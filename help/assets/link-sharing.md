@@ -7,9 +7,9 @@ feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1031'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,6 @@ ht-degree: 94%
 >
 >* リンクとして共有するフォルダーやアセットに対する `Edit ACL` 権限が必要です。
 >* ユーザーにメールを送信するには、[Day CQ Mail Service](#configmailservice) で SMTP サーバーの詳細を設定します。 
-
 
 ## アセットの共有 {#share-assets}
 
@@ -49,9 +48,9 @@ ht-degree: 94%
    >
    >組織内のメンバーではないユーザーのメール ID を入力した場合、ユーザーのメール ID に「[!UICONTROL External User]」というプレフィックスが付きます。
 
-1. 内 **[!UICONTROL 件名]** ボックスに、共有するアセットの件名を入力します。
+1. 「**[!UICONTROL 件名]**」ボックスに、共有するアセットの件名を入力します。
 
-1. 内 **[!UICONTROL メッセージ]** ボックスに、オプションのメッセージを入力します。
+1. 「**[!UICONTROL メッセージ]**」ボックスに、オプションのメッセージを入力します。
 
 1. 「**[!UICONTROL 有効期限]**」フィールドに、日付ピッカーを使用してリンクの有効期限の日付と時間を指定します。リンクのデフォルトの有効期間は 1 日です。
 
@@ -106,7 +105,7 @@ ht-degree: 94%
 
 ## ベストプラクティスとトラブルシューティング {#best-practices-and-troubleshooting}
 
-* 名前に空白を含むアセットフォルダーまたはコレクションは共有されない場合があります。
+* 名前に空白を含むアセットフォルダーまたはコレクションは共有されない可能性があります。
 * ユーザーが共有アセットをダウンロードできない場合は、[!DNL Experience Manager] 管理者に[ダウンロード制限](#configure-maximum-data-size)を確認してください。
 * 共有アセットへのリンクを含むメールを送信できない場合、または他のユーザーがお客様からのメールを受信できない場合、[!DNL Experience Manager] 管理者に[メールサービス](#configure-day-cq-mail-service)が設定されているかどうかを確認してください。
 * リンク共有機能を使用してアセットを共有できない場合は、適切な権限を持っていることを確認してください。[アセットの共有](#share-assets)を参照してください。
@@ -117,4 +116,5 @@ ht-degree: 94%
    * `http://[aem_server]:[port]/linkshare.html`
    * `http://[aem_server]:[port]/linksharepreview.html`
    * `http://[aem_server]:[port]/linkexpired.html`
-   [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。Web コンソールで **[!UICONTROL Day CQ Link Externalizer]** 設定を開き、`local`、`author` および `publish` に対して、記載された値を持つ&#x200B;**[!UICONTROL ドメイン]**&#x200B;フィールドで、次のプロパティを変更します。`local` プロパティと `author` プロパティには、それぞれローカルインスタンスとオーサーインスタンスの URL を指定します。1 つの [!DNL Experience Manager] オーサーインスタンスを実行している場合、同じ値を `local` および `author` プロパティに使用します。パブリッシュインスタンスには、[!DNL Experience Manager] パブリッシュインスタンスの URL を指定します。
+
+  [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。Web コンソールで **[!UICONTROL Day CQ Link Externalizer]** 設定を開き、`local`、`author` および `publish` に対して、記載された値を持つ&#x200B;**[!UICONTROL ドメイン]**&#x200B;フィールドで、次のプロパティを変更します。`local` プロパティと `author` プロパティには、それぞれローカルインスタンスとオーサーインスタンスの URL を指定します。1 つの [!DNL Experience Manager] オーサーインスタンスを実行している場合、同じ値を `local` および `author` プロパティに使用します。パブリッシュインスタンスには、[!DNL Experience Manager] パブリッシュインスタンスの URL を指定します。
