@@ -6,10 +6,10 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: ht
-source-wordcount: '3521'
-ht-degree: 100%
+source-git-commit: 2ed19ac8c60dbf49422b8f1f665be4004689e00e
+workflow-type: tm+mt
+source-wordcount: '3550'
+ht-degree: 99%
 
 ---
 
@@ -139,6 +139,10 @@ customBlobStore=B"false"
 
 Amazon の Simple Storage Service（S3）にデータを格納するように AEM を設定できます。このストアでは、`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` という PID を設定に使用します。
 
+>[!NOTE]
+>
+>AEM 6.5 では、Amazon S3 でのデータの保存がサポートされますが、他のプラットフォームにデータを保存するようサポートが拡張されるわけではありません。他のプラットフォームでは、Amazon S3 API を独自に実装している可能性があります。
+
 S3 データストア機能を有効にするには、S3 データストアコネクタを含む機能パックをダウンロードしてインストールする必要があります。[アドビリポジトリ](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)に移動し、1.10.x バージョンの機能パックの中から最新のバージョン（com.adobe.granite.oak.s3connector-1.10.0.zip など）をダウンロードします。さらに、[AEM 6.5 リリースノート](/help/release-notes/release-notes.md)ページに記載されている最新の AEM サービスパックをダウンロードしてインストールする必要もあります。
 
 >[!NOTE]
@@ -230,8 +234,8 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 | キー | 説明 | デフォルト | 必須 |
 | --- | --- | --- | --- |
-| accessKey | バケットへのアクセス権を持つ IAM ユーザーのキー ID にアクセスします。 |  | はい、IAM 役割を使用していない場合は有効です。 |
-| secretKey | バケットへのアクセス権を持つ IAM ユーザーの秘密アクセスキー。 |  | はい、IAM 役割を使用していない場合は有効です。 |
+| accessKey | バケットへのアクセス権を持つ IAM ユーザーのキー ID にアクセスします。 | | はい、IAM 役割を使用していない場合は有効です。 |
+| secretKey | バケットへのアクセス権を持つ IAM ユーザーの秘密アクセスキー。 | | はい、IAM 役割を使用していない場合は有効です。 |
 | cacheSize | ローカルキャッシュのサイズ（バイト単位）です。 | 64 GB | いいえ。 |
 | connectionTimeout | 最初に接続を確立したときにタイムアウトするまでに待機する時間（ミリ秒単位）を設定します。 | 10000 | いいえ。 |
 | maxCachedBinarySize | サイズがこの値（バイト単位）以下のバイナリは、メモリキャッシュに格納されます。 | 17408（17 KB） | いいえ。 |
@@ -239,10 +243,10 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 | maxErrorRetry | 失敗（再試行可能）リクエストの再試行の最大回数を設定します。 | 3 | いいえ。 |
 | minRecordLength | データストアに格納するオブジェクトの最小サイズ（バイト単位）です。 | 16384 | いいえ。 |
 | path | AEM データストアのローカルパス。 | `crx-quickstart/repository/datastore` | いいえ。 |
-| proxyHost | クライアントが接続するオプションのプロキシホストを設定します。 |  | いいえ。 |
-| proxyPort | クライアントが接続するオプションのプロキシポートを設定します。 |  | いいえ。 |
-| s3Bucket | S3 バケットの名前。 |  | はい |
-| s3EndPoint | S3 REST API エンドポイント。 |  | いいえ。 |
+| proxyHost | クライアントが接続するオプションのプロキシホストを設定します。 | | いいえ。 |
+| proxyPort | クライアントが接続するオプションのプロキシポートを設定します。 | | いいえ。 |
+| s3Bucket | S3 バケットの名前。 | | はい |
+| s3EndPoint | S3 REST API エンドポイント。 | | いいえ。 |
 | s3Region | バケットが存在する地域。 詳しくは、この[ページ](https://docs.aws.amazon.com/ja_jp/general/latest/gr/s3.html)を参照してください。 | AWS インスタンスが実行されている地域。 | いいえ。 |
 | socketTimeout | 確立されたオープン接続を介してデータが転送され、接続がタイムアウトして閉じられるまでの待機時間（ミリ秒単位）を設定します。 | 50000 | いいえ。 |
 | stagingPurgeInterval | 完了したアップロードをステージングキャッシュからパージする間隔（秒単位）です。 | 300 | いいえ。 |
@@ -391,7 +395,8 @@ S3 でバイナリレスレプリケーションを設定するには、次の�
    >
    >    * Oak バージョン **1.2.x** については、Oak-run **1.2.12 以降**&#x200B;を使用します
    >    * **上述のものよりも新しい** Oak バージョンについては、AEM インストールの Oak コアと一致するバージョンの oak-run を使用します。
-
+   >
+   >
 
 1. 最後に、設定を検証します。検証するには、共有している各リポジトリによってデータストアに追加された一意のファイルを探します。ファイルの形式は `repository-[UUID]` です。UUID は、個々のリポジトリーの一意の識別子です。
 
@@ -500,7 +505,6 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 >2. `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` ファイルで `blobTrackSnapshotIntervalInSecs=L"0"` パラメーターを追加します。このパラメーターを使用するには、Oak 1.12.0、1.10.2 以降のバージョンが必要です。
 >3. AEM インスタンスを再起動します。
 
-
 新しいバージョンの AEM では、複数のリポジトリによって共有されるデータストアでもガベージコレクションを実行できます。共有データストアでデータストアガベージコレクションを実行できるようにするには、次の手順に従います。
 
 1. データストアのガベージコレクション用に設定されたメンテナンスタスクが、データストアを共有するすべてのリポジトリインスタンスで無効になっていることを確認します。
@@ -513,4 +517,5 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
    1. JMX コンソールに移動し、「Repository Manager Mbean」を選択します。
    1. **startDataStoreGC(boolean markOnly)** リンクをクリックします。
    1. 次のダイアログで、`markOnly` パラメーターに再度 `false` を入力してください。
+
    以前に使用したマークフェーズで見つかったすべてのファイルを照合して、未使用の残りのファイルがデータストアから削除されます。
