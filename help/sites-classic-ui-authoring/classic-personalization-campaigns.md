@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d1741525-a475-4a76-bd16-55318023495e
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '621'
 ht-degree: 20%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Manager(AEM) では、ブランドは最上位の単位で、 *
 
    * **ニュースレター**
 
-     [メール通信](#emailmarketing)を使用してユーザーとの関係を深め、web サイトを訪問するよう促します。通常はニュースレターの形式で、 **リード** ( これらは **リスト**) をクリックします。 **注意：**&#x200B;この機能がさらに強化される予定はありません。お勧めは次のとおりです。 [Adobe CampaignとAEMの統合の使用](/help/sites-administering/campaign.md).
+     [メール通信](#emailmarketing)を使用してユーザーとの関係を深め、web サイトを訪問するよう促します。通常はニュースレターの形式で、お客様の **リード** ( これらは、 **リスト**) をクリックします。 **注意：**&#x200B;この機能がさらに強化される予定はありません。お勧めは次のとおりです。 [Adobe CampaignとAEMの統合の使用](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 

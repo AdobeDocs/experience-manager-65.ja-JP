@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '888'
 ht-degree: 9%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 9%
 
 AEM 6.5 Forms環境で HAdaptive Formsコアコンポーネントを有効にするには、 [AEM Archetype 41 以降](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) すべてのオーサーインスタンスとパブリッシュインスタンス上の（フォームオプションが有効な）プロジェクトをベースにする。
 
-この記事では、AEM 6.5 Forms環境上のAEM Archetype 41 以降ベースのプロジェクトを設定してデプロイし、アダプティブFormsコアコンポーネントを有効にする詳しい手順を説明します。
+この記事では、AEM 6.5 Forms環境上のAEM Archetype 41 以降ベースのプロジェクトを設定してデプロイし、アダプティブFormsコアコンポーネントを有効にする詳細な手順を説明します。
 
 
 ## 前提条件 {#prerequisites}

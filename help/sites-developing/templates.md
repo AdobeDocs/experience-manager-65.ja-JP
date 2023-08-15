@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
-workflow-type: ht
-source-wordcount: '931'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '930'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ AEM で開発を行う場合は、編集可能テンプレートを使用する�
 
 * 作成者によって[作成](/help/sites-authoring/templates.md#creating-a-new-template-template-author)および[編集](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)できます。
 
-* テンプレートを使用して作成される任意のページで、次の項目を定義できます。
+* テンプレートで作成されるすべてのページで以下を定義できるようにが導入されました。
 
    * 構造
    * 初期コンテンツ

@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3212'
 ht-degree: 1%
 
 ---
@@ -271,7 +271,7 @@ PhoneGap を使用してアプリを構築してデプロイするには、2 つ
 
 **注意：** プッシュ通知のテストでは、エミュレーターで十分ではありません。プッシュ通知では、プッシュプロバイダー (AppleまたはGoogle) とデバイスの間で異なるプロトコルが使用されるからです。 現在のMac/PC ハードウェアおよびエミュレーターでは、この機能はサポートされていません。
 
-1. *PhoneGap Build* は、PhoneGap が提供するサービスで、サーバー上でアプリを構築し、デバイスに直接ダウンロードできるようにします。 詳しくは、PhoneGap Buildドキュメント ( `https://build.phonegap.com/` を参照して、PhoneGap Buildを設定および使用する方法を確認してください。
+1. *PhoneGap Build* は、PhoneGap が提供するサービスで、アプリをサーバー上で構築し、直接デバイスにダウンロードできます。 詳しくは、PhoneGap Buildドキュメント ( `https://build.phonegap.com/` を参照して、PhoneGap Buildを設定および使用する方法を確認してください。
 
 1. *PhoneGap コマンドラインインターフェイス* (CLI) コマンドラインで豊富な PhoneGap コマンドセットを使用して、アプリのビルド、デバッグ、デプロイをおこなうことができます。 PhoneGap 開発者向けドキュメント (`https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface`) を参照して、PhoneGap CLI を設定して使用する方法を確認してください。
 

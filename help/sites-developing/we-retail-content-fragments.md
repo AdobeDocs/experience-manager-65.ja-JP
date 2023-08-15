@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 74%
+source-wordcount: '454'
+ht-degree: 71%
 
 ---
 
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** (Adobe Experience Managerの標準インスタンスで使用可能 ) は、フラグメントを提供します **Arctic Surfing in Lofoten** を基本的なサンプルとして使用します。 これは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツを、チャネル固有のバリエーションと共に作成できます。 **We.Retail** (Adobe Experience Managerの標準インスタンスで使用可能 ) は、フラグメントを提供します **Arctic Surfing in Lofoten** を基本的なサンプルとして使用します。 これは、次のことを示しています。
 
 * Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。チャネルに特化しないコンテンツを、チャネル固有のバリエーションと共に作成できます。
 
@@ -54,7 +54,7 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 * [http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten](http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten)
 
-ここで、 [編集と管理](/help/assets/content-fragments/content-fragments.md) タブ（左側のパネル）を使用してフラグメントを次のように設定します。
+ここで、以下を実行できます。 [編集と管理](/help/assets/content-fragments/content-fragments.md) タブ（左側のパネル）を使用してフラグメントを次のように設定します。
 
 <!--![cf-45-aa](do-not-localize/cf-45-aa.png) ![cf-45-a](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
@@ -66,7 +66,7 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 ## We.Retail でコンテンツフラグメントが使用される場所 {#where-content-fragments-are-used-in-we-retail}
 
-説明する [コンテンツフラグメントを使用したページオーサリング](/help/sites-authoring/content-fragments.md) の下には、例えば次のようなサンプルページが用意されています。
+説明するには [コンテンツフラグメントを使用したページオーサリング](/help/sites-authoring/content-fragments.md) の下には、例えば次のようなサンプルページが用意されています。
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 

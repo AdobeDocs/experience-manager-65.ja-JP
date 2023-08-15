@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1168'
 ht-degree: 53%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 53%
 AEM でメールコンテンツを作成して、Adobe Campaign のメールで処理することができます。これを実行するには、次の手順に従う必要があります。
 
 1. AEM で、Adobe Campaign 固有のテンプレートから新しいニュースレターを作成します。
-1. 選択 [Adobe Campaign](#selectingtheadobecampaigncloudservice) コンテンツを編集してすべての機能にアクセスする前に、
+1. 選択 [Adobe Campaignサービス](#selectingtheadobecampaigncloudservice) コンテンツを編集してすべての機能にアクセスする前に、
 1. コンテンツを編集します。
 1. コンテンツを検証します。
 
@@ -122,12 +122,12 @@ Adobe Campaignと統合するには、ページにAdobe Campaignクラウドサ�
 
 >[!NOTE]
 >
->* Adobe Campaign **プロファイル** ターゲティングディメンションが考慮されます。
+>* Adobe Campaignのフィールドのみ **プロファイル** ターゲティングディメンションが考慮されます。
 >* プロパティを「**サイト**」から表示すると、Adobe Campaign コンテキストフィールドにアクセスできません。これらのフィールドには編集時にメール内から直接アクセスできます。
 >
 
 1. 新しい&#x200B;**ニュースレター**／**テキストおよびパーソナライゼーション（キャンペーン）**&#x200B;コンポーネントを挿入します。
-1. コンポーネントをダブルクリックして開きます。 この **編集** ウィンドウには、パーソナライゼーション要素を挿入できる機能があります。
+1. コンポーネントをダブルクリックして開きます。 The **編集** ウィンドウには、パーソナライゼーション要素を挿入できる機能があります。
 
    >[!NOTE]
    >
@@ -160,7 +160,7 @@ Adobe Campaignと統合するには、ページにAdobe Campaignクラウドサ�
 
 コンテンツの作成が完了したら、承認プロセスを開始できます。 ツールボックスの「**ワークフロー**」タブに移動して、「**Adobe Campaign 用に承認**」ワークフローを選択します。
 
-この標準ワークフローには、次の 2 つの手順があります。リビジョン、承認または改訂、却下。 ただし、このワークフローは、より複雑なプロセスに拡張し、適応させることができます。
+そのまま使用できるこのワークフローには、リビジョンと承認、またはリビジョンと却下の 2 つのステップがあります。 ただし、このワークフローは、より複雑なプロセスに拡張し、適応させることができます。
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -170,7 +170,7 @@ Adobe Campaign 用にコンテンツを承認するには、サイドキック�
 
 コンテンツが承認されると、Adobe Campaignに承認済みと表示されます。 その後、E メールを送信できます。
 
-Adobe Campaign Standard:
+ADOBE CAMPAIGN STANDARD:
 
 ![chlimage_1-184](assets/chlimage_1-184.png)
 

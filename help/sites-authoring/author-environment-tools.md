@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 100%
+source-wordcount: '2240'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## サイトの管理 {#managing-your-site}
 
-**Sites** コンソールでは、ヘッダーバー、ツールバー、アクションアイコン（選択されたリソースに対して適用）、パンくず、選択時のセカンダリレール（例：タイムラインや参照）を使用して web サイト内を移動および管理できます。
+The **Sites** コンソールを使用すると、ヘッダーバー、ツールバー、アクションアイコン（選択したリソースに適用）、パンくずリストおよび選択時にセカンダリレール（タイムラインや参照など）を使用して、Web サイトの移動と管理をおこなえます。
 
 例えば、列表示では次のようになります。
 
@@ -292,17 +292,17 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 ページの編集時には様々なモードがあり、異なるアクションを行うことができます。
 
 * [編集](/help/sites-authoring/editing-content.md) - ページコンテンツの編集時に使用するモード。
-* [レイアウト](/help/sites-authoring/responsive-layout.md) - デバイスに応じたレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）
+* [レイアウト](/help/sites-authoring/responsive-layout.md)  — デバイスに応じたレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）
 
 * [基礎モード](/help/sites-authoring/scaffolding.md) - 同じ構造を共有しながらコンテンツが異なるページを大量に作成する場合に役立ちます。
-* [開発者](/help/sites-developing/developer-mode.md) - 様々なアクションを実行できます（権限が必要です）。このアクションには、ページやそのコンポーネントの技術的な詳細の検査が含まれます。
+* [開発者](/help/sites-developing/developer-mode.md) ：様々なアクションを実行できます（権限が必要です）。 これには、ページとそのコンポーネントの技術的な詳細の検査が含まれます。
 
-* [デザイン](/help/sites-authoring/default-components-designmode.md) - ページで使用するコンポーネントを有効または無効にしたり、コンポーネントのデザインを設定したりできます（ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合）。
+* [デザイン](/help/sites-authoring/default-components-designmode.md)  — ページで使用するコンポーネントを有効または無効にしたり、コンポーネントのデザインを設定したりできます ( ページが [静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)) をクリックします。
 
 * [ターゲット設定](/help/sites-authoring/content-targeting-touch.md) - すべてのチャネルにわたるターゲティングと測定で、コンテンツの関連性を高めます。
 * [Activity Map](/help/sites-authoring/page-analytics-using.md#analyticsvisiblefromthepageeditor) - ページの分析データを表示します。
 
-* [タイムワープ](/help/sites-authoring/working-with-page-versions.md#timewarp) - 特定の時点のページの状態を表示できます。
+* [タイムワープ](/help/sites-authoring/working-with-page-versions.md#timewarp) ：特定の時点のページの状態を表示できます。
 * [ライブコピーステータス](/help/sites-authoring/editing-content.md#live-copy-status) - ライブコピーのステータスと継承される（または継承されない）コンポーネントの概要をすばやく確認できます。
 * [プレビュー](/help/sites-authoring/editing-content.md#previewing-pages) - パブリッシュ環境とまったく同じ形式でページを表示する、またはコンテンツ内のリンクを使用して移動するために使用します。
 

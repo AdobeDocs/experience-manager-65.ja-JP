@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '511'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
    このグループの ID を「app-authors」に設定し、AEM内でのモバイルアプリケーションのオーサリングに特有の特定のタイプのオーサーユーザーグループであることを示します。
 
-1. メンバーをグループに追加：発言者
+1. メンバーをグループに追加：作成者
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
@@ -45,7 +45,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. 次のオプションを使用して、AEM Content Authors グループに追加できます。
+1. 次のリンクを使用して、AEM Content Authors グループに追加できます。
 
    （読み取り）
 
@@ -56,7 +56,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
 ### AEM Mobile Application Administrators グループ（app-admins グループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-admins グループのメンバーは、app-authors に含まれているのと同じ権限でアプリケーションコンテンツを作成できます **および** また、次のことも担当します。
+app-admins グループのメンバーは、app-authors に含まれているのと同じ権限でアプリケーションコンテンツを作成できます **および** さらに、次のことも担当します。
 
 * アプリケーションの ContentSync OTA 更新のステージング、公開、クリア
 
@@ -111,4 +111,4 @@ app-admins グループのメンバーは、app-authors に含まれているの
 AEM Mobile On-demand Services App の作成に関する他の 2 つの役割と責務について詳しくは、次のリソースを参照してください。
 
 * [AEM Mobile On-demand Services向けAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand Servicesアプリ用AEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
+* [AEM Mobile On-demand Servicesアプリ用のAEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)

@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2230'
-ht-degree: 99%
+source-wordcount: '2229'
+ht-degree: 98%
 
 ---
 
@@ -181,7 +181,7 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 #### 移動ステップ {#go-to-step}
 
-**移動ステップ**&#x200B;を使用すると、ルーティング式の結果に応じて、ワークフローモデル内で実行する次のステップを指定できます。
+The **ステップに移動** ルーティング式の結果に応じて、実行するワークフローモデル内の次のステップを指定できます。
 
 OR 分割ステップと同様に、ルール定義、ECMA スクリプト、または外部スクリプトを使用して、移動ステップのルーティング式を定義できます。
 

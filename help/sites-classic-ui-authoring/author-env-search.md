@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '470'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 94%
 
 ---
 
@@ -49,7 +49,6 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 >* [ブースト](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
 >
 
-
 検索を実行するには、パネル下部にある「**検索**」をクリックします。検索条件をクリアするには、「**リセット**」をクリックします。
 
 ## フィルター {#filter}
@@ -60,7 +59,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ## 検索と置換 {#find-and-replace}
 
-**Web サイト**&#x200B;コンソールの「**検索と置換**」メニューオプションでは、web サイトの特定のセクション内で特定の文字列を持つ複数のインスタンスを検索して置換できます。
+Adobe Analytics の **Web サイト** コンソールを開く **検索と置換** メニューオプションを使用すると、web サイトの特定のセクション内で、特定の文字列を持つ複数のインスタンスを検索および置換できます。
 
 1. 検索と置換アクションを実行するルートページまたはフォルダーを選択します。
 1. **ツール**／**検索と置換**&#x200B;を選択します。

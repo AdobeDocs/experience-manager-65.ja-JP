@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 6465e2c4-28e5-4fc8-8cca-7b632f10ba5a
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2150'
 ht-degree: 36%
 
 ---
 
 # Sling アダプターの使用{#using-sling-adapters}
 
-[Sling](https://sling.apache.org) オファー [アダプタパターン](https://sling.apache.org/documentation/the-sling-engine/adapters.html) 実装するオブジェクトを簡単に移動するには [適応可能](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) インターフェイス。 このインターフェイスは、汎用の [adaptTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) オブジェクトを引数として渡されるクラス型に変換するメソッド。
+[Sling](https://sling.apache.org) をオファー [アダプターパターン](https://sling.apache.org/documentation/the-sling-engine/adapters.html) 実装するオブジェクトを簡単に移動するには [適応可能](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) インターフェイス。 このインターフェイスは、汎用の [adaptTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) オブジェクトを引数として渡されるクラス型に変換するメソッド。
 
 例えば、次のように実行するだけで、Resource オブジェクトを対応する Node オブジェクトに変換できます。
 
@@ -41,7 +41,7 @@ Node node = resource.adaptTo(Node.class);
 
 ### 戻り値 Null {#null-return-value}
 
-`adaptTo()` null を返します。
+`adaptTo()` は null を返します。
 
 これには、次のような様々な理由があります。
 
@@ -73,7 +73,7 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
 
 * これら 2 つの組み合わせ。
 
-最初の例では、Java™のドキュメントに次の内容が示されます `adaptTo-targets` 可能です。 ただし、JCR ベースのリソースなどの特定のサブクラスでは、多くの場合、これは不可能です。後者の場合、 `AdapterFactory` は通常、バンドルのプライベートクラスの一部なので、クライアント API で公開されず、Java™ドキュメントにも記載されません。 理論的には、[OSGi](/help/sites-deploying/configuring-osgi.md) サービスランタイムからすべての `AdapterFactory` 実装にアクセスし、「アダプタブル」（ソースとターゲット）の設定を調べることは可能ですが、相互にマッピングすることはできません。最終的には、これは内部ロジックに依存し、ドキュメントに記載する必要があります。従って、参照はこちらです。
+最初の例では、Java™のドキュメントに次の内容が示されます。 `adaptTo-targets` 可能です。 ただし、JCR ベースのリソースなどの特定のサブクラスでは、多くの場合、これは不可能です。後者の場合、 `AdapterFactory` は通常、バンドルのプライベートクラスの一部なので、クライアント API で公開されず、Java™ドキュメントにも記載されません。 理論的には、[OSGi](/help/sites-deploying/configuring-osgi.md) サービスランタイムからすべての `AdapterFactory` 実装にアクセスし、「アダプタブル」（ソースとターゲット）の設定を調べることは可能ですが、相互にマッピングすることはできません。最終的には、これは内部ロジックに依存し、ドキュメントに記載する必要があります。従って、参照はこちらです。
 
 ## 参照 {#reference}
 
@@ -93,7 +93,7 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Item.html">項目</a></td>
-   <td>このリソースが JCR ベースのリソース（ノードまたはプロパティ）である場合</td>
+   <td>このリソースが JCR ベースのリソース（ノードまたはプロパティ）の場合</td>
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Map.html">Map</a></td>
@@ -109,15 +109,15 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">ModifiableValueMap</a></td>
-   <td>の拡張 <a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>：そのノードのプロパティを変更できます。</td>
+   <td>の拡張 <a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>（そのノードのプロパティを変更できます）</td>
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
-   <td>ファイルリソースのバイナリコンテンツを返します ( このリソースが JCR ノードベースのリソースで、ノードタイプが <code>nt:file</code> または <code>nt:resource</code>;これがバンドルリソースの場合、ファイルの内容（ファイルシステムリソースの場合）、またはバイナリ JCR プロパティリソースのデータ</td>
+   <td>ファイルリソースのバイナリコンテンツを返します ( このリソースが JCR ノードベースのリソースで、ノードタイプが <code>nt:file</code> または <code>nt:resource</code>これがバンドルリソースの場合は、ファイルコンテンツ（このリソースがファイルシステムリソースの場合）、またはバイナリ JCR プロパティリソースのデータ。</td>
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/net/URL.html">URL</a></td>
-   <td>リソースへの URL を返します ( このリソースが JCR ノードベースのリソースである場合、このノードのリポジトリ URL。このリソースがバンドルリソースの場合は jar bundle URL;ファイルシステムリソースの場合のファイル URL</td>
+   <td>リソースへの URL を返します（このノードが JCR ノードベースのリソースの場合はこのノードのリポジトリ URL、このリソースがバンドルリソースの場合は jar バンドル URL、このリソースがファイルシステムリソースの場合はファイル URL）</td>
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/io/File.html">ファイル</a></td>
@@ -177,7 +177,7 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Authorizable</a></td>
-   <td>Authorizable は、User および Group の共通の基本インターフェイスです</td>
+   <td>Authorizable は、User および Group の共通の基本インターフェイスです。</td>
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/api/security/user/User.html">User</a></td>
@@ -185,7 +185,7 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/SimpleSearch.html">SimpleSearch</a></td>
-   <td>このリソースが JCR ベースのリソースである場合は、リソース以下で検索します ( または setSearchIn() を使用します )</td>
+   <td>このリソースが JCR ベースのリソースである場合は、リソース以下で検索します ( または setSearchIn() を使用します )。</td>
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/status/WorkflowStatus.html">WorkflowStatus</a></td>
@@ -197,7 +197,7 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/connector/ConnectorResource.html">ConnectorResource</a></td>
-   <td>このリソースが JCR ノードベースのリソースである場合、特定のタイプに対する適応後のコネクタリソースを返します</td>
+   <td>このリソースが JCR ノードベースのリソースである場合、特定のタイプに対する適応後のコネクタリソースを返します。</td>
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/config/package-summary.html">Config</a></td>
@@ -336,7 +336,7 @@ null ケースを適切に処理することが重要です。 JSP レンダリ�
 
 #### セキュリティ {#security}
 
-**Authorizable**、 **User および **グループ** に適応します。
+**Authorizable**、 **User および **グループ化** 次の項目に適応します。
 
 | [Node](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | ユーザーまたはグループのホームノードを返します。 |
 |---|---|

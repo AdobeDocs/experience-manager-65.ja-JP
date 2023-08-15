@@ -1,23 +1,23 @@
 ---
-title: Markdown
-description: コンテンツフラグメントエディターで Markdown 構文を使用してヘッドレスコンテンツを簡単に作成する方法を説明します。
+title: マークダウン
+description: コンテンツフラグメントエディターが Markdown 構文を使用してヘッドレスコンテンツを簡単に作成する方法を説明します。
 feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '522'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 61%
 
 ---
 
-# Markdown {#markdown}
+# マークダウン {#markdown}
 
-[オーサリング](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)中に、コンテンツフラグメントエディターは *Markdown* 構文を使用してユーザーがヘッドレスコンテンツを簡単に記述できるようにします。
+次の場合、 [authoring](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)を使用する場合、コンテンツフラグメントエディターは *markdown* ヘッドレスコンテンツを簡単に記述するための構文：
 
 ![Markdown エディター](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
-次を定義できます。
+以下を定義できます。
 
 * [見出し表記](/help/assets/content-fragments/content-fragments-markdown.md#heading-notation)
 * [段落と改行](/help/assets/content-fragments/content-fragments-markdown.md#paragraphs-and-line-breaks)
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ## 見出し表記 {#heading-notation}
 
-ハッシュタグ（#）を前に付けて見出しを作成します。H1 には 1 つのハッシュタグ（#）、H2 には 2 つのハッシュタグ（##）のように使用します。最大で 6 個のハッシュタグを使用できます。次に例を示します。
+ヘッダーを作成するには、見出しの前にハッシュタグ (#) を配置します。 H1 には 1 つのハッシュタグ (#)、H2 には 2 つのハッシュタグ (##) が使用されます。 最大 6 個のハッシュタグを使用できます。 次に例を示します。
 
     `## This is an H2`
 
@@ -39,7 +39,7 @@ ht-degree: 100%
 
     `###### This is a H6`
 
-オプションで、テキストに等号で下線を付けて H1、マイナス符号で下線を付けて H2 を作成することもできます。次に例を示します。
+必要に応じて、H1 を作成するには、テキストに等号で下線を付け、マイナス記号で下線を付けて H2 を作成します。 次に例を示します。
 
     `This is an H1`
 
@@ -51,7 +51,7 @@ ht-degree: 100%
 
 ## 段落と改行 {#paragraphs-and-line-breaks}
 
-段落とは、1 つ以上の空白行によって区切られている、1 つ以上の連続したテキスト行です。空白行とは、スペースまたはタブしか含まれていない行です。通常の段落はスペースまたはタブでインデントされません。
+段落は、1 つ以上の空白行で区切られた、1 つ以上の連続したテキスト行です。 空白行とは、スペースやタブ以外を含まない行です。 通常の段落はスペースまたはタブでインデントされません。
 
 改行するには、行の末尾に 2 つ以上のスペースを付けてからリターンします。
 
@@ -105,7 +105,7 @@ ht-degree: 100%
 
 ## ブロック引用 {#block-quotes}
 
-テキストを引用するときは、テキストの先頭に > 記号を付けます。次に例を示します。
+テキストの前に > 記号を追加すると、テキストを引用できます。 次に例を示します。
 
     `>This is block quotes`
 
@@ -113,7 +113,7 @@ ht-degree: 100%
 
     `>asdfahsdlfasdfj`
 
-ブロック引用はネストできます。次に例を示します。
+ネストされたブロック引用符を使用できます。 次に例を示します。
 
     `> This is the first level of quoting.`
 
@@ -137,7 +137,7 @@ ht-degree: 100%
 
     `* item in list`
 
-順序付きリストを作成するには、数字の後にピリオドを付けて、リストの項目の前に付けます。次に例を示します。
+順序付きリストを作成するには、リスト内の各項目の前に数字とピリオドを 1 つ追加します。 次に例を示します。
 
     `1. First item in list.`
 
@@ -165,7 +165,7 @@ ht-degree: 100%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-コードの範囲を示すには、バッククォート（&grave;）で囲みます。事前に書式設定されたコードブロックとは異なり、コード範囲は通常の段落内のコードを示します。
+コードの範囲を示すには、バッククォート（&grave;）で囲みます。書式設定済みのコードブロックとは異なり、コード span は通常の段落内のコードを示します。
 
 次に例を示します。
 
@@ -173,7 +173,7 @@ ht-degree: 100%
 
 ## コードブロック {#code-blocks}
 
-コードブロックは通常はソースコードを示すために使用されます。コードブロックを作成するには、1 個のタブまたは少なくとも 4 個分のスペースを使用してコードをインデントします。次に例を示します。
+コードブロックは、通常、ソースコードを説明するために使用されます。 コードブロックを作成するには、タブを使用してコードをインデントするか、少なくとも 4 つのスペースを使用します。 次に例を示します。
 
     `This is a normal paragraph.`
 

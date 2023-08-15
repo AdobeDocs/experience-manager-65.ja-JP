@@ -4,9 +4,9 @@ description: Tough Day テストは、すべての操作が同時におこなわ
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1823'
 ht-degree: 53%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 53%
 
 ## Tough Day 2 とは {#what-is-tough-day}
 
-「Tough Day 2」は、AEMインスタンスの制限に応じてテストできるアプリケーションです。 デフォルトのテストスイートですぐに使用できる状態にすることも、テストのニーズに合わせて設定することもできます。 ご覧いただけます [この録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) アプリのプレゼンテーション用。
+「Tough Day 2」は、AEMインスタンスの制限に応じてテストできるアプリケーションです。 デフォルトのテストスイートですぐに使用できる状態にすることも、テストのニーズに合わせて設定することもできます。 ご覧いただけます [この録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) アプリのプレゼンテーション用に。
 
 >[!CAUTION]
 >
@@ -33,7 +33,7 @@ java -jar toughday2.jar --host=localhost
 
 * ページとそのライブコピーを作成する（ロールアウトを含む）
 * ホームページを取得
-* querybuilder でクエリを実行
+* querybuilder でクエリを実行する
 * アセット階層の作成
 * アセットの削除
 
@@ -140,7 +140,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 ## カスタマイズ {#customizing}
 
-カスタマイズは、次の 2 つの方法で実行できます。コマンドラインパラメーターまたは yaml 設定ファイル。 **設定ファイルは大規模なカスタムスイートで使用され、Tough Day 2 のデフォルトパラメーターを上書きします。 コマンドラインパラメータは、設定ファイルとデフォルトパラメータの両方を上書きします。**
+カスタマイズは、コマンドラインパラメーターと yaml 設定ファイルの 2 つの方法で実行できます。 **設定ファイルは大規模なカスタムスイートで使用され、Tough Day 2 のデフォルトパラメーターを上書きします。 コマンドラインパラメータは、設定ファイルとデフォルトパラメータの両方を上書きします。**
 
 テスト設定を保存するには、yaml 形式でコピーする方法しかありません。
 
@@ -370,7 +370,7 @@ Tough Day 2 では、現在、評価できる 9 つのテスト指標がレポ�
 
 デフォルトでは、両方の公開者が有効になっています。
 
-また、指標がレポートされるモードは 2 つあります。
+また、指標がレポートされるモードは次の 2 つです。
 
 * **simple** パブリッシュモード - 実行の開始から公開時点までの結果が報告されます。
 * **intervals** パブリッシュモード - 特定の期間内の結果が報告されます。期間は、**interval** パブリッシュモード／パラメーターを使用して設定することができます。
@@ -397,8 +397,8 @@ publishmode:
 
 Tough Day 2 では、Tough Day 2 を実行したディレクトリにログフォルダーが作成されます。このフォルダーには、次の 2 種類のログが含まれます。
 
-* **toughday.log**:には、アプリケーションの状態、デバッグ情報およびグローバルメッセージに関連するメッセージが含まれます。
-* **強い日&lt;testname>.log**:指定したテストに関連するメッセージ。
+* **toughday.log**：アプリケーションの状態、デバッグ情報およびグローバルメッセージに関連するメッセージが含まれます。
+* **強い日&lt;testname>.log**：指定したテストに関連するメッセージ。
 
 ログは上書きされず、その後の実行で既存のログにメッセージが追加されます。 ログには複数のレベルがあります。詳しくは、` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`を参照してください。
 

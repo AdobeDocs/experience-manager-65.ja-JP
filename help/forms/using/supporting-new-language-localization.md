@@ -2,7 +2,7 @@
 title: アダプティブフォームのローカリゼーション用に新しいロケールをサポート
 seo-title: Supporting new locales for adaptive forms localization
 description: AEM Formsでは、アダプティブフォームのローカライズ用に新しいロケールを追加できます。 デフォルトでサポートされているロケールは、英語、フランス語、ドイツ語、日本語です。
-seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
+seo-description: AEM Forms lets you add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
 uuid: 7f9fab6b-8d93-46bb-8c7c-7b723d5159ea
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '814'
 ht-degree: 90%
 
 ---
@@ -99,7 +99,7 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-タイプのノードの作成 `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`、カテゴリを `guides.I18N.<locale>` および依存関係 `xfaforms.3rdparty`, `xfaforms.I18N.<locale>` および `guide.common`.&quot;
+タイプのノードの作成 `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`（カテゴリを含む） `guides.I18N.<locale>` および依存関係 `xfaforms.3rdparty`, `xfaforms.I18N.<locale>` および `guide.common`.&quot;
 
 クライアントライブラリに次のファイルを追加します。
 

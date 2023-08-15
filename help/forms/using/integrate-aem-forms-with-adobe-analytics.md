@@ -3,16 +3,16 @@ title: AEM Forms と Adobe Analytics を統合する方法
 description: AEM Forms は Adobe Analytics と統合されているので、公開済みフォームのパフォーマンス指標を取得および追跡できます。
 docset: aem65
 exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
-source-git-commit: 45ca98ffb68e1e31e2f45f352e86f5aa1b6f0f00
-workflow-type: ht
-source-wordcount: '1806'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1805'
+ht-degree: 99%
 
 ---
 
 # [!DNL Adobe Launch] を使用した Analytics {#analyticsusingadobelaunch}
 
-AEM Forms は、[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=ja) と統合されているので、公開済みフォームのパフォーマンス指標を取得および追跡できます。これらの指標を分析する目的は、ビジネスユーザーがエンドユーザーの行動に関するインサイトを得て、データキャプチャエクスペリエンスを最適化できるようにすることです。Adobe Analytics for Adaptive Forms を介して、ログインしているユーザーとログインしていない（匿名）ユーザーの両方の動作を取得および追跡できます。
+AEM Formsとの統合 [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=ja) を使用して、発行済みフォームのパフォーマンス指標を取得および追跡できます。 これらの指標を分析する目的は、ビジネスユーザーがエンドユーザーの行動に関するインサイトを得て、データキャプチャエクスペリエンスを最適化できるようにすることです。Adobe Analytics for Adaptive Forms を介して、ログインしているユーザーとログインしていない（匿名）ユーザーの両方の動作を取得および追跡できます。
 
 Cloud Service フレームワークを使用して分析を実行することもできます。AEM Forms を Cloud Service フレームワークと統合する方法について詳しくは、[Cloud Service フレームワークを使用した Analytics](/help/forms/using/configure-analytics-forms-documents.md) を参照してください。Cloud Service フレームワークを使用して Analytics よりも Adobe Launch を使用する主な利点は、標準のイベントに加えて、カスタムイベントも定義できる点です。 カスタマイズされたイベントは、ルールエディターまたは顧客の clientlib を使用して定義され、[!DNL Adobe Analytics] のイベントにマップされます。
 
@@ -90,7 +90,7 @@ AEM Forms と [Adobe Analytics](https://experienceleague.adobe.com/docs/experien
    <td>PageName</td>
   </tr>
   <tr>
-   <td>PageURL<br /> </td>
+   <td>PageURL<br />。 </td>
    <td>PanelTitle<br /> </td>
    <td>TimeSpent</td>
   </tr>
@@ -143,7 +143,7 @@ AEM Forms と [Adobe Analytics](https://experienceleague.adobe.com/docs/experien
 
    * **[!UICONTROL 変数をクリア]**：データ証跡をクリアして [!DNL Adobe Analytics] へのイベントの登録回数を 1 回だけにする場合に使用します。
 
-      「**[!UICONTROL 変数を設定]**」アクションタイプを使用してイベントとデータ要素を設定したあと、「**[!UICONTROL ビーコンを送信]**」を使用してデータを送信し、「**[!UICONTROL 変数をクリア]**」を使用してデータ証跡をクリアすることをお勧めします。
+     「**[!UICONTROL 変数を設定]**」アクションタイプを使用してイベントとデータ要素を設定したあと、「**[!UICONTROL ビーコンを送信]**」を使用してデータを送信し、「**[!UICONTROL 変数をクリア]**」を使用してデータ証跡をクリアすることをお勧めします。
 
 1. 「**[!UICONTROL prop]**」セクションで、ドロップダウンリストで選択可能なレポートスイートオプションを、[データ要素の設定](#configure-data-elements)で定義したデータ要素にマッピングします。
 
@@ -232,6 +232,7 @@ Adobe Launch 設定を作成するには、次の手順を実行します。
 
 >[!NOTE]
 >[クラウドサービスのフレームワークを使用した分析](/help/forms/using/configure-analytics-forms-documents.md)機能と **Adobe Launch を使用した分析**&#x200B;機能の両方が同時に有効になっている場合、**Adobe Launch を使用した分析**&#x200B;機能が優先されます。
+> 
 
 ### カスタムイベントをキャプチャするルールの作成（オプション） {#capture-custom-events}
 

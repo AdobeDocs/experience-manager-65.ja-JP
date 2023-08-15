@@ -6,10 +6,10 @@ role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
-source-wordcount: '2417'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '2416'
+ht-degree: 99%
 
 ---
 
@@ -143,7 +143,7 @@ CRXDE リポジトリのオプションでノード構造を手動で作成す�
 
 ## タグ用述語の追加 {#adding-a-tags-predicate}
 
-タグの述語を使用すると、タグに基づいてアセットを検索できます。デフォルトでは、[!DNL Assets] は指定されたタグに基づいて、1 つまたは複数のタグと一致するアセットを検索します。つまり、検索クエリは指定されたタグを使用して OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すると、指定したすべてのタグを含むアセットを検索できます。
+タグの述語を使用して、タグに基づいたアセットの検索を実行できます。 デフォルトでは、[!DNL Assets] は指定されたタグに基づいて、1 つまたは複数のタグと一致するアセットを検索します。つまり、検索クエリは指定されたタグを使用して OR 演算を実行します。ただし、「すべてのタグに一致」オプションを使用すると、指定したすべてのタグを含むアセットを検索できます。
 
 1. [!DNL Experience Manager] ロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL 検索フォーム]**&#x200B;に移動します。
 1. 検索フォームページで、「**[!UICONTROL Assets 管理者の検索レール]**」を選択し、「**[!UICONTROL 編集]**」![edit icon](assets/do-not-localize/aemassets_edit.png)を選択します。

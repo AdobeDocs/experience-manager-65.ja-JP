@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '1885'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1882'
+ht-degree: 96%
 
 ---
 
@@ -28,31 +28,32 @@ ht-degree: 100%
 
 * **タイトル**
 
-   ページのタイトルは様々な場所に表示されます。例えば、「**web サイト**」タブリストや「**サイト**」カードビュー／リストビューに表示されます。
+  ページのタイトルは様々な場所に表示されます。例えば、「**web サイト**」タブリストや「**サイト**」カードビュー／リストビューに表示されます。
 
-   このフィールドは必須です。
+  このフィールドは必須です。
 
 * **タグ**
 
-   ここで、選択ボックスのリストを更新して、ページからタグを追加または削除できます。
+  ここで、選択ボックスのリストを更新して、ページからタグを追加または削除できます。
 
    * タグを選択すると、選択ボックスの下に表示されます。このリストからタグを削除するには、x を使用します。
    * 空の選択ボックスに名前を入力すると、完全に新しいタグを入力できます。
 
       * Enter キーを押すと、新しいタグが作成されます。
       * 新しいタグが表示され、その右側に新しいタグであることを示す小さな星が表示されます。
+
    * ドロップダウン機能を使用すると、既存のタグから選択できます。
    * 選択ボックスのタグエントリの上にマウスポインターを合わせると、x が表示されます。この x を使用して、対象のタグをこのページから削除できます。
 
-   タグについての詳細情報は、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
+  タグについての詳細情報は、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
 * **ナビゲーション内で非表示にする**
 
-   使用されるサイトでページがページのナビゲーションに表示されるかどうかを示します。
+  使用されるサイトでページがページのナビゲーションに表示されるかどうかを示します。
 
 * **ブランディング**
 
-   各ページタイトルにブランド見出しを追加して、ページ間で一貫したブランドアイデンティティを適用します。この機能では、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)のリリース 2.14.0 以降に含まれているページコンポーネントを使用する必要があります。
+  各ページタイトルにブランド見出しを追加して、ページ間で一貫したブランドアイデンティティを適用します。この機能では、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)のリリース 2.14.0 以降に含まれているページコンポーネントを使用する必要があります。
 
    * **オーバーライド** - このページにブランド見出しを定義する場合にオンにします。
       * 子ページにも&#x200B;**オーバーライド**&#x200B;値が設定されている場合を除き、値はすべての子ページに継承されます。
@@ -60,74 +61,74 @@ ht-degree: 100%
       * この値は、「Cycling Tuscany | Always ready for the WKND」のように、ページタイトルの末尾にパイプ文字に続けて追加されます。
 * **ページタイトル**
 
-   ページで使用されるタイトルです。通常、タイトルコンポーネントで使用されます。空の場合は、**タイトル**&#x200B;が使用されます。
+  ページで使用されるタイトルです。通常、タイトルコンポーネントで使用されます。空の場合は、**タイトル**&#x200B;が使用されます。
 
 * **ナビゲーションタイトル**
 
-   ナビゲーション内で使用する別のタイトルを指定できます（より簡潔にする場合など）。空の場合は、**タイトル**&#x200B;が使用されます。
+  ナビゲーション内で使用する別のタイトルを指定できます（より簡潔にする場合など）。空の場合は、**タイトル**&#x200B;が使用されます。
 
 * **サブタイトル**
 
-   ページで使用されるサブタイトルです。
+  ページで使用されるサブタイトルです。
 
 * **説明**
 
-   ページの説明です。ページの目的や、必要に応じてその他の詳細を入力します。
+  ページの説明です。ページの目的や、必要に応じてその他の詳細を入力します。
 
 * **オンタイム**
 
-   公開されたページがアクティベートされる日時です。公開されると、このページは指定された時間まで休止状態になります。
+  公開されたページがアクティベートされる日時です。公開されると、このページは指定された時間まで休止状態になります。
 
-   すぐにページを公開する場合（通常のシナリオの場合）は、このフィールドを空のままにします。
+  すぐにページを公開する場合（通常のシナリオの場合）は、このフィールドを空のままにします。
 
 * **オフタイム**
 
-   公開されたページのアクティベートが解除される時間です。
+  公開されたページのアクティベートが解除される時間です。
 
-   すぐにアクションを実行する場合は、このフィールドを空のままにします。
+  すぐにアクションを実行する場合は、このフィールドを空のままにします。
 
 * **バニティ URL**
 
-   このページのバニティ URL を入力して、より短い URL やより表現力のある URL を指定できます。
+  このページのバニティー URL を入力できます。バニティー URL を入力すると、短い URL やより表現的な URL を指定できます。
 
-   例えば、web サイト `http://example.com,` のパス `/v1.0/startpage` で特定されるページに対して、バニティー URL が `welcome` に設定されている場合、`http://example.com/content/v1.0/startpage` のバニティー URL は `http://example.com/welcome` となります。
+  例えば、web サイト `http://example.com,` のパス `/v1.0/startpage` で特定されるページに対して、バニティー URL が `welcome` に設定されている場合、`http://example.com/content/v1.0/startpage` のバニティー URL は `http://example.com/welcome` となります。
 
-   >[!CAUTION]
-   >
-   >バニティ URL は次のような特性があります。
-   >
-   >* 一意である必要があるので、値がまだ別のページで使用されていないことを確認してください。
-   >* 正規表現パターンはサポートしていません。
-   >* 既存のページには設定しないでください。
+  >[!CAUTION]
+  >
+  >バニティ URL は次のような特性があります。
+  >
+  >* 一意である必要があるので、値がまだ別のページで使用されていないことを確認してください。
+  >* 正規表現パターンはサポートしていません。
+  >* 既存のページには設定しないでください。
+  >
 
-
-   また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。詳しくは、 [バニティー URL へのアクセスの有効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
+  また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。詳しくは、 [バニティー URL へのアクセスの有効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
 
 * **バニティ URL をリダイレクト**
 
-   ページにバニティ URL を使用するかどうかを示します。
+  ページにバニティ URL を使用するかどうかを示します。
 
 ### 詳細 {#advanced}
 
 * **言語**
 
-   ページの言語です。
+  ページの言語です。
 
 * **言語ルート**
 
-   ページが言語コピーのルートの場合にオンにする必要があります。
+  ページが言語コピーのルートの場合にオンにする必要があります。
 
 * **リダイレクト**
 
-   このページが自動的にリダイレクトするページを示します。
+  このページが自動的にリダイレクトするページを示します。
 
 * **デザイン**
 
-   このページで使用される[デザイン](/help/sites-developing/designer.md)を示します。
+  このページで使用される[デザイン](/help/sites-developing/designer.md)を示します。
 
 * **エイリアス**
 
-   このページで使用されるエイリアスを指定します。
+  このページで使用されるエイリアスを指定します。
 
    * 例えば、ページ `/content/wknd/us/en/magazine/members-only` に `private` というエイリアスを定義した場合、このページには `/content/wknd/us/en/magazine/private` を介してもアクセスできます。
    * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定されます。これは、リポジトリパスではなく、リソースにのみ影響を与えます。
@@ -136,38 +137,38 @@ ht-degree: 100%
 
 * **&lt;*path*> から継承**
 
-   ページが継承されるかどうか、およびどこから継承するかを示します。
+  ページが継承されるかどうか、およびどこから継承するかを示します。
 
 * **クラウド設定**
 
-   設定のパスです。
+  設定のパスです。
 
 * **許可されたテンプレート**
 
-   このサブブランチ内で[使用できるテンプレートのリストを定義](/help/sites-authoring/templates.md#allowingatemplate)します。
+  このサブブランチ内で[使用できるテンプレートのリストを定義](/help/sites-authoring/templates.md#allowingatemplate)します。
 
 * **有効化**（認証要件）
 
-   ページにアクセスするための認証を有効（または無効）にします。
+  ページにアクセスするための認証を有効（または無効）にします。
 
-   >[!NOTE]
-   >
-   >ページにアクセスできるユーザーグループは、「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブで定義します。
+  >[!NOTE]
+  >
+  >ページにアクセスできるユーザーグループは、「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブで定義します。
 
-   >[!CAUTION]
-   >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixin が存在することにより、CUG 設定を編集できます。`cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示されます。オプションおよび[権限](/help/sites-authoring/editing-page-properties.md#permissions)は編集できません。
-   >
-   >
-   >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
+  >[!CAUTION]
+  >
+  >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixin が存在することにより、CUG 設定を編集できます。`cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示されます。オプションおよび[権限](/help/sites-authoring/editing-page-properties.md#permissions)は編集できません。
+  >
+  >
+  >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
 * **ログインページ**
 
-   ログインに使用されるページです。
+  ログインに使用されるページです。
 
 * **設定を書き出し**
 
-   書き出し設定を指定します。
+  書き出し設定を指定します。
 
 ### サムネール {#thumbnail}
 
@@ -175,25 +176,25 @@ ht-degree: 100%
 
 * **プレビューを生成**
 
-   サムネールとして使用するページのプレビューを生成します。
+  サムネールとして使用するページのプレビューを生成します。
 
 * **画像をアップロード**
 
-   サムネールとして使用する画像をアップロードします。
+  サムネールとして使用する画像をアップロードします。
 
 * **画像を選択**
 
-   サムネールとして使用する既存のアセットを選択します。
+  サムネールとして使用する既存のアセットを選択します。
 
 * **元に戻す**
 
-   このオプションは、サムネールを変更した後で使用できるようになります。変更を維持しない場合は、保存前にその変更を元に戻すことができます。
+  このオプションは、サムネールを変更した後で使用できるようになります。変更を維持しない場合は、保存前にその変更を元に戻すことができます。
 
 ### ソーシャルメディア {#social-media}
 
 * **ソーシャルメディア共有**
 
-   ページで使用可能な共有オプションを定義します。使用可能なオプションを[コアコンポーネントの共有](https://helpx.adobe.com/jp/experience-manager/core-components/using/sharing.html)に公開します。
+  ページで使用可能な共有オプションを定義します。使用可能なオプションを[コアコンポーネントの共有](https://helpx.adobe.com/jp/experience-manager/core-components/using/sharing.html)に公開します。
 
    * **Facebook に対してユーザー共有を有効にする**
    * **Pinterest に対してユーザー共有を有効にする**
@@ -203,53 +204,54 @@ ht-degree: 100%
 
 * **Cloud Services**
 
-   [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
+  [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
 ### パーソナライズ機能 {#personalization}
 
 * **ContextHub 設定**
 
-   「[ContextHub 設定](/help/sites-developing/ch-configuring.md)」と「[セグメントのパス](/help/sites-administering/segmentation.md)」を選択します。
+  「[ContextHub 設定](/help/sites-developing/ch-configuring.md)」と「[セグメントのパス](/help/sites-administering/segmentation.md)」を選択します。
 
 * **ターゲティング設定**
 
-   [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/target-adobe-campaign.md)します。
+  [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/target-adobe-campaign.md)します。
 
-   >[!NOTE]
-   >このオプションを使用するには、ユーザーアカウントが `Target Adminstrators` グループに属している必要があります。
+  >[!NOTE]
+  >このオプションを使用するには、ユーザーアカウントが `Target Adminstrators` グループに属している必要があります。
 
 ### 権限 {#permissions}
 
 * **権限**
 
-   このタブでは、次のことができます。
+  このタブでは、次のことができます。
 
    * [権限を追加](/help/sites-administering/user-group-ac-admin.md)
    * [閉じられたユーザーグループを編集](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)
 
    * [有効な権限](/help/sites-administering/user-group-ac-admin.md)を表示
-   >[!CAUTION]
-   >
-   >「**権限**」タブでは、`granite:AuthenticationRequired` mixin が存在することにより、CUG 設定を編集できます。`cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
-   >
-   >
-   >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
-   >[!NOTE]
-   >
-   >「権限」タブでは、空の CUG グループの作成が許可されません。そのため、すべてのユーザーによるアクセスを拒否する簡単な方法として使用できます。これを行うには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループおよびアクセス権限の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
+  >[!CAUTION]
+  >
+  >「**権限**」タブでは、`granite:AuthenticationRequired` mixin が存在することにより、CUG 設定を編集できます。`cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+  >
+  >
+  >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
+
+  >[!NOTE]
+  >
+  >「権限」タブでは、空の CUG グループの作成が許可されません。そのため、すべてのユーザーによるアクセスを拒否する簡単な方法として使用できます。これを行うには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループおよびアクセス権限の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
 
 ### ブループリント {#blueprint}
 
 * **ブループリント**
 
-   [マルチサイト管理](/help/sites-administering/msm.md)でブループリントページのプロパティを定義します。変更がライブコピーに反映される状況を制御します。
+  [マルチサイト管理](/help/sites-administering/msm.md)でブループリントページのプロパティを定義します。変更がライブコピーに反映される状況を制御します。
 
 ### ライブコピー {#live-copy}
 
 * **ライブコピー**
 
-   [マルチサイト管理](/help/sites-administering/msm.md)でライブコピーページのプロパティを定義します。変更がブループリントから反映される状況を制御します。
+  [マルチサイト管理](/help/sites-administering/msm.md)でライブコピーページのプロパティを定義します。変更がブループリントから反映される状況を制御します。
 
 ### サイト構造 {#site-structure}
 
@@ -314,7 +316,7 @@ ht-degree: 100%
 >
 >プロパティの一括編集はアセットに対しても使用できます。操作はよく似ていますが、いくつか異なる点があります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/metadata.md)を参照してください。
 >
->また、[バルクエディター](/help/sites-administering/bulk-editor.md)も用意されています。このエディターでは、GQL（Google Query Language）を使用して、複数のページからコンテンツを検索できます。コンテンツをバルクエディターで直接編集してから、変更を元のページに保存できます。
+>また、 [バルクエディター](/help/sites-administering/bulk-editor.md):GQL(Google Query Language) を使用して複数のページからコンテンツを検索し、元のページに対する変更を保存する前に Bulk Editor で直接コンテンツを編集できます。
 
 次の方法を含む様々な方法で、複数のページを一括編集用に選択することができます。
 
@@ -338,35 +340,38 @@ ht-degree: 100%
 
 * **表示**
 
-   複数のページのページプロパティを編集する場合は、次の項目が表示されます。
+  複数のページのページプロパティを編集する場合は、次の項目が表示されます。
 
    * 影響を受けるページのリスト
 
       * 必要に応じて、選択／選択解除できます。
+
    * タブ
 
       * 単一ページのプロパティを表示する場合と同様に、プロパティがタブの下で順に並べられます。
+
    * プロパティのサブセット
 
       * 選択したすべてのページで使用できるプロパティ（および一括編集で使用できると明示的に定義されたプロパティ）が表示されます。
       * 選択するページを 1 つに減らすと、すべてのプロパティが表示されます。
+
    * 共通の値を持つ共通のプロパティ
 
       * 表示モードで表示されるのは、共通の値を持つプロパティのみです。
       * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます&#x200B;*。*&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
 
-   一般的な値を含むプロパティがない場合は、メッセージが表示されます。
+  一般的な値を含むプロパティがない場合は、メッセージが表示されます。
 
 * **編集**
 
-   複数のページのページプロパティを編集する場合は、次の点に注意してください。
+  複数のページのページプロパティを編集する場合は、次の点に注意してください。
 
    * 利用可能なフィールドの値を更新できます。
 
       * 新しい値は、「**完了**」を選択したときに、選択したすべてのページに適用されます。
       * フィールドが複数値（タグなど）の場合は、新しい値を追加するか、共通の値を削除できます。
-   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。
 
+   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。
 
 >[!NOTE]
 >

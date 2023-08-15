@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3025'
-ht-degree: 99%
+source-wordcount: '3017'
+ht-degree: 95%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 99%
 
 ### タッチ対応 UI {#a-touch-enabled-ui}
 
-AEM のユーザーインターフェイスは、タッチ操作に対応しています。タッチ対応インターフェイスを使用すると、タップ、長押し、スワイプなどのタッチジェスチャーを使用して、ソフトウェアを操作できます。これは、従来のデスクトップインターフェイスで使用していた、クリック、ダブルクリック、右クリック、マウスオーバーなどのマウスアクションによる操作方法とは大きく異なります。
+AEM のユーザーインターフェイスは、タッチ操作に対応しています。タッチ対応インターフェイスを使用すると、タップ、長押し、スワイプなどのジェスチャーを使用して、タッチを使用してソフトウェアを操作できます。 これは、従来のデスクトップインターフェイスで使用していた、クリック、ダブルクリック、右クリック、マウスオーバーなどのマウスアクションによる操作方法とは大きく異なります。
 
 AEM UI はタッチ対応なので、タッチデバイス（モバイルやタブレットなど）上のタッチジェスチャと、従来のデスクトップデバイス上のマウスアクションを使用できます。
 
@@ -97,11 +97,11 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
   </tr>
   <tr>
    <td>Communities</td>
-   <td>このコンソールを使用すると、<a href="/help/communities/overview.md#engagement-community">エンゲージメント</a>と<a href="/help/communities/overview.md#enablement-community">イネーブルメント</a>のために、<a href="/help/communities/sites-console.md">コミュニティサイト</a>を作成および管理できます。</td>
+   <td>このコンソールでは、 <a href="/help/communities/sites-console.md">コミュニティサイト</a> 対象： <a href="/help/communities/overview.md#engagement-community">エンゲージメント</a> および <a href="/help/communities/overview.md#enablement-community">実施可能</a>.</td>
   </tr>
   <tr>
    <td>Commerce</td>
-   <td>これにより、<a href="/help/commerce/cif-classic/administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td>
+   <td>これにより、 <a href="/help/commerce/cif-classic/administering/ecommerce.md">コマース</a> サイト。</td>
   </tr>
   <tr>
    <td>エクスペリエンスフラグメント</td>
@@ -109,7 +109,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
   </tr>
   <tr>
    <td>Forms</td>
-   <td>このコンソールを使用すると、<a href="/help/forms/home.md">フォームとドキュメント</a>を作成、管理、処理できます。</td>
+   <td>このコンソールでは、 <a href="/help/forms/home.md">フォームとドキュメント</a>.</td>
   </tr>
   <tr>
    <td>パーソナライズ機能</td>
@@ -121,7 +121,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=ja">スクリーン</a>では、あらゆる場所、あらゆるサイズの顧客向け画面をすべて管理できます。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=ja">Screens</a> では、あらゆる場所、あらゆるサイズの顧客向け画面をすべて管理できます。</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -188,7 +188,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
   ![パンくずリスト](assets/bh-05.png)
 
-  パネルの中央に位置し、常に現在選択している項目の説明を表示するパンくずリストを使用すると、特定のコンソール内を移動できます。Sites コンソールでは、web サイトのレベル間を移動できます。
+  パネルの中央に位置し、常に現在選択されている項目の説明を表示するパンくずリストを使用すると、特定のコンソール内を移動できます。 Sites コンソールでは、web サイトのレベル間を移動できます。
 
   パンくずリストのテキストをクリックすると、現在選択している項目の階層レベルをリストするドロップダウンが表示されます。エントリをクリックすると、その場所にジャンプします。
 
@@ -401,7 +401,7 @@ Web Experience Management のドキュメントを表示します。
 
 ![列表示](assets/bh-16.png)
 
-列表示を使用すると、一連のカスケード表示された列を通じて、コンテンツツリーを視覚的に移動できます。この表示では、web サイトのツリー構造を視覚化して移動できます。
+列表示を使用すると、一連のカスケード表示された列を通じて、コンテンツツリーを視覚的に移動できます。この表示では、Web サイトのツリー構造を視覚化してトラバースできます。
 
 一番左の列でリソースを選択すると、右の列に子リソースが表示されます。右側の列でリソースを選択すると、さらに右側の列にその子リソースが表示されます。
 

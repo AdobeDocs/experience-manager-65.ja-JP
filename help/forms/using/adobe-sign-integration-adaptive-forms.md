@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2055'
-ht-degree: 96%
+source-wordcount: '2054'
+ht-degree: 94%
 
 ---
 
@@ -181,7 +181,7 @@ AEM Forms と Adobe Acrobat Sign Solutions の接続を開始する前に、
 
 #### Adobe Sign チームとのリダイレクト URL とスコープの共有および資格情報の受信
 
-Adobe Acrobat Sign Solutions for Government チームは、AEM Forms と Adobe Acrobat Sign Solutions for Government を接続するための資格情報（クライアント ID とクライアント秘密鍵）を生成するために、Adobe Acrobat Sign アプリケーション（下記）で `re-direct URL` と特定のスコープを有効にする必要があります。
+Adobe Acrobat Sign for Government Solutions チームには、 `re-direct URL` Adobe Acrobat Signアプリケーション（以下に示す）でAEM Formsと政府機関との接続に使用する資格情報（クライアント ID とクライアント秘密鍵）を生成するために有効にするスコープ。
 
 前の節の最後の手順で作成してメモした `scopes`（下記）と `re-direct URL` を、Adobe Acrobat Sign Solutions for Government の担当者である [Adobe Professional Services チームメンバー](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password)と共有します。
 

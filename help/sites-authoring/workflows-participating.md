@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
-workflow-type: ht
-source-wordcount: '1526'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1525'
+ht-degree: 99%
 
 ---
 
@@ -172,7 +172,7 @@ ht-degree: 100%
 
 ### 参加者ステップでの前のステップの実行 {#performing-step-back-on-a-participant-step}
 
-あるステップまたは一連のステップを繰り返す必要がある場合は、前のステップに戻すことができます。これにより、ワークフローで前に行われたステップを再処理のために選択できます。指定したステップにワークフローが戻り、そこから続行されます。
+あるステップまたは一連のステップを繰り返す必要がある場合は、前のステップに戻すことができます。これにより、ワークフロー内で前に発生した再処理のステップを選択できます。 指定したステップにワークフローが戻り、そこから続行されます。
 
 このアクションでは、以下を指定できます。
 

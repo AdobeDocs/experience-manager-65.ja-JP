@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 51%
+source-wordcount: '404'
+ht-degree: 48%
 
 ---
 
@@ -41,9 +41,9 @@ ht-degree: 51%
    * **名前**：templates
    * **タイプ**：`sling:Folder`
 
-1. 右クリック `/apps/acs/analytics/components`. 「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
+1. 右クリック `/apps/acs/analytics/components`. 選択 **作成…** 続いて **コンポーネントを作成…** 開くダイアログでは、次の項目を指定できます。
 
-   * **ラベル**：`googleanalyticspage`
+   * **ラベル**： `googleanalyticspage`
    * **タイトル**：`Google Analytics Page`
    * **スーパータイプ**：`cq/cloudserviceconfigs/components/configpage`
    * **グループ**：`.hidden`
@@ -119,8 +119,8 @@ ht-degree: 51%
    * **プロパティ**：
 
       * **名前**：`fieldLabel`
-      * **タイプ**:文字列
-      * **値**:アカウント ID
+      * **タイプ**：文字列
+      * **値**：アカウント ID
 
       * **名前**：`fieldDescription`
       * **型**：`String`
@@ -208,6 +208,6 @@ ht-degree: 51%
 
    「**Google Analytics 設定**」を選択し、「**作成**」をクリックします。
 
-1. 入力 **アカウント ID**&#x200B;例： `AA-11111111-1`. 「**OK**」をクリックします。
-1. ページに移動し、新しく作成した設定をページプロパティの **Cloud Services** タブをクリックします。
+1. を入力します。 **アカウント ID**&#x200B;例： `AA-11111111-1`. 「**OK**」をクリックします。
+1. ページに移動し、新しく作成した設定をページプロパティの **Cloud Service** タブをクリックします。
 1. ページにはカスタムマークアップが追加されます。

@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2715'
 ht-degree: 77%
 
 ---
@@ -27,7 +27,7 @@ VLT ツールはコマンドラインから実行します。このドキュメ�
 
 Filevault ツールの概念と構造の完全な概要については、公式の [Apache Jackrabbit Filevault ドキュメント](https://jackrabbit.apache.org/filevault/index.html)の [Filevault の概要](https://jackrabbit.apache.org/filevault/overview.html)および [Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html) ページを参照してください。
 
-## VLT 使用の手引き {#getting-started-with-vlt}
+## VLT の概要 {#getting-started-with-vlt}
 
 VLT の使用を開始するには、次の手順を実行する必要があります。
 
@@ -337,7 +337,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 
 ### エクスポート {#export}
 
-次の場所にマウントされた Vault ファイルシステムを書き出します。 &lt;uri> ローカルファイルシステムの &lt;local-path>. サブツリーのみをエクスポートするには、オプションの &lt;jcr-path> を指定できます。
+次の場所にマウントされた Vault ファイルシステムを書き出します。 &lt;uri> をローカルファイルシステム ( ) に追加します。 &lt;local-path>. サブツリーのみをエクスポートするには、オプションの &lt;jcr-path> を指定できます。
 
 #### 構文 {#syntax}
 
@@ -390,7 +390,7 @@ vlt import http://localhost:4502/crx . /
 
 ### チェックアウト (co) {#checkout-co}
 
-JCR リポジトリからローカルファイルシステムへの最初のチェックアウトを、 &lt;uri> ローカルファイルシステムの &lt;local-path>. また、 &lt;jcrpath> 引数を使用して、リモートツリーのサブディレクトリをチェックアウトします。 META-INF ディレクトリにコピーするワークスペースフィルターを指定できます。
+JCR リポジトリからローカルファイルシステムへの最初のチェックアウトを、 &lt;uri> をローカルファイルシステム ( ) に追加します。 &lt;local-path>. また、 &lt;jcrpath> 引数を使用して、リモートツリーのサブディレクトリをチェックアウトします。 META-INF ディレクトリにコピーするワークスペースフィルターを指定できます。
 
 #### 構文 {#syntax-2}
 
@@ -554,7 +554,7 @@ revert -q|-R <file1> [<file2> ...]
 
 >[!NOTE]
 >
->このコマンドは、競合を意味的に解決したり、競合マーカーを削除したりしません。競合関連のアーティファクトファイルを削除するだけで、PATH を再びコミットできます。
+>このコマンドは、競合を意味的に解決したり、競合マーカーを削除したりするわけではありません。競合に関連するアーティファクトファイルを削除するだけで、PATH を再びコミットできます。
 
 #### 構文 {#syntax-9}
 
@@ -869,7 +869,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 * `.vlt-sync.log`：同期中に実行された操作に関する情報を格納するログファイル。
 * `.vlt-sync-filter.xml`：リポジトリのどの部分を同期するかを定義するフィルター。このファイルの形式については、[フィルターが適用されたチェックアウトの実行](#performing-a-filtered-checkout)を参照してください。
 
-`.vlt-sync-config.properties` ファイルを使用すると、次のプロパティを設定できます。
+The `.vlt-sync-config.properties` ファイルでは、次のプロパティを設定できます。
 
 **無効** 同期のオンとオフを切り替えます。デフォルトでは、このパラメーターは false に設定されており、同期が行われます。
 

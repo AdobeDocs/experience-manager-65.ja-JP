@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3327'
-ht-degree: 98%
+source-wordcount: '3325'
+ht-degree: 97%
 
 ---
 
@@ -137,7 +137,7 @@ Sling を使用して、特定のエンティティをレンダリングする�
 
 リクエストを分解し、必要な情報を抽出します。リポジトリーで、リクエストされたリソース（コンテンツノード）を検索します。
 
-* 最初の Sling は、リクエストで指定された場所にノードが存在するかどうかを確認します。例： `../content/corporate/jobs/developer.html`
+* 最初の Sling は、リクエストで指定された場所にノードが存在するかどうかを確認します。例えば、 `../content/corporate/jobs/developer.html`
 * ノードが見つからない場合、拡張機能は削除され、検索が繰り返されます。例： `../content/corporate/jobs/developer`
 * それでもノードが見つからない場合、Sling は HTTP コード 404（Not Found）を返します。
 
@@ -300,7 +300,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 ## OSGi {#osgi}
 
-OSGi は、モジュール式アプリケーションおよびライブラリを開発およびデプロイするためのアーキテクチャを定義します（Dynamic Module System for Java とも呼ばれる）。OSGi コンテナを使用すると、アプリケーションを個々のモジュール（追加のメタ情報を含む jar ファイルで、OSGi 用語でバンドルと呼ばれます）に分割し、それらの間の相互依存関係を次の機能で管理できます。
+OSGi は、モジュール式アプリケーションおよびライブラリを開発およびデプロイするためのアーキテクチャを定義します（Dynamic Module System for Java とも呼ばれる）。OSGi コンテナを使用すると、アプリケーションを個々のモジュール（追加のメタ情報を含む jar ファイル、OSGi の用語では「bundles」）に分割し、それらの間の相互依存関係を次の方法で管理できます。
 
 * コンテナ内に実装されているサービス
 * コンテナとアプリケーションの間の契約
@@ -315,7 +315,7 @@ OSGi は、モジュール式アプリケーションおよびライブラリを
 >
 >特に、基礎教育に関するページには、プレゼンテーションやチュートリアルのコレクションが収められています。
 
-このアーキテクチャにより、Sling をアプリケーション固有のモジュールで拡張できます。Sling、したがって CQ5 は、OSGI（Open Services Gateway initiative）の [Apache Felix](https://felix.apache.org/documentation/index.html) 実装を使用しており、OSGi Service Platform Release 4 バージョン 4.2 の仕様に基づいています。どちらも、OSGi フレームワーク内で実行される OSGi バンドルの集まりです。
+このアーキテクチャを使用すると、Sling をアプリケーション固有のモジュールで拡張できます。 Sling、したがって CQ5 は、OSGI（Open Services Gateway initiative）の [Apache Felix](https://felix.apache.org/documentation/index.html) 実装を使用しており、OSGi Service Platform Release 4 バージョン 4.2 の仕様に基づいています。どちらも、OSGi フレームワーク内で実行される OSGi バンドルの集まりです。
 
 これにより、インストール内のどのパッケージでも、以下のアクションを実行できます。
 
@@ -325,7 +325,7 @@ OSGi は、モジュール式アプリケーションおよびライブラリを
 * 更新
 * アンインストール
 * 現在のステータスの確認
-* 特定のバンドルに関する詳細な情報（シンボリック名、バージョン、場所など）にアクセス
+* 特定のバンドルに関する詳細な情報（シンボリック名、バージョン、場所など）にアクセスする
 
 詳しくは、[Web コンソール](/help/sites-deploying/web-console.md)、[OSGI 設定](/help/sites-deploying/configuring-osgi.md)、および [OSGi 設定の指定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください。
 

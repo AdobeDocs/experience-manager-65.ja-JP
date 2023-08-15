@@ -1,8 +1,8 @@
 ---
 title: AEM インボックスでの Forms アプリケーションとタスクの管理
 seo-title: Manage Forms applications and tasks in AEM Inbox
-description: AEM インボックスを使用することで、アプリケーションの送信やタスクの管理を通じて Forms 中心のワークフローを起動できます。
-seo-description: AEM Inbox allows you to launch Forms-centric workflows through submitting applications and manage tasks.
+description: AEM Inbox を使用すると、アプリケーションの送信やタスクの管理を通じて、Forms中心のワークフローを起動できます。
+seo-description: AEM Inbox lets you launch Forms-centric workflows through submitting applications and manage tasks.
 uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: ht
-source-wordcount: '1098'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1096'
+ht-degree: 97%
 
 ---
 
@@ -25,7 +25,7 @@ Forms 中心のワークフローを起動またはトリガーする多くの�
 
 インボックスのユーザーインターフェイスでは、リストビューまたはカレンダービューでタスクを表示できます。ビューの設定もできます。様々なパラメーターに基づいて、タスクをフィルターできます。ビューとフィルターについて詳しくは、「[インボックス](/help/sites-authoring/inbox.md)」を参照してください。
 
-要約すると、インボックスでは新しいアプリケーションを作成して割り当てタスクを管理できます。
+要約すると、インボックスでは、新しいアプリを作成し、割り当てられたタスクを管理できます。
 
 >[!NOTE]
 >
@@ -132,13 +132,13 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
 
    * 以下の表で指定されているそれぞれのプロパティを使用して、CRX DE の `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` に以下のノードを作成します。
 
-      | ノード | プロパティ | タイプ |
-      |---|---|---|
-      | sharedWith | sharedWith | 文字列 |
-      | locked | locked | ブール値 |
-      | returned | returned | ブール値 |
-      | allowInboxSharing | allowInboxSharing | ブール値 |
-      | allowExplicitSharing | allowExplicitSharing | ブール値 |
+     | ノード | プロパティ | タイプ |
+     |---|---|---|
+     | sharedWith | sharedWith | 文字列 |
+     | locked | locked | ブール値 |
+     | returned | returned | ブール値 |
+     | allowInboxSharing | allowInboxSharing | ブール値 |
+     | allowExplicitSharing | allowExplicitSharing | ブール値 |
 
 
    * AEM パッケージを介してインデックスをデプロイします。[AEM アーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=ja)プロジェクトを使用して、デプロイ可能な AEM パッケージを作成できます。以下のサンプルコードを使用して、AEM アーキタイププロジェクトにインデックスを追加します。

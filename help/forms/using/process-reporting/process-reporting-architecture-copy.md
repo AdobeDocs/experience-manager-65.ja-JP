@@ -8,10 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 discoiquuid: a1af9920-5d2a-462f-bdee-ccec4c047c5b
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 100%
+source-wordcount: '344'
+ht-degree: 96%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Process Reporting は、JEE 上の AEM Forms のレポートモジュールです。
 
-Process Reporting を使用すると、AEM Forms のプロセスとタスクに関するレポートを実行できます。
+プロセスレポートを使用すると、AEM Formsのプロセスとタスクに関するレポートを実行できます。
 
 Process Reporting は、組み込みの Process Reporting リポジトリを使用して Forms データを公開します。その後、そのデータを使用してレポートを実行します。
 

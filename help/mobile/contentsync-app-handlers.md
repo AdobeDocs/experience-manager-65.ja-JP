@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 * ***type - String*** - mobileapppages
 * ***path - String***  — ページへのパス
-* ***extension - String***  — リクエストで使用する拡張子。 ページの場合、これはほとんど常にです *html*&#x200B;ですが、他の方法もまだ可能です。
+* ***extension - String***  — リクエストで使用する拡張子。 ページの場合、これはほとんど常にです。 *html*&#x200B;ですが、その他の方法はまだ可能です。
 
 * ***selector - String***  — オプションのセレクター（ドット区切り）。 一般的な例は次のとおりです。 *タッチ* モバイルバージョンのページをレンダリングする場合。
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 * ***includeImages — ブール値***  — 画像を含める必要があるかどうかを指定する、オプションのブール型プロパティ。 デフォルト値は *true*.
 
-   * デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントのみが含められます。
+   * デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントのみが含めると見なされます。
 
 * ***includeVideos - Boolean***  — ビデオを含める必要があるかどうかを指定する、オプションのブール型プロパティ。 デフォルト値は *true*.
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 * ***type - String - mobilecontentlisting***
 * ***パス*** - String — 空のままにします。有効なハンドラーとして表示するには存在する必要がありますが、パスは現在の ContentSync キャッシュと推測されます。 この値は無視されます。
 * ***targetRootDirectory* -**String — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***注文 — 長* -**コンテンツ同期でこのハンドラーを実行する順序です。 この数は、100 など他のすべてのハンドラーよりも大きく設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
+* ***注文 — 長い* -**コンテンツ同期でこのハンドラーを実行する順序です。 この数は、100 など他のすべてのハンドラーよりも大きく設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
 
 ```xml
 {
@@ -94,7 +94,7 @@ ht-degree: 1%
 * ***type - String - mobilecontentpackageslisting***
 * ***パス&#x200B;**-**文字列***  — アプリシェルのパス（pge-type=app-instance のノード）。
 * ***targetRootDirectory - String***  — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***注文 — 長* -**コンテンツ同期でこのハンドラーを実行する順序です。 この数は、100 など他のすべてのハンドラーよりも大きく設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
+* ***注文 — 長い* -**コンテンツ同期でこのハンドラーを実行する順序です。 この数は、100 など他のすべてのハンドラーよりも大きく設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
 
 >[!NOTE]
 >
@@ -127,7 +127,7 @@ ht-degree: 1%
 このハンドラーは、AEM App Shell ContentSync 設定（pge-type=のノード）で使用する必要があります[app-instance]) をクリックします。
 
 * ***type - String* - **widgetconfig
-* ***パス&#x200B;**-**文字列***  — アプリシェルの子ノード（pge-type=のノード）へのパス[app-instance]) をクリックします。
+* ***パス&#x200B;**-**文字列***  — 任意のアプリシェルの子ノード（pge-type=のノード）へのパス[app-instance]) をクリックします。
 * ***targetRootDirectory - String***  — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
 * ***targetIconDirectory - String***  — アプリのアイコンを配置するディレクトリ。
 
@@ -143,7 +143,7 @@ ht-degree: 1%
 
 **notificationsconfig** デバイスで必要な通知設定を抽出します。 プロパティは、アプリに関連付けられた各プッシュサービスクラウドサービス設定から抽出されます。
 
-クラウドサービスの jcr:content ノード内の非AEMプロパティが抽出され、 **pge-notifications-config.json** アプリコンテンツの www ルートに含める JSON ファイル。
+クラウドサービスの jcr:content ノード内のAEM以外のプロパティが抽出され、 **pge-notifications-config.json** アプリコンテンツの www ルートに含める JSON ファイル。
 
 AEMプロパティは、「cq」、「sling」または「jcr」という名前空間が付けられたプロパティです。 content-sync config ノードの「excludeProperties」プロパティを使用して、他のプロパティを除外できます。
 
@@ -162,7 +162,7 @@ AEMプロパティは、「cq」、「sling」または「jcr」という名前�
 * ***autoCreateFirstUpdateBeforeImport — ブール値*** - true の場合、初期値を作成 **更新** が存在しない場合は、インポート前の target 設定で
 
 * ***autoFillBeforeImport — ブール値*** - true の場合は、読み込む前にターゲット設定を更新または入力します
-* ***configSuffix - String*** - app-content の「phonegap-exportTemplate」プロパティで示されるパスに追加する文字列。 これは、異なる書き出しテンプレートを区別するために使用できます。 例えば、このプロパティを **&quot;-dev&quot;** 示す *&quot;/../../../appconfig-dev&quot;* を ( *&quot;/../../../appconfig&quot;*) をクリックします。
+* ***configSuffix - String*** - app-content の「phonegap-exportTemplate」プロパティで示されるパスに追加する文字列。 これは、異なる書き出しテンプレートを区別するために使用できます。 例えば、このプロパティを **&quot;-dev&quot;** 示す *&quot;/../../../appconfig-dev&quot;* 使用する必要がある ( *&quot;/../../../appconfig&quot;*) をクリックします。
 
 **app-assets** アプリインスタンスに関連付けられているすべてのアセットが含まれます。 このハンドラーには、指定されたパスの下に見つかったアセットと、アプリインスタンスの appAssetPath プロパティで参照されているアセットが含まれます。
 
@@ -200,7 +200,7 @@ mobileappsoffers ハンドラーは mobileappspages ハンドラーを拡張し�
 
 * 設定を実行
 * 設定を書き出すか、デバイスでレビューします
-* レンダリングが失敗した場合は、見つからないかを確認します *styles/assets/libs* または、 *styles/assets/libs*
+* レンダリングが失敗した場合は、見つからないかを確認します。 *styles/assets/libs* または、 *styles/assets/libs*
 
 **ログ** パッケージの OSGI ロガー設定を使用した ContentSync デバッグログの有効化 `com.day.cq.contentsync` これにより、実行されたハンドラーを追跡し、ハンドラーがキャッシュを更新し、キャッシュの更新をレポートしたかどうかを追跡できます。
 

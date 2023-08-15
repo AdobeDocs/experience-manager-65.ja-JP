@@ -1,17 +1,13 @@
 ---
 title: 「通信を作成」UI へのカスタムアクションまたはボタンの追加
-seo-title: Add custom action/button in Create Correspondence UI
 description: 通信を作成 UI でカスタムアクション/ボタンを追加する方法を説明します。
-seo-description: Learn how to add custom action/button in Create Correspondence UI
-uuid: 1b2b00bb-93ef-4bfe-9fc5-25c45e4cb4b1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1880'
 ht-degree: 79%
@@ -33,7 +29,7 @@ Correspondence Management ソリューションを使用すると、通信を作
 * CRX および JavaScript に関する知識
 * LiveCycleサーバ
 
-## シナリオ：通信を作成ユーザーインターフェイスでボタンを作成し、レターをレビュー用に送信します {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
+## シナリオ：通信を作成ユーザーインターフェイスでボタンを作成してレビュー用にレターを送信する {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
 
 「通信を作成」ユーザーインターフェイスに、アクション付きのボタン（ここではレビュー用のレターを送信）を追加するには、次の操作を行います。
 
@@ -323,7 +319,7 @@ AdobeAsset Composer 構築ブロックバンドルを再起動すると、通信
       '</div>';
       ```
 
-### アクションを有効にするLiveCycleプロセスを追加します <span class="acrolinxCursorMarker"></code>取り扱い {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### アクションを有効にするLiveCycleプロセスを追加します <span class="acrolinxCursorMarker"></code>処理中 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 このシナリオでは、以下のコンポーネントを有効にします。これらのコンポーネントは、添付されている components.zip ファイルに含まれています。
 

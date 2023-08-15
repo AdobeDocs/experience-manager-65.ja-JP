@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2465'
-ht-degree: 50%
+source-wordcount: '2462'
+ht-degree: 49%
 
 ---
 
@@ -216,7 +216,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 
 **resourceType**
 
-* 含めるリソースのリソースタイプ。 リソースタイプが設定されている場合、パスはリソースオブジェクトへの正確なパスである必要があります。この場合、パスへのパラメーター、セレクターおよび拡張の追加はサポートされません。
+* 含めるリソースのリソースタイプ。 リソースタイプを設定した場合、パスはリソースオブジェクトへの正確なパスである必要があります。この場合、パスへのパラメーター、セレクターおよび拡張子の追加はサポートされません。
 * 含めるリソースが、リソースに解決できない path 属性で指定されている場合、タグは、パスとこのリソースタイプから合成リソースオブジェクトを作成できます。
 * path と resourceType または script を指定する必要があります。
 
@@ -248,7 +248,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 `<cq:include>` と `<sling:include>` のどちらを使用するべきですか？
 
 * Adobe では、AEM コンポーネントを開発する場合に `<cq:include>` を使用することをお勧めします。
-* `<cq:include>` を使用すると、script 属性の使用時に、名前を指定してスクリプトファイルを直接インクルードできます。これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
+* `<cq:include>` script 属性を使用する際に、名前を使用してスクリプトファイルを直接含めることができます。 これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
 
 ### &lt;cq:includeClientLib> {#cq-includeclientlib}
 
@@ -304,7 +304,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 
 **component**
 
-* 現在のリソースの現在のAEMコンポーネントオブジェクト (com.day.cq.wcm.api.components.Component インターフェイス )
+* 現在のリソースの現在のAEMコンポーネントオブジェクト (com.day.cq.wcm.api.components.Component インターフェイス )。
 
 **currentDesign**
 
@@ -320,7 +320,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 
 **designer**
 
-* デザイン情報へのアクセスに使用する designer オブジェクト (com.day.cq.wcm.api.designer.Designer インターフェイス )
+* デザイン情報へのアクセスに使用する designer オブジェクト (com.day.cq.wcm.api.designer.Designer インターフェイス )。
 
 **editContext**
 
@@ -336,15 +336,15 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 
 **プロパティ**
 
-* 現在のリソースの properties オブジェクト (org.apache.sling.api.resource.ValueMap)
+* 現在のリソースの properties オブジェクト (org.apache.sling.api.resource.ValueMap)。
 
 **resourceDesign**
 
-* リソースページのデザインオブジェクト (com.day.cq.wcm.api.designer.Design インターフェイス )
+* リソースページのデザインオブジェクト (com.day.cq.wcm.api.designer.Design インターフェイス )。
 
 **resourcePage**
 
-* リソースページオブジェクト (com.day.cq.wcm.api.Page インターフェイス )
+* リソースページオブジェクト (com.day.cq.wcm.api.Page インターフェイス )。
 * このタグの属性を以下に示します。
 
 **requestName**
@@ -528,7 +528,7 @@ Sling タグライブラリには、便利な Sling 関数が含まれていま�
 
 **resourceType**
 
-* 含めるリソースのリソースタイプ。 リソースタイプが設定されている場合、パスはリソースオブジェクトへの正確なパスである必要があります。この場合、パスへのパラメーター、セレクターおよび拡張の追加はサポートされません。
+* 含めるリソースのリソースタイプ。 リソースタイプを設定した場合、パスはリソースオブジェクトへの正確なパスである必要があります。この場合、パスへのパラメーター、セレクターおよび拡張子の追加はサポートされません。
 * 含めるリソースが、リソースに解決できない path 属性で指定されている場合、タグは、パスとこのリソースタイプから合成リソースオブジェクトを作成できます。
 
 **replaceSelectors**
@@ -545,7 +545,7 @@ Sling タグライブラリには、便利な Sling 関数が含まれていま�
 
 >[!NOTE]
 >
->`<sling:include>` タグに含まれるリソースとスクリプトの解像度は、通常の sling URL の解像度と同じです。デフォルトでは、現在のリクエストのセレクターや拡張子などが、含まれるスクリプトにも使用されます。 これらは、タグ属性を使用して変更できます。例： `replaceSelectors="foo.bar"` では、セレクターを上書きできます。
+>`<sling:include>` タグに含まれるリソースとスクリプトの解像度は、通常の sling URL の解像度と同じです。デフォルトでは、現在のリクエストのセレクターや拡張子などが、含まれるスクリプトにも使用されます。 これらは、タグ属性（例： ）を使用して変更できます。 `replaceSelectors="foo.bar"` を使用すると、セレクターを上書きできます。
 
 例：
 
@@ -605,7 +605,7 @@ Sling タグライブラリには、便利な Sling 関数が含まれていま�
 
 **ログ**
 
-* スクリプト内から Sling ログシステムにログを記録する SLF4J ロガーを提供します。例えば、log.info(&quot;Executing my script&quot;) のようにします。
+* スクリプト内から Sling ログシステムにログを記録するための SLF4J ロガーを提供します。例えば、log.info(&quot;Executing my script&quot;) です。
 
 * このタグの属性を以下に示します。
 
@@ -630,7 +630,7 @@ l **ogName resourceResolverName**
 
 ## JSTL タグライブラリ {#jstl-tag-library}
 
-この [JavaServer Pages Standard Tag Library](https://www.oracle.com/java/technologies/java-server-tag-library.html) には、多くの便利な標準タグが含まれています。 コア、書式設定、関数の各タグライブラリは、 `/libs/foundation/global.jsp` 次のスニペットに示すように。
+The [JavaServer Pages Standard Tag Library](https://www.oracle.com/java/technologies/java-server-tag-library.html) には、多くの便利な標準タグが含まれています。 コア、書式設定、関数の各タグライブラリは、 `/libs/foundation/global.jsp` 次のスニペットに示すように。
 
 ### /libs/foundation/global.jsp からの抜粋 {#extract-of-libs-foundation-global-jsp}
 

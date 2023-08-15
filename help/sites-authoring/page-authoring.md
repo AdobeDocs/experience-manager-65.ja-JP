@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 91%
+source-wordcount: '313'
+ht-degree: 86%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 91%
 シングルまたはスローのダブルクリック/タップの両方で、適切なツールバーが表示されます（シングルはインプレース編集ツールバー、その後スローはフルツールバー）。
 
 * **[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)**
-レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。
+これにより、レスポンシブグリッド内にコンポーネントを配置できる段落システムが提供されます。
 
 * **入力中の検索**
 特定のシナリオ（編集ダイアログでのパスの選択など）において、AEM インターフェイスを使用したコンテンツの検索では、クエリを入力中に動的に一致するものが表示されます。

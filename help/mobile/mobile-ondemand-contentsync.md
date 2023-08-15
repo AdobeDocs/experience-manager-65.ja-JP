@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2976'
+source-wordcount: '2974'
 ht-degree: 0%
 
 ---
@@ -49,12 +49,12 @@ ht-degree: 0%
 
 コンテンツ同期設定を作成して、クライアントに配信される ZIP ファイルのコンテンツを指定します。 任意の数のコンテンツ同期設定を作成できます。 各設定には、識別のための名前が付けられます。
 
-コンテンツ同期設定を作成するには、 `cq:ContentSyncConfig` リポジトリのノードに、 `sling:resourceType` プロパティを `contentsync/config`. この `cq:ContentSyncConfig` ノードはリポジトリ内の任意の場所に配置できますが、AEMパブリッシュインスタンス上のユーザーがそのノードにアクセスできる必要があります。 したがって、以下にノードを追加する必要があります。 `/content`.
+コンテンツ同期設定を作成するには、 `cq:ContentSyncConfig` リポジトリのノードに、 `sling:resourceType` プロパティをに設定 `contentsync/config`. The `cq:ContentSyncConfig` ノードはリポジトリ内の任意の場所に配置できますが、AEMパブリッシュインスタンス上のユーザーがそのノードにアクセスできる必要があります。 したがって、以下にノードを追加する必要があります。 `/content`.
 
 コンテンツ同期 ZIP ファイルのコンテンツを指定するには、cq:ContentSyncConfig ノードに子ノードを追加します。 各子ノードの次のプロパティは、含めるコンテンツ項目と、その追加時の処理方法を識別します。
 
-* `path`:コンテンツの場所。
-* `type`:コンテンツの処理に使用する設定タイプの名前。 複数のタイプを使用できます。詳しくは、を参照してください。 *設定タイプ*.
+* `path`：コンテンツの場所。
+* `type`：コンテンツの処理に使用する設定タイプの名前。 複数のタイプを使用できます。詳しくは、を参照してください。 *設定タイプ*.
 
 詳しくは、 *コンテンツ同期設定の例* を参照してください。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->コンテンツ同期フレームワークは、アセットとデザイン関連のファイルの依存関係がコンテンツ同期パッケージに含まれているかどうかを確認しません。 必要なファイルをすべて ZIP ファイルに含めてください。
+>コンテンツ同期フレームワークは、アセットとデザイン関連のファイルの依存関係がコンテンツ同期パッケージに含まれているかどうかを確認しません。 ZIP ファイルに必要なファイルをすべて含めてください。
 
 ### コンテンツ同期ダウンロードへのアクセスの設定 {#configuring-access-to-content-sync-downloads}
 
@@ -76,9 +76,9 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 
 次の場合、 [Web コンソールを使用したサービスの設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)の場合は、ユーザーまたはグループの名前を Fallback Cache Authorizable プロパティの値として入力します。
 
-次の場合、 [リポジトリでの設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用する場合は、このサービスに関する次の情報を使用します。
+次の場合、 [リポジトリでの設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)、サービスに関する次の情報を使用します。
 
-* PID:com.day.cq.contentsync.impl.ContentSyncManagerImpl
+* PID: com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * プロパティ名：contentsync.fallback.authorizable
 
 #### コンテンツ同期キャッシュのダウンロードアクセスの上書き {#overriding-download-access-for-a-content-sync-cache}
@@ -91,7 +91,7 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 
 例えば、ユーザーがアプリを使用して、コンテンツ同期から直接更新をインストールできるようにします。 すべてのユーザーが更新をダウンロードできるようにするには、authorizable プロパティの値をに設定します。 `everyone`.
 
-この `cq:ContentSyncConfig` ノードに authorizable プロパティがない場合、Day CQ Content Sync Manager サービスの Fallback Cache Authorizable プロパティ用に設定されているデフォルトのユーザーまたはグループが、誰をダウンロードできるかを決定します。
+次の場合、 `cq:ContentSyncConfig` ノードに authorizable プロパティがない場合、Day CQ Content Sync Manager サービスの Fallback Cache Authorizable プロパティ用に設定されているデフォルトのユーザーまたはグループが、誰をダウンロードできるかを決定します。
 
 ### コンテンツ同期キャッシュを更新するためのユーザーの設定 {#configuring-the-user-for-updating-a-content-sync-cache}
 
@@ -105,7 +105,7 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 * 型：`String`
 * 値：更新を実行できるユーザーまたはグループの名前。
 
-この `cq:ContentSyncConfig` ノードがありません `updateuser` プロパティ、デフォルト `anonymous` ユーザーがキャッシュを更新します。
+次の場合、 `cq:ContentSyncConfig` ノードがありません `updateuser` プロパティ（デフォルト） `anonymous` ユーザーがキャッシュを更新します。
 
 ### 設定タイプ {#configuration-types}
 
@@ -118,14 +118,14 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 **コンテンツ** 標準を使用してコンテンツをレンダリング [Sling リクエストの処理](/help/sites-developing/the-basics.md#sling-request-processing).
 
 * **パス**  — 出力するリソースのパス。
-* **拡張**  — リクエストで使用する拡張子。 一般的な例は次のとおりです。 *html* および *json*&#x200B;ですが、他の拡張は可能です。
+* **拡張**  — リクエストで使用する拡張子。 一般的な例は次のとおりです。 *html* および *json*&#x200B;ですが、その他の拡張は可能です。
 
 * **セレクター**  — オプションのセレクター（ドット区切り）。 一般的な例は次のとおりです。 *タッチ* （ページのモバイルバージョンをレンダリングする場合）または *無限* JSON 出力用。
 
 **clientlib** - JavaScript または CSS クライアントライブラリをパッケージ化します。
 
 * **パス**  — クライアントライブラリのルートへのパス。
-* **拡張**  — クライアントライブラリのタイプ。 これは、次のいずれかに設定する必要があります。 *js* または *css* 今
+* **拡張**  — クライアントライブラリのタイプ。 これは、次のいずれかに設定する必要があります。 *js* または *css* 今すぐ
 
 **アセット**
 
@@ -142,7 +142,7 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 **ページ** - AEMページをレンダリングし、参照元のアセットを収集します。
 
 * **パス**  — ページへのパス。
-* **拡張**  — リクエストで使用する拡張子。 ページの場合、これはほとんど常にです *html*&#x200B;ですが、他の方法もまだ可能です。
+* **拡張**  — リクエストで使用する拡張子。 ページの場合、これはほとんど常にです。 *html*&#x200B;ですが、その他の方法はまだ可能です。
 
 * **セレクター**  — オプションのセレクター（ドット区切り）。 一般的な例は次のとおりです。 *タッチ* モバイルバージョンのページをレンダリングする場合。
 
@@ -150,22 +150,22 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 
 * **includeImages**  — 画像を含める必要があるかどうかを指定する、オプションのブール型プロパティ。 デフォルト値は *true*.
 
-  デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントのみが含められます。 リソースタイプを追加するには、 **Day CQ WCM Pages Update Handler** Web コンソールの
+  デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントのみが含めると見なされます。 リソースタイプを追加するには、 **Day CQ WCM Pages Update Handler** Web コンソールのをクリックします。
 
 **書き換え** — rewrite ノードは、書き出すページでリンクを書き換える方法を定義します。 書き換えられたリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指す場合があります。
 
-この `rewrite` ノードは、以下に配置する必要があります。 `page` ノード。
+The `rewrite` ノードは、以下に配置する必要があります。 `page` ノード。
 
-この `rewrite` ノードには、次の 1 つ以上のプロパティを含めることができます。
+The `rewrite` ノードには、次の 1 つ以上のプロパティを含めることができます。
 
 * `clientlibs`:clientlibs のパスを書き換えます。
 
-* `images`:画像のパスを書き換えます。
-* `links`:リンクのパスを書き換えます。
+* `images`：画像のパスを書き換えます。
+* `links`：リンクのパスを書き換えます。
 
 各プロパティは、次のいずれかの値を持つことができます。
 
-* `REWRITE_RELATIVE`:ファイルシステム上の page .html ファイルの相対位置を使用してパスを書き換えます。
+* `REWRITE_RELATIVE`：ファイルシステム上の page .html ファイルの相対位置を使用してパスを書き換えます。
 
 * `REWRITE_EXTERNAL`:AEM [Externalizer サービス](/help/sites-developing/externalizer.md).
 
@@ -227,7 +227,7 @@ AEMサービスの名前： **PathRewriterTransformerFactory** では、書き�
 
 ### コンテンツ同期コンソール {#the-content-sync-console}
 
-コンテンツ同期コンソールには、リポジトリ内のすべてのコンテンツ同期設定（タイプのすべてのノード）がリストされます `cq:ContentSyncConfig`) と各設定で、次の操作を実行できます。
+コンテンツ同期コンソールには、リポジトリ内のすべてのコンテンツ同期設定（タイプのすべてのノード）がリストされます `cq:ContentSyncConfig`) およびを設定ごとに使用して、次の操作を実行できます。
 
 * キャッシュを更新します。
 * キャッシュをクリアします。
@@ -253,7 +253,7 @@ AEMサービスの名前： **PathRewriterTransformerFactory** では、書き�
 * `com.day.cq.contentsync.handler.ContentUpdateHandler`  — すべての更新ハンドラーが実装する必要があるインターフェイス
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - Sling を使用してリソースのレンダリングを簡素化する抽象クラス
 
-クラスを OSGi コンポーネントファクトリとして登録し、バンドルの OSGi コンテナにデプロイします。 これは、 [Maven SCR プラグイン](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) JavaDoc タグまたは注釈の使用 次の例は、JavaDoc のバージョンを示しています。
+クラスを OSGi コンポーネントファクトリとして登録し、バンドルの OSGi コンテナにデプロイします。 これは、 [Maven SCR プラグイン](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) JavaDoc タグまたは注釈の使用。 次の例は、JavaDoc のバージョンを示しています。
 
 ```java
 /*
@@ -273,7 +273,7 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 }
 ```
 
-この *工場* 定義には、共通インターフェイスとカスタムタイプをスラッシュで区切って含めます。 この方法では、コンテンツ同期フレームワークが設定エントリでカスタムタイプを認識し、カスタムクラスのインスタンスを検索して作成できます。 次の節では、カスタム更新ハンドラの具体的な例を示します。
+次の点に注意してください。 *工場* 定義には、共通インターフェイスとカスタムタイプをスラッシュで区切って含めます。 この方法では、コンテンツ同期フレームワークが設定エントリでカスタムタイプを認識し、カスタムクラスのインスタンスを検索して作成できます。 次の節では、カスタム更新ハンドラの具体的な例を示します。
 
 >[!CAUTION]
 >
@@ -347,7 +347,7 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 }
 ```
 
-この `LogoUpdateHandler` クラスは、 `ContentUpdateHandler` インターフェイスの `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` メソッドは、複数の引数を取ります。
+The `LogoUpdateHandler` クラスは、 `ContentUpdateHandler` インターフェイスの `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` メソッドは、複数の引数を取ります。
 
 * A `ConfigEntry` このハンドラーが呼び出される設定エントリとそのプロパティへのアクセスを提供するインスタンス。
 * A `lastUpdated` コンテンツ同期が最後にキャッシュを更新した時刻を示すタイムスタンプ。 その後に変更されていないコンテンツは、ハンドラーによって更新されないでください。
@@ -361,9 +361,9 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 
 ## クライアントでのコンテンツの使用 {#using-the-content-on-the-client}
 
-コンテンツ同期で提供されるモバイルアプリでコンテンツを使用するには、HTTP または HTTPS 接続を介してコンテンツをリクエストする必要があります。 その結果、取得したコンテンツ（ZIP ファイルにパック）を抽出し、モバイルデバイス上でローカルに保存することができます。 コンテンツとは、データだけでなく、ロジック、つまり完全な Web アプリケーションを指します。したがって、モバイルユーザは、ネットワークに接続していなくても、取得した web アプリケーションと対応するデータを実行することができる。
+コンテンツ同期で提供されるモバイルアプリでコンテンツを使用するには、HTTP または HTTPS 接続を介してコンテンツをリクエストする必要があります。 その結果、取得したコンテンツ（ZIP ファイルにパック）を抽出し、モバイルデバイス上でローカルに保存することができます。 コンテンツは、データだけでなく、完全な Web アプリケーションを指すので、モバイルユーザーは、ネットワークに接続していなくても、取得した Web アプリケーションと対応するデータを実行できます。
 
-コンテンツ同期は、インテリジェントな方法でコンテンツを提供します。前回正常にデータ同期が配信されてからのデータの変更のみがおこなわれるので、データ転送に必要な時間が短縮されます。 アプリケーションの初回実行時には、1970 年 1 月 1 日以降にデータ変更がリクエストされ、最後に正常に同期された後に変更されたデータのみがリクエストされます。 AEMは、iOSのクライアント通信フレームワークを使用して、データ通信と転送を簡素化し、iOSベースの Web アプリケーションを有効にするために必要なネイティブコードの量を最小限に抑えます。
+コンテンツ同期は、インテリジェントな方法でコンテンツを配信します。最後に正常にデータ同期がおこなわれてからデータが変更された場合にのみ、データ転送に必要な時間が短縮されます。 アプリケーションの初回実行時には、1970 年 1 月 1 日以降にデータ変更がリクエストされ、最後に正常に同期された後に変更されたデータのみがリクエストされます。 AEMは、iOSのクライアント通信フレームワークを使用して、データ通信と転送を簡素化し、iOSベースの Web アプリケーションを有効にするために必要なネイティブコードの量を最小限に抑えます。
 
 転送されたすべてのデータは同じディレクトリ構造に抽出でき、データを抽出する際に追加の手順（依存関係チェックなど）は必要ありません。 iOSがある場合、すべてのデータはiOS App の Documents フォルダー内のサブフォルダーに保存されます。
 

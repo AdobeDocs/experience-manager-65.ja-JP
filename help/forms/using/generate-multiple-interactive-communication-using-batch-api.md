@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
-workflow-type: ht
-source-wordcount: '2207'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '2206'
+ht-degree: 98%
 
 ---
 
@@ -171,7 +171,7 @@ JSON ファイルに保存されたレコードからインタラクティブ通
 
 ## REST リクエストを使用した Batch API の呼び出し
 
- [Batch API](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html) は Representational State Transfer（REST）リクエストを通じて呼び出すことができます。他のユーザーに REST エンドポイントを提供し、API へのアクセス、インタラクティブ通信の処理、保存とカスタマイズのための独自のメソッドを設定できるようにします。独自のカスタム Java サーブレットを開発して、AEM インスタンスに API をデプロイできます。
+ [Batch API](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html) は Representational State Transfer（REST）リクエストを通じて呼び出すことができます。これにより、他のユーザーが API にアクセスできるように REST エンドポイントを提供し、インタラクティブ通信を処理、保存およびカスタマイズするための独自のメソッドを設定できます。 独自のカスタム Java サーブレットを開発して、AEM インスタンスに API をデプロイできます。
 
 Java サーブレットをデプロイする前に、インタラクティブ通信があり、対応するデータファイルの準備が整っていることを確認します。次の手順を実行して、Java サーブレットの作成とデプロイをおこないます。
 

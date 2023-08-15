@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1863'
-ht-degree: 56%
+source-wordcount: '1860'
+ht-degree: 55%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 56%
 * チェックアウト
 * 検索
 
-検索については、AEM 検索やサードパーティ検索またはこれらを組み合わせた検索を行うための統合フックが提供されています。
+検索には、AEM検索、サードパーティ検索またはその組み合わせを使用できる統合フックが提供されます。
 
 ## e コマースエンジンの選択 {#ecommerce-engine-selection}
 
@@ -61,7 +61,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 |  |  |
 |---|---|
-| `cq:commerceProvider = geometrixx` | geometrixx の例；これには、汎用 API の最小限の拡張が含まれます。 |
+| `cq:commerceProvider = geometrixx` | geometrixx の例。汎用 API に対する最小限の拡張が含まれます。 |
 
 ### 例 {#example}
 
@@ -254,7 +254,7 @@ public class AxisFilter implements VariantFilter {
          * `productData` プロパティはありません。
          * すべてのプロパティをローカルに格納する product ノード（productData プロパティを含まない）は、独自の上位ノードから製品属性を直接継承します。
 
-* **AEM-generic 製品構造**
+* **AEM-generic プロダクト構造**
 
    * 各バリアントには、独自のリーフノードが必要です。
    * 製品インターフェイスは製品とバリアントの両方を表しますが、関連するリポジトリノードは、それがどれであるかに固有です。
@@ -382,7 +382,7 @@ public class AxisFilter implements VariantFilter {
        public void submitOrder();
    ```
 
-**送料の計算**
+**送料計算**
 
 * 注文フォームでは、多くの場合、複数の配送オプション（および価格）を提示する必要があります。
 * 価格は、品目や注文の詳細（重み付けや配送先住所など）に基づく場合があります。
@@ -440,7 +440,7 @@ e コマースプロジェクトには、次の場所にあるデフォルトの
       * プロモーションパス（割引券が適用されるアクションを定義）。
 
    * 割引券には、独自の開始日時や終了日時は設定されておらず、親キャンペーンの開始日時や終了日時を使用します。
-   * 外部のコマースエンジンも割引券を提供できます。これらには、以下が必要です。
+   * 外部コマースエンジンで割引券を提供することもできます。最低限必要なのは、次のものです。
 
       * 割引券コード
       *  `isValid()` メソッド

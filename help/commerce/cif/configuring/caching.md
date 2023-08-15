@@ -2,10 +2,10 @@
 title: キャッシュとパフォーマンス
 description: GraphQL とコンテンツキャッシュを有効にしてコマース実装のパフォーマンス最適化に利用できる様々な設定について説明します。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '849'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ AEM CIF コアコンポーネントの場合、キャッシュはコンポーネ
 
 ### 例
 
-製品の検索ページおよびカテゴリページに表示される利用可能なすべての集計／ファセット値を取得する検索サービスのキャッシュを設定することをお勧めします。これらの値は通常、例えば新しい属性が製品に追加された場合にのみ変更されるので、製品属性のセットが頻繁に変更されない場合、このキャッシュエントリの期間は「長く」なる可能性があります。これはプロジェクトに固有のものですが、プロジェクト開発段階では数分の値を使用し、安定した実稼働システムでは数時間の値を使用することをお勧めします。
+製品の検索ページおよびカテゴリページに表示される利用可能なすべての集計／ファセット値を取得する検索サービスのキャッシュを設定することをお勧めします。これらの値は通常、例えば新しい属性が製品に追加された場合にのみ変更されるので、製品属性のセットが頻繁に変更されない場合、このキャッシュエントリの期間は「長く」なる可能性があります。これはプロジェクト固有ですが、Adobeでは、安定した実稼動システムで、プロジェクト開発フェーズで数分、数時間の値を推奨しています。
 
 これは通常、次のキャッシュエントリを使用して設定します。
 
@@ -63,4 +63,4 @@ TTL ベースのキャッシュを使用する場合、デベロッパーは通�
 
 - [Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)
 - [GraphQL キャッシュの設定](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)

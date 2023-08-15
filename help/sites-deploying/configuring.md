@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2111'
 ht-degree: 28%
 
 ---
@@ -20,8 +20,8 @@ Adobe Experience Manager(AEM) は、すべてのパラメーターのデフォ�
 
 設定できるAEMには、様々な側面があります。
 
-* 一部は [すべてのプロジェクトのインストールで共通に設定](#primary-configuration-considerations) を確認して、プロジェクトに適用できるかどうかを確認する必要があります。
-* [その他の設定](#further-configuration-considerations) 必須ではないにもかかわらず、一般的な場合もあります。機能、またはシステムのパフォーマンスと安定性に関連する
+* 一部は [すべてのプロジェクトのインストールに対して共通に設定](#primary-configuration-considerations) プロジェクトに適用できるかどうかを確認するために、およびを確認する必要があります。
+* [その他の設定](#further-configuration-considerations) は、必須ではありませんが、機能、またはシステムのパフォーマンスと安定性に関連する場合があります。
 * AEMの特定のオプション機能に対してのみ必要な機能もあります（これらは適切な機能と共に記載されています）。
 
 特定の設定に応じて、次のいずれかを使用して変更を加えることができます。
@@ -50,17 +50,17 @@ Adobe Experience Manager(AEM) は、すべてのパラメーターのデフォ�
 >
 >Adobe Experience Manager で作業をする際には、いくつかの方法で OSGi サービスの設定を管理できます（コンソールまたはリポジトリノード）。
 >
->詳しくは、 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) 詳細はこちら。
+>詳しくは、 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
 
 >[!NOTE]
 >
->AEMの設定は簡単です。 ただし、特定の変更がアプリケーションに大きな影響を与える可能性があることに注意してください。 このため、AEMの設定を開始する前に、必要な経験と知識を持っていることを確認し、必要な変更を加えてください。 OSGi コンソールを使用して行った変更は、次のとおりです **即時** 実行中のシステムに適用されます（再起動は不要です）。
+>AEMの設定は簡単です。 ただし、特定の変更がアプリケーションに大きな影響を与える可能性があることに注意してください。 このため、AEMの設定を開始する前に、必要な経験と知識を持っていることを確認し、必要な変更を加えてください。 OSGi コンソールを使用して行った変更は、次のとおりです。 **即時** 実行中のシステムに適用されます（再起動は不要です）。
 
 ## プライマリ設定に関する考慮事項 {#primary-configuration-considerations}
 
 このリストでは、すべての新規プロジェクトで一般的に設定される主な領域について詳しく説明します。 すべてが必要とは限りませんが、プロジェクトに適した内容を確認するには、リストを読み取り、確認する必要があります。
 
-リストには、各設定の概要と、詳細を提供するページへのリンクが表示されます。
+このリストには、各設定の概要と、詳細を提供するページへのリンクが表示されます。
 
 ### セキュリティチェックリスト {#security-checklist}
 
@@ -105,7 +105,7 @@ AEMのすべての要素（リポジトリ、Dispatcher など）は、IPv4 と 
 
 ### バージョンのパージ {#version-purging}
 
-標準インストールでは、（コンテンツの更新後に）ページをアクティベートするたびに、AEMはページまたはノードのバージョンを作成します。 また、リクエストに応じて、 **バージョン管理** サイドキックのタブ これらのバージョンはすべてリポジトリに保存され、必要に応じて復元できます。
+標準インストールでは、（コンテンツの更新後に）ページをアクティベートするたびに、AEMはページまたはノードのバージョンを作成します。 また、リクエストに応じて、 **バージョン管理** サイドキックのタブ。 これらのバージョンはすべてリポジトリに保存され、必要に応じて復元できます。
 
 これらのバージョンはパージされないので、リポジトリのサイズは時間の経過と共に大きくなるので、管理する必要があります。
 
@@ -116,7 +116,7 @@ AEMのすべての要素（リポジトリ、Dispatcher など）は、IPv4 と 
 AEMでは、次の項目を設定できます。
 
 * central ログサービスのグローバルパラメーター
-* リクエストデータログ；要求情報用の特別なログ設定
+* リクエストデータログ。リクエスト情報用の専用のログ設定です。
 * 個々のサービス固有の設定例えば、個々のログファイルとログメッセージの形式などです。
 
 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
@@ -129,7 +129,7 @@ AEMでは、次の項目を設定できます。
 
 すべての設定は 1 つのリポジトリに保存され、 **実行モード**.
 
-詳しくは、 [実行モード](/help/sites-deploying/configure-runmodes.md) 詳細はこちら。
+詳しくは、 [実行モード](/help/sites-deploying/configure-runmodes.md) を参照してください。
 
 ### シングルサインオン {#single-sign-on}
 
@@ -190,7 +190,7 @@ AEM Doc Services とAEM Doc Security のリリースに伴い、AEMはLiveCycle�
 
 トポロジは、オフロードに参加している疎結合Experience Managerクラスタです。 クラスタは、1 つ以上のExperience Managerサーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
 
-トポロジメンバーシップの表示または変更方法の詳細については、 [トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies) 」セクションに入力します。
+トポロジのメンバーシップを表示または変更する方法の詳細については、 [トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies) 」セクションに入力します。
 
 ### ようこそコンソールの設定 {#configuring-the-welcome-console}
 
@@ -263,7 +263,7 @@ AEMプロセスがこの最大値を超える場合、「 `too many open files`�
 
 ### リッチテキストエディターの設定 {#configuring-the-rich-text-editor}
 
-この **リッチテキストエディター** (**RTE**) は、様々な種類の [機能](/help/sites-authoring/rich-text-editor.md) テキストの内容を編集する場合に使用します。アイコン、選択ボックスおよびメニューを提供して、WYSIWYG 環境で使用できます。
+The **リッチテキストエディター** (**RTE**) は、様々な種類の [機能](/help/sites-authoring/rich-text-editor.md) テキストコンテンツを編集する。WYSIWYG 環境で使用するためのアイコン、選択ボックスおよびメニューを提供する。
 
 詳しくは、 [リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md) 詳しくは、を参照してください。
 
@@ -273,7 +273,7 @@ AEMプロセスがこの最大値を超える場合、「 `too many open files`�
 
 ### ビデオコンポーネントの設定 {#configuring-the-video-component}
 
-この [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) では、事前に定義された標準提供ビデオ要素をページに配置できます。
+The [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) では、事前に定義された標準提供ビデオ要素をページに配置できます。
 
 適切なトランスコードをおこなうには、管理者が [FFmpeg のインストール](/help/sites-administering/config-video.md#install-ffmpeg) 個別に。 また、 [ビデオプロファイルの設定](/help/sites-administering/config-video.md#configure-video-profiles) html5 要素で使用する場合。
 

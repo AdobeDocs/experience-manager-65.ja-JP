@@ -1,19 +1,15 @@
 ---
 title: クライアントサイドライブラリの使用
-seo-title: Using Client-Side Libraries
-description: AEMはクライアント側ライブラリフォルダーを提供します。クライアント側ライブラリフォルダーを使用すると、クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます
-seo-description: AEM provides Client-side Library Folders, which allow you to store your client-side code in the repository, organize it into categories, and define when and how each category of code is to be served to the client
-uuid: f12b13cc-6651-4c9a-9c52-19a22bb82b28
+description: AEMにはクライアントサイドライブラリフォルダーが用意されています。これを使用すると、クライアントサイドコードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2862'
+source-wordcount: '2860'
 ht-degree: 86%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 86%
 
 最近の web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題に対処するために、AEMでは、 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。その後、クライアントサイドライブラリシステムは、正しいコードを読み込むための正しいリンクを最終的な Web ページに生成する処理をおこないます。
+この問題に対処するために、AEMでは次の機能を提供しています。 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアントサイドライブラリシステムは、正しいコードを読み込むための正しいリンクを最終的な Web ページに生成する処理をおこないます。
 
 ## AEMでのクライアント側ライブラリの仕組み {#how-client-side-libraries-work-in-aem}
 
@@ -328,7 +324,7 @@ AEM では、プラグ可能なプリプロセッサーを使用でき、AEM の
 プラグ可能なプリプロセッサーを使用すると、次のような柔軟な使用が可能になります。
 
 * スクリプトソースを処理できる ScriptProcessor の定義
-* プロセッサはオプションで設定可能
+* プロセッサはオプションを使用して設定可能
 * プロセッサーは縮小に使用できますが、縮小されていない場合にも使用できます
 * clientlib は、使用するプロセッサーを定義できます
 
@@ -459,6 +455,6 @@ HTML ライブラリマネージャーサービスは、実行時に `cq:ClientL
 
 * セキュリティの向上：デバッグを無効にする
 * パフォーマンスの向上：空白を削除し、ライブラリを圧縮します。
-* 読みやすさの向上：空白を含め、圧縮しないでください。
+* 可読性の向上：空白を含め、圧縮しないでください。
 
 サービスの設定について詳しくは、 [AEMHTMLライブラリマネージャー](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager).

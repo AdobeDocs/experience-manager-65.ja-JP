@@ -1,7 +1,7 @@
 ---
 title: CSV ファイルへの書き出し
 seo-title: Export to CSV
-description: ページの情報をローカルシステムの CSV ファイルに書き出します
+description: ページに関する情報をローカルシステム上の CSV ファイルに書き出す
 seo-description: Export information about your pages to a CSV file on your local system
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
 contentOwner: Chris Bohnert
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 100%
+source-wordcount: '190'
+ht-degree: 85%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 100%
 >
 >ブラウザーのダウンロード機能（およびデフォルトのダウンロード先）が使用されます。
 
-**CSV の書き出しファイルを作成**&#x200B;ウィザードでは、次の要素を選択できます。
+The **CSV の書き出しファイルを作成** ウィザードで次の項目を選択できます。
 
 * 書き出すプロパティ
    * メタデータ
       * 名前
-      * 変更済み
+      * 変更
       * 公開済み
       * テンプレート
       * ワークフロー
@@ -55,7 +55,7 @@ ht-degree: 100%
 
 ![etc-01](assets/etc-01.png)
 
-「**CSV レポート**&#x200B;の作成」オプションは、**Sites** コンソールをリストビューで参照するときに使用できる、**作成**&#x200B;ドロップダウンメニューのオプションです。
+「**CSV レポート**&#x200B;の作成」オプションは、**Sites** コンソールをリスト表示で参照するときに使用できる、**作成**&#x200B;ドロップダウンメニューのオプションです。
 
 ![etc-02](assets/etc-02.png)
 
@@ -66,5 +66,5 @@ CSV の書き出しファイルを作成するには、次の手順を実行し�
 
    ![etc-03](assets/etc-03.png)
 
-1. 書き出す必要があるプロパティを選択します。
+1. 書き出す必要のあるプロパティを選択します。
 1. 「**作成**」を選択します。

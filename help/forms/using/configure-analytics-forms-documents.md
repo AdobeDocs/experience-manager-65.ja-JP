@@ -10,16 +10,16 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: fef4f47794942b1fca4b30ce518b2faa8951f482
-workflow-type: ht
-source-wordcount: '1533'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1532'
+ht-degree: 98%
 
 ---
 
 # Cloud Service フレームワークを使用した Analytics {#analyticsusingcloudframework}
 
-AEM Forms は、Analytics と統合されているため、公開中のフォームとドキュメントのパフォーマンス指標を取得およびトラックできます。これらの指標分析の意図は、フォームやドキュメントをさらに使いやすくするために必要な変更に関して、十分な情報に基づいた決定を行えるよう支援することです。
+AEM Formsは、発行されたフォームおよびドキュメントのパフォーマンス指標を取得して追跡する Analytics と統合されます。 これらの指標分析の意図は、フォームやドキュメントをさらに使いやすくするために必要な変更に関して、十分な情報に基づいた決定を行えるよう支援することです。
 
 >[!NOTE]
 >

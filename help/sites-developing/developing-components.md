@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: ht
-source-wordcount: '3456'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '3454'
+ht-degree: 98%
 
 ---
 
@@ -93,17 +93,17 @@ AEM コンポーネントを使用して、web ページ上で使用できるコ
 
 ### Java の使用 {#using-java}
 
-[HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=ja?lang=ja)。そのため、Java コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
+[HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=ja)。そのため、Java コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
 
 ### JavaScript の使用 {#using-javascript}
 
-[HTL JavaScript Use-API を使用すると、HTL ファイルから JavaScript で書かれたヘルパーコードへのアクセスが可能になります](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=ja)。そのため、JavaScript コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
+[HTL JavaScript Use-API を使用すると、HTL ファイルから JavaScript で書かれたヘルパーコードへのアクセスが可能になります](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=ja)。これにより、JavaScript コードを使用して、コンポーネントコンテンツの選択と設定のロジックを実装できます。
 
 ### クライアント側 HTML ライブラリの使用 {#using-client-side-html-libraries}
 
 最近の web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題への対処に役立つように、AEM では、**クライアント側ライブラリフォルダー**&#x200B;が提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
+この問題に対処するために、AEMでは次の機能を提供しています。 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアント側ライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
 詳しくは、[クライアントサイド HTML ライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
 
@@ -199,7 +199,6 @@ newComponent (cq:Component)
 >* [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッション。
 >* 「[コードサンプル - ダイアログフィールドのカスタマイズ方法](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)」で説明されている関連サンプルコード。
 >
-
 
 #### 新しいフィールドの作成 {#creating-a-new-field}
 
@@ -377,7 +376,6 @@ AEM では、ページの段落システムを設定するときに、常に空�
    * 名前：`cq:authoring`
    * 型：`nt:unstructured`
 
-
 1. この下に、アセットとコンポーネントのマッピングをすべて保持する新しいノードを作成します。
 
    * 名前：`assetToComponentMapping`
@@ -394,27 +392,26 @@ AEM では、ページの段落システムを設定するときに、常に空�
 
       * 型：`String`
       * 値：関連アセットが所属するグループ（例：`media`）
+
    *  `assetMimetype`：
 
       * 型：`String`
       * 値：関連アセットの MIME タイプ（例：`image/*`）
+
    *  `droptarget`：
 
       * 型：`String`
       * 値：ドロップターゲット（例：`image`）
+
    *  `resourceType`：
 
       * 型：`String`
       * 値：関連コンポーネントリソース（例：`foundation/components/image`）
+
    *  `type`：
 
       * 型：`String`
       * 値：タイプ（例：`Images`）
-
-
-
-
-
 
 例えば、次を参照してください。
 
@@ -456,7 +453,7 @@ GitHub のコード
 
 * コンポーネント
 
-   * クラシック UI 固有の関数を使用する [ `cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) コードを移行します。
+   * クラシック UI 固有の関数を使用する [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code)  コードを移行します。
    * RTE プラグイン。詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
    * クラシック UI 固有の関数を使用する[ `cq:listener` コードを移行](#migrating-cq-listener-code)します。
 

@@ -2,10 +2,10 @@
 title: RemotePage コンポーネント
 description: RemotePage コンポーネントは、AEM 内のリモート React SPA を編集するためのカスタムページコンポーネントです。
 exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
-source-git-commit: 41aac3b4ea3b100e9d927bef161929477d667a95
-workflow-type: ht
-source-wordcount: '394'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 94%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 100%
 
 RemotePage コンポーネントは、アプリケーションで生成された `asset-manifest.json` から必要なアセットをすべて取得し、これを使用して AEM 内の SPA +をレンダリングします。
 
-* RemotePage を使用すると、AEM ページコンポーネントの本文に SPA のスクリプトやスタイルシートを挿入できます。
+* RemotePage を使用すると、AEM Page コンポーネントの本文にSPAのスクリプトやスタイルシートを挿入できます。
 * 仮想フロントエンドコンポーネントを使用すると、AEM SPA エディターでセクションを編集可能としてマークできます。
 * これとともに、異なるドメインでホストされている SPA を AEM で編集可能にすることができます。
 
-AEM の編集可能な外部 SPA の詳細については、](spa-edit-external.md)AEM 内の外部 SPA の編集[を参照してください。
+AEM の編集可能な外部 SPA の詳細については、[AEM 内の外部 SPA の編集](spa-edit-external.md)を参照してください。
 
 ## 要件 {#requirements}
 
@@ -33,7 +33,7 @@ AEM の編集可能な外部 SPA の詳細については、](spa-edit-external.
    * https://github.com/webdeveric/webpack-assets-manifest
    * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
 
-   ![エントリポイント](assets/asset-manifest-entrypoints.png)
+  ![エントリポイント](assets/asset-manifest-entrypoints.png)
 
 * アプリケーションは、body 要素の下の `<div id="root"></div>` で初期化できる必要があります。アプリケーションで異なるマークアップをインスタンス化する必要がある場合は、`sling:resourceSuperType="spa-project-core/components/remotepage` を持つプロキシコンポーネントの HTL スクリプトで適宜調整する必要があります。
 

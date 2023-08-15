@@ -2,10 +2,10 @@
 title: AEM Assets API を使用してコンテンツをアップデートする方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、REST API を使用してコンテンツフラグメントのコンテンツにアクセスし、アップデートする方法について説明します。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 100%
+source-wordcount: '1037'
+ht-degree: 94%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 100%
 
 では、他の API が必要なのでしょうか？
 
-Assets HTTP API を使用すると、コンテンツを&#x200B;**読み取る**&#x200B;ことができます。また、コンテンツを&#x200B;**作成**、**アップデート**、**削除**&#x200B;することができます。これらは、GraphQL API では実行できないアクションです。
+Assets HTTP API を使用すると、 **読み取り** コンテンツを選択しますが、 **作成**, **更新** および **削除** コンテンツ — GraphQL API では実行できないアクション。
 
 Assets REST API は、最新の Adobe Experience Manager バージョンの標準インストールで利用できます。
 
@@ -50,11 +50,11 @@ Assets REST API は、最新の Adobe Experience Manager バージョンの標�
 Assets HTTP API には次の API が含まれます。
 
 * Assets REST API
-* コンテンツフラグメントをサポートしています。
+* コンテンツフラグメントをサポートしています
 
 現在の Assets HTTP API の実装は、**REST** アーキテクチャスタイルに基づいており、**CRUD** 操作（作成、読み取り、アップデート、削除）を使用して（AEM に保存された）コンテンツにアクセスできます。
 
-これらの操作で、API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、Adobe Experience Manager をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
+この操作を使用すると、API は、JavaScript フロントエンドアプリケーションにコンテンツサービスを提供することで、Adobe Experience Managerをヘッドレス CMS(Content Management System) として操作できます。 または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 
 <!--
 >[!NOTE]
@@ -224,7 +224,6 @@ Assets REST API は `/api/assets` エンドポイントを使用しており、�
 >* `/api/assets` は `.model` セレクターを使用する&#x200B;**必要はありません**。
 >* `/content/path/to/page` は `.model` セレクターを使用する&#x200B;**必要があります**。
 
-
 ### 操作 {#operation}
 
 実行する操作は HTTP メソッドで決まります。
@@ -243,11 +242,11 @@ Assets REST API は `/api/assets` エンドポイントを使用しており、�
 使用方法は、特定の使用例以外にも、AEM オーサーを使用するかパブリッシュ環境を使用するかで異なることがあります。
 
 * 作成時にはオーサーインスタンスに結び付けることを強くお勧めします（現在は、この API を使用して公開するフラグメントをレプリケートする手段はありません）。
-* 配信は、どちらからも可能です。AEM では、要求されたコンテンツを JSON 形式でのみ提供するからです。
+* AEM は要求されたコンテンツを JSON 形式でのみ提供するので、どちらからも配信できます。
 
-   * ファイアウォールの背後で動作するメディアライブラリアプリケーションには、AEM オーサーインスタンスからの格納と配信で十分です。
+   * ファイアウォールの背後で動作するメディアライブラリアプリケーションには、AEM オーサーインスタンスからのストレージと配信で十分です。
 
-   * ライブ Web 配信の場合は、AEM パブリッシュインスタンスをお勧めします。
+   * ライブ web 配信の場合は、AEM パブリッシュインスタンスをお勧めします。
 
 >[!CAUTION]
 >
@@ -326,7 +325,7 @@ AEM Assets REST API の使用の詳細については、次を参照してくだ
 * [コンテンツフラグメント REST API](/help/assets/assets-api-content-fragments.md)
    * [API リファレンス](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API - コンテンツフラグメント](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
-* [コンテンツフラグメントの操作](/help/assets/content-fragments/content-fragments.md)
+* [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
 * [AEM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [CORS／AEM の説明](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
-* [ビデオ - AEM を使用した CORS 向け開発](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+* [ビデオ - AEM を使用した CORS 向けの開発](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)

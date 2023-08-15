@@ -1,7 +1,7 @@
 ---
 title: パターン検出を使用したアップグレードの複雑性の評価
 seo-title: Assessing the Upgrade Complexity with the Pattern Detector
-description: パターン検出を使用してアップグレードの複雑性を評価する方法について説明します。
+description: パターン検出を使用して、アップグレードの複雑さを評価する方法を説明します。
 seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
 uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
@@ -12,10 +12,10 @@ discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 100%
+source-wordcount: '521'
+ht-degree: 37%
 
 ---
 
@@ -23,22 +23,22 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-この機能を使用すると、次のパターンを検出することによって、既存の AEM インスタンスのアップグレード可能性をチェックできます。
+この機能を使用すると、次のパターンを検出することで、既存のAEMインスタンスのアップグレード可能性をチェックできます。
 
-1. 特定のルールへの違反があり、アップグレードにより影響を受けるか上書きされる領域でおこなわれている。
-1. AEM 6.5 との後方互換性のない AEM 6.x の機能や API を使用しており、アップグレード後に動作しない可能性がある。
+1. 特定のルールに違反し、アップグレードによって影響を受ける領域または上書きされる領域で実行される
+1. AEM 6.5 との下位互換性のないAEM 6.x 機能または API を使用しており、アップグレード後に動作しなくなる可能性があります。
 
-これにより、AEM 6.5 へのアップグレードに必要な開発の作業量を評価できます。
+これは、AEM 6.5 へのアップグレードに関わる開発作業の評価に役立ちます。
 
 ## 設定方法 {#how-to-set-up}
 
-パターン検出は、AEM 6.5 のアップグレードを対象とした 6.1 から 6.5 のソース AEM バージョンで動作する [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用してインストールできます。
+パターン検出は、 [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 6.1 から 6.5 への任意のソースAEMバージョンでAEM 6.5 のアップグレードをターゲットとして作業する インストールするには、 [パッケージマネージャー](/help/sites-administering/package-manager.md).
 
 ## 使用方法 {#how-to-use}
 
 >[!NOTE]
 >
->パターン検出は、ローカル開発インスタンスを含むあらゆる環境で実行できます。ただし、次の 2 つを同時に達成するには：
+>パターン検出は、環境インスタンスを含む、あらゆるローカル開発で実行できます。 ただし、次の目的で使用します。
 >
 >* 検出率を上げる
 >* ビジネスにとって重大なインスタンスの減速を避ける
@@ -57,22 +57,22 @@ ht-degree: 100%
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
 * **事後対応 JSON Lines インターフェイスを使用し、**各行に個別の JSON ドキュメントを生成します。
 
-これらの方法の詳細を次に示します。
+これらの方法の両方について、以下で詳しく説明します。
 
-## 事後対応インターフェイス {#reactive-interface}
+## Reactive Interface {#reactive-interface}
 
-事後対応インターフェイスを使用すると、疑義が検出された場合、すぐに違反レポートを処理できます。
+リアクティブインターフェイスを使用すると、疑いが検出されたらすぐに違反レポートを処理できます。
 
-現在、出力は次の 2 つの URL から取得できます。
+出力は現在、次の 2 つの URL で使用できます。
 
 1. プレーンテキストインターフェイス
 1. JSON インターフェイス
 
 ## プレーンテキストインターフェイスの処理 {#handling-the-plain-text-interface}
 
-出力の情報は、一連のイベントエントリとして書式設定されます。違反を公開するためのチャネルと、現在の進行状況を公開するためのチャネルがあります。
+出力内の情報は、一連のイベントエントリの形式で表示されます。 違反を公開するチャネルと、現在の進行状況を公開するチャネルの 2 つがあります。
 
-これらのチャネルは、次のコマンドを使用することで取得できます。
+これらは、次のコマンドを使用して取得できます。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep SUSPICION
@@ -90,7 +90,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
 ```
 
-次の出力が得られます。
+これにより、次の出力が得られます。
 
 ```
 2018-02-13T14:19:26.909+01:00 [PROGRESS] emitted=127731/52 MB patterns (from=6.5), analysed=45780/16 MB items, found=0 suspicions so far in period=PT5.005S (throughput=34667 items/sec)
@@ -100,13 +100,13 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## JSON インターフェイスの処理 {#handling-the-json-interface}
 
-同様に、[jq ツール](https://stedolan.github.io/jq/)を使用すると、公開された JSON をすぐに処理できます。
+同様に、JSON も [jq ツール](https://stedolan.github.io/jq/) 公開され次第。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
 ```
 
-出力は以下のようになります。
+出力を次に示します。
 
 ```
 {
@@ -125,13 +125,13 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 }
 ```
 
-進行状況は 5 分ごとに報告され、疑義ありとしてマークされたメッセージを除外することで取得できます。
+進行状況は 5 秒ごとにレポートされ、疑わしいメッセージとしてマークされている以外のメッセージを除外することで、取得できます。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == false)'
 ```
 
-出力は以下のようになります。
+出力を次に示します。
 
 ```
 {
@@ -214,14 +214,14 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 検出範囲 {#scope}
 
-現在、パターン検出では以下のことを確認できます。
+現在、パターン検出では次の項目を確認できます。
 
-* OSGi バンドルのエクスポートとインポートの不一致
-* Sling リソースタイプとスーパータイプ（検索パスのコンテンツオーバーレイを含む）の過剰使用
+* OSGi バンドルの書き出しと読み込みの不一致
+* Sling リソースタイプとスーパータイプ（検索パスコンテンツオーバーレイを使用）のオーバー使用状況
 * Oak インデックスの定義（互換性）
 * VLT パッケージ（過剰使用）
-* rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
+* rep:User nodes の互換性（OAuth 設定のコンテキスト内）
 
 >[!NOTE]
 >
->パターン検出はアップグレードに関する警告を正確に予測しようとします。ただし、シナリオによっては誤検知が発生する可能性があります。
+>パターン検出は、アップグレードに関する警告を正確に予測しようとします。 ただし、場合によっては、偽陽性が生成されることがあります。

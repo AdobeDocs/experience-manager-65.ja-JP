@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3584'
-ht-degree: 70%
+source-wordcount: '3582'
+ht-degree: 68%
 
 ---
 
@@ -62,10 +62,10 @@ ht-degree: 70%
 
 * [cq:dialog](/help/sites-developing/developing-components.md#creating-and-configuring-a-dialog)
 
-  次のタブを持つダイアログ
+  次のタブを含むダイアログ：
 
-   * **共通**:（タイトルと説明の編集用）
-   * **詳細**:電子メール通知プロパティを編集する場合。
+   * **共通**：タイトルと説明を編集する場合に使用します。
+   * **詳細**：電子メール通知プロパティを編集するためのものです。
 
   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
@@ -117,7 +117,7 @@ WorkItem には、作業項目（例えば、step）の実行中にのみ使用�
 >
 >次の要件の両方が満たされた場合に、ステップインスタンスにフィールド値が表示されます。
 >
->* ステップの編集ダイアログでは、次の場所にタイトルと説明が保存されます。>
+>* ステップの編集ダイアログでは、タイトルと説明が次の場所に保存されます。 /
 >* `./jcr:title`
 >* `./jcr:description` の場所
 >
@@ -172,9 +172,9 @@ WorkItem には、作業項目（例えば、step）の実行中にのみ使用�
 
 * プロセスステップ：実行時に実行されるサービスまたは ECMA スクリプト。
 * 参加者ステップ：生成された作業項目を割り当てるユーザーの ID。
-* 動的参加者ステップ：作業項目を割り当てるユーザーの ID を選択するサービスまたは ECMA スクリプト。
+* 動的参加者ステップ：作業項目を割り当てられるユーザーの ID を選択するサービスまたは ECMA スクリプト。
 
-特定のワークフローシナリオで使用するコンポーネントに焦点を当てるには、デザインで主要な機能を設定し、モデル開発者が変更する機能を削除します。
+特定のワークフローシナリオで使用するコンポーネントに焦点を当てるには、デザインで主要な機能を設定し、モデル開発者がその機能を変更する機能を削除します。
 
 1. cq:component ノードの下に、次のノードを追加します。
 
@@ -250,7 +250,7 @@ WorkItem には、作業項目（例えば、step）の実行中にのみ使用�
 * 名前：`DO_NOTIFY`
 
    * 型：`Boolean`
-   * 値：ユーザー参加手順に関して電子メール通知を送信する必要があるかどうかを示します（また、メールサーバーが正しく設定されていると仮定）。
+   * 値：ユーザー参加手順に関する電子メール通知を送信する必要があるかどうかを示します（また、メールサーバーが正しく設定されていると仮定します）。
 
 ## データの保持とアクセス {#persisting-and-accessing-data}
 
@@ -613,7 +613,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 1. **モデル**&#x200B;エディターで、汎用の&#x200B;**動的参加者ステップ**&#x200B;コンポーネントを使用して、動的参加者ステップをワークフローに追加します。
 1. 編集ダイアログで、**参加者選択**&#x200B;タブを選択してから、選択の実装を選択してください。
 1. コード内で引数を使用する場合は、**プロセスの引数**&#x200B;を設定します。この例の場合は `/content/we-retail/de` です。
-1. ステップとワークフローモデルの両方の変更を保存します。
+1. ステップとワークフローモデルの両方に対する変更を保存します。
 
 ### ECMA スクリプトを使用した参加者選択の開発 {#developing-a-participant-chooser-using-an-ecma-script}
 
@@ -785,7 +785,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 ### 基本ステップの作成 {#creating-the-basic-step}
 
-1. /apps の下にパスを再作成します。例：
+1. /apps の下にパスを再作成します。次に例を示します。
 
    `/apps/cq/workflow/components/model`
 
@@ -803,7 +803,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    >
    >この手順は、クラシック UI モデルエディターには適用されません。
 
-1. 次に、コピーした手順を/apps フォルダーに配置します。例：
+1. 次に、コピーした手順を/apps フォルダーに配置します。次に例を示します。
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -892,7 +892,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 1. ノード`cq:listeners`のプロパティを設定します。
 
-   `cq:listener` ノードとそのプロパティを利用すると、ステップをモデルページにドラッグしたり、ステップのプロパティを編集したりして、タッチ操作対応 UI のモデルエディターでイベントに対処するイベントハンドラーを設定できます。
+   The `cq:listener` ノードとそのプロパティを使用すると、タッチ操作対応 UI モデルエディターでイベントに反応するイベントハンドラーを設定できます。例えば、モデルページへのステップのドラッグや、ステップのプロパティの編集などです。
 
    **対象プロパティ：**
 
@@ -903,7 +903,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    この設定は、エディターを適切に機能させるために必要です。 ほとんどの場合、この設定は変更しないでください。
 
-   ただし、`cq:inherit` を true に設定（上記のように `cq:editConfig` ノードで設定）するとこの設定を継承できるので、ステップの定義に明示的に含める必要はありません。継承されない場合は、次のプロパティと値を指定したこのノードを追加する必要があります。
+   ただし、 `cq:inherit` 真に ( `cq:editConfig` ノード（上記を参照）を使用すると、手順の定義に明示的に含める必要なく、この設定を継承できます。 継承されない場合は、次のプロパティと値を指定したこのノードを追加する必要があります。
 
    この例では継承が有効になっているので、`cq:listeners`ノードを削除できます。削除しても、ステップは正常に機能します。
 

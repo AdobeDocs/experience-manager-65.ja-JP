@@ -1,8 +1,8 @@
 ---
 title: フォームのフィールドのための文脈依存ヘルプの作成
 seo-title: Authoring in-context help for form fields
-description: AEM Formsでは、アダプティブフォームのフィールドやパネルに文脈依存ヘルプをテキストまたはビデオなどのリッチメディアとして追加できます。
-seo-description: AEM Forms allows you to add in-context help to adaptive form fields and panels, as text or rich media, including videos.
+description: AEM Formsを使用すると、アダプティブフォームのフィールドやパネルに文脈依存ヘルプを、テキストまたはビデオなどのリッチメディアとして追加できます。
+seo-description: AEM Forms lets you add in-context help to adaptive form fields and panels, as text or rich media, including videos.
 uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -10,26 +10,26 @@ discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: 6569bfba-9af5-4060-8640-e51d7af46614
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '422'
 ht-degree: 60%
 
 ---
 
-# フォームフィールド用の文脈依存ヘルプの作成{#authoring-in-context-help-for-form-fields}
+# フォームのフィールドのための文脈依存ヘルプの作成{#authoring-in-context-help-for-form-fields}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 ## はじめに {#introduction}
 
-エンドユーザーがフォームに記入しているときに、特定のフォームフィールドへの記入方法がわからない場合があります。このような問題に対処するため、アダプティブフォームでは、テキストの追加や、フォームフィールドへの豊富な文脈依存ヘルプの追加がサポートされています。 これにより、フォーム入力エクスペリエンスを向上し、エンドユーザーにとっての曖昧さを回避することができます。
+エンドユーザーがフォームに記入しているときに、特定のフォームフィールドへの記入方法がわからない場合があります。このような問題に対処するため、アダプティブフォームでは、テキストの追加や、豊富な文脈依存ヘルプをフォームフィールドに追加する機能を提供しています。 これにより、フォーム入力エクスペリエンスを向上し、エンドユーザーにとっての曖昧さを回避することができます。
 
 この記事では、アダプティブフォームのオーサリング中に文脈依存ヘルプを追加する方法について説明しますForms。
 
 ## 文脈依存ヘルプの追加 {#add-in-context-help}
 
-文脈依存ヘルプは、サイドバーにある「プロパティ」タブの「ヘルプコンテンツ」セクションの次のオプションを使用して指定できます。
+文脈依存ヘルプは、サイドバーにある「プロパティ」タブの「ヘルプコンテンツ」セクションで次のオプションを使用して指定できます。
 
 * [簡単な説明](../../forms/using/authoring-in-field-help.md#p-short-description-p)
 * [詳細な説明](../../forms/using/authoring-in-field-help.md#p-long-description-p)

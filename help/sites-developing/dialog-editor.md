@@ -1,7 +1,7 @@
 ---
 title: ダイアログエディター
 seo-title: Dialog Editor
-description: ダイアログエディターは、ダイアログボックスや基礎モードを簡単に作成および編集できるグラフィカルインターフェイスを提供します
+description: ダイアログエディターは、ダイアログボックスや基礎モードを簡単に作成および編集できるグラフィカルインターフェイスを提供します。
 seo-description: The dialog editor provides a graphical interface for easily creating and editing dialog boxes and scaffolds
 uuid: 64d3fb12-8638-441b-8595-c590d48f3072
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: b7ac457d-3689-4f5d-9ceb-ff6a9944e7eb
 exl-id: 57303608-c3e1-4201-8054-1a1798613e2c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '489'
 ht-degree: 32%
 
 ---
@@ -33,10 +33,10 @@ dialog ノードが&#x200B;**ダイアログエディター**&#x200B;で開か�
 
 ダイアログエディターのインターフェイスは、次の 4 つのペインで構成されます。
 
-* この **パレット**（左上隅） このウィンドウには、タブパネル、テキストフィールド、選択リスト、ボタンなど、ダイアログボックスの作成に使用できるウィジェットが表示されます。 目的の区切りバーをクリックして、パレット内の様々なカテゴリを展開できます。
-* この **構造** ウィンドウの左下隅に表示されます。 このウィンドウには、ダイアログ定義を構成するノードの階層構造が表示されます。 同じ構造を表示するには、「CRXDE Lite」または「CRX Content Explorer」で dialog ノードを展開します。
+* The **パレット**（左上隅） このウィンドウには、タブパネル、テキストフィールド、選択リスト、ボタンなど、ダイアログボックスの作成に使用できるウィジェットが表示されます。 目的の区切りバーをクリックして、パレット内の様々なカテゴリを展開できます。
+* The **構造** ウィンドウの左下隅に表示されます。 このウィンドウには、ダイアログ定義を構成するノードの階層構造が表示されます。 同じ構造を表示するには、「CRXDE Lite」または「CRX Content Explorer」で dialog ノードを展開します。
 * ウィンドウの中央の&#x200B;**レンダリング**&#x200B;ペイン。このペインには、構造ペインで定義したダイアログ定義が実際のダイアログボックスとしてどのようにレンダリングされるかが表示されます。
-* この **プロパティ** ウィンドウ このウィンドウには、構造ウィンドウで現在ハイライト表示されているノードのプロパティが表示されます。
+* The **プロパティ** ウィンドウ このウィンドウには、構造ウィンドウで現在ハイライト表示されているノードのプロパティが表示されます。
 
 ### ダイアログエディターの使用 {#using-the-dialog-editor}
 

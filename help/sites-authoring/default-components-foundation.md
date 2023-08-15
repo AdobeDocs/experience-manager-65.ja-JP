@@ -13,10 +13,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
-workflow-type: ht
-source-wordcount: '7210'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '7198'
+ht-degree: 97%
 
 ---
 
@@ -120,7 +120,7 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 
 #### プロパティ {#properties}
 
-ダイアログを使用すると、アダプティブ画像コンポーネントのインスタンスのプロパティを編集できます。プロパティの多くは、基本となる画像コンポーネントと共通しています。プロパティは次の 2 つのタブに表示されます。
+ダイアログを使用すると、アダプティブ画像コンポーネントのインスタンスのプロパティを編集できます。その多くは、そのインスタンスの基となる画像コンポーネントに共通しています。 プロパティは、次の 2 つのタブで使用できます。
 
 * **画像**
 
@@ -160,7 +160,7 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。代わりに、[カルーセルコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=ja)を使用することをお勧めします。
 
-カルーセルコンポーネントを使用すると、個々のページに関連付けられている画像を、次のように表示できます。
+カルーセルコンポーネントを使用すると、個々のページに関連付けられた画像を表示できます。
 
 * 一度に 1 つずつ
 * 短時間
@@ -822,7 +822,7 @@ Flash コンポーネントを使用すると、Flash ムービーを読み込�
 >
 >**テキスト**&#x200B;基盤コンポーネントは、**テーブル**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
 
-テキストコンポーネントを使用すると、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)が提供する機能により、WYSIWYG エディターを使用してテキストブロックを入力できます。各種のアイコンを使用すると、フォント特性、整列、リンク、リスト、インデントなど、テキストの書式を設定できます。
+テキストコンポーネントを使用すると、WYSIWYG エディターを使用してテキストブロックを入力できます。このエディターには、 [リッチテキストエディター](/help/sites-authoring/rich-text-editor.md). 様々なアイコンを使用して、フォントの特性、配置、リンク、リスト、インデントなど、テキストの書式を設定できます。
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -1020,7 +1020,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 * **タイトルとテキスト**
 
-  このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。該当する場合は、フィールドで複数選択が有効かどうかや、選択肢に使用できる項目など、その他の主要な情報を定義することもできます。
+  このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。また、必要に応じて、フィールドが複数選択可能かどうかや、選択可能な項目など、他の主要情報を定義できます。
 
 * **初期値**
 
@@ -1371,7 +1371,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=ja)を利用することをお勧めします。
 
-チェックボックスを使用すると、1 つ以上のチェックボックスのリストを構築できます。チェックボックスでは同時に複数の項目を選択できます。
+チェックボックスを使用すると、1 つ以上のチェックボックスのリストを作成できます。複数のチェックボックスを同時に選択できます。
 
 ![dc_form_checkboxgroupuse](assets/dc_form_checkboxgroupuse.png)
 
@@ -1522,7 +1522,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。アドビでは、代わりに[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=ja)を使用することをお勧めします。
 
-このコンポーネントを使用すると、デフォルトのテキストを指定した送信ボタンを作成できます。
+このコンポーネントを使用すると、次のいずれかのデフォルトのテキストを持つ送信ボタンを作成できます。
 
 ![dc_form_submitbutton](assets/dc_form_submitbutton.png)
 
@@ -1534,9 +1534,9 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 
 >[!CAUTION]
 >
->この基盤コンポーネントは非推奨（廃止予定）になりました。アドビでは、代わりに[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を使用することをお勧めします。
+>この基盤コンポーネントは非推奨（廃止予定）になりました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を使用することをお勧めします。
 
-このフィールドでは、タグを選択できます。
+このフィールドでタグを選択できます。
 
 ![dc_form_tags_use](assets/dc_form_tags_use.png)
 

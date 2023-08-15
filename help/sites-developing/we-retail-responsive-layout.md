@@ -10,24 +10,24 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 exl-id: 6df5fb10-a7f1-4d5d-ac00-b4be3d5d3d18
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 100%
+source-wordcount: '245'
+ht-degree: 60%
 
 ---
 
 # We.Retail のレスポンシブレイアウトの使用{#trying-out-responsive-layout-in-we-retail}
 
-We.Retail のすべてのページでは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントが使用されています。レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、ページエディターの&#x200B;**レイアウト**&#x200B;モードと組み合わせて使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
+We.Retail のすべてのページでは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントが使用されています。レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。 このグリッドでは、デバイスやウィンドウのサイズと形式に応じてレイアウトを並べ替えることができます。このコンポーネントは、 **レイアウト** モードを使用して、デバイスに応じたレスポンシブレイアウトを作成および編集できます。
 
-## 試してみる {#trying-it-out}
+## 試す {#trying-it-out}
 
-1. 言語マスターブランチの「エクスペリエンス」セクションで Arctic Surfing ページを編集します。
+1. 言語 master ブランチの「エクスペリエンス」セクションで、 Arctic Surfing ページを編集します。
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. **プレビュー**&#x200B;に切り替えて、Web サイトの訪問者に表示されるページを確認します。記事「*Aloha spirits in Norther Norway*」のコンテンツまでスクロールダウンします。
+1. 切り替え先 **プレビュー** を使用して、web サイトの訪問者にレンダリングされるページを確認できます。 記事「*Aloha spirits in Norther Norway*」のコンテンツまでスクロールダウンします。
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -35,7 +35,7 @@ We.Retail のすべてのページでは、レスポンシブデザインを実�
 
    ![chlimage_1-179](assets/chlimage_1-179.png)
 
-1. レイアウトモードに切り替えます。エミュレーターツールバーが自動的に表示されます。このツールバーを使用して、ターゲットデバイスごとにレイアウトを計画できます。
+1. レイアウトモードに切り替えます。 エミュレーターツールバーが自動的に表示され、ターゲットデバイスごとにレイアウトを計画できます。
 
    コンポーネントを選択すると、編集メニューにフローティングおよび非表示オプションと共に、コンポーネントのサイズ変更ハンドルが表示されます。
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 44%
+source-wordcount: '426'
+ht-degree: 45%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 44%
 
 ## David のモデルに従う {#follow-david-s-model}
 
-David&#39;s Model は、数年前に David Nuescheler が書いたものですが、今日ではその考えが正しいと思います。 David&#39;s Model の主な定義は次のとおりです。
+David&#39;s Model は、数年前に David Nuescheler が書いたものですが、今日ではその考えが正しいと考えています。 David&#39;s Model の主な定義は次のとおりです。
 
 * データが第一、構造は二の次（おそらくですが）。
 * コンテンツ階層を推進し、実現させないでください。
@@ -29,9 +29,9 @@ David&#39;s Model は、数年前に David Nuescheler が書いたものです�
 
 David&#39;s Model は、Jackrabbit Wiki の [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
-### すべてがコンテンツ {#everything-is-content}
+### すべてがコンテンツです {#everything-is-content}
 
-データベースなどの別々のサードパーティデータソースに依存するのではなく、すべてをリポジトリに保存する必要があります。 これは、作成したコンテンツ、画像、コード、設定などのバイナリデータに適用されます。 これにより、1 つの API セットを使用してすべてのコンテンツを管理し、レプリケーションを通じてこのコンテンツのプロモーションを管理できます。 また、バックアップ、ログなどの単一のソースも得られます。
+データベースなどの別々のサードパーティデータソースに依存するのではなく、すべてをリポジトリに保存する必要があります。 これは、作成したコンテンツ、画像、コード、設定などのバイナリデータに当てはまります。 これにより、1 つの API セットを使用してすべてのコンテンツを管理し、レプリケーションを通じてこのコンテンツのプロモーションを管理できます。 また、バックアップ、ログなどの単一のソースも得られます。
 
 ### 「コンテンツモデルが最初」のデザイン原則を使用 {#use-the-content-model-first-design-principle}
 

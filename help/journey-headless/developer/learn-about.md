@@ -2,10 +2,10 @@
 title: CMS ヘッドレス開発について
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレステクノロジーと、それを使用する理由について説明します。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 100%
+source-wordcount: '1594'
+ht-degree: 98%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 100%
 
 ## 技術基盤 {#technology}
 
-ヘッドレスアプローチを使用すると、将来のデジタルエクスペリエンスの要求に簡単かつ迅速に対応できるテクノロジースタックを構築できます。
+ヘッドレスアプローチを使用すると、将来のデジタルエクスペリエンスの要件に簡単かつ迅速に対応できるテクノロジースタックを構築できます。
 
 以前の CMS 向けの API は主に REST ベースでした。Representational State Transfer（REST）は、ステートレス方式でリソースをテキストとして提供します。これにより、リソースを読み取り、事前に定義された一連の操作で変更できます。REST は、コンテンツのステートレス表現を確保することで、Web 上のサービス間で大きな相互運用性を確保できます。
 

@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2385'
 ht-degree: 77%
 
 ---
@@ -352,7 +352,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 #### 新しいコンポーネントの確認 {#checking-the-new-component}
 
-コンポーネントを開発した後、段落システムに追加できます。これにより、作成者は、ページの編集時にコンポーネントを選択して使用できます。次の手順で、コンポーネントをテストできます。
+コンポーネントを開発した後、段落システムに追加できます。これにより、作成者は、ページの編集時にコンポーネントを選択して使用できます。以下の手順で、コンポーネントをテストできます。
 
 1. 英語／会社などの Geometrixx でページを開きます。
 1. サイドキックで「デザイン」をクリックし、デザインモードに切り替えます。

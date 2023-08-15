@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 444c522e-2f33-4f41-846c-8d317e799659
 docset: aem65
 exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 89%
+source-wordcount: '313'
+ht-degree: 85%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 89%
 | AEM 6.5 | この記事 |
 
 
-Adobe Analytics と AEM の統合により、Web ページのアクティビティを追跡できます。
+Adobe AnalyticsとAEMの統合により、Web ページのアクティビティを追跡できます。
 
 * Adobe Analytics 設定により、AEM で Adobe Analytics を認証できます。
 * Adobe Analytics レポートスイートに送信されたデータはフレームワークで特定されます。

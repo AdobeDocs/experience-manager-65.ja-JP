@@ -1,20 +1,16 @@
 ---
 title: アセット一覧表示画面へのカスタムアクションの追加
-seo-title: Add custom action to the Asset Listing view
 description: この記事では、アセット一覧表示画面にカスタムアクションを追加する方法について説明します。
-seo-description: This article teaches how to add custom action to the Asset Listing view
-uuid: 45f25cfb-f08f-42c6-99c5-01900dd8cdee
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-Correspondence Management ソリューションでは、「アセットを管理」ユーザーインターフェイスにカスタムアクションを追加できます。
+Correspondence Management ソリューションを使用すると、アセットを管理ユーザーインターフェイスにカスタムアクションを追加できます。
 
 次のカスタムアクションをアセット一覧表示画面に追加できます。
 

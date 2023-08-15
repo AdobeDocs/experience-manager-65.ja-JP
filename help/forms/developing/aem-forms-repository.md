@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '9117'
-ht-degree: 100%
+source-wordcount: '9113'
+ht-degree: 99%
 
 ---
 
@@ -125,7 +125,7 @@ URI 値の一例を以下に示します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用してフォルダーを作成 {#create-folders-using-the-java-api}
 
@@ -154,7 +154,6 @@ URI 値の一例を以下に示します。
    フォルダーの説明を設定するには、 `setDescription` メソッドを使用して、次のパラメーターを渡します。
 
    * リソースのコレクションを説明する`String`。この例では、 `"test Folder"` が使用されています `.`
-
 
 1. フォルダーをリポジトリに書き込む
 
@@ -216,7 +215,7 @@ URI 値の一例を以下に示します。
 
 リソースを作成すると、アクセス制御リスト（ACL）が親フォルダーから継承されます。ルートフォルダーには、最初のリソースまたはフォルダーを作成するまでは、システムレベルの権限が割り当てられています。リソースまたはフォルダーを初めて作成した時点で、それらにデフォルトの ACL 権限が付与されます。
 
-Repository サービス Java API または web サービス API を使用して、プログラムによってリソースを書き込むことができます。
+Repository Service Java API または web サービス API を使用して、プログラムによってリソースを書き込むことができます。
 
 >[!NOTE]
 >
@@ -265,11 +264,11 @@ Repository サービスメソッドを呼び出し、ターゲットフォルダ
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用したリソースの書き込み {#write-resources-using-the-java-api}
 
-Repository サービス API（Java）を使用してリソースを書き込みます。
+Repository Service API（Java）を使用してリソースを書き込みます。
 
 1. プロジェクトファイルを含める
 
@@ -410,11 +409,11 @@ Repository サービスメソッドを呼び出し、ターゲットフォルダ
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用したリソースのリスト化 {#list-resources-using-the-java-api}
 
-Repository サービス API（Java）を使用してリソースをリスト化します。
+Repository Service  API（Java）を使用してリソースをリスト化します。
 
 1. プロジェクトファイルを含める
 
@@ -446,7 +445,7 @@ Repository サービス API（Java）を使用してリソースをリスト化�
 
 ### Web サービス API を使用したリソースのリスト化 {#list-resources-using-the-web-service-api}
 
-Repository サービス API（web サービス）を使用してリソースをリスト化します。
+Repository Service API（web サービス）を使用してリソースをリスト化します。
 
 1. プロジェクトファイルを含める
 
@@ -479,14 +478,14 @@ Repository サービス API（web サービス）を使用してリソースを�
 
 リポジトリには、以下の 4 つの権限タイプがあります。
 
-* **トラバース**：リソースをリスト化できます。リソースのメタデータを読み取りますが、リソースのコンテンツを読み取ることはできません
-* **読み取り**：リソースのコンテンツを読み取ることができます
-* **書き込み**：リソースのコンテンツに書き込むことができます
-* **アクセス制御リスト（ACL）の管理**：リソース上の ACL を操作できます
+* **traverse**：リソースをリストできます。つまり、リソースメタデータを読み取るために使用できますが、リソースコンテンツは読み取りません。
+* **読み取り**：リソースコンテンツを読み取ることができます
+* **write**：リソースコンテンツを書き込むことができます
+* **アクセス制御リスト (ACL) の管理**：リソースの ACL を操作できます
 
 ユーザーは、プロセスを実行する権限を持っている場合にのみ、プロセスを実行できます。IDE ユーザーは、リポジトリと同期するには、トラバース権限と読み取り権限が必要です。ランタイムはシステムコンテキスト内で発生するので、ACL は設計時にのみ適用されます。
 
-Repository サービス Java API または web サービス API を使用して、プログラムによってリソースを読み取ることができます。
+Repository Service Java API または web サービス API を使用して、プログラムによってリソースを読み取ることができます。
 
 >[!NOTE]
 >
@@ -515,7 +514,7 @@ Repository サービス Java API または web サービス API を使用して�
 
 **リソースを読み込む**
 
-レポジトリサービスメソッドを呼び出し、URI を指定してリソースを読み込みます。
+Repository サービスメソッドを呼び出し、URI を指定してリソースを読み込みます。
 
 **関連トピック**
 
@@ -527,7 +526,7 @@ Repository サービス Java API または web サービス API を使用して�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用してリソースを読み込む {#read-resources-using-the-java-api}
 
@@ -637,7 +636,7 @@ Repository サービス Java API または web サービス API を使用して�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用したリソースのアップデート {#update-resources-using-the-java-api}
 
@@ -719,7 +718,7 @@ Repository API（web サービス）を使用してリソースをアップデ�
 
 *クエリ*&#x200B;には、条件で論理的に結合される 1 つ以上のステートメントが含まれます。*ステートメント*&#x200B;は、左オペランド、演算子、右オペランドで構成されます。また、検索結果に使用する並べ替え順を指定できます。この&#x200B;*並べ替え順*&#x200B;には、SQL の `ORDER BY` 句と同等の情報が含まれ、検索の基となった属性と、昇順または降順を使用するかどうかを示す値を含む要素で構成されます。
 
-レポジトリサービス Java API を使用して、プログラムでリソースを検索できます。現時点では、web サービス API を使用してリソースを検索することはできません。
+Repository Service Java API を使用して、プログラムでリソースを検索できます。現時点では、web サービス API を使用してリソースを検索することはできません。
 
 **並べ替え動作**
 
@@ -729,7 +728,7 @@ Repository API（web サービス）を使用してリソースをアップデ�
 
 >[!NOTE]
 >
->レポジトリサービスについて詳しくは、[ AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>Repository サービスについて詳しくは、[ AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-5}
 
@@ -784,11 +783,11 @@ Repository API（web サービス）を使用してリソースをアップデ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用したリソースの検索 {#search-for-resources-using-the-java-api}
 
-Repository service API（Java）を使用してリソースを検索します。
+Repository Service API（Java）を使用してリソースを検索します。
 
 1. プロジェクトファイルを含める
 
@@ -865,7 +864,7 @@ Repository service API（Java）を使用してリソースを検索します。
 
 独自のカスタム関係を作成します。例えば、HTML ファイルをリポジトリに格納し、そのファイルが画像を使用する場合、カスタムの関係を指定して HTML ファイルと画像を関連付けることができます（通常、リポジトリ定義の依存関係を使用して画像に関連付けられるのは XML ファイルのみです）。別のカスタム関係の例として、ツリー構造ではなく循環グラフ構造を使用して、リポジトリの別のビューを構築する場合があります。ビューアーと共に円グラフを定義して、これらの関係をトラバースすることができます。最後に、2 つのリソースが完全に異なる場合でも、1 つのリソースが別のリソースを置き換えることを示すことができます。この場合、予約範囲外の関係タイプを定義して、これら 2 つのリソース間の関係を作成できます。アプリケーションは、関係を検出して処理できる唯一のクライアントであり、その関係の検索を実行するために使用できます。
 
-Repository サービス Java API または web サービス API を使用して、プログラムによってリソース間の関係を指定できます。
+Repository Service Java API または web サービス API を使用して、プログラムによってリソース間の関係を指定できます。
 
 >[!NOTE]
 >
@@ -906,11 +905,11 @@ Repository サービスメソッドを呼び出して、関係のタイプを作
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用した関係リソースの作成 {#create-relationship-resources-using-the-java-api}
 
-Repository サービス Java API を使用して関係リソースを作成し、以下のタスクを実行します。
+Repository Service Java API を使用して関係リソースを作成し、以下のタスクを実行します。
 
 1. プロジェクトファイルを含める
 
@@ -1004,7 +1003,7 @@ Repository サービス Java API を使用して関係リソースを作成し�
 
 ![lr_lr_lockrepository](assets/lr_lr_lockrepository.png)
 
-Repository サービス Java API または web サービス API を使用して、リソースへのアクセスをプログラムで制御できます。
+Repository Service Java API または web サービス API を使用して、リソースへのアクセスをプログラムで制御できます。
 
 >[!NOTE]
 >
@@ -1055,11 +1054,11 @@ Repository サービスメソッドを呼び出し URI を指定して、リソ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API を使用したリソースのロック {#lock-resources-using-the-java-api}
 
-Repository サービス API（Java）を使用してリソースをロックします。
+Repository Service API（Java）を使用してリソースをロックします。
 
 1. プロジェクトファイルを含める
 
@@ -1091,7 +1090,7 @@ Repository サービス API（Java）を使用してリソースをロックし�
 
 1. リソースのロックの解除
 
-   `ResourceRepositoryClient` オブジェクトの `unlockResource` メソッドを呼び出し、リソースの URI をパラメーターとして渡します。詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   `ResourceRepositoryClient` オブジェクトの `unlockResource` メソッドを呼び出し、リソースの URI をパラメーターとして渡します。詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
 
 **関連トピック**
 
@@ -1105,7 +1104,7 @@ Repository サービス API（Java）を使用してリソースをロックし�
 
 ### Web サービス API を使用したリソースのロック {#lock-resources-using-the-web-service-api}
 
-Repository サービス API（web サービス）を使用してリソースをロックします。
+Repository Service API（web サービス）を使用してリソースをロックします。
 
 1. プロジェクトファイルを含める
 
@@ -1185,7 +1184,7 @@ Repository サービス Java API（SOAP）を使用して、リポジトリ内�
 
 **リソースを削除**
 
-URI を指定してリソースを削除するには、レポジトリサービスメソッドを呼び出します。
+URI を指定してリソースを削除するには、Repository サービスメソッドを呼び出します。
 
 **関連トピック**
 
@@ -1197,7 +1196,7 @@ URI を指定してリソースを削除するには、レポジトリサービ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Repository サービス API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
+[Repository Service API クイックスタート](/help/forms/developing/repository-service-api-quick-starts.md#repository-service-api-quick-starts)
 
 ### Java API（SOAP）を使用したリソースの削除 {#delete-resources-using-the-java-api-soap}
 

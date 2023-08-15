@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
-workflow-type: ht
-source-wordcount: '2232'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '2231'
+ht-degree: 99%
 
 ---
 
@@ -120,7 +120,7 @@ Workbench 6.4 用 Designer 6.4.x や Workbench 6.5 用 Designer 6.5.0.x など�
   </tr>
   <tr>
    <td><p>Designer（スタンドアロン）</p> </td>
-   <td><p>なし. <br />Workbench に付属する Designer のバージョンは英語版のみです。<br />Workbench インストーラーでは、新しいバージョンの Designer は再インストールされません。代わりに、Workbench インストーラーにバンドルされている更新バージョンにパッチが適用されます。これにより、Workbench 内でローカライズ版の Designer を使用することもできます。<br /> </p> </td>
+   <td><p>なし. <br />Workbench に付属する Designer のバージョンは英語版のみです。<br />Workbench インストーラーでは、新しいバージョンの Designer は再インストールされません。代わりに、Workbench インストーラーにバンドルされている更新バージョンにパッチが適用されます。また、ローカライズ版の Designer を Workbench 内で使用することもできます。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -158,12 +158,14 @@ Workbench をインストールする前に、Workbench の実行に必要なソ
 1. （オプション）フォームを作成および変更するツールが必要な場合は、「Adobe Designer のインストール」を選択します。
 
    >[!NOTE]
-   >Acrobat 10 と共にインストールされた Designer を引き続き使用するには、このオプションの選択を解除したままにします。
+   >
+   Acrobat 10 と共にインストールされた Designer を引き続き使用するには、このオプションの選択を解除したままにします。
 
 1. 表示されるデフォルトのディレクトリをそのまま使用するか、「選択」をクリックして Workbench のインストール先ディレクトリを選択し、「次へ」をクリックします。
 
    >[!NOTE]
-   >インストールディレクトリのパスには、#（ポンド）および $（ドル）文字を含めることはできません。
+   >
+   インストールディレクトリのパスには、#（ポンド）および $（ドル）文字を含めることはできません。
 
 1. インストール前の概要を確認して、「インストール」をクリックします。インストールの進行状況がインストールプログラムに表示されます。
 1. インストールの概要を確認します。「Adobe AEM forms Workbench の起動」を選択して Workbench を起動し、「次へ」をクリックします。
@@ -182,7 +184,8 @@ JEE 上の AEM Forms プロセスは、アップグレードウィザードを�
 Workbench を使用するには、通常は別のコンピューターで AEM Forms のインスタンスを実行させる必要があります。AEM Forms にログインにするには、ユーザー名とパスワードおよびサーバーの場所に関する詳細情報が必要です。
 
 >[!NOTE]
->EMC Documentum® または IBM® FileNet リポジトリプロバイダーを使用するように AEM Forms を設定している場合、AEM Forms 管理コンソールでデフォルトとして設定されている以外のリポジトリにログインするには、ユーザー名を username@Repository と指定します。
+>
+EMC Documentum® または IBM® FileNet リポジトリプロバイダーを使用するように AEM Forms を設定している場合、AEM Forms 管理コンソールでデフォルトとして設定されている以外のリポジトリにログインするには、ユーザー名を username@Repository と指定します。
 
 ### タイムアウトの設定 {#configuring-timeout-settings}
 
@@ -193,7 +196,8 @@ Workbench を使用するには、通常は別のコンピューターで AEM Fo
 HTTPS 経由で Workbench を AEM Forms サーバーに接続するには、公開鍵を発行した認証局（CA）が信頼できることを Workbench が認識する必要があります。この証明書が信頼できるソースに由来すると認識されない場合、[Workbench_HOME]/workbench/jre/lib/security ディレクトリにある cacert ファイルを更新する必要があります。
 
 >[!NOTE]
->[Workbench_HOME] は、Workbench をインストールしたディレクトリを表します。デフォルトの場所は C:¥Program Files (x86)¥Adobe Experience Manager forms Workbench です。
+>
+[Workbench_HOME] は、Workbench をインストールしたディレクトリを表します。デフォルトの場所は C:¥Program Files (x86)¥Adobe Experience Manager forms Workbench です。
 
 HTTPS には、証明書で指定されている名前を使用して接続してください。この名前は通常、完全修飾ホスト名です。
 
@@ -201,7 +205,8 @@ HTTPS には、証明書で指定されている名前を使用して接続し�
 1. Secure Sockets Layer（SSL）証明書のコピーがあることを確認します。SSL サーバーを設定した管理者に問い合わせるか、web ブラウザーを使用して証明書を書き出します。
 
    >[!NOTE]
-   >証明書を書き出すには、web ブラウザーを開いて管理コンソールにログインし、ブラウザーに証明書をインストールします。次にブラウザーから一時的な保存場所（または直接 [Workbench_HOME]/workbench/jre/lib/security ディレクトリ）に証明書を書き出します。
+   >
+   証明書を書き出すには、web ブラウザーを開いて管理コンソールにログインし、ブラウザーに証明書をインストールします。次にブラウザーから一時的な保存場所（または直接 [Workbench_HOME]/workbench/jre/lib/security ディレクトリ）に証明書を書き出します。
 
 1. 証明書を [Workbench_HOME]/workbench/jre/lib/security ディレクトリにコピーします。
 
@@ -225,8 +230,8 @@ Forms Generator または Output が、特定のフォームテンプレート�
 * **タイムスタンプ**：テンプレートファイルには、フォームの最終更新時刻の判断に使用されるタイムスタンプが含まれます。
 * **テンプレート UUID**：Designer は、各テンプレートに、フォームとそのバージョンの一意識別子（UUID）を挿入します。埋め込まれた UUID は、フォームが更新されるたびに更新されます。例えば、XDP テンプレートには次の内容が表示されます。
 
-   `<?xml version="1.0" encoding="UTF-8"?>`
-   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
+  `<?xml version="1.0" encoding="UTF-8"?>`
+  `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
 
 * **レンダリングオプション**：キャッシュの内容は、一意のレンダリングオプションのセットごとに、レンダリングされたフォームキャッシュ内に別々に保存されます。
 

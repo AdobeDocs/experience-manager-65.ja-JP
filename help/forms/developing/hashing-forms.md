@@ -2,10 +2,10 @@
 title: ダイナミック PDF フォームでハッシュを生成して操作する方法
 description: 動的 PDF Forms でのハッシュの生成と操作。
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 70%
+source-wordcount: '1246'
+ht-degree: 69%
 
 ---
 
@@ -69,7 +69,7 @@ JEE Designer 上のAEM Formsで提供されている 2 つのサンプルの 1 �
 
 ## サンプル PDF フォームの試用 {#try-sample-pdf-forms}
 
-この記事のサンプルファイルには、2 つの PDF forms が含まれます。最初のサンプルでは文字列での入力が可能になり、その文字列の MD4、MD5、SHA-1 および SHA-256 ハッシュ値を生成できます。2 つ目のサンプルは、正しいパスワードが入力された場合にテキストフィールドのロックを解除する単純なフォームです。
+この記事のサンプルファイルには、2 つの PDF forms が含まれます。最初のサンプルでは、文字列を入力し、その文字列の MD4、MD5、SHA-1 および SHA-256 ハッシュ値を生成できます。 2 つ目のサンプルは、正しいパスワードが入力された場合にテキストフィールドのロックを解除する単純なフォームです。
 
 ### 例 1：ハッシュの生成 {#generating-dashes}
 

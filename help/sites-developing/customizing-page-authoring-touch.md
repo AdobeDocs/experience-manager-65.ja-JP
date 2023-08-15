@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 50%
+source-wordcount: '1339'
+ht-degree: 49%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager(AEM) は、ページオーサリング機能 ( およ�
 
 * オーバーレイ
 
-  オーバーレイオーバーレイはノード定義に基づいており、（`/libs`にある）標準の機能に、（`/apps`にある）カスタマイズした独自機能を重ねることができます。[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+  オーバーレイはノード定義に基づいており、 `/libs`) をカスタマイズした独自の機能 ( `/apps`) をクリックします。 [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 >[!NOTE]
 >
@@ -53,18 +53,18 @@ Adobe Experience Manager(AEM) は、ページオーサリング機能 ( およ�
 >
 >******`/libs` パス内は一切変更しないでください。
 >
->理由は、 `/libs` が上書きされる場合は、次回インスタンスをアップグレードするとき（ホットフィックスまたは機能パックを適用したときに上書きされる場合があります）。
+>理由は、次の内容が原因です： `/libs` が上書きされる場合は、次回インスタンスをアップグレードするとき（ホットフィックスまたは機能パックを適用したときに上書きされる場合があります）。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) （下） `/apps`
 >1. `/apps` 内で変更作業をおこないます。
 
 ## 新しいレイヤー（モード）の追加 {#add-new-layer-mode}
 
-ページを編集する際には、様々な操作が行われます [モード](/help/sites-authoring/author-environment-tools.md#page-modes) 使用可能 これらのモードは、 [レイヤー](/help/sites-developing/touch-ui-structure.md#layer). これにより、同じページコンテンツに対して、異なるタイプの機能にアクセスできます。 標準レイヤーは次のとおりです。編集、プレビュー、注釈、開発者、ターゲティング。
+ページを編集する際には、様々な操作が行われます [モード](/help/sites-authoring/author-environment-tools.md#page-modes) 使用可能 これらのモードは、 [レイヤー](/help/sites-developing/touch-ui-structure.md#layer). これにより、同じページコンテンツに対して、異なるタイプの機能にアクセスできます。 標準のレイヤーは、編集、プレビュー、注釈、開発者、ターゲティングです。
 
-### レイヤの例：ライブコピーステータス {#layer-example-live-copy-status}
+### レイヤーの例：ライブコピーステータス {#layer-example-live-copy-status}
 
 標準のAEMインスタンスは MSM レイヤーを提供します。 これにより、 [マルチサイト管理](/help/sites-administering/msm.md) レイヤでハイライト表示します。
 
@@ -181,7 +181,7 @@ GitHub のコード
 
    >[!CAUTION]
    >
-   >AEMの切り抜き率 ( `ratio` プロパティは、 **高さ/幅**. これは従来の定義である「幅/高さ」とは異なり、レガシー互換性のための設定です。`name` プロパティを明確に定義していれば、UI に表示されるので、オーサリングユーザーは違いを認識しません。
+   >AEMの切り抜き率 ( `ratio` プロパティは、次のように定義されます。 **高さ/幅**. これは従来の定義である「幅/高さ」とは異なり、レガシー互換性のための設定です。`name` プロパティを明確に定義していれば、UI に表示されるので、オーサリングユーザーは違いを認識しません。
 
 #### 新しいインプレースエディターの作成 {#creating-a-new-in-place-editor}
 

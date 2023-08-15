@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2297'
+source-wordcount: '2296'
 ht-degree: 35%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->e コマースフレームワークは、任意の e コマースソリューションで使用できます。ここで扱う特定および例は、 [hybris](https://www.sap.com/products/crm.html) 解決策
+>e コマースフレームワークは、任意の e コマースソリューションで使用できます。ここで扱う特定および例は、 [hybris](https://www.sap.com/products/crm.html) 解決策。
 
-統合フレームワークには、API を備えた統合レイヤーが含まれています。これにより、以下のことが可能になります。
+統合フレームワークには、API を備えた統合レイヤーが含まれています。次の操作が可能です。
 
 * e コマースシステムをプラグインして、製品データを AEM に取り込む
 
@@ -59,13 +59,13 @@ e コマースフレームワークは、任意の e コマースソリューシ
 
 * 適切なコマースファクトリ定義を参照するために、`cq:commerceProvider` プロパティも使用されます。
 
-   * 例： `cq:commerceProvider` プロパティに値 `hybris` は、 **Day CQ Commerce Factory for Hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory) — パラメーター `commerceProvider` には値もあります `hybris`.
+   * 例えば、 `cq:commerceProvider` プロパティに値を指定 `hybris` は、の OSGi 設定と相関関係にあります。 **Day CQ Commerce Factory for Hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory) — パラメーター `commerceProvider` には値もあります `hybris`.
 
    * ここで、**カタログバージョン**&#x200B;など、さらに別のプロパティを設定できます（適切かつ使用可能な場合）。
 
 以下の例を参照してください。
 
-| `cq:commerceProvider = geometrixx` | 標準のAEMインストールでは、特定の実装が必要です。例えば、汎用 API への最小限の拡張を含むGeometrixxの例 |
+| `cq:commerceProvider = geometrixx` | 標準のAEMインストールでは、特定の実装が必要です。例えば、汎用 API への最小限の拡張を含むGeometrixx例の場合、 |
 |--- |--- |
 | `cq:commerceProvider = hybris` | hybris 実装 |
 
@@ -121,7 +121,7 @@ Hybris 4 向けの開発には、以下が必要です。
 
 hybris は、ユーザーセッションを使用して、顧客の買い物かごなどの情報を保存します。 セッション ID は、hybris から `JSESSIONID` hybris への以降のリクエスト時に送信する必要がある cookie。 セッション ID をリポジトリに保存しないように、セッション ID は買い物客のブラウザーに保存される別の cookie にエンコードされます。 次の手順を実行します。
 
-* 最初のリクエストでは、買い物客のリクエストに Cookie が設定されません。したがって、hybris インスタンスにリクエストが送信され、セッションが作成されます。
+* 最初のリクエストでは、買い物客のリクエストに Cookie が設定されていないので、セッションを作成するリクエストが hybris インスタンスに送信されます。
 
 * その応答からセッション cookie が抽出され、新しい cookie 内でエンコードされ（例えば `hybris-session-rest`）、買い物客への応答に設定されます。元の cookie は特定のパスに対してのみ有効で、それ以外の場合は後続のリクエストでブラウザーから返送されないので、新しい cookie でのエンコードが必要です。 また、パス情報を Cookie の値に追加する必要があります。
 
@@ -153,7 +153,7 @@ hybris は、ユーザーセッションを使用して、顧客の買い物か�
 
 hybris で管理される製品データは、AEMで使用できる必要があります。 次のメカニズムが実装されました。
 
-* ID の最初の読み込みは、hybris によってフィードとして提供されます。 このフィードは更新される場合があります。
+* ID の最初の読み込みは、hybris によってフィードとして提供されます。 このフィードは更新される可能性があります。
 * hybris は、(AEMがポーリングする ) フィードを介して更新情報を提供します。
 * AEMが製品データを使用している場合、現在のデータのリクエストを hybris に返します（最終変更日を使用した条件付き取得リクエスト）。
 * Hybris 上では、宣言的な方法でフィードコンテンツを指定できます。
@@ -203,7 +203,7 @@ hybris で管理される製品データは、AEMで使用できる必要があ�
 
 #### 製品とバリアントのアーキテクチャ {#architecture-of-product-and-variants}
 
-1 つの製品に複数のバリエーションを含めることができます。例えば、色やサイズによって異なる場合があります。 製品は、バリエーションを駆動するプロパティを定義する必要があります。Adobe用語 *バリアント軸*.
+1 つの製品に複数のバリエーションを含めることができます。例えば、色やサイズによって異なる場合があります。 製品は、バリエーションを駆動するプロパティを定義する必要があります。Adobe用語は次のとおりです。 *バリアント軸*.
 
 ただし、すべてのプロパティがバリアント軸であるわけではありません。 バリエーションは他のプロパティにも影響を与えます。例えば、価格はサイズに依存する場合があります。 買い物客はこれらのプロパティを選択できないので、バリアント軸とは見なされません。
 
@@ -228,7 +228,7 @@ hybris で管理される製品データは、AEMで使用できる必要があ�
 
 #### 製品の参照と製品データ {#product-references-and-product-data}
 
-一般に、製品データは `/etc`、および製品の参照は、 `/content`.
+一般に、製品データは、 `/etc`、および製品の参照は、 `/content`.
 
 製品バリエーションと製品データノードの間には 1 対 1 のマッピングが必要です。
 
@@ -348,7 +348,7 @@ public class AxisFilter implements VariantFilter {
 
          * すべてのプロパティをローカルに格納する product ノード（productData プロパティを含まない）は、独自の上位ノードから製品属性を直接継承します。
 
-* **AEM-generic 製品構造**
+* **AEM-generic プロダクト構造**
 
    * 各バリアントには、独自のリーフノードが必要です。
 
@@ -482,7 +482,7 @@ public class AxisFilter implements VariantFilter {
    public void submitOrder();
    ```
 
-**送料の計算**
+**送料計算**
 
 * 多くの場合、注文フォームには複数の配送オプション（および価格）が含まれている必要があります。
 * 価格は、品目や注文の詳細（重み付けや配送先住所など）に基づく場合があります。

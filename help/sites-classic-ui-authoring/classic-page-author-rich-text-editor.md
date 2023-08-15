@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 99%
+source-wordcount: '1840'
+ht-degree: 95%
 
 ---
 
@@ -161,7 +161,7 @@ URL（web サイト内または外部の場所）へのリンクを生成する�
 
 ![ハイパーリンクアイコン](do-not-localize/chlimage_1-9.png)
 
-ダイアログではターゲット URL を指定でき、その URL を新しいウィンドウで開くかどうかも指定できます。
+ダイアログで、ターゲット URL を指定できます。また、新しいウィンドウで開く必要があるかどうかも指定できます。
 
 ![cq55_rte_link_use](assets/cq55_rte_link_use.png)
 
@@ -207,7 +207,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-「**置換**」オプションを使用すると、**検索**&#x200B;してから、指定したテキストで個別のインスタンスを&#x200B;**置換**&#x200B;したり、現在のコンポーネントのインスタンスを&#x200B;**すべて置換**&#x200B;することができます。
+The **置換** オプションを使用すると、 **検索文字列**&#x200B;を、 **置換** 指定したテキストを持つ個々のインスタンス、または **すべてを置換** 現在のコンポーネントのインスタンス。
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
@@ -383,7 +383,7 @@ AEM には、**検索**&#x200B;および&#x200B;**置換**&#x200B;の両方の�
 
 ![ソース編集モードのツールバー](do-not-localize/cq55_rte_sourceedit.png)
 
-ソース編集モードでは、コンポーネントの基になる HTML を表示および編集できます。
+ソース編集モードを使用すると、コンポーネントの基になるHTMLを表示および編集できます。
 
 例えば、次のテキストを入力します。
 

@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
-workflow-type: ht
-source-wordcount: '264'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 96%
 
 ---
 
 # リッチテキストエディターを使用したコンテンツのオーサリング {#use-rich-text-editor-to-author-content}
 
-リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。様々なコンポーネントの基礎となります。例えば、次のコンポーネントです。
+リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。以下を含む、様々なコンポーネントの基礎を形成します。
 
 * テキスト
 * テキスト画像
@@ -36,7 +36,7 @@ ht-degree: 100%
 
 このツールバーには、次のオプションがあります。
 
-* **フォーマット**：太字、斜体および下線を設定できます。
+* **形式**：太字、斜体および下線を設定できます。
 * **リスト**：箇条書きリストまたは番号付きリストを作成したり、インデントを設定したりすることができます。
 * **ハイパーリンク**
 * **リンク解除**

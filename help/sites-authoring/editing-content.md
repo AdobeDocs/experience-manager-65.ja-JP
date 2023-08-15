@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: f6d6fcd1f174cc32a172f70ee3da8eff15156c15
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '3080'
-ht-degree: 97%
+source-wordcount: '3067'
+ht-degree: 91%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 97%
 
 * **モードセレクター**
 
-  現在の[モード](/help/sites-authoring/author-environment-tools.md#page-modes)が表示され、別のモード（編集、レイアウト、タイムワープ、ターゲット設定など）を選択できます。
+  現在の [mode](/help/sites-authoring/author-environment-tools.md#page-modes) 「 」では、編集、レイアウト、タイムワープ、ターゲット設定など、別のモードを選択できます。
 
   ![モードセレクター](assets/chlimage_1-120.png)
 
@@ -88,7 +88,7 @@ ht-degree: 97%
 
 * **注釈**
 
-  ページをレビューするときに、ページに[注釈](/help/sites-authoring/annotations.md)を追加できます。最初の注釈を追加後、アイコンは、ページ上の注釈の数を示す数字に切り替わります。
+  次の項目を追加： [注釈](/help/sites-authoring/annotations.md) をページに追加します。 最初の注釈を追加後、アイコンは、ページ上の注釈の数を示す数字に切り替わります。
 
   ![注釈](do-not-localize/screen_shot_2018-03-22at111638.png)
 
@@ -157,7 +157,7 @@ ht-degree: 97%
 
    * デスクトップデバイスを使用している場合は、「**コンポーネントをここにドラッグ**」ボックスをダブルクリックします。
 
-   **新規コンポーネントを挿入**&#x200B;ダイアログが表示され、必要なコンポーネントを選択できるようになります。
+   The **新規コンポーネントを挿入** ダイアログが開き、必要なコンポーネントを選択できます。
 
    ![新規コンポーネントを挿入](assets/screen_shot_2018-03-22at112650.png)
 
@@ -230,13 +230,13 @@ ht-degree: 97%
 
 * **編集**
 
-  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)[コンポーネントのコンテンツを編集](#edit-content)できます。多くの場合、ツールバーが提供されます。
+  [コンポーネントタイプに応じて異なる](/help/sites-authoring/default-components.md) これで [コンポーネントのコンテンツを編集](#edit-content). 多くの場合、ツールバーが提供されます。
 
   ![編集](do-not-localize/screen_shot_2018-03-22at112936.png)
 
 * **設定**
 
-  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)、コンポーネントのプロパティを編集および設定できます。多くの場合、ダイアログが開きます。
+  [コンポーネントタイプに応じて異なる](/help/sites-authoring/default-components.md) これにより、コンポーネントのプロパティを編集および設定できます。 多くの場合、ダイアログが開きます。
 
   ![設定](do-not-localize/screen_shot_2018-03-22at112955.png)
 
@@ -280,7 +280,7 @@ ht-degree: 97%
 
 * **グループ**
 
-  複数のコンポーネントを一度に選択できます。デスクトップデバイスで同じ操作をおこなうには、**Ctrl キーを押しながらクリック**&#x200B;するか、または **Command キーを押しながらクリック**&#x200B;します。
+  これにより、複数のコンポーネントを一度に選択できます。 デスクトップデバイスで同じ操作をおこなうには、**Ctrl キーを押しながらクリック**&#x200B;するか、または **Command キーを押しながらクリック**&#x200B;します。
 
   ![グループ](do-not-localize/screen_shot_2018-03-22at113240.png)
 
@@ -292,13 +292,13 @@ ht-degree: 97%
 
 * **レイアウト**
 
-  選択したコンポーネントの[レイアウト](/help/sites-authoring/editing-content.md#edit-component-layout)を変更できます。これは選択したコンポーネントにのみ適用され、ページ全体の[レイアウトモード](/help/sites-authoring/author-environment-tools.md#page-modes)はアクティベートされません。
+  これにより、 [レイアウト](/help/sites-authoring/editing-content.md#edit-component-layout) 選択したコンポーネントの。 これは選択したコンポーネントにのみ適用され、ページ全体の[レイアウトモード](/help/sites-authoring/author-environment-tools.md#page-modes)はアクティベートされません。
 
   ![レイアウト](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **エクスペリエンスフラグメントバリエーションに変換**
 
-  これを使用すると、選択したコンポーネントから新しい[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を作成したり、既存のエクスペリエンスフラグメントに追加したりできます。
+  これにより、新しい [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) 選択したコンポーネントから、または既存のエクスペリエンスフラグメントに追加します。
 
   ![エクスペリエンスフラグメントバリエーションに変換](do-not-localize/screen_shot_2018-03-22at113033.png)
 
@@ -507,7 +507,7 @@ ht-degree: 97%
 
 ## ページのロック {#locking-a-page}
 
-AEM では、他のユーザーによるコンテンツの変更を防ぐためにページをロックすることができます。ページのロックは、1 つの特定のページで大量の編集作業をおこなう場合や、短期間ページを凍結する必要がある場合に便利です。
+AEMでは、他のユーザーがコンテンツを変更できないように、ページをロックできます。 ページのロックは、1 つの特定のページで大量の編集作業をおこなう場合や、短期間ページを凍結する必要がある場合に便利です。
 
 ページは次のいずれかの場所からロックできます。
 
@@ -549,7 +549,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 ## ページ編集の取り消しとやり直し {#undoing-and-redoing-page-edits}
 
-次のアイコンを使用して、アクションの取り消しまたはやり直しを行うことができます。これらのアイコンは、ツールバーに適宜表示されます。
+次のアイコンを使用して、操作の取り消しとやり直しをおこなうことができます。 これらは、必要に応じてツールバーに表示されます。
 
 ![取り消しとやり直し](do-not-localize/screen_shot_2018-03-23at093614.png)
 

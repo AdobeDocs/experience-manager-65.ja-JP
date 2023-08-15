@@ -7,10 +7,10 @@ topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 72cd0594-8b5e-4d14-bc6f-bca26bae50f2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 100%
+source-wordcount: '840'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 ## インボックスの 1 つまたはすべての項目を他のユーザーと共有
 
-AEM インボックスは、インボックス内の 1 つまたはすべての項目を他のユーザーと共有できます。
+AEM Inbox では、インボックス内の 1 つの項目またはすべての項目を別のユーザーと共有できます。
 
 ### すべてのインボックス項目を共有
 

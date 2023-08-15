@@ -1,17 +1,17 @@
 ---
 title: ページエクスポーター
-description: AEM ページエクスポーターの使用方法について説明します。
+description: AEM Page Exporter の使用方法を説明します。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 100%
+source-wordcount: '1063'
+ht-degree: 94%
 
 ---
 
 # ページエクスポーター{#the-page-exporter}
 
-AEM を使用すると、画像ファイル、`.js` ファイル、`.css` ファイルを含む完全な web ページとして、ページをエクスポートできます。
+AEMでは、画像を含む完全な Web ページとしてページを書き出すことができます。 `.js` および `.css` ファイル。
 
 設定が完了したら、URL の `html` を `export.zip` に置き換えることにより、ページのエクスポートをブラウザーからリクエストします。これにより、HTML 形式でレンダリングされたページと参照元のアセットを含む、アーカイブ（zip）ファイルが生成されます。ページ内のすべてのパス（例えば、画像へのパス）は、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。アーカイブ（zip）ファイルは、ブラウザーからダウンロードできます。
 
@@ -20,7 +20,6 @@ AEM を使用すると、画像ファイル、`.js` ファイル、`.css` ファ
 >ブラウザーとその設定に応じて、ダウンロードは次のいずれかになります。
 >* アーカイブファイル（`<page-name>.export.zip`）
 >* フォルダー（`<page-name>`）（アーカイブファイルを実際に展開済み）
-
 
 ## ページのエクスポート {#exporting-a-page}
 
@@ -47,7 +46,6 @@ AEM を使用すると、画像ファイル、`.js` ファイル、`.css` ファ
    次を介してアクセスします。
    * localhost:4502/content/we-retail/language-masters/en.export.zip
 
-
 1. アーカイブファイルをファイルシステムにダウンロードします。
 
 1. ファイルシステムで、必要に応じてそのファイルを解凍します。展開すると、選択したページと同じ名前のフォルダーが作成されます。このフォルダーには次が含まれます。
@@ -55,8 +53,8 @@ AEM を使用すると、画像ファイル、`.js` ファイル、`.css` ファ
    * サブフォルダー `content`（リポジトリ内のページへのパスを反映した一連のサブフォルダーのルート）
 
       * この構造の中に、選択したページの html ファイルがあります（`<page-name>.html`）
-   * その他のリソース（`.js` ファイル、`.css` ファイル、画像など）エクスポートテンプレートの設定に従って配置
 
+   * その他のリソース（`.js` ファイル、`.css` ファイル、画像など）エクスポートテンプレートの設定に従って配置
 
 1. ページの HTML ファイル（`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`）をブラウザーで開き、レンダリングを確認します。
 
@@ -73,7 +71,7 @@ AEM を使用すると、画像ファイル、`.js` ファイル、`.css` ファ
 * `default` テンプレートは、ページをエクスポートするための設定方法を示していて、新しいエクスポートテンプレートのベースとして使用できます。
 
 * テンプレートのノード構造を JSON 形式でブラウザーに表示するには、次の URL をリクエストします。
-   `http://localhost:4502/etc/contentsync/templates/default.json`
+  `http://localhost:4502/etc/contentsync/templates/default.json`
 
 新しいページエクスポーターのテンプレートは、次の方法で簡単に作成できます。
 
@@ -121,19 +119,18 @@ page ノードを使用して、ページの HTML を zip ファイルにコピ�
    * プロパティ `Name` を `page` に設定して定義します。
    * ノードタイプは `nt:unstructured` です。
 
-   `page` ノードには以下のプロパティがあります。
+  `page` ノードには以下のプロパティがあります。
 
    * 値 `pages` が設定された `type` プロパティ。
 
    * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
-
-   <!--
+  <!--
   * The other properties are described in the Overview of configuration types section of the Content Sync framework.
   -->
 
 * `rewrite`
 rewrite ノードでは、エクスポートしたページでリンクを書き換える方法を定義します。書き換え後のリンクは、zip ファイルに含まれるファイルを指すか、サーバー上のリソースを指します。
-   <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
+  <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 design ノードを使用して、エクスポートされるページに使用されているデザインをコピーします。次のような特徴があります。
@@ -143,16 +140,14 @@ design ノードを使用して、エクスポートされるページに使用�
    * プロパティ `Name` を `design` に設定して定義します。
    * ノードタイプは `nt:unstructured` です。
 
-   `design` ノードには次のプロパティがあります。
+  `design` ノードには次のプロパティがあります。
 
    * 値 `copy` に設定された `type` プロパティ。
 
    * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
-
 * `generic`
-汎用ノードを使用して、clientlibs などのリソースをコピーできます。 
-`.js` ファイルまたは `.css` ファイルを zip ファイルへ。次のような特徴があります。
+汎用ノードを使用して、clientlibs などのリソースをコピーできます。`.js` ファイルまたは `.css` ファイルを zip ファイルへ。次のような特徴があります。
 
    * オプションです。
    * `/etc/contentsync/templates/<mysite>` にあります。
@@ -160,16 +155,16 @@ design ノードを使用して、エクスポートされるページに使用�
    * ノードタイプは `nt:unstructured` です。
    * `type` プロパティと `type` に関連したプロパティを持ちます。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
-   例えば、次の設定ノードは `mysite.clientlibs.js` ファイルを zip ファイルにコピーします。
+  例えば、次の設定ノードは `mysite.clientlibs.js` ファイルを zip ファイルにコピーします。
 
-   ```xml
-   "mysite.clientlibs.js": {
-       "extension": "js",
-       "type": "clientlib",
-       "path": "/etc/designs/mysite/clientlibs",
-       "jcr:primaryType": "nt:unstructured"
-   }
-   ```
+  ```xml
+  "mysite.clientlibs.js": {
+      "extension": "js",
+      "type": "clientlib",
+      "path": "/etc/designs/mysite/clientlibs",
+      "jcr:primaryType": "nt:unstructured"
+  }
+  ```
 
 **カスタム設定の実装**
 
@@ -186,10 +181,10 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 ## プログラムによるページのエクスポート {#programmatically-exporting-a-page}
 
-プログラムによってページを書き出すには、[PageExporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI サービスを使用できます。このサービスを使用すると、次のことが可能です。
+プログラムによってページを書き出すには、 [PageExporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGi サービス。 このサービスを使用すると、次のことができます。
 
-* ページを書き出して HTTP サーブレット応答に書き込む。
-* ページを書き出して zip ファイルを特定の場所に保存する。
+* ページを書き出し、HTTP サーブレット応答に書き込みます。
+* ページを書き出し、zip ファイルを特定の場所に保存します。
 
 `export` セレクターおよび `zip` 拡張子にバインドされているサーブレットは PageExporter サービスを使用します。
 

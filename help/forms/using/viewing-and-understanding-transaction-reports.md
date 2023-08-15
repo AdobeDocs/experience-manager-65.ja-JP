@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: 75e1697c301dca3a649833a45caa1753fdc81514
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 100%
+source-wordcount: '858'
+ht-degree: 98%
 
 ---
 
 # トランザクションレポートの表示と理解{#viewing-and-understanding-transaction-reports}
 
-トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できます。これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。詳しくは、 [AEM Formsトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)を参照してください。
+トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を取り込み、追跡できます。 これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。詳しくは、 [AEM Formsトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)を参照してください。
 
 ## トランザクションレポートの設定  {#setting-up-transaction-reports}
 
@@ -35,7 +35,6 @@ ht-degree: 100%
 >* トランザクションレポートを使用する前に、すべてのパブリッシュインスタンスでリバースレプリケーションが有効になっているか確認します。
 >* トランザクションデータは、パブリッシュインスタンスから、対応するオーサーインスタンスまたは処理インスタンスにのみリバースレプリケーションされます。オーサーインスタンスまたは処理インスタンスは、別のインスタンスにデータを複製できません。
 >
-
 
 ### すべてのパブリッシュインスタンスでリバースレプリケーションを有効にする {#enable-reverse-replication-on-all-the-publish-instances}
 

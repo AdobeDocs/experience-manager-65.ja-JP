@@ -1,7 +1,7 @@
 ---
 title: 送信アクションの設定
 seo-title: Configuring the Submit action
-description: Forms では、アダプティブフォームが送信された後どのように処理されるかを定義するために、送信アクションを設定できます。組み込みの送信アクションを使用することも、独自のアクションを一から書き込むこともできます。
+description: Formsでは、送信アクションを設定して、送信後のアダプティブフォームの処理方法を定義することができます。 組み込みの送信アクションを使用することも、独自のアクションを一から書き込むこともできます。
 uuid: 4368d648-88ea-4f84-a051-46296a1a084e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -9,20 +9,20 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 83%
+source-wordcount: '1949'
+ht-degree: 82%
 
 ---
 
 # 送信アクションの設定{#configuring-the-submit-action}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=jp) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
@@ -40,7 +40,7 @@ ht-degree: 83%
 
 * REST エンドポイントへの送信
 * メールを送信
-* メールでPDFを送信
+* 電子メールでPDFを送信
 * Forms ワークフローを起動
 * フォームデータモデルを使用して送信
 * フォームポータル送信アクション
@@ -63,7 +63,7 @@ ht-degree: 83%
 
 ## REST エンドポイントへの送信 {#submit-to-rest-endpoint}
 
-この **REST エンドポイントに送信** 送信オプションでは、フォームに入力されたデータを HTTP データリクエストの一環として設定済みの確認ページにGETを渡します。 リクエストにフィールド名を追加できます。リクエストのフォーマットを以下に示します。
+The **REST エンドポイントに送信** 送信オプションでは、フォームに入力されたデータを HTTP データリクエストの一環として設定済みの確認ページにGETを渡します。 リクエストにフィールド名を追加できます。リクエストのフォーマットを以下に示します。
 
 `{fieldName}={request parameter name}`
 
@@ -110,7 +110,7 @@ REST エンドポイント送信アクションの設定
 >
 フォームデータを電子メールに含めるには、異なるパネルに配置されている場合でも、すべてのフォームフィールドに異なる要素名を付ける必要があります。
 
-## メールでPDFを送信 {#send-pdf-via-email}
+## 電子メールでPDFを送信 {#send-pdf-via-email}
 
 「**メールで PDF を送信**」送信アクションでは、フォームの送信が完了すると同時に、1 人または複数の受信者にフォームデータを含む PDF が添付されたメールが送信されます。
 

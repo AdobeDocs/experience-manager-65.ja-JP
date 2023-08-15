@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: ht
-source-wordcount: '902'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '897'
+ht-degree: 91%
 
 ---
 
@@ -22,7 +22,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## サイト管理 {#site-administration}
 
-**Web サイト**&#x200B;コンソールを使用すると、web サイトを管理および移動できます。2 つのパネルを使用して、web サイトの構造を展開し、必要な要素に対してアクションを実行できます。
+The **Web サイト** コンソールを使用すると、Web サイトを管理し、移動できます。 2 つのパネルを使用して、web サイトの構造を展開し、必要な要素に対してアクションを実行できます。
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
@@ -46,7 +46,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## サイドキック {#sidekick}
 
-サイドキックの「**コンポーネント**」タブでは、現在のページに追加できるコンポーネントを参照できます。必要なグループを展開し、コンポーネントをページ上の必要な場所にドラッグできます。
+The **コンポーネント** サイドキックの「 」タブでは、現在のページに追加できるコンポーネントを参照できます。 必要なグループを展開し、コンポーネントをページ上の必要な場所にドラッグできます。
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
@@ -106,7 +106,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ### 他のページからの段落の参照 {#referencing-paragraphs-from-other-pages}
 
-このタブを使用すると、他のページを検索できます。そのページのすべての段落が一覧表示されます。段落を現在のページにドラッグすると、元の段落への参照が作成されます。
+このタブでは、別のページを検索できます。 そのページのすべての段落が一覧表示されます。段落を現在のページにドラッグすると、元の段落への参照が作成されます。
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -193,10 +193,10 @@ Web サイトコンソールには、[ページの現在のステータスに関
 サイドキックの下部に並ぶ 1 行のアイコンは、ページを操作するモードの切り替えに使用します。
 
 * [編集](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
-デフォルトのモードであり、ページの編集、コンポーネントの追加または削除、およびそれ以外の変更を行うことができます。
+これはデフォルトのモードで、ページの編集、コンポーネントの追加や削除、その他の変更をおこなうことができます。
 
 * [プレビュー](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
-このモードを使用すると、ページが web サイトで最終的にどのように表示されるかをプレビューできます。
+このモードでは、ページが Web サイト上で最終的に表示される場合と同様にプレビューできます。
 
 * [デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
 このモードでは、アクセス可能なコンポーネントを設定して、ページのデザインを編集できます。

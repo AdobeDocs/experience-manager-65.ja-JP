@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '1444'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1442'
+ht-degree: 99%
 
 ---
 
@@ -44,7 +44,8 @@ ht-degree: 100%
 >エクスペリエンスフラグメントの書き込みアクセス権には、次のグループに登録されたユーザーアカウントが必要です。
 >
 >    `experience-fragments-editors`
->問題が発生している場合は、システム管理者にお問い合わせください。
+>
+問題が発生している場合は、システム管理者にお問い合わせください。
 
 ## エクスペリエンスフラグメントを使用するタイミング {#when-should-you-use-experience-fragments}
 
@@ -76,17 +77,19 @@ ht-degree: 100%
 
 * [これらのフォルダーで使用可能なテンプレートを設定する](#configure-allowed-templates-folder)。
 
-フォルダーを作成すると、次の操作を行うことができます。
+フォルダーを作成すると、次の操作が可能になります。
 
 * エクスペリエンスフラグメントにとって意味のある構造（例：分類に従った構造）を作成する。
 
-   >[!NOTE]
-   >エクスペリエンスフラグメントの構造をサイトのページ構造に合わせる必要はありません。
+  >[!NOTE]
+  >
+  エクスペリエンスフラグメントの構造をサイトのページ構造に合わせる必要はありません。
 
 * [許可されたテンプレートをフォルダーレベルで割り当てる。](#configure-allowed-templates-folder)
 
-   >[!NOTE]
-   >[テンプレートエディター](/help/sites-authoring/templates.md)を使用すると、独自のテンプレートを作成できます。
+  >[!NOTE]
+  >
+  [テンプレートエディター](/help/sites-authoring/templates.md)を使用すると、独自のテンプレートを作成できます。
 
 WKND プロジェクトでは、`Contributors` に従って一部のエクスペリエンスフラグメントを構造化します。また、使用される構造は、マルチサイト管理（言語コピーを含む）などの他の機能の使用方法の例も示します。
 
@@ -105,12 +108,14 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 1. [そのフォルダーに使用できるエクスペリエンスフラグメントテンプレートを設定](#configure-allowed-templates-folder)します。
 
 >[!NOTE]
->また、[インスタンスに使用できるテンプレート](#configure-allowed-templates-instance)を設定することもできますが、アップグレード時に値が上書きされる可能性があるので、この方法は&#x200B;**お勧めしません**。
+>
+また、[インスタンスに使用できるテンプレート](#configure-allowed-templates-instance)を設定することもできますが、アップグレード時に値が上書きされる可能性があるので、この方法は&#x200B;**お勧めしません**。
 
 ### フォルダーに使用できるテンプレートの設定 {#configure-allowed-templates-folder}
 
 >[!NOTE]
->アップグレード時に値が上書きされないので、「**許可されたテンプレート**」を指定する場合は、この方法をお勧めします。
+>
+アップグレード時に値が上書きされないので、「**許可されたテンプレート**」を指定する場合は、この方法をお勧めします。
 
 1. 必要な&#x200B;**エクスペリエンスフラグメント**&#x200B;フォルダーに移動します。
 
@@ -127,15 +132,18 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
    ![エクスペリエンスフラグメントのプロパティ - 許可されたテンプレート](/help/sites-authoring/assets/xf-folders-templates.png)
 
    >[!NOTE]
-   >詳しくは、[エクスペリエンスフラグメントのテンプレート](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments)を参照してください。
+   >
+   詳しくは、[エクスペリエンスフラグメントのテンプレート](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments)を参照してください。
 
 1. 「**保存して閉じる**」を選択します。
 
 ### インスタンスに使用できるテンプレートの設定 {#configure-allowed-templates-instance}
 
 >[!CAUTION]
->指定したテンプレートがアップグレード時に上書きされる可能性があるので、「**許可されたテンプレート**」をこの方法で変更することはお勧めしません。
->このダイアログは、情報を提供する目的でのみ使用してください。
+>
+指定したテンプレートがアップグレード時に上書きされる可能性があるので、「**許可されたテンプレート**」をこの方法で変更することはお勧めしません。
+>
+このダイアログは、情報を提供する目的でのみ使用してください。
 
 1. 必要な&#x200B;**エクスペリエンスフラグメント**&#x200B;コンソールに移動します。
 
@@ -148,7 +156,8 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
    ![エクスペリエンスフラグメントを設定](assets/ef-01.png)
 
    >[!NOTE]
-   >詳しくは、[エクスペリエンスフラグメントのテンプレート](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments)を参照してください。
+   >
+   詳しくは、[エクスペリエンスフラグメントのテンプレート](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments)を参照してください。
 
 1. 「**保存**」を選択します。
 
@@ -177,8 +186,10 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
    ![xf-04](assets/xf-04.png)
 
    >[!NOTE]
-   >エクスペリエンスフラグメントテンプレート内のタグは、このエクスペリエンスフラグメントルートページのタグとは結合されません。
-   >これらは完全に別個のものです。
+   >
+   エクスペリエンスフラグメントテンプレート内のタグは、このエクスペリエンスフラグメントルートページのタグとは結合されません。
+   >
+   これらは完全に別個のものです。
 
 1. 「**作成**」をクリックします。
 
@@ -193,7 +204,8 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。
 
 >[!NOTE]
->ページエディターの使用方法についての詳細情報は、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
+>
+ページエディターの使用方法についての詳細情報は、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
 
 次の手順の例では、商品のティーザーを作成する方法を示しています。
 
@@ -215,7 +227,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    ![xf-authoring-06](assets/xf-authoring-06.png)
 
-1. 「**作成**」をクリックすると、以下を作成できます。
+1. **作成** 以下を作成できます。
 
    * **バリエーション**
    * **バリエーションを[ライブコピー](/help/sites-administering/msm.md#live-copies)**&#x200B;として。
@@ -254,7 +266,8 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
    ![xf-09](assets/xf-09.png)
 
    >[!NOTE]
-   >コンポーネントツールバーの「編集」は、フラグメントエディターでフラグメントを開くためのショートカットとして動作します。
+   >
+   コンポーネントツールバーの「編集」は、フラグメントエディターでフラグメントを開くためのショートカットとして動作します。
 
 ## 構築ブロック {#building-blocks}
 
@@ -309,8 +322,11 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
    プロパティが次のように様々なタブに表示されます。
 
    >[!CAUTION]
-   >これらのタブは、エクスペリエンスフラグメントコンソールから「**プロパティ**」を開くと表示されます。
-   >エクスペリエンスフラグメントの編集時に&#x200B;**プロパティを開く**&#x200B;と、適切な[ページのプロパティ](/help/sites-authoring/editing-page-properties.md)が表示されます。
+   >
+   これらのタブは、エクスペリエンスフラグメントコンソールから「**プロパティ**」を開くと表示されます。
+   >
+   >
+   エクスペリエンスフラグメントの編集時に&#x200B;**プロパティを開く**&#x200B;と、適切な[ページのプロパティ](/help/sites-authoring/editing-page-properties.md)が表示されます。
 
    ![ef-05](assets/ef-05.png)
 
@@ -326,28 +342,29 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
       * **非 Web バリアントの数** - **情報提供のみ**
 
       * **このフラグメントを使用するページの数** - 情報提供のみ
+
    * **Cloud Services**
 
       * **クラウド設定**
       * **クラウドサービス設定**
       * **Facebook ページ ID**
       * **Pinterest ボード**
+
    * **参照**
 
       * 参照のリスト
+
    * **ソーシャルメディアのステータス**
 
       * ソーシャルメディアバリエーションの詳細。
-
-
-
 
 ## プレーン HTML レンディション {#the-plain-html-rendition}
 
 URL の `.plain.` セレクターを使用すると、ブラウザーからプレーン HTML レンディションにアクセスできます。
 
 >[!NOTE]
->ブラウザーから直接利用することもできますが、[主な目的は、他のアプリケーション（例えば、サードパーティ Web アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。](/help/sites-developing/experience-fragments.md#the-plain-html-rendition)
+>
+ブラウザーから直接利用することもできますが、[主な目的は、他のアプリケーション（例えば、サードパーティ Web アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。](/help/sites-developing/experience-fragments.md#the-plain-html-rendition)
 
 ## エクスペリエンスフラグメントの書き出し {#exporting-experience-fragments}
 

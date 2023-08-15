@@ -7,10 +7,10 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 0afd721ff02f2c9abeed40c4b8f4fdf169523c35
-workflow-type: ht
-source-wordcount: '10068'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '10067'
+ht-degree: 99%
 
 ---
 
@@ -337,7 +337,7 @@ Adobe Experience Manager にアセットを大量にアップロードすると�
 
 ### アセットが含まれている ZIP アーカイブの抽出 {#extractzip}
 
-ZIP アーカイブは、サポートされているその他のアセットと同様にアップロードできます。ファイル名についても、同じルールが ZIP ファイルに適用されます。[!DNL Experience Manager] を使用すると、ZIP アーカイブを DAM の場所に抽出できます。アーカイブファイルに拡張子として ZIP が含まれていない場合、コンテンツを使用してファイルタイプの検出を有効にします。
+ZIP アーカイブは、サポートされているその他のアセットと同様にアップロードできます。ファイル名についても、同じルールが ZIP ファイルに適用されます。[!DNL Experience Manager] を使用すると、ZIP アーカイブを DAM の場所に抽出できます。 アーカイブファイルに拡張子として ZIP が含まれていない場合、コンテンツを使用してファイルタイプの検出を有効にします。
 
 一度に 1 つの ZIP アーカイブを選択し、「**[!UICONTROL アーカイブの抽出]**」をクリックして、抽出先フォルダーを選択します。競合を処理するオプションを選択します（存在する場合）。ZIP ファイル内のアセットが解凍先のフォルダーに存在する場合は、解凍をスキップする、既存のファイルを置き換える、名前を変更して両方のアセットを保持する、または新しいバージョンを作成する、のいずれかを選択できます。
 

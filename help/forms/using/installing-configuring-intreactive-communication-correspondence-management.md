@@ -9,10 +9,10 @@ discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
-workflow-type: ht
-source-wordcount: '1382'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1381'
+ht-degree: 98%
 
 ---
 
@@ -92,7 +92,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
-1. 「**[!UICONTROL フィルター]**」セクションで以下を実行します。
+1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
@@ -143,7 +143,7 @@ AEM Forms には、必須の設定とオプションの設定がいくつかあ�
 
 インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。AEM 6.5 Forms で顧客通信を作成する場合は、インタラクティブ通信を使用することを推奨します。以前のバージョンからアップグレードまたは移行を行って、引き続きレター（Correspondence Management）を使用する予定の場合は、[AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=ja)をインストールします。
 
-AEMFD 互換性パッケージを使用すると、AEM 6.5 Forms で AEM 6.2 Forms、AEM 6.3 Forms および AEM 6.4 Forms の次のアセットを使用できます。
+AEMFD 互換性パッケージを使用すると、AEM 6.4 Forms、AEM 6.3 FormsおよびAEM 6.5 Forms上のAEM 6.2 Formsの以下のアセットを使用できます。
 
 * ドキュメントフラグメント
 * レター

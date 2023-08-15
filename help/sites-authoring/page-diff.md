@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '577'
 ht-degree: 97%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 97%
 
 選択されたサイドが画面全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
 
-![上部のバーを使用して、ページを切り替えることができます。](assets/chlimage_1-110.png)
+![上部のバーを使用して、ページを切り替えることができます](assets/chlimage_1-110.png)
 
 また全画面表示を終了するアイコンをクリックして、全画面表示を閉じることができます。
 

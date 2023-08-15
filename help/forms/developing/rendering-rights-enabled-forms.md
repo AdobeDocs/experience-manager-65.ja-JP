@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1463'
-ht-degree: 100%
+source-wordcount: '1459'
+ht-degree: 95%
 
 ---
 
@@ -104,7 +104,7 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
    * `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを呼び出し、エイリアス値を表す文字列値を指定することによって、資格情報のエイリアスを指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。以下に例を示します。で、ユーザーがフォームのフィールドに入力して保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 以下に例を示します。で、ユーザーがフォームのフィールドに入力して保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
 
    >[!NOTE]
    >
@@ -157,7 +157,7 @@ Forms API（web サービス）を使用して、権限が有効なフォーム�
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
    * `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを呼び出し、エイリアス値を表す文字列値を指定することによって、資格情報のエイリアスを指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。ユーザーがフォームフィールドに入力し、フォームを保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 ユーザーがフォームフィールドに入力し、フォームを保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
 
 1. 権限設定されたフォームをレンダリングする
 

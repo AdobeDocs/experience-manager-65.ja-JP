@@ -7,9 +7,9 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1158'
 ht-degree: 28%
 
 ---
@@ -28,7 +28,7 @@ Bulk Editor を使用すると、次の操作が可能になるので、ビジ�
 >
 >コンテンツをリポジトリに読み込むこともできますが、デフォルトでは、**ツール**&#x200B;コンソールで使用できる Bulk Editor では無効になっています。
 
-ここでは、 **ツール** コンソール。管理者は通常、バルクエディターを使用して複数の項目を検索および編集します。これは、GQL クエリを使用してテーブルに値を入力し、作業するコンテンツ項目を選択することでおこなわれます。作成者は通常、バルクエディターを、 [製品リスト](/help/sites-authoring/default-components.md#productlist) コンポーネント。
+この節では、 **ツール** コンソール。管理者は通常、バルクエディターを使用して複数の項目を検索および編集します。これは、GQL クエリを使用してテーブルに値を入力し、作業するコンテンツ項目を選択することでおこなわれます。作成者は通常、バルクエディターを、 [製品リスト](/help/sites-authoring/default-components.md#productlist) コンポーネント。
 
 >[!CAUTION]
 >
@@ -41,7 +41,7 @@ Bulk Editor を使用すると、次の操作が可能になるので、ビジ�
 このような使用例を示す例をGeometrixxWeb サイトに記載します。
 
 1. 次に移動： **サポート** ページに移動してから、 **カスタマーサービス満足度** 調査。
-1. **編集** の **フォームの開始** 段落 ダイアログで、 **詳細** タブ、展開 **アクションの設定**&#x200B;を選択し、「 **データの表示…**.
+1. **編集** の **フォームの開始** 段落を選択します。 ダイアログで、 **詳細** タブ、展開 **アクションの設定**&#x200B;を選択し、次に **データの表示…**.
 
    ![顧客満足度調査の例](assets/custsatsurvey.png)
 
@@ -62,7 +62,7 @@ Bulk Editor では、次の操作を実行できます。
 
 Bulk Editor を使用して複数の項目を同時に編集するには：
 
-1. 内 **ツール** コンソールで、 **インポーター** フォルダーを開いて展開します。
+1. Adobe Analytics の **ツール** コンソールで、 **インポーター** フォルダーを開いて展開します。
 1. 次をダブルクリックします。 **バルクエディター** をクリックして開きます。
 1. 選択要件を入力します。
 
@@ -78,7 +78,7 @@ Bulk Editor を使用して複数の項目を同時に編集するには：
   </tr>
   <tr>
    <td>クエリのパラメーター</td>
-   <td>GQL パラメーターを使用して、Bulk Editor でリポジトリ内で検索する検索文字列を入力します。例： <code>type:Page</code> は、ルートパス内のすべてのページを探します。 <code>text:professional</code> 「professional」という単語が含まれるすべてのページを検索し、 <code>"jcr:title":English</code> は、タイトルが「英語」であるすべてのページを検索します。 文字列のみを検索できます。</td>
+   <td>GQL パラメーターを使用して、Bulk Editor でリポジトリで検索する検索文字列を入力します。例： <code>type:Page</code> は、ルートパス内のすべてのページを探します。 <code>text:professional</code> 「professional」という単語が含まれるすべてのページを検索し、 <code>"jcr:title":English</code> は、タイトルが「英語」であるすべてのページを検索します。 文字列のみを検索できます。</td>
   </tr>
   <tr>
    <td>「コンテンツモード」チェックボックス</td>

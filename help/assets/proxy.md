@@ -4,10 +4,10 @@ description: プロキシは、プロキシワーカーを使用してジョブ�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 100%
+source-wordcount: '843'
+ht-degree: 71%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 100%
 
 ## プロキシ（HTTP アクセス） {#proxy-http-access}
 
-プロキシは、次の場所でのジョブの処理を受け入れるよう設定されている場合に、HTTP Servlet を介して使用できます。`/libs/dam/cloud/proxy`.このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
+プロキシは、次の場所で処理ジョブを受け入れるように設定されている場合、HTTP サーブレットを通じて使用できます。 `/libs/dam/cloud/proxy`. このサーブレットは、投稿されたパラメーターから Sling ジョブを作成します。 これがプロキシジョブキューに追加され、適切なプロキシワーカーに接続されます。
 
-### サポートされている操作 {#supported-operations}
+### サポートされる操作 {#supported-operations}
 
 * `job`
 
-   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。ジョブプロセッサー用の `Event` の作成に使用します。
+  **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。ジョブプロセッサー用の `Event` の作成に使用します。
 
-   **結果**：新しいジョブが追加されます。成功した場合、一意のジョブ ID が返されます。
+  **結果**：新しいジョブが追加されます。成功した場合、一意のジョブ ID が返されます。
 
 ```shell
 curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
@@ -38,9 +38,9 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **要件**：パラメーター `jobid` を設定する必要があります。
+  **要件**：パラメーター `jobid` を設定する必要があります。
 
-   **結果**：ジョブプロセッサーによって作成されたノードの JSON 表現が返されます。
+  **結果**：ジョブプロセッサーによって作成されたノードの JSON 表現が返されます。
 
 ```shell
 curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
@@ -49,9 +49,9 @@ curl -u admin:admin -F":operation=result" -F"jobid=xxxxxxxxxxxx"
 
 * `resource`
 
-   **要件**：パラメーター jobid を設定する必要があります。
+  **要件**：パラメーター jobid を設定する必要があります。
 
-   **結果**：指定されたジョブに関連付けられているリソースが返されます。
+  **結果**：指定されたジョブに関連付けられているリソースが返されます。
 
 ```shell
 curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
@@ -60,9 +60,9 @@ curl -u admin:admin -F":operation=resource" -F"jobid=xxxxxxxxxxxx"
 
 * `remove`
 
-   **要件**：パラメーター jobid を設定する必要があります。
+  **要件**：パラメーター jobid を設定する必要があります。
 
-   **結果**：見つかった場合にジョブが削除されます。
+  **結果**：見つかった場合にジョブが削除されます。
 
 ```shell
 curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
@@ -71,11 +71,11 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### プロキシワーカー {#proxy-worker}
 
-プロキシワーカーは、ジョブの処理および結果の作成を担当するプロセッサーです。ワーカーはプロキシインスタンスにあり、プロキシワーカーとして認識されるには、[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) を実装する必要があります。
+プロキシワーカーは、ジョブの処理と結果の作成を担当するプロセッサです。 ワーカーはプロキシインスタンスにあり、プロキシワーカーとして認識されるには、[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) を実装する必要があります。
 
 >[!NOTE]
 >
->ワーカーがプロキシワーカーとして認識されるには、[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) を実装する必要があります。
+>作業者は、実装する必要があります [sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) 代理人として認識される。
 
 ### クライアント API {#client-api}
 
@@ -138,21 +138,21 @@ API の使用例を以下に示します。
 
 独自の [!DNL Assets] プロキシワーカーを開発および設定して、[!DNL Assets] 処理タスクをディスパッチおよびアウトソースする専用のワーカーを作成することもできます。
 
-独自のカスタムプロキシワーカーを設定するには、以下を実行する必要があります。
+独自のカスタムプロキシワーカーを設定するには、次の操作が必要です。
 
-* 以下を設定および実装します（Sling イベントを使用）。
+* （Sling イベントを使用して）次のように設定および実装します。
 
    * カスタムジョブトピック
    * カスタムジョブイベントハンドラー
 
-* 次に、JobService API を使用して以下を実行します。
+* その後、JobService API を使用して次の操作を行います。
 
    * プロキシへのカスタムジョブのディスパッチ
-   * ジョブの管理
+   * ジョブを管理
 
-* ワークフローからプロキシを使用する場合は、WorkflowExternalProcess API および JobService API を使用して、カスタム外部手順を実装する必要があります。
+* ワークフローからプロキシを使用する場合は、WorkflowExternalProcess API と JobService API を使用してカスタム外部ステップを実装する必要があります。
 
-以下の図および手順に、実行方法の詳細を示します。
+次の図と手順で、作業を進める方法を説明します。
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
@@ -164,17 +164,17 @@ API の使用例を以下に示します。
 
    例として、IDS プロキシワーカーの `IDSJob.IDS_EXTENDSCRIPT_JOB` を参照してください。
 
-1. 外部手順を使用してイベントを呼び出し、それが終了するまで待機します。これは、ID をポーリングすることによって実行されます。新機能を実装する独自の手順を開発する必要があります。
+1. 外部手順は、イベントのトリガー化に使用され、完了するまで待ちます。これは、ID に対するポーリングでおこなわれます。 新しい機能を実装するには、独自の手順を開発する必要があります。
 
    `WorkflowExternalProcess` を実装してから、JobService API およびジョブトピックを使用してジョブイベントを準備し、JobService（OSGi サービス）にディスパッチします。
 
    例として、IDS プロキシワーカーの `INDDMediaExtractProcess`.java を参照してください。
 
-1. トピックのジョブハンドラーを実装します。特定のアクションを実行し、ワーカー実装と見なされるように、このハンドラーを開発する必要があります。
+1. トピックにジョブハンドラーを実装します。 このハンドラーは、特定のアクションを実行し、ワーカー実装と見なされるように開発が必要です。
 
    例として、IDS プロキシワーカーの `IDSJobProcessor.java` を参照してください。
 
-1. dam-commons の `ProxyUtil.java` を使用します。これにより、DAM プロキシを使用してジョブをワーカーにディスパッチできます。
+1. dam-commons の `ProxyUtil.java` を使用します。これにより、dam プロキシを使用してジョブをワーカーにディスパッチできます。
 
 >[!NOTE]
 >
@@ -186,4 +186,4 @@ API の使用例を以下に示します。
 >
 >結果の同期：
 >
->同じプロキシを使用するインスタンスが n 個ある場合、処理結果はプロキシに保持されます。クライアント（Experience Manager 作成者）の役目は、ジョブ作成時にクライアントに指定されるものと同じ一意のジョブ ID を使用して、結果をリクエストすることです。プロキシでは、単にジョブを実行し、リクエストに備えて結果を準備しておくだけです。
+>同じプロキシを使用する n 個のインスタンスでは、処理結果はプロキシと共に保持されます。 クライアント（Experience Manager 作成者）の役目は、ジョブ作成時にクライアントに指定されるものと同じ一意のジョブ ID を使用して、結果をリクエストすることです。プロキシでは、単にジョブを実行し、リクエストに備えて結果を準備しておくだけです。

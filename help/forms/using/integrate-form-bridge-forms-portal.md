@@ -1,7 +1,7 @@
 ---
 title: Form Bridge と HTML5 フォームのカスタムポータルの統合
 seo-title: Integrating Form Bridge with custom portal for HTML5 forms
-description: FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定できます。
+description: FormBridge API を使用して、HTMLページからフォームフィールドの値を取得または設定し、フォームを送信することができます。
 seo-description: You can use the FormBridge API to get or set the values of form fields from the HTML page and submit the form.
 uuid: c8911f82-1a25-47a5-9a06-19b5dce74a2c
 content-type: reference
@@ -11,22 +11,22 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 100%
+source-wordcount: '392'
+ht-degree: 26%
 
 ---
 
 # Form Bridge と HTML5 フォームのカスタムポータルの統合{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge はフォームとのやりとりを可能にする HTML5 フォームのブリッジ API です。FormBridge API リファレンスについては、[FormBridge API リファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
+FormBridge は、フォームを操作するHTML5 forms ブリッジ API です。 FormBridge API リファレンスについては、[FormBridge API リファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
 
-FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定できます。たとえば、API を使用してウィザードのような経験を築くことができます。
+FormBridge API を使用して、HTMLページからフォームフィールドの値を取得または設定し、フォームを送信することができます。 例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
 
-既存の HTML アプリケーションは FormBridge API を利用してフォームとやりとりし、それを HTML ページに埋め込むことができます。次の手順を使用して、Form Bridge API を使用してフィールドの値を設定できます。
+既存のHTMLアプリケーションは、FormBridge API を利用してフォームを操作し、HTMLページに埋め込むことができます。 次の手順を使用して、Form Bridge API を使用してフィールドの値を設定できます。
 
-## HTML5 フォームと Web ページの統合 {#integrating-html-forms-to-a-web-page}
+## Web ページへのHTML5 フォームの統合 {#integrating-html-forms-to-a-web-page}
 
 1. **プロファイルの選択またはプロファイルの作成**
 
@@ -36,11 +36,11 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
       プロファイルの作成方法について詳しくは、[新しいプロファイルの作成](/help/forms/using/custom-profile.md)を参照してください。
 
-1. **HTML プロファイルの変更**
+1. **HTMLプロファイルの変更**
 
-   XFA ランタイム、XFA ロケールライブラリ、および XFA フォーム HTML スニペットをプロファイルレンダラーに含めた後、Web ページをデザインして、フォームを Web ページ内に配置します。
+   XFA ランタイム、XFA ロケールライブラリ、および XFA フォームHTMLスニペットをプロファイルレンダラーに含め、Web ページをデザインし、フォームを Web ページ内に配置します。
 
-   たとえば、次のコードスニペットを使用して、2 つの入力フィールドとフォームのあるアプリを作成し、フォームと外部アプリの間でのやり取りを示します。
+   例えば、次のコードスニペットを使用して、2 つの入力フィールドとフォームを含むアプリを作成し、フォームと外部アプリの間のやり取りを示します。
 
    ```xml
    <%@ page session="false"
@@ -79,17 +79,21 @@ FormBridge API を使用して、HTML ページからフォームフィールド
    >**9 行目**&#x200B;には、このページをデザインするための、CSS スタイルと JavaScript ファイルの追加 JSP 参照が含まれています。
    >
    >
-   >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
-   >ページは 2 つのコンテナ、**left** と **right** にスタイル設定されています。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
-   >次のスクリーンショットは、フォームがどのようにブラウザーで表示されるかを示しています。
+   >The &lt;div id=&quot;rightdiv&quot;> ～に追い付く **18 行目** には、XFA フォームのHTMLスニペットが含まれています。
+   >
+   >
+   ページは、次の 2 つのコンテナにスタイル設定されます。 **left** および **右**. 右側のコンテナにはフォームがあります。 左側のコンテナには、2 つの入力フィールドと、外部HTMLページの一部があります。
+   >
+   >
+   次のスクリーンショットは、フォームがブラウザーでどのように表示されるかを示しています。
 
    ![ポータル](assets/portal.jpg)
 
-   左側は **HTML ページ**&#x200B;の一部です。右側でフィールドを含んでいるのは **xfa フォーム**&#x200B;です。
+   左側は、 **HTMLページ**. フィールドを含む右側は、 **xfa フォーム**.
 
 1. **ページからのフォームフィールドへのアクセス**
 
-   次にあるのは、フォームフィールドの値を設定するために追加できるサンプルのスクリプトです。
+   次に、フォームフィールドに値を設定するために追加できるサンプルスクリプトを示します。
 
    たとえば、「**名前 (名)**」と「**名前 (姓)**」のフィールドにある値を使用して **EmployeeName**&#x200B;を設定する場合、**window.formBridge.setFieldValue** 関数を呼び出します。
 

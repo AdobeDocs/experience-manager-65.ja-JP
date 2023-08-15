@@ -1,7 +1,7 @@
 ---
 title: サンドボックスアプリケーションの開発
 seo-title: Develop Sandbox Application
-description: 基盤スクリプトによるアプリケーションの開発
+description: 基盤スクリプトを使用したアプリケーションの開発
 seo-description: Develop application using foundation scripts
 uuid: 572f68cd-9ecb-4b43-a7f8-4aa8feb6c64e
 contentOwner: User
@@ -10,20 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 49%
+source-wordcount: '572'
+ht-degree: 8%
 
 ---
 
 # サンドボックスアプリケーションの開発  {#develop-sandbox-application}
 
-[初期アプリケーション](initial-app.md)の節でテンプレートをセットアップし、[初期コンテンツ](initial-content.md)の節で初期ページを設定したので、ここでは、作成時にコミュニティコンポーネントを使用できるようにするとともに、基盤スクリプトを使用してアプリケーションを開発できます。この節の最後に、Web サイトが機能するようになります。
+この節では、テンプレートが [初期応用](initial-app.md) セクション、および [初期コンテンツ](initial-content.md) 「 」セクションでは、Communities コンポーネントを使用したオーサリングを有効にする機能を含む基盤スクリプトを使用して、アプリケーションを開発できます。 この節の最後に、Web サイトが機能するようになります。
 
-## 基盤ページスクリプトの使用 {#using-foundation-page-scripts}
+## Foundation ページスクリプトの使用 {#using-foundation-page-scripts}
 
-デフォルトのスクリプトは、playpage テンプレートをレンダリングするコンポーネントを追加したときに作成されましたが、このスクリプトを変更して、基盤ページの head.jsp およびローカルの body.jsp を含めます。
+playpage テンプレートをレンダリングするコンポーネントが追加された際に作成されたデフォルトのスクリプトは、基盤ページの head.jsp とローカルの body.jsp を含むように変更されます。
 
 ### スーパーリソースタイプ {#super-resource-type}
 
@@ -66,9 +66,9 @@ CRXDE Lite の使用:
    %>
    ```
 
-1. スクリプトの開始／終了タグに注意して、「// TODO ...」の代わりに、&lt;html> のヘッダーと本文部分のスクリプトを含めます。
+1. 開く/閉じるスクリプトタグに注意して、「 // TODO ...」を、の head 部分と body 部分用のスクリプトのインクルードに置き換えます。 &lt;html>.
 
-   スーパータイプが `foundation/components/page`を指定した場合、この同じフォルダーに定義されていないスクリプトは、 `/apps/foundation/components/page` フォルダー（存在する場合）、それ以外の場合は `/libs/foundation/components/page` フォルダー。
+   のスーパータイプで `foundation/components/page`を指定した場合、この同じフォルダーに定義されていないスクリプトは、 `/apps/foundation/components/page` フォルダー（存在する場合）、それ以外の場合は `/libs/foundation/components/page` フォルダー。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -88,7 +88,7 @@ CRXDE Lite の使用:
    </html>
    ```
 
-1. 基盤スクリプト `head.jsp` をオーバーレイする必要はありませんが、基盤スクリプト `body.jsp` は空です。
+1. 基盤スクリプト `head.jsp` オーバーレイする必要はありませんが、基盤スクリプト `body.jsp` が空である。
 
    オーサリング用に設定するには、オーバーレイ `body.jsp` ローカルスクリプトを使用し、本文に段落システム (parsys) を含めます。
 
@@ -96,7 +96,8 @@ CRXDE Lite の使用:
    1. `playpage` ノードを選択します。
    1. 右クリックして「 」を選択します。 `Create > Create File...`
 
-      * 名前：**body.jsp**
+      * 名前： **body.jsp**
+
    1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
    開く `/apps/an-scf-sandbox/components/playpage/body.jsp` 次のテキストに貼り付けます。
@@ -123,9 +124,9 @@ CRXDE Lite の使用:
 
 * 標準 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
-見出しだけが表示されるわけではありません **コミュニティプレイ**&#x200B;をクリックします。また、ページコンテンツを編集するための UI も使用します。
+見出しだけが表示されるわけではありません **コミュニティの再生**&#x200B;をクリックします。また、ページコンテンツを編集するための UI も使用します。
 
-サイドパネルが開くように切り替え、ウィンドウがサイドコンテンツとページコンテンツの両方を表示するのに十分な大きさである場合、アセット／コンポーネントサイドパネルが表示されます。
+アセット/コンポーネントのサイドパネルは、サイドパネルを開くように切り替えたときに表示され、ウィンドウの幅がサイドコンテンツとページコンテンツの両方に十分に広い場合に表示されます。
 
 ![view-page](assets/view-page.png)
 
@@ -137,11 +138,11 @@ CRXDE Lite の使用:
 
 ## コミュニティコンポーネント {#communities-components}
 
-オーサリング用にコミュニティコンポーネントを使用できるようにするには、まず、次の指示に従ってください。
+コミュニティコンポーネントのオーサリングを有効にするには、次の手順に従って開始します。
 
 * [コミュニティコンポーネントへのアクセス](basics.md#accessing-communities-components)
 
-このサンドボックスでは、次の&#x200B;**コミュニティ**&#x200B;コンポーネントから開始します（チェックボックスをオンにして有効にします）。
+このサンドボックスの目的では、次のものから始めます。 **Communities** コンポーネント（チェックボックスをオンにして有効にします）:
 
 * コメント
 * フォーラム
@@ -159,13 +160,13 @@ CRXDE Lite の使用:
 
 >[!NOTE]
 >
->ページパーツに対して有効なコンポーネントは、 `components` プロパティ
+>ページパーツに対して有効なコンポーネントは、 `components` のプロパティ
 >
->`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` node.
+>`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` ノード。
 
 ## ランディングページ {#landing-page}
 
-多言語環境では、クライアントからの要求を解析して優先言語を特定するスクリプトがルートページに含まれます。
+多言語環境では、ルートページには、クライアントからの要求を解析して優先言語を決定するスクリプトが含まれます。
 
 この簡単な例では、ルートページは英語のページにリダイレクトするように静的に設定されています。将来、英語は再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
 
@@ -176,10 +177,10 @@ CRXDE Lite の使用:
 * 「詳細」タブで、
 
    * リダイレクトエントリの場合は、 **[!UICONTROL Web サイト]** > **[!UICONTROL SCF サンドボックスサイト]** > **[!UICONTROL SCF サンドボックス]**
-   * 「**[!UICONTROL OK]**」をクリックします。
+   * クリック **[!UICONTROL OK]**
 
-* 「**[!UICONTROL OK]**」をクリックします。
+* クリック **[!UICONTROL OK]**
 
-サイトを公開した後、パブリッシュインスタンスでルートページを参照すると、英語のページにリダイレクトされます。
+サイトが公開されると、パブリッシュインスタンスでルートページを参照すると、英語ページにリダイレクトされます。
 
-コミュニティの SCF コンポーネントを使用する前の最後の手順は、クライアントライブラリフォルダー (clientlibs) を追加することです。. [clientlibs を追加](add-clientlibs.md)
+コミュニティの SCF コンポーネントを再生する前の最後の手順は、クライアントライブラリフォルダー (clientlibs) を追加することです.... [clientlibs を追加](add-clientlibs.md)

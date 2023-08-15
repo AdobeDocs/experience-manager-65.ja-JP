@@ -11,10 +11,10 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
 workflow-type: tm+mt
-source-wordcount: '9902'
-ht-degree: 98%
+source-wordcount: '9901'
+ht-degree: 90%
 
 ---
 
@@ -231,7 +231,7 @@ AEM Forms サービス操作が `BLOB` タイプを入力値として要求す�
 
    * サービスの SOAP エンドポイントパラメーターの出力 BLOB オブジェクトのデフォルトプロトコルは、スマートに設定されています。
 
-     SOAP エンドポイントを持つ各サービスについて、管理コンソールを使用して、返された BLOB の送信プロトコルを指定できます。（[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照してください）。
+     SOAP エンドポイントを持つサービスごとに、管理コンソールを使用して、返された BLOB の送信プロトコルを指定できます。 （[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照してください）。
 
    * AEM Forms サービスは、1 つ以上のドキュメントを入力として取得します。
 
@@ -444,7 +444,7 @@ JAX-WS を使用して、Forms サービス WSDL を Java プロキシクラス�
    * Java コンパイラのコンプライアンスレベルを 5.0 以上に設定します。
    * プロジェクトをビルドします。
    * プロジェクトを JAR ファイルとしてエクスポートします。
-   * この JAR ファイルをクライアントプロジェクトのクラスパスにインポートします。さらに、&lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty にあるすべての JAR ファイルをインポートします。
+   * この JAR ファイルをクライアントプロジェクトのクラスパスにインポートします。 さらに、&lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty にあるすべての JAR ファイルをインポートします。
 
    >[!NOTE]
    >
@@ -534,7 +534,7 @@ Apache Axis WSDL2Java ツールを使用すると、Forms サービスを Java �
     http://localhost:8080/soap/services/EncryptionService?blob=base64;
    ```
 
-1. 以下の Axis JAR ファイルを Java プロジェクトのクラスパスに追加します。
+1. 次の Axis JAR ファイルを Java プロジェクトのクラスパスに追加します。
 
    * activation.jar
    * axis.jar
@@ -648,17 +648,17 @@ Base64 エンコーディングを使用する .NET クライアントアセン�
 1. `MyApplication/EncryptDocument`サービス WSDL を使用する Microsoft .NET クライアントアセンブリを作成します。
 1. クライアントの Microsoft .NET プロジェクトを作成します。クライアントプロジェクトで Microsoft .NET クライアントアセンブリを参照します。また、`System.Web.Services`も参照します。
 1. Microsoft .NET クライアントアセンブリを使用し、デフォルトのコンストラクターを呼び出して、`MyApplication_EncryptDocumentService`オブジェクトを作成します。
-1. `System.Net.NetworkCredential` オブジェクトを使用して `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティを設定します。`System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
+1. を設定します。 `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティに `System.Net.NetworkCredential` オブジェクト。 `System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
 1. コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、`MyApplication/EncryptDocument` プロセスに渡す PDF ドキュメントを保存するために使用されます。
 1. コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
-1. `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
-1. `binaryData`プロパティにバイト配列の内容を割り当てて、`BLOB`オブジェクトにデータを入力します。
-1. `MyApplication/EncryptDocument`プロセスを呼び出すには、`MyApplication_EncryptDocumentService`オブジェクトの`invoke`メソッドを呼び出し、PDF ドキュメントを含む`BLOB`オブジェクトを渡します。このプロセスは、暗号化された PDF ドキュメントを`BLOB`オブジェクト内に返します。
+1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+1. を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+1. `binaryData` プロパティを割り当てることで、`BLOB` オブジェクトにバイト配列のコンテンツを入力します。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplication_EncryptDocumentService` オブジェクトの `invoke` メソッドおよび `BLOB` オブジェクトドキュメントを含むPDF。 このプロセスは、暗号化された PDF ドキュメントを`BLOB`オブジェクト内に返します。
 1. `System.IO.FileStream`オブジェクトを作成するには、コンストラクタを呼び出し、パスワードで暗号化されたドキュメントのファイルの場所を表す文字列値を渡します。
-1. `MyApplicationEncryptDocumentService`オブジェクトの`invoke`メソッドが返した`BLOB`オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を入力するには、`BLOB` オブジェクトの `binaryData` データメンバーの値を取得します。
-1. `System.IO.BinaryWriter`オブジェクトを作成するには、コンストラクタを呼び出して、`System.IO.FileStream`オブジェクトを渡します。
-1. `System.IO.BinaryWriter` オブジェクトの `Write` メソッドをを呼び出し、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+1. のデータコンテンツを格納するバイト配列を作成します。 `BLOB` が返すオブジェクト `MyApplicationEncryptDocumentService` オブジェクトの `invoke` メソッド。 バイト配列を生成するには、 `BLOB` オブジェクトの `binaryData` データメンバー。
+1. コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+1. を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 ### Java プロキシクラスと Base64 エンコーディングを使用したサービスの呼び出し {#invoking-a-service-using-java-proxy-classes-and-base64-encoding}
 
@@ -679,16 +679,16 @@ Java プロキシクラスと Base64 を使用して、AEM Forms サービスを
 
    を Java クライアントプロジェクトのクラスパスに追加します。
 
-1. `MyApplicationEncryptDocumentService` オブジェクトを作成するには、それ自身のコンストラクタを使用します。
-1. `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッドを呼び出すことによって、`MyApplicationEncryptDocument` オブジェクトを作成します。
+1. コンストラクターを使用して `MyApplicationEncryptDocumentService` オブジェクトを作成します。
+1. の作成 `MyApplicationEncryptDocument` を呼び出すことによって、オブジェクトを `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッド。
 1. 次のデータメンバーに値を割り当てて、AEM Forms を呼び出すのに必要な接続値を設定します。
 
-   * WSDL エンドポイントとエンコーディングタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。Base64 エンコーディングを使用する `MyApplication/EncryptDocument` サービスを呼び出すには、次の URL 値を指定します。
+   * WSDL エンドポイントとエンコーディングの種類を `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに入力します。 Base64 エンコーディングを使用する `MyApplication/EncryptDocument` サービスを呼び出すには、次の URL 値を指定します。
 
      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
-   * AEM forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに割り当てます。
-   * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに割り当てます。
+   * AEM forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに入力します。
+   * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに入力します。
 
    次のコード例に、このアプリケーションロジックを示します。
 
@@ -705,9 +705,9 @@ Java プロキシクラスと Base64 を使用して、AEM Forms サービスを
 1. `MyApplication/EncryptDocument` プロセスに送信する PDF ドキュメントを取得するには、コンストラクターを使用して `java.io.FileInputStream` オブジェクトを作成します。PDF ドキュメントの場所を指定する文字列値を渡します。
 1. バイト配列を作成し、 `java.io.FileInputStream` オブジェクトの内容を入力します。
 1. それ自身のコンストラクタを使用して、`BLOB` オブジェクトを作成します。
-1. `setBinaryData` メソッドを呼び出し、バイト配列を渡すことによって、`BLOB` オブジェクトを入力します。`BLOB` オブジェクトの `setBinaryData` は、Base64 エンコーディングを使用する場合に呼び出すメソッドです。サービスリクエストでの BLOB オブジェクトの供給を参照してください。
-1. `MyApplicationEncryptDocument` オブジェクトの `invoke` メソッドを呼び出すことによって、`MyApplication/EncryptDocument` プロセスを呼び出します。PDF ドキュメントを含む `BLOB` オブジェクトを渡します。呼び出しメソッドは、暗号化された PDF ドキュメントを含む `BLOB` オブジェクトを返します。
-1. `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して、暗号化された PDF ドキュメントを含むバイト配列を作成します。
+1. `setBinaryData` メソッドを呼び出し、バイト配列を渡すことによって、`BLOB` オブジェクトを入力します。The `BLOB` オブジェクトの `setBinaryData` は、Base64 エンコーディングを使用する場合に呼び出すメソッドです。 サービスリクエストでの BLOB オブジェクトの供給を参照してください。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplicationEncryptDocument` オブジェクトの `invoke` メソッド。 PDF ドキュメントを含む `BLOB` オブジェクトを渡します。呼び出しメソッドは、暗号化された PDF ドキュメントを含む `BLOB` オブジェクトを返します。
+1. を呼び出して、暗号化されたPDFドキュメントを含むバイト配列を作成します。 `BLOB` オブジェクトの `getBinaryData` メソッド。
 1. 暗号化された PDF ドキュメントを PDF ファイルとして保存します。バイト配列をファイルに書き込みます。
 
 **関連トピック**
@@ -786,7 +786,7 @@ Web サービスを使用して AEM Forms サービスを呼び出す Microsoft 
    >`hiro-xp` を *AEM Forms をホストする J2EE アプリケーションサービスの IP アドレス*&#x200B;で置き換えます。
 
 1. `EncryptDocumentClient.Endpoint.Binding` データメンバーの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-1. `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` データメンバーを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+1. を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` データメンバー `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
 1. 次のタスクを実行して、HTTP 基本認証を有効にします。
 
    * AEM Forms ユーザー名をデータメンバー `MyApplication_EncryptDocumentClient.ClientCredentials.UserName.UserName` に割り当てます。
@@ -809,18 +809,18 @@ Web サービスを使用して AEM Forms サービスを呼び出す Microsoft 
 
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、`MyApplication/EncryptDocument` プロセスに渡す PDF ドキュメントを保存するために使用されます。
 1. コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
-1. `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+1. を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
 1. `BLOB` オブジェクトを入力するには、`MTOM` データメンバーにバイト配列のコンテンツを割り当てます。
-1. `MyApplication/EncryptDocument` プロセスを呼び出すには、`MyApplication_EncryptDocumentClient` オブジェクトの `invoke` メソッドを呼び出します。PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このプロセスは、`BLOB` オブジェクト内で暗号化された PDF ドキュメントを返します。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplication_EncryptDocumentClient` オブジェクトの `invoke` メソッド。 PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このプロセスは、`BLOB` オブジェクト内で暗号化された PDF ドキュメントを返します。
 1. `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列値を渡します。
-1. `invoke` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
-1. コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-1. バイト配列のコンテンツを PDF ファイルに書き込むには、`System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡します。
+1. `invoke` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+1. コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+1. を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 >[!NOTE]
 >
->ほとんどの AEM Forms サービス操作は、MTOM のクイックスタートを備えています。これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
+>ほとんどの AEM Forms サービス操作は、MTOM のクイックスタートを備えています。これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。 例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
 
 **関連トピック**
 
@@ -874,16 +874,16 @@ JAX-WS と SwaRef を使用して作成された Java プロキシファイル�
 
    を Java クライアントプロジェクトのクラスパスに追加します。
 
-1. `MyApplicationEncryptDocumentService` オブジェクトを作成するには、それ自身のコンストラクタを使用します。
-1. `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッドを呼び出すことによって、`MyApplicationEncryptDocument` オブジェクトを作成します。
+1. コンストラクターを使用して `MyApplicationEncryptDocumentService` オブジェクトを作成します。
+1. の作成 `MyApplicationEncryptDocument` を呼び出すことによって、オブジェクトを `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッド。
 1. 次のデータメンバーに値を割り当てて、AEM Forms を呼び出すのに必要な接続値を設定します。
 
-   * WSDL エンドポイントとエンコーディングのタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。SwaRef エンコーディングを使用する`MyApplication/EncryptDocument`サービスを呼び出すには、次の URL 値を指定します。
+   * WSDL エンドポイントとエンコーディングの種類を `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに入力します。 SwaRef エンコーディングを使用する`MyApplication/EncryptDocument`サービスを呼び出すには、次の URL 値を指定します。
 
      ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
-   * AEM Forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに割り当てます。
-   * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに割り当てます。
+   * AEM forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに入力します。
+   * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに入力します。
 
    次のコード例に、このアプリケーションロジックを示します。
 
@@ -902,14 +902,14 @@ JAX-WS と SwaRef を使用して作成された Java プロキシファイル�
 1. `javax.activation.DataHandler` オブジェクトを作成するには、コンストラクタを使用して `javax.activation.DataSource` オブジェクトに渡します。
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
 1. `BLOB`オブジェクトを入力するには、`setSwaRef`メソッドを呼び出して`javax.activation.DataHandler`オブジェクトを渡します。
-1. `MyApplication/EncryptDocument`プロセスを呼び出すには、`MyApplicationEncryptDocument`オブジェクトの`invoke`メソッドを呼び出して、PDF ドキュメントを含む`BLOB`オブジェクトを渡します。呼び出しメソッドは、暗号化された PDF ドキュメントを含む`BLOB`オブジェクトを返します。
-1. `BLOB`オブジェクトの`getSwaRef`メソッドを呼び出して`javax.activation.DataHandler`オブジェクトを入力します。
-1. `javax.activation.DataHandler`オブジェクトを`java.io.InputSteam`インスタンスに変換するには、`javax.activation.DataHandler`オブジェクトの`getInputStream`メソッドを呼び出します。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplicationEncryptDocument` オブジェクトの `invoke` メソッドおよび `BLOB` オブジェクトドキュメントを含むPDF。 呼び出しメソッドは、暗号化された PDF ドキュメントを含む`BLOB`オブジェクトを返します。
+1. 次の項目に `javax.activation.DataHandler` を呼び出すことによって、オブジェクトを `BLOB` オブジェクトの `getSwaRef` メソッド。
+1. 変換する `javax.activation.DataHandler` オブジェクトを `java.io.InputSteam` を呼び出すことによるインスタンス `javax.activation.DataHandler` オブジェクトの `getInputStream` メソッド。
 1. 暗号化された PDF ドキュメントを表す PDF ファイルに`java.io.InputSteam`インスタンスを書き出します。
 
 >[!NOTE]
 >
->ほとんどの AEM Forms サービス操作には、SwaRef クイックスタートが用意されています。これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
+>ほとんどの AEM Forms サービス操作には、SwaRef クイックスタートが用意されています。これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。 例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
 
 **関連トピック**
 
@@ -932,7 +932,7 @@ Web サービスを使用し、HTTP 経由で BLOB データを渡すことで�
 
 >[!NOTE]
 >
->SOAP を使用した AEM Forms の呼び出しについて詳しく理解しておくことをお勧めします。（[Web サービスを使用した AEM Forms の呼び出し](#invoking-aem-forms-using-web-services)を参照。）
+>SOAP を使用したAEM Formsの呼び出しについて詳しく理解しておくことをお勧めします。 （[Web サービスを使用した AEM Forms の呼び出し](#invoking-aem-forms-using-web-services)を参照。）
 
 ### HTTP 経由のデータを使用する .NET クライアントアセンブリの作成 {#creating-a-net-client-assembly-that-uses-data-over-http}
 
@@ -964,15 +964,15 @@ HTTP 経由でデータを使用する .NET クライアントアセンブリを
 1. .NET クライアントアセンブリを作成します。
 1. Microsoft .NET クライアントアセンブリを参照しますクライアントの Microsoft .NET プロジェクトを作成します。クライアントプロジェクトで Microsoft .NET クライアントアセンブリを参照します。また、`System.Web.Services`も参照します。
 1. Microsoft .NET クライアントアセンブリを使用し、デフォルトのコンストラクターを呼び出して、`MyApplication_EncryptDocumentService`オブジェクトを作成します。
-1. `System.Net.NetworkCredential` オブジェクトを使用して `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティを設定します。`System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
+1. を設定します。 `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティに `System.Net.NetworkCredential` オブジェクト。 `System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
 1. コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、データを `MyApplication/EncryptDocument` プロセスに渡すために使用されます。
-1. `MyApplication/EncryptDocument` サービスに渡す PDF ドキュメントの URI の場所を指定する文字列値を、`BLOB` オブジェクトの `remoteURL` データメンバーに割り当てます。
-1. `MyApplication_EncryptDocumentService` オブジェクトの `invoke` メソッドを呼び出し、`BLOB` オブジェクトを渡すことによって、`MyApplication/EncryptDocument` プロセスを呼び出します。このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
-1. コンストラクターを使用し、返された `BLOB` オブジェクトの `remoteURL` データメンバーの値を渡すことによって、`System.UriBuilder` オブジェクトを作成します。
+1. 文字列値を `BLOB` オブジェクトの `remoteURL` に渡すPDFドキュメントの URI の場所を指定するデータメンバー `MyApplication/EncryptDocument`サービス。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplication_EncryptDocumentService` オブジェクトの `invoke` メソッドおよび `BLOB` オブジェクト。 このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
+1. の作成 `System.UriBuilder` オブジェクトのコンストラクタを使用し、返された `BLOB` オブジェクトの `remoteURL` データメンバー。
 1. `System.UriBuilder` オブジェクトを `System.IO.Stream` オブジェクトに変換します。（このリストの後に示す C# クイックスタートで、このタスクの実行方法を示しています）。
 1. バイト配列を作成し、そのバイト配列に、`System.IO.Stream` オブジェクト内にあるデータを入力します。
 1. コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-1. `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+1. を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 ### Java プロキシクラスおよび HTTP 経由での BLOB データを使用したサービスの呼び出し {#invoking-a-service-using-java-proxy-classes-and-blob-data-over-http}
 
@@ -997,16 +997,16 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
 
    を Java クライアントプロジェクトのクラスパスに追加します。
 
-1. `MyApplicationEncryptDocumentService` オブジェクトを作成するには、それ自身のコンストラクタを使用します。
-1. `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッドを呼び出すことによって、`MyApplicationEncryptDocument` オブジェクトを作成します。
+1. コンストラクターを使用して `MyApplicationEncryptDocumentService` オブジェクトを作成します。
+1. の作成 `MyApplicationEncryptDocument` を呼び出すことによって、オブジェクトを `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッド。
 1. 次のデータメンバーに値を割り当てて、AEM Forms を呼び出すのに必要な接続値を設定します。
 
-   * WSDL エンドポイントとエンコーディングタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。HTTP エンコーディング経由での BLOB を使用して `MyApplication/EncryptDocument` サービスを呼び出すには、次の URL 値を指定します。
+   * WSDL エンドポイントとエンコーディングの種類を `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに入力します。 HTTP エンコーディング経由での BLOB を使用して `MyApplication/EncryptDocument` サービスを呼び出すには、次の URL 値を指定します。
 
      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
-   * AEM Forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに割り当てます。
-   * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに割り当てます。
+   * AEM forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに入力します。
+   * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに入力します。
 
    次のコード例に、このアプリケーションロジックを示します。
 
@@ -1022,11 +1022,11 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
 
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
 1. `setRemoteURL` メソッドを呼び出して `BLOB` オブジェクトを入力します。`MyApplication/EncryptDocument` サービスに渡す PDF ドキュメントの URI の場所を指定する文字列値を渡します。
-1. `MyApplication/EncryptDocument` プロセスを呼び出すには、`MyApplicationEncryptDocument` オブジェクトの `invoke` メソッドを呼び出し、PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
-1. 暗号化された PDF ドキュメントを表すデータストリームを格納するバイト配列を作成します。`BLOB` オブジェクトの `getRemoteURL` メソッド を呼び出します（ `invoke` メソッドで返された `BLOB` オブジェクトを使用）。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplicationEncryptDocument` オブジェクトの `invoke` メソッドおよび `BLOB` オブジェクトドキュメントを含むPDF。 このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
+1. 暗号化された PDF ドキュメントを表すデータストリームを格納するバイト配列を作成します。を呼び出す `BLOB` オブジェクトの `getRemoteURL` メソッド ( `BLOB` が返すオブジェクト `invoke` メソッド )。
 1. コンストラクタを使用して `java.io.File` オブジェクトを作成します。このオブジェクトは、暗号化された PDF ドキュメントを表します。
 1. `java.io.FileOutputStream` オブジェクトを作成するには、コンストラクタを使用して `java.io.File` オブジェクトを渡します。
-1. `java.io.FileOutputStream` オブジェクトの `write` メソッドを呼び出します。暗号化された PDF ドキュメントを表すデータストリームを含むバイト配列を渡します。
+1. を呼び出す `java.io.FileOutputStream` オブジェクトの `write` メソッド。暗号化されたPDF・ドキュメントを表すデータ・ストリームを含むバイト配列を渡します。
 
 ## DIME を使用した AEM Forms の呼び出し {#invoking-aem-forms-using-dime}
 
@@ -1097,7 +1097,7 @@ DIME を使用して Forms サービスを呼び出すことができます。�
 
 1. DIME を使用してForms サービスの呼び出しを可能にする Microsoft .NET プロジェクトを作成します。必ず web サービス拡張機能 2.0 を含め、AEM Forms サービスへの web 参照を作成します。
 1. `MyApplication/EncryptDocument` プロセスへの web 参照を設定した後、デフォルトのコンストラクターを使用して `EncryptDocumentServiceWse` オブジェクトを作成します。
-1. AEM forms のユーザー名とパスワードの値を指定する `System.Net.NetworkCredential` 値で、`EncryptDocumentServiceWse` オブジェクトの `Credentials` データメンバーを設定します。
+1. を設定します。 `EncryptDocumentServiceWse` オブジェクトの `Credentials` データメンバーを `System.Net.NetworkCredential` AEM forms のユーザー名とパスワードの値を指定する値。
 1. コンストラクターを使用して `Microsoft.Web.Services2.Dime.DimeAttachment` オブジェクトを作成し、次の値を渡します。
 
    * GUID 値を指定する文字列値。`System.Guid.NewGuid.ToString` メソッドを呼び出すことによって、GUID 値を取得できます。
@@ -1106,16 +1106,16 @@ DIME を使用して Forms サービスを呼び出すことができます。�
    * AEM Forms プロセスに渡す PDF ドキュメントの場所を指定する文字列値。
 
 1. `BLOB` オブジェクトを、そのコンストラクタを使用して作成します。
-1. `Microsoft.Web.Services2.Dime.DimeAttachment` オブジェクトの `Id` データメンバーの値を `BLOB` オブジェクトの `attachmentID` データメンバーに割り当てて、`BLOB` オブジェクトに DIME 添付ファイルを追加します。
+1. DIME 添付ファイルを `BLOB` オブジェクトを割り当てる `Microsoft.Web.Services2.Dime.DimeAttachment` オブジェクトの `Id` データメンバーの値を `BLOB` オブジェクトの `attachmentID` データメンバー。
 1. `EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add` メソッドをを呼び出して、`Microsoft.Web.Services2.Dime.DimeAttachment` オブジェクトを渡します。
-1. `EncryptDocumentServiceWse` オブジェクトの `invoke` メソッドを呼び出し、DIME 添付ファイルを含む `BLOB` オブジェクトを渡すことによって、`MyApplication/EncryptDocument` プロセスを呼び出します。このプロセスは、`BLOB` オブジェクト内で暗号化された PDF ドキュメントを返します。
-1. 返された `BLOB` オブジェクトの `attachmentID` データメンバーの値を取得することによって、添付ファイルの識別情報の値を取得します。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `EncryptDocumentServiceWse` オブジェクトの `invoke` メソッドおよび `BLOB` DIME 添付ファイルを含むオブジェクト。 このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
+1. 返される `BLOB` オブジェクトの `attachmentID` データメンバー。
 1. `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` に配置された添付ファイルを繰り返し処理し、添付ファイルの識別情報の値を用いて、暗号化された PDF ドキュメントを取得します。
-1. `Attachment` オブジェクトの `Stream` データメンバーの値を取得することによって、`System.IO.Stream` オブジェクトを取得します。
-1. バイト配列を作成し、そのバイト配列を `System.IO.Stream` オブジェクトの `Read` メソッドに渡します。このメソッドは、暗号化された PDF ドキュメントを表すデータストリームでバイト配列を入力します。
+1. の取得 `System.IO.Stream` オブジェクトを作成するには、 `Attachment` オブジェクトの `Stream` データメンバー。
+1. バイト配列を作成し、そのバイト配列を `System.IO.Stream` オブジェクトの `Read` メソッド。 このメソッドは、暗号化された PDF ドキュメントを表すデータストリームでバイト配列を入力します。
 1. コンストラクターを呼び出し、PDF ファイルの場所を表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。このオブジェクトは、暗号化された PDF ドキュメントを表します。
 1. `System.IO.BinaryWriter` オブジェクトを作成するには、コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡します。
-1. `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+1. を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 ### DIME を使用する Apache Axis Java プロキシクラスの作成 {#creating-apache-axis-java-proxy-classes-that-use-dime}
 
@@ -1135,7 +1135,7 @@ Axis 生成のライブラリファイルと DIME を使用して、Workbench �
    ```
 
 1. `EncryptDocumentSoapBindingStub` オブジェクトを作成するには、コンストラクターを呼び出し、`MyApplicationEncryptDocumentServiceLocator` オブジェクトと `URL` オブジェクトを渡します。
-1. `EncryptDocumentSoapBindingStub` オブジェクトの `setUsername` および `setPassword` メソッドを呼び出して、AEM forms のユーザー名とパスワードの値を設定します。
+1. を呼び出して、AEM forms のユーザー名とパスワードの値を設定します。 `EncryptDocumentSoapBindingStub` オブジェクトの `setUsername` および `setPassword` メソッド。
 
    ```java
     encryptionClientStub.setUsername("administrator");
@@ -1145,18 +1145,18 @@ Axis 生成のライブラリファイルと DIME を使用して、Workbench �
 1. `MyApplication/EncryptDocument` サービスに送信する PDF ドキュメントを取得するには、`java.io.File` オブジェクトを作成します。PDF ドキュメントの場所を指定する文字列値を渡します。
 1. `javax.activation.DataHandler` オブジェクトを作成するには、コンストラクターを使用して、`javax.activation.FileDataSource` オブジェクトを渡します。`javax.activation.FileDataSource` オブジェクトを作成するには、コンストラクターを使用して、PDF ドキュメントを表す `java.io.File` オブジェクトを渡します。
 1. `org.apache.axis.attachments.AttachmentPart` オブジェクトを作成するには、コンストラクターを使用して、`javax.activation.DataHandler` オブジェクトを渡します。
-1. 添付ファイルを添付するには、`EncryptDocumentSoapBindingStub` オブジェクトの `addAttachment` メソッドを呼び出し、`org.apache.axis.attachments.AttachmentPart` オブジェクトを渡します。
-1. それ自身のコンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトに添付ファイルの識別情報の値を入力するには、`BLOB` オブジェクトの `setAttachmentID` メソッドを呼び出し、添付ファイルの識別情報の値を渡します。`org.apache.axis.attachments.AttachmentPart` オブジェクトの `getContentId` メソッドを呼び出すと、この値を取得できます。
-1. `MyApplication/EncryptDocument` プロセスを呼び出すには、`EncryptDocumentSoapBindingStub` オブジェクトの `invoke` メソッドを呼び出します。DIME 添付ファイルを含む `BLOB` オブジェクトを渡します。このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
-1. 返された `BLOB` オブジェクトの `getAttachmentID` メソッドを呼び出して、添付ファイルの識別情報の値を取得します。このメソッドは、返される添付ファイルの識別情報の値を表す文字列値を返します。
-1. `EncryptDocumentSoapBindingStub` オブジェクトの `getAttachments` メソッドを呼び出して、添付ファイルを取得します。このメソッドは、添付ファイルを表す `Objects` の配列を返します。
+1. を呼び出して添付ファイルを添付する `EncryptDocumentSoapBindingStub` オブジェクトの `addAttachment` メソッドおよび `org.apache.axis.attachments.AttachmentPart` オブジェクト。
+1. コンストラクターを使用して `BLOB` オブジェクトを作成します。次の項目に `BLOB` を呼び出すことにより、attachment identifier 値を持つオブジェクト `BLOB` オブジェクトの `setAttachmentID` メソッドを使用して添付ファイル識別子の値を渡す方法を参照してください。 この値は、 `org.apache.axis.attachments.AttachmentPart` オブジェクトの `getContentId` メソッド。
+1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `EncryptDocumentSoapBindingStub` オブジェクトの `invoke` メソッド。 DIME 添付ファイルを含む `BLOB` オブジェクトを渡します。このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
+1. 返された `BLOB` オブジェクトの `getAttachmentID` メソッド。 このメソッドは、返される添付ファイルの識別情報の値を表す文字列値を返します。
+1. を呼び出して添付ファイルを取得する `EncryptDocumentSoapBindingStub` オブジェクトの `getAttachments` メソッド。 このメソッドは、添付ファイルを表す `Objects` の配列を返します。
 1. 添付ファイル（`Object` 配列）を反復処理し、添付ファイルの識別情報の値を使用して、暗号化された PDF ドキュメントを取得します。各要素は `org.apache.axis.attachments.AttachmentPart` オブジェクトです。
-1. `org.apache.axis.attachments.AttachmentPart` オブジェクトの `getDataHandler` メソッドを呼び出して、添付ファイルに関連付けられた `javax.activation.DataHandler` オブジェクトを取得します。
-1. `javax.activation.DataHandler` オブジェクトの `getInputStream` メソッドを呼び出して、`java.io.FileStream` オブジェクトを取得します。
-1. バイト配列を作成し、そのバイト配列を `java.io.FileStream` オブジェクトの `read` メソッドに渡します。このメソッドは、暗号化された PDF ドキュメントを表すデータストリームでバイト配列を入力します。
+1. の取得 `javax.activation.DataHandler` を呼び出すことで添付ファイルに関連付けられたオブジェクト `org.apache.axis.attachments.AttachmentPart` オブジェクトの `getDataHandler` メソッド。
+1. の取得 `java.io.FileStream` を呼び出すことによって、オブジェクトを `javax.activation.DataHandler` オブジェクトの `getInputStream` メソッド。
+1. バイト配列を作成し、そのバイト配列を `java.io.FileStream` オブジェクトの `read` メソッド。 このメソッドは、暗号化された PDF ドキュメントを表すデータストリームでバイト配列を入力します。
 1. コンストラクタを使用して `java.io.File` オブジェクトを作成します。このオブジェクトは、暗号化された PDF ドキュメントを表します。
 1. `java.io.FileOutputStream` オブジェクトを作成するには、コンストラクタを使用して `java.io.File` オブジェクトを渡します。
-1. `java.io.FileOutputStream` オブジェクトの `write` メソッドを呼び出して、暗号化された PDF ドキュメントを表すデータストリームを含むバイト配列を渡します。
+1. を呼び出す `java.io.FileOutputStream` オブジェクトの `write` メソッドを使用して、暗号化されたPDF・ドキュメントを表すデータ・ストリームを含むバイト配列を渡します。
 
 **関連トピック**
 
@@ -1451,7 +1451,7 @@ Web サービスを使用して特定の AEM Forms サービスの操作を呼�
 
 ### 非同期でのサービス操作の呼び出し {#invoking-service-operations-asynchronously}
 
-PDF 生成の `htmlToPDF` 操作など、AEM Forms サービスの操作を非同期で呼び出そうとすると、`SoapFaultException` が発生します。この問題を解決するには、カスタム結合 XML ファイルを作成して、`ExportPDF_Result` 要素とその他の要素を異なるクラスにマッピングします。次の XML は、カスタム結合ファイルを表しています。
+GeneratePDFの `htmlToPDF` 操作， `SoapFaultException` が発生します。 この問題を解決するには、カスタム結合 XML ファイルを作成して、`ExportPDF_Result` 要素とその他の要素を異なるクラスにマッピングします。次の XML は、カスタム結合ファイルを表しています。
 
 ```xml
  <bindings

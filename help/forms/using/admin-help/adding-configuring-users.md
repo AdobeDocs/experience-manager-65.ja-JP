@@ -1,17 +1,13 @@
 ---
 title: ユーザーの追加および設定
-seo-title: Adding and configuring users
-description: 管理コンソールの User Management 設定では、ユーザーの作成または削除、および他のユーザー設定を行うことができます。
-seo-description: The User Management settings in the administration console allow you to create or delete users  and configure other user settings.
-uuid: fe650cdb-7d0d-4f38-9899-e5349559ed32
+description: 管理コンソールの User Management 設定を使用すると、ユーザーを作成または削除したり、他のユーザー設定を構成したりできます。
 contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
-discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 exl-id: 50eea35d-d844-4f4b-9cbe-7d84bd6b1e3b
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: ht
-source-wordcount: '1735'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1733'
+ht-degree: 97%
 
 ---
 
@@ -75,7 +71,7 @@ ht-degree: 100%
 
 ローカルドメインまたはハイブリッドドメインを使用している場合、ユーザーに関する情報は User Management データベースにのみ格納されます。これらのユーザーについては、業務カレンダーキーを文字列に設定します。次に、業務カレンダーキー（文字列）を Forms Workflow の業務カレンダーにマッピングします。
 
-エンタープライズドメインを使用している場合、ユーザーに関する情報は、LDAP ディレクトリなどのサードパーティのストレージシステムに格納されます。User Management によって、ディレクトリのユーザー情報が User Management データベースと同期されます。この機能によって、業務カレンダーキーを LDAP ディレクトリのフィールドにマッピングできるようになります。例えば、ディレクトリ内の各ユーザーレコードに「国」フィールドがあり、ユーザーが所在する国に基づいて業務カレンダーを割り当てるとします。この場合、「国」フィールド名を業務カレンダーキー設定の値として指定します。その後、業務カレンダーキー（LDAP ディレクトリの「国」フィールドに対して定義された値）を Forms Workflow の業務カレンダーにマッピングできます。
+エンタープライズドメインを使用している場合、ユーザーに関する情報は、LDAP ディレクトリなどのサードパーティのストレージシステムに格納されます。User Management によって、ディレクトリのユーザー情報が User Management データベースと同期されます。この機能を使用すると、業務カレンダーキーを LDAP ディレクトリ内のフィールドにマッピングできます。 例えば、ディレクトリ内の各ユーザーレコードに「国」フィールドがあり、ユーザーが所在する国に基づいて業務カレンダーを割り当てるとします。この場合、「国」フィールド名を業務カレンダーキー設定の値として指定します。その後、業務カレンダーキー（LDAP ディレクトリの「国」フィールドに対して定義された値）を Forms Workflow の業務カレンダーにマッピングできます。
 
 業務カレンダーキーを業務カレンダーにマッピングする方法など、業務カレンダーに関する詳しい情報については、[業務カレンダーの設定](/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars)を参照してください。
 
@@ -137,7 +133,6 @@ MySQL を使用する場合は、ユーザー ID に拡張文字を含めるこ�
 
    * ユーザーをグループから削除するには、そのグループのチェックボックスを選択して「**[!UICONTROL 削除]**」をクリックし、「**[!UICONTROL 保存]**」をクリックします。
 
-
 1. ユーザーの役割を編集するには、「**[!UICONTROL 役割の割り当て]**」タブをクリックし、次のタスクを実行します。
 
    * ロールのリストを表示するには、「**[!UICONTROL ロールを検索]**」をクリックします。
@@ -167,7 +162,7 @@ MySQL を使用する場合は、ユーザー ID に拡張文字を含めるこ�
 * Correspondence Management ソリューション
 * AEM Forms Workspace
 
-   ***注意&#x200B;**：AEM Forms のリリースでは Flex Workspace は廃止されています。*
+  ***注意&#x200B;**：AEM Forms のリリースでは Flex Workspace は廃止されています。*
 
 * Forms Manager
 * プロセスレポート

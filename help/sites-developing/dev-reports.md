@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '5241'
+source-wordcount: '5239'
 ht-degree: 86%
 
 ---
@@ -55,7 +55,7 @@ AEM に用意されている標準レポートの特徴：
 >  `P:<name> = <value>` ：プロパティ `<name>` に値 `<value>` を設定する必要があることを表します。
 >
 >* インデントは、ノード間の階層的依存関係を示します。
->* 次で区切られた項目 |は可能な項目のリストを示します。例えば、型や名前は、例： `String|String[]` は、プロパティが String または String のいずれかであることを示します。[].
+>* 次で区切られた項目： |は可能な項目のリストを示します。例えば、型や名前などです。 `String|String[]` は、プロパティが String または String のいずれかであることを示します。[].
 >
 >* `[]` は配列を示します。例えば String[] や、[クエリ定義](#query-definition)で説明しているノードの配列などがあります。
 >
@@ -84,7 +84,7 @@ AEM に用意されている標準レポートの特徴：
 レポートページの特徴は次のとおりです。
 
 * 標準の CQ5 ページです。
-* が [標準の CQ5 テンプレート。レポート用に設定されます。](#report-template).
+* 次に基づく [標準の CQ5 テンプレート。レポート用に設定されます。](#report-template).
 
 ### レポートベース {#report-base}
 
@@ -109,7 +109,7 @@ AEM に用意されている標準レポートの特徴：
 クエリ：
 
 * [`reportbase`](#report-base)  コンポーネントの一部として定義されます。
-* は、 [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html).
+* 次に基づく [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html).
 * レポートの基本要素として使用するデータを取得します。結果セット（テーブル）の各行は、クエリが返すノードに結び付けられます。 [それぞれの列](#column-base-component)の具体的な情報はこのデータセットから抽出されます。
 
 * 通常、次で構成されます。
@@ -130,13 +130,13 @@ AEM に用意されている標準レポートの特徴：
 
 ### 処理キュー {#processing-queue}
 
-この [クエリ](#the-query-and-data-retrieval) レポートに行として表示するデータの結果セットを返します。 結果セットの各行が（サーバー側で）処理され、 [いくつかの段階](#phases-of-the-processing-queue)を返します。
+The [クエリ](#the-query-and-data-retrieval) レポートに行として表示するデータの結果セットを返します。 結果セットの各行が（サーバー側で）処理され、 [いくつかの段階](#phases-of-the-processing-queue)、レポートに表示するためにクライアントに転送される前。
 
 次のような操作が可能です。
 
 * 基になる結果セットから値を抽出したり導き出したりします。
 
-  例えば、2 つのプロパティ値の差を計算することで、2 つの値を 1 つの値として処理できます。
+  例えば、2 つのプロパティ値の差を計算することで、2 つのプロパティ値を 1 つの値として処理できます。
 
 * 抽出した値を解決します。これは様々な方法で行うことができます。
 
@@ -163,12 +163,12 @@ AEM に用意されている標準レポートの特徴：
 
 1. 生データを含む最初の結果セットに対して [初期フィルタリング](#column-specific-definitions) (*raw* フェーズ ) が適用されます。
 
-1. 値は [前処理済み](#processing-queue);定義された *適用* フェーズ。
+1. 値は [前処理済み](#processing-queue); （定義済み） *適用* フェーズ。
 
-1. [フィルター](#column-specific-definitions) ( *前処理済み* フェーズ ) は、前処理された値に対して実行されます。
+1. [フィルター](#column-specific-definitions) ( 割り当て先 *前処理済み* フェーズ ) は、前処理された値に対して実行されます。
 
-1. 値が解決される。次によると [定義済みリゾルバー](#processing-queue).
-1. [フィルター](#column-specific-definitions) ( *解決済み* フェーズ ) は、解決された値に対して実行されます。
+1. 値は、 [定義済みリゾルバー](#processing-queue).
+1. [フィルター](#column-specific-definitions) ( 割り当て先 *解決済み* フェーズ ) は、解決された値に対して実行されます。
 
 1. データは[グループ化および集計済](#column-specific-definitions)です。
 1. 配列データは、リスト（文字列ベース）に変換することで解決されます。
@@ -236,7 +236,7 @@ N:apps
 
 このコンポーネントは、レポート全体のコンテナとして使用され、以下の情報が含まれます。
 
-* この [クエリ定義](#query-definition).
+* The [クエリ定義](#query-definition).
 * An [（オプション）dialog](#configuration-dialog) レポートを設定するために使用します。
 * 任意 [グラフ](#chart-definitions) と統合されています。
 
@@ -472,11 +472,11 @@ N:charting
 
 列コンポーネントは、次の組み合わせを定義します。
 
-* この [列固有のクエリ](#column-specific-query) 設定。
-* この [リゾルバーと前処理](#resolvers-and-preprocessing).
+* The [列固有のクエリ](#column-specific-query) 設定。
+* The [リゾルバーと前処理](#resolvers-and-preprocessing).
 * [列固有の定義](#column-specific-definitions)（フィルターや集計など。`definitions` の子ノード）。
 * [列のデフォルト値](#column-default-values).
-* この [クライアントフィルター](#client-filter) を使用して、サーバから返されたデータから表示する情報を抽出する。
+* The [クライアントフィルター](#client-filter) を使用して、サーバから返されたデータから表示する情報を抽出する。
 * 以上のほか、必要な[イベントとアクション](#events-and-actions)を定義するために、適切な `cq:editConfig` のインスタンスを列コンポーネントで提供する必要があります。
 * [汎用列](#generic-columns)の設定。
 
@@ -807,7 +807,7 @@ N:definitions
 
 これらのフォーマッターは、数値を対応する文字列に変換します。
 
-例えば、`min`、`avg`、`max` の集計を許可する時間列に使用できます。形式 `min`/ `avg`/ `max` 集計は *時間差* ( 例： `10 days ago`) の場合は、データフォーマッターが必要です。 したがって、`min`／`avg`／`max` の集計値に対して `datedelta` フォーマッターが適用されます。`count` 集計も利用できる場合、フォーマッターは不要です。また、元の値は含まれません。
+例えば、`min`、`avg`、`max` の集計を許可する時間列に使用できます。As `min`/ `avg`/ `max` 集計は、 *時間差* ( 例： `10 days ago`) の場合は、データフォーマッターが必要です。 したがって、`min`／`avg`／`max` の集計値に対して `datedelta` フォーマッターが適用されます。`count` 集計も利用できる場合、フォーマッターは不要です。また、元の値は含まれません。
 
 現在使用可能なデータタイプフォーマッターは、以下のとおりです。
 
@@ -1187,7 +1187,7 @@ N:apps
 1. レポートコンポーネントのルート。
 1. レポートのベースコンポーネント。
 1. 1 つ以上の列ベースコンポーネント。
-1. レポートデザイン。
+1. レポートのデザイン。
 1. レポートテンプレートのルート。
 1. レポートテンプレート。
 
@@ -1356,7 +1356,7 @@ N:apps
    これは、次のようなテンプレートを定義します。
 
    * 結果のレポートの `allowedPaths` を定義します。上記の場合、`/etc/reports` 下の任意の場所となります。
-   * テンプレートのタイトルと説明を提供します
+   * テンプレートのタイトルと説明を提供します。
    * テンプレートリストで使用するサムネール画像を提供します（このノードの完全な定義は上記ではありません。既存のレポートから thumbnail.png のインスタンスをコピーするのが最も簡単です）。
 
 ### 新しいレポートのインスタンスの作成 {#creating-an-instance-of-your-new-report}
@@ -1414,7 +1414,7 @@ N:apps
 
 ### キャッシュ設定 (Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
 
-* **有効にする**&#x200B;を使用すると、レポートデータのキャッシュを有効または無効にできます。レポートのキャッシュを有効にすると、複数のリクエストを実行する際にレポートデータがメモリに保持されます。 これによりパフォーマンスが向上する可能性がありますが、メモリ消費量が増加し、極端な状況ではメモリ不足に陥る場合があります。
+* **有効にする** レポートデータのキャッシュを有効または無効にできます。 レポートのキャッシュを有効にすると、複数のリクエストを実行する際にレポートデータがメモリに保持されます。 これによりパフォーマンスが向上する可能性がありますが、メモリ消費量が増加し、極端な状況ではメモリ不足に陥る場合があります。
 * **TTL** は、レポートデータがキャッシュされる時間（秒単位）を定義します。数値を大きくするとパフォーマンスが向上しますが、期間内にデータが変更された場合は不正確なデータが返される場合もあります。
 * **最大エントリ数**&#x200B;は、一度にキャッシュできるレポートの最大数を定義します。
 

@@ -1,6 +1,6 @@
 ---
 title: モバイルアプリケーションのオーサリング
-description: AEM Mobile Dashboard を使用すると、モバイルアプリケーションを作成、構築およびデプロイし、アプリケーションメタデータを作成、削除および編集できます。 このページでは、この機能について詳しく見ていきます。
+description: AEM Mobile Dashboard を使用すると、モバイルアプリケーションの作成、構築およびデプロイ、アプリケーションメタデータの作成、削除および編集をおこなえます。 このページでは、この機能について詳しく見ていきます。
 uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1013'
 ht-degree: 2%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 2%
 >
 >Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-AEM Mobileダッシュボードを使用すると、モバイルアプリケーションの作成、構築、デプロイ、アプリケーションメタデータの作成、削除、編集をおこなうことができます。 アプリケーションが稼働したら、ライフサイクル指標や使用指標を含むアプリケーション分析を実行して、顧客コンバージョンとブランドロイヤルティを向上させることができます。
+AEM Mobileダッシュボードを使用すると、モバイルアプリケーションの作成、構築およびデプロイ、アプリケーションメタデータの作成、削除および編集をおこなえます。 アプリケーションが稼働したら、ライフサイクル指標や使用指標を含むアプリケーション分析を実行して、顧客コンバージョンとブランドロイヤルティを向上させることができます。
 
-AEM Mobileアプリケーションを構築するには、 [モバイルアプリケーションの構築](/help/mobile/building-app-mobile-phonegap.md) ページ。
+AEM Mobileアプリケーションを構築するには、 [モバイルアプリケーションの構築](/help/mobile/building-app-mobile-phonegap.md) ページに貼り付けます。
 
 環境を設定して使い始めるには、 [AEM PhoneGap Enterprise を使用するためのAEMの管理](/help/mobile/administer-phonegap.md).
 
 ## AEM Mobile Apps カタログ {#the-aem-mobile-apps-catalog}
 
-この [AEM Mobile Apps カタログ](http://localhost:4502/aem/apps.html/content/phonegap) は、AEMで管理されているすべてのモバイルアプリを表示します。
+The [AEM Mobile Apps カタログ](http://localhost:4502/aem/apps.html/content/phonegap) は、AEMで管理されているすべてのモバイルアプリを表示します。
 
 このカタログは、AEM Mobileの「ランディングページ」と考えて、管理者は、テンプレートに基づいて作成するか、モバイル開発者が既に開始した既存のアプリをアップロードすることで、新しいAEM Mobileアプリを開始できます。
 
@@ -45,7 +45,7 @@ AEM Mobileアプリケーションを構築するには、 [モバイルアプ�
 
 カタログからAEM Mobileアプリを選択すると、そのアプリのダッシュボードが表示されます。 ここでは、アプリの管理、統計の表示、モバイルアプリコンテンツの構築、デプロイおよび管理をおこなうことができます。
 
-AEM Mobileダッシュボードの各タイルを展開して、「。..」をクリックし、詳細を表示または編集できます。 をクリックします。
+AEM Mobileダッシュボードの各タイルを展開して、右下隅の「。..」をクリックして、詳細を表示または編集できます。
 
 ![AEM Mobile Applications コマンドセンター](assets/chlimage_1-136.png)
 
@@ -59,7 +59,7 @@ AEM Mobileダッシュボードの各タイルを展開して、「。..」を�
 
 ### ページコンテンツを管理タイル {#the-manage-page-content-tile}
 
-AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテンツを作成、更新および削除できます。 この **ページコンテンツを管理タイル** 管理されているコンテンツのページ数と最終変更日を表示します。 タイル内の各レコードをクリックして、コンテンツをドリルダウンし、ページの作成、コピー、移動、削除、更新をおこなうことができます。 コンテンツが更新されたら、 **コンテンツパッケージを管理タイル。**
+AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテンツを作成、更新および削除できます。 The **ページコンテンツを管理タイル** 管理されているコンテンツのページ数と最終変更日を表示します。 タイル内の各レコードをクリックして、コンテンツをドリルダウンし、ページの作成、コピー、移動、削除、更新をおこなうことができます。 コンテンツが更新されたら、 **コンテンツパッケージを管理タイル。**
 
 ![コンテンツタイル](assets/chlimage_1-138.png)
 
@@ -75,11 +75,11 @@ AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテン�
 
 コンテンツは、言語として、またはアプリで複数のコンテンツリリースパッケージを使用するアプリの特定の部分として表すことができます。 コンテンツのバンドル方法の選択は柔軟で、アプリケーションのコンテンツ管理方法に応じて異なります。
 
-この **変更済み** 列には、ページが最も最近変更された日時が示されます。
+The **変更済み** 列には、ページが最も最近変更された日時が示されます。
 
-この **Staged** 列には、最後のコンテンツ更新がいつ作成されたかが表示されます。 コンテンツの更新を作成して変更をステージングするには、タイル内の任意のレコードを開き、更新を作成します。
+The **Staged** 列には、最後のコンテンツ更新がいつ作成されたかが表示されます。 コンテンツの更新を作成して変更をステージングするには、タイル内の任意のレコードを開き、更新を作成します。
 
-この **公開済み** 列には、最後のコンテンツ更新が公開され、顧客が使用できるようになった日時が表示されます。 コンテンツを公開するには、まずそのコンテンツをステージングしてから、このタイルにドリルダウンしてコンテンツリリースの詳細コンソールから公開することで、更新を公開する必要があります。
+The **公開済み** 列には、最後のコンテンツ更新が公開され、顧客が使用できるようになった日時が表示されます。 コンテンツを公開するには、まずそのコンテンツをステージングしてから、このタイルにドリルダウンしてコンテンツリリースの詳細コンソールから公開することで、更新を公開する必要があります。
 
 ![コンテンツリリースタイル](assets/chlimage_1-139.png) ![アプリシェルのコンテンツ同期パッケージ](do-not-localize/chlimage_1-5.png)
 
@@ -91,7 +91,7 @@ AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテン�
 
 ### PhoneGap Buildタイル {#the-phonegap-build-tile}
 
-この **PhoneGap Buildタイル** 接続先 `https://build.phonegap.com` リモートビルドを構築し、ホストします。 ビルドが完了すると、ビルドはダウンロードとして、または QR コードを介して直接デバイスで利用できるようになります。
+The **PhoneGap Buildタイル** 次と接続： `https://build.phonegap.com` リモートビルドを構築し、ホストします。 ビルドが完了すると、ビルドはダウンロードとして、または QR コードを介して直接デバイスで利用できるようになります。
 
 または、PhoneGap CLI (`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`) をクリックします。
 
@@ -105,9 +105,9 @@ AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテン�
 >
 >詳しくは、 [AdobeMobile ServicesCloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md) 」を参照してください。
 
-AEM Mobileは、 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=en) (AMS) を使用します。
+AEM MobileとAdobe Analyticsの統合 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=en) (AMS) を使用します。
 
-コントロールセンター **指標タイル** アプリケーション用に AMS から取得した概要分析を表示します。 「。..」をクリックして、Analytics ダッシュボードにドリルダウンできます。 右下に
+コントロールセンター **指標タイル** アプリケーション用に AMS から取得した概要分析を表示します。 右下の「。..」をクリックして、Analytics ダッシュボードにドリルダウンできます。
 
 ![指標タイル](assets/chlimage_1-141.png)
 
@@ -117,7 +117,7 @@ AEM Mobileは、 [AdobeMobile Services SDK](https://experienceleague.adobe.com/d
 
 クリック [ここ](/help/mobile/phonegap-app-definitions.md) をクリックして、アプリの定義を作成および管理します。
 
-「。..」をクリックして、エンティティコンテンツを管理ダッシュボードにドリルダウンできます。 右下に
+右下の「。..」をクリックして、エンティティコンテンツを管理ダッシュボードにドリルダウンできます。
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 

@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 5f4467c1-0f3f-4dc6-9bd5-98259f327295
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '640'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 ## 選択したユーザーキューへのアクセスの管理 {#managing-access-to-a-selected-user-queue}
 
-「ユーザーへのアクセスを管理」機能を使用すると、選択したユーザーキューへのアクセスを管理できます。 選択したユーザーキューへのアクセスを組織内の他のユーザーに許可または取り消すことができます。 例えば、Kara Bowman は不在です。 「ユーザーへのアクセスを管理」機能を使用すると、Kara のキューを Akira Tanaka および John Jacobs と共有して完了できます。 後で、Kara がオフィスに戻ると、Kara のキューへのアクセスを Akira Tanaka と John Jacobs から取り消すことができます。
+ユーザーへのアクセスを管理機能を使用すると、選択したユーザーキューへのアクセスを管理できます。 選択したユーザーキューへのアクセスを組織内の他のユーザーに許可または取り消すことができます。 例えば、Kara Bowman は不在です。 「ユーザーへのアクセスを管理」機能を使用すると、Kara のキューを Akira Tanaka および John Jacobs と共有して完了できます。 後で、Kara がオフィスに戻ると、Kara のキューへのアクセスを Akira Tanaka と John Jacobs から取り消すことができます。
 
 共有が完了すると、これらのタスクは、Workspace を使用して、キューへのアクセス権を持つユーザーが完了できます。
 

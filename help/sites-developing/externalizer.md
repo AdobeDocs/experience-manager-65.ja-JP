@@ -7,10 +7,10 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 58%
+source-wordcount: '492'
+ht-degree: 52%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Manager(AEM) では、 **Externalizer** は、リソースパ�
 
 ## Externalizer サービスの設定 {#configuring-the-externalizer-service}
 
-**Externalizer** サービスでは、プログラムによってリソースパスにプレフィックスを付けるために使用可能な複数のドメインを一元的に定義できます。各ドメインは一意の名前によって識別され、その名前を使用して、プログラムからそのドメインを参照できます。
+The **Externalizer** サービスを使用すると、プログラムによるリソースパスのプレフィックス付けに使用できる複数のドメインを一元的に定義できます。 各ドメインは、プログラムによってドメインを参照する際に使用される一意の名前で識別されます。
 
 **Externalizer** サービスのドメインマッピングを定義するには：
 
@@ -40,7 +40,7 @@ Adobe Experience Manager(AEM) では、 **Externalizer** は、リソースパ�
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. を定義 **ドメイン** マッピング：マッピングは、ドメイン、スペースおよびドメインを参照するためにコード内で使用できる一意の名前で構成されます。
+1. を定義 **ドメイン** マッピング：マッピングは、ドメイン、スペースおよびドメインを参照するコード内で使用できる一意の名前で構成されます。
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
@@ -65,7 +65,7 @@ Adobe Experience Manager(AEM) では、 **Externalizer** は、リソースパ�
 
    >[!NOTE]
    >
-   >カスタム設定を使用すると、次のようなカテゴリを追加できます。 `production`, `staging`または外部の非AEMシステム ( `my-internal-webservice`. このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
+   >カスタム設定を使用すると、次のようなカテゴリを追加できます。 `production`, `staging`または外部のAEM以外のシステム ( `my-internal-webservice`. このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
 
 1. 「**保存**」をクリックして変更を保存します。
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: e57a6971-6a6f-427b-a8cd-a2f2e8cdf9e2
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '604'
 ht-degree: 36%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)（以前は CQ）は、長い間、オーバーレ
 
 オーバーレイは、多くのコンテキストで使用される用語です。 このコンテキスト (AEMの拡張 ) では、オーバーレイとは、事前定義された機能を使用し、それに対して独自の定義を課す（標準の機能をカスタマイズする）ことです。
 
-標準インスタンスでは、事前定義された機能は `/libs` オーバーレイ（カスタマイズ）は、 `/apps` 分岐。 AEM がリソースを検索するときは検索パスを使用します。具体的には、最初に `/apps` ブランチを検索し、次に `/libs` ブランチを検索します（[検索パスは必要に応じて設定可能](#configuring-the-search-paths)）。このメカニズムにより、オーバーレイ（およびそこに定義されているカスタマイズ）が優先されます。
+標準インスタンスでは、事前定義された機能は、 `/libs` オーバーレイ（カスタマイズ）は、 `/apps` 分岐。 AEM がリソースを検索するときは検索パスを使用します。具体的には、最初に `/apps` ブランチを検索し、次に `/libs` ブランチを検索します（[検索パスは必要に応じて設定可能](#configuring-the-search-paths)）。このメカニズムにより、オーバーレイ（およびそこに定義されているカスタマイズ）が優先されます。
 
 AEM 6.0 以降、オーバーレイの実装方法と使用方法が変更されました。
 
@@ -62,20 +62,20 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が変更され
 
 * ***禁止* 変更を加える `/libs` 分岐&#x200B;**このブランチは、次の操作を行うたびに変更される可能性が高いので、加えた変更はすべて失われる可能性があります。
 
-   * インスタンスにアップグレードします
+   * インスタンスにアップグレードします。
    * ホットフィックスの適用
    * 機能パックをインストールする
 
-* 変更を 1 か所に集中させます。必要に応じて、変更の追跡、移行、バックアップ、デバッグを容易におこなえます。
+* 変更を 1 か所に集約し、必要に応じて、変更の追跡、移行、バックアップ、デバッグを容易におこなえます。
 
 ## 検索パスの設定 {#configuring-the-search-paths}
 
 オーバーレイの場合、配信されるリソースは、取得されたリソースとプロパティの集計で、定義可能な検索パスに応じて表されます。
 
-* リソース **Resolver Search Path** ( [OSGi 設定](/help/sites-deploying/configuring-osgi.md) の **Apache Sling Resource Resolver Factory**.
+* リソース **Resolver Search Path** 例： [OSGi 設定](/help/sites-deploying/configuring-osgi.md) （の） **Apache Sling Resource Resolver Factory**.
 
    * 検索パスの上から下に並ぶ順序は、それぞれの優先度を示します。
-   * 標準インストールでは、主なデフォルトは次のようになります。 `/apps`, `/libs`  — その内容は `/apps` ～よりも優先度が高い `/libs` ( つまり、 *overlays* )。
+   * 標準インストールでは、主なデフォルトは次のようになります。 `/apps`, `/libs`  — その内容は `/apps` ～よりも優先度が高い `/libs` ( つまり、 *overlays* ))。
 
 * スクリプトの保存場所への JCR:READ アクセス権を 2 人のサービスユーザーに付与する必要があります。この 2 人のユーザーは、components-search-service（com.day.cq.wcm.core でコンポーネントのアクセス／キャッシュに使用）と sling-scripting（org.apache.sling.servlets.resolver でサーブレットの検索に使用）です。
 * 次の設定も、スクリプトの保存場所に応じて設定する必要があります（この例では /etc、/libs または /apps の下）。
@@ -95,7 +95,7 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が変更され
 
 ## 使用例 {#example-of-usage}
 
-以下に例を示します。
+以下に、いくつかの例を示します。
 
 * [コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md)
 * [ページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md)

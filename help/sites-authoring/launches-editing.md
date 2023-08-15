@@ -10,10 +10,10 @@ discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
-workflow-type: ht
-source-wordcount: '524'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 95%
 
 ---
 
@@ -32,7 +32,6 @@ ht-degree: 100%
 >
 >* 警告：このページはローンチのソースです。ページの移動は許可されません。
 
-
 ### ライブコピーへのローンチページサブジェクトの編集 {#editing-launch-pages-subject-to-a-live-copy}
 
 ローンチが[ライブコピー](/help/sites-administering/msm.md)に基づいている場合は、次のようになります。
@@ -44,7 +43,7 @@ ht-degree: 100%
 
 標準のライブコピーを編集する場合と同じ方法で変更できます。例えば次のようにします。
 
-* 閉じた鍵アイコンをクリックすると、この同期が解除され、ローンチのコンテンツを新しく更新できます。ロックを解除（開いた鍵アイコン）すると、ソースブランチ内の同じ場所に変更を加えても、ユーザーの変更が上書きされなくなります。
+* 閉じた鍵アイコンをクリックすると、この同期が解除され、ローンチのコンテンツを新しく更新できます。 ロックを解除（開いた鍵アイコン）すると、ソースブランチ内の同じ場所に変更を加えても、ユーザーの変更が上書きされなくなります。
 * 特定のページの継承を&#x200B;**一時停止**（および&#x200B;**再開**）します。
 
 詳しくは、「[ライブコピーのコンテンツの変更](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)」を参照してください。
@@ -72,6 +71,7 @@ ht-degree: 100%
    * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**編集**」を選択します。
+
    * [「参照」（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**ローンチを編集**」を選択します。
@@ -93,6 +93,7 @@ ht-degree: 100%
    * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * **プロパティ**&#x200B;を選択します。
+
    * [「参照」（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**プロパティを編集**」を選択します。

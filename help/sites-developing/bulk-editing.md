@@ -2,7 +2,7 @@
 title: ページプロパティの一括編集のためのページの設定
 seo-title: Configuring your Page for Bulk Editing of Page Properties
 description: ページプロパティの一括編集を使用すると、複数のページのプロパティを一度に編集できます
-seo-description: Bulk editing of page properties allows you to edit the properties of multiple pages at once
+seo-description: Bulk editing of page properties lets you edit the properties of multiple pages at once
 uuid: 1ad403d2-4b93-4943-ae45-74bf20705b81
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '413'
 ht-degree: 59%
 
 ---
 
 # ページプロパティの一括編集のためのページの設定 {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) では、複数のページのプロパティを一度に編集できます。
+[ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) を使用すると、複数のページのプロパティを一度に編集できます。
 
 異なる値が存在する可能性があるので、ページプロパティはデフォルトでは一括編集が有効になっていません。 明示的に許可（有効）する必要があります。 一括編集で使用できるようにページプロパティを定義する場合は、次のような特定の影響を考慮する必要があります。
 

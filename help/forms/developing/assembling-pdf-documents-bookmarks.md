@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: ht
+source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+workflow-type: tm+mt
 source-wordcount: '2558'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 
@@ -85,7 +85,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
+>この節を読む前に、Assembler サービスを使用したPDFドキュメントの組み立てに関する知識を身に付けておくことをお勧めします。 このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
 
 >[!NOTE]
 >
@@ -160,7 +160,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **PDF ドキュメントのアセンブリ**
 
-新しいブックマークを含む PDF ドキュメントをアセンブリするには、Assembler サービスの `invokeDDX` 操作を使用します。`invokeOneDocument` などといった Assembler サービスの他の操作ではなく `invokeDDX` 操作を使用する必要がある理由は、Assembler サービスでは、Map コレクションオブジェクト内に渡されるブックマーク XML ドキュメントが必要だからです。このオブジェクトは、`invokeDDX` 操作のパラメーターです。
+新しいPDFを含むブックマークドキュメントを組み立てるには、Assembler サービスの `invokeDDX` 操作。 `invokeOneDocument` などといった Assembler サービスの他の操作ではなく `invokeDDX` 操作を使用する必要がある理由は、Assembler サービスでは、Map コレクションオブジェクト内に渡されるブックマーク XML ドキュメントが必要だからです。このオブジェクトは、`invokeDDX` 操作のパラメーターです。
 
 **ブックマークを含む PDF ドキュメントの保存**
 
@@ -180,7 +180,7 @@ Assembler サービス API（Java）を使用して、ブックマークとと�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-assembler-client.jar などのクライアント JAR ファイルを含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -205,24 +205,24 @@ Assembler サービス API（Java）を使用して、ブックマークとと�
 1. Map コレクションに PDF ドキュメントとブックマーク XML ドキュメントを追加します。
 
    * 入力 PDF ドキュメントとブックマーク XML ドキュメントの両方を格納するのに使用する `java.util.Map` オブジェクトを作成します。
-   * `java.util.Map` オブジェクトの `put` メソッドを呼び出し、次の引数を渡すことによって、入力 PDF ドキュメントを追加します。
+   * を呼び出して、入力PDFドキュメントを追加します。 `java.util.Map` オブジェクトの `put` メソッドを使用し、次の引数を渡す。
 
       * キー名を表す文字列値。この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致している必要があります。
       * 入力 PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
-   * `java.util.Map` オブジェクトの `put` メソッドを呼び出し、次の引数を渡すことによって、ブックマーク XML ドキュメントを追加します。
+
+   * を呼び出して、ブックマーク XML ドキュメントを追加します。 `java.util.Map` オブジェクトの `put` メソッドを使用し、次の引数を渡す。
 
       * キー名を表す文字列値。この値は、DDX ドキュメントで指定されているブックマークソース要素の値と一致する必要があります。
       * ブックマーク XML ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
-
 1. 実行時オプションを設定します。
 
    * コンストラクタを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生してもジョブの処理を続行するよう Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
+   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドとパス `false`.
 
 1. PDF ドキュメントをアセンブリします。
 
-   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出し、以下の必須の値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、以下の必須の値を渡します。
 
    * 使用する DDX ドキュメントを表す `com.adobe.idp.Document` オブジェクト
    * 入力 PDF ドキュメントとブックマーク XML ドキュメントの両方を含む `java.util.Map` オブジェクト。
@@ -234,9 +234,9 @@ Assembler サービス API（Java）を使用して、ブックマークとと�
 
    新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。これにより、`java.util.Map` オブジェクトが返されます。
+   * を呼び出す `AssemblerResult` オブジェクトの `getDocuments` メソッド。 これにより、`java.util.Map` オブジェクトが返されます。
    * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで `java.util.Map` オブジェクトを反復処理します（DDX ドキュメントで指定された PDF 結果要素を使用して、ドキュメントを取得できます）。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、PDF ドキュメントを抽出します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、PDFドキュメントを抽出します。
 
 **関連トピック**
 
@@ -263,7 +263,7 @@ Assembler Service API（web サービス）を使用して、ブックマーク�
    * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -275,24 +275,24 @@ Assembler Service API（web サービス）を使用して、ブックマーク�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、DDX ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
 1. ブックマークを追加する PDF ドキュメントを参照します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF を格納するために使用されます。
    * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` フィールドにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを設定します。
 
 1. ブックマーク XML ドキュメントを参照します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、ブックマーク XML ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` フィールドにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
 1. Map コレクションに PDF ドキュメントとブックマーク XML ドキュメントを追加します。
@@ -306,11 +306,11 @@ Assembler Service API（web サービス）を使用して、ブックマーク�
 1. 実行時オプションを設定します。
 
    * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生したときに Assembler サービスにジョブの処理を継続するように指示するには、`AssemblerOptionSpec` オブジェクトの `failOnError` データメンバーに `false` を入力します。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` から `AssemblerOptionSpec` オブジェクトの `failOnError` データメンバー。
 
 1. PDF ドキュメントをアセンブリします。
 
-   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出し、次の値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
 
    * DDX ドキュメントを表す `BLOB` オブジェクト
    * 入力ドキュメントを格納する `MyMapOf_xsd_string_To_xsd_anyType` 配列
@@ -322,9 +322,9 @@ Assembler Service API（web サービス）を使用して、ブックマーク�
 
    新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `AssemblerResult` オブジェクトの `documents` フィールドにアクセスし、結果の PDF ドキュメントを含む `Map` オブジェクトにアクセスします。
-   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し実行します。そして、その配列メンバーの `value` を `BLOB` にキャストします。
-   * PDF ドキュメントの `BLOB` オブジェクトの `MTOM` フィールドにアクセスして、そのドキュメントを表すバイナリデータを抽出します。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
+   * 次にアクセス： `AssemblerResult` オブジェクトの `documents` フィールド ( `Map` 結果PDF・ドキュメントを格納するオブジェクト。
+   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し実行します。次に、その配列メンバの `value` から `BLOB`.
+   * PDFドキュメントを表すバイナリデータを、そのドキュメントにアクセスして抽出します `BLOB` オブジェクトの `MTOM` フィールドに入力します。 これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
 
 **関連トピック**
 

@@ -8,16 +8,16 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '145'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 97%
 
 ---
 
 # e コマース {#ecommerce}
 
-統合フレームワークには、API を備えた統合レイヤーが含まれています。これにより、以下のことが可能になります。
+統合フレームワークには、API を備えた統合レイヤーが含まれています。次の操作が可能です。
 
 * e コマースシステムをプラグインして、製品データを AEM に取り込む
 * 特定の e コマースエンジンに依存しないコマース機能を提供する AEM コンポーネントを作成する

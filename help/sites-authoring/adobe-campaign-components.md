@@ -9,10 +9,10 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
-workflow-type: ht
-source-wordcount: '2839'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '2836'
+ht-degree: 98%
 
 ---
 
@@ -214,8 +214,7 @@ Dynamic Media Classic（Scene7）画像テンプレートはレイヤー化さ�
 * **画像**
 コンテンツファインダーから画像をドラッグするか、クリックして画像を参照します。必要に応じて、切り抜きや回転を行います。
 
-* **画像のプロパティ**（**詳細画像プロパティ**）
-次の項目を指定できます。
+* **画像のプロパティ** (**高度な画像プロパティ**) を使用して、以下を指定できます。
 
    * **タイトル**
 ブロックのタイトル。マウスポインターを置くと表示されます。
@@ -247,7 +246,7 @@ web サイト内のアセットまたはその他のページへのリンクを�
 
 テキストおよびパーソナライゼーション（Campaign）コンポーネントを使用すると、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)の機能を備えた WYSIWYG エディターでテキストブロックを入力できます。さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-authoring/campaign.md#inserting-personalization)も参照してください。
 
-フォントの文字、配置、リンク、リスト、インデントなど、多様なアイコンでテキストの書式を設定できます。[タッチ操作向け UI とクラシック UI](/help/sites-authoring/editing-content.md) の機能は基本的に同じですが、ルックアンドフィールは異なります。
+アイコンを選択すると、フォントの特性、配置、リンク、リスト、インデントなど、テキストの書式を設定できます。 [タッチ操作向け UI とクラシック UI](/help/sites-authoring/editing-content.md) の機能は基本的に同じですが、ルックアンドフィールは異なります。
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
@@ -428,7 +427,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ### 非表示の紐付けキー（Campaign） {#hidden-reconciliation-key-campaign}
 
-非表示の紐付けキー（Campaign）コンポーネントを使用して、非表示のフィールドを紐付け整キーの一部としてフォームに追加できます。
+非表示の紐付けキー (Campaign) コンポーネントを使用して、非表示のフィールドを紐付けキーの一部としてフォームに追加できます。
 
 非表示の紐付けキー（Campaign）コンポーネントでは、次の項目を設定できます。
 

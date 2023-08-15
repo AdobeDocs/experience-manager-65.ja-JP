@@ -5,10 +5,10 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 48131c5accfe73b83197bd581ed5a22bc4890a56
-workflow-type: ht
-source-wordcount: '1957'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1956'
+ht-degree: 98%
 
 ---
 
@@ -35,7 +35,7 @@ AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API で
 
 [Assets REST API](/help/assets/mac-api-assets.md) を使用すると、Adobe Experience Manager のデベロッパーは、HTTP API 経由で CRUD 操作（作成、読み取り、アップデート、削除）を介して、（AEM に格納された）コンテンツにアクセスできます。
 
-この API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、 Adobe Experience Manager をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。
+API を使用すると、JavaScript フロントエンドアプリケーションにコンテンツサービスを提供することで、Adobe Experience Managerをヘッドレス CMS(Content Management System) として操作できます。 または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。
 
 例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、HTTP API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 

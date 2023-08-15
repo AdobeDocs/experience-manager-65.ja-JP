@@ -11,10 +11,10 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 54%
+source-wordcount: '1661'
+ht-degree: 53%
 
 ---
 
@@ -90,7 +90,7 @@ Document Services コンポーネントカテゴリの下にある Search &amp; 
   </tr>
   <tr>
    <td> </td>
-   <td>詳細検索の無効化</td>
+   <td>詳細検索を無効にする</td>
    <td>有効にすると、詳細検索アイコンが非表示になります。</td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ Document Services コンポーネントカテゴリの下にある Search &amp; 
   </tr>
   <tr>
    <td> </td>
-   <td>送信 URL</td>
+   <td>URL を送信</td>
    <td><p>フォームデータが送信されるサーブレットを設定します。</p> <p><strong>注意：</strong> <em>フォームの送信 URL は複数の場所で指定でき、優先順位は次のとおりです。</em></p>
     <ol>
      <li><em>優先順位が最も高いのは、フォームに埋め込まれている送信URL（送信ボタン）です。</em></li>
@@ -141,17 +141,17 @@ Document Services コンポーネントカテゴリの下にある Search &amp; 
   <tr>
    <td> </td>
    <td>HTMLレンダリングアクションツールチップ</td>
-   <td>ポインターを合わせたときに表示されるツールヒントのテキストを設定します <img height="16" src="assets/aem6forms_panel-html.png" width="13" /> (HTML5 アイコン )。</td>
+   <td>ポインターを合わせたときに表示されるツールヒントのテキストを設定します。 <img height="16" src="assets/aem6forms_panel-html.png" width="13" /> (HTML5 アイコン )。</td>
   </tr>
   <tr>
    <td> </td>
    <td>PDFレンダリングアクションツールチップ</td>
-   <td>ポインターを合わせたときに表示されるツールヒントのテキストを設定します <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDFアイコン )。</td>
+   <td>ポインターを合わせたときに表示されるツールヒントのテキストを設定します。 <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDFアイコン )。</td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>スタイル</strong></code></td>
    <td>スタイルタイプ</td>
-   <td>フォームのリスト表示には、<strong>書式なし、デフォルトスタイル</strong>または<strong>カスタムスタイル</strong>を指定できます。</td>
+   <td>次を指定できます。 <strong>スタイルなし、デフォルトのスタイル</strong>または <strong>カスタムスタイル </strong>フォームを一覧表示するために使用します。</td>
   </tr>
   <tr>
    <td> </td>
@@ -198,7 +198,7 @@ Full Text Predicate コンポーネントを設定するには、次の手順を
 
 1. コンポーネントをタップし、![ettings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
 1. 「**メインタイトル**」フィールドにタイトルを指定します。
-1. タップ **Ok**
+1. タップ **OK**
 
 #### プロパティの述語 {#properties-predicate}
 
@@ -250,7 +250,7 @@ Search &amp; Listerコンポーネント
 
 フォームポータルページをカスタマイズすることで、特徴のある外観にすることができます。また、メタデータを追加することで、検索機能の改善、ページのレイアウト変更、およびカスタム CSS スタイルの追加を行うこともできます。詳しくは、「[フォームポータルコンポーネント用テンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)」を参照してください。
 
-AEM Forms UIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、フォームの一覧表示と検索の操作をエンドユーザーに提供する際に役立ちます。 カスタムメタデータについて詳しくは、「[フォームポータルコンポーネント用テンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)」を参照してください。
+AEM Forms UI を使用すると、カスタムメタデータをフォームに追加できます。 カスタムメタデータは、フォームの一覧表示と検索の操作をエンドユーザーに提供する際に役立ちます。 カスタムメタデータについて詳しくは、「[フォームポータルコンポーネント用テンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)」を参照してください。
 
 デフォルトでは、フォームポータルはレンダリングアクションを提供します。 フォームポータルをカスタマイズして、その他のアクションを追加できます。 詳しくは、 [フォームリスター項目にカスタムアクションを追加する。](../../forms/using/add-custom-action-form-lister.md)
 

@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 97%
+source-wordcount: '1138'
+ht-degree: 92%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 97%
 
 Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理](/help/assets/content-fragments/content-fragments.md)されます。
 
-コンテンツフラグメントを使用すると、チャネルに依存しないコンテンツを、（おそらくはチャネル固有の）バリエーションと共に作成できます。その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
+チャネルに特化しないコンテンツを、チャネル固有のバリエーションと共に作成できます。 その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
 
 更新された JSON エクスポーターと共に構造化コンテンツフラグメントを使用して、AEM コンテンツをコンテンツサービス経由で AEM ページ以外のチャネルに配信することもできます。
 
@@ -124,7 +124,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
    * デフォルトの「**マスター**」は常に利用できます。
    * フラグメントのバリエーションが作成された場合は、選択を使用できます。
 
-* **段落**:含める段落の範囲を指定します。
+* **段落**：含める段落の範囲を指定します。
 
    * **すべて**
    * **範囲**：例えば、`1`、`3-5`、`9-*` のように指定します。
@@ -135,7 +135,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 ### フラグメントエディターへのクイック接続 {#quick-connection-to-fragment-editor}
 
-コンポーネントツールバーの&#x200B;**編集**&#x200B;アイコンを使用して、フラグメントのソースを開いて（アセットを）編集できます。この機能により、[コンテンツフラグメントを編集および管理できます](/help/assets/content-fragments/content-fragments.md)。
+コンポーネントツールバーの&#x200B;**編集**&#x200B;アイコンを使用して、フラグメントのソースを開いて（アセットを）編集できます。これで、 [コンテンツフラグメントの編集と管理](/help/assets/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -145,7 +145,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 特定のコンテンツフラグメントがページに追加されると、フラグメントの各 HTML 段落の間（および上と下）に「**コンポーネントをここにドラッグ**」プレースホルダーが存在します。
 
-これにより、ルートフラグメントを変更することなく、フラグメントコンテンツとフラグメントコンテンツの[間](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments)（利用可能ないずれかの場所）に追加のコンテンツ（つまり、中間コンテンツ）を追加できます。
+これにより、コンテンツをさらに追加できます [中間（中間コンテンツなど）](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) （使用可能な任意のポイントで）フラグメントコンテンツを更新する場合、ルートフラグメントを変更する必要はありません。
 
 中間コンテンツの場合は、次のことができます。
 

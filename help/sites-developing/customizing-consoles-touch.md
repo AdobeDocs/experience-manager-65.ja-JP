@@ -1,7 +1,7 @@
 ---
 title: コンソールのカスタマイズ
 seo-title: Customizing the Consoles
-description: AEMには、オーサーインスタンスのコンソールをカスタマイズできる様々なメカニズムが用意されています
+description: AEMには、オーサーインスタンスのコンソールをカスタマイズできる様々なメカニズムが用意されています。
 seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
 uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 56%
+source-wordcount: '669'
+ht-degree: 50%
 
 ---
 
@@ -26,10 +26,9 @@ ht-degree: 56%
 
 AEMは、コンソール ( および [ページオーサリング機能](/help/sites-developing/customizing-page-authoring-touch.md)) を作成します。
 
-* クライアントライブラリクライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズするときに、独自の clientlib を `/apps.` に作成して、カスタムコンポーネントに必要なコードを保持するといった操作が可能です。
+* clientlibs Clientlibs を使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズするときに、独自の clientlib を `/apps.` に作成して、カスタムコンポーネントに必要なコードを保持するといった操作が可能です。
 
-* オーバーレイ
-オーバーレイはノード定義にもとづいており、標準の機能（`/libs`）にカスタマイズした独自機能（`/apps`）をオーバーレイすることができます。Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+* オーバーレイオーバーレイはノード定義に基づいており、標準の機能 ( `/libs`) をカスタマイズした独自の機能 ( `/apps`) をクリックします。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらは、AEMコンソールを拡張するための様々な方法で使用できます。 一部については、以降で（大まかに）説明します。
 
@@ -94,7 +93,7 @@ AEMは、コンソール ( および [ページオーサリング機能](/help/s
 
 ### ツールバーに新しいアクションを追加する {#add-new-action-to-the-toolbar}
 
-1. 独自のコンポーネントを構築し、対応するカスタムアクション用のクライアントライブラリを含めることができます。 例： **twitterに昇格** アクション：
+1. 独自のコンポーネントを構築し、対応するカスタムアクション用のクライアントライブラリを含めることができます。 例えば、 **twitterに昇格** アクション：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -155,7 +154,7 @@ AEMは、コンソール ( および [ページオーサリング機能](/help/s
 
    例えば、以下の GitHub から添付されたクラス/バンドルを参照してください。
 
-1. これで、リスト表示の列コンフィギュレーターで列を選択できます。
+1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになりました。
 
 ### リソースのフィルタリング {#filtering-resources}
 

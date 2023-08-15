@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: ada61b87753f3f3e70acdca0e946428511bd7b00
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2788'
-ht-degree: 58%
+source-wordcount: '2784'
+ht-degree: 57%
 
 ---
 
@@ -130,7 +130,7 @@ ht-degree: 58%
 >
 >The [コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) が推奨されました。 詳しくは、 [コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja) を参照してください。
 
-コンテンツフラグメントは、他のアセットタイプと同様に、AEMページから参照できます。 AEM では、[**コンテンツフラグメント**&#x200B;コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。この&#x200B;**コンテンツフラグメント**&#x200B;コアコンポーネントを拡張することもできます。
+コンテンツフラグメントは、他のアセットタイプと同様に、AEMページから参照できます。 AEMが [**コンテンツフラグメント** コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) - a [ページにコンテンツフラグメントを組み込むためのコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). この&#x200B;**コンテンツフラグメント**&#x200B;コアコンポーネントを拡張することもできます。
 
 * このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
@@ -297,7 +297,7 @@ ht-degree: 58%
 
 * **コンテンツフラグメント**（[ContentFragment](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)）
 
-  このインターフェイスでは、コンテンツフラグメントを抽象化して使用できます。
+  このインターフェイスを使用すると、コンテンツフラグメントを抽象的に操作できます。
 
   >[!CAUTION]
   >

@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
-workflow-type: ht
-source-wordcount: '1512'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1511'
+ht-degree: 97%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 ## チュートリアルについて {#about-the-tutorial}
 
-AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの web サービス、OData サービス、リレーショナルデータベースなど、バックエンドの様々なデータソースを使用してフォームデータモデルを作成できます。フォームデータモデル内でデータモデルオブジェクトおよびサービスを設定し、アダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。このサービスを使用すると、アダプティブフォームに事前に入力し、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
+AEM [!DNL Forms] データ統合モジュールを使用すると、AEMユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、リレーショナルデータベースなど、様々なバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトおよびサービスを設定し、アダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。このサービスを使用すると、アダプティブフォームに事前に入力し、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
 
 フォームデータの統合機能とフォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](../../forms/using/data-integration.md)」を参照してください。
 
@@ -91,13 +91,11 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
       * **検証クエリ：**&#x200B;プールからの接続を検証する SQL SELECT クエリを指定します。クエリは、1 行以上の行を返す必要があります。例えば、**customerdetails から &#42; を選択します**。
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
 
-         上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして **[!UICONTROL Save]** をタップします。
+        上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして **[!UICONTROL Save]** をタップします。
 
-         以下のような設定が作成されます。
+        以下のような設定が作成されます。
 
-         ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
-
-
+        ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
 
 ## 手順 2：フォームデータモデルを作成する {#create-fdm}
 
@@ -140,6 +138,7 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
       * 市区町村
       * ステート
       * 郵便番号
+
    * **サービス：**
 
       * 取得
@@ -182,11 +181,11 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
       * **タイトル**：サービスのタイトルを指定します。例：配送先住所を取得します。
       * **説明**：サービスの詳細な機能を含む説明を指定します。次に例を示します。
 
-         このサービスは [!DNL MySQL] データベースから配送先住所などの顧客についての詳細を取得します
+        このサービスは [!DNL MySQL] データベースから配送先住所などの顧客についての詳細を取得します
 
       * **出力モデルオブジェクト**：顧客データを保管するスキーマを選択します。次に例を示します。
 
-         customerdetail スキーマ
+        customerdetail スキーマ
 
       * **配列を返す**：「**配列を返す**」オプションを無効にします。
       * **引数**：**ID** という引数を選択します。
@@ -202,20 +201,19 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
       * **タイトル**：サービスのタイトルを指定します。例えば、「配送先住所を更新」などです。
       * **説明**：サービスの詳細な機能を含む説明を指定します。次に例を示します。
 
-         このサービスは、配送先住所とそれに関連するフィールドを MySQL データベース内で更新します
+        このサービスは、配送先住所とそれに関連するフィールドを MySQL データベース内で更新します
 
       * **入力モデルオブジェクト**：顧客データを保管するスキーマを選択します。次に例を示します。
 
-         customerdetail スキーマ
+        customerdetail スキーマ
 
       * **出力タイプ**：「**ブール演算式**」を選択します。
 
       * **引数**：**ID** という引数と **customerdetails** という引数を選択します。
+
       「**[!UICONTROL 完了]**」をタップします。[!DNL MySQL] データベース内の顧客の詳細情報を更新する **[!UICONTROL update]** サービスが設定されました。
 
       ![shiping-address-update](assets/shiiping-address-update.png)
-
-
 
 フォームデータモデル内のデータモデルオブジェクトとサービスが設定されています。これで、フォームデータモデルをテストできます。
 

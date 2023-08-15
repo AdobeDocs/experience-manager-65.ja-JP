@@ -3,10 +3,10 @@ title: Adobe Experience Manager でコンテンツを作成するようにリッ
 description: Adobe Experience Manager でコンテンツを作成するように Adobe Experience Manager リッチテキストエディターを設定する方法について学びます。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 53a18ec48331f1c25c15e8f7a59bd57e95639895
-workflow-type: ht
-source-wordcount: '2924'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '2923'
+ht-degree: 99%
 
 ---
 
@@ -195,7 +195,7 @@ RTE プラグインの設定について詳しくは、[RTE プラグインの�
 
 ## RTE ツールバーの設定 {#dialogfullscreen}
 
-AEM では、リッチテキストエディターのインターフェイスを編集モードごとに異なる設定にできます。デフォルト設定を以下に示します。これらの設定を必要に応じて上書きできます。作成者に提供するツールバー機能のみをカスタマイズします。すべてのツールバー設定を指定する必要はありません。
+AEMでは、リッチテキストエディターのインターフェイスを編集モードごとに異なる設定にできます。 デフォルト設定を以下に示します。これらの設定を必要に応じて上書きできます。作成者に提供するツールバー機能のみをカスタマイズします。すべてのツールバー設定を指定する必要はありません。
 
 `dialogFullScreen` 用のツールバーを設定するには、次のサンプル設定を使用します。
 

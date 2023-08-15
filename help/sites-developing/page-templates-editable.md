@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
-workflow-type: ht
-source-wordcount: '3224'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '3221'
+ht-degree: 98%
 
 ---
 
@@ -73,6 +73,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    * テンプレート構造で定義されたコンポーネントは、結果ページに移動することも、結果ページから削除することもできません。
 
       * `We.Retail` サンプルコンテンツ外のカスタムフォルダーにテンプレートを作成する場合は、基盤コンポーネントを選択するか、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を使用できます。
+
    * ページ作成者がコンポーネントを追加または削除するには、テンプレートに段落システムを追加する必要があります。
    * コンポーネントのロックを解除（再度ロックできます）して、初期コンテンツを定義できます。
 
@@ -85,6 +86,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    * コンテンツポリシーでは、コンポーネントのデザインプロパティを定義します。
 
       * 例えば、使用できるコンポーネントや最小／最大サイズを定義できます。
+
    * これらのポリシーは、テンプレート（およびテンプレートを使用して作成されたページ）に適用できます。
 
    テンプレート作成者がポリシーを定義する方法について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
@@ -374,7 +376,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
    * テンプレートタイプがコピーされて、テンプレートが作成されます。
    * コピー後のテンプレートとテンプレートタイプとの関連付けは、情報を取得するだけの静的参照のみとなります。
 
-* テンプレートタイプでは、以下の項目を定義できます。
+* テンプレートタイプを使用して、次の項目を定義できます。
 
    * ページコンポーネントのリソースタイプ。
    * ルートノードのポリシー。テンプレートエディターで許可されるコンポーネントを定義します。
@@ -541,13 +543,13 @@ GitHub のコード
 コンテンツ（またはデザイン）ポリシーは、コンポーネントの可用性や最小／最大寸法など、コンポーネントのデザインプロパティを定義します。これらのポリシーは、テンプレート（およびテンプレートを使用して作成されたページ）に適用できます。コンテンツポリシーは、テンプレートエディターで作成および選択できます。
 
 * `root` ノード上の `cq:policy` プロパティ
-   `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
+  `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
 ページの段落システムのコンテンツポリシーに対する相対参照を提供します。
 
 * `root` の下のコンポーネントを明示的に示すノードの `cq:policy` プロパティは、個々のコンポーネントのポリシーへのリンクを提供します。
 
 * 実際のポリシー定義は、次の場所に保存されます。
-   `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
+  `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
 
 >[!NOTE]
 >
@@ -565,7 +567,7 @@ GitHub のコード
 
 ### ページポリシー {#page-policies}
 
-ページポリシーを使用して、テンプレートまたは作成されるページで、ページ（メインの parsys）の[コンテンツポリシー](#content-policies)を定義できます。
+ページポリシーを使用すると、 [コンテンツポリシー](#content-policies) （メイン parsys）ページの場合は、テンプレートまたは結果ページのいずれかで使用します。
 
 ### 使用するテンプレートの有効化と許可 {#enabling-and-allowing-a-template-for-use}
 
@@ -578,7 +580,7 @@ GitHub のコード
    * `jcr:content` ノードの status プロパティを設定する。
 
       * 例：
-         `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
+        `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * 次のプロパティを定義します。
 
@@ -590,9 +592,9 @@ GitHub のコード
 
    * [サブブランチの該当するページまたはルートページの&#x200B;**ページプロパティ**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;で、許可されたテンプレートのパスを定義します。
    * プロパティを設定します。
-      `cq:allowedTemplates` 
-を 
-必要なブランチの `jcr:content` ノードに設定します。
+     `cq:allowedTemplates` 
+を必要なブランチの `jcr:content` ノードに設定します。
+
    例えば、次の値を使用します。
 
    `/conf/<your-folder>/settings/wcm/templates/.*`

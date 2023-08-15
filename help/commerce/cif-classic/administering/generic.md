@@ -8,10 +8,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2979'
-ht-degree: 99%
+source-wordcount: '2977'
+ht-degree: 98%
 
 ---
 
@@ -254,7 +254,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
    ![製品データのスクリーンショットの追加](/help/sites-administering/assets/chlimage_1-91.png)
 
 1. 「**追加**」をタップまたはクリックします。新しいアセットプレースホルダーが表示されます。
-1. 「**変更**」をタップまたはクリックすると、アセットを選択できるダイアログが表示されます。
+1. 「**変更**」をタップまたはクリックすると、アセットを選択するためのダイアログが開きます。
 1. 追加するアセットを選択します。
 
    >[!NOTE]
@@ -344,7 +344,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 <!-- Search&Promote is end of life as of September 1, 2022 ### Product Feed {#product-feed} -->
 
-<!-- Search&Promote is end of life as of September 1, 2022 The Search&Promote integration allows you to: -->
+<!-- Search&Promote is end of life as of September 1, 2022 The Search&Promote integration lets you: -->
 
 <!-- Search&Promote is end of life as of September 1, 2022 * use the eCommerce API, independently of the underlying repository structure and commerce platform. -->
 <!-- Search&Promote is end of life as of September 1, 2022 * leverage the Index Connector feature of Search&Promote to provide a product feed in XML format. -->
@@ -376,7 +376,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 ### 買い物かごに追加リンクを含む画像 {#image-with-add-to-cart-links}
 
-買い物かごに追加リンクを含む画像コンポーネントを使用すると、画像上の商品にリンクされているホットスポットを作成することによって、商品を買い物かごに素早く追加できます。
+買い物かごに追加リンクを含む画像コンポーネントを使用すると、画像上の商品にリンクされたホットスポットを作成することで、商品を買い物かごにすばやく追加できます。
 
 ホットスポットをクリックすると、商品のサイズと数量を選択できるダイアログが表示されます。
 

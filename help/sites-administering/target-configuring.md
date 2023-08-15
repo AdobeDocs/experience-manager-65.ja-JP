@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2200'
-ht-degree: 99%
+source-wordcount: '2199'
+ht-degree: 98%
 
 ---
 
@@ -260,7 +260,7 @@ AEM で Target フレームワークを作成した後、web ページをフレ�
 
    >[!NOTE]
    >
-   ページにアタッチしたフレームワークがまだアクティベートされていなかった場合は、ウィザードが開き、フレームワークを公開することもできます。
+   ページに関連付けたフレームワークがまだアクティベートされていない場合は、ウィザードが開き、それを公開することもできます。
 
 ## Target の接続に関する問題のトラブルシューティング {#troubleshooting-target-connection-problems}
 

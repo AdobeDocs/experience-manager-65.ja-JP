@@ -8,9 +8,9 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '677'
 ht-degree: 63%
 
 ---
@@ -79,7 +79,7 @@ AEM のアップグレードには複数の段階があり、場合によって�
 
 以下の図は、アップグレード方法を強調する全体的な推奨フローを示しています。Adobeで導入された新機能への参照に注意してください。 アップグレードは、まずパターン検出から始まります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。ここで生成されたレポートのパターンに基づき、AEM 6.4 との互換性を確保するためにどのパスを使用するかを決定できます。
 
-6.5 では、すべての新機能の後方互換性を維持することが大きく重点的に行われましたが、後方互換性の問題がまだ見られる場合、互換性モードを使用すると、カスタムコードを 6.5 に準拠させるために開発を一時的に遅らせることができます。この方法により、アップグレード直後の開発作業を回避できます ( [AEM 6.5 の後方互換性](/help/sites-deploying/backward-compatibility.md)) をクリックします。
+6.5 では、すべての新機能の後方互換性を維持することが大きく重点的に行われましたが、後方互換性の問題がまだ見られる場合、互換モードを使用すると、カスタムコードを 6.5 に準拠させるために開発を一時的に遅らせることができます。この方法により、アップグレード直後の開発作業を回避できます ( [AEM 6.5 の後方互換性](/help/sites-deploying/backward-compatibility.md)) をクリックします。
 
 6.5 の開発サイクルでは、持続可能なアップグレード（[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)を参照）の下で導入された機能により、今後のアップグレードをより効率的かつシームレスにするためのベストプラクティスに従いやすくなります。
 

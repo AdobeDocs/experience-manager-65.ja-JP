@@ -2,10 +2,10 @@
 title: コンテンツフラグメントでの参照の使用について
 description: コンテンツ、他のフラグメントおよび他のアセット（メディア）への参照をコンテンツフラグメントで使用する方法について説明します。ヘッドレス CMS オーサリング用のネストされたフラグメントの必要性と仕組みを紹介します。
 exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 100%
+source-wordcount: '726'
+ht-degree: 89%
 
 ---
 
@@ -39,17 +39,17 @@ ht-degree: 100%
 
 ## コンテンツ参照 {#content-references}
 
-コンテンツ参照の役割は、他のコンテンツを参照できるようにすることです。この参照によって、ブラウザーが開き、コンテンツ項目を選択できます。
+コンテンツ参照はそのような役割を果たします。コンテンツ参照を使用すると、他のコンテンツを参照できます。 これにより、コンテンツ項目を選択できるブラウザーが開きます。
 
 ## アセット／メディア参照 {#assets-media-references}
 
-アセット（画像やメディアなど）は、「**アセットを挿入**」オプションを使用して、テキストブロック内で参照することができます。この参照によって、ブラウザーが開き、アセットを選択できます。
+アセット（画像やメディアなど）は、「**アセットを挿入**」オプションを使用して、テキストブロック内で参照することができます。これにより、アセットを選択できるブラウザーが開きます。
 
 ![コンテンツフラグメント - アセットを挿入](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
 ## フラグメント参照 {#fragment-references}
 
-フラグメント参照の役割も同様です。つまり、別のフラグメントを参照できるようにします。これが重要な理由については、もう少し説明が必要です。
+再びフラグメント参照でも同様の操作が可能です。この場合、別のフラグメントを参照できます。 これが重要な理由については、もう少し説明が必要です。
 
 例えば、次のコンテンツフラグメントモデルが定義されているとします。
 
@@ -75,7 +75,7 @@ ht-degree: 100%
 
 ### ネストされたフラグメントのオーサリング方法 {#author-nested-fragment}
 
-フラグメント参照のオーサリングはどても簡単です（ただし、通常、フィールドには&#x200B;**フラグメント参照**&#x200B;というラベルは付きません）。参照を直接入力するか、フォルダーアイコンを選択してブラウザーを開き、必要なフラグメントを探して選択します（こちらの方が一般的です）。
+フラグメント参照のオーサリングはどても簡単です（ただし、通常、フィールドには&#x200B;**フラグメント参照**&#x200B;というラベルは付きません）。参照を直接入力するか、（可能性が高い）フォルダーアイコンを選択してブラウザーを開き、必要なフラグメントに移動して選択できます。
 
 ![コンテンツフラグメント - 参照](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
@@ -113,6 +113,7 @@ ht-degree: 100%
       * [アセットフォルダーへの設定の適用](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [コンテンツフラグメントの作成](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [バリエーション - コンテンツフラグメントのオーサリング](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
@@ -120,7 +121,6 @@ ht-degree: 100%
       * [コンテンツフラグメントモデル - データタイプ](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
       * [コンテンツフラグメントモデル - プロパティ](/help/assets/content-fragments/content-fragments-models.md#properties)
-
 
 * はじめる前に
    * [アセットフォルダーのヘッドレス作成のクイックスタートガイド](/help/sites-developing/headless/getting-started/create-assets-folder.md)

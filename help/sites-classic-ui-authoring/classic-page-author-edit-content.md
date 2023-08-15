@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
-workflow-type: ht
-source-wordcount: '1836'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1832'
+ht-degree: 95%
 
 ---
 
@@ -83,7 +83,7 @@ ht-degree: 100%
 
    表示されるオプションは、実稼働環境によって異なります。コンポーネントについて詳しくは、[デフォルトコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-default-components.md)を参照してください。
 
-1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定しコンテンツを追加するためのウィンドウが開きます。
+1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定してコンテンツを追加するためのウィンドウが開きます。
 
 ### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
 
@@ -213,7 +213,7 @@ ht-degree: 100%
 
   ![鉛筆記号で示される編集アイコン。](do-not-localize/chlimage_1-6.png)
 
-* 拡大鏡アイコンを使用すると、プレビューモードを選択できます。プレビューモードでは、ページがパブリッシュ環境とまったく同じ形式で表示されます（ページの更新が必要になる場合があります）。
+* 虫眼鏡アイコンを使用すると、プレビューモードを選択できます。このモードでは、パブリッシュ環境と同じようにページを表示できます（ページの更新が必要になる場合もあります）。
 
   ![虫眼鏡記号で示されるプレビューモードアイコン。](do-not-localize/chlimage_1-7.png)
 
@@ -223,11 +223,11 @@ ht-degree: 100%
 
 ## 検索と置換 {#find-replace}
 
-同じフレーズを大量に編集する場合、「**[検索と置換](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)**」メニューオプションで、web サイトの特定セクション内で特定文字列の複数の出現箇所を検索して置換できます。
+同じフレーズを大規模に編集する場合、 **[検索と置換](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)** メニューオプションを使用すると、web サイトの特定のセクション内で、特定の文字列を持つ複数のインスタンスを検索および置換できます。
 
 ## ページのロック {#locking-a-page}
 
-AEM では、他のユーザーによるコンテンツの変更を防ぐためにページをロックすることができます。ページのロックは、1 つの特定ページで大量の編集作業を行う場合や、短期間ページを凍結する必要がある場合に便利です。
+AEMでは、他のユーザーがコンテンツを変更できないように、ページをロックできます。 ページのロックは、1 つの特定ページで大量の編集作業を行う場合や、短期間ページを凍結する必要がある場合に便利です。
 
 >[!CAUTION]
 >

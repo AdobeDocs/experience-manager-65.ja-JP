@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 98%
+source-wordcount: '1662'
+ht-degree: 97%
 
 ---
 
@@ -126,7 +126,7 @@ ht-degree: 98%
 
    ![pp-02-1](assets/pp-02-1.png)
 
-1. **公開を管理**&#x200B;ウィザードが起動します。最初のステップでは、**オプション**&#x200B;を使用すると、次のことが可能です。
+1. **公開を管理**&#x200B;ウィザードが起動します。最初のステップは **オプション**&#x200B;を使用すると、次のことができます。
 
    * 選択したページの公開または非公開を選択する。
    * 今すぐ実行するか、後日実行するかを選択します。

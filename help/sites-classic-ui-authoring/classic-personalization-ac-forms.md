@@ -8,10 +8,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1227'
-ht-degree: 99%
+source-wordcount: '1224'
+ht-degree: 95%
 
 ---
 
@@ -71,7 +71,7 @@ Adobe Campaign 固有のフォームを作成する前に、AEM アプリケー�
 
 ## フォームコンテンツの編集 {#editing-form-content}
 
-Adobe Campaign 専用のフォームには、固有のコンポーネントがあります。これらのコンポーネントには、フォームの各フィールドを Adobe Campaign データベースのフィールドにリンクできるオプションがあります。
+Adobe Campaign 専用のフォームには、固有のコンポーネントがあります。これらのコンポーネントには、フォームの各フィールドをAdobe Campaignデータベースのフィールドにリンクするオプションがあります。
 
 >[!NOTE]
 >
@@ -87,9 +87,9 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
    >
    >必要に応じて、南京錠アイコンをクリックして設定をロック解除し、Adobe Campaign サービスを追加します。
 
-1. フォームの先頭にある「**編集**」ボタンを使用して、フォームの一般的なパラメーターにアクセスします。「**フォーム**」タブを使用すると、ありがとうページを選択して、フォームの検証後にユーザーをリダイレクトすることができます。
+1. フォームの先頭にある「**編集**」ボタンを使用して、フォームの一般的なパラメーターにアクセスします。The **フォーム** 「 」タブを使用すると、フォームの検証後にユーザーがリダイレクトされる「ありがとうございます」ページを選択できます。
 
-   「**詳細**」フォームを使用すると、フォームのタイプを選択できます。「**投稿オプション**」フィールドで、次の 3 種類の Adobe Campaign フォームから選択できます。
+   The **詳細** フォームを使用すると、フォームのタイプを選択できます。 「**投稿オプション**」フィールドで、次の 3 種類の Adobe Campaign フォームから選択できます。
 
    * **Adobe Campaign：プロファイルを保存**：Adobe Campaign（デフォルト値）で受信者を作成または更新できます。
    * **Adobe Campaign：サービスを購入**：Adobe Campaign で受信者の購入を管理できます。

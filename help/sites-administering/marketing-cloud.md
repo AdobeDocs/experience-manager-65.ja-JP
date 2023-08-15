@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '846'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '845'
+ht-degree: 98%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 100%
 
 Adobe Experience Manager（AEM）を使用すると、Adobe Experience Cloud の次の製品とシームレスに統合できます。
 
-* Adobe Analytics：マーケティング担当者は、オンライン戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの情報を入手できます。
-* Adobe Target：顧客へのオンラインコンテンツの関連性を継続的に高め、より多くのコンバージョンを生み出すための機能をマーケティング担当者に提供します。
+* Adobe Analytics：マーケターは、オンライン戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの情報を入手できます。
+* Adobe Target：顧客へのオンラインコンテンツの関連性を継続的に高め、より多くのコンバージョンを生み出すための機能をマーケターに提供します。
 * Adobe Dynamic Media Classic は、メディア管理の自動化、web パブリッシングの効率化、および web エクスペリエンスの強化をホストされた環境内で行います。
-* Adobe Dynamic Tag Management：アドビやサードパーティのタグをいくつでもすばやく簡単に管理できる直感的なツールをマーケティング担当者に提供します。
+* Adobe Dynamic Tag Management：アドビやサードパーティのタグをいくつでもすばやく簡単に管理できる直感的なツールをマーケターに提供します。
 <!-- Search&Promote is end of life as of September 1, 2022 * Adobe Search&Promote gives marketers the ability to control and optimize the search results on their sites. -->
 * Adobe Campaign：メール配信コンテンツを Adobe Experience Manager で直接管理できます。
 
@@ -30,11 +30,11 @@ Adobe Experience Manager（AEM）を使用すると、Adobe Experience Cloud の
 
 ## Adobe Analytics との統合 {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html?lang=ja) は、様々なマーケティングチャネルにまたがるオンライン戦略全体からの統合データを 1 箇所で測定、分析、最適化できる場をディジタルマーケターに提供する、業界最先端のソリューションです。マーケティング担当者は、デジタル戦略やマーケティング施策に関して、すぐに利用可能なリアルタイムの web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は web サイト内で最も収益性の高いパスを迅速に特定し、トラフィックをセグメント化して高価値な web 訪問者を見つけ出し、訪問者がサイトから離れた場所を確認し、オンラインマーケティングキャンペーンの重要な成功指標を明らかにすることができます。
+[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html?lang=ja) は、様々なマーケティングチャネルにまたがるオンライン戦略全体からの統合データを 1 箇所で測定、分析、最適化できる場をディジタルマーケターに提供する、業界最先端のソリューションです。マーケターは、デジタル戦略やマーケティング施策に関して、すぐに利用可能なリアルタイムの web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は web サイト内で最も収益性の高いパスを迅速に特定し、トラフィックをセグメント化して高価値な web 訪問者を見つけ出し、訪問者がサイトから離れた場所を確認し、オンラインマーケティングキャンペーンの重要な成功指標を明らかにすることができます。
 
 Adobe Analytics を使用すると、サイトのデータを分析できます。
 
-Adobe Analytics との統合によって、次の操作ができるようになります。
+Adobe Analyticsとの統合により、次の操作が可能になります。
 
 * Analytics のユーザートラッキングを有効にする。
 * 実行モード（オーサー、パブリッシュなど）をそれぞれ異なるレポートスイートにマッピングする。
@@ -49,7 +49,7 @@ AEMと Analytics の統合について詳しくは、[Adobe Analytics との統�
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-[Adobe Target](https://business.adobe.com/products/target/adobe-target.html?lang=ja) を使用すると、マーケティング担当者は、オンラインテストをデザインして実行し、行動に基づいたオーディエンスセグメントをその場で作成し、コンテンツとオンラインのエクスペリエンスを自動的にターゲット設定できるようになります。
+[Adobe Target](https://business.adobe.com/products/target/adobe-target.html?lang=ja) を使用すると、マーケターは、オンラインテストをデザインして実行し、行動に基づいたオーディエンスセグメントをその場で作成し、コンテンツとオンラインのエクスペリエンスを自動的にターゲット設定できるようになります。
 
 現在、オンライン消費者のニーズは常に変化しており、消費者は利用できる様々なサイトやコンテンツソースの中から、関連性が高く、パーソナライズされたコンテンツを選択したいと考えています。オンラインオーディエンスを引き付けるには、オンラインマーケターが、オーディエンスにとって関連性が高く魅力的なオファーやコンテンツをすばやく特定することが重要です。この知識に基づいて、マーケターはサイトを継続的に発展させ、様々なオーディエンスに適切なコンテンツをターゲット設定する必要があります。
 
@@ -79,9 +79,9 @@ Adobe Experience Manager と Dynamic Media Classic の統合方法について�
 
 ## Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html?lang=ja) は直感的なツールであり、このツールを使用することでマーケティング担当者は、アドビやサードパーティのタグを数に制限なく、すばやく簡単に管理できます。IT リソースへの依存度を減らしながら、オンライン上のほぼすべてのアセットを最適化するためのコントロールと柔軟性を向上することができます。
+[Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html?lang=ja) は直感的なツールであり、このツールを使用することでマーケターは、アドビやサードパーティのタグを数に制限なく、すばやく簡単に管理できます。IT リソースへの依存度を減らしながら、オンライン上のほぼすべてのアセットを最適化するためのコントロールと柔軟性を向上することができます。
 
-[Adobe Dynamic Tag Management](/help/sites-administering/dtm.md) と AEM を統合すると、Dynamic Tag Management の web プロパティを使用して AEM サイトを追跡できます。
+[Adobe Dynamic Tag Management](/help/sites-administering/dtm.md) と AEM を統合すると、Dynamic Tag Management の web プロパティを使用して AEM Sites を追跡できます。
 
 ## Adobe Audience Manager との統合 {#integrating-with-adobe-audience-manager}
 

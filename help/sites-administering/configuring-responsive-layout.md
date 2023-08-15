@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: ht
-source-wordcount: '1288'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '1285'
+ht-degree: 97%
 
 ---
 
@@ -30,11 +30,11 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 * [**レイアウトコンテナ**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)&#x200B;コンポーネント
 
-   このコンポーネントは、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。ページのデフォルトの parsys として使用したり、コンポーネントブラウザーで作成者が使用できるようにしたりできます。
+  このコンポーネントが提供するグリッド段落システムを使用すると、レスポンシブグリッド内にコンポーネントを追加して配置できるようになります。ページのデフォルトの parsys として使用したり、コンポーネントブラウザーで作成者が使用できるようにしたりできます。
 
    * デフォルトの&#x200B;**レイアウトコンテナ**&#x200B;コンポーネントは以下の場所で定義します。
 
-      /libs/wcm/foundation/components/responsivegrid
+     /libs/wcm/foundation/components/responsivegrid
 
    * レイアウトコンテナは次のように定義できます。
 
@@ -42,14 +42,13 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
       * ページのデフォルトの parsys として。
       * 両方として。
 
-         レイアウトコンテナをページの標準とし、この中でユーザーがレイアウトコンテナをさらに追加できるようにすることができます。例えば、列を制御する場合などです。
+        レイアウトコンテナをページの標準とし、この中でユーザーがレイアウトコンテナをさらに追加できるようにすることができます。例えば、列を制御する場合などです。
 
 * **[レイアウトモード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-レイアウトコンテナをページに配置したら、 
-**レイアウト**&#x200B;モードを使用してレスポンシブグリッド内にコンテンツを配置することができます。
+レイアウトコンテナをページに配置したら、**レイアウト**&#x200B;モードを使用してレスポンシブグリッド内にコンテンツを配置することができます。
 
 * [**エミュレーター**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
-これにより、コンポーネントのサイズをインタラクティブに変更することで、デバイスやウィンドウのサイズに従ってレイアウトを並べ替えるレスポンシブ web サイトを作成および編集できます。その後、ユーザーはエミュレーターを使用してコンテンツがどのようにレンダリングされるかを確認できます。
+これにより、コンポーネントのサイズをインタラクティブに変更することで、デバイスやウィンドウのサイズに従ってレイアウトを並べ替えるレスポンシブ Web サイトを作成および編集できます。 その後、ユーザーはエミュレーターを使用してコンテンツがどのようにレンダリングされるかを確認できます。
 
 >[!CAUTION]
 >
@@ -68,7 +67,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 ## レスポンシブエミュレーターの設定 {#configuring-the-responsive-emulator}
 
-このタスクをおこなうと、自分のサイトにレスポンシブ&#x200B;**エミュレーター**&#x200B;を表示できます。
+このタスクを実行すると、レスポンシブを表示できます **エミュレーター** 」を選択します。
 
 ### エミュレーション用のページコンポーネントの登録 {#register-your-page-components-for-emulation}
 
@@ -188,15 +187,15 @@ CRXDE Lite または XML を使用して定義できます。
 
 * **HTL：**
 
-   ```xml
-   <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
-   ```
+  ```xml
+  <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
+  ```
 
 * **JSP：**
 
-   ```
-   <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
-   ```
+  ```
+  <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
+  ```
 
 ### レスポンシブ CSS を含める {#include-the-responsive-css}
 
@@ -282,11 +281,11 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
 
 * **オーサー環境**
 
-   [デザインモード](/help/sites-authoring/default-components-designmode.md)を使用して、ページの&#x200B;**レイヤーコンテナ**&#x200B;コンポーネントをアクティベートします。
+  [デザインモード](/help/sites-authoring/default-components-designmode.md)を使用して、ページの&#x200B;**レイヤーコンテナ**&#x200B;コンポーネントをアクティベートします。
 
 * **コンポーネント定義**
 
-   コンポーネントを定義するときに、`allowedComponent` または静的インクルードを使用します。
+  コンポーネントを定義するときに、`allowedComponent` または静的インクルードを使用します。
 
 ### レイアウトコンテナのグリッドの設定 {#configure-the-grid-of-the-layout-container}
 
@@ -309,6 +308,7 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
    * 使用可能な列の数：
 
       * `columns="{String}8"`
+
    * 現在のコンポーネントに追加できるコンポーネント：
 
       * `components="[/libs/wcm/foundation/components/responsivegrid, ...`

@@ -10,10 +10,10 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: bb27c7dfedd5a16728674f7584b0c462a92646e6
-workflow-type: ht
-source-wordcount: '5934'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '5933'
+ht-degree: 99%
 
 ---
 
@@ -368,7 +368,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`。
    >
    >また、ログファイルが
    >
@@ -682,7 +682,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
 
 このファイルには、AEMに対して行われたすべてのリクエストに関する基本情報が記載されます。このことから、貴重な結論を引き出すことができます。
 
-`request.log` は、リクエストにかかる時間を確認するための組み込みの方法を提供します。開発目的では、`request.log` を `tail -f` して、応答時間の遅延を監視することが有用です。より大きな `request.log` を分析するには、[応答時間の並べ替えおよびフィルタリングが可能な `rlog.jar` の使用を推奨します](#using-rlog-jar-to-find-requests-with-long-duration-times)。
+`request.log` は、リクエストにかかる時間を確認するための組み込みの方法を提供します。開発目的では、`request.log` を `tail -f` して、応答時間の遅延を監視することが有用です。より大きなを分析するには `request.log`を使用する場合、Adobeは、 [～の使用 `rlog.jar` 応答時間に応じて並べ替えたり、フィルタリングしたりできます。](#using-rlog-jar-to-find-requests-with-long-duration-times).
 
 アドビでは、`request.log` から「遅い」ページを分離し、個別にチューニングしてパフォーマンスを向上させることをお勧めします。コンポーネントごとにパフォーマンス指標を含めるか、` [yourkit](https://www.yourkit.com/)` などのパフォーマンスプロファイリングツールを使用します。
 
@@ -1096,12 +1096,12 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 >[!NOTE]
 >
->詳しくは、以下の記事も参照してください。
+詳しくは、以下の記事も参照してください。
 >
->* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
->* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
->* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
->* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
+* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
+* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
 ### 100％の CPU 使用率 {#cpu-at}
@@ -1194,6 +1194,6 @@ JConsole の場合は以下のとおりです。
 
 >[!NOTE]
 >
->Oracle の VM に関する情報は、次の場所でも確認できます。
+Oracle の VM に関する情報は、次の場所でも確認できます。
 >
->[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
+[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)

@@ -1,7 +1,7 @@
 ---
 title: エラーダイアログのカスタマイズ
 seo-title: Customizing error dialogs
-description: LiveCycle AEM Forms Workspace のエラーダイアログをカスタマイズして、異なるエラー説明を追加する方法。
+description: 異なるフォルト説明を追加するためにLiveCycleAEM Forms Workspace のエラーダイアログをカスタマイズする方法。
 seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 exl-id: 8d2b07f5-5c4e-4111-8f78-eb1b156221bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 100%
+source-wordcount: '151'
+ht-degree: 74%
 
 ---
 
 # エラーダイアログのカスタマイズ {#customizing-error-dialogs}
 
-AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行して次の手順に従い、エラーダイアログをカスタマイズします。
+AEM Forms workspace では、エラーダイアログをカスタマイズできます。 [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行して次の手順に従い、エラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
@@ -48,7 +48,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
    >[!NOTE]
    >
-   >対応するキーと値のペアをすべてのサポートされている言語に追加します。
+   >対応するキーと値のペアを、サポートされるすべての言語に追加します。
 
 ## CSS のカスタマイズ {#customizing-css}
 
@@ -228,7 +228,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 ## 例 {#examples}
 
-* **エラーダイアログをカスタマイズするには、次を変更します。**
+* **エラーダイアログをカスタマイズするには、次の値を変更します。**
 
 ```css
 .error-dialog{

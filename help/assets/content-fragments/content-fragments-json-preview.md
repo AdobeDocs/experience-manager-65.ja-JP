@@ -4,8 +4,8 @@ description: AEM ヘッドレスソリューションの実装時にコンテン
 feature: Content Fragments
 role: User
 exl-id: c58a3cfd-6348-4a2e-996a-5fdb96415adb
-source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
-workflow-type: ht
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 100%
 
@@ -24,5 +24,5 @@ AEM ヘッドレス実装の一環としてコンテンツフラグメントの�
 ![コンテンツフラグメントエディター - フラグメントのプレビュー](assets/cfm-preview-02.png)
 
 <!--
-**Copy URL** allows you to copy to clipboard the URL for either author or publish.
+**Copy URL** lets you copy to clipboard the URL for either author or publish.
 -->

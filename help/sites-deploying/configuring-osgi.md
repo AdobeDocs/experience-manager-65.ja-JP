@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: bf55fcb855cbdad72c669058662ca70fe57e6632
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 97%
+source-wordcount: '1971'
+ht-degree: 96%
 
 ---
 
@@ -56,9 +56,9 @@ OSGi は「*標準化されたプリミティブを提供し、小さく再利�
 使用するメソッドに関わらず、次のことが可能です。
 
 * リポジトリのコンテンツをコピーまたはレプリケートすることにより、同一の設定を再作成できます。
-* セキュリティや追加の更新のために、FileVault または Subversion に設定をチェックアウトできます。
+* セキュリティまたはその他の更新のために、FileVault または Subversion に設定をチェックアウトできます。
 * パッケージとして保存し、他のインスタンスを設定する際に使用できます。
-* スクリプトを使用して設定の詳細を反映させることにより、設定のロールアウトを実行できます。
+* スクリプトを使用して設定のロールアウトを実行し、設定の詳細を反映できます。
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Web コンソールで行った設定変更は、設定ファイル（`.config`�
 >[!NOTE]
 >
 >設定ファイルの形式は固有です。詳しくは、 Sling Apache のドキュメントを参照してください。
->* 詳細 [Apache Sling Provisioning Model と Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
+>* ～の詳細 [Apache Sling Provisioning Model と Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
 >* のチュートリアルと例 [Sling でのリソースとプロパティの取得](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
 >
 >そのため、実際の変更は web コンソールを使用して行い、設定ファイルが作成、維持されるようにすることをお勧めします。

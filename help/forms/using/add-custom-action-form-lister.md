@@ -1,8 +1,8 @@
 ---
 title: フォームリスター項目にカスタムアクションボタンを追加
 seo-title: Adding custom action on form lister items
-description: フォーム開発者は、フォームポータルページでフォームのリストに詳細アクションを追加できます。デフォルトでは、フォームリストはフォームにアクセス、入力および送信することができます。
-seo-description: Form developers can add more actions to the listing of forms on the forms portal page. By default, the form listing allows you to access the form, fill it, and submit it.
+description: フォーム開発者は、フォームポータルページ上のフォームのリストに、さらにアクションを追加できます。 デフォルトでは、フォームリストを使用すると、フォームにアクセスして入力し、送信できます。
+seo-description: Form developers can add more actions to the listing of forms on the forms portal page. By default, the form listing lets you access the form, fill it, and submit it.
 uuid: 5703ba27-7fb8-482e-b933-a060574165dc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,22 +10,22 @@ topic-tags: customization
 discoiquuid: c34dd4c2-5fff-4355-b86d-cc8a956dd8af
 docset: aem65
 exl-id: 7c2a91c8-9b68-4491-88e2-f7ea68f5a79f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 100%
+source-wordcount: '264'
+ht-degree: 32%
 
 ---
 
 # フォームリスター項目にカスタムアクションボタンを追加{#adding-custom-action-on-form-lister-items}
 
-AEM Forms では、使用可能なフォームをリストしたポータルページを作成できます。デフォルトの設定では、ポータルページで検索したりフォームをリストしたりできます。フォームを開いて、情報を入力および送信することができます。レンダリングアクションのみポータルページにリストされているフォームにデフォルトで提供されています。ポータルページの利用可能なアクションの詳細については、[フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)を参照してください。
+AEM Formsでは、使用可能なフォームをリストするポータルページを作成できます。 デフォルトでは、ポータルページ上のフォームを検索してリストすることができます。 フォームを開いて、情報を入力し、送信することができます。 ポータルページに一覧表示されるフォームには、レンダリングアクションのみが標準で提供されています。 ポータルページの利用可能なアクションの詳細については、[フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)を参照してください。
 
-ポータルページには、その他のオプションも追加することができます。フォームポータルのテンプレートをカスタマイズすることで、これらのオプションをカスタマイズできます。
+ポータルページに他のオプションを追加できます。 フォームポータルのテンプレートをカスタマイズすることで、これらのオプションやアクションをカスタマイズできます。
 
-この記事は、フォームポータルページから直接フォームのリンクを送信するボタンの作成方法を示します。このカスタマイズは、Search &amp; Listerコンポーネントのテンプレートのアップデートを必要とします。
+この記事では、フォームポータルページから直接フォームのリンクを送信するボタンを作成する方法を説明します。 このカスタマイズを行うには、Search &amp; Lister コンポーネントのテンプレートを更新する必要があります。
 
-テンプレートにアクションを追加するのに必要なコードは以下の通りです。コードスニペットの `onclick` 属性にはメールでフォームのリンクを送信するスクリプトがあります。
+テンプレートにアクションを追加するために必要なコードは、以下で使用できます。 コードスニペットの `onclick` 属性にはメールでフォームのリンクを送信するスクリプトがあります。
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -46,7 +46,7 @@ AEM Forms では、使用可能なフォームをリストしたポータルペ�
 </div>
 ```
 
-カスタムテンプレートで同様のアクションを追加できます。JavaScript関数を定義するには、その機能をページレベルで追加して、必要なHTML要素にリンクします。上記の例では、`onclick` 式はリンク関数です。
+カスタムテンプレートに同様のアクションを追加できます。 JavaScript 関数を定義するには、ページレベルのスクリプトに関数を追加し、必要なHTML要素にリンクします。 上記の例では、`onclick` 式はリンク関数です。
 
 テンプレートに編集を行った後、サンプルのポータルページには、以下のようにフォームのリンクをメールで送信するボタンが含まれています。
 

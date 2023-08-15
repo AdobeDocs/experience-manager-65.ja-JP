@@ -1,7 +1,7 @@
 ---
 title: コンテンツフラグメント用コンポーネント
 seo-title: Components for Content Fragments
-description: AEM のコンテンツフラグメントは、ページから独立したアセットとして作成および管理されます
+description: AEMコンテンツフラグメントは、ページに依存しないアセットとして作成および管理されます。
 seo-description: AEM content fragments are created and managed as page-independent assets
 uuid: 81a9e0fe-ed45-4880-b36c-4f49e2598389
 contentOwner: AEM Docs
@@ -12,10 +12,10 @@ discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
-workflow-type: ht
-source-wordcount: '962'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '960'
+ht-degree: 57%
 
 ---
 
@@ -33,27 +33,27 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->[コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)が推奨されます。詳しくは、[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。
+>The [コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) が推奨されました。 詳しくは、 [コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja) を参照してください。
 >
->この節では、コンテンツフラグメント用に提供されるオリジナル コンテンツについて説明します（**一般**&#x200B;グループの&#x200B;**コンテンツフラグメント**）。
+>この節では、コンテンツフラグメントで使用するために配信される元のコンポーネント (**コンテンツフラグメント** （内） **一般** グループ ) です。
 
 >[!NOTE]
 >
 >詳しくは、[レンダリングコンポーネントのコンテンツフラグメントの設定](/help/sites-developing/content-fragments-config-components-rendering.md)も参照してください。
 
-Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理](/help/assets/content-fragments/content-fragments.md)されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[作成したコンテンツフラグメント（とそのバリエーション）は、コンテンツページのオーサリング時に使用できます](/help/sites-authoring/content-fragments.md)。また、既存のコンテンツフラグメントアセットを、画像コンポーネントなどの他のアセットベースのコンポーネントと同様に、[アセットブラウザーからページにドラッグ](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)して使用することもできます。既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。ページ上に表示する[要素、バリエーションおよびフラグメント段落の範囲](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)は、コンポーネントダイアログで定義できます。
+Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理](/help/assets/content-fragments/content-fragments.md)されます。チャネルに特化しないコンテンツを、チャネル固有のバリエーションと共に作成できます。 [作成したコンテンツフラグメント（とそのバリエーション）は、コンテンツページのオーサリング時に使用できます](/help/sites-authoring/content-fragments.md)。また、既存のコンテンツフラグメントアセットを、画像コンポーネントなどの他のアセットベースのコンポーネントと同様に、[アセットブラウザーからページにドラッグ](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)して使用することもできます。既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。ページ上に表示する[要素、バリエーションおよびフラグメント段落の範囲](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)は、コンポーネントダイアログで定義できます。
 
 >[!NOTE]
 >
->このコンテンツフラグメントコンポーネントは、廃止された記事コンポーネントの強化版として AEM 6.2 で導入されました。
+>このコンテンツフラグメントコンポーネントは、廃止された記事コンポーネントの拡張バージョンとしてAEM 6.2 で導入されました。
 
 >[!NOTE]
 >
->コンテンツフラグメントは、クラシック UI ではサポートされません。
+>コンテンツフラグメントは、クラシック UI ではサポートされていません。
 
 ### 定義 {#definition}
 
-**コンテンツフラグメント**&#x200B;コンポーネントは、コンテンツフラグメントアセット（効果的に拡張されたテキストアセット）への参照を保持するために使用されます。コンテンツフラグメントのリソースタイプは次のとおりです。
+The **コンテンツフラグメント** コンポーネントは、コンテンツフラグメントアセット（効果的に拡張されたテキストアセット）への参照を保持するために使用されます。 コンテンツフラグメントのリソースタイプは次のとおりです。
 
 `dam/cfm/components/contentfragment/contentfragment`
 
@@ -65,22 +65,22 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 `cq.authoring.editor.plugin.cfm`
 
-このライブラリは、コンテンツフラグメント専用の機能をエディターに追加します。例えば、ページ上のコンテンツフラグメントの追加および設定機能のサポート、アセットブラウザーでのコンテンツフラグメントアセットの検索機能およびサイドパネルでの関連コンテンツの検索機能を使用できます。
+このライブラリは、コンテンツフラグメント専用の機能をエディターに追加します。 例えば、ページ上でコンテンツフラグメントを追加および設定する機能、アセットブラウザーでコンテンツフラグメントアセットを検索する機能、およびサイドパネルで関連コンテンツを検索する機能をサポートできます。
 
 ### 中間コンテンツ {#in-between-content}
 
-**コンテンツフラグメント**&#x200B;コンポーネントを使用すると、表示される[要素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)のさまざまな段落の間に追加コンポーネントを挿入できます。基本的に、表示される要素は様々な段落で構成されます（各段落はキャリッジリターンによってマークされます）。これらの段落の間に、他のコンポーネントを使用してコンテンツを挿入できます。
+The **コンテンツフラグメント** t コンポーネントを使用すると、表示される異なる段落の間に追加のコンポーネントをドロップできます [要素](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment). 基本的に、表示される要素は異なる段落で構成されます（各段落はキャリッジリターンでマークされます）。 これらの各段落の間に、他のコンポーネントを使用してコンテンツを挿入できます。
 
 技術的には、表示される要素の各段落は個別の parsys 内に存在しており、段落間に追加される各コンポーネントは（内部的な処理では）その parsys に挿入されます。
 
-言い換えると、コンテンツフラグメントコンポーネントのインスタンスが 3 つの段落で構成されている場合、コンポーネントはリポジトリ内に 3 つの異なる parsys を持ちます。コンテンツフラグメントに追加される中間コンテンツはすべて、実際にはこれらの parsys の内部に配置されます。
+つまり、コンテンツフラグメントコンポーネントのインスタンスが 3 つの段落で構成されている場合、コンポーネントはリポジトリ内に 3 つの異なる parsys を持ちます。 コンテンツフラグメントに追加される中間コンテンツは、すべて、実際にはこれらの parsys 内に配置されます。
 
-リポジトリ内では、中間コンテンツは全体の段落構造内での自身の位置を基準として格納されます。実際の段落コンテンツに付加されるわけではありません。
+リポジトリ内では、中間コンテンツは、段落構造全体内の位置を基準に格納されます。つまり、実際の段落コンテンツには添付されません。
 
-この仕組みを理解するために、次のような状況を考えてみましょう。
+これを説明するために、次の点を考えてみましょう。
 
 * コンテンツフラグメントのインスタンスが 3 つの段落で構成されている
-* 2 番目の段落の後に、既にいくつかのコンテンツが挿入されている
+* また、2 番目の段落の後に既に一部のコンテンツが挿入されています。
 
    * この場合、コンテンツは 2 番目の parsys に格納されます。
 
@@ -96,22 +96,22 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 * 最初の段落だけを表示するようにコンテンツフラグメントコンポーネントが設定される：
 
-   * 中間コンテンツは表示されなくなります（新しい設定によって、2 番目の parsys はレンダリングされなくなります）。
+   * 中間コンテンツは表示されません（新しい設定により、2 番目の parsys はレンダリングされなくなります）。
 
 ### コンテンツフラグメントコンポーネントのカスタマイズ {#customizing-the-content-fragment-component}
 
-既製のコンテンツフラグメントコンポーネントを拡張のブループリントとして使用するときは、次のルールを守ってください。
+標準搭載のコンテンツフラグメントコンポーネントを拡張機能のブループリントとして使用するには、次の契約に従う必要があります。
 
-* HTL レンダリングスクリプトと関連 POJO を再利用して、中間コンテンツ機能の実装方法を確認します。
+* HTL レンダリングスクリプトとそれに関連する POJO を再利用して、中間コンテンツ機能の実装方法を確認します。
 * コンテンツフラグメントノード `cq:editConfig` を再利用します。
 
    *  `afterinsert`／`afteredit`／`afterdelete` リスナーを使用して JS イベントを呼び出します。これらのイベントを `cq.authoring.editor.plugin.cfm` クライアントライブラリで処理して、関連コンテンツをサイドパネルに表示します。
    * コンテンツフラグメントアセットのドラッグをサポートするように `cq:dropTargets` を設定します。
    * ページエディターでコンテンツフラグメントのオーサリングをサポートするように `cq:inplaceEditing` を設定します。フラグメントのインプレースエディターは `cq.authoring.editor.plugin.cfm` クライアントライブラリで定義され、クイックリンクによって現在の[要素／バリエーション](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)を[フラグメントエディター](/help/assets/content-fragments/content-fragments-variations.md)で開けるようにします。
 
-### レンダリング前のアセットの書き直し {#asset-rewriting-before-rendering}
+### レンダリング前のアセットの書き換え {#asset-rewriting-before-rendering}
 
-コンテンツフラグメント管理では、初期レンダリング処理を使用してページの最終的な HTML 出力を生成します。これは、コンテンツフラグメントコンポーネントによって内部で使用されますが、参照ページ上の参照フラグメントを更新するバックグラウンド処理でも使用されます。
+コンテンツフラグメント管理では、内部レンダリングプロセスを使用して、ページの最終HTML出力を生成します。 これは、コンテンツフラグメントコンポーネントによって内部的に使用されるだけでなく、参照ページ上の参照フラグメントを更新するバックグラウンドプロセスによっても使用されます。
 
 内部では、このレンダリングに Sling Rewriter を使用します。各設定は `/libs/dam/config/rewriter/cfm` にあり、必要に応じて調整できます。詳しくは、[Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) を参照してください。
 
@@ -124,7 +124,6 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >`serializerType` を次のように更新する&#x200B;**必要があります**。
 >
 >* `serializerType="html5-serializer"`
-
 
 既製の設定は、次の変換サービスを使用します。
 

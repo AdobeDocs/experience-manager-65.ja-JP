@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 AEMアプリを実装して、ユーザーがモバイルアプリやコンテンツとどのように関わっているかを追跡、レポート、理解し、起動回数、アプリ内時間、クラッシュ率などの主要なライフサイクル指標を測定します。
 
-この節では、AEM *開発者* 次のことが可能です。
+この節では、AEMの仕組みについて説明します *開発者* 次のことが可能です。
 
 * モバイルアプリケーションに Mobile Analytics を統合する
 * Bloodhound を使用した Analytics トラッキングのテスト
@@ -45,7 +45,7 @@ AEM Mobileでは、アプリ内のトラッキングデータを収集してレ�
 
 Analytics アカウントを設定したら、コンテンツ同期設定を作成して、コンテンツをモバイルアプリケーションに取り込みます。
 
-詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 設定は、ADBMobileConfig を/www ディレクトリに配置するようにコンテンツ同期に指示する必要があります。 例えば、Geometrixx Outdoorsアプリでは、コンテンツ同期設定は次の場所にあります。 */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発用の設定もあります。ただし、Geometrixx Outdoorsの場合の非開発設定と同じです。
+詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 設定は、ADBMobileConfig を/www ディレクトリに配置するようにコンテンツ同期に指示する必要があります。 例えば、Geometrixx Outdoorsアプリでは、コンテンツ同期設定は次の場所にあります。 */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発用の設定もありますが、Geometrixx Outdoorsの場合は非開発用の設定と同じです。
 
 Mobile Application AEM Apps ダッシュボードから ADBMobileConfig をダウンロードする方法について詳しくは、 Analytics - Mobile Services -AdobeMobile Services SDK 設定ファイルを参照してください。
 
@@ -98,11 +98,11 @@ Geometrixx Outdoorsアプリ config.xml は、 */content/phonegap/geometrixx-out
 
 これらの手順を実行すると、Adobe Analyticsが提供するすべてのライフサイクル指標のレポートがアプリで有効になります。 これには、起動、クラッシュ、インストールなどのデータが含まれます。 それがあなたが気にする唯一のデータなら、あなたは終わりです。 カスタムデータを収集する場合は、コードを実装する必要があります。
 
-### 完全なアプリ追跡用のコードの実装 {#instrument-your-code-for-full-app-tracking}
+### コードを完全なアプリ追跡用に実装する {#instrument-your-code-for-full-app-tracking}
 
 複数のトラッキング API が [AMS Phonegap プラグイン API です。](https://github.com/Adobe-Marketing-Cloud/mobile-services/blob/master/docs/ios/phonegap/phonegap-methods.md)
 
-これらを使用すると、アプリ内でユーザーが移動しているページや、最も使用されているコントロールの状態やアクションを追跡できます。 アプリを追跡用に実装する最も簡単な方法は、AMS プラグインが提供する Analytics API を使用することです。
+これらを使用すると、アプリ内でユーザーが移動しているページやコントロールの最も使用されている場所など、状態やアクションを追跡できます。 アプリを追跡用に実装する最も簡単な方法は、AMS プラグインが提供する Analytics API を使用することです。
 
 * ADB.trackState()
 * ADB.trackAction()
@@ -113,7 +113,7 @@ Geometrixx Outdoorsアプリ config.xml は、 */content/phonegap/geometrixx-out
 
 #### AMS に接続するためのプロパティ {#properties-for-connecting-to-ams}
 
-*com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImp* l は、AMS に接続するための次のプロパティを表示します。
+*com.adobe.cq.mobile.mobileservices.impl.service.MobileServicesHttpClientImp* l は、AMS に接続するための次のプロパティを公開します。
 
 | **ラベル** | **説明** | **デフォルト** |
 |---|---|---|

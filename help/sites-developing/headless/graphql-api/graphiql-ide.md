@@ -2,10 +2,10 @@
 title: AEM での GraphiQL IDE の使用
 description: Adobe Experience Manager で GraphiQL IDE を使用する方法について説明します。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 98%
+source-wordcount: '788'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 98%
 >[!NOTE]
 >GraphiQL IDE を使用する前に、[設定ブラウザー](/help/assets/content-fragments/content-fragments-configuration-browser.md)で[エンドポイントを設定](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)しておく必要があります。
 
-**GraphiQL** ツールを使用すると、次のことが可能になるので、GraphQL クエリをテストおよびデバッグできます。
+The **GraphiQL** ツールを使用すると、次のことが可能になり、GraphQLクエリをテストおよびデバッグできます。
 
 * クエリに使用する Sites 設定に適した&#x200B;**エンドポイント**&#x200B;を選択する
 * 新しいクエリを直接入力する
@@ -89,7 +89,7 @@ ht-degree: 98%
 
 <!-- more details needed here? -->
 
-また、GraphiQL IDE では、[クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)を管理することもできます。
+また、GraphiQL IDE を使用して、 [クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables).
 
 例：
 
@@ -140,7 +140,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## URL をコピーしてクエリに直接アクセスする {#copy-url}
 
-「**URL をコピー**」オプションを使用すると、永続クエリに直接アクセスする URL をコピーしてクエリをシミュレートし、結果を確認することができます。これは、ブラウザーでアクセスするなどしてテストに使用できます。
+The **URL をコピー** 「 」オプションを使用すると、永続化されたクエリに直接アクセスして結果を確認するために使用する URL をコピーして、クエリをシミュレートできます。 これは、ブラウザーでアクセスするなどしてテストに使用できます。
 
 <!--
   >[!NOTE]

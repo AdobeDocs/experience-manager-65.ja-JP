@@ -10,18 +10,18 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '2803'
+source-wordcount: '2802'
 ht-degree: 89%
 
 ---
 
 # アダプティブフォームの式{#adaptive-form-expressions}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
-アダプティブフォームは、ダイナミックスクリプティング機能を使用して、エンドユーザー向けに最適化されたシンプルなフォーム入力機能を提供します。 式を記述することで、フィールドやパネルのダイナミックな表示／非表示など、様々な動作を追加できます。また、レポートを作成する計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。動的動作は、ユーザー入力や事前入力データに基づいています。
+アダプティブフォームは、ダイナミックスクリプティング機能を使用して、エンドユーザー向けに最適化されたシンプルなフォーム入力機能を提供します。 式を記述して、動的なフィールドやパネルの表示/非表示など、様々な動作を追加できます。 また、レポートを作成する計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。動的動作は、ユーザー入力や事前入力データに基づいています。
 
 JavaScript はアダプティブフォームの式言語です。 すべての式は有効な JavaScript 式で、アダプティブフォームのスクリプティングモデル API を使用します。 これらの式は、特定のタイプの値を返します。アダプティブフォームのクラス、イベント、オブジェクトおよびパブリック API の完全なリストについては、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)を参照してください。
 
@@ -196,7 +196,7 @@ JavaScript はアダプティブフォームの式言語です。 すべての�
 
 ### 検証パターン {#validation-patterns}
 
-フィールドに利用可能な、すぐに使用できる検証パターンが複数あります。検証パターンを選択するには、コンポーネントの **編集** ダイアログで、「**パターン**」セクションを見つけて、「**パターン**」を選択します。**パターン**&#x200B;テキストボックスで、独自のカスタム検証パターンを作成できます。検証ステータスは、入力されたデータが検証パターンに準拠している場合にのみ **True** を返し、それ以外の場合は **False** を返します。独自の検証パターンを記述するには、 [Picture5 フォームのパターン形式文字列のサポートHTML](/help/forms/using/picture-clause-support.md).
+フィールドに利用可能な、すぐに使用できる検証パターンが複数あります。検証パターンを選択するには、コンポーネントの **編集** ダイアログで、「**パターン**」セクションを見つけて、「**パターン**」を選択します。**パターン**&#x200B;テキストボックスで、独自のカスタム検証パターンを作成できます。検証ステータスは、入力されたデータが検証パターンに準拠している場合にのみ **True** を返し、それ以外の場合は **False** を返します。独自の検証パターンを記述するには、 [Picture5 フォームのパターン形式HTML文字列のサポート](/help/forms/using/picture-clause-support.md).
 
 ### 検証式 {#validation-expressions}
 
@@ -270,7 +270,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 
 ### フィールドのカスタムパターンの作成 {#creating-custom-patterns-for-a-field}
 
-前述のように、アダプティブフォームでは、作成者が検証または表示形式のパターンを指定できます。 デフォルトパターンの使用に加えて、アダプティブフォームコンポーネントに再利用可能なカスタムパターンを設定することも可能です。例えば、テキストフィールドや数値フィールドを定義できます。定義したら、指定したタイプのコンポーネントのすべてのフォームでこれらのパターンを使用できます。例えば、テキストフィールドのカスタムパターンを作成して、アダプティブフォームのテキストフィールドで使用することができます。コンポーネントの編集ダイアログでパターンセクションにアクセスすることで、カスタムパターンを選択できます。パターンの定義または形式について詳しくは、 [Picture5 フォームのパターン形式文字列のサポートHTML](/help/forms/using/picture-clause-support.md).
+前述のように、アダプティブフォームでは、作成者が検証または表示形式のパターンを指定できます。 デフォルトパターンの使用に加えて、アダプティブフォームコンポーネントに再利用可能なカスタムパターンを設定することも可能です。例えば、テキストフィールドや数値フィールドを定義できます。定義したら、指定したタイプのコンポーネントのすべてのフォームでこれらのパターンを使用できます。例えば、テキストフィールドのカスタムパターンを作成して、アダプティブフォームのテキストフィールドで使用することができます。コンポーネントの編集ダイアログでパターンセクションにアクセスすることで、カスタムパターンを選択できます。パターンの定義または形式について詳しくは、 [Picture5 フォームのパターン形式HTML文字列のサポート](/help/forms/using/picture-clause-support.md).
 
 特定のフィールドタイプのカスタムパターンを作成して、同じタイプの他のフィールドに再利用するには、以下の手順を実行します。
 

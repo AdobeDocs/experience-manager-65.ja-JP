@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '7850'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 100%
 
 **Generate PDF サービスについて**
 
-Generate PDF サービスは、ネイティブファイル形式を PDF に変換します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
+GeneratePDFサービスは、ネイティブファイル形式をPDFに変換します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
 
-Generate PDF サービスは、以下のファイル形式を PDF に変換する際にネイティブアプリケーションを使用します。特に説明がない限り、これらのアプリケーションはドイツ語版、フランス語版、英語版および日本語版のみサポートされています。*Windows のみ*&#x200B;は、Windows Server® 2003 および Windows Server 2008 のみをサポートしています。
+GeneratePDFサービスは、ネイティブアプリケーションを使用して、次のファイル形式をPDFに変換します。 特に指示のない限り、これらのアプリケーションはドイツ語、フランス語、英語および日本語バージョンのみサポートされます。 *Windows のみ*&#x200B;は、Windows Server® 2003 および Windows Server 2008 のみをサポートしています。
 
 * Microsoft Office 2003 および 2007：DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、PPTX、VSD、MPP、MPPX、XPS および PUB を変換（Windows のみ）
 
@@ -40,39 +40,39 @@ Generate PDF サービスは、以下のファイル形式を PDF に変換す�
 
 >[!NOTE]
 >
->Generate PDF サービスは、64 ビットバージョンの OpenOffice をサポートしていません。
+Generate PDF サービスは、64 ビットバージョンの OpenOffice をサポートしていません。
 
 * PSD を変換する Adobe Photoshop® CS2（Windows のみ）
 
 >[!NOTE]
 >
->Windows Server 2003 または Windows Server 2008 がサポートされていないので、Photoshop CS3 および CS4 はサポートされていません。
+Windows Server 2003 または Windows Server 2008 がサポートされていないので、Photoshop CS3 および CS4 はサポートされていません。
 
 * FM を変換する Adobe FrameMaker® 7.2 および 8（Windows のみ）
 * PMD、PM6、P65、PM を変換する Adobe PageMaker® 7.0（Windows のみ）
-* サードパーティのアプリケーションによってサポートされているネイティブ形式（アプリケーションに固有のセットアップファイルの開発が必要）（Windows のみ）
+* サードパーティアプリケーションでサポートされるネイティブ形式（アプリケーション固有のセットアップファイルの開発が必要）（Windows のみ）
 
-Generate PDF サービスでは、次の標準ベースのファイル形式を PDF に変換します。
+GeneratePDFサービスは、次の標準ベースのファイル形式をPDFに変換します。
 
-* ビデオファイル形式：SWF、FLV（Windows のみ）
-* 画像ファイル形式：JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
-* HTML（Windows、Sun™ Solaris™ および Linux®）
+* ビデオ形式：SWF、FLV（Windows のみ）
+* 画像形式：JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
+* HTML(Windows、Sun™ Solaris™および Linux®)
 
-Generate PDF サービスでは、PDF を次のファイル形式に変換します（Windows のみ）：
+GeneratePDFサービスは、PDFを次のファイル形式に変換します（Windows のみ）。
 
-* EPS（Encapsulated PostScript）
+* Encapsulated PostScript (EPS)
 * HTML 3.2
-* CSS 1.0 を使用した HTML 4.01
-* DOC（Microsoft Word format）
+* HTML4.01 と CSS 1.0
+* DOC(Microsoft Word 形式 )
 * RTF
-* テキスト（アクセス可能およびプレーンの両方）
+* テキスト（アクセシブルとプレーンの両方）
 * XML
 * DeviceRGB カラースペースのみを使用する PDF/A-1a
 * DeviceRGB カラースペースのみを使用する PDF/A-1b
 
-Generate PDF サービスを使用するには、以下の管理タスクを実行する必要があります。
+GeneratePDFサービスでは、次の管理タスクを実行する必要があります。
 
-* 必要なネイティブアプリケーションを、AEM Forms をホストするコンピューター上にインストールする
+* AEM Formsをホストするコンピューターに必要なネイティブアプリケーションをインストールする
 * AEM Forms をホストするコンピューターに Adobe Acrobat Professional または Acrobat Pro Extended 9.2 をインストールします
 * インストール後のセットアップタスクを実行します
 
@@ -86,7 +86,7 @@ Generate PDF サービスを使用して、次のタスクを実行できます�
 
 >[!NOTE]
 >
->Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ## Word ドキュメントの PDF ドキュメントへの変換 {#converting-word-documents-to-pdf-documents}
 
@@ -94,11 +94,11 @@ Generate PDF サービスを使用して、次のタスクを実行できます�
 
 >[!NOTE]
 >
->その他のファイル形式について詳しくは、[追加のネイティブファイル形式のサポートの追加](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats)を参照してください。
+その他のファイル形式について詳しくは、[追加のネイティブファイル形式のサポートの追加](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats)を参照してください。
 
 >[!NOTE]
 >
->AEM Forms サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+AEM Forms サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary-of-steps}
 
@@ -148,7 +148,7 @@ Generate PDF API（Java）を使用して、Microsoft Word ドキュメントを
 
 1. プロジェクトファイルを含めます。
 
-   adobe-generatepdf-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-generatepdf-client.jar などのクライアント JAR ファイルを含めます。
 
 1. PDF 生成クライアントを作成します。
 
@@ -162,7 +162,7 @@ Generate PDF API（Java）を使用して、Microsoft Word ドキュメントを
 
 1. ファイルを PDF ドキュメントに変換します。
 
-   `GeneratePdfServiceClient` オブジェクトの `createPDF2` メソッドを呼び出して次の値を渡すことによって、ファイルを PDF ドキュメントに変換します。
+   を呼び出して、ファイルをPDFドキュメントに変換します。 `GeneratePdfServiceClient` オブジェクトの `createPDF2` メソッドを使用して、次の値を渡します。
 
    * 変換するファイルを表す `com.adobe.idp.Document` オブジェクト。
    * ファイル拡張子を含む `java.lang.String` オブジェクト。
@@ -178,16 +178,15 @@ Generate PDF API（Java）を使用して、Microsoft Word ドキュメントを
 
    PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `CreatePDFResult` オブジェクトの `getCreatedDocument` メソッドを呼び出します。これは `com.adobe.idp.Document` オブジェクトを返します。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、前の手順で作成したオブジェクトから PDF ドキュメントを抽出します。
+   * を呼び出す `CreatePDFResult` オブジェクトの `getCreatedDocument` メソッド。 `com.adobe.idp.Document` オブジェクト。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、前の手順で作成したPDFからオブジェクトドキュメントを抽出します。
 
    `createPDF2` メソッドを使用してログドキュメントを取得した場合（HTML 変換には適用されません）、次のアクションを実行します。
 
-   * `CreatePDFResult` オブジェクトの `getLogDocument` メソッドを呼び出します。これは `com.adobe.idp.Document` オブジェクトを返します。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出してログドキュメントを抽出します。
+   * を呼び出す `CreatePDFResult` オブジェクトの `getLogDocument` メソッド。 これは `com.adobe.idp.Document` オブジェクトを返します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用してログドキュメントを抽出します。
 
-
-**関連トピック**
+**関連情報**
 
 [手順の概要](converting-file-formats-pdf.md#summary-of-steps)
 
@@ -207,14 +206,14 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
+   `localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. PDF 生成クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -226,13 +225,13 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、PDF ドキュメントに変換するファイルを格納するために使用されます。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを作成します。変換するファイルの場所を表す文字列値とファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   *  `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み込み対象のバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` プロパティにバイト配列の内容を割り当て、`BLOB` オブジェクトにデータを入力します。
 
 1. ファイルを PDF ドキュメントに変換します。
 
-   `GeneratePDFServiceService` オブジェクトの `CreatePDF2` メソッドを呼び出して次の値を渡し、ファイルを PDF ドキュメントに変換します。
+   を呼び出して、ファイルをPDFドキュメントに変換します。 `GeneratePDFServiceService` オブジェクトの `CreatePDF2` メソッドを使用して、次の値を渡します。
 
    * 変換するファイルを表す `BLOB` オブジェクト。
    * ファイル拡張子を含む文字列。
@@ -246,12 +245,12 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
 1. 結果を取得します。
 
-   * 変換後の PDF ドキュメントを取得するには、`BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。バイト配列は変換後の PDF ドキュメントを表します。`createPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
+   * 変換後のPDFドキュメントを取得するには、 `BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。 バイト配列は変換後の PDF ドキュメントを表します。`createPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
    * コンストラクターを呼び出して変換された PDF ドキュメントのファイルの場所を表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
-**関連トピック：**
+**関連情報**
 
 [手順の概要](converting-file-formats-pdf.md#summary-of-steps)
 
@@ -265,7 +264,7 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
 >[!NOTE]
 >
->PDF 生成サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+PDF 生成サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-1}
 
@@ -315,7 +314,7 @@ Generate PDF API（Java）を使用して HTML ドキュメントを PDF ドキ�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-generatepdf-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-generatepdf-client.jar などのクライアント JAR ファイルを含めます。
 
 1. PDF 生成クライアントを作成します。
 
@@ -327,7 +326,7 @@ Generate PDF API（Java）を使用して HTML ドキュメントを PDF ドキ�
 
 1. HTML のコンテンツを PDF ドキュメントに変換します。
 
-   `GeneratePdfServiceClient` オブジェクトの `htmlToPDF2` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `GeneratePdfServiceClient` オブジェクトの `htmlToPDF2` メソッドを使用して、次の値を渡します。
 
    * 変換する HTML ファイルの URL を含む `java.lang.String` オブジェクト。
    * 変換で使用されるファイルタイプ設定を含む `java.lang.String` オブジェクト。ファイルタイプの設定には、スパイダリングレベルを含めることができます。
@@ -339,8 +338,8 @@ Generate PDF API（Java）を使用して HTML ドキュメントを PDF ドキ�
 
    `htmlToPDF2` メソッドは、生成された新しい PDF ドキュメントを含む `HtmlToPdfResult` オブジェクトを返します。新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `HtmlToPdfResult` オブジェクトの `getCreatedDocument` メソッドを呼び出します。これは `com.adobe.idp.Document` オブジェクトを返します。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、前の手順で作成したオブジェクトから PDF ドキュメントを抽出します。
+   * を呼び出す `HtmlToPdfResult` オブジェクトの `getCreatedDocument` メソッド。 これは `com.adobe.idp.Document` オブジェクトを返します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、前の手順で作成したPDFからオブジェクトドキュメントを抽出します。
 
 **関連トピック**
 
@@ -364,14 +363,14 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
+   `localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. PDF 生成クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -385,7 +384,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
 1. HTML のコンテンツを PDF ドキュメントに変換します。
 
-   `GeneratePDFServiceService` オブジェクトの `HtmlToPDF2` メソッドを呼び出し、次の値を渡して HTML の内容を PDF ドキュメントに変換します。
+   を呼び出して、HTMLコンテンツをPDFドキュメントに変換します。 `GeneratePDFServiceService` オブジェクトの `HtmlToPDF2` メソッドを使用して、次の値を渡します。
 
    * 変換する HTML の内容を含む文字列。
    * 変換処理で使用されるファイルタイプ設定を含む `java.lang.String` オブジェクト。
@@ -396,10 +395,10 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
 1. 結果を取得します。
 
-   * 変換後の PDF ドキュメントを取得するには、`BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。バイト配列は変換後の PDF ドキュメントを表します。`HtmlToPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
+   * 変換後のPDFドキュメントを取得するには、 `BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。 バイト配列は変換後の PDF ドキュメントを表します。`HtmlToPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
    * コンストラクターを呼び出して変換された PDF ドキュメントのファイルの場所を表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
@@ -415,7 +414,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
 >[!NOTE]
 >
->Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-2}
 
@@ -465,7 +464,7 @@ Generate PDF API（Java）を使用して、PDF ドキュメントを RTF ファ
 
 1. プロジェクトファイルを含めます。
 
-   adobe-generatepdf-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-generatepdf-client.jar などのクライアント JAR ファイルを含めます。
 
 1. PDF 生成クライアントを作成します。
 
@@ -478,7 +477,7 @@ Generate PDF API（Java）を使用して、PDF ドキュメントを RTF ファ
 
 1. PDF ドキュメントを変換します。
 
-   `GeneratePdfServiceClient` オブジェクトの `exportPDF2` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `GeneratePdfServiceClient` オブジェクトの `exportPDF2` メソッドを使用して、次の値を渡します。
 
    * 変換する PDF ファイルを表す `com.adobe.idp.Document` オブジェクト。
    * 変換するファイルの名前を含む `java.lang.String` オブジェクト。
@@ -492,10 +491,10 @@ Generate PDF API（Java）を使用して、PDF ドキュメントを RTF ファ
 
    新しく作成されたファイルを取得するには、次のアクションを実行します。
 
-   * `ExportPDFResult` オブジェクトの `getConvertedDocument` メソッドを呼び出します。これは `com.adobe.idp.Document` オブジェクトを返します。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、新規ドキュメントを抽出します。
+   * を呼び出す `ExportPDFResult` オブジェクトの `getConvertedDocument` メソッド。 これは `com.adobe.idp.Document` オブジェクトを返します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して新しいドキュメントを抽出します。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](converting-file-formats-pdf.md#summary-of-steps)
 
@@ -515,14 +514,14 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
+   `localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. Generate PDF クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -534,13 +533,13 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、変換された PDF ドキュメントの保存に使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   *  `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み込み対象のバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
 1. PDF ドキュメントを変換します。
 
-   `GeneratePDFServiceServiceWse` オブジェクトの `ExportPDF2` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `GeneratePDFServiceServiceWse` オブジェクトの `ExportPDF2` メソッドを使用して、次の値を渡します。
 
    * 変換する PDF ファイルを表す `BLOB` オブジェクト。
    * 変換するファイルのパス名を含む文字列。
@@ -551,12 +550,12 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 
 1. 変換したファイルを保存します。
 
-   * 変換された RTF ドキュメントを取得するには、`BLOB` オブジェクトの `MTOM` フィールドをバイト配列に割り当てます。バイト配列は変換された RTF ドキュメントを表します。`ExportPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
+   * 変換後の RTF ドキュメントを取得するには、 `BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。 バイト配列は変換された RTF ドキュメントを表します。`ExportPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。RTF ファイルの場所を表す文字列値を渡します。
    * コンストラクターを呼び出して、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * バイト配列の内容を RTF ファイルに書き込むには、`System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡します。
+   * を呼び出して、バイト配列の内容を RTF ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](converting-file-formats-pdf.md#summary-of-steps)
 
@@ -654,7 +653,7 @@ WinID がテキスト、サブウィンドウ、ウィンドウクラス ID な�
 
 このセクションと次のセクションで、ダイアログボックスとそのコンポーネントを内部表現の観点から説明する場合、*ウィンドウ要素*&#x200B;という用語を使用します。ウィンドウ要素の内部表現は階層で、各ウィンドウ要素のインスタンスはラベルで識別されます。ウィンドウ要素インスタンスは、その物理的な特性と動作も記述します。
 
-ユーザーの視点から見ると、ダイアログボックスとそのコンポーネントは異なる動作を示し、一部のダイアログボックス要素は、アクティブ化されるまで非表示になります。内部表現の観点からは、そのような行動の問題は存在しません。例えば、ダイアログボックスの内部表現は、そのダイアログボックスに含まれるコンポーネントの内部表現に似ていますが、コンポーネントがダイアログボックス内にネストされている点が異なります。
+ユーザーの視点から見ると、ダイアログボックスとそのコンポーネントは異なる動作を示し、一部のダイアログボックス要素は、アクティブ化されるまで非表示になります。 内部表現の観点からは、そのような行動の問題は存在しません。例えば、ダイアログボックスの内部表現は、そのダイアログボックスに含まれるコンポーネントの内部表現に似ていますが、コンポーネントがダイアログボックス内にネストされている点が異なります。
 
 このセクションでは、AppMon に手順を提供する XML 要素について説明します。これらの要素には、`dialog` 要素、`window` 要素などの名前があります。このドキュメントでは、XML 要素を区別するために等幅フォントを使用します。`dialog` 要素は、XML スクリプトファイルが意図的または意図せずに表示される原因となる可能性のあるダイアログボックスを識別します。`window` 要素は、ウィンドウ要素（ダイアログボックスまたはダイアログボックスのコンポーネント）を識別します。
 
@@ -670,13 +669,13 @@ WinID がテキスト、サブウィンドウ、ウィンドウクラス ID な�
 
 *スクリプト XML ファイル*&#x200B;は、特定のウィンドウ要素に移動してそれらの要素への応答を提供するように指示する一連のステップをネイティブアプリケーションに指定します。ほとんどの応答は、ユーザーが対応するダイアログボックスのフィールド、コンボボックス、ボタンへの入力に対応するテキストまたはキーストロークです。
 
-PDF 生成サービスでスクリプト XML ファイルをサポートする目的は、ネイティブアプリケーションにネイティブファイルを印刷するよう指示することです。ただし、スクリプト XML ファイルを使用して、ユーザーがネイティブアプリケーションのダイアログボックスを操作するときに実行できるすべてのタスクを実行できます。
+GeneratePDFサービスでスクリプト XML ファイルをサポートする目的は、ネイティブアプリケーションにネイティブファイルを印刷するよう指示することです。 ただし、スクリプト XML ファイルを使用して、ネイティブアプリケーションのダイアログボックスとの対話中にユーザーが実行できるタスクを実行できます。
 
 スクリプト XML ファイル内の手順は、分岐の機会がなく、順番に実行されます。サポートされている唯一の条件付きテストは、タイムアウト／再試行です。これにより、特定の期間内および特定の回数の再試行後に手順が正常に完了しなかった場合にスクリプトが終了します。
 
 順次的な手順に加えて、手順内の命令も順に実行されます。手順と指示が、ユーザーが同じ手順を実行する順序を反映していることを確認する必要があります。
 
-スクリプト XML ファイルの各手順は、手順の指示を正常に実行した場合に表示されるウィンドウ要素と予想されるウィンドウ要素を識別します。スクリプトでの手順の実行中に予期しないダイアログボックスが表示された場合、PDF 生成サービスは、次のセクションで説明するようにダイアログ XML ファイルを検索します。
+スクリプト XML ファイルの各ステップは、ステップの指示が正常に実行された場合に表示されるウィンドウ要素を識別します。 スクリプトでの手順の実行中に予期しないダイアログボックスが表示された場合、PDF 生成サービスは、次のセクションで説明するようにダイアログ XML ファイルを検索します。
 
 #### ダイアログ XML ファイル {#dialog-xml-files}
 
@@ -687,12 +686,12 @@ PDF 生成サービスでスクリプト XML ファイルをサポートする�
 システムまたはネイティブアプリケーションが、現在実行中のスクリプト XML ファイルで処理されないダイアログボックスを表示すると、PDF 生成サービスはダイアログ XML ファイルをこの順序で検索し、一致するものが見つかると停止します。
 
 * appmon。`[appname]`。追加。`[locale]`.xml
-* appmon。`[appname]``[locale]`.xml （このファイルは変更しないでください）。
+* appmon。`[appname]`。`[locale]`.xml （このファイルは変更しないでください）。
 * appmon.global。`[locale]`.xml （このファイルは変更しないでください）。
 
 Generate PDF サービスは、ダイアログボックスに一致するものを見つけると、ダイアログボックスに指定されたキーストロークまたはその他のアクションを送信して、それを閉じます。ダイアログボックスの指示で中止メッセージが指定されている場合、Generate PDF サービスは現在実行中のジョブを終了し、エラーメッセージを生成します。このような中止メッセージは、スクリプト XML 文法の `abortMessage` 要素で指定されます。
 
-Generate PDF サービスで、以前にリストされたファイルのいずれにも記述されていないダイアログボックスが検出された場合、Generate PDF サービスは、ダイアログボックスのキャプションをログファイルエントリに組み込みます。現在実行中のジョブは最終的にタイムアウトします。その後、ログファイル内の情報を使用して、ネイティブアプリケーション用の追加のダイアログ XML ファイルで新しい手順を作成できます。
+GeneratePDFサービスで、上記のファイルに記載されていないダイアログボックスが表示された場合、そのダイアログボックスのキャプションがログファイルエントリに組み込まれます。 現在実行中のジョブは最終的にタイムアウトします。その後、ログファイル内の情報を使用して、ネイティブアプリケーション用の追加のダイアログ XML ファイルで新しい手順を作成できます。
 
 ### ネイティブファイル形式のサポートの追加または変更 {#adding-or-modifying-support-for-a-native-file-format}
 
@@ -716,7 +715,7 @@ Generate PDF サービスで、以前にリストされたファイルのいず�
 
 次のような問題があります。
 
-* Microsoft Spy++ では、キャプションのホットキーを識別するために、アンパサンド（&amp;）を使用してキャプションを表示します。例えば、Spy++ では、ある印刷ダイアログボックスのキャプションが `Pri&nt` と表示されていますが、これはホットキーが *n* であることを示しています。スクリプトおよびダイアログの XML ファイルのキャプションタイトルでは、アンパサンドを省略する必要があります。
+* Microsoft Spy++は、キャプションのホットキーを識別するためにアンパサンド (&amp;) を使用してキャプションを表示します。 例えば、Spy++ では、ある印刷ダイアログボックスのキャプションが `Pri&nt` と表示されていますが、これはホットキーが *n* であることを示しています。スクリプトおよびダイアログの XML ファイルのキャプションタイトルでは、アンパサンドを省略する必要があります。
 * 一部のキャプションには改行が含まれています。Generate PDF サービスでは改行を識別できません。キャプションに改行が含まれている場合は、他のメニュー項目と区別するのに十分なキャプションを含め、省略された部分には正規表現を使用します。例えば（`^Long caption title$`）のようになります。（[キャプション属性での正規表現の使用](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)を参照。）
 * 予約された XML 文字には、文字エンティティ（エスケープシーケンスとも呼ばれます）を使用します。例えば、アンパサンドには `&`、「より小さい」と「より大きい」を表す記号にはそれぞれ `<` と `>`、アポストロフィには `&apos;`、引用符には `&quot;` を使用します。
 
@@ -755,7 +754,7 @@ Generate PDF サービスで、以前にリストされたファイルのいず�
 
 新しいネイティブアプリケーションにファイルをダイレクトする場合は、そのアプリケーション用のスクリプト XML ファイルを作成する必要があります。PDF 生成サービスと既にサポートされているネイティブアプリケーションとのやり取りを変更する場合は、そのアプリケーションのスクリプトを変更する必要があります。
 
-スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。この情報を含むファイルは `appmon.`[アプリ名]`` `.script.`[ロケール]`.xml`です。例えば appmon.notepad.script.en_US.xml です。
+スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。 この情報を含むファイルは `appmon.`[アプリ名]`` `.script.`[ロケール]`.xml`です。例えば appmon.notepad.script.en_US.xml です。
 
 #### スクリプトが実行する必要があるステップの識別 {#identifying-steps-the-script-must-execute}
 
@@ -850,7 +849,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
->このコンテキストでは、「追加」という用語は、`appmon.[applicationname].addition.[locale].xml` ファイルの内容を意味します。このようなファイルは、ダイアログ XML ファイルの上書きと追加を指定します。
+このコンテキストでは、「追加」という用語は、`appmon.[applicationname].addition.[locale].xml` ファイルの内容を意味します。このようなファイルは、ダイアログ XML ファイルの上書きと追加を指定します。
 
 また、以下の目的のために、ネイティブアプリケーション用の追加のダイアログ XML ファイルを変更することもできます。
 
@@ -863,7 +862,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
->native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
+native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
 
 `window` 要素で子として表示される `windowList` 要素に順序を付ける必要があります。（[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
 
@@ -883,7 +882,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
->アプリケーションの名前は、`GenericApp` 要素の `name` 属性の値として指定されます。この値は、そのアプリケーション用に開発するスクリプトで指定された、対応する名前と完全に一致する必要があります。同様に、`GenericApp` 要素の `displayName` 属性は、対応するスクリプトの `expectedWindow` ウィンドウのキャプションと完全に一致する必要があります。このような等価性は、`displayName` または `caption` 属性に表示される正規表現を解決した後に評価されます。
+アプリケーションの名前は、 `GenericApp` 要素の `name` 属性。 この値は、そのアプリケーション用に開発するスクリプトで指定された、対応する名前と完全に一致する必要があります。同様に、 `GenericApp` 要素の `displayName` 属性は、対応するスクリプトの `expectedWindow` ウィンドウのキャプション。 このような等価性は、`displayName` または `caption` 属性に表示される正規表現を解決した後に評価されます。
 
 この例では、Generate PDF サービスで提供されるデフォルトの設定データを変更し、ファイル名拡張子が.txt のファイルを処理するために（Microsoft Word ではなく）メモ帳を使用するように指定しました。この変更を行う前は、このようなファイルを処理するネイティブアプリケーションとして Microsoft Word が指定されていました。
 
@@ -983,7 +982,7 @@ AEM Forms には、Generate PDFサービスでメモ帳を使用してファイ�
 * from Adobe Systems Incorporated.
 *-->
 
-<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy we recommend using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
+<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
 
 <application name="Notepad" version="9.0" locale="en_US" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="scripts.xsd">
 

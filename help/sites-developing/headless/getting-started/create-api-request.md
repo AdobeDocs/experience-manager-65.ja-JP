@@ -2,10 +2,10 @@
 title: コンテンツフラグメントへのアクセスとヘッドレス配信クイック開始ガイド
 description: AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 61%
+source-wordcount: '555'
+ht-degree: 55%
 
 ---
 
@@ -17,9 +17,9 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 
 [コンテンツフラグメントはいくつか作成したので、AEM API](create-content-fragment.md) を使用してそれらをヘッドレスで配信できます。
 
-* [GraphQL](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) API を使用すると、コンテンツフラグメントにアクセスして配信するリクエストを作成できます。
+* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) では、コンテンツフラグメントにアクセスして配信するリクエストを作成できます。
    * これを使用するには、 [エンドポイントは、AEMで定義し、有効にする必要があります](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)（必要に応じて） [GraphiQL インターフェイスがインストールされています](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
-* [アセット REST API](/help/assets/assets-api-content-fragments.md) を使用すると、コンテンツフラグメント（およびその他のアセット）を作成および変更できます。
+* [Assets REST API](/help/assets/assets-api-content-fragments.md) では、コンテンツフラグメント（およびその他のアセット）を作成および変更できます。
 
 このガイドでは、GraphQLへのアクセスとコンテンツフラグメントの配信について説明します。
 
@@ -31,7 +31,7 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
    * 例：`http://<host>:<port>/aem/graphiql.html`
 
 1. GraphiQL は、GraphQL のブラウザー内のクエリエディターです。これを使用してクエリを作成し、コンテンツフラグメントを取得して JSON としてヘッドレスに配信できます。
-   * 左側のパネルでは、クエリを作成できます。
+   * 左のパネルを使用して、クエリを作成できます。
    * 右側のパネルに結果が表示されます。
    * クエリエディターは、コード補完機能とホットキーを備えており、クエリを簡単に実行できます。
      ![GraphiQL エディター](assets/graphiql.png)
@@ -72,7 +72,7 @@ GraphQLは、繰り返しの API リクエストや過剰な配信を避ける�
 
 ## 次の手順 {#next-steps}
 
-これで作業は完了です。AEM のヘッドレスコンテンツ管理に関する基本的な内容を説明しました。使用可能な機能を包括的に理解するために、さらに多くのリソースを参照できます。
+これで作業は完了です。AEM のヘッドレスコンテンツ管理に関する基本的な内容を説明しました。使用可能な機能を包括的に理解するために、さらに多くのリソースを使用して、さらに深く掘り下げることができます。
 
 * **[設定ブラウザー](create-configuration.md)** - AEM 設定ブラウザーの詳細
 * **[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)** - コンテンツフラグメントの作成と管理に関する詳細

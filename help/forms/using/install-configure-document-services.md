@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '5530'
-ht-degree: 80%
+source-wordcount: '5529'
+ht-degree: 79%
 
 ---
 
@@ -56,7 +56,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 >[!NOTE]
 >
->AEM Forms では設定したすべての機能を 1 台のサーバーで実行できますが、実稼働環境では、キャパシティプラニング、ロードバランシング、特定の機能の専用サーバーのセットアップを行う必要があります。例えば、PDF Generator サービスを使用して、1 日に数千のページと複数のアダプティブフォームをデータ取得用に変換する環境の場合、PDF Generator サービスとアダプティブフォームの機能を実行するための AEM Forms サーバーを別々にセットアップする必要があります。これにより、パフォーマンスが最適化され、各サーバーを個別にスケーリングできるようになります。
+>AEM Formsでは、1 台のサーバーからすべての機能を設定して実行できますが、容量計画、ロードバランシングを実行し、実稼動環境で特定の機能用に専用のサーバーを設定する必要があります。 例えば、PDF Generatorサービスを使用して 1 日に数千ページ、複数のアダプティブフォームを変換してデータを取得する環境の場合、PDF Generatorサービスとアダプティブフォーム機能用に別々のAEM Formsサーバーを設定します。 これにより、パフォーマンスが最適化され、各サーバーを個別にスケーリングできるようになります。
 
 ## システム要件 {#system-requirements}
 
@@ -68,7 +68,7 @@ AEM Forms Document Services のインストールと設定を開始する前に�
 * AEM インスタンスが稼働していること。AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。通常、AEM Forms Document Services を実行するには、1 つのAEMインスタンス（オーサーまたはパブリッシュ）のみ必要です。
 
    * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **公開**:公開されたコンテンツをインターネットまたは内部ネットワーク経由で公開するAEMインスタンス。
+   * **公開**：公開されたコンテンツをインターネットや内部ネットワークを介して公開するAEMインスタンス。
 
 * メモリ要件が満たされていること。AEM Forms アドオンパッケージでは、次が必要です。
 
@@ -225,7 +225,7 @@ Acrobat をインストールしてから、Microsoft® Word を開きます。�
   <tr>
    <td><p><strong>Adobe Acrobat</strong></p> </td>
    <td><p>Acrobat_PATH</p> </td>
-   <td><p>C:\Program Files (x86)\Adobe\Acrobat 2015\Acrobat\Acrobat.exe</p> </td>
+   <td><p>C:\Programファイル (x86)\Adobe\Acrobat 2015\Acrobat\Acrobat.exe</p> </td>
   </tr>
   <tr>
    <td><p><strong>メモ帳</strong></p> </td>
@@ -290,16 +290,16 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 
 1. Microsoft® Office のアプリケーションを開きます。例えば、Microsoft® Word などです。「**[!UICONTROL ファイル]**」／「**[!UICONTROL オプション]**」に移動します。オプションのダイアログボックスが表示されます。
 
-1. クリック **[!UICONTROL トラストセンター]**&#x200B;をクリックし、 **[!UICONTROL セキュリティセンターの設定]**.
-1. 内 **[!UICONTROL セキュリティセンターの設定]**&#x200B;をクリックし、 **[!UICONTROL ファイルブロック設定]**.
+1. クリック **[!UICONTROL Trust Center]**&#x200B;をクリックし、 **[!UICONTROL Trust Center の設定]**.
+1. Adobe Analytics の **[!UICONTROL Trust Center の設定]**&#x200B;をクリックし、 **[!UICONTROL ファイルブロック設定]**.
 1. PDF Generator サービスで PDF ドキュメントへの変換を許可するファイルタイプについて、「**[!UICONTROL ファイルタイプ]**」リストで「**[!UICONTROL 開く]**」チェックボックスをオフにします。
 
 ### （Windows のみ）プロセスレベルのトークンを置き換える権限の付与 {#grant-the-replace-a-process-level-token-privilege}
 
-アプリケーションサーバーの起動に使用するユーザーアカウントには、 **プロセスレベルトークンの置き換え** 権限 ローカルシステムアカウントに **プロセスレベルトークンの置き換え** デフォルトでは権限です。 Local Administrators グループのユーザーと共に実行するサーバーに対しては、明示的に権限を付与する必要があります。 次の手順を実行して権限を付与します。
+アプリケーションサーバーの起動に使用するユーザーアカウントには、 **プロセスレベルトークンの置換** 権限 ローカルシステムアカウントには **プロセスレベルトークンの置換** デフォルトで権限を持っています。 Local Administrators グループのユーザーと共に実行するサーバーに対しては、明示的に権限を付与する必要があります。 次の手順を実行して権限を付与します。
 
 1. Microsoft® Windows のグループポリシーエディターを開きます。グループポリシーエディターを開くには、「**[!UICONTROL スタート]**」をクリックしてスタートの検索ボックスに **gpedit.msc** と入力し、「**[!UICONTROL グループポリシーエディター]**」をクリックします。
-1. に移動します。 **[!UICONTROL ローカルコンピューターポリシー]** > **[!UICONTROL コンピュータの構成]** > **[!UICONTROL Windows 設定]** > **[!UICONTROL セキュリティ設定]** > **[!UICONTROL ローカルポリシー]** > **[!UICONTROL ユーザー権限の割り当て]** をクリックし、 **[!UICONTROL プロセスレベルトークンの置き換え]** ポリシーを作成し、 Administrators グループを含めます。
+1. に移動します。 **[!UICONTROL ローカルコンピューターポリシー]** > **[!UICONTROL コンピュータの構成]** > **[!UICONTROL Windows 設定]** > **[!UICONTROL セキュリティ設定]** > **[!UICONTROL ローカルポリシー]** > **[!UICONTROL ユーザー権限の割り当て]** をクリックし、 **[!UICONTROL プロセスレベルトークンの置換]** ポリシーを作成し、 Administrators グループを含めます。
 1. 「プロセスレベルトークンの置き換え」エントリにユーザーを追加します。
 
 ### （Windows のみ）管理者以外のユーザーに対する PDF Generator サービスの有効化 {#enable-the-pdf-generator-service-for-non-administrators}
@@ -357,7 +357,7 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 >[!NOTE]
 >
 >* Red Hat® Enterprise Linux® 6.x 以降で courier フォントは使用できません。courier フォントをインストールするには、 font-ibm-type1-1.0.3.zip アーカイブをダウンロードします。 /usr/share/fonts にあるアーカイブを抽出します。 /usr/share/X11/fonts から/usr/share/fonts へのシンボリックリンクを作成します。
->* Html2PdfSvc/bin ディレクトリと/usr/share/fonts ディレクトリからすべての.lst フォントキャッシュファイルを削除します。
+>* Html2PdfSvc/bin ディレクトリと/usr/share/fonts ディレクトリから、すべての.lst フォントキャッシュファイルを削除します。
 >* /usr/lib/X11/fonts ディレクトリと/usr/share/fonts ディレクトリが存在することを確認します。 ディレクトリが存在しない場合は、ln コマンドを使用して/usr/share/X11/fonts から/usr/lib/X11/fonts へのシンボリックリンクを作成し、/usr/share/fonts から/usr/share/X11/fonts への別のシンボリックリンクを作成します。 また、courier フォントが/usr/lib/X11/fonts で使用可能であることを確認してください。
 >* すべてのフォント（Unicode および非 Unicode）が /usr/share/fonts または /usr/share/X11/fonts ディレクトリで使用できることを確認してください。
 >* PDF Generator サービスを非 root ユーザーとして実行する場合は、すべてのフォントディレクトリへの読み取りおよび書き込みアクセス権を非 root ユーザーに与えます。
@@ -468,7 +468,7 @@ Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使�
 1. PDF Generator ユーティリティのバッチファイルを実行して、Adobe Acrobat を PDF Generator サービス用に設定します。
 
    1. [AEM パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を開き、`adobe-aemfd-pdfg-common-pkg-[version].zip` ファイルをパッケージマネージャーからダウンロードします。
-   1. ダウンロードした.zip ファイルを解凍します。 管理権限でコマンドプロンプトを開きます。
+   1. ダウンロードした.zip ファイルを解凍します。 管理者権限でコマンドプロンプトを開きます。
    1. `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\` に移動します。
    1. `adobe-aemfd-pdfg-common-pkg-[version]` を解凍します。
    1. `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` ディレクトリに移動します。次のバッチファイルを実行します。

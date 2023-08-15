@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '607'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '604'
+ht-degree: 93%
 
 ---
 
@@ -394,7 +394,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>ダッシュボード</td>
-   <td>レポートダッシュボードを作成できます。このダッシュボードでは、カスタマイズ可能な方法で統合データを表示するページを定義することができます。</td>
+   <td>レポートダッシュボードを作成できます。統合データを表示するページを定義するカスタマイズ可能な方法を提供します。</td>
   </tr>
   <tr>
    <td>カスタムドキュメント</td>
@@ -430,7 +430,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>レポート</td>
-   <td>AEM にはカスタマイズ用の様々なレポートが用意されています。レポートをカスタマイズしたり、独自のレポートを作成したりできます。</td>
+   <td>AEMには、様々なカスタマイズされたレポートが用意されており、カスタマイズされたレポートを作成したり、独自のレポートを作成したりできます。</td>
   </tr>
   <tr>
    <td>デフォルトページ基礎モード</td>

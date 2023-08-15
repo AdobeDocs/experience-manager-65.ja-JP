@@ -1,7 +1,7 @@
 ---
 title: HTML5 フォームのカスタムプロファイルの作成
 seo-title: Creating a custom profile for HTML5 forms
-description: HTML5 フォームプロファイルは Apache Sling のリソースノードです。それは HTML5 forms Render サービスのカスタマイズされたバージョンを表します。
+description: HTML5 forms プロファイルは、Apache Sling のリソースノードです。 これは、カスタマイズされたバージョンのHTML5 forms Render サービスを表します。
 seo-description: A HTML5 forms profile is a resource node in Apache Sling. It represents a customized version of HTML5 forms Render service.
 uuid: b9938280-a92c-4dde-b465-04372db3ca8d
 content-type: reference
@@ -10,10 +10,10 @@ topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 feature: Mobile Forms
 exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 100%
+source-wordcount: '659'
+ht-degree: 71%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType** プロパティがあります。このノードのレンダリングスクリプトは、/libs/xfaforms/profile にあります。
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらの Sling スクリプトは&#x200B;**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。プロファイルレンダラーは要求されたフォームをレンダリングするために Forms OSGi サービスを呼び出します。
+Sling スクリプトは JSP スクリプトです。 これらの JSP スクリプトは、要求されたフォームのHTMLと必要な JS/CSS アーティファクトを組み立てるためのコンテナとして機能します。 これらの Sling スクリプトは&#x200B;**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。プロファイルレンダラーは要求されたフォームをレンダリングするために Forms OSGi サービスを呼び出します。
 
 GET と POST リクエストのためのプロファイルスクリプトは html.jsp と html.POST.jsp 内にあります。これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースでの変更はおこなわないでください。このような変更は、パッチのアップデートによって上書きされてしまいます。
 
@@ -35,11 +35,11 @@ formRuntime.jsp モジュールには、クライアントライブラリの参
 
 ## config.jsp {#config-jsp}
 
-config.jsp モジュールには、ロギング、プロキシサービス、動作バージョンなど、さまあまな設定が含まれています。独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加することができます。カスタムウィジェット登録などの設定を config.jsp モジュールに追加することもできます。
+config.jsp モジュールには、ログ、プロキシサービス、動作バージョンなど、様々な設定が含まれています。 独自の設定とウィジェットのカスタマイズを config.jsp モジュールに追加できます。 カスタムウィジェット登録などの設定を config.jsp モジュールに追加することもできます。
 
 ## toolbar.jsp {#toolbar-jsp}
 
-toolbar.jsp は、カラーのツールバーを作成するためのコードを含みます。ツールバーを削除するには、toolbar.jsp を HTML.jsp から削除します。
+toolbar.jsp は、カラーのツールバーを作成するためのコードを含みます。ツールバーを削除するには、toolbar.jsp をHTML.jsp から削除します。
 
 ## formBody.jsp {#formbody-jsp}
 
@@ -47,11 +47,11 @@ formBody.jsp モジュールは、XFA フォームの HTML 表現のための�
 
 ## nav_footer.jsp {#nav-footer-jsp}
 
-最初に、HTML5 フォームはフォームの最初のページのみをレンダリングします。ユーザーがフォームをスクロールすると、フォームの残りの部分がロードされます。こうすることでロード体験が高速になります。nav_footer.jsp コンポーネントには、すべてのスタイルとスクロール時のページの読み込みを支援するために必要な要素が含まれます。 
+最初に、HTML5 フォームはフォームの最初のページのみをレンダリングします。 ユーザーがフォームをスクロールすると、残りのフォームが読み込まれます。 これにより、読み込み操作が高速になります。 nav_footer.jsp コンポーネントには、すべてのスタイルとスクロール時のページの読み込みを支援するために必要な要素が含まれます。 
 
 ## footer.jsp {#footer-jsp}
 
-footer.jsp モジュールは空です。これにより、ユーザーインタラクションのみに使用するスクリプトを追加できます。
+footer.jsp モジュールは空です。 ユーザーの操作にのみ使用するスクリプトを追加できます。
 
 ## カスタムプロファイルの作成 {#creating-custom-profiles}
 
@@ -71,7 +71,7 @@ footer.jsp モジュールは空です。これにより、ユーザーインタ
 
 ### プロファイルレンダラースクリプトを作成する {#create-the-profile-renderer-script}
 
-カスタムプロファイルの作成後、このプロファイルにレンダラーの情報を追加します。新しいプロファイルの要求を受け取る際に、CRX はレンダリングする JSP ページの /apps フォルダーの存在を確認します。JSP ページを /apps フォルダーで作成します。
+カスタムプロファイルを作成した後、このプロファイルにレンダリング情報を追加します。 新しいプロファイルの要求を受け取ると、CRX はレンダリングする JSP ページの/apps フォルダーの存在を検証します。 /apps フォルダーに JSP ページを作成します。
 
 1. 左のペインで、`/apps` フォルダーに移動します。
 1. `/apps` フォルダーを右クリックして選択し、「**hrform**」の名前を持つフォルダーを作成します。

@@ -1,7 +1,7 @@
 ---
 title: 言語コピーウィザード
 seo-title: Language Copy Wizard
-description: AEM での言語コピーウィザードの使用について説明します。
+description: AEMでの言語コピーウィザードの使用について説明します。
 seo-description: Learn about using the Language Copy Wizard in AEM.
 uuid: a6168f5d-cce7-48bd-a898-171319621460
 contentOwner: Guillaume Carlino
@@ -12,24 +12,24 @@ discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 100%
+source-wordcount: '213'
+ht-degree: 48%
 
 ---
 
 # 言語コピーウィザード{#language-copy-wizard}
 
-言語コピーウィザードは、多言語コンテンツ構造を作成して実装するためのガイド付きエクスペリエンスです。言語コピーの作成が大幅に簡単かつ迅速になりました。
+言語コピーウィザードは、多言語コンテンツ構造を作成および実装するためのガイド付きエクスペリエンスです。 言語コピーを作成する方が、より簡単で迅速になりました。
 
 >[!NOTE]
 >
 >サイトの言語コピーを作成するには、ユーザーはプロジェクト管理者グループのメンバーである必要があります。
 
-このウィザードにアクセスするには、次の手順を実行します。
+このウィザードにアクセスするには：
 
-1. 「サイト」で、ページを選択して「作成」をタップまたはクリックします。
+1. Sites で、ページを選択し、「作成」をタップまたはクリックします。
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
@@ -37,7 +37,7 @@ ht-degree: 100%
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
-1. ウィザードの&#x200B;**ソースを選択**&#x200B;手順で、ページを追加または削除できます。サブページを含めるか除外するオプションもあります。
+1. The **ソースを選択** ウィザードの手順で、ページを追加または削除できます。 サブページを含めるか除外するオプションもあります。
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
@@ -47,7 +47,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >デフォルトでは、翻訳設定は 1 つのみです。他の設定を選択するには、最初にクラウド設定を設定する必要があります。[翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md)を参照してください。
+   >デフォルトでは、翻訳設定は 1 つだけです。 他の設定を選択できるようにするには、まずクラウド設定を指定する必要があります。 詳しくは、 [翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md).
 
 1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;手順に進みます。ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
 

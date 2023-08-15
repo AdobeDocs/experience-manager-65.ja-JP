@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '413'
 ht-degree: 27%
 
 ---
 
 # We.Retail のグローバル化されたサイト構造の使用{#trying-out-the-globalized-site-structure-in-we-retail}
 
-We.Retail は、グローバル化されたサイト構造を使用して構築され、国固有の Web サイトにライブコピーできる言語マスターを提供します。 すべての機能が標準で設定されており、この構造と組み込みの翻訳機能を試すことができます。
+We.Retail は、グローバル化されたサイト構造を使用して構築され、国固有の Web サイトにライブコピーできる言語マスターを提供します。 すべての設定がすぐに使用でき、この構造と組み込みの翻訳機能を試すことができます。
 
 ## 試す {#trying-it-out}
 
@@ -42,11 +42,11 @@ We.Retail は、グローバル化されたサイト構造を使用して構築�
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
-1. の横にあるチェックボックスをオンにします。 **言語コピー** ラベル：すべての言語コピーを選択します。 内 **言語コピーを更新** パネルの「 」セクションで、「 **新しい翻訳プロジェクトを作成**. プロジェクトの名前を入力し、 **更新**.
+1. の横にあるチェックボックスをオンにします。 **言語コピー** 「ラベル」は、すべての言語コピーを選択する場合に使用します。 Adobe Analytics の **言語コピーを更新** パネルの「 」セクションで、「 」オプションを選択します。 **新しい翻訳プロジェクトを作成**. プロジェクトの名前を入力し、 **更新**.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 言語の翻訳ごとにプロジェクトが作成されます。 以下に表示します。 **ナビゲーション/プロジェクト**.
+1. 言語の翻訳ごとにプロジェクトが作成されます。 それらをの下に表示します。 **ナビゲーション/プロジェクト**.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 

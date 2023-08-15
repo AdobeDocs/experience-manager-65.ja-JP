@@ -4,16 +4,16 @@ description: ヘッドレスコンテンツ配信に AEM コンテンツフラ�
 feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
-workflow-type: ht
-source-wordcount: '687'
-ht-degree: 100%
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+workflow-type: tm+mt
+source-wordcount: '684'
+ht-degree: 91%
 
 ---
 
 # GraphQL のコンテンツフラグメントを使用したヘッドレスコンテンツ配信 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化されたコンテンツをヘッドレスで配信できます。単一の API クエリをカスタマイズする機能により、レンダリングする特定のコンテンツを（単一の API クエリに対する応答として）取得して配信できます。
+Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化されたコンテンツをヘッドレスで配信できます。単一の API クエリをカスタマイズする機能を使用すると、レンダリングする必要のある特定のコンテンツを（単一の API クエリへの応答として）取得して配信できます。
 
 <!--
 >[!NOTE]
@@ -25,17 +25,16 @@ Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 Gra
 >
 >GraphQL は現在 Adobe Experience Manager (AEM) の 2 つの（別々の）シナリオで使用されています。
 >
->* [AEM コマースは、GraphQL 経由でコマースプラットフォームのデータを使用します](/help/commerce/cif/integrating/magento.md)。
+>* [AEM Commerce は、GraphQL 経由でコマースプラットフォームのデータを使用します](/help/commerce/cif/integrating/magento.md)。
 >* [AEM コンテンツフラグメントは、AEM GraphQL API（標準の GraphQL に基づいてカスタマイズされた実装）と連携して、アプリケーションで使用する構造化コンテンツを配信します](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)。
-
 
 ## ヘッドレス CMS {#headless-cms}
 
 ヘッドレスコンテンツ管理システム（CMS）とは次のことを意味します。
 
-* 「*ヘッドレスコンテンツ管理システム（ヘッドレス CMS）は、バックエンド専用のコンテンツ管理システム（CMS）であり、API 経由でコンテンツにアクセスして、任意のデバイスに表示できます。*」
+* 「*ヘッドレスコンテンツ管理システム（ヘッドレス CMS）は、API経由でコンテンツにアクセスし、あらゆるデバイスで表示できるようにするコンテンツリポジトリとして一から構築された、バックエンド専用のコンテンツ管理システム（CMS）です。*」
 
-   [ウィキペディア](https://en.wikipedia.org/wiki/Headless_content_management_system)を参照してください。
+  [ウィキペディア](https://en.wikipedia.org/wiki/Headless_content_management_system)を参照してください。
 
 AEM のコンテンツフラグメントのオーサリングとは、次のことを意味します。
 
@@ -49,9 +48,9 @@ GraphQL とは次のことを意味します。
 
 * 「*...API のクエリ言語と、既存のデータを使用してこれらのクエリを満たすランタイムです。*」
 
-   [GraphQL.org](https://graphql.org) を参照
+  [GraphQL.org](https://graphql.org) を参照
 
-[AEM GraphQL API](#aem-graphql-api) を使用すると、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)で（複雑な）クエリを実行できます。各クエリは、特定のモデルタイプに従っています。返されたコンテンツは、アプリケーションで使用できます。
+The [AEM GraphQL API](#aem-graphql-api) を使用すると、 [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)；の場合、各クエリは特定のモデルタイプに従っています。 返されたコンテンツは、アプリケーションで使用できます。
 
 ## AEM GraphQL API {#aem-graphql-api}
 

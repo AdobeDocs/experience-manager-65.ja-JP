@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: aaeef8fcc0ed5f205aeb7ab40cc61f60912c9869
+source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1969'
 ht-degree: 49%
 
 ---
@@ -31,10 +31,10 @@ Client Context は、現在のページと訪問者に関する特定の情報�
 
 パブリッシュ環境とオーサー環境の両方で、次の情報が表示されます。
 
-* 訪問者は、インスタンスに応じて、特定の情報が要求または派生されます。
+* 訪問者。インスタンスに応じて、特定の情報が要求または派生しています。
 * ページタグおよび現在の訪問者がこれらのタグにアクセスした回数（これは、特定のタグの上にマウスを移動したときに表示されます）。
 * ページ情報。
-* 技術環境に関する情報（IP アドレス、ブラウザー、画面解像度など）。
+* IP アドレス、ブラウザー、画面の解像度など、技術環境に関する情報。
 * 現在解決されているセグメント。
 
 アイコン（オーサー環境でのみ使用可能）を使用して、ClientContext の詳細を設定できます。
@@ -203,7 +203,7 @@ ClientContext の編集を使用して、特定のプロパティの値を設定
 
 ### プロパティの詳細の編集 {#editing-property-details}
 
-ClientContext を編集して、特定のプロパティの値を設定（またはリセット）できます。 これにより、特定のシナリオをテストすることができます（特に[セグメント化](/help/sites-administering/campaign-segmentation.md)や[キャンペーン](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)で役に立ちます）。
+ClientContext を編集して、特定のプロパティの値を設定（またはリセット）できます。これにより、特定のシナリオをテストできます ( 特に [セグメント化](/help/sites-administering/campaign-segmentation.md) および [campaigns](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)) をクリックします。
 
 ![ClientContext の編集](assets/clientcontext_alisonparker_edit.png)
 
@@ -215,13 +215,13 @@ ClientContext を編集して、特定のプロパティの値を設定（また
 
 ### プロパティコンポーネントの削除 {#removing-a-property-component}
 
-を開いた後、 **ClientContextデザインページ**&#x200B;また、 **削除** プロパティ（不要になった場合） これには、標準で提供されるプロパティが含まれます。 **リセット** が削除された場合にそれらを回復します。
+を開いた後、 **ClientContextデザインページ**&#x200B;また、 **削除** プロパティ（不要になった場合）。 これには、標準で提供されるプロパティが含まれます。 **リセット** が削除された場合にこれらを回復します。
 
 ## JSONP を使用した ClientContext へのデータの格納 {#storing-data-in-client-context-via-jsonp}
 
-この例に従って、JSONP ストアのコンテキストストアコンポーネントを使用して、外部データを ClientContext に追加します。 次に、そのデータからの情報に基づいてセグメントを作成します。 この例では、WIPmania.com が提供する JSONP サービスを使用しています。 このサービスは、Web クライアントの IP アドレスに基づいて位置情報を返します。
+この例に従って、JSONP ストアのコンテキストストアコンポーネントを使用して、外部データを ClientContext に追加します。 次に、そのデータからの情報に基づいてセグメントを作成します。 この例では、WIPmania.comが提供する JSONP サービスを使用しています。 このサービスは、Web クライアントの IP アドレスに基づいて位置情報を返します。
 
-この例では、Geometrixx Outdoorsサンプル Web サイトを使用して ClientContext にアクセスし、作成したセグメントをテストします。 ページで ClientContext が有効になっている限り、別の Web サイトを使用できます。 ( [ページへの ClientContext の追加](/help/sites-developing/client-context.md#adding-client-context-to-a-page).)
+この例では、Geometrixx Outdoorsサンプル Web サイトを使用して ClientContext にアクセスし、作成したセグメントをテストします。 ページで ClientContext が有効になっている限り、別の Web サイトを使用できます。 ( 詳しくは、 [ページへの ClientContext の追加](/help/sites-developing/client-context.md#adding-client-context-to-a-page).)
 
 ### JSONP ストアコンポーネントの追加 {#add-the-jsonp-store-component}
 
@@ -229,7 +229,7 @@ JSONP ストアコンポーネントを ClientContext に追加し、それを�
 
 1. AEM オーサーインスタンスの Geometrixx Outdoors サイトの英語のホームページを開きます（[https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)）。
 1. ClientContext を開くには、Ctrl + Alt + C キー（Windows）または Control + Option + C キー（Mac）を押します。
-1. ClientContext の上部にある編集アイコンをクリックして、ClientContext Designer を開きます。
+1. ClientContext の上部にある編集アイコンをクリックして、ClientContext デザイナーを開きます。
 
    ![リンクアイコン](do-not-localize/chlimage_1.png)
 
@@ -237,7 +237,7 @@ JSONP ストアコンポーネントを ClientContext に追加し、それを�
 
    ![JSONP ストアコンポーネントを ClientContext にドラッグ&amp;ドロップする](assets/chlimage_1-4.jpeg)
 
-1. コンポーネントをダブルクリックして編集ダイアログを開きます。
+1. コンポーネントをダブルクリックして、編集ダイアログを開きます。
 1. 「JSONP サービスの URL」ボックスに次の URL を入力し、「ストアを取得」をクリックします。
 
    `https://api.wipmania.com/jsonp?callback=${callback}`
@@ -258,8 +258,8 @@ JSONP ストアコンポーネントを使用して作成したセッション�
 1. ツールコンソールを web ブラウザーで開きます（`https://localhost:4502/miscadmin#/etc`）。
 1. フォルダーツリーで、ツール/Segmentation フォルダーをクリックし、新規/新しいフォルダーをクリックします。 次のプロパティ値を指定し、「作成」をクリックします。
 
-   * 名前：mysegments
-   * タイトル：マイセグメント
+   * 名前： mysegments
+   * タイトル：My Segments
 
 1. My Segments フォルダーを選択し、新規/新しいページをクリックします。
 
@@ -274,9 +274,9 @@ JSONP ストアコンポーネントを使用して作成したセッション�
 
 1. コンポーネントをダブルクリックして編集ダイアログを開き、次のプロパティ値を指定して、「OK」をクリックします。
 
-   * ストア：ウィマニア
-   * プロパティ名：latitude
-   * 演算子：次よりも大きい
+   * ストア： wipmania
+   * プロパティ名： latitude
+   * 演算子：が次の値より大きい
    * プロパティ値：30
 
 1. スクリプトコンポーネントを同じ AND コンテナにドラッグし、その編集ダイアログを開きます。 次のスクリプトを追加し、「OK」をクリックします。
