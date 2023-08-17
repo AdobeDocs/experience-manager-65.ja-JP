@@ -87,8 +87,8 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      &lt;/sly>
      
      ```
-   
-1. `/apps/[your-sites-project]/components/page/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
+
+   1. `/apps/[your-sites-project]/components/page/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
        ```
      
@@ -97,8 +97,8 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      &lt;sly data-sly-test=&quot;${!wcmmode.edit}&quot; data-sly-call=&quot;${clientlib.js @ categories=&#39;core.forms.components.runtime.all&#39;, async=true}&quot;/>
      &lt;/sly>
      ```
-   
-1. `/apps/[your-sites-project]/components/xfpage/customheaderlibs.html` ファイルを開き、次のコードをファイルに追加します。
+
+   1. `/apps/[your-sites-project]/components/xfpage/customheaderlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
        ```
      //Customheaderlibs.html
@@ -107,8 +107,8 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      &lt;/sly>
      
      ```
-   
-1. `/apps/[your-sites-project]/components/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
+
+   1. `/apps/[your-sites-project]/components/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
        ```
      
@@ -117,8 +117,8 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      &lt;sly data-sly-test=&quot;${!wcmmode.edit}&quot; data-sly-call=&quot;${clientlib.js @ categories=&#39;core.forms.components.runtime.all&#39;, async=true}&quot;/>
      &lt;/sly>
      ```
-   
-1. 環境内のすべてのオーサーインスタンスとパブリッシュインスタンスで、上記の手順を繰り返します。
+
+   1. 環境内のすべてのオーサーインスタンスとパブリッシュインスタンスで、上記の手順を繰り返します。
 
 +++
 
