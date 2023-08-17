@@ -80,7 +80,7 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
 
 1. `/apps/[your-sites-project]/components/page/customheaderlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
-       ```
+     ```
      //Customheaderlibs.html
      &lt;sly data-sly-use.clientlib=&quot;core/wcm/components/commons/v1/templates/clientlib.html&quot;>
      &lt;sly data-sly-call=&quot;${clientlib.css @ categories=&#39;core.forms.components.runtime.all&#39;}&quot;/>
@@ -88,9 +88,9 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      
      ```
 
-   1. `/apps/[your-sites-project]/components/page/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
+1. `/apps/[your-sites-project]/components/page/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
-       ```
+     ```
      
      //customfooterlibs.html
      &lt;sly data-sly-use.clientlib=&quot;core/wcm/components/commons/v1/templates/clientlib.html&quot;>
@@ -98,9 +98,9 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      &lt;/sly>
      ```
 
-   1. `/apps/[your-sites-project]/components/xfpage/customheaderlibs.html` ファイルを開き、次のコードをファイルに追加します。
+1. `/apps/[your-sites-project]/components/xfpage/customheaderlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
-       ```
+     ```
      //Customheaderlibs.html
      &lt;sly data-sly-use.clientlib=&quot;core/wcm/components/commons/v1/templates/clientlib.html&quot;>
      &lt;sly data-sly-call=&quot;${clientlib.css @ categories=&#39;core.forms.components.runtime.all&#39;}&quot;/>
@@ -108,9 +108,9 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      
      ```
 
-   1. `/apps/[your-sites-project]/components/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
+1. `/apps/[your-sites-project]/components/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
-       ```
+     ```
      
      //customfooterlibs.html
      &lt;sly data-sly-use.clientlib=&quot;core/wcm/components/commons/v1/templates/clientlib.html&quot;>
@@ -118,7 +118,7 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
      &lt;/sly>
      ```
 
-   1. 環境内のすべてのオーサーインスタンスとパブリッシュインスタンスで、上記の手順を繰り返します。
+1. 環境内のすべてのオーサーインスタンスとパブリッシュインスタンスで、上記の手順を繰り返します。
 
 +++
 
