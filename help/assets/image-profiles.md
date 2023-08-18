@@ -10,10 +10,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 16ea73e9e75ddee25d7d348d4220a0e0f96a9ae8
-workflow-type: ht
+source-git-commit: d4c2890b92678aff58119e76251b5d181c95a393
+workflow-type: tm+mt
 source-wordcount: '3033'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
->• 画像プロファイルは、PDF ファイル、アニメーション GIF ファイル、INDD（Adobe InDesign）ファイルには適用されません。
+>* スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
+>* 画像プロファイルは、PDF ファイル、アニメーション GIF ファイル、INDD（Adobe InDesign）ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
@@ -57,7 +57,8 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->• アドビでは、生成される切り抜きやスウォッチをレビューして、それらが適切であり、ブランドや価値との関連性が高いことを確認することをお勧めします。• スマート切り抜きでは、CMYK 画像形式はサポートされていません。
+>* アドビでは、生成される切り抜きやスウォッチを確認し、これらが適切であり、ブランドと価値に関連していることを確認することをお勧めします。
+>* スマート切り抜きでは、CMYK 画像形式はサポートされていません。
 
 | オプション | 用途 | 説明 |
 | --- | --- | --- |
@@ -177,7 +178,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
+>* スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
 
 画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を手動で行って、焦点位置を細かく調整することができます。
 
@@ -208,7 +209,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
+>* スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
 
 スマート切り抜きを含んだ画像プロファイルをフォルダーに適用すると、そのフォルダー内のすべての画像に切り抜きが適用されます。必要に応じて、複数の画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を&#x200B;*手動*&#x200B;で行って、その焦点位置を細かく調整することができます。
 
