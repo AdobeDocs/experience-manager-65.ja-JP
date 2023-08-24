@@ -2,11 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: ea0f4096ac76ed11ee84a3769725f527c13fb461
+source-git-commit: 8edc6a97e2fc002d6dbbc4ce8b1828616b6c1cc6
 workflow-type: tm+mt
-source-wordcount: '3786'
-ht-degree: 99%
+source-wordcount: '3440'
+ht-degree: 42%
 
 ---
 
@@ -23,14 +22,14 @@ ht-degree: 99%
 
 | 製品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| バージョン | 6.5.17.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| バージョン | 6.5.18.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023年5月25日木曜日（PT）<!-- UPDATE FOR EACH NEW RELEASE --> |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.17.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日付 | 2023 年 8 月 24 日木曜日 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## [!DNL Experience Manager] 6.5.17.0 の内容 {#what-is-included-in-aem-6517}
+## [!DNL Experience Manager] 6.5.18.0 の内容 {#what-is-included-in-aem-6518}
 
-[!DNL Experience Manager] 6.5.17.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。[このサービスパックを [!DNL Experience Manager] 6.5 にインストール](#install)。
+[!DNL Experience Manager] 6.5.18.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。[このサービスパックを [!DNL Experience Manager] 6.5 にインストール](#install)。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -38,237 +37,198 @@ ht-degree: 99%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-このリリースの主な機能と改善点は次のとおりです。
+このリリースの主な機能および機能強化の一部を次に示します。
 
-* **検索エクスペリエンスの強化** - 検索結果に表示されるアセットに対して、次の操作を素早く実行できるようになりました。
-   * ワークフローを作成
-   * バージョンを作成
-   * アセットの関連付けまたは関連付け解除
+**主な機能**
 
-  これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
-* **Dynamic Media _スナップショット_**- テスト画像や Dynamic Media の URL を試して、様々な画像修飾子の出力や、ファイルサイズ（WebP および AVIF 配信による）、ネットワーク帯域幅およびデバイスのピクセル比を最適化するスマートイメージングを確認します。詳しくは、[Dynamic Media スナップショット](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=ja)を参照してください。
-* **Dynamic Media での DASH ストリーミング** - CMAF が有効な Dynamic Media ビデオ配信で、アダプティブストリーミングをサポートする新しいプロトコル（DASH - HTTP での動的アダプティブストリーミング）が開始しました。すべての地域で利用可能で、[サポートチケットを通じて有効になります](/help/assets/video.md#enable-dash-on-your-account-enable-dash)。
-* **Experience Manager Sites およびコンテンツフラグメントと Assets の次世代 Dynamic Media の統合** - Experience Manager Assets as a Cloud Service の次世代 Dynamic Media のユーザーは、これらのクラウドホストアセットを、Experience Manager Sites 6.5 のオンプレミスインスタンスまたは Managed Services インスタンスでのオーサリングと配信に使用できるようになりました。
+* Assets、Dynamic Media - [Dynamic Mediaでのビデオのマルチサブタイトルおよびマルチオーディオトラックのサポート](/help/assets/video.md#about-msma) — プライマリビデオに複数のサブタイトルや複数のオーディオトラックを簡単に追加できるようになりました。 この機能を使用すると、ビデオにアクセスできるのは、全世界のオーディエンス全体です。 複数の言語でグローバルオーディエンスに対して 1 つの公開済みプライマリビデオをカスタマイズし、様々な地域のアクセシビリティガイドラインに従うことができます。 作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルやオーディオトラックを管理することもできます。
 
-## Service Pack 17 の機能強化 {#enhancements-sp17}
+* アセット — 検索結果から、アセットを含むフォルダーの場所に移動できるようになり、様々なアセット管理タスクを実行できるようになりました。 （ASSETS-23182）
 
-### Forms{#aem-forms-6517}
+**主な機能強化**
 
-* **[AEM ページエディター内のアダプティブフォーム](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：AEM ページエディターを使用して、複数のフォームを素早く作成し、Sites ページに追加できるようになりました。この機能を使用すると、コンテンツ作成者は、動的な動作、検証、データ統合、レコードのドキュメントの生成、ビジネスプロセスの自動化など、アダプティブフォームコンポーネントの機能を利用して、Sites ページ内にシームレスなデータキャプチャエクスペリエンスを作成できます。以下の操作を実行できます。
-   * フォームコンポーネントを AEM サイトエディターまたはエクスペリエンスフラグメントのアダプティブフォームコンテナコンポーネントにドラッグ＆ドロップして、アダプティブフォームを作成します。
-   * AEM サイトエディター内でアダプティブフォームウィザードを使用すると、任意の Sites ページとは独立したフォームを作成して、自由に複数のページでそのフォームを再利用できます。
-   * 複数のフォームを Sites ページに追加し、ユーザーエクスペリエンスを合理化し、柔軟性を高めます。
-* **[Experience Manager Forms での reCAPTCHA Enterprise のサポート](/help/forms/using/captcha-adaptive-forms.md)**：Experience Manager Forms での reCAPTCHA Enterprise のサポートを追加し、既存の Google reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
-* **[Adobe Acrobat Sign for Government との Experience Manager Forms のサポート](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms は、Adobe Acrobat Sign for Government（FedRAMP 準拠）と統合されました。この統合により、政府関連のアカウント（政府機関および機関）に対するアダプティブフォーム送信による電子サインに、高度なコンプライアンスとセキュリティを提供します。Adobe Acrobat Sign for Government との統合により、アドビのパートナーや政府のお客様は、Adaptive Forms で最もミッションクリティカルで機密性の高い業務の一部に電子サインを使用できるようになります。このセキュリティの強化により、すべての電子サインが FedRAMP Moderate コンプライアンスに完全に準拠し、アドビの政府機関のお客様に安心感を提供します。
-* **データ交換用に Experience Manager Forms と Salesforce の統合が有効化**：OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Forms と Salesforce アプリケーションの統合を設定します。この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーが関与しないシームレスな通信が可能になります。
-* **ワークフローエンジンの最適化と機能強化**：ワークフローインスタンスの数を最小限に抑えて、ワークフローエンジンのパフォーマンスを向上させます。`COMPLETED` および `RUNNING` ステータス値に加えて、ワークフローは 3 つの新しいステータス値、`ABORTED`、`SUSPENDED` および `FAILED` もサポートします。
+* コンテンツフラグメントの Sites Polaris ピッカーは、パフォーマンスを向上させました。 （SITES-14092）
 
+* サイトのページエディター/画像コンポーネントユーザーが、リモートアセットCloud Serviceからアセットを参照できるようになりました。 （Sites-13448、Sites-13433）
+
+* Adobeで多数のプロジェクトがシステムに存在する場合に、リスト表示でプロジェクトをすばやく見つけるために、サーバー側での並べ替えがサポートされるようになりました。 プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。 （NPR-41027）
+
+* AEM 6.5.18.0は、MongoDB 5.0 から 6.0 をサポートしています。
+
+**Forms**
+
+* **ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化：** 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出し、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。 または、サービスから返されたエラーに対して特定のアクションを実行できます。 例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
+
+* **Adobe Sign Workflow ステップの強化：** AEM Workflows のAdobe Signワークフローステップは、次の機能強化で使用できます。
+
+   * **Adobe Signの政府機関 ID ベースの認証によるセキュリティの強化：** Adobe Acrobat Signの政府 ID ベースの認証では、政府発行の ID（運転免許証、国籍 ID、パスポート）を使用してユーザーが ID を認証できるようにすることで、さらに検証レイヤーを提供しています。 この機能強化は、信頼できる識別ドキュメントを活用することで、署名プロセスにさらに信頼性を高め、セキュリティ、コンプライアンス、およびユーザーの検証を強化する必要があるシナリオに最適です。
+
+   * **Adobe Signドキュメントの監査証跡による透明性の強化：** Adobe Signドキュメントのライフサイクルに関する詳細なインサイトについては、監査記録機能を使用します。 監査証跡を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を維持できるようになりました。 これには、ドキュメントの閲覧者、編集者、署名者、および各イベントのタイムスタンプなどの詳細が含まれます。 この強化は、コンプライアンスの維持、紛争の解決、およびデジタル契約の整合性の確保に不可欠です。
+
+
+  **「署名者」以外に、「契約」受信者の役割を拡張します。** Adobe Acrobat Signには、署名者以外にも、契約受信者の役割を拡張して、ワークフロー要件に合わせることができます。 有効にすると、契約の各受信者の役割は個別に設定でき、署名者がデフォルトとなります。
+
+
+* **AEM Forms on JEE の完全インストーラー**:Service Pack により、JEE 上のAEM Formsの完全なインストーラーが作成され、次のような新しいソフトウェアの組み合わせがサポートされます。
+   * Microsoft Windows Server 2022
+   * Microsoft Active Directory 2022
+   * OracleWebLogic 14C および 12.2.1.4（Windows Server 2022 上）
+   * Windows Server 2022 上の RedHat JBoss 7.4.10
+   * MongoDB 4.4
+   * SQL Server 用Microsoft JDBC Driver 12.2
+   * MySQL JDBC Connector 8
+
+JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、AEM 6.5.18.0 Formsを JEE 上のフルインストーラーで使用することをAdobeにお勧めします。 新しく追加および廃止されたソフトウェアの完全なリストを確認するには、JEE 上のAEM Formsまたは OSGi 上のAEM Formsのドキュメントを参照してください。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## Service Pack 17 の問題を修正しました {#fixed-issues}
+## Service Pack 18 の問題を修正しました {#fixed-issues}
 
-### [!DNL Sites]{#sites-6517}
+### [!DNL Sites]{#sites-6518}
 
-* LinkCheckerTransformer のパフォーマンスが低下します。（SITES-11661）
-* ページの言語コピーが期待どおりに更新されませんでした。（SITES-11191）
-* キャンペーンページ以外のページを開くと、不必要に `targeteditor.html` を呼び出します。`targeteditor` 呼び出しが不要な場合は削除します。（SITES-12469）
-* 注釈の付いたページにはライブコピーを作成できません。（SITES-12154）
-* Experience Manager 6.5.16 でページのロールアウトが機能しません。（SITES-12008）
-* メモリ不足、`NotificationManagerImpl` による活発なガベージコレクションのアクティビティ。`NotificationManager` バンドルを Experience Manager6.5 にアップグレードします。（SITES-11440）
-* サービスパック 17 をブロックしていた WCM IT テストを修正しました。（SITES-13089）
-* サイト参照の取得がサーブレットで失敗する。（SITES-10901）
+* バルクエディターを使用して、 `tsv` エクスポートし、変更をオフラインでおこない、 `tsv` Experience Managerに戻る ページが更新された場合でも、JCR プロパティは `cq:lastModified` が更新されず、タイムラインに表示されました。 （SITES-14072）
+* エクスペリエンスフラグメントのライブコピーまたはロールアウトを作成する際に、エクスペリエンスフラグメント内でリンク参照が更新されない。 （SITES-14759）
+* 既製のExperience Manager標準ロールアウト設定（「ページとサブページのロールアウト」）に親ページからワークフロー同期アクションが追加され、非同期ジョブが NullPointer 例外で失敗しました。 ソースの場所ページ (en-us) は親に存在しませんが、ターゲットの場所（ライブコピー）(en) に存在します。 （SITES-12207）
+* 次を含む「en」ページがあります： `jcr:description` 翻訳するページを送信しました。 The `jcr:description` が翻訳され、プロパティが launch の下に存在する。 ただし、ローンチが昇格されると、 `jcr:description` はページで更新されていません。 （SITES-13146）
+* ライブコピー上のローカライズされたコンテンツは、ブループリントのロールアウト後に失われます。 （SITES-12602）
 
-#### 管理ユーザーインターフェイス{#sites-adminui-6517}
+#### 管理ユーザーインターフェイス{#sites-adminui-6518}
 
-* サムネール画像セレクターのプレビューウィンドウを閉じることができない。（SITES-10459）
+* ユーザーの削除権限が useradmin コンソールを通じて削除された場合、ユーザーは（ページの選択時に） sites.html コンソールに「プロパティ」ボタンを表示しなくなります。 ただし、ユーザーがページエディターを開くと、このオプションが表示されます。 （SITES-14341）
+* フォルダーに多数のページがあり、各ページに多数のバージョンがある場合、バージョン比較機能を使用すると、インスタンスの負荷が高くなります。 複数のユーザーが同時にこの機能を使用する場合、インスタンスは停止する可能性があります。 （SITES-13026）
 
-#### [!DNL Content Fragments]{#sites-contentfragments-6517}
+#### [!DNL Content Fragments]{#sites-contentfragments-6518}
 
-* Polaris サービスオブジェクト（URL、資格情報、コールバックなど）に接続するための設定。（SITES-12149）
-* `SemanticDataType.REFERENCE` の使用方法は、「Remote-Asset-IDs」をサポートする必要があります。（SITES-12127）
-* Polaris アセットセレクターをコンテンツフラグメントエディターに統合します。（SITES-12125）
-* メタデータサービスエンドポイントにアクセスするには、必須の http ヘッダーが必要でした。（SITES-13068）
-* 6.5 の GraphQL 実装は、Cloud Service（プライマリ）と同じではありませんでした。特定された問題を修正しました。（SITES-13096）
-* GraphQL のページング／並べ替えおよびハイブリッドフィルタリングは、Experience Manager 6.5／AMS で使用できます。（SITES-9154）
+* の例外処理で問題が見つかりました `RemoteAssetClientImpl`. メタデータのクエリ中に IOException または RuntimeException が発生した場合、現在のスレッドは共有 httpClient を閉じて再作成しようとしますが、その結果、スレッド内の他のエラーがカスケードされる可能性があります。 （SITES-14092）
+* 作成者がコンテンツフラグメントのリッチテキストエディターフィールドに入力し、リンク内に画像を挿入すると、コンテンツフラグメントがGraphQL API を使用して照会されると、エラーメッセージが表示されます `Exception while fetching data (/genericContentByPath) : null` が返されます。 このエラーは、画像が含まれるリンクが存在する場合にのみ発生していました。 リンクから画像を削除すると、エラーメッセージが表示されなくなりました。 （SITES-13988）
+* Experience Manager6.5 のGraphQL実装がマスターと同じではなく、いくつかの重要な修正が見つかりませんでした。 （SITES-13096）
+* メタデータサービスエンドポイントにアクセスする場合は、必須の HTTP ヘッダーが必要です。 （SITES-13068）
 
-#### コアコンポーネント{#sites-core-components-6517}
+#### コアコンポーネント{#sites-core-components-6518}
 
-* 基盤ページコンポーネントのプロパティ `cq-msm-lockable` のリダイレクト値に間違いがあります。（SITES-10904）
-* リモートアセットピッカーが、常に IMS ステージ環境にリダイレクトされます。（SITES-13433）
+* アセットセレクターを閉じて再び開いたときに、更新されたアセットのリストが取得されない。 リポジトリに新しいアセットがアップロードされた場合、アセットセレクターを含むページが更新されるまで、アセットセレクターに表示されません。 （SITES-14828）
+* Sites エディター (CS) に統合されたアセットセレクターユーザーインターフェイスは、ウィンドウが縮小されるとレスポンシブになりません。 （SITES-14127）
+* アセットセレクター統合用のAdobe IMS(Identity Managementシステム ) 設定で、間違った値が受け入れられていました。 （SITES-13962）
+* アセットセレクターを Sites の画像コンポーネントに統合する場合、画像以外のアセットを選択できないようにする必要があります。 （SITES-13879）
+* ログインに成功すると、ユーザーはページエディターにリダイレクトされます。 リモートアセットを選択するには、アセットセレクターを再度開く必要があります。 （SITES-13851）
+* リモートアセットピッカーは、常にAdobe IMS(Identity Management System) ステージ環境にリダイレクトされます。 （Sites-13448、Sites-13433）
 
-#### [!DNL Experience Fragments]{#sites-experiencefragments-6517}
+<!-- #### [!DNL Experience Fragments]{#sites-experiencefragments-6518}
 
-* Adobe Target に書き出す際にエクスペリエンスフラグメントで Externalizer 設定を選択すると、誤っている外部化された URL が送信されます。（SITES-12402）
-* 非インクルーシブ用語を削除し、インクルーシブ用語のガイドラインを適用します。（SITES-11244）
+* A -->
 
-#### ページエディター{#sites-pageeditor-6517}
+#### ページエディター{#sites-pageeditor-6518}
 
-* カルーセルセットのサムネールが、Experience Manager コンテンツファインダーのサイドレールに表示されません。（SITES-8593）
+* 作成者がページのプロパティを開くと、ダイアログボックスの表示が正しくない。 つまり、余分な水平スクロールバーと余分な余白が表示されます。 （SITES-14502）
+* アンカーおよび body タグ用のスタイルがExperience Manager6.5 の Service Pack 17 で追加され、CSS の問題が発生していました。 作成者で、アンカータグに下線が表示されなかった問題を修正しました。 （SITES-14261）
 
-### [!DNL Assets]{#assets-6517}
+### [!DNL Assets]{#assets-6518}
 
-* 40 を超える PDF を同時に公開する場合、[!DNL Experience Manager] が応答を停止し、しばらくの間使用できなくなります。（ASSETS-21789）
-* テストユーザーとしてログインしている場合、アセットのプロパティをクリックしても、特定のアセットに関連するアセットが表示されません。（ASSETS-21648）
-* `Desktop Actions` を使用してアセットを編集する際、一度に 5 つ以上のアセットをチェックインしようとすると `Limit Reached` エラーが表示され、選択したアセットがチェックアウトされます。（ASSETS-21121）
-* コレクション内のアセットを名前で並べ替えることができません。（ASSETS-20924）
-* 画像アセットの形式にサイズを設定できません。（ASSETS-20835）
-* リンクを共有している間、「メールアドレスを検索／追加」フィールドのツールヒントのテキストとその背景に、適切なコントラスト比が表示されません。（ASSETS-17347）
-* `Notifications` を展開すると、段落の間隔が原因でテキストが正しく表示されません。（ASSETS-17345）
-* コレクション内のアセットをコピーすると、`Public Collection` チェックボックスが適切に表示されません。（ASSETS-17343）
-* 要素が役割のない ARIA 属性を使用します。（Assets-17325、Assets-17323）
-* `Notifications` を展開すると、リンクが説明的ではありません。（ASSETS-17283）
-* [!DNL Smart Crop] ボタンを移動して展開すると、コンテンツはリストのように表示されるが、順序なしリストとしてマークアップされません。そのため、スクリーンリーダーは順序なしのリストを認識せず、プレーンテキストとして読み上げます。（ASSETS-17247）
-* `Sort By` ラベルがそれぞれのドロップダウンに関連付けられていません。そのため、スクリーンリーダーがドロップダウンオプションを認識しません。（ASSETS-17239）
-* `Add user` コンボボックスを使用してユーザーを追加しようとすると、キーボードの Tab キーまたは矢印キーを使用して前方または後方に移動できません。（ASSETS-17233）
-* スクリーンリーダーがワークフローステップの情報を正しく伝えていません（ASSETS-17285）。
-* `Saved Searches` コンボボックスに移動すると、名前と役割の両方にラベルが割り当てられていません。（ASSETS-17329）
-* `Collection` に移動し、テキスト「*メンバー*」にマウスポインターを置いても、テキストがマークアップされて表示されません。そのため、スクリーンリーダーは見出しテキストを認識せず、プレーンテキストとして読み上げます。（ASSETS-17245）
-* キーボードの下スクロールキーまたは上スクロールキーを使用して `View Settings` オプションにアクセスできません。（ASSETS-17257）
-* 検索フィルターを使用して見つかった複数の選択済みアセットに対して、ワークフローをトリガーできません。（ASSETS-7689）
-* 検索結果からアセット（1 つまたは複数）を選択すると、「関連付け」オプションまたは「関連付けを解除」オプションが表示されません。ただし、それ以外の場合には、このオプションを使用することができます。（ASSETS-7679）
-* 検索フィルターパネルがログイン後に 1 回だけ開き、検索ページを終了して検索を再実行した場合には開きません。（ASSETS-7671）
-* リンクを共有する際に、メールコンボボックスに適切なコントラスト比が表示されません。（ASSETS-17349）
+* スクリーンリーダーは、 [!UICONTROL 切り抜きを開始] オプションを使用して設定できます。 （NPR-40593）
+* AEM 6.5.17.0インスタンスでアセットをアップロードする際に、Experience Managerにエラーメッセージと警告メッセージが表示される。 （ASSETS-26232）
+* 読み取り専用アクセス権を持つフォルダーからのアセットに対して完全アクセス権を持つExperience Managerーからのアセットを関連付けると、エラーメッセージが表示されますが、2 つのアセット間に部分的な関係が作成されます。 （ASSETS-25832）
+* AMS インスタンスとCloud Serviceインスタンスの間で Connected Assets が機能しない。 （ASSETS-24930）
+* メタデータスキーマFormsの編集中に、 [!UICONTROL オンタイム] および [!UICONTROL オフタイム] フィールドが正しく保存されません。 （ASSETS-24871）
+* トレーニング済みタグのスマートタグレポートを生成する際に、信頼性スコアの低いタグが一覧に表示されません。 （ASSETS-24109）
+* Experience Managerは、列表示で画像を編集および注釈を付ける際に、空白の画面を表示します。 （ASSETS-24108）
+* スクリーンリーダーで、コレクションの作成時に「ユーザーを追加」フィールドの目的が読み上げられない。 （ASSETS-21736）
+* The **コレクション** ラベルがコレクションのプロパティページにローカライズされていない。 （ASSETS-21102）
+* デフォルトのメタデータスキーマフォームを使用してルールを追加したり、既存のルールを編集したりする場合、ドロップダウンリストの言語はローカライズされません。 （ASSETS-21026）
+* Experience Managerで、メタデータスキーマに JSON パスを追加すると、ローカライズされていないエラーメッセージが表示される。 （ASSETS-21025）
+* 左側のナビゲーションの「タイムライン」オプションには、適切なコントラスト比が表示されません。 （ASSETS-17348）
+* カレンダー要素では、必要な ARIA 属性は使用されません。 （ASSETS-17282）
+* 左側のナビゲーションテキストには、適切なコントラスト比が表示されません。 （ASSETS-17268）
+* Lightbox 画像は、スクリーンリーダーユーザーに対して非表示にはなりません。 （Assets-17263、Assets-17242）
+* アクティブなユーザーインターフェイスの状態では、背景に関する適切なコントラスト比が提供されません。 （ASSETS-17260）
+* アセットに注釈を追加する際に、スクリーンリーダーが [!UICONTROL バージョンとして保存] または [!UICONTROL ワークフローを開始] ボタンをクリックし、キーボードの矢印キーを使用して移動する。 （ASSETS-17253）
+* 特定の ARIA ロールでは、Assets ホームページに適切な子ロールが含まれていません。 （ASSETS-17248）
+* キーボードを使用して画像タイプのアセットの編集オプションに移動すると、 [!UICONTROL ローンチマップ] オプションが認識されず、キーボードフォーカスが代わりにキャンセルボタンに移動する。 （ASSETS-17238）
 
-<!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST 
-* When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
-* When you navigate to `Smart Crop` option, the screen reader does not announce the expand or collapse state of the button. (ASSETS-17335)-->
+#### [!DNL Dynamic Media]{#assets-dm-6518}
 
-#### [!DNL Assets] - [!DNL Dynamic Media]{#dm-6517}
+* VTT のダウンロードに失敗した場合、ビデオは表示されません。 空白の画面が表示され、ビデオスクラバは前に進んでいます。 （ASSETS-21909）
+* キーボードの Tab キーを使用して移動する際に、ビデオの下に表示される複数のコントロールにフォーカスが移動しない。 したがって、アクセスできません。 インタラクティブビデオのキーボードナビゲーションが改善されました。 （ASSETS-25749）
+* Dynamic Mediaコンポーネントに表示される、無効なビューアプリセットを修正しました。 （ASSETS-22922）
+* 一般設定の「セキュリティ」タブから「画像サービング」を削除しました。 （ASSETS-24618）
+* アセットがDynamic Mediaおよび StringIndexOutOfBoundsException にアップロードできない問題を修正しました。 （ASSETS-25787）
+* 「基本」タブの必須の「幅」編集フィールドに視覚的なアスタリスクを追加しました。 （ASSETS-25741）
+* 透かしのDynamic Mediaレンディションのダウンロードを修正しました。 （ASSETS-26173）
+* ビデオ以外のアセット名の 127 文字の制限を復元しました。 （ASSETS-26074）
 
-* Dynamic Media クラウド設定が既に存在する場合に、Dynamic Media への接続が切断されます。（ASSETS-23057）
-* 多数の Dynamic Media ビデオが含まれているフォルダーを参照する際のパフォーマンスが向上し、フォルダーカード表示で読み込みが失敗する問題が解決されました。（ASSETS-23016）
-* セキュリティで保護されたテストサーバーからセキュリティで保護されたコンテンツを要求するために使用できるプレビュートークンが `error.log` から削除されました。（ASSETS-22685）
-* PDF サムネールのレンダリングにシャドウを追加しました。PDF サムネールのレンダリングの問題を解決するために、Gibson lib バージョン 4.0.1680232194 をアップグレードしました。（ASSETS-22585）
-* Dynamic Media ハイブリッドモードと New Relic エージェントバージョン 8.0.1 の互換性が追加されました（ASSETS-22578）。
-* Experience Manager で Dynamic Media ファイルをプレビューする際に、Experience Manager ACL（アクセス制御リスト）が考慮されるようになりました。（ASSETS-21628）
-* スクリーンリーダーで、ユーザーが下矢印キーまたは Tab キーを使用して移動しようとしても、非表示の要素に移動しません。（ASSETS-5617）
-* イメージプロファイルユーザーインターフェイスは、同じ名前、同じサイズ、またはその両方に該当するスマート切り抜きに対して制限されています。（ASSETS-16997）
-* イメージプロファイルユーザーインターフェイスでスマート切り抜きのデフォルトの幅と高さが 50 ピクセルに設定されるようになりました。（ASSETS-16997）
+### [!DNL Forms]{#forms-6518}
 
-### [!DNL Forms]{#forms-6517}
+の修正点 [!DNL Experience Manager] Formsは、スケジュールされた [!DNL Experience Manager] サービスパックのリリース日です。 この場合、AEM 6.5.18.0 Formsアドオンパッケージリリースは 2023 年 8 月 31 日（木）に予定されています。 Formsの修正および機能強化のリストは、リリース後にこの節に追加されます。
+<!--
+* After Experience Manager, Service Pack 16 is installed on the servers, all the Interactive communication Letters starts to clock if they try to edit these letters. If they provide any sample payload to preview or view/edit the properties page, they work. However, they are not able to edit the letters. (FORMS-9067) 
+-->
 
-* AEM 6.5.15.0 Service Pack に更新した後で、IE 互換モードの Edge ブラウザーを使用すると、HTML5 フォームが機能しないか、正しく読み込まれません。（FORMS-8526、FORMS-8523）
-* ユーザーが AEM 6.5.16.0 サービスパックを適用すると、ルールエディターが開きません。（FORMS-8290）
-* 数値ボックスコンポーネントに最大桁数の検証を適用すると、検証が失敗します。（FORMS-7938）
-* インタラクティブな通信ステートメントを作成する際に、PDF 内のグラフコンポーネントが正しく生成されません。（FORMS-7827、FORMS-8297）
-* Java™ ガベージコレクションが、Experience Manager Forms OSGi サーバー上にある旧世代のヒープをクリアできない。（FORMS-8207）
-* ユーザーが Experience Manager 6.5.16.0 サービスパックにアップグレードすると、送信後に CRX メタデータプロパティが欠落する。（FORMS-8205）
-* ユーザーがアダプティブフォーム日付選択コンポーネントを無効にしても、そのコンポーネントは引き続き編集可能になる。（FORMS-7804）
-* Experience Manager 6.5.16.0 Forms サービスパックで、ユーザーがポリシーセットコーディネーターを編集しようとすると、Manager Document Publisher が常にオフの状態になる。（FORMS-7775、FORMS-8599）
-* ユーザーが Experience Manager 6.5.16.0 サービスパックにアップグレードすると、翻訳が必要な文字列を処理する「GuideNode.externalize」メソッドが機能しなくなります。（FORMS-7709）
-* `Assign task` の手順で、ユーザーが「通知メールを送信」を選択してワークフローを呼び出すと、受信メールにテキストが正しく表示されません。受信メールでは、本文の代わりに疑問符が表示されます。（FORMS-7675）
-* レコードのドキュメントが部分的にローカライズされています。（FORMS-7674、FORMS-7573）
-* 特定の権限が割り当てられている場合でも、ユーザーがポリシーセットを編集できない。（FORMS-7665）
-* `forms-users` グループのユーザーがフォームを作成しようとすると、Experience Manager Forms インスタンスがクラッシュする。（FORMS-7629）
-* ユーザーがアダプティブフォームの「リセット」、「保存」、「送信」の各ボタンをクリックしても、画面にメッセージが表示されません。（FORMS-7524）
-* Experience Manager 6.5.16.0 サービスパックでは、PDFG 変換のパフォーマンスを向上させるために、スリープ間隔を設定できるようになりました。（FORMS-6752）
-* 切替スイッチのオプションは同じですが、ユーザーがカーソルを少しドラッグすると、フィールドの表示／非表示が切り替わります。（FORMS-6728）
-* ユーザーが Experience Manager 6.5.15.0 サービスパックにアップグレードすると、Internet Explorer でアダプティブフォームをレンダリングする際にリダイレクトが機能しなくなります。（FORMS-6725）
-* PAC 2021 ツールを使用すると、Experience Manager Designer で作成された PDF フォーム内のすべてのバックグラウンドオブジェクトに対して、`Path object not tagged` がエラーとして返されます。（FORMS-6707）
-* ユーザーがインボックスでフィルターを適用すると、`NullPointerException` というエラーが発生します。（FORMS-6706）
-* ユーザーが参照フラグメントを含むテンプレート（.tds）ファイルを読み込むと、Experience Manager Designer がクラッシュします。（FORMS-6702）
-* ユーザーが Experience Manager Forms Designer 6.5 の出力サービスを使用して静的 PDF を作成すると、`OCCD (optional content configuration dictionary) contains AS key` というエラーが発生します。（FORMS-6691）
-* ユーザーが単純なワークフローを作成して、単純な変数を追加すると、`set variable mapping` というエラーが発生します。（FORMS-5819）
-* ユーザーが出力サービスを使用して PDF を生成しようとすると、`PDF/A-1a` とマークされていても、`Preflight` サービスを使用したコンプライアンスチェックが失敗します。（LC-3920837）
-* Experience Manager 6.5.16.0 サービスパックインストールすると、Experience Manager Designer が開かなくなります。（LC-3921000）
-* ユーザーがチェックボックスとラジオボタンを追加した場合、タグツリーの構造が PDF 規格に沿って生成されません。（LC-3920838）
-* ユーザーが出力サービスを使用してフォントの埋め込みとサブセット化を行い、静的な PDF を生成した場合、生成される PDF には埋め込まれたフォントのみが含まれます。（LC-3920963）
-* RTL 形式で、ヘブライ語のテキストが正しく表示されない。（LC-3919632）
-* ユーザーが JBoss® Turnkey サーバー上で Experience Manager 6.5.16.0 サービスパックにアップグレードすると、Signature サービスの呼び出しが失敗します。`java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element` というエラーが発生します。（FORMS-7833）
-* Experience Manager 6.5.14.0 サービスパックにアップグレードすると、CRX ノードをある場所から別の場所に移動するワークベンチプロセスが機能しません。`ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]` というエラーが発生します。（FORMS-7713）
-* ユーザーが Experience Manager 6.5.16.0 サービスパックに更新すると、`Usage Rights` を適用できなくなります。（FORMS-7892）
-* ユーザーが PDF ドキュメントを生成しようとすると、PDF/A-1b 検証が失敗します。（FORMS-7615）
-* ユーザーが `Form Container` コンポーネントの `Configure` オプションをクリックすると、ブラウザーが応答しなくなります。（FORMS-7605）
-* ユーザーが Experience Manager Forms 6.5.16.0 サービスパックに更新すると、`LicenseType` を `Production` に変更しようとした場合に、変更が反映されません。（FORMS-7594）
-* ユーザーが `Chinese Full Width Characters` を含む PDF を使用して LCA プロセスを呼び出そうとすると、`ValidateForm` プロセスで問題が発生します。（FORMS-7464）
-* Experience Manager Forms Designer では、XMLFM で XDP ベースのテンプレート用に ZPL 出力を生成する際に、レターサイズ、A4、A5 などの異なる用紙サイズが適用される場合があります。（FORMS-7898）
 
-### [!DNL Commerce]{#commerce-6517}
+<!-- ### [!DNL Commerce]{#commerce-6518}
 
-* 移動されたタグはガベージコレクションの対象となりますが、`/var` の下にある製品からの参照は維持されます。（CQ-4351337）
+* A -->
 
-### 基盤{#foundation-6517}
+### 基盤{#foundation-6518}
 
-#### 統合{#integrations-6517}
+#### コンテンツの配布{#foundation-content-distribution-6518}
 
-* Adobe Target IMS 設定をレガシークラウド設定のユーザー資格情報に変換する場合、`connectedWhen` プロパティは変更されません。この問題により、すべての呼び出しが、設定が IMS ベース設定のままであるかのように実行されます。（CQ-4352810）
-* Adobe Sign 設定で `modifyProperties` の権限を `fd-cloudservice` システムユーザーに追加します。（FORMS-6164）
-* Adobe Target と統合された Experience Manager では、AB テストアクティビティを作成すると、そのアクティビティに関連付けられたオーディエンスは Target と同期されません。（NPR-40085）
+* アセットの削除キューはブロックしないでください。また、ログファイルにエラーは発生しません。 （NPR-40570）
 
-#### Oak{#oak-6517}
+<!-- #### Integrations{#integrations-6518}
 
-サービスパック 13 以降で、永続性キャッシュに影響する次のエラーログが表示され始めました。
+* A -->
 
-```shell
-org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
-at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
-    at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
-    at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
-    at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
-    at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
-    at org.h2.mvstore.db.Store.<init>(Store.java:129)
-```
+<!-- #### Oak{#oak-6518}
 
-または
+* A -->
 
-```shell
-org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5].
-```
+#### プラットフォーム{#foundation-platform-6518}
 
-この例外を解決するには、次の手順を実行します。
+* バニラExperience Manager、Service Pack 17 のインストール後、 `stderr.log`. Vanilla のインストール時にエラーが発生しないようにする。 （CQ-4353637）
+* ACL（アクセス制御リスト）に従わないタグ付け画面の「作成」ボタン。 （NPR-40973）
+* Experience Manager上の ContextHub のキャッシュノードを作成、アクセス、またはその両方を行うことができません。 （NPR-40515）
 
-1. 次の 2 つのフォルダーを `crx-quickstart/repository/` から削除する
+#### レプリケーション{#foundation-replication-6518}
 
-   * `cache`
-   * `diff-cache`
+* レプリケーションフラッシュは、要求されたパスのすべての子孫を削除します。 （NPR-40569）
 
-1. サービスパックをインストールするか、Experience Manager as a Cloud Serviceを再起動します。
-`cache` および `diff-cache` の新しいフォルダーが自動的に作成され、`error.log` 内で `mvstore` に関連する例外は発生しなくなりました。
+#### Sling{#foundation-sling-6518}
 
-#### プラットフォーム{#platform-6517}
+* リンク共有レポートが生成されると、リンク列に正しい値が含まれていません。 （NPR-40798）
+* AEM 6.5.15.0では、AEMの再起動後、すべてのバニティー URL、Sling エイリアス、Sling マッピングが壊れます。 （NPR-40420）
 
-* Experience Manager タグ管理ユーザーインターフェイス（/aem/tags/）で、名前空間とタグが作成された順序で表示されます。ただし、多数の名前空間とタグがある場合、名前空間を表示および管理するのは困難です。この問題は、他の方法で並べ替えることができないためです。（NPR-39620）
-* 一部のクライアントライブラリで縮小 js が機能しないので、Google 閉鎖バージョンの更新が必要です。（NPR-40043）
+#### 翻訳プロジェクト{#foundation-translation-6518}
 
-#### Sling{#sling-6517}
+* 翻訳 `rules.xml` 翻訳設定のユーザーインターフェイスからルールが追加された場合、ソートの品質が低くなりました。 （NPR-40431）
+* 翻訳時にクエリパラメーターを使用したリンクをサポートします。 （NPR-40339）
+* 追加のコンテキストルートを更新した後、辞書のユーザーインターフェイスが顧客に対して読み込まれません。 （NPR-40650）
+* アセットの 1 つが、ReferenceFragment または ContentFragment タイプを持つ複数フィールドを含むコンテンツフラグメントの場合、言語コピーの作成中にエラーが発生しました。 （NPR-40892）
 
-* 架空のパスが提供された場合、Sling `ResourceMerger` が大量の CPU を消費し、サービス拒否を引き起こします。（NPR-40338）
+#### ユーザーインターフェイス{#foundation-ui-6518}
 
-#### 翻訳プロジェクト{#translation-6517}
+* 詳しくは、 [設定ブラウザーのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=en#using-configuration-browser), _「名前」は、リポジトリ内のノード名になります。_. ただし、設定ブラウザーでは、CRXDE Liteのパスに設定タイトルが使用され、設定の名前は無視されます。 （NPR-40607）
 
-<!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST * The `translationrules.xml` is sorted poorly when adding a rule to a property by way of the translation configuration user interface. (NPR-40431) -->
-* ユーザーが必須以外のフィールドを設定していない場合、言語コピーが作成されません。（NPR-40036）
+<!-- #### WCM{#wcm-6518}
 
-#### ユーザーインターフェイス{#ui-6517}
+* A -->
 
-* ページプロパティの「キャンセル」ボタンが非アクティブになっていると、サイト管理ユーザーインターフェイスが表示されます。（NPR-40501）
+#### ワークフロー{#foundation-workflow-6518}
 
-<!-- ## WCM{#wcm-6517}
+* アセットのバージョンを元に戻しても、アセットのステータスは処理モードのままになります。 （NPR-41029）
+* アセットおよびプロジェクトユーザーインターフェイスの並べ替えの問題。 ビジネス要件に従って、アセットとプロジェクトのユーザーインターフェイスにカスタム列をオーバーレイしたものもあります。 標準のプロパティを使用して並べ替えを実装しています。 `sortable=true`. ただし、プロジェクトまたはアセットユーザーインターフェイスに多数のエントリがある場合、並べ替えで不整合が生じています。 （NPR-41027）
+* ログに次の情報が入力されています： `NullPointerException` （内） `EMailNotificationService`、および送信するワークフローが設定された電子メールは送信されません。 （NPR-40898）
+<!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST  * The timeline is not providing references to the selected content. (NPR-40806) -->
 
-* TEXT -->
-
-#### ワークフロー{#workflow-6517}
-
-* ワークフローコンソールの変更（NPR-40502）
-* `com.day.cq.workflow.impl.email.EMailNotificationServic` クラスの閉じられていないリソースリゾルバーが原因で、実稼動オーサーインスタンスのログ内に `SegmentNotfound errors` があります。（NPR-40187）
-* クローズした閉じられていない `ResourceResolver` の例外がログに記録されます。（ASSETS-22495）
-* 膨大な `DocumentAncestors` メタデータ属性を持つ PSD／PDFがアップロードされた場合、Experience Manager オーサーがクラッシュします。（ASSETS-22966）
-* `user-reader-service` を使用した `InboxSharingCache` クラスのセッションリーク。（CQ-4352513）
-* 「ワークフローイニシエーター参加者選択」ステップで参加者ステップのユーザーとグループが一覧表示されると、不完全なユーザーとグループのリストが表示されます。この問題は、あるグループが別のグループのメンバーでもある場合に発生しました。（NPR-40055）
-* ワークフローのパージが強化されました。（NPR-40459）
-
-## [!DNL Experience Manager] 6.5.17.0 のインストール{#install}
+## [!DNL Experience Manager] 6.5.18.0 のインストール{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.17.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
-* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.17.0.zip)からダウンロードできます。
-* MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.17.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.18.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip)からダウンロードできます。
+* MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.18.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> アドビでは、[!DNL Experience Manager] 6.5.17.0 パッケージを削除またはアンインストールすることを推奨しません。したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。<!-- UPDATE FOR EACH NEW RELEASE -->
+> アドビでは、[!DNL Experience Manager] 6.5.18.0 パッケージを削除またはアンインストールすることを推奨しません。したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。<!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
@@ -278,7 +238,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.17.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -288,28 +248,28 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 
 >[!NOTE]
 >
->サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでもときどき発生する場合があります。
+>サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認します。 この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでもときどき発生する場合があります。
 
 **自動インストール**
 
-[!DNL Experience Manager] 6.5.17.0. の自動インストールに使用できる方法は 2 つあります<!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.18.0. の自動インストールに使用できる方法は 2 つあります<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。パッケージが自動的にインストールされます。
 * [パッケージマネージャーの HTTP API](/help/sites-administering/package-manager.md#package-share) を使用します。ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
 >[!NOTE]
 >
->Experience Manager 6.5.17.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.18.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 **インストールの検証**
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.17.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.18.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
 
-1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.15 以降です（web コンソールを使用：`/system/console/bundles`）。<!-- NPR-40398 for 6.5.17.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.16 以降です（web コンソールを使用：`/system/console/bundles`）。<!-- NPR-41010 for 6.5.18.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
 ### [!DNL Experience Manager] Forms へのサービスパックのインストール{#install-aem-forms-add-on-package}
 
@@ -329,7 +289,7 @@ GraphQL を使用しているお客様は、[Experience Manager コンテンツ�
 
 ### UberJar{#uber-jar}
 
-[!DNL Experience Manager] 6.5.17.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.17/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.18.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -337,7 +297,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.17</version>
+     <version>6.5.18</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -364,6 +324,34 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 <!-- REMOVED AS PER CQDOC-20022, JANUARY 23, 2023 * If you install [!DNL Experience Manager] 6.5 Service Pack 10 or a previous service pack on [!DNL Experience Manager] 6.5, the runtime copy of your assets custom workflow model (created in `/var/workflow/models/dam`) is deleted.
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
+
+* Oak From Service Pack 13 以降に関連して、次のエラーログが表示され始め、永続性キャッシュに影響します。
+
+  ```shell
+  org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
+  at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+      at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+      at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+      at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+      at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+      at org.h2.mvstore.db.Store.<init>(Store.java:129)
+  ```
+
+  または
+
+  ```shell
+  org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5].
+  ```
+
+  この例外を解決するには、次の手順を実行します。
+
+   1. 次の 2 つのフォルダーを `crx-quickstart/repository/` から削除する
+
+      * `cache`
+      * `diff-cache`
+
+   1. サービスパックをインストールするか、Experience Manager as a Cloud Serviceを再起動します。
+`cache` および `diff-cache` の新しいフォルダーが自動的に作成され、`error.log` 内で `mvstore` に関連する例外は発生しなくなりました。
 
 * コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
@@ -410,10 +398,10 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
-次のテキストドキュメントには、[!DNL Experience Manager] 6.5.17.0 に含まれている OSGi バンドルとコンテンツパッケージの一覧が記載されています。<!-- UPDATE FOR EACH NEW RELEASE -->
+次のテキストドキュメントには、[!DNL Experience Manager] 6.5.18.0 に含まれている OSGi バンドルとコンテンツパッケージの一覧が記載されています。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Experience Manager 6.5.17.0 に含まれている OSGi バンドルの一覧](/help/release-notes/assets/65170_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager 6.5.17.0 に含まれているコンテンツパッケージの一覧](/help/release-notes/assets/65170_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager 6.5.18.0 に含まれている OSGi バンドルの一覧](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager 6.5.18.0 に含まれているコンテンツパッケージの一覧](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## 制限付き Web サイト{#restricted-sites}
 
