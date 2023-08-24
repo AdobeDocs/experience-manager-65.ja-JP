@@ -2,10 +2,10 @@
 title: IMS を使用した Adobe Target との統合
 description: IMS を使用した AEM と Adobe Target の統合について説明します
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 98%
+source-wordcount: '1577'
+ht-degree: 96%
 
 ---
 
@@ -68,6 +68,12 @@ Adobe Developer Console を使用して、AEM が使用する Adobe Target と�
 ### プロジェクトの作成 {#creating-the-project}
 
 Adobe 開発者コンソールを開いて、AEM で使用する Adobe Target を組み込んだプロジェクトを作成します。
+
+>[!CAUTION]
+>
+>現在、Adobe Developer Console の **サービスアカウント (JWT)** 資格情報のタイプ。
+>
+>次を使用しない **OAuth サーバー間通信** 秘密鍵証明書のタイプ。今後サポートされる予定です。
 
 1. Adobe Developer Console を開いて、プロジェクトを表示します。
 

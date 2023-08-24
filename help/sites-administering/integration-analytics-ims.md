@@ -2,10 +2,10 @@
 title: IMS を使用した Adobe Analytics との統合
 description: IMS を使用した AEM と Adobe Analytics の統合について説明します
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06ed2329840e151083bd238ee3a4d33663463c9c
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 98%
+source-wordcount: '1085'
+ht-degree: 95%
 
 ---
 
@@ -60,7 +60,7 @@ Analytics Standard API を介して AEM と Adobe Analytics を統合するに�
    >
    >この設定は、[AEM で IMS 設定を完了する](#completing-the-ims-configuration-in-aem)ときに再び必要になるため、開いたままにしてください。
 
-   ![キーをAdobe I/Oに追加する情報ダイアログ](assets/integrate-analytics-io-02.png)
+   ![キーをAdobe I/Oに追加するための情報ダイアログ](assets/integrate-analytics-io-02.png)
 
 ## AEM との Adobe Analytics 統合用の IMS の設定 {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
@@ -69,6 +69,12 @@ Adobe Developer Console を使用する場合は、Adobe Analytics でプロジ�
 ### プロジェクトの作成 {#creating-the-project}
 
 Adobe Developer Console を開いて、AEM が使用する Adobe Analytics でプロジェクトを作成します。
+
+>[!CAUTION]
+>
+>現在、Adobe Developer Console の **サービスアカウント (JWT)** 資格情報のタイプ。
+>
+>次を使用しない **OAuth サーバー間通信** 秘密鍵証明書のタイプ。今後サポートされる予定です。
 
 1. Adobe Developer Console を開いて、プロジェクトを表示します。
 
