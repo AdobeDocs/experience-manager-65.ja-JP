@@ -9,14 +9,14 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 82%
+source-wordcount: '2154'
+ht-degree: 80%
 
 ---
 
-# 送信アクションの設定{#configuring-the-submit-action}
+# 送信アクションの設定 {#configuring-the-submit-action}
 
 <span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
@@ -45,6 +45,7 @@ ht-degree: 82%
 * フォームデータモデルを使用して送信
 * フォームポータル送信アクション
 * AEM ワークフローを起動
+* Power Automate に送信
 
 >[!NOTE]
 >
@@ -155,6 +156,19 @@ Forms Portal と送信アクションについて詳しくは、 [ドラフト�
 * **添付ファイル**：「**[!UICONTROL 添付ファイルのパス]**」オプションを使用して、アダプティブフォームにアップロードされた添付ファイルの保存先となるフォルダー名を指定できます。フォルダーがペイロードを基準に作成されます。ワークフローが外部データストレージ用にマークされている場合は、「変数」オプションを使用し、ワークフローモデルで使用可能な変数のリストから変数を選択します。
 
 * **レコードのドキュメント**：アダプティブフォーム用に生成されたレコードのドキュメントを含みます。「**[!UICONTROL レコードのドキュメントパス]**」オプションを使用して、レコードのドキュメントファイル名と、ペイロードを基準にファイルのパスを指定できます。例えば、`/addresschange/DoR.pdf` パスは、ペイロードを基準に `addresschange` という名前のフォルダーを作成し、ペイロードを基準に `DoR.pdf` を配置します。`DoR.pdf` のみを指定して、フォルダー階層を作成せずに、レコードのドキュメントのみを保存することもできます。ワークフローが外部データストレージ用にマークされている場合は、「変数」オプションを使用し、ワークフローモデルで使用可能な変数のリストから変数を選択します。
+
+## Power Automate に送信 {#microsoft-power-automate}
+
+送信時に Microsoft® Power Automate のクラウドフローを実行するように、アダプティブフォームを設定できます。設定済みのアダプティブフォームは、キャプチャされたデータ、添付ファイルおよびレコードのドキュメントを Power Automate クラウドフローに送信して処理します。 Microsoft® Power Automate の機能を活用して、キャプチャされたデータを中心にビジネスロジックを構築し、顧客のワークフローを自動化しながら、カスタムのデータキャプチャエクスペリエンスを構築するのに役立ちます。アダプティブフォームを Microsoft® Power Automated と統合した後に実行できる操作の例を以下に示します。
+
+* Power Automate のビジネスプロセスでアダプティブフォームデータを使用する
+* Power Automate を使用して、500 を超えるデータソースまたは一般公開されている API にキャプチャしたデータを送信する
+* キャプチャしたデータに対する複雑な計算を実行する
+* 事前に定義されたスケジュールでアダプティブフォームのデータをストレージシステムに保存する
+
+アダプティブFormsエディターでは、 **Microsoft® Power Automate フローを起動します。** 送信アクションを実行して、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate Cloud Flow に送信します。 送信アクションを使用して、取得したデータをMicrosoft® Power Automate に送信するには、次の手順を実行します。 [AEM FormsインスタンスをMicrosoft® Power Automate に接続する](/help/forms/using/forms-microsoft-power-automate-integration.md)
+
+設定が正常に完了したら、 [Microsoft® Power Automate フローを起動します。](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) 送信アクションを使用して、Power Automate Flow にデータを送信します。
 
 ## アダプティブフォームにおけるサーバー側の再検証 {#server-side-revalidation-in-adaptive-form}
 

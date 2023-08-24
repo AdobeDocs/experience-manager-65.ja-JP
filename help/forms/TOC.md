@@ -9,9 +9,9 @@ breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
 feature: Forms Service
-source-git-commit: fc148a5f5e0fcaac2980dc73004fa92ac3b91fb3
+source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
 workflow-type: tm+mt
-source-wordcount: '3889'
+source-wordcount: '3897'
 ht-degree: 99%
 
 ---
@@ -163,6 +163,7 @@ ht-degree: 99%
    + [送信レビュー担当者のフォームへの関連付け](using/adding-reviewers-form.md)
    + [フォームのフィールドのための文脈依存ヘルプの作成](using/authoring-in-field-help.md)
    + [レイアウトモードを使用したコンポーネントのサイズ変更](/help/forms/using/resize-using-layout-mode.md)
+   + [アダプティブフォームデータをMicrosoftに接続して送信する](/help/forms/using/forms-microsoft-power-automate-integration.md)
 + アダプティブフォーム - 高度なオーサリング {#adaptive-forms-advanced-authoring}
    + [JSON スキーマを使用したアダプティブフォームの作成](using/adaptive-form-json-schema-form-model.md)
    + [XML スキーマを使ったアダプティブフォームの作成](using/adaptive-form-xml-schema-form-model.md)
