@@ -10,16 +10,16 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publishing
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 4005e09349d22dbb70a7af378bed2a991ea7218d
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 83%
+source-wordcount: '475'
+ht-degree: 76%
 
 ---
 
 # Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
 
-Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開]**」をタップします。Dynamic Media アセットを公開すると、URL を経由して、またはページにコードを埋め込むことで、web ページに含めることができます。
+Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開]**」をタップします。Dynamic Mediaアセットを公開した後は、URL を使用して Web ページに含めたり、Web ページにコードを埋め込んだりすることで、Web アセットを使用できるようになります。
 
 また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[Dynamic Media - Scene7 モードの設定](config-dms7.md)を参照してください。
 または、フォルダーレベルで「**[!UICONTROL 選択的公開]**」を使用して、相互に排他的なアセットを Dynamic Media または Adobe Experience Manager に選択的に公開することもできます。詳しくは、[Dynamic Media での選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
