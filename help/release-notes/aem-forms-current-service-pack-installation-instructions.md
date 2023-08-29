@@ -2,7 +2,7 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: d179c45044bbc987d60e180debefb243a5ee7cc6
+source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 96%
@@ -15,9 +15,9 @@ ht-degree: 96%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.18.0 |
+| バージョン | 6.5.12.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023 年 8 月 30 日 |
+| 日付 | 2023年6月1日（PT） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]

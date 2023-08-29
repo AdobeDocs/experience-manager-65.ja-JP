@@ -11,9 +11,9 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 077208ed8fea6a644487dbb46efb54ea44f303b4
+source-git-commit: ae8502641294b4f07e70f74227ee4fd72bc0e5c1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '294'
 ht-degree: 87%
 
 ---
@@ -30,9 +30,10 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 既存の LiveCycle または AEM Forms のインストール環境をアップグレードすると、AEM 6.5 Forms に導入された新機能と機能強化を使用できるようになります。既存のデータ、プロセス、アセットはそのまま保存されます。アップグレード時には、メタデータとプロセスの状態も保持されます。アップグレードを開始するためのアップグレードパスを選択できます。
 
-次の図は、OSGi 上の AEM Forms で使用可能なアップグレードパスを示しています。
+<!--
+The following diagram displays the available upgrade paths for AEM Forms on OSGi:
 
-![OSGi アップグレードフロー](do-not-localize/osgi-upgrade-path.png)
+![OSGi upgrade flow](do-not-localize/osgi-upgrade-path.png) -->
 
 次の場所から直接アップグレードを実行できます。
 
@@ -45,9 +46,10 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * OSGi 上の AEM 6.1 Forms
 * OSGi 上の AEM 6.2 Forms
 
-次の図に、AEM Forms on JEE で使用可能なアップグレードパスを示します。
+<!--
+The following diagram displays the available upgrade paths for AEM Forms on JEE:
 
-![JEE アップグレード 6.5](do-not-localize/jee-upgrade-6-5.png)
+![JEE upgrade 6.5](do-not-localize/jee-upgrade-6-5.png) -->
 
 
 次の場所から直接アップグレードを実行できます。
@@ -63,15 +65,16 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
 
-AEM 6.5.18.0 Forms on JEE には、[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)と[パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の 2 種類のインストーラーが用意されています。
+AEM 6.5.12.0 Forms on JEE には、[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)と[パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の 2 種類のインストーラーが用意されています。
 
-**完全インストーラー**：フルインストーラーを使用して、新しいAEM Formsインスタンスを設定するか、JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.18.0 Formsへのアップグレードを実行できます。
+**完全インストーラー**：フルインストーラーを使用して、新しいAEM Formsインスタンスを設定するか、JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.12.0 Formsへのアップグレードを実行できます。
 
 **パッチインストーラー**：パッチインストーラーは、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。パッチインストーラーを使用すると、AEM Forms の最新バージョンにアップグレードできます。
 
-次の画像は、完全なインストーラーとパッチインストーラーを使用する際のシナリオを示しています。
+<!--
+The following image depicts senarios for using full and patch installer.
 
-![完全なインストーラーとパッチインストーラー](/help/forms/using/assets/full-and-patch-installer.png)
+![Full Installer and Patch Installer](/help/forms/using/assets/full-and-patch-installer.png) -->
 
 <!--
 [Work in Progress]

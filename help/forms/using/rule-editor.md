@@ -10,9 +10,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 0985e591df83c7f1604bac37af771e8a7a21e691
+source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
 workflow-type: tm+mt
-source-wordcount: '6983'
+source-wordcount: '6921'
 ht-degree: 61%
 
 ---
@@ -30,15 +30,16 @@ ht-degree: 61%
 
 Adobe Experience Manager Formsのルールエディター機能を使用すると、フォームのビジネスユーザーや開発者は、アダプティブフォームのオブジェクトにルールを作成できます。 これらのルールは、フォームオブジェクト上でトリガーできるアクションを定義します。それらのアクションは、プリセットされた条件、ユーザー入力、およびフォーム上のユーザーアクションに基づいてトリガーされます。これにより、フォームへの入力を正確かつ迅速に行うことができます。
 
-ルールエディターでは、ルールを記述するための直感的でシンプルなユーザーインターフェイスを備えています。ルールエディターは、すべてのユーザーに対してビジュアルエディターを提供します。また、フォームのパワーユーザーに対してのみ、ルールエディターには、ルールとスクリプトを記述するコードエディターが用意されています。 アダプティブフォームオブジェクトでルールを使用して実行できる主なアクションは次のとおりです。
+ルールエディターでは、ルールを記述するための直感的でシンプルなユーザーインターフェイスを備えています。ルールエディターは、すべてのユーザーに対してビジュアルエディターを提供します。また、フォームのパワーユーザーに対してのみ、ルールエディターには、ルールとスクリプトを記述するコードエディターが用意されています。
+<!-- Some of the key actions that you can perform on adaptive form objects using rules are:
 
-* オブジェクトの表示／非表示を切り替える
-* オブジェクトの有効／無効を切り替える
-* オブジェクトの値を設定する
-* オブジェクトの値を検証する
-* 関数を実行することにより、オブジェクトの値を計算する
-* フォームデータモデルサービスを呼び出して処理を実行する
-* オブジェクトのプロパティを設定する
+* Show or hide an object
+* Enable or disable an object
+* Set a value for an object
+* Validate the value of an object
+* Execute functions to compute the value of an object
+* Invoke a form data model service and perform an operation
+* Set property of an object -->
 
 ルールエディタは、AEM 6.1 Forms 以前のリリースにおけるスクリプト作成機能を置き換えるものです。ただし、既存のスクリプトは、新しいルールエディターで保持されます。 ルールエディターでの既存のスクリプトの操作について詳しくは、 [既存のスクリプトに対するルールエディターの影響](#impact-of-rule-editor-on-existing-scripts).
 

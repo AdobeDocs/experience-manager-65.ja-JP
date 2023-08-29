@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: d63355e1042f6ad63a848b97c26dc2f29bab47b1
+source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
 workflow-type: tm+mt
-source-wordcount: '4459'
-ht-degree: 33%
+source-wordcount: '3454'
+ht-degree: 42%
 
 ---
 
@@ -61,9 +61,9 @@ ht-degree: 33%
 
 **Forms**
 
-* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html):** 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出し、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。 または、サービスから返されたエラーに対して特定のアクションを実行できます。 例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
+* **ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化** 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出し、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。 または、サービスから返されたエラーに対して特定のアクションを実行できます。 例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
 
-* **[Adobe Sign Workflow ステップの強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html):** AEM Workflows のAdobe Signワークフローステップは、次の機能強化で使用できます。
+* **Adobe Sign Workflow ステップの強化：** AEM Workflows のAdobe Signワークフローステップは、次の機能強化で使用できます。
 
    * **Adobe Signの政府機関 ID ベースの認証によるセキュリティの強化：** Adobe Acrobat Signの政府 ID ベースの認証では、政府発行の ID（運転免許証、国籍 ID、パスポート）を使用してユーザーが ID を認証できるようにすることで、さらに検証レイヤーを提供しています。 この機能強化は、信頼できる識別ドキュメントを活用することで、署名プロセスにさらに信頼性を高め、セキュリティ、コンプライアンス、およびユーザーの検証を強化する必要があるシナリオに最適です。
 
@@ -73,7 +73,7 @@ ht-degree: 33%
    * **署名者だけを超えて、契約受信者の役割を拡張しました。** Adobe Acrobat Signには、署名者以外にも、契約受信者の役割を拡張して、ワークフロー要件に合わせることができます。 有効にすると、契約の各受信者の役割は個別に設定でき、署名者がデフォルトとなります。
 
 
-* **[AEM Forms on JEE の完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**:Service Pack により、JEE 上のAEM Formsの完全なインストーラーが作成され、次のような新しいソフトウェアの組み合わせがサポートされます。
+* **AEM Forms on JEE の完全インストーラー**:Service Pack により、JEE 上のAEM Formsの完全なインストーラーが作成され、次のような新しいソフトウェアの組み合わせがサポートされます。
    * Microsoft Windows Server 2022
    * Microsoft Active Directory 2022
    * OracleWebLogic 14C（Windows Server 2022 上）
@@ -160,59 +160,58 @@ JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合
 
 ### [!DNL Forms]{#forms-6518}
 
+
+の修正点 [!DNL Experience Manager] Formsは、スケジュールされた [!DNL Experience Manager] サービスパックのリリース日です。 この場合、AEM 6.5.18.0 Formsアドオンパッケージリリースは 2023 年 8 月 31 日（木）に予定されています。 Formsの修正および機能強化のリストは、リリース後にこの節に追加されます。
 <!--
-Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.18.0 Forms add-on packages release is scheduled for Thursday, August 31, 2023. A list of Forms fixes and enhancements would be added to this section post the release.
--->
-
 * **Document Services**
-   * ユーザーが transformPDF サービスを使用すると、次の例外が発生して失敗します。 `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml` (FORMS-9957)
-   * サーバードキュメントの生成中にPDFがシャットダウンされた場合、サーバー起動後のジョブ処理エラーがスローされます。 引数 —Dcom.adobe.livecycle.dsc.deferServiceStart=true は、サーバーの起動中に追加する必要があります。 （FORMS-9836）
-   * ユーザーが AssemblerService.Invoke メソッドを使用してPDFを結合しようとすると、アセンブラはタスクを実行できません。 （FORMS-9550）
-   * OSGI および JEE 環境でAEM 6.5.15.0 Service Pack にアップグレードすると、特定のテンプレートを使用する Assembler サービスが動作しなくなります。 (FORMS-9355、FORMS-9445、FORMS-9408)
-   * XMLFormService の Global Timeout が適切な値に設定されていないので、Java のガベージコレクションは、AEM Forms OSGi サーバー上の古い生成元ヒープをクリアできません。 （FORMS-9384、FORMS-9035）
-   * アダプティブフォームのPDFプレビューをレンダリングする際に、不要な Java スタックダンプがエラーログに表示されます。 （FORMS-8865）
-   * ユーザーがドキュメントの詳細セクションでドキュメントのドキュメントステータスを確認すると、正しく表示されません。 （FORMS-8946、FORMS-10424）
-   * ユーザーがAEM Formsにアップグレードし、sendToPrinter サービスを使用すると、ヒープ使用率が継続的に増加します。 （FORMS-10148）
-   * JBoss 7.4 EAP サーバーでは、電子メール機能は次の条件で失敗します。 `java.io.IOException`. （FORMS-10138）
-   * ユーザーが transformPDF サービスを使用すると、次のエラーで失敗します。 `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
-   * AEM Service Pack 6.5.14.0にアップグレードした後、特定のテンプレートを使用しているときに、Assembler サービスで問題が発生します。 （FORMS-9445、FORMS-9408）
-  <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
-* **アダプティブフォーム**
-   * ユーザーがフィールドを変更せずにカスタム関数を呼び出そうとすると（例えば、別のフィールドの値を設定しようとする）、失敗します。 （FORMS-9921）
-   * アダプティブフォーム内のルールエディターのカスタムエラー機能を使用する際に、次のエラーが発生します。
-      * ユーザーが@paramを使用しようとしたとき{boolean} 関数を使用する場合、ルールエディターではブール値を関数に渡すことはできません。
-      * ユーザーが@paramを使用しようとしたとき{string} 関数を使用すると、ルールエディターはオプションの値を渡せず、不完全なルールに関する警告を表示します。 （FORMS-9816、FORMS-9815）
-   * forms-user グループが、アダプティブフォーム内でルールエディターを 2 回呼び出せません。 （FORMS-9051）
-   * Visual Editor では、ユーザーがフォームオブジェクトを選択すると、フィールドの値だけでなく、フィールドインスタンスオブジェクト全体がカスタム関数に渡されます。 （FORMS-10015）
-   * ユーザーがコアコンポーネントベースのアダプティブフォームを作成し、テキスト入力コンポーネントを追加した場合、 `Is Empty` および `Is Not Empty` ルールエディターでは作業しないでください。 （FORMS-10098）
-   * コアコンポーネントベースのアダプティブフォームで、フィールドが無効とマークされている場合は、フィールド上で変更イベントが開始されます。 （FORMS-10087）
-   * ユーザーが複雑な JSON スキーマを使用してアダプティブフォームを作成しようとすると、失敗します。 エラーは次のように発生します。
-     `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0` で使用される様々なキャッシュに分散されます。（FORMS-9639）
-   * アダプティブフォームでは、ユーザーが「利用条件に同意します」チェックボックスを無効にすると、ユーザーがスクロールダウンするとすぐに再び有効になります。 （FORMS-9458）
-   * ユーザーがGoogle Chrome/Firefox を使用して Android デバイスでアダプティブフォームを開き、テキストボックスに許可されている最大文字数を入力すると、テキストボックスの値がクリアされません。 （FORMS-9354）
-   * チェックボックスのラベルに「、」、「/」、「。」などの特殊文字が含まれる場合、テキスト/ラベルをクリックしても、それぞれのチェックボックスは選択されません。 （FORMS-9313）
-   * ユーザーが利用条件コンポーネントの検証を試みると、他のコンポーネントが検証される間、コンポーネントがフォーカスされていないかどうかの検証に失敗します。 （FORMS-8725、FORMS-8913）
-   * AEM 6.5.16.0 Service Pack にアップグレードした後にアダプティブフォームが再読み込みされると、ファイル添付ファイルの取得に失敗します。 （FORMS-8906）
-   * XDP に基づくアダプティブフォームで、チェックボックスコンポーネントにテキストタイトルが数値で割り当てられている場合、テキストタイトルは切り捨てられ、割り当てられた値と一致しません。 （FORMS-8743）
-   * オーサー環境のアダプティブフォームに埋め込まれたフラグメントに遅延読み込みを実装しようとしても、フラグメントに対して定義されたルールやロジックはフォームに反映されません。 （FORMS-8554、FORMS-9182）
-   * AEM 6.5.16.0 Service Pack で任意の Coral ダイアログを開こうとすると、 `error.log: cannot render resource` 例外です。 （FORMS-8942）
-   * ユーザーがアダプティブフォーム内の 1 つのオプションを含むチェックボックスを翻訳しようとすると、失敗します。 （FORMS-10181）
-* **アクセシビリティ**
-   * アダプティブフォームで手書き署名コンポーネントを使用すると、次のエラーが発生します。
-      * 手書き署名コンポーネントの後に、コンポーネントが他にある場合は、Tab キーを押しても署名ダイアログボックスに移動せず、代わりに次のコンポーネントに移動します。 すべてのコンポーネントを走査した後にのみ、最終的に署名ダイアログボックスに移動します。
-      * ユーザーがブラシやキーボードを使用して署名ダイアログボックスにサインインした場合、Enter キーを押してもダイアログボックスは閉じません。
-      * 明確な署名の確認ダイアログには、キーボードを使用してアクセスできません。
-      * スクリーンリーダーが、ダイアログボックスに入力された情報を読み取れない。
-      * マウスを使用せずに署名をクリアすることはできません。  （FORMS-9317）
-   * ユーザーがアダプティブフォームを送信すると、スクリーンリーダーは必須フィールドのエラーメッセージを読み取れません。 （FORMS-9316）
-   * スクリーンリーダーがHTMLフォームを読み取ると、カーニング付き（間隔）でテキストを読み取る際に問題が発生します。 （FORMS-9258）
-   * アダプティブフォームでは、テキストにリンクされた参照や脚注は、スクリーンリーダーを使用して呼び出されません。 （FORMS-8920）
-   * 最新の Designer では、アクセシビリティタグが正しく認識されません。 （FORMS-10139）
-* **インタラクティブコミュニケーション**
-   * Correspondence Management では、ローカライゼーションは機能しません。 （FORMS-8926）
-   * publishAll サービスを使用すると、ドラフトレターが開けません。 （FORMS-8589）
-   * Experience Manager後、サーバーに Service Pack 16 がインストールされ、これらのレターを編集しようとすると、すべてのインタラクティブ通信レターがクロックを開始します。 プロパティページをプレビューまたは表示または編集するためのサンプルペイロードが用意されている場合は、機能します。 ただし、レターを編集することはできません。 （FORMS-9067）
-
+  * When a user uses a transformPDF service, it fails with an exception: `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml` (FORMS-9957) 
+  * If the server is shut down during PDF document generation, post server startup job processing errors are thrown. The argument -Dcom.adobe.livecycle.dsc.deferServiceStart=true needs to be added during server startup. (FORMS-9836)
+  * If a user tries to merge PDFs using the AssemblerService.Invoke method, the assembler fails to perform the task. (FORMS-9550) 
+  * When you upgrade to AEM 6.5.15.0 Service Pack on OSGI and JEE environments, the Assembler service using a specific template stops working. (FORMS-9355, FORMS-9445, FORMS-9408) 
+  * Java garbage collection is unable to clear old-gen heap on an AEM Forms OSGi server, as the Global Timeout for XMLFormService is not configured to a proper value. (FORMS-9384, FORMS-9035) 
+  * While rendering the PDF preview of an Adaptive Form, the unwanted Java stack dumps appear in the error logs. (FORMS-8865)
+  * When a user review the document status for documents in the document details section, it is not displayed correctly. (FORMS-8946, FORMS-10424)
+  * When a user upgrades to AEM Forms and uses the sendToPrinter service, there is a continuous increase in heap utilization. (FORMS-10148) 
+  * On JBoss 7.4 EAP server, the email functionality fails with `java.io.IOException`. (FORMS-10138)
+  * When a user uses the transformPDF service, it fails with an error: `java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`(FORMS-9957)
+  * After upgrading to AEM Service Pack 6.5.14.0, the issue arises in the assembler service while using a specific template. (FORMS-9445, FORMS-9408)
+  <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152)
+* **Adaptive Forms** 
+  * When a user tries to call a custom function without modifying a field, such as setting the value of another field, it fails. (FORMS-9921) 
+  * While working with the custom error function for the Rule Editor in an Adaptive Form, the following errors occur: 
+    * When a user tries to use @param{boolean} with a function, the rule editor does not allow Boolean values to pass to a function. 
+    * When a user tries to use @param{string} with a function, the rule editor fails to pass the optional values and gives a warning of incomplete rules. (FORMS-9816, FORMS-9815) 
+  * The forms-user group fails to call the Rule Editor twice in an Adaptive Form. (FORMS-9051) 
+  * In visual editor editor, when a user selects a Form object then whole field instance object is passed to the custom function instead of just value of the field. (FORMS-10015) 
+  * When a user creates a core component-based Adaptive Form and adds a text input component, `Is Empty` and `Is Not Empty` do not work in the Rule editor. (FORMS-10098)
+  * If a field is marked as invalid in an core component based Adaptive Form, it starts a change event on the field. (FORMS-10087)
+  * When a user tries to create an Adaptive Form using a complex JSON schema, it fails. The error occurs as: 
+  `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`. (FORMS-9639) 
+  * In an Adaptive Form, when a user disables the "I agree to the terms & conditions" checkbox, it gets enabled again as soon as the user scrolls down. (FORMS-9458) 
+  * When a user opens an Adaptive Form on an Android Device using Google Chrome/Firefox and enters the maximum allowed characters in a Textbox, the value in the textbox fails to clear. (FORMS-9354) 
+  * When the label of the checkbox includes special characters like ',', '/', or '.', clicking on the text/label does not select the respective checkbox. (FORMS-9313) 
+  * When a user tries to validate the Terms and Conditions component, it fails to validate if the component is not in focus while the other component gets validated. (FORMS-8725, FORMS-8913) 
+  * If an Adaptive Form is reloaded after upgrading to AEM 6.5.16.0 Service Pack, the file attachment retrieval fails. (FORMS-8906) 
+  * In an Adaptive Form based on an XDP, if a checkbox component includes a text title assigned a numeric value, the text title gets truncated and does not match the assigned value. (FORMS-8743) 
+  * If a user tries to implement lazy loading on a fragment embedded in an Adaptive Form for the author environment, the rules/logic defined for the fragment are not reflected in the form. (FORMS-8554, FORMS-9182) 
+  * When you try to open any Coral dialog in AEM 6.5.16.0 Service Pack, it generates the `error.log: cannot render resource` exception. (FORMS-8942) 
+  * When a user tries to translate a checkbox with single option in an Adaptive Form, it fails. (FORMS-10181)
+* **Accessibility**
+  * When using the Scribble Signature component in an Adaptive Form, the following errors occur: 
+    * After the Scribble Signature component, when there are more components, pressing the Tab key does not traverse to the signature dialog box; instead, it moves to the next component. Only after traversing all components, it finally moves to the signature dialog box. 
+    * When a user signs in the signature dialog box using a brush or keyboard, pressing the Enter key does not close the dialog box. 
+    * The clear signature confirmation dialog cannot be accessed using a keyboard. 
+    * The screen reader fails to read information entered in a dialog box.
+    * It is not possible to clear the signature without using a mouse.  (FORMS-9317) 
+  * When a user submits an Adaptive Form, the screen reader fails to read error messages for the mandatory fields. (FORMS-9316) 
+  * When a screen reader reads an HTML form, the issue occurs while reading the text with kerning (spacing). (FORMS-9258) 
+  * In an Adaptive Form, the references/footnotes linked to the text are not called out using the screen reader. (FORMS-8920) 
+  *  Accessibility tags are not recognised properly in latest Designer. (FORMS-10139)
+* **Interactive Communications**
+  * In Correspondence Management, the localization is not working. (FORMS-8926) 
+  * The draft letter fails to open when the publishAll service is used. (FORMS-8589) 
+  * After Experience Manager, Service Pack 16 is installed on the servers, all the Interactive communication Letters starts to clock if they try to edit these letters. If they provide any sample payload to preview or view/edit the properties page, they work. However, they are not able to edit the letters. (FORMS-9067) 
+ -->
 
 <!-- ### [!DNL Commerce]{#commerce-6518}
 
@@ -427,9 +426,13 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
   "refresh": true
   ```
 
+* [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。
+
 * [!DNL Experience Manager] インスタンスを 6.5.0～6.5.4 から Java™ 11 の最新のサービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
+
+* アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 
 * [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
    * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
@@ -439,29 +442,32 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : 登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
+* JBoss® 7.1.4 プラットフォームで、Experience Manager 6.5.16.0 以降のサービスパックをインストールすると、`adobe-livecycle-jboss.ear` デプロイメントが失敗します。
+* 1.8.0_281 より後の JDK バージョンは、WebLogic JEE サーバーではサポートされていません。
 * AEM 6.5.15 以降、```org.apache.servicemix.bundles.rhino``` バンドル で提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。strict モード (```use strict;```) は、変数を正しく宣言する必要があります。そうしない場合は、実行されず、代わりにランタイムエラーが発生します。
 
-### AEM Formsの既知の問題
+<!--
+### Known issues for AEM Forms
 
-#### サポートされているプラットフォーム
+#### Supported platforms 
 
-* 1.8.0_281 より後の JDK バージョンは、WebLogic JEE サーバーではサポートされていません。(FORMS-8498、CQDOC-20383)
-* [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないため、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。（CQDOC-18312）
-* JDK 11.0.20 は、JEE 上のAEM Formsインストーラーのインストールをサポートしていません。 JEE 上のAEM Formsインストーラーのインストールには、JDK 11.0.19 以前のバージョンのみがサポートされています。 （FORMS-10659）
+  * JDK version higher than 1.8.0_281 are not supported for WebLogic JEE server. (FORMS-8498, CQDOC-20383)
+  * As [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms 6.5.10.0]. (CQDOC-18312)
+  * JDK 11.0.20 is not supported to install AEM Forms on JEE Installer. Only JDK 11.0.19 or earlier versions are supported to install AEM Forms on JEE Installer. (FORMS-10659)
 
-#### インストール
+#### Installation 
 
-* JBoss® 7.1.4 プラットフォームで、Experience Manager 6.5.16.0 以降のサービスパックをインストールすると、`adobe-livecycle-jboss.ear` デプロイメントが失敗します。(CQ-4351522、CQDOC-20159)
+  * On JBoss&reg; 7.1.4 platform, when user installs Experience Manager 6.5.16.0 or later service pack, `adobe-livecycle-jboss.ear` deployment fails. (CQ-4351522, CQDOC-20159)
 
-#### アダプティブフォーム
+#### Adaptive Forms
 
-* アダプティブフォームが発行されると、変更が加えられていない場合でも、ポリシーを含むすべての依存関係が再発行されます。 （FORMS-10454）
-* アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
-* アダプティブフォームのガイドコンテナでリダイレクト URL が設定されると、インライン署名が機能しなくなります。 （FORMS-10493）
+  * When an Adaptive Form is published, all its dependencies, including policies, get republished, even if no modifications have been made to them. (FORMS-10454)
+  * When a user selects to configure a field for the first time in an adaptive form, the option to save a configuration does not display in Properties Browser. Selecting to configure some other field of the Adaptive Form in the same editor resolves the issue. 
+  * When a redirect URL is set in the guide container of an Adaptive Form, the inline signing stops working. (FORMS-10493)
 
-#### インタラクティブコミュニケーション
+#### Interactive Communications
 
-* AEM Service Pack 18 にアップグレードした後は、インタラクティブ通信レターを編集できません。 （FORMS-10578）
+  * After upgrading to AEM Service Pack 18, it is not possible to edit interactive communication letters. (FORMS-10578) -->
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
