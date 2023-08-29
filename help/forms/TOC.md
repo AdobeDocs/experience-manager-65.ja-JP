@@ -9,10 +9,10 @@ breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
 feature: Forms Service
-source-git-commit: e19a7e617bdabb678bd804cab3fea228ce19acfa
+source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
 workflow-type: tm+mt
-source-wordcount: '3897'
-ht-degree: 99%
+source-wordcount: '3912'
+ht-degree: 98%
 
 ---
 
@@ -136,6 +136,7 @@ ht-degree: 99%
    + [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md)
    + [コアコンポーネントベースのアダプティブフォームの作成](/help/forms/using/create-an-adaptive-form-core-components.md)
    + [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+   + [コアコンポーネントベースのアダプティブFormsでカスタムエラーハンドラーを作成して使用する](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
 + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
    + [アダプティブフォームの操作のベストプラクティス](using/adaptive-forms-best-practices.md)
    + [アダプティブフォームの作成](using/creating-adaptive-form.md)
@@ -188,7 +189,7 @@ ht-degree: 99%
    + [Adobe Sign の AEM Forms への統合](using/adobe-sign-integration-adaptive-forms.md)
    + [フォームのアセットのレビューの作成と管理](using/create-reviews-forms.md)
    + [AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの組み込み](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [標準検証エラーメッセージアダプティブフォーム](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [アダプティブFormsのカスタムエラーハンドラーを作成して使用する](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + インタラクティブコミュニケーション {#interactive-communications}
    + [インタラクティブ通信オーサリング UI の概要](using/introduction-interactive-communication-authoring.md)
    + [インタラクティブ通信の作成](using/create-interactive-communication.md)

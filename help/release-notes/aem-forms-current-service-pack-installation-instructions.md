@@ -2,10 +2,10 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
-workflow-type: ht
-source-wordcount: '1727'
-ht-degree: 100%
+source-git-commit: d179c45044bbc987d60e180debefb243a5ee7cc6
+workflow-type: tm+mt
+source-wordcount: '1733'
+ht-degree: 96%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 100%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.17.0 |
+| バージョン | 6.5.18.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023年6月1日（PT） |
+| 日付 | 2023 年 8 月 30 日 |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 >[!NOTE]
 >
-> アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms サービスパック 12（6.5.12.0）は最新の完全なインストーラーです。完全なインストーラーは新しいプラットフォームのサポートを提供するのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。新規インストールを実行する場合や、JEE 版 AEM 6.5 Forms 環境の最新ソフトウェアを使用することを計画している場合は、2019年4月8日（PT）にリリースされた AEM 6.5 Forms インストーラーではなく、2022年3月3日（PT）にリリースされた JEE 版 AEM 6.5.12.0 Forms の完全なインストーラーを使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms Service Pack 18(6.5.18.0) は、最新の JEE フルインストーラーです。 完全なインストーラーは新しいプラットフォームのサポートを提供するのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、2019 年 4 月 8 日にリリースされたAEM 6.5 Formsインストーラーではなく、2023 年 8 月 29 日にリリースされたAEM 6.5.18.0 Forms JEE 上のAdobe 6. AEMフルインストーラーを使用することをお勧めします。022. 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 
 ## JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-jee-service-pack}
 
@@ -150,7 +150,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
   >[!NOTE]
   >
-  >Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+  Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
   **インストールの検証**
 
@@ -182,7 +182,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 >[!NOTE]
 >
->リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
+リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
 
 +++
 
@@ -210,7 +210,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
   >[!NOTE]
   >
-  >Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+  Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
   **インストールの検証**
 

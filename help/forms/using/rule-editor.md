@@ -10,10 +10,10 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0985e591df83c7f1604bac37af771e8a7a21e691
 workflow-type: tm+mt
-source-wordcount: '6929'
-ht-degree: 62%
+source-wordcount: '6983'
+ht-degree: 61%
 
 ---
 
@@ -151,7 +151,19 @@ _
 
 フォームデータモデルでのサービス設定について詳しくは、[AEM Forms のデータ統合機能](/help/forms/using/data-integration.md)を参照してください。
 
-The **プロパティを設定** ルールタイプを使用すると、条件アクションに基づいて、指定したオブジェクトのプロパティの値を設定できます。
+The **[!UICONTROL プロパティを設定]** ルールタイプを使用すると、条件アクションに基づいて、指定したオブジェクトのプロパティの値を設定できます。 プロパティは、次のいずれかに設定できます。
+* visible (Boolean)
+* dorExclusion (Boolean)
+* chartType（文字列）
+* title (String)
+* enabled(Boolean)
+* mandatory (Boolean)
+* validationsDisabled (Boolean)
+* validateExpMessage (String)
+* 値（数値、文字列、日付）
+* 項目（リスト）
+* valid (Boolean)
+* errorMessage (String)
 
 これにより、ルールを定義して、アダプティブフォームにチェックボックスを動的に追加することができます。カスタム関数、フォームオブジェクト、またはオブジェクトプロパティを使用して、ルールを定義できます。
 
@@ -817,6 +829,10 @@ AEM 6.1 Forms機能パック 1 より前のバージョンでは、フォーム�
 ![example-invoke-services](assets/example-invoke-services.png)
 
 アダプティブフォームのルールを使用してフォームデータモデルサービスを呼び出す
+
+>[!NOTE]
+>
+>入力が配列タイプの場合、配列をサポートするフィールドが「出力」ドロップダウンセクションに表示されます。
 
 ### 「When」ルールを使用して複数のアクションをトリガーする  {#triggering-multiple-actions-using-the-when-rule}
 

@@ -11,14 +11,14 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 077208ed8fea6a644487dbb46efb54ea44f303b4
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 96%
+source-wordcount: '341'
+ht-degree: 87%
 
 ---
 
-# AEM 6.5 Forms へのアップグレード{#upgrade-to-aem-forms}
+# AEM 6.5 Forms へのアップグレード {#upgrade-to-aem-forms}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -49,6 +49,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 ![JEE アップグレード 6.5](do-not-localize/jee-upgrade-6-5.png)
 
+
 次の場所から直接アップグレードを実行できます。
 
 * JEE 上の AEM 6.3 Forms
@@ -57,16 +58,14 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 以下の場合は、マルチホップアップグレードを実行することができます。
 
-* LiveCycle ES2
-* LiveCycle ES3
 * LiveCycle ES4 SP1
 * JEE 上の AEM 6.0 Forms
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
 
-AEM 6.5.12.0 Forms on JEE には、[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)と[パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の 2 種類のインストーラーが用意されています。
+AEM 6.5.18.0 Forms on JEE には、[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)と[パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の 2 種類のインストーラーが用意されています。
 
-**完全なインストーラー**：完全なインストーラーを使用すると、新しい AEM Forms インスタンスを設定したり、AEM 6.3 Forms on JEE、AEM 6.4 on JEE のアップグレードを実行したり、AEM 6.5.x.x on JEE から AEM 6.5.12.0 Forms on JEE へのアウトオブプレースアップグレードを実行したりすることができます。
+**完全インストーラー**：フルインストーラーを使用して、新しいAEM Formsインスタンスを設定するか、JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.18.0 Formsへのアップグレードを実行できます。
 
 **パッチインストーラー**：パッチインストーラーは、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。パッチインストーラーを使用すると、AEM Forms の最新バージョンにアップグレードできます。
 
