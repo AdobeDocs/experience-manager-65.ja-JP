@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: ee1a0866aafd56fa53f5d3b936beab8f500d335c
+source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
 workflow-type: tm+mt
-source-wordcount: '11363'
+source-wordcount: '11313'
 ht-degree: 69%
 
 ---
@@ -698,11 +698,7 @@ Dynamic Mediaのマルチサブタイトルおよびマルチオーディオト�
 
 #### キャプション修飾子を持つ既存の URL を持つビデオに複数のキャプションを追加する
 
-Dynamic Mediaでは、URL 修飾子を使用してビデオに単一のキャプションを追加できます ( [caption](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=en)) をクリックします。
-
-<!-- IS THE CORRECT LINK THE ONE ABOVE OR IS IT THE LINK BELOW???? -->
-
-URL で JSON 機能を使用する方法について詳しくは、*Dynamic Media 画像サービングおよびレンダリング API ヘルプ*&#x200B;の[静的コンテンツ（画像以外）の提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api)を参照してください。
+Dynamic Mediaでは、URL 修飾子を使用して、ビデオでの単一のキャプションの追加がサポートされています。 詳しくは、 [ビデオにキャプションを追加](#adding-captions-to-video).
 
 複数のキャプションの変更は、公開済みビデオの URL 修飾子を使用して追加されたキャプションよりも優先されます。
 
@@ -727,7 +723,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 | サブタイトルまたはオーディオトラックのステータス | 説明 |
 | --- | --- |
 | 処理 | 新しいサブタイトルまたはオーディオトラックファイルを追加して保存すると、「処理中」の状態になります。 Dynamic Mediaは、ストリーミングマニフェストをプライマリビデオに添付することで、ファイルを処理します。 |
-| 処理済み | 処理が完了すると、サブタイトルまたはオーディオトラックファイルは「処理済み」の状態で表示されます。 「処理済み」として表示されるサブタイトルおよびオーディオトラックファイルをプレビューできます。 *前* ビデオを公開します。 |
+| 処理済み | 処理が完了すると、サブタイトルやオーディオトラックファイル、またはプライマリビデオに関連付けられているオリジナルのオーディオトラックが「処理済み」状態で表示されます。 「処理済み」として表示されるサブタイトルおよびオーディオトラックファイルをプレビューできます。 *前* ビデオを公開します。 |
 | 公開済み | 「公開済み」状態は、プライマリビデオの「公開済み」と同じ状態を表します。 アセットは、プライマリビデオが公開されると公開されます。また、公開Dynamic Media URL で使用できます。 |
 | 失敗 | 「失敗」状態は、サブタイトルまたはオーディオトラックファイルの処理が完了しなかったことを意味します。 サブタイトルまたはオーディオトラックファイルを削除して、再度アップロードします。 |
 | 非公開     | 公開済みのプライマリビデオを明示的に非公開にすると、ビデオに追加したサブタイトルまたはオーディオトラックファイルも非公開になります。 |
@@ -850,7 +846,7 @@ Adobe Analytics の **デフォルトとして設定** ダイアログボック�
 
 >[!IMPORTANT]
 >
-このトピックは、現在は積極的に管理されていません。 Dynamic Mediaのレガシーユーザーには、そのまま提供されます。 Adobeが推奨する [マルチサブタイトルおよびマルチオーディオトラック機能の有効化](#enable-dash) をDynamic Mediaアカウントで設定します。 これにより、最新のDynamic Mediaバックエンドアーキテクチャと、キャプション、サブタイトル、オーディオトラックをビデオに追加するためのシンプルなワークフローを活用できます。
+Adobeが推奨する [マルチサブタイトルおよびマルチオーディオトラック機能の有効化](#enable-dash) をDynamic Mediaアカウントで設定します。 これにより、最新のDynamic Mediaバックエンドアーキテクチャと、キャプション、サブタイトル、オーディオトラックをビデオに追加するためのシンプルなワークフローを活用できます。
 
 クローズドキャプションを 1 つのビデオまたはアダプティブビデオセットに追加することにより、ビデオの配信先をグローバルマーケットまで拡大できます。クローズドキャプションを追加すると、音声をダビングする必要も、異なる言語ごとにネイティブスピーカーの音声を使って再録音する必要もなくなります。ビデオは、録画された言語で再生されます。様々な言語を使う人々が音声を理解できるように、外国語の字幕が表示されます。
 
