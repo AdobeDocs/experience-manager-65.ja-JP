@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 26cea35dcbdbafe622f975bac7920ea5fd5fbd6c
+source-git-commit: e330d69b7644e8f99498d0ed60afab009c649b40
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4552'
 ht-degree: 33%
 
 ---
@@ -450,6 +450,8 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### インストール
 
 * JBoss® 7.1.4 プラットフォームで、Experience Manager 6.5.16.0 以降のサービスパックをインストールすると、`adobe-livecycle-jboss.ear` デプロイメントが失敗します。(CQ-4351522、CQDOC-20159)
+* AEM Service Pack 6.5.18.0フルインストーラーをインストールした後、JEE で JBoss Turnkey(CQDOC-20803) を使用して EAR デプロイメントが失敗します。
+問題を解決するには、 `<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` ファイルと更新 `Adobe_Adobe_JAVA_HOME` から `Adobe_JAVA_HOME` を設定してから、configuration manager を実行する必要があります。
 
 #### アダプティブフォーム
 
@@ -459,7 +461,12 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 #### インタラクティブコミュニケーション
 
-* AEM Service Pack 18 にアップグレードした後は、インタラクティブ通信レターを編集できません。 （FORMS-10578）
+* AEM Service Pack 18 にアップグレードした後は、インタラクティブ通信レターを編集できません。 (FORMS-10578) 問題を解決するには、次の手順を実行します。
+
+   1. ダウンロード [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) SD リンクから。
+   1. ホットフィックスアーカイブファイルを展開して、Experience Managerパッケージ (.zip) ファイルとバンドル (.jar) ファイルを取得します。
+   1. パッケージマネージャーからパッケージ (.zip) をアップロードしてインストールします。
+   1. Configuration Manager バンドルを開きます。 `https://server:host/system/console/bundles`バンドル (.jar) をアップロードし、インストールします。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
