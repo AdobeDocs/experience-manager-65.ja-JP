@@ -10,9 +10,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 051e6838bea0be9f826183db935d33725c18386d
+source-git-commit: 0738f53564cb2e2607d739d97bdd1bb2fc64ac6e
 workflow-type: tm+mt
-source-wordcount: '11313'
+source-wordcount: '11310'
 ht-degree: 69%
 
 ---
@@ -601,7 +601,6 @@ Dynamic Mediaのマルチサブタイトルおよびマルチオーディオト�
 | **字幕** | 複数言語のサポート |
 |  | アクセシビリティの説明テキスト |
 | **オーディオトラック** | 複数言語のサポート |
-|  | ステレオとマルチチャンネル（サラウンドサウンド） |
 |  | 解説曲 |
 |  | 記述オーディオ |
 
@@ -694,7 +693,7 @@ Dynamic Mediaのマルチサブタイトルおよびマルチオーディオト�
 
 >[!CAUTION]
 >
->既に公開されているビデオにサブタイトルファイルまたはオーディオファイルをアップロードすると、これらのファイルは削除されます。 [*再処理*](/help/assets/processing-profiles.md#reprocessing-assets) ビデオ。 ビデオの元のオーディオのみがそのまま残ります。 このような場合は、サブタイトルファイルとオーディオトラックファイルをビデオに再度アップロードする必要があります。
+>公開または非公開のビデオにサブタイトルファイルまたはオーディオファイルをアップロードすると、ファイルは削除されます [*再処理*](/help/assets/processing-profiles.md#reprocessing-assets) ビデオ。 ビデオの元のオーディオのみがそのまま残ります。 このような場合は、サブタイトルファイルとオーディオトラックファイルをビデオに再度アップロードする必要があります。
 
 #### キャプション修飾子を持つ既存の URL を持つビデオに複数のキャプションを追加する
 

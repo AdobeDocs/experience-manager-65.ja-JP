@@ -10,7 +10,7 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
+source-git-commit: 517fe7fb8917164ee05b006214055592510d15da
 workflow-type: tm+mt
 source-wordcount: '6921'
 ht-degree: 61%
@@ -153,6 +153,7 @@ _
 フォームデータモデルでのサービス設定について詳しくは、[AEM Forms のデータ統合機能](/help/forms/using/data-integration.md)を参照してください。
 
 The **[!UICONTROL プロパティを設定]** ルールタイプを使用すると、条件アクションに基づいて、指定したオブジェクトのプロパティの値を設定できます。 プロパティは、次のいずれかに設定できます。
+
 * visible (Boolean)
 * dorExclusion (Boolean)
 * chartType（文字列）

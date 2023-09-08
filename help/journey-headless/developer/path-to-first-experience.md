@@ -2,10 +2,10 @@
 title: AEM ヘッドレス機能を使用した初めてのエクスペリエンスへの道筋
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、計画に関する考慮事項なども含め、AEM で初めてのヘッドレスエクスペリエンスを実装するための手順を示し、できるだけスムーズに作業を進めるためのベストプラクティスについても説明します。
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
-workflow-type: ht
-source-wordcount: '1982'
-ht-degree: 100%
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+workflow-type: tm+mt
+source-wordcount: '1992'
+ht-degree: 99%
 
 ---
 
@@ -151,3 +151,4 @@ AEM でのヘッドレス開発に取りかかる前に、必要な機能がす�
 * [コンテンツフラグメントモデルの作成](/help/assets/content-fragments/content-fragments-models.md) - コンテンツフラグメントモデルに関する技術ドキュメント
 * [コンテンツフラグメントの作成](/help/assets/content-fragments/content-fragments.md) - コンテンツフラグメントに関する技術ドキュメント
 * [GraphQL を使用したコンテンツのクエリ実行](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API に関する技術ドキュメント
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

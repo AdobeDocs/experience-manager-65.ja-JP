@@ -2,10 +2,10 @@
 title: AEM ヘッドレスデベロッパージャーニー
 description: AEM ヘッドレス CMS のドキュメント。AEM の強力で柔軟なヘッドレス機能とその能力、および初めての開発プロジェクトでの活用方法を示すガイド付きのジャーニーをここから始めてください。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 98%
+source-wordcount: '1230'
+ht-degree: 97%
 
 ---
 
@@ -91,3 +91,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 * [ヘッドレスオーサリングジャーニー](/help/journey-headless/author/overview.md) - AEM の強力で柔軟なヘッドレス機能とその能力および初めてのヘッドレスプロジェクトでコンテンツをモデル化する方法を説明するガイド付きジャーニーは、ここから始めてください。
 * [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) - Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法の入門的解説が必要であれば、ここから始めてください。
 * [AEM 技術ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja) - AEM およびヘッドレステクノロジーを既にしっかり理解している場合は、アドビの詳細な技術ドキュメントを直接参照することをお勧めします。
+
+   * An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

@@ -2,7 +2,7 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 34be3b4695679a9b5e8001d28f05ed804f929e61
+source-git-commit: 692193326e0623036ee3834985cfa9dc8d7076d9
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 96%
@@ -15,9 +15,9 @@ ht-degree: 96%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.12.0 |
+| バージョン | 6.5.18.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023年6月1日（PT） |
+| 日付 | 2023 年 8 月 31 日 |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 >[!NOTE]
 >
-> アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms Service Pack 18(6.5.18.0) は、最新の JEE フルインストーラーです。 完全なインストーラーは新しいプラットフォームのサポートを提供するのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、2019 年 4 月 8 日にリリースされたAEM 6.5 Formsインストーラーではなく、2023 年 8 月 29 日にリリースされたAEM 6.5.18.0 Forms JEE 上のAdobe 6. AEMフルインストーラーを使用することをお勧めします。022. 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms Service Pack 18(6.5.18.0) は、最新の JEE フルインストーラーです。 完全なインストーラーは新しいプラットフォームのサポートを提供するのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、2019 年 4 月 8 日にリリースされたAEM 6.5 Formsインストーラーや 2023 年 3 月 2 日にリリースされたAEM 6.5 Adobeインストーラーではなく、2023 年 8 月 31 日にリリースされたAEM 6.5.18.0 Formsを使用することをお勧めします。022. 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 
 ## JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-jee-service-pack}
 

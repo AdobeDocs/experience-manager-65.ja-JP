@@ -2,10 +2,10 @@
 title: AEM ヘッドレス翻訳の基本を学ぶ
 description: ヘッドレスコンテンツを整理する方法と AEM の翻訳ツールの仕組みについて説明します。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 100%
+source-wordcount: '1495'
+ht-degree: 99%
 
 ---
 
@@ -190,3 +190,6 @@ AEM のコンテンツは、ヘッドレスであろうと従来の web ペー�
 * [翻訳対象コンテンツの特定](/help/sites-administering/tc-rules.md) - 翻訳が必要なコンテンツを翻訳ルールで特定する方法について説明します。
 * [翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md) - サードパーティの翻訳サービスと統合できるように翻訳統合フレームワークを設定する方法について説明します。
 * [翻訳プロジェクトの管理](/help/sites-administering/tc-manage.md) - AEM で機械翻訳と人間による翻訳の両方のプロジェクトを作成および管理する方法について説明します。
+* An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
