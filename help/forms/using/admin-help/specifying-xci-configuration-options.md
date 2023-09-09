@@ -1,6 +1,6 @@
 ---
 title: XCI 設定オプションの指定
-description: XCI 設定オプションを指定する方法について説明します。
+description: XCI 設定オプションの指定方法について説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
@@ -9,7 +9,7 @@ exl-id: 7cd10389-63e6-41f2-a132-92fd9e40a9b7
 source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 7%
+ht-degree: 21%
 
 ---
 
@@ -25,5 +25,5 @@ Formsでは、レンダリングに使用できるカスタム XCI ファイル�
 上記のオプションの上書きをキャンセルするオプションを選択できます。この場合、Formsはカスタム XCI ファイルで指定された値を使用します。
 
 1. 管理コンソールで、 **サービス** > **Forms**.
-1. 「 Use System Default XCI Options 」チェックボックスをオンまたはオフにします。 このオプションを選択すると、Formsはパケット、作成者、プロデューサー、compressObjectStream の設定にデフォルト値を使用します。 このオプションの選択を解除すると、Formsはカスタム XCI ファイルで指定された値を使用します。
+1. 「システムデフォルトの XCI オプションを使用」チェックボックスをオンまたはオフにします。このオプションを選択すると、Formsはパケット、作成者、プロデューサー、compressObjectStream の設定にデフォルト値を使用します。 このオプションの選択を解除すると、Formsはカスタム XCI ファイルで指定された値を使用します。
 1. 「**保存**」をクリックします。

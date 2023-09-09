@@ -11,7 +11,7 @@ role: Admin, Developer
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
 workflow-type: tm+mt
 source-wordcount: '1973'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 10%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
