@@ -6,14 +6,15 @@ seo-description: Transform the validation error messages for adaptive forms into
 uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
 contentOwner: anujkapo
 content-type: reference
+keywords: カスタムエラーハンドラーの追加、デフォルトエラーハンドラーの追加、フォームのエラーハンドラーの追加、ルールエディターの呼び出しサービスを使用したカスタムエラーハンドラーの追加、ルールエディターの設定、ルールエディターを使用したカスタムエラーハンドラーの追加
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: 2b1daa1dcd7b5d81c0012ca0de65e9e9043fd4dc
 workflow-type: tm+mt
-source-wordcount: '2346'
-ht-degree: 8%
+source-wordcount: '2416'
+ht-degree: 9%
 
 ---
 
@@ -405,3 +406,10 @@ The `var som_map` lists the SOM expression of the Adaptive Form fields that you 
 Using this custom error handler, the adaptive form converts the fields listed in `var som_map` to standard error message format. As a result, the validation error messages display at field-level in the adaptive form.
 
  -->
+
+
+## 追加情報 {#additional-information}
+
+* [スタンドアロンのコアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [フォームのスタイルまたはテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [AEM Sites ページへのアダプティブフォームの作成または追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)

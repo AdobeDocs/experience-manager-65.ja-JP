@@ -4,10 +4,10 @@ description: アダプティブフォームを容易に作成したり、シー�
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: 3649df0e2a2672bc1742b3c02386f12ff6991935
+source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
 workflow-type: tm+mt
-source-wordcount: '2888'
-ht-degree: 89%
+source-wordcount: '2905'
+ht-degree: 88%
 
 ---
 
@@ -250,3 +250,8 @@ AEM Sites ページ内のアダプティブフォームをエクスペリエン�
    * リダイレクト URL を設定するには、「送信」オプションで「URL にリダイレクト」オプションを選択し、AEM Sites ページの絶対アドレス、リダイレクト URL、または相対パスを指定します。
 
    * カスタムメッセージまたはお礼のメッセージを設定するには、「送信」オプションで「メッセージを表示」オプションを選択し、メッセージコンテンツボックスにメッセージを入力します。これはリッチテキストボックスで、全画面表示オプションを使用して、使用可能なすべてのリッチテキスト項目を表示できます。
+
+## 関連トピック {#see-also}
+
+* [スタンドアロンのコアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [フォームのスタイルまたはテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)

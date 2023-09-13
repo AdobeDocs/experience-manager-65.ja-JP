@@ -7,15 +7,20 @@ keywords: カスタムエラーハンドラーの追加、デフォルトエラ�
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: f8e0ac45d98d6485ccb60e754657caf9d190c3ea
+source-git-commit: 6d6e74c61b2ecb13e7cc352d5278c40d2677d44d
 workflow-type: tm+mt
-source-wordcount: '2281'
-ht-degree: 6%
+source-wordcount: '2331'
+ht-degree: 7%
 
 ---
 
 
 # アダプティブForms（コアコンポーネント）のエラーハンドラー {#error-handlers-in-adaptive-form}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/add-custom-error-handler-adaptive-forms-core-components.html) |
+| AEM 6.5 | この記事 |
 
 AEM Forms には、すぐに使用できる、フォーム送信の成功および失敗ハンドラーが用意されています。また、エラーハンドラ関数をカスタマイズする機能も提供します。 例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます。 ハンドラーは、サーバー応答に基づいて実行されるクライアントサイド関数です。API を使用して外部サービスが呼び出されると、データが検証用にサーバーに送信され、クライアントに応答を返して送信の成功またはエラーイベントに関する情報を返します。 この情報は、関連するハンドラーにパラメーターとして渡され、関数が実行されます。エラーハンドラーは、発生したエラーや検証の問題を管理および表示するのに役立ちます。
 
@@ -309,3 +314,9 @@ AEM Formsバージョンの機能の改善とその後の更新に伴い、既�
 ブラウザーコンソールを開き、REST サービスエンドポイントから受け取った応答とヘッダーで、検証エラーメッセージを確認します。
 
 カスタムエラーハンドラー関数は、エラー応答に基づいて、モーダルダイアログの表示や Analytics イベントの送信など、追加のアクションを実行します。 カスタムエラーハンドラー関数を使用すると、特定のユーザー要件に合わせて柔軟にエラー処理をカスタマイズできます。
+
+## 関連トピック {#see-also}
+
+* [スタンドアロンのコアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [フォームのスタイルまたはテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [AEM Sites ページへのアダプティブフォームの作成または追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
