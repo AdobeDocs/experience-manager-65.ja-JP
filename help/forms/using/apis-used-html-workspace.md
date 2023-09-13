@@ -1,24 +1,20 @@
 ---
 title: AEM Forms ワークスペースで使用する各種 API
-seo-title: APIs used in AEM Forms workspace
-description: パブリック Java および JavaScript API と、LiveCycleAEM Forms Workspace のメソッド、カスタマイズと自動化のために公開。
-seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
-uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
+description: パブリック Java&trade、JavaScript API およびLiveCycleAEM Forms Workspace のメソッド、カスタマイズと自動化のために公開。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1059'
 ht-degree: 3%
 
 ---
 
 # AEM Forms ワークスペースで使用する各種 API {#apis-used-in-aem-forms-workspace}
 
-AEM Forms Workspace では次の API が使用されます。
+AEM Forms Workspace では、次の API が使用されます。
 
 <table>
  <tbody>
@@ -56,7 +52,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>getRootEndpointCategories</td>
    <td>ProcessManagementStartpointService</td>
    <td>getRootEndpointCategories</td>
-   <td>サーバーに存在するすべてのルートカテゴリを取得します。</td>
+   <td>サーバー上に存在するすべてのルートカテゴリを取得します。</td>
   </tr>
   <tr>
    <td>getDirectChildCategories</td>
@@ -74,7 +70,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>invokeStartpoint</td>
    <td>ProcessManagementStartpointService</td>
    <td>invokeStartpoint</td>
-   <td>これにより、スタートポイントが呼び出され、スタートポイントに対応する新しいタスクが作成されます</td>
+   <td>これにより、スタートポイントが呼び出され、スタートポイントに対応するタスクが作成されます</td>
   </tr>
   <tr>
    <td>getAllTasks</td>
@@ -92,7 +88,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>renderTask</td>
    <td>ProcessManagementTaskService</td>
    <td>render</td>
-   <td>タスクをレンダリングし、フォーム URL、フォームタイプ、必要に応じてデータ URL など、フォームのレンダリングに必要な情報を返します。</td>
+   <td>タスクをレンダリングし、必要に応じて、フォームのレンダリングに必要な情報を、フォームの URL、フォームの種類、データの URL などとして返します。</td>
   </tr>
   <tr>
    <td>submitWithPriorData</td>
@@ -104,7 +100,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>submitWithData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithData</td>
-   <td>TaskManager の送信 API を使用して、タスクに関連付けられた（文字列として渡された）フォームデータを送信します。 TaskManager の送信 API を呼び出さないフレックスフォームに使用されます。</td>
+   <td>TaskManager の送信 API を使用して、タスクに関連付けられた（文字列として渡された）フォームデータを送信します。 TaskManager の送信 API を呼び出さないFlexフォームに使用されます。</td>
   </tr>
   <tr>
    <td>save</td>
@@ -113,9 +109,9 @@ AEM Forms Workspace では次の API が使用されます。
    <td>タスクをサーバーに保存します。</td>
   </tr>
   <tr>
-   <td>完了</td>
+   <td>complete</td>
    <td>ProcessManagementTaskService</td>
-   <td>完了</td>
+   <td>complete</td>
    <td>タスクが完了し、プロセスデザインに従ってタスクが次のステップに渡されます。</td>
   </tr>
   <tr>
@@ -173,22 +169,22 @@ AEM Forms Workspace では次の API が使用されます。
    <td>タスクの前の所有者にタスクを返します。</td>
   </tr>
   <tr>
-   <td>離脱</td>
+   <td>abandon</td>
    <td>ProcessManagementTaskService</td>
-   <td>離脱</td>
+   <td>abandon</td>
    <td>タスクを削除します。</td>
   </tr>
   <tr>
    <td>setVisibility</td>
    <td>ProcessManagementTaskService</td>
    <td>setVisibility</td>
-   <td>タスクの表示を設定します。 表示を false に設定した場合、後でユーザーに対してタスクが表示されなくなります。</td>
+   <td>タスクの表示を設定します。 visibility が false に設定されている場合、後でユーザーにはタスクが表示されません。</td>
   </tr>
   <tr>
    <td>getUsers</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsers</td>
-   <td>ユーザーの検索に使用されます。 名前が指定されていない場合はすべてのユーザーを返し、指定された名前のユーザーを返します。</td>
+   <td>ユーザーの検索に使用されます。 名前が指定されていない場合はすべてのユーザーを返し、指定された名前を持つユーザーを返します。</td>
   </tr>
   <tr>
    <td>getUsersInGroup</td>
@@ -200,13 +196,13 @@ AEM Forms Workspace では次の API が使用されます。
    <td>grantQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>grantQueueAccess</td>
-   <td>ログインしたユーザーのキューへのアクセスを指定したユーザーに許可します。 基本的には、別のユーザーと自分のキューを共有しています。</td>
+   <td>ログインしたユーザーのキューへのアクセスを指定したユーザーに許可します。 基本的に、自分のキューを別のユーザーと共有しています。</td>
   </tr>
   <tr>
    <td>requestQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>requestQueueAccess</td>
-   <td>ログインしたユーザーの指定したユーザーのキューへのアクセス要求を行います。 ユーザーがリクエストを承認すると、ユーザーのキューがログインユーザーと共有されます。</td>
+   <td>ログインしたユーザーに対して、指定したユーザーのキューのアクセス要求を行います。 ユーザーがリクエストを承認すると、そのユーザーのキューがログインしたユーザーと共有されます。</td>
   </tr>
   <tr>
    <td>getGrantedUsers</td>
@@ -236,7 +232,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>getAllQueues<br /> </td>
    <td>ProcessManagementQueueService<br /> </td>
    <td>getAllQueues<br /> </td>
-   <td>ログインしたユーザーがアクセスできるすべてのキュー（独自のキュー、共有キュー、グループキュー）を取得します。<br /> </td>
+   <td>ログインしたユーザーがアクセスできるすべてのキュー（独自、共有、グループのキュー）を取得します。<br /> </td>
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td>
@@ -290,7 +286,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>getAllSearchTemplates</td>
    <td>ProcessManagementQueryService</td>
    <td>getAllSearchTemplates</td>
-   <td>すべての検索テンプレートのリストを返します。</td>
+   <td>すべての検索テンプレートのリストが返されます。</td>
   </tr>
   <tr>
    <td>getTemplate</td>
@@ -308,7 +304,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>タスクのすべての割り当てを取得します。 例えば、: — ユーザーが別のユーザーにタスクを転送または問い合わせした場合、それはタスクの割り当てになります。</td>
+   <td>タスクのすべての割り当てを取得します。 例えば、あるユーザーが別のユーザーにタスクを転送または問い合わせした場合、そのタスクはタスクの割り当てになります。</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>
@@ -320,13 +316,13 @@ AEM Forms Workspace では次の API が使用されます。
    <td>initialize</td>
    <td>ProcessManagementClientSessionService</td>
    <td>initialize</td>
-   <td>必要に応じてアサーションを更新します。 ユーザーを認証します。 サーバ/クライアント情報のセッションパラメータを設定します。 ユーザー情報とポーリング間隔を返します。</td>
+   <td>必要に応じてアサーションを更新します。 ユーザーを認証します。 サーバー/クライアント情報のセッションパラメーターを設定します。 ユーザー情報とポーリング間隔を返します。</td>
   </tr>
   <tr>
    <td>getTasksForDirectReports</td>
    <td>ProcessManagementTeamTasksService</td>
    <td>getTasksForDirectReports</td>
-   <td>ログインしたマネージャーの直接レポートのすべてのタスクを返します。</td>
+   <td>ログインしたマネージャーの直属の部下のタスクをすべて返します。</td>
   </tr>
   <tr>
    <td>getTaskOfDirectReport<br /> </td>
@@ -395,7 +391,7 @@ AEM Forms Workspace では次の API が使用されます。
    <td>タスクの添付ファイルをサーバーにアップロードします。</td>
   </tr>
   <tr>
-   <td>getImageURL （html テンプレートから直接呼び出すこともできます）</td>
+   <td>getImageURL (HTMLテンプレートから直接呼び出されます )</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>getImage</td>
    <td>プロセスの画像を取得します。</td>

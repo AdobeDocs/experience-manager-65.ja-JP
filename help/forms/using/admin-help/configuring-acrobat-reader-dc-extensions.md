@@ -1,41 +1,37 @@
 ---
-title: データ取得のための Acrobat Reader DC Extensions の設定
-seo-title: Configuring Acrobat Reader DC extensions for data capture
-description: データ取得のための Acrobat Reader DC Extensions の設定方法について説明します。
-seo-description: Learn how to configure Acrobat Reader DC extensions for data capture.
-uuid: af6b3c72-601e-4f54-8343-a323eeee5906
+title: データキャプチャ用のAcrobat Reader DC Extensions の設定
+description: データキャプチャ用にAcrobat Reader DC Extensions を設定する方法を説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 8f8367fe-a8e9-46ee-a980-1633be02932d
 exl-id: 0f8e1e46-4fc5-43f6-abb1-19a3f20e1f1d
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 100%
+source-wordcount: '318'
+ht-degree: 3%
 
 ---
 
-# データ取得のための Acrobat Reader DC Extensions の設定 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
+# データキャプチャ用のAcrobat Reader DC Extensions の設定 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
-AEM forms インストール環境のユーザーが Content Services（非推奨）のデータ取得機能を使用する場合、このユーザー用に、読み取り専用アクセス権を持つロールを作成することをお勧めします。
+AEM forms インストール環境のユーザーが Content Services（非推奨）のデータ取得機能を使用している場合、これらのユーザーに対して読み取り専用アクセス権を持つロールを作成することをお勧めします。
 
-***メモ&#x200B;**：Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/jp/support/products/enterprise/eol/eol_matrix.html)を参照してください。*
+***注意&#x200B;**:Adobe®LiveCycle® Content Services ES（非推奨）は、LiveCycleと共にインストールされるコンテンツ管理システムです。 これにより、ユーザーは人間中心のプロセスを設計、管理、監視、最適化できます。 Content Services（非推奨）のサポートは12/31/2014で終了します。 [アドビ製品のライフサイクルに関するドキュメント](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を参照してください。*
 
-データを取得するには、SampleReaderExtensionsCredential にアクセスするために、ユーザーロールをアサインする必要があります。標準的な Trust 管理者ロールをアサインすることはできますが、これにより管理者以外の一般的なユーザーに対して、PKI Trust 設定や PKI 秘密鍵証明書の管理を行うことができる、強力な管理者権限を付与することになるので、AEM Forms がインストールされた実稼働環境のセキュリティを危険にさらす可能性があります。AEM Forms システム管理者が、Trust Store への読み取り専用アクセス権のみを含む新規ロールを作成して、データ取得機能を使用する管理者以外のユーザーにこのロールをアサインすることをお勧めします。
+データ取得を行うには、SampleReaderExtensionsCredential にアクセスするためのユーザーロールを割り当てる必要があります。 標準の信頼管理者の役割を割り当てることができます。 ただし、この役割には、PKI の信頼設定を制御し、PKI 資格情報を管理する一般的な非管理者ユーザー管理者権限が与えられ、実稼動環境でのAEM forms のインストールのセキュリティが損なわれる可能性があると考えてください。 AEM forms システム管理者は、Trust Store への読み取り専用アクセス権のみを付与するロールを作成し、この新しいロールを、データ取得を使用する管理者以外のユーザーに割り当てることをお勧めします。
 
-## データ取得を行うユーザー用のロールの作成 {#create-a-role-for-data-capture-users}
+## データ取得ユーザーのロールの作成 {#create-a-role-for-data-capture-users}
 
-1. 管理コンソールで、設定／User Management／ロールの管理をクリックし、「新規ロール」をクリックします。
-1. 該当するフィールドにロール名（Data Capture User など）および説明を入力して、「次へ」をクリックします。
-1. 「ロールの権限」画面で「権限を検索」をクリックし、使用可能な権限のリストから「Credential Read」を選択します。
+1. 管理コンソールで、設定/User Management/役割の管理をクリックし、「新しい役割」をクリックします。
+1. ロール名（例：データ取得ユーザ）と説明を適切なフィールドに入力し、「次へ」をクリックします。
+1. 役割の権限画面で、「権限を検索」をクリックし、使用可能な権限のリストから「Credential Read」を選択します。
 1. 「OK」をクリックし、「完了」をクリックします。
 
-## データ取得ロールをアサインするには： {#assign-the-data-capture-role}
+## データキャプチャの役割を割り当てる {#assign-the-data-capture-role}
 
-1. 管理コンソールで、設定／User Management／ロールの管理をクリックし、「検索」をクリックします。
-1. 作成したデータ取得ユーザーロールをクリックします。
-1. 「ユーザー／グループのロール」タブで、「ユーザーまたはグループを検索」をクリックします。
-1. 「ユーザーおよびグループを検索」画面で「検索」をクリックし、データ取得ユーザーロールを必要とするユーザーを選択して、「OK」をクリックします。
-1. ロールを編集画面で、「保存」をクリックします。
+1. 管理コンソールで、設定/User Management/役割の管理をクリックし、「検索」をクリックします。
+1. 作成したデータ取得ユーザーの役割をクリックします。
+1. [ 役割のユーザー/グループ ] タブで、[ ユーザー/グループの検索 ] をクリックします。
+1. 「ユーザーおよびグループの検索」画面で「検索」をクリックし、データ取得ユーザーの役割を必要とするユーザーを選択して、「OK」をクリックします。
+1. 役割を編集画面で、「保存」をクリックします。

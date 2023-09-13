@@ -1,35 +1,31 @@
 ---
 title: AEM DS の設定
-seo-title: Configuring AEM DS settings
-description: フォームを送信する前に、処理サーバーの URL を指定する必要があります。
-seo-description: You need to specify the processing server URL before you submit a form.
-uuid: 55a6d434-7352-48a8-8387-8a5c1a48fafc
+description: フォームを送信する前に処理サーバーの URL を指定する方法を説明します。
 contentOwner: amgoyal
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: a7387bd3-8b31-4bd0-a861-daa8f7cb2d05
 docset: aem65
 role: Admin
 exl-id: c43cab7b-3421-4e1b-a834-b2dd6eb23c1d
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 100%
+source-wordcount: '244'
+ht-degree: 37%
 
 ---
 
 # AEM DS の設定{#configuring-aem-ds-settings}
 
-この記事では、**AEM DS Settings Service** の設定方法について説明します。この設定は、次のような場合に使用できます。
+この記事では、 **AEM DS Settings Service**. この設定は、次のような複数のシナリオで使用できます。
 
 * Correspondence Management では
 
-   * AEM Forms ワークフローを設定する場合
-   * ドラフトまたは送信のリモート保存にフォームポータルを使用する場合
+   * AEM Forms Workflow を設定する場合
+   * Forms Portal を使用してドラフト/送信をリモートで保存する場合
 
-* アダプティブフォームにおいては、アダプティブフォームが発行インスタンスから送信される場合
+* アダプティブフォームでは、パブリッシュインスタンスからアダプティブフォームが送信された場合などに使用します。
 
-次の手順に従って、「**[!UICONTROL AEM DS 設定]**」を構成します。
+次に、 **[!UICONTROL AEM DS 設定]**:
 
 1. 次の URL で、パブリッシュインスタンスにある Configuration Manager を開きます。\
    *https://localhost:port/system/console/configMgr*
@@ -46,7 +42,7 @@ ht-degree: 100%
 
 1. 次の情報をそれぞれのフィールドに追加します。
 
-   **[!UICONTROL 処理サーバー URL]**：処理サーバーは、Forms または AEM ワークフローをトリガーする必要のあるサーバーです。AEM オーサーインスタンスの URL と同じか、他のサーバー URL（つまり、https://localhost:port/）である場合があります。
+   **[!UICONTROL 処理サーバー URL]**：処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。 これは、AEMオーサーインスタンスの URL と同じか、他のサーバー URL(https://localhost:port/) と同じにすることができます。
 
    **[!UICONTROL 処理サーバーのユーザー名]**：ワークフローユーザーのユーザー名は、[使用するサーバー URL に基づいています]
 
@@ -57,5 +53,6 @@ ht-degree: 100%
    >
    >    
    >    
-   >    * Forms または AEM ワークフローのいずれかを使用しているときは、発行サーバーから送信を行う前に、DS 設定サービスを構成する必要があります。このサービスを構成しないと、フォームの送信が失敗します。
-
+   >    * FormsまたはAEMワークフローを使用している場合、パブリッシュサーバーから送信する前に、DS 設定サービスを設定する必要があります。 そうしないと、フォームの送信が失敗します。
+   >    
+   >

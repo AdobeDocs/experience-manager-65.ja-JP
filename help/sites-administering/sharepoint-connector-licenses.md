@@ -1,30 +1,26 @@
 ---
 title: SharePoint Connector のライセンス、著作権情報および免責事項
-seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
-seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
-uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
+description: SharePoint Connector のライセンス、著作権情報、免責事項について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 100%
+source-wordcount: '354'
+ht-degree: 62%
 
 ---
 
 # SharePoint Connector のライセンス、著作権情報および免責事項{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-この節では、Day JCR Connector for MS SharePoint に関して明示的に記載する必要があるすべてのライセンス、著作権情報および免責事項について説明します。
+この節では、Day JCR Connector for MS® SharePointで明示的に記述する必要があるすべてのライセンス、著作権に関する通知、免責事項を示します。
 
-## Connector のサードパーティのライブラリの概要 {#overview-of-connector-rd-party-libraries}
+## コネクタのサードパーティライブラリの概要 {#overview-of-connector-rd-party-libraries}
 
-以下の表に、SharePoint Connector のコアライブラリ内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報または免責事項を示します。
+次の表に、SharePoint Connector コアライブラリ内で使用されるサードパーティライブラリと、それらのライブラリでカバーされるライセンス、著作権情報、免責事項を示します。
 
 | ライブラリ | ライセンスタイプ |
 |---|---|
@@ -63,9 +59,9 @@ ht-degree: 100%
 | xml-apis | [Apache](#apache)（パブリックドメインおよび W3C ソフトウェアライセンスの対象となる部分が含まれます） |
 | XmlSchema | [Apache](#apache) |
 
-## CRX のサードパーティのライブラリの概要 {#overview-of-crx-rd-party-libraries}
+## CRX サードパーティライブラリの概要 {#overview-of-crx-rd-party-libraries}
 
-以下の表に、CRX 内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報、または免責事項を記載します。
+次の表に、CRX 内で使用されるサードパーティのライブラリと、それらが適用されるライセンス、著作権情報、免責事項を示します。
 
 <table>
  <colgroup>
@@ -155,9 +151,9 @@ ht-degree: 100%
  </tbody>
 </table>
 
-## CQSE のサードパーティのライブラリの概要 {#overview-of-cqse-rd-party-libraries}
+## CQSE サードパーティライブラリの概要 {#overview-of-cqse-rd-party-libraries}
 
-以下の表に、Communiqué Servlet Engine 内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報、または免責事項を記載します。
+次の表に、Communiqué Servlet Engine 内で使用されるサードパーティのライブラリと、それらが適用されるライセンス、著作権情報、免責事項を示します。
 
 <table>
  <colgroup>
@@ -426,7 +422,7 @@ ht-degree: 100%
      limitations under the License.
 ```
 
-## 同時 {#concurrent}
+## Concurrent {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -770,7 +766,7 @@ ht-degree: 100%
      WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-## Sun ポートレット {#sun-portlet}
+## Sun Portlet {#sun-portlet}
 
 ```xml
      SPECIFICATION LEAD IS WILLING TO LICENSE THIS
@@ -1100,8 +1096,8 @@ ht-degree: 100%
      This license came from: https://www.w3.org/Consortium/Legal/
      copyright-documents-19990405
 
-     W3C® DOCUMENT NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; DOCUMENT NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1125,7 +1121,7 @@ ht-degree: 100%
      A link or URL to the original W3C document.
 
      The pre-existing copyright notice of the original author, or if
-     it doesn't exist, a notice of the form: "Copyright © [$date-of-document]
+     it doesn't exist, a notice of the form: "Copyright &copy; [$date-of-document]
      World Wide Web Consortium, (Massachusetts
      Institute of Technology, Institut National de Recherche en Informatique
      et en Automatique, Keio
@@ -1186,8 +1182,8 @@ ht-degree: 100%
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
      copyright-software-19980720
 
-     W3C® SOFTWARE NOTICE AND LICENSE
-     Copyright © 1994-2001 World
+     W3C&reg; SOFTWARE NOTICE AND LICENSE
+     Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
      Wide Web Consortium, (Massachusetts Institute of
      Technology, Institut National de
@@ -1213,7 +1209,7 @@ ht-degree: 100%
      terms and conditions. If none exist, a short notice of the
      following form (hypertext is preferred, text is permitted) should
      be used within the body of any redistributed or derivative code:
-     "Copyright © [$date-of-software] World Wide Web Consortium,
+     "Copyright &copy; [$date-of-software] World Wide Web Consortium,
      (Massachusetts Institute of Technology, Institut National de
      Recherche en Informatique et en Automatique, Keio University).
      All Rights Reserved.

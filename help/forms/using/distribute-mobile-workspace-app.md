@@ -1,18 +1,14 @@
 ---
 title: AEM Forms アプリの配布
-seo-title: Distribute AEM Forms app
 description: モバイルデバイスでのアプリの大規模なデプロイメントには、モバイルデバイス管理 (MDM) を使用します。
-seo-description: Use Mobile Device Management (MDM) for the large-scale deployment of apps on mobile devices.
-uuid: 8a2ce42b-5e9b-42c1-a945-c069f6152f6e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 exl-id: 375cfa95-ac6f-44c4-a736-f5dd55d24195
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 37%
+source-wordcount: '243'
+ht-degree: 22%
 
 ---
 
@@ -22,9 +18,9 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->この配布は、iOSおよび Android デバイスにのみ適用されます。
+>この配布は、iOSおよび Android™デバイスにのみ適用されます。
 
-## MDM ソリューションで一般的に提供される主な機能： {#main-features-generally-provided-by-mdm-solutions}
+## MDM ソリューションが提供する主な機能： {#main-features-generally-provided-by-mdm-solutions}
 
 * エンタープライズ環境でのデバイス登録の有効化
 * デバイス設定の設定と更新の許可
@@ -37,11 +33,11 @@ MDM 管理者は、ipa ファイルと apk ファイルの両方を MDM サー�
 
 ## AEM Forms アプリケーションに影響するプロファイル設定 {#profile-settings-affecting-the-aem-forms-app-br}
 
-デバイスにおける次のプロファイル設定は、お使いのデバイスの AEM Forms アプリケーションの機能に影響を与えます。
+デバイスでの次のプロファイル設定は、デバイスでのAEM Formsアプリの機能に影響します。
 
 * **カメラの使用を許可** （内） **デバイスの機能** セクション
 
-「**Allow use of camera**」を無効にすると、[写真注釈](/help/forms/using/add-attachments.md)のカメラ機能は使えません。アプリでカメラを使用するには、このオプションを有効にする必要があります。
+を無効にした場合、 **カメラの使用を許可**（のカメラ機能） [写真注釈](/help/forms/using/add-attachments.md) は機能しません。 アプリでカメラを使用するには、このオプションを有効にします。
 
 * **デバイスでのパスコードの要求** 「Passcode policies」セクションの
 

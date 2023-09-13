@@ -5,26 +5,26 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: 3fb069cf-d3ed-47b0-b6bf-82e110b3b059
-source-git-commit: f8643f6118e0bc6bfb2ee0e093155cf0907eb5d3
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 83%
+source-wordcount: '723'
+ht-degree: 72%
 
 ---
 
 # AEM Forms Android アプリケーションの構築 {#build-the-aem-forms-android-app}
 
-AEM Forms Android アプリケーションを構築するには、以下の手順を、記載されている順序で実行します。
+AEM Forms用の Android アプリを構築するには、次の手順を推奨される順序で実行します。
 
 1. [AEM Forms アプリケーションのソースコードパッケージのダウンロード](#download-android-zip)
 1. [環境変数の設定](#set-environment-variable-android)
-1. [標準的な AEM Forms アプリケーションの構築](#set-up-the-xcode-project)
+1. [標準のAEM Formsアプリの構築](#set-up-the-xcode-project)
 
 ## AEM Forms アプリケーションのソースコードパッケージのダウンロード {#download-android-zip}
 
 AEM Forms アプリケーションのソースコードパッケージは `adobe-lc-mobileworkspace-src-<version>.zip` アーカイブを参照します。このアーカイブにはカスタムの AEM Forms アプリケーションを構築するために必要なソースコードが含まれています。アーカイブは、「ソフトウェア配布」で入手できる `adobe-aemfd-forms-app-src-pkg-<version>.zip` パッケージに含まれています。
 
-`adobe-aemfd-forms-app-src-pkg-<version>.zip` ファイルをダウンロードするには、次の手順を実行します。
+次の手順で `adobe-aemfd-forms-app-src-pkg-<version>.zip` ファイルに保存するには、次の手順を実行します。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
@@ -49,9 +49,9 @@ AEM Formsアプリのビルドプロセスを開始する前に、次の環境�
 * `ANDROID_SDK_ROOT` システム環境変数を、Android の SDK の場所に設定します。例：C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk
 * `Path` システム環境変数を、Android の platform-tools フォルダーおよび tools フォルダーに含めるように設定します。例：C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk\platform-tools および C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk\tools
 
-## 標準的な AEM Forms アプリケーションの構築 {#set-up-the-xcode-project}
+## 標準のAEM Formsアプリの構築 {#set-up-the-xcode-project}
 
-adobe-lc-mobileworkspace-src-&lt;version>.zip ファイルをローカルファイルシステムに保存して環境変数を設定したら、次のいずれかのオプションを使用して、標準的な AEM Forms Android アプリケーションを構築します。
+adobe-lc-mobileworkspace-src — を保存した後&lt;version>ローカルファイルシステム上の.zip ファイルと、環境変数を設定し、次のいずれかのオプションを使用して、標準のAEM Forms Android アプリを構築します。
 
 * [Android Studio を使用した AEM Forms アプリケーションの構築](#using-android-studio)
 * [Android Studio を使用した .apk ファイルの生成](#generate-apk-android-studio)
@@ -81,7 +81,7 @@ Android Studio を使用してAEM Formsアプリを構築するには、次の�
 
 ### Android Studio を使用した .apk ファイルの生成 {#generate-apk-android-studio}
 
-Android Studio を使用して.apk ファイルを生成するには、次の手順を実行します。
+Android Studio を使用して.apk ファイルを生成するには、以下の手順を実行します。
 
 1. 自分のマシンで Android Studio アプリケーションを起動します。
 1. 「**Open an existing Android Studio project**」を選択します。既存のプロジェクトを開くダイアログボックスが自動的に表示されない場合は、**File**／**Open** を選択します。
@@ -89,7 +89,7 @@ Android Studio を使用して.apk ファイルを生成するには、次の手
 
     「android」オプションが左側のペインに表示されます。
 
-1. **Build**／**Build APK** を選択し、.apk ファイルを生成します。
+1. .apk ファイルを生成するには、「 **ビルド** > **APK の構築**.
 
    オプションで、**Build**／**Generate Signed APK** を選択し、.apk ファイルの[署名バージョン](https://developer.android.com/studio/publish/app-signing)を生成することもできます。
 
@@ -99,4 +99,4 @@ Android Studio を使用して.apk ファイルを生成するには、次の手
 
 **Windows ユーザー：** `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
 
-**Mac ユーザー：** `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+**Macユーザー：** `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`

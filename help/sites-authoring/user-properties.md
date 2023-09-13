@@ -1,20 +1,16 @@
 ---
 title: アカウント環境の設定
-seo-title: Configuring Your Account Environment
 description: AEMでは、アカウントおよびオーサー環境の特定の側面を設定できます
-seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
-uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 68%
+source-wordcount: '514'
+ht-degree: 53%
 
 ---
 
@@ -24,11 +20,11 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
 [ヘッダー](/help/sites-authoring/basic-handling.md#the-header)および関連する[環境設定](#userpreferences)ダイアログの「[ユーザー](/help/sites-authoring/user-properties.md#user-settings)」オプションを使用すると、ユーザーオプションを変更できます。
 
-最初に、ヘッダーの「[ユーザー](/help/sites-authoring/user-properties.md#user-settings)」オプションにアクセスします。
+まず、ヘッダーの「[ユーザー](/help/sites-authoring/user-properties.md#user-settings)」オプションにアクセスします。
 
 ## ユーザー設定 {#user-settings}
 
-この **ユーザー** 設定ダイアログでは、次の設定を実行できます。
+The **ユーザー** 設定ダイアログでは、次の設定を実行できます。
 
 * 次のユーザーとして操作
 
@@ -64,7 +60,7 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
    * **複数のウィンドウ** （デフォルト）
 
-      * 新しいウィンドウでページが開きます。
+      * ページが新しいウィンドウで開きます。
 
    * **単一ウィンドウ**
 
@@ -72,18 +68,18 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
 * **アセットのデスクトップアクションを表示**
 
-  このオプションを使用するには、AEM デスクトップアプリケーションが必要です。
+  このオプションを使用するには、AEMデスクトップアプリケーションが必要です。
 
 * **注釈カラー**
 
   これは、注釈を作成する際に使用されるデフォルトの色を定義します。
 
-   * カラーブロックをクリックして、スウォッチセレクターを開き、カラーを選択します。
+   * カラーブロックをクリックして、スウォッチセレクターを開き、色を選択します。
    * または、フィールドに目的のカラーの 16 進コードを入力します。
 
 * **相対的な日付の表示**
 
-  読みやすくするために、AEM では、過去 7 日以内の日付を相対日付（例： 3 日前）で表示し、それ以前の日付を正確な日付（例：2017年3月20日）で表示します。
+  読みやすさを向上させるために、AEMでは、過去 7 日以内の日付を相対日付（3 日前など）としてレンダリングし、古い日付を正確な日付（2017 年 3 月 20 日など）としてレンダリングします。
 
   このオプションは、システムの日付の表示方法を定義します。以下のオプションが利用できます。
 
@@ -100,12 +96,12 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
 * **ショートカットを有効にする**
 
-  AEM には、オーサリングの効率性を高める多くのキーボードショートカットがあります。
+  AEMでは、オーサリングの効率を高めるいくつかのキーボードショートカットがサポートされています。
 
    * [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
-  このオプションは、キーボードショートカットを有効にします。 デフォルトでは有効になっていますが、ユーザーに特定のアクセシビリティ要件がある場合などに無効にすることができます。
+  このオプションは、キーボードショートカットを有効にします。 デフォルトでは有効になっていますが、例えばユーザーに特定のアクセシビリティ要件がある場合などに、無効にすることができます。
 
 * **従来のオーサリング機能を使用**
 
@@ -113,8 +109,8 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
 * **アセットのホームページを有効にする**
 
-  このオプションは、システム管理者がアセットホームページの使用を組織全体で有効にしている場合にのみ使用できます。
+  このオプションは、システム管理者がアセットのホームページエクスペリエンスを組織全体で有効にしている場合にのみ使用できます。
 
 * **Stock 設定**
 
-  このオプションを使用すると、Adobe Stockの優先設定を指定できます。システム管理者が有効にしている場合にのみ使用できます [Adobe Stock統合](/help/assets/aem-assets-adobe-stock.md).
+  このオプションを使用すると、Adobe Stockの優先設定を指定できます。この設定は、システム管理者が有効にしている場合にのみ使用できます [Adobe Stock統合](/help/assets/aem-assets-adobe-stock.md).
