@@ -1,20 +1,16 @@
 ---
 title: AEM Forms Workspace ユーザーインターフェイスのロケールの変更
-seo-title: Changing the locale of AEM Forms workspace user interface
-description: インターフェイス上で AEM Forms Workspace を変更してテキスト、折りたたまれているカテゴリ、キュー、プロセス、および日付選択をローカライズする方法。
-seo-description: How to modify the AEM Forms workspace to localize text, collapsed categories, queues, and processes, and the date picker on the interface.
-uuid: c89ff150-a36e-45cc-99a6-8768dbe58eab
+description: AEM Forms Workspace を変更して、テキスト、折りたたまれたカテゴリ、キュー、プロセス、およびインターフェイス上の日付選択をローカライズする方法です。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 100%
+source-wordcount: '570'
+ht-degree: 39%
 
 ---
 
@@ -22,37 +18,37 @@ ht-degree: 100%
 
 AEM Forms Workspace では、英語、フランス語、ドイツ語、日本語によるサポートを提供しています。また、AEM Forms Workspace ユーザーインターフェイスをその他の言語にローカライズする機能も提供しています。
 
-AEM Forms Workspace ユーザーインターフェイスを任意の言語にローカライズするには、次のようにします。
+AEM Forms Workspace のユーザーインターフェイスを選択した言語にローカライズするには：
 
-* AEM Forms Workspace のテキストをローカライズします。
-* 折りたたまれているカテゴリ、キュー、およびプロセスをローカライズする。
-* 日付選択をローカライズする。
+* AEM Formsワークスペースのテキストをローカライズする。
+* 折りたたまれたカテゴリ、キュー、およびプロセスをローカライズする。
+* 日付選択をローカライズする
 
-前述した手順を実行する前に、「[AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)」に一覧表示されている手順に従っていることを確認してください。 
+上記の手順を実行する前に、次の手順に従っていることを確認してください： [AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md).
 
 >[!NOTE]
 >
->AEM Forms Workspace のログイン画面の言語を変更するには、「[新しいログイン画面の作成](../../forms/using/creating-new-login-screen.md)」を参照してください。
+>AEM Forms Workspace のログイン画面の言語を変更するには、 [新しいログイン画面の作成](../../forms/using/creating-new-login-screen.md).
 
 ## テキストのローカライズ {#localizing-text}
 
-次の手順を実行して&#x200B;*新規*&#x200B;言語のサポートおよびブラウザのロケールコード「*nw*」を追加します。
+次の手順を実行して、言語のサポートを追加できます。 *新規* ブラウザのロケールコード *nw*.
 
 1. CRXDE Lite にログインします。
 CRXDE Lite のデフォルトの URL は、 `https://'[server]:[port]'/lc/crx/de/index.jsp` です。
-1. `apps/ws/locales` の場所に移動して、新しいフォルダー「`nw.`」を作成します。
+1. 場所に移動します。 `apps/ws/locales` フォルダーを作成します。 `nw.`
 1.  `/apps/ws/locales/en-US`の場所から`/apps/ws/locales/nw`の場所に、`translation.json`ファイルをコピーします。
-1. `/apps/ws/locales/nw`に移動して `translation.json`を開いて編集します。translation.json ファイルにロケール固有の変更を行います。
+1. `/apps/ws/locales/nw`に移動して `translation.json`を開いて編集します。translation.json ファイルにロケール固有の変更を加えます。
 
-   次の例では、AEM Forms Workspace の英語およびフランス語のロケールの translation.json ファイルを示します。
+   次の例には、AEM Forms Workspace の英語およびフランス語のロケールの translation.json ファイルが含まれています。
 
    ![translation_json_in_en](assets/translation_json_in_en.png) ![translation_json_in_fr](assets/translation_json_in_fr.png)
 
 ## 折りたたまれているカテゴリ、キューおよびプロセスのローカライズ {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms Workspace では画像を使用してカテゴリ、キュー、およびプロセスのヘッダを表示します。これらのヘッダをローカライズするには、開発パッケージが必要です。開発パッケージを作成する方法については、「[AEM Forms Workspace コードの構築](introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照してください。
+AEM Forms Workspace では画像を使用してカテゴリ、キュー、およびプロセスのヘッダを表示します。これらのヘッダーをローカライズするには、開発パッケージが必要です。 開発パッケージの作成について詳しくは、 [AEM Forms Workspace コードを構築しています。](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-次の手順では、新しくローカライズされた画像ファイルは&#x200B;*Categories_nw.png*、*Queue_nw.png*、および *Processes_nw.png* であると想定しています。画像の推奨される幅は 19px です。
+次の手順では、新しくローカライズされた画像ファイルは&#x200B;*Categories_nw.png*、*Queue_nw.png*、および *Processes_nw.png* であると想定しています。画像の推奨幅は 19 ピクセルに設定する必要があります。
 
 >[!NOTE]
 >
@@ -60,9 +56,9 @@ AEM Forms Workspace では画像を使用してカテゴリ、キュー、およ
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
-次の手順を実行して画像をローカライズします。
+画像をローカライズするには、次の手順を実行します。
 
-1. WebDAV クライアントを使用して、画像ファイルを */apps/ws/images* フォルダーに配置します。
+1. WebDAV クライアントを使用して、 */apps/ws/images* フォルダー。
 1. */apps/ws/css* に移動します。*newStyle.css* を開いて編集し、次のエントリを追加します。
 
    ```css
@@ -81,7 +77,7 @@ AEM Forms Workspace では画像を使用してカテゴリ、キュー、およ
 
 1. 「[Workspace のカスタマイズ](../../forms/using/introduction-customizing-html-workspace.md)」の記事に一覧表示されているすべてのセマンティック変更を実行します。
 1. */js/runtime/utility* フォルダーに移動し、*usersession.js* ファイルを開いて編集します。
-1. 元のコードブロックに一覧表示されているコードを探して、ステートメントに条件 *lang ! == &#39;nw&#39;* を追加します。 
+1. 元のコードブロックにリストされているコードを探し、条件を追加します。 *lang !== &#39;nw&#39;* を追加します。 
 
    ```javascript
    // Orignal code
@@ -109,12 +105,12 @@ AEM Forms Workspace では画像を使用してカテゴリ、キュー、およ
 
 ## 日付選択のローカライズ {#localizing-date-picker}
 
-*日付選択* API をローカライズするには、開発パッケージが必要です。開発パッケージを作成する方法については、「[AEM Forms Workspace コードの構築](introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照してください。
+をローカライズするには、開発パッケージが必要です。 *datepicker* API. 開発パッケージの作成について詳しくは、 [AEM Forms Workspace コードの構築](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-1. [jQuery UI パッケージ](https://jqueryui.com/download/all/)をダウンロードして抽出し、*&lt;抽出された jquery UI パッケージ>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n に移動します。
-1. ロケールコード nw の jquery.ui.datepicker-nw.js ファイルを apps/ws/js/libs/jqueryui にコピーして、ファイルにロケール固有の変更を行います。
+1. をダウンロードして抽出します。 [jQuery UI パッケージ](https://jqueryui.com/download/all/)に移動します。 *&lt;extracted jquery=&quot;&quot; ui=&quot;&quot; package=&quot;&quot;>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n
+1. ロケールコード nw のjquery.ui.datepicker-nw.js ファイルを apps/ws/js/libs/jqueryui にコピーし、ファイルにロケール固有の変更を行います。
 1. `apps/ws/js` に移動し、 `jquery.ui.datepicker-nw.js` ファイルを開いて編集します。 
-1. main.js ファイルで、 `jquery.ui.datepicker-nw.js.` にエイリアスを作成します。 `jquery.ui.datepicker-nw.js` ファイルにエイリアスを作成するためのコードは、次のとおりです。
+1. main.js ファイルで、 `jquery.ui.datepicker-nw.js.` のエイリアスを作成するコード `jquery.ui.datepicker-nw.js` ファイル：
 
    ```javascript
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
@@ -125,7 +121,7 @@ AEM Forms Workspace では画像を使用してカテゴリ、キュー、およ
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
 
-   以下のサンプルコードは、jquery.ui.datepicker-nw.js のエントリを追加する方法を示します。
+   以下のサンプルコードは、jquery.ui.datepicker-nw.js のエントリを追加する方法を示しています。
 
    ```json
    //Original Code
@@ -162,7 +158,7 @@ AEM Forms Workspace では画像を使用してカテゴリ、キュー、およ
    ], function ($, _, Backbone, jQueryUI, jQueryUIDatePickerJA, jQueryUIDatePickerDE, jQueryUIDatePickerFR, jQueryUIDatePickerNW, slimScroll, UserSearch, LogManager, Logger) {
    ```
 
-1. 日付選択 API を使用するすべてのファイルで、デフォルトの日付選択 API の設定を変更します。日付選択 API は次のファイルで使用されます。
+1. 日付選択 API を使用するすべてのファイルで、デフォルトの日付選択 API 設定を変更します。 日付選択 API は、次のファイルで使用されます。
 
    * apps\ws\js\runtime\views\searchtemplatedetails.js
    * apps\ws\js\runtime\views\outofoffice.js
