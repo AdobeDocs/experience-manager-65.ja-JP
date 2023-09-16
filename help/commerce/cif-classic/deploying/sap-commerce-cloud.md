@@ -5,10 +5,10 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 69%
+ht-degree: 68%
 
 ---
 
@@ -44,7 +44,7 @@ e コマース統合フレームワークの Hybris 拡張が更新されて、[
 >[!NOTE]
 >
 >* バージョン 18.11 以降をサポートしています。
->* を実行するには Java™ 7 が必要です [hybris 5 サーバー。](https://www.sap.com/products/crm.html)
+>* を実行するには Java™ 7 が必要です。 [hybris 5 サーバー。](https://www.sap.com/products/crm.html)
 * hybris のアドオンである [Telco Accelerator](https://www.sap.com/products/crm.html) は、AEM 拡張機能ではサポートされていません。
 >
 
@@ -95,7 +95,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
 >[!NOTE]
 >
-開発者は、[API のドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)をダウンロードすることもできます。
+開発者向けの [API ドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) は、もダウンロードできます。
 
 ### hybris サーバーのダウンロードと構築 {#download-and-build-your-hybris-server}
 
@@ -171,9 +171,9 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    [http://localhost:9002](http://localhost:9002)
 
-1. クリック **初期化** 次に、（既存のデータを削除したときに）初期化アクションを確認します。
+1. クリック **初期設定** 次に、（既存のデータを削除して）初期化アクションを確認します。
 
-   進行状況は、 `FINISHED` 完了を示しています。
+   コンソールに進行状況が表示され、 `FINISHED` 完了を示しています。
 
    >[!NOTE]
    >
@@ -212,7 +212,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
 [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 「**開始**」をクリックして、指定したファイルを読み込みます。この **結果** 「 」タブには、ログエントリが表示されます。
+1. 「**開始**」をクリックして、指定したファイルを読み込みます。The **結果** 「 」タブには、ログエントリが表示されます。
 
 1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
@@ -230,7 +230,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    `en_US - English (United States)`
 
-1. 「**開始**」をクリックして、指定したファイルを読み込みます。この **結果** 「 」タブには、ログエントリが表示されます。
+1. 「**開始**」をクリックして、指定したファイルを読み込みます。The **結果** 「 」タブには、ログエントリが表示されます。
 
 1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
