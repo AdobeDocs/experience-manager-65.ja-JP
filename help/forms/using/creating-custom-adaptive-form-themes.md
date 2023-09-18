@@ -1,18 +1,14 @@
 ---
 title: カスタムアダプティブフォームテーマの作成
-seo-title: Creating custom adaptive form themes
-description: アダプティブフォームテーマは、アダプティブフォームのスタイル（ルック＆フィール）を定義するために使用する AEM クライアントライブラリのことです。カスタムアダプティブフォームテーマの作成方法について説明します。
-seo-description: An adaptive form theme is an AEM client library that you use to define the styles (look and feel) for an adaptive form. Learn how you can create custom adaptive form themes.
-uuid: b25df10e-b07c-4e9d-a799-30f1c6fb3c44
+description: アダプティブフォームテーマは、アダプティブフォームのスタイル（ルックアンドフィール）を定義するために使用するAdobe Experience Managerクライアントライブラリです。 カスタムアダプティブフォームテーマを作成する方法を説明します。
 content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 100%
+source-wordcount: '795'
+ht-degree: 42%
 
 ---
 
@@ -20,19 +16,19 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->AEM Forms は、アダプティブフォームの[テーマ](/help/forms/using/themes.md)を作成および変更するための[テーマエディター](/help/forms/using/themes.md)機能を提供します。この記事に示す手順は、 [テーマエディター](/help/forms/using/themes.md)が存在しないバージョンからアップデートし、LESS/CSS ファイルを使用して作成されたテーマに対する投資を既におこなっている場合（テーマ前のエディター方式）のみ実行します。
+>ADOBE EXPERIENCE MANAGER(AEM)FORMS [テーマエディター](/help/forms/using/themes.md) アダプティブフォームの作成と変更の機能 [テーマ](/help/forms/using/themes.md). この記事に記載されている手順は、 [テーマエディター](/help/forms/using/themes.md) また、LESS/CSS ファイルを使用して作成されたテーマに対する投資が既に存在します（テーマ前のエディター方式）。
 
 ## 前提条件 {#prerequisites}
 
 * LESS（Leaner CSS）の知識
-* Adobe Experience Manager でのクライアントライブラリの作成方法
-* 作成したテーマを使用するための[アダプティブフォームテンプレートの作成](/help/forms/using/custom-adaptive-forms-templates.md)
+* Adobe Experience Managerでクライアントライブラリを作成する方法
+* [アダプティブフォームテンプレートの作成](/help/forms/using/custom-adaptive-forms-templates.md) 作成したテーマを使用する場合
 
-## アダプティブフォームテーマ {#adaptive-form-theme}
+## アダプティブフォームのテーマ {#adaptive-form-theme}
 
-**アダプティブフォームテーマ**&#x200B;は、アダプティブフォームのスタイル（ルック＆フィール）を定義するために使用する AEM クライアントライブラリのことです。
+An **アダプティブフォームのテーマ** は、アダプティブフォームのスタイル（ルックアンドフィール）の定義に使用するAEMクライアントライブラリです。
 
-**アダプティブテンプレート**&#x200B;を作成し、テンプレートにテーマを適用します。そしてこのカスタムテンプレートを使い、**アダプティブフォーム**&#x200B;を作成します。
+次を作成します。 **アダプティブテンプレート** テーマをテンプレートに適用します。 その後、このカスタムテンプレートを使用して、 **アダプティブフォーム**.
 
 ![アダプティブフォームとクライアントライブラリ](assets/hierarchy.png)
 
@@ -40,7 +36,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->次の手順では、ノード、プロパティ、フォルダーなどのAEM オブジェクトに対し、サンプル名を使用して説明します。
+>次の手順は、ノード、プロパティ、フォルダなどのAEMオブジェクトのサンプル名を使用して説明します。
 >
 >この手順にしたがって同じ名前を使用すると、結果として次のスナップショットと同じようなテンプレートが出来上がるはずです：
 
@@ -57,19 +53,19 @@ ht-degree: 100%
 
    例えば、プロパティを `af.theme.forest` に設定します。
 
-   ![CRX レポジトリのスナップショット](assets/3-2.png)
+   ![CRX リポジトリのスナップショット](assets/3-2.png)
 
 1. 手順 1 で作成したノードに、 `less` と `css` の 2 つのフォルダーと `css.txt` のファイルを追加します：
 
    * `less` フォルダー：`less` 変数と CSS スタイルの管理に使用される `less mixins` を定義する `less` 変数ファイルが含まれています。
 
-      このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインと変数を使用してスタイルを定義する `less` ファイルから構成されています。そして、これらすべての less ファイルは、styles.less にインポートされます。
+     このフォルダーは、 `less` 変数ファイル `less` mixin ファイル `less` mixin および変数を使用してスタイルを定義するファイル そして、これらすべての less ファイルは、styles.less にインポートされます。
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
 
-   **LESS 変数ファイル**：これらは、CSS スタイルを定義するために使用される変数を定義または上書きするためのファイルです。
+   **LESS 変数ファイル**:CSS スタイルの定義で使用される変数を定義または上書きするファイルです。
 
-   アダプティブフォームは、次の LESS ファイルで定義されている OOTB 変数を提供します：
+   アダプティブフォームは、以下の.less ファイルで定義された OOTB 変数を提供します。
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -82,7 +78,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >LESS プリプロセッサーのファイルをインポートする際には、インポートステートメント内でファイルの相対パスを指定してください。
+   >LESS プリプロセッサーのファイルをインポートする際に、import 文でファイルの相対パスを指定します。
 
    上書き変数の例：
 
@@ -109,9 +105,9 @@ ht-degree: 100%
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **LESS ミックスインファイル：**&#x200B;変数を引数として受け入れる関数を定義することができます。これらの関数の出力が、結果のスタイルとなります。異なるスタイルでこれらのミックスインを使用することにより、CSS スタイルの繰り返しを避けることができます。
+   **LESS ミックスインファイル：**&#x200B;変数を引数として受け入れる関数を定義することができます。これらの関数の出力は、結果のスタイルになります。 CSS スタイルの繰り返しを避けるために、これらの Mixin を異なるスタイルで使用します。
 
-   アダプティブフォームは、次のファイルで定義されている OOTB ミックスインを提供します：
+   アダプティブフォームは、次のファイルで定義された OOTB mixin を提供します。
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
 
@@ -135,7 +131,7 @@ ht-degree: 100%
    }
    ```
 
-   **styles.less ファイル：**&#x200B;このファイルは、クライアントライブラリに使わなくてはならないすべての LESS ファイル（変数、ミックスイン、スタイル）を含むために使用します。
+   **Styles.less ファイル：** このファイルを使用して、クライアントライブラリで使用する必要のあるすべての LESS ファイル（変数、mixin、スタイル）を含めます。
 
    次の `styles.less` ファイルのサンプルでは、インポートステートメントは任意の順序で配置することができます。
 
@@ -194,9 +190,9 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >styles.less ファイルは必須ではありません。これはつまり、カスタムスタイル、変数、ミックスインを定義していない場合には、このファイルを作成する必要はないということです。
+   >styles.less ファイルは必須ではありません。 つまり、カスタムスタイル、変数、mixin を定義していない場合は、このファイルを作成する必要はありません。
    >
-   >しかし、styles.less ファイルを作成しない場合には、css.txt ファイル内の次の行をアンコメントする必要があります：
+   >ただし、style.less ファイルを作成しない場合、css.txt ファイル内で次の行のコメントを解除する必要があります。
    >
    >**`#base=less`**
    >
@@ -214,11 +210,11 @@ ht-degree: 100%
 
    1. `sling:resourceSuperType` プロパティを追加し、その値を `fd/af/components/page/base` に設定します。
 
-      ![CRX レポジトリのスナップショット](assets/1-2.png)
+      ![CRX リポジトリのスナップショット](assets/1-2.png)
 
-   1. テーマをページで使用するには、ノードに上書きファイル library.jsp を追加する必要があります。
+   1. ページでテーマを使用するには、上書きするファイル library.jsp をノードに追加する必要があります。
 
-      次に、本記事の「アダプティブフォームテーマを作成するには」のセクションで作成されたテーマをインポートします。
+      その後、この記事の「アダプティブフォームテーマを作成するには」の節で作成したテーマを読み込むことができます。
 
       以下のサンプルコードでは、`af.theme.forest` のテーマをインポートしています。
 
@@ -229,8 +225,8 @@ ht-degree: 100%
 
    1. **オプション**：カスタムページでは、header.jsp、footer.jsp、the body.jsp を必要に応じて上書きしてください。
 
-1. jcr:content が前の手順で作成されたカスタムページ（例：`myAfCustomizations/myAfPages/forestPage)`）を指しているカスタムテンプレート（例：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`）を作成します。
+1. カスタムテンプレートを作成します ( 例： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`) の jcr:content が前の手順で作成したカスタムページを指す ( 例： `myAfCustomizations/myAfPages/forestPage)`.
 
-   ![CRX レポジトリのスナップショット](assets/2-1.png)
+   ![CRX リポジトリのスナップショット](assets/2-1.png)
 
-1. 前の手順で作成したテンプレートを使って、アダプティブフォームを作成します。アダプティブフォームのルック＆フィールは、本記事の「アダプティブフォームテーマを作成するには」のセクションで作成されたテーマによって定義されています。
+1. 前の手順で作成したテンプレートを使用して、アダプティブフォームを作成します。 アダプティブフォームのルックアンドフィールは、この記事の「アダプティブフォームテーマを作成するには」の節で作成したテーマによって定義されます。

@@ -1,18 +1,15 @@
 ---
 title: 開発（汎用）
-seo-title: Developing (generic)
 description: 統合フレームワークには、e コマース機能用のAEMコンポーネントを構築できる、API を備えた統合レイヤーが含まれています
-seo-description: The integration framework includes an integration layer with an API, allowing you to build AEM components for eCommerce capabilities
-uuid: 393bb28a-9744-44f4-9796-09228fcd466f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 55%
+source-wordcount: '1846'
+ht-degree: 39%
 
 ---
 
@@ -24,7 +21,7 @@ ht-degree: 55%
 
 統合フレームワークには、API を備えた統合レイヤーが含まれています。これにより、（特定の e コマースエンジンに関係なく）e コマース機能用のAEMコンポーネントを構築できます。 また、内部 CRX データベースを使用したり、e コマースシステムを接続して製品データをAEMに取り込んだりすることもできます。
 
-この統合レイヤーを使用するために、すぐに使える AEM コンポーネントが多数用意されています。現在、次のものがあります。
+統合レイヤーを使用するための、標準搭載のAEMコンポーネントがいくつか用意されています。 現在、次のものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -33,11 +30,11 @@ ht-degree: 55%
 * チェックアウト
 * 検索
 
-検索には、AEM検索、サードパーティ検索またはその組み合わせを使用できる統合フックが提供されます。
+検索では、Adobe Experience Manager(AEM) 検索、サードパーティ検索またはその組み合わせを使用できる統合フックが提供されます。
 
 ## e コマースエンジンの選択 {#ecommerce-engine-selection}
 
-e コマースフレームワークは任意の e コマースソリューションと組み合わせて使用できますが、使用するエンジは AEM によって識別される必要があります（AEM の汎用エンジンを使用する場合でも同様です）。
+e コマースフレームワークは、任意の e コマースソリューションと共に使用できます。AEMの汎用エンジンを使用している場合でも、使用中のエンジンはAEMによって識別される必要があります。
 
 * e コマースエンジンは、`CommerceService` インターフェイスをサポートする OSGi サービスです。
 
@@ -54,7 +51,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 * 適切なコマースファクトリ定義を参照するために、`cq:commerceProvider` プロパティも使用されます。
 
-   * 例えば、 という値を持つ `cq:commerceProvider` プロパティは、**Geometrixx-Outdoors 向け Day CQ コマースファクトリ**（`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`）の OSGi 設定に関連付けられます（ここでも、`commerceProvider` パラメーターの値は `geometrixx`geometrixx となります）。
+   * 例えば、 `cq:commerceProvider` プロパティと値Geometrixxは、 **Day CQ Commerce Factory for Data-Outdoors** (`com.adobe.cq.commerce.hybris.impl.GeoCommerceServiceFactory`) — ここで、パラメーターは `commerceProvider` には値もあります `geometrixx`.
    * ここで、その他のプロパティも設定できます（適切かつ使用可能な場合）。
 
 標準の AEM インストールでは、例えば次のような特定の実装が必要です。
@@ -104,26 +101,26 @@ e コマースフレームワークは任意の e コマースソリューショ
   `CommerceSession.getUserContext()`
 
 * `updateOrder(Map<String, Object> delta)` を使用して、配送の詳細情報を取得または更新できます。
-* また、 **支払い** 処理接続
-* また、 **達成** 接続
+* の所有 **支払い** 処理接続
+* の所有 **達成** 接続
 
 ### アーキテクチャ {#architecture}
 
 #### 製品とバリアントのアーキテクチャ {#architecture-of-product-and-variants}
 
-1 つの製品に複数のバリエーションを含めることができます。例えば、色やサイズによって異なる場合があります。 製品では、バリエーションを構成するプロパティを定義する必要があります。このようなプロパティを&#x200B;*バリアント軸*&#x200B;と呼びます。
+1 つの製品に複数のバリエーションを含めることができます。例えば、色やサイズによって異なる場合があります。 製品は、バリエーションを駆動するプロパティを定義する必要があります。Adobe用語は次のとおりです。 *バリアント軸*.
 
 ただし、すべてのプロパティがバリアント軸であるわけではありません。 バリエーションは他のプロパティにも影響を与えます。例えば、価格はサイズに依存する場合があります。 買い物客はこれらのプロパティを選択できないので、バリアント軸とは見なされません。
 
 各製品やバリアントはリソースで表されるので、1:1 がリポジトリノードにマッピングされます。 特定の製品やバリアントをそのパスで一意に識別できるのも当然です。
 
-すべての製品リソースは、`Product API` で表現できます。製品 API の呼び出しのほとんどはバリエーションごとに固有ですが（ただし、バリエーションは 1 つのオリジナルから共有される値を継承する場合があります）、一連のバリエーションを一覧で表示する呼び出しもあります（`getVariantAxes()` や `getVariants()` など）。
+すべての製品リソースは、`Product API` で表現できます。製品 API のほとんどの呼び出しはバリエーション固有です（バリエーションは親から共有値を継承する場合がありますが）が、バリエーションのセットをリストする呼び出しもあります ( `getVariantAxes()`, `getVariants()`など )。
 
 >[!NOTE]
 >
->事実上、バリアント軸は `Product.getVariantAxes()` の戻り値で決定されます。
+>実際には、バリアント軸は、 `Product.getVariantAxes()` 戻り値：
 >
->* 汎用実装の場合、AEM が製品データのプロパティ（`cq:productVariantAxes`）からバリアント軸を読み取ります。
+>* 汎用実装の場合、AEMは製品データのプロパティから読み取ります ( `cq:productVariantAxes`)
 >
 >（一般的に）製品には多数のバリアント軸を持たせることができますが、デフォルトの製品コンポーネントでは次の 2 つのバリアント軸のみが処理されます。
 >
@@ -309,7 +306,7 @@ public class AxisFilter implements VariantFilter {
 
 * 買い物かごは、`CommerceSession:` によって管理されます。
 
-   * `CommerceSession` は、追加や削除などを実行します。
+   * The `CommerceSession` は追加や削除などを実行します。
    * `CommerceSession` は、買い物かごに対する様々な計算も実行します。
    * `CommerceSession` は、トリガーされた割引券とプロモーションも買い物かごに適用します。
 
@@ -321,7 +318,7 @@ public class AxisFilter implements VariantFilter {
       * 様々な通貨。
       * VAT 対応および VAT 対応です。
 
-   * 修飾子は、次のインターフェイスを使用して完全にオープンエンドになります。
+   * 修飾子は、次のインターフェイスを使用してオープンエンドになります。
 
       * `int CommerceSession.getQuantityBreakpoints(Product product)`
       * `String CommerceSession.getProductPrice(Product product)`
@@ -330,11 +327,11 @@ public class AxisFilter implements VariantFilter {
 
 * ストレージ
 
-   * AEM汎用の場合、買い物かごは、 [ClientContext](/help/sites-administering/client-context.md)
+   * AEM汎用の場合、買い物かごは [ClientContext](/help/sites-administering/client-context.md)
 
 **パーソナライズ機能**
 
-* パーソナライズは、常に [ClientContext](/help/sites-administering/client-context.md) から取得する必要があります。
+* 常に [ClientContext](/help/sites-administering/client-context.md).
 * 買い物かごの ClientContext `/version/` は、すべてのケースで作成されます。
 
    * 製品は、`CommerceSession.addCartEntry()` メソッドを使用して追加する必要があります。
@@ -384,7 +381,7 @@ public class AxisFilter implements VariantFilter {
 
 **送料計算**
 
-* 注文フォームでは、多くの場合、複数の配送オプション（および価格）を提示する必要があります。
+* 注文フォームには、多くの場合、複数の配送オプション（および価格）が含まれている必要があります。
 * 価格は、品目や注文の詳細（重み付けや配送先住所など）に基づく場合があります。
 * `CommerceSession` はすべての依存関係にアクセスするので、製品価格と同じ方法で扱うことができます。
 
@@ -403,13 +400,13 @@ public class AxisFilter implements VariantFilter {
 >
 >そのため、標準で提供される汎用実装ではこの API は実装されませんが、拡張して検索機能を追加できます。
 
-e コマースプロジェクトには、次の場所にあるデフォルトの検索コンポーネントが含まれています。
+e コマースプロジェクトには、次の場所にデフォルトの検索コンポーネントが含まれています。
 
 `/libs/commerce/components/search`
 
 ![chlimage_1-34](/help/sites-developing/assets/chlimage_1-34a.png)
 
-これにより、検索 API を使用して、選択したコマースエンジンに対するクエリを実行できます ( [e コマースエンジンの選択](#ecommerce-engine-selection)):
+これは、検索 API を使用して、選択したコマースエンジンに対してクエリを実行します ( [e コマースエンジンの選択](#ecommerce-engine-selection)):
 
 #### 検索 API {#search-api}
 
@@ -417,11 +414,11 @@ e コマースプロジェクトには、次の場所にあるデフォルトの
 
 1. `CommerceQuery`
 
-    検索クエリの記述に使用します（クエリテキスト、現在のページ、ページサイズ、並べ替え、選択されているファセットについての情報を含みます）。検索 API を実装するすべての e コマースサービスは、検索を実行するために、このクラスのインスタンスを受け取ります。`CommerceQuery` は、リクエストオブジェクト（`HttpServletRequest`）からインスタンス化できます。
+   検索クエリの説明に使用します（クエリテキスト、現在のページ、ページサイズ、並べ替え、選択されたファセットに関する情報が含まれます）。 検索 API を実装するすべての e コマースサービスは、このクラスのインスタンスを受け取って検索を実行します。 `CommerceQuery` は、リクエストオブジェクト（`HttpServletRequest`）からインスタンス化できます。
 
 1. `FacetParamHelper`
 
-    1 つの静的メソッド（`toParams`）を提供するユーティリティクラス。このメソッドを使用して、ファセットのリストと 1 つのトグル値から `GET` パラメーター文字列を生成します。これは、UI 側で役立ちます。各ファセットの値ごとにハイパーリンクを表示する必要があります。ユーザーがハイパーリンクをクリックすると、それぞれの値が切り替えられます（つまり、選択した場合はクエリから削除され、それ以外の場合は追加されます）。 これは、複数値/単一値ファセットの処理、値の上書きなどのすべてのロジックを処理します。
+    1 つの静的メソッド（`toParams`）を提供するユーティリティクラス。このメソッドを使用して、ファセットのリストと 1 つのトグル値から `GET` パラメーター文字列を生成します。これは UI 側で役立ちます。ユーザーがハイパーリンクをクリックしたときにそれぞれの値を切り替えるように、各ファセットの値に対してハイパーリンクを表示する必要があります。 つまり、選択された場合は、クエリから削除されます。選択されていない場合は、追加されます。 これは、複数値または単一値のファセットの処理、値の上書きなどのすべてのロジックを処理します。
 
 検索 API のエントリポイントは、`CommerceService#search` オブジェクトを返す `CommerceResult` メソッドです。このトピックについて詳しくは、API ドキュメントを参照してください。
 
@@ -448,7 +445,7 @@ e コマースプロジェクトには、次の場所にあるデフォルトの
    * **割引券**&#x200B;コンポーネント（`/libs/commerce/components/voucher`）は次のものを提供します。
 
       * 割引券管理用のレンダラー。買い物かごに現在入っている割引券があれば表示します。
-      * 割引券を管理（追加/削除）するための編集ダイアログ（フォーム）。
+      * 割引券を管理（追加/削除）するための編集ダイアログボックス（フォーム）。
       * 買い物かごへの割引券の追加/削除に必要なアクション。
 
 * プロモーション:
@@ -464,7 +461,7 @@ e コマースプロジェクトには、次の場所にあるデフォルトの
 
    * プロモーションをキャンペーンに関連付けて、オン/オフの日時を定義できます。
    * プロモーションをエクスペリエンスに関連付けて、セグメントを定義できます。
-   * エクスペリエンスに接続されていないプロモーションは、単独では実行されませんが、割引券で実行することはできます。
+   * エクスペリエンスに接続されていないプロモーションは、単独では実行されませんが、Voucher で実行することはできます。
    * プロモーションコンポーネント（`/libs/commerce/components/promotion`）には、次のものが含まれます。
 
       * プロモーション管理用のレンダラーとダイアログ
@@ -475,9 +472,9 @@ e コマースプロジェクトには、次の場所にあるデフォルトの
       * `DiscountPromotionHandler`買い物かご全体に絶対価格による割引またはパーセンテージ割引を適用します。
       * `PerfectPartnerPromotionHandler`パートナー製品も買い物かごに入っている場合に、製品の絶対価格による割引またはパーセンテージ割引を適用します。
 
-   * ClientContext `SegmentMgr` がセグメントを解決し、ClientContext `CartMgr` がプロモーションを解決します。少なくとも 1 つの解決されたセグメントの対象となる各プロモーションが実行されます。
+   * ClientContext `SegmentMgr` がセグメントを解決し、ClientContext `CartMgr` がプロモーションを解決します。1 つ以上の解決されたセグメントが対象となる各プロモーションが実行されます。
 
-      * 発生したプロモーションは、買い物かごを再計算するために、AJAX呼び出しを介してサーバーに送り返されます。
+      * 発生したプロモーションは、買い物かごを再計算するAJAX呼び出しによってサーバーに送り返されます。
       * 実行されたプロモーション（および追加された割引券）もClientContextパネルに表示されます。
 
 割引券の買い物かごへの追加または買い物かごからの削除は、`CommerceSession` API を使用して実行されます。
@@ -507,7 +504,7 @@ public void removeVoucher(String code) throws CommerceException;
 public List<Voucher> getVouchers() throws CommerceException;
 ```
 
-このように、`CommerceSession` は、割引券が存在するかどうか、割引券を適用できるかどうかをチェックします。このチェックは、特定の条件を満たした場合（例えば、買い物かごの合計価格が 1 万円を超える場合など）にのみ適用できる割引券に対して実行されます。何らかの理由で割引券を適用できない場合は、`addVoucher` メソッドが例外をスローします。また、`CommerceSession` によって、割引券の追加または削除後に買い物かごの価格の更新もおこないます。
+このように、`CommerceSession` は、割引券が存在するかどうか、割引券を適用できるかどうかをチェックします。これは、特定の条件が満たされた場合にのみ適用できる割引券の場合に発生します。例えば、買い物かごの合計価格が$100 を超える場合などです。 何らかの理由で割引券を適用できない場合、 `addVoucher` メソッドは例外をスローします。 また、 `CommerceSession` は、割引券が追加または削除された後に買い物かごの価格を更新する役割を持ちます。
 
 `Voucher` は、以下のフィールドを含む、Bean のようなクラスです。
 
@@ -515,7 +512,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 * 短い説明
 * 割引のタイプと値を示す関連プロモーションの参照
 
-提供される `AbstractJcrCommerceSession` によって割引券を適用できます。クラス `getVouchers()` が返す割引券は、（特に）次のプロパティを持つ jcr:content ノードを含んだ `cq:Page` のインスタンスです。
+提供される `AbstractJcrCommerceSession` によって割引券を適用できます。クラスから返された割引券 `getVouchers()` は、次のインスタンスです： `cq:Page` 次のプロパティを持つ jcr:content ノードを含む（その他）。
 
 * `sling:resourceType`（String） - `commerce/components/voucher` である必要があります。
 
@@ -523,7 +520,7 @@ public List<Voucher> getVouchers() throws CommerceException;
 * `code`（String） - この割引券を適用するためにユーザーが入力する必要があるコード。
 * `promotion` （文字列） — 適用されるプロモーション。例： `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-プロモーションハンドラーは、買い物かごを変更する OSGi サービスです。買い物かごは、`PromotionHandler` インターフェイスで定義される、複数のフックをサポートします。
+プロモーションハンドラーは、買い物かごを変更する OSGi サービスです。 買い物かごは、 `PromotionHandler` インターフェイス。
 
 ```java
 /**

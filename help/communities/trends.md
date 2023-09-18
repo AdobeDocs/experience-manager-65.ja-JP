@@ -1,20 +1,16 @@
 ---
 title: アクティビティのトレンド
-seo-title: Activity Trends
 description: コミュニティアクティビティリストコンポーネントをページに追加する
-seo-description: Adding a Community Activity List component to a page
-uuid: 316aabf7-01a5-46da-be59-70c206eb6a3d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 8%
+source-wordcount: '344'
+ht-degree: 9%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 8%
 
 ## はじめに {#introduction}
 
-この `Community Activity List` コンポーネントを使用すると、メンバーによる投稿およびビュー、およびコンテンツの投稿とビューに関するトレンド情報を追加できます。
+The `Community Activity List` コンポーネントを使用すると、メンバー別の投稿およびビューに関するトレンド情報や、コンテンツの投稿およびビューを追加できます。
 
 このドキュメントでは、次の内容について説明します。
 
@@ -38,11 +34,7 @@ ht-degree: 8%
 
 ### コミュニティアクティビティリストをページに追加する {#adding-a-community-activity-list-to-a-page}
 
-を追加するには、以下を実行します。 `Community Activity List` コンポーネントをオーサリングモードでページに追加する場合は、
-
-* `Communities / Community Activity List`
-
-をクリックし、ページ上の適切な場所にドラッグします。
+を追加するには、以下を実行します。 `Community Activity List` コンポーネントをオーサリングモードでページに追加する場合は、 `Communities / Community Activity List` をクリックし、ページ上の適切な場所にドラッグします。
 
 必要な情報については、 [コミュニティコンポーネントの基本](/help/communities/basics.md).
 
@@ -52,11 +44,11 @@ ht-degree: 8%
 
 ### コミュニティアクティビティリストの設定  {#configuring-community-activity-list}
 
-配置された `Community Activity List` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+配置した `Community Activity List` コンポーネントを選択し、 `Configure` アイコンをクリックして、編集ダイアログボックスを開きます。
 
 ![設定](assets/configure-new.png)
 
-以下 **コメント** タブで、アップロードされたファイルのコメントを表示するかどうかと表示方法を指定します。
+の下 **コメント** タブで、アップロードされたファイルのコメントを表示するかどうかと表示する方法を指定します。
 
 ![プロパティ](assets/activity-list-properties.png)
 
@@ -79,7 +71,7 @@ ht-degree: 8%
 * **表示数**
 
   リストする項目の数。
-初期設定は 10 です。
+デフォルトは 10 です。
 
 * **アクティビティタイプ**
 
@@ -90,7 +82,7 @@ ht-degree: 8%
    * `Follows`
    * `Likes`
 
-  初期設定は Views です。
+  デフォルトは Views です。
 
 * **期間**
 
@@ -107,22 +99,22 @@ ht-degree: 8%
 
 * **コンテキストパス**
 
-  特定のブログなど、サイトのサブセットに対するアクティビティの範囲を設定できます。
+  これにより、特定のブログなど、サイトのサブセットに対するアクティビティの範囲を設定できます。
 デフォルトはコミュニティサイト全体です。
 
 * **メンバー数の集計**
 
-  選択を解除（オフ）すると、最上位の投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、 `Activity Type` / `Posts` コンテンツをルートページに投稿できないので、アクティビティは表示されません。 オンにすると、すべての下位のページのカウントが含まれます。
+  選択を解除（オフ）すると、最上位の投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、 `Activity Type` / `Posts` ルートページにコンテンツを投稿できないので、「 」アクティビティは表示されません。 オンにすると、すべての下位のページのカウントが含まれます。
 初期設定はオンです。
 
-### 4 つのコンポーネントを含むページの例 {#example-page-with-components}
+### 4 つのコンポーネントを持つページの例 {#example-page-with-components}
 
-**上位の訪問者** config:タイプ=メンバー、アクティビティタイプ=ビュー
+**上位の訪問者** config: Type = Members、Activity type = Views
 
-**上位の寄稿者** config:タイプ=メンバー、アクティビティタイプ=投稿
+**上位の寄稿者** config: Type = Members、Activity type = Posts
 
-**上位のコンテンツ** config:タイプ=コンテンツ、アクティビティタイプ=ビュー
+**上位のコンテンツ** config: Type = Content、Activity type = Views、
 
-**コンテンツのトレンド** config:タイプ=コンテンツ、アクティビティタイプ=投稿
+**コンテンツのトレンド** config: Type = Content、Activity type = Posts
 
 ![components](assets/activity-list-components.png)
