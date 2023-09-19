@@ -1,15 +1,15 @@
 ---
 title: We.Finance 自動保険更新リファレンスサイトのチュートリアル
-description: We.Finance 自動保険更新リファレンスサイトのチュートリアル
+description: We.Finance Auto Insurance Renewal リファレンスサイトの説明を参照してください。
 contentOwner: dekalra
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 docset: aem65
 exl-id: b6ded6ac-4fb1-49f9-b272-16774c3e89a3
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 67%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 67%
 
 ## We.Finance リファレンスサイトのシナリオ  {#we-finance-reference-site-scenario}
 
-We.Finance サイトは、AEM Forms のインタラクティブ通信機能の学習に役立つ金融サービスのサイトです。
+We.Finance サイトは、AEM Formsのインタラクティブ通信機能を学ぶのに役立つ金融サービスサイトです。
 
-AEM forms とMicrosoft® Dynamics との統合が、金融サービス会社における顧客体験をパーソナライズする方法を示す、We.Finance Auto Insurance の使用例に関する詳細なチュートリアルを参照してください。 このインタラクティブなチュートリアルは、金融会社における複雑なデジタルトランザクションや、顧客とのコミュニケーションの実装を容易にすることを目的としています。
+AEM forms とMicrosoft® Dynamics との統合が、金融サービス会社での顧客体験をパーソナライズする方法を示す、We.Finance 自動保険の使用例に関する詳細な説明を読みます。 このインタラクティブなチュートリアルは、金融会社における複雑なデジタルトランザクションや、顧客とのコミュニケーションの実装を容易にすることを目的としています。
 
 **まず、ユースケースをご覧ください。**
 
-Sarah Rose は We.Finance 社の既存の顧客で、自動保険ポリシーを購入しています。今はサラの保険証券を更新する時期です。 We.Finance 社の保険代理店である Gloria Rios が、Sarah に対し、保険契約の更新に関するリマインダーを送信します。 Sarah は電子メールに記載された指示に従い、処理を正常に完了します。
+Sarah Rose は We.Finance 社の既存の顧客で、自動保険ポリシーを購入しています。Sarah が保険契約を更新するのは今年のその時です。 Gloria Rios は彼女の保険代理店です。 We.Finance 社は、Sarah に対し、ポリシーの更新に関するリマインダーを送信します。 Sarah は電子メールに記載された指示に従い、処理を正常に完了します。
 
 ## 自動保険申し込みのチュートリアル {#auto-insurance-application-walkthrough}
 
@@ -34,7 +34,7 @@ We.Finance 社の自動保険申し込みのシナリオでは、次の 2 人の
 
 ### Gloria が We.Finance 社から保険契約の更新に関する連絡を送信 {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria は AEM インスタンスにログインし、「 **自動保険更新**」をクリックしてから「**エージェント UI を開く**」をクリックします。クリックすると、Sarah Rose のポリシーの詳細が保険関連ドキュメントに表示されます。Gloria が「**送信**」をクリックすると、画面に「送信開始」メッセージが表示され、数秒後に「送信完了」と表示されます。
+Gloria がAEMインスタンスにログインし、「 」をクリックします。 **自動保険の更新** その後、 **エージェント UI を開く**. 」をクリックします。クリックすると、Sarah Rose のポリシーの詳細が保険関連ドキュメントに表示されます。Gloria がクリック **送信** 画面に「送信開始」と表示され、数秒後に「送信に成功しました」と表示されます。
 
 Sarah は「自動保険更新」という件名のメールを受信します。
 
@@ -42,7 +42,7 @@ Sarah は「自動保険更新」という件名のメールを受信します�
 
 #### 実際の動作確認 {#see-it-yourself}
 
-**Adobe Experience Manager** ／**フォーム** ／ **フォームとドキュメント** ／**We.Finance**／**自動保険**&#x200B;に移動します。「自動保険更新／**インタラクティブ通信**」を選択し、「**エージェント UI を開く**」をクリックします。エージェント UI でインタラクティブ通信が開きます。ポリシードキュメントが添付された電子メールを受け取れるように、有効な電子メールアドレスを入力し、「送信」をクリックします。
+**Adobe Experience Manager** ／**フォーム** ／ **フォームとドキュメント** ／**We.Finance**／**自動保険**&#x200B;に移動します。「自動保険更新／**インタラクティブ通信**」を選択し、「**エージェント UI を開く**」をクリックします。エージェント UI でインタラクティブ通信が開きます。有効な電子メールアドレスを入力して、ポリシードキュメントが添付された電子メールを受信し、「送信」をクリックします。
 
 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.` から自動保険更新インタラクティブ通信に直接アクセスして確認することができます。
 
@@ -62,9 +62,9 @@ Sarah が「 **今すぐ更新する**」をクリックすると、自動保険
 
 #### 実際の動作確認 {#see-it-yourself-1}
 
-添付のPDF。 PDF は自動保険レターの印刷版です。「**今すぐ更新する**」をクリックしてポリシーの Web 版にアクセスします。自分の個人情報やポリシーの詳細を確認し、**今すぐ更新する**&#x200B;をクリックすると、別のインタラクティブ通信が表示されます。
+添付のPDFを含む電子メールを受信した。 PDF は自動保険レターの印刷版です。「**今すぐ更新する**」をクリックしてポリシーの Web 版にアクセスします。自分の個人情報やポリシーの詳細を確認し、**今すぐ更新する**&#x200B;をクリックすると、別のインタラクティブ通信が表示されます。
 
-この **今すぐ更新** ボタンをクリックすると、Sarah は Web 上のポリシーに移動します。 次の URL にアクセスできます。
+The **今すぐ更新** ボタンをクリックすると、Sarah は Web 上のポリシーに移動します。 次の URL にアクセスできます。
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 
@@ -72,7 +72,7 @@ Sarah が「 **今すぐ更新する**」をクリックすると、自動保険
 
 ### Sarah は支払いページを表示します {#sarah-reaches-the-payment-page}
 
-We.Finance 社の支払いページが表示されます。Sarah は、自分の記録と照らし合わせて、ポリシー番号と有効期限を再確認します。ページの右側で契約更新の支払いの概要を確認します。合計金額からプレミアム割引として 10％ 差し引かれていることがわかります。
+We.Finance 社の支払いページが表示されます。Sarah は、自分の記録と照らし合わせて、ポリシー番号と有効期限を再確認します。ページの右側で、Sarah は更新の「支払いの概要」をチェックし、合計金額に対して 10%のプレミアム割引を適用します。
 
 #### 仕組み {#how-it-works-1}
 
