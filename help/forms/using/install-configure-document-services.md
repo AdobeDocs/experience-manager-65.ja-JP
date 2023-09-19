@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
 workflow-type: tm+mt
-source-wordcount: '5529'
+source-wordcount: '5517'
 ht-degree: 79%
 
 ---
@@ -243,7 +243,7 @@ Acrobat をインストールしてから、Microsoft® Word を開きます。�
 >[!NOTE]
 >
 >* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
->* JAVA_HOME、JAVA_HOME_32、Acrobat_PATH（Windows のみ）は、必須の環境変数です。
+>* JAVA_HOME およびAcrobat_PATH（Windows のみ）は必須の環境変数です。
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
 >* Word、PowerPoint、Excel、Project などの Microsoft® Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。これらのアプリケーションがサーバーにインストールされている場合、GeneratePDFサービスは自動的にこれらのアプリケーションを開始します。
 >* UNIX ベースのプラットフォームでは、OpenOffice を/root としてインストールします。 OpenOffice がルートとしてインストールされていない場合、PDF Generatorサービスは OpenOffice ドキュメントをPDFドキュメントに変換できません。 OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
@@ -686,8 +686,6 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
   ```
   ldd phantomjs | grep not
   ```
-
-* JAVA_HOME_32 環境変数が正しい場所を指していることを確認します。
 
 **Linux® および Solaris™（WebKit 変換ルート）**
 
