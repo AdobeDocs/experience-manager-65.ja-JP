@@ -1,39 +1,34 @@
 ---
 title: アダプティブフォームのスタイル設定
-seo-title: Style your adaptive form
-description: カスタムテーマの作成、個々のコンポーネントのスタイル設定、テーマでの Web フォントの使用について説明します
-seo-description: Learn to create a custom theme, style individual components, and use web fonts in a theme
-page-status-flag: de-activated
-uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
+description: カスタムテーマの作成、個々のコンポーネントのスタイル設定、テーマでのWeb Fontsの使用について説明します。
 topic-tags: introduction
-discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
 workflow-type: tm+mt
-source-wordcount: '2041'
-ht-degree: 67%
+source-wordcount: '2054'
+ht-degree: 58%
 
 ---
 
 # アダプティブフォームのスタイル設定 {#do-not-publish-style-your-adaptive-form}
 
-カスタムテーマの作成、個々のコンポーネントのスタイル設定、テーマでの Web フォントの使用について説明します
+カスタムテーマの作成、個々のコンポーネントのスタイル設定、テーマでのWeb Fontsの使用について説明します。
 
 ![hero-image](do-not-localize/08-style_your_adaptiveformmain.png)
 
-これは、[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)シリーズを構成するチュートリアルです。チュートリアルの使用例全体を理解、実行、デモするために、シリーズを時系列に沿って実施することをお勧めします。
+これは、[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)シリーズを構成するチュートリアルです。Adobeでは、チュートリアルの使用例を理解し、実行し、デモを行うために、時系列に従うことをお勧めします。
 
 ## チュートリアルについて  {#about-the-tutorial}
 
-テーマを使用して、アダプティブフォームに独自の外観とスタイルを設定することができます。 アダプティブフォームエディターに付属している標準のテーマを適用することも、独自のカスタムテーマを作成することもできます。 AEM [!DNL Forms] はカスタムテーマを作成するための[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を提供します。1 つのテーマで、モバイル、タブレット、デスクトップで開いた同じアダプティブフォームに異なる外観を提供できます。 CSS または LESS に関する事前の知識は、テーマエディターを使用する必要はありませんが、これは必須です。
+テーマを使用して、アダプティブフォームに独自の外観とスタイルを設定することができます。 アダプティブフォームエディターに付属している標準のテーマを適用することも、独自のカスタムテーマを作成することもできます。 AEM [!DNL Forms] はカスタムテーマを作成するための[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を提供します。1 つのテーマで、モバイル、タブレット、デスクトップで開いた同じアダプティブフォームに異なる外観を提供できます。 テーマエディターを使用する場合、CSS または LESS に関する事前の知識は必要ありませんが、これは必要です。
 
-このチュートリアルを最後まで学習すると、次の内容を習得できます。
+チュートリアルの最後までに、次の操作をおこなう必要があります。
 
 * 標準搭載のテーマをアダプティブフォームに適用する
 * テーマエディターを使用してアダプティブフォームのテーマを作成する
 * 個々のコンポーネントのスタイル設定
-* ボーナスセクション：カスタムテーマでの Web フォントの使用
+* ボーナスセクション：カスタムWeb Fontsでのテーマの使用
 
 このチュートリアルを完了すると、フォームは次のようになります。
 
@@ -47,16 +42,18 @@ ht-degree: 67%
 
 [ファイルを入手](assets/logo-1.png)
 
-## 手順 1:アダプティブフォームにテーマを適用する {#step-apply-a-theme-to-your-adaptive-form}
+## 手順 1：アダプティブフォームにテーマを適用する {#step-apply-a-theme-to-your-adaptive-form}
 
-アダプティブフォームエディターには、すぐに使用できる複数のテーマが用意されています。 アダプティブフォームでカスタムスタイルを使用しない場合は、標準のテーマを持つアダプティブフォームを発行することもできます。 テーマはアダプティブフォームとは独立しています。 同じテーマを複数のアダプティブフォームに適用することができます。 テーマをアダプティブフォームに適用するには：
+アダプティブフォームエディターには、すぐに使用できる複数のテーマが用意されています。 アダプティブフォームでカスタムスタイルを使用しない場合は、標準のテーマを持つアダプティブフォームを発行することもできます。 テーマはアダプティブフォームとは独立しています。 同じテーマを複数のアダプティブフォームに適用することができます。
+
+**テーマをアダプティブフォームに適用するには、次の手順を実行します。**
 
 1. アダプティブフォームを編集用に開きます。
 
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
 1. のプロパティを開く **[!UICONTROL アダプティブフォームコンテナ]**. プロパティブラウザーで、に移動します。 **[!UICONTROL 基本]** > **[!UICONTROL アダプティブフォームのテーマ]**. すべての初期設定済みテーマとカスタムテーマが、「**[!UICONTROL アダプティブフォームのテーマ]**」フィールドに表示されます。デフォルトではキャンバステーマが適用されます。
-1. テーマを **[!UICONTROL アダプティブフォームのテーマ]** フィールドに入力します。 例： **調査テーマ**. ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) をタップして、選択したテーマを適用します。
+1. 次からテーマを選択： **[!UICONTROL アダプティブフォームのテーマ]** フィールドに入力します。 例： **調査のテーマ**. タップ ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 選択したテーマを適用できます。
 
    ![デフォルトのテーマを使用したアダプティブフォーム](assets/default-adaptive-form.png)
 
@@ -66,13 +63,15 @@ ht-degree: 67%
 
    **図：** *調査テーマを使用したアダプティブフォーム*
 
-## 手順 2:アダプティブフォームの更新 {#step-update-your-adaptive-form}
+## 手順 2：アダプティブフォームの更新 {#step-update-your-adaptive-form}
 
-上記のデザインでは、既存のアダプティブフォームのプレースホルダーテキストとロゴを変更する必要があります。 必要な変更を行うには、次の手順を実行します。
+上記のデザインでは、既存のアダプティブフォームのプレースホルダーテキストとロゴを変更する必要があります。
+
+**アダプティブフォームを更新するには：**
 
 1. ヘッダーの既存のロゴおよびテキストを変更します。 ロゴを削除するには：
 
-   1. フォームをフォームエディターで開きます。
+   1. フォームエディターでフォームを開きます。
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
@@ -91,9 +90,9 @@ ht-degree: 67%
 
       ![updated-adaptive-form](assets/updated-adaptive-form.png)
 
-## 手順 3:アダプティブフォームのカスタムテーマの作成 {#step-create-a-custom-theme-for-your-adaptive-form}
+## 手順 3：アダプティブフォームのカスタムテーマを作成する {#step-create-a-custom-theme-for-your-adaptive-form}
 
-以下を使用できます。 [テーマエディター](/help/forms/using/themes.md) をクリックしてカスタムテーマを作成します。 テーマエディターは、WYSIWYG の全機能を備えたエディターです。 これは、アダプティブフォームの様々なコンポーネントに CSS を適用する視覚的な方法です。 アダプティブフォームのコンポーネントやパネルのスタイルをより細かく制御できます。
+以下を使用すると、 [テーマエディター](/help/forms/using/themes.md) をクリックしてカスタムテーマを作成します。 テーマエディターは、WYSIWYG の全機能を備えたエディターです。 これは、アダプティブフォームの様々なコンポーネントに CSS を適用する視覚的な方法です。 アダプティブフォームのコンポーネントやパネルのスタイルをより細かく制御できます。
 
 テーマは、アダプティブフォームと同様、個別のエンティティです。 アダプティブフォームのコンポーネントやパネルのスタイル (CSS) が含まれています。 スタイルには、背景色、状態色、透明度、整列、サイズなどの CSS プロパティが含まれます。 テーマを適用すると、指定したスタイルがアダプティブフォームの対応するコンポーネントに適用されます。
 
@@ -105,11 +104,11 @@ ht-degree: 67%
 1. 「**[!UICONTROL 作成]**」をタップし、「**[!UICONTROL テーマ]**」を選択します。テーマの作成が必要なフィールドを含む「[!UICONTROL テーマを作成]」ページが表示されます。「**[!UICONTROL タイトル]**」フィールドと「**[!UICONTROL 名前]**」フィールドは入力必須です。
 
    * **タイトル：**&#x200B;テーマのタイトルを指定します。例： **グローバルテーマ。** タイトルを指定すると、テーマのリストからテーマを特定しやすくなります。
-   * **名前：**&#x200B;テーマの名前を指定します。例： **グローバルテーマ**&#x200B;指定された名前のノードがリポジトリーに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用できます。無効な入力は、すべてハイフンに置き換えられます。
+   * **名前：**&#x200B;テーマの名前を指定します。例： **グローバルテーマ。**&#x200B;指定された名前のノードがリポジトリーに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。 候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用できます。無効な入力は、すべてハイフンに置き換えられます。
 
-1. 「**[!UICONTROL 作成]**」をタップします。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。「**[!UICONTROL 開く]**」をタップし、新規作成されたテーマを新しいタブで開きます。テーマがテーマエディターで開きます。スタイル設定には、AEM に付属している標準提供のアダプティブフォームがテーマエディターにより使用されます。[!DNL Forms]
+1. 「**[!UICONTROL 作成]**」をタップします。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。「**[!UICONTROL 開く]**」をタップし、新規作成されたテーマを新しいタブで開きます。テーマがテーマエディターで開きます。 スタイル設定には、AEM に付属している標準提供のアダプティブフォームがテーマエディターにより使用されます。[!DNL Forms]
 
-   テーマエディター UI の使用について詳しくは、「[テーマエディターについて](/help/forms/using/themes.md#aboutthethemeeditor)」を参照してください。
+   テーマエディターの UI の使用について詳しくは、 [テーマエディターについて](/help/forms/using/themes.md#aboutthethemeeditor).
 
 1. **[!UICONTROL テーマオプション]** ![theme-options](assets/theme-options.png)／**[!UICONTROL 設定]**&#x200B;をタップします。「**[!UICONTROL フォームのプレビュー]**」フィールドで **shipping-address-add-update-form** アダプティブフォームを選択し、 「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」、「 **[!UICONTROL 保存]**」の順にタップします。テーマエディターで、デフォルトのアダプティブフォームではなく独自のアダプティブフォームを使用できるようになります。テーマエディターに戻るには、「**[!UICONTROL キャンセル]**」をタップします。
 
@@ -131,7 +130,7 @@ ht-degree: 67%
 
    | プロパティ | 値 |
    |---|---|
-   | フォントファミリー | Arial |
+   | フォントファミリー | Arial® |
    | フォントカラー | FFFFFF |
    | フォントサイズ | 54 px |
 
@@ -158,10 +157,10 @@ ht-degree: 67%
       <td>余白</td> 
       <td> 
        <ul> 
-        <li>上：1.5rem</li> 
-        <li>下：-35px</li> 
+        <li>上： 1.5rem</li> 
+        <li>下： -35 px</li> 
         <li>左：1rem<strong><br /> </strong></li> 
-       </ul> <p><strong>ヒント：</strong> フィールドごとに異なる値を設定するには、<img src="assets/link.png"> リンクアイコンをタップします。<br /> </p> </td> 
+       </ul> <p><strong>ヒント：</strong> 次をタップします。 <img src="assets/link.png"> リンクアイコンを使用して、各フィールドに異なる値を指定します。<br /> </p> </td> 
      </tr> 
      <tr> 
       <td>高さ</td> 
@@ -174,7 +173,7 @@ ht-degree: 67%
 
 ### データ取得コンポーネントのスタイルを設定し、アダプティブフォームに背景を適用する {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
-アダプティブフォーム内の複数のコンポーネントを使用して、データを取り込むことができます。 例えば、テキストボックスや数値ボックスなどです。 すべてのデータ取得コンポーネントに同じスタイルを設定することも、コンポーネントごとに異なるスタイルを設定することもできます。このチュートリアルでは、数値ボックス（顧客 ID、郵便番号）とテキストボックス（顧客 ID、名前、発送先住所、状態、メール）に同じスタイルを適用します。データ取得コンポーネントのスタイルを設定するには、次の手順を実行します。
+アダプティブフォーム内の複数のコンポーネントを使用して、データを取り込むことができます。 例えば、テキストボックスや数値ボックスなどです。 すべてのデータ取り込みコンポーネントと同じスタイルを指定するか、各コンポーネントに別々のスタイルを指定することができます。 このチュートリアルでは、数値ボックス（顧客 ID、郵便番号）とテキストボックス（顧客 ID、名前、発送先住所、状態、メール）に同じスタイルを適用します。データ取得コンポーネントのスタイルを設定するには、次の手順を実行します。
 
 1. 「**[!UICONTROL 顧客 ID]**」フィールドをタップし、「**[!UICONTROL フィールドウィジェット]**」オプションをタップします。次のプロパティを設定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 
@@ -195,16 +194,16 @@ ht-degree: 67%
       <td>境界線の半径 </td> 
       <td> 
        <ul> 
-        <li>上：7px<br /> </li> 
-        <li>右：7px<br /> </li> 
-        <li>下：7px<br /> </li> 
-        <li>左：7px<br /> </li> 
+        <li>上：7 px<br /> </li> 
+        <li>右：7 px<br /> </li> 
+        <li>下：7 px<br /> </li> 
+        <li>左：7 px<br /> </li> 
        </ul> </td> 
      </tr> 
      <tr> 
       <td>テキスト</td> 
       <td>フォントファミリー</td> 
-      <td>Arial</td> 
+      <td>Arial®</td> 
      </tr> 
      <tr> 
       <td>テキスト</td> 
@@ -264,16 +263,16 @@ ht-degree: 67%
       <td>境界線の半径 </td> 
       <td> 
        <ul> 
-        <li>上：7px<br /> </li> 
-        <li>右：7px<br /> </li> 
-        <li>下：7px<br /> </li> 
-        <li>左：7px</li> 
+        <li>上：7 px<br /> </li> 
+        <li>右：7 px<br /> </li> 
+        <li>下：7 px<br /> </li> 
+        <li>左：7 px</li> 
        </ul> </td> 
      </tr> 
      <tr> 
       <td>テキスト<br /> </td> 
       <td>フォントファミリー</td> 
-      <td>Arial</td> 
+      <td>Arial®</td> 
      </tr> 
      <tr> 
       <td>テキスト</td> 
@@ -292,7 +291,7 @@ ht-degree: 67%
 
    ![style-data-capture-components](assets/style-data-capture-components.png)
 
-## 手順 4:個々のコンポーネントのスタイル設定 {#step-style-individual-components}
+## 手順 4：個々のコンポーネントのスタイル設定 {#step-style-individual-components}
 
 一部のスタイルは、特定のコンポーネントにのみ適用されます。 このようなコンポーネントは、アダプティブフォームエディターでスタイル設定されます。
 
@@ -332,7 +331,7 @@ ht-degree: 67%
       <td>パディング</td> 
       <td> 
        <ul> 
-        <li>左：10px</li> 
+        <li>左： 10 px</li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -345,7 +344,7 @@ ht-degree: 67%
       <td>余白</td> 
       <td><br /> 
        <ul> 
-        <li>右：2rem</li> 
+        <li>右：2 rem</li> 
         <li>左：10rem </li> 
        </ul> </td> 
      </tr> 
@@ -377,7 +376,7 @@ ht-degree: 67%
      <tr> 
       <td>テキスト</td> 
       <td>フォントファミリー</td> 
-      <td>Arial</td> 
+      <td>Arial®</td> 
      </tr> 
      <tr> 
       <td>テキスト</td> 
@@ -417,10 +416,10 @@ ht-degree: 67%
       <td>余白</td> 
       <td> 
        <ul> 
-        <li>上：5rem</li> 
-        <li>右：14rem</li> 
-        <li>下：20px</li> 
-        <li>左：20px<br /> </li> 
+        <li>上：5 rem</li> 
+        <li>右： 14 rem</li> 
+        <li>下：20 px</li> 
+        <li>左： 20 px<br /> </li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -438,21 +437,21 @@ ht-degree: 67%
 
    ![styled-adaptive-form-1](assets/styled-adaptive-form-1.png)
 
-## 手順 5:ボーナスセクション：カスタムテーマでの Web フォントの使用 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
+## ステップ 5：ボーナスセクション：カスタムテーマでのWeb Fontsの使用 {#step-bonus-section-using-web-fonts-in-a-custom-theme}
 
-様々なフォントを使用して、アダプティブフォームをデザインすることができます。 アダプティブフォームが表示されるすべてのデバイスに、アダプティブフォームのデザインに使用されるフォントがない場合があります。 Web フォントサービスを使用すると、必要なフォントを目的のデバイスで使用できます。
+様々なフォントを使用して、アダプティブフォームをデザインすることができます。 アダプティブフォームが表示されるすべてのデバイスに、アダプティブフォームのデザインに使用されるフォントがない場合があります。 Web フォントサービスを使用して、必要なフォントをターゲットデバイスに配信できます。
 
-[!DNL Adobe Fonts] は web フォントサービスです。アダプティブフォームでこのサービスを設定、使用できます。[!DNL Adobe Fonts] をアダプティブフォームで使用するには：
+[!DNL Adobe Fonts] は、Web Fontsサービスです。 アダプティブフォームでこのサービスを設定、使用できます。[!DNL Adobe Fonts] をアダプティブフォームで使用するには：
 
 >[!NOTE]
 >
 >![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] の現在の名称は Adobe Fonts であり、Creative Cloud や他のサブスクリプションサービスに含まれています。[詳細情報](https://fonts.adobe.com/)を参照してください。
 
-1. [Adobe Fonts](https://typekit.com/) アカウントを作成し、キットを作成します。次に、Myriad Pro フォントをキットに追加してキットを発行し、キット ID を取得します。アダプティブフォームでは [!DNL Adobe Fonts]（web フォント）を使用する必要があります。
-1. AEM [!DNL Forms] サーバーで、![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]** ![ハンマー](assets/hammer.png)／**[!UICONTROL Adobe Fonts]** に移動します。次に、設定フォルダーを開きます。既に設定が使用可能な場合は、「**[!UICONTROL 作成]**」ボタンをクリックして新しいインスタンスを作成します。
+1. [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) アカウントを作成し、キットを作成します。次に、Myriad Pro フォントをキットに追加してキットを発行し、キット ID を取得します。これは、 [!DNL Adobe Fonts] (Web Fonts) を使用して、アダプティブフォーム内でデータを読み込むことができます。
+1. AEM内 [!DNL Forms] サーバー、に移動します。 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL ツール]** ![ハンマー](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. 次に、設定フォルダーを開きます。設定が既に使用可能な場合は、 **[!UICONTROL 作成]** ボタンを使用してインスタンスを作成します。
 
    設定を作成ダイアログで、新しい設定の「**タイトル**」を指定し、「**[!UICONTROL 作成]**」をクリックします。設定ページにリダイレクトされます。[!UICONTROL コンポーネントを編集]ダイアログが表示されるので、**キット ID** を入力して「**[!UICONTROL OK]**」をクリックします。
 
-1. [!DNL Adobe Fonts] 設定を使用するようにテーマを設定します。オーサーインスタンスで、テーマエディターを使用して「**[!UICONTROL グローバルテーマ]**」を開きます。テーマエディターで、**[!UICONTROL テーマオプション]** ![theme-options](assets/theme-options.png)／**[!UICONTROL 設定]**&#x200B;に移動します。「**[!UICONTROL Adobe Fonts 設定]**」フィールドで、キットを選択して「**[!UICONTROL 保存]**」をクリックします。
+1. [!DNL Adobe Fonts] 設定を使用するようにテーマを設定します。オーサーインスタンスで、テーマエディターを使用して「**[!UICONTROL グローバルテーマ]**」を開きます。テーマエディターで、**[!UICONTROL テーマオプション]** ![theme-options](assets/theme-options.png)／**[!UICONTROL 設定]**&#x200B;に移動します。Adobe Analytics の **[!UICONTROL Adobe Fonts Configuration]** 「 」フィールドでキットを選択し、 **[!UICONTROL 保存]**.
 
    **[!UICONTROL Adobe Fonts]** に追加したフォントは、すべてのコンポーネントの「**[!UICONTROL テキスト]**」アコーディオンで選択できます。
