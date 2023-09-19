@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 923ec028679031c9ef9ea6ae2cf827e7a4cd00d8
+source-git-commit: f41962faa0567ed99c1e2ab189e81fb978781af3
 workflow-type: tm+mt
-source-wordcount: '5517'
-ht-degree: 79%
+source-wordcount: '5515'
+ht-degree: 78%
 
 ---
 
@@ -481,7 +481,7 @@ Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使�
 
 ### （Windows のみ）HTML から PDF への変換のためのプライマリルートの設定 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換する複数のルート（Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS）を提供します。アドビでは、PhantomJS ルートを使用することを推奨しています。動的コンテンツを処理する機能を持ち、32 ビットライブラリと 32 ビット JDK に依存せず、追加フォントを必要としないからです。また、PhantomJS ルートは、変換を実行するために sudo または root アクセスを必要としません。
+PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換する複数のルート（Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS）を提供します。Adobeは PhantomJS ルートを使用することをお勧めします。動的コンテンツを処理する機能を持ち、32 ビットライブラリに依存しないか、追加のフォントが必要ないからです。 また、PhantomJS ルートは、変換を実行するために sudo または root アクセスを必要としません。
 
 HTMLからPDFへの変換のデフォルトの主ルートは Webkit です。 変換ルートを変更するには：
 
