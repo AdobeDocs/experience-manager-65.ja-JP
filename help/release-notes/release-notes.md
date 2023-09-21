@@ -2,7 +2,7 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
+source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
 workflow-type: tm+mt
 source-wordcount: '4548'
 ht-degree: 27%
@@ -371,7 +371,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * **Service Pack 18 にアップグレードした後、ページパブリッシングがページエディターで機能しない (6.5.18.0)**
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> AEM 6.5.0.0 のインスタンスをAEM 6.5.17.0にアップグレードした後、「 **[!UICONTROL ページを公開]** ページエディター内に、存在しない URL にリダイレクトされます。
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> AEM 6.5.0.0 のインスタンスをAEM 6.5.17.0にアップグレードした後、「 **ページを公開** ページエディター内に、存在しない URL にリダイレクトされます。
 
   この問題を回避するには、次のいずれかの操作を行います。
 
