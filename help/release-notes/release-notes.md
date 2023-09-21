@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: a15b9dae5cc4405122ee95e036a83fdfbf34f9bd
+source-git-commit: 4f6ef1a6cddec307af64ca888307f19c0450467d
 workflow-type: tm+mt
-source-wordcount: '4490'
-ht-degree: 28%
+source-wordcount: '4548'
+ht-degree: 27%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 28%
 
 * Assets、Dynamic Media - [Dynamic Mediaでのビデオのマルチサブタイトルおよびマルチオーディオトラックのサポート](/help/assets/video.md#about-msma) — プライマリビデオに複数のサブタイトルや複数のオーディオトラックを簡単に追加できるようになりました。 この機能を使用すると、ビデオにアクセスできるのは、全世界のオーディエンス全体です。 複数の言語でグローバルオーディエンスに対して 1 つの公開済みプライマリビデオをカスタマイズし、様々な地域のアクセシビリティガイドラインに従うことができます。 作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルやオーディオトラックを管理することもできます。
 
-* アセット — 検索結果から、アセットを含むフォルダーの場所に移動できるようになり、様々なアセット管理タスクを実行できるようになりました。 （ASSETS-23182）
+* アセット — 検索結果から、アセットが含まれるフォルダーの場所に移動して、様々なアセット管理タスクを実行できるようになりました。 （ASSETS-23182）
 
 **主な機能強化**
 
@@ -51,7 +51,7 @@ ht-degree: 28%
 
 * サイトのページエディター/画像コンポーネントユーザーがリモートアセットCloud Serviceーからアセットを参照できるようになりました。 （Sites-13448、Sites-13433）
 
-* Adobeで多数のプロジェクトがシステムに存在する場合に、リスト表示でプロジェクトをすばやく見つけるために、サーバー側での並べ替えがサポートされるようになりました。 プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。 （NPR-41027）
+* リスト表示でプロジェクトをすばやく見つけるために、Adobeでは、サーバー側での並べ替えがサポートされるようになりました。 プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。 （NPR-41027）
 
 * AEM 6.5.18.0は、MongoDB 5.0 から 6.0 をサポートしています。
 
@@ -61,19 +61,19 @@ ht-degree: 28%
 
 **Forms**
 
-* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html):** 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出し、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。 または、サービスから返されたエラーに対して特定のアクションを実行できます。 例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
+* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)**  — 外部サービスから返されたエラーに応じて、（クライアントライブラリを使用して）カスタム関数を呼び出せるようになりました。 また、エンドユーザーに合わせて適切な応答を提供できます。 または、サービスから返されたエラーに対して特定のアクションを実行できます。 例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
 
-* **[Adobe Sign Workflow ステップの強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step):** AEM Workflows のAdobe Signワークフローステップは、次の機能強化で使用できます。
+* **[Adobe Sign Workflow ステップの強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)** - AEM Workflows のAdobe Signワークフローステップは、次の機能強化で使用できます。
 
-   * **Adobe Signの政府機関 ID ベースの認証によるセキュリティの強化：** Adobe Acrobat Signの政府 ID ベースの認証では、政府発行の ID（運転免許証、国籍 ID、パスポート）を使用してユーザーが ID を認証できるようにすることで、さらに検証レイヤーを提供しています。 この機能強化は、信頼された識別ドキュメントを使用することで、署名プロセスに対する信頼性を高め、セキュリティ、コンプライアンス、およびユーザーの検証を強化する必要があるシナリオに最適です。
+   * **Adobe Signの政府機関 ID ベースの認証によるセキュリティの強化** - Adobe Acrobat Signの政府 ID ベースの認証により、さらに多くの検証がおこなわれます。 これにより、ユーザーは政府発行の ID（運転免許証、国籍 ID、パスポート）を使用して ID を認証できます。 この機能強化は、信頼された識別ドキュメントを使用することで、署名プロセスに対する信頼性を高め、セキュリティ、コンプライアンス、およびユーザーの検証を強化する必要があるシナリオに最適です。
 
-   * **Adobe Signドキュメントの監査証跡による透明性の強化：** Adobe Signドキュメントのライフサイクルに関する詳細なインサイトについては、監査記録機能を使用します。 監査証跡を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を維持できるようになりました。 これには、ドキュメントの閲覧者、編集者、署名者、および各イベントのタイムスタンプなどの詳細が含まれます。 この強化は、コンプライアンスの維持、紛争の解決、およびデジタル契約の整合性の確保に不可欠です。
-
-
-   * **署名者だけを超えて、契約受信者の役割を拡張しました。** Adobe Acrobat Signには、署名者以外にも、契約受信者の役割を拡張して、ワークフロー要件に合わせることができます。 有効にすると、契約の各受信者の役割は個別に設定でき、署名者がデフォルトとなります。
+   * **Adobe Signドキュメントの監査証跡による透明性の向上**  — 監査記録機能を使用すると、Adobe Signドキュメントのライフサイクルに関する詳細なインサイトを得ることができます。 監査証跡を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を維持できるようになりました。 これには、ドキュメントの閲覧者、編集者、署名者、および各イベントのタイムスタンプなどの詳細が含まれます。 この強化は、コンプライアンスの維持、紛争の解決、およびデジタル契約の整合性の確保に不可欠です。
 
 
-* **[AEM Forms on JEE の完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**:Service Pack により、JEE 上のAEM Formsの完全なインストーラーが作成され、次のような新しいソフトウェアの組み合わせがサポートされます。
+   * **署名者だけを超えて、契約受信者の役割を拡張しました。** - Adobe Acrobat Signを使用すると、署名者以外に、契約の受信者の役割を拡張して、ワークフロー要件に合わせることができます。 有効にすると、契約の各受信者の役割は個別に設定でき、署名者がデフォルトとなります。
+
+
+* **[AEM Forms on JEE の完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)**  — このサービスパックでは、次のような新しいソフトウェアの組み合わせをサポートする、JEE 上のAEM Formsの完全なインストーラーが提供されます。
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * OracleWebLogic 14C（Windows Server 2022 上）
@@ -81,7 +81,7 @@ ht-degree: 28%
    * MongoDB 4.4
    * MySQL JDBC Connector 8
 
-JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、AEM 6.5.18.0 Formsを JEE 上のフルインストーラーで使用することをAdobeにお勧めします。 新しく追加および廃止されたソフトウェアの完全なリストを確認するには、JEE 上のAEM Formsまたは OSGi 上のAEM Formsのドキュメントを参照してください。
+JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストールする、または使用する予定がある場合、Adobeでは、JEE 上のAEM 6.5.18.0 Formsフルインストーラーを使用することをお勧めします。 新しく追加および廃止されたソフトウェアの完全なリストを確認するには、JEE 上のAEM Formsまたは OSGi 上のAEM Formsのドキュメントを参照してください。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -179,7 +179,7 @@ JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合
    * ユーザーがフィールドを変更せずにカスタム関数を呼び出そうとすると（例えば、別のフィールドの値を設定しようとする）、失敗します。 （FORMS-9921）
    * アダプティブフォーム内のルールエディターのカスタムエラー機能を使用する際に、次のエラーが発生します。
       * ユーザーが@paramを使用しようとしたとき{boolean} 関数を使用する場合、ルールエディターではブール値を関数に渡すことはできません。
-      * ユーザーが@paramを使用しようとしたとき{string} 関数を使用すると、ルールエディターはオプションの値を渡せず、不完全なルールに関する警告を表示します。 （FORMS-9816、FORMS-9815）
+      * ユーザーが@paramを使用しようとしたとき{string} 関数を使用すると、ルールエディターはオプションの値を渡せず、不完全なルールの警告を表示します。 （FORMS-9816、FORMS-9815）
    * forms-user グループが、アダプティブフォーム内でルールエディターを 2 回呼び出せません。 （FORMS-9051）
    * ビジュアルエディターでは、ユーザーがフォームオブジェクトを選択すると、フィールドの値だけでなく、フィールドインスタンスオブジェクト全体がカスタム関数に渡されます。 （FORMS-10015）
    * ユーザーがコアコンポーネントベースのアダプティブフォームを作成し、テキスト入力コンポーネントを追加した場合、 `Is Empty` および `Is Not Empty` ルールエディターでは作業しないでください。 （FORMS-10098）
@@ -187,7 +187,7 @@ JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合
    * ユーザーが複雑な JSON スキーマを使用してアダプティブフォームを作成しようとすると、失敗します。 エラーは次のように発生します。
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0` で使用される様々なキャッシュに分散されます。（FORMS-9639）
    * アダプティブフォームでは、ユーザーが「利用条件に同意します」チェックボックスを無効にすると、ユーザーがスクロールダウンすると再び有効になります。 （FORMS-9458）
-   * ユーザーがGoogle Chrome/Firefox を使用して Android™デバイスでアダプティブフォームを開き、テキストボックスに許可されている最大文字数を入力すると、テキストボックスの値がクリアされません。 （FORMS-9354）
+   * ユーザーがGoogle Chrome/Firefox を使用して Android™デバイスでアダプティブフォームを開き、最大許容文字数をテキストボックスに入力すると、テキストボックス内の値がクリアされません。 （FORMS-9354）
    * チェックボックスのラベルに「、」、「/」、「。」などの特殊文字が含まれる場合、テキスト/ラベルをクリックしても、それぞれのチェックボックスは選択されません。 （FORMS-9313）
    * ユーザーが利用条件コンポーネントの検証を試みると、他のコンポーネントが検証される間、コンポーネントがフォーカスされていないかどうかの検証に失敗します。 （FORMS-8725、FORMS-8913）
    * AEM 6.5.16.0 Service Pack にアップグレードした後にアダプティブフォームが再読み込みされると、ファイル添付ファイルの取得に失敗します。 （FORMS-8906）
@@ -203,7 +203,7 @@ JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合
       * ユーザーがブラシやキーボードを使用して署名ダイアログボックスにサインインした場合、Enter キーを押してもダイアログボックスは閉じません。
       * 明確な署名の確認ダイアログには、キーボードを使用してアクセスできません。
       * スクリーンリーダーが、ダイアログボックスに入力された情報を読み取れない。
-      * マウスを使用せずに署名をクリアすることはできません。  （FORMS-9317）
+      * マウスを使用せずに署名をクリアすることはできません。 （FORMS-9317）
    * ユーザーがアダプティブフォームを送信すると、スクリーンリーダーは必須フィールドのエラーメッセージを読み取れません。 （FORMS-9316）
    * スクリーンリーダーがHTMLフォームを読み取ると、カーニング付き（間隔）でテキストを読み取る際に問題が発生します。 （FORMS-9258）
    * アダプティブフォームでは、テキストにリンクされた参照や脚注は、スクリーンリーダーを使用して呼び出されません。 （FORMS-8920）
@@ -235,7 +235,7 @@ JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合
 #### プラットフォーム{#foundation-platform-6518}
 
 * バニラExperience Manager、Service Pack 17 のインストール後、 `stderr.log`. Vanilla のインストール時にエラーが発生しないようにする。 （CQ-4353637）
-* ACL（アクセス制御リスト）に従わないタグ付け画面で「作成」ボタンを使用します。 （NPR-40973）
+* ACL（アクセス制御リスト）に従わないタグ付け画面の「作成」ボタン。 （NPR-40973）
 * Experience Manager上の ContextHub のキャッシュノードを作成、アクセス、またはその両方を行うことができません。 （NPR-40515）
 
 #### レプリケーション{#foundation-replication-6518}
@@ -369,7 +369,24 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* Oak From Service Pack 13 以降に関連して、次のエラーログが表示され始め、永続性キャッシュに影響します。
+* **Service Pack 18 にアップグレードした後、ページパブリッシングがページエディターで機能しない (6.5.18.0)**
+
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> AEM 6.5.0.0 のインスタンスをAEM 6.5.17.0にアップグレードした後、「 **[!UICONTROL ページを公開]** ページエディター内に、存在しない URL にリダイレクトされます。
+
+  この問題を回避するには、次のいずれかの操作を行います。
+
+   * 次の「path」プロパティを削除します。
+
+     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+
+   * 正しい URL をブラウザーに直接貼り付けます。
+
+     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+
+
+
+* **Oak に関連**
+Service Pack 13 以降で、永続性キャッシュに影響する次のエラーログが表示され始めました。
 
   ```shell
   org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
@@ -439,7 +456,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### サポートされているプラットフォーム
 
 * 1.8.0_281 より高い JDK バージョンは、WebLogic JEE サーバーではサポートされていません。 (FORMS-8498、CQDOC-20383)
-* [!DNL Microsoft®® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss®® EAP 7.1] をサポートしていないため、[!DNL Microsoft®® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。（CQDOC-18312）
+* [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないため、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。（CQDOC-18312）
 * JDK 11.0.20 は、JEE 上のAEM Formsインストーラーのインストールをサポートしていません。 JEE 上のAEM Formsインストーラーのインストールには、JDK 11.0.19 以前のバージョンのみがサポートされています。 （FORMS-10659）
 
 #### インストール
@@ -460,7 +477,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * AEM Service Pack 18 にアップグレードした後は、インタラクティブ通信レターを編集できません。 (FORMS-10578) 問題を解決するには、次の手順を実行します。
 
    1. ダウンロード [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) SD リンクから。
-   1. ホットフィックスアーカイブファイルを展開して、Experience Managerパッケージ (.zip) ファイルとバンドル (.jar) ファイルを取得します。
+   1. ホットフィックスアーカイブファイルを展開して、Experience Managerパッケージ (.zip) ファイルとバンドル (.jar) ファイルを取得できるようにします。
    1. パッケージマネージャーからパッケージ (.zip) をアップロードしてインストールします。
    1. Configuration Manager バンドルを開きます。 `https://server:host/system/console/bundles`バンドル (.jar) をアップロードし、インストールします。
 
