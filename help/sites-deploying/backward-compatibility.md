@@ -1,21 +1,17 @@
 ---
 title: AEM 6.5 における後方互換性
-seo-title: Backward Compatibility in AEM 6.5
-description: アプリと設定をAEM 6.5 と互換性を保つ方法を説明します。
-seo-description: Learn how to keep your apps and configurations compatible with AEM 6.5
-uuid: 81dc2771-f59b-4b24-8932-9e938cba05e0
+description: アプリと設定をAdobe Experience Manager(AEM)6.5 と互換性を保つ方法について説明します。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 feature: Upgrading
 exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 45%
+source-wordcount: '500'
+ht-degree: 15%
 
 ---
 
@@ -25,19 +21,19 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->互換性パッケージの範囲に含まれないコンテンツと設定の変更のリストについては、 [AEMでのリポジトリの再構築](/help/sites-deploying/repository-restructuring.md).
+>互換性パッケージの範囲に属さないコンテンツおよび設定の変更のリストについては、 [AEMでのリポジトリの再構築](/help/sites-deploying/repository-restructuring.md).
 
-AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発されています。
+Adobe Experience Manager(AEM)6.5 では、すべての機能が後方互換性を念頭に置いて開発されています。
 
-ほとんどの場合、AEM 6.3 を実行しているお客様は、アップグレードの際にコードやカスタマイズの修正をおこなう必要はありません。AEM 6.1 および 6.2 のお客様の場合、6.3 にアップグレードする際よりも大きい変更はありません。
+通常、AEM 6.3 を実行しているお客様は、アップグレードの際にコードやカスタマイズを変更する必要はありません。 AEM 6.1 および 6.2 のお客様の場合、6.3 へのアップグレード時よりも重大な変更はありません。
 
-例外的に機能の後方互換性を維持できない場合は、6.4 の互換パッケージをインストールすることで、バンドルおよびコンテンツの後方非互換性の問題を軽減できます（ダウンロード場所について詳しくは、以下の「設定方法」を参照してください）。この互換パッケージは、AEM 6.4 に準拠したアプリケーションのほとんどの場合で、互換性を回復するのに役立ちます。
+機能の後方互換性を維持できない例外の場合、バンドルとコンテンツに対する後方非互換性の問題を軽減できます。 それには、6.4 用の互換性パッケージをインストールします（ダウンロード先の詳細については、以下のセットアップ方法を参照してください）。 この互換性パッケージは、AEM 6.4 に準拠しているアプリケーションで、通常は互換性を復元するのに役立ちます。
 
 互換性パッケージを使用すると、AEMを互換モードで実行し、新しいAEM機能に対するカスタム開発を延期できます。
 
 >[!NOTE]
 >
->互換性パッケージは、AEM 6.5 との互換性を維持するために必要な開発を遅らせるための一時的なソリューションに過ぎません。アップグレード後すぐに開発を通じて互換性の問題に対処できない場合にのみ、最後のオプションとして推奨されます。 6.5 ベースのカスタム開発を続行し、6.5 の機能をフルに利用できるようになったら、ネイティブモードに切り替えて、互換性パッケージをアンインストールすることを強くお勧めします。
+>互換性パッケージは、AEM 6.5 との互換性を保つために必要な開発を遅らせるための一時的なソリューションに過ぎません。 Adobeでは、アップグレード直後に開発を通じて互換性の問題に対処できない場合にのみ、最後のオプションとしてのみお勧めします。 さらに、6.5 ベースのカスタム開発を続行し、6.5 の全機能を利用できるようになったら、Adobeはネイティブモードに切り替えて、互換性パッケージをアンインストールすることをお勧めします。
 
 ![sase](assets/sase.png)
 
@@ -49,7 +45,7 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 ネイティブモードは、AEM 6.5 のすべての新機能を使用し、すべての新機能でカスタマイズ機能を動作させるために開発を行う準備が整っているお客様向けです。
 
-つまり、アップグレード後すぐにアプリケーションで調整を行う必要が生じる場合があります。
+つまり、アップグレード後すぐにアプリケーションを調整する必要があります。
 
 **互換性モード：ルーティングが有効な互換性パッケージがインストールされました**
 
@@ -63,10 +59,10 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 ## 設定方法 {#how-to-set-up}
 
-**6.5 用 AEM 6.4 互換性パック**&#x200B;は、パッケージマネージャーを使用してパッケージとしてインストールできます。[6.5 用 AEM 6.4 互換性パックは、ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64)サイトからダウンロードできます。
+The **6.5 用AEM 6.4 互換性パック** は、パッケージマネージャーを使用してパッケージとしてインストールできます。 次をダウンロード： [ソフトウェア配布版のAEM 6.4 Compatibility Pack （6.5 用）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64) サイト。
 
 互換パッケージがインストールされると、次に示すように、OSGI 設定のスイッチを使用して、ルーティングを有効または無効にできます。
 
 ![互換スイッチ](assets/compat-switches.png)
 
-互換パッケージがインストールされて設定されると、各機能は選択された互換モードに基づいて使用されるようになります。
+互換性パッケージをインストールして設定した後、選択した互換性モードに基づいて機能が使用されます。

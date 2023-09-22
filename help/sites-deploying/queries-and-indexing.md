@@ -1,6 +1,6 @@
 ---
 title: Oak クエリとインデックス作成
-description: AEMでインデックスを設定する方法を説明します。
+description: Adobe Experience Managerでインデックスを設定する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,10 +8,10 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: 2adc33b5f3ecb2a88f7ed2c5ac5cc31f98506989
+source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
 workflow-type: tm+mt
 source-wordcount: '3033'
-ht-degree: 29%
+ht-degree: 23%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 29%
 
 ## はじめに {#introduction}
 
-Jackrabbit 2 とは異なり、Oak はデフォルトでコンテンツのインデックスを作成しません。 カスタムインデックスは、従来のリレーショナルデータベースと同様に、必要に応じて作成する必要があります。 特定のクエリのインデックスがない場合は、多数のノードがトラバースされる可能性があります。 クエリはまだ機能する可能性がありますが、非常に遅い可能性があります。
+Jackrabbit 2 とは異なり、Oak はデフォルトでコンテンツのインデックスを作成しません。 カスタムインデックスは、従来のリレーショナルデータベースと同様に、必要に応じて作成する必要があります。 特定のクエリのインデックスがない場合、多くのノードがトラバースされる可能性があります。 クエリは引き続き動作する可能性がありますが、処理が遅い可能性があります。
 
 Oak でインデックスのないクエリが検出された場合、WARN レベルのログメッセージが表示されます。
 
@@ -64,7 +64,7 @@ Apache Oak ベースのバックエンドを使用すると、様々なインデ
 
 >[!NOTE]
 >
->大規模なリポジトリでインデックスを構築するには時間がかかります。これは、インデックスの初期作成とインデックスの再作成（定義を変更した後にインデックスを再構築）の両方に当てはまります。 関連トピック [Oak インデックスのトラブルシューティング](/help/sites-deploying/troubleshooting-oak-indexes.md) および [インデックス再作成の遅延を防ぐ](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>大規模なリポジトリの場合、インデックスの構築は時間のかかる操作です。 これは、インデックスの初期作成とインデックスの再作成（定義を変更した後にインデックスを再構築）の両方に当てはまります。 関連トピック [Oak インデックスのトラブルシューティング](/help/sites-deploying/troubleshooting-oak-indexes.md) および [インデックス再作成の遅延を防ぐ](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 大規模なリポジトリでインデックス再作成が必要な場合、特に MongoDB を使用し、フルテキストインデックスの場合は、テキストの事前抽出を検討し、oak-run を使用して初期インデックスを作成し、インデックスを再作成します。
 
@@ -92,7 +92,7 @@ Apache Oak ベースのバックエンドを使用すると、様々なインデ
 
 * The **type** プロパティは、インデックスのタイプを指定します。この場合、をに設定する必要があります。 **プロパティ**
 
-* The **propertyNames** プロパティは、インデックスに格納されるプロパティのリストを示します。 見つからない場合は、ノード名がプロパティ名の参照値として使用されます。 この例では、 **jcr:uuid** プロパティの名前を指定して、そのノードの一意の識別子 (UUID) をインデックスに追加します。
+* The **propertyNames** プロパティは、インデックスに保存されるプロパティのリストを示します。 見つからない場合は、ノード名がプロパティ名の参照値として使用されます。 この例では、 **jcr:uuid** プロパティの名前を指定して、そのノードの一意の識別子 (UUID) をインデックスに追加します。
 
 * **unique** フラグは、**true** に設定されている場合、プロパティインデックスに対して一意性制約を付加します。
 
@@ -111,7 +111,7 @@ AEM 6 では、Apache Lucene に基づいたフルテキストインデクサー
 
 全文インデックスが設定されていない場合、全文条件を持つクエリは期待どおりに動作しません。
 
-インデックスは非同期のバックグラウンドスレッドを介して更新されるので、一部のフルテキスト検索は、バックグラウンドプロセスが完了するまで、少しの期間、使用できません。
+インデックスは非同期のバックグラウンドスレッドによって更新されるので、一部のフルテキスト検索は、バックグラウンドプロセスが完了するまで、少しの時間枠で使用できません。
 
 次の手順に従って、Lucene のフルテキストインデックスを設定できます。
 
@@ -134,7 +134,7 @@ Lucene Index には次の設定オプションがあります。
 
 ### フルテキスト検索について {#understanding-fulltext-search}
 
-この節のドキュメントは、Apache Lucene、Elasticsearch、および PostgreSQL、SQLite、MySQL などのフルテキストインデックスに適用されます。 次の例は、AEM / Oak / Lucene 用です。
+この節のドキュメントは、例えば、PostgreSQL、SQLite、MySQL の Apache Lucene、Elasticsearch、フルテキストインデックスに適用されます。 次の例は、AEM / Oak / Lucene 用です。
 
 <b>インデックスを作成するデータ</b>
 
@@ -151,9 +151,9 @@ Lucene Index には次の設定オプションがあります。
 
 インデックス作成メカニズムは、フルテキストを「トークン」と呼ばれる単語に分割し、「逆インデックス」と呼ばれるインデックスを作成します。 このインデックスには、各単語に対して表示されるドキュメントのリストが含まれます。
 
-非常に短く、一般的な単語（「stopwords」とも呼ばれる）のインデックスが作成されません。 すべてのトークンは小文字に変換され、ステミングが適用されます。
+短く、一般的な単語（「stopwords」とも呼ばれます）はインデックス付けされません。 すべてのトークンは小文字に変換され、ステミングが適用されます。
 
-特殊文字 ( *&quot;-&quot;* インデックスが作成されていません。
+特殊文字（例： ） *&quot;-&quot;* インデックスが作成されていません。
 
 | <b>トークン</b> | <b>ドキュメント ID</b> |
 | --- | --- |
@@ -161,12 +161,12 @@ Lucene Index には次の設定オプションがあります。
 | ブランド | ..., 100,... |
 | キューブ | ..., 200, 300,... |
 | ディメンション | 300 |
-| フィンランド語 | ..., 100,... |
+| 終了 | ..., 100,... |
 | 発明する | 200 |
 | オブジェクト | ..., 300,... |
-| ルービック | .., 100, 200,... |
+| ルービック | ..., 100, 200,... |
 
-ドキュメントのリストが並べ替えられます。 これは、クエリ時に便利です。
+ドキュメントのリストが並べ替えられます。 これは、クエリを実行する際に便利です。
 
 <b>検索中</b>
 
@@ -182,7 +182,7 @@ Lucene Index には次の設定オプションがあります。
 +:fulltext:rubik +:fulltext:cube
 ```
 
-次に、インデックスはドキュメントのリストを参照して、それらの単語を確認します。 ドキュメントが多い場合は、リストが非常に大きくなる可能性があります。 例として、次のようなものが含まれていると仮定します。
+インデックスは、それらの単語のドキュメントのリストを調べます。 ドキュメントが多い場合は、リストが大きくなる場合があります。 例えば、次のようなものが含まれていると仮定します。
 
 
 | <b>トークン</b> | <b>ドキュメント ID</b> |
@@ -191,7 +191,7 @@ Lucene Index には次の設定オプションがあります。
 | キューブ | 30, 200, 300, 2000 |
 
 
-Lucene は 2 つのリスト（またはラウンドロビン）間で反転します。 `n` リスト、検索時 `n` 単語 ):
+Lucene は、2 つのリスト（またはラウンドロビン）間をフリップします `n` リスト、検索時 `n` 単語 ):
 
 * &quot;rubik&quot;で読み取る最初のエントリを取得：10 を見つけます
 * 「キューブ」で読み取ると、最初のエントリが取得されます `>` = 10. 10 が見つからない場合、次の 1 は 30 です。
@@ -263,7 +263,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 アナライザは、ドキュメントのインデックスが作成されるときと、クエリ時の両方で使用されます。 アナライザは、フィールドのテキストを調べ、トークンストリームを生成します。 Lucene アナライザーは、一連のトークン化クラスとフィルタークラスで構成されています。
 
-このアナライザーは、`oak:index` 定義内の `analyzers` ノード（タイプ `nt:unstructured`）を介して定義できます。
+アナライザーは、 `analyzers` ノード ( タイプ `nt:unstructured`) を `oak:index` 定義。
 
 インデックスのデフォルトのアナライザーは、analyzers ノードの子の `default` に設定されます。
 
@@ -300,11 +300,11 @@ select * from [nt:base] where [alias] = '/admin'
 1. Analyzer 構成にストップワードファイルを追加する場合は、 `default` 1 つは次のプロパティを持ちます。
 
    * **名前：** `stopwords`
-   * **タイプ:** `nt:file`
+   * **タイプ：** `nt:file`
 
-#### 構成によるアナライザーの作成 {#creating-analyzers-via-composition}
+#### 構成を使用したアナライザの作成 {#creating-analyzers-via-composition}
 
-アナライザーは、`Tokenizers`、`TokenFilters`、および `CharFilters` に基づいて構成することもできます。そのためには、アナライザーを指定し、オプションの tokenizer および filtersの子ノードを作成します。これらはリストされた順序で適用されます。[https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema) を参照してください。
+アナライザーは、 `Tokenizers`, `TokenFilters`、および `CharFilters`. これを行うには、アナライザを指定し、オプションの tokenizer と filter の子ノードをリスト順に作成します。 関連トピック [https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
 例えば、次のノード構造について考えてみます。
 
@@ -342,9 +342,9 @@ select * from [nt:base] where [alias] = '/admin'
 
             * **名前:** `stop2.txt`
 
-               * **タイプ:** `nt:file`
+               * **タイプ：** `nt:file`
 
-フィルタ、charFilters および tokenizers の名前は、ファクトリのサフィックスを削除することで形成されます。 したがって、
+フィルタ、charFilters、および tokenizers の名前は、ファクトリのサフィックスを削除することで形成されます。 したがって、
 
 * `org.apache.lucene.analysis.standard.StandardTokenizerFactory` が `standard` になります
 
@@ -352,9 +352,9 @@ select * from [nt:base] where [alias] = '/admin'
 
 * `org.apache.lucene.analysis.core.StopFilterFactory` が `Stop` になります
 
-ファクトリに必要なすべての設定パラメーターは、対象ノードのプロパティとして指定します。
+ファクトリに必要な設定パラメーターは、該当するノードのプロパティとして指定されます。
 
-ストップワードの読み込みなど、外部ファイルのコンテンツを読み込む必要がある場合は、対象ファイル用の子ノード（タイプ `nt:file`）を作成することによってコンテンツを指定できます。
+ストップワードの読み込みなど、外部ファイルからのコンテンツを読み込む必要がある場合、コンテンツは、 `nt:file` 問題のファイルのタイプ。
 
 ### Solr インデックス {#the-solr-index}
 
@@ -368,7 +368,7 @@ AEM インスタンスでリモートサーバーとして機能するように�
 
 AEM は、リモート Solr サーバーインスタンスと連動するように設定することもできます。
 
-1. 最新バージョンの Solr をダウンロードして抽出します。 この方法について詳しくは、 [Apache Solr のインストールドキュメント](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
+1. 最新バージョンの Solr をダウンロードして抽出します。 この方法について詳しくは、 [Apache Solr のインストールドキュメント](https://solr.apache.org/guide/6_6/installing-solr.html).
 1. 次に、2 つの Solr シャードを作成します。 そのためには、Solr の展開先フォルダー内に、各シャード用のフォルダーを作成します。
 
    * 1 つ目のシャード用に、次のフォルダーを作成します。
@@ -396,7 +396,7 @@ AEM は、リモート Solr サーバーインスタンスと連動するよう�
 
    >[!NOTE]
    >
-   >Solr および ZooKeeper 設定について詳しくは、[Solr の設定に関するドキュメント](https://wiki.apache.org/solr/ConfiguringSolr)および [ZooKeeper 入門ガイド](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html)を参照してください。
+   >Solr および ZooKeeper 設定について詳しくは、[Solr の設定に関するドキュメント](https://cwiki.apache.org/confluence/display/solr/ConfiguringSolr)および [ZooKeeper 入門ガイド](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html)を参照してください。
 
 1. 1 つ目のシャードを ZooKeeper サポート付きで起動するために、`aemsolr1\node1` に移動し、次のコマンドを実行します。
 
@@ -431,7 +431,7 @@ AEM は、リモート Solr サーバーインスタンスと連動するよう�
 
 以下に、この記事で説明する 3 つの Solr デプロイメントすべてで使用できる基本設定の例を示します。AEM に既に存在する専用プロパティインデックスに対応しているため、他のアプリケーションでは使用しないでください。
 
-これを適切に使用するには、アーカイブの内容を Solr ホームディレクトリに直接配置する必要があります。 マルチノードデプロイメントの場合は、各ノードのルートフォルダーの直下に配置する必要があります。
+これを適切に使用するには、アーカイブの内容を Solr ホームディレクトリに直接配置する必要があります。 複数ノードのデプロイメントがある場合は、各ノードのルートフォルダーの直下に配置する必要があります。
 
 Solr 推奨設定ファイル
 
@@ -480,7 +480,7 @@ The **com.day.cq.search** カテゴリは、AEMが提供する QueryBuilder ユ�
 
 >[!NOTE]
 >
->ログは、トラブルシューティングするクエリが実行中の間のみ、DEBUG に設定されることが重要です。 そうしないと、時間の経過と共に大量のイベントがログに生成されます。 このため、必要なログが収集されたら、前述のカテゴリの情報レベルのログに戻します。
+>ログは、トラブルシューティングするクエリが実行中の間のみ、DEBUG に設定されることが重要です。 そうしないと、多くのイベントが時間の経過と共にログに生成されます。 このため、必要なログが収集されたら、前述のカテゴリの情報レベルのログに戻します。
 
 次の手順に従って、ログを有効にすることができます。
 
@@ -516,7 +516,7 @@ The **com.day.cq.search** カテゴリは、AEMが提供する QueryBuilder ユ�
    * Oak クエリ統計
    * IndexStats
 
-1. それぞれの MBean をクリックして、パフォーマンス統計を取得します。サポートへの提出が必要な場合に備え、スクリーンショットを取得するか、記録しておきます。
+1. 各 MBean をクリックして、パフォーマンス統計を取得できます。 サポートの送信が必要な場合に備えて、スクリーンショットを作成するか、メモしておきます。
 
 また、これらの統計に関する JSON 形式の情報を、次の URL で取得できます。
 
@@ -525,7 +525,7 @@ The **com.day.cq.search** カテゴリは、AEMが提供する QueryBuilder ユ�
 * `https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak/%2522LuceneIndex%2522.tidy.-1.json`
 * `https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak/%2522LuceneIndex%2522.tidy.-1.json`
 
-さらに、`https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak.tidy.3.json` から、統合された JMX 出力を提供することもできます。これには、Oak 関連のすべての MBean 詳細が JSON 形式で含まれています。
+統合された JMX 出力は、 `https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak.tidy.3.json`. これには、Oak 関連のすべての MBean の詳細が JSON 形式で含まれます。
 
 #### その他の詳細 {#other-details}
 
