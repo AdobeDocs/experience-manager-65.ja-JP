@@ -4,7 +4,7 @@ description: AEM Content and Commerce の入門と概要。Experience Manager Co
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '871'
 ht-degree: 100%
 

@@ -9,7 +9,7 @@ user-guide-description: デジタルアセットを作成、管理、処理お�
 role: User
 feature: Asset Management
 source-git-commit: fc148a5f5e0fcaac2980dc73004fa92ac3b91fb3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '723'
 ht-degree: 100%
 

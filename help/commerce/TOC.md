@@ -6,7 +6,7 @@ feature: Commerce Integration Framework
 role: User
 user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
 source-git-commit: b3c44f93c235b5daa7b6385a0c12841fcba767ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '123'
 ht-degree: 100%
 
