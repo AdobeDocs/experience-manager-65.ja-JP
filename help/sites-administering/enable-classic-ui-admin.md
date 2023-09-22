@@ -1,27 +1,27 @@
 ---
 title: 管理コンソール
-description: AEM で使用可能な管理コンソールの使用方法について説明します。
+description: Adobe Experience Managerで使用できるAdmin Consoleの使用方法を説明します。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 75%
+source-wordcount: '230'
+ht-degree: 51%
 
 ---
 
 
 # 管理コンソール{#admin-consoles}
 
-管理コンソールからクラシック UI に切り替える機能は、デフォルトで無効になっています。したがって、特定のコンソールアイコンにマウスを合わせると表示されるポップアップアイコン（クラシック UI にアクセスできる）は表示されなくなりました。
+デフォルトでは、管理コンソールを介してクラシック UI に切り替える機能は無効になっています。 したがって、特定のコンソールアイコンにマウスを合わせると表示されるポップアップアイコン（クラシック UI にアクセスできる）は表示されなくなりました。
 
 各コンソールのクラシック UI バージョンは `/libs/cq/core/content/nav` にあり、個別に再有効化できます。それぞれのクラシック UI を有効にすれば、コンソールアイコンの上にマウスを移動したときに、「**クラシック UI**」オプションが再度ポップアップするようになります。
 
-以下の例では、サイトコンソールのクラシック UI を再有効化しています。
+この例では、サイトコンソールのクラシック UI を再度有効にします。
 
 1. CRXDE Liteを使用して、クラシック UI を再度有効にするAdmin Consoleに対応するノードを探します。 目的のノードは次の場所にあります。
 
@@ -31,7 +31,7 @@ ht-degree: 75%
 
    [`https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
-1. クラシック UI を再有効化するコンソールのノードを選択します。この例では、Sites コンソールのクラシック UI を再有効化します。
+1. クラシック UI を再有効化するコンソールのノードを選択します。この例では、サイトコンソールのクラシック UI を再度有効にします。
 
    `/libs/cq/core/content/nav/sites`
 

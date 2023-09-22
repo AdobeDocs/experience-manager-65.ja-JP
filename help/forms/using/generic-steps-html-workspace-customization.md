@@ -1,31 +1,27 @@
 ---
 title: AEM Forms Workspace のカスタマイズの一般的な手順
-seo-title: Generic steps for AEM Forms workspace customization
-description: AEM Forms Workspace ユーザーインターフェイスをカスタマイズする方法。
-seo-description: How to get started customizing AEM Forms workspace user interface.
-uuid: da6310b4-1c58-468d-85c6-975fd2c141f9
+description: Adobe Experience Manager Forms Workspace ユーザーインターフェイスのカスタマイズを開始する方法です。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 exl-id: 45e50b47-1b36-4937-9e1a-cc7bfb953861
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 100%
+source-wordcount: '304'
+ht-degree: 68%
 
 ---
 
 # AEM Forms Workspace のカスタマイズの一般的な手順 {#generic-steps-for-aem-forms-workspace-customization}
 
-カスタマイズを実行するための一般的な手順を以下に示します。
+カスタマイズを実行する一般的な手順は次のとおりです。
 
 1. `https://'[server]:[port]'/lc/crx/de/index.jsp` にアクセスして CRXDE Lite にログインします。
-1. `/apps` に `ws` という名前の `sling:Folder` フォルダーが存在しない場合は、作成します。`sling:Folder` フォルダーを作成するには、`apps` フォルダーを右クリックし、**[!UICONTROL 作成]**／**[!UICONTROL ノードを作成]**&#x200B;を選択します。名前を `ws` として指定し、タイプを `sling:Folder` として選択して「**[!UICONTROL OK]**」をクリックします。「**[!UICONTROL すべて保存]**」をクリックします。
+1. の作成 `sling:Folder` という名前のフォルダー `ws` 時刻 `/apps`（存在しない場合） `sling:Folder` フォルダーを作成するには、`apps` フォルダーを右クリックし、**[!UICONTROL 作成]**／**[!UICONTROL ノードを作成]**&#x200B;を選択します。名前をとして指定します。 `ws`を選択し、次のようにタイプを選択します。 `sling:Folder`をクリックし、 **[!UICONTROL OK]**. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. `/apps/ws` を参照して「**[!UICONTROL アクセス制御]**」タブに移動します。
-1. 「**[!UICONTROL リポジトリ]**」オプションを選択します。**[!UICONTROL アクセス制御]**&#x200B;リストで「**[!UICONTROL +]**」 をクリックして、新しいエントリを追加します。もう一度「**[!UICONTROL +]**」をクリックします。
+1. 「**[!UICONTROL リポジトリ]**」オプションを選択します。Adobe Analytics の **[!UICONTROL アクセス制御]** リスト、クリック **[!UICONTROL +]** をクリックして、エントリを追加します。 もう一度「**[!UICONTROL +]**」をクリックします。
 1. **PERM_WORKSPACE_USER** プリンシパルを検索して選択します。
 
    ![HTML Workspace をカスタマイズするための汎用手順の一部として PERM_WORKSPACE_USER プリンシパルを選択します](assets/perm_workspace_user.png)
@@ -42,9 +38,9 @@ ht-degree: 100%
 
 1. CSS のカスタマイズは以下のようにして実行します。
 
-   1. `/apps/ws` フォルダーに移動して `css` という名前の新しいフォルダーを作成します。
+   1. 次に移動： `/apps/ws` フォルダーを作成し、 `css`.
 
-   1. `css` フォルダーに `newStyle.css` という名前の新しいファイルを作成します。
+   1. Adobe Analytics の `css` フォルダー、名前を付けたファイルを作成します。 `newStyle.css`.
 
    1. `/apps/ws/html`.jsp を開いて次のように変更します。変更元：
 
@@ -65,7 +61,7 @@ ht-degree: 100%
    >
    >上記のように、style.css のエントリの後ろにユーザー定義された CSS ファイルのエントリを配置します。
 
-1. /apps/ws/html.jsp ファイルで、
+1. /apps/ws/html.jspファイルで、
 
    ```jsp
    <script data-main="js/main" src="js/libs/require/require.js"></script>
@@ -85,7 +81,7 @@ ht-degree: 100%
 
    1. `/libs/ws/js/libs/jqueryui` フォルダーを `/apps/ws/js/libs` にコピーします。「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. HTML のカスタマイズは以下のようにして実行します。
+1. HTMLのカスタマイズの場合は、次の操作を行います。
 
    1. `/apps/ws/js` の下に `runtime` という名前のフォルダーを作成します。「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -95,6 +91,6 @@ ht-degree: 100%
 
    1. /libs/ws/js/registry.js を `/apps/ws/js/registry.js` にコピーします。
 
-1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
+1. クリック **[!UICONTROL すべて保存]**、キャッシュをクリアして、AEM Forms Workspace を更新します。
 
    URL `https://'[server]:[port]'/lc/ws` にアクセスして、管理者とパスワードの資格情報を使用してログインします。ブラウザーが `https://'[server]:[port]'/lc/apps/ws/index.html` にリダイレクトします。

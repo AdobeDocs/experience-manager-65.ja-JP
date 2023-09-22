@@ -1,25 +1,21 @@
 ---
 title: チュートリアル
-seo-title: Tutorials
-description: AEM Communities ソーシャルコンポーネントフレームワーク（SCF）の学習および操作に役立つ例
-seo-description: Examples to help in learning and working with AEM Communities social component framework (SCF)
-uuid: c99a9d56-9630-4a79-bcd7-a15f01d6c13d
+description: Adobe Experience Manager(AEM)Communities ソーシャルコンポーネントフレームワーク (SCF) の学習と操作に役立つ例
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 exl-id: 061d3b1b-7ceb-4e57-8183-2062a76173f1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 55%
+source-wordcount: '259'
+ht-degree: 12%
 
 ---
 
 # チュートリアル {#tutorials}
 
-ここでは、AEM 6.1 Communities [ソーシャルコンポーネントフレームワーク（SCF）](scf.md)の学習および操作に役立つ例を紹介しています。
+以下は、Adobe Experience Manager(AEM)6.1 Communities の学習と操作に役立つ例です。 [ソーシャルコンポーネントフレームワーク (SCF)](scf.md).
 
 ## クライアント側のカスタマイズ {#client-side-customization}
 
@@ -35,9 +31,9 @@ ht-degree: 55%
 
 ## サーバー側のカスタマイズ {#server-side-customization}
 
-[SCF のサーバー側のカスタマイズ](server-customize.md)も参照してください。
+関連トピック [SCF サーバー側のカスタマイズ](server-customize.md).
 
-[Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで次のサンプルコードが公開されています。
+サンプルコードは、 [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリ：
 
 * [SCF コンポーネントのカスタマイズのサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
@@ -49,11 +45,11 @@ ht-degree: 55%
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVC SCF+SRP コンポーネントを一から開発する方法を説明します。
+  ToDo MVC では、SCF+SRP コンポーネントを最初から開発する方法を説明します。
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
-* [デモ用の MongoDB の設定方法](demo-mongo.md)
+* [デモ用に MongoDB を設定する方法](demo-mongo.md)
 
 * [SCF サンドボックスの作成](an-scf-sandbox.md)
 
@@ -61,16 +57,16 @@ ht-degree: 55%
 
 ## デモユーザー {#demo-users}
 
-Geometrixxサンプルパッケージには、デモユーザーが含まれています。 訪問者（ログインしていない）またはメンバー（ログインしている）の間に、多くの場合、エクスペリエンスに違いがあります。また、Geometrixxサンプルパッケージがインストールされている限り、 [コミュニティコンポーネントガイド](components-guide.md).
+Geometrixxサンプルパッケージには、デモユーザーが含まれています。 多くの場合、エクスペリエンスには、訪問者（ログインしていない）とメンバー（ログインしている）の間に違いがあります。 また、Geometrixxサンプルパッケージがインストールされている限り、これらのユーザーを使用して、 [コミュニティコンポーネントガイド](components-guide.md).
 
-デモユーザーの完全なリストについては、レールを使用して次の場所に移動してください。 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL セキュリティ/ユーザー]**. または、クラシック UI を使用します。 [セキュリティコンソール](http://localhost:4502/useradmin) ユーザーとグループを管理するための
+デモユーザーの完全なリストについては、レールを使用して次の場所に移動してください。 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL セキュリティ/ユーザー]**. または、クラシック UI を使用します。 [セキュリティコンソール](http://localhost:4502/useradmin) ユーザーとグループを管理するために使用します。
 
-[コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
+次の場合、 [コミュニティサイトが作成されました](getting-started.md)に値を指定しない場合、デモユーザーをに割り当てることができます。 [コミュニティユーザーグループ](users.md).
 
 ***ユーザー id* / *パスワード***:
 
-* aaron.mcdonald@mailinator.com／password
+* aaron.mcdonald@mailinator.com /パスワード
 * emily.andrews@mailinator.com /パスワード
 * weston.mccall@dodgit.com /パスワード
-* andrew.schaeffer@trashymail.com／password
+* andrew.schaeffer@trashymail.com /パスワード
 * rebekah.larsen@trashymail.com /パスワード

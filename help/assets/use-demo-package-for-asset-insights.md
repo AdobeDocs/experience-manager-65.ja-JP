@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 13947513-da76-43e1-ae01-abd24a59752a
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 100%
+source-wordcount: '162'
+ht-degree: 61%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 ## [!DNL Use Experience Manager Assets] サンプル web ページを使用したインサイト  {#using-aem-assets-insights-with-sample-web-page}
 
 1. [アセットインサイトの設定](configure-asset-insights.md)の手順を使用してアセットインサイトを設定します。
-1. 次に示すサンプル Assets パッケージをダウンロードして、CRXDE パッケージマネージャーでインストールします。
+1. 以下からサンプルのアセットパッケージをダウンロードし、CRXDE パッケージマネージャーからパッケージをインストールします。
 
 [ファイルを入手](assets/insightsdemo.zip)
 
@@ -27,11 +27,11 @@ ht-degree: 100%
 
 [ファイルを入手](assets/demosite.zip)
 
-1. Web ページをクリックして Web ブラウザーで開きます。
+1. Web ブラウザーで開いた Web ページをクリックします。
 
    >[!CAUTION]
    >
-   >Web ページは localhost のサーバーからアセットを読み込むように設定されます。サーバーが別の場所で実行している場合は、localhost のサーバーアドレスを Web ページの HTML コンテンツのサーバーアドレスに変更してください。
+   >Web ページは、localhost サーバーからアセットを読み込むように設定されます。 サーバーが別の場所で実行されている場合は、サーバーアドレスを localhost から Web ページのHTMLコンテンツにあるサーバーアドレスに変更します。
 
    >[!NOTE]
    >

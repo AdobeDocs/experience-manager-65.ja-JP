@@ -1,18 +1,15 @@
 ---
 title: Adobe Sign との統合| ユーザーデータの処理
-seo-title: Integration with Adobe Sign | Handling user data
 description: Adobe Sign との統合| ユーザーデータの処理
-uuid: cb3a455d-2e33-44c8-8f71-3a7ecd939cd8
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 feature: Acrobat Sign
 role: Admin
 exl-id: b43ed9b7-b1ef-4878-ae3b-643b558eed7b
-source-git-commit: 28d092a7713438c27213766f0bb702b699305b88
-workflow-type: ht
-source-wordcount: '307'
-ht-degree: 100%
+source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+workflow-type: tm+mt
+source-wordcount: '310'
+ht-degree: 58%
 
 ---
 
@@ -26,12 +23,12 @@ ht-degree: 100%
 
 ## ユーザーデータとデータストア {#data}
 
-[!DNL Adobe Sign] 対応のアダプティブフォームには署名者に関する情報が含まれています。これにはアダプティブフォームで収集された他のユーザーのデータが含まれている場合があります。[!DNL Adobe Sign] サービスは、契約書内の署名を使用してユーザーデータを格納します。この契約書は、[!DNL AEM Forms] クラウドサービスに設定された [!DNL Adobe Sign] サーバーに保存されます。さらに、Forms Portal の送信アクションを使用するようにアダプティブフォームが構成されている場合、契約書のデータはフォームデータとともに Forms Portal のデータストアに格納されます。
+[!DNL Adobe Sign] 対応のアダプティブフォームには署名者に関する情報が含まれています。これにはアダプティブフォームで収集された他のユーザーのデータが含まれている場合があります。[!DNL Adobe Sign] サービスは、契約書内の署名を使用してユーザーデータを格納します。契約は [!DNL Adobe Sign] サーバーが次の場所で設定されています： [!DNL AEM Forms] クラウドサービス。 さらに、Formsポータルの送信アクションを使用するようにアダプティブフォームが設定されている場合、契約データはフォームデータと共にFormsポータルのデータストアに保存されます。
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
-ユーザーデータは契約書内で収集されますが、いずれのサービステーブルにも保存されません。[!DNL Adobe Sign] を使用すると、管理者はサービスで管理する管理データを自身で選択できます。[!DNL Adobe Sign] サービスのプライバシー管理者は、依頼者のメールアドレスに基づいて契約書のリストの作成または削除を行うことができます。
+ユーザーデータは契約内で収集されますが、どのサービステーブルにも保存されません。 [!DNL Adobe Sign] を使用すると、管理者は、サービスで制御するデータの管理に関して独自に選択できます。 [!DNL Adobe Sign] サービスのプライバシー管理者は、依頼者のメールアドレスに基づいて契約書のリストの作成または削除を行うことができます。
 
-[!DNL Adobe Sign] は、参加者による契約書の検索、および必要に応じて契約書の削除を実行できる Web アプリケーションを提供しています。詳しくは、[Adobe Sign - 機能：ユーザー情報の削除](https://helpx.adobe.com/jp/sign/help/adobesign_gdpr_user_deletion.html)を参照してください。
+[!DNL Adobe Sign] は、参加者による契約の検索を可能にし、必要に応じて削除する Web アプリケーションを提供します。 詳しくは、[Adobe Sign - 機能：ユーザー情報の削除](https://helpx.adobe.com/jp/sign/help/adobesign_gdpr_user_deletion.html)を参照してください。
 
-Forms Portal の送信アクションを使用するように構成されているアダプティブフォームの契約書データも、Forms Portal のデータストアに格納されます。Forms Portal のデータストアにアクセスしてデータを削除する方法については、「[Forms Portal | ユーザーデータの処理](/help/forms/using/forms-portal-handling-user-data.md)」を参照してください。
+Formsポータル送信アクションを使用するように設定されたアダプティブフォームの契約データも、Formsポータルデータストアに保存されます。 Forms Portal データストアにアクセスして削除する方法については、 [Forms Portal |ユーザーデータの処理](/help/forms/using/forms-portal-handling-user-data.md).
