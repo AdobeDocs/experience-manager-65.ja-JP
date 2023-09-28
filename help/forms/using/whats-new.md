@@ -10,9 +10,9 @@ discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1243'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 96%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/latest-innovations.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/latest-innovations.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
-トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を取り込み、追跡できます。 これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。トランザクションの例を次に示します。
+トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を取得および追跡できます。これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。トランザクションの例を次に示します。
 
 * アダプティブフォーム、HTML5 フォーム、またはフォームセットの送信
 * インタラクティブ通信の印刷または web バージョンのレンディション
@@ -84,7 +84,7 @@ Web チャンネルにボタンコンポーネントとセパレーターコン�
 
 #### AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの埋め込み {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
-AEM Formsで [アダプティブフォームをシームレスに埋め込む](../../forms/using/embed-adaptive-form-aem-sites-spa.md) またはAEM Sitesシングルページアプリケーション (SPA) のインタラクティブ通信 埋め込まれたアダプティブフォームおよびインタラクティブ通信ではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームの記入および送信ができます。これにより、ユーザーは Web ページのその他の要素とのコンテキストを保ったまま、同時にアダプティブフォームやインタラクティブ通信の操作を行うことができます。
+AEM Forms では、AEM Sites シングルページアプリケーション（SPA）にインタラクティブ通信や[アダプティブフォームをシームレスに埋め込む](../../forms/using/embed-adaptive-form-aem-sites-spa.md)ことができます。埋め込まれたアダプティブフォームおよびインタラクティブ通信ではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームの記入および送信ができます。これにより、ユーザーは Web ページのその他の要素とのコンテキストを保ったまま、同時にアダプティブフォームやインタラクティブ通信の操作を行うことができます。
 
 #### アダプティブフォームテーブルの列の並べ替え {#sort-columns-of-adaptive-form-tables}
 
@@ -141,7 +141,7 @@ Go To ステップ、OR Split ステップ、およびすべての AEM Forms ワ
  <tbody>
   <tr>
    <td>コンポーネント</td>
-   <td>サポートが削除されました</td>
+   <td>サポート対象から除外</td>
   </tr>
   <tr>
    <td>オペレーティングシステム</td>

@@ -4,13 +4,13 @@ product: experience manager
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.5 リリースノート
 breadcrumb-title: リリースノート
-user-guide-description: AEM 6.5 の最近の新機能については、リリースノートを参照してください。
+user-guide-description: AEM 6.5 の最新の新機能については、リリースノートを参照してください。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '70'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 55%
    + [6.5.2](previous/6.5.2.md)
    + [6.5.1](previous/6.5.1.md)
    + [6.5.0](previous/ga.md)
-+ [AEM Forms service pack のインストール手順](aem-forms-current-service-pack-installation-instructions.md)
++ [AEM Forms サービスパックのインストール手順](aem-forms-current-service-pack-installation-instructions.md)
 + [AEM Forms JEE パッチインストーラー](jee-patch-installer-65.md)
 + [廃止される機能および削除された機能](deprecated-removed-features.md)
 + [タッチ操作対応 UI 機能のステータス](touch-ui-features-status.md)
