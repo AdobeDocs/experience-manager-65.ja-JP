@@ -1,17 +1,15 @@
 ---
 title: AEM 6.5 と Adobe Campaign Classic の統合
 description: AEM 6.5 と Adobe Campaign Classic の統合方法について説明します。
-uuid: 3c998b0e-a885-4aa9-b2a4-81b86f9327d3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
-workflow-type: ht
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
 source-wordcount: '1583'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -100,7 +98,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
    * `allowHTTP="true"`
    * `sessionTokenOnly="true"`
-   * `allowUserPassword="true"`
+   * `allowUserPassword="true"`。
 
 1. ファイルを保存します。
 
@@ -152,7 +150,7 @@ AEM が Adobe Campaign と通信できるようになりました。
 
 >[!NOTE]
 >
->Adobe Campaign サーバーがインターネット経由で到達可能であることを確認してください。AEM はプライベートネットワークにアクセスできません。
+>Adobe Campaign サーバーがインターネット経由で到達可能であることを確認してください。AEMはプライベートネットワークにアクセスできません。
 
 ## AEM パブリッシュインスタンスへのレプリケーションを設定 {#replication}
 
@@ -190,7 +188,7 @@ AEM パブリッシュインスタンスへのレプリケーションを設定�
 
 1. AEM オーサーインスタンスに管理者としてログインします。
 1. グローバルナビゲーションサイドパネルで、**ツール**／**運用**／**Web コンソール**／**OSGi 設定**&#x200B;を選択し、**Day CQ Link Externalizer**&#x200B;を検索します。
-1. デフォルトでは、「**ドメイン**」フィールドの最新エントリは、公開インスタンスを対象としています。 URL をデフォルトの `http://localhost:4503` から、公開されているパブリッシュインスタンスに変更します。
+1. デフォルトでは、「**ドメイン**」フィールドの最新エントリは、公開インスタンスを対象としています。 デフォルトの URL から URL を変更 `http://localhost:4503` 公開されているパブリッシュインスタンスに追加します。
 
    ![Externalizer の設定](assets/acc-externalizer-config.png)
 
@@ -200,7 +198,7 @@ Externalizer が設定され、Adobe Campaign がコンテンツにアクセス�
 
 >[!NOTE]
 >
->パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
+パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
 
 ## AEM での campaign-remote ユーザーを設定 {#configure-user}
 

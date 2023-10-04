@@ -1,20 +1,16 @@
 ---
 title: Web サービスを使用した AEM Forms の呼び出し
-seo-title: Invoking AEM Forms using Web Services
 description: WSDL 生成を完全にサポートする web サービスを使用して、AEM Forms プロセスを呼び出します。
-seo-description: Invoke AEM Forms processes using web services with full support for WSDL generation.
-uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '9901'
-ht-degree: 90%
+ht-degree: 89%
 
 ---
 
@@ -648,7 +644,7 @@ Base64 エンコーディングを使用する .NET クライアントアセン�
 1. `MyApplication/EncryptDocument`サービス WSDL を使用する Microsoft .NET クライアントアセンブリを作成します。
 1. クライアントの Microsoft .NET プロジェクトを作成します。クライアントプロジェクトで Microsoft .NET クライアントアセンブリを参照します。また、`System.Web.Services`も参照します。
 1. Microsoft .NET クライアントアセンブリを使用し、デフォルトのコンストラクターを呼び出して、`MyApplication_EncryptDocumentService`オブジェクトを作成します。
-1. を設定します。 `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティに `System.Net.NetworkCredential` オブジェクト。 `System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
+1. を設定します。 `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティに `System.Net.NetworkCredential` オブジェクト。 内 `System.Net.NetworkCredential` コンストラクタ。AEM forms のユーザー名と対応するパスワードを指定します。 .NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
 1. コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、`MyApplication/EncryptDocument` プロセスに渡す PDF ドキュメントを保存するために使用されます。
 1. コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
 1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
@@ -964,7 +960,7 @@ HTTP 経由でデータを使用する .NET クライアントアセンブリを
 1. .NET クライアントアセンブリを作成します。
 1. Microsoft .NET クライアントアセンブリを参照しますクライアントの Microsoft .NET プロジェクトを作成します。クライアントプロジェクトで Microsoft .NET クライアントアセンブリを参照します。また、`System.Web.Services`も参照します。
 1. Microsoft .NET クライアントアセンブリを使用し、デフォルトのコンストラクターを呼び出して、`MyApplication_EncryptDocumentService`オブジェクトを作成します。
-1. を設定します。 `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティに `System.Net.NetworkCredential` オブジェクト。 `System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
+1. を設定します。 `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティに `System.Net.NetworkCredential` オブジェクト。 内 `System.Net.NetworkCredential` コンストラクタ。AEM forms のユーザー名と対応するパスワードを指定します。 .NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
 1. コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、データを `MyApplication/EncryptDocument` プロセスに渡すために使用されます。
 1. 文字列値を `BLOB` オブジェクトの `remoteURL` に渡すPDFドキュメントの URI の場所を指定するデータメンバー `MyApplication/EncryptDocument`サービス。
 1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplication_EncryptDocumentService` オブジェクトの `invoke` メソッドおよび `BLOB` オブジェクト。 このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
@@ -1231,7 +1227,7 @@ AEM Forms ユーザーの ID は、秘密鍵を使用して署名された SAML 
 * AuthenticationManager API で公開されている認証メソッドのいずれかを使用して、ユーザーを認証します。通常は、ユーザー名とパスワードを使用します。ただし、証明書認証を使用することもできます。
 * `AuthenticationManager.getAuthResultOnBehalfOfUser` メソッドを使用します。このメソッドを使用すると、クライアントアプリケーションは任意の AEM Forms ユーザーの `AuthResult` オブジェクトを取得できます。
 
-AEM Forms ユーザーは、取得した SAML トークンを使用して認証できます。この SAML アサーション（xml フラグメント）は、ユーザー認証用の Web サービス呼び出しで WS-Security ヘッダーの一部として送信できます。通常、クライアントアプリケーションはユーザーを認証しましたが、ユーザー認証情報は保存されていません。（または、ユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンします）この場合、クライアントアプリケーションは AEM Forms を呼び出し、AEM Forms の呼び出しを許可されている特定のユーザーとして実行する必要があります。
+AEM forms ユーザーは、取得した SAML トークンを使用して認証できます。 この SAML アサーション（xml フラグメント）は、ユーザー認証用の Web サービス呼び出しで WS-Security ヘッダーの一部として送信できます。通常、クライアントアプリケーションはユーザーを認証しましたが、ユーザー認証情報は保存されていません。（または、ユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンします）この場合、クライアントアプリケーションは AEM Forms を呼び出し、AEM Forms の呼び出しを許可されている特定のユーザーとして実行する必要があります。
 
 特定のユーザーとして実行するには、 web サービスを使用して `AuthenticationManager.getAuthResultOnBehalfOfUser` メソッドを呼び出します。このメソッドは、そのユーザーの SAML アサーションを含む `AuthResult` インスタンスを返します。
 

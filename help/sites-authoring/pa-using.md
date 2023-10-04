@@ -1,17 +1,15 @@
 ---
 title: ページ分析データの表示によるページコンテンツの効果の測定
 description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
-uuid: 8dda89be-13e3-4a13-9a44-0213ca66ed9c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: ht
-source-wordcount: '638'
-ht-degree: 100%
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
+source-wordcount: '636'
+ht-degree: 92%
 
 ---
 
@@ -36,9 +34,9 @@ ht-degree: 100%
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
 1. **Sites** コンソールを開きます（例：[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)）。
-1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「**リスト表示**」（表示されるアイコンは、[現在の表示](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)によって異なる）を選択します。
+1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
 
-1. もう一度、ツールバーの右端（右上隅）でアイコンをクリックまたはタップして、「**表示設定**」を選択します。**列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
+1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップし、「 **設定を表示**. **列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
 
    ![aa-04](assets/aa-04.png)
 

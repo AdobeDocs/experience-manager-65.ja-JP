@@ -12,10 +12,10 @@ discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 58%
+source-wordcount: '799'
+ht-degree: 54%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 58%
 
 作成したフィルターは、 [グループ設定。](/help/sites-developing/mobile.md#creating-a-device-group)
 
-## フィルター Java クラス {#the-filter-java-class}
+## Filter Java クラス {#the-filter-java-class}
 
 デバイスグループフィルターは、 [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイス。 デプロイすると、実装クラスは、デバイスグループの設定で使用できるフィルターサービスを提供します。
 
@@ -95,7 +95,7 @@ public String getTitle() {
 
 * DeviceGroup オブジェクト
 * ユーザーエージェントの名前
-* デバイスの機能を格納する Map オブジェクト。Map のキーは WURFL™ の機能名であり、値は WURFL™ データベースの対応する値です。
+* デバイス機能を格納する Map オブジェクト。 Map キーは WURFL™の機能名で、値は WURFL™データベースの対応する値です。
 
 [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスの静的なフィールドには WURFL™ の機能名のサブセットが含まれます。デバイスの機能の Map から値を取得する場合は、これらのフィールドの定数をキーとして使用します。
 
@@ -179,9 +179,9 @@ getTitle メソッドと getDescription メソッドが返す文字列値は、�
 
 **プラグイン:**
 
-* Apache Maven Compiler プラグイン：ソースコードから Java クラスをコンパイルします。
-* Apache Felix Maven Bundle プラグイン：バンドルとマニフェストを作成します
-* Apache Felix Maven SCR プラグイン：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
+* Apache Maven Compiler Plugin：ソースコードから Java クラスをコンパイルします。
+* Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。
+* Apache Felix Maven SCR Plugin：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
 
 **依存関係：**
 

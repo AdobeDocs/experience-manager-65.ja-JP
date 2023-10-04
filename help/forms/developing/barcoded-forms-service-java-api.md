@@ -1,16 +1,13 @@
 ---
 title: Barcoded Forms サービス Java API クイックスタート（SOAP）
-seo-title: Barcoded Forms Service Java APIQuick Start(SOAP)
 description: Barcoded Forms サービス Java API クイックスタート（SOAP）
-uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 100%
@@ -114,7 +111,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
          ServiceClientFactory myFactory = ServiceClientFactory.createInstance(connectionProps);
          BarcodedFormsServiceClient barClient = new BarcodedFormsServiceClient(myFactory);
  
-         //Specify a PDF document to convert to a XDP file
+         //Specify a PDF document to convert to an XDP file
          FileInputStream fileInputStream = new FileInputStream("C:\\Adobe\LoanBarForms.pdf");
          Document inDoc = new Document (fileInputStream);
  

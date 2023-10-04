@@ -1,19 +1,15 @@
 ---
 title: VLT ツールを使用する方法
-seo-title: How to use the VLT Tool
 description: Jackrabbit FileVault ツール (VLT) は、Jackrabbit/AEMインスタンスのコンテンツをファイルシステムにマッピングする Apache Foundation によって開発されました
-seo-description: The Jackrabbit FileVault tool (VLT) is developed by The Apache Foundation that maps the content of a Jackrabbit/AEM instance to your file system
-uuid: 579e7785-8b50-4366-b562-8e79b6451464
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2715'
-ht-degree: 77%
+ht-degree: 76%
 
 ---
 
@@ -333,7 +329,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | `diff` | `di` | 2 つのパスの差分を表示します。 |
 | `console` |  | インタラクティブコンソールを実行します。 |
 | `rcp` |  | ノードツリーをリモートリポジトリ間でコピーします。 |
-| `sync` |  | vault 同期サービスを制御できるようにします。 |
+| `sync` |  | Vault 同期サービスを制御できます。 |
 
 ### エクスポート {#export}
 
@@ -746,7 +742,7 @@ vlt rcp http://localhost:4502/crx/-/jcr:root/content  https://admin:admin@localh
 
 ### 同期 {#sync}
 
-vault 同期サービスを制御できるようにします。引数がない場合、このコマンドは現在の作業ディレクトリを同期制御の下に置こうとします。 vlt チェックアウト内で実行される場合、それぞれのフィルターとホストを使用して同期を設定します。 vlt チェックアウト外で実行した場合は、ディレクトリが空の場合にのみ、現在のフォルダーが同期用に登録されます。
+Vault 同期サービスを制御できます。 引数がない場合、このコマンドは現在の作業ディレクトリを同期制御の下に置こうとします。 vlt チェックアウト内で実行する場合、それぞれのフィルターとホストを使用して同期を設定します。 vlt チェックアウト以外で実行すると、ディレクトリが空の場合にのみ、現在のフォルダが同期用に登録されます。
 
 #### 構文 {#syntax-18}
 

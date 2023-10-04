@@ -3,8 +3,8 @@ title: コマース統合フレームワークを使用した、AEM と Adobe Co
 description: AEM と Adobe Commerce は、コマース統合フレームワーク（CIF）を使用してシームレスに統合されます。CIF を使用すると、AEM は Adobe Commerce インスタンスにアクセスし、GraphQL を介して Adobe Commerce と通信できます。また、AEM オーサーは、製品とカテゴリの選択機能と製品コンソールを使用して、Adobe Commerce からオンデマンドで取得した製品およびカテゴリデータを参照できます。さらに、CIF には、コマースプロジェクトの迅速化に役立つ標準搭載のストアフロントが用意されています。
 thumbnail: aem-magento-architecture.jpg
 exl-id: f843784c-5ff7-41d1-97c5-13facb8459b2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: ht
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 100%
 

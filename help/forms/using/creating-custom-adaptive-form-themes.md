@@ -5,10 +5,10 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 42%
+source-wordcount: '789'
+ht-degree: 37%
 
 ---
 
@@ -59,13 +59,13 @@ An **アダプティブフォームのテーマ** は、アダプティブフォ
 
    * `less` フォルダー：`less` 変数と CSS スタイルの管理に使用される `less mixins` を定義する `less` 変数ファイルが含まれています。
 
-     このフォルダーは、 `less` 変数ファイル `less` mixin ファイル `less` mixin および変数を使用してスタイルを定義するファイル そして、これらすべての less ファイルは、styles.less にインポートされます。
+     このフォルダーは、 `less` 変数ファイル `less` mixin ファイル `less` mixin および変数を使用してスタイルを定義するファイル そしてこれら全て `less` その後、ファイルは styles.less にインポートされます。
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
 
    **LESS 変数ファイル**:CSS スタイルの定義で使用される変数を定義または上書きするファイルです。
 
-   アダプティブフォームは、以下の.less ファイルで定義された OOTB 変数を提供します。
+   アダプティブフォームは、以下で定義された OOTB 変数を提供します `.less` ファイル：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -74,7 +74,7 @@ An **アダプティブフォームのテーマ** は、アダプティブフォ
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
-   アダプティブフォームで提供される LESS 変数 を使用する、これらの変数を上書きする、または 新しく LESS 変数を作成することができます。
+   以下を使用すると、 `less` アダプティブフォームで提供される変数は、これらの変数を上書きするか、新しい変数を作成することができます。 `less` 変数。
 
    >[!NOTE]
    >
@@ -131,11 +131,11 @@ An **アダプティブフォームのテーマ** は、アダプティブフォ
    }
    ```
 
-   **Styles.less ファイル：** このファイルを使用して、クライアントライブラリで使用する必要のあるすべての LESS ファイル（変数、mixin、スタイル）を含めます。
+   **Styles.less ファイル：** このファイルを使用して、 `less` クライアントライブラリで使用する必要があるファイル（変数、mixin、スタイル）。
 
    次の `styles.less` ファイルのサンプルでは、インポートステートメントは任意の順序で配置することができます。
 
-   次の LESS ファイルをインポートするためのステートメントは必須です：
+   次をインポートするステートメント `.less` ファイルは必須です。
 
    * `globalvariables.less`
    * `layoutvariables.less`

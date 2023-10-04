@@ -1,19 +1,15 @@
 ---
 title: アダプティブフォームにおける表
-seo-title: Tables in adaptive forms
 description: AEM Forms のテーブルコンポーネントを使用すると、アダプティブフォームでモバイルレイアウトに対応するテーブルを作成でき、XDP テーブルコンポーネントも使用できるようになります。
-seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
-uuid: 03436c81-42f0-430f-9e52-14a4ab0e877d
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2475'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -216,7 +212,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 アダプティブフォームの表を使用すると、XML ファイルのデータを使用して、実行時に表に値を入力できます。 データ XML ファイルは、AEM Forms サーバーが稼動しているマシンのローカルファイルシステム、または CRX リポジトリに置くことができます。
 
-XML ファイルのデータを使用して入力する、以下の銀行取引概要テーブルの例を見てみましょう。
+XML ファイルからのデータを使って銀行取引概略表に入力する例を次に示します。
 
 ![data-merge-table](assets/data-merge-table.png)
 
@@ -310,7 +306,7 @@ XFA のテーブル要素はテーブルコンポーネントにマッピング�
 
 >[!NOTE]
 >
->XDP テーブルコンポーネント（サブフォーム）または XSD 複合タイプ内の要素の数は、行内のセルの数を超えることはできません。例えば、セルが 3 つしかない行に、4 つの要素をドロップすることはできません。これは、エラーとなります。
+>XDP テーブルコンポーネント、サブフォーム、または XSD 複合型の要素の数は、行のセル数を超えることはできません。 例えば、セルが 3 つしかない行に、4 つの要素をドロップすることはできません。これは、エラーとなります。
 >
 >要素数が行内のセルの数より少ない場合、要素に基づいたセルが新しい行にまず追加され、その後、行内の残りのセルに入力するためにデフォルトのセルが追加されます。例えば、3 つの要素のグループを 4 つのセルを持つ行にドロップした場合、最初の 3 つのセルはドロップされた要素に基づくセルとなり、残りの 1 つのセルはテーブルのデフォルトのセルになります。
 

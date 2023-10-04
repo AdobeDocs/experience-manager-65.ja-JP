@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '531'
-ht-degree: 100%
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 97%
 
 ---
 
@@ -46,7 +46,7 @@ Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベス
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td>
    <td><a href="/help/assets/organize-assets.md">ファイル管理のベストプラクティス</a></td>
-   <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーを基準としています。このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td>
+   <td>ほとんどの処理プロファイルはフォルダーベースです。ビデオ、メタデータ、画像処理は常にフォルダーに適用されます。 このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td>
   </tr>
   <tr>
    <td>Scene7 と AEM の統合</td>

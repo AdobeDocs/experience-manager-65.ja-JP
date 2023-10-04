@@ -10,9 +10,9 @@ discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1498'
 ht-degree: 60%
 
 ---

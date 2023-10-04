@@ -1,19 +1,15 @@
 ---
 title: AEM Forms の監視フォルダー
-seo-title: Watched folder in AEM Forms
 description: 管理者は、監視フォルダーを配置し、監視対象のフォルダーにファイルが配置されたときに、ワークフロー、サービス、またはスクリプト操作を開始できます。
-seo-description: An administrator can put a folder on watch and start a workflow, service, or script operation when a file is placed in the folder being watched.
-uuid: 39eac0fd-8212-46ff-b75d-8b4320d448a9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '7148'
-ht-degree: 25%
+ht-degree: 24%
 
 ---
 
@@ -591,7 +587,7 @@ log.info("Exiting workflow script!")
 * %F =ソースファイル名
 * %E =ソースファイル名の拡張子
 
-出力パラメーターのマッピングパターンが「File.separator」（つまり、パスセパレーター）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
+出力パラメーターのマッピングパターンが「File.separator」（パスセパレーター）で終わる場合、フォルダーが作成され、内容がそのフォルダーにコピーされます。 パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
 
 ## 監視PDF Generatorーでのフォルダーの使用 {#using-pdf-generator-with-a-watched-folder}
 

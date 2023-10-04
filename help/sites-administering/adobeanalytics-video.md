@@ -1,26 +1,22 @@
 ---
 title: Adobe Analytics のビデオトラッキングの設定
-seo-title: Configuring Video Tracking for Adobe Analytics
 description: SiteCatalyst用のビデオトラッキングの設定について説明します。
-seo-description: Learn about configuring video tracking for SiteCatalyst.
-uuid: 5a862f05-abfa-42a2-ad40-4c1c32f1bd75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1746'
-ht-degree: 78%
+ht-degree: 72%
 
 ---
 
 # Adobe Analytics のビデオトラッキングの設定 {#configuring-video-tracking-for-adobe-analytics}
 
-ビデオイベントの追跡には、いくつかの方法を使用できます。そのうち 2 つは古いバージョンのAdobe Analyticsのレガシーオプションです。 従来のオプションは次のとおりです。レガシーマイルストーンおよびレガシー秒。
+ビデオイベントの追跡には、いくつかの方法を使用できます。そのうち 2 つは古いバージョンのAdobe Analyticsのレガシーオプションです。 従来のオプションは、レガシーマイルストーンとレガシー秒です。
 
 >[!NOTE]
 >
@@ -57,7 +53,7 @@ ht-degree: 78%
 
 マイルストーン方式では、ビデオに関する最も多くの情報を追跡し、高度にカスタマイズ可能で、簡単に設定できます。
 
-マイルストーン方式を使用するには、時間に基づく追跡オフセットを指定して、マイルストーンを定義します。 ビデオの再生がマイルストーンを通過すると、そのイベントを追跡するためにページが Adobe Analytics を呼び出します。定義したマイルストーンごとに、Adobe Analytics プロパティにマッピングできる CQ 変数が作成されます。これらの CQ 変数の名前は、次の形式を使用します。
+マイルストーン方式を使用するには、時間に基づく追跡オフセットを指定して、マイルストーンを定義します。 ビデオの再生がマイルストーンを通過すると、そのイベントを追跡するためにページが Adobe Analytics を呼び出します。定義したマイルストーンごとに、Adobe Analyticsプロパティにマッピングできる CQ 変数がコンポーネントによって作成されます。 これらの CQ 変数の名前は、次の形式を使用します。
 
 ```shell
 eventdata.events.milestoneXX
@@ -85,11 +81,11 @@ XX サフィックスは、マイルストーンを定義する追跡オフセ�
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>このプロパティにマッピングされる変数には、ファイルの名前が格納されます。eventdata.events.a.media.view と一緒にのみ送信されます。 </td>
+   <td>これにマッピングされる変数には、ファイルの名前が含まれます。 eventdata.events.a.media.view と一緒にのみ送信されます。 </td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
-   <td>このプロパティにマッピングされる変数には、ファイルのサーバー上のパスが格納されます。eventdata.events.a.media.view と一緒にのみ送信されます。 </td>
+   <td>これにマッピングされる変数には、サーバー上のファイルのパスが含まれます。 eventdata.events.a.media.view と一緒にのみ送信されます。 </td>
   </tr>
   <tr>
    <td>eventdata.events.a.media.segmentView </td>
@@ -250,7 +246,7 @@ Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の�
 
 * ビデオの再生がマイルストーンを通過すると、そのイベントを追跡するためにページが Adobe Analytics を呼び出します。
 * Adobe Analytics プロパティとのマッピング用に定義される [CQ 変数の静的セット](#cqvars)。
-* 定義したマイルストーンごとに、コンポーネントが Adobe Analytics プロパティにマッピングできる CQ 変数を作成します。
+* 定義したマイルストーンごとに、Adobe Analyticsプロパティにマッピングできる CQ 変数がコンポーネントによって作成されます。
 
 これらの CQ 変数の名前は、次の形式を使用します。
 
@@ -302,11 +298,11 @@ eventdata.events.milestoneXX
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>このプロパティにマッピングされる変数には、ファイルの名前が格納されます。ビデオの再生開始時に一度だけ送信されます。</td>
+   <td>これにマッピングされる変数には、ファイルの名前が含まれます。 ビデオの再生開始時に一度だけ送信されます。</td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
-   <td>このプロパティにマッピングされる変数には、ファイルのサーバー上のパスが格納されます。ビデオの再生開始時に一度だけ送信されます。</td>
+   <td>これにマッピングされる変数には、サーバー上のファイルのパスが含まれます。 ビデオの再生開始時に一度だけ送信されます。</td>
   </tr>
  </tbody>
 </table>
@@ -359,11 +355,11 @@ eventdata.events.milestoneXX
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>このプロパティにマッピングされる変数には、ファイルの名前が格納されます。ビデオの再生開始時に一度だけ送信されます。</td>
+   <td>これにマッピングされる変数には、ファイルの名前が含まれます。 ビデオの再生開始時に一度だけ送信されます。</td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
-   <td>このプロパティにマッピングされる変数には、ファイルのサーバー上のパスが格納されます。ビデオの再生開始時に一度だけ送信されます。</td>
+   <td>これにマッピングされる変数には、サーバー上のファイルのパスが含まれます。 ビデオの再生開始時に一度だけ送信されます。</td>
   </tr>
  </tbody>
 </table>
@@ -374,13 +370,13 @@ eventdata.events.milestoneXX
 
 1. これらの変数を prop1、prop2 および prop3 にマッピングします。
 
-   この **関連情報の残り** を呼び出すと、次に連結されます： **1 つ** 名前の付いた変数 **pev3**.
+   The **関連情報の残り** を呼び出すと、次に連結されます： **1 つ** 名前の付いた変数 **pev3**.
 
    この例を使用した Adobe Analytics への呼び出しは、DigitalPulse Debugger では次のように表示されます。
 
    ![lseconds](assets/lseconds.png)
 
-   *この呼び出しは、上記のレガシーマイルストーン呼び出しに似ています。 pev3 の情報を参照してください&#x200B;**[指定された](/help/sites-administering/adobeanalytics.md)**.*
+   *この呼び出しは、上記のレガシーマイルストーン呼び出しに似ています。 pev3 の情報を参照してください。**[指定された](/help/sites-administering/adobeanalytics.md)**.*
 
 **このチュートリアルで使用する参照：**
 

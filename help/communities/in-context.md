@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 1%
 
 AEM Communitiesの場合、管理者や信頼できるコミュニティメンバーは、コミュニティコンテンツが投稿された公開済みページで直接モデレートを実行できます。
 
-を使用する場合 [モデレートコンソール](moderation.md)コンテンツに対して表示される情報には、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできるように、公開済みページへのリンクが含まれます。
+を使用する場合、 [モデレートコンソール](moderation.md)コンテンツに対して表示される情報には、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできるように、公開済みページへのリンクが含まれます。
 
 ## モデレートアクション {#moderation-actions}
 
-モデレートの概要で [モデレートアクション](moderate-ugc.md#moderation-actions).
+モデレートの概要にアクセスして、 [モデレートアクション](moderate-ugc.md#moderation-actions).
 
 ## モデレート UI {#moderation-ui}
 
 パブリッシュインスタンスのモデレーターに表示される UI は、ユーザー生成コンテンツ (UGC) の投稿と管理を行うためのダイアログ内に含まれています。 UI の要素は、サイト訪問者のステータス ( 訪問者が
 
 1. コンテンツを投稿したメンバー。
-1. 信頼できるメンバーモデレーター。
+1. 信頼できるメンバーモデレーターです。
 1. 管理者。
 1. サインインしていますが、管理者、モデレーター、コンテンツの作成者ではありません。
 1. サインインしていません。
@@ -46,7 +46,7 @@ Aaron McDonald(aaron.mcdonald@mailinator.com) は、サイトの作成時に com
 
 Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソール](members.md).
 
-コミュニティユーザーグループの詳細については、 [ユーザーとユーザーグループの管理](users.md).
+コミュニティユーザーグループについて詳しくは、 [ユーザーとユーザーグループの管理](users.md).
 
 ### フォーラム投稿の作成 {#create-the-forum-posts}
 
@@ -58,7 +58,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソー�
 
      ハミングバードフィーダーでネクターを変更するタイミング
 
-   * 本文を入力
+   * 本文のテキストを入力
 
      毎年ハチドリの餌を吊り上げる時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ 早く変更する必要がありますか？
 
@@ -82,7 +82,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソー�
    * Hummingbird のトピックで、「詳細を表示」を選択します。
    * 返信を投稿のコメントを入力
 
-     私は蜜と飼料を販売しています — https://my.viral.url/にアクセスしてください
+     私は蜜と飼料を販売しています — https://my.viral.url/にアクセスしてください。
 
    * 返信を選択
    * ログアウトを選択
@@ -99,7 +99,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソー�
 
 オーサー環境で、管理者としてログインし、Boyd Larsen(boyd.larsen@dodgit.com) を community-engage-members グループの新しいメンバーとして追加します。その際、 [メンバーコンソール](members.md)、次にログアウトします。
 
-公開時に、Boyd Larsen としてログインし、を選択してスレッドにアクセスします。 `Forum`、 `Read more` 蜂雀の巣箱のために
+公開時に、Boyd Larsen としてログインし、を選択してスレッドにアクセスします。 `Forum`を、 `Read more` 蜂雀の巣箱のために
 
 注意:
 

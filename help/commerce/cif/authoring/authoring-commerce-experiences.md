@@ -2,10 +2,10 @@
 title: コマースエクスペリエンスのオーサリング
 description: コマースエクスペリエンスの作業
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: ht
-source-wordcount: '703'
-ht-degree: 100%
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
+source-wordcount: '705'
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ CIF アドオンは、コマース固有の機能を使用して AEM オーサ�
 
 ### 製品ピッカー {#product-picker}
 
-このピッカーは、製品を見つけるためにカタログ構造によるブラウジングや全文検索を提供します。バリエーションを持つ製品には、「タイプ」列にフォルダーアイコンが表示されます。フォルダーアイコンをクリックすると、選択した製品のバリエーションが開きます。
+このピッカーは、カタログ構造や全文検索を参照して商品を検索する機能を提供します。 バリエーションを持つ製品には、「タイプ」列にフォルダーアイコンが表示されます。フォルダーアイコンをクリックすると、選択した製品のバリエーションが開きます。
 
 ![製品ピッカー](/help/commerce/cif/assets/authoring/product-picker.png)
 
@@ -39,7 +39,7 @@ CIF アドオンは、コマース固有の機能を使用して AEM オーサ�
 
 ### カテゴリピッカー {#category-picker}
 
-このピッカーは、カテゴリを見つけるためにカタログ構造によるブラウジングを提供します。
+このピッカーは、カタログ構造を参照してカテゴリを検索する機能を提供します。
 
 ![カテゴリピッカー](/help/commerce/cif/assets/authoring/category-picker.png)
 

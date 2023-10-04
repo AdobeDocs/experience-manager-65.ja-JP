@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
@@ -56,13 +56,13 @@ ht-degree: 2%
 
 jcr コンテンツと json を介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
-1. AEM オーサーインスタンスで、 https:// hostname:port/editor.html/content/site/sitename.htmlに移動します。
+1. AEMオーサーインスタンスで、 https:// hostname:port/editor.html/content/site/sitename.htmlに移動します。
 
    >[!NOTE]
    >
    >ローカライズされたサイトに移動しないでください。
 
-1. に移動します。 **ページプロパティ**.
+1. に移動します。 **ページのプロパティ**.
 
    ![page-properties](assets/page-properties.png)
 
@@ -77,7 +77,7 @@ jcr コンテンツと json を介した匿名ユーザーによるアクセス�
 
 ## 信頼できるコミュニティメンバー {#trusted-community-member}
 
-この操作は、次を前提としています。 [Aaron McDonald](/help/communities/tutorials.md#demo-users) は次の役割を割り当てられました： [コミュニティマネージャーとモデレーター](/help/communities/create-site.md#roles). そうでない場合は、オーサー環境に戻ります。 [サイト設定の変更](/help/communities/sites-console.md#modifying-site-properties) コミュニティマネージャーとモデレーターの両方として Aaron McDonald を選択します。
+この操作は、次を前提としています。 [Aaron McDonald](/help/communities/tutorials.md#demo-users) は次の役割を割り当てられました： [コミュニティマネージャーとモデレーター](/help/communities/create-site.md#roles). そうでない場合は、次の場所にオーサー環境に戻ります。 [サイト設定を変更する](/help/communities/sites-console.md#modifying-site-properties) コミュニティマネージャーとモデレーターの両方として Aaron McDonald を選択します。
 
 右上隅で、「 `Log in`をクリックし、ユーザー名 (aaron.mcdonald@mailinator.com) とパスワード (password) を使用して署名します。 twitterまたはFacebookの資格情報を使用してログインする機能に注目してください。
 
@@ -85,7 +85,7 @@ jcr コンテンツと json を介した匿名ユーザーによるアクセス�
 
 登録済みのコミュニティメンバーとしてサインインしたら、次のメニュー項目に注目して、コミュニティサイトをクリックして参照してください。
 
-* **プロファイル** オプションを使用すると、プロファイルを表示および編集できます。
+* **プロファイル** 「 」オプションを使用すると、プロファイルを表示および編集できます。
 * [メッセージ](/help/communities/configure-messaging.md) 「 」オプションを使用すると、ダイレクトメッセージの節に移動し、次の操作をおこなうことができます。
 
    1. 受信したダイレクトメッセージ（インボックス）、送信したダイレクトメッセージ（送信済みアイテム）、削除した（ごみ箱）を表示します。
@@ -115,7 +115,7 @@ jcr コンテンツと json を介した匿名ユーザーによるアクセス�
 
 サイトの訪問者は、投稿を表示し、様々な方法で並べ替えることができます。
 
-![formlink](assets/forumlink.png)
+![forumlink](assets/forumlink.png)
 
 ### グループリンク {#groups-link}
 
@@ -127,7 +127,7 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 
 ![grouplink](assets/grouplink.png)
 
-参照グループの作成：
+参照グループを作成します。
 
 1. 選択 **新しいグループ**
 1. **「設定」タブ**
@@ -139,13 +139,13 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 
 1. **「テンプレート」タブ**
 
-   * 選択 `Reference Group` （構造内にグループ機能を含み、ネストされたグループを許可します）
+   * 選択 `Reference Group` （構造内にグループ機能を含み、ネストされたグループを許可します）。
 
 1. 選択 **グループを作成**
 
    ![creategroup](assets/creategroup.png)
 
-新しいグループが作成された後、 **新しいスポーツグループを選択します。** 2 つのグループ（ネスト）を作成するために、このグループ内にネストします。 サイト構造は、グループ機能で始めることができないので、Sports グループを開いた後、「グループ」リンクを選択する必要があります。
+新しいグループが作成された後、 **新しいスポーツグループを選択します。** 2 つのグループ（ネスト）を作成するために、このグループ内にネストします。 サイト構造はグループ機能で始めることができないので、 Sports グループを開いた後、「グループ」リンクを選択する必要があります。
 
 ![grouplink1](assets/grouplink1.png)
 
@@ -155,7 +155,7 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 
 * 次の名前の 1 つ： `Baseball`
 
-   * 設定を `Open Group` （必須のメンバーシップ）。
+   * 設定を「 `Open Group` （必須のメンバーシップ）。
    * 「テンプレート」タブで、「 `Conversational Group`.
 
 * 次の名前の 1 つ： `Gymnastics`
@@ -167,7 +167,7 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 
 * 両方のグループが表示される前に、ページの更新が必要になる場合があります。
 * このテンプレートでは、 *not* にグループ機能を含めるので、これ以上グループをネストすることはできません。
-* 作成者の場合、 [グループコンソール](/help/communities/groups.md) は 3 つ目の選択肢を提供します。 `Public Group` （オプションのメンバーシップ）。
+* 作成者の場合、 [グループコンソール](/help/communities/groups.md) は 3 つ目の選択肢を提供します。a `Public Group` （オプションのメンバーシップ）。
 
 両方のグループを作成したら、Baseball グループ（開いているグループ）を選択し、リンクに注目します。
 
@@ -186,9 +186,9 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 * 選択 `Sports` リンク
 * スポーツを選択&#39; `Groups` リンク
 
-野球グループのみが表示されます。
+Baseball グループのみが表示されます。
 
-Weston McCall(weston.mccall@dodgit.com / password) としてログインし、同じ場所に移動します。 Weston が `Join` 開場 `Baseball` グループ化し、次のいずれかを選択します。 `enter or Leave` 私人 `Gymnastics` グループ化します。
+Weston McCall(weston.mccall@dodgit.com / password) としてログインし、同じ場所に移動します。 Weston が `Join` 開場所 `Baseball` グループ化し、次のいずれかを選択します。 `enter or Leave` 私人 `Gymnastics` グループ化します。
 
 ![grouplink3](assets/grouplink3.png)
 
@@ -202,7 +202,7 @@ Weston McCall(weston.mccall@dodgit.com / password) としてログインし、�
 
 ### モデレートリンク {#moderationlink}
 
-コミュニティメンバーがモデレート権限を持っている場合は、モデレートリンクが表示され、選択すると、投稿されたコミュニティコンテンツが表示され、コミュニティのコンテンツを使用できるようになります [モデレート済み](/help/communities/moderate-ugc.md) ～に似た方法で [モデレートコンソール](/help/communities/moderation.md) （オーサー環境で）
+コミュニティメンバーがモデレート権限を持っている場合は、モデレートリンクが表示され、選択すると、投稿されたコミュニティコンテンツが表示され、コミュニティのコンテンツを使用できるようになります [モデレート済み](/help/communities/moderate-ugc.md) ～に似た方法で [モデレートコンソール](/help/communities/moderation.md) （オーサー環境で）。
 
 ブラウザーの「戻る」ボタンを使用して、公開済みのサイトに戻ります。 ほとんどのコンソールは、パブリッシュ環境のグローバルナビゲーションからはアクセスできません。
 

@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2853'
+source-wordcount: '2852'
 ht-degree: 3%
 
 ---
@@ -24,9 +24,9 @@ AEM Communitiesのスコアとバッジ機能を使用すると、コミュニ�
 
 スコアとバッジの主な側面は次のとおりです。
 
-* [バッジを割り当て](#assign-and-revoke-badges) コミュニティ内のメンバーの役割を特定する。
+* [バッジの割り当て](#assign-and-revoke-badges) コミュニティ内のメンバーの役割を特定します。
 
-* [バッジの基本的な授与](#enable-scoring) メンバーの参加を促すために、メンバーに送信します（作成されたコンテンツの数）。
+* [バッジの基本的な授与](#enable-scoring) メンバーの参加を促すために、メンバーに送信します（作成されたコンテンツの数量）。
 
 * [バッジの高度な授与](/help/communities/advanced.md) メンバーをエキスパートとして識別する（作成されたコンテンツの質）。
 
@@ -50,13 +50,13 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 ### バッジ管理 UI {#badge-management-ui}
 
-コミュニティ [バッジコンソール](/help/communities/badges.md) カスタムバッジを追加できます。カスタムバッジは、獲得時（与えられた時）またはコミュニティ内の特定の役割（割り当てられた時）にメンバーに対して表示できます。
+コミュニティ [バッジコンソール](/help/communities/badges.md) カスタムバッジを追加できます。カスタムバッジは、獲得時（与えられた時）またはコミュニティ内の特定の役割を引き受ける（割り当てられた時）に、メンバーに対して表示できます。
 
 ### 割り当てられたバッジ {#assigned-badges}
 
 ロールベースのバッジは、コミュニティ内での役割に基づいて、管理者がコミュニティメンバーに割り当てます。
 
-割り当てられた（与えられた）バッジは、選択した [SRP](/help/communities/srp.md) およびは直接アクセスできません。 GUI が使用できるようになるまで、ロールベースのバッジを割り当てる唯一の方法は、コードまたは cURL を使用して割り当てることです。 cURL の手順については、「 [バッジの割り当てと取り消し](#assign-and-revoke-badges).
+割り当てられた（与えられた）バッジは、選択した [SRP](/help/communities/srp.md) とは、直接アクセスできません。 GUI が使用できるようになるまで、ロールベースのバッジを割り当てる唯一の方法は、コードまたは cURL を使用して割り当てることです。 cURL の手順については、「 [バッジの割り当てと取り消し](#assign-and-revoke-badges).
 
 このリリースには、次の 3 つの役割ベースのバッジが含まれています。
 
@@ -66,7 +66,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 * **グループマネージャー**
   `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
-* **特権を持つ人**
+* **特権を持つメンバー**
   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
   ![割り当てられたバッジ](assets/assigned-badges.png)
@@ -78,7 +78,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 アクティビティに対する報酬としてバッジを表示するには、次の 2 つの処理が必要です。
 
 * バッジは必ず設定します [有効](#enableforcomponent) フィーチャコンポーネント用。
-* スコアルールとバッジルールは次の条件を満たす必要があります [適用](#applytopage) を、コンポーネントが配置されているページ（または上位ページ）に追加します。
+* スコアルールとバッジルールは次の条件を満たす必要があります [適用済み](#applytopage) を、コンポーネントが配置されているページ（または上位ページ）に追加します。
 
 このリリースには、次の 3 つの報酬ベースのバッジが含まれています。
 
@@ -101,7 +101,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 ### カスタムバッジ {#custom-badges}
 
-カスタムバッジは、 [バッジコンソール](/help/communities/badges.md) バッジルールで割り当てるか指定します。
+カスタムバッジは、 [バッジコンソール](/help/communities/badges.md) バッジルールで割り当てるか、指定します。
 
 バッジコンソールからインストールすると、カスタムバッジはパブリッシュ環境に自動的にレプリケートされます。
 
@@ -123,7 +123,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 サイトが既に公開されている場合は、すべてのルールを適用してコンポーネントを有効にした後、サイトを再公開します。
 
-バッジが有効なコンポーネントに適用されるルールは、現在のノードまたはその上位ノード用のものです。
+バッジが有効なコンポーネントに適用されるルールは、現在のノードまたはその上位ノード用のルールです。
 
 ノードのタイプがの場合 `cq:Page` （推奨）次に CRXDE|Lite を使用して、そのにプロパティを追加します。 `jcr:content` ノード。
 
@@ -134,13 +134,13 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 >[!NOTE]
 >
->スコアルールがバッジの授与に影響を与えないように見える場合は、バッジルールの scoringRules プロパティでスコアルールがブロックされていないことを確認します。 「 [バッジルール](#badging-rules).
+>スコアルールがバッジの授与に影響を与えないように見える場合は、バッジルールの scoringRules プロパティでスコアルールがブロックされていないことを確認します。 「 」というタイトルの節を参照してください。 [バッジルール](#badging-rules).
 
 ### コンポーネントのバッジを有効にする {#enable-badges-for-component}
 
-スコアルールとバッディングルールは、 [オーサリングモード](/help/communities/author-communities.md).
+スコアルールとバッディングルールは、でコンポーネント設定を編集することでバッジを有効にしたコンポーネントのインスタンスに対してのみ有効です。 [オーサリングモード](/help/communities/author-communities.md).
 
-boolean プロパティ `allowBadges`コンポーネントインスタンスのバッジの表示を有効または無効にします。 これは、 [コンポーネント編集ダイアログ](/help/communities/author-communities.md) フォーラム、Q&amp;A、コメントの各コンポーネントの場合は、「 」チェックボックスを使用します。 **バッジを表示**.
+ブール型のプロパティ `allowBadges`コンポーネントインスタンスのバッジの表示を有効または無効にします。 これは、 [コンポーネント編集ダイアログ](/help/communities/author-communities.md) フォーラム、Q&amp;A、コメントの各コンポーネントの場合は、「 」チェックボックスを使用します。 **バッジを表示**.
 
 #### 例：フォーラムコンポーネントインスタンスの allowBadges {#example-allowbadges-for-forum-component-instance}
 
@@ -175,7 +175,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 >
 >ベストプラクティス：各スコアルールに一意の名前を付けます。
 >
->スコア付けルール名は、グローバルに一意である必要があります。同じ名前で終わるべきではありません。
+>スコア付けルール名は、グローバルに一意である必要があります。同じ名前で終わらないでください。
 >
 >例 *not* 手順：
 >
@@ -201,7 +201,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 * member-comment-create
 * member-receive-vote
 
-サブルールはタイプのノードです `cq:Page` プロパティを含む `jcr:content`ノード [動詞とトピック](#topics-and-verbs) .
+サブルールはタイプのノードです `cq:Page` プロパティを含む `jcr:content`以下を指定するノード [動詞とトピック](#topics-and-verbs) .
 
 <table>
  <tbody>
@@ -215,7 +215,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
    <td>Long</td>
    <td>
     <ul>
-     <li>必須動詞はイベントアクションに対応する</li>
+     <li>必須。動詞はイベントアクションに対応します。</li>
      <li>動詞プロパティは少なくとも 1 つ必要です</li>
      <li>動詞はすべて大文字で入力する必要があります</li>
      <li>複数の動詞プロパティを使用できますが、重複はありません</li>
@@ -229,8 +229,8 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
    <td>文字列</td>
    <td>
     <ul>
-     <li>オプション；イベントトピックで識別されるコミュニティコンポーネントにサブルールを制限</li>
-     <li>指定した場合：値は、イベントトピックの複数値文字列です</li>
+     <li>オプション。イベントトピックで識別されるコミュニティコンポーネントにサブルールを制限します。</li>
+     <li>指定した場合：値はイベントトピックの複数値文字列です。</li>
      <li>このリリースのトピックのリストは、 <a href="#topics-and-verbs">トピックと動詞</a> セクション</li>
      <li>デフォルトでは、動詞に関連するすべてのトピックに適用されます</li>
     </ul> </td>
@@ -240,8 +240,8 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
    <td>ブーリアン</td>
    <td>
     <ul>
-     <li>オプション；メンバーが自分のコンテンツに対して行動を起こす場合は関係ありません</li>
-     <li>true の場合は、アクションを実行するコンテンツの所有者にスコアを適用します</li>
+     <li>オプション。メンバーが自分が所有するコンテンツに対して行動を起こす場合は関係ありません</li>
+     <li>true の場合は、アクションを実行するコンテンツの所有者にスコアを適用します。</li>
      <li>false の場合は、アクションを実行するメンバーにスコアを適用します</li>
      <li>デフォルトは false です。</li>
     </ul> </td>
@@ -251,12 +251,12 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
    <td>文字列</td>
    <td>
     <ul>
-     <li>オプション；スコアエンジンを識別します。</li>
+     <li>（オプション）スコアエンジンを識別します。</li>
      <li>「basic」の場合は、数量に基づいてスコアエンジンを指定します。
       <ul>
        <li>リリースに含まれる</li>
       </ul> </li>
-     <li>「詳細」の場合は、品質と数量に基づいてスコアエンジンを指定します
+     <li>「詳細」の場合は、品質と数量に基づいてスコアエンジンを指定します。
       <ul>
        <li>にはが必要です <a href="/help/communities/advanced.md">追加パッケージ</a></li>
       </ul> </li>
@@ -272,7 +272,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
 1. /libs/settings/community/scoring/rules/comments-scoring
 
-   * subRules[] = /libs/settings/community/scoring/rules/sub-rules/member-comment-create /libs/settings/community/scoring/rules/sub-rules/member-receive-vote /libs/settings/community/scoring/rules/sub-moderated/member-is
+   * subRules[] = /libs/settings/community/scoring/rules/sub-rules/member-comment-create /libs/settings/community/scoring/rules/sub-rules/member-receive-vote /libs/settings/community/scoring/rules/sub-moderated/member-moderated
 
 1. /libs/settings/community/scoring/rules/forums-scoring
 
@@ -282,7 +282,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
 * 両方 `rules` および `sub-rules` ノードのタイプは cq:Page です。
 
-* `subRules` は String 型の属性です[] 規則の `jcr:content` ノード。
+* `subRules` は String 型の属性です[] 規則に従って `jcr:content` ノード。
 
 * `sub-rules` は、様々なスコアリングルール間で共有できます。
 * `rules` はリポジトリの場所に配置し、全員に対して読み取り権限を付与する必要があります。
@@ -316,9 +316,9 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
    * 80 ポイントが累積すると、ゴールドバッジが授与されます。
 
-バッジルールは、ポイントの累積方法を決定するスコアルールと対になります。 「 [コンテンツへのルールの適用](#apply-rules-to-content).
+バッジルールは、ポイントの累積方法を決定するスコアルールと対になります。 「 」というタイトルの節を参照してください。 [コンテンツへのルールの適用](#apply-rules-to-content).
 
-この `scoringRules` プロパティは、特定のバッジルールと対にできるスコアルールを制限するだけです。
+The `scoringRules` プロパティは、特定のバッジルールと対にできるスコアルールを制限するだけです。
 
 >[!NOTE]
 >
@@ -358,7 +358,7 @@ boolean プロパティ `allowBadges`コンポーネントインスタンスの�
 
 ### 含まれるバッジルール {#included-badging-rules}
 
-このリリースには、 [フォーラムおよびコメントのスコアリングルール](#includedscoringrules).
+このリリースには、 [フォーラムおよびコメントのスコア付けルール](#includedscoringrules).
 
 * `/libs/settings/community/badging/rules/comments-badging`
 
@@ -385,19 +385,19 @@ cURL -i -XPOST-H *ヘッダー* -u *サインイン* -F *操作* -F *バッジ* 
 
 *ヘッダー* =サーバーに渡すカスタムヘッダー（必須）
 
-*サインイン* = administrator-id:password 例：admin:admin
+*サインイン* = administrator-id:password 例： admin:admin
 
 *操作* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
 *バッジ* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所 ( 例：/libs/settings/community/badging/images/moderator/jcr:content/moderator.png
+*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所 ( 例： /libs/settings/community/badging/images/moderator/jcr:content/moderator.png)
 
-*member-profile-url* =パブリッシュ時のメンバーのプロファイルのエンドポイント（例： ）https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* =公開時のメンバーのプロファイルのエンドポイント ( 例： https:// )&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
->この *member-profile-url*:
+>The *member-profile-url*:
 >
 >* オーサーインスタンスを参照する場合、 [トンネルサービス](/help/communities/users.md#tunnel-service) が有効になっている。
 >* わかりにくく、ランダムな名前である可能性があります。詳しくは、 [セキュリティチェックリスト](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) 許可可能 ID に関する情報です。
@@ -428,13 +428,13 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 メンバーがコミュニティ機能とやり取りすると、通知やスコアリングなどの非同期リスナーをトリガーにできるイベントが送信されます。
 
-コンポーネントの SocialEvent インスタンスは、イベントを `actions` それは `topic`. SocialEvent には、 `verb` アクションに関連付けられている。 ここに *n-1* ～間の関係 `actions` および `verbs`.
+コンポーネントの SocialEvent インスタンスは、イベントを `actions` それは `topic`. SocialEvent には、 `verb` アクションに関連付けられています。 ここに *n-1* ～間の関係 `actions` および `verbs`.
 
-配信されるコミュニティコンポーネントについて、次の表で次の内容を説明します `verbs` それぞれに定義 `topic` ～で使用できる [スコア付けサブルール](#scoring-sub-rules).
+配信されるコミュニティコンポーネントについて、次の表で次の内容を説明します。 `verbs` それぞれに定義済み `topic` ～で使用できる [スコア付けサブルール](#scoring-sub-rules).
 
 >[!NOTE]
 >
->新しいブール型プロパティ `allowBadges`コンポーネントインスタンスのバッジの表示を有効または無効にします。 更新時に設定可能 [コンポーネント編集ダイアログ](/help/communities/author-communities.md) ラベル付きのチェックボックスを通じて **バッジを表示**.
+>新しいブール型プロパティ、 `allowBadges`コンポーネントインスタンスのバッジの表示を有効または無効にします。 更新時に設定可能 [コンポーネント編集ダイアログ](/help/communities/author-communities.md) ラベル付きのチェックボックスを通じて **バッジを表示**.
 
 **[カレンダーコンポーネント](/help/communities/calendar.md)**
 SocialEvent `topic`= com/adobe/cq/social/calendar
@@ -462,9 +462,9 @@ SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがフォルダーを作成 |
-| 添付 | メンバーはファイルをアップロードします |
-| 更新 | メンバーがフォルダーまたはファイルを更新 |
-| 削除 | メンバーがフォルダまたはファイルを削除 |
+| ATTACH | メンバーはファイルをアップロードします |
+| 更新 | メンバーがフォルダーまたはファイルを更新します |
+| 削除 | メンバーがフォルダーまたはファイルを削除 |
 
 **[フォーラムコンポーネント](/help/communities/forum.md)**
 SocialEvent `topic`= com/adobe/cq/social/forum
@@ -472,7 +472,7 @@ SocialEvent `topic`= com/adobe/cq/social/forum
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがフォーラムトピックを作成します |
-| 追加 | フォーラムトピックに返信するメンバー |
+| 追加 | フォーラムトピックに対するメンバーの返信 |
 | 更新 | メンバーのフォーラムのトピックまたは返信が編集されます |
 | 削除 | メンバーのフォーラムトピックまたは返信が削除されました |
 
@@ -495,7 +495,7 @@ SocialEvent `topic` = com/adobe/cq/social/qna
 | 追加 | メンバーが Q&amp;A 回答を作成 |
 | 更新 | メンバーの Q&amp;A の質問または回答が編集されます |
 | 選択 | メンバーの回答が選択されています |
-| 選択解除 | メンバーの回答が選択解除されました |
+| 選択を解除 | メンバーの回答が選択解除されました |
 | 削除 | メンバーの Q&amp;A の質問または回答が削除されます |
 
 **[レビューコンポーネント](/help/communities/reviews.md)**
@@ -539,7 +539,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 カスタムコンポーネントの場合、 SocialEvent がインスタンス化され、コンポーネントのイベントが `actions` それは `topic`.
 
-スコアリングをサポートするには、 SocialEvent でメソッドを上書きする必要があります `getVerb()` 適切な `verb` が返される `action`. この `verb` アクションに対して返されるのは、一般的に使用される ( `POST`) またはコンポーネント専用の ( 例えば `ADD RATING`) をクリックします。 ここに *n-1* ～間の関係 `actions` および `verbs`.
+スコアリングをサポートするには、 SocialEvent でメソッドを上書きする必要があります `getVerb()` 適切な `verb` が返される `action`. The `verb` アクションに対して返されるのは、一般的に使用される ( `POST`) またはコンポーネント専用の ( 例えば、 `ADD RATING`) をクリックします。 ここに *n-1* ～間の関係 `actions` および `verbs`.
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -553,7 +553,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 スコアルールとバッジルールが Web サイトのコンテンツに適用され、一部のアクションにバッジが与えられ、他のアクションにはバッジが与えられない場合は、適用されるスコアルールがバッジルールによって制限されていないことを確認します。
 
-詳しくは、 `scoringRules` プロパティ [バッジルール](#badging-rules).
+詳しくは、 `scoringRules` のプロパティ [バッジルール](#badging-rules).
 
 ### 大文字と小文字の区別 {#case-sensitive-typo}
 
@@ -563,7 +563,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## クイックテスト {#quick-test}
 
-スコアとバッジを、 [入門チュートリアル](/help/communities/getting-started.md) （エンゲージメント）サイト：
+スコアとバッジをすばやく試すには、 [入門チュートリアル](/help/communities/getting-started.md) （エンゲージメント）サイト：
 
 * 作成者のCRXDE Liteにアクセスします。
 * ベースページを参照します。
@@ -598,8 +598,8 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 次に、フォーラムとコメントのコンポーネントでバッジを表示できることを確認します。
 
-* 再びCRXDE Lite。
-* フォーラムコンポーネントを参照
+* 再びCRXDE Liteを使用。
+* フォーラムコンポーネントを参照します。
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
@@ -616,13 +616,13 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 最後に
 
 * パブリッシュインスタンス上のコンポーネントを参照します。
-* コミュニティメンバーとしてログインします ( 例：weston.mccall@dodgit.com / password) で確認できます。
+* コミュニティメンバーとしてログインします ( 例： weston.mccall@dodgit.com / password)。
 * 新しいフォーラムトピックを投稿します。
 * バッジを表示するには、ページを更新する必要があります。
 
-   * ログアウトし、別のコミュニティメンバーとしてログインします ( 例：aaron.mcdonald@mailinator.com/password) を参照してください。
+   * ログアウトし、別のコミュニティメンバー (aaron.mcdonald@mailinator.com/password など ) としてログインします。
 
-* フォーラムを選択します。
+* 「フォーラム」を選択します。
 
 これにより、コミュニティメンバーは、最初のフォーラムバッジルールの最初のしきい値がスコア 1 なので、フォーラム投稿でブロンズバッジを表示できます。
 

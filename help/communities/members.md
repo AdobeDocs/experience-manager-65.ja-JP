@@ -1,15 +1,13 @@
 ---
 title: メンバーコンソールとグループ管理コンソール
-description: メンバーおよびグループ管理コンソールにアクセスする方法
-uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
+description: メンバーおよびグループの管理コンソールにアクセスする方法
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 201c87da1316944e594ade6d95800326b1e6667c
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 5%
@@ -21,32 +19,32 @@ ht-degree: 5%
 
 ## 概要 {#overview}
 
-AEM Communitiesの機能を使用する場合は、サイト訪問者を登録してサインインしてから、パブリッシュ環境でコミュニティに参加する必要が生じます。 ユーザー登録が必要なのはパブリッシュ環境に限られ、一般に *メンバー* 区別する *ユーザー* がオーサー環境に登録されている。
+AEM Communitiesの機能を使用する場合、サイト訪問者を登録してサインインしてから、パブリッシュ環境でコミュニティに参加する必要が生じることがあります。 ユーザー登録が必要なのはパブリッシュ環境に限られ、一般に、 *メンバー* 区別する *ユーザー* がオーサー環境に登録されている。
 
 ### 公開時のメンバー（ユーザー） {#members-users-on-publish}
 
-コミュニティメンバーコンソールとグループコンソールを使用して、 *公開* 環境は、 *作成者* 環境。 これは、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっている。
+コミュニティのメンバーコンソールとグループコンソールを使用して、 *公開* 環境は、 *作成者* 環境。 これは、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっている。
 
 ### 作成者のユーザー {#users-on-author}
 
-に登録されているユーザーとグループを管理するための *作成者* 環境のセキュリティコンソールを使用するには、が必要です。
+に登録されているユーザーとグループを管理するための *作成者* 環境の場合は、プラットフォームのセキュリティコンソールを使用する必要があります。
 
-* グローバルナビゲーションから、 **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL ユーザー]**.
-* グローバルナビゲーションから、 **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL グループ]**.
+* グローバルナビゲーションから、「 」を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL ユーザー]**.
+* グローバルナビゲーションから、「 」を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL グループ]**.
 
 >[!NOTE]
 >
->サンプルコンテンツがデプロイされ有効になっている場合、多くのサンプルユーザーがオーサー環境とパブリッシュ環境の両方に存在します。 を使用してを実行する場合、これらのユーザーは表示されません [nosamplecontent 実行モード](../../help/sites-administering/production-ready.md).
+>サンプルコンテンツがデプロイされ有効になっている場合、多くのサンプルユーザーがオーサー環境とパブリッシュ環境の両方に存在します。 を使用してを実行する場合、これらのユーザーは表示されません。 [nosamplecontent 実行モード](../../help/sites-administering/production-ready.md).
 
 ## メンバーコンソール {#members-console}
 
 オーサー環境で、パブリッシュ環境で登録されたメンバーを管理するためのメンバーコンソールを開くには、次の手順を実行します。
 
-* グローバルナビゲーションから、 **[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL メンバー]**
+* グローバルナビゲーションから、「 」を選択します。 **[!UICONTROL ナビゲーション]** > **[!UICONTROL Communities]** > **[!UICONTROL メンバー]**
 
 >[!CAUTION]
 >
->メンバーコンソールを使用できない場合、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっていません。
+>メンバーコンソールを使用できないのは、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっていません。
 
 ![メンバーコンソール](assets/member-console1.png)
 
@@ -59,9 +57,9 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 ![メンバーコンソールのフィルターオプション](assets/member-console2.png)
 
-「 `Members` ヘッダーを使用して、検索サイドパネルを閉じます。
+左側の検索アイコンを選択します。 `Members` ヘッダーを使用して、検索サイドパネルを閉じます。
 
-### メンバー統計 {#member-statistics}
+### メンバーの統計 {#member-statistics}
 
 表示されている列 `Views`, `Posts`, `Follows` および `Likes` ユーザーがAdobe Analyticsを使用して 1 つ以上のコミュニティサイトのメンバーになっている場合に更新されます [有効](sites-console.md#analytics).
 
@@ -69,13 +67,13 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 の選択 `Export CSV` リンクを使用すると、すべてのメンバーがコンマ区切り値のリストとしてダウンロードされ、スプレッドシートに読み込むのに適しています。
 
-列ヘッダーは次のとおりです
+列ヘッダーは次のとおりです。
 
 `| Screen Name |Last Name |First Name |Status |Views |Posts |Follows |Likes |`
 
 ## 新しいメンバーを作成 {#create-new-member}
 
-選択 `Create Member` パブリッシュ環境でユーザーを作成する場合。
+選択 `Create Member` をクリックして、パブリッシュ環境でユーザーを作成します。
 
 ![「新規メンバーの作成」ウィンドウ](assets/create-member1.png)
 
@@ -98,7 +96,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
   (*必須*) ログインパスワード。
 
-* **[!UICONTROL パスワードの確認入力]**
+* **[!UICONTROL パスワードを再入力]**
 
   (*必須*) 確認用のパスワードを再入力します。
 
@@ -135,7 +133,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 ### 一般 — 写真 {#general-photo}
 
-メンバーのアバターを提供するには、まず、 **[!UICONTROL 画像をアップロード]** .jpg、.png、.tif または.gif 形式の画像を選択します。 画像の推奨サイズは、72 dpi での 240 x 240 ピクセルです。
+メンバーのアバターを提供するには、まず、 **[!UICONTROL 画像をアップロード]** .jpg、.png、.tif または.gif タイプの画像を選択します。 画像の推奨サイズは、72 dpi での 240 x 240 ピクセルです。
 
 ### 一般 — サイトにメンバーを追加 {#general-add-member-to-sites}
 
@@ -147,7 +145,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 ### 「バッジ」タブ {#badges-tab}
 
-この `BADGES` panel では、バッジを手動で割り当てたり、取り消したりすることができます。 バッジは、割り当てられた役割に対して使用することも、通常は獲得されたバッジに対して使用することもできます。
+The `BADGES` panel では、バッジを手動で割り当てたり、取り消したりすることができます。 バッジは、割り当てられた役割に対して使用することも、通常は獲得されたバッジに対して使用することもできます。
 
 関連トピック [スコアとバッジ](implementing-scoring.md).
 
@@ -161,10 +159,10 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 ## グループコンソール {#groups-console}
 
-オーサー環境から使用できるグループコンソールを使用すると、パブリッシュ環境で登録されたメンバーグループを作成および管理できます。 特に～に役立つ [権限を持つメンバーグループ](users.md#privilegedmembersgroups).
+オーサー環境から使用できるグループコンソールを使用すると、パブリッシュ環境で登録されたメンバーグループを作成および管理できます。 特に～に役立つ。 [権限を持つメンバーグループ](users.md#privilegedmembersgroups).
 
 グループコンソールにアクセスするには：
-* グローバルナビゲーションから、 **[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL グループ]**.
+* グローバルナビゲーションから、「 」を選択します。 **[!UICONTROL ナビゲーション]** > **[!UICONTROL Communities]** > **[!UICONTROL グループ]**.
 
 >[!CAUTION]
 >
@@ -204,6 +202,6 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 コミュニティメンバーコンソールでメンバーを操作する場合は、適切な権限を持つユーザーとして、および [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が正しく設定されている必要があります。
 
-次の名前でサインインしていない場合 `admin`の場合、サインインしたユーザーは `administrators` ユーザーグループ。
+次の名前でサインインしていない場合 `admin`の場合、サインインしたユーザーは、 `administrators` ユーザーグループ。
 
 関連トピック [オーサー環境のレプリケーションエージェント](deploy-communities.md#replication-agents-on-author).

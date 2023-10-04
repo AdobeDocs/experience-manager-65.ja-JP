@@ -1,20 +1,16 @@
 ---
 title: ポリシーを使用したドキュメントの保護
-seo-title: Protecting Documents with Policies
 description: Document Security サービスを使用すると、機密性の設定を Adobe PDF ドキュメントに動的に適用したり、ドキュメントを管理したりできます。また、Document Security サービスを使用すると、ユーザーは、ポリシーで保護された PDF ドキュメントを受信者が使用する方法を管理できます。
-seo-description: Use the Document Security service to dynamically apply confidentiality settings to Adobe PDF documents and to maintain control over the documents. The Document Security service also enables the users to maintain control over how recipients use the policy-protected PDF document.
-uuid: 6feb69ef-7b61-4d0b-8c87-d65d98bae9b5
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: ht
-source-wordcount: '15514'
-ht-degree: 100%
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
+source-wordcount: '15513'
+ht-degree: 84%
 
 ---
 
@@ -26,7 +22,7 @@ ht-degree: 100%
 
 Document Security サービスを使用すると、ユーザーは、ドキュメントの配布範囲にかかわらず、Adobe PDF ドキュメントに機密性の設定を動的に適用したり、ドキュメントを管理したりできます。
 
-Document Security サービスは、ポリシーで保護された PDF ドキュメントを受信者がどのように使用するかをユーザーが管理できるようにすることで、ユーザーの手の届かない範囲で情報が広がるのを防ぎます。 ユーザーは、配布後に、ドキュメントを誰が開くことができるかを指定でき、ドキュメントの使用方法を制限でき、ドキュメントを監視できます。 また、ユーザーは、ポリシーで保護されたドキュメントへのアクセスを動的に制御することもでき、ドキュメントへのアクセスを動的に取り消すことさえできます。
+Document Security サービスは、ポリシーで保護されたPDFドキュメントを受信者がどのように使用するかをユーザーが管理できるようにすることで、ユーザーの手の届かない範囲で情報が広がるのを防ぎます。 ユーザーは、配布後に、ドキュメントを誰が開くことができるかを指定でき、ドキュメントの使用方法を制限でき、ドキュメントを監視できます。 また、ユーザーは、ポリシーで保護されたドキュメントへのアクセスを動的に制御することもでき、ドキュメントへのアクセスを動的に取り消すことさえできます。
 
 また、Document Security サービスでは、Microsoft Word ファイル（DOC ファイル）などの他のファイルタイプも保護します。 Document Security Client API を使用して、これらのファイルタイプを操作できます。 次のバージョンがサポートされています。
 
@@ -154,7 +150,7 @@ Web サービス API を使用してポリシーを作成する場合は、そ�
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-rightsmanagement-client.jar
-* namespace.jar（AEM Forms が JBoss にデプロイされている場合）
+* namespace.jar(AEM Formsが JBoss にデプロイされている場合 )
 * jaxb-api.jar（AEM Forms が JBoss にデプロイされている場合）
 * jaxb-impl.jar（AEM Forms が JBoss にデプロイされている場合）
 * jaxb-libs.jar（AEM Forms が JBoss にデプロイされている場合）
@@ -172,7 +168,7 @@ Web サービス API を使用してポリシーを作成する場合は、そ�
 
 Document Security サービスの操作をプログラムで実行する前に、Document Security サービスのクライアントオブジェクトを作成します。
 
-**ポリシー属性の設定**
+**ポリシーの属性を設定します**
 
 ポリシーを作成するには、ポリシー属性を設定します。必須の属性は、ポリシー名です。ポリシー名は、ポリシーセットごとに一意である必要があります。ポリシーセットは、単にポリシーの集まりです。ポリシーが別々のポリシーセットに属している場合は、同じ名前の 2 つのポリシーを使用できます。ただし、1 つのポリシーセット内の 2 つのポリシーが同じポリシー名を持つことはできません。
 
@@ -219,41 +215,42 @@ Document Security API（Java）を使用してポリシーを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクタを使用して `DocumentSecurityClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
+   * コンストラクタを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`DocumentSecurityClient` オブジェクトを作成します。
 
 1. ポリシーの属性を設定します。
 
-   * `InfomodelObjectFactory` オブジェクトの静的 `createPolicy` メソッドを呼び出すことによって `Policy` オブジェクトを作成します。このメソッドは `Policy` オブジェクトを返します。
-   * `Policy` オブジェクトの `setName` メソッドを呼び出し、ポリシー名を指定する文字列値を渡すことにより、ポリシーの名前属性を設定します。
-   * `Policy` オブジェクトの `setDescription` メソッドを呼び出し、ポリシーの説明を指定する文字列値を渡すことにより、ポリシーの説明を設定します。
-   * `Policy` オブジェクトの `setPolicySetName` メソッドを呼び出し、ポリシーセット名を指定する文字列値を渡すことにより、新しいポリシーが属するポリシーセットを設定します（このパラメーター値に `null` を指定すると、このポリシーが&#x200B;*マイポリシー*&#x200B;ポリシーセットに追加されます）。
-   * `InfomodelObjectFactory` オブジェクトの静的 `createValidityPeriod` メソッドを呼び出して、ポリシーの有効期間を作成します。このメソッドは `ValidityPeriod` オブジェクトを返します。
-   * `ValidityPeriod` オブジェクトの `setRelativeExpirationDays` メソッドを呼び出し、日数を指定する整数値を渡すことにより、ポリシーで保護されたドキュメントにアクセスできる日数を設定します。
-   * `Policy` オブジェクトの `setValidityPeriod` メソッドを呼び出して `ValidityPeriod` オブジェクトを渡すことにより、ポリシーの有効期間を設定します。
+   * の作成 `Policy` を呼び出すことによって、オブジェクトを `InfomodelObjectFactory` オブジェクトの静的 `createPolicy` メソッド。 このメソッドは、`Policy` オブジェクトを返します。
+   * を呼び出して、ポリシーの名前属性を設定します。 `Policy` オブジェクトの `setName` メソッドを使用し、ポリシー名を指定する string 値を渡す。
+   * を呼び出して、ポリシーの説明を設定します。 `Policy` オブジェクトの `setDescription` メソッドを使用して、ポリシーの説明を指定する string 値を渡すことができます。
+   * を呼び出して、新しいポリシーが属するポリシーセットを指定します。 `Policy` オブジェクトの `setPolicySetName` メソッドを使用し、ポリシーセット名を指定する string 値を渡す。 （このパラメーター値に `null` を指定すると、このポリシーが&#x200B;*マイポリシー*&#x200B;ポリシーセットに追加されます）。
+   * を呼び出して、ポリシーの有効期間を作成します。 `InfomodelObjectFactory` オブジェクトの静的 `createValidityPeriod` メソッド。 このメソッドは、`ValidityPeriod` オブジェクトを返します。
+   * ポリシーで保護されたドキュメントにアクセスできる日数を、 `ValidityPeriod` オブジェクトの `setRelativeExpirationDays` メソッドを使用し、日数を指定する整数値を渡す方法と方法。
+   * を呼び出して、ポリシーの有効期間を設定します。 `Policy` オブジェクトの `setValidityPeriod` メソッドおよび `ValidityPeriod` オブジェクト。
 
 1. ポリシーエントリを作成します。
 
-   * `InfomodelObjectFactory` オブジェクトの静的 `createPolicyEntry` メソッドを呼び出してポリシーエントリを作成します。このメソッドは `PolicyEntry` オブジェクトを返します。
-   * `InfomodelObjectFactory` オブジェクトの静的 `createPermission` メソッドを呼び出して、ポリシーの権限を指定します。権限を表す `Permission` インターフェイスに属する静的データメンバーを渡します。このメソッドは `Permission` オブジェクトを返します。例えば、ポリシーで保護された PDF ドキュメントのデータをユーザーがコピーできる権限を追加するには、`Permission.COPY` を渡します（追加する権限ごとに、この手順を繰り返します）。
-   * `PolicyEntry` オブジェクトの `addPermission` メソッドを呼び出して `Permission` オブジェクトを渡すことにより、ポリシーエントリに権限を追加します（この手順を作成した各 `Permission` オブジェクトについて繰り返します）。
-   * `InfomodelObjectFactory` オブジェクトの静的 `createSpecialPrincipal` メソッドを呼び出して、ポリシープリンシパルを作成します。プリンシパルを表す `InfomodelObjectFactory` オブジェクトに属するデータメンバーを渡します。このメソッドは `Principal` オブジェクトを返します。例えば、ドキュメントのパブリッシャーをプリンシパルとして追加するには、 `InfomodelObjectFactory.PUBLISHER_PRINCIPAL` を渡します。
-   * `PolicyEntry` オブジェクトの `setPrincipal`メソッドを呼び出して `Principal` オブジェクトを渡すことにより、ポリシーエントリにプリンシパルを追加します。
-   * `Policy` オブジェクトの `addPolicyEntry` メソッドを呼び出して `PolicyEntry` オブジェクトを渡すことにより、ポリシーエントリをポリシーに追加します。
+   * を呼び出してポリシーエントリを作成する `InfomodelObjectFactory` オブジェクトの静的 `createPolicyEntry` メソッド。 このメソッドは、`PolicyEntry` オブジェクトを返します。
+   * を呼び出して、ポリシーの権限を指定します。 `InfomodelObjectFactory` オブジェクトの静的 `createPermission` メソッド。 権限を表す `Permission` インターフェイスに属する静的データメンバーを渡します。このメソッドは `Permission` オブジェクトを返します。例えば、ポリシーで保護された PDF ドキュメントのデータをユーザーがコピーできる権限を追加するには、`Permission.COPY` を渡します（追加する権限ごとに、この手順を繰り返します）。
+   * を呼び出して、ポリシーエントリに権限を追加します。 `PolicyEntry` オブジェクトの `addPermission` メソッドおよび `Permission` オブジェクト。 （この手順を作成した各 `Permission` オブジェクトについて繰り返します）。
+   * を呼び出して、ポリシープリンシパルを作成します。 `InfomodelObjectFactory` オブジェクトの静的 `createSpecialPrincipal` メソッド。 プリンシパルを表す `InfomodelObjectFactory` オブジェクトに属するデータメンバーを渡します。このメソッドは `Principal` オブジェクトを返します。例えば、ドキュメントのパブリッシャーをプリンシパルとして追加するには、 `InfomodelObjectFactory.PUBLISHER_PRINCIPAL` を渡します。
+   * を呼び出して、プリンシパルをポリシーエントリに追加します。 `PolicyEntry` オブジェクトの `setPrincipal`メソッドおよび `Principal` オブジェクト。
+   * を呼び出して、ポリシーにポリシーエントリを追加します。 `Policy` オブジェクトの `addPolicyEntry` メソッドおよび `PolicyEntry` オブジェクト。
 
 1. ポリシーを登録します。
 
-   * `DocumentSecurityClient` オブジェクトの `getPolicyManager` メソッドを呼び出すことによって `PolicyManager` オブジェクトを作成します。
-   * `PolicyManager` オブジェクトの `registerPolicy` メソッドを呼び出して次の値を渡すことによって、ポリシーを登録します。
+   * の作成 `PolicyManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getPolicyManager` メソッド。
+   * を呼び出して、ポリシーを登録します。 `PolicyManager` オブジェクトの `registerPolicy` メソッドを使用して、次の値を渡します。
 
       * 登録するポリシーを表す `Policy` オブジェクト。
+
    * ポリシーが属するポリシーセットを表す文字列値。
 
-   接続設定で AEM Forms 管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを作成する場合は、`registerPolicy` メソッドを呼び出す際にポリシーセット名を指定します。ポリシーセットに `null` 値を渡すと、ポリシーは管理者の&#x200B;*マイポリシー*&#x200B;のポリシーセットに作成されます。
+   接続設定でAEM forms 管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを選択し、 `registerPolicy` メソッド。 ポリシーセットに `null` 値を渡すと、ポリシーは管理者の&#x200B;*マイポリシー*&#x200B;のポリシーセットに作成されます。
 
    接続設定内で Document Security ユーザーを使用する場合は、ポリシーのみを受け入れる過負荷の `registerPolicy` メソッドを呼び出すことができます。つまり、ポリシーセット名を指定する必要はありません。ただし、ポリシーは&#x200B;*マイポリシー*&#x200B;という名前のポリシーセットに追加されます。このポリシーセットに新しいポリシーを追加しない場合は、`registerPolicy` メソッドを呼び出す際にポリシーセット名を指定します。
 
@@ -282,23 +279,23 @@ Document Security API（web サービス）を使用してポリシーを作成�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DocumentSecurityServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を`BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
 1. ポリシーの属性を設定します。
 
-   * コンストラクタを使用して `PolicySpec` オブジェクトを作成します。
-   * `PolicySpec` オブジェクトの `name` データメンバーに文字列値を割り当てることにより、ポリシーの名前を設定します。
-   * `PolicySpec` オブジェクトの `description` データメンバーに文字列値を割り当てることにより、ポリシーの説明を設定します。
-   * `PolicySpec` オブジェクトの `policySetName` データメンバーに文字列値を割り当てることにより、ポリシーが属するポリシーセットを設定します。既存のポリシーセット名を指定する必要があります（このパラメーター値に `null` を指定すると、このポリシーは&#x200B;*マイポリシー*&#x200B;に追加されます）。
-   * `PolicySpec` オブジェクトの `offlineLeasePeriod` データメンバーに整数値を割り当てることにより、ポリシーのオフラインリース期間を設定します。
-   * PDRL XML データを表す文字列値を使用して `PolicySpec` オブジェクトの `policyXml` データメンバーを設定します。このタスクを実行するには、コンストラクターを使用して .NET `StreamReader` オブジェクトを作成します。ポリシーを表す PDRL XML ファイルの場所を `StreamReader` コンストラクターに渡します。次に、`StreamReader` オブジェクトの `ReadLine` メソッドを呼び出し、戻り値を文字列変数に割り当てます。`ReadLine` メソッドが null を返すまで `StreamReader` オブジェクトを反復します。文字列変数を `PolicySpec` オブジェクトの `policyXml` データメンバーに割り当てます。
+   * コンストラクターを使用して `PolicySpec` オブジェクトを作成します。
+   * ポリシーの名前を設定するには、 `PolicySpec` オブジェクトの `name` データメンバー。
+   * ポリシーの説明を設定するには、 `PolicySpec` オブジェクトの `description` データメンバー。
+   * ポリシーが属するポリシーセットを指定するには、 `PolicySpec` オブジェクトの `policySetName` データメンバー。 既存のポリシーセット名を指定する必要があります（このパラメーター値に `null` を指定すると、このポリシーは&#x200B;*マイポリシー*&#x200B;に追加されます）。
+   * ポリシーのオフラインリース期間を設定するには、 `PolicySpec` オブジェクトの `offlineLeasePeriod` データメンバー。
+   * を設定します。 `PolicySpec` オブジェクトの `policyXml` PDRL XML データを表す string 値を持つデータメンバー。 このタスクを実行するには、コンストラクターを使用して .NET `StreamReader` オブジェクトを作成します。ポリシーを表す PDRL XML ファイルの場所を `StreamReader` コンストラクターに渡します。次に、 `StreamReader` オブジェクトの `ReadLine` メソッドを使用して戻り値を文字列変数に割り当てます。 `ReadLine` メソッドが null を返すまで `StreamReader` オブジェクトを反復します。文字列変数を `PolicySpec` オブジェクトの `policyXml` データメンバー。
 
 1. ポリシーエントリを作成します。
 
@@ -306,12 +303,12 @@ Document Security API（web サービス）を使用してポリシーを作成�
 
 1. ポリシーを登録します。
 
-   `DocumentSecurityServiceClient` オブジェクトの `registerPolicy` メソッドを呼び出して、次の値を渡すことにより、ポリシーを登録します。
+   を呼び出して、ポリシーを登録します。 `DocumentSecurityServiceClient` オブジェクトの `registerPolicy` メソッドを使用して、次の値を渡します。
 
    * 登録するポリシーを表す `PolicySpec` オブジェクト。
    * ポリシーが属するポリシーセットを表す文字列値。`null` 値を指定すると、このポリシーは&#x200B;*マイポリシー* に追加されることになります。
 
-   接続設定で AEM Forms 管理者アカウントを使用して `DocumentSecurityClient` オブジェクトを作成する場合は、`registerPolicy` メソッドを呼び出す際にポリシーセット名を指定します。
+   接続設定でAEM forms 管理者アカウントを使用して `DocumentSecurityClient` オブジェクトの場合は、 `registerPolicy` メソッド。
 
    接続設定内で Document Security ユーザーを使用する場合は、ポリシーのみを受け入れる過負荷の `registerPolicy` メソッドを呼び出すことができます。つまり、ポリシーセット名を指定する必要はありません。ただし、ポリシーは&#x200B;*マイポリシー*&#x200B;という名前のポリシーセットに追加されます。このポリシーセットに新しいポリシーを追加しない場合は、`registerPolicy` メソッドを呼び出す際にポリシーセット名を指定します。
 
@@ -358,11 +355,11 @@ Document Security サービスの操作をプログラムで実行する前に�
 
 既存のポリシーを変更するには、そのポリシーを取得する必要があります。ポリシーを取得するには、ポリシー名とポリシーが属するポリシーセットを指定します。ポリシーセット名に `null` 値を指定すると、ポリシーは&#x200B;*マイポリシー*&#x200B;ポリシーセットから取得されます。
 
-**ポリシーの属性の設定**
+**ポリシーの属性を設定します**
 
-ポリシーを変更するには、ポリシー属性の値を変更します。変更できない唯一のポリシー属性は名前属性です。例えば、ポリシーのオフラインリース期間を変更するには、ポリシーのオフラインリース期間属性の値を変更します。
+ポリシーを変更するには、ポリシー属性の値を変更します。変更できない唯一のポリシー属性は名前属性です。たとえば、ポリシーのオフラインリース期間を変更するには、ポリシーのオフラインリース期間属性の値を変更します。
 
-Web サービスを使用してポリシーのオフラインリース期間を変更する場合、`PolicySpec` インターフェイスの `offlineLeasePeriod` フィールドは無視されます。オフラインリース期間を更新するには、PDRL XML ドキュメントの `OfflineLeasePeriod` 要素を変更します。次に、`PolicySpec` インターフェイスの `policyXML` データメンバーを使用して、更新された PDRL XML ドキュメントを参照します。
+Web サービスを使用してポリシーのオフラインリース期間を変更する場合、 `offlineLeasePeriod` フィールド `PolicySpec` インターフェイスは無視されます。 オフラインリース期間を更新するには、PDRL XML ドキュメントの `OfflineLeasePeriod` 要素を変更します。次に、 `PolicySpec` インターフェイスの `policyXML` データメンバー。
 
 >[!NOTE]
 >
@@ -378,7 +375,7 @@ Document Security API（Java）を使用して既存のポリシーを変更し�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -387,19 +384,19 @@ Document Security API（Java）を使用して既存のポリシーを変更し�
 
 1. 既存のポリシーを取得します。
 
-   * `RightsManagementClient` オブジェクトの `getPolicyManager` メソッドを呼び出すことによって `PolicyManager` オブジェクトを作成します。
-   * 更新するポリシーを表す `Policy` オブジェクトを作成するには、`PolicyManager` オブジェクトの `getPolicy` メソッドを呼び出し、次の値を渡します。
+   * の作成 `PolicyManager` を呼び出すことによって、オブジェクトを `RightsManagementClient` オブジェクトの `getPolicyManager` メソッド。
+   * の作成 `Policy` を呼び出して更新するポリシーを表すオブジェクト `PolicyManager` オブジェクトの `getPolicy` メソッドを使用して次の値を渡す»
 
       * ポリシーが属するポリシーセット名を表す文字列値。`null` を指定すると、`MyPolicies` ポリシーセットが使用されるようになります。
       * ポリシー名を表す文字列値。
 
 1. ポリシーの属性を設定します。
 
-   ビジネス要件に合わせてポリシーの属性を変更します。例えば、ポリシーのオフラインリース期間を変更するには、`Policy` オブジェクトの `setOfflineLeasePeriod` メソッドを呼び出します。
+   ポリシーの属性を、ビジネス要件に合わせて変更します。 たとえば、ポリシーのオフラインリース期間を変更するには、 `Policy` オブジェクトの `setOfflineLeasePeriod` メソッド。
 
 1. ポリシーを更新します。
 
-   `PolicyManager` オブジェクトの `updatePolicy` メソッドを呼び出してポリシーを更新します。更新するポリシーを表す `Policy` オブジェクトを渡します。
+   を呼び出してポリシーを更新する `PolicyManager` オブジェクトの `updatePolicy` メソッド。 更新するポリシーを表す `Policy` オブジェクトを渡します。
 
 **コード例**
 
@@ -422,29 +419,29 @@ Document Security API（web サービス）を使用して既存のポリシー�
    * デフォルトのコンストラクターを使用して `RightsManagementServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存のポリシーを取得します。
 
-   `RightsManagementServiceClient` オブジェクトの `getPolicy` メソッドを呼び出し、次の値を渡すことにより、変更するポリシーを表す `PolicySpec` オブジェクトを作成します。
+   の作成 `PolicySpec` を呼び出して、変更するポリシーを表すオブジェクト `RightsManagementServiceClient` オブジェクトの `getPolicy` メソッドを使用して、次の値を渡します。
 
    * ポリシーが属するポリシーセット名を指定する文字列値。`null` を指定すると、`MyPolicies` ポリシーセットが使用されます。
    * ポリシーの名前を指定する文字列値。
 
 1. ポリシーの属性を設定します。
 
-   ビジネス要件に合わせてポリシーの属性を変更します。
+   ポリシーの属性を、ビジネス要件に合わせて変更します。
 
 1. ポリシーを更新します。
 
-   `RightsManagementServiceClient` オブジェクトの `updatePolicyFromSDK` メソッドを呼び出し、更新するポリシーを表す `PolicySpec` オブジェクトを渡すことにより、ポリシーを更新します。
+   を呼び出してポリシーを更新する `RightsManagementServiceClient` オブジェクトの `updatePolicyFromSDK` メソッドおよび `PolicySpec` 更新するポリシーを表すオブジェクト。
 
 **コード例**
 
@@ -487,7 +484,7 @@ Document Security API（Java）を使用してポリシーを削除します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -496,8 +493,8 @@ Document Security API（Java）を使用してポリシーを削除します。
 
 1. ポリシーを削除します。
 
-   * `RightsManagementClient` オブジェクトの `getPolicyManager` メソッドを呼び出すことにより、`PolicyManager` オブジェクトを作成します。
-   * `PolicyManager` オブジェクトの `deletePolicy` メソッドを呼び出し、次の値を渡すことにより、ポリシーを削除します。
+   * の作成 `PolicyManager` を呼び出すことによって、オブジェクトを `RightsManagementClient` オブジェクトの `getPolicyManager` メソッド。
+   * を呼び出してポリシーを削除する `PolicyManager` オブジェクトの `deletePolicy` メソッドを使用して、次の値を渡します。
 
       * ポリシーが属するポリシーセット名を指定する文字列値。`null` を指定すると、`MyPolicies` ポリシーセットが使用されます。
       * 削除するポリシーの名前を指定する文字列値。
@@ -525,18 +522,18 @@ Document Security API（web サービス）を使用してポリシーを削除�
    * デフォルトのコンストラクターを使用して `RightsManagementServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. ポリシーを削除します。
 
-   `RightsManagementServiceClient` オブジェクトの `deletePolicy` メソッドを呼び出し次の値を渡すことによって、ポリシーを削除します。
+   を呼び出してポリシーを削除する `RightsManagementServiceClient` オブジェクトの `deletePolicy` メソッドを使用して、次の値を渡します。
 
    * ポリシーが属するポリシーセット名を指定する文字列値。`null` を指定すると、`MyPolicies` ポリシーセットが使用されます。
    * 削除するポリシーの名前を指定する文字列値。
@@ -604,7 +601,7 @@ Document Security API（Java）を使用して、PDF ドキュメントにポリ
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -618,8 +615,8 @@ Document Security API（Java）を使用して、PDF ドキュメントにポリ
 
 1. PDF ドキュメントに既存のポリシーを適用します。
 
-   * `RightsManagementClient` オブジェクトの `getDocumentManager` メソッドを呼び出して `DocumentManager` オブジェクトを作成します。
-   * `DocumentManager` オブジェクトの `protectDocument` メソッドを呼び出し、次の値を渡すことによって、PDF ドキュメントにポリシーを適用します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `RightsManagementClient` オブジェクトの `getDocumentManager` メソッド。
+   * を呼び出して、PDFドキュメントにポリシーを適用する `DocumentManager` オブジェクトの `protectDocument` メソッドを使用して、次の値を渡します。
 
       * このポリシーが適用される PDF ドキュメントが格納される `com.adobe.idp.Document` オブジェクト。
       * ドキュメントの名前を指定する文字列値。
@@ -629,14 +626,13 @@ Document Security API（Java）を使用して、PDF ドキュメントにポリ
       * ドキュメントのパブリッシャーであるユーザーマネージャーユーザーの正規名の名前を表す文字列値。このパラメーター値はオプションで、`null` にできます（このパラメーターを null にする場合、前のパラメーター値は `null` である必要があります）。
       * MS Office テンプレートの選択に使用されるロケールを表す `com.adobe.livecycle.rightsmanagement.Locale` です。このパラメーター値はオプションで、PDF ドキュメントには使用されません。 PDF ドキュメントを保護するには、`null` を指定します。
 
-      `protectDocument` メソッドは、ポリシーで保護された PDF ドキュメントが格納される `RMSecureDocumentResult` オブジェクト。
-
+     `protectDocument` メソッドは、ポリシーで保護された PDF ドキュメントが格納される `RMSecureDocumentResult` オブジェクト。
 
 1. PDF ドキュメントを保存します。
 
-   * `RMSecureDocumentResult` オブジェクトの `getProtectedDoc` メソッドを呼び出して、ポリシーで保護された PDF ドキュメントを取得します。 このメソッドは `com.adobe.idp.Document` オブジェクトを返します。
+   * を呼び出す `RMSecureDocumentResult` オブジェクトの `getProtectedDoc` メソッドを使用して、ポリシーで保護されたPDFドキュメントを取得します。 このメソッドは `com.adobe.idp.Document` オブジェクトを返します。
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が PDF であることを確認します。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトの内容をファイルにコピーします（`getProtectedDoc` メソッドが返した `Document` オブジェクトを使用するようにしてください）。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します ( `Document` が返したオブジェクト `getProtectedDoc` メソッド )。
 
 **コード例**
 
@@ -668,26 +664,26 @@ Document Security API（web サービス）を使用して、PDF ドキュメン
    * デフォルトのコンストラクターを使用して `RightsManagementServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF ドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、ポリシーが適用される PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得してバイト配列を決定します。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出してバイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズを決定するには、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドを割り当てて、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. PDF ドキュメントに既存のポリシーを適用します。
 
-   `RightsManagementServiceClient` オブジェクトの `protectDocument` メソッドを呼び出して、次の値を渡して PDF ドキュメントにポリシーを適用します。
+   を呼び出して、PDFドキュメントにポリシーを適用する `RightsManagementServiceClient` オブジェクトの `protectDocument` メソッドを使用して、次の値を渡します。
 
    * このポリシーが適用される PDF ドキュメントが格納される `BLOB` オブジェクト。
    * ドキュメントの名前を指定する文字列値。
@@ -705,9 +701,9 @@ Document Security API（web サービス）を使用して、PDF ドキュメン
 1. PDF ドキュメントを保存します。
 
    * コンストラクターを呼び出し、ポリシーで保護された PDF ドキュメントのファイルの場所を表す文字列値を渡すことで `System.IO.FileStream` オブジェクトを作成します。
-   * `protectDocument` メソッドで返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
-   * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDF ファイルに書き込みます。
+   * `protectDocument` メソッドで返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **コード例**
 
@@ -768,7 +764,7 @@ Document Security API（Java）を使用して、ポリシーで保護された 
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -782,13 +778,13 @@ Document Security API（Java）を使用して、ポリシーで保護された 
 
 1. PDF ドキュメントからポリシーを削除します。
 
-   * `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッドを呼び出して `DocumentManager` オブジェクトを作成します。
-   * `DocumentManager` オブジェクトの `removeSecurity` メソッドを呼び出し、ポリシーで保護された PDF ドキュメントが格納された `com.adobe.idp.Document` オブジェクトを渡すことにより、PDF ドキュメントからポリシーを削除します。このメソッドは、保護されていない PDF ドキュメントが格納された `com.adobe.idp.Document` オブジェクトを返します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッド。
+   * を呼び出して、PDFドキュメントからポリシーを削除する `DocumentManager` オブジェクトの `removeSecurity` メソッドおよび `com.adobe.idp.Document` ポリシーで保護されたPDF・ドキュメントを含むオブジェクト。 このメソッドは、保護されていない PDF ドキュメントが格納された `com.adobe.idp.Document` オブジェクトを返します。
 
 1. 保護されていない PDF ドキュメントを保存します。
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が PDF であることを確認します。
-   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトの内容をファイルにコピーします（`removeSecurity` メソッドが返した `Document` オブジェクトを使用するようにしてください）。
+   * を呼び出す `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します ( `Document` が返したオブジェクト `removeSecurity` メソッド )。
 
 **コード例**
 
@@ -813,31 +809,31 @@ Document Security API（web サービス）を使用して、ポリシーで保�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DocumentSecurityServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `DocumentSecurityServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `DocumentSecurityServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. ポリシーで保護された PDF ドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、ポリシーの削除対象となる、ポリシーで保護された PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` フィールドを割り当てて、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. PDF ドキュメントからポリシーを削除します。
 
-   PDF ドキュメントからポリシーを削除するには、`DocumentSecurityServiceClient` オブジェクトの `removePolicySecurity` メソッドを呼び出し、ポリシーで保護された PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このメソッドは、保護されていない PDF ドキュメントを含む `BLOB` オブジェクトを返します。
+   を呼び出して、PDFドキュメントからポリシーを削除します。 `DocumentSecurityServiceClient` オブジェクトの `removePolicySecurity` メソッドおよび `BLOB` ポリシーで保護されたPDF・ドキュメントを含むオブジェクト。 このメソッドは、保護されていない PDF ドキュメントが格納された `BLOB` オブジェクトを返します。
 
 1. 保護されていない PDF ドキュメントを保存します。
 
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、保護されていない PDF ドキュメントのファイルの場所を表す文字列の値を渡します。
-   * `removePolicySecurity` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得してバイト配列を入力します。
+   * `removePolicySecurity` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
    * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことにより、`System.IO.BinaryWriter` オブジェクトを作成します。
 
 **コード例**
@@ -910,7 +906,7 @@ Document Security API（Java）を使用して、ポリシーで保護された 
 
 1. プロジェクトファイルを含める
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトの作成
 
@@ -924,12 +920,12 @@ Document Security API（Java）を使用して、ポリシーで保護された 
 
 1. ポリシーで保護されたドキュメントの取り消し
 
-   * `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッドを呼び出すことによって `DocumentManager` オブジェクトを作成します。
-   * `DocumentManager` オブジェクトの `getLicenseId` メソッドを呼び出して、ポリシーで保護されたドキュメントのライセンス識別子の値を取得します。ポリシーで保護されたドキュメントを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、ライセンス識別子の値を表す文字列値を返します。
-   * `DocumentSecurityClient` オブジェクトの `getLicenseManager` メソッドを呼び出して `LicenseManager` オブジェクトを作成します。
-   * `LicenseManager` オブジェクトの `revokeLicense` メソッドを呼び出し、次の値を渡して、ポリシーで保護されたドキュメントを取り消します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッド。
+   * を呼び出して、ポリシーで保護されたドキュメントのライセンス識別子の値を取得します。 `DocumentManager` オブジェクトの `getLicenseId` メソッド。 ポリシーで保護されたドキュメントを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、ライセンス識別子の値を表す文字列値を返します。
+   * の作成 `LicenseManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getLicenseManager` メソッド。
+   * を呼び出して、ポリシーで保護されたドキュメントを失効させます。 `LicenseManager` オブジェクトの `revokeLicense` メソッドを使用して、次の値を渡します。
 
-      * ポリシーで保護されたドキュメントのライセンス識別子の値を指定する文字列値（`DocumentManager` オブジェクトの `getLicenseId` メソッドの戻り値を指定します）。
+      * ポリシーで保護されたドキュメントのライセンス識別子の値を指定する string 値 ( `DocumentManager` オブジェクトの `getLicenseId` メソッド )。
       * ドキュメントを取り消す理由を指定する `License` インターフェイスの静的データメンバーです。例えば、`License.DOCUMENT_REVISED` を指定できます。
       * 改訂済みドキュメントの場所を指定する `java.net.URL` 値です。 ユーザーを別の URL にリダイレクトしないようにする場合は、`null` を渡します。
 
@@ -956,29 +952,29 @@ Document Security API（web サービス）を使用して、ポリシーで保�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DocumentSecurityServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `DocumentSecurityServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `DocumentSecurityServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. ポリシーで保護された PDF ドキュメントの取得
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、失効したポリシーで保護された PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、失効させるポリシーで保護された PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    *  `MTOM` フィールドを割り当てて、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. ポリシーで保護されたドキュメントを失効させる
 
-   * `DocumentSecurityServiceClient` オブジェクトの `getLicenseID` メソッドを呼び出して、ポリシーで保護されたドキュメントを表す `BLOB` オブジェクトを渡して、ポリシーで保護されたドキュメントのライセンス識別子の値を取得します。このメソッドは、ライセンス識別子を表す文字列値を返します。
-   * `DocumentSecurityServiceClient` オブジェクトの `revokeLicense` メソッドを呼び出して、次の値を渡すことにより、ポリシーで保護されたドキュメントを失効させます。
+   * を呼び出して、ポリシーで保護されたドキュメントのライセンス識別子の値を取得します。 `DocumentSecurityServiceClient` オブジェクトの `getLicenseID` メソッドおよび `BLOB` ポリシーで保護されたドキュメントを表すオブジェクト。 このメソッドは、ライセンス識別子を表す文字列値を返します。
+   * を呼び出して、ポリシーで保護されたドキュメントを失効させます。 `DocumentSecurityServiceClient` オブジェクトの `revokeLicense` メソッドを使用して、次の値を渡します。
 
-      * ポリシーで保護されたドキュメントのライセンス識別子の値を指定する文字列値（`DocumentSecurityServiceService` オブジェクトの `getLicenseId` メソッド）。
+      * ポリシーで保護されたドキュメントのライセンス識別子の値を指定する string 値 ( `DocumentSecurityServiceService` オブジェクトの `getLicenseId` メソッド )。
       * ドキュメントを失効させる理由を指定する `Reason` enum の静的データメンバー。例えば、`Reason.DOCUMENT_REVISED` を指定できます。
       * 改訂されたドキュメントの URL の場所を指定する `string` 値。ユーザーを別の URL にリダイレクトしたくない場合、`null` を渡すことができます。
 
@@ -1046,7 +1042,7 @@ Document Security API（Java）を使用して、失効したドキュメント�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -1057,13 +1053,13 @@ Document Security API（Java）を使用して、失効したドキュメント�
 
    * コンストラクターを使用し、PDF ドキュメントの場所を指定する文字列値を渡すことによって、失効した PDF ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
-   * `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッドを呼び出すことによって `DocumentManager` オブジェクトを作成します。
-   * `DocumentManager` オブジェクトの `getLicenseId` メソッドを呼び出し、失効したドキュメントを表す `com.adobe.idp.Document` オブジェクトを渡すことによって、失効したドキュメントのライセンス識別子の値を取得します。このメソッドは、ライセンス識別子を表す文字列値を返します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッド。
+   * を呼び出して、取り消されたドキュメントのライセンス識別子の値を取得します。 `DocumentManager` オブジェクトの `getLicenseId` メソッドおよび `com.adobe.idp.Document` 取り消されたドキュメントを表すオブジェクト。 このメソッドは、ライセンス識別子を表す文字列値を返します。
 
 1. 失効した PDF ドキュメントへのアクセス権を回復します。
 
-   * `DocumentSecurityClient` オブジェクトの `getLicenseManager` メソッドを呼び出すことによって `LicenseManager` オブジェクトを作成します。
-   * `LicenseManager` オブジェクトの `unrevokeLicense` メソッドを呼び出し、失効したドキュメントのライセンス識別子の値を渡すことによって、失効した PDF ドキュメントへのアクセス権限を復元します。
+   * の作成 `LicenseManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getLicenseManager` メソッド。
+   * を呼び出して、取り消されたPDFドキュメントへのアクセスを回復する `LicenseManager` オブジェクトの `unrevokeLicense` 取り消されたドキュメントのメソッドおよびライセンス識別子の値を渡す方法。
 
 **コード例**
 
@@ -1088,27 +1084,27 @@ Document Security API（web サービス）を使用して、失効したドキ�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DocumentSecurityServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `DocumentSecurityServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `DocumentSecurityServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
 1. 失効した PDF ドキュメントのライセンス識別子を取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、アクセス権が回復された失効済み PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、失効した PDF ドキュメントファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` フィールドを割り当てて、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. 失効した PDF ドキュメントへのアクセス権を回復します。
 
-   * `DocumentSecurityServiceClient` オブジェクトの `getLicenseID` メソッドを呼び出し、失効したドキュメントを表す `BLOB` オブジェクトを渡して、失効したドキュメントのライセンス識別子の値を取得します。このメソッドは、ライセンス識別子を表す文字列値を返します。
-   * `DocumentSecurityServiceClient` オブジェクトの `unrevokeLicense` メソッドを呼び出して、失効した PDF ドキュメントのライセンス識別子の値を指定する文字列値を渡すことにより、失効した PDF ドキュメントへのアクセスを回復します（`DocumentSecurityServiceClient` オブジェクトの `getLicenseId` メソッドの値を渡します）。
+   * を呼び出して、取り消されたドキュメントのライセンス識別子の値を取得します。 `DocumentSecurityServiceClient` オブジェクトの `getLicenseID` メソッドおよび `BLOB` 取り消されたドキュメントを表すオブジェクト。 このメソッドは、ライセンス識別子を表す文字列値を返します。
+   * を呼び出して、取り消されたPDFドキュメントへのアクセスを回復する `DocumentSecurityServiceClient` オブジェクトの `unrevokeLicense` メソッドを使用し、取り消されたPDFドキュメントのライセンス識別子の値を指定する string 値を渡す ( `DocumentSecurityServiceClient` オブジェクトの `getLicenseId` メソッド )。
 
 **コード例**
 
@@ -1178,7 +1174,7 @@ Document Security Service API（Java）を使用して、ポリシーで保護�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+   Java プロジェクトのクラスパスに、 adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。 これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -1192,12 +1188,12 @@ Document Security Service API（Java）を使用して、ポリシーで保護�
 
 1. ドキュメントを検査します。
 
-   * `RightsManagementClient` オブジェクトの `getDocumentManager` メソッドを呼び出して `DocumentManager` オブジェクトを作成します。
-   * `LicenseManager` の `inspectDocument` メソッドを呼び出して、ポリシーで保護されたドキュメントを検査します。ポリシーで保護された PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `RightsManagementClient` オブジェクトの `getDocumentManager` メソッド。
+   * Inspectを呼び出すことで、ポリシーで保護されたドキュメントを `LicenseManager` オブジェクトの `inspectDocument` メソッド。 ポリシーで保護された PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
 
 1. ポリシーで保護されたドキュメントに関する情報を取得します。
 
-   ポリシーで保護されたドキュメントに関する情報を取得するには、`RMInspectResult` オブジェクトに属する適切なメソッドを呼び出します。例えば、ポリシー名を取得するには、`RMInspectResult` オブジェクトの `getPolicyName` メソッドを呼びします。
+   ポリシーで保護されたドキュメントに関する情報を取得するには、`RMInspectResult` オブジェクトに属する適切なメソッドを呼び出します。例えば、ポリシー名を取得するには、 `RMInspectResult` オブジェクトの `getPolicyName` メソッド。
 
 **コード例**
 
@@ -1222,30 +1218,30 @@ Document Security Service API（web サービス）を使用して、ポリシ�
    * デフォルトのコンストラクターを使用して `RightsManagementServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 検査するポリシーで保護されたドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、検査する PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出して、`System.IO.FileStream` オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトに入力します。
 
 1. ドキュメントを検査します。
 
-   `RightsManagementServiceClient` オブジェクトの `inspectDocument` メソッドを呼び出して、ポリシーで保護されたドキュメントを検査します。ポリシーで保護された PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このメソッドは、ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
+   Inspectを呼び出すことで、ポリシーで保護されたドキュメントを `RightsManagementServiceClient` オブジェクトの `inspectDocument` メソッド。 ポリシーで保護された PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このメソッドは、ポリシーで保護されたドキュメントに関する情報を含む `RMInspectResult` オブジェクトを返します。
 
 1. ポリシーで保護されたドキュメントに関する情報を取得します。
 
-   ポリシーで保護されたドキュメントに関する情報を取得するには、`RMInspectResult` オブジェクトに属する適切なフィールドの値を取得します。例えば、ポリシー名を取得するには、`RMInspectResult` オブジェクトの `policyName` フィールドの値を取得します。
+   ポリシーで保護されたドキュメントに関する情報を取得するには、`RMInspectResult` オブジェクトに属する適切なフィールドの値を取得します。例えば、ポリシー名を取得するには、 `RMInspectResult` オブジェクトの `policyName` フィールドに入力します。
 
 **コード例**
 
@@ -1262,7 +1258,7 @@ Document Security サービスを使用するコード例については、次�
 
 ## 透かしの作成 {#creating-watermarks}
 
-透かしを使用すると、ドキュメントを一意に識別し、著作権侵害を制御することにより、ドキュメントのセキュリティを確保できます。例えば、機密を示す透かしを作成して、ドキュメントのすべてのページに配置できます。透かしを作成した後は、その透かしをポリシーの一部として含めることができます。つまり、新しく作成した透かしにポリシーの透かし属性を設定できます。透かしを含むポリシーがドキュメントに適用されると、その透かしはポリシーで保護されたドキュメントに表示されます。
+透かしを使用すると、ドキュメントを一意に識別し、著作権侵害を制御することにより、ドキュメントのセキュリティを確保できます。例えば、機密を示す透かしを作成して、ドキュメントのすべてのページに配置できます。透かしを作成した後は、その透かしをポリシーの一部として含めることができます。つまり、新しく作成した透かしにポリシーの透かし属性を設定できます。 透かしを含むポリシーがドキュメントに適用されると、その透かしはポリシーで保護されたドキュメントに表示されます。
 
 >[!NOTE]
 >
@@ -1346,12 +1342,12 @@ Document Security サービスの操作をプログラムで実行するには�
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:HORIZ_ALIGN</code></p></td>
-   <td><p>透かしの水平方向の位置揃えを指定します。 デフォルト値は中央です。</p></td>
+   <td><p>透かしの水平方向の位置を指定します。 デフォルト値は中央です。</p></td>
    <td><p>左、中央または右</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:VERT_ALIGN</code></p></td>
-   <td><p>透かしの垂直方向の位置揃えを指定します。デフォルト値は中央です。</p></td>
+   <td><p>透かしの垂直方向の位置を指定します。 デフォルト値は中央です。</p></td>
    <td><p>上、中央、下</p></td>
   </tr>
   <tr>
@@ -1399,7 +1395,7 @@ Document Security API（Java）を使用して透かしを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   `adobe-rightsmanagement-client.jar` などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   クライアント JAR ファイルを含める ( 例： `adobe-rightsmanagement-client.jar`Java プロジェクトのクラスパスに含まれます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -1408,18 +1404,18 @@ Document Security API（Java）を使用して透かしを作成します。
 
 1. 透かし属性を設定
 
-   * `InfomodelObjectFactory` オブジェクトの静的 `createWatermark` メソッドを呼び出すことによって `Watermark` オブジェクトを作成します。このメソッドは `Watermark` オブジェクトを返します。
-   * `Watermark` オブジェクトの `setName` メソッドを呼び出し、ポリシー名を指定する文字列値を渡すことにより、透かしの名前属性を設定します。
-   * `Watermark` オブジェクトの `setBackground` メソッドを呼び出して `true` を渡すことにより、透かしの背景属性を設定します。この属性を設定すると、透かしがドキュメントの背景に表示されます。
-   * `Watermark` オブジェクトの `setCustomText` メソッドを呼び出し、透かしのテキストを表す文字列値を渡すことにより、透かしのカスタムテキスト属性を設定します。
-   * `Watermark` オブジェクトの `setOpacity` メソッドを呼び出し、不透明度レベルを指定する整数値を渡すことにより、透かしの不透明度属性を設定します。100 の値は透かしが完全に不透明であることを示し、0 の値は透かしが完全に透明であることを示します。
+   * の作成 `Watermark` を呼び出すことによって、オブジェクトを `InfomodelObjectFactory` オブジェクトの静的 `createWatermark` メソッド。 このメソッドは、`Watermark` オブジェクトを返します。
+   * を呼び出して、透かしの名前属性を設定します。 `Watermark` オブジェクトの `setName` メソッドを使用し、ポリシー名を指定する string 値を渡す。
+   * を呼び出して、透かしの背景属性を設定します。 `Watermark` オブジェクトの `setBackground` メソッドとパス `true`. この属性を設定すると、透かしがドキュメントの背景に表示されます。
+   * を呼び出して、透かしのカスタムテキスト属性を設定する `Watermark` オブジェクトの `setCustomText` メソッドを使用して透かしのテキストを表す string 値を渡すことができます。
+   * 透かしの不透明度アトリビュートを設定するには、 `Watermark` オブジェクトの `setOpacity` メソッドを使用し、不透明度レベルを指定する整数値を渡す。 100 の値は透かしが完全に不透明であることを示し、0 の値は透かしが完全に透明であることを示します。
 
 1. 透かしを登録します。
 
-   * `RightsManagementClient` オブジェクトの `getWatermarkManager` メソッドを呼び出すことによって `WatermarkManager` オブジェクトを作成します。このメソッドは `WatermarkManager` オブジェクトを返します。
-   * `WatermarkManager` オブジェクトの `registerWatermark` メソッドを呼び出し、透かしを表す `Watermark` オブジェクトを渡して、透かしを登録します。このメソッドは、透かしの識別値を表す文字列値を返します。
+   * の作成 `WatermarkManager` を呼び出すことによって、オブジェクトを `RightsManagementClient` オブジェクトの `getWatermarkManager` メソッド。 このメソッドは、`WatermarkManager` オブジェクトを返します。
+   * を呼び出して透かしを登録します。 `WatermarkManager` オブジェクトの `registerWatermark` メソッドおよび `Watermark` 登録する透かしを表すオブジェクト。 このメソッドは、透かしの識別値を表す string 値を返します。
 
-**コードの例**
+**コード例**
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
@@ -1442,29 +1438,29 @@ Document Security API（web サービス）を使用して透かしを作成し�
    * デフォルトのコンストラクターを使用して `RightsManagementServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 透かしの属性を設定します。
 
    * `WatermarkSpec` コンストラクターを呼び出して `WatermarkSpec` オブジェクトを作成します。
-   * `WatermarkSpec` オブジェクトの `name` データメンバーに文字列値を割り当てて、透かしの名前を設定します。
-   * `WatermarkSpec` オブジェクトの `id` データメンバーに文字列値を割り当てて、透かしの `id` 属性を設定します。
+   * 透かしの名前を設定するには、 `WatermarkSpec` オブジェクトの `name` データメンバー。
+   * 透かしの `id` 属性を設定するために、 `WatermarkSpec` オブジェクトの `id` データメンバー。
    * 設定する透かしプロパティごとに、個別の `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
-   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` データメンバー（たとえば、`WaterBackCmd:OPACITY)`）に値を割り当てて、キー値を設定します。
-   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` データメンバー（たとえば、`.25`）に値を割り当てて、値を設定します。
-   * `MyArrayOf_xsd_anyType` オブジェクトを作成します。各 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトに対して、`MyArrayOf_xsd_anyType` オブジェクトの `Add` メソッドを呼び出します。`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを渡します。
-   * `MyArrayOf_xsd_anyType` オブジェクトを `WatermarkSpec` オブジェクトの `values` データメンバーに割り当てます。
+   * キーの値を設定するには、 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` データメンバー ( 例： `WaterBackCmd:OPACITY)`.
+   * に値を割り当てて値を設定 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` データメンバー ( 例： `.25`) をクリックします。
+   * `MyArrayOf_xsd_anyType` オブジェクトを作成します。次ごとに `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクト、を呼び出す `MyArrayOf_xsd_anyType` オブジェクトの `Add` メソッド。 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを渡します。
+   * 割り当て `MyArrayOf_xsd_anyType` オブジェクトを `WatermarkSpec` オブジェクトの `values` データメンバー。
 
 1. 透かしを登録します。
 
-   `RightsManagementServiceClient` オブジェクトの `registerWatermark` メソッドを呼び出し、透かしを表す `WatermarkSpec` オブジェクトを渡して、透かしを登録します。
+   を呼び出して透かしを登録します。 `RightsManagementServiceClient` オブジェクトの `registerWatermark` メソッドおよび `WatermarkSpec` 登録する透かしを表すオブジェクト。
 
 **コード例**
 
@@ -1529,7 +1525,7 @@ Document Security サービスの操作をプログラムで実行するには�
 
 **透かしの更新**
 
-透かしの属性を変更したら、透かしを更新する必要があります。
+透かしの属性を変更した後、透かしを更新する必要があります。
 
 **関連トピック**
 
@@ -1545,7 +1541,7 @@ Document Security API（Java）を使用して透かしを変更します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、 adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -1554,11 +1550,11 @@ Document Security API（Java）を使用して透かしを変更します。
 
 1. 変更する透かしを取得します。
 
-   `DocumentSecurityClient` オブジェクトの `getWatermarkManager` メソッドを呼び出すことにより、`WatermarkManager` オブジェクトを作成し、透かしの名前を指定する文字列値を渡します。このメソッドは、変更する透かしを表す `Watermark` オブジェクトを返します。
+   の作成 `WatermarkManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getWatermarkManager` メソッドを使用して透かしの名前を指定する string 値を渡します。 このメソッドは、変更する透かしを表す `Watermark` オブジェクトを返します。
 
 1. 透かしの属性を設定します。
 
-   `Watermark` オブジェクトの `setOpacity` メソッドを呼び出し、不透明度を指定する整数値を渡すことにより、透かしの不透明度属性を設定します。100 の値は透かしが完全に不透明であることを示し、0 の値は透かしが完全に透明であることを示します。
+   透かしの不透明度アトリビュートを設定するには、 `Watermark` オブジェクトの `setOpacity` メソッドを使用し、不透明度レベルを指定する整数値を渡す。 100 の値は透かしが完全に不透明であることを示し、0 の値は透かしが完全に透明であることを示します。
 
    >[!NOTE]
    >
@@ -1566,7 +1562,7 @@ Document Security API（Java）を使用して透かしを変更します。
 
 1. 透かしを更新します。
 
-   * `WatermarkManager` オブジェクトの `updateWatermark` メソッドを呼び出すことにより透かしを更新し、属性が変更された `Watermark` オブジェクトを渡します。
+   * を呼び出して透かしを更新する `WatermarkManager` オブジェクトの `updateWatermark` メソッドを使用して、 `Watermark` 属性が変更されたオブジェクト。
 
 **コード例**
 
@@ -1589,30 +1585,30 @@ Document Security API（web サービス）を使用して透かしを変更し�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `DocumentSecurityServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `DocumentSecurityServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
 1. 変更する透かしを取得します。
 
-   `DocumentSecurityServiceClient` オブジェクトの `getWatermarkByName` メソッドを呼び出して、変更する透かしを取得します。透かしの名前を指定する文字列値を渡します。このメソッドは、変更する透かしを表す `WatermarkSpec` オブジェクトを返します。
+   を呼び出して、変更する透かしを取得します。 `DocumentSecurityServiceClient` オブジェクトの `getWatermarkByName` メソッド。 透かしの名前を指定する文字列値を渡します。このメソッドは、変更する透かしを表す `WatermarkSpec` オブジェクトを返します。
 
 1. 透かしの属性を設定します。
 
    * 更新する透かしプロパティごとに、個別に `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
-   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` データメンバーに値を割り当てることによって、キーの値を設定します（例：`WaterBackCmd:OPACITY)`。
-   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` データメンバー（たとえば、`.50`）に値を割り当てて、値を設定します。
-   * `MyArrayOf_xsd_anyType` オブジェクトを作成します。各 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトに対して、`MyArrayOf_xsd_anyType` オブジェクトの `Add` メソッドを呼び出します。`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを渡します。
-   * `MyArrayOf_xsd_anyType` オブジェクトを `WatermarkSpec` オブジェクトの `values` データメンバーに割り当てます。
+   * キーの値を設定するには、 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` データメンバー ( 例： `WaterBackCmd:OPACITY)`.
+   * に値を割り当てて値を設定 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` データメンバー ( 例： `.50`) をクリックします。
+   * `MyArrayOf_xsd_anyType` オブジェクトを作成します。次ごとに `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクト、を呼び出す `MyArrayOf_xsd_anyType` オブジェクトの `Add` メソッド。 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを渡します。
+   * 割り当て `MyArrayOf_xsd_anyType` オブジェクトを `WatermarkSpec` オブジェクトの `values` データメンバー。
 
 1. 透かしを更新します。
 
-   `DocumentSecurityServiceClient` オブジェクトの `updateWatermark` メソッドを呼び出し、変更する透かしを表す `WatermarkSpec` オブジェクトを渡すことによって、透かしを更新します。
+   を呼び出して透かしを更新する `DocumentSecurityServiceClient` オブジェクトの `updateWatermark` メソッドおよび `WatermarkSpec` 変更する透かしを表すオブジェクト。
 
 **コード例**
 
@@ -1674,7 +1670,7 @@ Rights Management API（Java）を使用してイベントを検索します。
 
 1. プロジェクトファイルを含める
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Rights Management クライアント API オブジェクトの作成
 
@@ -1682,9 +1678,9 @@ Rights Management API（Java）を使用してイベントを検索します。
 
 1. 検索するイベントの指定
 
-   * `DocumentSecurityClient` オブジェクトの `getEventManager` メソッドを呼び出すことによって `EventManager` オブジェクトを作成します。このメソッドは `EventManager` オブジェクトを返します。
+   * の作成 `EventManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getEventManager` メソッド。 このメソッドは `EventManager` オブジェクトを返します。
    * コンストラクターを呼び出して `EventSearchFilter` オブジェクトを作成します。
-   * `EventSearchFilter` オブジェクトの `setEventCode` メソッドを呼び出し、検索するイベントを表す `EventManager` クラスに属する静的データメンバーを渡すことにより、検索するイベントを指定します。例えば、ポリシー作成イベントを検索するには、`EventManager.POLICY_CREATE_EVENT` を渡します。
+   * を呼び出して検索するイベントを指定します。 `EventSearchFilter` オブジェクトの `setEventCode` メソッドを使用して、 `EventManager` 検索するイベントを表すクラス。 例えば、ポリシー作成イベントを検索するには、`EventManager.POLICY_CREATE_EVENT` を渡します。
 
    >[!NOTE]
    >
@@ -1692,7 +1688,7 @@ Rights Management API（Java）を使用してイベントを検索します。
 
 1. イベントの検索
 
-   `EventManager` オブジェクトの `searchForEvents` メソッドを呼び出し、イベント検索条件を定義する `EventSearchFilter` オブジェクトを渡すことにより、イベントを検索します。このメソッドは、 `Event` オブジェクトの配列を返します。
+   を呼び出してイベントを検索する `EventManager` オブジェクトの `searchForEvents` メソッドおよび `EventSearchFilter` イベントの検索条件を定義するオブジェクト。 このメソッドは、 `Event` オブジェクトの配列を返します。
 
 **コード例**
 
@@ -1717,23 +1713,23 @@ Rights Management API（web サービス）を使用してイベントを検索�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DocumentSecurityServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `DocumentSecurityServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `DocumentSecurityServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 検索するイベントの指定
 
    * コンストラクターを使用して `EventSpec` オブジェクトを作成します。
-   * イベントが発生した期間の開始時点を指定するには、`EventSpec` オブジェクトの `firstTime.date` データメンバーに、イベントが発生した日付範囲の開始日を表す `DataTime` インスタンスを設定します。
-   * `EventSpec` オブジェクトの `firstTime.dateSpecified` データメンバーに値 `true` を割り当てます。
-   * イベントが発生した期間の終了時点を指定するには、`EventSpec` オブジェクトの `lastTime.date` データメンバーに、イベントが発生した日付範囲の終了日を表す `DataTime` インスタンスを設定します。
-   * `EventSpec` オブジェクトの `lastTime.dateSpecified` データメンバーに 値 `true` を割り当てます。
-   * `EventSpec` オブジェクトの `eventCode` データメンバーに文字列値を割り当てて、検索するイベントを設定します。次の表に、このプロパティに割り当てることができる数値を示します。
+   * イベントが発生した期間の開始を指定するには、 `EventSpec` オブジェクトの `firstTime.date` 次を持つデータメンバー `DataTime` イベントが発生した日付範囲の開始を表すインスタンス。
+   * 値を割り当て `true` から `EventSpec` オブジェクトの `firstTime.dateSpecified` データメンバー。
+   * イベントが発生した期間の終わりを指定するには、 `EventSpec` オブジェクトの `lastTime.date` 次を持つデータメンバー `DataTime` イベントが発生した日付範囲の終わりを表すインスタンス。
+   * 値を割り当て `true` から `EventSpec` オブジェクトの `lastTime.dateSpecified` データメンバー。
+   * 検索するイベントを設定するには、 `EventSpec` オブジェクトの `eventCode` データメンバー。 次の表に、このプロパティに割り当てることができる数値を示します。
 
    <table>
     <thead>
@@ -1936,7 +1932,7 @@ Rights Management API（web サービス）を使用してイベントを検索�
 
 1. イベントの検索
 
-   `DocumentSecurityServiceClient` オブジェクトの `searchForEvents` メソッドを呼び出して、検索対象のイベントと検索の最大件数を表す `EventSpec` オブジェクトを渡すことにより、イベントを検索します。このメソッドは、`MyArrayOf_xsd_anyType` のコレクション（個々の要素はそれぞれ 1 つの `AuditSpec` インスタンスに相当します）を返します。`AuditSpec` インスタンスを使用して、発生した時刻など、イベントに関する情報を取得できます。`AuditSpec` インスタンスには、この情報を指定する `timestamp` データメンバーが含まれます。
+   を呼び出してイベントを検索する `DocumentSecurityServiceClient` オブジェクトの `searchForEvents` メソッドおよび `EventSpec` 検索するイベントと結果の最大数を表すオブジェクト。 このメソッドは、`MyArrayOf_xsd_anyType` のコレクション（個々の要素はそれぞれ 1 つの `AuditSpec` インスタンスに相当します）を返します。`AuditSpec` インスタンスを使用して、発生した時刻など、イベントに関する情報を取得できます。`AuditSpec` インスタンスには、この情報を指定する `timestamp` データメンバーが含まれます。
 
 **コード例**
 
@@ -2005,7 +2001,7 @@ Document Security API（Java）を使用して、Word ドキュメントにポ�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトを作成します。
 
@@ -2019,8 +2015,8 @@ Document Security API（Java）を使用して、Word ドキュメントにポ�
 
 1. Word ドキュメントに既存のポリシーを適用します。
 
-   * `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッドを呼び出して、`DocumentManager` オブジェクトを作成します。
-   * `DocumentManager` オブジェクトの `protectDocument` メソッドを呼び出して次の値を渡すことによって、Word ドキュメントにポリシーを適用します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `DocumentSecurityClient` オブジェクトの `getDocumentManager` メソッド。
+   * を呼び出して、Word ドキュメントにポリシーを適用する `DocumentManager` オブジェクトの `protectDocument` メソッドを使用して、次の値を渡します。
 
       * ポリシーが適用される Word ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
       * ドキュメントの名前を指定する文字列値。
@@ -2030,14 +2026,13 @@ Document Security API（Java）を使用して、Word ドキュメントにポ�
       * ドキュメントのパブリッシャーであるユーザーマネージャーユーザーの正規名の名前を表す文字列値。このパラメーター値はオプションであり、 `null` にすることができます（このパラメーターが `null` の場合、前のパラメーター値も `null` である必要があります）。
       * MS Office テンプレートの選択に使用されるロケールを表す `com.adobe.livecycle.rightsmanagement.Locale`。このパラメーター値はオプションであり、`null` を指定できます。
 
-      `protectDocument` メソッドは、ポリシーで保護された Word ドキュメントを含む `RMSecureDocumentResult` オブジェクトを返します。
-
+     `protectDocument` メソッドは、ポリシーで保護された Word ドキュメントを含む `RMSecureDocumentResult` オブジェクトを返します。
 
 1. Word ドキュメントを保存します。
 
-   * `RMSecureDocumentResult` オブジェクトの `getProtectedDoc` メソッドを呼び出して、ポリシーで保護された Word ドキュメントを取得します。このメソッドは `com.adobe.idp.Document` オブジェクトを返します。
+   * を呼び出す `RMSecureDocumentResult` オブジェクトの `getProtectedDoc` メソッドを使用して、ポリシーで保護された Word ドキュメントを取得します。 このメソッドは `com.adobe.idp.Document` オブジェクトを返します。
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が DOC であることを確認します。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトの内容をファイルにコピーします（`getProtectedDoc` メソッドが返した `Document` オブジェクトを使用してください）。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します ( `Document` が返したオブジェクト `getProtectedDoc` メソッド )。
 
 **コード例**
 
@@ -2062,26 +2057,26 @@ Document Security API（web サービス）を使用して、Word ドキュメ�
    * デフォルトのコンストラクターを使用して `DocumentSecurityServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DocumentSecurityServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DocumentSecurityService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `DocumentSecurityServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DocumentSecurityServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `DocumentSecurityServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
 1. Word ドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、ポリシーが適用される Word ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、Word ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得してバイト配列を決定します。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出してバイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズを決定するには、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
 1. Word ドキュメントに既存のポリシーを適用します。
 
-   `DocumentSecurityServiceClient` オブジェクトの `protectDocument` メソッドを呼び出して、次の値を渡すことにより、Word ドキュメントにポリシーを適用します。
+   を呼び出して、Word ドキュメントにポリシーを適用する `DocumentSecurityServiceClient` オブジェクトの `protectDocument` メソッドを使用して、次の値を渡します。
 
    * ポリシーが適用される Word ドキュメントを含む `BLOB` オブジェクト。
    * ドキュメントの名前を指定する文字列値。
@@ -2099,9 +2094,9 @@ Document Security API（web サービス）を使用して、Word ドキュメ�
 1. Word ドキュメントを保存します。
 
    * コンストラクターを呼び出し、ポリシーで保護された Word ドキュメントファイルの場所を表す 文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `protectDocument` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
+   * `protectDocument` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を Word ファイルに書き込みます。
+   * バイト配列の内容を Word ファイルに書き込むには、 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **コード例**
 
@@ -2161,7 +2156,7 @@ Document Security API（Java） を使用して、ポリシーで保護された
 
 1. プロジェクトファイルを含める
 
-   adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-rightsmanagement-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Document Security Client API オブジェクトの作成
 
@@ -2175,13 +2170,13 @@ Document Security API（Java） を使用して、ポリシーで保護された
 
 1. Word ドキュメントからポリシーを削除する
 
-   * `RightsManagementClient` オブジェクトの `getDocumentManager` メソッドを呼び出すことによって、`DocumentManager` オブジェクトを作成します。
-   * `DocumentManager` オブジェクトの `removeSecurity` メソッドを呼び出し、ポリシーで保護された Word ドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡すことにより、Word ドキュメントからポリシーを削除します。このメソッドは、セキュリティで保護されていない Word ドキュメントを含む `com.adobe.idp.Document` オブジェクトを返します。
+   * の作成 `DocumentManager` を呼び出すことによって、オブジェクトを `RightsManagementClient` オブジェクトの `getDocumentManager` メソッド。
+   * を呼び出して、Word ドキュメントからポリシーを削除する `DocumentManager` オブジェクトの `removeSecurity` メソッドおよび `com.adobe.idp.Document` ポリシーで保護された Word ドキュメントを含むオブジェクト。 このメソッドは、セキュリティで保護されていない Word ドキュメントを含む `com.adobe.idp.Document` オブジェクトを返します。
 
 1. 保護されていない Word ドキュメントを保存する
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が DOC であることを確認します。
-   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトの内容をファイルにコピーします（`removeSecurity` メソッドが返した `Document` オブジェクトを使用してください）。
+   * を呼び出す `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します ( `Document` が返したオブジェクト `removeSecurity` メソッド )。
 
 **コード例**
 
@@ -2206,31 +2201,31 @@ Document Security API（web サービス）を使用して、ポリシーで保�
    * デフォルトのコンストラクターを使用して `RightsManagementServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `RightsManagementServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/RightsManagementService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `RightsManagementServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `RightsManagementServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `RightsManagementServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. ポリシーで保護された Word ドキュメントの取得
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、ポリシーの削除対象となる、ポリシーで保護された Word ドキュメントを保存するために使用されます。
    * コンストラクターを呼び出し、Word ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して `System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` フィールドを割り当てて `BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. Word ドキュメントからポリシーを削除する
 
-   `RightsManagementServiceClient` オブジェクトの `removePolicySecurity` メソッドを呼び出して、ポリシーで保護された Word ドキュメントを含む `BLOB` オブジェクトを渡すことにより、Word ドキュメントからポリシーを削除します。このメソッドは、 保護されていない Word ドキュメントを含む `BLOB` オブジェクトを返します。
+   を呼び出して、Word ドキュメントからポリシーを削除します。 `RightsManagementServiceClient` オブジェクトの `removePolicySecurity` メソッドおよび `BLOB` ポリシーで保護された Word ドキュメントを含むオブジェクト。 このメソッドは、セキュリティで保護されていない Word ドキュメントを含む `BLOB` オブジェクトを返します。
 
 1. 保護されていない Word ドキュメントを保存する
 
    * コンストラクターを呼び出し、保護されていない Word ドキュメントを含むファイルの場所を表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `removePolicySecurity` メソッドで返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得してバイト配列を入力します。
+   * `removePolicySecurity` メソッドで返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
    * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことにより、`System.IO.BinaryWriter` オブジェクトを作成します。
 
 **コードの例**

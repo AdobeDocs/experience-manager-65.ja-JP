@@ -2,7 +2,7 @@
 title: Adobe Experience Manager内での外部SPAの編集
 description: このドキュメントでは、スタンドアロンSPAをAdobe Experience Managerインスタンスにアップロードし、編集可能なコンテンツセクションを追加して、オーサリングを有効にするための推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '2440'
 ht-degree: 73%
@@ -49,7 +49,7 @@ AEM SPA 機能の利用は、次の 3 つのパッケージに依存していま
 * [`@adobe/aem-spa-component-mapping`](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [`@adobe/aem-spa-page-model-manager`](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 
-この `@adobe/aem-spa-page-model-manager` には、Model Manager を初期化し、AEMインスタンスからモデルを取得するための API が用意されています。 その後、このモデルを使用して、`@adobe/aem-react-editable-components` と `@adobe/aem-spa-component-mapping` の API を使用して AEM コンポーネントをレンダリングできます。
+The `@adobe/aem-spa-page-model-manager` には、Model Manager を初期化し、AEMインスタンスからモデルを取得するための API が用意されています。 その後、このモデルを使用して、`@adobe/aem-react-editable-components` と `@adobe/aem-spa-component-mapping` の API を使用して AEM コンポーネントをレンダリングできます。
 
 #### インストール {#installation}
 
@@ -65,7 +65,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 これは、アプリケーションの `src/index.js` ファイル内、またはアプリケーションのルートがレンダリングされる場所で行う必要があります。
 
-この場合は、 `initializationAsync` で提供される API `ModelManager`.
+これには、 `initializationAsync` で提供される API `ModelManager`.
 
 次のスクリーンショットは、単純な React アプリケーションで `ModelManager` の初期化を有効にする方法を示しています。唯一の制約は `initializationAsync` は、の前に呼び出す必要があります `ReactDOM.render()`.
 
@@ -73,7 +73,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 この例では、`ModelManager` が初期化され、空の `ModelStore` が作成されます。
 
-この `initializationAsync` 必要に応じて、を受け入れることができます。 `options` オブジェクトを次のパラメーターとして指定します。
+The `initializationAsync` 必要に応じて、を受け入れることができます。 `options` オブジェクトを次のパラメーターとして指定します。
 
 * `path` - 初期化時に、定義されたパスのモデルが取得され、`ModelStore` に保存されます。これは、必要に応じて初期化時に `rootModel` を取得するのに使用できます。
 * `modelClient` - モデルの取得を担当するカスタムクライアントを提供できます。
@@ -103,7 +103,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    >[!NOTE]
    >
-   >この例では、コンポーネントに別のバージョンがあります。AEMは React コンポーネントをラップおよびアンラップしました。 コンポーネントを明示的に使用する場合は、ラップされたバージョンを使用する必要があります。コンポーネントがページの一部になっている場合は、SPA エディターで現在行われているように、デフォルトのコンポーネントを引き続き使用することができます。
+   >この例では、AEMのラップされた React コンポーネントとアンラップされた React コンポーネントの 2 つのバージョンが、コンポーネントに別々に存在します。 コンポーネントを明示的に使用する場合は、ラップされたバージョンを使用する必要があります。コンポーネントがページの一部になっている場合は、SPA エディターで現在行われているように、デフォルトのコンポーネントを引き続き使用することができます。
 
 1. コンポーネント内のコンテンツをレンダリングします。
 
@@ -111,7 +111,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    ![テキストコンポーネントのプロパティ](assets/external-spa-text-properties.png)
 
-   これらの値は、新しく作成されたにプロパティとして渡されます `AEMText` React コンポーネントを使用し、コンテンツのレンダリングに使用できます。
+   これらの値は、新しく作成されたにプロパティとして渡されます。 `AEMText` React コンポーネントを使用し、コンテンツのレンダリングに使用できます。
 
    ```javascript
    import React from 'react';
@@ -157,8 +157,8 @@ WKND SPAプロジェクトのテキストを追加する必要がある場合の
 
 1. 表示するノードのパスを指定します。
 
-   * `pagePath`:ノードを含むページ（例： ） `/content/wknd-spa-react/us/en/home`
-   * `itemPath`:ページ内のノードのパス（例） `root/responsivegrid/text`
+   * `pagePath`：ノードを含むページ（例： ） `/content/wknd-spa-react/us/en/home`
+   * `itemPath`：ページ内のノードのパス（例） `root/responsivegrid/text`
       * これは、ページに含まれる項目の名前で構成されます。
 
    ![ノードのパス](assets/external-spa-path.png)
@@ -205,7 +205,7 @@ mvn clean install -PautoInstallSinglePackage
    >
    >この例では、ラップされていない React テキストコンポーネントが、ラップされた `AEMText` 作成済み。 これは、コンポーネントがページ／コンテナの一部であってスタンドアローンではない場合、コンテナがコンポーネントのマッピングを再帰的に行い、オーサリング機能を有効にするので、子ごとの追加ラッパーが不応になるためです。
 
-1. SPAにオーサリング可能なページを追加するには、「 」セクションの同じ手順に従います [オーサリング可能なコンポーネントをページに追加](#add-authorable-component-to-page). 」節を同じ手順に従います。 ただし、ここでは、`itemPath` プロパティをスキップできます。
+1. SPAにオーサリング可能なページを追加するには、「 」セクションの同じ手順に従います。 [オーサリング可能なコンポーネントをページに追加する](#add-authorable-component-to-page). 」節を同じ手順に従います。 ただし、ここでは、`itemPath` プロパティをスキップできます。
 
 #### AEM でのページコンテンツの確認 {#verify-page-content}
 
@@ -360,7 +360,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ## フレームワークの制限 {#framework-limitations}
 
-RemotePage コンポーネントは、実装が、 [ここにある](https://github.com/shellscape/webpack-manifest-plugin).  アセットマニフェストを提供することを想定しています。ただし、RemotePage コンポーネントは、React フレームワーク（および remote-page-next コンポーネントを介した Next.js）での動作のみがテストされているため、Angular などの他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
+RemotePage コンポーネントは、実装がアセットマニフェストのようなアセットマニフェストを提供することを想定しています [ここにある](https://github.com/shellscape/webpack-manifest-plugin).  アセットマニフェストを提供することを想定しています。ただし、RemotePage コンポーネントは、React フレームワーク（および remote-page-next コンポーネントを介した Next.js）での動作のみがテストされているため、Angular などの他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
 
 ## その他のリソース {#additional-resources}
 

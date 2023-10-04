@@ -1,18 +1,15 @@
 ---
 title: ContextHub の設定
-seo-title: Configuring ContextHub
 description: Context Hub の設定方法について説明します。
-seo-description: Learn how to configure Context Hub.
-uuid: f2988bb9-6878-42a2-bb51-c3f8683248c5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1787'
-ht-degree: 99%
+source-wordcount: '1786'
+ht-degree: 98%
 
 ---
 
@@ -188,7 +185,7 @@ contexthub.generic-jsonp ストアがサービスコール `https://md5.jsontest
 
 contexthub.generic-jsonp のサンプルのストア候補を使用すると、JSON データを返す JSONP サービスや web サービスからデータを取得できます。このストア候補では、そのストア設定を使用して、使用する JSONP サービスに関する詳細を指定します。
 
-この [init](/help/sites-developing/contexthub-api.md#init-name-config) 関数 `ContextHub.Store.JSONPStore` JavaScript クラスは `config` このストア候補を初期化するオブジェクト。 `config` オブジェクトには JSONP サービスに関する情報が含まれる `service` オブジェクトが含まれています。ストアを設定するには、詳細設定プロパティの値として `service` オブジェクトを JSON 形式で指定します。
+The [init](/help/sites-developing/contexthub-api.md#init-name-config) 関数 `ContextHub.Store.JSONPStore` JavaScript クラスは `config` このストア候補を初期化するオブジェクト。 `config` オブジェクトには JSONP サービスに関する情報が含まれる `service` オブジェクトが含まれています。ストアを設定するには、詳細設定プロパティの値として `service` オブジェクトを JSON 形式で指定します。
 
 jsontest.com サイトの MD5 サービスからのデータを保存するには、次のプロパティを使用して [ContextHub ストアの作成](/help/sites-developing/ch-configuring.md#creating-a-contexthub-store)の手順に従います。
 
@@ -258,7 +255,7 @@ CRXDE Lite を使用して、`debug` プロパティを **true** に設定しま
 
 >[!NOTE]
 >
->ContextHub 設定が従来のパスの下に残っている場合は、 `debug property` を設定する場所は `/libs/settings/cloudsettings/legacy/contexthub` になります。
+>ContextHub 設定が従来のパスの下にまだ存在する場合、 `debug property` 次に該当 `/libs/settings/cloudsettings/legacy/contexthub`.
 
 ### サイレントモード {#silent-mode}
 

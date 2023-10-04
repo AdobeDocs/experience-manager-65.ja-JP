@@ -1,16 +1,12 @@
 ---
 title: 記事の管理
-seo-title: Managing Articles
 description: このページでは、記事の作成と管理について説明します。
-seo-description: Follow this page to learn about creating and managing Articles.
-uuid: 72b86cd7-3016-41b6-a001-9dce4084e9db
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: b46058f9-4691-4fba-a656-0f8507875a79
 exl-id: ea6c8aa3-f86e-4878-8550-fe1662f10696
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 3%
@@ -45,9 +41,9 @@ ht-degree: 3%
 1. 選択 **モバイル** サイドレールから。
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. の右上隅にある下向き矢印をクリックします。 **記事を管理** タイル。
-1. 記事テンプレートを選択し、 **次へ**.
+1. 記事テンプレートを選択し、「 **次へ**.
 1. ウィザードの各手順を実行し、新しい記事の作成を続行します。
-1. 準備が整ったら、 **作成**.
+1. 準備が整ったら、「 **作成**.
 1. 新しい記事が **記事を管理** タイル。
 
 ## 新しい記事の読み込み {#importing-a-new-article}
@@ -61,7 +57,7 @@ ht-degree: 3%
 新しい記事を読み込むためのワークフロー
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
-1. の右上隅にある下向き矢印をクリックします。 **記事を管理** タイルに表示され、記事を読み込むを選択します。
+1. の右上隅にある下向き矢印をクリックします。 **記事を管理** タイルに表示され、「記事を読み込む」を選択します。
 1. クリック **記事を読み込む** ダイアログで、「閉じる」を選択します。
 1. Mobile On-Demand の記事が **記事を管理** タイル。
 
@@ -107,7 +103,7 @@ ht-degree: 3%
 記事をアップロードする一般的なワークフロー：
 
 1. 送信者 **モバイル**」で、カタログから Mobile On-Demand アプリを選択します。
-1. 内 **記事を管理** タイルで、Mobile On-Demand にアップロードする記事を選択します。
+1. Adobe Analytics の **記事を管理** タイルで、Mobile On-Demand にアップロードする記事を選択します。
 1. 必要に応じて、リスト表示から他の記事を追加します。
 1. 選択 **アップロード** アクションバーから、ダイアログの「アップロード」をクリックします。
 1. 記事が Mobile On-Demand にアップロードされました。

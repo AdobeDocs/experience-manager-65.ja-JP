@@ -1,16 +1,12 @@
 ---
 title: コレクションの管理
-seo-title: Managing Collections
 description: コレクションとは、カバーのテーマに適した記事やバナーなどのコンテンツがいっぱいになった、適切に定義されたグループです。 このページでは、この機能について詳しく見ていきます。
-seo-description: Collections represent a well defined bucket filled with content such as articles or banners that suits the cover's theme. Follow this page to learn more.
-uuid: 1d2e9769-d2cc-4d43-a428-e962a51eb5d0
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 64c6d198-983f-4a52-9c83-560206363868
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 4%
@@ -27,7 +23,7 @@ ht-degree: 4%
 
 ## コレクションの概要 {#collections-overview}
 
-コレクションは適切に定義された *バケット* カバーのテーマに合った記事やバナーなどのコンテンツがいっぱいになっています。
+コレクションは、適切に定義された *バケット* カバーのテーマに合った記事やバナーなどのコンテンツがいっぱいになっています。
 
 >[!NOTE]
 >
@@ -46,7 +42,7 @@ ht-degree: 4%
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. の右上隅にある下向き矢印をクリックします。 **コレクションを管理** タイル。
 1. ウィザードの各手順を実行し、新しい記事の作成を続行します。
-1. 準備が整ったら、 **作成**.
+1. 準備が整ったら、「 **作成**.
 1. 新しい記事が **コレクションを管理** タイル。
 
 ![chlimage_1-1](assets/chlimage_1-1.gif)
@@ -88,7 +84,7 @@ ht-degree: 4%
 コレクションを表示/編集する一般的なワークフロー：
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
-1. 次の場所からコレクションを選択： **コレクションを管理** タイル。
+1. 次の中からコレクションを選択： **コレクションを管理** タイル。
 
 1. アクションバーから「**プロパティ**」を選択します。
 1. その記事で使用可能なすべてのメタデータを表示します。
@@ -102,7 +98,7 @@ ht-degree: 4%
 コレクションをアップロードする一般的なワークフロー：
 
 1. 送信者 **モバイル**」で、カタログから Mobile On-Demand アプリを選択します。
-1. 内 **コレクションを管理** タイルで、Mobile On-Demand にアップロードする記事を選択します。
+1. Adobe Analytics の **コレクションを管理** タイルで、Mobile On-Demand にアップロードする記事を選択します。
 1. 必要に応じて、リスト表示からコレクションを追加します。
 1. 選択 **アップロード** アクションバーから、ダイアログの「アップロード」をクリックします。
 1. コレクションが Mobile On-Demand にアップロードされました。
@@ -129,7 +125,7 @@ ht-degree: 4%
 >
 >コンテンツをコレクションに追加する前に、Mobile On-Demand にアップロードする必要があります。
 
-コレクションは基本的に関連コンテンツのカテゴリです。記事やバナーなどのコンテンツを、アプリケーションのナビゲーション構造を定義するパッケージにまとめます。 コレクションはネストできます。
+コレクションは基本的に関連コンテンツのカテゴリです。コレクションは、記事やバナーなどのコンテンツをまとめて、アプリケーションのナビゲーション構造を定義するパッケージにまとめます。 コレクションはネストできます。
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. 以前にアップロードした記事（またはバナー/コレクション）を選択

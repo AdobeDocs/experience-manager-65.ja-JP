@@ -1,15 +1,11 @@
 ---
 title: アダプティブフォームの操作のベストプラクティス
-seo-title: Best practices for working with adaptive forms
 description: AEM Formsプロジェクトの設定、アダプティブフォームの開発、AEM Formsシステムのパフォーマンスの最適化のベストプラクティスについて説明します。
-seo-description: Explains best practices for setting up an AEM Forms project, developing adaptive forms, and optimizing the performance for AEM Forms system.
-uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '4734'
 ht-degree: 39%
@@ -293,7 +289,7 @@ AEMでは、アダプティブフォームのローカライズに使用でき�
 
 * 複数のフォームに共通する要素に対してアダプティブフォームフラグメントを使用し、フラグメントをローカライズします。これにより、フラグメントを 1 回ローカライズするだけで、ローカライズされたフラグメントが使用されるすべてのフォームに反映されます。
 * 新しいコンポーネントの追加や、ローカライズされたフォームへのスクリプトの適用などの変更は、自動的にはローカライズされません。 したがって、ローカライズを何度も行わなければならない状況を避けるには、フォームをローカライズする前に完成させる必要があります。
-* ブラウザーのロケールを上書きし、指定したロケールでフォームをレンダリングするには、`afAcceptLang` 要求パラメーターを使用します。例えば、次の URL を使用すると、ブラウザー設定で指定されたロケールに関係なく、日本語ロケールでのフォームのレンダリングが強制されます。
+* ブラウザーのロケールを上書きし、指定したロケールでフォームをレンダリングするには、`afAcceptLang` 要求パラメーターを使用します。例えば、次の URL は、ブラウザー設定で指定されたロケールに関係なく、日本語ロケールでフォームをレンダリングするよう強制されます。
 
   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 59%
+source-wordcount: '1429'
+ht-degree: 58%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 59%
 
 次に移動： **ページのプロパティ** 」と入力し、 *タイトルテキスト*, *説明*, *ターゲットテンプレート*、および *ターゲットパス*（前述のように）
 
-次に、この基礎モードから作成されるページの構造を定義する必要があります。これをおこなうには、 **[デザインモード](/help/sites-authoring/page-authoring.md#sidekick)** を使用します。 リンクが表示され、**ダイアログエディター**&#x200B;で基礎モードを編集できます。
+次に、この基礎モードから作成されるページの構造を定義する必要があります。これをおこなうには、 **[デザインモード](/help/sites-authoring/page-authoring.md#sidekick)** を使用します。 リンクが表示され、 **ダイアログエディター**.
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 

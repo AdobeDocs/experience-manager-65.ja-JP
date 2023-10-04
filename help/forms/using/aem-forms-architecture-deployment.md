@@ -11,9 +11,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2479'
+source-wordcount: '2478'
 ht-degree: 76%
 
 ---
@@ -81,7 +81,7 @@ OSGi 上の AEM Forms および JEE 上の AEM Forms には、いずれもワー
 
   >[!NOTE]
   >
-  >アドビは、AEM リポジトリを使用する代わりに、サードパーティのデータストアを使用して、最終的に処理されたデータを保存することをお勧めします。
+  >Adobeでは、AEMリポジトリを使用する代わりに、最終的な処理済みデータを保存する際に、サードパーティのデータストアを使用することをお勧めします。
 
 * **パブリッシュインスタンスから送信された通信データの保存と後処理：** AEM ワークフローは、対応するレター定義の後処理をオプションで実行します。これらのワークフローで、最終的な処理済みデータを、適切な外部データストアに保存することができます。
 

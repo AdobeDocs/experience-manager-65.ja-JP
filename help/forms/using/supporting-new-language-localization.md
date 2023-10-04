@@ -1,21 +1,17 @@
 ---
 title: アダプティブフォームのローカリゼーション用に新しいロケールをサポート
-seo-title: Supporting new locales for adaptive forms localization
 description: AEM Formsでは、アダプティブフォームのローカライズ用に新しいロケールを追加できます。 デフォルトでサポートされているロケールは、英語、フランス語、ドイツ語、日本語です。
-seo-description: AEM Forms lets you add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
-uuid: 7f9fab6b-8d93-46bb-8c7c-7b723d5159ea
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '814'
-ht-degree: 90%
+source-wordcount: '813'
+ht-degree: 88%
 
 ---
 
@@ -43,7 +39,7 @@ ht-degree: 90%
 * 指定した順序で次のパラメーターを確認します。
 
    * リクエストパラメーター`afAcceptLang`
-ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡して、ロケールを強制します。例えば、次の URL は日本語ロケールでのフォームのレンダリングを強制します。
+ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡して、ロケールを強制します。例えば、次の URL では、日本語ロケールでのフォームのレンダリングが強制されます。
      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * ユーザー向けに設定されるブラウザーのロケールです。これは、`Accept-Language` ヘッダーを使用したリクエストで指定されます。

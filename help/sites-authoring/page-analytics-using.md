@@ -1,21 +1,17 @@
 ---
 title: ページコンテンツの効果を測定するためのページ分析データの表示
-seo-title: Seeing Page Analytics Data
 description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
-seo-description: Use page analytics data to gauge the effectiveness of their page content
-uuid: 5398a5d5-0239-4194-a403-77f5e6fcd741
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 5d192a48-c86f-4803-bb0d-0411ac7470f5
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: ht
-source-wordcount: '449'
-ht-degree: 100%
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+workflow-type: tm+mt
+source-wordcount: '447'
+ht-degree: 89%
 
 ---
 
@@ -40,9 +36,9 @@ ht-degree: 100%
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
 1. **Sites** コンソールを開きます（例：[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)）。
-1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「**リスト表示**」（表示されるアイコンは、[現在の表示](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)によって異なる）を選択します。
+1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
 
-1. もう一度、ツールバーの右端（右上隅）でアイコンをクリックまたはタップして、「**表示設定**」を選択します。**列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
+1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップし、「 **設定を表示**. **列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
 
    ![spad-02](assets/spad-02.png)
 

@@ -1,19 +1,15 @@
 ---
 title: Adobe Campaign Classic および Adobe Campaign Standard の使用
-seo-title: Working with Adobe Campaign 6.1 and Adobe Campaign Standard
 description: AEM でメールコンテンツを作成して、Adobe Campaign のメールで処理することができます。
-seo-description: You can create email content in AEM and process it in Adobe Campaign emails
-uuid: 23195f0b-71c0-4554-8c8b-b0e7704d71d7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 43%
+source-wordcount: '2753'
+ht-degree: 41%
 
 ---
 
@@ -149,8 +145,8 @@ E メールコンテンツを編集するには：
 
 コンテンツの編集時に、以下を挿入できます。
 
-* Adobe Campaign コンテキストフィールド。これらは、受信者のデータ（姓名、ターゲットディメンションのデータなど）に応じて変化する値をテキスト内に挿入するためのフィールドです。
-* Adobe Campaign パーソナライゼーションブロック。ブランドのロゴやミラーページへのリンクなど、受信者のデータに関係なく表示される、事前定義されたコンテンツのブロックです。
+* Adobe Campaign コンテキストフィールド。これらは、受信者のデータ（名、姓またはターゲットディメンションの任意のデータなど）に応じてテキスト内に挿入できるフィールドです。
+* Adobe Campaign パーソナライゼーションブロック。これらは、ブランドロゴやミラーページへのリンクなど、受信者のデータとは関係のない定義済みコンテンツのブロックです。
 
 詳しくは、 [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md) を参照してください。
 

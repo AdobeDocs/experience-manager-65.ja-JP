@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '551'
 ht-degree: 61%
 
 ---

@@ -7,9 +7,9 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 3e978c3e-12f2-4dc6-801d-8ab4c5df6700
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '653'
 ht-degree: 41%
 
 ---

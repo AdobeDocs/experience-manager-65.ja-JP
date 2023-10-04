@@ -1,20 +1,16 @@
 ---
 title: Remoting を使用した AEM Forms の呼び出し
-seo-title: Invoking AEM Forms using Remoting
 description: Remoting を使用して AEM Forms プロセスを起動し、Workbench で作成されたプロセスを呼び出します。Flex で作成されたクライアントアプリケーションから AEM Forms プロセスを呼び出すことができます。
-seo-description: Use Remoting to invoke an AEM Forms process to invoke processes created in Workbench. You can invoke a AEM Forms process from a client application built with Flex.
-uuid: 592d1519-c38b-4b33-8cf3-61e2bff81501
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '4597'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -550,7 +546,7 @@ Flex で構築されたクライアントアプリケーションを起動し、
 
 1 つまたは複数のドキュメントを必要とするプロセスを呼び出す際に、セキュリティで保護されたドキュメントを AEM Forms に渡すことができます。セキュリティで保護されているドキュメントを渡すことにより、ビジネス情報や機密ドキュメントを保護できます。この場合、ドキュメントとは PDF ドキュメント、XML ドキュメント、Word ドキュメントなどを指しています。セキュリティで保護されているドキュメントを許可するように AEM Forms が設定されている場合は、Flex で記述されたクライアントアプリケーションからセキュリティで保護されているドキュメントを AEM Forms に渡す必要があります（[安全なドキュメントと安全でないドキュメントを受け入れるための AEM Forms の構成](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)を参照）。
 
-セキュリティで保護されているドキュメントを渡す場合は、シングルサインオンを使用し、*ドキュメントアップロードアプリケーションユーザー*&#x200B;の役割を持つ AEM Forms ユーザーを指定します。この役割がないと、ユーザーはセキュアなドキュメントをアップロードできません。プログラムによってユーザーに役割を割り当てることもできます（[役割と権限の管理](/help/forms/developing/users.md#managing-roles-and-permissions)を参照）。
+安全なドキュメントを渡す場合は、シングルサインオンを使用し、 *ドキュメントアップロードアプリケーションユーザー* 役割。 この役割がないと、ユーザーはセキュアなドキュメントをアップロードできません。プログラムによってユーザーに役割を割り当てることもできます（[役割と権限の管理](/help/forms/developing/users.md#managing-roles-and-permissions)を参照）。
 
 >[!NOTE]
 >

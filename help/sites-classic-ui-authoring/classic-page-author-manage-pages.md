@@ -1,16 +1,14 @@
 ---
 title: ページの作成と整理
 description: ここでは、ページ上でコンテンツを作成できるように、AEM でページを作成および管理する方法について説明します。
-uuid: 47ce137a-7a85-4b79-b4e0-fdf08a9e77bd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1906'
 ht-degree: 99%
 
 ---
@@ -320,7 +318,7 @@ AEM には、名前変更または移動が行われるページへの内部リ�
 
 ### ページのロック {#locking-a-page}
 
-コンソールから、または個々のページの編集時に[ページをロック／ロック解除](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)できます。ページがロックされているかどうかに関する情報も、両方の場所で示されます。
+コンソールから、または個々のページの編集時に[ページをロック／ロック解除](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)できます。ロックされたページに関する情報も、両方の場所に表示されます。
 
 ### 新しいフォルダーの作成 {#creating-a-new-folder}
 

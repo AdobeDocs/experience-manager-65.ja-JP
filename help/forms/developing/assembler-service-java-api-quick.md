@@ -1,19 +1,16 @@
 ---
 title: Assembler サービス Java API クイックスタート（SOAP）
-seo-title: Assembler Service Java API QuickStart(SOAP)
 description: Assembler サービス Java API クイックスタート（SOAP）
-uuid: 33ad5f7a-4f4c-4e72-937d-85891498a80e
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
 source-wordcount: '1001'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -170,7 +167,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -309,7 +306,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
                  Object o = e.getValue();
  
@@ -588,7 +585,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -855,7 +852,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              //document that specifies if the input document is
              //PDF/A compliant
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -1160,7 +1157,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
              //Iterate through the map object to retrieve the result PDF document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
@@ -1191,7 +1188,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 * `createDDX`：Assembler サービスに送信される DDX ドキュメントを表す `org.w3c.dom.Document` オブジェクトを作成します。このユーザー定義メソッドは、`org.w3c.dom.Document` オブジェクトを返します。
 * `convertDDX`：`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。このメソッドは、入力パラメーターとして `org.w3c.dom.Document` オブジェクトを受け入れ、`com.adobe.idp.Document` オブジェクトを返します。
 
-   このクイックスタートでは、これらの両方のメソッドが呼び出されます。（[DDX ドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)を参照。）
+  このクイックスタートでは、これらの両方のメソッドが呼び出されます。（[DDX ドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)を参照。）
 ``
 
 ```java
@@ -1534,7 +1531,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## クイックスタート（SOAP モード）：Java API を使用した複数の XDP フラグメントのアセンブリ {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
-次の Java コードの例では、XDP ファイル *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp* および* tuc018_patient.xdp* に基づく XDP フラグメントをアセンブルします。すべてのフラグメントを含むアセンブル済みの XDP ドキュメントは、*AssemblerResultXDP.xdp* という名前の XDP ファイルとして保存されます。（[複数の XDP フラグメントをアセンブル](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)を参照。）
+次の Java コードの例では、XDP ファイル *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp* および* tuc018_patient.xdp* に基づく XDP フラグメントをアセンブルします。すべてのフラグメントを含むアセンブリ済みの XDP ドキュメントは、という名前の XDP ファイルとして保存されます。 *AssemblerResultXDP.xdp*. （[複数の XDP フラグメントをアセンブル](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)を参照。）
 
 ```java
  /*
@@ -1662,7 +1659,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
  
              //Iterate through the map object to retrieve the result XDP document
              for (Iterator i = allDocs.entrySet().iterator(); i.hasNext();) {
-                 // Retrieve the Map object’s value
+                 // Retrieve the Map object's value
                  Map.Entry e = (Map.Entry)i.next();
  
                  //Get the key name as specified in the
