@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '2585'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -624,7 +624,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 * 言語タイトル
 * 国名
-* （`en`、`de` などのコードの）言語に対するデフォルトの国
+* 言語のデフォルトの国 ( `en`, `de`（その他）
 
 言語のリストは、`/libs/wcm/core/resources/languages` ノードの下に格納されます。各子ノードは、言語または言語-国を表します。
 

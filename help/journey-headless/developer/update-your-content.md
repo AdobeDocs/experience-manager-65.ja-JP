@@ -2,10 +2,10 @@
 title: AEM Assets API を使用してコンテンツをアップデートする方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、REST API を使用してコンテンツフラグメントのコンテンツにアクセスし、アップデートする方法について説明します。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '1066'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -180,7 +180,7 @@ Assets can have multiple renditions. These are typically exposed as child entiti
 
 ## Assets HTTP API とコンテンツフラグメント {#assets-http-api-content-fragments}
 
-コンテンツフラグメントはヘッドレス配信に使用される、特別なタイプのアセットです。コンテンツフラグメントを使用すれば、テキスト、数値、日付など様々な要素を含む構造化データにアクセスできます。
+コンテンツフラグメントはヘッドレス配信に使用される、特別なタイプのアセットです。これらは、テキスト、数値、日付などの構造化されたデータにアクセスするために使用されます。
 
 <!--
 As there are several differences to *standard* assets (such as images or audio), some additional rules apply to handling them.
