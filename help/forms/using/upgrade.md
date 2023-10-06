@@ -11,10 +11,10 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: fbc371e59c4f80195fe90da5f635267141c8849e
+source-git-commit: a67c2347eb6ddbb4e77f77985033d882f34ccb00
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 87%
+source-wordcount: '366'
+ht-degree: 83%
 
 ---
 
@@ -73,6 +73,8 @@ AEM 6.5.18.0 Forms on JEE には、[完全なインストーラー](https://expe
 
 ![完全なインストーラーとパッチインストーラー](/help/forms/using/assets/full-and-patch-installer.png)
 
+詳しくは、 [AEM 6.5 Forms Service Pack のインストール手順](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja) JEE 環境用の最新の Service Pack をインストールする記事です。
+
 <!--
 [Work in Progress]
 
@@ -104,3 +106,5 @@ Migration involves moving only assets (PDF, XDP, images, adaptive forms, corresp
       Methods to calculate average fill time for forms and average read time for have changed. So, when you upgrade to AEM 6.3 forms, older data (data from previous AEM Forms release) for these metrics is available only in Adobe Analytics. It is not visible in AEM Forms analytics reports. For these metrics, AEM Forms analytics reports display data which is captured after performing the upgrade.
       
       -->
+
+
