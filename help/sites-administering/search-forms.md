@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
 workflow-type: tm+mt
 source-wordcount: '2067'
-ht-degree: 77%
+ht-degree: 75%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 77%
 
 用途 **Formsを検索** を使用すると、様々なAEMコンソールやオーサー環境のパネルで使用できる検索パネルで使用される検索用述語の選択をカスタマイズできます。 これらのパネルをカスタマイズすると、検索機能を特定のニーズに合わせて汎用化できます。
 
-[述語の範囲](#predicates-and-their-settings)は標準で使用できます。複数の述語を追加できます。たとえば、指定した単一のプロパティに一致するアセットを検索する Property 述語、または特定のプロパティに指定した 1 つまたは複数の値に一致するアセットを検索する Options 述語を含みます。
+[述語の範囲](#predicates-and-their-settings)は標準で使用できます。プロパティの述語を含む複数の述語を追加して、指定した 1 つのプロパティに一致するアセットを検索したり、オプションの述語を追加したりできます。特定のプロパティに対して指定した 1 つ以上の値に一致するアセットを検索したりできます。
 
 以下が可能です。 [検索フォームの設定](#configuring-your-search-forms) 様々なコンソールおよびアセットブラウザー内で使用されます（ページの編集時）。 The [これらのフォームを設定するためのダイアログ](#configuring-your-search-forms) は、次の場所からアクセスできます。
 
