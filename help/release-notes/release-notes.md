@@ -2,10 +2,11 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: ffda4927ddc8555564f33697fa81d1f8a0cd2cdc
+exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
+source-git-commit: 59d5c2574bf4298469152a3d55e7c1508eb2f1be
 workflow-type: tm+mt
-source-wordcount: '4548'
-ht-degree: 75%
+source-wordcount: '4633'
+ht-degree: 74%
 
 ---
 
@@ -462,8 +463,25 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 #### インストール
 
 * JBoss® 7.1.4 プラットフォームで、Experience Manager 6.5.16.0 以降のサービスパックをインストールすると、`adobe-livecycle-jboss.ear` デプロイメントが失敗します。（CQ-4351522、CQDOC-20159）
-* AEM Service Pack 6.5.18.0フルインストーラーをインストールした後、JEE で JBoss® Turnkey(CQDOC-20803) を使用して EAR デプロイメントが失敗します。
-問題を解決するには、設定マネージャーを実行する前に、`<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` ファイルを見つけて、すべての出現箇所について `Adobe_Adobe_JAVA_HOME` を `Adobe_JAVA_HOME` に更新します。
+* Windows Server 2022 上のAEM Forms 6.5.18.0 JBoss 自動インストーラー環境にアップグレードした後、Java 11 を使用して Output クライアントアプリケーションコードをコンパイルする際に、次のコンパイルエラーが発生する場合があります。
+
+  ```
+  error: error reading [AEM_Forms_Installation_dir]\sdk\client-libs\common\adobe-output-client.jar; java.net.URISyntaxException: 
+  Illegal character in path at index 70: file:/[AEM_Forms_Installation_dir]/sdk/client-libs/common/${clover.jar.name} 1 error
+  ```
+
+  この問題を解決するには、次の手順に従います。
+   1. に移動します。 `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` および解凍 `adobe-output-client.jar` 抽出する `Manifest.mf` ファイル。
+   1. を更新します。 `Manifest.mf` エントリを削除してファイルを作成 `${clover.jar.name}` を class-path 属性から取得します。
+
+      >[!NOTE]
+      >
+      > また、7-zip などのインプレース編集ツールを使用して、 `Manifest.mf` ファイル。
+
+   1. 更新した `Manifest.mf` （内） `adobe-output-client.jar` アーカイブ。
+   1. 変更した `adobe-output-client.jar` ファイルを作成し、セットアップを再実行します。  （CQDOC-20878）
+* AEM Service Pack 6.5.18.0フルインストーラーをインストールした後、JBoss® Turnkey を使用して JEE で EAR デプロイメントが失敗します。
+問題を解決するには、設定マネージャーを実行する前に、`<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` ファイルを見つけて、すべての出現箇所について `Adobe_Adobe_JAVA_HOME` を `Adobe_JAVA_HOME` に更新します。（CQDOC-20803）
 
 #### アダプティブフォーム
 
