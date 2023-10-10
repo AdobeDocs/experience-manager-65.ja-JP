@@ -2,9 +2,9 @@
 title: GraphQL クエリの最適化
 description: ヘッドレスコンテンツ配信のためにAdobe Experience Manager as a Cloud Serviceでコンテンツフラグメントをフィルタリング、ページング、並べ替える際に、GraphQLクエリを最適化する方法について説明します。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 2ba17c43e84ad449ec858de57812f3ef82fca3e1
+source-git-commit: c0570d6c0d624d950ddbb5c0d2ce38ff7c3756a4
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1935'
 ht-degree: 60%
 
 ---
@@ -89,7 +89,10 @@ GraphQLクエリとその JSON 応答は、をターゲット設定した場合�
 
 永続化されたGraphQLクエリを CDN で使用する場合は、適切な HTTP キャッシュ制御ヘッダーを設定することをお勧めします。
 
-永続化された各クエリには、独自のキャッシュ制御ヘッダーのセットを設定できます。 ヘッダーは、 [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) または [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
+永続化された各クエリには、独自のキャッシュ制御ヘッダーのセットを設定できます。 ヘッダーは、 [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
+
+<!-- or the [AEM GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md#managing-cache). 
+-->
 
 **その他の参照**
 
