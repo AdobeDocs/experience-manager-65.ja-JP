@@ -2,10 +2,10 @@
 title: はじめに —Edge Delivery Services
 description: Edge 配信サービスの概要。
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
-source-git-commit: d989f83b51ed1c957b63b5d71e2afe027abcd330
+source-git-commit: 6b60deb47f4a07b48156ce8f449d49ebaf29abde
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 2%
+source-wordcount: '868'
+ht-degree: 1%
 
 ---
 
@@ -59,7 +59,7 @@ Adobeには、Edge Delivery Servicesに役立つ 3 つのチャネルが用意�
 
 ### コミュニティリソースにアクセス {#community-resource}
 
-Adobeには、Edge 配信に役立つ 2 つのコミュニティリソースがあります。 [Experience Leagueコミュニティ](https://adobe.ly/3Q6kTKl) および [Discord チャネル](https://discord.gg/aem-live).
+Adobeは、コミュニティに対する最高のエンゲージメントとサポートを提供し、Edge Delivery Servicesとドキュメントベースのオーサリングに取り組んでいます。 参加する [Experience Leagueコミュニティ](https://adobe.ly/3Q6kTKl) 質問をしたり、意見を共有したり、ディスカッションを開始したり、Adobeの専門家やAEM Advisors/Champs に助けを求めたり、同じ意見を持つ人とリアルタイムでつながりを持つことができます。 また、 [Discord チャネル](https://discord.gg/aem-live)：リアルタイムのインタラクションと迅速なアイデア交換のための、より一般的なプラットフォームです。
 
 ### 製品コラボレーションチャネルへのアクセス方法 {#collab-channel}
 
