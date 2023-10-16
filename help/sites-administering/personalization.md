@@ -1,7 +1,7 @@
 ---
 title: パーソナライズ機能
 seo-title: Personalization
-description: AEMでのパーソナライゼーションについて説明します。
+description: 動的コンテンツを表示する独自の環境をユーザーに提供するAdobe Experience Managerでのパーソナライゼーションについて説明します。
 seo-description: Learn about personalization in AEM.
 uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 42%
+source-wordcount: '1698'
+ht-degree: 41%
 
 ---
 

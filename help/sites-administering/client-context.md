@@ -1,7 +1,7 @@
 ---
 title: ClientContext
 seo-title: Client Context
-description: AEMでの ClientContext の使用方法を説明します。
+description: ClientContext を使用して、Adobe Experience Managerの現在のページと訪問者に関する情報を確認する方法を説明します。
 seo-description: Learn how to use the Client Context in AEM.
 uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 49%
+source-wordcount: '1980'
+ht-degree: 48%
 
 ---
 

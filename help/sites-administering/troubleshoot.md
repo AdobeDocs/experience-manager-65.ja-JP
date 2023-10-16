@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Manager のトラブルシューティング
-description: AEM の問題のトラブルシューティングについて説明します。
+description: Adobe Experience Managerで発生する可能性のあるいくつかの問題のトラブルシューティングについて説明します。
 uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '545'
-ht-degree: 100%
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+workflow-type: tm+mt
+source-wordcount: '551'
+ht-degree: 97%
 
 ---
 

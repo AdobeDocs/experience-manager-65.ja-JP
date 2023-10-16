@@ -1,7 +1,7 @@
 ---
 title: Target オファー
 seo-title: Target offers
-description: Target オファーを作成
+description: Adobe Experience Managerで Target オファーを作成し、Adobe Targetで使用します。
 seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: ht
-source-wordcount: '93'
-ht-degree: 100%
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 88%
 
 ---
 

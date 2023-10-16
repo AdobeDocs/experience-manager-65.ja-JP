@@ -1,14 +1,14 @@
 ---
 title: AEM と SAP Commerce Cloud の使用
-description: AEM と SAP Commerce Cloud の使用方法を説明します。
+description: Adobe Experience Managerと SAPCommerce Cloudの使用方法を説明します。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
 workflow-type: tm+mt
-source-wordcount: '1702'
-ht-degree: 80%
+source-wordcount: '1704'
+ht-degree: 79%
 
 ---
 
@@ -55,23 +55,23 @@ ht-degree: 80%
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. 内 **インデックス付き型** タブ、 **合成タイプ** 移動先：
+1. Adobe Analytics の **インデックス付き型** タブ、セット **組み立てタイプ** 移動先：
 
    `Product - Product`
 
-1. 内 **インデックス付き型** タブ、調整 **インデクサークエリ** 対象 `full`:
+1. Adobe Analytics の **インデックス付き型** タブ、調整 **インデクサークエリ** 対象： `full`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. 内 **インデックス付き型** タブ、調整 **インデクサークエリ** 対象 `incremental`:
+1. Adobe Analytics の **インデックス付き型** タブ、調整 **インデクサークエリ** 対象： `incremental`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. 内 **インデックス付き型** タブ、調整 `category` ファセット。 カテゴリリストの最後のエントリをダブルクリックして、 **インデックス付きプロパティ** タブ：
+1. Adobe Analytics の **インデックス付き型** タブ、調整 `category` ファセット。 カテゴリリストの最後のエントリをダブルクリックして、 **インデックス付きのプロパティ** タブ：
 
    >[!NOTE]
    >
@@ -84,7 +84,7 @@ ht-degree: 80%
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
 1. 変更内容を&#x200B;**保存**&#x200B;します。
-1. 再び「**SOLR Item types**」から、以下のスクリーンショットに従って、`price` ファセットを変更します。例： `category`，ダブルクリック `price` 開く **インデックス付きプロパティ** タブ：
+1. 再び「**SOLR Item types**」から、以下のスクリーンショットに従って、`price` ファセットを変更します。例： `category`，ダブルクリック `price` 開く **インデックス付きのプロパティ** タブ：
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
@@ -105,7 +105,7 @@ ht-degree: 80%
 **Day CQ Commerce Hybris 設定**
 （`com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`）
 
-**カタログバージョン** が `Online` または `Staged` （デフォルト）。
+**カタログバージョン** が次のいずれかに設定されている場合、 `Online` または `Staged` （デフォルト）。
 
 >[!NOTE]
 >
@@ -285,7 +285,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 1. hybris で、関連する製品に保持されている情報を更新します。
 
-1. hybris で、1 つ以上の製品を Express Queue に追加します。例：
+1. hybris で、1 つ以上の製品を Express Queue に追加します。次に例を示します。
 
    ![chlimage_1-43](/help/sites-administering/assets/chlimage_1-43a.png)
 
@@ -374,7 +374,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    * `Cajamara` を検索します
    * この商品を選択し、承認ステータスを「`unapproved`」に変更します。
 
-1. 増分更新を再度実行します（[カタログの読み込み](#catalog-import)を参照）。ログには、削除された製品が一覧表示されます。
+1. 増分更新を再度実行します（[カタログの読み込み](#catalog-import)を参照）。ログには、削除された製品の一覧が表示されます。
 1. 該当するカタログを[ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)します。製品ページと製品ページがAEM内から削除されました。
 
    次に例を示します。
@@ -388,7 +388,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
      [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * この `Cajamara` 製品が `Bike` カテゴリ
+   * The `Cajamara` 製品が `Bike` カテゴリ
 
 1. 製品を回復する手順は、次のとおりです。
 
