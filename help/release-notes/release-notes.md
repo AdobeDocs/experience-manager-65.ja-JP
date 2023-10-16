@@ -6,7 +6,7 @@ exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
 source-git-commit: 59d5c2574bf4298469152a3d55e7c1508eb2f1be
 workflow-type: tm+mt
 source-wordcount: '4633'
-ht-degree: 74%
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 74%
 
 ## [!DNL Experience Manager] 6.5.18.0 の内容 {#what-is-included-in-aem-6518}
 
-[!DNL Experience Manager] 6.5.18.0には、2019 年 4 月の 6.5 の初期リリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、バグ修正、パフォーマンス、安定性、セキュリティの改善が含まれています。 [このサービスパックを [!DNL Experience Manager] 6.5 にインストール](#install)。
+[!DNL Experience Manager] 6.5.18.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。[!DNL Experience Manager] 6.5 で[このサービスパックをインストール](#install)します。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -44,37 +44,37 @@ ht-degree: 74%
 
 * Assets、Dynamic Media - [Dynamic Media のビデオに対するマルチサブタイトルとマルチオーディオトラックのサポート](/help/assets/video.md#about-msma) - プライマリビデオに複数のサブタイトルと複数のオーディオトラックを簡単に追加できるようになりました。この機能により、グローバルなオーディエンスがビデオにアクセスできるようになります。1 つの公開済みプライマリビデオを複数の言語でグローバルオーディエンスに向けてカスタマイズし、様々な地理的地域のアクセシビリティガイドラインに従うことができます。また、作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルとオーディオトラックを管理することもできます。
 
-* アセット — 検索結果から、アセットが含まれるフォルダーの場所に移動して、様々なアセット管理タスクを実行できるようになりました。 （ASSETS-23182）
+* Assets - 検索結果から、アセットが含まれるフォルダーの場所に移動でき、様々なアセット管理タスクを実行できるようになります。（ASSETS-23182）
 
 **主な機能強化**
 
 * コンテンツフラグメントの Sites Polaris ピッカーのパフォーマンスが向上しました。（SITES-14092）
 
-* サイトのページエディター/画像コンポーネントユーザーがリモートアセットCloud Serviceーからアセットを参照できるようになりました。 （Sites-13448、Sites-13433）
+* Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。（Sites-13448、Sites-13433）
 
-* リスト表示でプロジェクトをすばやく見つけるために、Adobeでは、サーバー側での並べ替えがサポートされるようになりました。 プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。（NPR-41027）
+* システム内に多数のプロジェクトが存在する可能性があるリスト表示でプロジェクトをすばやく見つけるために、アドビではサーバーサイドでの並べ替えをサポートするようになりました。プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。（NPR-41027）
 
 * AEM 6.5.18.0 は、MongoDB 5.0～6.0 をサポートします。
 
 **非推奨（廃止予定）の機能**
 
-* AEM の ActiveMQ は、非推奨（廃止予定）です。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。Adobeでは、現在ロードバランサーを使用することをお勧めします。
+* AEM の ActiveMQ は、非推奨（廃止予定）です。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。アドビでは、現在ロードバランサーを使用することを推奨しています。
 
 **Forms**
 
-* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html?lang=ja)**  — 外部サービスから返されたエラーに応じて、（クライアントライブラリを使用して）カスタム関数を呼び出せるようになりました。 また、エンドユーザーに合わせて適切な応答を提供できます。 または、サービスから返されたエラーに対して特定のアクションを実行できます。例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
+* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html?lang=ja)** - 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出すことができるようになりました。また、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。または、サービスから返されたエラーに対して特定のアクションを実行できます。例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
 
-* **[Adobe Sign Workflow ステップの強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html?lang=ja#sign-document-step)** - AEM Workflows のAdobe Signワークフローステップは、次の機能強化で使用できます。
+* **[Adobe Sign ワークフローステップの機能強化](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html?lang=ja#sign-document-step)** - AEM ワークフローの Adobe Sign ワークフローステップは、次の機能強化で使用可能になります。
 
-   * **Adobe Signの政府機関 ID ベースの認証によるセキュリティの強化** - Adobe Acrobat Signの政府 ID ベースの認証により、さらに多くの検証がおこなわれます。 これにより、ユーザーは政府発行の ID（運転免許証、国籍 ID、パスポート）を使用して ID を認証できます。 この機能強化は、信頼された識別ドキュメントを使用することで、署名プロセスに対する信頼性を高め、セキュリティ、コンプライアンス、およびユーザーの検証を強化する必要があるシナリオに最適です。
+   * **Adobe Sign の行政 ID に基づいた認証によるセキュリティの機能強化** - Adobe Acrobat Sign の行政 ID に基づいた認証は、追加の検証レイヤーを提供します。これにより、ユーザーは行政発行の ID（運転免許証、国民 ID、パスポート）を使用して身元を認証できます。この機能強化により、信頼できる ID ドキュメントを使用することで、署名プロセスの信頼性がさらに高まり、高度なセキュリティ、コンプライアンスおよびユーザー検証を必要とするシナリオに最適になります。
 
-   * **Adobe Signドキュメントの監査証跡による透明性の向上**  — 監査記録機能を使用すると、Adobe Signドキュメントのライフサイクルに関する詳細なインサイトを得ることができます。 監査証跡を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を保持できるようになります。これには、ドキュメントを表示、編集、署名したユーザーなどの詳細と、各イベントのタイムスタンプが含まれます。この機能強化は、コンプライアンスの保持、紛争の解決、デジタル契約の整合性を確保する上で重要です。
-
-
-   * **署名者だけを超えて、契約受信者の役割を拡張しました。** - Adobe Acrobat Signを使用すると、署名者以外に、契約の受信者の役割を拡張して、ワークフロー要件に合わせることができます。 有効にすると、契約の各受信者の役割は個別に設定でき、署名者がデフォルトとなります。
+   * **Adobe Sign ドキュメントの監査証跡による透明性の機能強化** - 監査証跡機能を使用すると、Adobe Sign ドキュメントのライフサイクルに関する詳細なインサイトが得られます。監査証跡を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を保持できるようになります。これには、ドキュメントを表示、編集、署名したユーザーなどの詳細と、各イベントのタイムスタンプが含まれます。この機能強化は、コンプライアンスの保持、紛争の解決、デジタル契約の整合性を確保する上で重要です。
 
 
-* **[AEM Forms on JEE の完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html?lang=ja)**  — このサービスパックでは、次のような新しいソフトウェアの組み合わせをサポートする、JEE 上のAEM Formsの完全なインストーラーが提供されます。
+   * **契約受信者の役割を署名者以外にも拡張** - Adobe Acrobat Sign を使用すると、契約受信者の役割を署名者以外にも拡張して、ワークフロー要件にさらに適合させることができます。有効にすると、契約の各受信者の役割を個別に設定でき、署名者がデフォルトになります。
+
+
+* **[AEM Forms on JEE 完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html?lang=ja)** - サービスパックには、AEM Forms on JEE 完全インストーラーが含まれており、以下を含む複数の新しいソフトウェアの組み合わせがサポートされます。
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * Oracle WebLogic 14C（Windows Server 2022）
@@ -82,7 +82,7 @@ ht-degree: 74%
    * MongoDB 4.4
    * MySQL JDBC Connector 8
 
-JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストールする、または使用する予定がある場合、Adobeでは、JEE 上のAEM 6.5.18.0 Formsフルインストーラーを使用することをお勧めします。 新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
+AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE 完全インストーラーを使用することをお勧めします。新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -110,11 +110,11 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 
 #### コアコンポーネント{#sites-core-components-6518}
 
-* アセットセレクターを閉じて再び開いたときに、更新されたアセットのリストが取得されません。 リポジトリに新しいアセットがアップロードされた場合、アセットセレクターを含むページが更新されるまで、アセットセレクターに表示されません。 （SITES-14828）
-* サイトエディター (CS) に統合されたアセットセレクターのユーザーインターフェイスは、ウィンドウが縮小されるとレスポンシブになりません。 （SITES-14127）
+* アセットセレクターを閉じて再度開いた場合、更新されたアセットリストは取得しません。新しいアセットをリポジトリにアップロードした場合、アセットセレクターを含むページが更新されるまで、新しいアセットはアセットセレクターに表示されません。（SITES-14828）
+* Sites エディター（CS）に統合されているアセットセレクターのユーザーインターフェイスは、ウィンドウが縮小されるとレスポンシブになりません。（SITES-14127）
 * アセットセレクター統合用の Adobe IMS（Identity Management System）設定で、間違った値が受け入れられていました。（SITES-13962）
-* アセットセレクターを Sites 画像コンポーネントに統合する場合、画像以外のアセットを選択できないようにする必要があります。 （SITES-13879）
-* ログインに成功すると、ユーザーはページエディターにリダイレクトされます。 リモートアセットを選択するには、アセットセレクターを再度開く必要があります。 （SITES-13851）
+* アセットセレクターを Sites の画像コンポーネントに統合する際、画像以外のアセットを選択できないようにする必要があります。（SITES-13879）
+* ログインに成功した後、ユーザーはページエディターにリダイレクトされます。リモートアセットを選択するには、ユーザーはアセットセレクターを再度開く必要があります。（SITES-13851）
 * リモートアセットピッカーが、常に Adobe IMS（Identity Management System）ステージ環境にリダイレクトされます。（Sites-13448、Sites-13433）
 
 <!-- #### [!DNL Experience Fragments]{#sites-experiencefragments-6518}
@@ -138,7 +138,7 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 * スクリーンリーダーは、コレクションの作成中に「ユーザーを追加」フィールドの目的を通知しません。（ASSETS-21736）
 * **コレクション**&#x200B;ラベルは、コレクションプロパティページではローカライズされません。（ASSETS-21102）
 * デフォルトのメタデータスキーマフォームを使用してルールを追加するか、既存のルールを編集する際、ドロップダウンリストの言語はローカライズされません。（ASSETS-21026）
-* Experience Managerで、メタデータスキーマに JSON パスを追加すると、ローカライズされていないエラーメッセージが表示される。 （ASSETS-21025）
+* Experience Manager では、メタデータスキーマに JSON パスを追加すると、ローカライズされていないエラーメッセージが表示されます。（ASSETS-21025）
 * 左側のナビゲーションのタイムラインオプションには、適切なコントラスト比が表示されません。（ASSETS-17348）
 * カレンダー要素では、必須の ARIA 属性を使用しません。（ASSETS-17282）
 * 左側のナビゲーションテキストには、適切なコントラスト比が表示されません。（ASSETS-17268）
@@ -151,11 +151,11 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 #### [!DNL Dynamic Media]{#assets-dm-6518}
 
 * VTT のダウンロードに失敗すると、ビデオは表示されません。空白の画面が表示されますが、ビデオスクラバーが前進していることがわかります。（ASSETS-21909）
-* キーボードの Tab キーを使用して移動する際に、ビデオの下に表示される複数のコントロールにフォーカスが移動しない。 そのため、コントロールにアクセスできません。インタラクティブビデオのキーボードナビゲーションを改善しました。（ASSETS-25749）
-* Dynamic Mediaコンポーネントに表示される、無効になったビューアプリセットを修正しました。 （ASSETS-22922）
-* 一般設定の「セキュリティ」タブから「画像サービング」を削除しました。 （ASSETS-24618）
+* キーボードの Tab キーを使用して移動する際に、ビデオの下に表示される複数のコントロールにフォーカスが移動しません。そのため、コントロールにアクセスできません。インタラクティブビデオのキーボードナビゲーションを改善しました。（ASSETS-25749）
+* Dynamic Media コンポーネントに表示される無効なビューアプリセットを修正しました。（ASSETS-22922）
+* 一般設定の「セキュリティ」タブから「画像サービング」を削除しました。（ASSETS-24618）
 * アセットを Dynamic Media にアップロードできない問題と StringIndexOutOfBoundsException を修正しました。（ASSETS-25787）
-* 「基本」タブの必須の「幅」編集フィールドに視覚的なアスタリスクを追加しました。 （ASSETS-25741）
+* 「基本」タブの必須の「幅」編集フィールドに視覚的なアスタリスクを追加しました。（ASSETS-25741）
 * 透かしの Dynamic Media レンディションのダウンロードを修正しました。（ASSETS-26173）
 * ビデオ以外のアセット名の 127 文字の制限を復元しました。（ASSETS-26074）
 
@@ -165,14 +165,14 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 
 * **Document Services**
    * ユーザーが transformPDF サービスを使用すると、次の例外が発生して失敗します：`java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`（FORMS-9957）
-   * サーバードキュメントの生成中にPDFがシャットダウンされた場合、サーバー起動後のジョブ処理エラーがスローされます。 引数 —Dcom.adobe.livecycle.dsc.deferServiceStart=true は、サーバーの起動中に追加する必要があります。 （FORMS-9836）
+   * PDF ドキュメントの生成中にサーバーをシャットダウンした場合、サーバー起動後のジョブ処理エラーがスローされます。引数 - Dcom.adobe.livecycle.dsc.deferServiceStart=true をサーバーの起動中に追加する必要があります。（FORMS-9836）
    * ユーザーが AssemblerService.Invoke メソッドを使用して PDF を結合しようとすると、アセンブラーはタスクの実行に失敗します。（FORMS-9550）
    * OSGI および JEE 環境で AEM 6.5.15.0 サービスパックにアップグレードすると、特定のテンプレートを使用する Assembler サービスが動作しなくなります。（FORMS-9355、FORMS-9445、FORMS-9408）
-   * XMLFormService の Global Timeout が適切な値に設定されていないので、Java™ガベージコレクションはAEM Forms OSGi サーバー上の古い生成ヒープをクリアできません。 （FORMS-9384、FORMS-9035）
-   * アダプティブフォームのPDFプレビューをレンダリングする際に、不要な Java™スタックダンプがエラーログに表示されます。 （FORMS-8865）
-   * ユーザーがドキュメントの詳細セクションでドキュメントのドキュメントステータスを確認すると、正しく表示されません。 （FORMS-8946、FORMS-10424）
+   * XMLFormService のグローバルタイムアウトが適切な値に設定されていないので、Java™ ガベージコレクションは AEM Forms OSGi サーバー上の旧世代ヒープをクリアできません。（FORMS-9384、FORMS-9035）
+   * アダプティブフォームの PDF プレビューをレンダリングする際に、不要な Java™ スタックダンプがエラーログに表示されます。（FORMS-8865）
+   * ユーザーがドキュメントの詳細セクションでドキュメントのステータスを確認すると、正しく表示されません。（FORMS-8946、FORMS-10424）
    * ユーザーが AEM Forms にアップグレードして sendToPrinter サービスを使用すると、ヒープ使用率が継続的に増加します。（FORMS-10148）
-   * JBoss® 7.4 EAP サーバーでは、電子メール機能は次の条件で失敗します。 `java.io.IOException`. （FORMS-10138）
+   * JBoss® 7.4 EAP サーバーでは、メール機能が `java.io.IOException` で失敗します。（FORMS-10138）
    * ユーザーが transformPDF サービスを使用すると、次のエラーが発生して失敗します：`java.lang.ClassNotFoundException: default task-158Class name com.adobe.internal.afml.AFMLExceptionInvalidParameter from package com.adobe.internal.afml`（FORMS-9957）
    * AEM サービスパック 6.5.14.0 にアップグレードした後、特定のテンプレートを使用するとアセンブラーサービスで問題が発生します。（FORMS-9445、FORMS-9408）
   <!-- *  When a user configures the watched folder endpoint for PDF Generator, it fails to pick documents on JDK 11. (FORMS-10152) -->
@@ -180,23 +180,23 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
    * ユーザーがフィールドを変更せずにカスタム関数を呼び出そうとすると（別のフィールドの値を設定するなど）、失敗します。（FORMS-9921）
    * アダプティブフォームでルールエディターのカスタムエラー関数を使用している際に、次のエラーが発生します。
       * ユーザーが関数で @param{boolean} を使用しようとすると、ルールエディターではブール値を関数に渡すことができません。
-      * ユーザーが@paramを使用しようとしたとき{string} 関数を使用すると、ルールエディターはオプションの値を渡せず、不完全なルールの警告を表示します。 （FORMS-9816、FORMS-9815）
+      * ユーザーが関数で @param{string} を使用しようとすると、ルールエディターではオプションの値を渡すことができず、不完全なルールに関して警告します。（FORMS-9816、FORMS-9815）
    * forms-user グループが、アダプティブフォーム内でルールエディターの呼び出しに 2 回失敗します。（FORMS-9051）
-   * ビジュアルエディターでは、ユーザーがフォームオブジェクトを選択すると、フィールドの値だけでなく、フィールドインスタンスオブジェクト全体がカスタム関数に渡されます。 （FORMS-10015）
+   * ビジュアルエディターでは、ユーザーがフォームオブジェクトを選択すると、フィールドの値だけではなく、フィールドインスタンスオブジェクト全体がカスタム関数に渡されます。（FORMS-10015）
    * ユーザーがコアコンポーネントベースのアダプティブフォームを作成し、テキスト入力コンポーネントを追加すると、`Is Empty` と `Is Not Empty` がルールエディターで機能しません。 （FORMS-10098）
-   * コアコンポーネントベースのアダプティブフォームで、フィールドが無効とマークされている場合は、フィールド上で変更イベントが開始されます。 （FORMS-10087）
+   * コアコンポーネントベースのアダプティブフォームでフィールドが無効としてマークされている場合、フィールド上で変更イベントが開始します。（FORMS-10087）
    * ユーザーが複雑な JSON スキーマを使用してアダプティブフォームを作成しようとすると、失敗します。エラーは、次のように発生します。
      `GET /content/forms/af/katezeroone/testaf1.html HTTP/1.1] com.adobe.aemds.guide.service.impl.JsonObjectCreatorImpl Could not emit JSON with context java.lang.ArrayIndexOutOfBoundsException:0`。（FORMS-9639）
-   * アダプティブフォームでは、ユーザーが「利用条件に同意します」チェックボックスを無効にすると、ユーザーがスクロールダウンすると再び有効になります。 （FORMS-9458）
-   * ユーザーがGoogle Chrome/Firefox を使用して Android™デバイスでアダプティブフォームを開き、最大許容文字数をテキストボックスに入力すると、テキストボックス内の値がクリアされません。 （FORMS-9354）
-   * チェックボックスのラベルに「、」、「/」、「。」などの特殊文字が含まれる場合、テキスト/ラベルをクリックしても、それぞれのチェックボックスは選択されません。 （FORMS-9313）
+   * アダプティブフォームでは、「利用条件に同意します」チェックボックスを無効にする際、下にスクロールすると再び有効になります。（FORMS-9458）
+   * ユーザーが Google Chrome／Firefox を使用して Android™ デバイスでアダプティブフォームを開き、テキストボックスに許可される最大文字数を入力すると、テキストボックスの値がクリアされません。（FORMS-9354）
+   * チェックボックスのラベルに「,」、「/」、「.」などの特殊文字が含まれる場合、テキスト／ラベルをクリックしてもそれぞれのチェックボックスは選択されません。（FORMS-9313）
    * ユーザーが利用条件コンポーネントを検証しようとする際、他のコンポーネントが検証される間にそのコンポーネントがフォーカスされていないと、検証に失敗します。（FORMS-8725、FORMS-8913）
    * AEM 6.5.16.0 サービスパックにアップグレードした後にアダプティブフォームを再読み込みすると、添付ファイルの取得に失敗します。（FORMS-8906）
    * XDP に基づくアダプティブフォームでは、チェックボックスコンポーネントに数値が割り当てられたテキストタイトルが含まれている場合、テキストタイトルは切り捨てられ、割り当てられた値と一致しません。（FORMS-8743）
    * ユーザーがオーサー環境のアダプティブフォームに埋め込まれたフラグメントに遅延読み込みを実装しようとすると、フラグメントに定義されたルール／ロジックがフォームに反映されません。（FORMS-8554、FORMS-9182）
    * AEM 6.5.16.0 サービスパックで任意の Coral ダイアログを開こうとすると、`error.log: cannot render resource` 例外が生成されます。（FORMS-8942）
-   * ユーザーがアダプティブフォーム内の 1 つのオプションを含むチェックボックスを翻訳しようとすると、失敗します。 （FORMS-10181）
-   * すべてのレコードのドキュメント (DoR) テンプレートが公開に失敗しました。 英語のロケールベースの DoR テンプレートと、それに関連するFormsベースの DoR テンプレートのみが公開されます。 （FORMS-10535）
+   * ユーザーがアダプティブフォームで 1 つのオプションを含むチェックボックスを翻訳しようとすると、失敗します。（FORMS-10181）
+   * すべてのレコードのドキュメント（DoR）テンプレートが公開に失敗します。英語ロケールベースの DoR テンプレートと、これに関連するフォームベースの DoR テンプレートのみが公開されます。（FORMS-10535）
 
 * **アクセシビリティ**
    * アダプティブフォームで手書き署名コンポーネントを使用すると、次のエラーが発生します。
@@ -208,7 +208,7 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
    * ユーザーがアダプティブフォームを送信すると、スクリーンリーダーは必須フィールドのエラーメッセージを読み取ることができません。（FORMS-9316）
    * スクリーンリーダーが HTML フォームを読み取る場合、カーニング（間隔）のあるテキストを読み取る際に問題が発生します。 （FORMS-9258）
    * アダプティブフォームでは、テキストにリンクされている参照／脚注は、スクリーンリーダーを使用して読み上げられません。（FORMS-8920）
-   * 最新の Designer では、アクセシビリティタグが正しく認識されません。 （FORMS-10139）
+   * 最新の Designer では、アクセシビリティタグが正しく認識されません。（FORMS-10139）
 * **インタラクティブコミュニケーション**
    * Correspondence Management では、ローカライゼーションが機能しません。（FORMS-8926）
    * publishAll サービスを使用すると、ドラフトレターを開けません。（FORMS-8589）
@@ -236,7 +236,7 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 #### プラットフォーム{#foundation-platform-6518}
 
 * Vanilla Experience Manager サービスパック 17 をインストールすると、`stderr.log` にエラーが表示されます。Vanilla のインストールでは、エラーが発生することはありません。（CQ-4353637）
-* ACL（アクセス制御リスト）に従わないタグ付け画面の「作成」ボタン。 （NPR-40973）
+* ACL（アクセス制御リスト）を考慮しないタグ付け画面の「作成」ボタン。（NPR-40973）
 * Experience Manager で ContextHub のキャッシュノードを作成、アクセスまたはその両方ができません。（NPR-40515）
 
 #### レプリケーション{#foundation-replication-6518}
@@ -252,12 +252,12 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 
 * 翻訳設定ユーザーインターフェイスからルールを追加すると、翻訳 `rules.xml` は適切に並べ替えられませんでした。（NPR-40431）
 * 翻訳中にクエリパラメーターを使用したリンクをサポートします。（NPR-40339）
-* 追加のコンテキストルートを更新した後、辞書のユーザーインターフェイスが顧客に対して読み込まれません。 （NPR-40650）
+* 追加のコンテキストルートを更新した後、辞書ユーザーインターフェイスが顧客に対して読み込まれません。（NPR-40650）
 * アセットの 1 つが ReferenceFragment または ContentFragment タイプの複数フィールドを含むコンテンツフラグメントである場合、言語コピーの作成中にエラーが発生します。（NPR-40892）
 
 #### ユーザーインターフェイス{#foundation-ui-6518}
 
-* [設定ブラウザーのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=ja#using-configuration-browser)で説明しているように、_名前はリポジトリ内のノード名になります_。ただし、設定ブラウザーでは、CRXDE Liteのパスに設定タイトルが使用され、設定の名前は無視されます。 （NPR-40607）
+* [設定ブラウザーのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=ja#using-configuration-browser)で説明しているように、_名前はリポジトリ内のノード名になります_。ただし、設定ブラウザーでは、設定タイトルが CRXDE Lite のパスに使用され、設定の名前は無視されます。（NPR-40607）
 
 <!-- #### WCM{#wcm-6518}
 
@@ -266,7 +266,7 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 #### ワークフロー{#foundation-workflow-6518}
 
 * アセットのバージョンを元に戻しても、アセットのステータスは処理モードのままになります。（NPR-41029）
-* Assets とプロジェクトのユーザーインターフェイスで並べ替えの問題が発生します。ビジネス要件に従って、アセットとプロジェクトユーザーインターフェイスのカスタム列をオーバーレイしたものもあります。 標準のプロパティ `sortable=true` を使用して並べ替えを実装しました。ただし、プロジェクトまたはアセットユーザーインターフェイスに多数のエントリがある場合、並べ替えで不整合が生じています。 （NPR-41027）
+* Assets とプロジェクトのユーザーインターフェイスで並べ替えの問題が発生します。ビジネス要件に応じて、Assets とプロジェクトのユーザーインターフェイスにカスタム列をオーバーレイするものもあります。標準のプロパティ `sortable=true` を使用して並べ替えを実装しました。ただし、プロジェクトまたは Assets のユーザーインターフェイスに多数のエントリがある場合、並べ替えに不整合が発生します。（NPR-41027）
 * ログは `EMailNotificationService` の `NullPointerException` でいっぱいになり、ワークフローが送信するはずのメールが送信されません。（NPR-40898）
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST  * The timeline is not providing references to the selected content. (NPR-40806) -->
 
@@ -300,7 +300,7 @@ JEE 上のAEM 6.5 Forms環境に最新のソフトウェアをインストール
 
 >[!NOTE]
 >
->サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。通常、この問題は [!DNL Safari] ブラウザーは断続的に使用されますが、どのブラウザーでも発生する場合があります。
+>サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
 
 **自動インストール**
 
@@ -370,9 +370,9 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
 
-* **Service Pack 18 にアップグレードした後、ページパブリッシングがページエディターで機能しない (6.5.18.0)**
+* **サービスパック 18（6.5.18.0）にアップグレードした後、ページエディターでページの公開が機能しない**
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> AEM 6.5.0.0 のインスタンスをAEM 6.5.17.0にアップグレードした後、「 **ページを公開** ページエディター内に、存在しない URL にリダイレクトされます。
+  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> AEM 6.5.0.0～6.5.17.0 のインスタンスを AEM 6.5.18.0 にアップグレードした後、ページエディター内で「**ページを公開**」をクリックすると、存在しない URL にリダイレクトされます。
 
   この問題を回避するには、次のいずれかの操作を行います。
 
@@ -380,14 +380,14 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
      `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
 
-   * 正しい URL をブラウザーに直接貼り付けます。
+   * 正しい URL をブラウザーに直接ペーストします。
 
      `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
 
 
 
-* **Oak 関連
-サービスパック 13 以降で、永続性キャッシュに影響する次のエラーログが表示され始めました。**
+* **Oak 関連**
+サービスパック 13 以降で、永続性キャッシュに影響する次のエラーログが表示されるようになりました。
 
   ```shell
   org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
@@ -415,7 +415,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    1. サービスパックをインストールするか、Experience Manager as a Cloud Serviceを再起動します。
 `cache` および `diff-cache` の新しいフォルダーが自動的に作成され、`error.log` 内で `mvstore` に関連する例外は発生しなくなりました。
 
-* コンテンツモデルのカスタム API 名を使用した可能性のあるGraphQLクエリを更新し、代わりにコンテンツモデルのデフォルト名を使用します。
+* コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
 * GraphQL クエリでは、`fragments` インデックスの代わりに `damAssetLucene` インデックスを使用する場合があります。このアクションは結果的に、GraphQL クエリが失敗するか、実行に非常に長い時間がかかる可能性があります。
 
@@ -442,13 +442,13 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 
-* のインストール中に、次のエラーおよび警告メッセージが表示される場合があります。 [!DNL Experience Manager] 6.5.x.x:
+* [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
    * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
-   * ショッパブルバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されません。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : 登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
+   * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
 * AEM 6.5.15 以降、```org.apache.servicemix.bundles.rhino``` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。strict モード（```use strict;```）を使用するスクリプトでは、変数を正しく宣言する必要があります。宣言しない場合、変数は実行されず、代わりにランタイムエラーが発生します。
 
@@ -456,7 +456,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 #### サポートされているプラットフォーム
 
-* 1.8.0_281 より高い JDK バージョンは、WebLogic JEE サーバーではサポートされていません。 （FORMS-8498、CQDOC-20383）
+* 1.8.0_281 より後の JDK バージョンは、WebLogic JEE サーバーではサポートされていません。（FORMS-8498、CQDOC-20383）
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。（CQDOC-18312）
 * JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。（FORMS-10659）
 
@@ -488,7 +488,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * アダプティブフォームのガイドコンテナにリダイレクト URL が設定されると、インライン署名が機能しなくなります。（FORMS-10493）
-* すべてのレコードのドキュメント (DoR) テンプレートが公開に失敗しました。 英語のロケールベースの DoR テンプレートと、それに関連するFormsベースの DoR テンプレートのみが公開されます。 （FORMS-10535）
+* すべてのレコードのドキュメント（DoR）テンプレートが公開に失敗します。英語ロケールベースの DoR テンプレートと、これに関連するフォームベースの DoR テンプレートのみが公開されます。（FORMS-10535）
 
 #### インタラクティブコミュニケーション
 
@@ -496,7 +496,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 問題を解決するには、次の手順に従います。
 
    1. SD リンクから [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をダウンロードします。
-   1. ホットフィックスアーカイブファイルを展開して、Experience Managerパッケージ (.zip) ファイルとバンドル (.jar) ファイルを取得できるようにします。
+   1. ホットフィックスアーカイブファイルを抽出して、Experience Manager パッケージ（.zip）とバンドル（.jar）ファイルを取得できるようにします。
    1. パッケージマネージャーを通じてパッケージ（.zip）をアップロードしてインストールします。
    1. 設定マネージャーのバンドル `https://server:host/system/console/bundles` を開き、バンドル（.jar）をアップロードしてインストールします。
 
