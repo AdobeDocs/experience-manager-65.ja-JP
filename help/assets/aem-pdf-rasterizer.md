@@ -5,10 +5,10 @@ contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools,Renditions
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: e6e0ad29bc5b3a644f74427d8d60233c9e26aa03
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 100%
+source-wordcount: '719'
+ht-degree: 75%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 100%
 * デフォルトで生成されないサムネールを含む AI ファイルおよび PDFファイル。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
-PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、何もしなくてもすぐに使用できる出力に比べて高品質です。そのため、デバイス全体で一貫した表示エクスペリエンスを得ることができます。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
+PDFRasterizer を使用して生成されたサムネールとプレビューは、標準の出力に比べて画質が優れているので、デバイス間で一貫した表示エクスペリエンスを提供します。 Adobe PDF Rasterizer ライブラリは、カラースペースの変換をサポートしていません。 ソースファイルのカラースペースに関係なく、常にRGBに出力されます。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.4.zip) から PDF Rasterizer パッケージを [!DNL Adobe Experience Manager] のデプロイメントにインストールします。
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip) から PDF Rasterizer パッケージを [!DNL Adobe Experience Manager] のデプロイメントにインストールします。
 
    >[!NOTE]
    >
-   >PDF Rasterizer ライブラリは、Windows と Linux のみで使用できます。
+   >PDFRasterizer ライブラリは、Windows と Linux®でのみ使用できます。
 
 1. [!DNL Assets] ワークフローコンソール（`https://[aem_server]:[port]/workflow`）にアクセスします。[!UICONTROL DAM アセットの更新]ワークフローを開きます。
 
@@ -51,20 +51,19 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 
    * MIME タイプ： `application/pdf` または `application/postscript`
    * コマンド: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * 追加するサムネールのサイズ：319:319、140:100、48:48。必要に応じて、サムネールのカスタム設定を追加します。
+   * サムネールのサイズを追加：319:319、140:100、48:48。 必要に応じて、カスタムのサムネール設定を追加します。
 
-   `PDFRasterizer` コマンドのコマンドライン引数には、以下のものがあります。
+   コマンドライン引数 `PDFRasterizer` コマンドには、次のものを含めることができます。
 
-   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ高い画質の画像が作成されます。ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像サイズも増大します。
+   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグより高品質な画像を作成します。 ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像のサイズが大きくなります。
 
-   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
+   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。ページのサイズが異なる場合、各ページは異なるサイズで拡大/縮小される可能性があります。 デフォルトは実際のページサイズです。
 
-   * `-t`：出力画像のタイプ有効なタイプは JPEG、PNG、GIF および BMP です。デフォルト値は JPEG です。
+   * `-t`：出力画像のタイプ有効なタイプは、JPEG、PNG、GIF、BMP です。 デフォルト値は JPEG です。
 
    * `-i`：入力 PDF のパス必須パラメーターです。
 
    * `-h`: ヘルプ
-
 
 1. 中間レンディションを削除するには、「**[!UICONTROL 生成されたレンディションを削除]**」を選択します。
 1. PDF Rasterizer で web レンディションを生成するには、「**[!UICONTROL Web レンディションを生成]**」を選択します。
@@ -84,18 +83,17 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    * コマンド: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 追加するサムネールのサイズ：`319:319`、`140:100`、`48:48`必要に応じて、サムネールのカスタム設定を追加します。
 
-   `PDFRasterizer` コマンドのコマンドライン引数には、以下のものがあります。
+   コマンドライン引数 `PDFRasterizer` コマンドには、次のものを含めることができます。
 
-   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ高い画質の画像が作成されます。ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像サイズも増大します。
+   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグより高品質な画像を作成します。 ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像のサイズが大きくなります。
 
-   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
+   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。ページのサイズが異なる場合、各ページは異なるサイズで拡大/縮小される可能性があります。 デフォルトは実際のページサイズです。
 
-   * `-t`：出力画像のタイプ有効なタイプは JPEG、PNG、GIF および BMP です。デフォルト値は JPEG です。
+   * `-t`：出力画像のタイプ有効なタイプは、JPEG、PNG、GIF、BMP です。 デフォルト値は JPEG です。
 
    * `-i`：入力 PDF のパス必須パラメーターです。
 
    * `-h`: ヘルプ
-
 
 1. 中間レンディションを削除するには、「**[!UICONTROL 生成されたレンディションを削除]**」を選択します。
 1. PDF Rasterizer で web レンディションを生成するには、「**[!UICONTROL Web レンディションを生成]**」を選択します。
