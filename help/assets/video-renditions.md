@@ -1,15 +1,15 @@
 ---
 title: ビデオレンディション
-description: ビデオレンディション
+description: Adobe Experience Manager Assets を使用して、OGG、FLV などの様々な形式のビデオアセットのビデオレンディションを生成する方法について説明します。
 uuid: a02f9ec1-30d9-4cbb-8746-8391ac614f0a
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 100%
+source-wordcount: '243'
+ht-degree: 85%
 
 ---
 
@@ -35,7 +35,7 @@ Experience Manager Assets では、クライアントサイドでこのような
 
 DM エンコードされたレンディションのプロキシサーバーを設定するには、[Dynamic Media クラウドサービスを設定します](config-dynamic.md)。
 
-必要なパラメーターを指定してビデオレンディションを生成するには、[対応するビデオプロファイルを作成](video-profiles.md)します。
+必要なパラメーターを持つビデオレンディションを生成するには、 [対応するビデオプロファイルを作成する](video-profiles.md).
 
 プロキシサーバーを設定し、ビデオプロファイルを作成したら、このビデオプリセットを処理プロファイルに追加して、その処理プロファイルをフォルダーに適用することができます。
 
@@ -43,4 +43,4 @@ DM エンコードされたレンディションのプロキシサーバーを�
 >
 >Microsoft® Internet Explorer 11 では、OGG および WAV ファイルのオーディオは再生できません。拡張子が OGG または WAV のアセットの詳細ページに、エラー `Invalid Source` が表示されます。
 >
->MS® Edge および iPad では、OGG ファイルは再生されず、サポートされていない形式というエラーが発生します。
+MS® Edge および iPad では、OGG ファイルは再生されず、サポートされていない形式というエラーが発生します。

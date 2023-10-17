@@ -1,14 +1,14 @@
 ---
 title: レンダリングと配信
-description: レンダリングと配信
+description: Sling Default Servlets を使用してAdobe Experience Managerコンテンツをレンダリングし、JSON や他の形式をレンダリングする方法を説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 9%
+source-wordcount: '596'
+ht-degree: 8%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 9%
 >
 >Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager(AEM) コンテンツは、 [Sling のデフォルトサーブレット](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) レンダリング [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) およびその他の形式
+Adobe Experience Manager(AEM) コンテンツは、 [Sling のデフォルトサーブレット](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) レンダリングする [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) およびその他の形式
 
-これらのレンダリングは通常、リポジトリーを参照し、そのままコンテンツを返します。
+そのまま使用できるこれらのレンダリングは、通常、リポジトリーを参照し、コンテンツをそのまま返します。
 
 AEMは、Sling を介して、レンダリングされたスキーマとコンテンツを完全に制御するカスタム Sling レンダラーの開発とデプロイもサポートしています。
 
@@ -32,7 +32,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 ## JSON のリクエスト {#requesting-json}
 
-用途 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** JSON をリクエストする。]
+用途 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** JSON をリクエストする場合。]
 
 <table>
  <tbody>
@@ -75,49 +75,49 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
   <tr>
    <td>includeComponents</td>
    <td>String[]</td>
-   <td>すべてを含む</td>
+   <td>すべてを含める</td>
    <td>sling:resourceType</td>
    <td>JSON 書き出しから sling:resourceType が指定されたノードの詳細を除外</td>
   </tr>
   <tr>
    <td>excludeComponents</td>
    <td>String[]</td>
-   <td>何も除外</td>
+   <td>何も除外しない</td>
    <td>sling:resourceType</td>
    <td>JSON 書き出しから指定された sling:resourceType を持つノードの詳細のみを含めます</td>
   </tr>
   <tr>
    <td>excludePropertyPrefixes</td>
    <td>String[]</td>
-   <td>何も除外</td>
+   <td>何も除外しない</td>
    <td>プロパティのプレフィックス</td>
    <td>指定したプレフィックスで始まるプロパティを JSON 書き出しから除外する</td>
   </tr>
   <tr>
    <td>excludeProperties</td>
    <td>String[]</td>
-   <td>何も除外</td>
+   <td>何も除外しない</td>
    <td>プロパティ名</td>
    <td>JSON 書き出しから指定したプロパティを除外</td>
   </tr>
   <tr>
    <td>includeProperties</td>
    <td>String[]</td>
-   <td>すべてを含む</td>
+   <td>すべてを含める</td>
    <td>プロパティ名</td>
    <td><p>if excludePropertyPrefixes セット<br /> 除外されるプレフィックスと一致するにもかかわらず、指定されたプロパティも含まれます。</p> <p>else （無視されたプロパティを除外）は、これらのプロパティのみを含めます</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
    <td>String[]</td>
-   <td>すべてを含む</td>
+   <td>すべてを含める</td>
    <td>子名</td>
    <td>JSON 書き出しから指定した子を除外</td>
   </tr>
   <tr>
    <td>excludeChildren</td>
    <td>String[]<br /> <br /> </td>
-   <td>何も除外</td>
+   <td>何も除外しない</td>
    <td>子名</td>
    <td>JSON 書き出しから指定された子のみを含め、他の子を除外</td>
   </tr>
@@ -133,7 +133,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 ### リソースタイプの書き出しの上書き {#resource-type-export-overrides}
 
-以下に設定ノードを作成します。 */apps/mobileapps/caas/exportConfigs に置き換えます。*
+の下に設定ノードを作成します。 */apps/mobileapps/caas/exportConfigs に置き換えます。*
 
 | name | resourceTypeOverrides |
 |---|---|
@@ -208,7 +208,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
    <td> </td>
   </tr>
   <tr>
-   <td>Sling JSON オーバーライド</td>
+   <td>Sling JSON の上書き</td>
    <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
   </tr>
  </tbody>

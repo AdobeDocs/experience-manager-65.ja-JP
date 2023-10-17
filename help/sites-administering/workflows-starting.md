@@ -1,25 +1,21 @@
 ---
 title: ワークフローの開始
-seo-title: Starting Workflows
-description: AEMでワークフローを開始する方法を説明します。
-seo-description: Learn how to start Workflows in AEM.
-uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
+description: Adobe Experience Managerでワークフローを管理し、様々な方法（手動または自動）でワークフローを開始する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 56%
+source-wordcount: '799'
+ht-degree: 40%
 
 ---
 
 # ワークフローの開始{#starting-workflows}
 
-ワークフローを管理する場合、次の様々な方法でワークフローを開始できます。
+ワークフローを管理する際は、様々な方法でワークフローを開始できます。
 
 * 手動：
 
@@ -87,16 +83,16 @@ ht-degree: 56%
 ## モデルコンソールからのワークフローの開始 {#starting-a-workflow-from-the-models-console}
 
 1. **ツール**／**ワークフロー**／**モデル**&#x200B;の順に移動して&#x200B;**モデル** コンソールにアクセスします。
-1. （コンソールの表示に従って）ワークフローを選択します。必要に応じて、「検索」（左上）を使用することもできます。
+1. （コンソール表示に従って）ワークフローを選択します。必要に応じて、「検索」（左上）を使用することもできます。
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >**[一時的な](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;インジケーターは、ワークフローの履歴が保持されないワークフローを示します。
+   >The **[一時的](/help/sites-developing/workflows.md#transient-workflows)** インジケーターは、ワークフローの履歴が保持されていないワークフローを示します。
 
 1. ツールバーの「**ワークフローを開始**」を選択します。
-1. ワークフローを実行ダイアログが開き、次の内容を指定できます。
+1. ワークフローを実行ダイアログボックスが開き、次の項目を指定できます。
 
    * **ペイロード**
 
@@ -115,13 +111,13 @@ ht-degree: 56%
 ## ランチャー設定の作成 {#creating-a-launcher-configuration}
 
 1. **ツール**／**ワークフロー**／**ランチャー**&#x200B;の順に移動して&#x200B;**ワークフローランチャー**&#x200B;コンソールにアクセスします。
-1. 「**作成**」を選択してから「**ランチャーを追加**」を選択し、ダイアログを開きます。
+1. 選択 **作成**&#x200B;を、 **ランチャーを追加** ダイアログボックスを開くには、次の手順に従います。
 
    ![wf-105](assets/wf-105.png)
 
    * **イベントタイプ**
 
-     ワークフローを起動するイベントタイプ。
+     ワークフローを起動するイベントタイプ：
 
       * 作成日
       * 変更
@@ -170,12 +166,12 @@ ht-degree: 56%
 
    * **リストを除外**
 
-     ワークフローを実行するかどうかを決定する際に除外（無視）するすべての JCR イベントを指定します。
+     これは、ワークフローをトリガーするかどうかを決定する際に除外する（無視する）JCR イベントを指定します。
 
-     このランチャープロパティは、次のような項目のコンマ区切りリストです。
+     このランチャープロパティは、項目のコンマ区切りリストです。
 
       * `property-name` は、指定したプロパティ名に対して実行されたすべての `jcr` イベントを無視します。
-      * `event-user-data:<*someValue*>` は、`*<someValue*`  API で設定した `user-data`> [`ObservationManager` を含むすべてのイベントを無視します。](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String
+      * `event-user-data:<*someValue*>` は、 `*<someValue*`> `user-data` ～を通り抜ける [`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
 
      次に例を示します。
 

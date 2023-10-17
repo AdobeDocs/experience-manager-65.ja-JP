@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media での 3D アセットの操作
-description: Dynamic Media で 3D アセットを使用する方法について説明します
+description: 3D アセットを、没入感のあるエクスペリエンスとしてDynamic Mediaでアップロード、管理、表示および配信する方法について説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
@@ -8,10 +8,10 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '2348'
-ht-degree: 98%
+source-wordcount: '2354'
+ht-degree: 96%
 
 ---
 
@@ -88,7 +88,7 @@ Dynamic Media の 3D アセットを操作する前に、Experience Manager の�
 
 ## 3D アセットの表示とインタラクションについて {#viewing-three-d-assets}
 
-この節では、次の 2 つの方法で 3D アセットの表示とインタラクションをおこなう方法について説明します。をクリックします。また、Experience Manager Sitesの 3D メディアコンポーネント内からアクセスすることもできます。
+この節では、3D アセットの表示およびインタラクション方法を、アセットの詳細ページ内から、またはExperience Manager Sitesの 3D メディアコンポーネント内から、2 種類の方法で説明します。
 
 このインタラクティブ 3D ビューアには、3D アセットをオービット、ズームおよびパンできる、インタラクティブなカメラコントロールのコレクションが含まれます。
 

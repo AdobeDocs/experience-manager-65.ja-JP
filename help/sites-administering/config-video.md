@@ -1,19 +1,15 @@
 ---
 title: ビデオコンポーネントの設定
-seo-title: Configure the Video component
-description: ビデオコンポーネントの設定方法について説明します。
-seo-description: Learn how to configure the Video Component.
-uuid: f4755a13-08ea-4096-a951-46a590f8d766
+description: Adobe Experience Managerのビデオコンポーネントを使用して、事前定義済みの標準提供ビデオアセットをページに配置する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 100%
+source-wordcount: '499'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +21,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。アドビでは、[コアコンポーネント埋め込みコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html?lang=ja)を代わりに利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント埋め込みコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=ja)を利用することをお勧めします。
 
 >[!CAUTION]
 >
@@ -33,7 +29,7 @@ ht-degree: 100%
 
 ## ビデオプロファイルの設定 {#configure-video-profiles}
 
-HTML 5 要素を使用するには、ビデオプロファイルを定義します。ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用し、「**[!UICONTROL プロファイル]**」タブを選択します。
+HTML5 要素を使用するには、ビデオプロファイルを定義します。 ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用し、「**[!UICONTROL プロファイル]**」タブを選択します。
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
@@ -50,18 +46,18 @@ FFmpeg を **Windows** にインストールするには、次の手順を実行
 1. システム環境変数 `PATH` を *ご利用の ffmpeg- の場所*`\bin`に設定します。
 1. AEM を再起動します。
 
-FFmpeg を **Mac OS X** にインストールするには、次の手順に従います。
+FFmpeg をにインストールするには、以下を実行します。 **macOS X**&#x200B;を使用する場合は、次の手順に従います。
 
 1. [developer.apple.com/xcode](https://developer.apple.com/xcode/) で入手可能な Xcode をインストールします。
-1. [XQuartz](https://www.xquartz.org) で入手可能な [X11](https://support.apple.com/ja-jp/HT201341) をインストールします。
+1. [XQuartz](https://www.xquartz.org) で入手可能な [X11](https://support.apple.com/en-us/100724) をインストールします。
 1. [www.macports.org](https://www.macports.org/) で入手可能な MacPorts をインストールします。
-1. コンソールで `sudo port install ffmpeg` コマンドを実行し、画面上の指示に従って操作します。`FFmpeg` 実行ファイルのパスが `PATH` システム変数に追加されていることを確認します。
+1. コンソールで、を実行します。 `sudo port install ffmpeg` コマンドを入力し、画面上の指示に従って操作します。 `FFmpeg` 実行ファイルのパスが `PATH` システム変数に追加されていることを確認します。
 
-FFmpeg を **Mac OS X 10.6** にインストールするには、事前にコンパイルされたバージョンを使用して、次の手順に従います。
+FFmpeg をにインストールするには、以下を実行します。 **macOS X 10.6**&#x200B;では、次の手順に従います。
 
 1. コンパイル済みバージョンをダウンロードします。
 1. `/usr/local` ディレクトリにアーカイブを解凍します。
-1. コンソールで、`sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg` を実行します。パスを適宜変更します。
+1. コンソールで、を実行します。 `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`. 必要に応じてパスを変更します。
 
 **AEM を設定**&#x200B;するには、次の手順に従います。
 
@@ -79,9 +75,9 @@ FFmpeg を **Mac OS X 10.6** にインストールするには、事前にコン
 
    >[!NOTE]
    >
-   >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイ／編集してください。そのようなリソースは SlingResourceMerger 経由で解決されません。
+   >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイして編集します。 このようなリソースは、SlingResourceMerger を介して解決されません。
 
-4. いずれかのプロパティを変更した場合は、「**[!UICONTROL すべて保存]**」をクリックします。
+4. いずれかのプロパティを変更した場合、 **[!UICONTROL すべて保存]**.
 
 >[!NOTE]
 >

@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience ManagerでのAdobe PhoneGap Enterprise 向けのオーサリング
-description: PhoneGap
+description: テンプレートとコンポーネントを使用したAdobe PhoneGap Enterprise でのオーサリング、ページの追加と編集、コンポーネントのドラッグ&ドロップ、メディアの追加について説明します。
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 930a6950-150a-4670-ab48-250b655132fb
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '228'
 ht-degree: 15%
 
 ---
@@ -28,9 +28,9 @@ Adobe Experience Manager(AEM)Mobile は、完全なAEMプラットフォーム�
 
 ## PhoneGap アプリケーションのオーサリング {#authoring-phonegap-applications}
 
-An ***AEM オーサー* ( または *マーケター*)**では、標準搭載のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこなえます。
+An ***AEM Author* ( または *マーケター*)**では、標準のテンプレートとコンポーネントを使用して、ページを追加および編集できます。 コンポーネントをドラッグ&amp;ドロップし、画像、ビデオ、テキストフラグメント（コンテンツフラグメント）を含むすべてのタイプのメディアを DAM から追加できます。
 
-使い始めるには、以下のリソースを参照してください。
+詳しくは、次のリソースを参照してください。
 
 * [モバイルアプリケーションのオーサリング](/help/mobile/phonegap-authoring-apps.md)
 * [アプリコンテンツの作成および管理](/help/mobile/phonegap-manage-app-content.md)
@@ -40,7 +40,7 @@ An ***AEM オーサー* ( または *マーケター*)**では、標準搭載の
 * [作成ウィザードを使用したAEM Mobileアプリの作成](/help/mobile/phonegap-create-new-app.md)
 * [既存のハイブリッドアプリの読み込み](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-詳しくは、 **コンテンツサービス**&#x200B;を参照してください。 [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md) をクリックして開始します。
+詳しくは、以下を参照してください。 **コンテンツサービス**&#x200B;を参照してください。 [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md) をクリックして開始します。
 
 ## その他のリソース {#additional-resources}
 

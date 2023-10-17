@@ -1,13 +1,13 @@
 ---
 title: コンテンツ配信
-description: コンテンツ配信
+description: Adobe Experience Managerのすべてのコンテンツを使用して、ターゲットアプリのエクスペリエンスを配信する方法について説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 85e73679-684e-402f-8186-8b56d8bd9372
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '978'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 Content Services の主な価値は、デバイス用に最適化されたアセットを返す機能です。 これにより、ローカルデバイスのストレージのニーズが減り、アプリのパフォーマンスが向上します。
 
-アセットの最適化は、API リクエストで提供される情報に基づくサーバー側の関数です。 可能な限り、アセットレンディションをキャッシュする必要があります。これにより、同様のリクエストでアセットレンディションを再生成する必要がなくなります。
+アセットの最適化は、API リクエストで提供される情報に基づくサーバー側の関数です。 可能な限り、アセットレンディションをキャッシュする必要があります。これにより、同様の要求でアセットレンディションを再生成する必要がなくなります。
 
 ### Assets ワークフロー {#assets-workflow}
 
@@ -127,15 +127,15 @@ AEM Content Services は、API を介してモバイルアプリにHTMLコンテ
 
 コンテンツは、いくつかの方法でアプリにアクセスできます。
 
-1. GETコンテンツ ZIP(AEM Over-the-Air 経由 )
+1. AEM Over-the-Air を介したGETコンテンツ ZIP
 
    * コンテンツ同期ハンドラーは、zip パッケージを直接更新するか、既存のコンテンツレンダラーを呼び出すことで更新できます
 
       * プラットフォームハンドラー
-      * AEM ハンドラー
+      * AEMハンドラー
       * カスタムハンドラー
 
-1. GETレンダラーを介した直接のデータコンテンツ
+1. GETレンダラーを介して直接コンテンツを作成する
 
    * デフォルトの Sling レンダラー（標準搭載）
    * AEM Mobile/Content Services コンテンツレンダラー
