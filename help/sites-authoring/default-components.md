@@ -1,12 +1,8 @@
 ---
 title: デフォルトコンポーネント
 description: Adobe Experience Managerには、すぐに使用できる様々なコンポーネントが付属しており、Web サイト作成者は包括的な機能を使用できます。
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 75%
@@ -41,13 +37,13 @@ Adobe Experience Manager(AEM) には、すぐに使用できる様々なコン�
 
 * **We.Retail**：[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用するためにプロキシ設定されたコアコンポーネントが含まれています。
 
-* **We.Retail コマース**：カートや商品グリッドなどのコマースコンポーネントが含まれています。
+* **We.Retail コマース**：買い物かごや商品グリッドなどのコマースコンポーネントが含まれています。
 
-* **一般**:レイアウトコンテナとエクスペリエンスフラグメントを含めます
+* **一般**：レイアウトコンテナとエクスペリエンスフラグメントを含めます
 
 ## 全コンポーネントの概要 {#overview-of-all-components}
 
-この [コンポーネントコンソール](/help/sites-authoring/default-components-console.md) では、コンポーネントグループと、AEMインストール環境で提供されるコンポーネントの概要を説明します。 個々のコンポーネントとその使用方法に関する主な情報を確認できます。
+The [コンポーネントコンソール](/help/sites-authoring/default-components-console.md) では、コンポーネントグループと、AEMインストール環境で提供されるコンポーネントの概要を説明します。 個々のコンポーネントとその使用方法に関する主な情報を確認できます。
 
 ## コンポーネント - 主な領域 {#components-major-areas}
 

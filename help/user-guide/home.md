@@ -1,9 +1,9 @@
 ---
 title: AEM 6.5 ユーザーガイドハブ
-description: AEM 6.5 の理解、インストール、管理および使用に関する重要なリソースの概要
+description: AEM 6.5 の理解、インストール、管理および使用に関する重要なリソースの概要。
 exl-id: 51788662-6214-408e-98d9-692950c366be
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
-workflow-type: ht
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 100%
 

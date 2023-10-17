@@ -1,20 +1,13 @@
 ---
 title: 翻訳するコンテンツの特定
-seo-title: Identifying Content to Translate
-description: 翻訳が必要なコンテンツを識別する方法を説明します。
-seo-description: Learn how to identify content that needs translating.
-uuid: 81b9575c-1c7a-4955-b03f-3f26cbd4f956
+description: Adobe Experience Managerで翻訳が必要なコンテンツを識別する方法を説明します。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
 feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 74%
+source-wordcount: '1153'
+ht-degree: 73%
 
 ---
 

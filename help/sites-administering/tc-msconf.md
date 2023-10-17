@@ -1,18 +1,13 @@
 ---
 title: Microsoft&reg; Translator への接続
-description: AEM を Microsoft® Translator に接続する方法について説明します。
-uuid: 5e3916ec-36a0-4d31-94ff-c340a462411a
+description: Adobe Experience ManagerをMicrosoft&reg; Translator に接続する方法を説明します。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: a7958411-b509-428e-bbe2-42efe8fd1add
 feature: Language Copy
 exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
-source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
-workflow-type: ht
-source-wordcount: '606'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '608'
+ht-degree: 98%
 
 ---
 

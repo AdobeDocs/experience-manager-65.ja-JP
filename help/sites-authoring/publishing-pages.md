@@ -1,18 +1,11 @@
 ---
 title: コンテンツページの公開
-description: コンテンツページの公開方法を説明します。
-uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
-docset: aem65
+description: Adobe Experience Manager 6.5 でコンテンツページを公開する方法を説明します。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1660'
-ht-degree: 96%
+source-wordcount: '1664'
+ht-degree: 95%
 
 ---
 

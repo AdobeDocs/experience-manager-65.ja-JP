@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5 実装ユーザーガイド
-seo-title: AEM 6.5 Implementation User Guide
-description: AEM 6.5 の実装方法の概要
-seo-description: An overview of how to implement AEM 6.5
+description: Adobe Experience Manager 6.5 を使用した実装および開発方法の概要です。
 exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: ht
-source-wordcount: '100'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 88%
 
 ---
 

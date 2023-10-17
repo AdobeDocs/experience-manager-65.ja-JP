@@ -2,15 +2,9 @@
 title: 関連する AEM コンテンツでの製品データのエンリッチメント
 description: マーケターが製品ページにマーケティングコンテンツを動的に追加することで、Adobe Experience Managerの関連コンテンツで製品データをエンリッチメントする方法を説明します。 これにより、マーケターは、画像やビデオなどの追加のコンテンツで特定の製品ページをターゲットにし、様々な可能性を開くことができます。
 sub-product: Commerce
-version: 6.5
-doc-type: feature-video
-activity: use
-audience: marketer
 feature: Commerce Integration Framework
-kt: 7065
-thumbnail: 333205.jpg
 exl-id: 1a069fbc-c036-419a-b585-6aa43e15de16
-source-git-commit: a600acb7d65fbfa1806ef582642a6c5ac7859890
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 87%

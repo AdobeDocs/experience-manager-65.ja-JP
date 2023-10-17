@@ -6,10 +6,8 @@ doc-type: technical-video
 activity: setup
 audience: administrator
 feature: Commerce Integration Framework
-kt: 3046
-thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 66%
@@ -24,7 +22,7 @@ AEM CIF コアコンポーネントは複数の AEM サイト構造で使用で�
 
 >[!VIDEO](https://video.tv.adobe.com/v/28952/?quality=12)
 
-地域とロケールをまたいでサイトをグローバルに管理するには、AEM Multi-Site Management 機能のライブコピーと言語コピーを Commerce Integration Framework と共に使用します。
+地域とロケールをまたいでサイトをグローバルに管理するには、Commerce integration frameworkと共にAEM Multi-Site Management 機能（ライブコピーと言語コピー）を使用します。
 
 推奨される設定は、AEMサイトとAdobe Commerceストア表示の間に 1 対 1 の関係を使用することです。
 

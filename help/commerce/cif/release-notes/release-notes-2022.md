@@ -1,11 +1,11 @@
 ---
 title: AEM Content and Commerce リリースノート 2022
-description: AEM Content and Commerce リリースノート 2022
+description: Adobe Experience Manager Content and Commerce リリースノート 2022.
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
-workflow-type: ht
-source-wordcount: '816'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '818'
+ht-degree: 99%
 
 ---
 

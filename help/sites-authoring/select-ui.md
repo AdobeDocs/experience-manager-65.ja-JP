@@ -1,16 +1,11 @@
 ---
 title: AEM でのユーザーインターフェイスの選択
-description: AEM での作業に使用するインターフェイスを設定します。
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: introduction
-content-type: reference
-docset: aem65
+description: Adobe Experience Manager 6.5 で動作させるために使用するインターフェイスを設定します。
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 43%
+source-wordcount: '735'
+ht-degree: 42%
 
 ---
 

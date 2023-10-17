@@ -1,14 +1,11 @@
 ---
 title: 概念
-description: Adobe Experience Managerとの e コマースの一般的な概念。
+description: e コマースとAdobe Experience Managerの一般的な概念について説明します。
 contentOwner: Guillaume Carlino
-topic-tags: e-commerce
-content-type: reference
-docset: aem65
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '4478'
+source-wordcount: '4480'
 ht-degree: 30%
 
 ---

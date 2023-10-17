@@ -1,18 +1,11 @@
 ---
 title: AEM でのコンテンツページのオーサリング
-description: コンテンツページのオーサリングに関連するタスクです。
-uuid: 454d94aa-da27-45cb-bbb2-7bfcef103806
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
-docset: aem65
+description: Adobe Experience Manager 6.5 でコンテンツページをオーサリングする際に必要なタスク。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 86%
+source-wordcount: '317'
+ht-degree: 82%
 
 ---
 

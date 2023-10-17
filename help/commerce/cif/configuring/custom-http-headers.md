@@ -1,11 +1,11 @@
 ---
 title: カスタム HTTP ヘッダー
-description: カスタム HTTP ヘッダーの設定
+description: Adobe Experience Manager Commerce でカスタム HTTP ヘッダーを設定する方法を説明します。
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 100%
+source-wordcount: '278'
+ht-degree: 95%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 100%
 >[!NOTE]
 >
 >開発者は、GraphQL クライアント設定を使用して、カスタム HTTP ヘッダーをいつでも設定できます。
+>
 
 ## 設定 {#configuration}
 

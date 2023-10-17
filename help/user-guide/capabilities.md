@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5 機能ユーザーガイド
-seo-title: AEM 6.5 Capabilities User Guide
-description: AEM 6.5 の基本的な機能の概要
-seo-description: An overview of the essential capabilities of AEM 6.5
+description: Adobe Experience Manager 6.5 の基本的な機能の概要です。
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '129'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 92%
 
 ---
 

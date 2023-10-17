@@ -1,21 +1,10 @@
 ---
 title: 基盤コンポーネント
-seo-title: Foundation Components
-description: 基盤コンポーネント
-seo-description: null
-uuid: 3caf9123-ae58-4590-af2f-57ef076daf7f
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-discoiquuid: ea2a523e-8d26-4be4-822f-35f153e40308
-docset: aem65
-legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
-pagetitle: Foundation Components
+description: Adobe Experience Manager 6.5 の基盤コンポーネントについて説明します。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '7198'
+source-wordcount: '7204'
 ht-degree: 97%
 
 ---

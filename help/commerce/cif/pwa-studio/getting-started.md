@@ -3,10 +3,9 @@ title: AEM Extension for PWA Studio の概要
 description: PWA Studio で、ヘッドレスの AEM Content and Commerce プロジェクトをデプロイする方法について説明します。
 topics: Commerce
 feature: Commerce Integration Framework
-thumbnail: 37843.jpg
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
-workflow-type: ht
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 100%
 
@@ -94,15 +93,15 @@ AEM コンテンツフラグメントのドキュメントに従って、AEM プ
 
 * Adobe Granite クロスオリジンリソース共有ポリシー（com.adobe.granite.cors.impl.CORSPolicyImpl）
 
-   `allowedorigin` プロパティに PWA アプリケーションの完全なホスト名を設定します。
+  `allowedorigin` プロパティに PWA アプリケーションの完全なホスト名を設定します。
 
-   例：`<https://pwa-studio-test-vflyn.local.pwadev:9366>`
+  例：`<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling Referrer Filter（org.apache.sling.security.impl.ReferrerFilter.cfg.json）
 
-   allow.hosts プロパティに PWA アプリケーションのホスト名を設定します。
+  allow.hosts プロパティに PWA アプリケーションのホスト名を設定します。
 
-   例：pwa-studio-test-vflyn.local.pwadev
+  例：pwa-studio-test-vflyn.local.pwadev
 
 両方の設定の完全な例については、<https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config> を参照してください。
 

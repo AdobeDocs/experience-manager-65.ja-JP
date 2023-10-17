@@ -1,28 +1,21 @@
 ---
 title: 翻訳するコンテンツの準備
-seo-title: Preparing Content for Translation
-description: 翻訳するコンテンツを準備する方法について説明します。
-seo-description: Learn how to prepare content for translation.
-uuid: 369630a8-2ed7-48db-973e-bd8213231d49
+description: Adobe Experience Managerで翻訳するコンテンツを準備する方法を説明します。
 contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 100%
+source-wordcount: '685'
+ht-degree: 61%
 
 ---
 
 # 翻訳するコンテンツの準備{#preparing-content-for-translation}
 
-通常、多言語の Web サイトは、ある程度の量のコンテンツを複数の言語で提供します。サイトは 1 つの言語でオーサリングされてから、他の言語に翻訳されます。通常、多言語サイトはページのブランチで構成されます。各ブランチには、異なる言語のサイトのページが含まれています。
+通常、多言語の Web サイトでは、多言語のコンテンツがいくつか提供されます。 サイトは 1 つの言語で作成され、他の言語に翻訳されます。 一般に、多言語サイトはページのブランチで構成され、各ブランチには異なる言語のサイトのページが含まれます。
 
-サンプルの Geometrixx Demo Site には、複数の言語ブランチが含まれています。使用される構造は次のとおりです。
+サンプルのGeometrixxデモサイトには、複数の言語ブランチが含まれ、次の構造を使用します。
 
 ```xml
 /content
@@ -36,7 +29,7 @@ ht-degree: 100%
              |- zh
 ```
 
-サイトの各言語ブランチは言語コピーと呼ばれます。言語コピーのルートページ（言語ルート）では、言語コピー内のコンテンツの言語を識別します。例えば、`/content/geometrixx/fr` は、フランス語の言語コピー用の言語ルートです。ソースサイトの翻訳の実行時に適切な言語がターゲットになるように、言語コピーでは、[正しく設定された言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root)を使用する必要があります。
+サイトの各言語ブランチは、言語コピーと呼ばれます。 言語コピーのルートページ（言語ルート）は、言語コピー内のコンテンツの言語を識別します。 例えば、`/content/geometrixx/fr` は、フランス語の言語コピー用の言語ルートです。ソースサイトの翻訳の実行時に適切な言語がターゲットになるように、言語コピーでは、[正しく設定された言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root)を使用する必要があります。
 
 サイトのコンテンツを最初にオーサリングするための言語コピーが言語マスターです。言語マスターは、他の言語に翻訳されるソースです。
 
@@ -44,13 +37,13 @@ ht-degree: 100%
 
 1. 言語マスターの言語ルートを作成します。例えば、英語の Geometrixx Demo Site の言語ルートは /content/geometrixx/en です。[言語ルートの作成](/help/sites-administering/tc-prep.md#creating-a-language-root)に記載の情報に従って言語ルートが正しく設定されていることを確認してください。
 1. 言語マスターのコンテンツをオーサリングします。
-1. サイトの各言語コピーの言語ルートを作成します。例えば、Geometrixx のサンプルサイトのフランス語の言語コピーは /content/geometrixx/fr です。
+1. サイトの各言語コピーの言語ルートを作成します。例えば、Geometrixxサンプルサイトのフランス語の言語コピーは/content/geometrixx/fr です。
 
 翻訳するコンテンツの準備が完了したら、言語コピーおよび関連する翻訳プロジェクトの不足ページを自動的に作成できます（[翻訳プロジェクトの作成](/help/sites-administering/tc-manage.md)を参照）。AEM のコンテンツ翻訳プロセスの概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
 ## 言語ルートの作成 {#creating-a-language-root}
 
-コンテンツの言語を識別する言語コピーのルートページとして言語ルートを作成します。言語ルートを作成したら、言語コピーを含む翻訳プロジェクトを作成できます。
+コンテンツの言語を識別する言語コピーのルートページとして言語ルートを作成します。 言語ルートを作成したら、その言語コピーを含む翻訳プロジェクトを作成できます。
 
 言語ルートを作成するには、ページを作成し、「名前」プロパティの値として ISO 言語コードを使用します。言語コードは次のどちらかの形式にしてください。
 
@@ -58,14 +51,14 @@ ht-degree: 100%
 
 * `<language-code>_<country-code>` または `<language-code>-<country-code>` サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです（例：`en_US`、`en_us`、`en_GB`、`en-gb`）。
 
-グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。「名前」プロパティは、リポジトリ内の page ノードの名前として使用されます。そのため、このプロパティによってページのパスが指定されます（http://localhost:4502/content/geometrixx/fr.html）。
+グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。Name プロパティはリポジトリ内のページノードの名前として使用されるので、ページのパスを決定します。 (http://localhost:4502/content/geometrixx/fr.html)
 
-次の手順では、タッチ操作向け UI を使用して Web サイトの言語コピーを作成します。クラシック UI を使用する手順については、[クラシック UI による言語ルートの作成](/help/sites-administering/tc-lroot-classic.md)を参照してください。
+次の手順では、タッチ操作向け UI を使用して、Web サイトの言語コピーを作成します。 クラシック UI の使用手順については、 [クラシック UI を使用した言語ルートの作成](/help/sites-administering/tc-lroot-classic.md).
 
-1. サイトに移動します。
+1. Sites に移動します。
 1. 言語コピーを作成するサイトをクリックまたはタップします。
 
-   例えば、Geometrixx Outdoors サイトの言語コピーを作成するには、「Geometrixx Outdoors Site」をクリックまたはタップします。
+   例えば、Geometrixx Outdoorsサイトの言語コピーを作成するには、「Geometrixx Outdoorsサイト」をクリックまたはタップします。
 
 1. 「作成」をクリックまたはタップして、「ページを作成」をクリックまたはタップします。
 
@@ -80,7 +73,7 @@ ht-degree: 100%
 
 ## 言語ルートのステータスの確認 {#seeing-the-status-of-language-roots}
 
-タッチ操作向け UI には参照パネルがあります。このパネルには、作成された言語ルートのリストが表示されます。
+タッチ操作向け UI には参照パネルがあり、作成された言語ルートのリストが表示されます。
 
 ![chlimage_1-23](assets/chlimage_1-23a.png)
 

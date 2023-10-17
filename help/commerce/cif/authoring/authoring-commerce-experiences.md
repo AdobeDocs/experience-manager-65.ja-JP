@@ -1,11 +1,11 @@
 ---
 title: コマースエクスペリエンスのオーサリング
-description: コマースエクスペリエンスの作業
+description: CIFアドオンは、コマース固有の機能を使用してAdobe Experience Managerオーサリングを拡張します。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 95%
+source-wordcount: '713'
+ht-degree: 94%
 
 ---
 

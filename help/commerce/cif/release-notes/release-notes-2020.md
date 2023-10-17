@@ -1,11 +1,11 @@
 ---
 title: AEM Content and Commerce リリースノート 2020
-description: AEM Content and Commerce リリースノート 2020
+description: Adobe Experience Manager Content and Commerce リリースノート 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 69%
+source-wordcount: '1354'
+ht-degree: 68%
 
 ---
 
@@ -189,7 +189,7 @@ ht-degree: 69%
 
 ### 新機能 {#what-is-new-april}
 
-* CIF コネクタの設定は統合され、簡素化されています。 詳しくは、 [はじめに](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=ja) または[新しい AEM CIF プロジェクト設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=ja)を参照してください。
+* CIF Connector の設定は統合され、シンプル化されています。 詳しくは、 [はじめに](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=ja) または[新しい AEM CIF プロジェクト設定](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=ja)を参照してください。
 
 ### 改善点 {#what-is-improved-april}
 

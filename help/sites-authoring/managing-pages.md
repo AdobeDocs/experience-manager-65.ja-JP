@@ -1,10 +1,10 @@
 ---
 title: AEM を使用したページの作成と整理
-description: AEM でページを作成および整理する方法
+description: Adobe Experience Managerでページを作成および管理する方法について説明します。
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2526'
 ht-degree: 99%
 
 ---

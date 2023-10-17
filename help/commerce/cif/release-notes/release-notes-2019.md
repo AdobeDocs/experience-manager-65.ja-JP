@@ -1,10 +1,10 @@
 ---
 title: AEM Content and Commerce リリースノート 2019
-description: AEM Content and Commerce リリースノート 2019
+description: Adobe Experience Manager Content and Commerce リリースノート 2019.
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '992'
 ht-degree: 75%
 
 ---
@@ -91,7 +91,7 @@ ht-degree: 75%
 
 ### 新機能 {#what-is-new-august}
 
-* CIF アーキタイプへの CIF コネクタの埋め込みはオプションになり、開発者がより柔軟におこなうことができます。
+* CIFアーキタイプへのCIFコネクタの埋め込みはオプションになり、開発者がより柔軟におこなうことができます。
 
 * CIF コンポーネントは、「Venia」固有の CSS スタイル設定から切り離されているので、開発者は選択した CSS スタイル設定を適用できます。
 

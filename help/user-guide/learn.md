@@ -1,11 +1,9 @@
 ---
 title: Adobe Experience Manager 6.5 の機能について
-seo-title: Learn about Adobe Experience Manager 6.5 Capabilities
-description: Adobe Experience Manager 6.5 の重要な機能について説明します
-seo-description: An description of the essential capabilities of Adobe Experience Manager 6.5
+description: Adobe Experience Manager 6.5 の重要な機能について説明します。
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 100%
 

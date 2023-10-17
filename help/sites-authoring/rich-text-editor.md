@@ -1,18 +1,11 @@
 ---
 title: リッチテキストエディターを使用したコンテンツのオーサリング
-seo-title: Using the Rich Text Editor to Author Content
-description: リッチテキストエディターを使用したコンテンツのオーサリング
-seo-description: Using the Rich Text Editor to Author Content
-uuid: 70f4d4b2-cbc6-4fef-9262-1696804008d8
-contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
-docset: aem65
+description: リッチテキストエディターを使用したコンテンツのオーサリング Adobe Experience Manager 6.5 のバージョン。
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 96%
+source-wordcount: '267'
+ht-degree: 95%
 
 ---
 

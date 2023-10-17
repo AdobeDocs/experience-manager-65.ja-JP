@@ -1,17 +1,9 @@
 ---
 title: 翻訳のベストプラクティス
-seo-title: Translation Best Practices
 description: 翻訳プロジェクトの立ち上げと実行に役立つ、Adobeエンジニアリングチームとコンサルティングチームがコンパイルしたベストプラクティスを見つけます。
-seo-description: Find best practices compiled by Adobe engineering and consulting teams to help you get up and running with translation projects.
-uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features, best-practices
-content-type: reference
-discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 feature: Language Copy
 exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 61%
@@ -39,7 +31,7 @@ ht-degree: 61%
 * ベストプラクティスは、 **言語ベースの構造** トップレベルのオーサリングサイトと国のサイトの間のレベルは 3 つまでです。
 * 次の言語/国のサイト命名規則を使用します。 **W3C 規格**.
 * コンテンツを地域や国別に配信する方法を指定します。 言語を共有する国を検討します。 言語マスター（非アクティブ化ページのレイヤー）を作成し、翻訳済みのコンテンツをレビューおよび変更して、その言語を共有する国のサイトにプッシュまたはプルできるようにすることをお勧めします。
-* 言語マスターを作成する方法は 2 つあります。言語コピーの使用、および MSM/ライブコピーの使用。
+* 言語マスターを作成する方法は、言語コピーの使用と MSM/ライブコピーの使用の 2 つです。
 
    * 言語コピーアプローチは、AEMの標準の翻訳統合フレームワークで使用されるアプローチなので、最も簡単に開始できます。 このフレームワークは、メイン言語マスター（例えば英語）からその他の言語マスターへコンテンツの変更を反映させて、翻訳することを初期段階で容易にするユーザーインターフェイスを提供します。ただし、プロジェクトが拡大するにつれ、増えたページ数や言語数の翻訳を管理するために、ワークフローの自動化がますます必要になります。
    * MSM/ライブコピーアプローチは、サイトがより大きく複雑な高度なユースケースの代わりに使用できる場合があります。 英語と言語マスターの間の複雑な継承関係を処理し、既存の翻訳を上書きするリスクを軽減するには、最初から強力なガバナンスとワークフローの自動化が必要です。 これには、いくつかの翻訳コネクタを利用して対応できます。詳しくは、[MSM と多言語サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)を参照してください。

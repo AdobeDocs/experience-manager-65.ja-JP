@@ -1,16 +1,10 @@
 ---
 title: デザインモードでのデフォルトのコンポーネントの設定
-description: デザインモードでのコンポーネントの設定
-uuid: b9c9792d-4398-446d-8767-44d4e7ce9a2e
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
-discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
+description: デザインモードでのAdobe Experience Managerコンポーネントの設定
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '915'
 ht-degree: 94%
 
 ---

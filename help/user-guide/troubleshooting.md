@@ -1,11 +1,11 @@
 ---
 title: AEM のトラブルシューティング
-description: AEM のトラブルシューティング
+description: Adobe Experience Manager 6.5 のパフォーマンスと問題のトラブルシューティング。
 exl-id: f7a220bf-0b0c-4d16-824d-dad7d86c01c9
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '59'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 89%
 
 ---
 

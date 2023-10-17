@@ -1,11 +1,11 @@
 ---
 title: AEM CIF Classic
-description: AEM CIF Classic に関するセルフヘルプリソースおよびドキュメントリンク
+description: Adobe Experience Manager CIF Classic のセルフヘルプリソースおよびドキュメントリンクです。
 exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 100%
+source-wordcount: '54'
+ht-degree: 81%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 100%
 >* 新規プロジェクトでは、 [AEM CIF](/help/commerce/home.md) を使用してください。
 >* 既存の CIF Classic は [AEM CIF に移行](/help/commerce/cif/migration.md)する必要があります。
 >
-
 
 ## CIF Classic に関する主要な記事 {#key-articles}
 

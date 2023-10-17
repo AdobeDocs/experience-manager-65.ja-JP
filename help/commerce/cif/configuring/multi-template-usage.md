@@ -6,10 +6,8 @@ doc-type: feature-video
 activity: use
 audience: marketer
 feature: Commerce Integration Framework
-kt: 3455
-thumbnail: 28969.jpg
 exl-id: 09e986c4-16b9-4ef5-a0b3-8d65b17a7f2c
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 100%

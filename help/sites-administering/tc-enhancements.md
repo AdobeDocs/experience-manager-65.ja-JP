@@ -1,25 +1,20 @@
 ---
-title: 翻訳の機能強化
-seo-title: Translation Enhancements
-description: AEM の翻訳の機能強化です。
-seo-description: Translation enhancements in AEM.
-uuid: 0563603f-327b-48f1-ac14-6777c06734b9
-products: SG_EXPERIENCEMANAGER/6.5/SITES
+title: 翻訳機能の強化
+description: AEM翻訳管理機能の段階的な機能強化と絞り込み。
 topic-tags: site-features
 content-type: reference
-discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
-workflow-type: ht
-source-wordcount: '681'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '686'
+ht-degree: 83%
 
 ---
 
 # 翻訳の機能強化{#translation-enhancements}
 
-ここでは、AEM 翻訳管理機能に対する増分的機能強化と調整について説明します。
+このページでは、AEM翻訳管理機能の段階的な機能強化と絞り込みについて説明します。
 
 ## 翻訳プロジェクトの自動化 {#translation-project-automation}
 
@@ -69,7 +64,7 @@ ht-degree: 100%
 
    ![screen_shot_2018-04-22at234430](assets/screen_shot_2018-04-22at234430.jpg)
 
-1. リストビューでは、編集されたすべてのテキストコンポーネントについて、ソースと翻訳が横に並んで比較表示されます。翻訳メモリに同期する必要がある翻訳の更新を選択して、「**メモリを更新**」を選択します。
+1. リスト表示では、編集されたすべてのテキストコンポーネントについて、ソースと翻訳が横に並んで比較表示されます。翻訳メモリに同期する必要がある翻訳の更新を選択して、「**メモリを更新**」を選択します。
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
@@ -96,7 +91,7 @@ AEM は、設定済みの TMS の翻訳メモリ内の既存の文字列の翻�
 
 >[!CAUTION]
 >
->1 レベルのみ許可されます。例えば、次の場合、「es」ページを言語コピーとして解釈できません。
+>1 レベルのみ許可されます。例えば、次の場合は、「es」ページで言語コピーを解決できません。
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
@@ -105,13 +100,13 @@ AEM は、設定済みの TMS の翻訳メモリ内の既存の文字列の翻�
 
 >[!NOTE]
 >
->言語ルートは、言語の ISO コードだけでなく、任意のページ名を持つことができます。AEM は常に最初にパスと名前を確認しますが、ページ名で言語が識別されない場合は、ページの cq:language プロパティを確認して言語を識別します。
+>言語ルートには、言語の ISO コードだけでなく、任意のページ名を含めることができます。 AEMは常に最初にパスと名前を確認しますが、ページ名が言語を識別しない場合は、AEMはページの cq:language プロパティで言語識別を確認します。
 
 ## 翻訳ステータスのレポート {#translation-status-reporting}
 
-ページが翻訳済みである、翻訳中である、またはまだ翻訳されていないことを示すプロパティが、Sites のリストビューで選択できるようになりました。プロパティを表示するには：
+ページが翻訳済みか、翻訳中か、またはまだ翻訳されていないかを示すプロパティをサイトリスト表示で選択できるようになりました。 プロパティを表示するには：
 
-1. Sites で、**リストビュー**&#x200B;に切り替えます。
+1. Sites で、**リスト表示**&#x200B;に切り替えます。
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 

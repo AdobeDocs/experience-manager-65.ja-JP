@@ -1,14 +1,13 @@
 ---
 title: フォルダーへの翻訳クラウドサービスの適用
-description: フォルダーへの翻訳クラウドサービスの適用
-contentOwner: AG
+description: フォルダーへの翻訳クラウドサービスの適用 Adobe Experience Managerで
 role: Admin
 feature: Translation
 exl-id: f17a33d7-eb2f-406b-8d6c-a3bf564c8702
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 100%
+source-wordcount: '389'
+ht-degree: 98%
 
 ---
 

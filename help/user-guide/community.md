@@ -1,11 +1,11 @@
 ---
 title: AEM コミュニティ
-description: AEM コミュニティ
+description: Adobe Experience Managerコミュニティを検出し、連携を作成します。
 exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
-workflow-type: ht
-source-wordcount: '316'
-ht-degree: 100%
+source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 96%
 
 ---
 
