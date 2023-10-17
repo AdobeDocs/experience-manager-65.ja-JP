@@ -1,19 +1,15 @@
 ---
 title: コンテキスト内モデレート
-seo-title: In-Context Moderation
-description: モデレーターの操作を実行する方法
-seo-description: How to perform moderator actions
-uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
+description: 管理者と信頼できるコミュニティメンバーがAdobe Experience Manager Communities でモデレーターアクションを実行する方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -40,11 +36,11 @@ AEM Communitiesの場合、管理者や信頼できるコミュニティメン�
 
 ## 例 {#example}
 
-の使用 [Geometrixxエンゲージ](http://localhost:4503/content/sites/engage/en.html) 次の場合に作成されたサイト [AEM Communitiesの概要](getting-started.md)を使用すると、次に示すように、パブリッシュ環境で様々なモデレートアクティビティを体験できるフォーラムに、スレッドをすばやく設定できます。
+の使用 [Geometrixxエンゲージ](http://localhost:4503/content/sites/engage/en.html) 次の場合に作成されたサイト [AEM Communitiesの概要](getting-started.md)を使用すると、フォーラムにスレッドを設定して、パブリッシュ環境で様々なモデレートアクティビティを体験することができます。 以下を参照してください。
 
-Aaron McDonald(aaron.mcdonald@mailinator.com) は、サイトの作成時に community-engage-moderators グループに追加することで、信頼できるコミュニティメンバーとして識別されました。
+Aaron McDonald (`aaron.mcdonald@mailinator.com`) は、サイトの作成時に community-engage-moderators グループに追加することで、信頼できるコミュニティメンバーとして識別されました。
 
-Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソール](members.md).
+Rebekah Larsen (`rebekah.larsen@trashymail.com`) は、 [メンバーコンソール](members.md).
 
 コミュニティユーザーグループについて詳しくは、 [ユーザーとユーザーグループの管理](users.md).
 
@@ -60,7 +56,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソー�
 
    * 本文のテキストを入力
 
-     毎年ハチドリの餌を吊り上げる時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ 早く変更する必要がありますか？
+     毎年ハチドリの餌を吊り上げる時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ もっと早く変更しなければなりませんか？
 
    * 投稿を選択
    * ログアウトを選択
@@ -136,7 +132,7 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 ### コミュニティモデレーター (#2) {#community-moderator}
 
-コミュニティモデレーターの Aaron McDonald(aaron.mcdonal@mailinator.com) としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「詳細を表示」を選択します。
+Aaron McDonald (`aaron.mcdonal@mailinator.com`) をクリックし、コミュニティモデレーターを選択して、「フォーラム」を選択し、Hummingbird の投稿の「詳細を表示」を選択してスレッドにアクセスします。
 
 注意:
 
@@ -151,7 +147,7 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 コミュニティモデレーターの場合、GeometrixxEngage コミュニティサイトからのモデレート可能なコンテンツのみが表示されます。
 
-コミュニティモデレーターには、管理者と同じオプション（画像は検索サイドバーを閉じた状態です）がありますが、他のAEMコンソールにはアクセスできません。
+コミュニティモデレーターには、管理者と同じオプション（画像は検索サイドバーを閉じた状態で表示）がありますが、他のAEMコンソールにはアクセスできません。
 
 ログアウト.
 
@@ -159,7 +155,7 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 ### コンテンツ作成者 (#1) {#content-author}
 
-スレッドを開始したコミュニティメンバーである Rebekah Larsen(rebekah.larsen@mailinator.com) としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「続きを読む」を選択します。
+Rebekah Larsen (`rebekah.larsen@mailinator.com`) をクリックし、スレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「詳細を表示」を選択します。
 
 注意:
 

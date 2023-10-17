@@ -1,6 +1,6 @@
 ---
 title: メールの設定
-description: コミュニティの電子メール設定
+description: Adobe Experience Manager Communities の電子メール通知と購読を設定する方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '824'
 ht-degree: 6%
 
 ---
