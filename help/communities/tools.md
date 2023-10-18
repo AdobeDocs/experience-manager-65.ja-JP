@@ -1,21 +1,17 @@
 ---
 title: コミュニティツール
-seo-title: Communities Tools
-description: コミュニティツールコンソールにアクセスする方法
-seo-description: How to access Communities Tools console
-uuid: 3172fe00-7132-4cee-9fd1-b6f96eb43200
+description: オーサーインスタンスを使用してコミュニティツールコンソールにアクセスする方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 role: Admin
 exl-id: ba6c4ad3-c393-42d8-9f1f-d59947c3e7ab
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 10%
+source-wordcount: '112'
+ht-degree: 4%
 
 ---
 
@@ -23,9 +19,9 @@ ht-degree: 10%
 
 コミュニティツールコンソールにアクセスするには、オーサーインスタンスにログインします。
 
-* グローバルナビゲーションから： **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**.
+* グローバルナビゲーションから： **[!UICONTROL ツール]** > **[!UICONTROL Communities]**.
 
-   ![コミュニティ](assets/communities-home.png)
+  ![コミュニティ](assets/communities-home.png)
 
 * [サイトテンプレート](sites.md)  — サイトテンプレートの作成と管理を行うコンソール。
 

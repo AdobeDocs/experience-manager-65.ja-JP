@@ -1,6 +1,6 @@
 ---
 title: コミュニティサイトコンソール
-description: コミュニティサイトコンソールへのアクセス方法
+description: コミュニティサイトコンソールにアクセスして、サイトの作成、編集、管理を行う方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3089'
 ht-degree: 4%
 
 ---
@@ -149,7 +149,7 @@ ht-degree: 4%
 
 ### 手順 3 ：設定 {#step-settings}
 
-設定パネルには、サイトを作成する前の手順に進む前に設定する必要のあるサブパネルの表示機能がいくつか含まれています。
+設定パネルには、サイトを作成する最後の手順に進む前に設定する必要のある機能を示すサブパネルがいくつか含まれています。
 
 * [ユーザー管理](#user-management)
 * [タグ付け](#tagging)
@@ -162,7 +162,7 @@ ht-degree: 4%
 >
 >**トンネルサービスを有効にする**
 >
->「設定」サブパネルの一部では、UGC のモデレート、グループの管理、パブリッシュ環境でのイネーブルメントリソースの連絡先など、信頼できるメンバーの割り当てが可能です。
+>いくつかの設定サブパネルを使用すると、信頼されたメンバーを割り当てて、UGC のモデレート、グループの管理、パブリッシュ環境でのイネーブルメントリソースの連絡先にすることができます。
 >
 >この規則は、パブリッシュ側で使用されます。 [ユーザーとユーザーグループ](/help/communities/users.md) （メンバーとメンバーグループ）をオーサー環境で複製しないようにする必要があります。
 >
@@ -450,7 +450,7 @@ The [コミュニティメンバーの役割](/help/communities/users.md) はこ
 
 ### 設定を変更 {#modify-settings}
 
-設定パネルを使用すると、コミュニティサイト作成の手順 3 のサブパネルにあるほとんどの設定にアクセスできます。
+設定パネルを使用すると、コミュニティサイト作成の手順 3 のサブパネルの下にあるほとんどの設定にアクセスできます。
 
 * [ユーザー管理](#user-management)
 * [タグ](#tagging)
@@ -529,7 +529,7 @@ UGC はサイトパッケージに含まれていません。
 
   `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
-  例：
+  次に例を示します。
   `/content/sites/engage/en/signin:/content/sites/engage/en`
 
 * 「**保存**」を選択します。
