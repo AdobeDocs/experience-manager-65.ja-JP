@@ -1,20 +1,16 @@
 ---
 title: コミュニティコンポーネント
-seo-title: Communities Components
-description: 任意のAEMサイトへのコミュニティ機能の追加
-seo-description: Adding community features to any AEM site
-uuid: 76824820-81e9-4192-8df3-dff55eaf144e
+description: AEM Communitiesのライセンスを取得する場合、標準のAEMオーサリングツールを使用して、任意のAEMサイトにコミュニティ機能を追加できます。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 35%
+source-wordcount: '293'
+ht-degree: 33%
 
 ---
 
@@ -43,7 +39,7 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 >
 >読み取り [コミュニティコンポーネントの基本](/help/communities/basics.md) コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれているので、
 
-| **コンポーネントタイトル** | **機能** |
+| **コンポーネントのタイトル** | **機能** |
 |---|---|
 | アクティビティストリーム | [アクティビティストリーム](/help/communities/activities.md) |
 | ブログ | [ブログ](/help/communities/blog-feature.md) |
@@ -80,8 +76,8 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 訪問 [コミュニティのデプロイ](/help/communities/deploy-communities.md) を参照して、推奨されるデプロイメントについて確認してください。
+* 訪問 [コミュニティのデプロイ](/help/communities/deploy-communities.md) ここで、推奨されるデプロイメントについて説明します。
 
 * 訪問 [コミュニティサイトの管理](/help/communities/administer-landing.md) コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、メッセージングの設定について説明します。
 
-* 訪問 [コミュニティの開発](/help/communities/communities.md) ソーシャルコンポーネントフレームワーク (SCF) と、コミュニティのコンポーネントと機能のカスタマイズについて説明します。
+* 訪問 [コミュニティの開発](/help/communities/communities.md) ここでは、ソーシャルコンポーネントフレームワーク (SCF) とコミュニティのコンポーネントおよび機能のカスタマイズについて学習できます。

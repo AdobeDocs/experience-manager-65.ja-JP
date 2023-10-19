@@ -1,15 +1,15 @@
 ---
 title: コミュニティグループ
-description: コミュニティグループの作成
+description: コミュニティグループ機能を使用して、パブリッシュとオーサーの権限を持つユーザーがコミュニティサイト内にサブコミュニティを動的に作成する方法を説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: edcda6cb-df47-4afe-8a9a-82d8e386fe05
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '555'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ A [コミュニティグループテンプレート](/help/communities/tools-gro
 
 ![new-group](assets/new-group.png)
 
-次の項目を選択した場合： **新しいグループ** アイコンをクリックすると、編集ダイアログが開きます。
+次の項目を選択した場合： **新しいグループ** アイコンをクリックすると、編集ダイアログボックスが開きます。
 
 の下 **設定** 「 」タブでは、グループの基本機能を使用できます。
 
@@ -74,7 +74,7 @@ A [コミュニティグループテンプレート](/help/communities/tools-gro
 
 次を選択して **グループを作成**&#x200B;をクリックした場合、グループのページは選択したテンプレートに基づいて作成され、ユーザーグループがメンバーシップ用に作成され、グループページが更新されて新しいサブコミュニティが表示されます。
 
-例えば、画像のサムネールがアップロードされた新しいサブコミュニティ「Focus Group」が付いたグループページは、次のように表示されます（コミュニティグループ管理者としてサインインしたまま）。
+例えば、画像のサムネールがアップロードされた「フォーカスグループ」という新しいサブコミュニティがあるグループページは、次のように表示されます（コミュニティグループ管理者としてサインインしたまま）。
 
 ![group-page](assets/group-page.png)
 
