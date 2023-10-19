@@ -1,16 +1,16 @@
 ---
 title: AEM Commerce - GDPR 対応
 seo-title: AEM Commerce - GDPR Readiness
-description: AEM Commerce で GDPR 要求を処理する手順とその使用方法について説明します。
+description: AEM Commerce で GDPR リクエストを処理する手順とその使用方法について説明します。
 seo-description: null
 uuid: 7ca26587-8cce-4c75-8629-e0e5cfb8166c
 contentOwner: carlino
 discoiquuid: c637964a-dfcb-41fe-9c92-934620fe2cb3
 exl-id: 3a483b9d-627a-41d3-8ac1-66f9c5e89ad5
 source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
