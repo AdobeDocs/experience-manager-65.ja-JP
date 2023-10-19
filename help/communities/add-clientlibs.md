@@ -1,15 +1,15 @@
 ---
 title: clientlib の追加
-description: ClientLibraryFolder の追加
+description: サイトのページをレンダリングするために使用する JavaScript およびカスケードスタイルシートを含めるために使用する ClientLibraryFolder(clientlibs) を追加する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '701'
 ht-degree: 3%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 3%
 
 ## ClientLibraryFolder(clientlibs) の追加 {#add-a-clientlibraryfolder-clientlibs}
 
-という名前の ClientLibraryFolder を作成します。 `clientlibs` サイトのページをレンダリングするために使用される JS と CSS を含む
+という名前の ClientLibraryFolder を作成します。 `clientlibs` サイトのページをレンダリングするために使用される JavaScript(JS) およびカスケーディングスタイルシート (CSS) を含む
 
-この `categories` このクライアントライブラリに与えられるプロパティ値は、コンテンツページからこの clientlib を直接含めたり、他の clientlib に埋め込んだりするために使用される識別子です。
+The `categories` このクライアントライブラリに与えられるプロパティ値は、コンテンツページからこの clientlib を直接含めたり、他の clientlib に埋め込んだりするために使用される識別子です。
 
 1. 使用 **CRXDE Lite**、展開 `/etc/designs`
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ![add-client-library](assets/add-client-library.png)
 
-内 **プロパティ** 新しい `clientlibs` ノードに、 **カテゴリ** プロパティ：
+Adobe Analytics の **プロパティ** 新しい `clientlibs` ノードに、 **カテゴリ** プロパティ：
 
 * 名前：**categories**
 * タイプ：**String**
@@ -41,7 +41,7 @@ ht-degree: 3%
 * クリック **追加**
 * クリック **すべて保存**
 
-注意：categories 値の前に「apps」を付けます。 は、「所有アプリケーション」が/libs ではなく/apps フォルダー内にあることを識別する規則です。 重要：プレースホルダーを追加 `js.tx`t および **`css.txt`** ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
+注意： categories 値の前に「apps」を付けます。 は、「所有アプリケーション」が/libs ではなく/apps フォルダー内にあることを識別する規則です。 重要：プレースホルダーを追加 `js.tx`t および **`css.txt`** ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
 
 1. 右クリック **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選択 **ファイルを作成…**
@@ -71,9 +71,9 @@ css.txt の内容を次のように設定してみてください。
 
 ### SCF Clientlibs を埋め込む {#embed-scf-clientlibs}
 
-内 **プロパティ** タブ `clientlibs` ノードで、複数値の String プロパティを入力します。 **埋め込み**. これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要なクライアントライブラリの多くが追加されています。
+Adobe Analytics の **プロパティ** タブ `clientlibs` ノードで、複数値の String プロパティを入力します。 **埋め込み**. これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要なクライアントライブラリの多くが追加されています。
 
-すべてのページにダウンロードされる clientlib の利便性とサイズ/速度に関する考慮事項があるので、実稼動サイトで使用する方法にはこの方法が望ましい場合とそうでない場合があります。
+各ページにダウンロードされる clientlib の利便性とサイズ/速度に関する考慮事項があるので、実稼動サイトで使用する方法にはこの方法が望ましい場合とそうでない場合があります。
 
 1 つのページで 1 つの機能のみを使用する場合、その機能の完全な clientlib をそのページに直接組み込むことができます（例： ）。
 
@@ -106,7 +106,7 @@ css.txt の内容を次のように設定してみてください。
 
 ### PlayPage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
-を含めずに、 `apps.an-scf-sandbox` 必要な JavaScript とスタイルが使用できないので、ページの ClientLibraryFolder カテゴリ、SCF コンポーネントは機能せず、スタイルも設定されません。
+を含めずに、 `apps.an-scf-sandbox` 必要な JavaScript および CSS スタイルを使用できないので、ページの ClientLibraryFolder カテゴリ、SCF コンポーネントは機能しないか、スタイル設定されていません。
 
 例えば、clientlibs を含めないと、SCF コメントコンポーネントはスタイル設定されていない状態で表示されます。
 
@@ -116,7 +116,7 @@ apps.an-scf-sandbox clientlibs を含めると、 SCF コメントコンポー�
 
 ![clientlibs-comment-styled](assets/clientlibs-comment1.png)
 
-include ステートメントは、 `head` セクション `html` スクリプト デフォルト **`foundation head.jsp`** には、オーバーレイ可能なスクリプトが含まれています。 **`headlibs.jsp`**.
+include ステートメントは、 `head` のセクション `html` スクリプト。 デフォルト **`foundation head.jsp`** には、オーバーレイ可能なスクリプトが含まれています。 **`headlibs.jsp`**.
 
 **headlibs.jsp をコピーし、clientlibs を含めます。**
 
@@ -125,7 +125,7 @@ include ステートメントは、 `head` セクション `html` スクリプ�
 1. 右クリックして「 」を選択します。 **コピー** （または、ツールバーから「コピー」を選択します）。
 1. **`/apps/an-scf-sandbox/components/playpage`** を選択します。
 1. 右クリックして「 」を選択します。 **貼り付け** （または、ツールバーから「貼り付け」を選択します）。
-1. ダブルクリック **`headlibs.jsp`** 開ける
+1. ダブルクリック **`headlibs.jsp`** 開けるように
 1. ファイルの末尾に次の行を追加します。
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
@@ -149,7 +149,7 @@ include ステートメントは、 `head` セクション `html` スクリプ�
 
 ### これまでの作業の保存 {#saving-your-work-so-far}
 
-この時点で、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにし、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールします。
+この時点で、最小限のサンドボックスが存在します。 再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにできるように、パッケージとして保存する価値がある場合があります。 次に、フォルダー crx-quickstart/の名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールします。これらの最も基本的な手順を繰り返す必要はありません。
 
 このパッケージは、 [サンプルページの作成](/help/communities/create-sample-page.md) 飛び込んで遊び始めるのを待ちきれない人向けのチュートリアル！
 
@@ -158,8 +158,8 @@ include ステートメントは、 `head` セクション `html` スクリプ�
 * CRXDE Liteで、 [パッケージアイコン](https://localhost:4502/crx/packmgr/)
 * クリック **パッケージを作成**
 
-   * パッケージ名：an-scf-sandbox-minimal-pkg
-   * バージョン：0.1
+   * パッケージ名： an-scf-sandbox-minimal-pkg
+   * バージョン： 0.1
    * グループ：`leave as default`
    * クリック **OK**
 
@@ -181,4 +181,4 @@ include ステートメントは、 `head` セクション `html` スクリプ�
 
 * クリック **ビルド**
 
-これで、 **ダウンロード** ディスクに保存し **パッケージをアップロード** 別の場所に移動し、「 **詳細 > レプリケート** ：サンドボックスを localhost パブリッシュインスタンスにプッシュして、サンドボックスの領域を拡張します。
+これで、以下を選択できます。 **ダウンロード** ディスクに保存し **パッケージをアップロード** 別の場所に移動し、「 **その他/レプリケート** ：サンドボックスを localhost パブリッシュインスタンスにプッシュして、サンドボックスの領域を拡張します。

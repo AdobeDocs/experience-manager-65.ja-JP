@@ -1,18 +1,14 @@
 ---
 title: ConvertPDF サービス
-seo-title: ConvertPDF Service
-description: AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。
-seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
-uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
+description: Adobe Experience Manager Forms ConvertPDF サービスを使用して、PDFドキュメントを PostScript または画像ファイルに変換します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 exl-id: 575bab27-d973-47fa-a0da-fa889cec6f27
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 100%
+source-wordcount: '400'
+ht-degree: 28%
 
 ---
 
@@ -20,26 +16,26 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-Convert PDF サービスは、PDF ドキュメントを PostScript または画像ファイル（JPEG、JPEG 2000、PNG および TIFF）に変換します。PDF ドキュメントの PostScript への変換は、PostScript プリンターでの無人のサーバーベース印刷に便利です。PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換する方法が実用的です。
+ConvertPDFサービスは、PDFドキュメントを PostScript または画像ファイル (JPEG、JPEG2000、PNG およびTIFF) に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでの無人サーバーベースの印刷に便利です。 PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
 
-Convert PDF サービスを使用すると、次のタスクを実行できます。
+Convert Convert サービスを使用すると、次のことがPDFできます。
 
-* PDF ドキュメントを PostScript に変換します。PostScript に変換する際に、この変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 と 3 のどちらに変換するかを指定できます。PostScript ファイルに変換する PDF ドキュメントは、非インタラクティブである必要があります。
-* PDF ドキュメントを JPEG、JPEG 2000、PNG および TIFF 画像形式に変換します。いずれかの画像形式に変換する場合は、変換操作を使用して、ソースドキュメントおよび画像オプションを指定できます。画像オプションには、画像変換形式、画像の解像度、色の変換などの様々な設定があります。
+* PDF ドキュメントを PostScript に変換します。PostScript に変換する場合は、変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 または 3 のどちらに変換するかを指定できます。 PostScript ファイルに変換するPDFドキュメントは、非インタラクティブである必要があります。
+* PDFドキュメントをJPEG、JPEG2000、PNG およびTIFFの画像形式に変換します。 これらの画像形式のいずれかに変換する場合は、変換処理を使用して、ソースドキュメントと画像オプションの仕様を指定できます。 この仕様には、画像変換形式、画像解像度、色変換など、様々な環境設定が含まれます。
 
-## サービスのプロパティの設定 {#properties}
+## サービスのプロパティを設定します   {#properties}
 
-AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEM コンソールのデフォルト URL は `https://[host]:'port'/system/console/configMgr` です。
+以下を使用すると、 **AEMFD ConvertPDF サービス** AEMコンソールで、このサービスのプロパティを設定します。 AEM コンソールのデフォルト URL は `https://[host]:'port'/system/console/configMgr` です。
 
 ## サービスの使用 {#using-the-service}
 
-Convert PDF サービスには次の 2 つの API があります。
+ConvertPDF サービスには次の 2 つの API が用意されています。
 
 * **[toPS](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：PDF ドキュメントを PostScript ファイルに変換します。
 
 * **[toImage](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：PDF ドキュメントを画像ファイルに変換します。サポートされている画像形式は、JPEG、JPEG2000、PNG および TIFF です。
 
-### JSP または Servlets との toPS API の使用 {#using-tops-api-with-a-jsp-or-servlets}
+### JSP またはサーブレットでの toPS API の使用 {#using-tops-api-with-a-jsp-or-servlets}
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -71,7 +67,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
  // options object to pass to toPS API
  ToPSOptionsSpec toPSOptions = new ToPSOptionsSpec();
 
- // mandatory option to pass, sets PostScript langauge
+ // mandatory option to pass, sets PostScript language
  toPSOptions.setPsLevel(PSLevel.LEVEL_3);
 
  // invoke toPS method to convert inputPDF to PostScript
@@ -83,7 +79,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### JSP または Servlets との toImage API の使用 {#using-toimage-api-with-a-jsp-or-servlets}
+### JSP またはサーブレットでの toImage API の使用 {#using-toimage-api-with-a-jsp-or-servlets}
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -130,14 +126,14 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### AEM ワークフローとの Convert PDF サービスの使用 {#using-convertpdf-service-with-aem-workflows}
+### AEMワークフローでの ConvertPDF サービスの使用 {#using-convertpdf-service-with-aem-workflows}
 
-ワークフローから Convert PDF サービスを実行することは、JSP またはサーブレットから実行することに似ています。
+ワークフローから ConvertPDF サービスを実行することは、JSP/Servlet から実行する場合と似ています。
 
-唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。続いて、Document オブジェクトは
+唯一の違いは、JSP/Servlet からサービスを実行する場合、ドキュメントオブジェクトは ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動的に取得する点です。 この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。続いて、Document オブジェクトは
 渡された ResourceResolver オブジェクトを使用してリポジトリからコンテンツを読み込みます。
 
-以下に示したサンプルワークフロープロセスは、入力ドキュメントを PostScript ドキュメントに変換します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
+以下のサンプルワークフロープロセスでは、入力ドキュメントを PostScript ドキュメントに変換します。 コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
 ```javascript
 /*

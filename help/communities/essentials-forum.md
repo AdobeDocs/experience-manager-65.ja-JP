@@ -1,15 +1,15 @@
 ---
 title: フォーラムの基本事項
-description: フォーラムの概要
+description: Adobe Experience Manager Communities でのフォーラム機能の操作に関する基本事項について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 4%
+source-wordcount: '259'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 4%
    <td>social/forum/components/hbs/forum<br /> social/forum/components/hbs/topic<br /> social/forum/components/hbs/post</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>含める</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
@@ -74,6 +74,6 @@ Adobe Experience Manager 6.1 Communities の時点での、 [共通店](working-
 以下を参照してください。
 
 * [ストレージリソースプロバイダの概要](srp.md)  — の概要とリポジトリの使用の概要。
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
-* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。
+* [SocialUtils のリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。

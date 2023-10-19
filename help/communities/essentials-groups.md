@@ -1,14 +1,14 @@
 ---
 title: コミュニティグループの基本事項
-description: コミュニティサイトの動的な作成
+description: 権限を持つユーザーがコミュニティグループ機能を使用して、コミュニティサイト内にサブコミュニティを動的に作成する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '427'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 コミュニティグループ機能を使用すると、パブリッシュ環境およびオーサー環境から許可されたユーザーがコミュニティサイト内でサブコミュニティを動的に作成できます。
 
-コミュニティの時点 [機能パック 1](deploy-communities.md#latestfeaturepack)の場合、グループを他のグループ内にネストすることが可能です
+コミュニティの時点 [機能パック 1](deploy-communities.md#latestfeaturepack)の場合は、グループを他のグループ内にネストできます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -83,11 +83,11 @@ ht-degree: 4%
 
 ### グループ機能 {#groups-function}
 
-を含むコミュニティサイト構造 [グループ機能](functions.md#groups-function) 新しい `community groups` パブリッシュ環境およびオーサー環境から。 作成したコミュニティグループには、 `community groups member list` グループのメンバーをリストするコンポーネント。
+を含むコミュニティサイト構造 [Groups 関数 [Groups かんすう ]](functions.md#groups-function) 新しい `community groups` パブリッシュ環境およびオーサー環境から。 作成したコミュニティグループには、 `community groups member list` グループのメンバーをリストするコンポーネント。
 
-1 つ以上 [コミュニティグループテンプレート](tools-groups.md)（コミュニティグループページのデザインを提供）は、関数を [コミュニティサイトテンプレート](sites.md) またはコミュニティグループテンプレート内にネストされている
+1 つ以上 [コミュニティグループテンプレート](tools-groups.md)コミュニティグループページのデザインを提供する「 」は、グループ機能用に設定できます。 これは、関数が [コミュニティサイトテンプレート](sites.md) またはコミュニティグループテンプレート内にネストされている
 
-複数のコミュニティグループテンプレートを組み込むと、コミュニティサイト用に新しいコミュニティグループを作成する際に、承認済みユーザーに提示するデザインを選択できます (「 [コミュニティグループ](creating-groups.md) 作成者向け
+複数のコミュニティグループテンプレートを組み込むことで、選択肢が得られます。 つまり、コミュニティサイト用のコミュニティグループを作成する際に、承認済みユーザーに提示するデザインの選択です。 詳しくは、 [コミュニティグループ](creating-groups.md) 作成者向け
 
 ### ネストされたグループ {#nested-groups}
 

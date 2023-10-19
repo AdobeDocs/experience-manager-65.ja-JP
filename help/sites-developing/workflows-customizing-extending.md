@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
 source-wordcount: '3582'
 ht-degree: 68%
@@ -37,7 +37,7 @@ ht-degree: 68%
 * コンポーネントのプロパティを設定するための編集ダイアログ。
 * 実行時に実行されるサービスまたはスクリプト。
 
-[すべてのコンポーネント](/help/sites-developing/components.md)と同様、ワークフローステップコンポーネントは、`sling:resourceSuperType` プロパティに指定されたコンポーネントから継承します。次の図は、すべてのワークフローステップコンポーネントの基礎を形成する `cq:component` ノードの階層を示しています。この図には、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;コンポーネントも含まれています。これらのコンポーネントは、カスタムステップコンポーネント作成の最も一般的で基本的な出発点になります。
+例： [すべてのコンポーネント](/help/sites-developing/components.md)の場合、ワークフローステップコンポーネントは、 `sling:resourceSuperType` プロパティ。 次の図は、すべてのワークフローステップコンポーネントの基礎を形成する `cq:component` ノードの階層を示しています。この図には、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;コンポーネントも含まれています。これらのコンポーネントは、カスタムステップコンポーネント作成の最も一般的で基本的な出発点になります。
 
 ![aem_wf_componentinherit](assets/aem_wf_componentinherit.png)
 

@@ -1,19 +1,15 @@
 ---
 title: ソーシャルグラフの使用
-seo-title: Using Social Graph
-description: コンポーネントをページに追加
-seo-description: Adding a Following component to a page
-uuid: 8be6334b-e6c9-40bc-90a8-750b98419470
+description: サインインしたコミュニティメンバーがアクティビティをフォローしたりフォローしたりできるようにするページに、フォロー中コンポーネントを追加する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 0ce57ab1-e4c6-4c38-963d-556eef8757f2
 exl-id: 2cd1436b-3727-4757-b28e-70756be78a4e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 19%
+source-wordcount: '197'
+ht-degree: 4%
 
 ---
 
@@ -21,13 +17,13 @@ ht-degree: 19%
 
 ## はじめに {#introduction}
 
-コミュニティメンバーがフォローする機能 [アクティビティ](activities.md) それに続くものは、次の 2 つの構成要素を通じて確立されます。 `Follow` および `Following`.
+コミュニティメンバーがフォローする機能 [アクティビティ](activities.md) その後には、次の 2 つの要素を通じて確立されます。 `Follow` および `Following`.
 
-この `Follow` コンポーネントは別のリソースに関連付ける必要があり、この関連付けはコミュニティのメンバーと機能に対して既に確立されています。
+The `Follow` コンポーネントは別のリソースに関連付ける必要があり、この関連付けはコミュニティのメンバーと機能に対して既に確立されています。
 
-この `Following` コンポーネントは、現在のメンバーをフォローしているメンバー、または現在のメンバーの後に続いているメンバーをリストします。 このメンバー間の関係のソーシャルグラフは、 [コミュニティサイト](overview.md#communitiessites).
+The `Following` コンポーネントは、現在のメンバーをフォローしているメンバー、または現在のメンバーの後に続いているメンバーのみをリストします。 このメンバー間の関係のソーシャルグラフは、 [コミュニティサイト](overview.md#communitiessites).
 
-## フォロー中コンポーネントをページに追加 {#adding-following-to-a-page}
+## ページへのフォローの追加 {#adding-following-to-a-page}
 
 必要に応じて `Following` コンポーネントをオーサリングモードでページに追加する場合は、 `Communities / Following` をドラッグし、ページ上のソーシャルグラフを表示する場所にドラッグします。
 
@@ -37,10 +33,10 @@ ht-degree: 19%
 
 ![次の](assets/following.png)
 
-## フォロー中コンポーネントの設定 {#configuring-following}
+## フォローの設定 {#configuring-following}
 
 現在、コンポーネントに `follows` 関係、または `following` 関係。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[ソーシャルグラフの重要事項](essentials-socialgraph.md)ページを参照してください。
+詳しくは、 [ソーシャルグラフの基本事項](essentials-socialgraph.md) 開発者向けのページ

@@ -1,16 +1,14 @@
 ---
 title: Q&A の基本事項
-description: 質問と回答フォーラムの機能
-uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
+description: Adobe Experience Manager Communities での質問と回答 (Q&A) フォーラム機能の使用に関する基本を学びます。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '252'
 ht-degree: 4%
 
 ---
@@ -76,6 +74,6 @@ AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場�
 以下を参照してください。
 
 * [ストレージリソースプロバイダの概要](srp.md)  — の概要とリポジトリの使用の概要。
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
-* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。
+* [SocialUtils のリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。

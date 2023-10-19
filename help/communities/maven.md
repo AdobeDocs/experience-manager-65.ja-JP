@@ -1,14 +1,14 @@
 ---
 title: コミュニティでの Maven の使用
-description: Adobe Experience Manager Uber API jar
+description: コミュニティで使用するAdobe Experience Manager Uber API jar の詳細。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '121'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Manager (AEM) Communities ドキュメントのこの節には�
 >
 >AEM 6.4 以降では、Communities API は明示的にリリースされていません。 すべての Communities API が Uber jar 自体に含まれるようになりました。
 >
->最新の Communities リリースを常に使用してください。
+>最新の Communities リリースに最新の情報を常に提供します。
 >
 >詳しくは、 [最新リリース](deploy-communities.md#latest-releases) 」セクションで、最新バージョンを識別できます。
 
@@ -76,7 +76,7 @@ Ensure thet the version specified corresponds with the Communities package versi
 1. Locate the package: `cq-socialcommunities-pkg-1.x.xxx`
 1. Extract the version from the package name:
    * First version for AEM 6.3 is version 1.11.170.
-   * Feature packs will be versions 1.12.xxx.
+   * Feature packs is versions 1.12.xxx.
 
 >[!NOTE]
 >

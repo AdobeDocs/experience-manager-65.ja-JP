@@ -1,25 +1,21 @@
 ---
 title: アイディエーションの基本事項
-seo-title: Ideation Essentials
-description: アイディエーション機能の概要
-seo-description: Ideation feature overview
-uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
+description: コミュニティでのアイディエーション機能の操作の基本について学びます。この機能は、フォーラムに似ていますが、より協調的な機能を備えています。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
 exl-id: 7ad3592b-f8b5-45c0-97bc-15f781d7b811
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 65%
+source-wordcount: '127'
+ht-degree: 7%
 
 ---
 
 # アイディエーションの基本事項 {#ideation-essentials}
 
-このページでは、アイディエーション機能の操作に関する基本情報をまとめています。この機能は、フォーラムに似ていますが、ドラフトとして保存する機能があるほか、共同作業しやすくなります。
+このページでは、アイディエーション機能を使用する際に必要な情報を提供します。アイディエーション機能はフォーラムに似ていますが、ドラフトとして保存したり、より協調的な操作を行ったりすることができます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -30,7 +26,7 @@ ht-degree: 65%
    <td>social/ideation/components/hbs/ideation</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>

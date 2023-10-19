@@ -1,15 +1,15 @@
 ---
 title: Communities のデプロイ
-description: AEM Communitiesのデプロイ方法
+description: Adobe Experience Managerでコミュニティとコミュニティ機能をデプロイする方法を説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1712'
 ht-degree: 4%
 
 ---
@@ -84,7 +84,7 @@ AEM 6.5 Communities GA には Communities パッケージが含まれていま�
 
 AEM 6.4 以降、Communities の更新はAEM Cumulative Fix Packs および Service Pack の一部として提供されます。
 
-AEM 6.5 の最新の更新については、 [Adobe Experience Manager 6.4 累積修正パックおよびサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
+AEM 6.5 の最新の更新については、 [Adobe Experience Manager 6.4 累積修正パックおよびサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja).
 
 ### バージョン履歴 {#version-history}
 
@@ -132,7 +132,7 @@ MySQL コネクタを取得し、別途インストールする必要があり�
 
 高度な多言語検索 (MLS) をサポートする SRP コレクション（MSRP または DSRP）については、カスタムスキーマと Solr 設定に加えて、新しい Solr プラグインが必要です。 必要な項目はすべて、ダウンロード可能な zip ファイルにパッケージ化されます。
 
-高度な MLS のダウンロード（「phasetwo」とも呼ばれます）は、Adobeリポジトリから入手できます。
+高度な MLS のダウンロード ( 別名 `phasetwo`) は次の場所からAdobeで使用できます。
 
 * AEM-SOLR-MLS-phasetwo
 
@@ -298,13 +298,11 @@ AEM 6.3 以降では、キー資料はファイルシステムに保存され、
 
 #### リポジトリレプリケーション {#repository-replication}
 
-AEM 6.2 以前の場合と同様に、鍵の素材をリポジトリに保存しておくと、保存できます。 各AEMインスタンスの初回起動時に、次のシステムプロパティを指定します（初期リポジトリを作成します）。
-
-* `-Dcom.adobe.granite.crypto.file.disable=true`
+AEM 6.2 以前の場合と同様に、鍵の素材をリポジトリに保存しておくと、保存できます。 システムプロパティを指定します。 `-Dcom.adobe.granite.crypto.file.disable=true` 各AEMインスタンスの初回起動時（最初のリポジトリを作成）。
 
 >[!NOTE]
 >
->これは、 [オーサー環境のレプリケーションエージェント](#replication-agents-on-author) が正しく設定されている。
+>次を確認します。 [オーサー環境のレプリケーションエージェント](#replication-agents-on-author) が正しく設定されている。
 
 リポジトリに保存されたキー材料を使用して、オーサーから他のインスタンスに暗号キーをレプリケートする方法は次のとおりです。
 

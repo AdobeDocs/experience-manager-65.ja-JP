@@ -1,23 +1,23 @@
 ---
 title: コメントの基本事項
-description: コメントコンポーネントの概要
+description: コメントシステム（コメントコンポーネント）の操作と、コミュニティメンバーの投稿でのユーザー生成コンテンツ (UGC) の管理について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8b4034f7-2f97-45ad-96d4-51cfbeae5991
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '351'
 ht-degree: 5%
 
 ---
 
 # コメントの基本事項 {#comments-essentials}
 
-このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本事項と、メンバーがコメントや返信を投稿したときに生成されるユーザー生成コンテンツ (UGC) を管理するためのオプションを提供します。
+このページでは、コメントシステム（コメントコンポーネント）の操作の基本と、メンバーがコメントや返信を投稿したときに生成されるユーザー生成コンテンツ (UGC) を管理するためのオプションについて説明します。
 
-コメントコンポーネントは、個々の投稿がコメントコンポーネント（単数）で表されるようにコメントシステムを確立します。 ページに含まれるコメントシステムです。 コメントシステムは、呼び出されると個々のコメントを作成します。
+コメントコンポーネントは、個々の投稿がコメントコンポーネント（単数）で表されるようにコメントシステムを確立します。 ページに含まれるコメントシステムです。 コメントシステムは、呼び出されると、個々のコメントを作成します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -28,7 +28,7 @@ ht-degree: 5%
    <td> social/commons/components/hbs/comments</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>含める</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
    <td>はい — でプロパティを編集できます <i>デザイン </i>mode</td>
   </tr>
   <tr>
@@ -56,7 +56,7 @@ ht-degree: 5%
 
 ページネーションおよびキャッシュやリンクに URL を使用する場合、コメントシステムごとに一意の URL を指定する必要があります。 したがって、1 ページにつき 1 つのコメントシステムのインスタンスのみを使用できます。
 
-その他の機能には、既にコメントシステムが含まれています。 以下が該当します。
+その他の機能には、既にコメントシステムが含まれています。 以下の項目が該当します。
 
 * [ブログ](blog-developer-basics.md)
 * [Calendar](calendar-basics-for-developers.md)
@@ -67,7 +67,7 @@ ht-degree: 5%
 
 ### フラグ設定理由リスト {#flag-reason-list}
 
-フラグ設定の理由リストは、アプリに flagreasonlist.hbs を追加して、内の内容を上書きすることでカスタマイズできます
+フラグ設定の理由リストは、アプリに flagreasonlist.hbs を追加して、内の内容を上書きすることでカスタマイズできます。
 
 * `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
@@ -93,6 +93,6 @@ AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場�
 以下を参照してください。
 
 * [ストレージリソースプロバイダの概要](srp.md)  — の概要とリポジトリの使用の概要。
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
-* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。
+* [SocialUtils のリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。

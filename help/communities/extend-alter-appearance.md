@@ -1,28 +1,24 @@
 ---
 title: 外観の変更（HBS）
-seo-title: Alter the Appearance
-description: HBS スクリプトの変更
-seo-description: Modify the HBS scripts
-uuid: cff24505-dbb3-4312-9b1b-c1693b8d1c98
+description: HBS スクリプトを編集して外観 (HBS) を変更する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 exl-id: 27e1bff3-385e-4ced-87af-54044b7e8812
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 57%
+source-wordcount: '277'
+ht-degree: 3%
 
 ---
 
 # 外観の変更（HBS） {#alter-the-appearance-hbs}
 
-カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ（/apps）に配置され、デフォルトのコメントシステムおよびカスタムモデル／ビューを参照する resourceSuperType が登録されたので、実装を変更できるようになりました。
+アプリケーションディレクトリ (/apps) 内のカスタムコメントシステムのコンポーネントが配置され、resourceSuperType がデフォルトのコメントシステムを参照し、カスタムのモデル/ビューが登録された状態で、実装を編集できます。
 
-簡単なデモのために、ビジュアル機能（コメントを投稿するサインインユーザーについて表示されるアバター）を削除します。
+シンプルなデモの場合、ビジュアル機能（コメントを投稿するサインインユーザーに表示されるアバター）は削除されます。
 
 >[!NOTE]
 >
@@ -30,33 +26,33 @@ ht-degree: 57%
 
 ## HBS スクリプトの変更 {#modify-the-hbs-scripts}
 
-[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
+使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 * 開く [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
    * コメント投稿のアバターを含むタグをコメントアウトします（21 行目前後）。
 
-      ```
-        <!--
-         <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
-         -->
-      ```
+     ```
+       <!--
+        <<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+        -->
+     ```
 
 * 開く [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * 次のコメントエントリのアバターを含むタグをコメントアウトします（44 行目前後）。
 
-      ```
-        <!--
-         <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
-         -->
-      ```
+     ```
+       <!--
+        <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"></img>
+        -->
+     ```
 
-* 「**すべて保存**」を選択します。
+* 選択 **すべて保存**
 
-### カスタムアプリのレプリケート {#replicate-custom-app}
+### カスタムアプリをレプリケート {#replicate-custom-app}
 
-アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
+アプリケーションを変更した後、カスタムコンポーネントを再レプリケートする必要があります。
 
 その方法の 1 つは次のとおりです。
 
@@ -68,9 +64,9 @@ ht-degree: 57%
    * 選択を解除 **[!UICONTROL 変更済みのみ]**.
    * 選択 **[!UICONTROL 有効化]** 」ボタンをクリックします。
 
-### 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
+### 公開済みサンプルページで変更済みコメントを表示 {#view-modified-comment-on-published-sample-page}
 
-パブリッシュインスタンスで[エクスペリエンスを続行](/help/communities/extend-sample-page.md#publish-sample-page)すると、同じユーザーとしてサインインしたまま、パブリッシュ環境でページを更新してアバターを削除する変更を表示できます。
+[エクスペリエンスの継続](/help/communities/extend-sample-page.md#publish-sample-page) パブリッシュインスタンスでは、同じユーザーとしてサインインしたままで、パブリッシュ環境でページを更新して、アバターを削除するための変更を表示できます。
 
 ![view-modified-content](assets/view-modified-content.png)
 

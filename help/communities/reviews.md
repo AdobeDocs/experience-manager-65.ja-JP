@@ -1,18 +1,14 @@
 ---
 title: レビューおよびレビューの概要（表示）の使用
-seo-title: Using Reviews and Reviews Summary (Display)
-description: レビューおよびレビューサマリーコンポーネントをページに追加する
-seo-description: Adding the Reviews and Reviews Summary components to a page
-uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
+description: レビューおよびレビューの概要コンポーネントをページに追加する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1285'
 ht-degree: 5%
 
 ---
@@ -39,7 +35,7 @@ The `Reviews Summary (Display)` コンポーネントは、アクティブなイ
 
 ## レビューの設定 {#configuring-reviews}
 
-配置した `Reviews` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+配置した `Reviews` コンポーネントを使用して、 `Configure` 編集ダイアログを開くアイコン。
 
 ![configure-new](assets/configure-new.png)
 
@@ -55,9 +51,9 @@ The `Reviews Summary (Display)` コンポーネントは、アクティブなイ
 
   クリック **[!UICONTROL 項目を追加]** 別の評価選択肢を追加する場合。
 
-の下 **[!UICONTROL 必須の評価]** 」タブで、リストから項目を再入力します。 **[!UICONTROL 許可された評価]** 評価が必要です。 「許可された評価」タブでのみ指定された項目は、メンバーが送信した際に、マークが付いていないままにすることができます。
+の下 **[!UICONTROL 必須の評価]** 」タブで、リストから項目を再入力します。 **[!UICONTROL 許可された評価]** 評価に必要な情報です。 「許可された評価」タブでのみ指定された項目は、メンバーが送信した際に、マークが付いていないままにすることができます。
 
-Web サイトでは、必須の評価にアスタリスクが付いています。 項目が必須で、マークが付いていない場合は、必要な評価がすべてマークされるまで、メッセージがメンバーに表示され、送信が拒否されます。
+Web サイトでは、必須の評価にアスタリスクが付いています。 項目が必須で、マークが付いていない場合は、メンバーにメッセージが表示され、必要な評価がすべてマークされるまで送信が拒否されます。
 
 ![required-rating](assets/configure-review2.png)
 
@@ -99,7 +95,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 * **[!UICONTROL 許可されるファイルタイプ]**
 
-  次の場合にのみ関連します。 **[!UICONTROL ファイルのアップロードを許可]** がオンになっている。 「ドット」区切り文字を使用したファイル拡張子のコンマ区切りリスト。 例： .jpg、.jpeg、.png、.doc、.docx、.pdf。 ファイルタイプが指定されている場合、指定されていないファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
+  次の場合にのみ関連します。 **[!UICONTROL ファイルのアップロードを許可]** がオンになっている。 「ドット」区切り記号を使用したファイル拡張子のコンマ区切りリスト。 例： .jpg、.jpeg、.png、.doc、.docx、.pdf。 ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
 
 * **[!UICONTROL リッチテキストエディター]**
 
@@ -115,11 +111,11 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 * **[!UICONTROL 事前モデレート]**
 
-  オンにすると、レビューが公開サイトに表示される前に、承認が必要になります。 初期設定はオフです。
+  オンにすると、レビューが公開サイトに表示される前に承認が必要になります。 初期設定はオフです。
 
 * **[!UICONTROL レビューを削除]**
 
-  オンにすると、レビューを投稿したメンバーはレビューを削除できます。 初期設定はオフです。
+  オンにすると、レビューを投稿したメンバーがレビューを削除できます。 初期設定はオフです。
 
 * **[!UICONTROL レビューを拒否]**
 
@@ -155,7 +151,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 * `Communities / Reviews Summary (Display)`
 
-をドラッグし、アクティブなレビューまたは閉じられたレビューの概要を表示するページ上の場所にドラッグします。
+ページ上で、アクティブなレビューまたは閉じられたレビューの概要を表示する場所にドラッグします。
 
 必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
@@ -169,7 +165,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 ### レビューの概要（表示）の設定 {#configuring-reviews-summary-display}
 
-配置した `Reviews Summary (Display)` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+配置した `Reviews Summary (Display)` コンポーネントを使用して、 `Configure` 編集ダイアログを開くアイコン。
 
 ![設定](assets/configure-new.png)
 
@@ -179,13 +175,13 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 * `Review Path`
 
-  配置されたインスタンスを入力するか、参照します。 `reviews`要約するコンポーネント ( 例えば、 [Geometrixxエンゲージサイト](getting-started.md) パスは次のようになります。
+  配置したインスタンスを入力または参照 `reviews` コンポーネントを使用して、例えば、 [Geometrixxエンゲージサイト](getting-started.md) パスは次のようになります。
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
 * `Include histogram`
 
-  オンにした場合、要約するレビューに含まれる各星評価の数を示す棒グラフの表示を含めます。 初期設定はオフです。
+  オンにすると、要約するレビューの星評価の数を示す棒グラフが表示されます。 初期設定はオフです。
 
 ### カスタムレビュータイプへの変更 {#changing-to-a-custom-review-type}
 
@@ -193,7 +189,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 「コメントのリソースタイプ」を変更すると、コメントシステムはデフォルトのを使用してコメントのインスタンスを生成しなくなり、開発者がカスタマイズ（拡張）したインスタンスを生成します。
 
-カスタムリソースタイプがわかったら、次のように入力します。 [デザインモード](../../help/sites-authoring/default-components-designmode.md) をクリックし、配置された `Comments` 追加のタブを含むダイアログを開くコンポーネント。
+カスタムリソースタイプがわかっている場合は、次のように入力します。 [デザインモード](../../help/sites-authoring/default-components-designmode.md) をクリックし、配置した `Comments` 追加のタブを含むダイアログを開くコンポーネント。
 
 の下 **[!UICONTROL リソースタイプ]** タブで、新しいインスタンスのカスタム resourceType を指定します。 `Comments or Voting` コンポーネント：
 

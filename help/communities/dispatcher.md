@@ -1,14 +1,14 @@
 ---
 title: Communities 用の Dispatcher の設定
-description: AEM Communities用の Dispatcher の設定
+description: コミュニティサイトが適切に機能するようにAEM Communities向けに Dispatcher を設定する方法について説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '653'
 ht-degree: 13%
 
 ---
@@ -47,9 +47,9 @@ Dispatcher のキャッシュをサポートするように設定した場合、
 
 ### 設定 {#configuration}
 
-OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー — 最大経過時間** 指定されたパスの下に表示される、キャッシュされたページの有効期限を設定します。
+OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー — Max Age** 指定されたパスの下に表示される、キャッシュされたページの有効期限を設定します。
 
-* 次の [Web コンソール](../../help/sites-deploying/configuring-osgi.md).
+* 次から： [Web コンソール](../../help/sites-deploying/configuring-osgi.md).
 
    * 例： [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
@@ -62,7 +62,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
   *（必須）* コミュニティページへの 1 つ以上のパス。 例：`/content/sites/engage/(.*)`
 
 * **Cache-Control の最大経過時間**
-  *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 0 より大きい値を指定する必要があります。
+  *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 値は 0 より大きい値にする必要があります。
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
@@ -70,7 +70,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 
 この節では、コミュニティ機能を適切に機能させるために必要なエントリについて説明します。
 
-フィルタープロパティ名は、フィルターパターンを適用する順序を示す 4 桁の数字を使用する規則に従います。 1 つの要求に複数のフィルターパターンが適用される場合、最後に適用されたフィルターパターンが有効です。 したがって、最初のフィルターパターンは、多くの場合、すべてを拒否するために使用され、次のパターンは、制御された方法でアクセスを復元するために使用されます。
+フィルタープロパティ名は、フィルターパターンを適用する順序を示す 4 桁の数値を使用する規則に従います。 1 つの要求に複数のフィルターパターンが適用される場合は、最後に適用されたフィルターパターンが有効です。 したがって、最初のフィルターパターンは、多くの場合、すべてを拒否するために使用され、次のパターンは、制御された方法でアクセスを復元するために使用されます。
 
 以下のサンプルでは、特定の特定のプロパティに合わせて変更する必要があるプロパティ名を使用しています `dispatcher.any` ファイル。
 
@@ -89,7 +89,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 >Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)を参照してください。また、 [AEMセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) AEMのインストールに関するセキュリティの詳細については、を参照してください。
 >
 
-次のエントリは、特にすべての deny エントリの後に/filter セクションの末尾に追加する必要があります。
+特にすべての拒否されたエントリの後に、次のエントリを/filter セクションの末尾に追加する必要があります。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -271,11 +271,11 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 
 主な問題の原因は、以前のルールへの影響に注意を払わずにフィルタールールを挿入することです。特に、アクセスを拒否するルールを追加する場合に問題が発生します。
 
-最初のフィルターパターンは、多くの場合、次のフィルターが制御された方法でアクセスを復元するように、すべてを拒否するために使用されます。 1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効です。
+最初のフィルターパターンは、多くの場合、次のフィルターが制御された方法でアクセスを復元するように、すべてを拒否するために使用されます。 1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
 
 ## サンプルの dispatcher.any {#sample-dispatcher-any}
 
-以下はサンプルです `dispatcher.any` Communities /filters と/rules を含むファイル。
+以下に例を示します `dispatcher.any` Communities /filters と/rules を含むファイル。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->

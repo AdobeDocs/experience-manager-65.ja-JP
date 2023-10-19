@@ -1,15 +1,15 @@
 ---
 title: サンプルページの作成
-description: サンプルコミュニティサイトの作成
+description: 簡単なコミュニティサイトを作成するのに役立つページ機能のみを含むコミュニティサイトテンプレートを作成する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: developing
 exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 4%
+source-wordcount: '426'
+ht-degree: 3%
 
 ---
 
@@ -50,7 +50,7 @@ AEM 6.1 Communities 以降、サンプルページを作成する最も簡単な
    * 「構成関数の詳細」に、次のように入力します。
 
       * `Title`：単一ページ
-      * `URL`: ページ
+      * `URL`: page
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 

@@ -1,17 +1,15 @@
 ---
 title: 外観の変更
-description: スクリプトを変更
-uuid: 30555b9f-da29-4115-9ed5-25f80a247bd6
+description: Adobe Experience Manager Communities で各コメントの全体的なHTMLを作成する comment.hbs スクリプトを編集する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 exl-id: cb8f6967-216c-46d3-a7ba-068b0f5e3b94
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '236'
 ht-degree: 3%
 
 ---
@@ -20,9 +18,9 @@ ht-degree: 3%
 
 ## スクリプトの変更 {#modify-the-script}
 
-comment.hbs スクリプトは、各コメントの全体的なHTMLを作成します。
+The `comment.hbs` スクリプトは、各コメントの全体的なHTMLを作成します。
 
-投稿された各コメントの横にアバターを表示しないには、次のようにします。
+投稿された各コメントの横にアバターを表示しないには、次の手順を実行します。
 
 1. コピー `comment.hbs`から `libs`から `apps`
 
@@ -57,9 +55,9 @@ comment.hbs スクリプトは、各コメントの全体的なHTMLを作成し�
 
 >[!NOTE]
 >
->より堅牢なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、 [有効化](/help/sites-administering/package-manager.md#replicating-packages) それは。 パッケージはエクスポートおよびアーカイブできます。
+>より堅牢なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、 [アクティブ化](/help/sites-administering/package-manager.md#replicating-packages) その通り。 パッケージはエクスポートおよびアーカイブできます。
 
-グローバルナビゲーションから、 **[!UICONTROL ツール]** > **[!UICONTROL 導入]** > **[!UICONTROL レプリケーション]** をクリックし、 **[!UICONTROL ツリーをアクティベート]**.
+グローバルナビゲーションで、「 」を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL 導入]** > **[!UICONTROL レプリケーション]** をクリックします。 **[!UICONTROL ツリーをアクティベート]**.
 
 「開始パス」に、と入力します。 `/apps/social/commons` を選択し、 **[!UICONTROL 有効化]**.
 
@@ -69,6 +67,6 @@ comment.hbs スクリプトは、各コメントの全体的なHTMLを作成し�
 
 パブリッシュインスタンスに管理者としてログオンした場合 ( 例えば、 https://localhost:4503/crx/deを admin/admin としてログオンした場合 ) は、オーバーレイされたコンポーネントが存在することを確認できます。
 
-ログオフし、 `aaron.mcdonald@mailinator.com/password` ページを更新すると、アバターが投稿されたコメントと共に表示されないことがわかります。 代わりに、単純な「xxx」が表示されます。
+ログオフし、次のようにしてログオンする場合 `aaron.mcdonald@mailinator.com/password` ページを更新すると、アバターが投稿されたコメントと共に表示されないことがわかります。 代わりに、単純な「xxx」が表示されます。
 
 ![create-template-component](assets/create-template-component.png)

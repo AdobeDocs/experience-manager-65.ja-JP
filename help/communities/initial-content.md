@@ -1,15 +1,15 @@
 ---
 title: 初期サンドボックスコンテンツ
-description: コンテンツを作成
+description: サンドボックスのページテンプレートを使用して、Web サイトの英語版のメインページと、メインページの子ページを作成する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 068a0fff-ca48-4847-ba3f-d78416c97f6d
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 6%
+source-wordcount: '490'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 
    * SCF 再生 — 再生するメインページの子。
 
-このチュートリアルでは詳しく説明しませんが、 [言語コピー](../../help/sites-administering/tc-prep.md)の場合、ルートページでHTMLヘッダーを使用してユーザーの優先言語の検出を実装し、その言語に適したメインページにリダイレクトできるように設計されています。 ページのノード名に 2 文字の国コードを使用する規則です。例えば、英語の場合は「en」、フランス語の場合は「fr」です。
+このチュートリアルでは、 [言語コピー](../../help/sites-administering/tc-prep.md). 代わりに、ルートページでHTMLヘッダーを使用してユーザーの優先言語の検出を実装し、その言語に適したメインページにリダイレクトできるように設計されています。 ページのノード名に 2 文字の国コードを使用する規則です。例えば、英語の場合は「en」、フランス語の場合は「fr」です。
 
 ## 最初のページを作成 {#create-first-pages}
 
@@ -35,9 +35,9 @@ ht-degree: 6%
 
    ![classic-ui](assets/classic-ui.png)
 
-   クラシック UI に切り替える機能は、次の条件を満たす必要があります。 [管理者が有効にした](../../help/sites-administering/enable-classic-ui.md).
+   クラシック UI に切り替える機能は、次の条件を満たす必要があります。 [管理者によって有効にされています](../../help/sites-administering/enable-classic-ui.md).
 
-1. 次の [クラシック UI のようこそページ](http://localhost:4502/welcome.html)を選択します。 **[!UICONTROL Web サイト]**.
+1. 次から： [クラシック UI のようこそページ](http://localhost:4502/welcome.html)を選択します。 **[!UICONTROL Web サイト]**.
 
    ![classic-ui-website](assets/classic-ui-website.png)
 
@@ -45,7 +45,7 @@ ht-degree: 6%
 
 1. エクスプローラウィンドウで、「 」を選択します。 **[!UICONTROL Web サイト]** 次に、ツールバーで **[!UICONTROL 新規]** > **[!UICONTROL 新しいページ]**.
 
-   内 **[!UICONTROL ページを作成]** ダイアログで、次の情報を入力します。
+   Adobe Analytics の **[!UICONTROL ページを作成]** ダイアログで、次の情報を入力します。
 
    * タイトル: `SCF Sandbox Site`
    * 名前：`an-scf-sandbox`

@@ -10,10 +10,10 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
 source-wordcount: '1532'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -172,7 +172,7 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
    >[!NOTE]
    >
-   >レポート取得操作がタイムアウトになるまでの時間は、最大で、指定されている秒数に 10 秒を加算した時間になります。
+   >レポートの取得操作がタイムアウトし、指定された秒数に達するまで、最大 10 秒かかる場合があります。
 
 1. パブリッシュインスタンスで手順 1 から 3 を繰り返し、Analytics を設定します。
 

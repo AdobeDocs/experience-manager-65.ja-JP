@@ -1,19 +1,15 @@
 ---
 title: Social タグクラウドの使用
-seo-title: Using Social Tag Cloud
-description: Social タグクラウドコンポーネントをページに追加する
-seo-description: Adding a Social Tag Cloud component to a page
-uuid: 8c400030-976c-457a-bb5f-e473909647a9
+description: サインインしたコミュニティメンバーがトレンドトピックをすばやく識別し、タグ付きコンテンツを見つけられるようにするページに、Social タグクラウドコンポーネントを追加する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 exl-id: 56af5362-78de-4308-8958-63a45e8573cc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 10%
+source-wordcount: '569'
+ht-degree: 6%
 
 ---
 
@@ -21,15 +17,15 @@ ht-degree: 10%
 
 ## はじめに {#introduction}
 
-この `Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーが適用したタグをハイライトします。 これは、トレンドトピックを識別し、サイト訪問者がタグ付きコンテンツをすばやく見つけられるようにする手段です。
+The `Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーが適用したタグをハイライトします。 これは、トレンドトピックを識別し、サイト訪問者がタグ付きコンテンツをすばやく見つけられるようにする手段です。
 
 現在のトレンドを識別する別の方法として、 [アクティビティのトレンド](trends.md).
 
 このページでは、 `Social Tag Cloud` コンポーネントダイアログの設定およびユーザーエクスペリエンスについて説明します。
 
-開発者向けの詳細は、 [タグの基本事項](tag.md).
+開発者向けの詳しい情報については、 [タグの基本事項](tag.md).
 
-タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](../../help/sites-administering/tags.md)を参照してください。
+詳しくは、 [タグの管理](../../help/sites-administering/tags.md) タグの作成と管理、およびタグが適用されるコンテンツについて説明します。
 
 ## Social タグクラウドの追加 {#adding-a-social-tag-cloud}
 
@@ -43,11 +39,11 @@ ht-degree: 10%
 
 ## Social タグクラウドの設定 {#configuring-social-tag-cloud}
 
-配置された `Social Tag Cloud` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+配置した `Social Tag Cloud` コンポーネントを使用して、 `Configure` 編集ダイアログを開くアイコン。
 
 ![設定](assets/configure-new.png)
 
-以下 **[!UICONTROL Social タグクラウド]** タブで、表示するタグを指定し、タグがアクティブなリンクの場合は、検索結果のページの場所を指定します。
+の下 **[!UICONTROL Social タグクラウド]** タブで、表示するタグを指定し、タグがアクティブなリンクの場合は、検索結果のページの場所を指定します。
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
@@ -57,11 +53,11 @@ ht-degree: 10%
    * `From page and child pages`
    * `All tags`
 
-  デフォルトはです。 `From page and child pages`(「page」は **ページ** を設定します。
+  デフォルトはです。 `From page and child pages`（「page」はを指します） **ページ** を設定します。
 
 * **[!UICONTROL Page]**
 
-  ( そうでない場合は必須 `All tags)` ページの UGC へのパス。 空白の場合、初期設定は現在のページです。
+  （そうでない場合は必須） `All tags)` ページの UGC へのパス。 空白の場合、初期設定は現在のページです。
 
 * **[!UICONTROL タグにリンクがありません]**
 
@@ -73,7 +69,7 @@ ht-degree: 10%
 
 ## Social タグクラウドの表示を変更 {#change-display-of-social-tag-cloud}
 
-表示を編集するには **Social タグクラウド**&#x200B;を入力して、 [デザインモード](../../help/sites-authoring/default-components-designmode.md) をクリックし、配置された `Social Tag Cloud` 追加のタブを含むダイアログを開くコンポーネント。
+表示を編集するには **Social タグクラウド**，と入力します。 [デザインモード](../../help/sites-authoring/default-components-designmode.md) をクリックし、配置した `Social Tag Cloud` 追加のタブを含むダイアログを開くコンポーネント。
 
 の使用 **[!UICONTROL Social タグクラウド（デザイン）]** タブで、タグの表示方法を指定します。 タグは、単純なタグ、デフォルト名前空間の単一の単語、階層的な分類のいずれかになります。
 
@@ -83,7 +79,7 @@ ht-degree: 10%
 
   オンにすると、適用された各タグの親タグと名前空間のタイトルが表示されます。
 
-  例：
+  次に例を示します。
 
    * チェック済み: `Geometrixx Media: Gadgets / Cars`
    * 未チェック: `Cars`
@@ -104,8 +100,8 @@ ht-degree: 10%
 
   `Geometrixx Media (the namespace)`, `Gadgets`, および `Cars`
 
-   * チェック済み：のみ `Cars` が表示されます（適用されている場合）。
-   * オフ： `Geometrixx Media` および `Gadgets`同様に `Cars` が表示されます（適用されている場合）。
+   * オン：のみ `Cars` が表示されます（適用されている場合）。
+   * オフ： `Geometrixx Media`, `Gadgets`、および `Cars` が表示されます（適用されている場合）。
 
   単純なタグはリーフタグです。
 

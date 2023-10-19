@@ -1,26 +1,22 @@
 ---
 title: メッセージングの基本事項
-seo-title: Messaging Essentials
-description: メッセージングコンポーネントの概要
-seo-description: Messaging component overview
-uuid: e0dad45e-d84d-4b28-b357-aded1c5d2605
+description: メッセージングコンポーネントを使用して Web サイトにメッセージング機能を組み込む方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 33%
+source-wordcount: '397'
+ht-degree: 4%
 
 ---
 
 # メッセージングの基本事項 {#messaging-essentials}
 
-このページでは、メッセージングコンポーネントを使用してメッセージング機能を Web サイトに組み込む方法の詳細をまとめています。
+このページでは、メッセージングコンポーネントを使用して Web サイトにメッセージング機能を組み込む方法について詳しく説明します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -57,7 +53,7 @@ ht-degree: 33%
 
 **メッセージリスト**
 
-（インボックス、送信済み、ごみ箱）
+（インボックス、送信済みおよびごみ箱の場合）
 
 <table>
  <tbody>
@@ -78,7 +74,7 @@ ht-degree: 33%
    <td>/libs/social/messaging/components/hbs/messagebox/clientlibs/messagebox.css</td>
   </tr>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>properties</strong></td>
    <td>詳しくは、 <a href="/help/communities/configure-messaging.md" target="_blank">メッセージの設定</a></td>
   </tr>
   <tr>
@@ -88,14 +84,14 @@ ht-degree: 33%
  </tbody>
 </table>
 
-[クライアント側のカスタマイズ](/help/communities/client-customize.md)も参照してください。
+関連トピック [クライアント側のカスタマイズ](/help/communities/client-customize.md)
 
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [メッセージングの設定](/help/communities/configure-messaging.md)
-* [メッセージングクライアント API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) （SCF コンポーネント用）
-* [メッセージング API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)（サービス用）
-* [メッセージングエンドポイント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
+* [メッセージングクライアント API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) （SCF コンポーネント用）
+* [メッセージング API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) サービスの
+* [メッセージエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [サーバー側のカスタマイズ](/help/communities/server-customize.md)
 
 >[!CAUTION]
@@ -107,17 +103,16 @@ ht-degree: 33%
 >
 >次に例を示します。
 >
->
-```
+>```
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
 >```
 
 ### コミュニティサイト {#community-site}
 
-ウィザードを使用して作成されたコミュニティサイト構造には、選択するとメッセージング機能が含まれます。 詳しくは、 `User Management` 設定 [コミュニティサイトコンソール](/help/communities/sites-console.md#user-management).
+ウィザードを使用して作成されたコミュニティサイト構造には、選択するとメッセージング機能が含まれます。 詳しくは、 `User Management` の設定 [コミュニティサイトコンソール](/help/communities/sites-console.md#user-management).
 
-### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
+### サンプルコード：受信したメッセージの通知 {#sample-code-message-received-notification}
 
 ソーシャルメッセージ機能では、操作に関するイベント ( 例えば、 `send`, `marking read`, `marking delete`. これらのイベントを取得し、イベントに含まれるデータに対して実行されるアクションを取得できます。
 
@@ -129,8 +124,8 @@ ht-degree: 33%
 1. の作成 `bundle node`in `/apps/engage/install` に次のような任意の名前を付けます。
 
    * 記号名： `com.engage.media.social.messaging.MessagingNotification`
-   * 名前：使用の手引きチュートリアルのメッセージ通知
-   * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するサンプルサービス
+   * 名前：はじめにチュートリアルメッセージ通知
+   * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するためのサンプルサービス
    * パッケージ: `com.engage.media.social.messaging.notification`
 
 1. に移動します。 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`、次に、

@@ -1,27 +1,23 @@
 ---
 title: おすすめコンテンツの基本事項
-seo-title: Featured Content Essentials
-description: おすすめコンテンツの使用
-seo-description: Working with feature content
-uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
+description: コミュニティサイト内の任意の場所で強調表示したいおすすめコンテンツの操作に関する基本について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 exl-id: 70b0ad6a-c891-4588-8515-449aed206805
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 83%
+source-wordcount: '120'
+ht-degree: 10%
 
 ---
 
 # おすすめコンテンツの基本事項  {#featured-content-essentials}
 
-このページでは、おすすめコンテンツを使用するための基本的な情報について説明します。
+このページでは、おすすめコンテンツを扱う際に必要な情報を紹介します。
 
-フォーラム上部への投稿のピン留めとは異なり、この機能では、コミュニティサイト内のすべての場所でコンテンツを強調表示できます。
+フォーラムの上部に投稿を固定するのとは異なり、この機能を使用すると、コミュニティサイト内の任意の場所でコンテンツをハイライト表示できます。
 
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
@@ -33,7 +29,7 @@ ht-degree: 83%
    <td>social/commons/components/hbs/featuredcontent</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
