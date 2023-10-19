@@ -2,7 +2,7 @@
 title: AEM ヘッドレス翻訳の基本を学ぶ
 description: ヘッドレスコンテンツを整理する方法と AEM の翻訳ツールの仕組みについて説明します。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 947b17a82f704a244e7fdc710cfa9df50c64f46b
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 99%
@@ -50,7 +50,7 @@ AEM ヘッドレス翻訳ジャーニーの以前のドキュメント（[ヘッ
 
 * コンテンツの翻訳をテストするためのサンドボックスアクセス
 * 好みの翻訳サービスに接続するための資格情報
-* AEM の `project-administrators` グループのメンバーであること
+* AEM の `projects-administrators` グループのメンバーであること
 
 ## 構造の重要性 {#content-structure}
 
