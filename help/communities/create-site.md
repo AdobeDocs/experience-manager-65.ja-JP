@@ -1,64 +1,60 @@
 ---
-title: 新しいコミュニティサイトの作成
-seo-title: Author a New Community Site
-description: 新しいAEM Communitiesサイトの作成方法
-seo-description: How to author a new AEM Communities site
-uuid: 4f609f5f-ef07-44fc-aeb3-1c616e120d46
+title: コミュニティサイトの作成
+description: Adobe Experience Manager Communities サイトの作成方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1578'
 ht-degree: 3%
 
 ---
 
-# 新しいコミュニティサイトの作成{#author-a-new-community-site}
+# コミュニティサイトの作成{#author-a-new-community-site}
 
-## コミュニティサイトを作成 {#create-a-community-site}
+## コミュニティサイトを作成する {#create-a-community-site}
 
-オーサーインスタンスを使用してコミュニティサイトを作成します。 AEM オーサーインスタンスで、次の操作を実行します。
+オーサーインスタンスを使用してコミュニティサイトを作成します。 AEMオーサーインスタンス上：
 
 1. 管理者権限でログインします。
-1. グローバルナビゲーションから、に移動します。 **[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**.
+1. グローバルナビゲーションから、に移動します。 **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 
-コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を示すウィザードを使用できます。 を `Next` 手順または `Back` を前の手順に戻してから、最後の手順でサイトをコミットします。
+コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を示すウィザードを使用できます。 次の項目に進みます。 `Next` 手順または `Back` を前の手順に戻してから、最後の手順でサイトをコミットします。
 
-新しいコミュニティサイトの作成を開始するには：
+コミュニティサイトの作成を開始するには：
 
 * を選択します。 `Create` 」ボタンをクリックします。
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
-### 手順 1:サイトテンプレート {#step-site-template}
+### 手順 1：サイトテンプレート {#step-site-template}
 
 ![サイトを作成するテンプレート](assets/create-site.png)
 
-の [サイトテンプレートの手順](/help/communities/sites-console.md#step2013asitetemplate)、タイトル、説明、URL の名前を入力し、コミュニティサイトテンプレートを選択します。次に例を示します。
+次の日： [サイトテンプレートの手順](/help/communities/sites-console.md#step2013asitetemplate)、タイトル、説明、URL の名前を入力し、コミュニティサイトテンプレートを選択します。次に例を示します。
 
 * **コミュニティサイトのタイトル**: `Getting Started Tutorial`
 * **コミュニティサイトの説明**: `A site for engaging with the community.`
 * **コミュニティサイトのルート**:（デフォルトのルートの場合は空白のままにします） `/content/sites`)
 * **クラウド設定**:（クラウド設定が指定されていない場合は空白にします）指定したクラウド設定へのパスを指定します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は、手を付けないでください）。英語 ) ドロップダウンリストを使用して、1 つを選択します *以上* 使用可能な言語 ( ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)) のベース言語。 追加された言語ごとに 1 つのコミュニティサイトが作成され、 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md). 各サイトのルートページには、選択した言語の 1 つの言語コード（英語の場合は「en」、フランス語の場合は「fr」など）で名前が付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**:（単一言語の場合は「未変更」をそのままにします。英語）ドロップダウンリストを使用して、1 つを選択します。 *またはその他* 使用可能な言語 ( ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)) のベース言語。 追加された言語ごとに 1 つのコミュニティサイトが作成され、 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md). 各サイトのルートページには、選択した言語の 1 つの言語コード（英語の場合は「en」、フランス語の場合は「fr」など）で名前が付けられた子ページが含まれます。
 
-* **コミュニティサイト名**:エンゲージ
+* **コミュニティサイト名**: engage
 
    * サイトの作成後に名前が簡単に変更されないので、名前を再確認します。
-   * 初期 URL がコミュニティサイト名の下に表示されます
+   * 初期 URL はコミュニティサイト名の下に表示されます
    * 有効な URL に、ベース言語コード+ &quot;.html&quot;を追加します。
    * *例：*, https://localhost:4502/content/sites/ `engage/en.html`
 
-* **テンプレート**:引っ張って選ぶ `Reference Site`
+* **テンプレート**：プルダウンして選択します。 `Reference Site`
 
 * 「**次へ**」を選択します。
 
-### 手順 2:デザイン {#step-design}
+### 手順 2：デザイン {#step-design}
 
 デザインの手順は、テーマとブランディングバナーを選択するための 2 つの節で説明します。
 
@@ -76,9 +72,9 @@ ht-degree: 3%
 
 「**次へ**」を選択します。
 
-### 手順 3:設定 {#step-settings}
+### 手順 3：設定 {#step-settings}
 
-設定ステップで、選択する前に `Next`ユーザー管理、タグ付け、モデレート、グループ管理、分析および翻訳に関する設定にアクセスできる 7 つの節があることに注意してください。
+設定ステップで、選択する前に `Next`の 7 つのセクションで、ユーザー管理、タグ付け、モデレート、グループ管理、分析および翻訳に関する設定にアクセスできます。
 
 #### ユーザー管理 {#user-management}
 
@@ -88,7 +84,7 @@ ht-degree: 3%
 * サイト訪問者がサインインせずにサイトを表示できるようにするには
 * メンバーが他のコミュニティメンバーからメッセージを送受信できるようにするには
 * プロファイルの登録と作成の代わりにFacebookでのログインを許可するには
-* プロファイルの登録と作成の代わりにTwitterでのログインを許可するには
+* プロファイルの登録と作成を行う代わりに、Twitterを使用したログインを許可するには
 
 >[!NOTE]
 >
@@ -98,12 +94,12 @@ ht-degree: 3%
 
 #### タグ付け {#tagging}
 
-コミュニティコンテンツに適用できるタグを制御するには、以前に [タグ付けコンソール](/help/sites-administering/tags.md#tagging-console) ( [チュートリアル名前空間](/help/communities/setup.md#create-tutorial-tags)) をクリックします。
+コミュニティコンテンツに適用されるタグは、以前に [タグ付けコンソール](/help/sites-administering/tags.md#tagging-console) ( 例えば [チュートリアル名前空間](/help/communities/setup.md#create-tutorial-tags)) をクリックします。
 
 名前空間を検索するには、先頭入力検索を使用すると簡単です。 例：
 
 * 型 `tut`
-* 選択 `Tutorial`
+* `Tutorial` を選択します。
 
 ![タグ付け](assets/tagging.png)
 
@@ -130,9 +126,9 @@ ht-degree: 3%
 
 ![モデレート](assets/moderation1.png)
 
-#### 分析 {#analytics}
+#### ANALYTICS {#analytics}
 
-Adobe Analyticsがライセンスされ、Analytics クラウドサービスとフレームワークが設定されている場合は、Analytics を有効にしてフレームワークを選択できます。
+Adobe Analyticsがライセンスされ、Analytics Cloudのサービスとフレームワークが設定されている場合は、Analytics を有効にしてフレームワークを選択できます。
 
 詳しくは、 [コミュニティ機能用の Analytics 設定](/help/communities/analytics.md).
 
@@ -140,10 +136,10 @@ Adobe Analyticsがライセンスされ、Analytics クラウドサービスと�
 
 #### 翻訳 {#translation}
 
-この [翻訳設定](/help/communities/sites-console.md#translation) サイトのベース言語と、UGC を翻訳できるかどうか、および翻訳できる場合はどの言語に変換するかを指定します。
+The [翻訳設定](/help/communities/sites-console.md#translation) サイトのベース言語と、UGC を翻訳できるかどうか、および翻訳可能な場合はどの言語に翻訳するかを指定します。
 
 * チェック **機械翻訳を許可**
-* デフォルトの機械翻訳サービスで翻訳用に選択されたデフォルトの言語をそのまま使用
+* デフォルトの機械翻訳サービスで翻訳用に選択されたデフォルトの言語をそのままにします
 * デフォルトの翻訳プロバイダーと設定のままにします。
 * 言語コピーがないので、グローバルストアは不要です
 * 選択 **ページ全体を翻訳**
@@ -151,7 +147,7 @@ Adobe Analyticsがライセンスされ、Analytics クラウドサービスと�
 
 ![translation-settings](assets/translation-settings.png)
 
-### 手順 4:コミュニティサイトを作成 {#step-create-communities-site}
+### 手順 4：コミュニティサイトを作成する {#step-create-communities-site}
 
 選択 **を作成します。**
 
@@ -177,24 +173,23 @@ Adobe Analyticsがライセンスされ、Analytics クラウドサービスと�
 
 * **サイトを開く**
 
-   鉛筆アイコンを選択してコミュニティサイトをオーサリング編集モードで開き、ページコンポーネントを追加または設定します。
+  鉛筆アイコンを選択すると、コミュニティサイトがオーサリング編集モードで開き、ページコンポーネントを追加または設定できます。
 
 * **サイトを編集**
 
-   プロパティアイコンを選択してコミュニティサイトを開き、タイトルやテーマの変更などのプロパティを変更します。
+  プロパティアイコンを選択すると、コミュニティサイトが開き、タイトルやテーマの変更などのプロパティを変更できます。
 
 * **サイトを公開**
 
-   コミュニティサイトを公開する場合は、世界アイコンを選択します（例えば、公開サーバーがローカルマシンで実行されている場合は、デフォルトで localhost:4503 に公開します）。
+  世界のアイコンを選択すると、コミュニティサイトが公開されます（例えば、パブリッシュサーバーがローカルマシンで実行されている場合は、デフォルトで localhost:4503 に公開されます）。
 
 * **サイトを書き出し**
 
-   書き出しアイコンを選択して、コミュニティサイトのパッケージを作成し、そのパッケージを次の場所に保存します。 [パッケージマネージャー](/help/sites-administering/package-manager.md) とダウンロードされました。
-UGC はサイトパッケージに含まれていません。
+  書き出しアイコンを選択すると、コミュニティサイトのパッケージが作成され、そのパッケージがに保存されます。 [パッケージマネージャー](/help/sites-administering/package-manager.md) とダウンロードされました。 UGC はサイトパッケージに含まれていません。
 
 * **サイトを削除**
 
-   削除アイコンを選択して、内からコミュニティサイトを削除します。 **[!UICONTROL コミュニティ/サイトコンソール]**. この操作により、UGC、ユーザーグループ、アセット、データベースレコードなど、サイトに関連するすべての項目が削除されます。
+  削除アイコンを選択すると、内からコミュニティサイトが削除されます。 **[!UICONTROL コミュニティ/サイトコンソール]**. この操作により、UGC、ユーザーグループ、アセット、データベースレコードなど、サイトに関連するすべての項目が削除されます。
 
 ![siteactions](assets/siteactions.png)
 
@@ -204,15 +199,14 @@ UGC はサイトパッケージに含まれていません。
 >
 >オーサーインスタンスで、メインメニューから次の操作を実行します。
 >
->1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL レプリケーション]** メニュー
+>1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL レプリケーション]** メニュー。
 >1. 選択 **[!UICONTROL 作成者のエージェント]**.
 >1. 選択 **[!UICONTROL デフォルトエージェント (publish)]**.
 >1. 次の隣 **[!UICONTROL 設定]**&#x200B;を選択します。 **[!UICONTROL 編集]**.
 >1. エージェント設定のポップアップダイアログで、 **[!UICONTROL 輸送]** タブをクリックします。
->1. URI で、ポート番号 4503 を目的のポート番号に変更します。 例えば、ポート 6103 を使用するには、次のようにします。https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. URI で、ポート番号 4503 を目的のポート番号に変更します。 例えば、ポート 6103 を使用するには、 https://localhost:6103/bin/receive?sling:authRequestLogin=1と入力します。
 >1. 「**[!UICONTROL OK]**」を選択します。
 >1. （オプション）「 」を選択します。 **[!UICONTROL クリア]** または **[!UICONTROL 再試行を強制]** レプリケーションキューをリセットします。
-
 
 ### 公開を選択 {#select-publish}
 
@@ -226,7 +220,7 @@ UGC はサイトパッケージに含まれていません。
 
 新しいコミュニティサイトと共に、様々な管理機能に対して適切な権限が設定された新しいユーザーグループが作成されます。 詳しくは、 [コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites).
 
-この新しいコミュニティサイトでは、手順 1 でサイト名「engage」を指定すると、 [グループコンソール](/help/communities/members.md) ( グローバルナビゲーション：コミュニティ、グループ ):
+この新しいコミュニティサイトでは、手順 1 でサイト名「engage」を指定すると、 [グループコンソール](/help/communities/members.md) （グローバルナビゲーション：コミュニティ、グループ）:
 
 * コミュニティエンゲージコミュニティマネージャー
 * コミュニティエンゲージグループ管理者
@@ -235,7 +229,7 @@ UGC はサイトパッケージに含まれていません。
 * コミュニティエンゲージ権限を持つメンバー
 * コミュニティエンゲージサイトコンテンツマネージャー
 
-注意： [Aaron McDonald](/help/communities/tutorials.md#demo-users) は、
+[Aaron McDonald](/help/communities/tutorials.md#demo-users) は、次のメンバーです：
 
 * コミュニティエンゲージコミュニティマネージャー
 * コミュニティエンゲージモデレーター
@@ -249,7 +243,7 @@ UGC はサイトパッケージに含まれていません。
 
 ## 認証エラー用の設定 {#configure-for-authentication-error}
 
-サイトが設定され、パブリッシュにプッシュされると、 [ログインマッピングの設定](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) をパブリッシュインスタンスでクリックします。 ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
+サイトが設定され、パブリッシュにプッシュされると、 [ログインのマッピングの構成](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) をパブリッシュインスタンスでクリックします。 ログイン資格情報が正しく入力されていない場合、認証エラーによりコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
 
 を追加します。 `Login Page Mapping` as
 
@@ -283,12 +277,12 @@ UGC はサイトパッケージに含まれていません。
    * **名前** sling:match
       * **タイプ** 文字列
       * **値** localhost.4503/$ （「$」文字で終わる必要があります）
+
    * プロパティの追加:
 
       * **名前** sling:internalRedirect
       * **タイプ** 文字列
       * **値** /content/sites/engage/en.html
-
 
 1. 選択 **すべて保存します。**
 1. （オプション）閲覧履歴を削除します。
@@ -310,11 +304,11 @@ UGC はサイトパッケージに含まれていません。
 
 #### トラブルシューティング：リダイレクトに失敗 {#troubleshooting-fail-to-redirect}
 
-&#39;**$**&#39; （正規表現の末尾） `sling:match`文字列が非常に重要なので、正確に `https://localhost:4503/` がマッピングされている場合、リダイレクト値の前に、URL の server:port の後に存在する可能性のある任意のパスが付きます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
+&#39;**$**&#39; （正規表現の末尾） `sling:match`文字列が重要なので、 `https://localhost:4503/` がマッピングされている場合、リダイレクト値の前に、URL の server:port の後に存在する可能性のある任意のパスが付きます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ### サイトの変更 {#modify-the-site}
 
-サイトが最初に作成された後、作成者は [サイトを開くアイコン](/help/communities/sites-console.md#authoring-site-content) 標準のAEMオーサリングアクティビティを実行する場合。
+サイトが最初に作成された後、作成者は [サイトを開くアイコン](/help/communities/sites-console.md#authoring-site-content) を使用して、標準のAEMオーサリングアクティビティを実行します。
 
 また、管理者は [サイトを編集アイコン](/help/communities/sites-console.md#modifying-site-properties) をクリックして、サイトのプロパティ（タイトルなど）を変更します。
 

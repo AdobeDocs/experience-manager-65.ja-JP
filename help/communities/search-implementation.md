@@ -1,14 +1,14 @@
 ---
 title: 検索の基本事項
-description: コミュニティで検索
+description: AEM Communitiesの重要な機能である検索機能について説明します。 コミュニティには、ユーザー生成コンテンツ用の検索 API も用意されています。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1189'
 ht-degree: 5%
 
 ---
@@ -68,11 +68,11 @@ MSRP と Solr に関して：
 
 ### JSRP 検索 {#jsrp-searches}
 
-の場合 [JSRP](jsrp.md)に設定した場合、UGC は [Oak](../../help/sites-deploying/platform.md) とは、入力されたAEMオーサーインスタンスまたはパブリッシュインスタンスのリポジトリーにのみ表示されます。
+の場合 [JSRP](jsrp.md)に設定した場合、UGC は [Oak](../../help/sites-deploying/platform.md) とは、入力されたAEMオーサーインスタンスまたはパブリッシュインスタンスのリポジトリにのみ表示されます。
 
-UGC は通常パブリッシュ環境に入力されるので、マルチパブリッシャーの実稼動システムでは、 [クラスターを公開](topologies.md)（パブリッシュファームではなく）入力したコンテンツをすべてのパブリッシャーから表示できるようにする。
+UGC は通常、パブリッシュ環境に入力されるので、マルチパブリッシャーの実稼動システムでは、 [クラスターを公開](topologies.md)（パブリッシュファームではなく）入力したコンテンツをすべてのパブリッシャーから表示できるようにする。
 
-JSRP の場合、パブリッシュ環境に入力された UGC は、オーサー環境では表示されません。 したがって、すべて [モデレート](moderate-ugc.md) タスクはパブリッシュ環境で実行されます。
+JSRP の場合、パブリッシュ環境に入力された UGC は、オーサー環境では表示されません。 したがって、すべて [モデレート](moderate-ugc.md) タスクは、パブリッシュ環境で実行されます。
 
 カスタム検索機能では、 [UGC 検索 API](#ugc-search-api).
 

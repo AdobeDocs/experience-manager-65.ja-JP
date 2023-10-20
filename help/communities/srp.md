@@ -1,14 +1,14 @@
 ---
 title: ストレージリソースプロバイダーの概要
-description: コミュニティ用の共通ストレージ
+description: ユーザー生成コンテンツ (UGC) と呼ばれるコミュニティコンテンツを、ストレージリソースプロバイダー (SRP) が提供するシンプルで共通のストアに保存する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 5f313274-1a2a-4e83-9289-60a4729b99b4
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1140'
 ht-degree: 1%
 
 ---
@@ -27,20 +27,20 @@ Adobe Experience Manager(AEM)Communities 6.1 以降、コミュニティコン�
 
 >[!NOTE]
 >
->**カスタムコンポーネント**:AEM Communitiesのライセンスを持つお客様の場合、SRP API は、カスタムコンポーネントの開発者が基盤のトポロジに関係なく UGC にアクセスするために使用できます。 詳しくは、 [SRP と UGC の基本事項](srp-and-ugc.md).
+>**カスタムコンポーネント**:AEM Communitiesのライセンスを持つお客様の場合、SRP API は、カスタムコンポーネントの開発者が基盤のトポロジに関係なく、UGC にアクセスするために使用できます。 詳しくは、 [SRP と UGC の基本事項](srp-and-ugc.md).
 
 関連トピック：
 
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
-* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。
+* [SocialUtils のリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。
 
 ## リポジトリについて {#about-the-repository}
 
-SRP を理解するには、AEMコミュニティサイトでのAEMリポジトリ (Oak) の役割を理解すると役立ちます。
+SRP を理解するには、AEMコミュニティサイトでのAEMリポジトリ (Oak) の役割を理解すると役に立ちます。
 
 **Java™コンテンツリポジトリ (JCR)**
-この標準は、データモデルとアプリケーションプログラミングインターフェイス ([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)) をコンテンツリポジトリーに追加します。 従来のファイル・システムの特性とリレーショナル・データベースの特性を組み合わせ、コンテンツ・アプリケーションが頻繁に必要とする機能をいくつか追加します。
+この標準は、データモデルとアプリケーションプログラミングインターフェイスを定義します ([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)) をコンテンツリポジトリーに追加します。 従来のファイル・システムの特性とリレーショナル・データベースの特性を組み合わせ、コンテンツ・アプリケーションが頻繁に必要とする機能をいくつか追加します。
 
 JCR の実装の 1 つはAEMリポジトリ Oak です。
 
@@ -53,7 +53,7 @@ JCR の実装の 1 つはAEMリポジトリ Oak です。
 
 UGC の場合、コンテンツは公開パブリッシュ環境で登録されたサイト訪問者（コミュニティメンバー）によって入力されます。 これはランダムに発生します。
 
-管理とレポートの目的で、プライベートオーサー環境から UGC にアクセスできると便利です。 SRP では、パブリッシュからオーサーへのリバースレプリケーションは不要なので、オーサーから UGC にアクセスする方が一貫性が高く、パフォーマンスも向上します。
+管理とレポートの目的で、プライベートオーサー環境から UGC にアクセスできると便利です。 SRP では、パブリッシュからオーサーへのリバースレプリケーションは必要ないので、オーサーから UGC へのアクセスの一貫性とパフォーマンスが向上します。
 
 ## SRP について {#about-srp}
 
@@ -91,9 +91,9 @@ JSRP は、1 つのAEMインスタンス上のすべての UGC にアクセス�
 
 詳しくは、 [JSRP - JCR ストレージリソースプロバイダー](jsrp.md).
 
-JSRP がある場合、UGC は JCR に格納され、CRXDE Liteと JCR API の両方を通じてアクセスできる場合は、JCR API を使用しないことをお勧めします。そうしないと、今後の変更がカスタムコードに影響を与える可能性があります。
+UGC が JCR に格納されている間に JSRP が存在し、CRXDE Liteおよび JCR API でアクセスできる場合、Adobeでは JCR API を使用しないことをお勧めします。 設定すると、今後の変更がカスタムコードに影響を与える可能性があります。
 
-さらに、オーサー環境とパブリッシュ環境用のリポジトリは共有されません。 パブリッシュインスタンスのクラスターが共有パブリッシュリポジトリになりますが、パブリッシュ時に入力された UGC はオーサーに表示されないので、オーサーから UGC を管理することはできません。 UGC は、入力されたインスタンスのAEMリポジトリ (JCR) にのみ保持されます。
+さらに、オーサー環境とパブリッシュ環境用のリポジトリは共有されません。 パブリッシュインスタンスのクラスターが共有パブリッシュリポジトリになりますが、パブリッシュで入力した UGC はオーサーに表示されないので、オーサーから UGC を管理することはできません。 UGC は、入力されたインスタンスのAEMリポジトリ (JCR) にのみ保持されます。
 
 JSRP は、クエリに Oak インデックスを使用します。
 
@@ -104,7 +104,7 @@ UGC へのパスを模倣するシャドウノードは、ローカルリポジ�
 1. [アクセス制御 (ACL)](#for-access-control-acls)
 1. [存在しないリソース (NER)](#for-non-existing-resources-ners)
 
-SRP の実装に関係なく、実際の UGC はシャドウノードと同じ場所に表示されません。
+SRP の実装に関係なく、実際の UGC は *not* シャドウノードと同じ場所に表示されます。
 
 ### アクセス制御 (ACL) の場合 {#for-access-control-acls}
 
@@ -128,9 +128,9 @@ ACL チェックでは、リソースの UGC に適用される権限の確認�
 
 ### ストレージの場所 {#storage-location}
 
-次に、 [コメントコンポーネント](http://localhost:4502/content/community-components/en/comments.html) 内 [コミュニティコンポーネントガイド](components-guide.md):
+次に、 [コメントコンポーネント](http://localhost:4502/content/community-components/en/comments.html) （内） [コミュニティコンポーネントガイド](components-guide.md):
 
-* コンポーネントは次の場所にあるローカルリポジトリに存在します。
+* コンポーネントは、次の場所にあるローカルリポジトリに存在します。
 
   `/content/community-components/en/comments/jcr:content/content/includable/comments`
 

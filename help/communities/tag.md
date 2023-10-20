@@ -1,18 +1,14 @@
 ---
 title: タグの基本事項
-seo-title: Tag Essentials
-description: タグの概要
-seo-description: Tag overview
-uuid: a5d52319-f821-4608-b0ab-abc8a1374343
+description: コミュニティメンバーは、タグ付けが有効な状態でコミュニティコンポーネントを設定する際に、パブリッシュ環境で投稿するコンテンツにタグを付けることができます。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '262'
 ht-degree: 5%
 
 ---
@@ -25,11 +21,11 @@ AEM Communitiesコンポーネントでタグ付けが有効になっている�
 
 * 詳しくは、 [タグの管理](../../help/sites-administering/tags.md) および [ユーザー生成コンテンツのタグ付け](tag-ugc.md) (UGC) を参照してください。
 
-* 詳しくは、 [開発者向けタグ付け](../../help/sites-developing/tags.md) を参照してください。 [タグ付けフレームワーク](../../help/sites-developing/framework.md) にタグを追加したり、タグを拡張したりする [カスタムアプリケーション](../../help/sites-developing/building.md).
+* 詳しくは、 [開発者向けタグ付け](../../help/sites-developing/tags.md) 」を参照してください。 [タグ付けフレームワーク](../../help/sites-developing/framework.md) およびタグを追加し、拡張します。 [カスタムアプリケーション](../../help/sites-developing/building.md).
 
 * 詳しくは、 [Social タグクラウドの使用](tagcloud.md) を参照してください。 `social tag cloud` コンポーネントをページに追加して、パブリッシュ環境で UGC に適用されたタグをハイライトします。
 
-UGC のタグ付けは、 [コミュニティサイト](sites-console.md#tagging) または次の機能の 1 つ：
+UGC のタグ付けは、 [コミュニティサイト](sites-console.md#tagging) または次の機能の 1 つを選択します。
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -74,14 +70,14 @@ UGC のタグ付けは、 [コミュニティサイト](sites-console.md#tagging
 
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
-* [Social タグクラウド API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [Social タグクラウド API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
-* [Social タグマネージャー](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
+* [Social タグマネージャー](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
 ## タグ検索 {#tag-searching}
 
-現在 [機能パック 1](deploy-communities.md#latestfeaturepack) (FP1)、タグ検索は [タグのタイトル](../../help/sites-developing/framework.md#tag-characteristics).
+現在 [機能パック 1](deploy-communities.md#latestfeaturepack) (FP1)、タグ検索は、 [タグのタイトル](../../help/sites-developing/framework.md#tag-characteristics).
 
 FP1 以前は、 [タグ id](../../help/sites-developing/framework.md#tagid).

@@ -1,14 +1,14 @@
 ---
 title: コミュニティのトラブルシューティング
-description: 既知の問題を含むコミュニティのトラブルシューティング
+description: 既知の問題や懸念事項など、コミュニティのトラブルシューティングについて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 新しいバージョンの Jetty で Dispatcher 4.1.5 を使用する場合、リフェッチを実行すると、リクエストがタイムアウトするのを待った後に「リモートサーバーから応答を受け取れません」となる場合があります。
 
-Dispatcher 4.1.6 以降を使用すると、この問題が解決します。
+この問題は、Dispatcher 4.1.6 以降を使用すると解決されます。
 
 ### CQ 5.4 からのアップグレード後にフォーラム投稿にアクセスできない {#cannot-access-forum-post-after-upgrading-from-cq}
 
@@ -45,17 +45,17 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * To: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-失敗は、オーサーとパブリッシュで異なります。 オーサー環境では、警告なく失敗し、フォーラムトピックは表示されません。 公開すると、ページ上でエラーがスローされます。
+失敗は、オーサーとパブリッシュで異なります。 オーサー環境では、エラーは表示されず、フォーラムトピックは表示されません。 公開時に、ページ上でエラーがスローされます。
 
 詳しくは、 [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
 ## 一般的な懸念事項 {#common-concerns}
 
-### ログ内の警告：Handlebars は非推奨 {#warning-in-logs-handlebars-deprecated}
+### ログ内の警告：Handlebars は非推奨です {#warning-in-logs-handlebars-deprecated}
 
 起動時（最初ではなく、その後のすべて）に、次の警告がログに表示される場合があります。
 
-* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、次で置き換えられています： `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
 この警告は、 `jknack.handlebars.Handlebars`、使用元 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)には、独自の i18n ヘルパーユーティリティが付属しています。 起動時に、AEM固有の [i18n ヘルパー](handlebars-helpers.md#i-n). この警告は、既存のヘルパーの上書きを確認するために、サードパーティのライブラリによって生成されます。
 
@@ -74,9 +74,9 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 23.04.2014 14:21:18.990 *WARN* [pool-5-thread-3] org.apache.sling.jcr.resource.internal.OakResourceListener processOsgiEventQueue: Resource at /var/replication/data/1f799fb4-0aeb-4660-aadb-705657f16048/b9/b91f1690-87e8-41d8-a78e-cd2259f837c8/jcr:content not found, which is not expected for an added or modified node
 ```
 
-### ログのエラー：IndexElementFactory の NoClassDefFoundError {#error-in-logs-noclassdeffounderror-for-indexelementfactory}
+### ログのエラー： IndexElementFactory の NoClassDefFoundError {#error-in-logs-noclassdeffounderror-for-indexelementfactory}
 
-AEM 5.6.1 GA を最新の cq-socialcommunities-pkg-1.4.x またはAEM 6.0 にアップグレードすると、起動時にログファイルにエラーが表示され、再起動時にエラーが見つからないことを示す条件が解決されます。
+AEM 5.6.1 を最新の cq-socialcommunities-pkg-1.4.x にアップグレードするか、AEM 6.0 にアップグレードすると、ログファイルにエラーが発生します。 これは、再起動時にエラーが見つからないことを示すように解決される状態の起動時に発生します。
 
 ```xml
 14.11.2013 20:52:39.453 ERROR [Apache Sling JCR Resource Event Queue Processor for path '/'] com.adobe.cq.social.storage.index.impl.IndexService Error occurred while processing event java.util.ConcurrentModificationException

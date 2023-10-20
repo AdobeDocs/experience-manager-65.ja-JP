@@ -1,15 +1,15 @@
 ---
 title: ネストされたグループの作成
-description: ネストされたグループの作成
+description: Adobe Experience Manager Communities サイト用にネストされたグループを作成する方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '600'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ AEMオーサーインスタンスで、グローバルナビゲーションか�
 
 ## メインアートグループを作成 {#create-main-arts-group}
 
-このグループは、エンゲージメントを行うためのサイト構造にグループ機能が含まれているので作成できます。 サイトの `Reference Template` デフォルトでは、有効なグループテンプレートを選択できます。 したがって、この新しいグループ用に選択されたテンプレートは、 `Reference Group`.
+このグループは、をエンゲージするためのサイト構造にグループの機能が含まれているので作成できます。 サイトの `Reference Template` デフォルトでは、有効なグループテンプレートを選択できます。 したがって、この新しいグループ用に選択されたテンプレートは、 `Reference Group`.
 
 これらのコンソールは、コミュニティサイトコンソールに似ています。
 
@@ -118,7 +118,7 @@ The `arts` グループには、 `groups` フォルダー内に作成されま�
    * テンプレート: `Reference Group`
    * メンバーシップ： select `Restricted Membership`：シークレットグループ。招待されたメンバーにのみ表示されます。 例として、を [デモユーザー](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
 
-ページを更新して、ネストされた 3 つのグループ（サブコミュニティ）をすべて表示します。
+ページを更新して、3 つのネストされたグループ（サブコミュニティ）をすべて表示します。
 
 コミュニティサイトコンソールからネストされたグループに移動するには、次の手順を実行します。
 
