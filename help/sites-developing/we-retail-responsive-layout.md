@@ -1,7 +1,7 @@
 ---
 title: We.Retail のレスポンシブレイアウトの使用
 seo-title: Trying out Responsive Layout in We.Retail
-description: We.Retail のレスポンシブレイアウトの使用
+description: We.Retail を使用してAdobe Experience Managerでレスポンシブレイアウトを試す方法を説明します。
 seo-description: null
 uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 exl-id: 6df5fb10-a7f1-4d5d-ac00-b4be3d5d3d18
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 60%
+source-wordcount: '252'
+ht-degree: 56%
 
 ---
 

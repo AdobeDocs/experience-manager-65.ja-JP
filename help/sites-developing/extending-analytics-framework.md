@@ -1,16 +1,16 @@
 ---
 title: Adobe Analytics Framework のカスタマイズ
-description: Adobe Analytics Framework のカスタマイズ
+description: Adobe Experience Manager用のAdobe Analyticsフレームワークをカスタマイズする方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1613'
-ht-degree: 46%
+source-wordcount: '1620'
+ht-degree: 45%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Analytics フレームワークは、Adobe Analytics で追跡される情
 
 ページがAdobe Analyticsフレームワークに関連付けられ、そのページに以下が含まれている場合 [Analytics モジュールへの参照](/help/sites-administering/adobeanalytics.md)を指定すると、analytics.sitecatalyst.js ファイルがページ用に自動的に生成されます。
 
-ページ内の JavaScript で、 `s_gi`オブジェクト (s_code.js Adobe Analyticsライブラリで定義されている ) を削除し、そのプロパティに値を割り当てます。 オブジェクトインスタンスの名前は `s` です。この節に示すコード例では、この `s` 変数への参照を複数作成します。
+ページ内の JavaScript によって、 `s_gi`オブジェクト (s_code.js Adobe Analyticsライブラリで定義されている ) を削除し、そのプロパティに値を割り当てます。 オブジェクトインスタンスの名前は `s` です。この節に示すコード例では、この `s` 変数への参照を複数作成します。
 
 次のコード例は、analytics.sitecatalyst.js ファイルのコードに似ています。
 
@@ -124,7 +124,7 @@ JavaScript からの自由のボックス ( **一般的な Analytics 設定** �
 
 `if (s.usePlugins) s.doPlugins(s)`
 
-以下の手順では、「 JavaScript 」ボックスを使用してAdobe Analyticsトラッキングをカスタマイズする方法を示します。 JavaScript でAdobe Analyticsプラグインを使用する必要がある場合、 [統合する](/help/sites-administering/adobeanalytics.md) AEMに
+以下の手順では、「 JavaScript 」ボックスを使用してAdobe Analyticsトラッキングをカスタマイズする方法を示します。 JavaScript でAdobe Analyticsプラグインを使用する必要がある場合、 [統合する](/help/sites-administering/adobeanalytics.md) をAEMに追加します。
 
 1. 次の JavaScript コードをボックスに追加し、 `s.doPlugins` が実行されました：
 
@@ -187,7 +187,7 @@ analytics.sitecatalyst.js ファイル（Adobe Analytics の s_code.js ファイ
 
 if (s.usePlugins) s.doPlugins(s)
 
-したがって、JavaScript を `s.usePlugins` から `true` そのため、 `s_doPlugins` 関数が実行されます。 コードをカスタマイズするには、独自の JavaScript を使用するファイルでconfig.js.jsp ファイルをオーバーレイします。 JavaScript でAdobe Analyticsプラグインを使用する必要がある場合、 [統合する](/help/sites-administering/adobeanalytics.md) AEMに
+したがって、JavaScript を `s.usePlugins` から `true` そのため、 `s_doPlugins` 関数が実行されます。 コードをカスタマイズするには、独自の JavaScript を使用するファイルでconfig.js.jsp ファイルをオーバーレイします。 JavaScript でAdobe Analyticsプラグインを使用する必要がある場合、 [統合する](/help/sites-administering/adobeanalytics.md) をAEMに追加します。
 
 >[!NOTE]
 >
@@ -240,7 +240,7 @@ if (s.usePlugins) s.doPlugins(s)
 
 Adobe Analyticsプラグインの JavaScript コードを取得し、AEMのAdobe Analyticsフレームワークに統合します。 カテゴリのクライアントライブラリフォルダーにコードを追加する `sitecatalyst.plugins` カスタム JavaScript コードで使用できるようにします。
 
-例えば、 `getQueryParams` プラグインを使用する場合は、 `s_doPlugins` 関数を使用します。 次のコード例では、 **&quot;pid&quot;** リファラーの URL から **eVar1**、Adobe Analytics呼び出しがトリガーされたとき。
+例えば、 `getQueryParams` プラグインを使用する場合は、 `s_doPlugins` 関数を使用して、カスタム JavaScript を読み込みます。 次のコード例では、 **&quot;pid&quot;** リファラーの URL から **EVAR1**、Adobe Analytics呼び出しがトリガーされたとき。
 
 ```
 s.usePlugins=true;
@@ -273,12 +273,12 @@ AEM では次の Adobe Analytics プラグインをインストールして、�
 
    * タイプ：cq:ClientLibraryFolder
 
-1. 作成したクライアントライブラリフォルダーを選択し、右下のプロパティバーを使用して次のプロパティを追加します。
+1. 作成したクライアントライブラリフォルダーを選択し、右下のプロパティバーを使用して、次のプロパティを追加します。
 
    * 名前：categories
    * タイプ：String
-   * 値：sitecatalyst.plugins
-   * 複数：選択済み
+   * 値： sitecatalyst.plugins
+   * マルチ：選択
 
    編集ウィンドウで「OK」をクリックして、プロパティの値を確認します。
 
@@ -305,6 +305,6 @@ AEM では次の Adobe Analytics プラグインをインストールして、�
 
 >[!NOTE]
 >
->プラグインを使用する場合は、サポートするプラグインも必ず統合します。統合しない場合、プラグイン JavaScript は、サポートするプラグインの関数に対しておこなった呼び出しを認識しません。 例えば、getPreviousValue() プラグインを正しく機能させるには、split() プラグインが必要です。
+>プラグインを使用する場合は、サポートするプラグインも必ず統合してください。統合しない場合、プラグイン JavaScript は、サポートするプラグインの関数に対しておこなった呼び出しを認識しません。 例えば、getPreviousValue() プラグインを正しく機能させるには、split() プラグインが必要です。
 >
 > サポートプラグインの名前も **js.txt** に追加する必要があります。

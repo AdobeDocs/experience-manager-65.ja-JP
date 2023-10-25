@@ -1,15 +1,15 @@
 ---
 title: We.Retail のコアコンポーネントの使用
-description: We.Retail のコアコンポーネントの使用
+description: We.Retail を使用してAdobe Experience Managerでコアコンポーネントを試す方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 35%
+source-wordcount: '540'
+ht-degree: 34%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 35%
 
 1. ありがとうページで、テキストコンポーネントを選択し、コンポーネントの編集メニューで継承をキャンセルアイコンをクリックします。
 
-   [We.Retail はグローバル化されたサイト構造を持っています](/help/sites-developing/we-retail-globalized-site-structure.md) コンテンツが言語マスターからにプッシュされる場所 [継承という仕組みを通じたライブコピー](/help/sites-administering/msm.md). このため、継承はキャンセルして、ユーザーが手動でテキストを編集できるようにする必要があります。
+   [We.Retail はグローバル化されたサイト構造を持っています](/help/sites-developing/we-retail-globalized-site-structure.md) コンテンツが言語マスターからにプッシュされる場所 [継承という仕組みを通じてのライブコピー](/help/sites-administering/msm.md). このため、継承はキャンセルして、ユーザーが手動でテキストを編集できるようにする必要があります。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
@@ -70,7 +70,7 @@ ht-degree: 35%
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 次の **ページ情報** メニュー、選択 **テンプレートを編集**.
+1. 次から： **ページ情報** メニュー、選択 **テンプレートを編集**.
 1. ページのテンプレートエディターで、 **ポリシー** アイコン **レイアウトコンテナ** 」と入力します。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)

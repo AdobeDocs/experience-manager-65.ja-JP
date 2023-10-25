@@ -1,7 +1,7 @@
 ---
 title: We.Retail のコンテンツフラグメントの使用
 seo-title: Trying out Experience Fragments in We.Retail
-description: We.Retail のコンテンツフラグメントの使用
+description: We.Retail を使用してAdobe Experience Managerでエクスペリエンスフラグメントを試す方法を説明します。
 seo-description: Trying out Experience Fragments in We.Retail
 uuid: 43a6df77-9dd3-4316-b749-0ef059370f7d
 contentOwner: AEM Docs
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: fe44a941-a09b-4421-b766-1d433291f2cc
 exl-id: e17ff611-122a-4d17-97af-071d0234dd16
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
-workflow-type: ht
-source-wordcount: '235'
-ht-degree: 100%
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 94%
 
 ---
 
@@ -31,7 +31,7 @@ We.Retail のコンテンツフラグメントの使用
 >
 >**[コンテンツフラグメント](/help/sites-developing/we-retail-content-fragments.md)**&#x200B;と&#x200B;**エクスペリエンスフラグメント**&#x200B;は、AEM 内の異なる機能です。
 >
->* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
+>* **コンテンツフラグメント**&#x200B;は編集コンテンツで、主にテキストや関連する画像です。これらは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、web ページのフラグメントです。
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。

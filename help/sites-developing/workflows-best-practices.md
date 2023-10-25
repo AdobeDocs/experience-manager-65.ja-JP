@@ -1,7 +1,7 @@
 ---
 title: ワークフローのベストプラクティス
 seo-title: Workflow Best Practices
-description: ワークフローのベストプラクティス
+description: Adobe Experience Managerでのワークフローの操作に関するベストプラクティスについて説明します。
 seo-description: null
 uuid: 79be4055-c2ef-428e-9054-103c6cfde1d2
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1929'
 ht-degree: 26%
 
 ---
@@ -255,7 +255,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 >[!CAUTION]
 >
->推奨はされませんが、独自の JCR セッションを作成した場合は保存する必要があります。
+>ここでのレコメンデーションにもかかわらず、独自の JCR セッションを作成する場合は、それを保存する必要があります。
 
 ### ランチャーの数/範囲の最小化 {#minimize-the-number-scope-of-launchers}
 

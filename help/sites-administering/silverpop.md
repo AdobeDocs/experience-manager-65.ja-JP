@@ -1,7 +1,7 @@
 ---
 title: Silverpop Engage との統合
 seo-title: Integrating with Silverpop Engage
-description: AEM と Silverpop Engage を統合する方法について説明します
+description: Adobe Experience Managerを Silverpop Engage と統合する方法を説明します。
 seo-description: Learn how to integrate AEM with Silverpop Engage
 uuid: e17deeb6-5339-4ead-9086-cbe2167cdec6
 contentOwner: Guillaume Carlino
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 01029a80-f80e-450c-9c73-16d0662af26d
 docset: aem65
 exl-id: 6c4b8aaa-bda0-4066-a3fc-d91a5ab1621c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 97%
+source-wordcount: '590'
+ht-degree: 95%
 
 ---
 

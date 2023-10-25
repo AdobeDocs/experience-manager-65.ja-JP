@@ -1,15 +1,15 @@
 ---
 title: OSGi バンドル
-description: OSGi バンドルの管理に関するヒント
+description: Adobe Experience Managerでの OSGi バンドルの管理に関するヒントを説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e18065c7-75b9-4b37-8294-cf94122a4dcf
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 33%
+source-wordcount: '346'
+ht-degree: 32%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 33%
 
 ## OSGi バンドルで厳密に必要とされる以上のクラスや jar を埋め込まないでください。 {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
 
-共通のライブラリは、別々のバンドルにファクタリングする必要があります。 これにより、バンドル間で再利用できます。 をラッピングする場合 *JAR* OSGi バンドルで、オンラインソースで、既にこの操作を実行しているかどうかを確認します。 既存のバンドルラッパーを見つける一般的な場所は次のとおりです。Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse バンドルレシピ、および SpringSource Enterprise バンドルリポジトリ。
+共通のライブラリは、別々のバンドルにファクタリングする必要があります。 これにより、バンドル間で再利用できます。 をラッピングする場合 *JAR* OSGi バンドルで、オンラインソースを確認して、既にこの操作を実行しているかどうかを確認します。 既存のバンドルラッパーを見つける一般的な場所は、Apache Felix、Apache Sling、Apache Geronimo、Apache ServiceMix、Eclipse Bundle Recipes、SpringSource Enterprise Bundle Repository です。
 
 ## 最低限必要なバンドルバージョンに依存 {#depend-on-the-lowest-needed-bundle-versions}
 

@@ -1,14 +1,14 @@
 ---
 title: コーディングのヒント
-description: AEMのコーディングに関するヒント
+description: Adobe Experience Managerでのコーディングのベストプラクティスに関するヒントをいくつか紹介します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '861'
 ht-degree: 57%
 
 ---
@@ -30,8 +30,8 @@ ht-degree: 57%
 AEM のコードベースでは、次のような規則が使用されます。
 
 
-* インターフェイスの単一実装は、 `<Interface>Impl`つまり、 `ReaderImpl`.
-* 1 つのインターフェイスの複数の実装には、 `<Variant><Interface>`つまり、 `JcrReader` および `FileSystemReader`.
+* インターフェイスの単一の実装は、 `<Interface>Impl`、つまり、 `ReaderImpl`.
+* インターフェイスの複数の実装には、という名前が付けられます `<Variant><Interface>`、つまり、 `JcrReader` および `FileSystemReader`.
 * 抽象ベースクラスには `Abstract<Interface>` または `Abstract<Variant><Interface>` という名前を付けます。
 * パッケージには `com.adobe.product.module` という名前を付けます。それぞれの Maven アーティファクトまたは OSGi バンドルには独自のパッケージが必要です。
 * Java™の実装は、API の下の impl パッケージに配置されます。
@@ -48,7 +48,7 @@ AEM のコードベースでは、次のような規則が使用されます。
    <td><p><strong>明確</strong></p> </td>
   </tr>
   <tr>
-   <td><p>int d;//経過時間（日数）</p> </td>
+   <td><p>int d; //経過時間（日単位）</p> </td>
    <td><p>int elapsedTimeInDays;</p> </td>
   </tr>
   <tr>
@@ -89,8 +89,8 @@ Java™コードの場合、AEMは、メッセージのログに標準 API と�
 * ERROR：コードが中断され、処理を続行できない場合。これは多くの場合、予期しない例外の結果として発生します。これらのシナリオにスタックトレースを含めると便利です。
 * WARN：正しく動作していない部分があるが、処理は続行できる場合。これは多くの場合、*PathNotFoundException* など、予期された例外の結果です。
 * INFO：システムを監視する際に役立つ情報。これがデフォルトであり、ほとんどのお客様の環境でこの設定がそのまま使用されることに留意してください。したがって、過度に使用しないでください。
-* デバッグ：処理に関する低レベルの情報。 サポートに関する問題をデバッグする際に役立ちます。
-* TRACE:最下位レベルの情報（開始/終了メソッドなど）。 これは通常、開発者のみが使用します。
+* DEBUG：処理に関する低レベルの情報。 サポートに関する問題をデバッグする際に役立ちます。
+* TRACE：メソッドの開始/終了など、最も低いレベルの情報。 これは通常、開発者のみが使用します。
 
 JavaScript の場合は、開発時にのみ console.log を使用し、リリース前にすべてのログステートメントを削除する必要があります&#x200B;*。*
 

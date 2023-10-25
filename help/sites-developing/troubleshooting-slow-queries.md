@@ -1,7 +1,7 @@
 ---
 title: 処理に時間のかかるクエリのトラブルシューティング
 seo-title: Troubleshooting Slow Queries
-description: 処理に時間のかかるクエリのトラブルシューティング
+description: Adobe Experience Managerで低速なクエリをトラブルシューティングする方法を説明します。
 seo-description: null
 uuid: ad09546a-c049-44b2-99a3-cb74ee68f040
 contentOwner: User
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: a296e459461973fc2dbd0641c6fdda1d89d8d524
-workflow-type: ht
-source-wordcount: '2262'
-ht-degree: 100%
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+workflow-type: tm+mt
+source-wordcount: '2269'
+ht-degree: 99%
 
 ---
 

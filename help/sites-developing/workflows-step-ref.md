@@ -1,7 +1,7 @@
 ---
 title: ワークフローステップのリファレンス
 seo-title: Workflow Step Reference
-description: ワークフローステップのリファレンス
+description: Adobe Experience Managerのワークフローについては、この手順のリファレンスを参照してください。
 seo-description: null
 uuid: 88bf6997-73a1-4639-82aa-5dff08d3ef86
 contentOwner: User
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '3242'
+source-wordcount: '3250'
 ht-degree: 97%
 
 ---
@@ -521,7 +521,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 * **フォームの開始**&#x200B;コンポーネントでは、**アクションタイプ**&#x200B;プロパティが `Edit Workflow Controlled Resource(s)` に設定されている必要があります。
 * **フォームの開始**&#x200B;コンポーネントには、`Form Identifier` プロパティの値が必要です。
-* フォームコンポーネントでは、**エレメント名**&#x200B;プロパティを、フィールドデータを保存するノードのパスに設定する必要があります。パスは、ワークフローペイロードのコンテンツ内のノードを指す必要があります。値には次の形式を使用します。
+* フォームコンポーネントでは、**要素名**&#x200B;プロパティを、フィールドデータを保存するノードのパスに設定する必要があります。パスは、ワークフローペイロードのコンテンツ内のノードを指す必要があります。値には次の形式を使用します。
 
   `./jcr:content/path_to_node`
 

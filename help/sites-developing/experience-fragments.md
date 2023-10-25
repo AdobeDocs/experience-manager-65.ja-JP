@@ -1,16 +1,16 @@
 ---
 title: Adobe Experience Manager Sites開発のエクスペリエンスフラグメント
-description: エクスペリエンスフラグメントのカスタマイズについて学びます。
+description: Adobe Experience Manager用のエクスペリエンスフラグメントをカスタマイズする方法を説明します。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: d6e5684ee89d19ab0fc6d15038c22a4a5b816563
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 79%
+source-wordcount: '1787'
+ht-degree: 87%
 
 ---
 
@@ -34,7 +34,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 これはブラウザーから使用できますが、主な目的は、他のアプリケーション（サードパーティの Web アプリ、カスタムモバイル実装など）が URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
 
-プレーンHTMLレンディションは、次のパスにプロトコル、ホストおよびコンテキストパスを追加します。
+プレーン HTML レンディションは、次のようなパスにプロトコル、ホストおよびコンテキストパスを追加します。
 
 * タイプが `src`、`href`、`action` のいずれか
 
@@ -64,7 +64,7 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
    * 最終レンディションに残す CSS クラスに一致する正規表現。
    * これは、顧客が特定の CSS クラスを取り除きたい場合に便利です。
 * `allowedTags`
-   * 最終レンディションで許可されるHTMLタグのリスト。
+   * 最終的なレンディションで許可される HTML タグのリスト。
    * デフォルトでは、次のタグが許可されています（設定は不要）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link、script
 
 オーバーレイを使用してリライターを設定することをお勧めします。[オーバーレイ](/help/sites-developing/overlays.md)を参照してください
@@ -134,7 +134,7 @@ AEM では、エクスペリエンスフラグメントを作成できます。�
 * コンポーネントグループとレイアウトで構成されます。
 * AEM ページとは独立して存在できます。
 
-このようなグループの使用例の 1 つは、Adobe Targetなどのサードパーティのタッチポイントにコンテンツを埋め込む場合です。
+このようなグループのユースケースの 1 つは、Adobe Target などのサードパーティのタッチポイントにコンテンツを埋め込む場合です。
 
 ### デフォルトのリンク書き換え {#default-link-rewriting}
 
@@ -146,7 +146,7 @@ AEM では、エクスペリエンスフラグメントを作成できます。�
 
 この機能は、[AEM のオーサーインスタンスで有効にする](/help/sites-administering/experience-fragments-target.md#Prerequisites)ことができます。有効な Adobe Target 設定と、Link Externalizer の設定が必要です。
 
-Link Externalizer は、Target オファーのHTMLバージョンを作成する際に必要な正しい URL を決定するために使用されます。オファーはAdobe Targetに送信されます。 これが必要なのは、Adobe Target では Target HTML オファー内のすべてのリンクに公にアクセスできる必要があるからです。つまり、リンクが参照するあらゆるリソースとエクスペリエンスフラグメントそのものを使用するには、まずそれらを公開する必要があります。
+Link Externalizer は、Target オファーの HTML バージョンを作成する際に必要な正しい URL を決定するために使用します。オファーは、その後 Adobe Target に送信されます。これが必要なのは、Adobe Target では Target HTML オファー内のすべてのリンクに公にアクセスできる必要があるからです。つまり、リンクが参照するあらゆるリソースとエクスペリエンスフラグメントそのものを使用するには、まずそれらを公開する必要があります。
 
 デフォルトでは、Target HTML オファーを作成すると、AEM のカスタム Sling セレクターにリクエストが送信されます。このセレクターの名前は `.nocloudconfigs.html` です。これはエクスペリエンスフラグメントのプレーン HTML レンダリングを作成しますが、その名前が示すとおり、クラウド設定を含んでいません（クラウド設定は余分な情報です）。
 
@@ -169,7 +169,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
    >
    >通常、HTML内の内部リンクは相対リンクですが、カスタムコンポーネントがHTML内で完全な URL を指定する場合もあります。 デフォルトでは、AEM はこれらの完全な URL を無視し、変更しません。
 
-   これらの属性のリンクは、AEM Link Externalizer を通じて実行されます `publishLink()` 公開済みのインスタンス上にあるかのように URL を再作成し、公開済みの状態にします。
+   これらの属性のリンクは AEM Link Externalizer `publishLink()` を通じて実行され、あたかもパブリッシュインスタンス上にあるかのように URL が再作成され、一般に公開されます。
 
 そのまま使用できる標準実装を使用する場合、エクスペリエンスフラグメントから Target オファーを生成して Adobe Target に書き出すには、上記のプロセスで十分です。しかし、このプロセスでは対応していない使用例もいくつかあります。例えば、次のような場合です。
 
@@ -291,16 +291,16 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 このメソッドは入力として次のパラメーターを受け取ります。
 
-* `link`
-The `String` 処理中のリンクの表現。 これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
+* `link`：
+処理中のリンクの `String` 表現です。これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
 
-* `tag`
-処理中のHTML要素の名前。
+* `tag`：
+処理中の HTML 要素の名前です。
 
 * `attribute`：
 正確な属性名です。
 
-例えば、「Adobe Target に書き出し」システムがこの要素を処理している場合、 `CSSInclude` 形式：
+例えば、Target システムに書き出しがこの要素を処理している場合は、`CSSInclude` を次のように定義できます。
 
 ```java
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
@@ -347,7 +347,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->上記のメソッドが `null`「Adobe Target に書き出し」を選択した場合、そのリンクをそのままの状態で、リソースへの相対リンクとして残します。
+>上記のメソッドが `null` を返した場合、Target システムに書き出しは、リンクをそのままの状態（リソースへの相対リンク）にしておきます。
 
 #### 優先度 - getPriority {#priorities-getpriority}
 

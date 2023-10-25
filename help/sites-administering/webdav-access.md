@@ -1,7 +1,7 @@
 ---
 title: WebDAV アクセス
 seo-title: WebDAV Access
-description: AEM での WebDAV アクセスについて説明します。
+description: WebDAV を使用して Web Experience Manager にアクセスするAdobeについて説明します。
 seo-description: Learn about WebDAV access in AEM.
 uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
@@ -10,10 +10,10 @@ topic-tags: content
 content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
-workflow-type: ht
-source-wordcount: '1097'
-ht-degree: 100%
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+workflow-type: tm+mt
+source-wordcount: '1101'
+ht-degree: 99%
 
 ---
 
@@ -181,6 +181,7 @@ macOS では、WebDAV を介して接続するために必要な設定手順は�
 1. **サーバへ接続**&#x200B;ウィンドウで、AEM の場所を入力します。
 
    * `http://localhost:4502`
+
    >[!NOTE]
    >
    >AEM が別のポートにある場合は、4502 の代わりにそのポート番号を使用してください。また、コンテンツリポジトリをローカルマシンで実行していない場合は、`localhost` を該当するサーバー名または IP アドレスに置き換えてください。

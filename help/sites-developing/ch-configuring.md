@@ -1,14 +1,14 @@
 ---
 title: ContextHub の設定
-description: Context Hub の設定方法について説明します。
+description: Adobe Experience Manager Context Hub を設定してエクスペリエンスをパーソナライズする方法について説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1793'
 ht-degree: 98%
 
 ---
@@ -52,7 +52,7 @@ Adobe Granite ContextHub OSGi サービスを設定して、ページで [Contex
 
 このサービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用して設定できます。
 
-* **Web コンソール：** UI を表示するには、「Show UI」プロパティを選択します。UI を非表示にするには、「Show UI」プロパティをオフにします。
+* **Web コンソール：** UI を表示するには、「Show UI」プロパティを選択します。UI を非表示にするには、「非表示 UI」プロパティをクリアします。
 * **JCR ノード：** UI を表示するには、`com.adobe.granite.contexthub.show_ui` ブール値プロパティを `true` に設定します。UI を非表示にするには、プロパティを `false` に設定します。
 
 ContextHub UI を表示する場合は、AEM オーサーインスタンスのページにのみ表示されます。この UI は、パブリッシュインスタンスのページには表示されません。
@@ -97,7 +97,7 @@ AEM には、基本 UI モジュールタイプと、UI モジュールのベー
 
 UI モジュールのプロパティには、モジュール固有のプロパティの値を指定できる詳細設定が含まれています。詳細設定は JSON 形式で指定します。表の「モジュールタイプ」列は、各 UI モジュールタイプに必要な JSON コードに関する情報へのリンクを示します。
 
-| モジュールタイプ | 説明 | ストア |
+| モジュールの種類 | 説明 | ストア |
 |---|---|---|
 | [contexthub.base](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) | 汎用の UI モジュールタイプ | UI モジュールのプロパティで設定されます |
 | [contexthub.browserinfo](/help/sites-developing/ch-samplemodules.md#contexthub-browserinfo-ui-module-type) | ブラウザーに関する情報が表示されます | surferinfo |
@@ -127,7 +127,7 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
 
 ## ContextHub ストアの作成 {#creating-a-contexthub-store}
 
-ContextHub ストアを作成してユーザーデータを保持し、必要に応じてそのデータにアクセスします。ContextHub ストアは、登録済みのストア候補に基づきます。ストアを作成する際には、ストア候補が登録された storeType の値が必要です（[カスタムストア候補の作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)を参照してください）。
+ContextHub ストアを作成してユーザーデータを保持し、必要に応じてそのデータにアクセスします。ContextHub ストアは、登録済みのストア候補に基づきます。ストアを作成する際には、ストア候補が登録された storeType の値が必要です（[カスタムストア候補の作成を参照してください](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)）。
 
 ### ストアの詳細設定 {#detailed-store-configuration}
 
@@ -139,7 +139,7 @@ ContextHub ストアを作成してユーザーデータを保持し、必要に
 
 AEM には、ストアのベースにできる次のサンプルのストア候補が用意されています。
 
-| ストアタイプ | 説明 |
+| ストアの種類 | 説明 |
 |---|---|
 | [aem.segmentation](/help/sites-developing/ch-samplestores.md#aem-segmentation-sample-store-candidate) | 解決済みおよび未解決の ContextHub セグメント用のストア。ContextHub SegmentManager からセグメントを自動的に取得します |
 | [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManager サービスをリッスンしてストアを自動的に更新します。 |
@@ -160,7 +160,7 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 
 1. 次の基本設定のプロパティの値を指定して「次へ」をクリックまたはタップします。
 
-   * **設定のタイトル：**&#x200B;ストアを識別するタイトル。
+   * **設定タイトル：**&#x200B;ストアを識別するタイトル。
    * **ストアタイプ：**&#x200B;ストアのベースとなるストア候補の storeType プロパティの値。
    * **必須：**&#x200B;オン。
    * **有効：**&#x200B;オンにするとストアが有効になります。
@@ -185,7 +185,7 @@ contexthub.generic-jsonp ストアがサービスコール `https://md5.jsontest
 
 contexthub.generic-jsonp のサンプルのストア候補を使用すると、JSON データを返す JSONP サービスや web サービスからデータを取得できます。このストア候補では、そのストア設定を使用して、使用する JSONP サービスに関する詳細を指定します。
 
-The [init](/help/sites-developing/contexthub-api.md#init-name-config) 関数 `ContextHub.Store.JSONPStore` JavaScript クラスは `config` このストア候補を初期化するオブジェクト。 `config` オブジェクトには JSONP サービスに関する情報が含まれる `service` オブジェクトが含まれています。ストアを設定するには、詳細設定プロパティの値として `service` オブジェクトを JSON 形式で指定します。
+`ContextHub.Store.JSONPStore` Javascript クラスの [init](/help/sites-developing/contexthub-api.md#init-name-config) 関数は、このストア候補を初期化する `config` オブジェクトを定義します。`config` オブジェクトには JSONP サービスに関する情報が含まれる `service` オブジェクトが含まれています。ストアを設定するには、詳細設定プロパティの値として `service` オブジェクトを JSON 形式で指定します。
 
 jsontest.com サイトの MD5 サービスからのデータを保存するには、次のプロパティを使用して [ContextHub ストアの作成](/help/sites-developing/ch-configuring.md#creating-a-contexthub-store)の手順に従います。
 
@@ -243,7 +243,7 @@ ContextHub の設定を編集し、「**デバッグ**」オプションをオ�
 
 1. レールで、**ツール／サイト／ContextHub** をクリックまたはタップします。
 1. デフォルトの「**設定コンテナ**」をクリックまたはタップします。
-1. 「**ContextHub 設定**」を選択し、「**選択した要素を編集**」をクリックまたはタップします。
+1. 「**ContextHub 設定** 」を選択し、「**選択した要素を編集**」をクリックまたはタップします。
 1. 「**デバッグ**」をクリックまたはタップし、「**保存**」をクリックまたはタップします。
 
 ### CRXDE による有効化 {#via-crxde}

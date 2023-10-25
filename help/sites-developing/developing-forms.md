@@ -1,7 +1,7 @@
 ---
 title: Forms の開発（クラシック UI）
 seo-title: Developing Forms (Classic UI)
-description: フォームの開発方法を学ぶ
+description: Adobe Experience Managerクラシック UI 用のフォームを開発する方法を説明します。
 seo-description: Learn how to develop forms
 uuid: 33859f29-edc5-4bd5-a634-35549f3b5ccf
 contentOwner: Guillaume Carlino
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1953'
 ht-degree: 56%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->このドキュメントでは、 [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md) （クラシック UI）を参照してください。 Adobeは、 [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) および [条件を非表示](/help/sites-developing/hide-conditions.md) タッチ操作対応 UI でのフォーム開発用。
+>このドキュメントでは、 [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md) （クラシック UI）を参照してください。 Adobeは、新しい [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) および [条件を非表示](/help/sites-developing/hide-conditions.md) タッチ操作対応 UI でのフォーム開発用。
 
 ## フォーム値のプリロード {#preloading-form-values}
 
@@ -67,7 +67,7 @@ ht-degree: 56%
 
 ドロップダウンリストは、選択する値の範囲で設定できます。
 
-この **項目読み込みパス** を使用して、リポジトリ内のフォルダーからリストにアクセスし、これらをフィールドにプリロードできます。
+The **項目読み込みパス** を使用して、リポジトリ内のフォルダーからリストにアクセスし、これらをフィールドにプリロードできます。
 
 1. 新しい sling フォルダー（`sling:Folder`）を作成する
 例：`/etc/designs/<myDesign>/formlistvalues`
@@ -181,7 +181,7 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 スクリプトの名前は `cleanup.<extension>`例： `cleanup.jsp`
 このスクリプトを使用してクリーンアップを実行できます。
 
-1. 以下を使用： **Forms** parsys 内のコンポーネント。 この **アクションタイプ** ドロップダウンに新しいアクションが含まれます。
+1. 以下を使用します。 **Forms** parsys 内のコンポーネント。 The **アクションタイプ** ドロップダウンに新しいアクションが含まれます。
 
    >[!NOTE]
    >
@@ -195,7 +195,7 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 制約は次の 2 つのレベルで適用できます。
 
 * の場合 [個々のフィールド（以下の手順を参照）](#constraints-for-individual-fields)
-* 形式 [フォームグローバル検証](#form-global-constraints)
+* As [フォームグローバル検証](#form-global-constraints)
 
 #### 個々のフィールドの制約 {#constraints-for-individual-fields}
 
@@ -220,10 +220,10 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 
 1. このフォルダー内には、少なくとも次のどちらかのスクリプトが必要です。
 
-   * クライアント検証スクリプト：スクリプトの名前は `clientvalidation.<extension>`例： `clientvalidation.jsp`
+   * クライアント検証スクリプト：スクリプトの名前は次のとおりです。 `clientvalidation.<extension>`例： `clientvalidation.jsp`
 これは、フォームフィールドがレンダリングされると呼び出されます。 このスクリプトを使用すると、クライアントでフィールドを検証するクライアント JavaScript を作成できます。
 
-   * サーバー検証スクリプト：スクリプトの名前は `servervalidation.<extension>`例： `servervalidation.jsp`
+   * サーバー検証スクリプト：スクリプトの名前は次のとおりです。 `servervalidation.<extension>`例： `servervalidation.jsp`
 これは、フォームが送信されると呼び出されます。 この変数は、送信後にサーバー上のフィールドを検証するために使用できます。
 
 >[!NOTE]
@@ -268,7 +268,7 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 
 ![showhidecondition](assets/showhidecondition.png)
 
-JavaScript では、条件は要素名プロパティの値を使用してフィールドを参照します。 前述の例では、ラジオグループコンポーネントのエレメント名プロパティは「`contact`」です。次のコードは、この例と同等の JavaScript コードです。
+JavaScript では、条件は要素名プロパティの値を使用してフィールドを参照します。 前述の例では、ラジオグループコンポーネントの要素名プロパティは「`contact`」です。次のコードは、この例と同等の JavaScript コードです。
 
 `((contact == "Yes"))`
 
@@ -278,12 +278,12 @@ JavaScript では、条件は要素名プロパティの値を使用してフィ
 
 1. 選択 **表示/非表示** 開く **表示/非表示のルールを編集** ダイアログ：
 
-   * 最初のドロップダウンリストで、次のいずれかを選択します。 **表示** または **を隠す** を使用して、コンポーネントの表示と非表示を条件で指定します。
+   * 最初のドロップダウンリストで、次のいずれかを選択します。 **表示** または **非表示** を使用して、コンポーネントの表示と非表示を条件で指定します。
 
    * 上部行の末尾にあるドロップダウンリストで、以下を選択します。
 
       * **すべて**  — コンポーネントを表示または非表示にするすべての条件が true である必要がある場合
-      * **任意** - 1 つ以上の条件のみが true に設定されている場合に、コンポーネントを表示または非表示にします
+      * **任意** - 1 つ以上の条件のみが true に設定されている場合に、コンポーネントの表示/非表示を切り替えます。
 
    * 条件行（デフォルトで表示されます）で、コンポーネント、演算子を選択し、値を指定します。
    * 必要に応じて、「 」をクリックしてさらに条件を追加します。 **条件を追加**.
@@ -294,7 +294,7 @@ JavaScript では、条件は要素名プロパティの値を使用してフィ
 
 1. 「**OK**」をクリックして、定義を保存します。
 
-1. 定義を保存した後、 **ルールを編集** リンクが **表示/非表示** オプションを使用して、フォームコンポーネントのプロパティに追加します。 このリンクをクリックして、 **表示/非表示のルールを編集** 変更を加えるダイアログボックス
+1. 定義を保存した後、 **ルールを編集** の横にリンクが表示されます **表示/非表示** オプションを使用して、フォームコンポーネントのプロパティに追加します。 このリンクをクリックして、 **表示/非表示のルールを編集** 変更を加えるダイアログボックス
 
    クリック **OK** をクリックして、すべての変更を保存します。
 
@@ -310,13 +310,13 @@ JavaScript では、条件は要素名プロパティの値を使用してフィ
 
 #### 壊れたコンポーネント参照の処理 {#handling-broken-component-references}
 
-表示／非表示の条件では、エレメント名プロパティの値を使用して、フォーム内の他のコンポーネントを参照します。いずれかの条件で、削除されたコンポーネントまたはエレメント名プロパティが変更されたコンポーネントを参照している場合、表示／非表示の設定は無効になります。その場合は、手動で条件を更新する必要があります。更新しないと、フォームの読み込み時にエラーが発生します。
+表示／非表示の条件では、要素名プロパティの値を使用して、フォーム内の他のコンポーネントを参照します。いずれかの条件で、削除されたコンポーネントまたは要素名プロパティが変更されたコンポーネントを参照している場合、表示／非表示の設定は無効になります。その場合は、手動で条件を更新する必要があります。更新しないと、フォームの読み込み時にエラーが発生します。
 
-表示／非表示の設定が無効な場合、その設定は JavaScript コードとしてのみ提供されます。コードを編集して、問題を修正します。そのコードでは、コンポーネントを参照するために元々使用していたエレメント名プロパティを使用しています。
+表示／非表示の設定が無効な場合、その設定は JavaScript コードとしてのみ提供されます。コードを編集して、問題を修正します。そのコードでは、コンポーネントを参照するために元々使用していた要素名プロパティを使用しています。
 
 ### Forms で使用するスクリプトの作成 {#developing-scripts-for-use-with-forms}
 
-スクリプトを記述する際に使用できる API エレメントについて詳しくは、[フォームに関連する javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html) を参照してください。
+スクリプトを記述する際に使用できる API 要素について詳しくは、[フォームに関連する javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html) を参照してください。
 
 これは、フォームが送信される前にサービスを呼び出し、呼び出しに失敗した場合にサービスをキャンセルするなどのアクションに使用できます。
 

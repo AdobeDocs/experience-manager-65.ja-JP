@@ -1,7 +1,7 @@
 ---
 title: JCR 統合
 seo-title: JCR Integration
-description: JCR レベルでの統合が必要な場合のヒント
+description: JCR レベルでAdobe Experience Managerと統合する必要がある場合のヒントを説明します。
 seo-description: Tips for when you must integrate at the JCR level
 uuid: 11518baf-521e-471d-ad4f-2baa76075cfa
 contentOwner: User
@@ -10,24 +10,24 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: e6647a11-a36e-4808-bb61-29b2895c6b1d
 exl-id: 170474c1-c7f4-446c-bda4-84768d44a078
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '295'
-ht-degree: 100%
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 49%
 
 ---
 
 # JCR 統合{#jcr-integration}
 
-## JCR API よりも Sling リソース API を優先する {#prefer-the-sling-resource-api-to-jcr-api}
+## JCR API よりも Sling Resource API の方が望ましい {#prefer-the-sling-resource-api-to-jcr-api}
 
-Sling API は、JCR API よりも高度な抽象レベルで機能します。これにより、コードの再利用性を高め、コードを基になるストレージから独立させることができます。したがって、必要に応じて ResourceProvider メカニズムを利用して外部の仮想データを含めることがより簡単になります。
+Sling API は、JCR API よりも高い、より抽象的なレベルで機能します。 これにより、コードの再利用性が向上し、基になるストレージとは無関係になります。 これにより、必要に応じて、ResourceProvider メカニズムを介して外部仮想データを簡単に含めることができます。
 
-## 可能な限りクエリを回避する {#avoid-queries-wherever-possible}
+## 可能な限りクエリを避ける {#avoid-queries-wherever-possible}
 
-常に、クエリを実行するよりも、リポジトリ内を移動してデータを取得する方が速くなります。エンドユーザークエリやリポジトリ全体から構造化されたコンテンツを探す必要がある場合などクエリが必要になりますが、それ以外の場合は必要なノードに移動することをお勧めします。ナビゲーション要素、「最近の項目リスト」、項目数などのレンダリングロジックでは、常にクエリを回避してください。このような場合、階層をたどっていくか、レンダリング時に直接結果を使用できるように事前に結果をキャッシュに格納しておく方が効率的です。
+クエリを実行するよりも、常にリポジトリ内を移動してデータを取得する方が速くなります。 エンドユーザークエリや、リポジトリ全体から構造化されたコンテンツを検索する必要がある場合など、クエリが必要になる場合がありますが、その他の場合はすべて、必要なノードに移動することをお勧めします。 ナビゲーション要素、「最近の項目リスト」、項目数などのレンダリングロジックでは、常にクエリを回避してください。このような場合は、レンダリング時に直接使用できるように、階層を順を追って進むか、結果をプリキャッシュする方が良いです。
 
-## JCR 監視の範囲を制限する {#restrict-the-scope-of-jcr-observation}
+## JCR 監視の範囲を制限 {#restrict-the-scope-of-jcr-observation}
 
 リポジトリでイベントをリッスンするときには、できる限り範囲を絞り込むことが重要です。例えば、`/etc` でリッスンするよりも `/etc/mycompany` でイベントをリッスンする方がはるかに効率的です。決してリポジトリルートではイベントをリッスンしないでください。加えて、コールバックメソッドが実行すべき内容が何もない場合は、可能な限り速やかに処理を完了するようにしてください。
 

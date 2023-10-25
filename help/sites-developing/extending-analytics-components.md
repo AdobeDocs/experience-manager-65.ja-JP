@@ -1,14 +1,14 @@
 ---
 title: コンポーネントへの Adobe Analyticsトラッキングの追加
-description: コンポーネントへの Adobe Analyticsトラッキングの追加
+description: Adobe Experience ManagerのコンポーネントにAdobe Analyticsトラッキングを追加する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1273'
 ht-degree: 90%
 
 ---
@@ -36,7 +36,7 @@ ContextHub エントリは `<head>` タグのすぐ下に含めるようにし�
 
 `<head>` 要素の直後に挿入する `contexthub` スクリプトは、そのページに ContextHub 機能を追加します。
 
-`<head>` と `<body>` セクションに追加する `cloudservices` スクリプトはページに追加されたクラウドサービス設定に適用されます( ページで複数のCloud Services設定を使用する場合、ContextHub jsp とCloud Servicesjsp を 1 回だけ含める必要があります )。
+`<head>` と `<body>` セクションに追加する `cloudservices` スクリプトはページに追加されたクラウドサービス設定に適用されます( ページで複数のCloud Service設定を使用する場合、ContextHub jsp とCloud Servicejsp を 1 回だけ含める必要があります )。
 
 Adobe Analytics フレームワークをページに追加すると、`cloudservices` スクリプトは、次の例のように、Adobe Analytics 関連の JavaScript およびクライアントサイドライブラリへの参照を生成します。
 
@@ -438,4 +438,4 @@ e コマースモジュールは、s.products 変数データを生成する複�
 
 一般に、web ブラウザーは GET リクエストのサイズを制限します。CQ の製品と SKU の値はリポジトリパスなので、複数の値を含む製品配列は要求サイズの制限を超える可能性があります。そのため、コンポーネントで各 `CQ_Analytics.record function` の `product` 配列内の項目数を制限する必要があります。追跡する必要がある項目の数が制限を超える場合は、複数の関数を作成します。
 
-例：e コマース `submitorder` コンポーネントは、 `product` 4 への呼び出しの項目。 カートに 5 つ以上の製品が含まれると、このコンポーネントは複数の `CQ_Analytics.record` 関数を生成します。
+例：e コマース `submitorder` コンポーネントは、 `product` 4 への呼び出しの項目。 買い物かごに 5 つ以上の製品が含まれると、このコンポーネントは複数の `CQ_Analytics.record` 関数を生成します。

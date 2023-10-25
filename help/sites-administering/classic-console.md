@@ -1,7 +1,7 @@
 ---
 title: クラシック UI のタグ付けコンソール
 seo-title: Classic UI Tagging Console
-description: クラシック UI のタグ付けコンソールについて説明します。
+description: Adobe Experience Manager Classic UI のタグ付けコンソールについて説明します。
 seo-description: Learn about the Classic UI Tagging Console.
 uuid: 51e29422-f967-424b-a7fd-4ca2ddc6b8a3
 contentOwner: Chiradeep Majumdar
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: 21330d460d1080ab1dee3e82bc3c3877677c1420
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '892'
 ht-degree: 52%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 52%
 クラシック UI のタグ付けコンソールにアクセスするには：
 
 * オーサー環境で
-* 管理者権限でサインイン
+* 管理者権限でログイン
 * コンソールに移動します。
 例： [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
@@ -82,7 +82,7 @@ ht-degree: 52%
 ## タグのアクティブ化と非アクティブ化 {#activating-and-deactivating-tags}
 
 1. 右側のウィンドウで、アクティブ化（公開）または非アクティブ化（非公開）する名前空間またはタグを選択します。
-1. クリック **有効化** または **無効化** 必要に応じて。
+1. クリック **有効化** または **非アクティブ化** 必要に応じて。
 
 ## リスト — タグが参照されている場所の表示 {#list-showing-where-tags-are-referenced}
 
@@ -96,14 +96,14 @@ ht-degree: 52%
 
 1. を開きます。 **タグ付け** コンソール。
 1. タグを選択し、 **移動…** 上部のツールバー（またはコンテキストメニュー内）に表示されます。
-1. 内 **タグを移動** ダイアログ、定義：
+1. Adobe Analytics の **タグを移動** ダイアログ、定義：
 
    * **から**：宛先ノード。
    * **名前をに変更**、新しいノード名。
 
 1. 「**移動**」をクリックします。
 
-この **タグを移動** ダイアログは次のように表示されます。
+The **タグを移動** ダイアログは次のように表示されます。
 
 ![タグの移動](assets/move_tag.png)
 
@@ -119,7 +119,7 @@ ht-degree: 52%
 
 1. を開きます。 **タグ付け** コンソール。
 1. タグを選択し、 **結合…** 上部のツールバー（またはコンテキストメニュー内）に表示されます。
-1. 内 **タグを結合** ダイアログ、定義：
+1. Adobe Analytics の **タグを結合** ダイアログ、定義：
 
    * **into**：宛先ノード。
 
@@ -134,7 +134,7 @@ ht-degree: 52%
 タグの使用回数を確認するには：
 
 1. を開きます。 **タグ付け** コンソール。
-1. クリック **使用状況をカウント** 上部のツールバーで、次の操作をおこないます。「カウント」列に結果が表示されます。
+1. クリック **使用状況をカウント** 上部のツールバーの「カウント」列に結果が表示されます。
 
 ## 他の言語でのタグの管理 {#managing-tags-in-different-languages}
 
@@ -148,9 +148,9 @@ ht-degree: 52%
 1. **タグ**／**フォトグラフィー**&#x200B;で、**Animals** というタグを編集します。
 1. 次の言語の翻訳を追加します。
 
-   * **英語**:動物
-   * **ドイツ語**:ティエール
-   * **フランス語**:アニモー
+   * **英語**：動物
+   * **ドイツ語**：ティア
+   * **フランス語**:Animaux
 
 1. 変更を保存します。
 

@@ -1,15 +1,15 @@
 ---
 title: ワークフロープロセスのリファレンス
-description: ワークフロープロセスのリファレンス
+description: Adobe Experience Managerのワークフローについては、このプロセスリファレンスを参照してください。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: a9de8ec6-6948-4643-89c3-62d9b1f6293a
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 48%
+source-wordcount: '1076'
+ht-degree: 47%
 
 ---
 
@@ -40,7 +40,7 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 一部のワークフロープロセスは、ワークフローステップの設定時に管理者が指定した引数を受け取ります。
 
-引数は、単一の文字列として **プロセスの引数** プロパティを **プロパティ** ワークフローエディターのウィンドウ 次の各プロセスでは、引数文字列の形式を単純な EBNF 文法で記述しています。例えば、次の例では、引数文字列が 1 つ以上のコンマ区切りのペアで構成され、各ペアは名前（文字列）と値（ダブルコロンで区切られる）で構成されます。
+引数は、単一の文字列として **プロセスの引数** プロパティを **プロパティ** ワークフローエディターのパネル。 次の各プロセスでは、引数文字列の形式を単純な EBNF 文法で記述しています。例えば、次の例では、引数文字列が 1 つ以上のコンマ区切りのペアで構成され、各ペアは名前（文字列）と値（ダブルコロンで区切られる）で構成されます。
 
 ```
     args := name '::' value [',' name '::' value]*
@@ -108,7 +108,7 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 ### ProcessAssembler（プロセスアセンブラー） {#processassembler-process-assembler}
 
-この `ProcessAssembler` プロセスは、1 つのワークフローステップで複数のサブプロセスを連続して実行します。 次の手順で `ProcessAssembler`ワークフローでこのタイプの 1 つのステップを作成し、その引数を設定して、実行するサブプロセスの名前と引数を示します。
+The `ProcessAssembler` プロセスは、1 つのワークフローステップで複数のサブプロセスを連続して実行します。 次の手順で `ProcessAssembler`ワークフローでこのタイプの 1 つのステップを作成し、その引数を設定して、実行するサブプロセスの名前と引数を示します。
 
 * **Java™クラス**: `com.day.cq.workflow.impl.process.ProcessAssembler`
 
@@ -126,7 +126,7 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
         listitem := /* A string */
 ```
 
-* **タイムアウト**:尊敬される。
+* **タイムアウト**：尊重されます。
 
 次は例です。
 

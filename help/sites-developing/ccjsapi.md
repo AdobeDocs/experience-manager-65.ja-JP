@@ -1,7 +1,7 @@
 ---
 title: ClientContext JavaScript API
 seo-title: Client Context JavaScript API
-description: ClientContext 用 JavaScript API
+description: Adobe Experience Managerの ClientContext 用 JavaScript API について説明します。
 seo-description: The JavaScript API for Client Context
 uuid: be58998c-f23e-4768-8394-1f1ad3994c4c
 contentOwner: Guillaume Carlino
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '3153'
+source-wordcount: '3159'
 ht-degree: 24%
 
 ---
@@ -34,7 +34,7 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 **パラメーター**
 
-* 名前：文字列。 セッションストアの名前。
+* name: String。 セッションストアの名前。
 
 **戻り値**
 
@@ -46,7 +46,7 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 **パラメーター**
 
-* sessionstore:CQ_Analytics.SessionStore です。 登録するセッションストアオブジェクト。
+* sessionstore: CQ_Analytics.SessionStore。 登録するセッションストアオブジェクト。
 
 **戻り値**
 
@@ -65,20 +65,20 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 * 前回の初期化の遅延期間中にストアが初期化されると、以前の関数呼び出しがキャンセルされ、現在の初期化に対して関数が再び呼び出されます。
 * 後続の初期化が発生する前に遅延期間が経過した場合、コールバック関数が 2 回実行されます。
 
-例えば、セッションストアは JSON オブジェクトに基づいており、JSON リクエストを介して取得されます。 次の初期化シナリオが考えられます。
+例えば、セッションストアは JSON オブジェクトに基づいており、JSON リクエストで取得されます。 次の初期化シナリオが考えられます。
 
 * リクエストが完了し、取得されたデータがストアに読み込まれます。 この場合、初期化は 1 回だけおこなわれます。
 * リクエストが失敗しました（タイムアウト）。 この場合、初期化はおこなわれず、ストアにデータがありません。
 * ストアには、デフォルト値（init プロパティ）が事前に設定されていますが、リクエストは失敗します（タイムアウト）。 デフォルト値を持つ初期化は 1 つだけです。
 * ストアが事前に設定されています。
 
-遅延を `true` またはミリ秒単位の数に設定すると、メソッドはコールバックメソッドが呼び出されるまで待機します。遅延が渡される前に別の初期化イベントがトリガーされた場合は、初期化イベントなしで遅延時間が経過するまで待機します。 これにより、2 番目の初期化イベントがトリガーされるのを待機し、最適なケースでコールバック関数を呼び出すことができます。
+遅延を `true` またはミリ秒単位の数に設定すると、メソッドはコールバックメソッドが呼び出されるまで待機します。遅延が渡される前に別の初期化イベントがトリガーされた場合は、初期化イベントなしで遅延時間が経過するまで待ちます。 これにより、2 番目の初期化イベントがトリガーされるのを待機し、最適なケースでコールバック関数を呼び出すことができます。
 
 **パラメーター**
 
-* storeName:文字列。 リスナーを追加するセッションストアの名前。
-* callback:関数。 ストアの初期化時に呼び出す関数。
-* 遅延：ブール値または数値。 コールバック関数の呼び出しを遅延させる時間（ミリ秒）。 Boolean 値 `true` の場合、デフォルトの遅延 `200 ms` が使用されます。Boolean 値 `false` または負の数の場合、遅延は使用されません。
+* storeName: String。 リスナーを追加するセッションストアの名前。
+* callback：関数。 ストアの初期化時に呼び出す関数。
+* delay：ブール値または数値。 コールバック関数の呼び出しを遅延させる時間（ミリ秒）。 Boolean 値 `true` の場合、デフォルトの遅延 `200 ms` が使用されます。Boolean 値 `false` または負の数の場合、遅延は使用されません。
 
 **戻り値**
 
@@ -90,8 +90,8 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 **パラメーター**
 
-* storeName:文字列。 リスナーを追加するセッションストアの名前。
-* callback:関数。 ストアの初期化時に呼び出す関数。
+* storeName: String。 リスナーを追加するセッションストアの名前。
+* callback：関数。 ストアの初期化時に呼び出す関数。
 
 **戻り値**
 
@@ -117,10 +117,10 @@ CQ_Analytics.JSONPStore オブジェクトを作成します。
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
-* serviceURL:文字列。 JSONP サービスの URL
-* dynamicData:（オプション）オブジェクト。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
-* deferLoading:（オプション）ブール値。 値が true の場合は、オブジェクト作成時に JSONP サービスが呼び出されなくなります。 値が false の場合、JSONP サービスが呼び出されます。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
+* serviceURL：文字列。 JSONP サービスの URL
+* dynamicData: （オプション）Object。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
+* deferLoading: （オプション）ブール値。 値が true の場合は、オブジェクト作成時に JSONP サービスが呼び出されなくなります。 値が false の場合、JSONP サービスが呼び出されます。
 * loadingCallback：（オプション）文字列。JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
 
 **戻り値**
@@ -145,9 +145,9 @@ JSONP サービスを呼び出します。 JSONP の URL は、指定された�
 
 **パラメーター**
 
-* serviceURL:（オプション）文字列。 呼び出す JSONP サービス。 値 null を指定すると、既に設定されているサービス URL が使用されます。 null 以外の値は、このオブジェクトに使用する JSONP サービスを設定します。 （ setServiceURL を参照）。
-* dynamicData:（オプション）オブジェクト。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
-* callback:（オプション）文字列。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
+* serviceURL: （オプション）文字列。 呼び出す JSONP サービス。 値 null を指定すると、既に設定されているサービス URL が使用されます。 null 以外の値は、このオブジェクトに使用する JSONP サービスを設定します。 （ setServiceURL を参照）。
+* dynamicData: （オプション）Object。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
+* callback: （オプション）String。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
 
 **戻り値**
 
@@ -159,10 +159,10 @@ CQ_Analytics.JSONPStore オブジェクトを作成し、ストアを ClientCont
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
-* serviceURL:（オプション）文字列。 JSONP サービスの URL。
-* dynamicData:（オプション）オブジェクト。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
-* callback:（オプション）文字列。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
+* serviceURL: （オプション）文字列。 JSONP サービスの URL。
+* dynamicData: （オプション）Object。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
+* callback: （オプション）String。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
 
 **戻り値**
 
@@ -174,7 +174,7 @@ JSON データの取得に使用する JSONP サービスの URL を設定しま
 
 **パラメーター**
 
-* serviceURL:文字列。 JSON データを提供する JSONP サービスの URL
+* serviceURL：文字列。 JSON データを提供する JSONP サービスの URL
 
 **戻り値**
 
@@ -222,8 +222,8 @@ CQ_Analytics.SessionStore を拡張します。
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
-* jsonData:オブジェクト。 JSON データを格納したオブジェクト。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
+* jsonData: Object. JSON データを格納したオブジェクト。
 
 **戻り値**
 
@@ -277,7 +277,7 @@ B/B1: "valueBB1"
 
 **パラメーター**
 
-* jsonData:保存するデータが格納されている JSON オブジェクト。
+* jsonData：保存するデータを格納する JSON オブジェクト。
 * doNotClear：値が true の場合、既存の初期化プロパティが保持され、JSON オブジェクトから派生した初期化プロパティが追加されます。値が false の場合、既存の初期化プロパティを削除してから、JSON オブジェクトから得た初期化プロパティが追加されます。
 
 **戻り値**
@@ -290,8 +290,8 @@ B/B1: "valueBB1"
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
-* jsonData:オブジェクト。 JSON データを格納したオブジェクト。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
+* jsonData: Object. JSON データを格納したオブジェクト。
 
 **戻り値**
 
@@ -309,9 +309,9 @@ CQ_Analytics.JSONStore オブジェクト。
 
 **パラメーター**
 
-* イベント：文字列。 リッスンするイベントの名前。
-* fct:関数。 イベントの発生時に呼び出される関数。
-* scope：（オプション）オブジェクト。ハンドラ関数を実行するスコープ。 ハンドラー関数の「this」コンテキスト。
+* event:String。 リッスンするイベントの名前。
+* fct：関数。 イベントの発生時に呼び出される関数。
+* scope：（オプション）オブジェクト。ハンドラー関数を実行するスコープ。 ハンドラー関数の「this」コンテキスト。
 
 **戻り値**
 
@@ -323,8 +323,8 @@ CQ_Analytics.JSONStore オブジェクト。
 
 **パラメーター**
 
-* イベント：文字列。 イベントの名前。
-* fct:関数。 イベントハンドラ。
+* event:String。 イベントの名前。
+* fct：関数。 イベントハンドラー。
 
 **戻り値**
 
@@ -346,10 +346,10 @@ CQ_Analytics.PersistedJSONPStore オブジェクトを作成します。
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
-* serviceURL:文字列。 JSONP サービスの URL
-* dynamicData:（オプション）オブジェクト。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
-* deferLoading:（オプション）ブール値。 値が true の場合は、オブジェクト作成時に JSONP サービスが呼び出されなくなります。 値が false の場合、JSONP サービスが呼び出されます。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
+* serviceURL：文字列。 JSONP サービスの URL
+* dynamicData: （オプション）Object。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
+* deferLoading: （オプション）ブール値。 値が true の場合は、オブジェクト作成時に JSONP サービスが呼び出されなくなります。 値が false の場合、JSONP サービスが呼び出されます。
 * loadingCallback：（オプション）文字列。JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
 
 **戻り値**
@@ -374,9 +374,9 @@ JSONP サービスを呼び出します。 JSONP の URL は、指定された�
 
 **パラメーター**
 
-* serviceURL:（オプション）文字列。 呼び出す JSONP サービス。 値 null を指定すると、既に設定されているサービス URL が使用されます。 null 以外の値は、このオブジェクトに使用する JSONP サービスを設定します。 （ setServiceURL を参照）。
-* dynamicData:（オプション）オブジェクト。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
-* callback:（オプション）文字列。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
+* serviceURL: （オプション）文字列。 呼び出す JSONP サービス。 値 null を指定すると、既に設定されているサービス URL が使用されます。 null 以外の値は、このオブジェクトに使用する JSONP サービスを設定します。 （ setServiceURL を参照）。
+* dynamicData: （オプション）Object。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
+* callback: （オプション）String。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
 
 **戻り値**
 
@@ -388,10 +388,10 @@ CQ_Analytics.PersistedJSONPStore オブジェクトを作成し、ストアを C
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
-* serviceURL:（オプション）文字列。 JSONP サービスの URL。
-* dynamicData:（オプション）オブジェクト。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
-* callback:（オプション）文字列。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。 storeName を指定しない場合、このメソッドは null を返します。
+* serviceURL: （オプション）文字列。 JSONP サービスの URL。
+* dynamicData: （オプション）Object。 コールバック関数が呼び出される前に、ストアの初期化データに追加される JSON データ。
+* callback: （オプション）String。 JSONP サービスが返す JSONP オブジェクトを処理するために呼び出す関数の名前。 コールバック関数は、CQ_Analytics.JSONPStore オブジェクトである 1 つのパラメーターを定義する必要があります。
 
 **戻り値**
 
@@ -403,7 +403,7 @@ JSON データの取得に使用する JSONP サービスの URL を設定しま
 
 **パラメーター**
 
-* serviceURL:文字列。 JSON データを提供する JSONP サービスの URL
+* serviceURL：文字列。 JSON データを提供する JSONP サービスの URL
 
 **戻り値**
 
@@ -435,8 +435,8 @@ JSON オブジェクトの永続的なコンテナ。
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
-* jsonData:オブジェクト。 JSON データを格納したオブジェクト。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
+* jsonData: Object. JSON データを格納したオブジェクト。
 
 **戻り値**
 
@@ -478,7 +478,7 @@ B/B1: "valueBB1"
 
 **パラメーター**
 
-* jsonData:保存するデータが格納されている JSON オブジェクト。
+* jsonData：保存するデータを格納する JSON オブジェクト。
 * doNotClear：値が true の場合、既存の初期化プロパティが保持され、JSON オブジェクトから派生した初期化プロパティが追加されます。値が false の場合、既存の初期化プロパティを削除してから、JSON オブジェクトから得た初期化プロパティが追加されます。
 
 **戻り値**
@@ -491,8 +491,8 @@ B/B1: "valueBB1"
 
 **パラメーター**
 
-* storeName:文字列。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
-* jsonData:オブジェクト。 JSON データを格納したオブジェクト。
+* storeName: String。 STORENAME プロパティとして使用する名前です。 STOREKEY プロパティの値は、すべて大文字で storeName に設定されます。
+* jsonData: Object. JSON データを格納したオブジェクト。
 
 **戻り値**
 
@@ -536,7 +536,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 **パラメーター**
 
-* 名前：文字列。 プロパティの名前。
+* name: String。 プロパティの名前。
 
 **戻り値**
 
@@ -576,7 +576,7 @@ localStorage が使用できない、または書き込めない場合、スト�
 
 **パラメーター**
 
-* 名前：文字列。 永続化しないプロパティの名前。
+* name: String。 永続化しないプロパティの名前。
 
 **戻り値**
 
@@ -606,8 +606,8 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-* 名前：文字列。 追加するプロパティの名前。
-* 値：文字列。 追加するプロパティの値。
+* name: String。 追加するプロパティの名前。
+* value: String。 追加するプロパティの値。
 
 **戻り値**
 
@@ -631,7 +631,7 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-除外：（オプション）返されるデータから除外するプロパティ名の配列。
+excluded: （オプション）返されるデータから除外するプロパティ名の配列。
 
 **戻り値**
 
@@ -643,7 +643,7 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-* 名前：文字列。 取得するデータプロパティの名前。
+* name: String。 取得するデータプロパティの名前。
 
 **戻り値**
 
@@ -667,8 +667,8 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-* 名前：文字列。 取得するデータプロパティの名前。
-* raw:ブール値。 値が true の場合、生のプロパティ値が返されます。 値が false の場合、返される値を XSS フィルターします。
+* name: String。 取得するデータプロパティの名前。
+* raw：ブール値。 値が true の場合、生のプロパティ値が返されます。 値が false の場合、返される値を XSS フィルターします。
 
 **戻り値**
 
@@ -680,7 +680,7 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-除外：（オプション）結果から省略するプロパティ名の配列。
+excluded: （オプション）結果から除外するプロパティ名の配列。
 
 **戻り値**
 
@@ -728,8 +728,8 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-* obj:可算プロパティを含むオブジェクト。
-* setValues:true の場合、ストアデータに同じ名前のプロパティがまだ含まれていない場合、obj プロパティはセッションストアデータに追加されます。 false の場合、データはセッションストアデータに追加されません。
+* obj：可算プロパティを格納したオブジェクト。
+* setValues: true の場合、ストアデータに同じ名前のプロパティがまだ含まれていない場合、obj プロパティがセッションストアデータに追加されます。 false の場合、データはセッションストアデータに追加されません。
 
 **戻り値**
 
@@ -741,7 +741,7 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-* 名前：文字列。 削除するプロパティの名前。
+* name: String。 削除するプロパティの名前。
 
 **戻り値**
 
@@ -777,8 +777,8 @@ loadInitProperties を使用して、初期化値をセッションストアデ�
 
 **パラメーター**
 
-* 名前：文字列。 プロパティの名前。
-* 値：文字列。 プロパティ値.
+* name: String。 プロパティの名前。
+* value: String。 プロパティ値.
 
 **戻り値**
 

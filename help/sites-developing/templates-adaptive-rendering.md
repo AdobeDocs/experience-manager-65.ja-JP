@@ -1,15 +1,15 @@
 ---
 title: アダプティブテンプレートレンダリング
-description: アダプティブテンプレートレンダリング
+description: Adobe Experience Managerでのアダプティブテンプレートのレンダリングについて説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 58cac3b1-b7cd-44b2-b89b-f5ee8811c198
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 12%
+source-wordcount: '486'
+ht-degree: 11%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 12%
 
 アダプティブレンダリングセレクターは、既存のデバイスグループに対して、または [自分で作成したグループ。](/help/sites-developing/mobile.md#device-groups)
 
-この例では、既存のデバイスグループを設定します **スマートフォン** アダプティブレンダリングセレクターを **エクスペリエンスページ** We.Retail 内のテンプレート
+この例では、既存のデバイスグループを設定します **スマートフォン** アダプティブレンダリングセレクターを **エクスペリエンスページ** We.Retail 内のテンプレート。
 
 1. `http://localhost:4502/miscadmin#/etc/mobile/groups` で、アダプティブセレクターを必要とするデバイスグループを編集します。
 
@@ -60,7 +60,7 @@ ht-degree: 12%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. CRXDE Liteを使用して、複数値の文字列プロパティにデバイスグループを追加することで、サイトでデバイスグループを使用できるようにします `cq:deviceGroups` を使用して、サイトの構造を確認します。
+1. CRXDE Liteを使用して、複数値の文字列プロパティにデバイスグループを追加することで、サイトでデバイスグループを使用できるようにします。 `cq:deviceGroups` を使用して、サイトの構造を確認します。
 
    `/content/<your-site>/jcr:content`
 

@@ -1,7 +1,7 @@
 ---
 title: メール通知の設定
 seo-title: Configuring Email Notification
-description: AEM でメール通知を設定する方法を説明します。
+description: Adobe Experience Managerで電子メール通知を設定する方法を説明します。
 seo-description: Learn how to configure Email Notification in AEM.
 uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '2069'
-ht-degree: 96%
+source-wordcount: '2071'
+ht-degree: 95%
 
 ---
 
@@ -377,7 +377,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 1.  **Day CQ Mail Service** を探してクリックします。
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.office365.com`
-   * SMTP ユーザー：メール形式のユーザ名
+   * SMTP ユーザー：メールフォーマットのユーザ名
    * 「From」アドレス：メーラーが送信するメッセージの「From」フィールドで使用するメールアドレス
    * SMTP サーバーポート：要件に応じて `25` または `587`
    * 「**SMPT は StarTLS を使用**」と「**SMTP には StarTLS が必要**」のチェックボックスをオンにします。

@@ -1,7 +1,7 @@
 ---
 title: Adobe Target との統合
 seo-title: Integrating with Adobe Target
-description: AEM と Adobe Target の統合について説明します。
+description: Adobe Experience ManagerとAdobe Targetを統合する方法を説明します。
 seo-description: Learn about integrating AEM with Adobe Target.
 uuid: b90346e8-9757-4272-a870-bbe5e647303f
 contentOwner: Guillaume Carlino
@@ -10,23 +10,23 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '598'
-ht-degree: 100%
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 71%
 
 ---
 
 # Adobe Target との統合{#integrating-with-adobe-target}
 
-Adobe Marketing Cloud に含まれている [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) を使用すると、あらゆるチャネルにわたってターゲット設定と測定を行い、コンテンツの関連性を高めることができます。Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。AEM では Adobe Target Standard に使用されているターゲット設定ワークフローが採用されています。Target を使用すると、AEM のターゲット設定の編集環境に慣れ親しむことができます。
+Adobe Marketing Cloud に含まれている [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) を使用すると、あらゆるチャネルにわたってターゲット設定と測定を行い、コンテンツの関連性を高めることができます。Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。AEMでは、Adobe Target Standard で使用されるターゲティングワークフローが採用されています。 Target を使用すると、AEM のターゲット設定の編集環境に慣れ親しむことができます。
 
 AEM Sites を Adobe Target に統合して、ページ内のコンテンツを次のようにパーソナライズできます。
 
-* コンテンツのターゲティングを実装する。
+* コンテンツのターゲティングを実装します。
 * Target のオーディエンスを使用してパーソナライズされたエクスペリエンスを作成する。
 * 訪問者がページとやり取りを行ったときにコンテキストデータを Target に送信する。
-* コンバージョン率を追跡する。
+* コンバージョン率をトラックします。
 
 Target に統合するには、次のタスクを実行します。
 
@@ -34,7 +34,7 @@ Target に統合するには、次のタスクを実行します。
 
 1. 以下のどちらかの操作を行います。
 
-   1. [Adobe Target にオプトインする](/help/sites-administering/opt-in.md)：オプトインウィザードは Target のアカウント情報を取得し、Adobe Target のクラウド設定と Target フレームワークを作成します。また、このウィザードはサイトを Target フレームワークに関連付けます。ウィザードが Target に接続できない場合は、[接続に関するトラブルシューティング](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)の節を参照してください。[デフォルトのクラウド設定を変更する](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：必要な場合は、オプトインウィザードで作成されたクラウド設定とフレームワークを変更します。例えば、フレームワークを変更して追加のコンテキストデータを Target に送信します。Adobe Analytics を Adobe Target のレポートソースとして使用する場合は、クラウド設定を A4T 設定を参照するように変更する必要があります。
+   1. [Adobe Targetのオプトイン](/help/sites-administering/opt-in.md)：オプトインウィザードは、Target のアカウント情報を取得し、Adobe Targetクラウド設定と Target フレームワークを作成します。 また、このウィザードはサイトを Target フレームワークに関連付けます。 ウィザードが Target に接続できない場合は、 [接続障害発生](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 」セクションに入力します。 次の操作が可能です。 [デフォルトのクラウド設定を変更する](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations)：必要に応じて、オプトインウィザードで作成したクラウド設定とフレームワークを変更します。 例えば、追加のコンテキストデータを Target に送信するようにフレームワークを変更します。 Adobe AnalyticsをAdobe Targetのレポートソースとして使用する場合は、A4T 設定を指すようにクラウド設定を変更する必要があります。
    1. [手動での Adobe Target との統合](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target)
 
 1. [アクティビティを設定する](/help/sites-authoring/activitylib.md)：アクティビティを Target のクラウド設定に関連付けます。
@@ -51,10 +51,9 @@ Target に統合するには、次のタスクを実行します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
 >
 
-
 >[!CAUTION]
 >
->権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
+>アクティビティ設定ノードを保護する必要があります **cq:ActivitySettings** 通常のユーザーがアクセスできないように、パブリッシュインスタンス上で実行します。 アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 >
 >詳しくは、[Adobe Target との統合の前提条件](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node)を参照してください。
 
@@ -66,19 +65,18 @@ Target に統合するには、次のタスクを実行します。
 
 ## 背景情報ソース {#background-information-sources}
 
-AEM と Adobe Target を統合するには、Adobe Target、AEM アクティビティの管理、AEM オーディエンスの管理に関する知識が必要です。以下を十分理解している必要があります。
+AEMとAdobe Targetの統合には、Adobe Target、AEMアクティビティの管理、AEM Audiences の管理に関する知識が必要です。 以下を十分理解している必要があります。
 
 * Adobe Target（[Adobe Target のドキュメント](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)を参照）
 * AEM アクティビティコンソール（[アクティビティの管理](/help/sites-authoring/activitylib.md)を参照）。
-* AEM オーディエンス（[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照）
+* AEM オーディエンス（[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照）。
 
 >[!NOTE]
 >
->Adobe Target を操作するときのキャンペーン内で許可されるアーティファクトの最大数は次のとおりです。
+>Adobe Target を操作する場合、1 つのキャンペーンで許可されるアーティファクトの最大数は次のとおりです。
 >
 >* 場所：50
 >* エクスペリエンス：2,000
 >* 指標：50
->* レポートのセグメント：50
+>* レポートセグメント：50
 >
-

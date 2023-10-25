@@ -1,7 +1,7 @@
 ---
 title: AEM Brackets 拡張
 seo-title: AEM Brackets Extension
-description: AEM Brackets 拡張
+description: Brackets 用Adobe Experience Manager拡張機能の使用方法について説明します。
 seo-description: null
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 58%
+source-wordcount: '938'
+ht-degree: 57%
 
 ---
 
@@ -53,7 +53,7 @@ AEM Brackets Extension は、Brackets バージョン 1.0 以降をサポート�
 
 拡張機能をインストールするには、次の手順を実行します。
 
-1. Brackets を開きます。 メニュー内 **ファイル**&#x200B;を選択します。 **Extension Manager...**
+1. Brackets を開きます。 メニュー内 **ファイル**&#x200B;を選択します。 **EXTENSION MANAGER...**
 1. 入力 **AEM** 検索バーで **AEM Brackets Extension**.
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
@@ -71,7 +71,7 @@ AEM Brackets Extension は、Brackets バージョン 1.0 以降をサポート�
 
 1. a `jcr_root` フォルダー ( 例： `myproject/jcr_root`)
 
-1. a `filter.xml` ファイル ( 例： `myproject/META-INF/vault/filter.xml`);を参照してください。 `filter.xml` ファイルを参照してください [Workspace フィルターの定義](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` ファイル ( 例： `myproject/META-INF/vault/filter.xml`)；の構造の詳細を表示します。 `filter.xml` ファイルを参照してください [Workspace フィルターの定義](https://jackrabbit.apache.org/filevault/filter.html).
 
 Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_root` フォルダーまたは親プロジェクトフォルダーを選択します。
 

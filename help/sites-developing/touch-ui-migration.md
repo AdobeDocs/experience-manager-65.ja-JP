@@ -1,15 +1,15 @@
 ---
 title: タッチ UI への移行
-description: タッチ UI への移行
+description: タッチ UI へのAdobe Experience Managerの移行と、その影響について説明します。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '669'
 ht-degree: 76%
 
 ---
@@ -98,10 +98,10 @@ ht-degree: 76%
 
 つまり、UI の一部をクラシック UI からタッチ UI に移行するということは、*ExtJS ウィジェット*&#x200B;を *Sling コンポーネント*&#x200B;に移行することを意味します。これを容易にするために、タッチ UI は、Granite UI フレームワークに基づいています。このフレームワークは、既に UI 用の Sling コンポーネント（Granite UI コンポーネントと呼ばれます）を提供しています。
 
-開始する前に、ステータスと関連する推奨事項を確認してください。
+開始する前に、ステータスと関連するレコメンデーションを確認してください。
 
 * [タッチ操作対応 UI 機能のステータス](/help/release-notes/touch-ui-features-status.md)
-* [顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)
+* [顧客向けのユーザーインターフェイスのレコメンデーション](/help/sites-deploying/ui-recommendations.md)
 
 タッチ UI の開発の基本は、堅実な基礎を提供します。
 
@@ -148,7 +148,7 @@ AEM の開発について詳しくは、以下のリソースのコレクショ�
 * [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites のチュートリアルとビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)
 * [AEM Sites の開発の手引き - WKND チュートリアル ](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=en)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=ja)
 * [AEM 最新化ツール](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
