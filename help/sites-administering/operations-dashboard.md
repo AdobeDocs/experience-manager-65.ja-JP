@@ -1,7 +1,7 @@
 ---
 title: 操作ダッシュボード
 seo-title: Operations Dashboard
-description: 操作ダッシュボードの使用方法について説明します。
+description: Adobe Experience Managerの操作ダッシュボードの使用方法を説明します。
 seo-description: Learn how to use the Operations Dashboard.
 uuid: ef24813f-a7a8-4b26-a496-6f2a0d9efef6
 contentOwner: Guillaume Carlino
@@ -12,10 +12,10 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
-workflow-type: ht
-source-wordcount: '6053'
-ht-degree: 100%
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+workflow-type: tm+mt
+source-wordcount: '6057'
+ht-degree: 99%
 
 ---
 
@@ -111,6 +111,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
       * **タイプ：** `String`
       * **値：** `granite/operations/components/mbean`
+
    * **名前：** `resource`
 
       * **タイプ：** `String`
@@ -173,6 +174,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
       * **タイプ：** `String`
       * **値：** `granite/operations/components/mbean`
+
    * **名前：** `resource`
 
       * **タイプ：** `String`

@@ -1,16 +1,16 @@
 ---
 title: 設定の基本概念
-description: Adobe Experience Managerの設定方法を説明します。
+description: 独自の要件に合わせてAdobe Experience Managerを設定する方法を説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '2111'
-ht-degree: 28%
+source-wordcount: '2116'
+ht-degree: 29%
 
 ---
 
@@ -139,9 +139,9 @@ AEMでは、次の項目を設定できます。
 
 ### リソースマッピング {#resource-mapping}
 
-リソースマッピングは、AEMのリダイレクト、バニティー URL および仮想ホストを定義するために使用されます。
+リソースマッピングは、AEM のリダイレクト、バニティ URL および仮想ホストを定義するために使用します。
 
-例えば、これらのマッピングを使用して、次のことをおこなうことができます。
+例えば、これらのマッピングを使用すると次のことが可能です。
 
 * すべてのリクエストに `/content` というプレフィックスを付けて、web サイトの訪問者に内部構造が表示されないようにする。
 * Web サイトの `/content/en/gateway` ページへの要求がすべて `https://gbiv.com/` にリダイレクトされるように、リダイレクトを定義する。

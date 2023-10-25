@@ -1,16 +1,16 @@
 ---
 title: Salesforce との統合
-description: Adobe Experience Managerと Salesforce の統合について説明します。
+description: Adobe Experience Manager (AEM) と Salesforce の統合について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 27%
+source-wordcount: '1553'
+ht-degree: 28%
 
 ---
 
@@ -25,7 +25,7 @@ AEMと Salesforce の双方向で拡張可能な統合により、次のこと�
 * マーケティングからセールス活動へのエンゲージメント。
 * Salesforce データストアからデータを自動的に送受信する組織。
 
-このドキュメントでは、次の点について説明します。
+このドキュメントは次の内容について説明します。
 
 * SalesforceCloud Serviceの設定方法 (AEMを Salesforce と統合するように設定 )。
 * ClientContext での Salesforce リード/連絡先情報の使用方法と、パーソナライゼーションの使用方法。

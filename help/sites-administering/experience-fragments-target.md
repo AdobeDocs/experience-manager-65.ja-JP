@@ -1,16 +1,16 @@
 ---
 title: Adobe Target へのエクスペリエンスフラグメントの書き出し
-description: Adobe Target へのエクスペリエンスフラグメントの書き出し
+description: Adobe Experience Manager(AEM) エクスペリエンスフラグメントをAdobe Targetに書き出す方法を説明します。
 contentOwner: carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: c6eee2e647a0c5e6f5a8dd7a1a13d18218fdf10b
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 67%
+source-wordcount: '1540'
+ht-degree: 66%
 
 ---
 
@@ -83,9 +83,9 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
 ## クラウド設定の追加 {#add-the-cloud-configuration}
 
-フラグメントを書き出す前に、 **クラウド設定** 対象 **Adobe Target** をフラグメントまたはフォルダーに追加します。 この結果、次のことも可能になります。
+フラグメントを書き出す前に、 **クラウド設定** 対象： **Adobe Target** をフラグメントまたはフォルダーに追加します。 この結果、次のことも可能になります。
 
-* エクスポートに使用する形式オプションを指定します
+* エクスポートに使用する形式オプションを指定します。
 * Target ワークスペースを宛先として選択する
 * エクスペリエンスフラグメント内の参照を書き換える Externalizer ドメインを選択します（オプション）。
 
@@ -233,11 +233,11 @@ AEMがAdobe Targetにエクスペリエンスフラグメントを書き出す�
 
 * http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
 
-この `nocloudconfigs` セレクターは、HTL を使用して定義され、次の場所からコピーしてオーバーレイできます。
+The `nocloudconfigs` セレクターは、HTL を使用して定義され、次の場所からコピーしてオーバーレイできます。
 
 * /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
 
-この `atoffer` セレクターを次を使用して後処理に適用： [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). いずれかを使用して、クライアントライブラリを削除できます。
+The `atoffer` セレクターを次を使用して後処理に適用： [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). いずれかを使用して、クライアントライブラリを削除できます。
 
 ### 例 {#example}
 
@@ -277,7 +277,7 @@ AEMがAdobe Targetにエクスペリエンスフラグメントを書き出す�
 
 >[!NOTE]
 >
->使用する `data-sly-unwrap` body タグを削除するには、 `nocloudconfigs.html`.
+>次を使用するには： `data-sly-unwrap` body タグを削除するには、 `nocloudconfigs.html`.
 
 ### 検討事項 {#considerations}
 

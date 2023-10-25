@@ -1,15 +1,15 @@
 ---
 title: デプロイのベストプラクティス
-description: ベストプラクティスのデプロイと保守。
+description: 可能な限り効率的かつ効果的な方法でAdobe Experience Manager(AEM) をデプロイおよび維持する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 66%
+source-wordcount: '447'
+ht-degree: 64%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 66%
 
 デプロイのベストプラクティスでは、Adobe Experience Manager(AEM) をできるだけ効率的かつ効果的にデプロイまたは維持する方法について説明します。 このトピックのリストは、AEMの様々な領域で構成されています。
 
-次の領域について、ベストプラクティスのデプロイと保守、および推奨事項に関するドキュメントが提供されています。
+次の領域について、ベストプラクティスのデプロイと保守、およびレコメンデーションに関するドキュメントが提供されています。
 
 * [Oak](#oak)
 * [Communities](#communities)
@@ -59,7 +59,7 @@ ht-degree: 66%
    <td>このドキュメントでは、バイナリデータとコンテンツノードの保存に関するベストプラクティスを説明します。 Amazon S3 データストアの使用に関する情報が含まれます。</td>
   </tr>
   <tr>
-   <td>Oak で検索</td>
+   <td>Oak での検索</td>
    <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">クエリとインデックス作成のベストプラクティス</a><br /> </td>
    <td>コンテンツのインデックス作成方法に関するベストプラクティスについて説明します。</td>
   </tr>
@@ -70,7 +70,7 @@ ht-degree: 66%
 
 AEM Communities を使用すると、オンプレミスのコミュニティの作成と管理が容易になります。AEM Communities のベストプラクティスは、こちらで説明しています。
 
-[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザー生成コンテンツ (UGC) の新しい共有ストレージ機能と、基になるコンテンツを選択する際の考慮事項について説明します [トポロジ](/help/communities/topologies.md).
+[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザー生成コンテンツ (UGC) の新しい共有ストレージ機能と、基になるコンテンツを選択する際の考慮事項について説明します。 [トポロジ](/help/communities/topologies.md).
 
 [コミュニティの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Communities の推奨されるデプロイメントについて説明します。|
 
@@ -78,7 +78,7 @@ AEM Communities を使用すると、オンプレミスのコミュニティの�
 
 ユーザーインターフェイスに関するベストプラクティスは、こちらで説明しています。
 
-[顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)
+[顧客向けのユーザーインターフェイスのレコメンデーション](/help/sites-deploying/ui-recommendations.md)
 
 AEM には現在、クラシック UI とタッチ操作向け UI の 2 つが同じリリースに含まれています。そのため、どちらを使用するかを、プロジェクトの実装時にユーザーが決断する必要があります。このドキュメントは、適切な選択肢を見つける際に役立ちます。
 

@@ -1,6 +1,6 @@
 ---
 title: Oak クエリとインデックス作成
-description: Adobe Experience Managerでインデックスを設定する方法を説明します。
+description: Adobe Experience Manager(AEM)6.5 でインデックスを設定する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,9 +8,9 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3034'
 ht-degree: 23%
 
 ---

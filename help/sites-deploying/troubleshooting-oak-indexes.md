@@ -1,7 +1,7 @@
 ---
 title: Oak インデックスのトラブルシューティング
 seo-title: Troubleshooting Oak Indexes
-description: インデックス再作成の遅延を検出して修正する方法。
+description: インデックス作成が遅いかどうかを識別し、原因を特定し、問題を解決する方法を説明します。
 uuid: 6567ddae-128c-4302-b7e8-8befa66b1f43
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 100%
+source-wordcount: '1473'
+ht-degree: 98%
 
 ---
 

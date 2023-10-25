@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Manager インスタンスの監視と保守
-description: AEM の監視方法を説明します。
+description: Adobe Experience Managerインスタンスの監視および保守方法の詳細
 uuid: 14466552-5c92-4730-a427-85675a2b121c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '5933'
+source-wordcount: '5939'
 ht-degree: 99%
 
 ---

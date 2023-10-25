@@ -1,15 +1,15 @@
 ---
 title: プロキシサーバーツール（proxy.jar）
-description: AEMのプロキシサーバーツールについて説明します。
+description: Adobe Experience Managerのプロキシサーバーツール (proxy.jar) について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 8%
 
 ---

@@ -1,16 +1,16 @@
 ---
 title: Analytics と外部プロバイダー
-description: 外部プロバイダーとの Analytics について説明します。
+description: 汎用分析スニペットの独自のインスタンスを設定して、新しいサービス設定を定義する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 35%
+source-wordcount: '446'
+ht-degree: 34%
 
 ---
 
@@ -26,7 +26,7 @@ Analytics は、Web サイトがどのように使用されているかに関す
 
 また、 **汎用 Analytics スニペット** をクリックして、新しいサービス設定を定義します。
 
-その後、情報が収集され、Web ページに追加されるコードの小さなスニペットが使用されます。 例：
+その後、情報が収集され、Web ページに追加されるコードの小さなスニペットが使用されます。 次に例を示します。
 
 >[!CAUTION]
 >
@@ -48,12 +48,12 @@ _gaq.push(['_trackPageview']);
 
 * 長期間の訪問者数
 * 訪問したページ数
-* 使用する検索語句
+* 使用された検索語句
 * ランディングページ
 
 >[!CAUTION]
 >
->Geometrixxアウトドアデモサイトは、ページプロパティで指定された属性が HTML ソースコード ( `</html>` 終了タグ ) を、 `js` スクリプト
+>Geometrixxアウトドアデモサイトは、ページプロパティで指定された属性が HTML ソースコード ( `</html>` 終了タグ ) を、 `js` スクリプト。
 >
 >独自の `/apps` がデフォルトページコンポーネント（`/libs/foundation/components/page`）から継承しない場合、ユーザー（またはその開発者）が対応する `js` スクリプトが含まれていること（例えば、`cq/cloudserviceconfigs/components/servicescomponents` が含まれているか、同様のメカニズムが使用されているか）を確認する必要があります。
 >
@@ -64,7 +64,7 @@ _gaq.push(['_trackPageview']);
 基本設定の場合：
 
 1. **ツール**&#x200B;コンソールを開きます。
-1. 左側のウィンドウから、を展開します。 **Cloud Services設定**.
+1. 左側のウィンドウで、を展開します。 **Cloud Service設定**.
 1. ダブルクリック **汎用分析スニペット** ページを開くには：
 
    ![汎用分析スニペット](assets/analytics_genericoverview.png)
@@ -90,7 +90,7 @@ _gaq.push(['_trackPageview']);
    ![クラウドサービスの追加](assets/analytics_selectservice.png)
 
 1. 「**OK**」をクリックして保存します。
-1. 次の場所に戻ります： **Cloud Services** タブをクリックします。 **汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。「 」ドロップダウンリストを使用して、特定のサービスインスタンスを選択します。 例えば、google-analytics の場合は次のようになります。
+1. 次の場所に戻ります。 **Cloud Service** タブをクリックします。 **汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。「 」ドロップダウンリストを使用して、特定のサービスインスタンスを選択します。 例えば、google-analytics の場合は次のようになります。
 
    ![クラウドサービス設定の追加](assets/analytics_selectspecificservice.png)
 
