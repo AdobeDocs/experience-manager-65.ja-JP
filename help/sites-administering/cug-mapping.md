@@ -1,7 +1,7 @@
 ---
 title: AEM 6.5 のカスタムユーザグループマッピング
 seo-title: Custom User Group Mapping in AEM 6.5
-description: AEM でカスタムユーザーグループマッピングがどのように機能するか説明します。
+description: Adobe Experience Managerでのカスタムユーザーグループマッピングの仕組みを説明します。
 seo-description: Lear how Custom User Group Mapping works in AEM.
 uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
@@ -12,10 +12,10 @@ discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: ht
-source-wordcount: '478'
-ht-degree: 100%
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 97%
 
 ---
 
@@ -65,39 +65,39 @@ ht-degree: 100%
 
 * ラベル：Apache Jackrabbit Oak CUG の設定
 
-   名前：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
+  名前：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
 
-   ConfigurationPolicy = REQUIRED
+  ConfigurationPolicy = REQUIRED
 
 * ラベル：Apache Jackrabbit Oak CUG 除外リスト
 
-   名前：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugExcludeImpl
+  名前：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugExcludeImpl
 
-   ConfigurationPolicy = REQUIRED
+  ConfigurationPolicy = REQUIRED
 
 * 名前：com.adobe.granite.auth.requirement.impl.RequirementService
 * ラベル：Adobe Granite 認証要件とログインパスハンドラー
 
-   名前：com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
+  名前：com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
 
-   ConfigurationPolicy = REQUIRED
+  ConfigurationPolicy = REQUIRED
 
 **コメント**
 
 * CUG 認証の設定および評価の有効化/無効化CUG 認証によって影響を受けるべきではないプリンシパルの除外リストを設定するサービス。
 
-   >[!NOTE]
-   > 
-   >`CugExcludeImpl` が設定されていない場合、`CugConfiguration` がデフォルトに戻ります。
+  >[!NOTE]
+  > 
+  >`CugExcludeImpl` が設定されていない場合、`CugConfiguration` がデフォルトに戻ります。
 
-   特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
+  特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
 
 * LoginSelectorHandler に一致するログインパスを公開する LoginPathProvider を実装する OSGi コンポーネント。これは、granite:AuthenticationRequired mixin タイプによって、コンテンツに格納されている変更された認証要件を監視するオブザーバを登録するために使用される RequirementHandler への必須参照を持っています。
 * authRequirements の変更について SlingAuthenticator に通知する RequirementHandler を実装する OSGi コンポーネント。
 
-   このコンポーネントの設定ポリシーは REQUIRE なことから、サポートされているパスのセットが指定されている場合にのみ有効になります。
+  このコンポーネントの設定ポリシーは REQUIRE なことから、サポートされているパスのセットが指定されている場合にのみ有効になります。
 
-   サービスを有効にすると RequirementService が起動します。
+  サービスを有効にすると RequirementService が起動します。
 
 <!-- nested tables not supported - text above is the table>
 <table>

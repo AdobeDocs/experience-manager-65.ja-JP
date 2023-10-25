@@ -1,6 +1,6 @@
 ---
 title: AEM の閉じられたユーザーグループ
-description: AEMでの閉じられたユーザーグループについて説明します。
+description: 閉じられたユーザーグループと、AEMのスケーラビリティとセキュリティにもたらすメリットについて説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '6845'
+source-wordcount: '6854'
 ht-degree: 47%
 
 ---

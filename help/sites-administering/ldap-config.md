@@ -1,6 +1,6 @@
 ---
 title: AEM 6 での LDAP の設定
-description: AEM で LDAP を設定する方法について説明します。
+description: AEMで LDAP サービスを使用して設定する方法を説明します。
 uuid: 0007def4-86f0-401d-aa37-c8d49d5acea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,10 +8,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
-workflow-type: ht
-source-wordcount: '1625'
-ht-degree: 100%
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+workflow-type: tm+mt
+source-wordcount: '1628'
+ht-degree: 99%
 
 ---
 
@@ -21,7 +21,7 @@ LDAP（**L** ightweight **D** irectory **A** ccess **P** rotocol）は、一元�
 
 リポジトリに保存されている LDAP アカウントの詳細を使用して、LDAP サーバーとリポジトリの間でユーザーアカウントを同期できます。この機能を利用すると、アカウントをリポジトリグループに割り当てて、必要な権限や特権を割り当てることができます。
 
-リポジトリでは、LDAP 認証を使用してこれらのユーザーを認証します。認証の際は、検証用に LDAP サーバーに渡される認証情報が使用されます。この認証は、リポジトリへのアクセスを許可する前に行う必要があります。パフォーマンスを向上させるために、検証が成功した認証情報をリポジトリでキャッシュできます。有効期限のタイムアウトを使用すると、適切な期間が経過した後に再検証が実行されます。
+リポジトリでは、LDAP 認証を使用してこれらのユーザーを認証します。認証の際は、検証用に LDAP サーバーに渡される資格情報が使用されます。この認証は、リポジトリへのアクセスを許可する前に行う必要があります。パフォーマンスを向上させるために、検証が成功した資格情報をリポジトリでキャッシュできます。有効期限のタイムアウトを使用すると、適切な期間が経過した後に再検証が実行されます。
 
 LDAP サーバーからアカウントが削除されると、検証が許可されず、リポジトリへのアクセスが拒否されます。リポジトリ保存されている LDAP アカウントの詳細をパージすることもできます。
 
@@ -222,7 +222,8 @@ Sync Handler では、以下の設定オプションを使用できます。
 | **Sync Handler Name** | 同期ハンドラーの名前。 |
 
 >[!NOTE]
->AEM インスタンスで複数の LDAP 設定を使用する場合は、設定ごとに ID プロバイダーと同期ハンドラーを個別に作成する必要があります。
+>
+AEM インスタンスで複数の LDAP 設定を使用する場合は、設定ごとに ID プロバイダーと同期ハンドラーを個別に作成する必要があります。
 
 ## LDAP over SSL の設定 {#configure-ldap-over-ssl}
 

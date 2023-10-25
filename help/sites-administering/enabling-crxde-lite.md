@@ -1,7 +1,7 @@
 ---
 title: AEM での CRXDE Lite の有効化
 seo-title: Enabling CRXDE Lite in AEM
-description: AEM で CRXDE Lite を有効にする方法について説明します。
+description: Adobe Experience ManagerでCRXDE Liteを有効にする方法を説明します。
 seo-description: Learn how to enable CRXDE Lite in AEM.
 uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
@@ -10,16 +10,16 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: a4183bb9d72763ebea3b464c77fce978c723e053
-workflow-type: ht
-source-wordcount: '258'
-ht-degree: 100%
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+workflow-type: tm+mt
+source-wordcount: '260'
+ht-degree: 79%
 
 ---
 
 # AEM での CRXDE Lite の有効化 {#enabling-crxde-lite-in-aem}
 
-AEM のインストールを可能な限り保護するために、セキュリティチェックリストでは実稼動環境で [WebDAV を無効化](/help/sites-administering/security-checklist.md#disable-webdav)することをお勧めしています。
+AEMのインストールを可能な限り安全にするために、セキュリティチェックリストでは、 [WebDAV の無効化](/help/sites-administering/security-checklist.md#disable-webdav) 実稼動環境で使用できます。
 
 ただし、CRXDE Lite が正しく機能するには `org.apache.sling.jcr.davex` バンドルに依存するので、WebDAV を無効にすると CRXDE Lite も無効になります。
 
@@ -29,7 +29,7 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
 ```
 
-この推奨事項は攻撃対象領域を可能な限り減らすことを目的としていますが、システム管理者はコンテンツの参照や実稼動インスタンスの問題をデバッグするために CRXDE Lite にアクセスする必要がある場合があります。
+このレコメンデーションは攻撃対象領域を可能な限り減らすことを目的としていますが、システム管理者はコンテンツの参照や実稼動インスタンスの問題をデバッグするために CRXDE Lite にアクセスする必要がある場合があります。
 
 [OSGi 設定](#enabling-crxde-lite-osgi)または [cURL コマンド](#enabling-crxde-lite-curl)のいずれかを使用して、CRXDE Lite を有効にできます。
 
@@ -61,7 +61,7 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 
 ## cURL での CRXDE Lite の有効化 {#enabling-crxde-lite-curl}
 
-CRXDE Lite は、次のコマンドを実行して、cURL を使用して有効にすることもできます。
+次のコマンドを実行して、cURL 経由でCRXDE Liteを有効にすることもできます。
 
 ```shell
 curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet

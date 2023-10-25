@@ -1,7 +1,7 @@
 ---
 title: コードのアップグレードとカスタマイズ
 seo-title: Upgrading Code and Customizations
-description: AEM でのカスタムコードのアップグレードについて説明します。
+description: AEMでのコードのアップグレードとカスタマイズについて詳しく説明します。
 seo-description: Learn more about upgrading custom code in AEM.
 uuid: dec11ef0-bf85-4e4e-80ac-dcb94cc3c256
 contentOwner: sarchiz
@@ -13,10 +13,10 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
-source-git-commit: a296e459461973fc2dbd0641c6fdda1d89d8d524
-workflow-type: ht
-source-wordcount: '2115'
-ht-degree: 100%
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+workflow-type: tm+mt
+source-wordcount: '2116'
+ht-degree: 99%
 
 ---
 

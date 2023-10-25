@@ -1,7 +1,7 @@
 ---
-title: ID 管理
+title: Identity Management
 seo-title: Identity Management
-description: AEM での ID 管理について説明します。
+description: AEMでの ID 管理の内部機能について説明します。
 seo-description: Learn about identity management in AEM.
 uuid: d9b83cd7-c47a-41a5-baa4-bbf385d13bfd
 contentOwner: Guillaume Carlino
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 1036127ae508ec76c868db5fb67709c104c51123
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 96%
+source-wordcount: '1254'
+ht-degree: 95%
 
 ---
 

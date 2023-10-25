@@ -1,7 +1,7 @@
 ---
 title: アップグレード前のメンテナンスタスク
 seo-title: Pre-Upgrade Maintenance Tasks
-description: AEM のアップグレード前のタスクについて説明します。
+description: AEMで推奨されるアップグレード前のタスクについて説明します。
 seo-description: Learn about the pre-upgrade tasks in AEM.
 uuid: 5da1cfc7-8a10-47b1-aafb-2cd112e3f818
 contentOwner: sarchiz
@@ -12,10 +12,10 @@ discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: ht
-source-wordcount: '2030'
-ht-degree: 100%
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+workflow-type: tm+mt
+source-wordcount: '2031'
+ht-degree: 99%
 
 ---
 
@@ -245,7 +245,6 @@ You can find the packages at these locations:
 >* cURL
 >
 
-
 ## カスタムログインモジュールの無効化 {#disable-custom-login-modules}
 
 >[!NOTE]
@@ -339,7 +338,6 @@ CRX3 インスタンスでリビジョンクリーンアップを実行した後
 >* AEM 6.3 より前の AEM バージョンからアップグレードしている
 >* アップグレード中に以下に示すエラーが発生した
 >
-
 
 サービスユーザーが以前の AEM バージョンで、通常のユーザーとして適切にタグ付けされていない場合があります。
 

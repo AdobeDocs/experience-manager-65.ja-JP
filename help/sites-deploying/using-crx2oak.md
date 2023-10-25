@@ -1,7 +1,7 @@
 ---
 title: CRX2Oak 移行ツールの使用
 seo-title: Using the CRX2Oak Migration Tool
-description: CRX2Oak 移行ツールの使用方法について説明します。
+description: AEMでの CRX2Oak 移行ツールの使用方法を説明します。
 seo-description: Learn how to use the CRX2Oak migration tool.
 uuid: 9b788981-4ef0-446e-81f0-c327cdd3214b
 contentOwner: User
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
-workflow-type: ht
-source-wordcount: '1220'
-ht-degree: 100%
+source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+workflow-type: tm+mt
+source-wordcount: '1222'
+ht-degree: 99%
 
 ---
 
