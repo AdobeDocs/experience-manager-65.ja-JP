@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: a07765f95f01f05a30dce14138f75e7edbe94ae2
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1740'
 ht-degree: 97%
 
 ---
@@ -77,6 +77,7 @@ Workfront プロジェクトと AEM フォルダー間のメタデータマッ�
 
 マッピングを設定するには、次の手順に従います。
 
+1. 追加 `jcr:read` に対する権限 `/conf/global/settings/dam/adminui-extension/foldermetadataschema` 対象： `wf-workfront-users` グループ化します。
 1. **[!UICONTROL ツール]**／ **[!UICONTROL Assets]** ／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
 1. 編集するフォルダーメタデータスキーマフォームを選択し、「編集」をクリックします。
 1. 編集するフォルダーメタデータスキーマフォームフィールドを選択し、右側のパネルの「設定」タブを選択します。
