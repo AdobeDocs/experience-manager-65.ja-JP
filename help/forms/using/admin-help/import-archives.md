@@ -1,8 +1,6 @@
 ---
 title: アーカイブの読み込みと管理
-seo-title: Import and manage archives
-description: アーカイブの読み込みと管理の方法を説明します。
-seo-description: Learn how to import and manage archives.
+description: アーカイブの読み込みと管理の方法を説明します。 アーカイブは、Workbench で作成された LCA を読み込んで管理します。 アーカイブを読み込み、設定、使用および削除できます。
 uuid: aa1613dd-6350-49a7-9643-44365e2acdcc
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archiv
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b6f6463a-2ae4-43d2-8d16-cc20a954e50e
 exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1473'
 ht-degree: 20%
 
 ---

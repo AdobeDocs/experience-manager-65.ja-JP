@@ -3,7 +3,7 @@ title: 新規 Adobe Experience Manager ユーザー向けリソース
 description: Adobe Experience Manager を初めて使用するユーザー向けの質問、回答、リソース 6.5.
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 100%
 

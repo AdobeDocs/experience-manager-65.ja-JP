@@ -1,8 +1,6 @@
 ---
 title: PDF Generator の操作の概要
-seo-title: Introduction to working with PDF Generator
-description: 様々な形式のファイルを PDF に変換する方法について説明します。
-seo-description: Learn how to convert various file formats to PDF.
+description: 様々なファイル形式をPDFに変換する方法を説明します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
 uuid: 1942bf9f-99cc-48b6-89f4-e78c1957a300
 contentOwner: admin
 content-type: reference
@@ -12,21 +10,21 @@ discoiquuid: 9e25ea72-e7ba-400b-9cab-de256fe64888
 docset: aem65
 feature: PDF Generator
 exl-id: 08e2381e-c7e8-4690-9cbf-6934064a04f8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 100%
+source-wordcount: '149'
+ht-degree: 61%
 
 ---
 
 # PDF Generator の操作の概要 {#introduction-to-working-with-pdf-generator}
 
-PDF Generator では、様々な形式のファイルを PDF に変換できます。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。サポートされるファイル形式のリストについては、「[PDF Generator のソフトウェアサポート](/help/forms/using/aem-forms-jee-supported-platforms.md)」を参照してください。
+PDF Generatorは、様々なファイル形式をPDFに変換します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。サポートされるファイル形式の一覧については、 [ソフトウェアのPDF Generatorサポート](/help/forms/using/aem-forms-jee-supported-platforms.md)
 
-**ファイルを処理するために PDF Generator に送信**
+**処理用にPDF Generatorにファイルを送信中**
 
-ファイル処理のために、ファイルは PDF Generator に 3 種類の方法で送信できます。
+ファイルを処理するためにPDF Generatorに送信する方法は 3 つあります。
 
-* 管理者は、管理コンソールで PDFG ページにアクセスできます（[PDF Generator を使用したファイルの変換](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)を参照）。
+* 管理者は、管理コンソールで PDFG ページにアクセスできます。 （[PDF Generator を使用したファイルの変換](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)を参照）。
 * ユーザーは、`http(s)://'[server]:[port]'/pdfgui.` にログインすると、PDFG エンドユーザーページにアクセスできます。そこから、PDFG ネットワークプリンター、PDFの作成、HTML から PDF、PDF のエクスポート、PDF の最適化などの各ページにアクセスできます。
-* これらのサービスのエンドポイントを設定できます参照先 <!--Fix broken link to Managing Endpoints --> [Generate PDF サービスの推奨事項](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations).
+* これらのサービスのエンドポイントを設定できます参照先 <!--Fix broken link to Managing Endpoints --> [Generate PDF サービスのレコメンデーション](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations).

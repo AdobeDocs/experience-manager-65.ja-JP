@@ -1,19 +1,19 @@
 ---
-title: ローカル秘密鍵証明書の管理
-description: ローカル秘密鍵証明書の管理方法を説明します。
+title: ローカル資格情報の管理
+description: Trust Store 管理を使用してローカル秘密鍵証明書を管理する方法を説明します。 AEM forms は、標準の PKCS12 形式の RSA 秘密鍵証明書と DSA 秘密鍵証明書をサポートします。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 3%
 
 ---
 
-# ローカル秘密鍵証明書の管理 {#managing-local-credentials}
+# ローカル資格情報の管理 {#managing-local-credentials}
 
 ローカル秘密鍵証明書は、Trust Store 管理でホストされる秘密鍵資格情報です。 A *ローカル秘密鍵証明書* は、ユーザーの DES 秘密鍵証明書が保存される場所を示します。 Trust Store の管理では、既存の PFX ファイルなどを使用してローカル秘密鍵証明書の読み込みと管理を行い、ローカル秘密鍵証明書の読み込み、編集、削除を行うことができます。
 
@@ -28,7 +28,7 @@ Acrobat Reader DC Extensions に関する情報と手順については、 [資�
 1. 管理コンソールで、設定/Trust Store の管理/ローカル秘密鍵証明書をクリックします。
 1. 「読み込み」をクリックします。「Trust Store の種類」で、次のいずれかのオプションを選択します。
 
-   * **ドキュメント署名証明書：**&#x200B;ドキュメントの電子署名の発行に使用する秘密鍵証明書です。
+   * **ドキュメント署名証明書：**&#x200B;ドキュメントの電子署名の発行に使用する資格情報です。
    * **Acrobat Reader DC Extensions 資格情報：** Adobe Readerの使用権限を生成するPDFドキュメントで有効にする、Acrobat Reader DC Extensions に固有の電子証明書。
    * **デフォルト：** これが、Acrobat Reader DC Extensions で使用するデフォルトの資格情報であることを示します。
 

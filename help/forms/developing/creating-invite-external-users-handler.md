@@ -1,12 +1,12 @@
 ---
 title: 外部ユーザー招待ハンドラーの作成
-description: 外部ユーザー招待ハンドラーの作成
+description: 外部ユーザー招待ハンドラーを作成する方法を説明します。 これにより、Rights Managementサービスは外部ユーザーを招待してRights Managementユーザーにできます。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 98%
+source-wordcount: '1135'
+ht-degree: 96%
 
 ---
 

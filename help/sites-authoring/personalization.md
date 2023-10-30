@@ -5,7 +5,7 @@ exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 63%
+ht-degree: 65%
 
 ---
 
@@ -60,6 +60,6 @@ AEM は、ページリクエストの処理や、表示コンテンツの判断�
 Adobe Target ターゲティングエンジンを使用すると、ページへの訪問から収集された情報が Adobe Target で追跡されます。
 
 * このターゲティングエンジンを使用する場合、エクスペリエンスのオーディエンス定義には、Adobe Target から読み込んだセグメントを使用します。
-* Adobe Targetエンジンを使用するアクティビティは、 [Target に同期済み](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target).
+* Adobe Target エンジンを使用するアクティビティは、[Target と同期](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)します。
 
 このエンジンを使用できるのは、[Adobe Target と統合](/help/sites-administering/opt-in.md)している場合のみです。

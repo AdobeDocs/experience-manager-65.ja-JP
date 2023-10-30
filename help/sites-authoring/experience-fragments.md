@@ -40,7 +40,7 @@ ht-degree: 99%
 >
 問題が発生している場合は、システム管理者にお問い合わせください。
 
-## エクスペリエンスフラグメントを使用するタイミング {#when-should-you-use-experience-fragments}
+## エクスペリエンスフラグメントを使用するタイミング？ {#when-should-you-use-experience-fragments}
 
 エクスペリエンスフラグメントは、次の場合に使用します。
 

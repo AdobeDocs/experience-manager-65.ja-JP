@@ -5,7 +5,7 @@ exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '425'
-ht-degree: 75%
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Manager(AEM) には、すぐに使用できる様々なコン�
 
 ## 一般的な使用方法 {#general-usage}
 
-コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時にページエディターのサイドパネルの「**コンポーネント**」タブで使用できます。
+コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時に、ページエディターのサイドパネルにある「**コンポーネント**」タブで使用できます。
 
 コンポーネントを選択し、ページ上の必要な場所にドラッグできます。その後、次の機能を使用して編集できます。
 
@@ -32,8 +32,7 @@ Adobe Experience Manager(AEM) には、すぐに使用できる様々なコン�
 
 * [コンテンツの編集 - 全画面表示モード](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-ページへのコンポーネントの追加について詳しくは、 [ページのコンテンツの編集](/help/sites-authoring/editing-content.md).
-コンポーネントは、コンポーネントグループと呼ばれる様々なカテゴリーに従って並べ替えられます。このようなコンポーネントグループの例を次に示します。
+ページへのコンポーネントの追加について詳しくは、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。コンポーネントは、コンポーネントグループと呼ばれる様々なカテゴリーに従って並べ替えられます。このようなコンポーネントグループの例を次に示します。
 
 * **We.Retail**：[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用するためにプロキシ設定されたコアコンポーネントが含まれています。
 

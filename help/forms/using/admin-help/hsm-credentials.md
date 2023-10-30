@@ -1,19 +1,19 @@
 ---
-title: HSM 秘密鍵証明書の管理
-description: HSM 秘密鍵証明書の管理方法について説明します。
+title: HSM 資格情報の管理
+description: HSM 秘密鍵証明書の管理方法について説明します。 HSM は、Trust Store の管理ページから管理できます。 HSM コンポーネントは、表示、チェック、更新、リセット、削除できます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: facbeab2-de95-4778-894c-faa771d3391e
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1324'
 ht-degree: 11%
 
 ---
 
-# HSM 秘密鍵証明書の管理 {#managing-hsm-credentials}
+# HSM 資格情報の管理 {#managing-hsm-credentials}
 
 Trust Store の管理ページでは、ハードウェアセキュリティモジュール (HSM) 秘密鍵証明書を管理できます。 HSM は、秘密鍵を安全に生成して保存するために使用できる、サードパーティの PKCS#11 デバイスです。 HSM は、秘密鍵へのアクセスと使用を物理的に保護します。
 

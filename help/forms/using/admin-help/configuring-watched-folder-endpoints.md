@@ -1,14 +1,14 @@
 ---
 title: 監視フォルダーのエンドポイントの設定
-description: 監視フォルダーエンドポイントを設定する方法について説明します。
+description: 監視フォルダーエンドポイントを設定する方法について説明します。 ドキュメントが監視フォルダーに配置されている場合は、設定済みのサービス操作が呼び出され、ファイルが操作されます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 22d9b22a0fc0bc5f753f2e11ca66e2627e1a8405
 workflow-type: tm+mt
-source-wordcount: '7163'
+source-wordcount: '7181'
 ht-degree: 25%
 
 ---
@@ -410,7 +410,7 @@ Watched Folder サービスは、エンドポイントの作成、更新およ�
 
 すべてのサービスで、監視フォルダーのバッチサイズと繰り返し間隔を調整して、新しいファイルやフォルダーを処理する頻度が、AEM forms サーバーで処理できるジョブの割合を超えないようにする必要があります。 実際に使用するパラメーターは、設定されている監視フォルダーの数、監視フォルダーを使用しているサービス、およびプロセッサーでのジョブの集中的な使用状況によって異なる場合があります。
 
-### Generate PDF サービスの推奨事項 {#generate-pdf-service-recommendations}
+### Generate PDF サービスのレコメンデーション {#generate-pdf-service-recommendations}
 
 * GeneratePDFサービスでは、Microsoft Word、Microsoft Excel、Microsoft PowerPoint、Microsoft Project、AutoCAD、Adobe Photoshop®、Adobe FrameMaker®、AdobePageMaker®のファイル形式で、一度に 1 つのファイルのみ変換できます。 これらは長時間実行されるジョブなので、バッチサイズを低い設定に保つようにしてください。 また、クラスター内にノードが他に存在する場合は、繰り返し間隔を長くします。
 * PostScript(PS)、Encapsulated PostScript(EPS) および画像ファイルタイプの場合、GeneratePDFサービスは複数のファイルを並行して処理できます。 サーバーの容量とクラスタ内のノード数に応じて、セッション Bean プールのサイズを慎重に調整する必要があります（これは、並行して実行される変換の数を管理します）。 次に、変換しようとしているファイルタイプのセッション Bean プールサイズに等しい数にバッチサイズを増やします。 ポーリング頻度は、クラスター内のPDFの数によって決まります。ただし、Generate ノードサービスはこの種のジョブを非常に高速に処理するので、繰り返し間隔を 5 や 10 などの低い値に設定できます。

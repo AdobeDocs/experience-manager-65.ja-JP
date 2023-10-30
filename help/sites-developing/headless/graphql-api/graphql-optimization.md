@@ -5,7 +5,7 @@ exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 source-git-commit: 3ec34efc14cc49d0f45cb4b175573c33c1cc232e
 workflow-type: tm+mt
 source-wordcount: '1966'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 60%
 
 #### 永続的なGraphQLクエリを使用 {#use-persisted-graphql-queries}
 
-**推奨**
+**レコメンデーション**
 
 永続化されたGraphQLクエリの使用を強くお勧めします。
 
@@ -40,7 +40,7 @@ ht-degree: 60%
 
 #### GraphQL Index パッケージのインストール {#install-graphql-index-package}
 
-**推奨**
+**レコメンデーション**
 
 GraphQLを使用するお客様 *必須* GraphQLインデックスパッケージを使用してExperience Managerコンテンツフラグメントをインストールします。 これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。このパッケージをインストールしないと、GraphQL クエリが遅くなったり失敗したりする場合があります。
 
@@ -61,7 +61,7 @@ GraphQLを使用するお客様 *必須* GraphQLインデックスパッケー�
 
 #### AEM Dispatcher のキャッシュの有効化 {#enable-aem-dispatcher-caching}
 
-**推奨**
+**レコメンデーション**
 
 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) は、AEMサービス内の、CDN キャッシュの前の第 1 レベルのキャッシュです。
 
@@ -73,7 +73,7 @@ GraphQLを使用するお客様 *必須* GraphQLインデックスパッケー�
 
 #### コンテンツ配信ネットワーク (CDN) の使用 {#use-cdn}
 
-**推奨**
+**レコメンデーション**
 
 GraphQLクエリとその JSON 応答は、をターゲット設定した場合はキャッシュできます `GET` リクエストを送信する必要があります。 これに対し、キャッシュされていないリクエストは、（リソース）非常に高コストで処理に時間がかかる場合があり、元のリソースにさらに悪影響を及ぼす可能性があります。
 
@@ -85,7 +85,7 @@ GraphQLクエリとその JSON 応答は、をターゲット設定した場合�
 
 #### HTTP キャッシュ制御ヘッダーの設定 {#set-http-cache-control-headers}
 
-**推奨**
+**レコメンデーション**
 
 永続化されたGraphQLクエリを CDN で使用する場合は、適切な HTTP キャッシュ制御ヘッダーを設定することをお勧めします。
 
@@ -148,7 +148,7 @@ AEM には、GraphQL クエリを最適化する 2 つの方法があります�
 
 #### AEM GraphQLハイブリッドフィルタリングの使用 {#use-aem-graphql-hybrid-filtering}
 
-**推奨**
+**レコメンデーション**
 
 ハイブリッドフィルタリングは、JCR フィルタリングと AEM フィルタリングを組み合わせます。
 
@@ -156,7 +156,7 @@ AEM には、GraphQL クエリを最適化する 2 つの方法があります�
 
 >[!NOTE]
 >
->技術的な理由（柔軟性、フラグメントのネストなど）により、AEMはフィルター全体を JCR に委任できません。
+>技術的な理由（柔軟性、フラグメントのネストなど）により、AEM はフィルタリング全体を JCR に委任できません。
 
 この方法では、GraphQL フィルターが提供する柔軟性を維持しながら、可能な限り多くのフィルタリングを JCR に委任できます。
 
@@ -169,11 +169,11 @@ AEM には、GraphQL クエリを最適化する 2 つの方法があります�
 以下を参照してください。
 
 * [GraphQLフィルタリングでのページングと並べ替えのためのコンテンツフラグメントの更新](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
-* [_tags ID でフィルタリングし、バリエーションを除外したクエリ例](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-filtering-tag-not-variations)
+* [_tags ID でフィルタリングされた、バリエーションを含まないサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-filtering-tag-not-variations)
 
 #### GraphQLのページネーションを使用 {#use-aem-graphql-pagination}
 
-**推奨**
+**レコメンデーション**
 
 大きな結果セットを持つ複雑なクエリの応答時間は、GraphQL標準のページネーションを使用して応答をチャンクにセグメント化することで、改善できます。
 
@@ -203,7 +203,7 @@ AEM の GraphQL では、次の 2 種類のページネーションに対応し�
 
 #### GraphQLの並べ替えを使用 {#use-graphql-sorting}
 
-**推奨**
+**レコメンデーション**
 
 また、GraphQL標準の並べ替え機能を使用すると、クライアントは JSON コンテンツを並べ替えられた順序で受け取ることができます。 これにより、クライアント上でさらに処理する必要が減少します。
 
@@ -276,7 +276,7 @@ AEM では、通常、リポジトリ構造を使用して、処理するコン�
 
 ### フィルター式の論理演算 {#logical-operations-in-filter-expressions}
 
-ネストされたフラグメントをフィルタリングする場合、JCR フィルタリングを適用できます。その際、 `AND` 演算子を使用します。
+ネストされたフラグメントをフィルタリングする場合でも、`AND` 演算子を使用して組み合わされた最上位フィールドに付随するフィルターを提供して、JCR フィルタリングを適用できます。
 
 一般的なユースケースは、最上位フラグメントの `_path` フィールドでフィルターを使用してクエリの範囲を制限し、最上位またはネストされたフラグメント上の追加フィールドでフィルタリングすることです。
 

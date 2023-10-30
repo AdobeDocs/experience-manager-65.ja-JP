@@ -1,8 +1,6 @@
 ---
 title: サービス設定の指定
-seo-title: Configure service settings
-description: サービス設定の構成方法を説明します。
-seo-description: Learn how to configure service settings.
+description: サービス設定の構成方法を説明します。 「サービスの管理」ページを使用して、AEM forms に含まれる各サービスの設定を指定できます。
 uuid: e95425a4-62f6-473e-b21b-d081c432e02d
 contentOwner: admin
 content-type: reference
@@ -10,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '10678'
+source-wordcount: '10699'
 ht-degree: 56%
 
 ---
@@ -520,7 +518,7 @@ Job Expiration Seconds 設定は、ファイルまたは空のフォルダーを
 
 Remoting サービスでは、次の設定を使用できます。
 
-**Flex のクライアント認証方法：** 呼び出されたサービスでセキュリティが有効になっており、呼び出された操作で匿名の呼び出しがサポートされていないとき、クライアントから秘密鍵証明書が渡されないか無効な場合に、サーバーがクライアントに送り返す応答の種類を特定します。「カスタム」または「基本」から選択します。デフォルト値は「基本」です。
+**Flex のクライアント認証方法：** 呼び出されたサービスでセキュリティが有効になっており、呼び出された操作で匿名の呼び出しがサポートされていないとき、クライアントから資格情報が渡されないか無効な場合に、サーバーがクライアントに送り返す応答の種類を特定します。「カスタム」または「基本」から選択します。デフォルト値は「基本」です。
 
 **Allow Serialization Of Non-Serializable Classes：** ほとんどの AEM forms エンドポイントでは、呼び出しに serializable クラスのみを使用できます。 それより前のバージョンでは、Remoting エンドポイントで Flex ベースのクライアントからの呼び出しに Serializable 以外のクラスを使用できました。APS11-15 で説明されているセキュリティ脆弱性を防止するため、この変更が行われました。Flex Remoting エンドポイントで Serializable 以外のクラスを引き続き使用する場合は、このチェックボックスを選択します。
 
@@ -666,7 +664,7 @@ Validation Of Signatures：** このオプションを選択すると、ドキ�
 
 **Sign OCSP Request：** OCSP 要求に署名する必要があるかどうかを指定します。デフォルト値は false です。
 
-**Request Signer Credential Alias：**&#x200B;署名が有効な場合に OCSP 要求への署名に使用する秘密鍵証明書のエイリアスを指定します。OCSP 要求の署名が有効な場合にのみ使用されます。 デフォルト値はありません。
+**Request Signer Credential Alias：**&#x200B;署名が有効な場合に OCSP 要求への署名に使用する資格情報のエイリアスを指定します。OCSP 要求の署名が有効な場合にのみ使用されます。 デフォルト値はありません。
 
 **Go Online：**&#x200B;失効確認を行うためにオンラインにするかどうかを指定します。デフォルト値は true です。
 

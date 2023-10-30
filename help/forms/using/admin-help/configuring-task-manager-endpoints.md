@@ -1,8 +1,6 @@
 ---
 title: タスクマネージャーエンドポイントの設定
-seo-title: Configuring Task Manager endpoints
-description: タスクマネージャーエンドポイントを設定する方法について説明します。
-seo-description: Learn how to configure Task Manager endpoints.
+description: サービスを呼び出すようにタスクマネージャーエンドポイントを設定する方法について説明します。 タスクマネージャーエンドポイントを設定するには、異なる設定が必要です。
 uuid: 07604b10-0bd7-4bce-9624-7ebac4754f56
 contentOwner: admin
 content-type: reference
@@ -10,16 +8,16 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9c55feb9-23d8-4798-a3c5-70ec736df3ad
 exl-id: 8495a3d7-6ac9-41f5-b1f9-31decaba118a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 100%
+source-wordcount: '245'
+ht-degree: 82%
 
 ---
 
 # タスクマネージャーエンドポイントの設定 {#configuring-task-manager-endpoints}
 
-タスクマネージャーエンドポイントを使用すると、Workspace ユーザーがサービスを呼び出せるようになります。
+タスクマネージャーエンドポイントを使用すると、Workspace ユーザーはサービスを呼び出すことができます。
 
 **タスクマネージャーエンドポイントの設定**
 

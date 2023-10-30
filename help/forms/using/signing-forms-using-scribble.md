@@ -1,8 +1,6 @@
 ---
 title: 手書き署名を使用したフォームへの電子署名の適用
-seo-title: Apply electronic signatures to a form using scribble signatures
-description: 手書きを使用したフォームへの署名
-seo-description: Signing forms using scribble
+description: 手書き署名を使用してAEM Adaptive Formsに署名する方法を説明します。 手書き署名と署名のステップを使用して、フォームに署名を描画できます。
 uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -10,16 +8,16 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 71%
+source-wordcount: '742'
+ht-degree: 74%
 
 ---
 
 # 手書き署名を使用したフォームへの電子署名の適用{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 
 | バージョン | 記事リンク |
@@ -63,7 +61,7 @@ ht-degree: 71%
 
    >[!NOTE]
    >
-   >署名ステップコンポーネントは、フォームで使用できる全幅を取ります。 署名ステップコンポーネントを含むセクションには、他のコンポーネントを含めないことをお勧めします。
+   >署名ステップコンポーネントは、フォームの幅いっぱいに表示されます。そのため、署名ステップコンポーネントが含まれているセクションに他のコンポーネントを配置しないようにすることをお勧めします。
    >
 
 1. コンテンツブラウザーで「**フォームコンテナ**」をタップし、**設定**&#x200B;アイコン（![設定](/help/forms/using/assets/configure.png)）をタップします。この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。に移動します。 **アダプティブフォームコンテナ** > **電子署名** を選択し、選択を解除します。 **Adobe Signを有効にする** オプション。 完了（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）アイコンをタップして、変更を保存します。
@@ -73,7 +71,7 @@ ht-degree: 71%
    >署名ステップコンポーネントをアダプティブフォームに追加すると、「Adobe Sign を有効にする」オプションが自動的に選択されます。
    >
 
-1. **設定**（![設定](assets/configure.png)）アイコンをタップします。これにより、プロパティブラウザーが開き、署名ステップのプロパティが表示されます。 以下のプロパティを設定します。
+1. **設定**（![設定](assets/configure.png)）アイコンをタップします。この操作により、署名ステップのプロパティを表示するプロパティブラウザーが開きます。以下のプロパティを設定します。
 
    * **要素名**：コンポーネントの名前を指定します。
 
@@ -87,7 +85,7 @@ ht-degree: 71%
 
    これで、フォームに入力する際に、アダプティブフォームのPDF版が表示され、PDFドキュメントに署名するためのオプションが提供されます。 詳しくは、「[手書き署名を使用したアダプティブフォームの署名](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature)」を参照してください。
 
-## 手書き署名を使用したアダプティブフォームの署名 {#sign-an-adaptive-form-using-scribble-signature}
+## 手書き署名を使用してアダプティブフォームに署名する {#sign-an-adaptive-form-using-scribble-signature}
 
 1. アダプティブフォームに入力して署名ステップページに到達すると、署名画面が表示されます。
 

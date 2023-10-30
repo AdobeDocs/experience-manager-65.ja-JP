@@ -1,8 +1,6 @@
 ---
-title: アダプティブフォームと XFA フォームテンプレートの同期
-seo-title: Synchronizing Adaptive Forms with XFA Form Templates
-description: アダプティブフォームと XFA/XDP ファイルとの同期
-seo-description: Synchronizing Adaptive forms with XFA/XDP files.
+title: アダプティブフォームと XFA フォームテンプレートとの同期
+description: フォームを XFA/XDP ファイルと同期する方法について説明します。 XFA/XDP ファイル内の対応するフィールドに対する変更と同期されたフォームのフィールドを再利用します。
 uuid: 92818132-1ae0-4576-84f2-ece485a34457
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -10,22 +8,22 @@ discoiquuid: dac4539b-804d-4420-9170-68000ebb2638
 docset: aem65
 feature: Adaptive Forms
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 61%
+source-wordcount: '1231'
+ht-degree: 67%
 
 ---
 
-# アダプティブフォームと XFA フォームテンプレートの同期{#synchronizing-adaptive-forms-with-xfa-form-templates}
+# アダプティブフォームと XFA フォームテンプレートとの同期{#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 <span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 ## はじめに {#introduction}
 
-XFA フォームテンプレート（`*.XDP` ファイル）に基づいてアダプティブフォームを作成することができます。この再利用により、既存の XFA フォームへの投資を保持できます。 XFA フォームテンプレートを使用したアダプティブフォームの作成方法については、「[テンプレートに基づくアダプティブフォームの作成](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
+XFA フォームテンプレート（`*.XDP`ファイル）を基にアダプティブフォームを作成することができます。この再利用により、既存の XFA フォームへの投資を保持できます。 XFA フォームテンプレートを使用したアダプティブフォームの作成方法については、「[テンプレートに基づくアダプティブフォームの作成](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
 
-アダプティブフォーム内で XDP ファイルのフィールドを再利用できます。 これらのフィールドは、連結されたフィールドと呼ばれます。 連結されたフィールドのプロパティ（スクリプト、ラベル、表示形式など）は、XDP ファイルからコピーされます。 これらのプロパティには、値をオーバーライドできるものもあります。
+アダプティブフォーム内で XDP ファイルのフィールドを再利用できます。 これらのフィールドは、バインドされたフィールドと呼ばれます。バインドされたフィールドのプロパティ（スクリプト、ラベル、表示形式など）は、XDP ファイルからコピーされます。これらのプロパティには、値をオーバーライドできるものもあります。
 
 AEM Formsでは、XDP ファイル内の対応するフィールドに後で変更が加えられた場合に、アダプティブフォームのフィールドを同期した状態に保つことができます。 この記事では、この同期を有効にする方法を説明します。
 
@@ -60,13 +58,13 @@ AEM Formsオーサリング環境では、XFA フォーム（左）からアダ�
 ### アダプティブフォームへのコンテンツの追加 {#add-content-to-adaptive-form-br}
 
 1. https://&lt;server>:&lt;port>/aem/forms.html に移動します。要求された場合は、資格情報を入力します。
-1. sample-af-xfa をオーサリングモードで編集用に開きます。
-1. サイドバーのコンテンツブラウザーで、「データモデルオブジェクト」タブを選択します。 NumericField1 と TextField1 をアダプティブフォームにドラッグします。
+1. オーサーモードで sample-af-xfa を開き、編集します。
+1. サイドバーにあるコンテンツブラウザーで、「データモデルオブジェクト」タブを選択します。NumericField1 と TextField1 をアダプティブフォームにドラッグします。
 1. NumericField1 のタイトルを **Numeric Field** から **AF Numeric Field** に変更します。
 
 >[!NOTE]
 >
->上記の手順では、XDP ファイル内のフィールドのプロパティを上書きしました。 したがって、XDP ファイル内の対応するプロパティが後で変更された場合、このプロパティは同期されません。
+>前述の手順では、XDP ファイル内のフィールドのプロパティを上書きしました。したがって、このプロパティは、XDP ファイル内の対応するプロパティが後に変更されても同期されません。
 
 ## XDP ファイル内の変更の検出 {#detecting-changes-in-xdp-file}
 

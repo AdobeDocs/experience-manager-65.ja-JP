@@ -17,7 +17,7 @@ ht-degree: 40%
 
 ワークフローを管理する際は、様々な方法でワークフローを開始できます。
 
-* 手動：
+* 手動:
 
    * から [ワークフローモデル](#workflow-models).
    * 次のワークフローパッケージを使用： [バッチ処理](#workflow-packages-for-batch-processing).

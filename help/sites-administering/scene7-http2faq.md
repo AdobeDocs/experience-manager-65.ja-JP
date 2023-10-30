@@ -9,7 +9,7 @@ exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
 source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 83%
+ht-degree: 92%
 
 ---
 
@@ -31,16 +31,16 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 アドビ独自のテストでは、以下の結果が出ています。
 
-* 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。パフォーマンスの最も顕著な向上は、iOSデバイスでした。
+* 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。最もパフォーマンスが向上したのは iOS デバイスでした。
 * ビューアの場合、読み込み時のパフォーマンスが 15%向上しました。
 
-次のデモは、HTTP/1 と HTTP/2 の読み込みの違いを示しています。
+以下のデモは、HTTP/1 と HTTP/2 の読み込み時間を比較して示しています。
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 に切り替える資格はありますか？ {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 への移行対象となるお客様 {#am-i-eligible-to-switch-over-to-http}
 
-HTTP/2 を使用するには、次の要件を満たす必要があります。
+HTTP/2 を使用するには、以下の要件を満たしている必要があります。
 
 * リッチメディアリクエストにセキュア HTTPS を使用している。
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media ライセンスの一部として使用します。
@@ -58,8 +58,8 @@ HTTP/2 を使用するには、次の要件を満たす必要があります。
 
      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、企業アカウントにログインします。**[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。
 
-   * リッチメディアリクエストにセキュアな HTTPS を使用していることを確認します。
-   * 直接の関係で管理されていない、Adobeを通じて CDN を使用していることを確認します。
+   * リッチメディアリクエストについて、セキュリティで保護された HTTPS を使用していることを確認します。
+   * 直接的関係で管理するのではなく、アドビを介して CDN を使用していることを確認します。
    * 専用ドメインを使用していることを確認します。つまり、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用の Dynamic Media ドメインではなく、`images.company.com` または `mycompany.scene7.com` です。
 
      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、企業アカウントにログインします。**[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
@@ -80,7 +80,7 @@ HTTP/2 を使用するには、次の要件を満たす必要があります。
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
-キャッシュされていないコンテンツは、キャッシュが再構築されるまで、Adobeの元のサーバーに直接ヒットします。 そのため、起点サーバーからの要求のプル時に許容範囲のパフォーマンスを確保できるよう、アドビでは、一度に処理するお客様の移行件数を数件にとどめるつもりです。
+キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。そのため、起点サーバーからの要求のプル時に許容範囲のパフォーマンスを確保できるよう、アドビでは、一度に処理するお客様の移行件数を数件にとどめるつもりです。
 
 ## URL または web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
