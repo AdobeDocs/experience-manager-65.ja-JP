@@ -1,14 +1,14 @@
 ---
 title: AEM Forms JEE パッチインストーラー
-description: AEM Forms JEE パッチインストーラー
+description: AEM Forms JEE パッチインストーラー AEM 6.5 Formsコンポーネントの問題を修正しました。
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
-workflow-type: ht
-source-wordcount: '522'
-ht-degree: 100%
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 96%
 
 ---
 
@@ -28,7 +28,7 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
 ## パッチのインストールと設定 {#installing-and-configuring-the-patch}
 
-1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
+1. &lt;*AEM_forms_root*>/deploy フォルダー。 Quick Fix をアンインストールする場合は必須です。
 1. アプリケーションサーバーを停止します。
 1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
@@ -39,15 +39,15 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
       * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
+
    * **Linux**
-適切なディレクトリに移動して、コマンドプロンプトで、 
-`./aem65_cfp_install.bin` を入力します。
+適切なディレクトリに移動して、コマンドプロンプトで、`./aem65_cfp_install.bin`。
 
       * （Linux）`Linux/Disk1/InstData/NoVM`
 
-   インストールの手順を示すインストールウィザードが起動します。
+   これにより、インストール手順を示すインストールウィザードが起動します。
 
-1. 概要パネルで「**[!UICONTROL 次へ]**」をクリックします。
+1. 最初のパネルで「**[!UICONTROL 次へ]**」をクリックします。
 1. **インストールフォルダーを選択**&#x200B;画面で、表示されるデフォルトの場所が既存のインストール場所であることを確認するか、または「**[!UICONTROL 参照]**」をクリックして AEM Forms がインストールされている別のフォルダーを選択してから、「**[!UICONTROL 次へ]**」をクリックします。
 1. Quick Fix パッチの概要の情報を読み、「**[!UICONTROL 次へ]**」をクリックします。
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
@@ -57,8 +57,12 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
    * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
    * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルおよび [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルを置き換えてから、**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行します。
-   >[!NOTE]
-   >**ConfigurationManager.bat** ファイルを使用すると、.lax ファイルの名前を手動でアップデートする必要がなくなります。
+
+   >>
+   [!NOTE]
+   >>
+   **ConfigurationManager.bat** ファイルを使用すると、.lax ファイルの名前を手動でアップデートする必要がなくなります。
+   >
 
 1. **[UNIX ベースの場合のみ]：**
 

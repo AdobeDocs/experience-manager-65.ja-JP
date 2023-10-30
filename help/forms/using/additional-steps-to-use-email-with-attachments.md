@@ -1,11 +1,11 @@
 ---
 title: 添付ファイル付きのメールを受信するための追加手順
-description: 添付ファイル付きのメールを受信するための追加手順
+description: JEE 上のAEM Formsプラットフォームの添付ファイルを含む電子メールを取得できない場合のエラーを修正します。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 74%
+source-wordcount: '235'
+ht-degree: 67%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 74%
 
 1. マニフェストファイルを開き、`1.5.0` を `1.5.6` に、`Bundle-Version: 1.0` を `Bundle-Version:1.5` にすべて置き換えます。
 
-1. カスタム jar の作成 (`java.mail-1.5.jar`) ファイルを `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` 次のフォルダー：
+1. カスタム jar の作成 (`java.mail-1.5.jar`) ファイルに追加します。 `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` 次のフォルダー：
    `jar -cfm java.mail-1.5.jar manifest.mf`
 
    上記のコマンドで、*manifest.mf* はマニフェストファイルの名前で、*java.mail-1.5.jar* は、上記のコマンドを実行した後に作成されるファイルの名前です。
@@ -37,7 +37,7 @@ ht-degree: 74%
 
 1. 手順 3 で取得した `java.mail-1.5.jar` をインストールします。この手順を実行すると、JEE デプロイメントの Sling プロパティが再起動されます。`http://<server name>:<port>/lc/system/console/bundles` にインストールされたバンドルのステータス表示が&#x200B;**アクティブ**&#x200B;になるまで待ちます。
 
-   >注意：の場合、ステータスは **InActive**，再起動   **JBoss®** から **サービスコンソール**.
+   >注意：この場合、ステータスは「 **InActive**，再起動   **JBoss®** から **サービスコンソール**.
 
 
 1. 手順 5 でダウンロードした `javax.mail-1.5.6.redhat-1.jar` ファイルをインストールします。

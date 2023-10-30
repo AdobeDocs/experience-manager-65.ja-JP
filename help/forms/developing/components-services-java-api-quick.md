@@ -1,7 +1,6 @@
 ---
 title: コンポーネントとサービス Java API クイックスタート（SOAP）
-seo-title: Components and Services Java APIQuick Start(SOAP)
-description: コンポーネントとサービス Java API クイックスタート（SOAP）
+description: Java API Quick Start(SOAP) を使用して、AEM Formsのコンポーネントとサービスをプログラムで操作します。
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
 content-type: reference
@@ -10,10 +9,10 @@ topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 100%
+source-wordcount: '433'
+ht-degree: 96%
 
 ---
 

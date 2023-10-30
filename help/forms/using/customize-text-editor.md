@@ -1,8 +1,6 @@
 ---
 title: テキストエディターのカスタマイズ
-seo-title: Customize text editor
-description: テキストエディターのカスタマイズ方法について説明します。
-seo-description: Learn how to customize text editor.
+description: AEM Forms環境でテキストエディターをカスタマイズする方法を説明します。
 uuid: 598246fe-8f15-49b6-b6d3-9154bebcd27e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,10 +9,10 @@ discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 feature: Correspondence Management
 exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 100%
+source-wordcount: '609'
+ht-degree: 90%
 
 ---
 
@@ -22,23 +20,23 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-アセットを管理 UI と通信を作成 UI でテキストエディターをカスタマイズし、フォントおよびフォントサイズを追加することができます。日本語フォントなど英語以外のフォントも使用できます。
+アセットを管理 UI と通信を作成 UI で、テキストエディターをカスタマイズして、フォントとフォントサイズを追加できます。 英語フォントだけでなく、日本語フォントなど英語以外のフォントも使用できます。
 
-フォント設定のカスタマイズで以下の変更を行うことができます。
+フォント設定で、以下を変更してカスタマイズすることができます。
 
 * フォントファミリーとサイズ
 * 高さ、文字間隔などのプロパティ
-* フォントファミリーとサイズ、高さ、文字間隔、日付形式のデフォルト値
+* フォントファミリーとサイズ、高さ、文字間隔および日付形式のデフォルト値
 * 箇条書きのインデント
 
-これを行うには、以下の手順を実行します。
+それには、以下を実行する必要があります。
 
 1. [CRX の tbxeditor-config.xml ファイルを編集しフォントをカスタマイズ](#customizefonts)
 1. [クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)
 
-## CRX の tbxeditor-config.xml ファイルを編集しフォントをカスタマイズ {#customizefonts}
+## CRX の tbxeditor-config.xml ファイルを編集してフォントをカスタマイズ {#customizefonts}
 
-フォントをカスタマイズするには、次のファイルを編集します。tbxeditor-config.xml file。次の手順を実行します。
+tbxeditor-config.xml ファイルを編集してフォントをカスタマイズするには、次の手順を実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
 1. apps フォルダーに、libs/fd/cm/config の config フォルダーに類似したパスまたはフォルダー構造を持つ config という名前のフォルダーを次の手順で作成します。
@@ -63,10 +61,10 @@ ht-degree: 100%
 
    1. 「**すべて保存**」をクリックします。
 
-1. 次の手順を使って、新しく作成された config フォルダーに tbxeditor-config.xml ファイルのコピーを作成します。
+1. 以下の手順で、新しく作成した config フォルダーに tbxeditor-config.xml ファイルのコピーを作成します。
 
    1. libs/fd/cm/config にある tbxeditor-config.xml ファイルを右クリックし、「**コピー**」を選択します。
-   1. 以下のフォルダーを右クリックし「**貼り付け**」を選択します。
+   1. 以下のフォルダーを右クリックし、「**貼り付け**」を選択します。
 
       `apps/fd/cm/config`
 
@@ -165,7 +163,7 @@ ht-degree: 100%
 
       * フォントファミリーとサイズの追加または削除
       * 高さ、文字間隔などのプロパティ
-      * フォントファミリーとサイズ、高さ、文字間隔、日付形式のデフォルト値
+      * フォントファミリーとサイズ、高さ、文字間隔および日付形式のデフォルト値
       * 箇条書きのインデント
 
       例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XML ファイル：`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
@@ -174,10 +172,9 @@ ht-degree: 100%
 
    1. 「**すべて保存**」をクリックします。
 
-
 ## クライアントコンピューターへのカスタムフォントの追加 {#addcustomfonts}
 
-Correspondence Management テキストエディターに格納されたフォントにアクセスする際、Correspondence Management へアクセスするクライアントマシンにそのフォントがある必要があります。テキストエディターでカスタムフォントを使用するには、まずクライアントマシンに同じフォントをインストールする必要があります。
+Correspondence Management テキストエディターでフォントにアクセスする場合は、Correspondence Management にアクセスするために使用するクライアントマシンにそのフォントが存在している必要があります。 テキストエディターでカスタムフォントを使用するには、まずクライアントマシンに同じフォントをインストールする必要があります。
 
 フォントのインストールについて詳しくは、次を参照してください。
 

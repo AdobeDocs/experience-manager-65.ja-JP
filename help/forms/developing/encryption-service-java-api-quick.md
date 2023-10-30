@@ -1,7 +1,6 @@
 ---
 title: 暗号化サービス Java API クイックスタート（SOAP）
-seo-title: Encryption Service Java API QuickStart(SOAP)
-description: 暗号化サービス Java API クイックスタート（SOAP）
+description: SOAP モードで Java API を使用して、PDFドキュメントの暗号化、パスワード/証明書ベースの暗号化の削除、ロック解除、暗号化の種類の決定を行います。
 uuid: 3e29b3e9-340b-4b35-80cc-f0aff4180892
 contentOwner: admin
 content-type: reference
@@ -10,10 +9,10 @@ topic-tags: develop
 discoiquuid: f12c10c3-1ce6-4415-ba9d-5349d1888237
 role: Developer
 exl-id: e8b2aa43-ac27-410d-a809-56bfd1c2fcb1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 100%
+source-wordcount: '467'
+ht-degree: 95%
 
 ---
 

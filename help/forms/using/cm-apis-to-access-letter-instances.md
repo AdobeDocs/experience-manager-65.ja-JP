@@ -1,15 +1,15 @@
 ---
 title: レターインスタンスにアクセスするための API
-description: API を使用してレターインスタンスにアクセスする方法を説明します。
+description: API を検出し、それらを使用して、AEM Forms環境内のレターインスタンスにプログラムでアクセスします。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 36%
+source-wordcount: '599'
+ht-degree: 35%
 
 ---
 

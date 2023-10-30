@@ -1,40 +1,39 @@
 ---
-title: 別のユーザーの代わりにドキュメントを保護
-seo-title: Protect a document on behalf of another user
-description: 別のユーザーの代わりにドキュメントを保護
+title: 別のユーザーの代わりにドキュメントを保護する
+description: AEM Forms Document Security Java SDK は、編集権限を必要とせずに、別のユーザーの代わりにドキュメントを保護するためのユーザーアカウント用の API を提供します。
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 feature: Document Security
 exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 100%
+source-wordcount: '385'
+ht-degree: 29%
 
 ---
 
-# 別のユーザーの代わりにドキュメントを保護 {#protect-a-document-on-behalf-of-another-user}
+# 別のユーザーの代わりにドキュメントを保護する {#protect-a-document-on-behalf-of-another-user}
 
-AEM Forms Document Security Java SDK には、別のユーザーの代わりにユーザーアカウントを使用してドキュメントを保護する API セットが用意されています。ドキュメントの編集権限を取得する必要はありません。これらの API は、ワークフロープロセスで使用することも、プログラム内でドキュメントサービスとして使用することもできます。新しく導入された API は以下のとおりです。
+AEM Forms Document Security Java SDK は、ユーザーアカウントがドキュメントを編集する権限を取得することなく、別のユーザーの代わりにドキュメントを保護できる API を提供します。 この API は、ワークフロープロセスで使用することも、プログラムによってドキュメントサービスとして使用することもできます。 新しい API は次のとおりです。
 
 * **protectDocumentUse** protectDocument API では、別のユーザーアカウントを使用する代わりに、ポリシーをドキュメントに適用することができます。
 
-   別のユーザーアカウント。ポリシーを適用するためのユーザーアカウントの権限は、ドキュメントの保護に制限されたままになります。ドキュメントを開いて表示するための権限が付与されることはありません。RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
+  別のユーザーアカウント。ポリシーの適用に使用されるユーザーアカウントの権限は、ドキュメントの保護に制限されたままです。 ドキュメントを開いて表示する権限を取得しません。 RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
 
-* **createLicenseUse** createLicense API では、別のユーザーアカウントを使用する代わりに、ポリシーのライセンスを作成することができます。PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
-* **protectDocumentWithCoverPageUse** protectDocumentWithCoverPage API では、別のユーザーの代わりにポリシーを適用して、ドキュメントにカバーページを追加することができます。ポリシーを適用するためのユーザーアカウントの権限は、ドキュメントの保護に制限されたままになります。ドキュメントを開いて表示するための権限が付与されることはありません。RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
+* **createLicenseUse** 別のユーザーアカウントに代わってポリシーのライセンスを作成する CreateLicense API です。 PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
+* **protectDocumentWithCoverPageUse** protectDocumentWithCoverPage API では、別のユーザーの代わりにポリシーを適用して、ドキュメントにカバーページを追加することができます。ポリシーの適用に使用されるユーザーアカウントの権限は、ドキュメントの保護に制限されたままです。 ドキュメントを開いて表示する権限を取得しません。 RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
 
-## API を使用して別のユーザーの代わりにドキュメントを保護する {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
+## 別のユーザーに代わって API を使用してドキュメントを保護する {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 
-次の手順を実行して、別のユーザーの代わりにドキュメントを保護します。ドキュメントの編集権限を取得する必要はありません。
+ドキュメントを編集する権限を取得することなく、別のユーザーの代わりにドキュメントを保護するには、次の手順を実行します。
 
 1. ポリシーセットを作成します。例えば、PolicySet1 を作成します。
 1. 新規作成されたポリシーセットにポリシーを作成します。例えば、PolicySet1 に Policy1 を作成します。
-1. Rights Managemen エンドユーザーの役割を持つユーザーを作成します。例えば、User1 を作成します。Policy1 を使用して、新しく作成されたユーザーに保護されたドキュメントを表示する権限を付与します。
-1. 新しい役割を作成します。例えば、Role1 を作成します。新しく作成された役割にサービスを起動する権限を付与します。新しく作成された役割でユーザーを作成します。例えば、User2 を作成します。User2 または管理者権限を使用して SDK 接続を作成し、protectDocument サービスを起動できます。
+1. 役割 End User を持つRights Managementを作成します。 例：User1。 Policy1 を使用して、新しく作成されたユーザーに保護されたドキュメントを表示する権限を付与します。
+1. 新しい役割の作成. 例えば、Role1 などです。 新しく作成したロールに対して、サービスの呼び出し権限を付与します。 新しく作成した役割を持つユーザーを作成します。 例えば、User2.User2 または管理者を使用して SDK 接続を作成し、protectDocument サービスを呼び出すことができます。
 
-   これで、ドキュメントを保護するための次のサンプルコードを実行できるようになりました。ドキュメントを編集する権限をユーザーに提供することなく、ドキュメントを保護することができます。
+   次のサンプルコードを実行すると、ドキュメントを保護するユーザーにドキュメントを編集する権限を付与することなく、ドキュメントを保護できます。
 
    ```java
    import java.io.File;

@@ -1,11 +1,11 @@
 ---
 title: JEE と OSGI の両方に適用可能な PDFG 設定の UAC の無効化
-description: PDFG 設定の UAC を無効にする手順
+description: PDFG 設定の UAC を無効にする手順 をクリックして、Word からPDFへの変換を修正します。
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
-source-git-commit: 2e9b9c40f54aa54a946e4320341ed4a760c56fd1
-workflow-type: ht
-source-wordcount: '255'
-ht-degree: 100%
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 93%
 
 ---
 
@@ -30,7 +30,7 @@ ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイ
    1. Microsoft® は、レジストリを変更する前にバックアップをとっておくことを推奨しています。詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/ja-jp/help/322756)」を参照してください。
    1. Microsoft® Windows のレジストリエディターを開きます。レジストリエディターを開くには、「スタート／ファイル名を指定して実行」に移動し、「regedit」と入力して「OK」をクリックします。
    1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\` に移動します。EnableLUA の値が 0（ゼロ）に設定されていることを確認します。
-   1. **EnableLUA** の値が 0（ゼロ）に設定されていることを確認します。値が 0 に設定されていない場合は、0 に変更します。レジストリエディターを終了します。
+   1. **EnableLUA** の値が 0（ゼロ）に設定されていることを確認します。値が 0 でない場合は、値を 0 に変更します。 レジストリエディターを終了します。
 
 1. コンピューターを再起動します。
 

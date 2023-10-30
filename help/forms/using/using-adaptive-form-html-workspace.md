@@ -1,8 +1,6 @@
 ---
 title: HTML Workspace でのアダプティブフォームの使用
-seo-title: Using an adaptive form in HTML Workspace
-description: HTML Workspace でのアダプティブフォームの使用
-seo-description: Using an adaptive form in HTML Workspace
+description: フィールドワーカーがデバイス上のフォームにアクセスできるように、HTMLワークスペースでアダプティブフォームを使用する方法について説明します。
 uuid: 473d5daf-a3ed-449f-9136-585755b59922
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,10 +8,10 @@ topic-tags: forms-workspace
 discoiquuid: 2b6875cd-2ee7-4aa8-90c7-d33583dc2f0e
 docset: aem65
 exl-id: 15b9ae98-059f-4bf7-bfdd-9cfeb8eb30a4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 100%
+source-wordcount: '704'
+ht-degree: 58%
 
 ---
 
@@ -21,23 +19,23 @@ ht-degree: 100%
 
 JEE 上の AEM Forms では、HTML Workspace でアダプティブフォームを使用することができます。
 
-プロセスデザインの際に XDP を選択することができるため、既存のアダプティブフォーム AEM レポジトリから参照できる機能が追加されました。この機能により、プロセスデザイナーは、アダプティブフォームを Task からだけでなく、Starting Point からも設定することができます。
+プロセスデザインの際に XDP を選択できるため、既存のアダプティブフォーム AEM リポジトリから参照できる機能が追加されました。この機能により、プロセスデザイナーは、アダプティブフォームを Task からだけでなく、Starting Point からも設定することができます。
 
-## プロセスデザインのエクスペリエンス {#process-design-experience}
+## プロセスデザインエクスペリエンス {#process-design-experience}
 
-プロセスデザインでアダプティブフォームの使用を有効化するには、次の手順を実行します。
+プロセスデザインでアダプティブフォームを使用できるようにするには、次の手順を実行します。
 
-* 「Assign Task」および「Start Point」では、タスクにフォームアセットを割り当てる際に、CRX リポジトリ内のアダプティブフォームアセットを参照することができます。
-* 「Assign Task」および「Start Point」の Workbench プロパティシートでは、アダプティブフォームのトップレベル / グローバルツールバーを非表示にすることができます。
-* 新しいアクションプロファイルを、アダプティブフォームでのレンダリングおよび送信アクションに使用することができます。
+* タスクの割り当てとスタートポイントでは、CRX リポジトリ内のアダプティブフォームアセットを参照して、タスクにフォームアセットを割り当てることができます。
+* 「Assign Task」/「Start Point」Workbench プロパティシートで、アダプティブフォームの最上位/グローバルツールバーを非表示にすることができます。
+* アダプティブフォームで、レンダリングアクションと送信アクションに新しいアクションプロファイルを使用することができます。
 
-### LiveCycle アプリケーションのエクスポートおよびインポート {#livecycle-application-export-and-import}
+### LiveCycleアプリケーションの書き出しと読み込み {#livecycle-application-export-and-import}
 
-アダプティブフォームは AEM リポジトリにあるため、LiveCycle アプリケーションのエクスポートには、使用されているアダプティブフォームへのリファレンスのみが含まれています。そのため、LiveCycle アプリケーションのエクスポートおよびインポートは、2 段階のプロセスとなっています。LiveCycle アプリケーションには、プロセスの定義などが含まれています。アダプティブフォームを含む別のパッケージが、AEM より ZIP ファイルにてエクスポートされます。インポート中、LiveCycle アプリケーションは Workbench を通してインポートされ、アダプティブフォームは AEM を通してインポートされます。
+アダプティブフォームはAEMリポジトリ内にあるので、LiveCycleの書き出しには、使用するアダプティブフォームの参照のみが含まれます。 そのため、LiveCycle アプリケーションのエクスポートおよびインポートは、2 段階のプロセスとなっています。LiveCycleアプリケーションには、プロセスの定義などが含まれます。 アダプティブフォームを含む別のパッケージが、AEMから ZIP ファイルとして書き出されます。 読み込み時に、LiveCycleアプリケーションは Workbench を通じて読み込まれ、アダプティブフォームはAEMを通じて読み込まれます。
 
-## HTML Workspace におけるアダプティブフォームのユーザーエクスペリエンス {#user-experience-of-adaptive-form-in-html-workspace}
+## Workspace でのアダプティブフォームのユーザーエクスペリエンスHTML {#user-experience-of-adaptive-form-in-html-workspace}
 
-HTML Workspace は、モバイルフォームに使用できるコントロールのほかに、アダプティブフォーム特有のコントロールをいくつか提供しています。HTML Workspace で「Task」または「Start Point」を開くと、ユーザーは、アダプティブフォームをナビゲートし、保存、署名、送信、添付ファイルの追加を行うことができます。詳しい内容は次のとおりです。
+HTMLWorkspace には、モバイルフォームで使用できるコントロールに加えて、アダプティブフォーム固有のコントロールがいくつか用意されています。 Task または Start Point を開くと、HTMLWorkspace でアダプティブフォームの添付ファイルの追加、保存、署名、送信、ナビゲーションを行うことができます。 詳細は次のとおりです。
 
 1. ファイルを添付するには、Mobile Forms と同じように、「Task」の添付ファイルを使用します。アダプティブフォームでは、File Attachment タイプのボタンは非表示になっています。
 
@@ -49,7 +47,7 @@ HTML Workspace は、モバイルフォームに使用できるコントロー�
 
 1. **Workspace でのアダプティブフォームのナビゲーションコントロール**：HTML Workspace のアダプティブフォームでは、「保存」、「送信」、「ルートアクション」のボタンに加え、「次へ」／「前へ」ボタンも使用できます。HTML Workspace でアダプティブフォームのパネルをナビゲートするには、「次へ」／「前へ」ボタンをクリックします。「次へ」／「前へ」ボタンは、アダプティブフォームのモバイル表示のナビゲーションコントロールのような、精密なナビゲーションを提供します。
 
-1. **アダプティブフォームの eSign サービスと Summary コンポーネント**：Summary コンポーネントは、HTML Workspace では操作できません。つまり、アダプティブフォームに Summary コンポーネントが含まれていても、ワークスペースでは表示されません。HTML Workspace では、ユーザーは、Esign コンポーネントの自動送信の代わりに、送信またはルートアクションをクリックします。ドキュメントが署名された後は、フラット（非インタラクティブ）な署名済みドキュメントとして表示されます。「**送信**」またはルートアクションをクリックして、タスクまたは Start Point を閉じます。\
+1. **アダプティブフォームの eSign サービスと Summary コンポーネント**：Summary コンポーネントは、HTML Workspace では操作できません。つまり、アダプティブフォームに Summary コンポーネントが含まれている場合、Workspace には表示されません。 Esign コンポーネントの自動送信の代わりに、Workspace ユーザーは Workspace で送信またはルートアクションをクリックします。HTML。 ドキュメントに署名した後は、フラットな署名済みドキュメントとして表示されます。 クリック **送信** タスクまたは開始点を閉じる、または完了するルートアクション。\
    署名済みのドキュメントが eSign サービスサーバーから収集され、データ xml ファイルがプロセス内の次のステップへと転送されます。
 
 ## アダプティブフォームをプロセスデザインで使用するための手順 {#steps-to-use-adaptive-forms-in-process-design}
@@ -83,7 +81,7 @@ HTML Workspace は、モバイルフォームに使用できるコントロー�
 
    >[!NOTE]
    >
-   >アダプティブフォームの作成について詳しくは、「[アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)」を参照してください。
+   >アダプティブフォームの作成について詳しくは、 [アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md).
    >
    >
    >プロセスの作成について詳しくは、[プロセスの作成と管理](https://help.adobe.com/ja_JP/AEMForms/6.1/WorkbenchHelp/WS92d06802c76abadb-1cc35bda128261a20dd-7ff7.2.html)を参照してください。

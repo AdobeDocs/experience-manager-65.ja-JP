@@ -1,7 +1,6 @@
 ---
 title: Correspondence Management Solution の設定
-seo-title: Configuring a Correspondence Management solution
-description: Correspondence Management Solution の設定
+description: AEM Forms環境で Correspondence Management ソリューションを設定します。
 uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
 topic-tags: correspondence-management
 content-type: reference
@@ -9,18 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 feature: Correspondence Management
 exl-id: f7f5eb0d-a283-45ea-84d3-d6375d2bb95b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 100%
+source-wordcount: '295'
+ht-degree: 39%
 
 ---
 
 # Correspondence Management Solution の設定 {#configuring-a-correspondence-management-solution}
 
-## VersionRestoreManagerImpl の作成者インスタンス URL の定義 {#defining-author-instance-url-for-versionrestoremanagerimpl}
+## VersionRestoreManagerImpl のオーサーインスタンス URL の定義 {#defining-author-instance-url-for-versionrestoremanagerimpl}
 
-作成者インスタンスバージョンのリストアの作成者インスタンス URL を定義するには、以下の手順を実行します。
+オーサーインスタンスのバージョンを復元するオーサーインスタンスの URL を定義するには、次の手順を実行します。
 
 1. *https://:&lt;PublishHost>:&lt;PublishPort>/lc/system/console/configMgr* に移動します。OSGi Management Console のユーザー資格情報を使ってログインします。デフォルトの資格情報は、admin/admin です。
 1. 「**[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]**」設定の横にある「**[!UICONTROL 編集]**」アイコンをクリックします。
@@ -36,20 +35,20 @@ ht-degree: 100%
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
-## ActivationManagerImpl（発行インスタンス Activation Manager）の発行インスタンス URL の定義 {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
+## ActivationManagerImpl のパブリッシュインスタンス URL の定義（パブリックインスタンスアクティベーションマネージャー） {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
 
-発行インスタンス ActivationManager の発行インスタンス URL を定義するには、以下の手順を実行します。
+パブリックインスタンスアクティベーションマネージャーのパブリッシュインスタンス URL を定義する手順は次のとおりです。
 
 1. *https://:&lt;authorHost>:&lt;authorPort>/lc/system/console/configMgr* に移動します。OSGi Management Console のユーザー資格情報を使ってログインします。デフォルトの資格情報は、admin/admin です。
-1. 「**[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]**」設定の横にある「**[!UICONTROL 編集]**」アイコンをクリックします。
-1. 「**[!UICONTROL ActivationManager Publish URL]**」フィールドで、発行インスタンス ActivationManager にアクセスするための URL を指定します。次の URL を指定できます。
+1. を検索して、 **[!UICONTROL 編集]** 横のアイコン **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]** 設定。
+1. Adobe Analytics の **[!UICONTROL ActivationManager 公開 URL]** 「 」フィールドで、パブリッシュインスタンスの ActivationManager にアクセスするための URL を指定します。 次の URL を指定できます。
 
-   * **ロードバランサー URL（推奨）**：発行ファーム（複数の非クラスター発行インスタンス）の前にロードバランサーとして機能する Web サーバーを持っている場合は、そのロードバランサーの URL を指定します。
-   * **発行インスタンス URL**: 単一の発行インスタンスのみを持っている場合、あるいは発行ファーム前段の Web サーバーが何らかの理由で作成者完了からアクセスできない場合、任意の発行インスタンス URL を指定します。指定した発行インスタンスがダウンした場合は、フォールバックメカニズムが機能して作成者側で処理します。
+   * **ロードバランサー URL （推奨）**：ロードバランサー URL を指定します。パブリッシュファーム（複数の非クラスターパブリッシュインスタンス）の前にロードバランサーとして機能する Web サーバーがある場合は、
+   * **パブリッシュインスタンス URL**：任意のパブリッシュインスタンス URL を指定します。1 つのパブリッシュインスタンスがある場合、またはパブリッシュファームを前面に配置している Web サーバーが、制限によりオーサー環境からアクセスできない場合です。 指定したパブリッシュインスタンスが停止した場合は、オーサー側で対処するフォールバックメカニズムがあります。
    * **URL 文字列**：
 
-      `https://<hostname>:<port>:/libs/fd/fdm/content/crud/lc.content.remote.activate.activationManager`
+     `https://<hostname>:<port>:/libs/fd/fdm/content/crud/lc.content.remote.activate.activationManager`
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
-Correspondence Management の設定方法と詳細は、[Correspondence Management 設定プロパティ](https://helpx.adobe.com/jp/aem-forms/6-2/cm-configuration-properties.html)を参照してください。
+Correspondence Management の設定について詳しくは、 [Correspondence Management 設定プロパティ](https://helpx.adobe.com/jp/aem-forms/6-2/cm-configuration-properties.html).

@@ -1,8 +1,6 @@
 ---
 title: AEM Forms ワークフローへのログイン
-seo-title: Logging in AEM Forms workflows
-description: ログを使用して、AEM Forms のワークフローの問題をデバッグします。
-seo-description: Use logs to debug AEM Forms workflow issues.
+description: AEM Formsのワークフローの問題をデバッグし、AEM Formsワークフローのデバッグログを有効にしてログを表示します。
 uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,10 +8,10 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 100%
+source-wordcount: '288'
+ht-degree: 94%
 
 ---
 
@@ -26,35 +24,35 @@ Forms Workflow の手順では、ワークフローに関する問題をデバ�
 Forms ワークフローのデバッグログには、次の内容が含まれます。
 
 * 各ワークフロー手順のエントリ。次に例を示します。\
-   `[DEBUG] "Executing Invoke DDX Process step"`
+  `[DEBUG] "Executing Invoke DDX Process step"`
 
 * 各ワークフロー手順の終了。次に例を示します。\
-   `[DEBUG] "Successfully finished Invoke DDX Process step"`
+  `[DEBUG] "Successfully finished Invoke DDX Process step"`
 
 * サービス呼び出しメッセージ。次に例を示します。\
-   `[DEBUG] Invoking Adobe Sign Service for creating agreement`
+  `[DEBUG] Invoking Adobe Sign Service for creating agreement`
 
 * サービス終了メッセージ。次に例を示します。\
-   `[DEBUG] Agreement created successfully with agreement id <agreement id>`
+  `[DEBUG] Agreement created successfully with agreement id <agreement id>`
 
 * メタデータマップから読み取られた変数。次に例を示します。\
-   `[DEBUG] Successfully retrieved variable <variable name> from workflow meta data map`
+  `[DEBUG] Successfully retrieved variable <variable name> from workflow meta data map`
 
 * JCR リポジトリで書き込まれた変数。次に例を示します。
 
-   ```verilog
-      [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
-   ```
+  ```verilog
+     [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
+  ```
 
 * 完全なスタックトレースを含む例外メッセージ。次に例を示します。\
-   `[DEBUG] Exception in Adobe Sign Service <complete stack trace>`
+  `[DEBUG] Exception in Adobe Sign Service <complete stack trace>`
 
 * 動的な手順のメタデータパラメーター。次に例を示します。
 
-   ```verilog
-   [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
-    [DEBUG] Locale to be used for Document of Record is <locale>
-   ```
+  ```verilog
+  [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
+   [DEBUG] Locale to be used for Document of Record is <locale>
+  ```
 
 次の例は、「ドキュメントに署名」手順のログを示しています。
 

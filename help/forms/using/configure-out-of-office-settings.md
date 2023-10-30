@@ -1,13 +1,12 @@
 ---
 title: 不在時の設定
-seo-title: Configure Out of Office settings
-description: 不在時の設定
+description: 不在時の設定 をAEM Formsインスタンスに追加します。
 seo-description: Configure Out of Office settings
 exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 99%
+source-wordcount: '825'
+ht-degree: 98%
 
 ---
 

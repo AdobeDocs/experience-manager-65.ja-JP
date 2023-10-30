@@ -1,7 +1,6 @@
 ---
 title: AEM Forms プロセスについて
-seo-title: Understanding AEM Forms Processes
-description: AEM Forms プロセスについて
+description: AEM Formsのプロセスには、フォームの作成、送信、データの処理、検証、統合、ワークフローの自動化、出力の管理が含まれます。
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
@@ -10,10 +9,10 @@ topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 100%
+source-wordcount: '815'
+ht-degree: 98%
 
 ---
 
@@ -33,7 +32,7 @@ ht-degree: 100%
 * プロセスが、複数の組織にまたがっている。
 * プロセスを完了するには、他人による入力が必要。例えば、外出中の上司にフォームを送信した場合を考えてみましょう。この場合、上司が帰社しフォームを入力するまで、プロセスは完了しません。
 
-   こうしたタイプのプロセスは、長期間有効なプロセスと呼ばれます。 長期間有効なプロセスは非同期で実行されるため、システムはリソースの余裕があるときに処理することができ、操作の追跡や監視をすることも可能です。長期間有効なプロセスが呼び出されると、AEM Forms は、長期間有効なプロセスのステータスを追跡するレコードの一部として、呼び出し識別子の値を作成します。レコードは AEM Forms データベースに保存されます。長期間有効なプロセスレコードは、不要になればパージできます。
+  こうしたタイプのプロセスは、長期間有効なプロセスと呼ばれます。 長期間有効なプロセスは非同期で実行されるため、システムはリソースの余裕があるときに処理することができ、操作の追跡や監視をすることも可能です。長期間有効なプロセスが呼び出されると、AEM Forms は、長期間有効なプロセスのステータスを追跡するレコードの一部として、呼び出し識別子の値を作成します。レコードは AEM Forms データベースに保存されます。長期間有効なプロセスレコードは、不要になればパージできます。
 
 >[!NOTE]
 >
@@ -47,7 +46,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスには基づいていません。このプロセスを呼び出す方法を説明するコード例に沿って理解を深めるには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
+>このプロセスは、既存の AEM Forms プロセスには基づいていません。このプロセスを呼び出す方法を説明するコード例に沿って理解を深めるには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
 
 この短時間のみ有効なプロセスを呼び出すと、次のアクションを実行します。
 
@@ -59,7 +58,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >通常、短時間のみ有効なプロセスは 3 つより多くのアクションで構成されます。プロセスを作成する際は、Workbench を使用します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
+   >通常、短時間のみ有効なプロセスは 3 つより多くのアクションで構成されます。プロセスを作成する際は、Workbench を使用します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
 
    *AEM Forms によるプログラミング*&#x200B;では、この短時間のみ有効なプロセスをプログラムで呼び出すことができる次の方法について説明しています。
 

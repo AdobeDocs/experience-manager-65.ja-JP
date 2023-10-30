@@ -1,7 +1,6 @@
 ---
 title: エンドポイントレジストリ Java API クイックスタート（SOAP）
-seo-title: Endpoint Registry Java API QuickStart(SOAP)
-description: エンドポイントレジストリ Java API クイックスタート（SOAP）
+description: EJB、SOAP、監視フォルダー、電子メールエンドポイント、リモートエンドポイントなどのエンドポイントを追加します。 また、Java API を使用して、エンドポイントを変更、削除および取得します。
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
 contentOwner: admin
 content-type: reference
@@ -10,10 +9,10 @@ topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 role: Developer
 exl-id: 985a6fc5-6675-4c25-80e4-34dcb658de72
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1917989005a98469776befc967e40ab7b40c31f5
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 100%
+source-wordcount: '560'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +26,7 @@ ht-degree: 100%
 
 [QuickStart：Java API を使用した監視フォルダーエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[クイックスタート：Java API を使用した電子メールエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
+[クイックスタート：Java API を使用したメールエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
 
 [クイックスタート：Java API を使用してリモートエンドポイントを追加する](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
@@ -383,9 +382,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート：Java API を使用した電子メールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
+## クイックスタート：Java API を使用したメールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-次の Java コードの例では、電子メールエンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します（[メールエンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)を参照）。
+次の Java コードの例では、メールエンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します（[メールエンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)を参照）。
 
 >[!NOTE]
 >

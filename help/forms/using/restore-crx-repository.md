@@ -1,9 +1,9 @@
 ---
 title: JEE クラスターサーバーに適用可能な破損した CRX リポジトリを復元できません
-description: 破損した CRX リポジトリを復元する手順
+description: 破損した CRX リポジトリを復元する手順。
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: c4f776b08cb8cc8c6eea78a3757735e063bec20c
-workflow-type: ht
+source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 100%
 
