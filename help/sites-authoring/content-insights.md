@@ -1,7 +1,7 @@
 ---
 title: コンテンツインサイト
 seo-title: Content Insight
-description: コンテンツインサイトは、web 分析や SEO の推奨を活用してページパフォーマンスに関する情報を提供します
+description: コンテンツインサイトは、web 分析や SEO のレコメンデーションを活用してページパフォーマンスに関する情報を提供します
 seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
@@ -10,16 +10,16 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 245d501d4124d9aaa3f2b12bdb06a5bdd1661e8c
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 100%
+source-wordcount: '530'
+ht-degree: 19%
 
 ---
 
 # コンテンツインサイト{#content-insight}
 
-コンテンツインサイトは、Web 分析や SEO の推奨を活用してページパフォーマンスに関する情報を提供します。コンテンツインサイトを使用して、ページをどのように変更するか判断を下し、以前に加えた変更によってパフォーマンスがどのように変わったかを確認できます。作成するすべてのページについて、コンテンツインサイトを開いてページを分析できます。
+コンテンツインサイトは、Web 分析および SEO の推奨事項を使用したページのパフォーマンスに関する情報を提供します。 コンテンツインサイトを使用して、ページの変更方法に関する決定を下したり、以前の変更によるパフォーマンスの変化を確認したりします。 作成するすべてのページで、コンテンツインサイトを開いてページを分析できます。
 
 ![chlimage_1-311](assets/chlimage_1-311.png)
 
@@ -27,74 +27,78 @@ ht-degree: 100%
 
 ## レポートデータ
 
-コンテンツインサイトページには、Adobe SiteCatalyst、Adobe Target、Adobe Social、BrightEdge のデータを使用するレポートが用意されています。
+コンテンツインサイトページには、Adobe SiteCatalyst、Adobe Target、Adobe Social、BrightEdge のデータを使用するレポートが含まれます。
 
-* SiteCatalyst：次の指標のレポートを確認できます。
+* SiteCatalyst：次の指標に関するレポートを使用できます。
 
-   * ページ表示
+   * ページビュー数
    * ページでの平均滞在時間
    * ソース
 
-* Target：オファーが含まれるページのキャンペーンアクティビティに関するレポートを確認できます。
-* BrightEdge：検索エンジンでのページの視認性を向上させるページの機能に関するレポートと、実装が推奨される機能を確認できます。
+* Target：ページにオファーが含まれるキャンペーンアクティビティに関するレポート。
+* BrightEdge：検索エンジンに対するページの表示を改善するページ機能に関するレポートを作成し、実装が必要な機能を推奨します。
 
-[ページの「分析と推奨表示」を開く](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)を参照してください。
+[ページの「分析とレコメンデーション表示」を開く](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page)を参照してください。
 
 ## レポート期間
 
-レポートには、ユーザーが指定した期間のデータが表示されます。レポート期間を調整すると、レポートのデータが指定した期間の内容に更新されます。ページのバージョンが変更された時間は、視覚キューで確認できます。これにより、各バージョンのパフォーマンスを比較できます。
+レポートには、制御した期間のデータが表示されます。 レポート期間を調整すると、レポートはその期間のデータで自動的に更新されます。 視覚的なキューは、ページのバージョンが変更された時間を示すので、各バージョンのパフォーマンスを比較できます。
 
-レポートデータの精度も指定できます。例えば、日次、週次、月次、年次のデータを確認できます。
+>[!NOTE]
+>
+>コンテンツインサイトダッシュボードのタイムラインは、 `GMT`.
 
-[レポート期間の変更](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period)を参照してください。
+また、レポートするデータの精度を指定することもできます。例えば、日別、週別、月別、年別のデータを確認できます。
+
+詳しくは、 [レポート期間の変更](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
 >コンテンツインサイトのレポートを使用するには、管理者が AEM と SiteCatalyst、Target および BrightEdge を統合する必要があります。[SightCatalyst との統合](/help/sites-administering/adobeanalytics.md)、[Adobe Target との統合](/help/sites-administering/target.md)および [BrightEdge との統合](/help/sites-administering/brightedge.md)を参照してください。
 
-## 表示レポート {#the-views-report}
+## ビューレポート {#the-views-report}
 
-表示レポートには、ページのトラフィックを評価する次の機能が備わっています。
+ビューレポートには、ページトラフィックを評価するための次の機能が含まれています。
 
-* 指定のレポート期間におけるページビューの合計数。
-* レポート期間全体にわたるビュー数を示す次のグラフ。
+* レポート期間中のページの合計表示数。
+* レポート期間中のビュー数のグラフ：
 
    * 合計ビュー数。
-   * 実訪問者数。
+   * 個別訪問者数。
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## ページでアクションが実行された平均レポート {#the-page-average-engaged-report}
+## ページの平均エンゲージ済みレポート {#the-page-average-engaged-report}
 
-ページでアクションが実行された平均レポートには、ページの効果を評価する次の機能が備わっています。
+ページにアクションを実行した平均レポートには、ページの効果を評価するための次の機能が含まれています。
 
-* レポート期間全体に対してページが開かれている平均時間。
-* 指定のレポート期間におけるページビューの平均時間のグラフ。
+* レポート期間全体でページが開いたままの平均時間。
+* レポート期間中のページビューの平均長さのグラフ。
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
 ## ソースレポート {#the-sources-report}
 
-ソースレポートは、ユーザーがどのようにしてページに到達したかを示します。例えば、検索エンジンからの場合や、既知の URL を使用する場合などがあります。
+「ソース」レポートは、ユーザーが検索エンジンの結果から、または既知の URL を使用して、どのようにページに移動したかを示します。
 
 ![chlimage_1-314](assets/chlimage_1-314.png)
 
 ## バウンスレポート {#the-bounces-report}
 
-バウンスレポートには、選択したレポート期間にページで発生したバウンスの数を示すグラフが含まれています。
+バウンス数レポートには、選択したレポート期間にページで発生したバウンス数を示すグラフが含まれます。
 
 ![chlimage_1-315](assets/chlimage_1-315.png)
 
 ## キャンペーンアクティビティレポート {#the-campaign-activity-report}
 
-アクティブなページの各キャンペーンについて、*キャンペーン名*&#x200B;アクティビティという名前のレポートが表示されます。このレポートは、オファーが提供されている各セグメントのページインプレッション数とコンバージョン数を示します。
+ページがアクティブなキャンペーンごとに、 *キャンペーン名* アクティビティ。 このレポートは、オファーが提供されている各セグメントのページインプレッション数とコンバージョン数を示します。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## SEO の推奨レポート {#the-seo-recommendations-report}
+## SEO Recommendationsレポート {#the-seo-recommendations-report}
 
-SEO の推奨レポートには、ページの BrightEdge 分析の結果が含まれています。このレポートはページ機能のチェックリストで、検索エンジンを使用してファインダビリティを最大化するための機能のうち、ページにどの機能が含まれていて、どの機能が含まれていないかを示します。
+SEO Recommendationsレポートには、ページの BrightEdge 分析の結果が含まれます。 このレポートは、検索エンジンを使用して検索性を最大限に高めるために、ページがどの機能を使用し、どの機能を含まないかを示すページ機能のチェックリストです。
 
-このレポートを使用すると、ページのファインダビリティを向上させるタスクを作成できます。推奨は、推奨を実装するためのタスクが作成されていることを示します。[SEO の推奨のためのタスクの割り当て](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)を参照してください。
+このレポートでは、ページの検索性を向上させるためのタスクを作成できます。 Recommendationsは、レコメンデーションを実装するためのタスクが作成されたことを示します。 詳しくは、 [SEO Recommendationsのタスクの割り当て](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
