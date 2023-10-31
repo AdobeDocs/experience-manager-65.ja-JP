@@ -2,9 +2,9 @@
 title: 非同期ジョブ
 description: Adobe Experience Manager では、リソースを集中的に消費する一部のタスクを非同期的に処理することでパフォーマンスを最適化します。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: cc63291c32f7a234398ebe8bf67ab53aaf8fa90f
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '800'
 ht-degree: 100%
 
 ---
@@ -19,7 +19,6 @@ Adobe Experience Manager では、パフォーマンスを悪化させないた�
 * 多数のアセットまたは多数の参照があるアセットの移動
 * アセットメタデータの一括書き出し／読み込み
 * しきい値制限セットを超えるアセットのリモート Experience Manager デプロイメントからの取得
-* ページの移動
 * ライブコピーのロールアウト
 
 非同期ジョブのステータスは、**[!UICONTROL 非同期ジョブ]**&#x200B;ダッシュボード（**グローバルナビゲーション**／**ツール**／**操作**／**ジョブ**）で表示できます。
@@ -113,19 +112,6 @@ AEM が特定の操作を非同期で処理するためのアセット、ペー�
 1. 「**[!UICONTROL Threshold number of assets/references]**」ボックスで、移動操作の非同期処理に関するアセットやフォルダーまたは参照の数のしきい値を指定します。
 
    ![アセット移動しきい値](assets/async-move-threshold.png)
-
-1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます例えば、成功、失敗です。
-1. 変更を保存します。
-
-### 非同期ページ移動操作を設定 {#configuring-asynchronous-page-move-operations}
-
-移動するページへの参照数がしきい値を超えると、移動操作は非同期に実行されます。
-
-1. グローバルナビゲーションで、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;をクリックします。
-1. Web コンソールで、「**[!UICONTROL Async Page Move Operation Job Processing Configuration]**」を開きます。
-1. 「**[!UICONTROL Threshold number of references]**」ボックスで、ページ移動操作の非同期処理に関する参照の数のしきい値を指定します。
-
-   ![ページ移動しきい値](assets/async-page-move.png)
 
 1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます例えば、成功、失敗です。
 1. 変更を保存します。
