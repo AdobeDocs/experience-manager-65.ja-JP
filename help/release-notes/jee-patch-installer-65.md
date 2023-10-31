@@ -58,11 +58,11 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
    * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルおよび [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルを置き換えてから、**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行します。
 
-   
-   >[!NOTE]
+   >>
+   [!NOTE]
+   >>
+   **ConfigurationManager.bat** ファイルを使用すると、.lax ファイルの名前を手動でアップデートする必要がなくなります。
    >
-   >**ConfigurationManager.bat** ファイルを使用すると、.lax ファイルの名前を手動でアップデートする必要がなくなります。
-   
 
 1. **[UNIX ベースの場合のみ]：**
 

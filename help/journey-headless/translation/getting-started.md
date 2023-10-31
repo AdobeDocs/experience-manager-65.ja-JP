@@ -2,10 +2,10 @@
 title: AEM ヘッドレス翻訳の基本を学ぶ
 description: ヘッドレスコンテンツを整理する方法と AEM の翻訳ツールの仕組みについて説明します。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 947b17a82f704a244e7fdc710cfa9df50c64f46b
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '1495'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -180,7 +180,7 @@ AEM のコンテンツは、ヘッドレスであろうと従来の web ペー�
 * AEM のヘッドレスコンテンツの保存方法を理解する
 * AEM の翻訳ツールに詳しくなる
 
-この知識を基に、AEM ヘッドレス翻訳ジャーニーを続けてください。次に、[翻訳コネクタの設定](configure-connector.md)のドキュメントを参照しながら、AEM を翻訳サービスに接続する方法について説明します。
+この知識に基づいてドキュメントを次に確認し、AEMヘッドレス翻訳ジャーニーを継続します。 [翻訳統合の設定](configure-connector.md) AEMを翻訳サービスに接続する方法を説明します。|
 
 ## その他のリソース {#additional-resources}
 

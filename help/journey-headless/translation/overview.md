@@ -2,10 +2,10 @@
 title: AEM ヘッドレス翻訳ジャーニー
 description: AEM の強力な翻訳ツールを使用してヘッドレスコンテンツを翻訳する方法を順を追って説明するガイド付きジャーニーは、ここから始めてください。
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 96%
+ht-degree: 95%
 
 ---
 
@@ -66,9 +66,9 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 | 0 | AEM ヘッドレス翻訳ジャーニー | このドキュメント |
 | 1 | [ヘッドレスコンテンツの概要と AEM での翻訳方法について](learn-about.md) | ヘッドレスの概念、AEM へのマッピング方法、AEM 翻訳の基本概念について説明します。 |
 | 2 | [AEM ヘッドレス翻訳の基本を学ぶ](getting-started.md) | ヘッドレスコンテンツを整理する方法と AEM の翻訳ツールの仕組みについて説明します。 |
-| 3 | [翻訳コネクタの設定](configure-connector.md) | AEM を翻訳サービスに接続する方法を説明します。 |
+| 3 | [翻訳統合の設定](configure-connector.md) | AEM を翻訳サービスに接続する方法を説明します。 |
 | 4 | [翻訳ルールの設定](translation-rules.md) | 翻訳するコンテンツを特定するための翻訳ルールを定義する方法を説明します。 |
-| 5 | [コンテンツの翻訳](translate-content.md) | 翻訳コネクタおよびルールを使用して、ヘッドレスコンテンツを翻訳します。 |
+| 5 | [コンテンツの翻訳](translate-content.md) | 翻訳の統合とルールを使用して、ヘッドレスコンテンツを翻訳します。 |
 | 6 | [翻訳済みコンテンツの公開](publish-content.md) | 翻訳済みコンテンツを公開し、基になるコンテンツの更新時に翻訳を更新する方法を説明します。 |
 
 ## 次の手順 {#what-is-next}

@@ -1,15 +1,15 @@
 ---
-title: 翻訳コネクタの設定
+title: 翻訳統合の設定
 description: AEM を翻訳サービスに接続する方法を説明します。
 exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
-# 翻訳コネクタの設定 {#configure-connector}
+# 翻訳統合の設定 {#configure-integration}
 
 AEM を翻訳サービスに接続する方法を説明します。
 
@@ -25,7 +25,7 @@ AEM ヘッドレス翻訳ジャーニーの以前のドキュメント（[AEM �
 
 ## 目的 {#objective}
 
-このドキュメントでは、選択した翻訳サービスに AEM コネクタをセットアップする方法を説明します。読み終えると、次のことができるようになります。
+このドキュメントでは、選択した翻訳サービスにAEM統合を設定する方法を説明します。 読み終えると、次のことができるようになります。
 
 * AEM の翻訳統合フレームワークの重要なパラメーターを理解する
 * 翻訳サービスへの独自の接続をセットアップできる
