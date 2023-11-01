@@ -6,10 +6,10 @@ seo-description: Learn about the options available when installing a standalone 
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 65%
+source-wordcount: '1616'
+ht-degree: 63%
 
 ---
 
@@ -47,13 +47,13 @@ AEM のデフォルトのポートは 4502 です。このポートが使用で�
 
 Oracle Java 11（または一般にバージョン 8 より新しい Java）を実行している場合は、AEM の起動時にコマンドラインにさらにスイッチを追加する必要があります。
 
-* 関連するリフレクションアクセス警告メッセージが `stdout.log` に出力されないように、次の - `-add-opens` スイッチを追加する必要があります。
+* 次の内容： `-add-opens` スイッチを追加して、 `stdout.log`
 
 ```shell
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* さらに、パフォーマンスの潜在的な問題を軽減するために、`-XX:+UseParallelGC` スイッチを利用する必要があります。
+* また、 `-XX:+UseParallelGC` 潜在的なパフォーマンスの問題を軽減するために切り替えます。
 
 以下は、Java 11 で AEM を起動するときに指定する追加の JVM パラメータのサンプルです。
 

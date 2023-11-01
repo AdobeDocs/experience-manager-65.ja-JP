@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1787'
-ht-degree: 87%
+source-wordcount: '1785'
+ht-degree: 88%
 
 ---
 
@@ -214,7 +214,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含むバンドルを作成する必要があります。
 
-このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Adobe Target に書き出し」機能の書き換えにプラグインするために使用されます。
+このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Adobe Target に書き出し」機能での書き換えにプラグインするために使用されます。
 
 例えば、`ComponentService` の場合は次のようになります。
 

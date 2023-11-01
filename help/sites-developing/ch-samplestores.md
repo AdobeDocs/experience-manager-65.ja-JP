@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 100%
+source-wordcount: '471'
+ht-degree: 88%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 ContextHub には、ソリューションで利用できるサンプルストア候補がいくつか用意されています。各サンプルでは次の情報が提供されます。
 
-* 学習用に参照できるソースコードの場所。
+* 学習目的で開くことのできるソースコードの場所。
 * ストア候補から作成するストアの設定方法。
 * アクセスするためのストアデータの構造。
 
@@ -41,7 +41,7 @@ aem.segmentation ストア候補は、[`ContextHub.Store.PersistedJSONPStore`](/
 
 ### 設定 {#configuration-segmentation}
 
-aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
+aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。 デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
 
 ```xml
 {
@@ -55,7 +55,7 @@ aem.segmentation ストアを作成する場合、詳細な設定をする必要
 
 ## contexthub.geolocation サンプルストア候補 {#contexthub-geolocation-sample-store-candidate}
 
-contexthub.geolocation サンプルストア候補は、Google マップを使用して、クライアントの位置に関する情報を取得し、格納します。
+contexthub.geolocation サンプルストア候補は、Googleマップを使用して、クライアントの場所に関する情報を取得し、格納します。
 
 ### ソースの場所 {#source-location-geolocation}
 
@@ -109,7 +109,7 @@ contexthub.geolocation ストア候補は、[`ContextHub.Store.PersistedJSONPSto
 
 >[!NOTE]
 >
->Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用して行う必要があります。そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
+>Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用して行う必要があります。そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。それ以外の場合は、同じ接触チャネルのポリシーに準拠するために http が使用されます。 Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
 
 ## contexthub.surferinfo サンプルストア候補 {#contexthub-surferinfo-sample-store-candidate}
 

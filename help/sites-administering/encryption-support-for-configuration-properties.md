@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 exl-id: 3c3db1c8-5b22-45dd-aeaf-5cf830a9486b
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 27%
+source-wordcount: '281'
+ht-degree: 28%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 27%
 
 この機能を使用すると、すべての OSGi 設定プロパティを、クリアテキストではなく、保護された暗号化形式で保存できます。 Web コンソール UI のフォームは、システム全体の暗号化プライマリキーを使用して、クリアテキストから暗号化テキストを作成するために使用されます。
 
-サービスで使用される前にプロパティを復号化するために、OSGi 設定プラグインのサポートが追加されました。
+OSGi 設定プラグインのサポートが、サービスで使用される前に、プロパティを復号化するために追加されました。
 
 >[!NOTE]
 >

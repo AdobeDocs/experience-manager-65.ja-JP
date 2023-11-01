@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2011'
-ht-degree: 71%
+source-wordcount: '2009'
+ht-degree: 70%
 
 ---
 
@@ -248,7 +248,7 @@ REST API では、次のアクションがサポートされています。
   </tr>
   <tr>
    <td><code>DELETE</code></td>
-   <td>モデルを削除します。ファイアウォールやプロキシの問題を解決するために、値 <code>DELETE</code> の <code>X-HTTP-Method-Override</code> ヘッダーエントリを含む <code>POST</code> も <code>DELETE</code> リクエストとして受け入れられます。</td>
+   <td>モデルを削除します。ファイアウォール/プロキシの問題を解決するには、 <code>POST</code> を含む <code>X-HTTP-Method-Override</code> 値を持つヘッダーエントリ <code>DELETE</code> は、 <code>DELETE</code> リクエスト。</td>
   </tr>
  </tbody>
 </table>

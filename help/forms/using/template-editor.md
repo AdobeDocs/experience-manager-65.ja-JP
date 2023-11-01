@@ -11,20 +11,20 @@ discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 77%
 
 ---
 
 # アダプティブフォームテンプレート{#adaptive-form-templates}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
@@ -121,7 +121,7 @@ ht-degree: 77%
 
 ![初期コンテンツ](assets/initial-content-layer-1.png)
 
-作成者がベースとして使用するアダプティブフォームテンプレートを初期コンテンツレイヤーで作成します。 テンプレートの作成はフォームの作成と同様です。サイドバーにあるオプションを使用します。サイドバーは、コンテンツブラウザー、プロパティブラウザー、アセットブラウザー、コンポーネントブラウザーを提供します。
+作成者がベースとして使用するアダプティブフォームテンプレートを、初期コンテンツレイヤーで作成します。 テンプレートの作成はフォームの作成と同様です。サイドバーにあるオプションを使用します。サイドバーは、コンテンツブラウザー、プロパティブラウザー、アセットブラウザー、コンポーネントブラウザーを提供します。
 
 [サイドバー](../../forms/using/introduction-forms-authoring.md#sidebar)を参照してください。
 
@@ -191,11 +191,11 @@ ht-degree: 77%
 1. **FormsManager 設定**&#x200B;を探して開きます。
 
    * アダプティブフォームの初期設定済みテンプレートを表示または非表示にするには、「**AF および AD の初期設定済みテンプレートを含める**」オプションをオンまたはオフにします。
-   * AEM 6.0 Forms または AEM 6.1 Forms リリースで追加され、現在非推奨になっているアダプティブフォームの初期設定済みテンプレートを表示または非表示にするには、「**AEM 6.0 の AF テンプレートを含める**」オプションをオンまたはオフにします。このオプションがオンの場合、有効にするには **標準搭載の AF および AD テンプレートを含める** 設定を有効にします。
+   * AEM 6.0 Forms または AEM 6.1 Forms リリースで追加され、現在非推奨になっているアダプティブフォームの初期設定済みテンプレートを表示または非表示にするには、「**AEM 6.0 の AF テンプレートを含める**」オプションをオンまたはオフにします。このオプションをオンにした場合、 **標準搭載の AF および AD テンプレートを含める** 設定を有効にします。
 
-1. 「**保存**」をクリックします。標準のテンプレートの表示オプションが変更されます。
+1. 「**保存**」をクリックします。標準テンプレートの表示オプションが変更されます。
 
-## 推奨事項 {#recommendations}
+## レコメンデーション {#recommendations}
 
 * テンプレートエディターでフォームのプロパティを変更する際は、BindReference プロパティを使用しないようにしてください。
 * ブレークポイントを追加する場合は、アダプティブフォームテンプレートの作成時にブレークポイントを作成します。

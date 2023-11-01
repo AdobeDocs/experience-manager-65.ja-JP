@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 100%
+source-wordcount: '2356'
+ht-degree: 99%
 
 ---
 
@@ -238,7 +238,7 @@ DocConverter の操作をプログラム的に実行する前に、DocConverter 
 
 **PDF/A 準拠の判断に使用する PDFドキュメントを参照**
 
-PDFドキュメントが PDF/ A に準拠しているかどうかを判断するには、PDFドキュメントを参照し、DocConverter サービスに渡す必要があります。
+PDFドキュメントがPDF/ A に準拠しているかどうかを判断するには、PDFドキュメントを参照し、DocConverter サービスに渡す必要があります。
 
 **実行時オプションの設定**
 
@@ -280,7 +280,7 @@ Java API を使用して PDF/A の準拠を判断します。
 
    * コンストラクターを使用して `PDFAValidationOptionSpec` オブジェクトを作成します。
    * `PDFAValidationOptionSpec` オブジェクトの `setCompliance` メソッドを呼び出し、`PDFAValidationOptionSpec.Compliance.PDFA_1B` を渡して、準拠レベルを設定します。
-   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `setLogLevel` メソッドを参照してください。
+   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
 
 1. PDF ドキュメントに関する情報を取得
 

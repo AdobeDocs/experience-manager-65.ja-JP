@@ -2,9 +2,9 @@
 title: 翻訳統合の設定
 description: AEM を翻訳サービスに接続する方法を説明します。
 exl-id: a1a4b1ca-d353-46e2-a992-f38be6be338e
-source-git-commit: f627bc2b58578df1b4ff6c95d87f0c64daafa1c7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1162'
 ht-degree: 97%
 
 ---

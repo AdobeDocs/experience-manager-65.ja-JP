@@ -1,20 +1,16 @@
 ---
 title: ジョブのオフロード
-seo-title: Offloading Jobs
-description: 特定のタイプの処理を実行するために、トポロジ内の AEM インスタンスを設定および使用する方法について説明します。
-seo-description: Learn how to configure and use AEM instances in a topology in order to perform specific types of processing.
-uuid: e971d403-dfd2-471f-b23d-a67e35f1ed88
+description: トポロジ内でAEMインスタンスを設定および使用して、特定のタイプの処理を実行する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
-source-git-commit: 08a6777bf1ff3abf62f45fe1e164ef2027996848
-workflow-type: ht
-source-wordcount: '2364'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '2362'
+ht-degree: 39%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 100%
 
 ## はじめに {#introduction}
 
-オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。オフロードでは、特定の Experience Manager インスタンスを使用して、特定のタイプの処理を実行できます。処理を特化することによって、利用可能なサーバーリソースを最大限に使用できます。
+オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。オフロードを使用すると、特定のExperience Managerインスタンスを使用して特定のタイプの処理を実行できます。 特殊な処理により、使用可能なサーバーリソースの使用を最大限に活用できます。
 
 オフロードは、[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) および Sling JobManager の機能に基づきます。オフロードを使用するには、Experience Manager クラスターをトポロジに追加し、クラスターで処理するジョブトピックを特定します。クラスターは 1 つ以上の Experience Manager インスタンスで構成され、単一のインスタンスがクラスターと見なされます。
 
@@ -33,12 +29,12 @@ ht-degree: 100%
 Sling JobManager と JobConsumer を使用して、トポロジ内で処理されるジョブを作成できます。
 
 * JobManager：特定のトピックのジョブを作成するサービス。
-* JobConsumer：1 つ以上のトピックのジョブを実行するサービス。同じトピックに対して複数の JobConsumer サービスを登録できます。
+* JobConsumer:1 つ以上のトピックのジョブを実行するサービスです。 同じトピックに対して複数の JobConsumer サービスを登録できます。
 
-JobManager でジョブが作成されると、オフロードフレームワークによって、ジョブを実行するトポロジ内の Experience Manager クラスターが選択されます。
+JobManager がジョブを作成すると、オフロードフレームワークは、トポロジ内のExperience Managerクラスターを選択してジョブを実行します。
 
-* クラスターには、ジョブトピックに対して登録された JobConsumer を実行している 1 つ以上のインスタンスが含まれている必要があります。
-* トピックは、クラスター内の少なくとも 1 つのインスタンスに対して有効化されている必要があります。
+* クラスターには、ジョブトピックに登録された JobConsumer を実行している 1 つ以上のインスタンスを含める必要があります。
+* このトピックは、クラスター内の 1 つ以上のインスタンスに対して有効にする必要があります。
 
 ジョブ配布の調整について詳しくは、[トピック使用の設定](/help/sites-deploying/offloading.md#configuring-topic-consumption)を参照してください。
 
@@ -48,72 +44,72 @@ JobManager でジョブが作成されると、オフロードフレームワー
 
 ### ジョブペイロード {#job-payloads}
 
-オフロードフレームワークでは、ジョブをリポジトリ内のリソースと関連付けるジョブペイロードがサポートされています。ジョブペイロードは、ジョブがリソースを処理するために作成されたり、別のコンピューターにオフロードされたりする場合に役立ちます。
+オフロードフレームワークは、ジョブをリポジトリ内のリソースに関連付けるジョブペイロードをサポートします。 ジョブペイロードは、ジョブがリソースを処理するために作成され、ジョブが別のコンピュータにオフロードされる場合に役立ちます。
 
-ジョブの作成時に、ペイロードはそのジョブを作成するインスタンスにのみ配置されることが保証されます。ジョブのオフロード時に、レプリケーションエージェントによって、ペイロードが最終的にジョブを使用するインスタンスで作成されます。ジョブ実行が完了すると、リバースレプリケーションによって、ペイロードのコピーがジョブを作成したインスタンスに戻されます。
+ジョブの作成時に、ペイロードはジョブを作成するインスタンス上にのみ配置されることが保証されます。 ジョブのオフロード時に、レプリケーションエージェントは、最終的にジョブを使用するインスタンス上にペイロードが作成されることを確認します。 ジョブの実行が完了すると、リバースレプリケーションによって、ペイロードがジョブを作成したインスタンスにコピーされ直されます。
 
 ## トポロジの管理 {#administering-topologies}
 
-トポロジは、オフロードに参加する疎結合された Experience Manager クラスターです。クラスターは 1 つ以上の Experience Manager サーバーインスタンスで構成されます（単一のインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに参加している疎結合Experience Managerクラスタです。 クラスタは、1 つ以上のExperience Managerサーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
 
-各 Experience Manager インスタンスによって、以下のオフロード関連サービスが実行されます。
+各Experience Managerインスタンスは、次のオフロード関連サービスを実行します。
 
-* Discovery Service：トポロジに参加するために Topology Connector に要求を送信します。
-* Topology Connector：参加要求を受信し、各要求を承認または拒否します。
+* Discovery Service：トポロジに参加するための要求を Topology Connector に送信します。
+* Topology Connector：結合リクエストを受け取り、各リクエストを受け入れるか拒否します。
 
-トポロジのすべてのメンバーの Discovery Service は、メンバーのうちの 1 つの Topology Connector を参照しています。以下の節では、このメンバーをルートメンバーと呼びます。
+トポロジのすべてのメンバーの Discovery Service は、いずれかのメンバーの Topology Connector を指します。 以降のセクションでは、このメンバーをルートメンバーと呼びます。
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
-トポロジ内の各クラスターには、リーダーと認識されるインスタンスが含まれています。クラスターリーダーは、クラスターの他のメンバーの代わりにトポロジとやり取りします。リーダーがクラスターから外れると、クラスターの新しいリーダーが自動的に選択されます。
+トポロジ内の各クラスターには、リーダーとして認識されるインスタンスが含まれています。 クラスターリーダーは、クラスターの他のメンバーの代わりに、トポロジとやり取りします。 引出線がクラスタから離れると、クラスタの新しい引出線が自動的に選択されます。
 
 ### トポロジの表示 {#viewing-the-topology}
 
-トポロジブラウザーを使用して、Experience Manager インスタンスが参加しているトポロジの状態を調べます。トポロジブラウザーには、トポロジのクラスターおよびインスタンスが表示されます。
+トポロジブラウザーを使用して、Experience Managerインスタンスが参加しているトポロジの状態を調べます。 トポロジブラウザーには、トポロジのクラスターとインスタンスが表示されます。
 
 クラスターごとに、クラスターメンバーのリストが表示されます。このリストには、各メンバーがクラスターに参加した順序と、どのメンバーがリーダーかが示されています。現在プロパティによって、現在管理しているインスタンスが示されます。
 
 クラスターの各インスタンスについて、複数のトポロジ関連プロパティを確認できます。
 
 * インスタンスのジョブコンシューマーが担当するトピックの許可リスト。
-* トポロジとの接続用に公開されるエンドポイント
-* インスタンスがどのジョブトピックについてオフロード用に登録されているか
-* インスタンスによって処理されるジョブトピック
+* トポロジとの接続用に公開されるエンドポイント。
+* インスタンスがオフロード用に登録されているジョブトピック。
+* インスタンスが処理するジョブトピック。
 
-1. タッチ UI を使用して、「ツール」タブをクリックします([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
-1. Granite の操作エリアで、「オフロードするブラウザー」をクリックします。
-1. ナビゲーションパネルで、「トポロジブラウザー」をクリックします。
+1. タッチ UI を使用して、「ツール」タブをクリックします。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
+1. Granite の操作領域で、「ブラウザーのオフロード」をクリックします。
+1. ナビゲーションパネルで、[ トポロジブラウザ ] をクリックします。
 
    トポロジに参加しているクラスターが表示されます。
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. クラスターをクリックして、クラスターのインスタンスとそれらの ID、現在ステータスおよびリーダーステータスのリストを表示します。
-1. インスタンス ID をクリックして、詳細なプロパティを表示します。
+1. クラスターをクリックすると、クラスター内のインスタンスと、その ID、現在のステータス、リーダーのステータスのリストが表示されます。
+1. インスタンス ID をクリックすると、詳細なプロパティが表示されます。
 
-Web コンソールを使用してトポロジ情報を表示することもできます。コンソールには、トポロジのクラスターに関するその他の情報が表示されます。
+また、Web コンソールを使用してトポロジ情報を表示することもできます。 コンソールには、トポロジクラスターに関する詳細情報が表示されます。
 
-* どのインスタンスがローカルインスタンスであるか
-* このインスタンスがトポロジに接続するために使用する Topology Connector サービス（送信）と、このインスタンスに接続するサービス（受信）
+* ローカルインスタンスを表すインスタンス。
+* このインスタンスがトポロジへの接続に使用する Topology Connector サービス（送信）と、このインスタンスに接続するサービス（受信）です。
 * トポロジおよびインスタンスのプロパティの変更履歴
 
-以下の手順を使用して、Web コンソールのトポロジ管理ページを開きます。
+次の手順を実行して、Web コンソールのトポロジ管理ページを開きます。
 
-1. ブラウザーで Web コンソールを開きます([http://localhost:4502/system/console](http://localhost:4502/system/console))
-1. Main／Topology Management をクリックします。
+1. ブラウザーで Web コンソールを開きます。 ([http://localhost:4502/system/console](http://localhost:4502/system/console))
+1. [Main] > [Topology Management] の順にクリックします。
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
 ### トポロジメンバーシップの設定 {#configuring-topology-membership}
 
-Experience Manager インスタンスとトポロジとのインタラクション方法を制御するために、Apache Sling のリソースベースの Discovery Service が各インスタンスで実行されます。
+Apache Sling Resource-Based Discovery Service は各インスタンスで実行され、Experience Managerインスタンスとトポロジとのやり取りを制御します。
 
-Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connector サービスでは、トポロジへの参加が許可される IP アドレスまたはホスト名の許可リストを維持管理します。
+Discovery Service は、トポロジとの接続を確立し、維持するために、定期的なPOST要求（ハートビート）を Topology Connector サービスに送信します。 Topology Connector サービスでは、トポロジへの参加が許可される IP アドレスまたはホスト名の許可リストを維持管理します。
 
 * インスタンスをトポロジに参加させるには、ルートメンバーの Topology Connector サービスの URL を指定します。
-* インスタンスがトポロジに参加できるようにするには、ルートメンバーの Topology Connector サービスの許可リストにインスタンスを追加します。
+* インスタンスがトポロジに参加できるようにするには、インスタンスをルートメンバーの Topology Connector サービスの許可リストに追加します。
 
-Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apache.sling.discovery.impt.Config サービスの以下のプロパティを設定します。
+Web コンソールまたは sling:OsgiConfig ノードを使用して、 org.apache.sling.discovery.impt.Config サービスの次のプロパティを設定します。
 
 <table>
  <tbody>
@@ -132,7 +128,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
   <tr>
    <td>ハートビート間隔（秒）</td>
    <td>heartbeatInterval</td>
-   <td>ハートビート間の時間（秒単位）。</td>
+   <td>ハートビート間の時間（秒）。</td>
    <td>15</td>
   </tr>
   <tr>
@@ -142,15 +138,15 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
    <td>3</td>
   </tr>
   <tr>
-   <td>Topology Connector URL</td>
+   <td>トポロジコネクタの URL</td>
    <td>topologyConnectorUrls</td>
-   <td>ハートビートメッセージを送信する Topology Connector サービスの URL。</td>
+   <td>ハートビートメッセージを送信する Topology Connector サービスの URL です。</td>
    <td>http://localhost:4502/libs/sling/topology/connector</td>
   </tr>
   <tr>
    <td>Topology Connector 許可リスト</td>
    <td>topologyConnectorWhitelist</td>
-   <td>ローカル Topology Connector サービスによってトポロジ内で許可される IP アドレスまたはホスト名のリスト。 </td>
+   <td>トポロジ内でローカル Topology Connector サービスが許可する IP アドレスまたはホスト名のリストです。 </td>
    <td><p>localhost</p> <p>127.0.0.1</p> </td>
   </tr>
   <tr>
@@ -162,31 +158,31 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
  </tbody>
 </table>
 
-以下の手順を使用して、CQ インスタンスをトポロジのルートメンバーに接続します。この手順では、インスタンスがルートトポロジメンバーの Topology Connector URL を指すようにします。この手順をトポロジのすべてのメンバーで実行します。
+CQ インスタンスをトポロジのルートメンバーに接続するには、次の手順を実行します。 この手順では、インスタンスがルートトポロジメンバーの Topology Connector URL を指し示します。 トポロジのすべてのメンバーで、この手順を実行します。
 
-1. ブラウザーで Web コンソールを開きます([http://localhost:4502/system/console](http://localhost:4502/system/console))
-1. Main／Topology Management をクリックします。
-1. 「 Configure Discovery Service」をクリックします。
-1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URL の形式は、https://rootservername:4502/libs/sling/topology/connector です。
+1. ブラウザーで Web コンソールを開きます。 ([http://localhost:4502/system/console](http://localhost:4502/system/console))
+1. [Main] > [Topology Management] の順にクリックします。
+1. [Configure Discovery Service] をクリックします。
+1. Topology Connector URLs プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。 URL の形式は、https://rootservername:4502/libs/sling/topology/connector です。
 
-トポロジのルートメンバーで以下の手順を実行します。この手順では、ルートメンバーの Discovery Service 許可リストに他のトポロジメンバーの名前を追加します。
+トポロジのルートメンバーで以下の手順を実行します。この手順では、他のトポロジメンバの名前が Discovery Service許可リストに追加されます。
 
-1. ブラウザーで Web コンソールを開きます([http://localhost:4502/system/console](http://localhost:4502/system/console))
-1. Main／Topology Management をクリックします。
-1. 「 Configure Discovery Service」をクリックします。
+1. ブラウザーで Web コンソールを開きます。 ([http://localhost:4502/system/console](http://localhost:4502/system/console))
+1. [Main] > [Topology Management] の順にクリックします。
+1. [Configure Discovery Service] をクリックします。
 1. トポロジの各メンバーについて、Topology Connector の許可リストプロパティに項目を追加し、トポロジメンバーのホスト名または IP アドレスを指定します。
 
-## トピック使用の設定 {#configuring-topic-consumption}
+## トピック消費の設定 {#configuring-topic-consumption}
 
-オフロードするブラウザーを使用して、トポロジ内の Experience Manager インスタンスのトピック使用を設定します。インスタンスごとに、使用するトピックを指定できます。例えば、1 つのインスタンスのみが特定のタイプのトピックを使用するようにトポロジを設定するには、その 1 つのインスタンスを除くすべてのインスタンスでそのトピックを無効にします。
+オフロードブラウザを使用して、トポロジ内のトピックインスタンスのExperience Manager消費を設定します。 各インスタンスについて、使用するトピックを指定できます。 例えば、1 つのインスタンスが特定のタイプのトピックを使用するようにトポロジを設定するには、1 つを除くすべてのインスタンスでトピックを無効にします。
 
 ジョブは、ラウンドロビンロジックを使用して、関連するトピックが有効なインスタンス間で配布されます。
 
-1. タッチ UI を使用して、「ツール」タブをクリックします([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
-1. Granite の操作エリアで、「オフロードするブラウザー」をクリックします。
-1. ナビゲーションパネルで、「オフロードするブラウザー」をクリックします。
+1. タッチ UI を使用して、「ツール」タブをクリックします。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
+1. Granite の操作領域で、「ブラウザーのオフロード」をクリックします。
+1. ナビゲーションパネルで、[ オフロードするブラウザ ] をクリックします。
 
-   オフロードトピックと、トピックを使用できるサーバーインスタンスが表示されます。
+   オフロードするトピックと、そのトピックを使用できるサーバーインスタンスが表示されます。
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
@@ -195,21 +191,21 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
    ![chlimage_1-114](assets/chlimage_1-114.png)
 
-1. トピックの横にある以下のボタンのいずれかをクリックし、インスタンスの使用動作を設定して、「保存」をクリックします。
+1. トピックの横にある次のボタンの 1 つをクリックして、インスタンスの消費動作を設定し、「保存」をクリックします。
 
-   * 有効：このインスタンスはこのトピックのジョブを使用します。
+   * 有効：このインスタンスは、このトピックのジョブを使用します。
    * 無効：このインスタンスはこのトピックのジョブを使用しません。
    * 排他：このインスタンスはこのトピックのみのジョブを使用します。
 
-   **注意：**&#x200B;あるトピックに対して「排他」を選択すると、他のすべてのトピックは自動的に「無効」に設定されます。
+   **注意：** トピックに対して [ 除外 ] を選択すると、その他のトピックはすべて自動的に [ 無効 ] に設定されます。
 
-### インストール済みの JobConsumer {#installed-job-consumers}
+### インストール済みのジョブコンシューマー {#installed-job-consumers}
 
-複数の JobConsumer 実装が Experience Manager とともにインストールされます。これらの JobConsumer が登録されているトピックが、オフロードするブラウザーに表示されます。表示されるその他のトピックは、カスタム JobConsumer で登録されたトピックです。以下の表に、デフォルトの JobConsumer を示します。
+複数の JobConsumer 実装が、インストールと共にExperience Managerされます。 これらの JobConsumer が登録されているトピックは、オフロードブラウザに表示されます。 表示される追加のトピックは、カスタム JobConsumer が登録したトピックです。 次の表に、デフォルトの JobConsumer を示します。
 
 | ジョブトピック | サービス PID | 説明 |
 |---|---|---|
-| ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling とともにインストールされます。下位互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
+| ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling と共にインストールされます。 OSGi イベント管理で生成されたジョブを処理して、後方互換性を確保します。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
 
 <!--
@@ -218,7 +214,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
 ### インスタンスのトピックの無効化と有効化 {#disabling-and-enabling-topics-for-an-instance}
 
-Apache Sling JobConsumer Manager サービスによって、トピックの許可リストプロパティとブロックリストプロパティが提供されます。これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
+Apache Sling Job Consumer Manager サービスは、トピックの許可リストとブロックリストのプロパティを提供します。 これらのプロパティを設定して、Experience Managerインスタンスでの特定のトピックの処理を有効または無効にします。
 
 **注意：**&#x200B;インスタンスがトポロジに属している場合は、トポロジ内の任意のコンピューターでオフロードするブラウザーを使用して、トピックを有効または無効にすることもできます。
 
@@ -226,34 +222,34 @@ Apache Sling JobConsumer Manager サービスによって、トピックの許�
 
 Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以下のプロパティを設定します。`sling:OsgiConfig` ノードの場合、JobConsumer Manager サービスの PID は、org.apache.sling.event.impl.jobs.JobConsumerManager です。
 
-| Web コンソールでのプロパティ名 | OSGi ID | 説明 |
+| Web コンソールのプロパティ名 | OSGi ID | 説明 |
 |---|---|---|
-| トピック許可リスト | job.consumermanager.whitelist | ローカル JobManager サービスによって処理されるトピックのリスト。デフォルト値の &amp;ast; では、すべてのトピックが登録済み TopicConsumer サービスに送信されます。 |
-| トピックブロックリスト | job.consumermanager.blacklist | ローカル JobManager サービスによって処理されないトピックのリスト。 |
+| トピック許可リスト | job.consumermanager.whitelist | ローカルの JobManager サービスが処理するトピックのリストです。 デフォルト値の &amp;ast; では、すべてのトピックが登録済み TopicConsumer サービスに送信されます。 |
+| トピックブロックリスト | job.consumermanager.blacklist | ローカル JobManager サービスが処理しないトピックのリストです。 |
 
-## オフロードのレプリケーションエージェントの作成 {#creating-replication-agents-for-offloading}
+## オフロード用のレプリケーションエージェントの作成 {#creating-replication-agents-for-offloading}
 
-オフロードフレームワークでは、作成者とワーカー間のリソースの転送にレプリケーションが使用されます。インスタンスがトポロジに参加すると、オフロードフレームワークによってレプリケーションエージェントが自動的に作成されます。エージェントはデフォルト値を使用して作成されます。エージェントが認証に使用するパスワードを手動で変更する必要があります。
+オフロードフレームワークは、レプリケーションを使用して、オーサーとワーカーの間でリソースを転送します。 オフロードフレームワークは、インスタンスがトポロジに参加すると、レプリケーションエージェントを自動的に作成します。 エージェントはデフォルト値で作成されます。 エージェントが認証に使用するパスワードは手動で変更する必要があります。
 
 >[!CAUTION]
 >
 >自動的に生成されるレプリケーションエージェントには既知の問題があるので、新しいレプリケーションエージェントを手動で作成する必要があります。
 
-オフロードのためにインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。以下の図に、作成者からワーカーインスタンスへのオフロードに必要なエージェントを示します。オーサーの Sling ID は 1、ワーカーインスタンスの Sling ID は 2 です。
+オフロード用にインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。 次の図に、オーサーインスタンスからワーカーインスタンスにオフロードするために必要なエージェントを示します。 オーサーの Sling ID は 1、ワーカーインスタンスの Sling ID は 2 です。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
-この設定では、以下の 3 つのエージェントが必要です。
+この設定には、次の 3 つのエージェントが必要です。
 
-1. ワーカーインスタンスへレプリケートする、オーサーインスタンス上の送信エージェント
-1. ワーカーインスタンス上のアウトボックスから引き出す、オーサーインスタンス上のリバースエージェント
-1. ワーカーインスタンス上のアウトボックスエージェント
+1. ワーカーインスタンスにレプリケートする、オーサーインスタンス上の送信エージェントです。
+1. ワーカーインスタンス上のアウトボックスから取り込む、オーサーインスタンス上のリバースエージェント。
+1. ワーカーインスタンス上のアウトボックスエージェント。
 
-このレプリケーションスキームは、オーサーインスタンスとパブリッシュインスタンスの間で使用されるものと同様です。ただし、オフロードの場合は、関係するすべてのインスタンスはオーサーインスタンスです。
+このレプリケーションスキームは、オーサーインスタンスとパブリッシュインスタンスの間で使用されるスキームと似ています。 ただし、オフロード状況では、関係するすべてのインスタンスがオーサリングインスタンスです。
 
 >[!NOTE]
 >
->オフロードフレームワークでは、トポロジを使用してオフロードインスタンスの IP アドレスが取得されます。次に、これらの IP アドレスに基づいて、レプリケーションエージェントが自動的に作成されます。オフロードインスタンスの IP アドレスが後で変更された場合、変更はインスタンスの再起動後にトポロジ上で自動的に伝搬されます。ただし、オフロードフレームワークでは、新しい IP アドレスを反映するようにレプリケーションエージェントが自動的に更新されることはありません。この状況を回避するには、トポロジ内のすべてのインスタンスに固定 IP アドレスを使用します。
+>オフロードフレームワークは、トポロジを使用してオフロードインスタンスの IP アドレスを取得します。 その後、フレームワークは、これらの IP アドレスに基づいてレプリケーションエージェントを自動的に作成します。 オフロードインスタンスの IP アドレスが後で変更された場合、変更はインスタンスの再起動後にトポロジ上で自動的に伝搬されます。ただし、オフロードフレームワークでは、新しい IP アドレスを反映するようにレプリケーションエージェントが自動的に更新されることはありません。この状況を回避するには、トポロジ内のすべてのインスタンスに固定 IP アドレスを使用します。
 
 ### オフロードのレプリケーションエージェントの命名 {#naming-the-replication-agents-for-offloading}
 
@@ -282,12 +278,12 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト |
-   | トランスポート／トランスポート URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
-   | トランスポート／トランスポートユーザー | ターゲットインスタンスのレプリケーションユーザー |
-   | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーパスワード |
-   | 拡張／HTTP メソッド | POST |
-   | トリガー／デフォルトを無視 | True |
+   | 「設定」>「シリアル化の種類」 | デフォルト |
+   | Transport > Transport URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
+   | トランスポート/トランスポートユーザー | ターゲットインスタンス上のレプリケーションユーザー |
+   | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーのパスワード |
+   | 拡張/HTTP メソッド | POST |
+   | トリガー/デフォルトを無視 | True |
 
 ### リバースエージェントの作成 {#creating-the-reverse-agent}
 
@@ -296,26 +292,26 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト |
-   | トランスポート／トランスポート URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
-   | トランスポート／トランスポートユーザー | ターゲットインスタンスのレプリケーションユーザー |
-   | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーパスワード |
-   | 拡張／HTTP メソッド | GET |
+   | 「設定」>「シリアル化の種類」 | デフォルト |
+   | Transport > Transport URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
+   | トランスポート/トランスポートユーザー | ターゲットインスタンス上のレプリケーションユーザー |
+   | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーのパスワード |
+   | 拡張/HTTP メソッド | GET |
 
 ### アウトボックスエージェントの作成 {#creating-the-outbox-agent}
 
 1. ワーカーインスタンス上に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照してください）。任意の&#x200B;**タイトル**&#x200B;を指定します。**名前**&#x200B;は `offloading_outbox` にする必要があります。
-1. 以下のプロパティを使用してエージェントを作成します。
+1. 次のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト |
-   | トランスポート／トランスポート URI | repo://var/replication/outbox |
-   | トリガー／デフォルトを無視 | True |
+   | 「設定」>「シリアル化の種類」 | デフォルト |
+   | Transport > Transport URI | repo://var/replication/outbox |
+   | トリガー/デフォルトを無視 | True |
 
 ### Sling ID の検索 {#finding-the-sling-id}
 
-以下のいずれかの方法を使用して、Experience Manager インスタンスの Sling ID を取得します。
+次のいずれかの方法を使用して、Experience Managerインスタンスの Sling ID を取得します。
 
 * Web コンソールを開き、Sling 設定で、Sling ID プロパティの値を検索します（[http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)）。この方法は、インスタンスがまだトポロジの一部ではない場合に役立ちます。
 * インスタンスが既にトポロジの一部である場合は、トポロジブラウザーを使用します。
@@ -354,6 +350,6 @@ The following procedure assumes the following characteristics for the offloading
 
 ## 参考情報 {#further-reading}
 
-このページで説明した詳細以外に、以下を参照することもできます。
+このページで説明する詳細に加えて、次の情報もお読みください。
 
 * Java API を使用したジョブおよびジョブコンシューマーの作成について詳しくは、[オフロードのためのジョブの作成と使用](/help/sites-developing/dev-offloading.md)を参照してください。

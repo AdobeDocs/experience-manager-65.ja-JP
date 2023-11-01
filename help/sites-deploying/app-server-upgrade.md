@@ -1,18 +1,18 @@
 ---
 title: アプリケーションサーバーのインストール環境のアップグレード手順
-description: アプリケーションサーバーからデプロイされる AEM のインスタンスのアップグレード方法について説明します。
+description: アプリケーションサーバーを介してデプロイされるAEMのインスタンスをアップグレードする方法について説明します。
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
-workflow-type: ht
-source-wordcount: '452'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 75%
 
 ---
 
 # アプリケーションサーバーのインストール環境のアップグレード手順{#upgrade-steps-for-application-server-installations}
 
-ここでは、アプリケーションサーバーインストール用の AEM を更新するために必要になる手順を説明します。
+この項では、AEM for Application Server のインストールを更新するために必要な手順について説明します。
 
 この手順では、どの例でも JBoss をアプリケーションサーバーとして使用し、有効な AEM のバージョンが既にデプロイされているものとします。ここでは、**AEM バージョン 6.4 から 6.5** へのアップグレードについて説明します。
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 1. 次に、AEM 6.4 のデプロイを解除します。これは、TomCat App Manager（`http://serveraddress:serverport/manager/html`）から実行できます。
 
-1. 次に、crx2oak 移行ツールを使用してリポジトリを移行してください。これをおこなうには、crx2oak の最新バージョンを [この場所](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/) からダウンロードしてください。
+1. 次に、crx2oak 移行ツールを使用してリポジトリを移行してください。それには、最新バージョンの crx2oak をからダウンロードします。 [この場所](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/).
 
    ```shell
    SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -jar crx2oak.jar --load-profile segment-fds
@@ -57,9 +57,9 @@ ht-degree: 100%
 
       1. `sling.run.mode.install.options`
 
-1. 不要なファイルとフォルダーを削除します。具体的に削除する必要のある項目は次のとおりです。
+1. 不要になったファイルとフォルダーを削除します。 具体的に削除する必要がある項目は次のとおりです。
 
-   * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
+   * The **launchpad/startup フォルダー**. ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
 
    * **base.jar ファイル**：`find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
 
@@ -72,22 +72,22 @@ ht-degree: 100%
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
 
-   この 2 つのファイルにより、AEM が TarMK ノードストアとファイルデータストアを使用するように設定されます。
+   これら 2 つのファイルは、TarMK ノードストアとファイルデータストアを使用するようにAEMを設定します。
 
-1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
+1. 設定ファイルを編集して、使用可能な状態にします。 具体的には、
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` に次の行を追加します。
 
-      `customBlobStore=true`
+     `customBlobStore=true`
 
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` に次の行を追加します。
 
-      ```
-      path=./crx-quickstart/repository/datastore
-      minRecordLength=4096
-      ```
+     ```
+     path=./crx-quickstart/repository/datastore
+     minRecordLength=4096
+     ```
 
-1. 今度は、AEM 6.5 war ファイル内の実行モードを変更する必要があります。変更するには、まず AEM 6.5 war を格納する一時フォルダーを作成します。次の例のフォルダー名は、`temp` です。war ファイルをコピーしたら、temp フォルダー内で次のコマンドを実行して、内容を抽出します。
+1. 今度は、AEM 6.5 war ファイル内の実行モードを変更する必要があります。これをおこなうには、まずAEM 6.5 戦争を格納する一時フォルダーを作成します。 次の例のフォルダー名は、`temp` です。war ファイルをコピーしたら、temp フォルダー内で次のコマンドを実行して、内容を抽出します。
 
    ```
    jar xvf aem-quickstart-6.5.0.war

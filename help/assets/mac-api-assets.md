@@ -6,9 +6,9 @@ role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1744'
 ht-degree: 100%
 
 ---
@@ -122,7 +122,7 @@ Experience Manager では、アセットに次の要素が含まれています�
 * 404 - NOT FOUND（フォルダーが存在しないかアクセスできない）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-**応答**：返されるエンティティのクラスはアセットまたはフォルダーです。含まれるエンティティのプロパティは、各エンティティの完全なプロパティセットのサブセットです。エンティティのすべての表現を取得するために、クライアントは `rel` が `self` となっているリンクで参照される URL のコンテンツを取得する必要があります。
+**応答**：返されるエンティティのクラスはアセットまたはフォルダーです。含まれるエンティティのプロパティは、各エンティティの完全なプロパティセットのサブセットです。エンティティのすべての表現を取得するために、クライアントはリンクで参照される URL のコンテンツを `self` の `rel` で取得する必要があります。
 
 ## フォルダーの作成 {#create-a-folder}
 

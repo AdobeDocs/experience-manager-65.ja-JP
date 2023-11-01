@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '6854'
-ht-degree: 47%
+source-wordcount: '6836'
+ht-degree: 45%
 
 ---
 
@@ -96,7 +96,7 @@ CUG ポリシーの処理と評価を目的とした承認モデルに関連す�
 CUG を介した制限付き読み取りアクセスを定義する際には、次のベストプラクティスを考慮する必要があります。
 
 * CUG は、読み取りアクセスの制限のために必要なのか、認証要件のために必要なのかを判断します。後者の場合、または両方が必要な場合は、認証要件の詳細について「ベストプラクティス」の節を参照してください
-* 脅威の境界を特定し、データの機密性と、許可されたアクセスに関連する役割を明確に把握するために、保護する必要のあるデータまたはコンテンツの脅威モデルを作成します。
+* 脅威の境界を特定し、データの機密性と、許可されたアクセスに関連する役割を明確に把握するために、保護する必要のあるデータまたはコンテンツの脅威モデルを作成します
 * 一般的な認証関連の側面とベストプラクティスを念頭に置いて、リポジトリコンテンツと CUG をモデル化します。
 
    * 読み取り権限は、特定の CUG と、設定でデプロイされた他のモジュールの評価権限が、特定のサブジェクトが特定のリポジトリ項目を読み取ることを許可する場合にのみ付与されることに注意してください
@@ -129,7 +129,7 @@ CUG 機能の認証関連の部分を使用すると、認証が必要なツリ�
 
 デフォルトの AEM セットアップでは、この設定を利用できるようにするために、mixin を author 実行モードで設定し、その設定をパブリッシュインスタンスへのレプリケーション時にのみ有効にできるようになりました。Sling での認証要件の強制方法について詳しくは、[このページ](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html)を参照してください。
 
-の追加 `granite:AuthenticationRequired` 設定されたサポート対象パス内の mixin タイプを使用すると、応答ハンドラーの OSGi 登録が更新され、 `sling.auth.requirements` プロパティ。 特定の認証要件にオプションの `granite:loginPath` プロパティが指定されている場合は、その値が「-」プレフィックスと共に Authenticator に登録されて認証要件から除外されます。
+の追加 `granite:AuthenticationRequired` 設定されたサポート対象パス内の mixin タイプを使用すると、応答ハンドラーの OSGi 登録が更新され、 `sling.auth.requirements` プロパティ。 特定の認証要件でオプション `granite:loginPath` プロパティの場合、値は Authenticator に追加で「 — 」プレフィックスと共に登録され、認証要件から除外されます。
 
 #### 認証要件の評価と継承 {#evaluation-and-inheritance-of-the-authentication-requirement}
 
@@ -718,7 +718,7 @@ AEMの新規インストールでは、デフォルトで、CUG 機能の認証�
 
 ### 認証要件の無効化 {#disable-the-authentication-requirement}
 
-`granite.auth.authhandler` モジュールが提供する認証要件のサポートを無効にするには、**Adobe Granite Authentication Requirement and Login Path Handler** に関連する設定を削除するだけで十分です。
+で指定されている認証要件のサポートを無効にするには `granite.auth.authhandler` モジュールは、 **AdobeGranite 認証要件およびログインパスハンドラー**.
 
 >[!NOTE]
 >
@@ -740,7 +740,7 @@ Apache Jackrabbit FileVault の読み込みメカニズムは、タイプ `Princ
 
 ### AdobeGranite レプリケーション {#adobe-granite-replication}
 
-複数のAEMインスタンス間で CUG ポリシーをレプリケートできるように、レプリケーションモジュールが若干調整されました。
+レプリケーションモジュールは、異なるAEMインスタンス間で CUG ポリシーをレプリケートできるように若干調整されました。
 
 * `DurboImportConfiguration.isImportAcl()` は、文字どおりに解釈され、`javax.jcr.security.AccessControlList` を実装するアクセス制御ポリシーにのみ影響します。
 
@@ -753,7 +753,7 @@ CUG ポリシーのレプリケーションには 1 つ制約があります。�
 
 **バンドルに付属する認証ハンドラー** Adobe Granite HTTP Header Authentication Handler`com.adobe.granite.auth.authhandler` は、同じモジュールによって定義される `CugSupport` インターフェイスへの参照を保持します。これは、特定の環境内での「領域」の計算に使用され、このハンドラーによって設定される領域にフォールバックします。
 
-このモジュールは、`CugSupport` への参照をオプションとして使用できるように調整されました。この調整により、既に廃止されている実装を特定のセットアップで再度有効にしても、最大限の後方互換性を確保できます。その実装を使用するインストールでは、CUG 実装から領域が抽出されることはありませんが、**Adobe Granite HTTP Header Authentication Handler** によって定義される領域が常に表示されます。
+これは、 `CugSupport` 任意の設定で非推奨の実装を再度有効にする場合に、最大限の後方互換性を確保するためのオプションです。 その実装を使用するインストールでは、CUG 実装から領域が抽出されることはありませんが、**Adobe Granite HTTP Header Authentication Handler** によって定義される領域が常に表示されます。
 
 >[!NOTE]
 >
@@ -776,7 +776,7 @@ CUG ポリシーのレプリケーションには 1 つ制約があります。�
 
 ### CUG のセットアップと設定の違い {#differences-in-cug-setup-and-configuration}
 
-非推奨の OSGi コンポーネント **AdobeGranite 閉じられたユーザーグループ (CUG) のサポート** ( `com.day.cq.auth.impl.cug.CugSupportImpl`) は、以前の CUG 機能の認証および認証関連の部分を個別に処理できるように、新しいコンポーネントに置き換えられました。
+非推奨の OSGi コンポーネント **AdobeGranite 閉じられたユーザーグループ (CUG) のサポート** ( `com.day.cq.auth.impl.cug.CugSupportImpl`) は、以前の CUG 機能の認証と認証に関連する部分を個別に処理できる新しいコンポーネントに置き換えられました。
 
 ## リポジトリコンテンツにおける CUG の管理の違い {#differences-in-managing-cugs-in-the-repository-content}
 
@@ -794,7 +794,7 @@ CUG ポリシーのレプリケーションには 1 つ制約があります。�
 
 **アクセス制御管理での CUG ポリシーの編集**
 
-この変更は、残りの JCR プロパティから専用のアクセス制御ポリシーに移行した場合、CUG 機能の承認部分を作成または変更するために必要な権限に影響を与えます。 この移行はアクセス制御コンテンツに対する変更と見なされるので、リポジトリに書き込むためには `jcr:readAccessControl` 権限と `jcr:modifyAccessControl` 権限が必要です。したがって、このコンテンツを設定または変更できるのは、ページのアクセス制御コンテンツを変更する権限を持つコンテンツ作成者のみです。 これは、通常の JCR プロパティを書き込む機能で十分だった古い実装とは対照的で、結果として権限のエスカレーションがおこなわれます。
+この変更は、残りの JCR プロパティから専用のアクセス制御ポリシーに移行した場合、CUG 機能の承認部分を作成または変更するために必要な権限に影響を与えます。 これは、アクセス制御コンテンツの変更と見なされるので、 `jcr:readAccessControl` および `jcr:modifyAccessControl` リポジトリに書き込む権限。 したがって、このコンテンツを設定または変更できるのは、ページのアクセス制御コンテンツを変更する権限を持つコンテンツ作成者のみです。 これは、通常の JCR プロパティを書き込む機能で十分だった古い実装とは対照的で、結果として権限のエスカレーションがおこなわれます。
 
 **ポリシーで定義されたターゲットノード**
 
@@ -870,7 +870,7 @@ AEM 6.3 以降の CUG の対応関係
 
 ### 既存の CUG コンテンツの移行 {#migrating-existing-cug-content}
 
-Adobeは、新しい CUG 実装に移行するためのツールを提供します。 この機能を使用するには、次の手順に従います。
+Adobeは、新しい CUG 実装に移行するためのツールを提供します。 使用するには、次の手順に従います。
 
 1. `https://<serveraddress>:<serverport>/system/console/cug-migration` に移動して、ツールにアクセスします。
 1. CUG を確認するルートパスを入力し、 **ドライランを実行** 」ボタンをクリックします。 これにより、選択された場所で変換可能な CUG がスキャンされます。

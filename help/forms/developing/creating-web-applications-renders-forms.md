@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 100%
+source-wordcount: '1872'
+ht-degree: 99%
 
 ---
 
@@ -151,8 +151,8 @@ Forms サービス API を使用してフラグメントに基づいてフォー
 1. コンストラクターを使用して、URI 値を格納する `URLSpec` オブジェクトを作成します。
 1. `URLSpec` オブジェクトの `setApplicationWebRoot` メソッドを呼び出して、アプリケーションの web ルートを表す文字列値を渡します。
 1. `URLSpec` オブジェクトの `setContentRootURI` メソッドを呼び出して、コンテンツルート URI 値を指定する文字列値を渡します。フォームデザインとフラグメントがコンテンツルート URI に配置されていることを確認します。そうでない場合、Forms サービスは例外をスローします。AEM Forms リポジトリを参照するには、`repository://` を指定してください。
-1. `URLSpec` オブジェクトの `setTargetURL` メソッドを呼び出して、フォームデータの送信先となるターゲット URL 値を指定する文字列値を渡します。フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、計算を実行するためのフォームの送信先の URL を指定することもできます。
-1. `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して次の値を渡します。
+1. `URLSpec` オブジェクトの `setTargetURL` メソッドを呼び出して、フォームデータの送信先となるターゲット URL 値を指定する文字列値を渡します。フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、演算を実行するためのフォームの送信先の URL を指定することもできます。
+1. `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して、次の値を渡します。
 
    * ファイル名拡張子を含んだフォームデザイン名を指定する文字列値。
    * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト（手順 2 で作成）。
@@ -397,4 +397,4 @@ Web アプリケーションをデプロイした後、Web ブラウザーを使
 
 * http://localhost:8080/FragmentsWebApplication/index.html
 
-   「ラジオ」ボタンを選択し、「送信」ボタンをクリックしてください。フラグメントに基づくフォームが Web ブラウザーに表示されます。問題が発生した場合は、J2EE アプリケーションサーバーのログファイルを参照してください。
+  「ラジオ」ボタンを選択し、「送信」ボタンをクリックしてください。フラグメントに基づくフォームが Web ブラウザーに表示されます。問題が発生した場合は、J2EE アプリケーションサーバーのログファイルを参照してください。

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1980'
-ht-degree: 48%
+source-wordcount: '1978'
+ht-degree: 47%
 
 ---
 
@@ -89,7 +89,7 @@ Context Cloud に表示される場合、コンポーネントはGoogle API を�
 
 **JSONP Store**：インストールによって異なるコンテンツが表示されるコンポーネント。
 
-JSONP 標準は JSON を補完し、同一生成元ポリシーを回避します（Web アプリケーションが別のドメインにあるサーバーと通信できないようにします）。これは関数呼び出しの JSON オブジェクトをラップすることで、別のドメインから `<script>` として読み込むことができるようにします（同一生成元ポリシーの例外として許可されます）。
+JSONP 標準は JSON を補完し、同一生成元ポリシーを回避します（Web アプリケーションが別のドメインにあるサーバーと通信できないようにします）。これは、JSON オブジェクトを `<script>` （同じオリジンポリシーに対して許可された例外）他のドメインから。
 
 JSONP ストアは他のストアと同じですが、別のドメインからの情報を読み込むのに現在のドメインにその情報のプロキシを必要としない点が異なります。[JSONP を介して ClientContext にデータを保存](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp)する例を参照してください。
 

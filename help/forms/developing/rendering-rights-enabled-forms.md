@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 95%
+source-wordcount: '1457'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 Forms サービスでは、使用権限が適用されているフォームをレンダリングできます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。使用権限が適用されたフォームは、権限付きフォームと呼ばれます。ユーザーは、権限付きフォームを Adobe Reader で開くことで、そのフォームで有効になっている操作を実行できます。
 
-使用権限をフォームに適用するには、Acrobat Reader DC Extensions サービスが AEM forms のインストール環境に含まれている必要があります。また、使用権限を PDF ドキュメントに適用できる有効な資格情報が必要です。つまり、権限付きフォームをレンダリングするには、Acrobat Reader DC Extensions サービスを適切に設定する必要があります。（[Acrobat Reader DC Extensions サービスについて](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)を参照してください）。
+使用権限をフォームに適用するには、Acrobat Reader DC Extensions サービスがAEM forms インストールに含まれている必要があります。 また、使用権限を PDF ドキュメントに適用できる有効な資格情報が必要です。つまり、権限付きフォームをレンダリングするには、Acrobat Reader DC Extensions サービスを適切に設定する必要があります。（[Acrobat Reader DC Extensions サービスについて](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)を参照してください）。
 
 >[!NOTE]
 >

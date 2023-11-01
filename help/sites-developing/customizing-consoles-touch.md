@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '667'
 ht-degree: 50%
 
 ---
@@ -160,4 +160,4 @@ AEMは、コンソール ( および [ページオーサリング機能](/help/s
 
 コンソールを使用する場合、一般的な使用例は、リソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。 これは、例えば、作成者が項目を選択する必要があるリストの形式をとることができます。
 
-リストを適切なサイズに保ち、使用事例にも関連するように、カスタム述語の形式でフィルターを実装できます。 詳しくは、 [この記事](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 」を参照してください。
+リストを適切なサイズに保ち、使用例にも関連するように、フィルターをカスタム述語の形式で実装できます。 詳しくは、 [この記事](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 」を参照してください。

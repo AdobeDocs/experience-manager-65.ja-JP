@@ -1,19 +1,15 @@
 ---
 title: AEM での CRXDE Lite の有効化
-seo-title: Enabling CRXDE Lite in AEM
 description: Adobe Experience ManagerでCRXDE Liteを有効にする方法を説明します。
-seo-description: Learn how to enable CRXDE Lite in AEM.
-uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 79%
+source-wordcount: '254'
+ht-degree: 62%
 
 ---
 
@@ -29,7 +25,7 @@ AEMのインストールを可能な限り安全にするために、セキュ�
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
 ```
 
-このレコメンデーションは攻撃対象領域を可能な限り減らすことを目的としていますが、システム管理者はコンテンツの参照や実稼動インスタンスの問題をデバッグするために CRXDE Lite にアクセスする必要がある場合があります。
+この推奨事項は、攻撃対象をできるだけ減らすことを目的としていますが、CRXDE Lite管理者は、コンテンツを参照したり、実稼動インスタンスで問題をデバッグしたりするために、システムへのアクセスが必要になる場合があります。
 
 [OSGi 設定](#enabling-crxde-lite-osgi)または [cURL コマンド](#enabling-crxde-lite-curl)のいずれかを使用して、CRXDE Lite を有効にできます。
 
@@ -48,7 +44,7 @@ AEMのインストールを可能な限り安全にするために、セキュ�
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
 
-1. その設定オプションを確認するには、その横にあるレンチのアイコンをクリックします。
+1. 横のレンチアイコンをクリックして、設定オプションを表示します。
 
    ![chlimage_1-80](assets/chlimage_1-80a.png)
 

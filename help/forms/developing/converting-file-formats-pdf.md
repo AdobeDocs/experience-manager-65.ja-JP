@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '7850'
+source-wordcount: '7848'
 ht-degree: 90%
 
 ---
@@ -592,7 +592,7 @@ Generate PDF サービスがネイティブファイル形式を変換するに�
 1. ファイル／印刷を選択して、印刷ダイアログボックスを開く
 1. 印刷ダイアログボックスが表示されることを確認する
 
-AppMon は、標準の Win32 API を使用して、サードパーティのアプリケーションとやり取りし、キーストロークやマウスクリックなどの UI イベントを転送します。これは、これらのアプリケーションを制御して PDF ファイルを生成するのに役立ちます。
+AppMon は、標準の Win32 API を使用して、サードパーティのアプリケーションとやり取りし、キーストロークやマウスクリックなどの UI イベントを転送します。これは、これらのアプリケーションを制御してPDFファイルを生成するのに役立ちます。
 
 これらの Win32 API の制限により、AppMon は、TextPad などの一部のアプリケーションで見つかるフローティングメニューバーや、Win32 API を使用してコンテンツを取得できない特定の種類のダイアログなど、特定の種類のウィンドウにこれらの UI イベントをディスパッチできません。
 
@@ -982,7 +982,7 @@ AEM Forms には、Generate PDFサービスでメモ帳を使用してファイ�
 * from Adobe Systems Incorporated.
 *-->
 
-<!-- This file automates printing of text files via notepad to Adobe PDF printer. In order to see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
+<!-- This file automates printing of text files via notepad to Adobe PDF printer. To see the complete hierarchy Adobe recommends using the Microsoft Spy++ which details the properties of windows necessary to write scripts. In this sample there are total of eight steps-->
 
 <application name="Notepad" version="9.0" locale="en_US" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="scripts.xsd">
 

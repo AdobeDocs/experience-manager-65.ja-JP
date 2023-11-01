@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2715'
+source-wordcount: '2713'
 ht-degree: 76%
 
 ---
@@ -196,7 +196,7 @@ Usage:
  export -v|-t <arg>|-p <uri> <jcr-path> <local-path>
 
 Description:
-  Export the Vault filesystem mounted at <uri> to the local filesystem at <local-path>. An optional <jcr-path> can be specified in order to export just a sub tree.
+  Export the Vault filesystem mounted at <uri> to the local filesystem at <local-path>. An optional <jcr-path> can be specified to export just a sub tree.
   Example:
     vlt export http://localhost:4502/crx /apps/geometrixx myproject
 
@@ -333,7 +333,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 
 ### エクスポート {#export}
 
-次の場所にマウントされた Vault ファイルシステムを書き出します。 &lt;uri> をローカルファイルシステム ( ) に追加します。 &lt;local-path>. サブツリーのみをエクスポートするには、オプションの &lt;jcr-path> を指定できます。
+次の場所にマウントされた Vault ファイルシステムを書き出します。 &lt;uri> をローカルファイルシステム ( ) に追加します。 &lt;local-path>. オプション &lt;jcr-path> サブツリーのみを書き出すように指定できます。
 
 #### 構文 {#syntax}
 

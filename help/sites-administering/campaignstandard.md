@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 98%
+source-wordcount: '1831'
+ht-degree: 97%
 
 ---
 
@@ -217,7 +217,7 @@ AEM が Adobe Campaign と通信する際に使用する Adobe Campaign のユ�
 
 ## Campaign で AEM 外部アカウントを設定 {#acc-external-user}
 
-[AEM 固有のメール配信テンプレートを作成](#aem-email-delivery-template)した場合、テンプレートが `aemInstance` 外部アカウントを使用して AEM と通信する必要があると指定したことになります。両方のソリューション間で双方向通信を有効にするには、Adobe Campaign でこのアカウントを設定する必要があります。
+[AEM 固有のメール配信テンプレートを作成](#aem-email-delivery-template)した場合、テンプレートが `aemInstance` 外部アカウントを使用して AEM と通信する必要があると指定したことになります。両方のソリューション間で双方向通信を有効にするには、Adobe Campaignでこのアカウントを設定する必要があります。
 
 1. 管理者として Adobe Campaign にログインします。
 

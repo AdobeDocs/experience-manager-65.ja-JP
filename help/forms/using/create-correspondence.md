@@ -10,10 +10,10 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
-workflow-type: ht
-source-wordcount: '3855'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '3853'
+ht-degree: 99%
 
 ---
 
@@ -179,8 +179,6 @@ ht-degree: 100%
 
    * 数値変数フィールドはデフォルトで *0* に設定されます。ただし、この変数は未入力として解釈されます。これは、*0* の値を持つすべての数値変数フィールドが変数カウントに含まれることを意味します。
 
-
-
 #### 通信を作成ユーザーインターフェイスの「コンテンツ」タブで使用できるアクションと情報 {#actions-and-info-available-in-the-create-correspondence-content-tab}
 
 **ターゲット領域**
@@ -293,7 +291,7 @@ ht-degree: 100%
 
 レターを公開する前に、またはパブリッシュインスタンスでドラフトを保存する前に、オーサーインスタンスとパブリッシュインスタンスで次の手順を実行して、「ドラフトとして保存」機能を有効にします。
 
-*cq:lastReplicationAction*、*cq:lastreplicated* および *cq:lastReplicatedBy* プロパティは、デフォルトではパブリッシュインスタンスに引き継がれません。*cq:lastReplicationAction*、*cq:lastreplicated* および *cq:lastReplicatedBy* プロパティをパブリッシュインスタンスに引き継ぐには、[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネントを無効にします。コンポーネントを無効にするには：
+*cq:lastReplicationAction*、*cq:lastreplicated* および *cq:lastReplicatedBy* プロパティは、デフォルトではパブリッシュインスタンスに引き継がれません。繰り越す *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* パブリッシュインスタンスのプロパティを無効にします。 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネント。 コンポーネントを無効にするには：
 
 1. オーサーインスタンスで、 Adobe Experience Manager web コンソールのコンポーネントコンソールを開きます。デフォルトの URL は、`http://author-server:port/system/console/components` です。
 

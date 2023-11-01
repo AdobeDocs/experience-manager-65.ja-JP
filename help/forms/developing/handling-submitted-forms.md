@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2904'
-ht-degree: 100%
+source-wordcount: '2902'
+ht-degree: 99%
 
 ---
 
@@ -176,7 +176,7 @@ Forms サービスに送信された Forms には、添付ファイルが含ま�
 
 >[!NOTE]
 >
->添付ファイルを取得するために、フォームは PDF データとして送信される必要があります。フォームが XML データとして送信された場合、添付ファイルは送信されません。
+>添付ファイルを取得するには、フォームがPDFデータとして送信される必要があります。 フォームが XML データとして送信された場合、添付ファイルは送信されません。
 
 **送信されたデータの処理**
 
@@ -223,11 +223,9 @@ Forms API（Java）を使用して、送信されたフォームを処理しま�
       * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。このパラメーター値はオプションです。
       * 実行時オプションを保存する `RenderOptionsSpec` オブジェクト。
 
-      `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
+     `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
    * `FormsResult` オブジェクトの `getAction` メソッドを呼び出して、Forms サービスがフォームデータの処理を完了したかどうかを判断します。このメソッドが値 `0` を返した場合、データを処理する準備が整っています。
-
-
 
 1. フォーム送信に添付ファイルが含まれているかどうかを確認します
 
@@ -248,12 +246,12 @@ Forms API（Java）を使用して、送信されたフォームを処理しま�
       * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
       * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
       * XML ドキュメント内の各ノードの値を取得します。このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
+
    * データコンテンツタイプが `application/pdf` の場合、アプリケーションロジックを作成して、送信された PDF データを PDF ファイルとして保存します。
 
       * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `com.adobe.idp.Document` オブジェクトを作成します。
       * パブリックコンストラクターを使用して `java.io.File` オブジェクトを作成します。ファイル名の拡張子には必ず PDF を指定してください。
       * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して `java.io.File` オブジェクトを渡すことによって、PDFファイルに入力します。
-
 
 **関連トピック**
 
@@ -303,10 +301,9 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
       * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
       * 送信されるフォームを使用してメソッドによって設定される空の `FormsResultHolder` オブジェクト。
 
-      `processFormSubmission` メソッドによって `FormsResultHolder` パラメーターにフォーム送信の結果が入力されます。
+     `processFormSubmission` メソッドによって `FormsResultHolder` パラメーターにフォーム送信の結果が入力されます。
 
    * `FormsResult` オブジェクトの `getAction` メソッドを呼び出して、Forms サービスがフォームデータの処理を完了したかどうかを判断します。このメソッドが値 `0` を返す場合、フォームデータを処理する準備が整っています。`FormsResultHolder` オブジェクトの `value` データメンバーの値を取得することで、`FormsResult` オブジェクトを取得できます。
-
 
 1. フォーム送信に添付ファイルが含まれているかどうかを確認します
 
@@ -323,6 +320,7 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
       * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
       * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
       * XML ドキュメント内の各ノードの値を取得します。このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
+
    * データコンテンツタイプが `application/pdf` の場合、アプリケーションロジックを作成して、送信された PDF データを PDF ファイルとして保存します。
 
       *  `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `BLOB` オブジェクトを作成します。
@@ -330,7 +328,6 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
       * コンストラクターを使用して `java.io.File` オブジェクトを作成します。ファイル名の拡張子には必ず PDF を指定してください。
       * コンストラクターを使用して `java.io.FileOutputStream` オブジェクトを渡すことによって、`java.io.File` オブジェクトを作成します。
       * `java.io.FileOutputStream` オブジェクトの `write` メソッドを呼び出してバイト配列を渡すことによって、PDF ファイルを生成します。
-
 
 **関連トピック**
 

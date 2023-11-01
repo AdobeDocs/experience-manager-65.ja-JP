@@ -7,10 +7,10 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '1341'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '1339'
+ht-degree: 99%
 
 ---
 
@@ -101,7 +101,7 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 
 アップグレードの前に、Lucene インデックスをオフラインで作成します。MongoMK を使用する場合、MongoMk ノードの 1 つで直接実行することをお勧めします。これにより、ネットワークのオーバーヘッドが回避されます。
 
-インデックスをオフラインで作成するには、以下の手順に従います。
+インデックスをオフラインで作成するには、次の手順に従います。
 
 **1. ターゲット AEM バージョンの Oak Lucene インデックス定義を生成します。**
 

@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 100%
@@ -196,7 +196,7 @@ ContextHub の永続性を削除するには、以下を実行します。
 * 現在読み込まれているストアの永続性を削除するには、以下を実行します。
 
   ```
-  // in order to be able to fully access persistence layer, Opt-Out must be turned off
+  // to be able to fully access persistence layer, Opt-Out must be turned off
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   
   // following call asks all currently loaded stores to clear their data

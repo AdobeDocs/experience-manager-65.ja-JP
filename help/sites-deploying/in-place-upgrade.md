@@ -4,10 +4,10 @@ description: AEM 6.5 のインプレースアップグレードの実行方法�
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 47%
+source-wordcount: '1242'
+ht-degree: 43%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 47%
 
 AEM 6.3 からアップグレードする場合は、この移行は必要ありません。6.3 より前のAdobeでは、AEM 6.3 に存在する Oak Segment Tar の新しいバージョンにリポジトリを移行するために使用できるツールが提供されています。これはクイックスタートパッケージの一部として提供され、TarMK を使用するアップグレードに必須です。 MongoMK を使用している環境のアップグレードには、リポジトリの移行は必要ありません。 新しい Segment Tar 形式の利点について詳しくは、 [Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions).
 
-実際の移行は、標準の AEM クイックスタート jar ファイルを使用して行います。この jar ファイルは、新しい `-x crx2oak` オプションを指定して実行します。このオプションにより crx2oak ツールが実行され、アップグレードが容易になり、より堅牢になります。
+実際の移行は、標準のAEM quickstart jar ファイルを使用して実行され、新しい `-x crx2oak` オプション：crx2oak ツールを実行してアップグレードを簡略化し、より堅牢にします。
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ AEM 6.3 インストールでは新しく `FileDataStore` がデフォルトに�
 
 **外部データストアが指定されていないので、チェックポイントはコピーされません。 これにより、最初の起動時にリポジトリ全体のインデックスが再作成されます。 —skip-checkpoints を使用して強制的に移行します。詳しくは、https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migrationを参照してください。**
 
-何らかの理由で、移行プロセスはデータストア内のバイナリにアクセスする必要があり、見つかりません。 データストア設定を指定するには、移行コマンドの `<<ADDITIONAL_FLAGS>>` 部分に以下のフラグを挿入します。
+何らかの理由で、移行プロセスはデータストア内のバイナリにアクセスする必要があり、見つかりません。 データストアの設定を指定するには、次のフラグを `<<ADDITIONAL_FLAGS>>` 移行コマンドの一部：
 
 **S3 データストアの場合：**
 

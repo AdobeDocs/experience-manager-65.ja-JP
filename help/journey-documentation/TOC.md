@@ -2,13 +2,13 @@
 sub-product: AEM Documentation Journeys
 user-guide-title: AEM ドキュメントのジャーニー
 breadcrumb-title: AEM ドキュメントのジャーニー
-user-guide-description: ドキュメントジャーニーは、複雑で異なる機能を組み合わせ、ベストプラクティス方式でビジネス目標を解決することで、AEM ドキュメント内のナレーション構造を提供します。AEM の初心者を念頭に置いて設計されたジャーニーでは、A から Z の目標を達成するための概念と機能を紹介しています。
+user-guide-description: ドキュメントジャーニーは、複雑で異なる機能を組み合わせ、ベストプラクティス方式でビジネス目標を解決することで、AEMドキュメント内のナレーション構造を提供します。 AEM の初心者を念頭に置いて設計されたジャーニーでは、A から Z の目標を達成するための概念と機能を紹介しています。
 feature: Developer Tools
 role: Developer, Architect
-source-git-commit: 0b8b517607f305ad82caf6ba766cad5a46021439
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 100%
+source-wordcount: '527'
+ht-degree: 95%
 
 ---
 

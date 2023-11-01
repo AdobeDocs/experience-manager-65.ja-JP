@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1489'
 ht-degree: 22%
 
 ---
@@ -21,7 +21,7 @@ AEM forms の使用方法を特定したら、バックアップする必要の�
 
 >[!NOTE]
 >
->AEM Forms の実装の他の側面と同様に、バックアップと回復戦略は、実稼動環境で使用する前に、開発環境またはステージング環境で開発およびテストして、データを失うことなく、ソリューション全体が期待どおりに動作することを確認する必要があります。
+>AEM Forms の実装の他の側面と同様に、バックアップと回復戦略は、実稼動環境で使用する前に、開発環境またはステージング環境で開発およびテストして、データを失うことなく、ソリューション全体が期待どおりに動作するようにする必要があります。
 
 Adobe Experience Manager(AEM) は、AEM forms の不可欠な構成要素です。 AEM Manager は、AEM Forms のAEM部分に格納されたデータに基づいて、AEM Forms のバックアップと同期する必要があります。データの損失を防ぐには、GDS とAEM (repository) をデータベース参照と関連付けるように、AEM Forms 固有のデータをバックアップする必要があります。元のコンピュータと同じ DNS 名のコンピュータに復元されました。
 
@@ -78,7 +78,7 @@ AEM forms のバックアップ方法には、次の 2 種類のバックアッ�
 1. メンテナンスモードでシステムを起動します。
 1. 次の操作を実行して、Form Manager がメンテナンスモードでAEM forms と同期されるようにします。
 
-   1. https://&lt;*サーバー*>:&lt;*ポート*>/lc/fm にアクセスし、管理者／パスワードの認証情報を使用してログインします。
+   1. https://&lt;*サーバー*>:&lt;*ポート*>/lc/fm にアクセスし、管理者／パスワードの資格情報を使用してログインします。
    1. 右上隅にあるユーザーの名前（この場合は「Super Administrator」）をクリックします。
    1. クリック **管理オプション**.
    1. クリック **開始** をクリックして、リポジトリーからアセットを同期します。

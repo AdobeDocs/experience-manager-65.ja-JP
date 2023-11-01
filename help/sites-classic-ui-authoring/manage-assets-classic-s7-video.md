@@ -7,10 +7,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: 59e182c165f6fd4b822eaf0e34f6e4b3bb18eb14
-workflow-type: ht
-source-wordcount: '1682'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '1678'
+ht-degree: 97%
 
 ---
 
@@ -117,6 +117,7 @@ Dynamic Media Classic ビデオコンポーネントは、Dynamic Media Classic 
 >[!NOTE]
 >
 >デフォルトでは、 Dynamic Media Classic ビデオコンポーネントはユニバーサルビデオプロファイルを使用します。ただし、Experience Manager で使用する HTML5 ベースのビデオプレーヤーを入手することはできます。  Dynamic Media Classic で、デフォルトの HTML5 ビデオプレーヤーの埋め込みコードをコピーして、Experience Manager ページに貼り付けます。
+>
 
 ## Experience Manager ビデオコンポーネント {#aem-video-component}
 
@@ -126,7 +127,7 @@ Dynamic Media Classic ビデオの閲覧には Dynamic Media Classic ビデオ�
 
 次の表は、Experience Manager の基盤ビデオコンポーネントと Dynamic Media Classic ビデオコンポーネントの間でサポートされる機能を比較したものです。
 
-|  | Experience Manager の基盤ビデオ | Dynamic Media Classic ビデオ |
+|   | Experience Manager の基盤ビデオ | Dynamic Media Classic ビデオ |
 |---|---|---|
 | アプローチ | HTML5 の第 1 のアプローチ。Flash は非 HTML5 のフォールバックにのみ使用されます。 | ほとんどのデスクトップでの Flash。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
@@ -165,7 +166,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 
 #### デザインを設定 {#configuring-design}
 
-ビデオのソースリストを作成するには、どのビデオプロファイルを使用するのか、基盤ビデオコンポーネントが認識している必要があります。ビデオコンポーネントのデザインダイアログを開いて、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定してください。
+基盤ビデオコンポーネントは、ビデオソースリストの作成に使用するビデオプロファイルについて把握している必要があります。 ビデオコンポーネントデザインダイアログを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定します。
 
 >[!NOTE]
 >
@@ -173,7 +174,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 
 >[!NOTE]
 >
->デザインを変更するには、デザインのアクティベーションをおこなって、公開時に変更を有効にする必要があります。
+>デザインを変更した場合、公開時にデザインをアクティベートする必要があります。
 
 1. 基盤ビデオコンポーネントのデザインダイアログを開き、「**[!UICONTROL プロファイル]**」タブに変更します。その後、標準のプロファイルを削除し、Dynamic Media Classic ビデオの新しいプロファイルを追加します。デザインダイアログのプロファイルリストの順序で、レンダリング時のビデオソース要素の順序も定義します。
 1. HTML5 をサポートしていないブラウザーの場合は、ビデオコンポーネントで Flash フォールバックを設定できます。ビデオコンポーネントのデザインダイアログボックスを開き、「**[!UICONTROL Flash]**」タブに変更します。Flash Player 設定を指定して、Flash Player のフォールバックプロファイルを割り当てます。

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
 feature: Operations
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 51%
+source-wordcount: '602'
+ht-degree: 47%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 51%
    >コンテンツパスは、リポジトリの `/var/audit/com.day.cq.wcm.core.page` ノードの子にのみ適用されます。
 
 1. ルールを保存します。
-1. 作成したルールを実行するには、操作ダッシュボードに公開する必要があります。 そのためには、AEM のようこそ画面から&#x200B;**ツール／操作／メンテナンス**&#x200B;に移動します。
+1. 作成したルールを実行するには、操作ダッシュボードに公開する必要があります。 これをおこなうには、次に進みます。 **ツール/運営/メンテナンス** をAEMのようこそ画面から開きます。
 
 1. **週別メンテナンスウィンドウ**&#x200B;カードをクリックします。
 

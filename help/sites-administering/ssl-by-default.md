@@ -11,10 +11,10 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 95%
+source-wordcount: '853'
+ht-degree: 90%
 
 ---
 
@@ -202,7 +202,7 @@ cURL ツールを使用して SSL/TLS 設定を自動化することもできま
 
 *https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
-以下は、設定ウィザードの様々な設定を変更するために使用できるパラメーターです。
+設定ウィザードで様々な設定を変更する際に使用できるパラメーターを次に示します。
 
 * `-F "keystorePassword=password"` - キーストアのパスワード。
 
@@ -223,7 +223,7 @@ cURL ツールを使用して SSL/TLS 設定を自動化することもできま
 >
 >SSL/TLS 設定を自動化するための cURL は、DER および CRT ファイルが存在するフォルダーから実行すると最も速く実行されます。または、`privatekeyFile` および certificateFile 引数でフルパスを指定できます。
 >
->また、更新の実行には認証が必要なため、cURL コマンドに `-u user:passeword` パラメーターを付加します。
+>また、更新を実行するには認証が必要なので、cURL コマンドを `-u user:passeword` パラメーター。
 >
 >正しい cURL POST コマンドは、次のようになります。
 

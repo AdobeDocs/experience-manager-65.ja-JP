@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2069'
 ht-degree: 95%
 
 ---
@@ -262,7 +262,7 @@ AEM Assets のコレクションが共有されている場合も共有されて
 
 ## OAuth の設定 {#setting-up-oauth}
 
-AEM は、組織が安全なメール要件に準拠できるように、Oauth2 の統合メーラーサービスをサポートしています。
+AEMは、組織が安全な電子メール要件に準拠できるように、OAuth2 を統合メーラーサービスに対してサポートしています。
 
 以下に示すように、複数のメールプロバイダーに対して OAuth を設定できます。
 

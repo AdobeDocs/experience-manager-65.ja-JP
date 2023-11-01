@@ -3,10 +3,10 @@ title: 外部ユーザー招待ハンドラーの作成
 description: 外部ユーザー招待ハンドラーを作成する方法を説明します。 これにより、Rights Managementサービスは外部ユーザーを招待してRights Managementユーザーにできます。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 96%
+source-wordcount: '1133'
+ht-degree: 94%
 
 ---
 
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 承認ハンドラー用のコンポーネント XML ファイルの定義 {#define-component-xml-authorization-handler}
 
-外部ユーザー招待ハンドラーコンポーネントをデプロイするには、コンポーネント XML ファイルを定義する必要があります。コンポーネントの XML ファイルは、コンポーネントごとに存在し、コンポーネントに関するメタデータを提供します。
+外部ユーザー招待ハンドラーコンポーネントをデプロイするには、コンポーネント XML ファイルを定義する必要があります。 コンポーネントの XML ファイルは、コンポーネントごとに存在し、コンポーネントに関するメタデータを提供します。
 
 以下の `component.xml` ファイルは、外部ユーザー招待ハンドラーに使用されます。サービス名は `InviteExternalUsersSample` でこのサービスが公開する操作の名前は `invitedUser` です。入力パラメーターは `java.util.List` インスタンスで、出力値は `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` インスタンスの配列です。
 

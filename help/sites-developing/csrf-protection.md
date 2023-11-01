@@ -1,7 +1,7 @@
 ---
 title: CSRF 対策フレームワーク
 seo-title: The CSRF Protection Framework
-description: このフレームワークでは、トークンを利用して、クライアントの要求が正当なものであることを保証します
+description: このフレームワークでは、トークンを使用して、クライアントの要求が正当なものであることを保証します
 seo-description: The framework makes use of tokens to guarantee that the client request is legitimate
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
@@ -10,22 +10,22 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
-workflow-type: ht
-source-wordcount: '260'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 38%
 
 ---
 
 # CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
-アドビでは、Apache Sling Referrer Filter 以外にも、この種の攻撃を防ぐための新しい CSRF 対策フレームワークを用意しています。
+Apache Sling Referrer Filter に加えて、Adobeは、この種の攻撃から保護する新しい CSRF 保護フレームワークも提供します。
 
-このフレームワークでは、トークンを利用して、クライアントの要求が正当なものであることを保証します。トークンは、フォームがクライアントに送信されるときに生成され、フォームがサーバーに返されるときに検証されます。
+このフレームワークでは、トークンを使用して、クライアントの要求が正当なものであることを保証します。 トークンは、フォームがクライアントに送信されるときに生成され、フォームがサーバーに送り返されるときに検証されます。
 
 >[!NOTE]
 >
->パブリッシュインスタンスでは、匿名ユーザーのトークンはありません。
+>匿名ユーザーのパブリッシュインスタンスにはトークンがありません。
 
 ## 要件 {#requirements}
 
@@ -35,14 +35,14 @@ ht-degree: 100%
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-トークンを利用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケーションする必要があります。詳しくは、[HMAC キーのレプリケーション](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key)を参照してください。
+トークンを利用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケートする必要があります。 詳しくは、[HMAC キーのレプリケーション](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key)を参照してください。
 
 >[!NOTE]
 >
->CSRF 対策フレームワークを使用するには、必要な[ディスパッチャー設定の変更](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html)を行ってください。
+>必ず必要な [Dispatcher 設定の変更](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html) CSRF 保護フレームワークを使用する場合。
 
 >[!NOTE]
 >
->Web アプリケーションでマニフェストキャッシュを使用する場合、トークンがオフラインで CSRF トークンの生成を呼び出さないように、「**&amp;ast;**」をマニフェストに追加してください。詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
+>Web アプリケーションでマニフェストキャッシュを使用する場合は、必ず「**&amp;ast;**」をマニフェストに追加して、トークンが CSRF トークン生成呼び出しをオフラインで受け取らないようにします。 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
 >
 >CSRF 攻撃とその対策について詳しくは、[クロスサイトリクエストフォージェリに関する OWASP のページ](https://owasp.org/www-community/attacks/csrf)を参照してください。

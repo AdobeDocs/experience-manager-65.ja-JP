@@ -8,10 +8,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 95%
+source-wordcount: '1222'
+ht-degree: 93%
 
 ---
 
@@ -105,9 +105,9 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
    >[!CAUTION]
    >
-   >**エレメント名**&#x200B;は、フォームフィールドごとに異なっている必要があります。必要に応じて変更してください。
+   >**要素名**&#x200B;は、フォームフィールドごとに異なっている必要があります。必要に応じて変更してください。
    >
-   >Adobe Campaign データベース内で受信者を正しく管理するために、フォームごとに 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;コンポーネントを含める必要があります。
+   >各フォームには、 **暗号化されたプライマリキー** Adobe Campaignデータベースで受信者を正しく管理するためのコンポーネント。
 
 1. ツールボックスで&#x200B;**ページ**／**ページをアクティベート**&#x200B;を選択して、ページをアクティベートします。ページがサイト上でアクティベートされます。AEM パブリケーションインスタンスに移動すると、ページを表示できます。フォームの検証が完了すると、Adobe Campaign データベース内のデータが更新されます。
 

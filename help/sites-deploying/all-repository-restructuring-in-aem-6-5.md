@@ -1,19 +1,15 @@
 ---
 title: AEM 6.5 における共通リポジトリの再構築
-seo-title: Common Repository Restructuring in AEM 6.5
-description: AEM のすべての領域に共通な、AEM 6.5 の新しいリポジトリ構造への移行に必要な変更を加える方法について学びます。
-seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 that are common for all areas of AEM.
-uuid: a4bb64e5-387b-4084-9258-54e68db12f3b
+description: AEMのすべての領域で共通のAEM 6.5 の新しいリポジトリ構造に移行するために必要な変更を行う方法を説明します。
 contentOwner: chaikels
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
-discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2691'
-ht-degree: 58%
+source-wordcount: '2689'
+ht-degree: 57%
 
 ---
 
@@ -227,7 +223,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
      <li>新規または変更された ContextHub 設定を以前の場所から新しい場所にコピーします。</li>
      <li>該当するAEM設定をAEMコンテンツ階層に関連付けます。
       <ol>
-       <li><strong>「AEM Sites」の「AEM Sites/ページ/ページのプロパティ/「詳細」タブ/クラウド設定を使用したページ階層</strong>.</li>
+       <li><strong>「AEM Sites」の「AEM Sites/ページ/ページのプロパティ/「詳細」タブ/「クラウド設定」を使用したページ階層</strong>.</li>
       </ol> </li>
      <li>移行済みの従来の ContextHub 設定を、前述のAEMコンテンツ階層からすべて関連付け解除します。</li>
     </ol> </td>
@@ -581,7 +577,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><p>Day Communique Tagging OSGi バンドルを再起動すると、以前の場所が空の場合にのみ、新しい場所がタグルートとして登録されます。</p> <p>以前の場所への参照は、タグの解決にAEM TagManager API を利用するすべての機能について、新しい場所に移行した後も引き続き機能します。</p> <p>パス <code>/etc/tags</code> を明示的に参照するカスタムコードは、<span class="code">/content/ に更新する必要があります。
+   <td><p>Day Communique Tagging OSGi バンドルを再起動すると、以前の場所が空の場合にのみ、新しい場所がタグルートとして登録されます。</p> <p>以前の場所への参照は、タグの解決にAEM TagManager API を利用するすべての機能について、新しい場所に移行した後も、引き続き機能します。</p> <p>パス <code>/etc/tags</code> を明示的に参照するカスタムコードは、<span class="code">/content/ に更新する必要があります。
       <code>
        cq
       </code>
@@ -610,14 +606,14 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol>
      <li>以前の場所の既存の設定を新しい場所に移行します。
       <ul>
-       <li>AEMオーサリング UI( ) で新しい翻訳Cloud Services設定を手動で再作成します。 <strong>ツール/Cloud Services/翻訳Cloud Services</strong>.<br /> または </li>
+       <li>AEMオーサリング UI( ) で新しい翻訳Cloud Service設定を手動で再作成します。 <strong>ツール/Cloud Service/翻訳Cloud Service</strong>.<br /> または </li>
        <li>新規の翻訳クラウドサービス設定を、以前の場所から新しい場所（<code>/apps</code>、<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）にコピーします。</li>
       </ul> </li>
      <li>該当するAEM設定をAEMコンテンツ階層に関連付けます。
       <ol>
        <li>AEM Sites経由のページ階層 <strong>AEM Sites /ページ/ページのプロパティ/「詳細」タブ/クラウド設定</strong>.</li>
-       <li>を使用したエクスペリエンスフラグメント階層のAEM <strong>AEMエクスペリエンスフラグメント/エクスペリエンスフラグメント/プロパティ/Cloud Servicesタブ/クラウド設定</strong>.</li>
-       <li>を使用したエクスペリエンスフラグメントフォルダー階層のAEM <strong>AEMエクスペリエンスフラグメント/フォルダー/プロパティ/「Cloud Services」タブ/クラウド設定</strong>.<br /> </li>
+       <li>を使用したエクスペリエンスフラグメント階層のAEM <strong>AEMエクスペリエンスフラグメント/エクスペリエンスフラグメント/プロパティ/Cloud Serviceタブ/クラウド設定</strong>.</li>
+       <li>を使用したエクスペリエンスフラグメントフォルダー階層のAEM <strong>AEMエクスペリエンスフラグメント/フォルダー/プロパティ/「Cloud Service」タブ/クラウド設定</strong>.<br /> </li>
        <li><strong>AEM Assets／フォルダー／フォルダーのプロパティ／クラウドサービスタブ／設定</strong>を使用した AEM Assets フォルダー階層。</li>
        <li><strong>AEM プロジェクト／プロジェクト／プロジェクトのプロパティ／詳細タブ／クラウド設定</strong>を使用した AEM プロジェクト。</li>
       </ol> </li>
@@ -632,7 +628,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
      <li><code>/conf/global/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/apps/settings/cloudconfigs/translations/translationcfg</code></li>
      <li><code>/libs/settings/cloudconfigs/translations/translationcfg</code></li>
-    </ol> <p>移行された翻訳Cloud Servicesは、AEM 6.4 と互換性がある必要があります。</p> </td>
+    </ol> <p>移行された翻訳Cloud Serviceは、AEM 6.4 と互換性がある必要があります。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -768,14 +764,14 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol>
      <li>以前の場所の既存の設定を新しい場所に移行します。
       <ul>
-       <li>新しいベンダー翻訳コネクタCloud Servicesを <strong>ツール/Cloud Services/翻訳Cloud ServicesのAEMオーサリング UI</strong>.<br /> または </li>
+       <li>新しいベンダー翻訳コネクタCloud Serviceを <strong>ツール/Cloud Service/翻訳Cloud ServiceのAEMオーサリング UI</strong>.<br /> または </li>
        <li>新規のベンダー翻訳コネクターのクラウドサービス設定を、以前の場所から新しい場所（<code>/apps</code>、<code>/conf/global </code> または <code>/conf/&lt;tenant&gt;</code>）にコピーします。</li>
       </ul> </li>
      <li>該当するAEM設定をAEMコンテンツ階層に関連付けます。
       <ol>
        <li>AEM Sites経由のページ階層 <strong>AEM Sites /ページ/ページのプロパティ/「詳細」タブ/クラウド設定</strong>.</li>
-       <li>を使用したエクスペリエンスフラグメント階層のAEM <strong>AEMエクスペリエンスフラグメント/エクスペリエンスフラグメント/プロパティ/Cloud Servicesタブ/クラウド設定</strong>.</li>
-       <li>を使用したエクスペリエンスフラグメントフォルダー階層のAEM <strong>AEMエクスペリエンスフラグメント/フォルダー/プロパティ/「Cloud Services」タブ/クラウド設定</strong>.</li>
+       <li>を使用したエクスペリエンスフラグメント階層のAEM <strong>AEMエクスペリエンスフラグメント/エクスペリエンスフラグメント/プロパティ/Cloud Serviceタブ/クラウド設定</strong>.</li>
+       <li>を使用したエクスペリエンスフラグメントフォルダー階層のAEM <strong>AEMエクスペリエンスフラグメント/フォルダー/プロパティ/「Cloud Service」タブ/クラウド設定</strong>.</li>
        <li><strong>AEM Assets／フォルダー／フォルダーのプロパティ／クラウドサービスタブ／設定</strong>を使用した AEM Assets フォルダー階層。</li>
        <li><strong>AEM プロジェクト／プロジェクト／プロジェクトのプロパティ／詳細タブ／クラウド設定</strong>を使用した AEM プロジェクト。</li>
       </ol> </li>
@@ -850,7 +846,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><p>クラシック UI の Miscadmin コンソールで作成されたワークフローパッケージは以前の場所に保持され、その他のすべては新しい場所に保持されます。</p> <p>以前の場所または最新の場所に保存されているワークフローパッケージは、クラシック UI の Miscadmin コンソールで管理できます。</p> </td>
+   <td><p>クラシック UI の Miscadmin コンソールで作成されたワークフローパッケージは以前の場所に保持され、その他のすべてのパッケージは新しい場所に保持されます。</p> <p>以前の場所または最新の場所に保存されているワークフローパッケージは、クラシック UI の Miscadmin コンソールで管理できます。</p> </td>
   </tr>
  </tbody>
 </table>

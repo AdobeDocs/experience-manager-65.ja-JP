@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '7669'
-ht-degree: 99%
+source-wordcount: '7667'
+ht-degree: 98%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 99%
 
 企業のイントラネット内で動作する JEE 上の AEM Forms のセキュリティを強化するための、様々なセキュリティ強化設定について学びます。
 
-この記事では、JEE 上の AEM Forms を実行するサーバーを保護するための推奨事項とベストプラクティスについて説明します。ここでは、オペレーティングシステムとアプリケーションサーバーのホストの堅牢化について包括的な説明はしません。企業のイントラネット内で運用している JEE 上の AEM Forms のセキュリティを強化するために行うことが望ましい、様々なセキュリティ堅牢化設定について説明します。なお、JEE 上の AEM Forms アプリケーションサーバーのセキュリティを確実に保つには、これだけでなく、セキュリティの監視、検出および応答の方策を実装することも必要です。
+この記事では、JEE 上の AEM Forms を実行するサーバーを保護するためのレコメンデーションとベストプラクティスについて説明します。ここでは、オペレーティングシステムとアプリケーションサーバーのホストの堅牢化について包括的な説明はしません。企業のイントラネット内で運用している JEE 上の AEM Forms のセキュリティを強化するために行うことが望ましい、様々なセキュリティ堅牢化設定について説明します。なお、JEE 上の AEM Forms アプリケーションサーバーのセキュリティを確実に保つには、これだけでなく、セキュリティの監視、検出および応答の方策を実装することも必要です。
 
 この記事では、インストールと設定の作業において、次の各段階で適用する堅牢化手法について説明します。
 
@@ -29,11 +29,11 @@ ht-degree: 99%
 * **インストール時：**&#x200B;この手法は、JEE 上の AEM Forms ソフトウェアをインストールする作業の一環として実行します。
 * **インストール後：**&#x200B;この手法は、インストール終了後と、それ以降の定期的な管理作業として実行します。
 
-JEE 上の AEM Forms は詳細なカスタマイズが可能で、様々な環境で動作します。推奨事項には、一部の組織のニーズに合わないものも含まれている可能性があります。
+JEE 上の AEM Forms は詳細なカスタマイズが可能で、様々な環境で動作します。レコメンデーションには、一部の組織のニーズに合わないものも含まれている可能性があります。
 
 ## インストール前 {#preinstallation}
 
-JEE 上の AEM Forms をインストールする前には、ネットワーク層とオペレーティングシステムに対してセキュリティソリューションを適用することができます。ここでは、いくつかの問題と、この領域におけるセキュリティの脆弱性を減らすための推奨事項について説明します。
+JEE 上の AEM Forms をインストールする前には、ネットワーク層とオペレーティングシステムに対してセキュリティソリューションを適用することができます。ここでは、いくつかの問題と、この領域におけるセキュリティの脆弱性を減らすためのレコメンデーションについて説明します。
 
 **UNIX および Linux へのインストールと設定**
 
@@ -746,7 +746,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **カスタム WAR ファイルのリファラーフィルタリング**
 
-管理者は、ビジネス要件に合わせて JEE 上の AEM Forms を操作するためのカスタム WAR ファイルを用意している場合があります。カスタム WAR ファイルに対してリファラーフィルタリングを有効にするには、***adobe-usermanager-client.jar***&#x200B;を WAR のクラスパスに追加し、次のパラメーターを含むフィルターエントリを* web.xml* ファイルに追加してください。
+JEE 上のAEM Formsと連携してビジネス要件を満たすためにカスタム WAR ファイルを作成している場合もあります。 カスタム WAR ファイルに対してリファラーフィルタリングを有効にするには、***adobe-usermanager-client.jar***&#x200B;を WAR のクラスパスに追加し、次のパラメーターを含むフィルターエントリを* web.xml* ファイルに追加してください。
 
 **CSRF_CHECK_GETS** は、GET 要求でリファラーチェックを制御します。このパラメーターが定義されていない場合、デフォルト値は false に設定されます。このパラメーターは、GET リクエストをフィルタリングする場合にのみ指定します。
 
@@ -808,7 +808,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 ## 保護されたネットワーク設定 {#secure-network-configuration}
 
-ここでは、JEE 上の AEM Forms が必要とするプロトコルとポートについて説明し、保護されたネットワーク設定で JEE 上の AEM Forms をデプロイするための推奨事項を示します。
+ここでは、JEE 上の AEM Forms が必要とするプロトコルとポートについて説明し、保護されたネットワーク設定で JEE 上の AEM Forms をデプロイするためのレコメンデーションを示します。
 
 ### JEE 上の AEM Forms で使用されるネットワークプロトコル {#network-protocols-used-by-aem-forms-on-jee}
 
@@ -986,9 +986,9 @@ WebSphere または WebLogic で SSL リダイレクトを設定するには、�
 
    standalone.xml ファイルを保存して閉じます。
 
-## Windows 固有のセキュリティに関する推奨事項 {#windows-specific-security-recommendations}
+## Windows 固有のセキュリティに関するレコメンデーション {#windows-specific-security-recommendations}
 
-ここでは、AEM Forms on JEE の実行に使用する場合の Windows 固有のセキュリティ推奨事項について説明します。
+ここでは、AEM Forms on JEE の実行に使用する場合の Windows 固有のセキュリティレコメンデーションについて説明します。
 
 ### JBoss サービスアカウント {#jboss-service-accounts}
 
@@ -1044,9 +1044,9 @@ AEM Forms on JEE でのファイルシステムの使用方法は次のとおり
 
 Forms サーバーサービスでドキュメントを送受信する方法として監視フォルダーを使用する場合は、ファイルシステムセキュリティの一層の予防措置を講じる必要があります。ユーザーが監視フォルダーにコンテンツをドロップした場合、そのコンテンツは監視フォルダーを通じて公開されます。この場合、サービスは実際のエンドユーザーの認証を行いません。代わりに、フォルダーレベルで設定される ACL と共有レベルセキュリティに基づいて、サービスを実質的に呼び出すことができるユーザーを決定します。
 
-## JBoss 固有のセキュリティに関する推奨事項 {#jboss-specific-security-recommendations}
+## JBoss 固有のセキュリティに関するレコメンデーション {#jboss-specific-security-recommendations}
 
-ここでは、JEE 上の AEM Forms を実行する際に使用される JBoss 7.0.6 に特有のアプリケーションサーバー設定の推奨事項について説明します。
+ここでは、JEE 上の AEM Forms を実行する際に使用される JBoss 7.0.6 に特有のアプリケーションサーバー設定のレコメンデーションについて説明します。
 
 ### JBoss 管理コンソールおよび JMX コンソールの無効化 {#disable-jboss-management-console-and-jmx-console}
 
@@ -1061,9 +1061,9 @@ https://<servername>:8080/adminui/secured/
 https://<servername>:8080/um/
 ```
 
-## WebLogic 固有のセキュリティに関する推奨事項 {#weblogic-specific-security-recommendations}
+## WebLogic 固有のセキュリティに関するレコメンデーション {#weblogic-specific-security-recommendations}
 
-ここでは、AEM Forms on JEE の実行時に WebLogic 9.1 を保護するためのアプリケーションサーバー設定の推奨事項について説明します。
+ここでは、AEM Forms on JEE の実行時に WebLogic 9.1 を保護するためのアプリケーションサーバー設定のレコメンデーションについて説明します。
 
 ### ディレクトリ参照の無効化 {#disable_directory_browsing-1}
 
@@ -1080,9 +1080,9 @@ weblogic.xml ファイルの index-directories プロパティを `false` に設
 
 デフォルトでは、WebLogic はデフォルト SSL リッスンポート 7002 を有効にしません。SSL を設定する前に、WebLogic Server 管理コンソールでこのポートを有効にしてください。
 
-## WebSphere 固有のセキュリティに関する推奨事項 {#websphere-specific-security-recommendations}
+## WebSphere 固有のセキュリティに関するレコメンデーション {#websphere-specific-security-recommendations}
 
-ここでは、AEM Forms on JEE の実行時に WebSphere を保護するためのアプリケーションサーバー設定の推奨事項について説明します。
+ここでは、AEM Forms on JEE の実行時に WebSphere を保護するためのアプリケーションサーバー設定のレコメンデーションについて説明します。
 
 ### ディレクトリ参照の無効化 {#disable_directory_browsing-2}
 

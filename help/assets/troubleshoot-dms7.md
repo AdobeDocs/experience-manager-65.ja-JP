@@ -12,10 +12,10 @@ role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1397'
-ht-degree: 72%
+source-wordcount: '1395'
+ht-degree: 73%
 
 ---
 
@@ -50,7 +50,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 |---|---|---|
 | `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a\|364266`** | ノードが Dynamic Media にリンクされていることを示す全般的インジケーター。 |
 | `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** またはエラーテキスト | Dynamic Media へのアセットアップロードのステータス。 |
-| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Dynamic Mediaのリモートアセットへの URL を生成するには、を設定する必要があります。 |
+| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Dynamic Media のリモートアセットへの URL を生成するには、これを入力する必要があります。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **success** または **failed:`<error text>`** | セット（スピンセット、画像セットなど）、画像プリセット、ビューアプリセット、アセットの画像マップの更新、編集された画像などの同期ステータス。 |
 
 ### 同期のログ {#synchronization-logging}

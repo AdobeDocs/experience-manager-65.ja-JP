@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '3926'
-ht-degree: 100%
+source-wordcount: '3918'
+ht-degree: 97%
 
 ---
 
@@ -38,7 +38,7 @@ Acrobat Reader DC エクステンションサービスを使用して、次の�
 
 ## PDF ドキュメントへの使用権限を適用 {#applying-usage-rights-to-pdf-documents}
 
-Acrobat Reader DC エクステンション Java クライアント API および web サービスを使用すると、PDF ドキュメントに使用権限を適用できます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。使用権限が与えられた PDF ドキュメントは、使用権限を付与されたドキュメントと呼ばれます。使用権限を付与されたドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
+Acrobat Reader DC エクステンション Java クライアント API および web サービスを使用すると、PDF ドキュメントに使用権限を適用できます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。PDFに使用権限が適用されているドキュメントは、「権限付きドキュメント」と呼ばれます。 Adobe Readerで権限を付与されたドキュメントを開いたユーザーは、そのドキュメントに対して有効になっている操作を実行できます。
 
 >[!NOTE]
 >
@@ -69,15 +69,15 @@ Acrobat Reader DC エクステンション Java クライアント API および
 
 **PDF ドキュメントを取得**
 
-使用権限を適用するには、PDF ドキュメントを取得する必要があります。権限が付与された PDF ドキュメントには、使用権限ディクショナリが含まれています。Adobe Reader がそのようなディクショナリを含むドキュメントを開くと、そのドキュメントに対してのみディクショナリで指定された使用権限が有効になります。ドキュメントに使用権限ディクショナリが含まれていない場合、Acrobat Reader DC エクステンションサービスは使用権限ディクショナリを作成します。既にディクショナリが含まれている場合、Acrobat Reader DC エクステンションサービスは、指定した使用権限で既存の使用権限を上書きします。ディクショナリは、有効にする使用権限を指定します。ユーザーが Adobe Reader でドキュメントを開くと、ディクショナリで指定されている使用権限のみが許可されます。
+使用権限を適用するには、PDFドキュメントを取得する必要があります。 権限が付与された PDF ドキュメントには、使用権限ディクショナリが含まれています。Adobe Reader がそのようなディクショナリを含むドキュメントを開くと、そのドキュメントに対してのみディクショナリで指定された使用権限が有効になります。ドキュメントに使用権限ディクショナリが含まれていない場合、Acrobat Reader DC エクステンションサービスは使用権限ディクショナリを作成します。既にディクショナリが含まれている場合、Acrobat Reader DC エクステンションサービスは、指定した使用権限で既存の使用権限を上書きします。ディクショナリは、有効にする使用権限を指定します。ユーザーが Adobe Reader でドキュメントを開くと、ディクショナリで指定されている使用権限のみが許可されます。
 
 **適用する使用権限を指定**
 
-設定できる使用権限は、Adobe Systems Inc で購入した資格によって決まります。通常、資格情報は、インタラクティブフォームに関連する使用権限など、関連する使用権限のグループを設定する権限が付与されます。各資格情報は、一定数の権限が付与された PDF ドキュメントを作成する権限を付与します。評価資格情報を使用すると、無制限の数のドラフトドキュメントを作成する権限が付与されます。
+設定できる使用権限は、Adobe Systems Inc で購入した資格情報によって決まります。通常、資格情報は、インタラクティブフォームに関連する使用権限など、関連する使用権限のグループを設定する権限が付与されます。各資格情報は、一定数の権限が付与された PDF ドキュメントを作成する権限を付与します。評価資格情報を使用すると、無制限の数のドラフトドキュメントを作成する権限が付与されます。
 
 >[!NOTE]
 >
->証明書で許可されていない使用権限を割り当てようとすると、例外が発生します。
+>資格情報で許可されていない使用権限を割り当てようとすると、例外が発生します。
 
 **PDF ドキュメントに使用権限を適用**
 
@@ -128,11 +128,13 @@ Acrobat Reader DC エクステンション API（Java）を使用して、PDF �
 
       * ドキュメントに適用する使用権限を含む `UsageRights` オブジェクト。
       * Adobe Reader 7.x で権限が付与された PDF ドキュメントを開く際にユーザーに表示されるメッセージを指定する文字列値。このメッセージは、Adobe Reader 8.0 では表示されません。
+
    * 使用権限を PDF ドキュメントに適用するには、`ReaderExtensionsServiceClient` オブジェクトの `applyUsageRights` メソッドを呼び出して、次の値を渡してください。
 
       * 使用権限が適用される PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクトです。
-      * 使用権限を適用できる証明書のエイリアスを指定する文字列値です。
+      * 使用権限を適用できる資格情報のエイリアスを指定する文字列値です。
       * 対応するパスワード値を指定する文字列値です。（現在、このパラメーターは無視されます。`null` を渡すことができます。）
+
    * 実行時オプションを含む `ReaderExtensionsOptionSpec` オブジェクトです。
 
    `applyUsageRights` メソッドは、権限が付与された PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト返します。
@@ -198,8 +200,9 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
    * 使用権限を PDF ドキュメントに適用するには、`ReaderExtensionsServiceClient` オブジェクトの `applyUsageRights` メソッドを呼び出して、次の値を渡します。
 
       * 使用権限が適用される PDF ドキュメントを含む `BLOB` オブジェクトです。
-      * 使用権限を適用できる証明書のエイリアスを指定する文字列値です。
+      * 使用権限を適用できる資格情報のエイリアスを指定する文字列値です。
       * 対応するパスワード値を指定する文字列値です。（現在、このパラメーターは無視されます。`null` を渡すことができます。）
+
    * 実行時オプションを含む `ReaderExtensionsOptionSpec` オブジェクトです。
 
    `applyUsageRights` メソッドは、権限が付与された PDF ドキュメントを含む `BLOB` オブジェクト返します。
@@ -221,7 +224,7 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
 
 ## PDF ドキュメントから使用権限を削除 {#removing-usage-rights-from-pdf-documents}
 
-権限を付与されたドキュメントから使用権限を削除できます。ドキュメントに対してその他の AEM Forms の操作を実行するには、権限を付与された PDF ドキュメントから使用権限を削除する必要があります。例えば、PDF ドキュメントに対する電子署名（または認証）は、使用権限を設定する前に実行する必要があります。したがって、権限を付与されたドキュメントに対して操作を行う場合、その PDF ドキュメントから使用権限を削除し、ドキュメントへのデジタル署名など、その他の操作を行った後にドキュメントに対して使用権限を再び適用してください。
+権限を付与されたドキュメントから使用権限を削除できます。使用権限を有効にしたPDFドキュメントから使用権限を削除して、その他のAEM Forms操作を実行する必要もあります。 例えば、PDF ドキュメントに対する電子署名（または認証）は、使用権限を設定する前に実行する必要があります。したがって、権限を付与されたドキュメントに対して操作を行う場合、その PDF ドキュメントから使用権限を削除し、ドキュメントへのデジタル署名など、その他の操作を行った後にドキュメントに対して使用権限を再び適用してください。
 
 >[!NOTE]
 >
@@ -247,7 +250,7 @@ Acrobat Reader DC エクステンションサービスの操作をプログラ�
 
 **権限が付与された PDF ドキュメントを取得**
 
-使用権限を削除するために、権限を付与された PDF ドキュメントを取得します。
+使用権限を削除する権限が有効なPDFドキュメントを取得します。
 
 **使用権限を PDF ドキュメントから削除**
 
@@ -360,7 +363,7 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
 ## 資格情報の取得 {#retrieving-credential-information}
 
-権限付き PDF ドキュメントに使用権限を適用するために使用された資格に関する情報を取得できます。資格に関する情報を取得することで、証明書が無効になった日付などの情報を取得できます。
+権限付き PDF ドキュメントに使用権限を適用するために使用された資格情報に関する情報を取得できます。資格情報に関する情報を取得することで、資格情報が無効になった日付などの情報を取得できます。
 
 >[!NOTE]
 >
@@ -368,12 +371,12 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
 ### 手順の概要 {#summary_of_steps-2}
 
-使用権限を PDF ドキュメントに適用するために使用された資格に関する情報を取得するには、次の手順に従います。
+使用権限を PDF ドキュメントに適用するために使用された資格情報に関する情報を取得するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 1. 権限付き PDF ドキュメントを取得します。
-1. 資格に関する情報を取得します。
+1. 資格情報に関する情報を取得します。
 
 **プロジェクトファイルを含める**
 
@@ -383,19 +386,19 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
 Acrobat Reader DC エクステンションサービスの操作をプログラムで実行する前に、Acrobat Reader DC エクステンションサービスのクライアントオブジェクトを作成する必要があります。Java API を使用している場合は、`ReaderExtensionsServiceClient` オブジェクトを作成してください。Acrobat Reader DC Extensions web サービス API を使用している場合は、`ReaderExtensionsServiceService` オブジェクトを作成してください。
 
-**権限付き PDF ドキュメントを取得**
+**権限が付与された PDF ドキュメントを取得**
 
-資格に関する情報を取得するには、権限付き PDF ドキュメントを取得する必要があります。エイリアスを指定して、資格に関する情報を取得することもできます。ただし、使用権限を特定の権限付き PDF ドキュメントに適用するために使用された資格に関する情報を取得する場合は、ドキュメントを取得する必要があります。
+秘密鍵証明書に関する情報を取得するには、権限が有効なPDFドキュメントを取得する必要があります。 エイリアスを指定して、資格情報に関する情報を取得することもできます。ただし、使用権限を特定の権限付き PDF ドキュメントに適用するために使用された資格情報に関する情報を取得する場合は、ドキュメントを取得する必要があります。
 
-**資格に関する情報の取得**
+**資格情報に関する情報の取得**
 
-権限付き PDF ドキュメントを取得したら、使用権限を適用するために使用された資格に関する情報を取得できます。資格に関する次の情報を取得できます。
+権限付き PDF ドキュメントを取得したら、使用権限を適用するために使用された資格情報に関する情報を取得できます。資格情報に関する次の情報を取得できます。
 
 * 権限を持つ PDF ドキュメントを開く際に、Adobe Reader 内で表示されるメッセージです。
-* 資格が無効になった後の日付です。
-* 資格が無効になる前の日付です。
+* 資格情報が無効になった後の日付です。
+* 資格情報が無効になる前の日付です。
 * この権限を持つ PDF ドキュメントに設定された使用権限です。
-* 秘密鍵証明書が使用された回数。
+* 資格情報が使用された回数。
 
 **関連トピック**
 
@@ -409,9 +412,9 @@ Acrobat Reader DC エクステンションサービスの操作をプログラ�
 
 [Acrobat Reader DC Extensions サービス API クイックスタート](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-service-java-api-quick-start-soap)
 
-### Java API を使用した秘密鍵証明書情報の取得 {#retrieve-credential-information-using-the-java-api}
+### Java API を使用した資格情報情報の取得 {#retrieve-credential-information-using-the-java-api}
 
-Acrobat Reader DC Extensions API（Java）を使用して、秘密鍵証明書情報を取得します。
+Acrobat Reader DC Extensions API（Java）を使用して、資格情報情報を取得します。
 
 1. プロジェクトファイルを含めます。
 
@@ -428,23 +431,23 @@ Acrobat Reader DC Extensions API（Java）を使用して、秘密鍵証明書�
 
 1. 使用権限を PDF ドキュメントから削除します。
 
-   * `ReaderExtensionsServiceClient` オブジェクトの `getDocumentUsageRights` メソッドを呼び出し、使用権限を付与された PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡すことによって、PDF ドキュメントに使用権限を適用するために使用される、秘密鍵証明書に関する情報を取得します。このメソッドは、秘密鍵証明書情報を含む `GetUsageRightsResult` オブジェクトを返します。
-   * `GetUsageRightsResult` オブジェクトの `getNotAfter` メソッドを呼び出して、秘密鍵証明書が有効でなくなった日付を取得します。このメソッドは、 `java.util.Date` 秘密鍵証明書が有効でなくなる日付を表すオブジェクトを返します。
+   * `ReaderExtensionsServiceClient` オブジェクトの `getDocumentUsageRights` メソッドを呼び出し、使用権限を付与された PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクトを渡すことによって、PDF ドキュメントに使用権限を適用するために使用される、資格情報に関する情報を取得します。このメソッドは、資格情報情報を含む `GetUsageRightsResult` オブジェクトを返します。
+   * `GetUsageRightsResult` オブジェクトの `getNotAfter` メソッドを呼び出して、資格情報が有効でなくなった日付を取得します。このメソッドは、 `java.util.Date` 資格情報が有効でなくなる日付を表すオブジェクトを返します。
    * `GetUsageRightsResult` オブジェクトの `getMessage` メソッドを呼び出して、権限を付与された PDF ドキュメントが開かれたときに、Adobe Reader に表示されるメッセージを取得します。このメソッドは、メッセージを表す文字列値を返します。
 
 **関連トピック**
 
 [資格情報の取得](assigning-usage-rights.md#retrieving-credential-information)
 
-[クイックスタート（SOAP モード）：Java API を使用した秘密鍵証明書情報の取得](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した資格情報情報の取得](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用して秘密鍵証明書に関する情報を取得 {#retrieve-credential-information-using-the-web-service-api}
+### Web サービス API を使用して資格情報に関する情報を取得 {#retrieve-credential-information-using-the-web-service-api}
 
-Acrobat Reader DC Extensions API（Web サービス）を使用して秘密鍵証明書に関する情報を取得します。
+Acrobat Reader DC Extensions API（Web サービス）を使用して資格情報に関する情報を取得します。
 
 1. プロジェクトファイルを含めます。
 

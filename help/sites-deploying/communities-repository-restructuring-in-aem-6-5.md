@@ -1,19 +1,15 @@
 ---
 title: AEM Communities 6.4 におけるリポジトリの再構築
-seo-title: Repository Restructuring for AEM Communities in 6.4
-description: AEM 6.4 for Communities の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Communities.
-uuid: d161655f-4074-44a7-8d69-38e80934c58b
+description: AEM 6.4 for Communities の新しいリポジトリ構造に移行するために必要な変更を行う方法を説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
-discoiquuid: 7383265b-0ed4-4ea7-b741-0a417d187bdd
 feature: Upgrading
 exl-id: 4d2bdd45-a29a-4936-b8da-f7e011d81e83
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 100%
+source-wordcount: '1009'
+ht-degree: 76%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 100%
 
 **6.5 へのアップグレード時におこなう変更**
 
-* [電子メール通知テンプレート](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#e-mail-notification-templates)
+* [メール通知テンプレート](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#e-mail-notification-templates)
 * [サブスクリプション設定](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md#subscription-configurations)
 
 **今後のアップグレードまでにおこなう変更**
@@ -40,7 +36,7 @@ ht-degree: 100%
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
-### 電子メール通知テンプレート {#e-mail-notification-templates}
+### メール通知テンプレート {#e-mail-notification-templates}
 
 <table>
  <tbody>
@@ -86,7 +82,7 @@ ht-degree: 100%
  </tbody>
 </table>
 
-### 監視ワード設定 {#watchwords-configurations}
+### ウォッチワード設定 {#watchwords-configurations}
 
 <table>
  <tbody>
@@ -125,9 +121,9 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>手動移行が必要です。</p> <p>インスタンスがバッジ／スコアルールをカスタマイズしている場合、すべてのルールをバケットの下に自動的に配置する方法はありません。サイトに使用する conf バケット（グローバルまたはサイト固有）に関する顧客からの情報が必要です。</p> <p>サイトのバッジおよびスコア設定に使用できる UI はありません。</p> <p>新しいリポジトリ構造に合わせるには：</p>
+   <td><p>手動移行が必要です。</p> <p>インスタンスでバッジ/スコアルールをカスタマイズしている場合、すべてのルールをバケットの下に自動で配置する方法はありません。 サイトで使用する conf バケット（グローバルまたはサイト固有）に関する顧客入力が必要です。</p> <p>サイトのバッジとスコアを設定する UI がありません。</p> <p>新しいリポジトリ構造に合わせるには：</p>
     <ol>
-     <li><strong>ツール</strong>の下の<strong>設定ブラウザー</strong>を使用して、サイトコンテキストバケットを作成します。</li>
+     <li>を使用したサイトコンテキストバケットの作成 <strong>設定ブラウザー</strong> under <strong>ツール</strong></li>
      <li>サイトのルートに移動します。</li>
      <li><code>cq:confproperty</code> を、すべての設定を格納するバケットのパスに設定します。同じ設定をサイトの「<strong>編集ウィザード - クラウド設定入力</strong>」で行うこともできます。</li>
      <li>関連するバッジルールおよびスコアルールを <code>/etc/community/*</code> から、前の手順で作成したサイトコンテキストバケットに移動します。</li>
@@ -183,11 +179,11 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>新しい Facebook クラウド設定をすべて、新しい場所に移行する必要があります。</p>
+   <td><p>新しいFacebookクラウド設定は、すべて新しい場所に移行する必要があります。</p>
     <ol>
-     <li>以前の場所にある既存の設定を新しい場所に移行します。
+     <li>以前の場所の既存の設定を新しい場所に移行します。
       <ol>
-       <li><strong>ツール／クラウドサービス／Facebook ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Facebook ソーシャルログイン設定を手動で再作成します。<br /> または <br /> </li>
+       <li>AEMオーサリング UI( ) で新しいFacebook Social ログイン設定を手動で再作成します。 <strong>ツール/Cloud Service/ Facebook Social ログイン設定</strong>.<br /> または <br /> </li>
        <li>新しい Facebook クラウド設定をすべて、以前の場所から新しい適切な場所（<code>/conf/global or /conf/&lt;tenant&gt;</code> の下）にコピーします。</li>
       </ol> </li>
      <li>新しい Facebook ソーシャルログイン設定を参照するように AEM Communities サイトのルートを更新します。それには、<code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li>
@@ -239,11 +235,11 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>新しい Pinterest クラウド設定をすべて、新しい場所に移行する必要があります。</p>
+   <td><p>新しいPinterestクラウド設定は、すべて新しい場所に移行する必要があります。</p>
     <ol>
-     <li>以前の場所にある既存の設定を新しい場所に移行します。
+     <li>以前の場所の既存の設定を新しい場所に移行します。
       <ol>
-       <li><strong>ツール／クラウドサービス／Pinterest ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Pinterest ソーシャルログイン設定を手動で再作成します。<br />または</li>
+       <li>AEMオーサリング UI( ) で新しいPinterest Social ログイン設定を手動で再作成します。 <strong>ツール/Cloud Service/ Pinterest Social ログイン設定</strong>.<br />または</li>
        <li>新しい Pinterest クラウド設定をすべて、以前の場所から適切な新しい場所（<code>/conf/global or /conf/&lt;tenant&gt;</code> の下）にコピーします。</li>
       </ol> </li>
      <li>新しい Pinterest ソーシャルログイン設定を参照するように AEM Communities サイトのルートを更新します。それには、<code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li>
@@ -305,11 +301,11 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>新しい Twitter クラウド設定をすべて、新しい場所に移行する必要があります。</p>
+   <td><p>新しいTwitterクラウド設定は、新しい場所に移行する必要があります。</p>
     <ol>
-     <li>以前の場所にある既存の設定を新しい場所に移行します。
+     <li>以前の場所の既存の設定を新しい場所に移行します。
       <ol>
-       <li><strong>ツール／クラウドサービス／Twitter ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Twitter ソーシャルログイン設定を手動で再作成します。<br /> または <br /> </li>
+       <li>AEMオーサリング UI( ) で新しいTwitterのソーシャルログイン設定を手動で再作成します。 <strong>ツール/Cloud Service/Twitterソーシャルログイン設定</strong>.<br /> または <br /> </li>
        <li>新しい Twitter クラウド設定をすべて、以前の場所から適切な新しい場所（<code>/conf/global or /conf/&lt;tenant&gt;</code> の下）にコピーします。</li>
       </ol> </li>
      <li>新しい Twitter ソーシャルログイン設定を参照するように AEM Communities サイトのルートを更新します。それには、<code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li>
@@ -337,7 +333,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>アドビでは、以下で移行ユーティリティを提供しています。</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td>
+   <td><p>Adobeは、次の場所に移行ユーティリティを提供しています。</p> <p><a href="https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration">https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-template-migration</a></p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '4956'
-ht-degree: 62%
+source-wordcount: '4950'
+ht-degree: 61%
 
 ---
 
@@ -30,7 +30,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 
 実行中、完了済み、期限切れ、または失敗したワークフローインスタンスを管理するための操作です。
 
-* ドメイン：com.adobe.granite.workflow
+* ドメイン： com.adobe.granite.workflow
 * タイプ：メンテナンス
 
 >[!NOTE]
@@ -42,17 +42,17 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 **listRunningWorkflowsPerModel** ワークフローモデルごとに、実行されているワークフローインスタンスの数をリストします。
 
 * 引数：なし
-* 戻り値：Count 列と ModelId 列を含む表形式のデータ。
+* 戻り値： Count 列と ModelId 列を含む表形式のデータ。
 
 **listCompletedWorkflowsPerModel** ワークフローモデルごとに、完了したワークフローインスタンスの数をリストします。
 
 * 引数：なし
-* 戻り値：Count 列と ModelId 列を含む表形式のデータ。
+* 戻り値： Count 列と ModelId 列を含む表形式のデータ。
 
 **returnWorkflowQueueInfo** 処理済み、および処理に向けて待機中のワークフロー項目に関する情報をリストします。
 
 * 引数：なし
-* 戻り値：次の列を含む表データ：
+* 戻り値：次の列を含む表形式のデータ：
 
    * ジョブ
    * キュー名
@@ -90,8 +90,8 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 
 **returnFailedWorkflowCountPerModel** ワークフローモデルごとに、失敗したワークフローインスタンスの数を表示します。
 
-* 引数：なし
-* 戻り値：数およびモデル ID 列を含む表形式のデータ。
+* 引数：なし。
+* 戻り値：カウント列とモデル ID 列を含む表形式のデータ。
 
 **terminateFailedInstances** 失敗したワークフローインスタンスを終了します。失敗したインスタンスをすべて終了するか、特定のモデルの失敗したインスタンスのみを終了するかを指定できます。オプションで、終了後にインスタンスを再開できます。また、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
@@ -103,7 +103,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 戻り値：終了したインスタンスに関する表形式のデータ。次の列が含まれます。
+* 戻り値：以下の列を含む、終了したインスタンスに関する表形式のデータ。
 
    * 開始者
    * InstanceId
@@ -121,7 +121,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 戻り値：再試行された失敗した作業項目に関する表形式のデータ（次の列を含む）。
+* 戻り値：再試行された失敗した作業項目に関する表形式のデータ。次の列が含まれます。
 
    * 開始者
    * InstanceId
@@ -140,7 +140,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
    * ワークフローが開始してからの日数：パージするワークフローインスタンスの有効期間（日数）。
    * ドライラン：（オプション） `true` の値を指定して、 実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
-* 戻り値：次の列を含む、パージされたアクティブなワークフローインスタンスに関する表形式のデータです。
+* 戻り値：次の列を含む、パージされたアクティブなワークフローインスタンスに関する表形式のデータ：
 
    * 開始者
    * InstanceId
@@ -163,7 +163,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの古いインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+   * モデル： （オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの古いインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
@@ -173,7 +173,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 **fetchModelList** すべてのワークフローモデルのリストを表示します。
 
 * 引数：なし
-* 戻り値：ModelId 列や ModelName 列など、ワークフローモデルを識別する表形式のデータ。
+* 戻り値： ModelId 列や ModelName 列など、ワークフローモデルを識別する表形式のデータ。
 
 **countRunningWorkflows** 実行中のワークフローインスタンスの数を返します。実行中のインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
@@ -205,7 +205,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
    * ワークフローが完了してからの日数：ワークフローインスタンスが完了状態になっている日数。
    * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
-* 戻り値：次の列を含む、パージされた完了したワークフローインスタンスに関する表形式のデータです。
+* 戻り値：次の列を含む、パージされた完了したワークフローインスタンスに関する表形式のデータ：
 
    * 開始者
    * InstanceId
@@ -218,7 +218,7 @@ JMX コンソールを使用してサービスを管理する MBean の作成に
 
 CRX リポジトリに関する情報
 
-* ドメイン：com.adobe.granite
+* ドメイン： com.adobe.granite
 * タイプ：リポジトリ
 
 ### 属性 {#attributes}
@@ -255,10 +255,10 @@ CRX リポジトリに関する情報
    <td>identifier.stability</td>
    <td>参照不可のノード識別子の安定性を示します。 次の値を指定できます。
     <ul>
-     <li>identifier.stability.indefinite.duration:識別子は変更されません。</li>
-     <li>identifier.stability.method.duration:識別子は、メソッドの呼び出し間で変更される場合があります。</li>
-     <li>identifier.stability.save.duration:識別子は、保存/更新サイクル内では変更されません。</li>
-     <li>identifier.stability.session.duration:セッション中は識別子は変更されません。</li>
+     <li>identifier.stability.indefinite.duration：識別子は変更されません。</li>
+     <li>identifier.stability.method.duration：識別子はメソッドの呼び出し間で変更される可能性があります。</li>
+     <li>identifier.stability.save.duration：保存/更新サイクル内で識別子は変更されません。</li>
+     <li>identifier.stability.session.duration：セッション中に識別子は変更されません。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -267,7 +267,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>crx.repository.systemid</td>
-   <td>system.id ファイル内のシステム識別子。</td>
+   <td>system.id ファイルに見つかったシステム識別子。</td>
   </tr>
   <tr>
    <td>option.query.sql.supported</td>
@@ -371,7 +371,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>ノードタイプの継承に対するリポジトリのサポートのレベルを示します。 次の値を指定できます。</p> <p>node.type.management.inheritance.minimal:プライマリノードタイプの登録は、スーパータイプとして nt:base のみを持つノードに限られます。 mixin ノードタイプの登録は、スーパータイプのないものに限られます。</p> <p>node.type.management.inheritance.single：プライマリノードタイプの登録は、スーパータイプが 1 つのものに限られます。mixin ノードタイプの登録は、スーパータイプが 1 つ以下のものに限られます。</p> <p><br /> node.type.management.inheritance.multiple：プライマリノードタイプは、1 つ以上のスーパータイプに登録できます。mixin ノードタイプは、0 個以上のスーパータイプに登録できます。</p> </td>
+   <td><p>ノードタイプの継承に対するリポジトリのサポートのレベルを示します。 次の値を指定できます。</p> <p>node.type.management.inheritance.minimal：プライマリノードタイプの登録は、スーパータイプとして nt:base のみを持つノードに制限されます。 mixin ノードタイプの登録は、スーパータイプのないものに限られます。</p> <p>node.type.management.inheritance.single：プライマリノードタイプの登録は、スーパータイプが 1 つのものに限られます。mixin ノードタイプの登録は、スーパータイプが 1 つ以下のものに限られます。</p> <p><br /> node.type.management.inheritance.multiple：プライマリノードタイプは、1 つ以上のスーパータイプに登録できます。mixin ノードタイプは、0 個以上のスーパータイプに登録できます。</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
@@ -405,9 +405,9 @@ CRX リポジトリに関する情報
    <td>query.joins</td>
    <td><p>クエリでの結合のサポートレベル。 次の値を指定できます。</p>
     <ul>
-     <li>query.joins.none:結合はサポートされていません。 クエリでは 1 つのセレクターを使用できます。</li>
-     <li>query.joins.inner:内部結合のサポート。</li>
-     <li>query.joins.inner.outer:内側と外側の結合のサポート。</li>
+     <li>query.joins.none：結合はサポートされません。 クエリでは 1 つのセレクターを使用できます。</li>
+     <li>query.joins.inner：内部結合のサポート。</li>
+     <li>query.joins.inner.outer：内部結合と外部結合のサポート。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -506,10 +506,10 @@ CRX リポジトリに関する情報
 **BackupResult** 現在のバックアップのステータス。次の値を指定できます。
 
 * バックアップ中：バックアップが現在実行中です。
-* バックアップがキャンセルされました：バックアップがキャンセルされました。
-* バックアップは次のエラーで終了しました：バックアップ中にエラーが発生しました。 エラーメッセージに、原因に関する情報が表示されます。
-* バックアップ完了：バックアップが正常に完了しました。
-* 現在までに実行されたバックアップはありません：処理中のバックアップはありません。
+* バックアップがキャンセルされました：バックアップはキャンセルされました。
+* バックアップが完了しました。エラー：バックアップ中にエラーが発生しました。 エラーメッセージに、原因に関する情報が表示されます。
+* バックアップが完了しました：バックアップは成功しました。
+* 現時点で実行されているバックアップはありません：進行中のバックアップはありません。
 
 読み取り専用。
 
@@ -533,7 +533,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * 名前：新しいワークスペースの名前を表す String 値です。
+   * name：新しいワークスペースの名前を表す String 値です。
 
 * 戻り値：なし
 
@@ -548,7 +548,7 @@ CRX リポジトリに関する情報
 **stopDataStoreGarbageCollection** 実行中のデータストアのガベージコレクションを停止します。
 
 * 引数：なし
-* 戻り値：現在のステータスを表す文字列
+* 戻り値：現在のステータスの文字列表現
 
 **startBackup** リポジトリデータを ZIP ファイルにバックアップします。
 
@@ -602,7 +602,7 @@ CRX リポジトリに関する情報
 * 引数：なし
 * 戻り値：なし
 
-**joinCluster** このリポジトリを、クラスターのプライマリによって制御されるノードとしてクラスターに追加します。認証のためにユーザー名とパスワードを指定する必要があります。接続では基本認証を使用します。セキュリティ認証情報は、サーバーに送信される前に base-64 エンコードされます。
+**joinCluster** このリポジトリを、クラスターのプライマリによって制御されるノードとしてクラスターに追加します。認証のためにユーザー名とパスワードを指定する必要があります。接続では基本認証を使用します。セキュリティ資格情報は、サーバーに送信される前に base-64 エンコードされます。
 
 * 引数：
 
@@ -651,8 +651,8 @@ CRX リポジトリに関する情報
 
 レポートされる統計のタイプごとに、次の属性が提供されます。
 
-* ValuePerSecond:直近 1 分間の 1 秒あたりの測定値。 読み取り専用。
-* ValuePerMinute:過去 1 時間の 1 分あたりの測定値。 読み取り専用。
+* ValuePerSecond：直近 1 分間の 1 秒あたりの測定値。 読み取り専用。
+* ValuePerMinute：過去 1 時間の 1 分あたりの測定値。 読み取り専用。
 * ValuePerHour：過去 1 週間の、1 時間あたりの測定値。読み取り専用。
 * ValuePerWeek：過去 3 年間の、1 週あたりの測定値。読み取り専用。
 
@@ -660,8 +660,8 @@ CRX リポジトリに関する情報
 
 リポジトリクエリに関する統計情報。
 
-* ドメイン：com.adobe.granite
-* タイプ：QueryStat
+* ドメイン： com.adobe.granite
+* 型：QueryStat
 
 ### 属性 {#attributes-2}
 
@@ -751,7 +751,7 @@ CRX リポジトリに関する情報
 SlingRequestProcessor サービスのパフォーマンスを監視できるように、HTTP リクエストに関する統計を提供します。
 
 * ドメイン：org.apache.sling
-* タイプ：エンジン
+* タイプ： engine
 * プロパティ：{service=RequestProcessor}
 
 ### 属性 {#attributes-4}
@@ -791,14 +791,14 @@ SlingRequestProcessor サービスのパフォーマンスを監視できるよ�
 
 起動プロセスとクイックスタートランチャーに関する情報です。
 
-* ドメイン：com.adobe.granite.quickstart
-* タイプ：ランチャー
+* ドメイン： com.adobe.granite.quickstart
+* 型：ランチャー
 
 ### 運用 {#operations-5}
 
 **ログ**
 
-クイックスタートウィンドウにメッセージを表示します。
+[ クイックスタート ] ウィンドウにメッセージを表示します。
 
 引数：
 
@@ -817,7 +817,7 @@ SlingRequestProcessor サービスのパフォーマンスを監視できるよ�
 サーバー起動プロセスの完了値を設定します。 クイックスタートウィンドウのプログレスバーは、完了値を表します。
 
 * 引数：
-   * p1:起動プロセスが完了した割合を分数で表す浮動小数値です。 値は 0 ～ 1 の範囲で指定する必要があります。 例えば、0.3 は 30%完了したことを示します。
+   * p1：起動プロセスが完了した割合を分数で表す浮動小数値。 値は 0 ～ 1 の範囲で指定する必要があります。 例えば、0.3 は 30%完了したことを示します。
 * 戻り値：なし.
 
 ## サードパーティのサービス {#third-party-services}
@@ -852,8 +852,8 @@ SlingRequestProcessor サービスのパフォーマンスを監視できるよ�
      <li>MemoryManager</li>
      <li>MemoryPool</li>
      <li>OperatingSystem</li>
-     <li>ランタイム</li>
-     <li>スレッド</li>
+     <li>Runtime</li>
+     <li>スレッド化</li>
     </ul> </td>
    <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a> パッケージ</td>
   </tr>
@@ -940,11 +940,11 @@ $ java
 
 ### CRX が提供する MBean の使用 {#using-the-mbeans-provided-by-crx}
 
-クイックスタートプロセスに接続した後、JConsole は、CRX が実行されている JVM の一般的な監視ツールを提供します。
+クイックスタートプロセスに接続した後、JConsole は、CRX が実行されている JVM 用の様々な一般的な監視ツールを提供します。
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-CRX の内部監視および設定オプションにアクセスするには、「MBeans」タブに移動し、左側の階層コンテンツツリーから、目的の属性または操作セクションを選択します。 例えば、 com.adobe.granite/Repository/Operations セクションなどです。
+CRX の内部監視および設定オプションにアクセスするには、「MBean」タブに移動し、左側の階層コンテンツツリーから、目的の属性または操作セクションを選択します。 例えば、 com.adobe.granite/Repository/Operations セクションなどです。
 
 そのセクション内で、左側のペインで目的の属性または操作を選択します。
 

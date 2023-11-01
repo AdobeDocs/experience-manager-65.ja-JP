@@ -2,10 +2,10 @@
 title: WS-Security ヘッダーを使用した資格情報の受け渡し
 description: WS-security ヘッダーを使用して認証情報を渡す方法を学ぶ
 exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '217'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 90%
 
 ---
 
@@ -34,9 +34,8 @@ WS-Security ヘッダーを JEE 上の AEM Forms に渡す方法は、Axis で�
 
 ## 要件 {#requirements}
 
-このドキュメントを最大限に活用するには、JEE ソフトウェア上の AEM Forms についてよく理解する必要があります。
+このドキュメントを最大限に活用するには、JEE 上のAEM Formsソフトウェアに関する十分な知識が必要です。
 
 >[!MORELIKETHIS]
 >
 >* [WS-Security ヘッダーを使用して資格情報を渡す](assets/passing-credentials-using-ws-security-headers.pdf)
-

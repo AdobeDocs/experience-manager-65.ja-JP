@@ -7,10 +7,10 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2860'
-ht-degree: 86%
+source-wordcount: '2856'
+ht-degree: 91%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 86%
 
 * `categories`：`cq:ClientLibraryFolder` に含まれる JS ファイルや CSS ファイルのセットのカテゴリを特定します。`categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリの一部にすることができます（これがどのように役立つかについては以下を参照）。
 
-* `dependencies`：これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。例えば、`F` と `G` の 2 つの `cq:ClientLibraryFolder` ノードを指定し、`F` のファイルが正しく機能するために別の `G` のファイルを必要とする場合、`G` の中の少なくとも 1 つの `categories` は、`F` の `dependencies` でなければなりません。
+* `dependencies`：これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。例えば、`F` と `G` の 2 つの `cq:ClientLibraryFolder` ノードを指定し、`F` のファイルが正しく機能するために、別の `G` にあるファイルが必要な場合、`G` のうち 1 つ以上の `categories` は、`F` の `dependencies` に含まれている必要があります。
 
 * `embed`：他のライブラリからコードを埋め込むために使用します。ノード F がノード G および H を埋め込むと、結果として得られる HTML は、ノード G および H からのコンテンツの合成になります。
 * `allowProxy`：クライアントライブラリが `/apps` の下にある場合、このプロパティを使用すると、プロキシサーブレット経由でクライアントライブラリにアクセスできます。後述の[クライアントライブラリのフォルダーの配置とプロキシクライアントライブラリのサーブレットの使用](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)を参照してください。
@@ -134,7 +134,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 >[!NOTE]
 >
->コードをコンテンツおよび設定から適切に分離するために、`/apps` の下にクライアントライブラリを配置し、`allowProxy` プロパティを活用して `/etc.clientlibs` を介して公開することをお勧めします。
+>コードをコンテンツと設定からより詳細に分離するには、以下の場所にクライアントライブラリを配置することをお勧めします。 `/apps` を介して公開します。 `/etc.clientlibs` ～を活用して `allowProxy` プロパティ。
 
 `/apps` にあるクライアントライブラリにアクセスできるようにするために、プロキシサーブレットが使用されます。ACL は依然としてクライアントライブラリフォルダーで適用されますが、サーブレットを使用すると、`/etc.clientlibs/` プロパティが `allowProxy` に設定されている場合、`true` を介してコンテンツを読み取ることができます。
 
@@ -321,20 +321,20 @@ body {
 
 AEM では、プラグ可能なプリプロセッサーを使用でき、AEM のデフォルトプリプロセッサーとして、CSS および JavaScript 用の [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) と YUI が定された JavaScript 用の [Google Closure Compiler（GCC）](https://developers.google.com/closure/compiler/)をサポートします。
 
-プラグ可能なプリプロセッサーを使用すると、次のような柔軟な使用が可能になります。
+プラガブルプリプロセッサーは、次のように柔軟に使用できます。
 
-* スクリプトソースを処理できる ScriptProcessor の定義
-* プロセッサはオプションを使用して設定可能
-* プロセッサーは縮小に使用できますが、縮小されていない場合にも使用できます
-* clientlib は、使用するプロセッサーを定義できます
+* スクリプトソースを処理できる ScriptProcessors を定義する
+* プロセッサーはオプションを使用して設定できる
+* プロセッサーは縮小用に使用できるが、縮小以外の場合にも使用できる
+* clientlib はどのプロセッサーを使用するかを定義できる
 
 >[!NOTE]
 >
->デフォルトでは、AEMは YUI Compressor を使用します。 詳しくは、 [YUI Compressor GitHub ドキュメント](https://github.com/yui/yuicompressor/issues) 」を参照してください。 特定の clientlibs 用の GCC コンプレッサーに切り替えると、YUI を使用しているときに発生していたいくつかの問題が解決することがあります。
+>デフォルトでは、AEM は YUI Compressor を使用します。既知の問題のリストについては、[YUI Compressor GitHub ドキュメント](https://github.com/yui/yuicompressor/issues)を参照してください。特定の clientlibs 用の GCC コンプレッサーに切り替えると、YUI を使用しているときに発生していたいくつかの問題が解決することがあります。
 
 >[!CAUTION]
 >
->縮小されたライブラリをクライアントライブラリに配置しないでください。 代わりに生のライブラリを提供し、縮小が必要な場合は、プリプロセッサーのオプションを使用します。
+>縮小化したライブラリをクライアントライブラリに配置しないでください。代わりに、生のライブラリを提供し、縮小が必要な場合は、プリプロセッサーのオプションを使用します。
 
 ### 使用方法 {#usage}
 
@@ -384,11 +384,11 @@ languageOut (defaults to "ECMASCRIPT5")
 compilationLevel (defaults to "simple") (can be "whitespace", "simple", "advanced")
 ```
 
-GCC オプションの詳細については、 [GCC ドキュメント](https://developers.google.com/closure/compiler/docs/compilation_levels).
+GCC オプションについて詳しくは、[GCC ドキュメント](https://developers.google.com/closure/compiler/docs/compilation_levels)を参照してください。
 
-### システムの既定のミニファイヤを設定 {#set-system-default-minifier}
+### システムのデフォルト縮小ツールの設定 {#set-system-default-minifier}
 
-YUI はAEMのデフォルトの縮小機能として設定されています。 これを GCC に変更するには、次の手順に従います。
+YUI は、AEM のデフォルト縮小ツールとして設定されています。これを GCC に変更するには、次の手順に従います。
 
 1. Apache Felix Config Manager（[https://localhost:4502/system/console/configMgrr](https://localhost:4502/system/console/configMgr)）に移動します。
 1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;を検索して編集します。
@@ -422,8 +422,8 @@ AEM には、クライアントライブラリフォルダーをデバッグお�
 1. Web ブラウザーのアドレスボックスで、HTML の URL に次のテキストを付加します。
 
    `?debugClientLibs=true`
-1. ページが読み込まれたら、ページのソースを表示します。
-1. リンク要素の href として指定されているリンクをクリックして、ファイルを開き、ソースコードを表示します。
+1. ページが読み込まれたら、ページソースを表示します。
+1. リンク要素の href として指定されているリンクをクリックしてファイルを開き、ソースコードを表示します。
 
 ### クライアントライブラリの確認 {#discover-client-libraries}
 

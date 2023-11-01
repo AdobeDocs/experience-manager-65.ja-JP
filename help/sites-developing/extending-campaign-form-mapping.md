@@ -1,7 +1,7 @@
 ---
 title: カスタムフォームマッピングの作成
 seo-title: Creating Custom Form Mappings
-description: Adobe Campaign にカスタムテーブルを作成したら、そのカスタムテーブルにマップするフォームを AEM で作成できます
+description: Adobe Campaignでカスタムテーブルを作成する場合、AEMでそのカスタムテーブルにマッピングするフォームを作成する必要が生じる場合があります
 seo-description: When you create a custom table in Adobe Campaign, you may want to build a form in AEM that maps to that custom table
 uuid: f3bde513-6edb-4eb6-9048-40045ee08c4a
 contentOwner: User
@@ -10,22 +10,22 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
 exl-id: bce6c586-9962-4217-82cb-c837e479abc0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 100%
+source-wordcount: '528'
+ht-degree: 18%
 
 ---
 
 # カスタムフォームマッピングの作成{#creating-custom-form-mappings}
 
-Adobe Campaign にカスタムテーブルを作成したら、そのカスタムテーブルにマップするフォームを AEM で作成できます。
+Adobe Campaignでカスタムテーブルを作成する場合、AEMでそのカスタムテーブルにマッピングするフォームを作成する必要が生じる場合があります。
 
-このドキュメントでは、カスタムフォームマッピングの作成方法について説明します。このドキュメントのステップを完了すると、今後のイベントに新規登録できるイベントページを表示できます。その後、Adobe Campaign を使用して、登録したユーザーをフォローアップします。
+このドキュメントでは、カスタムフォームマッピングを作成する方法について説明します。 このドキュメントの手順を完了すると、ユーザーが今後のイベントに新規登録できるイベントページが表示されます。 その後、Adobe Campaignを通じて、これらのユーザーをフォローアップします。
 
 ## 前提条件 {#prerequisites}
 
-以下の製品がインストールされている必要があります。
+以下をインストールする必要があります。
 
 * Adobe Experience Manager
 * Adobe Campaign Classic
@@ -34,18 +34,18 @@ Adobe Campaign にカスタムテーブルを作成したら、そのカスタ�
 
 ## カスタムフォームマッピングの作成 {#creating-custom-form-mappings-2}
 
-カスタムフォームマッピングを作成するには、次の詳細な手順を実行する必要があります。詳しくは、以下の節を参照してください。
+カスタムフォームマッピングを作成するには、次の大まかな手順に従う必要があります。手順については、以下の節で詳しく説明します。
 
-1. カスタムテーブルの作成。
-1. **シード**&#x200B;テーブルの拡張。
-1. カスタムマッピングの作成。
-1. カスタムマッピングに基づいた配信の作成。
-1. 作成した配信を使用するフォームを AEM で作成。
-1. フォームを送信してテスト。
+1. カスタムテーブルを作成します。
+1. の拡張 **シード** 表。
+1. カスタムマッピングを作成します。
+1. カスタムマッピングに基づいて配信を作成します。
+1. 作成した配信を使用するAEMでフォームを作成します。
+1. フォームを送信してテストします。
 
-### Adobe Campaign でのカスタムテーブルの作成 {#creating-the-custom-table-in-adobe-campaign}
+### Adobe Campaignでのカスタムテーブルの作成 {#creating-the-custom-table-in-adobe-campaign}
 
-まず、Adobe Campaign でカスタムテーブルを作成します。この例では、以下の定義を使用して、イベントテーブルを作成します。
+まず、Adobe Campaignでカスタムテーブルを作成します。 この例では、以下の定義を使用して、イベントテーブルを作成します。
 
 ```xml
 <element autopk="true" label="Event" labelSingular="Event" name="event">
@@ -56,11 +56,11 @@ Adobe Campaign にカスタムテーブルを作成したら、そのカスタ�
 </element>
 ```
 
-イベントテーブルを作成したら、**データベース構造更新ウィザード**&#x200B;を実行して、テーブルを作成します。
+イベントテーブルを作成したら、 **データベース構造の更新ウィザード** をクリックして、テーブルを作成します。
 
 ### シードテーブルの拡張 {#extending-the-seed-table}
 
-Adobe Campaign で、「**追加**」をタップまたはクリックして、**シードアドレス（nms）**&#x200B;テーブルの新しい拡張を作成します。
+Adobe Campaignで、をタップまたはクリックします。 **追加** 新しい拡張機能を作成するには、以下を実行します。 **シードアドレス (nms)** 表。
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -75,39 +75,39 @@ Adobe Campaign で、「**追加**」をタップまたはクリックして、*
  </element>
 ```
 
-拡張後、**データベース更新ウィザード**&#x200B;を実行して、変更を適用します。
+この後、を実行します。 **データベース更新ウィザード** 変更を適用します。
 
 ### カスタムターゲットマッピングの作成 {#creating-custom-target-mapping}
 
-**管理／キャンペーン管理**&#x200B;で、**ターゲットマッピング**&#x200B;に移動し、新しい&#x200B;**ターゲットマッピング**&#x200B;を追加します。
+In **管理/キャンペーン管理** t、に移動します。 **ターゲットマッピング** 新しい T を追加します。**ターゲットマッピング。**
 
 >[!NOTE]
 >
->**内部名**&#x200B;にはわかりやすい名前を使用してください。
+>次に対して意味のある名前を使用してください。 **内部名**.
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
 ### カスタム配信テンプレートの作成 {#creating-a-custom-delivery-template}
 
-この手順では、作成した&#x200B;**ターゲットマッピング**&#x200B;を使用する配信テンプレートを追加します。
+この手順では、作成した **ターゲットマッピング**.
 
-**リソース／テンプレート**&#x200B;で、配信テンプレートに移動し、既存の AEM 配信を複製します。「**宛先**」をクリックしたら、作成イベント「**ターゲットマッピング**」を選択します。
+In **リソース/テンプレート**「配信テンプレート」に移動し、既存のAEM配信を複製します。 クリック時 **宛先**、「イベントを作成」を選択します。 **ターゲットマッピング**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-### AEM でのフォームの作成 {#building-the-form-in-aem}
+### AEMでのフォームの構築 {#building-the-form-in-aem}
 
-AEM の&#x200B;**ページのプロパティ**&#x200B;で、クラウドサービスが設定されていることを確認します。
+AEMで、でCloud Serviceを設定していることを確認します。 **ページのプロパティ**.
 
 その後、「**Adobe Campaign**」タブで、「[カスタム配信テンプレートの作成](#creating-a-custom-delivery-template)」で作成した配信を選択します。
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-フィールドを設定する際は、フォームフィールドに一意の要素名を指定します。
+フィールドを設定する際は、フォームフィールドに一意の要素名を必ず指定してください。
 
-フィールドの設定が完了したら、手動でマッピングを変更する必要があります。
+フィールドを設定した後、マッピングを手動で変更する必要があります。
 
-CRXDE Lite で、（ページ）ノードの **jcr:content** に移動して、**acMapping** の値を&#x200B;**ターゲットマッピング**&#x200B;の内部名に変更します。
+CRXDE Lite で、 **jcr:content** （ページの）ノードに追加し、 **acMapping** の値を **ターゲットマッピング**.
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -117,14 +117,14 @@ CRXDE Lite で、（ページ）ノードの **jcr:content** に移動して、*
 
 ### フォームの送信 {#submitting-the-form}
 
-フォームを送信して、値が保存されているかどうかを Adobe Campaign 側で検証できるようになりました。
+これで、フォームを送信し、値が保存されているかどうかをAdobe Campaign側で検証できます。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
 ## トラブルシューティング {#troubleshooting}
 
-**&quot;Invalid type for value &#39;02/02/2015&#39; from element &#39;@eventdate&#39; (document of type &#39;Event ([adb:event])&#39;)&quot;**
+**&quot;要素「@eventdate」の値「02/02/2015」のタイプが無効です ( タイプ「Event」のドキュメント ([adb:event])&#39;)&quot;**
 
-フォームを送信すると、このエラーが AEM の **error.log** に記録されます。
+フォームを送信する際に、このエラーは **error.log** AEMの
 
-日付フィールドのフォーマットが無効であることが原因です。回避策は、値を **yyyy-mm-dd** 形式で指定することです。
+これは、日付フィールドの形式が無効なためです。 回避策は、 **yyyy-mm-dd** を値として使用します。

@@ -1,19 +1,15 @@
 ---
 title: SPA ブループリント
-seo-title: SPA Blueprint
-description: このドキュメントでは、AEM 内に編集可能な SPA コンポーネントを実装するために SPA フレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
-seo-description: This document describes the general, framework-independent contract that any SPA framework should fulfill in order to implement editable SPA components within AEM.
-uuid: 48f2d415-ec34-49dc-a8e1-6feb5a8a5bbe
+description: このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '2080'
-ht-degree: 93%
+source-wordcount: '2074'
+ht-degree: 96%
 
 ---
 
@@ -27,11 +23,11 @@ ht-degree: 93%
 
 ## はじめに {#introduction}
 
-このドキュメントでは、AEM 内に編集可能な SPA コンポーネントを実装するために SPA フレームワークが満たす必要がある一般的な契約（AEM サポートレイヤーの種類など）について説明します。
+このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある一般的な契約 (AEMサポートレイヤーの種類など ) について説明します。
 
 >[!NOTE]
 >
->次の要件は、フレームワークに依存しません。 これらの要件を満たす場合、モジュール、コンポーネント、サービスで構成されるフレームワーク固有のレイヤーを提供できます。
+>以下の要件は、フレームワークには依存しません。要件が満たされると、（モジュール、コンポーネントおよびサービスで構成された）フレームワーク固有のレイヤーが提供されます。
 >
 >**AEM の React フレームワークと Angular フレームワークでは、これらの要件は既に満たされています。**&#x200B;このブループリントの要件は、AEM で別のフレームワークを実装して使用する場合にのみ適用されます。
 
@@ -61,7 +57,7 @@ NPM パッケージ [@adobe/aem-spa-model-manager](https://www.npmjs.com/package
 
 #### コンポーネントマッピングの動的モデル {#dynamic-model-to-component-mapping}
 
-コンポーネントマッピングの動的モデルがAEM用の JavaScript SPA SDK でどのようにおこなわれるかについて詳しくは、この記事を参照してください [SPAの動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+AEM 用の Javascript SPA SDK での動的モデルとコンポーネントのマッピングの方法について詳しくは、[SPA の動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の記事を参照してください。
 
 ### フレームワーク固有のレイヤー {#framework-specific-layer}
 
@@ -73,9 +69,9 @@ NPM パッケージ [@adobe/aem-spa-model-manager](https://www.npmjs.com/package
 
 ### ページモデル {#page-model}
 
-ページのコンテンツ構造は、AEMに保存されています。 ページのモデルは、SPAコンポーネントのマッピングとインスタンス化に使用されます。 SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これをおこなうには、リソースタイプ（または AEM コンポーネントへのパス）を一意のキーとして使用します。
+ページのコンテンツ構造は AEM に保存されます。ページのモデルは、SPA コンポーネントのマッピングとインスタンス化に使用されます。SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これをおこなうには、リソースタイプ（または AEM コンポーネントへのパス）を一意のキーとして使用します。
 
-SPA コンポーネントは、ページモデルと同期する必要があり、コンテンツに変更があった場合はそれに応じて更新する必要があります。指定されたページモデル構造に従って、動的コンポーネントを活用するパターンを使用して、コンポーネントをその場でインスタンス化する必要があります。
+SPA コンポーネントは、ページモデルと同期する必要があり、コンテンツに変更があった場合はそれに応じて更新する必要があります。指定のページモデル構造に従って、コンポーネントをその場でインスタンス化するには、動的コンポーネントを利用したパターンを使用する必要があります。
 
 ### メタフィールド  {#meta-fields}
 
@@ -118,7 +114,7 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 プロジェクトコンポーネントは、モデルのフラグメントへのアクセスをモデルプロバイダーに委任する必要があります。次に、モデルプロバイダーは、モデルの指定したフラグメントに対する変更をリッスンし、更新されたモデルを委任コンポーネントに返します。
 
-これをおこなうには、モデルプロバイダーを ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` に登録する必要があります。次に、変更が発生すると、その変更を受け取り、更新されたデータを委任コンポーネントに渡します。 慣例により、モデルのフラグメントを伝達する委任コンポーネントで使用可能になるプロパティは、`cqModel` という名前が付けられます。このプロパティはコンポーネントに自由に提供できますが、フレームワークアーキテクチャとの統合、検出可能性、使いやすさなどの側面を考慮する必要があります。
+これをおこなうには、モデルプロバイダーを ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` に登録する必要があります。次に、変更が発生すると、その変更を受け取り、更新されたデータが委任コンポーネントに渡されます。慣例により、モデルのフラグメントを伝達する委任コンポーネントで使用可能になるプロパティは、`cqModel` という名前が付けられます。このプロパティはコンポーネントに自由に提供できますが、フレームワークアーキテクチャとの統合、検出可能性、使いやすさなどの側面を考慮する必要があります。
 
 ### コンポーネントの HTML デコレーター {#the-component-html-decorator}
 
@@ -236,7 +232,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 プロジェクトコンポーネントでは、エディターによる操作を可能にするために、少なくとも次のデータ属性を生成する必要があります。
 
-* `data-cq-data-path`:コンポーネントの相対パス ( `PageModel` ( 例： `"root/responsivegrid/image"`) をクリックします。 この属性はページには追加しないでください。
+* `data-cq-data-path`：で指定されたコンポーネントの相対パス。 `PageModel` ( 例： `"root/responsivegrid/image"`) をクリックします。 この属性はページには追加しないでください。
 
 要約すると、エディターによって編集可能と認識されるためには、プロジェクトコンポーネントは次の契約に準拠する必要があります。
 

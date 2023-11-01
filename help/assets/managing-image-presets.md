@@ -13,22 +13,22 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '3839'
-ht-degree: 100%
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+workflow-type: tm+mt
+source-wordcount: '3837'
+ht-degree: 84%
 
 ---
 
 # Dynamic Media 画像プリセットの管理{#managing-image-presets}
 
-画像プリセットを使用すると、Adobe Experience Manager Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。画像プリセットの作成時には、画像配信用のサイズを選択します。またフォーマットコマンドも選択し、表示対象画像の配信時に画像の見た目が最適化されるようにします。
+画像プリセットを使用すると、Adobe Experience Manager Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像を表示するためのサイズとフォーマットに関するコマンドの事前定義済みのコレクションを表します。 画像プリセットを作成する際に、画像配信用のサイズを選択します。 また、画像が表示用に配信される際に、画像の外観が最適化されるように、書式設定コマンドを選択します。
 
 管理者は、アセットを書き出すためのプリセットを作成できます。ユーザーは画像を書き出すときにプリセットを選択できます。また、この操作によって、管理者が指定した仕様に合わせて画像が再フォーマットされます。
 
 レスポンシブな画像プリセットを作成することもできます。アセットにレスポンシブな画像プリセットを適用すると、画像が表示するデバイスや画面サイズに応じて変化します。画像プリセットは、RGB またはグレーに加えて CMYK をカラースペースで使用するよう設定できます。
 
-ここでは、画像プリセットを作成、変更および全般的に管理する方法について説明します。作成者は画像をプレビューするときに、いつでも画像プリセットを適用できます。詳しくは、[画像プリセットの適用](/help/assets/image-presets.md)を参照してください。
+この節では、画像プリセットの作成、変更および一般的な管理方法について説明します。 作成者は画像をプレビューするときに、いつでも画像プリセットを適用できます。詳しくは、[画像プリセットの適用](/help/assets/image-presets.md)を参照してください。
 
 >[!NOTE]
 >
@@ -44,9 +44,9 @@ ht-degree: 100%
 
 デスクトップバージョン（500 x 500 ピクセル）とモバイルバージョン（150 x 150 ピクセル）の 2 つの画像プリセットを作成できます。2 つの画像プリセットを作成します。つまり、500 x 500 ピクセルで画像を表示するための `Enlarge` プリセットとで、150 x 150 ピクセルで画像を表示するための `Thumbnail` プリセットです。`Enlarge` および `Thumbnail` サイズの画像を配信するために、Adobe Experience Manager では「拡大画像プリセット」と「サムネール画像プリセット」の定義を検索します。その後、Adobe Experience Manager は各画像プリセットのサイズと形式の仕様に従って画像を動的に生成します。
 
-この場合、動的に配信されるときに画像のサイズを削減すると、シャープさと細部の表現が失われる可能性があります。この理由で、各画像プリセットには、画像を特定のサイズで配信するときに最適化するためのフォーマット用のコントロールが含まれています。これらのコントロールによって、Web サイトまたはアプリケーションに画像が配信されるときに、画像がシャープでクリアに表示されるようになります。
+動的に配信される際にサイズが縮小された画像は、シャープさとディテールが失われる可能性があります。 このため、各画像プリセットには、特定のサイズで配信される場合に画像を最適化するための書式設定コントロールが含まれています。 これらのコントロールを使用すると、画像が Web サイトやアプリケーションに配信される際に、シャープで明確な画像を使用できます。
 
-管理者が画像プリセットを作成できます。画像プリセットを作成する際に、最初から作業を始めることも、既存のプリセットから始めて新しい名前で保存することもできます。
+管理者は画像プリセットを作成できます。 画像プリセットを作成するには、最初から開始するか、既存のプリセットから開始して新しい名前で保存します。
 
 ## Dynamic Media 画像プリセットの管理 {#managing-image-presets-1}
 
@@ -58,7 +58,7 @@ Adobe Experience Manager で画像プリセットを管理するには、Adobe E
 >
 >作成した画像プリセットは、アセットをプレビューまたは配信する際の動的レンディションとしても使用できます。
 >
->*Dynamic Media - Scene7 モード*&#x200B;では、画像プリセットは自動的に公開されるので、ユーザーが画像プリセットを公開する必要は&#x200B;*ありません*。
+>In *Dynamic Media - Scene7モード*、 *not* 画像プリセットが自動的に公開されるので、画像プリセットを公開する必要があります。
 >
 >*Dynamic Media - ハイブリッドモード*&#x200B;では、画像プリセットを手動で公開する必要があります。
 >
@@ -139,22 +139,22 @@ PDF または AI ワークフローのラスタライズの引数
   <tr>
    <td>解像度</td>
    <td>72</td>
-   <td>最初のページをラスタライズする解像度（ppi（インチあたりピクセル数）単位）</td>
+   <td>最初のページをラスタライズする解像度 (ppi(ppi) 単位 )。</td>
   </tr>
  </tbody>
 </table>
 
 デフォルトのプロセス引数を使用して、PDF/AI ドキュメントの最初のページが 72 ppi でラスタライズされ、生成されたプレビュー画像のサイズは 2048 x 2048 ピクセルになります。通常のデプロイメントでは、解像度を 150 ppi 以上に増やす必要が生じる場合があります。例えば、300 ppi の US Letter サイズのドキュメントの幅と高さにはそれぞれ最大で 2550 x 3300 ピクセルが必要です。
 
-ラスタライズする解像度を制限する最大の幅と最大の高さ。例えば、最大値が変更されず、解像度が 300 ppi に設定された場合、US Letter のドキュメントは 186 ppi でラスタライズされます。つまり、ドキュメントは 1581 x 2046 ピクセルになります。
+ラスタライズする解像度を制限する最大の幅と最大の高さ。例えば、最大値が変更されず、解像度が 300 ppi に設定されている場合、US Letter ドキュメントは 186 ppi でラスタライズされます。 つまり、ドキュメントは 1581 x 2046 ピクセルです。
 
-`Rasterize PDF/AI Image Preview Rendition` プロセスコンポーネントには、メモリに過度に大きな画像が作成されないように、最大値が定義されています。このようなサイズの大きな画像の場合は、JVM（Java™ 仮想マシン）に提供されているメモリがオーバーフローするおそれがあります。それぞれ設定された最大サイズで画像を作成可能なワークフローを、設定した数だけ並行して管理するのに十分なメモリを JVM に提供する必要があります。
+`Rasterize PDF/AI Image Preview Rendition` プロセスコンポーネントには、メモリに過度に大きな画像が作成されないように、最大値が定義されています。このようなサイズの大きな画像の場合は、JVM（Java™ 仮想マシン）に提供されているメモリがオーバーフローするおそれがあります。設定された数の並列ワークフローを管理するのに十分なメモリを JVM に提供する場合は注意が必要です。各ワークフローには、設定された最大サイズの画像を作成する可能性があります。
 
-### InDesign（INDD）ファイル形式 {#indesign-indd-file-format}
+### InDesign(INDD) ファイル形式 {#indesign-indd-file-format}
 
 INDD 形式の取り込みをサポートし、このファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
 
-InDesign ファイルについては、Adobe InDesign Server が AEM Experience Manager に統合されている場合にのみサブアセットが抽出されます。参照元のアセットは、メタデータに基づいてリンクされます。リンク設定に InDesign Server は不要です。ただし、リンクが InDesign ファイルと参照元のアセットの間に作成されるには、InDesign ファイルが処理される前に参照元のアセットが Adobe Experience Manager 内に存在する必要があります。
+InDesign ファイルについては、Adobe InDesign Server が AEM Experience Manager に統合されている場合にのみサブアセットが抽出されます。参照元のアセットは、メタデータに基づいてリンクされます。 リンク設定に InDesign Server は不要です。ただし、リンクが InDesign ファイルと参照元のアセットの間に作成されるには、InDesign ファイルが処理される前に参照元のアセットが Adobe Experience Manager 内に存在する必要があります。
 
 [Experience Manager Assets と InDesign Server の統合](/help/assets/indesign.md)を参照してください。
 
@@ -206,11 +206,10 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 >* ビデオのサムネールサイズは「**[!UICONTROL 引数]**」の下にある「**[!UICONTROL 処理]**」タブの **[!UICONTROL FFmpeg サムネール]**&#x200B;のステップで設定します。
 >
 
-
 **画像のサムネールサイズを設定するには**：:
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**／**[!UICONTROL DAM アセットの更新]**／**[!UICONTROL 編集]**&#x200B;をタップします。
-1. **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップまたはクリックします。必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」をタップします。
+1. 次をタップします。 **[!UICONTROL Dynamic Media Process Image Assets]** ステップとタップまたはクリック **[!UICONTROL サムネール]** タブをクリックします。 必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」をタップします。
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
@@ -220,7 +219,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
    >
    >**[!UICONTROL サムネールを処理]**&#x200B;ステップのサムネール引数の値が、**[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;ステップのサムネール引数と一致する必要があります。
 
-1. 「**[!UICONTROL 保存]**」をタップしてワークフローに対する変更を保存します。
+1. タップ **[!UICONTROL 保存]** をクリックして、ワークフローに対する変更を保存します。
 
 ### 表示される Dynamic Media 画像プリセット数の増減 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
@@ -247,7 +246,7 @@ Dynamic Media 画像プリセットの作成によって、プレビューや公
 
 >[!NOTE]
 >
->Internet Explorer 9 を使用している場合、プリセットを作成しても、保存後すぐにプリセットのリストに表示されません。この問題を回避するには、IE9 のキャッシュを無効にしてください。
+>Internet Explorer 9 を使用している場合、プリセットの作成は保存後すぐにプリセットリストに表示されません。 この問題を回避するには、IE9 のキャッシュを無効にします。
 
 AI ファイル、PDF ファイル、EPS ファイルの取り込みをサポートして、これらのファイル形式の動的レンディションを生成できるようにする場合は、画像プリセットを作成する前に次の情報を確認してください。[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
@@ -288,9 +287,9 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
->Dynamic Media - Scene7 モードでは、画像プリセットと画像アセットは自動的に公開されます。
+>Dynamic Media - Scene7モードでは、画像プリセットと画像アセットが自動的に公開されます。
 >
->Dynamic Media - ハイブリッドモードでは、画像プリセットと画像アセットを手動で公開する必要があります。
+>Dynamic Media — ハイブリッドモードでは、画像プリセットと画像アセットを手動で公開する必要があります。
 
 ### 画像プリセットオプション {#image-preset-options}
 
@@ -316,11 +315,11 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>「幅」と「高さ」</strong></td>
-   <td>画像が配信されるサイズをピクセル単位で入力します。「幅」と「高さ」は 0 ピクセルより大きい値にする必要があります。いずれかの値が 0 の場合、プリセットは作成されません。両方の値が空の場合、レスポンシブな画像プリセットが作成されます。</td>
+   <td>画像の配信サイズをピクセル単位で入力します。 幅と高さは 0 ピクセルより大きくする必要があります。 いずれかの値が 0 の場合、プリセットは作成されません。両方の値が空の場合、レスポンシブな画像プリセットが作成されます。</td>
   </tr>
   <tr>
    <td><strong>形式</strong></td>
-   <td><p>メニューから形式を選択します。</p> <p>「<strong>JPEG</strong>」を選択すると、次の追加オプションを入力できます。</p>
+   <td><p>メニューから形式を選択します。</p> <p>選択 <strong>JPEG</strong> には、次のその他のオプションが用意されています。</p>
     <ul>
      <li><strong>画質</strong> - JPEG 圧縮レベルを制御します。この設定は、ファイルサイズと画質の両方に影響します。JPEG 画質の尺度は 1～100 です。スライダーをドラッグすると、この尺度が表示されます。</li>
      <li><strong>JPG クロミナンスダウンサンプリングを有効にする</strong> - 目は高周波の色情報よりも高周波の輝度に対して敏感であるので、JPEG 画像は画像情報を輝度成分と色の成分に分けています。JPEG 画像が圧縮されると、輝度成分はフル解像度のまま、色成分がピクセルのグループでまとめて平均化されることでダウンサンプリングされます。ダウンサンプリングによって、知覚される画質にはほぼ影響を与えることなく、データ量を半分から 3 分の 1 程度削減できます。ダウンサンプリングは、グレースケールの画像には適用されません。この技術によって圧縮量が削減されます。これは、高コントラストの画像（オーバーレイされたテキストを含む画像など）で役立ちます。</li>
@@ -366,9 +365,9 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>レンダリングインテント</strong></td>
-   <td>デフォルトのレンダリングインテントを上書きできます。レンダリングインテントは、対象のカラープロファイルでは再現できない（色域外の）色をどうするかを定義します。レンダリングインテントは、ICC プロファイルと互換性がない場合は無視されます。
+   <td>デフォルトのレンダリングインテントを上書きできます。 レンダリングの目的によって、ターゲットカラープロファイル（色域外）で再現できないカラーに対する影響が決まります。 レンダリングインテントは、ICC プロファイルと互換性がない場合は無視されます。
     <ul>
-     <li>「<strong>知覚的</strong>」は、元の画像の 1 つ以上の色が対象のカラースペースの色域外であるときに、一方のカラースペースの全色域をもう一方のカラースペースの色域に圧縮する場合に選択します。</li>
+     <li>選択 <strong>知覚的</strong> 元の画像の 1 つ以上の色が目的のカラースペースの色域外にある場合に、あるカラースペースの全色域を別のカラースペースに圧縮する。</li>
      <li>「<strong>相対的な色域を維持</strong>」は、現在のカラースペースの 1 色が対象のカラースペースの色域外であるときに、他の色に影響を与えることなく、その色を対象のカラースペースの色域内のできる限り近い色にマップしたい場合に選択します。 </li>
      <li>「<strong>彩度</strong>」は、対象のカラースペースに変換するときに元の画像の色の彩度を再現する場合に選択します。 </li>
      <li>「<strong>絶対的な色域を維持</strong>」は、画像の明るさを変える白点と黒点の調整なしで色を完全に一致させる場合に選択します。</li>
@@ -376,7 +375,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>黒点補正</strong></td>
-   <td>出力プロファイルでこの機能がサポートされている場合、このオプションを選択します。指定した ICC プロファイルと互換性がない場合、黒点補正は無視されます。</td>
+   <td>出力プロファイルがこの機能をサポートする場合は、このオプションを選択します。 黒点補正は、指定された ICC プロファイルと互換性がない場合、無視されます。</td>
   </tr>
   <tr>
    <td><strong>ディザリング</strong></td>
@@ -392,7 +391,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
     </ul> <p>「<strong>アンシャープマスク</strong>」には次のオプションがあります。</p>
     <ul>
      <li><strong>量</strong> - 端のピクセルに適用されるコントラストを制御します。デフォルトの実数値は 1.0 です。高解像度の画像に対しては、この値を 5.0 まで増やすことができます。「量」は、フィルター強度の尺度だと考えてください。</li>
-     <li><strong>半径</strong> - シャープに影響するエッジピクセルの周囲のピクセル数を決定します。解像度の高い画像では、1～2 の実数を入力します。値が小さい場合、エッジのピクセルのみがシャープニングされます。値が大きい場合、より広い範囲のピクセルがシャープニングされます。画像のサイズによって適切な値が変わります。</li>
+     <li><strong>半径</strong> - シャープに影響するエッジピクセルの周囲のピクセル数を決定します。高解像度の画像の場合は、1 ～ 2 の実数を入力します。 値が小さい場合、エッジのピクセルのみがシャープニングされます。値が大きい場合、より広い範囲のピクセルがシャープニングされます。正しい値は、画像のサイズによって異なります。</li>
      <li><strong>しきい値</strong> - アンシャープマスクフィルターが適用される場合のコントラストの範囲を指定します。つまり、このオプションは、シャープニングされるピクセルが周囲の領域とどの程度違えば、そのピクセルをエッジのピクセルと見なしてシャープニングするかを決定するものです。ノイズが入らないように、2～20 の範囲で様々な整数値を試してください。 </li>
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li>
     </ul>
@@ -402,13 +401,13 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>再サンプリングモード</strong></td>
-   <td>「<strong>再サンプリングモード</strong>」オプションを選択します。画像がダウンサンプリングされる場合に、以下のオプションによって画像がシャープニングされます。
+   <td>を選択します。 <strong>再サンプリングモード</strong> オプション。 画像がダウンサンプリングされる場合に、以下のオプションによって画像がシャープニングされます。
     <ul>
      <li><strong>バイリニア法</strong> - 最速の再サンプリング方法。目に見えるエイリアスアーティファクトが一部発生します。</li>
      <li><strong>バイキュービック法</strong> - CPU 使用率は上昇しますが、目に見えるエイリアスアーティファクトが減少した、よりシャープな画像が生成されます。</li>
      <li><strong>シャープ 2</strong> - バイキュービック法よりも少しシャープな画像を生成できますが、CPU コストはさらに大きくなります。</li>
      <li><strong>バイシャープ</strong> - 画像サイズを縮小するための Photoshop のデフォルトの再サンプリング方法を選択します。Adobe Photoshop では「<strong>バイキュービックシャーパー</strong>」と呼ばれています。</li>
-     <li><strong>各カラー</strong>、<strong>明るさ</strong> - 色または明るさに基づいた手法です。デフォルトでは、「<strong>各カラー</strong>」が選択されます。</li>
+     <li><strong>各色</strong> および <strong>明るさ</strong>  — 各方法は、色または明るさに基づくことができます。 デフォルト <strong>各色</strong> が選択されている。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -444,43 +443,43 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 * [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html?lang=ja) - それぞれの色成分を、画像の効果が反対になるように逆転させます。
 
-   ```xml
-   &op_invert=1
-   ```
+  ```xml
+  &op_invert=1
+  ```
 
-   ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
+  ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
 
 * [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html?lang=ja) - 画像にぼかしフィルターを適用します。
 
-   ```xml
-   &op_blur=7
-   ```
+  ```xml
+  &op_blur=7
+  ```
 
-   ![6_5_imagepreset-edit-blur](assets/6_5_imagepreset-edit-blur.png)
+  ![6_5_imagepreset-edit-blur](assets/6_5_imagepreset-edit-blur.png)
 
 * コマンドの組み合わせ - op_blur と op-invert
 
-   ```xml
-   &op_invert=1&op_blur=7
-   ```
+  ```xml
+  &op_invert=1&op_blur=7
+  ```
 
-   ![chlimage_1-80](assets/chlimage_1-501.png)
+  ![chlimage_1-80](assets/chlimage_1-501.png)
 
 * [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html?lang=ja) - 明るさを増減させます。
 
-   ```xml
-   &op_brightness=58
-   ```
+  ```xml
+  &op_brightness=58
+  ```
 
-   ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
+  ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
 
-* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html?lang=ja) - 画像の不透明度を調節します。前景の不透明度を減らすことができます。
+* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html?lang=ja)  — 画像の不透明度を調整します。 前景の不透明度を減らすことができます。
 
-   ```xml
-   opac=29
-   ```
+  ```xml
+  opac=29
+  ```
 
-   ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
+  ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
 
 ## 画像プリセットの編集 {#modifying-image-presets}
 
@@ -493,15 +492,15 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ## Dynamic Media 画像プリセットを公開する {#publishing-image-presets}
 
-Dynamic Media - ハイブリッドモードを実行している場合、画像プリセットを手動で公開する必要があります。
+Dynamic Media — ハイブリッドモードを実行している場合は、画像プリセットを手動で公開する必要があります。
 
-（Dynamic Media - Scene7 モードを実行している場合、画像プリセットは自動的に公開されるので、以下の手順を実行する必要はありません）。
+(Dynamic Media - Scene7モードを実行している場合、画像プリセットは自動的に公開されます。これらの手順を完了する必要はありません。)
 
 **Dynamic Media で画像プリセットを公開するには - ハイブリッドモード：**
 
 1. Experience Manager で、Experience Manager ロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして、**[!UICONTROL アセット]**／**[!UICONTROL 画像プリセット]**&#x200B;の順に移動します。
-1. 画像プリセットのリストから該当する画像プリセットを選択し（複数選択可）「**[!UICONTROL 公開]**」をクリックまたはタップします。
-1. 画像プリセットが公開されると、ステータスが非公開から公開済みに変更されます。
+1. 画像プリセットのリストから目的の画像プリセットを 1 つ以上選択し、「 」をクリックまたはタップします。 **[!UICONTROL 公開]**.
+1. 画像プリセットが公開されると、ステータスが非公開から公開済みに変わります。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
@@ -509,4 +508,4 @@ Dynamic Media - ハイブリッドモードを実行している場合、画像�
 
 1. Experience Manager で、Experience Manager のロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
 1. 「**[!UICONTROL ツール]**」アイコンをタップし、**[!UICONTROL アセット]**／**[!UICONTROL 画像プリセット]**&#x200B;に移動します。
-1. プリセットを選択し、「**[!UICONTROL 削除]**」をクリックします。プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップして削除するか、「**[!UICONTROL キャンセル]**」をタップして中止します。
+1. プリセットを選択し、「 **[!UICONTROL 削除]**. プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップして削除するか、「**[!UICONTROL キャンセル]**」をタップして中止します。

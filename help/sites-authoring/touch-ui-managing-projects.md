@@ -10,10 +10,10 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 100%
+source-wordcount: '985'
+ht-degree: 98%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 100%
 
 ### リソースとプロジェクトの関連付け {#associating-resources-with-your-project}
 
-プロジェクトでは、リソースを 1 つのエンティティにグループ化して、全体として管理できます。したがって、リソースをプロジェクトに関連付ける必要があります。これらのリソースは、プロジェクト内で&#x200B;**タイル**&#x200B;としてグループ化されます。追加できるリソースのタイプについては、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
+プロジェクトでは、リソースを 1 つのエンティティにグループ化して、リソース全体を管理できます。 したがって、リソースをプロジェクトに関連付ける必要があります。これらのリソースは、プロジェクト内で&#x200B;**タイル**&#x200B;としてグループ化されます。追加できるリソースのタイプについては、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
 
 リソースとプロジェクトを関連付けるには：
 
@@ -66,7 +66,7 @@ ht-degree: 100%
 
 ### タイルへの項目の追加 {#adding-items-to-a-tile}
 
-タイルによっては、複数の項目を追加できます。例えば、一度に複数のワークフローを実行したり、複数のエクスペリエンスを持ったりすることができます。
+タイルによっては、複数の項目を追加できます。例えば、一度に複数のワークフローを実行したり、複数のエクスペリエンスを持つことができます。
 
 タイルに項目を追加するには：
 

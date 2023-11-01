@@ -4,10 +4,10 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
 workflow-type: tm+mt
-source-wordcount: '4626'
-ht-degree: 68%
+source-wordcount: '4622'
+ht-degree: 67%
 
 ---
 
@@ -423,7 +423,7 @@ AEM Forms Analytics データは、オフライン時に使用できます。Ado
 1. 「AEM Forms We.Gov サイト」を選択して、サイトのページを表示します。
 1. サイトページの 1 つ（例：ホーム）を選択し、「Analytics &amp; Recommendations」を選択します。
 
-   ![分析と推奨表示](assets/analytics_recommendations.jpg)
+   ![分析とレコメンデーション表示](assets/analytics_recommendations.jpg)
 
 1. このページには、AEM Sitesページに関連する、Adobe Analyticsから取得した情報が表示されます ( 注意：デザインにより、この情報はAdobe Analyticsから定期的に更新され、リアルタイムには表示されません )。
 
@@ -476,7 +476,7 @@ AEM FormsをAdobeFormsと共にインストールして設定するには、変�
 
 #### IMS 設定の作成パート 1 {#creating-ims-config}
 
-Forms 変換ツールと正しく通信するようにサービスを設定するには、ユーザーは Adobe I/O に登録できるように Identity Management System（IMS）サービスを設定する必要があります。
+フォーム変換ツールと正しく通信するようにサービスを設定するには、ユーザーがIdentity Management System(IMS) サービスをAdobe I/Oに登録できるように設定する必要があります。
 
 1. https://&lt;aemserver>:&lt;port> > に移動します。Adobe Experience 
 Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定をクリックします。
@@ -497,7 +497,7 @@ Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定を�
 
 #### Adobe I/O での統合の作成 {#create-integration-adobeio}
 
-アドビメイン内で統合を作成するためにシステム管理者に連絡しない場合は、ご自身に作成する能力があることを確認してください。
+システム管理者に問い合わせない場合は、Adobeドメイン内で統合を作成できることを確認してください。
 
 1. [Adobe I/O コンソール](https://developer.adobe.com/console/)に移動します。
 
@@ -549,7 +549,7 @@ IMS の設定が完了したら、AEMでクラウド設定を確認する必要�
 
 1. ブラウザーを開き、システム URL https://&lt;domain_name>:&lt;system_port> に移動します。
 
-1. 画面の左上隅にあるAdobe Experience Manager /ツール/Cloud Services/自動Forms会話設定をクリックします。
+1. 画面の左上隅にあるAdobe Experience Manager /ツール/Cloud Service/自動Forms会話設定をクリックします。
 
 1. 設定を配置する設定フォルダーを選択します。
 
@@ -579,7 +579,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 1. ブラウザーを開き、システム URL https://&lt;domain_name>:&lt;system_port> に移動します。
 
-1. 画面の左上隅にあるAdobe Experience Manager /ツール/Cloud Services/自動Forms会話設定をクリックします。
+1. 画面の左上隅にあるAdobe Experience Manager /ツール/Cloud Service/自動Forms会話設定をクリックします。
 
 1. 設定を配置する設定フォルダーを選択します。
 
