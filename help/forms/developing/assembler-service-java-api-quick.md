@@ -1,20 +1,20 @@
 ---
-title: Assembler サービス Java API クイックスタート（SOAP）
-description: Assembler Service Java API QuickStart(SOAP) を使用して、PDFドキュメントをアセンブル、ディスアセンブル、および動的に作成します。
+title: Assembler Service Java&trade; API QuickStart(SOAP)
+description: Assembler Service Java&trade; API QuickStart(SOAP) を使用して、PDFドキュメントをアセンブル、ディスアセンブル、および動的に作成する方法について説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 96%
+source-wordcount: '1019'
+ht-degree: 85%
 
 ---
 
-# Assembler サービス Java API クイックスタート（SOAP） {#assembler-service-java-api-quickstart-soap}
+# Assembler サービス Java™ API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
 
 Assembler サービスで Java API クイックスタート（SOAP）を使用できます
 
@@ -44,7 +44,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->『AEM Forms によるプログラミング』にあるクイックスタートは、JBoss アプリケーションサーバーと Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM Formsでのプログラミング」のクイックスタートは、JBoss® Application Server とMicrosoft® Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -736,7 +736,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用したドキュメントの PDF/A 準拠の確認 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-次の Java コードの例では、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを判断します。Assembler サービスに渡される入力 PDF ドキュメントには、*Loan.pdf* という名前が付けられます。DDX ドキュメントの名前は shell_PDFA.xml です。Assembler サービスから返され、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを指定する XML ドキュメントは、result.xml という名前の XML ファイルとして保存されます。このコードの例で使用されている *shell_PDFA.xml* DDX ドキュメントについて詳しくは、[ドキュメントが PDF/A に準拠しているかどうかの検証](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)を参照してください。
+次の Java コードの例では、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを判断します。Assembler サービスに渡される入力 PDF ドキュメントには、*Loan.pdf* という名前が付けられます。DDX ドキュメントの名前は shell_PDFA.xml です。Assembler サービスから返され、入力PDFドキュメントがPDF/A に準拠しているかどうかを指定する XML ドキュメントは、result.xml という名前の XML ファイルとして保存されます。 このコードの例で使用されている *shell_PDFA.xml* DDX ドキュメントについて詳しくは、[ドキュメントが PDF/A に準拠しているかどうかの検証](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)を参照してください。
 
 ```java
  /*
@@ -1183,7 +1183,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した DDX ドキュメントの動的な作成 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
-次の Java コードの例では、PDF ドキュメントを分割する DDX ドキュメントを動的に作成します。新しい PDF ドキュメントは、入力 PDF ドキュメントのレベル 1 のブックマークごとに作成されます。このコードの例には、次の 2 つのユーザー定義メソッドがあります。
+次の Java コードの例では、DDX ドキュメントを動的に作成し、そのドキュメントをPDFします。 新しい PDF ドキュメントは、入力 PDF ドキュメントのレベル 1 のブックマークごとに作成されます。このコードの例には、次の 2 つのユーザー定義メソッドがあります。
 
 * `createDDX`：Assembler サービスに送信される DDX ドキュメントを表す `org.w3c.dom.Document` オブジェクトを作成します。このユーザー定義メソッドは、`org.w3c.dom.Document` オブジェクトを返します。
 * `convertDDX`：`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。このメソッドは、入力パラメーターとして `org.w3c.dom.Document` オブジェクトを受け入れ、`com.adobe.idp.Document` オブジェクトを返します。
@@ -1684,11 +1684,11 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの編集 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
-次のコードの例では、`PDFUtility` を使用して PDF ドキュメントを編集します。
+次のコードの例では、 `PDFUtility`.
 
 >[!NOTE]
 >
->`PDFUtility` は、Acrobat を使用して編集対象としてマークされている PDF のみを編集できます。
+The `PDFUtility` Acrobatを使用して修正用にマークされたPDFのみを修正できます。
 
 ```java
 /*

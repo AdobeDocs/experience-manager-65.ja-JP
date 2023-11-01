@@ -1,23 +1,21 @@
 ---
 title: AEM Forms ワークフローへのログイン
-description: AEM Formsのワークフローの問題をデバッグし、AEM Formsワークフローのデバッグログを有効にしてログを表示します。
-uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
+description: AEM Forms Workflow の問題をデバッグし、AEM Formsワークフローのデバッグログを有効にしてログを表示する方法について説明します。
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 94%
+source-wordcount: '292'
+ht-degree: 82%
 
 ---
 
 # AEM Forms ワークフローへのログイン{#logging-in-aem-forms-workflows}
 
-Forms Workflow の手順では、ワークフローに関する問題をデバッグするのに便利な詳細なログを提供しています。ログを表示するには AEM Formsワークフローのデバッグログを有効にします。
+Forms Workflow手順では、ワークフローに関する問題をデバッグするための詳細なログが便利に提供されます。 ログを表示するには AEM Formsワークフローのデバッグログを有効にします。
 
 デフォルトでは、すべてのログ情報は */crx-repository/logs/* ディレクトリに保存されている **error.log** ファイルにあります。
 
@@ -68,7 +66,7 @@ Forms ワークフローのデバッグログには、次の内容が含まれ�
 
 ログを使用して次の内容を評価します。
 
-* 正しい Adobe Sign 設定を使用していること。
+* 正しいAdobe Sign設定を使用しています。
 * 契約を正常に作成したら Adobe Sign サービスが終了すること。
 * 「ドキュメントに署名」手順が成功メッセージとともに終了すること。
 
@@ -76,7 +74,7 @@ Forms ワークフローのデバッグログには、次の内容が含まれ�
 
 ## AEM Forms ワークフローのデバッグログの有効化 {#enable-debug-logging-for-aem-forms-workflows}
 
-AEM Forms ワークフローのデバッグログを有効にするには、次の手順を実行します。
+AEM Formsワークフローのデバッグログを有効にするには、次の操作を行います。
 
 1. AEM web コンソール設定マネージャーに移動します。
 

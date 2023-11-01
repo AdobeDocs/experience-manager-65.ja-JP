@@ -1,15 +1,15 @@
 ---
 title: レターインスタンスにアクセスするための API
-description: API を検出し、それらを使用して、AEM Forms環境内のレターインスタンスにプログラムでアクセスします。
+description: API を検出し、それらを使用してAEM Forms環境のレターインスタンスにプログラム的にアクセスします。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 35%
+source-wordcount: '597'
+ht-degree: 36%
 
 ---
 
@@ -134,8 +134,8 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 レターインスタンスのタイプは、「送信済み」または「ドラフト」にすることができます。 両方のタイプのレターインスタンスを開くと、異なる動作を示します。
 
-* 送信済みのレターインスタンスの場合は、そのレターインスタンスを表すPDFが開きます。 サーバー上に保存される送信済みのレターインスタンスには、dataXML と処理済みの XDP も含まれます。これを使用して、PDF/A の作成などの事例を実行し、さらにカスタムで使用できます。
-* ドラフトレターインスタンスの場合、通信を作成用 UI は、ドラフトが作成された時点の正確な前の状態に再読み込みされます。
+* 送信済みのレターインスタンスがある場合は、そのレターインスタンスを表すPDFが開きます。 サーバー上に保存される送信済みのレターインスタンスには、dataXML と処理済みの XDP も含まれます。これを使用して、PDF/A の作成などの事例を実行し、さらにカスタムで使用できます。
+* ドラフトレターインスタンスがある場合、通信を作成用 UI は、ドラフトが作成された時点の正確な前の状態に再読み込みされます。
 
 ### ドラフトレターインスタンスを開く  {#opening-draft-letter-instance-nbsp}
 

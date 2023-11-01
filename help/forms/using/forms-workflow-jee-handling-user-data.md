@@ -1,16 +1,14 @@
 ---
 title: Forms JEE ワークフロー | ユーザーデータの処理
-description: AEM Forms JEE ワークフローを使用して、ビジネスプロセスを設計、作成、管理します。
-uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
+description: AEM Forms JEE ワークフローを使用して、ビジネスプロセスを設計、作成、管理する方法について説明します。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 role: Admin
 exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 53%
+source-wordcount: '1388'
+ht-degree: 41%
 
 ---
 
@@ -32,7 +30,7 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
-プロセスがトリガーされると、一意のプロセスインスタンス ID と永続的呼び出し ID が生成され、プロセスインスタンスに関連付けられます。永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスして、データを削除できます。プロセスイニシエーターのユーザー名またはタスクを送信したプロセス参加者のユーザー名を使用して、プロセスインスタンスの永続的呼び出し ID を推測することができます。
+プロセスがトリガーされると、一意のプロセスインスタンス ID と長期間有効な呼び出し ID が生成され、プロセスインスタンスに関連付けられます。 永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスして、データを削除できます。プロセスイニシエーターのユーザー名またはタスクを送信したプロセス参加者のユーザー名を使用して、プロセスインスタンスの永続的呼び出し ID を推測することができます。
 
 ただし、次のシナリオでは、イニシエーターのプロセスインスタンス ID を特定できません。
 
@@ -42,9 +40,9 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
 ### ワークフローの開始者または参加者が既知の場合のプロセスインスタンス ID の識別 {#initiator-participant}
 
-ワークフロー開始者または参加者のプロセスインスタンス ID を識別するには、次の手順を実行します。
+ワークフロー開始者または参加者のプロセスインスタンス ID を識別できるように、次の手順を実行します。
 
-1. AEM Forms サーバーデータベースで次のコマンドを実行して、`edcprincipalentity` データベーステーブルからワークフローイニシエーターまたは参加者のプリンシパル ID を取得します。
+1. AEM Forms Server データベースで次のコマンドを実行して、 `edcprincipalentity` データベーステーブル。
 
    ```sql
    select id from edcprincipalentity where canonicalname='user_ID'
@@ -75,7 +73,7 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
    オーファンタスクまたは `process_instance_id` が 0（ゼロ）であるタスクの場合、該当するタスク ID をメモして、[オーファンタスクの操作](#orphan)を参照してください。
 
-1. [プロセスインスタンス ID に基づいてワークフローインスタンスからユーザーデータを削除する](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge)節の手順に従って、特定されたプロセスインスタンス ID のユーザーデータを削除します。
+1. 詳しくは、 [プロセスインスタンス ID に基づいて、ワークフローインスタンスからユーザーデータをパージします](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 」セクションを使用して、識別されたプロセスインスタンス ID のユーザーデータを削除できます。
 
 ### ユーザーデータがプリミティブ変数に格納されている場合のプロセスインスタンス ID の特定 {#primitive}
 
@@ -85,7 +83,7 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 * **数値**：ユーザー ID が直接含まれます。
 * **XML**：ユーザー ID を、データベース内のテキスト列として保存されたテキスト内のサブ文字列として含み、文字列と同様にクエリできます。
 
-以下の手順を実行して、プリミティブ型変数にデータを格納するワークフローに、そのユーザーのデータが含まれているかどうかを判断します。
+以下の手順を実行して、プリミティブ型変数にデータを格納するワークフローにユーザーのデータが含まれているかどうかを判断できます。
 
 1. 次のデータベースコマンドを実行します。
 
@@ -97,7 +95,7 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
    >[!NOTE]
    >
-   >ワークフローがアプリケーション内のサブフォルダーにネストされている場合、`name` プロパティの値は複合型にすることができます。ワークフローへの正確なフルパスを指定するようにしてください。これは、`omd_object_type` データベーステーブルから取得できます。
+   >の値 `name` ワークフローがアプリケーション内のサブフォルダー内にネストされている場合は、プロパティが複雑になる可能性があります。 ワークフローへの正確なフルパスを指定するようにしてください。これは、`omd_object_type` データベーステーブルから取得できます。
 
 1. `tb_<number>` テーブルスキーマを確認します。このテーブルには、指定したワークフローのユーザーデータを格納する変数が含まれています。 テーブル内の変数は、ワークフロー内の変数に対応しています。
 
@@ -111,13 +109,13 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
    クエリを実行すると、指定された `user_ID` に関連付けられたすべてのプロセスインスタンス ID が返されます。
 
-1. [プロセスインスタンス ID に基づいてワークフローインスタンスからユーザーデータを削除する](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge)節の手順に従って、特定されたプロセスインスタンス ID のユーザーデータを削除します。
+1. 詳しくは、 [プロセスインスタンス ID に基づいて、ワークフローインスタンスからユーザーデータをパージします](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 」セクションを使用して、識別されたプロセスインスタンス ID のユーザーデータを削除できます。
 
 ### プロセスインスタンス ID に基づいて、ワークフローインスタンスからユーザーデータをパージします {#purge}
 
 ユーザーに関連付けられたプロセスインスタンス ID を識別したら、以下の手順を実行して、各プロセスインスタンスからユーザーデータを削除します。
 
-1. 次のコマンドを実行して、`tb_process_instance` テーブルからプロセスインスタンスの永続的呼び出し ID およびステータスを取得します。
+1. 次のコマンドを実行して、プロセスインスタンスの長時間有効な呼び出し ID とステータスを `tb_process_instance` 表。
 
    ```sql
    select long_lived_invocation_id, status from tb_process_instance where id='process_instance_id'
@@ -127,7 +125,7 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
 1. パブリック `ProcessManager` クライアント（`com.adobe.idp.workflow.client.ProcessManager`）のインスタンスを、適切に接続設定された `ServiceClientFactory` インスタンスを使用して作成します。
 
-   詳しくは、 Java API リファレンス ( [クラス ProcessManager](https://helpx.adobe.com/jp/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
+   詳しくは、 Java™ API リファレンス ( [クラス ProcessManager](https://helpx.adobe.com/jp/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html).
 
 1. ワークフローインスタンスのステータスを確認します。 ステータスが 2（COMPLETE）または 4（TERMINATED）以外の場合、次のメソッドを呼び出して最初にインスタンスを停止します。
 
@@ -137,15 +135,15 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
 
    `ProcessManager.purgeProcessInstance(<long_lived_invocation_id>)`
 
-   `purgeProcessInstance` メソッドを使用すると、AEM Forms サーバーデータベースおよび GDS から、指定された呼び出し ID のすべてのデータが完全に削除されます（設定が行われている場合）。
+   The `purgeProcessInstance` メソッドが設定されている場合、指定した呼び出し ID のすべてのデータをAEM Forms Server データベースおよび GDS から完全に削除します。
 
 ### オーファンタスクの操作 {#orphan}
 
-オーファンタスクとは、プロセスが開始されたがまだ送信されていないタスクを指します。 この場合、`process_instance_id` は **0**（ゼロ）になります。したがって、プロセスインスタンス ID を使用してオーファンタスク用に保存されたユーザーデータをトレースすることはできません。 ただし、オーファンタスクのタスク ID を使用してトレースできます。 [ワークフローイニシエーターまたは参加者が分かっている場合のプロセスインスタンス ID の特定](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant)で説明されているように、ユーザーの `tb_task` テーブルからタスク ID を特定することができます。
+オーファンタスクとは、プロセスが開始されたがまだ送信されていないタスクを指します。 この場合、 `process_instance_id` 次に該当 **0** （ゼロ）を返します。 したがって、プロセスインスタンス ID を使用してオーファンタスク用に保存されたユーザーデータをトレースすることはできません。 ただし、オーファンタスクのタスク ID を使用してトレースできます。 [ワークフローイニシエーターまたは参加者が分かっている場合のプロセスインスタンス ID の特定](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant)で説明されているように、ユーザーの `tb_task` テーブルからタスク ID を特定することができます。
 
 タスク ID を取得したら、次の手順を実行して、GDS およびデータベースからオーファンタスクを含む関連ファイルとデータをパージします。
 
-1. AEM Formsサーバーデータベースで次のコマンドを実行して、識別されたタスク ID の ID を取得します。
+1. AEM Forms Server データベースで次のコマンドを実行して、識別されたタスク ID の ID を取得できるようにします。
 
    ```sql
    select id from tb_form_data where task_id=<task_id>
@@ -185,7 +183,7 @@ AEM Forms JEE ワークフロープロセスの作成について詳しくは、
       delete from tb_dm_deletion where sessionid=<session_id>
       ```
 
-1. 次のコマンドを実行して、AEM Formsサーバーデータベースからタスク ID のデータを削除します。
+1. 次のコマンドを実行して、AEM Forms Server データベースからタスク ID のデータを削除できるようにします。
 
    ```sql
    delete from tb_task_acl where task_id=<task_id>

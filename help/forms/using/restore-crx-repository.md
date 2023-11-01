@@ -1,11 +1,11 @@
 ---
 title: JEE クラスターサーバーに適用可能な破損した CRX リポジトリを復元できません
-description: 破損した CRX リポジトリを復元する手順。
+description: 破損している CRX リポジトリを復元する方法について説明します。
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 
@@ -19,9 +19,8 @@ ht-degree: 100%
 
 以下の手順を実行する前に、CRX リポジトリのバックアップを取ります。
 
-## 解決策 {#solution}
+## ソリューション {#solution}
 
-問題を解決するには、以下の手順を実行します。
 1. `https://[AEM Forms Server]:[port]/system/console/bundles` にアクセスします。
 
 1. `oak-core` バンドルを見つけて、実行中かどうかを確認します。
@@ -33,6 +32,4 @@ ht-degree: 100%
 
 ## 適用先 {#applies-to}
 
-このソリューションは次の場合に適用されます。
-
-* JEE クラスター上の AEM Forms
+このソリューションは、JEE 上のAEM Formsクラスターに適用されます。

@@ -1,44 +1,42 @@
 ---
-title: 暗号化サービス Java API クイックスタート（SOAP）
-description: SOAP モードで Java API を使用して、PDFドキュメントの暗号化、パスワード/証明書ベースの暗号化の削除、ロック解除、暗号化の種類の決定を行います。
-uuid: 3e29b3e9-340b-4b35-80cc-f0aff4180892
+title: Encryption Service Java&trade; API QuickStart(SOAP)
+description: SOAP モードで Java&trade; API を使用して、PDFドキュメントの暗号化、パスワード/証明書ベースの暗号化の削除、ロック解除、および暗号化の種類の決定を行う方法について説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: f12c10c3-1ce6-4415-ba9d-5349d1888237
 role: Developer
 exl-id: e8b2aa43-ac27-410d-a809-56bfd1c2fcb1
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '467'
-ht-degree: 95%
+ht-degree: 48%
 
 ---
 
-# 暗号化サービス Java API クイックスタート（SOAP） {#encryption-service-java-api-quickstart-soap}
+# Encryption サービス Java™ API クイックスタート (SOAP) {#encryption-service-java-api-quickstart-soap}
 
-[クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの暗号化](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した PDF ドキュメントの暗号化](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したパスワードベースの暗号化の削除](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用したパスワードベースの暗号化の削除](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの証明書での暗号化](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した PDF ドキュメントの証明書での暗号化](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した証明書ベースの暗号化の削除](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した証明書ベースの暗号化の削除](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した、暗号化された PDF ドキュメントのロック解除](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した、暗号化された PDF ドキュメントのロック解除](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した暗号化タイプの決定](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した暗号化タイプの決定](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
 AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」に記載したクイックスタートは、JBoss Application Server と Microsoft Windows オペレーティングシステムにデプロイされる Forms Server に基づくものです。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM forms によるプログラミング」のクイックスタートは、JBoss® Application Server とMicrosoft® Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの暗号化 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したPDFドキュメントの暗号化 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*Loan.pdf* という名前の PDF ドキュメントをパスワード値 `OpenPassword` で暗号化します。マスターパスワードは `PermissionPassword` です。セキュリティで保護された PDF ドキュメントは、*EncryptLoan.pdf* という名前の PDF ファイルとして保存されます（[パスワードでの PDF ドキュメントの暗号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)を参照してください）。
+次の Java™コードの例では、という名前のPDFドキュメントを暗号化します。 *Loan.pdf* パスワード値は次のとおりです。 `OpenPassword`. 主なパスワードは、 `PermissionPassword`. セキュリティで保護された PDF ドキュメントは、*EncryptLoan.pdf* という名前の PDF ファイルとして保存されます（[パスワードでの PDF ドキュメントの暗号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)を参照してください）。
 
 ```java
  /*
@@ -156,9 +154,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  }
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したパスワードベースの暗号化の削除 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したパスワードベースの暗号化の削除 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
-次の Java コードの例では、*EncryptLoan.pdf* という名前の PDF ドキュメントからパスワードベースの暗号化を削除します。パスワードベースの暗号化の削除に使用するマスターパスワードの値は *PermissionPassword* です。セキュリティで保護されていない PDF ドキュメントは、*noEncryptionLoan.pdf* という名前の PDF ファイルとして保存されます（[パスワードの暗号化の削除](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)を参照してください）。
+次の Java™コードの例では、という名前のパスワードドキュメントからPDFベースの暗号化を削除します。 *EncryptLoan.pdf*. パスワードベースの暗号化を削除するための主なパスワード値は、次のとおりです。 *PermissionPassword*. セキュリティで保護されていない PDF ドキュメントは、*noEncryptionLoan.pdf* という名前の PDF ファイルとして保存されます（[パスワードの暗号化の削除](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)を参照してください）。
 
 ```java
  /*
@@ -253,9 +251,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  }
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの証明書での暗号化 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用した証明書を使用したPDFドキュメントの暗号化 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
 
-次の Java コードの例では、*Loan.pdf* という名前の PDF ドキュメントを、*Encryption.cer* という名前の証明書を使用して暗号化します。暗号化された PDF ドキュメントは、*EncryptLoanCert.pdf* という名前の PDF ファイルとして保存されます（[証明書による PDF ドキュメントの暗号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)を参照してください）。
+次の Java™コードの例では、という名前のPDFドキュメントを暗号化します。 *Loan.pdf* という名前の証明書を持つ *Encryption.cer*. 暗号化された PDF ドキュメントは、*EncryptLoanCert.pdf* という名前の PDF ファイルとして保存されます（[証明書による PDF ドキュメントの暗号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)を参照してください）。
 
 ```java
  /*
@@ -382,9 +380,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用した証明書ベースの暗号化の削除 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用した証明書ベースの暗号化の削除 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
 
-次の Java コードの例では、*EncryptLoanCert.pdf* という名前の PDF ドキュメントから認証ベースの暗号化を削除します。認証の削除に使用する公開鍵のエイリアスは、`Encryption` です。セキュリティで保護されていない PDF ドキュメントは、*noEncryptionLoan.pdf* という名前の PDF ファイルとして保存されます（[証明書ベースの暗号化の削除](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)を参照してください）。
+次の Java™コードの例では、という名前の証明書ドキュメントから証明書ベースの暗号化をPDFします。 *EncryptLoanCert.pdf*. 認証の削除に使用する公開鍵のエイリアスは、`Encryption` です。セキュリティで保護されていない PDF ドキュメントは、*noEncryptionLoan.pdf* という名前の PDF ファイルとして保存されます（[証明書ベースの暗号化の削除](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)を参照してください）。
 
 ```java
  /*
@@ -479,9 +477,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  }
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用した、暗号化された PDF ドキュメントのロック解除 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用した暗号化されたPDFドキュメントのロック解除 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*EncryptLoan.pdf* という名前のパスワードで暗号化された PDF ドキュメントのロックを解除します（[暗号化された PDF ドキュメントのロック解除](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)を参照してください）。
+次の Java™コードの例では、という名前のパスワードで暗号化されたPDF・ドキュメントのロックを解除します。 *EncryptLoan.pdf*. （[暗号化された PDF ドキュメントのロック解除](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -575,9 +573,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用した暗号化タイプの決定 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用した暗号化タイプの決定 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
 
-次の Java コードの例では、*EncryptLoan.pdf* という名前の PDF ドキュメントを保護している暗号化のタイプを特定します（[暗号化のタイプの特定](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type)を参照してください）。
+次の Java™コードの例では、という名前の暗号化ドキュメントを保護するPDFの種類を決定します。 *EncryptLoan.pdf*. （[暗号化タイプの決定](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type)を参照してください）。
 
 ```java
  /*

@@ -7,7 +7,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 37%
@@ -71,7 +71,7 @@ The `/apps` ブランチ（フォルダー構造）:
 
       >[!NOTE]
       >
-      >次を変更しない： `/libs` 分岐。 このブランチは、次の操作を行うたびに変更される可能性が高いので、加えた変更はすべて失われる可能性があります。
+      >次を変更しない： `/libs` 分岐。 このブランチは、以下の場合に変更がおこなわれる可能性が高いので、加えた変更はすべて失われる可能性があります。
       >
       >    
       >    
@@ -83,7 +83,7 @@ The `/apps` ブランチ（フォルダー構造）:
 
    1. 「**OK**」をクリックします。指定されたパスに css フォルダーが作成されます。
 
-1. apps フォルダーに、 `imgs` （ccrui フォルダー内の）imgs フォルダーに似たパス/構造を持つ。
+1. apps フォルダーに、 `imgs` 次のようなパス/構造を持つ `imgs` フォルダー（ccrui フォルダー内）に保存します。
 
    1. 次のパスにある **imgs** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 「ノードをオーバーレイ」ダイアログに次の値が表示されていることを確認します。

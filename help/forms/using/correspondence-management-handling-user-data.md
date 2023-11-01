@@ -1,15 +1,13 @@
 ---
 title: Correspondence Management | ユーザーデータの処理
-description: AEM Forms環境での Correspondence Management とユーザーデータの処理。
-uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
+description: Adobe Experience Manager Forms環境での Correspondence Management とユーザーデータの処理について説明します。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '550'
 ht-degree: 45%
 
 ---
@@ -73,7 +71,7 @@ AEMのデプロイメント用に設定されたデータストアの永続性�
 
 Correspondence Management には、ドラフトインスタンスと送信済みレターインスタンスを検索してアクセスするための API が用意されています。 API を使用すると、レターインスタンス ID または通信を保存または送信したユーザーを使用して、レターインスタンスを検索し、開くことができます。 詳しくは、[レターインスタンスにアクセスするための API](/help/forms/using/cm-apis-to-access-letter-instances.md) を参照してください。
 
-または、CRX DelIte を使用してAEMリポジトリ内のレターインスタンスに移動することもできます。 詳しくは、 [ユーザーデータとデータストア](/help/forms/using/correspondence-management-handling-user-data.md#data) を参照してください。
+または、CRXDE Liteを使用してAEMリポジトリ内のレターインスタンスに移動できます。 詳しくは、 [ユーザーデータとデータストア](/help/forms/using/correspondence-management-handling-user-data.md#data) を参照してください。
 
 ### ユーザーデータの削除 {#delete-user-data}
 

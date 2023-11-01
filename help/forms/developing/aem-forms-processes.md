@@ -1,18 +1,16 @@
 ---
 title: AEM Forms プロセスについて
-description: AEM Formsのプロセスには、フォームの作成、送信、データの処理、検証、統合、ワークフローの自動化、出力の管理が含まれます。
-uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
+description: AEM Formsのプロセスが、フォームの作成、送信、データ処理、検証、統合、ワークフローの自動化、出力管理を含む方法について説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
-discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 98%
+source-wordcount: '814'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +20,7 @@ ht-degree: 98%
 
 使用例として一般的なのは、一連の AEM Forms サービスが単一のドキュメントを操作するというものです。Workbench を使用してプロセスを作成することで、サービスコンテナにリクエストを送信できます。1 つのプロセスが、自動化対象の 1 つのビジネスプロセスを表します。プロセスの作成について詳しくは、[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください。
 
-プロセスがアクティブ化されると、そのプロセスはサービスになり、他のサービスと同様に呼び出すことができます。Encryption サービスなどの標準サービスと、プロセスから生成されるサービスとの違いの 1 つは、後者には多くのアクションを実行する 1 つの操作があるという点です。これに対し、標準のサービスには多くの操作があります。通常、各操作は 1 つのアクション（ドキュメントへのポリシーの適用やドキュメントの暗号化など）を実行します。
+プロセスがアクティブ化されると、そのプロセスはサービスになり、他のサービスと同様に呼び出すことができます。Encryption サービスなどの標準サービスと、プロセスから生成されるサービスとの違いの 1 つは、後者には多くのアクションを実行する 1 つの操作があるという点です。これに対し、標準のサービスには多くの操作があります。 通常、各操作は 1 つのアクション（ドキュメントへのポリシーの適用やドキュメントの暗号化など）を実行します。
 
 プロセスは、短時間のみ有効なものでも長期間有効なものでもかまいません。短時間のみ有効なプロセスとは、同期的に実行される操作のことで、呼び出し元と同じ実行スレッドで実行される操作です。短時間のみ有効な操作は、ほとんどのプログラミング言語で見られる標準的な動作に相当します。つまり、クライアントアプリケーションがメソッドを呼び出し、戻り値を待つ動作です。
 
@@ -30,7 +28,7 @@ ht-degree: 98%
 
 * プロセスが長い時間を要する。
 * プロセスが、複数の組織にまたがっている。
-* プロセスを完了するには、他人による入力が必要。例えば、外出中の上司にフォームを送信した場合を考えてみましょう。この場合、上司が帰社しフォームを入力するまで、プロセスは完了しません。
+* プロセスを完了するには、外部入力が必要です。 例えば、外出中の上司にフォームを送信した場合を考えてみましょう。この場合、上司が帰社しフォームを入力するまで、プロセスは完了しません。
 
   こうしたタイプのプロセスは、長期間有効なプロセスと呼ばれます。 長期間有効なプロセスは非同期で実行されるため、システムはリソースの余裕があるときに処理することができ、操作の追跡や監視をすることも可能です。長期間有効なプロセスが呼び出されると、AEM Forms は、長期間有効なプロセスのステータスを追跡するレコードの一部として、呼び出し識別子の値を作成します。レコードは AEM Forms データベースに保存されます。長期間有効なプロセスレコードは、不要になればパージできます。
 
@@ -63,7 +61,7 @@ ht-degree: 98%
    *AEM Forms によるプログラミング*&#x200B;では、この短時間のみ有効なプロセスをプログラムで呼び出すことができる次の方法について説明しています。
 
    * [AEM Forms Remoting を使用して保護されていないドキュメントを渡すことにより、短時間のみ有効なプロセスを呼び出す](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)（Flex アプリケーションを使用）
-   * [呼び出し API を使用した短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api)（Java 呼び出し API）
+   * [呼び出し API を使用した短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java™呼び出し API)
    * [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)（web サービスの例）
    * [MTOM を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （web サービスの例）
    * [SwaRef を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) （web サービスの例）

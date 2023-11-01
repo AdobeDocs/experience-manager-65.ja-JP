@@ -1,22 +1,20 @@
 ---
-title: フォームポータルコンポーネントのテンプレートをカスタマイズする
-description: AEM Formsのユーザーインターフェイスを使用すると、ユーザーはメタデータをフォームに追加できます。 カスタムメタデータを使用すると、組織内のフォームリストや検索でのユーザーエクスペリエンスが向上します。
-uuid: 212109ca-85c8-4915-82e5-a18a0443be1b
+title: Forms Portal コンポーネントのテンプレートのカスタマイズ
+description: AEM Formsユーザーインターフェイスを使用して、ユーザーがフォームにメタデータを追加する方法について説明します。 カスタムメタデータを使用すると、フォームの一覧と検索の操作性が向上します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '1243'
-ht-degree: 57%
+source-wordcount: '1250'
+ht-degree: 51%
 
 ---
 
-# フォームポータルコンポーネントのテンプレートをカスタマイズする{#customizing-templates-for-forms-portal-components}
+# Forms Portal コンポーネントのテンプレートのカスタマイズ{#customizing-templates-for-forms-portal-components}
 
 ## 前提条件 {#prerequisites}
 
@@ -30,7 +28,7 @@ AEM Formsユーザーインターフェイスを使用すると、任意のフ�
 
 Forms Portal では、フォームリストにカスタムメタデータを使用できます。 アセットのカスタムテンプレートを作成する際に、レイアウトを変更し、CSS スタイルセットでカスタムメタデータを使用することができます。
 
-様々なForms Portal コンポーネントのカスタムテンプレートを作成するには、次の手順を実行します。
+様々なForms Portal コンポーネントのカスタムテンプレートを作成できるように、次の操作を実行します。
 
 ## カスタムテンプレートの作成 {#creating-a-nbsp-custom-template}
 
@@ -55,7 +53,7 @@ Forms Portal では、フォームリストにカスタムメタデータを使�
    次の画像は、Search &amp; Listerコンポーネントの構成を示します。
    ![sling:Folderの作成](assets/1.png)
 
-1. このフォルダー内に template.html ファイルを作成して、カスタムテンプレートとして使用します。
+1. このフォルダーに template.html ファイルを作成し、カスタムテンプレートとして使用できるようにします。
 1. 以下の説明に従って、カスタムテンプレートを記述し、カスタムメタデータを使用します。
 
 ## 作業例 {#working-example}
@@ -92,7 +90,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 
 それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります. フォームの特定の場所でカスタムメタデータを表示するには、そこに **${metadata_prop} プロパティ** を追加します。
 
-*この例では、メタデータプロパティは複数のインスタンスで使用されています。例えば、**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**、および&#x200B;**path**で所定の方法で使用されます。*
+*この例では、metadata プロパティは複数のインスタンスで使用されています。 例えば、**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**、および&#x200B;**path**で所定の方法で使用されます。*
 
 ## 標準提供のメタデータ {#out-of-the-box-metadata}
 
@@ -120,7 +118,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 1. **ローカリゼーションサポート**：スタティックテキストをローカライズするには、属性 `${localize-YOUR_TEXT}` を使用し、ローカライズされた値が存在しない場合は、値を用意します。
    *上記の例では、属性 `${localize-Apply}` と `${localize-Download}` は、「Apply」と「Download」のテキストをローカライズするのに使用します。*
 
-1. **並べ替えのサポート**：検索結果を並べ替えるには、HTML要素をクリックします。 テーブルレイアウトでの並べ替えを実装するには、特定のテーブルヘッダーに「data-sortKey」属性を追加します。 さらに、ソートしたいメタデータとしてその値を加えます。例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして特定の列の値を並べ替えます。
+1. **並べ替えのサポート**：検索結果を並べ替えるには、HTML要素をクリックします。 テーブルレイアウトでの並べ替えを実装するには、特定のテーブルヘッダーに「data-sortKey」属性を追加します。 さらに、ソートしたいメタデータとしてその値を加えます。例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えることができます。
 
 1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。例えば、編集ダイアログを通して保存された HTML ツールヒントテキストを表示するには、`${config-htmlLinkText}` 属性を使用します。**同様に、PDF ツールヒントテキストにも、** `${config-pdfLinkText}` 属性を使用します。
 
@@ -133,7 +131,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 
 ### ドラフトと送信コンポーネント {#drafts-amp-submissions-component}
 
-* **パス**：ドラフト/送信メタデータノードのパス。 ドラフトまたは送信を開くには、URL として HTML 拡張子と一緒に使用してください。
+* **パス**：ドラフト/送信メタデータノードのパス。 URL として拡張子。HTMLと共に使用して、ドラフトまたは送信を開くことができます。
 * **contextPath**:AEMインスタンスのコンテキストパス。
 * **firstLetter**：ドラフトとして保存または送信されたアダプティブフォームのタイトルの最初の文字（大文字）
 * **formName**：ドラフトとして保存または送信されたアダプティブフォームのタイトル。
@@ -141,7 +139,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 * **submitID**：リストに表示される送信の ID（送信セクションのテンプレートでのみ使用）
 * **ステータス**：送信されたフォームのステータス。 （「送信」セクションのテンプレートでのみ使用）。
 * **説明**：ドラフトまたは送信に関連付けられているアダプティブフォームの説明。
-* **diffTime**：現在の時刻とドラフトの最後の保存アクションとの差。 または、現在の時刻と送信の最後の送信アクションの差を指定します。
+* **diffTime**：現在の時刻とドラフトの最後の保存アクションとの差。 または、現在の時刻と送信時に最後に送信されたアクションの差を指定します。
 * **iconClass**：ドラフト/送信の最初の文字を表示するために使用される CSS クラス。 Forms Portal には、様々な色の背景を提供する、次のクラスが含まれています。
 * **所有者**：ドラフト/送信を作成したユーザー。
 * **Today**：DD:MM:YYYY 形式のドラフト作成日または送信日。
@@ -161,7 +159,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 
 **C.** 各フォームのテンプレートセクションに使用する Data-repeatable 属性
 
-**D.** 「Apply」文字列をローカライズする
+**D.** &quot;適用&quot;文字列をローカライズする
 
 **E.** pdfLink テキストの設定プロパティを使用する
 
@@ -176,11 +174,11 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 
 ## 関連記事
 
-* [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
-* [フォームポータルページの作成 ](/help/forms/using/creating-form-portal-page.md)
+* [フォームポータルコンポーネントを有効にする](/help/forms/using/enabling-forms-portal-components.md)
+* [Forms Portal の作成ページ](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
-* [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
-* [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [ドラフトと送信コンポーネントのデータベースへの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
+* [Forms Portal コンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム公開の概要](/help/forms/using/introduction-publishing-forms.md)

@@ -1,38 +1,36 @@
 ---
-title: DocConverter サービス Java API QuickStart（SOAP）
-description: ドキュメントをPDF/A ドキュメントに変換し、Java API クイックスタート (SOAP) を使用してコンプライアンスを管理します。
-uuid: a02e13a5-4557-4c8a-a4be-e8d017127128
+title: DocConverter Service Java&trade; API QuickStart(SOAP)
+description: ドキュメントをPDF/A ドキュメントに変換し、Java&trade; API クイックスタート (SOAP) を使用してコンプライアンスを管理する方法を説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: ea4b26c8-b9cf-42c2-b4da-2884336014a9
 role: Developer
 exl-id: 554b19d6-47c3-4171-b59d-343f1ad935b2
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 93%
+source-wordcount: '270'
+ht-degree: 47%
 
 ---
 
-# DocConverter サービス Java API QuickStart（SOAP） {#docconverter-service-java-api-quickstart-soap}
+# DocConverter サービス Java™ API クイックスタート (SOAP) {#docconverter-service-java-api-quickstart-soap}
 
-DocConverter サービスで Java API Quick Start（SOAP）を使用できます。
+DocConverter サービスで Java™ API クイックスタート (SOAP) を使用できます。
 
-[クイックスタート（SOAP モード）：Java API を使用した PDF/A の適合性の判断](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した PDF/A の適合性の判断](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した PDF/A ドキュメントへのドキュメントの変換](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用した PDF/A ドキュメントへのドキュメントの変換](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
 AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」に記載したクイックスタートは、JBoss Application Server と Microsoft Windows オペレーティングシステムにデプロイされる Forms Server に基づくものです。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM forms によるプログラミング」のクイックスタートは、JBoss® Application Server とMicrosoft® Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAP モード）：Java API を使用した PDF/A ドキュメントへのドキュメントの変換 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
+## クイックスタート（SOAP モード）: Java™ API を使用してドキュメントをPDF/A ドキュメントに変換する {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
 
-次の Java コードの例では、*Loan.pdf* という名前の PDFドキュメントが *LoanArchive.pdf* という名前の PDF で保存された PDF/A ドキュメントに変換されます（[ドキュメントを PDF/A ドキュメントに変換する](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)を参照してください）。
+次の Java™コードの例では、という名前のPDFドキュメントを変換します。 *Loan.pdf* をPDF/A ドキュメントに追加します。このドキュメントは、次の名前のPDFファイルとして保存されます。 *LoanArchive.pdf*. （[ドキュメントを PDF/A ドキュメントに変換する](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)を参照。）
 
 ```java
  /*
@@ -133,9 +131,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  }
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用した PDF/A の適合性の判断 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
+## クイックスタート（SOAP モード）: Java™ API を使用したPDF/A 準拠の判断 {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
 
-次の Java コードの例では、入力用の PDF ドキュメントが PDF/A に準拠しているかどうかを判断します。DocConverter サービスに渡される入力用 PDF ドキュメントの名前は *LoanArchive.pdf* です。検証結果は、*ValidationResults.xml* という XML ファイルに書き込まれます（ [プログラムによる PDF/A の適合性の判断](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)を参照してください） 。
+次の Java™コードの例は、入力PDFドキュメントがPDF/A に準拠しているかどうかを判別します。 DocConverter サービスに渡される入力用 PDF ドキュメントの名前は *LoanArchive.pdf* です。検証結果は、*ValidationResults.xml* という XML ファイルに書き込まれます（ [プログラムによる PDF/A の適合性の判断](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)を参照してください） 。
 
 ```java
  /*

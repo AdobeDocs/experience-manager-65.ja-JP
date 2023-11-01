@@ -1,11 +1,11 @@
 ---
 title: JEE と OSGI の両方に適用可能な PDFG 設定の UAC の無効化
-description: PDFG 設定の UAC を無効にする手順 をクリックして、Word からPDFへの変換を修正します。
+description: PDFG 設定の UAC を無効にして、Word からPDFへの変換を修正する方法について説明します。
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 93%
+source-wordcount: '262'
+ht-degree: 58%
 
 ---
 
@@ -13,17 +13,18 @@ ht-degree: 93%
 
 ## 問題 {#issue}
 
-ユーザーが Word ファイルまたは Excel ファイルを Microsoft Windows Server 上で PDF に変換しようとすると、次のエラーが発生します。
+ユーザーがMicrosoft® Windows Server 上で Word または Excel ファイルをPDFに変換しようとすると、次のエラーが発生します。
 
-*プライマリコンバーターからのエラーメッセージ：
-ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
+*プライマリコンバータからのエラーメッセージ：*
+*ALC-PDG-015-003-Theシステムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
 
-## 解決策 {#solution}
+## ソリューション {#solution}
 
-問題を解決するには、以下の手順を実行します。
+次の手順を実行します。
+
 1. システム構成ユーティリティにアクセスするには、**[!UICONTROL スタート／ファイル名を指定して実行]**&#x200B;を選択し、**[!UICONTROL MSCONFIG]** と入力します。
-1. 「**[!UICONTROL ツール]**」タブをクリックし、スクロールして「**[!UICONTROL UAC 設定を変更]**」を選択します。「**[!UICONTROL 起動]**」をクリックして新しいウィンドウでコマンドを実行します。
+1. 「**[!UICONTROL ツール]**」タブをクリックし、スクロールして「**[!UICONTROL UAC 設定を変更]**」を選択します。クリック **[!UICONTROL Launch]** 新しいウィンドウでコマンドを実行できます。
 1. スライダーを「通知しない」レベルに設定します。完了したら、コマンドウィンドウを閉じ、システム構成ウィンドウを閉じます。
 1. レジストリ設定で UAC が 0（ゼロ）に設定されていることを検証します。検証するには、以下の手順を実行します。
 
@@ -36,6 +37,4 @@ ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイ
 
 ## 適用先 {#appliesto}
 
-このソリューションは、次の場合に適用されます。
-* JEE サーバー上の AEM Forms
-* OSGi サーバー上の AEM Forms
+このソリューションは、JEE 上のAEM Forms Server と OSGi 上のAEM Formsに適用されます。

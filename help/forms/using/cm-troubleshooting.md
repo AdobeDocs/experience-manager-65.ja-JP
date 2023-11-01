@@ -1,17 +1,15 @@
 ---
 title: 「Correspondence Management：トラブルシューティング」
-description: AEM Forms環境でレターを保存するプロセス中に発生する可能性のあるエラーを処理します。
-uuid: 25828cdd-110e-4a84-8f31-d82cd610a54f
+description: AEM Forms環境でレターを保存する際に発生するエラーを処理する方法を説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 feature: Correspondence Management
 exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
-source-git-commit: 68a1edf5f62d7a988094fceb3f762504711dc2f1
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 21%
+source-wordcount: '215'
+ht-degree: 17%
 
 ---
 
@@ -24,7 +22,7 @@ ht-degree: 21%
 レターを保存する際に、次のエラーの 1 つが表示されます。
 
 * テキストモジュールのデータ連結が存在しません
-* 次に必要なプロパティ情報を指定してください
+* 次に必要なプロパティ情報を指定します
 
 ### 理由 {#reason}
 
@@ -50,5 +48,5 @@ ht-degree: 21%
 1. **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** に移動して管理者としてログインします。
 1. 「**Correspondence Management の設定**」を選択します。
 1. 「**Correspondence Management の設定**」で、「**レターのキャッシュを有効にする**」を無効にして「**保存**」をクリックします。
-1. 「**レターのキャッシュを有効にする**」を無効にし、「**保存**」をクリックします。
+1. チェック **レターキャッシュを有効にする** 次に、「 **保存**.
 1. レターの表示をもう一度やり直します。

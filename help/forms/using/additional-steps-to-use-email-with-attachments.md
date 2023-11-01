@@ -1,17 +1,18 @@
 ---
-title: 添付ファイル付きのメールを受信するための追加手順
-description: JEE 上のAEM Formsプラットフォームの添付ファイルを含む電子メールを取得できない場合のエラーを修正します。
+title: 添付ファイル付きの電子メールを取得するための追加手順
+description: JEE 上のAEM Formsプラットフォームで添付ファイルを含む電子メールを取得できない場合のエラーの修正方法を説明します。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: 20b0d0db54dc30285c056a10032f02ba45f8baca
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 67%
+source-wordcount: '237'
+ht-degree: 64%
 
 ---
 
 # AEM Forms on JEE プラットフォームで添付ファイル付きのメールを受信できない{#unable-to-get-email-with-attachments}
 
 この問題が該当するのは、次のバージョンです。
+
 * Experience Manager 6.5 Forms
 
 ## 問題 {#issue}
@@ -37,7 +38,7 @@ ht-degree: 67%
 
 1. 手順 3 で取得した `java.mail-1.5.jar` をインストールします。この手順を実行すると、JEE デプロイメントの Sling プロパティが再起動されます。`http://<server name>:<port>/lc/system/console/bundles` にインストールされたバンドルのステータス表示が&#x200B;**アクティブ**&#x200B;になるまで待ちます。
 
-   >注意：この場合、ステータスは「 **InActive**，再起動   **JBoss®** から **サービスコンソール**.
+   >ステータスがまだの場合 **InActive**，再起動   **JBoss®** から **サービスコンソール**.
 
 
 1. 手順 5 でダウンロードした `javax.mail-1.5.6.redhat-1.jar` ファイルをインストールします。

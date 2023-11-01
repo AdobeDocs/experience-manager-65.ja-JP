@@ -1,37 +1,35 @@
 ---
-title: コンポーネントとサービス Java API クイックスタート（SOAP）
-description: Java API Quick Start(SOAP) を使用して、AEM Formsのコンポーネントとサービスをプログラムで操作します。
-uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
+title: コンポーネントとサービス Java&trade; APIQuick Start (SOAP)
+description: Java&trade; API クイックスタート (SOAP) を使用して、AEM Formsのコンポーネントやサービスをプログラムで操作する方法について説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
-discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: 0e5b89617d481c69882ec5d4658e76855aa9b691
+source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 96%
+source-wordcount: '430'
+ht-degree: 37%
 
 ---
 
-# コンポーネントとサービス Java API クイックスタート（SOAP） {#components-and-services-java-apiquick-start-soap}
+# コンポーネントとサービス Java™ API クイックスタート (SOAP) {#components-and-services-java-apiquick-start-soap}
 
-Java API クイックスタート（SOAP）は、コンポーネントとサービスで使用できます。
+Java™ API クイックスタート (SOAP) は、コンポーネントとサービスで使用できます。
 
 
-[クイックスタート（SOAP モード）：Java API を使用したコンポーネントのデプロイ](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用したコンポーネントのデプロイ](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したサービスの実行コンテキストの設定](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用したサービスの実行コンテキストの設定](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したサービスセキュリティの無効化](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用したサービスセキュリティの無効化](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したサービスの開始](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用したサービスの開始](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したサービス設定値の変更](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用したサービス設定値の変更](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したコンポーネントの削除](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
+[クイックスタート（SOAP モード）：Java を使用したコンポーネントの削除](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
 AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
@@ -42,15 +40,15 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」のクイックスタートは、JBoss および Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、Unix などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM forms によるプログラミング」のクイックスタートは、JBoss®および Windows オペレーティングシステムにデプロイされているForms Server に基づいています。 ただし、UNIX®などの別のオペレーティング・システムを使用している場合は、Windows 固有のパスを、該当するオペレーティング・システムでサポートされるパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 >[!NOTE]
 >
->カスタムコンポーネントがあり、SOAP または EJB プロトコルを使用して同じローカルサーバー上で DSC を呼び出している場合、アップグレード後にこれらの呼び出しが機能しなくなり、VM 内呼び出し方法を使用します。デフォルトの ServiceClientFactory で VM 内 DSC 呼び出しメソッドを使用し、SOAP または EJB プロトコルを使用して ServiceClientFactory を構築しないでください。
+カスタムコンポーネントがあり、SOAP または EJB プロトコルを使用して同じローカルサーバー上で DSC を呼び出している場合、アップグレード後にこれらの呼び出しが機能しなくなり、VM 内呼び出し方法を使用します。デフォルトの ServiceClientFactory で VM 内 DSC 呼び出しメソッドを使用し、SOAP または EJB プロトコルを使用して ServiceClientFactory を構築しないでください。
 
-## クイックスタート（SOAP モード）：Java API を使用したコンポーネントのデプロイ {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したコンポーネントのデプロイ {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-次の Java の例は、*adobe-emailSample-dsc.jar* という名前の JAR ファイルに基づくコンポーネントをデプロイします。
+次の Java™の例は、という名前の JAR ファイルに基づくコンポーネントをデプロイします *adobe-emailSample-dsc.jar*.
 
 ```java
  /* 
@@ -150,9 +148,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したサービスの実行コンテキストの設定 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したサービスの実行コンテキストの設定 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-次の Java コードの例では、Run-As Invoker 実行コンテキストを、*EncryptDocument* という名前のサンプルサービスに設定します。
+次の Java™コードの例では、Run-As Invoker 実行コンテキストを、という名前のサンプルサービスに設定します。 *EncryptDocument*.
 
 ```java
  /* 
@@ -242,9 +240,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したサービスセキュリティの無効化 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したサービスセキュリティの無効化 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
-次の Java コードの例では、サンプルの EncryptDocument サービスと、このサービス内（Set Value サービスと Encryption サービス）から呼び出されるサービスのセキュリティを無効にします。
+次の Java™コードの例では、サンプルの EncryptDocument サービスと、このサービス内（Set Value サービスと Encryption サービス）から呼び出されるサービスのセキュリティを無効にします。
 
 ```java
  /* 
@@ -355,9 +353,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したサービスの開始 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したサービスの開始 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-次の Java コードの例は、*SendEmailService* という名前のサービスを開始します。
+次の Java™コードの例は、という名前のサービスを開始します。 *SendEmailService*.
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -413,9 +411,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したサービス設定値の変更 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したサービス設定値の変更 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
-次の Java の例では、SendEmail Service に属する設定値を変更します。
+次の Java™の例では、SendEmail Service に属する設定値を変更します。
 
 ```java
  /* 
@@ -504,7 +502,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              modService.setConfigParameterAsText("smtpUser","smyUserName");     
              modService.setConfigParameterAsText("smtpPassword","myPassword");     
                       
-             //Modify the service’s configuration values 
+             //Modify the service's configuration values 
              serviceReg.modifyConfiguration(modService); 
                           
              //Conform the new configuration values 
@@ -525,9 +523,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したコンポーネントの削除 {#quick-start-soap-mode-removing-components-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したコンポーネントの削除 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
-以下の Java コードの例では、Java API を使用してコンポーネントを削除します。
+以下の Java™コードの例では、Java™ API を使用してコンポーネントを削除します。
 
 ```java
  /* 
