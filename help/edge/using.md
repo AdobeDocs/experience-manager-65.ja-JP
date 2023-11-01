@@ -1,9 +1,10 @@
 ---
 title: 使用Edge Delivery Services
-description: 使用Edge Delivery Services
-source-git-commit: 0c0e14ec3d022b7e9efd17edf2997990f5ac3dc2
+description: Edge Delivery Services(EDS) の使用
+exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
+source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
