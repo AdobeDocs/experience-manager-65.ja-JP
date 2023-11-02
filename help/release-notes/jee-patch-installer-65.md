@@ -8,7 +8,7 @@ exl-id: 6b17472b-9226-4319-b305-4dba862d21af
 source-git-commit: f0b59ff25f49f5ca12bc6966882f68b5231a9511
 workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 82%
+ht-degree: 84%
 
 ---
 
@@ -28,7 +28,7 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
 ## パッチのインストールと設定 {#installing-and-configuring-the-patch}
 
-1. &lt;*AEM_forms_root*>/deploy フォルダー。 Quick Fix をアンインストールする場合は必須です。
+1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
 1. アプリケーションサーバーを停止します。
 1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
