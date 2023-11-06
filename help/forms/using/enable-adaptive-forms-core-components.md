@@ -1,20 +1,18 @@
 ---
 title: AEM 6.5 FormsでアダプティブFormsコアコンポーネントを有効にするにはどうすればよいですか？
-seo-title: How to enable Adaptive Forms Core Components on AEM 6.5 Forms?
 description: AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にする手順ガイドです。
-seo-description: Step-by-Step guide to help you enable Adaptive Forms Core Components on an AEM 6.5 Forms environment.
 keywords: コアコンポーネント、コアコンポーネントアダプティブForms、コアコンポーネント 6.5、アダプティブFormsコアコンポーネント (AEM 6.5)、AF コアコンポーネント (AEM 6.5、AEM 6.5 Formsコアコンポーネント ) の有効化
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
+source-git-commit: 1da3abac8a7f09d41127818a5abacf29524f1365
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 9%
+source-wordcount: '990'
+ht-degree: 52%
 
 ---
-
 
 # AEM 6.5 FormsでのアダプティブFormsコアコンポーネントの有効化 {#enable-adaptive-forms-core-components}
 
@@ -27,24 +25,23 @@ ht-degree: 9%
 
 アダプティブFormsコアコンポーネントを有効にすると、作成、公開、配信を開始できます [コアコンポーネントベースのアダプティブForms](create-an-adaptive-form-core-components.md) および [ヘッドレスアダプティブForms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp) AEM 6.5 Forms環境から
 
-AEM 6.5 Forms環境で HAdaptive Formsコアコンポーネントを有効にするには、 [AEM Archetype 41 以降](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) すべてのオーサーインスタンスとパブリッシュインスタンス上の（フォームオプションが有効な）プロジェクトをベースにする。
+AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にするには、 [AEM Archetype 41 以降](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) すべてのオーサーインスタンスとパブリッシュインスタンス上の（フォームオプションが有効な）プロジェクトをベースにする。
 
-この記事では、AEM 6.5 Forms環境上のAEM Archetype 41 以降ベースのプロジェクトを設定してデプロイし、アダプティブFormsコアコンポーネントを有効にする詳細な手順を説明します。
-
+この記事では、AEM 6.5 Forms環境上のAEM Archetype 41 以降ベースのプロジェクトを設定してデプロイし、アダプティブFormsコアコンポーネントを有効にする詳細な手順を説明します。 以下のリストを参照して、 **AEM 6.5** Formsコアコンポーネントを有効にする互換性のあるバージョン：
 
 ## 前提条件 {#prerequisites}
 
 AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にする前に、次の手順を実行します。
 
-* [AEM 6.5 Forms Service Pack 16(6.5.16.0) 以降にアップグレードします。](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html).
+* [AEM 6.5 Forms サービスパック 16（6.5.16.0）以降にアップグレードします](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)。
 
-* 最新リリースのをインストールする [Apache Maven](https://maven.apache.org/download.cgi).
+* [Apache Maven](https://maven.apache.org/download.cgi) の最新リリースをインストールします。
 
-* プレーンテキストエディターをインストールします。 例： Microsoft Visual Studio Code。
+* プレーンテキストエディターをインストールします。例えば Microsoft Visual Studio Code などです。
 
-## 最新のAEMアーキタイプベースのプロジェクトを作成してデプロイする
+## 最新の AEM アーキタイプをベースにしたプロジェクトの作成とデプロイ
 
-AEMアーキタイプ 41 を作成するには、以下を実行します。 [後で](https://github.com/adobe/aem-project-archetype) ベースのプロジェクトを作成し、すべてのオーサーインスタンスとパブリッシュインスタンスにデプロイします。
+AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetype)をベースにしたプロジェクトを作成し、すべてのオーサーインスタンスとパブリッシュインスタンスにデプロイするには：
 
 1. AEM 6.5 Formsインスタンスをホストし、実行しているコンピューターに、管理者としてログインします。
 1. コマンドプロンプトまたはターミナルを開き、次のコマンドを実行してAEM Archetype プロジェクトを作成します（フォームオプションが有効な状態）。
@@ -63,7 +60,7 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
       -D aemVersion="6.5.15" 
    ```
 
-   * Linux またはApple macOS
+   * Linux または Apple macOS
 
    ```Shell
       mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
@@ -83,12 +80,12 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 
    * を設定します。 `archetypeVersion` プロパティを `41` または後で。 最新バージョンについては、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) ドキュメント。
 
-   * コマンドを更新して、 `appTitle`, `appId`、および `groupId`. また、  `includeFormsenrollment` プロパティを `y`. Forms Portal を使用している場合、 `includeExamples=y` Forms Portal コアコンポーネントをプロジェクトに含めるオプション。
+   * コマンドを更新して、 `appTitle`, `appId`、および `groupId`. また、  `includeFormsenrollment` プロパティを `y`. フォームポータルを使用する場合は、`includeExamples=y` オプションを設定して、フォームポータルのコアコンポーネントをプロジェクトに含めます。
 
 
-1. （アーキタイプバージョン 41 ベースのプロジェクトのみ）AEMアーキタイププロジェクトを作成したら、コアコンポーネントベースのアダプティブFormsのテーマを有効にします。 テーマを有効にするには：
+1. （アーキタイプバージョン 41 ベースのプロジェクトの場合のみ）AEM アーキタイププロジェクトの作成後に、コアコンポーネントベースのアダプティブフォームのテーマを有効にします。テーマを有効にするには、次の手順を実行します。
 
-   1. を開きます。 [AEM Archetype プロジェクトフォルダー]/ui.apps/src/main/content/jcr_root/apps/__appId__/components/adaptiveForm/page/customheaderlibs.html編集用：
+   1. [AEM Archetype Project Folder]/ui.apps/src/main/content/jcr_root/apps/__appId__/components/adaptiveForm/page/customheaderlibs.html を編集用に開きます。
 
    1. 21 行目に次のコードを追加します。
 
@@ -100,23 +97,32 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
       </sly>
       ```
 
-      ![上記のコードを 21 行目に追加します。](/help/forms/using/assets/code-to-enable-themes.png)
+      ![21 行目に上記のコードを追加したところ](/help/forms/using/assets/code-to-enable-themes.png)
 
    1. ファイルを保存して閉じます。
 
-1. プロジェクトを更新して、Formsコアコンポーネントの最新バージョンを含めます。
+1. 最新バージョンの Forms コアコンポーネントを含めるようにプロジェクトを更新します。
 
-   1. を開きます。 [AEM Archetype プロジェクトフォルダー]/pom.xmlを参照してください。
-   1. のバージョンを設定 `core.forms.components.version` および `core.forms.components.af.version` から [最新のFormsコアコンポーネント](https://github.com/adobe/aem-core-forms-components/tree/release/650) バージョン。
+   1. [AEM Archetype Project Folder]/pom.xml を編集用に開きます。
+   1. のバージョンを設定 `core.forms.components.version` および `core.forms.components.af.version` から [最新のFormsコアコンポーネント](https://github.com/adobe/aem-core-forms-components/tree/release/650#system-requirements) のバージョンと両方がと同じバージョンであることを確認します。 **Forms Core Components** 表に記載されている、およびセットバージョンの `core.wcm.components.version` 以下で指定されたように **WCM コアコンポーネント**.
+
+      >[!WARNING]
+      >
+      >* でアーキタイププロジェクトを作成する場合 `version 45`、 [AEM Archetype プロジェクトフォルダー]/pom.xmlは最初に、フォームコアコンポーネントのバージョンをに設定します。 `1.1.28`. アーキタイププロジェクトを構築またはデプロイする前に、フォームコアコンポーネントのバージョンをに更新します。 `1.1.26`.
+
+
+      >[!NOTE]
+      >
+      >* その他のトポロジを設定する場合は、送信、事前入力およびその他の URL を Dispatcher レイヤーのに必ず追加しま許可リストに加えるす。
 
    1. ファイルを保存して閉じます。
 
 
-1. AEMアーキタイププロジェクトが正常に作成されたら、環境用のデプロイメントパッケージを構築します。 パッケージをビルドするには、次の手順に従います。
+1. AEM アーキタイププロジェクトが正常に作成されたら、環境用のデプロイメントパッケージをビルドします。パッケージをビルドするには、以下を実行します。
 
-   1. AEMアーキタイププロジェクトのルートディレクトリに移動します。
+   1. AEM アーキタイププロジェクトのルートディレクトリに移動します。
 
-   1. 次のコマンドを実行して、環境用のAEM Archetype プロジェクトを構築します。
+   1. 次のコマンドを実行して、環境に対応する AEM アーキタイププロジェクトをビルドします。
 
       ```Shell
       mvn clean install
@@ -125,9 +131,9 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
       ![archetypebuild-success](/help/forms/using/assets/corecomponent-build-successful.png)
 
 
-   AEMアーキタイププロジェクトが正常に構築されたら、AEMパッケージが生成されます。 パッケージは、次の場所にあります。 [AEM Archetype プロジェクトフォルダー]\all\target\[appid].all-[version].zip
+   AEM アーキタイププロジェクトが正常にビルドされると、AEM パッケージが生成されます。パッケージは、[AEM Archetype Project Folder]\all\target\[appid].all-[version].zip になります。
 
-1. 以下を使用します。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) をデプロイするには [AEM Archetype プロジェクトフォルダー]\all\target\[appid].all-[version]すべてのオーサーインスタンスとパブリッシュインスタンス上に.zip パッケージを作成します。
+1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を使用して、[AEM Archetype Project Folder]\all\target\[appid].all-[version].zip パッケージをすべてのオーサーインスタンスとパブリッシュインスタンスにデプロイします。
 
 >[!NOTE]
 >
@@ -136,23 +142,23 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 > * パブリッシュインスタンスでログインダイアログにアクセスできない場合は、パッケージマネージャーを使用してパッケージをインストールするには、次の URL を使用してみてください。 `http://[Publish Server URL]:[PORT]/system/console` ログインします。 これにより、パブリッシュインスタンスのログインページにアクセスして、インストールプロセスを続行できます。
 > * 環境にデプロイした後で、アーキタイププロジェクトを削除または破棄しないでください。 カスタマイズされた新しいアダプティブFormsコアコンポーネントテーマを環境に追加するには、アーキタイププロジェクトが必要です。
 
-コアコンポーネントは、お使いの環境で有効になっています。 空のコアコンポーネントベースのアダプティブフォームテンプレートと Canvas 3.0 テーマが環境にデプロイされ、次の操作が可能になります。 [コアコンポーネントベースのアダプティブFormsの作成](create-an-adaptive-form-core-components.md).
+お使いの環境でコアコンポーネントが有効になります。空のコアコンポーネントベースのアダプティブフォームテンプレートと Canvas 3.0 テーマが使用中の環境にデプロイされ、[コアコンポーネントベースのアダプティブフォームを作成](create-an-adaptive-form-core-components.md)できるようになります。
 
 ## よくある質問
 
 ### コアコンポーネントとは
 
-The [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) は、AEMの開発時間を短縮し、Web サイトのメンテナンスコストを削減するための、標準化された Web コンテンツ管理 (WCM) コンポーネントのセットです。
+[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)は、web サイト開発時間の短縮とメンテナンスコストの削減を実現する、AEM の標準化された web コンテンツ管理（WCM）コンポーネントのセットです。
 
-### コアコンポーネントを有効にすると、どのような機能が追加されるのですか？
+### コアコンポーネントを有効にすると、どのような機能が追加されますか？
 
 
-お使いの環境でアダプティブFormsコアコンポーネントを有効にすると、空のコアコンポーネントベースのアダプティブフォームテンプレートとキャンバス 3.0 テーマが環境に追加されます。 お使いの環境でアダプティブFormsコアコンポーネントを有効にすると、次の操作を実行できます。
+使用中の環境でアダプティブフォームのコアコンポーネントを有効にすると、空のコアコンポーネントベースのアダプティブフォームテンプレートと Canvas 3.0 テーマが環境に追加されます。お使いの環境でアダプティブフォームのコアコンポーネントを有効にすると、次の操作を実行できます。
 
-* コアコンポーネントベースのアダプティブFormsを作成します。
-* コアコンポーネントベースのアダプティブフォームテンプレートを作成します。
-* コアコンポーネントベースのアダプティブフォームテンプレート用にカスタムテーマを作成します。
-* コアコンポーネントベースのアダプティブフォームの JSON 表現を、モバイル、Web、ネイティブアプリ、フォームのヘッドレス表現を必要とするサービスなどのチャネルに提供する。
+* コアコンポーネントベースのアダプティブフォームの作成。
+* コアコンポーネントベースのアダプティブフォームテンプレートの作成。
+* コアコンポーネントベースのアダプティブフォームテンプレート用のカスタムテーマの作成。
+* コアコンポーネントベースのアダプティブフォームの JSON 表現を、フォームのヘッドレス表現を必要とするモバイル、web、ネイティブアプリ、サービスなどのチャネルに提供。
 
 ## 次の手順
 
