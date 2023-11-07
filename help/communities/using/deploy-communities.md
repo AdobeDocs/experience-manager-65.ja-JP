@@ -3,7 +3,7 @@ title: Communities のデプロイ
 description: AEM Communitiesのデプロイ方法
 content-type: reference
 topic-tags: deploying
-source-git-commit: e33816b3b8d190e185d2b23dad3a05aca272f01c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1761'
 ht-degree: 4%
@@ -150,7 +150,7 @@ MySQL コネクタを取得し、別途インストールする必要があり�
 * を選択します。 **Assets** タブ
 * 選択 **ディスクにダウンロード**
 
-ローカルのAEMインスタンスで、パッケージマネージャー ( 例： [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) をクリックして、ローカルのAEMパッケージリポジトリにアップロードします。
+ローカルのAEMインスタンスで、パッケージマネージャーを使用します ( 例： [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)) をクリックして、ローカルのAEMパッケージリポジトリにアップロードします。
 
 または、ローカルのAEMインスタンスからパッケージ共有を使用してパッケージにアクセスします ( 例： [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/))、 `Download` ボタンをクリックすると、ローカルのAEMインスタンスのパッケージリポジトリにダウンロードされます。
 

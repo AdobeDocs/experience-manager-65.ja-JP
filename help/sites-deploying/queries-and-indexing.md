@@ -8,10 +8,10 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3034'
-ht-degree: 23%
+source-wordcount: '3032'
+ht-degree: 22%
 
 ---
 
@@ -429,7 +429,7 @@ AEM は、リモート Solr サーバーインスタンスと連動するよう�
 
 #### Solr の推奨設定 {#recommended-configuration-for-solr}
 
-以下に、この記事で説明する 3 つの Solr デプロイメントすべてで使用できる基本設定の例を示します。AEM に既に存在する専用プロパティインデックスに対応しているため、他のアプリケーションでは使用しないでください。
+以下に、この記事で説明する 3 つの Solr デプロイメントすべてで使用できる基本設定の例を示します。AEMに既に存在する専用プロパティインデックスに対応します。他のアプリケーションでは使用しないでください。
 
 これを適切に使用するには、アーカイブの内容を Solr ホームディレクトリに直接配置する必要があります。 複数ノードのデプロイメントがある場合は、各ノードのルートフォルダーの直下に配置する必要があります。
 

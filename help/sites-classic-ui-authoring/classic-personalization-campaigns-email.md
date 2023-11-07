@@ -1,20 +1,16 @@
 ---
 title: メールマーケティング
-seo-title: E-mail Marketing
-description: メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレター特有の新しいコンテンツを追加できます。
-seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
-uuid: 565943bf-fe37-4d5c-98c3-7c629c4ba264
+description: メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEMでは、既存のAEMコンテンツからニュースレターを作成し、ニュースレター専用の新しいコンテンツを追加できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 97%
+source-wordcount: '1764'
+ht-degree: 92%
 
 ---
 
@@ -23,10 +19,10 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->アドビでは、AEM SMTP サービスが送信したメールの開封／バウンス（配信不能）を追跡する機能をさらに強化する計画はありません。
->[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+>アドビでは、AEM SMTP サービスが送信したメールの開封／バウンス（配信不能）をトラッキングする機能をさらに強化する計画はありません。
+>使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
 
-メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレター特有の新しいコンテンツを追加できます。
+メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEMでは、既存のAEMコンテンツからニュースレターを作成し、ニュースレター専用の新しいコンテンツを追加できます。
 
 作成した後は、即時または（ワークフローを使用して）スケジュールした時間に、特定のユーザーグループへとニュースレターを送信できます。さらに、ユーザーは自分が選択した形式でニュースレターの購読を申し込むことができます。
 
@@ -67,7 +63,7 @@ ht-degree: 97%
 
 1. 「**作成**」をクリックします。
 
-1. すぐに新しいダイアログが開きます。ここで、ニュースレターのプロパティを入力できます。
+1. 新しいダイアログボックスが直ちに開きます。 ここで、ニュースレターのプロパティを入力できます。
 
    「**デフォルトの受信者リスト**」は、ニュースレターのタッチポイントを構成するので、必須のフィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
 
@@ -173,7 +169,7 @@ ht-degree: 97%
 ニュースレターを送信できるのは権限のあるユーザーのみですが、次の点をカスタマイズする必要があります。
 
 * 件名の行。ユーザーがメールを開きたくなり、ニュースレターがスパムとマークされないようにします。
-* 送信者アドレス（noreply@geometrixx.com）。指定したアドレスからユーザーがメールを受信できるようにします。
+* 送信元アドレス。例： `noreply@geometrixx.com`を使用して、指定したアドレスから電子メールを受け取ることができます。
 
 ニュースレター設定をカスタマイズするには：
 
@@ -188,7 +184,7 @@ ht-degree: 97%
 
 1. 必要に応じてメールの&#x200B;**件名**&#x200B;を変更します。
 
-1. 「**デフォルトの受信者リスト**」をドロップダウンリストから選択します。
+1. を選択します。 **デフォルトの受信者リスト** 」をドロップダウンリストから選択します。
 
 1. 「**OK**」をクリックします。
 
@@ -222,8 +218,8 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->アドビでは、AEM SMTP サービスが送信したメールの開封やバウンス（配信不能）を追跡する機能をさらに強化する計画はありません。
->[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+>アドビでは、AEM SMTP サービスが送信したメールの開封やバウンス（配信不能）をトラッキングする機能をさらに強化する計画はありません。
+>使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
 
 ニュースレターまたはリストからニュースレターを送信できます。両方の手順について説明します。
 

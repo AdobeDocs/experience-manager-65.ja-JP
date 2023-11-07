@@ -7,10 +7,10 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: bc6a97a55f392cba03131ee3ca7cad35b8c1e69b
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3949'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 
 ## Connected Assets の概要 {#overview-of-connected-assets}
 
-[!UICONTROL ページエディター]でページをターゲット先として編集する場合、作成者は、アセットのソースとして機能する別の [!DNL Assets] デプロイメントのアセットをシームレスに検索、参照および埋め込むことができます。管理者は、 [!DNL Sites] の機能を備える [!DNL Experience Manager] のデプロイメントと [!DNL Assets] の機能を備える [!DNL Experience Manager] 別のデプロイメントとの 1 回限りの統合を作成します。サイト作成者は、Connected Assets を通じてサイトの web ページで Dynamic Media 画像を使用し、スマート切り抜きや画像プリセットなどの Dynamic Media 機能を利用することもできます。
+[!UICONTROL ページエディター]でページをターゲット先として編集する場合、作成者は、アセットのソースとして機能する別の [!DNL Assets] デプロイメントのアセットをシームレスに検索、参照および埋め込むことができます。管理者は、 [!DNL Sites] の機能を備える [!DNL Experience Manager] のデプロイメントと [!DNL Assets] の機能を備える [!DNL Experience Manager] 別のデプロイメントとの 1 回限りの統合を作成します。サイト作成者は、Connected Assets を通じてサイトの Web ページでDynamic Media画像を使用したり、スマート切り抜きや画像プリセットなどのDynamic Media機能を使用したりできます。
 
 [!DNL Sites] 作成者の場合、リモートアセットは読み取り専用のローカルアセットとして利用できます。この機能は、サイトエディター上のリモートアセットへのシームレスな検索とアクセスをサポートします。Sites で完全なアセットコーパスの使用を必要とするその他のユースケースについては、Connected Assets を活用する代わりにアセットの一括移行を検討してください。詳しくは、[Experience Manager Assets 移行ガイド](/help/assets/assets-migration-guide.md)を参照してください。
 
@@ -145,7 +145,7 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
 ## Dynamic Media アセットの使用 {#dynamic-media-assets}
 
 
-Connected Assets では、[!DNL Dynamic Media] で処理された画像アセットをリモート DAM デプロイメントから Sites ページで使用したり、スマート切り抜きや画像プリセットなどの Dynamic Media 機能を活用することができます。
+Connected Assets では、[!DNL Dynamic Media] で処理された画像アセットをリモート DAM デプロイメントから Sites ページで使用したり、スマート切り抜きや画像プリセットなどの Dynamic Media 機能を活用できます。
 
 Connected Assets で [!DNL Dynamic Media] を使用するには、以下の手順に従います。
 

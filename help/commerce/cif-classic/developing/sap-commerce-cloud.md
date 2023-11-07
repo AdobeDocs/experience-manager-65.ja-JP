@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2287'
 ht-degree: 32%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->e コマースフレームワークは、任意の e コマースソリューションで使用できます。ここで扱う特定および例は、 [hybris](https://www.sap.com/products/crm.html) 解決策。
+>e コマースフレームワークは、任意の e コマースソリューションで使用できます。ここで取り上げる特定の詳細と例については、 [hybris](https://www.sap.com/products/crm.html) 解決策。
 
 統合フレームワークには、API を備えた統合レイヤーが含まれています。次の操作が可能です。
 
@@ -405,7 +405,7 @@ public class AxisFilter implements VariantFilter {
 
 * 買い物かごは、`CommerceSession:` によって管理されます。
 
-   * `CommerceSession` は、追加や削除などを実行します。
+   * The `CommerceSession` は追加や削除などを実行します。
    * `CommerceSession` は、買い物かごに対する様々な計算も実行します。
 
 * 買い物かごに直接関連はしませんが、`CommerceSession` はカタログの価格情報も提供する必要があります（価格を管理しているので）。

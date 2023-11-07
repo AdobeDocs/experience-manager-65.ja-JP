@@ -1,28 +1,24 @@
 ---
 title: AEM Sites の開発の手引き - WKND チュートリアル
-seo-title: Getting Started Developing AEM Sites - WKND Tutorial
-description: AEM の開発が初めての方や、ベストプラクティスの情報が必要な方のためのまず、このチュートリアルを試してください。この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。
-seo-description: New to developing AEM? Need a refresher on best practices? This is the place to start! The goal for this multi-part tutorial is to teach a developer who is new to AEM how to implement a website in AEM using the latest standards and technologies.
-uuid: 12861ca8-b5b9-404e-9788-9d13aa7c5a68
+description: AEM の開発が初めての方や、最新のベストプラクティスの情報が必要な方は、まず、このチュートリアルを試してください。この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '259'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 95%
 
 ---
 
-# AEM Sites の開発の手引き - WKND チュートリアル {#getting-started-developing-aem-sites-wknd-tutorial}
+# AEM Sites の開発の手引き - WKND チュートリアル{#getting-started-developing-aem-sites-wknd-tutorial}
 
 ## 概要 {#overview}
 
-AEM の開発が初めての方や、ベストプラクティスの情報が必要な方のためのまず、このチュートリアルを試してください。
+AEM の開発が初めての方や、最新のベストプラクティスの情報が必要な方は、まず、このチュートリアルを試してください。
 
 この複数のパートで構成されているチュートリアルでは、AEM を初めて利用する開発者に対して、最新の標準と技術を使用して AEM で Web サイトを実装する方法を教えることを目的としています。このチュートリアルの終了時には、AEM プラットフォームの基礎と一般的なデザインパターンの知識を理解することが期待されます。
 
@@ -42,7 +38,7 @@ WKND 開発者向けチュートリアルは[こちら](https://experienceleague
 * [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
 
-まずチュートリアルを済ませてから、上記の概念の詳細に進んでください。
+上記の概念の詳細について説明する前に、チュートリアルを進めてください。
 
 ## 次の手順 {#next-steps}
 

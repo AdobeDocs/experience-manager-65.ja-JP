@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2689'
-ht-degree: 57%
+ht-degree: 56%
 
 ---
 
@@ -577,13 +577,13 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><p>Day Communique Tagging OSGi バンドルを再起動すると、以前の場所が空の場合にのみ、新しい場所がタグルートとして登録されます。</p> <p>以前の場所への参照は、タグの解決にAEM TagManager API を利用するすべての機能について、新しい場所に移行した後も、引き続き機能します。</p> <p>パス <code>/etc/tags</code> を明示的に参照するカスタムコードは、<span class="code">/content/ に更新する必要があります。
+   <td><p>Day Communique Tagging OSGi バンドルを再起動すると、以前の場所が空の場合にのみ、新しい場所がタグルートとして登録されます。</p> <p>以前の場所への参照は、タグの解決にAEM TagManager API を使用するすべての機能について、新しい場所に移行した後も、引き続き機能します。</p> <p>パスを明示的に参照するカスタムコード <code>/etc/tags</code> は、次のように更新する必要があります： <span class="code">/content/
       <code>
        cq
       </code>
       <code>
        :tags
-      </code></span>、あるいは、この移行と並行して TagManager Java API を活用するように書き直すことをお勧めします。</p> </td>
+      </code></span>を書き換えるか、この移行と組み合わせて、TagManager Java API を使用するように書き直すことをお勧めします。</p> </td>
   </tr>
  </tbody>
 </table>

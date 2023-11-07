@@ -11,7 +11,7 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3935'
 ht-degree: 98%
@@ -228,7 +228,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 <!-- Remove when forms portal goes live
 >[!NOTE]
 >
->Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
+>Data of the adaptive form is stored temporarily on Forms Portal. Use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
 -->
 
 これで、フォームに署名する準備が整いました。フォームのプレビューを表示して、署名エクスペリエンスを確認することができます。署名者がメールで署名用のフォームを受信すると、公開済みフォーム上に [!DNL Adobe Sign] ブロックのフィールドが表示されます。このエクスペリエンスは、フォーム外の署名エクスペリエンスとも呼ばれます。最初の署名者に対して、フォーム内の署名エクスペリエンスを設定することもできます。詳細な手順については、[フォーム内の署名エクスペリエンスを作成](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)を参照してください。
@@ -334,7 +334,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 **Q**：アダプティブフォームの静的テキストコンポーネントで [!DNL Adobe Sign] のテキストタグを使用することはできますか？**A**：はい。テキストコンポーネントでテキストタグを使用して、[!DNL Adobe Sign] のフィールドを[レコードのドキュメント](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)（「自動生成されたレコードのドキュメント」オプション）が有効になっているアダプティブフォームに追加することができます。テキストタグを作成する手順とルールについては、[Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/using/text-tag.html)を参照してください。アダプティブフォームでは、テキストタグを使用する場合に制限があることにも注意してください。テキストタグを使用して作成できるのは、[Adobe Sign ブロック](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form)がサポートされているフィールドだけです。
 
 **Q：** AEM [!DNL Forms] には、[!UICONTROL Adobe Sign ブロック]と署名ステップコンポーネントの両方が用意されていますが、アダプティブフォームで両方を同時に使用することはできますか？
-**A：**&#x200B;はい。フォーム内で両方のコンポーネントを同時に使用することができます。これらのコンポーネントを使用する場合は、以下の推奨事項を参照してください。
+**A：**&#x200B;はい。フォーム内で両方のコンポーネントを同時に使用することができます。これらのコンポーネントを使用する場合は、以下のレコメンデーションを参照してください。
 
 **Adobe Sign ブロック：** [!UICONTROL Adobe Sign ブロック]を使用すると、アダプティブフォームの任意の場所に [!UICONTROL Adobe Sign] フィールドを追加することができます。また、特定のフィールドを署名者に割り当てることもできます。アダプティブフォームのプレビュー時と公開時には、[!UICONTROL Adobe Sign] ブロックがデフォルトで非表示になります。これらのブロックは、署名ドキュメント内でのみ使用できます。署名ドキュメント内では、署名者に割り当てられているフィールド以外は使用できません。[!UICONTROL Adobe Sign] ブロックは、最初の署名者だけでなく、後続の署名者も使用することができます。
 

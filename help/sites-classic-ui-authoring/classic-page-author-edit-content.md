@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1832'
-ht-degree: 95%
+ht-degree: 92%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 95%
 
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
-1. サイドキックと&#x200B;**新規コンポーネントを挿入**&#x200B;ツールバーの両方に、使用可能なコンポーネント（段落タイプ）のリストが表示されます。これらの段落タイプは様々なセクション（「一般」、「列」など）に分類されており、必要に応じて展開できます。
+1. サイドキックと&#x200B;**新規コンポーネントを挿入**&#x200B;ツールバーの両方に、使用可能なコンポーネント（段落タイプ）のリストが表示されます。これらは、様々なセクション（「一般」、「列」など）に分割でき、必要に応じて展開できます。
 
    表示されるオプションは、実稼働環境によって異なります。コンポーネントについて詳しくは、[デフォルトコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-default-components.md)を参照してください。
 
@@ -87,7 +87,7 @@ ht-degree: 95%
 
 ### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
 
-[コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、アセットを含んだ適切なタイプのコンポーネントが自動的に新規作成されます。
+[コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。これにより、アセットを含む適切なタイプのコンポーネントが自動的に作成されます。
 
 これは次のアセットタイプに有効です（一部はページや段落システムに依存します）。
 
@@ -177,7 +177,7 @@ ht-degree: 95%
 * [マルチサイト管理](/help/sites-administering/msm.md)。[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用されます。
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
-* 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
+* 特定のコンポーネント (Geometrixx内の継承された段落システムなど )。
 
 継承はキャンセル（その後再度有効化）できます。コンポーネントによって、次の場所から操作できます。
 

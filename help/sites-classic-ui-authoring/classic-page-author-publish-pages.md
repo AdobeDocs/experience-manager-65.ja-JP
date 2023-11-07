@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 97%
+source-wordcount: '1035'
+ht-degree: 94%
 
 ---
 
@@ -78,7 +78,7 @@ Web サイトコンソールでページをアクティベートできます。�
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
-1. 選択したコンテンツが AEM WCM によってアクティベートされます。公開されたページが、コンテンツをアクティベートしたユーザーや日時の情報と共に、[web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)に表示されます（緑でマーク）。
+1. 選択したコンテンツが AEM WCM によってアクティベートされます。公開されたページが [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) （緑でマーク）を更新し、誰がコンテンツをアクティベートしたか、およびアクティベートした日時に関する情報を追加しました。
 
    ![screen_shot_2012-02-08at14335pm](assets/screen_shot_2012-02-08at14335pm.png)
 

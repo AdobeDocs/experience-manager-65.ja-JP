@@ -11,10 +11,10 @@ discoiquuid: bd9bf095-d74d-458c-afe7-fab04050849d
 docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 26%
+source-wordcount: '391'
+ht-degree: 23%
 
 ---
 
@@ -24,7 +24,7 @@ FormBridge は、フォームを操作するHTML5 forms ブリッジ API です�
 
 FormBridge API を使用して、HTMLページからフォームフィールドの値を取得または設定し、フォームを送信することができます。 例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
 
-既存のHTMLアプリケーションは、FormBridge API を利用してフォームを操作し、HTMLページに埋め込むことができます。 次の手順を使用して、Form Bridge API を使用してフィールドの値を設定できます。
+既存のHTMLアプリケーションは、FormBridge API を使用してフォームを操作し、HTMLページに埋め込むことができます。 次の手順を使用して、Form Bridge API を使用してフィールドの値を設定できます。
 
 ## Web ページへのHTML5 フォームの統合 {#integrating-html-forms-to-a-web-page}
 
@@ -34,7 +34,7 @@ FormBridge API を使用して、HTMLページからフォームフィールド�
    1. 管理者の資格情報を使用してログインします。
    1. プロファイルを作成するか、既存のプロファイルを選択します。
 
-      プロファイルの作成方法について詳しくは、[新しいプロファイルの作成](/help/forms/using/custom-profile.md)を参照してください。
+      プロファイルの作成方法について詳しくは、 [プロファイルの作成](/help/forms/using/custom-profile.md).
 
 1. **HTMLプロファイルの変更**
 

@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 97%
+source-wordcount: '1420'
+ht-degree: 96%
 
 ---
 
@@ -63,7 +63,7 @@ INDD ファイルがアップロードされると、`xmpMM:InstanceID` およ�
 
 ### ZIP ファイルに書き出してアセットの参照を作成 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
-1. [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)の手順を実行し、新しいワークフローを作成します。
+1. の手順を実行します。 [ワークフローモデルの作成](/help/sites-developing/workflows-models.md) をクリックして、ワークフローを作成します。
 1. [!DNL Adobe InDesign] の[パッケージ機能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)を使用して、ドキュメントをエクスポートします。[!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。この場合、エクスポートされたフォルダーには、[!DNL InDesign] ファイル内のサブアセットを格納するための `Links` フォルダーが含まれます。この `Links` フォルダーが INDD ファイルと同じフォルダーに存在する。
 1. ZIP ファイルを作成し、このファイルを [!DNL Experience Manager] リポジトリにアップロードします。
 1. `Unarchiver` ワークフローを開始します。

@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -20,19 +20,19 @@ ht-degree: 100%
 
    * クイックアクションを使用して、**[!UICONTROL カード]**&#x200B;表示でアセットに表示される&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックします。リスト表示では、アセットを選択して、ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;オプションをクリックします。
 
-      >[!NOTE]
-      >
-      >注意：**[!UICONTROL リスト]**&#x200B;表示ではクイックアクションを使用できません。
+     >[!NOTE]
+     >
+     >注意：**[!UICONTROL リスト]**&#x200B;表示ではクイックアクションを使用できません。
 
    * **[!UICONTROL カード]**&#x200B;表示または&#x200B;**[!UICONTROL リスト]**&#x200B;表示では、アセットを選択して、ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックします。
    * アセットページの&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックします。
 
 1. 画像マップを挿入するには、 ツールバーの&#x200B;**[!UICONTROL 起動マップ]** ![画像マップ](assets/do-not-localize/image-map-icon.png) をクリックします。
-1. 画像マップの図形を選択します。選択した図形のホットスポットが画像上に置かれます。
+1. 画像マップの形状を選択します。 選択したシェイプのホットスポットが画像上に配置されます。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. ホットスポットをクリックし、URL と代替テキストを入力します。「**[!UICONTROL ターゲット]**」リストから、画像マップを表示する場所（例：同じタブ、新しいタブ、iFrame など）を指定します。例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
+1. ホットスポットをクリックし、URL と代替テキストを入力します。次から： **[!UICONTROL Target]** リストで、同じタブ、新しいタブ、iFrame など、画像マップを表示する場所を指定します。 例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 

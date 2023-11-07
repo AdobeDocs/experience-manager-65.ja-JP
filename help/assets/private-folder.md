@@ -6,10 +6,10 @@ role: User
 feature: Collaboration
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-[!DNL Adobe Experience Manager Assets] のユーザーインターフェイスに、自分だけが使用できるプライベートフォルダーを作成できます。このプライベートフォルダーを他のユーザーと共有して、他のユーザーに様々な権限を割り当てることができます。ユーザーはフォルダーに対して、割り当てられた特権のレベルに応じた様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
+[!DNL Adobe Experience Manager Assets] のユーザーインターフェイスに、自分だけが使用できるプライベートフォルダーを作成できます。このプライベートフォルダーを他のユーザーと共有して、他のユーザーに様々な権限を割り当てることができます。ユーザーは、割り当てた特権のレベルに応じて、フォルダー内のアセットの表示やアセットの編集など、フォルダーに対する様々なタスクを実行できます。
 
 >[!NOTE]
 >

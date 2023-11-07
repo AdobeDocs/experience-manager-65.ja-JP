@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 role: Developer
 exl-id: b3c19c82-e26f-4dc8-b846-6aec705cee08
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2163'
-ht-degree: 81%
+source-wordcount: '2162'
+ht-degree: 80%
 
 ---
 
@@ -238,7 +238,7 @@ Assembler サービス API（web サービス）を使用して、DDX ドキュ�
 
    * コンストラクターを使用して `System.IO.MemoryStream` オブジェクトを作成します。
    * DDX ドキュメントを表す `XmlElement` オブジェクトを使った DDX ドキュメントで、`MemoryStream` オブジェクトを入力します。`XmlElement` オブジェクトの `Save` メソッドを呼び出し、`MemoryStream` オブジェクトを渡します
-   * バイト配列を作成し、 `MemoryStream` オブジェクトにあるデータを入力します。次のコードは、このアプリケーションロジックを示しています。
+   * バイト配列を作成し、 `MemoryStream` オブジェクト。 次のコードは、このアプリケーションロジックを示しています。
 
      ` int bufLen = Convert.ToInt32(stream.Length);  byte[] byteArray = new byte[bufLen];  stream.Position = 0;  int count = stream.Read(byteArray, 0, bufLen);`
 

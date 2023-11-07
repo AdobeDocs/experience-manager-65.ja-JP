@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3681'
-ht-degree: 66%
+ht-degree: 63%
 
 ---
 
@@ -95,7 +95,7 @@ AEM には、提供されているワークフロー手順を使用してワー�
 
    住宅ローンのサンプルでは、読み取り専用のアダプティブフォームを使用してタスクの割り当て手順を設定し、タスクの完了後に PDF ドキュメントを表示します。また、ローン申請を承認できるユーザーグループも選択します。「**アクション**」タブで、「**送信**」オプションを無効にします。文字列データ型の **actionTaken** 変数を作成し、その変数を&#x200B;**ルート変数**&#x200B;として指定します。例えば、actionTaken などです。 また、「承認」および「却下」のルートを追加します。 ルートは、AEMインボックスに個別のアクション（ボタン）として表示されます。 ワークフローでは、ユーザーがタップした操作（ボタン）に基づいて分岐が選択されます。
 
-   セクションの始めに示すサンプルパッケージを読み込むことにより、住宅ローン申し込みの例に設定されているタスク割り当て手順のすべてのフィールドの値を一式入手できます。
+   サンプルパッケージは、住宅ローン申し込みなどに設定したタスクの割り当て手順のすべてのフィールドの値の完全なセットに対して、セクションの最初にダウンロードできます。
 
 1. OR 分割コンポーネントをステップブラウザーからワークフローモデルにドラッグ＆ドロップします。OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの分岐だけがアクティブになります。これを使用すると、ワークフローに条件付き処理パスを導入できます。必要に応じて、各分岐にワークフローステップを追加できます。
 
@@ -121,7 +121,7 @@ AEM には、提供されているワークフロー手順を使用してワー�
 
    住宅ローンの例では、次の画像に示すように、レコードのドキュメントの生成、2 つのタスクの割り当て、1 つのドキュメントの署名ステップをモデルのブランチ 1 に追加します。 タスクの割り当てステップの 1 つは&#x200B;**申請者の署名予定ローンドキュメント**&#x200B;の表示と送信に使用し、もう 1 つは、**署名済みドキュメントの表示**&#x200B;に使用します。また、分岐 2 にタスクの割り当てコンポーネントも追加します。AEM インボックスで「拒否」をタップすると、分岐 2 がアクティブになります。
 
-   住宅ローン申し込みの例で設定されたタスクの割り当て手順、レコードのドキュメント手順、ドキュメントに署名手順のすべてのフィールドの値の完全なセットについては、この節の最初にダウンロードできるサンプルパッケージをインポートします。
+   タスクの割り当て手順、レコードのドキュメント手順、ドキュメントの署名手順（住宅ローン申し込みなど）のすべてのフィールドの値の完全なセットについては、この節の最初にダウンロードできるサンプルパッケージをインポートします。
 
    ワークフローモデルの準備が整いました。 ワークフローは、様々な方法で起動できます。 詳しくは、 [OSGi でのForms中心のワークフローの起動](#launch).
 
@@ -277,9 +277,9 @@ AEMワークフローの「タスクの割り当て」手順と「電子メー�
 
 ## 機密データをワークフロー変数にパラメーター化し、外部データストアに保存 {#externalize-wf-variables}
 
-アダプティブフォームから [!DNL Experience Manager] ワークフローに送信されたデータに、エンドユーザーの PII（個人を特定できる情報）または SPD（機密の個人データ）を含めることができます。ただし、[!DNL Adobe Experience Manager] [JCR リポジトリ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html?lang=ja)にデータを保存する必要はありません。情報を[ワークフロー変数](/help/forms/using/variable-in-aem-workflows.md)にパラメーター化することで、エンドユーザーデータの管理対象データストレージ（Azure BLOB ストレージなど）への外部化が可能です。
+アダプティブフォームから [!DNL Experience Manager] ワークフローに送信されたデータに、エンドユーザーの PII（個人を特定できる情報）または SPD（機密の個人データ）を含めることができます。ただし、[!DNL Adobe Experience Manager] [JCR リポジトリ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html?lang=ja)にデータを保存する必要はありません。情報を次にパラメータ化することで、エンドユーザーデータの管理対象データストレージ（Azure BLOB ストレージなど）への外部化が可能 [ワークフロー変数](/help/forms/using/variable-in-aem-workflows.md).
 
-[!DNL Adobe Experience Manager] Forms のワークフローでは、データが処理され、ワークフロー変数を介して一連のワークフローステップを通過します。これらの変数は、名前の付いたプロパティまたはキーと値のペアで、ワークフローインスタンスのメタデータノードに保存されます。例：`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`。これらのワークフロー変数は、JCR 以外の別のリポジトリに外部化し、[!DNL Adobe Experience Manager] ワークフローで処理できます。[!DNL Adobe Experience Manager] は `[!UICONTROL UserMetaDataPersistenceProvider]` API を提供して、管理対象の外部ストレージにワークフロー変数を保存します。顧客が所有する [!DNL Adobe Experience Manager] のデータストアに対するワークフロー変数の使用について詳しくは、[外部データストアのワークフロー変数の管理](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
+[!DNL Adobe Experience Manager] Forms のワークフローでは、データが処理され、ワークフロー変数を介して一連のワークフローステップを通過します。これらの変数は、名前の付いたプロパティまたはキーと値のペアで、ワークフローインスタンスのメタデータノードに保存されます。例： `/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`. これらのワークフロー変数は、JCR 以外の別のリポジトリに外部化し、[!DNL Adobe Experience Manager] ワークフローで処理できます。[!DNL Adobe Experience Manager] は `[!UICONTROL UserMetaDataPersistenceProvider]` API を提供して、管理対象の外部ストレージにワークフロー変数を保存します。顧客が所有する [!DNL Adobe Experience Manager] のデータストアに対するワークフロー変数の使用について詳しくは、[外部データストアのワークフロー変数の管理](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
 [!DNL Adobe] は、API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md) を使用して、ワークフローメタデータマップから Azure blob ストレージに変数を保存するために、以下の[サンプル](https://github.com/adobe/workflow-variable-externalizer)を提供しています。同様に、サンプルを参考にして、[UserMetaDataPersistenceProvider] API を使用して、[!DNL Adobe Experience Manager] の外部の他のデータストレージにワークフロー変数を外部化し、同じものを管理することができます。
 
 >[!NOTE]
@@ -313,11 +313,11 @@ AEMワークフローの「タスクの割り当て」手順と「電子メー�
 
 * **accountName** は、データを保存する必要がある azure アカウントです。
 
-* **endpointSuffix**、例：`core.windows.net`。
+* **endpointSuffix**&#x200B;例： `core.windows.net`.
 
 * **containerName** は、データの保存が必要なアカウントのコンテナです。このサンプルでは、コンテナが存在すると仮定しています。
 
-* **protocol**、例：`https` または `http`。
+* **protocol**&#x200B;例： `https` または `http`.
 
 1. [!DNL Adobe Experience Manager].でのワークフローモデルの設定外部ストレージのワークフローモデルを設定する方法については、[ワークフローモデルの設定](#configure-aem-wf-model)を参照してください。
 
@@ -337,7 +337,7 @@ AEMワークフローの「タスクの割り当て」手順と「電子メー�
 
 ### AEM ワークフローで外部データストレージを使用する場合のガイドライン {#guidelines-workflows-external-data-storage}
 
-[!DNL Adobe Experience Manager] ワークフローを使用し、外部データストレージ（例：Microsoft Azure ストレージサーバー）にデータを保存する場合のガイドラインを以下に示します。
+次に、 [!DNL Adobe Experience Manager] ワークフローを作成し、外部データストレージ (Microsoft Azure ストレージサーバーなど ) にデータを保存します。
 
 * ワークフローモデルステップで入出力データファイルと添付ファイルを定義する際は、変数を使用してデータを格納します。「**[!UICONTROL ペイロードを基準とする]**」オプションと「**[!UICONTROL 絶対パスで利用可能]**」オプションを選択しないでください。[外部データストレージを使用するように  [!DNL Adobe Experience Manager]  ワークフローモデルを設定](#configure-aem-wf-model)したら、「**[!UICONTROL ペイロードを基準とする]**」オプションと「**[!UICONTROL 絶対パスで利用可能]**」オプションは自動的には表示されません。
 

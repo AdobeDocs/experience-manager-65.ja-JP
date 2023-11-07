@@ -8,7 +8,7 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 6%
@@ -41,7 +41,7 @@ AEM Communitiesは次の電子メールを使用します。
 
 これは、 [電子メール通知の設定](../../help/sites-administering/notification.md)が、フィールドに違いがある場合は、 `"From" address` 次に該当 *not* 必須およびは空のままにする必要があります。
 
-次に例を示します（例として、値を入力します）。
+例えば、（例としての値を入力）:
 
 ![email-config](assets/email-config.png)
 

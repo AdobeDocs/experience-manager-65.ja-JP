@@ -7,9 +7,9 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,7 @@ AEMオーサーインスタンスで、グローバルナビゲーションか�
    * **[!UICONTROL コミュニティグループのルート]**: *デフォルトのままにする*
    * **[!UICONTROL 追加の利用可能なコミュニティグループの言語]**：ドロップダウンメニューを使用して、使用可能なコミュニティグループの言語を選択します。 親コミュニティサイトが作成されたすべての言語がメニューに表示されます。 ユーザーは、この 1 つの手順で、複数のロケールでグループを作成するために、これらの言語の中から選択できます。 各コミュニティサイトのグループコンソールで、指定した複数の言語で同じグループが作成されます。
    * **[!UICONTROL コミュニティグループ名]**: arts
-   * **[!UICONTROL テンプレート]**：ドロップダウンで選択 `Reference Group`
+   * **[!UICONTROL テンプレート]**：選択するドロップダウン `Reference Group`
    * 選択 **[!UICONTROL 次へ]**
 
 ![ネストされたコミュニティグループ](assets/parent-to-nestedgroup.png)
@@ -148,7 +148,7 @@ The `arts` グループには、 `groups` フォルダー内に作成されま�
 
 ## 公開時のエクスペリエンス {#experience-on-publish}
 
-ログイン時に様々なグループが表示されます。例えば、 [デモユーザー](/help/communities/tutorials.md#demo-users) 次に使用：
+様々なグループがサインイン時に、例えば [デモユーザー](/help/communities/tutorials.md#demo-users) 次に使用：
 
 * アート/履歴グループのメンバー： `emily.andrews@mailinator.com/password`
    * 制限された（秘密の）グループ、arts/history が表示されます。

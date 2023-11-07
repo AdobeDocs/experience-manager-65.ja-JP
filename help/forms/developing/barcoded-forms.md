@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: ht
-source-wordcount: '1920'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '1915'
+ht-degree: 95%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 100%
 
 Barcoded Forms サービスは、印刷および記入用フォームからのデータのキャプチャを自動化し、取り込んだ情報を組織の主要な IT システムに統合します。
 
-Barcoded Forms サービスを使用すると、1 次元および 2 次元のバーコードをインタラクティブ PDF forms に追加できます。その後、Barcoded Forms を web サイトに公開したり、電子メールまたは CD で配布したりできます。ユーザーが Adobe Reader、Acrobat Professional またはAcrobat Standard でバーコードフォームに入力すると、バーコードが自動的に更新され、フォームデータがエンコードされます。ユーザーは、フォームを電子メールで送ったり、紙に印刷して、郵送や FAX で送信したり、直接配布したりできます。後で、自動化されたワークフローの一部として、ユーザーが指定したデータを抽出し、承認プロセスやビジネスシステム間でデータをルーティングできます。
+Barcoded Forms サービスを使用すると、1 次元および 2 次元のバーコードをインタラクティブ PDF forms に追加できます。その後、Barcoded Forms を web サイトに公開したり、メールまたは CD で配布したりできます。ユーザーが Adobe Reader、Acrobat Professional またはAcrobat Standard でバーコードフォームに入力すると、バーコードが自動的に更新され、フォームデータがエンコードされます。ユーザーは、フォームをメールで送ったり、紙に印刷して、郵送や FAX で送信したり、直接配布したりできます。後で、自動化されたワークフローの一部として、ユーザーが指定したデータを抽出し、承認プロセスやビジネスシステム間でデータをルーティングできます。
 
 Barcoded Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ## バーコードフォームデータのデコード {#decoding-barcoded-form-data}
 
-Barcoded Forms API を使用して、バーコードを含む PDF フォームまたは画像からデータをデコードできます。フォームデータのデコードとは、バーコード内のデータを抽出することを意味します。データを PDF フォーム（または画像）からデコードする前に、フォームにはデータが入力されている必要があります。
+Barcoded Forms API を使用して、バーコードを含む PDF フォームまたは画像からデータをデコードできます。フォームデータのデコードとは、バーコード内のデータを抽出することを意味します。 データを PDF フォーム（または画像）からデコードする前に、フォームにはデータが入力されている必要があります。
 
 >[!NOTE]
 >
@@ -60,9 +60,9 @@ Barcoded Forms API を使用して、バーコードを含む PDF フォーム�
 * adobe-barcodedforms-client.jar
 * adobe-utilities.jar（AEM Forms を JBoss にデプロイする場合に必要）
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
-* xercesImpl.jar（&lt;install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty）
+* xercesImpl.jar ( &lt;install directory=&quot;&quot;>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
 
-AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Formsが、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **Barcoded Forms Client API オブジェクトの作成**
 
@@ -160,7 +160,7 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
 1. デコードされたデータを処理
 
-   * `java.util.List` オブジェクトを反復処理して、リストにある各 `org.w3c.dom.Document` オブジェクトを取得します。
+   * 次の項目を反復 `java.util.List` 各 `org.w3c.dom.Document` オブジェクトを指定します。
    * リストの各要素に対して、 `org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します（`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換するアプリケーションロジックは、「Java API を使用したバーコード化されたフォームデータのデコード」の例で示しています）。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` を呼び出し、XML ファイルを表す File オブジェクトを渡すことにより、XML データを XML ファイルとして保存します。
 

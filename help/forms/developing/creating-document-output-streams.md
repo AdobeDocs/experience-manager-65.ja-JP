@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '19006'
-ht-degree: 83%
+source-wordcount: '18965'
+ht-degree: 79%
 
 ---
 
@@ -42,7 +42,7 @@ Output サービスを使用すると、XML フォームデータをフォーム
 
 次の節では、`com.adobe.idp.Document` インスタンス内でフォームデザインを渡す方法について説明します。
 
-* [コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す方法](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [Content Services（非推奨）のドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [フラグメントを使用した PDF ドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
 どの手法を使用するかを決定する際の考慮事項の 1 つは、別の AEM Forms サービスからフォームデザインを取得して `com.adobe.idp.Document` インスタンス内で渡すかどうかです。*Output サービスへのドキュメントの受け渡し*&#x200B;と&#x200B;*フラグメントを使用した PDF ドキュメントの作成*&#x200B;の両方の節で、別の AEM Forms サービスからフォームデザインを取得する方法を説明します。最初の節では、コンテンツサービス（非推奨）からフォームデザインを取得します。2 つ目の節では、Assembler サービスからフォームデザインを取得します。
@@ -57,7 +57,7 @@ Output サービスを使用して、以下のタスクを実行できます。
 
 * [PDF ドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents)
 * [PDF/A ドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents)
-* [コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す方法](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [Content Services（非推奨）のドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [フラグメントを使用した PDF ドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 * [ファイルへの印刷](creating-document-output-streams.md#printing-to-files)
 * [プリンターへの印刷ストリームの送信](creating-document-output-streams.md#sending-print-streams-to-printers)
@@ -105,7 +105,7 @@ PDF ドキュメントを作成するには、次の手順を実行します。
 * adobe-utilities.jar（AEM Forms を JBoss にデプロイする場合に必要）
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
 **Output クライアントオブジェクトの作成**
 
@@ -188,7 +188,7 @@ XDP ファイルに画像（またはフラグメントなどの他のリソー�
 
 >[!NOTE]
 >
->Formsアプリケーション内の XDP を参照してPDFドキュメントを作成する完全なクイックスタートについては、 [クイックスタート（EJB モード）:Java API を使用して、PDFXDP ファイルに基づくアプリケーションドキュメントを作成する](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
+>Formsアプリケーションで XDP を参照してPDFドキュメントを作成する完全なクイックスタートについては、 [クイックスタート（EJB モード）:Java API を使用して、PDFXDP ファイルに基づくアプリケーションドキュメントを作成する](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
 
 **操作の結果の取得**
 
@@ -265,7 +265,7 @@ Output API（Java）を使用して PDF ドキュメントを作成します。
 
    >[!NOTE]
    >
-   >また、 `OutputClient` オブジェクトの `generatePDFOutput2` メソッド。 （[コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*を参照。）*
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput2` メソッド。 ( 詳しくは、 [Content Services（非推奨）のドキュメントを Output サービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. 操作の結果を取得します。
 
@@ -358,7 +358,7 @@ Output API（web サービス）を使用して PDF ドキュメントを作成�
 
    >[!NOTE]
    >
-   >また、 `OutputClient` オブジェクトの `generatePDFOutput2` メソッド。 （[コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*を参照。）*
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput2` メソッド。 ( 詳しくは、 [Content Services（非推奨）のドキュメントを Output サービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. 操作の結果を取得します。
 
@@ -385,7 +385,7 @@ Output サービスを使用して PDF/A ドキュメントを作成できます
 
 PDF/A-1 仕様は、a と b の 2 つの適合レベルで構成されます。この 2 つの主な違いは、論理構造（アクセシビリティ）のサポートに関するもので、適合レベル b には必要ありません。適合レベルに関係なく、PDF/A-1 では、生成された PDF/A ドキュメントにすべてのフォントが埋め込まれます。
 
-PDF/A はPDFドキュメントのアーカイブの標準ですが、標準PDFドキュメントがお客様の企業のニーズを満たす場合に、アーカイブにPDF/A を使用する必要はありません。 PDF/A 規格の目的は、ドキュメントの保存要件を満たし、長期間保存できる PDF ファイルを確立することです。例えば、ある URL を PDF/A に埋め込むことはできません。これは、URL が時間の経過と共に無効になる可能性があるためです。
+PDF/A はPDFドキュメントのアーカイブの標準ですが、標準PDFドキュメントがお客様の企業のニーズを満たす場合に、アーカイブにPDF/A を使用する必要はありません。 PDF/A 規格の目的は、長期間保存でき、ドキュメント保存要件を満たすPDFファイルを確立することです。 例えば、ある URL を PDF/A に埋め込むことはできません。これは、URL が時間の経過と共に無効になる可能性があるためです。
 
 組織は、独自のニーズ、ドキュメントの保持期間、ファイルサイズに関する考慮事項を評価し、独自のアーカイブ戦略を決定する必要があります。DocConverter サービスを使用すると、PDF ドキュメントが PDF/A に準拠しているかどうかをプログラム的に判断できます。（[プログラムによる PDF/A 準拠の判断](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)を参照してください）。
 
@@ -427,7 +427,7 @@ PDF/A ドキュメントを作成するには、次の手順を実行します�
 * adobe-utilities.jar（AEM Forms を JBoss にデプロイする場合に必要）
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
 **Output クライアントオブジェクトの作成**
 
@@ -523,7 +523,7 @@ Output API（Java）を使用して PDF/A ドキュメントを作成します�
 
    >[!NOTE]
    >
-   >また、 `OutputClient` オブジェクトの `generatePDFOutput`2 メソッド。 （[コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)を参照）。
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput`2 メソッド。 ( 詳しくは、 [Content Services（非推奨）のドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. 操作の結果を取得します。
 
@@ -609,7 +609,7 @@ Output API（web サービス）を使用して PDF/A ドキュメントを作�
 
    >[!NOTE]
    >
-   >また、 `OutputClient` オブジェクトの `generatePDFOutput`2 メソッド。 （[コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)を参照）。
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput`2 メソッド。 ( 詳しくは、 [Content Services（非推奨）のドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. 操作の結果を取得します。
 
@@ -626,9 +626,9 @@ Output API（web サービス）を使用して PDF/A ドキュメントを作�
 
 [SwaRef を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## コンテンツサービス（非推奨）にあるドキュメントを Output サービスに渡す方法 {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## Content Services（非推奨）のドキュメントを Output サービスに渡す {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Output サービスは、通常 XDP ファイルとして保存され、Designer で作成されたフォームデザインに基づく、非インタラクティブな PDF フォームを処理します。フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Output サービスに渡すことができます。次に、Output サービスは `com.adobe.idp.Document` オブジェクトにあるフォームデザインを処理します。
+Output サービスは、通常 XDP ファイルとして保存され、Designer で作成されたフォームデザインに基づく、非インタラクティブな PDF フォームを処理します。フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Output サービスに渡すことができます。次に、Output サービスがフォームデザインを `com.adobe.idp.Document` オブジェクト。
 
 `com.adobe.idp.Document` オブジェクトを Output サービスに渡すことの利点は、他の AEM Forms サービス操作が `com.adobe.idp.Document` インスタンスを返すことです。つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得し、それをレンダリングできます。例えば、次の図に示すように、XDP ファイルが `/Company Home/Form Designs` という名前のコンテンツサービス（非推奨）ノードに格納されているとします。
 
@@ -817,23 +817,23 @@ Output サービスとコンテンツサービス（非推奨）API（web サー
 
 ## リポジトリ内のドキュメントを Output サービスに渡す {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output サービスは、通常 XDP ファイルとして保存され、Designer で作成されたフォームデザインに基づく、非インタラクティブな PDF フォームを処理します。フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Output サービスに渡すことができます。次に、Output サービスは `com.adobe.idp.Document` オブジェクトにあるフォームデザインを処理します。
+Output サービスは、通常 XDP ファイルとして保存され、Designer で作成されたフォームデザインに基づく、非インタラクティブな PDF フォームを処理します。フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Output サービスに渡すことができます。次に、Output サービスがフォームデザインを `com.adobe.idp.Document` オブジェクト。
 
 `com.adobe.idp.Document` オブジェクトを Output サービスに渡すことの利点は、他の AEM Forms サービス操作が `com.adobe.idp.Document` インスタンスを返すことです。すなわち、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得し、それを処理できます。例えば、以下の図に示すように、XDP ファイルが AEM Forms リポジトリに格納されているとします。
 
 ![pd_pd_formrepository](assets/pd_pd_formrepository.png)
 
-*FormsFolder* フォルダーは、AEM Forms リポジトリ内のユーザー定義の場所です（この場所は例であり、デフォルトでは存在しません）。この例では、Loan.xdp という名前のフォームデザインがこのフォルダー内にあります。フォームデザインに加えて、フォーム作成に使用する他のファイル（画像など）もこの場所に保存できます。AEM Forms リポジトリにあるリソースへのパスは次のとおりです。
+*FormsFolder* フォルダーは、AEM Forms リポジトリ内のユーザー定義の場所です（この場所は例であり、デフォルトでは存在しません）。この例では、Loan.xdp という名前のフォームデザインがこのフォルダーにあります。 フォームデザインに加えて、フォーム作成に使用する他のファイル（画像など）もこの場所に保存できます。AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
 プログラムで AEM Forms リポジトリから Loan.xdp を取得し、それを `com.adobe.idp.Document` オブジェクト内の Output サービスに渡すことができます。
 
-2 つの方法のいずれかを使用して、リポジトリにある XDP ファイルに基づいて PDF を作成できます。XDP の場所は、参照によって渡すことも、プログラムによってリポジトリから XDP を取得し、XDP ファイル内で Output サービスに渡すこともできます。
+リポジトリ内の XDP ファイルに基づいてPDFを作成するには、2 つの方法のいずれかを使用します。 XDP の場所は、参照によって渡すことも、プログラムによってリポジトリから XDP を取得し、XDP ファイル内で Output サービスに渡すこともできます。
 
 [クイックスタート（EJB モード）：Java API を使用してアプリケーション XDP ファイルに基づいて PDF ドキュメントを作成します](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)（XDP ファイルの場所を参照で渡す方法を示します）。
 
-[クイックスタート（EJB モード）：Java API を使用して AEM Forms リポジトリにあるドキュメントを Output サービスに渡します](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)（プログラムで AEM Forms リポジトリから XDP ファイルを取得し、`com.adobe.idp.Document` インスタンス内の Output サービスに渡す方法を示します）。（このセクションでは、このタスクの実行方法について説明します）。
+[クイックスタート（EJB モード）:Java API を使用してAEM Formsリポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) ( プログラムによってAEM Formsリポジトリから XDP ファイルを取得し、 `com.adobe.idp.Document` インスタンス )。 （このセクションでは、このタスクの実行方法について説明します）。
 
 >[!NOTE]
 >
@@ -877,9 +877,9 @@ XDP ファイルは、`com.adobe.idp.Document` インスタンス（または we
 
 **関連トピック**
 
-[Java API を使用して、リポジトリにあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
+[Java API を使用して、リポジトリ内のドキュメントを Output Service に渡します。](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms の Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -887,7 +887,7 @@ XDP ファイルは、`com.adobe.idp.Document` インスタンス（または we
 
 ResourceRepositoryClient
 
-### Java API を使用して、リポジトリにあるドキュメントを Output サービスに渡す {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
+### Java API を使用して、リポジトリ内のドキュメントを Output Service に渡します。 {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
 
 Output サービスと Repository API（Java）を使用して、リポジトリから取得したドキュメントを渡します。
 
@@ -928,15 +928,15 @@ Output サービスと Repository API（Java）を使用して、リポジトリ
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJB モード）：Java API を使用して AEM Forms リポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用してAEM Formsリポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms の Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## フラグメントを使用した PDF ドキュメントの作成 {#creating-pdf-documents-using-fragments}
 
-Output サービスと Assembler サービスを使用して、フラグメントに基づいた出力ストリーム（PDF ドキュメントなど）を作成できます。Assembler サービスは、複数の XDP ファイル内に配置されたフラグメントに基づく XDP ドキュメントを組み立てます。組み立てられた XDP ドキュメントが Output サービスに渡されて、PDF ドキュメントが作成されます。このワークフローでは、PDF ドキュメントが生成される様子が示されていますが、Output サービスでは、このワークフローに対して ZPL などの他の出力タイプも生成できます。PDF ドキュメントは、説明目的でのみ使用されています。
+Output サービスと Assembler サービスを使用して、フラグメントに基づいた出力ストリーム（PDF ドキュメントなど）を作成できます。Assembler サービスは、複数の XDP ファイル内のフラグメントに基づく XDP ドキュメントをアセンブリします。 組み立てられた XDP ドキュメントが Output サービスに渡されて、PDF ドキュメントが作成されます。このワークフローでは、PDF ドキュメントが生成される様子が示されていますが、Output サービスでは、このワークフローに対して ZPL などの他の出力タイプも生成できます。PDF ドキュメントは、説明目的でのみ使用されています。
 
 次の図は、このワークフローを示しています。
 
@@ -1182,7 +1182,7 @@ Output サービスを使用すると、XML データをフォームデザイン
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。（[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 （[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
 
 **Output クライアントオブジェクトの作成**
 
@@ -1241,7 +1241,7 @@ Output API（Java） を使用してファイルに印刷します。
 1. ファイルへの印刷に必要な印刷実行時オプションを設定します。
 
    * コンストラクターを使用して `PrintedOutputOptionsSpec` オブジェクトを作成します。
-   * PrintedOutputOptionsSpec オブジェクトの `setFileURI` メソッドを使用し、ファイルの名前と場所を表す string 値を渡す方法を示します。 例えば、Output サービスを C:\Adobe にある MortgageForm.ps という名前の PostScript ファイルに印刷する場合は、C:\\Adobe\MortgageForm.ps と指定します。
+   * PrintedOutputOptionsSpec オブジェクトの `setFileURI` メソッドを使用し、ファイルの名前と場所を表す string 値を渡す方法を示します。 例えば、C:\Adobeの MortgageForm.ps という名前の PostScript ファイルに Output サービスを印刷する場合は、C:\\Adobe\MortgageForm.psと指定します。
    * を呼び出して、印刷する部数を指定します。 `PrintedOutputOptionsSpec` オブジェクトの `setCopies` メソッドを使用し、コピー数を表す整数値を渡す。
 
 1. 印刷ストリームをファイルに印刷します。
@@ -1313,7 +1313,7 @@ Output API（web サービス）を使用してファイルに印刷します。
 1. ファイルへの印刷に必要な印刷実行時オプションを設定します。
 
    * コンストラクターを使用して `PrintedOutputOptionsSpec` オブジェクトを作成します。
-   * ファイルの場所と名前を表す string 値を `PrintedOutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 例えば、Output サービスを PostScript ファイル（C:\Adobe にある *MortgageForm.ps*）に印刷する場合は、C:\\Adobe\MortgageForm.ps と指定します。
+   * ファイルの場所と名前を表す string 値を `PrintedOutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 例えば、Output サービスを PostScript ファイル ( *MortgageForm.ps* C:\Adobeで、C:\\Adobe\MortgageForm.psと指定します。
    * 印刷部数を指定するには、印刷部数を表す整数値を割り当てます。 `PrintedOutputOptionsSpec` オブジェクトの `copies` データメンバー。
 
 1. 印刷ストリームをファイルに印刷します。
@@ -1387,7 +1387,7 @@ Output サービスを使用すると、XML データをフォームデザイン
 * adobe-utilities.jar（AEM Forms を JBoss にデプロイする場合に必要）
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
 **Output クライアントオブジェクトの作成**
 
@@ -1727,7 +1727,7 @@ XML データソースに基づいて複数の PDF ファイルを作成する�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
 **Output クライアントオブジェクトの作成**
 
@@ -1741,7 +1741,7 @@ AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーション
 
 **PDF 実行時オプションの設定**
 
-XML データソースに基づいて複数のファイルを正常に作成するには、Output サービスに次の実行時オプションを設定する必要があります。
+Output サービスで、XML データソースに基づいて複数のファイルを正常に作成するために、次のランタイムオプションを設定します。
 
 * **多数のファイル**：Output サービスで 1 つのドキュメントを作成するか、複数のドキュメントを作成するかを指定します。true または false を指定できます。XML データソース内のデータレコードごとに個別のドキュメントを作成するには、true を指定します。
 * **ファイル URI**：Output サービスで生成されるファイルの場所を指定します。例えば、C:\\Adobe\forms\Loan.pdf と指定したとします。この場合、Output サービスは Loan.pdf という名前のファイルを作成して C:\\Adobe\forms フォルダーに配置します。複数のファイルが存在する場合、ファイル名は Loan0001.pdf、Loan0002.pdf、Loan0003.pdf などになります。ファイルの場所を指定した場合、ファイルはクライアントコンピューターではなくサーバーに配置されます。
@@ -1935,7 +1935,7 @@ Output API（web サービス）を使用して複数の PDF ファイルを作�
 
 ## 検索ルールの作成 {#creating-search-rules}
 
-入力データを調べ、出力を生成するデータコンテンツに基づいた様々なフォームデザインを使用することで、Output サービスを導き出す検索ルールを作成できます。例えば、 *mortgage* というテキストが入力データ内にある場合、Output サービスは Mortgage.xdp という名前のフォームデザインを使用できます。同様に、 *automobile* というテキストが入力データにある場合、Output サービスは、AutomobileLoan.xdp として保存されたフォームデザインを使用できます。Output サービスでは異なる出力タイプを生成できますが、この節では、Output サービスが PDF ファイルを生成することを前提としています。以下の図は、XML データファイルを処理し、多数のフォームデザインの 1 つを使用して PDF ファイルを生成する Output サービスを示しています。
+入力データを調べ、出力を生成するデータコンテンツに基づいた様々なフォームデザインを使用することで、Output サービスを導き出す検索ルールを作成できます。例えば、 *mortgage* というテキストが入力データ内にある場合、Output サービスは Mortgage.xdp という名前のフォームデザインを使用できます。同様に、 *自動車* が入力データに含まれている場合、Output サービスは AutomobileLoan.xdp として保存されたフォームデザインを使用できます。 Output サービスでは異なる出力タイプを生成できますが、この節では、Output サービスが PDF ファイルを生成することを前提としています。以下の図は、XML データファイルを処理し、多数のフォームデザインの 1 つを使用して PDF ファイルを生成する Output サービスを示しています。
 
 また、Output サービスではドキュメントパッケージを生成できます。このパッケージでは、データセットに複数のレコードが含まれており、各レコードがフォームデザインと照合され、1 つのドキュメントが複数のフォームデザインで構成されます。
 
@@ -1970,7 +1970,7 @@ Output API（web サービス）を使用して複数の PDF ファイルを作�
 * adobe-utilities.jar（AEM Forms を JBoss にデプロイする場合に必要）
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
 **Output クライアントオブジェクトの作成**
 
@@ -1986,7 +1986,7 @@ Output サービスの処理をプログラムで実行する前に、Output サ
 
 >[!NOTE]
 >
->テキストパターンが存在しない場合は、デフォルトのフォームが使用されます。使用するすべてのフォームデザインを、コンテンツルートに必ず配置します。
+>テキストパターンが存在しない場合は、デフォルトのフォームが使用されます。使用するフォームデザインがすべて、コンテンツルートにあることを確認します。
 
 **PDF 実行時オプションの設定**
 
@@ -2227,7 +2227,7 @@ Output サービスを使用すると、インタラクティブ PDF ドキュ�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **Output クライアントオブジェクトの作成**
 

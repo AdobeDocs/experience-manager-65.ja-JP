@@ -11,10 +11,10 @@ discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4435'
-ht-degree: 55%
+source-wordcount: '4428'
+ht-degree: 53%
 
 ---
 
@@ -47,7 +47,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 すべてのアセットタイプおよびレターにカスタムプロパティを追加するには、次の手順を実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` に移動して、管理者でログインします。
-1. apps フォルダー内で、次の手順で css フォルダー（ccrui フォルダーに存在）に類似したパス／構造で、css という名前のフォルダーを作成します。
+1. 次の手順に従って、apps フォルダーに、（ccrui フォルダー内の）css フォルダーと同様のパス/構造で css という名前のフォルダーを作成します。
 
    1. 以下のパスにある items フォルダーを右クリックし、**ノードをオーバーレイ**&#x200B;を選択します。
 
@@ -88,7 +88,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
       | **名前** | **種類** | **値** |
       |---|---|---|
-      | fieldLabel | 文字列 | フィールド/プロパティに与える名前。 ( ここでは（受信者の場所） |
+      | fieldLabel | 文字列 | フィールド/プロパティに与える名前。 （ここでは、受信者の場所） |
       | name | 文字列 | `./extendedproperties/GeoLocation`（値は items ノードで作成したフィールド名と同じにします） |
       | renderReadOnly | ブール値 | true |
       | sling:resourceType | 文字列 | `granite/ui/components/coral/foundation/form/textfield` |
@@ -105,7 +105,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
    >[!NOTE]
    >
-   >追加するすべてのアセットの共通プロパティは、アセットプロパティの「基本」タブに表示されます。 デフォルトでは、すべてのアセットに追加された共通のプロパティは、プロパティページおよびアセット作成ページに表示されます。 共通のプロパティを非表示にするには、<!--link to show / hide properties]--> を実行する必要があります。
+   >追加するすべてのアセットの共通プロパティは、アセットプロパティの「基本」タブに表示されます。 デフォルトでは、すべてのアセットに追加された共通のプロパティは、プロパティページとアセット作成ページに表示されます。 共通のプロパティを非表示にするには、<!--link to show / hide properties]--> を実行する必要があります。
 
 ### シナリオ：カスタムプロパティ/フィールドにカスタムドロップダウンと値を追加する {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
 
@@ -128,7 +128,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
    <tr>
       <td>fieldLabel</td>
       <td>文字列</td>
-      <td>フィールド/プロパティに与える名前。 ( ここではgeographicallocation)</td>
+      <td>フィールド/プロパティに与える名前。 （ここでは、地理配分）</td>
    </tr>
    <tr>
       <td>name</td>
@@ -189,7 +189,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 次の手順を使用して、すべてのアセットにフィールド付きのタブを追加できます。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. apps フォルダーに、（content フォルダー内の）cmmetadataproperties フォルダーに類似したパス／構造で cmmetadataproperties という名前のフォルダーを作成します。手順は次のとおりです。
+1. 次の手順を使用して、apps フォルダに、（コンテンツフォルダ内の）cmmetadataproperties フォルダに似たパス/構造を持つ cmmetadataproperties という名前のフォルダを作成します。
 
    1. 次のパスにある cmmetadataproperties フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -213,7 +213,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 1. cmmetadataproperties フォルダーに、すべてのアセット用のカスタムタブを作成するためのノードを追加します（例：commontab）。手順は次のとおりです。
 
-   1. cmmetadataproperties フォルダを右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
+   1. cmmetadataproperties フォルダーを右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
 
       ![ノードを作成](assets/cmmetadatapropertiescreatenode.png)
 
@@ -236,7 +236,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
          <tr>
           <td>jcr:title</td>
           <td>文字列</td>
-          <td>列に付ける名前。 ( ここでは受信者 )</td>
+          <td>列に付ける名前。 （受信者）</td>
          </tr>
          <tr>
           <td>sling:resourceType</td>
@@ -248,7 +248,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
    1. 「**すべて保存**」をクリックします。
 
-1. 最後の手順（ここでは commontab）で作成したタブノードに対して、次の手順を使用して item というノードを作成します。
+1. 最後の手順（ここでは commontab）で作成したタブノードに対して、次の手順を使用して item と呼ばれるノードを作成します。
 
    1. 関連するノード（ここでは「commontab」）を右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
@@ -429,7 +429,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
    1. items フォルダーを右クリックし、**作成**／**ノードを作成**&#x200B;を選択します。
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
-      **名前：** customtab（または、このプロパティに与える任意の名前）
+      **名前：** customtab（またはこのプロパティに与える任意の名前）
 
       **タイプ：** nt:unstructured
 
@@ -581,7 +581,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 レターを作成するための UI に表示されるカスタムプロパティ（言語）
 
-## リスト表示をカスタマイズしてカスタムプロパティを表示 {#customize-the-list-view-to-show-custom-properties}
+## リスト表示をカスタマイズしてカスタムプロパティを表示する {#customize-the-list-view-to-show-custom-properties}
 
 Correspondence Management アセットにカスタムプロパティを追加した後、CRX/DE をさらに変更して、カスタムプロパティが Correspondence Management UI に表示されるようにする必要があります。
 
@@ -843,12 +843,12 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 >
 >/oak:index/cmLucene&quot;とプロパティの値を変更します。
 
-## 検索ページのデフォルトの表示を変更 {#change-default-view-of-the-search-page}
+## 検索ページのデフォルトの表示を変更する {#change-default-view-of-the-search-page}
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. apps フォルダーで、/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views にある list フォルダーと類似したパス／構造で list という名前のフォルダーを作成します。
+1. apps フォルダーに、 /libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views の list フォルダーに似たパス/構造で list という名前のフォルダーを作成します。
 
-   1. 以下のパスにある items フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
+   1. 次のパスにある items フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       `/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views/list`
 
@@ -890,7 +890,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 >これらの手順では、Forms、ドキュメント、アセット、サイトなど、すべてのコンソールのデフォルト表示を変更します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. apps フォルダーで、以下のパスにある list フォルダーと類似したパス／構造で list という名前のフォルダーを作成します。
+1. apps フォルダーに、次のリストフォルダーに類似したパス/構造で list という名前のフォルダーを作成します。
 
    /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/
 
@@ -933,7 +933,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
 カスタムプロパティの表示/非表示を切り替えるには、次の手順を実行します。
 
-1. geographicallocation などのカスタムプロパティノードに、タイプが「nt:unstructured」の「granite:rendercondition」という名前の新しいノードを作成します。
+1. カスタムプロパティノード（geographicallocation など）の下に、「granite:rendercondition」という名前で「nt:unstructured」タイプのノードを作成します。
 1. 次のプロパティをノードに追加し、「**すべて保存**」をクリックします。
 
    <table>

@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: PDF Generator
 exl-id: c3fc159e-2677-4b71-b0b2-2feaf69e1a32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '605'
 ht-degree: 11%
 
 ---

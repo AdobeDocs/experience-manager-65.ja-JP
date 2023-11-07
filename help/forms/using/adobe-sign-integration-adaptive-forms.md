@@ -10,10 +10,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 93%
+source-wordcount: '2073'
+ht-degree: 91%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 93%
 
    >[!NOTE]
    >
-   >手順1〜4を実行して、新しい構成コンテナを作成し、コンテナで [!DNL Adobe Sign] 構成を作成するか、**ツール** ![ハンマー](assets/hammer.png)／**[!UICONTROL Cloud Services]**／**[!UICONTROL Adobe Sign]**&#x200B;で既存の `global` フォルダーを使用できます。新しい設定コンテナで設定を作成する場合、必ず&#x200B;**[!UICONTROL 設定コンテナ]**&#x200B;フィールドに値を入力する必要があります。
+   >手順 1～4 を実行して、設定コンテナを作成し、 [!DNL Adobe Sign] コンテナ内の設定、または既存の `global` フォルダー内 **ツール** ![ハンマー](assets/hammer.png) > **[!UICONTROL Cloud Service]** > **[!UICONTROL Adobe Sign]**. 新しい設定コンテナで設定を作成する場合、必ず&#x200B;**[!UICONTROL 設定コンテナ]**&#x200B;フィールドに値を入力する必要があります。
 
    >[!NOTE]
    >

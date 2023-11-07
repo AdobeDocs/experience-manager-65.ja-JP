@@ -9,9 +9,9 @@ docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2851'
 ht-degree: 3%
 
 ---
@@ -156,7 +156,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 各スコアルールは、1 つ以上のサブルールのリストです。 バッジが有効な場合に適用するルールを識別するために、スコアルールがコミュニティサイトのコンテンツに適用されます。
 
-スコア付けルールは継承されますが、加算的ではありません。 例：
+スコア付けルールは継承されますが、加算的ではありません。 次に例を示します。
 
 * page2 にスコアルール 2 が含まれ、その上位ページ 1 にスコアルール 1 が含まれる場合。
 * page2 コンポーネントのアクションは、rule1 と rule2 の両方を呼び出します。
@@ -196,7 +196,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 各サブルールは、1 つ以上のスコアルールに含めることができます。
 
-通常、サブルールの名前は、 *件名*, *object*、および *動詞*. 例：
+通常、サブルールの名前は、 *件名*, *object*、および *動詞*. 次に例を示します。
 
 * member-comment-create
 * member-receive-vote
@@ -208,7 +208,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th> 値 説明</th>
+   <th> 値の説明</th>
   </tr>
   <tr>
    <td><i><code>VERB</code></i></td>
@@ -285,7 +285,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 * `subRules` は String 型の属性です[] 規則に従って `jcr:content` ノード。
 
 * `sub-rules` は、様々なスコアリングルール間で共有できます。
-* `rules` はリポジトリの場所に配置し、全員に対して読み取り権限を付与する必要があります。
+* `rules` 全員に対する読み取り権限を持つリポジトリの場所に存在する必要があります。
 
    * ルール名は、場所に関係なく一意である必要があります。
 
@@ -302,7 +302,7 @@ UGC では、バッジがルールに従って割り当てられたか、獲得�
 
 バッジルールはタイプのノードです `cq:Page` プロパティを含む `jcr:content` スコアルールをスコアおよびバッジに関連付けるノード。
 
-バッジのルールは必須の `thresholds` バッジにマッピングされたスコアの順序付きリストであるプロパティ。 スコアは、値を増やすために並べ替える必要があります。 例：
+バッジのルールは必須の `thresholds` バッジにマッピングされたスコアの順序付きリストであるプロパティ。 スコアは、値を増やすために並べ替える必要があります。 次に例を示します。
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
@@ -331,7 +331,7 @@ The `scoringRules` プロパティは、特定のバッジルールと対にで�
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th>値 説明</th>
+   <th>値の説明</th>
   </tr>
   <tr>
    <td>しきい値</td>
@@ -391,7 +391,7 @@ cURL -i -XPOST-H *ヘッダー* -u *サインイン* -F *操作* -F *バッジ* 
 
 *バッジ* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所 ( 例： /libs/settings/community/badging/images/moderator/jcr:content/moderator.png)
+*badge-image-file* =リポジトリ内のバッジ画像ファイルの場所 ( 例：/libs/settings/community/badging/images/moderator/jcr:content/moderator.png)
 
 *member-profile-url* =公開時のメンバーのプロファイルのエンドポイント ( 例： https:// )&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
@@ -616,7 +616,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 最後に
 
 * パブリッシュインスタンス上のコンポーネントを参照します。
-* コミュニティメンバーとしてログインします ( 例： weston.mccall@dodgit.com / password)。
+* コミュニティメンバー (weston.mccall@dodgit.com / password など ) としてログインします。
 * 新しいフォーラムトピックを投稿します。
 * バッジを表示するには、ページを更新する必要があります。
 

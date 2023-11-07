@@ -1,20 +1,16 @@
 ---
 title: SPA エディターの概要
-seo-title: SPA Editor Overview
 description: この記事では、SPA エディターの包括的な概要と動作の仕組み（AEM 内での SPA エディターの詳細なインタラクションワークフローなど）を説明します。
-seo-description: This article gives a comprehensive overview of the SPA Editor and how it works included detailed workflows of interaction of the SPA Editor within AEM.
-uuid: c283abab-f5bc-414a-bc81-bf3bdce38534
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 93%
+source-wordcount: '1651'
+ht-degree: 91%
 
 ---
 
@@ -157,7 +153,7 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 
 ## 要件と制限事項 {#requirements-limitations}
 
-作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。動作させるために必要な基本的な知識については、[AEM での SPA の概要](/help/sites-developing/spa-getting-started-react.md)を参照してください。
+作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。詳しくは、 [AEMでSPAを使い始める](/help/sites-developing/spa-getting-started-react.md) 少なくとも、自分の環境を動かすために必要な情報を提供します。
 
 ### サポートされているフレームワーク {#supported-frameworks}
 
@@ -170,7 +166,7 @@ SPA Editor SDK では、最低限、次のバージョンをサポートして�
 
 ### その他のフレームワーク {#additional-frameworks}
 
-AEM SPA Editor SDK で動作する他の SPA フレームワークを追加で実装することができます。詳しくは、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) AEM SPA Editor で動作するモジュール、コンポーネント、サービスで構成されるフレームワーク固有のレイヤーを作成するためにフレームワークが満たす必要がある要件を示すドキュメントです。
+AEM SPA Editor SDK で動作する他の SPA フレームワークを追加で実装することができます。詳しくは、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) を参照してください。
 
 ### 複数のセレクターの使用 {#multiple-selectors}
 
@@ -197,6 +193,6 @@ AEM SPA Editor SDK は、AEM 6.4 サービスパック 2 で導入されまし�
 * 設定の編集（例：リスナー）
 * 取り消し／やり直し
 * ページの差分とタイムワープ
-* リンクチェッカー、CDN 書き直しサービス、URL 短縮など、サーバー側で HTML の書き換えを実行する機能
+* リンクチェッカー、CDN 書き換えサービス、URL 短縮など、HTMLのサーバー側書き換えを実行する機能。
 * 開発者モード
 * AEM ローンチ

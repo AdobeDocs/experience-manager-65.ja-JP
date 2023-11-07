@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9109'
-ht-degree: 99%
+source-wordcount: '9095'
+ht-degree: 97%
 
 ---
 
@@ -30,13 +30,13 @@ ht-degree: 99%
 
 ![ww_ww_formrepository](assets/ww_ww_formrepository.png)
 
-FormsFolder に Loan.xdp という名前のファイルがあることを確認してください。このフォームデザインにアクセスするには、完全パス（バージョンを含む）である `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` を指定します。
+FormsFolder に Loan.xdp という名前のファイルがあることに注意してください。 このフォームデザインにアクセスするには、完全パス（バージョンを含む）である `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` を指定します。
 
 >[!NOTE]
 >
 >Workbench を使用して Forms アプリケーションを作成する方法について詳しくは、[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください。
 
-AEM Forms リポジトリにあるリソースへのパスは次のとおりです。
+AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -50,7 +50,7 @@ URI 値の一例を以下に示します。
 >
 >Web ブラウザーを使用して AEM Forms リポジトリを参照できます。リポジトリを参照するには、web ブラウザーに URL `https://[server name]:[server port]/repository` を入力します。Web ブラウザーを使用して、「AEM Forms リポジトリの操作」セクションに関連するクイックスタートの結果を確認できます。例えば、AEM Forms リポジトリにコンテンツを追加したら、そのコンテンツを web ブラウザーで表示できます（詳しくは、[クイックスタート（SOAP モード）：Java API を使用したリソースの書き込み](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)を参照してください）。
 
-リポジトリ API には、リポジトリへの情報の保存や取得に使用できる多数の操作が用意されています。例えば、リソースのリストを取得したり、アプリケーションの処理の一環としてリソースが必要な場合にリポジトリに保存されている特定のリソースを取得したりできます。
+リポジトリ API は、リポジトリから情報を保存および取得するために使用できる操作を複数提供します。 例えば、リソースのリストを取得したり、アプリケーションの処理の一環としてリソースが必要な場合にリポジトリに保存されている特定のリソースを取得したりできます。
 
 >[!NOTE]
 >
@@ -305,7 +305,7 @@ Repository Service API（Java）を使用してリソースを書き込みます
 
 1. ターゲットフォルダにリソースを書き込む
 
-   `ResourceRepositoryClient` オブジェクトの `writeResource` メソッドを呼び出して、フォルダーの URI と `Resource` オブジェクトに渡します。
+   を呼び出す `ResourceRepositoryClient` オブジェクトの `writeResource` メソッドを使用してフォルダーの URI を渡し、 `Resource` オブジェクト。
 
 **関連トピック**
 
@@ -354,7 +354,7 @@ Repository Service API（Java）を使用してリソースを書き込みます
 
 1. ターゲットフォルダにリソースを書き込む
 
-   `RepositoryServiceService` オブジェクトの `writeResource` メソッドを呼び出して、フォルダーの URI と `Resource` オブジェクトを渡します。他の 2 つのパラメータに対して `null` を渡します。
+   を呼び出す `RepositoryServiceService` オブジェクトの `writeResource` メソッドを使用してフォルダーの URI を渡し、 `Resource` オブジェクト。 他の 2 つのパラメーターには `null` を渡します。
 
 **関連トピック**
 
@@ -542,7 +542,7 @@ Repository サービスメソッドを呼び出し、URI を指定してリソ�
 
 1. 読み込むリソースの URI を指定
 
-   取得するリソースの URI を表す文字列値を指定します。例えば、リソースの名前が *testResource* で、*testFolder* という名前のフォルダーに保存されているとすると、`/testFolder/testResource` を指定します。
+   取得するリソースの URI を表す文字列値を指定します。例えば、リソースの名前がの場合、 *testResource* これは、次の名前のフォルダーにあります： *testFolder*&#x200B;を指定します。 `/testFolder/testResource`.
 
 1. リソースを読み込む
 
@@ -716,7 +716,7 @@ Repository API（web サービス）を使用してリソースをアップデ�
 
 **クエリステートメント**
 
-*クエリ*&#x200B;には、条件で論理的に結合される 1 つ以上のステートメントが含まれます。*ステートメント*&#x200B;は、左オペランド、演算子、右オペランドで構成されます。また、検索結果に使用する並べ替え順を指定できます。この&#x200B;*並べ替え順*&#x200B;には、SQL の `ORDER BY` 句と同等の情報が含まれ、検索の基となった属性と、昇順または降順を使用するかどうかを示す値を含む要素で構成されます。
+*クエリ*&#x200B;には、条件で論理的に結合される 1 つ以上のステートメントが含まれます。*ステートメント*&#x200B;は、左オペランド、演算子、右オペランドで構成されます。また、検索結果に使用する並べ替え順を指定できます。The *並べ替え順* には、SQL と同等の情報が含まれます `ORDER BY` 句およびは、検索の基となった属性と、昇順または降順のどちらを使用するかを示す値を含む要素で構成されます。
 
 Repository Service Java API を使用して、プログラムでリソースを検索できます。現時点では、web サービス API を使用してリソースを検索することはできません。
 
@@ -921,7 +921,7 @@ Repository Service Java API を使用して関係リソースを作成し、以�
 
 1. 関連付けるリソースの URI の指定
 
-   関連付けるリソースの URI を指定します。この場合、リソースの名前が `testResource1` および `testResource2` で、`testFolder` という名前のフォルダーに配置されているので、URI は `"/testFolder/testResource1"` および `"/testFolder/testResource2"` となります。URI は `java.lang.String` オブジェクトとして格納されます。この例では、リソースは最初にリポジトリに書き込まれ、URI が取得されます。リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
+   関連付けるリソースの URI を指定します。この場合、リソースの名前が `testResource1` および `testResource2` とは、という名前のフォルダーにあります。 `testFolder`の場合、URI は `"/testFolder/testResource1"` および `"/testFolder/testResource2"`. URI は `java.lang.String` オブジェクトとして格納されます。この例では、リソースは最初にリポジトリに書き込まれ、URI が取得されます。リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
 
 1. 関係の作成
 
@@ -965,7 +965,7 @@ Repository Service Java API を使用して関係リソースを作成し、以�
 
 1. 関連付けるリソースの URI の指定
 
-   関連付けるリソースの URI を指定します。この場合、リソースの名前が `testResource1` および `testResource2` で、`testFolder` という名前のフォルダーに配置されているので、URI は `"/testFolder/testResource1"` および `"/testFolder/testResource2"` となります。Microsoft .NET Framework に準拠している言語（C# など）を使用する場合、URI は `System.String` オブジェクトとして保存されます。この例では、リソースは最初にリポジトリに書き込まれ、URI が取得されます。リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
+   関連付けるリソースの URI を指定します。この場合、リソースの名前が `testResource1` および `testResource2` とは、という名前のフォルダーにあります。 `testFolder`の場合、URI は `"/testFolder/testResource1"` および `"/testFolder/testResource2"`. Microsoft .NET Framework に準拠している言語（C# など）を使用する場合、URI は `System.String` オブジェクトとして保存されます。この例では、リソースは最初にリポジトリに書き込まれ、URI が取得されます。リソースの書き込みについて詳しくは、[リソースの書き込み](aem-forms-repository.md#writing-resources)を参照してください。
 
 1. 関係の作成
 
@@ -999,7 +999,7 @@ Repository Service Java API を使用して関係リソースを作成し、以�
 
 特定のユーザーが排他的に使用できるように、または複数のユーザー間で共有して使用できるように、リソースまたはリソースのセットをロックできます。共有ロックは、リソースに対して何らかの処理が行われることを示すものですが、他のユーザーもそのリソースに操作を行うことができます。共有ロックは、他のユーザーにサインを示すメカニズムと考えることができます。排他的ロックとは、リソースをロックしたユーザーがリソースに変更を加えようとしていることを意味し、ロックをすることで、そのユーザーがリソースにアクセスする必要がなくなりロックを解除するまでは、他のユーザーがリソースを変更できなくなります。リポジトリ管理者がリソースのロックを解除すると、そのリソースに対するすべての排他的なロックと共有ロックが自動的に削除されます。このタイプのアクションは、登録解除されたユーザーがリソースのロックを解除しなかった場合に使用します。
 
-リソースがロックされていると、次の図に示すように、Workbench の「リソース」タブを表示したときにロックアイコンが表示されます。
+リソースがロックされていると、次の図に示すように、Workbench の「Resources」タブを表示すると、ロックアイコンが表示されます。
 
 ![lr_lr_lockrepository](assets/lr_lr_lockrepository.png)
 

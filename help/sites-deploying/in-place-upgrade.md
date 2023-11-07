@@ -4,10 +4,10 @@ description: AEM 6.5 のインプレースアップグレードの実行方法�
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1242'
-ht-degree: 43%
+source-wordcount: '1238'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 43%
 
 アップグレードを実行する前に、いくつかの手順を完了する必要があります。 詳しくは、 [コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md) および [アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) を参照してください。 さらに、お使いのシステムが新しいバージョンのAEMの要件を満たしていることを確認します。 パターン検出を使用して、アップグレードの複雑さを推定する方法を確認します。また、 [アップグレードの計画](/help/sites-deploying/upgrade-planning.md) を参照してください。
 
-<!--Finally, note that the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+<!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
 ## 移行の前提条件 {#migration-prerequisites}
 
@@ -113,7 +113,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 **次のシナリオでは、追加のスイッチが必要となる場合もあります。**
 
-* Java のメモリマッピングが正しく処理されない Windows システムでアップグレードを行う場合は、`--disable-mmap`パラメーターをコマンドに追加してください。
+* Java メモリマッピングが正しく処理されない Windows システムでアップグレードを実行する場合は、 `--disable-mmap` パラメータをコマンドに追加します。
 
 crx2oak ツールの使用に関する追加の手順については、 [CRX2Oak 移行ツール](/help/sites-deploying/using-crx2oak.md). crx2oak ヘルパー JAR は、必要に応じて手動でアップグレードできます。その場合は、クイックスタートを展開した後に、手動で新しいバージョンに置き換えます。 AEMインストールフォルダー内の場所は次のとおりです。 `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. 最新バージョンの CRX2Oak 移行ツールは、アドビリポジトリ（[https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)）からダウンロードできます。
 
@@ -161,13 +161,13 @@ AEM 6.3 インストールでは新しく `FileDataStore` がデフォルトに�
 
 ### 適切なアップグレード開始コマンドの確認 {#determining-the-correct-upgrade-start-command}
 
-アップグレードを実行するには、jar ファイルを使用してAEMを起動し、インスタンスを起動することが重要です。 6.5 にアップグレードする場合は、アップグレードコマンドで選択できる[遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)のその他のコンテンツ再構築および移行オプションも検討してください。
+アップグレードを実行するには、jar ファイルを使用してAEMを起動し、インスタンスを起動することが重要です。 6.5 へのアップグレードについては、 [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) アップグレードコマンドで選択できます。
 
 >[!IMPORTANT]
 >
->Oracle Java 11（または一般にバージョン 8 より新しい Java）を実行している場合は、AEM の起動時にコマンドラインにさらにスイッチを追加する必要があります。詳しくは、 [Java 11 に関する考慮事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)を参照してください。
+>oracleJava 11（または通常は 8 より新しいバージョンの Java）を実行している場合は、AEMの起動時に、追加のスイッチをコマンドラインに追加する必要があります。 詳しくは、 [Java 11 に関する考慮事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)を参照してください。
 
-開始スクリプトからAEMを起動しても、アップグレードは開始されません。 ほとんどのお客様は、起動スクリプトを使用してAEMを起動し、この起動スクリプトをカスタマイズして、メモリ設定、セキュリティ証明書などの環境設定用のスイッチを含めています。 このため、Adobeでは、適切なアップグレードコマンドを判断するために、次の手順に従うことを推奨します。
+開始スクリプトからAEMを起動しても、アップグレードは開始されません。 ほとんどのお客様は、起動スクリプトを使用してAEMを起動し、この起動スクリプトをカスタマイズして、メモリ設定やセキュリティ証明書などの環境設定用のスイッチを含めています。 このため、Adobeでは、適切なアップグレードコマンドを判断するために、次の手順に従うことを推奨します。
 
 1. 実行中の AEM インスタンスで、コマンドラインから次のコマンドを実行します。
 

@@ -2,10 +2,10 @@
 title: AEM ヘッドレスコンテンツ作成者ジャーニー
 description: AEM の強力で柔軟なヘッドレス機能とその能力およびプロジェクトのコンテンツをオーサリングする方法を説明するガイド付きジャーニーは、ここから始めてください。
 exl-id: b8cdbd0f-c034-4c9f-976f-5e39b1bd33bf
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 94%
+source-wordcount: '861'
+ht-degree: 89%
 
 ---
 
@@ -43,7 +43,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 
 このジャーニーは、AEM ヘッドレスプロジェクトのコンテンツをオーサリングするための要件、手順およびアプローチを明確にします。ジャーニーでは、プロジェクトを成功させるためにコンテンツ作成者がやり取りする必要がある追加のペルソナを定義することになりますが、ジャーニー自体はコンテンツ作成者の視点で構成されています。
 
-このジャーニーの情報は、もちろん他のペルソナにとっても役に立ちますが、特定のロールには必要ない情報も一部あります。その他のロールに対応するジャーニーが今後公開され次第、随時お知らせします。
+このジャーニーの情報は他のユーザーにとって役立つ場合がありますが、一部の情報は特定の役割にとって余分です。 その他の役割に対応するジャーニーが今後公開され次第、随時お知らせします。
 
 ## ヘッドレスコンテンツ作成者ジャーニー {#the-journey}
 
@@ -66,7 +66,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 <!--
 ### Choose Your Own Adventure {#choose-your-path}
 
-However, Adobe wants you to succeed as you get started with your AEM Headless project, regardless of your learning style. So please consider these two options.
+However, Adobe wants you to succeed as you get started with your AEM Headless project, regardless of your learning style. So consider these two options.
 
 * If you prefer to continue to **learn about headless concepts and AEM's headless technologies**, you should continue your AEM headless journey as recommended by next reviewing the document [How to Model Your Content as AEM Content Models](model-your-content.md) where you learn how to model your content structure in AEM.
 * If you prefer to **learn by doing**, you can jump to the [Getting Started with AEM Headless hands-on tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) where you will jump directly into AEM Headless development by implementing a simple project to expose AEM headless content.
@@ -76,11 +76,11 @@ However, Adobe wants you to succeed as you get started with your AEM Headless pr
 
 ドキュメントジャーニーでは、相互に関連する複雑なプロセスや機能をストーリーに従って読者に説明しながら、ビジネス上の問題を AEM で解決する方法を示します。1 つのジャーニーでは、複数の機能が連携して 1 つのビジネスニーズを満たす方法を示しています。
 
-そのため、ジャーニーは、それぞれが独立して設計されています。ただし、その多くは互いに関連付けられています。AEM の強力な機能の連携の仕組みについて詳しくは、次に示すその他のジャーニーを参照してください。
+そのため、ジャーニーは独立して設計されています。 ただし、複数の関連付けが可能です。 AEM の強力な機能の連携の仕組みについて詳しくは、次に示すその他のジャーニーを参照してください。
 
 * [AEM ヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md) - このドキュメントジャーニーでは、ヘッドレステクノロジー、AEM によるヘッドレスコンテンツの提供方法、ヘッドレスコンテンツの翻訳方法について幅広く理解できます。
-* [AEM ヘッドレス開発者ジャーニー](/help/journey-headless/developer/overview.md) - AEM の強力で柔軟なヘッドレス機能とその能力、および初めての開発プロジェクトでの活用方法を説明するガイド付きジャーニーは、ここから始めてください。
-* [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) - Adobe Experience Manager の強力で柔軟なヘッドレス機能の概要と、プロジェクトのコンテンツをモデル化する方法については、ここから始めてください。
+* [AEM ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) - AEM の強力で柔軟なヘッドレス機能、その性能、および初めての開発プロジェクトでの活用方法を説明するガイド付きジャーニーは、ここから始めてください。
+* [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) - Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法の入門的解説が必要であれば、ここから始めてください。
 * [AEM 技術ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja) - AEM およびヘッドレステクノロジーを既にしっかり理解している場合は、アドビの詳細な技術ドキュメントを直接参照することをお勧めします。
    * An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
 * [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - 技術指向の方が実践による学習を希望する場合は、API とフレームワーク別に整理された実践チュートリアルを利用してください。このチュートリアルでは、AEM ヘッドレスに基づくアプリケーションの作成と使用の詳細を紹介しています。

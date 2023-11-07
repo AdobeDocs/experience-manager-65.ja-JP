@@ -5,10 +5,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2242'
-ht-degree: 89%
+ht-degree: 88%
 
 ---
 
@@ -114,7 +114,7 @@ Workbench のインストールには、対応する英語版の Designer がデ
   <tr>
    <td><p>Acrobat Pro または Acrobat Pro Extended（Designer 付属）</p> </td>
    <td><p>なし.<br />Workbench のインストールで、Acrobat Pro または Acrobat Pro Extended と共にインストールされた Designer のインスタンスがコンピューター上で検出されます。<br />
-Workbench 6.4 用 Designer 6.4.x や Workbench 6.5 用 Designer 6.5.0.x など、異なるバージョンの Designer は同じシステム上で共存できます。Acrobat 10 Pro または Acrobat 10 Pro Extended などと一緒にインストールされた Designer のバージョンをアンインストールする必要はありません。
+異なるバージョンの Designer を同じシステム上で共存させることができます。例えば、Workbench 6.4 用の Designer 6.4.x と Workbench 6.5 用の Designer 6.5.0.x などです。Acrobat 10 Pro またはAcrobat 10 Pro Extended 以降でインストールされている Designer のバージョンをアンインストールする必要はありません。
 <br /></p> </td>
   </tr>
   <tr>

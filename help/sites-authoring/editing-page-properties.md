@@ -2,10 +2,10 @@
 title: コンテンツのページプロパティの編集
 description: Adobe Experience Managerでページに必要なプロパティを定義します。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
-ht-degree: 63%
+source-wordcount: '1871'
+ht-degree: 62%
 
 ---
 
@@ -257,7 +257,7 @@ ht-degree: 63%
 
 * **サイト**&#x200B;コンソールから：
 
-   * [新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)します（プロパティのサブセット）
+   * [ページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page) （プロパティのサブセット）
 
    * 「**プロパティ**」をクリックまたはタップします
 

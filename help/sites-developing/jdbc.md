@@ -10,10 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: 061af6f3318d68b50c5f606ad50db7a39da0f4fd
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 99%
+ht-degree: 85%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 99%
 
 ## JDBC データベースドライバーのバンドル {#bundling-the-jdbc-database-driver}
 
-一部のデータベースベンダー（[MySQL](https://dev.mysql.com/downloads/connector/j/) など）は、JDBC ドライバーを OSGi バンドル内で提供しています。お使いのデータベース用の JDBC ドライバーが OSGi バンドルとして提供されていない場合は、ドライバーの JAR を取得して、それを OSGi バンドル内にラップします。このバンドルは、データベースサーバーとのやり取りに必要なパッケージを書き出す必要があり、バンドルは参照先のパッケージも読み込む必要もあります。
+一部のデータベースベンダーは、OSGi バンドルで JDBC ドライバーを提供しています。例えば、 [MySQL](https://dev.mysql.com/downloads/connector/j/).データベースの JDBC ドライバーが OSGi バンドルとして使用できない場合は、ドライバー JAR を取得し、OSGi バンドルに含めます。バンドルは、データベースサーバーとの対話に必要なパッケージを書き出す必要があります。また、バンドルは、参照するパッケージもインポートする必要があります。
 
 次の例では、[Maven 用プラグインのバンドル](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)を使用して、HSQLDB ドライバーを OSGi バンドル内にラップします。POM では、このプラグインに対して、hsqldb.jar ファイルを埋め込み、そのファイルを依存関係として識別するように指示します。すべての org.hsqldb パッケージが書き出されます。
 
@@ -94,21 +94,21 @@ ht-degree: 99%
 
 JDBC ドライバーを使用してデータソースオブジェクトを作成する JDBC Connections Pool サービスの設定を追加します。アプリケーションコードではこのサービスを使用してデータソースオブジェクトを取得し、データベースに接続します。
 
-JDBC 接続プール（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。異なるプロパティ（読み取り専用アクセスと読み取り／書き込みアクセスなど）を使用する接続が必要な場合は、複数の設定を作成します。
+JDBC 接続プール（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。読み取り専用や読み取り/書き込みアクセスなど、異なるプロパティを使用する接続が必要な場合は、複数の設定を作成します。
 
 CQ で作業する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 プールに入れられた接続サービスを設定するには、次のプロパティを使用できます。プロパティ名は、web コンソールに表示されるとおりに表示されます。`sling:OsgiConfig` ノードに対応する名前を括弧内に示しています。エイリアスが `mydb` である HSQLDB サーバーおよびデータベースの値の例を示しています。
 
-* JDBC ドライバークラス（`jdbc.driver.class`）：java.sql.Driver インターフェイスを実装するために使用する Java クラス。例：`org.hsqldb.jdbc.JDBCDriver`。データタイプは `String` です。
+* JDBC ドライバークラス ( `jdbc.driver.class`):java.sql.Driver インターフェイスを実装するために使用する Java™クラス。例： `org.hsqldb.jdbc.JDBCDriver`. データタイプは `String` です。
 
-* JDBC 接続 URI（`jdbc.connection.uri`）：接続の作成に使用するデータベースの URL。例：`jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`。URL の形式は、java.sql.DriverManager クラスの getConnection メソッドで使用する場合に有効である必要があります。データタイプは `String` です。
+* JDBC 接続 URI ( `jdbc.connection.uri`)：接続の作成に使用するデータベースの URL（例： ） `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL の形式は、java.sql.DriverManager クラスの getConnection メソッドで使用する場合に有効である必要があります。データタイプは `String` です。
 
 * ユーザー名（`jdbc.username`）：データベースサーバーでの認証に使用するユーザー名。データタイプは `String` です。
 
 * Password（`jdbc.password`）：ユーザーの認証に使用するパスワード。データタイプは `String` です。
 
-* 検証クエリ（`jdbc.validation.query`）：接続が成功したことを検証するために使用する SQL 文（例：`select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`）。データタイプは `String` です。
+* 検証クエリ ( `jdbc.validation.query`)：接続が成功したことを検証するために使用する SQL 文（例： ） `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. データタイプは `String` です。
 
 * デフォルトで読み取り専用（default.readonly）：この接続を読み取り専用アクセスにする場合に、このオプションを選択します。データタイプは `Boolean` です。
 * デフォルトで自動コミット（`default.autocommit`）：データベースに送信される SQL コマンドごとに個別のトランザクションを作成し、各トランザクションを自動的にコミットする場合は、このオプションを選択します。コード内でトランザクションを明示的にコミットする場合は、このオプションを選択しないでください。データタイプは `Boolean` です。

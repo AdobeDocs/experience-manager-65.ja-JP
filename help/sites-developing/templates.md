@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '930'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -130,7 +130,7 @@ AEM で開発を行う場合は、編集可能テンプレートを使用する�
 
 #### 子ページで使用するテンプレートの制限 {#limiting-templates-used-in-child-pages}
 
-特定のページの下に子ページを作成するために使用できるテンプレートを制限するには、ページの `jcr:content` ノードの `cq:allowedTemplates` プロパティを使用して、子ページとして許可するテンプレートのリストを指定します。例えば、`/apps/geometrixx/templates/contentpage` リストの各値は、許可されている子ページのテンプレートへの絶対パスである必要があります。
+特定のページの下に子ページを作成するために使用できるテンプレートを制限するには、ページの `jcr:content` ノードの `cq:allowedTemplates` プロパティを使用して、子ページとして許可するテンプレートのリストを指定します。例えば、リストの各値は、許可されている子ページのテンプレートへの絶対パスである必要があります。 `/apps/geometrixx/templates/contentpage`.
 
 テンプレートの `jcr:content` ノードの `cq:allowedTemplates` プロパティを使用すると、このテンプレートを使用するすべての新規作成ページにこの設定を適用できます。
 

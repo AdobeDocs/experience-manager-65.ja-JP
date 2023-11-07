@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: fbcdea8a-72e9-431b-9c32-dc02d4cdb9c8
 exl-id: d989e235-5993-4738-8523-5b9a5f6bf712
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '486'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 AEMは PhoneGap と統合されているので、AEMページを使用して簡単にアプリを作成できます。 PhoneGap を使用すると、ユーザーがコンテンツを操作するためのユーティリティアプリを作成できます。 コンテンツ同期を使用すると、アプリとのバンドル用に、バージョン管理されたページのアーカイブを作成できます。
 
-通常、 ***AEM Administrator*** は、作成ウィザードを使用して新しいアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。
+通常、 ***AEM Administrator*** は、作成ウィザードを使用してアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。
 
 ここから、 ***AEM Author*** ( または *マーケター*) では、標準搭載のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこなえます。
 

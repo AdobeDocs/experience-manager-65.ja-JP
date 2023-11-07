@@ -3,7 +3,7 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 79fa58e63596301e1669903ce10dd8b2ba7d0a1b
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4774'
 ht-degree: 92%
@@ -116,7 +116,7 @@ AEM は、クエリ（両方のタイプ）を Dispatcher と CDN によって�
 
 POST リクエストを使用する GraphQL クエリは、キャッシュされないのでお勧めしません。そのため、デフォルトのインスタンスでは、Dispatcher はそれらのクエリをブロックするように設定されています。
 
-GraphQLはGETリクエストもサポートしますが、これらのリクエストは、永続化されたクエリを使用して回避できる制限（URL の長さなど）に達する可能性があります。
+また、GraphQLはGETリクエストもサポートしますが、これらのリクエストは、永続化されたクエリを使用して回避できる制限（URL の長さなど）に達する可能性があります。
 
 詳しくは、 [永続クエリのキャッシュの有効化](#enable-caching-persisted-queries) 詳しくは、を参照してください。
 

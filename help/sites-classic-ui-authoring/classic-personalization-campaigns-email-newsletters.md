@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 55%
+source-wordcount: '1106'
+ht-degree: 54%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 55%
 
 メールサービスに公開するメールまたはニュースレターは、**Geometrixx ニュースレター**&#x200B;テンプレートを使用してキャンペーンで作成できます。また、**Geometrixx Outdoors メール**&#x200B;テンプレートも使用できます。**Geometrixx Outdoors メール**&#x200B;テンプレートに基づくメールまたはニュースレターのサンプルは、`https://<hostname>:<port>/cf#/content/campaigns/geometrixx-outdoors/e-mails.html` で入手できます。
 
-設定済みのメールサービスに公開する新しいメールを作成するには：
+設定済みの電子メールサービスに公開する電子メールを作成するには、次の手順を実行します。
 
 1. **Web サイト**／**Campaigns** の順に移動します。キャンペーンを選択します。
 1. 「**新規**」をクリックして、**ページを作成**&#x200B;ウィンドウを開きます。

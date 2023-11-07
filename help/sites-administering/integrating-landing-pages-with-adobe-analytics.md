@@ -1,7 +1,7 @@
 ---
 title: ランディングページと Adobe Analytics の統合
 seo-title: Integrating Landing Pages with Adobe Analytics
-description: ランディングページと Adobe Analytics を統合する方法について説明します。
+description: ランディングページをAdobe Analyticsと統合する方法を説明します。
 seo-description: Learn how to integrate landing pages with Adobe Analytics.
 uuid: 8f6672d1-497f-4ccb-b3cc-f6120fc467ba
 contentOwner: msm-service
@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 100%
+source-wordcount: '374'
+ht-degree: 63%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 AEM は、次に示すコールトゥアクション（CTA）コンポーネントを使用することにより、ランディングページのソリューションを [Adobe Analytics](https://www.omniture.com/jp/products/analytics/sitecatalyst) と統合しました。
 
 1. クリックスルーコンポーネント
-1. グラフィックリンクコンポーネント
+1. グラフィカルリンクコンポーネント
 
 これらのコンポーネントによって、Adobe Analytics の変数（トラフィック変数、コンバージョン変数）を使用してマッピングできる特定の属性、および Adobe Analytics に情報を送信するための成功イベントが公開されます。
 
@@ -36,12 +36,12 @@ AEM で、サイドキックに表示される&#x200B;**コールトゥアクシ
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
-### Adobe Analytics へのランディングページコンポーネントのマッピング {#mapping-landing-page-components-to-adobe-analytics}
+### ランディングページコンポーネントのAdobe Analyticsへのマッピング {#mapping-landing-page-components-to-adobe-analytics}
 
-ランディングページコンポーネントを Adobe Analytics にマッピングするには：
+ランディングページコンポーネントをAdobe Analyticsにマッピングするには：
 
-1. Adobe Analytics 設定を作成し、新しいフレームワークを作成したら、ドロップダウンメニューから適切なレポートスイートを選択します。この結果、Adobe Analytics の変数が取得され、コンテンツファインダーに表示されます。
-1. コールトゥアクション（CTA）コンポーネントを、サイドキックからページ中央のマッピング領域の適切な場所にドラッグ＆ドロップします。
+1. Adobe Analytics設定を作成してフレームワークを作成したら、ドロップダウンメニューから適切なレポートスイートを選択します。 その結果、Adobe Analytics変数が取得され、コンテンツファインダーに表示されます。
+1. 必要に応じて、Call to Action(CTA) コンポーネントをサイドキックからページの中央にあるマッピング領域にドラッグ&amp;ドロップします。
 
 <table>
  <tbody>
@@ -89,7 +89,7 @@ AEM で、サイドキックに表示される&#x200B;**コールトゥアクシ
 </table>
 
 1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。これで、フレームワークを使用できるようになります。
-1. 新しいランディングページを作成するか、既存の CTA コンポーネントを含む既存のランディングページを開き、サイドキックで「**ページプロパティ**」の「**Cloud Services**」タブをクリックし（タッチ操作向け UI では、**プロパティを開く**&#x200B;を選択して「**Cloud Services**」をクリックし）、ランディングページで使用するフレームワークを設定します。ドロップダウンリストからフレームワークを選択します。
+1. これで、ランディングページを作成するか、既存の CTA コンポーネントを含む既存のランディングページを開いて、 **Cloud Service** タブ **ページのプロパティ** サイドキック（タッチ操作向け UI）で、「 」を選択します。 **プロパティを開く** をクリックします。 **Cloud Service**) をクリックし、ランディングページで使用するフレームワークを設定します。 ドロップダウンリストからフレームワークを選択します。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 

@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1901'
 ht-degree: 10%
 
 ---
@@ -65,7 +65,7 @@ AEM Forms には、土曜日と日曜日が非稼働日に指定されている�
 
 >[!NOTE]
 >
->新しい業務カレンダーを作成しない場合は、デフォルトの業務カレンダーが使用されます。
+>業務カレンダーを作成しない場合は、デフォルトのカレンダーが使用されます。
 
 1. 管理コンソールで、サービス/Formsワークフロー/業務カレンダーをクリックします。
 1. 新しい業務カレンダーを追加するには、![bus_cal_plus](assets/bus_cal_plus.png) をクリックします。テキスト *新しいカレンダー* がドロップダウンリストに表示されます。 テキストを選択し、カレンダーに別の名前を入力します。

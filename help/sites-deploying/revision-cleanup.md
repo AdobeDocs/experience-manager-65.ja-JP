@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5814'
+source-wordcount: '5811'
 ht-degree: 68%
 
 ---
@@ -132,7 +132,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td>AEM 6.5 にアップグレードするときの注意点を教えてください。</td>
-   <td><p>AEM 6.5 での TarMK の変更の永続性形式。これらの変更には、事前の移行手順は必要ありません。 既存のリポジトリは、ユーザーに対して透過的なローリング移行をおこないます。 AEM 6.5（または関連ツール）がリポジトリに初めてアクセスすると、移行プロセスが開始されます。</p> <p><strong>AEM 6.5 永続化形式への移行が開始されると、リポジトリを以前のAEM 6.3 永続化形式に戻すことはできません。</strong></p> </td>
+   <td><p>AEM 6.5 での TarMK の永続性形式の変更。これらの変更には、事前に移行する手順は必要ありません。 既存のリポジトリは、ユーザーに対して透過的なローリング移行をおこないます。 AEM 6.5（または関連ツール）がリポジトリに初めてアクセスすると、移行プロセスが開始されます。</p> <p><strong>AEM 6.5 永続化形式への移行が開始されると、リポジトリを以前のAEM 6.3 永続化形式に戻すことはできません。</strong></p> </td>
   </tr>
  </tbody>
 </table>
@@ -266,7 +266,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップを実行するときのディスク領域とヒープメモリの最小要件を教えてください。</strong></td>
-   <td><p>オンラインでのリビジョンクリーンアップ中、ディスク領域は継続的に監視されます。使用可能なディスク領域が重大な値を下回った場合、プロセスはキャンセルされます。 臨界値とは、リポジトリのその時点でのディスクフットプリントの 25%であり、変更はできません。</p> <p><strong>Adobeでは、最初に推定されたリポジトリサイズの 2 倍または 3 倍以上のディスクサイズを使用することをお勧めします。</strong></p> <p>クリーンアッププロセス中、空きヒープ領域が継続的に監視されます。空きヒープ領域が重大な値を下回った場合、プロセスはキャンセルされます。 臨界値は、org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD を使用して設定します。デフォルト値は 15% です。</p> <p>最小コンパクションヒープサイズ設定の推奨事項は、AEM のメモリサイズ設定の推奨事項と切り離されていません。一般に： <strong>AEMインスタンスのサイズが、使用例とそれに対して予想されるペイロードに対応できるほど大きい場合、クリーンアッププロセスは十分なメモリを取得します。</strong></p> </td>
+   <td><p>オンラインでのリビジョンクリーンアップ中、ディスク領域は継続的に監視されます。使用可能なディスク領域が重大な値を下回った場合、プロセスはキャンセルされます。 臨界値とは、リポジトリのその時点でのディスクフットプリントの 25%であり、変更はできません。</p> <p><strong>Adobeでは、最初に推定されたリポジトリサイズの 2 倍または 3 倍以上のディスクサイズを使用することをお勧めします。</strong></p> <p>クリーンアッププロセス中、空きヒープ領域が継続的に監視されます。空きヒープ領域が重大な値を下回った場合、プロセスはキャンセルされます。 臨界値は、org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD を使用して設定します。デフォルト値は 15% です。</p> <p>最小コンパクションヒープサイズ設定のレコメンデーションは、AEM のメモリサイズ設定のレコメンデーションと切り離されていません。一般に： <strong>AEMインスタンスのサイズが、使用例とそれに対して予想されるペイロードに対応できるほど大きい場合、クリーンアッププロセスは十分なメモリを取得します。</strong></p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -291,7 +291,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>設定したメンテナンスウィンドウ中にオンラインでのリビジョンクリーンアップが終わらない場合は、何が起きていますか。</strong></td>
-   <td>他のメンテナンスタスクが実行を遅延させていないことを確認します。 これは、同じメンテナンスウィンドウ内で、オンラインでのリビジョンクリーンアップよりも多くのメンテナンスタスクが実行された場合に発生する可能性があります。メンテナンスタスクは、順序を設定せずに順番に実行されます。</td>
+   <td>他のメンテナンスタスクが実行を遅延させていないことを確認します。 これは、同じメンテナンスウィンドウ内で、オンラインでのリビジョンクリーンアップよりも多くのメンテナンスタスクが実行された場合に発生する可能性があります。メンテナンスタスクは、順番を設定せずに順番に実行されます。</td>
    <td> </td>
   </tr>
   <tr>
@@ -330,7 +330,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>リポジトリへの同時書き込みからの干渉が多すぎる場合はどうなりますか。</strong></td>
-   <td><p>同時書き込みが可能なシステムでは、コンパクションサイクルの終了時に変更をコミットできるように、オンラインでのリビジョンクリーンアップで排他書き込みアクセスが必要になる場合があります。システムが <strong>forceCompact モード</strong>( 詳しくは、 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html" target="_blank">Oak ドキュメント</a>. 強制コンパクト中は、排他的な書き込みロックが取得され、同時書き込みの干渉を受けずに、最終的に変更をコミットします。 応答時間に対する影響を制限するために、タイムアウト値を定義できます。 この値はデフォルトで 1 分に設定されています。つまり、1 分以内に強制コンパクトが完了しない場合、コンパクションプロセスは中止され、同時コミットが優先されます。</p> <p>強制コンパクションの実行時間は以下の要素によって変動します。</p>
+   <td><p>同時書き込みが可能なシステムでは、コンパクションサイクルの終了時に変更をコミットできるように、オンラインでのリビジョンクリーンアップで排他書き込みアクセスが必要になる場合があります。システムがに移行します <strong>forceCompact モード</strong>( 詳しくは、 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html" target="_blank">Oak ドキュメント</a>. 強制コンパクト中は、排他的な書き込みロックが取得され、同時書き込みの干渉を受けずに、最終的に変更をコミットします。 応答時間に対する影響を制限するために、タイムアウト値を定義できます。 この値はデフォルトで 1 分に設定されています。つまり、1 分以内に強制コンパクトが完了しない場合、コンパクションプロセスは中止され、同時コミットが優先されます。</p> <p>強制コンパクションの実行時間は以下の要素によって変動します。</p>
     <ul>
      <li>ハードウェア：特に IOPS。IOPS が増えるにつれ、処理時間が短くなります。</li>
      <li>セグメントストアのサイズ：時間はセグメントストアのサイズと共に長くなります。</li>
@@ -370,7 +370,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><strong>オンラインでのリビジョンクリーンアップ中に監視する必要があるものを教えてください。</strong></td>
    <td>
     <ul>
-     <li>オンラインでのリビジョンクリーンアップが有効な場合は、ディスクスペースを監視する必要があります。ディスク容量が不足している場合は、クリーンアップが実行されないか、先に終了します。</li>
+     <li>オンラインでのリビジョンクリーンアップが有効な場合は、ディスクスペースを監視する必要があります。ディスク容量が不足している場合は、クリーンアップが実行されないか、先にクリーンアップが終了します。</li>
      <li>オンラインでのリビジョンクリーンアップの完了時間をログで確認してください。これは 2 時間以下である必要があります。</li>
      <li>チェックポイントの数。コンパクションの実行時にチェックポイントが 3 つ以上ある場合は、チェックポイントをクリーンアップすることをお勧めします。</li>
     </ul> </td>
@@ -392,7 +392,7 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>オンラインでのリビジョンクリーンアップが開始/停止しました
       <ul>
-       <li>オンラインでのリビジョンクリーンアップは、次の 3 つのフェーズで構成されます。推定、圧縮、クリーンアップ。 リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンの AEM では、メッセージ「<code>TarMK GC #{}: estimation started</code>」は見積もりの開始を示し、「<code>TarMK GC #{}: compaction started, strategy={}</code>」はコンパクションの開始を示し、「T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>」はクリーンアップの開始を示します。</li>
+       <li>オンラインでのリビジョンクリーンアップは、推定、コンパクション、クリーンアップの 3 つのフェーズで構成されます。 リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンの AEM では、メッセージ「<code>TarMK GC #{}: estimation started</code>」は見積もりの開始を示し、「<code>TarMK GC #{}: compaction started, strategy={}</code>」はコンパクションの開始を示し、「T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>」はクリーンアップの開始を示します。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップで取得したディスクスペース
       <ul>
@@ -426,7 +426,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>リビジョンクリーンアップのヘルスチェックではどのような情報が表示されますか。色分けされたステータスレベルには、どのように、いつどのように影響しますか。 </strong></td>
-   <td><p>リビジョンのクリーンアップヘルスチェックは、 <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作ダッシュボード</a>の一部です。<br /> </p> <p>ステータスは <strong>緑</strong> オンラインでのリビジョンクリーンアップメンテナンスタスクの最後の実行が正常に完了した場合。</p> <p>これは <strong>イエロー</strong> オンラインでのリビジョンクリーンアップのメンテナンスタスクが 1 回キャンセルされた場合。<br /> </p> <p>これは <strong>赤</strong> オンラインでのリビジョンクリーンアップのメンテナンスタスクが 3 回連続でキャンセルされた場合。 <strong>この場合、手動の操作が必要であるか</strong>、オンラインでのリビジョンクリーンアップが再び失敗する可能性が高くなります。詳細情報に関しては、以下の<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">トラブルシューティング</a>の節を参照してください。<br /> </p> <p>システムの再起動後に、ヘルスチェックステータスがリセットされることにもご注意ください。したがって、新しく再起動したインスタンスは、リビジョンクリーンアップヘルスチェックで緑色のステータスで表示されます。 外部監視ツールを使用すると、AEMの稼動時間を超えてデータを保持できます。 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
+   <td><p>リビジョンのクリーンアップヘルスチェックは、 <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作ダッシュボード</a>の一部です。<br /> </p> <p>ステータスは <strong>緑</strong> オンラインでのリビジョンクリーンアップメンテナンスタスクの最後の実行が正常に完了した場合。</p> <p>それは <strong>イエロー</strong> オンラインでのリビジョンクリーンアップのメンテナンスタスクが 1 回キャンセルされた場合。<br /> </p> <p>それは <strong>赤</strong> オンラインでのリビジョンクリーンアップのメンテナンスタスクが 3 回連続でキャンセルされた場合。 <strong>この場合、手動の操作が必要であるか</strong>、オンラインでのリビジョンクリーンアップが再び失敗する可能性が高くなります。詳細情報に関しては、以下の<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">トラブルシューティング</a>の節を参照してください。<br /> </p> <p>また、システムの再起動後にヘルスチェックのステータスがリセットされます。 したがって、新しく再起動したインスタンスは、リビジョンクリーンアップヘルスチェックで緑色のステータスで表示されます。 外部監視ツールを使用すると、AEMの稼動時間を超えてデータを保持できます。 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -468,8 +468,8 @@ TarMK GC: no base state available, running full compaction instead
      <li>まず、ログエントリを確認します。<br /> </li>
      <li>ログの情報に応じて、適切なアクションを実行します。
       <ul>
-       <li>ログに、5 回の失敗したコンパクションサイクルと<code>forceCompact</code>サイクルでのタイムアウトが示されている場合は、リポジトリへの書き込みが少ない、処理が少ない時間帯にメンテナンスウィンドウをスケジュールします。リポジトリの書き込みを、 <em>https://serveraddress:serverport/libs/granite/operations/content/monitoring/page.html</em></li>
-       <li>メンテナンスウィンドウの最後にクリーンアップが停止した場合は、メンテナンスタスクユーザーインターフェイスのメンテナンスウィンドウの設定が十分に大きいことを確認してください</li>
+       <li>ログに、5 回の失敗したコンパクションサイクルと<code>forceCompact</code>サイクルでのタイムアウトが示されている場合は、リポジトリへの書き込みが少ない、処理が少ない時間帯にメンテナンスウィンドウをスケジュールします。リポジトリの書き込みを、次の場所にあるリポジトリ指標監視ツールで確認できます。 <em>https://serveraddress:serverport/libs/granite/operations/content/monitoring/page.html</em></li>
+       <li>メンテナンスウィンドウの最後にクリーンアップが停止した場合は、メンテナンスタスクユーザーインターフェイスのメンテナンスウィンドウの設定が十分に大きいことを確認してください。</li>
        <li>使用可能なヒープメモリが不十分な場合は、インスタンスに十分なメモリがあることを確認します。</li>
        <li>応答が遅れた場合、セグメントストアが大きすぎて、メンテナンス期間が長くなってもオンラインでのリビジョンクリーンアップを完了できない可能性があります。 例えば、先週にオンラインでのリビジョンクリーンアップが正常に完了しなかった場合は、オフラインでのメンテナンスを計画し、オフラインでのリビジョンクリーンアップを実行して、セグメントストアを管理可能なサイズに戻すことをお勧めします。</li>
       </ul> </li>
@@ -544,7 +544,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
    <tr>
     <td>該当なし</td>
-    <td>TarMK GC #2:コンパクションがキャンセルされました：${REASON}.</td>
+    <td>TarMK GC #2：コンパクションがキャンセルされました： ${REASON}.</td>
     <td>コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。また、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルすることで、コンパクションをキャンセルすることもできます。</td>
     <td>示されている理由によって異なります。</td>
   </td>
@@ -618,7 +618,7 @@ Oak-run ツールには、リビジョンクリーンアッププロセスのパ
 
 * **-Dcompress-interval**。現在のマップを圧縮するまで保持する、コンパクションマップのエントリ数です。デフォルトは 1000000 です。十分なヒープメモリが使用可能な場合、スループットを高めるためにはこの値をさらに大きくする必要があります。**このパラメーターは Oak バージョン 1.6 で削除されており、効果はありません。**
 
-* **-Dcompaction-progress-log**。ログに記録される圧縮ノードの数。 デフォルト値は150000です。これは、最初の150000個の圧縮ノードが操作中にログに記録されることを意味します。 これを次に説明するパラメーターで使用します。
+* **-Dcompaction-progress-log**。ログに記録される圧縮済みノードの数。 デフォルト値は150000です。これは、最初の150000個の圧縮ノードが操作中にログに記録されることを意味します。 これを次に説明するパラメーターと共に使用します。
 
 * **-Dtar.PersistCompactionMap。** コンパクションマップの永続化にヒープメモリの代わりにディスク領域を使用するには、このパラメーターを true に設定します。 oak-run ツールの&#x200B;**バージョン 1.4** 以上が必要です。詳しくは、[オフラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)の節の質問 3 を参照してください。**このパラメーターは Oak バージョン 1.6 で削除されており、効果はありません。**
 
@@ -660,7 +660,7 @@ java -Dupdate.limit=10000 -Dcompaction-progress-log=150000 -Dlogback.configurati
   </tr>
   <tr>
    <td><strong>オフラインでのリビジョンクリーンアップのタスクが 8 時間以内に完了しない場合に、このタスクを高速化するにはどうすればよいですか。</strong></td>
-   <td>リビジョンタスクが 8 時間以内に完了せず、<a href="/help/sites-administering/operations-dashboard.md#diagnosis-tools" target="_blank">スレッドダンプ</a>で主なホットスポットが<code>InMemoryCompactionMap.findEntry</code>であると示されている場合は、oak-run ツール<strong>バージョン 1.4</strong>またはそれ以上で以下のパラメーターを使用します：<code>-Dtar.PersistCompactionMap=true</code>。この <code>-Dtar.PersistCompactionMap</code> Oak バージョン 1.6 では、パラメーターが削除されました。</td>
+   <td>リビジョンタスクが 8 時間以内に完了せず、<a href="/help/sites-administering/operations-dashboard.md#diagnosis-tools" target="_blank">スレッドダンプ</a>で主なホットスポットが<code>InMemoryCompactionMap.findEntry</code>であると示されている場合は、oak-run ツール<strong>バージョン 1.4</strong>またはそれ以上で以下のパラメーターを使用します：<code>-Dtar.PersistCompactionMap=true</code>。The <code>-Dtar.PersistCompactionMap</code> Oak バージョン 1.6 では、パラメーターが削除されました。</td>
   </tr>
  </tbody>
 </table>

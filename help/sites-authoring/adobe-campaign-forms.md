@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1288'
-ht-degree: 98%
+source-wordcount: '1286'
+ht-degree: 95%
 
 ---
 
@@ -54,7 +54,7 @@ Adobe Campaign 固有のフォームを作成する前に、AEM アプリケー�
 >Adobe Campaign Classic または Adobe Campaign Standard を使用する場合は、ページの **jcr:content** ノードの **acMapping** プロパティがそれぞれ **mapRecipient** または **profile** に設定されていることを確認してください。
 >
 
-1. AEM の Sites で、新しいページを作成する場所に移動します。
+1. AEMの Sites で、ページを作成する場所に移動します。
 1. ページを作成して、「**Adobe Campaign Classic プロファイル**」または「 **Adobe Campaign Standard プロファイル**」を選択し、「**次へ**」をクリックします。
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
@@ -95,7 +95,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
    * **Adobe Campaign：サービスを購入**：Adobe Campaign で受信者の購入を管理できます。
    * **Adobe Campaign：サービスの登録解除**：Adobe Campaign で受信者の登録をキャンセルできます。
 
-1. 各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。このコンポーネントでは、Adobe Campaign プロファイルの暗号化されたプライマリキーを受け入れるために使用する URL パラメーターを定義します。「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
+1. 各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。このコンポーネントでは、Adobe Campaignプロファイルの暗号化されたプライマリキーを受け取るために使用される URL パラメーターを定義します。 「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
 1. 「**暗号化されたプライマリキー**」コンポーネントをフォーム（任意の場所）にドラッグし、「**設定**」アイコンをクリックまたはタップします。「**Adobe Campaign**」タブで、URL パラメーターに任意の名前を指定します。チェックマークをクリックまたはタップして、変更を保存します。
 
    このフォームへのリンクを生成するには、この URL パラメーターを使用して、Adobe Campaign プロファイルの暗号化されたプライマリキーを割り当てる必要があります。暗号化されたプライマリキーは、URL（パーセント）で適切にエンコードする必要があります。

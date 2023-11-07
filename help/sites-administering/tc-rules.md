@@ -4,10 +4,10 @@ description: Adobe Experience Managerで翻訳が必要なコンテンツを識�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 89%
+source-wordcount: '1152'
+ht-degree: 86%
 
 ---
 
@@ -160,7 +160,7 @@ translation_rules.xml ファイルは、複数の `node` 子要素を持つ `nod
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
-次に、コンテキストを選択して「**編集**」をクリックする必要があります。これにより、翻訳ルールエディターが開きます。
+次に、コンテキストを選択して「**編集**」をクリックする必要があります。翻訳ルールエディターが開きます。
 
 ![chlimage_1-58](assets/chlimage_1-58.jpeg)
 
@@ -192,7 +192,7 @@ UI では、「**プロパティ**」タブで「**継承**」をチェックま
 
 UI では、「**プロパティ**」タブで「**翻訳**」をチェックまたはチェック解除できます。
 
-**updateDestinationLanguage**：この属性は、テキストを持たず、言語コード（jcr:language など）を持つプロパティに対して使用されます。ユーザーはテキストを翻訳していませんが、ソースから宛先への言語ロケールを設定します。そのようなプロパティは、翻訳用に送信されません。
+**updateDestinationLanguage** この属性は、テキストを持たないが言語コード（例：jcr:language）を持つプロパティに使用されます。 ユーザーはテキストを翻訳していませんが、ソースから宛先への言語ロケールを設定します。そのようなプロパティは、翻訳用に送信されません。
 
 UI では、言語コードを値として持つ特定のプロパティについてのみ、「**プロパティ**」タブで「**翻訳**」をチェックまたはチェック解除できます。
 

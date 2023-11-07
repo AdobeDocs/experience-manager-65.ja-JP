@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6384'
-ht-degree: 90%
+source-wordcount: '6381'
+ht-degree: 88%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 90%
 
 ExtJS 言語では、xtype はクラスに付与されるシンボル名です。xtype とその使用方法について詳しくは、[ExtJS 2 の概要](https://www.sencha.com/learn/overview-of-extjs-2)の「Component XTypes」の段落を参照してください。
 
-AEM で利用できるすべてのウィジェットの完全な情報については、[ウィジェット API のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)を参照してください。
+AEMで使用可能なすべてのウィジェットについて詳しくは、 [widget API ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
 
 AEM で特定の xtype が使用されるコンポーネントを探すには、CRXDE で次の Xpath クエリを使用します。その際、「checkbox」を検索する xtype に置き換えます。
 
@@ -245,7 +245,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.wcm.CreateVersionDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.CreateVersionDialog)
 
-  CreateVersionDialog は、新しいバージョンのページを作成できるダイアログボックスです。
+  CreateVersionDialog は、ページのバージョンを作成できるダイアログボックスです。
 
 * customcontentpanel
 
@@ -703,7 +703,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.form.SearchField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SearchField)
 
-  SearchField は、リポジトリーの検索に使用でき、検索結果をドロップダウンリストで示す検索フィールドを表示します。
+  SearchField は、リポジトリの検索に使用できるドロップダウンリストの結果を提供する検索フィールドを提供します。
 
 * selection
 
@@ -733,7 +733,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.form.SizeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SizeField)
 
-  SizeField は、ユーザーが（例えば画像に対して）幅と高さを入力できるようにします。
+  SizeField を使用すると、ユーザーは幅と高さ（例えば、画像）を入力できます。
 
 * slider
 
@@ -761,7 +761,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.form.SmartImage](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartImage)
 
-  SmartImage はインテリジェント画像アップローダーです。アップロードされた画像を処理するツールを提供します。イメージマップや画像のトリミングを定義するツールを提供します。
+  SmartImage はインテリジェント画像アップローダーです。アップロードされた画像を処理するツール（例えば、画像マップを定義するツールや画像クロッパーなど）を提供します。
 
   このコンポーネントは、別のダイアログタブで使用するように設計されています。
 

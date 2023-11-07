@@ -2,7 +2,7 @@
 title: 基盤コンポーネント
 description: Adobe Experience Manager 6.5 の基盤コンポーネントについて説明します。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '7204'
 ht-degree: 97%
@@ -351,7 +351,7 @@ Flash コンポーネントを使用すると、Flash ムービーを読み込�
 
    * **ウィンドウモード**
 
-     不透明、透明、枠付きウィンドウなど、ウィンドウの表示方法。
+     ウィンドウの表示方法 ( 不透明、透明、別個の（実線）ウィンドウなど )。
 
    * **背景色**
 

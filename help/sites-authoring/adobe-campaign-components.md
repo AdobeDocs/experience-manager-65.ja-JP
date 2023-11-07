@@ -1,18 +1,16 @@
 ---
 title: Adobe Campaign コンポーネントとの統合
 description: Adobe Campaign と統合すると、ニュースレター用のコンポーネントとフォーム用のコンポーネントを使用できるようになります。
-uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2836'
-ht-degree: 98%
+source-wordcount: '2835'
+ht-degree: 96%
 
 ---
 
@@ -24,7 +22,7 @@ Adobe Campaign と統合すると、ニュースレター用のコンポーネ�
 >
 >AEM メールコンポーネントは非推奨（廃止予定）となりました。コンテンツとスタイルを結合するメールの性質上、AEM で標準で提供されるメールコンポーネントは、プロジェクトで必要なすべてのコンポーネントにカスタムスタイルを実装する必要があるので、顧客による再利用の機会は限られています。
 >
->メールコンポーネントはプロジェクトレベルで実装できます。その方法は、非推奨の AEM メールコンポーネントを見ればわかります。ただし、これらの非推奨コンポーネントは、プロジェクトでは使用しないでください。
+>メールコンポーネントはプロジェクトレベルで実装できます。その方法は、非推奨の AEM メールコンポーネントを見ればわかります。ただし、これらの非推奨コンポーネントはプロジェクトで使用しないでください。
 
 ## Adobe Campaign ニュースレターコンポーネント {#adobe-campaign-newsletter-components}
 
@@ -217,7 +215,7 @@ Dynamic Media Classic（Scene7）画像テンプレートはレイヤー化さ�
 * **画像のプロパティ** (**高度な画像プロパティ**) を使用して、以下を指定できます。
 
    * **タイトル**
-ブロックのタイトル。マウスポインターを置くと表示されます。
+ブロックのタイトル。マウスを置くと表示されます。
 
    * **代替テキスト**
 画像を表示できない場合に表示する代替テキスト。
@@ -388,7 +386,7 @@ Adobe Campaign コンポーネントには、すべてのコンポーネント�
 
 ### 日付フィールド（Campaign）と日付フィールド／HTML 5（Campaign） {#date-field-campaign-and-date-field-html-campaign}
 
-日付フィールドを使用して、受信者が日付を指定できるようにします。これは例えば、受信者による生年月日の指定が必要な場合などに有効です。日付の形式は、Adobe Campaign インスタンスで使用されている形式と同じになります。
+日付フィールドを使用して、受信者に日付を指定できます。例えば、受信者に生年月日を指定させる場合などです。 日付の形式は、Adobe Campaign インスタンスで使用されている形式と同じになります。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
@@ -440,7 +438,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ### 数値フィールド （Campaign） {#numeric-field-campaign}
 
-数値フィールドを使用すると、受信者が年齢などの数値を入力できるようになります。
+数値フィールドを使用して、受信者に年齢などの数値を入力できるようにします。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 

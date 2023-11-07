@@ -1,19 +1,15 @@
 ---
 title: AEM Sites - GDPR 対応
-seo-title: AEM Sites - GDPR Readiness
 description: AEM Sites で GDPR リクエストを処理する手順とその使用方法について説明します。
-seo-description: Learn about the details of GDPR Readiness for AEM Sites.
-uuid: 00d1fdce-ef9a-4902-a7a5-7225728e8ffc
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '837'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -21,7 +17,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
+>以下の節では GDPR を例として使用していますが、詳細は、GDPR、CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
 
 データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。
 

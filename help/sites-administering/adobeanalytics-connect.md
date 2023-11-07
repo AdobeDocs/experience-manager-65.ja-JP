@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
-workflow-type: ht
-source-wordcount: '1499'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '1497'
+ht-degree: 97%
 
 ---
 
@@ -131,7 +131,7 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
    >
    >レポートスイート ID を選択すると、左側のコンテンツファインダーに Adobe Analytics 変数（SiteCatalyst 変数）が設定されます。
 
-1. レポートスイートに情報を送信させるサーバーインスタンスを選択するには、（レポートスイート ID の横にある）「**実行モード**」ドロップダウンを使用します。
+1. レポートスイートに情報を送信するサーバーインスタンスを選択するには、 **実行モード** （レポートスイート ID の横にある）」ドロップダウンリストを使用して、製品内で利用できます。
 
    ![aa-framework-01](assets/aa-framework-01.png)
 
@@ -177,7 +177,7 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 1. コンソールから直接、またはページエディターから&#x200B;**[ページのプロパティ](/help/sites-authoring/editing-page-properties.md)**&#x200B;を開きます。
 1. 「クラウドサービス」タブを開きます。
 
-1. **設定を追加**&#x200B;ドロップダウンを使用して、利用可能なオプションから **Adobe Analytics** を選択します。継承が設定されている場合、セレクターが使用可能になる前に無効にします。
+1. 以下を使用します。 **設定を追加** ドロップダウンで選択 **Adobe Analytics** を選択します。 継承が設定されている場合、セレクターが使用可能になる前に無効にします。
 
 1. **Adobe Analytics** のドロップダウンセレクターが、使用可能なオプションに追加されます。必要なフレームワーク設定を選択します。
 

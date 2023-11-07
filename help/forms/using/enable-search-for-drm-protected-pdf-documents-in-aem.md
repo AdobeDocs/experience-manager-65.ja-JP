@@ -1,7 +1,7 @@
 ---
 title: Document Security によって保護された PDF ドキュメントを AEM で検索可能にする
 seo-title: Enable AEM to search document security protected PDF documents
-description: ネイティブ AEM 検索を有効にし、DRM 保護された PDF ドキュメントで全テキストの検索を実行する方法について説明します。
+description: DRM 保護されたドキュメントでネイティブAEM検索を有効にして全文検索を実行する方法をPDFします。
 seo-description: Learn how to enable native AEM search to perform full-text search on DRM protected PDF documents.
 uuid: ec6e5d53-a74c-4958-a389-7937d073c083
 contentOwner: khsingh
@@ -12,19 +12,19 @@ discoiquuid: b79c147c-f846-4e48-bec0-8b658502bb6f
 docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '697'
-ht-degree: 100%
+ht-degree: 56%
 
 ---
 
 # Document Security によって保護された PDF ドキュメントを AEM で検索可能にする{#enable-aem-to-search-document-security-protected-pdf-documents}
 
-AEM 検索では、AEM アセットの検索と場所の特定をすることができます。また、プレーンテキストファイル、Microsoft Office ドキュメント、PDF ドキュメントなど、広く使用されているさまざまなドキュメント形式において、テキスト検索を実行することができます。ネイティブ検索を拡張し、[AEM Document Security で保護された PDF ドキュメント](../../forms/using/admin-help/document-security.md)で全テキストの検索を実行することも可能です。このようなドキュメントで全テキストの検索を AEM で実行できるようにするには、次の手順を実行します。
+AEM検索では、AEMアセットを検索および検索し、プレーンテキストファイル、Microsoft Office ドキュメント、PDFドキュメントなど、一般的に使用される様々なドキュメント形式でテキスト検索を実行できます。 ネイティブ検索を拡張して、フルテキスト検索を実行することもできます。 [AEM Document Security で保護されたPDFドキュメント](../../forms/using/admin-help/document-security.md). AEMがドキュメントに対して全文検索を実行できるようにするには、次の手順を実行します。
 
 1. 安全な接続の確立
-1. サンプルポリシーで保護された PDF ドキュメントのインデックス作成
+1. ポリシーで保護されたサンプルPDFドキュメントのインデックス作成
 
 ## 前提条件 {#prerequisites}
 
@@ -49,30 +49,30 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
 ### AEM Forms JEE と OSGi スタック間の安全な接続の確立 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
-次のいずれかの方法を使用して安全な接続を確立します。
+次のいずれかの方法を使用して、安全な接続を確立できます。
 
-* JEE 上の AEM Forms の管理者資格情報を使用して Adobe LiveCycle Client SDK Bundle を設定します
+* JEE 上のAEM Formsの管理者資格情報を使用して、AdobeLiveCycleClient SDK Bundle を設定します。
 * 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定
 
-#### JEE 上の AEM Forms の管理者資格情報を使用して Adobe LiveCycle Client SDK Bundle を設定します {#configure-adobe-livecycle-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
+#### JEE 上のAEM Formsの管理者資格情報を使用して、AdobeLiveCycleClient SDK Bundle を設定します。 {#configure-adobe-livecycle-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
 1. AEM Web コンソールを開きます。URL は https://&#39;[server]:[port]&#39;/system/console/configMgr です。
-1. **Adobe LiveCycle Client SDK Bundle** を探して開きます。次の各フィールドの値を指定します。
+1. を探して開きます。 **AdobeLiveCycleクライアント SDK バンドル**. 次のフィールドの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
-   * **ユーザー名**：AEM サーバーからの呼び出しの開始に使用される JEE 上の AEM Forms アカウントのユーザー名を指定します。指定したアカウントは、JEE サーバー上の AEM Forms で Document Services を開始することができる権限が付与されている必要があります。
-   * **パスワード**：Username フィールドに表示される JEE 上の AEM Forms アカウントのパスワードを指定します。
+   * **ユーザー名**：AEM サーバーからの呼び出しの開始に使用される JEE 上の AEM Forms アカウントのユーザー名を指定します。指定したアカウントには、JEE 上のAEM Formsサーバーで Document Services を開始する権限が必要です。
+   * **パスワード**:「ユーザー名」フィールドで説明した JEE 上のAEM Formsアカウントのパスワードを指定します。
 
-   「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
+   「**保存**」をクリックします。AEMは、Document Security で保護されたPDFドキュメントを検索できます。
 
 #### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
-1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
+1. JEE 上のAEM Formsの相互認証を有効にします。 詳しくは、 [CAC と相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html).
 1. AEM Web コンソールを開きます。URL は https://&#39;[server]:[port]&#39;/system/console/configMgr です。
-1. **Adobe LiveCycle Client SDK** Bundle を探して開きます。次の各プロパティの値を指定します。
+1. を探して開きます。 **AdobeLiveCycleクライアント SDK** バンドル。 次のプロパティの値を指定します。
 
-   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
+   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を有効にするには、 -Djavax.net.ssl.trustStore=&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> パラメーター。
    * **2way SSL の有効化**：「2way SSL の有効化」オプションを有効にします。
    * **キーストアファイル URL**：キーストアファイルの URL を指定します。
    * **TrustStore ファイル URL**：Truststore ファイルの URL を指定します.
@@ -80,11 +80,11 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
    * **TrustStore パスワード**：Truststore ファイルのパスワードを指定します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
 
-   「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
+   「**保存**」をクリックします。AEMは Document Security で保護されたドキュメントを検索するために有効になります。PDF
 
-### サンプルポリシーで保護された PDF ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-document}
+### ポリシーで保護されたサンプルPDFドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-document}
 
 1. 管理者として AEM Assets にログインします。
-1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントをアップロードします。
+1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護されたPDFドキュメントをアップロードします。
 
-   これで AEM 検索を使用してポリシーで保護されたドキュメントを検索できるようになりました。
+   これで、AEM検索を使用して、ポリシーで保護されたドキュメントを検索できるようになりました。

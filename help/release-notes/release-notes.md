@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 59d5c2574bf4298469152a3d55e7c1508eb2f1be
-workflow-type: ht
-source-wordcount: '4633'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '4632'
+ht-degree: 99%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 100%
    * MongoDB 4.4
    * MySQL JDBC Connector 8
 
-AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE 完全インストーラーを使用することをお勧めします。新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
+AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE 完全インストーラーを使用することをお勧めします。新しく追加および廃止されたソフトウェアの完全なリストを確認するには、JEE 上のAEM Formsまたは OSGi 上のAEM Formsのドキュメントを参照してください。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -476,7 +476,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
       >[!NOTE]
       >
-      > また、7-zip などのインプレース編集ツールを使用して、`Manifest.mf` ファイルを更新することもできます。
+      > また、7-zip などのインプレース編集ツールを使用して、 `Manifest.mf` ファイル。
 
    1. 更新した `Manifest.mf` を `adobe-output-client.jar` アーカイブに保存します。
    1. 変更した `adobe-output-client.jar` ファイルを保存し、設定を再実行します。（CQDOC-20878）

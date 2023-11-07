@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1188'
 ht-degree: 5%
 
 ---

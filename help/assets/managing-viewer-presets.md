@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '4519'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -404,8 +404,8 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
-1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
-1. 「**[!UICONTROL すべて保存]**」を選択します。
+1. 「 limit 」プロパティで、数を目的の数（例： ）に変更します。 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
+1. **[!UICONTROL すべて保存]** を選択します。
 
 ## ビューアプリセットを作成する {#creating-a-new-viewer-preset}
 
@@ -445,7 +445,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
    * スタイル設定を別個の CSS ファイルで定義している場合は、その CSS ファイルを AEM Assets にアップロードできます。「**[!UICONTROL 選択したタイプ]**」プルダウンメニューの下の「**[!UICONTROL CSS を読み込み]**」をタップし（必要に応じて、Visual Editor を上にスクロールして表示します）、アップロードした CSS ファイルを探してビューアプリセットと関連付けます。
 
-     CSS ファイルを読み込むと、Visual Editor は、その CSS に正しいビューアマーカーが使用されているかを確認します。例えば、ズームビューアを作成している場合、読み込むすべての CSS ルールが、親のビューアエレメントに定義されているズームビューアのクラス名 `.s7mixedmediaviewer` を使用して定義されている必要があります。
+     CSS ファイルを読み込むと、Visual Editor は、その CSS に正しいビューアマーカーが使用されているかを確認します。例えば、ズームビューアを作成している場合、読み込むすべての CSS ルールが、親のビューア要素に定義されているズームビューアのクラス名 `.s7mixedmediaviewer` を使用して定義されている必要があります。
 
      指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます（CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。例えば、ズームビューアの CSS マーカーについては、[ズームビューアのカスタマイズ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja)を参照してください）。ただし、Visual Editor が一部の CSS 値を理解できないこともありえます。そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
 

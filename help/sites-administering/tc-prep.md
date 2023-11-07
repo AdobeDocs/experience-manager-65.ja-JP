@@ -4,10 +4,10 @@ description: Adobe Experience Managerで翻訳するコンテンツを準備す�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 79%
+source-wordcount: '683'
+ht-degree: 72%
 
 ---
 
@@ -47,11 +47,11 @@ ht-degree: 79%
 
 言語ルートを作成するには、ページを作成し、「名前」プロパティの値として ISO 言語コードを使用します。言語コードは次のどちらかの形式にしてください。
 
-* `<language-code>`サポートされている言語コードは、ISO-639-1 で定義されている 2 文字のコード（例：`en`）です。
+* `<language-code>`サポートされている言語コードは、ISO-639-1 で定義されている 2 文字のコードです。例： `en`.
 
-* `<language-code>_<country-code>` または `<language-code>-<country-code>` サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです（例：`en_US`、`en_us`、`en_GB`、`en-gb`）。
+* `<language-code>_<country-code>` または `<language-code>-<country-code>`サポートされている国コードは、ISO 3166 で定義されている小文字または大文字の 2 文字コードです。例： `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。Name プロパティはリポジトリ内のページノードの名前として使用されるので、ページのパスを決定します。 (http://localhost:4502/content/geometrixx/fr.html)
+グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。Name プロパティは、リポジトリ内のページノードの名前として使用されるので、ページのパスを決定します。 (http://localhost:4502/content/geometrixx/fr.html)
 
 次の手順では、タッチ操作向け UI を使用して、Web サイトの言語コピーを作成します。 クラシック UI の使用手順については、 [クラシック UI を使用した言語ルートの作成](/help/sites-administering/tc-lroot-classic.md).
 
@@ -65,7 +65,7 @@ ht-degree: 79%
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
 1. ページテンプレートを選択して、「次へ」をクリックまたはタップします。
-1. 「名前」フィールドに言語コードを入力します。言語コードの形式は `<language-code>` または `<language-code>_<country-code>` です。例：`en`、`en_US`、`en_us`、`en_GB`、`en_gb`。ページのタイトルを入力します。
+1. 「名前」フィールドに、の形式で国コードを入力します。 `<language-code>` または `<language-code>_<country-code>`例： `en`, `en_US`, `en_us`, `en_GB`, `en_gb`. ページのタイトルを入力します。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 

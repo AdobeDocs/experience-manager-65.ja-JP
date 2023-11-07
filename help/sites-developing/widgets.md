@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 7b234f1f-4470-4de1-a3c3-ab19e5e001ad
 docset: aem65
 exl-id: 56a9591c-cd78-42e8-a5d7-6b48581d6af6
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4926'
+source-wordcount: '4925'
 ht-degree: 99%
 
 ---
@@ -102,7 +102,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 * JavaScript コードのみを組み込むには：
   `<ui:includeClientLib js="<category-name>"/>`
 
-詳しくは、[&lt;ui:includeClientLib>](/help/sites-developing/taglib.md#lt-ui-includeclientlib) タグの説明を参照してください。
+詳しくは、 [&lt;ui:includeclientlib>](/help/sites-developing/taglib.md#lt-ui-includeclientlib) タグを使用します。
 
 クライアントライブラリは、オーサーモードでしか使用できず、パブリッシュモードでは除外する必要が生じる場合があります。これを行うには、次のように設定します。
 
@@ -463,7 +463,7 @@ AEM 付属のすぐに使用できるウィジェットは、ほとんどのユ�
 
 #### 例 3：リッチテキストエディター（RTE）プラグイン {#example-rich-text-editor-rte-plug-in}
 
-**リッチテキストエディター（RTE）プラグイン**&#x200B;ベースのダイアログは、リッチテキストエディターベースのダイアログで、カスタムテキストを角括弧内に挿入するカスタムボタンが備わっています。カスタムテキストをサーバー側ロジックで解析し、例えば、特定のパスで定義されたテキストを追加することができます（この例では、サーバー側ロジックは実装されていません）。
+**リッチテキストエディター（RTE）プラグイン**&#x200B;ベースのダイアログは、リッチテキストエディターベースのダイアログで、カスタムテキストを角括弧内に挿入するカスタムボタンが備わっています。カスタムテキストは、特定のパスで定義されたテキストを追加する場合など、サーバー側のロジック（この例では実装されていません）で解析できます。
 
 **RTE プラグイン**&#x200B;ベースのダイアログ：
 

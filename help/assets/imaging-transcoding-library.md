@@ -5,10 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 76%
+ht-degree: 75%
 
 ---
 
@@ -56,10 +56,10 @@ Adobeの画像トランスコーディングライブラリは、次のような
 
 `-resize` パラメーターには、以下のオプションを設定できます。
 
-* `X`：[!DNL Experience Manager] と同様に機能。例：-resize 319
-* `WxH`：縦横比は維持されません（例：`-resize 319x319` ）。
-* `Wx`：幅を固定し、アスペクト比を維持して高さを計算。例えば、`-resize 319x` のように指定します。
-* `xH`：高さを固定し、アスペクト比を維持して幅を計算。例えば、`-resize x319` のように指定します。
+* `X`：[!DNL Experience Manager] と同様に機能。例えば、-resize 319 のように指定します。
+* `WxH`：縦横比が維持されない（例： ） `-resize 319x319`.
+* `Wx`：幅を固定し、アスペクト比を維持して高さを計算。例：`-resize 319x`
+* `xH`：高さを固定し、アスペクト比を維持して幅を計算。例：`-resize x319`
 
 ```shell
  -AllowUpsampling (Resizes smaller images)

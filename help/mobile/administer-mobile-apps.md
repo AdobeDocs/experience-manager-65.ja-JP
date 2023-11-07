@@ -8,7 +8,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 302d1bd9-fdb3-4db6-a446-6ed85ad9fba5
 exl-id: dc7ba6ad-9df9-4312-a82f-5f3405dea684
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 9%
@@ -21,7 +21,7 @@ ht-degree: 9%
 >
 >Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager(AEM)Mobile は、AEM Assets、Sites、Screens、Workflow、User Manager、Commerce およびFormsを活用する、Adobe Experience Managerマルチチャネルデジタルプラットフォームに含まれています。 AEM Mobileは、優れた展開の柔軟性を備え、企業が様々なコンテンツソースを使用できるようにします。
+Adobe Experience Manager(AEM)Mobile は、Adobe Experience Managerマルチチャネルデジタルプラットフォームに含まれ、AEM Assets、Sites、Screens、Workflow、User Manager、Commerce、Formsも使用します。 AEM Mobileは、優れた展開の柔軟性を備え、企業が様々なコンテンツソースを使用できるようにします。
 
 AEM Mobileには、アプリを作成する複数の方法が用意されています。 を使用してアプリを作成する様々な方法を次に示します。
 

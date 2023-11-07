@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 オーバーレイは、 /内のデフォルトコンポーネントのコピーを変更することで実行されます。**アプリ** ディレクトリ内に配置されます。**libs** ディレクトリ。 コンポーネントは、同じ相対パスを使用して構築されますが、「libs」が「apps」に置き換えられる点が異なります。
 
-/apps ディレクトリは、要求を解決するために最初に検索される場所です。見つからない場合は、/libs ディレクトリにあるデフォルトバージョンが使用されます。
+/apps ディレクトリは、要求を解決するために最初に検索される場所です。見つからない場合は、/libs ディレクトリ内のデフォルトバージョンが使用されます。
 
 /libs ディレクトリ内のデフォルトコンポーネントは、今後のパッチやアップグレードでは、パブリックインターフェイスを維持しながら必要な方法で/libs ディレクトリを自由に変更できるので、変更しないでください。
 
@@ -168,7 +168,7 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 
 * `/etc/clientlibs/social/hbs/&lt;component name&gt;`
 
-例：
+次に例を示します。
 
 * クライアントフォルダーノード： `/etc/clientlibs/social/hbs/forum`
 * Categories プロパティ： `cq.social.hbs.forum`
@@ -187,7 +187,7 @@ The [コミュニティコンポーネントガイド](components-guide.md) 各 
 
 * `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
-例：
+次に例を示します。
 
 * クライアントフォルダーノード： `/libs/social/forum/hbs/forum/clientlibs`
 * Categories プロパティ： `cq.social.author.hbs.forum`

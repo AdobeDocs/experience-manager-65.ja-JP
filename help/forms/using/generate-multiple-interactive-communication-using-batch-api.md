@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2206'
 ht-degree: 98%
@@ -187,7 +187,7 @@ Java サーブレットをデプロイする前に、インタラクティブ通
        </dependency>
    ```
 
-1. Java プロジェクトを開き、.java ファイル（例：CCMBatchServlet.java）を作成します。次のコードをファイルに追加します。
+1. Java プロジェクトを開き、.java ファイル（例：CCMBatchServlet.java）を作成します。 次のコードをファイルに追加します。
 
    ```java
            package com.adobe.fd.ccm.multichannel.batch.integration;

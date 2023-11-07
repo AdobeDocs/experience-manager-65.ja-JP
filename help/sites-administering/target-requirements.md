@@ -1,20 +1,16 @@
 ---
 title: Adobe Target との統合の前提条件
-seo-title: Prerequisites for Integrating with Adobe Target
 description: Adobe Targetとの統合の前提条件について説明します。
-seo-description: Find out about the prerequisites for integrating with Adobe Target.
-uuid: 55d87a96-5fe7-4f7e-93c1-fdf7fbb7c971
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 54%
+source-wordcount: '549'
+ht-degree: 42%
 
 ---
 
@@ -32,7 +28,7 @@ AEMをAdobe Targetと統合するには、有効なAdobe Targetアカウント�
 >
 >統合を使用するには、Target チームがアカウントを有効にする必要もあります。
 >
->そうでない場合は、[Adobe カスタマーケア](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja)にご連絡ください。
+>該当しない場合は、 [Adobeカスタマーケア](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja).
 
 ## Target レプリケーションエージェントの有効化 {#enabling-the-target-replication-agent}
 
@@ -47,13 +43,13 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
    >
    >Test と Target のレプリケーションエージェントを設定する際に、 **輸送** 」タブに設定されている場合、URI はデフォルトで「 **tnt:///**. この URI を **https://admin.testandtarget.omniture.com** に置換しないでください。
    >
-   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。これは想定されている動作です。この URI は内部でのみ使用されるべきものであり、**接続をテスト**&#x200B;では使用すべきではありません。
+   >接続をテストしようとする場合 **tnt:///**&#x200B;を呼び出すと、エラーがスローされます。 この URI は内部でのみ使用されるので、これは期待された動作です。では使用しないでください。 **接続をテスト**.
 
 ## アクティビティ設定ノードの保護 {#securing-the-activity-settings-node}
 
 アクティビティ設定ノードを保護する必要があります **cq:ActivitySettings** 通常のユーザーがアクセスできないように、パブリッシュインスタンス上で実行します。 アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
-**cq:ActivitySettings** ノードは、*アクティビティ jcr:content ノードの下*&#x200B;の `/content/campaigns/*nameofbrand*`* の下の CRXDE Lite で利用できます（例：`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`）。このノードは、コンポーネントのターゲティング後にのみ作成されます。
+The **cq:ActivitySettings** ノードは、CRXDE lite の下の `/content/campaigns/*nameofbrand*`* *activitys jcr:content ノードの下で、* *例： `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. このノードは、コンポーネントのターゲティング後にのみ作成されます。
 
 アクティビティの jcr:content の下にある **cq:ActivitySettings** ノードは、次の ACL によって保護されています。
 

@@ -7,9 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '956'
 ht-degree: 5%
 
 ---
@@ -145,7 +145,7 @@ AEM Communitiesの機能を使用する場合、サイト訪問者を登録し�
 
 ### 「バッジ」タブ {#badges-tab}
 
-The `BADGES` panel では、バッジを手動で割り当てたり、取り消したりすることができます。 バッジは、割り当てられた役割に対して使用することも、通常は獲得されたバッジに対して使用することもできます。
+The `BADGES` panel では、手動でバッジを割り当てたり取り消したりすることができます。 割り当てられた役割とバッジは、通常、獲得された役割に対してバッジを使用できます。
 
 関連トピック [スコアとバッジ](implementing-scoring.md).
 
@@ -174,7 +174,7 @@ The `BADGES` panel では、バッジを手動で割り当てたり、取り消�
 
 ![新しいグループを作成ウィンドウ](assets/group-console1.png)
 
-新しい公開側メンバーグループを作成するための必須フィールドは次のとおりです。
+公開側のメンバーグループを作成するための必須フィールドは次のとおりです。
 
 * **[!UICONTROL ID]**
 

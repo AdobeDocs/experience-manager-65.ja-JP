@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Collaboration
 exl-id: 130cec6d-1cdd-4304-94bb-65e6bb573e55
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 64%
+ht-degree: 60%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 64%
 
 >[!CAUTION]
 >
->[!DNL Experience Manager] から [!DNL Creative Cloud] へのフォルダー共有機能は廃止されました。Adobeは、次のような新しい機能を使用することをお勧めします。 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) または [Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja). 詳しくは、[Experience Manager と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>[!DNL Experience Manager] から [!DNL Creative Cloud] へのフォルダー共有機能は廃止されました。Adobeは、次のような新しい機能を使用することをお勧めします。 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) または [Experience Managerデスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja). 詳しくは、[Experience Manager と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
 
 [!DNL Adobe Experience Manager] は、[!DNL Assets] のユーザーに [!DNL Adobe Creative Cloud] アプリのユーザーとのフォルダー共有を許可するように設定できます。これにより、[!DNL Adobe Creative Cloud] アセットサービスの共有フォルダーとして利用が可能になります。この機能を使用すると、クリエイティブチームと [!DNL Assets] ユーザーの間でファイルをやり取りすることができます。特に、クリエイティブユーザーが [!DNL Assets] デプロイメントへのアクセス権を持っていない（エンタープライズネットワーク上にいない）場合に有用です。
 
@@ -39,11 +39,11 @@ ht-degree: 64%
 
 この統合の主要な要素は以下のとおりです。
 
-* **[!DNL Experience Manager Assets]** エンタープライズネットワーク (Managed Servicesまたはオンプレミス ) にデプロイされる場合：フォルダーの共有はここで開始されます。
+* **[!DNL Experience Manager Assets]** エンタープライズネットワーク (Managed Servicesまたはオンプレミス ) にデプロイされる：フォルダーの共有は、ここで開始されます。
 * **[!DNL Adobe Experience Cloud Assets]コアサービス**：[!DNL Experience Manager] と [!DNL Creative Cloud] のストレージサービス間で仲介を行います。統合を使用する組織の管理者は、組織組織と [!DNL Assets] デプロイメント。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/services/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
 
 * **[!DNL Creative Cloud]Assets の web サービス**（ストレージおよび [!DNL Creative Cloud] ファイルの web UI）：[!DNL Assets] フォルダーを共有している特定の Creative Cloud アプリユーザーが招待を受け入れ、自身の Creative Cloud アカウントのストレージにあるフォルダーを参照できる場所です。
-* **Creative Cloudデスクトップアプリ**:（オプション）との同期を通じて、クリエイティブユーザーのデスクトップから共有フォルダー/ファイルに直接アクセスできるようにします。 [!DNL Creative Cloud] アセットストレージ。
+* **Creative Cloudデスクトップアプリケーション**: （オプション）との同期を通じて、クリエイティブユーザーのデスクトップから共有フォルダー/ファイルに直接アクセスできるようにします。 [!DNL Creative Cloud] アセットストレージ。
 
 ## 特徴と制限事項 {#characteristics-and-limitations}
 
@@ -66,9 +66,9 @@ ht-degree: 64%
 * **ボリュームを考慮する：** [!DNL Experience Manager] と [!DNL Creative Cloud] のフォルダー共有は、例えば、具体的なキャンペーンやアクティビティに関連した少数のファイルを共有する場合に使用します。組織で承認されたすべてのアセットなど、多数のアセットのセットを共有する場合は、他の配信方法（例えば [!DNL Assets Brand Portal] や [!DNL Experience Manager] デスクトップアプリなど）を使用します。
 * **深い階層を共有しない：** 共有は再帰的に機能し、選択的な共有解除は許可されません。 通常は、サブフォルダーを持たないフォルダー、または 1 つのサブフォルダーレベルのように浅い階層を持つフォルダーのみを共有の対象とします。
 * **一方向共有のためにフォルダーを分離する：**&#x200B;最終アセットを [!DNL Assets] から [!DNL Creative Cloud] ファイルへ送って共有したり、クリエイティブレディアセットを [!DNL Creative Cloud] ファイル から [!DNL Assets] へ戻して共有したりするには、フォルダーを分離する必要があります。これらのフォルダーの命名に十分な注意を払うことで、[!DNL Assets] と [!DNL Creative Cloud] の双方のユーザーが理解しやすい作業環境を構築することができます。
-* **WIP 作業のために共有フォルダーを使用しない：**&#x200B;共有フォルダーは、処理中の作業（WIP）で使用しないでください。ファイルを頻繁に変更する必要がある作業を行うには、Creative Cloud Files の別のフォルダーを使用します。
+* **共有フォルダー内で WIP を回避：** Work in Progress に共有Creative Cloudを使用しない — Work Files に別のフォルダを使用して、ファイルに頻繁に変更を加える必要のある作業を実行します。
 * **新しい作業は共有フォルダー以外で開始する：**&#x200B;新しいデザイン（クリエイティブファイル）は、Creative Cloud Files の WIP 専用フォルダーで開始してください。新しいデザインを [!DNL Assets] ユーザーと共有する準備ができたら、共有フォルダーに移動または保存してください。
-* **共有構造の簡素化：** より扱いやすいオペレーティングセットアップのために、共有構造の簡素化について検討してください。 すべてのクリエイティブユーザーと共有する代わりに、 [!DNL Assets] フォルダは、クリエイティブディレクターやチームマネージャーなど、チーム担当者とのみ共有する必要があります。 クリエイティブサイドのマネージャーが最終アセットを受け取って作業割り当てを決定し、デザイナーは自身の Creative Cloud アカウントで WIP アセットの作業をするようにします。デザイナーは Creative Cloud のコラボレーション機能を使用して共同作業を行います。最後に、準備ができたアセットを選択し、[!DNL Assets] のクリエイティブレディ用共有フォルダーに戻して共有します。
+* **共有構造の簡素化：** より扱いやすいオペレーティングセットアップのために、共有構造の簡素化について考えてみましょう。 すべてのクリエイティブユーザーと共有する代わりに、 [!DNL Assets] フォルダは、クリエイティブディレクターやチームマネージャーなど、チーム担当者とのみ共有する必要があります。 クリエイティブサイドのマネージャーが最終アセットを受け取って作業割り当てを決定し、デザイナーは自身の Creative Cloud アカウントで WIP アセットの作業をするようにします。デザイナーは Creative Cloud のコラボレーション機能を使用して共同作業を行います。最後に、準備ができたアセットを選択し、[!DNL Assets] のクリエイティブレディ用共有フォルダーに戻して共有します。
 
 次の図は、からの既存の最終アセットに基づいてデザインを作成するための設定例を示しています。 [!DNL Assets].
 

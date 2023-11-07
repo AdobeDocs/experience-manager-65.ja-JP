@@ -1,23 +1,19 @@
 ---
-title: 新しいログイン画面の作成
-seo-title: Creating a new login screen
-description: AEM Forms Workspace や Forms Manager など、LiveCycle モジュールのログインページを変更する方法を説明します。
-seo-description: How-to modify the login page of LiveCycle modules, for example of AEM Forms workspace or Forms Manager.
-uuid: 2d4a72f4-cc9a-412d-856d-0fca75f1272b
+title: ログイン画面の作成
+description: AEM Forms Workspace やForms Manager など、LiveCycleモジュールのログインページを変更する方法。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: ht
-source-wordcount: '462'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '460'
+ht-degree: 94%
 
 ---
 
-# 新しいログイン画面の作成{#creating-a-new-login-screen}
+# ログイン画面の作成{#creating-a-new-login-screen}
 
 AEM Forms ログイン画面を使用するすべての AEM Forms モジュールのログイン画面を変更できます。例えば、変更は、Forms Manager および AEM Forms Workspace の両方のログイン画面に影響します。
 
@@ -60,6 +56,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    1. フォルダーの名前をサポートするロケール名に変更します。（例：`ar`）。
 
    1. プロパティ `jcr:language` の値を `ar` に変更します（`ar` フォルダーの場合）。
+
    >[!NOTE]
    >
    >`ar-DZ` のようにロケールが言語と国コードの組み合わせである場合は、フォルダー名とプロパティ値を `ar-DZ` に変更します。
@@ -212,6 +209,7 @@ String browserLocale = "en";
       * コピー元：`/libs/livecycle/core/components/login`
 
       * コピー先：`/apps/livecycle/core/components/login`
+
    1. `/apps/livecycle/core/components/login/login.jsp` を変更して、新しく追加したテキストを取り込みます。
 
    ![新しいキーと値のペアを追加](assets/capture_new.png)
@@ -254,8 +252,8 @@ String browserLocale = "en";
       * コピー元：`/libs/livecycle/core/components/login`
 
       * コピー先：`/apps/livecycle/core/components/login`
-   1. `/apps/livecycle/core/components/login/login.jsp` を変更して、新しく追加したスタイルを取り込みます。
 
+   1. `/apps/livecycle/core/components/login/login.jsp` を変更して、新しく追加したスタイルを取り込みます。
 
 
 次に例を示します。
@@ -272,15 +270,15 @@ css.newLoginContentArea {
 * `/apps/livecycle/core/components/login.jsp` で以下を変更します。
 
 
-   ```jsp
-   <div class="loginContentArea">
-   ```
+  ```jsp
+  <div class="loginContentArea">
+  ```
 
-   To
+  To
 
-   ```jsp
-   <div class="newLoginContentArea">
-   ```
+  ```jsp
+  <div class="newLoginContentArea">
+  ```
 
 >[!NOTE]
 >

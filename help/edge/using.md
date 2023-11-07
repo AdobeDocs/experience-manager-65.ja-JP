@@ -2,7 +2,7 @@
 title: 使用Edge Delivery Services
 description: Edge Delivery Services(EDS) の使用
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 6a1d96125ca6647770718fff74ec21afb5c91a68
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Edge 配信を利用すると、コンテンツソースに関係なく、コン
 
 ## Edge Delivery Servicesと GitHub {#github-edge}
 
-Edge 配信では GitHub を活用するので、顧客は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、Google Docs またはMicrosoft Word にコンテンツを書き込み、GitHub で CSS と JavaScript を使用してサイトの機能を開発することができます。 コンテンツのプレビューから実稼動環境まで、ブランチごとに Web サイトが自動的に作成されます。 GitHub リポジトリに配置したすべてのリソースは、ビルドプロセスなしで Web サイト上で使用できます。
+Edge 配信では GitHub を使用するので、顧客は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、Google Docs またはMicrosoft Word にコンテンツを書き込み、GitHub で CSS と JavaScript を使用してサイトの機能を開発することができます。 コンテンツのプレビューから実稼動環境まで、ブランチごとに Web サイトが自動的に作成されます。 GitHub リポジトリに配置したすべてのリソースは、ビルドプロセスなしで Web サイト上で使用できます。
 
 ## Sidekickの使用 {#using-sidekick}
 

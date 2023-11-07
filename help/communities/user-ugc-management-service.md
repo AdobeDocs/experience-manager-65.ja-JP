@@ -12,10 +12,10 @@ discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 12%
+source-wordcount: '590'
+ht-degree: 7%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
+>以下の節では GDPR を例として使用していますが、詳細は、GDPR、CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
 
 AEM Communitiesでは、ユーザープロファイルの管理やユーザー生成コンテンツ (UGC) の一括管理をおこなうための API を標準で提供しています。 有効にすると、 **UserUgcManagement** サービスを使用すると、権限を持つユーザー（コミュニティ管理者とモデレーター）がユーザープロファイルを無効にしたり、特定のユーザーに対して UGC を一括削除または一括書き出ししたりできます。 また、これらの API を使用すると、顧客データの管理者やプロセッサーが、欧州連合の一般データ保護規則 (GDPR) や、GDPR に基づくその他の GDPR に触発されたプライバシー要件に準拠できます。
 
@@ -35,7 +35,7 @@ AEM Communitiesでは、ユーザープロファイルの管理やユーザー�
 
 これらの API を使用するには、 `/services/social/ugcmanagement` UserUgcManagement サービスをアクティブ化してエンドポイントを作成します。 このサービスをアクティブ化するには、 [サンプルサーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) 次の日付で利用可能： [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 次に、次のような http リクエストを使用して、コミュニティサイトのパブリッシュインスタンスでエンドポイントをヒットします。
 
-`https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>` で使用される様々なキャッシュに分散されます。ただし、UI（ユーザーインターフェイス）を構築して、システム内のユーザープロファイルとユーザー生成コンテンツを管理することもできます。
+`https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`。ただし、UI（ユーザーインターフェイス）を構築して、システム内のユーザープロファイルとユーザー生成コンテンツを管理することもできます。
 
 これらの API を使用して、次の機能を実行できます。
 

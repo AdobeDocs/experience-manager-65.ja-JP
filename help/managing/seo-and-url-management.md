@@ -1,14 +1,14 @@
 ---
 title: SEO と URL 管理のベストプラクティス
-description: AEM の実装における SEO のベストプラクティスと推奨事項について説明します。
+description: AEM の実装における SEO のベストプラクティスとレコメンデーションについて説明します。
 topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
-workflow-type: ht
-source-wordcount: '3678'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '3677'
+ht-degree: 99%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 SEO（検索エンジン最適化）は、多くのマーケターにとって重要な関心事となっています。そのため、多くの AEM プロジェクトで SEO 対策に取り組む必要があります。
 
-このドキュメントでは、まず、AEM の実装における [SEO のベストプラクティス](#seo-best-practices)と推奨事項について説明します。その次に、最初の節で提示するより[複雑な実装手順](#aem-configurations)のいくつかについて詳しく説明していきます。
+このドキュメントでは、まず、AEM の実装における [SEO のベストプラクティス](#seo-best-practices)とレコメンデーションについて説明します。その次に、最初の節で提示するより[複雑な実装手順](#aem-configurations)のいくつかについて詳しく説明していきます。
 
 ## SEO のベストプラクティス {#seo-best-practices}
 
@@ -49,9 +49,8 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
    * ページでセレクターを使用する場合は、セマンティック値を提供するセレクターが推奨されます。
    * 人間が理解できない URL は、検索エンジンでも理解できません。
    * 次に例を示します。
-      `mybrand.com/products/product-detail.product-category.product-name.html`
-の方が より望ましい 
-`mybrand.com/products/product-detail.1234.html`
+     `mybrand.com/products/product-detail.product-category.product-name.html`
+の方が `mybrand.com/products/product-detail.1234.html` より望ましい
 
 * 検索エンジンではサブドメインは異なるエンティティとして扱われ、サイトの SEO 値が分断されるので、可能な限りサブドメインの使用は避けます。
 
@@ -72,9 +71,9 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
 
 * 可能な限り、URL をページタイトルに一致させます。
 
-   * コンテンツの作成者に対して、この手法に従うよう勧めてください。
+   * この手法に従うように、コンテンツ作成者に勧めてください。
 
-* URL リクエストで大文字と小文字を区別しないようサポートします。
+* URL リクエストで大文字と小文字を区別しないことをサポートします。
 
    * すべての受信要求を小文字として書き換えるように Dispatcher を設定します。
    * 小文字を使用してすべてのページを作成するようにコンテンツ作成者をトレーニングします。
@@ -91,7 +90,7 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
 
 * `robots.txt` ファイルを使用して、インデックスを作成する必要がないコンテンツのクローリングをブロックします。
 
-   * テスト環境では&#x200B;**すべての**&#x200B;クローリングをブロックします。
+   * テスト環境では&#x200B;**すべて**&#x200B;のクローリングをブロックします。
 
 * 更新した URL を使用して新しいサイトの運用を開始する場合は、既存の SEO ランキングが失われないように 301 リダイレクトを実装します。
 * サイトの favicon を含めます。
@@ -99,7 +98,7 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
 
 ## AEM の設定 {#aem-configurations}
 
-このセクションでは、次の SEO 推奨事項に従って AEM を設定する実装手順について説明します。
+このセクションでは、次の SEO レコメンデーションに従って AEM を設定する実装手順について説明します。
 
 ### Sling セレクターの使用 {#using-sling-selectors}
 
@@ -178,7 +177,7 @@ Resource myPage = req.getResource();
 
 AEM では、すべての Web ページが `/content/my-brand/my-content` に保存されます。この場所は、リポジトリデータ管理の観点から見ると便利ですが、必ずしもこの方法で顧客にサイトを表示したいわけではありません。また、URL はできるだけ短くするという SEO ガイダンスに抵触する可能性があります。また、同じ AEM インスタンスや異なるドメイン名から複数の web サイトを提供している場合もあります。
 
-このセクションでは、これらの URL を管理し、よりわかりやすく、SEO に適した方法で URL をユーザーに表示するために AEM で使用可能なオプションを説明します。
+この節では、これらの URL を管理し、よりわかりやすく、SEO に適した方法で URL をユーザーに表示するために AEM で使用可能なオプションを説明します。
 
 #### バニティ URL {#vanity-urls}
 
@@ -189,20 +188,20 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 翻訳されたコンテンツのユーザーには、ローカライズされたページ名を表示した方がよい場合があります。次に例を示します。
 
 * スペイン語を話すユーザーが次のページにアクセスするとします。
-   `www.mydomain.com/es/home.html`
+  `www.mydomain.com/es/home.html`
 
 * この場合、URL を次のように表示した方が効果的です。
-   `www.mydomain.com/es/casa.html`
+  `www.mydomain.com/es/casa.html`。
 
 ページ名をローカライズする際の課題は、AEM プラットフォームで利用できるローカライズツールの多くが、コンテンツの同期を保つためにロケール間でページ名を一致させる必要があることです。
 
 `sling:alias` プロパティを使用すると、両方を同時に実現できます。`sling:alias` を任意のリソースにプロパティとして追加すると、リソースのエイリアス名を使用することができます。前述の例では、次のようになります。
 
 * JCR の次の場所にページがあるとします。
-   `…/es/home`
+  `…/es/home`
 
 * プロパティを追加します。
-   `sling:alias` = `casa`
+  `sling:alias` = `casa`
 
 これにより、マルチサイトマネージャーなどの AEM 翻訳ツールでは、次のページ間の関係を引き続き維持できます。
 
@@ -221,12 +220,11 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 標準 AEM インストールでは、
 
 * OSGi 設定には
-   **Apache Sling Resource Resolver Factory**
-（ 
-`org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`）
+  **Apache Sling Resource Resolver Factory**
+( `org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
 
 * プロパティ
-   **マッピング場所**（`resource.resolver.map.location`）
+  **マッピング場所**（`resource.resolver.map.location`）
 
 * デフォルト `/etc/map` に設定。
 
@@ -255,8 +253,8 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
    Web コンソール（localhost:4502/system/console/configMgr など）を使用して、Sling Resource Resolver を設定できます。
 
    * **Apache Sling Resource Resolver Factory**
+     `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`。
 
-      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`
    URL を短縮するために必要なマッピングを正規表現として構築した後、ビルドに含まれている OsgiConfignode の `config.publish` でこれらの設定を定義することをお勧めします。
 
    `/etc/map`マッピングを定義する代わりに、プロパティ **URL Mappings**（`resource.resolver.mapping`）に直接割り当てることができます。
@@ -470,7 +468,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
 }
 ```
 
-さらに、XML サイトマップ用に実装された機能は、例えば、正規リンクや代替言語をページの先頭に追加する場合など、様々なユースケースにも使用できます。詳しくは、[SEO タグ](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html)のインターフェイスを参照してください。
+さらに、XML サイトマップ用に実装された機能は、例えば、正規リンクや代替言語をページの先頭に追加する場合など、様々な使用例に使用できます。 詳しくは、[SEO タグ](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html)のインターフェイスを参照してください。
 
 ### レガシー URL の 301 リダイレクトの作成 {#creating-redirects-for-legacy-urls}
 
@@ -483,7 +481,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
 
 ## その他のリソース {#additional-resources}
 
-詳しくは、以下のその他のリソースを参照してください。
+詳しくは、次のその他のリソースを参照してください。
 
 * [リソースマッピング](/help/sites-deploying/resource-mapping.md)
 * [https://moz.com/blog/seo-cheat-sheet-anatomy-of-a-url](https://moz.com/blog/seo-cheat-sheet-anatomy-of-a-url)

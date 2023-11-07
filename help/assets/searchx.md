@@ -5,10 +5,10 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 98%
+source-wordcount: '822'
+ht-degree: 93%
 
 ---
 
@@ -53,13 +53,13 @@ ht-degree: 98%
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、**/libs/cq/search/components/predicates** にあります。
+ベストプラクティスは、既存の述語をコピー後に変更することです。述語の例は、 **/libs/cq/search/components/predicates**.
 
 ### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
 プロパティ述語を作成するには、次の手順を実行します。
 
-1. プロジェクトディレクトリ（**/apps//weretail/components/titlepredicate** など）にコンポーネントフォルダーを作成します。
+1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： **/apps/weretail/components/titlepredicate**.
 1. **content.xml** を追加します。
 
    ```xml
@@ -89,7 +89,7 @@ ht-degree: 98%
    
        <div class="title">Title</div>
    
-       <%-- The wrapper for the form elements. All items will be append to this wrapper. --%>
+       <%-- The wrapper for the form elements. All items are appended to this wrapper. --%>
        <div id="<%= elemId %>" class="content"></div>
    
    </div><script type="text/javascript">
@@ -108,7 +108,7 @@ ht-degree: 98%
            var id = qb.createId(predicateName);
    
            // Hidden field that defines the property to search for; in our case this
-           // is the "dc:title" metadata. The name "property" (or "1_property", "2_property" etc.)
+           // is the "dc:title" metadata. The name "property" (or "1_property", "2_property" and so on.)
            // indicates the server to use the property predicate
            // (com.day.cq.search.eval.JcrPropertyPredicateEvaluator).
            qb.addField({
@@ -152,7 +152,7 @@ ht-degree: 98%
 
 グループ述語を作成するには、次の手順を実行します。
 
-1. プロジェクトディレクトリ（ **/apps/weretail/components/picspredicate** など）にコンポーネントフォルダーを作成します。
+1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： **/apps/weretail/components/picspredicate**.
 1. **content.xml** を追加します。
 
    ```xml
@@ -182,7 +182,7 @@ ht-degree: 98%
    
        <div class="title">Image Formats</div>
    
-       <%-- The wrapper for the form elements. All items will be append to this wrapper. --%>
+       <%-- The wrapper for the form elements. All items are append to this wrapper. --%>
        <div id="<%= elemId %>" class="content"></div>
    
    </div><script type="text/javascript">
@@ -228,7 +228,7 @@ ht-degree: 98%
                qb.addField({
                    "xtype": "checkbox",
                    "renderTo": "<%= elemId %>",
-                   // 1_group.property.0_value, 1_group.property.1_value etc.
+                   // 1_group.property.0_value, 1_group.property.1_value and so on.
                    "name": groupId + "." +  predicateName + "." + i + "_value",
                    "inputValue": options[i].value,
                    "boxLabel": options[i].label,

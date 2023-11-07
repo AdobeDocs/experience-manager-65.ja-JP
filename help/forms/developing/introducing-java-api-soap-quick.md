@@ -9,7 +9,7 @@ topic-tags: develop, development-tools
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 role: Developer
 exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 32%
@@ -36,19 +36,19 @@ JAR ファイルのリストは、クイックスタートの先頭にあるコ�
      * 2. adobe--client.jar
      * 3. adobe-usermanager-client.jar
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/Adobe/Adobe_Experience_Manager_forms/SDK/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/Adobe/Adobe_Experience_Manager_forms/SDK/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
      *
      * If you want to invoke a remote AEM Forms instance and there is a
      * firewall between the client application and AEM Forms, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/Adobe/Adobe_Experience_Manager_forms/SDK/client-libs/thirdparty
      *

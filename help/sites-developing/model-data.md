@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 6%
@@ -53,7 +53,7 @@ ERD の意味で宣言されたデータ構造について心配しないこと�
 
 #### 例 {#example-1}
 
-上記の `lastModified` 例えば「blog post」ノードの日付プロパティは、特別なノードタイプが必要であるとは限りません。 私は、少なくとも最初は必ず `nt:unstructured` をブログ投稿ノード用に使います。私のブログアプリケーションでは、私が行うことは、とにかく lastModified 日を表示することだけです（おそらく&quot;order by&quot;）私は、それが Date であるかどうかをほとんど気にしません。 私のブログの書き込みアプリケーションを暗黙的に信頼して「日付」を付けるので、実際には、 `lastModified` ノードタイプの形式の日付。
+上記の `lastModified` 例えば「blog post」ノードの日付プロパティは、特別なノードタイプが必要であるとは意味しません。 私は、少なくとも最初は必ず `nt:unstructured` をブログ投稿ノード用に使います。私のブログアプリケーションでは、私が行うことは、とにかく lastModified 日を表示することだけです（おそらく&quot;order by&quot;）私は、それが Date であるかどうかをほとんど気にしません。 私のブログの書き込みアプリケーションを暗黙的に信頼して「日付」を付けるので、実際には、 `lastModified` ノードタイプの形式の日付。
 
 ### ルール#2：コンテンツ階層を駆動します。実行しないでください。 {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 

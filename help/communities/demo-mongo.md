@@ -8,9 +8,9 @@ content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## はじめに {#introduction}
 
-このチュートリアルでは、 [MSRP](msrp.md) 対象 *1 人の作者* インスタンスと *1 つの公開* インスタンス。
+このチュートリアルでは、の設定方法について説明します。 [MSRP](msrp.md) 対象： *1 人の作者* インスタンスと *1 つの公開* インスタンス。
 
 この設定により、ユーザー生成コンテンツ (UGC) を転送またはリバースレプリケーションする必要なく、オーサー環境とパブリッシュ環境の両方からコミュニティコンテンツにアクセスできるようになります。
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
    * バージョンの選択：
 
-      * 少なくとも、バージョン 2.6 を使用してください
+      * 少なくとも、バージョン 2.6 を使用してください。
 
 * 基本設定
 
@@ -55,11 +55,11 @@ ht-degree: 1%
       * モンゴや共有を設定する必要はありません。
 
    * インストールされている MongoDB フォルダーの名前はです。 &lt;mongo-install>.
-   * 定義されたデータディレクトリのパスは、 &lt;mongo-dbpath>.
+   * 定義されたデータディレクトリのパスがと呼ばれます。 &lt;mongo-dbpath>.
 
 * MongoDB は、AEMと同じホストで実行するか、リモートで実行できます。
 
-### MongoDB を起動 {#start-mongodb}
+### MongoDB を起動します {#start-mongodb}
 
 * &lt;mongo-install>/bin/mongod —dbpath &lt;mongo-dbpath>
 
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->MongoDB が起動している場合 *後* AEM, **再起動** すべて **AEM** インスタンスが MongoDB に正しく接続されるようにします。
+>MongoDB が起動している場合 *次より後* AEM, **再起動** すべて **AEM** インスタンスが MongoDB に正しく接続されるようにします。
 
 ### デモ実稼動オプション：MongoDBレプリカセットの設定 {#demo-production-option-setup-mongodb-replica-set}
 
@@ -105,7 +105,7 @@ ht-degree: 1%
    * サービスは必要ありません。
    * インストールされている Solr フォルダーの名前はです。 &lt;solr-install>.
 
-### AEM Communities用 Solr の設定 {#configure-solr-for-aem-communities}
+### AEM Communities用の Solr の設定 {#configure-solr-for-aem-communities}
 
 デモ用に MSRP 用の Solr コレクションを設定するには、次の 2 つの決定をおこなう必要があります（詳しくは、メインドキュメントへのリンクを選択してください）。
 
@@ -114,7 +114,7 @@ ht-degree: 1%
 
 ### スタンドアロン Solr {#standalone-solr}
 
-Solr を実行する方法は、インストールのバージョンと方法によって異なる場合があります。 この [Solr リファレンスガイド](https://archive.apache.org/dist/lucene/solr/ref-guide/) は、権限を持つドキュメントです。
+Solr を実行する方法は、インストールのバージョンと方法によって異なる場合があります。 The [Solr リファレンスガイド](https://archive.apache.org/dist/lucene/solr/ref-guide/) は、権限を持つドキュメントです。
 
 簡単にするために、バージョン 4.10 を例として使用し、Solr をスタンドアロンモードで起動します。
 
@@ -129,7 +129,7 @@ Solr を実行する方法は、インストールのバージョンと方法に
 >
 >Solr コンソールが使用できない場合は、以下のログを確認します。 &lt;solrinstall>/example/logs. SOLR が、解決できない特定のホスト名（例えば、「user-macbook-pro」）にバインドしようとしているかどうかを確認します。
 >
-その場合は、 `etc/hosts` ファイルに、このホスト名の新しいエントリ（例えば、127.0.0.1 user-macbook-pro）を含め、Solr を正しく起動します。
+該当する場合は、 `etc/hosts` ファイルに、このホスト名の新しいエントリ（例えば、127.0.0.1 user-macbook-pro）を含め、Solr を正しく起動します。
 
 ### SolrCloud {#solrcloud}
 
@@ -147,7 +147,7 @@ MongoDB が起動する前にAEMが実行されていた場合は、AEMインス
 
 ## テスト {#test}
 
-MongoDB 共通ストアをテストおよび検証するには、パブリッシュインスタンスにコメントを投稿して、オーサーインスタンスに表示し、MongoDB と Solr で UGC を表示します。
+MongoDB 共通ストアをテストおよび検証するには、パブリッシュインスタンスにコメントを投稿してオーサーインスタンスで表示し、MongoDB と Solr で UGC を表示します。
 
 1. パブリッシュインスタンスで、 [コミュニティコンポーネントガイド](http://localhost:4503/content/community-components/en/comments.html) ページを開き、コメントコンポーネントを選択します。
 1. サインインしてコメントを投稿：
@@ -159,9 +159,9 @@ MongoDB 共通ストアをテストおよび検証するには、パブリッシ
 
    ![view-comment](assets/view-comment.png)
 
-   注意：JCR ノードは *asipath* オーサー環境では、これらのノードは SCF フレームワーク用です。 実際の UGC は JCR には含まれず、MongoDB に含まれます。
+   注意： JCR ノードは *asipath* オーサー環境では、これらのノードは SCF フレームワーク用です。 実際の UGC は JCR には含まれず、MongoDB に含まれます。
 
-1. mongodb での UGC の表示 **[!UICONTROL コミュニティ]** > **[!UICONTROL コレクション]** > **[!UICONTROL コンテンツ]**
+1. mongodb での UGC の表示 **[!UICONTROL Communities]** > **[!UICONTROL コレクション]** > **[!UICONTROL コンテンツ]**
 
    ![ugc-content](assets/ugc-content.png)
 

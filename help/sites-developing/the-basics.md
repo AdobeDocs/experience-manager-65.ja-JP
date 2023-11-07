@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3310'
-ht-degree: 69%
+source-wordcount: '3306'
+ht-degree: 73%
 
 ---
 
@@ -80,7 +80,7 @@ Sling は *コンテンツ中心型* です。これは、各（HTTP）リクエ
 
 コンテンツ中心型の原理により、Sling は REST 指向のサーバーを実装するので、web アプリケーションフレームワークの新しい概念を特徴としています。メリットは次のとおりです。
 
-* RESTful は、サーフェス上だけでなく、リソースと表示域がサーバー内で正しくモデル化されます。
+* 表面上だけでなく、RESTful であり、リソースや表示域をサーバー内で正しくモデリングされます。
 * 1 つ以上のデータモデルを削除
 
    * 以前に必要だったもの：URL 構造、ビジネスオブジェクト、DB スキーマ
@@ -96,9 +96,9 @@ Sling では、処理はユーザーリクエストの URL によって駆動さ
 https://myhost/tools/spy.printable.a4.html/a/b?x=12
 ```
 
-次の複合部品に分割できます。
+次のように複合的な部分に分解できます。
 
-| プロトコル | ホスト | コンテンツのパス | セレクター | 拡張子 |  | 接尾辞 |  | params |
+| プロトコル | ホスト | コンテンツのパス | セレクター | 拡張子 |  | 接尾辞 |  | パラメーター |
 |---|---|---|---|---|---|---|---|---|
 | https:// | myhost | tools/spy | .printable.a4. | html | / | a/b | ? | x=12 |
 
@@ -106,7 +106,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 **ホスト** - web サイトの名前。
 
-**コンテンツのパス** - レンダリングされるコンテンツを指定するパス。拡張機能で使用されます。 この例では、 `tools/spy.html`.
+**コンテンツパス** レンダリングするコンテンツを指定するパス。拡張機能で使用されます。 この例では、 `tools/spy.html`.
 
 **セレクター** コンテンツをレンダリングする代替の方法に使用します。この例では、A4 形式のプリンターに適したバージョンです。
 
@@ -183,7 +183,7 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
   例：`../content/corporate/jobs/developer.pdf`
 
-  スクリプトは `/apps/hr/jobs/jobs.pdf.esp`；サフィックスがスクリプト名に追加されます。
+  スクリプトは `/apps/hr/jobs/jobs.pdf.esp` です。スクリプト名に接尾辞が追加されます。
 
 * セレクターを含む URL
 
@@ -191,7 +191,7 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
   プリンターに適したバージョンでセレクターが *印刷*、 `../content/corporate/jobs/developer.print.html`
 
-  スクリプトは `/apps/hr/jobs/jobs.print.esp`を指定します。セレクターがスクリプト名に追加されます。
+  スクリプトは `/apps/hr/jobs/jobs.print.esp` です。セレクターがスクリプト名に追加されます。
 
 * sling:resourceType が定義されていない場合、次のようになります。
 
@@ -214,7 +214,7 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 例えば、次のリソースにアクセスするためのリクエストについて考えます。
 `/content/corporate/jobs/developer.print.a4.html`リソースのタイプは次のとおりとします。`sling:resourceType="hr/jobs"`
 
-正しい場所に次のスクリプトのリストがあるとします。
+次のスクリプトのリストが正しい場所にあると仮定します。
 
 1. `GET.esp`
 1. `jobs.esp`
@@ -227,7 +227,7 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 この場合、優先順位は (8) - (7) - (6) - (5) - (4) - (3) - (2) - (1) となります。
 
-リソースタイプに加えて ( 主に `sling:resourceType` プロパティ )、リソースのスーパータイプも存在します。 これは、 `sling:resourceSuperType` プロパティ。 これらのスーパータイプは、スクリプトを検索する際にも検討されます。リソーススーパータイプの利点は、（デフォルトのサーブレットで使用される）デフォルトのリソースタイプ `sling/servlet/default` が事実上のルートになるリソースの階層を形成できる点です。
+リソースタイプ（主に `sling:resourceType` プロパティで定義）に加えて、リソーススーパータイプもあります。これは、 `sling:resourceSuperType` プロパティ。 これらのスーパータイプは、スクリプトを検索する際にも検討されます。リソーススーパータイプの利点は、（デフォルトのサーブレットで使用される）デフォルトのリソースタイプ `sling/servlet/default` が事実上のルートになるリソースの階層を形成できる点です。
 
 リソースのリソーススーパータイプは次の 2 つの方法で定義できます。
 
@@ -273,7 +273,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 * GET 以外の HTTP メソッドの自動処理。これには以下が含まれます。
 
-   * POST、PUT、DELETE。Sling のデフォルト実装で処理されます。
+   * Sling のデフォルトの実装で扱う POST、PUT、DELETE
    * sling:resourceType の場所にある `POST.jsp` スクリプト
 
 * コードアーキテクチャに必要なクリーン性や明確な構造が失われます。これは大規模な開発では最も重要です。
@@ -303,7 +303,7 @@ OSGi は、モジュラー型アプリケーションおよびライブラリを
 
 これらのサービスおよび契約によって提供されるアーキテクチャでは、コラボレーションのために個々の要素が相互に動的に検出し合うことができます。
 
-その後、OSGi フレームワークは、再起動を必要とせずに、これらのバンドルの動的な読み込み/アンロード、設定、制御を提供します。
+その後、OSGi フレームワークによって、これらのバンドルの動的な読み込み／読み込み解除、設定および制御が可能になります。再起動は不要です。
 
 >[!NOTE]
 >
@@ -311,7 +311,7 @@ OSGi は、モジュラー型アプリケーションおよびライブラリを
 >
 >特に、基礎教育に関するページには、プレゼンテーションやチュートリアルのコレクションが収められています。
 
-このアーキテクチャにより、Sling をアプリケーション固有のモジュールで拡張できます。 Sling、したがって CQ5 は、OSGI（Open Services Gateway initiative）の [Apache Felix](https://felix.apache.org/documentation/index.html) 実装を使用しており、OSGi Service Platform Release 4 バージョン 4.2 の仕様に基づいています。どちらも、OSGi フレームワーク内で実行される OSGi バンドルの集まりです。
+このアーキテクチャを使用すると、Sling をアプリケーション固有のモジュールで拡張できます。Sling、したがって CQ5 は、OSGI（Open Services Gateway initiative）の [Apache Felix](https://felix.apache.org/documentation/index.html) 実装を使用しており、OSGi Service Platform Release 4 バージョン 4.2 の仕様に基づいています。どちらも、OSGi フレームワーク内で実行される OSGi バンドルの集まりです。
 
 これにより、インストール内のどのパッケージでも、以下のアクションを実行できます。
 
@@ -347,7 +347,7 @@ Item オブジェクトの操作の詳細については、 [Java™ドキュメ
 
 現在のノードオブジェクトである currentNode です。
 
-Node オブジェクトの操作について詳しくは、 [Java™ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
+Node オブジェクトの操作の詳細については、 [Java™ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 **Widget** - AEMでは、すべてのユーザー入力はウィジェットで管理されます。多くの場合、コンテンツの一部の編集を制御するために使用されます。
 
@@ -408,7 +408,7 @@ pageManager はページマネージャーオブジェクトで、 myResource �
 
 >[!CAUTION]
 >
->`/libs` パス内は一切変更しないでください。設定やその他の変更を行う場合は、次の場所から項目をコピーします。 `/libs` から `/apps` 内で変更を加えます。 `/apps`.
+>`/libs` パス内は一切変更しないでください。設定やその他の変更は、項目を `/libs` から `/apps` にコピーし、`/apps` 内で変更を行います。
 
 * `/apps`
 

@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2713'
-ht-degree: 76%
+source-wordcount: '2707'
+ht-degree: 74%
 
 ---
 
 # VLT ツールの使用方法 {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault ツール (VLT) は、 [Apache Foundation](https://www.apache.org/) Jackrabbit/AEMインスタンスのコンテンツをファイルシステムにマッピングするためのものです。 VLT ツールは、ソース管理システムクライアント (Subversion(SVN) クライアントなど ) と同様の機能を備え、通常のチェックイン、チェックアウト、管理操作に加え、プロジェクトコンテンツを柔軟に表現するための設定オプションを提供します。
+Jackrabbit FileVault ツール (VLT) は、 [Apache Foundation](https://www.apache.org/) Jackrabbit/AEMインスタンスのコンテンツをファイルシステムにマッピングするためのものです。 VLT ツールは、ソース管理システムクライアント (Subversion(SVN) クライアントなど ) と同様の機能を備えており、通常のチェックイン、チェックアウトおよび管理操作、およびプロジェクトコンテンツを柔軟に表現するための設定オプションを提供します。
 
-VLT ツールはコマンドラインから実行します。このドキュメントでは、ツールの使い方（導入方法、ヘルプの表示方法、すべての[コマンド](#vlt-commands)と使用可能な[オプション](#vlt-global-options)のリストを含む）について説明します。
+VLT ツールは、コマンドラインから実行します。 このドキュメントでは、ツールの使用方法 ( 使い始める方法、ヘルプを表示する方法、およびすべての [コマンド](#vlt-commands) および利用可能 [options](#vlt-global-options).
 
 ## 概念およびアーキテクチャ {#concepts-and-architecture}
 
@@ -440,7 +440,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | ホットフィックスのリンクの出力形式（名前、ID）（例：`[CQ520_HF_%s|%s]`） |
+| `-l (--linkFormat) <format>` | ホットフィックスリンク（名前、ID）の printf 形式。例： `[CQ520_HF_%s|%s]` |
 | `-v (--verbose)` | 詳細 Output |
 | `-q (--quiet)` | 最小限に抑えた出力 |
 | `<localPaths> [<localPaths> ...]` | ローカルパス |

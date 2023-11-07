@@ -11,10 +11,10 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '671'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
@@ -81,7 +81,7 @@ XFA を参照しているアダプティブフォームのフィールドは、X
 フォームテンプレートを削除すると、依存アダプティブフォームまたはフォームテンプレートが破損します。 このようなアダプティブフォームは、非公式にダーティフォームと呼ばれる場合があります。 AEM Formsのユーザーインターフェイスでは、次の 2 つの方法で dirty フォームを見つけることができます。
 
 * アセットリスト内のアダプティブフォームのサムネールに警告アイコンが表示され、警告アイコンの上にマウスポインターを置くと次のメッセージが表示されます。\
-  `Schema/Form Template for this adaptive form has been updated so please go to Authoring mode and rebase it with new version.`
+  `Schema/Form Template for this adaptive form has been updated so go to Authoring mode and rebase it with new version.`
 
 ![関連 XFA の更新後の非同期のアダプティブフォームの警告](assets/dirtyaf.png)
 

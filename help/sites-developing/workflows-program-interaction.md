@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2009'
-ht-degree: 70%
+source-wordcount: '2008'
+ht-degree: 68%
 
 ---
 
@@ -73,7 +73,7 @@ REST API では、次のアクションがサポートされています。
 
 >[!NOTE]
 >
->Web 開発用の Firefox 拡張機能である Firebug を使用すると、コンソールの操作時に HTTP トラフィックを追跡できます。 例えば、`POST` リクエストで AEM サーバーに送信されたパラメーターと値を確認できます。
+>Web 開発用の Firefox 拡張機能である Firebug を使用すると、コンソールの操作時に HTTP トラフィックを追跡できます。 例えば、AEMサーバーに送信されるパラメーターと値を、 `POST` リクエスト。
 
 このページでは、AEM がローカルホストのポート `4502` で動作しており、インストールコンテキストが「`/`」（ルート）であると想定しています。実際のインストール状況が異なる場合は、HTTP リクエストが適用される URI を実際の状況に合わせて変更してください。
 
@@ -132,7 +132,7 @@ REST API では、次のアクションがサポートされています。
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>インスタンスの状態を変更します。新しい状態がパラメーター <code>state</code> として送信されます。状態は <code>RUNNING</code>、<code>SUSPENDED</code>、<code>ABORTED</code> のいずれかの値でなければなりません。<br />新しい状態にアクセスできない場合（強制終了したインスタンスを休止にするなど）は、<code>409</code>（<code>CONFLICT</code>）の応答がクライアントに返されます。</td>
+   <td>インスタンスの状態を変更します。新しい状態がパラメーター <code>state</code> として送信されます。状態は <code>RUNNING</code>、<code>SUSPENDED</code>、<code>ABORTED</code> のいずれかの値でなければなりません。<br /> 新しい状態にアクセスできない場合（終了したインスタンスを休止している場合など）、 <code>409</code> (<code>CONFLICT</code>) 応答がクライアントに送り返されます。</td>
   </tr>
  </tbody>
 </table>
@@ -488,7 +488,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 >
 >削除してもモデルノードは削除されません。
 
-新しいモデルを作成する場合：
+モデルを作成する場合：
 
 * ワークフローモデルエディターでは、モデルが `/var/workflow/models` の下で特定のノード構造を使用している必要があります。モデルの親ノードは、以下のプロパティ値の `jcr:content` ノードを持つ `cq:Page` タイプである必要があります。
 

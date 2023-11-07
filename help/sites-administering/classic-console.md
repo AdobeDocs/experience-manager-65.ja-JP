@@ -1,20 +1,16 @@
 ---
 title: クラシック UI のタグ付けコンソール
-seo-title: Classic UI Tagging Console
 description: Adobe Experience Manager Classic UI のタグ付けコンソールについて説明します。
-seo-description: Learn about the Classic UI Tagging Console.
-uuid: 51e29422-f967-424b-a7fd-4ca2ddc6b8a3
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 52%
+source-wordcount: '891'
+ht-degree: 46%
 
 ---
 
@@ -160,7 +156,7 @@ The **タグを移動** ダイアログは次のように表示されます。
 
 タグ付けコンソールでは、ユーザーの言語設定が使用されます。したがって Animal タグは、ユーザープロパティで言語をフランス語に設定しているユーザーには「Animaux」と表示されます。
 
-ダイアログに新しい言語を追加する方法については、[デベロッパー向けタグ付け](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog)節の&#x200B;**タグを編集ダイアログへの新しい言語の追加**&#x200B;を参照してください。
+ダイアログに新しい言語を追加するには、「 [タグを編集ダイアログへの新しい言語の追加](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog) （内） **開発者向けタグ付け** 」セクションに入力します。
 
 ### 指定した言語でのページプロパティにおけるタグタイトルの表示 {#displaying-tag-titles-in-page-properties-in-a-specified-language}
 
@@ -177,7 +173,7 @@ The **タグを移動** ダイアログは次のように表示されます。
 
 デフォルトでは、ページのプロパティダイアログにはページ言語にもとづいたタグの `titles` が表示されます。
 
-ページ言語が有効な場合、タグの言語はページ言語から取得されます。[`tag`Widget](/help/sites-developing/building.md#tagging-on-the-client-side) が他のケース（フォームやダイアログ内など）で使われる場合、タグの言語はコンテキストに依存します。
+ページ言語が有効な場合、タグの言語はページ言語から取得されます。次の場合に [`tag` widget](/help/sites-developing/building.md#tagging-on-the-client-side) が他のケース（フォームやダイアログボックスなど）で使用される場合、タグの言語はコンテキストに応じて異なります。
 
 >[!NOTE]
 >

@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 823e756f470b0599f7d53a3e08fdf650b4e892d1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3454'
-ht-degree: 97%
+source-wordcount: '3446'
+ht-degree: 93%
 
 ---
 
@@ -204,13 +204,13 @@ newComponent (cq:Component)
 
 タッチ操作向け UI 用のウィジェットは、Granite UI コンポーネントとして実装されています。
 
-タッチ操作向け UI 用のコンポーネントダイアログで使用する新しいウィジェットを作成するには、[新しい Granite UI フィールドコンポーネントを作成](/help/sites-developing/granite-ui-component.md)する必要があります。
+タッチ操作対応 UI 用のコンポーネントダイアログボックスで使用するウィジェットを作成するには、次の手順を実行する必要があります。 [Granite UI フィールドコンポーネントの作成](/help/sites-developing/granite-ui-component.md).
 
 >[!NOTE]
 >
->Granite UI について詳しくは、[Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)を参照してください。
+>Granite UI について詳しくは、 [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
-ダイアログをフォーム要素の単純なコンテナと見なす場合、ダイアログコンテンツの主なコンテンツをフォームフィールドとして表示することもできます。新しいフォームフィールドを作成するには、リソースタイプを作成する必要があります。これは、新しいコンポーネントの作成と同じです。この作業を容易にするために、Granite UI は、`sling:resourceSuperType` を使用して以下を継承する汎用フィールドコンポーネントを提供しています。
+ダイアログをフォーム要素の単純なコンテナと見なす場合、ダイアログコンテンツの主なコンテンツをフォームフィールドとして表示することもできます。フォームフィールドを作成するには、リソースタイプを作成する必要があります。これは、コンポーネントの作成と同じです。 この作業を容易にするために、Granite UI は、`sling:resourceSuperType` を使用して以下を継承する汎用フィールドコンポーネントを提供しています。
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
@@ -226,7 +226,7 @@ Granite UI には、具体的に言えばダイアログ（一般的に言えば
 
 コンポーネントのスタイル設定と動作を定義する場合は、カスタム CSS/LESS および JS を定義する専用の[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成できます。
 
-クライアントライブラリをコンポーネントダイアログ用にのみ読み込む（別のコンポーネント用に読み込まれない）には、プロパティを設定する必要があります `extraClientlibs` ダイアログの「 」から、先ほど作成したクライアントライブラリのカテゴリ名に変更します。 この方法は、クライアントライブラリが非常に大きい場合や、フィールドがそのダイアログに固有で、他のダイアログで必要になることがない場合にお勧めです。
+クライアントライブラリをコンポーネントダイアログ用にのみ読み込む（別のコンポーネント用に読み込まれない）には、プロパティを設定する必要があります `extraClientlibs` ダイアログのカテゴリ名を、作成したクライアントライブラリのカテゴリ名に変更します。 この方法は、クライアントライブラリが非常に大きい場合や、フィールドがそのダイアログに固有で、他のダイアログで必要になることがない場合にお勧めです。
 
 クライアントライブラリをすべてのダイアログ用に読み込むには、クライアントライブラリのカテゴリプロパティを `cq.authoring.dialog` に設定します。これは、すべてのダイアログのレンダリング時にデフォルトで含まれるクライアントライブラリのカテゴリ名です。クライアントライブラリが小さい場合や、フィールドが汎用的で、他のダイアログで再利用できる場合には、この方法を使用できます。
 
@@ -344,13 +344,13 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 
 初期状態の AEM は参照コンポーネントのみを確認します。コンポーネントを追加するには、OSGi バンドル **WCM オーサリングコンテンツ参照設定**&#x200B;を設定する必要があります。
 
-定義に新しいエントリを作成し、確認するプロパティと共にコンポーネントを指定します。次に例を示します。
+定義内にエントリを作成し、チェックするプロパティと共に、コンポーネントを指定します。 次に例を示します。
 
 `/apps/<*your-Project*>/components/reference@parentPath`
 
 >[!NOTE]
 >
->AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+>AEMを操作する場合、このようなサービスの設定を管理する方法はいくつかあります。詳しくは、 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
 
 ## コンポーネントの有効化と段落システムへの追加 {#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -371,12 +371,12 @@ AEM では、ページの段落システムを設定するときに、常に空�
 
    * `/etc/designs/<myApp>/page/par`
 
-   新しいノードを作成します。
+   ノードの作成：
 
    * 名前：`cq:authoring`
    * 型：`nt:unstructured`
 
-1. この下に、アセットとコンポーネントのマッピングをすべて保持する新しいノードを作成します。
+1. この下に、すべてのアセットとコンポーネントのマッピングを格納するノードを作成します。
 
    * 名前：`assetToComponentMapping`
    * 型：`nt:unstructured`
@@ -396,7 +396,7 @@ AEM では、ページの段落システムを設定するときに、常に空�
    *  `assetMimetype`：
 
       * 型：`String`
-      * 値：関連アセットの MIME タイプ（例：`image/*`）
+      * 値：関連アセットの MIME タイプ（例： ） `image/*`
 
    *  `droptarget`：
 

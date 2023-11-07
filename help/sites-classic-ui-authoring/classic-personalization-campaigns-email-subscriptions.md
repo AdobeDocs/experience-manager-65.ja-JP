@@ -1,19 +1,15 @@
 ---
 title: 購読の管理
-seo-title: Managing Subscriptions
 description: AEM web ページ上で使用するフォームコンポーネントを利用して、メールサービスプロバイダーのメーリングリストに登録するようにユーザーに求めることができます。メールサービスのメーリングリストに登録するためのサインアップフォームを AEM ページに準備するには、対応するサービス設定を、登録する可能性のあるユーザーが訪れる AEM ページに適用する必要があります。
-seo-description: Users can be asked to subscribe to Email Service Provider's mailing lists with the help of the Form component used on an AEM web page. To prepare an AEM page with a sign-up form for subscription to your e-mail service mailing lists, you must apply the corresponding service configuration to the AEM page that the potential subscriber will visit.
-uuid: b2578a3d-dba1-4114-b21a-5f34c0cccc5a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 55%
+source-wordcount: '913'
+ht-degree: 54%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 55%
 >[!NOTE]
 >
 >アドビでは、この機能（リードおよびリストの管理）をさらに強化する予定はありません。
->[Adobe Campaign と AEM 統合](/help/sites-administering/campaign.md)を活用することをお勧めします。
+>使用することをお勧めします。 [Adobe CampaignとそのAEMの統合](/help/sites-administering/campaign.md).
 
 AEM web ページ上で使用する&#x200B;**フォーム**&#x200B;コンポーネントを利用して、**メールサービスプロバイダー**&#x200B;のメーリングリストに登録するようにユーザーに求めることができます。メールサービスのメーリングリストに登録するためのサインアップフォームを AEM ページに準備するには、対応するサービス設定を、登録する可能性のあるユーザーが訪れる AEM ページに適用する必要があります。
 
@@ -72,7 +68,7 @@ AEMページを設定するには：
 電子メールサービスの購読と購読解除をパブリッシュインスタンスのサインアップフォーム経由で機能させるには、次の手順に従う必要があります。
 
 1. オーサーインスタンスで、パッケージマネージャーに移動します。
-1. 新しいパッケージを作成します。 フィルターを`/etc/key`に設定します。
+1. パッケージを作成する. フィルターを`/etc/key`に設定します。
 1. パッケージをビルドしてダウンロードします。
 1. パブリッシュインスタンスでパッケージマネージャーに移動し、このパッケージをアップロードします。
 1. パブリッシュ OSGi コンソールに移動し、という名前のバンドルを再起動します。 **AdobeGranite 暗号サポート**.

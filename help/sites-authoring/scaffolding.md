@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
 exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '153'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 83%
 
 ---
 
@@ -23,4 +23,4 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->基礎[モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用できますが、基礎のメンテナンスおよび作成は、基礎からの新しいページの作成と同様に、クラシック UI で行ないます。詳しくは、クラシック UI オーサリングドキュメントの[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)を参照してください。
+>Scaffolding がありますが、 [mode](/help/sites-authoring/author-environment-tools.md#page-modes) 使用可能な場合は、基礎のメンテナンスと作成、および基礎からの新しいページの作成は、クラシック UI で行います。 詳しくは、クラシック UI オーサリングドキュメントの[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)を参照してください。

@@ -9,10 +9,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
-source-git-commit: 5f4bbad87768cf6bd73771f9eac6e01ab3bf3309
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6171'
-ht-degree: 36%
+source-wordcount: '6170'
+ht-degree: 35%
 
 ---
 
@@ -190,7 +190,7 @@ Adobe PDFの書き出し設定セクションの書き出しファイルタイ�
 
 **ページレイアウト：** PDF ドキュメントのページレイアウトの種類を選択します。
 
-**拡大：** PDF ドキュメントの初期表示のプリセット倍率を選択するか、カスタム値を選択します。デフォルト設定を選択すると、Acrobat のデフォルト倍率が使用されます。
+**拡大：** PDF ドキュメントの初期表示のプリセット倍率を選択するか、カスタム値を選択します。デフォルト設定を選択すると、デフォルトのAcrobat倍率が使用されます。
 
 **開封ページ番号：** PDF を開くページ番号を指定します。
 

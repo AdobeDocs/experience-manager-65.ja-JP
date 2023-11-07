@@ -5,10 +5,10 @@ contentOwner: Adobe
 feature: Asset Management,Metadata,Search
 role: User
 exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
-source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '490'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 100%
 
 | 名前 | 値 | 例 | 目的 |
 |---|---|---|---|
-| リソースサフィックス（B） | URL のリソースサフィックスとしてのフォルダーパス：`http://localhost:4502/aem/`<br>`assetpicker.html/<folder_path>` | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えばフォルダーが `/content/dam/we-retail/en/activities` の場合、URL は `http://localhost:4502/aem/assetpicker.html`<br>`/content/dam/we-retail/en/activities?assettype=images` のような形式になります | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
+| リソースサフィックス（B） | URL のリソースサフィックスとしてのフォルダーパス：`http://localhost:4502/aem/`<br>`assetpicker.html/<folder_path>` | 特定のフォルダーを選択した状態（例えば、フォルダーを選択した状態）でアセットセレクターを起動するには `/content/dam/we-retail/en/activities` を選択した場合、URL は次の形式である必要があります。 `http://localhost:4502/aem/assetpicker.html`<br>`/content/dam/we-retail/en/activities?assettype=images` | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
 | mode | single、multiple | `http://localhost:4502/aem/assetpicker.html`<br>`?mode=multiple` <br> `http://localhost:4502/aem/assetpicker.html`<br>`?mode=single` | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
 | dialog | true、false | `http://localhost:4502/aem/assetpicker.html`<br>`?dialog=true` | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
 | root | `<folder_path>` | `http://localhost:4502/aem/`<br>`assetpicker.html?assettype=images`<br>`&root=/content/dam/we-retail/en/activities` | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。この場合、アセットセレクターを使用して、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |

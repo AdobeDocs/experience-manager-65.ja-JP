@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4950'
+source-wordcount: '4962'
 ht-degree: 61%
 
 ---
@@ -424,7 +424,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.xml.import.supported</td>
-   <td>true は、リポジトリが XML コードをコンテンツとして読み込むことをサポートしていることを示します。</td>
+   <td>true は、リポジトリがコンテンツとしての XML コードの読み込みをサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.same.name.siblings.supported</td>
@@ -476,11 +476,11 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.multivalued.properties.supported</td>
-   <td>true は、0 個以上の値を持つことのできるノードプロパティをリポジトリがサポートしていることを示します。</td>
+   <td>true は、0 個以上の値を持つノードプロパティをリポジトリがサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>option.retention.supported</td>
-   <td>true は、リポジトリが、コンテンツに保存ポリシーを適用し、保持と解放をサポートする外部の保存管理アプリケーションの使用をサポートしていることを示します。</td>
+   <td>true は、リポジトリが、コンテンツに保存ポリシーを適用し、保持とリリースをサポートする外部の保存管理アプリケーションの使用をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>option.lifecycle.supported</td>
@@ -894,7 +894,7 @@ JMX コンソールのメインページには、サービスの表が含まれ�
 
 ## 外部 JMX アプリケーションを使用した監視 {#using-external-jmx-applications-for-monitoring}
 
-CRX を使用すると、外部アプリケーションがを介して管理 Beans(MBean) とやり取りできます。 [Java 管理拡張 (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). 次のような汎用コンソールの使用 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) またはドメイン固有の監視アプリケーションを使用すると、CRX の設定とプロパティの取得と設定、およびパフォーマンスとリソースの使用状況の監視をおこなうことができます。
+CRX を使用すると、外部アプリケーションがを介して管理 Beans(MBean) とやり取りできます。 [Java 管理拡張 (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). 次のような汎用コンソールの使用 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) またはドメイン固有の監視アプリケーションでは、CRX の設定とプロパティの取得と設定、およびパフォーマンスとリソースの使用状況の監視を行うことができます。
 
 ### JConsole を使用した CRX への接続 {#using-jconsole-to-connect-to-crx}
 

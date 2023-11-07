@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 79%
+source-wordcount: '2478'
+ht-degree: 78%
 
 ---
 
@@ -76,7 +76,7 @@ Forms サービスが、どのようにしてインタラクティブフォー�
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-The `HandleData` Java サーブレットは、このフォームにユーザーの姓と名および金額を事前入力します。 フォームが事前入力された後、クライアントの web ブラウザーに送信されます。（[編集可能なレイアウトを使用した Forms の事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）
+The `HandleData` Java サーブレットは、このフォームにユーザーの姓名と金額を事前入力します。 フォームが事前入力された後、クライアントの web ブラウザーに送信されます。（[編集可能なレイアウトを使用した Forms の事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）
 
 **Java サーブレット**
 
@@ -133,7 +133,7 @@ Forms サービスでフォームをレンダリングするために必要な U
 >
 >Workbench を使用した Forms アプリケーションの作成について詳しくは、[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください。
 
-Forms アプリケーション内のリソースへのパスは次のとおりです。
+Formsアプリケーション内のリソースへのパスは次のとおりです。
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -193,7 +193,7 @@ Forms API（Java）を使用してインタラクティブ PDF フォームを�
 
    * コンストラクターを使用して、URI 値を格納する `URLSpec` オブジェクトを作成します。
    * を呼び出す `URLSpec` オブジェクトの `setApplicationWebRoot` メソッドを使用して、アプリケーションの Web ルートを表す string 値を渡します。
-   * を呼び出す `URLSpec` オブジェクトの `setContentRootURI` メソッドを使用して、コンテンツルート URI 値を指定する string 値を渡します。 フォームデザインがコンテンツルート URI に配置されていることを確認します。そうでない場合、Forms サービスは例外をスローします。リポジトリを参照するには、`repository:///` を指定します。
+   * を呼び出す `URLSpec` オブジェクトの `setContentRootURI` メソッドを使用して、コンテンツルート URI 値を指定する string 値を渡します。 フォームデザインがコンテンツルート URI にあることを確認します。 そうでない場合、Forms サービスは例外をスローします。リポジトリを参照するには、`repository:///` を指定します。
    * を呼び出す `URLSpec` オブジェクトの `setTargetURL` メソッドを使用してターゲット URL 値を指定し、フォームデータの投稿先となる文字列値を渡します。 フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、演算を実行するためのフォームの送信先の URL を指定することもできます。
 
 1. フォームにファイルを添付する
@@ -248,7 +248,7 @@ Forms API（web サービス）を使用してインタラクティブ PDF フ�
 
    * コンストラクターを使用して、URI 値を格納する `URLSpec` オブジェクトを作成します。
    * を呼び出す `URLSpec` オブジェクトの `setApplicationWebRoot` メソッドを使用して、アプリケーションの Web ルートを表す string 値を渡します。
-   * を呼び出す `URLSpec` オブジェクトの `setContentRootURI` メソッドを使用して、コンテンツルート URI 値を指定する string 値を渡します。 フォームデザインがコンテンツルート URI に配置されていることを確認します。そうでない場合、Forms サービスは例外をスローします。リポジトリを参照するには、`repository:///` を指定します。
+   * を呼び出す `URLSpec` オブジェクトの `setContentRootURI` メソッドを使用して、コンテンツルート URI 値を指定する string 値を渡します。 フォームデザインがコンテンツルート URI にあることを確認します。 そうでない場合、Forms サービスは例外をスローします。リポジトリを参照するには、`repository:///` を指定します。
    * を呼び出す `URLSpec` オブジェクトの `setTargetURL` メソッドを使用してターゲット URL 値を指定し、フォームデータの投稿先となる文字列値を渡します。 フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、演算を実行するためのフォームの送信先の URL を指定することもできます。
 
 1. フォームにファイルを添付する

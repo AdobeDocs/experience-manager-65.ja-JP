@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
 feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 59%
+source-wordcount: '660'
+ht-degree: 57%
 
 ---
 
@@ -135,13 +135,13 @@ AEMでは、次の情報を使用してログメッセージをファイルに�
 
 次の手順で、独自のロガーとライターのペアを定義できます。
 
-1. ファクトリ設定の [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md) の新しいインスタンスを作成します。
+1. ファクトリ設定のインスタンスを作成する [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. ログファイルを指定します。
    1. ロガーを指定します。
    1. 必要に応じて、その他のパラメーターを設定します。
 
-1. ファクトリ設定の新しいインスタンスを作成します。 [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md).
+1. ファクトリ設定のインスタンスを作成する [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. ログファイルを指定します。これは、ロガーに指定されたファイルと一致する必要があります。
    1. 必要に応じて、その他のパラメーターを設定します。

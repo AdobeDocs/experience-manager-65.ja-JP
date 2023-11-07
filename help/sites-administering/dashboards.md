@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 48%
+source-wordcount: '829'
+ht-degree: 49%
 
 ---
 
@@ -32,8 +32,6 @@ AEMを使用すると、様々なタイプ（ページ、アセットなど）�
 ## ダッシュボードの管理 {#administering-dashboards}
 
 ### ダッシュボードの作成 {#creating-a-dashboard}
-
-新しいダッシュボードを作成するには、次の手順に従います。
 
 1. Adobe Analytics の **ツール** セクションで、 **設定コンソール**.
 1. ツリー内で、「**ダッシュボード**」をダブルクリックします。

@@ -9,9 +9,9 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: c86e79c4-e887-4ee3-bb54-eeffb34a33c2
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3511'
+source-wordcount: '3509'
 ht-degree: 99%
 
 ---
@@ -195,7 +195,7 @@ Adobe Dynamic Media の会社管理者が、自社のセキュアテスト環境
 
   >[!IMPORTANT]
   >
-  >2023年5月1日（PT）以降、Dynamic Media の UGC アセットは、アップロード日から最大 60 日間使用できます。60 日後にアセットが削除されます。
+  >2023年5月1日（PT）以降、Dynamic Media の UGC アセットは、アップロード日から最大 60 日間使用できます。60 日後にアセットは削除されます。
 
   >[!NOTE]
   >

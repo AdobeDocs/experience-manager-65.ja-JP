@@ -3,9 +3,9 @@ title: 概念
 description: e コマースとAdobe Experience Managerの一般的な概念について説明します。
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4480'
+source-wordcount: '4481'
 ht-degree: 30%
 
 ---
@@ -486,7 +486,7 @@ The **製品** 個々の要件に応じて、コンポーネントをカスタ�
 
 プロキシページでは、実際の商品コンテンツをまったく含まない 2 ノード構造（`cq:Page` と `jcr:content`）を使用しています。コンテンツは、要求時に商品データとテンプレートページを参照することで生成されます。
 
-しかし、トレードオフがあります。 AEM内で製品情報をカスタマイズすることはできません。（お客様のサイト用に定義された）標準テンプレートが使用されます。
+しかし、トレードオフがあります。 AEM内で製品情報をカスタマイズすることはできません。（サイト用に定義された）標準テンプレートが使用されます。
 
 >[!NOTE]
 >
@@ -574,7 +574,7 @@ AEMでは、プロモーションも [Campaign Management](/help/sites-authoring
 
 >[!NOTE]
 >
->[hybris プロモーション](https://www.hybris.com/modules/promotion) および [hybris 割引券](https://www.hybris.com/ja/modules/voucher) 買い物かごに影響を与え、価格に関連するものをすべてカバーします。 プロモーション固有のマーケティングコンテンツ（バナーなど） は hybris 昇格には含まれていません。
+>[hybris プロモーション](https://www.hybris.com/modules/promotion) および [hybris 割引券](https://www.hybris.com/ja/modules/voucher) 買い物かごに影響を与え、価格に関連するものをすべてカバーします。 プロモーション固有のマーケティングコンテンツ（バナーなど）。 は hybris 昇格には含まれていません。
 
 ## パーソナライズ機能 {#personalization}
 

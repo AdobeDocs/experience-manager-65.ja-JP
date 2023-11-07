@@ -4,10 +4,10 @@ description: フラグメントのコンテンツを作成し、目的に応じ�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2391'
-ht-degree: 51%
+source-wordcount: '2388'
+ht-degree: 62%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 51%
 
 ## コンテンツのオーサリング {#authoring-your-content}
 
-コンテンツフラグメントを編集用に開くと、 **バリエーション** タブはデフォルトで開きます。 このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。構造化フラグメントには、コンテンツモデルで定義された様々なデータタイプの様々なフィールドが含まれています。
+コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。構造化フラグメントには、コンテンツモデルで定義された様々なデータタイプの様々なフィールドが含まれています。
 
 次に例を示します。
 
@@ -85,14 +85,14 @@ ht-degree: 51%
 
 全画面表示テキストエディターでは、次の情報が表示されます。
 
-* 様々な [アクション](#actions)
-* に応じて [形式](#formats)、その他の書式設定オプション ([リッチテキスト](#rich-text))
+* 様々な[アクション](#actions)へのアクセス
+* [形式](#formats)に応じた、その他の書式設定オプション（[リッチテキスト](#rich-text)）
 
 ### アクション {#actions}
 
-次のアクションも使用できます ( すべての [形式](#formats)) をクリックします。
+全画面表示エディター（複数行テキスト）を開いている場合は、次のアクションも（すべての[形式](#formats)で）使用できます。
 
-* [形式](#formats)（[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)、[Markdown](#markdown)）の選択
+* [形式](#formats)（[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)、[マークダウン](#markdown)）の選択
 
 * [コンテンツのアップロード](#uploading-content)
 
@@ -122,15 +122,15 @@ ht-degree: 51%
 * 整列：左、中央、右
 * 箇条書きリスト
 * 番号付きリスト
-* インデント：増減
-* ハイパーリンクの作成/解除
-* テキストを貼り付け/Word から貼り付け
-* テーブルを挿入
+* インデント：増、減
+* ハイパーリンクを作成／解除
+* テキストを貼り付け／Word から貼り付け
+* 表を挿入
 * 段落スタイル：段落、見出し 1/2/3
 * [アセットを挿入](#inserting-assets-into-your-fragment)
 * 全画面表示エディターを開く。次の書式設定オプションを使用できます。
    * 検索
-   * 検索 / 置換
+   * 検索／置換
    * スペルチェッカー
    * [注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [コンテンツフラグメントを挿入](#inserting-content-fragment-into-your-fragment)は、「**複数行テキスト**」フィールドが「**フラグメント参照を許可**」に設定されている場合に使用できます。
@@ -183,7 +183,7 @@ ht-degree: 51%
 オプション **コンテンツフラグメントを編集** 新しいウィンドウタブでフラグメントを開きます。
 
 <!--
-The option **Edit Content Fragment** will open that fragment in a new editor tab (within the same browser tab).
+The option **Edit Content Fragment** opens that fragment in a new editor tab (within the same browser tab).
 
 Selecting the original tab again (for example, **Little Pony Inc.**), will close this secondary tab (in this case, **Adam Smith**).
 
@@ -251,18 +251,18 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![要約](assets/cfm-variations-05.png)
 
-1. ターゲットの単語数を指定し、「 」を選択します。 **開始**:
-1. 元のテキストが、提案された要約と並べて表示されます。
+1. ターゲットの単語数を指定し、「**開始**」を選択します。
+1. 元のテキストは、提案された要約と横並びで表示されます。
 
-   * 削除する文は赤でハイライト表示され、取り消し線が付きます。
+   * 削除される文には取り消し線が付き、赤色で表示されます。
    * 要約されたコンテンツに保持する場合は、強調表示された文をクリックします。
    * 削除する場合は、ハイライト表示されていない文をクリックします。
 
 1. 変更を確定するには、「**要約**」を選択します。
 
-1. 元のテキストが、提案された要約と並べて表示されます。
+1. 元のテキストは、提案された要約と横並びで表示されます。
 
-   * 削除する文は赤でハイライト表示され、取り消し線が付きます。
+   * 削除される文には取り消し線が付き、赤色で表示されます。
    * 要約されたコンテンツに保持する場合は、強調表示された文をクリックします。
    * 削除する場合は、ハイライト表示されていない文をクリックします。
    * 要約統計（**実際**&#x200B;と&#x200B;**ターゲット**）が表示されます。
@@ -272,7 +272,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 ### コンテンツフラグメントへの注釈の追加 {#annotating-a-content-fragment}
 
-フラグメントに注釈を付けるには：
+フレグメントに注釈を付ける手順は次のとおりです。
 
 1. 「**プライマリ**」または必要なバリエーションを選択します。
 
@@ -324,7 +324,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 コンテンツフラグメントのオーサリングプロセスを容易にするには、 [Assets](/help/assets/manage-assets.md) （画像）をフラグメントに直接追加します。
 
-書式設定を行わずにフラグメントの段落シーケンスに追加されます。書式設定は、 [フラグメントがページで使用または参照されている](/help/sites-authoring/content-fragments.md).
+これらは、書式設定なしでフラグメントの段落シーケンスに追加されます。[フラグメントをページ上で使用または参照](/help/sites-authoring/content-fragments.md)する際に書式を設定できます。
 
 >[!CAUTION]
 >
@@ -361,7 +361,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 コンテンツフラグメントのオーサリングプロセスを容易にするには、フラグメントに別のコンテンツフラグメントを追加することもできます。
 
-これらは参照として、フラグメントの現在の場所に追加されます。
+これらは参照として、フラグメント内の現在の場所に追加されます。
 
 >[!NOTE]
 >
@@ -408,9 +408,9 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. フラグメントを開き、サイドパネルが表示されていることを確認します。
 1. サイドパネルのアイコンバーから「**バリエーション**」を選択します。
-1. 選択 **バリエーションを作成**.
+1. 「**バリエーションを作成**」を選択します。
 1. ダイアログボックスが開き、 **タイトル** および **説明** 新しいバリエーション用。
-1. 選択 **追加**；フラグメント **マスター** が新しいバリエーションにコピーされ、次のバリエーションで開かれます： [編集中](#editing-a-variation).
+1. 「**追加**」を選択します。フラグメントの&#x200B;**マスター**&#x200B;が新しいバリエーションにコピーされ、[編集](#editing-a-variation)用に開かれます。
 
    >[!NOTE]
    >
@@ -424,8 +424,8 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 次のいずれかの操作を行った後にバリエーションのコンテンツを変更します。
 
-* [バリエーションの作成](#creating-a-variation).
-* 既存のフラグメントを開き、サイドパネルから必要なバリエーションを選択します。
+* [バリエーションの作成](#creating-a-variation)。
+* 既存のフラグメントを開いた後、サイドパネルから必要なバリエーションを選択します。
 
 ![バリエーションの編集](assets/cfm-variations-10.png)
 
@@ -439,11 +439,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 表示されたダイアログボックスで新しい「**タイトル**」や「**説明**」を入力します。
 
-1. を確認します。 **名前を変更** アクション。
+1. 「**名前を変更**」アクションを確認します。
 
 >[!NOTE]
 >
-これはバリエーションにのみ影響します **タイトル**.
+この手順はバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
 
 ### バリエーションの削除 {#deleting-a-variation}
 
@@ -481,7 +481,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 特定のバリエーションを選択し、次のいずれかから適切な同期アクションを選択します。
 
-   * 「**アクション**」ドロップダウンセレクター - **現在の要素をプライマリと同期**
+   * **アクション**&#x200B;ドロップダウンセレクター - **現在の要素をマスターと同期**
 
      ![プライマリとの同期](assets/cfm-variations-11a.png)
 
@@ -489,7 +489,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
      ![プライマリとの同期](assets/cfm-variations-11b.png)
 
-1. マスターとバリエーションが並べて表示されます。
+1. プライマリとバリエーションが横並びに表示されます。
 
    * 緑は、コンテンツが（バリエーションに）追加されたことを示します。
    * 赤は削除されたコンテンツを示します（バリエーションからの削除）
@@ -497,4 +497,4 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![プライマリとの同期](assets/cfm-variations-11c.png)
 
-1. 選択 **同期**&#x200B;の場合、バリエーションが更新され、表示されます。
+1. 「**同期**」を選択すると、バリエーションが更新され、表示されます。

@@ -9,7 +9,7 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 3%
@@ -32,7 +32,7 @@ ht-degree: 3%
 * **制御**：グループは、開くか秘密鍵を持つことができます。
 * **ネスト**：グループには、0 個以上のグループを含めることができます。
 
-<!-- This is a 404 on helpx. Please update or remove.
+<!-- This is a 404 on helpx. Update or remove.
 >[!NOTE]
 >
 >Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), is not listed in the Community Groups console, and thus, are not modifiable using the console.

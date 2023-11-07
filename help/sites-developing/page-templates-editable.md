@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3219'
 ht-degree: 98%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 98%
 
 AEM プロジェクトで編集可能テンプレートを使用する方法について詳しくは、「[Lazybones を使用した AEM プロジェクトの作成](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478?lang=ja)」を参照してください。
 
-新しい編集可能テンプレートを作成する場合は、次の手順を実行します。
+編集可能テンプレートを作成する場合は、次の操作を実行します。
 
 1. [テンプレート用フォルダー](#template-folders)を作成します。このフォルダーは必須ではありませんが、ベストプラクティスとして推奨されます。
 1. [テンプレートタイプ](#template-type)を選択します。このタイプがコピーされ、[テンプレート定義](#template-definitions)が作成されます。
@@ -111,7 +111,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    テンプレートレイアウトの技術的な詳細については、このドキュメントの[レイアウト](/help/sites-developing/page-templates-editable.md#layout)を参照してください。
 
-1. テンプレートを有効化し、特定のコンテンツツリーに対して許可します。
+1. テンプレートを有効にし、特定のコンテンツツリーに対して許可します。
 
    * テンプレートを有効または無効にして、ページ作成者が使用できるようにしたり、使用できなくしたりできます。
    * テンプレートは、特定のページブランチに対して使用可能または使用不可にすることができます。
@@ -417,7 +417,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
 * 編集可能テンプレートのタイプ
 * 編集可能テンプレート
 
-新しい編集可能テンプレートを作成すると、この値がテンプレートタイプから個々のテンプレートにコピーされます。値がタイプで設定されていない場合は、テンプレートで設定できます。テンプレートの作成後に、タイプからテンプレートに継承されることはありません。
+編集可能テンプレートを作成する際、値はテンプレートタイプから個々のテンプレートにコピーされます。 値がタイプで設定されていない場合は、テンプレートで設定できます。テンプレートの作成後に、タイプからテンプレートに継承されることはありません。
 
 >[!CAUTION]
 >
@@ -593,7 +593,7 @@ GitHub のコード
    * [サブブランチの該当するページまたはルートページの&#x200B;**ページプロパティ**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;で、許可されたテンプレートのパスを定義します。
    * プロパティを設定します。
      `cq:allowedTemplates` 
-を必要なブランチの `jcr:content` ノードに設定します。
+を必要な分岐の `jcr:content` ノードに設定します。
 
    例えば、次の値を使用します。
 

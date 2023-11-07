@@ -10,10 +10,10 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 66%
+source-wordcount: '2475'
+ht-degree: 65%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 66%
 
 フォームデータモデルのプロパティを挿入することで、テキストドキュメントフラグメントをパーソナライズできます。 フォームデータモデルのプロパティをテキスト内に挿入すると、インタラクティブ通信のプレビューを表示する際に、関連するデータソースから受信者固有のデータを取得して設定できるようになります。フォームデータモデルについて詳しくは、[AEM Forms のデータ統合](/help/forms/using/data-integration.md)を参照してください。
 
-テキストの作成時にフォームデータモデルを指定すると、そのフォームデータモデルのプロパティが、テキストエディターの左側のウィンドウに表示されます。指定されるフォームデータモデルは、テキストドキュメントフラグメントと、それが含まれているインタラクティブ通信とで、同じである必要があります。
+テキストの作成時にフォームデータモデルを指定すると、そのフォームデータモデルのプロパティが、テキストエディターの左側のウィンドウに表示されます。指定したフォームデータモデルは、テキストドキュメントフラグメントと、そのフラグメントを含むインタラクティブ通信で同じである必要があります。
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 

@@ -8,7 +8,7 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: cfa822c8-f9a9-4122-9eac-0293d525f6b5
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 20%
@@ -39,8 +39,8 @@ ht-degree: 20%
 
 **1 つまたは複数のエージェントキューが停止している場合：**
 
-1. キューが表示されるか **ブロック** ステータス？ その場合、パブリッシュインスタンスは実行されず、応答しなくなりますか。 パブリッシュインスタンスで問題を確認します。 つまり、ログを確認し、OutOfMemory エラーやその他の問題が発生しているかどうかを確認します。 単に遅い場合は、スレッドダンプを取り、それらを分析します。
-1. キューのステータスが表示されますか。 **キューはアクティブ — 保留中数**? 基本的に、レプリケーションジョブは、パブリッシュインスタンスまたは Dispatcher が応答するのを待つソケットの読み取りで停止する可能性があります。 これは、パブリッシュインスタンスまたは Dispatcher が高負荷になっているか、ロック状態になっている可能性があります。 この場合、オーサーからスレッドダンプを取得し、パブリッシュします。
+1. キューが表示されるか **ブロック** ステータス？ その場合、パブリッシュインスタンスは実行されず、応答しなくなりますか。 パブリッシュインスタンスを調べて、問題を確認します。 つまり、ログを確認し、OutOfMemory エラーやその他の問題が発生しているかどうかを確認します。 単に遅い場合は、スレッドダンプを取り、それらを分析します。
+1. キューのステータスが表示されますか。 **キューはアクティブ — 保留中数です**? 基本的に、レプリケーションジョブは、パブリッシュインスタンスまたは Dispatcher が応答するのを待つソケットの読み取りで停止する可能性があります。 これは、パブリッシュインスタンスまたは Dispatcher が高負荷になっているか、ロック状態になっている可能性があります。 この場合、オーサーからスレッドダンプを取得し、パブリッシュします。
 
    * スレッドダンプアナライザーでオーサーのスレッドダンプを開き、レプリケーションエージェントの sling イベントジョブが socketRead で停止していないかを確認します。
    * スレッドダンプアナライザーでパブリッシュのスレッドダンプを開き、パブリッシュインスタンスが応答しない原因となる可能性があるものを分析します。作成者からレプリケーションを受け取るスレッドで、名前にPOST/bin/receive が含まれるスレッドが表示されます。
@@ -57,15 +57,15 @@ ht-degree: 20%
    1. 「検索」をクリックします。
    1. 結果では、上位の項目は最新の Sling イベンティングジョブです。 それぞれをクリックし、キューの上部に表示される内容に一致する、停止したレプリケーションを見つけます。
 
-1. Sling イベンティングフレームワークのジョブキューに問題がある可能性があります。 /system/console で org.apache.sling.event バンドルを再起動してみてください。
-1. ジョブの処理がオフになっている可能性があります。 Sling Eventing Tab の Felix コンソールで確認できます。 「Apache Sling Eventing （JOB PROCESSING が無効になっています。）」と表示されるかどうかを確認します。
+1. Sling イベンティングフレームワークのジョブキューに問題がある可能性があります。 /system/console の org.apache.sling.event バンドルを再起動してみてください。
+1. ジョブの処理がオフになっている可能性があります。 Sling Eventing Tab の Felix Console で確認できます。 「Apache Sling Eventing （JOB PROCESSING が無効になっています。）」と表示されるかどうかを確認します。
 
    * 有効な場合は、Felix コンソールの「Configuration」タブで「Apache Sling Job Event Handler」をオンにします。 [ ジョブ処理が有効 ] チェックボックスがオフになっている可能性があります。 このオプションをオンにしても「ジョブ処理が無効です」と表示される場合は、ジョブ処理を無効にするオーバーレイが/apps/system/config の下に存在するかどうかを確認します。 boolean 値を true に設定して jobmanager.enabled の osgi:config ノードを作成し、アクティベーションが開始したかどうか、およびキューにジョブがなくなったかどうかを再確認します。
 
 1. また、DefaultJobManager 構成に一貫性のない状態が発生する場合もあります。 この問題は、ユーザーが OSGiconsole で「Apache Sling Job Event Handler」設定を手動で変更した場合に発生する可能性があります（例えば、「Job Processing Enabled」プロパティを無効にして再度有効にし、設定を保存します）。
 
    * この時点で、crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.configに保存されている DefaultJobManager 設定が不整合な状態になります。 また、「Apache Sling Job Event Handler」プロパティで「Job Processing Enabled」がチェック状態になっている場合でも、「Sling Eventing」タブに移動すると、「JOB PROCESSING IS DISABLED」というメッセージが表示され、レプリケーションは機能しません。
-   * この問題を解決するには、OSGi コンソールの Configuration ページに移動し、「Apache Sling Job Event Handler」設定を削除します。 次に、クラスターのマスターノードを再起動して、設定を一貫した状態に戻します。 これにより問題が修正され、レプリケーションが再び動作し始めます。
+   * この問題を解決するには、OSGi コンソールの Configuration ページに移動し、「Apache Sling Job Event Handler」設定を削除します。 次に、クラスターのマスターノードを再起動して、設定を一貫性のある状態に戻します。 これにより問題が修正され、レプリケーションが再び動作し始めます。
 
 **replication.log の作成**
 

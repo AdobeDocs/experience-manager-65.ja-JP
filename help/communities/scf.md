@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1477'
 ht-degree: 1%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 ソーシャルコンポーネントフレームワーク (SCF) を使用すると、サーバー側とクライアント側の両方で Communities コンポーネントを設定、カスタマイズ、拡張するプロセスが簡単になります。
 
-フレームワークの利点：
+フレームワークの利点は次のとおりです。
 
-* **機能**:80%の使用例に対するカスタマイズがほとんどあるいはまったく行われず、すぐに使用できる簡単な統合。
+* **機能**:80%の使用例をカスタマイズすることなく、またはカスタマイズすることなく、すぐに使用できる統合の容易さ。
 * **スキン可能**:CSS スタイル設定でHTML属性を一貫して使用。
-* **拡張可能**:コンポーネントの実装は、オブジェクト指向でビジネスロジックが軽量で、サーバー上に増分的なビジネスログインを簡単に追加できます。
-* **柔軟**:簡単にオーバーレイおよびカスタマイズできる、単純なロジックのない JavaScript テンプレートです。
-* **アクセス可能**:HTTP API は、モバイルアプリを含む任意のクライアントからの投稿をサポートします。
-* **ポータブル**:あらゆるテクノロジーで構築された Web ページに統合/埋め込みます。
+* **拡張可能**：コンポーネントの実装は、オブジェクト指向でビジネスロジックが軽量で、サーバー上に増分的なビジネスログインを簡単に追加できます。
+* **柔軟**：簡単にオーバーレイおよびカスタマイズできる、単純なロジックのない JavaScript テンプレートです。
+* **アクセシブル**: HTTP API は、モバイルアプリを含む任意のクライアントからの投稿をサポートします。
+* **ポータブル**：あらゆるテクノロジーで構築された Web ページに統合/埋め込みます。
 
 インタラクティブを使用してオーサーインスタンスまたはパブリッシュインスタンスで参照する [コミュニティコンポーネントガイド](components-guide.md).
 
@@ -42,7 +42,7 @@ SocialComponent API を拡張して、ビューレイヤーまたは HTTP クラ
 
 ![scf-page-rendering](assets/scf-overview.png)
 
-### コンポーネントのカスタマイズと拡張 {#component-customization-and-extension}
+### コンポーネントのカスタマイズと拡張機能 {#component-customization-and-extension}
 
 コンポーネントをカスタマイズまたは拡張するには、オーバーレイと拡張のみを/apps ディレクトリに書き込み、将来のリリースへのアップグレードプロセスを簡素化します。
 
@@ -54,10 +54,10 @@ SocialComponent API を拡張して、ビューレイヤーまたは HTTP クラ
    * JS テンプレート、CSS および [JavaScript の拡張/オーバーライド](client-customize.md#extending-javascript).
 * JS テンプレートまたはGETエンドポイントで使用可能な情報を変更するには：
    * の拡張 [SocialComponent](server-customize.md#socialcomponent-interface).
-* 操作中にカスタム処理を追加するには：
-   * を書く [OperationExtension](server-customize.md#operationextension-class).
+* 操作中にカスタム処理を追加するには、次の手順に従います。
+   * 書き込み [OperationExtension](server-customize.md#operationextension-class).
 * カスタム操作を追加するには：
-   * 新しい [Sling Post 操作](server-customize.md#postoperation-class).
+   * の作成 [Sling Post 操作](server-customize.md#postoperation-class).
    * 既存を使用 [OperationServices](server-customize.md#operationservice-class) 必要に応じて。
    * 必要に応じてクライアント側から操作を呼び出す JavaScript コードを追加します。
 
@@ -69,7 +69,7 @@ SocialComponent API を拡張して、ビューレイヤーまたは HTTP クラ
 
 Java™ API は、簡単に継承またはサブクラス化される抽象クラスおよびインターフェイスを提供します。
 
-メインクラスは、 [サーバー側のカスタマイズ](server-customize.md) ページ。
+メインクラスは、 [サーバー側のカスタマイズ](server-customize.md) ページに貼り付けます。
 
 訪問 [ストレージリソースプロバイダの概要](srp.md) を参照してください。
 
@@ -83,9 +83,9 @@ HTTP API は、PhoneGap アプリ、ネイティブアプリ、その他の統�
 
 **`DefaultSocialGetServlet`**
 
-1. リソース (resourceType) を `SocialComponentFactoryManager` とは、 `SocialComponent` リソースを表します。
+1. リソース (resourceType) を `SocialComponentFactoryManager` を受け取り、 `SocialComponent` リソースを表します。
 
-1. ファクトリを呼び出し、を受け取ります。 `SocialComponent` リソースとリクエストを処理できる
+1. ファクトリを呼び出し、を受け取ります。 `SocialComponent` は、リソースとリクエストを処理できます。
 1. を呼び出します。 `SocialComponent`：リクエストを処理し、結果の JSON 表現を返します。
 1. JSON 応答をクライアントに返します。
 
@@ -137,9 +137,9 @@ Handlebars(HBS) テンプレートファイル (.hbs) は、.jsp および.html 
 
 .hbs ファイルへの HTTP アクセスは禁止されていない可能性があります。
 
-### コミュニティコンポーネントの追加または追加 {#add-or-include-a-communities-component}
+### コミュニティコンポーネントを追加または含める {#add-or-include-a-communities-component}
 
-ほとんどのコミュニティコンポーネントは、 *追加済み* Sling アドレス可能リソースとして。 一部のコミュニティコンポーネントは、 *含む* を既存のリソース以外としてテンプレートに追加し、ユーザー生成コンテンツ (UGC) を書き込む場所を動的に組み込み、カスタマイズできるようにします。
+ほとんどのコミュニティコンポーネントは、 *追加済み* Sling アドレス可能リソースとして。 一部のコミュニティコンポーネントは、次のように選択できます。 *含む* を既存のリソース以外としてテンプレートに追加し、ユーザー生成コンテンツ (UGC) を書き込む場所を動的に組み込み、カスタマイズできるようにします。
 
 どちらの場合も、コンポーネントの [必要なクライアントライブラリ](clientlibs.md) は、も存在する必要があります。
 
@@ -162,9 +162,9 @@ Adobe Experience Manager(AEM)6.1 以降では、コンポーネントを追加�
 * [レビュー](reviews-basics.md)
 * [投票](essentials-voting.md)
 
-この [コミュニティコンポーネントガイド](components-guide.md) を使用すると、インクルード可能なコンポーネントを追加からインクルードに切り替えることができます。
+The [コミュニティコンポーネントガイド](components-guide.md) を使用すると、インクルード可能なコンポーネントを追加からインクルードに切り替えることができます。
 
-**Handlebars を使用する場合** テンプレート言語、存在しないリソースは [ヘルパーを含める](handlebars-helpers.md#include) resourceType を指定する。
+**Handlebars を使用する場合** テンプレート言語、存在しないリソースは、 [ヘルパーを含める](handlebars-helpers.md#include) resourceType を指定する。
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
@@ -201,7 +201,7 @@ CSS クラスを定義および使用する際の推奨規則を次に示しま�
 
 ### クライアント側のカスタマイズ {#client-side-customizations}
 
-クライアント側のコミュニティコンポーネントの外観と動作をカスタマイズするには、 [クライアント側のカスタマイズ](client-customize.md)（次の情報を含む）:
+クライアント側でコミュニティコンポーネントの外観と動作をカスタマイズする場合は、 [クライアント側のカスタマイズ](client-customize.md)（次の情報を含む）:
 
 * [オーバーレイ](client-customize.md#overlays)
 * [拡張子](client-customize.md#extensions)
@@ -214,7 +214,7 @@ CSS クラスを定義および使用する際の推奨規則を次に示しま�
 
 開発者向けの重要な情報については、 [機能とコンポーネントの基本事項](essentials.md) 」セクションに入力します。
 
-開発者に関する追加情報については、 [コーディングのガイドライン](code-guide.md) 」セクションに入力します。
+開発者に関するその他の情報については、 [コーディングのガイドライン](code-guide.md) 」セクションに入力します。
 
 ## トラブルシューティング {#troubleshooting}
 

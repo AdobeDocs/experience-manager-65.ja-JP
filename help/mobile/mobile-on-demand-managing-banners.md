@@ -1,7 +1,7 @@
 ---
 title: バナーの管理
 seo-title: Managing Banners
-description: バナーは通常、グラフィカルなプロモーションリンクを表します。 このページでは、この機能について詳しく見ていきます。
+description: バナーは、通常、グラフィカルなプロモーションリンクを表します。 このページでは、この機能について詳しく見ていきます。
 seo-description: Banners represent typically graphical promotional links. Follow this page to learn more.
 uuid: 593fe2ef-84df-42e2-8a03-897fb67a896d
 contentOwner: User
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: fb1abaa0-9c02-4f20-aa7c-073def067452
 exl-id: c65a24e6-3041-4774-aeed-8e188ea19b78
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '661'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 ## バナーの概要 {#banners-overview}
 
-バナーは通常、グラフィカルなプロモーションリンクを表します。
+バナーは、通常、グラフィカルなプロモーションリンクを表します。
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ ht-degree: 5%
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. の右上隅にある下向き矢印をクリックします。 **バナーを管理** タイル。
 1. ウィザードの各手順を実行して、新しいバナーの作成を続行します。
-1. 準備が整ったら、 **作成**.
+1. 準備が整ったら、「 **作成**.
 1. 新しいバナーが **バナーを管理** タイル。
 
 ![chlimage_1-6](assets/chlimage_1-6.gif)
@@ -81,7 +81,7 @@ ht-degree: 5%
 記事を編集するワークフロー：
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
-1. 「**バナーを管理**」タイルで、バナーを管理するAEMを選択します。
+1. 「**バナーを管理**」タイルで、バナーを管理するAEMをソースとするバナーを選択します。
 1. リスト表示でハイライト表示されたバナーをクリックして、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、バナーのコンテンツ（原稿、画像、テキストなど）をドラッグします。
 
@@ -92,7 +92,7 @@ ht-degree: 5%
 記事を表示または編集する一般的なワークフロー：
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
-1. 次からバナーを選択： **バナーを管理** タイル。
+1. 次の中からバナーを選択： **バナーを管理** タイル。
 
 1. アクションバーから「**プロパティ**」を選択します。
 1. その記事で使用可能なすべてのメタデータを表示します。
@@ -106,7 +106,7 @@ ht-degree: 5%
 バナーをアップロードする一般的なワークフロー：
 
 1. 送信者 **モバイル**」で、カタログから Mobile On-Demand アプリを選択します。
-1. 内 **バナーを管理** タイルで、Mobile On-Demand にアップロードするバナーを選択します。
+1. Adobe Analytics の **バナーを管理** タイルで、Mobile On-Demand にアップロードするバナーを選択します。
 1. 必要に応じて、リスト表示からバナーを追加します。
 1. 選択 **アップロード** アクションバーから、ダイアログの「アップロード」をクリックします。
 1. バナーが Mobile On-Demand にアップロードされました。
@@ -120,16 +120,16 @@ ht-degree: 5%
 バナーを削除する一般的なワークフロー：
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
-1. 削除するバナーを **バナーを管理** タイル。
+1. で削除するバナーを選択します。 **バナーを管理** タイル。
 1. リストで選択されていることを確認します（必要に応じて、削除する他を選択します）。
 1. クリック **削除** をクリックします。
-1. AEMおよび Mobile On-Demand から削除する場合はオンにします。
+1. AEMと Mobile On-Demand からを削除する場合はオンにします。
 1. 「**削除**」をクリックします。
 1. これで、バナーがリストから削除されました。
 
 ### 次の手順 {#the-next-steps}
 
-バナーの管理について学ぶには、
+バナーの管理について学習した後は、
 
 * [記事の管理](/help/mobile/mobile-on-demand-managing-articles.md)
 * [コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)

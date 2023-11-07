@@ -8,10 +8,10 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 45%
+source-wordcount: '975'
+ht-degree: 41%
 
 ---
 
@@ -36,14 +36,14 @@ Adobe Experience Manager（AEM）Assets は、アセットだけでなく、[コ
 作成と翻訳ワークフローには、次のオプションが含まれます。 各オプションに関連する手順は、アセットの対応するオプションに関連する手順と似ています。
 
 * 構造のみを作成：手順は、[構造のみを作成（アセット）](translation-projects.md#create-structure-only)を参照してください。
-* 新しい翻訳プロジェクトを作成：手順は、[新しい翻訳プロジェクトを作成（アセット）](translation-projects.md#create-a-new-translation-project)を参照してください。
+* 翻訳プロジェクトの作成：手順については、 [アセットの翻訳プロジェクトを作成します](translation-projects.md#create-a-new-translation-project).
 * 既存の翻訳プロジェクトに追加：手順は、[既存の翻訳プロジェクトに追加（アセット）](translation-projects.md#add-to-existing-translation-project)を参照してください。
 
 ## 言語コピーを更新ワークフロー {#update-language-copies-workflow}
 
 言語コピーを更新ワークフローには、次のオプションが含まれます。 各オプションに関連する手順は、アセットの対応するオプションに関連する手順と似ています。
 
-* 新しい翻訳プロジェクトを作成：手順は、[新しい翻訳プロジェクトを作成（アセット）](translation-projects.md#create-a-new-translation-project)（更新ワークフロー）を参照してください。
+* 翻訳プロジェクトの作成：手順については、 [アセットの翻訳プロジェクトを作成します](translation-projects.md#create-a-new-translation-project) （ワークフローを更新）。
 * 既存の翻訳プロジェクトに追加：手順は、[既存の翻訳プロジェクトに追加（アセット）](translation-projects.md#add-to-existing-translation-project)（更新ワークフロー）を参照してください。
 
 また、アセットの一時コピーを作成する場合と同様に、フラグメントの一時言語コピーを作成することもできます。 詳しくは、 [アセットの一時的な言語コピーの作成](translation-projects.md#creating-temporary-language-copies).
@@ -159,4 +159,4 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    >[!NOTE]
    >
-   >コンテンツフラグメントを既存のプロジェクトに追加する手順や更新ワークフローを実行する手順は、アセットの対応する手順と似ています。 これらの手順については、アセットに関する説明を参照してください。
+   >コンテンツフラグメントを既存のプロジェクトに追加する手順や更新ワークフローを実行する手順は、アセットの対応する手順と似ています。 これらの手順に関するガイダンスについては、アセットに関する説明を参照してください。

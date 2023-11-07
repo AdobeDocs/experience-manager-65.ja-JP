@@ -2,10 +2,10 @@
 title: Reader 拡張証明書の有効期限とその影響
 description: Reader 拡張証明書の有効期限とその影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 6e9a7f3307ed05f887d60c7c7310100cd4596b23
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '1121'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Acrobat Reader DC Extensions サービスを使用する資格があります。サービスを使用すると、追加の使用権限を付与して Acrobat Reader の機能を拡張することで、組織内でインタラクティブ PDF ドキュメントを簡単に共有できます。このサービスは、PDF ドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Reader を使用して PDF ドキュメントを開いた場合には使用できない機能をアクティブにします。サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Acrobat Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-アドビは公開鍵インフラストラクチャ（PKI）を活用して、ライセンスやイネーブルメント機能に使用する電子証明書を発行します。アドビは、認証局 **Adobe ルート CA** によって証明書を発行していますが、この証明書は 2023年1月7日（PT）に期限が切れる予定です。証明書の有効期限が切れても、**Adobe ルート CA** ベースの証明書（古い証明書）から発行された実稼働用の証明書を使用して拡張された PDF ドキュメントには影響しません。すべての PDF ドキュメント（2023年1月7日（PT）より前の古い証明書を使用して拡張された Reader）は、顧客がダウンロードしたものも含め、適用されているすべての使用権限で引き続き機能し、更新する必要はありません。
+Adobeは、公開鍵基盤 (PKI) を使用して、ライセンスおよび機能の有効化に使用する電子証明書を発行します。 アドビは、認証局 **Adobe ルート CA** によって証明書を発行していますが、この証明書は 2023年1月7日（PT）に期限が切れる予定です。証明書の有効期限が切れても、**Adobe ルート CA** ベースの証明書（古い証明書）から発行された実稼働用の証明書を使用して拡張された PDF ドキュメントには影響しません。すべての PDF ドキュメント（2023年1月7日（PT）より前の古い証明書を使用して拡張された Reader）は、顧客がダウンロードしたものも含め、適用されているすべての使用権限で引き続き機能し、更新する必要はありません。
 
 新しい認証局 **Adobe ルート CA G2**&#x200B;と、新しい認証局に基づく証明書が使用できるようになりました。2023年1月7日（PT）までに、Reader で **Adobe ルート CA G2** に基づく新しい証明書の使用を開始して、新しい PDF ドキュメントを拡張してください。[新しい証明書の取得は、アドビのライセンス web サイトから](https://licensing.adobe.com/)、またはアドビのサポートから可能です。
 
@@ -178,7 +178,7 @@ The following command list the details of the pfx file. Before running the comma
 
 `keytool -v -list -storetype pkcs12 -keystore [name of your .pfx file]`
 
-For example keytool -v -list -storetype pkcs12 -keystore 1005566.pfx where 1005566.pfx is the name of my pfx file
+For example, keytool -v -list -storetype pkcs12 -keystore 1005566.pfx where 1005566.pfx is the name of my pfx file
 
 <!-- ### Remove usage rights from existing rights-enabled PDF documents
 

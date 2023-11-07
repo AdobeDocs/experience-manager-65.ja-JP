@@ -1,7 +1,7 @@
 ---
 title: Acrobat Reader DC Extensions ServiceJava API クイックスタート (SOAP)
 seo-title: Acrobat Reader DC extensions ServiceJava API Quick Start(SOAP)
-description: Acrobat Reader DC Extensions サービスを使用して、PDF ドキュメントに使用権限を適用したり、PDF ドキュメントから使用権限を削除したり、LoanUsageRights.pdf という名前の権限を持つ PDF ドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得したりしてください。
+description: Acrobat Reader DC Extensions サービスを使用して、PDF ドキュメントに使用権限を適用したり、PDF ドキュメントから使用権限を削除したり、LoanUsageRights.pdf という名前の権限を持つ PDF ドキュメントに使用権限を適用するために使用される資格情報に関する情報を取得したりしてください。
 seo-description: Use the  Acrobat Reader DC Extensions service to apply usage rights to a PDF document, remove usage rights from PDF documents, and retrieve  information about the credential that is used to apply usage-rights to a rights-enabled PDF document named LoanUsageRights.pdf.
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
 exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 100%
+source-wordcount: '310'
+ht-degree: 95%
 
 ---
 
@@ -25,13 +25,13 @@ Acrobat Reader DC Extensions サービスでは、次のクイックスタート
 
 [PDF ドキュメントから使用権限を削除](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した資格情報情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->『AEM Forms によるプログラミング』にあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「 AEM Formsでのプログラミング」のクイックスタートは、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
@@ -62,13 +62,13 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 18. xbean.jar (required for SOAP mode) 
      * 19. xercesImpl.jar (required for SOAP mode) 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
      * <install directory>/jboss/bin/client 
      * 
-     * SOAP required JAR files are located in the following path: 
+     * SOAP required JAR files are in the following path: 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
      * If you want to invoke a remote forms server instance and there is a 
@@ -132,7 +132,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              null, 
              reOptions);  
           
-           //Create a new PDF file that represents the rights-enabled PDF document 
+           //Create a PDF file that represents the rights-enabled PDF document 
            File resultFile = new File("C:\\Adobe\LoanUsageRights.pdf");  
            rightsEnabledPDF.copyToFile(resultFile); 
                           
@@ -176,7 +176,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
@@ -185,7 +185,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
-     * you have to include additional JAR files located in the following  
+     * you have to include additional JAR files in the following  
      * path 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
@@ -245,9 +245,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用した資格情報情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を与えられた PDF ドキュメントに使用権原を適用するために使用される秘密鍵証明書に関する情報を取得します。（[認証情報の取得](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
+次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を与えられた PDF ドキュメントに使用権原を適用するために使用される資格情報に関する情報を取得します。（[資格情報の取得](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
 
 ```java
  /* 
@@ -276,7 +276,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
      * 
-     * These JAR files are located in the following path: 
+     * These JAR files are in the following path: 
      * <install directory>/sdk/client-libs/common 
      * 
      * 
@@ -285,7 +285,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
-     * you have to include additional JAR files located in the following  
+     * you have to include additional JAR files in the following  
      * path 
      * <install directory>/sdk/client-libs/thirdparty 
      * 

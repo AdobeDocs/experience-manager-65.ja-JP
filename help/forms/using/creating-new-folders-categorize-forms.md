@@ -1,7 +1,7 @@
 ---
 title: フォームを分類するための新しいフォルダーの作成
 seo-title: Create new folders to categorize forms
-description: フォルダーを使用して、フォームテンプレート、PDF、リソース、およびアダプティブフォームを整理します。
+description: フォルダーを使用して、フォームテンプレート、PDF、リソース、アダプティブフォームを整理します。
 seo-description: Use folders to organize your form templates, PDFs, resources, and adaptive forms.
 uuid: 63fcb807-c9cf-49ae-ad69-6b1187543470
 content-type: reference
@@ -10,26 +10,26 @@ topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
 role: Admin
 exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 100%
+source-wordcount: '392'
+ht-degree: 63%
 
 ---
 
 # フォームを分類するための新しいフォルダーの作成 {#create-new-folders-to-categorize-forms}
 
-フォルダーを使用することでアセットをより良く整理できます。AEM Forms はさまざまなタイプのアセット（フォームテンプレート、PDF、ドキュメント、リソース、およびアダプティブフォームと、さまざまなメタデータ）をサポートしているので、フォルダーを使用して必要な条件に基づきフォームを分類できます。
+フォルダーを使用すると、アセットをより整理できます。 AEM Formsでは、フォームテンプレート、PDF、ドキュメント、リソース、アダプティブフォームなど、様々な種類のアセットを様々なメタデータと共に使用できるので、フォルダーを使用して、必要な条件に基づいてフォームを分類できます。
 
-AEM Forms では、フォルダーのタイトルを変更できます。タイトルは、フォルダーがリポジトリ内で保存されるノードの名前と同じではありません。タイトルはフォルダーのメタデータとして保持されます。フォルダーのタイトルを変更しても、フォルダー内にあるアセットのパスは影響されません。
+AEM Formsでは、フォルダーのタイトルを変更できます。 タイトルは、リポジトリ内のフォルダーが格納されるノードの名前とは異なります。 代わりに、タイトルはフォルダーのメタデータとして保持されます。 フォルダーのタイトルを変更しても、フォルダー内に存在するアセットのパスは影響を受けません。
 
 ## フォルダーの作成 {#create-a-folder}
 
-次のいずれかの方法で、AEM Forms でフォルダーを作成できます。
+次のいずれかの方法で、AEM Formsにフォルダーを作成できます。
 
 * アセットを含む ZIP ファイルを必要なフォルダー構造にアップロードする（[AEM Forms での XDP および PDF ドキュメントの取得](/help/forms/using/get-xdp-pdf-documents-aem.md)を参照）
 
-* 新しい空白フォルダーを作成する
+* 空のフォルダーの作成
 
 1. `https://<server>:<port>/aem/forms.html` で、AEM Forms ユーザーインターフェイスにログインします。
 1. フォルダーを作成する場所に移動します。
@@ -54,5 +54,5 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 
 1. タイトルを編集するフォルダーを選択します。
 1. ツールバーで、編集 ![aem6forms_edit](assets/aem6forms_edit.png) アイコンをクリックします。
-1. 新しいタイトルを入力します。テキストフィールドは、フォルダータイトルの現在の値で自動入力されます。それを新しい値に変更できます。
+1. 新しいタイトルを入力します。 テキストフィールドには、フォルダータイトルの現在の値が事前入力されます。 それを新しい値に変更できます。
 1. 「**[!UICONTROL 送信]」をクリックします。**

@@ -3,7 +3,7 @@ title: リッチテキストエディタープラグインの設定
 description: Adobe Experience Manager リッチテキストエディターのプラグインを設定して、個々の機能を有効にする方法について説明します。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4395'
 ht-degree: 62%
@@ -95,7 +95,7 @@ RTE を使用している場合、作成者は次の 3 つのモードのいず�
 
 必須アイコンを表示するように RTE を設定するには、以下の手順に従います。
 
-1. 例えば、`/apps/<myProject>/components/text` コンポーネントに移動します。
+1. 例えば、コンポーネントに移動します。 `/apps/<myProject>/components/text`.
 1. `rtePlugins/edit` ノードに移動します。このノードが存在しない場合は、[プラグインのアクティベート](#activateplugin)を参照してください。
 1. `features` ノードの `edit` プロパティを作成し、1 つ以上の機能を追加します。すべての変更を保存します。
 
@@ -226,7 +226,7 @@ Microsoftとして貼り付け (`paste-wordhtml`) モードをさらに詳細に
 
 次に、参照するスタイルシートの場所を指定します。
 
-1. テキストコンポーネントのルートノードに移動します（例：`/apps/<myProject>/components/text`）。
+1. テキストコンポーネントのルートノードに移動します（例： ）。 `/apps/<myProject>/components/text`.
 1. `externalStyleSheets` の親ノードに、`<rtePlugins-node>` プロパティを追加します。
 
    * **名前** `externalStyleSheets`
@@ -327,7 +327,7 @@ RTE で作成したテキストは、ブロックタグ（デフォルトでは 
 
 >[!NOTE]
 >
->ブロックタグの場合 ( 例： &lt;hr> タグを段落に割り当てることはできません。paraformat プラグインの有効なユースケースではありません。
+>ブロックタグ ( 例： &lt;hr> タグを段落に割り当てることはできません。paraformat プラグインの有効なユースケースではありません。
 
 段落書式プラグインを初めて有効にした場合、デフォルトの段落書式は使用できません。 ポップアップリストが空です。 段落書式を作成者に提供するには、次の手順を実行します。
 

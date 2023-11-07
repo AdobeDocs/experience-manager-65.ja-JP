@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '5396'
-ht-degree: 48%
+source-wordcount: '5393'
+ht-degree: 47%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 48%
 
 AEM Formsは、AEM Forms Java API を使用して呼び出すことができます。 AEM Forms Java API を使用する場合は、呼び出し API または Java クライアントライブラリを使用できます。 Java クライアントライブラリは、Java サービスなどのサービスで使用できます。Rights Managementサービス。 これらの強く型指定された API を使用すると、AEM Formsを呼び出す Java アプリケーションを開発できます。
 
-呼び出し API は、`com.adobe.idp.dsc` パッケージに含まれるクラスです。これらのクラスを使用すると、呼び出し要求をサービスに直接送信し、返された呼び出し応答を処理できます。 呼び出し API を使用して、Workbench を使用して作成された短時間のみ有効なプロセスまたは長時間有効なプロセスを呼び出します。
+呼び出し API は、 `com.adobe.idp.dsc` パッケージ。 これらのクラスを使用すると、呼び出し要求をサービスに直接送信し、返された呼び出し応答を処理できます。 呼び出し API を使用して、Workbench を使用して作成された短時間のみ有効なプロセスまたは長時間有効なプロセスを呼び出します。
 
 サービスをプログラムで呼び出す方法として、呼び出し API とは異なり、サービスに対応する Java クライアントライブラリを使用することをお勧めします。 例えば、Encryption サービスを呼び出すには、Encryption サービスのクライアントライブラリを使用します。 Encryption サービス操作を実行するには、Encryption サービスクライアントオブジェクトに属するメソッドを呼び出します。 を呼び出すことで、PDFドキュメントをパスワードで暗号化できます。 `EncryptionServiceClient` オブジェクトの `encryptPDFUsingPassword` メソッド。
 
@@ -789,7 +789,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
 
 #### ファイルに基づくドキュメントの作成 {#creating-a-document-based-on-a-file}
 
-次のコードの例では、*map.pdf* という名前の PDF ファイルに基づいた `com.adobe.idp.Document` オブジェクトを作成します。このファイルは C ハードドライブのルートにあります。このコンストラクターは、ファイル拡張子を使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
+次のコードの例では、*map.pdf* という名前の PDF ファイルに基づいた `com.adobe.idp.Document` オブジェクトを作成します。このファイルは C ハードドライブのルートにあります。 このコンストラクターは、ファイル拡張子を使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
 
 `com.adobe.idp.Document` オブジェクトを受け入れる `java.io.File` コンストラクターは、ブール型パラメーターも受け入れます。このパラメーターを `true` に設定すると、`com.adobe.idp.Document` オブジェクトによってファイルが削除されます。このアクションは、ファイルを `com.adobe.idp.Document` コンストラクターに渡した後にファイルを削除する必要がないことを意味します。
 

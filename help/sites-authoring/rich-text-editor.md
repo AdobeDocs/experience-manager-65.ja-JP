@@ -2,10 +2,10 @@
 title: リッチテキストエディターを使用したコンテンツのオーサリング
 description: リッチテキストエディターを使用したコンテンツのオーサリング Adobe Experience Manager 6.5 のバージョン。
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 95%
+source-wordcount: '266'
+ht-degree: 87%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-もう一度タップまたはクリックするか、最初にコンポーネントをゆっくり 2 回タップまたはクリックして選択すると、インプレース編集が開始され、独自のツールバーが表示されます。ここで、コンテンツの編集や、基本的な書式変更ができます。
+もう一度タップまたはクリックするか、最初にゆっくりダブルタップまたはクリックしてコンポーネントを選択すると、独自のツールバーを持つインプレース編集が開きます。 ここで、コンテンツの編集や、基本的な書式変更ができます。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 

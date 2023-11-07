@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
 exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 92%
+source-wordcount: '295'
+ht-degree: 86%
 
 ---
 
@@ -51,7 +51,7 @@ Process Reporting は、標準の一連のレポートを提供し、長時間�
 
 フィルターを使用して、データの特定の表示を取得します。
 
-ID、期間、開始日と終了日、プロセス開始者などで、プロセスまたはタスクを検索できます。
+ID、期間、開始日と終了日、プロセスイニシエーターなどで、プロセスやタスクを検索できます。
 
 複数のフィルターを組み合わせて、特定のレポートを作成できます。
 

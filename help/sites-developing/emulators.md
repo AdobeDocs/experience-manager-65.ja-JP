@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 71%
+ht-degree: 62%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager（AEM）では、作成者がエミュレーターでページを確認できます。エミュレーターは、モバイルデバイスやメールクライアントなどでエンドユーザーがページを表示する環境をシミュレートします。
+Adobe Experience Manager(AEM) を使用すると、作成者はエミュレーターでページを表示できます。エミュレーターは、モバイルデバイスや電子メールクライアントなどで、エンドユーザーがページを表示する環境をシミュレートします。
 
 AEM エミュレーターフレームワークの機能を次に示します。
 
@@ -144,7 +144,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
    例として、ノード `/libs/wcm/mobile/components/emulators/iPhone/css` を参照できます。
 
-1. 必要に応じて、JS クライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、名前 = js、ノードタイプ = cq:ClientLibrary にします。
+1. 必要に応じて、JS クライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、name = js、node type = cq:ClientLibrary を定義します。
 
    例として、ノード `/libs/wcm/mobile/components/emulators/base/js` を参照できます。
 

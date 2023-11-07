@@ -1,7 +1,7 @@
 ---
 title: 新しいレンダリングと送信サービス
 seo-title: New render and submit service
-description: Workbench でレンダリングと送信サービスを定義して、XDP フォームをアクセス元のデバイスに応じて HTML または PDF としてレンダリングする。
+description: Workbench でレンダリングサービスと送信サービスを定義して、XDP フォームを、アクセス元のデバイスに応じてHTMLまたはPDFとしてレンダリングします。
 seo-description: Define render and submit services in Workbench to render XDP form as HTML or PDF depending on the device it is accessed from.
 uuid: 7f8348a1-753c-4dab-87d5-4a4a301198dd
 content-type: reference
@@ -10,10 +10,10 @@ topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 exl-id: 46de0101-9607-4429-84c3-7c1f34d2da27
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '901'
-ht-degree: 100%
+ht-degree: 45%
 
 ---
 
@@ -21,16 +21,16 @@ ht-degree: 100%
 
 ## はじめに {#introduction}
 
-Workbench で `AssignTask` 操作を定義する場合は、特定のフォーム（XDP または PDF フォーム）を指定します。また、アクションプロファイル経由で一連のレンダリングと送信サービスを指定します。
+Workbench で `AssignTask` 操作を定義する場合は、特定のフォーム（XDP または PDF フォーム）を指定します。また、アクションプロファイルを介して一連のレンダリングサービスと送信サービスを指定します。
 
-XDP は、PDF フォームまたは HTML フォームとしてレンダリングすることができます。新しい機能により、以下のことが可能です。
+XDP は、フォームまたはHTMLフォームとしてPDFできます。 新しい機能には、次の機能が含まれます。
 
-* XDP フォームを HTML としてレンダリングして送信する
-* XDP フォームをデスクトップで PDF として、およびモバイルデバイス（iPad など）で HTML としてレンダリングして送信する
+* XDP フォームをレンダリングしてHTMLとして送信
+* XDP フォームをデスクトップ上でPDFとして、またモバイルデバイス ( 例えばiPad) 上でHTMLとしてレンダリングして送信する
 
-### 新しい HTML フォームサービス {#new-html-forms-service}
+### 新しいHTMLFormsサービス {#new-html-forms-service}
 
-新しい HTML フォームサービスでは、フォームの新しい機能を活用して HTML としての XDP フォームのレンダリングをサポートします。新しい HTML フォームサービスでは以下のメソッドを表示します。
+新しいHTMLFormsサービスは、Formsの新機能を使用して、XDP フォームのHTMLとしてのレンダリングをサポートします。 新しいHTMLFormsサービスでは、次のメソッドを公開します。
 
 ```java
 /*
@@ -55,15 +55,15 @@ public String generateFormURL(TaskContext taskContext, String profileName);
 public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profileName, Map<String,Object> runtimeMap);
 ```
 
-モバイルフォームプロファイルについて詳しくは、「[カスタムプロファイルの作成](/help/forms/using/custom-profile.md)」を参照してください。
+モバイルフォームプロファイルの詳細については、 [カスタムプロファイルの作成](/help/forms/using/custom-profile.md).
 
-## 新しい HTML フォームのレンダリングと送信プロセス {#new-html-form-render-amp-submit-processes}
+## 新しいHTMLフォームのレンダリングおよび送信プロセス {#new-html-form-render-amp-submit-processes}
 
-各「タスクの割り当て」操作で、フォームでレンダリングと送信プロセスを指定します。カスタム処理ができるように、これらのプロセスは TaskManager `renderForm` および `submitForm` API によって呼び出されます。新しい HTML フォームのためのこれらのプロセスのセマンティック：
+すべての「AssignTask」操作に対して、フォームのレンダリングと送信プロセスを指定します。 カスタム処理ができるように、これらのプロセスは TaskManager `renderForm` および `submitForm` API によって呼び出されます。新しいプロセスフォームのためのこれらのプロセスのHTML:
 
-### 新しい HTML フォームのレンダリング {#render-a-new-html-form}
+### 新しいHTMLフォームをレンダリング {#render-a-new-html-form}
 
-すべてのレンダリングプロセスと同様に、HTML をレンダリングするための新しいプロセスには以下の I/O パラメータがあります。
+すべてのレンダリングプロセスと同様に、HTMLをレンダリングする新しいプロセスには次の I/O パラメータがあります。
 
 必要情報 - `taskContext`
 
@@ -71,15 +71,15 @@ public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profi
 
 出力 - `outFormDoc`
 
-このメソッドは、NewHTMLFormsService の `renderHTMLForm` API の正確な動作をシミュレーションします。これは、`generateFormURL` API を呼び出してフォームの HTML 表示の URL を取得します。その後、以下のキーまたは値で runtimeMap を入力します。
+このメソッドは、NewHTMLFormsService の `renderHTMLForm` API の正確な動作をシミュレーションします。これは、`generateFormURL` API を呼び出してフォームの HTML 表示の URL を取得します。その後、次のキーまたは値を使用して runtimeMap を設定します。
 
 new html form = true
 
 newHTMLFormURL = `generateFormURL` API を呼び出した後で返された URL
 
-### 新しい HTML フォームの送信 {#submit-a-new-html-form}
+### 新しいHTMLフォームを送信 {#submit-a-new-html-form}
 
-この新しい HTML フォームを送信するプロセスには、以下の I/O パラメータと連携します。
+新しいHTMLフォームを送信するこのプロセスは、次の I/O パラメータで動作します。
 
 必要情報 - `taskContext`
 
@@ -89,25 +89,25 @@ newHTMLFormURL = `generateFormURL` API を呼び出した後で返された URL
 
 プロセスは、`outputDocument` を `taskContext` から取得した `inputDocument` に設定します。
 
-## デフォルトのレンダリングまたは送信プロセス、およびアクションプロファイル {#default-render-or-submit-processes-and-action-profiles}
+## デフォルトのレンダリングまたは送信プロセスとアクションプロファイル {#default-render-or-submit-processes-and-action-profiles}
 
-デフォルトのレンダリングと送信サービスにより、デスクトップで PDF およびモバイルデバイス（iPad）で HTML をレンダリングするためのサポートが可能です。
+デフォルトのレンダリングと送信サービスを使用すると、デスクトップでPDFをレンダリングし、モバイルデバイス (iPad) でHTMLをレンダリングするサポートが可能になります。
 
 ### デフォルトのレンダリングフォーム {#default-render-form}
 
-このプロセスでは、XDP フォームを複数のプラットフォームにシームレスにレンダリングします。プロセスは、`taskContext` からユーザーエージェントを取得し、データを使用して HTML または PDF のいずれかをレンダリングするプロセスを呼び出します。
+このプロセスでは、XDP フォームを複数のプラットフォーム上でシームレスにレンダリングします。 プロセスは、`taskContext` からユーザーエージェントを取得し、データを使用して HTML または PDF のいずれかをレンダリングするプロセスを呼び出します。
 
 ![default-render-form](assets/default-render-form.png)
 
 ### デフォルトの送信フォーム {#default-submit-form}
 
-このプロセスでは、XDP フォームを複数のプラットフォームにシームレスに送信します。`taskContext` からユーザーエージェントを取得し、データを使用して HTML または PDF のいずれかを送信するプロセスを呼び出します。
+このプロセスでは、複数のプラットフォーム上で XDP フォームをシームレスに送信します。 `taskContext` からユーザーエージェントを取得し、データを使用して HTML または PDF のいずれかを送信するプロセスを呼び出します。
 
 ![default-submit-form](assets/default-submit-form.png)
 
-## モバイルフォームのレンダリングの PDF から HTML への切り替え {#switch-the-rendering-of-mobile-forms-from-pdf-to-html}
+## モバイルフォームのレンダリングをPDFからHTMLに切り替える {#switch-the-rendering-of-mobile-forms-from-pdf-to-html}
 
-Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブラウザーは NPAPI ベースのプラグインを徐々にサポートしなくなっています。モバイルフォームのレンダリングを PDF から HTML に変更するには、次の手順を実行します。
+ブラウザーは、Adobe AcrobatおよびAdobe Acrobat Reader用のプラグインを含む、NPAPI ベースのプラグインのサポートを徐々に廃止しています。 次の手順を使用して、モバイルフォームのレンダリングをPDFからHTMLに変更できます。
 
 1. 有効なユーザーとして Workbench にログインします。
 1. **File**／**Get Applications** を選択します。
@@ -126,30 +126,30 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 ### デフォルトのアクションプロファイル {#default-action-profile}
 
-デフォルトのアクションプロファイルは、XDP フォームを PDF としてレンダリングしていました。このビヘイビアーは、デフォルトのレンダリングフォームとデフォルトの送信フォームプロセスを使用するように変更されました。
+デフォルトのアクションプロファイルにより、XDP フォームがPDFとしてレンダリングされました。 この動作は、「デフォルトのレンダリングフォーム」と「デフォルトの送信フォーム」の処理を使用するように変更されました。
 
 アクションプロファイルに関するよくある質問の一部を次に示します。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **どのようなレンダリング/ 送信プロセスが追加設定なしで使用できますか？**
 
 * Guide のレンダリング（Guide は推奨されていません）
-* Render Form Guide
-* PDF フォームのレンダリング
-* HTML フォームのレンダリング
-* 新規 HTML フォームのレンダリング（新規）
-* デフォルトのフォームのレンダリング（新規）
+* Render Form ガイド
+* レンダリングPDFフォーム
+* レンダリングHTMLフォーム
+* 新規HTMLフォームをレンダリング（新規）
+* デフォルトのレンダリングフォーム（新規）
 
-および同等の送信プロセス。
+また、同等の送信プロセスにも対応します。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **どのようなアクションプロファイルが追加設定なしで使用できますか？**
 
-XDP フォームの場合：
+XDP Formsの場合：
 
-* デフォルト（新しい「デフォルトのレンダリング / 送信」プロセスを使用したレンダリング / 送信）
+* デフォルト（新しい「デフォルトのレンダリング/送信」プロセスを使用したレンダリング/送信）
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデバイス上では HTML およびデスクトップ上では PDF にレンダリングされるようにするには、プロセスデザイナーは何を行う必要がありますか？**
 
-何も必要ありません。デフォルトのアクションプロファイルが自動的に選択されて、レンダリングのモードも同じく自動的に対処されます。
+何も。 デフォルトの「アクションプロファイル」が自動的に選択され、レンダリングのモードも自動的に処理されます。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデスクトップ上で HTML にレンダリングされるようにするには、何を行う必要がありますか？**
 
@@ -159,7 +159,7 @@ XDP フォームの場合：
 
 はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。「**デフォルトを復元**」をクリックすると、デフォルトのレンダリングと送信サービスが代わりに設定されます。
 
-既存のレンダリングまたは送信 PDF Form サービスを変更した場合またはカスタムサービス（たとえば custom1）を作成した場合、HTML レンダリングに対して同じ機能を使用したいとします。新しいレンダリングまたは送信サービス（custom2）を置き換えて、これらに同様のカスタマイズを適用する必要があります。そこで、レンダリングまたは送信の custom1 の代わりに、custom2 サービスを使用して XDP を開始するようにアクションプロファイルを変更します。
+既存のレンダリングまたは送信PDFフォームサービスを変更した場合、またはカスタムサービス（custom1 など）を作成した場合に、HTMLレンディションで同じ機能を使用したい場合。 新しいレンダリングまたは送信サービス（custom2 など）をレプリケートし、これらに類似したカスタマイズを適用する必要があります。 次に、レンダリングまたは送信用の custom1 の代わりに custom2 サービスを使用して XDP のアクションプロファイルを変更します。
 
 デバイス上では HTML、デスクトップ上では PDF にフォームをレンダリングする場合、プロセスデザイナーは何を行う必要がありますか？
 デバイス上では HTML、デスクトップ上では PDF にフォームをレンダリングする場合、プロセスデザイナーは何を行う必要がありますか？

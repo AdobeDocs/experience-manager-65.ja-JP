@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 95%
+source-wordcount: '1250'
+ht-degree: 84%
 
 ---
 
@@ -76,7 +76,7 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 これにより、訪問者には標準のフィールド（「**ユーザー名**」および「**パスワード**」）と「**ログイン**」ボタンが表示され、資格情報を入力するとログインプロセスがアクティベートされます。
 
-例えば、ユーザーは Geometrixx ツールバーの「**Sign In**」オプションを使用して、ログインするか、新しいアカウントを作成できます。使用するページを次に示します。
+例えば、ユーザーは、 **ログイン** 」オプションを使用します (Geometrixxを使用します )。
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
@@ -94,22 +94,22 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-プロファイルの詳細を確認するには、ページの右上隅にある「**マイプロファイル**」をクリックします。例えば、`admin` アカウントを使用する場合のプロファイルは次のとおりです。
+プロファイルの詳細を確認するには、をクリックします。 **マイプロファイル** をクリックします。例えば、 `admin` アカウント：
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
 
-1. ページを開きます（例：Geometrixx ページ）。
+1. ページを開きます。例えば、次のようなGeometrixxページを開きます。
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
-1. 右上隅にある「**マイプロファイル**」をクリックします。現在のアカウント（例：管理者）のプロファイルを確認できます。
+1. 右上隅にある「**マイプロファイル**」をクリックします。管理者など、現在のアカウントのプロファイルが表示されます。
 1. **Ctrl + Alt + C** キーを押して ClientContext を開きます。
 1. ClientContext の左上隅にある「**ClientContext にプロファイルを読み込み**」ボタンをクリックします。
 
    ![「プロファイルを読み込み」アイコン](do-not-localize/loadprofile.png)
 
-1. ダイアログウィンドウのドロップダウンリストから別のプロファイルを選択します。例えば、**Alison Parker** のプロファイルを選択します。
+1. ダイアログウィンドウのドロップダウンリストから別のプロファイルを選択します。例： **Alison Parker**.
 1. 「**OK**」をクリックします。
 1. もう一度「**マイプロファイル**」をクリックします。Alison の詳細を使用してフォームが更新されます。
 
@@ -119,7 +119,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## プロファイル定義へのフィールドの追加 {#adding-fields-to-the-profile-definition}
 
-プロファイル定義にフィールドを追加できます。例えば、Geometrixx プロファイルに「Favorite Color」（好きな色）フィールドを追加するには、次の手順を実行します。
+プロファイル定義にフィールドを追加できます。例えば、「お気に入りの色」フィールドをGeometrixxプロファイルに追加するには、次のようにします。
 
 1. Web サイトコンソールから Geometrixx Outdoors Site／英語／ユーザー／マイプロファイルに移動します。
 1. **マイプロファイル**&#x200B;ページをダブルクリックして編集用に開きます。
@@ -145,7 +145,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## プロファイルの状態 {#profile-states}
 
-ユーザー（またはユーザーのプロファイル）が&#x200B;*特定の状態*&#x200B;かどうかを確認しなければならない場合があります。
+ユーザー（またはユーザーのプロファイル）が *特定の状態* またはそうではありません。
 
 そのためには、次に示す方法で、ユーザープロファイルに適切なプロパティを定義する必要があります。
 
@@ -163,7 +163,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
   状態に関連するアクションを管理します。
 
-複数の状態を定義できます。例えば、Geometrixx では次の定義を行うことができます。
+複数の状態を定義できます。例えば、Geometrixxには次の状態が含まれます。
 
 * ニュースレターまたはコメントスレッドの通知を購読／購読解除
 * 友人とのつながりを追加／削除

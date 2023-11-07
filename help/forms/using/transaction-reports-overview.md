@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b2c09e6b-a1d8-4b30-af2c-988442a3a986
 docset: aem65
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -40,7 +40,7 @@ PDF フォームの送信、エージェント UI によるインタラクティ
 
 ## サポートされるトポロジ {#supported-topology}
 
-トランザクションレポートは、OSGi 環境の AEM Forms でのみ使用できます。author-publish、author-processing-publish のほか、トポロジの処理のみがサポートされます。トポロジについて詳しくは、[AEM Forms のアーキテクチャとデプロイメントトポロジ](../../forms/using/transaction-reports-overview.md)を参照してください。
+トランザクションレポートは、OSGi 環境の AEM Forms でのみ使用できます。author-publish、author-processing-publish のほか、トポロジの処理のみがサポートされます。トポロジの例については、 [AEM Formsのアーキテクチャとデプロイメントトポロジ](../../forms/using/transaction-reports-overview.md).
 
 トランザクション数は、パブリッシュインスタンスからオーサーインスタンスまたは処理インスタンスにリバースレプリケートされます。指標となるオーサーとパブリッシュのトポロジを次に示します。
 

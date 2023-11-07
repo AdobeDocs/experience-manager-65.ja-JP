@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 41%
+source-wordcount: '550'
+ht-degree: 50%
 
 ---
 
@@ -41,7 +41,7 @@ The **ライブコピーの概要** では、次のことが可能です。
 
 「**ライブコピーの概要**」は、**Sites** コンソールの&#x200B;**参照**&#x200B;サイドパネルから開くことができます。
 
-1. Adobe Analytics の **Sites** コンソール [ブループリントページに移動して選択します。](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+1. **Sites** コンソールで、[ブループリントページに移動して選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 1. を開きます。 **[参照](/help/sites-authoring/basic-handling.md#references)** パネルと選択 **ライブコピー**.
 
    ![参照パネル — ライブコピー](assets/chlimage_1-359.png)
@@ -55,10 +55,10 @@ The **ライブコピーの概要** では、次のことが可能です。
 
 ### ライブコピーの概要を開く — ブループリントページのプロパティ {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
-The **ライブコピーの概要** は、ブループリントページのプロパティの表示時に開くことができます。
+**ライブコピーの概要**&#x200B;は、ブループリントページのプロパティを表示しているときに開くことができます。
 
-1. 開く **プロパティ** 適切なブループリントページ用の
-1. を開きます。 **ブループリント** タブ — **ライブコピーの概要** オプションが上部のツールバーに表示されます。
+1. 該当するブループリントページの&#x200B;**プロパティ**&#x200B;を開きます。
+1. 「**ブループリント**」タブを開きます。「**ライブコピーの概要**」オプションが上部のツールバーに表示されます。
 
    ![「ブループリント」タブ — ライブコピーの概要](assets/chlimage_1-360.png)
 

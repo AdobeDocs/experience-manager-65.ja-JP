@@ -3,10 +3,10 @@ title: OSGi 上の Forms ベース AEM ワークフローおよび AEM Forms JEE
 description: OSGi 上の Forms ベース AEM ワークフローおよび AEM Forms JEE ワークフローのアクションと機能
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 65%
+source-wordcount: '925'
+ht-degree: 62%
 
 ---
 
@@ -396,7 +396,7 @@ OSGi 上の Forms 中心のAEM Workflows とAEM Forms JEE Workflows(JEE 上のAE
 
 ## AEM インボックスの機能と AEM Forms アプリケーションの機能との違い {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-Forms 中心のワークフローを起動するには、[AEM インボックス](../../forms/using/manage-applications-inbox.md)と AEM Forms アプリケーションの 2 つの方法があります。ただし、AEM インボックスの機能と AEM Forms アプリケーションの機能は異なっています。AEM インボックスは [Forms 中心のワークフロー](../../forms/using/aem-forms-workflow.md)でのみ機能するのに対して、AEM Forms アプリケーションは Forms 中心のワークフローだけでなく、Process Management でも機能します。
+Forms 中心のワークフローを起動するには、[AEM インボックス](../../forms/using/manage-applications-inbox.md)と AEM Forms アプリケーションの 2 つの方法があります。ただし、AEM インボックスの機能と AEM Forms アプリケーションの機能は異なっています。AEM Inbox は、 [Forms中心のワークフロー](../../forms/using/aem-forms-workflow.md) 一方、AEM Formsアプリは、Forms中心のワークフローとプロセス管理の両方で動作します。
 
 以下の表に、AEM インボックスの機能と AEM Forms アプリケーションの機能を示します。
 

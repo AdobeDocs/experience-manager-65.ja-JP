@@ -3,10 +3,10 @@ title: 外部ユーザー招待ハンドラーの作成
 description: 外部ユーザー招待ハンドラーを作成する方法を説明します。 これにより、Rights Managementサービスは外部ユーザーを招待してRights Managementユーザーにできます。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 94%
+source-wordcount: '1132'
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ Rights Management サービス用に外部ユーザー招待ハンドラーを�
 
 ## 開発環境の設定 {#setting-up-development-environment}
 
-開発環境を設定するには、Eclipse プロジェクトなどの新しい Java プロジェクトを作成する必要があります。サポートしている Eclipse のバージョンは `3.2.1` 以降です。
+開発環境を設定するには、Eclipse プロジェクトなどの Java プロジェクトを作成する必要があります。 サポートしている Eclipse のバージョンは `3.2.1` 以降です。
 
 Rights Management SPI にはプロジェクトのクラスパスに設定する `edc-server-spi.jar` ファイルが必要です。この JAR ファイルを参照しない場合、Java プロジェクトで Rights Management SPI を使用できません。この JAR ファイルは、AEM Forms SDK と共に `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` フォルダーにインストールされています。
 

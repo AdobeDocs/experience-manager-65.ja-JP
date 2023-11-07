@@ -1,5 +1,5 @@
 ---
-title: 顧客向けのユーザーインターフェイスの推奨事項
+title: 顧客向けのユーザーインターフェイスのレコメンデーション
 seo-title: User Interface Recommendations for Customers
 description: 従来のユーザーインターフェイスとタッチ操作向けのユーザーインターフェイスに関連する推奨事項のリストです。
 seo-description: A list of recommendations related to the classic and touch-optimized user interfaces.
@@ -11,14 +11,14 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '781'
 ht-degree: 32%
 
 ---
 
-# 顧客向けのユーザーインターフェイスの推奨事項{#user-interface-recommendations-for-customers}
+# 顧客向けのユーザーインターフェイスのレコメンデーション{#user-interface-recommendations-for-customers}
 
 Adobe Experience Managerには、統合Experience CloudUI（タッチ操作対応 UI とも呼ばれます）とクラシック UI の 2 つの UI が用意されています。
 
@@ -52,7 +52,7 @@ Adobeでは、2018/19で新しい UI への切り替えを計画することを�
 
 クラシック UI はAEM 6.4 で非推奨となり、Adobeはクラシック UI のそれ以上の機能強化を予定していません。 クラシック UI は廃止中は引き続き完全にサポートされます。
 
-### ルールと推奨事項 {#rules-and-recommendations}
+### ルールとレコメンデーション {#rules-and-recommendations}
 
 Adobe Experience Manager 6.5 の製品管理からの推奨事項を次に示します。
 
@@ -60,7 +60,7 @@ Adobe Experience Manager 6.5 の製品管理からの推奨事項を次に示し
  <tbody>
   <tr>
    <th>私のプロジェクト…</th>
-   <th>推奨事項</th>
+   <th>レコメンデーション</th>
   </tr>
   <tr>
    <td>Adobe Experience Managerを使い始めたばかりです。</td>
@@ -88,7 +88,7 @@ Adobe Experience Manager 6.5 の製品管理からの推奨事項を次に示し
     </ol> <p>次に、第 2 段階で、次のようになります。</p>
     <ol>
      <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。 Adobeは、 <a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a> をクリックして、コンポーネントを更新します。</li>
-     <li>ContextHub を設定し (ClientContextの代わり )、ContextHub を使用するようにページテンプレートを更新します。 ContextHub には、カスタムモードストアを読み込める互換モードがあることに注意してください。</li>
+     <li>ContextHub を設定し (ClientContextの代わり )、ContextHub を使用するようにページテンプレートを更新します。 ContextHub には、カスタムモードストアを読み込むことができる互換性ClientContextがあります。</li>
     </ol> </td>
   </tr>
   <tr>

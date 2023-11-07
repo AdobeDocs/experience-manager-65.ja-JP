@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
 feature: Operations
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 47%
+source-wordcount: '600'
+ht-degree: 46%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 47%
 
 設定可能な週別メンテナンスタスクとして実装され、操作ダッシュボードの監視コンソールからアクセスできます。
 
-詳しくは、[操作ダッシュボードのドキュメント](/help/sites-administering/operations-dashboard.md)を参照してください。
+詳しくは、 [運用ダッシュボードのドキュメント](/help/sites-administering/operations-dashboard.md).
 
 監査ログのパージオプションには 3 つのタイプがあります。
 
@@ -58,7 +58,7 @@ ht-degree: 47%
    >コンテンツパスは、リポジトリの `/var/audit/com.day.cq.wcm.core.page` ノードの子にのみ適用されます。
 
 1. ルールを保存します。
-1. 作成したルールを実行するには、操作ダッシュボードに公開する必要があります。 これをおこなうには、次に進みます。 **ツール/運営/メンテナンス** をAEMのようこそ画面から開きます。
+1. 作成したルールを実行するには、そのルールを操作ダッシュボードに表示する必要があります。 これをおこなうには、次に進みます。 **ツール/運営/メンテナンス** をAEMのようこそ画面から開きます。
 
 1. **週別メンテナンスウィンドウ**&#x200B;カードをクリックします。
 

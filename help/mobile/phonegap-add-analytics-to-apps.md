@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '932'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,9 @@ AEM Mobileでは、アプリ内のトラッキングデータを収集してレ�
 
 Analytics アカウントを設定したら、コンテンツ同期設定を作成して、コンテンツをモバイルアプリケーションに取り込みます。
 
-詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 設定は、ADBMobileConfig を/www ディレクトリに配置するようにコンテンツ同期に指示する必要があります。 例えば、Geometrixx Outdoorsアプリでは、コンテンツ同期設定は次の場所にあります。 */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発用の設定もありますが、Geometrixx Outdoorsの場合は非開発用の設定と同じです。
+詳しくは、「コンテンツ同期コンテンツの設定」を参照してください。 この設定は、ADBMobileConfig を/www ディレクトリに配置するようにコンテンツ同期に指示する必要があります。 例えば、Geometrixx Outdoorsアプリでは、コンテンツ同期設定は次の場所にあります。 */content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig*. 開発用の設定もありますが、Geometrixx Outdoorsの場合は非開発用の設定と同じです。
 
-Mobile Application AEM Apps ダッシュボードから ADBMobileConfig をダウンロードする方法について詳しくは、 Analytics - Mobile Services -AdobeMobile Services SDK 設定ファイルを参照してください。
+Mobile Application AEM Apps ダッシュボードから ADBMobileConfig をダウンロードする方法について詳しくは、 Analytics - Mobile Services - Mobile Services SDK 設定ファイルを参照してください。
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"

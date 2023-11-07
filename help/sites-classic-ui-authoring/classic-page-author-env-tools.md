@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 91%
+source-wordcount: '898'
+ht-degree: 88%
 
 ---
 
@@ -182,7 +182,7 @@ AEM を使用すると、現在作業中のページにリンクされている�
 
 ## ページ情報 {#page-information}
 
-Web サイトコンソールには、[ページの現在のステータスに関する情報も表示されます](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)（公開、変更、ロック、ライブコピーなど）。
+Web サイトコンソールも [ページの現在のステータスに関する情報を提供します](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) パブリッシュ、変更、ロック、ライブコピーなど。
 
 ## ページモード {#page-modes}
 
@@ -207,7 +207,7 @@ Web サイトコンソールには、[ページの現在のステータスに関
 >
 >* [基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [ClientContext](/help/sites-administering/client-context.md)
->* Web サイト - Web サイトコンソールを開きます。
+>* Web サイト — Web サイトコンソールを開きます。
 >* 再読み込み - ページを更新します。
 
 ## キーボードショートカット {#keyboard-shortcuts}

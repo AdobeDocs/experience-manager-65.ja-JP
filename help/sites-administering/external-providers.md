@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 34%
+ht-degree: 26%
 
 ---
 
@@ -55,7 +55,7 @@ _gaq.push(['_trackPageview']);
 >
 >Geometrixxアウトドアデモサイトは、ページプロパティで指定された属性が HTML ソースコード ( `</html>` 終了タグ ) を、 `js` スクリプト。
 >
->独自の `/apps` がデフォルトページコンポーネント（`/libs/foundation/components/page`）から継承しない場合、ユーザー（またはその開発者）が対応する `js` スクリプトが含まれていること（例えば、`cq/cloudserviceconfigs/components/servicescomponents` が含まれているか、同様のメカニズムが使用されているか）を確認する必要があります。
+>自分のものの場合 `/apps` デフォルトのページコンポーネント ( `/libs/foundation/components/page`) を使用する場合は、 `js` スクリプトは、例えば、 `cq/cloudserviceconfigs/components/servicescomponents`または同様のメカニズムを使用している必要があります。
 >
 >これがないと、どのサービス（汎用、Analytics、Target など）も機能しません。
 
@@ -69,7 +69,7 @@ _gaq.push(['_trackPageview']);
 
    ![汎用分析スニペット](assets/analytics_genericoverview.png)
 
-1. 「 + 」をクリックし、ダイアログボックスを使用して新しい設定を追加します。 少なくとも、名前を割り当てます ( 例：Google Analytics)。
+1. 「 + 」をクリックし、ダイアログボックスを使用して新しい設定を追加します。 少なくとも、名前 ( 例：Google Analytics) を割り当てます。
 
    ![設定の作成](assets/analytics_addconfig.png)
 

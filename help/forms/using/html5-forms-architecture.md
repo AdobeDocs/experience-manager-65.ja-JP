@@ -12,10 +12,10 @@ discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 feature: Mobile Forms
 exl-id: ed8349a1-f761-483f-9186-bf435899df7d
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: ht
-source-wordcount: '2011'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '2010'
+ht-degree: 99%
 
 ---
 
@@ -174,7 +174,7 @@ Sling パッケージには、プロファイルとプロファイルレンダ�
 
 #### プロファイルレンダラー {#profile-renderers}
 
-プロファイルノードには、**xfaforms/profile** の値を持つ **sling:resourceSuperType** プロパティがあります。このプロパティは転送リクエストを、**/libs/xfaforms/profile** フォルダーにあるプロファイルノードの Sling スクリプトに内部的に送信します。これらのスクリプトは JSP ページであり、HTML フォームと必要な JS/CSS アーティファクトをまとめるコンテナです。このページには、次への参照が含まれます。
+プロファイルノードには、**xfaforms/profile** の値を持つ **sling:resourceSuperType** プロパティがあります。このプロパティは、内部的に、 **/libs/xfaforms/profile** フォルダー。 これらのスクリプトは JSP ページであり、HTML フォームと必要な JS/CSS アーティファクトをまとめるコンテナです。このページには、次への参照が含まれます。
 
 * **xfaforms.I18N.&lt;locale>**：このライブラリには、ローカライズされたデータが含まれています。
 * **xfaforms.profile**：このライブラリには、XFA スクリプティングとレイアウトエンジンの実装が含まれています。

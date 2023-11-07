@@ -1,19 +1,15 @@
 ---
 title: メール通知の設定
-seo-title: Configuring Email Notification
 description: Adobe Experience Managerで電子メール通知を設定する方法を説明します。
-seo-description: Learn how to configure Email Notification in AEM.
-uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2069'
-ht-degree: 95%
+source-wordcount: '2067'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 95%
 
 AEM は、次のユーザーに対してメール通知を送信します。
 
-* 変更やレプリケーションなど、ページイベントを購読したことがある。[通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)では、このようなイベントを購読する方法について説明します。
+* 変更やレプリケーションなどのページイベントを購読済みである。The [通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) このようなイベントを購読する方法については、を参照してください。
 
 * フォーラムイベントを購読したことがある
 * ワークフローで手順を実行する必要がある。[参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
@@ -279,7 +275,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
    * `https://mail.google.com/`
    * `https://www.googleapis.com//auth/gmail.send`
 1. 範囲を追加したら、左側のメニューで&#x200B;**資格情報**&#x200B;に戻り、 **資格情報を作成**／**OAuth クライアント ID**／**デスクトップアプリ**&#x200B;に移動します。
-1. 新しいウィンドウが開き、クライアント ID とクライアント秘密鍵が表示されます。
+1. 新しいウィンドウが開き、クライアント ID とクライアントの秘密鍵が表示されます。
 1. これらの資格情報を保存します。
 
 **AEM 側の設定**
@@ -361,7 +357,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 1. 次に、「**証明書とシークレット**」に移動し、「**新しいクライアントシークレット**」をクリックし、画面の手順に従ってシークレットを作成します。このシークレットは後で使用するため、必ずメモしてください
 1. 左側のウィンドウで「**概要**」を押し、後で使用するために、「**アプリケーション（クライアント）ID**」および「**ディレクトリ（テナント）ID**」の値をコピーします。
 
-まとめると、以下の情報を使用して、AEM 側の Mailer サービスの Oauth2 を設定する必要があります。
+まとめるには、AEM側で Mailer サービスの OAuth2 を設定するために、次の情報が必要です。
 
 * 認証 URLはテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * トークン URL はテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`

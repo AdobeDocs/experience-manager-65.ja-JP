@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 39%
+source-wordcount: '1835'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 39%
 
 ## バルクエディタークエリパラメーター {#bulk-editor-query-parameters}
 
-Bulk Editor を操作する際には、URL に追加して、特定の設定で Bulk Editor を呼び出すためのクエリパラメーターがいくつかあります。 Bulk Editor を製品リストコンポーネントなどの特定の設定で常に使用する場合は、 `bulkeditor.jsp` （/libs/wcm/core/components/bulkeditor 内）または特定の設定でコンポーネントを作成します。 クエリパラメーターを使用して行った変更は、永続的ではありません。
+Bulk Editor を操作する際には、URL に追加して、特定の設定で Bulk Editor を呼び出すためのクエリパラメーターがいくつかあります。 Bulk Editor を製品リストコンポーネントなどの特定の設定で常に使用したい場合は、 `bulkeditor.jsp` （/libs/wcm/core/components/bulkeditor 内）または特定の設定でコンポーネントを作成します。 クエリパラメーターを使用して行った変更は、永続的ではありません。
 
 例えば、ブラウザーの URL に次のように入力するとします。
 
@@ -31,7 +31,7 @@ Bulk Editor は、 **ルートパス** 「hrp=true」のフィールドは、フ
 
 >[!NOTE]
 >
->各パラメーターには、長い名前と短い名前を指定できます。例えば、検索ルートパスの長い名前は `rootPath`、短い名前は `rp` のようになります。長い名前が定義されていない場合、短い名前がリクエストから読み取られます。
+>各パラメーターには、長い名前と短い名前を指定できます。例えば、検索ルートパスの長い名前は次のようになります。 `rootPath`短いのは `rp`. 長い名前が定義されていない場合、短い名前がリクエストから読み取られます。
 
 <table>
  <tbody>
@@ -160,9 +160,9 @@ Bulk Editor は、 **ルートパス** 「hrp=true」のフィールドは、フ
 
 ### バルクエディターベースのコンポーネントの開発：製品リストコンポーネント {#developing-a-bulk-editor-based-component-the-product-list-component}
 
-この節では、バルクエディターの使用方法の概要と、バルクエディターに基づく既存のGeometrixxコンポーネントの説明を示します。製品リストコンポーネント
+この節では、バルクエディターの使用方法の概要と、バルクエディター（製品リストコンポーネント）に基づく既存のGeometrixxコンポーネントの説明を示します。
 
-製品リストコンポーネントを使用すると、ユーザーはデータのテーブルを表示および編集できます。 例えば、製品リストコンポーネントを使用して、カタログ内の製品を表すことができます。 情報は標準HTMLテーブルに表示され、編集は **編集** ダイアログボックスに BulkEditor ウィジェットが表示されます。 ( この Bulk Editor は、 /etc/importers/bulkeditor.htmlまたはツールメニューからアクセスできるものと同じです )。 製品リストコンポーネントは、特定の限られたバルクエディター機能用に設定されています。 Bulk Editor のすべての部分（または Bulk Editor から派生したコンポーネント）を設定できます。
+製品リストコンポーネントを使用すると、ユーザーはデータのテーブルを表示および編集できます。 例えば、製品リストコンポーネントを使用して、カタログ内の製品を表すことができます。 情報は標準のHTMLテーブルに表示され、編集は **編集** ダイアログボックスに BulkEditor ウィジェットが表示されます。 ( この Bulk Editor は、 /etc/importers/bulkeditor.htmlまたはツールメニューからアクセスできるものと同じです )。 製品リストコンポーネントは、特定の限られたバルクエディター機能用に設定されています。 Bulk Editor のすべての部分（または Bulk Editor から派生したコンポーネント）を設定できます。
 
 Bulk Editor を使用すると、行の追加、変更、削除、フィルタリングおよびエクスポート、変更の保存、一連の行のインポートをおこなうことができます。 すべての行は、製品リストコンポーネントインスタンス自体の下にノードとして保存されます。 すべてのセルは、各ノードのプロパティです。これは設計の選択肢で、簡単に変更できます。例えば、リポジトリ内の別の場所にノードを保存できます。 クエリサーブレットの役割は、表示するノードのリストを返すことです。検索パスは、製品リストインスタンスとして定義されます。
 
@@ -282,7 +282,7 @@ Bulk Editor のすべての部分を設定できます。 次の表に、Bulk Ed
   </tr>
   <tr>
    <td>contentMode</td>
-   <td>True に設定すると、コンテンツモードが有効になります。プロパティは、検索結果ノードではなく、jcr:content ノードで読み取られます。</td>
+   <td>コンテンツモードを有効にする場合に True を指定します。プロパティは、検索結果ノードではなく、jcr:content ノードで読み取られます。</td>
   </tr>
   <tr>
    <td>colsValue</td>
@@ -402,7 +402,7 @@ Bulk Editor のすべての部分を設定できます。 次の表に、Bulk Ed
   </tr>
   <tr>
    <td>store</td>
-   <td>ストア設定</td>
+   <td>設定を保存</td>
   </tr>
   <tr>
    <td>colModel</td>
@@ -432,11 +432,11 @@ Bulk Editor のすべての部分を設定できます。 次の表に、Bulk Ed
    <td>colsMetadata</td>
    <td>列のメタデータ設定。 可能なプロパティは次のとおりです（列のすべてのセルに適用されます）。 <br />
     <ul>
-     <li>cellStyle:html スタイル </li>
-     <li>cellCls:css クラス </li>
-     <li>readOnly:値を変更できない場合に true </li>
-     <li>チェックボックス：true：列のすべてのセルをチェックボックス（true/false 値）として定義します。 </li>
-     <li>forcedPosition:グリッド内の列を配置する必要がある場所を指定する整数値（0 ～列数 —1）<p><br /> </p> </li>
+     <li>cellStyle: html style </li>
+     <li>cellCls: css クラス </li>
+     <li>readOnly：値を変更できない場合は true </li>
+     <li>checkbox: true を指定すると、列のすべてのセルがチェックボックスとして定義されます（true/false 値）。 </li>
+     <li>forcedPosition：グリッド内の列の配置先を指定する整数値（0 ～列数 —1）<p><br /> </p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -455,9 +455,9 @@ CSS 列と読み取り専用列
 
 Bulk Editor には次の 3 つの列設定があります。
 
-* セルの CSS クラス名 (cellCls):設定した列の各セルに追加される CSS クラス名。
-* セルのスタイル (cellStyle):設定済み列の各セルに追加されるHTMLスタイル。
-* 読み取り専用 (readOnly):読み取り専用は、設定した列の各セルに対して設定されます。
+* セル CSS クラス名 (cellCls)：設定した列の各セルに追加される CSS クラス名。
+* セルのスタイル (cellStyle)：設定した列の各HTMLに追加されるセルスタイル。
+* 読み取り専用 (readOnly)：設定された列の各セルに対して読み取り専用が設定されます。
 
 設定は、次のように定義する必要があります。
 
@@ -514,7 +514,7 @@ checkbox configuration プロパティが true に設定されている場合、
 
 **強制位置**
 
-強制位置メタデータ forcedPosition を使用すると、列をグリッド内のどこに配置するかを指定できます。0 が最初で、 &lt;number of=&quot;&quot; columns=&quot;&quot;>-1 が最後の位置です。 その他の値は無視されます。
+強制位置メタデータ forcedPosition を使用すると、グリッド内で列を配置する場所を指定できます。0 が最初の位置で、 &lt;number of=&quot;&quot; columns=&quot;&quot;>-1 が最後の位置です。 その他の値は無視されます。
 
 前の例では、選択列は forcedPosition=&quot;0&quot;の最初の列です。
 
@@ -522,7 +522,7 @@ checkbox configuration プロパティが true に設定されている場合、
 
 デフォルトでは、クエリサーブレットは `/libs/wcm/core/components/bulkeditor/json.java` にあります。別のパスを設定するとデータを取得できます。
 
-クエリサーブレットは、次のように動作します。GQL クエリと返す列を受け取り、結果を計算し、結果を JSON ストリームとして Bulk Editor に返します。
+クエリサーブレットは、GQL クエリと返す列を受け取り、結果を計算し、結果を JSON ストリームとして Bulk Editor に返します。
 
 製品リストコンポーネントの場合、クエリサーブレットに送信される 2 つのパラメーターは次のようになります。
 

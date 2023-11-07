@@ -9,9 +9,9 @@ breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
 feature: Forms Service
-source-git-commit: 28cc10b79d2ac8cf12ddfd0bf7d1a8e013fe6238
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3912'
+source-wordcount: '3911'
 ht-degree: 98%
 
 ---
@@ -228,7 +228,7 @@ ht-degree: 98%
    + [AEM Forms Workspace のカスタマイズの概要](using/introduction-customizing-html-workspace.md)
    + [AEM Forms Workspace のカスタマイズの一般的な手順](using/generic-steps-html-workspace-customization.md)
    + [AEM Forms Workspace ユーザーインターフェイスのロケールの変更](using/changing-locale-user-interface.md)
-   + [新しいログイン画面の作成](using/creating-new-login-screen.md)
+   + [ログイン画面の作成](using/creating-new-login-screen.md)
    + [エラーダイアログのカスタマイズ](using/customizing-error-dialogs.md)
    + [タスクのタブのカスタマイズ](using/customizing-tabs-task.md)
    + [タスクの詳細ページのカスタマイズ](using/customizing-task-details-page.md)
@@ -444,13 +444,13 @@ ht-degree: 98%
       + [Connector for IBM FileNet の設定](/help/forms/using/admin-help/configuring-connector-ibm-filenet.md)
       + [Connector for IBM Content Manager の設定](/help/forms/using/admin-help/configuring-connector-ibm-content-manager.md)
       + [Connector for Microsoft SharePoint の設定](/help/forms/using/admin-help/configuring-connector-microsoft-sharepoint.md)
-   + 証明書と秘密鍵証明書の管理 {#manage-certificates-credentials}
-      + [ユーザー名とパスワードの秘密鍵証明書の追加と削除](/help/forms/using/admin-help/adding-removing-user-name-password.md)
+   + 証明書と資格情報の管理 {#manage-certificates-credentials}
+      + [ユーザー名とパスワードの資格情報の追加と削除](/help/forms/using/admin-help/adding-removing-user-name-password.md)
       + [証明書失効リストの管理](/help/forms/using/admin-help/certificate-revocation-lists.md)
-      + [証明書と秘密鍵証明書の管理の基本事項](/help/forms/using/admin-help/overview-2.md)
+      + [証明書と資格情報の管理の基本事項](/help/forms/using/admin-help/overview-2.md)
       + [証明書の管理](/help/forms/using/admin-help/certificates.md)
-      + [HSM 秘密鍵証明書の管理](/help/forms/using/admin-help/hsm-credentials.md)
-      + [ローカル秘密鍵証明書の管理](/help/forms/using/admin-help/local-credentials.md)
+      + [HSM 資格情報の管理](/help/forms/using/admin-help/hsm-credentials.md)
+      + [ローカル資格情報の管理](/help/forms/using/admin-help/local-credentials.md)
    + アプリケーションおよびアーカイブの読み込みと管理 {#import-manage-applications-archives}
       + [アプリケーションおよびサービスページに表示するアイテム数の変更](/help/forms/using/admin-help/change-number-items-displayed-applications.md)
       + [アーカイブの読み込みと管理](/help/forms/using/admin-help/import-archives.md)
@@ -470,8 +470,8 @@ ht-degree: 98%
       + [Acrobat Reader DC Extensions で使用される証明書の種類](/help/forms/using/admin-help/certificate-types-used-acrobat-reader.md)
       + [PDF ドキュメントでの有効な証明書と期限切れ証明書の認識](/help/forms/using/admin-help/recognizing-valid-expired-certificates-pdf.md)
       + [データ取得のための Acrobat Reader DC Extensions の設定](/help/forms/using/admin-help/configuring-acrobat-reader-dc-extensions.md)
-      + [秘密鍵証明書の使用に関する情報の確認](/help/forms/using/admin-help/review-credential-information.md)
-      + [証明書を Acrobat Reader DC Extensions で使用するための設定](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md)
+      + [資格情報の使用に関する情報の確認](/help/forms/using/admin-help/review-credential-information.md)
+      + [資格情報を Acrobat Reader DC Extensions で使用するための設定](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md)
       + [PDF ファイルの使用権限の確認](/help/forms/using/admin-help/review-usage-rights-pdf-file.md)
       + [Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [Acrobat Reader DC Extensions で使用するタイムアウト値の設定](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)

@@ -7,10 +7,10 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '384'
-ht-degree: 69%
+ht-degree: 63%
 
 ---
 
@@ -49,7 +49,7 @@ AEM サイトと AEM CIF コアコンポーネントを専用のストア表示�
 4. AEM Sites に子設定を割り当てます。
 
    * AEM Sitesコンソールに移動します。
-   * サイト構造の地域または言語ルート（Venia サンプルページの場合は /content/venia/us _または_ /content/venia/us/en）に移動します。
+   * サイト構造の地域または言語ルート（例：/content/venia/us）に移動します。 _または_ Venia サンプルページの場合は/content/venia/us/en
    * ページを選択し、ページのプロパティを開きます。
    * 「詳細」タブを選択します。
    * Adobe Analytics の `Configuration` セクションで、手順で作成した設定を選択します。

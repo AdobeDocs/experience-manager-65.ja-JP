@@ -7,10 +7,10 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '2203'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 100%
 
 ### 静的な参照を含むコレクションの作成 {#creating-a-collection-with-static-references}
 
-静的な参照を含むコレクション（アセット、フォルダー、コレクション、スピンセット、画像セットへの参照を含むコレクションなど）を作成できます。
+静的な参照を含むコレクションを作成できます。例えば、アセット、フォルダー、コレクション、スピンセットおよび画像セットへの参照を含むコレクションを作成できます。
 
 1. **[!UICONTROL コレクション]**&#x200B;コンソールに移動します。
 1. ツールバーで、「**[!UICONTROL 作成]**」をクリックします。

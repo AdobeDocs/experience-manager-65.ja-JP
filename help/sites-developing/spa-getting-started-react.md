@@ -1,20 +1,16 @@
 ---
 title: React を使用した AEM での SPA の概要
-seo-title: Getting Started with SPAs in AEM - React
 description: この記事では、サンプルのSPAアプリケーションを紹介し、その設定方法を説明し、React フレームワークを使用して独自のSPAをすぐに使い始めるための方法について説明します。
-seo-description: This article presents a sample SPA application, explains how it is put together, and lets you get up-and-running with your own SPA quickly using the React framework.
-uuid: 2beca277-a381-4482-99f6-85005d826d06
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: cc1e5c20-cc9c-4222-8a11-ec5a963d4466
 docset: aem65
 exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 89%
+source-wordcount: '1161'
+ht-degree: 86%
 
 ---
 
@@ -52,7 +48,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 ## 依存関係、設定、ビルド {#dependencies-configuration-and-building}
 
-サンプルの SPA では、必要な React の依存関係以外に、追加のライブラリも利用して SPA の作成を効率化できます。
+サンプルの SPA では、予想される React の依存関係に加えて、追加のライブラリも利用して SPA の作成を効率化できます。
 
 ### 依存関係 {#dependencies}
 
@@ -114,7 +110,7 @@ module.exports = {
 
 ### ビルド {#building}
 
-実際には、 [Webpack](https://webpack.js.org/) aem-clientlib-generator に加え、クライアントライブラリの自動作成に使用するトランスパイルのため。 したがって、build コマンドは次のようになります。
+アプリの実際のビルドでは、クライアントライブラリの自動作成用の aem-clientlib-generator 以外に、トランスパイル用に [Webpack](https://webpack.js.org/) も使用します。したがって、build コマンドは次のようになります。
 
 `"build": "webpack && clientlib --verbose"`
 
@@ -122,7 +118,7 @@ module.exports = {
 
 ### AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を使用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を使用します。
 
 ## アプリケーション構造 {#application-structure}
 
@@ -134,7 +130,7 @@ AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https
 
 ### index.js {#index-js}
 
-SPA のエントリポイントはもちろん `index.js` ファイルです。このファイルの内容を以下に示しますが、重要な部分のみに焦点を当てるために簡略化しています。
+SPA のエントリポイントは `index.js` ファイルです。このファイルの内容を以下に示しますが、重要な部分のみに焦点を当てるために簡略化されています。
 
 ```
 import ReactDOM from 'react-dom';
@@ -271,9 +267,9 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 ## SPA コンポーネント間での情報の共有 {#sharing-information-between-spa-components}
 
-単一ページのアプリケーション内のコンポーネントが情報を共有することは定期的に必要です。これをおこなう推奨方法にはいくつかあり、以下に簡単なものから順に示します。
+単一ページのアプリケーション内のコンポーネントが情報を共有することは定期的に必要です。これを行う推奨方法にはいくつかあり、以下に簡単なものから順に示します。
 
-* **オプション 1：** React Context などを使用して、ロジックを一元化し、必要なコンポーネントにブロードキャストします。
+* **オプション 1:** React Context などを使用して、ロジックを一元化し、必要なコンポーネントにブロードキャストします。
 * **オプション 2：** Redux などのステートライブラリを使用して、コンポーネントの状態を共有します。
 * **オプション 3：**&#x200B;コンテナコンポーネントをカスタマイズおよび拡張することで、オブジェクト階層を活用します。
 
@@ -285,4 +281,4 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 動的モデルからコンポーネントへのマッピング、および　AEM の SPA 内での動作について詳しくは、[SPA の動的モデルからコンポーネントへのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の記事を参照してください。
 
-React や Angular 以外のフレームワーク用に AEM の SPA を実装する場合や、AEM 用 SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
+AEMに React やAngular以外のフレームワーク用にSPAを実装する場合や、AEM用SPA SDK の仕組みを詳しく知りたい場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 記事。

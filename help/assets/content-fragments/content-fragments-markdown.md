@@ -4,9 +4,9 @@ description: コンテンツフラグメントエディターが Markdown 構文
 feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '522'
 ht-degree: 61%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 61%
 
 ## 見出し表記 {#heading-notation}
 
-ヘッダーを作成するには、見出しの前にハッシュタグ (#) を配置します。 H1 には 1 つのハッシュタグ (#)、H2 には 2 つのハッシュタグ (##) が使用されます。 最大 6 個のハッシュタグを使用できます。 次に例を示します。
+ヘッダーを作成するには、見出しの前にハッシュタグ (#) を配置します。 H1 には 1 つのハッシュタグ (#) が使用され、H2 には 2 つのハッシュタグ (##) が使用されます。 最大 6 個のハッシュタグを使用できます。 次に例を示します。
 
     `## This is an H2`
 

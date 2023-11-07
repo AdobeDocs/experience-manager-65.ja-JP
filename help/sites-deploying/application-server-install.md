@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 39%
@@ -44,9 +44,9 @@ AEMは、デプロイする単一の war ファイルとして提供されます
 デプロイすると、デフォルトで次の処理がおこなわれます。
 
 * 実行モードは `author`
-* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど）が `${user.dir}/crx-quickstart`場所 `${user.dir}` は現在の作業ディレクトリで、crx-quickstart へのこのパスは `sling.home`
+* インスタンス（リポジトリ、Felix OSGi 環境、バンドルなど）が `${user.dir}/crx-quickstart`場所 `${user.dir}` は現在の作業ディレクトリで、crx-quickstart へのこのパスは `sling.home`
 
-* コンテキストルートは、war ファイル名です。例： `aem-6`
+* コンテキストルートは、war ファイル名です。例：  `aem-6`
 
 #### 設定 {#configuration}
 
@@ -100,7 +100,7 @@ AEMは、デプロイする単一の war ファイルとして提供されます
 
 * Basic Auth ヘッダーを通す：
 
-   * AEMでユーザーを認証する方法の 1 つは、WebSphere®サーバーのグローバル管理セキュリティを無効にして、次の操作を行うことです。[ セキュリティ ] -> [ グローバルセキュリティ ] に移動し、[ 管理セキュリティを有効にする ] チェックボックスをオフにして、サーバを保存して再起動します。
+   * AEMでユーザーを認証する方法の 1 つは、WebSphere®サーバーのグローバル管理セキュリティを無効にする方法です。無効にするには、「Security/Global Security」に移動し、「Enable administrative security」チェックボックスをオフにして、サーバーを保存して再起動します。
 
 * `"JAVA_OPTS= -Xmx2048m"` を設定
 * コンテキスト root = /を使用してAEMをインストールする場合は、既存のデフォルト Web アプリケーションのコンテキストルートを変更します。
@@ -119,7 +119,7 @@ AEMは、デプロイする単一の war ファイルとして提供されます
 
    * コンテキストルートを選択します（Sling 実行モードを設定する場合は、デプロイウィザードの詳細な手順を選択し、ウィザードの手順 6 で指定する必要があります）。
 
-* AEM Web アプリケーションを起動します
+* AEM Web アプリケーションを起動します。
 
 #### JBoss® EAP 6.3.0/6.4.0 {#jboss-eap}
 
@@ -131,7 +131,7 @@ AEMは、デプロイする単一の war ファイルとして提供されます
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-deployment-scanner を使用してAEM Web アプリケーションをインストールする場合は、 `deployment-timeout,` そういうわけで `deployment-timeout` インスタンスの xml ファイルの属性 ( 例： `configuration/standalone.xml)`:
+deployment-scanner を使用してAEM Web アプリケーションをインストールする場合は、 `deployment-timeout,` そういうわけで `deployment-timeout` インスタンスの xml ファイル内の属性 ( 例： `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -159,7 +159,7 @@ deployment-scanner を使用してAEM Web アプリケーションをインス�
 
 * VM メモリ設定の値を増やします。
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh) WLS_MEM_ARGS を検索し、例えば set を検索します。 `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * 開く `${myDomain}/bin/setDomainEnv.cmd` (resp .sh) WLS_MEM_ARGS を検索し、例えば set を検索します。 `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * WebLogic Server を再起動します。
 
 * `${myDomain}` に packages フォルダーを作成し、その中に cq フォルダー、その中に Plan フォルダーを作成します。
@@ -188,7 +188,7 @@ deployment-scanner を使用してAEM Web アプリケーションをインス�
 
    * VM メモリ設定の値を増やします。
 
-      * In `bin/catalina.bat` ( 応答 `catalina.sh` UNIX®の場合 ) 次の設定を追加します。
+      * In `bin/catalina.bat` (resp `catalina.sh` (UNIX®の場合 ) 次の設定を追加します。
       * `set "JAVA_OPTS= -Xmx2048m`
 
    * Tomcat では、インストール時に admin や manager のアクセス権を無効にします。 そのため、手動で編集する必要があります `tomcat-users.xml` 次のアカウントへのアクセスを許可するには：

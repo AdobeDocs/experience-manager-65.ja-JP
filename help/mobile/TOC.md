@@ -7,10 +7,10 @@ breadcrumb-title: モバイルガイド
 user-guide-description: モバイルアプリ用のコンテンツを作成および管理します。
 feature: Mobile
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 100%
+source-wordcount: '330'
+ht-degree: 97%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 100%
    + [アプリのメタデータの編集](phonegap-editmetadata.md)
    + [アプリの定義](phonegap-app-definitions.md)
    + [アプリコンテンツの作成および管理](phonegap-manage-app-content.md)
-   + [作成ウィザードを使用した新規 AEM Mobile アプリの作成](phonegap-create-new-app.md)
+   + [作成ウィザードを使用したAEM Mobileアプリの作成](phonegap-create-new-app.md)
    + [モバイルアプリケーションのオーサリング](phonegap-authoring-apps.md)
    + [アプリを管理タイル](phonegap-app-details-tile.md)
    + [AEM Mobile のコンテンツパーソナライゼーション](phonegap-aem-mobile-content-personalization.md)

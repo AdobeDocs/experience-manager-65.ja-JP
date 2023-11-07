@@ -2,10 +2,10 @@
 title: AEM FAQ
 description: これらの FAQ を使用して、AEMの一般的なワークフローや問題を理解、設定、トラブルシューティングします。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: f7bfbfab9fb9ec00304f2889735c70be924cc217
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 54%
+source-wordcount: '1085'
+ht-degree: 45%
 
 ---
 
@@ -17,7 +17,7 @@ AEMのトラブルシューティングと設定に関する問題の回答を�
 
 ### バイナリレス配布を設定する方法を教えてください。 {#how-do-i-configure-binary-less-distribution}
 
-バイナリレスディストリビューションは、共有データストアにわたる開発でサポートされ、Vault ベースのディストリビューションパッケージエクスポーター（ファクトリ PID：`org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`）パッケージビルダーを活用するエージェントが関係します。
+バイナリレス配布は、共有データストアを介した展開でサポートされ、Vault ベースの配布パッケージエクスポータ ( 出荷時の PID: `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`) パッケージビルダーで使用できます。
 
 バイナリレスモードを有効にした場合、配布されるコンテンツパッケージには、実際のバイナリではなくバイナリへの参照が含まれます。
 
@@ -64,7 +64,7 @@ AEM のコンテンツサービスは Sling Model に基づきます。AEM デ�
 
 AEM コンテンツサービスを React アプリケーションから使用する方法については、[AEM コンテンツサービスの使用準備](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)のチュートリアルを参照してください。
 
-また、デベロッパーがコンポーネントのツリーを書き出す場合は、`ComponentExporter` および `ContainerExporter` インターフェイスを実装し、`ModelFactory` を使用して子コンポーネントに対して反復処理を行ってモデル表現を返すこともできます。以下のリソースを参照してください。
+また、開発者がコンポーネントのツリーを書き出す場合は、 `ComponentExporter` および `ContainerExporter` インターフェイスと `ModelFactory` 子コンポーネントを繰り返し処理し、そのモデル表現を返します。 以下のリソースを参照してください。
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
@@ -76,7 +76,7 @@ AEM コンテンツサービスを React アプリケーションから使用す
 
 #### AEM 6.4 へのアップグレードに関する主な機能を強調したリソースはありますか。 {#is-there-a-good-resource-that-highlights-the-key-features-for-upgrading-to-aem}
 
-[AEM をアップグレードする理由について](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html)を参考にしてください。これは、Adobe Experience Manager の最新バージョンへのアップグレードを検討しているお客様向けの主要機能の概要を説明しています。
+詳しくは、 [AEMをアップグレードする理由について](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html) ここでは、お客様がAdobe Experience Managerの最新バージョンへのアップグレードを検討する際の主な機能の大まかな分類について説明します。
 
 ## Assets {#assets}
 
@@ -104,13 +104,13 @@ AEM には、オーサーインスタンスのコンソールおよびページ�
 
 #### CoralUI 2 と CoralUI 3 ベースのコンポーネントの違いは何ですか。 {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-Granite UI Foundation の Sling コンポーネントの新しいセットが Coral3 用に作成され、[/libs/granite/ui/components/coral/foundation にあります。](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) CoralUI 2 ベースのコンポーネント用のセットと、CoralUI 3 ベースのコンポーネント用のセットが 1 つあります。 新しいセットは、古いセットのコピー&amp;ペーストではなく、クリーンアップされます（例えば、廃止された機能の整理、削除）。 そのため、ページでは、CoralUI 3 ベースまたは CoralUI 2 ベースのセットのみを使用することをお勧めします。
+Granite UI Foundation の Sling コンポーネントの新しいセットが Coral3 用に作成され、[/libs/granite/ui/components/coral/foundation にあります。](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) CoralUI 2 ベースのコンポーネント用のセットと、CoralUI 3 ベースのコンポーネント用のセットが 1 つあります。 新しいセットは、古いセットのコピー&amp;ペーストではなく、クリーンアップ（例えば、廃止された機能の整理、削除）されます。 そのため、ページでは、CoralUI 3 ベースまたは CoralUI 2 ベースのセットのみを使用することをお勧めします。
 
-詳細については、[CoralUI 3 ベースの移行ガイド](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html)を参照してください。
+詳しくは、 [CoralUI 3 ベースへの移行ガイド](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 
 #### AEM Assetsで検索コンポーネントをカスタマイズする方法は？ {#how-to-customize-the-search-component-in-aem-assets}
 
-検索ブースト/ランキングおよびその他の実装情報について詳しくは、 [シンプルな検索実装ガイド](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
+検索ブースト/ランキングとその他の実装情報について詳しくは、 [シンプルな検索実装ガイド](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
 
 簡易検索の実装は、2017 Summit lab AEM Search Demystified の資料です。
 

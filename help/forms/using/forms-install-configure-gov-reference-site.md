@@ -4,9 +4,9 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4622'
+source-wordcount: '4619'
 ht-degree: 67%
 
 ---
@@ -701,7 +701,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 [スタイルシステム](../../sites-authoring/style-system.md)
 
-また、サポート対象のスタイルに関するドキュメントとしては、[テンプレートをカスタマイズするためのスタイルシステム](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates)を参照してください。
+また、 [テンプレートカスタマイズスタイルシステム](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) サポートされるスタイルに関するドキュメント。
 
 ### アダプティブフォームのカスタマイズ {#adaptive-forms-customization}
 
@@ -750,7 +750,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 ### アクセシビリティテスト用の Chrome アドオンの有効化 {#enable-chrome-add-on}
 
-アクセシビリティのテストを実施するには、こちら`https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`の Chrome プラグインをインストールします。<!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+アクセシビリティのテストを実施するには、こちら`https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`の Chrome プラグインをインストールします。<!-- This URL is a 404. As such, fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 インストールしたら、テストするページを Chrome ブラウザーで読み込みます（メモ：タブが複数開かれているとスコアに影響する場合があります。タブは 1 つだけ開くことをお勧めします）。ページが読み込まれると、 **右クリック** を選択し、 **監査** タブをクリックします。 その画面で開発者は、アクセシビリティプラグインで実行する検証のタイプを選択できます。必要なオプションをすべて選択したら、「レポートを生成」ボタンをクリックできます。これにより、PDF性の評価全体と、全体的なアクセシビリティの評価を上げるために使用できる内容を示すアクセシビリティドキュメントが生成されます。
 

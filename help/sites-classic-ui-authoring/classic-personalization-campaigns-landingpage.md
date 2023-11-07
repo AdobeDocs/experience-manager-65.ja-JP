@@ -1,20 +1,16 @@
 ---
 title: ランディングページ
-seo-title: Landing Pages
 description: ランディングページ機能を使用すると、デザインとコンテンツをAEMページにすばやく簡単に読み込むことができます。 Web 開発者は、HTMLと追加のアセットを準備して、完全なページまたはページの一部として読み込むことができます。
-seo-description: The landing pages feature allows quick and easy importing of a design and content right into an AEM page. A web developer can prepare the HTML and additional assets that can be imported as a full page or only a part of a page.
-uuid: b294c43f-63ae-4b5b-bef0-04566e350b63
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3329'
-ht-degree: 40%
+source-wordcount: '3323'
+ht-degree: 39%
 
 ---
 
@@ -352,13 +348,13 @@ Adobeでは、ステージングインスタンスでデザインインポータ
 
 ### インポーターページの作成 {#creating-an-importer-page}
 
-ランディングページデザインをインポートする前に、例えばキャンペーンの下にインポーターページを作成する必要があります。 インポーターページテンプレートを使用すると、ランディングページ全体をHTMLで読み込むことができます。 ページにはドロップボックスが含まれ、ドラッグ&amp;ドロップを使用してランディングページデザインパッケージを読み込むことができます。
+ランディングページデザインを読み込む前に、例えばキャンペーンの下にインポーターページを作成する必要があります。 インポーターページテンプレートを使用すると、ランディングページ全体をHTMLで読み込むことができます。 ページにはドロップボックスが含まれ、ドラッグ&amp;ドロップを使用してランディングページデザインパッケージを読み込むことができます。
 
 >[!NOTE]
 >
 >デフォルトでは、インポーターページはキャンペーンの下にのみ作成できますが、このテンプレートをオーバーレイして、の下にランディングページを作成することもできます。 `/content/mysite`.
 
-新しいランディングページを作成するには：
+ランディングページを作成するには：
 
 1. 次に移動： **Web サイト** コンソール。
 1. 左側のパネルでキャンペーンを選択します。
@@ -418,7 +414,7 @@ Adobeでは、ステージングインスタンスでデザインインポータ
 
 ### 読み込まれたデザインパッケージのダウンロード {#downloading-the-imported-design-package}
 
-zip ファイルをダウンロードすると、特定のランディングページで読み込まれた zip を記録できます。 ページ上でおこなった変更は zip には追加されません。
+zip ファイルをダウンロードすると、特定のランディングページで読み込まれた zip を記録できます。 ページに対しておこなった変更は zip には追加されません。
 
 読み込んだデザインパッケージをダウンロードするには、 **Zip をダウンロード** （[ ランディングページ ] ツールバー）
 
@@ -440,7 +436,7 @@ zip ファイルをダウンロードすると、特定のランディングペ�
 
 >[!NOTE]
 >
->コンテンツの変更内容を削除する場合、「**消去**」をクリックすると、読み込まれたランディングページ上で行われたすべての変更、およびすべてのページプロパティが失われます。
+>コンテンツの変更を削除する場合、読み込まれたランディングページに加えた変更と、すべてのページプロパティは、「 **クリア**.
 
 ### ランディングページ上のコンポーネントの変更と追加 {#modifying-and-adding-components-on-a-landing-page}
 

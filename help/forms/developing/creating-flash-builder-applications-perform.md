@@ -11,10 +11,10 @@ topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
-workflow-type: ht
-source-wordcount: '1796'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '1795'
+ht-degree: 98%
 
 ---
 
@@ -672,7 +672,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### remoting.mxml ファイルの作成 {#creating-the-remoting-mxml-file}
 
-次のコードは、`MyApplication/EncryptDocument` プロセスを呼び出す remoting.mxml ファイルを表します。ドキュメントがプロセスに渡されるので、セキュアなドキュメントを AEM Forms に渡すためのアプリケーションロジックは、このファイルに配置されます。（[リモート処理を使用したプロセスを呼び出すためのセキュアなドキュメントの受け渡し](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照。）
+次のコードは、`MyApplication/EncryptDocument` プロセスを呼び出す remoting.mxml ファイルを表します。ドキュメントがプロセスに渡されるので、セキュアなドキュメントをAEM Formsに渡すアプリケーションロジックは、このファイルに含まれます。 （[リモート処理を使用したプロセスを呼び出すためのセキュアなドキュメントの受け渡し](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照。）
 
 ```xml
  <?xml version="1.0" encoding="utf-8"?>

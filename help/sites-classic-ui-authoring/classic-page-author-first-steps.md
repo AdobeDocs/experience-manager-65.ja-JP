@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: page-authoring, introduction
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '412'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '410'
+ht-degree: 92%
 
 ---
 
@@ -35,7 +35,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-編集前に、[新しいページを作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page)する必要があります。
+編集する前に、次の操作を行う必要があります。 [ページの作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
 
 ### ページを開く {#opening-a-page}
 
@@ -43,7 +43,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### ページの編集 {#editing-a-page}
 
-インスタンスに既存のページがあるか、新しいページを自分で作成した直後の場合は、次の方法で[ページを編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)できます。
+インスタンスに既存のページが存在するか、または自分で新しいページを作成したかに関わらず、 [ページの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 基準：
 
 * [コンポーネント（段落）の挿入](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
 * [コンポーネントの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)
@@ -57,7 +57,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### ページの公開  {#publishing-a-page}
 
-ページの編集が完了したら、web サイトへの訪問者がページを閲覧できるように、[ページを公開（またはアクティブ化）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)します。
+ページの編集が完了したら、web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)します。
 
 ## その他のアクション {#further-actions}
 
@@ -65,15 +65,15 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### ページのコピー {#copying-a-page}
 
-場合によっては、[ページをコピー](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page)してそのコンテンツを再利用する方が、すべてのコンテンツを最初から作成し直すよりも簡単です。
+場合によっては、[ページをコピー](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page)してそのコンテンツを再利用する方が、最初からすべてのコンテンツをもう一度作成するよりも簡単です。
 
 ### ページの移動または名前の変更 {#moving-or-renaming-a-page}
 
-[ページの移動と名前変更](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page)は、基本的に同じアクションで実行されます。
+[ページの移動と名前変更](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page)は、基本的に同じアクションにより実行されます。
 
 ### ページの非公開 {#unpublishing-a-page}
 
-前に公開（またはアクティブ化）したコンテンツを公開 web サイトで閲覧できないようにするには、[ページを非公開（または非アクティブ化）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)します。
+前に公開（またはアクティベート）したコンテンツを公開 web サイトで閲覧できないようにするには、[ページを非公開（またはアクティベート解除）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)します。
 
 ### ページの削除 {#deleting-a-page}
 

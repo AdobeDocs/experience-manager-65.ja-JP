@@ -2,10 +2,10 @@
 title: アセットフォルダーのヘッドレス作成のクイック開始ガイド
 description: AEM コンテンツフラグメントモデルを使用すると、ヘッドレスコンテンツの基盤となるコンテンツフラグメントの構造を定義できます。
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
-workflow-type: ht
-source-wordcount: '379'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '375'
+ht-degree: 88%
 
 ---
 
@@ -19,7 +19,7 @@ AEM コンテンツフラグメントモデルを使用すると、ヘッドレ�
 
 ただし、まず、アセットを保存するアセットフォルダーを作成する必要があります。
 
-アセットフォルダーは、画像やビデオなど、従来のコンテンツアセットや[コンテンツフラグメントを整理](/help/assets/manage-assets.md)するために使用されます。
+アセットフォルダーは、 [従来のコンテンツアセットを整理する](/help/assets/manage-assets.md) 画像やビデオ、コンテンツフラグメントと同様です。
 
 ## アセットフォルダーの作成方法 {#how-to-create-an-assets-folder}
 
@@ -34,17 +34,16 @@ AEM コンテンツフラグメントモデルを使用すると、ヘッドレ�
       * 必要に応じて調整できます。
 
    ![フォルダーを作成](assets/assets-folder-create.png)
-1. 先ほど作成したフォルダーを選択し、ツールバーから「**プロパティ**」を選択します（または、`p` [キーボードショートカットを使用します](/help/sites-authoring/keyboard-shortcuts.md)）。
+1. 作成したフォルダーを選択し、「 」を選択します。 **プロパティ** をツールバーから ( または `p` [キーボードショートカット。](/help/sites-authoring/keyboard-shortcuts.md))
 1. **プロパティ**&#x200B;ウィンドウで、「**Cloud Services**」タブを選択します。
 1. **クラウド設定**&#x200B;で、[以前に作成した設定](create-configuration.md)を選択します。
-
    ![アセットフォルダーの設定](assets/assets-folder-configure.png)
 1. 「**保存して閉じる**」をタップまたはクリックします。
 1. 確認ウィンドウで「**OK**」をタップまたはクリックします。
 
    ![確認ウィンドウ](assets/assets-folder-confirmation.png)
 
-先ほど作成したフォルダー内に、追加のサブフォルダーを作成できます。サブフォルダーは、親フォルダーの&#x200B;**クラウド設定**&#x200B;を継承します。別の設定モデルを使用する場合は、この設定を上書きできます。
+作成したフォルダ内にサブフォルダを追加で作成できます。 サブフォルダーは、親フォルダーの&#x200B;**クラウド設定**&#x200B;を継承します。別の設定モデルを使用する場合は、この設定を上書きできます。
 
 ローカライズされたサイト構造を使用している場合は、新しいフォルダーの下に[言語ルート](/help/assets/multilingual-assets.md)を作成できます。
 

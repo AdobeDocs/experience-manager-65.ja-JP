@@ -3,9 +3,9 @@ title: 言語コピーウィザード
 description: Experience Manager での言語コピーウィザードの使用についてAdobeします。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 2d87022aa2223df261e245fba65df054c041cd69
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '214'
 ht-degree: 52%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 52%
    >
    >デフォルトでは、翻訳設定は 1 つのみです。他の設定を選択するには、最初にクラウド設定を行う必要があります。[翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md)を参照してください。
 
-1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;手順に進みます。ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;手順に進みます。ここでは、構造のみを作成するか、翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
 
    >[!NOTE]
    >

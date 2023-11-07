@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 role: Developer
 exl-id: 76d855cf-ebfa-487a-b1c8-755e7e45dd73
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 100%
+source-wordcount: '1068'
+ht-degree: 98%
 
 ---
 
@@ -49,7 +49,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->AEM Forms によるプログラミングにあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「 AEM Formsでのプログラミング」のクイックスタートは、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用したポリシーの作成 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
@@ -82,7 +82,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -91,7 +91,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -208,13 +208,13 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -312,7 +312,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -321,7 +321,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -401,13 +401,13 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -510,7 +510,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -519,7 +519,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -617,7 +617,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -626,7 +626,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -731,7 +731,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -740,7 +740,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -849,7 +849,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -858,7 +858,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -952,14 +952,14 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1085,14 +1085,14 @@ public class PDFWatermarksSOAPMode {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1172,7 +1172,7 @@ public class TextWatermarks {
             element1.setEndPage(1);// The watermark will appear only on first
                                     // page, start page is 1 by default.
 
-            // Create a new element.
+            // Create an element.
             Watermark2Element element2 = InfomodelObjectFactory
                     .createWatermark2Element();
             element2.setName("Second element");
@@ -1234,14 +1234,14 @@ public class TextWatermarks {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1349,7 +1349,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1358,7 +1358,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1447,7 +1447,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1456,7 +1456,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1560,7 +1560,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1569,7 +1569,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1675,7 +1675,7 @@ public class ModifyWatermarks {
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1684,7 +1684,7 @@ public class ModifyWatermarks {
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdkK/client-libs/thirdparty
      *
@@ -1780,14 +1780,14 @@ public class ModifyWatermarks {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1897,14 +1897,14 @@ public class CreateAbstractPolicySoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -1996,14 +1996,14 @@ public class ModifyingAbstractPolicySoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -2083,14 +2083,14 @@ public class DeleteAbstractPolicySoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a
@@ -2194,14 +2194,14 @@ public class protectStatementWorkFlowExistingUserSoap {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/common
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/jboss
  *
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a

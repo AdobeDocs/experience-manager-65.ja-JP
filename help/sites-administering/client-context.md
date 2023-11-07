@@ -1,20 +1,16 @@
 ---
 title: ClientContext
-seo-title: Client Context
 description: ClientContext を使用して、Adobe Experience Managerの現在のページと訪問者に関する情報を確認する方法を説明します。
-seo-description: Learn how to use the Client Context in AEM.
-uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 47%
+source-wordcount: '1979'
+ht-degree: 40%
 
 ---
 
@@ -41,7 +37,8 @@ Client Context は、現在のページと訪問者に関する特定の情報�
 
 ![ClientContext ウィンドウの編集アイコン、読み込みアイコン、リセットアイコン](do-not-localize/clientcontext_icons.png)
 
-* **編集** 新しいページが開き、[プロファイルのプロパティを編集、追加または削除](#editingprofiledetails)できます。
+* **編集**
+新しいページが開き、次の操作ができます。 [プロファイルプロパティを編集、追加、削除する](#editingprofiledetails).
 
 * **読み込み** テストを実行する[プロファイルをリストから選択してプロファイルを読み込む](#loading-a-new-user-profile)ことができます。
 
@@ -61,13 +58,13 @@ ClientContext には、次のプロパティ ([「編集」を使用して選択
 * **マウスの X** ポジション
 * **マウスの Y** ポジション
 
-**アクティビティストリーム**：様々なプラットフォーム（AEM フォーラム、ブログ、評価など）上のユーザーのソーシャルアクティビティに関する情報を提供します。
+**アクティビティストリーム** AEMフォーラム、ブログ、評価など、様々なプラットフォームでのユーザーのソーシャルアクティビティに関する情報を提供します。
 
 **キャンペーン**：作成者がキャンペーンの特定のエクスペリエンスをシミュレートできます。このコンポーネントは通常のキャンペーンの結果とエクスペリエンスの選択をオーバーライドし、各種配列のテストを有効にします。
 
 キャンペーンの結果は通常、キャンペーンの優先度のプロパティに基づいています。エクスペリエンスは通常、分類に基づいて選択されます。
 
-**カート**：商品のエントリ（タイトル、数量、priceFormatted など）、解決済みのプロモーション（タイトル、メッセージなど）などの買い物かご情報を表示します。割引券（コード、説明など）
+**買い物かご** 製品エントリ（タイトル、数量、priceFormatted など）、解決されたプロモーション（タイトル、メッセージなど）、割引券（コード、説明など）を含む買い物かご情報を表示します。
 
 また、買い物かごセッションストアは、ClientContextCartServlet を使用して（セグメント化の変更に基づいて）解決されたプロモーションの変更についてサーバーに通知します。
 
@@ -151,7 +148,7 @@ ClientContext を使用すると、詳細をインタラクティブに変更で
 
    ![ClientContext の「プロファイルを読み込み」アイコン](do-not-localize/clientcontext_loadprofile.png)
 
-1. ダイアログが開きます。ここで読み込むプロファイルを選択できます。
+1. ダイアログが開き、ここで読み込むプロファイルを選択できます。
 
    ![プロファイルを選択するためのドロップダウンが表示されるプロファイルローダーダイアログ](assets/clientcontext_profileloader.png)
 
@@ -161,7 +158,7 @@ ClientContext を使用すると、詳細をインタラクティブに変更で
 
 次の選択スライダーを使用してプロファイルを選択することもできます。
 
-1. 現在のユーザーを表すアイコンをダブルクリックします。セレクターが開きます。矢印で移動し、使用可能なプロファイルを確認します。
+1. 現在のユーザーを表すアイコンをダブルクリックします。セレクターが開きます。矢印を使用して移動し、使用可能なプロファイルを確認します。
 
    ![ユーザーセレクター](assets/clientcontext_profileselector.png)
 
@@ -175,7 +172,7 @@ ClientContext を使用すると、詳細をインタラクティブに変更で
 
 ### ブラウザープラットフォームの変更 {#changing-the-browser-platform}
 
-1. ブラウザープラットフォームを表すアイコンをダブルクリックします。 セレクターが開きます。矢印で移動し、使用可能なプラットフォームやブラウザーを確認します。
+1. ブラウザープラットフォームを表すアイコンをダブルクリックします。 セレクターが開き、矢印を使用して移動し、使用可能なプラットフォーム/ブラウザーを確認します。
 
    ![ブラウザープラットフォームセレクター](assets/clientcontext_browserplatform.png)
 
@@ -183,7 +180,7 @@ ClientContext を使用すると、詳細をインタラクティブに変更で
 
 ### 位置情報の変更 {#changing-the-geolocation}
 
-1. 位置情報アイコンをダブルクリックします。 展開されたマップが開きます。ここでマーカーを新しい位置にドラッグできます。
+1. 位置情報アイコンをダブルクリックします。 展開されたマップが開き、マーカーを新しい位置にドラッグできます。
 
    ![位置情報の詳細](assets/clientcontext_geomocationrelocate.png)
 
@@ -191,7 +188,7 @@ ClientContext を使用すると、詳細をインタラクティブに変更で
 
 ### タグ選択の変更 {#changing-the-tag-selection}
 
-1. ClientContext の「タグクラウド」セクションをダブルクリックします。 ダイアログが開きます。ここでタグを選択できます。
+1. ClientContext の「タグクラウド」セクションをダブルクリックします。 ダイアログが開き、ここでタグを選択できます。
 
    ![タグクラウドダイアログ](assets/clientcontext_tagselection.png)
 

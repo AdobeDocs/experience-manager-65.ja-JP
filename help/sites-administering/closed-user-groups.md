@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6836'
-ht-degree: 45%
+source-wordcount: '6818'
+ht-degree: 43%
 
 ---
 
@@ -23,7 +23,7 @@ AEM 6.3 以降には、新しい閉じられたユーザーグループ実装が
 
 >[!NOTE]
 >
->このドキュメントでは、説明を簡略にするために、閉じられたユーザーグループ（Closed User Group）を「CUG」という略語で表記します。
+>簡潔にするために、このドキュメント全体で CUG の省略形が使用されます。
 
 この新しい実装の目的は、必要に応じて既存の機能をカバーすると同時に、旧バージョンからの問題や設計上の制限に対応することです。その結果、次の特性を持つ新しい CUG デザインが作成されます。
 
@@ -104,7 +104,7 @@ CUG を介した制限付き読み取りアクセスを定義する際には、�
    * ネストされた CUG の過剰な必要性は、コンテンツデザインの問題を強調する可能性があります
    * CUG の非常に過度な必要性（例えば、すべてのページ）は、アプリケーションやコンテンツの特定のセキュリティニーズに合わせて、潜在的により適したカスタム認証モデルの必要性を示している可能性があります。
 
-* CUG ポリシーでサポートされるパスをリポジトリ内のいくつかのツリーに制限して、パフォーマンスの最適化を可能にします。 例えば、AEM 6.3 よりデフォルト値として付属している /content ノード下にのみ CUG を許可します。
+* CUG ポリシーでサポートされるパスをリポジトリ内のいくつかのツリーに制限して、パフォーマンスの最適化を可能にします。 例えば、AEM 6.3 以降のデフォルト値として出荷された/content ノードの下の CUG のみを許可します。
 * CUG ポリシーは、小さなプリンシパルのセットに対して読み取りアクセスを許可するように設計されています。 多数のプリンシパルが必要な場合は、コンテンツやアプリケーションのデザインの問題を強調表示する可能性があるので、再度検討する必要があります。
 
 ### 認証：認証要件の定義 {#authentication-defining-the-auth-requirement}
@@ -207,7 +207,7 @@ CUG の読み取りアクセスを制限する新しいタイプのアクセス�
 
 #### 新しい CUG ポリシーを設定 {#set-a-new-cug-policy}
 
-以前に CUG が設定されていないノードに新しい CUG ポリシーを適用するコード。 `getApplicablePolicies` は、まだ一度も設定されていない新しいポリシーのみを返すことに注意が必要です。最後に、ポリシーを書き戻し、変更を保持する必要があります。
+以前に CUG が設定されていないノードに新しい CUG ポリシーを適用するコード。 注意： `getApplicablePolicies` は、以前に設定されていない新しいポリシーのみを返します。 最後に、ポリシーを書き戻し、変更を保持する必要があります。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -243,7 +243,7 @@ session.save();
 
 #### 既存の CUG ポリシーの編集 {#edit-an-existing-cug-policy}
 
-既存の CUG ポリシーを編集するには、次の手順が必要です。 変更されたポリシーを書き戻し、`javax.jcr.Session.save()` を使用して変更を保存する必要があります。
+既存の CUG ポリシーを編集するには、次の手順が必要です。 変更したポリシーを書き戻し、次を使用して変更を保持する必要があります： `javax.jcr.Session.save()`.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -281,7 +281,7 @@ JCR アクセス制御管理では、特定のパスで有効なポリシーを�
 
 >[!NOTE]
 >
->`getEffectivePolicies` と、特定のパスが既に既存の CUG の一部であるかどうかを階層内で調べる後続のコード例との違いに注意してください。
+>違いは `getEffectivePolicies` と、特定のパスが既に既存の CUG に含まれているかどうかを調べるために階層を上に向かう後続のコード例を示します。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -338,7 +338,7 @@ while (isSupportedPath(path)) {
 
 #### 新しい認証要件の追加 {#adding-a-new-auth-requirement}
 
-新しい認証要件を作成する手順を以下に示します。 新しい認証要件は、ターゲットノードを含むツリーに `RequirementHandler` が設定済みの場合にのみ、Apache Sling Authenticator に登録されます。
+認証要件を作成する手順については、以下で詳しく説明します。 この要件は、Apache Sling Authenticator に登録されている場合、 `RequirementHandler` は、ターゲットノードを含むツリー用に設定されています。
 
 ```java
 Node targetNode = [...]
@@ -349,7 +349,7 @@ session.save();
 
 #### ログインパスを使用した新しい認証要件の追加 {#add-a-new-auth-requirement-with-login-path}
 
-ログインパスを含む新しい認証要件を作成する手順です。 新しい認証要件と除外されるログインパスは、ターゲットノードを含むツリーに `RequirementHandler` が設定済みの場合にのみ、Apache Sling Authenticator に登録されます。
+ログインパスを含む認証要件を作成する手順です。 新しい認証要件と除外されるログインパスは、ターゲットノードを含むツリーに `RequirementHandler` が設定済みの場合にのみ、Apache Sling Authenticator に登録されます。
 
 ```java
 Node targetNode = [...]
@@ -582,7 +582,7 @@ CUG-authorization モジュールに関連する使用可能な設定オプシ�
 
 #### CUG 評価からのプリンシパルの除外 {#excluding-principals-from-cug-evaluation}
 
-CUG 評価の個々のプリンシパルの除外は、前の実装から適用されています。 新しい CUG 認承では、CugExclude という名前の専用インターフェイスを使用してこれを説明します。Apache Jackrabbit Oak 1.4 には、プリンシパルの固定セットを除外するデフォルト実装と、個々のプリンシパル名を設定できる拡張実装が付属しています。後者は、AEMパブリッシュインスタンスで設定されます。
+CUG 評価の個々のプリンシパルの除外は、前の実装から適用されています。 新しい CUG 認承では、CugExclude という名前の専用インターフェイスを使用してこれを説明します。Apache Jackrabbit Oak 1.4 には、固定プリンシパルのセットと個々のプリンシパル名を設定できる拡張実装を除くデフォルトの実装が付属しています。 後者は、AEMパブリッシュインスタンスで設定されます。
 
 AEM 6.3 以降のデフォルトでは、次のプリンシパルは CUG ポリシーの影響を受けません。
 
@@ -768,7 +768,7 @@ CUG ポリシーのレプリケーションには 1 つ制約があります。�
 
 これらの要素は両方とも、`cq:Page` に作成されます。現在の設計では、MSM は `cq:PageContent`（`jcr:content`）ノードの下にあるノードとプロパティのみを処理します。
 
-そのため、CUG グループをブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
+そのため、CUG グループをブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この問題を回避してください。
 
 ## 新しい CUG 実装に伴う変更 {#changes-with-the-new-cug-implementation}
 

@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '430'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 96%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->管理者権限を持ち AEM の問題をトラブルシューティングするユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に記載されたトラブルシューティング方法を使用できます。十分な権限がない場合は、AEM のトラブルシューティングに関してシステム管理者にお問い合わせください。
+>管理者権限を持ち AEM の問題をトラブルシューティングするユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に記載されたトラブルシューティング方法を使用できます。十分な権限がない場合は、AEMのトラブルシューティングに関して、システム管理者に問い合わせてください。
 
 ## 公開されたサイト上に古いバージョンのページがまだある {#old-page-version-still-on-published-site}
 
@@ -44,9 +44,9 @@ ht-degree: 100%
    * ローカルブラウザーのキャッシュをクリアして、ページに再度アクセスします。
    * ページ URL の末尾に `?` を追加します。以下に例を示します。
 
-      `http://localhost:4502/sites.html/content?`
+     `http://localhost:4502/sites.html/content?`
 
-       これによって、ページが AEM から直接リクエストされ、Dispatcher がスキップされます。更新されたページを受け取った場合、Dispatcher のキャッシュをクリアする必要があることを表しています。
+      これによって、ページが AEM から直接リクエストされ、Dispatcher がスキップされます。更新されたページを受け取った場合、Dispatcher のキャッシュをクリアする必要があることを表しています。
 
    * システム管理者に問い合わせて、レプリケーションキューに問題があることを伝えます。
 
@@ -83,4 +83,4 @@ ht-degree: 100%
 
    * これらの定義は、例えば次の場所にある **web コンソール**&#x200B;を使用して、**Day CQ WCM 検索置換サーブレット** を設定することで変更できます。
 
-      `http://localhost:4502/system/console/configMgr`
+     `http://localhost:4502/system/console/configMgr`

@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '5484'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
 # Adobe Experience Manager と Dynamic Media Classic の統合 {#integrating-with-dynamic-media-classic-scene}
 
-Adobe Dynamic Media Classic は、リッチメディアアセットの管理や拡張のほか、web、モバイル、電子メールをはじめインターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
+Adobe Dynamic Media Classic は、リッチメディアアセットの管理や拡張のほか、web、モバイル、メールをはじめインターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
 
 Dynamic Media Classic を使用するには、Dynamic Media Classic と Adobe Experience Manager Assets が相互にやり取りできるようにクラウド設定を指定する必要があります。このドキュメントでは、Experience Manager と Dynamic Media Classic の設定方法について説明します。
 
@@ -27,7 +27,6 @@ Dynamic Media Classic を使用するには、Dynamic Media Classic と Adobe Ex
 >* Experience Manager と連携するよう Dynamic Media Classic を設定する前に、Dynamic Media Classic と Experience Manager を統合するための[ベストプラクティス](#best-practices-for-integrating-scene-with-aem)を参照してください。
 >* カスタムプロキシ設定で Dynamic Media Classic を使用する場合、Experience Manager では 3.x API を使用する機能もあれば 4.x API を使用する機能もあるので、両方の HTTP クライアントプロキシ設定を指定する必要があります。3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定し、4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
 >
-
 
 ## Experience Manager と Dynamic Media Classic との統合または Dynamic Media との統合 {#aem-scene-integration-versus-dynamic-media}
 
@@ -62,15 +61,15 @@ Experience Manager Dynamic Media は、Dynamic Media Classic の機能を Experi
 1. 1 つの画像とビデオのアセットを直接 Experience Manager にアップロードします。
 1. ビデオを Experience Manager 内で直接エンコードします。
 1. 画像ベースのセットを Experience Manager 内で直接作成します。
-1. 必要に応じて、画像やビデオにインタラクティブ機能を追加する。
+1. 該当する場合は、画像またはビデオにインタラクティビティを追加します。
 
-ダイナミックメディア用に使用するコンポーネントは、**[!UICONTROL デザインモード]**&#x200B;の[ダイナミックメディア](/help/sites-authoring/author-environment-tools.md#page-modes)コンポーネント領域にあります。これらには、次が含まれます。
+Dynamic Mediaに使用するコンポーネントは、 **[!UICONTROL Dynamic Media]** のコンポーネント領域 [デザインモード](/help/sites-authoring/author-environment-tools.md#page-modes). 次のようなものがあります。
 
-* **[!UICONTROL ダイナミックメディア]** - **[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントでは、追加しているアセットが画像であるかビデオであるかに応じて、様々なオプションを使用できます。このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。さらに、ビューアはレスポンシブなので、ビューアのサイズは画面サイズに合わせて自動的に変化します。すべてのビューアは HTML5 ビューアです。
+* **[!UICONTROL Dynamic Media]** - **[!UICONTROL Dynamic Media]** コンポーネントはスマートです。追加している画像が画像かビデオかに応じて、様々なオプションを使用できます。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。さらに、ビューアはレスポンシブなので、ビューアのサイズは画面サイズに合わせて自動的に変化します。すべてのビューアは HTML5 ビューアです。
 
 * **[!UICONTROL インタラクティブメディア]** - **[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、カルーセルバナー、インタラクティブ画像、インタラクティブビデオなどのアセット用です。このようなアセットには、ホットスポットや画像マップなどのインタラクティビティが組み込まれています。このコンポーネントはスマートです。つまり、追加するのが画像であるかビデオであるかに応じて、様々なオプションを使用できます。さらに、ビューアはレスポンシブなので、ビューアのサイズは画面サイズに合わせて自動的に変化します。すべてのビューアは HTML5 ビューアです。
 
-### 両方を利用するシナリオ {#dual-use-scenario}
+### 二重使用シナリオ {#dual-use-scenario}
 
 標準で、Dynamic Media と Dynamic Media Classic の両方を同時に Experience Manager と統合して、それらの機能を使用することができます。次の使用例の表で、特定の領域をオンまたはオフにするタイミングについて説明します。
 
@@ -114,7 +113,7 @@ Dynamic Media と Dynamic Media Classic を同時に使用するには：
     <td>オフ</td>
     </tr>
     <tr>
-    <td>Assets とダイナミックメディアを初めて使用する</td>
+    <td>Assets とDynamic Mediaを使い始める</td>
     <td>アセットを Experience Manager Assets にアップロードし、公開済み URL または埋め込みコードを Dynamic Media から使用する</td>
     <td><p>オン</p> <p>（手順 3 を参照）</p> </td>
     <td>オフ</td>
@@ -122,7 +121,7 @@ Dynamic Media と Dynamic Media Classic を同時に使用するには：
     <td>オフ</td>
     </tr>
     <tr>
-    <td>ダイナミックメディアを使用して初めてテンプレートを作成する</td>
+    <td>Dynamic Mediaとテンプレートを使い始める</td>
     <td>Dyamic Media を使用して画像とビデオを作成する。Dynamic Media Classic で画像テンプレートを作成し、Dynamic Media Classic コンテンツファインダーを使用して Sites ページにテンプレートを含めます。</td>
     <td><p>オン</p> <p>（手順 3 を参照）</p> </td>
     <td><a href="/help/assets/adding-dynamic-media-assets-to-pages.md">オン</a></td>
@@ -315,7 +314,7 @@ Experience Manager Assets と Dynamic Media Classic 間の同期により、現�
    >
    >追加の設定を作成する場合は、**[!UICONTROL 親設定]**&#x200B;フィールドが表示されます。
    >
-   >親設定は&#x200B;**変更しない**&#x200B;でください。親設定の変更は、統合を解除する可能性があります。
+   >実行 **not** 親設定を変更します。 親設定を変更すると、統合が解除される場合があります。
 
 1. Dynamic Media Classic アカウントのメールアドレス、パスワード、地域を入力し、**[!UICONTROL Dynamic Media Classic に接続]**&#x200B;を選択します。Dynamic Media Classic サーバーに接続され、ダイアログにはより多くのオプションが表示され、拡大します。
 
@@ -327,7 +326,7 @@ Experience Manager Assets と Dynamic Media Classic 間の同期により、現�
 
    >[!CAUTION]
    >
-   >Dynamic Media Classic フォルダーのサイズによっては、ルートフォルダーの読み込みに時間がかかる可能性があります。また、Dynamic Media Classic のデータが Experience Manager のストレージを超える可能性があります。正しいフォルダーを読み込んでいることを確認してください。読み込むデータが多すぎると、システムが停止する可能性があります。
+   >Dynamic Media Classic フォルダーのサイズによっては、ルートフォルダーの読み込みに時間がかかる可能性があります。また、Dynamic Media Classic のデータが Experience Manager のストレージを超える可能性があります。正しいフォルダーをインポートしていることを確認してください。 読み込むデータが多すぎると、システムが停止する場合があります。
 
    ![chlimage_1-298](assets/chlimage_1-298.png)
 
@@ -340,7 +339,6 @@ Experience Manager Assets と Dynamic Media Classic 間の同期により、現�
 >* パブリッシュ環境で Dynamic Media Classic に再接続する場合、パブリッシュ環境でパスワードをリセットしないと再接続が正常にできません（オーサーインスタンスの問題ではありません）。
 >* 地域、会社名などの値を変更する場合は、 Dynamic Media Classic に再接続する必要があります。設定オプションを変更後、保存していない場合、Experience Manager では引き続き、設定が有効であると誤って表示されます。必ず再接続するようにします。
 >
-
 
 ### Adobe CQ Dynamic Media Classic Dam Listener を有効にする {#enabling-the-adobe-cq-scene-dam-listener}
 
@@ -363,11 +361,11 @@ Dynamic Media Classic を使用してビデオエンコーディングを処理�
 
    ![chlimage_1-300](assets/chlimage_1-300.png)
 
-1. 「**[!UICONTROL Active job timeout]**」フィールドの数値を目的の値に変更します。負以外の数値であれば、任意の数値を指定できます。単位は秒です。この値は、デフォルトでは 2100 に設定されています。
+1. 必要に応じて、 **[!UICONTROL アクティブなジョブタイムアウト]** フィールドに入力します。 負以外の数は、測定単位（秒）で受け入れられます。 この値は、デフォルトでは 2100 に設定されています。
 
    >[!NOTE]
    >
-   >ベストプラクティス：ほとんどのアセットが長くても数分以内に収集されます（画像など）。ただし、長編ビデオを扱うなどの場合には、タイムアウト値を 7200 秒（2 時間）まで増やし、長い処理時間にも対応できるようにします。それ以外の場合は、この Dynamic Media Classic アップロードジョブは JCR（Java™ Content Repository）メタデータ内で **[!UICONTROL UploadFailed]** としてマークされます。
+   >ベストプラクティス：ほとんどのアセットが長くても数分以内に収集されます（画像など）。ただし、大きなビデオなどの場合は、長い処理時間に対応するために、タイムアウト値を 7200 秒（2 時間）に増やします。 それ以外の場合は、この Dynamic Media Classic アップロードジョブは JCR（Java™ Content Repository）メタデータ内で **[!UICONTROL UploadFailed]** としてマークされます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 
@@ -402,7 +400,6 @@ Experience Manager 6.3.2 以降では、アセットが CQ のターゲットフ
    >
    >* 自動化後にアセットを追加する場合、CQ ターゲットフォルダーに配置されていないアセットは、Dynamic Media Classic にアップロードされません。
    >* Experience Manager は、Dynamic Media Classic にアップロードする前にすべてのメタデータを XMP として埋め込むため、メタデータノードのすべてのプロパティを Dynamic Media Classic で XMP として使用できます。
-
 
 ### Dynamic Media Classic にプッシュされたアセットの状態（公開／非公開）を設定 {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}
 
@@ -590,11 +587,11 @@ Dynamic Media Classic と Experience Manager の統合で問題が発生した�
 * アップロード中のアセットが **[!UICONTROL CQ ターゲット]**&#x200B;フォルダーにあることを確認します（このフォルダーは Dynamic Media Classic クラウド設定で指定します）。
 * ない場合、**[!UICONTROL CQ アドホックフォルダー]**&#x200B;にアップロードできるように、そのページの&#x200B;**[!UICONTROL ページプロパティ]**&#x200B;でクラウド設定を設定する必要があります。
 
-* ログの情報を確認します。
+* ログで情報を確認します。
 
 **ビデオプリセットが表示されない場合：**
 
-* **[!UICONTROL ページのプロパティ]**&#x200B;で、そのページのクラウド設定が設定されていることを確認します。ビデオプリセットは、Dynamic Media Classic ビデオコンポーネントで使用できます。
+* を通じて、そのページのクラウド設定が設定されていることを確認します。 **[!UICONTROL ページのプロパティ]**. ビデオプリセットは、Dynamic Media Classic ビデオコンポーネントで使用できます。
 
 **Experience Manager でビデオアセットが再生されない場合：**
 
@@ -606,7 +603,7 @@ Dynamic Media Classic と Experience Manager の統合で問題が発生した�
 * 自動アップロードを有効にするようにクラウドサービス設定を設定し、DAM Asset ワークフローを更新および保存して Dynamic Media Classic アップロードに含めたことを確認します。
 * Dynamic Media Classic ターゲットフォルダーのサブフォルダーに画像をアップロードする場合、次のいずれかの操作を行うようにします。
 
-   * 場所に関係なく、すべてのアセットの名前が一意であることを確認します。そうしないと、メインターゲットフォルダーのアセットが削除され、サブフォルダーのアセットだけが残ります。
+   * 場所に関係なく、すべてのアセットの名前が一意であることを確認します。 そうしないと、メインターゲットフォルダー内のアセットが削除され、サブフォルダー内のアセットのみが残ります。
    * Dynamic Media Classic アカウントの設定領域で、Dynamic Media Classic によるアセットの上書き方法を変更します。同じ名前のアセットをサブフォルダーで使用する場合、場所に関係なく、アセットを上書きするように Dynamic Media Classic を設定しないでください。
 
 **削除したアセットやフォルダーが Dynamic Media Classic と Experience Manager の間で同期されない場合：**

@@ -2,10 +2,10 @@
 title: JEE Workbench 上の AEM Forms で Execute Script サービスを使用して XML データを作成する方法を教えてください。
 description: JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 68%
+source-wordcount: '992'
+ht-degree: 69%
 
 ---
 
@@ -15,7 +15,7 @@ JEE プロセス管理ワークフロー上の AEM Forms に関連している X
 
 単純な XML 設定を扱う場合、`Set Value` サービスを使用することができます。これは JEE サービス上のデフォルトの AEM Forms です。プロセスデータモデルの 1 つ以上のデータ項目の値を設定します。単純な条件ロジック「if this, the」のシナリオの場合、このサービスは目的に合う場合があります。
 
-しかし、より複雑な状況では、Set Value サービスはそれほど有効ではありません。このような状況では、Java™のようなプログラミング言語で提供されるコマンドなど、より堅牢なプログラミングコマンドのセットに依存する必要があります。 Set Value サービス内の単純なテキストから XML ドキュメントを作成するよりも、Java™を使用して複雑な XML を作成する方がはるかに簡単で明確です。 さらに、Set Value サービス内よりも Java™に条件付きプログラミングを組み込むほうが簡単です。
+しかし、より複雑な状況では、Set Value サービスはそれほど有効ではありません。このような状況では、Java™のようなプログラミング言語で提供されるコマンドなど、より堅牢なプログラミングコマンドのセットに依存する必要があります。 Set Value サービス内の単純なテキストから XML ドキュメントを作成するよりも、Java™を使用して複雑な XML を作成する方がはるかに簡単で明確です。 さらに、Set Value サービス内よりも Java™に条件付きプログラミングを組み込む方が簡単です。
 
 ## プロセスでの Execute Script サービスの使用 {#using-execute-script-service-in-process}
 
@@ -47,7 +47,7 @@ Execute Script サービスを含むプロセスが作成されたら、この�
 
 **Execute Script サービスのテクノロジーについて**
 
-Execute Script サービスの能力と制限を知るには、サービスの技術的基盤を知る必要があります。 JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C の Document Object Model 仕様の Java™実装です。定義済み [ここ](https://dom.spec.whatwg.org/). DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java™実装 Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
+Execute Script サービスの能力と制限を知るには、サービスの技術的基盤を知る必要があります。 JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C の Document Object Model 仕様の Java™実装で、定義済み [ここ](https://dom.spec.whatwg.org/). DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java™実装 Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
 
 XML 変数の格納に使用される Java™クラスは次のとおりです。
 
@@ -105,7 +105,7 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 **反復ループを使用した XML へのノードの追加**
 
-ノードは、プロセス内の既存の XML 変数にも追加できます。変数 node には、作成された XML オブジェクトが含まれます。
+ノードは、プロセス内の既存の XML 変数にも追加できます。変数 node は、作成された XML オブジェクトを含みます。
 
 ```xml
 Document document = patExecContext.getProcessDataValue("/process_data/node");

@@ -10,10 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 58%
+source-wordcount: '434'
+ht-degree: 53%
 
 ---
 
@@ -57,7 +57,7 @@ Eclipse は、例えば、JSP での作業でのサポートも提供します�
 * タグライブラリのオートコンプリート
 * Eclipse によって定義されたオブジェクトの認識 &lt;cq:defineobjects /> および &lt;sling:defineobjects />
 
-これが機能するための条件：
+これが機能するための手順は次のとおりです。
 
 1. [Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)の [JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)に記載されている説明に従います。
 1. 以下を &lt;build /> 」セクションを使用して、コンテンツモジュールの POM にアクセスできます。
@@ -133,4 +133,4 @@ Eclipse は、例えば、JSP での作業でのサポートも提供します�
 
    >[!NOTE]
    >
-   >`/libs/foundation/global.jsp` または内の他の JSP`/libs` を含める場合は、これらをプロジェクトにコピーして、Eclipse が包含を解決できるようにする必要があります。同時に、Maven によってコンテンツパッケージにバンドルされていないことを確認する必要があります。これをおこなう方法については、[Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
+   >次を含める場合： `/libs/foundation/global.jsp` または内の他の JSP `/libs`を使用する場合は、Eclipse がインクルージョンを解決できるように、プロジェクトにコピーする必要があります。 同時に、Maven によってコンテンツパッケージにバンドルされていないことを確認する必要があります。これをおこなう方法については、[Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)で説明されています。

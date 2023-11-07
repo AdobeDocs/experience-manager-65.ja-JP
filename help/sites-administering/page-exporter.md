@@ -2,10 +2,10 @@
 title: ページエクスポーター
 description: Adobe Experience Manager(AEM) ページエクスポーターの使用方法を説明します。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 66%
+ht-degree: 65%
 
 ---
 
@@ -107,7 +107,7 @@ Adobe Experience Manager(AEM) では、画像を含む完全な Web ページと
 
 [コンテンツ同期フレームワーク](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html)を使用しているため、テンプレートはノード構造で構成されています。各ノードには、zip ファイルの作成プロセスで特定のアクションを定義する `type` プロパティが含まれています。
 
-<!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
+<!-- For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
 -->
 
 次のノードを使用してエクスポートテンプレートを作成することができます。
@@ -131,7 +131,7 @@ page ノードを使用して、ページの HTML を zip ファイルにコピ�
 
 * `rewrite`
 rewrite ノードでは、エクスポートしたページでリンクを書き換える方法を定義します。書き換え後のリンクは、zip ファイルに含まれるファイルを指すか、サーバー上のリソースを指します。
-  <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
+  <!-- See the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 design ノードを使用して、エクスポートされるページに使用されているデザインをコピーします。次のような特徴があります。
@@ -156,7 +156,7 @@ design ノードを使用して、エクスポートされるページに使用�
    * ノードタイプは `nt:unstructured`.
    * `type` プロパティと `type` に関連したプロパティを持ちます。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
-  例えば、次の設定ノードは `mysite.clientlibs.js` ファイルを zip ファイルにコピーします。
+  例えば、次の設定ノードは、 `mysite.clientlibs.js` ファイルを zip ファイルに保存します。
 
   ```xml
   "mysite.clientlibs.js": {
@@ -177,7 +177,7 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 特定の要件を満たすには、 [カスタム更新ハンドラー](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html).
 
-<!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
+<!-- To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
 -->
 
 ## プログラムによるページのエクスポート {#programmatically-exporting-a-page}

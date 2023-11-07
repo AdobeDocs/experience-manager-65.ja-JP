@@ -11,10 +11,10 @@ topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 100%
+source-wordcount: '522'
+ht-degree: 94%
 
 ---
 
@@ -44,7 +44,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->AEM Forms によるプログラミングにあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM Formsでのプログラミング」のクイックスタートは、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 ## クイックスタート（SOAP モード）：Java API を使用して、タスクを割り当てる {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
@@ -77,7 +77,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -86,7 +86,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -210,7 +210,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -219,7 +219,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -299,7 +299,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -308,7 +308,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -425,7 +425,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -434,7 +434,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -483,7 +483,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              long formInstanceId = fi[0].getFormInstanceId();
              FormInstance newfi = myTaskManager.getFormInstanceForTask(taskId, formInstanceId, true);
  
-             //Get data located in the form and
+             //Get data in the form and
              //write the data to FormData.xml
              Document doc = newfi.getDocument();
              File myTestFile = new File("C:\\Adobe\FormData.xml");
@@ -502,7 +502,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用して、フォームデータを変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-次の Java コードの例では、 *FormData.xml* ファイルにあるデータでフォームをアップデートしています。
+次の Java コードの例では、 *FormData.xml* ファイル。
 
 ```java
  /*
@@ -531,7 +531,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -540,7 +540,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -641,7 +641,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -650,7 +650,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -745,7 +745,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -754,7 +754,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

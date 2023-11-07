@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7848'
+source-wordcount: '7847'
 ht-degree: 90%
 
 ---
@@ -619,7 +619,7 @@ WinID がテキスト、サブウィンドウ、ウィンドウクラス ID な�
   <tr>
    <td><p>スクリプト </p></td>
    <td><p>PDF 生成サービスとネイティブアプリケーション間の相互作用を指定します。このようなやり取りは、通常、アプリケーションに対して、Adobe PDF ドライバーにファイルを印刷するよう指示します。 </p><p>スクリプトには、特定のダイアログボックスを開くようネイティブアプリケーションに指示し、それらのダイアログボックスのフィールドやボタンに対して特定の応答を提供する指示が含まれています。 </p></td>
-   <td><p>PDF 生成サービスには、サポートされているすべてのネイティブアプリケーションのスクリプトファイルが含まれています。これらのファイルは、XML 編集アプリケーションを使用して変更できます。</p><p>新しいネイティブアプリケーションのサポートを追加するには、新しいスクリプトファイルを作成する必要があります。（<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">ネイティブアプリケーション用の追加のダイアログ XML ファイルの作成または変更</a>を参照。） </p></td>
+   <td><p>PDF 生成サービスには、サポートされているすべてのネイティブアプリケーションのスクリプトファイルが含まれています。これらのファイルは、XML 編集アプリケーションを使用して変更できます。</p><p>新しいネイティブアプリケーションのサポートを追加するには、スクリプトファイルを作成する必要があります。 （<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">ネイティブアプリケーション用の追加のダイアログ XML ファイルの作成または変更</a>を参照。） </p></td>
   </tr>
   <tr>
    <td><p>汎用ダイアログボックスの説明 </p></td>

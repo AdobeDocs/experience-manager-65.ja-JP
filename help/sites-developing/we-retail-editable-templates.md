@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 29%
+source-wordcount: '480'
+ht-degree: 23%
 
 ---
 
@@ -33,7 +33,7 @@ We.Retail のすべてのページは、編集可能なテンプレートに基�
 1. **ページ情報**&#x200B;メニューから「**テンプレートを編集**」を選択します。
 1. ヒーローページテンプレートを編集中です。
 
-   ページの構造モードを使用して、テンプレートの構造を変更できます。 例えば、レイアウトコンテナで使用できるコンポーネントが含まれます。
+   ページの構造モードを使用して、テンプレートの構造を変更できます。 これには、例えば、レイアウトコンテナで使用できるコンポーネントが含まれます。
 
    ![chlimage_1-138](assets/chlimage_1-138.png)
 
@@ -45,7 +45,7 @@ We.Retail のすべてのページは、編集可能なテンプレートに基�
 
 1. レイアウトコンテナのデザインダイアログで、次の操作を実行できます。
 
-   * 既存のポリシーを選択するか、コンテナ用の新しいポリシーを作成します
+   * 既存のポリシーを選択するか、コンテナ用のポリシーを作成します
    * コンテナで許可するコンポーネントを選択
    * アセットをコンテナにドラッグしたときに配置されるデフォルトのコンポーネントを定義する
 
@@ -55,7 +55,7 @@ We.Retail のすべてのページは、編集可能なテンプレートに基�
 
    次の操作が可能です。
 
-   * 既存のポリシーを選択するか、コンテナ用の新しいポリシーを作成します
+   * 既存のポリシーを選択するか、コンテナ用のポリシーを作成します
    * ページ作成者がこのコンポーネントを使用する際に使用できる機能を定義します。例：
 
       * 許可されている貼り付けソース
@@ -73,6 +73,6 @@ We.Retail のすべてのページは、編集可能なテンプレートに基�
 
 ## 詳細情報 {#more-information}
 
-詳しくは、オーサリングドキュメントの[ページテンプレートの作成](/help/sites-authoring/templates.md)を参照してください。また、編集可能テンプレートの技術的な詳細については、開発者用ドキュメントページの[テンプレート - 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
+詳しくは、オーサリングドキュメントを参照してください [ページテンプレートの作成](/help/sites-authoring/templates.md) または開発者ドキュメントのページ [テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md) を参照してください。
 
 また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。コアコンポーネントの機能の概要については、オーサリングドキュメントの[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を参照してください。技術的な概要については、開発者用ドキュメントの[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。

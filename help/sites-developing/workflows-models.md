@@ -1,19 +1,15 @@
 ---
 title: ワークフローモデルの作成
-seo-title: Creating Workflow Models
 description: ワークフローモデルを作成して、ユーザーがワークフローを開始したときに実行される一連の手順を定義します。
-seo-description: You create a workflow model to define the series of steps executed when a user starts the workflow.
-uuid: 31071d3a-d6d5-4476-9ac0-7b335de406d9
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2463'
+source-wordcount: '2451'
 ht-degree: 48%
 
 ---
@@ -30,14 +26,14 @@ ht-degree: 48%
 
 ## 新しいワークフローの作成 {#creating-a-new-workflow}
 
-最初に新しいワークフローモデルを作成すると、そのモデルには次の内容が含まれます。
+新しいワークフローモデルを初めて作成する場合、次のものが含まれます。
 
 * **フロー開始**&#x200B;ステップと&#x200B;**フロー終了**ステップ。
 これらのステップは、ワークフローの始まりと終わりを表します。これらのステップは必須で、編集または削除できません。
 * 「**手順 1**」という名前のサンプルの&#x200B;**参加者**ステップ。
 このステップは、作業項目をワークフロー開始者に割り当てるように設定されています。このステップを編集または削除し、必要に応じてステップを追加します。
 
-エディターを使用して新しいワークフローを作成するには：
+エディターを使用してワークフローを作成するには：
 
 1. **ツール**／**ワークフロー**／**モデル**&#x200B;の順にクリックするか、[https://localhost:4502/aem/workflow](https://localhost:4502/aem/workflow) などから&#x200B;**ワークフローモデル**&#x200B;コンソールを開きます。
 1. 「**作成**」を選択してから、「**モデルを作成**」を選択します。
@@ -86,9 +82,9 @@ ht-degree: 48%
 * ステップブラウザーを利用できません（左側）。
 * ツールバーで「**編集**」操作を利用できます（右側）。
 * 次の理由から、最初はモデルとそのプロパティが読み取り専用モードで開かれます。
-   * デフォルトのワークフローは `/libs` にあります。
-   * レガシーワークフローは `/etc` にあります。
-選択**編集** を選択すると、次のようになります。
+   * デフォルトのワークフローは、 `/libs`
+   * レガシーワークフローは、 `/etc`
+選択 **編集** は次のようになります。
 * ワークフローが `/conf` にコピーされます。
 * ステップブラウザーを利用できるようになります。
 * 変更を加えられるようになります。
@@ -167,7 +163,7 @@ ht-degree: 48%
 
 ### 一時的なワークフローの作成 {#creating-a-transient-workflow}
 
-次の項目を作成できます。 [一時的](/help/sites-developing/workflows.md#transient-workflows) 新しいモデルを作成する場合、または既存のモデルを編集する場合のワークフローモデル：
+次の項目を作成できます。 [一時的](/help/sites-developing/workflows.md#transient-workflows) モデルを作成する場合、または既存のモデルを編集する場合のワークフローモデル：
 
 1. 次のワークフローモデルを開く： [編集中](#editinganexistingworkflow).
 1. 選択 **ワークフローモデルのプロパティ** をクリックします。
@@ -207,7 +203,7 @@ ht-degree: 48%
 
 ### マルチリソースサポートのためのワークフローの設定 {#configuring-a-workflow-for-multi-resource-support}
 
-次のワークフローモデルを設定できます。 [マルチリソースのサポート](/help/sites-developing/workflows.md#multi-resource-support) 新しいモデルを作成する場合、または既存のモデルを編集する場合：
+次のワークフローモデルを設定できます。 [マルチリソースのサポート](/help/sites-developing/workflows.md#multi-resource-support) モデルを作成する場合、または既存のモデルを編集する場合：
 
 1. 次のワークフローモデルを開く： [編集中](#editinganexistingworkflow).
 1. 選択 **ワークフローモデルのプロパティ** をクリックします。
@@ -264,7 +260,7 @@ ht-degree: 48%
 
 パッケージのワークフローモデルを書き出す方法は次のとおりです。
 
-1. を使用して新しいパッケージを作成します。 [パッケージマネージャー](/help/sites-administering/package-manager.md#package-manager):
+1. を使用してパッケージを作成します。 [パッケージマネージャー](/help/sites-administering/package-manager.md#package-manager):
 
    1. でパッケージマネージャーに移動します。 **ツール**, **導入**, **パッケージ**.
 
@@ -299,7 +295,7 @@ ht-degree: 48%
 
 フォームで使用するワークフローを設定するには、次の手順を実行します。
 
-1. 新しいページを作成し、編集用に開きます。
+1. ページを作成し、編集用に開きます。
 1. を追加します。 **フォーム** コンポーネントをページに追加します。
 1. **設定** の **フォーム開始** ページに表示されたコンポーネント
 1. 「**ワークフローを開始**」で、使用可能なワークフローの中から目的のワークフローを選択します。
@@ -328,7 +324,7 @@ ht-degree: 48%
 
 ワークフロー作成の可能性をいくつか示すために、ここでは、`Publish Example` ワークフローのバリエーションを作成します。
 
-1. [新しいワークフローモデルを作成](#creating-a-new-workflow).
+1. [ワークフローモデルの作成](#creating-a-new-workflow).
 
    新しいワークフローには、次の情報が含まれます。
 
@@ -402,7 +398,7 @@ ht-degree: 48%
 
 OR ルールを定義するには、次の手順に従います。
 
-1. 2 つのスクリプトを作成し、リポジトリに保存します。例えば、次の場所です。
+1. 2 つのスクリプトを作成し、リポジトリに保存します。次に例を示します。
 
    `/apps/myapp/workflow/scripts`
 

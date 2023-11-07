@@ -11,10 +11,10 @@ topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 role: Developer
 exl-id: 34069505-a6cf-4540-932b-604f81823178
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: ht
-source-wordcount: '872'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '868'
+ht-degree: 89%
 
 ---
 
@@ -46,7 +46,7 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」にあるクイックスタートは、JBoss アプリケーションサーバーと Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「 AEM Formsでのプログラミング」のクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへの署名フィールドの追加 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
@@ -76,16 +76,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -166,7 +166,7 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
 
 ## クイックスタート（SOAP モード）：Java API を使用した署名フィールド名の取得 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
-次の Java コードの例では、*LoanSig.pdf* という名前の PDF ドキュメント内にある署名フィールドの名前を取得します。（[署名フィールド名の取得](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照してください）。
+次の Java コードの例では、という名前の署名ドキュメント内のPDFフィールドの名前を取得します。 *LoanSig.pdf*. （[署名フィールド名の取得](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照してください）。
 
 ```java
  /*
@@ -195,16 +195,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -301,16 +301,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -400,7 +400,7 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのデジタル署名 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントにデジタル署名を行います。セキュリティ証明書に対して指定されたエイリアスはセキュリティで保護され、失効確認が実行されます。CRL または OCSP サーバー情報が指定されていないので、PDF ドキュメントへの電子署名に使用される証明書からサーバー情報が取得されます。署名済みのドキュメントは、*LoanSigned.pdf* という名前の PDF ファイルとして保存されます。（[PDF ドキュメントへの電子署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照してください）。
+次の Java コードの例では、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントにデジタル署名を行います。セキュリティ資格情報に対して指定されたエイリアスはセキュリティで保護され、失効確認が実行されます。CRL または OCSP サーバー情報が指定されていないので、PDF ドキュメントへの電子署名に使用される証明書からサーバー情報が取得されます。署名済みのドキュメントは、*LoanSigned.pdf* という名前の PDF ファイルとして保存されます。（[PDF ドキュメントへの電子署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -429,16 +429,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -578,16 +578,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -761,7 +761,7 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの認証 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-次の Java コードの例は、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントを認証します。セキュリティ証明書に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。認証済みのドキュメントは、*LoanCertified.pdf* という名前の PDF ファイルとして保存されます。（[PDF ドキュメントの認証](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照してください）。
+次の Java コードの例は、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントを認証します。セキュリティ資格情報に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。認証済みのドキュメントは、*LoanCertified.pdf* という名前の PDF ファイルとして保存されます。（[PDF ドキュメントの認証](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -790,16 +790,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -910,7 +910,7 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
 
 ## クイックスタート（SOAP モード）：Java API を使用したデジタル署名の検証 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-次の Java コードの例では、LoanSigned.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内のデジタル署名を検証します。検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。（[電子署名の検証](#verifying-digital-signatures)を参照してください）。
+次の Java コードの例では、LoanSigned.pdf という名前のPDFファイルに基づいて、署名済みPDFドキュメント内の電子署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。（[電子署名の検証](#verifying-digital-signatures)を参照してください）。
 
 ```java
  /*
@@ -935,16 +935,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -1010,17 +1010,17 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
  
        //Determine the status of the signature
        if (sigStatus == SignatureStatus.DynamicFormSignatureUnknown)
-              myStatus = "The signatures located in the dynamic PDF form are unknown";
+              myStatus = "The signatures in the dynamic PDF form are unknown";
           else if (sigStatus == SignatureStatus.DocumentSignatureUnknown)
-              myStatus = "The signatures located in the PDF document are unknown";
+              myStatus = "The signatures in the PDF document are unknown";
           else if (sigStatus == SignatureStatus.CertifiedDynamicFormSignatureTamper)
-              myStatus = "The signatures located in a certified PDF form are valid";
+              myStatus = "The signatures in a certified PDF form are valid";
           else if (sigStatus == SignatureStatus.SignedDynamicFormSignatureTamper)
-              myStatus = "The signatures located in a signed dynamic PDF form are valid";
+              myStatus = "The signatures in a signed dynamic PDF form are valid";
           else if (sigStatus == SignatureStatus.CertifiedDocumentSignatureTamper)
-              myStatus = "The signatures located in a certified PDF document are valid";
+              myStatus = "The signatures in a certified PDF document are valid";
           else if (sigStatus == SignatureStatus.SignedDocumentSignatureTamper)
-              myStatus = "The signatures located in a signed PDF document are valid";
+              myStatus = "The signatures in a signed PDF document are valid";
           else if (sigStatus == SignatureStatus.SignatureFormatError)
               myStatus = "The format of a signature in a signed document is invalid";
           else if (sigStatus == SignatureStatus.DynamicFormSigNoChanges)
@@ -1074,7 +1074,7 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
 
 ## クイックスタート（SOAP モード）：Java API を使用した複数のデジタル署名の検証 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
-次の Java コードの例では、LoanAllSigs.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内にある複数のデジタル署名を検証します。検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。（[複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照してください）。
+次の Java コードの例では、LoanAllSigs.pdf という名前のPDFファイルに基づいて、署名済みPDFドキュメント内の複数の電子署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。（[複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照してください）。
 
 ```java
  /*
@@ -1103,16 +1103,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -1162,13 +1162,13 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
        pkiOptions.setVerificationTime(VerificationTime.CURRENT_TIME);
        pkiOptions.setRevocationCheckStyle(RevocationCheckStyle.BestEffort);
  
-       //Verify all digital signatures that are located in a PDF document
+       //Verify all digital signatures that are in a PDF document
        PDFDocumentVerificationInfo  allSig = signClient.verifyPDFDocument(
           inDoc,
           pkiOptions,
           null);
  
-       //Get a list of all signatures that are located in the PDF document
+       //Get a list of all signatures that are in the PDF document
        List allSignatures = allSig.getVerificationInfos();
  
      //Create an Iterator object and iterate through
@@ -1184,17 +1184,17 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
  
              //Determine the status of the signature
                if (sigStatus == SignatureStatus.DynamicFormSignatureUnknown)
-                   myStatus = "The signatures located in the dynamic PDF form are unknown";
+                   myStatus = "The signatures in the dynamic PDF form are unknown";
                else if (sigStatus == SignatureStatus.DocumentSignatureUnknown)
-                   myStatus = "The signatures located in the PDF document are unknown";
+                   myStatus = "The signatures in the PDF document are unknown";
                else if (sigStatus == SignatureStatus.CertifiedDynamicFormSignatureTamper)
-                   myStatus = "The signatures located in a certified PDF form are valid";
+                   myStatus = "The signatures in a certified PDF form are valid";
                else if (sigStatus == SignatureStatus.SignedDynamicFormSignatureTamper)
-                   myStatus = "The signatures located in a signed dynamic PDF form are valid";
+                   myStatus = "The signatures in a signed dynamic PDF form are valid";
                else if (sigStatus == SignatureStatus.CertifiedDocumentSignatureTamper)
-                   myStatus = "The signatures located in a certified PDF document are valid";
+                   myStatus = "The signatures in a certified PDF document are valid";
                else if (sigStatus == SignatureStatus.SignedDocumentSignatureTamper)
-                   myStatus = "The signatures located in a signed PDF document are valid";
+                   myStatus = "The signatures in a signed PDF document are valid";
                else if (sigStatus == SignatureStatus.SignatureFormatError)
                    myStatus = "The format of a signature in a signed document is invalid";
                else if (sigStatus == SignatureStatus.DynamicFormSigNoChanges)
@@ -1265,16 +1265,16 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -1364,13 +1364,13 @@ AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使�
  * 11. adobe-utilities.jar (required for SOAP mode)
  *
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
- * The adobe-utilities.jar file is located in the following path:
+ * The adobe-utilities.jar file is in the following path:
  * <install directory>/sdk/client-libs/jboss
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  * If you want to invoke a remote forms server instance and there is a

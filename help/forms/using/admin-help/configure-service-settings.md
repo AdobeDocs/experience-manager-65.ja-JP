@@ -8,10 +8,10 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '10699'
-ht-degree: 56%
+source-wordcount: '10694'
+ht-degree: 55%
 
 ---
 
@@ -109,7 +109,7 @@ IBM FileNet サービスでは、Content Repository Connector を次の設定に
 
 ## Convert PDF サービスの設定 {#convert-pdf-service-settings}
 
-Convert PDF サービス（`ConvertPdfService`）は、PDF ドキュメントを PostScript および様々な画像形式（JPEG、JPEG 2000、PNG および TIFF）に変換します。PDFドキュメントを PostScript に変換すると、PostScript プリンターでの無人サーバーベースの印刷に便利です。 PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
+ConvertPDFサービス ( `ConvertPdfService`) はPDFドキュメントを PostScript および複数の画像形式 (JPEG、JPEG2000、PNG およびTIFF) に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでの無人サーバーベースの印刷に便利です。 PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
 
 Convert Service では、次の設定を使用できます。PDF
 
@@ -243,7 +243,7 @@ FTP サービスでは、以下の設定を使用できます。
 
 ## GeneratePDF サービスの設定 {#generate-pdf-service-settings}
 
-Generate PDF サービス（`GeneratePDFService`）は、様々な種類の形式のファイルを PDF ドキュメントに変換し、PDF ドキュメントを様々な種類のファイル形式に変換します。
+GeneratePDFサービス ( `GeneratePDFService`) は、様々なネイティブ形式のファイルをPDFドキュメントに変換し、PDFドキュメントを複数のファイル形式に変換します。
 
 Generate PDF サービスでは、以下の設定を使用できます。
 
@@ -326,7 +326,7 @@ Guide Utilities サービスのデフォルト値は、ほとんどの使用例�
 
 ### サーバークラスタでのガイドの使用 {#using-guides-in-a-server-cluster}
 
-スティッキーセッションを使用しないサーバークラスタでのガイドのレンダリングは、NullPointerException で失敗します。 Guides 要求は、デフォルトで、生成元のサーバーに固有のセキュリティで保護された URL を利用します。 スティッキーセッションを使用するクラスターでは、リクエストがクラスター内のノードにヒットした後、そのセッションまたはユーザーに対する以降の要求はすべて、そのサーバーにのみルーティングされ、すべては問題ありません。 スティッキーセッションを使用しないクラスターでは、後続の要求がクラスター内の任意のサーバーにヒットする可能性があります。 リクエストがヒットしたサーバーが元のサーバーではない場合、セキュア URL を解決できません。
+スティッキーセッションを使用しないサーバークラスタでのガイドのレンダリングは、NullPointerException で失敗します。 Guides リクエストは、デフォルトで、生成元のサーバーに固有のセキュア URL を使用します。 スティッキーセッションを使用するクラスターでは、リクエストがクラスター内のノードにヒットした後、そのセッションまたはユーザーに対する以降の要求はすべて、そのサーバーにのみルーティングされ、すべては問題ありません。 スティッキーセッションを使用しないクラスターでは、後続の要求がクラスター内の任意のサーバーにヒットする可能性があります。 リクエストがヒットしたサーバーが元のサーバーではない場合、セキュア URL を解決できません。
 
 スティッキーセッションを使用しないサーバークラスターで Guides を使用している場合は、GuidesUtility サービスの macKeySeed 値を設定し、クラスターを停止して起動します。
 
@@ -830,7 +830,7 @@ forms サーバーでは、各サービスのセキュリティ設定を構成�
    * **SUPERVISOR_PERM：**&#x200B;サービスに対してプロセスから作成されたプロセスインスタンスデータを表示します。
    * **START_STOP_PERM：**&#x200B;サービスを開始および停止します。
    * **ADD_REMOVE_ENDPOINTS_PERM：**&#x200B;サービスのエンドポイントを追加、削除、変更します。
-   * **CREATE_VERSION_PERM：**&#x200B;サービスの新しいバージョンを作成します。
+   * **CREATE_VERSION_PERM:** サービスのバージョンを作成するには
    * **DELETE_VERSION_PERM：**&#x200B;サービスのバージョンを削除します。
    * **MODIFY_VERSION_PERM：**&#x200B;サービスのバージョンを変更します。
    * **READ_PERM：**&#x200B;サービスを表示します。

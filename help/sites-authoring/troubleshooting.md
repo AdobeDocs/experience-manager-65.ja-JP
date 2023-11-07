@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '295'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->管理者権限を持ち AEM の問題をトラブルシューティングするユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に記載されたトラブルシューティング方法を使用できます。十分な権限がない場合は、AEM のトラブルシューティングに関してシステム管理者にお問い合わせください。
+>管理者権限を持ち AEM の問題をトラブルシューティングするユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に記載されたトラブルシューティング方法を使用できます。十分な権限がない場合は、AEMのトラブルシューティングに関して、システム管理者に問い合わせてください。
 
 ## 公開されたサイト上に古いバージョンのページがまだある {#old-page-version-still-on-published-site}
 
@@ -46,8 +46,8 @@ ht-degree: 100%
 
       * `http://localhost:4502/sites.html/content?`
       *  これによって、ページが AEM から直接リクエストされ、Dispatcher がスキップされます。更新されたページを受け取った場合、Dispatcher のキャッシュをクリアする必要があることを表しています。
-   * システム管理者に問い合わせて、レプリケーションキューに問題があることを伝えます。
 
+   * システム管理者に問い合わせて、レプリケーションキューに問題があることを伝えます。
 
 ## コンポーネントのアクションがツールバーに表示されない {#component-actions-not-visible-on-toolbar}
 

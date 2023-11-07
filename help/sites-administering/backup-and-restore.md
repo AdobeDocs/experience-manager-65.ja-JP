@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2285'
-ht-degree: 49%
+source-wordcount: '2283'
+ht-degree: 48%
 
 ---
 
@@ -215,7 +215,7 @@ AEM オンラインバックアップは、バックアップ対象のデータ�
 
 1. zip ファイル作成時の最初の手順は、ターゲットディレクトリを作成または指定することです。
 
-   * zip ファイルにバックアップする場合、一時ディレクトリが作成されます。ディレクトリ名は `backup.` で始まり、`.temp`（例：`backup.f4d3.temp`）で終わります。
+   * zip ファイルにバックアップする場合、一時ディレクトリが作成されます。ディレクトリ名はで始まります。 `backup.` およびで終わる `.temp`例： `backup.f4d3.temp`.
    * ディレクトリにバックアップする場合は、ターゲットパスで指定された名前が使用されます。既存のディレクトリを使用できます。使用しない場合は、新しいディレクトリが作成されます。
 
      バックアップの開始時に、ターゲットディレクトリ内に `backupInProgress.txt` という空のファイルが作成されます。このファイルは、バックアップの完了時に削除されます。

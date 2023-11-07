@@ -6,10 +6,10 @@ role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1744'
-ht-degree: 100%
+source-wordcount: '1743'
+ht-degree: 98%
 
 ---
 
@@ -29,7 +29,7 @@ API にアクセスするには、次の手順を実行します。
 1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
 1. `https://[hostname]:[server]/api/assets.json` への [!DNL Assets] サービスリンクをクリックします。
 
-API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションを行う場合は、応答コードを利用します。
+API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションで、PDFファイルなどでは使用できない場合があります。 詳細な分析やアクションを行う場合は、応答コードを利用します。
 
 [!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、[!DNL Assets] Web インターフェイスでも HTTP API でも使用できません。[!UICONTROL オンタイム]が未来の場合、または[!UICONTROL オフタイム]が過去の場合、API は 404 エラーメッセージを返します。
 
@@ -211,7 +211,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 ## アセットレンディションの作成 {#create-an-asset-rendition}
 
-アセットの新しいアセットレンディションを作成します。リクエストパラメーター名が指定されない場合、ファイル名がレンディション名として使用されます。
+アセットのアセットレンディションの作成 リクエストパラメーター名が指定されない場合、ファイル名がレンディション名として使用されます。
 
 **パラメーター**：パラメーターは `name`（レンディションの名前）と `file`（ファイル参照）です。
 

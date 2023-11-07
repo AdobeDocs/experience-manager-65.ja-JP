@@ -7,16 +7,16 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 98%
+source-wordcount: '869'
+ht-degree: 95%
 
 ---
 
 # AEM Commerce の開発 {#develop}
 
-AEM 向けコマース統合フレームワーク（CIF）に基づく AEM Commerce プロジェクトの開発でも、他の AEM プロジェクトと同じルールとベストプラクティスに従います。最初に以下を確認してください。
+AEM 向けコマース統合フレームワーク（CIF）に基づく AEM Commerce プロジェクトの開発でも、他の AEM プロジェクトと同じルールとベストプラクティスに従います。最初に以下を確認します。
 
 - [AEM 6.5 開発ユーザーガイド](/help/sites-developing/home.md)
 - [AEM の中心概念](/help/sites-developing/the-basics.md)
@@ -29,7 +29,7 @@ CIF プロジェクトを使用する場合は、ローカル開発環境を使�
 
 >[!NOTE]
 >
->以下の手順は、CIF を使用して AEM Commerce 用のローカル AEM 開発環境を AEM 6.5 用に設定する場合に役立ちます。AEM as a Cloud Service を使用している場合は、 [AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) ドキュメントを参照してください。
+>以下の手順は、CIF を使用して AEM Commerce 用のローカル AEM 開発環境を AEM 6.5 用に設定する場合に役立ちます。AEM as a Cloud Serviceを使用している場合は、 [AEM Commerceas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) ドキュメント。
 
 AEM Commerce Add-On for AEM 6.5 アドオンCIF アドオンは、ローカル開発にも使用でき、AEM パッケージとしても提供されます。これは、 [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から機能パックとしてダウンロードできます。
 

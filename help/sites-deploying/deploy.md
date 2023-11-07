@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1765'
 ht-degree: 58%
 
 ---
@@ -66,7 +66,7 @@ Adobe Experience Managerは、商用 Web サイトや関連サービスを構築
 
 * **Web アプリケーションサーバー**：AEM は、スタンドアロンモードで（統合 Jetty Web サーバーを含む）、またはサードパーティのアプリケーションサーバー内の web アプリケーションとしてデプロイできます。
 * **Web アプリケーションフレームワーク**：AEM には Sling web アプリケーションフレームワークが組み込まれており、RESTful でコンテンツ指向 web アプリケーションを簡単に記述できます。
-* **コンテンツリポジトリ**:AEMには、非構造化データと半構造化データ専用に設計された、Java™ Content Repository(JCR) という階層データベースが含まれています。 リポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレート、内部データも保存されます。
+* **コンテンツリポジトリ**:AEMには、非構造化データおよび半構造化データ専用に設計された、Java™ Content Repository(JCR) という階層データベースが含まれています。 リポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレート、内部データも保存されます。
 
 この基盤を基に、AEMは、次の管理のためのアプリケーションレベルの機能も提供します。
 
@@ -89,7 +89,7 @@ AEMの用語では、「インスタンス」とは、サーバー上で実行�
 * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
 * **公開**：公開の準備が整ったコンテンツを公開する AEM インスタンス。
 
-インストールされるソフトウェアという点では、これらのインスタンスは同一です。その違いは設定のみです。さらに、ほとんどのインストールでは Dispatcher を使用します。
+インストールされるソフトウェアという点では、これらのインスタンスは同一です。その違いは設定のみです。さらに、ほとんどのインストールでは、Dispatcher を使用します。
 
 * **Dispatcher**:AEM Dispatcher モジュールで拡張された静的 Web サーバー (Apache httpd、Microsoft® IIS など )。 パブリッシュインスタンスで生成された Web ページをキャッシュしてパフォーマンスを向上します。
 
@@ -103,9 +103,9 @@ AEMの用語では、「インスタンス」とは、サーバー上で実行�
 
 ### オンプレミス {#on-premise}
 
-企業環境のサーバーに AEM をインストールできます。一般的なインストールインスタンスは次のとおりです。開発環境、テスト環境、および公開環境。 詳しくは、 [はじめに](/help/sites-deploying/deploy.md#getting%20started) AEMソフトウェアをローカルにインストールする方法の基本的な詳細
+企業環境のサーバーに AEM をインストールできます。一般的なインストールインスタンスには、開発、テスト、パブリッシュ環境が含まれます。 詳しくは、 [はじめに](/help/sites-deploying/deploy.md#getting%20started) AEMソフトウェアをローカルにインストールする方法の基本的な詳細。
 
-一般的なオンプレミスデプロイメントの詳細については、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)を参照してください。
+一般的なオンプレミスデプロイメントの詳細については、 [推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md).
 
 ### Cloud Manager を使用した Managed Services {#managed-services-using-cloud-manager}
 
@@ -113,7 +113,7 @@ AEM Managed Services は、デジタルエクスペリエンスの管理のた�
 
 AEM Managed Services を使用すると、お客様は次のような利点を得ることができます。
 
-**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャを使用すると、組織は成功するデジタルエクスペリエンスを迅速に計画、開始、最適化できます。 アドビがクラウドアーキテクチャを管理するので、投資、ハードウェア、ソフトウェアを追加する必要がありません。アドビのカスタマーサクセスエンジニアが、AEM のアーキテクチャ、プロビジョニング、バックエンドアプリとの接続のカスタマイズ、実稼働に向けてのベストプラクティスに関する支援を提供します。
+**市場投入までの時間の短縮：** AdobeManaged Servicesの柔軟なクラウドインフラストラクチャを使用して、組織は成功するデジタルエクスペリエンスを迅速に計画、立ち上げ、最適化できます。 アドビがクラウドアーキテクチャを管理するので、投資、ハードウェア、ソフトウェアを追加する必要がありません。アドビのカスタマーサクセスエンジニアが、AEM のアーキテクチャ、プロビジョニング、バックエンドアプリとの接続のカスタマイズ、実稼働に向けてのベストプラクティスに関する支援を提供します。
 
 **より高い性能：** 99.5％、99.9％、99.95％、および 99.99％ の 4 つのサービス可用性オプションで、ビジネスに信頼性の高いデジタル体験を提供します。また、自動バックアップとマルチモードの災害復旧モデルを使用して、信頼性とコンティンジェンシー管理を確保できます。
 
@@ -129,11 +129,11 @@ Cloud Manager とそのリソースについて詳しくは、 [**Cloud Manager 
 
 ### 前提条件 {#prerequisites}
 
-本番用インスタンスは、正式にサポートされている OS を実行する専用マシンで実行されます ( [技術要件](/help/sites-deploying/technical-requirements.md)) の場合、Experience Managerサーバーは、実際にはをサポートする任意のシステムで実行されます [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
+本番用インスタンスは、正式にサポートされている OS を実行する専用マシンで実行されます ( [技術要件](/help/sites-deploying/technical-requirements.md)) の場合、Experience Managerサーバーは、実際にはをサポートする任意のシステムで実行されます。 [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
 
 慣習化を目的とし、AEMでの開発のために、Apple OS X またはMicrosoft® Windows または Linux®のデスクトップバージョンを実行するローカルマシンにインストールされたインスタンスを使用するのが一般的です。
 
-クライアント側では、AEMはすべての最新のブラウザー (**Microsoft® Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47 以降， **Safari** 8 以降 ) をデスクトップとタブレットの両方のオペレーティングシステムで使用できます。 詳細に関しては、[サポートされているクライアントプラットフォーム](/help/sites-deploying/technical-requirements.md#supported-client-platforms)を参照してください。
+クライアント側では、AEMはすべての最新のブラウザーで動作します (**Microsoft® Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47 以降， **Safari** 8 以降 ) をデスクトップとタブレットの両方のオペレーティングシステムで使用できます。 詳細に関しては、[サポートされているクライアントプラットフォーム](/help/sites-deploying/technical-requirements.md#supported-client-platforms)を参照してください。
 
 ### ソフトウェアの入手 {#getting-the-software}
 
@@ -155,7 +155,7 @@ AEMソフトウェアパッケージは、次の 2 つの形式で使用でき�
 
    Windows のインストール先： **`C:\Program Files\aem`**
 
-   同様に、デスクトップ上のフォルダーにサンプルインスタンスをインストールするのが一般的です。いずれの場合も、この場所を一般的に次のように呼びます。
+   同様に、デスクトップ上のフォルダーにサンプルインスタンスをインストールするのが一般的です。いずれの場合も、Adobeはこの場所を一般的に次のように参照します。
 
    `<aem-install>`
 

@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 86%
+source-wordcount: '1723'
+ht-degree: 85%
 
 ---
 
@@ -172,7 +172,7 @@ AEM が標準で Angular および React SPA フレームワークをサポー�
 
 >[!CAUTION]
 >
->[We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)はデモの目的でのみ使用され、推奨される Adobe I/O Runtime の代わりに、Node.js を単純な例として使用します。この例は、どのプロジェクト作業にも使用しないでください。
+>[We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)はデモの目的でのみ使用され、推奨される Adobe I/O Runtime の代わりに、Node.js を単純な例として使用します。この例は、どのプロジェクトの作業にも使用しないでください。
 
 >[!NOTE]
 >

@@ -1,16 +1,12 @@
 ---
 title: データソースの設定
-seo-title: Configure data sources
-description: 各種のデータソースを設定し、それを活用してフォームデータモデルを作成する方法を説明します。
-seo-description: Learn how to configure different types of data sources and leverage to create form data models.
-uuid: 12360c8c-b596-4f9b-837a-10a8ff5c7448
+description: フォームデータモデルを作成できるように、様々なタイプのデータソースを設定する方法を説明します。
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2111'
 ht-degree: 98%

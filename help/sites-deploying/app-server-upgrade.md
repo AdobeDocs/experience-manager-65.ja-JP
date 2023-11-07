@@ -3,10 +3,10 @@ title: アプリケーションサーバーのインストール環境のアッ�
 description: アプリケーションサーバーを介してデプロイされるAEMのインスタンスをアップグレードする方法について説明します。
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 75%
+source-wordcount: '445'
+ht-degree: 69%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 75%
 
    * **sling.options.file** を以下を実行することにより削除します：`find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
-1. 次に、AEM 6.5 で使用されるノードストアとデータストアを作成します。そのためには、次の名前を持つ 2 つのファイルを `crx-quickstart\install` の下に作成します。
+1. 次に、AEM 6.5 で使用するノードストアとデータストアを作成します。これをおこなうには、次の名前を持つ 2 つのファイルを以下の下に作成します。 `crx-quickstart\install`:
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`

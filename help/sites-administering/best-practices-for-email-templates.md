@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: 3f48e059ec8b0b255caf7d29749930e0534a37f7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1081'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 99%
 >
 >最新の[コアコンポーネントのメールコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html?lang=ja)を使用することが推奨されています。
 
-このドキュメントでは、適切な電子メールキャンペーンテンプレートを作成するための、メールデザインに関するいくつかのベストプラクティスについて説明します。
+このドキュメントでは、適切なメールキャンペーンテンプレートを作成するための、メールデザインに関するいくつかのベストプラクティスについて説明します。
 
 AEM で利用可能なデモキャンペーンは、これらすべてのベストプラクティスに従っています。デモキャンペーンでのベストプラクティスの実装方法は、各ベストプラクティスで説明しています。
 
@@ -35,7 +35,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
 >
 >すべてのキャンペーンコンテンツは、`master` タイプのページ `cq/personalization/components/ambitpage` の下に作成してください。
 >
->例えば、計画されているキャンペーン構造が次のような場合
+>例えば、計画されているキャンペーンの構造が
 >
 >`/content/campaigns/teasers/en/campaign-promotion-global`
 >
@@ -83,7 +83,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
   </tr>
   <tr>
    <td>CSS をシンプルに保ちます。複合スタイル宣言、短縮形コード、CSS レイアウトプロパティ、複雑なセレクターおよび疑似要素を避けます。</td>
-   <td>CSS スタイルがデモデザインの説明で使用されている限り、推奨される CSS は次のようになります。</td>
+   <td>CSS スタイルがデモデザインの説明で使用されている限り、CSS のレコメンデーションは次のようになります。</td>
   </tr>
   <tr>
    <td>メールの幅は、最大 600 ～ 800 pixel にする必要があります。このサイズ設定により、多くのクライアントで提供されるプレビューパネルのサイズ内で動作を向上します。</td>

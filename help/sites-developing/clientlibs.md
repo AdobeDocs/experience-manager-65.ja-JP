@@ -7,10 +7,10 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2856'
-ht-degree: 91%
+source-wordcount: '2853'
+ht-degree: 89%
 
 ---
 
@@ -122,7 +122,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 ### /lib でのライブラリの上書き {#overriding-libraries-in-lib}
 
-`/apps` にあるクライアントライブラリフォルダーは、`/libs` にある同じ名前のフォルダーよりも優先されます。例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
+以下にあるクライアントライブラリフォルダー `/apps` 同じ名前のフォルダーよりも、 `/libs`. 例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
 
 ### クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用 {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
@@ -134,7 +134,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 >[!NOTE]
 >
->コードをコンテンツと設定からより詳細に分離するには、以下の場所にクライアントライブラリを配置することをお勧めします。 `/apps` を介して公開します。 `/etc.clientlibs` ～を活用して `allowProxy` プロパティ。
+>コードをコンテンツと設定からより詳細に分離するには、以下の場所にクライアントライブラリを配置することをお勧めします。 `/apps` を介して公開します。 `/etc.clientlibs` を使用して、 `allowProxy` プロパティ。
 
 `/apps` にあるクライアントライブラリにアクセスできるようにするために、プロキシサーブレットが使用されます。ACL は依然としてクライアントライブラリフォルダーで適用されますが、サーブレットを使用すると、`/etc.clientlibs/` プロパティが `allowProxy` に設定されている場合、`true` を介してコンテンツを読み取ることができます。
 
@@ -197,7 +197,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 ### 依存関係へのリンク {#linking-to-dependencies}
 
-クライアントライブラリフォルダーのコードが他のライブラリを参照する場合、他のライブラリを依存関係として識別します。JSP では、クライアントライブラリフォルダーを参照する `ui:includeClientLib` タグが原因で、HTML コードに生成したライブラリファイルへのリンクおよび依存関係が含まれます。
+クライアントライブラリフォルダーのコードが他のライブラリを参照する場合、他のライブラリを依存関係として識別します。JSP では、 `ui:includeClientLib` クライアントライブラリフォルダーを参照するタグによって、HTMLコードに生成されたライブラリファイルへのリンクと依存関係が含まれます。
 
 依存関係は別の `cq:ClientLibraryFolder` でなければなりません。依存関係を識別するには、次の属性を持つプロパティを `cq:ClientLibraryFolder` ノードに追加します。
 

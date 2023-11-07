@@ -9,7 +9,7 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 61%
@@ -240,7 +240,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. Navigate to **[!UICONTROL JWT]** tab, and copy the **[!UICONTROL JWT payload]**.
 
-   The API Key, Client Secret key, and JWT payload information will be used to create IMS account configuration.
+   The API Key, Client Secret key, and JWT payload information that is used to create IMS account configuration.
 -->
 
 ### IMS アカウントの設定 {#create-ims-account-configuration}

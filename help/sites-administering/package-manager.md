@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3570'
-ht-degree: 97%
+source-wordcount: '3568'
+ht-degree: 96%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 97%
 * **アクティビティログ** - このパネルは最初は最小化され、パッケージのビルド時やインストール時などに、パッケージマネージャーのアクティビティの詳細を表示するために拡張されます。「アクティビティログ」タブには、次の操作を行うための追加のボタンがあります。
    * **ログを消去**
    * **表示／非表示**
-* **ツールバー** - ツールバーには、左側のナビゲーションパネルとパッケージリスト用の更新ボタン、およびパッケージを検索、作成、アップロードするためのボタンが含まれています。
+* **ツールバー** - ツールバーには、左側のナビゲーションパネルとパッケージリスト用の更新ボタン、およびパッケージを検索、作成、アップロードするための各ボタンが含まれています。
 
 ![パッケージマネージャー UI](assets/package-manager-ui.png)
 
@@ -275,7 +275,7 @@ ht-degree: 97%
 
 ### パッケージを再度含める {#rewrapping-a-package}
 
-パッケージは、ビルド後に再度含めることができます。再度含めると、パッケージのコンテンツを変更せずに、サムネール、説明などを含まないパッケージ情報を変更します。
+パッケージは、ビルド後に再度含めることができます。再ラップは、パッケージのコンテンツを変更せずに、サムネールや説明などを含めずにパッケージ情報を変更します。
 
 1. [パッケージマネージャーにアクセスします。](#accessing)
 
@@ -581,7 +581,7 @@ AEM パッケージを使用すると、AEM 環境全体でコンテンツを作
 
 [ソフトウェア配布](https://downloads.experiencecloud.adobe.com)は、AEM パッケージの検索とダウンロードを簡素化する一元化されたサービスです。
 
-詳しくは、[ソフトウェア配布ドキュメント](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja)を参照してください。
+詳しくは、 [ソフトウェア配布に関するドキュメント。](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja)
 
 >[!NOTE]
 >

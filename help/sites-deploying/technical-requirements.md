@@ -3,10 +3,10 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0dd6e3fc2fa9539e5c3ce4e99ab367752dfeaad6
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3597'
-ht-degree: 91%
+ht-degree: 89%
 
 ---
 
@@ -226,9 +226,9 @@ Adobe Experience Manager は、クラウドコンピューティング環境上�
 
 アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 
-AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、Azure Blob Storage や AWS S3 などのクラウドサービスが、このページに記載されている技術要件の一部としてサポートされている場合を除きます。
+AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、このページに記載されている技術要件の一部として Cloud Service がサポートされていない限り ( 例：Azure Blob ストレージやAWS S3)。
 
-Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合は、クラウドプロバイダーと直接共同作業することをお勧めします。または、選択したクラウド環境での AEM のデプロイをサポートしているアドビパートナーと協力することをお勧めします。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
+Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合のレコメンデーションは、クラウドプロバイダーと直接共同作業することです。または、選択したクラウド環境での AEM のデプロイをサポートしているアドビパートナーと協力することをお勧めします。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
 
 ### Dispatcher プラットフォーム（web サーバー） {#dispatcher-platforms-web-servers}
 
@@ -537,4 +537,4 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 ### AEM Assets がメタデータの多いアセットを Linux で処理するための要件® {#assetsonlinux}
 
-XMPFilesProcessor プロセスは、 GLIBC_2.14 ライブラリを動作させる必要がある。 GLIBC_2.14 を含む Linux® カーネルを使用します。例えば、Linux® カーネルバージョン 3.1.x です。PSD ファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
+XMPFilesProcessor プロセスは、 GLIBC_2.14 ライブラリを動作させる必要がある。 GLIBC_2.14 を含む Linux®カーネルを使用します。例えば、Linux®カーネルバージョン 3.1.x です。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。

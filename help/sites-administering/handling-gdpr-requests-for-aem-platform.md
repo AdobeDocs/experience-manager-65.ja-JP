@@ -3,10 +3,10 @@ title: Adobe Experience Manager Foundation に対する GDPR 要求の処理
 description: Adobe Experience Manager Foundation に対する GDPR 要求の処理
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 59%
+source-wordcount: '438'
+ht-degree: 63%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 59%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
+>以下の節では GDPR を例として使用していますが、詳細は、GDPR、CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
 
 ## AEM 基盤の GDPR サポート {#aem-foundation-gdpr-support}
 
@@ -38,7 +38,7 @@ AEM 基盤のレベルでは、保存される個人データはユーザープ�
 
 ### HTTP API {#http-api}
 
-既に述べたように、Adobeは、自動化を容易にするユーザーデータにアクセスするための API を提供します。 利用可能な API には、以下のようにいくつかのタイプがあります。
+前述したように、自動化を促進するために、アドビではユーザーデータにアクセスするための API を用意しています。利用可能な API には、以下のようにいくつかのタイプがあります。
 
 **UserProperties API**
 
@@ -71,8 +71,8 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### ユーザーの無効化 {#disable-user}
 
-1. 前述のように、ユーザー管理コンソールを開き、該当するユーザーを検索します。
-1. ユーザーの上にマウスポインターを置いて、選択アイコンをクリックします。 プロファイルがグレーに変わり、選択されたことを示します。
+1. 前述のように、ユーザー管理コンソールを開き、目的のユーザーを検索します。
+1. ユーザーの上にポインタを合わせ、選択アイコンをクリックします。プロファイルがグレーに変わり、選択されたことが示されます。
 
 1. 上部のメニューの「無効にする」ボタンをクリックして、このユーザーを無効にします。
 
@@ -105,7 +105,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### HTTP API {#http-api-1}
 
-以下の手順では、 `curl` コマンドラインツールを使用して、 **[!UICONTROL cavery]** `userId` を削除し、 `cavery` がデフォルトの場所で使用可能になっています。
+以下の手順では、 `curl` コマンドラインツールを使用して、 **[!UICONTROL cavery]** `userId` およびを削除します。 `cavery` がデフォルトの場所で使用可能になっています。
 
 * *ユーザーホームの検出*
 
@@ -124,7 +124,7 @@ curl -X POST -u user:password -FdisableUser="describe the reasons for disabling 
 
 * *ユーザープロファイルの削除*
 
-アカウント検索コマンドから返された JSON ペイロードの home プロパティに含まれているノードパス、および既知のデフォルトのプロファイルノード位置を使用：
+アカウント検索コマンドから返された JSON ペイロードの home プロパティに含まれているノードパス、および既知のデフォルトのプロファイルノード位置を使用：
 
 ```shell
 curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':operation=delete' 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile'

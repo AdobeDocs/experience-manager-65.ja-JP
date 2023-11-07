@@ -1,18 +1,16 @@
 ---
 title: コンテンツページへのワークフローの適用
 description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行できます。複数のワークフローを適用することもできます。
-uuid: 652d9a23-907d-43ad-9eef-7ab1d07918cd
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
-workflow-type: ht
-source-wordcount: '649'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '645'
+ht-degree: 94%
 
 ---
 
@@ -39,7 +37,6 @@ ht-degree: 100%
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
 >* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)。
 >
-
 
 >[!NOTE]
 >
@@ -103,6 +100,7 @@ ht-degree: 100%
    * **パッケージタイトル**
 
       * 識別に役立つように、パッケージのタイトルを指定できます。
+
    >[!NOTE]
    >
    >ワークフローが[マルチリソースサポート](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)のために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。
@@ -117,13 +115,13 @@ ht-degree: 100%
 
    * 追加のアクションを表示するための既存のリソース
 
-      * 「**子を含める**」で、ワークフローに含まれるそのリソースの子を指定します。ダイアログが開いて、以下のものに従って選択を絞り込むことができます。
+      * 「**子を含める**」で、ワークフローに含まれるそのリソースの子を指定します。ダイアログボックスが開き、以下に従って選択を絞り込むことができます。
 
          * 直近の子のみを含める。
          * 変更されたページのみを含める。
          * 既に公開済みのページのみを含める。
 
-         指定した子は、ワークフローが適用されるリソースのリストに追加されます。
+        指定した子は、ワークフローが適用されるリソースのリストに追加されます。
 
       * 「**選択項目を削除**」で、そのリソースをワークフローから削除します。
 
@@ -137,6 +135,6 @@ ht-degree: 100%
 
 ## ページエディターからのワークフローの開始 {#starting-a-workflow-from-the-page-editor}
 
-ページの編集時に、ツールバーから「**ページ情報**」を選択できます。ドロップダウンメニューには、「**ワークフローで開始**」オプションがあります。これによりダイアログが開き、必要なワークフローと必要な場合はタイトルを指定できます。
+ページの編集時に、ツールバーから「**ページ情報**」を選択できます。ドロップダウンメニューには、「**ワークフローで開始**」オプションがあります。これにより、必要なワークフローと必要に応じてタイトルを指定できるダイアログボックスが開きます。
 
 ![wf-54](assets/wf-54.png)

@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2229'
-ht-degree: 98%
+source-wordcount: '2228'
+ht-degree: 97%
 
 ---
 
@@ -303,4 +303,4 @@ Forms Workflow を使用して処理されるデータには、個人を特定�
 
 ## 参照 {#references}
 
-AEM Forms Workflow ステップで変数を使用するその他の例については、[AEM ワークフローの変数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/variables-aem-workflow/introduction.html?lang=ja)を参照してください。
+AEM Forms Workflow ステップでの変数の使用例について詳しくは、 [AEMワークフロー内の変数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/variables-aem-workflow/introduction.html?lang=ja).

@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2268'
 ht-degree: 99%
 
 ---
@@ -321,7 +321,7 @@ AEM では、以下のクエリ言語をサポートしています。
 ## 既存のインデックスのチューニング {#existing-index-tuning}
 
 1. 最適なクエリがプロパティインデックスに解決される場合、プロパティインデックスでは最小限のチューニングのみが可能なので、他にすることはありません。
-1. できることがある場合、クエリは Lucene プロパティインデックスに解決される必要があります。解決できるインデックスがない場合は、「新しいインデックスの作成」に進んでください。
+1. できることがある場合、クエリは Lucene プロパティインデックスに解決される必要があります。解決できるインデックスがない場合は、インデックスの作成に進みます。
 1. 必要に応じて、クエリを XPath または JCR-SQL2 に変換します。
 
    * **Query Builder クエリ**

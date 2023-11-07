@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 25%
+source-wordcount: '419'
+ht-degree: 21%
 
 ---
 
@@ -66,6 +66,6 @@ We.Retail は、グローバル化されたサイト構造を使用して構築�
 >
 >この手順では、Microsoft®の機械翻訳との組み込みの統合について説明しました。 の使用 [AEM Translation Integration Framework](/help/sites-administering/translation.md)を使用すると、多くの標準翻訳サービスと統合して、AEMの翻訳を調整できます。
 
-## その他の情報 {#further-information}
+## 詳細情報 {#further-information}
 
-技術的な詳細については、オーサリングドキュメントの [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
+詳しくは、オーサリングドキュメントを参照してください。 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md) 」を参照してください。

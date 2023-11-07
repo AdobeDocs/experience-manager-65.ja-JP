@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 88%
+source-wordcount: '1012'
+ht-degree: 84%
 
 ---
 
@@ -51,7 +51,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 ## 依存関係、設定、ビルド {#dependencies-configuration-and-building}
 
-サンプルの SPA では、必要な Angular の依存関係以外に、追加のライブラリも利用して SPA の作成を効率化できます。
+サンプルの SPA では、必要な Angular の依存関係以外に、追加のライブラリも使用して SPA の作成を効率化できます。
 
 ### 依存関係 {#dependencies}
 
@@ -106,7 +106,7 @@ module.exports = {
 
 ### ビルド {#building}
 
-実際には、 [Webpack](https://webpack.js.org/) aem-clientlib-generator に加え、クライアントライブラリの自動作成に使用するトランスパイルのため。 したがって、build コマンドは次のようになります。
+アプリの実際のビルドでは、クライアントライブラリの自動作成用の aem-clientlib-generator 以外に、トランスパイル用に [Webpack](https://webpack.js.org/) も使用します。したがって、build コマンドは次のようになります。
 
 `"build": "ng build --build-optimizer=false && clientlib",`
 
@@ -114,7 +114,7 @@ module.exports = {
 
 ### AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を使用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を使用します。
 
 ## アプリケーション構造 {#application-structure}
 
@@ -282,7 +282,7 @@ AEMのSPAの中心概念は、SPAコンポーネントをAEMコンポーネン�
 
 単一ページのアプリケーション内のコンポーネントが情報を共有することは定期的に必要です。これを行う推奨方法にはいくつかあり、以下に簡単なものから順に示します。
 
-* **オプション 1**：util クラスを純粋なオブジェクト指向のソリューションとして使用するなど、ロジックを一元化し、必要なコンポーネントにブロードキャストします。
+* **オプション 1:** util クラスを純粋なオブジェクト指向のソリューションとして使用するなど、ロジックを一元化し、必要なコンポーネントにブロードキャストします。
 * **オプション 2**：NgRx などのステートライブラリを使用して、コンポーネントの状態を共有します。
 * **オプション 3**：コンテナコンポーネントをカスタマイズおよび拡張することで、オブジェクト階層を活用します。
 
@@ -294,4 +294,4 @@ AEMのSPAの中心概念は、SPAコンポーネントをAEMコンポーネン�
 
 動的モデルからコンポーネントへのマッピング、および　AEM の SPA 内での動作について詳しくは、[SPA の動的モデルからコンポーネントへのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の記事を参照してください。
 
-React や Angular 以外のフレームワーク用に AEM の SPA を実装する場合や、AEM 用 SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
+AEMに React やAngular以外のフレームワーク用にSPAを実装する場合や、AEM用SPA SDK の仕組みを詳しく知りたい場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 記事。

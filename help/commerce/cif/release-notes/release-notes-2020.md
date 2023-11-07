@@ -2,9 +2,9 @@
 title: AEM Content and Commerce リリースノート 2020
 description: Adobe Experience Manager Content and Commerce リリースノート 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1353'
 ht-degree: 68%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 68%
 
 * ビジネスユーザーがAEMコンテンツページにこのコンポーネントをドラッグ&amp;ドロップして、コマースデータを使用してコンテンツページをエンリッチメントできるようにする、新しいカテゴリカルーセルコンポーネントが追加されました。
 
-* CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。Adobeクライアントデータレイヤーは、データを収集し、そのデータを Digital Analytics およびレポートサーバーと通信するための標準化された方法です。 詳しくは、[Adobe Client データレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を参照してください。
+* CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。Adobeクライアントデータレイヤーは、データを収集し、そのデータを Digital Analytics およびレポートサーバーと通信するための標準化された方法です。 詳しくは、 [Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki).
 
 * Adobe Commerce 管理 UI 内で設定された SEO メタデータ（タイトル、メタ説明、メタキーワードなど）を自動的に入力するように、製品の詳細ページと製品リストページが拡張されました。
 

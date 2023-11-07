@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 88%
+source-wordcount: '639'
+ht-degree: 86%
 
 ---
 
@@ -27,7 +27,7 @@ Web サイトのページにコンテンツを追加する場合、多くは、�
 
 >[!NOTE]
 >
->クラシック UI で作成された注釈は、タッチ対応 UI に表示されます。ただし、スケッチは、UI 固有で、それを作成した UI でのみ表示されます。
+>クラシック UI で作成された注釈は、タッチ操作対応 UI に表示されます。 ただし、スケッチは、UI 固有で、それを作成した UI でのみ表示されます。
 
 >[!CAUTION]
 >

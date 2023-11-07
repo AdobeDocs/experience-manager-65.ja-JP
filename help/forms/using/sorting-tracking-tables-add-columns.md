@@ -1,7 +1,7 @@
 ---
 title: 追跡テーブルのカスタマイズ
 seo-title: Customize tracking tables
-description: AEM Forms Workspace の「追跡」タブに表示されるタスクテーブルのユーザープロセスの詳細表示をカスタマイズする方法。
+description: AEM Forms Workspace の「監査」タブに表示されるタスクテーブルでのユーザープロセスの詳細の表示をカスタマイズする方法。
 seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 100%
+ht-degree: 36%
 
 ---
 
 # 追跡テーブルのカスタマイズ{#customize-tracking-tables}
 
-AEM Forms Workspace の「追跡」タブを使用すると、ログインしたユーザーが関係するプロセスインスタンスの詳細を表示できます。追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
+AEM Forms Workspace の「追跡」タブを使用すると、ログインしたユーザーが関係するプロセスインスタンスの詳細を表示できます。追跡テーブルを表示するには、最初に左側のペインでプロセス名を選択して、中央のペインでインスタンスのリストを表示します。 プロセスインスタンスを選択して、このインスタンスによって生成されたタスクのテーブルを右側のウィンドウに表示します。 デフォルトでは、テーブル列には次のタスク属性が表示されます（タスクモデル内の対応する属性は括弧内に表示されます）。
 
 * ID（`taskId`）
 * 名前（`stepName`）
@@ -89,7 +89,7 @@ AEM Forms Workspace の「追跡」タブを使用すると、ログインした
   </tr>
   <tr>
    <td><p>isApprovalUI</p> </td>
-   <td><p>priority</p> </td>
+   <td><p>優先度</p> </td>
    <td><p>taskACL</p> </td>
   </tr>
   <tr>
@@ -117,9 +117,9 @@ AEM Forms Workspace の「追跡」タブを使用すると、ログインした
 
 次のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDK を使用してセマンティックの変更を行い、変更されたソースから縮小パッケージを構築する方法については、「[AEM Forms Workspace のカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md)」を参照してください。
 
-## テーブル列と順序の変更 {#changing-table-columns-and-their-order}
+## テーブルの列と順序の変更 {#changing-table-columns-and-their-order}
 
-1. テーブルに表示されたタスク属性とそれらの順序を変更するには、ファイル /ws/js/runtime/templates/processinstancehistory.html を設定します。
+1. テーブルに表示されるタスク属性とその順序を変更するには、ファイル/ws/js/runtime/templates/processinstancehistory.htmlを設定します。
 
    ```html
    <table>
@@ -141,7 +141,7 @@ AEM Forms Workspace の「追跡」タブを使用すると、ログインした
        <tbody>
            <%_.each(obj, function(task){%>
            <tr>
-               <!-- Put the task attributes in the order of headings, for example -->
+               <!-- Put the task attributes in the order of headings, for example, -->
                <td><%= task.stepName %></td>
                <td><%= task.instructions %></td>
                <td><%= !task.selectedRoute?'':(task.selectedRoute=='null'?'Default':task.selectedRoute) %></td>
@@ -153,9 +153,9 @@ AEM Forms Workspace の「追跡」タブを使用すると、ログインした
    </table>
    ```
 
-## 追跡テーブルの並べ替え {#sorting-a-tracking-table}
+## トラッキングテーブルの並べ替え {#sorting-a-tracking-table}
 
-列の見出しをクリックするときにタスクリストテーブルを並べ替えるには：
+列見出しをクリックしたときにタスクリストテーブルを並べ替えるには：
 
 1. ファイル `js/runtime/views/processinstancehistory.js` の `.fixedTaskTableHeader th` にクリックハンドラーを登録します。
 
@@ -177,9 +177,9 @@ AEM Forms Workspace の「追跡」タブを使用すると、ログインした
 
 1. `TaskTableHeaderClick` メソッドを `js/runtime/util/history.js` で公開します。
 
-   メソッドはクリックイベントからタスク属性を検索し、その属性のタスクリストを並べ替えて、並べ替えられたタスクリストでタスクテーブルをレンダリングします。
+   メソッドは、click イベントから task 属性を検索し、その属性の tasklist を並べ替え、並べ替えられた tasklist を使用して task テーブルをレンダリングします。
 
-   並べ替えは、比較関数を指定することによって、タスクリストコレクションの Backbone 並べ替え関数を使用して行われます。
+   並べ替えは、比較関数を提供することで、タスクリストコレクションの Backbone 並べ替え関数を使用して行われます。
 
    ```javascript
        return {

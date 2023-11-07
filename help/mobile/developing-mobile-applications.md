@@ -1,16 +1,12 @@
 ---
 title: AEM でのモバイルアプリケーションの開発
-seo-title: Developing Mobile Applications in AEM
-description: ここでは、Adobe PhoneGap Enterprise を使用したAEMでのモバイルアプリケーションの開発を開始します。
-seo-description: Follow this page to start developing mobile application in AEM using Adobe PhoneGap Enterprise.
-uuid: d8442447-ee04-4bb2-a0d7-17dcc8979dba
+description: このページでは、Adobe PhoneGap Enterprise を使用したAEMでのモバイルアプリケーションの開発を開始します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: fd7bcf17-af7e-4bd6-8137-48401d9743c5
 exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 15%
@@ -23,7 +19,7 @@ ht-degree: 15%
 >
 >Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-AEMは、Adobe PhoneGapとAdobePublishing Solutions を活用し、コンテンツに富んだユーティリティベースのクロスプラットフォームモバイルアプリケーションを作成および管理できます。
+AEMはAdobe PhoneGapとAdobeパブリッシングソリューションを使用しており、コンテンツに富んだユーティリティベースのクロスプラットフォームモバイルアプリケーションを作成および管理できます。
 
 * すべての会社のモバイルアプリを 1 か所で管理します。
 * プロファイルのプロビジョニングの複雑さや、共有用にアプリを作成およびアップロードする追加の手間を必要とせずに、開発環境およびステージング環境でアプリをレビューできます。
@@ -54,9 +50,9 @@ Starter Kit Git リポジトリの readme には、スターターキットの�
 >
 >ラボを含むその他の参照用実装ソースは、GitHub にあります [ここ](https://github.com/adobe-marketing-cloud-apps) そして、「台所流し台」の源 [ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink).
 
-## IOS 9 および HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
+## iOS 9 および HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
 
-iOSの開発者は、iOS 9 で実行される Cordova アプリのオープンな問題を認識している必要があります。 この問題により、安全でないホスト ( *http://localhost:4502*) をクリックします。 この問題は、（Cordova CLI で使用される）cordova-ios の今後のリリースで解決されますが、それまでの間に、次の 2 つの回避策が用意されています。
+IOSの開発者は、iOS 9 で実行される Cordova アプリのオープンな問題を認識している必要があります。 この問題により、安全でないホスト ( *http://localhost:4502*) をクリックします。 この問題は、（Cordova CLI で使用される）cordova-ios の今後のリリースで解決されますが、それまでの間に、次の 2 つの回避策が用意されています。
 
 1. 即時の回避策として、iOS 8 シミュレーターを問題なく使用できます。
 1. iOS 9 を使用する必要がある場合は、 apps -Info.plist （実行後に見つかります） `cordova platform add ios` 」の&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;) ファイルを手動で編集して、次のプロパティを含めることができます。

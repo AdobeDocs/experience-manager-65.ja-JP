@@ -7,10 +7,10 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1880'
-ht-degree: 79%
+source-wordcount: '1879'
+ht-degree: 78%
 
 ---
 
@@ -40,7 +40,7 @@ Correspondence Management ソリューションを使用すると、通信を作
 ### 通信作成ユーザーインターフェイスへのボタンの追加 {#add-the-button-to-the-create-correspondence-user-interface}
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. config フォルダーにある defaultApp フォルダーに類似したパスまたはフォルダー構造で、`defaultApp` という名前のフォルダーを apps フォルダーに作成します。フォルダーの作成手順は次のとおりです。
+1. apps フォルダーに、 `defaultApp` （config フォルダー内の）defaultApp フォルダーに似たパス/構造を持つ フォルダーの作成手順は次のとおりです。
 
    1. 次のパスにある **defaultApp** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -335,7 +335,7 @@ components.zip ファイルをダウンロードして解凍し、DSCSample.jar 
 >
 >この手順が必要となるのは、OSGI セットアップを使用していて、実装しているカスタマイズのタイプで LC 統合が必要になる場合に限られます。
 
-LCA プロセスは LiveCycle サーバー上で実行され、サーバーアドレスとログイン情報が必要になります。
+LCA プロセスは LiveCycle サーバー上で実行され、サーバーアドレスとログイン資格情報が必要になります。
 
 1. `https://'[server]:[port]'/system/console/configMgr` にアクセスし、Admin でログインしてください。
 1. Adobe LiveCycle Client SDK 設定を見つけて、**編集**（編集アイコン）をクリックしてください。設定パネルが開きます。

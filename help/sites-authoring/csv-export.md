@@ -1,7 +1,7 @@
 ---
 title: CSV ファイルへの書き出し
 seo-title: Export to CSV
-description: ページに関する情報をローカルシステム上の CSV ファイルに書き出す
+description: ページに関する情報をローカルシステムの CSV ファイルに書き出す
 seo-description: Export information about your pages to a CSV file on your local system
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
 contentOwner: Chris Bohnert
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 85%
+source-wordcount: '189'
+ht-degree: 83%
 
 ---
 
@@ -43,19 +43,19 @@ The **CSV の書き出しファイルを作成** ウィザードで次の項目�
       * 翻訳済み
    * 分析
       * ページ表示
-      * 個別訪問者数
+      * ユニーク訪問者
       * ページ滞在時間
 * 深さ
    * 親パス
    * 直属の子要素のみ
-   * 追加の子のレベル
+   * 子の追加のレベル
    * レベル
 
 生成された `export.csv` ファイルは、Excel（または互換性のあるその他のアプリケーション）で開くことができます。
 
 ![etc-01](assets/etc-01.png)
 
-「**CSV レポート**&#x200B;の作成」オプションは、**Sites** コンソールをリスト表示で参照するときに使用できる、**作成**&#x200B;ドロップダウンメニューのオプションです。
+作成 **CSV レポート** オプションは、 **Sites** コンソール（リスト表示）：これは、 **作成** ドロップダウンメニュー：
 
 ![etc-02](assets/etc-02.png)
 

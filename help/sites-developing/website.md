@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '4941'
 ht-degree: 88%
@@ -729,7 +729,7 @@ listchildren コンポーネントのスクリプトを開発します。
    <%@include file="/libs/foundation/global.jsp"%><%
    %><%@ page import="java.util.Iterator,
             com.day.cq.wcm.api.PageFilter"%><%
-        /* Create a new Page object using the path of the current page */
+        /* Create a Page object using the path of the current page */
          String listroot = properties.get("listroot", currentPage.getPath());
         Page rootPage = pageManager.getPage(listroot);
         /* iterate through the child pages and gather properties */

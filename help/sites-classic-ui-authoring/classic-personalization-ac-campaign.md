@@ -1,19 +1,15 @@
 ---
 title: Adobe Campaign 6.1 および Adobe Campaign Standard の使用
-seo-title: Working with Adobe Campaign 6.1 and Adobe Campaign Standard
 description: AEM でメールコンテンツを作成して、Adobe Campaign のメールで処理することができます。
-seo-description: You can create email content in AEM and process it in Adobe Campaign emails.
-uuid: 439df7fb-590b-45b8-9768-565b022a808b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 61b2bd47-dcef-4107-87b1-6bf7bfd3043b
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 50%
+source-wordcount: '1163'
+ht-degree: 46%
 
 ---
 
@@ -21,7 +17,7 @@ ht-degree: 50%
 
 AEM でメールコンテンツを作成して、Adobe Campaign のメールで処理することができます。これを実行するには、次の手順に従う必要があります。
 
-1. AEM で、Adobe Campaign 固有のテンプレートから新しいニュースレターを作成します。
+1. AEMでAdobe Campaign固有のテンプレートからニュースレターを作成します。
 1. 選択 [Adobe Campaignサービス](#selectingtheadobecampaigncloudservice) コンテンツを編集してすべての機能にアクセスする前に、
 1. コンテンツを編集します。
 1. コンテンツを検証します。
@@ -56,7 +52,7 @@ Adobe Campaign のコンテンツを AEM 内で作成する場合は、すべて
 
    >[!NOTE]
    >
-   >[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md#weretail)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
+   >[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md#weretail)。サンプルGeometrixxコンテンツをパッケージ共有からダウンロードします。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -116,7 +112,7 @@ Adobe Campaignと統合するには、ページにAdobe Campaignクラウドサ�
 コンテンツの編集時に、以下を挿入できます。
 
 * Adobe Campaign コンテキストフィールド。これらは、受信者のデータ（名、姓またはターゲットディメンションの任意のデータなど）に応じてテキスト内に適応させるために挿入できるフィールドです。
-* Adobe Campaign パーソナライゼーションブロック。ブランドのロゴやミラーページへのリンクなど、受信者のデータに関係なく表示される、事前定義されたコンテンツのブロックです。
+* Adobe Campaign パーソナライゼーションブロック。これらは、ブランドロゴやミラーページへのリンクなど、受信者のデータとは関係のない定義済みコンテンツのブロックです。
 
 詳しくは、 [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md) を参照してください。
 
@@ -147,7 +143,7 @@ Adobe Campaignと統合するには、ページにAdobe Campaignクラウドサ�
 
 ### ニュースレターのプレビュー {#previewing-a-newsletter}
 
-ニュースレターの外観やパーソナライゼーションのプレビューを確認できます。
+ニュースレターの外観とパーソナライゼーションのプレビューをプレビューできます。
 
 1. プレビューするニュースレターを開き、プレビュー（虫眼鏡）アイコンをクリックすると、サイドキックが小さく折りたたまれます。
 1. メールクライアントのアイコンをクリックすると、各メールクライアントでニュースレターがどのように表示されるかを確認できます。

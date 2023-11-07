@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 exl-id: e1519477-b5a8-4947-8597-26b945a3b819
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1710'
-ht-degree: 31%
+source-wordcount: '1707'
+ht-degree: 30%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 31%
 
 管理コンソールのコア設定ページには、システムパフォーマンスの向上に役立つ設定が表示されます。 これらの設定を構成または更新した後、アプリケーションサーバーを再起動します。
 
-セーフバックアップモードの有効化については、 [セーフバックアップモードの有効化と無効化](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md#enabling-and-disabling-safe-backup-mode).
+セーフバックアップモードの有効化について詳しくは、 [セーフバックアップモードの有効化と無効化](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md#enabling-and-disabling-safe-backup-mode).
 
 
 >[!NOTE]
@@ -77,7 +77,7 @@ GDS ディレクトリの追加情報については、[AEM Forms のインス�
 
 **システムフォントディレクトリの場所** オペレーティングシステムが提供するフォントディレクトリのパスを入力します。 複数のディレクトリを追加する場合は、セミコロン **;** で区切って指定します。
 
-**データサービス設定ファイルの場所** services-config.xml ファイルの場所を指定します。 デフォルトでは、このファイルは adobe-core-appserver.ear ファイルに埋め込まれており、ユーザーはアクセスできません。デフォルトの services-config.xml ファイルのコピーは、[aem-forms root]\sdk\misc\DataServices\Server-Configuration にあります。このファイルを変更して移動した場合は、このフィールドに新しい場所を入力します。
+**データサービス設定ファイルの場所** services-config.xml ファイルの場所を指定します。 デフォルトでは、このファイルは adobe-core-appserver.ear ファイルに埋め込まれており、ユーザーはアクセスできません。デフォルトの services-config.xml ファイルのコピーは、 [aem-forms ルート]\sdk\misc\DataServices\Server-Configuration. このファイルを変更して移動した場合は、このフィールドに新しい場所を入力します。
 
 データサービス設定ファイルを使用すると、認証タイプやデバッグ出力など、データサービスの設定をカスタマイズできます。
 
@@ -87,7 +87,7 @@ GDS ディレクトリの追加情報については、[AEM Forms のインス�
 
 この設定は必須です。 デフォルト値は65536バイトです。
 
-**デフォルトのドキュメント破棄タイムアウト（秒）** 様々な AEM Forms コンポーネント間で受け渡されるドキュメントをアクティブと見なす最長の時間（秒単位）。この時間が経過すると、このドキュメントの保存に使用されるファイルは削除される可能性があります。 この設定を使用して、ディスク容量の使用を制御します。
+**デフォルトのドキュメント破棄タイムアウト（秒）** 様々な AEM Forms コンポーネント間で受け渡されるドキュメントをアクティブと見なす最長の時間（秒単位）。この時間が経過すると、このドキュメントの保存に使用されるファイルは削除される可能性があります。 この設定を使用して、ディスク領域の使用量を制御します。
 
 この設定は必須です。 デフォルト値は 600 秒です。
 
@@ -97,7 +97,7 @@ GDS ディレクトリの追加情報については、[AEM Forms のインス�
 
 **FIPS を有効にする** FIPS モードを有効にするには、このオプションを選択します。連邦情報処理規格 (FIPS)140-2 は、米国政府が定義した暗号規格です。 FIPS モードで実行する場合、AEM forms では、RSA BSAFE Crypto-C 2.1 暗号化モジュールを使用して、データ保護が FIPS 140-2 承認アルゴリズムに制限されます。
 
-FIPS モードでは、Adobe Acrobat®バージョン 7.0 より前のバージョンで使用される暗号化アルゴリズムはサポートされていません。FIPS モードが有効で、Encryption サービスを使用して互換性レベルがAcrobat 5に設定されたPDFを使用して暗号化する場合、暗号化は失敗します。
+FIPS モードでは、7.0 より前のバージョンのAdobe Acrobat®で使用されている暗号化アルゴリズムはサポートされていません。FIPS モードが有効で、Encryption サービスを使用して、互換性レベルがAcrobat 5に設定されたPDFを使用してパスワードを暗号化する場合、暗号化の試行は失敗し、エラーが発生します。
 
 一般に、FIPS が有効な場合、Assembler サービスはどのドキュメントにもパスワード暗号化を適用しません。 この処理を試みると、FIPSModeException がスローされ、「FIPS モードではパスワードの暗号化が許可されていません」と示されます。 また、ベースドキュメントがパスワードで暗号化されている場合、 Document Description XML (DDX) PDFsFromBookmarks 要素は FIPS モードではサポートされません。
 

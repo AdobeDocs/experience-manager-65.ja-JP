@@ -1,20 +1,16 @@
 ---
 title: アダプティブフォームにおけるレコードのドキュメントの生成
-seo-title: Generate Document of Record for adaptive forms
 description: アダプティブフォームでレコードのドキュメント (DoR) のテンプレートを生成する方法について説明します。
-seo-description: Explains how you can generate a template for a document of record (DoR) for adaptive forms.
-uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3544'
-ht-degree: 75%
+source-wordcount: '3545'
+ht-degree: 74%
 
 ---
 
@@ -219,7 +215,7 @@ ht-degree: 75%
 
 基本テンプレートは、レコードのドキュメントにスタイルと外観の情報を提供します。 これにより、自動生成されたレコードのドキュメントのデフォルトの外観をカスタマイズできます。 例えば、レコードのドキュメントのヘッダーに会社のロゴを追加し、フッターに著作権情報を追加するとします。 基本テンプレートのマスターページは、レコードのドキュメントテンプレートのマスターページとして使用されます。 マスターページには、レコードのドキュメントに適用できるページヘッダー、ページフッター、ページ番号などの情報を含めることができます。 レコードのドキュメント自動生成用の基本テンプレートを使用することで、この情報をレコードのドキュメントに適用できます。基本テンプレートを使用すると、フィールドのデフォルトプロパティを変更することができます。
 
-後に続いてください [基本テンプレートの規則](#base-template-conventions) 基本テンプレートを設計する際に使用します。
+必ず従ってください [基本テンプレートの規則](#base-template-conventions) 基本テンプレートを設計する際に使用します。
 
 ## 基本テンプレートの規則 {#base-template-conventions}
 
@@ -235,7 +231,7 @@ ht-degree: 75%
 
 **フィールドのスタイリング規則**
 
-* レコードのドキュメント内のフィールドにスタイルを適用するため、基本テンプレートは`AF_METATEMPLATE`ルートサブフォーム内の`AF_FIELDSSUBFORM`サブフォームにフィールドを作成します。
+* レコードのドキュメント内のフィールドにスタイルを適用するために、基本テンプレートは、 `AF_FIELDSSUBFORM` ～の下から下へ下がる `AF_METATEMPLATE` ルートサブフォーム。
 
 * これらのフィールドのプロパティは、レコードのドキュメント内のフィールドに適用されます。これらのフィールドは、`AF_<name of field in all caps>_XFO` の命名規則に従う必要があります。例えば、チェックボックスのフィールド名は `AF_CHECKBOX_XFO` とする必要があります。
 

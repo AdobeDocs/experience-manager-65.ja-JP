@@ -6,10 +6,10 @@ role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '2000'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 | AEM 6.5 | この記事 |
 
 <!-- Scope of metadata articles:
-* metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
+* metadata.md: The scope of this article is basic metadata updates, changes, and so on, operations that end-users can do.
 * metadata-concepts.md: All conceptual information. Minor instructions are OK but it is an FYI article about support and standards.
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
@@ -56,7 +56,7 @@ ht-degree: 100%
 ### メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータプロファイル]**&#x200B;に移動し、「**[!UICONTROL 作成]**」をクリックします。
-1. プロファイルのタイトル（例：`Sample Metadata`）を入力して、「**[!UICONTROL 作成]**」をクリックします。メタデータプロファイルの「[!UICONTROL フォームを編集]」が表示されます。
+1. プロファイルのタイトルを入力します（例： ）。 `Sample Metadata`をクリックし、 **[!UICONTROL 作成]**. メタデータプロファイルの「[!UICONTROL フォームを編集]」が表示されます。
 
    ![メタデータフォームの編集](assets/metadata-edit-form.png)
 

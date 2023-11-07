@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1222'
 ht-degree: 22%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 22%
 
 SSL を有効にするには、WebSphere は、ローカルの OS ユーザーレジストリ内の、システムを管理する権限を持つユーザーアカウントにアクセスする必要があります。
 
-* (Windows) Administrators グループに属し、オペレーティングシステムの一部として機能する権限を持つ新しい Windows ユーザーを作成します。 ( 詳しくは、 [WebSphere 用の Windows ユーザーの作成](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
+* (Windows) Administrators グループに属し、オペレーティングシステムの一部として機能する権限を持つ Windows ユーザーを作成します。 ( 詳しくは、 [WebSphere 用の Windows ユーザーの作成](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere).)
 * (Linux、UNIX)root ユーザーまたは root 権限を持つ別のユーザーを指定できます。 WebSphere で SSL を有効にする場合は、このユーザーのサーバー ID とパスワードを使用します。
 
 ### WebSphere 用の Linux または UNIX ユーザーの作成 {#create-a-linux-or-unix-user-for-websphere}

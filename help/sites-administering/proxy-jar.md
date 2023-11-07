@@ -7,7 +7,7 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 8%
@@ -82,7 +82,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **失われたリクエストの検索**
 
-複雑なサーバー設定（ファイアウォールや Dispatcher を使用する場合など）でリクエストが失われた場合、プロキシサーバーを使用して、リクエストが失われた場所を特定できます。 ファイアウォールがある場合：
+複雑なサーバー設定（ファイアウォールや Dispatcher を使用している場合など）でリクエストが失われた場合、プロキシサーバーを使用して、リクエストが失われた場所を特定できます。 ファイアウォールがある場合：
 
 1. ファイアウォールの前にプロキシを開始する
 1. ファイアウォール後に別のプロキシを開始する

@@ -1,25 +1,21 @@
 ---
 title: チェックリスト
-seo-title: Checklists
-description: 次のチェックリストに、テストでの主な問題を示します。
-seo-description: The following checklist highlights some of the main testing issues
-uuid: 0456c98c-779f-415d-9641-b17ac141698b
+description: 次のチェックリストは、主なテストの問題の一部を示しています
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 exl-id: 16c5f9aa-024d-4d8a-ba08-22b073289cfd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 100%
+source-wordcount: '156'
+ht-degree: 81%
 
 ---
 
 # チェックリスト{#checklists}
 
-次のチェックリストでは、主な問題の一部を重点的に説明しています。詳しくは、テストに関する他の節を参照してください。
+次のチェックリストは、主な問題の一部を重点的に示しています。詳しくは、テストに関する他の節を参照してください。
 
 | チェック項目 | 応答 | アクション | 所有者 | 期限 |
 |---|---|---|---|---|

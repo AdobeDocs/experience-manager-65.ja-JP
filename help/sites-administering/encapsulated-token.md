@@ -1,18 +1,14 @@
 ---
 title: カプセル化されたトークンのサポート
-seo-title: Encapsulated Token Support
 description: AEMでのカプセル化されたトークンのサポートについて説明します。
-seo-description: Learn about the Encapsulated Token support in AEM.
-uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '792'
 ht-degree: 35%
 
 ---

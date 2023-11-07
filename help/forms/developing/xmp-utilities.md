@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
 role: Developer
 exl-id: cff65f74-ba95-438e-88a4-5ec7d22aafba
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 100%
+source-wordcount: '1404'
+ht-degree: 98%
 
 ---
 
@@ -39,7 +39,7 @@ XMP ユーティリティサービスを使用して、次のタスクを実行�
 
 ## メタデータの PDF ドキュメントへのインポート {#importing-metadata-into-pdf-documents}
 
-XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートできます。メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDF ドキュメントに関する情報を提供します。メタデータは、次の図に示すように、ドキュメントの「ドキュメントのプロパティ」ダイアログに配置できます。
+XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートできます。メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDF ドキュメントに関する情報を提供します。メタデータは、次の図に示すように、ドキュメントのドキュメントのプロパティダイアログで使用できます。
 
 ![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
 

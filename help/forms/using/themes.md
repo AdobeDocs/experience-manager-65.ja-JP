@@ -1,17 +1,13 @@
 ---
 title: テーマの作成および使用
-seo-title: Creating and using themes
 description: テーマを使用して、アダプティブフォームやインタラクティブ通信のスタイルを設定し、視覚的な ID を提供することができます。 テーマは、任意の数のアダプティブフォームやインタラクティブ通信で共有できます。
-seo-description: You can use themes to stylize and provide a visual identity to an adaptive form or interactive communication. You can share a theme across any number of adaptive forms or interactive communications.
-uuid: 88b6b6fd-181b-48c5-ac15-2b37592bd14b
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, interactive-communications
 content-strategy: max-2018
-discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 feature: Adaptive Forms
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '6106'
 ht-degree: 81%
@@ -20,7 +16,7 @@ ht-degree: 81%
 
 # テーマの作成および使用 {#creating-and-using-themes}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -224,11 +220,11 @@ AEM Formsにはテーマエディターが付属しています。 テーマエ�
      特定の背景色が設定されているすべてのフィールドコンポーネントをカスタマイズすると、年齢フィールド、名前フィールド、住所フィールドなど、すべてのフィールドでその背景色が継承されます。年齢などの数値ボックスを選択し、幅を短くすると、年齢や家族の人数など、すべての数値ボックスの幅が短くなります。テキストボックスの幅は変更されません。
 
    * **状態：**&#x200B;特定の状態にあるオブジェクトのスタイル設定をカスタマイズします。例えば、デフォルト、フォーカス、無効、ホバー、エラーの状態におけるオブジェクトの見え方を指定できます。
-   * **プロパティカテゴリ：**&#x200B;スタイル設定プロパティには、様々なカテゴリがあります。例えば、サイズと位置、テキスト、背景、境界線、効果などです。各カテゴリで、スタイル設定情報を指定します。例えば、背景では、背景色や画像とグラデーションを指定します。
+   * **プロパティカテゴリ：**&#x200B;スタイル設定プロパティには、様々なカテゴリがあります。例えば、ディメンションと位置、テキスト、背景、境界線および効果などです。各カテゴリで、スタイル設定情報を指定します。例えば、背景では、背景色や画像とグラデーションを指定します。
 
    * **詳細：**&#x200B;カスタムの CSS を任意のオブジェクトに追加することができます。この CSS により、スタイル設定が重複している場合は、視覚的な制御を行うプロパティが上書きされます。
 
-   * **CSS を表示**:選択したコンポーネントの CSS を表示できます
+   * **CSS を表示**：選択したコンポーネントの CSS を表示できます。
 
   また、サイドバーの下部に矢印が表示されます。矢印をクリックすると、「**成功をシミュレート**」と「**エラーをシミュレート」という 2 つのオプションがさらに表示されます。**&#x200B;これらのオプションは、上記のオプションと合わせて、詳細が[下記](../../forms/using/themes.md#using-rail)で説明されています。
 
@@ -495,7 +491,7 @@ AEM で Adobe Fonts を設定するには、次の手順を実行します。
 
 1. オーサーインスタンスで、![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager／ツール![hammer](assets/hammer.png)／デプロイメント／クラウドサービスに移動します。
 1. **Cloud Services** ページで、「**Adobe Fonts**」オプションに移動して開きます。設定フォルダーを開き、「**作成**」をクリックします。
-1. の **設定を作成** ダイアログで、設定のタイトルを指定し、 **作成**.
+1. 次の日： **設定を作成** ダイアログで、設定のタイトルを指定し、「 **作成**.
 
    設定ページにリダイレクトされます。
 
@@ -626,7 +622,7 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 * サイドバーの「**CSS を表示**」オプション：テーマでコンポーネントを選択すると、サイドバーに「CSS を表示」オプションが表示されます。`::before`、`::after` 疑似要素を含め、生成された CSS を表示します。
 * キャンバスツールバーの「**テーマ CSS を表示**」オプション：キャンバスツールバーで、![theme-options](assets/theme-options.png)／**テーマ CSS を表示**&#x200B;をクリックします。テーマエディターで定義したプロパティから生成されたテーマ CSS 全体を表示できます。
 
-## トラブルシューティング、推奨事項、ベストプラクティス {#troubleshooting-recommendations-and-best-practices}
+## トラブルシューティング、レコメンデーション、ベストプラクティス {#troubleshooting-recommendations-and-best-practices}
 
 * **別のテーマに属するアセットの回避**
 

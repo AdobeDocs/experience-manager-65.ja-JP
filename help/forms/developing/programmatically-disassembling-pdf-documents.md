@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 role: Developer
 exl-id: c5e712e0-5c3f-48cd-91cf-fd347222a6b2
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 86%
+source-wordcount: '1760'
+ht-degree: 85%
 
 ---
 
@@ -26,7 +26,7 @@ Assembler サービスに PDF ドキュメントを渡すことで、ドキュ�
 
 ![pd_pd_pdfsfrombookmarks](assets/pd_pd_pdfsfrombookmarks.png)
 
-PDF ドキュメントを分割するには、`PDFsFromBookmarks` 要素が DDX ドキュメント内にある必要があります。`PDFsFromBookmarks` 要素は結果の要素であり、`DDX` 要素の子要素のみとすることができます。複数のドキュメントが生成される可能性があるため、`result` 属性はありません。
+PDF・ドキュメントを分解するには、 `PDFsFromBookmarks` 要素が DDX ドキュメント内にある。 `PDFsFromBookmarks` 要素は結果の要素であり、`DDX` 要素の子要素のみとすることができます。複数のドキュメントが生成される可能性があるため、`result` 属性はありません。
 
 `PDFsFromBookmarks` 要素を使用すると、ソースドキュメントのレベル 1 のブックマークごとに 1 つのドキュメントが生成されます。
 

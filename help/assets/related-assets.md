@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Collaboration,Asset Management
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '630'
 ht-degree: 65%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 65%
    * 派生ファイルを関連付けるには、リストから「**[!UICONTROL 派生]**」を選択します。
    * アセット間に双方向の関係を作成するには、 **[!UICONTROL その他]** を選択します。
 
-1. 次の **[!UICONTROL アセットを選択]** 画面で、関連付けるアセットの場所に移動して選択します。
+1. 次から： **[!UICONTROL アセットを選択]** 画面で、関連付けるアセットの場所に移動して選択します。
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
@@ -74,7 +74,7 @@ ht-degree: 65%
 
 *図：翻訳に含める関連アセットのソースアセット。*
 
-1. 次の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。 [新しい翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project). 例えば、この場合、アセットをフランス語に翻訳します。
+1. 次の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。 [翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project). 例えば、この場合、アセットをフランス語に翻訳します。
 
 1. [!UICONTROL プロジェクト]ページから、翻訳フォルダーを開きます。
 

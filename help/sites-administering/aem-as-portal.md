@@ -1,20 +1,16 @@
 ---
 title: AEM ポータルとポートレット
-seo-title: AEM Portals and Portlets
 description: AEM as a portal の設定と管理の方法、およびポートレットでAEMコンテンツを設定および表示する方法について説明します。
-seo-description: Learn how to configure and administer AEM as a portal and how to configure and display AEM content in a portlet.
-uuid: 7f9e316d-277e-4a1e-b6f3-cd89addc897b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6098'
-ht-degree: 28%
+source-wordcount: '6093'
+ht-degree: 26%
 
 ---
 
@@ -343,7 +339,7 @@ AEM WCM が受け取るリクエストごとに、まず SSO ベースの認証�
 
 #### AEMポートレットでの SSO 認証の有効化 {#enabling-sso-authentication-in-a-aem-portlet}
 
-基盤の AEM WCM インスタンスが SSO リクエストを受け入れるようにするために、ポートレットの認証モードを「**Technical**」から「**SSO**」に切り替える必要があります。
+基になるAEM WCM インスタンスが SSO リクエストを受け入れるには、ポートレットの認証モードを次のように切り替える必要があります。 **技術** から **SSO**.
 
 AEM ポートレットで SSO 認証を有効にするには：
 
@@ -527,7 +523,7 @@ title="{text}"/>
 
 #### カスタムレイアウトのインストール {#installing-a-custom-layout}
 
-カスタムレイアウトをインストールするには、ポートレットの OSGI Web コンソールの「Bundles」セクションにアクセスしてバンドルをアップロードします。
+カスタムレイアウトをインストールするには、ポートレットの OSGI Web コンソールの「**Bundles**」セクションにアクセスして、バンドルをアップロードします。
 
 #### パッケージ {#packages}
 
@@ -548,7 +544,7 @@ AEMコンテンツポートレットには、AEMのコンテンツが正しい�
 これは、次の 2 つの手順でおこないます。
 
 1. ポータルディレクトリのロケール検出は、ポータルからロケール設定を取得することで、ポータルユーザーのロケールを検出します。 このサービスは、AEMで使用可能な言語のリストを使用して設定する必要があります。
-1. Portal Director Locale Handler は、現在の要求のローカライゼーションを処理します。 リクエストされたコンテンツのパス（例：`/content/geometrixx/en/company.html`/）を取得し、設定に従って、**en** を実際のユーザーのロケールに書き換えます。
+1. Portal Director Locale Handler は、現在の要求のローカライゼーションを処理します。 リクエストされたコンテンツのパスを取得します。例： `/content/geometrixx/en/company.html`設定に従って、 **en** ユーザーの実際のロケールを使用します。
 
 Portal Director Locale Handler には、ロケール情報をチェックするためのパスを設定できます。通常、この設定には `/content` 以下のすべてと、パス内のロケール情報の位置が含まれます。Portal Director Locale Handler はデフォルトで、AEM 内の多言語サイトの推奨構造に従います。
 
@@ -661,7 +657,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
    このパッケージによって、リポジトリ内の /libs/portal/director フォルダーに cq-portlet-director-sharedlibs-x.x.x.jar がインストールされます。
 
-1. cq-portlet-director-sharedlibs-x.x.x.jar をハードドライブにコピーします。 FileVault や WebDAV クライアントなど、任意の方法でファイルを取得できます。
+1. cq-portlet-director-sharedlibs-x.x.x.jar をハードドライブにコピーします。 ファイルを取得するには、FileVault や WebDAV クライアントなどの任意の方法を使用します。
 1. cq-portlet-director-sharedlibs.x.x.x.jar ファイルをアプリケーションサーバーの共有ライブラリフォルダーに移動し、デプロイされたポートレットアプリケーションでクラスを使用できるようにします。
 
 ### ポートレットコンポーネントのSidekickへの追加 {#adding-the-portlet-component-to-sidekick}
@@ -731,7 +727,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 AEM WCM が提供するコンテンツにアクセスするには、ポータルサーバーがAEM Portal Directorポートレットに適合している必要があります。 これをおこなうには、この節で説明する手順に従って、ポートレットをインストール、設定、ポータルページに追加します。
 
-デフォルトでは、ポートレットは localhost:4503 のパブリッシュインスタンスに接続し、localhost:4502 のオーサーインスタンスに接続します。 これらの値は、ポートレットのデプロイ時に変更できます。 ポータルディレクタは、リポジトリ内の/libs/portal/directory の下にコンテンツとして表示されます。 ポータルディレクターを使用する前に、アプリケーション WAR ファイルをダウンロードする必要があります。
+デフォルトでは、ポートレットは localhost:4503 のパブリッシュインスタンスに接続し、localhost:4502 のオーサーインスタンスに接続します。 これらの値は、ポートレットのデプロイ時に変更できます。 ポータルディレクタは、リポジトリ内の/libs/portal/directory の下にコンテンツとして表示されます。 使用する前に、アプリケーションの war ファイルをダウンロードする必要があります。
 
 ### WAR ファイルのダウンロード {#downloading-the-war-file}
 
@@ -741,7 +737,7 @@ AEM WCM が提供するコンテンツにアクセスするには、ポータル
 
 >[!NOTE]
 >
->これらの手順では、Websphere ポータルを例として使用しますが、可能な限り一般的な手順です。他の Web ポータルでは手順が異なることに注意してください。 手順は基本的にすべての Web ポータルで同じですが、特定の Web ポータルの手順を再利用する必要があります。
+>これらの手順では、Websphere ポータルを例として使用しますが、可能な限り一般的なものです。他の Web ポータルでは手順が異なることに注意してください。 手順は基本的にすべての Web ポータルで同じですが、特定の Web ポータルの手順を再利用する必要があります。
 
 #### ポートレットのインストール {#installing-the-portlet}
 
@@ -800,7 +796,7 @@ AEMからコンテンツが要求されると、ポートレットは現在の�
 ポートレットをポータルページに追加するには、次の手順を実行します。
 
 1. アプリサーバーの管理ウィンドウにいることを確認し、ページを管理する場所に移動します。 ( 例えば、WebSphere 6.1 では、 **ページを管理**) をクリックします。
-1. ポートレットの名前を選択し、既存のページを選択するか新しいページを作成します。
+1. ポートレットの名前を選択し、既存のページを選択するか、ページを作成します。
 1. ページレイアウトを編集します。
 1. ポートレットを選択し、コンテナに追加します。
 1. 変更を保存します。

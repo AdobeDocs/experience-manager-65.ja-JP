@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management
 role: Architect, Admin
 exl-id: 6b50f1b3-9c1c-47c8-a43e-6f40c42a41cc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 100%
+source-wordcount: '505'
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 次のガイドを参照すると、お客様のニーズを満たすエンタープライズアセット管理システムを構築、管理するための知識とツールを得ることができます。
 
 * [Assets パフォーマンスチューニングガイド](/help/assets/performance-tuning-guidelines.md)：実稼動環境への移行後を含めた実装のあらゆる段階において、システムから最大限のパフォーマンスを引き出すための一連のベストプラクティスが記載されています。
-* [Assets サイジングガイド](/help/assets/assets-sizing-guide.md)：[!DNL Assets] 実装の予測を立てる際には、アセットのストレージ、CPU、メモリ、I/O、ネットワークスループットなどのリソースに十分な空きがあることを確認することが重要です。これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、[!DNL Assets] のデプロイに必要なインフラストラクチャやリソースを見積もるための効果的な指標を決定するためのベストプラクティスや、サイジングツールが用意されています。
+* [Assets サイジングガイド](/help/assets/assets-sizing-guide.md)：[!DNL Assets] 実装の予測を立てる際には、アセットのストレージ、CPU、メモリ、I/O、ネットワークスループットなどのリソースに十分な空きがあることを確認することが重要です。これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、導入に必要なインフラストラクチャとリソースの見積もりに効率的な指標を決定するのに役立つベストプラクティスが含まれています [!DNL Assets] サイズ変更ツール
 * [Assets 移行ガイド](/help/assets/assets-migration-guide.md)：従来使用していたシステムからアセットを Assets に移行する場合、移行プロセスを効率化するにはいくつかの手順を考慮する必要があります。この移行ガイドには、アセットを [!DNL Experience Manager] に段階的に移行するタスクのベストプラクティスが記載されています。これには、メタデータの適用、レンディションの生成、パブリッシュインスタンスへのアセットのアクティベートなどが含まれています。
 * [Assets のネットワークに関する考慮事項のドキュメント](/help/assets/assets-network-considerations.md)：[!DNL Experience Manager] のデプロイメントを処理する際に、ネットワークのトポロジを理解することは、ネットワークのパフォーマンスを理解し、ボトルネックを特定して、期待するユーザーエクスペリエンスを説明するのに重要です。[!DNL Assets] のネットワークに関する考慮事項のドキュメントでは、Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
 * [Assets 監視ガイド](/help/assets/assets-monitoring-best-practices.md)：[!DNL Experience Manager] のデプロイメントの導入後は、システムの整合性およびオペレーションの効率性が確保されるよう、特定のタスクおよびシステム全般を監視する必要があります。この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。

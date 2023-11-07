@@ -2,9 +2,9 @@
 title: AEM での GraphiQL IDE の使用
 description: Adobe Experience Manager で GraphiQL IDE を使用する方法について説明します。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 92%
 
 ---
@@ -112,7 +112,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
    ![Persisted Query HTTP Cache Headers](assets/cfm-graphqlapi-headers-01.png "Persisted Query HTTP Cache Headers")
 
-1. Selecting this will open the **Cache Configuration** dialog:
+1. Selecting this opens the **Cache Configuration** dialog box:
 
    ![Persisted Query HTTP Cache Header Settings](assets/cfm-graphqlapi-headers-02.png "Persisted Query HTTP Cache Header Settings")
 

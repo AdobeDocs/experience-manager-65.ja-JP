@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 13%
@@ -462,7 +462,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
       #/serveStaleOnError "0"
 
       # The rules section defines what responses should be cached based on
-      # the requested URL. Please note that only the following requests can
+      # the requested URL. Only the following requests can
       # lead to cacheable responses:
       #
       # - HTTP method is GET
@@ -508,7 +508,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
         }
 
       # The invalidate section defines the pages that are "invalidated" after
-      # any activation. Please note that the activated page itself and all
+      # any activation. The activated page itself and all
       # related documents are flushed on an modification. For example: if the
       # page /foo/bar is activated, all /foo/bar.* files are removed from the
       # cache.
@@ -775,7 +775,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
       #/serveStaleOnError "0"
 
       # The rules section defines what responses should be cached based on
-      # the requested URL. Please note that only the following requests can
+      # the requested URL. Only the following requests can
       # lead to cacheable responses:
       #
       # - HTTP method is GET
@@ -821,7 +821,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
         }
 
       # The invalidate section defines the pages that are "invalidated" after
-      # any activation. Please note that the activated page itself and all
+      # any activation. The activated page itself and all
       # related documents are flushed on an modification. For example: if the
       # page /foo/bar is activated, all /foo/bar.* files are removed from the
       # cache.

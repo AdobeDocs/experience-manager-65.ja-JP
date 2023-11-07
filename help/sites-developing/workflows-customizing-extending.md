@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3588'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
@@ -467,7 +467,7 @@ public class MyProcess implements WorkflowProcess {
 
 ### ECMAScript の使用 {#using-ecmascript}
 
-ECMA スクリプトを使用すると、スクリプト開発者はプロセスステップを実装できます。 スクリプトは JCR リポジトリに配置され、そこから実行されます。
+ECMA スクリプトを使用すると、スクリプト開発者はプロセスステップを実装できます。 スクリプトは JCR リポジトリにあり、そこから実行されます。
 
 次の表に、ワークフロー Java API のオブジェクトへのアクセスを提供する、スクリプトを処理するためにすぐに使用できる変数を示します。
 
@@ -528,7 +528,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 スクリプトを使用するには：
 
-1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の`//apps/workflow/scripts/`の下に保存します。
+1. スクリプト ( 例えば、CRXDE Lite) を作成し、以下のリポジトリに保存します。 `//apps/workflow/scripts/`
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content`ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -619,7 +619,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 ECMA スクリプトを作成して、 **参加者ステップ** が生成されました。 スクリプトには、`getParticipant`という関数を含める必要があります。この関数は引数が不要で、ユーザーまたはグループの ID を格納した`String`を返します。
 
-スクリプトは JCR リポジトリに配置され、そこから実行されます。
+スクリプトは JCR リポジトリにあり、そこから実行されます。
 
 次の表に、スクリプト内のワークフロー Java オブジェクトに即座にアクセスできる変数を示します。
 
@@ -645,7 +645,7 @@ function getParticipant() {
 }
 ```
 
-1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の `//apps/workflow/scripts` の下に保存します。
+1. スクリプト ( 例えば、CRXDE Lite) を作成し、以下のリポジトリに保存します。 `//apps/workflow/scripts`
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content`ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -803,7 +803,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    >
    >この手順は、クラシック UI モデルエディターには適用されません。
 
-1. 次に、コピーした手順を/apps フォルダーに配置します。次に例を示します。
+1. 次に、コピーした手順を/apps フォルダーに次のように配置します。
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -825,7 +825,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
      既存のステップから継承する必要があります。
 
-      この例では、`cq/workflow/components/model/step` の基本ステップから継承していますが、`participant` や `process` などの他のスーパータイプも使用できます。
+     この例では、を基本手順 ( `cq/workflow/components/model/step`を使用できますが、 `participant`, `process`など。
 
    * `jcr:title`
 
@@ -1042,4 +1042,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  `/libs` 内の設定は参考にするだけに留め、変更しないでください。既存のステップを活用する場合は、`/apps` にコピーし、そこで変更を加えてください。
+>  `/libs` 内の設定は参考にするだけに留め、変更しないでください。既存のステップを使用する場合は、次の場所にコピーします。 `/apps` そして、そこで修正を加えます。

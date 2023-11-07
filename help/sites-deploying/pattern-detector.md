@@ -1,20 +1,16 @@
 ---
 title: パターン検出を使用したアップグレードの複雑性の評価
-seo-title: Assessing the Upgrade Complexity with the Pattern Detector
 description: パターン検出を使用して、アップグレードの複雑さを評価する方法を説明します。
-seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
-uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '516'
 ht-degree: 37%
 
 ---

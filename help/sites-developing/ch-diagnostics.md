@@ -1,17 +1,15 @@
 ---
 title: ContextHub の診断
-seo-title: ContextHub Diagnostics
 description: ContextHub には、ContextHub フレームワークの概要を確認できる診断ページがあります
-seo-description: ContextHub provides a diagnostics page where you can see an overview of the ContextHub framework
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: b833c28b-76c6-42a2-b690-3e81ddf91bc2
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 51%
+source-wordcount: '473'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +23,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 >[!NOTE]
 >
->診断情報を返すには、デバッグモードを有効にする必要があります。有効にしない場合は、診断ページが空白になります。 詳しくは、 [このドキュメント](ch-configuring.md#debugging-contexthub) デバッグモードを有効にする方法の詳細については、を参照してください。
+>診断情報を返すには、デバッグモードを有効にする必要があります。有効にしない場合は、診断ページが空白になります。 デバッグモードを有効にする方法について詳しくは、[このドキュメント](ch-configuring.md#debugging-contexthub)を参照してください。
 
 >[!NOTE]
 >
@@ -33,21 +31,21 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 ## ストア {#stores}
 
-「ストア」セクションには、設定されたすべての ContextHub ストアが一覧表示されます。 リスト内の各項目は、次の情報で構成されます。
+「ストア」セクションには、設定されたすべての ContextHub ストアが一覧表示されます。リスト内の各項目は、次の情報で構成されます。
 
 * **タイトル：**&#x200B;ストアのベースとなっている[ストアタイプ](/help/sites-developing/ch-samplestores.md)。
-* **パス：** 設定を保持するリポジトリノードへのパス。
-* **resourceType:** ストアタイプが定義されているリポジトリノードのパス。
-* **clientlibs:** 読み込まれ、ストアタイプを実装するクライアントライブラリのカテゴリ。
+* **パス：**&#x200B;設定を保持するリポジトリノードへのパス。
+* **resourceType：**&#x200B;ストアタイプが定義されているリポジトリノードのパス。
+* **clientlibs：**&#x200B;ストアタイプを実装する、読み込まれたクライアントライブラリのカテゴリ。
 
 ## モジュール {#modules}
 
-「モジュール」セクションには、設定されたすべての ContextHub UI モジュールが一覧表示されます。 リスト内の各項目は、次の情報で構成されます。
+「モジュール」セクションには、設定されたすべての ContextHub UI モジュールが一覧表示されます。リスト内の各項目は、次の情報で構成されます。
 
 * **タイトル**：UI モジュールのベースとなっている [UI モジュールタイプ](/help/sites-developing/ch-samplemodules.md)。
-* **パス：** 設定を保持するリポジトリノードへのパス。
-* **resourceType:** UI モジュールタイプが定義されているリポジトリノードのパス。
-* **clientlibs:** 読み込まれ、UI モジュールタイプを実装するクライアントライブラリのカテゴリ。
+* **パス：**&#x200B;設定を保持するリポジトリノードへのパス。
+* **resourceType：** UI モジュールタイプが定義されているリポジトリノードのパス。
+* **clientlibs：** UI モジュールタイプを実装する、読み込まれたクライアントライブラリのカテゴリ。
 
 ## Clientlibs {#clientlibs}
 
@@ -55,7 +53,7 @@ Clientlibs セクションには、ContextHub によって読み込まれたす�
 
 * **kernel.js：** ContextHub フレームワーク、セグメントエンジン、ストアタイプを実装するクライアントライブラリ。
 * **ui.js：** ContextHub UI および UI モジュールタイプを実装するクライアントライブラリ。
-* **style.css:** クライアントライブラリから読み込まれる CSS ファイル。
+* **style.css：**&#x200B;クライアントライブラリから読み込まれる CSS ファイル。
 
 ## URL {#urls}
 

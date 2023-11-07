@@ -1,18 +1,14 @@
 ---
 title: AEM Brackets 拡張
-seo-title: AEM Brackets Extension
 description: Brackets 用Adobe Experience Manager拡張機能の使用方法について説明します。
-seo-description: null
-uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '935'
 ht-degree: 57%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 57%
 
 ## 概要 {#overview}
 
-AEM Brackets Extension は、AEMのコンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、 [Brackets](https://brackets.io/) コードエディター。コードエディター内からPhotoshopのファイルおよびレイヤーにアクセスできます。 拡張機能によって提供される簡単な同期（Maven や File Vault は不要）により、開発者の効率が向上し、AEMに関する知識が限られたフロントエンド開発者もプロジェクトに参加できます。 この拡張機能は、[HTML Template Language（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)のサポートも提供しており、複雑な JSP を使用しない、より手軽でセキュアなコンポーネント開発を可能にします。
+AEM Brackets Extension は、AEMのコンポーネントやクライアントライブラリを編集するためのスムーズなワークフローを提供し、 [Brackets](https://brackets.io/) コードエディター。コードエディター内からPhotoshopのファイルおよびレイヤーにアクセスできます。 拡張機能によって提供される簡単な同期（Maven や File Vault は不要）により、開発者の効率が向上し、AEMに関する知識が限られたフロントエンド開発者もプロジェクトに参加できます。 この拡張機能は、[HTML Template Language（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)のサポートも提供しており、複雑な JSP を使用しない、より手軽でセキュアなコンポーネント開発を可能にします。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -71,7 +67,7 @@ AEM Brackets Extension は、Brackets バージョン 1.0 以降をサポート�
 
 1. a `jcr_root` フォルダー ( 例： `myproject/jcr_root`)
 
-1. a `filter.xml` ファイル ( 例： `myproject/META-INF/vault/filter.xml`)；の構造の詳細を表示します。 `filter.xml` ファイルを参照してください [Workspace フィルターの定義](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` ファイル ( 例： `myproject/META-INF/vault/filter.xml`)；の構造の詳細を表示します。 `filter.xml` ファイルを参照 [Workspace フィルターの定義](https://jackrabbit.apache.org/filevault/filter.html).
 
 Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_root` フォルダーまたは親プロジェクトフォルダーを選択します。
 
@@ -127,7 +123,7 @@ AEM Brackets Extension には、Brackets ウィンドウの右側にあるツー
 * 黄 — 一部のファイルが同期されませんでした
 * 赤 — どのファイルも同期されませんでした
 
-通知アイコンをクリックすると、同期済みの各ファイルのすべてのステータスの一覧を示す同期ステータスレポートダイアログが開きます。
+通知アイコンをクリックすると、同期済みの各ファイルのすべてのステータスの一覧を示す [ 同期ステータスレポート ] ダイアログボックスが開きます。
 
 ![chlimage_1-58](assets/chlimage_1-58a.png)
 

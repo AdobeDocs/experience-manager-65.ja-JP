@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3501'
-ht-degree: 33%
+source-wordcount: '3498'
+ht-degree: 31%
 
 ---
 
@@ -113,7 +113,7 @@ canvas div は `id="cqcanvas"` を含む HTML **div** です。この div を HT
 
 ### タグに適用された class や id などの属性は &amp;lt;body> タグは保持されません {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
-id や class などの属性が body タグに適用されている場合（例：`<body id="container">`）、この属性は読み込み後に保持されません。したがって、読み込むデザインは、`<body>` タグに適用されている属性に依存しないようにしてください。
+id や class などの属性が body タグに適用されている場合、例えば、 `<body id="container">` その場合、インポート後は保持されません。 したがって、読み込むデザインは、`<body>` タグに適用されている属性に依存しないようにしてください。
 
 ### zip ファイルのドラッグ＆ドロップ {#drag-and-drop-zip}
 
@@ -321,7 +321,7 @@ HTML タグを使用して、読み込まれた zip ファイルにグラフィ�
 
 * 事前定義されたリードフィールド - 名、姓、住所、生年月日、性別、詳細情報、ユーザー ID、メール ID、送信ボタンがサイドキックで使用できます。必要なコンポーネントをリードフォームにドラッグ＆ドロップするだけで使用できます。
 * これらのコンポーネントを使用して、作成者がスタンドアロンのリードフォームをデザインできます。これらのフィールドはリードフォームフィールドに対応しています。スタンドアロンまたは読み込まれた zip アプリケーションでは、cq:form または cta リードフォームのフィールド、名前、および要件に従って設計を使用して、追加のフィールドを追加できます。
-* 特定の事前定義された CTA リードフォーム名を使用してフォームフィールドをマッピングします。例えば、firstName をリードフォームの名にマッピングしたりします。
+* CTA リードフォームの特定の事前定義名を使用して、リードフォームフィールドをマッピングします（例：リードフォームの名の場合は — firstName）。
 * リードフォームが cq:form コンポーネントにマッピングされないフィールド（テキスト、ラジオ、チェックボックス、ドロップダウン、非表示、パスワード）。
 * ユーザーは「ラベル」タグを使用してタイトルを設定し、スタイル属性「クラス」を使用してスタイルを設定することができます（CTA リードフォームコンポーネントでのみ使用可能）。
 * 「ありがとうございます」ページや購読リストをフォームの非表示パラメーターとして設定（index.htm 内）するか、「リードフォームの最初」の編集バーから追加または編集することができます。
@@ -438,9 +438,9 @@ HTMLタグに設定された Lang 属性は、デザインインポーターに�
 
 ### テンプレートのオーバーレイ {#overlaying-template}
 
-空白のランディングページテンプレートをオーバーレイするには、`/apps/<appName>/designimporter/templates/<templateName>` でオーバーレイを新規作成します。
+空白のランディングページテンプレートは、次の場所で作成することでオーバーレイできます。 `/apps/<appName>/designimporter/templates/<templateName>`
 
-AEM のテンプレートを新規作成する手順については、[こちら](/help/sites-developing/templates.md)を参照してください。
+AEMでテンプレートを作成する手順について説明します。 [ここ](/help/sites-developing/templates.md).
 
 ### ランディングページからのコンポーネントの参照 {#referring-a-component-from-landing-page}
 

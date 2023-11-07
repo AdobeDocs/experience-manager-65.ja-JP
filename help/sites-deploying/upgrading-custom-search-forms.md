@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1681'
 ht-degree: 31%
 
 ---
@@ -30,7 +30,7 @@ AEM 6.2 では、カスタマイズされた検索Formsがリポジトリに格�
 
 このため、フォームを引き続き機能させるには、アップグレード後に手動での調整が必要です。
 
-これは、新しい検索Formsと、カスタマイズされたデフォルトのFormsに当てはまります。
+これは、新しい Search Formsと、カスタマイズされたデフォルトのFormsに当てはまります。
 
 詳しくは、[検索ファセット](/help/assets/search-facets.md)に関するドキュメントを参照してください。
 

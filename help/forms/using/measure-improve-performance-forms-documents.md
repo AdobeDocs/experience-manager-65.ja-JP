@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: a128877d-239c-4272-99c2-72d6486d5703
 docset: aem65
 exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1275'
 ht-degree: 29%
 
 ---
@@ -151,7 +151,7 @@ AEM Formsと Target を統合すると、アダプティブフォームの A/B �
 * フォームフィールドに標準的または一般的な用語を使用すること。
 * ユーザーが間違いやすいところには、例示やヘルプなどでフィールドおよび入力必須箇所に説明を加えること。
 * フォーム送信時のエラーを避けるために、可能な限りユーザー入力を入力時に検証します。
-* デスクトップおよびモバイルデバイス用のレイアウトを最適化します。
+* デスクトップおよびモバイルデバイス用のレイアウトを最適化する。
 * 既知のユーザーの情報を自動入力します。
 
 **A/B テスト**

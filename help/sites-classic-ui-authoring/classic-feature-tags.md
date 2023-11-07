@@ -8,19 +8,19 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 exl-id: 4b6c273c-560e-4330-b886-a02825d5aaa1
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '712'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '706'
+ht-degree: 94%
 
 ---
 
 # タグの使用 {#using-tags}
 
-タグを使用すると、web サイト内のコンテンツをすばやく簡単に分類できます。タグはキーワードやラベルとしてページ、アセット、その他のコンテンツに添付し、コンテンツや関連コンテンツを検索できます。
+タグを使用すると、web サイト内のコンテンツを素早く簡単に分類できます。タグをキーワードやラベルとしてページ、アセット、その他のコンテンツに添付して、コンテンツや関連コンテンツを検索できます。
 
-* タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](/help/sites-administering/tags.md)を参照してください。
-* タグ付けのフレームワークのほか、カスタムアプリケーションでタグを追加したりタグを拡張したりする方法について詳しくは、[開発者のためのタグ付け](/help/sites-developing/tags.md)を参照してください。
+* 詳しくは、 [タグの管理](/help/sites-administering/tags.md) タグの作成と管理、およびタグが適用されるコンテンツについて説明します。
+* タグ付けのフレームワークと、カスタムアプリケーションにタグの追加と拡張を行う方法について詳しくは、[開発者向けタグ付け](/help/sites-developing/tags.md)を参照してください。
 
 ## タグを使用する 10 の理由 {#ten-reasons-to-use-tagging}
 
@@ -53,7 +53,7 @@ ht-degree: 100%
 
 * 個々のタグをアクティベートします。
 
-   ページと同様、新しく作成されたタグは、パブリッシュ環境で使用可能となる前にアクティベートする必要があります。
+  ページと同様、新しく作成されたタグは、パブリッシュ環境で使用可能になる前にアクティベートする必要があります。
 
 >[!NOTE]
 >

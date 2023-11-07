@@ -1,25 +1,21 @@
 ---
 title: ContextHub
-seo-title: ContextHub
 description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。
-seo-description: ContextHub is a framework for storing, manipulating, and presenting context data
-uuid: 14e6ff4f-ffbe-454a-b2ec-a35333526e27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 61%
+source-wordcount: '284'
+ht-degree: 88%
 
 ---
 
 # ContextHub{#contexthub}
 
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアント側 JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズできます。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
 
 >[!NOTE]
 >
@@ -29,22 +25,22 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 >
 >[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用される ContextHub 設定のサンプルを含むパス（`/libs/settings/cloudsettings/legacy`）は、独自の設定を作成する際の参考としてご利用ください。
 >
->独自の ContextHub 設定としてプロジェクトで使用しないでください。
+>プロジェクト内でを独自の ContextHub 設定として使用しないでください。
 
 ## 永続性 {#persistence}
 
-ContextHub ストアは、コンテキストデータをクライアント上に保持します。ContextHub JavaScript API を使用すると、ストアにアクセスして、必要に応じてデータを作成、更新および削除できます。 したがって、ContextHub はページ上のデータレイヤーに相当します。
+ContextHub ストアは、コンテキストデータをクライアント上に保持します。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。
 
 個々の ContextHub ストアは、事前定義されたストアタイプのインスタンスです。
 
-* ContextHub には、次の機能が用意されています。 [サンプルストアタイプ](/help/sites-developing/ch-samplestores.md).
-* AEMコンソールを使用して [ストアを作成](ch-configuring.md#creating-a-contexthub-store).
+* ContextHub には、いくつかの[ストアタイプのサンプル](/help/sites-developing/ch-samplestores.md)が用意されています。
+* AEM コンソールを使用して[ストアを作成](ch-configuring.md#creating-a-contexthub-store)します。
 * デベロッパーは、[カスタムストアタイプを作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)できます。
 * 開発者が実行できる操作 [ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) JavaScript を使用します。
 
 ## セグメント化 {#segmentation}
 
-ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントを判断するセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用すると、 [解決されたセグメントを決定](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
+ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントを判断するセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments)できます。
 
 ## プレゼンテーション {#presentation}
 
@@ -52,9 +48,9 @@ ContextHub には、セグメントの管理や、現在のコンテキストで
 
 各 ContextHub UI モジュールは、事前定義されたモジュールタイプのインスタンスです。
 
-* ContextHub には、次の機能が用意されています。 [サンプルモジュールタイプ](/help/sites-developing/ch-samplemodules.md).
-* AEMコンソールを使用して [UI モジュールの追加](ch-configuring.md#adding-a-ui-module)、および [UI モードでグループ化](ch-configuring.md#adding-a-ui-mode).
+* ContextHub には、いくつかの[モジュールタイプのサンプル](/help/sites-developing/ch-samplemodules.md)が用意されています。
+* AEM コンソールを使用して [UI モジュールを追加](ch-configuring.md#adding-a-ui-module)し、[UI モードにグループ化](ch-configuring.md#adding-a-ui-mode)します。
 
-* 開発者が実行できる操作 [カスタムモジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
+* 開発者は、[カスタムモジュールタイプを作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)できます。
 
-開発者は、 [ページに ContextHub コンポーネントを追加する](/help/sites-developing/ch-adding.md).
+開発者は、[ContextHub コンポーネントをページに追加](/help/sites-developing/ch-adding.md)する必要があります。

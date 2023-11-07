@@ -2,10 +2,10 @@
 title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '4675'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -147,25 +147,25 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
    * 文字列、配列、オブジェクトの「in」演算子
 
-      ```html
-      ${'a' in 'abc'}
-      ${100 in myArray}
-      ${'a' in myObject}
-      ```
+     ```html
+     ${'a' in 'abc'}
+     ${100 in myArray}
+     ${'a' in myObject}
+     ```
 
    * data-sly-set を使用した変数の宣言
-      `<sly data-sly-set.title="${currentPage.title}"/>${title}`
+     `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
    * 制御パラメーターのリストと繰り返し（begin、step、end）
-      `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
+     `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
    * data-sly-unwrap の識別子
 
-      ```html
-      <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-      text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-      </div>
-      ```
+     ```html
+     <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
+     text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+     </div>
+     ```
 
    * 負の数のサポート
 
@@ -241,7 +241,6 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 >
 >* Target へのエクスペリエンスフラグメントのエクスポートを使用し、Target のコンソールでアクティビティを実行している場合、`at.js. 1.x` と `at.js 2.x` の両方をサポートしています。
 
-
 * Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
 * `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
@@ -309,7 +308,7 @@ AEM 6.5 以降の Communities では、様々なコミュニティサイトや�
 AEM 6.5 Communities のイネーブルメント機能は、Shareable Content Object Reference Model[（SCORM）2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジンに対応しています。
 
 * イネーブルメントコンポーネントでのキーボードナビゲーションのサポート
-* AEM Communities のイネーブルメントコンポーネント（カタログやコース再生、割り当て、ファイルライブラリなど）では、アクセシビリティを向上させるためにキーボードナビゲーションをサポートしています。
+* AEM Communitiesのイネーブルメントコンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、キーボードナビゲーションをサポートし、アクセシビリティを向上させます。
 
 ##### その他の機能強化 {#other-enhancements}
 
@@ -328,7 +327,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 ##### Adobe Asset Link {#aal}
 
-[!DNL Adobe Asset Link] を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケティング担当者のコラボレーションを強化できます。クリエイティブ担当者は、使い慣れたアプリを離れることなく、[!DNL Experience Manager Assets] に保存されているコンテンツにアクセスできます。[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]、[!DNL Adobe InDesign] などのアプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることもできます。
+[!DNL Adobe Asset Link] を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケターのコラボレーションを強化できます。クリエイティブ担当者は、使い慣れたアプリを離れることなく、[!DNL Experience Manager Assets] に保存されているコンテンツにアクセスできます。[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]、[!DNL Adobe InDesign] などのアプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることもできます。
 
 [!DNL Adobe Asset Link] は、[Creative Cloud エンタープライズ版](https://www.adobe.com/creativecloud/business/enterprise.html)に含まれています。[!DNL Experience Manager] デプロイメントの必要な設定など、詳しくは、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html?lang=ja) を参照してください。
 
@@ -390,7 +389,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### 検索エクスペリエンスの強化 {#experience-enhancement-for-searching}
 
-[!DNL Experience Manager] 6.5 以降では、マーケティング担当者が検索結果ページから目的のアセットをすばやく見つけることができます。検索ファセットのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。詳しくは、[Experience Manager でのアセットの検索](/help/assets/search-assets.md)を参照してください。
+[!DNL Experience Manager] 6.5 以降では、マーケターが検索結果ページから目的のアセットをすばやく見つけることができます。検索ファセットのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。詳しくは、[Experience Manager でのアセットの検索](/help/assets/search-assets.md)を参照してください。
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット数の表示](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
@@ -522,20 +521,20 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 * CRX-Quickstart とその内容が削除された場所に問題が報告されます。
 
-   次の各アクションで、プロパティ `htmllibmanager.fileSystemOutputCacheLocation` が空の文字列ではありません。
+  次の各アクションで、プロパティ `htmllibmanager.fileSystemOutputCacheLocation` が空の文字列ではありません。
 
    1. `/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true` の呼び出し。
    2. AEM 6.5 へのアップグレード。
    3. AEM 6.5 での「遅延コンテンツ移行」の実行。
 
-   [ナレッジベース](https://helpx.adobe.com/jp/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html)の記事には、この問題の詳細と回避策が記載されています。
+  [ナレッジベース](https://helpx.adobe.com/jp/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html)の記事には、この問題の詳細と回避策が記載されています。
 
 * AEM 6.5 インスタンスで JDK 11 を使用している場合、一部のパッケージをデプロイすると、一部のページが空白で表示されることがあります。次のエラーメッセージがログファイルに表示されます。
 
-   ```java
-   *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
-   java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
-   ```
+  ```java
+  *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
+  java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+  ```
 
 このエラーを解決するには：
 
@@ -571,7 +570,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * アダプティブフォームでは、ルールエディターからフォームデータモデルサービスを呼び出して画像選択コンポーネントの値を動的に更新する場合、画像選択コンポーネントの値が更新されません。（CQ-4254754）
 * AEM Forms Designer インストーラーを実行するには、32 ビット版の [Visual C++ 再頒布可能ランタイムパッケージ 2012](https://docs.microsoft.com/ja-JP/cpp/windows/latest-supported-vc-redist?view=msvc-170) と [Visual C++ 再頒布可能ランタイムパッケージ 2013](https://support.microsoft.com/ja-jp/topic/update-for-visual-c-2013-and-visual-c-redistributable-package-5b2ac5ab-4139-8acc-08e2-9578ec9b2cf1) が必要です。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。（CQ-4265668）
 
-* PDF ジェネレーターは、スマートカードベースの認証をサポートしていません。管理者が Windows サーバーでグループポリシー `Interactive Logon: Require Smart card` を有効にすると、既存の PDF Generator のユーザーがすべて無効になります。
+* PDF Generator は、スマートカードベースの認証をサポートしていません。管理者が Windows サーバーでグループポリシー `Interactive Logon: Require Smart card` を有効にすると、既存の PDF Generator のユーザーがすべて無効になります。
 
 * コンポーネントの値を動的に更新するようにアダプティブフォームが設定されていて、そのフォームをホストするパブリッシュインスタンスに Dispatcher を通じてアクセスする場合、フィールドの値を動的に更新する機能が動作しなくなります。この問題を解決するには、パブリッシュインスタンスで CRXDE を開き、`/libs/fd/af/runtime/clientlibs/guideChartReducer` を検索して、次のプロパティを作成します。
 
@@ -583,7 +582,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
    * 複数：False
    * 自動作成：False
 
-   このプロパティを設定すると、ランタイムフォルダー内のクライアントライブラリからプロキシにアクセスできます。（CQ-4268679）
+  このプロパティを設定すると、ランタイムフォルダー内のクライアントライブラリからプロキシにアクセスできます。（CQ-4268679）
 
 * AEM Forms を起動すると、`SAX Security Manager could not be setup` 警告が表示されます。
 * Adobe Acrobat Reader バージョン 20.10.00 を実行している Apple iOS または iPadOS で、AEM Forms Document Security で保護された PDF を開いたとき

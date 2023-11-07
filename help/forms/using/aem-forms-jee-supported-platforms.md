@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: c7e30587a37b8bf20932b43549ab38c668bd75af
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3694'
+source-wordcount: '3693'
 ht-degree: 43%
 
 ---
@@ -461,7 +461,7 @@ PDF Generator は、サポート対象のオペレーティングシステムと
 - PDF Generator は Microsoft® Office 365 をサポートしていません。
 - PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 - OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
-- Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
+- Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメントに応じたAEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 - PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。-PDF Generatorは、Microsoft® Visio 2019 を使用してファイルを変換できません。 Microsoft® Visio 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
 - PDF Generatorは、Microsoft® Project 2019 を使用してファイルを変換できません。引き続き、 Microsoft® Project 2016 を使用して.MPP ファイルを変換できます。
 - PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。

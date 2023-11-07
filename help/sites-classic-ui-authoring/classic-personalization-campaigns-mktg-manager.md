@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 98%
+source-wordcount: '1175'
+ht-degree: 91%
 
 ---
 
@@ -38,7 +38,7 @@ MCM から、以下にアクセスできます。
 以下の 4 つのウィンドウに分かれています。
 
    * [リスト](#lists)
-このウィンドウには作成済みのリストと、そのリスト内のリード数が表示されます。このウィンドウから直接新しいリストを作成したり、リードを読み込んで新しいリストを作成することができます。
+このウィンドウには作成済みのリストと、そのリスト内のリード数が表示されます。このウィンドウから、リストを直接作成するか、リードをインポートしてリストを作成できます。
 特定のリストを選択すると「[リスト](#lists)」セクションに移動し、リストの詳細が表示されます。
 
    * [セグメント](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
@@ -54,11 +54,11 @@ MCM から、以下にアクセスできます。
 
 * **[リード](#leads)**
 このウィンドウでリードを管理できます。リードの作成または読み込みを行ったり、個別のリードの詳細を編集したり、不要になった場合は削除したりできます。リードをリストと呼ばれる様々なグループに配置することもできます。**注意：**この機能が今後強化される予定はありません。
-[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
 
 * **[リスト](#lists)**
 このウィンドウで（リードの）リストを管理できます。**注意：**この機能が今後強化される予定はありません。
-[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
 
 * **[キャンペーン](#campaigns)**
 ここからブランド、キャンペーンおよびエクスペリエンスを管理できます。
@@ -74,7 +74,7 @@ MCM から、以下にアクセスできます。
 >[!NOTE]
 >
 >この機能（リードの管理）がさらに強化される予定はありません。
->[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+>使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
 
 AEM MCM では、リードの構成および追加ができます。これを行うには、リードを手動で入力するか、コンマ区切りのリスト（メーリングリストなど）を読み込みます。リードを生成する他の方法として、ニュースレターのサインアップやコミュニティのサインアップから生成する方法があります（設定済みであれば、これらのサインアップによって、リードの情報を入力するワークフローを実行することができます）。通常、リードは分類され、リストに置かれます。これにより、リスト全体に対するアクションを後で実行することができます。例えば、特定のリストに対してカスタムメールを送信できます。
 
@@ -91,7 +91,7 @@ AEM MCM では、リードの構成および追加ができます。これを行
 >[!NOTE]
 >
 >この機能（リストの管理）がさらに強化される予定はありません。
->[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+>使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
 
 リストによって、リードをグループにまとめることができます。リストを使用すると、マーケティングキャンペーンのターゲットを、選択したリードのグループに設定できます。例えば、ターゲットを設定したニュースレターをリストに送信することができます。
 
@@ -198,6 +198,6 @@ MCM で「**キャンペーン**」をクリックします。リスト表示が
 
 ### キャンペーンエクスペリエンスの分析 {#analyzing-your-campaign-experiences}
 
-MCM で「**キャンペーン**」をクリックします。リスト表示がアクティブであることを確認し、必要なキャンペーンエクスペリエンスを選択して、「**分析...**」を選択します。期間中のページの訪問数のグラフが表示されます。
+MCM で「**キャンペーン**」をクリックします。リスト表示がアクティブであることを確認し、必要なキャンペーンエクスペリエンスを選択して、「**分析...**」を選択します。ページインプレッション数の推移を示すグラフが表示されます。
 
 ![mcm_campaignanalyze](assets/mcm_campaignanalyze.png)

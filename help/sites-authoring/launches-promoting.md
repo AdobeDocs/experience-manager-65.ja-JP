@@ -10,10 +10,10 @@ discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 97%
+source-wordcount: '772'
+ht-degree: 95%
 
 ---
 
@@ -89,13 +89,13 @@ ht-degree: 97%
 1. 「**次へ**」を選択して、続行します。
 1. 昇格させるページを確認できます。これは、選択したページの範囲によって変わります。
 
-   ![昇格するページを確認](assets/chlimage_1-102.png)
+   ![昇格するページを確認します](assets/chlimage_1-102.png)
 
 1. 「**昇格**」を選択します。
 
 ## 編集時のローンチページの昇格 {#promoting-launch-pages-when-editing}
 
-ローンチページの編集中、**ローンチを昇格**&#x200B;アクションは「**ページ情報**」からも実行できます。これによりウィザードが開き、必要な情報が収集されます。
+ローンチページの編集中、**ローンチを昇格**&#x200B;アクションは「**ページ情報**」からも実行できます。これにより、必要な情報を収集するためのウィザードが開きます。
 
 ![ローンチを昇格](assets/chlimage_1-103.png)
 

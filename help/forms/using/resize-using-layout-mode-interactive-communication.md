@@ -3,10 +3,10 @@ title: レイアウトモードを使用してインタラクティブ通信の�
 description: レイアウトモードで使用できるレスポンシブグリッドを使用して、コンポーネントの位置を定義する
 feature: Interactive Communication
 exl-id: 9534fcb2-4260-4dd0-9f7e-779b10fd3a22
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '867'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 「**プレビュー**」オプションの横のインタラクティブ通信のオーサリングインターフェイス上部に表示されるドロップダウンリストから、「**レイアウト**」を選択します。フォームがレイアウトモードで表示されます。
 
 1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
-1. 新しい[インタラクティブ通信](../../forms/using/create-interactive-communication.md)を作成するか、既存のインタラクティブ通信を開きます。
+1. の作成 [インタラクティブ通信](../../forms/using/create-interactive-communication.md) または既存のものを開きます。
 1. 「**プレビュー**」オプションの横の上部に表示されるドロップダウンリストから「**レイアウト**」を選択します。フォームがレイアウトモードで表示されます。
 
    ![インタラクティブ通信のレイアウトモード](assets/layout_mode_ic_new.png)

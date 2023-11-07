@@ -5,10 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1591'
-ht-degree: 100%
+source-wordcount: '1589'
+ht-degree: 85%
 
 ---
 
@@ -40,9 +40,10 @@ ht-degree: 100%
    * INDD ファイルを取得します。
    * 次の [!DNL InDesign Server] コマンドを実行します。
 
-      * 構造、テキストおよびすべてのメディアファイルが抽出されます。
-      * PDF と JPG のレンディションが生成されます。
-      * HTML と IDML のレンディションが生成されます。
+      * 構造、テキストおよびメディアファイルが抽出されます。
+      * PDFとJPGのレンディションが生成される。
+      * HTMLと IDML レンディションが生成されます。
+
    * 生成されたファイルを [!DNL Experience Manager Assets] に送り返します。
 
    >[!NOTE]
@@ -51,7 +52,7 @@ ht-degree: 100%
 
    >[!CAUTION]
    >
-   >[!DNL InDesign Server] をインストールしていない場合や設定していない場合でも、INDD ファイルを [!DNL Experience Manager] にアップロードすることができます。ただし、この場合に生成されるレンディションは、PNG と JPEG に限定されます。HTML、IDML またはページのレンディションを生成することはできません。
+   >[!DNL InDesign Server] をインストールしていない場合や設定していない場合でも、INDD ファイルを [!DNL Experience Manager] にアップロードすることができます。ただし、生成されるレンディションは PNG とJPEGに制限されます。 HTML、.idml、ページのレンディションを生成することはできません。
 
 1. 抽出およびレンダリング生成後：
 
@@ -80,11 +81,11 @@ ht-degree: 100%
 
    `<*ids-installation-dir*>/InDesignServer.com -port 8080`
 
-   SOAP プラグインがポート 8080 でリスンする状態でサーバーが起動されます。すべてのログメッセージと出力がコマンドウィンドウに直接書き込まれます。
+   これにより、SOAP プラグインでポート 8080 をリッスンしてサーバーが起動します。 すべてのログメッセージと出力は、コマンドウィンドウに直接書き込まれます。
 
    >[!NOTE]
    >
-   >ファイルに出力メッセージを保存してリダイレクトを使用する場合は、例えば Windows の場合は次のように実行します。
+   >出力メッセージをファイルに保存する場合は、Windows の場合などに、リダイレクトを使用します。
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### [!DNL Experience Manager Assets] ワークフローの設定 {#configuring-the-aem-assets-workflow}
@@ -126,7 +127,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 #### ページ抽出 {#page-extraction}
 
-抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
+抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーは、レンディション ( 現在のHTMLまたは IDML) からデータを抽出するために使用されます。 このデータは、その後、PageBuilder を使用してページを作成するために使用されます。
 
 カスタマイズするには、**[!UICONTROL ページ抽出]**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
@@ -139,7 +140,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 * **ページタイトル**：生成されるページに割り当てるタイトルを指定します。
 
-* **ページルートのパス**：生成されるページのルート位置を示すパス。空白にした場合、アセットのレンディションを保持しているノードが使用されます。
+* **ページルートのパス**：生成されるページのルート位置のパス。 空白のままにした場合、アセットのレンディションを保持しているノードが使用されます。
 
 * **ページテンプレート**：ページの生成時に使用するテンプレート。
 
@@ -149,13 +150,13 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 >[!NOTE]
 >
->ワーカーは、プロキシインスタンス上にあります。
+>ワーカーはプロキシインスタンス上に存在します。
 
-1. 「ツール」コンソールの左側のウィンドウで、「**[!UICONTROL クラウドサービス設定]**」を展開します。次に、「**[!UICONTROL クラウドプロキシ設定]**」を展開します。
+1. ツールコンソールで、を展開します。 **[!UICONTROL Cloud Service設定]** が左側のウィンドウに表示されます。 次に、を展開します。 **[!UICONTROL クラウドプロキシ設定]**.
 
 1. 「**[!UICONTROL IDS ワーカー]**」をダブルクリックし、開いて設定します。
 
-1. 「**[!UICONTROL 編集]**」をクリックして設定ダイアログを開き、必要な設定を定義します。
+1. クリック **[!UICONTROL 編集]** 設定ダイアログを開き、必要な設定を定義するには、次の手順を実行します。
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
@@ -181,11 +182,11 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 IDS の並列ジョブ処理を有効にすることができます。[!DNL InDesign Server] が処理できる並列ジョブの最大数（`x`）を決定します。
 
 * 単一のマルチプロセッサーマシンでは、[!DNL InDesign Server] が処理できる並列ジョブの最大数（`x`）は、IDS を実行するプロセッサー数から 1 を減算した数です。
-* 複数のマシンで IDS を実行する場合は、すべてのマシンで使用可能なプロセッサーの総数を把握して、そこからマシン総数を減算する必要があります。
+* 複数のマシンで IDS を実行する場合は、使用可能なプロセッサの総数（つまりすべてのマシン）をカウントし、マシンの総数を減算する必要があります。
 
-IDS 並列ジョブ数を設定するには：
+並列 IDS ジョブ数を設定するには：
 
-1. Felix Console の「**[!UICONTROL Configurations]**」タブを開きます。次に URL の例を挙げます。`https://[aem_server]:[port]/system/console/configMgr` です。
+1. を開きます。 **[!UICONTROL 設定]** Felix コンソールの「 」タブ。次に例を示します。 `https://[aem_server]:[port]/system/console/configMgr`.
 
 1. `Apache Sling Job Queue Configuration` で IDS 処理キューを選択します。
 
@@ -232,9 +233,8 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 1. `/etc/cloudservices/proxy.html` にアクセスします。
 1. ダイアログで、新しいユーザー名とパスワードを指定します。
-1. この資格情報を保存します。
+1. 資格情報を保存します。
 
 >[!MORELIKETHIS]
 >
 >* [Adobe InDesign Server について](https://www.adobe.com/jp/products/indesignserver/faq.html)
-

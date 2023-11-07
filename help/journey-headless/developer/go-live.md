@@ -2,10 +2,10 @@
 title: ヘッドレスアプリケーションの運用開始方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法について説明します。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1873'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -151,7 +151,7 @@ Cloud Manager を使用して AMS を使用している場合、すべてがテ�
 
 <!-- Can't find a parallel link -->
 <!--
-You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
+You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
 -->
 
 ## パフォーマンスの監視 {#performance-monitoring}
@@ -167,7 +167,7 @@ AEM ヘッドレスアプリケーションの使用時に最高のユーザー�
       * ユーザー数、リクエスト数および読み込み数を確認する
 * アプリおよびスペース固有のパフォーマンスレポートにアクセスする
    * サーバーが起動したら、一般的な指標が緑／オレンジ／赤のどれになっているかを確認し、アプリの具体的な問題を特定する
-   * 特定のアプリやスペース（例：Photoshop デスクトップ、ペイウォール）に限定した上記レポートを開く
+   * 上記のフィルターで同じレポートを開き、アプリまたはスペースで (Photoshopデスクトップ、ペイウォールなど )
    * Splunk ログ API を使用してサービスやアプリケーションのパフォーマンスにアクセスする
    * その他の問題が発生した場合は、カスタマーサポートに連絡する
 

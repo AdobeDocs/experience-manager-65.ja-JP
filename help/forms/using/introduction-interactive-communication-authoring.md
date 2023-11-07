@@ -11,10 +11,10 @@ discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 79%
+source-wordcount: '1310'
+ht-degree: 78%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 79%
 * WYSIWYG ドラッグアンドドロップドキュメントエディター
 * アセット用の統合リポジトリー - サーバーにアップロードされてサーバー上で作成されたアセットは、インタラクティブ通信オーサリングインターフェイスのアセットブラウザーで使用することができます
 
-[新しいインタラクティブ通信の作成または既存のインタラクティブ通信の編集](../../forms/using/create-interactive-communication.md)を行う場合は、以下のユーザーインターフェイス要素を使用します。
+次の場合： [既存のインタラクティブ通信を作成または編集する](../../forms/using/create-interactive-communication.md)を使用する場合は、次のユーザーインターフェイス要素を使用します。
 
 * [サイドバー](#sidebar)
 * [ページツールバー](#page-toolbar)

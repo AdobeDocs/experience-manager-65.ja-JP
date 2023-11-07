@@ -2,10 +2,10 @@
 title: ページへの ContextHub の追加とストアへのアクセス
 description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します。
 exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 59%
+source-wordcount: '921'
+ht-degree: 95%
 
 ---
 
@@ -17,40 +17,40 @@ ContextHub JavaScript API を使用すると、ContextHub が管理するコン�
 
 ## ページコンポーネントへの ContextHub の追加 {#adding-contexthub-to-a-page-component}
 
-ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、 ページの `head` セクションに `contexthub` コンポーネントを含めます。ページコンポーネントの HTL コードは、次の例のようになります。
+ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ページの `head` セクションに `contexthub` コンポーネントを含めます。ページコンポーネントの HTL コードは、次の例のようになります。
 
 ```xml
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-また、ContextHub ツールバーをプレビューモードで表示するかどうかを設定する必要があります。 詳しくは、 [ContextHub UI の表示と非表示](ch-configuring.md#showing-and-hiding-the-contexthub-ui).
+ContextHub ツールバーをプレビューモードで表示するかどうかも設定する必要があります。[ContextHub UI の表示／非表示](ch-configuring.md#showing-and-hiding-the-contexthub-ui)を参照してください。
 
 ## ContextHub ストアについて {#about-contexthub-stores}
 
-ContextHub ストアを使用して、コンテキストデータを保持します。 ContextHub には、すべてのストアタイプの基盤となる次のタイプのストアが用意されています。
+コンテキストデータを保持するには、ContextHub ストアを使用します。ContextHub には、すべてのストアタイプの基礎となる次のタイプのストアが用意されています。
 
 * [PersistedStore](contexthub-api.md#contexthub-store-persistedstore)
 * [SessionStore](contexthub-api.md#contexthub-store-sessionstore)
 * [JSONPStore](contexthub-api.md#contexthub-store-persistedjsonpstore)
 * [PersistedJSONPStore](contexthub-api.md#contexthub-store-persistedstore)
 
-すべてのストアタイプは、[`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) クラスの拡張です。新しいストアタイプの作成について詳しくは、 [カスタムストアの作成](ch-extend.md#creating-custom-store-candidates). サンプルのストアタイプについて詳しくは、 [ContextHub ストア候補のサンプル](ch-samplestores.md).
+すべてのストアタイプは、[`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) クラスの拡張です。ストアタイプの作成について詳しくは、 [カスタムストアの作成](ch-extend.md#creating-custom-store-candidates). ストアタイプのサンプルについては、[ContextHub ストア候補のサンプル](ch-samplestores.md)を参照してください。
 
 ### 永続モード {#persistence-modes}
 
-ContextHub ストアでは、次の永続モードのいずれかを使用します。
+ContextHub ストアは、次のいずれかの永続モードを使用します。
 
-* **ローカル：** HTML5 localStorage を使用してデータを保持します。 ローカルストレージは、セッションをまたいでブラウザーに保持されます。
-* **セッション：** HTML5 sessionStorage を使用してデータを保持します。 セッションストレージは、ブラウザーセッションの間保持され、すべてのブラウザーウィンドウで使用できます。
-* **cookie:** データストレージに対するブラウザーの cookie のネイティブサポートを使用します。 Cookie データは、HTTP リクエストでサーバーとの間で送信されます。
+* **ローカル：** HTML5 localStorage を使用してデータを保持します。ローカルストレージは、セッションをまたいでブラウザー上に保持されます。
+* **セッション：** HTML5 sessionStorage を使用してデータを保持します。セッションストレージは、ブラウザーセッションが持続する間、保持され、すべてのブラウザーウィンドウで使用可能です。
+* **Cookie：**&#x200B;ブラウザーのデータストレージ用 cookie のネイティブサポートを使用します。cookie データは、HTTP リクエストでサーバーとの間で送受信されます。
 * **Window.name：** window.name プロパティを使用してデータを保持します。
 * **メモリ：** JavaScript オブジェクトを使用してデータを保持します。
 
-デフォルトでは、Context Hub はローカル永続化モードを使用します。 ブラウザーが localStorage5 をサポートしていない場合、または許可していない場合は、HTMLの永続性が使用されます。 ブラウザーが sessionStorage をサポートしていないか、許可していない場合は、Window.name persistence が使用されます。
+デフォルトでは、ContextHub はローカル永続モードを使用します。ブラウザーが HTML5 localStorage をサポートまたは許可していない場合は、セッション永続モードが使用されます。ブラウザーが HTML5 sessionStorage をサポートまたは許可していない場合は、Window.name 永続モードが使用されます。
 
 ### ストアデータ {#store-data}
 
-内部的には、データをツリー構造に格納し、値をプライマリ型または複雑なオブジェクトとして追加できます。 複雑なオブジェクトをストアに追加すると、オブジェクトプロパティはデータツリー内にブランチを形成します。 例えば、次の複合オブジェクトを location という名前の空のストアに追加します。
+ストアデータは内部的にツリー構造を形成しており、値をプライマリタイプまたは複合オブジェクトとして追加できます。複合オブジェクトをストアに追加すると、オブジェクトのプロパティがデータツリーにブランチを形成します。例えば、次の複合オブジェクトを location という名前の空のストアに追加します。
 
 ```javascript
 Object {
@@ -79,26 +79,26 @@ Object {
             |- elevation
 ```
 
-ツリー構造は、ストア内のデータ項目をキーと値のペアとして定義します。 上記の例では、キー `/number` が値 `321` に対応し、キー `/data/country` が値 `Switzerland` に対応しています。
+ツリー構造は、ストア内のデータ項目をキーと値のペアとして定義します。上記の例では、キー `/number` が値 `321` に対応し、キー `/data/country` が値 `Switzerland` に対応しています。
 
 ### オブジェクトの操作 {#manipulating-objects}
 
-ContextHub には、 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) JavaScript オブジェクトを操作するためのクラス。 このクラスの関数を使用して、JavaScript オブジェクトをストアに追加する前またはストアから取得した後に操作します。
+ContextHub には、JavaScript オブジェクトを操作するための [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) クラスが用意されています。JavaScript オブジェクトをストアに追加する前またはストアから取得した後に、このクラスの関数を使用して JavaScript オブジェクトを操作します。
 
 さらに、[`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) クラスには、オブジェクトを文字列にシリアライズしたり、文字列をオブジェクトにデシリアライズしたりするための関数があります。`JSON.parse` 関数および `JSON.stringify` 関数をネイティブに含まないブラウザーをサポートするには、このクラスを使用して JSON データを処理します。
 
 ## ContextHub ストアとのやり取り {#interacting-with-contexthub-stores}
 
-以下を使用： [`ContextHub`](contexthub-api.md#ui-event-constants) ストアを JavaScript オブジェクトとして取得する JavaScript オブジェクト。 ストアオブジェクトを取得したら、そのストアに格納されているデータを操作できます。ストアを取得するには、[`getAllStores`](contexthub-api.md#getallstores) 関数または [`getStore`](contexthub-api.md#getstore-name) 関数を使用します。
+ストアを JavaScript オブジェクトとして取得するには、[`ContextHub`](contexthub-api.md#ui-event-constants) JavaScript オブジェクトを使用します。ストアオブジェクトを取得したら、そのストアに格納されているデータを操作できます。ストアを取得するには、[`getAllStores`](contexthub-api.md#getallstores) 関数または [`getStore`](contexthub-api.md#getstore-name) 関数を使用します。
 
 ### ストアデータへのアクセス {#accessing-store-data}
 
-この [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) JavaScript クラスは、ストアデータとやり取りするための関数を定義します。 次の関数は、オブジェクトに格納されている複数のデータ項目を保存および取得します。
+[`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) JavaScript クラスは、ストアデータとやり取りするための関数を定義します。次の関数は、オブジェクトに格納されている複数のデータ項目を保存および取得します。
 
 * [addAllItems](contexthub-api.md#addallitems-tree-options)
 * [getTree](contexthub-api.md#gettree-includeinternals)
 
-個々のデータ項目は、キーと値のペアのセットとして保存されます。 値を保存および取得するには、対応するキーを指定します。
+個々のデータ項目は、一連のキーと値のペアとして保存されます。値を保存および取得するには、対応するキーを指定します。
 
 * [getItem](contexthub-api.md#getitem-key)
 * [setItem](contexthub-api.md#setitem-key-value-options)
@@ -113,11 +113,11 @@ ContextHub には、 [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub
 
 ### ContextHub のイベンティング {#contexthub-eventing}
 
-ContextHub には、ストアイベントに自動的に対処できるようにするイベントフレームワークが含まれています。各ストアオブジェクトには、ストアの [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) プロパティとして使用できる [`eventing`](contexthub-api.md#eventing) オブジェクトが含まれています。以下を使用： [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) または [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) 関数を使用して、JavaScript 関数をストアイベントにバインドします。
+ContextHub には、ストアイベントに自動的に対処できるようにするイベントフレームワークが含まれています。各ストアオブジェクトには、ストアの [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) プロパティとして使用できる [`eventing`](contexthub-api.md#eventing) オブジェクトが含まれています。JavaScript 関数をストアイベントにバインドするには、[`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) 関数または [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) 関数を使用します。
 
 ## ContextHub を使用した cookie の操作 {#using-context-hub-to-manipulate-cookies}
 
-Context Hub JavaScript API には、ブラウザー cookie を処理するためのクロスブラウザーサポートが用意されています。 [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) 名前空間は、Cookie を作成、操作、削除するための関数を定義します。
+ContextHub JavaScript API には、ブラウザー cookie を処理するためのクロスブラウザーサポートがあります。[`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) 名前空間は、ookie を作成、操作、削除するための関数を定義します。
 
 ## 解決された ContextHub セグメントの特定 {#determining-resolved-contexthub-segments}
 
@@ -139,11 +139,11 @@ ContextHub のセグメントは、`/conf/<site>/settings/wcm/segments` ノー�
 
 >[!WARNING]
 >
->インストールされたセグメントは、プロジェクト用の独自の専用設定を構築するのに役立つリファレンス設定として提供されています。直接使用しないでください。
+>インストールされたセグメントは、プロジェクト用に独自の専用設定を構築するのに役立つリファレンス設定として提供されます。 直接使用しないでください。
 
 ## ContextHub のデバッグ {#debugging-contexthub}
 
-ログの生成を含め、ContextHub をデバッグするためには多くのオプションがあります。詳しくは、「[ContextHub の設定](ch-configuring.md#logging-debug-messages-for-contexthub)」を参照してください。
+ログの生成を含め、ContextHub をデバッグする場合のオプションはいくつかあります。 詳しくは、「[ContextHub の設定](ch-configuring.md#logging-debug-messages-for-contexthub)」を参照してください。
 
 ## ContextHub フレームワークの概要の確認 {#see-an-overview-of-the-contexthub-framework}
 

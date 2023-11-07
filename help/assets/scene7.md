@@ -11,16 +11,16 @@ feature: Dynamic Media Classic
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2845'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
 # ページに Dynamic Media Classic 機能を追加 {#adding-scene-features-to-your-page}
 
-[Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=ja) は、リッチメディアアセットを管理および拡張したり、web、モバイル、電子メール、インターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
+[Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=ja) は、リッチメディアアセットを管理および拡張したり、web、モバイル、メール、インターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
 
 Dynamic Media Classic で公開された Experience Manager アセットは、様々なビューアで表示できます。
 
@@ -53,13 +53,14 @@ Experience Manager でのビデオコンポーネントの使用について詳�
 >[!NOTE]
 >
 >Experience Manager は Dynamic Media Classic に非同期で公開します。**[!UICONTROL 公開]**&#x200B;を選択した後、アセットが Dynamic Media Classic に公開されるまでに数秒かかります。
+>
 
 ## Dynamic Media Classic コンポーネント {#scene-components}
 
 次の Dynamic Media Classic コンポーネントを Experience Manager で使用できます。
 
 * ズーム
-* フライアウト (ズーム)
+* フライアウト（ズーム）
 * 画像テンプレート
 * 画像
 * ビデオ
@@ -175,7 +176,7 @@ Dynamic Media Classic の&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネ�
 
 **[!UICONTROL 画像プリセット]** - ドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-**[!UICONTROL 出力形式]** - 画像の出力形式（例：jpeg）を選択します。選択する出力形式によっては、追加の設定オプションがあります。[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
+**[!UICONTROL 出力形式]**  — 画像の出力形式（例：jpeg）を選択します。 選択する出力形式によっては、追加の設定オプションがあります。[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
 
 **[!UICONTROL シャープニング]** - 画像にシャープニングを適用する方法を選択します。シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
@@ -272,10 +273,9 @@ Dynamic Media Classic のコンテンツブラウザーを使用すると、Dyna
 >   * 単一の MP4 ビデオ
 >   * 単一の F4V ビデオ
 
-
 ### タッチ操作向け UI でのコンテンツを参照 {#browsing-content-in-the-touch-optimized-ui}
 
-タッチ対応 UI またはクラシック UI を使用してコンテンツブラウザーにアクセスできます。現時点では、タッチ対応 UI には次の制限事項があります。
+コンテンツブラウザーには、タッチ操作向け UI またはクラシック UI でアクセスできます。 現在、タッチ操作向けには次の制限があります。
 
 * Dynamic Media Classic の FXG および Flash のアセットはサポートされていません。
 
@@ -287,21 +287,20 @@ Dynamic Media Classic のコンテンツブラウザーを使用すると、Dyna
 >* セキュリティで保護されたプレビューサーバーが設定されている場合、ブラウザーはそのプレビューサーバーを使用してサムネールとアセットをレンダリングします。
 >
 
-
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
 また、ブラウザー内でアセットの上にマウスポインターを置くと、解像度の情報、サイズ、変更後の日数およびファイル名を参照できます。
 
 ![chlimage_1-241](assets/chlimage_1-241.png)
 
-* アダプティブビデオセットとテンプレートの場合は、サムネール用のサイズ情報が生成されません。
-* アダプティブビデオセットの場合は、サムネール用の解像度が生成されません。
+* アダプティブビデオセットおよびテンプレートの場合、サムネールのサイズ情報は生成されません。
+* アダプティブビデオセットの場合、サムネールの解像度は生成されません。
 
 ### コンテンツブラウザーでの Dynamic Media Classic アセットの検索 {#searching-for-scene-assets-with-the-content-browser}
 
 Dynamic Media Classic でのアセットの検索は、Experience Manager Assets でのアセットの検索と類似しています。ただし、検索時に、Experience Manager にアセットを直接インポートするのではなく、実際には Dynamic Media Classic システム内のアセットのリモートビューが表示されます。
 
-クラシック UI またはタッチ操作向け UI を使用して、アセットを表示および検索できます。インターフェイスによって検索方法は多少異なります。
+クラシック UI またはタッチ操作向け UI を使用して、アセットの表示と検索の両方を実行することができます。検索方法は、インターフェイスによって多少異なります。
 
 どちらの UI で検索する場合でも、次の基準でフィルターを適用できます（ここでは、タッチ操作向け UI を示しています）。
 
@@ -336,7 +335,6 @@ Dynamic Media Classic でのアセットの検索は、Experience Manager Assets
 >* ビデオを検索するときは、単一のレンディションが検索されています。結果には、元のレンディション（&amp;ast;.mp4 のみ）と、エンコードされたレンディションが返されます。
 >* アダプティブビデオセットを検索する場合は、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
 >
-
 
 **[!UICONTROL 公開ステータス]** - 公開ステータス（**[!UICONTROL 非公開]**&#x200B;または&#x200B;**[!UICONTROL 公開済み]**）に基づいてアセットをフィルタリングできます。**[!UICONTROL 公開ステータス]**&#x200B;を選択しない場合、Experience Manager ではデフォルトですべての公開ステータスが検索されます。
 

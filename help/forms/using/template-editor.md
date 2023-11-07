@@ -1,19 +1,15 @@
 ---
 title: アダプティブフォームテンプレート
-seo-title: Adaptive Form Templates
 description: テンプレートエディターを使用して基本的な構造と初期フォームコンテンツを定義し、アダプティブフォームテンプレートを作成します。
-seo-description: Create adaptive form templates by defining the basic structure and initial form content using the Template Editor.
-uuid: 317ca3ab-f809-49a7-a063-9d0c17a35fe4
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: b21a48ba-eccd-4bb5-9b92-3039026ddf2a
 docset: aem65
 feature: Adaptive Forms
 exl-id: d7287ee7-fb4e-4d47-b37e-0a9260344070
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2040'
 ht-degree: 77%
 
 ---
@@ -39,9 +35,9 @@ ht-degree: 77%
 
 ## テンプレートの操作 {#working-with-templates}
 
-ツールメニューからテンプレートエディターにアクセスするには、次の場所に移動します。 **Adobe Experience Manager /ツール/テンプレート**. テンプレートは、編集可能なテンプレートが有効になっているフォルダーで整理されています。AEMは、テンプレートを整理するためのグローバルフォルダーを提供します。 ただし、このフォルダーはデフォルトでは無効になっています。管理者に依頼してグローバルフォルダーを有効にするか、テンプレート用の新しいフォルダーを作成できます。 フォルダーの作成方法について詳しくは、[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md)を参照してください。
+ツールメニューからテンプレートエディターにアクセスするには、次の場所に移動します。 **Adobe Experience Manager /ツール/テンプレート**. テンプレートは、編集可能なテンプレートが有効になっているフォルダーで整理されています。AEMは、テンプレートを整理するためのグローバルフォルダーを提供します。 ただし、このフォルダーはデフォルトでは無効になっています。グローバルフォルダーを有効にするように管理者に依頼することも、テンプレート用のフォルダーを作成することもできます。フォルダーの作成方法について詳しくは、「[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md)」を参照してください。
 
-フォルダーをタップして開くと、アダプティブフォーム用のテンプレートを新規作成するための「作成」ボタンが表示されます。
+フォルダーをタップして開くと、「作成」ボタンが表示され、アダプティブフォーム用のテンプレートを作成できます。
 
 ### テンプレートの作成 {#create-template}
 

@@ -1,20 +1,16 @@
 ---
 title: Multi Site Manager の拡張
-seo-title: Extending the Multi Site Manager
 description: このページでは、マルチサイトマネージャーの機能を拡張する方法について説明します
-seo-description: This page helps you extend the functionalities of the Multi Site Manager
-uuid: dfa7d050-29fc-4401-8d4d-d6ace6b49bea
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 71b3f7c6ad2c7712762a29518de6cf0639081cb7
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2585'
-ht-degree: 98%
+source-wordcount: '2578'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 98%
 ここでは、マルチサイトマネージャーの機能を拡張する方法について説明します。
 
 * MSM Java API の主な構成要素について説明します。
-* ロールアウト設定で使用できる、新しい同期アクションを作成します。
+* ロールアウト設定で使用できる同期アクションを作成します。
 * デフォルトの言語コードと国コードを変更します。
 
 <!-- * Remove the "Chapters" step in the Create Site wizard. -->
@@ -111,7 +107,7 @@ ht-degree: 98%
 
 * `LiveAction` クラスには次のメソッドが含まれます。
 
-   * `getName`：アクション名を返します。この名前は、ロールアウト設定などで、アクションを参照するために使用します。
+   * `getName`：アクションの名前を戻します。この名前は、アクションを参照するために使用されます（例えば、ロールアウト設定）。
    * `execute`：アクションのタスクを実行します。
 
 * `LiveActionFactory` クラスには次のメンバーが含まれます。
@@ -182,8 +178,6 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 ### ロールアウト設定の作成 {#create-the-rollout-configuration}
 
-新しいロールアウト設定を作成するには：
-
 1. CRXDE Lite を開きます。例：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
@@ -206,7 +200,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. この下に、次のプロパティを持つノードを&#x200B;**作成**&#x200B;します。
 
-   * **名前**：ロールアウト設定のノード名です。md#installed-synchronization-actions)、例えば、 `contentCopy` または `workflow` です。
+   * **名前**：ロールアウト設定のノード名です。md#installed-synchronization-actions) の例を次に示します。 `contentCopy` または `workflow`.
    * **タイプ**：`cq:RolloutConfig`
 
 1. このノードに次のプロパティを追加します。
@@ -240,7 +234,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. 次のノードプロパティを持つノードを&#x200B;**作成** ：
 
    * **名前**：同期アクションのノード名。
-名前は、[同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下の表の「**アクション名**」と同じである必要があります。例えば、`contentCopy` または `workflow` です。
+名前は **アクション名** 下のテーブルで [同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例： `contentCopy` または `workflow`.
    * **タイプ**：`cq:LiveSyncAction`
 
 1. 必要な数の同期アクションノードを追加して設定します。アクションノードの順序を、実行する順序と一致するように並べ替えます。最上位のアクションノードが最初に実行されます。
@@ -600,7 +594,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
 1. In CRX Explorer, remove the node:
    `/etc/blueprints/weretail-english/jcr:content/dialog/items/tabs/items/tab_chap`.
 
-1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a new node:
+1. Navigate to `/libs/wcm/msm/templates/blueprint/defaults/livecopy_tab/items` and create a node:
 
     1. **Name** = `chapters`; **Type** = `cq:Widget`.
 

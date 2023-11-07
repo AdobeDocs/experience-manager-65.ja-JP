@@ -10,9 +10,9 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1879'
 ht-degree: 67%
 
 ---
@@ -219,7 +219,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
 Adobe Signを使用すると、アダプティブフォームの電子署名ワークフローが有効になります。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
-Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、そのフォームはサービスプロバイダーに送信され、追加のアクションが実行されます。サービスプロバイダーは、申し込みを確認し、Adobe Signを使用して申し込みを承認済みとマークします。 これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
+Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、追加のアクションのためにサービスプロバイダーにそのフォームが送信されます。サービスプロバイダーは、申し込みを確認し、Adobe Signを使用して申し込みを承認済みとマークします。 これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
 AEM FormsでAdobe Signを使用するには、 [Adobe SignとAEM Formsの統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
@@ -231,7 +231,7 @@ AEM Forms で Adobe Analytics を使用するには、「[分析とレポート�
 
 #### Adobe Target の統合 {#integrate-adobe-target}
 
-顧客は、フォームのエクスペリエンスに魅力がない場合、フォームを放棄してしまいます。顧客にとって不満が生じる一方で、組織のサポート量とコストが増加する可能性もあります。コンバージョン率を向上させる顧客体験を正しく認識して提供することは、難題であると同時に非常に重要です。この問題を解決する鍵は AEM Forms にあります。
+顧客は、フォームのエクスペリエンスに魅力がない場合、フォームを放棄してしまいます。顧客にとって不満が生じる一方で、組織のサポート量とコストが増加する可能性もあります。コンバージョン率を向上させるカスタマーエクスペリエンス（顧客体験）を正しく認識して提供することは非常に重要であり、難題でもあります。この問題を解決する鍵は AEM Forms にあります。
 
 AEM forms は、Adobe Marketing CloudソリューションであるAdobe Targetと統合して、パーソナライズされた魅力的な顧客体験を複数のデジタルチャネルで提供します。 Adobe Target を A/B テストのアダプティブフォームに対して使用するには、「[Adobe Target を AEM Forms に統合する](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)」を参照してください。 
 

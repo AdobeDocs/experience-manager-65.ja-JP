@@ -7,9 +7,9 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2384'
 ht-degree: 77%
 
 ---
@@ -206,7 +206,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 コンポーネントを開発したら、段落システムに追加します。この操作により、ページの編集時に、作成者がコンポーネントを選択して使用できるようになります。
 
-1. 段落システムを使用するオーサリング環境でページにアクセスします（例：`<contentPath>/Test.html`）。
+1. 段落システムを使用するオーサリング環境内のページにアクセスします。例： `<contentPath>/Test.html`.
 1. 次のどちらかの方法でデザインモードに切り替えます。
 
    * 以下の例のように、URL の最後に `?wcmmode=design` を追加し、再度アクセスします。
@@ -378,7 +378,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
    * **jcr:title** を `Image (Extended)` に設定します。
 
 1. `/apps/geometrixx/components/image/dialog/items/image`に移動します。
-1. プロパティを追加します。
+1. プロパティの追加:
 
    * **名前**：`allowUpload`
    * **型**：`String`

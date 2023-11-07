@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '5375'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -73,7 +73,7 @@ Web ページをサポートする AEM アプリケーションを開発する�
 
 メディアクエリによって、ページレンダリング用の CSS スタイルを選択的に使用できます。AEM 開発ツールおよび機能を使用すれば、アプリケーションでメディアクエリを効果的かつ効率的に実装できます。
 
-W3C グループが、この CSS3 機能と構文について示した、[メディアクエリ](https://www.w3.org/TR/mediaqueries-3/)に関する推奨事項を提供しています。
+W3C グループが、この CSS3 機能と構文について示した、[メディアクエリ](https://www.w3.org/TR/mediaqueries-3/)に関するレコメンデーションを提供しています。
 
 ### CSS ファイルの作成 {#creating-the-css-file}
 
@@ -929,20 +929,20 @@ CSS には、次の構造を使用する一連のメディアクエリが含ま�
 
 ページの要素クラスと CSS スタイルを開発するための出発点として、次のアルゴリズムを使用します。
 
-1. すべての行を含む div 要素のクラス名を定義します（例：`content.`）。
+1. すべての行を含む div 要素のクラス名を定義します（例： ）。 `content.`
 1. 行を表す div 要素用の CSS クラスを定義します（例：`row-fluid`）。
 1. コンテンツブロック要素のクラス名を定義します。列の範囲という観点で、それぞれの幅に対して 1 つのクラスが必要です。たとえば、3 列にまたがる `div` 要素には `span3` クラスを使用し、4 列にまたがる場合は `span4` クラスを使用します。グリッドにある列と同じ数のクラスを定義します。
 
 1. ターゲットとする表示域サイズごとに、対応するメディアクエリを CSS ファイルに追加します。各メディアクエリに次の項目を追加します。
 
-   * `content` クラス用のセレクター（例：`.content{}`）。
-   * 各 span クラス用のセレクター（例：`.span3{ }`）。
-   * `row-fluid` クラス用のセレクター（例：`.row-fluid{ }`）。
-   * row-fluid クラス内にある span クラス用のセレクター（例：`.row-fluid span3 { }`）。
+   * のセレクター `content` クラス。例： `.content{}`.
+   * 各 span クラスのセレクター（例： ） `.span3{ }`.
+   * のセレクター `row-fluid` クラス。例： `.row-fluid{ }`
+   * row-fluid クラス内にある span クラスのセレクター（例： ） `.row-fluid span3 { }`.
 
 1. 各セレクターに幅のスタイルを追加します。
 
-   1. `content` セレクターの幅を、ページの絶対サイズに設定します（例：`width:480px`）。
+   1. 幅の設定 `content` ページの絶対サイズのセレクター（例： ） `width:480px`.
    1. すべての row-fluid セレクターの幅を 100％に設定します。
    1. すべての span セレクターの幅を、コンテンツブロックの幅の絶対値に設定します。単純なグリッドでは、同じ幅の均等に分布した列 `(absolute width of page)/(number of columns)` が使用されます。
    1. `.row-fluid .span` セレクターの幅を、全体の幅のパーセンテージとして設定します。この幅を計算するには、数式 `(absolute span width)/(absolute page width)*100` を使用します。

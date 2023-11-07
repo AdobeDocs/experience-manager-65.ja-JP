@@ -6,10 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2072'
-ht-degree: 18%
+source-wordcount: '2065'
+ht-degree: 16%
 
 ---
 
@@ -109,7 +109,7 @@ DB2 には、Tivoli Storage Manager にデータベースをバックアップ�
 
 スナップショットバックアップを使用するか、Oracle・データベースをアーカイブ・ログ・モードで実行するように構成します。 ( 詳しくは、 [Oracleバックアップ：はじめに](https://www.databasedesign-resource.com/oracle-backup.md).) oracle・データベースのバックアップとリカバリの詳細については、次のサイトを参照してください。
 
-[Oracle Backup and Recovery：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html)バックアップと回復の概念、および Recovery Manager（RMAN）を使用したバックアップ、回復およびレポートの最も一般的な方法について詳しく説明し、バックアップと回復の計画の立て方の詳細についても説明しています。
+[Oracleのバックアップとリカバリ：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) バックアップと回復の概念、および Recovery Manager (RMAN) を使用したバックアップ、回復、レポート作成の最も一般的な方法について詳しく説明し、バックアップと回復戦略の計画方法の詳細を示します。
 
 [Oracle・データベース・バックアップ/リカバリ・ユーザー・ガイド：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) RMAN のアーキテクチャ、バックアップと回復の概念とメカニズム、ポイント・イン・タイム・リカバリやデータベース・フラッシュバック機能などの高度なリカバリ手法、バックアップとリカバリのパフォーマンス・チューニングに関する詳細情報を提供します。 また、RMAN の代わりにホストオペレーティングシステムの機能を使用して、ユーザーが管理するバックアップとリカバリについても説明します。 このボリュームは、より高度なデータベース展開のバックアップとリカバリ、および高度なリカバリシナリオに不可欠です。
 
@@ -163,7 +163,7 @@ log-bin=logname
 
 /backup-lucene-indexes
 
-/backup-lucene-indexes ディレクトリが存在しない場合は、/lucene-indexes ディレクトリをバックアップします。このディレクトリは、コンテンツストレージのルートディレクトリにもあります。 /backup-lucene-indexes ディレクトリが存在する場合は、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
+/backup-lucene-indexes ディレクトリが存在しない場合は、/lucene-indexes ディレクトリをバックアップします。また、コンテンツ保存場所のルートディレクトリにもバックアップします。 /backup-lucene-indexes ディレクトリが存在する場合は、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
 
 ### コンテンツ保存場所のルートの場所（クラスター環境） {#content-storage-root-location-clustered-environment}
 
@@ -183,7 +183,7 @@ log-bin=logname
 
 /backup-lucene-indexes
 
-/backup-lucene-indexes ディレクトリが存在しない場合は、/lucene-indexes ディレクトリをバックアップします。このディレクトリは、コンテンツストレージのルートディレクトリにもあります。 /backup-lucene-indexes ディレクトリが存在する場合は、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
+/backup-lucene-indexes ディレクトリが存在しない場合は、/lucene-indexes ディレクトリをバックアップします。また、コンテンツ保存場所のルートディレクトリにもバックアップします。 /backup-lucene-indexes ディレクトリが存在する場合は、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
 
 インデックスルートディレクトリのデフォルトの場所は、各ノード上の `[aem-forms root]/lucene-indexes` です。
 
@@ -193,6 +193,6 @@ AEM forms 環境に追加のフォントをインストールした場合は、�
 
 >[!NOTE]
 >
-デフォルトでは、AEM Forms と共にインストールされる Adobe Fonts は、 `[aem-forms root]/fonts` ディレクトリにあります。
+デフォルトでは、AEM forms と共にインストールされるAdobeフォントは、 `[aem-forms root]/fonts` ディレクトリ。
 
 ホストコンピューター上のオペレーティングシステムを再初期化し、以前のオペレーティングシステムのフォントを使用する場合は、システムフォントディレクトリの内容もバックアップする必要があります。 （具体的な手順については、ご使用のオペレーティングシステムのドキュメントを参照してください）。

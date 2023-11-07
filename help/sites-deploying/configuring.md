@@ -7,10 +7,10 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2116'
-ht-degree: 29%
+ht-degree: 28%
 
 ---
 
@@ -287,7 +287,7 @@ The [ビデオコンポーネント](/help/sites-authoring/default-components-fo
 
 CQ は次のユーザーに電子メール通知を送信します。
 
-* 変更やレプリケーションなど、ページイベントを購読したことがある
+* 変更やレプリケーションなどのページイベントを購読済みである。
 * フォーラムイベントを購読したことがある
 * ワークフローで手順を実行する必要がある。
 

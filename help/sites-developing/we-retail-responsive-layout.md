@@ -1,19 +1,15 @@
 ---
 title: We.Retail のレスポンシブレイアウトの使用
-seo-title: Trying out Responsive Layout in We.Retail
 description: We.Retail を使用してAdobe Experience Managerでレスポンシブレイアウトを試す方法を説明します。
-seo-description: null
-uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 exl-id: 6df5fb10-a7f1-4d5d-ac00-b4be3d5d3d18
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 56%
+source-wordcount: '251'
+ht-degree: 47%
 
 ---
 
@@ -47,4 +43,4 @@ We.Retail のすべてのページでは、レスポンシブデザインを実�
 
 ## その他の情報 {#further-information}
 
-技術的な詳細については、オーサリングドキュメントの[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)または管理者向けドキュメントの[レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
+詳しくは、オーサリングドキュメントを参照してください。 [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) または管理者ドキュメント [レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md) 」を参照してください。

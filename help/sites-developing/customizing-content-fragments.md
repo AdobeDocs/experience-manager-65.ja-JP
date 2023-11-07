@@ -1,16 +1,16 @@
 ---
 title: コンテンツフラグメントのカスタマイズと拡張
 seo-title: Customizing and Extending Content Fragments
-description: コンテンツフラグメントは、標準アセットを拡張します。 カスタマイズ方法を学びます。
+description: コンテンツフラグメントは、標準アセットを拡張します。カスタマイズ方法を学びます。
 seo-description: A content fragment extends a standard asset. Learn how you can customize them.
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2784'
-ht-degree: 57%
+source-wordcount: '2793'
+ht-degree: 65%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 57%
    * コンテンツフラグメントモデルでは、コンテンツフラグメントの作成時にその構造を定義します。
    * フラグメントはモデルを参照するので、モデルに対する変更は、そのモデルに関連付けられているフラグメントにも影響します。
    * モデルはデータタイプで構成されています。
-   * 新しいバリエーションを追加するときなどは、それに合わせてフラグメントを更新する必要があります。
+   * 新しいバリエーションを追加する関数などは、それに応じてフラグメントを更新する必要があります。
 
   >[!CAUTION]
   >
@@ -62,17 +62,17 @@ ht-degree: 57%
    * シンプルなコンテンツフラグメントの定義に使用します。
    * テンプレートは、コンテンツフラグメントの作成時にその構造（基本的なテキストのみ）を定義します。
    * テンプレートは、作成時にフラグメントにコピーされるので、テンプレートに対するそれ以上の変更は既存のフラグメントには反映されません。
-   * 新しいバリエーションを追加する機能など、適宜フラグメントを更新する必要があります。
+   * 新しいバリエーションを追加する関数などは、それに応じてフラグメントを更新する必要があります。
    * [コンテンツフラグメントテンプレート](/help/sites-developing/content-fragment-templates.md) は、AEMエコシステム内の他のテンプレートメカニズム（ページテンプレートなど）とは異なる方法で動作します。 そのため、分けて考える必要があります。
    * テンプレートに基づいてコンテンツの MIME タイプが実際のコンテンツに基づいて管理されます。つまり、各要素とバリエーションの MIME タイプが異なる場合もあります。
 
 ### Assets との統合 {#integration-with-assets}
 
-コンテンツフラグメント管理 (CFM) は、次のようにAEM Assetsに含まれています。
+コンテンツフラグメント管理（CFM）は、次のように AEM Assets の一部です。
 
 * コンテンツフラグメントはアセットです。
-* 既存の Assets 機能を使用します。
-* AEM Assets に完全に統合されている（Admin Console など）。
+* 既存のアセット機能を使用します。
+* Assets と完全に統合されています（管理コンソールなど）。
 
 #### 構造化コンテンツフラグメントのアセットへのマッピング {#mapping-structured-content-fragments-to-assets}
 
@@ -128,17 +128,17 @@ ht-degree: 57%
 
 >[!CAUTION]
 >
->The [コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) が推奨されました。 詳しくは、 [コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja) を参照してください。
+>The [コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) が推奨されました。 詳しくは、[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。
 
-コンテンツフラグメントは、他のアセットタイプと同様に、AEMページから参照できます。 AEMが [**コンテンツフラグメント** コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) - a [ページにコンテンツフラグメントを組み込むためのコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). この&#x200B;**コンテンツフラグメント**&#x200B;コアコンポーネントを拡張することもできます。
+コンテンツフラグメントは、他のアセットタイプと同様に、AEM ページから参照できます。AEMが [**コンテンツフラグメント** コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) - a [ページにコンテンツフラグメントを組み込むためのコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). この&#x200B;**コンテンツフラグメント**&#x200B;コアコンポーネントを拡張することもできます。
 
 * このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
 * コンポーネントを使用すると、表示するバリエーションを選択できます。
-* さらに、段落の範囲を選択して出力を制限できます。例えば、複数列の出力に使用できます。
+* さらに、出力を制限するために、段落の範囲を選択できます。例えば、複数列の出力に使用できます。
 * このコンポーネントは、 [中間コンテンツ](/help/sites-developing/components-content-fragments.md#in-between-content):
 
-   * ここで、コンポーネントを使用して、他のアセット（画像など）を （参照されるフラグメントの段落の間）。
+   * ここで、コンポーネントを使用して、参照されるフラグメントの段落の間に他のアセット（画像など）を配置できます。
    * 中間コンテンツの場合は、次の操作が必要です。
 
       * 参照が不安定になる可能性に注意します。中間コンテンツ（ページのオーサリング時に追加）とその横にある段落の関係は、固定されていません。（コンテンツフラグメントエディター内で）中間コンテンツの位置の前に新しい段落を挿入すると、相対的な位置が失われることがあります。
@@ -182,7 +182,7 @@ ht-degree: 57%
 
 * 複数の要素の出力がサポートされている（`elementNames` で複数の要素を指定している）場合、実際の表示モードは、`displayMode` プロパティによって定義されます。
 
-   * 値が `singleText`（設定されている要素が 1 つのみ）の場合、その要素は、中間コンテンツやレイアウトサポートなどで、テキストとしてレンダリングされます。これは、1 つの要素のみがレンダリングされるフラグメントのデフォルトです。
+   * 値が `singleText` （および 1 つの要素のみが設定されています）その要素は、中間コンテンツ、レイアウトサポートなどを含むテキストとしてレンダリングされます。 これは、1 つの要素のみがレンダリングされるフラグメントのデフォルトです。
    * それ以外の場合は、よりシンプルな方法（「フォームビュー」と呼ばれます）が使用され、中間コンテンツはサポートされず、フラグメントコンテンツは「そのまま」レンダリングされます。
 
 * フラグメントが `displayMode` == `singleText` 用に（暗黙的または明示的に）レンダリングされる場合、次の追加のプロパティも有効になります。
@@ -199,7 +199,7 @@ ht-degree: 57%
 
   コンテンツフラグメントは、[AEM の翻訳ワークフロー](/help/sites-administering/tc-manage.md)と完全に統合されています。つまり、アーキテクチャレベルでは以下を意味します。
 
-   * コンテンツフラグメントの個々の翻訳は、実際には別々のフラグメントです。次に例を示します。
+   * コンテンツフラグメントの個々の翻訳は、次の例のように、実際には別々のフラグメントです。
 
       * 様々な言語のルートの下に配置されています。
 
@@ -229,7 +229,7 @@ ht-degree: 57%
 
 * **メタデータスキーマ**
 
-   * コンテンツフラグメント（再） [メタデータスキーマ](/help/assets/metadata-schemas.md)に含まれている必要があります。
+   * コンテンツフラグメントは、標準アセットで定義できる[メタデータスキーマ](/help/assets/metadata-schemas.md)を（再）使用します。
    * CFM には、次のような独自の固有のスキーマがあります。
 
      `/libs/dam/content/schemaeditors/forms/contentfragment`
@@ -238,7 +238,7 @@ ht-degree: 57%
 
    * 各スキーマフォームは、フラグメントエディターと統合されます。
 
-## コンテンツフラグメント管理 API — サーバー側 {#the-content-fragment-management-api-server-side}
+## コンテンツフラグメント管理 API - サーバーサイド {#the-content-fragment-management-api-server-side}
 
 サーバー側 API を使用して、コンテンツフラグメントにアクセスできます。以下を参照してください。
 
@@ -246,7 +246,7 @@ ht-degree: 57%
 
 >[!CAUTION]
 >
->コンテンツ構造に直接アクセスする代わりに、サーバー側 API を使用することを強くお勧めします。
+>コンテンツ構造に直接アクセスする代わりに、サーバーサイド API を使用することを強くお勧めします。
 
 ### 主要インターフェイス {#key-interfaces}
 
@@ -254,7 +254,7 @@ ht-degree: 57%
 
 * **フラグメントテンプレート** ([FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
-  新しいフラグメントを作成する場合は、`FragmentTemplate.createFragment()` を使用します。
+  用途 `FragmentTemplate.createFragment()` フラグメントを作成するために使用します。
 
   ```
   Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -307,50 +307,50 @@ ht-degree: 57%
 
    * 基本データを管理する（名前の取得、タイトルまたは説明の取得／設定など）
    * メタデータへのアクセス
-   * 要素にアクセスする：
+   * 要素にアクセスするには、次の操作を実行します。
 
-      * リスト要素
-      * 名前で要素を取得
+      * 要素を一覧表示する
+      * 名前で要素を取得する
       * 新しい要素を作成する（[注意事項](#caveats)を参照）
 
       * 要素データにアクセスする（`ContentElement` を参照）
 
-   * フラグメントに定義されたバリエーションのリスト
-   * 新しいバリエーションをグローバルに作成
-   * 関連コンテンツを管理：
+   * フラグメントに定義されたバリエーションを一覧表示する
+   * 新しいバリエーションをグローバルに作成する
+   * 関連コンテンツを管理するには、次の操作を実行します。
 
-      * コレクションのリスト
-      * コレクションを追加
-      * コレクションを削除
+      * コレクションを一覧表示する
+      * コレクションを追加する
+      * コレクションを削除する
 
    * フラグメントのモデルにアクセスするまたはテンプレート
 
   フラグメントの主要要素を表すインターフェイスは、次のとおりです。
 
-   * **コンテンツ要素** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **コンテンツ要素**（[ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html)）
 
       * 基本データ（名前、タイトル、説明）を取得
-      * コンテンツを取得/設定
-      * 要素のバリエーションにアクセスする：
+      * コンテンツを取得／設定する
+      * 要素のバリエーションにアクセスするには、次の操作を実行します。
 
-         * バリエーションのリスト
-         * 名前でバリエーションを取得
-         * 新しいバリエーションを作成します ( [注意事項](#caveats))
+         * バリエーションを一覧表示する
+         * 名前でバリエーションを取得する
+         * 新しい要素を作成する（[注意事項](#caveats)を参照）
          * バリエーションを削除する（[注意事項](#caveats)を参照）
          * バリエーションデータにアクセスする（`ContentVariation` を参照）
 
       * バリエーションを解決するためのショートカット（要素に指定されたバリエーションを使用できない場合は実装固有の追加のフォールバックロジックを適用）
 
-   * **コンテンツのバリエーション** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **コンテンツのバリエーション**（[ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html)）
 
       * 基本データ（名前、タイトル、説明）を取得
-      * コンテンツを取得/設定
+      * コンテンツを取得／設定する
       * 最終変更情報に基づく単純な同期
 
   3 つのインターフェイス（`ContentVariation`、`ContentFragment`、`ContentElement`、）すべてによって `Versionable` インターフェイスを拡張し、コンテンツフラグメントに必要な次のバージョン管理機能を追加します。
 
    * 要素の新しいバージョンを作成する
-   * 要素のバージョンのリスト
+   * 要素のバージョンを一覧表示する
    * バージョン管理された要素の特定のバージョンのコンテンツを取得する
 
 ### 適応 - adaptTo() の使用  {#adapting-using-adaptto}
@@ -383,8 +383,8 @@ ht-degree: 57%
 次のことに注意してください。
 
 * API は、UI でサポートされる機能を提供するために実装されています。
-* API 全体は、 **not** は、（API JavaDoc で特に記載がない限り）変更を自動的に保持します。 したがって、各リクエスト（または実際に使用しているリゾルバー）のリソースリゾルバーを常にコミットする必要があります。
-* 追加の作業が必要になる可能性のあるタスク：
+* API 全体は、（API JavaDoc で特に記載がない限り）変更を自動的に永続化&#x200B;**しない**&#x200B;ように設計されています。したがって、各リクエスト（または実際に使用しているリゾルバー）のリソースリゾルバーを常にコミットする必要があります。
+* 追加の作業が必要になる可能性のあるタスクは、次のとおりです。
 
    * 新しい要素を作成または削除しても、（フラグメントテンプレートに基づく）単純なフラグメントのデータ構造は更新されません。
    * `ContentElement` から新しいバリエーションを作成してもデータ構造は更新されません（ただし、`ContentFragment` からグローバルに新しいバリエーションを作成すると更新されます）。
@@ -492,9 +492,9 @@ if (fragmentResource != null) {
 }
 ```
 
-### 例：新しいコンテンツフラグメントの作成 {#example-creating-a-new-content-fragment}
+### 例：コンテンツフラグメントの作成 {#example-creating-a-new-content-fragment}
 
-新しいコンテンツフラグメントをプログラムで作成するには、次を使用する必要があります。
+コンテンツフラグメントをプログラムで作成するには、次を使用する必要があります。
 
 `com.adobe.cq.dam.cfm.ContentFragmentManager#create`
 
@@ -533,5 +533,5 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 詳しくは、
 
-* [コアコンポーネント — コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) （推奨）
+* [コアコンポーネント - コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)（推奨）
 * [コンテンツフラグメントコンポーネント - ページオーサリング用コンポーネント](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)

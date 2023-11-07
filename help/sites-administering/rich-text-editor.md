@@ -3,10 +3,10 @@ title: Adobe Experience Manager でコンテンツを作成するようにリッ
 description: Adobe Experience Manager でコンテンツを作成するように Adobe Experience Manager リッチテキストエディターを設定する方法について学びます。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2923'
-ht-degree: 99%
+source-wordcount: '2921'
+ht-degree: 98%
 
 ---
 
@@ -34,7 +34,7 @@ RTE 機能をオーサリングに使用する方法については、[リッチ
 
 >[!MORELIKETHIS]
 >
->* [UI 推奨事項（英語）](/help/sites-deploying/ui-recommendations.md)
+>* [UI レコメンデーション（英語）](/help/sites-deploying/ui-recommendations.md)
 >* クラシック UI の廃止については、[Experience Manager 6.5 リリースノート](/help/release-notes/deprecated-removed-features.md)を参照してください。
 >* タッチ UI とクラシック UI の違いについては、[タッチ UI とクラシック UI](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/) を参照してください。
 >* タッチ操作対応 UI について詳しくは、[Experience Manager タッチ UI の概念](/help/sites-developing/touch-ui-concepts.md)を参照してください。
@@ -182,7 +182,7 @@ RTE プラグインの設定について詳しくは、[RTE プラグインの�
 >
 >テンプレートエディターで[コアコンポーネントのテキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja#the-text-component-and-the-rich-text-editor)を利用すると、技術的な設定をおこなうことなく、GUI で多くの RTE プラグインをコンテンツポリシーとして設定できます。コンテンツポリシーは、このドキュメントで説明するように RTE UI 設定と連携させることができます。
 >
->詳しくは、このドキュメントの [RTE UI 設定とコンテンツポリシー](/help/sites-administering/rich-text-editor.md)の節、[ページテンプレートの作成](/help/sites-authoring/templates.md)および[コアコンポーネント開発者のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。
+>詳しくは、 [RTE UI 設定とコンテンツポリシー](/help/sites-administering/rich-text-editor.md) このドキュメントのセクションと [ページテンプレートの作成](/help/sites-authoring/templates.md) そして [コアコンポーネント開発者向けドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja).
 
 >[!NOTE]
 >

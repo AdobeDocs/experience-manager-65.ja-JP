@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 62%
@@ -657,7 +657,7 @@ ht-degree: 62%
 
      3. The name "JDOM" must not be used to endorse or promote products
         derived from this software without prior written permission.  For
-        written permission, please contact <request_AT_jdom_DOT_org>.
+        written permission, contact <request_AT_jdom_DOT_org>.
 
      4. Products derived from this software may not be called "JDOM", nor
         may "JDOM" appear in their name, without prior written permission
@@ -688,7 +688,7 @@ ht-degree: 62%
      individuals on behalf of the JDOM Project and was originally
      created by Jason Hunter <jhunter_AT_jdom_DOT_org> and
      Brett McLaughlin <brett_AT_jdom_DOT_org>.  For more information
-     on the JDOM Project, please see <https://www.jdom.org/>.
+     on the JDOM Project, see <https://www.jdom.org/>.
 ```
 
 ## PDFBox {#pdfbox}
@@ -1166,7 +1166,7 @@ ht-degree: 62%
      This formulation of W3C's notice and license became active on
      April 05 1999 so as to account for the treatment of DTDs, schema's
      and bindings. See the older formulation for the policy prior to this
-     date. Please see our Copyright FAQ for common questions about using
+     date. See our Copyright FAQ for common questions about using
      materials from our site, including specific terms and conditions
      for packages like libwww, Amaya, and Jigsaw.
      Other questions about this notice can be directed to site-policy@
@@ -1241,7 +1241,7 @@ ht-degree: 62%
      version ensures that W3C software licensing terms are no more
      restrictive than GPL and consequently W3C software may be
      distributed in GPL packages. See the older formulation for the
-     policy prior to this date. Please see our Copyright FAQ for common
+     policy prior to this date. See our Copyright FAQ for common
      questions about using materials from our site, including specific
      terms and conditions for packages like libwww, Amaya, and Jigsaw.
      Other questions about this notice can be directed to site-policy@

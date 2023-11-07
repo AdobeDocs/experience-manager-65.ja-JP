@@ -10,8 +10,8 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 100%
 
@@ -68,7 +68,7 @@ AEM 6.5 comes with Livefyre feature package 1.2.6 pre-installed. This package on
 Configure AEM to use your organization's Livefyre license credentials, allowing communication between Livefyre and AEM.
 
 1. From the AEM homepage, click the **Tools** icon in the left rail, then navigate to **Deployment &gt; Livefyre Configuration**.
-1. Select the configuration folder in which you want to create a new Livefyre configuration, then click **Create**.
+1. Select the configuration folder in which you want to create a Livefyre configuration, then click **Create**.
 
    ![create-livefyre-configuration1](assets/create-livefyre-configuration1.png)
 
@@ -120,9 +120,9 @@ Once Livefyre is enabled for the page, containers must be configured to allow Li
    ![livefyre-add](assets/livefyre-add.png)
 
 1. Select a Livefyre component, and drag it into position on your page.
-1. Select whether to create a new Livefyre app or to embed an existing one.
+1. Select whether to create a Livefyre app or to embed an existing one.
 
-   If embedding an existing app, AEM asks you to select the App. If creating a new App, the App will need to be populated before any content appears. The App will be created in the Livefyre site and network selected when Livefyre cloud configuration was enabled for the page.
+   If embedding an existing app, AEM asks you to select the App. If creating an App, the App must be populated before any content appears. The App will be created in the Livefyre site and network selected when Livefyre cloud configuration was enabled for the page.
 
    For more information on inserting components, see [Editing Page Content](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html).
 
@@ -207,7 +207,7 @@ After you import the product catalog, the products show up in real time in your 
 
 1. Ensure you have the latest Livefyre for AEM package installed on your AEM instance.
 1. From the AEM homepage, navigate to **AEM Commerce**.
-1. Create a new collection or use an existing collection.
+1. Create a collection or use an existing collection.
 1. Hover over the collection and click **Collection Properties** (pencil icon).
 1. Check **Sync to Livefyre**.
 1. Fill in **Livefyre Page Prefix** to link this collection to a specific page in AEM.

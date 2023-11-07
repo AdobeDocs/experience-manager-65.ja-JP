@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2664'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ angularページの本文は、wcmMode が検出されたか (!= WCMMode.DISABLE
 
 オーサーモードでは、各ページが個別にレンダリングされます。 Angularは、ページ間のルーティングを処理しないほか、ページのコンポーネントを含む部分的なテンプレートの読み込みに使用される ng-view も使用しません。 代わりに、ページテンプレート (template.jsp) のコンテンツは、 `cq:include` タグを使用します。
 
-この方法では、作成者の機能 ( 段落システム、Sidekick、デザインモードなどでのコンポーネントの追加や編集など ) を を呼び出し、変更せずに関数を呼び出す。 アプリ用のページなど、クライアント側のレンダリングに依存するページは、AEMオーサーモードでは正常に動作しません。
+この方法を使用すると、作成者機能 ( 段落システム、Sidekick、デザインモードなどのコンポーネントの追加や編集など ) を変更せずに使用できます。 アプリ用のページなど、クライアント側のレンダリングに依存するページは、AEMオーサーモードでは正常に動作しません。
 
 template.jsp インクルードは、 `div` 要素 `ng-controller` ディレクティブ。 この構造により、DOM コンテンツをコントローラーにリンクできます。 したがって、クライアント側でレンダリングされるページは失敗しますが、個々のコンポーネントは正常に機能します（以下のコンポーネントの節を参照）。
 
@@ -144,7 +144,7 @@ controller.js.jsp スクリプトは、各ページのコントローラーフ�
 ])
 ```
 
-なお、 `data` 変数には、Angular `$http.get` メソッド。 このページに含まれる各コンポーネントでは、必要に応じて、一部の.json コンテンツを (angular.json.jsp スクリプトを介して ) 使用可能にし、解決時にこのリクエストのコンテンツに基づいて動作させることができます。 要求は、単にファイルシステムにアクセスするので、モバイルデバイスでは非常に高速です。
+The `data` 変数には、Angular `$http.get` メソッド。 このページに含まれる各コンポーネントでは、必要に応じて、一部の.json コンテンツを (angular.json.jsp スクリプトを介して ) 使用可能にし、解決時にこのリクエストのコンテンツに基づいて動作させることができます。 要求は、単にファイルシステムにアクセスするので、モバイルデバイスでは非常に高速です。
 
 この方法でコンポーネントをコントローラーの一部にするには、 /libs/mobileapps/components/angular/ng-component コンポーネントを拡張し、 `frameworkType: angular` プロパティ。
 

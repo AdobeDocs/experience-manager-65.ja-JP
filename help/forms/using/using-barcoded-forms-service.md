@@ -1,19 +1,15 @@
 ---
 title: Barcoded Forms サービス
-seo-title: Using AEM Forms Barcoded Forms Service
-description: AEM Forms Barcoded Forms サービスを使用すると、バーコードの電子画像からデータを抽出することができます。
-seo-description: Use AEM Forms Barcoded Forms service to extract data from electronic images of barcodes.
-uuid: b044a788-0e4a-4718-b71a-bd846933d51b
+description: AEM Forms Barcoded Formsサービスを使用して、バーコードの電子画像からデータを抽出します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 exl-id: edaf12be-473f-4175-b4e0-549b41159a55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1022'
-ht-degree: 100%
+ht-degree: 25%
 
 ---
 
@@ -21,32 +17,32 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-Barcoded Forms サービスは、バーコードの電子画像からデータを抽出するサービスです。このサービスは、入力として 1 つまたは複数のバーコードを含んだ TIFF ファイルや PDF ファイルを受け取り、バーコードデータを抽出します。バーコードデータは、XML、区切られた文字列、JavaScript で作成されたカスタム形式など、様々な形式で作成されます。
+Barcoded Formsサービスは、バーコードの電子画像からデータを抽出します。 このサービスは、入力として 1 つまたは複数のバーコードを含んだ TIFF ファイルや PDF ファイルを受け取り、バーコードデータを抽出します。バーコードデータは、XML、区切り文字列、JavaScript で作成されたカスタム形式など、様々な形式で書式設定できます。
 
 Barcoded Forms サービスは、スキャンされた TIFF または PDF ドキュメントとして提供される以下の&#x200B;**二次元**&#x200B;コードをサポートします。
 
 * PDF417
-* Data Matrix
-* QR Code
+* データマトリックス
+* QR コード
 
 このサービスはまた、スキャンされた TIFF または PDF ドキュメントとして提供される以下の&#x200B;**一次元**&#x200B;コードもサポートします。
 
 * Codabar
-* Code 128
+* Code128
 * Code 3 of 9
 * EAN13
 * EAN8
 
-Barcoded Forms サービスを使用すると、次のタスクを実行できます。
+Barcoded Formsサービスを使用して、次のタスクを実行できます。
 
-* バーコード画像（TIFF または PDF）からバーコードデータを抽出します。このデータは、区切り文字付きテキストとして保存されます。
-* 区切り文字付きテキストデータを XML（XDP または XFDF）に変換します。XML データには、区切り文字付きテキストと比べ、解析がしやすいという特徴があります。また、XDP 形式または XFDF 形式のデータは、他の AEM Forms サービスの入力として使用できます。
+* バーコード画像 (TIFFまたはPDF) からバーコードデータを抽出します。 データは区切り文字付きテキストとして保存されます。
+* 区切り文字付きテキストデータを XML（XDP または XFDF）に変換します。 XML データは、区切られたテキストよりも解析が容易です。 また、XDP 形式または XFDF 形式のデータは、AEM Formsの他のサービスの入力として使用できます。
 
-Barcoded Forms サービスは、画像に含まれる各バーコードを検索してデコードし、データを抽出します。バーコードデータは、（必要に応じてエンティティエンコードを使用して）XML ドキュメントの content 要素として返されます。例えば、次の図は、2 つのバーコードを含んだフォームをスキャンした TIFF 画像です。
+Barcoded Formsサービスは、画像内の各バーコードを検索し、デコードして、データを抽出します。 このサービスは、バーコードデータを（必要に応じてエンティティエンコーディングを使用して）XML ドキュメントのコンテンツ要素で返します。 例えば、次のスキャンされたフォームTIFF画像には、2 つのバーコードが含まれています。
 
 ![例](assets/example.png)
 
-Barcoded Forms サービスは、バーコードのデコード後、次の XML ドキュメントを返します。
+Barcoded Formsサービスは、バーコードのデコード後に、次の XML ドキュメントを返します。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>  
@@ -91,58 +87,58 @@ Barcoded Forms サービスは、バーコードのデコード後、次の XML 
 </xb:scanned_image>
 ```
 
-## このサービスに関する考慮事項 {#considerations}
+## 変換サービスに関する考慮事項 {#considerations}
 
 ### バーコードフォームを使用するワークフロー {#workflows-that-use-barcoded-forms}
 
-フォーム作成者は、Designer を使用してインタラクティブなバーコードフォームを作成します（「[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63_jp)」を参照）。ユーザーが Adobe Reader または Acrobat でバーコードフォームに入力すると、バーコードは自動的に更新され、フォームデータがエンコードされます。
+フォーム作成者は、Designer を使用してインタラクティブなバーコードフォームを作成します。 （「[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63_jp)」を参照）。ユーザーがAdobe ReaderまたはAcrobatを使用してバーコードフォームに入力すると、バーコードは自動的に更新され、フォームデータがエンコードされます。
 
-Barcoded Forms サービスは、紙面上のデータを電子的なフォーマットに移行させる場合に役立ちます。例えば、バーコードフォームに記入して印刷した後で、その印刷出力をスキャンし、Barcoded Forms サービスへの入力として使用できます。
+Barcoded Formsサービスは、紙に存在するデータを電子形式に変換する場合に役立ちます。 例えば、バーコードフォームに入力して印刷する場合、印刷されたコピーをスキャンして、Barcoded Formsサービスへの入力として使用できます。
 
-通常、監視フォルダーのエンドポイントは、Barcoded Forms サービスを使用するアプリケーションを起動するときに使用されます。例えば、バーコードフォームの TIFF 画像または PDF 画像が、ドキュメントスキャナーによって監視フォルダーに保存されたとします。この画像が、監視フォルダーのエンドポイントからサービスに渡されてデコードされます。
+通常、監視フォルダーエンドポイントは、Barcoded Formsサービスを使用するアプリケーションを起動するために使用されます。 例えば、バーコードフォームのTIFF画像やPDF画像を監視フォルダーに保存することができます。 監視フォルダーエンドポイントは、画像をデコード用にサービスに渡します。
 
-### 推奨されるエンコードおよびデコードの形式 {#recommended-encoding-and-decoding-formats}
+### 推奨されるエンコーディングおよびデコーディングの形式 {#recommended-encoding-and-decoding-formats}
 
-バーコードフォームを作成する場合、バーコードのデータをエンコードするときに単純な区切り形式（タブ区切りなど）を使用することをお勧めします。また、フィールド区切り文字としてキャリッジリターンは使用しないようにしてください。Designer では、区切られたデータのエンコード方法を選択できますが、選択した方法によっては、バーコードをエンコードする JavaScript スクリプトが自動的に生成されます。この場合、デコードされたデータの 1 行目にはフィールド名が、2 行目にはその値が設定されます。また、各フィールドはタブで区切られます。
+バーコードフォームを作成する場合は、バーコード内のデータのエンコーディングにシンプルな区切り形式（タブ区切りなど）を使用することをお勧めします。 また、フィールドの区切り文字にキャリッジリターンは使用しないでください。 Designer では、区切られたエンコーディングを選択できます。区切られたエンコーディングでは、バーコードをエンコードする JavaScript スクリプトが自動的に生成されます。 デコードされたデータは、最初の行にフィールド名と 2 行目に値を持ち、各フィールドの間にタブがあります。
 
-バーコードのデコード時には、フィールドの区切りに使用する文字を指定します。デコード用に指定する文字は、バーコードのエンコーディングで使用された文字と同じであることが必要です。例えば、推奨されるタブ区切り形式が使用された場合、XML 抽出操作でも、フィールド区切り文字にデフォルト値の Tab を使用する必要があります。
+バーコードをデコードする場合は、フィールドの区切りに使用する文字を指定します。 デコード用に指定した文字は、バーコードのエンコードに使用した文字と同じである必要があります。 例えば、推奨されるタブ区切り形式を使用する場合、「Extract to XML」操作では、フィールド区切り文字にデフォルト値の Tab を使用する必要があります。
 
 ### ユーザー指定の文字セット {#user-specified-character-sets}
 
-フォームの作成者は、Designer を使用してバーコードオブジェクトをそのフォームに追加するときに、文字エンコードを指定できます。認識可能なエンコードは、UTF-8、ISO-8859-1、ISO-8859-2、ISO-8859-7、Shift-JIS、KSC-5601、Big-Five、GB-2312、UTF-16 です。デフォルトでは、バーコード内のすべてのデータが UTF-8 としてエンコードされます。
+フォーム作成者が Designer を使用してフォームにバーコードオブジェクトを追加する場合、文字エンコーディングを指定できます。 認識されるエンコーディングは、UTF-8、ISO-8859-1、ISO-8859-2、ISO-8859-7、Shift-JIS、KSC-5601、Big-Five、GB-2312、UTF-16 です。 デフォルトでは、すべてのデータはバーコードで UTF-8 としてエンコードされます。
 
-バーコードのデコード時には、使用する文字セットエンコーディングを指定できます。すべてのデータが正常にデコードされるようにするには、フォームのデザイン時にフォームの作成者が指定した文字セットと同じ文字セットを指定してください。
+バーコードをデコードする際に、使用する文字セットエンコーディングを指定できます。 すべてのデータが正しくデコードされるようにするには、フォームのデザイン時に指定した文字セットと同じ文字セットを指定します。
 
-### API の制限事項 {#api-limitations}
+### API の制限 {#api-limitations}
 
-BCF API を使用するときは、次の制限事項に考慮してください。
+BCF API を使用する場合は、次の制限事項を考慮してください。
 
-* 動的フォームはサポートされていません。
-* インタラクティブフォームは、統合されているもの以外は正しくデコードされません。
-* 1-D バーコード（サポートされている場合）に英数字以外の文字を含めることはできません。特殊記号を含んだ 1-D バーコードはデコードされません。
+* ダイナミックフォームはサポートされていません。
+* インタラクティブフォームは、統合されていない限り、正しくデコードされません。
+* 1-D バーコードには、英数字のみを含める必要があります（サポートされている場合）。 特殊記号を含む 1-D バーコードはデコードされません。
 
 ### その他の制限事項 {#other-limitations}
 
 Barcoded Forms サービスを使用するときは、次の制限事項についても考慮する必要があります。
 
-* このサービスは、Adobe Reader または Acrobat を使用して保存された、2D バーコードを含む AcroForms および静的フォームを完全にサポートします。ただし、1D バーコードの場合は、フォームを統合するか、フォームを変換してスキャンされた PDF または TIFF ドキュメントとして提供してください。
-* 動的 XFA フォームは完全にサポートされているわけではありません。動的フォーム内の 1D および 2D バーコードを正しくデコードするには、フォームを統合するか、フォームを変換してスキャンされた PDF または TIFF ドキュメントとして提供してください。
+* このサービスは、Adobe ReaderまたはAcrobatを使用して保存された 2D バーコードを含む AcroForms および静的フォームを完全にサポートします。 ただし、1D バーコードの場合は、フォームを統合するか、スキャンされたPDFまたはTIFF文書としてフォームを指定します。
+* 動的 XFA フォームは完全にはサポートされていません。 動的フォーム内の 1D および 2D バーコードを適切にデコードするには、フォームを統合するか、スキャンされたPDFまたはTIFFドキュメントとしてフォームを指定します。
 
-また、サービスは前記の制限事項に触れない限り、サポートされているコードが使用されていれば、どのようなバーコードでもデコードできます。インタラクティブなバーコードフォームの作成方法について詳しくは、[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+また、サービスは前記の制限事項に触れない限り、サポートされているコードが使用されていれば、どのようなバーコードでもデコードできます。インタラクティブなバーコードフォームの作成方法について詳しくは、[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63_jp)を参照してください。
 
-## サービスのプロパティの設定 {#configureproperties}
+## サービスのプロパティを設定します   {#configureproperties}
 
-AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEM コンソールのデフォルト URL は `https://[host]:'port'/system/console/configMgr` です。
+以下を使用すると、 **AEMFD Barcoded Forms Service** AEMコンソールで、このサービスのプロパティを設定します。 AEM コンソールのデフォルト URL は `https://[host]:'port'/system/console/configMgr` です。
 
 ## サービスの使用 {#using}
 
-Barcoded Forms サービスには次の 2 つの API があります。
+Barcoded Forms Service は、次の 2 つの API を提供します。
 
 * **[decode](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：Input PDF ドキュメントまたは TIFF 画像で使用可能なすべてのバーコードをデコードします。入力ドキュメントまたは画像内で使用可能なすべてのバーコードから抽出されたデータを含む別の XML ドキュメントを返します。
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：decode API を使用してデコードされたデータを XML データに変換します。この XML データは XFA フォームと結合できます。バーコードごとに 1 つずつ XML ドキュメントのリストを返します。
+* **[extractToXML](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**：decode API を使用してデコードされたデータを XML データに変換します。この XML データは XFA フォームとマージできます。 バーコードごとに 1 つずつ、XML ドキュメントのリストを返します。
 
-### JSP またはサーブレットを使用した BCF サービスの使用 {#using-bcf-service-with-a-jsp-or-servlets}
+### JSP またはサーブレットでの BCF サービスの使用 {#using-bcf-service-with-a-jsp-or-servlets}
 
 次のサンプルコードはドキュメント内のバーコードをデコードして、Output XML をディスクに保存します。
 
@@ -175,13 +171,13 @@ Barcoded Forms サービスには次の 2 つの API があります。
 
  // Create a Docmanager Document object for 
  // the tiff file containing barcode
- // Please see Docmanager Document javadoc for
+ // See Docmanager Document javadoc for
  // more details
  Document inputDoc = new Document(documentPath);
 
  // Invoke decode operation of barcoded forms service 
  // Second parameter is set to true to decode PDF417 barcode symbology
- // Please see javadoc for details of parameters
+ // See javadoc for details of parameters
 
  org.w3c.dom.Document result = bcfService.decode(inputDoc, // Input Document Object
                                                     true, 
@@ -231,13 +227,13 @@ Barcoded Forms サービスには次の 2 つの API があります。
 %>
 ```
 
-### AEM ワークフローを使用した BCF サービスの使用 {#using-the-bcf-service-with-aem-workflows}
+### AEM Workflows での BCF サービスの使用 {#using-the-bcf-service-with-aem-workflows}
 
-ワークフローから Barcoded Forms サービスを実行することは、JSP またはサーブレットからサービスを実行することに似ています。唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントオブジェクトが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。
+ワークフローから Barcoded Formsサービスを実行することは、JSP/Servlet からサービスを実行する場合と似ています。 唯一の違いは、JSP/Servlet からサービスを実行する場合、ドキュメントオブジェクトは ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動的に取得する点です。 この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。
 
 ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。続いて、Document オブジェクトは渡された ResourceResolver オブジェクトを使用してリポジトリからコンテンツを読み込みます。
 
-次のサンプルワークフロープロセスは、ドキュメント内のバーコードをデコードして結果をディスクに保存します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
+以下のサンプルワークフロープロセスでは、ドキュメント内のバーコードをデコードし、結果をディスクに保存します。 コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
 ```javascript
 /*

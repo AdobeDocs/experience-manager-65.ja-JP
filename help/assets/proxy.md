@@ -4,7 +4,7 @@ description: プロキシは、プロキシワーカーを使用してジョブ�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 71%
@@ -87,7 +87,7 @@ API の使用例を以下に示します。
 @Reference
  JobService proxyJobService;
 
- // to create a new job
+ // to create a job
  final Hashtable props = new Hashtable();
  props.put("someproperty", "some value");
  props.put(JobUtil.PROPERTY_JOB_TOPIC, "myworker/job"); // this is an identifier of the worker

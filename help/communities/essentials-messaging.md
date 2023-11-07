@@ -7,7 +7,7 @@ topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 4%
@@ -114,7 +114,7 @@ ht-degree: 4%
 
 ### サンプルコード：受信したメッセージの通知 {#sample-code-message-received-notification}
 
-ソーシャルメッセージ機能では、操作に関するイベント ( 例えば、 `send`, `marking read`, `marking delete`. これらのイベントを取得し、イベントに含まれるデータに対して実行されるアクションを取得できます。
+ソーシャルメッセージ機能では、例えば次の操作に対してイベントがスローされます。 `send`, `marking read`, `marking delete`. これらのイベントを取得し、イベントに含まれるデータに対して実行されるアクションを取得できます。
 
 次の例は、 `message sent` イベントを送信し、 `Day CQ Mail Service`.
 

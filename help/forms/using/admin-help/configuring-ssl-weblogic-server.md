@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 33%
 
 ---
@@ -169,7 +169,7 @@ keytool コマンドの使用方法の詳細については、JDK のマニュ�
 1. 「一般」の「設定」で、次の点を確認します。 **リスンポート有効** および **SSL リッスンポートが有効になっています** が選択されている。 有効になっていない場合は、次の操作を行います。
 
    1. 「Change Center」で、「**Lock &amp; Edit**」をクリックし、選択内容と値を変更します。
-   1. 次を確認します。 **リスンポート有効** および **SSL リッスンポートが有効になっています** チェックボックス
+   1. 次を確認します。 **リスンポート有効** および **SSL リッスンポートが有効になっています** チェックボックス。
 
 1. このサーバーが管理対象サーバーの場合は、Listen Port を未使用のポート値（8001 など）に変更し、SSL Listen Port を未使用のポート値（8002 など）に変更します。 スタンドアロンサーバーでは、デフォルトの SSL ポートは 7002 です。
 1. クリック **リリース設定**.
@@ -181,7 +181,7 @@ keytool コマンドの使用方法の詳細については、JDK のマニュ�
 
    **Custom Identity Keystore**：*[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain]* は実際のパス、*[server name]* はアプリケーションサーバーの名前です。
 
-   **カスタム ID キーストアタイプ**:JKS
+   **カスタム ID キーストアタイプ**: JKS
 
    **カスタム ID キーストアのパスフレーズ**: *mypassword* （カスタム ID キーストアのパスワード）
 
@@ -189,7 +189,7 @@ keytool コマンドの使用方法の詳細については、JDK のマニュ�
 
    **Custom Trust Keystore ファイル名**：`*[appserverdomain]*/adobe/*'server'*/ads-ca.jks` ここで、`*[appserverdomain]*` は実際のパスです。
 
-   **カスタム信頼キーストアの種類**:JKS
+   **カスタム信頼キーストアの種類**: JKS
 
    **カスタム信頼キーストアのパスフレーズ**: *mypassword* （カスタム信頼キーのパスワード）
 
@@ -197,7 +197,7 @@ keytool コマンドの使用方法の詳細については、JDK のマニュ�
 1. デフォルトでは、ID と信頼の場所にキーストアが選択されています。そうでない場合は、キーストアに変更します。
 1. 「ID」で、次の値を指定します。
 
-   **秘密鍵のエイリアス**:ads-credentials
+   **秘密鍵のエイリアス**: ads-credentials
 
    **パスフレーズ**: *mypassword*
 

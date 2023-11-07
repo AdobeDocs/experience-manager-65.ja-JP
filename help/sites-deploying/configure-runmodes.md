@@ -1,20 +1,16 @@
 ---
 title: 実行モード
-seo-title: Run Modes
 description: 実行モードを使用して、特定の目的に合わせて AEM インスタンスを調整する方法を説明します。
-seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
-uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 90%
+source-wordcount: '744'
+ht-degree: 88%
 
 ---
 
@@ -85,7 +81,7 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
 特定の実行モードで使用される設定プロパティの値のコレクションをリポジトリに保存できます。
 
-実行モードは、フォルダー名のサフィックスで示されます。 これにより、すべての設定をとして 1 つのリポジトリに保存できます。 例：
+実行モードは、フォルダー名のサフィックスで示されます。 これにより、すべての設定をとして 1 つのリポジトリに保存できます。 次に例を示します。
 
 * `config`
 
@@ -153,7 +149,7 @@ java -jar cq-56-p4545.jar -r dev
 
 起動スクリプトのシステムプロパティを使用して実行モードを指定できます。
 
-* 例えば、US にある実稼働のパブリッシュインスタンスとしてインスタンスを起動するには、以下を使用します。
+* 例えば、次の例を使用して、インスタンスを実稼動パブリッシュインスタンスとして米国で起動します。
 
   `-Dsling.run.modes=publish,prod,us`
 

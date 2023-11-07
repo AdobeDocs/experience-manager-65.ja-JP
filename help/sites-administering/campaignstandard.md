@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 97%
+source-wordcount: '1825'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ AEM 6.5 を Adobe Campaign Standard（ACS）と統合すると、メール配信
 
 ## 統合手順 {#integration-steps}
 
-AEM と Adobe Campaign Standard 間の統合を設定するには、両方のソリューションで多くの手順が必要です。
+AEMとAdobe Campaign Standard間の統合を設定するには、両方のソリューションでいくつかの手順が必要です。
 
 1. [を設定 ](#aemserver-user)
 1. [を確認 ](#resource-type-filter)
@@ -42,7 +42,7 @@ AEM と Adobe Campaign Standard 間の統合を設定するには、両方のソ
 ## 前提条件 {#prerequisites}
 
 * Adobe Campaign Standard への管理者アクセス
-   * Adobe Campaign Standard のセットアップおよび設定方法について詳しくは、[Adobe Campaign Standard ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)を参照してください。
+   * Adobe Campaign Standardの設定方法と設定方法に関する追加の詳細が必要な場合は、 [Adobe Campaign Standardドキュメント。](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)
 * AEM への管理者アクセス
 
 ## Campaign で aemserver ユーザーを設定 {#aemserver-user}
@@ -63,7 +63,7 @@ Adobe Campaign Standard には、AEM が Adobe Campaign に接続する際に使
 
 `aemserver` ユーザーに、AEM が Adobe Campaign と通信するために必要な権限が付与されました。
 
-ただし、AEMが `aemserver` ユーザーを使用する前に、そのパスワードを設定する必要があります。 これは、Adobe Campaignでは実行できません。 この作業は、アドビのサポートエンジニアが行う必要があります。 [アドビカスタマーケアでチケットを発行](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)して、`aemserver` パスワードのリセットをリクエストしてください。パスワードをアドビカスタマーケアから取得したら、安全な場所に保管してください。
+ただし、AEMが `aemserver` ユーザーを使用する前に、そのパスワードを設定する必要があります。 これは、Adobe Campaignでは実行できません。 この作業は、アドビのサポートエンジニアが行う必要があります。 [チケットをAdobeカスタマーケアと共に送信](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support) リセットをリクエストする `aemserver` パスワード。 パスワードをカスタマーケアから取得したら、Adobeは安全な場所に保管してください。
 
 ## Campaign の AEMResourceTypeFilter を確認 {#resource-type-filter}
 

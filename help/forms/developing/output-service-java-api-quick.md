@@ -1,8 +1,8 @@
 ---
 title: Output Service Java API Quick Start（SOAP）
 seo-title: Output Service Java API Quick Start(SOAP)
-description: Output service Java API Quick Start（SOAP）を使用して、PDF ドキュメントを作成する、アプリケーションの XDP ファイルに基づいて PDFドキュメントを作成する、PDF/A ドキュメントを作成する、Output サービスにドキュメントを渡す、AEM Forms リポジトリにあるドキュメントを Output サービスに渡す、フラグメントに基づいて PDF ドキュメントを作成し、ファイルに印刷したり、ネットワークプリンターに印刷ストリームを送る、複数の PDF ファイルを作成する、検索ルールを作成する、PDF ドキュメントを変換するなど操作を行います。
-seo-description: Use the Output service Java API Quick Start (SOAP) to create a PDF document, create a PDF document based on application XDP file, create a PDF/A document, pass documents to the Output service, pass a document located in the AEM Forms repository to the Output service, create a PDF document based on fragments, printing to a file, sending a print stream to a network printer, create multiple PDF files, create search rules, transform a PDF document.
+description: Output サービス Java API クイックスタート (SOAP) を使用して、PDFドキュメントの作成、PDFドキュメントの作成、PDF/A ドキュメントの作成、Output サービスへのドキュメントの渡し、AEM Formsリポジトリ内のドキュメントの Output サービスへの渡し、フラグメントに基づくPDFドキュメントの作成、複数のPDFファイルの作成検索ルールを作成し、PDF・ドキュメントを変換します。
+seo-description: Use the Output service Java API Quick Start (SOAP) to create a PDF document, create a PDF document based on application XDP file, create a PDF/A document, pass documents to the Output service, pass a document in the AEM Forms repository to the Output service, create a PDF document based on fragments, printing to a file, sending a print stream to a network printer, create multiple PDF files, create search rules, transform a PDF document.
 uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
 contentOwner: admin
 content-type: reference
@@ -11,10 +11,10 @@ topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 role: Developer
 exl-id: dc99dd4d-fce9-4ec5-9b51-661d37a21559
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 100%
+source-wordcount: '1311'
+ht-degree: 84%
 
 ---
 
@@ -30,7 +30,7 @@ Java API Quick Start（SOAP）は、Output サービスで利用できます。
 
 [クイックスタート（SOAP モード）：Java API を使用して Output サービスにドキュメントを渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[Quick Start（SOAP モード）：Java API を使用して AEM Forms リポジトリにあるドキュメントを Output サービスに渡す。](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用してAEM Formsリポジトリ内のドキュメントを Output サービスに渡す](output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java API を使用して、フラグメントに基づく PDF ドキュメントを作成](#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
@@ -48,7 +48,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」に記載した Quick Start は、Forms Server オペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「 AEM forms によるプログラミング」のクイックスタートは、Forms Server オペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの作成 {#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api}
 
@@ -81,7 +81,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -90,7 +90,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -200,7 +200,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/Adobe/adobe_experience_manager_forms/SDK/client-libs/common
      *
      * <install directory>/Adobe/adobe_experience_manager_forms/SDK/client-libs/jboss
@@ -210,7 +210,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote AEM Forms instance and there is a
      * firewall between the client application and AEM Forms, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/Adobe/adobe_experience_manager_forms/SDK/client-libs/thirdparty
      *
@@ -291,7 +291,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## Quick Start（SOAP モード）：Java API を使用してリポジトリにあるドキュメントを渡す。 {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
+## クイックスタート（SOAP モード）:Java API を使用してリポジトリ内のドキュメントを Output サービスに渡す {#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api}
 
 次の Java コードでは、リポジトリから XDP ファイルを検索し、`com.adobe.idp.Document` インスタンス中の Output サービスにこのファイルを渡します。XDP ファイルは、`Applications/FormsApplication` という名前の AEM Forms アプリケーションの一部としてデプロイされます。URI のパスは `repository:///Applications/FormsApplication/1.0/FormsFolder/` です。
 
@@ -305,7 +305,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 >
 >コンテンツルートの値は、`generatePrintedOutput2` メソッドを呼び出す場合と同じように設定できます。
 
-この *Loan.pdf* は、AEM Forms をホストしている J2EE アプリケーションサーバー上の C:\Adobe フォルダーに書き込まれます（[リポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service)を参照してください）。
+この *Loan.pdf* は、AEM Forms をホストしている J2EE アプリケーションサーバー上の C:\Adobe フォルダーに書き込まれます( 詳しくは、 [リポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-the-repository-to-the-output-service).)
 
 >[!NOTE]
 >
@@ -323,7 +323,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -332,7 +332,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -471,13 +471,13 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 18. xbean.jar (required for SOAP mode)
      * 19. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -584,7 +584,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -593,7 +593,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -673,7 +673,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用して Output サービスにドキュメントを渡す {#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api}
 
-次の Java Quick Startでは、Content Services からファイル *Loan.xdp* を取得します。この XDP ファイルは、`space /Company Home/Form Designs` にあります。XDP ファイルは、`com.adobe.idp.Document` インスタンス内で返されます。`com.adobe.idp.Document` インスタンスは、Output サービスに渡されます。非インタラクティブフォームは、クライアントコンピューター上の *Loan.pdf* という名前の PDF ファイルとして保存されます。「ファイル URI」オプションが設定されているため、PDF ファイル「Loan.pdf」も AEM Forms をホストしている J2EE アプリケーションサーバー上に保存されます。（[Content Services ES2 にあるドキュメントを Output サービスに渡す](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)を参照してください。）
+次の Java Quick Startでは、Content Services からファイル *Loan.xdp* を取得します。この XDP ファイルは、 `space /Company Home/Form Designs`. XDP ファイルは、`com.adobe.idp.Document` インスタンス内で返されます。`com.adobe.idp.Document` インスタンスは、Output サービスに渡されます。非インタラクティブフォームは、クライアントコンピューター上の *Loan.pdf* という名前の PDF ファイルとして保存されます。「ファイル URI」オプションが設定されているため、PDF ファイル「Loan.pdf」も AEM Forms をホストしている J2EE アプリケーションサーバー上に保存されます。( 詳しくは、 [Content Services ES2 のドキュメントを Output サービスに渡す](/help/forms/developing/creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 ```java
  /*
@@ -687,7 +687,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -696,7 +696,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -812,7 +812,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用して、フラグメントに基づく PDF ドキュメントを作成 {#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api}
 
-次の Java コードの例では、Assembler サービスによってアセンブルされたフォームデザインに基づいた PDF ドキュメントを作成します。Assembler サービスは、複数の XDP ファイルに配置されたフラグメントを 1 つのフォームデザインにアセンブリします。 Assembler サービスを呼び出すアプリケーションロジックは、`GetFormDesign` という名前のユーザー定義メソッドにあります。 非インタラクティブフォームは、クライアントコンピューター上の *Loan.pdf* という名前の PDF ファイルとして保存されます。（[フラグメントを使用した PDF ドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments) を参照。）
+次の Java コードの例では、Assembler サービスによってアセンブルされたフォームデザインに基づいた PDF ドキュメントを作成します。Assembler サービスは、複数の XDP ファイル内のフラグメントを 1 つのフォームデザインにアセンブリします。 Assembler サービスを呼び出すアプリケーションロジックは、 `GetFormDesign`. 非インタラクティブフォームは、クライアントコンピューター上の *Loan.pdf* という名前の PDF ファイルとして保存されます。（[フラグメントを使用した PDF ドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments) を参照。）
 
 ```java
  /*
@@ -842,7 +842,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -851,7 +851,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1049,7 +1049,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1058,7 +1058,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1161,7 +1161,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1170,7 +1170,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1223,7 +1223,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              printOptions.setStaple(Staple.on);
  
              //Create a PostScript output stream based on the form design named Loan.xdp and
-             //the data located in the XML file
+             //the data in the XML file
              OutputResult outputDocument = outClient.generatePrintedOutput(
                      PrintFormat.PostScript,
                      "Loan.xdp",
@@ -1257,7 +1257,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## Quick Start（SOAP モード）：Java API を使用して複数の PDF ファイルを作成する。 {#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api}
 
-次の Java コードは、*Loan_data_batch.xml* という名前の XMLデータファイルにある各データレコードに対して、複数の PDF ファイルを作成します。ファイルは C:\Adobe ディレクトリに書き込まれます。 PDF ファイルは、クライアントコンピューターではなく、AEM Forms をホストする J2EE アプリケーションサーバー上の C:\Adobe フォルダに書き込まれます。 （[複数の出力ファイルの作成](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files) を参照。）
+次の Java コードは、という名前の XML データファイルにある各データレコードに対して複数のPDFファイルを作成します。 *Loan_data_batch.xml*. ファイルは C:\Adobe ディレクトリに書き込まれます。 PDF ファイルは、クライアントコンピューターではなく、AEM Forms をホストする J2EE アプリケーションサーバー上の C:\Adobe フォルダに書き込まれます。 （[複数の出力ファイルの作成](/help/forms/developing/creating-document-output-streams.md#creating-multiple-output-files) を参照。）
 
 ```java
  /*
@@ -1286,7 +1286,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1295,7 +1295,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1407,7 +1407,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1416,7 +1416,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1539,7 +1539,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
      *
@@ -1548,7 +1548,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 50%
+source-wordcount: '669'
+ht-degree: 47%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 50%
 
 AEMは、コンソール ( および [ページオーサリング機能](/help/sites-developing/customizing-page-authoring-touch.md)) を作成します。
 
-* clientlibs Clientlibs を使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズするときに、独自の clientlib を `/apps.` に作成して、カスタムコンポーネントに必要なコードを保持するといった操作が可能です。
+* clientlibs Clientlibs を使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際に、独自のクライアントライブラリを `/apps.` 例えば、カスタムコンポーネントに必要なコードを保持できます。
 
 * オーバーレイオーバーレイはノード定義に基づいており、標準の機能 ( `/libs`) をカスタマイズした独自の機能 ( `/apps`) をクリックします。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
@@ -158,6 +158,6 @@ AEMは、コンソール ( および [ページオーサリング機能](/help/s
 
 ### リソースのフィルタリング {#filtering-resources}
 
-コンソールを使用する場合、一般的な使用例は、リソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。 これは、例えば、作成者が項目を選択する必要があるリストの形式をとることができます。
+コンソールを使用する場合、一般的な使用例は、リソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。 これは、例えば、作成者が項目を選択する必要があるリストの形式を取ることができます。
 
 リストを適切なサイズに保ち、使用例にも関連するように、フィルターをカスタム述語の形式で実装できます。 詳しくは、 [この記事](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) 」を参照してください。

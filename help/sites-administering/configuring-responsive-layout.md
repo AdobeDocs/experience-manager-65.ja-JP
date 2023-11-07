@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 97%
+source-wordcount: '1283'
+ht-degree: 95%
 
 ---
 
@@ -269,7 +269,7 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
 
 >[!CAUTION]
 >
->カスタムスタイルシートの clientlibs を作成時と公開時に適切に機能させるには、これをヘッダーの一部として読み込む必要があります。
+>カスタムスタイルシートの clientlib がオーサー環境およびパブリッシュ環境で正しく機能するには、ヘッダーの一部として読み込む必要があります。
 
 ## ページ用のレイアウトコンテナコンポーネントの有効化 {#enable-the-layout-container-component-for-page}
 

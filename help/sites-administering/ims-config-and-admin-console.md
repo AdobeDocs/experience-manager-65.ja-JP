@@ -7,10 +7,10 @@ topic-tags: Security
 content-type: reference
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1669'
-ht-degree: 80%
+source-wordcount: '1668'
+ht-degree: 76%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->この機能は、Adobe Managed Services のお客様のみが利用できます。
+>この機能は、Managed Servicesのお客様のみがAdobeできます。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ AEM が [!DNL Admin Console] をオンボーディングしたことにより、
 
 ## 主なハイライト {#key-highlights}
 
-* AEM IMS 認証のサポートは、AEM オーサー、管理者またはデベロッパーに対してのみ有効で、サイト訪問者などの顧客サイトの外部エンドユーザーには適用されません。
+* AEM IMS 認証のサポートは、AEM Authors、管理者または開発者に対してのみ有効で、サイト訪問者などの顧客サイトの外部エンドユーザーには有効ではありません
 * [!DNL Admin Console] は、AEM Managed Services の顧客を IMS 組織として、それらのインスタンスを製品コンテキストとして表します。顧客システムおよび製品管理者は、インスタンスへのアクセスを管理できるようになります。
 * AEM Managed Services は、顧客のトポロジと [!DNL Admin Console] を同期させます。[!DNL Admin Console] では、インスタンスごとに AEM Managed Services 製品コンテキストのインスタンスが 1 つあります。
 * [!DNL Admin Console] の製品プロファイルによって、ユーザーがアクセスできるインスタンスが決まります。
@@ -116,7 +116,7 @@ Adobe同期ツール (UST) を使用すると、企業のお客様は、Active D
 
 次の場所にあるプレリリースバージョンの 2.4RC1 は、動的グループの作成をサポートしています。[https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
-このリリースの主な機能は、[!DNL Admin Console] でユーザーのメンバーシップに合わせて新しい LDAP グループを動的にマッピングする機能と、動的にユーザーグループを作成する機能です。
+このリリースの主な機能は、 [!DNL Admin Console]、および動的なユーザーグループの作成。
 
 新しいグループ機能の詳細については、こちらを参照してください。
 
@@ -124,7 +124,7 @@ Adobe同期ツール (UST) を使用すると、企業のお客様は、Active D
 
 >[!NOTE]
 >
->ユーザー同期ツールについて詳しくは、[ドキュメントページ](https://adobe-apiplatform.github.io/user-sync.py/en/)を参照してください。
+>ユーザー同期ツールについて詳しくは、 [ドキュメントページ](https://adobe-apiplatform.github.io/user-sync.py/en/).
 >
 >
 >ユーザー同期ツールでは、[ここ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)に説明されている手順を使用して、Adobe I/O クライアント UMAPI として登録する必要があります。
@@ -136,7 +136,7 @@ Adobe同期ツール (UST) を使用すると、企業のお客様は、Active D
 
 >[!NOTE]
 >
->AEM IMS の設定は、Adobe Managed Services チームによって処理されます。ただし、お客様の管理者は必要に応じて変更することができます（例えば、自動グループメンバーシップやグループマッピングなど）。IMS クライアントは、ご自身の Managed Services チームによっても登録されます。
+>AEM IMS の設定は、Adobe Managed Services チームによって処理されます。ただし、顧客管理者は要件（自動グループメンバーシップやグループマッピングなど）に従って変更できます。 IMS クライアントは、ご自身の Managed Services チームによっても登録されます。
 
 ## 使用方法 {#how-to-use}
 
@@ -146,7 +146,7 @@ Adobe同期ツール (UST) を使用すると、企業のお客様は、Active D
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
-この例では、*AEM-MS-Onboard* 組織には、ステージング、実稼働など、さまざまなトポロジと環境にまたがる 32 のインスタンスがあります。
+この例では、org です。 *AEM-MS-Onboard* には、Stage、Prod など、様々なトポロジと環境にまたがる 32 個のインスタンスがあります。
 
 ![screen_shot_2018-09-17at105517pm](assets/screen_shot_2018-09-17at105517pm.png)
 

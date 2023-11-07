@@ -1,19 +1,15 @@
 ---
 title: タグの管理
-seo-title: Administering Tags
 description: Adobe Experience Managerでタグを管理する方法と管理方法について説明します。
-seo-description: Learn how to administer Tags in AEM.
-uuid: 77e1280a-feea-4edd-94b6-4fb825566c42
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 76%
+source-wordcount: '1761'
+ht-degree: 72%
 
 ---
 
@@ -78,7 +74,7 @@ AEM 内のタグには以下のような機能があります。
 
 ### 名前空間の作成 {#creating-a-namespace}
 
-新しい名前空間を作成するには、**`Create Namespace`** アイコンを選択します。
+名前空間を作成するには、 **`Create Namespace`** アイコン。
 
 名前空間はそれ自体がタグです。サブタグが含まれている必要はありません。ただし、分類の作成を続行するには、[サブタグを作成](#creating-tags)します。リーフタグかコンテナタグのいずれかにすることができます。
 
@@ -211,7 +207,7 @@ AEM 内のタグには以下のような機能があります。
 
 タグのマージは、分類に重複がある場合に使用できます。 タグ A がタグ B に統合されると、タグ A がタグ B でタグ付けされたすべてのページにタグ B が付けられ、作成者はタグ A を使用できなくなります。
 
-名前空間または他のタグが選択されている場合、**結合**&#x200B;アイコンを選択すると、パネルが開いて、結合先のパスを選択できます。
+名前空間または他のタグが選択されたときに、 **結合** アイコン：パネルを開き、マージ先のパスを選択できます。
 
 ![chlimage_1-200](assets/chlimage_1-200.png)
 
@@ -296,7 +292,7 @@ AEM 内のタグには以下のような機能があります。
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
-一般的に、タグに選択した言語はページの言語から取得されます（利用可能な場合）。[`tag`Widget](/help/sites-developing/building.md#tagging-on-the-client-side) が他のケース（フォームやダイアログ内など）で使われる場合、タグの言語はコンテキストに依存します。
+一般的に、タグに選択した言語はページの言語から取得されます（利用可能な場合）。次の場合に [`tag` widget](/help/sites-developing/building.md#tagging-on-the-client-side) が他のケース（フォームやダイアログボックスなど）で使用される場合、タグの言語はコンテキストに応じて異なります。
 
 タグ付けコンソールでは、ページの言語設定の代わりに、ユーザーの言語設定が使用されます。タグ付けコンソールでは、ユーザーのプロパティで言語をフランス語に設定したユーザーには、「Animals」タグが「Animaux」と表示されます。
 
@@ -310,6 +306,6 @@ AEM 内のタグには以下のような機能があります。
 
 * [開発者向けタグ付け](/help/sites-developing/tags.md)
 
-  タグ付けフレームワーク、カスタムアプリケーションの拡張やタグ付けに関する情報です。
+  タグ付けフレームワーク、およびカスタムアプリケーションでのタグの拡張と含む情報について説明します。
 
 * [クラシック UI のタグ付けコンソール](/help/sites-administering/classic-console.md)

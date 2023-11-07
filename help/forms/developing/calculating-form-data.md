@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 100%
+source-wordcount: '1878'
+ht-degree: 96%
 
 ---
 
@@ -80,13 +80,13 @@ Forms サービスでは、ユーザーがフォームに入力した値を計�
 
 **A.** NumericField1 という名前のフィールド **B.** NumericField2 という名前のフィールド **C.** NumericField3 という名前のフィールド
 
-このフォームデザインに配置されるスクリプトの構文は次のとおりです。
+このフォームデザインのスクリプトの構文は次のとおりです。
 
 ```javascript
      NumericField3 = NumericField2 + NumericField1
 ```
 
-このフォームデザインでは、「計算」ボタンはコマンドボタンであり、スクリプトはこのボタンの `Click` イベントに配置されています。ユーザーが最初の 2 つのフィールド（NumericField1 および NumericField2）に値を入力して「計算」ボタンをクリックすると、フォームが Forms サービスに送信され、スクリプトが実行されます。Forms サービスは、NumericField3 フィールドに表示された計算結果を使用して、フォームをクライアントデバイスにレンダリングし直します。
+このフォームデザインでは、「計算」ボタンはコマンドボタンで、スクリプトはこのボタンの `Click` イベント。 ユーザーが最初の 2 つのフィールド（NumericField1 および NumericField2）に値を入力して「計算」ボタンをクリックすると、フォームが Forms サービスに送信され、スクリプトが実行されます。Forms サービスは、NumericField3 フィールドに表示された計算結果を使用して、フォームをクライアントデバイスにレンダリングし直します。
 
 >[!NOTE]
 >
@@ -123,14 +123,15 @@ Forms サービスのクライアント API を使用して、サーバー上で
 
 送信されたフォームに関連付けられている処理状態が `1` の場合は、結果をクライアント web ブラウザーに書き戻す必要があります。フォームが表示されると、計算された値が適切なフィールドに表示されます。
 
-**関連項目**
+**関連情報**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[Java API を使用してフォームデータを計算する](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
+[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[Java API を使用してフォームデータを計算する](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
 [Web サービス API を使用してフォームデータを計算する](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
-[Forms サービス API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
-[インタラクティブ PDF Forms のレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
-[Forms をレンダリングする Web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Forms Service API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[Formsをレンダリングする Web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Java API を使用してフォームデータを計算する {#calculate-form-data-using-the-java-api}
 
@@ -151,14 +152,13 @@ Forms API（Java）を使用してフォームデータを計算します。
    *  `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
       * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。`CONTENT_TYPE` 環境変数に 1 つまたは複数の値を指定して、処理するコンテンツタイプを指定する必要があります。例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
+      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。`CONTENT_TYPE` 環境変数に 1 つ以上の値を指定して、処理するコンテンツタイプを指定します。例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
       * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
       * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
-      `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
+     `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
    * `FormsResult` オブジェクトの `getAction` メソッドを呼び出すことによって、送信されたフォームに関連付けられている処理状態が `1` であることを確認します。このメソッドが値 `1` を返した場合、計算は実行されており、データをクライアントの web ブラウザーに書き戻すことができます。
-
 
 1. フォームデータストリームをクライアントの web ブラウザーに書き戻します。
 
@@ -210,10 +210,9 @@ Forms API（web サービス）を使用してフォームデータを計算し�
       * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
       * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
 
-      `processFormSubmission` メソッドで、フォーム送信の結果を `FormsResultHolder` パラメーターに入力します。`processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
+     `processFormSubmission` メソッドで、フォーム送信の結果を `FormsResultHolder` パラメーターに入力します。`processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
    * `FormsResult` オブジェクトの `getAction` メソッドを呼び出すことによって、送信されたフォームに関連付けられている処理状態が `1` であることを確認します。このメソッドが値 `1` を返した場合、計算は実行されており、データをクライアントの web ブラウザーに書き戻すことができます。
-
 
 1. フォームデータストリームをクライアントの web ブラウザーに書き戻します。
 

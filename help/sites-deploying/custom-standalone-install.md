@@ -1,15 +1,13 @@
 ---
 title: カスタムスタンドアロンインストール
-seo-title: Custom Standalone Install
 description: スタンドアロンのAEMインスタンスをインストールする際に使用できるオプションについて説明します。
-seo-description: Learn about the options available when installing a standalone AEM instance.
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1616'
-ht-degree: 63%
+source-wordcount: '1618'
+ht-degree: 60%
 
 ---
 
@@ -45,7 +43,7 @@ AEM のデフォルトのポートは 4502 です。このポートが使用で�
 
 ### Java 11 に関する考慮事項 {#java-considerations}
 
-Oracle Java 11（または一般にバージョン 8 より新しい Java）を実行している場合は、AEM の起動時にコマンドラインにさらにスイッチを追加する必要があります。
+oracleJava 11（または通常は 8 より新しいバージョンの Java）を実行している場合は、AEMの起動時に、追加のスイッチをコマンドラインに追加する必要があります。
 
 * 次の内容： `-add-opens` スイッチを追加して、 `stdout.log`
 
@@ -143,7 +141,7 @@ AEM as a Windows サービスをインストールして開始するには：
 
 ## 一時的な作業ディレクトリの場所の再定義 {#redefining-the-location-of-the-temporary-work-directory}
 
-Java マシンの一時フォルダーのデフォルトの場所は `/tmp`です。AEM も、パッケージの構築時などにこのフォルダーを使用します。
+Java マシンの一時フォルダーのデフォルトの場所は次のとおりです。 `/tmp`.AEMは、例えば、パッケージの作成時に、このフォルダーも使用します。
 
 一時フォルダーの場所を変更する場合（ディレクトリの空き容量を増やす必要がある場合など）は、JVM パラメーターを追加して * `<new-tmp-path>`* を定義します。
 

@@ -5,16 +5,16 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2244'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
 # スマートタグ付けのために [!DNL Assets] を準備 {#configure-asset-tagging-using-the-smart-content-service}
 
-スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを活用します。設定が完了したら、いくつかの画像とタグを使用してサービスのトレーニングを行います。
+スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、を統合します。 [!DNL Experience Manager Assets] とAdobe Developer Console でのスマートサービスを使用 [!DNL Adobe Sensei]. 設定が完了したら、いくつかの画像とタグを使用してサービスのトレーニングを行います。
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 1. 「**[!UICONTROL 公開鍵をアップロード]**」を選択します。[!DNL Experience Manager]からダウンロードした証明書ファイルを指定します。[!UICONTROL 公開鍵が正常にアップロード]されたというメッセージが表示されます。「**[!UICONTROL 次へ]**」をクリックします。
 
-   [!UICONTROL 新しいサービスアカウント（JWT）秘密鍵証明書を作成]ページにはサービスアカウントの公開鍵が表示されます。
+   [!UICONTROL 新しいサービスアカウント（JWT）資格情報を作成]ページにはサービスアカウントの公開鍵が表示されます。
 
 1. 「**[!UICONTROL 次へ]**」をクリックします。
 

@@ -5,7 +5,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 exl-id: 575bab27-d973-47fa-a0da-fa889cec6f27
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 28%
@@ -55,7 +55,7 @@ ConvertPDF サービスには次の 2 つの API が用意されています。
  ConvertPdfService cpdfService = sling.getService(ConvertPdfService.class);
 
  // path to input document in AEM repository
- // please replace this with path to your document
+ // replace this with path to your document
 String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
  // Create a Docmanager Document object for
@@ -99,7 +99,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
  ConvertPdfService cpdfService = sling.getService(ConvertPdfService.class);
 
  // path to input document in AEM repository
- // please replace this with path to your document
+ // replace this with path to your document
  String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
  // Create a Docmanager Document object for

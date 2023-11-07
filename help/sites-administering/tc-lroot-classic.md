@@ -4,10 +4,10 @@ description: クラシック UI を使用してAdobe Experience Managerで言語
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '322'
-ht-degree: 23%
+ht-degree: 16%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 23%
 1. サイトの言語バージョンを表す新しい子ページを追加します。
 
    1. 新規/新しいページをクリックします。
-   1. ダイアログで、「タイトル」と「名前」を指定します。名前の形式は `<language-code>` または `<language-code>_<country-code>` です。例えば、en、en_US、en_us、en_GB、en_gb のようにします。
+   1. ダイアログで、「タイトル」と「名前」を指定します。名前は、 `<language-code>` または `<language-code>_<country-code>`例えば、en、en_US、en_us、en_GB、en_gb のようになります。
 
       * サポートされている言語コードは、ISO-639-1 で定義されている小文字の 2 文字コードです。
       * サポートされる国コードは、ISO 3166 で定義されている小文字または大文字の 2 文字コードです。

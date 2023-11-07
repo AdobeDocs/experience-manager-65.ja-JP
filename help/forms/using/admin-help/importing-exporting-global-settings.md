@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 exl-id: cdb7ff54-7891-45b1-a921-10b01ef5188d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 41%
+source-wordcount: '1240'
+ht-degree: 36%
 
 ---
 
@@ -63,7 +63,7 @@ Workspace の検索テンプレート定義およびグローバル設定の読�
 
 ## Workspace のグローバル設定 {#workspace-global-settings}
 
-グローバル設定ファイルは変更できます。ただし、編集が必要な設定は、JChannelConnectionProperties、formViewOnly、specialRoutes の各設定のみです。
+グローバル設定ファイルは変更できますが、編集できる設定は JChannelConnectionProperties、formViewOnly、specialRoutes の設定のみです。
 
 >[!NOTE]
 >
@@ -73,14 +73,14 @@ Workspace グローバル設定ファイルには、次の設定が含まれて�
 
 ### specialRoutes 設定 {#specialroutes-settings}
 
-この *specialRoutes* 設定は、Workspace で特別なルートのプロパティ、承認および拒否を指定します。 状況によっては、Workspace のタスクカードにこれらのルートのボタンが表示され、ユーザーはフォームを開かずにルートを選択できます。 グローバル設定ファイルの specialRoutes 設定を変更して、承認および拒否のためのカスタマイズ名を追加したり、追加のルートを作成したりできます。
+The *specialRoutes* 設定は、Workspace で特別なルートのプロパティ、承認および拒否を指定します。 状況によっては、Workspace のタスクカードにこれらのルートのボタンが表示され、ユーザーはフォームを開かずにルートを選択できます。 グローバル設定ファイルの specialRoutes 設定を変更して、承認および拒否のためのカスタマイズ名を追加したり、追加のルートを作成したりできます。
 
-**client_specialRoutes_routes_approve_style：**Workspace テーマにあるスタイルの名前。これによって、承認ボタンアイコンを識別します。このスタイルには、有効アイコンと無効アイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
+**client_specialRoutes_routes_approve_style:** Workspace テーマ内のスタイルの名前。承認ボタンのアイコンを識別します。 このスタイルには、有効アイコンと無効アイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
 ` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }` Workspace の CSS ファイルは、workspace-theme.swf ファイルに埋め込まれます。このファイルは、adobe-workspace-client.ear / adobe-workspace-client.war ファイルにあります。 Workspace の外観を変更するには、workspace-theme.swf ファイルを再コンパイルする必要があります。
 
 **client_specialRoutes_routes_deny_names：** Workbench ユーザーが「拒否」と解釈するために使用できる様々な文字列です。 これらの文字列では、大文字と小文字が区別されます。例えば、デフォルト値は「deny」です。Workbench ユーザーのプロセスで「Deny」という単語が使用された場合、この単語は認識されません。ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Deny」という単語をこの設定に追加する必要があります。
 
-**client_specialRoutes_routes_deny_style：**ワークスペーステーマファイルにあるスタイルの名前。これによって、「拒否ボタン」アイコンを識別します。このスタイルには、有効アイコンと無効アイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
+**client_specialRoutes_routes_deny_style:** Workspace テーマファイル内のスタイルの名前。拒否ボタンのアイコンを識別します。 このスタイルには、有効アイコンと無効アイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
 `  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` **client_specialRoutes_routes_approve_names:** Workbench ユーザーが「承認」と解釈するために使用できる様々な文字列。 これらの文字列では、大文字と小文字が区別されます。例えば、デフォルト値は、「approve」です。Workbench ユーザーのプロセスで「Approve」という単語が使用された場合、この単語は認識されません。ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Approve」という単語をこの設定に追加する必要があります。
 
 **client_specialRoutes_names：**&#x200B;カスタマイズされた文字列値をリソースファイルから検索するために使用されるキー。この設定の各エントリには、名前とスタイルの値を含める必要があります。
@@ -99,7 +99,7 @@ Workspace グローバル設定ファイルには、次の設定が含まれて�
 
 >[!NOTE]
 >
->TTL は、クラスタ内のサーバー間のネットワークスイッチ数より大きく設定する必要があります。ただし、値が大きすぎる場合は、マルチキャストパケットがサブネットに送信され、サブネットが破棄される可能性があります。
+>TTL は、クラスタ内のサーバ間のネットワークスイッチの数より大きい値にする必要があります。ただし、値が大きすぎると、マルチキャストパケットがサブネットに送られ、サブネットが破棄される可能性があります。
 
 この設定の残りのプロパティは変更しないでください。
 
@@ -113,13 +113,13 @@ For additional information on JGroups and Workspace, see [JGroups and AEM forms 
 
 ### formView 設定 {#formview-settings}
 
-**client_formView_openFormInFullScreen：** Workspace のすべてのフォームをフルスクリーンモードで表示するには、このオプションを true に設定します。このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。User サービスには、タスクに関連付けられたドキュメントをフルスクリーンモードで開くオプションが含まれています。 これにより、プロセスごとに表示を制御できます。
+**client_formView_openFormInFullScreen：** Workspace のすべてのフォームをフルスクリーンモードで表示するには、このオプションを true に設定します。このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。User サービスには、タスクに関連付けられたドキュメントをフルスクリーンモードで開くためのオプションが含まれています。 これにより、プロセスごとに表示を制御できます。
 
 **client_routes_formViewOnly：** True に設定すると、ルートは Workspace でカード表示にもリスト表示にも表示されません。デフォルト値は False で、ルートはカード表示およびリスト表示に表示されます。
 
 ### その他の設定 {#other-settings}
 
-**client_mimeTypes_openOutsideBrowser：** Workspace ブラウザーインスタンスとは別に開くドキュメントの MIME タイプです。組織のプロセスで追加の MIME タイプが必要な場合は、ここで指定します。 デフォルト値は次のとおりです。
+**client_mimeTypes_openOutsideBrowser:** Workspace ブラウザーインスタンスの外部で開くドキュメントの MIME タイプです。 組織のプロセスで追加の MIME タイプが必要な場合は、ここで指定します。 デフォルト値は次のとおりです。
 
 * `application/msword`
 * `application/msexcel`

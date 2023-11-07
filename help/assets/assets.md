@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 65%
@@ -26,7 +26,7 @@ AEM [!DNL Assets] は、 [!DNL Experience Manager] プラットフォームを�
 * タグ、Lightbox、または星マーク（お気に入り）で分類して、アセットを管理する。アセットに注釈を追加する。
 * ファイル名、ドキュメントの全文、日付、ドキュメントタイプ、タグを検索してアセットを検索します。
 * アセットのメタデータ情報を追加または編集する。メタデータは、関連するアセットと共に、自動的にバージョン管理されます。アセットのメタデータの読み込みまたは書き出しができます。
-* 画像編集機能（拡大・縮小、画像フィルタの追加など）を実行する。 WebDAV または CIFS フォルダーを使用した複数のデジタルアセットの読み込みと書き出しを同時におこないます。
+* 画像編集機能（拡大・縮小、画像フィルタの追加など）を実行する。 WebDAV またはCIFフォルダーを使用した複数のデジタルアセットの読み込みと書き出しを同時におこないます。
 * ワークフローおよび通知を使用して、アセットのセットに関する結合処理とダウンロードを許可し、アセットへのアクセス権を管理する。
 
 ### [!DNL Experience Manager Assets] と [!DNL Experience Manager Sites] の統合 {#aem-assets-fully-integrated-in-cq-wcm}

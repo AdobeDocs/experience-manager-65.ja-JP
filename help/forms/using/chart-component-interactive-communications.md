@@ -11,9 +11,9 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2608'
 ht-degree: 84%
 
 ---
@@ -161,7 +161,7 @@ ht-degree: 84%
    <td><p>共通の設定に加えて、次のようなグラフ固有の設定を使用できます。</p>
     <ul>
      <li><strong>凡例を表示：</strong>有効にすると、円グラフまたはドーナツグラフの凡例を表示します。</li>
-     <li><strong>凡例の位置：</strong>グラフに対する凡例の位置を指定します。使用できるオプションは、右端、左端、上、下です。印刷チャネルの右側の凡例を使用することをお勧めします。</li>
+     <li><strong>凡例の位置：</strong>グラフに対する凡例の位置を指定します。使用できるオプションは、右端、左端、上、下です。印刷チャネルの右側の凡例を使用します。</li>
      <li><strong>内半径</strong>：ドーナツグラフで使用できます。グラフの内側の円の半径をピクセル単位で指定できます。</li>
      <li><strong>線の色</strong>：線グラフ、線と点のグラフ、面グラフで使用できます。グラフの線の色を指定できます。</li>
      <li><strong>点の色</strong>：点グラフや、折れ線と点のグラフで使用できます。グラフの点（マーカー）の色を指定できます。<br /> </li>

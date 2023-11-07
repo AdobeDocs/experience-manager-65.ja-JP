@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
-source-git-commit: 5910b0e64a579998bc9cd79cf4e95f5e6f459c5a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 100%
+source-wordcount: '640'
+ht-degree: 92%
 
 ---
 
@@ -45,11 +45,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」にあるクイックスタートは、JBoss および Windows オペレーティングシステムにデプロイされている Forms Server に基づいています。UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換える必要があります。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM forms によるプログラミング」のクイックスタートは、JBoss および Windows オペレーティングシステムにデプロイされているForms Server に基づいています。 UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換える必要があります。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した Content Services スペースの作成（非推奨） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
-次の Java コードの例では、Company Home にある *Test Directory* という名前の新しいスペースを作成します。新しいスペースの識別子の値がコンソールに書き込まれます。
+次の Java コードの例では、という名前の新しいスペースを作成します。 *テストディレクトリ* 会社の自宅で。 新しいスペースの識別子の値がコンソールに書き込まれます。
 
 ```java
  /*
@@ -78,16 +78,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -129,7 +129,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              String storeName ="SpacesStore";
              String nodeName = "/Company Home/Test Directory" ;
  
-             //Create a new space
+             //Create a space
              String spaceId = docManager.createSpace(storeName,nodeName);
              System.out.println("The identifier value of the new space is " +spaceId);
          }
@@ -174,16 +174,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -274,16 +274,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -397,16 +397,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -503,16 +503,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -575,7 +575,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した Content Services コンテンツの一覧表示（非推奨） {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
-次の Java コードの例は、/Company Home にあるコンテンツを一覧表示します。各ノードのタイプと名前が表示されます。
+次の Java コードの例は、 /Company Home にあるコンテンツをリストします。 各ノードのタイプと名前が表示されます。
 
 ```java
  /*
@@ -604,16 +604,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -717,16 +717,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -780,10 +780,10 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              ResultSet rs = docManager.searchRepository(storeName, path, true, qImpl, 200);
              long resultSize = rs.getResultSize();
  
-             //Determine if the document is located in Content space
+             //Determine if the document is in Content space
              if (resultSize > 0)
              {
-                 System.out.println("MortgageForm is located in the Repository");
+                 System.out.println("MortgageForm is in the Repository");
              }
          }
      catch(Exception e)
@@ -827,16 +827,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -880,7 +880,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              String storeName ="SpacesStore";
              String nodeName = "/Company Home/Test Directory/";
  
-              //Create a new permission
+              //Create a permission
              ContentAccessPermission permission = new ContentAccessPermission();
              permission.setAuthority("tblue/DefaultDom");
              permission.setIsAllowed(false);
@@ -937,16 +937,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a

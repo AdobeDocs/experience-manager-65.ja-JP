@@ -9,10 +9,10 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: ea983b24da66edd02f86614690f8bc5e1e2499d9
-workflow-type: ht
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
 source-wordcount: '3624'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -372,7 +372,7 @@ WebP をデフォルトで提供する状態に戻す場合は、同様にサポ
 
 ## 合成画像でデバイスピクセル比（dpr）機能が期待どおりに動作しないのはなぜですか？ {#composite-images}
 
-合成画像に含まれるレイヤーが多すぎると、位置修飾子の使用中に dpr 機能に影響が及ぶ場合があります。この問題は既知で、スマートイメージングの今後のリリースで修正される予定です。他のスマートイメージング機能が期待どおりに動作しない場合は、サポートケースを作成して問題を報告することができます。
+合成画像に含まれるレイヤーが多すぎると、位置修飾子の使用中に dpr 機能に影響が及ぶ場合があります。この問題は既知で、スマートイメージングの今後のリリースで修正する必要があります。 他のスマートイメージング機能が期待どおりに動作しない場合は、サポートケースを作成して問題を報告することができます。
 
 ## スマートイメージングで PNG が依然として可逆 WebP／AVIF に変換されるのはなぜですか？ {#convert-to-lossless}
 

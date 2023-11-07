@@ -1,7 +1,7 @@
 ---
 title: プロセスインスタンスのリストのカスタマイズ
 seo-title: Customizing the listing of process instances
-description: AEM Forms Workspace のプロセスインスタンスで表示されるプロパティをカスタマイズする方法。
+description: AEM Forms Workspace のプロセスインスタンスに表示されるプロパティをカスタマイズする方法。
 seo-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
@@ -9,18 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 exl-id: b27ffe92-8491-43a0-bf42-613eb39a606e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 100%
+ht-degree: 53%
 
 ---
 
 # プロセスインスタンスのリストのカスタマイズ {#customizing-the-listing-of-process-instances}
 
-プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
+プロセスインスタンスのリストが、AEM Forms Workspace の「追跡」タブに表示されます。
 
-プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティを各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスのコンポーネントモデルに属性として格納されていて、表示やテンプレートで使用できます。
+プロセスインスタンスリストで、各プロセスインスタンスに対して、AEM Forms workspace にそのインスタンスのいくつかのプロパティが表示されます。 次のプロパティを各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスのコンポーネントモデルに属性として格納されていて、表示やテンプレートで使用できます。
 
 <table>
  <tbody>
@@ -33,7 +33,7 @@ ht-degree: 100%
    <td>プロセスインスタンスの説明。</td>
   </tr>
   <tr>
-   <td>initiator</td>
+   <td>イニシエーター</td>
    <td>プロセスインスタンスのイニシエーターの名前。</td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>processInstanceStatus</td>
-   <td>0 = 起動済み<br /> 1 = 実行中<br /> 2 = 完了<br /> 3 = 完了中<br /> 4 = 終了<br /> 5 = 終了中<br /> 6 = 休止<br /> 7 = 休止中<br /> 8 = 休止解除中</td>
+   <td>0 =開始済み<br /> 1 =実行中<br /> 2 =完了<br /> 3 =完了中<br /> 4 =終了<br /> 5 =終了中<br /> 6 =中断<br /> 7 =休止中<br /> 8 =休止解除中</td>
   </tr>
   <tr>
    <td>processName</td>
@@ -62,7 +62,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトは、<strong>名前</strong>（プロセス変数の名前）、<strong>値</strong>（プロセス変数の値）、および<strong>タイプ</strong>（プロセス変数のタイプ）を含みます。</td>
+   <td>プロセス変数のオブジェクトの配列。 各プロセス変数オブジェクトには、 <strong>名前</strong> （プロセス変数の名前） <strong>値</strong> （プロセス変数の値）、<strong> type</strong> （プロセス変数の型）。</td>
   </tr>
  </tbody>
 </table>
@@ -90,7 +90,7 @@ ht-degree: 100%
 
    ```css
    .processinstance .processDescription {
-    <!--Dummy values, need to be configured by user as per requirement as well as user can add or delete any property depending upon requirement-->
+    <!--Dummy values, need to be configured by user as per requirement and user can add or delete any property depending upon requirement-->
        width : 250px;
        font-size : 11pt;
        padding : 2px;

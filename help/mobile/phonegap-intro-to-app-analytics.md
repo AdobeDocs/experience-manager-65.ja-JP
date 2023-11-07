@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 7e358660-bc2f-4d8f-8d74-6cdb6c1ea7b5
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1051'
 ht-degree: 2%
 
 ---
@@ -29,34 +29,34 @@ AEM Mobileアプリはマーケティングキャンペーンで何をしてい�
 
 AdobeMobile Services を使用すると、使用状況、アプリのクラッシュ回数、デバイスの詳細など、モバイルアプリに関する他の重要な指標を追跡することで、モバイルアプリのユーザーの使用状況を把握できます。
 
-Adobe Experience Manager Mobileは、AEM Mobile Application Dashboard から直接モバイル分析の詳細を表示します。 この **モバイル指標タイル** ダッシュボードにはモバイルアプリケーション用のReal-Time Analyticsが表示され、開発者、作成者および管理者はモバイルアプリケーションの状態をすばやく確認できます。 表紙の下で、分析に力を入れるのは [Adobeモバイル分析](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK. AdobeMobile Analytics SDK は、ネイティブで、または Web ビュー用の PhoneGap Bridge プラグインを通じて、アプリケーションにプラグインできます。 指標は収集され、デバイスが接続されるまでデバイス上でキャッシュされ、そのデータがAdobeの Mobile Services クラウドにプッシュされて、レポートと分析がおこなわれます。
+Adobe Experience Manager Mobileは、AEM Mobile Application Dashboard から直接モバイル分析の詳細を表示します。 The **モバイル指標タイル** ダッシュボードにはモバイルアプリケーション用のReal-Time Analyticsが表示され、開発者、作成者および管理者はモバイルアプリケーションの状態をすばやく確認できます。 表紙の下で、分析に力を入れるのは [Adobeモバイル分析](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK. AdobeMobile Analytics SDK は、ネイティブで、または Web ビュー用の PhoneGap Bridge プラグインを通じて、アプリケーションにプラグインできます。 指標は収集され、デバイスが接続されるまでデバイス上でキャッシュされ、そのデータがAdobeの Mobile Services クラウドにプッシュされて、レポートと分析がおこなわれます。
 
 AdobeMobile Analytics SDK は、次の機能を提供します。
 
 1. **モバイルチャネルのデータ収集**  — すべての主要なオペレーティングシステム上のモバイル Web サイトやアプリの包括的なデータを収集します。
-1. **モバイルエンゲージメント分析**  — モバイルアプリ、Web サイトまたはビデオ内でのユーザーエンゲージメントを把握します。これには、消費者がチャネルを起動する頻度、チャネルから購入するかどうかなどが含まれます。
+1. **モバイルエンゲージメント分析**  — モバイルアプリ、Web サイトまたはビデオ内でのユーザーエンゲージメントを把握します。これには、消費者がチャネルを起動する頻度や、チャネルから購入するかどうかなどが含まれます。
 1. **モバイルアプリのダッシュボードとレポート**  — アプリやアプリストア指標のライフサイクル指標を含む使用状況レポートを取得します。ユーザー、起動回数、平均セッション長、リテンション長、クラッシュ回数のトレンドを確認できます。
 1. **モバイルキャンペーン分析** - SMS、モバイル検索広告、モバイルディスプレイ広告、QR コードなど、モバイル固有のキャンペーンの効果を定量化します。
-1. **位置情報分析**  — アプリのユーザーが起動した場所や、GPS の位置や目標地点によってモバイルエクスペリエンスとやり取りする場所を特定します。
-1. **パス分析**  — ユーザーがアプリ内をどのように移動して、ユーザーを引き付けている画面や UI 要素を特定し、ユーザーをドロップオフにさせるかを確認します。
+1. **位置情報分析**  — アプリのユーザーが起動した場所や、GPS の位置や目標地点によってモバイルエクスペリエンスとやり取りする場所を見つけます。
+1. **パス分析**  — ユーザーがアプリ内をどのように移動して、ユーザーを引き付けている画面や UI 要素を特定し、ユーザーをドロップオフさせたかを確認します。
 
 この節では、 [AEM Developers](#developers) 分析追跡を使用してAEM Mobileアプリを実装する方法を学ぶことができます。
 
-最後に [AEM Administrators](#administrators) 学習内容：
+最後に [AEM Administrators](#administrators) 手順を以下に示します。
 
-* クラウドサービスを作成して Mobile Services をAdobe
+* クラウドサービスを作成して Mobile Services をAdobeにする
 * モバイルサービス設定の作成とレポートスイートの関連付け
 * モバイルアプリにモバイルサービス設定を関連付ける
-* AEM Apps コマンドセンターから指標を表示
+* AEM Apps コマンドセンターを使用した指標の表示
 * モバイルアプリに AMS SDK 設定を割り当て
 
 ## 開発者向け — アプリへの Analytics の統合 {#for-developers-integrate-analytics-into-your-app}
 
-**前提条件：** AEM管理者は、Mobile Services クラウド設定Adobeを設定する必要があります。 [以下で説明するように](#amscloudserviceconfig).
+**前提条件：** AEM管理者は、Mobile Services クラウド設定をAdobeする必要があります。 [以下で説明するように](#amscloudserviceconfig).
 
 開発者は [AEM Mobileアプリへの analytics の追加](/help/mobile/phonegap-add-analytics-to-apps.md) 必要に応じて、ユーザーがモバイルアプリコンテンツとどのように関わっているかを追跡、レポートおよび理解し、起動回数、アプリ内時間、クラッシュ率などの主要なライフサイクル指標を測定します。
 
-## 管理者向け —AdobeMobile ServicesCloud Service {#for-administrators-configure-the-adobe-mobile-services-cloud-service}
+## 管理者向け —AdobeMobile ServicesCloud Serviceの設定 {#for-administrators-configure-the-adobe-mobile-services-cloud-service}
 
 Mobile Services のAdobeを活用するには、AEMAdobeMobile ServicesCloud ServiceをAdobe Analyticsのアカウント情報と共に設定する必要があります。 Apps コマンドセンターには、 **指標を分析** クラウドサービスを作成し、モバイルアプリに関連付けることができるタイル。
 
@@ -68,7 +68,7 @@ Mobile Services のAdobeを活用するには、AEMAdobeMobile ServicesCloud Ser
 
 AdobeMobile Services クラウドサービスを作成するには、サービスへの接続と、設定に割り当てるレポートスイートの選択の 2 つの手順が必要です。
 
-まず、ダッシュボードの「Cloud Servicesを管理」タイルの「+」ボタンをクリックします。
+まず、ダッシュボードの「Cloud Serviceを管理」タイルの「+」ボタンをクリックします。
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
@@ -76,7 +76,7 @@ AdobeMobile Services クラウドサービスを作成するには、サービ�
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-次に示すように、必須フィールドに入力して、新しい Mobile Service 設定を選択または作成します。 AEM管理者が Mobile Services への接続を正常に作成するには、この情報が必要です。
+次に示すように、必須フィールドに入力して、モバイルサービス設定を選択または作成します。 AEM管理者が Mobile Services への接続を正常に作成するには、この情報が必要です。
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 

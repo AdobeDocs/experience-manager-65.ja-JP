@@ -6,10 +6,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 96%
+ht-degree: 95%
 
 ---
 
@@ -71,11 +71,11 @@ AEM 用の Javascript SPA SDK での動的モデルとコンポーネントの�
 
 ページのコンテンツ構造は AEM に保存されます。ページのモデルは、SPA コンポーネントのマッピングとインスタンス化に使用されます。SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これをおこなうには、リソースタイプ（または AEM コンポーネントへのパス）を一意のキーとして使用します。
 
-SPA コンポーネントは、ページモデルと同期する必要があり、コンテンツに変更があった場合はそれに応じて更新する必要があります。指定のページモデル構造に従って、コンポーネントをその場でインスタンス化するには、動的コンポーネントを利用したパターンを使用する必要があります。
+SPA コンポーネントは、ページモデルと同期する必要があり、コンテンツに変更があった場合はそれに応じて更新する必要があります。動的コンポーネントを使用するパターンは、提供されたページモデル構造に従って、その場でコンポーネントをインスタンス化する場合に使用する必要があります。
 
 ### メタフィールド  {#meta-fields}
 
-ページモデルでは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) API に基づく JSON Model Exporter を利用します。この書き出し可能な Sling モデルは、基になるライブラリがデータモデルを解釈できるように、次のフィールドのリストを公開します。
+ページモデルでは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) API に基づく JSON モデルエクスポーターを利用します。この書き出し可能な Sling モデルは、基になるライブラリがデータモデルを解釈できるように、次のフィールドのリストを公開します。
 
 * `:type`：AEM リソースのタイプ（デフォルト = リソースタイプ）
 * `:children`：現在のリソースの階層の子。子は現在のリソースの内部コンテンツに含まれていません（ページを表す項目に含まれています）

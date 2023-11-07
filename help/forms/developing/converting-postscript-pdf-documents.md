@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
 role: Developer
 exl-id: 744df8b2-0c61-410f-89e9-20b8adddbf45
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1325'
-ht-degree: 100%
+source-wordcount: '1323'
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ Distiller® サービスは、PostScript®、Encapsulated PostScript（EPS）お
 
 **変換するファイルの取得**
 
-変換するファイルを取得する必要があります。例えば、PS ファイルを PDF ドキュメントに変換するには、PS ファイルを取得する必要があります。
+変換するファイルを取得します。 例えば、PS ファイルを PDF ドキュメントに変換するには、PS ファイルを取得する必要があります。
 
 **PDF 作成操作の呼び出し**
 
@@ -126,7 +126,6 @@ Distiller Service API（Java）を使用して、PostScript ファイルを PDF 
 
    * `CreatePDFResult` オブジェクトの `getLogDocument` メソッドを呼び出します。これは `com.adobe.idp.Document` オブジェクトを返します。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出してログドキュメントを抽出します。
-
 
 **関連トピック**
 

@@ -4,10 +4,10 @@ description: ヘッドレスコンテンツの基礎となる AEM コンテン�
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 97%
+source-wordcount: '1714'
+ht-degree: 94%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 97%
 1. 「**作成**」を選択し、「**コンテンツフラグメント**」を選択して、ウィザードを開きます。
 1. ウィザードの最初の手順では、新しいフラグメントの基盤を指定することを求められます。
 
-   * [モデル](/help/assets/content-fragments/content-fragments-models.md) - **アドベンチャー**&#x200B;モデルなど、構造化コンテンツを必要とするフラグメントの作成に使用されます
+   * [モデル](/help/assets/content-fragments/content-fragments-models.md)  — 構造化コンテンツを必要とするフラグメントを作成するために使用します。例えば、 **アドベンチャー** モデル
 
       * 使用可能なすべてのモデルが表示されます。
 
@@ -142,7 +142,7 @@ ht-degree: 97%
    * フラグメントまたはフラグメントリンク（コンソール表示によって異なる）をクリックまたはタップします。
    * フラグメントを選択してから、ツールバーの「**編集**」を選択。
 
-1. フラグメントエディターが開きます。必要に応じて変更を加えます。
+1. フラグメントエディターが開きます。 必要に応じて変更を加えます。
 
    ![フラグメントエディター](assets/cfm-managing-03.png)
 
@@ -186,7 +186,7 @@ ht-degree: 97%
 
 * フラグメント名の下に、現在のフラグメントの作成に使用された[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)の名前が表示されます。
 
-   * また、この名前はモデルエディターを開くリンクでもあります。
+   * また、この名前は、モデルエディターを開くためのリンクでもあります。
 
 * フラグメントのステータス、例えば、作成日、変更日、公開日などの情報を確認します。
 
@@ -237,7 +237,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
   >
   >これらの操作では、変更を保存するだけでなく、参照もすべて更新し、Dispatcher が必要に応じてフラッシュされます。これらの変更の処理には時間がかかる場合があります。このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
   >
-  >「**保存して閉じる**」を使用する際はこの点に留意し、フラグメントエディターをすぐに開いて、さらに変更を加え保存してください。
+  >次の点に注意してください： **保存して閉じる** その後、フラグメントエディターにすばやく再度入力し、さらに変更を加えて保存します。
 
 * **閉じる**
 
@@ -319,7 +319,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 特定のバージョンを選択したら、「[タイムライン](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)」から「**現在のバージョンと比較**」アクションを利用できるようになります。
 
-これにより、次の情報が表示されます。
+開く画面：
 
 * **現在**（最新）のバージョン（左）
 

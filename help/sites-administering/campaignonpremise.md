@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 98%
+source-wordcount: '1573'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ AEM を Adobe Campaign Classic（ACC）と統合すると、メール配信、�
 
 ## 統合手順 {#integration-steps}
 
-AEM と Campaign の統合には、両方のソリューションで多くの手順が必要です。
+AEMと Campaign の統合には、両方のソリューションでいくつかの手順が必要です。
 
 1. [AEM 統合パッケージの Campaign へのインストール](#install-package)
 1. [Campaign での AEM のオペレーターの作成](#create-operator)
@@ -41,12 +41,12 @@ AEM と Campaign の統合には、両方のソリューションで多くの手
 
 * Adobe Campaign Classic への管理者アクセス
    * 統合を実行するには、設定済みのデータベースを含む、動作中の Adobe Campaign Classic インスタンスが必要です。
-   * Adobe Campaign Classic のセットアップおよび設定方法に関する詳細が必要な場合は、[Adobe Campaign Classic ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)、特にインストールおよび設定ガイドを参照してください。
+   * Adobe Campaign Classicの設定方法と設定方法に関する追加の詳細が必要な場合は、 [Adobe Campaign Classicのドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja) 特に、『インストールと設定』ガイド。
 * AEM への管理者アクセス
 
 ## Campaign への AEM 統合パッケージのインストール {#install-package}
 
-Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接続に必要な標準設定が多数含まれています。
+The **AEM統合** Adobe Campaignのパッケージには、AEMへの接続に必要ないくつかの標準設定が含まれています。
 
 1. 管理者は、クライアントコンソールを使用して Adobe Campaign インスタンスにログインします。
 
@@ -112,7 +112,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
    >
    >デフォルトでは、オペレーターのセキュリティゾーンは設定されていません。AEM を Adobe Campaign に接続するには、前の手順で説明したようにゾーンを選択する必要があります。
    >
-   >セキュリティの問題を回避するために、AEM 専用のセキュリティゾーンを作成することを強くお勧めします。このトピックについて詳しくは、[Adobe Campaign Classicドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html?lang=ja)を参照してください。
+   >セキュリティの問題を回避するために、AEM 専用のセキュリティゾーンを作成することを強くお勧めします。このトピックについて詳しくは、 [Adobe Campaign Classicドキュメント。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html?lang=ja)
 
 1. Campaign クライアントで、`aemserver` オペレーターに戻り、「**一般**」タブを選択します。
 

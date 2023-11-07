@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 55%
+source-wordcount: '1611'
+ht-degree: 54%
 
 ---
 
@@ -103,7 +103,7 @@ S3 実装の遅延は、バックグラウンドの書き込みスレッドに�
 
 ## ネットワーク {#network}
 
-[!DNL Assets] には、他の多くの [!DNL Experience Manager] プロジェクトよりもネットワークのパフォーマンスが重要になる使用例が数多くあります。お客様のサーバーが高速になっていても、システムに対してアセットをアップロードおよびダウンロードする際のユーザーの負荷に対応した十分な大きさのネットワーク接続が備わっていなければ、低速のままに見えます。[!DNL Experience Manager] へのユーザーのネットワーク接続の渋滞地点を判別するための便利な手法については、[Assets のユーザーエクスペリエンス、インスタンスのサイジング、ワークフローの評価およびネットワークトポロジに関する考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
+[!DNL Assets] には、アドビの [!DNL Experience Manager] プロジェクト。 お客様のサーバーが高速になっていても、システムに対してアセットをアップロードおよびダウンロードする際のユーザーの負荷に対応した十分な大きさのネットワーク接続が備わっていなければ、低速のままに見えます。[!DNL Experience Manager] へのユーザーのネットワーク接続の渋滞地点を判別するための便利な手法については、[Assets のユーザーエクスペリエンス、インスタンスのサイジング、ワークフローの評価およびネットワークトポロジに関する考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
 
 ## 制限事項 {#limitations}
 

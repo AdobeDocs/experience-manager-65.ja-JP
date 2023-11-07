@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 659eb9b0-93a0-4bae-8836-d4bc9c3a8c77
-source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 35%
@@ -69,11 +69,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  * 19. xbean.jar (required for SOAP mode)
  * 20. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -139,7 +139,7 @@ public class CreateApplicationVersion_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションの書き出し {#quick-start-soap-mode-exporting-applications-using-the-java-api}
+## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションの書き出し {#quick-start-soap-mode-exporting-applications-using-the-java-api}
 
 次の Java™コードの例は、Java™ API を使用してアプリケーションを書き出します。
 
@@ -167,11 +167,11 @@ public class CreateApplicationVersion_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -242,7 +242,7 @@ public class ExportLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションの読み込み {#quick-start-soap-mode-importing-applications-using-the-java-api}
+## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションのインポート {#quick-start-soap-mode-importing-applications-using-the-java-api}
 
 次の Java™コードの例では、Java™ API を使用してアプリケーションを読み込みます。
 
@@ -274,11 +274,11 @@ Java™ API importApplication() は、同じ名前の既存のアプリケーシ
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -329,7 +329,7 @@ public class ImportLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションの取得 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
+## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションの取得 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
 
 次の Java™コードの例では、Java™ API を使用してアプリケーションを取得しています。
 
@@ -357,11 +357,11 @@ public class ImportLCA_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -466,11 +466,11 @@ public class GetApplication_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -535,7 +535,7 @@ public class GetApplications_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションのステータスの取得 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションのステータスの取得 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
 ```java
 /*
@@ -561,11 +561,11 @@ public class GetApplications_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *
@@ -668,11 +668,11 @@ public class GetApplicationStatus_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  */
 package com.adobe.idp.dsc.applicationmanager;
@@ -747,11 +747,11 @@ public class PreviewLCA_SOAP {
  * 18. xbean.jar (required for SOAP mode)
  * 19. xercesImpl.jar (required for SOAP mode)
  *
- * These JAR files are located in the following path:
+ * These JAR files are in the following path:
  * <install directory>/sdk/client-libs/common
  *
  *
- * SOAP required JAR files are located in the following path:
+ * SOAP required JAR files are in the following path:
  * <install directory>/sdk/client-libs/thirdparty
  *
  *

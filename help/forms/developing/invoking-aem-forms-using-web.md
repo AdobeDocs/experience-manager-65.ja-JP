@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '9901'
-ht-degree: 89%
+source-wordcount: '9888'
+ht-degree: 87%
 
 ---
 
@@ -143,7 +143,7 @@ Web サービスを使用して AEM Forms サービスを呼び出すには、�
 
 **AEM Forms Process WSDL の定義**
 
-Workbench で作成されたプロセスに属する WSDL にアクセスするには、WSDL 定義内でアプリケーション名とプロセス名を指定する必要があります。アプリケーション名が `MyApplication` で、プロセス名が `EncryptDocument` であると仮定します。この場合、以下の WSDL 定義を指定します。
+Workbench で作成されたプロセスに属する WSDL にアクセスするには、WSDL 定義内のアプリケーション名とプロセス名を指定します。 アプリケーション名が `MyApplication` で、プロセス名が `EncryptDocument` であると仮定します。この場合、以下の WSDL 定義を指定します。
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?wsdl
@@ -208,11 +208,11 @@ AEM Forms サービス WSDL は、多くのデータタイプを定義します�
 
 **サービスリクエストでの BLOB オブジェクトの供給**
 
-AEM Forms サービス操作が `BLOB` タイプを入力値として要求する場合、`BLOB` タイプのインスタンスを、アプリケーションロジック内に作成します。（*AEM Forms によるプログラミング* にある多くの web サービスのクイックスタートは、 BLOB データタイプの操作方法を示します）。
+AEM Forms サービス操作が `BLOB` タイプを入力値として要求する場合、`BLOB` タイプのインスタンスを、アプリケーションロジック内に作成します。(Web サービスの多くは、 *AEM forms によるプログラミング* BLOB データ型の操作方法を示します。)
 
 `BLOB` インスタンスに属するフィールドには、次のように値を割り当てます。
 
-* **Base64**：データを Base64 形式でエンコードされたテキストとして渡すには、`BLOB.binaryData` フィールドにデータを設定し、`BLOB.contentType` フィールドに MIME 形式でデータタイプ（例：`application/pdf`）を設定します。（[Base64 エンコーディングを使用したAEM Formsの呼び出し](#invoking-aem-forms-using-base64-encoding) を参照してください）。
+* **Base64**:Base64 形式でエンコードされたテキストとしてデータを渡すには、データを `BLOB.binaryData` フィールドに値を入力し、MIME 形式でデータタイプを設定します ( 例： `application/pdf`) を `BLOB.contentType` フィールドに入力します。 （[Base64 エンコーディングを使用したAEM Formsの呼び出し](#invoking-aem-forms-using-base64-encoding) を参照してください）。
 * **MTOM**：MTOM 添付ファイルにバイナリデータを渡すには、`BLOB.MTOM` フィールドにデータを設定します。この設定により、Java JAX-WS フレームワークまたは SOAP フレームワークのネイティブ API を使用して、SOAP リクエストにデータが添付されます。（[MTOM を使用した AEM Forms の呼び出し](#invoking-aem-forms-using-mtom)を参照してください）。
 * **SwaRef**：WS-I SwaRef 添付ファイルにバイナリデータを渡すには、`BLOB.swaRef` フィールドにデータを設定します。この設定により、Java JAX-WS フレームワークを使用して、SOAP リクエストにデータが添付されます。（[SwaRef を使用した AEM Forms の呼び出し](#invoking-aem-forms-using-swaref) を参照してください）。
 * **MIME または DIME 添付ファイル**：MIME または DIME 添付ファイルにデータを渡すには、SOAP フレームワークのネイティブ API を使用して、SOAP リクエストにデータを添付します。添付ファイル識別情報を `BLOB.attachmentID` フィールドに設定します。（[Base64 エンコーディングを使用した AEM Forms の呼び出し](#invoking-aem-forms-using-base64-encoding) を参照してください）。
@@ -357,7 +357,7 @@ JAX-WS を使用して、Forms サービス WSDL を Java プロキシクラス�
 1. JDK 1.6 以降をインストールします。
 
    * JDK bin ディレクトリをクラスパスに追加します。
-   * JRE bin ディレクトリをクラスパスに追加します。この bin は、`[JDK_INSTALL_LOCATION]/jre` ディレクトリに配置されています。
+   * JRE bin ディレクトリをクラスパスに追加します。このビンは、 `[JDK_INSTALL_LOCATION]/jre` ディレクトリ。
    * `JAVA_HOME` 環境変数を、JDK をインストールしたディレクトリに設定します。
 
    JDK 1.6 には、build.xml ファイルで使用される wsimport プログラムが含まれています。JDK 1.5 には、このプログラムは含まれていません。
@@ -431,7 +431,7 @@ JAX-WS を使用して、Forms サービス WSDL を Java プロキシクラス�
 
 1. これらの JAVA ファイルを 1 つの JAR ファイルにパッケージ化します。Eclipse で作業している場合は、次の手順に従います。
 
-   * プロキシ JAVA ファイルを JAR ファイルにパッケージ化するために使用する、新しい Java プロジェクトを作成します。
+   * プロキシ JAVA ファイルを JAR ファイルにパッケージ化するために使用する Java プロジェクトを作成します。
    * プロジェクトにソースフォルダーを作成します。
    * ソースフォルダーに`com.adobe.idp.services`パッケージを作成します。
    * `com.adobe.idp.services`パッケージを選択して、JAVA ファイルを adobe/idp/services フォルダーからこのパッケージにインポートします。
@@ -440,11 +440,11 @@ JAX-WS を使用して、Forms サービス WSDL を Java プロキシクラス�
    * Java コンパイラのコンプライアンスレベルを 5.0 以上に設定します。
    * プロジェクトをビルドします。
    * プロジェクトを JAR ファイルとしてエクスポートします。
-   * この JAR ファイルをクライアントプロジェクトのクラスパスにインポートします。 さらに、&lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty にあるすべての JAR ファイルをインポートします。
+   * この JAR ファイルをクライアントプロジェクトのクラスパスにインポートします。 さらに、にすべての JAR ファイルをインポートします。 &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty.
 
    >[!NOTE]
    >
-   >「AEM Forms によるプログラミング」にあるすべての Java web サービスのクイックスタート（Forms サービスを除く）は、JAX-WS を使用して Java プロキシファイルを作成します。また、すべての Java web サービスのクイックスタートは、SwaRef を使用します。（[SwaRef を使用した AEM Forms の呼び出し](#invoking-aem-forms-using-swaref)を参照。）
+   >「 AEM forms によるプログラミング」の「Formsサービスを除くすべての Java Web サービスのクイックスタート」では、JAX-WS を使用して Java プロキシファイルを作成します。 また、すべての Java web サービスのクイックスタートは、SwaRef を使用します。（[SwaRef を使用した AEM Forms の呼び出し](#invoking-aem-forms-using-swaref)を参照。）
 
 **関連項目**
 
@@ -584,7 +584,7 @@ Base64 エンコーディングを使用して、AEM Forms サービスを呼び
 
 **プロキシクラスの作成**
 
-Microsoft Visual Studio に付属のツールを使用すると、.NET クライアントアセンブリの作成に使用するプロキシクラスを作成できます。このツールの名前は wsdl.exe で、Microsoft Visual Studio のインストールフォルダーにあります。プロキシクラスを作成するには、コマンドプロンプトを開き、wsdl.exe ファイルを含むフォルダーに移動します。wsdl.exe ツールについて詳しくは、 *MSDN ヘルプ*&#x200B;を参照してください。
+Microsoft Visual Studio に付属のツールを使用すると、.NET クライアントアセンブリの作成に使用するプロキシクラスを作成できます。このツールの名前は wsdl.exe で、Microsoft Visual Studio のインストールフォルダーにあります。 プロキシクラスを作成するには、コマンドプロンプトを開き、wsdl.exe ファイルを含むフォルダーに移動します。wsdl.exe ツールについて詳しくは、 *MSDN ヘルプ*&#x200B;を参照してください。
 
 コマンドプロンプトで次のコマンドを入力します。
 
@@ -669,7 +669,7 @@ Java プロキシクラスと Base64 を使用して、AEM Forms サービスを
    >AEM Forms をホストする J2EE アプリケーションサーバーの IP アドレスに `hiro-xp` *を置換します。*
 
 1. JAX-WS を使用して作成した Java プロキシクラスを JAR ファイルにパッケージ化します。
-1. 次のパスに配置された Java プロキシ JAR ファイルと JAR ファイルを含めます。
+1. 次のパスに、Java プロキシ JAR ファイルと JAR ファイルを含めます。
 
    &lt;インストールディレクトリ>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -864,7 +864,7 @@ JAX-WS と SwaRef を使用して作成された Java プロキシファイル�
    >`hiro-xp` を *AEM Forms をホストする J2EE アプリケーションサーバーの IP アドレス*&#x200B;で置き換えます。
 
 1. JAX-WS を使用して作成した Java プロキシクラスを JAR ファイルにパッケージ化します。
-1. 次のパスに配置された Java プロキシ JAR ファイルと JAR ファイルを含めます。
+1. 次のパスに、Java プロキシ JAR ファイルと JAR ファイルを含めます。
 
    &lt;インストールディレクトリ>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -966,8 +966,8 @@ HTTP 経由でデータを使用する .NET クライアントアセンブリを
 1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `MyApplication_EncryptDocumentService` オブジェクトの `invoke` メソッドおよび `BLOB` オブジェクト。 このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
 1. の作成 `System.UriBuilder` オブジェクトのコンストラクタを使用し、返された `BLOB` オブジェクトの `remoteURL` データメンバー。
 1. `System.UriBuilder` オブジェクトを `System.IO.Stream` オブジェクトに変換します。（このリストの後に示す C# クイックスタートで、このタスクの実行方法を示しています）。
-1. バイト配列を作成し、そのバイト配列に、`System.IO.Stream` オブジェクト内にあるデータを入力します。
-1. コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+1. バイト配列を作成し、 `System.IO.Stream` オブジェクト。
+1. コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
 1. を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 ### Java プロキシクラスおよび HTTP 経由での BLOB データを使用したサービスの呼び出し {#invoking-a-service-using-java-proxy-classes-and-blob-data-over-http}
@@ -987,7 +987,7 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
    >`hiro-xp` を *AEM Forms をホストする J2EE アプリケーションサーバーの IP アドレス*&#x200B;で置き換えます。
 
 1. JAX-WS を使用して作成した Java プロキシクラスを JAR ファイルにパッケージ化します。
-1. 次のパスに配置された Java プロキシ JAR ファイルと JAR ファイルを含めます。
+1. 次のパスに、Java プロキシ JAR ファイルと JAR ファイルを含めます。
 
    &lt;インストールディレクトリ>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
@@ -1106,7 +1106,7 @@ DIME を使用して Forms サービスを呼び出すことができます。�
 1. `EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add` メソッドをを呼び出して、`Microsoft.Web.Services2.Dime.DimeAttachment` オブジェクトを渡します。
 1. を呼び出す `MyApplication/EncryptDocument` を呼び出して処理 `EncryptDocumentServiceWse` オブジェクトの `invoke` メソッドおよび `BLOB` DIME 添付ファイルを含むオブジェクト。 このプロセスは、暗号化された PDF ドキュメントを `BLOB` オブジェクト内に返します。
 1. 返される `BLOB` オブジェクトの `attachmentID` データメンバー。
-1. `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` に配置された添付ファイルを繰り返し処理し、添付ファイルの識別情報の値を用いて、暗号化された PDF ドキュメントを取得します。
+1. の添付ファイルを繰り返し処理します。 `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` およびを使用して、暗号化された添付ファイルドキュメントを取得し、PDF識別子の値を使用します。
 1. の取得 `System.IO.Stream` オブジェクトを作成するには、 `Attachment` オブジェクトの `Stream` データメンバー。
 1. バイト配列を作成し、そのバイト配列を `System.IO.Stream` オブジェクトの `Read` メソッド。 このメソッドは、暗号化された PDF ドキュメントを表すデータストリームでバイト配列を入力します。
 1. コンストラクターを呼び出し、PDF ファイルの場所を表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。このオブジェクトは、暗号化された PDF ドキュメントを表します。
@@ -1162,7 +1162,7 @@ Axis 生成のライブラリファイルと DIME を使用して、Workbench �
 
 AEM Forms は、サービスを呼び出す際に、様々な web サービス認証モードをサポートしています。そのうちの 1 つは、web サービスの呼び出しで、基本認証ヘッダーを使用してユーザー名とパスワードの値の両方を指定します。AEM Forms は、SAML アサーションベースの認証もサポートしています。クライアントアプリケーションが web サービスを使用して AEM Forms サービスを呼び出すと、クライアントアプリケーションは以下のいずれかの方法で認証情報を提供できます。
 
-* 基本認証の一部として認証情報を渡す
+* 基本認証の一部として資格情報を渡す
 * WS-Security ヘッダーの一部としてユーザー名トークンを渡す
 * WS-Security ヘッダーの一部として SAML アサーションを渡す
 * WS-Security ヘッダーの一部として Kerberos トークンを渡す
@@ -1227,7 +1227,7 @@ AEM Forms ユーザーの ID は、秘密鍵を使用して署名された SAML 
 * AuthenticationManager API で公開されている認証メソッドのいずれかを使用して、ユーザーを認証します。通常は、ユーザー名とパスワードを使用します。ただし、証明書認証を使用することもできます。
 * `AuthenticationManager.getAuthResultOnBehalfOfUser` メソッドを使用します。このメソッドを使用すると、クライアントアプリケーションは任意の AEM Forms ユーザーの `AuthResult` オブジェクトを取得できます。
 
-AEM forms ユーザーは、取得した SAML トークンを使用して認証できます。 この SAML アサーション（xml フラグメント）は、ユーザー認証用の Web サービス呼び出しで WS-Security ヘッダーの一部として送信できます。通常、クライアントアプリケーションはユーザーを認証しましたが、ユーザー認証情報は保存されていません。（または、ユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンします）この場合、クライアントアプリケーションは AEM Forms を呼び出し、AEM Forms の呼び出しを許可されている特定のユーザーとして実行する必要があります。
+AEM forms ユーザーは、取得した SAML トークンを使用して認証できます。 この SAML アサーション（xml フラグメント）は、ユーザー認証用の Web サービス呼び出しで WS-Security ヘッダーの一部として送信できます。通常、クライアントアプリケーションはユーザーを認証しましたが、ユーザー資格情報は保存されていません。（または、ユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンします）この場合、クライアントアプリケーションは AEM Forms を呼び出し、AEM Forms の呼び出しを許可されている特定のユーザーとして実行する必要があります。
 
 特定のユーザーとして実行するには、 web サービスを使用して `AuthenticationManager.getAuthResultOnBehalfOfUser` メソッドを呼び出します。このメソッドは、そのユーザーの SAML アサーションを含む `AuthResult` インスタンスを返します。
 

@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '3837'
-ht-degree: 84%
+ht-degree: 83%
 
 ---
 
@@ -197,7 +197,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップでは、サムネールは Image Server で生成されます。この設定は、**[!UICONTROL サムネールを処理]**&#x200B;のステップで適用される設定とは独立した設定です。**[!UICONTROL サムネールを処理]**&#x200B;のステップで行うサムネールの生成は、サムネール生成で最も遅く、最もメモリを使う方法です。
 
-サムネールのサイズは **[!UICONTROL width:height:center]** の形式で定義されます。例えば `80:80:false` のようになります。幅と高さによって、サムネールのピクセル単位のサイズが決まります。中央の値は、false または true で、サムネール画像が設定で指定されたのとまったく同じサイズであることを示します。画像が指定よりも小さいサイズに変更された場合は、サムネール内で中央揃えされます。
+サムネールのサイズ設定は次の形式で定義します。 **[!UICONTROL 幅:height:中央]**&#x200B;例： `80:80:false`. 幅と高さによって、サムネールのピクセル単位のサイズが決まります。中央の値は、false または true で、サムネール画像が設定で指定されたのとまったく同じサイズであることを示します。画像が指定よりも小さいサイズに変更された場合は、サムネール内で中央揃えされます。
 
 >[!NOTE]
 >
@@ -237,7 +237,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
-1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
+1. 「 limit 」プロパティで、数を目的の数（例： ）に変更します。 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. 「**[!UICONTROL すべて保存]**」をタップします。
 
 ## Dynamic Media 画像プリセットの作成 {#creating-image-presets}

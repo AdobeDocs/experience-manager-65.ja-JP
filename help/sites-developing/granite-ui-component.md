@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: e4820330-2ee6-4eca-83fd-462aa0b83647
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '525'
 ht-degree: 26%
 
 ---
@@ -44,8 +44,8 @@ Granite UI Foundation フレームワークを使用して、Granite コンポ�
 
 一般的な Granite UI コンポーネントである `field` は、以下の 2 つのファイルで構成されています。
 
-* `init.jsp`:は一般的な処理を処理します。ラベル付け、説明、およびフィールドのレンダリング時に必要となるフォーム値の提供。
-* `render.jsp`:ここで、フィールドの実際のレンダリングが実行されます。カスタムフィールドに対して上書きする必要があります。次に含まれる `init.jsp`.
+* `init.jsp`：ラベル付けや説明などの汎用処理を処理し、フィールドのレンダリング時に必要なフォーム値を提供します。
+* `render.jsp`：フィールドの実際のレンダリングが実行される場所です。カスタムフィールドに対して上書きする必要があります。は、に含まれます。 `init.jsp`.
 
 詳しくは、 [Granite UI ドキュメント — フィールド](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) 」を参照してください。
 
@@ -85,7 +85,7 @@ Granite UI Foundation フレームワークを使用して、Granite コンポ�
    vm.get("value, String.class");
    ```
 
-   詳しくは、標準搭載の Granite UI フィールドの実装を参照してください。例： `/libs/granite/ui/components/foundation/form/textfield`.
+   詳しくは、標準の Granite UI フィールドの実装を参照してください。例： `/libs/granite/ui/components/foundation/form/textfield`.
 
    >[!NOTE]
    >

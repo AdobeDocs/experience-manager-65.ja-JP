@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 56%
+source-wordcount: '1947'
+ht-degree: 52%
 
 ---
 
@@ -61,18 +61,17 @@ ht-degree: 56%
 
 様々なフォームフィールドにも **項目読み込みパス**&#x200B;リポジトリ内のノードを指すオプションのパス。
 
-**項目読み込みパス**&#x200B;とは、定義済みの値をフォーム上の特定のフィールド（[ドロップダウンリスト](/help/sites-authoring/default-components-foundation.md#dropdown-list)、[チェックボックスグループ](/help/sites-authoring/default-components-foundation.md#checkbox-group)、[ラジオグループ](/help/sites-authoring/default-components-foundation.md#radio-group)など）に読み込むために使用するノードプロパティのパスです。
+The **項目読み込みパス** は、定義済みの値をフォーム上の特定のフィールドに読み込むために使用されるノードプロパティのパスです。例えば、 [ドロップダウンリスト](/help/sites-authoring/default-components-foundation.md#dropdown-list), [チェックボックスグループ](/help/sites-authoring/default-components-foundation.md#checkbox-group) または [ラジオグループ](/help/sites-authoring/default-components-foundation.md#radio-group).
 
 #### 例 — 複数の値を含むドロップダウンリストのプリロード {#example-preloading-a-dropdown-list-with-multiple-values}
 
-ドロップダウンリストは、選択する値の範囲で設定できます。
+コンボボックスは、選択する値の範囲で設定できます。
 
 The **項目読み込みパス** を使用して、リポジトリ内のフォルダーからリストにアクセスし、これらをフィールドにプリロードできます。
 
-1. 新しい sling フォルダー（`sling:Folder`）を作成する
-例：`/etc/designs/<myDesign>/formlistvalues`
+1. Sling フォルダー ( `sling:Folder`など ) が含まれます。 `/etc/designs/<myDesign>/formlistvalues`
 
-1. ドロップダウンアイテムのリストを格納する複数値文字列タイプ（`String[]`）の新しいプロパティ（`myList` など）を追加します。コンテンツはスクリプト（JSP スクリプトやシェルスクリプトの curl など）を使用してインポートすることもできます。
+1. 新しいプロパティを追加します ( 例： `myList`) 型の複数値文字列 ( `String[]`) をクリックして、ドロップダウン項目のリストを含めます。 コンテンツはスクリプト（JSP スクリプトやシェルスクリプトの curl など）を使用してインポートすることもできます。
 
 1. 「**項目読み込みパス**」フィールドにフルパスを使用します。
 例：`/etc/designs/geometrixx/formlistvalues/myList`
@@ -81,7 +80,7 @@ The **項目読み込みパス** を使用して、リポジトリ内のフォ�
 
 * `AL=Alabama`
 * `AK=Alaska`
-* 等。
+* などなど
 
 次のリストが生成されます。
 
@@ -211,7 +210,7 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 
    * `sling:resourceType` - `foundation/components/form/constraint` に設定
 
-   * `constraintMessage` - フォームの送信時に、制約に照らしてフィールドが無効な場合に表示されるカスタマイズされたメッセージ
+   * `constraintMessage`  — フォームが送信されたときに、制約に従ってフィールドが有効でない場合に表示される、カスタマイズされたメッセージ
 
    * 省略可能：
 
@@ -280,7 +279,7 @@ JavaScript では、条件は要素名プロパティの値を使用してフィ
 
    * 最初のドロップダウンリストで、次のいずれかを選択します。 **表示** または **非表示** を使用して、コンポーネントの表示と非表示を条件で指定します。
 
-   * 上部行の末尾にあるドロップダウンリストで、以下を選択します。
+   * 上部の行の末尾にあるドロップダウンリストで、次の項目を選択します。
 
       * **すべて**  — コンポーネントを表示または非表示にするすべての条件が true である必要がある場合
       * **任意** - 1 つ以上の条件のみが true に設定されている場合に、コンポーネントの表示/非表示を切り替えます。

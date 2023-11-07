@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '883'
 ht-degree: 33%
 
 ---

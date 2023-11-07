@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1793'
-ht-degree: 98%
+source-wordcount: '1788'
+ht-degree: 96%
 
 ---
 
 # ContextHub の設定 {#configuring-contexthub}
 
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub について詳しくは、[開発者ドキュメント](/help/sites-developing/contexthub.md)を参照してください。ContextHub は、タッチ UI の [ClientContext](/help/sites-administering/client-context.md) に代わる機能です。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。ContextHub について詳しくは、 [開発者向けドキュメント](/help/sites-developing/contexthub.md). ContextHub は、タッチ UI の [ClientContext](/help/sites-administering/client-context.md) に代わる機能です。
 
 [ContextHub](/help/sites-developing/contexthub.md) ツールバーを設定すると、プレビューモードで表示されるかどうかを制御したり、ContextHub ストアを作成したり、タッチ操作向け UI を使用して UI モジュールを追加したりすることができます。
 
@@ -84,7 +84,7 @@ UI モードを追加すると、関連する ContextHub モジュールをグ�
 1. 次のプロパティの値を指定します。
 
    * UI モードのタイトル：UI モードを識別するタイトル。
-   * モードアイコン：使用する [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)のセレクター（例：`coral-Icon--user`）。
+   * モードアイコン： [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 例えば、 `coral-Icon--user`
    * 有効：ContextHub ツールバーに UI モードを表示する場合に選択します
 
 1. 「保存」をクリックまたはタップします。
@@ -145,7 +145,7 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 | [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManager サービスをリッスンしてストアを自動的に更新します。 |
 | [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) | ブラウザーの場所の緯度と経度を格納します。 |
 | [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | ブラウザーの場所の日付、時間、季節を格納します。 |
-| [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 多数のデバイスのプロパティと機能を定義し、現在のクライアントデバイスを検出します |
+| [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 複数のデバイスのプロパティと機能を定義し、現在のクライアントデバイスを検出します |
 | [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | JSONP サービスからデータを取得して格納します。 |
 | [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) | 現在のユーザーのプロファイルデータを格納します |
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | デバイス情報、ブラウザーの種類、画面の向きなど、クライアントに関する情報を格納します |

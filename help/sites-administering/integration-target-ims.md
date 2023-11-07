@@ -2,10 +2,10 @@
 title: IMS を使用した Adobe Target との統合
 description: IMS を使用した AEM と Adobe Target の統合について説明します。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 67%
+source-wordcount: '1556'
+ht-degree: 70%
 
 ---
 
@@ -47,7 +47,7 @@ Target Standard API を介して AEM と Adobe Target を統合するには、Ad
 1. AEM で、**ツール**&#x200B;メニューを開きます。
 1. Adobe Analytics の **セキュリティ** セクション、選択 **Adobe IMS設定**.
 1. **作成**&#x200B;を選択して、**Adobe IMS テクニカルアカウント設定**&#x200B;を開きます。
-1. 以下のドロップダウンを使用 **クラウド設定**&#x200B;を選択します。 **Adobe Target**.
+1. **クラウド設定**&#x200B;の下のドロップダウンを使用して、**Adobe Target** を選択します。
 1. **新しい証明書の作成**&#x200B;をアクティブにして、新しいエイリアスを入力します。
 1. 「**証明書の作成**」で確認します。
 
@@ -79,9 +79,9 @@ AEMで使用できるAdobe Targetを使用したプロジェクトを作成す�
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 既に表示されているプロジェクトがすべて表示されます。 選択 **新規プロジェクトを作成**  — 場所と使用方法は、次の条件によって異なります。
+1. 自分が持つプロジェクトが表示されます。選択 **新規プロジェクトを作成**  — 場所と使用方法は、次の条件によって異なります。
 
-   * まだプロジェクトがない場合は、 **新規プロジェクトを作成** は中央、下です。
+   * まだプロジェクトがない場合は、「**新規プロジェクトを作成**」が中央の下に表示されます。
      ![新規プロジェクトの作成 - 最初のプロジェクト](assets/integration-target-io-02.png)
    * 既存のプロジェクトがある場合は、それらのプロジェクトがリストされ、 **新規プロジェクトを作成** は右上にあります。
      ![新規プロジェクトの作成 - 複数のプロジェクト](assets/integration-target-io-03.png)
@@ -105,7 +105,7 @@ AEMで使用できるAdobe Targetを使用したプロジェクトを作成す�
 
 1. 資格情報を確認して、**次へ**&#x200B;をクリックして進みます。
 
-   ![新しいプロジェクトの作成](assets/integration-target-io-15.png)
+   ![プロジェクトの作成](assets/integration-target-io-15.png)
 
 1. 必要な製品プロファイルを選択して、**設定済み API を保存**&#x200B;に進みます。
 
@@ -118,7 +118,7 @@ AEMで使用できるAdobe Targetを使用したプロジェクトを作成す�
 
    ![追加する API の選択](assets/integration-target-io-16.png)
 
-1. 作成が確認されました。
+1. 作成が確定されました。
 
 <!--
 1. The creation is confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
@@ -177,7 +177,7 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
 1. 「**作成**」で確定します。
 
-1. Adobe Targetの設定がAEMコンソールに表示されます。
+1. Adobe Target の設定が AEM コンソールに表示されます。
 
    ![Adobe IMS テクニカルアカウント設定](assets/integrate-target-io-11.png)
 

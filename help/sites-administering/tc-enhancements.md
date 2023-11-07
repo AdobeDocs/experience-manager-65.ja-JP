@@ -5,10 +5,10 @@ topic-tags: site-features
 content-type: reference
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '686'
-ht-degree: 83%
+ht-degree: 80%
 
 ---
 
@@ -85,7 +85,7 @@ AEM は、設定済みの TMS の翻訳メモリ内の既存の文字列の翻�
 
 ## 複数のレベルの言語コピー {#language-copies-on-multiple-levels}
 
-言語ルートは、言語コピーのルートを認識できる状態で、ノード（地域など）の下にグループ化できるようになりました。
+言語ルートは、ノード（例えば、地域）の下にグループ化できるようになりましたが、言語コピーのルートとして認識されます。
 
 ![screen_shot_2018-04-23at144012](assets/screen_shot_2018-04-23at144012.jpg)
 

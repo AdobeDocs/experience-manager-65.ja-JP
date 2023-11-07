@@ -10,10 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 86%
+source-wordcount: '180'
+ht-degree: 84%
 
 ---
 
@@ -29,7 +29,7 @@ AEMを使用すると、コンテンツから動的に取り込んだテキス�
 
    `/apps/<your-project>/`
 
-1. `/apps/<your-project>/` の下に、新しいノードを作成してください。
+1. の下 `/apps/<your-project>/` ノードを作成します。
 
    * **名前**：`fonts`
    * **型**：`sling:Folder`

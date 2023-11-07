@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
-workflow-type: ht
-source-wordcount: '1122'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 97%
 
 ---
 
@@ -71,15 +71,15 @@ AEM Forms は、以下の障害から確実に回復します。
 
    * （JBoss®）`[appserver root]/server/'server'/svcnative/DocumentStorage/backup` を次に変更：
 
-     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`
+     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`。
 
    * （WebLogic）`[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
-     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`
+     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`。
 
    * （WebSphere®）次のように `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` の名前を変更します。
 
-     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`
+     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`。
 
 1. コンテンツ保存場所のルートディレクトリを復元するには、まずAEM Forms の既存のインストールにあるコンテンツ保存場所のルートディレクトリの内容を削除し、次に、スタンドアロン環境またはクラスター環境のタスクに従って内容を復元します。
 
@@ -124,7 +124,7 @@ GDS が元の場所以外の場所に復元された場合は、LCSetGDS スク�
 
 >[!NOTE]
 >
->GDS ディレクトリがドライブルート（D:¥ など）にある場合、Windows でのコンポーネントのデプロイメントは失敗します。GDS の場合、ディレクトリがドライブのルートではなく、サブディレクトリに配置されていることを確認する必要があります。例えば、ディレクトリは単に D:¥ ではなく D:¥GDS にする必要があります。
+>GDS ディレクトリがドライブルート（D:¥ など）にある場合、Windows でのコンポーネントのデプロイメントは失敗します。GDS の場合、ディレクトリがドライブのルートではなく、サブディレクトリにあることを確認する必要があります。 例えば、ディレクトリは単に D:¥ ではなく D:¥GDS にする必要があります。
 
 ## クラスター環境への GDS の復元 {#recovering-the-gds-to-a-clustered-environment}
 

@@ -7,7 +7,7 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: f317783f3320e3987c7468aa0b2471e525b0387a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1797'
 ht-degree: 35%
@@ -43,7 +43,7 @@ ht-degree: 35%
 
 * **コンテンツ構造を調整**
 
-   * アクセス制御が使用可能なリクエストセッションと一致する場所など、他の場所に移動します。
+   * アクセス制御が使用可能なリクエストセッションと一致する他の場所に移動します。
    * コンテンツの精度を変更する。
 
 * **コードのリファクタリングを行って適切なサービスになるようにする**

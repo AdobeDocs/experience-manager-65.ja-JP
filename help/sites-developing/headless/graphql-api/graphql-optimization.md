@@ -2,7 +2,7 @@
 title: GraphQL クエリの最適化
 description: ヘッドレスコンテンツ配信のためにAdobe Experience Manager as a Cloud Serviceでコンテンツフラグメントをフィルタリング、ページング、並べ替える際に、GraphQLクエリを最適化する方法について説明します。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 3ec34efc14cc49d0f45cb4b175573c33c1cc232e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1966'
 ht-degree: 63%
@@ -124,7 +124,7 @@ This capability allows AEM to further cache content within the scope of GraphQL 
 
 **Further Reference**
 
-Please contact Adobe to enable this capability for your AEM Cloud Service program and environments. 
+Contact Adobe to enable this capability for your AEM Cloud Service program and environments. 
 -->
 
 ### GraphQL Query optimization {#graphql-query-optimization}

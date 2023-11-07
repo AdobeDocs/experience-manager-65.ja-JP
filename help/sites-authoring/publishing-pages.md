@@ -2,10 +2,10 @@
 title: コンテンツページの公開
 description: Adobe Experience Manager 6.5 でコンテンツページを公開する方法を説明します。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 95%
+source-wordcount: '1660'
+ht-degree: 93%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 95%
    * 公開する参照がない場合、ページが直接公開されます。
    * 公開が必要な参照がページに含まれている場合は、それらのリストが&#x200B;**公開**&#x200B;ウィザードに表示され、ウィザードで次のいずれかを実行できます。
 
-      * ページと一緒に公開するアセットやタグなどを指定し、「**公開**」を使用してプロセスを完了します。
+      * ページと一緒に公開するアセットやタグなどを指定し、 **公開** をクリックしてプロセスを完了します。
 
       * 「**キャンセル**」を使用してアクションを中止します。
 
@@ -111,7 +111,7 @@ ht-degree: 95%
 
 #### 公開を管理 {#manage-publication}
 
-**公開を管理**&#x200B;には、クイック公開よりも多くのオプションがあります。子ページを含めたり、参照をカスタマイズしたり、使用可能なワークフローを開始したり、後日公開するためのオプションを提供したりします。
+**公開を管理**&#x200B;には、クイック公開よりも多くのオプションがあります。子ページの追加、参照のカスタマイズ、該当するワークフローの開始を可能にし、後日公開するオプションを提供します。
 
 公開を管理を使用してページを公開または非公開にするには、次の手順を実行します。
 
@@ -182,7 +182,7 @@ ht-degree: 95%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、公開権限に関する[このページの前述の注意事項](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、 [このページの前のメモ](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 公開権限および [ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md) および [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 」を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションが提供されます。
 

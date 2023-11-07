@@ -3,10 +3,10 @@ title: レイアウトモードを使用してアダプティブフォームの�
 description: レイアウトモードで使用できるレスポンシブグリッドを使用して、コンポーネントの位置を定義する
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 92%
+ht-degree: 91%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 92%
 「**プレビュー**」オプションの横のアダプティブフォームのオーサリングインターフェイス上部に表示されるドロップダウンリストから、「**レイアウト**」を選択します。フォームがレイアウトモードで表示されます。
 
 1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
-1. 新しいアダプティブフォームを作成するか、既存の[アダプティブフォーム](../../forms/using/creating-adaptive-form.md)を開きます。
+1. の作成 [アダプティブフォーム](../../forms/using/creating-adaptive-form.md) または既存のものを開きます。
 1. 「**プレビュー**」オプションの横の上部に表示されるドロップダウンリストから「**レイアウト**」を選択します。フォームがレイアウトモードで表示されます。
 
    ![レイアウトモード](assets/layout_mode_ic_new.png)

@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: 399ae241593b5cc14ef1c2efd090f0d1fae7c2df
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 100%
@@ -17,9 +17,9 @@ Possible topics to cover in this article are below.
 
 * Compile a list of enhancements done in the last ~1 year.
 * Showcase a few prominent use cases (search?) in a screencast.
-* Top-level actions supported, such as clickable UI elements, keyboard shortcuts, popup dialogs, etc.
+* Top-level actions supported, such as clickable UI elements, keyboard shortcuts, popup dialogs, and so on.
 * List all UIs that are keyboard navigable.
-* Unified list of the product tasks supported, such as, search assets, download assets, add or editing metadata, use DM Viewers, etc.
+* Unified list of the product tasks supported, such as, search assets, download assets, add or editing metadata, use DM Viewers, and so on.
 * Do we need to add support matrix of user tasks with browser and screen reader combinations. Everything may not work in all browsers and/or using all screen readers.
 * Any exceptions that users should be aware of. It may help to call out (it may be done in ACR) what tasks are NOT supported.
 * CTAs – what's next and more info from AEM team:
@@ -198,13 +198,13 @@ CRUD 操作、アセットのダウンロード、メタデータの追加など
 
 アセットを共有する場合、次の機能によってアクセシビリティが向上します。
 
-* ユーザーは、リンク共有ダイアログの「電子メールアドレスを検索／追加」フィールド内でキーボードを使用して、フォーカスを移動することができる。
+* ユーザーは、リンク共有ダイアログの「メールアドレスを検索／追加」フィールド内でキーボードを使用して、フォーカスを移動することができる。
 
 * リンク共有ダイアログで、参照モードで移動するときに、スクリーンリーダーに次の現象が発生する。
 
    * ダイアログが読み込まれたとき、テーブル情報を読み上げません。
    * リストに表示されているすべての提案に移動できる。
-   * 「電子メールアドレスを検索／追加」フィールドに対して表示された提案を読み上げる。
+   * 「メールアドレスを検索／追加」フィールドに対して表示された提案を読み上げる。
 
 ## アクセシビリティの高いドキュメント {#accessible-docs}
 
@@ -220,7 +220,7 @@ CRUD 操作、アセットのダウンロード、メタデータの追加など
 アクセシビリティに関するフィードバックを提供したり、質問をしたり、製品の機能強化をリクエストしたりするには、次の方法を使用します。
 
 * [www.adobe.com/accessibility/feedback.html](https://www.adobe.com/accessibility/feedback.html) のフォームに入力する。
-* access@adobe.com 宛てに電子メールを送信する。
+* access@adobe.com 宛てにメールを送信する。
 
 >[!MORELIKETHIS]
 >
@@ -228,4 +228,3 @@ CRUD 操作、アセットのダウンロード、メタデータの追加など
 >* [各サービスパックのリリースでおこなわれた機能強化のリリースノート](/help/release-notes/release-notes.md)。
 >* [[!DNL Adobe Experience Manager] アクセシビリティガイダンス](/help/managing/web-accessibility.md)
 >* [アドビソリューションのアクセシビリティ準拠レポート（ACR）および VPAT リスト](https://www.adobe.com/accessibility/compliance.html)
-

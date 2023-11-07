@@ -1,16 +1,16 @@
 ---
 title: ドキュメントのデジタル署名と認証
-description: Signature サービスを使用して、PDF ドキュメントに対するデジタル署名フィールドの追加と削除、PDF ドキュメント内の署名フィールドの名前の取得、署名フィールドの変更、PDF ドキュメントのデジタル署名、PDF ドキュメント内の認証、PDF ドキュメント内にあるデジタル署名の検証、PDF ドキュメント内にあるすべてのデジタル署名の検証および署名フィールドからデジタル署名の削除を行います。
+description: Signature サービスを使用して、PDFドキュメントに対する電子署名フィールドの追加と削除、PDFドキュメント内の署名フィールドの名前の取得、署名フィールドの変更、電子署名PDFドキュメントの認証、PDFドキュメント内の電子署名の検証、署名フィールドからの電子署名の削除を行います。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '17045'
-ht-degree: 85%
+source-wordcount: '17029'
+ht-degree: 83%
 
 ---
 
@@ -37,12 +37,12 @@ PDF ドキュメント内に複数の署名フィールドがある場合は、�
 Signature サービスを使用して、次のタスクを実行できます。
 
 * PDF ドキュメントへのデジタル署名フィールドの追加および削除を行います。（[署名フィールドの追加](digitally-signing-certifying-documents.md#adding-signature-fields)を参照してください）。
-* PDF ドキュメント内の署名フィールドの名前を取得します。（[署名フィールド名の取得](digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照してください）。
+* 署名ドキュメント内の署名フィールドの名前をPDFします。 （[署名フィールド名の取得](digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照してください）。
 * 署名フィールドを変更します。（[署名フィールドの変更](digitally-signing-certifying-documents.md#modifying-signature-fields)を参照してください）。
 * PDF ドキュメントにデジタル署名を行います。（[PDF ドキュメントへのデジタル署名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照してください）。
 * PDF ドキュメントを認証します。（[PDF ドキュメントの認証](digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照してください）。
-* PDF ドキュメント内のデジタル署名を検証します。（[電子署名の検証](digitally-signing-certifying-documents.md#verifying-digital-signatures)を参照してください。）
-* PDF ドキュメント内のすべてのデジタル署名を検証します。（[複数のデジタル署名の検証](digitally-signing-certifying-documents.md#verifying-digital-signatures)を参照してください。）
+* 署名ドキュメント内の電子署名をPDFします。 （[電子署名の検証](digitally-signing-certifying-documents.md#verifying-digital-signatures)を参照してください）。
+* PDF・ドキュメント内のすべての電子署名を検証します。 （[複数のデジタル署名の検証](digitally-signing-certifying-documents.md#verifying-digital-signatures)を参照してください。）
 * 署名フィールドからデジタル署名を削除します。（[電子署名の削除](digitally-signing-certifying-documents.md#removing-digital-signatures)を参照してください。）
 
 >[!NOTE]
@@ -347,7 +347,7 @@ Signature API（Web サービス）を使用して署名フィールド名を取
 
 ## 署名フィールドの変更 {#modifying-signature-fields}
 
-Java API と web サービス API を使用して、PDF ドキュメント内の署名フィールドを変更できます。署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
+Java API と Web サービス API を使用して、PDFドキュメント内の署名フィールドを変更できます。 署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
 
 *フィールドロックディクショナリ*&#x200B;は、署名フィールドへの署名時にロックするフィールドのリストを指定します。フィールドがロックされると、ユーザーはフィールドを変更できません。*シード値ディクショナリ*&#x200B;には、署名の適用時に使用される制約情報が含まれます。例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
 
@@ -361,7 +361,7 @@ Java API と web サービス API を使用して、PDF ドキュメント内の
 
 ### 手順の概要 {#summary_of_steps-2}
 
-PDF ドキュメント内の署名フィールドを変更するには、次のタスクを実行します。
+署名ドキュメント内の署名フィールドをPDFするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
 1. Signature クライアントを作成します。
@@ -601,7 +601,7 @@ PDF ドキュメントの署名や認証に nCipher nShield HSM 資格情報を�
 
 **XFA ベースのフォームのドキュメントに署名**
 
-XFA ベースのフォームに Signature サービス API を使用して署名しようとすると、Acrobat にある `View` `Signed` `Version` からデータが欠落する場合があります。例えば、次のようなワークフローが考えられます。
+Signature service API を使用して XFA ベースのフォームに署名しようとすると、データが `View` `Signed` `Version` Acrobatで 例えば、次のようなワークフローが考えられます。
 
 * Designer を使用して作成された XDP ファイルを使用して、署名フィールドを含むフォームデザインと、フォームデータを含む XML データを結合します。Forms サービスを使用して、インタラクティブ PDF ドキュメントを生成します。
 * Signature サービス API を使用して PDF ドキュメントに署名します。
@@ -816,7 +816,7 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
 
 Forms サービスで作成されるインタラクティブフォームに署名することができます。例えば、次のようなワークフローが考えられます。
 
-* Designer を使用して作成した XFA ベースの PDF フォームと、Forms サービスを使用した XML ドキュメント内のフォームデータを結合します。Forms サーバーはインタラクティブフォームをレンダリングします。
+* Formsサービスを使用して、Designer を使用して作成した XFA ベースのPDFフォームと、XML ドキュメント内のフォームデータを結合します。 Forms サーバーはインタラクティブフォームをレンダリングします。
 * Signature サービス API を使用してインタラクティブフォームに署名します。
 
 その結果、電子署名されたインタラクティブ PDF フォームが生成されます。XFA フォームに基づく PDF フォームに署名する場合は、その PDF ファイルを Adobe スタティック PDF フォームとして保存します。Adobe ダイナミック PDF フォームとして保存された PDF フォームに署名しようとすると、例外が発生します。Forms サービスから返されるフォームに署名するので、フォームに署名フィールドが含まれていることを確認してください。
@@ -1514,7 +1514,7 @@ Signature Service API（Web サービス）を使用してデジタル署名を�
 
 ## 複数のデジタル署名の検証 {#verifying-multiple-digital-signatures}
 
-AEM Forms は、PDF ドキュメント内のすべてのデジタル署名を検証する手段を提供します。複数の署名者からの署名を必要とするビジネスプロセスの結果として、PDF ドキュメントに複数のデジタル署名が含まれていると想定します。例えば、融資担当者の署名と管理者の署名の両方を必要とする金融取引を考えてみましょう。 Signature サービス Java API または Web サービス API を使用して、PDF ドキュメント内のすべての署名を検証できます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。デジタル署名を信用する前に、検証することをお勧めします。単一のデジタル署名の検証に精通していることをお勧めします。
+AEM Formsは、PDFドキュメント内のすべての電子署名を検証する手段を提供します。 複数の署名者からの署名を必要とするビジネスプロセスの結果として、PDF ドキュメントに複数のデジタル署名が含まれていると想定します。例えば、融資担当者の署名と管理者の署名の両方を必要とする金融取引を考えてみましょう。 Signature サービス Java API または Web サービス API を使用して、PDF ドキュメント内のすべての署名を検証できます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。デジタル署名を信用する前に、検証することをお勧めします。単一のデジタル署名の検証に精通していることをお勧めします。
 
 >[!NOTE]
 >
@@ -1585,7 +1585,7 @@ Signature サービスが使用する CRL および OCSP サーバーの順序�
 
 **すべての電子署名の取得**
 
-PDF ドキュメント内のすべてのデジタル署名を検証するには、PDF ドキュメントからデジタル署名を取得します。すべての署名がリスト形式で返されます。電子署名の検証の一環として、署名のステータスを確認します。
+PDF・ドキュメント内のすべての電子署名を検証するには、PDF・ドキュメントから電子署名を取得します。 すべての署名がリスト形式で返されます。電子署名の検証の一環として、署名のステータスを確認します。
 
 >[!NOTE]
 >
@@ -1641,7 +1641,7 @@ Signature サービス API（Java）を使用して、複数の電子署名を�
    * PKI 実行時オプションが格納されている `PKIOptions` オブジェクト。
    * SPI 情報を含む `VerifySPIOptions` インスタンス。このパラメーターには `null` を指定できます。
 
-   この `verifyPDFDocument` メソッドは、PDF ドキュメントにあるすべてのデジタル署名に関する情報が格納されている `PDFDocumentVerificationInfo` オブジェクトを返します。
+   The `verifyPDFDocument` メソッドは、 `PDFDocumentVerificationInfo` オブジェクトドキュメント内のすべての電子署名に関する情報を含むPDF。
 
 1. すべての署名を反復処理
 
@@ -1707,7 +1707,7 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
    * PKI 実行時オプションが格納されている `PKIOptions` オブジェクト。
    * SPI 情報を含む `VerifySPIOptions` インスタンス。このパラメーターには null を指定できます。
 
-   この `verifyPDFDocument` メソッドは、PDF ドキュメント内のすべてのデジタル署名に関する情報を含む `PDFDocumentVerificationInfo` オブジェクトを返します。
+   The `verifyPDFDocument` メソッドは、 `PDFDocumentVerificationInfo` オブジェクトドキュメント内のすべての電子署名に関する情報を含むPDF。
 
 1. すべての署名を反復処理
 

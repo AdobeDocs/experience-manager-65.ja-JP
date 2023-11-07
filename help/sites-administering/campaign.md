@@ -8,10 +8,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: 6fe5e617ceac3c97a77de2d574ec370f30887330
-workflow-type: ht
-source-wordcount: '338'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 91%
 
 ---
 
@@ -26,11 +26,11 @@ Adobe Campaign は、オンラインおよびオフラインのあらゆるチ�
 >
 >このドキュメントでは、Adobe Campaign と、オンプレミスまたは AMS でホストされている AEM ソリューションである AEM 6.5 との統合について説明します。
 >
->Adobe Campaign とクラウドネイティブ AEM ソリューションである AEM as a Cloud Service の統合について詳しくは、[このドキュメントを参照してください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/campaign.html?lang=ja)。
+>クラウドネイティブなAEMソリューションである、Adobe CampaignとAEM as a Cloud Serviceの統合について詳しくは、 [このドキュメントを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/campaign.html?lang=ja)
 
 ## Adobe Campaign Classic との統合 {#acc}
 
-Adobe Campaign Classic（ACC）のバージョンは多数あります。AEM との統合のサポートは、実装した ACC のバージョンと、AEM が Adobe Manage Services（AMS）のオンプレミスにインストールされているかどうかによって異なります。
+Adobe Campaign Classic(ACC) には複数のバージョンがあります。 AEM との統合のサポートは、実装した ACC のバージョンと、AEM が Adobe Manage Services（AMS）のオンプレミスにインストールされているかどうかによって異なります。
 
 | ACC バージョン | AEM 6.5 オンプレミス<br>との統合 | AEM 6.5 AMS<br>との統合 |
 |---|---|---|

@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2506'
-ht-degree: 86%
+source-wordcount: '2505'
+ht-degree: 85%
 
 ---
 
@@ -321,4 +321,4 @@ REST リクエストを使用して、Acrobat から Forms プロセスを呼び
 
 プロセスで PDF ドキュメントを入力値として必要とする場合は、前の図に示すように、必ず PDF としてフォームを送信してください。また、プロセスを正常に呼び出すには、プロセスが PDF ドキュメントを返す必要があります。そうしないと、Acrobat は戻り値を処理できず、エラーが発生します。入力プロセス変数の名前を指定する必要はありません。例えば、*MyApplication/EncryptDocument* プロセスには、`inDoc` という入力変数があります。フォームが PDF として送信されている限り、inDoc を指定する必要はありません。
 
-また、フォームデータを XML としても Forms プロセスに送信できます。XML データを送信する場合は `Submit As` ドロップダウンが XML を指定していることを確認してください。プロセスの戻り値は PDF ドキュメントである必要があるので、PDF ドキュメントは Acrobat に表示されます。
+また、フォームデータを XML としてFormsプロセスに送信する場合も、XML データを送信する場合は、 `Submit As` ドロップダウンで XML を指定します。 プロセスの戻り値は PDF ドキュメントである必要があるので、PDF ドキュメントは Acrobat に表示されます。

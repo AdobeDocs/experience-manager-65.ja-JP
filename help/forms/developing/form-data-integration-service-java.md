@@ -11,10 +11,10 @@ topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 81%
 
 ---
 
@@ -30,11 +30,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->AEM Forms によるプログラミングにあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされる Forms Server に基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM forms によるプログラミング」のクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-次の Java コードの例では、データを PDF フォームに読み込みます。データは、*Loan_data.xml* という名前の XML ファイルにあり、PDF フォームは *ResultLoanForm.pdf* という名前の PDF ファイルとして保存されます（[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
+次の Java コードの例では、データを PDF フォームに読み込みます。データは、 *Loan_data.xml* PDFフォームは、 *ResultLoanForm.pdf*. （[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
 
 ```java
  /*
@@ -63,16 +63,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a
@@ -165,16 +165,16 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 20. xbean.jar (required for SOAP mode)
      * 21. xercesImpl.jar (required for SOAP mode)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * SOAP required JAR files are located in the following path:
+     * SOAP required JAR files are in the following path:
      * <install directory>/sdk/client-libs/thirdparty
      *
      * If you want to invoke a remote forms server instance and there is a

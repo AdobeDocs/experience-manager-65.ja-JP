@@ -1,8 +1,8 @@
 ---
 title: FormsService にドキュメントを渡す
 seo-title: Passing Documents to the FormsService
-description: フォームデザインを含む com.adobe.idp.Document オブジェクトを Forms サービスに渡します。Forms サービスは、com.adobe.idp.Document オブジェクトにあるフォームデザインをレンダリングします。
-seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design located in the com.adobe.idp.Document object.
+description: フォームデザインを含む com.adobe.idp.Document オブジェクトを Forms サービスに渡します。Formsサービスは、フォームデザインを com.adobe.idp.Document オブジェクトにレンダリングします。
+seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design in the com.adobe.idp.Document object.
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 role: Developer
 exl-id: 29c7ebda-407a-464b-a9db-054163f5b737
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1684'
-ht-degree: 100%
+source-wordcount: '1682'
+ht-degree: 98%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-AEM Forms サービスは、ユーザーから情報を収集するために、インタラクティブ PDF Forms をクライアントデバイス（通常は web ブラウザー）にレンダリングします。インタラクティブ PDF フォームは、通常 XDP ファイルとして保存され、Designer で作成されるフォームデザインに基づいています。AEM Forms では、フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Forms サービスに渡すことができます。次に、Forms サービスは、`com.adobe.idp.Document` オブジェクトにあるフォームデザインをレンダリングします。
+AEM Forms サービスは、ユーザーから情報を収集するために、インタラクティブ PDF Forms をクライアントデバイス（通常は web ブラウザー）にレンダリングします。インタラクティブ PDF フォームは、通常 XDP ファイルとして保存され、Designer で作成されるフォームデザインに基づいています。AEM Forms では、フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Forms サービスに渡すことができます。次に、Formsサービスがフォームデザインを `com.adobe.idp.Document` オブジェクト。
 
 `com.adobe.idp.Document` オブジェクトを Forms サービスに渡す利点は、他のサービス操作が `com.adobe.idp.Document` インスタンスを返すことです。つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得し、レンダリングできます。例えば、（次の図に示すように）XDP ファイルが `/Company Home/Form Designs` という名前のコンテンツサービス（非推奨）ノードに格納されているとします。
 
@@ -156,6 +156,7 @@ Forms サービスおよびコンテンツサービス（非推奨） API（web 
       * `FormsServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `FormsServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
       * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+
    * フィールド `BasicHttpBindingSecurity.Security.Mode` に定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を割り当てます。
 
    >[!NOTE]

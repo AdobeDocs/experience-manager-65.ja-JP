@@ -1,20 +1,16 @@
 ---
 title: PDF から Postscript および画像ファイルへの変換
-seo-title: Converting PDF to Postscript andImage Files
-description: Convert PDF サービスでは、Java API および web サービス API を使用して、 PDF ドキュメントを PostScript および多数の画像形式（JPEG、JPEG 2000、PNG、TIFF）に変換できます。
-seo-description: Use the Convert PDF service to convert PDF documents to PostScript and to a number of image formats (JPEG, JPEG 2000, PNG, and TIFF) using the Java API and Web Service API.
-uuid: 07da0391-7180-4197-aaa6-ae753d753b84
+description: ConvertPDFサービスを使用して、Java API と Web サービス API を使用して、PDFドキュメントを PostScript に、また複数の画像形式 (JPEG、JPEG2000、PNG、TIFF) に変換します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 role: Developer
 exl-id: 31730c24-46c3-4111-9391-ccd4342740e9
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: ht
-source-wordcount: '2809'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '2801'
+ht-degree: 86%
 
 ---
 
@@ -24,7 +20,7 @@ ht-degree: 100%
 
 **Convert PDF サービスについて**
 
-Convert PDF サービスは、PDF ドキュメントを PostScript および多数の画像形式（JPEG、JPEG 2000、PNG および TIFF）に変換します。PDF ドキュメントの PostScript への変換は、PostScript プリンターでの無人のサーバーベース印刷に便利です。PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換する方法が実用的です。
+ConvertPDFサービスは、PDFドキュメントを PostScript および複数の画像形式 (JPEG、JPEG2000、PNG およびTIFF) に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでの無人サーバーベースの印刷に便利です。 PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
 
 Convert PDF サービスを使用して、以下のタスクを実行できます。
 
@@ -106,7 +102,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-convertpdf-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-convertpdf-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Convert PDF クライアントを作成します。
 
@@ -121,11 +117,11 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 1. 変換の実行時オプションを設定します。
 
    * コンストラクターを呼び出して `ToPSOptionsSpec` オブジェクトを作成します。
-   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
+   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドとパス `PSLevel` PostScript レベルを指定する列挙値。 設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
 
 1. PDF ドキュメントを PostScript ファイルに変換します。
 
-   `ConvertPdfServiceClient` オブジェクトの `toPS2` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `ConvertPdfServiceClient`オブジェクトの `toPS2` メソッドを使用して、次の値を渡します。
 
    * PostScript ファイルに変換する PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクト
    * PostScript の実行時オプションを指定する `ToPSOptionsSpec` オブジェクト
@@ -135,7 +131,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 1. PostScript ファイルを保存します。
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .ps であることを確認します。
-   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、 `Document` オブジェクトの内容をファイルにコピーします（必ず、`toPS2` メソッドから返された `Document` オブジェクトを使用します）。
+   * を呼び出す `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します ( `Document` が返したオブジェクト `toPS2` メソッド )。
 
 **関連情報**
 
@@ -164,7 +160,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
    * デフォルトのコンストラクターを使用して `ConvertPdfServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ConvertPdfServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `ConvertPdfServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -176,32 +172,32 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PostScript ファイルに変換された PDF ドキュメントを格納するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成します。それには、コンストラクターを呼び出し、変換する PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得して決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み取るバイト配列、開始位置、ストリーム長を渡す。
    * `MTOM` フィールドにバイト配列の内容を割り当てることにより、`BLOB` オブジェクトに入力します。
 
 1. 変換の実行時オプションを設定します。
 
-   * コンストラクターを使用して `ToPSOptionsSpec` オブジェクトを作成します。
-   * `ToPSOptionsSpec` オブジェクトのデータメンバーに値を割り当てて、実行時オプションを設定します。例えば、作成する PostScript レベルを定義するには、`ToPSOptionsSpec` オブジェクトの `psLevel` データメンバーに `PSLevel` 列挙値を割り当てます。
+   * コンストラクターを呼び出して `ToPSOptionsSpec` オブジェクトを作成します。
+   * 実行時オプションを設定するには、 `ToPSOptionsSpec` オブジェクトのデータメンバー。 例えば、作成する PostScript レベルを定義するには、 `PSLevel` 列挙値を `ToPSOptionsSpec` オブジェクトの `psLevel` データメンバー。
 
 1. PDF ドキュメントを PostScript ファイルに変換します。
 
-   `GeneratePDFServiceService` オブジェクトの `toPS2` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `GeneratePDFServiceService` オブジェクトの `toPS2` メソッドを使用して、次の値を渡します。
 
    * PostScript ファイルに変換する PDF ドキュメントを表す `BLOB` オブジェクト
    * 実行時のオプションを指定する `ToPSOptionsSpec` オブジェクト
 
-   変換が完了したら、`BLOB` オブジェクトの `MTOM` プロパティにアクセスして、PostScript ドキュメントを表すバイナリデータを抽出します。PostScript ファイルに書き出すことができるバイト配列を返します。
+   変換が完了したら、PostScript ドキュメントを表すバイナリデータを抽出し、そのドキュメントにアクセスします `BLOB` オブジェクトの `MTOM` プロパティ。 PostScript ファイルに書き出すことができるバイト配列を返します。
 
 1. PostScript ファイルを保存します。
 
    * コンストラクターを呼び出して、`System.IO.FileStream` オブジェクトを作成します。PS ファイルの場所を表す文字列値を渡します。
-   * `encryptPDFUsingPassword` メソッドから返された `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得してバイト配列を入力します。
-   * コンストラクターを呼び出し `System.IO.FileStream` オブジェクトを渡して、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡して、バイト配列の内容を PostScript ファイルに書き込ます。
+   * `encryptPDFUsingPassword` メソッドから返された `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
+   * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+   * を呼び出して、バイト配列の内容を PostScript ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](converting-pdf-postscript-image-files.md#summary-of-steps)
 
@@ -240,11 +236,11 @@ PDF ドキュメントをサポートされている任意のタイプに変換�
 
 **変換する PDF ドキュメントを取得**
 
-画像に変換する PDF ドキュメントを取得する必要があります。インタラクティブ PDF ドキュメントを画像に変換することはできません。その操作を実行しようとすると、例外が発生します。インタラクティブ PDF ドキュメントを画像ファイルに変換するには、変換前に PDF ドキュメントを統合する必要があります（[PDF ドキュメントの統合](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)を参照してください）。
+画像に変換するPDFドキュメントを取得します。 インタラクティブ PDF ドキュメントを画像に変換することはできません。その操作を実行しようとすると、例外が発生します。インタラクティブ PDF ドキュメントを画像ファイルに変換するには、変換前に PDF ドキュメントを統合する必要があります（[PDF ドキュメントの統合](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)を参照してください）。
 
 **実行時オプションを設定**
 
-画像形式や解像度の値など、実行時オプションを設定する必要があります。実行時の値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToImageOptionsSpec` のクラス参照を参照してください。
+画像形式や解像度の値などの実行時オプションを設定します。 実行時の値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToImageOptionsSpec` のクラス参照を参照してください。
 
 **PDF を画像に変換**
 
@@ -270,7 +266,7 @@ Convert PDF サービス API（Java）を使用して、PDFドキュメントを
 
 1. プロジェクトファイルを含めます。
 
-   adobe-convertpdf-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-convertpdf-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Convert PDF クライアントを作成します。
 
@@ -293,7 +289,7 @@ Convert PDF サービス API（Java）を使用して、PDFドキュメントを
 
 1. PDF を画像に変換します。
 
-   `ConvertPdfServiceClient` オブジェクトの `toImage2` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `ConvertPdfServiceClient` オブジェクトの `toImage2` メソッドを使用して、次の値を渡します。
 
    * 変換する PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクト。
    * ターゲット画像の形式に関する各種の環境設定が含まれる `com.adobe.livecycle.converpdfservice.client.ToImageOptionsSpec` オブジェクト。
@@ -302,7 +298,7 @@ Convert PDF サービス API（Java）を使用して、PDFドキュメントを
 
 1. コレクションから画像ファイルを取得します。
 
-   `java.util.List` オブジェクトを繰り返して、画像が存在するかを判断します。各要素は、`com.adobe.idp.Document` のインスタンスです。`com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出し、`java.io.File` オブジェクトを渡して、画像を保存します。
+   `java.util.List` オブジェクトを繰り返して、画像が存在するかを判断します。各要素は、`com.adobe.idp.Document` のインスタンスです。を呼び出して画像を保存します。 `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドと `java.io.File` オブジェクト。
 
 **関連トピック**
 
@@ -325,7 +321,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF ドキ�
    * デフォルトのコンストラクターを使用して `ConvertPdfServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ConvertPdfServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `ConvertPdfServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -337,8 +333,8 @@ Convert PDF サービス API（web サービス）を使用して、PDF ドキ�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDF フォームを格納するために使用します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。PDF フォームの場所と、ファイルを開くときのモードを指定する文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定します。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズを決定するには、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドを割り当てることにより、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. 実行時オプションを設定します。
@@ -352,7 +348,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF ドキ�
 
 1. PDF を画像に変換します。
 
-   `ConvertPDFServiceService` オブジェクトの `toImage2` メソッドを呼び出して次の値を渡します。
+   を呼び出す `ConvertPDFServiceService` オブジェクトの `toImage2` メソッドを使用して、次の値を渡します。
 
    * 変換するファイルを表す `BLOB` オブジェクト
    * ターゲット画像形式に関する様々な環境設定を含む `ToImageOptionsSpec` オブジェクト

@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 60%
+source-wordcount: '1795'
+ht-degree: 58%
 
 ---
 
@@ -55,13 +55,13 @@ ht-degree: 60%
 
 ### アセットの取り込み {#ingesting-assets}
 
-アセットをシステムに取り込む際には、パフォーマンスと安定性が重要です。 大量のデータをシステムに読み込むので、必要な時間を最小限に抑え、システムの過負荷を回避するために、システムのパフォーマンスとパフォーマンスを確保する必要があります。これは、特に、既に実稼動中のシステムで発生します。
+アセットをシステムに取り込む際には、パフォーマンスと安定性が重要です。 大量のデータをシステムに読み込むので、システムのパフォーマンスを確保し、必要な時間を最小限に抑え、システムの過負荷を回避する必要があります。これは、特に、実稼動環境にあるシステムで発生する可能性があります。
 
 アセットをシステムに読み込む方法には、HTTP を使用したプッシュベースのアプローチと、JCR API を使用したプルベースのアプローチの 2 つがあります。
 
 #### HTTP 経由で送信 {#pushing-through-http}
 
-アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton は小さな Java アプリケーションであり、[!DNL Experience Manager] のデプロイメントでディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
+AdobeのManaged Servicesチームは、Glutton と呼ばれるツールを使用して、顧客環境にデータを読み込みます。 Glutton は小さな Java アプリケーションであり、[!DNL Experience Manager] のデプロイメントでディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
 
 HTTPS を通じたプッシュのアプローチには、主に次の 2 つの欠点があります。
 
@@ -82,7 +82,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 ニーズに合わせてワークフローを設定したら、次の 2 つの方法のいずれかで実行できます。
 
-1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。このツールを使用すると、クエリを実行し、ワークフローを通じてクエリの結果を処理できます。 バッチサイズを設定するオプションもあります。
+1. 最も簡単な方法は次のとおりです。 [ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html). このツールを使用すると、クエリを実行し、ワークフローを通じてクエリの結果を処理できます。 バッチサイズを設定するオプションもあります。
 1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、[!DNL Experience Manager] ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### アセットのアクティベート {#activating-assets}

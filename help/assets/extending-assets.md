@@ -5,10 +5,10 @@ contentOwner: AG
 role: Developer
 feature: Developer Tools
 exl-id: 0271c528-23b0-4a3a-b5e8-5baf6cdeecc7
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 50%
+source-wordcount: '250'
+ht-degree: 40%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 50%
 
 Asset Editor は、AdobeEnterprise Manager Web サイトのユーザーがリポジトリ内のデジタルアセットの検索、表示、操作に使用する主なアクセスポイントです。
 
-[!DNL Experience Manager] の開発者は、アセットエディターを様々な方法でカスタマイズして拡張し、ユーザーに合わせたインターフェイスと一連の機能を提供できます。
+As an [!DNL Experience Manager] 開発者は、アセットエディターを複数の方法でカスタマイズおよび拡張し、特別にカスタマイズされたインターフェイスと機能のセットをユーザーに提示できます。
 
 以下の領域における機能について、カスタマイズまたは拡張できます。
 

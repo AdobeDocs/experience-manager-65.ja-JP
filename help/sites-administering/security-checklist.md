@@ -12,10 +12,10 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 465d3e956ecdd36eea5fe095e250652eedd4b3c5
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3005'
-ht-degree: 100%
+source-wordcount: '3004'
+ht-degree: 98%
 
 ---
 
@@ -126,7 +126,7 @@ AEM Dispatcher はインフラストラクチャの重要な部分です。[Disp
 
 ### レプリケーションの設定とユーザーのトランスポート {#configure-replication-and-transport-users}
 
-AEM の標準インストールでは、`admin` をデフォルトの[レプリケーションエージェント](/help/sites-deploying/replication.md)内のトランスポート認証情報のユーザーとして指定します。また、管理者ユーザーは、オーサーシステムでレプリケーションを展開する際に使用します。
+AEM の標準インストールでは、`admin` をデフォルトの[レプリケーションエージェント](/help/sites-deploying/replication.md)内のトランスポート資格情報のユーザーとして指定します。また、管理者ユーザーは、オーサーシステムでレプリケーションを展開する際に使用します。
 
 セキュリティに関する考慮事項については、次の 2 つの点を考慮して、特定の使用例がすぐに反映されるように両方を変更する必要があります。
 
@@ -393,7 +393,7 @@ AEM 6.1 以降、`AuthorizableNodeName` インターフェイスの新しい実�
 
 ### 匿名権限堅牢化パッケージ {#anonymous-permission-hardening-package}
 
-デフォルトでは、AEM は、`jcr:createdBy` や `jcr:lastModifiedBy` などのシステムメタデータをノードプロパティとして、リポジトリ内の通常のコンテンツの隣に保存します。設定とアクセス制御のセットアップに応じて、場合によっては、このようなノードが生の JSON または XML としてレンダリングされるなど、個人を特定できる情報（PII）の漏洩につながる可能性があります。
+デフォルトでは、AEM は、`jcr:createdBy` や `jcr:lastModifiedBy` などのシステムメタデータをノードプロパティとして、リポジトリ内の通常のコンテンツの隣に保存します。設定とアクセス制御の設定に応じて、場合によっては、これによって、例えば、生の JSON または XML としてレンダリングされる場合などに、個人識別情報 (PII) が公開される可能性があります。
 
 すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。権限の最小化の原則に従って、これらのプロパティへのアクセスを制限する必要があります。
 

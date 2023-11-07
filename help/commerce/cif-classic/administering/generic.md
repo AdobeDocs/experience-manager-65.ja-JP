@@ -6,7 +6,7 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: b00ed4ed146b89aece9af1d267c890a360a236e9
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2929'
 ht-degree: 66%
@@ -264,7 +264,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 これで、2 つのアセットが製品コンポーネントに保存されました。製品ページに表示する項目を設定できます。 これはカテゴリシステムで機能します。最初に、個々のアセットにカテゴリを追加する必要があります。
 
 1. 選択 **製品データを表示**.
-1. アセットの下の「**アセットカテゴリ**」に入力します（例：`cat1` および `cat2`）。
+1. を入力します。 **アセットカテゴリ** アセットの下に、例えば `cat1` および `cat2`.
 
    >[!NOTE]
    >
@@ -345,8 +345,8 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 <!-- Search&Promote is end of life as of September 1, 2022 The Search&Promote integration lets you: -->
 
 <!-- Search&Promote is end of life as of September 1, 2022 * use the eCommerce API, independently of the underlying repository structure and commerce platform. -->
-<!-- Search&Promote is end of life as of September 1, 2022 * leverage the Index Connector feature of Search&Promote to provide a product feed in XML format. -->
-<!-- Search&Promote is end of life as of September 1, 2022 * leverage the Remote Control feature of Search&Promote to perform on-demand or scheduled requests of the product feed -->
+<!-- Search&Promote is end of life as of September 1, 2022 * use the Index Connector feature of Search&Promote to provide a product feed in XML format. -->
+<!-- Search&Promote is end of life as of September 1, 2022 * use the Remote Control feature of Search&Promote to perform on-demand or scheduled requests of the product feed -->
 <!-- Search&Promote is end of life as of September 1, 2022 * feed generation for different Search&Promote accounts, configured as cloud services configurations. -->
 
 <!-- Search&Promote is end of life as of September 1, 2022 For more information, read [Product Feed](/help/sites-administering/product-feed.md). -->
@@ -475,7 +475,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 1. の選択 **完了** ボタンをクリックすると、カタログが表示されるサイトコンソールに戻ります。
 
-   「**カタログを開く**」ボタンをタップまたはクリックすると、カタログ（例：`http://localhost:4502/editor.html/content/test-catalog.html`）が開きます。
+   タップ/クリック **カタログを開く** 「 」ボタンをクリックすると、カタログが開きます ( 例： `http://localhost:4502/editor.html/content/test-catalog.html`) をクリックします。
 
 #### カタログの生成 - クラシック UI {#generating-a-catalog-classic-ui}
 

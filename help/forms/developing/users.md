@@ -1,20 +1,16 @@
 ---
 title: ユーザーの管理
-seo-title: Managing Users
-description: User Management API を使用して、役割、権限、プリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成してください。
-seo-description: Use the User Management API to create client applications that can manage roles, permissions, and principals (which can be users or groups), as well as authenticate users.
-uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
+description: ユーザー管理 API を使用して、役割、権限およびプリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6226'
-ht-degree: 99%
+source-wordcount: '6218'
+ht-degree: 82%
 
 ---
 
@@ -24,7 +20,7 @@ ht-degree: 99%
 
 **User Management について**
 
-User Management API を使用して、役割、権限、プリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成できます。User Management API は、次の AEM Forms API で構成されています。
+ユーザー管理 API を使用して、役割、権限およびプリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成できます。 User Management API は、次の AEM Forms API で構成されています。
 
 * Directory Manager Service API
 * Authentication Manager Service API
@@ -142,7 +138,7 @@ Directory Manager Service API を使用して新しいユーザーを追加す�
 
 **AEM Forms へのユーザーの追加**
 
-ユーザー情報を定義した後、そのユーザーを AEM Forms に追加できます。ユーザーを追加するには、`DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出してください。
+ユーザー情報を定義した後、そのユーザーを AEM Forms に追加できます。ユーザーを追加するには、 `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッド。
 
 **ユーザーが追加されたことを確認**
 
@@ -166,7 +162,7 @@ Directory Manager Service API（Java）を使用してユーザーを追加し�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。
 
 1. DirectoryManagerServices クライアントを作成します。
 
@@ -175,31 +171,31 @@ Directory Manager Service API（Java）を使用してユーザーを追加し�
 1. ユーザー情報を定義します。
 
    * コンストラクターを使用して `UserImpl` オブジェクトを作成します。
-   * `UserImpl` オブジェクトの `setDomainName` メソッドを呼び出して、ドメイン名を設定します。ドメイン名を指定する文字列値を渡します。
-   * `UserImpl` オブジェクトの `setPrincipalType` メソッドを呼び出して、プリンシパルタイプを設定します。ユーザーのタイプを指定する文字列値を渡します。例えば、`USER` を指定できます。
-   * `UserImpl` オブジェクトの `setUserid` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー識別子の値を指定する文字列値を渡します。例えば、`wblue` を指定できます。
-   * `UserImpl` オブジェクトの `setCanonicalName` メソッドを呼び出して、正規名を設定します。ユーザーの正規名を指定する文字列値を渡します。例えば、`wblue` を指定できます。
-   * `UserImpl` オブジェクトの `setGivenName` メソッドを呼び出して、名前を設定します。ユーザーの名前を指定する文字列値を渡します。例えば、`Wendy` を指定できます。
-   * `UserImpl` オブジェクトの `setFamilyName` メソッドを呼び出して、姓を設定します。ユーザーの姓を指定する文字列値を渡します。例えば、`Blue` を指定できます。
+   * を呼び出して、データメイン名を設定します。 `UserImpl` オブジェクトの `setDomainName` メソッド。 ドメイン名を指定する文字列値を渡します。
+   * を呼び出して、プリンシパルタイプを設定します。 `UserImpl` オブジェクトの `setPrincipalType` メソッド。 ユーザーのタイプを指定する文字列値を渡します。例えば、`USER` を指定できます。
+   * を呼び出して、ユーザー識別子の値を設定します。 `UserImpl` オブジェクトの `setUserid` メソッド。 ユーザー識別子の値を指定する文字列値を渡します。例えば、`wblue` を指定できます。
+   * を呼び出して、正規名を設定します。 `UserImpl` オブジェクトの `setCanonicalName` メソッド。 ユーザーの正規名を指定する string 値を渡します。 例えば、`wblue` を指定できます。
+   * を呼び出して、指定された名前を設定します。 `UserImpl` オブジェクトの `setGivenName` メソッド。 ユーザーの名前を指定する string 値を渡します。 例えば、`Wendy` を指定できます。
+   * を呼び出して、ファミリ名を設定します。 `UserImpl` オブジェクトの `setFamilyName` メソッド。 ユーザーの姓を指定する string 値を渡します。 例えば、`Blue` を指定できます。
 
    >[!NOTE]
    >
-   >`UserImpl` オブジェクトに属するメソッドを呼び出して他の値を設定します。例えば、 `UserImpl` オブジェクトの `setLocale` メソッドを呼び出して、ロケール値を設定できます。
+   >`UserImpl` オブジェクトに属するメソッドを呼び出して他の値を設定します。例えば、 `UserImpl` オブジェクトの `setLocale` メソッド。
 
-1. ユーザーを AEM Forms に追加します。
+1. AEM Forms にユーザーを追加します。
 
-   `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出して、以下の値を渡します。
+   を呼び出す `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを使用して、次の値を渡します。
 
    * 新しいユーザーを表す `UserImpl` オブジェクト
-   * ユーザーのパスワードを表す文字列値
+   * ユーザーのパスワードを表す string 値です。
 
    この `createLocalUser` メソッドは、ローカルユーザー ID の値を指定する文字列値を返します。
 
 1. ユーザーが追加されたことを確認します。
 
-   * コンストラクタを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー ID の値を表す文字列値を渡します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを繰り返し、ユーザーを特定します。
+   * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
+   * を呼び出して、ユーザー識別子の値を設定します。 `PrincipalSearchFilter` オブジェクトの `setUserId` メソッド。 ユーザー ID の値を表す文字列値を渡します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡しますこのメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを繰り返し、ユーザーを特定します。
 
 **関連トピック**
 
@@ -228,7 +224,7 @@ Directory Manager サービス API（web サービス）を使用してユーザ
    * デフォルトのコンストラクターを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`?blob=mtom` を指定するようにしてください。
    * `DirectoryManagerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -239,27 +235,27 @@ Directory Manager サービス API（web サービス）を使用してユーザ
 1. ユーザー情報を定義します。
 
    * コンストラクターを使用して `UserImpl` オブジェクトを作成します。
-   * デフォルト名を設定するには、`UserImpl` オブジェクトの `domainName` フィールドに文字列値を割り当てます。
-   * プリンシパルタイプを設定するには、`UserImpl` オブジェクトの `principalType` フィールドに文字列値を割り当てます。例えば、`USER` を指定できます。
-   * ユーザー ID の値を設定するには、`UserImpl` オブジェクトの `userid` フィールドに文字列値を割り当てます。
-   * 正規名の値を設定するには、`UserImpl` オブジェクトの `canonicalName` フィールドに文字列値を割り当てます。
-   * 指定された名前の値を設定するには、`UserImpl` オブジェクトの `givenName` フィールドに文字列値を割り当てます。
-   * 姓の値を設定するには、`UserImpl` オブジェクトの `familyName` フィールドに文字列値を割り当てます。
+   * デフォルト名を設定するには、 `UserImpl` オブジェクトの `domainName` フィールドに入力します。
+   * プリンシパルタイプを設定するには、 `UserImpl` オブジェクトの `principalType` フィールドに入力します。 例えば、`USER` を指定できます。
+   * ユーザー識別子の値を設定するには、 `UserImpl` オブジェクトの `userid` フィールドに入力します。
+   * 正規名の値を `UserImpl` オブジェクトの `canonicalName` フィールドに入力します。
+   * 指定された名前の値を、 `UserImpl` オブジェクトの `givenName` フィールドに入力します。
+   * ファミリ名の値を設定するには、 `UserImpl` オブジェクトの `familyName` フィールドに入力します。
 
 1. AEM Forms にユーザーを追加します。
 
-   `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出して、以下の値を渡します。
+   を呼び出す `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを使用して、次の値を渡します。
 
    * 新しいユーザーを表す `UserImpl` オブジェクト
-   * ユーザーのパスワードを表す文字列値
+   * ユーザーのパスワードを表す string 値です。
 
    この `createLocalUser` メソッドは、ローカルユーザー ID の値を指定する文字列値を返します。
 
 1. ユーザーが追加されたことを確認します。
 
    * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * ユーザー ID の値を設定するには、`PrincipalSearchFilter` オブジェクトの `userId` フィールドにユーザー ID の値を表す文字列値を割り当てます。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、`MyArrayOfUser` コレクションオブジェクト（各要素は `User` オブジェクト）を返します。`MyArrayOfUser` コレクションを反復処理して、ユーザーを特定します。
+   * ユーザー識別子の値を表す string 値を `PrincipalSearchFilter` オブジェクトの `userId` フィールドに入力します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡しますこのメソッドは、`MyArrayOfUser` コレクションオブジェクト（各要素は `User` オブジェクト）を返します。`MyArrayOfUser` コレクションを反復処理して、ユーザーを特定します。
 
 **関連トピック**
 
@@ -292,11 +288,11 @@ Directory Manager Service API 操作をプログラムで実行する前に、Di
 
 **削除するユーザーの指定**
 
-ユーザー ID の値を使用して、削除するユーザーを指定できます。
+ユーザーの識別子の値を使用して、削除するユーザーを指定できます。
 
 **AEM Forms からのユーザーの削除**
 
-ユーザーを削除するには、`DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッドを呼び出します。
+ユーザーを削除するには、 `DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッド。
 
 **関連トピック**
 
@@ -316,7 +312,7 @@ Directory Manager Service API（Java）を使用してユーザーを削除し�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。
 
 1. DirectoryManagerService クライアントを作成します。
 
@@ -325,12 +321,12 @@ Directory Manager Service API（Java）を使用してユーザーを削除し�
 1. 削除するユーザーを指定します。
 
    * コンストラクタを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー ID の値を表す文字列値を渡します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、`java.util.List` インスタンスを返します。このインスタンスの各要素は `User` オブジェクトです。`java.util.List` インスタンスを繰り返し、削除するユーザーを特定します。
+   * を呼び出して、ユーザー識別子の値を設定します。 `PrincipalSearchFilter` オブジェクトの `setUserId` メソッド。 ユーザー ID の値を表す文字列値を渡します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡しますこのメソッドは、`java.util.List` インスタンスを返します。このインスタンスの各要素は `User` オブジェクトです。`java.util.List` インスタンスを繰り返し、削除するユーザーを特定します。
 
 1. AEM Forms からユーザーを削除します。
 
-   `DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッドを呼び出して、`User` オブジェクトの `oid` フィールドの値を渡します。`User` オブジェクトの `getOid` メソッドを呼び出します。`java.util.List` インスタンスから取得した `User` オブジェクトを使用します。
+   を呼び出す `DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッドを使用して、 `User` オブジェクトの `oid` フィールドに入力します。 を呼び出す `User` オブジェクトの `getOid` メソッド。 `java.util.List` インスタンスから取得した `User` オブジェクトを使用します。
 
 **関連トピック**
 
@@ -350,14 +346,14 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。
 
 1. DirectoryManagerService クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`blob=mtom.` を指定してください
    * `DirectoryManagerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -367,15 +363,15 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
 1. 削除するユーザーを指定します。
 
-   * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * ユーザー ID の値を設定するには、`PrincipalSearchFilter` オブジェクトの `userId` フィールドに文字列値を入力します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、`MyArrayOfUser` コレクションオブジェクト（各要素は `User` オブジェクト）を返します。`MyArrayOfUser` コレクションを反復処理して、ユーザーを特定します。`MyArrayOfUser` コレクションオブジェクトから取得した `User` オブジェクトは、ユーザーの削除に使用されます。
+   * コンストラクタを使用して `PrincipalSearchFilter` オブジェクトを作成します。
+   * ユーザー識別子の値を設定するには、 `PrincipalSearchFilter` オブジェクトの `userId` フィールドに入力します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡しますこのメソッドは、`MyArrayOfUser` コレクションオブジェクト（各要素は `User` オブジェクト）を返します。`MyArrayOfUser` コレクションを反復処理して、ユーザーを特定します。`MyArrayOfUser` コレクションオブジェクトから取得した `User` オブジェクトは、ユーザーの削除に使用されます。
 
 1. AEM Forms からユーザーを削除します。
 
-   ユーザーを削除するには、`User` オブジェクトの `oid` フィールド値を `DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッドに渡します。
+   ユーザーを削除するには、 `User` オブジェクトの `oid` フィールドの値を `DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](users.md#summary-of-steps)
 
@@ -448,7 +444,7 @@ Directory Manager Service API（Java）を使用してグループを作成し�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。
 
 1. DirectoryManagerService クライアントを作成します。
 
@@ -457,28 +453,28 @@ Directory Manager Service API（Java）を使用してグループを作成し�
 1. グループが存在するかどうかを確認します。
 
    * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * `PrincipalSearchFilter` オブジェクトの `setPrincipalType` オブジェクトを呼び出して、プリンシパルタイプを設定します。値 `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` を渡します。
-   * `PrincipalSearchFilter` オブジェクトの `setSpecificDomainName` オブジェクトを呼び出してドメインを設定します。ドメイン名を指定する文字列値を渡します。
-   * グループを検索するには、`DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッド（プリンシパルはグループにすることができます）を呼び出します。プリンシパルタイプとドメイン名を指定する `PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、各要素が `Group` インスタンスである `java.util.List` インスタンスを返します。各グループインスタンスは、`PrincipalSearchFilter` オブジェクトを使用して指定されたフィルターに準拠しています。
+   * を呼び出して、プリンシパルタイプを設定します。 `PrincipalSearchFilter` オブジェクトの `setPrincipalType` オブジェクト。 値 `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` を渡します。
+   * を呼び出してドメインを設定する `PrincipalSearchFilter` オブジェクトの `setSpecificDomainName` オブジェクト。 ドメイン名を指定する文字列値を渡します。
+   * グループを検索するには、 `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッド（プリンシパルはグループにすることができます）。 プリンシパルタイプとドメイン名を指定する `PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、各要素が `Group` インスタンスである `java.util.List` インスタンスを返します。各グループインスタンスは、`PrincipalSearchFilter` オブジェクトを使用して指定されたフィルターに準拠しています。
    * `java.util.List` インスタンスを反復処理します。各要素について、グループ名を取得します。グループ名が新しいグループ名と等しくないことを確認します。
 
 1. グループを作成します。
 
-   * グループが存在しない場合は、`Group` オブジェクトの `setCommonName` メソッドを呼び出して、グループ名を指定する文字列値を渡します。
-   * `Group` オブジェクトの `setDescription` メソッドを呼び出して、グループの説明を指定する文字列値を渡します。
-   * `Group` オブジェクトの `setDomainName` メソッドを呼び出して、ドメイン名を指定する文字列値を渡します。
-   * `DirectoryManagerServiceClient` オブジェクトの `createLocalGroup` メソッドを呼び出して、`Group` インスタンスを渡します。
+   * グループが存在しない場合は、 `Group` オブジェクトの `setCommonName` メソッドを使用し、グループ名を指定する string 値を渡します。
+   * を呼び出す `Group` オブジェクトの `setDescription` メソッドを使用し、グループの説明を指定する string 値を渡します。
+   * を呼び出す `Group` オブジェクトの `setDomainName` メソッドを使用して、ドメイン名を指定する string 値を渡します。
+   * を呼び出す `DirectoryManagerServiceClient` オブジェクトの `createLocalGroup` メソッドを使用して、 `Group` インスタンス。
 
    `createLocalUser` メソッドは、ローカルユーザー ID の値を指定する文字列値を返します。
 
 1. グループでアクションを実行します。
 
    * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー ID の値を表す文字列値を渡します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを反復処理して、ユーザーを特定します。
-   * `DirectoryManagerServiceClient` オブジェクトの `addPrincipalToLocalGroup` メソッドを呼び出して、グループにユーザーを追加します。`User` オブジェクトの `getOid` メソッドの戻り値を渡します。`Group` オブジェクトの `getOid` メソッドの戻り値を渡します（新しいグループを表す `Group` インスタンスを使用）。
+   * を呼び出して、ユーザー識別子の値を設定します。 `PrincipalSearchFilter` オブジェクトの `setUserId` メソッド。 ユーザー ID の値を表す文字列値を渡します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡しますこのメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを反復処理して、ユーザーを特定します。
+   * を呼び出して、ユーザーをグループに追加します。 `DirectoryManagerServiceClient` オブジェクトの `addPrincipalToLocalGroup` メソッド。 の戻り値を渡す `User` オブジェクトの `getOid` メソッド。 の戻り値を渡す `Group` オブジェクトの `getOid` メソッド ( `Group` 新しいグループを表すインスタンス )。
 
-**関連項目**
+**関連情報**
 
 [手順の概要](users.md#summary-of-steps)
 
@@ -539,7 +535,7 @@ Directory Manager サービスの操作をプログラムで実行する前に�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。 これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 1. DirectoryManagerService クライアントを作成します。
 
@@ -547,17 +543,17 @@ Directory Manager サービスの操作をプログラムで実行する前に�
 
 1. 適切なユーザーまたはグループの操作を呼び出します。
 
-   ユーザーまたはグループを検索するには、プリンシパルを検索する `DirectoryManagerServiceClient` オブジェクトのメソッドのいずれかを呼び出します（プリンシパルはユーザーまたはグループにすることができるためです）。次の例では、`findPrincipals` メソッドは、検索フィルター（`PrincipalSearchFilter` オブジェクト）を使用して呼び出されています。
+   ユーザーまたはグループを検索するには、 `DirectoryManagerServiceClient` オブジェクトのプリンシパルを検索するメソッド（プリンシパルはユーザーまたはグループにすることができるので）。 次の例では、`findPrincipals` メソッドは、検索フィルター（`PrincipalSearchFilter` オブジェクト）を使用して呼び出されています。
 
    この場合の戻り値は `Principal` オブジェクトを含む `java.util.List` であるため、結果を反復処理し、`Principal`オブジェクトを `User` オブジェクトまたは `Group` オブジェクトにキャストします。
 
-   結果の `User` オブジェクトまたは `Group` オブジェクト（両方とも `Principal` インターフェイスから継承）を使用して、ワークフローで必要な情報を取得します。例えば、ドメイン名と正規名の値を組み合わせて、プリンシパルを一意に識別します。これらはそれぞれ `Principal` オブジェクトの `getDomainName` メソッドおよび `getCanonicalName` メソッドを呼び出して取得されます。
+   結果の `User` オブジェクトまたは `Group` オブジェクト（両方とも `Principal` インターフェイスから継承）を使用して、ワークフローで必要な情報を取得します。例えば、ドメイン名と正規名の値を組み合わせて、プリンシパルを一意に識別します。これらは、 `Principal` オブジェクトの `getDomainName` および `getCanonicalName` メソッドに含まれます。
 
-   ローカルユーザーを削除するには、`DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッドを呼び出してユーザーの識別情報を渡します。
+   ローカルユーザーを削除するには、 `DirectoryManagerServiceClient` オブジェクトの `deleteLocalUser` メソッドを使用してユーザーの識別子を渡します。
 
-   ローカルグループを削除するには、 `DirectoryManagerServiceClient` オブジェクトの `deleteLocalGroup` メソッドを呼び出してグループの識別情報を渡します。
+   ローカルグループを削除するには、 `DirectoryManagerServiceClient` オブジェクトの `deleteLocalGroup` メソッドを使用してグループの識別子を渡します。
 
-**関連項目**
+**関連情報**
 
 [手順の概要](users.md#summary-of-steps)
 
@@ -576,11 +572,11 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
 1. DirectoryManagerService クライアントを作成します。
 
-   プロキシクラスのコンストラクターを使用して、`DirectoryManagerServiceService` オブジェクトを作成します。
+   の作成 `DirectoryManagerServiceService` オブジェクトを指定します。
 
 1. 適切なユーザーまたはグループの操作を呼び出します。
 
-   ユーザーまたはグループを検索するには、プリンシパルを検索する `DirectoryManagerServiceService` オブジェクトのメソッドのいずれかを呼び出します（プリンシパルはユーザーまたはグループにすることができるためです）。次の例では、`findPrincipalsWithFilter` メソッドは、検索フィルター（`PrincipalSearchFilter` オブジェクト）を使用して呼び出されます。`PrincipalSearchFilter` オブジェクトを使用する場合、ローカルプリンシパルは、`isLocal` プロパティが `true` に設定されている場合のみに返されます。この動作は、Java API で発生する動作とは異なります。
+   ユーザーまたはグループを検索するには、 `DirectoryManagerServiceService` オブジェクトのプリンシパルを検索するメソッド（プリンシパルはユーザーまたはグループにすることができるので）。 次の例では、`findPrincipalsWithFilter` メソッドは、検索フィルター（`PrincipalSearchFilter` オブジェクト）を使用して呼び出されます。`PrincipalSearchFilter` オブジェクトを使用する場合、ローカルプリンシパルは、`isLocal` プロパティが `true` に設定されている場合のみに返されます。この動作は、Java API で発生する動作とは異なります。
 
    >[!NOTE]
    >
@@ -588,13 +584,13 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
    この場合の戻り値は `Principal` オブジェクトを含む `object[]` であるため、結果を反復処理して `Principal` オブジェクトを `User` または `Group` オブジェクトにキャストします。
 
-   結果の `User` オブジェクトまたは `Group` オブジェクト（両方とも `Principal` インターフェイス から継承）を使用して、ワークフローで必要な情報を取得します。例えば、ドメイン名と正規名の値を組み合わせて、プリンシパルを一意に識別します。これらはそれぞれ、`Principal` オブジェクトの `domainName` フィールドおよび `canonicalName` フィールドを呼び出すことによって設定されます。
+   結果の `User` オブジェクトまたは `Group` オブジェクト（両方とも `Principal` インターフェイス から継承）を使用して、ワークフローで必要な情報を取得します。例えば、ドメイン名と正規名の値を組み合わせて、プリンシパルを一意に識別します。これらは、 `Principal` オブジェクトの `domainName` および `canonicalName` フィールドに設定されます。
 
-   ローカルユーザーを削除するには、`DirectoryManagerServiceService` オブジェクトの `deleteLocalUser` メソッドを呼び出してユーザーの識別情報を渡します。
+   ローカルユーザーを削除するには、 `DirectoryManagerServiceService` オブジェクトの `deleteLocalUser` メソッドを使用してユーザーの識別子を渡します。
 
-   ローカルグループを削除するには、 `DirectoryManagerServiceService` オブジェクトの `deleteLocalGroup` メソッドを呼び出してグループの識別情報を渡します。
+   ローカルグループを削除するには、 `DirectoryManagerServiceService` オブジェクトの `deleteLocalGroup` メソッドを使用してグループの識別子を渡します。
 
-**関連項目**
+**関連情報**
 
 [手順の概要](users.md#summary-of-steps)
 
@@ -648,7 +644,7 @@ Authorization Manager Service API（Java）を使用して役割と権限を管�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。
 
 1. AuthorizationManagerService クライアントを作成します。
 
@@ -656,12 +652,12 @@ Authorization Manager Service API（Java）を使用して役割と権限を管�
 
 1. 適切な役割または権限の操作を呼び出します。
 
-   プリンシパルに役割を割り当てるには、`AuthorizationManagerServiceClient` オブジェクトの `assignRole` メソッドを呼び出して、次の値を渡します。
+   プリンシパルにロールを割り当てるには、を呼び出します。 `AuthorizationManagerServiceClient` オブジェクトの `assignRole` メソッドを使用して、次の値を渡します。
 
    * 役割識別情報を含む `java.lang.String` オブジェクト
    * プリンシパル識別情報を含む `java.lang.String` オブジェクトの配列。
 
-   プリンシパルから役割を削除するには、`AuthorizationManagerServiceClient` オブジェクトの `unassignRole` メソッドを呼び出して、次の値を渡します。
+   プリンシパルからロールを削除するには、を呼び出します。 `AuthorizationManagerServiceClient` オブジェクトの `unassignRole` メソッドを使用して、次の値を渡します。
 
    * 役割識別情報を含む `java.lang.String` オブジェクト。
    * プリンシパル識別情報を含む `java.lang.String` オブジェクトの配列。
@@ -693,7 +689,7 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
    * デフォルトのコンストラクターを使用して `AuthorizationManagerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AuthorizationManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AuthorizationManagerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -703,12 +699,12 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
 
 1. 適切な役割または権限の操作を呼び出します。
 
-   プリンシパルに役割を割り当てるには、`AuthorizationManagerServiceClient` オブジェクトの `assignRole` メソッドを呼び出して、次の値を渡します。
+   プリンシパルにロールを割り当てるには、を呼び出します。 `AuthorizationManagerServiceClient` オブジェクトの `assignRole` メソッドを使用して、次の値を渡します。
 
    * 役割識別情報を含む `string` オブジェクト
    * プリンシパル識別情報を含む `MyArrayOf_xsd_string` オブジェクト
 
-   プリンシパルから役割を削除するには、`AuthorizationManagerServiceService` オブジェクトの `unassignRole` メソッドを呼び出して、以下の値を渡します。
+   プリンシパルからロールを削除するには、を呼び出します。 `AuthorizationManagerServiceService` オブジェクトの `unassignRole` メソッドを使用して、次の値を渡します。
 
    * 役割識別情報を含む `string` オブジェクト。
    * プリンシパル識別情報を含む `string` オブジェクトの配列。
@@ -749,7 +745,7 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>ユーザーの認証情報は、Authentication Manager サービスで認証されます。ユーザーの認証情報が有効な場合、ワークフローは手順 3 に進みます。そうでない場合は、ユーザーが承認されていないことを示すメッセージがユーザーに送信されます。</p></td>
+   <td><p>ユーザーの資格情報は、Authentication Manager サービスで認証されます。ユーザーの資格情報が有効な場合、ワークフローは手順 3 に進みます。そうでない場合は、ユーザーが承認されていないことを示すメッセージがユーザーに送信されます。</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -781,7 +777,7 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
 
 **認証操作の呼び出し**
 
-サービスクライアントを作成すると、認証操作を呼び出すことができます。この操作には、ユーザー名やパスワードなど、ユーザーに関する情報が必要です。ユーザーが認証しない場合、例外がスローされます。
+サービスクライアントを作成すると、認証操作を呼び出すことができます。この操作には、ユーザー名やパスワードなど、ユーザーに関する情報が必要です。 ユーザーが認証しない場合、例外がスローされます。
 
 **認証コンテキストの取得**
 
@@ -803,7 +799,7 @@ Authentication Manager Service API（Java）を使用してユーザーを認証
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-usermanager-client.jar などのクライアント JAR ファイルを含めます。
 
 1. AuthenticationManagerServices クライアントを作成します。
 
@@ -811,18 +807,18 @@ Authentication Manager Service API（Java）を使用してユーザーを認証
 
 1. 認証操作を呼び出します。
 
-   `AuthenticationManagerServiceClient` オブジェクトの `authenticate` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `AuthenticationManagerServiceClient` オブジェクトの `authenticate` メソッドを使用して、次の値を渡します。
 
-   * ユーザーの名前を含む `java.lang.String` オブジェクト。
-   * ユーザーのパスワードを含むバイト配列（`byte[]` オブジェクト）。`java.lang.String` オブジェクトの `getBytes` メソッドを呼び出すと、`byte[]` オブジェクトを取得できます。
+   * A `java.lang.String` ユーザーの名前を格納するオブジェクト。
+   * バイト配列 (a `byte[]` オブジェクト ) には、ユーザーのパスワードが含まれます。 以下を実行すると、 `byte[]` を呼び出すことによって、オブジェクトを `java.lang.String` オブジェクトの `getBytes` メソッド。
 
    認証メソッドが、認証済みユーザーに関する情報を含む `AuthResult` オブジェクトを返します。
 
 1. 認証コンテキストを取得します。
 
-   `ServiceClientFactory` オブジェクトの `getContext` メソッドを呼び出すことで、`Context` オブジェクトが返されます。
+   を呼び出す `ServiceClientFactory` オブジェクトの `getContext` メソッドを使用して、 `Context` オブジェクト。
 
-   次に、`Context` オブジェクトの `initPrincipal` メソッドを呼び出して、`AuthResult` を渡します。
+   次に、 `Context` オブジェクトの `initPrincipal` メソッドを使用して、 `AuthResult`.
 
 ### Web サービス API を使用したユーザーの認証 {#authenticate-a-user-using-the-web-service-api}
 
@@ -835,17 +831,17 @@ Authentication Manager Service API（web サービス）を使用してユーザ
 
 1. AuthenticationManagerService クライアントを作成します。
 
-   プロキシクラスのコントラクターを使用して、`AuthenticationManagerServiceService` オブジェクトを作成します。
+   の作成 `AuthenticationManagerServiceService` オブジェクトを指定します。
 
 1. 認証操作を呼び出します。
 
-   `AuthenticationManagerServiceClient` オブジェクトの `authenticate` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `AuthenticationManagerServiceClient` オブジェクトの `authenticate` メソッドを使用して、次の値を渡します。
 
-   * ユーザーの名前を含む `string` オブジェクト
-   * ユーザーのパスワードを含むバイト配列（`byte[]` オブジェクト）。以下の例に示すロジックを使用して、パスワードを含む `string` オブジェクトを `byte[]` 配列に変換することによって、`byte[]` オブジェクトを取得できます。
-   * 戻り値は `AuthResult` オブジェクトです。このオブジェクトは、ユーザーに関する情報を取得するために使用できます。以下の例では、ユーザーの情報は、最初に `AuthResult` オブジェクトの `authenticatedUser` フィールドを取得し、続いてその結果の `User` オブジェクトの `canonicalName` フィールドおよび `domainName` フィールドを取得することによって取得されます。
+   * A `string` ユーザーの名前を含むオブジェクト
+   * バイト配列 (a `byte[]` オブジェクト ) には、ユーザーのパスワードが含まれます。 以下の例に示すロジックを使用して、パスワードを含む `string` オブジェクトを `byte[]` 配列に変換することによって、`byte[]` オブジェクトを取得できます。
+   * 戻り値は `AuthResult` オブジェクトです。このオブジェクトは、ユーザーに関する情報を取得するために使用できます。以下の例では、ユーザーの情報は、最初に `AuthResult` オブジェクトの `authenticatedUser` フィールドを開き、その結果を取得する `User` オブジェクトの `canonicalName` および `domainName` フィールド。
 
-**関連項目**
+**関連トピック**
 
 [MTOM を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
@@ -853,7 +849,7 @@ Authentication Manager Service API（web サービス）を使用してユーザ
 
 ## プログラムによるユーザーの同期 {#programmatically-synchronizing-users}
 
-User Management API を使用して、プログラムによってユーザーを同期できます。ユーザーを同期する際、ユーザーリポジトリ内にあるユーザーデータで AEM Forms を更新します。例えば、新しいユーザーをユーザーリポジトリに追加するとします。同期操作を実行すると、新しいユーザーが AEM forms ユーザーになります。また、ユーザーリポジトリ内のユーザーは AEM Forms から削除されます。
+User Management API を使用して、プログラムによってユーザーを同期できます。ユーザーを同期する際に、ユーザーリポジトリ内のユーザーデータでAEM Formsを更新しようとしています。 例えば、新しいユーザーをユーザーリポジトリに追加するとします。同期操作を実行すると、新しいユーザーが AEM forms ユーザーになります。また、ユーザーリポジトリ内のユーザーは AEM Forms から削除されます。
 
 次の図は、AEM Forms がユーザーリポジトリと同期する様子を示しています。
 
@@ -912,7 +908,7 @@ User Management API を使用して同期操作を実行する前に、ユーザ
 
 **同期処理の呼び出し**
 
-1 つ以上のエンタープライズドメインを指定した後、同期処理を実行できます。この処理の実行に要する時間は、ユーザーリポジトリ内にあるユーザーレコードの数によって異なります。
+1 つ以上のエンタープライズドメインを指定した後、同期処理を実行できます。この操作の実行に要する時間は、ユーザーリポジトリ内のユーザーレコードの数によって異なります。
 
 **同期処理が完了したかどうかを確認する**
 
@@ -942,15 +938,15 @@ User Management API（Java）を使用してユーザーを同期します。
 
 1. エンタープライズドメインを指定します。
 
-   * `UserManagerUtilServiceClient` オブジェクトの `scheduleSynchronization` メソッドを呼び出して、ユーザー同期処理を開始します。
+   * を呼び出す `UserManagerUtilServiceClient` オブジェクトの `scheduleSynchronization` メソッドを使用して、ユーザー同期操作を開始します。
    * `HashSet` コンストラクターを使用して `java.util.Set` インスタンスを作成します。`String` をデータタイプとして設定したことを確認してください。この `Java.util.Set` インスタンスは、同期操作が適用されるドメイン名を格納します。
-   * 追加するドメイン名ごとに、`java.util.Set` オブジェクトの add メソッドを参照し、ドメイン名を渡します。
+   * 追加するドメイン名ごとに、 `java.util.Set` オブジェクトの add メソッドを参照し、ドメイン名を渡します。
 
 1. 同期操作を呼び出します。
 
-   `ServiceClientFactory` オブジェクトの `getContext` メソッドを呼び出し、`Context` オブジェクトを返します。
+   を呼び出す `ServiceClientFactory` オブジェクトの `getContext` メソッドを使用して、 `Context` オブジェクト。
 
-   `Context` オブジェクトの `initPrincipal` メソッドを呼び出し、`AuthResult` を渡します。
+   次に、 `Context` オブジェクトの `initPrincipal` メソッドを使用して、 `AuthResult`.
 
 **関連トピック**
 

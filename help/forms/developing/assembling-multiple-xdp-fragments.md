@@ -13,10 +13,10 @@ discoiquuid: c4706632-02e5-4510-ad9c-4f732d5fbdad
 docset: aem65
 role: Developer
 exl-id: 54d98c69-2b2e-46cb-9f6a-7e9bdbe5c378
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1887'
-ht-degree: 100%
+source-wordcount: '1883'
+ht-degree: 96%
 
 ---
 
@@ -74,9 +74,9 @@ DDX ドキュメントには、結果の名前を指定する XDP `result` タ�
  }
 ```
 
-`XDP source` タグは、完全な XDP ドキュメント（XDP フラグメントを追加するためのコンテナとして使用したり、順番に追加される多数のドキュメントの 1 つとして使用したりできる）を表す XDP ファイルを指定します。この場合、XDP ドキュメントはコンテナ（*複数の XDP フラグメントのアセンブル*&#x200B;に示した最初の図）としてのみ使用されます。つまり、他の XDP ファイルは XDP コンテナ内に配置されます。
+The `XDP source` タグは、XDP フラグメントを追加するためのコンテナとして、または順番に追加される複数のドキュメントの 1 つとして使用できる完全な XDP ドキュメントを表す XDP ファイルを指定します。 この場合、XDP ドキュメントはコンテナ（*複数の XDP フラグメントのアセンブル*&#x200B;に示した最初の図）としてのみ使用されます。つまり、他の XDP ファイルは XDP コンテナ内に配置されます。
 
-サブフォームごとに、 `XDPContent` 要素（この要素はオプションです）を追加できます。上記の例では、`subPatientContact`、`subPatientPhysical`、`subPatientHealth` の 3 つのサブフォームがあることに注意してください。両方の `subPatientPhysical` サブフォームおよび `subPatientHealth` サブフォームは、同じ XDP ファイル（tuc018_patient.xdp）に存在します。fragment 要素は、Designer で定義されたサブフォームの名前を指定します。
+サブフォームごとに、 `XDPContent` 要素（この要素はオプションです）を追加できます。上記の例では、`subPatientContact`、`subPatientPhysical`、`subPatientHealth` の 3 つのサブフォームがあることに注意してください。両方の `subPatientPhysical` サブフォームおよび `subPatientHealth` サブフォームは同じ XDP ファイル tuc018_patient.xdp に含まれます。 fragment 要素は、Designer で定義されたサブフォームの名前を指定します。
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
  <XDPContent insertionPoint="ddx_fragment" source="tuc018_contact.xdp" fragment="subPatientContact" required="false"/>
 ```
 
-*subPatientContact* という名前のサブフォームは、 *tuc018_contact.xdp* という名前の XDP ファイル内にある必要があります。
+次の名前のサブフォーム： *subPatientContact* は、という名前の XDP ファイル内にある必要があります *tuc018_contact.xdp*.
 
 **実行時オプションの設定**
 

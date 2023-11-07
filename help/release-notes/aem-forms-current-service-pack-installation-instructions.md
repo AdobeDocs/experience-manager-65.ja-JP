@@ -2,10 +2,10 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 692193326e0623036ee3834985cfa9dc8d7076d9
-workflow-type: ht
-source-wordcount: '1733'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '1732'
+ht-degree: 99%
 
 ---
 
@@ -84,7 +84,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 1. **[Windows のみ]：** 次のいずれかのステップを実行します。
 
-   * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
+   * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。**にある** ConfigurationManager.bat **ファイルを使用して** Configuration Manager`[aem-forms root]\configurationManager\bin` を実行します。
 
    * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルおよび [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルを置き換えてから、**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行します。
 
@@ -150,7 +150,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
   >[!NOTE]
   >
-  >Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+  Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
   **インストールの検証**
 
@@ -182,7 +182,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 >[!NOTE]
 >
->リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
+リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
 
 +++
 
@@ -210,7 +210,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
   >[!NOTE]
   >
-  >Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+  Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
   **インストールの検証**
 

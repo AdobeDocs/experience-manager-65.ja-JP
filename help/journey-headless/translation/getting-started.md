@@ -2,10 +2,10 @@
 title: AEM ヘッドレス翻訳の基本を学ぶ
 description: ヘッドレスコンテンツを整理する方法と AEM の翻訳ツールの仕組みについて説明します。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 95%
+source-wordcount: '1490'
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ AEM ヘッドレス翻訳ジャーニーの以前のドキュメント（[ヘッ
 
 ## 要件と前提条件 {#requirements-prerequisites}
 
-ヘッドレス AEM コンテンツの翻訳を開始するには、いくつかの要件があります。
+ヘッドレスAEMコンテンツの翻訳を開始する前に、いくつかの要件があります。
 
 ### 知識 {#knowledge}
 
@@ -44,7 +44,7 @@ AEM ヘッドレス翻訳ジャーニーの以前のドキュメント（[ヘッ
 
 >[!TIP]
 >
->AEM のような大規模 CMS を使い慣れていない場合は、先に進む前に[基本操作](/help/sites-authoring/basic-handling.md)のドキュメントを確認することをお勧めします。「基本操作」ドキュメントはこのジャーニーの一部ではないので、読み終えたら、このページに戻ってください。
+>AEM のような大規模 CMS を使い慣れていない場合は、先に進む前に[基本操作](/help/sites-authoring/basic-handling.md)のドキュメントを確認することをお勧めします。基本操作に関するドキュメントはジャーニーに含まれていないので、完了したらこのページに戻ります。
 
 ### ツール {#tools}
 

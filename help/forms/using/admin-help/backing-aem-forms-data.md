@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1533'
 ht-degree: 10%
 
 ---
@@ -40,12 +40,12 @@ GDS の場所をバックアップする頻度は、AEM Formsの使用方法と�
 AEM Formsは、セーフバックアップ（スナップショット）モードまたはローリングバックアップ（継続的な有効範囲）モードのどちらかに設定する必要があります。 AEM Formsを設定していずれかのバックアップモードに入る前に、次の点を確認します。
 
 * システムのバージョンを確認し、最後の完全なシステムイメージバックアップの実行後に適用されたパッチまたは更新を記録します。
-* ローリングモードまたはスナップショットモードのバックアップを使用する場合は、データベースのホットバックアップを実行できるように、データベースに正しいログ設定が設定されていることを確認します。 ( [AEM Formsデータベース](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)
+* ローリングモードまたはスナップショットモードのバックアップを使用する場合は、データベースのホットバックアップを実行できるように、データベースに正しいログ設定が設定されていることを確認します。 ( 詳しくは、 [AEM Formsデータベース](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)
 
 これらに加えて、バックアップ/復元プロセスに関する次のガイドラインを確認します。
 
-* 使用可能なオペレーティングシステムまたはサードパーティのバックアップユーティリティを使用して、GDS ディレクトリをバックアップします。 ( [GDS の場所](/help/forms/using/admin-help/files-back-recover.md#gds-location).)
-* （オプション）使用可能なオペレーティングシステムまたはサードパーティのバックアップとユーティリティを使用して、コンテンツ保存場所のルートディレクトリをバックアップします。 ( [コンテンツ保存場所のルートの場所（スタンドアロン環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment) または [コンテンツ保存場所のルートの場所（クラスター環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment).)
+* 使用可能なオペレーティングシステムまたはサードパーティのバックアップユーティリティを使用して、GDS ディレクトリをバックアップします。 ( 詳しくは、 [GDS の場所](/help/forms/using/admin-help/files-back-recover.md#gds-location).)
+* （オプション）使用可能なオペレーティングシステムまたはサードパーティのバックアップとユーティリティを使用して、コンテンツ保存場所のルートディレクトリをバックアップします。 ( 詳しくは、 [コンテンツ保存場所のルートの場所（スタンドアロン環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment) または [コンテンツ保存場所のルートの場所（クラスター環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment).)
 * オーサーインスタンスとパブリッシュインスタンス（ crx -repository バックアップ）をバックアップします。
 
   Correspondence Management Solution 環境をバックアップするには、オーサーインスタンスとパブリッシュインスタンスで手順を実行します。詳しくは、 [バックアップと復元](/help/sites-administering/backup-and-restore.md).
@@ -62,11 +62,11 @@ AEM Formsは、セーフバックアップ（スナップショット）モー�
 詳細については、使用するデータベースに適したナレッジベースを参照してください。
 <!-- The four URLs below are all 404s; checked July 19, 2023 -->
 * [AEM Formsのoracleバックアップと回復](https://www.adobe.com/go/kb403624)
-* [AEM Formsの MySQL バックアップと回復](https://www.adobe.com/go/kb403625)
-* [AEM Forms向けMicrosoft® SQL Server バックアップと回復](https://www.adobe.com/go/kb403623)
+* [AEM Forms向け MySQL バックアップと回復](https://www.adobe.com/go/kb403625)
+* [AEM Forms向けMicrosoft® SQL Server のバックアップと回復](https://www.adobe.com/go/kb403623)
 * [AEM Forms向け DB2®バックアップと回復](https://www.adobe.com/go/kb403626)
 
-これらの記事は、データのバックアップと回復に関する基本的なデータベース機能のガイダンスを提供します。 特定のベンダーのデータベースバックアップ/リカバリ機能に関する包括的な技術ガイドとしての意図はありません。 AEM Formsアプリケーションデータの信頼性の高いデータベースバックアップ戦略を作成するために必要なコマンドの概要を説明します。
+これらの記事は、データのバックアップと回復に関する基本的なデータベース機能に関するガイダンスを提供します。 特定のベンダーのデータベースバックアップ/リカバリ機能に関する包括的な技術ガイドとしての意図はありません。 AEM Formsアプリケーションデータの信頼性の高いデータベースバックアップ戦略を作成するために必要なコマンドの概要を説明します。
 
 >[!NOTE]
 >
@@ -74,7 +74,7 @@ AEM Formsは、セーフバックアップ（スナップショット）モー�
 
 ### バックアップモードの開始 {#entering-the-backup-modes}
 
-管理コンソール、LCBackupMode コマンド、またはAEM Formsインストールで使用可能な API を使用して、バックアップモードを開始および終了できます。 ローリングバックアップ（継続的なバックアップ）の場合、管理コンソールオプションは使用できません。コマンドラインオプションまたは API を使用する必要があります。 <!-- Fix broken link For information about using the API to enter and leave backup modes, see AEM Forms API Reference on Help and Tutorials page. -->
+管理コンソール、LCBackupMode コマンド、またはAEM Formsインストールで使用可能な API を使用して、バックアップモードを開始および終了できます。 ローリングバックアップ（継続的な対象）の場合、管理コンソールオプションは使用できません。コマンドラインオプションまたは API を使用する必要があります。 <!-- Fix broken link For information about using the API to enter and leave backup modes, see AEM Forms API Reference on Help and Tutorials page. -->
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ AEM Formsは、セーフバックアップ（スナップショット）モー�
 
 **コマンドラインオプションを使用したセーフバックアップモードの開始**
 
-コマンドラインインターフェイスを使用できます `LCBackupMode` AEM Formsをセーフバックアップモードにするスクリプト
+コマンドラインインターフェイスを使用できます。 `LCBackupMode` AEM Formsをセーフバックアップモードにするためのスクリプト。
 
 1. ADOBE_LIVECYCLE を設定し、アプリケーションサーバーを起動します。
 1. `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline` フォルダーに移動します。
@@ -137,7 +137,7 @@ AEM Formsは、セーフバックアップ（スナップショット）モー�
 
    >[!NOTE]
    >
-   >JAVA_HOME ディレクトリは、アプリケーション・サーバーの適切な章 ( [AEM Formsのインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)*.*
+   >JAVA_HOME ディレクトリを、アプリケーション・サーバーの適切な章 ( [AEM Formsのインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)*.*
 
 1. 次のコマンドを 1 行で実行します。
 

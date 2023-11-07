@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
-workflow-type: ht
-source-wordcount: '708'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '707'
+ht-degree: 98%
 
 ---
 
@@ -82,7 +82,7 @@ AEM 6 で最も重要な変更の 1 つは、リポジトリレベルでのイ�
    * `changesSize`：Mongo で差分出力のキャッシュに使用される capped コレクションのサイズ（MB 単位）です。デフォルトは 256 です。
    * `customBlobStore`：カスタムデータストアが使用されることを示すブール値です。デフォルトは false です。
 
-1. 使用するデータストアの PID を持つ設定ファイルを作成し、そのファイルを編集して設定オプションを指定します。詳しくは、[ノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md)を参照してください。
+1. 使用するデータストアの PID を持つ設定ファイルを作成し、そのファイルを編集して設定オプションを指定します。詳しくは、 [ノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md).
 
 1. 次のコマンドを実行して、AEM 6 jar を MongoDB ストレージバックエンドと共に起動します。
 
@@ -120,9 +120,8 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >次のリソースを参照してください。
 >
 >* Red Hat® Linux® 上の Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
->* Linux® のチューニングのヒントについて詳しくは、こちらの[記事](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)を参照してください。
+* Linux® のチューニングのヒントについて詳しくは、こちらの[記事](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)を参照してください。
 >
-
 
 ## リポジトリのメンテナンス {#maintaining-the-repository}
 

@@ -2,10 +2,10 @@
 title: カスタム HTTP ヘッダー
 description: Adobe Experience Manager Commerce でカスタム HTTP ヘッダーを設定する方法を説明します。
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 95%
+source-wordcount: '273'
+ht-degree: 82%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 95%
 
 HTTP ヘッダーの値は、プロジェクトのクラウドサービス設定ページで設定できます。
 
-1. ツール／クラウドサービス／CIF 設定のクラウドサービス設定ページに移動します。
-1. 既存の設定を開くか、新しい設定を作成します。
+1. ツール/Cloud Service/CIF設定で、Cloud Services設定ページに移動します。
+1. 既存の設定を開くか、作成します。
 1. 「詳細」タブに移動し、「カスタム HTTP ヘッダー」マルチフィールドを探します。定義済みのヘッダーを選択し、それらに値を割り当てることができます。
 
-上記のクラウドサービス設定を使用するコンポーネントは、すべての GraphQL リクエストでこれらの HTTP ヘッダーを送信します。
+上記のクラウドサービス設定を使用するコンポーネントは、GraphQLリクエストのたびにこれらの HTTP ヘッダーを送信します。
 
 ## 制限 {#restrictions}
 

@@ -1,20 +1,18 @@
 ---
 title: カルーセルバナー
 description: Dynamic Media のカルーセルバナーの操作方法を説明します
-uuid: 73684a08-d84d-4665-ab89-3a1bf88ac5dd
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '4726'
-ht-degree: 92%
+source-wordcount: '4722'
+ht-degree: 93%
 
 ---
 
@@ -44,7 +42,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 >[!NOTE]
 >
->管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合は、 **[!UICONTROL dam-users]** グループ化します。
+>管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
 
 ## クイックスタート：カルーセルバナー {#quick-start-carousel-banners}
 
@@ -179,7 +177,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
 
 ## 画像バナーのアップロード {#uploading-image-banners}
 
-使用する画像を既にアップロードしている場合は、次の手順（[カルーセルセットの作成](#creating-carousel-sets)）に進んでください。カルーセルで使用される画像をアップロードする前に Dynamic Media を有効にしておく必要があることに注意してください。
+使用する画像を既にアップロードしている場合は、次の手順（[カルーセルセットの作成](#creating-carousel-sets)）に進んでください。カルーセルで使用される画像は、Dynamic Mediaを有効にした後にアップロードする必要があります。
 
 画像バナーをアップロードするには、[アセットのアップロード](/help/assets/manage-assets.md)を参照してください。
 
@@ -187,7 +185,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
 
 >[!NOTE]
 >
->管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合は、 **[!UICONTROL dam-users]** グループ化します。
+>管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
 
 **カルーセルセットを作成するには：**
 
@@ -337,7 +335,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
 
 >[!NOTE]
 >
-管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合は、 **[!UICONTROL dam-users]** グループ化します。
+管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
 
 カルーセルセットには、次のような様々な編集タスクを実行できます。
 

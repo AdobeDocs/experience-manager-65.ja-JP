@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: d370d772-ef4d-4f38-826c-e90d07735822
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1274'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 >
 >このドキュメントは、 [Adobe Experience Manager(AEM)Mobile の概要](/help/mobile/getting-started-aem-mobile.md) ガイド (AEM Mobileリファレンスの出発点として推奨 )。
 
-コンテンツ作成者がモバイルアプリ用のターゲットコンテンツの生成を開始できるようにするには、次の手順をまとめる必要があります。ユーザーおよびグループに対する適切な権限のセットの取得、クラウドサービスの作成、アクティビティのアプリケーションの設定、最後にコンテンツの生成がおこなわれます。
+コンテンツ作成者がモバイルアプリ用のターゲットコンテンツの生成を開始する前に、いくつかの手順を組み合わせる必要があります。ユーザーとグループに対する適切な権限のセットの取得、クラウドサービスの作成、アクティビティ用のアプリケーションの設定、最後にコンテンツの生成です。
 
 今後の想定は、 [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) は、AEM Mobile Dashboard を通じて正常にデプロイされ、アクセスできるようになりました。
 
@@ -35,11 +35,11 @@ ht-degree: 2%
 
 ## Cloud Services {#cloud-services}
 
-モバイルアプリケーションでターゲットコンテンツが機能するようにするには、次の 2 つのサービスを設定する必要があります。Adobe Target Service と Mobile ServicesAdobe。 Adobe Targetサービスは、クライアントリクエストを処理し、パーソナライズされたコンテンツを返すためのエンジンを提供します。 AdobeMobile Services サービスは、AMS Cordova プラグインで使用される ADBMobileConfig.json ファイルを介して、Adobe サービスとモバイルアプリケーション間の接続を提供します。 AEM Mobile Dashboard から、2 つのサービスを追加してアプリケーションを設定できます。
+モバイルアプリケーションでターゲットコンテンツを機能させるには、Adobe TargetサービスとAdobeMobile Services サービスの 2 つのサービスを設定する必要があります。 Adobe Targetサービスは、クライアントリクエストを処理し、パーソナライズされたコンテンツを返すためのエンジンを提供します。 AdobeMobile Services サービスは、AMS Cordova プラグインで使用される ADBMobileConfig.json ファイルを介して、Adobe サービスとモバイルアプリケーション間の接続を提供します。 AEM Mobile Dashboard から、2 つのサービスを追加してアプリケーションを設定できます。
 
 ## Adobe Target Cloud Service {#adobe-target-cloud-service}
 
-AEM Mobileダッシュボードで「Cloud Servicesを管理」を探し、「+」ボタンをクリックします。
+AEM Mobileダッシュボードで「Cloud Serviceを管理」を探し、「+」ボタンをクリックします。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -47,9 +47,9 @@ Cloud Serviceの追加ウィザードで、「Adobe Target」クラウドサー�
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-「 Select a Configuration 」ドロップダウンで、設定を作成するか、既存の設定から選択できます。 設定を作成するには、ドロップダウンから「設定を作成」を選択します。 Target 設定のタイトルを入力します。 Target アカウントに関連付けられているクライアントコード、電子メール、およびパスワードを入力します。 これらのフィールドの値が不明な場合は、Adobe Targetサポートにお問い合わせください。 「検証」ボタンをクリックして、資格情報を検証します。 検証が完了したら、「送信」ボタンをクリックしてクラウドサービスを作成します。
+「 Select a Configuration 」ドロップダウンで、設定を作成するか、既存の設定から選択できます。 設定を作成するには、ドロップダウンから「設定を作成」を選択します。 Target 設定のタイトルを入力します。 Target アカウントに関連付けられているクライアントコード、電子メール、およびパスワードを入力します。 これらのフィールドの値が不明な場合は、Adobe Targetサポートにお問い合わせください。 「検証」ボタンをクリックして、認証情報を検証します。 検証が完了したら、「送信」ボタンをクリックしてクラウドサービスを作成します。
 
-作成されたクラウドサービスは、ウィザードによってモバイルアプリケーションに自動的に関連付けられます。 cq:cloudserviceconfigs プロパティ値は、 apps group ノードの jcr:content ノードで設定されます。 ハイブリッドアプリのサンプルでは、自動生成されたフレームワークノードを指す値が/etc/cloudservices/testandtarget/adobe-target—aem-apps/framework にある/content/mobileapps/hybrid-reference-app/jcr:content に設定されます。 フレームワークノードには、デフォルトで設定される性別と年齢の 2 つのプロパティがあります。 フレームワークはAEMのプレビューでのみ使用され、デバイスには影響しません。
+作成されたクラウドサービスは、ウィザードによってモバイルアプリケーションに自動的に関連付けられます。 cq:cloudserviceconfigs プロパティ値は、 apps group ノードの jcr:content ノードに対して設定されます。 ハイブリッドアプリのサンプルでは、自動生成されたフレームワークノードを指す値が/etc/cloudservices/testandtarget/adobe-target—aem-apps/framework にある/content/mobileapps/hybrid-reference-app/jcr:content に設定されます。 フレームワークノードには、デフォルトで設定される性別と年齢の 2 つのプロパティがあります。 フレームワークはAEMのプレビューでのみ使用され、デバイスには影響しません。
 
 ウィザードが完了すると、Cloud Serviceを管理タイルに Target Cloud Service が表示されますが、AdobeMobile Services アカウントが見つからないことに関する警告が表示されます。
 
@@ -61,7 +61,7 @@ Adobeの Mobile Services(AMS) アカウントをアプリケーションにリ�
 
 ### クライアントコード {#client-code}
 
-AMS サービスへのログインの訪問 [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)、モバイルアプリケーションを選択し、「設定」をクリックします。 「 SDK Target オプション」フィールドを探し、フィールドにクライアントコードを配置して、「保存」をクリックします。
+AMS サービスへのログインには、以下の手順に従ってください。 [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)、モバイルアプリケーションを選択し、「設定」をクリックします。 「 SDK Target オプション」フィールドを探し、フィールドにクライアントコードを配置して、「保存」をクリックします。
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
@@ -69,7 +69,7 @@ AMS サービスへのログインの訪問 [https://mobilemarketing.adobe.com](
 
 ### AdobeMobile Service Could Service {#adobe-mobile-service-could-service}
 
-AMS が設定されたので、Mobile Dashboard でモバイルアプリケーションをAdobeに関連付けます。 AEM Mobileダッシュボードで「Cloud Servicesを管理」を探し、「+」ボタンをクリックします。
+AMS が設定されたので、Mobile Dashboard でモバイルアプリケーションをAdobeに関連付けます。 AEM Mobileダッシュボードで「Cloud Serviceを管理」を探し、「+」ボタンをクリックします。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -77,15 +77,15 @@ AMS が設定されたので、Mobile Dashboard でモバイルアプリケー�
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-作成または選択ウィザードの手順で、「 Mobile Service 」ドロップダウンを選択し、「設定を作成」エントリを選択します。 役職、会社、ユーザー名、パスワードを入力し、適切なデータセンターを選択します。 これらの値が不明な場合は、AdobeMobile Service 管理者に問い合わせて取得してください。 すべてのフィールドに入力したら、 **検証**. 検証プロセスが AMS に移動し、アカウントの資格情報が検証されます。検証が成功すると、モバイルアプリケーションのリストが表示され、関連するモバイルアプリケーションをドロップダウンから選択します。 「送信」ボタンをクリックして、ウィザードを完了します。 このプロセスでは、設定データと、アプリケーションに関連する分析を取得するのに少し時間がかかる場合があります。 処理が完了したら、「 **完了** モーダルから「モバイルAdobe」に戻ります。
+作成または選択ウィザードの手順で、「 Mobile Service 」ドロップダウンを選択し、「設定を作成」エントリを選択します。 役職、会社、ユーザー名、パスワードを入力し、適切なデータセンターを選択します。 これらの値が不明な場合は、AdobeMobile Service 管理者に問い合わせて取得してください。 すべてのフィールドに入力したら、 **検証**. 検証プロセスが AMS に移動し、アカウントの資格情報が検証されます。検証が成功すると、モバイルアプリケーションのリストが表示され、ドロップダウンから関連するモバイルアプリケーションを選択します。 「送信」ボタンをクリックして、ウィザードを完了します。 このプロセスでは、設定データと、アプリケーションに関連する分析を取得するのに少し時間がかかる場合があります。 処理が完了したら、「 **完了** モーダルから「モバイルAdobe」に戻ります。
 
-モバイルダッシュボードに戻ると、Cloud Servicesを管理タイルに AMS クラウドサービスが含まれます。 また、指標を分析タイルには、ライフサイクルレポートが表示されます。
+モバイルダッシュボードに戻ると、Cloud Serviceを管理タイルに AMS クラウドサービスが含まれます。 また、指標を分析タイルには、ライフサイクルレポートが表示されます。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
 ## Target コンテンツ同期ハンドラー {#target-content-sync-handlers}
 
-ユーザーのデバイスにコンテンツを配信するために、AEMコンテンツ作成者が作成したオファーをレンダリングすることで、コンテンツが生成されます。 ターゲットオファーのレンダリングを処理するために、オファーを処理する新しいコンテンツ同期ハンドラーが追加されました。 Hybrid Reference Application をサンプルとして使用すると、en（英語）コンテンツパッケージには、 [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) ハンドラ 次の手順は、オファーをデバイスにレンダリングする際に非常に重要です。 mobileappoffers ハンドラーには、アプリケーションで使用されるパーソナライゼーションアクティビティへのパスを識別する path プロパティがあります。
+ユーザーのデバイスにコンテンツを配信するために、AEMコンテンツ作成者が作成したオファーをレンダリングすることで、コンテンツが生成されます。 ターゲットオファーのレンダリングを処理するために、オファーを処理する新しいコンテンツ同期ハンドラーが追加されました。 Hybrid Reference Application をサンプルとして使用すると、en（英語）コンテンツパッケージには ContentSyncConfig が含まれ、 [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) ハンドラー 次の手順は、オファーをデバイスにレンダリングする際に非常に重要です。 mobileappoffers ハンドラーには、アプリケーションで使用されるパーソナライゼーションアクティビティへのパスを識別する path プロパティがあります。
 
 例えば、 */content/campaigns/hybridref*、このパスをコピーし、値として *パス* mobileappoffers ハンドラーのプロパティ。
 
@@ -95,7 +95,7 @@ mobileappoffers ハンドラーの path プロパティにアクティビティ�
 
 ### レンダリングモード {#render-mode}
 
-mobileappoffers ハンドラーの設定は、公開設定と開発設定で異なります。 パブリッシュ設定の場合、という名前のプロパティがあります。 *renderMode* 値を *公開* cq:ContentSyncConfig ノードで設定します。 mobileappoffers ハンドラーは renderMode を参照し、publish に設定されている場合は、作成される mbox ID を編集します。 デフォルトでは、AEMで作成された mbox には、mbox ID に —author 値が追加されます。 これは、アクティビティが公開されておらず、オファーの解決に未公開のキャンペーンを使用する必要があることを示します。
+mobileappoffers ハンドラーの設定は、公開設定と開発設定で異なります。 パブリッシュ設定の場合、という名前のプロパティがあります。 *renderMode* 値を持つ *公開* cq:ContentSyncConfig ノードで設定します。 mobileappoffers ハンドラーは renderMode を参照し、publish に設定されている場合は、作成される mbox ID を編集します。 デフォルトでは、AEMで作成された mbox には、mbox ID に —author 値が追加されます。 これは、アクティビティが公開されておらず、オファーの解決に未公開のキャンペーンを使用する必要があることを示します。
 
 コンテンツがAdobeのモバイルダッシュボードでステージングされる場合、ステージング済みコンテンツは、実稼動準備済みコンテンツと見なされ、開発用以外のコンテンツ同期設定でレンダリングされます。 この方法でレンダリングすると、—author がすべての mbox ID から削除され、公開済みのアクティビティが Target サーバーで使用できるようになります。 ステージングされたコンテンツをテストする前に、アクティビティが公開されていることを確認します。
 

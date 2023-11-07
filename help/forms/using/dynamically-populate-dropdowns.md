@@ -1,7 +1,7 @@
 ---
 title: ドロップダウンリストの動的な自動入力
 seo-title: Dynamically populating drop-down lists
-description: あるロジックに基づいてドロップダウンリストを動的に自動入力する手順
+description: あるロジックに基づいてドロップダウンリストを動的に埋め込む手順
 seo-description: Procedure to dynamically populate drop-down lists based on some logic
 uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
@@ -10,10 +10,10 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '332'
-ht-degree: 100%
+ht-degree: 49%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ## 前提条件 {#prerequisites}
 
-* [OSGI バンドルの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)
+* [OSGi バンドルの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)
 * [AEM コンポーネントの開発](/help/sites-developing/components.md)
 * [アダプティブフオームの作成](../../forms/using/creating-adaptive-form.md)
 * [アダプティブフォームのオーサリング](../../forms/using/introduction-forms-authoring.md)
@@ -32,10 +32,10 @@ ht-degree: 100%
 
 1. 次のモジュールでプロジェクトを作成します。
 
-   * ドロップダウンに自動入力するロジックを含むバンドル。この例ではサーブレットです。
-   * コンテンツ。.jar ファイルを埋め込んだもので、ドロップダウンリソースを持つもの。サーブレットはこのリソースにポイントします。
+   * ドロップダウンに入力するロジックが含まれるバンドル。この場合はサーブレットです。
+   * コンテンツ。.jar ファイルを埋め込んで、ドロップダウンリソースを持ちます。 サーブレットは、このリソースを指します。
 
-1. リクエストパラメーター「国」に基づいてサーブレットを作成します。これは、その国にある州名を含む配列を返します。
+1. リクエストパラメーター Country に基づいてサーブレットを作成し、国内の州の名前を含む配列を返します。
 
    ```java
    @Component(metatype = false)
@@ -150,10 +150,10 @@ ht-degree: 100%
 
    ![ドロップダウンノードの作成](assets/dropdown-node.png)
 
-1. コンテンツノードをパッケージ化し、その .jar ファイルを特定の場所（例えば /apps/myfolder/demo/install/）に埋め込みます。同じファイルをサーバーにデプロイします。
-1. アダプティブフォームを作成し、2 つのドロップダウンリスト（国と州）をそれに追加します。国リストは、国も名前を含むことができます。州リストは、最初のリストで選択した国に対する州の名前を動的に自動入力できます。
+1. コンテンツノードをパッケージ化し、特定の場所（例：/apps/myfolder/demo/install/）に.jar ファイルを埋め込みます。 同じファイルをサーバーにデプロイします。
+1. アダプティブフォームを作成し、国と州の 2 つのドロップダウンリストを追加します。 国リストには、国の名前を含めることができます。 州リストは、最初のリストで選択した国の州名を動的に入力できます。
 
-   国リストに表示する国の名前を追加します。州リストに、それを国リスト内の国の名前に基づいて自動入力するスクリプトを追加します。
+   国リストに表示する国の名前を追加します。 州リストに、国リスト内の国の名前に基づいて入力するスクリプトを追加します。
 
    ![国名の追加](assets/country-dropdown.png)![州名を入力するスクリプトの追加](assets/state-dropdown.png)![「国」と「州」ドロップダウンリストを一緒に](assets/2dropdowns.png)
 

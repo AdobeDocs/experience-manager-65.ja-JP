@@ -10,10 +10,10 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '2802'
-ht-degree: 89%
+ht-degree: 88%
 
 ---
 
@@ -279,7 +279,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 作成したノードの「プロパティ」タブを開きます。例えば、`textboxpatterns` の「プロパティ」タブを開きます。このノードに `guideComponentType` プロパティを追加して、その値を *fd/af/components/formatter/guideTextBox* に設定します。
 
 1. このプロパティの値は、パターンを定義するフィールドに応じて変わります。数値フィールドの場合、`guideComponentType` プロパティの値は、*fd/af/components/formatter/guideNumericBox* です。日付選択フィールドの値は、*fd/af/components/formatter/guideDatepicker* す。
-1. `textboxpatterns` ノードにプロパティを割り当てることで、カスタムパターンを追加できます。名前の付いたプロパティ（例えば `pattern1`）を追加して、追加するパターンにその値を設定します。例えば、値が Fax=text{99-999-9999999} のプロパティ `pattern1` を追加します。パターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
+1. `textboxpatterns` ノードにプロパティを割り当てることで、カスタムパターンを追加できます。プロパティに名前 ( 例： `pattern1`) をクリックし、追加するパターンの値をに設定します。 例えば、値が Fax=text{99-999-9999999} のプロパティ `pattern1` を追加します。パターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
 
    ![CrxDe でのフィールドのカスタムパターンの作成](assets/creating-custom-patterns.png)
 

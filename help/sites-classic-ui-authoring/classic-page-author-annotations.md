@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 46%
+source-wordcount: '761'
+ht-degree: 42%
 
 ---
 
@@ -26,7 +26,7 @@ Web サイトのページにコンテンツを追加する場合、実際に公�
 
 >[!NOTE]
 >
->クラシック UI で作成された注釈も、タッチ操作向け UI に表示されます。ただし、スケッチは UI 固有で、作成された UI にのみ表示されます。
+>クラシック UI で作成された注釈は、タッチ操作向け UI に表示されます。 ただし、スケッチは UI 固有で、作成された UI にのみ表示されます。
 
 >[!CAUTION]
 >

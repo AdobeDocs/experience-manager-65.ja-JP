@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 48%
@@ -15,7 +15,7 @@ ht-degree: 48%
 
 # カスタムクラウドサービスの作成{#creating-a-custom-cloud-service}
 
-デフォルトのCloud Servicesセットは、カスタムCloud Serviceタイプで拡張できます。 これにより、構造化された方法でページにカスタムマークアップを挿入できます。 これは主に、Google Analytics、Chartbeat など、サードパーティの分析プロバイダーで使用されます。 Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
+デフォルトのCloud Servicesセットは、カスタムCloud Serviceタイプで拡張できます。 これにより、構造化された方法でページにカスタムマークアップを挿入できます。 これは主に、Google Analytics、Chartbeat など、サードパーティの分析プロバイダーに使用されます。 Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
 
 >[!NOTE]
 >

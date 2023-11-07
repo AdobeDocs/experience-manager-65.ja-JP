@@ -1,5 +1,5 @@
 ---
-title: Repository サービス API クイックスタート
+title: Repository Service API クイックスタート
 seo-title: Repository Service API Quick Starts
 description: AEM Forms リポジトリサービスを使用して、フォルダーの作成、リソースの書き込み、リソースのリスト作成、リソースの読み取り、リソースの更新、リソースの検索、リソース間の関係の作成、リソースのロック、アクセス制御リストの管理、リソースの削除を行います。
 seo-description: Use the AEM Forms Repository service to create a folder, write  a resource, list resources, reading a resource, update a resource, search for resources, create relationships between resources, locking a resource, managing access control lists, and delete a resource.
@@ -11,14 +11,14 @@ topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 role: Developer
 exl-id: 703b6798-d40f-4769-96fc-e440090ca983
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: ht
-source-wordcount: '652'
-ht-degree: 100%
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 93%
 
 ---
 
-# Repository サービス API クイックスタート {#repository-service-api-quick-starts}
+# Repository Service API クイックスタート {#repository-service-api-quick-starts}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
@@ -52,7 +52,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 FormsFolder フォルダーは、AEM Forms リポジトリ内の場所です。例えば、このフォルダーをプログラムで `Applications/FormsApplication` に追加できます。（[クイックスタート（SOAP モード）：Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api) を使用したフォルダーの作成）
 
-AEM Forms リポジトリにあるリソースへのパスは次のとおりです。
+AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
@@ -84,19 +84,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -190,19 +190,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -300,7 +300,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
 
 ## クイックスタート（SOAP モード）：Java API を使用したリソースのリスト化 {#quick-start-soap-mode-listing-resources-using-the-java-api}
 
-次の Java コードの例では、`Applications/FormsApplication/1.0/FormsFolder` にあるリソースを一覧表示しています。（[リソースの一覧表示](/help/forms/developing/aem-forms-repository.md#listing-resources)を参照。）
+次の Java コードの例は、 `Applications/FormsApplication/1.0/FormsFolder`. （[リソースの一覧表示](/help/forms/developing/aem-forms-repository.md#listing-resources)を参照。）
 
 ```java
  /*
@@ -318,19 +318,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -350,7 +350,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
  import com.adobe.repository.bindings.dsc.client.ResourceRepositoryClient;
  import com.adobe.repository.infomodel.bean.Resource;
  
- //This quick start lists the content located in Applications/FormsApplication/1.0/FormsFolder
+ //This quick start lists the content in Applications/FormsApplication/1.0/FormsFolder
  //Ensure that you create a AEM Forms application named Applications/FormsApplication using Workbench
  public class ListFiles {
  
@@ -372,7 +372,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
              // Create a ResourceRepositoryClient object using the service client factory
              ResourceRepositoryClient repositoryClient = new ResourceRepositoryClient(myFactory);
  
-             // List all the files located in the
+             // List all the files in the
              String resourceFolderPath = "/Applications/FormsApplication/1.0/FormsFolder";
  
              // Retrieve the list of resources under the folder path
@@ -399,7 +399,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
 
 ## クイックスタート（SOAP モード）：Java API を使用したリソースの読み込み {#quick-start-soap-mode-reading-a-resource-using-the-java-api}
 
-次の Java コードの例では、リポジトリから *Loan.xdp* という名前のリソースを読み取ります。XDP ファイルは、`/Applications/FormsApplication/1.0/FormsFolder/` にあります。（[リソースの読み取り](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照。）
+次の Java コードの例では、リポジトリから *Loan.xdp* という名前のリソースを読み取ります。XDP ファイルは、 `/Applications/FormsApplication/1.0/FormsFolder/`. （[リソースの読み取り](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照。）
 
 ```java
  /*
@@ -417,19 +417,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -518,19 +518,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -630,19 +630,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -754,19 +754,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -895,19 +895,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1006,19 +1006,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1103,7 +1103,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
 
 ## クイックスタート（SOAP モード）：Java API を使用したリソースの削除 {#quick-start-soap-mode-deleting-a-resource-using-the-java-api}
 
-次の Java コードの例では、`Applications/FormsApplication/1.0/FormsFolder` から Loan.xdp を削除します。この XDP ファイルがこのフォルダーにない場合は、例外が発生します。（[リソースの削除](/help/forms/developing/aem-forms-repository.md#deleting-resources)を参照。）
+次の Java コードの例では、`Applications/FormsApplication/1.0/FormsFolder` から Loan.xdp を削除します。この XDP ファイルがこのフォルダーにない場合は、例外が発生します。 （[リソースの削除](/help/forms/developing/aem-forms-repository.md#deleting-resources)を参照。）
 
 ```java
  /*
@@ -1121,19 +1121,19 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs/common
      *
-     * The adobe-utilities.jar file is located in the following path:
+     * The adobe-utilities.jar file is in the following path:
      * <install directory>/sdk/client-libs/jboss
      *
-     * The jboss-client.jar file is located in the following path:
+     * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
      * If you want to invoke a remote forms server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
-     * you have to include additional JAR files located in the following
+     * you have to include additional JAR files in the following
      * path
      * <install directory>/sdk/client-libs/thirdparty
      *
@@ -1157,7 +1157,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
  
  
  // This quick start deletes Loan.xdp from Applications/FormsApplication/1.0/FormsFolder
- //If this XDP is not located in this folder, an exception is thrown
+ //If this XDP is not in this folder, an exception is thrown
  //Ensure that you create a AEM Forms application named FormsApplication using Workbench
  public class DeleteResource {
  

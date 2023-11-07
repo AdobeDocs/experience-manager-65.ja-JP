@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1872'
-ht-degree: 99%
+source-wordcount: '1865'
+ht-degree: 93%
 
 ---
 
@@ -71,7 +71,7 @@ Web アプリケーションで使用される XML データファイルが Data
 
 フラグメントに基づいて Forms をレンダリングする Web ベースのアプリケーションを作成するには、次の手順を実行します。
 
-1. 新規 web プロジェクトを作成します。
+1. Web プロジェクトを作成.
 1. Java サーブレットを表す Java アプリケーションロジックを作成します。
 1. Web アプリケーション用の Web ページを作成します。
 1. Web アプリケーションを WAR ファイルにパッケージ化します。
@@ -84,7 +84,7 @@ Web アプリケーションで使用される XML データファイルが Data
 
 ### Web プロジェクトの作成 {#creating-a-web-project}
 
-Forms サービスを呼び出す Java サーブレットを含む Web アプリケーションを作成する最初の手順は、新しい Web プロジェクトを作成することです。このドキュメントの基になる Java IDE は Eclipse 3.3 です。Eclipse IDE を使用して、Web プロジェクトを作成し、必要な JAR ファイルをプロジェクトに追加します。最後に、*index.html* という名前の HTML ページと Java サーブレットをプロジェクトに追加します。
+Formsサービスを呼び出す Java サーブレットを含む Web アプリケーションを作成する最初の手順は、Web プロジェクトを作成することです。 このドキュメントの基になる Java IDE は Eclipse 3.3 です。Eclipse IDE を使用して、Web プロジェクトを作成し、必要な JAR ファイルをプロジェクトに追加します。最後に、*index.html* という名前の HTML ページと Java サーブレットをプロジェクトに追加します。
 
 次のリストは、Web プロジェクトに追加する必要がある JAR ファイルを指定します。
 
@@ -145,12 +145,12 @@ Java サーブレット内から Forms サービスを呼び出す Java アプ�
 Forms サービス API を使用してフラグメントに基づいてフォームをレンダリングするには、次のタスクを実行します。
 
 1. adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
-1. HTML フォームから送信されたラジオボタンの値を取得し、米国データとカナダデータのどちらを使用するかを指定します。米国データが送信された場合、*Purchase Order US.xml* のデータを格納する `com.adobe.idp.Document` を作成します。同様に、カナダの場合は、*Purchase Order Canada.xml* ファイルのデータを格納する `com.adobe.idp.Document` を作成します。
-1. 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）
+1. HTML フォームから送信されたラジオボタンの値を取得し、米国データとカナダデータのどちらを使用するかを指定します。アメリカ語が送信された場合、 `com.adobe.idp.Document` が *発注 US.xml*. 同様に、カナダの場合は、 `com.adobe.idp.Document` が *Purchase Order Canada.xml* ファイル。
+1. 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）
 1. コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`FormsServiceClient` オブジェクトを作成します。
 1. コンストラクターを使用して、URI 値を格納する `URLSpec` オブジェクトを作成します。
 1. `URLSpec` オブジェクトの `setApplicationWebRoot` メソッドを呼び出して、アプリケーションの web ルートを表す文字列値を渡します。
-1. `URLSpec` オブジェクトの `setContentRootURI` メソッドを呼び出して、コンテンツルート URI 値を指定する文字列値を渡します。フォームデザインとフラグメントがコンテンツルート URI に配置されていることを確認します。そうでない場合、Forms サービスは例外をスローします。AEM Forms リポジトリを参照するには、`repository://` を指定してください。
+1. `URLSpec` オブジェクトの `setContentRootURI` メソッドを呼び出して、コンテンツルート URI 値を指定する文字列値を渡します。フォームデザインとフラグメントがコンテンツルート URI にあることを確認します。 そうでない場合、Forms サービスは例外をスローします。AEM Forms リポジトリを参照するには、`repository://` を指定してください。
 1. `URLSpec` オブジェクトの `setTargetURL` メソッドを呼び出して、フォームデータの送信先となるターゲット URL 値を指定する文字列値を渡します。フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、演算を実行するためのフォームの送信先の URL を指定することもできます。
 1. `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して、次の値を渡します。
 
@@ -184,7 +184,7 @@ Forms サービス API を使用してフラグメントに基づいてフォー
      * that contains this quick start is exported as a WAR file which
      * is deployed to the J2EE application server)
      *
-     * These JAR files are located in the following path:
+     * These JAR files are in the following path:
      * <install directory>/sdk/client-libs
      *
      * For complete details about the location of these JAR files,
@@ -331,7 +331,7 @@ Java サーブレットは、次の Java コードを使用して、HTML ペー�
              }
 ```
 
-次の HTML コードは、開発環境のセットアップ中に作成された index.html ファイルにあります（[Web プロジェクトの作成](/help/forms/developing/rendering-forms.md#creating-a-web-project)を参照）。
+次のHTMLコードは、開発環境のセットアップ中に作成された index.html ファイルにあります。 （[Web プロジェクトの作成](/help/forms/developing/rendering-forms.md#creating-a-web-project)を参照）。
 
 ```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

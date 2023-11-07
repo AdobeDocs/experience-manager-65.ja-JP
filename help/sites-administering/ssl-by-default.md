@@ -1,20 +1,16 @@
 ---
 title: デフォルトの SSL/TLS
-seo-title: SSL/TLS By Default
 description: AEM 6.5 のデフォルトの機能で SSL を使用する方法を説明します。
-seo-description: Learn how to use SSL by Default in AEM.
-uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
-discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '853'
-ht-degree: 90%
+source-wordcount: '851'
+ht-degree: 88%
 
 ---
 
@@ -117,7 +113,7 @@ Content-Disposition: form-data; name="httpsPort"
 <dt class='foundation-form-response-description'>Description</dt>
 <dd>HTTPS has been configured on port 8443. The private key and
 certificate were stored in the key store of the user ssl-service.
-Please take note of the key store password you provided. You will need
+Take note of the key store password you provided. You need
 it for any subsequent updating of the private key or certificate.</dd>
 </dl>
 <h2>Links</h2>
@@ -163,7 +159,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 >[!NOTE]
 >
->自己署名証明書は例を示すためにのみ使用しており、実稼動では使用しないでください。
+>自己署名証明書の使用は、サンプル目的でのみ可能です。 実稼動環境では使用しないでください。
 
 1. まず、秘密鍵を作成します。
 

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -287,7 +287,7 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 
 ### カスタム更新ハンドラーの実装 {#implementing-a-custom-update-handler}
 
-すべての We.Retail Mobile ページの左上隅には、もちろん zip ファイルに含めたいロゴが含まれています。 ただし、キャッシュの最適化の場合、AEMは画像ファイルのリポジトリ内の実際の場所を参照しないので、 **コピー** 設定タイプ。 その代わりに我々がしなければならないことは、自分たちのものを提供することだ **ロゴ** AEMが要求した場所で画像を使用できるようにする設定タイプ。 次のコードリストは、ロゴ更新ハンドラーの完全な実装を示しています。
+すべての We.Retail Mobile ページの左上隅には、zip ファイルに含めるロゴが含まれています。 ただし、キャッシュの最適化の場合、AEMは画像ファイルのリポジトリ内の実際の場所を参照しないので、 **コピー** 設定タイプ。 その代わりに我々がしなければならないことは、自分たちのものを提供することだ **ロゴ** AEMが要求した場所で画像を使用できるようにする設定タイプ。 次のコードリストは、ロゴ更新ハンドラーの完全な実装を示しています。
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 

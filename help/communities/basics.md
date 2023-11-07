@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '359'
 ht-degree: 5%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 ドキュメントのオーサリングの節では、オーサー編集モードでAEMサイトにコミュニティ機能を追加する方法と、コンポーネント設定を説明する方法について説明します。
 
-コンポーネントは、AEMインスタンスとインタラクティブを使用して確認できます [コミュニティコンポーネントガイド](components-guide.md).
+コンポーネントは、AEMインスタンスとインタラクティブを使用して調査できます [コミュニティコンポーネントガイド](components-guide.md).
 
 ## コミュニティコンポーネントへのアクセス {#accessing-communities-components}
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 
 ### デザインモードに入ります {#entering-design-mode}
 
-次の場合、 **コミュニティ** コンポーネントがコンポーネントブラウザー（サイドキック）に見つからない場合は、 `Design Mode` をクリックして、他のコミュニティコンポーネントを追加します。 [必要なクライアント側ライブラリ](#required-clientlibs) (clientlibs) の追加も必要になる場合があります。
+次の場合、 **Communities** コンポーネントがコンポーネントブラウザー（サイドキック）に見つからない場合は、 `Design Mode` をクリックして、他のコミュニティコンポーネントを追加します。 [必要なクライアント側ライブラリ](#required-clientlibs) (clientlibs) の追加も必要になる場合があります。
 
 詳しくは、 [デザインモードでのコンポーネントの設定](../../help/sites-authoring/default-components-designmode.md).
 
@@ -51,13 +51,13 @@ ht-degree: 5%
 
 ![component-design1](assets/component-design1.png)
 
-## 必須の clientlib {#required-clientlibs}
+## 必須の clientlibs {#required-clientlibs}
 
 [クライアント側ライブラリ](../../help/sites-developing/clientlibs.md) (clientlibs) は、コンポーネントが適切に機能し (JavaScript)、スタイル設定 (CSS) されるために必要です。
 
 コミュニティコンポーネントをページに追加する際に、エラーや予期しない外観が発生した場合は、最初に、コミュニティコンポーネントに必要な clientlib を追加します。 詳しくは、 [コミュニティコンポーネントの clientlib](clientlibs.md).
 
-### 例：最初にクライアントライブラリのないレビューを配置… {#example-initially-placed-reviews-without-client-libraries}
+### 例：クライアントライブラリを使用しない最初のレビューを配置… {#example-initially-placed-reviews-without-client-libraries}
 
 ![clientlibs1](assets/clientlibs1.png)
 
@@ -82,7 +82,7 @@ ht-degree: 5%
 管理情報の場合：
 
 * タグ名前空間（分類）の作成： [タグの管理](../../help/sites-administering/tags.md)
-* コミュニティサイトの設定：参照 [タグ付け](sites-console.md#tagging)
+* コミュニティサイトの設定：詳しくは、 [タグ付け](sites-console.md#tagging)
 * [ユーザー生成コンテンツのタグ付け](../../help/sites-authoring/tags.md)
 
 開発者向けの情報：

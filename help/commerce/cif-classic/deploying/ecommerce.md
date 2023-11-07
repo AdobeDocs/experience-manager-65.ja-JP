@@ -3,10 +3,10 @@ title: e コマースの概要
 description: AEMの汎用 e コマースは、標準インストールの一部として使用でき、e コマースフレームワークの全機能を提供します。
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 77%
+source-wordcount: '260'
+ht-degree: 71%
 
 ---
 
@@ -30,7 +30,7 @@ AEMの汎用 e コマースは、標準インストールの一部として使�
 
 ## 他の実装のデプロイ {#deploying-other-implementations}
 
-AEM と Adobe Commerce については、[コマース統合フレームワーク](/help/commerce/cif/integrating/magento.md)を使用した [AEM と Adobe Commerce の統合](/help/commerce/cif/introduction.md)を参照してください。
+AEMおよびAdobe Commerceの場合は、 [AEMとAdobe Commerceの統合](/help/commerce/cif/integrating/magento.md) の使用 [Commerce integration framework](/help/commerce/cif/introduction.md).
 
 >[!NOTE]
 >
