@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 61f3079a88e39c02b29bfafc7b2b9d4d098cef6b
 workflow-type: tm+mt
-source-wordcount: '4632'
-ht-degree: 99%
+source-wordcount: '4640'
+ht-degree: 98%
 
 ---
 
@@ -492,7 +492,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 #### インタラクティブコミュニケーション
 
-* AEM サービスパック 18 にアップグレードした後は、インタラクティブ通信レターを編集することはできません。（FORMS-10578）
+* AEM Service Pack 18 にアップグレードした後は、大きなインライン画像を含むインタラクティブ通信を編集モードで開くことはできません。 （FORMS-10578）
 問題を解決するには、次の手順に従います。
 
    1. SD リンクから [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をダウンロードします。
