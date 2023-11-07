@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 role: Developer
 exl-id: 76d855cf-ebfa-487a-b1c8-755e7e45dd73
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 27e5c7fea4e90873bf80f976e179b5af0088f550
 workflow-type: tm+mt
 source-wordcount: '1068'
 ht-degree: 98%
@@ -1190,8 +1190,8 @@ public class TextWatermarks {
 
             // Add these elements to the watermark in the order in you want them
             // to be applied.
-            newWatermark.addWatermarkElement(element1);// Will be applied first.
-            newWatermark.addWatermarkElement(element2);// Will be applied on top
+            newWatermark.addWatermarkElement(element1);// Applied first.
+            newWatermark.addWatermarkElement(element2);// Applied on top
                                                         // of it.
             newWatermark.setName("Sample Text Watermark");
             watermarkManager.registerWatermark2(newWatermark);

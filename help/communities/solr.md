@@ -1,17 +1,13 @@
 ---
 title: SRP 用の Solr 設定
-seo-title: Solr Configuration for SRP
 description: 1 つの Apache Solr のインストールは、異なるコレクションを使用することで、ノードストア (Oak) と共通ストア (SRP) の間で共有できます
-seo-description: An Apache Solr installation may be shared between the node store (Oak) and common store (SRP) by using different collections
-uuid: 7356343d-073c-4266-bdcb-c7e999281476
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 2a97935a81cf9c0a1a832dd27b62d388805863e0
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 3%

@@ -6,9 +6,9 @@ content-type: reference
 topic-tags: deploying
 noindex: true
 exl-id: d25e3070-080a-4594-8fdb-9f09164135fc
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+source-git-commit: 2a97935a81cf9c0a1a832dd27b62d388805863e0
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1385'
 ht-degree: 27%
 
 ---
@@ -78,7 +78,7 @@ Valid indexes :
 
 1. オフライン分析のためにインデックスコンテンツをダンプします。
 
-1. AEM にアクセスできない場合でも使用可能です。
+1. AEMにアクセスできない場合でも使用可能
 
 上記の操作は、次の操作インデックスコマンドを使用して実行できるようになりました。
 
@@ -106,7 +106,7 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 
 ## 使用例 3 — インデックスの再作成 {#usecase3reindexing}
 
-に応じて [シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)の場合、インデックス再作成を実行する必要が生じることがあります。 現在、インデックス再作成は、 `reindex` フラグ設定 `true` を、CRXDE を介して、または Index Manager ユーザーインターフェイスを介して、インデックス定義ノード内に追加します。 このフラグを設定すると、インデックス再作成は非同期でおこなわれます。
+に応じて [シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)の場合、インデックス再作成を実行する必要が生じることがあります。 現在、インデックス再作成は、 `reindex` フラグを設定 `true` を、CRXDE を介して、または Index Manager ユーザーインターフェイスを介して、インデックス定義ノード内に追加します。 このフラグを設定すると、インデックス再作成は非同期でおこなわれます。
 
 インデックスの再作成に関する注意事項を次に示します。
 
@@ -139,7 +139,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 これには次のような利点があります
 
 * 実行中のAEMインスタンスに対する影響は最小限です。 ほとんどの読み取りはセカンダリサーバーから実行でき、AEMキャッシュの実行はインデックス再作成に必要なすべてのトラバーサルのため、悪影響を受けません。
-* ユーザーは、 `--index-definitions-file` オプション。
+* また、新しいインデックスや更新されたインデックスの JSON を `--index-definitions-file` オプション。
 
 ### インデックス再作成 - SegmentNodeStore {#reindexsegmentnodestore}
 
@@ -156,7 +156,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 これには次のものが含まれます。
 
 1. ステップテキスト
-1. 接続 `oak-run` を読み取り専用モードでAEMが使用するのと同じリポジトリに追加し、インデックス作成を実行します。 これを実現する方法の例を次に示します。
+1. 接続する `oak-run` を読み取り専用モードでAEMが使用するのと同じリポジトリに追加し、インデックス作成を実行します。 これを実現する方法の例を次に示します。
 
    ```shell
    java -jar oak-run-1.7.6.jar index --fds-path=/Users/dhasler/dev/cq/quickstart/target/crx-quickstart/repository/datastore/ --checkpoint 26b7da38-a699-45b2-82fb-73aa2f9af0e2 --reindex --index-paths=/oak:index/lucene /Users/dhasler/dev/cq/quickstart/target/crx-quickstart/repository/segmentstore/
@@ -194,7 +194,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 ## 使用例 4 - インデックス定義の更新 {#usecase4updatingindexdefinitions}
 
-現在、インデックス定義の変更を [ACS Ensure Index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) パッケージ。 これにより、コンテンツパッケージを介してインデックス定義を送信できますが、後でインデックスの再作成を行うには、 `reindex` フラグ設定 `true`.
+現在、インデックス定義の変更を [ACS Ensure Index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) パッケージ。 これにより、コンテンツパッケージを介してインデックス定義を送信できますが、後でインデックスの再作成を行うには、 `reindex` フラグを設定 `true`.
 
 これは、インデックス再作成に時間がかからない小規模なインストールで適切に機能します。 ただし、大規模なリポジトリの場合、インデックス再作成はかなり長い時間でおこなわれます。 このような場合、oak-run インデックスツールを使用できます。
 
