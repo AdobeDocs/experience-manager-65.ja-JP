@@ -1,20 +1,16 @@
 ---
 title: Output Service Java API Quick Start（SOAP）
-seo-title: Output Service Java API Quick Start(SOAP)
 description: Output サービス Java API クイックスタート (SOAP) を使用して、PDFドキュメントの作成、PDFドキュメントの作成、PDF/A ドキュメントの作成、Output サービスへのドキュメントの渡し、AEM Formsリポジトリ内のドキュメントの Output サービスへの渡し、フラグメントに基づくPDFドキュメントの作成、複数のPDFファイルの作成検索ルールを作成し、PDF・ドキュメントを変換します。
-seo-description: Use the Output service Java API Quick Start (SOAP) to create a PDF document, create a PDF document based on application XDP file, create a PDF/A document, pass documents to the Output service, pass a document in the AEM Forms repository to the Output service, create a PDF document based on fragments, printing to a file, sending a print stream to a network printer, create multiple PDF files, create search rules, transform a PDF document.
-uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 role: Developer
 exl-id: dc99dd4d-fce9-4ec5-9b51-661d37a21559
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
 source-wordcount: '1311'
-ht-degree: 84%
+ht-degree: 83%
 
 ---
 
@@ -299,7 +295,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 >
 >Repository API は、この場所から XDP ファイルを取得するために使用します（[リソースの読み取り](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照してください）。
 
-また、コンテンツルートの値 `repository:///Applications/FormsApplication/1.0/FormsFolder/` は、`OutputClient` オブジェクトの `generatePDFOutput2` メソッド（2 番目のパラメーター）に渡されます。この値は Output サービスに渡され、フォーム作成に使用するファイル（画像など）がこの場所に保存されていることを Output サービスに通知します。
+また、コンテンツのルート値にも注意してください。 `repository:///Applications/FormsApplication/1.0/FormsFolder/` が `OutputClient` オブジェクトの `generatePDFOutput2` メソッド（2 番目のパラメータ）を使用します。 この値は Output サービスに渡され、フォーム作成に使用するファイル（画像など）がこの場所に保存されていることを Output サービスに通知します。
 
 >[!NOTE]
 >
@@ -974,7 +970,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
                  //Create a Document object
                  Document inFragment2Doc = new Document(inFragment2);
  
-                 //Place all of the XDP files into the MAP
+                 //Place all the XDP files into the MAP
                  inputs.put("tuc018_template_flowed.xdp",myMapSource);
                  inputs.put("tuc018_contact.xdp",inFragment1Doc);
                  inputs.put("tuc018_patient.xdp",inFragment2Doc);

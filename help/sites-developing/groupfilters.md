@@ -12,10 +12,10 @@ discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 52%
+source-wordcount: '797'
+ht-degree: 50%
 
 ---
 
@@ -91,7 +91,7 @@ public String getTitle() {
 
 ### フィルター条件に対する評価 {#evaluating-against-filter-criteria}
 
-デバイスの機能がすべてのフィルター条件を満たす場合、`matches` 関数は `true` を返します。デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
+The `matches` 関数の戻り値 `true` （デバイスの機能がすべてのフィルター条件を満たす場合）。 デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
 
 * DeviceGroup オブジェクト
 * ユーザーエージェントの名前

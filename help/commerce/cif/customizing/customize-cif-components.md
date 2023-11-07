@@ -1,6 +1,6 @@
 ---
 title: CIF コアコンポーネントのカスタマイズ
-description: Adobe Experience Manager CIF コアコンポーネントをカスタマイズする方法について説明します。 このチュートリアルでは、ビジネス固有の要件を満たすために、CIF コアコンポーネントを安全に拡張する方法について説明します。 GraphQL クエリを拡張してカスタム属性を返し、新しい属性を CIF コアコンポーネントに表示する方法を説明します。
+description: Adobe Experience Manager CIFコアコンポーネントをカスタマイズする方法について説明します。 このチュートリアルでは、ビジネス固有の要件を満たすために、CIF コアコンポーネントを安全に拡張する方法について説明します。GraphQL クエリを拡張してカスタム属性を返し、新しい属性を CIF コアコンポーネントに表示する方法を説明します。
 sub-product: Commerce
 topics: Development
 version: Cloud Service
@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 1d914b12c3279bacaf5cabb3b1953e927c04bad1
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 71%
+source-wordcount: '2567'
+ht-degree: 87%
 
 ---
 
-# Adobe Experience Manager CIF コアコンポーネントのカスタマイズ {#customize-cif-components}
+# Adobe Experience Manager CIFコアコンポーネントのカスタマイズ {#customize-cif-components}
 
-[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、 [製品ティーザー](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) Adobe Commerceのカスタム属性を表示するコンポーネント。 また、Adobe Experience Manager(AEM) とAdobe Commerceの間のGraphQL統合と、CIF コアコンポーネントが提供する拡張フックについても説明します。
+[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、[製品ティーザー](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)コンポーネントをさらに拡張して、Adobe Commerce のカスタム属性を表示します。また、Adobe Experience Manager(AEM) とAdobe Commerceの間のGraphQL統合と、CIFコアコンポーネントが提供する拡張フックについても説明します。
 
 >[!TIP]
 >
@@ -28,15 +28,15 @@ ht-degree: 71%
 
 ## 作成する内容
 
-Venia ブランドは最近、持続可能な資材を使用して一部の製品を製造し始めました。同社は、**エコフレンドリー**&#x200B;バッジを製品ティーザーの一部として表示したいと考えています。製品が **エコフレンドリー** 材料。 このカスタム属性は、GraphQLクエリの一部として追加され、指定した製品の製品ティーザーに表示されます。
+Venia ブランドは最近、持続可能な資材を使用して一部の製品を製造し始めました。同社は、**エコフレンドリー**&#x200B;バッジを製品ティーザーの一部として表示したいと考えています。製品が&#x200B;**環境にやさしい**&#x200B;素材を使用しているかどうかを示す新しいカスタム属性が Adobe Commerce に作成されます。このカスタム属性が GraphQL クエリの一部として追加され、特定の製品の製品ティーザーに表示されます。
 
 ![エコフレンドリーバッジの最終実装](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。これには、Adobe Commerce に設定および接続された AEM の実行インスタンスが含まれます。[AEM を使用したローカル開発をセットアップする](../develop.md)ための要件と手順を確認します。このチュートリアルを完全に実行するには、 [製品の属性](https://docs.magento.com/user-guide/catalog/product-attributes-add.html) Adobe Commerce
+このチュートリアルを完了するには、ローカルの開発環境が必要です。これには、Adobe Commerce に設定および接続された AEM の実行インスタンスが含まれます。[AEM を使用したローカル開発をセットアップする](../develop.md)ための要件と手順を確認します。このチュートリアルを完全に実行するには、[属性を Adobe Commerce 内の製品に追加](https://docs.magento.com/user-guide/catalog/product-attributes-add.html)する権限が必要になります。
 
-また、GraphQL IDE( [GraphiQL](https://github.com/graphql/graphiql) またはブラウザー拡張機能を使用して、コードサンプルとチュートリアルを実行することもできます。 ブラウザー拡張機能をインストールする場合は、その拡張機能でリクエストヘッダーを設定できることを確認してください。 Google Chrome の [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) は、ジョブを実行できる拡張機能の 1 つです。
+また、コード例やチュートリアルを実行するには、[GraphiQL](https://github.com/graphql/graphiql) またはブラウザー拡張機能などの GraphQL IDE が必要です。ブラウザー拡張機能をインストールする場合は、その拡張機能でリクエストヘッダーを設定できることを確認してください。 Google Chrome の [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) は、ジョブを実行できる拡張機能の 1 つです。
 
 ## Venia プロジェクトのクローン {#clone-venia-project}
 
@@ -69,7 +69,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
 ## 製品ティーザーの作成 {#author-product-teaser}
 
-製品ティーザーコンポーネントは、このチュートリアル全体で拡張されています。 最初の手順として、製品ティーザーのインスタンスをホームページに追加し、ベースライン機能を理解します。
+製品ティーザーコンポーネントは、このチュートリアル全体で拡張されます。最初の手順として、製品ティーザーのインスタンスをホームページに追加し、ベースライン機能を理解します。
 
 1. サイトの&#x200B;**ホームページ**（[http://localhost:4502/editor.html/content/acme/us/en.html](http://localhost:4502/editor.html/content/acme/us/en.html)）に移動します。
 
@@ -126,7 +126,7 @@ AEM に表示された製品と製品データは Adobe Commerce に格納され
    >
    >製品属性の管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html)を参照してください。
 
-1. **システム**／**ツール**／**キャッシュ管理**&#x200B;に移動します。データスキーマは更新されたので、Adobe Commerceで一部のキャッシュタイプを無効にする必要があります。
+1. **システム**／**ツール**／**キャッシュ管理**&#x200B;に移動します。データスキーマは更新されたので、Adobe Commerce で一部のキャッシュタイプを無効にする必要があります。
 1. 「**設定**」の横のチェックボックスをオンにして、**更新**&#x200B;用にキャッシュタイプを送信します。
 
    ![構成キャッシュタイプの更新](../assets/customize-cif-components/refresh-configuration-cache-type.png)
@@ -178,7 +178,7 @@ AEMコードを始める前に、 [Adobe Commerce GraphQL](https://devdocs.magen
 
    ![GraphQL の応答例](../assets/customize-cif-components/sample-graphql-query.png)
 
-の値 **はい** は、 **1**. これは、GraphQLクエリを Java™で記述する場合に役立ちます。
+「**はい**」の値は整数 **1** です。これは、GraphQLクエリを Java™で記述する場合に役立ちます。
 
 >[!TIP]
 >
@@ -186,9 +186,9 @@ AEMコードを始める前に、 [Adobe Commerce GraphQL](https://devdocs.magen
 
 ## 製品ティーザーの Sling モデルのアップデート {#updating-sling-model-product-teaser}
 
-次に、Sling モデルを実装して、製品ティーザーのビジネスロジックを拡張します。 [Sling モデル](https://sling.apache.org/documentation/bundles/models.html)は、コンポーネントで必要なビジネスロジックを実装する注釈駆動型の「POJO」(Plain Old Java™ Objects) です。 Sling モデルは、コンポーネントの一部として HTL スクリプトで使用されます。 次の手順に従います。 [Sling モデルの委任パターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 既存の製品ティーザーモデルの一部を拡張できます。
+次に、Sling モデルを実装して、製品ティーザーのビジネスロジックを拡張します。 [Sling モデル](https://sling.apache.org/documentation/bundles/models.html)は、コンポーネントで必要なビジネスロジックを実装する注釈駆動型の「POJO」(Plain Old Java™ Objects) です。 Sling モデルは、コンポーネントの一部として HTL スクリプトと組み合わせて使用されます。次の手順に従います。 [Sling モデルの委任パターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) 既存の製品ティーザーモデルの一部を拡張できます。
 
-Sling モデルは Java™として実装され、 **コア** 生成されたプロジェクトのモジュール。
+Sling モデルは Java として実装され、生成されたプロジェクトの&#x200B;**コア**&#x200B;モジュールにあります。
 
 [任意の IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#set-up-the-development-ide) を使用して、Venia プロジェクトをインポートします。使用したクリーンショットは、[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code) からのものです。
 
@@ -196,7 +196,7 @@ Sling モデルは Java™として実装され、 **コア** 生成されたプ
 
    ![コアのロケーション IDE](../assets/customize-cif-components/core-location-ide.png)
 
-   `MyProductTeaser.java` は、 [ProductTeaser](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) インターフェイス。
+   `MyProductTeaser.java` は、CIF [ProductTeaser](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) インターフェイス。
 
    製品が「新規」と見なされた場合にバッジを表示するための新しい `isShowBadge()` メソッドが既に追加されています。
 
@@ -225,7 +225,7 @@ Sling モデルは Java™として実装され、 **コア** 生成されたプ
    private ProductTeaser productTeaser;
    ```
 
-   上書きまたは変更されないすべてのメソッドに対して、 `ProductTeaser` を返します。 例：
+   上書きまたは変更されないすべてのメソッドに対して、 `ProductTeaser` はを返します。 次に例を示します。
 
    ```java
    @Override
@@ -259,7 +259,7 @@ Sling モデルは Java™として実装され、 **コア** 生成されたプ
    ...
    ```
 
-   この `@PostConstruct` 注釈により、Sling モデルが初期化されたときにこのメソッドが呼び出されます。
+   `@PostConstruct` 注釈により、Sling モデルが初期化されるとこのメソッドが呼び出されます。
 
    製品の GraphQL クエリは、追加の `created_at` 属性を取得するように、`extendProductQueryWith` メソッドを使用して既に拡張されています。この属性は、後で `isShowBadge()` メソッドの一部として使用されます。
 
@@ -283,13 +283,13 @@ Sling モデルは Java™として実装され、 **コア** 生成されたプ
    }
    ```
 
-   を `extendProductQueryWith` メソッドは、他の製品属性を確実にモデルの残りの部分で使用できるようにする強力な方法です。 また、実行されるクエリの数も最小限に抑えられます。
+   `extendProductQueryWith` メソッドに追加すると、他の製品属性を確実にモデルの残りの部分で使用できるようになります。また、実行されるクエリの数も最小限に抑えられます。
 
    上記のコードでは、`eco_friendly` 属性を取得するために `addCustomSimpleField` が使用されています。この例では、Adobe Commerce スキーマの一部であるカスタム属性をクエリする方法を説明します。
 
    >[!NOTE]
    >
-   >この `createdAt()` メソッドが [製品インターフェイス](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). 一般的なスキーマ属性のほとんどは実装されているので、真のカスタム属性に対してのみ `addCustomSimpleField` を使用します。
+   >`createdAt()` メソッドは、[製品インターフェイス](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java)の一部として実装されています。一般的なスキーマ属性のほとんどは実装されているので、真のカスタム属性に対してのみ `addCustomSimpleField` を使用します。
 
 1. Java™コードのデバッグに役立つロガーを追加します。
 
@@ -324,15 +324,15 @@ Sling モデルは Java™として実装され、 **コア** 生成されたプ
    }
    ```
 
-   上記のメソッドでは、`productRetriever` が製品の取得に使用され、`getAsInteger()` メソッドが `eco_friendly` 属性の値の取得に使用されています。前に実行したGraphQLクエリに基づいて、が `eco_friendly` 属性が&quot;**はい**」は実際には **1**.
+   上記のメソッドでは、`productRetriever` が製品の取得に使用され、`getAsInteger()` メソッドが `eco_friendly` 属性の値の取得に使用されています。先ほど実行した GraphQL クエリに基づいて、`eco_friendly` 属性が「**はい**」に設定された場合の期待値は、実際には整数 **1** であることがわかります。
 
    Sling モデルがアップデートされたので、Sling モデルに基づいて&#x200B;**エコフレンドリー**&#x200B;という指標を実際に表示するには、コンポーネントマークアップをアップデートする必要があります。
 
 ## 製品ティーザーのマークアップのカスタマイズ {#customize-markup-product-teaser}
 
-AEM コンポーネントの一般的な拡張機能は、コンポーネントによって生成されたマークアップを変更することです。これは、コンポーネントがマークアップのレンダリングに使用する [HTL スクリプト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)を上書きすることで行われます。HTMLテンプレート言語 (HTL) は、AEMコンポーネントがオーサリングされたコンテンツに基づいて動的にマークアップをレンダリングし、コンポーネントを再利用する際に使用する、軽量なテンプレート言語です。 例えば、製品ティーザーを何度も繰り返し再利用して、異なる製品を表示できます。
+AEM コンポーネントの一般的な拡張機能は、コンポーネントによって生成されたマークアップを変更することです。これは、コンポーネントがマークアップのレンダリングに使用する [HTL スクリプト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)を上書きすることで行われます。HTML テンプレート言語（HTL）は、軽量なテンプレート言語です。AEM コンポーネントを使用して、作成されたコンテンツに基づいてマークアップを動的にレンダリングするので、コンポーネントの再利用が可能になります。例えば、製品ティーザーを何度も再利用して、様々な製品を表示できます。
 
-この場合、ティーザーの上にバナーをレンダリングして、カスタム属性に基づいて製品が「エコフレンドリー」であることを示します。 コンポーネントの[マークアップをカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=ja#customizing-the-markup)するデザインパターンは、AEM CIF コアコンポーネントだけでなく、すべての AEM コンポーネントに対して実際に標準です。
+この例では、ティーザーの上部にバナーをレンダリングして、カスタム属性に基づいて製品が「エコフレンドリー」であることを示します。コンポーネントの[マークアップをカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=ja#customizing-the-markup)するデザインパターンは、AEM CIF コアコンポーネントだけでなく、すべての AEM コンポーネントに対して実際に標準です。
 
 >[!NOTE]
 >
@@ -352,7 +352,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
        componentGroup="Venia - Commerce"/>
    ```
 
-   このプロジェクトの製品ティーザーコンポーネントのコンポーネント定義は上記のとおりです。 `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"` プロパティに注目してください。これは、[プロキシコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=ja#create-proxy-components)の作成例です。AEM CIF コアコンポーネントからすべての製品ティーザー HTL スクリプトをコピー&amp;ペーストする代わりに、 `sling:resourceSuperType` をクリックして、すべての機能を継承します。
+   このプロジェクトの製品ティーザーコンポーネントのコンポーネント定義は上記のとおりです。 `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"` プロパティに注目してください。これは、[プロキシコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=ja#create-proxy-components)の作成例です。AEM CIFコアコンポーネントからすべての製品ティーザー HTL スクリプトをコピー&amp;ペーストする代わりに、 `sling:resourceSuperType` を追加して、すべての機能を継承します。
 
 1. `productteaser.html` ファイルを開きます。これは、[CIF 製品ティーザー](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)からの `productteaser.html` ファイルのコピーです。
 
@@ -394,7 +394,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    `data-sly-test` などの HTL ブロック文の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=ja)を参照してください。
 
-1. 変更を保存し、コマンドラインターミナルから Maven スキルを使用してAEMにアップデートをデプロイします。
+1. 変更を保存し、コマンドラインターミナルから Maven スキルを使用して、AEM にアップデートをデプロイします。
 
    ```shell
    $ cd aem-cif-guides-venia/
@@ -417,7 +417,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    製品の `eco_friendly` 属性が「**はい**」に設定されている場合、ページに「エコフレンドリー」というテキストが表示されます。異なる製品に切り替えて、動作の変更を確認してください。
 
-1. 次に、AEMを開きます。 `error.log` 追加されたログ文を確認する。 この `error.log` 次の値 `<AEM SDK Install Location>/crx-quickstart/logs/error.log`.
+1. 次に、AEMを開きます。 `error.log` をクリックして、追加されたログ文を確認します。 `error.log` は、`<AEM SDK Install Location>/crx-quickstart/logs/error.log` にあります。
 
    AEMログを検索して、Sling モデルに追加されたログ文を確認します。
 
@@ -473,7 +473,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
    >
    >フロントエンドワークフローに関する詳細については、「[CIF コアコンポーネントのスタイル設定](./style-cif-component.md)」を参照してください。
 
-1. 変更を保存し、コマンドラインターミナルから Maven スキルを使用してAEMにアップデートをデプロイします。
+1. 変更を保存し、コマンドラインターミナルから Maven スキルを使用して、AEM にアップデートをデプロイします。
 
    ```shell
    $ cd aem-cif-guides-venia/
@@ -486,11 +486,11 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 ## これで完了です {#congratulations}
 
-最初のAEM CIF コンポーネントをカスタマイズしました。 完成したソリューションファイルを[こちら](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip)からダウンロードしてください。
+最初の AEM CIF コンポーネントをカスタマイズしました。完成したソリューションファイルを[こちら](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip)からダウンロードしてください。
 
 ## ボーナスチャレンジ {#bonus-challenge}
 
-製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者がいつ **エコフレンドリー** バッジが表示されます。 次の場所でコンポーネントダイアログを更新する必要があります。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
+製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。次の場所でコンポーネントダイアログを更新する必要があります。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
 
 ![新しいバッジの実装の課題](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 

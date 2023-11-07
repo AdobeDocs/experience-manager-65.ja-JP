@@ -10,10 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1253'
-ht-degree: 96%
+source-wordcount: '1252'
+ht-degree: 94%
 
 ---
 
@@ -206,7 +206,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
 * **ノードの子の非表示（そのノードのプロパティは維持）**
 
-  ノード、そのプロパティおよびその子が `/libs` に定義されていて、ノードとそのプロパティは `/apps` オーバーレイ／オーバーライドで必要であるものの、一部またはすべての子ノードが `/apps` オーバーレイ／オーバーライドで不要な場合に、不要なものを非表示にできます。
+  ノード、そのプロパティおよびその子が `/libs` に定義されていて、ノードとそのプロパティは、 `/apps` オーバーレイ/オーバーライドしますが、一部またはすべての子ノードが `/apps` overlay/override を選択します。
 
    1. `/apps` 以下に、対応するノードを作成します。
    1. `sling:hideChildren` プロパティを作成します。

@@ -2,10 +2,10 @@
 title: CMS ヘッドレス開発について
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレステクノロジーと、それを使用する理由について説明します。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 93%
+source-wordcount: '1611'
+ht-degree: 92%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 93%
 
 ![従来のフルスタック CMS](assets/full-stack.png)
 
-フルスタック CMS では、コンテンツを操作する機能はすべて CMS 内にあります。システムの機能は、CMS スタックの異なるコンポーネントを構成します。フルスタックソリューションには多くの利点があります。
+フルスタック CMS では、コンテンツを操作する機能はすべて CMS 内にあります。 システムの機能は、CMS スタックの異なるコンポーネントを構成します。フルスタックソリューションには多くの利点があります。
 
 * 維持するシステムは 1 つである。
 * コンテンツを一元的に管理できる。

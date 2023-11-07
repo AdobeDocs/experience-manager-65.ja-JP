@@ -7,9 +7,9 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3264'
+source-wordcount: '3263'
 ht-degree: 94%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 94%
 
 | 関係するユーザーに対する価値提案 | アドビ製品／サービス | 関係するサーフェス |
 |---|---|---|
-| クリエイティブユーザーがからアセットを検出する [!DNL Experience Manager]を開き、それらを使用して、変更を編集し、次の場所にアップロードします。 [!DNL Experience Manager]を開き、新しいファイルを次の場所にアップロードします。 [!DNL Experience Manager]（出て行かず） [!DNL Creative Cloud] アプリ | [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator] および [!DNL Adobe InDesign] です。 |
+| クリエイティブユーザーがからアセットを検出する [!DNL Experience Manager]、開いて使用する、変更を編集し、次の場所にアップロードする、 [!DNL Experience Manager]を開き、新しいファイルを次の場所にアップロードします。 [!DNL Experience Manager]（出て行かず） [!DNL Creative Cloud] アプリ | [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator] および [!DNL Adobe InDesign] です。 |
 | ビジネスユーザーは、アセットのオープンと使用、編集と [!DNL Experience Manager] への変更内容のアップロード、[!DNL Experience Manager] への新しいファイルのアップロードをデスクトップ環境から簡単に行えます。汎用の統合を使用して、アドビ以外のアセットも含め、あらゆるアセットタイプをネイティブデスクトップアプリケーションで開きます。 | [Experience Manager デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja) | Windows および Mac デスクトップ上の [!DNL Experience Manager] デスクトップアプリケーション |
 | マーケターとビジネスユーザーは、[!DNL Experience Manager] の中から [!DNL Adobe Stock] アセットの検出、プレビュー、ライセンスの取得と保存、管理を行います。ライセンスを取得して保存したアセットは、ガバナンスの強化に役立つ、[!DNL Adobe Stock] の選ばれたメタデータを提供します。 | [Experience Manager と Adobe Stock の統合](aem-assets-adobe-stock.md) | [!DNL Experience Manager] Web インターフェイス |
 
@@ -137,7 +137,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 また、アセットの保存に関しては、技術的な考慮事項とリソース稼働率についての考慮事項があります。DAM には、保存されたアセットに関連する追加サービスが用意されています（メタデータの抽出、バージョン管理、プレビュー／トランスコーディングの生成、参照の管理、アクセス制御情報の追加など）。これらのサービスを使用すると、より多くの時間リソースとインフラストラクチャリソースが消費されます。
 
-多くの場合、アセットおよび更新をすべて保存することは推奨されません。例えば、特定のアセットの更新が低品質で、大量のリソースを消費するような場合、そのアセットは DAM に保存しないようにします。
+多くの場合、すべてのアセットと更新を保存することは望ましくありません。 例えば、特定のアセットの更新が低品質で、大量のリソースを消費するような場合、そのアセットは DAM に保存しないようにします。
 
 #### アセットを DAM に保存するタイミング {#when-assets-are-stored-in-dam}
 

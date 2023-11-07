@@ -4,9 +4,9 @@ description: Tough Day テストは、すべての操作が同時におこなわ
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1822'
 ht-degree: 53%
 
 ---
@@ -86,7 +86,7 @@ java -jar toughday2.jar --help_full
   </tr>
   <tr>
    <td>--help_full</td>
-   <td>上記のすべてを出力し、さらに、テスト、パブリッシャー、スイートコンポーネントを出力します。</td>
+   <td>上記のすべてを印刷し、さらに、テスト、パブリッシャー、スイートコンポーネントを印刷します。</td>
    <td> </td>
   </tr>
   <tr>

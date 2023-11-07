@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2835'
-ht-degree: 96%
+source-wordcount: '2834'
+ht-degree: 95%
 
 ---
 
@@ -328,7 +328,7 @@ Adobe Campaign と統合するように設定されているフォームを開�
 
 ### 大部分のコンポーネントに共通の設定 {#settings-common-to-most-components}
 
-Adobe Campaign コンポーネントには、すべてのコンポーネント（暗号化されたプライマリキーコンポーネントと非表示の調整キーコンポーネントを除く）に共通の設定があります。
+Adobe Campaignコンポーネントには、すべてのコンポーネントで共通の設定があります ( 暗号化されたプライマリキーと非表示の紐付けキーコンポーネントを除く )。
 
 大部分のコンポーネントでは、次の設定を行うことができます。
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 35%
 
 ---
@@ -24,12 +24,12 @@ JCR、Apache Sling、またはAdobe Experience Manager(AEM) アプリケーシ�
 * 次のセットで構成される 1 つのセット：
    * 統合開発環境。 例： [Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md).
    * ビルドツール。 例： [Apache Maven](/help/sites-developing/ht-projects-maven.md).
-   * FileVault は、リポジトリをファイルシステム（バージョン管理システム）にマッピングするためにAdobeが開発しました。 例えば、Subversion などです。
-   * バグトラッカーシステム。 例えば、ジラ。
+   * FileVault は、リポジトリをファイルシステム（バージョン管理システム）にマッピングするためにAdobeが開発しました。 例えば、Subversion と入力します。
+   * バグトラッカーシステム。 例えば、Jira。
    * 中央依存管理システム。 例えば、Apache Archiva などです。
-   * ビルド自動化システム。 例えば、Apache Continuum などです。
+   * ビルドオートメーションシステム。 例えば、Apache Continuum などです。
 
-  このセットアップにより、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境およびプロセスに完全に統合できます。 前述の開発ツールのすべてがファイルを操作できるので、異なる要素間のリンクは、FileVault を介したリポジトリのファイルシステム表現です。
+  このセットアップにより、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境およびプロセスに完全に統合できます。 前述のすべての開発ツールでファイルを操作できるので、異なる要素間のリンクは、FileVault を介したリポジトリのファイルシステム表現です。
 
 ## 統合開発環境の拡張 {#extensions-for-integrated-development-environments}
 

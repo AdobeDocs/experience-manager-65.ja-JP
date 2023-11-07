@@ -9,16 +9,16 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1174'
 ht-degree: 91%
 
 ---
 
 # 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 
@@ -66,7 +66,7 @@ ht-degree: 91%
       >`<panelName>.instanceManager.instances[<instanceNumber>].<fieldname>`
       >
       >
-      >例えば、繰り返し可能なパネルにテキストボックスが付いたアダプティブフォームを作成したとします。 このフォームに 3 つの繰り返し可能テキストボックスを事前入力するには、以下の xml が必要です。
+      >例えば、テキストボックスを持つ繰り返し可能なパネルを含むアダプティブフォームを作成するとします。このフォームに 3 つの繰り返し可能テキストボックスを事前入力するには、以下の xml が必要です。
       >
       >
       >`<panel1><textbox1>AA1</panel1></textbox1>`
@@ -94,7 +94,7 @@ ht-degree: 91%
 
       >[!NOTE]
       >
-      >パネルのすべてのインスタンスがアダプティブフォームから削除されているとき、削除されたパネルのインスタンスを 1 つ追加するには、_panelName 構文を使用してパネルのインスタンスマネージャをキャプチャし、インスタンスマネージャの addInstance API を使用して、削除されたインスタンスを追加します。例えば、_panelName.addInstance() です。削除されたパネルのインスタンスを 1 つ追加します。
+      >パネルのすべてのインスタンスがアダプティブフォームから削除された場合、削除されたパネルのインスタンスを追加するには、 _panelName 構文を使用してパネルのインスタンスマネージャーを取り込み、削除されたインスタンスを追加するには、 addInstance API を使用します。 例えば、_panelName.addInstance() です。削除されたパネルのインスタンスを 1 つ追加します。
 
 ## 親パネルに対するアコーディオンレイアウトの使用  {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 
@@ -118,7 +118,7 @@ ht-degree: 91%
 1. サブフォームの繰り返し回数の最大値を指定する場合は、「最大値」を選択して、関連するボックスに数値を入力します。「最大値」に値を入力しなければ、サブフォームの繰り返し回数は無制限になります。
 1. サブフォームの繰り返し回数をデータ量に関係なく指定する場合は、「初期値」オプションを選択して、関連するボックスに数値を入力します。このオプションを選択した場合は、データが使用できないときやデータ項目が指定された「初期値」の値より少ないときにも、フォーム上に空のサブフォームインスタンスが配置されます。
 1. 親サブフォームにボタンを 2 つ追加します。ひとつはインスタンスの追加に、もうひとつは繰り返し可能なサブフォームのインスタンスの削除に使用します。詳しい手順については、「[アクションの作成](https://help.adobe.com/ja_JP/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2)」を参照してください。
-1. 次に、フォームテンプレートをアダプティブフォームにリンクします。 詳細な手順については、 [テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template).
+1. ここで、アダプティブフォームにフォームテンプレートをリンクします。詳しい手順については、[テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template)を参照してください。
 1. 手順 9 で作成したボタンを使用して、サブフォームを追加および削除します。
 
 添付の .zip ファイルには、繰り返し可能なサブフォーラムのサンプルが含まれています。
@@ -127,7 +127,7 @@ ht-degree: 91%
 
 ## XML スキーマ（XSD）の繰り返し設定の使用  {#using-repeat-settings-of-an-xml-schema-xsd-br}
 
-XML スキーマ、または任意の複合タイプエレメントの minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。XML スキーマについて詳しくは、 [XML スキーマをフォームモデルとして使用してアダプティブフォームを作成する](/help/forms/using/adaptive-form-xml-schema-form-model.md).
+XML スキーマ、または任意の複合タイプ要素の minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。XML スキーマについて詳しくは、[XML スキーマをフォームモデルとして使用するアダプティブフォームを作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)を参照してください。
 
 以下のコードでは、`SampleType` パネルで minOccurs および maxOccurs プロパティが使用されています。
 

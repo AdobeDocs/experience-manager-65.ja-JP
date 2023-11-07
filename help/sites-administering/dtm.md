@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2205'
 ht-degree: 30%
 
 ---
@@ -260,7 +260,7 @@ Dynamic Tag Management設定を Web サイトのページに関連付け、AEM�
 
 1. 「 Dynamic Tag Management 」ドロップダウンメニューを使用して設定を選択し、「 OK 」をクリックします。
 
-ページの継承された設定の関連付けを上書きするには、次の手順を実行します。 上書きは、ページとすべての子ページに影響を与えます。
+ページの継承された設定の関連付けを上書きするには、次の手順を実行します。 上書きは、ページおよびすべてのページの子孫に影響します。
 
 1. クラシック UI でページを開きます。
 1. 「Sidekick」を使用してページのプロパティを開きます。

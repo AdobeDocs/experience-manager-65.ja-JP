@@ -1,19 +1,15 @@
 ---
 title: 業務カレンダーの設定
-seo-title: Configuring Business Calendars
 description: 業務カレンダーは、組織の業務日と非業務日を定義します。 業務カレンダーの設定方法を説明します。
-seo-description: Business calendars define business and non-business days for your organization. Learn how to configure the business calendars.
-uuid: 0ba610b8-72a8-480c-8783-70d98cbe890a
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7a85e13d-4800-47c4-812a-5c6e2355298a
 exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 10%
+source-wordcount: '1898'
+ht-degree: 9%
 
 ---
 
@@ -39,7 +35,7 @@ AEM Forms には、土曜日と日曜日が非稼働日に指定されている�
 
 1. 適切な業務カレンダーをユーザーに関連付ける方法を決定します。 ビジネスカレンダーをユーザーに関連付ける方法は 2 つあります。
 
-   **グループメンバーシップ：** ユーザーのグループメンバーシップに基づいて、ユーザーに業務カレンダーを割り当てることができます。この場合、グループ内の各ユーザーは同じ業務カレンダーを使用します。
+   **グループのメンバーシップ：** ユーザーのグループメンバーシップに基づいて、ユーザーに業務カレンダーを割り当てることができます。 この場合、グループ内の各ユーザーは同じ業務カレンダーを使用します。
 
    ユーザーが 2 つの異なるグループのメンバーで、それらのグループが 2 つの異なる業務カレンダーにマッピングされている場合、AEM forms では、検索結果で見つかった最初のカレンダーが使用されます。 この場合、業務カレンダーキーを使用してユーザーを業務カレンダーに関連付けることを検討します。
 
@@ -128,7 +124,7 @@ AEM forms では、業務カレンダーを XML ファイルとして書き出�
 
 >[!NOTE]
 >
->この機能では、AEM forms で提供されるデフォルトの業務カレンダーを含む、定義済みのすべての業務カレンダーの書き出しと読み込みが行われます。 インポートした業務カレンダーが既存のカレンダーと同じ名前である場合、既存のカレンダーは上書きされます。
+>この機能では、AEM forms で提供されるデフォルトの業務カレンダーを含む、定義済みのすべての業務カレンダーの書き出しと読み込みが行われます。 インポートした業務カレンダーは、既存のカレンダーと同じ名前で、既存のカレンダーを上書きします。
 
 ### 業務カレンダーの書き出し {#export-business-calendars}
 

@@ -4,9 +4,9 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4613'
 ht-degree: 67%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 67%
 
    * **we-gov-forms.ui.analytics-&lt;version>.zip** - *リポジトリ内に保存するすべての We.Gov Forms Analytics データが含まれます。*
 
-   * **we-gov-forms.config.public-&lt;version>.zip** - *フォームのデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
+   * **we-gov-forms.config.public-&lt;version>.zip** - *フォームデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
 
 このパッケージのアセットには、次のものが含まれます。
 

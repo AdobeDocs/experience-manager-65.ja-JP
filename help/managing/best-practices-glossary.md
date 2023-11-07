@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '6946'
+source-wordcount: '6945'
 ht-degree: 6%
 
 ---
@@ -102,7 +102,7 @@ Adobeサポートポータルを使用すると、実装パートナーやお客
 
 ### 適切な訓練を受けたスタッフ {#appropriately-trained-staff}
 
-チームが適切なトレーニングを受けたスタッフで構成されていることを確認します。 プロジェクトチームの場合、次のすべてをおこなうことをお勧めします。
+チームが適切なトレーニングを受けたスタッフで構成されていることを確認します。 プロジェクトチームの場合は、次のすべてをおこなうことをお勧めします。
 
 * 少なくとも 1 人の AEM 認定リード開発者
 * 少なくとも 1 人の AEM 認定アーキテクト

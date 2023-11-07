@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '6093'
+source-wordcount: '6092'
 ht-degree: 26%
 
 ---
@@ -405,7 +405,7 @@ Web サイト管理ページを開く、またはポートレットからペー�
 
 ### AEMポートレットアプリケーションのカスタマイズ {#customizing-the-aem-portlet-application}
 
-指定されたAEMポートレットアプリケーションは、AEMと同様に、Web アプリケーション内で OSGi コンテナを開始します。 このアーキテクチャを使用すると、OSGi の次の利点をすべて活用できます。
+指定されたAEMポートレットアプリケーションは、AEMと同様に、Web アプリケーション内で OSGi コンテナを開始します。 このアーキテクチャを使用すると、OSGi の次のすべての利点を活用できます。
 
 * 更新と拡張が容易
 * ポータルサーバーと通信せずに、ポートレットのホットアップデートを実行できる

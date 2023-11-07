@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2320'
+source-wordcount: '2318'
 ht-degree: 35%
 
 ---
@@ -179,7 +179,7 @@ Translator ツールの下部にある検索バーには、文字列選択オプ
    * 変更済み：変更された項目を表示します。
    * 新規：追加された項目を表示します。
    * 削除済み：削除する項目を表示します。
-   * 複数選択：選択したプロパティのすべてを持つ項目を表示します。
+   * 複数選択：選択したすべてのプロパティを持つ項目を表示します。
 
 * **コメントあり**：翻訳者向けのコメントを含む項目を表示します。
 * **翻訳の欠落：**

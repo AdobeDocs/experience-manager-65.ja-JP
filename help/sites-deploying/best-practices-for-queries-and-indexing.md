@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '4602'
+source-wordcount: '4600'
 ht-degree: 59%
 
 ---
@@ -158,7 +158,7 @@ AEM 6.3 では、上記の 2 つのパラメーターは事前に設定されて
 
 Lucene インデックスは Oak 1.0.9 で導入され、AEM 6 の初回起動時に導入されたプロパティインデックスに対して、強力な最適化を提供します。Lucene インデックスまたはプロパティインデックスのどちらを使用するかを決定する際は、次の点を考慮してください。
 
-* Lucene インデックスは、プロパティインデックスよりも多くの機能を提供します。例えば、プロパティインデックスでは 1 つのプロパティにしかインデックスを作成できませんが、Lucene インデックスでは多数のプロパティを含めることができます。Lucene インデックスで使用可能なすべての機能について詳しくは、[ドキュメント](https://jackrabbit.apache.org/oak/docs/query/lucene.html)を参照してください。
+* Lucene インデックスは、プロパティインデックスよりも多くの機能を提供します。例えば、プロパティインデックスでは 1 つのプロパティにしかインデックスを作成できませんが、Lucene インデックスでは多数のプロパティを含めることができます。Lucene インデックスで使用可能なすべての機能について詳しくは、 [ドキュメント](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 * Lucene インデックスは非同期です。パフォーマンスが大幅に向上する一方で、リポジトリにデータが書き込まれるタイミングとインデックスが更新されるタイミングとの間に遅延が生じる場合もあります。クエリが 100％の正確な結果を返すことが重要な場合は、プロパティインデックスが必要です。
 * Lucene インデックスは、非同期式という特性上、一意性制約を適用できません。これが必要な場合は、プロパティインデックスを配置する必要があります。
 

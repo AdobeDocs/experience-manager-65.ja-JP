@@ -2,10 +2,10 @@
 title: Adobe Experience Manager ヘッドレスコンテンツアーキテクトジャーニー
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法を紹介します。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 91%
+source-wordcount: '730'
+ht-degree: 89%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 91%
 
 ![従来のフルスタック CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-フルスタック CMS では、コンテンツを操作する機能はすべて CMS 内にあります。システムの機能は、CMS スタックの異なるコンポーネントを構成します。フルスタックソリューションには多くの利点があります。
+フルスタック CMS では、コンテンツを操作する機能はすべて CMS 内にあります。 システムの機能は、CMS スタックの異なるコンポーネントを構成します。フルスタックソリューションには多くの利点があります。
 
 * 維持管理するシステムは 1 つである。
 * コンテンツを一元的に管理できる。

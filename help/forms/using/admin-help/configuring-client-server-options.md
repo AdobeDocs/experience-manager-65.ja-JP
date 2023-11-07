@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '10229'
+source-wordcount: '10228'
 ht-degree: 23%
 
 ---
@@ -773,7 +773,7 @@ Document Security 設定ファイルで、バックグラウンドでの自動�
 
 クライアントアプリケーションは、Document Security とのリンクを確立しようとすると、アプリケーション、バージョン、プラットフォームの情報を提供します。 Document Security は、この情報を、Document Security 設定ファイルから取得した拒否設定と比較します。
 
-拒否設定には、複数の拒否条件のセットを含めることができます。 1 つのセットのすべての属性が一致する場合、要求元のアプリケーションは Document Security サービスへのアクセスを拒否されます。
+拒否設定には、複数の拒否条件のセットを含めることができます。 いずれかのセットのすべての属性が一致する場合、要求元のアプリケーションは Document Security サービスへのアクセスを拒否されます。
 
 サービス拒否機能を使用するには、クライアントアプリケーションで Document Security C++ Client SDK バージョン 8.2 以降を使用する必要があります。 次のAdobe製品は、Document Security サービスを要求する際に製品情報を提供します。
 

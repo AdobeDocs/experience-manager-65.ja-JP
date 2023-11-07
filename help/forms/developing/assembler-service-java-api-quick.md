@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 306cd40b-1831-45aa-9f58-3ab1983a68c5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 85%
@@ -1640,7 +1640,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
              //Create a Document object
              Document inFragment2Doc = new Document(inFragment2);
  
-             //Place all of the XDP files into the MAP
+             //Place all the XDP files into the MAP
              inputs.put("tuc018_template_flowed.xdp",myMapSource);
              inputs.put("tuc018_contact.xdp",inFragment1Doc);
              inputs.put("tuc018_patient.xdp",inFragment2Doc);

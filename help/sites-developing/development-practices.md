@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 49%
+source-wordcount: '615'
+ht-degree: 44%
 
 ---
 
@@ -60,7 +60,7 @@ Jackalope や Prosper などのカスタムフレームワークを使用して�
 
 ### ボーイスカウトのルールを守る {#follow-the-boy-scout-rule}
 
-ボーイスカウトには、「来たときよりも美しく」というルールがあります。開発チームのメンバー全員がこのルールを守り、散らかっていたらそのままにしないで片付けるようにすると、コードは継続的に改善されます。
+ボーイスカウトには、「来たときよりも美しく」というルールがあります。開発チームのすべてのメンバーがこのルールに従って、混乱が発生したときに何かをクリーンアップする限り、コードは常に改善されます。
 
 ### YAGNI 機能を導入しない {#avoid-implementing-yagni-features}
 

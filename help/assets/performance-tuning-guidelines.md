@@ -6,10 +6,10 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '2740'
-ht-degree: 95%
+source-wordcount: '2739'
+ht-degree: 94%
 
 ---
 
@@ -153,7 +153,7 @@ accessKey=<snip>
 
 ### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
-デフォルトでは、[!DNL Experience Manager] は最大でサーバー上のプロセッサーと同じ数の並列ジョブを実行できます。この設定の問題点は、多くの負荷がかかる期間にはすべてのプロセッサーが「[!UICONTROL DAM アセットの更新]」ワークフローに占有されるので、UI の応答が遅くなり、[!DNL Experience Manager] がサーバーのパフォーマンスや安定性を保護するその他の処理を実行できなくなる点です。次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
+デフォルトでは、[!DNL Experience Manager] は最大でサーバー上のプロセッサーと同じ数の並列ジョブを実行できます。この設定の問題は、負荷が大きい時間帯に、すべてのプロセッサが [!UICONTROL DAM アセットの更新] ワークフロー、UI の応答性の低下と回避 [!DNL Experience Manager] サーバのパフォーマンスと安定性を保護する他のプロセスの実行から 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
 1. [!DNL Experience Manager] オーサー環境に移動し、`https://[aem_server]:[port]/system/console/slingevent` にアクセスします。
 

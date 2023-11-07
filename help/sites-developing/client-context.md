@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 feature: Context Hub
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3001'
-ht-degree: 91%
+source-wordcount: '3000'
+ht-degree: 90%
 
 ---
 
@@ -507,7 +507,7 @@ CQ アプリケーションを作成し、ジオロケーションコンポー�
 
 1. `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` ノードを右クリックして、「コピー」をクリックします。
 1. `/apps/myapp/contextstores/geoloc` ノードを右クリックして、ペーストをクリックします。
-1. /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items ノードの下にある子ノードをすべて削除します。
+1. /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items ノードの下にあるすべての子ノードを削除します。
 
    * store
    * properties

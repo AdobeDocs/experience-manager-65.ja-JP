@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7661'
 ht-degree: 97%
 
 ---
@@ -270,7 +270,7 @@ Configuration Manager は、アプリケーションサーバーにデプロイ�
 
 Configuration Manager を使用すると、Acrobat Reader DC Extensions の資格情報を AEM Forms on JEE の Trust Store にアップロードできます。つまり、リモートプロトコル（SOAP および EJB）経由の Trust Store 資格情報サービスへのアクセスは、デフォルトで有効になっています。このアクセスは、Configuration Manager を使用して使用権限資格情報のアップロードを完了した後、または後で管理コンソールを使用して資格情報を管理することにした場合は、必要なくなります。
 
-[サービスへの不要なリモートアクセスの無効化](https://helpx.adobe.com/jp/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)の節に示されている手順に従って、すべての Trust Store サービスへのリモートアクセスを無効にすることができます。
+の節の手順に従って、すべての Trust Store サービスへのリモートアクセスを無効にできます [サービスへの不要なリモートアクセスの無効化](https://helpx.adobe.com/jp/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services).
 
 **すべての不要な匿名アクセスの無効化**
 
@@ -954,7 +954,7 @@ JEE 上の AEM Forms で必要な WebSphere ポートについて詳しくは、
 
 ### SSL の設定 {#configuring-ssl}
 
-[JEE 上の AEM Forms の物理アーキテクチャ](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)で取り上げている物理アーキテクチャについては、使用するすべての接続に SSL を設定する必要があります。特に すべての SOAP 接続は、ネットワーク上にユーザー資格情報が漏洩されないように、すべて SSL 経由で行う必要があります。
+「 」の節で説明する物理アーキテクチャの参照 [JEE 上のAEM Formsの物理アーキテクチャ](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)を使用する場合は、使用するすべての接続に対して SSL を設定する必要があります。 特に すべての SOAP 接続は、ネットワーク上にユーザー資格情報が漏洩されないように、すべて SSL 経由で行う必要があります。
 
 JBoss、WebLogic および WebSphere 上で SSL を設定する手順については、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_64_jp)の「SSL の設定」を参照してください。
 
