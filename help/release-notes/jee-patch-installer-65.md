@@ -1,6 +1,6 @@
 ---
 title: AEM Forms JEE パッチインストーラー
-description: AEM Forms JEE パッチインストーラーを使用してAEM 6.5 Formsコンポーネントの問題を修正する方法を説明します。
+description: AEM Forms JEE パッチインストーラーを使用して AEM 6.5 Forms コンポーネントの問題を修正する方法について説明します。
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
@@ -8,7 +8,7 @@ exl-id: 6b17472b-9226-4319-b305-4dba862d21af
 source-git-commit: f0b59ff25f49f5ca12bc6966882f68b5231a9511
 workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -33,15 +33,13 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
-   * **Windows**
-
-インストールメディアの適切なディレクトリまたはハードディスク上にあるインストーラーのコピー先フォルダーに移動して、aemforms65_cfp_install.exe ファイルをダブルクリックします。
+   * **Windows** インストールメディアの適切なディレクトリまたはハードディスク上にあるインストーラーのコピー先フォルダーに移動して、aemforms65_cfp_install.exe ファイルをダブルクリックします。
 
       * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-適切なディレクトリに移動し、コマンドプロンプトで次のように入力します。 `./aem65_cfp_install.bin`.
+適切なディレクトリに移動して、コマンドプロンプトで、`./aem65_cfp_install.bin` と入力します。
 
       * （Linux®）`Linux/Disk1/InstData/NoVM`
 
@@ -53,8 +51,8 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
 1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 
-1. **[Windows のみ]:** 次の操作を実行します。
-   * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。実行 **Configuration Manager** を使用して、 **ConfigurationManager.bat** ～にファイルを送る `[aem-forms root]\configurationManager\bin`.
+1. **[Windows のみ]：**&#x200B;次の手順を実行します。
+   * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
    * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルおよび [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルを置き換えてから、**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行します。
 
@@ -72,13 +70,13 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
    * [AEM Forms for JBoss® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [AEM Forms for WebSphere® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
 
-1. (JBoss®のみ ) パッチをインストールしてサーバーを設定した後、JBoss®アプリケーションサーバーの tmp ディレクトリと work ディレクトリを削除します。
+1. （JBoss® のみ）パッチをインストールしてサーバーを設定した後、JBoss® Application Server の tmp および work ディレクトリを削除します。
 
 ## デプロイメント後の設定 {#post-deployment-configurations}
 
 ### SAML の設定 {#saml-configurations}
 
-SAML 認証が設定され、大きな IDP メタデータに関する問題が発生する場合は、パッチをインストールした後に以下の手順を実行します。
+SAML 認証を設定済みで、大きな IDP メタデータに関する問題が発生した場合は、パッチをインストールした後に次の手順を実行します。
 
 1. アプリケーションサーバーで次のシステムプロパティを設定します。\
    `um.saml.enable.large.xml=true`
