@@ -2,10 +2,10 @@
 title: GraphQL クエリの最適化
 description: ヘッドレスコンテンツ配信のためにAdobe Experience Manager as a Cloud Serviceでコンテンツフラグメントをフィルタリング、ページング、並べ替える際に、GraphQLクエリを最適化する方法について説明します。
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 63%
+source-wordcount: '1964'
+ht-degree: 61%
 
 ---
 
@@ -177,10 +177,10 @@ AEM には、GraphQL クエリを最適化する 2 つの方法があります�
 
 大きな結果セットを持つ複雑なクエリの応答時間は、GraphQL標準のページネーションを使用して応答をチャンクにセグメント化することで、改善できます。
 
-AEM の GraphQL では、次の 2 種類のページネーションに対応しています。
+AEMのGraphQLは、次の 2 種類のページネーションをサポートしています。
 
-* [制限／オフセットベースのページネーション](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
-これは、リストクエリに使用されます。これらは次の値で終わります`List`（例：`articleList`）。
+* [制限/オフセットベースのページネーション](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
+これはリストクエリに使用され、次で終わります。 `List`例： `articleList`.
 これを使用するには、最初に返す項目（`offset`）と返す項目の数（`limit` またはページサイズ）を指定する必要があります。
 
 * [カーソルベースのページネーション](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after)（`first` および `after` で表される）

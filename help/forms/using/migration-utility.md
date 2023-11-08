@@ -9,9 +9,9 @@ content-strategy: max-2018
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1734'
 ht-degree: 42%
 
 ---
@@ -27,19 +27,19 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->アウトオブプレースアップグレードの場合、Correspondence Management アセットの場合、アセットを読み込むたびに移行を実行できます。 Correspondence Management を移行するには、Forms互換性パッケージをインストールする必要があります。
+>アウトオブプレースアップグレードがある場合、Correspondence Management アセットの場合、アセットを読み込むたびに移行を実行できます。 Correspondence Management を移行するには、Forms互換性パッケージをインストールする必要があります。
 
 ## 移行のアプローチ {#approach-to-migration}
 
 以下が可能です。 [アップグレード](../../forms/using/upgrade.md) AEM Forms 6.4、6.3、6.2 または 6.2 からAEM Forms 6.5 の最新バージョンにアップグレードするか、新しいインストールに移行します。 以前のインストールをアップグレードしたか、新規インストールを実行したかに応じて、次のいずれかを実行する必要があります。
 
-**インプレースアップグレードの場合**
+**インプレースアップグレードがある場合**
 
 インプレースアップグレードを実行した場合、アップグレードされたインスタンスには既にアセットとドキュメントが含まれています。 ただし、アセットとドキュメントを使用する前に、 [AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) （Correspondence Management 互換性パッケージを含む）
 
 その後、次の方法でアセットとドキュメントを更新する必要があります： [移行ユーティリティの実行](#runningmigrationutility).
 
-**アウトオブプレースインストールの場合**
+**アウトオブプレースインストールがある場合**
 
 アセットとドキュメントを使用する前に、（新規の）インストールを行う場合は、 [AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) （Correspondence Management 互換性パッケージを含む）。
 

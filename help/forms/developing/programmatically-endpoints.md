@@ -1,20 +1,16 @@
 ---
 title: エンドポイントのプログラム管理
-seo-title: Programmatically Managing Endpoints
 description: Endpoint Registry サービスを使用して、EJB エンドポイントの追加、SOAP エンドポイントの追加、監視フォルダーエンドポイントの追加、メールエンドポイントの追加、リモートエンドポイントの追加、Task Manager エンドポイントの追加、エンドポイントの変更、エンドポイントの削除、エンドポイントコネクタ情報の取得を行います。
-seo-description: Use the Endpoint Registry service to add EJB endpoints, add SOAP endpoint, add Watched Folder endpoints, add Email endpoints, add  Remoting endpoints, add Task Manager endpoints, modify endpoints, remove endpoints, and retrieve endpoint connector information.
-uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '10790'
-ht-degree: 98%
+source-wordcount: '10791'
+ht-degree: 83%
 
 ---
 
@@ -124,7 +120,7 @@ Java API を使用して EJB エンドポイントを追加します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。（
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。 （
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -134,21 +130,21 @@ Java API を使用して EJB エンドポイントを追加します。
 1. EJB エンドポイント属性を設定します。
 
    * コンストラクタを使用して `CreateEndpointInfo` オブジェクトを作成します。
-   * `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドを呼び出し、文字列値 `EJB` を渡すことによって、コネクタ識別子の値を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを呼び出し、エンドポイントを説明する文字列値を渡すことによって、エンドポイントの説明を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setName` メソッドを呼び出し、名前を指定する文字列値を渡すことによって、エンドポイントの名前を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを呼び出し、サービス名を指定する文字列値を渡すことによって、エンドポイントが属するサービスを指定します。
-   * `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを呼び出し、操作名を指定する文字列値を渡すことによって、呼び出される操作を指定します。SOAP および EJB エンドポイントの場合は、ワイルドカード文字（`*`）を指定します。これは、すべての操作を示します。
+   * を呼び出して、コネクタ識別子の値を指定します。 `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドと文字列値を渡す `EJB`.
+   * を呼び出して、エンドポイントの説明を指定します。 `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを使用してエンドポイントを表す string 値を渡す方法を示します。
+   * を呼び出して、エンドポイントの名前を指定します。 `CreateEndpointInfo` オブジェクトの `setName` メソッドを使用して、名前を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するサービスを指定します。 `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを使用し、サービス名を指定する string 値を渡す。
+   * を呼び出して呼び出す操作を指定します。 `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを使用して、操作名を指定する string 値を渡します。 SOAP および EJB エンドポイントの場合は、ワイルドカード文字（`*`）を指定します。これは、すべての操作を示します。
 
 1. EJB エンドポイントを作成します。
 
-   `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドを呼び出し、`CreateEndpointInfo` オブジェクトを渡すことによって、エンドポイントを作成します。このメソッドは、新しい EJB エンドポイントを表す `Endpoint` オブジェクトを返します。
+   を呼び出してエンドポイントを作成する `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドおよび `CreateEndpointInfo` オブジェクト。 このメソッドは、新しい EJB エンドポイントを表す `Endpoint` オブジェクトを返します。
 
 1. エンドポイントを有効にします。
 
-   `EndpointRegistryClient` オブジェクトの enable メソッドを呼び出し、`createEndpoint` メソッドによって返された `Endpoint` オブジェクトを渡すことによって、エンドポイントを有効にします。
+   を呼び出してエンドポイントを有効にする `EndpointRegistryClient` オブジェクトの enable メソッドおよび `Endpoint` が返したオブジェクト `createEndpoint` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -229,7 +225,7 @@ Java API を使用して、SOAP エンドポイントをサービスに追加し
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -239,21 +235,21 @@ Java API を使用して、SOAP エンドポイントをサービスに追加し
 1. SOAP エンドポイント属性を設定します。
 
    * コンストラクタを使用して `CreateEndpointInfo` オブジェクトを作成します。
-   * `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドを呼び出し、文字列値 `SOAP` を渡すことによって、コネクタ識別子の値を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを呼び出し、エンドポイントを説明する文字列値を渡すことによって、エンドポイントの説明を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setName` メソッドを呼び出し、名前を指定する文字列値を渡すことによって、エンドポイントの名前を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを呼び出し、サービス名を指定する文字列値を渡すことによって、エンドポイントが属するサービスを指定します。
-   * `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを呼び出し、操作名を指定する文字列値を渡すことによって、呼び出される操作を指定します。SOAP および EJB エンドポイントの場合は、ワイルドカード文字（`*`）を指定します。これは、すべての操作を示します。
+   * を呼び出して、コネクタ識別子の値を指定します。 `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドと文字列値を渡す `SOAP`.
+   * を呼び出して、エンドポイントの説明を指定します。 `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを使用してエンドポイントを表す string 値を渡す方法を示します。
+   * を呼び出して、エンドポイントの名前を指定します。 `CreateEndpointInfo` オブジェクトの `setName` メソッドを使用して、名前を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するサービスを指定します。 `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを使用し、サービス名を指定する string 値を渡す。
+   * を呼び出して呼び出す操作を指定します。 `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを使用して、操作名を指定する string 値を渡す。 SOAP および EJB エンドポイントの場合は、ワイルドカード文字（`*`）を指定します。これは、すべての操作を示します。
 
 1. SOAP エンドポイントを作成します。
 
-   `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドを呼び出し、`CreateEndpointInfo` オブジェクトを渡すことによって、エンドポイントを作成します。このメソッドは、新しい SOAP エンドポイントを表す `Endpoint` オブジェクトを返します。
+   を呼び出してエンドポイントを作成する `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドおよび `CreateEndpointInfo` オブジェクト。 このメソッドは、新しい SOAP エンドポイントを表す `Endpoint` オブジェクトを返します。
 
 1. エンドポイントを有効にします。
 
-   `EndpointRegistryClient` オブジェクトの enable メソッドを呼び出し、`createEndpoint` メソッドによって返された `Endpoint` オブジェクトを渡すことによって、エンドポイントを有効にします。
+   を呼び出してエンドポイントを有効にする `EndpointRegistryClient` オブジェクトの enable メソッドを参照し、 `Endpoint` が返したオブジェクト `createEndpoint` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -271,7 +267,7 @@ AEM Forms Java API を使用して、プログラムによって監視フォル�
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
-このプロセスは、セキュリティで保護されていない PDF ドキュメントを入力値として受け取り、セキュリティで保護されていない PDF ドキュメントを Encryption サービスの `EncryptPDFUsingPassword` 操作に渡します。PDF ドキュメントをパスワードで暗号化し、パスワードで暗号化された PDF ドキュメントはこのプロセスの出力値です。入力値の名前 ( 保護されていない PDF ドキュメント ) は `InDoc`、 データタイプは `com.adobe.idp.Document`です。出力値の名前 ( パスワードで暗号化された PDF ドキュメント ) は `SecuredDoc`、 データタイプは `com.adobe.idp.Document`です。
+このプロセスは、セキュリティで保護されていないPDFドキュメントを入力値として受け取り、セキュリティで保護されていないPDFドキュメントを Encryption サービスの `EncryptPDFUsingPassword` 操作。 PDF ドキュメントをパスワードで暗号化し、パスワードで暗号化された PDF ドキュメントはこのプロセスの出力値です。入力値の名前 ( 保護されていない PDF ドキュメント ) は `InDoc`、 データタイプは `com.adobe.idp.Document`です。出力値の名前 ( パスワードで暗号化された PDF ドキュメント ) は `SecuredDoc`、 データタイプは `com.adobe.idp.Document`です。
 
 >[!NOTE]
 >
@@ -331,7 +327,7 @@ AEM Forms Java API を使用して、プログラムによって監視フォル�
 * **repeatCount**：監視フォルダーがフォルダーまたはディレクトリをスキャンする回数です。値を —1 にすると、無限にスキャンされます。 デフォルト値は -1 です。
 * **throttleOn**：一度に処理できる監視フォルダーのジョブ数を制限します。ジョブの最大数は、batchSize の値によって決まります。
 * **userName**：監視フォルダーからターゲットサービスを呼び出すときに使用されるユーザー名です。この値は必須です。デフォルト値は「SuperAdmin」です。
-* **domainName**：ユーザーのドメインです。この値は必須です。デフォルト値は「DefaultDom」です。
+* **domainName**：ユーザーのドメイン。 この値は必須です。デフォルト値は「DefaultDom」です。
 * **batchSize**：1 回のスキャンで取得されるファイルまたはフォルダーの数です。この値を使用して、システムが過負荷の状態になるのを防ぎます。一度にスキャンするファイル数が多すぎると、クラッシュにつながる可能性があります。デフォルト値は 2 です。
 * **waitTime**：フォルダーまたはファイルを作成してからスキャンするまでに待機する時間（ミリ秒単位）です。例えば、待機時間が 36,000,000 ミリ秒（1 時間）のときにファイルが 1 分前に作成されている場合、59 分以上経過するとこのファイルが取得されます。この属性は、ファイルまたはフォルダーを入力フォルダーにコピーする処理を確実に完了するために役立ちます。例えば、処理の対象となるファイルサイズが大きく、そのファイルをダウンロードするのに 10 分かかる場合は、待機時間を 10 x 60 x 1000 ミリ秒に設定します。このように設定しておけば、監視フォルダーが 10 分間待機せずにファイルをスキャンすることを防げます。デフォルト値は 0 です。
 * **excludeFilePattern**：スキャンおよび取得するファイルとフォルダーを判別する際に監視フォルダーが使用するパターンです。このパターンに当てはまるファイルまたはフォルダーは、スキャン処理の対象外となります。この設定は、複数のファイルが存在するフォルダーが入力に使用される場合に便利です。フォルダーの内容を、監視フォルダーの取得対象となる名前のフォルダーにコピーすることができます。この手順により、入力フォルダーにフォルダーを完全にコピーする前に、監視フォルダーがフォルダーを取得して処理することを回避できます。例えば、excludeFilePattern の値が `data*` であれば、`data*` に一致するファイルとフォルダーはいずれも取得されません。`data1` や `data2` などといった名前のファイルとフォルダーがこれに該当します。また、ワイルドカードパターンをパターンに追加してファイルパターンを指定することもできます。監視フォルダーでは、`*.*` や `*.pdf` などのワイルドカードパターンをサポートするよう、正規表現を変更しました。これらのワイルドカードパターンは、正規表現ではサポートされていません。
@@ -339,7 +335,7 @@ AEM Forms Java API を使用して、プログラムによって監視フォル�
 * **resultFolderName**：保存された結果を格納するフォルダーです。この場所には、絶対ディレクトリパスや相対ディレクトリパスを指定することができます。結果がこのフォルダーに表示されない場合は、失敗フォルダーを確認します。 読み取り専用ファイルは処理されず、失敗フォルダーに保存されます。デフォルト値は `result/%Y/%M/%D/` です。これは、監視フォルダー内の結果フォルダーです。
 * **preserveFolderName**：スキャンとピックアップに成功した後にファイルが保存される場所です。この場所は、絶対パス、相対パス、null ディレクトリパスのいずれかを指定できます。デフォルト値は `preserve/%Y/%M/%D/` です。
 * **failureFolderName**：失敗ファイルが保存されるフォルダーです。この場所は、常に監視フォルダーからの相対パスで指定します。読み取り専用ファイルは処理されず、失敗フォルダーに保存されます。デフォルト値は `failure/%Y/%M/%D/` です。
-* **preserveOnFailure**：サービスで操作の実行に失敗した場合に、入力ファイルを保存します。デフォルト値は true です。
+* **preserveOnFailure**：サービスで操作を実行できなかった場合に、入力ファイルを保持します。 デフォルト値は true です。
 * **overwriteDuplicateFilename**：この値を True に設定すると、結果フォルダーと保存用フォルダーにあるファイルが上書きされます。false 設定すると、ファイルやフォルダーの名前に数字のインデックスサフィックスが使用されます。デフォルト値は false です。
 
 **入力パラメーター値の定義**
@@ -377,7 +373,7 @@ AEM Forms Java API を使用して、プログラムによって監視フォル�
 
 **監視フォルダーエンドポイントの作成**
 
-エンドポイントの属性を設定し、設定値を指定して、さらに入力パラメーターと出力パラメーターの値を定義した後、監視フォルダーエンドポイントを作成する必要があります。
+エンドポイントの属性、設定値を設定し、入力パラメーターと出力パラメーターの値を定義した後、監視フォルダーエンドポイントを作成する必要があります。
 
 **エンドポイントを有効にする**
 
@@ -397,7 +393,7 @@ AEM Forms Java API を使用して、監視フォルダーエンドポイント�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -407,15 +403,15 @@ AEM Forms Java API を使用して、監視フォルダーエンドポイント�
 1. 監視フォルダーエンドポイントの属性を設定します。
 
    * コンストラクターを使用して `CreateEndpointInfo` オブジェクトを作成します。
-   * `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドを呼び出し、文字列値 `WatchedFolder` を渡すことによって、コネクタ識別子の値を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを呼び出し、エンドポイントを説明する文字列値を渡すことによって、エンドポイントの説明を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setName` メソッドを呼び出し、名前を指定する文字列値を渡すことによって、エンドポイントの名前を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを呼び出し、サービス名を指定する文字列値を渡すことによって、エンドポイントが属するサービスを指定します。
-   * `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを呼び出し、操作名を指定する文字列値を渡して、呼び出される操作を指定します。通常、Workbench で作成されたプロセスから生成されたサービスの監視フォルダーエンドポイントを作成する場合、操作名は invoke になります。
+   * を呼び出して、コネクタ識別子の値を指定します。 `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドと文字列値を渡す `WatchedFolder`.
+   * を呼び出して、エンドポイントの説明を指定します。 `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを使用してエンドポイントを表す string 値を渡す方法を示します。
+   * を呼び出して、エンドポイントの名前を指定します。 `CreateEndpointInfo` オブジェクトの `setName` メソッドを使用して、名前を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するサービスを指定します。 `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを使用し、サービス名を指定する string 値を渡す。
+   * を呼び出して呼び出す操作を指定します。 `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを使用して、操作名を指定する string 値を渡す。 通常、Workbench で作成されたプロセスから生成されたサービスの監視フォルダーエンドポイントを作成する場合、操作名は invoke になります。
 
 1. 設定値を指定します。
 
-   監視フォルダーエンドポイントに設定する設定値ごとに、`CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを呼び出す必要があります。例えば、`url` の設定値を設定するには、`CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを呼び出して、以下の文字列値を渡します。
+   設定値ごとに、監視フォルダーエンドポイントに対してを呼び出す必要があります。 `CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッド。 例えば、 `url` 設定値、を呼び出す `CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを使用して、次の文字列値を渡します。
 
    * 設定値の名前を指定する文字列値。`url` 設定値を設定する場合は、`url` を指定します。
    * 設定値の値を指定する文字列値。`url` 設定値を設定するには、監視フォルダーの場所を指定します。
@@ -426,7 +422,7 @@ AEM Forms Java API を使用して、監視フォルダーエンドポイント�
 
 1. 入力パラメーター値を定義します。
 
-   入力パラメーター値を定義するには、`CreateEndpointInfo` オブジェクトの `setInputParameterMapping` メソッドを呼び出し、次の値を渡します。
+   を呼び出して、入力パラメーター値を定義する `CreateEndpointInfo` オブジェクトの `setInputParameterMapping` メソッドを使用して、次の値を渡します。
 
    * 入力パラメーターの名前を指定する文字列値。例えば、EncryptDocument サービスの入力パラメーターの名前は `InDoc` です。
    * 入力パラメーターのデータタイプを指定する文字列値。例えば、`InDoc` 入力パラメーターのデータタイプは `com.adobe.idp.Document` です。
@@ -439,7 +435,7 @@ AEM Forms Java API を使用して、監視フォルダーエンドポイント�
 
 1. 出力パラメーター値を定義します。
 
-   出力パラメーター値を定義するには、`CreateEndpointInfo` オブジェクトの `setOutputParameterMapping` メソッドを呼び出し、以下の値を渡します。
+   を呼び出して、出力パラメーター値を定義する `CreateEndpointInfo` オブジェクトの `setOutputParameterMapping` メソッドを使用して、次の値を渡します。
 
    * 出力パラメーターの名前を指定する文字列値。例えば、EncryptDocument サービスの出力パラメーターの名前は `SecuredDoc` です。
    * 出力パラメーターのデータタイプを指定する文字列値。例えば、`SecuredDoc` 出力パラメーターのデータタイプは `com.adobe.idp.Document` です。
@@ -447,13 +443,13 @@ AEM Forms Java API を使用して、監視フォルダーエンドポイント�
 
 1. 監視フォルダーエンドポイントを作成します。
 
-   エンドポイントを作成するには、`EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドを呼び出し、`CreateEndpointInfo` オブジェクトを渡します。このメソッドは、 監視フォルダーエンドポイントを表す `Endpoint` オブジェクトを返します。
+   を呼び出してエンドポイントを作成する `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドおよび `CreateEndpointInfo` オブジェクト。 このメソッドは、 監視フォルダーエンドポイントを表す `Endpoint` オブジェクトを返します。
 
 1. エンドポイントを有効にします。
 
-   エンドポイントを有効にするには、`EndpointRegistryClient` オブジェクトの `enable` メソッドを呼び出し、`createEndpoint` メソッドによって返された `Endpoint` オブジェクトを渡します。
+   を呼び出してエンドポイントを有効にする `EndpointRegistryClient` オブジェクトの `enable` メソッドおよび `Endpoint` が返したオブジェクト `createEndpoint` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -504,7 +500,7 @@ AEM Forms Java API を使用して、プログラムによってメールエン�
 
 ![ae_ae_encryptdocumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
-このプロセスは、セキュリティで保護されていない PDF ドキュメントを入力値として受け取り、セキュリティで保護されていない PDF ドキュメントを Encryption サービスの `EncryptPDFUsingPassword` 操作に渡します。このプロセスは、PDF ドキュメントをパスワードで暗号化し、パスワードで暗号化された PDF ドキュメントを出力値として返します。入力値の名前（保護されていない PDF ドキュメント）は `InDoc`、データタイプは `com.adobe.idp.Document` です。出力値の名前（パスワードで暗号化された PDF ドキュメント）は `SecuredDoc`、データタイプは `com.adobe.idp.Document` です。
+このプロセスは、セキュリティで保護されていないPDFドキュメントを入力値として受け取り、セキュリティで保護されていないPDFドキュメントを Encryption サービスの `EncryptPDFUsingPassword` 操作。 このプロセスは、PDF ドキュメントをパスワードで暗号化し、パスワードで暗号化された PDF ドキュメントを出力値として返します。入力値の名前（保護されていない PDF ドキュメント）は `InDoc`、データタイプは `com.adobe.idp.Document` です。出力値の名前（パスワードで暗号化された PDF ドキュメント）は `SecuredDoc`、データタイプは `com.adobe.idp.Document` です。
 
 >[!NOTE]
 >
@@ -556,7 +552,7 @@ AEM Forms Java API を使用して、プログラムによってメールエン�
 
 >[!NOTE]
 >
->監視対象のメールアカウントは、メールエンドポイントにのみ使用される専用のアカウントです。このアカウントは通常のユーザーのメールアカウントではありません。通常のユーザーのメールアカウントは、メールプロバイダーが使用するアカウントとして設定してはいけません。これはメッセージの処理が完了すると、メールプロバイダーがインボックスからメッセージを削除するためです。
+>監視対象のメールアカウントは、メールエンドポイントにのみ使用される専用のアカウントです。このアカウントは通常のユーザーのメールアカウントではありません。通常のユーザーの電子メールアカウントは、電子メールプロバイダーが使用するアカウントとして設定してはいけません。電子メールプロバイダーは、メッセージの使用が完了した後で、インボックスから電子メールメッセージを削除します。
 
 メールエンドポイントをサービスにプログラム的に追加する際に、次の設定値が設定されます。
 
@@ -642,7 +638,7 @@ Java API を使用してメールエンドポイントを追加します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -652,15 +648,15 @@ Java API を使用してメールエンドポイントを追加します。
 1. メールエンドポイント属性を設定します。
 
    * コンストラクタを使用して `CreateEndpointInfo` オブジェクトを作成します。
-   * `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドを呼び出し、文字列値 `Email` を渡すことによって、コネクタ識別子の値を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを呼び出し、エンドポイントを説明する文字列値を渡すことによって、エンドポイントの説明を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setName` メソッドを呼び出し、名前を指定する文字列値を渡すことによって、エンドポイントの名前を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを呼び出し、サービス名を指定する文字列値を渡すことによって、エンドポイントが属するサービスを指定します。
-   * 呼び出す操作を指定するには、`CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを呼び出し、操作名を指定する文字列値を渡します。通常、Workbench で作成されたプロセスから派生するサービスのメールエンドポイントを作成する場合、操作の名前は「呼び出し」になります。
+   * を呼び出して、コネクタ識別子の値を指定します。 `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドと文字列値を渡す `Email`.
+   * を呼び出して、エンドポイントの説明を指定します。 `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを使用してエンドポイントを表す string 値を渡す方法を示します。
+   * を呼び出して、エンドポイントの名前を指定します。 `CreateEndpointInfo` オブジェクトの `setName` メソッドを使用して、名前を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するサービスを指定します。 `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを使用し、サービス名を指定する string 値を渡す。
+   * を呼び出して呼び出す操作を指定します。 `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを使用して、操作名を指定する string 値を渡す。 通常、Workbench で作成されたプロセスから派生するサービスのメールエンドポイントを作成する場合、操作の名前は「呼び出し」になります。
 
 1. 設定値を指定します。
 
-   メールエンドポイントに設定する設定値ごとに、`CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを呼び出す必要があります。例えば、`smtpHost` 設定値を設定するには、`CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを呼び出して、次の値を渡します。
+   電子メールエンドポイントに設定する設定値ごとに、 `CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッド。 例えば、 `smtpHost` 設定値、を呼び出す `CreateEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを使用して、次の値を渡します。
 
    * 設定値の名前を指定する文字列値。`smtpHost` 設定値を設定する場合は、`smtpHost` を指定します。
    * 設定値の値を指定する文字列値。`smtpHost` 設定値を設定する場合は、SMTP サーバーの名前を指定する文字列値を指定します。
@@ -671,7 +667,7 @@ Java API を使用してメールエンドポイントを追加します。
 
 1. 入力パラメーター値を定義します。
 
-   入力パラメーター値を定義するには、`CreateEndpointInfo` オブジェクトの `setInputParameterMapping` メソッドを呼び出し、次の値を渡します。
+   を呼び出して、入力パラメーター値を定義する `CreateEndpointInfo` オブジェクトの `setInputParameterMapping` メソッドを使用して、次の値を渡します。
 
    * 入力パラメーターの名前を指定する文字列値。例えば、EncryptDocument サービスの入力パラメーターの名前は `InDoc` です。
    * 入力パラメーターのデータタイプを指定する文字列値。例えば、`InDoc` 入力パラメーターのデータタイプは `com.adobe.idp.Document` です。
@@ -684,7 +680,7 @@ Java API を使用してメールエンドポイントを追加します。
 
 1. 出力パラメーター値を定義します。
 
-   出力パラメーター値を定義するには、`CreateEndpointInfo` オブジェクトの `setOutputParameterMapping` メソッドを呼び出し、次の値を渡します。
+   を呼び出して、出力パラメーター値を定義する `CreateEndpointInfo` オブジェクトの `setOutputParameterMapping` メソッドを使用して、次の値を渡します。
 
    * 出力パラメーターの名前を指定する文字列値。例えば、EncryptDocument サービスの出力パラメーターの名前は `SecuredDoc` です。
    * 出力パラメーターのデータタイプを指定する文字列値。例えば、`SecuredDoc` 出力パラメーターのデータタイプは `com.adobe.idp.Document` です。
@@ -692,13 +688,13 @@ Java API を使用してメールエンドポイントを追加します。
 
 1. メールエンドポイントを作成します。
 
-   エンドポイントを作成するには、`EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドを呼び出し、`CreateEndpointInfo` オブジェクトを渡します。このメソッドは、メールエンドポイントを表す `Endpoint` オブジェクトを返します。
+   を呼び出してエンドポイントを作成する `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドおよび `CreateEndpointInfo` オブジェクト。 このメソッドは、メールエンドポイントを表す `Endpoint` オブジェクトを返します。
 
 1. エンドポイントを有効にします。
 
-   エンドポイントを有効にするには、`EndpointRegistryClient` オブジェクトの `enable` メソッドを呼び出し、`createEndpoint` メソッドによって返された `Endpoint` オブジェクトを渡します。
+   を呼び出してエンドポイントを有効にする `EndpointRegistryClient` オブジェクトの `enable` メソッドおよび `Endpoint` が返したオブジェクト `createEndpoint` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -760,7 +756,7 @@ AEM Forms Java API を使用して、プログラムによってリモートエ�
 
 ![ar_ar_encryptdocumentprocess](assets/ar_ar_encryptdocumentprocess.png)
 
-このプロセスは、入力値として非暗号化 PDF ドキュメントを受け取り、暗号化サービスの`EncryptPDFUsingPassword`操作に非暗号化 PDF ドキュメントを渡します。PDF ドキュメントをパスワードで暗号化し、パスワードで暗号化された PDF ドキュメントはこのプロセスの出力値です。入力値の名前 ( 保護されていない PDF ドキュメント ) は `InDoc`、 データタイプは `com.adobe.idp.Document`です。出力値（パスワードで暗号化された PDF ドキュメント）の名前は `SecuredDoc`、データタイプは `com.adobe.idp.Document` です。
+このプロセスは、セキュリティで保護されていないPDFドキュメントを入力値として受け取り、セキュリティで保護されていないPDFドキュメントを Encryption サービスの `EncryptPDFUsingPassword` 操作。 PDF ドキュメントをパスワードで暗号化し、パスワードで暗号化された PDF ドキュメントはこのプロセスの出力値です。入力値の名前 ( 保護されていない PDF ドキュメント ) は `InDoc`、 データタイプは `com.adobe.idp.Document`です。出力値（パスワードで暗号化された PDF ドキュメント）の名前は `SecuredDoc`、データタイプは `com.adobe.idp.Document` です。
 
 サービスにリモートエンドポイントを追加する方法を示すために、このセクションでは EncryptDocument という名前のサービスにリモートエンドポイントを追加します。
 
@@ -827,7 +823,7 @@ Java API を使用してリモートエンドポイントを追加します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -837,21 +833,21 @@ Java API を使用してリモートエンドポイントを追加します。
 1. リモートエンドポイントの属性を設定します。
 
    * コンストラクターを使用して `CreateEndpointInfo` オブジェクトを作成します。
-   * `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドを呼び出し、文字列値 `Remoting` を渡すことによって、コネクタ識別子の値を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを呼び出し、エンドポイントを説明する文字列値を渡すことによって、エンドポイントの説明を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setName` メソッドを呼び出し、名前を指定する文字列値を渡すことによって、エンドポイントの名前を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを呼び出し、サービス名を指定する文字列値を渡すことによって、エンドポイントが属するサービスを指定します。
-   * `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを呼び出し、操作名を指定する文字列値を渡すことによって、操作を指定します。リモートエンドポイントの場合は、ワイルドカード文字（&amp;ast;）を指定します。
+   * を呼び出して、コネクタ識別子の値を指定します。 `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドと文字列値を渡す `Remoting`.
+   * を呼び出して、エンドポイントの説明を指定します。 `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを使用してエンドポイントを表す string 値を渡す方法を示します。
+   * を呼び出して、エンドポイントの名前を指定します。 `CreateEndpointInfo` オブジェクトの `setName` メソッドを使用して、名前を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するサービスを指定します。 `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを使用し、サービス名を指定する string 値を渡す。
+   * によって呼び出される操作を指定します。 `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを使用して、操作名を指定する string 値を渡す。 リモートエンドポイントの場合は、ワイルドカード文字（&amp;ast;）を指定します。
 
 1. リモートエンドポイントを作成します。
 
-   `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドを呼び出し、`CreateEndpointInfo` オブジェクトを渡すことによって、エンドポイントを作成します。このメソッドは、新しいリモートエンドポイントを表す `Endpoint` オブジェクトを返します。
+   を呼び出してエンドポイントを作成する `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドおよび `CreateEndpointInfo` オブジェクト。 このメソッドは、新しいリモートエンドポイントを表す `Endpoint` オブジェクトを返します。
 
 1. エンドポイントを有効にします。
 
-   エンドポイントを有効にするには、`EndpointRegistryClient` オブジェクトの `enable` メソッドを呼び出し、`createEndpoint` メソッドによって返された `Endpoint` オブジェクトを渡します。
+   を呼び出してエンドポイントを有効にする `EndpointRegistryClient` オブジェクトの `enable` メソッドおよび `Endpoint` が返したオブジェクト `createEndpoint` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -938,7 +934,7 @@ Java API を使用して TaskManager エンドポイントを追加します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -952,27 +948,27 @@ Java API を使用して TaskManager エンドポイントを追加します。
       * カテゴリの識別子の値を指定する文字列値
       * カテゴリの説明を指定する文字列値
 
-   * カテゴリを作成するには、`EndpointRegistryClient` オブジェクトの `createEndpointCategory` メソッドを呼び出し、`CreateEndpointCategoryInfo` オブジェクトを渡します。このメソッドは、新しいカテゴリを表す `EndpointCategory` オブジェクトを返します。
+   * を呼び出して、カテゴリを作成します。 `EndpointRegistryClient` オブジェクトの `createEndpointCategory` メソッドおよび `CreateEndpointCategoryInfo` オブジェクト。 このメソッドは、新しいカテゴリを表す `EndpointCategory` オブジェクトを返します。
 
 1. TaskManager エンドポイント属性を設定します。
 
    * コンストラクターを使用して `CreateEndpointInfo` オブジェクトを作成します。
-   * `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドを呼び出し、文字列値 `TaskManagerConnector` を渡すことによって、コネクタ識別子の値を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを呼び出し、エンドポイントを説明する文字列値を渡すことによって、エンドポイントの説明を指定します。
-   * `CreateEndpointInfo` オブジェクトの `setName` メソッドを呼び出し、名前を指定する文字列値を渡すことによって、エンドポイントの名前を指定します。
-   * エンドポイントが属するサービスを指定するには、`CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを呼び出し、サービス名を指定する文字列値を渡します。
-   * エンドポイントが属するカテゴリを指定するには、`CreateEndpointInfo` オブジェクトの `setCategoryId` メソッドを呼び出し、カテゴリ識別子の値を指定する文字列値を渡します。`EndpointCategory` オブジェクトの `getId` メソッドを呼び出すと、このカテゴリの識別子の値を取得できます。
-   * 呼び出す操作を指定するには、`CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを呼び出し、操作名を指定する文字列値を渡します。通常、Workbench で作成したプロセスから派生するサービスの `TaskManager` エンドポイントで、操作の名前は `invoke` です。
+   * を呼び出して、コネクタ識別子の値を指定します。 `CreateEndpointInfo` オブジェクトの `setConnectorId` メソッドと文字列値を渡す `TaskManagerConnector`.
+   * を呼び出して、エンドポイントの説明を指定します。 `CreateEndpointInfo` オブジェクトの `setDescription` メソッドを使用してエンドポイントを表す string 値を渡す方法を示します。
+   * を呼び出して、エンドポイントの名前を指定します。 `CreateEndpointInfo` オブジェクトの `setName` メソッドを使用して、名前を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するサービスを指定します。 `CreateEndpointInfo` オブジェクトの `setServiceId` メソッドを使用し、サービス名を指定する string 値を渡す。
+   * を呼び出して、エンドポイントが属するカテゴリを指定します。 `CreateEndpointInfo` オブジェクトの `setCategoryId` メソッドを使用して、カテゴリ識別子の値を指定する string 値を渡す。 を呼び出すことができます。 `EndpointCategory` オブジェクトの `getId` メソッドを使用して、このカテゴリの識別子の値を取得します。
+   * を呼び出して呼び出す操作を指定します。 `CreateEndpointInfo` オブジェクトの `setOperationName` メソッドを使用して、操作名を指定する string 値を渡す。 通常、Workbench で作成したプロセスから派生するサービスの `TaskManager` エンドポイントで、操作の名前は `invoke` です。
 
 1. TaskManager エンドポイントを作成します。
 
-   エンドポイントを作成するには、`EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドを呼び出し、`CreateEndpointInfo` オブジェクトを渡します。このメソッドは、新しい TaskManager エンドポイントを表す `Endpoint` オブジェクトを返します。
+   を呼び出してエンドポイントを作成する `EndpointRegistryClient` オブジェクトの `createEndpoint` メソッドおよび `CreateEndpointInfo` オブジェクト。 このメソッドは、新しい TaskManager エンドポイントを表す `Endpoint` オブジェクトを返します。
 
 1. エンドポイントを有効にします。
 
-   エンドポイントを有効にするには、`EndpointRegistryClient` オブジェクトの `enable` メソッドを呼び出し、`createEndpoint` メソッドによって返された `Endpoint` オブジェクトを渡します。
+   を呼び出してエンドポイントを有効にする `EndpointRegistryClient` オブジェクトの `enable` メソッドおよび `Endpoint` が返したオブジェクト `createEndpoint` メソッド。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -1050,7 +1046,7 @@ Java API を使用してエンドポイントを変更します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -1059,22 +1055,22 @@ Java API を使用してエンドポイントを変更します。
 
 1. 変更するエンドポイントを取得します。
 
-   *  `EndpointRegistryClient` オブジェクトの `getEndpoints` メソッドを呼び出してフィルターとして動作する `PagingFilter` オブジェクトを渡し、現在のユーザー（接続プロパティで指定）がアクセスできるすべてのエンドポイントのリストを取得します。`(PagingFilter)null` 値を指定して、すべてのエンドポイントを返します。このメソッドは、各要素が `Endpoint` オブジェクトである `java.util.List` オブジェクトを返します。`PagingFilter` オブジェクトの情報は、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
+   * を呼び出して、現在のユーザー（接続プロパティで指定）がアクセスできるすべてのエンドポイントのリストを取得します。 `EndpointRegistryClient` オブジェクトの `getEndpoints` メソッドと `PagingFilter` オブジェクトを指定します。 `(PagingFilter)null` 値を指定して、すべてのエンドポイントを返します。このメソッドは、各要素が `Endpoint` オブジェクトである `java.util.List` オブジェクトを返します。`PagingFilter` オブジェクトの情報は、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
    * `java.util.List` オブジェクトを反復処理して、エンドポイントがあるかどうかを判断します。エンドポイントが存在する場合、各要素は `EndPoint` インスタンスです。
-   *  `EndPoint` オブジェクトの `getServiceId` メソッドを呼び出して、エンドポイントに対応するサービスを判断します。このメソッドは、サービス名を指定する文字列値を返します。
-   * `EndPoint` オブジェクトの `getConnectorId` メソッドを呼び出して、エンドポイントのタイプを特定します。このメソッドは、エンドポイントのタイプを指定する文字列値を返します。例えば、エンドポイントが監視フォルダーエンドポイントの場合、このメソッドは `WatchedFolder` を返します。
+   * を呼び出して、エンドポイントに対応するサービスを判断する `EndPoint` オブジェクトの `getServiceId` メソッド。 このメソッドは、サービス名を指定する文字列値を返します。
+   * を呼び出して、エンドポイントのタイプを決定します。 `EndPoint` オブジェクトの `getConnectorId` メソッド。 このメソッドは、エンドポイントのタイプを指定する文字列値を返します。例えば、エンドポイントが監視フォルダーエンドポイントの場合、このメソッドは `WatchedFolder` を返します。
 
 1. 新しい設定値を指定します。
 
    * コンストラクターを使用して `ModifyEndpointInfo` オブジェクトを作成します。
-   * 設定する設定値ごとに、 `ModifyEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを呼び出します。例えば、URL 設定値を設定するには、`ModifyEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを呼び出して、次の値を渡します。
+   * 設定する設定値ごとに、 `ModifyEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッド。 例えば、URL 設定値を設定するには、 `ModifyEndpointInfo` オブジェクトの `setConfigParameterAsText` メソッドを使用して、次の値を渡します。
 
       * 設定値の名前を指定する文字列値。例えば、 `url` 構成値を設定するには、`url` を指定します。
       * 設定値の値を指定する文字列値。`url` 設定値の値を定義するには、監視フォルダーの場所を指定します。
 
-   * `EndpointRegistryClient` オブジェクトの `modifyEndpoint` メソッドを呼び出し、`ModifyEndpointInfo` オブジェクトを渡します。
+   * `EndpointRegistryClient` オブジェクトの `modifyEndpoint` メソッドを呼び出し、`ModifyEndpointInfo` オブジェクトを渡します
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -1144,7 +1140,7 @@ Java API を使用してエンドポイントを削除します。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. EndpointRegistry クライアントオブジェクトを作成します。
 
@@ -1153,16 +1149,16 @@ Java API を使用してエンドポイントを削除します。
 
 1. 削除するエンドポイントを取得します。
 
-   * `EndpointRegistryClient` オブジェクトの `getEndpoints` メソッドを呼び出してフィルターとして動作する `PagingFilter` オブジェクトを渡し、現在のユーザー（接続プロパティで指定）がアクセス権を持つすべてのエンドポイントのリストを取得します。`(PagingFilter)null` を渡して、すべてのエンドポイントを返します。このメソッドは、各要素が `Endpoint` オブジェクトである `java.util.List` オブジェクトを返します。
+   * を呼び出して、現在のユーザー（接続プロパティで指定）がアクセス権を持つすべてのエンドポイントのリストを取得します。 `EndpointRegistryClient` オブジェクトの `getEndpoints` メソッドと `PagingFilter` オブジェクトを指定します。 `(PagingFilter)null` を渡して、すべてのエンドポイントを返します。このメソッドは、各要素が `Endpoint` オブジェクトである `java.util.List` オブジェクトを返します。
    * `java.util.List` オブジェクトを反復処理して、エンドポイントがあるかどうかを判断します。エンドポイントが存在する場合、各要素は `EndPoint` インスタンスです。
-   * `EndPoint` オブジェクトの `getServiceId` メソッドを呼び出して、エンドポイントに対応するサービスを特定します。このメソッドは、サービス名を指定する文字列値を返します。
-   * `EndPoint` オブジェクトの `getConnectorId` メソッドを呼び出して、エンドポイントのタイプを特定します。このメソッドは、エンドポイントのタイプを指定する文字列値を返します。例えば、エンドポイントが EJB エンドポイントである場合、このメソッドは `EJB` を返します。
+   * を呼び出して、エンドポイントに対応するサービスを判断する `EndPoint` オブジェクトの `getServiceId` メソッド。 このメソッドは、サービス名を指定する文字列値を返します。
+   * を呼び出して、エンドポイントのタイプを決定します。 `EndPoint` オブジェクトの `getConnectorId` メソッド。 このメソッドは、エンドポイントのタイプを指定する文字列値を返します。例えば、エンドポイントが EJB エンドポイントである場合、このメソッドは `EJB` を返します。
 
 1. エンドポイントを削除します。
 
-   `EndpointRegistryClient` オブジェクトの `remove` メソッドを呼び出し、削除するエンドポイントを表す `EndPoint` オブジェクトを渡すことで、エンドポイントを削除することができます。
+   を呼び出してエンドポイントを削除する `EndpointRegistryClient` オブジェクトの `remove` メソッドおよび `EndPoint` 削除するエンドポイントを表すオブジェクト。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](programmatically-endpoints.md#summary-of-steps)
 
@@ -1241,7 +1237,7 @@ Java API を使用して、エンドポイントコネクターの情報を取�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-livecycle-client.jar などのクライアント JAR ファイルを含めます。
 
 1. ConnectorRegistry クライアントオブジェクトを作成します。
 
@@ -1250,12 +1246,12 @@ Java API を使用して、エンドポイントコネクターの情報を取�
 
 1. コネクタタイプを指定します。
 
-   `ConnectorRegistryClient` オブジェクトの `getEndpointDefinition` メソッドを呼び出して、コネクタータイプを指定する文字列値を渡し、コネクタータイプを指定します。例えば、監視フォルダーのコネクタータイプを指定するには、文字列値 `WatchedFolder` を渡します。このメソッドは、コネクタタイプに対応する `Endpoint` オブジェクトを返します。
+   を呼び出して、コネクタのタイプを指定します。 `ConnectorRegistryClient` オブジェクトの `getEndpointDefinition` メソッドを使用して、コネクタの種類を指定する string 値を渡します。 例えば、監視フォルダーのコネクタータイプを指定するには、文字列値 `WatchedFolder` を渡します。このメソッドは、コネクタタイプに対応する `Endpoint` オブジェクトを返します。
 
 1. 設定値を取得します。
 
-   * `Endpoint` オブジェクトの `getConfigParameters` メソッドを呼び出して、このエンドポイント内で関連付けられている設定値を取得します。このメソッドは、 `ConfigParameter` オブジェクトの配列を返します。
-   * 配列内の各要素を取得して、各設定値に関する情報を取得します。各要素は `ConfigParameter` オブジェクトです。例えば、設定値が必須かオプションかを、`ConfigParameter` オブジェクトの `isRequired` メソッドを呼び出して特定できます。設定値が必要な場合、このメソッドは `true` を返します。
+   * を呼び出して、このエンドポイント内で関連付けられている設定値を取得します。 `Endpoint` オブジェクトの `getConfigParameters` メソッド。 このメソッドは、 `ConfigParameter` オブジェクトの配列を返します。
+   * 配列内の各要素を取得して、各設定値に関する情報を取得します。各要素は `ConfigParameter` オブジェクトです。例えば、設定値が必須かオプションかを、 `ConfigParameter` オブジェクトの `isRequired` メソッド。 設定値が必要な場合、このメソッドは `true` を返します。
 
 **関連トピック**
 

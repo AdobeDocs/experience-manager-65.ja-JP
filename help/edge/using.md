@@ -2,9 +2,9 @@
 title: 使用Edge Delivery Services
 description: Edge Delivery Services(EDS) の使用
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '608'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Edge 配信を利用すると、オーサリングが簡単で迅速で柔軟な
 * ドキュメントベースのオーサリング (Microsoft Word やGoogleドキュメントなど ) - [詳しくは、このリンクを参照してください。](https://www.hlx.live/docs/authoring).
 * ページエディター/ユニバーサルエディター — 担当のAdobe営業にお問い合わせください。
 
-ドキュメントベースのオーサリングの場合、Microsoft Word やGoogle Docs など、様々なソースを使用できます。 これらのソースからのドキュメントは、Web サイト上のページになります。 見出し、リスト、画像、フォント要素、ビデオはすべて、初期ソースから Web サイトに転送できます。 SEO 用にメタデータを追加したり、ブロックを使用して構造化コンテンツを操作したり、機能を追加したりできます。
+ドキュメントベースのオーサリングがある場合は、Microsoft Word やGoogle Docs など、様々なソースを使用できます。 これらのソースからのドキュメントは、Web サイト上のページになります。 見出し、リスト、画像、フォント要素、ビデオはすべて、初期ソースから Web サイトに転送できます。 SEO 用にメタデータを追加したり、ブロックを使用して構造化コンテンツを操作したり、機能を追加したりできます。
 
 ## 公開 {#publishing-edge}
 

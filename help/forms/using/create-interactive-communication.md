@@ -1,19 +1,15 @@
 ---
 title: インタラクティブ通信の作成
-seo-title: Create an Interactive Communication
 description: インタラクティブ通信エディタを使用してインタラクティブ通信を作成します。 ドラッグ&ドロップ機能を使用してインタラクティブ通信を作成し、異なる種類のデバイスで印刷出力と Web 出力の両方をプレビューします。
-seo-description: Create an Interactive Communication using the Interactive Communication editor. Use drag-and-drop functionality to build the Interactive Communication, and preview both print and web outputs on different device types.
-uuid: d524a3de-00b4-444f-b3c7-be443fa24ec8
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6168'
-ht-degree: 89%
+source-wordcount: '6163'
+ht-degree: 88%
 
 ---
 
@@ -141,7 +137,7 @@ ht-degree: 89%
 
 さらに、これらの要素の上にマウスを置くと、連結されていないフィールドや変数のメッセージがツールヒントに表示されます。
 
-ドキュメントフラグメントで使用される非連結の変数は、オーサリングインターフェイスに表示されない場合があります。これは、ドキュメントフラグメント内のインラインテキストルールが原因であるか、または条件フラグメントの場合に発生する可能性があります。このような場合、青色で強調表示されたツールヒントがドキュメントフラグメントの一部として表示されます。ドキュメントフラグメント内で使用されている、非連結変数の数がツールヒントに表示されます。
+ドキュメントフラグメントで使用される非連結の変数は、オーサリングインターフェイスに表示されない場合があります。この問題は、ドキュメントフラグメント内のインラインテキストルールが原因で発生する場合や、条件フラグメントが存在する場合に発生する可能性があります。 このような場合、青色で強調表示されたツールヒントがドキュメントフラグメントの一部として表示されます。ドキュメントフラグメント内で使用されている、非連結変数の数がツールヒントに表示されます。
 
 ![非連結変数](assets/df_unbound_variable_new.png)
 
@@ -199,7 +195,7 @@ ht-degree: 89%
    | パネル | 次の項目を追加できます。 [パネル](../../forms/using/create-interactive-communication.md#add-panel-component-to-the-web-channel) をインタラクティブ通信に追加します。 |
    | テーブル | 行と列にデータを整理できるテーブルを追加します。 |
    | ターゲット領域 | Web チャネルにターゲット領域を挿入して、Web チャネル固有のコンポーネントを整理します。 ターゲット領域は、Web チャネル固有のコンポーネントをグループ化できるプレーンコンテナです。 |
-   | テキスト | インタラクティブ通信の Web チャネルにリッチテキストを追加します。 また、テキストでは、フォームデータモデルオブジェクトを使用して、コンテンツを動的にすることもできます。 |
+   | テキスト | インタラクティブ通信の Web チャネルにリッチテキストを追加します。 テキストでは、フォームデータモデルオブジェクトを使用して、コンテンツを動的にすることもできます。 |
    | ボタン | 次の項目を追加できます。 [ボタン](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) をインタラクティブ通信に追加します。 ボタンコンポーネントを使用すると、別のインタラクティブ通信、アダプティブフォーム、その他のアセット（画像やドキュメントフラグメントなど）、または外部 URL に移動することができます。 |
    | 区切り文字 | インタラクティブ通信内に横線を挿入できます。 このコンポーネントは、通信内のセクションを区切るために使用します。例えば、セパレーターコンポーネントを使用して、クレジットカード明細書の顧客情報セクションとクレジットカード詳細情報セクションを区切ることができます。 |
 
@@ -562,7 +558,7 @@ Web チャネルで、コンポーネントの継承をキャンセルした場�
 
 ### 同期 {#synchronize-1}
 
-Web チャネルのマスターとして印刷チャネルを使用している場合は、印刷チャネルを変更すると、その内容が同期され、新規の変更を web チャネルに反映させることができます。
+Web チャネルのマスターとして印刷を使用し、印刷チャネルを変更する場合は、コンテンツを同期して新しく変更した内容を Web チャネルに取り込むことができます。
 
 1. Web チャネルを印刷チャネルと同期するには、web チャネルを切り替えて「詳細オプション」アイコンをタップします。
 

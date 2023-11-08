@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2623'
 ht-degree: 18%
@@ -27,7 +27,7 @@ ht-degree: 18%
 
 ## 電子メールの設定 {#configuring-email-settings}
 
-forms サーバーの電子メールアカウントを指定し、この電子メールアカウントを使用してAEM forms のユーザーおよび管理者に電子メールメッセージを送信できます。 これらの電子メールメッセージは、完了する必要があるタスクをユーザーに通知し、期限に達したタスクをユーザーに通知し、発生したプロセスエラーを管理者に通知するために使用されます。
+Forms Server の電子メールアカウントを指定し、この電子メールアカウントを使用して、AEM forms のユーザーおよび管理者に電子メールメッセージを送信できます。 これらの電子メールメッセージは、完了する必要があるタスクをユーザーに通知し、期限に達したタスクをユーザーに通知し、発生したプロセスエラーを管理者に通知するために使用されます。
 
 AEM forms とユーザーの間で電子メールメッセージを送信できるようにするには、電子メールの設定ページで、送信電子メールを設定します。 送信メールは SMTP サーバーを使用する必要があります。
 
@@ -288,7 +288,7 @@ BAM の構成設定ページで、BAM を実行するサーバーへの接続を
 1. 管理コンソールで、サービス/Formsワークフロー/サーバー設定/BAM 構成設定をクリックします。
 1. 「BAM ホスト」ボックスに、BAM を実行するサーバーの名前を入力します。 デフォルトは localhost です。
 1. 「BAM ポート」ボックスに、BAM を実行するサーバーへの接続に使用するポートを入力します。 JBoss のデフォルトの BAM ポートは 8080、WebLogic は 7001、WebSphere は 9080 です。
-1. 「サーバーホスト」ボックスに、ホスト forms サーバーの名前または IP アドレスを入力します。 デフォルト値は localhost です。
-1. 「サーバーポート」ボックスに、forms サーバーが使用するポート番号を入力します。
+1. 「サーバーホスト」ボックスに、ホストForms Server の名前または IP アドレスを入力します。 デフォルト値は localhost です。
+1. 「 Server Port 」ボックスに、Forms Server で使用するポート番号を入力します。
 1. 「ユーザー名」ボックスと「パスワード」ボックスに、BAM サーバーにアクセスする適切なユーザー ID とパスワードを入力します。 デフォルトのユーザー名は CognosNowAdmin で、デフォルトのパスワードは manager です。
 1. 「保存」をクリックします。

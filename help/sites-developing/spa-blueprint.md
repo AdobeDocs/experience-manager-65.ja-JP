@@ -6,9 +6,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2075'
 ht-degree: 95%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 ## はじめに {#introduction}
 
-このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある一般的な契約 (AEMサポートレイヤーの種類など ) について説明します。
+このドキュメントでは、AEM内に編集可能なSPAコンポーネントを実装するためにSPAフレームワークが満たす必要がある一般的な契約 (AEMサポートレイヤーの種類 ) について説明します。
 
 >[!NOTE]
 >

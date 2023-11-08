@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 62%
+source-wordcount: '635'
+ht-degree: 60%
 
 ---
 
@@ -119,7 +119,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
   `deviceGroup.drawHead(pageContext);`
 
-* メソッド `DeviceGroup.drawHead(pageContext)` には、エミュレーターの init コンポーネントを含まれています。つまり、エミュレーターコンポーネントの `init.html.jsp` を呼び出します。エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
+* メソッド `DeviceGroup.drawHead(pageContext)` エミュレーターの init コンポーネント、つまり、 `init.html.jsp` エミュレーターコンポーネントの エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
 
 * モバイルベースエミュレーターの init スクリプトは、JavaScript を使用して次のように定義します。
 

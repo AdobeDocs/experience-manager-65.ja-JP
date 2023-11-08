@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2670'
-ht-degree: 39%
+source-wordcount: '2668'
+ht-degree: 38%
 
 ---
 
@@ -131,7 +131,7 @@ Apache Sling の要求解決に関する重要な側面は、要求を主にコ�
 
 **Dispatcher** - Dispatcher は、キャッシュとロードバランシングの両方のツールで、特定のセキュリティ保護を提供します。
 
-**ExtJS ウィジェット** - AEM のほとんどのユーザーインターフェイス要素は、ExtJS を使用しています。ExtJS は、JavaScript で書かれたサードパーティのウィジェットライブラリです。ExtJS は、高パフォーマンスでカスタマイズ可能な UI ウィジェットと、適切にデザインされた拡張可能なコンポーネントモデルを備えています。
+**ExtJS ウィジェット** - AEMのほとんどのユーザーインターフェイス要素は、ExtJS を使用します。これは、JavaScript で記述されたサードパーティのウィジェットライブラリです。 ExtJS は、高パフォーマンスでカスタマイズ可能な UI ウィジェットと、適切にデザインされた拡張可能なコンポーネントモデルを備えています。
 
 **JCR、Java™コンテンツリポジトリ** - Java™ Content Repository の仕様 (JSR-283) は、抽象データモデルとアプリケーションプログラミングインターフェイスの両方を提供し、ファイルシステムとオブジェクトデータベースの機能を組み合わせた大規模な NoSQL データリポジトリを実現します。 JSR-283 を詳細に理解する必要はありませんが、JCR は AEM の「すべてがコンテンツ」という理念を可能にするものなので、JCR の基本機能とその基礎となるデータモデルについて時間をかけて理解する必要があります。
 

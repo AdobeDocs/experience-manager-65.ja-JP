@@ -7,10 +7,10 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 88%
+source-wordcount: '745'
+ht-degree: 83%
 
 ---
 
@@ -69,11 +69,11 @@ ht-degree: 88%
 
 ## samplecontent と nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
 
-これらのモードを使用すると、サンプルコンテンツの使用を制御できます。 サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージや設定などを含めることができます。
+これらのモードを使用すると、サンプルコンテンツの使用を制御できます。 サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージ、設定などを含めることができます。
 
-* `samplecontent` 実行モードでは、サンプルコンテンツがインストールされます（デフォルトモード）。
+* The `samplecontent` 実行モードでは、このコンテンツがインストールされます（デフォルトのモード）。
 
-* `nosamplecontent` モードでは、サンプルコンテンツはインストールされません。
+* The `nosamplecontent` モードでは、サンプルコンテンツはインストールされません。
 
 nosamplecontent 実行モードは、実稼動インストール用に設計されています。
 

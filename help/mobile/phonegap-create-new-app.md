@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '630'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ AEM Mobileアプリは、ページ構造とプロパティを定義するブル�
 アプリテンプレートとは これは、アプリのベースラインまたは基盤を表すページテンプレートおよびコンポーネントの集まりと考えてください。
 別のアプリのテンプレートに基づいてアプリを作成する場合、作成元のアプリを表す開始点を持つアプリが表示されます。
 
-この機能を利用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリ）がインストールされている必要があります。
+この機能を使用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリ）がインストールされている必要があります。
 
 最新のAEM Apps サンプルパッケージには、Geometrixxアプリの更新バージョンとアプリテンプレートが含まれています。 または、 [StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) これにはテンプレートも用意されています。
 

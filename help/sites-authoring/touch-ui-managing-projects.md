@@ -10,10 +10,10 @@ topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 93%
+source-wordcount: '980'
+ht-degree: 92%
 
 ---
 
@@ -151,7 +151,7 @@ ht-degree: 93%
 
 以下の手順に従って、プロジェクトを削除します。
 
-1. **プロジェクト**&#x200B;コンソールの最上位レベルに移動します。
+1. の最上位レベルに移動します。 **プロジェクト** コンソール。
 1. コンソールでプロジェクトを選択します。
 1. ツールバーの「**削除**」をタップまたはクリックします。
 1. AEM は、プロジェクトの削除時に、関連するプロジェクトデータを削除または変更できます。必要なオプションを&#x200B;**プロジェクトを削除**&#x200B;ダイアログで選択します。

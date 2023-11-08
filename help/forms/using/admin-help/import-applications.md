@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 6%
@@ -51,7 +51,7 @@ Workbench で作成したアプリケーションを読み込んで管理する�
 
    右側の「プロパティ」タブに、選択した CRX ノードのプロパティが表示されます。
 
-   The **syncState** プロパティは、AEM forms サーバーと CRX リポジトリとの間のデータの同期の状態を示します。 インポート処理が開始すると、この状態は 0（ゼロ）に設定されます。 この状態は、データが現在同期されていないことを示します。 データが同期されると、状態は 1 に設定されます。
+   The **syncState** プロパティは、AEM Forms Server と CRX リポジトリ間のデータの同期の状態を示します。 インポート処理が開始すると、この状態は 0（ゼロ）に設定されます。 この状態は、データが現在同期されていないことを示します。 データが同期されると、状態は 1 に設定されます。
 
 ## アプリケーションのデプロイ {#deploy-an-application}
 

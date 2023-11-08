@@ -9,10 +9,10 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 64%
+source-wordcount: '896'
+ht-degree: 86%
 
 ---
 
@@ -20,19 +20,19 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->検索エンジン最適化（SEO）は、多くのマーケターにとって重要な課題となっています。そのため、多くの AEM プロジェクトで SEO 対策に取り組む必要があります。詳しくは、 [SEO および URL 管理のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html?lang=ja) を参照してください。
+>検索エンジン最適化（SEO）は、多くのマーケターにとって重要な課題となっています。そのため、多くの AEM プロジェクトで SEO 対策に取り組む必要があります。詳しくは、[SEO および URL 管理のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html?lang=ja)を参照してください。
 
-[AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、製品ページとカテゴリページの URL をカスタマイズする高度な設定を提供します。多くの実装では、検索エンジン最適化 (SEO) 用にこれらの URL をカスタマイズしています。 次のビデオでは、`UrlProvider` サービスと [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)の機能を設定して、製品ページとカテゴリページの URL をカスタマイズする方法について詳しく説明します。
+[AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、製品ページとカテゴリページの URL をカスタマイズする高度な設定を提供します。多くの実装では、検索エンジン最適化（SEO）用にこれらの URL をカスタマイズします。次のビデオでは、`UrlProvider` サービスと [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)の機能を設定して、製品ページとカテゴリページの URL をカスタマイズする方法について詳しく説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## 設定 {#configuration}
 
-次の手順で `UrlProvider` SEO 要件と必要に応じて、サービスで「CIF URL Provider configuration」の OSGI 設定をプロジェクトで提供する必要があります。
+次の手順で `UrlProvider` SEO 要件と必要に応じて、サービスで「CIF URL Provider configuration」の OSGI 設定を提供する必要があります。
 
 >[!NOTE]
 >
->AEM CIF コアコンポーネントのリリース 2.0.0 以降、URL プロバイダー設定では、1.x リリースで知られているフリーテキスト設定可能な形式の代わりに、事前に定義された URL 形式のみが提供されます。 さらに、セレクターを使用して URL 内のデータを渡すことはなくなり、代わりにサフィックスが使用されます。
+>AEM CIFコアコンポーネントのリリース 2.0.0 以降、URL プロバイダー設定では、1.x リリースで既知のフリーテキスト設定可能な形式の代わりに、事前に定義された URL 形式のみが提供されます。 さらに、セレクターを使用して URL 内のデータを渡すことはなくなり、代わりにサフィックスが使用されます。
 
 ### 製品ページの URL 形式 {#product}
 
@@ -44,17 +44,17 @@ ht-degree: 64%
 * `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
 * `{{page}}.html/{{sku}}/{{url_path}}.html#{{variant_sku}}`
 
-[Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)の場合は次のとおりです。
+[Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)がある場合：
 
-* `{{page}}` は、 `/content/venia/us/en/products/product-page`
-* `{{sku}}` が製品の SKU に置き換えられている（例： ） `VP09`
-* `{{url_key}}` は製品の `url_key` プロパティ。例： `lenora-crochet-shorts`
-* `{{url_path}}` は製品の `url_path`例： `venia-bottoms/venia-pants/lenora-crochet-shorts`
-* `{{variant_sku}}` は、現在選択されているバリアントに置き換えられます（例： ）。 `VP09-KH-S`
+* `{{page}}` は `/content/venia/us/en/products/product-page` に置き換えられます
+* `{{sku}}` は製品の SKU（例：`VP09`）に置き換えられます
+* `{{url_key}}` は製品の `url_key` プロパティ（例：`lenora-crochet-shorts`）に置き換えられます
+* `{{url_path}}` は製品の `url_path`（例：`venia-bottoms/venia-pants/lenora-crochet-shorts`）に置き換えられます
+* `{{variant_sku}}` は、現在選択されているバリアント（例：`VP09-KH-S`）に置き換えられます
 
-以降 `url_path` 廃止されました。事前定義済みの製品 URL 形式では、製品の `url_rewrites` を選択し、最も多くのパスセグメントを持つセグメントを、 `url_path` は使用できません。
+`url_path` が非推奨になったため、あらかじめ定義された製品 URL 形式は製品の `url_rewrites` を使用し、`url_path` が利用できない場合は最もパスセグメントが多いものを代わりに選択します。
 
-上記の例のデータでは、デフォルトの URL 形式を使用して書式設定された製品バリアント URL は次のようになります。 `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
+上記のサンプルデータでは、デフォルトの URL 形式を使用して設定された製品バリアント URL は `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S` のようになります。
 
 ### カテゴリページの URL 形式 {#product-list}
 
@@ -63,13 +63,13 @@ ht-degree: 64%
 * `{{page}}.html/{{url_path}}.html`（デフォルト）
 * `{{page}}.html/{{url_key}}.html`
 
-[Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)の場合は次のとおりです。
+[Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)がある場合：
 
-* `{{page}}` は、 `/content/venia/us/en/products/category-page`
-* `{{url_key}}` はカテゴリの `url_key` プロパティ
-* `{{url_path}}` はカテゴリの `url_path`
+* `{{page}}` は `/content/venia/us/en/products/category-page` に置き換えられます
+* `{{url_key}}` はカテゴリの `url_key` プロパティに置き換えられます
+* `{{url_path}}` はカテゴリの `url_path` に置き換えられます
 
-上記の例のデータでは、デフォルトの URL 形式を使用して書式設定されたカテゴリページの URL は次のようになります。 `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
+上記のサンプルデータでは、デフォルトの URL 形式を使用して設定されたカテゴリページ URL は `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html` のようになります。
 
 >[!NOTE]
 > 
@@ -85,13 +85,13 @@ ht-degree: 64%
 
 ## カスタム URL 形式 {#custom-url-format}
 
-プロジェクトで実装できるカスタム URL 形式を指定するには、 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) または [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) サービスインターフェイスを使用し、実装を OSGi サービスとして登録します。 これらの実装が存在する場合は、設定済みの事前定義済み形式を置き換えます。 複数の実装が登録されている場合、サービスランキングが高い実装は、低いサービスランキングの実装に置き換えられます。
+プロジェクトで実装できるカスタム URL 形式を指定するには、 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) または [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) サービスインターフェイスを使用し、実装を OSGi サービスとして登録します。 これらの実装が使用できる場合は、設定されている事前定義済み形式に置き換えます。複数の実装が登録されている場合、サービスランキングの高い実装は、サービスランキングの低い実装に置き換わます。
 
 カスタム URL 形式の実装では、指定されたパラメーターから URL を作成するメソッドと URL を解析して同じパラメーターを返すメソッドのペアを実装する必要があります。
 
 ## Sling マッピングとの結合 {#sling-mapping}
 
-また、 `UrlProvider`を使用する場合、 [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) を使用して、URL を書き換え、処理します。 AEM Archetype プロジェクトには、 [サンプル設定](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) ポート 4503（パブリッシュ）および 80(Dispatcher) の一部の Sling マッピングを設定する場合。
+`UrlProvider` に加え、URL の書き換えと処理を行うために、[Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)を設定できます。AEM アーキタイププロジェクトでは、ポート 4503（パブリッシュ）および 80（Dispatcher）の Sling マッピングを設定する[設定例](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish)も提供されています。
 
 ## AEM Dispatcher との統合 {#dispatcher}
 

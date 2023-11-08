@@ -1,20 +1,16 @@
 ---
 title: セグメント化の設定
-seo-title: Configuring Segmentation
 description: AEM Campaign でセグメント化を設定する方法を説明します。
-seo-description: Learn how to configure segmentation for AEM Campaign.
-uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 45%
+source-wordcount: '1129'
+ht-degree: 41%
 
 ---
 
@@ -110,7 +106,7 @@ The **セグメントエディター** では、簡単にセグメントを定�
 
 OR および AND のブール演算子を使用してこれらの特徴を組み合わせ（[新しいセグメントの作成](#creating-a-new-segment)を参照）、このセグメントを選択できる確実なシナリオを定義します。
 
-文全体が true と評価されると、このセグメントは解決されます。複数のセグメントを適用可能な場合、**[ブースト](/help/sites-administering/campaign-segmentation.md#boost-factor)**&#x200B;係数も使用されます。
+文全体が true と評価されると、このセグメントは解決されます。複数の適用可能なセグメントがある場合、 **[ブースト](/help/sites-administering/campaign-segmentation.md#boost-factor)** factor も使用されます。
 
 >[!CAUTION]
 >
@@ -149,7 +145,7 @@ OR および AND のブール演算子を使用してこれらの特徴を組み
 
 AEMで複雑なセグメントを作成できます。 これは、次の基本的な点に注意するのに役立ちます。
 
-* 定義の最上位レベルは必ず、最初に作成された AND コンテナになります。これは変更できませんが、他のセグメント定義には影響しません。
+* 定義の最上位レベルは常に、最初に作成された AND コンテナになります。これは変更できませんが、他のセグメント定義には影響しません。
 * コンテナのネストが意味のあるものになっていることを確認してください。コンテナは、ブーリアン式の括弧として見ることができます。
 
 次の例は、次のいずれかの訪問者を選択するために使用します。

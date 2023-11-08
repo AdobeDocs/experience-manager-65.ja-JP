@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1039'
-ht-degree: 95%
+ht-degree: 92%
 
 ---
 
@@ -64,9 +64,9 @@ ht-degree: 95%
 
    >[!NOTE]
    >
-   >ローンチにページやブランチを追加するには、それらがサイト内に存在する必要があります（例：共通の最上位ルートの下）。
+   >ローンチにページや分岐を追加するには、それらがサイト内（共通の最上位ルートの下）に存在する必要があります。
    >
-   >サイトの最上位レベルの下に言語ルートが含まれている場合、ローンチのページおよびブランチは共通言語ルートの下にある必要があります。
+   >サイトの最上位レベルの下に言語ルートが含まれている場合、ローンチのページとブランチは共通言語ルートの下にある必要があります。
    >
    >ソースパスに親ページまたは子ページを含むローンチを作成しようとすると、失敗し、「宛先はページへのパスに既に存在します。」というエラーが返されます。
 

@@ -12,10 +12,10 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2693'
-ht-degree: 68%
+source-wordcount: '2694'
+ht-degree: 69%
 
 ---
 
@@ -320,7 +320,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 いくつかのプロパティとノードタイプは、デフォルトで除外されます。これらは、**除外ページのプロパティ**&#x200B;の **CQ MSM CQ コンテンツ更新アクション**&#x200B;の OSGi 設定で定義されています。
 
-デフォルトでは、次の正規表現に一致するプロパティは、ロールアウト時に除外されます（つまり、更新されません）。
+デフォルトでは、次の正規表現に一致するプロパティがロールアウト時に除外されます（更新されません）。
 
 ![CQ MSM Content Update Action](assets/chlimage_1.png)
 

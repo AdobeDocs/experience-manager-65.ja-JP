@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2008'
-ht-degree: 68%
+ht-degree: 66%
 
 ---
 
@@ -359,7 +359,7 @@ REST API では、次のアクションがサポートされています。
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>URI がパラメーター <code>item</code> として送信される作業項目を完了し、一致するワークフローインスタンスを次のノードに進めます。次のノードは、パラメーター <code>route</code>（1 ステップ戻る場合はパラメーター「<code>backroute</code>」）によって定義されます。<br /> パラメーター <code>delegatee</code> を送信した場合は、パラメーター <code>item</code> によって識別される作業項目が、指定された参加者に委任されます。 </td>
+   <td>URI がパラメーターとして送信される作業項目を完了します。 <code>item</code> に従って、ワークフローインスタンスを、パラメーターで定義された次のノードに進めます。 <code>route</code> または <code>backroute</code> もし一歩引く事が出来れば<br /> パラメーター <code>delegatee</code> を送信した場合は、パラメーター <code>item</code> によって識別される作業項目が、指定された参加者に委任されます。 </td>
   </tr>
  </tbody>
 </table>

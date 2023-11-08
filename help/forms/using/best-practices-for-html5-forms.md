@@ -12,7 +12,7 @@ discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
 exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 23%
@@ -46,7 +46,7 @@ HTML5 フォームには、画像、JavaScript、CSS ファイルなど、複数
 
 * 用途 [圧縮画像](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md). これにより、フォームのレンダリングに必要なネットワークアクティビティとメモリ量が削減されます。 したがって、フォームの読み込み時間が大幅に短縮されます。
 * AEM Configuration Manager(Day CQHTMLライブラリマネージャー ) の minify オプションを使用して、JavaScript ファイルと CSS ファイルを圧縮します。 詳しくは、 [OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md).
-* Web 圧縮を有効にします。 フォームから発生した要求と応答のサイズが小さくなります。 詳しくは、 [AEM forms サーバーのパフォーマンス調整](https://helpx.adobe.com/jp/aem-forms/6-3/performance-tuning-aem-forms.html).
+* Web 圧縮を有効にします。 フォームから発生した要求と応答のサイズが小さくなります。 詳しくは、 [AEM Forms Server のパフォーマンス調整](https://helpx.adobe.com/jp/aem-forms/6-3/performance-tuning-aem-forms.html).
 
 ## 関心を維持し、必須フィールドのみを表示  {#keep-the-interest-alive-show-only-required-fields}
 

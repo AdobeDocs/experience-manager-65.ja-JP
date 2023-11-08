@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2689'
-ht-degree: 56%
+source-wordcount: '2688'
+ht-degree: 55%
 
 ---
 
@@ -131,9 +131,10 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><code>
+   <td>での明示的なパス参照
+    <code>
      custom
-    </code> コード内の以前の場所への明示的なパス参照では、新しい場所も考慮に入れる必要があります。AEM Workflow API を使用するには、このコードをリファクタリングすることをお勧めします。</td>
+    </code> 以前の場所へのコードも、新しい場所を考慮する必要があります。 AEM Workflow API を使用するには、このコードをリファクタリングすることをお勧めします。</td>
   </tr>
  </tbody>
 </table>

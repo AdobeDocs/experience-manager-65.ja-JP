@@ -3,10 +3,10 @@ title: ライブコピーの作成と同期
 description: Adobe Experience Managerでライブコピーを作成し同期する方法を説明します。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4226'
-ht-degree: 65%
+source-wordcount: '4227'
+ht-degree: 64%
 
 ---
 
@@ -424,7 +424,7 @@ ht-degree: 65%
 
 ### 継承の深度の変更（シャロー／ディープ） {#changing-inheritance-depth-shallow-deep}
 
-既存のライブコピーで、ページの深度（例：子ページが含まれるかどうか）を変更できます。
+既存のライブコピーでは、ページの深さ（子ページを含めるかどうか）を変更できます。
 
 * シャローライブコピーに切り替える場合：
 

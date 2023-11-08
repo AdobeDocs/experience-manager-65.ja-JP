@@ -1,19 +1,15 @@
 ---
 title: 通信を作成
-seo-title: Create Correspondence
 description: 作成したレターテンプレートは、データ、コンテンツおよび添付ファイルを管理することにより、AEM Forms で通信を作成する際に使用することができます。
-seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
-uuid: 48cf2b26-c9b4-4127-9ea0-1b36addbff60
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3853'
-ht-degree: 99%
+source-wordcount: '3849'
+ht-degree: 98%
 
 ---
 
@@ -261,11 +257,11 @@ ht-degree: 99%
    >
    >Mozilla Firefox と HTML レンディションタイプを使用する場合、統合された PDF をプレビューするには、Acrobat のプラグインではなく、必ずネイティブのブラウザープラグインを使用してください。ネイティブのブラウザープラグインを選択するには、Mozilla Firefox の設定に移動し、「ファイルの種類（Content Type）」の「PDF 文書」から「Firefox でプレビュー表示」を選択します。
 
-1. 統合された PDF のプレビューが十分なものであると確認できた場合、「**送信**」をタップしてレターを送信します。また、レターを変更するには、「**プレビューを終了**」をタップして「通信を作成」UI に戻り、レターの変更を行います。「送信」をタップすると、Manage Letter Instance 設定が発行インスタンスで有効になっている場合、レターの送信インスタンスが生成されます。
+1. 統合された PDF のプレビューが十分なものであると確認できた場合、「**送信**」をタップしてレターを送信します。または、レターを変更するには、 **プレビューを終了** レターの「通信を作成」UI プレビューに戻り、レターを変更します。 「送信」をタップすると、Manage Letter Instance 設定が発行インスタンスで有効になっている場合、レターの送信インスタンスが生成されます。
 
    詳しくは、「ドラフトの保存とレターインスタンスの送信」の「ドラフトインスタンス」を参照してください。
 
-   レターをドラフトとして保存して、後でレターの変更を行うこともできます。
+   レターをドラフトとして保存して、後でレターを変更することもできます。
 
    必要な変更を加えた後、HTML5 プレビューからレターを送信するか、「プレビュー」を再度タップして、分割・統合された PDF 出力をレビューできます。
 

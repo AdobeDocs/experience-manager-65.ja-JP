@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2319'
 ht-degree: 35%
 
 ---
@@ -301,7 +301,7 @@ XLIFF ファイルを辞書に読み込んで、辞書に入力します。 辞�
 
    >[!NOTE]
    >
-   >トランスレーターで保存されるのは、実際に[辞書に存在する](#creating-a-dictionary)（`/apps/myProject/i18n`などの辞書のパスの下に存在する）言語の翻訳のみです。
+   >トランスレーターは、実際には [辞書に載る](#creating-a-dictionary) ( つまり、辞書のパスの下に `/apps/myProject/i18n`) をクリックします。
    >
    >これらがグリッドに表示される言語に対応していることを確認してください。
 

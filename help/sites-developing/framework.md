@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1641'
 ht-degree: 60%
 
 ---
@@ -76,11 +76,11 @@ AEM の基本パスは `/content/cq:tags` であり、ルートノードのタ�
 
 ### タグの名前空間 {#tag-namespace}
 
-名前空間を使用するとグループ化を行うことができます。最も一般的な使用例は、サイトごと（例：公開、内部、ポータル）または大規模なアプリケーションごと（例：WCM、Assets、Communities）の名前空間です。 ただし、名前空間は他の様々なニーズに使用できます。 名前空間は、現在のコンテンツに適用できるタグのサブセット（特定の名前空間のタグなど）のみを表示するために、ユーザーインターフェイスで使用されます。
+名前空間を使用するとグループ化を行うことができます。最も一般的な使用例は、サイトごと（例：公開、内部、ポータル）または大規模なアプリケーションごと（例：WCM、Assets、Communities）の名前空間です。 ただし、名前空間は他の様々なニーズに使用できます。 名前空間は、現在のコンテンツに適用できるタグのサブセット（つまり、特定の名前空間のタグ）のみを表示するために、ユーザーインターフェイスで使用されます。
 
 タグの名前空間は、分類サブツリーの最初のレベルです。これは、[分類のルートノード](#taxonomy-root-node)の直下のノードです。名前空間は `cq:Tag` タイプのノードで、その親は `cq:Tag` ノードタイプではありません。
 
-すべてのタグには名前空間があります。名前空間が指定されていない場合、タグはデフォルトの名前空間 (TagID) に割り当てられます `default` タイトルを持つ `Standard Tags`例： `/content/cq:tags/default`.
+すべてのタグには名前空間があります。名前空間が指定されていない場合、タグはデフォルトの名前空間 (TagID) に割り当てられます `default` タイトルを持つ `Standard Tags`、つまり、 `/content/cq:tags/default`.
 
 ### コンテナタグ {#container-tags}
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '5484'
+source-wordcount: '5483'
 ht-degree: 96%
 
 ---
@@ -383,7 +383,7 @@ Experience Manager 6.3.2 以降では、アセットが CQ のターゲットフ
 
 1. Experience Manager アイコンを選択し、**[!UICONTROL デプロイメント]**／**[!UICONTROL Cloud Services]** に移動します。
 1. 「Dynamic Media」見出しの下の「利用可能な設定」で、「**[!UICONTROL dms7 (Dynamic Media)]**」をクリックします。
-1. 「**[!UICONTROL 詳細]**」タブを選択し、「**[!UICONTROL 自動アップロードを有効にする]**」チェックボックスをオンにして、「**[!UICONTROL OK]**」を選択します。次に、DAM Asset ワークフローに Dynamic Media Classic へのアップロードが含まれるよう設定する必要があります。
+1. 「**[!UICONTROL 詳細]**」タブを選択し、「**[!UICONTROL 自動アップロードを有効にする]**」チェックボックスをオンにして、「**[!UICONTROL OK]**」を選択します。Dynamic Media Classicへのアップロードを含めるように DAM Asset ワークフローを設定する必要があります。
 
    >[!NOTE]
    >

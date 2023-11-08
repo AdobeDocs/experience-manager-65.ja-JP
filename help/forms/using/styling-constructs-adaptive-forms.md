@@ -1,18 +1,15 @@
 ---
 title: アダプティブフォームのスタイル構成
-seo-title: Styling constructs for adaptive forms
 description: LESS フレームワークを使用して、アダプティブフォームの外観をカスタマイズします。
-seo-description: Use LESS framework to customize appearance of adaptive forms.
-uuid: d2e45ad9-7322-43ce-a1dd-ad97e2eea742
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2363'
+source-wordcount: '2361'
 ht-degree: 92%
 
 ---
@@ -58,7 +55,7 @@ Web ページのテーマは、ブートストラップに基づき、以下の 
 
 ## コンポーネントスタイルの変更 {#changing-component-style}
 
-要素の外観、レイアウト、配置、可視性を変更できます。そのためには、カスタムの .css ファイルを作成または更新し、この記事で説明するスタイル構成をそのファイルに含める必要があります。
+要素の外観、レイアウト、配置、表示設定を変更できます。 そのためには、カスタムの .css ファイルを作成または更新し、この記事で説明するスタイル構成をそのファイルに含める必要があります。
 
 アダプティブフォームにスタイルを適用するには、編集用としてアダプティブフォームを開き、アダプティブフォームコンテナのプロパティを開いて、「基本」タブでカスタム .css ファイルのパスを指定します。アダプティブフォームのデフォルトのスタイル構成は、カスタムの .css ファイル内の構成によって上書きされます。
 

@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 role: Developer
 exl-id: bee0eebb-c21d-472c-bbdf-28d8c3a5ed4a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 98%
@@ -127,10 +127,10 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 2. adobe-livecycle-client.jar
      * 3. adobe-usermanager-client.jar
      * 4. adobe-utilities.jar
-     * 5. jboss-client.jar (use a different JAR file if the forms server is not deployed
+     * 5. jboss-client.jar (use a different JAR file if the Forms Server is not deployed
      * on JBoss)
-     * 6. jacorb.jar (use a different JAR file if the forms server is not deployed on JBoss)
-     * 7. jnp-client.jar (use a different JAR file if the forms server is not deployed on JBoss)
+     * 6. jacorb.jar (use a different JAR file if the Forms Server is not deployed on JBoss)
+     * 7. jnp-client.jar (use a different JAR file if the Forms Server is not deployed on JBoss)
      *
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to
      * your local development environment and then include the 3 JBoss JAR files in your class path
@@ -144,7 +144,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The jboss-client.jar file is in the following path:
      * <install directory>/jboss/bin/client
      *
-     * If you want to invoke a remote forms server instance and there is a
+     * If you want to invoke a remote Forms Server instance and there is a
      * firewall between the client application and the server, then it is
      * recommended that you use the SOAP mode. When using the SOAP mode,
      * you have to include additional JAR files in the following
@@ -580,7 +580,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  using Microsoft.Web.Services2;
  
  //The following statement represents a web reference to
- //the forms server that contains the process that
+ //the Forms Server that contains the process that
  //is invoked
  using ConsoleApplication1.LC_Host;
  

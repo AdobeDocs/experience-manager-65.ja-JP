@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 47%
+source-wordcount: '670'
+ht-degree: 45%
 
 ---
 
@@ -50,7 +50,7 @@ AEMは、コンソール ( および [ページオーサリング機能](/help/s
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) （下） `/apps`
 >
 >1. `/apps` 内で変更作業をおこないます。
 >

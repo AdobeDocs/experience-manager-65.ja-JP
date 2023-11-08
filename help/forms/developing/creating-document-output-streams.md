@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '18965'
+source-wordcount: '18956'
 ht-degree: 79%
 
 ---
@@ -257,7 +257,7 @@ Output API（Java）を使用して PDF ドキュメントを作成します。
 
    >[!NOTE]
    >
-   >`generatePDFOutput` メソッドを呼び出して PDF ドキュメントを生成する場合、署名または認証された XFA PDF フォームとデータを結合することはできません。（[ドキュメントのデジタル署名と認証&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*。）*
+   >を呼び出してPDFドキュメントを生成する場合 `generatePDFOutput` メソッドを使用して、署名または認証されている XFAPDFフォームとデータを結合することはできません。 （[ドキュメントのデジタル署名と認証&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*。）*
 
    >[!NOTE]
    >
@@ -354,7 +354,7 @@ Output API（web サービス）を使用して PDF ドキュメントを作成�
 
    >[!NOTE]
    >
-   >`generatePDFOutput` メソッドを呼び出して PDF ドキュメントを生成する場合、署名または認証された XFA PDF フォームとデータを結合することはできません。（[ドキュメントのデジタル署名と認証&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*。）*
+   >を呼び出してPDFドキュメントを生成する場合 `generatePDFOutput` メソッドを使用して、署名または認証されている XFAPDFフォームとデータを結合することはできません。 （[ドキュメントのデジタル署名と認証&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*。）*
 
    >[!NOTE]
    >
@@ -1505,7 +1505,7 @@ Output サービスの操作をプログラム的に実行する前に、Output 
 
 >[!NOTE]
 >
->PDFG が Forms サーバーにインストールされ、そのサーバーが Windows Server 2008 で実行されている場合、SharedPrinter プロパティは使用できません。この場合は、別のプリンタープロトコルを使用します。
+>PDFG がForms Server にインストールされ、サーバーが Windows Server 2008 で実行されている場合、SharedPrinter プロパティは使用できません。 この場合は、別のプリンタープロトコルを使用します。
 
 >[!NOTE]
 >
@@ -2173,7 +2173,7 @@ Output API（web サービス）を使用して検索ルールを作成します
 
    >[!NOTE]
    >
-   >`generatePDFOutput` メソッドを呼び出して PDF ドキュメントを生成する場合、署名、認証、使用権限を含む XFA PDFフォームにデータを結合することはできません。使用権限について詳しくは、[PDF ドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)を参照してください。
+   >を呼び出してPDFドキュメントを生成する場合 `generatePDFOutput` メソッドを使用しない場合、使用権限を含む署名済み、認証済みの XFAPDFフォームにデータを結合することはできません。 使用権限について詳しくは、[PDF ドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)を参照してください。
 
 1. 操作の結果を取得します。
 

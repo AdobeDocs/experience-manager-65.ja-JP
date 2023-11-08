@@ -1,19 +1,15 @@
 ---
 title: ContextHub でのセグメント化の設定
-seo-title: Configuring Segmentation with ContextHub
 description: Context Hub でセグメント化を設定する方法について説明します。
-seo-description: Learn how to configure segmentation with Context Hub.
-uuid: 196cfb18-317c-443d-b6f1-f559e4221baa
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 81%
+source-wordcount: '1772'
+ht-degree: 79%
 
 ---
 
@@ -52,7 +48,7 @@ The **セグメントエディター** を使用すると、セグメントを�
 
 コンポーネントブラウザーを使用すると、**AND** および **OR** コンテナを追加してセグメントロジックを定義してから、別のコンポーネントを追加してプロパティや値を比較できます。また、スクリプトやその他のセグメントを参照して選択条件を定義する（[新しいセグメントの作成](#creating-a-new-segment)を参照）ことによって、セグメントの選択シナリオを正確に定義できます。
 
-ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数](/help/sites-administering/campaign-segmentation.md#boost-factor)について詳しくは、「[新しいセグメントの作成](#creating-a-new-segment)」を参照してください。
+ステートメント全体が true と評価されると、セグメントは解決されます。複数の適用可能なセグメントがある場合、 **ブースト** factor も使用されます。 [ブースト係数](/help/sites-administering/campaign-segmentation.md#boost-factor)について詳しくは、「[新しいセグメントの作成](#creating-a-new-segment)」を参照してください。
 
 >[!CAUTION]
 >
@@ -164,7 +160,7 @@ The **セグメントエディター** を使用すると、セグメントを�
 
 AND および OR コンテナコンポーネントを使用すると、AEM で複雑なセグメントを作成できます。この際、次の基本事項に留意してください。
 
-* 定義の最上位レベルは必ず、最初に作成された AND コンテナになります。これは変更できませんが、他のセグメント定義には影響しません。
+* 定義の最上位レベルは常に、最初に作成された AND コンテナです。 これは変更できませんが、他のセグメント定義には影響しません。
 * コンテナのネストが意味のあるものになっていることを確認してください。コンテナは、ブーリアン式の括弧として見ることができます。
 
 次の例は、アドビのプライムエイジグループに属すると見なされる訪問者を選択するために使用されます。

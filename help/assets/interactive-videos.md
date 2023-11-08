@@ -9,10 +9,10 @@ docset: aem65
 feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6036'
-ht-degree: 100%
+source-wordcount: '6035'
+ht-degree: 99%
 
 ---
 
@@ -521,7 +521,7 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 >
 そのため、ハイパーリンクされた Web ページのみを使用したインタラクティビティを追加した場合は、これで完了です。
 >
-一方、クイックビューをトリガーするインタラクティブ機能を追加した場合は、インタラクティブビデオの隣のサムネールは表示専用であり、既存のクイックビューとまだ統合されていません。そのような場合は、インタラクティブビデオを web サイトの既存のクイックビューと統合する必要があります。
+一方、クイックビューをトリガーするインタラクティブ機能を追加した場合は、インタラクティブビデオの隣のサムネールは表示専用であり、既存のクイックビューとまだ統合されていません。その場合は、インタラクティブビデオを Web サイト上の既存のクイックビューに統合する必要があります。
 
 **例**
 

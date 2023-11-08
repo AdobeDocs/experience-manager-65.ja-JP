@@ -2,10 +2,10 @@
 title: タスクを管理するインボックス
 description: Adobe Experience Manager 6.5 のインボックスを使用したタスクの管理
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 96%
+source-wordcount: '1143'
+ht-degree: 94%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 96%
 
 ## ヘッダー内のインボックス {#inbox-in-the-header}
 
-どのコンソールからでも、インボックス内の現在の項目数がヘッダーに表示されます。インジケーターを開いて、アクションが必要なページに素早くアクセスしたり、インボックスにアクセスしたりすることもできます。
+どのコンソールからでも、インボックス内の現在の項目数がヘッダーに表示されます。インジケーターを開いて、アクションが必要なページにすばやくアクセスしたり、インボックスにアクセスしたりすることもできます。
 
 ![wf-80](assets/wf-80.png)
 

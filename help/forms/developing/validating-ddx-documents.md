@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 role: Developer
 exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1525'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -152,11 +152,11 @@ Assembler Service API（web サービス）を使用して DDX ドキュメン�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用していることを確認します。`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >localhost を Forms サーバーの IP アドレスに置き換えます。
+   >localhost をFormsサーバーの IP アドレスに置き換えます。
 
 1. PDF Assembler クライアントを作成します。
 

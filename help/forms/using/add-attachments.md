@@ -1,19 +1,15 @@
 ---
 title: 添付ファイルの追加
-seo-title: Adding attachments
-description: AEM Forms のアプリで、写真や手書きメモをタスクに注釈として追加する
-seo-description: Add photographs and scribble notes as annotations to your task in the AEM Forms app
-uuid: 3d2738b4-fd43-44ec-8eaf-a2ad4b7e5af5
+description: 写真や手書きメモを注釈としてAEM Formsアプリのタスクに追加する
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: d5976ed2-4482-495c-bf77-6d192379cfef
 docset: aem65
 exl-id: 82282e2d-63a1-47e9-b2ec-f50a4bd32bd3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 100%
+ht-degree: 54%
 
 ---
 
@@ -21,7 +17,7 @@ ht-degree: 100%
 
 ## AEM Forms Workflow（JEE 上の AEM Forms）と同期されたフォーム内で、添付ファイルを追加する {#adding-annotations}
 
-AEM Forms アプリでは、AEM Forms JEE サーバーと同期されたフォームに対して、画像、手書きメモやテキストメモを添付することができます。フォームを AEM Forms Workflow サーバから読み込んだ場合は、添付ファイルがフォームに追加されます。添付ボタン ![attachments-app](assets/attachments-app.png) をタップすると、フォームに添付されたファイルを一括表示することができます。赤色の通知は、フォームの添付ファイルの数を表示します。フォームに添付ファイルが存在しない場合、赤の通知ボタンは表示されません。フォームに添付ファイルが存在しない場合に添付ファイルボタン ![attch](assets/attch.png) をタップすると、写真や手書きメモを添付できるオプションが表示されます。
+AEM Formsアプリを使用すると、AEM Forms JEE サーバーと同期されたフォームに、画像、手書きメモ、テキストメモを添付できます。 フォームがAEM Forms Workflow サーバーから読み込まれると、添付ファイルがフォームに追加されます。 添付ボタン ![attachments-app](assets/attachments-app.png) をタップすると、フォームに添付されたファイルを一括表示することができます。赤色の通知は、フォームの添付ファイルの数を表示します。フォームに添付ファイルが存在しない場合、赤の通知ボタンは表示されません。フォームに添付ファイルが存在しない場合に添付ファイルボタン ![attch](assets/attch.png) をタップすると、写真や手書きメモを添付できるオプションが表示されます。
 
 以下のオプションがあります。
 
@@ -34,6 +30,7 @@ AEM Forms アプリでは、AEM Forms JEE サーバーと同期されたフォ�
 >[!NOTE]
 >
 >単一ユーザーによって追加された添付ファイルは、他の AEM Forms アプリケーションのユーザーにも表示されます。他のユーザーは、ユーザーが追加した添付ファイルを削除することはできません。
+>
 
 ### 添付ファイル画面 {#the-attachments-screen}
 
@@ -43,49 +40,49 @@ AEM Forms アプリでは、AEM Forms JEE サーバーと同期されたフォ�
 
 別の画像、手書きメモまたはテキストを添付する場合は、添付ファイル画面の「**+**」ボタンを使用することができます。
 
-### 写真を追加する {#adding-a-photograph}
+### 写真の追加 {#adding-a-photograph}
 
-フォームに画像を添付する際は、モバイルデバイスのカメラを使用するか、またはデバイスに保存された画像を使用することができます。
+モバイルデバイスのカメラを使用したり、デバイスに保存した画像を使用して、フォームに画像を添付したりできます。
 
 1. ウィンドウ下部にある添付ファイルボタン ![attch](assets/attch.png) をクリックします。
 1. 表示されるポップアップの中から、「**ギャラリー**」または「**カメラ**」をタップします。
-1. 選択したオプションに応じて、次の操作を行います。
+1. 選択したオプションに基づいて、次の操作を実行します。
 
-   1. 「**カメラ**」を選択した場合：
+   1. 次を選択した場合、 **カメラ**.
 
-      写真を撮ります。次に&#x200B;**使用** ![use-pic](assets/use-pic.png)ボタンをタップします。
+      写真を撮りなさい。 次に&#x200B;**使用** ![use-pic](assets/use-pic.png)ボタンをタップします。
 
       あるいは、**撮り直し** ![retake](assets/retake.png) ボタンをタップして写真を撮り直します。
 
-   1. 「**ギャラリー**」を選択した場合：
+   1. 次を選択した場合、 **ギャラリー**.
 
-      デバイスの画像ブラウザがポップアップ表示されます。デバイスの画像ブラウザーから、添付する画像をタップします。
+      デバイスの画像ブラウザーがポップアップ表示されます。 デバイスの画像ブラウザーから、添付する画像をタップします。
 
 ### メモを追加する {#adding-a-note}
 
 「**メモ**」オプションでは、フォームに手書きメモやテキストメモの添付ファイルを追加することができます。
 
 1. ウィンドウ下部にある添付ファイルボタン ![attch](assets/attch.png) をクリックします。
-1. 表示されるポップアップで「**メモ**」をタップします。
-1. 起動した「メモ」ユーザーインターフェイスで、フリーハンドの手書きメモをキャプチャします。
+1. タップ **メモ** が表示されるポップアップに表示されます。
+1. 起動した Notes ユーザーインターフェイスで、フリーハンドの手書きメモをキャプチャします。
 
    ![手書きメモインターフェイス](assets/scribble-ui.png)
 
    手書き
 
-   「手書きメモ」インターフェイスでは、以下のオプションを使用できます。
+   手書きメモインターフェイスでは、次のオプションを使用できます。
 
-   * **クリア**：スクリーンをクリアします。
+   * **クリア**：画面をクリアします。
    * **「完了」ボタン**：現在の手書きメモを添付します。
-   * **キャンセルボタン**: 現在の手書きメモを破棄し、「手書きメモ」ユーザーインターフェイスを閉じます。
+   * **キャンセルボタン**：現在の手書きメモを破棄し、手書きメモユーザーインターフェイスを閉じます。
    * ![キーボード](assets/keyboard.png)：手書きメモをクリアし、テキストメモを追加します。
 
    ![AEM Forms アプリの手書きメモ画面に表示されたキーボード](assets/keyboard-inapp.png)
 
-## AEM Forms Workflow を使用しない AEM Forms Server と同期されるフォームの添付ファイル（OSGi での AEM Forms） {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
+## AEM Forms Workflow を使用せずにAEM Formsサーバーと同期されたフォームの添付ファイル (OSGi 上のAEM Forms) {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
 
-AEM Forms OSGi サーバーと同期するモバイル向けフォームの添付ファイルは、AEM Forms JEE サーバーと同様の動作をします。
+AEM Forms OSGi サーバーと同期されたモバイルフォームの添付ファイルは、AEM Forms JEE サーバーと同様に機能します。
 
-フォームレベルの添付ファイルは、アプリ上で AEM Forms OSGi サーバーから読み込んだアダプティブフォームではサポートされません。画像やテキストメモを添付するには、フォームの作成時に、フィールドレベルの添付ファイルを有効にします。ファイルの添付コンポーネントを、コンポーネントブラウザーからフィールド上にドラッグ＆ドロップします。
+フォームレベルの添付ファイルは、AEM Forms OSGi サーバーからアプリ内で読み込まれたアダプティブフォームではサポートされていません。 画像やテキストメモを添付するには、フォームの作成時にフィールドレベルの添付ファイルを有効にします。 ファイル添付コンポーネントを、コンポーネントブラウザーからフィールドにドラッグ&amp;ドロップします。
 
-アダプティブフォームでは、添付されたファイルをレコードのドキュメント（DoR）に表示することができます。[非 XFA アダプティブフォームにおける、レコードのドキュメントの生成](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)を参照してください。
+アダプティブフォームがある場合は、レコードのドキュメント (DoR) 内の添付ファイルを表示することができます。 [非 XFA アダプティブフォームにおける、レコードのドキュメントの生成](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)を参照してください。

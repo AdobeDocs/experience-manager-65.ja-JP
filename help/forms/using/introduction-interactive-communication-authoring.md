@@ -1,19 +1,15 @@
 ---
 title: インタラクティブ通信オーサリング UI の概要
-seo-title: An introduction to the various user interface elements you can use to author Interactive Communication
 description: インタラクティブ通信の作成に使用できる様々なユーザーインターフェイス要素の紹介
-seo-description: An introduction to the various user interface elements you can use to author Interactive Communication
-uuid: e8c5b1e8-b2bb-46b4-b42e-1f343192641a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications
-discoiquuid: 5855d21b-340c-4139-aabe-c3a534cedb98
 docset: aem65
 feature: Interactive Communication
 exl-id: 3d15a723-df6c-4b4a-992e-a6636f4cf3dc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1308'
 ht-degree: 78%
 
 ---

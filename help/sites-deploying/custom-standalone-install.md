@@ -4,9 +4,9 @@ description: スタンドアロンのAEMインスタンスをインストール�
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1616'
 ht-degree: 60%
 
 ---
@@ -51,7 +51,7 @@ oracleJava 11（または通常は 8 より新しいバージョンの Java）�
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* また、 `-XX:+UseParallelGC` 潜在的なパフォーマンスの問題を軽減するために切り替えます。
+* さらに、 `-XX:+UseParallelGC` 潜在的なパフォーマンスの問題を軽減するために切り替えます。
 
 以下は、Java 11 で AEM を起動するときに指定する追加の JVM パラメータのサンプルです。
 

@@ -1,19 +1,15 @@
 ---
 title: AEM Forms Workspace の操作
-seo-title: Working with AEM Forms workspace
 description: プロセスワークフローの概要を簡単に説明し、AEM Forms Workspace の概要を説明します。
-seo-description: Get started with AEM Forms workspace with this quick overview of the process workflows.
-uuid: 36381e7b-1533-459c-80de-92e806a49cd5
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 exl-id: 0bedcbd9-2cf8-47da-9440-c773982e550c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 24%
+source-wordcount: '1040'
+ht-degree: 22%
 
 ---
 
@@ -51,7 +47,7 @@ AEM Forms Workspace を使用して、次のタスクを実行できます。
 
 Flex Workspace は、AEM Formsのお客様には対応していません。 Flex Workspace を使用しているすべてのお客様は、AEM Forms Workspace に移行する必要があります。
 
-AEM Forms Workspace では、XDP フォームに関連付けられているデフォルトのアクションプロファイルで、デフォルトのレンダリングサービスと送信サービスが変更され、新しいサービスが導入されています。 詳しくは、 [新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md). XDP フォームを使用する既存のプロセスを移行してこれらのサービスを使用するには、[この手順](new-render-submit-service.md)に従います。
+AEM Forms Workspace では、XDP フォームに関連付けられているデフォルトのアクションプロファイルで、デフォルトのレンダリングサービスと送信サービスが変更され、新しいサービスが導入されています。 詳しくは、 [新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md). XDP フォームで動作する既存のプロセスを移行してこれらのサービスを使用するには、次の手順に従います [以下の手順](new-render-submit-service.md).
 
 **Flex Workspace カスタマイズと AEM Forms Workspace のマッピング**
 

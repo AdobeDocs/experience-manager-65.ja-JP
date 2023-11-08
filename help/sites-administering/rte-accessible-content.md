@@ -3,10 +3,10 @@ title: アクセシブルな web ページとサイトを作成するための�
 description: アクセシブルな web ページとサイトを作成するためのリッチテキストエディターの設定
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 97%
+source-wordcount: '933'
+ht-degree: 95%
 
 ---
 
@@ -48,7 +48,7 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 意味的ブロックの新しい書式を選択可能にするには、次の手順を実行します。
 
 1. 使用している RTE によって、[設定場所](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)を特定し、移動します。
-1. [段落選択フィールドの有効化](/help/sites-administering/rich-text-editor.md);作成者 [プラグインのアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
+1. [段落選択フィールドの有効化](/help/sites-administering/rich-text-editor.md)；次で [プラグインのアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
 1. [段落選択フィールドで使用可能にする書式を指定](/help/sites-administering/rich-text-editor.md)します。
 1. これにより、コンテンツ作成者は、指定した段落書式を RTE の選択フィールドから選択できます。アクセス方法は次のとおりです。
 
@@ -73,7 +73,7 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テーブルのプロパティダイアログへのキャプションの追加 {#example-adding-the-caption-to-the-table-properties-dialog}
 
-`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。`itemId` は、コンテンツを自動的に処理するために、`caption`（つまり、DOM 属性の名前）に設定する必要がある点に注意してください。
+`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。注意： `itemId` は、次のように設定する必要があります `caption` （つまり、DOM 属性の名前）内のコンテンツを自動的に処理します。
 
 **テーブル**&#x200B;で、DOM 要素に属性を明示的に設定したり削除したりします。値は、`config` オブジェクトのダイアログによって渡されます。DOM 属性は、ブラウザーの実装に伴う一般的な落とし穴を回避するために、対応する `CQ.form.rte.Common` メソッド（`com` は `CQ.form.rte.Common` のショートカット）を使用して、設定／削除する必要があります。
 
@@ -83,7 +83,7 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テキストで強調を使用する際のアクセシブルな HTML の作成 {#create-accessible-html-for-text}
 
-RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として `uiSettings` および `rtePlugins` ノードを設定します。
+RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として `uiSettings` および `rtePlugins` ノードがダイアログに表示されます。
 
 ```HTML
 <htmlRules jcr:primaryType="nt:unstructured">

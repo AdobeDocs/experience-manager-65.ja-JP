@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2658'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ PhoneGap アプリケーション内の特定のアセットの URI は、プラ
 
 PhoneGap 開発者は、関心のあるコンテンツは www ディレクトリの下に配置されます。 アプリアセットにアクセスするには、相対パスを使用します。
 
-この問題を組み合わせるために、PhoneGap アプリケーションでは単一ページアプリ (SPA) パターンを使用し、ベース URI（ハッシュを除く）が変更されないようにします。 したがって、参照するすべてのアセット、テンプレートまたはスクリプト **は、トップレベルのページに対する相対パスである必要があります。** トップレベルページは、次の条件に基づいてAngularルーティングとコントローラを初期化します。 `*<name>*.angular-app-module.js` および `*<name>*.angular-app-controllers.js`. このページは、sling:redirect を拡張しないリポジトリのルートに最も近いページにする必要があります。
+この問題を組み合わせるために、PhoneGap アプリケーションでは単一ページアプリ (SPA) パターンを使用し、ベース URI（ハッシュを除く）が変更されないようにします。 したがって、参照するすべてのアセット、テンプレートまたはスクリプト **は、トップレベルのページに対する相対パスである必要があります。** トップレベルのページでは、次の条件に基づいてAngularルーティングとコントローラを初期化します。 `*<name>*.angular-app-module.js` および `*<name>*.angular-app-controllers.js`. このページは、sling:redirect を拡張しないリポジトリのルートに最も近いページにする必要があります。
 
 相対パスの処理には、次のいくつかのヘルパーメソッドを使用できます。
 

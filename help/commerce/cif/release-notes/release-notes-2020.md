@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2020
 description: Adobe Experience Manager Content and Commerce リリースノート 2020.
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1353'
-ht-degree: 68%
+source-wordcount: '1352'
+ht-degree: 67%
 
 ---
 
@@ -143,7 +143,7 @@ ht-degree: 68%
 
 * カテゴリフィルタリングの方法を追加し、買い物客がカテゴリに基づいてフィルタリングできるようにしました。
 
-* ACL を直接操作するのではなく、サービスユーザーを介して /conf に確実にアクセスできるように、サービスユーザーマッピングをセキュリティ要件の一環として追加しました。CIF コアコンポーネントは、設定にアクセスする際に、サービスユーザーを使用しなければならなくなりました。
+* ACL を直接操作するのではなく、サービスユーザーを介して /conf に確実にアクセスできるように、サービスユーザーマッピングをセキュリティ要件の一環として追加しました。設定にアクセスするには、CIFコアコンポーネントでサービスユーザーを使用する必要があります。
 
 ### 改善点 {#what-is-improved-june}
 

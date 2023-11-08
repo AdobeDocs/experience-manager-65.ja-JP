@@ -7,8 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
-workflow-type: ht
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ public interface DraftAFDataService {
  /**
   * Saves user data provided in the argument map
   *
-  * @param draftUserDataMap contains Form Data (key - "guideState"), Adaptive Form Name (Key - "guideName"), and Draft DataID (Key - "userDataID") in case of update
+  * @param draftUserDataMap contains Form Data (key - "guideState"), Adaptive Form Name (Key - "guideName"), and Draft DataID (Key - "userDataID") if there is update
   * @return userData ID would be returned which needs to be saved in metadata node
   * @throws FormsPortalException
   */

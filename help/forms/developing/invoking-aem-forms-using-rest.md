@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2505'
-ht-degree: 85%
+source-wordcount: '2503'
+ht-degree: 82%
 
 ---
 
@@ -117,9 +117,9 @@ REST リクエストを使用してAEM Forms サービスを呼び出す場合�
 
 ## エラーレポート {#error-reporting}
 
-サーバーで例外が発生し、同期または非同期の呼び出し要求を完了できない場合、HTTP 応答メッセージの一部として例外がレポートされます。呼び出し URL（または非同期呼び出しの `async_result` URL の場合）に.xml サフィックスが付かない場合、REST プロバイダーは `500 Internal Server Error` HTTP コードを返し、続いて例外メッセージを返します。
+サーバーで例外が発生し、同期または非同期の呼び出し要求を完了できない場合、HTTP 応答メッセージの一部として例外がレポートされます。呼び出し URL ( または `async_result` URL （非同期呼び出しがある場合）に.xml サフィックスが付かない場合、REST プロバイダーは HTTP コードを返します `500 Internal Server Error` その後に例外メッセージが続きます。
 
-呼び出し URL（または非同期呼び出しの `async_result` URL の場合）に.xml サフィックスが付いている場合、REST プロバイダーは `200 OK` HTTP コードを返し、続いて次の形式の例外を説明する XML ドキュメントを返します。
+呼び出し URL ( または `async_result` URL （非同期呼び出しがある場合）に.xml サフィックスが付いている場合、REST プロバイダーは HTTP コードを返します `200 OK`その後に、次の形式の例外を説明する XML ドキュメントが続きます。
 
 ```xml
  <exception>
@@ -143,7 +143,7 @@ REST リクエストを使用してAEM Forms サービスを呼び出す場合�
 
 ## セキュリティと認証 {#security-and-authentication}
 
-安全な転送で REST の呼び出しを行うために、AEM forms 管理者はAEM Formsをホストする J2EE アプリケーションサーバーで HTTPS プロトコルを有効にすることができます。 この設定は、J2EE アプリケーションサーバーに固有で、Forms サーバー設定には含まれていません。
+安全な転送で REST の呼び出しを行うために、AEM forms 管理者はAEM Formsをホストする J2EE アプリケーションサーバーで HTTPS プロトコルを有効にすることができます。 この設定は、J2EE アプリケーションサーバーに固有のもので、Forms Server 設定には含まれていません。
 
 >[!NOTE]
 >

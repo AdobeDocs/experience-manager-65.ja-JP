@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '445'
 ht-degree: 26%
 
 ---
@@ -81,7 +81,7 @@ _gaq.push(['_trackPageview']);
 
 ## ページでの新しいサービスの使用 {#using-your-new-service-on-pages}
 
-次に、サービス設定を作成し、使用する必要のあるページを設定する必要があります。
+サービス設定を作成したら、必要なページを設定して使用する必要があります。
 
 1. ページに移動します。
 1. サイドキックから&#x200B;**ページプロパティ**&#x200B;を開き、「**クラウドサービス**」タブを選択します。

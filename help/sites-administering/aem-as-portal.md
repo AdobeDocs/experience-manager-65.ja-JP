@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6092'
+source-wordcount: '6087'
 ht-degree: 26%
 
 ---
@@ -405,7 +405,7 @@ Web サイト管理ページを開く、またはポートレットからペー�
 
 ### AEMポートレットアプリケーションのカスタマイズ {#customizing-the-aem-portlet-application}
 
-指定されたAEMポートレットアプリケーションは、AEMと同様に、Web アプリケーション内で OSGi コンテナを開始します。 このアーキテクチャを使用すると、OSGi の次のすべての利点を活用できます。
+指定されたAEMポートレットアプリケーションは、AEMと同様に、Web アプリケーション内で OSGi コンテナを開始します。 このアーキテクチャを使用すると、OSGi の次の利点をすべて利用できます。
 
 * 更新と拡張が容易
 * ポータルサーバーと通信せずに、ポートレットのホットアップデートを実行できる
@@ -737,7 +737,7 @@ AEM WCM が提供するコンテンツにアクセスするには、ポータル
 
 >[!NOTE]
 >
->これらの手順では、Websphere ポータルを例として使用しますが、可能な限り一般的なものです。他の Web ポータルでは手順が異なることに注意してください。 手順は基本的にすべての Web ポータルで同じですが、特定の Web ポータルの手順を再利用する必要があります。
+>これらの手順では、Websphere ポータルを例として使用しますが、可能な限り一般的なものです。手順は、他の Web ポータルでは異なります。 手順は基本的にすべての Web ポータルで同じですが、特定の Web ポータルの手順を再利用する必要があります。
 
 #### ポートレットのインストール {#installing-the-portlet}
 

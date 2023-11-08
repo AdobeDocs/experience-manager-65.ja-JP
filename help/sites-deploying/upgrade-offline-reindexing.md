@@ -7,10 +7,10 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 98%
+source-wordcount: '1337'
+ht-degree: 96%
 
 ---
 
@@ -160,7 +160,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 `--doc-traversal-mode` パラメーターの使用方法は、リポジトリコンテンツをローカルフラットファイルにスプールすることにより、再インデックス時間を大幅に改善するので、MongoMK のインストールで便利です。ただし、リポジトリの 2 倍のサイズのディスク空き容量が必要です。
 
-MongoMK の場合、MongoDB インスタンスに近いインスタンスでこの手順を実行すると、このプロセスを高速化できます。同じマシン上で実行すると、ネットワークのオーバーヘッドを回避できます。
+MongoMK がある場合、この手順が MongoDB インスタンスに近いインスタンスで実行されると、このプロセスを高速化できます。 同じマシン上で実行すると、ネットワークのオーバーヘッドを回避できます。
 
 技術的な詳細については、[インデックス作成用の oak-run ドキュメント](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)を参照してください。
 

@@ -4,9 +4,9 @@ description: AEM Multi Site Manager の使用を開始および実行するの�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1604'
 ht-degree: 77%
 
 ---
@@ -160,7 +160,7 @@ MSM は、次の 2 つの方法で多言語 Web サイトを作成するため�
 
 ## ロールアウトのカスタマイズ {#customizing-rollouts}
 
-MSM ロールアウト設定は高度にカスタマイズ可能です。ロールアウトの自動化は、大きな影響を及ぼす可能性があることに注意する必要があります。ベストプラクティスとして、次のような場合はきわめて慎重に事前計画を立てるようにしてください&#x200B;*。*
+MSM ロールアウト設定は高度にカスタマイズ可能です。ロールアウトの自動化は、大きな影響を及ぼす可能性があります。 ベストプラクティスとして、次のような場合はきわめて慎重に事前計画を立てるようにしてください&#x200B;*。*
 
 * [onModify トリガー](#onmodify)などを使用してロールアウトを自動化する場合
 * [ノードタイプ／プロパティ](#node-types-properties)をカスタマイズする場合

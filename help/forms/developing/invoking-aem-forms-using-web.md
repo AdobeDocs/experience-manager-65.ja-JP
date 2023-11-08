@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '9887'
 ht-degree: 87%
@@ -1735,4 +1735,4 @@ AEM Forms の複雑なデータタイプ（`PrincipalReference` など）の一�
 
 ### I の文字で始まるサービスで無効なプロキシファイルが生成される {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
 
-Microsoft .Net 3.5 および WCF を使用する際、AEM Forms で一部のプロキシクラスの名前が間違って生成されます。この問題は、IBMFilenetContentRepositoryConnector、IDPSchedulerService、または名前が I の文字で始まる他のサービスに対してプロキシクラスが作成された場合に発生します。例えば、IBMFileNetContentRepositoryConnector では、生成されたクライアントの名前が `BMFileNetContentRepositoryConnectorClient` である場合です。生成されたプロキシクラスには I の文字がありません。
+Microsoft .Net 3.5 および WCF を使用する際、AEM Forms で一部のプロキシクラスの名前が間違って生成されます。この問題は、IBMFilenetContentRepositoryConnector、IDPSchedulerService、または名前が文字 I で始まるその他のサービスに対してプロキシクラスが作成された場合に発生します。例えば、IBMFileNetContentRepositoryConnector が次の場合に、生成されたクライアントの名前を指定します。 `BMFileNetContentRepositoryConnectorClient`. 生成されたプロキシクラスには I の文字がありません。

@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
 exl-id: 2118d77f-1314-48f1-88e3-e27dd8e9f17b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 75%
@@ -85,8 +85,8 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
     
             }
         ],
-        "originCode": <Origin http status code>, (optional - in case of SERVER_SIDE_VALIDATION)
-        "originMessage" : "<unstructured error message returned by service>" (optional - in case of SERVER_SIDE_VALIDATION)
+        "originCode": <Origin http status code>, (optional - if there is SERVER_SIDE_VALIDATION)
+        "originMessage" : "<unstructured error message returned by service>" (optional - if there is SERVER_SIDE_VALIDATION)
     }
 ```
 

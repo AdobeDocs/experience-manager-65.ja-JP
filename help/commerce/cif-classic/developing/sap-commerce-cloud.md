@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '2287'
 ht-degree: 32%
@@ -643,7 +643,7 @@ public interface ImportHandler {
   * Creates a category from the given values.
   * @param ctx           The importer context
   * @param values        The category's properties
-  * @param parentPath    Path of parent category or base path of import in case of root category
+  * @param parentPath    Path of parent category or base path of import if there is a root category
   * @return Path of created category
   */
   public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;

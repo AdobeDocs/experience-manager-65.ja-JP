@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 22%
@@ -61,11 +61,11 @@ AEM forms のバックアップ方法には、次の 2 種類のバックアッ�
 
 次の変更が原因で、AEM forms を別の環境で回復する必要がある場合は、次のガイドラインを使用します。
 
-* AEM forms サーバーの IP アドレス、ホスト名またはポートの変更
+* AEM Forms Server の IP アドレス、ホスト名またはポートの変更
 * ドライブ文字またはディレクトリパスの変更
 * 別のデータベースホスト、ポート、または名前への変更
 
-通常、このような回復シナリオは、アプリケーションサーバー、データベースサーバー、または forms サーバーをホストするサーバーのハードウェア障害が原因で発生します。 この節で説明するAEM forms 固有の設定に加えて、AEM forms サーバーのホスト名または IP アドレスが変更された場合は、ロードバランサーやファイアウォールなど、AEM forms のデプロイメントの他の部分にも必要な変更を加える必要があります。
+通常、このような回復シナリオは、アプリケーションサーバー、データベースサーバー、またはFormsサーバーをホストするサーバーのハードウェア障害が原因で発生します。 この節で説明するAEM forms 固有の設定に加えて、AEM Forms Server のホスト名または IP アドレスが変更された場合は、ロードバランサーやファイアウォールなど、AEM forms のデプロイメントの他の部分にも必要な変更を加える必要があります。
 
 ### 変更できないもの {#what-cannot-be-changed}
 
@@ -73,7 +73,7 @@ AEM forms のバックアップ方法には、次の 2 種類のバックアッ�
 
 ### 回復後の再起動 {#restarting-after-a-recovery}
 
-回復後に forms サーバーを再起動する前に、以下の手順を実行します。
+回復後にForms Server を再起動する前に、次の手順を実行します。
 
 1. メンテナンスモードでシステムを起動します。
 1. 次の操作を実行して、Form Manager がメンテナンスモードでAEM forms と同期されるようにします。
@@ -104,4 +104,4 @@ AEM forms のバックアップ方法には、次の 2 種類のバックアッ�
 >
 >この状況は、このスクリプトを使用して GDS の場所を変更する必要がある唯一の状況です。AEM Forms の実行中に GDS の場所を変更するには、管理コンソールを使用します。（[一般的な AEM Forms の設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)を参照）。
 
-GDS パスを設定した後、forms サーバーをメンテナンスモードで起動し、管理コンソールを使用して新しいノードの残りのファイルシステムパスを更新します。 必要なすべての設定が更新されたことを確認したら、AEM forms を再起動し、テストします。
+GDS パスを設定したら、メンテナンスモードでFormsサーバーを起動し、管理コンソールを使用して、新しいノードの残りのファイルシステムパスを更新します。 必要なすべての設定が更新されたことを確認したら、AEM forms を再起動し、テストします。

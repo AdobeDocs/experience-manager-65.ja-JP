@@ -4,10 +4,10 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '4613'
-ht-degree: 67%
+source-wordcount: '4611'
+ht-degree: 66%
 
 ---
 
@@ -693,7 +693,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 すべてのサイトページは、*https://&lt;aemserver>:&lt;port>/sites.html/content/we-gov* から利用できます。
 
-また、これらのサイトページでは、AEM Grid パッケージを使用して一部のコンポーネントのレイアウトを制御しています。
+また、これらのサイトページでは、AEM Grid パッケージを使用して、一部のコンポーネントのレイアウトを制御します。
 
 #### スタイルシステム {#style-system}
 

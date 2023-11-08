@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 13%
@@ -281,7 +281,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 -->
 
 ```shell
-# Each farm configures a set of load balanced renders (i.e. remote servers)
+# Each farm configures a set of load balanced renders (that is, remote servers)
 /farms
   {
   # First farm entry
@@ -594,7 +594,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 <!-- existing content as of Dec 10, wrt CQDOC-16081
 
 ```shell
-# Each farm configures a set of load balanced renders (i.e. remote servers)
+# Each farm configures a set of load balanced renders (that is, remote servers)
 /farms
   {
   # First farm entry

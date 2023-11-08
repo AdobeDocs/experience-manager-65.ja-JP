@@ -1,7 +1,7 @@
 ---
 title: HTML5 フォームの Form Bridge API
 seo-title: Form Bridge APIs for HTML5 forms
-description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。API は親ウィンドウで FormBridgeInitialized イベントを送出します。
+description: 外部アプリケーションは、FormBridge API を使用して XFA Mobile Form に接続します。 API は親ウィンドウで FormBridgeInitialized イベントを発行します。
 seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 100%
+ht-degree: 86%
 
 ---
 
@@ -43,7 +43,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **getBridgeVersion()**
 
-スクリプティングライブラリのバージョン番号を返す
+スクリプトライブラリのバージョン番号を返します
 
 * **入力**：なし
 * **出力**：スクリプティングライブラリのバージョン番号
@@ -73,15 +73,15 @@ window.addEventListener("FormBridgeInitialized",
    * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数。この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
-      * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
+      * **success**：サクセスハンドラー関数。この関数には、XML を含むオブジェクトが *データ* プロパティ。
+      * **context**：のコンテキスト (this) の対象となるオブジェクト *成功* 関数が設定されている
       * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数検証関数にはエラー文字列の配列が渡されます。
       * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
+**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定は、デフォルトの設定よりも優先されます。 サポートされる設定は、config セクションで指定します。
 
 * **必要情報:**
 
@@ -89,40 +89,38 @@ window.addEventListener("FormBridgeInitialized",
 
       * **widgetConfig：**&#x200B;フォーム内のデフォルトウィジェットをカスタムウィジェットでオーバーライドするのをユーザーに許可します。設定は次のようにオーバーライドされます。
 
-         *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
+        *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
 
       * **pagingConfig：**&#x200B;最初のページのみがレンダリングされるデフォルト動作をオーバーライドするのをユーザーに許可します。設定は次のようにオーバーライドされます。
 
-         *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).*
+        *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).*
 
       * **LoggingConfig：**&#x200B;ユーザーがログのレベル、あるカテゴリのログの無効化、またはログコンソールを表示するかサーバーに送信するかをオーバーライドすることを可能にします。設定は次のようにオーバーライドできます。
 
-      ```javascript
-      formBridge.registerConfig{
-        "LoggerConfig" : {
-      {
-      "on":`<true *| *false>`,
-      "category":`<array of categories>`,
-      "level":`<level of categories>`, "
-      type":`<"console"/"server"/"both">`
-      }
-        }
-      ```
+     ```javascript
+     formBridge.registerConfig{
+       "LoggerConfig" : {
+     {
+     "on":`<true *| *false>`,
+     "category":`<array of categories>`,
+     "level":`<level of categories>`, "
+     type":`<"console"/"server"/"both">`
+     }
+       }
+     ```
 
       * **SubmitServiceProxyConfig：**&#x200B;ユーザーが送信を登録し、プロキシサービスをロギングできるようにします。
 
-         ```javascript
-         window.formBridge.registerConfig("submitServiceProxyConfig",
-         {
-         "submitServiceProxy" : "`<submitServiceProxy>`",
-         "logServiceProxy": "`<logServiceProxy>`",
-         "submitUrl" : "`<submitUrl>`"
-         });
-         ```
+        ```javascript
+        window.formBridge.registerConfig("submitServiceProxyConfig",
+        {
+        "submitServiceProxy" : "`<submitServiceProxy>`",
+        "logServiceProxy": "`<logServiceProxy>`",
+        "submitUrl" : "`<submitUrl>`"
+        });
+        ```
 
    * **config：**&#x200B;設定の値
-
-
 
 * **出力：***data* プロパティに設定の元の値が含まれているオブジェクト。
 
@@ -150,7 +148,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **入力**：なし
 * **出力**：なし
-* **エラー**：フォーム状態が初期化されていない場合、例外をスローする
+* **エラー**：フォーム状態が初期化されていない場合に例外をスローします
 
 **getFormState()**：フォームステートを表す JSON を返します
 
@@ -159,7 +157,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **エラー**：なし
 
-**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
+**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後に成功またはエラーハンドラーが呼び出されます
 
 * **必要情報:**
 
@@ -177,7 +175,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **入力：**&#x200B;フォーカスを設定するフィールドの SOM 式
 * **出力：**&#x200B;なし
-* **エラー：** SOM 式が間違っている場合、例外をスローする
+* **エラー：** SOM 式が正しくない場合は例外をスローする
 
 **setFieldValue (som, value)**：提供された SOM 式のフィールドの値を設定します
 
@@ -187,7 +185,7 @@ window.addEventListener("FormBridgeInitialized",
    * **value：** **SOM** 配列で提供された SOM 式に対応する値が含まれている配列。値のデータタイプが fieldType と同じでない場合、値は変更されません。
 
 * **出力：**&#x200B;なし
-* **エラー：** SOM 式が間違っている場合、例外をスローします
+* **エラー：** SOM 式が正しくない場合は例外をスローする
 
 **getFieldValue (som)**：提供された SOM 式のフィールドの値を返します
 

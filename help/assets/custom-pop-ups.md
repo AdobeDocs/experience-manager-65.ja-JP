@@ -9,10 +9,10 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
-workflow-type: ht
-source-wordcount: '1052'
-ht-degree: 100%
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+workflow-type: tm+mt
+source-wordcount: '1050'
+ht-degree: 90%
 
 ---
 
@@ -42,7 +42,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
     </tr>
     <tr>
     <td>インタラクティブ画像</td>
-    <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">画像バナーへのホットスポットの追加</a></td>
+    <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">画像バナーへのホットスポットの追加</a>.</td>
     </tr>
     <tr>
     <td>インタラクティブビデオ</td>
@@ -50,12 +50,12 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
     </tr>
     <tr>
     <td>カルーセルバナー</td>
-    <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">バナーへのホットスポットまたは画像マップの追加</a><br /> </td>
+    <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">バナーへのホットスポットまたは画像マップの追加</a>.<br /> </td>
     </tr>
     </tbody>
    </table>
 
-1. ビューアの埋め込みコードを取得し、Web サイトにビューアを統合します。
+1. ビューアの埋め込みコードを取得して、Web サイト内にビューアを統合します。
 
    <table>
     <tbody>
@@ -78,7 +78,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
     </tbody>
    </table>
 
-1. 使用しているビューアがクイックビューの使用方法を認識できる必要があります。
+1. 使用しているビューアは、クイックビューの使用方法を理解している必要があります。
 
    ビューアは `QuickViewActive` というハンドラーを使用します。
 
@@ -109,7 +109,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
    * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
    * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
 
-1. ここで、 `quickViewActivate` ハンドラーを設定する必要があります。
+1. 次の項目を設定する必要があります。 `quickViewActivate` ハンドラー
 
    `quickViewActivate` ハンドラーはビューアのクイックビューを制御します。このハンドラーには、クイックビューで使用する変数のリストと関数呼び出しが含まれています。埋め込みコードは、クイックビューに設定された SKU 変数と `loadQuickView` 関数呼び出しのサンプルにマッピングを提供します。
 
@@ -128,7 +128,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
     var <i>variable3</i>= inData.<i>quickviewVariable3</i>
    ```
 
-   **関数呼び出し**&#x200B;ハンドラーには、クイックビューを機能させるために関数呼び出しも必要です。この関数は、ホストページからアクセスできることが前提となります。埋め込みコードは、サンプル関数呼び出しを提供します。
+   **関数呼び出し**&#x200B;ハンドラーには、クイックビューを機能させるために関数呼び出しも必要です。関数は、ホストページからアクセス可能であると想定されます。 埋め込みコードは、次のサンプル関数呼び出しを提供しています。
 
    `loadQuickView(sku)`
 
@@ -142,13 +142,14 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
 
 1. 以下の操作を実行してください。
 
-   * 埋め込みコードの setHandlers セクションのコメントアウトを解除します。
-   * クイックビューに含まれる追加変数をマッピングします。
+   * 埋め込みコードの setHandlers セクションのコメントを解除します。
+   * クイックビューに含まれる追加の変数をマッピングします。
 
       * 変数を追加する場合は、`loadQuickView(sku,*var1*,*var2*)` 呼び出しを更新します。
+
    * ビューア外でページにシンプルな `loadQuickView` () 関数を作成します。
 
-      例えば、以下の場合は、ブラウザーのコンソールに SKU の値が書き込まれます。
+     例えば、以下の場合は、ブラウザーのコンソールに SKU の値が書き込まれます。
 
    ```xml
    function loadQuickView(sku){
@@ -158,9 +159,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
 
    * Web サーバーにテスト HTML ページをアップロードし、開きます。
 
-       クイックビューからの変数がマッピングされ、関数呼び出しが追加された状態で、ブラウザーコンソールは提供されたサンプル関数を使用してブラウザーコンソールに変数値を書き込みます。
-
-
+      クイックビューからの変数がマッピングされ、関数呼び出しが追加された状態で、ブラウザーコンソールは提供されたサンプル関数を使用してブラウザーコンソールに変数値を書き込みます。
 
 1. これで、関数を使用してクイックビューでシンプルなポップアップを起動できるようになりました。以下の例では、ポップアップに `DIV` を使用しています。
 1. ポップアップの `DIV` を以下のようなスタイルにします。必要に応じて独自のスタイルを追加します。
@@ -188,7 +187,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
    </div>
    ```
 
-1. ポップアップで SKU の値を更新できるように関数を追加します。手順 5 で作成した簡単な関数を次のように置き換えて、ポップアップを表示させます。
+1. ポップアップで SKU の値を更新できるように関数を追加します。手順 5 で作成した簡単な関数を次のように置き換えて、を次のように設定します。
 
    ```xml
    <script type="text/javascript">
@@ -232,9 +231,9 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
    上記のコードでは、次の処理を実行しました。
 
    * カスタムポップアップを特定しました。
-   * DOM からの削除
-   * ビューアコンテナの指定
-   * ビューアコンテナへのポップアップのアタッチ
+   * DOM から削除しました。
+   * ビューアのコンテナを識別しました。
+   * ビューアのコンテナにポップアップをアタッチしました。
 
 1. setHandlers コード全体は次に似たものになります（インタラクティブビデオビューアを使用しています）。
 

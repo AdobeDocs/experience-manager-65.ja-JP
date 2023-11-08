@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '4143'
-ht-degree: 94%
+ht-degree: 93%
 
 ---
 
@@ -67,13 +67,13 @@ Forms サービスは、web ブラウザーからの HTTP リクエストに応�
 >
 >HTML フォーム上の HTML のデジタル署名ボタンの外観をカスタマイズする場合は、fscdigsig.css ファイル（adobe-forms-ds.ear/adobe-forms-ds.war ファイル内）で次のプロパティを変更する必要があります。
 
-**.fsc-ds-ssb**：このスタイルシートは、空白の記号フィールドの場合に適用されます。
+**.fsc-ds-ssb**：このスタイルシートは、空白の記号フィールドがある場合に適用されます。
 
-**.fsc-ds-ssv**：このスタイルシートは、「有効な記号」フィールドの場合に適用されます。
+**.fsc-ds-ssv**：このスタイルシートは、「有効な記号」フィールドがある場合に適用されます。
 
-**.fsc-ds-ssc**：このスタイルシートは、有効な記号フィールドでデータが変更された場合に適用されます。
+**.fsc-ds-ssc**：このスタイルシートは、「有効な署名」フィールドがあるが、データが変更されている場合に適用されます。
 
-**.fsc-ds-ssi**：このスタイルシートは、無効な記号フィールドの場合に適用されます。
+**.fsc-ds-ssi**：このスタイルシートは、無効な記号フィールドがある場合に適用されます。
 
 **.fsc-ds-popup-bg**：このスタイルシートプロパティは使用されていません。
 

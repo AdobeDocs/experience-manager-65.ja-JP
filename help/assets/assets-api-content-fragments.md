@@ -5,9 +5,9 @@ feature: Content Fragments,Assets HTTP API
 role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1961'
 ht-degree: 93%
 
 ---
@@ -231,7 +231,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 * バイナリデータを公開しません。
 * JSON 出力（`properties` プロパティ内）に完全に含まれます。
 
-* また、アトミックと見なされます。つまり、要素とバリエーションは、リンクまたは子エンティティとしてではなく、フラグメントのプロパティの一部として公開されます。これにより、フラグメントのペイロードに効率的にアクセスできます。
+* また、アトミックと見なされます。つまり、エレメントとバリエーションは、リンクまたは子エンティティとしてではなく、フラグメントのプロパティの一部として公開されます。これにより、フラグメントのペイロードに効率的にアクセスできます。
 
 #### コンテンツモデルとコンテンツフラグメント {#content-models-and-content-fragments}
 

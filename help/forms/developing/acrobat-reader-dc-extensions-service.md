@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
 exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 95%
@@ -71,7 +71,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * SOAP required JAR files are in the following path: 
      * <install directory>/sdk/client-libs/thirdparty 
      * 
-     * If you want to invoke a remote forms server instance and there is a 
+     * If you want to invoke a remote Forms Server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
      * you have to include these additional JAR files 
@@ -182,7 +182,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 
      * <install directory>/jboss/bin/client 
      * 
-     * If you want to invoke a remote forms server instance and there is a 
+     * If you want to invoke a remote Forms Server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
      * you have to include additional JAR files in the following  
@@ -282,7 +282,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 
      * <install directory>/jboss/bin/client 
      * 
-     * If you want to invoke a remote forms server instance and there is a 
+     * If you want to invoke a remote Forms Server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
      * you have to include additional JAR files in the following  

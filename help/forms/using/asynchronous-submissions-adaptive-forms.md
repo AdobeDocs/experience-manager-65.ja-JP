@@ -1,41 +1,37 @@
 ---
 title: アダプティブフォームの非同期送信
-seo-title: Asynchronous submission of adaptive forms
 description: アダプティブフォームの非同期送信を設定する方法を説明します。
-seo-description: Learn to configure asynchronous submission for adaptive forms.
-uuid: 6555ac63-4d99-4b39-a2d0-a7e61909106b
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 0a0d2109-ee1f-43f6-88e5-1108cd215da6
 docset: aem65
 feature: Adaptive Forms
 exl-id: bd0589e2-b15a-4f0e-869c-2da4760b1ff4
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 79%
+source-wordcount: '795'
+ht-degree: 70%
 
 ---
 
 # アダプティブフォームの非同期送信{#asynchronous-submission-of-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/asynchronous-submissions-adaptive-forms.html) |
 | AEM 6.5 | この記事 |
 
-これまでの Web フォームは、同期送信用に設定されていました。同期送信では、ユーザーがフォームを送信すると、確認ページ、ありがとうページ、または送信に失敗した場合はエラーページにリダイレクトされます。しかし、現在では、単一ページアプリケーションなどの最新の Web エクスペリエンスが広く使用されるようになっています。こうしたアプリケーションでは、バックグラウンドでクライアントとサーバー間の通信が実行されている間は、Web ページが静的な状態のままになります。非同期送信を設定することにより、アダプティブフォームでこうした Web エクスペリエンスを実現することができます。
+これまでの Web フォームは、同期送信用に設定されていました。同期送信では、ユーザーがフォームを送信すると、確認確認ページ、「ありがとうございます」ページ、または送信エラーが発生した場合はエラーページにリダイレクトされます。 しかし、現在では、単一ページアプリケーションなどの最新の Web エクスペリエンスが広く使用されるようになっています。こうしたアプリケーションでは、バックグラウンドでクライアントとサーバー間の通信が実行されている間は、Web ページが静的な状態のままになります。非同期送信を設定することにより、アダプティブフォームでこうした Web エクスペリエンスを実現することができます。
 
-非同期送信では、ユーザーがフォームを送信すると、フォーム開発者は、別のフォームや Web サイトの別のセクションにリダイレクトするなど、別のエクスペリエンスを提供します。作成者は、別のデータストアへのデータの送信やカスタム分析エンジンの追加など、個別のサービスをプラグインすることもできます。非同期送信の場合、アダプティブフォームは、送信されたフォームのデータがサーバー上で検証される際にリロードされなかったり、URL が変更されなかったりするため、単一ページアプリケーションのように動作します。
+非同期送信では、ユーザーがフォームを送信すると、フォーム開発者は、別のフォームや Web サイトの別のセクションにリダイレクトするなど、別のエクスペリエンスを提供します。また、作成者は、別のデータストアへのデータ送信やカスタム解析エンジンの追加など、別のサービスを差し込むこともできます。非同期送信がある場合、アダプティブフォームは単一ページアプリケーションのように動作します。送信されたフォームデータがサーバー上で検証されても、フォームが再読み込みされないか、URL が変更されないからです。
 
 アダプティブフォームでの非同期送信の詳細については、以下を参照してください。
 
 ## 非同期送信の設定 {#configure}
 
-アダプティブフォームの非同期送信を設定するには：
+アダプティブフォームの非同期送信を設定するには、次の手順を実行します。
 
 1. アダプティブフォームのオーサリングモードで、フォームコンテナオブジェクトを選択し、![cmppr1](assets/cmppr1.png) をタップしてプロパティを開きます。
 1. 「**[!UICONTROL 送信]**」プロパティセクションで、「**[!UICONTROL 非同期送信を使用]**」を有効にします。
@@ -48,7 +44,7 @@ ht-degree: 79%
 
 ## 非同期送信の仕組み {#how-asynchronous-submission-works}
 
-AEM Formsには、すぐに使用できる、フォーム送信の成功ハンドラーとエラーハンドラーが用意されています。 ハンドラーは、サーバー応答に基づいて実行されるクライアントサイド関数です。フォームが送信されると、データが検証のためにサーバーに転送され、送信の成功またはエラーイベントに関する情報と共に、応答がクライアントに返されます。この情報は、関連するハンドラーにパラメーターとして渡され、関数が実行されます。
+AEM Forms には、すぐに使用できる、フォーム送信の成功および失敗ハンドラーが用意されています。ハンドラーは、サーバー応答に基づいて実行されるクライアントサイド関数です。フォームが送信されると、データが検証のためにサーバーに転送され、送信の成功またはエラーイベントに関する情報と共に、応答がクライアントに返されます。この情報は、関連するハンドラーにパラメーターとして渡され、関数が実行されます。
 
 また、フォームの作成者と開発者は、フォームレベルでルールを記述して、デフォルトのハンドラーを上書きできます。詳しくは、「[ルールを使用したデフォルトハンドラーの上書き](#custom)」を参照してください。
 
@@ -67,7 +63,7 @@ AEM Formsには、すぐに使用できる、フォーム送信の成功ハン�
 }
 ```
 
-フォーム送信が成功した場合に含まれるサーバー応答を以下に示します。
+フォームの送信が成功した場合のサーバーの応答には、次のものが含まれます。
 
 * フォームデータのフォーマットタイプ：XML または JSON
 * XML 形式または JSON 形式のフォームデータ
@@ -93,7 +89,7 @@ AEM Formsには、すぐに使用できる、フォーム送信の成功ハン�
  }
 ```
 
-フォーム送信がエラーになった場合に含まれるサーバー応答を以下に示します。
+フォームの送信時にエラーが発生した場合のサーバーの応答には、次のものが含まれます。
 
 * エラーの理由、失敗した CAPTCHA またはサーバーサイド検証
 * 検証が失敗したフィールドの SOM 式と、対応するエラーメッセージを含む、エラーオブジェクトのリスト
@@ -108,7 +104,7 @@ AEM Formsには、すぐに使用できる、フォーム送信の成功ハン�
 
 1. アダプティブフォームをオーサリングモードで開いて、任意のフォームオブジェクトを選択し、![edit-rules1](assets/edit-rules1.png) をタップしてルールエディターを開きます。
 1. フォームオブジェクトツリーで「**[!UICONTROL フォーム]**」選択し、「**[!UICONTROL 作成]**」をタップします。
-1. 選択 **[!UICONTROL コードエディター]** を選択します。
+1. 選択 **[!UICONTROL コードエディター]** 「モード選択」ドロップダウンから、次の操作をおこないます。
 1. コードエディターで、 **[!UICONTROL コードを編集]**. タップ **[!UICONTROL 編集]** をクリックします。
 1. 選択 **[!UICONTROL 送信成功]** または **[!UICONTROL 送信中にエラーが発生しました]** から **[!UICONTROL イベント]** 」ドロップダウンリストから選択できます。
 1. 選択したイベントのルールを作成してをタップします。 **[!UICONTROL 完了]** 」と入力してルールを保存します。

@@ -1,18 +1,14 @@
 ---
 title: アプリケーションの作成および設定アクション
-seo-title: Application Create and Configuration Actions
 description: 多くの場合、アプリを作成することは、AEM Mobile On-Demand コンテンツを作成および管理するための最初の手順です。 このページでは、この機能について詳しく見ていきます。
-seo-description: Creating an app is often the first step towards creating and managing AEM Mobile On-Demand content. Follow this page to learn more.
-uuid: f6b41d9a-d896-479e-9f6c-e91a88f3e74d
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '440'
 ht-degree: 8%
 
 ---
@@ -59,7 +55,7 @@ ht-degree: 8%
 アプリテンプレートとは これは、アプリのベースラインまたは基盤を表すページテンプレートおよびコンポーネントの集まりと考えてください。
 別のアプリのテンプレートに基づいてアプリを作成する場合、作成元のアプリを表す開始点を持つアプリが表示されます。
 
-この機能を利用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリ）がインストールされている必要があります。
+この機能を使用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリ）がインストールされている必要があります。
 
 ### 次のステップ {#the-next-step}
 

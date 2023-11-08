@@ -4,10 +4,10 @@ description: AEM Content and Commerce プロジェクトをデプロイする方
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -57,7 +57,7 @@ CIF アドオンでは、`/api/graphql` に GraphQL プロキシサーブレッ�
 
 この設定は、次の手順に従って、CIF Cloud Service 設定を使用してプロジェクトに合わせて調整できます。
 
-1. AEM で、ツール／Cloud Services／CIF 設定に移動します。
+1. AEMで、ツール/Cloud Service/CIF設定に移動します。
 
 2. 変更するコマース設定を選択します。
 

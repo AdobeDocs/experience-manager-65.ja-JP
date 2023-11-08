@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '10692'
 ht-degree: 54%
@@ -35,7 +35,7 @@ ht-degree: 54%
 
 ## Audit Workflow サービスの設定 {#audit-workflow-service-settings}
 
-Workbench では、実行時に実行されたプロセスインスタンスを記録し、再生してプロセスの動作を観察することができます。 ( 詳しくは、 [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp).) forms サーバーのファイルシステム上のスペースを節約するために、保存するデータを記録するプロセスの量を制限できます。 Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
+Workbench では、実行時に実行されたプロセスインスタンスを記録し、再生してプロセスの動作を観察することができます。 ( 詳しくは、 [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp).) Forms Server のファイルシステム上の領域を節約するために、保存するプロセス記録データの量を制限できます。 Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
 
 **maxNumberOfRecordingInstances：**&#x200B;格納する記録の最大数です。最大数が保存されると、新しい記録が作成されると、最も古い記録がファイルシステムから削除されます。 このプロパティは、多くの録画を作成する場合に、古い録画を自動的に削除する場合に役立ちます。 デフォルト値は 50 です。
 
@@ -265,7 +265,7 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 **OCR Pool Size：** PDF Generator が OCR に使用する PaperCaptureService のプールサイズです。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。この設定は Windows システムでのみ有効です。
 
-**Fallback Font Family For HTML To PDF Conversions：** 元の HTML で使用されているフォントが AEM Forms サーバーで使用できない場合に PDF ドキュメントで使用されるフォントファミリーの名前です。使用できないフォントを使用するHTMLページを変換する場合は、フォントファミリを指定します。 例えば、地域言語で作成したページでは、使用できないフォントを使用できます。
+**フォールバックフォントファミリを使用したHTMLからPDFへの変換：** 元のHTMLで使用されたフォントがAEM Forms Server で使用できない場合に、PDFドキュメントで使用するフォントファミリの名前です。 使用できないフォントを使用するHTMLページを変換する場合は、フォントファミリを指定します。 例えば、地域言語で作成したページでは、使用できないフォントを使用できます。
 
 **Retry Logic for Native Conversions：** 最初の変換に失敗した場合、PDF 生成の再試行が次のように制御されます。
 
@@ -283,7 +283,7 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 ## Guides ES4 Utilities サービス設定 {#guides-es4-utilities-service-settings}
 
-ガイドを作成すると、ガイド定義などの一部のリソースがガイドに埋め込まれます。 リソースは、ローカルまたはAEM forms サーバー上に保存されたアプリケーションアセットへの参照として存在することもできます。 ガイドにはデータが含まれておらず、送信場所と入力の値は、すべての外部環境に適していません。
+ガイドを作成すると、ガイド定義などの一部のリソースがガイドに埋め込まれます。 リソースは、ローカルまたはAEM Forms Server に保存されたアプリケーションアセットへの参照としても存在できます。 ガイドにはデータが含まれておらず、送信場所と入力の値は、すべての外部環境に適していません。
 
 ほとんどの場合、デフォルトのガイドレンダリングサービスを使用すれば、Workspace または他の外部環境で使用するガイドを準備できます。 (Workbench のサービスビューでは、デフォルトのサービスは Guides (system)/Processes/Render Guide - 1.0 です )。 Guide Utilities サービス ( `GuidesUtility`) を使用すると、必要に応じて、ガイドをレンダリングするためのカスタマイズされたプロセスを作成できます。
 
@@ -340,7 +340,7 @@ JDBC サービス（`JdbcService`）を使用すると、プロセスにおい�
 
 JDBC サービスでは、以下の設定を使用できます。
 
-**datasourceName：** データベースサーバーへの接続に使用するデータソースの JNDI 名を表す文字列値です。データソースは、forms サーバーをホストするアプリケーションサーバー上で定義する必要があります。 デフォルト値は、AEM forms データベースのデータソースの JNDI 名です。
+**datasourceName：** データベースサーバーへの接続に使用するデータソースの JNDI 名を表す文字列値です。データソースは、Forms Server をホストするアプリケーションサーバーで定義する必要があります。 デフォルト値は、AEM forms データベースのデータソースの JNDI 名です。
 
 ## JMS サービスの設定 {#jms-service-settings}
 
@@ -482,7 +482,7 @@ PDFG Config サービス（`PDFGConfigService`）では、以下の設定を使�
 
 **Server Conversion Timeout：** Generate PDF サービスと Distiller サービスの最大ジョブ変換タイムアウト（秒単位）です。この設定により、config.xml ファイルおよび PDF Generator の管理コンソールページで指定できる最大変換タイムアウトが制限されます。デフォルト値は 270 です。
 
-**Server Global Timeout：** PDF の変換中、forms サーバーはタイムアウトの制限を考慮します。この問題を解決するには、タイムアウトの値を設定します。
+**Server Global Timeout:** PDFの変換を実行する際、Formsサーバーではタイムアウトの制限が考慮されます。 この問題を解決するには、タイムアウトの値を設定します。
 
 **Job Options Prefix：** ジョブオプションファイルに短い文字列を追加するために Generate PDF サービスで使用されるプレフィックスです。Acrobat Distiller でこれらのジョブオプションファイルを一時的に使用するために作成されます。デフォルト値は「pdfg」です。
 
@@ -708,7 +708,7 @@ Watched Folder サービスでは、以下の設定を使用できます。
 
 **Overwrite Duplicate Filenames：**&#x200B;監視フォルダーで結果ファイルが同じ名前の既存のファイルを上書きするかどうか、および保持されていた同じ名前のドキュメントを上書きするかどうかを指定する Boolean 文字列。
 
-**Preserve Folder：**&#x200B;保存用フォルダーのデフォルト値。このフォルダーは、入力が正常に処理された場合に、ソースファイルをにコピーするために使用します。 この値には、結果フォルダー設定で説明されているファイルパターンを使用して、何も指定しないか、相対パスまたは絶対パスを指定できます。
+**Preserve Folder：**&#x200B;保存用フォルダーのデフォルト値。このフォルダーは、入力が正常に処理された場合に、ソースファイルをにコピーするために使用されます。 この値には、結果フォルダー設定で説明されているファイルパターンを使用して、何も指定しないか、相対パスまたは絶対パスを指定できます。
 
 **Failure Folder：**&#x200B;失敗ファイルをコピーするフォルダー名。何も指定しないか、結果フォルダー設定で説明されているファイルパターンを使用して相対パスまたは絶対パスを指定できます。
 
@@ -755,11 +755,11 @@ Web Service サービスは、SOAP メッセージを送受信して Web サー�
 
 Web Service サービスでは、次の設定を使用できます。
 
-**Key Store：**&#x200B;認証に使用する秘密鍵を含むキーストアファイルのフルパス。forms サーバーからこのファイルにアクセスできる必要があります。
+**Key Store：**&#x200B;認証に使用する秘密鍵を含むキーストアファイルのフルパス。Forms Server がファイルにアクセスできる必要があります。
 
 **Key Store Password：**&#x200B;キーストアファイルのパスワード。
 
-**Key Store Type：**&#x200B;キーストアのタイプ。forms サーバーを実行する JVM 用に設定されているデフォルトのキーストアの種類を使用する場合は、値を指定しません。 それ以外の場合は、次のいずれかの値を指定します。
+**Key Store Type：**&#x200B;キーストアのタイプ。値を指定しないで、Forms Server を実行する JVM 用に設定されているデフォルトのキーストアタイプを使用します。 それ以外の場合は、次のいずれかの値を指定します。
 
 * jks
 * pkcs12
@@ -770,7 +770,7 @@ Web Service サービスでは、次の設定を使用できます。
 
 **Trust Store Password：**&#x200B;トラストストアファイルのパスワード。
 
-**Trust Store Type：**&#x200B;トラストストアのタイプ。 forms サーバーを実行する JVM 用に設定されているデフォルトのキーストアの種類を使用する場合は、値を指定しません。 それ以外の場合は、次のいずれかの値を指定します。
+**Trust Store Type：**&#x200B;トラストストアのタイプ。 値を指定しないで、Forms Server を実行する JVM 用に設定されているデフォルトのキーストアタイプを使用します。 それ以外の場合は、次のいずれかの値を指定します。
 
 * jks
 * pkcs12
@@ -783,11 +783,11 @@ XSLT Transformation サービス（`XSLTService`）を使用すると、プロ�
 
 XSLT Transformation サービスでは以下の設定を使用できます。
 
-**Factory Name：** XSLT 変換の実行に使用する Java クラスの完全修飾名。値を指定しない場合は、forms サーバーを実行する Java 仮想マシンに設定されたデフォルトのファクトリが使用されます。
+**Factory Name：** XSLT 変換の実行に使用する Java クラスの完全修飾名。値を指定しない場合は、Forms Server を実行する Java 仮想マシンに設定されたデフォルトのファクトリが使用されます。
 
 ## サービスのセキュリティ設定の変更 {#modifying-security-settings-for-a-service}
 
-forms サーバーでは、各サービスのセキュリティ設定を構成できます。この設定により、サービスごとのサービスレベルに関する詳細なアクセス制御を構成できます。
+Forms Server では、各サービスのセキュリティ設定を構成できます。この設定により、サービスごとにアクセス制御の詳細設定をおこなうことができます。
 
 デフォルトのセキュリティプロファイルがインストールされ、システムのニーズに合わせて設定できます。 各セキュリティプロファイルには関連付けられたドメインがあり、ユーザーレベルまたはグループレベルで作成されます。
 

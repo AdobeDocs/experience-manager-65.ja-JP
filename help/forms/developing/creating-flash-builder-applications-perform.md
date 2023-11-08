@@ -11,7 +11,7 @@ topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 98%
@@ -362,7 +362,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
          /**
           * The root event. If current event type is <code>AUTHENTICATION_FAULT</code> then it would be an
           * <code>IOErrorEvent</code> in other cases it would be complete event. Its basic use is to extract the root
-          * cause in case of an authentication fault.
+          * cause if there is an authentication fault.
           */
          public function get rootEvent():Event
          {

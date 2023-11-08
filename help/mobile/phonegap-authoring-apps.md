@@ -1,16 +1,14 @@
 ---
 title: モバイルアプリケーションのオーサリング
 description: AEM Mobile Dashboard を使用すると、モバイルアプリケーションの作成、構築およびデプロイ、アプリケーションメタデータの作成、削除および編集をおこなえます。 このページでは、この機能について詳しく見ていきます。
-uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1011'
 ht-degree: 2%
 
 ---
@@ -67,7 +65,7 @@ AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテン�
 
 ページコンテンツを管理タイルでコンテンツを追加または変更したら、コンテンツリリースの更新を使用して、変更を顧客にプッシュできます。
 
-コンテンツパッケージを使用すると、AEMアプリ作成者はAEMでページコンテンツを管理し、開発チームに PhoneGap Shell アプリケーション（アプリフレームワークまたはインフラストラクチャ）を変更してもらい、開発者に配布用に様々なストアに再送信する必要がありません。
+コンテンツパッケージを使用すると、AEMアプリ作成者はAEMでページコンテンツを管理し、開発チームに PhoneGap Shell アプリケーション（アプリフレームワークまたはインフラストラクチャ）を変更してもらい、開発者に配布用に様々なストアに再送信する必要がなくなります。
 
 コンテンツパッケージは、更新ごとにコンテンツリリースパッケージと見なされる ZIP ファイルを作成します。 これらのパッケージには、アプリのレンダリング時に生成される html リソースと html ページが含まれ、最後の更新以降に変更されたファイルのみをパッケージ化するのに十分なインテリジェントです。
 

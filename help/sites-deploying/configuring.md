@@ -7,9 +7,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2113'
 ht-degree: 28%
 
 ---
@@ -54,7 +54,7 @@ Adobe Experience Manager(AEM) は、すべてのパラメーターのデフォ�
 
 >[!NOTE]
 >
->AEMの設定は簡単です。 ただし、特定の変更がアプリケーションに大きな影響を与える可能性があることに注意してください。 このため、AEMの設定を開始する前に、必要な経験と知識を持っていることを確認し、必要な変更を加えてください。 OSGi コンソールを使用して行った変更は、次のとおりです。 **即時** 実行中のシステムに適用されます（再起動は不要です）。
+>AEMの設定は簡単です。 ただし、一部の変更がアプリケーションに大きな影響を与える可能性があります。 このため、AEMの設定を開始する前に、必要な経験と知識を持っていることを確認し、必要な変更を加えてください。 OSGi コンソールを使用して行った変更は、次のとおりです。 **即時** 実行中のシステムに適用されます（再起動は不要です）。
 
 ## プライマリ設定に関する考慮事項 {#primary-configuration-considerations}
 

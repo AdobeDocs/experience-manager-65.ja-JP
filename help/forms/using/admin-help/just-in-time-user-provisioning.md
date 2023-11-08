@@ -1,7 +1,7 @@
 ---
 title: ジャストインタイムのユーザープロビジョニング
 seo-title: Just-in-time user provisioning
-description: ジャストインタイムのプロビジョニングを使用して、正常に認証された後でユーザーを User Management に追加し、新しいユーザーに関連するロールおよびグループを動的に割り当てます。
+description: ジャストインタイムプロビジョニングを使用して、認証が正常に完了した後でユーザーを User Management に追加し、新しいユーザーに関連する役割とグループを動的に割り当てます。
 seo-description: Use just-in-time provisioning to add users to User Management after successfull authentication and dynamically assign relevant roles and groups to the new user.
 uuid: a5ad4698-70bb-487b-a069-7133e2f420c2
 contentOwner: admin
@@ -10,24 +10,24 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 100%
+ht-degree: 33%
 
 ---
 
 # ジャストインタイムのユーザープロビジョニング {#just-in-time-user-provisioning}
 
-AEM Forms では、User Management にまだ存在していないユーザーのジャストインタイムプロビジョニングをサポートしています。ジャストインタイムプロビジョニングを使用した場合、ユーザーは、秘密鍵証明書が正常に認証されると、自動的に User Management に追加されます。さらに、関連するロールおよびグループが新しいユーザーに動的にアサインされます。
+AEM forms は、User Management にまだ存在しないユーザーのジャストインタイムプロビジョニングをサポートしています。 ジャストインタイムプロビジョニングでは、ユーザーの資格情報が正常に認証されると、ユーザーは User Management に自動的に追加されます。 さらに、関連する役割とグループが新しいユーザーに動的に割り当てられます。
 
-## ジャストインタイムのユーザープロビジョニングの必要性 {#need-for-just-in-time-user-provisioning}
+## ジャストインタイムのユーザープロビジョニングが必要 {#need-for-just-in-time-user-provisioning}
 
-従来の認証の手順を次に示します。
+従来の認証の仕組みは次のとおりです。
 
-1. ユーザーが AEM Forms にログインしようとすると、User Management は、使用可能なすべての認証プロバイダーにユーザーの秘密鍵証明書を連続して渡します（ログイン資格情報には、ユーザー名とパスワードの組み合わせ、Kerberos チケット、PKCS7 署名などが含まれます）。
-1. 認証プロバイダーは、秘密鍵証明書を検証します。
-1. 認証プロバイダーは、次に、ユーザーが User Management データベースに存在するかどうかを確認します。可能性のある結果を次に示します。
+1. ユーザーがAEM forms にログインしようとすると、User Management はユーザーの資格情報を、使用可能なすべての認証プロバイダーに順番に渡します。 （ログイン資格情報には、ユーザー名とパスワードの組み合わせ、Kerberos チケット、PKCS7 署名などが含まれます）。
+1. 認証プロバイダーが資格情報を検証します。
+1. 次に、認証プロバイダーは、ユーザーが User Management データベースに存在するかどうかを確認します。 次の結果が考えられます。
 
    **存在する：**&#x200B;ユーザーが登録されており、ロックされていない場合、User Management は認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
@@ -35,16 +35,16 @@ AEM Forms では、User Management にまだ存在していないユーザーの
 
    **無効：** User Management は認証失敗を返します。
 
-1. 認証プロバイダーが返した結果が評価されます。認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。そうでない場合は、User Management は次の認証プロバイダーに対して確認（手順 2～3）を行います。
-1. ユーザーの秘密鍵証明書を検証する利用可能な認証プロバイダーがなくなると、認証の失敗が返されます。
+1. 認証プロバイダーから返された結果が評価されます。 認証プロバイダーが認証成功を返した場合、ユーザーはログインできます。 それ以外の場合は、User Management は次の認証プロバイダー（手順 2～3）と確認します。
+1. ユーザーの資格情報を検証する使用可能な認証プロバイダーがない場合は、認証失敗が返されます。
 
-ジャストインタイムプロビジョニングが実装されているときに、認証プロバイダーの 1 つがユーザーの秘密鍵証明書を検証すると、新しいユーザーが User Management 内に動的に作成されます（上記、従来の認証手順 3 の後）。
+ジャストインタイムプロビジョニングを実装すると、いずれかの認証プロバイダーがユーザーの資格情報を検証すると、User Management に新しいユーザーが動的に作成されます。 （上記の従来の認証手順の手順 3 の後）。
 
-## ジャストインタイムのユーザープロビジョニングの実装 {#implement-just-in-time-user-provisioning}
+## ジャストインタイムのユーザープロビジョニングを実装する {#implement-just-in-time-user-provisioning}
 
-### ジャストインタイムプロビジョニングの API {#apis-for-just-in-time-provisioning}
+### ジャストインタイムプロビジョニング用の API {#apis-for-just-in-time-provisioning}
 
-AEM Forms で提供するジャストインタイムプロビジョニングの API を次に示します。
+AEM forms は、ジャストインタイムプロビジョニング用に以下の API を提供します。
 
 ```java
 package com.adobe.idp.um.spi.authentication  ;
@@ -81,32 +81,32 @@ public Boolean assign(User user);
 }
 ```
 
-### ジャストインタイムが有効なドメインを作成する際の考慮事項 {#considerations-while-creating-a-just-in-time-enabled-domain}
+### ジャストインタイム対応ドメインを作成する際の考慮事項 {#considerations-while-creating-a-just-in-time-enabled-domain}
 
 * ハイブリッドドメインのカスタム `IdentityCreator` を作成する際に、ローカルユーザーにダミーのパスワードが指定されていることを確認します。このパスワードフィールドを空白のままにしないでください。
-* 推奨事項：`DomainSpecificAuthentication` を使用して、特定のドメインに対するユーザーの秘密鍵証明書を検証します。
+* 推奨事項：`DomainSpecificAuthentication` を使用して、特定のドメインに対するユーザーの資格情報を検証します。
 
 ### ジャストインタイムが有効なドメインの作成 {#create-a-just-in-time-enabled-domain}
 
 1. 「ジャストインタイムプロビジョニングの API」の節にある、DSC による API の実装を記述します。
-1. DSC を forms サーバーにデプロイします。
-1. ジャストインタイムが有効なドメインを作成します。
+1. DSC をForms Server にデプロイします。
+1. ジャストインタイムが有効なドメインの作成:
 
-   * 管理コンソールで、設定／User Management／ドメインの管理／新規エンタープライズドメインをクリックします。
-   * ドメインを設定し、「ジャストインタイムプロビジョニングを有効にする」を選択します<!--Fix broken link (See Setting up and managing domains).-->
-   * 認証プロバイダーを追加します。認証プロバイダーを追加する際に、新規認証画面で、登録された「ID 作成者」および「割り当てプロバイダー」を選択します。
+   * 管理コンソールで、設定/User Management/ドメイン管理/新しいエンタープライズドメインをクリックします。
+   * ドメインを設定し、「ジャストインタイムプロビジョニングを有効にする」を選択します。 <!--Fix broken link (See Setting up and managing domains).-->
+   * 認証プロバイダーを追加します。 認証プロバイダーを追加する際に、新しい認証画面で、登録されている ID 作成者と割り当てプロバイダーを選択します。
 
 1. 新しいドメインを保存します。
 
-## 機能の仕組み {#behind-the-scenes}
+## 舞台裏 {#behind-the-scenes}
 
-ユーザーが AEM Forms にログインを試みて、認証プロバイダーがユーザーの秘密鍵証明書を受け入れるとします。ユーザーがまだ User Management データベースに存在していない場合、ユーザーの ID 確認は失敗します。このとき、AEM Forms は次のアクションを実行します。
+ユーザーがAEM forms にログインしようとしていて、認証プロバイダーがユーザーの資格情報を受け入れたとします。 ユーザーが User Management データベースにまだ存在しない場合、そのユーザーの ID チェックは失敗します。 AEM forms では、次のアクションが実行されるようになりました。
 
-1. 認証データを持つ `UserProvisioningBO` オブジェクトを作成し、秘密鍵証明書マップに配置します。
+1. 認証データを持つ `UserProvisioningBO` オブジェクトを作成し、資格情報マップに配置します。
 1. `UserProvisioningBO` によって返されるドメイン情報に基づいて、ドメインの登録された `IdentityCreator` および `AssignmentProvider` を取得して呼び出します。
-1. `IdentityCreator`を呼び出します。正常な `AuthResponse` が返される場合、秘密鍵証明書マップから `UserInfo` を抽出します。ユーザー作成後のグループ／ロールアサインおよびその他の後処理のために `AssignmentProvider` に渡します。
-1. ユーザーが正常に作成されると、成功としてユーザーのログイン試行を返します。
-1. ハイブリッドドメインの場合、認証プロバイダーに提供された認証データからユーザー情報を引き出します。この情報が正常に取得されると、ユーザーがオンザフライで作成されます。
+1. `IdentityCreator`を呼び出します。正常な `AuthResponse` が返される場合、資格情報マップから `UserInfo` を抽出します。ユーザー作成後のグループ／ロールアサインおよびその他の後処理のために `AssignmentProvider` に渡します。
+1. ユーザーが正常に作成された場合は、成功したとユーザーによるログイン試行を返します。
+1. ハイブリッドドメインの場合、認証プロバイダーに提供される認証データからユーザー情報を取り込みます。 この情報が正常に取得された場合は、その場でユーザーを作成します。
 
 >[!NOTE]
 >

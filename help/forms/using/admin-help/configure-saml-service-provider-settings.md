@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 10%
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ SAML について詳しくは、 [Security Assertion Markup Language (SAML) V2.0
 
 1. 管理コンソールで、設定/User Management/設定/SAML サービスプロバイダーの設定をクリックします。
 1. 「 Service Provider Entity ID 」ボックスに、AEM forms サービスプロバイダー実装の識別子として使用する一意の ID を入力します。 また、この一意の ID は、IDP（例えば `um.lc.com`）を設定するときにも指定します。AEM Forms にアクセスする URL も使用できます（例えば `https://AEMformsserver`）。
-1. 「サービスプロバイダーの Base URL」ボックスに、Forms サーバーのベース URL を入力します（例えば `https://AEMformsserver:8080`）。
+1. 「 Service Provider Base URL 」ボックスに、Forms Server のベース URL を入力します ( 例： `https://AEMformsserver:8080`) をクリックします。
 1. （オプション）署名済みの認証要求をAEM forms から IDP に送信できるようにするには、次のタスクを実行します。
 
    * Trust Manager を使用して、Trust Store の種類として「Document Signing Credential」を選択した状態で、PKCS #12形式の秘密鍵証明書を読み込みます。 ( 詳しくは、 [ローカル秘密鍵証明書の管理](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)

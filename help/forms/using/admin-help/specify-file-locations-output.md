@@ -8,9 +8,9 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 460bbb31-8187-469c-8102-b310093b6c03
 exl-id: 620c69d6-4fe1-46d6-b5d4-3b562142e547
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '327'
 ht-degree: 58%
 
 ---
@@ -38,11 +38,11 @@ Output で必要な特定の種類のファイルを検索する場所を指定�
 **デフォルトの場所：** これはデフォルトの選択です。このオプションを選択すると、次のように使用しているアプリケーションサーバーによって決まる場所にキャッシュが作成されます。
 
 * **JBoss:** `[JBoss Home]\server\[install type]\svcdata\Output\Cache`
-* **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[forms server name]\Output\Cache`
+* **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[Forms Server name]\Output\Cache`
 * **WebSphere:** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
 **LC の一時ディレクトリ：**&#x200B;キャッシュは、AEM Forms の一時ディレクトリのサブディレクトリ（管理コンソールの、設定／コアシステム設定／設定／一時ディレクトリの場所で指定）に作成されます。サブディレクトリの名前は `adobeoutput_[servername]` です。
 
 >[!NOTE]
 >
->一時クリーニングユーティリティを使用している場合、これらのディレクトリを削除しても機能に影響はありませんが、新しいキャッシュが作成されるまで、短時間のパフォーマンスに大きな影響が及ぶ可能性があります。 この問題を回避するには、AEM forms の一時ディレクトリをクリアする際に、これらのディレクトリを削除しないでください。
+>一時クリーニングユーティリティを使用している場合、これらのディレクトリを削除しても機能に影響はありませんが、新しいキャッシュが作成されるまで、短時間の間、パフォーマンスに大きな影響を与える可能性があります。 この問題を回避するには、AEM forms の一時ディレクトリをクリアする際に、これらのディレクトリを削除しないでください。

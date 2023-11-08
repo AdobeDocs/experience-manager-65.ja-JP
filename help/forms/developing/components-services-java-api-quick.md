@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 37%
@@ -84,7 +84,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
         * The jboss-client.jar file is in the following path: 
         * <install directory>/jboss/bin/client 
         * 
-        * If you want to invoke a remote forms server instance and there is a 
+        * If you want to invoke a remote Forms Server instance and there is a 
         * firewall between the client application and the server, then it is  
         * recommended that you use the SOAP mode. When using the SOAP mode,  
         * you have to include additional JAR files in the following  
@@ -182,7 +182,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
         * 
         * 
         * 
-        * If you want to invoke a remote forms server instance and there is a 
+        * If you want to invoke a remote Forms Server instance and there is a 
         * firewall between the client application and the server, then it is  
         * recommended that you use the SOAP mode. When using the SOAP mode,  
         * you have to include additional JAR files in the following  
@@ -279,7 +279,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
         * The jboss-client.jar file is in the following path: 
         * <install directory>/jboss/bin/client 
         * 
-        * If you want to invoke a remote forms server instance and there is a 
+        * If you want to invoke a remote Forms Server instance and there is a 
         * firewall between the client application and the server, then it is  
         * recommended that you use the SOAP mode. When using the SOAP mode,  
         * you have to include additional JAR files in the following  
@@ -367,8 +367,8 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 3. adobe-workflow-client-sdk.jar 
      * 4. adobe-utilities.jar 
      * 5. jboss-client.jar (use a different JAR file if AEM Forms is not deployed on Jboss) 
-     * 6. jacorb.jar (use a different JAR file if the forms server is not deployed on JBoss) 
-     * 7. jnp-client.jar (use a different JAR file if the forms server is not deployed on JBoss) 
+     * 6. jacorb.jar (use a different JAR file if the Forms Server is not deployed on JBoss) 
+     * 7. jnp-client.jar (use a different JAR file if the Forms Server is not deployed on JBoss) 
      */ 
  import java.util.*; 
  import com.adobe.idp.dsc.clientsdk.ServiceClientFactory; 
@@ -449,7 +449,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
         * The jboss-client.jar file is in the following path: 
         * <install directory>/jboss/bin/client 
         * 
-        * If you want to invoke a remote forms server instance and there is a 
+        * If you want to invoke a remote Forms Server instance and there is a 
         * firewall between the client application and the server, then it is  
         * recommended that you use the SOAP mode. When using the SOAP mode,  
         * you have to include additional JAR files in the following  
@@ -534,12 +534,12 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * 2. adobe-livecycle-client.jar 
      * 3. adobe-usermanager-client.jar 
      * 4. adobe-utilities.jar 
-     * 5. jboss-client.jar (use a different JAR file if the forms server is not deployed 
+     * 5. jboss-client.jar (use a different JAR file if the Forms Server is not deployed 
      * on JBoss) 
      * 6. commons-code-1.3.jar 
      * 7. adobe-workflow-client-sdk.jar 
-     * 8. jacorb.jar (use a different JAR file if the forms server is not deployed on JBoss) 
-     * 9. jnp-client.jar (use a different JAR file if the forms server is not deployed on JBoss) 
+     * 8. jacorb.jar (use a different JAR file if the Forms Server is not deployed on JBoss) 
+     * 9. jnp-client.jar (use a different JAR file if the Forms Server is not deployed on JBoss) 
      * 
      * The JBoss files must be kept in the jboss\client folder. You can copy the client folder to  
      * your local development environment and then include the 3 JBoss JAR files in your class path 
@@ -553,7 +553,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
      * The jboss-client.jar file is in the following path: 
      * <install directory>/jboss/bin/client 
      * 
-     * If you want to invoke a remote forms server instance and there is a 
+     * If you want to invoke a remote Forms Server instance and there is a 
      * firewall between the client application and the server, then it is  
      * recommended that you use the SOAP mode. When using the SOAP mode,  
      * you have to include additional JAR files in the following  

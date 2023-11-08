@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
 source-wordcount: '2065'
 ht-degree: 16%
@@ -25,7 +25,7 @@ ht-degree: 16%
 
 ## グローバルドキュメントストレージディレクトリ {#global-document-storage-directory}
 
-GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。 長期間有効なファイルの有効期間は、AEM forms システムの 1 つ以上の起動にまたがることを目的としており、日数と年数を超える場合もあります。 長期間有効なファイルには、PDF、ポリシー、フォームテンプレートが含まれる場合があります。 長期間有効なファイルは、多くのAEM forms デプロイメントの全体的な状態の重要な部分です。 長期間有効なドキュメントの一部またはすべてが失われたり破損したりした場合、forms サーバーが不安定になる可能性があります。
+GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。 長期間有効なファイルの有効期間は、AEM forms システムの 1 つ以上の起動にまたがることを目的としており、日数と年数を超える場合もあります。 長期間有効なファイルには、PDF、ポリシー、フォームテンプレートが含まれる場合があります。 長期間有効なファイルは、多くのAEM forms デプロイメントの全体的な状態の重要な部分です。 長期間有効なドキュメントの一部またはすべてが失われたり破損したりした場合は、Forms Server が不安定になる可能性があります。
 
 非同期ジョブの呼び出し用の入力ドキュメントも GDS に保存されます。要求の処理には、このドキュメントを使用できる必要があります。 したがって、GDS をホストするファイルシステムの信頼性を考慮し、品質とサービスレベルの要件に応じて、RAID(Redundant Array of Independent Disks) やその他のテクノロジーを適切に使用することが重要です。
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 57%
+source-wordcount: '860'
+ht-degree: 55%
 
 ---
 
@@ -92,7 +92,7 @@ Java™コードの場合、AEMは、メッセージのログに標準 API と�
 * DEBUG：処理に関する低レベルの情報。 サポートに関する問題をデバッグする際に役立ちます。
 * TRACE：メソッドの開始/終了など、最も低いレベルの情報。 これは通常、開発者のみが使用します。
 
-JavaScript の場合は、開発時にのみ console.log を使用し、リリース前にすべてのログステートメントを削除する必要があります&#x200B;*。*
+JavaScript がある場合、 *console.log* は開発時にのみ使用し、すべてのログ文はリリース前に削除する必要があります。
 
 ### カーゴカルトプログラミングの回避 {#avoid-cargo-cult-programming}
 

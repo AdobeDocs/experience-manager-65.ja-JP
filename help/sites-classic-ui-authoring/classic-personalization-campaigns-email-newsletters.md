@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b9618913-5433-4baf-9ff6-490a26860505
 exl-id: c07692f7-3618-4e8c-96d7-4db09f2d9896
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1106'
-ht-degree: 54%
+source-wordcount: '1105'
+ht-degree: 52%
 
 ---
 
@@ -152,7 +152,7 @@ ExactTarget 用の&#x200B;**メールツール**&#x200B;コンポーネントに
 
    処理が正常に終了したら、ExactTarget または Silverpop Engage でメールを参照できるかどうか確認されます。
 
-   ExactTarget の場合、「**公開されたメールを表示**」をクリックして、公開されたメールを表示できます。クリックすると、ExactTarget で公開されたニュースレター（[https://members.exacttarget.com/](https://members.exacttarget.com/)）に直接移動します。
+   ExactTarget がある場合、公開された電子メールは、 **公開済みメールの表示**. クリックすると、ExactTarget で公開されたニュースレター（[https://members.exacttarget.com/](https://members.exacttarget.com/)）に直接移動します。
 
 >[!NOTE]
 >

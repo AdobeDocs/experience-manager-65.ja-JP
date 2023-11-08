@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 95%
+source-wordcount: '1867'
+ht-degree: 94%
 
 ---
 
@@ -234,7 +234,7 @@ ht-degree: 95%
 
 ## 一時的な言語コピーの作成 {#creating-temporary-language-copies}
 
-翻訳ワークフローを実行して、元のアセットを編集したバージョンで言語コピーを更新するとき、翻訳済みアセットをユーザーが承認するまで、既存の言語コピーが維持されます。[!DNL Adobe Experience Manager Assets] は、新しく翻訳されたアセットを一時的な場所に保存し、アセットを明示的に承認した後で既存の言語コピーを更新します。 アセットを拒否しても、言語コピーは変更されません。
+翻訳ワークフローを実行して編集済みバージョンの元のアセットで言語コピーを更新すると、翻訳済みアセットが承認されるまで、既存の言語コピーが保持されます。 [!DNL Adobe Experience Manager Assets] は、新しく翻訳されたアセットを一時的な場所に保存し、アセットを明示的に承認した後で既存の言語コピーを更新します。 アセットを拒否しても、言語コピーは変更されません。
 
 1. 言語コピーを既に作成した「**[!UICONTROL 言語コピー]**」の下のソースルートフォルダーをクリックしてから、「**[!UICONTROL アセットで表示]**」をクリックしてフォルダーを [!DNL Experience Manager Assets] で開きます。
 

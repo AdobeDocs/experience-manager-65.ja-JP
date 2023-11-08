@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '6818'
+source-wordcount: '6816'
 ht-degree: 43%
 
 ---
@@ -594,7 +594,7 @@ AEM 6.3 以降のデフォルトでは、次のプリンシパルは CUG ポリ�
 
 除外する「管理者」グループは、システムコンソールの **Apache Jackrabbit Oak CUG Exclude List**&#x200B;の設定セクションで変更または拡張できます。
 
-また、特殊なニーズがある場合は、CugExclude インターフェイスのカスタム実装を提供、導入して、除外するプリンシパルのセットを調整することもできます。詳しい説明と実装例については、[プラグの可／不可](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability)に関するドキュメントを参照してください。
+また、特別なニーズがある場合は、CugExclude インターフェイスのカスタム実装を提供してデプロイし、除外されたプリンシパルのセットを調整することもできます。 詳しい説明と実装例については、[プラグの可／不可](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability)に関するドキュメントを参照してください。
 
 ### 認証：セットアップと設定 {#authentication-setup-and-configuration}
 
@@ -710,7 +710,7 @@ AEMの新規インストールでは、デフォルトで、CUG 機能の認証�
 
 ## CUG 認証および認証要件の無効化 {#disabling-cug-authorization-and-authentication-requirement}
 
-特定のインストールで CUG を使用しなかったり、認証と承認に別の手段を使用したりした場合に、新しい実装を完全に無効にすることができます。
+特定のインストールで CUG が使用されない場合や、認証と承認に別の手段を使用する場合は、新しい実装を完全に無効にすることができます。
 
 ### CUG 認証を無効にする {#disable-cug-authorization}
 

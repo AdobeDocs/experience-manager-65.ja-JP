@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '3588'
-ht-degree: 66%
+source-wordcount: '3589'
+ht-degree: 65%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 66%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（例：`/libs` にある項目）を、`/apps` の下で再作成します
+>1. 必要な項目（内に存在）を再作成します。 `/libs` under `/apps`
 >2. `/apps` 内で必要な変更を加えます
 
 `/libs/cq/workflow/components/model/step` コンポーネントは、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;の各コンポーネントの最も近い共通の上位です。これらのコンポーネントはすべて、次の項目を継承します。

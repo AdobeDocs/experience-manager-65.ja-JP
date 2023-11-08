@@ -1,6 +1,6 @@
 ---
 title: Query Builder API
-description: アセット共有 Query Builder の機能は、Java&Trade を通じて公開されます。API と REST API
+description: アセット共有の Query Builder の機能は、Java API と REST API を通して公開されます。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -8,10 +8,10 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: a66814fa065b7545ec39fe9109b4c5815fa199da
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '2288'
-ht-degree: 52%
+source-wordcount: '2284'
+ht-degree: 72%
 
 ---
 
@@ -19,17 +19,17 @@ ht-degree: 52%
 
 の機能 [アセット共有 Query Builder](/help/assets/assets-finder-editor.md) は、Java™ API と REST API を通じて公開されます。 この節では、これらの API について説明します。
 
-サーバー側のクエリビルダー ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) は、クエリの説明を受け入れ、XPath クエリを作成して実行します。オプションで結果セットをフィルタリングし、必要に応じてファセットを抽出します。
+サーバーサイド Query Builder（[`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)）はクエリの記述を受け入れ、XPath クエリを作成して実行します。必要に応じて、結果セットのフィルタリングや、ファセットの抽出も実行できます。
 
 クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPath の `jcr:contains()` 関数に対応するフルテキスト述語などがあります。
 
-各述語タイプに、1 つのエバリュエーターコンポーネント（[`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)）があります。これらのコンポーネントは、XPath、フィルタリングおよびファセットの抽出に対してその特定の述語を処理する方法を理解しています。OSGi コンポーネントランタイムを通じてプラグインされるカスタムエバリュエーターは、簡単に作成できます。
+各述語タイプに、1 つのエバリュエーターコンポーネント（[`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)）があります。これらのコンポーネントは、XPath、フィルタリングおよびファセットの抽出に対してその特定の述語を処理する方法を理解しています。OSGi コンポーネントのランタイムによってプラグインされる、カスタムのエバリュエーターを作成するのは簡単です。
 
-REST API は、JSON で送信される応答と HTTP を通じて同じ機能にアクセスできます。
+REST API は、JSON で送信される応答を使用して、HTTP 経由で同じ機能へのアクセスを提供します。
 
 >[!NOTE]
 >
->QueryBuilder API は、JCR API を使用して構築されます。 また、OSGi バンドル内から JCR API を使用してAdobe Experience Manager JCR に対してクエリを実行することもできます。 詳しくは、[JCR API を使用した Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=ja) を参照してください。
+>QueryBuilder API は、JCR API を使用して構築されます。また、OSGi バンドル内から JCR API を使用してAdobe Experience Manager JCR に対してクエリを実行することもできます。 詳しくは、[JCR API を使用した Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=ja) を参照してください。
 
 ## Gem セッション {#gem-session}
 
@@ -41,7 +41,7 @@ REST API は、JSON で送信される応答と HTTP を通じて同じ機能に
 
 ## サンプルクエリ {#sample-queries}
 
-これらのサンプルは、Java™のプロパティスタイル表記で示されています。 Java™ API で使用するには、Java™を使用します `HashMap` 以下に示す API サンプルと同様です。
+以下のサンプルは、Java™ プロパティのスタイル表記法で示されています。これらのサンプルを Java™ API で使用するには、この後の API サンプルのように Java™ `HashMap` を使用します。
 
 `QueryBuilder` JSON サーブレットについては、各例にローカルの CQ インストールへのリンク（デフォルトは `http://localhost:4502`）が含まれています。これらのリンクを使用する前に、CQ インスタンスにログインする必要があります。
 
@@ -55,11 +55,11 @@ REST API は、JSON で送信される応答と HTTP を通じて同じ機能に
 
 >[!NOTE]
 >
->返された JSON データをブラウザーに表示するには、Firefox 用 JSONView などのプラグインを使用できます。
+>返された JSON データをブラウザーで表示するのに、Firefox 用 JSONView などのプラグインを使用できます。
 
 ### すべての結果を返す {#returning-all-results}
 
-次のクエリ **10 件の結果を返す** （正確には、最大 10）ですが、 **ヒット数：** 次の項目を使用できます。
+次のクエリ **10 件の結果を返す** （正確に言えば、最大 10）ですが、 **ヒット数：** 次の項目を使用できます。
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -103,7 +103,7 @@ p.guessTotal=true
 orderby=path
 ```
 
-クエリは、 `p.limit` デフォルト `10` 結果 `0` オフセット：
+このクエリは、`p.limit` のデフォルトである `10` 件の結果をオフセット `0` で返します。
 
 ```xml
 "success": true,
@@ -129,9 +129,9 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 
 ### ページネーションの実装 {#implementing-pagination}
 
-デフォルトでは、Query Builder にもヒット数が表示されます。 結果のサイズによっては、正確なカウントを決定する際に、アクセス制御のすべての結果を確認する必要があるので、時間がかかる場合があります。 合計は、ほとんどの場合、エンドユーザー UI のページネーションの実装に使用されます。 正確な数の決定は遅くなる可能性があるので、guessTotal 機能を利用してページネーションを実装することをお勧めします。
+デフォルトでは、Query Builder はヒット数も通知します。結果のサイズによっては、正確なカウントを決定する際に、アクセス制御のすべての結果を確認する必要があるので、時間がかかる場合があります。 合計は、ほとんどの場合、エンドユーザー UI のページネーションの実装に使用されます。 正確な数の決定は遅くなる可能性があるので、guessTotal 機能を使用してページネーションを実装することをお勧めします。
 
-例えば、UI は次の方法に適応できます。
+例えば、この UI は以下の手法に適応できます。
 
 * 100 以下の合計ヒット数の正確な数（[SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) または querybuilder.json 応答の合計）を取得して表示します。
 * `guessTotal` を 100 に設定して、Query Builder への呼び出しを作成します。
@@ -139,7 +139,7 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 * 応答は、以下のような結果になります。
 
    * `total=43`、`more=false` - 合計ヒット数が 43 であることを意味します。UI には先頭ページの一部として 10 件の結果が表示され、続く 3 ページのページネーションが提供されます。この実装を使用して、「**43 件の結果が見つかりました**」のような説明テキストを表示することもできます。
-   * `total=100`、`more=true` - 合計ヒット数が 100 を超え、正確な数が不明であることを意味します。UI は、最初のページの一部として最大 10 個を表示し、次の 10 ページのページネーションを提供できます。 また、これを使用して、 **&quot;100 件を超える結果が見つかりました&quot;**. ユーザーが次のページに移動すると、Query Builder への呼び出しによって `guessTotal` の制限と、`offset` パラメーターおよび `limit` パラメーターの制限が増やされます。
+   * `total=100`、`more=true` - 合計ヒット数が 100 を超え、正確な数が不明であることを意味します。UI には先頭ページの一部として 10 件の結果が表示され、続く 10 ページのページネーションが提供されます。また、これを使用して、 **&quot;100 件を超える結果が見つかりました&quot;**. ユーザーが次のページに移動すると、Query Builder への呼び出しによって `guessTotal` の制限と、`offset` パラメーターおよび `limit` パラメーターの制限が増やされます。
 
 `guessTotal` は、Query Builder が正確なヒット数を決定しないように、UI で無限スクロールを使用する必要がある場合に使用します。
 
@@ -197,7 +197,7 @@ tagid.property=jcr:content/cq:tags
 
 タグタイトルのパス（スペースなし）には、`tag` 述語を使用します。
 
-前の例では、ページ ( `cq:Page` ノード )、そのノードからの相対パスを `tagid.property` 述語： `jcr:content/cq:tags`. デフォルトでは、`tagid.property` は、単に `cq:tags` となります。
+前の例ではページ（`cq:Page` ノード）を検索しているので、`tagid.property` 述語にはそのノードからの相対パス（`jcr:content/cq:tags`）を使用します。デフォルトでは、`tagid.property` は、単に `cq:tags` となります。
 
 ### 複数のパスでの検索（グループを使用） {#search-under-multiple-paths-using-groups}
 
@@ -262,7 +262,7 @@ type=cq:Page
 
 ### プロパティの複数の値の検索 {#search-for-multiple-property-values}
 
-プロパティ ( `"A" or "B" or "C"`) の代わりに、 `property` 述語：
+1 つのプロパティに対して複数の値を検索する場合（`"A" or "B" or "C"`）に、グループが大きくならないようにするには、`property` 述語に複数の値を指定します。
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.1_value=Products&property.2_value=Square&property.3_value=Events`
 
@@ -287,15 +287,15 @@ property.3_value=bar
 
 ## 返されるプロパティの絞り込み {#refining-what-is-returned}
 
-デフォルトでは、QueryBuilder JSON サーブレットは、検索結果内の各ノードのデフォルトのプロパティセット（パス、名前、タイトルなど）を返します。 返されるプロパティを制御するには、次のいずれかの操作を行います。
+デフォルトでは、QueryBuilder JSON サーブレットは検索結果内の各ノードに関するデフォルトのプロパティのセット（path、name、title など）を返します。返されるプロパティを制御するために、次のいずれかの操作を実行できます。
 
-以下のように
+以下のように指定します
 
 ```
 p.hits=full
 ```
 
-この場合、すべてのプロパティが各ノードに含まれます。
+すると、各ノードのすべてのプロパティが含まれるようになります。
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=full&property=jcr%3atitle&property.value=Triangle`
 
@@ -305,19 +305,19 @@ property.value=Triangle
 p.hits=full
 ```
 
-使用方法
+以下を使用し、
 
 ```
 p.hits=selective
 ```
 
-次に、取得するプロパティを指定します
+取得するプロパティを次のように指定して
 
 ```
 p.properties
 ```
 
-スペースで区切られた文字：
+スペースで区切ります。
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
@@ -336,7 +336,7 @@ p.properties=sling:resourceType jcr:primaryType
 p.nodedepth=n
 ```
 
-ここで、 `n` は、クエリが返すレベルの数です。 子ノードを返すには、そのノードをプロパティセレクターで指定する必要があります
+ここで、`n` は、クエリが返すレベルの数です。子ノードが返されるようにするには、プロパティセレクターでそのように指定する必要があります。
 
 ```
 p.hits=full
@@ -361,7 +361,7 @@ p.nodedepth=5
 
 クラス名のプレフィックス（例えば [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html) の &quot;`similar`&quot; など）は、クラスの&#x200B;*プリンシパルプロパティ*&#x200B;です。このプロパティは、クエリ内で使用する述語の名前（小文字で使用）でもあります。
 
-このようなプリンシパルプロパティの場合は、クエリを短縮して、完全修飾したバリアント `similar.similar=/content/en` の代わりに `similar=/content/en` を使用できます。完全修飾フォームは、クラスのプリンシパル以外のすべてのプロパティに使用する必要があります。
+このようなプリンシパルプロパティの場合は、クエリを短縮して、完全修飾したバリアント `similar.similar=/content/en` の代わりに `similar=/content/en` を使用できます。完全修飾形式は、クラスのプリンシパルプロパティではないすべてのプロパティに対して使用する必要があります。
 
 ## Query Builder API の使用例 {#example-query-builder-api-usage}
 
@@ -465,17 +465,17 @@ querybuilder のクエリを再生およびデバッグする場合は、次の�
 
 （`path=/tmp` は、一例です）。
 
-### デバッグに関する一般的な推奨事項 {#general-debugging-recommendations}
+### デバッグに関する一般的なレコメンデーション {#general-debugging-recommendations}
 
 ### ログを使用して説明可能な XPath を取得する {#obtain-explain-able-xpath-via-logging}
 
-説明 **すべて** ターゲットインデックスセットに対する開発サイクル中のクエリ。
+開発サイクルでは、設定されたターゲットインデックスに対して、**すべての**&#x200B;クエリの説明を実行します。
 
-* QueryBuilder の DEBUG ログを有効にして、基礎となる説明可能な XPath クエリを取得します
+* QueryBuilder の DEBUG ログを有効にして、基になる説明可能な XPath クエリを取得します。
 
-   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog に移動します。のロガーの作成 `com.day.cq.search.impl.builder.QueryImpl` 時刻 **デバッグ**.
+   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog に移動します。**DEBUG** に、`com.day.cq.search.impl.builder.QueryImpl` の新しいロガーを作成します。
 
-* 上記のクラスで DEBUG を有効にすると、ログに Query Builder で生成された XPath が表示されます。
+* 上述のクラスで DEBUG を有効にすると、Query Builder で生成された XPath がログに表示されます。
 * 関連する QueryBuilder クエリのログエントリから XPath クエリをコピーします。次に例を示します。
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
@@ -486,15 +486,15 @@ querybuilder のクエリを再生およびデバッグする場合は、次の�
 
 * AEM QueryBuilder デバッガーを使用して、説明可能な XPath クエリを生成します。
 
-説明 **すべて** ターゲットインデックスセットに対する開発サイクル中のクエリ。
+開発サイクルでは、設定されたターゲットインデックスに対して、**すべての**&#x200B;クエリの説明を実行します。
 
 **ログを使用して説明可能な XPath を取得する**
 
-* QueryBuilder の DEBUG ログを有効にして、基礎となる説明可能な XPath クエリを取得します
+* QueryBuilder の DEBUG ログを有効にして、基になる説明可能な XPath クエリを取得します。
 
-   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog に移動します。のロガーの作成 `com.day.cq.search.impl.builder.QueryImpl` 時刻 **デバッグ**.
+   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog に移動します。**DEBUG** に、`com.day.cq.search.impl.builder.QueryImpl` の新しいロガーを作成します。
 
-* 上記のクラスで DEBUG を有効にすると、ログに Query Builder で生成された XPath が表示されます。
+* 上述のクラスで DEBUG を有効にすると、Query Builder で生成された XPath がログに表示されます。
 * 関連する QueryBuilder クエリのログエントリから XPath クエリをコピーします。次に例を示します。
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
@@ -508,13 +508,13 @@ querybuilder のクエリを再生およびデバッグする場合は、次の�
 ![chlimage_1-66](assets/chlimage_1-66a.png)
 
 1. Query Builder Debugger で Query Builder クエリを指定します。
-1. 検索を実行
-1. 生成された XPath を取得する
+1. 検索を実行します。
+1. 生成された XPath を取得します。
 1. クエリ計画を取得するための XPath として、XPath クエリをクエリの説明に貼り付けます。
 
 >[!NOTE]
 >
->クエリの説明を実行するには、クエリを実行しないクエリ (XPath、JCR-SQL2) を直接指定できます。
+>Explain Query に対して、Non-queryBuilder クエリ (XPath、JCR-SQL2) を直接指定できます。
 
 QueryBuilder を使用したクエリのデバッグ方法の概要については、以下のビデオを参照してください。
 
@@ -565,9 +565,9 @@ com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 | **Javadoc** | **説明** |
 |---|---|
 | [com.day.cq.search](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/package-summary.html) | 基本的な QueryBuilder および Query API |
-| [com.day.cq.search.result](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/package-summary.html) | 結果 API |
+| [com.day.cq.search.result](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/package-summary.html) | Result API |
 | [com.day.cq.search.facets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/package-summary.html) | ファセット |
 | [com.day.cq.search.facets.buckets](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | バケット（ファセット内に含まれる） |
 | [com.day.cq.search.eval](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) | 述語エバリュエーター |
-| [com.day.cq.search.facets.extractors](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | ファセット抽出（評価演算子用） |
+| [com.day.cq.search.facets.extractors](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | ファセット抽出（エバリュエーター用） |
 | [com.day.cq.search.writer](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/writer/package-summary.html) | Querybuilder サーブレット用の JSON Result Hit Writer (/bin/querybuilder.json) |

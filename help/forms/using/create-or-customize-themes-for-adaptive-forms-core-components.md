@@ -1,20 +1,18 @@
 ---
 title: アダプティブフォームのテーマを作成またはカスタマイズする方法は？
-seo-title: How to create a theme for Adaptive Forms Core Components?
 description: BEM 仕様を使用して、アダプティブFormsコアコンポーネントのテーマを作成またはカスタマイズする方法を説明します。
-seo-description: Learn to create or customize themes for Adaptive Forms Core Components using BEM specifications
 keywords: アダプティブフォームのコアコンポーネントテーマの作成、新しいテーマの作成、テーマのカスタマイズ、新しいテーマのアップロード、フォームでのテーマの使用、テーマの削除、AEM 6.5 forms でのテーマの作成
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
+source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1971'
 ht-degree: 11%
 
 ---
-
 
 # アダプティブフォームテーマの作成またはカスタマイズ {#introduction-to-theme}
 
@@ -62,7 +60,7 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 ## テーマのカスタマイズ {#customize-a-theme-core-components-based-adaptive-forms}
 
-テーマのカスタマイズとは、テーマの外観を変更し、パーソナライズするプロセスを指します。 テーマをカスタマイズすると、デザイン要素、レイアウト、色、タイポグラフィ、および基になるコードに変更を加えることができます。 これにより、テーマで提供される基本的な構造と機能を維持しながら、Web サイトやアプリケーションの独自のカスタマイズされた外観を作成できます。
+テーマのカスタマイズとは、テーマの外観を変更し、パーソナライズするプロセスを指します。 テーマをカスタマイズすると、デザイン要素、レイアウト、色、タイポグラフィ、および基になるコードが変更される場合があります。 これにより、テーマで提供される基本的な構造と機能を維持しながら、Web サイトやアプリケーションの独自のカスタマイズされた外観を作成できます。
 
 >[!NOTE]
 >
@@ -73,11 +71,11 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 * [環境でのアダプティブフォームコアコンポーネントの有効化.](/help/forms/using/enable-adaptive-forms-core-components.md)
 
-* 最新リリースのをインストールする [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven は、Java™プロジェクトで一般的に使用されるビルド自動化ツールです。 最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
+* [Apache Maven の最新リリースをインストールします。](https://maven.apache.org/download.cgi) Apache Maven は、Java™プロジェクトで一般的に使用されるビルド自動化ツールです。 最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
 
 * を作成する方法を学ぶ [Adobe Experience Managerのクライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja). AEMはクライアントライブラリを提供します。このライブラリを使用すると、クライアントサイドコードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。
 
-* プレーンテキストエディターをインストールします。 例： Microsoft® Visual Studio Code。 Microsoft® Visual Studio Code などのプレーンテキストエディターを使用すると、テーマファイルの編集と変更を行う際に使いやすい環境を提供します。
+* プレーンテキストエディターをインストールします。例： Microsoft® Visual Studio Code。 Microsoft® Visual Studio Code などのプレーンテキストエディターを使用すると、テーマファイルの編集と変更を行う際に使いやすい環境を提供します。
 
 * AEM Forms環境が起動および実行中であることを確認します。
 
@@ -339,4 +337,3 @@ The selected theme is applied to the Adaptive Form.
 * [コアコンポーネントベースのアダプティブFormsのテンプレートを作成する](template-editor.md)
 * [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [サンプルのテーマテンプレートとフォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
-
