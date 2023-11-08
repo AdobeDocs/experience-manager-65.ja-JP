@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
 exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
-source-git-commit: 2f3168c9bd39926ee8cf86b48cc0daef9d783a1c
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 53%
+source-wordcount: '250'
+ht-degree: 64%
 
 ---
 
@@ -39,15 +39,15 @@ CRX は詳細なログを記録します。 クイックスタートを解凍し
 
 デフォルトのログレベルは情報（INFO）であるため、デバッグ（DEBUG）メッセージはログに記録されません。
 
-DEBUG ログレベルをアクティブにするには、CRX Explorer を使用して
+DEBUG ログレベルをアクティブにするには、CRX Explorer を使用して、
 
 ```xml
 /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level
 ```
 
-このプロパティを debug に設定してください。多くのログが生成されるので、デバッグログレベルのログを不必要に長く残さないでください。
+このプロパティを debug に設定してください。多数のログが生成されるので、デバッグログレベルのログを必要以上に長く残さないでください。
 
-デバッグファイルの行は、通常は DEBUG で始まり、ログレベル、インストーラーのアクション、ログメッセージを示します。 次に例を示します。
+デバッグファイルの行は、通常は DEBUG で始まり、その後にログレベル、インストーラーのアクション、ログメッセージが示されます。次に例を示します。
 
 ```xml
 DEBUG 3 WebApp Panel: WebApp successfully deployed
@@ -57,8 +57,8 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
 | 0 | 重大なエラー | アクションが失敗し、インストーラーの処理を続行できません。 |
 |---|---|---|
-| 1 | エラー | アクションが失敗しました。インストールは続行しますが、CRX の一部が正しくインストールされず、動作しません。 |
-| 2 | 警告 | アクションは成功しましたが、問題が発生しました。CRX が正しく動作する場合と動作しない場合があります。 |
+| 1 | エラー | アクションが失敗しました。インストールは続行しますが、CRX の一部が正常にインストールされなかったので、機能しません。 |
+| 2 | 警告 | アクションは成功しましたが、問題が発生しました。CRX は正常に機能する場合と機能しない場合があります。 |
 | 3 | 情報 | アクションが成功しました。 |
 
 ## トラブルシューティングに使用する詳細オプション {#verbose-option-used-for-troubleshooting}

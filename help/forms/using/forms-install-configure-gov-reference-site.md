@@ -4,9 +4,9 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '4611'
+source-wordcount: '4603'
 ht-degree: 66%
 
 ---
@@ -34,8 +34,8 @@ ht-degree: 66%
 | Adobe Analytics | v1.4 Rest API | **サポート対象** |
 **パッケージのインストールに関する考慮事項：**
 
-* このパッケージは、クリーンなサーバー、他のデモパッケージがない、または古いデモパッケージバージョンにインストールされる予定です。
-* パッケージは、オーサーモードで実行されている OSGi サーバーにインストールする必要があります。
+* このパッケージは、他のデモパッケージや古いデモパッケージバージョンを含まないクリーンサーバーにインストールします。
+* オーサーモードで実行している OSGi サーバーにパッケージをインストールします。
 
 ### このパッケージに含まれる機能 {#what-does-this-package-include}
 

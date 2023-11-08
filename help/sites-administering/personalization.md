@@ -1,19 +1,15 @@
 ---
 title: パーソナライズ機能
-seo-title: Personalization
 description: 動的コンテンツを表示する独自の環境をユーザーに提供するAdobe Experience Managerでのパーソナライゼーションについて説明します。
-seo-description: Learn about personalization in AEM.
-uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 39%
+source-wordcount: '1696'
+ht-degree: 37%
 
 ---
 
@@ -115,7 +111,7 @@ ht-degree: 39%
 
 * ユーザーの行動を追跡し、またはユーザーのプロファイルに基づいてルールを設定することで実現されるパーソナライゼーションは、正確で論理的である必要があります。
 * ルールの不正確なロジックにより、コンテンツが強制されたり拒否されたりする以上に、ユーザーにとって不満が生じることはありません。
-* そのため、ルールはユーザーの要求を前面に押し出した、よく考えられたものでなければなりません。この作業は手間がかかりますが、軽視すべきではありません。パーソナライゼーションの実装では多くの場合、テクニカルな作業よりもビジネスルールを定義することが優先されます。
+* そのため、ルールはユーザーの要求を前面に押し出した、よく考えられたものでなければなりません。これには多くの作業が必要になる場合があり、見積もりが少ないわけではありません。パーソナライゼーションを実装する際に、ビジネスルールを定義する方が技術的な作業よりも多くの場合、
 
 #### 用途 {#when-to-use}
 

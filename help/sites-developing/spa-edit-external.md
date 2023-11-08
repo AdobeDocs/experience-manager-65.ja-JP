@@ -2,7 +2,7 @@
 title: Adobe Experience Manager内での外部SPAの編集
 description: このドキュメントでは、スタンドアロンSPAをAdobe Experience Managerインスタンスにアップロードし、編集可能なコンテンツセクションを追加して、オーサリングを有効にするための推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 87%
@@ -300,7 +300,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ### ルートノード ID {#root-node-id}
 
-デフォルトでは、React アプリケーションが要素 ID `spa-root` の `div` 内でレンダリングされると想定しています。必要に応じて、これをカスタマイズできます。
+デフォルトでは、React アプリケーションが要素 ID `spa-root` の `div` 内でレンダリングされると想定しています。必要に応じて、カスタマイズできます。
 
 例えば、要素 ID `root` の `div` 内部にアプリケーションがレンダリングされる SPA があるとします。これは、3 つのファイルに反映する必要があります。
 

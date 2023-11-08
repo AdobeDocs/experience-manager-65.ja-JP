@@ -6,10 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '10692'
-ht-degree: 54%
+ht-degree: 53%
 
 ---
 
@@ -614,9 +614,9 @@ Validation Of Signatures：** このオプションを選択すると、ドキ�
 
 **TSP Server URL：**&#x200B;デフォルトのタイムスタンププロバイダーの URL です。有効な値が指定された場合にのみ使用されます。 デフォルト値はありません。
 
-**TSP Server Username：**&#x200B;タイムスタンププロバイダーで必要な場合のユーザー名です。URL に有効な値が指定された場合にのみ使用されます。 デフォルト値はありません。
+**TSP サーバーのユーザー名：** 必要に応じてタイムスタンププロバイダーがユーザー名を指定します。 URL に有効な値が指定された場合にのみ使用されます。 デフォルト値はありません。
 
-**TSP Server Password：**&#x200B;タイムスタンププロバイダーで必要とされる場合に前述のユーザー名のパスワードを指定します。URL とユーザー名に有効な値が指定された場合にのみ使用されます。 デフォルト値はありません。
+**TSP サーバーのパスワード：** タイムスタンププロバイダーで必要に応じて、上記のユーザー名のパスワードを指定します。 URL とユーザー名に有効な値が指定された場合にのみ使用されます。 デフォルト値はありません。
 
 **Request Hash Algorithm：**&#x200B;タイムスタンププロバイダーへの要求を作成するときに使用されるハッシュアルゴリズムを指定します。デフォルト値は SHA1 です。
 

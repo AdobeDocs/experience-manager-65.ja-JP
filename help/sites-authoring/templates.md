@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '4834'
 ht-degree: 84%
@@ -125,7 +125,7 @@ AEMには、次の 2 つの基本的なタイプのテンプレートが用意�
 * 必要に応じて、[テンプレート用のフォルダーを作成](#creating-a-template-folder-admin)できます。
 * [テンプレートの作成](#creatinganewtemplateauthor)（最初は空）
 
-* （必要に応じて）テンプレートの[追加プロパティを定義](#definingtemplatepropertiesauthor)します。
+* [追加のプロパティを定義する](#definingtemplatepropertiesauthor) 必要に応じて、テンプレートの
 * [テンプレートを編集](#editingtemplates)して次の要素を定義します。
 
    * [構造](#editingatemplatestructureauthor) - テンプレートで作成されたページでは変更できない定義済みのコンテンツ。

@@ -3,7 +3,7 @@ title: ライブコピーの作成と同期
 description: Adobe Experience Managerでライブコピーを作成し同期する方法を説明します。
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '4227'
 ht-degree: 64%
@@ -412,7 +412,7 @@ ht-degree: 64%
 
 ![再開](assets/chlimage_1-229.png)
 
-選択すると、ダイアログが表示されます。 必要に応じて、同期を選択し、アクションを確定できます。
+選択すると、ダイアログが表示されます。 必要に応じて同期を選択し、アクションを確定できます。
 
 #### ライブコピーの概要からのライブコピーページの再開 {#resume-a-live-copy-page-from-the-live-copy-overview}
 
@@ -462,7 +462,7 @@ ht-degree: 64%
 
 ### コンポーネントの継承のキャンセル {#cancelling-inheritance-for-a-component}
 
-コンポーネントがソースコンポーネントと同期されなくなるように、コンポーネントのライブコピーの継承をキャンセルします。 必要な場合は後で継承を有効にすることができます。
+コンポーネントがソースコンポーネントと同期されなくなるように、コンポーネントのライブコピーの継承をキャンセルします。 必要に応じて、後から継承を有効にすることができます。
 
 >[!NOTE]
 >
@@ -522,7 +522,7 @@ ht-degree: 64%
 
 ![継承が壊れた場合にプロパティを変更](assets/chlimage_1-232.png)
 
-必要に応じて、プロパティの継承を後から再度有効にすることができます。
+必要に応じて、後でプロパティの継承を再度有効にすることができます。
 
 >[!NOTE]
 >

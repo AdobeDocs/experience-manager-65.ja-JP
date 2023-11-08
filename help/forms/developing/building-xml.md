@@ -2,16 +2,16 @@
 title: JEE Workbench 上の AEM Forms で Execute Script サービスを使用して XML データを作成する方法を教えてください。
 description: JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '992'
-ht-degree: 69%
+source-wordcount: '990'
+ht-degree: 64%
 
 ---
 
 # JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成 {#using-execute-script-service-forms-jee-workbench}
 
-JEE プロセス管理ワークフロー上の AEM Forms に関連している XML は数多くあります。例えば、XML 情報をプロセス内で構築したり、JEE ワークスペース上の AEM Forms の Flex アプリケーションに送信したり、システム設定に使用したりできますし、フォームとの間で情報を渡す場合に使用することができます。JEE 上の AEM Forms 開発者による XML の管理が必要となるインスタンスは多くありますが、そのうちの多くで、XML を JEE プロセス上の AEM Forms で管理する必要があります。
+例えば、JEE 上のAEM Forms Process Management ワークフローには、XML 情報がプロセス内で構築され、JEE Workspace のFlexアプリケーションに送信され、システム設定に使用されたり、フォームとの間で情報を渡したりする XML が多く含まれています。 JEE 上の AEM Forms 開発者による XML の管理が必要となるインスタンスは多くありますが、そのうちの多くで、XML を JEE プロセス上の AEM Forms で管理する必要があります。
 
 単純な XML 設定を扱う場合、`Set Value` サービスを使用することができます。これは JEE サービス上のデフォルトの AEM Forms です。プロセスデータモデルの 1 つ以上のデータ項目の値を設定します。単純な条件ロジック「if this, the」のシナリオの場合、このサービスは目的に合う場合があります。
 

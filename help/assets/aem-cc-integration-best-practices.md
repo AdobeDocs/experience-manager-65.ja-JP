@@ -7,10 +7,10 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '3263'
-ht-degree: 94%
+source-wordcount: '3260'
+ht-degree: 93%
 
 ---
 
@@ -199,7 +199,7 @@ Adobe Asset Link は、この使用例を適切にサポートしています。
 * さらに、アセットは Creative Cloud アカウントにあるので、ユーザーが所有している他のデバイスでも使用でき（例えば、専用の Creative Cloud モバイルアプリで開いたり編集したりできます）、共同作業を行うために他の Creative Cloud ユーザーと共有することもできます。
 * クリエイティブユーザーが変更を完了すると、使用中の Creative Cloud アプリケーションでそのファイルに対してチェックイン操作を実行できます。その際に、オプションでコメントを付けることもできます。[!DNL Experience Manager] 内の対応するアセットに新しいバージョンが付けられ、新しいバイナリで更新されます。マーケターや LOB ユーザーなどの [!DNL Experience Manager] ユーザーは、[!DNL Experience Manager] のアセットタイムライン UI を介して、アセットの大幅な変更やマイルストーンにアクセスできます。
 
-[!DNL Experience Manager] デスクトップアプリケーションを使用すると、ネイティブアプリで開かれたアセットをネットワークで共有できます。デフォルトでは、ローカルで行われたすべての変更は、しばらくすると自動的に [!DNL Experience Manager] にアップロードされます。このような設定では、処理中の作業フェーズで頻繁に保存を行うと、すべてが [!DNL Experience Manager] にアップロードされてバージョン管理されるので、不要なバージョンが [!DNL Experience Manager] に生成されるだけでなく、大量のネットワークトラフィックが発生し、スケーラビリティの問題が生じる可能性もあります。
+[!DNL Experience Manager] デスクトップアプリケーションを使用すると、ネイティブアプリで開かれたアセットをネットワークで共有できます。デフォルトでは、ローカルで行われたすべての変更は、しばらくすると自動的に [!DNL Experience Manager] にアップロードされます。このような設定を使用すると、WP フェーズで頻繁に保存されるすべてのファイルが [!DNL Experience Manager] およびバージョン管理され、多数のネットワークトラフィックと潜在的な拡張性の課題を作成する ( [!DNL Experience Manager].
 
 ここで推奨されるアプローチは、 [!DNL Experience Manager] 自動更新をオフにし、変更内容をにアップロードするデスクトップアプリケーション [!DNL Experience Manager] 手動で、デスクトップアプリケーションの Asset Status UI にある upload changes アクションを使用。
 

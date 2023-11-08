@@ -2,7 +2,7 @@
 title: コンテンツのページバージョンの操作
 description: ページバージョンを作成、比較および復元します Adobe Experience Managerで
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1501'
 ht-degree: 70%
@@ -36,7 +36,7 @@ ht-degree: 70%
    ![タイムライン — バージョンとして保存](assets/screen-shot_2019-03-05at112335.png)
 
 1. 「**バージョンとして保存**」を選択します。
-1. 必要に応じて、「**ラベル**」と「**コメント**」を入力します。
+1. を入力します。 **ラベル** および **コメント** 必要に応じて。
 
    ![バージョンを作成 — ラベルとコメントを追加](assets/chlimage_1-42.png)
 

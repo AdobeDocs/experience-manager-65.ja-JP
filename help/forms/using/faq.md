@@ -12,10 +12,10 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '2005'
-ht-degree: 60%
+source-wordcount: '2003'
+ht-degree: 59%
 
 ---
 
@@ -116,7 +116,7 @@ ht-degree: 60%
 
 1. HTML フォームのサイズが PDF フォームのサイズより大きいのはなぜですか？
 
-   回答：XDP を HTML フォームにレンダリングするには、多くの中間データ構造とフォーム DOM、データ DOM、レイアウト DOM などのオブジェクトが必要になります。
+   回答：XDP をHTMLフォームにレンダリングするには、フォーム DOM、データ DOM、レイアウト DOM など、多数の中間データ構造とオブジェクトが必要です。
 
    PDF formsの場合、Adobe Acrobatには、中間データ構造およびオブジェクトを作成するための組み込みの XTG エンジンがあります。 Acrobatは、レイアウトとスクリプトも扱います。
 

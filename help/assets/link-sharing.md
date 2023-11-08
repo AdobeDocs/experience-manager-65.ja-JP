@@ -6,10 +6,10 @@ role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 98%
 
 1. [!DNL Assets] のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
 
-1. ツールバーの「**[!UICONTROL リンクを共有]**」![アセット共有アイコン](assets/do-not-localize/assets_share.png)をクリックします。クリック後に作成されるリンク **[!UICONTROL 共有]** は、事前に [!UICONTROL リンクを共有] フィールドに入力します。 リンクは、「**[!UICONTROL 送信]**」を選択するまで作成されません。
+1. ツールバーの「**[!UICONTROL リンクを共有]**」![アセット共有アイコン](assets/do-not-localize/assets_share.png)をクリックします。クリック後に作成されるリンク **[!UICONTROL 共有]** は、事前に [!UICONTROL リンクを共有] フィールドに入力します。 リンクは、 **[!UICONTROL 送信]**.
 
    ![「リンクを共有」が表示されるダイアログ](assets/share-assets-as-link.png)
 

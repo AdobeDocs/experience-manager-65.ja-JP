@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2582'
-ht-degree: 94%
+ht-degree: 93%
 
 ---
 
@@ -614,7 +614,7 @@ AEM では、言語コードと国コードのデフォルトセットを使用�
 * デフォルトの言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
 * デフォルトの国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
 
-MSM は、保存されている言語コードと国コードのリストを使用して、ページの言語バージョン名に関連付けられている国名を判断します。必要に応じて、リストの次の要素を変更できます。
+MSM は、保存されている言語コードと国コードのリストを使用して、ページの言語バージョン名に関連付けられている国名を判断します。必要に応じて、リストの以下の側面を変更できます。
 
 * 言語タイトル
 * 国名

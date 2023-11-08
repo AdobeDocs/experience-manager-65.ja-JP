@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 83%
+ht-degree: 77%
 
 ---
 
@@ -61,7 +61,7 @@ The **CSV の書き出しファイルを作成** ウィザードで次の項目�
 
 CSV の書き出しファイルを作成するには、次の手順を実行します。
 
-1. **サイト**&#x200B;コンソールを開き、必要に応じて必要な場所まで移動します。
+1. を開きます。 **Sites** コンソールで、必要に応じて必要な場所に移動します。
 1. ツールバーの「**作成**」をクリックし、「**CSV レポート**」を選択してウィザードを開きます。
 
    ![etc-03](assets/etc-03.png)

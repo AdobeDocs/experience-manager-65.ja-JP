@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '4519'
+source-wordcount: '4520'
 ht-degree: 99%
 
 ---
@@ -114,7 +114,7 @@ Dynamic Media に付属するすべての標準提供のビューアのプリセ
   </tr>
   <tr>
    <td><strong>パノラマ画像</strong></td>
-   <td><p>パノラマ画像およびパノラマ VR ビューアでは球状のパノラマ画像をレンダリングして、部屋、プロパティ、場所、風景などの 360° の視聴エクスペリエンスにユーザーを没入させます。</p> <p>アップロードした画像が球パノラマと見なされるには、次のいずれかまたは両方を満たす必要があります。</p>
+   <td><p>パノラマ画像およびパノラマ VR ビューアでは、球形のパノラマ画像をレンダリングして、部屋、物件、場所、風景などの 360 度の視聴体験にユーザーを浸すことができます。</p> <p>アップロードした画像が球パノラマと見なされるには、次のいずれかまたは両方を満たす必要があります。</p>
     <ul>
      <li>アスペクト比が 2:1 です。</li>
      <li>キーワード <code>equirectangular</code>、または <code>spherical</code> と <code>panorama</code>、または <code>spherical </code> と <code>panoramic</code> でタグ付けされている必要があります。<a href="/help/sites-authoring/tags.md">タグの使用</a>を参照してください。</li>

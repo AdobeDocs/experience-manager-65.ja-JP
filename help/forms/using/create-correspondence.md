@@ -6,7 +6,7 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '3849'
 ht-degree: 98%
@@ -121,7 +121,7 @@ ht-degree: 98%
    >
    >テキストモジュールやレターのタブスペースの設定について詳しくは、[タブスペースを使用したテキスト調整の詳細](https://helpx.adobe.com/jp/aem-forms/kb/cm-tab-spacing-limitations.html)を参照してください。
 
-1. 必要に応じて、通信に特殊文字を挿入します。例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
+1. 必要に応じて、通信に特殊文字を挿入します。 例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
 
    * 通貨記号（€、￥、£ など）
    * 数学記号（∑、√、∂、^ など）

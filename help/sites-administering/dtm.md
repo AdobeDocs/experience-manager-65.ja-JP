@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2205'
-ht-degree: 30%
+ht-degree: 29%
 
 ---
 
@@ -248,7 +248,7 @@ AEMで直ちに更新するには、Dynamic Tag Managementライブラリを手�
 
 ## Dynamic Tag Management設定とサイトの関連付け {#associating-a-dynamic-tag-management-configuration-with-your-site}
 
-Dynamic Tag Management設定を Web サイトのページに関連付け、AEMが必要なスクリプトをページに追加できるようにします。 サイトのルートページを設定に関連付けます。 そのページのすべての子ページが関連付けを継承します。必要に応じて、子ページの関連付けを上書きできます。
+Dynamic Tag Management設定を Web サイトのページに関連付け、AEMが必要なスクリプトをページに追加できるようにします。 サイトのルートページを設定に関連付けます。 そのページのすべての子ページが関連付けを継承します。必要に応じて、下位のページで関連付けを上書きできます。
 
 次の手順を実行して、ページとその子ページを Dynamic Tag Management 設定に関連付けます。
 

@@ -1,26 +1,24 @@
 ---
 title: パノラマ画像
-description: Dynamic Media でのパノラマ画像の使用方法を学習します。
-uuid: ced3e5bd-93c8-4d5f-a397-1380d4d0a5e7
+description: Dynamic Mediaでパノラマ画像を使用する方法を説明します。
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
-discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 feature: Panoramic Images,Asset Management
 role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 100%
+source-wordcount: '575'
+ht-degree: 86%
 
 ---
 
 # パノラマ画像 {#panoramic-images}
 
-ここでは、パノラマ画像ビューアを使用して球パノラマ画像をレンダリングし、室内、物件、場所、風景などをあらゆる角度から見ることができる臨場感あふれる体験を提供する方法について説明します。
+この節では、パノラマ画像ビューアを使用して球状のパノラマ画像をレンダリングし、部屋、プロパティ、場所または風景の没入感のある 360 度の表示エクスペリエンスを実現する方法について説明します。
 
 [ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)も参照してください。
 
@@ -32,7 +30,7 @@ ht-degree: 100%
 
 * 縦横比が 2 である。
 CRXDE Lite では縦横比のデフォルト設定は 2 ですが、次で上書きできます。
-   `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
+  `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
 * キーワード `equirectangular`、または `spherical` と `panorama`、または `spherical` と `panoramic` でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
@@ -49,8 +47,8 @@ CRXDE Lite では縦横比のデフォルト設定は 2 ですが、次で上書
 1. ページの右上隅付近で、**[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 公開設定]**／**[!UICONTROL Image Server]** をクリックします。
 1. Image Server 公開ページの上部にある「**[!UICONTROL 公開コンテキスト]**」ドロップダウンリストで、「**[!UICONTROL 画像サービス]**」を選択します。
 
-1. 同じ Image Server 公開ページで、「**[!UICONTROL 要求属性]**」という見出しを探します。
-1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限]**」を探します。次に、関連する「幅」フィールドと「高さ」フィールドで、パノラマ画像で許容される最大画像サイズを大きくします。
+1. 同じ Image Server 公開ページで、見出しを探します。 **[!UICONTROL 要求属性]**.
+1. 「要求属性」見出しの下で、 **[!UICONTROL 返信画像のサイズ制限]**. 次に、関連する「幅」フィールドと「高さ」フィールドで、パノラマ画像で許容される最大画像サイズを大きくします。
 
    Dynamic Media Classic には、25,000,000 ピクセルという制限があります。縦横比が 2:1 の画像の最大許容サイズは 7000 x 3500 です。ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
@@ -58,10 +56,10 @@ CRXDE Lite では縦横比のデフォルト設定は 2 ですが、次で上書
    >
    >許容される最大画像サイズ以内の画像のみがサポートされます。サイズ制限を超える画像をリクエストすると、403 応答が返ります。
 
-1. 「要求属性」の見出しの下で、次の操作をおこないます。
+1. 「要求属性」の見出しの下で、以下の操作を行います。
 
-   * 「要求難読化モード」を「**[!UICONTROL 無効]**」に設定します。
-   * 「要求ロックモード」を「**[!UICONTROL 無効]**」に設定します。
+   * 要求の難読化モードをに設定します。 **[!UICONTROL 無効]**.
+   * 要求ロックモードをに設定 **[!UICONTROL 無効]**.
 
    これらの設定は、Experience Manager の `Panoramic Media` WCM コンポーネントを使用するために必要です。
 

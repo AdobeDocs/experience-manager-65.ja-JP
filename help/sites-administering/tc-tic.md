@@ -4,7 +4,7 @@ description: Adobe Experience Managerで翻訳統合フレームワークを設�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 61%
@@ -50,7 +50,7 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 
 コネクタパッケージをインストールしたら、コネクタ用のクラウド設定を作成できます。通常は、翻訳サービスで認証を行うための資格情報を指定する必要があります。Microsft Translator コネクタ用のクラウド設定の追加については、[Microsoft Translator との統合](/help/sites-administering/tc-msconf.md)を参照してください。
 
-必要に応じて、同じコネクタに対して複数のクラウド設定を作成できます。例えば、同じベンダーを使用するアカウントまたはプロジェクトごとに設定を 1 つずつ作成します。
+必要に応じて、同じコネクタに対して複数のクラウド設定を作成できます。 例えば、同じベンダーを使用するアカウントまたはプロジェクトごとに設定を 1 つずつ作成します。
 
 接続の設定が完了したら、その接続を使用する翻訳統合フレームワーク設定を作成できます。
 

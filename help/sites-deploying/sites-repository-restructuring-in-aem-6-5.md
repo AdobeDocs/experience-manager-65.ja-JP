@@ -6,10 +6,10 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1460'
-ht-degree: 70%
+source-wordcount: '1457'
+ht-degree: 68%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 70%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>新規または変更された ContextHub セグメントが AEM で編集されるのではなく、ソース管理で編集されることを意図している場合は、それらを新しい場所に移行する必要があります。</p>
+   <td><p>新規または変更された ContextHub セグメントがAEMで編集されるのではなく、ソース管理で編集される場合は、新しい場所に移行する必要があります。</p>
     <ol>
      <li>新規または変更された ContextHub セグメントを以前の場所から適切な新しい場所（/<code>apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）にコピー</li>
      <li>以前の場所の ContextHub Segments への参照を、新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）の移行された ContextHub Segments に更新します。</li>

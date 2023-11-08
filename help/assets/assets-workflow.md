@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Workflow, Renditions
 role: User, Admin
 exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 94%
+source-wordcount: '959'
+ht-degree: 91%
 
 ---
 
@@ -98,7 +98,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## ベストプラクティスと制限事項 {#best-practices-limitations-tips}
 
-* ワークフローを設計する際には、あらゆる種類のレンディションに対するニーズを考慮します。レンディションが今後必要になることが予測されない場合は、ワークフローからレンディションの作成ステップを削除します。以後、レンディションは一括削除できません。[!DNL Experience Manager] を長時間使用した後、不要なレンディションで大量のストレージ領域が占有される場合があります。個々のアセットについては、ユーザーインターフェイスからレンディションを手動で削除できます。複数のアセットについては、特定のレンディションを削除するように [!DNL Experience Manager] をカスタマイズすることもできますし、アセットを削除して再びアップロードすることもできます。
+* ワークフローを設計する際には、あらゆる種類のレンディションに対するニーズを考慮します。レンディションが今後必要になることが予測されない場合は、ワークフローからレンディションの作成ステップを削除します。以後、レンディションは一括削除できません。を長時間使用した後、不要なレンディションでストレージ領域が占有される場合があります。 [!DNL Experience Manager]. 個々のアセットについては、ユーザーインターフェイスからレンディションを手動で削除できます。複数のアセットについては、特定のレンディションを削除するように [!DNL Experience Manager] をカスタマイズすることもできますし、アセットを削除して再びアップロードすることもできます。
 * デフォルトでは、[!UICONTROL DAM アセットの更新]ワークフローに、サムネールと web レンディションを作成する手順が含まれています。ワークフローからデフォルトのレンディションが削除されると、[!DNL Assets] のユーザーインターフェイスが適切にレンダリングされません。
 
 >[!MORELIKETHIS]

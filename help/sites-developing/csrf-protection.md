@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 39%
+source-wordcount: '247'
+ht-degree: 24%
 
 ---
 
@@ -27,7 +27,7 @@ Apache Sling Referrer Filter に加えて、Adobeは、この種の攻撃から�
 
 ### 依存関係 {#dependencies}
 
-`granite.jquery` 依存関係を信頼する任意のコンポーネント は、CSRF 保護フレームワークのメリットを自動的に受けます。どのコンポーネントにも当てはまらない場合、このフレームワークを使用するには `granite.csrf.standalone` への依存関係を宣言する必要があります。
+に依存する任意のコンポーネント `granite.jquery` 依存関係は、CSRF 保護フレームワークから自動的にメリットを得ることができます。 そうでない場合は、任意のコンポーネントに対して、依存関係を宣言する必要があります。 `granite.csrf.standalone` このフレームワークを使用する前に、
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 

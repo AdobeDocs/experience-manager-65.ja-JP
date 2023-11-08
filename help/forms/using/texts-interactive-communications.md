@@ -10,7 +10,7 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '2475'
 ht-degree: 65%
@@ -247,7 +247,7 @@ Microsoft® Word ドキュメントから編集可能なテキストドキュメ
 
 ## テキストに特殊文字を挿入します {#special}
 
-必要に応じて、ドキュメントフラグメントに特殊文字を挿入します。例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
+必要に応じて、ドキュメントフラグメントに特殊文字を挿入します。 例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
 
 * 通貨記号（€、￥、£ など）
 * 数学記号（∑、√、∂、^ など）

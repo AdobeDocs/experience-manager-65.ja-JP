@@ -5,10 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1589'
-ht-degree: 85%
+ht-degree: 84%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 85%
 プロキシを設定した後で、[!DNL Experience Manager Assets] で使用するために [!DNL InDesign Server] を統合するには 、次の手順を実行する必要があります。
 
 1. [InDesign Server をインストールします](#installing-the-indesign-server)。
-1. 必要に応じて、[Experience Manager アセットのワークフロー](#configuring-the-aem-assets-workflow) を設定します。
+1. 必要に応じて、 [Experience Manager Assets Workflow の設定](#configuring-the-aem-assets-workflow).
 これは、デフォルト値がインスタンスに適さない場合にのみ必要です。
 1. [InDesign Server のプロキシワーカー](#configuring-the-proxy-worker-for-indesign-server)を設定します。
 
@@ -75,7 +75,7 @@ ht-degree: 85%
 
 1. [!DNL InDesign Server] をダウンロードしてインストールします。
 
-1. 必要に応じて、 [!DNL InDesign Server] インスタンスの設定をカスタマイズできます。
+1. 必要に応じて、 [!DNL InDesign Server] インスタンス。
 
 1. コマンドラインから、サーバーを起動します。
 

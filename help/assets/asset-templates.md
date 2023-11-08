@@ -5,10 +5,10 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1544'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -160,7 +160,7 @@ Web インターフェイスから [!DNL Adobe InDesign] テンプレートを�
    様々なフィルターを適用して、目的のテンプレートを検索できます。 例えば、ファイルタイプまたはタグに基づいてテンプレートを検索できます。
 
 1. ツールバーから「**[!UICONTROL 次へ]**」をクリックします。
-1. **[!UICONTROL プレビューと並べ替え]**&#x200B;画面で、必要に応じてテンプレートを再配置し、統合するために選択したテンプレートをプレビューします。次に、ツールバーから「**[!UICONTROL 次へ]**」をクリックします。
+1. Adobe Analytics の **[!UICONTROL プレビューと並べ替え]** 画面で、必要に応じてテンプレートを並べ替え、統合するテンプレートの選択をプレビューします。 次に、ツールバーから「**[!UICONTROL 次へ]**」をクリックします。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 

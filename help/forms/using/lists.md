@@ -8,10 +8,10 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '6911'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -96,7 +96,7 @@ Correspondence Management Solution は、動的データ項目（可変データ
    >
    >ただし、貼り付けられたテキストの書式設定にはいくつかの[制約](https://helpx.adobe.com/jp/aem-forms/kb/cm-copy-paste-text-limitations.html)があります。
 
-1. 必要に応じて、ドキュメントフラグメントに特殊文字を挿入します。例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
+1. 必要に応じて、ドキュメントフラグメントに特殊文字を挿入します。 例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
 
    * 通貨記号（€、￥、£ など）
    * 数学記号（∑、√、∂、^ など）

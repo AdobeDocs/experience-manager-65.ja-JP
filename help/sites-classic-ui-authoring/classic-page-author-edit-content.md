@@ -1,18 +1,16 @@
 ---
 title: ページコンテンツの編集
 description: コンテンツの追加は、ページにドラッグ可能なコンポーネントを使用して行います。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
-uuid: e7b65ceb-263c-46f2-91e3-11dec3a016fa
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1832'
-ht-degree: 92%
+source-wordcount: '1831'
+ht-degree: 91%
 
 ---
 
@@ -110,7 +108,7 @@ ht-degree: 92%
 
    選択したアセットを格納した、アセットタイプに適したコンポーネントが必要な場所に作成されます。
 
-1. 必要に応じて、コンポーネントを[編集](#editmovecopypastedelete)します。
+1. [編集](#editmovecopypastedelete) 必要に応じて、コンポーネントを選択します。
 
 ## コンポーネント（コンテンツとプロパティ）の編集 {#editing-a-component-content-and-properties}
 
@@ -227,7 +225,7 @@ ht-degree: 92%
 
 ## ページのロック {#locking-a-page}
 
-AEMでは、他のユーザーがコンテンツを変更できないように、ページをロックできます。 ページのロックは、1 つの特定ページで大量の編集作業を行う場合や、短期間ページを凍結する必要がある場合に便利です。
+AEMでは、他のユーザーがコンテンツを変更できないように、ページをロックできます。 これは、1 つの特定のページに多数の編集を加える場合や、短時間ページを凍結する必要がある場合に便利です。
 
 >[!CAUTION]
 >

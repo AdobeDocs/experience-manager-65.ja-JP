@@ -11,10 +11,10 @@ docset: aem65
 role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
-source-git-commit: 5dcea82acdc33c5c2b9e32af412554acd2571281
-workflow-type: ht
-source-wordcount: '3262'
-ht-degree: 100%
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+workflow-type: tm+mt
+source-wordcount: '3263'
+ht-degree: 99%
 
 ---
 
@@ -310,7 +310,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 ### パノラマメディアコンポーネント {#panoramic-media-component}
 
-パノラマメディアコンポーネントは、球状のパノラマ画像のアセット用です。このような画像は、部屋、不動産、場所、または風景の 360 度の視聴エクスペリエンスを提供します。画像が球状のパノラマとして認定されるには、以下の一方または両方の条件を満たしている必要があります。
+パノラマメディアコンポーネントは、球状のパノラマ画像のアセット用です。このような画像により、部屋、物件、場所、風景などの 360 度の視聴体験が得られます。 画像が球状のパノラマとして認定されるには、以下の一方または両方の条件を満たしている必要があります。
 
 * アスペクト比が 2:1 です。
 * キーワード `equirectangular` または（`spherical` + `panorama`）または（`spherical` + `panoramic`）でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。

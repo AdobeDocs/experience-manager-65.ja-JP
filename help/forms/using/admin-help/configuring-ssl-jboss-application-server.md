@@ -6,10 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 72%
+ht-degree: 71%
 
 ---
 
@@ -66,7 +66,7 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
    * `keytool -printcert -v -file [appserver root]\standalone\configuration\AEMForms_cert.cer`
    * `keytool -printcert -v -file [appserver root]\domain\configuration\AEMForms_cert.cer`
 
-1. `[JAVA_HOME]\jre\lib\security`の cacerts ファイルへの書き込みアクセス権を付与するには、必要に応じて、次のタスクを実行します。
+1. の cacerts ファイルへの書き込みアクセス権を付与するには、以下を実行します。 `[JAVA_HOME]\jre\lib\security`必要に応じて、次のタスクを実行します。
 
    * （Windows）cacerts ファイルを右クリックして「プロパティ」を選択し、「読み取り専用」属性の選択を解除します。
    * （Linux）タイプ `chmod 777 cacerts`

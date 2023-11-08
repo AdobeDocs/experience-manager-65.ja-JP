@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1884'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -139,7 +139,7 @@ TarMK をノードストアとデータストアの両方として使用して�
 1. Apache Felix OSGi Management Console で、 **メイン** 「 」タブで「 」を選択します。 **JMX** を次のメニューから選択します。
 1. 次に、「**リポジトリマネージャー** MBean」を検索して、クリックします（または`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`に移動します）。
 1. 「**startDataStoreGC(boolean markOnly)**」をクリックします。
-1. 必要に応じて、`markOnly` パラメーターに「`true`」と入力します。
+1. &quot;と入力します。`true`」 `markOnly` 必要に応じて、パラメーターを指定します。
 
    | **オプション** | **説明** |
    |---|---|

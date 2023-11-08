@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
 source-wordcount: '1835'
-ht-degree: 90%
+ht-degree: 89%
 
 ---
 
@@ -115,7 +115,7 @@ WYSIWYG 編集ダイアログは、様々な機能を提供します。
 
 ![取り消し、やり直しツールバー](do-not-localize/cq55_rte_undoredo.png)
 
-AEM では、現在のコンポーネントでの直近 50 個の操作を記録し、時系列で保持します。これらの操作は、必要に応じて順序通りに取り消す（その後、やり直す）ことができます。
+AEM では、現在のコンポーネントでの直近 50 個の操作を記録し、時系列で保持します。必要に応じて、これらの操作を完全に元に戻す（その後、やり直す）ことができます。
 
 >[!CAUTION]
 >
