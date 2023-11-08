@@ -1,24 +1,24 @@
 ---
-title: Adobe Experience Manager Foundation に対する GDPR 要求の処理
-description: Adobe Experience Manager Foundation に対する GDPR 要求の処理
+title: Adobe Experience Manager の基盤での GDPR リクエストの取り扱い
+description: Adobe Experience Manager の基盤での GDPR リクエストの取り扱い
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# Adobe Experience Manager(AEM)Foundation に対する GDPR 要求の処理{#handling-gdpr-requests-for-the-aem-foundation}
+# Adobe Experience Manager（AEM）の基盤での GDPR リクエストの取り扱い{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細は、GDPR、CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
 ## AEM 基盤の GDPR サポート {#aem-foundation-gdpr-support}
 
-AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。したがって、この記事の情報は主に、ユーザープロファイルへのアクセスと削除の方法、GDPR アクセス要求と削除要求にそれぞれ対処する方法について説明しています。
+AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。そのため、この記事では主に、GDPR のアクセスリクエストと削除リクエストに対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
 
 ## ユーザープロファイルへのアクセス {#accessing-a-user-profile}
 
@@ -82,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   ユーザーインターフェイスは、プロファイルカードをグレーアウトし、ロックを追加することで、ユーザーがアクティベートを解除されたことを示します。
+   次のように、プロファイルがグレー表示されてロックが追加されるので、ユーザーのアクティベーションが解除されたことがわかります。
 
    ![disableduser](assets/disableduser.png)
 
@@ -96,7 +96,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. プロファイルノードとそのすべての子ノードを削除します。 プロファイルノードには、AEMのバージョンに応じて、次の 2 つの形式があります。
+1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
 
    1. `[!UICONTROL /profile]` のデフォルトの非公開プロファイル
    1. `[!UICONTROL /profiles]`（AEM 6.5 を使用して作成された新しいプロファイル用）
@@ -105,9 +105,9 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### HTTP API {#http-api-1}
 
-以下の手順では、 `curl` コマンドラインツールを使用して、 **[!UICONTROL cavery]** `userId` およびを削除します。 `cavery` がデフォルトの場所で使用可能になっています。
+以下の手順では、`curl` コマンドラインツールを使用して **[!UICONTROL cavery]** `userId` を持つユーザーを無効にし、デフォルトの場所にある `cavery` のプロファイルを削除する方法を示します。
 
-* *ユーザーホームの検出*
+* *ユーザーホームの検索*
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
