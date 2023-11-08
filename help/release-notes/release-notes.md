@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: d0dc5dfb-25a3-4388-a1d4-abba70081cc3
-source-git-commit: 61f3079a88e39c02b29bfafc7b2b9d4d098cef6b
+source-git-commit: 31bc86f81620bdc6fe9877cdc96f4004a80d60f9
 workflow-type: tm+mt
-source-wordcount: '4640'
-ht-degree: 98%
+source-wordcount: '4641'
+ht-degree: 99%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 98%
    * MongoDB 4.4
    * MySQL JDBC Connector 8
 
-AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE 完全インストーラーを使用することをお勧めします。新しく追加および廃止されたソフトウェアの完全なリストを確認するには、JEE 上のAEM Formsまたは OSGi 上のAEM Formsのドキュメントを参照してください。
+AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE 完全インストーラーを使用することをお勧めします。新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -419,10 +419,19 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * GraphQL クエリでは、`fragments` インデックスの代わりに `damAssetLucene` インデックスを使用する場合があります。このアクションは結果的に、GraphQL クエリが失敗するか、実行に非常に長い時間がかかる可能性があります。
 
-  問題を修正するには、`damAssetLucene` は、次の 2 つのプロパティを含むように設定する必要があります。
+  問題を修正するには、 `damAssetLucene` は、次の 2 つのプロパティを以下に含むように設定する必要があります。 `/indexRules/dam:Asset/properties`:
 
    * `contentFragment`
+      * `jcr:primaryType="nt:unstructured"`
+      * `name="jcr:content/contentFragment"`
+      * `propertyIndex="{Boolean}true"`
+      * `type="Boolean"`
    * `model`
+      * `jcr:primaryType="nt:unstructured"`
+      * `name="jcr:content/data/cq:model"`
+      * `ordered="{Boolean}true"`
+      * `propertyIndex="{Boolean}true"`
+      * `type="String"`
 
   インデックス定義を変更した後、インデックス再作成が必要です（`reindex` = `true`）。
 
@@ -476,7 +485,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
       >[!NOTE]
       >
-      > また、7-zip などのインプレース編集ツールを使用して、 `Manifest.mf` ファイル。
+      > また、7-zip などのインプレース編集ツールを使用して、`Manifest.mf` ファイルを更新することもできます。
 
    1. 更新した `Manifest.mf` を `adobe-output-client.jar` アーカイブに保存します。
    1. 変更した `adobe-output-client.jar` ファイルを保存し、設定を再実行します。（CQDOC-20878）
