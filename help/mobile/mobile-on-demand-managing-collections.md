@@ -17,7 +17,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークにもとづくクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
 コンテンツ管理アクションは、アプリケーション内のコンテンツの作成と管理に役立つ構成要素です。 アプリケーション内のコンテンツに対して、次のアクションが実行されます。
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 >
 >AEM Mobileアプリの次のトピックについては、オンラインヘルプの次のリソースを参照してください。
 >
->* [デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [設計上の考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
 >* [コレクションの管理](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
 >
@@ -112,12 +112,12 @@ ht-degree: 4%
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. で削除する記事を選択します。 **コレクションを管理** タイル。
 1. リストで選択されていることを確認します。必要に応じて、削除する他を選択します。
-1. クリック **削除** をクリックします。
+1. アクションバーの「**作成**」をクリックします。
 1. AEMと Mobile On-Demand からを削除する場合はオンにします。
 1. 「**削除**」をクリックします。
 1. コレクションがリストから削除されました。
 
-## コレクションへのコンテンツの追加 {#adding-content-to-collections}
+## ニュースレターへのコンテンツの追加 {#adding-content-to-collections}
 
 コレクションは基本的に関連コンテンツのカテゴリです。 記事やバナーなどのコンテンツを、アプリケーションのナビゲーション構造を定義するパッケージにまとめます。 コレクションはネストできます。
 
