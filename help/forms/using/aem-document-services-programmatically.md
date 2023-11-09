@@ -5,7 +5,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '6419'
 ht-degree: 45%
@@ -4460,7 +4460,7 @@ PDF Generator サービスは、ネイティブファイル形式を PDF に変�
 
 ### GeneratePDFService {#generatepdfservice}
 
-GeneratePDFService には、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、（非推奨）.swf、.jpg、.bmp、.tif、.png、.html などの様々なファイル形式をPDFに変換する API が用意されています。 また、様々なファイル形式にPDFを書き出し、PDFを最適化する API も提供します。 このサービスは、次の API をサポートしています。
+GeneratePDFService には、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（非推奨）、.jpg、.bmp、.tif、.png、.html など、様々なファイル形式をPDFに変換する API が用意されています。 また、様々なファイル形式にPDFを書き出し、PDFを最適化する API も提供します。 このサービスは、次の API をサポートしています。
 
 * **createPDF**：サポートされているファイルタイプをPDFドキュメントに変換します。 Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式をサポートしています。 これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
 * **exportPDF**：サポートされるファイルPDFに変換ドキュメントを変換します。 メソッドは、PDFを入力として受け入れ、PDFのコンテンツを指定したファイルタイプ形式で書き出します。 PDF ドキュメントは、次の形式でエクスポートすることができます。Encapsulated PostScript（eps）、HTML 3.2（htm、html）、CSS 1.0 を使用した HTML 4.01（htm、html）、JPEG（jpg、jpeg、jpe）、JPEG2000（jpf、jpx、jp2、j2k、j2c、jpc）、Microsoft Word 文書（doc、 docx） Microsoft Excel ブック（xlsx）、Microsoft PowerPoint プレゼンテーション（pptx）、PNG（png）、PostScript（ps）、リッチテキスト形式（rtf）、テキスト（Accessible）（txt）、テキスト（Plain）（txt）、TIFF（tif、tiff）、XML 1.0（xml）、PDF/A-1a（sRGB）、PDF/A-1b、PDF/A-2a（sRGB）、PDF/A-2b（sRGB）、PDF/A-3a（sRGB）、PDF/A-3b（sRGB）。PDF の出力用として[カスタムの Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を指定することもできます。

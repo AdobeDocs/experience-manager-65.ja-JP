@@ -1,19 +1,15 @@
 ---
 title: AEM Sites ページへのアダプティブフォームまたはインタラクティブ通信の埋め込み
-seo-title: Embed an adaptive form or interactive communication in AEM sites page
 description: アダプティブフォームをAEMサイトページに埋め込むことができます。 ユーザーは、サイトのページから移動することなくフォームを記入および送信できます。
-seo-description: You can embed adaptive forms in AEM sites pages. Users can fill and submit forms without leaving the site pages.
-uuid: 59b49e2f-6d95-42e5-b31e-fc40936c42d2
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
-discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
 feature: Adaptive Forms
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 62%
+source-wordcount: '1164'
+ht-degree: 60%
 
 ---
 
@@ -69,7 +65,7 @@ AEM Formsコンテナコンポーネントを使用してアダプティブフ�
 
       * **「ありがとうございます」メッセージ**：フォーム送信時に表示するメッセージをリッチテキストエディターで書き込みます。このオプションは、「ありがとうございます」メッセージの表示が有効な場合にのみ選択できます。
       * **「ありがとうございます」ページ**： フォームの送信時に表示するページを参照して選択します。このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
-      * **送信時にページを更新**：アダプティブフォームが埋め込まれたページを更新して「ありがとうございます」ページを表示します。この機能が無効な場合は、AEM Forms コンテナ内のアダプティブフォームの代わりに「ありがとうございます」ページが（ページの更新を待たずに）表示されます。このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
+      * **送信時にページを更新**：アダプティブフォームが埋め込まれたページを更新して、「ありがとうございます」ページを表示できるようにします。 この機能が無効な場合は、AEM Forms コンテナ内のアダプティブフォームの代わりに「ありがとうございます」ページが（ページの更新を待たずに）表示されます。このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
 
    * **テーマ**：アダプティブフォームまたはインタラクティブ通信のコンポーネントのスタイルを定義するテーマを選択します。スタイル設定には、フォントスタイル、背景色、サイズ、配置など、外観のプロパティが含まれます。
    * **高さ**：コンテナの高さを指定します。コンテナのサイズを自動的に変更するには、空白のままにします。

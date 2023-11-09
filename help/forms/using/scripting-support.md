@@ -1,19 +1,15 @@
 ---
 title: HTML5 フォームのスクリプティングのサポート
-seo-title: Scripting support for HTML5 forms
 description: JavaScript、FormCalc プロパティ、および Java5 Formsでサポートされるその他のHTML。
-seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
-uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '3887'
+source-wordcount: '3896'
 ht-degree: 20%
 
 ---
@@ -36,7 +32,7 @@ ht-degree: 20%
    <td>ユーザーのアクションに応じて変更される前のフィールドのコンテンツを指定します。 この値は、取り消し機能と同様に、再呼び出しできます。</td>
    <td><p>ドロップダウンおよびリストボックスに対しては機能しません。 次の場合、<code>PrevText </code> は正常に機能しません。</p>
     <ul>
-     <li>iPadの数値フィールドに一部の特殊文字キー ( 例：$、(、)、&amp;、@など ) を入力すると、 </li>
+     <li>iPadの数値フィールドに一部の特殊文字キー（例えば、$や、&amp;や@など）を入力すると、 </li>
      <li>「日付」フィールド（日付がカレンダーを通じて入力される場合）<br /> </li>
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td>
   </tr>
@@ -52,7 +48,7 @@ ht-degree: 20%
     <ul>
      <li>テキストを選択 — 置換するとき</li>
      <li>テキストの削除、コピー、貼り付け時。</li>
-     <li>数値フィールドに一部の特殊文字キー ( 例：$、(、)、&amp;、@など ) を入力するとき<br /> </li>
+     <li>数値フィールドに一部の特殊文字キー（$や、&amp;や@など）を入力するとき<br /> </li>
      <li>Shift +英数字の組み合わせを使用した場合。 </li>
      <li>日付／時間フィールドを使用したとき。</li>
     </ul>
@@ -67,7 +63,7 @@ ht-degree: 20%
     <ul>
      <li>テキストを選択 — 置換するとき</li>
      <li>テキストの削除、コピー、貼り付け時。</li>
-     <li>数値フィールドに一部の特殊文字キー ( 例：$、(、)、&amp;、@など ) を入力するとき<br /> </li>
+     <li>数値フィールドに一部の特殊文字キー（$や、&amp;や@など）を入力するとき<br /> </li>
      <li>Shift +英数字の組み合わせを使用した場合。 </li>
      <li>日付／時間フィールドを使用したとき。</li>
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td>

@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 4%
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. で削除する記事を選択します。 **コレクションを管理** タイル。
-1. リストで選択されていることを確認します（必要に応じて、削除する他を選択します）。
+1. リストで選択されていることを確認します。必要に応じて、削除する他を選択します。
 1. クリック **削除** をクリックします。
 1. AEMと Mobile On-Demand からを削除する場合はオンにします。
 1. 「**削除**」をクリックします。

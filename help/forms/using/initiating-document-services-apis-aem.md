@@ -1,15 +1,11 @@
 ---
 title: AEM ワークフローからの Document Services API の開始
-seo-title: Initiate Document Services APIs from AEM Workflow
 description: DDX または指定された入力でAEM Document Services を呼び出す方法について説明します。 PDFをPDF/A に変換する方法も参照
-seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A
-uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 53%
@@ -61,7 +57,7 @@ Invoke DDX ワークフローには次の入力ドキュメントが必要です
 入力 DDX に応じて、呼び出し API は複数の出力ドキュメントを生成できます。 「出力ドキュメント」タブでは、出力ドキュメントを保存する場所を選択できます。
 
 1. *ペイロードでの出力ドキュメント保存*：ペイロードフォルダーの下で出力ドキュメントを保存したり、ペイロードがファイルの場合はペイロードを上書きしたりします。
-1. *出力ドキュメントのマップ*：出力ドキュメントごとに 1 つのエントリを追加して、各出力ドキュメントの保存場所を明示的に指定できます。 各エントリは、ドキュメントと保存場所を指定します。 出力ドキュメントは、ペイロードを上書きしたり、ペイロードフォルダーの下に保存したりできます。 複数の出力ドキュメントがあると役に立ちます。
+1. *出力ドキュメントのマップ*：各出力ドキュメントの保存場所を明示的に指定します。出力ドキュメントごとに 1 つのエントリを追加します。 各エントリは、ドキュメントと保存場所を指定します。 出力ドキュメントは、ペイロードを上書きしたり、ペイロードフォルダーの下に保存したりできます。 複数の出力ドキュメントがあると役に立ちます。
 
 1. *ジョブのログ*：トラブルシューティングエラーに役立つジョブログドキュメントを保存する場所を指定します。
 

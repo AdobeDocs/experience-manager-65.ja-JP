@@ -1,16 +1,12 @@
 ---
 title: JEE 上の AEM Forms 環境の堅牢化
-seo-title: Hardening Your AEM Forms on JEE Environment
 description: 企業のイントラネット内で動作する JEE 上の AEM Forms のセキュリティを強化するための、様々なセキュリティ強化設定について学びます。
-seo-description: Learn a variety of security-hardening settings to enhance the security of AEM Forms on JEE running in a corporate intranet.
-uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
-discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
 source-wordcount: '7662'
 ht-degree: 92%
@@ -319,8 +315,8 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
    https://[host name]:[port]/adminui
    ```
 
-1. **設定／コアシステム設定／設定**&#x200B;をクリックします。
-1. 「**WSDL を有効にする**」のチェックを外して「**OK**」をクリックします。
+1. 選択 **設定/コアシステム設定/設定**.
+1. 選択を解除 **WSDL を有効にする**&#x200B;を選択し、「 **OK**.
 
 ### アプリケーションサーバーのセキュリティ {#application-server-security}
 
