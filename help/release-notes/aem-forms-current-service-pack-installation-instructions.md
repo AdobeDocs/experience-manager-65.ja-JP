@@ -2,9 +2,9 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1770'
 ht-degree: 96%
 
 ---
@@ -33,9 +33,11 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 >[!NOTE]
 >
-> アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE 完全インストーラーです。フルインストーラーは新しいプラットフォームをサポートし、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善が含まれています。 新規インストールを実行する場合や、AEM 6.5 Forms on JEE 環境の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、AEM 6.5.18.0 Forms on JEE の完全なインストーラー（2023年8月31日（PT）にリリース）を使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE 完全インストーラーです。フルインストーラーは新しいプラットフォームをサポートし、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善が含まれています。 新規インストールを実行する場合や、AEM 6.5 Forms on JEE 環境の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、AEM 6.5.18.0 Forms on JEE の完全なインストーラー（2023年8月31日（PT）にリリース）を使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 > 
-> アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブForms機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
+> * AEM Formsの機能 ( アダプティブFormsなど ) は、 [AEM 6.5 QuickStart](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)は、調査および評価の目的でのみ使用されます。 実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
+
+
 
 ## JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-jee-service-pack}
 

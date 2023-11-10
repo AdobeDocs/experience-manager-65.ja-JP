@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
+source-git-commit: 6f45b0f8dad44e66570f6436a560060cbed56161
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '952'
 ht-degree: 24%
 
 ---
@@ -36,6 +36,10 @@ AEM Forms では、通信管理機能、ドキュメントセキュリティ、�
 大企業では、一度フォームを作成したら、そのフォームがコンテンツ管理システムにコピーして再利用されることも多くあります。フォームの大規模なデータベースを最新の状態に保ち、検出可能な状態に保つことは、非常に困難な作業です。 AEM はカスタマイズ可能な「フォームポータル」を提供することにより、Web チャネルおよびモバイルチャネルの双方から必要なフォームを見つけ、アクセスできる状態に保ちます。
 
 AEM Formsには、アダプティブフォームだけでなく、XFA フォーム、PDF forms、関連アセットも管理できるフォーム管理ツールが用意されています。 詳しくは、 [フォーム管理の概要](../../forms/using/introduction-managing-forms.md).
+
+>[!NOTE]
+>
+>AEM Formsの機能 ( アダプティブFormsなど ) は、 [AEM 6.5 QuickStart](/help/sites-deploying/deploy.md)は、調査および評価の目的でのみ使用されます。 実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
 
 ![AEM forms の機能](do-not-localize/4th-draft.gif)
 
@@ -124,6 +128,3 @@ AEM Formsを使用すると、ビジネスユーザーは、ドキュメント�
 
 合理化されたパーソナライズされた通信ワークフロー
 
->[!NOTE]
->
->アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブForms機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
