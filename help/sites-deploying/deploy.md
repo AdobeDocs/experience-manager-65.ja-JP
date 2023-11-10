@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '1765'
-ht-degree: 58%
+source-wordcount: '1803'
+ht-degree: 56%
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Experience Managerは、商用 Web サイトや関連サービスを構築
 * **Web サイト**
 * **モバイルアプリケーション**
 * **デジタルパブリケーション**
-* **Forms**
+* **フォームとドキュメント**
 * **デジタルアセット**
 * **Communities**
 * **オンライン取引**
@@ -81,6 +81,10 @@ Adobe Experience Managerは、商用 Web サイトや関連サービスを構築
 最後に、ユーザーはこれらのインフラストラクチャレベルおよびアプリケーションレベルの構築ブロックを使用して、独自のアプリケーションを構築することで、カスタマイズされたソリューションを作成できます。
 
 AEM サーバーは **Java ベース**&#x200B;であり、Java プラットフォームをサポートするほとんどのオペレーティングシステムで動作します。クライアントと AEM とのやり取りはすべて、**web ブラウザー**&#x200B;経由で行われます。
+
+>[!NOTE]
+>
+>アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブForms機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
 
 ### 典型的なデプロイメントシナリオ {#typical-deployment-scenarios}
 

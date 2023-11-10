@@ -11,10 +11,10 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 25%
+source-wordcount: '956'
+ht-degree: 24%
 
 ---
 
@@ -123,3 +123,7 @@ AEM Formsを使用すると、ビジネスユーザーは、ドキュメント�
 ![レイアウト 2](do-not-localize/layout-02.png)
 
 合理化されたパーソナライズされた通信ワークフロー
+
+>[!NOTE]
+>
+>アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブForms機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。

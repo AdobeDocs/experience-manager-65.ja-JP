@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: e3a3511a5854432b9c01748f7f5ffaf9182180f8
+source-git-commit: e4e2e8b58c0283182b2fbd4262a4ef9b607dac26
 workflow-type: tm+mt
-source-wordcount: '3392'
+source-wordcount: '3429'
 ht-degree: 48%
 
 ---
@@ -282,6 +282,10 @@ ht-degree: 48%
 ### [!DNL Experience Manager] Forms へのサービスパックのインストール{#install-aem-forms-add-on-package}
 
 AEM Forms にサービスパックをインストールする手順については、[AEM Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)を参照してください。
+
+>[!NOTE]
+>
+>アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブForms機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
 
 ### Experience Manager コンテンツフラグメント用の GraphQL インデックスパッケージのインストール{#install-aem-graphql-index-add-on-package}
 
