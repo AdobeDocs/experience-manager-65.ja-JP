@@ -2,13 +2,13 @@
 sub-product: AEM Headless Journeys
 user-guide-title: AEM ヘッドレスジャーニー
 breadcrumb-title: AEM ヘッドレスジャーニー
-user-guide-description: AEMの強力で柔軟なヘッドレス機能、その機能、およびプロジェクトでの使用方法に関するガイド付きのジャーニーについては、ここから始めてください。
+user-guide-description: AEM の強力で柔軟なヘッドレス機能、その性能、プロジェクトでの使用方法について、ここからガイド付きのジャーニーを開始します。
 feature: Developer Tools
 role: Developer, Architect
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
