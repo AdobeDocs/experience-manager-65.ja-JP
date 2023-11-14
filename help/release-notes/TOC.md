@@ -8,7 +8,7 @@ user-guide-description: AEM 6.5 の最新の新機能については、リリー
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: f618dbaafbbcd1511ea2a678db398b4bcbfda366
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '71'
 ht-degree: 100%
 

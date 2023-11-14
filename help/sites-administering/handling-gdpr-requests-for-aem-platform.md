@@ -4,7 +4,7 @@ description: Adobe Experience Manager の基盤での GDPR リクエストの取
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '438'
 ht-degree: 100%
 

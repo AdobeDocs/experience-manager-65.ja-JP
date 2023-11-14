@@ -11,7 +11,7 @@ docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5401'
 ht-degree: 100%
 
