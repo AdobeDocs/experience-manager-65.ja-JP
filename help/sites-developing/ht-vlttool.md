@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '2707'
-ht-degree: 74%
+source-wordcount: '2709'
+ht-degree: 73%
 
 ---
 
@@ -944,4 +944,4 @@ The `.vlt-sync-config.properties` ファイルでは、次のプロパティを�
 
 >[!NOTE]
 >
->VLT 同期機能でサポートされるのはシンプルなファイルとフォルダーのみです。vault でシリアル化された特殊なファイル（.content.xml、dialog.xml など）は検出されても無視されます。そのため、デフォルトの vlt チェックアウトで vault 同期を使用できます。
+>VLT 同期機能は、単純なファイルとフォルダのみをサポートしますが、Vault でシリアル化された特殊なファイル（.content.xml、dialog.xml など）を検出し、それらを無視します。 したがって、デフォルトの vlt チェックアウトで Vault 同期を使用できます。

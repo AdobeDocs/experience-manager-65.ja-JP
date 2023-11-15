@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 87%
+source-wordcount: '221'
+ht-degree: 82%
 
 ---
 
@@ -27,7 +27,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 | 場所 | ショートカット | 説明 |
 |---|---|---|
-| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | **プレビュー**&#x200B;と、現在選択されている[モード](/help/sites-authoring/author-environment-tools.md#page-modes)</a>（**編集**、 **レイアウト**&#x200B;など）を切り替えます * |
+| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | 切り替え **プレビュー** および現在選択されている [mode](/help/sites-authoring/author-environment-tools.md#page-modes)</a> ( 例： **編集**, **レイアウト**&#x200B;など ) |
 | **編集**&#x200B;モード | `Ctrl-z` | [最後におこなった変更操作を取り消す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [最後におこなった変更操作をやり直す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 複数の段落を選択する |
