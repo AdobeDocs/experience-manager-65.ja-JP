@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 70d7ee0d-2f6d-4f97-a6e2-b02d84a0ca42
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2607'
 ht-degree: 1%
@@ -87,7 +87,7 @@ AMS サービスへのログインには、以下の手順に従ってくださ�
 
 ### AdobeモバイルサービスCloud Service {#adobe-mobile-service-cloud-service}
 
-AMS が設定されたので、Mobile Dashboard でモバイルアプリケーションをAdobeに関連付けます。 AEM Mobileダッシュボードで「Cloud Serviceを管理」を探し、「+」ボタンをクリックします。
+AMS が設定されたら、「モバイルダッシュボード」でモバイルアプリケーションをAdobeに関連付けます。 AEM Mobileダッシュボードで「Cloud Serviceを管理」を探し、「+」ボタンをクリックします。
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 

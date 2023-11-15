@@ -2,10 +2,10 @@
 title: ヘッドレスアプリケーションの運用開始方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法について説明します。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 98%
+source-wordcount: '1874'
+ht-degree: 97%
 
 ---
 
@@ -100,7 +100,7 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 <!-- Start of CDN Review -->
 
-それではいよいよ、以下に示すベストプラクティスに従って、AEM ヘッドレスアプリケーションのローンチの準備を行います。
+次に、以下に説明するベストプラクティスに従って、AEMヘッドレスアプリケーションを起動できるように準備します。
 
 ### ローンチ前にヘッドレスアプリケーションのセキュリティを確保 {#secure-and-scale-before-launch}
 

@@ -2,9 +2,9 @@
 title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '4675'
+source-wordcount: '4676'
 ht-degree: 99%
 
 ---
@@ -187,7 +187,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * [参照](/help/sites-authoring/author-environment-tools.md#references)パネルには、選択したページを参照する内部リンクを一覧表示する新しいセクションがあります。これは、ページをオフラインにしたり削除したりすることが想定される場合に、オフラインにする前に調整する必要があるページを確認するのに便利です。
 * [リスト表示](/help/sites-authoring/basic-handling.md#list-view)には、ページがワークフローに含まれている場合にステータスを表示する新しいワークフロー列があります。
-* [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)で、ページにサムネールを割り当てるときに既存のアセットを参照できるようになりました（「サムネール」タブ）。
+* Adobe Analytics の [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)を使用する場合、ページにサムネールを割り当てる際に、既存のアセットを参照できるようになりました（「サムネール」タブ）。
 
 #### ページエディター {#page-editor}
 

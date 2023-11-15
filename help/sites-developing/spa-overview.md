@@ -7,9 +7,9 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1652'
 ht-degree: 90%
 
 ---
@@ -176,7 +176,7 @@ AEM SPA Editor SDK で動作する他の SPA フレームワークを追加で�
 
 SPA で作成したテキストコンポーネントのインプレースエディタを使用する場合は、追加の設定が必要です。
 
-1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKND Journal のサンプルコンテンツがある場合は、 `<div>` 要素と、使用されているセレクターが `data-rte-editelement`.
+1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKND ジャーナルのサンプルコンテンツがある場合は、 `<div>` 要素と、使用されているセレクターが `data-rte-editelement`.
 1. 対応する AEM テキストコンポーネントの `cq:InplaceEditingConfig` で、そのセレクター（例：`data-rte-editelement` など）を指す設定 `editElementQuery` を指定します。これにより、HTML テキストを折り返す HTML 要素をエディターが把握できます。
 
 この処理の例については、[WKND Journal サンプルコンテンツ](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)を参照してください。

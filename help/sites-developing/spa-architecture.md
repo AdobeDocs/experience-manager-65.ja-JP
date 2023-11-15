@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2055'
-ht-degree: 75%
+source-wordcount: '2051'
+ht-degree: 73%
 
 ---
 
@@ -98,7 +98,7 @@ AEM プロジェクトでは、[AEM プロジェクトアーキタイプ](https:
 
 >[!NOTE]
 >
->AEM ではすべてのモデルがサポートされていますが、3 番目のモデルを実装することでのみ（つまり AEM で推奨される [SPA 開発原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)に従うことで）、コンテンツ作成者は SPA のコンテンツをいつもどおりに操作、編集できます。
+>AEMではすべてのモデルがサポートされていますが、3 番目のモデルを実装することによってのみ ( したがって、推奨される [AEMでのSPA開発原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)) を使用すると、コンテンツ作成者は、AEMでSPAのコンテンツをいつもどおりに操作および編集できます。
 
 ## 既存の SPA から AEM への移行 {#migrating-existing-spas-to-aem}
 

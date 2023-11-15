@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 1%
@@ -27,7 +27,7 @@ AEM Mobileプロジェクトには、ページ、JavaScript および CSS クラ
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-AEMの慣例により、アプリの最初のページは、アプリのデフォルト言語 (Geometrixxとスターターキットの両方のケースで「en」) となる、アプリの子の 1 つへのリダイレクトにする必要があります。 トップレベルのロケールページは、通常、基盤の「splash-page」コンポーネント (/libs/mobileapps/components/splash-page) を継承します。このコンポーネントは、空中コンテンツ同期更新のインストールに必要な初期化を処理します (contentInit コードは/etc/clientlibs/mobile/content-sync/js/contentInit.jsにあります )。
+AEMの慣例により、アプリの最初のページは、アプリのデフォルト言語 (Geometrixxとスターターキットの両方のケースでは「en」) となる、アプリの子の 1 つへのリダイレクトにする必要があります。 トップレベルのロケールページは、通常、基盤の「splash-page」コンポーネント (/libs/mobileapps/components/splash-page) を継承します。このコンポーネントは、空中コンテンツ同期更新のインストールに必要な初期化を処理します (contentInit コードは/etc/clientlibs/mobile/content-sync/js/contentInit.jsにあります )。
 
 ## テンプレートとコンポーネント {#templates-and-components}
 
@@ -45,7 +45,7 @@ AngularJS を使用したいオーサリング可能なページコンポーネ�
 
 お使いのクライアントサイドコードが独立していて、アプリケーションの特定のコンポーネントに関連していない場合（つまり、他のアプリケーションで再利用できる場合）は、Adobeは/etc/clientlibs/に保存することをお勧めします。&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. 一方、clientlib が単一のアプリに固有の場合は、アプリのデザインノード (/etc/designs/phonegap/) の子としてネストできます。&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs. この clientlib のカテゴリを他のライブラリと共に使用しないでください。代わりに、必要に応じて他のライブラリを埋め込みます。 このパターンに従うと、開発者はクライアントライブラリをアプリに追加するたびに新しいコンテンツ同期設定を追加する必要がなくなり、アプリのデザイン clientlib の「embeds」プロパティを更新するだけで済みます。 例えば、/content/phonegap/geometrixx-outdoors/en/jcr:content/pge-app/app-config/clientlibs-all のGeometrixxclientlibs-all コンテンツ同期設定ノードを確認します。
 
-クライアントサイドコードが特定のコンポーネントと緊密に結び付いている場合、そのコードを/apps/内のコンポーネントの場所の下にネストされたクライアントライブラリに配置し、そのカテゴリをアプリの「デザイン」clientlib に埋め込みます。
+クライアントサイドコードが特定のコンポーネントに緊密に結び付いている場合は、そのコードを/apps/内のコンポーネントの場所の下にネストされたクライアントライブラリに配置し、そのカテゴリをアプリの「デザイン」clientlib に埋め込みます。
 
 ## PhoneGap 設定 {#phonegap-configuration}
 

@@ -1,17 +1,13 @@
 ---
 title: 監視フォルダーの作成または設定
-seo-title: Create or Configure a watched folder
 description: 監視フォルダーを作成または削除する方法、または既存の監視フォルダーのプロパティを変更する方法について説明します。
-seo-description: Learn how to create or delete a watched folder, or modify the properties of an existing watched folder.
-uuid: 659d4d8c-99b8-40dd-b884-bfee4d476fe1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 0ce7b338-6686-49b3-b58b-e7ab6b670708
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1819'
 ht-degree: 32%
 
 ---

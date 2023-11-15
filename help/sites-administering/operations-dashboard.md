@@ -1,21 +1,17 @@
 ---
 title: 操作ダッシュボード
-seo-title: Operations Dashboard
 description: Adobe Experience Managerの操作ダッシュボードの使用方法を説明します。
-seo-description: Learn how to use the Operations Dashboard.
-uuid: ef24813f-a7a8-4b26-a496-6f2a0d9efef6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '6057'
-ht-degree: 99%
+source-wordcount: '6061'
+ht-degree: 98%
 
 ---
 
@@ -230,9 +226,9 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
      <li>1 つ以上のインデックス作成レーンが失敗した場合に、重要ステータスを返します</li>
      <li>すべてのインデックス作成レーンについて <code>lastIndexedTime</code> をチェックし、次のことを行います。
       <ul>
-       <li>2 時間以上前である場合は、重要ステータスを返します。 </li>
-       <li>2 時間～ 45 分前の場合は、警告ステータスを返します。 </li>
-       <li>45 分前以内の場合は、OK ステータスを返します。 </li>
+       <li>2 時間以上前の場合は、重大ステータスを返します。 </li>
+       <li>2 時間～ 45 分前の場合は警告ステータスを返します </li>
+       <li>45 分前未満の場合は OK ステータスを返します </li>
       </ul> </li>
      <li>いずれの条件も満たさない場合は、OK ステータスを返します</li>
     </ul> <p>重要ステータスと警告ステータスの両方のしきい値を設定できます。このヘルスチェックの Mbean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a> です。</p> <p><strong>注意：</strong>このヘルスチェックは、AEM 6.4 で使用でき、AEM 6.3.0.1 に移植されています。</p> </td>
@@ -442,7 +438,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 >[!NOTE]
 >
->診断ページの設定はログファイルへの記録内容には影響せず、その逆も同様です。したがって、エラーログで情報メッセージが見つかったとしても、ログメッセージの UI には表示されない場合があります。また、エラーログに影響を与えずに、特定のパッケージからのデバッグメッセージを UI を通して見つけることもできます。ログファイルの設定方法について詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
+>診断ページの設定はログファイルへの記録内容には影響せず、その逆も同様です。したがって、エラーログで情報メッセージが見つかったとしても、ログメッセージの UI には表示されない場合があります。また、UI を使用すると、エラーログに影響を与えることなく、特定のパッケージからデバッグメッセージを取得できます。 ログファイルの設定方法について詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
 >[!NOTE]
 >

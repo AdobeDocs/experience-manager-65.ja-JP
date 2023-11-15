@@ -1,14 +1,12 @@
 ---
 title: ContextHub UI モジュールタイプのサンプル
-seo-title: Sample ContextHub UI Module Types
-description: ContextHub には、ソリューションで使用できるいくつかのサンプル UI モジュールが用意されています
-seo-description: ContextHub provides several sample UI modules that you can use in your solutions
+description: ContextHub には、ソリューションで使用できるいくつかのサンプル UI モジュールが用意されています.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 87%
@@ -57,7 +55,7 @@ JSON 形式の JavaScript オブジェクトを使用して、contexthub.base UI
    * タイトル：この項目に対して表示するテキスト
    * 画像：（オプション）左側に表示する画像への URL
    * アイコン：（オプション）左側に表示する CUI アイコンクラスで、画像が指定されている場合は無視されます
-   * 選択済み：（オプション）この項目を選択された状態で表示するかどうかを指定する Boolean 値（true=selected）。デフォルトでは、選択した項目は太字フォントで表示されます。その他の外観を設定するには、`listType` プロパティを使用します（以下を参照）。
+   * 選択済み：（オプション）この項目を選択された状態で表示するかどうかを指定する Boolean 値（true=selected）。デフォルトでは、選択した項目は太字フォントで表示されます。 その他の外観を設定するには、`listType` プロパティを使用します（以下を参照）。
 
 * **listType：**&#x200B;ポップオーバーリスト項目に使用するスタイル。次のいずれかの値を使用します。
 

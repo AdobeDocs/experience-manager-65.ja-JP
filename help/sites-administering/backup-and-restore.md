@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2282'
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
@@ -216,7 +216,7 @@ AEM オンラインバックアップは、バックアップ対象のデータ�
 
      バックアップの開始時に、ターゲットディレクトリ内に `backupInProgress.txt` という空のファイルが作成されます。このファイルは、バックアップの完了時に削除されます。
 
-1. すべてのファイルが、ソースディレクトリからターゲットディレクトリ（zip ファイルを作成する場合は一時ディレクトリ）にコピーされます。リポジトリの破損を回避するために、セグメントストアはデータストアより前にコピーされます。バックアップの作成時、インデックスとキャッシュデータは省略されます。結果として、`crx-quickstart/repository/cache` と `crx-quickstart/repository/index` からのデータはバックアップに含まれません。このプロセスで進行状況バーのインジケーターは、zip ファイルの作成時は 0 ～ 70％、zip ファイルを作成しない場合は 0 ～ 100％を示します。
+1. すべてのファイルが、ソースディレクトリからターゲットディレクトリ（zip ファイルを作成する場合は一時ディレクトリ）にコピーされます。リポジトリの破損を回避するために、セグメントストアはデータストアより前にコピーされます。バックアップの作成時、インデックスとキャッシュデータは省略されます。結果として、`crx-quickstart/repository/cache` と `crx-quickstart/repository/index` からのデータはバックアップに含まれません。プロセスの進行状況バーのインジケーターは、zip ファイルの作成時は 0%～70%、zip ファイルが作成されない場合は 0%～100%の間です。
 
 1. バックアップが既存のディレクトリに対して行われる場合、ターゲットディレクトリ内の「古い」ファイルは削除されます。 古いファイルは、ソースディレクトリに存在しないファイルです。
 

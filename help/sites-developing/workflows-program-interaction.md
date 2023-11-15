@@ -1,18 +1,14 @@
 ---
 title: プログラムによるワークフローとのやり取り
-seo-title: Interacting with Workflows Programmatically
 description: Adobe Experience Managerでプログラムを使用してワークフローを操作する方法を説明します。
-seo-description: null
-uuid: a0f19fc6-b9bd-4b98-9c0e-fbf4f7383026
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2007'
 ht-degree: 66%
 
 ---
@@ -359,7 +355,7 @@ REST API では、次のアクションがサポートされています。
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>URI がパラメーターとして送信される作業項目を完了します。 <code>item</code> に従って、ワークフローインスタンスを、パラメーターで定義された次のノードに進めます。 <code>route</code> または <code>backroute</code> もし一歩引く事が出来れば<br /> パラメーター <code>delegatee</code> を送信した場合は、パラメーター <code>item</code> によって識別される作業項目が、指定された参加者に委任されます。 </td>
+   <td>URI がパラメーターとして送信される作業項目を完了します。 <code>item</code> をクリックして、従うワークフローインスタンスを、パラメーターで定義された次のノードに進めます。 <code>route</code> または <code>backroute</code> もし一歩戻れば<br /> パラメーター <code>delegatee</code> を送信した場合は、パラメーター <code>item</code> によって識別される作業項目が、指定された参加者に委任されます。 </td>
   </tr>
  </tbody>
 </table>

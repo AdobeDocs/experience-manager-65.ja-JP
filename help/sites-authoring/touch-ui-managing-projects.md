@@ -1,19 +1,15 @@
 ---
 title: プロジェクトの管理
-seo-title: Managing Projects
 description: プロジェクトコンソールでアクセスして管理できる 1 つのエンティティにリソースをグループ化することで、プロジェクトを整理できます。
-seo-description: Projects lets you organize your project by grouping resources into one entity which can be acessed and managed intheProjects console
-uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
-discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 91%
+source-wordcount: '981'
+ht-degree: 89%
 
 ---
 
@@ -135,7 +131,7 @@ ht-degree: 91%
 
 ### プロジェクトの無効化 {#making-projects-inactive-or-active}
 
-プロジェクトが完了しても、そのプロジェクトに関する情報をまだ保持する必要がある場合は、プロジェクトを非アクティブにマークできます。[非アクティブなプロジェクト](#viewing-active-inactive-projects)が&#x200B;**プロジェクト**&#x200B;コンソールでデフォルトで表示されるようになりました。
+プロジェクトが完了した場合、そのプロジェクトを非アクティブとしてマークしたいが、そのプロジェクトに関する情報を保持したい場合があります。 [非アクティブなプロジェクト](#viewing-active-inactive-projects)が&#x200B;**プロジェクト**&#x200B;コンソールでデフォルトで表示されるようになりました。
 
 プロジェクトを非アクティブにするには、次の手順に従います。
 

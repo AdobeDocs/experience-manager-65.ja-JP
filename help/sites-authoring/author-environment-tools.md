@@ -7,10 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2226'
-ht-degree: 59%
+source-wordcount: '2227'
+ht-degree: 58%
 
 ---
 
@@ -174,7 +174,7 @@ The **コンテンツツリー** では、ページ上のすべてのコンポ�
 
 ![コンテンツツリー](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-サイドパネルを開くと、パネルが（左側から）スライドして開きます。 必要に応じて「**コンテンツツリー**」タブを選択します。このタブを開くと、ページやテンプレートがツリー形式で表示されるので、コンテンツの階層構造を理解しやすくなります。また、複雑なページでは、ページのコンポーネント間をジャンプしやすくなります。
+サイドパネルを開くと、パネルが（左側から）スライドして開きます。 必要に応じて「**コンテンツツリー**」タブを選択します。開くと、ページやテンプレートのツリービュー表示が表示され、コンテンツが階層的にどのように構造化されているかを理解しやすくなります。 また、複雑なページでは、ページのコンポーネント間をジャンプしやすくなります。
 
 ![ateat-11](assets/ateat-11.png)
 

@@ -7,9 +7,9 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '3493'
+source-wordcount: '3495'
 ht-degree: 31%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 31%
 
 1. TagHandler の作成
 
-   * タグハンドラーは、特定の種類の HTML タグを処理する POJO です。TagHandler が処理できるHTMLタグの「種類」は、TagHandlerFactory の OSGi プロパティ「tagpattern.name」を介して定義されます。 この OSGi プロパティは基本的に、処理する入力 html タグに一致する正規表現です。 ネストされたタグはすべて、処理のためにタグハンドラーにスローされます。 例えば、ネストされた &lt;p> タグ、 &lt;p> タグが TagHandler にもスローされます。このタグの扱い方は、ユーザーが自由に設定できます。
+   * タグハンドラーは、特定の種類の HTML タグを処理する POJO です。TagHandler が処理できるHTMLタグの「種類」は、TagHandlerFactory の OSGi プロパティ「tagpattern.name」を介して定義されます。 この OSGi プロパティは基本的に、処理する入力 html タグに一致する正規表現です。 ネストされたタグはすべて、処理のためにタグハンドラーにスローされます。 例えば、ネストされた &lt;p> タグ、 &lt;p> タグが TagHandler にもスローされ、その処理方法はユーザー次第です。
    * タグハンドラーインターフェイスは、SAX コンテンツハンドラーインターフェイスに似ています。 各 html タグに対する SAX イベントを受け取ります。 タグハンドラープロバイダーは、デザインインポーターフレームワークによって自動的に呼び出される特定のライフサイクルメソッドを実装する必要があります。
 
 1. 対応する TagHandlerFactory を作成します。

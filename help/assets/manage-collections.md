@@ -7,10 +7,10 @@ role: User
 feature: Collections,Asset Management
 exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
 hide: true
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 98%
+source-wordcount: '2204'
+ht-degree: 97%
 
 ---
 
@@ -222,7 +222,7 @@ ht-degree: 98%
 
 ## ネストされたコレクションの作成 {#creating-nested-collections}
 
-別のコレクションにコレクションを追加できます。これにより、ネストされたコレクションが作成されます。
+別のコレクションにコレクションを追加して、ネストされたコレクションを作成できます。
 
 1. コレクションコンソールから目的のコレクションを 1 つ以上選択し、ツールバーの&#x200B;**[!UICONTROL コレクションに追加]**&#x200B;をクリックします。
 

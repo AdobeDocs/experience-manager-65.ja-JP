@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: personalization
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '5383'
-ht-degree: 98%
+source-wordcount: '5374'
+ht-degree: 96%
 
 ---
 
@@ -38,9 +38,9 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 >[!NOTE]
 >
->Adobe Target でキャンペーンを作成すると、`thirdPartyId` というプロパティが各キャンペーンに割り当てられます。Adobe Target でキャンペーンを削除しても、thirdPartyId は削除されません。`thirdPartyId` を異なるタイプ（AB、XT）のキャンペーンに再利用することはできません。また、手動で削除することはできません。この問題を回避するには、各キャンペーンに一意の名前を付けてください。そうすれば、キャンペーン名を異なるキャンペーンタイプで再利用できなくなります。
+>Adobe Target でキャンペーンを作成すると、`thirdPartyId` というプロパティが各キャンペーンに割り当てられます。Adobe Target でキャンペーンを削除しても、thirdPartyId は削除されません。`thirdPartyId` を異なるタイプ（AB、XT）のキャンペーンに再利用することはできません。また、手動で削除することはできません。この問題を回避するには、各キャンペーンに一意の名前を付けます。キャンペーン名を異なるキャンペーンタイプで再利用することはできません。
 >
->同じキャンペーンタイプで同じ名前を使用する場合は、既存のキャンペーンが上書きされます。
+>同じキャンペーンタイプで同じ名前を使用する場合は、既存のキャンペーンを上書きします。
 >
 >同期中に、「リクエストは失敗しました。`thirdPartyId` は既に存在します」というエラーが表示された場合は、キャンペーン名を変更して再度同期してください。
 
@@ -79,7 +79,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
    >[!NOTE]
    >
-   >[アクティビティコンソールを使用してブランドを作成](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console)することをお勧めします。
+   >Adobeが推奨する [アクティビティコンソールを使用してブランドを作成](/help/sites-authoring/activitylib.md#creating-a-brand-using-the-activities-console).
    >
    >
    >他の方法でブランドを作成する場合は、ノード `/campaigns/<brand>/master` が存在することを確認してください。ノードがなければ、アクティビティを作成しようとするとエラーが発生します。
@@ -140,7 +140,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 >[!CAUTION]
 >
->オーサーインスタンスで既にターゲット設定されているコンポーネントのターゲット設定を無効にする場合は注意が必要です。パブリッシュインスタンスからも、それぞれのアクティビティが自動的に削除されます。
+>オーサーインスタンスで既にターゲット設定されているコンポーネントのターゲティングを無効にする場合は注意が必要です。パブリッシュインスタンスからも、それぞれのアクティビティが自動的に削除されます。
 
 >[!NOTE]
 >
@@ -251,7 +251,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
    ![Target](do-not-localize/chlimage_1.png)
 
-   このコンポーネントのコンテンツが、デフォルトエクスペリエンス用のオファーになります。コンポーネントをターゲット設定すると、各エクスペリエンスについてデフォルトノードが置き換えられます。これは、特定のオーサリングエクスペリエンスで、正しいコンテンツノードを編集するために必要です。このようなデフォルト以外のエクスペリエンスに対して、[カスタムオファーを追加](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)するか、[ライブラリオファーを追加](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)します。
+   このコンポーネントのコンテンツが、デフォルトエクスペリエンス用のオファーになります。コンポーネントをターゲット設定すると、各エクスペリエンスについてデフォルトノードがレプリケートされます。これは、特定のオーサリングエクスペリエンスで、正しいコンテンツノードを編集するために必要です。このようなデフォルト以外のエクスペリエンスに対して、[カスタムオファーを追加](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer)するか、[ライブラリオファーを追加](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)します。
 
 #### ターゲットコンポーネントを追加してオファーを作成 {#creating-an-offer-by-adding-a-target-component}
 
@@ -402,11 +402,11 @@ Target コンポーネントにドラッグされたコンポーネントは、�
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-セグメントに基づいてオーディエンスを定義します。使用できるセグメントは、ページのクラウド設定によって決まります。ページが Adobe Target クラウド設定と関連付けられていない場合は、AEM セグメントをオーディエンスの定義に使用できます。ページが Adobe Target クラウド設定に関連付けられている場合、Target セグメントを使用します。
+セグメントに基づいてオーディエンスを定義します。使用可能なセグメントは、ページのクラウド設定によって決まります。 ページが Adobe Target クラウド設定に関連付けられていない場合、AEM セグメントを使用してオーディエンスを定義できます。ページが Adobe Target クラウド設定に関連付けられている場合、Target セグメントを使用します。
 
 ターゲティングエンジンについて詳しくは、[ターゲティングエンジン](/help/sites-authoring/personalization.md#targeting-engine)を参照してください。
 
-オーディエンスは、複数のエクスペリエンスで使用できません。既に別のエクスペリエンスにマッピングされているオーディエンスにエクスペリエンスをマッピングすると、そのエクスペリエンスの横に警告シンボルが表示されます。
+オーディエンスを複数のエクスペリエンスで使用しないでください。 既に別のエクスペリエンスにマッピングされているオーディエンスにエクスペリエンスをマッピングすると、そのエクスペリエンスの横に警告シンボルが表示されます。
 
 ![既に別のエクスペリエンスにマッピングされているオーディエンスにエクスペリエンスをマッピングした場合の警告シンボル](do-not-localize/chlimage_1-6.png)
 

@@ -1,18 +1,14 @@
 ---
 title: HTML5 フォームの Form Bridge API
-seo-title: Form Bridge APIs for HTML5 forms
 description: 外部アプリケーションは、FormBridge API を使用して XFA Mobile Form に接続します。 API は親ウィンドウで FormBridgeInitialized イベントを発行します。
-seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
-uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
-discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 86%
+source-wordcount: '939'
+ht-degree: 84%
 
 ---
 
@@ -20,7 +16,7 @@ ht-degree: 86%
 
 各種 Form Bridge API を使用すると、XFA ベースの HTML5 フォームとお使いのアプリケーション間の通信チャネルを開くことができます。これらの Form Bridge API では接続作成用の&#x200B;**接続** API を使用できます。
 
-**接続** API はハンドラーを引数として受け入れます。XFA ベースの HTML5 フォームと Form Bridge 間の接続が正常に作成されると、ハンドルが呼び出されます。
+**接続** API はハンドラーを引数として受け入れます。XFA ベースの接続 5 フォームと Form Bridge 間の接続が正常にHTMLされると、ハンドルが呼び出されます。
 
 次のサンプルコードを使用して接続を作成できます。
 

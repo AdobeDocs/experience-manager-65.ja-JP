@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1832'
 ht-degree: 37%
 
 ---
@@ -436,7 +436,7 @@ Bulk Editor のすべての部分を設定できます。 次の表に、Bulk Ed
      <li>cellCls: css クラス </li>
      <li>readOnly：値を変更できない場合は true </li>
      <li>checkbox: true を指定すると、列のすべてのセルがチェックボックスとして定義されます（true/false 値）。 </li>
-     <li>forcedPosition：グリッド内の列の配置先を指定する整数値（0 ～列数 —1）<p><br /> </p> </li>
+     <li>forcedPosition：グリッド内の列の配置先を指定する整数値（0 ～ 1 列の間）<p><br /> </p> </li>
     </ul> </td>
   </tr>
  </tbody>

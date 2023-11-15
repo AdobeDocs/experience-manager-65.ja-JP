@@ -4,10 +4,10 @@ description: スタンドアロンのAEMインスタンスをインストール�
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1616'
-ht-degree: 60%
+source-wordcount: '1617'
+ht-degree: 57%
 
 ---
 
@@ -74,8 +74,8 @@ oracleJava 11（または通常は 8 より新しいバージョンの Java）�
 デフォルトでは、`crx-quickstart/install` フォルダーのファイルが監視されます。
 このフォルダーは存在しませんが、実行時に作成できます。
 
-このディレクトリに追加されたバンドル、設定またはコンテンツパッケージは自動的に選択およびインストールされます。削除された場合は、アンインストールされます。
-これは、バンドル、コンテンツパッケージまたは設定をリポジトリに追加するためのもう 1 つの方法です。
+バンドル、設定またはコンテンツパッケージがこのディレクトリに配置されると、自動的に取得されてインストールされます。 削除された場合は、アンインストールされます。
+これは、バンドル、コンテンツパッケージまたは設定をリポジトリに配置する別の方法です。
 
 これは、次のようないくつかの使用例で特に興味深いものです。
 

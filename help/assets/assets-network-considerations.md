@@ -5,10 +5,10 @@ contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 41%
+ht-degree: 38%
 
 ---
 
@@ -71,9 +71,9 @@ ht-degree: 41%
 
 このサンプルシナリオには、5 台のサーバーと 1 台の S3 バイナリストアで構成され、Dynamic Media が設定されたパブリッシュファームがあります。
 
-Dispatcher では、100 Mbps の接続が 2 つのエンティティ（外部と [!DNL Experience Manager] デプロイメント）で共有されています。同時アップロードおよびダウンロード操作の場合、この数を 2 で割る必要があります。 接続された外部ストレージは、別の接続を使用します。
+Dispatcher は、100 Mbps の接続を、外部と [!DNL Experience Manager] デプロイメント。 同時アップロードおよびダウンロード操作の場合、この数を 2 で割る必要があります。 接続された外部ストレージは、別の接続を使用します。
 
-[!DNL Experience Manager] デプロイメントでは、1 Gbps の接続が複数のサービスで共有されています。ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
+The [!DNL Experience Manager] 導入により、1 Gbps の接続が複数のサービスと共有されます。 ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
 
 クライアントデバイスから [!DNL Experience Manager] デプロイメントへのネットワークを確認すると、最小渋滞地点は 10 M ビットの企業ファイアウォールのスロットルのように見えます。[Assets サイジングガイド](assets-sizing-guide.md)のサイズ計算ツールでこれらの値を使用して、ユーザーエクスペリエンスを判定できます。
 

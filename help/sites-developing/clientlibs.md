@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2853'
 ht-degree: 89%
@@ -36,7 +36,7 @@ ht-degree: 89%
 
 この方法は AEM で機能しますが、ページやそれに含まれるコンポーネントが複雑になると、問題につながる可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的な HTML 出力に含まれる危険性があります。これを回避してクライアントサイドライブラリを論理的に整理するために、AEM では&#x200B;**クライアントサイドライブラリフォルダー**&#x200B;を使用します。
 
-クライアントサイドライブラリフォルダーは、タイプが `cq:ClientLibraryFolder` のリポジトリノードです。[CND 注釈](https://jackrabbit.apache.org/node-type-notation.html)での定義は次のとおりです。
+クライアントサイドライブラリフォルダーは、タイプが `cq:ClientLibraryFolder` のリポジトリーノードです。[CND 注釈](https://jackrabbit.apache.org/node-type-notation.html)での定義は次のとおりです。
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder

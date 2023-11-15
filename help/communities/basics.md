@@ -1,18 +1,14 @@
 ---
 title: コミュニティコンポーネントの基本
-seo-title: Communities Components Basics
 description: 編集モードでコミュニティ機能をAEMサイトに追加し、コンポーネントを設定する
-seo-description: Add Communities features to AEM sites in edit mode and configure components
-uuid: c017a7c5-40d1-4592-9317-96fd727dac86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
-discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '360'
 ht-degree: 5%
 
 ---
@@ -55,7 +51,7 @@ ht-degree: 5%
 
 [クライアント側ライブラリ](../../help/sites-developing/clientlibs.md) (clientlibs) は、コンポーネントが適切に機能し (JavaScript)、スタイル設定 (CSS) されるために必要です。
 
-コミュニティコンポーネントをページに追加する際に、エラーや予期しない外観が発生した場合は、最初に、コミュニティコンポーネントに必要な clientlib を追加します。 詳しくは、 [コミュニティコンポーネントの clientlib](clientlibs.md).
+コミュニティコンポーネントをページに追加する際に、エラーや予期しない外観が発生した場合は、まず、コミュニティコンポーネントに必要な clientlib を追加します。 詳しくは、 [コミュニティコンポーネントの clientlib](clientlibs.md).
 
 ### 例：クライアントライブラリを使用しない最初のレビューを配置… {#example-initially-placed-reviews-without-client-libraries}
 

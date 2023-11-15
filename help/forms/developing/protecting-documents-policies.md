@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '15464'
+source-wordcount: '15462'
 ht-degree: 82%
 
 ---
@@ -1328,12 +1328,12 @@ Document Security サービスの操作をプログラムで実行するには�
   <tr>
    <td><p><code>WaterBackCmd:OPACITY</code></p></td>
    <td><p>透かしの不透明度を指定します。指定しない場合、デフォルト値は 0.5 です。</p></td>
-   <td><p>0.0 ～ 1.0 の範囲の値。</p></td>
+   <td><p>0.0 ～ 1.0 の値です。</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:ROTATION</code></p></td>
    <td><p>透かしの回転を指定します。デフォルト値は 0 度です。</p></td>
-   <td><p>0 ～ 359 の範囲の値。</p></td>
+   <td><p>0 ～ 359 の値です。</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:SCALE</code></p></td>

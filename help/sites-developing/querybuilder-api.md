@@ -8,9 +8,9 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2285'
 ht-degree: 72%
 
 ---
@@ -88,7 +88,7 @@ orderby=path
 
 の目的 `p.guessTotal` パラメータは、実行可能な最小 p.offset 値と p.limit 値を組み合わせて表示できる適切な数の結果を返します。 このパラメーターを使用するメリットは、結果セットが大きい場合にパフォーマンスが向上することです。これにより、完全な合計を計算し ( 例えば、result.getSize() を呼び出す )、結果セット全体を読み取るのを避け、Oak エンジンとインデックスに至るまで最適化されました。 これは、100,000 個の結果が実行時間とメモリ使用量の両方にある場合に、大きな違いを生じる可能性があります。
 
-このパラメーターのデメリットは、ユーザーには正確な合計が表示されないことです。しかし、p.guessTotal=1000 のような最小値を設定して、常に 1000 まで読み取れるようにすることができます。そのため、小さい結果セットの正確な合計が得られますが、それ以上の場合は、「以上」のみを表示できます。
+このパラメーターのデメリットは、ユーザーには正確な合計が表示されないことです。しかし、p.guessTotal=1000 のような最小値を設定して、常に 1000 まで読み取れるようにすることができます。そのため、小さい結果セットの正確な合計が得られますが、それ以上の場合は「以上」のみを表示できます。
 
 以下のクエリに `p.guessTotal=true` を追加して、どのように機能するかを見てみましょう。
 

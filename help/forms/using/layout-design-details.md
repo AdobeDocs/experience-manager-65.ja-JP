@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2171'
+source-wordcount: '2170'
 ht-degree: 45%
 
 ---
@@ -83,7 +83,7 @@ XDP テンプレートでサブフォームを使用するには、以下の手�
    1. サブフォームの名前を **名前** フィールドに指定します。
    1. 「**データ連結**」ドロップダウンリストから「**データ連結なし**」を選択します。
 
-   手順 2 ～ 5 を繰り返して、XDP テンプレートにさらにサブフォームを追加します。インタラクティブ通信のオーサリング時にのみ、[テキスト、ドキュメントフラグメント、画像、グラフ](create-interactive-communication.md#step2)をターゲット領域に追加します。
+   手順 2～5 を繰り返して、XDP テンプレートにさらにサブフォームを追加します。 インタラクティブ通信のオーサリング時にのみ、[テキスト、ドキュメントフラグメント、画像、グラフ](create-interactive-communication.md#step2)をターゲット領域に追加します。
 
 1. ローカルのファイルシステムにファイルを保存するには、**ファイル**／**名前を付けて保存**&#x200B;を選択して、次の手順を実行します。
 

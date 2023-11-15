@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: e50974a7-01ac-4a08-bea2-df9cc975c69e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 25%
@@ -55,7 +55,7 @@ AEM Formsは、ユーザーのアクセスを、ユーザーがアクセス制�
    
        /*
        Returns whether a livecycle user has direct reports or not.
-       It's functionally equivalent to -
+       It is functionally equivalent to -
        getDirectReports(principalOid).size()>0
        */
        boolean isManager(String principalOid) {

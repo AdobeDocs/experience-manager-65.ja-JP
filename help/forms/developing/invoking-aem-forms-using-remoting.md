@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '4593'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
@@ -311,7 +311,7 @@ HTTP トークンを使用した認証の実行について詳しくは、[HTTP 
 >
 以前のリリースの AEM Forms では、`RemoteObject.setCredentials` メソッドを呼び出して資格情報を宛先に送信していました。`setCredentials` メソッドは、コンポーネントがサーバーへの接続を最初に試みるまで、資格情報を実際にサーバーに渡しませんでした。したがって、コンポーネントが障害イベントを発行した場合、その障害が認証エラーによって発生したか、別の理由で発生したかを確認することはできません。`ChannelSet.login`メソッドは、呼び出し時にサーバーに接続し、認証の問題をすぐに処理できるようにします。`setCredentials` メソッドは引き続き使用できますが、`ChannelSet.login` メソッドを使用することをお勧めします。
 
-同じチャンネルと対応する ChannelSet オブジェクトを複数の宛先で使用できるので、1 つの宛先にログインすると、同じ単一のチャンネルまたは同じ複数のチャンネルを使用する他の宛先にログインされます。2 つのコンポーネントが同じ ChannelSet オブジェクトに異なる資格情報を適用する場合は、最後に適用された資格情報が使用されます。複数のコンポーネントが同じ認証済み ChannelSet オブジェクトを使用している場合、`logout` メソッドは、すべてのコンポーネントを宛先からログアウトします。
+複数の宛先で同じチャネルと対応する ChannelSet オブジェクトを使用できるので、1 つの宛先にログインすると、同じチャネルまたはチャネルを使用する他の宛先にユーザーがログインします。 2 つのコンポーネントが同じ ChannelSet オブジェクトに異なる資格情報を適用する場合は、最後に適用された資格情報が使用されます。複数のコンポーネントが同じ認証済み ChannelSet オブジェクトを使用している場合、`logout` メソッドは、すべてのコンポーネントを宛先からログアウトします。
 
 次の例では、`ChannelSet.login` および `ChannelSet.logout` メソッドと RemoteObject コントロールを使用します。このアプリケーションは、次のアクションを実行します。
 

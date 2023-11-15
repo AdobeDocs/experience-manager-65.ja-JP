@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 2%
   デフォルト値は216000時間（24 年以内）です。
 
 * **スコア付け成長率**
-この値は、0 からスコア範囲の間のスコアを指定します。この値を超えると、成長が遅くなり、エキスパートの数が制限されます。
+この値は、0 スコアの範囲のスコアを指定します。この値を超えると、成長が遅くなり、エキスパートの数が制限されます。
 
   デフォルト値は 50 です。
 

@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 32%
@@ -44,7 +44,7 @@ Adobe Experience Managerには、統合Experience CloudUI（タッチ操作対�
 
 ## 一般 {#general}
 
-過去数年の間に、Adobeは、すべてのAdobe Experience Cloudソリューションを統合ユーザーインターフェイスで更新しました。 Experience Cloud・ソリューションをまたいだユーザーは、アプリケーションの使用と運用に関する共通のパターンに基づいて、一貫した経験を得ることができます。 各リリースで、Adobeは、様々なソリューションで作業しているお客様からのフィードバックに基づいて、ユーザーインターフェイスを絞り込んでいます。
+過去数年の間に、Adobeは、すべてのAdobe Experience Cloudソリューションを統合ユーザーインターフェイスで更新しました。 Experience Cloud・ソリューションをまたいだユーザーは、アプリケーションの使用と運用に関する共通のパターンに基づいて、一貫した経験を得ることができます。 各リリースでは、Adobeは、様々なソリューションをまたいで作業しているお客様からのフィードバックに基づいて、ユーザーインターフェイスを絞り込んでいます。
 
 2008 年に導入され、バージョン 5.0 ～ 5.6.1 を実行しているお客様が使用する、Adobe Experience Manager（旧称 CQ5）の元のユーザーインターフェイスは、AEM 6.5 に存在します。これにより、お客様は 6.5 に更新でき、同じユーザーインターフェイスを使用し続けながら、新しい機能を備えた更新済みプラットフォームのメリットを享受できます。
 

@@ -2,10 +2,10 @@
 title: AEM コミュニティ
 description: Adobe Experience Managerコミュニティを検出し、連携を作成します。
 exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 96%
+source-wordcount: '324'
+ht-degree: 92%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 AEM コミュニティには世界中の何千ものメンバーが参加しています。メンバーは、Experience Manager を初めて利用する人から熟練したエキスパート開発者や管理者まで、多岐にわたります。コミュニティでは、AEM 機能や開発などに関する質問について、サポートを受けることができます。AEM コミュニティでは、社内および外部のエキスパートユーザーを対象としたエキスパートセッションを定期的に開催しています。また、サンプル、記事、チュートリアルの作成にも役立ちます。
 
-[今すぐコミュニティに参加して、優れたコンテンツ、ユーザー、知識にアクセスしてください。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)AEM に関心のあるすべてのユーザーは誰でも参加できます。今すぐ参加してください。
+[今すぐコミュニティに参加して、優れたコンテンツ、ユーザー、知識にアクセスしてください。](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja) 誰にでも開放的です。 AEMに興味がある場合は、ようこそ。 今すぐ参加してください。
 
 ## AEM コミュニティのメンバー向けには、どのようなイベントがありますか？ {#events}
 

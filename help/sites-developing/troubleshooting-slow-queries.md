@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
 source-wordcount: '2268'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -180,7 +180,7 @@ AEM では、以下のクエリ言語をサポートしています。
 * JCR-SQL2
 * XPath
 
-以下の例では、AEM 開発者が使用する最も一般的なクエリ言語として Query Builder を使用していますが、JCR-SQL2 および XPath にも同じ原則が当てはまります。
+次の例では、AEM開発者が使用する最も一般的なクエリ言語として Query Builder を使用しますが、同じ原則が JCR-SQL2 および XPath にも当てはまります。
 
 1. クエリが既存の Lucene プロパティインデックスに解決されるように、ノードタイプの制限を追加します。
 
