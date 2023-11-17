@@ -3,10 +3,10 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 5bfd8216c9d3540ac6d795d434dab5afb7bce309
 workflow-type: tm+mt
-source-wordcount: '4774'
-ht-degree: 92%
+source-wordcount: '4848'
+ht-degree: 91%
 
 ---
 
@@ -712,6 +712,27 @@ query {
    ```xml
    Define CACHE_GRAPHQL_PERSISTED_QUERIES
    ```
+
+>[!NOTE]
+>
+>を使用して、永続化されたクエリに対して Dispatcher のキャッシュを有効にする場合 `Define CACHE_GRAPHQL_PERSISTED_QUERIES` an `ETag` ヘッダーが Dispatcher によって応答に追加されます。
+>
+>デフォルトでは、 `ETag` ヘッダーは、次のディレクティブを使用して設定します。
+>
+>```
+>FileETag MTime Size 
+>```
+>
+>ただし、この設定は応答の小さな変更を考慮しないので、永続化されたクエリ応答で使用すると、問題が発生する可能性があります。
+>
+>個人を成し遂げるには `ETag` の計算 *各* 一意の応答 `FileETag Digest` 設定は、dispatcher の設定で使用する必要があります。
+>
+>```xml
+><Directory />    
+>   ...    
+>   FileETag Digest
+></Directory> 
+>```
 
 >[!NOTE]
 >
