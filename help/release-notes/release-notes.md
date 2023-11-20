@@ -92,7 +92,7 @@ ht-degree: 98%
 * アセットセレクターの JS URL を次から変更しました
   `https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/assets-selectors.js`
 コピー先：
-  `https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js` (SITES-16068)
+  `https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js`（SITES-16068）
 * 新しい Polaris メタデータ API 応答スキーマを CFM-Polaris 統合に適応させます。（SITES-15166）
 * 選択したコンテンツフラグメントが参照される場所に、すべてのコンテンツフラグメントをリストする必要があります。代わりに、コンテンツフラグメント参照パネルのアセット参照には 0（ゼロ）の参照が表示されます。（SITES-15036）
 
@@ -139,9 +139,9 @@ ht-degree: 98%
 
 ### [!DNL Assets]{#assets-6519}
 
-* 公開フォルダーを作成または保存すると、管理ダッシュボードに 3 つのグループが作成されます。(ASSETS-26700)
-* 公開アセットを Experience Manager または Brand Portal に区別できません。(NPR-41320)
-* 検索パネルでチェックボックスをオンにし、いずれかのチェックボックスをオフにすると、すべてのチェックボックスがオフになります。(ASSETS-26377)
+* 公開フォルダーを作成または保存すると、管理ダッシュボードに 3 つのグループが作成されます。（ASSETS-26700）
+* 公開アセットを Experience Manager または Brand Portal に区別できません。（NPR-41320）
+* 検索パネルでチェックボックスをオンにし、いずれかのチェックボックスをオフにすると、すべてのチェックボックスがオフになります。（ASSETS-26377）
 
 #### [!DNL Dynamic Media]{#assets-dm-6519}
 
@@ -149,9 +149,9 @@ ht-degree: 98%
 * カスタムサーブレット（API エンドポイント）が正しくない Dynamic Media（Scene7）ファイル名を返します。これは、アセットが削除され、同じ名前のアセットに置き換えられる場合に発生します。カスタムサーブレットは古いDynamic Media（Scene7）ファイル名を返しますが、「jcr」API 呼び出しが正しいファイル名を返します。（ASSETS-29476）
 * フォルダーレベルで同期がオフになった後でも、ログには「Scene7 ReplicateOnModifyListener」のトリガーが表示されます。`ReplicateOnModifyListener/Worker` では、Dynamic Media 以外のフォルダーアセットとコンテンツフラグメントの処理をスキップする必要があります。（ASSETS-26705）
 * コントラストの高い白黒モードでドロップダウン要素（コンテンツのみ、表示、その他のオプション）にフォーカスが表示されない場合、視覚障害のあるユーザーは影響を受けます。（ASSETS-25759）
-* ページ上のテキストの輝度コントラスト比が 4.5:1 未満の場合、視覚障碍のあるユーザーは影響を受けます。（ASSETS-25756）
+* ページ上のテキストの輝度コントラスト比が 4.5:1 未満の場合、視覚障害のあるユーザーは影響を受けます。（ASSETS-25756）
 * スクリーンリーダーでは、データの送信後に表示されるポップアップメッセージのナレーションを行いません。（ASSETS-25755）
-* ランドマーク／領域のショートカットキー `D/R` を使用して移動すると、スクリーンリーダーではページ（Dynamic Media、ビデオエンコードプロファイルの作成）内のランドマークを認識しません。（ASSETS-25752）
+* ランドマーク／地域のショートカットキー `D/R` を使用して移動すると、スクリーンリーダーではページ（Dynamic Media、ビデオエンコードプロファイルの作成）内のランドマークを認識しません。（ASSETS-25752）
 * スクリーンリーダーがランドマーク／領域のショートカットキーを使用して移動すると、ページ内の複数のランドマーク（Dynamic Media、インタラクティブビデオの作成）を認識できません `D/R`。（ASSETS-25750）
 * スクリーンリーダー（NVDA／JAWS／ナレーター）がショートカットキーを使用して移動している間、**アセットを編集**&#x200B;ページのランドマークを認識しません `D/R`。（ASSETS-25744）
 * ユーザーは空／偽の非同期ジョブメッセージを受け取りますが、接続されたアセットは正常に公開されます。（ASSETS-29342）
@@ -182,9 +182,9 @@ ht-degree: 98%
 * 「相対的な日付の表示」ツールチップを閉じるには、キーボードの Esc キー（ESC）を押します。ユーザがユーザーインターフェイスの任意の部分を選択すると、ツールチップが閉じます。（NPR-41394）
 * **ユーザーを編集**／**キーストア**&#x200B;で間違った秘密鍵ファイルを追加すると、ローカライズされていない文字列 `Something went wrong while adding the private key.` が発生します。（NPR-41366）
 * アイコンは、AEM 6.5 環境の Microsoft® SharePoint と Microsoft® One Drive に必要です。（NPR-41354）
-* 「UserId/Password mismatch」がローカライズされていません。**セキュリティ**／**ユーザー**／**作成**&#x200B;ダイアログボックス内の文字列。（NPR-41245）
+* 「UserId/Password mismatch」がローカライズされていません。 **セキュリティ**／**ユーザー**／**作成**&#x200B;ダイアログボックス内の文字列。（NPR-41245）
 * ポップオーバーコードとイベントハンドラーが 2 回読み込まれ、ユーザーが作成した Coral3 ベースのユーザーインターフェイスが機能しなくなります。（NPR-41171）
-* AEM Sites コンソールで「すべてを選択」を使用すると、選択解除が正しく機能しません。（NPR-41304）
+* AEM Sites コンソールで「すべてを選択」を使用しても、選択解除が正しく機能しません。（NPR-41304）
 
 <!--#### Content distribution{#foundation-content-distribution-6519}
 
