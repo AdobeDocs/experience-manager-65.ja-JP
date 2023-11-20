@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 31131af52ecb4f9c4caaf8e75e0a9213874b3a1e
+source-git-commit: c78d5f1d94ffb92a1e034b0ccb6131ac811d708f
 workflow-type: tm+mt
-source-wordcount: '3559'
+source-wordcount: '3530'
 ht-degree: 98%
 
 ---
@@ -463,17 +463,14 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * アダプティブフォームのガイドコンテナにリダイレクト URL が設定されると、インライン署名が機能しなくなります。（FORMS-10493）
+この問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
 * すべてのレコードのドキュメント（DoR）テンプレートが公開に失敗します。英語ロケールベースの DoR テンプレートと、これに関連するフォームベースの DoR テンプレートのみが公開されます。（FORMS-10535）
+この問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
+
 
 #### インタラクティブコミュニケーション
 
-* AEM サービスパック 18 にアップグレードした後は、編集モードで大きなインライン画像を使用したインタラクティブ通信を開くことはできません。（FORMS-10578）
-問題を解決するには、次の手順に従います。
-
-   1. SD リンクから [Hotfix-FORMS-10578](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をダウンロードします。
-   1. ホットフィックスアーカイブファイルを抽出して、Experience Manager パッケージ（.zip）とバンドル（.jar）ファイルを取得できるようにします。
-   1. パッケージマネージャーを通じてパッケージ（.zip）をアップロードしてインストールします。
-   1. 設定マネージャーのバンドル `https://server:host/system/console/bundles` を開き、バンドル（.jar）をアップロードしてインストールします。
+* AEM サービスパック 18 にアップグレードした後は、編集モードで大きなインライン画像を使用したインタラクティブ通信を開くことはできません。(FORMS-10578) 問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
