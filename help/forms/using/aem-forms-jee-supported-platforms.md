@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: b886336b5a66f16eb7b076aefc2ae326dedb2f52
 workflow-type: tm+mt
-source-wordcount: '3691'
+source-wordcount: '3695'
 ht-degree: 43%
 
 ---
@@ -726,6 +726,7 @@ Adobeは、任意の時点で、JEE 上のAEM Formsリリースでサポート�
 
 - Adobe Acrobat 2017 - [Adobe Acrobat 2017 のコアサポートは 2022年6月6日に終了します](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)。
 - Red Hat® Enterprise Linux® 7(Kernel 3.x)（64 ビット）
+- Microsoft® Windows Server 2016（64 ビット）
 - Microsoft® Office 2016
 - OpenOffice 4.1.2
 
