@@ -1,16 +1,11 @@
 ---
 title: 'チュートリアル：アダプティブフォームの作成'
-seo-title: Create an adaptive form
 description: アダプティブフォームの作成、レイアウト、プレビューについて説明します。 また、送信アクションを設定する方法についても説明します。
-seo-description: Learn to create, layout, and preview an adaptive form. Also, learn to configure submit actions.
-page-status-flag: de-activated
-uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
-discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1384'
 ht-degree: 74%
 
 ---
@@ -51,7 +46,7 @@ ht-degree: 74%
 
    アダプティブフォームのオーサリングインターフェイスと使用可能なコンポーネントについて詳しくは、 [アダプティブフォームのオーサリングの概要](/help/forms/using/creating-adaptive-form.md).
 
-   ![newly-created-adaptive-form](assets/newly-created-adaptive-form.png)
+   ![新しく作成されたアダプティブフォーム。](assets/newly-created-adaptive-form.png)
 
 ## 手順 2：ヘッダーとフッターを追加する {#step-add-header-and-footer}
 
@@ -153,11 +148,11 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
     </tbody> 
    </table>
 
-1. ドラッグ **[!UICONTROL 送信ボタン]** コンポーネントをアダプティブフォームに追加します。 フッターコンポーネントの前にドロップします。コンポーネントのプロパティを開き、「要素名」を `address_addition_update_submit` に変更して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。これでフォームのレイアウトが設定され、フォームが以下のように表示されます。
+1. ドラッグして **[!UICONTROL 送信ボタン]** コンポーネントをアダプティブフォームに追加します。 フッターコンポーネントの前にドロップします。コンポーネントのプロパティを開き、「要素名」を `address_addition_update_submit` に変更して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。これでフォームのレイアウトが設定され、フォームが以下のように表示されます。
 
    ![adaptive-form-with-all-the-components](assets/adaptive-form-with-all-the-components.png)
 
-## 手順 4:アダプティブフォームの送信アクションを設定する {#step-configure-submit-action-for-the-adaptive-form}
+## 手順 4：アダプティブフォームの送信アクションを設定する {#step-configure-submit-action-for-the-adaptive-form}
 
 アダプティブフォーム上の「送信」ボタンをタップすると、送信アクションがトリガーされます。 送信アクションを使用して、フォームデータをローカルリポジトリに保存したり、フォームデータを REST エンドポイントに送信したり、フォームデータを電子メールとして送信したりできます。 アダプティブフォームには、そのまますぐに使用できる送信アクションがいくつか用意されています。 詳しくは、 [送信アクションの設定](/help/forms/using/configuring-submit-actions.md).
 
@@ -173,7 +168,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
    |--- |--- |
    | 送信元 | `donotreply@weretail.com` |
    | To | `${customer_Email}` |
-   | 件名 | 受信確認：We.Retail Web サイトに配送先住所を追加しました。 |
+   | 件名 | 確認応答： We.Retail の Web サイトに配送先住所を追加しました。 |
    | メールテンプレート | こんにちは。`${customer_Name}`様のアカウントに次のアドレスが追加されました：<br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> 今後ともよろしくお願いいたします。We.Retail |
    | 添付ファイルを含める | Enabled |
 
@@ -187,6 +182,6 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
 
 1. フォームエディター右側の「**[!UICONTROL プレビュー]**」オプションをタップします。フォームがプレビューモードで表示されます。このチュートリアルに記載されている値を使用してフォームを作成した場合、フォームのプレビュー URL は [http://localhost:4502/content/dam/formsanddocuments/shipping-address-add-update-form/jcr:content?wcmmode=disabled](http://localhost:4502/content/dam/formsanddocuments/shipping-address-addition-updation-form/jcr:content?wcmmode=disabled) になります。
 1. 「![ルーラー](assets/ruler.png)」を使用して、各種のデバイスでフォームがどのように表示されるかを確認します。
-1. フォームのフィールドに入力してをタップします。 **[!UICONTROL 送信]**. フォームが送信され、デフォルトにリダイレクトされます **ありがとうございます** ページ。 また、カスタムの「ありがとうございます」ページを指定することもできます。 詳しくは、「[リダイレクトページの設定](/help/forms/using/configuring-redirect-page.md)」を参照してください。
+1. フォームのフィールドに入力してをタップします。 **[!UICONTROL 送信]**. フォームが送信され、デフォルトにリダイレクトされます **ありがとうございます** ページに貼り付けます。 また、カスタムの「ありがとうございます」ページを指定することもできます。 詳しくは、「[リダイレクトページの設定](/help/forms/using/configuring-redirect-page.md)」を参照してください。
 
 これで、住所を追加するためのアダプティブフォームの準備が完了しました。このチュートリアルに記載されている名前を指定し、AEM Forms サーバーで稼働するマシン上に作成されたフォームにアクセスする場合は、対応するフォームが [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html) に用意されています。

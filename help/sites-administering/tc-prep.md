@@ -4,10 +4,10 @@ description: Adobe Experience Managerで翻訳するコンテンツを準備す�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 72%
+source-wordcount: '684'
+ht-degree: 69%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 72%
              |- zh
 ```
 
-サイトの各言語分岐は、言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。例えば、`/content/geometrixx/fr` は、フランス語の言語コピー用の言語ルートです。ソースサイトの翻訳の実行時に適切な言語がターゲットになるように、言語コピーでは、[正しく設定された言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root)を使用する必要があります。
+サイトの各言語分岐は、言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。例えば、`/content/geometrixx/fr` は、フランス語の言語コピー用の言語ルートです。言語コピーでは [正しく設定された言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root) したがって、ソースサイトの翻訳の実行時に正しい言語がターゲットになります。
 
 サイトのコンテンツを最初にオーサリングするための言語コピーが言語マスターです。言語マスターは、他の言語に翻訳されるソースです。
 

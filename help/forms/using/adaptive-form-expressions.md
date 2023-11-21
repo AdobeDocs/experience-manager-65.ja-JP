@@ -1,16 +1,12 @@
 ---
 title: アダプティブフォームの式
-seo-title: Adaptive Form Expressions
 description: アダプティブフォームの式を使用して、自動検証、計算を追加し、セクションの表示/非表示を切り替えます。
-seo-description: Use adaptive forms expressions to add automatic validation, calculation, and turn visibility of a section on or off.
-uuid: c274dce5-8b87-472f-bff5-53b246fa6584
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '2802'
 ht-degree: 88%
@@ -192,7 +188,7 @@ JavaScript はアダプティブフォームの式言語です。 すべての�
 
 ### 必須 {#required}
 
-コンポーネントを必須にするには、コンポーネントの&#x200B;**編集**&#x200B;ダイアログで、**タイトルとテキスト／必須**&#x200B;オプションを選択します。また、 **必須メッセージ** （オプション）も同様です。.
+コンポーネントを必須にするには、コンポーネントの&#x200B;**編集**&#x200B;ダイアログで、**タイトルとテキスト／必須**&#x200B;オプションを選択します。また、 **必須メッセージ** （オプション）も同様です。
 
 ### 検証パターン {#validation-patterns}
 

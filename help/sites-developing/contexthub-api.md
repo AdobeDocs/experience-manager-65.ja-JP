@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
-source-wordcount: '5002'
-ht-degree: 81%
+source-wordcount: '5004'
+ht-degree: 80%
 
 ---
 
@@ -224,7 +224,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **パラメーター**
 
-* **includeInternals：**&#x200B;値 `true` は、内部的に使用されているキーを結果に含めます。このようなキーは、アンダースコア（&quot;_&quot;）文字で始まります。デフォルト値は `false` です。
+* **includeInternals:** 値： `true` 内部的に使用されているキーを結果に含めます。 このようなキーは、アンダースコア（&quot;_&quot;）文字で始まります。デフォルト値は `false` です。
 
 **戻り値**
 
@@ -248,7 +248,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **パラメーター**
 
-* `includeInternals:`：値 `true` は、内部的に使用されているキーと値のペアを結果に含めます。このデータのキーは、アンダースコア（&quot;_&quot;）文字で始まります。デフォルト値は `false` です。
+* `includeInternals:` 値： `true` 内部的に使用されているキーと値のペアを結果に含めます。 このデータのキーは、アンダースコア（&quot;_&quot;）文字で始まります。デフォルト値は `false` です。
 
 **戻り値**
 

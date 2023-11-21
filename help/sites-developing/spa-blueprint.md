@@ -6,10 +6,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '2075'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -154,7 +154,7 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 ### レスポンシブグリッド {#responsive-grid}
 
-レスポンシブグリッドコンポーネントは、コンテナです。列を表すモデルプロバイダーの特定のバリアントが含まれます。レスポンシブグリッドとその列は、モデルに含まれる特定のクラス名で、プロジェクトのコンポーネントの外側の HTML 要素を修飾する役割を持ちます。
+レスポンシブグリッドコンポーネントは、コンテナです。列を表すモデルプロバイダーの特定のバリアントが含まれます。 レスポンシブグリッドとその列は、モデルに含まれる特定のクラス名で、プロジェクトのコンポーネントの外側の HTML 要素を修飾する役割を持ちます。
 
 レスポンシブグリッドコンポーネントは、AEM の対応するコンポーネントに事前にマッピングされている必要があります。このコンポーネントは複雑で、カスタマイズされることはほとんどありません。
 

@@ -1,16 +1,14 @@
 ---
 title: リッチテキストエディター
 description: リッチテキストエディターは、AEM にテキストコンテンツを入力するための基本的な構成要素です。
-uuid: 4bcce45a-e14f-41b7-8c6f-89d1e1bb595c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
 workflow-type: tm+mt
 source-wordcount: '1835'
-ht-degree: 89%
+ht-degree: 88%
 
 ---
 
@@ -157,7 +155,7 @@ AEM では、現在のコンポーネントでの直近 50 個の操作を記録
 
 ![リンクツールバー](do-not-localize/cq55_rte_links.png)
 
-URL（web サイト内または外部の場所）へのリンクを生成するには、必要なテキストをハイライト表示してハイパーリンクアイコンをクリックします。
+URL（Web サイト内または外部の場所）へのリンクは、必要なテキストをハイライト表示し、ハイパーリンクアイコンをクリックすることで生成されます。
 
 ![ハイパーリンクアイコン](do-not-localize/chlimage_1-9.png)
 
