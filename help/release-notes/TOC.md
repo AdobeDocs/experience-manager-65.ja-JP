@@ -8,9 +8,9 @@ user-guide-description: AEM 6.5 の最新の新機能については、リリー
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: f6069758853181f96376a77da8d46cc5228b9605
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '76'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -41,6 +41,6 @@ ht-degree: 93%
    + [6.5.0](previous/ga.md)
 + [AEM Forms サービスパックのインストール手順](aem-forms-current-service-pack-installation-instructions.md)
 + [AEM Forms JEE パッチインストーラー](jee-patch-installer-65.md)
-+ [AEM Forms Service Pack のホットフィックス](/help/release-notes/aem-forms-hotfix.md)
++ [AEM Forms サービスパックのホットフィックス](/help/release-notes/aem-forms-hotfix.md)
 + [廃止される機能および削除された機能](deprecated-removed-features.md)
 + [タッチ操作対応 UI 機能のステータス](touch-ui-features-status.md)
