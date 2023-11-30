@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 92481a37d3e2b84277d878547aaf174c7127f499
-workflow-type: ht
-source-wordcount: '3530'
-ht-degree: 100%
+source-git-commit: 8d06457241919095fd9802f69df426a1cc6851da
+workflow-type: tm+mt
+source-wordcount: '3675'
+ht-degree: 93%
 
 ---
 
@@ -23,14 +23,14 @@ ht-degree: 100%
 
 | 製品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| バージョン | 6.5.18.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| バージョン | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023年8月24日木曜日（PT）<!-- UPDATE FOR EACH NEW RELEASE --> |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日付 | 2023年11月30日木曜日（PT）<!-- UPDATE FOR EACH NEW RELEASE --> |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## [!DNL Experience Manager] 6.5.18.0 の内容 {#what-is-included-in-aem-6519}
+## [!DNL Experience Manager] 6.5.19.0 の内容 {#what-is-included-in-aem-6519}
 
-[!DNL Experience Manager] 6.5.18.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。[!DNL Experience Manager] 6.5 で[このサービスパックをインストール](#install)します。
+[!DNL Experience Manager] 6.5.19.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。[!DNL Experience Manager] 6.5 で[このサービスパックをインストール](#install)します。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -54,7 +54,7 @@ ht-degree: 100%
 
 * システム内に多数のプロジェクトが存在する可能性があるリスト表示でプロジェクトをすばやく見つけるために、アドビではサーバーサイドでの並べ替えをサポートするようになりました。プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。（NPR-41027）
 
-* AEM 6.5.18.0 は、MongoDB 5.0～6.0 をサポートします。
+* AEM 6.5.19.0 は、MongoDB 5.0～6.0 をサポートします。
 
 **非推奨（廃止予定）の機能**
 
@@ -62,10 +62,9 @@ ht-degree: 100%
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## サービスパック 18 で修正された問題 {#fixed-issues}
+## サービスパック 19 で修正された問題 {#fixed-issues}
 
 ### [!DNL Sites]{#sites-6519}
-
 
 #### アクセシビリティ{#sites-accessibility-6519}
 
@@ -100,6 +99,7 @@ ht-degree: 100%
 #### コアバックエンド{#sites-core-backend-6519}
 
 * `StyleImpl` を改善します。（SITES-15164）
+* WCM パイプラインのリリース/650 ブランチを改善し、そのモジュールの統合テストを実行できるようにします。 （SITES-12938）
 
 <!--#### Core Components{#sites-core-components-6519}
 
@@ -129,12 +129,13 @@ ht-degree: 100%
 #### MSM - ライブコピー{#sites-msm-live-copies-6519}
 
 * MSM ロールアウトボタンは、タッチグラフィックユーザーインターフェイスでは機能しません。（SITES-16991）
-* エクスペリエンスフラグメントのライブコピーまたはロールアウトを作成する際に、エクスペリエンスフラグメント内でリンク参照が更新されません。（SITES-15460）
+* ライブコピーの作成時やエクスペリエンスフラグメントのロールアウト時に、エクスペリエンスフラグメント内でリンク参照が更新されない。 （SITES-15460）
 
 #### ページエディター{#sites-pageeditor-6519}
 
+* Forms/テーマで、テーマエディターでテーマを開き、いくつかの変更を加えて保存し、「プレビュー」をクリックすると、読み込みアイコンが表示されますが、実際のプレビューは読み込まれません。 （SITES-17164）
 * ページコンソールのアセットタイプフィルターで、複数のドキュメントファイルタイプの選択が機能しません。1 つの特定のファイルタイプの結果が利用可能な場合でも、結果が見つかりません。その結果、作成者は複数のドキュメントをフィルタリングできなくなります。複数のドキュメントタイプを使用し、一度に 1 つずつフィルタリングする必要があります。（SITES-14047）
-* AEM 6.5.17 および AEM 6.5.18 からインスタンスをアップグレードした後、ページエディター内で「**[!UICONTROL ページを公開]**」を選択すると、存在しない URL にリダイレクトされます。ユーザーは、公開ウィザードにリダイレクトされます。（SITES-15856）
+* AEM 6.5.17 およびAEM 6.5.18 からインスタンスをアップグレードした後、ページエディター（選択した場合）内から **[!UICONTROL ページを公開]**&#x200B;の場合は、存在しない URL にリダイレクトされます。 ユーザーは、公開ウィザードにリダイレクトされます。（SITES-15856）
 * オペレーティングシステムのクリップボードからのペースト中の AEM のクリップボードからの冗長コピー。（SITES-15704）
 * Assets で「**[!UICONTROL ドキュメント]**」を選択し、**[!UICONTROL Filtertype]** で「**[!UICONTROL Microsoft® Word]**」または「**[!UICONTROL Microsoft® Excel]**」を選択すると、両方のタイプのファイルが存在しても結果が表示されません。（SITES-14837）
 
@@ -146,7 +147,7 @@ ht-degree: 100%
 
 #### [!DNL Dynamic Media]{#assets-dm-6519}
 
-* アセットを AEM にアップロードすると、`update_asset` ワークフローがトリガーされます。ワークフローが完了することはありません。ワークフローインスタンスを見ると、ワークフローは製品のアップロード手順まで完了します。次の手順は、Scene7 のバッチアップロードです。ユーザーは、Dynamic Media Classic アプリからアセットが Scene7 にあることを確認できます。（ASSETS-30443）
+* アセットを AEM にアップロードすると、`update_asset` ワークフローがトリガーされます。ワークフローが完了することはありません。ワークフローインスタンスを見ると、ワークフローは製品のアップロード手順まで完了します。次の手順は、Scene7のバッチアップロードです。 ユーザーは、Dynamic Media Classic アプリからアセットが Scene7 にあることを確認できます。（ASSETS-30443）
 * カスタムサーブレット（API エンドポイント）が正しくない Dynamic Media（Scene7）ファイル名を返します。これは、アセットが削除され、同じ名前のアセットに置き換えられる場合に発生します。カスタムサーブレットは古いDynamic Media（Scene7）ファイル名を返しますが、「jcr」API 呼び出しが正しいファイル名を返します。（ASSETS-29476）
 * フォルダーレベルで同期がオフになった後でも、ログには「Scene7 ReplicateOnModifyListener」のトリガーが表示されます。`ReplicateOnModifyListener/Worker` では、Dynamic Media 以外のフォルダーアセットとコンテンツフラグメントの処理をスキップする必要があります。（ASSETS-26705）
 * コントラストの高い白黒モードでドロップダウン要素（コンテンツのみ、表示、その他のオプション）にフォーカスが表示されない場合、視覚障害のあるユーザーは影響を受けます。（ASSETS-25759）
@@ -228,22 +229,21 @@ ht-degree: 100%
 
 #### ワークフロー{#foundation-workflow-6519}
 
-* インボックスでタスクを完了できません。タスクを完了してアクションを選択しようとすると、ドロップダウンメニューに「未定義」の値のみが表示されます。つまり、ユーザーは AEM 6.5.18 サービスパックを適用できません。（NPR-41402）
+* インボックスでタスクを完了できません。タスクを完了してアクションを選択しようとすると、ドロップダウンメニューに「未定義」の値のみが表示されます。つまり、ユーザーは AEM 6.5.18 サービスパックを適用できません。（NPR-41402 および NPR-41473）
 * インボックスでタスクを完了できません。zip ファイル、アセットレポート、移動（成功または失敗）またはアセットの有効期限に関するタスクを完了しようとすると、ドロップダウンリストに値が表示されません （「未定義」のみ）。（NPR-41305）
 * ユーザーが&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／インスタンスを選択し、実行中のワークフローを選択してから「**[!UICONTROL ペイロードを表示]**」を選択すると、500 エラーページが表示されます。（NPR-41325）
 
-
-## [!DNL Experience Manager] 6.5.18.0 のインストール{#install}
+## [!DNL Experience Manager] 6.5.19.0 のインストール{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.18.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
-* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip)からダウンロードできます。
-* MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.18.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.19.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip)からダウンロードできます。
+* MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.19.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> アドビでは、[!DNL Experience Manager] 6.5.18.0 パッケージを削除またはアンインストールすることを推奨しません。したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。<!-- UPDATE FOR EACH NEW RELEASE -->
+> アドビでは、[!DNL Experience Manager] 6.5.19.0 パッケージを削除またはアンインストールすることを推奨しません。したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。<!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
@@ -253,7 +253,7 @@ ht-degree: 100%
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.18.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -267,24 +267,24 @@ ht-degree: 100%
 
 **自動インストール**
 
-[!DNL Experience Manager] 6.5.18.0 の自動インストールに使用できる方法は 2 つあります。<!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.19.0 の自動インストールに使用できる方法は 2 つあります。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。パッケージが自動的にインストールされます。
 * [パッケージマネージャーの HTTP API](/help/sites-administering/package-manager.md#package-share) を使用します。ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
 >[!NOTE]
 >
->Experience Manager 6.5.18.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.19.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 **インストールの検証**
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.18.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.19.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
 
-1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.16 以降です（Web コンソールを使用：`/system/console/bundles`）。<!-- NPR-41010 for 6.5.18.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.17 以降です（Web コンソールを使用：`/system/console/bundles`）。<!-- NPR-41292 for 6.5.19.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
 ### [!DNL Experience Manager] Forms へのサービスパックのインストール{#install-aem-forms-add-on-package}
 
@@ -308,7 +308,7 @@ GraphQL を使用しているお客様は、[Experience Manager コンテンツ�
 
 ### UberJar{#uber-jar}
 
-[!DNL Experience Manager] 6.5.18.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.18/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.19.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.19/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -316,7 +316,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.18</version>
+     <version>6.5.19</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -331,25 +331,22 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ## 既知の問題{#known-issues}
 
-<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
- -->
-<!-- REMOVED AS PER CQDOC-20022, JANUARY 23, 2023 * If you install [!DNL Experience Manager] 6.5 Service Pack 10 or a previous service pack on [!DNL Experience Manager] 6.5, the runtime copy of your assets custom workflow model (created in `/var/workflow/models/dam`) is deleted.
-To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
-`<designModelPath>/jcr:content.generate.json`. -->
+<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.-->
 
-* **サービスパック 18（6.5.18.0）にアップグレードした後、ページエディターでページの公開が機能しない**
+<!-- * **Page publishing not working in Page Editor after upgrading to Service Pack 18 (6.5.18.0)** -->
 
-  <!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0--> AEM 6.5.0.0～6.5.17.0 のインスタンスを AEM 6.5.19.0 にアップグレードした後、ページエディター内で「**ページを公開**」をクリックすると、存在しない URL にリダイレクトされます。
+<!-- https://jira.corp.adobe.com/browse/SITES-15856 REMOVE FOR 6.5.19.0 -->
+<!-- After you upgrade an instance of AEM 6.5.0.0&mdash;6.5.17.0 to AEM 6.5.19.0, when you click **Publish Page** inside the Page Editor, you are redirected to a URL that does not exist.
 
-  この問題を回避するには、次のいずれかの操作を行います。
+  To work around this issue, do one of the following:
 
-   * 次の「path」プロパティを削除します。
+  * Remove the following "path" property.
 
-     `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
+       `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/publish/granite:data`
 
-   * 正しい URL をブラウザーに直接ペーストします。
+  * Paste the correct URL directly into the browser.
 
-     `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html`
+       `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html` -->
 
 
 
@@ -459,14 +456,31 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * AEM サービスパック 6.5.19.0 フルインストーラーをインストールした後、JBoss® Turnkey を使用した JEE での EAR デプロイメントが失敗します。
 問題を解決するには、設定マネージャーを実行する前に、`<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` ファイルを見つけて、すべての出現箇所について `Adobe_Adobe_JAVA_HOME` を `Adobe_JAVA_HOME` に更新します。（CQDOC-20803）
 
+#### サーブレットフラグメント (AEM Service Pack 6.5.14.0以前 ) をインストールします。
+
+* AEM Service Pack 6.5.15.0以降のバージョンにアップグレードし、AEMインスタンスが Tomcat 8.5.88 で動作している場合は、サーブレットフラグメントをインストールする必要があります。 *前* Service Pack 6.5.15.0以降のバージョンのインストールを続行します。
+* JBoss® EAP 7.4.0 で実行されているアプリケーションサーバーを除くすべてのアプリケーションサーバーにサーブレットフラグメントをインストールする必要があります。
+
+**サーブレットフラグメントをインストールするには：**
+
+1. 次のサーブレットフラグメントをダウンロード： [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
+1. アプリケーションサーバーを起動します。
+1. ログが安定するのを待ち、バンドルの状態を確認します。
+1. Web コンソールのバンドルを開きます。デフォルトの URL は `http://[Server]:[Port]/system/console/bundles` です。
+1. 選択 **[!UICONTROL インストール]** または **[!UICONTROL 更新]**.
+1. ダウンロードしたフラグメントを選択
+   `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`
+1. 選択 **[!UICONTROL インストール]** または **[!UICONTROL 更新]**.
+1. アプリケーションサーバーが安定するまで待つ.
+1. アプリケーションサーバーを停止します。
+
 #### アダプティブフォーム
 
 * アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * アダプティブフォームのガイドコンテナにリダイレクト URL が設定されると、インライン署名が機能しなくなります。（FORMS-10493）
-この問題を解決するには、[6.5.18.0 のホットフィックス](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
-* すべてのレコードのドキュメント（DoR）テンプレートが公開に失敗します。英語ロケールベースの DoR テンプレートと、これに関連するフォームベースの DoR テンプレートのみが公開されます。（FORMS-10535）
-この問題を解決するには、[6.5.18.0 のホットフィックス](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+この問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
+* すべてのレコードのドキュメント（DoR）テンプレートが公開に失敗します。英語ロケールベースの DoR テンプレートと、これに関連するフォームベースの DoR テンプレートのみが公開されます。(FORMS-10535) 問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
 
 
 #### インタラクティブコミュニケーション
@@ -476,10 +490,10 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
-次のテキストドキュメントには、[!DNL Experience Manager] 6.5.18.0 に含まれている OSGi バンドルとコンテンツパッケージの一覧が記載されています。<!-- UPDATE FOR EACH NEW RELEASE -->
+次のテキストドキュメントには、[!DNL Experience Manager] 6.5.19.0 に含まれている OSGi バンドルとコンテンツパッケージのリストが記載されています。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Experience Manager 6.5.18.0 に含まれている OSGi バンドルの一覧](/help/release-notes/assets/65180_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Experience Manager 6.5.18.0 に含まれているコンテンツパッケージの一覧](/help/release-notes/assets/65180_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager 6.5.19.0 に含まれている OSGi バンドルのリスト](/help/release-notes/assets/65190_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Experience Manager 6.5.19.0 に含まれているコンテンツパッケージのリスト](/help/release-notes/assets/65190_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## 制限付き Web サイト{#restricted-sites}
 

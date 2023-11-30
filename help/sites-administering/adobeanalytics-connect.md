@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: f525c8d159b8312184fc015b1151e93c9d46b3eb
+source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 97%
+source-wordcount: '1523'
+ht-degree: 93%
 
 ---
 
@@ -193,38 +193,20 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 詳しくは、[ページ分析データの表示](/help/sites-authoring/page-analytics-using.md)を参照してください。
 
-<!-- SP19
-### Configuring the Import Interval {#configuring-the-import-interval}
-
-Configure the appropriate instance of the **Adobe AEM Analytics Report Sling Importer** service:
-
-* **Fetch attempts**:
-  Number of attempts to fetch a queued report. 
-  The default is `6`.
-
-* **Fetch delay**:
-  The number of milliseconds between attempts to fetch a queued report. 
-  The default is `10000`. As this is in milliseconds it corresponds to 10 seconds.
-
-* **Fetch frequency**:
-  A `cron` expression to determine the frequency for fetching the Analytics Report. 
-  The default is `0 0 0/12 * * ?`; this corresponds to 12 fetches every hour.
-
-To configure this OSGi service, you can either use the [Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) or an [osgiConfig node in the repository](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (the service PID is `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`).
--->
-
 ### 読み込み間隔の設定 {#configuring-the-import-interval}
 
-次のように **Adobe AEM Managed Polling Configuration** サービスの適切なインスタンスを設定します。
+適切な **AdobeAEM Analytics Report Sling Importer** サービス：
 
-* **ポール間隔**：
-サービスが Adobe Analytics からページビューデータを取得する間隔（秒）。
-デフォルトの間隔は 43,200,000 ms（12 時間）です。
+* **取得の試行**：キューに格納されたレポートを取得しようとした回数。
+デフォルトは、`6` です。
 
-* **有効にする**：
-サービスを有効または無効にします。デフォルトでは、このサービスは有効になっています。
+* **取得遅延**：キューに格納されたレポートを取得しようとするまでのミリ秒数。
+デフォルトは`10000` です。ミリ秒単位なので、10 秒に相当します。
 
-この OSGi サービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の osgiConfig ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)（サービス PID は `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`）を使用して設定できます。
+* **取得頻度**: A `cron` 式を使用して、Analytics レポートを取得する頻度を指定します。
+デフォルトはです。 `0 0 0/12 * * ?`これは、1 時間ごとの 12 個の取得に相当します。
+
+この OSGi サービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の osgiConfig ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)（サービス PID は `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）を使用して設定できます。
 
 ## Adobe Analytics 設定やフレームワークの編集 {#editing-adobe-analytics-configurations-and-or-frameworks}
 
