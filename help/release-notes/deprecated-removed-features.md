@@ -3,9 +3,9 @@ title: Adobe Experience Manager 6.5 リリースで廃止および削除され�
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1741'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 98%
 
 | 領域 | 機能 | 代替手段 | バージョン（SP） |
 |---|---|---|---|
-| Sites | The **AdobeAEM Managed Polling Configuration** サービス： `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | The **AdobeAEM Analytics Report Sling Importer** サービス。 詳しくは、 Adobe Analyticsへの接続とフレームワークの作成を参照してください。 [インポート間隔の設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
+| Sites | **Adobe AEM Managed Polling Configuration** サービス：`com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | **Adobe AEM Analytics Report Sling Importer** サービス。詳しくは、 Adobe Analytics への接続とフレームワークの作成 - [読み込み間隔の設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)を参照してください。 | 6.5.19.0 |
 | Screens | AEM の ActiveMQ。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。 | アドビでは、ロードバランサーを使用することをお勧めします。 |  |
 | [!DNL Sites] | **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 |   | 6.5.11.0 |
 | [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | 現在の[モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
