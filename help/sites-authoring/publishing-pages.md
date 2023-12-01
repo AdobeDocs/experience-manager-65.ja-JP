@@ -2,9 +2,9 @@
 title: コンテンツページの公開
 description: Adobe Experience Manager 6.5 でコンテンツページを公開する方法を説明します。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1660'
 ht-degree: 91%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 91%
    * 公開する参照がない場合、ページが直接公開されます。
    * 公開が必要な参照がページに含まれている場合は、それらのリストが&#x200B;**公開**&#x200B;ウィザードに表示され、ウィザードで次のいずれかを実行できます。
 
-      * ページと一緒に公開するアセットやタグなどを指定し、 **公開** をクリックしてプロセスを完了します。
+      * ページと一緒に公開するアセットまたはタグを指定し、 **公開** をクリックしてプロセスを完了します。
 
       * 「**キャンセル**」を使用してアクションを中止します。
 

@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '4143'
-ht-degree: 93%
+ht-degree: 80%
 
 ---
 
@@ -33,11 +33,11 @@ Forms サービスは、web ブラウザーからの HTTP リクエストに応�
 
 >[!NOTE]
 >
->`FormServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` および `renderHTMLForm2` メソッドを使用して TIFF 画像を含むフォームをレンダリングする場合、Internet Explorer または Mozilla Firefox ブラウザーで表示されるレンダリングされたHTML フォームには TIFF 画像が表示されません。これらのブラウザーでは、TIFF 画像のネイティブサポートは提供されていません。
+>を使用して、画像を含むフォームをTIFFする場合、 `FormServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` および `renderHTMLForm2` メソッドの場合、TIFF画像は、Internet Explorer または Mozilla Firefox ブラウザーに表示されるレンダリングされたHTMLフォームに表示されません。 これらのブラウザーでは、TIFF 画像のネイティブサポートは提供されていません。
 
 ## HTML ページ {#html-pages}
 
-フォームデザインが HTML フォームとしてレンダリングされる場合、各第 2 レベルサブフォームはHTML ページ（パネル）としてレンダリングされます。サブフォームの階層は Designer で表示できます。ルートサブフォームに属する子サブフォーム（ルートサブフォームのデフォルト名は form1 です）は、パネルのサブフォームです。次に、フォームデザインのサブフォームの例を示します。
+フォームデザインが HTML フォームとしてレンダリングされる場合、各第 2 レベルサブフォームはHTML ページ（パネル）としてレンダリングされます。サブフォームの階層は Designer で表示できます。 ルートサブフォームに属する子サブフォーム（ルートサブフォームのデフォルト名は form1 です）は、パネルのサブフォームです。次に、フォームデザインのサブフォームの例を示します。
 
 ```java
      form1
@@ -83,9 +83,9 @@ Forms サービスは、web ブラウザーからの HTTP リクエストに応�
 
 フォームの作成者は、スクリプトをサーバー上で実行するかクライアント上で実行するかを指定します。Forms サービスは、`runAt` 属性を使用してクライアントとサーバー間で分散できるフォームインテリジェンスを実行するための分散イベント処理環境を作成します。この属性やフォームデザイン内でのスクリプトの作成について詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
 
-Forms サービスは、フォームのレンダリング中にスクリプトを実行できます。その結果、データベースに接続するか、クライアント上で使用できない web サービスに接続することで、フォームにデータを事前入力できます。また、ボタンの `Click` イベントをサーバーで実行するように設定して、クライアントがデータをサーバーにラウンドトリップするようにすることもできます。これにより、ユーザーがフォームを操作している間に、エンタープライズデータベースなどのサーバーリソースを必要とする可能性のあるスクリプトをクライアントが実行できます。HTML フォームの場合、formcalc スクリプトはサーバー上でのみ実行できます。その結果、これらのスクリプトを `server` または `both` で実行するように指定する必要があります。
+Forms サービスは、フォームのレンダリング中にスクリプトを実行できます。その結果、データベースに接続するか、クライアント上で使用できない web サービスに接続することで、フォームにデータを事前入力できます。また、ボタンの `Click` イベントを設定し、クライアントがサーバーにトリップデータをラウンドトリップするようにします。 これにより、ユーザーがフォームを操作している間に、エンタープライズデータベースなどのサーバーリソースを必要とする可能性のあるスクリプトをクライアントが実行できます。HTML フォームの場合、formcalc スクリプトはサーバー上でのみ実行できます。その結果、これらのスクリプトを `server` または `both` で実行するように指定する必要があります。
 
-ページ（パネル）間を移動するフォームは、`xfa.host.pageUp` および `xfa.host.pageDown` メソッドを呼び出すことによって設計できます。このスクリプトはボタンの `Click` イベントに配置され、`runAt` 属性は `Both` に設定されます。`Both` を選択する理由は、（PDF としてレンダリングされるフォームの場合）Adobe Reader や Acrobat がサーバーに移動せずにページを変更でき、HTML フォームがサーバーにデータをラウンドトリップさせずにページを変更できるようにするためです。つまり、あるフォームは Forms サービスに送信され、あるフォームは新しいページを表示する HTML としてレンダリングされます。
+ページ（パネル）間を移動するフォームは、`xfa.host.pageUp` および `xfa.host.pageDown` メソッドを呼び出すことによって設計できます。このスクリプトは、ボタンの `Click` イベントと `runAt` 属性が `Both`. `Both` を選択する理由は、（PDF としてレンダリングされるフォームの場合）Adobe Reader や Acrobat がサーバーに移動せずにページを変更でき、HTML フォームがサーバーにデータをラウンドトリップさせずにページを変更できるようにするためです。つまり、あるフォームは Forms サービスに送信され、あるフォームは新しいページを表示する HTML としてレンダリングされます。
 
 スクリプト変数やフォームフィールドには、同じ名前（item など）を付けないことをお勧めします。Internet Explorer などの一部の web ブラウザーでは、フォームフィールドと同じ名前の変数が初期化されず、スクリプトエラーが発生する場合があります。フォームフィールドとスクリプト変数に異なる名前を付けることをお勧めします。
 
@@ -156,7 +156,7 @@ HTML 4.0 のサーバーと、MSDHTML または CSS2HTML 用のクライアン�
 
 ## プレゼンテーションの変更の維持 {#maintaining-presentation-changes}
 
-HTML ページ（パネル）間を移動すると、データの状態のみが保持されます。背景色や必須フィールド設定などの設定は維持されません（初期設定と異なる場合）。プレゼンテーションの状態を維持するには、フィールドのプレゼンテーションの状態を表すフィールド（通常は非表示）を作成する必要があります。非表示のフィールド値に基づいて、プレゼンテーションを変更するフィールドの `Calculate` イベントにスクリプトを追加すると、 HTML ページ（パネル）間を移動するときにプレゼンテーションの状態を維持できます。
+HTML ページ（パネル）間を移動すると、データの状態のみが保持されます。背景色や必須フィールド設定などの設定は維持されません（初期設定と異なる場合）。 プレゼンテーションの状態を維持するには、フィールドのプレゼンテーションの状態を表すフィールド（通常は非表示）を作成する必要があります。フィールドの `Calculate` イベントを使用して非表示のフィールドの値に基づいてプレゼンテーションを変更する場合、HTMLページ（パネル）間を行ったり来たりする際に、プレゼンテーションの状態を保持することができます。
 
 次のスクリプトは、`hiddenField` の値に基づいてフィールドの `fillColor` を維持します。このスクリプトがフィールドの `Calculate` イベント。
 
@@ -216,7 +216,7 @@ HTMLフォームをレンダリングするには、次の手順を実行しま�
 
 HTML フォームのレンダリング時に、HTML 実行時オプションを設定します。例えば、HTML フォームにツールバーを追加すると、クライアントコンピューター上の添付ファイルを選択したり、HTML フォームでレンダリングされた添付ファイルを取得したりできます。デフォルトでは、HTML ツールバーは無効になっています。ツールバーを HTML フォームに追加するには、実行時オプションをプログラムによって設定する必要があります。デフォルトでは、HTML ツールバーは次のボタンで構成されています。
 
-* `Home`：アプリケーションの web ルートへのリンクを提供します。
+* `Home`：アプリケーションの Web ルートへのリンクを提供します。
 * `Upload`：現在のフォームに添付するファイルを選択するためのユーザーインターフェイスを提供します。
 * `Download`：添付ファイルを表示するユーザインタフェースを提供します。
 
@@ -268,7 +268,7 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
 
 1. プロジェクトファイルを含める
 
-   adobe-forms-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-forms-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Forms Client API オブジェクトの作成
 
@@ -278,17 +278,17 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
 1. HTML 実行時オプションを設定
 
    * コンストラクターを使用して `HTMLRenderSpec` オブジェクトを作成します。
-   * ツールバーを使用して HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して、`HTMLToolbar` enum 値を渡します。例えば、HTML ツールバーを垂直位置に表示するには、`HTMLToolbar.Vertical` を渡します。
-   * HTML フォームのロケール値を設定するには、`HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出して、ロケール値を指定する文字列値を渡します。（これはオプション設定です）。
-   * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して、`OutputType.FullHTMLTags` を渡します。（これはオプション設定です）。
+   * ツールバーを使用してHTMLフォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドとパス `HTMLToolbar` enum 値。 例えば、HTML ツールバーを垂直位置に表示するには、`HTMLToolbar.Vertical` を渡します。
+   * ロケールフォームのロケール値を設定するには、HTMLフォームで `HTMLRenderSpec` オブジェクトの `setLocale` メソッドを使用し、ロケール値を指定する string 値を渡します。 （これはオプション設定です）。
+   * 完全なHTMLタグ内でHTMLフォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setOutputType` メソッドとパス `OutputType.FullHTMLTags`. （これはオプション設定です）。
 
    >[!NOTE]
    >
-   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外を参照している場合、Forms は正常にレンダリングされません（`ApplicationWebRoot` の値は、`FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定します）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
+   Formsは、 `StandAlone` オプションは `true` そして `ApplicationWebRoot` は、AEM Forms( `ApplicationWebRoot` の値が `URLSpec` に渡されるオブジェクト `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッド )。 `ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
 1. HTML フォームのレンダリング
 
-   `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを使用して、次の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
@@ -302,13 +302,13 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
+   * の作成 `com.adobe.idp.Document` を呼び出すことによって、オブジェクトを `FormsResult` オブジェクトの `getOutputContent` メソッド。
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって `java.io.InputStream` オブジェクトを作成します。
-   * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
-   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
+   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
+   * の作成 `java.io.InputStream` を呼び出すことによって、オブジェクトを `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
+   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
@@ -336,17 +336,17 @@ Forms API（web サービス）を使用して HTML フォームをレンダリ�
 1. HTML 実行時オプションを設定
 
    * コンストラクターを使用して `HTMLRenderSpec` オブジェクトを作成します。
-   * ツールバーを使用して HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して、`HTMLToolbar` enum 値を渡します。例えば、HTML ツールバーを垂直位置に表示するには、`HTMLToolbar.Vertical` を渡します。
-   * HTML フォームのロケール値を設定するには、`HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出し、ロケール値を指定する文字列値を渡します。詳しくは、[AEM Forms API レファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
-   * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して `OutputType.FullHTMLTags` を渡します。
+   * ツールバーを使用してHTMLフォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドとパス `HTMLToolbar` enum 値。 例えば、HTML ツールバーを垂直位置に表示するには、`HTMLToolbar.Vertical` を渡します。
+   * ロケールフォームのロケール値を設定するには、HTMLフォームで `HTMLRenderSpec` オブジェクトの `setLocale` メソッドを使用し、ロケール値を指定する string 値を渡します。 詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
+   * 完全なHTMLタグ内でHTMLフォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setOutputType` メソッドとパス `OutputType.FullHTMLTags`.
 
    >[!NOTE]
    >
-   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外のサーバーを参照している場合、フォームは HTML で正常にレンダリングされません（`ApplicationWebRoot` 値は `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定されます）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
+   Formsは、 `StandAlone` オプションは `true` そして `ApplicationWebRoot` は、AEM Forms( `ApplicationWebRoot` の値が `URLSpec` に渡されるオブジェクト `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッド )。 `ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
 1. HTML フォームのレンダリング
 
-   `FormsService` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `FormsService` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを使用して、次の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
@@ -366,13 +366,13 @@ Forms API（web サービス）を使用して HTML フォームをレンダリ�
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して、`FormResult` オブジェクトを作成します。
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
+   * の作成 `FormResult` オブジェクトを作成するには、 `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバー。
+   * の作成 `BLOB` を呼び出してフォームデータを含むオブジェクト `FormsResult` オブジェクトの `getOutputContent` メソッド。
    * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを渡します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `BLOB` オブジェクト。
+   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
+   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッド。 このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * を呼び出す `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 

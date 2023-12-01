@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '6218'
-ht-degree: 82%
+ht-degree: 81%
 
 ---
 
@@ -101,7 +101,7 @@ User Management が書き出す設定 XML で、属性値が `Domains` のルー
 
 Active Directory を使用する場合、 `objectSID` の値は、複数のドメインで一意の属性ではありません。この値は、オブジェクトのセキュリティ識別情報を格納しています。複数ドメイン環境（ドメインのツリーなど）では、 `objectSID` の値は異なる場合があります。
 
-`objectSID` 値は、ある Active Directory ドメインから別のドメインにオブジェクトが移動された場合に変更されます。オブジェクトによっては、ドメイン内のどこにいても同じ`objectSID`値を持つものがあります。例えば、BUILTIN\Administrators、BUILTIN\Power Users などのグループは、ドメインに関係なく同じ `objectSID` 値を持ちます。これらの `objectSID` 値はよく知られています。
+`objectSID` 値は、ある Active Directory ドメインから別のドメインにオブジェクトが移動された場合に変更されます。オブジェクトによっては、ドメイン内のどこにいても同じ`objectSID`値を持つものがあります。例えば、BUILTIN\Administrators、BUILTIN\Power Users などのグループも同じように設定されます。 `objectSID` の値を指定する必要はありません。 これらの `objectSID` 値はよく知られています。
 
 ## ユーザーの追加 {#adding-users}
 

@@ -7,7 +7,7 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '2987'
 ht-degree: 60%
@@ -401,7 +401,7 @@ In [カード表示](#cardviewquickactions)の場合、特定のアクション�
 
 列表示を使用すると、一連のカスケード表示された列を通じて、コンテンツツリーを視覚的に移動できます。この表示では、Web サイトのツリー構造を視覚化してトラバースできます。
 
-一番左の列でリソースを選択すると、右の列に子リソースが表示されます。 右側の列でリソースを選択すると、右側の別の列に子リソースが表示されます。
+一番左の列でリソースを選択すると、右の列に子リソースが表示されます。 右側の列でリソースを選択すると、右側の列に子リソースが表示されます。
 
 * リソース名またはリソース名の右にある山形記号をタップまたはクリックすると、ツリー内を上下に移動できます。
 

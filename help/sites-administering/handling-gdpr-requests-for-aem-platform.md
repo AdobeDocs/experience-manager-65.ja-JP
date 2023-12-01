@@ -3,10 +3,10 @@ title: Adobe Experience Manager の基盤での GDPR リクエストの取り扱
 description: Adobe Experience Manager の基盤での GDPR リクエストの取り扱い
 contentOwner: sarchiz
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: ht
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
+>以下の節では GDPR を例として使用していますが、詳細は、GDPR、CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
 
 ## AEM 基盤の GDPR サポート {#aem-foundation-gdpr-support}
 

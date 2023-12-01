@@ -1,20 +1,18 @@
 ---
 title: メタデータ、画像およびビデオを処理するためのプロファイル
-description: プロファイルは、フォルダーにアップロードされたアセットに適用されるオプションに関する一連のルールです。アップロードするビデオアセットに適用するメタデータプロファイルおよびビデオエンコーディングプロファイルを指定します。画像アセットの場合は、適切に切り抜くために画像アセットに適用するイメージプロファイルを指定することもできます。
-uuid: 6ded2a2f-a0d3-4f43-af97-02fbc0902c25
+description: プロファイル：フォルダーにアップロードされるアセットに適用されるオプションに関する一連のルールです。 アップロードするビデオアセットに適用するメタデータプロファイルおよびビデオエンコーディングプロファイルを指定します。 画像アセットの場合、画像アセットを適切に切り抜くために、画像アセットに適用するイメージプロファイルを指定することもできます。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 role: User, Admin
 feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 100%
+ht-degree: 91%
 
 ---
 
@@ -22,15 +20,15 @@ ht-degree: 100%
 
 プロファイルとは、フォルダーにアップロードされるアセットに適用するオプションを指定したファイルです。例えば、アップロードするビデオアセットに適用するメタデータプロファイルおよびビデオエンコーディングプロファイルを指定できます。また、画像アセットを適切に切り抜くために画像アセットに適用するイメージプロファイルを指定できます。
 
-ルールには、メタデータの追加、画像のスマート切り抜きまたはビデオエンコーディングプロファイルの構築などが含まれます。Adobe Experience Manager では、3 種類のプロファイルを作成することができ、その詳細は次のリンクで説明されています。
+例えば、メタデータの追加、画像のスマート切り抜き、ビデオエンコーディングプロファイルの確立などをおこなえます。 Adobe Experience Manager では、3 種類のプロファイルを作成することができ、その詳細は次のリンクで説明されています。
 
 * [メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles)
 * [イメージプロファイル](/help/assets/image-profiles.md)
 * [ビデオプロファイル](/help/assets/video-profiles.md)
 
-メタデータプロファイル、イメージプロファイルまたはビデオプロファイルを作成、編集および削除するには、管理者権限が必要です。
+メタデータ、画像またはビデオプロファイルを作成、編集および削除するには、管理者権限が必要です。
 
-メタデータプロファイル、イメージプロファイルまたはビデオプロファイルを作成した後、新規にアップロードするアセットのアップロード先として使用する 1 つ以上のフォルダーにそのプロファイルを割り当てます。
+メタデータ、画像またはビデオプロファイルを作成したら、新しくアップロードするアセットのアップロード先として使用する 1 つ以上のフォルダーにそのプロファイルを割り当てます。
 
 プロファイルがフォルダーに割り当てられることは、Experience Manager Assets でのプロファイルの使用に関する重要な概念です。プロファイル内では、メタデータプロファイルの形式で、ビデオプロファイルまたはイメージプロファイルと共に設定されています。これらの設定は、フォルダーのコンテンツを（そのサブフォルダーコンテンツを含めて）処理します。そのため、ファイルおよびフォルダーの命名方法、サブフォルダーの配置およびこれらのフォルダー内にあるファイルの処理方法は、プロファイルによるこれらのアセットの処理方法に大きな影響を与えます。
 ファイルおよびフォルダーの一貫した適切な命名戦略と優れたメタデータプラクティスを使用することで、デジタルアセットコレクションを最大限に活用して、適切なファイルを適切なプロファイルによって処理することができます。
@@ -63,7 +61,7 @@ ht-degree: 100%
 >
 >再処理ワークフローが期待どおりに動作するように、Dynamic Media サーバー上で移行公開エージェントを無効にする必要があります。
 
-<!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
+<!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media's Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job, and so on, until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
 **フォルダー内のアセットを再処理するには：**
 

@@ -7,7 +7,7 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '3495'
 ht-degree: 31%
@@ -249,7 +249,7 @@ HTMLコンポーネント (foundation/components/image) をデザインパッケ
 * Target URL。サードパーティおよびAEMの URL をサポート
 * ページレンダリングオプション（同じウィンドウ、新しいウィンドウなど）
 
-HTMLタグを使用して、読み込んだ zip ファイルにクリックスルーコンポーネントを含めます。 ここで、href はターゲット URL に、「製品の詳細を表示」はラベルにマッピングされます。
+HTMLタグを使用して、読み込んだ zip ファイルにクリックスルーコンポーネントを含めます。 ここでは、href はターゲット URL に、「製品の詳細を表示」はラベルにマッピングされます。
 
 ```xml
 <div id="cqcanvas">
@@ -282,7 +282,7 @@ HTMLタグを使用して、読み込んだ zip ファイルにクリックス�
 * Target URL。サードパーティおよびAEMの URL をサポート
 * ページレンダリングオプション（同じウィンドウ、新しいウィンドウなど）
 
-HTML タグを使用して、読み込まれた zip ファイルにグラフィックリンクコンポーネントを含めます。ここでは、href がターゲット URL にマッピングされ、img src がレンダリング画像で、「title」がホバーテキストとして取られます。
+HTML タグを使用して、読み込まれた zip ファイルにグラフィックリンクコンポーネントを含めます。ここでは、href がターゲット URL にマッピングされ、img src がレンダリング画像で、「title」がホバーテキストと見なされます。
 
 ```xml
 <div id="cqcanvas">

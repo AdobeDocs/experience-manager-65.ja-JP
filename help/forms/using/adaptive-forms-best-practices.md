@@ -5,16 +5,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '4725'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
 # アダプティブフォームの操作のベストプラクティス {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 ## 概要 {#overview}
 
@@ -257,7 +257,7 @@ AEM Forms [ルールエディター](/help/forms/using/rule-editor.md) これに
    * **XSD スキーマ**：アダプティブフォームで使用されているのと同じ XML スキーマを使用する、関連する XFA テンプレートを使用します。
    * **なし**：自動生成された DoR を使用します。
 
-* アダプティブフォームエディターの「レコードのドキュメント」タブから、ヘッダー、フッター、画像、色、フォントなどを直接設定します。
+* アダプティブフォームエディターの「レコードのドキュメント」タブから直接、ヘッダー、フッター、画像、色、フォントなどを設定します。
 * `DoRService` を使用して、DoR をプログラムにより生成します。
 * DoR から非表示フィールドを除外します。
 * `afAcceptLang` リクエストパラメーターを使用して、別のロケールで DoR を表示します。

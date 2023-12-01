@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1778'
 ht-degree: 37%
 
 ---
@@ -159,7 +159,7 @@ MongoDB を使用した最小のデプロイメントは、通常、次のトポ
 
 2 つ以上のオーサーインスタンスのクラスターを持つ MongoDB レプリカセットを展開するメリットの 1 つは、オーサーインスタンス、MongoDB レプリカ、または完全なデータセンター障害がある場合に、ダウンタイムを最小限に抑えて自動復元シナリオを使用することです。 しかし、TarMK は制御されたフェイルオーバーメカニズムを使用して最小限のダウンタイムソリューションを提供できるので、TarMK に対する MongoMK の選択は、リカバリ要件によってのみ実行されるべきではありません。
 
-デプロイメントの最初の 18 ヶ月間に上記の条件が満たされないと思われる場合は、まず TarMK を使用してAEMをデプロイし、次に上記の条件が適用された後の日に設定を再評価し、最後に TarMK に残るか MongoMK に移行するかを決定します。
+デプロイメントの最初の 18 か月間に上記の条件が満たされないと思われる場合は、まず TarMK を使用してAEMをデプロイし、次に上記の条件が適用される後日に設定を再評価し、最後に TarMK に残るか MongoMK に移行するかを決定します。
 
 ### パブリッシュインスタンスで TarMK よりもAEM MongoMK を選択する際の例外 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
 

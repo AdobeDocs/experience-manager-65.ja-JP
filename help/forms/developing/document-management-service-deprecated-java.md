@@ -1,19 +1,16 @@
 ---
 title: ドキュメント管理サービス（非推奨）Java API クイックスタート（SOAP）
-seo-title: Document Management Service (Deprecated)Java API Quick Start(SOAP)
 description: ドキュメント管理サービス（非推奨）Java API クイックスタート（SOAP）
-uuid: 967c282a-ccde-4489-a4d5-53c6a1a0cac0
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 92%
+source-wordcount: '639'
+ht-degree: 89%
 
 ---
 
@@ -23,7 +20,7 @@ Document Management サービス（非推奨）では、次のクイックスタ
 
 >[!NOTE]
 >
->2011年8月5日より、アドビは、Content Services ES のお客様を Adobe Digital Enterprise Platform Experience Services に移行します。Content Services をご利用のお客様は、新しい ADEP Experience Services - Core に移行していただく製品ロードマップです。この新しいサービスには、Day Software との合併により得られた、最新のモジュラー CRX アーキテクチャで構築されたネイティブなコンテンツリポジトリが含まれています。
+>2011 年 8 月 5 日に、Adobeは Content Services ES のお客様をAdobe Digital Enterprise Platform Experience Services に移行します。 Content Services をご利用のお客様は、新しい ADEP Experience Services - Core に移行していただく製品ロードマップです。この新しいサービスには、Day Software との合併により得られた、最新のモジュラー CRX アーキテクチャで構築されたネイティブなコンテンツリポジトリが含まれています。
 
 [クイックスタート（SOAP モード）：Java API を使用した Content Services スペースの作成](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 

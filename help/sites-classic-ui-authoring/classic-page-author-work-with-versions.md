@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 54%
@@ -167,7 +167,7 @@ ht-degree: 54%
 
    * 線はすべて公開済みのバージョンを示します。
 ページがアクティベートされると、新しい線が表示されます。ドキュメントが編集されるたびに、新しい色が表示されます。
-次の例では、赤い線はページが最初の緑のバージョンの期間に編集されたことを示しています。 黄色い線は、赤いバージョンの間にページが編集されたことを示します。
+次の例では、赤い線はページが最初の緑のバージョンの期間に編集されたことを示しています。 黄色い線は、ページが赤いバージョンの間に編集されたことを示します。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 

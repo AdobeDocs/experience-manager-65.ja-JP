@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '9151'
+source-wordcount: '9148'
 ht-degree: 97%
 
 ---
@@ -577,15 +577,15 @@ AEM でこれを実現するには、ソース編集モードを使用してマ�
    <td><p><strong>入手方法</strong></p> </td>
   </tr>
   <tr>
-   <td><p>3月16日（火）<sup></sup></p> </td>
+   <td><p>3 月 16 日</p> </td>
    <td><p>空席あり</p> </td>
   </tr>
   <tr>
-   <td><p>3月17日（水）<sup></p> </td>
+   <td><p>3 月 17 日（水）</p> </td>
    <td><p>空席あり</p> </td>
   </tr>
   <tr>
-   <td><p>3月18日（木）<sup></sup></p> </td>
+   <td><p>3 月 18 日（木）</p> </td>
    <td><p>完売</p> </td>
   </tr>
  </tbody>

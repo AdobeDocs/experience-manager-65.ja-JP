@@ -3,10 +3,10 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 5bfd8216c9d3540ac6d795d434dab5afb7bce309
+source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '4848'
-ht-degree: 91%
+source-wordcount: '4847'
+ht-degree: 90%
 
 ---
 
@@ -554,7 +554,7 @@ GraphQL クエリでフィルタリングを使用して、特定のデータを
    * リスト内の最初のフィールドで、主な並べ替え順を定義します
       * 2 番目のフィールドは、主な並べ替え条件の 2 つの値が等しい場合に使用されます
       * 最初の 2 つの条件が等しい場合は 3 番目のフィールドを、などのように使用されます
-   * ドット表記（field1.subfield.subfield など）
+   * ドット表記、つまり `field1.subfield.subfield`など。
 * （オプション）並べ替えの方向
    * ASC（昇順）または DESC（降順）。デフォルトでは ASC が適用されます
    * 方向は、フィールドごとに指定できます。つまり、あるフィールドを昇順で、別のフィールドを降順で並べ替えることができます（name、firstName DESC）
