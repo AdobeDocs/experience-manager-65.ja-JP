@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 8d06457241919095fd9802f69df426a1cc6851da
+source-git-commit: f8f82ad5805095f331432471b614225f761e645c
 workflow-type: tm+mt
-source-wordcount: '3675'
-ht-degree: 93%
+source-wordcount: '3530'
+ht-degree: 92%
 
 ---
 
@@ -38,23 +38,12 @@ ht-degree: 93%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
+**主な機能および機能強化**
+
 このリリースの主な機能と機能強化は次のとおりです。
 
-**主な機能**
-
-* Assets、Dynamic Media - [Dynamic Media のビデオに対するマルチサブタイトルとマルチオーディオトラックのサポート](/help/assets/video.md#about-msma) - プライマリビデオに複数のサブタイトルと複数のオーディオトラックを簡単に追加できるようになりました。この機能により、グローバルなオーディエンスがビデオにアクセスできるようになります。1 つの公開済みプライマリビデオを複数の言語でグローバルオーディエンスに向けてカスタマイズし、様々な地理的地域のアクセシビリティガイドラインに従うことができます。また、作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルとオーディオトラックを管理することもできます。
-
-* Assets - 検索結果から、アセットが含まれるフォルダーの場所に移動でき、様々なアセット管理タスクを実行できるようになります。（ASSETS-23182）
-
-**主な機能強化**
-
-* コンテンツフラグメントの Sites Polaris ピッカーのパフォーマンスが向上しました。（SITES-14092）
-
 * Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。（Sites-13448、Sites-13433）
-
-* システム内に多数のプロジェクトが存在する可能性があるリスト表示でプロジェクトをすばやく見つけるために、アドビではサーバーサイドでの並べ替えをサポートするようになりました。プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。（NPR-41027）
-
-* AEM 6.5.19.0 は、MongoDB 5.0～6.0 をサポートします。
+* AEMでサーバー側の並べ替えがサポートされ、リスト表示でのプロジェクトのナビゲーションをより迅速におこなえるようになりました。 プロジェクトノードは、インターフェイスに表示される前に、ユーザが選択した列に基づいて並べ替えられます。
 
 **非推奨（廃止予定）の機能**
 
@@ -292,7 +281,7 @@ AEM Forms にサービスパックをインストールする手順について�
 
 >[!NOTE]
 >
->[AEM 6.5 クイックスタート](https://experienceleague.corp.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォーム機能は、探索と評価のみを目的として設計されています。アダプティブフォームの機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
+>[AEM 6.5 クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォーム機能は、探索と評価のみを目的として設計されています。アダプティブフォームの機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
 
 ### Experience Manager コンテンツフラグメント用の GraphQL インデックスパッケージのインストール{#install-aem-graphql-index-add-on-package}
 
@@ -458,7 +447,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 #### サーブレットフラグメント (AEM Service Pack 6.5.14.0以前 ) をインストールします。
 
-* AEM Service Pack 6.5.15.0以降のバージョンにアップグレードし、AEMインスタンスが Tomcat 8.5.88 で動作している場合は、サーブレットフラグメントをインストールする必要があります。 *前* Service Pack 6.5.15.0以降のバージョンのインストールを続行します。
+* AEM Service Pack 6.5.15.0以降にアップグレードし、AEMインスタンスが Tomcat 8.5.88 で動作している場合は、サーブレットフラグメントをインストールする必要があります *前* Service Pack 6.5.15.0以降のインストールを続行します。
 * JBoss® EAP 7.4.0 で実行されているアプリケーションサーバーを除くすべてのアプリケーションサーバーにサーブレットフラグメントをインストールする必要があります。
 
 **サーブレットフラグメントをインストールするには：**
@@ -485,8 +474,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 #### インタラクティブコミュニケーション
 
-* AEM サービスパック 18 にアップグレードした後は、編集モードで大きなインライン画像を使用したインタラクティブ通信を開くことはできません。（FORMS-10578）
-この問題を解決するには、[6.5.18.0 のホットフィックス](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* AEM サービスパック 18 にアップグレードした後は、編集モードで大きなインライン画像を使用したインタラクティブ通信を開くことはできません。(FORMS-10578) 問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
