@@ -13,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3837'
-ht-degree: 83%
+source-wordcount: '3794'
+ht-degree: 78%
 
 ---
 
@@ -81,11 +81,11 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。Adobe 
 * Adobe Illustrator のドキュメントは複数のレイヤーを持つ単一のページで構成されます。各レイヤーはメインの Illustrator アセットの下に PNG サブアセットとして抽出されます。
 * PDF のドキュメントは 1 つ以上のページで構成されます。各ページはメインの複数ページの PDF ドキュメントの下に単一ページの PDF サブアセットとして抽出されます。
 
-サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。ワークフローにこのプロセスコンポーネントを表示するには、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**／**[!UICONTROL DAM アセットの更新]**／**[!UICONTROL 編集]**&#x200B;をタップします。
+サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。ワークフロー内でこのプロセスコンポーネントを表示するには、「 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]** > **[!UICONTROL DAM アセットの更新]** > **[!UICONTROL 編集]**.
 
 「[複数ページファイルのページの表示](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)」も参照してください。
 
-サブアセットまたはページは、アセットを開き、コンテキストメニューをタップし、「**[!UICONTROL サブアセット]**」または「**[!UICONTROL ページ]**」を選択して表示できます。サブアセットは実在のアセットです。つまり、PDF ページは `Create Sub Asset` ワークフローコンポーネントによって抽出されます。その後それらは `page1.pdf` や `page2.pdf` などとして、メインアセットの下に保存されます。保存後、それらは `DAM Update Asset` ワークフローで処理されます。
+サブアセットまたはページは、アセットを開き、コンテキストメニューを選択し、「**[!UICONTROL サブアセット]**」または「**[!UICONTROL ページ]**」を選択して表示できます。サブアセットは実在のアセットです。つまり、PDF ページは `Create Sub Asset` ワークフローコンポーネントによって抽出されます。その後それらは `page1.pdf` や `page2.pdf` などとして、メインアセットの下に保存されます。保存後、それらは `DAM Update Asset` ワークフローで処理されます。
 
 Dynamic Media を使用して AI、EPS または PDF ファイルの動的レンディションを表示および生成するには、次の処理ステップが必要です。
 
@@ -106,7 +106,7 @@ Dynamic Media を使用して AI、EPS または PDF ファイルの動的レン
 
 `Rasterize PDF/AI Image Preview Rendition` プロセスコンポーネントのオプションには、`DAM Update Asset` ワークフローを通じてアクセスします。
 
-左上の Adobe Experience Manager をタップし、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;に移動します。ワークフローモデルページで「**[!UICONTROL DAM アセットの更新]**」を選択し、ツールバーの「**[!UICONTROL 編集]**」をタップします。[!UICONTROL DAM アセットの更新]ワークフローページで、`Rasterize PDF/AI Image Preview Rendition`プロセスコンポーネントをダブルタップして、ステップのプロパティダイアログボックスを開きます。
+左上隅で、「 Adobe Experience Manager 」を選択し、 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**. ワークフローモデルページで「**[!UICONTROL DAM アセットの更新]**」を選択し、ツールバーの「**[!UICONTROL 編集]**」を選択します。次の日： [!UICONTROL DAM アセットの更新] ワークフローページで、をダブル選択します。 `Rasterize PDF/AI Image Preview Rendition` プロセスコンポーネントを使用して、ステップのプロパティダイアログボックスを開きます。
 
 #### PDF/AI 画像プレビューレンディションをラスタライズのオプション {#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -129,12 +129,12 @@ PDF または AI ワークフローのラスタライズの引数
   <tr>
    <td>最大の幅</td>
    <td>2048</td>
-   <td>生成されたプレビューレンディションの最大の幅（ピクセル単位）。<br /> </td>
+   <td>生成されるプレビューレンディションの最大幅（ピクセル単位）。<br /> </td>
   </tr>
   <tr>
    <td>最大の高さ</td>
    <td>2048</td>
-   <td>生成されたプレビューレンディションの最大の高さ（ピクセル単位）。<br />。 </td>
+   <td>生成されるプレビューレンディションの最大の高さ（ピクセル単位）。<br /> </td>
   </tr>
   <tr>
    <td>解像度</td>
@@ -208,18 +208,18 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 **画像のサムネールサイズを設定するには**：:
 
-1. **[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**／**[!UICONTROL DAM アセットの更新]**／**[!UICONTROL 編集]**&#x200B;をタップします。
-1. 次をタップします。 **[!UICONTROL Dynamic Media Process Image Assets]** ステップとタップまたはクリック **[!UICONTROL サムネール]** タブをクリックします。 必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」をタップします。
+1. 選択 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]** > **[!UICONTROL DAM アセットの更新]** > **[!UICONTROL 編集]**.
+1. を選択します。 **[!UICONTROL Dynamic Media Process Image Assets]** ステップとクリック **[!UICONTROL サムネール]** タブをクリックします。 必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」を選択します。
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. **[!UICONTROL サムネールを処理]**&#x200B;のステップをタップし、「**[!UICONTROL サムネール]**」タブをタップします。必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」をタップします。
+1. **[!UICONTROL サムネールを処理]**&#x200B;のステップを選択し、「**[!UICONTROL サムネール]**」タブを選択します。必要に応じてサムネールのサイズを変更し、「**[!UICONTROL OK]**」を選択します。
 
    >[!NOTE]
    >
    >**[!UICONTROL サムネールを処理]**&#x200B;ステップのサムネール引数の値が、**[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;ステップのサムネール引数と一致する必要があります。
 
-1. タップ **[!UICONTROL 保存]** をクリックして、ワークフローに対する変更を保存します。
+1. 「**[!UICONTROL 保存]**」を選択して、ワークフローに対する変更を保存します。
 
 ### 表示される Dynamic Media 画像プリセット数の増減 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
@@ -238,7 +238,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 「 limit 」プロパティで、数を目的の数（例： ）に変更します。 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 「**[!UICONTROL すべて保存]**」をタップします。
+1. **[!UICONTROL すべて保存]** を選択します。
 
 ## Dynamic Media 画像プリセットの作成 {#creating-image-presets}
 
@@ -258,7 +258,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 **Dynamic Media 画像プリセットを作成するには：**
 
-1. Adobe Experience Manager で、Adobe Experience Manager ロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL 画像プリセット]**&#x200B;をタップします。
+1. 「Experience Manager」で、Experience Managerロゴを選択してグローバルナビゲーションコンソールにアクセスし、「 」を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL 画像プリセット]**.
 1. 「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -328,10 +328,10 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
       「<strong>GIF</strong>」または「<strong>アルファ付き GIF</strong>」を選択すると、以下の追加の「<strong>GIF カラー量子化</strong>」オプションを入力できます。
     </div>
     <ul>
-     <li><strong>タイプ</strong> - 「<strong>アダプティブ</strong>」（デフォルト）、「<strong>Web</strong>」、「<strong>Macintosh</strong>」のいずれかを選択します。「<strong>アルファ付き GIF</strong>」を選択した場合は、「Macintosh」オプションは選択できません。</li>
+     <li><strong>タイプ </strong> — 選択 <strong>アダプティブ</strong> （デフォルト）、 <strong>Web</strong>または <strong>Macintosh</strong>. 「<strong>アルファ付き GIF</strong>」を選択した場合は、「Macintosh」オプションは使用できません。</li>
      <li><strong>ディザ</strong> - 「<strong>拡散</strong>」または「<strong>オフ</strong>」を選択します。</li>
      <li><strong>色数</strong> - 2～256 の値を入力します。</li>
-     <li><strong>カラーリスト</strong> - コンマ区切りのリストを入力します。例えば、白、グレー、黒の場合は、 <code>000000,888888,ffffff</code> と入力します。</li>
+     <li><strong>カラーリスト</strong>  — コンマ区切りのリストを入力します。 たとえば、白、灰色、黒の場合は、と入力します。 <code>000000,888888,ffffff</code>.</li>
     </ul>
     <div>
       「<strong>PDF</strong>」、「<strong>TIFF</strong>」または「<strong>アルファ付き TIFF</strong>」を選択すると、以下の追加オプションを入力できます。
@@ -483,11 +483,11 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ## 画像プリセットの編集 {#modifying-image-presets}
 
-1. Adobe Experience Manager で、Adobe Experience Manager ロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL 画像プリセット]**&#x200B;をタップします。
+1. 「Experience Manager」で、Experience Managerロゴを選択してグローバルナビゲーションコンソールにアクセスし、「 」を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL 画像プリセット]**.
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
-1. プリセットを選択し、「**[!UICONTROL 編集]**」をクリックします。**[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
+1. プリセットを選択し、「 **[!UICONTROL 編集]**. **[!UICONTROL 画像プリセットを編集]**&#x200B;ウィンドウが開きます。
 1. 変更を加え、「**[!UICONTROL 保存]**」をクリックして変更を保存するか、「**[!UICONTROL キャンセル]**」をクリックして変更をキャンセルします。
 
 ## Dynamic Media 画像プリセットを公開する {#publishing-image-presets}
@@ -498,14 +498,14 @@ Dynamic Media — ハイブリッドモードを実行している場合は、�
 
 **Dynamic Media で画像プリセットを公開するには - ハイブリッドモード：**
 
-1. Experience Manager で、Experience Manager ロゴをタップまたはクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップまたはクリックして、**[!UICONTROL アセット]**／**[!UICONTROL 画像プリセット]**&#x200B;の順に移動します。
-1. 画像プリセットのリストから目的の画像プリセットを 1 つ以上選択し、「 」をクリックまたはタップします。 **[!UICONTROL 公開]**.
+1. Experience Managerで、Experience Managerのロゴをクリックしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをクリックして、に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL 画像プリセット]**.
+1. 画像プリセットのリストから目的の画像プリセットを 1 つ以上選択し、「 **[!UICONTROL 公開]**.
 1. 画像プリセットが公開されると、ステータスが非公開から公開済みに変わります。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## ダイナミックメディア画像プリセットを削除 {#deleting-image-presets}
 
-1. Experience Manager で、Experience Manager のロゴをタップまたはクリックして、グローバルナビゲーションコンソールにアクセスします。
-1. 「**[!UICONTROL ツール]**」アイコンをタップし、**[!UICONTROL アセット]**／**[!UICONTROL 画像プリセット]**&#x200B;に移動します。
-1. プリセットを選択し、「 **[!UICONTROL 削除]**. プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップして削除するか、「**[!UICONTROL キャンセル]**」をタップして中止します。
+1. Experience Managerで、Experience Managerのロゴをクリックして、グローバルナビゲーションコンソールにアクセスします。
+1. を選択します。 **[!UICONTROL ツール]** アイコンをクリックし、 **[!UICONTROL Assets]** > **[!UICONTROL 画像プリセット]**.
+1. プリセットを選択し、「 **[!UICONTROL 削除]**. プリセットを削除してよいか確認するメッセージが表示されます。選択 **[!UICONTROL 削除]** 削除または選択 **[!UICONTROL キャンセル]** を中止します。

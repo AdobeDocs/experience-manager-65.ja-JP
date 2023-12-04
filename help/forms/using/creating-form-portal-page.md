@@ -11,10 +11,10 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1661'
-ht-degree: 53%
+source-wordcount: '1666'
+ht-degree: 49%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 53%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 Formsポータルコンポーネントを使用すると、Web 開発者にAdobe Experience Manager(AEM) で作成された Web サイト上でフォームポータルを作成し、カスタマイズするためのコンポーネントが支給されます。 フォームポータルの概要については、 [ポータル上のフォーム発行の概要](../../forms/using/introduction-publishing-forms.md).
@@ -58,13 +58,13 @@ Document Services コンポーネントカテゴリの下にある Search &amp; 
 
 リストペインはフォームが一覧表示される領域です。検索とリスターコンポーネントでは各種の設定オプションが提供されており、リストウィンドウでフォームの表示を制御するのに使用します。
 
-リストウィンドウを設定するには、検索とリスターコンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。**[!UICONTROL 編集コンポーネント]**&#x200B;ダイアログが開きます。
+リストペインを設定するには、Search &amp; Lister コンポーネントを選択し、 ![settings_icon](assets/settings_icon.png). **[!UICONTROL 編集コンポーネント]**&#x200B;ダイアログが開きます。
 
 ![編集モードのリストペイン](assets/edit-list.png)
 
 編集モードのリストペイン
 
-「**編集**」ダイアログには複数のタブが含まれており、以下の表で説明される設定オプションを提供します。終わったら「**OK**」をタップして、設定を保存します。
+「**編集**」ダイアログには複数のタブが含まれており、以下の表で説明される設定オプションを提供します。選択 **OK** 設定を保存します（完了したら）。
 
 <table>
  <tbody>
@@ -177,7 +177,7 @@ Document Services コンポーネントカテゴリの下にある Search &amp; 
 
 Date Predicate コンポーネントを設定するには、次の手順を実行します。
 
-1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
+1. コンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
 1. 以下のプロパティを指定します。
 
    * **タイプ：**&#x200B;選択できるオプションは「**最終変更日**」のみです。
@@ -188,7 +188,7 @@ Date Predicate コンポーネントを設定するには、次の手順を実�
    * **終了日のラベル：**&#x200B;終了日フィールドのラベルまたはキャプションです。
    * **非表示：**&#x200B;デフォルトの日付フィルターを適用してフォームを一覧表示します。
 
-1. 「**OK**」をタップします。
+1. 選択 **OK**
 
 #### フルテキストの述語 {#full-text-predicate}
 
@@ -196,9 +196,9 @@ Full Text Predicate コンポーネントは、名前や説明などのフォー
 
 Full Text Predicate コンポーネントを設定するには、次の手順を実行します。
 
-1. コンポーネントをタップし、![ettings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
+1. コンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
 1. 「**メインタイトル**」フィールドにタイトルを指定します。
-1. タップ **OK**
+1. 選択 **OK**
 
 #### プロパティの述語 {#properties-predicate}
 
@@ -206,14 +206,14 @@ Properties Predicate コンポーネントは、タイトル、作成者、説�
 
 Properties Predicate コンポーネントを設定するには、次の手順を実行します。
 
-1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
+1. コンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
 1. 「一般」タブで、検索ラベルを指定します。 デフォルト値は、**プロパティ**&#x200B;です。
 
-1. 「オプション」タブで、「**アイテムの追加**」をタップします。
+1. 「オプション」タブで、「 **項目を追加します。**
 1. ドロップダウンリストからプロパティを選択し、ドロップダウンリストの下のフィールドでプロパティの検索ラベルを指定します。
 1. 手順 4 を繰り返してさらにプロパティを追加します。デフォルトのフィルター値を指定して、指定の条件に基づいてフォームをリスト表示したり、エンドユーザーごとに検索のプロパティを非表示にしたりできます。プロパティの「非表示」チェックボックスを選択し、デフォルトフィルター値を指定します。例えば、タイトルに「Travel」という文字を含むフォームを表示するには、「タイトル」プロパティ横の「非表示」を選択します。さらに、デフォルトフィルター値のテキストボックスで Travel と指定します。
 
-1. 「**OK**」をタップします。
+1. 選択 **OK**
 
 #### タグの述語 {#tags-predicate}
 
@@ -221,10 +221,10 @@ Tags Predicate コンポーネントは、Forms Manager で定義されたタグ
 
 Tags Predicate コンポーネントを設定するには：
 
-1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
-1. 「タグ」フィールド横の下向き矢印ボタンをタップします。
+1. コンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png). 編集ダイアログが開きます。
+1. 「タグ」フィールドの横にある下矢印ボタンを選択します。
 1. 適切なタグを選択します。
-1. 「**OK**」をタップします。
+1. 選択 **OK**
 
 選択したタグが、選択用のチェックボックスと共に検索パネルに表示されます。 ユーザーはこのタグに基づいて検索を絞り込めるようになります。
 

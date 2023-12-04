@@ -7,10 +7,10 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 58%
+source-wordcount: '480'
+ht-degree: 53%
 
 ---
 
@@ -40,4 +40,4 @@ HTML5 フォームの主なターゲットはタッチデバイスです。 そ�
 
 #### リッチテキスト形式 {#rich-text-format}
 
-テキストフィールドをリッチテキストフィールドに変換できます。テキストフィールドに書式設定オプションのリストを追加します。変換するには、Forms Designer を開き、 **[!UICONTROL デザインビュー]**&#x200B;のテキストフィールドをタップします。「**[!UICONTROL フィールド]**」タブで、**[!UICONTROL フィールドの形式]**&#x200B;ドロップダウンリストから「**[!UICONTROL リッチテキスト]**」を選択します。これで、XFA フォームが HTML5 フォームとしてレンダリングされると、そのフィールドはリッチテキストフィールドとしてレンダリングされます。「![最大化](assets/maximize_icon.svg)」をタップして、その他の書式設定オプションを表示します。
+テキストフィールドをリッチテキストフィールドに変換できます。テキストフィールドに書式設定オプションのリストを追加します。変換するには、Forms Designer を開き、 **[!UICONTROL デザインビュー]**. 「**[!UICONTROL フィールド]**」タブで、**[!UICONTROL フィールドの形式]**&#x200B;ドロップダウンリストから「**[!UICONTROL リッチテキスト]**」を選択します。これで、XFA フォームが HTML5 フォームとしてレンダリングされると、そのフィールドはリッチテキストフィールドとしてレンダリングされます。選択 ![最大化](assets/maximize_icon.svg) をクリックして、その他の書式設定オプションを表示します。

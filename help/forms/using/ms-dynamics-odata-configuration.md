@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 58%
+source-wordcount: '1207'
+ht-degree: 57%
 
 ---
 
@@ -117,12 +117,12 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
 **MS Dynamics OData Cloud Service（OData サービス）**&#x200B;の設定は、デフォルトの OData 設定に付属しています。Odata サービスを設定して Microsoft Dynamics サービスに接続するには、以下の手順を実行します。
 
-1. **[!UICONTROL ツール／クラウドサービス／データソース]**&#x200B;に移動し、`global` 設定フォルダーをタップします。
-1. 選択 **MS Dynamics ODataCloud Service（OData サービス）** 設定およびタップします。 **[!UICONTROL プロパティ]**. クラウドサービス設定プロパティダイアログが開きます。
+1. に移動します。 **[!UICONTROL ツール/Cloud Service/データソース]**&#x200B;をクリックし、 `global` 設定フォルダー。
+1. 選択 **MS Dynamics ODataCloud Service（OData サービス）** 設定および選択 **[!UICONTROL プロパティ]**. クラウドサービス設定プロパティダイアログが開きます。
 
    「**認証設定**」タブで、次のように設定します。
 
-   1. の値を入力します。 **サービスルート** フィールドに入力します。 Dynamics インスタンスの「**開発者向けリソース**」に移動し、「サービスルート」フィールドの値を表示します。例えば、https://&lt;tenant-name>/api/data/v9.1/ です。
+   1. 「**サービスルート**」フィールドの値を入力します。Dynamics インスタンスの「**開発者向けリソース**」に移動し、「サービスルート」フィールドの値を表示します。例えば、https://&lt;tenant-name>/api/data/v9.1/ です。
 
    1. 「**クライアント ID**」（「**アプリケーション ID**」とも呼ばれます）、「**クライアントの秘密鍵**」、「**OAuth URL**」、「**更新トークン URL**」、「**アクセストークン URL**」、「**リソース**」の各フィールドのデフォルト値を、Microsoft Dynamics サービス設定の値と置き換えます。Microsoft Dynamics をフォームデータモデルで構成するには、「**リソース**」フィールドで Dynamics インスタンスの URL を指定する必要があります。サービスルート URL を使用して、Dynamics インスタンスの URL を取得します。例えば、[https://org.crm.dynamics.com](https://org.crm.dynamics.com/) です。
 

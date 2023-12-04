@@ -1,17 +1,13 @@
 ---
 title: テンプレートとコンポーネントの作成および追加
-seo-title: Creating and Adding Templates and Components
 description: このページでは、テンプレートとコンポーネントを作成し、アプリに追加する方法について説明します。 このページでは、Geometrixx Unlimitedアプリを、サンプルのアプリテンプレートとページテンプレートを含むアプリとして使用しています。
-seo-description: Follow this page to learn about creating and adding templates and components to your app. The page uses Geometrixx Unlimited App as the app that contains a sample app template and page templates.
-uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1151'
 ht-degree: 3%
 
 ---
@@ -45,7 +41,7 @@ We.Unlimited App は、完全に設定可能で管理可能なAEM Mobile On-Dema
 アプリテンプレートに基づいてアプリを作成する手順は次のとおりです。
 
 1. AEM Mobileアプリカタログに移動します。 *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. 選択 **作成** —> **アプリ** 次に示すように
+1. 選択 **作成** -> **アプリ** 次に示すように
 
 このテンプレートを使用してアプリを作成したら、記事、バナー、コレクションをアプリに追加できます。 記事、バナー、コレクションを再度作成するには、 [コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
@@ -145,7 +141,7 @@ AEMテンプレートに従って、任意のデフォルトのプロパティ�
 **既存のコンポーネントを編集するには：**
 
 1. そのページを選択し、 **編集** モードとコンポーネントを選択します。
-1. レンチアイコンをタップして、コンポーネントを設定します。
+1. レンチアイコンを選択してコンポーネントを設定します。
 
 >[!NOTE]
 >

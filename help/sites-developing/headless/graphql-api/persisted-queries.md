@@ -2,10 +2,10 @@
 title: 永続的な GraphQL クエリ
 description: Adobe Experience ManagerでGraphQLクエリを保持してパフォーマンスを最適化する方法を説明します。 クライアントアプリケーションで HTTP GET メソッドを使用して永続クエリをリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュできるので、最終的にクライアントアプリケーションのパフォーマンスが向上します。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 97%
+source-wordcount: '1401'
+ht-degree: 95%
 
 ---
 
@@ -400,8 +400,8 @@ URL は次の部分に分解できます。
 1. パッケージ定義ダイアログの「**一般**」で、「wknd-persistent-queries」などの&#x200B;**名前**&#x200B;を入力します。
 1. 「1.0」のようなバージョン番号を入力します。
 1. 「**フィルター**」で、新しい&#x200B;**フィルター**&#x200B;を追加します。パスファインダーを使用して、設定の下にある `persistentQueries` フォルダーを選択します。例えば、 `wknd` フルパスの設定： `/conf/wknd/settings/graphql/persistentQueries`.
-1. 「**保存**」をタップして新しいパッケージ定義を保存し、ダイアログを閉じます。
-1. 新しく作成されたパッケージ定義で「**ビルド**」ボタンをタップします。
+1. 選択 **保存** 新しいパッケージ定義を保存し、ダイアログを閉じます。
+1. を選択します。 **ビルド** 」ボタンをクリックします。
 
 パッケージが構築されたら、次の操作を実行できます。
 

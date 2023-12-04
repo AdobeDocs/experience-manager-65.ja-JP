@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6489'
+source-wordcount: '6508'
 ht-degree: 90%
 
 ---
@@ -275,7 +275,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
    * 上記のパスをコピーしてツールバーの下の CRXDE Lite パスフィールドに貼り付け、`Enter` を押します。
 
-1. 左側のパネルで、`fileupload` を右クリックし、ポップアップメニューから「 **[!UICONTROL ノードをオーバーレイ]**」を選択します。
+1. 左側のレールで、右クリックします。 `fileupload`を選択し、ポップアップメニューから「 **[!UICONTROL ノードをオーバーレイ]**.
 
    ![「ノードをオーバーレイ」オプション](/help/assets/assets-dm/uploadassets15gb_a.png)
 
@@ -387,7 +387,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
    * 「**[!UICONTROL 有効]**」フィールドをダブルクリックします。デフォルトでは、すべてのアセットの MIME タイプが有効になって（**[!UICONTROL true]** に設定されて）います。これは、処理に関してアセットが Dynamic Media に同期されることを意味します。このアセットの MIME タイプを処理から除外する場合、この設定を **[!UICONTROL false]** に変更します。
 
-   * **[!UICONTROL jobParam]** をダブルタップして、関連するテキストフィールドを開きます。特定の MIME タイプに使用可能な、許可されている処理パラメーター値のリストについては、[サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types)を参照してください。
+   * ダブル選択 **[!UICONTROL jobParam]** をクリックして、関連するテキストフィールドを開きます。 特定の MIME タイプに使用可能な、許可されている処理パラメーター値のリストについては、[サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types)を参照してください。
 
 1. 次のいずれかの操作を行います。
 
@@ -441,7 +441,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. MIME タイプ `image_vnd.dwg` を選択したまま、「**[!UICONTROL プロパティ]**」タブの「**[!UICONTROL 有効]**」行で、「**[!UICONTROL 値]**」列見出しの値をダブルクリックして、「**[!UICONTROL 値]**」ドロップダウンリストを開きます。
+1. MIME タイプを使用 `image_vnd.dwg` 選択された状態 ( **[!UICONTROL プロパティ]** タブ、 **[!UICONTROL 有効]** 行、 **[!UICONTROL 値]** 列見出し、値をダブル選択して **[!UICONTROL 値]** 」ドロップダウンリストから選択できます。
 1. フィールドに `false` と入力します（または、ドロップダウンリストから「**[!UICONTROL false]**」を選択します）。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)

@@ -10,16 +10,16 @@ discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 feature: Adaptive Forms
 exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 39%
+source-wordcount: '592'
+ht-degree: 40%
 
 ---
 
 # アダプティブフォームコンポーネントのインラインスタイリング {#inline-styling-of-adaptive-form-components}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -32,8 +32,8 @@ ht-degree: 39%
 
 コンポーネントにインラインスタイルを追加するには、次の手順を実行します。
 
-1. フォームエディターでフォームを開き、モードをスタイルモードに変更します。 モードをスタイルモードに変更するには、ページツールバーで ![canvas-drop-down](assets/canvas-drop-down.png)／**スタイル**&#x200B;をタップします。
-1. ページ内のコンポーネントを選択し、編集ボタン ![edit-button](assets/edit-button.png) をタップします。スタイル設定プロパティがサイドバーに開きます。
+1. フォームエディターでフォームを開き、モードをスタイルモードに変更します。 モードをスタイルモードに変更するには、ページツールバーで、 ![キャンバスドロップダウン](assets/canvas-drop-down.png) > **スタイル**.
+1. ページ内のコンポーネントを選択し、「編集」ボタンを選択します。 ![edit-button](assets/edit-button.png). スタイル設定プロパティがサイドバーに開きます。
 
    サイドバーのフォーム階層ツリーからコンポーネントを選択することもできます。 フォーム階層ツリーは、サイドバーでフォームオブジェクトとして使用できます。
 
@@ -51,7 +51,7 @@ ht-degree: 39%
    * 詳細（コンポーネントのカスタム CSS を作成できます）
 
 1. 同様に、コンポーネントの他の部分（ウィジェット、キャプション、ヘルプなど）のスタイルを適用できます。
-1. 「**完了**」をクリックして変更を確定するか、または「**キャンセル**」をクリックして変更を破棄します。
+1. 選択 **完了** 変更を確定するか、 **キャンセル** 変更を破棄します。
 
 ## 例：フィールドコンポーネントのインラインスタイル {#example-inline-styles-for-a-field-component}
 
@@ -81,12 +81,12 @@ ht-degree: 39%
    <td><p>テキストボックス</p> </td>
    <td><p>背景色</p> </td>
    <td><p>#6495ED</p> </td>
-   <td><p>背景色を CornflowerBlue (#6495ED) に変更します。</p> <p>注意：値フィールドには、カラー名またはその 16 進コードを指定できます。</p> </td>
+   <td><p>背景色を CornflowerBlue (#6495ED) に変更します。</p> <p>注意：値フィールドには、色名またはその 16 進コードを指定できます。</p> </td>
   </tr>
   <tr>
    <td><p>ラベル</p> </td>
    <td><p>寸法と位置/幅</p> </td>
-   <td><p>100 px</p> </td>
+   <td><p>100px</p> </td>
    <td><p>ラベルの幅を 100 px に固定します</p> </td>
   </tr>
   <tr>

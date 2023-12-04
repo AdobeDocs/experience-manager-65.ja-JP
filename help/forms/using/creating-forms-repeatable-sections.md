@@ -9,16 +9,16 @@ topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 91%
+source-wordcount: '1139'
+ht-degree: 92%
 
 ---
 
 # 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 
@@ -28,7 +28,7 @@ ht-degree: 91%
 
 ## スクリプトを介したインスタンスマネージャーの使用 {#using-instance-manager-via-scripts-nbsp}
 
-1. 編集モードで、パネルを選択し、![cmppr](assets/cmppr.png) をタップします。サイドバーのプロパティで「**パネルを繰り返し可能にする**」を有効にします。「**[!UICONTROL 最大値]**」および「**[!UICONTROL 最小値]**」フィールドの値を指定します。
+1. 編集モードで、パネルを選択し、「 ![cmppr](assets/cmppr.png). サイドバーのプロパティで「**パネルを繰り返し可能にする**」を有効にします。「**[!UICONTROL 最大値]**」および「**[!UICONTROL 最小値]**」フィールドの値を指定します。
 
    「最大値」フィールドでは、パネルがそのページに表示される最大の回数を指定します。パネルの表示回数を制限しないように設定するには、「最大値」フィールドに「-1」を指定します。
 
@@ -40,7 +40,7 @@ ht-degree: 91%
 
 1. パネルの親要素に繰り返しを許可する場合は、繰り返し可能なパネルのインスタンスを管理するために、追加ボタンおよび削除ボタンが親要素に含まれている必要があります。親要素にボタンを挿入し、ボタン上のスクリプトを有効にするには、以下の手順を実行します。
 
-   1. サイドバーから、ボタンコンポーネントをパネルの親要素にドラッグ＆ドロップします。コンポーネントを選択して、「![編集ルール](assets/edit-rules.png)」をタップします。ルールエディターでボタンのルールが開きます。
+   1. サイドバーから、ボタンコンポーネントをパネルの親要素にドラッグ＆ドロップします。コンポーネントを選択し、「 」を選択します。 ![edit-rules](assets/edit-rules.png). ルールエディターでボタンのルールが開きます。
    1. ルールエディターウィンドウで、「**作成**」をクリックします。
 
       フォームオブジェクトと関数の行で、「**ビジュアルエディター**」を選択します。
@@ -60,7 +60,7 @@ ht-degree: 91%
 
       >[!NOTE]
       >
-      >フィールドが繰り返し可能なパネルに属する場合、スクリプトで名前を指定して直接アクセスすることはできません。フィールドにアクセスするには、`InstanceManager` の `instances` API を使用してフィールドが属している繰り返し可能インスタンスを指定します。`InstanceManager` の `instances` API を使用するための構文を以下に示します。
+      >フィールドが繰り返し可能なパネルに属する場合、スクリプトで名前を指定して直接アクセスすることはできません。フィールドにアクセスするには、`instances` の `InstanceManager` API を使用してフィールドが属している繰り返し可能インスタンスを指定します。`instances` の API `InstanceManager`を使用するための構文を以下に示します。
       >
       >
       >`<panelName>.instanceManager.instances[<instanceNumber>].<fieldname>`
@@ -100,8 +100,8 @@ ht-degree: 91%
 
 パネルには、様々なレイアウトオプションがあります。アコーディオンデザインオプションのレイアウトでは、繰り返し可能なパネルをすぐに使用できます。アコーディオンデザインオプションのレイアウトで繰り返し可能なパネルを使用するには、以下の手順を実行します。
 
-1. 繰り返しを許可するパネルの親で、![cmppr](assets/cmppr.png) をタップします。サイドバーにプロパティが表示されます。**レイアウト** ドロップダウンで、「**アコーディオン**」を選択します。
-1. 繰り返しを許可するパネルで、![cmppr](assets/cmppr.png) をタップします。サイドバーにパネルプロパティが表示されます。「**パネルを繰り返し可能にする**」タブを有効にし、「**最大値**」および「**最小値**」フィールドの値を指定します。
+1. 繰り返しを許可するパネルの親パネルで、 ![cmppr](assets/cmppr.png). サイドバーにプロパティが表示されます。**レイアウト** ドロップダウンで、「**アコーディオン**」を選択します。
+1. 繰り返しを許可するパネルで、 ![cmppr](assets/cmppr.png). サイドバーにパネルプロパティが表示されます。「**パネルを繰り返し可能にする**」タブを有効にし、「**最大値**」および「**最小値**」フィールドの値を指定します。
 
    これで、プラス（+）ボタンと削除（![delete-panel](assets/delete-panel.png)）ボタンを使用して、パネルの追加と削除を行うことができるようになりました。
 

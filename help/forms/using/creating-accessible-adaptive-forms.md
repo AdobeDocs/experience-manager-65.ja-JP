@@ -10,16 +10,16 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptive Forms
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2109'
-ht-degree: 89%
+source-wordcount: '2099'
+ht-degree: 88%
 
 ---
 
 # アクセシブルなアダプティブフォームの作成{#creating-accessible-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 ## はじめに {#introduction}
 
@@ -54,7 +54,7 @@ Ultramarine-Accessible テーマは、リファレンステーマです。これ
 
 1. テーマパッケージをダウンロードします。
 1. AEM インスタンスで **[!UICONTROL Experience Manager]**／**[!UICONTROL ナビゲーション]** ![ナビゲーション](assets/Smock_Compass_18_N.svg)／**[!UICONTROL Forms]** に移動します。
-1. **[!UICONTROL 作成]**／**[!UICONTROL ファイルのアップロード]**&#x200B;をタップします。Ultramarine-Accessible-Theme.zip ファイルを選択し、アップロードします。AEM インスタンスにテーマをアップロードします。
+1. 選択 **[!UICONTROL 作成]** > **[!UICONTROL ファイルのアップロード]**. Ultramarine-Accessible-Theme.zip ファイルを選択し、アップロードします。AEM インスタンスにテーマをアップロードします。
 
 ## アダプティブフォームをアクセス可能にする
 
@@ -65,8 +65,8 @@ Ultramarine-Accessible テーマは、リファレンステーマです。これ
 Ultramarine-Accessible テーマを既存のアダプティブフォームに適用します。テーマを適用するには：
 
 1. アダプティブフォームを編集用に開きます。
-1. コンポーネントを選択し、親アイコンをタップします。コンテキストメニューで、「**[!UICONTROL アダプティブフォームコンテナ]**」をタップし、設定アイコンをタップします。
-1. プロパティブラウザーで Ultramarine-Accessible テーマを選択し、「**[!UICONTROL 保存]**」アイコンをタップします。
+1. コンポーネントを選択し、親アイコンを選択します。 コンテキストメニューで、「 」を選択します。 **[!UICONTROL アダプティブフォームコンテナ]** 次に設定アイコンを選択します。
+1. プロパティブラウザーで「 Ultramarine-Accessible 」テーマを選択し、「 」を選択します。 **[!UICONTROL 保存]** アイコン。
 1. ブラウザーウィンドウを更新します。テーマはアダプティブフォームに適用されます。
 
 アクセシブルなテーマを適用した後、以下にリストされている追加の修正を実行します。これらの修正は、アクセシブルなテーマで扱われているアクセシビリティの修正に追加されます。
@@ -107,7 +107,7 @@ Ultramarine-Accessible テーマを既存のアダプティブフォームに適
 
 アクセシビリティオプションを使用するには、次の手順に従います。
 
-1. コンポーネントを選択して、![cmppr](assets/cmppr.png) をタップします。
+1. コンポーネントを選択し、 ![cmppr](assets/cmppr.png).
 1. サイドバーの&#x200B;**[!UICONTROL アクセシビリティ]**&#x200B;をクリックして、必要なアクセシビリティオプションを選択します。
 
 ### フォームコンポーネントのアクセシビリティオプション {#accessibility-options-in-form-components}
@@ -135,7 +135,7 @@ Ultramarine-Accessible テーマを既存のアダプティブフォームに適
 
 このテキストは、フォーム内のオブジェクトとその目的を説明する内容である必要があります。スクリーンリーダーが画像を検出すると、この代替テキストを読み上げます。画像には常に代替テキストを指定する必要があります。
 
-画像コンポーネントを選択し ![cmppr](assets/cmppr.png) をタップします。サイドバーのプロパティで、画像の代替テキストを指定します。
+画像コンポーネントを選択し、「 」を選択します。 ![cmppr](assets/cmppr.png). サイドバーのプロパティで、画像の代替テキストを指定します。
 
 ![画像の代替テキスト](assets/image-properties.png)
 
@@ -164,7 +164,7 @@ AEM Formsでは、次のキーボードショートカットを使用できま�
 | フォーム内の記入済みデータをリセットします。 | Alt + R |
 | フォームを送信します。 | Alt + S |
 
-さらに、アダプティブフォームの&#x200B;**[!UICONTROL 日付選択]**&#x200B;コンポーネントで使用できる様々なキーボードショートカットキーがあります。ショートカットキーを有効にするには、**[!UICONTROL 日付選択]**&#x200B;コンポーネントをタップし、「![設定](assets/configure-icon.svg)」をタップしてプロパティを開きます。「**[!UICONTROL パターン]**」セクションで、「**[!UICONTROL タイプ]**」および「**[!UICONTROL パターン]**」ドロップダウンリストを使用して、表示パターンを選択します。プロパティを保存して、**[!UICONTROL 日付選択]**&#x200B;コンポーネントのショートカットキーを使用できるようにします。
+さらに、アダプティブフォームの&#x200B;**[!UICONTROL 日付選択]**&#x200B;コンポーネントで使用できる様々なキーボードショートカットキーがあります。ショートカットキーを有効にするには、 **[!UICONTROL 日付選択]** コンポーネントと選択 ![設定](assets/configure-icon.svg) をクリックしてプロパティを開きます。 「**[!UICONTROL パターン]**」セクションで、「**[!UICONTROL タイプ]**」および「**[!UICONTROL パターン]**」ドロップダウンリストを使用して、表示パターンを選択します。プロパティを保存して、**[!UICONTROL 日付選択]**&#x200B;コンポーネントのショートカットキーを使用できるようにします。
 
 アダプティブフォームの日付選択コンポーネントでは、次のキーボードショートカットキーを使用できます。
 

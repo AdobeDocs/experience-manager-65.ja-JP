@@ -6,16 +6,16 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 11cbf865-c8e2-4833-b0b8-a3cb5e42f5cd
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 35%
+source-wordcount: '361'
+ht-degree: 43%
 
 ---
 
 # アダプティブフォームにおけるセパレータコンポーネント{#separator-component-in-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用したアダプティブFormsのオーサリングに関する古いアプローチについて説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用したアダプティブFormsのオーサリングに関する古いアプローチについて説明します。 </span>
 
 セパレーターコンポーネントを使用して、フォームのパネルを視覚的に区別することができます。区切り文字コンポーネントの次のプロパティを指定することで、区切り文字コンポーネントの全体的な外観とスタイルを定義できます。
 
@@ -30,7 +30,7 @@ ht-degree: 35%
 
 区切り文字コンポーネントのプロパティを指定するには：
 
-1. セパレーターコンポーネントを選択して、![cmppr](assets/cmppr.png) をタップします。プロパティがサイドバーに開きます。
+1. 区切り文字コンポーネントを選択し、「 」を選択します。 ![cmppr](assets/cmppr.png). プロパティがサイドバーに開きます。
 1. インライン CSS プロパティセクションのタブをクリックして、CSS プロパティを指定できます。 例： a.「フィールド」タブで、 **項目を追加**. 2 つのフィールドを持つ行が追加されます。
 1. 左側の最初のフィールドで、適用する CSS3 プロパティを指定します。 例： **ボーダー**. 下向き矢印ボタンをクリックしてプロパティを選択することもできます。 ドロップダウンリストに含まれるプロパティがすべてではなく、サポートされている CSS3 プロパティの名前をこのフィールドで指定できます。
 1. 隣接するフィールドで、指定した CSS3 プロパティに有効な値を指定します。 例： **3 px 実線（黒）**.

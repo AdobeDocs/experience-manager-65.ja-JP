@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 74%
+ht-degree: 71%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 74%
 
 1. アダプティブフォームを&#x200B;**[!UICONTROL 編集]**&#x200B;モードで開きます。
 
-1. 「**[!UICONTROL コンテンツ]**」タブで、**[!UICONTROL フォームコンテナ]**&#x200B;をタップし、![設定](assets/configure-icon.svg)をタップして、アダプティブフォームのプロパティを表示します。
+1. Adobe Analytics の **[!UICONTROL コンテンツ]** タブ、選択 **[!UICONTROL フォームコンテナ]** を選択し、 ![設定](assets/configure-icon.svg) をクリックして、アダプティブフォームのプロパティを表示します。
 
 1. 「**[!UICONTROL 送信]**」セクションで、**[!UICONTROL 送信アクション]**&#x200B;ドロップダウンリストから「**[!UICONTROL メールを送信]**」を選択します。
 

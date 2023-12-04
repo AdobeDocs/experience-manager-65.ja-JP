@@ -7,16 +7,16 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms
 exl-id: bd0589e2-b15a-4f0e-869c-2da4760b1ff4
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '781'
 ht-degree: 70%
 
 ---
 
 # アダプティブフォームの非同期送信{#asynchronous-submission-of-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -33,14 +33,14 @@ ht-degree: 70%
 
 アダプティブフォームの非同期送信を設定するには、次の手順を実行します。
 
-1. アダプティブフォームのオーサリングモードで、フォームコンテナオブジェクトを選択し、![cmppr1](assets/cmppr1.png) をタップしてプロパティを開きます。
+1. アダプティブフォームのオーサリングモードで、フォームコンテナオブジェクトを選択し、 ![cmppr1](assets/cmppr1.png) をクリックしてプロパティを開きます。
 1. 「**[!UICONTROL 送信]**」プロパティセクションで、「**[!UICONTROL 非同期送信を使用]**」を有効にします。
 1. 「**[!UICONTROL 送信時]**」セクションで、フォームが正常に送信された場合に実行するオプションを以下のどちらかから選択します。
 
    * **[!UICONTROL URL にリダイレクト]**：フォームの送信時に、指定の URL またはページにリダイレクトされます。「**[!UICONTROL リダイレクト URL / パス]**」フィールドで URL を指定することも、ページのパスを参照して選択することもできます。
    * **[!UICONTROL メッセージを表示]**：フォームの送信時にメッセージを表示します。「メッセージを表示」オプションの下のテキストフィールドにメッセージを入力できます。このテキストフィールドは、リッチテキスト形式をサポートします。
 
-1. ![check-button1](assets/check-button1.png) をタップしてプロパティを保存します。
+1. 選択 ![check-button1](assets/check-button1.png) をクリックしてプロパティを保存します。
 
 ## 非同期送信の仕組み {#how-asynchronous-submission-works}
 
@@ -102,9 +102,9 @@ AEM Forms には、すぐに使用できる、フォーム送信の成功およ�
 
 成功イベントとエラーイベントを処理するためのルールをコードエディターで記述するには、以下の手順を実行します。
 
-1. アダプティブフォームをオーサリングモードで開いて、任意のフォームオブジェクトを選択し、![edit-rules1](assets/edit-rules1.png) をタップしてルールエディターを開きます。
-1. フォームオブジェクトツリーで「**[!UICONTROL フォーム]**」選択し、「**[!UICONTROL 作成]**」をタップします。
+1. アダプティブフォームをオーサリングモードで開き、任意のフォームオブジェクトを選択して、 ![edit-rules1](assets/edit-rules1.png) をクリックして、ルールエディターを開きます。
+1. 選択 **[!UICONTROL フォーム]** フォームオブジェクトツリーで「 」を選択し、 **[!UICONTROL 作成]**.
 1. 選択 **[!UICONTROL コードエディター]** 「モード選択」ドロップダウンから、次の操作をおこないます。
-1. コードエディターで、 **[!UICONTROL コードを編集]**. タップ **[!UICONTROL 編集]** をクリックします。
+1. コードエディターで、「 **[!UICONTROL コードを編集]**. 選択 **[!UICONTROL 編集]** をクリックします。
 1. 選択 **[!UICONTROL 送信成功]** または **[!UICONTROL 送信中にエラーが発生しました]** から **[!UICONTROL イベント]** 」ドロップダウンリストから選択できます。
-1. 選択したイベントのルールを作成してをタップします。 **[!UICONTROL 完了]** 」と入力してルールを保存します。
+1. 選択したイベントのルールを作成し、「 」を選択します。 **[!UICONTROL 完了]** 」と入力してルールを保存します。

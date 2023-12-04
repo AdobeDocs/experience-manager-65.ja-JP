@@ -7,16 +7,16 @@ content-strategy: max-2018
 docset: aem65
 feature: Adaptive Forms
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '6106'
-ht-degree: 81%
+source-wordcount: '6084'
+ht-degree: 80%
 
 ---
 
 # テーマの作成および使用 {#creating-and-using-themes}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -228,7 +228,7 @@ AEM Formsにはテーマエディターが付属しています。 テーマエ�
 
   また、サイドバーの下部に矢印が表示されます。矢印をクリックすると、「**成功をシミュレート**」と「**エラーをシミュレート」という 2 つのオプションがさらに表示されます。**&#x200B;これらのオプションは、上記のオプションと合わせて、詳細が[下記](../../forms/using/themes.md#using-rail)で説明されています。
 
-[![ レールとキャンバスがハイライトされたテーマエディター](assets/themes.png)](assets/themes-1.png) **A.** サイドバー **B.** キャンバス
+[![パネルとキャンバスがハイライト表示されたテーマエディター。](assets/themes.png)](assets/themes-1.png) **A.** サイドバー **B.** キャンバス
 
 ### コンポーネントのスタイル設定 {#styling-components}
 
@@ -362,7 +362,7 @@ AEM Formsのテーマは、フォームとインタラクティブ通信のパ�
 * **数値ボックスウィジェット**：サイドバーで外観をカスタマイズするコンポーネントを選択できます。
 * **フィールドウィジェット**：スタイル設定の汎用コンポーネントを選択できます。この例では、スタイル設定にすべてのテキスト入力コンポーネント（テキストボックス／数値ボックス／数値ステッパー／日付入力）が選択されています。
 
-* ![field-level](assets/field-level.png)：スタイル設定のために、汎用コンポーネントに切り替えることができます。数値ボックスを選択してこのアイコンをタップすると、フィールドコンポーネントが選択されます。フィールドコンポーネントを選択してこのアイコンをタップすると、パネルが選択されます。このアイコンをタップし続けると、最終的にスタイル設定用のレイアウトが選択されます。
+* ![field-level](assets/field-level.png)：スタイル設定のために、汎用コンポーネントに切り替えることができます。数値ボックスを選択してこのアイコンを選択すると、フィールドコンポーネントが選択されます。 フィールドコンポーネントを選択してこのアイコンを選択すると、パネルが選択されます。 このアイコンをタップし続けると、最終的にスタイル設定用のレイアウトが選択されます。
 
 >[!NOTE]
 >
@@ -449,7 +449,7 @@ AEM Formsのテーマは、フォームとインタラクティブ通信のパ�
 1. 数値ボックスを選択すると、オプションが 3 つあるコンポーネントツールバーが表示されます。
 
    * **数値ボックスウィジェット**
-   * **フィールドウィジェット**![フィールドレベル](assets/field-level.png)
+   * **フィールドウィジェット** ![フィールドレベル](assets/field-level.png)
 
 1. **数値ボックスウィジェット** を選択します。
 1. サイドバーのタイトルが「数値ボックスウィジェット」に変わり、外観をカスタマイズするオプションが表示されます。サイドバーの「**寸法と位置**」オプションを使用して、コンポーネントのサイズをカスタマイズします。状態が&#x200B;**デフォルト**&#x200B;であることを確認してください。
@@ -585,7 +585,7 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 
 1. オーサーインスタンスで、**Adobe Experience Manager／Forms／テーマ**&#x200B;に移動します。
 1. テーマライブラリフォルダーを開きます。
-1. テーマライブラリフォルダーで、対応するすぐに使用可能なテーマにポインターを置いて、「**コピー**」をタップします。
+1. Theme Library フォルダーで、対応する標準のテーマの上にマウスポインターを置いて、「 」を選択します。 **コピー**.
 1. コピーしたテーマをテーマライブラリフォルダーの外部に貼り付けます。
 1. コピーしたテーマをカスタマイズします。
 

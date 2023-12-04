@@ -9,10 +9,10 @@ docset: aem65
 feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4275'
-ht-degree: 98%
+source-wordcount: '4130'
+ht-degree: 97%
 
 ---
 
@@ -262,7 +262,7 @@ Experience Manager Assets に含まれる、デフォルトの標準提供イン
 
    * 画像を選択して、詳細ビューページで開きます。ツールバーの「**[!UICONTROL 編集]**」を選択します。
 
-1. ページの左上隅にある「**[!UICONTROL ホットスポットを追加]**」（指先アイコン）を選択して、ホットスポット管理ページを開きます。
+1. ページの左上隅にある「 **[!UICONTROL ホットスポットを追加]** （指で選択アイコン）をクリックして、ホットスポット管理ページを開きます。
 1. ページの左上隅にある「**[!UICONTROL ホットスポット]**」を選択します。
 
    1. ホットスポット管理ページの左上隅にある「**[!UICONTROL ホットスポット]**」を選択します。

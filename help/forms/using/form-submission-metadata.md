@@ -10,16 +10,16 @@ discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 51%
+source-wordcount: '740'
+ht-degree: 53%
 
 ---
 
 # ユーザーデータからフォーム送信メタデータへの情報の追加{#adding-information-from-user-data-to-form-submission-metadata}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 フォームの要素に入力された値を使用して、ドラフトまたはフォーム送信のメタデータフィールドを計算できます。 メタデータを使用すると、ユーザーデータに基づいてコンテンツをフィルタリングできます。 例えば、ユーザーがフォームの名前フィールドに John Doe と入力したとします。 この情報を使用してメタデータを計算することにより、この送信をイニシャル JD の下に分類できます。
 
@@ -34,8 +34,8 @@ ht-degree: 51%
 フォーム要素をメタデータに追加するには、次の手順を実行します。
 
 1. アダプティブフォームを編集モードで開きます。\
-   フォームを編集モードで開くには、Forms Manager でフォームを選択して、「**開く**」をタップします。
-1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)／**アダプティブフォームコンテナ**&#x200B;をタップしてから、![cmppr](assets/cmppr.png) をタップします。
+   フォームを編集モードで開くには、フォームマネージャーでフォームを選択し、「 **開く**.
+1. 編集モードで、コンポーネントを選択し、「 」を選択します。 ![フィールドレベル](assets/field-level.png) > **アダプティブフォームコンテナ**&#x200B;を選択し、 ![cmppr](assets/cmppr.png).
 1. サイドバーで、 **メタデータ**.
 1. 「メタデータ」セクションで、 **追加**.
 1. スクリプトを追加するには、「メタデータ」タブの「値」フィールドを使用します。 追加したスクリプトは、フォーム上の要素からデータを収集し、メタデータに入力される値を計算します。

@@ -11,10 +11,10 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4031'
-ht-degree: 18%
+source-wordcount: '4024'
+ht-degree: 17%
 
 ---
 
@@ -132,7 +132,7 @@ TODO リストからタスクを開いたときに、リストが共有されて
 
 1. 任意のタブで、次のいずれかのボタンをクリックします。
 
-   * **送る**
+   * **進む**
    * **共有**
    * **相談**
 
@@ -186,7 +186,7 @@ TODO リストからタスクを開いたときに、リストが共有されて
 
 ### タスクを完了せずに作業内容を保存する {#save-your-work-without-completing-the-task}
 
-1. 任意のタブで、「**保存**」をクリックします。
+1. 任意のタブで、「 」を選択します。 **保存**.
 
    [ 下書きとして保存 ] ダイアログが表示されます。 ドラフトのデフォルト名は、タスクテンプレートのタスク名です。
 
@@ -199,7 +199,7 @@ TODO リストからタスクを開いたときに、リストが共有されて
    >
    >詳しくは、[環境設定の管理](/help/forms/using/getting-started-livecycle-html-workspace.md)の「ドラフトを定期的に保存」を参照してください。
 
-1. ドラフトとして保存ダイアログで、タスクに一意の名前を指定して、「**OK**」をタップします。
+1. ドラフトとして保存ダイアログで、タスクの一意の名前を指定し、「 」を選択します。 **OK**.
 
    ![saveasdraftdialog_name](assets/saveasdraftdialog_name.png)
 

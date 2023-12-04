@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2475'
-ht-degree: 92%
+source-wordcount: '2459'
+ht-degree: 93%
 
 ---
 
 # アダプティブフォームのテーブル{#tables-in-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -77,7 +77,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 情報がどのように整理されているか、スクリーンリーダーが解釈し、読み出すことのできる説明を、テーブルに追加できます。説明を追加するには、以下の手順を実行します。
 
-1. テーブルを選択して ![cmppr](assets/cmppr.png) をタップし、サイドバーにプロパティを表示します。
+1. テーブルを選択し、「 」を選択します。 ![cmppr](assets/cmppr.png) をクリックして、サイドバーにプロパティを表示します。
 1. 「アクセシビリティ」タブで概要を指定します。
 1. 「**完了**」をクリックします。
 
@@ -95,9 +95,9 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 並べ替えを有効にするには、以下の手順を実行します。
 
-1. テーブルを選択し、![configure_icon](assets/configure_icon.png)（設定）をタップします。インタラクティブ通信のサイドキックにある&#x200B;**コンテンツ**&#x200B;ブラウザーを使用して、テーブルを選択することもできます。
+1. テーブルを選択し、「 」を選択します。 ![configure_icon](assets/configure_icon.png) （設定）を参照してください。 インタラクティブ通信のサイドキックにある&#x200B;**コンテンツ**&#x200B;ブラウザーを使用して、テーブルを選択することもできます。
 1. 「**並べ替えを有効にする**」を選択します。
-1. ![done_icon](assets/done_icon.png) をタップして、テーブルのプロパティを保存します。列ヘッダー内の並べ替えアイコンの上向き矢印と下向き矢印は、並べ替えが有効になっていることを表します。
+1. 選択 ![done_icon](assets/done_icon.png) をクリックして、テーブルのプロパティを保存します。 列ヘッダー内の並べ替えアイコンの上向き矢印と下向き矢印は、並べ替えが有効になっていることを表します。
 
    ![並べ替えを有効にする](assets/enable_sorting_new.png)
 
@@ -116,7 +116,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 テーブルの列幅を設定するには、次の手順を実行します。
 
-1. 「**[!UICONTROL コンテンツ]**」タブで、 **[!UICONTROL テーブル]**&#x200B;コンポーネントをタップし、設定（![設定](assets/configure-icon.svg)）アイコンをタップします。
+1. Adobe Analytics の **[!UICONTROL コンテンツ]** タブで、 **[!UICONTROL テーブル]** コンポーネントを選択し、設定 (![設定](assets/configure-icon.svg))icon.
 
 1. 「**[!UICONTROL 列幅]**」フィールドに値のコンマ区切りリストを入力して、テーブルの各列の比例する幅を指定します。例えば、3 つの列を含むテーブルの場合、「**[!UICONTROL 列幅]**」フィールドの値で 2、4、6 を指定すると、1 列目の幅は 2/12、2 列目は 4/12、3 列目は 6/12 に設定されます。最初の列の幅である 2/12 は、テーブル幅の 6 分の 1 を表します。同様に、4/12 は 2 番目の列の幅をテーブル幅の 3 分の 1 に設定し、6/12 は 3 番目の列の幅をテーブル幅の半分に設定します。
 
@@ -124,9 +124,10 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 ページツールバーでスタイルモードを使用することで、テーブルのスタイルを定義できます。以下の手順を実行して、スタイルモードに切り替え、テーブルのスタイルを編集します。
 
-1. ページツールバーで、プレビューの前に、![canvas-drop-down](assets/canvas-drop-down.png)／**スタイル**&#x200B;をタップします。
+1. ページツールバーで、「プレビュー」の前に「 ![キャンバスドロップダウン](assets/canvas-drop-down.png) > **スタイル**.
 
-1. サイドバーでテーブルを選択し、編集ボタン ![edit-button](assets/edit-button.png) をタップします。サイドバーにスタイルプロパティが表示されます。
+1. サイドバーでテーブルを選択し、「編集」ボタンを選択します。 ![edit-button](assets/edit-button.png).
+サイドバーにスタイルプロパティが表示されます。
 
 ![テーブルのスタイルプロパティ](assets/style-table.png)
 
@@ -138,7 +139,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 テーブルには、実行時の動的な行の追加および削除のサポートがあらかじめ含まれています。
 
-1. テーブルの行を選択して ![cmppr](assets/cmppr.png) をタップします。
+1. テーブルの行を選択し、「 」を選択します。 ![cmppr](assets/cmppr.png).
 1. 「設定を繰り返し」タブで、テーブルの行の数を制限する最大値と最小値を指定します。
 1. 「**完了**」をクリックします。
 
@@ -306,7 +307,7 @@ XFA のテーブル要素はテーブルコンポーネントにマッピング�
 
 >[!NOTE]
 >
->XDP テーブルコンポーネント、サブフォーム、または XSD 複合型の要素の数は、行のセル数を超えることはできません。 例えば、セルが 3 つしかない行に、4 つの要素をドロップすることはできません。これは、エラーとなります。
+>XDP テーブルコンポーネント（サブフォーム）または XSD 複合タイプ内の要素の数は、行内のセルの数を超えることはできません。例えば、セルが 3 つしかない行に、4 つの要素をドロップすることはできません。これは、エラーとなります。
 >
 >要素数が行内のセルの数より少ない場合、要素に基づいたセルが新しい行にまず追加され、その後、行内の残りのセルに入力するためにデフォルトのセルが追加されます。例えば、3 つの要素のグループを 4 つのセルを持つ行にドロップした場合、最初の 3 つのセルはドロップされた要素に基づくセルとなり、残りの 1 つのセルはテーブルのデフォルトのセルになります。
 

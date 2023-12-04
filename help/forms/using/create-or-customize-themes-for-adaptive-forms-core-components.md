@@ -7,10 +7,10 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1971'
-ht-degree: 11%
+source-wordcount: '1933'
+ht-degree: 9%
 
 ---
 
@@ -69,9 +69,9 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 ### テーマをカスタマイズするための前提条件 {#prerequisites}
 
-* [環境でのアダプティブフォームコアコンポーネントの有効化.](/help/forms/using/enable-adaptive-forms-core-components.md)
+* [アダプティブFormsコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md) 環境に適用されます。
 
-* [Apache Maven の最新リリースをインストールします。](https://maven.apache.org/download.cgi) Apache Maven は、Java™プロジェクトで一般的に使用されるビルド自動化ツールです。 最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
+* 最新リリースのをインストールする [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven は、Java™プロジェクトで一般的に使用されるビルド自動化ツールです。 最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
 
 * を作成する方法を学ぶ [Adobe Experience Managerのクライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja). AEMはクライアントライブラリを提供します。このライブラリを使用すると、クライアントサイドコードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。
 
@@ -145,8 +145,8 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 The `variable.scss` ファイルには、テーマのグローバル変数が含まれます。 これらの変数を更新すると、テーマレベルでスタイル関連の変更を行うことができます。 テーマレベルのスタイルを適用するには、次の手順に従います。
 
-1. `<your-theme-sources>/src/site/_variables.scss` ファイルを編集用に開きます。
-1. 任意のプロパティの値を変更します。 例えば、デフォルトのエラー色は赤です。 エラーの色を赤から青に変更するには、 `$error`変数を使用します。 例：`$error: #196ee5`
+1. を開きます。 `<your-theme-sources>/src/site/_variables.scss` ファイルを編集します。
+1. 任意のプロパティの値を変更します。 例えば、デフォルトのエラー色は赤です。 エラーの色を赤から青に変更するには、 `$error`変数を使用します。 例：`$error: #196ee5`。
 
    ![例：エラーの色を青に設定](/help/forms/using/assets/theme-level-changes.png)
 
@@ -233,7 +233,7 @@ To apply and test the customized theme with an Adaptive Form:
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
@@ -247,7 +247,7 @@ An Adaptive Form with the selected theme is created.
 
 1. Log in to your AEM Forms author instance. 
 
-1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
+1. Select **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
 1. Select an Adaptive Form and click Properties. 
 
@@ -266,7 +266,7 @@ The selected theme is applied to the Adaptive Form.
 1. パッケージマネージャーを開きます。 デフォルトの URL は `https://localhost:4502/crx/packmgr/index.jsp` です。
 1. クリック **パッケージをアップロード** をクリックします。 **参照**.
 1. に移動して選択します。 `[AEM Archetype Project Folder]\all\target[appid].all-[version].zip`. クリック **開く**.
-1. 「インストール」をクリックします。すべての実稼動環境でこの手順を繰り返します。
+1. 「インストール」をクリックします。 すべての実稼動環境でこの手順を繰り返します。
 
 
 パッケージがインストールされると、テーマを選択できるようになります。
@@ -283,8 +283,8 @@ The selected theme is applied to the Adaptive Form.
 アダプティブフォームにテーマを適用する手順は次のとおりです。
 
 1. ローカルのAEMオーサーインスタンスにログインします。
-1. Experience Manager のログインページに資格情報を入力します。**Adobe Experience Manager**／**Forms**／**フォームとドキュメント**&#x200B;の順にタップします。
-1. **作成**／**アダプティブフォーム**&#x200B;の順にクリックします。
+1. Experience Manager のログインページに資格情報を入力します。選択 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**.
+1. クリック **作成** > **アダプティブForms**.
 1. アダプティブFormsコアコンポーネントテンプレートを選択し、 **次へ**. The **プロパティを追加** 現在
 1. 次を指定します。 **名前** アダプティブフォームに適用されます。
 
@@ -336,4 +336,4 @@ The selected theme is applied to the Adaptive Form.
 * [コアコンポーネントベースのアダプティブFormsのテーマを作成またはカスタマイズする](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [コアコンポーネントベースのアダプティブFormsのテンプレートを作成する](template-editor.md)
 * [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [サンプルのテーマテンプレートとフォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
+* [サンプルのテーマ、テンプレートおよびフォームデータモデル](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=ja)

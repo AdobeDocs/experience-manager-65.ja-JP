@@ -4,10 +4,10 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4603'
-ht-degree: 66%
+source-wordcount: '4501'
+ht-degree: 65%
 
 ---
 
@@ -79,11 +79,11 @@ ht-degree: 66%
 ### ソフトウェア配布から {#from-software-distribution}
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
+1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. **we-gov-forms.pkg.all-&lt;version>.zip** パッケージ名をタップし、「**[!UICONTROL EULA 条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
+1. を選択します。 **we-gov-forms.pkg.all-&lt;version>.zip** パッケージ名、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
 
@@ -330,7 +330,7 @@ ht-degree: 66%
 
    ![Dynamics CRM FDM のプロパティ](assets/aftia-update-data-source.jpg)
 
-1. 「**保存して閉じる**」をクリックします。
+1. クリック **保存して閉じる**.
 
 1. [サービスのテスト](work-with-form-data-model.md#test-data-model-objects-and-services)を行い、設定したデータソースに正常に接続できることを確認します。
 

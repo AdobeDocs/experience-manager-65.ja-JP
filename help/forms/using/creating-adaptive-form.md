@@ -5,16 +5,16 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 654dcb7c9bbb73420df7494b21fddb8cb4fdd39a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1936'
-ht-degree: 58%
+source-wordcount: '1923'
+ht-degree: 52%
 
 ---
 
 # アダプティブフォームの作成 {#creating-an-adaptive-form}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -29,14 +29,14 @@ ht-degree: 58%
 
 1. Experience Manager のログインページに資格情報を入力します。
 
-   ログイン後、左上隅の **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;をタップします。
+   ログイン後、左上隅の「 」を選択します。 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**.
 
    >[!NOTE]
    >
    >デフォルトのインストールでは、ログインは `admin`、パスワードは `admin` に設定されています。
 
-1. 「**[!UICONTROL 作成]**」をタップして、「**[!UICONTROL アダプティブフォーム]**」を選択します。
-1. テンプレートを選択するためのオプションが表示されます。テンプレートについて詳しくは、「[アダプティブフォームのテンプレート](creating-adaptive-form.md#p-adaptive-form-templates-p)」を参照してください。テンプレートをタップして選択し、「次へ」をタップします。
+1. 選択 **[!UICONTROL 作成]** を選択し、 **[!UICONTROL アダプティブフォーム]**.
+1. テンプレートを選択するためのオプションが表示されます。テンプレートについて詳しくは、「[アダプティブフォームのテンプレート](creating-adaptive-form.md#p-adaptive-form-templates-p)」を参照してください。テンプレートを選択して選択し、「次へ」を選択します。
 1. 「プロパティの追加」オプションが表示されます。以下のプロパティフィールドの値を指定します。「タイトル」フィールドと「ドキュメント名」フィールドは必須です。
 
    * **[!UICONTROL タイトル：]**&#x200B;フォームの表示名を指定します。タイトルを指定すると、[!DNL Experience Manager Forms] ユーザーインターフェイス内のフォームを特定しやすくなります。
@@ -53,13 +53,13 @@ ht-degree: 58%
 
    これらは、**[!UICONTROL プロパティを追加]**&#x200B;ページの「**[!UICONTROL フォームモデル]**」タブから設定できます。デフォルトで選択されているフォームモデルは、「**[!UICONTROL なし]**」です。
 
-1. 「**[!UICONTROL 作成]**」をタップします。アダプティブフォームが作成され、編集用フォームを開くためのダイアログが表示されます。
+1. 「**[!UICONTROL 作成]**」を選択します。アダプティブフォームが作成され、編集用フォームを開くためのダイアログが表示されます。
 
    すべてのプロパティを指定した後、「**[!UICONTROL 作成]**」をクリックします。アダプティブフォームが作成され、編集用フォームを開くためのダイアログが表示されます。
 
    すべてのプロパティを指定した後、「**[!UICONTROL 作成]**」をクリックします。アダプティブフォームが作成され、編集用フォームを開くためのダイアログが表示されます。
 
-1. 「**[!UICONTROL 開く]**」をタップし、新しく作成されたフォームを新しいタブで開きます。フォームが編集用に開かれ、テンプレート内の利用可能なコンテンツが表示されます。新しく作成されたフォームを必要に応じてカスタマイズするためのサイドバーも表示されます。
+1. 選択 **[!UICONTROL 開く]** をクリックして、新しく作成されたフォームを新しいタブで開きます。 フォームが編集用に開かれ、テンプレート内の利用可能なコンテンツが表示されます。新しく作成されたフォームを必要に応じてカスタマイズするためのサイドバーも表示されます。
 
    アダプティブフォームのタイプに基づいて、関連する XFA フォームテンプレート、XML スキーマ、JSON スキーマに存在するフォーム要素が **[!UICONTROL データモデルオブジェクト]** タブ **[!UICONTROL コンテンツブラウザー]** サイドバーに表示されます。 また、これらの要素をドラッグ&amp;ドロップしてアダプティブフォームを作成することもできます。
 
@@ -79,7 +79,7 @@ ht-degree: 58%
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
-1. 「**[!UICONTROL フォームデータモデルを選択]**」をタップして展開します。使用可能なすべてのフォームデータモデルが表示されます。
+1. 選択して展開 **[!UICONTROL フォームデータモデルを選択]**. 使用可能なすべてのフォームデータモデルが表示されます。
 
    データモデルからを選択します。
 
@@ -120,12 +120,12 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 
 アダプティブフォームのフォームモデルとして XML スキーマまたは JSON スキーマを使用するには、以下を行ってください。
 
-1. アダプティブフォーム作成ページの&#x200B;**[!UICONTROL プロパティを追加]**&#x200B;ステップで、「**[!UICONTROL フォームモデル]**」タブをタップします。
+1. 次の日： **[!UICONTROL プロパティを追加]** アダプティブフォーム作成ページの手順で、「 **[!UICONTROL フォームモデル]** タブをクリックします。
 1. 「フォームモデル」のタブで、 **[!UICONTROL 次から選択]** ドロップダウンから「**[!UICONTROL スキーマ]**」を選択します。
 
-1. 「**[!UICONTROL スキーマを選択]**」をタップして、以下のいずれかの操作を行います。
+1. 選択 **[!UICONTROL スキーマを選択]** 次のいずれかの操作を行います。
 
-   * **[!UICONTROL ディスクからアップロード]** - このオプションを選択して、「スキーマ定義をアップロード」をタップし、ファイルシステムから XML スキーマまたは JSON スキーマを参照してアップロードします。アップロードされたスキーマファイルはフォームと共に存在し、他のアダプティブフォームからはアクセスできません。
+   * **[!UICONTROL ディスクからアップロード]**  — このオプションを選択し、「スキーマ定義をアップロード」を選択して、ファイルシステムから XML スキーマまたは JSON スキーマを参照およびアップロードします。 アップロードされたスキーマファイルはフォームと共に存在し、他のアダプティブフォームからはアクセスできません。
    * **[!UICONTROL リポジトリーを検索]** - このオプションを選択して、リポジトリーで使用できるスキーマ定義ファイルのリストから選択します。XML または JSON スキーマファイルをフォームモデルとして選択します。選択したスキーマが参照されてフォームに関連付けられ、他のアダプティブフォームからアクセスして使用できるようになります。
 
    >[!CAUTION]
@@ -135,7 +135,7 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
    ![XML または JSON スキーマの選択](assets/upload-schema.png)
    **図**：*XML または JSON スキーマの選択*
 
-1. （XML スキーマのみ）XML スキーマを選択またはアップロードした後、選択した XSD ファイルのルートエレメントを指定してアダプティブフォームにマッピングします。
+1. （XML スキーマのみ）XML スキーマを選択またはアップロードした後、選択した XSD ファイルのルート要素を指定してアダプティブフォームにマッピングします。
 
    ![XSD ルート要素の選択](assets/xsd-root-element.png)
    **図**：*XSD ルート要素の選択*
@@ -146,7 +146,7 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 
 ## アダプティブフォームテンプレート {#adaptive-form-templates}
 
-テンプレートは基本的な構造を提供し、アダプティブフォームの外観（レイアウトとスタイル）を定義します。 これには、特定のプロパティやコンテンツ構造を有するフォーマット済みのコンポーネントが含まれます。<!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
+テンプレートは基本的な構造を提供し、アダプティブフォームの外観（レイアウトとスタイル）を定義します。 これには、特定のプロパティとコンテンツ構造を含む、事前に形式設定されたコンポーネントが含まれています。 <!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
 
 さらに、テンプレートエディターを使用して独自のテンプレートを作成できます。 テンプレートの操作について詳しくは、 [アダプティブフォームテンプレート](template-editor.md).
 
@@ -158,13 +158,13 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 
 アダプティブフォームは、フォームモデルを使用せず（フォームモデルの「なし」オプションを使用）、またはフォームテンプレート、XML スキーマ、JSON スキーマ、フォームデータモデルなどのフォームモデルを使用して作成されます。 アダプティブフォームのフォームモデルは、「なし」から別のフォームモデルに変更できます。 フォームモデルに基づくアダプティブフォームの場合は、同じフォームモデルに対して別のフォームテンプレート、XML スキーマ、JSON スキーマ、またはフォームデータモデルを選択できます。 ただし、フォームモデルを別のフォームモデルに変更することはできません。
 
-1. アダプティブフォームを選択し、「**プロパティ**」アイコンをタップします。
+1. アダプティブフォームを選択し、 **プロパティ** アイコン。
 1. 「**[!UICONTROL フォームモデル]**」タブを開き、以下のいずれかを実行します。
 
    * アダプティブフォームにフォームモデルがない場合は、別のフォームモデルを選択し、それに応じて、フォームテンプレート、XML スキーマ、JSON スキーマ、またはフォームデータモデルを選択できます。
    * アダプティブフォームがフォームモデルに基づいている場合、同じフォームモデルに対して別のフォームテンプレート、XML スキーマ、JSON スキーマ、またはフォームデータモデルを選択できます。
 
-1. 「**[!UICONTROL 保存]**」をタップして、プロパティを保存します。
+1. 選択 **[!UICONTROL 保存]** をクリックしてプロパティを保存します。
 
 ## アダプティブフォームの自動保存 {#auto-save-an-adaptive-form}
 
@@ -179,7 +179,7 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 
 デフォルトでは、自動保存オプションは有効になっていません。 自動保存オプションは、アダプティブフォームの「自動保存」タブで有効にすることができます。 「自動保存」タブには、その他の設定オプションもいくつか用意されています。 次の手順を実行して、アダプティブフォームの自動保存オプションを有効に設定します。
 
-1. プロパティの「自動保存」セクションにアクセスするには、コンポーネントを選択して、![フィールドレベル](assets/field-level.png)／**[!UICONTROL アダプティブフォームコンテナ]**／ ![cmppr](assets/cmppr.png) の順にタップします。
+1. プロパティの自動保存セクションにアクセスするには、コンポーネントを選択し、「 ![フィールドレベル](assets/field-level.png) > **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;を選択し、 ![cmppr](assets/cmppr.png).
 1. Adobe Analytics の **[!UICONTROL 自動保存]** セクション **[!UICONTROL 有効にする]** 自動保存オプション。
 1. Adobe Analytics の **[!UICONTROL アダプティブフォームイベント]** ボックスに 1 を指定するか、TRUE を指定すると、フォームがブラウザに読み込まれたときに自動的にフォームの保存が開始されます。 また、イベントの条件式を指定すると、そのイベントがトリガーされて true が返され、フォームのコンテンツの保存が開始されます。
 1. トリガー。 自動保存は、設定に基づいてトリガーされます。 以下のオプションがあります。

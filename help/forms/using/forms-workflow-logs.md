@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '292'
-ht-degree: 82%
+ht-degree: 77%
 
 ---
 
@@ -81,12 +81,12 @@ AEM Formsワークフローのデバッグログを有効にするには、次�
    https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. **[!UICONTROL Sling]**／**[!UICONTROL ログのサポート]**&#x200B;を選択します。
-1. 「**[!UICONTROL 新規ロガーを追加r]**」をタップします。
+1. 選択 **[!UICONTROL 新しいロガーを追加します。]**
 1. **[!UICONTROL デバッグ]**&#x200B;を&#x200B;**[!UICONTROL ログレベル]**&#x200B;として選択します。
 1. ログファイルの場所を指定します。ログファイルのデフォルトの場所は *logs\error.log* です。
 1. **[!UICONTROL ロガー]**&#x200B;列でパッケージの名前を **com.adobe.granite.workflow.core** として指定します。
 
-   これらの手順を実行すると、**com.adobe.granite.workflow.core** パッケージのデバッグログを格納できるようになります。**[!UICONTROL +]** をタップして次のパッケージ名をリストに追加します。
+   これらの手順を実行すると、**com.adobe.granite.workflow.core** パッケージのデバッグログを格納できるようになります。選択 **[!UICONTROL +]** 次のパッケージ名をリストに追加します。
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

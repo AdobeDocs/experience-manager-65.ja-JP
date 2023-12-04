@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 40%
+source-wordcount: '235'
+ht-degree: 31%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager(AEM)Formsアプリからプロセスを開始するに�
 1. AEM Formsアプリで使用可能な Startpoint を表示するには、に移動します。 [ホーム画面](../../forms/using/home-screen.md).
 1. デフォルトでは、**[!UICONTROL ホーム]**&#x200B;画面に「**[!UICONTROL すべてのフォーム]**」リストが表示されます。
 
-   スタートポイントはフォームに関連付けられています。リストでスタートポイントに関連付けられているフォームをタップして開きます。
+   スタートポイントはフォームに関連付けられています。リスト内でスタートポイント関連フォームを選択して開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 
@@ -38,7 +38,7 @@ Adobe Experience Manager(AEM)Formsアプリからプロセスを開始するに�
 
    「[添付ファイル](../../forms/using/add-attachments.md)」ボタンを使用して、このタスクに注釈を追加できます。
 
-1. フォームを入力したら、「**[!UICONTROL 送信]**」ボタンをタップします。
+1. フォームに入力した後、 **[!UICONTROL 送信]** 」ボタンをクリックします。
 
 アプリがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
 

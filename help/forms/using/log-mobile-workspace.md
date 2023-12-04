@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: d19cba33-0646-40d4-b4a3-b28d6db4a1f3
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 25%
+ht-degree: 19%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)Formsアプリを起動する際は、まずログ�
 
 ## アプリを起動するには {#to-start-the-app}
 
-1. モバイルデバイス上の AEM Forms アプリケーションのアイコンをタップします。
+1. モバイルデバイスでAEM Formsアプリアイコンを選択します。
 1. アプリにログインするには、ユーザー名、パスワードおよびAEM Forms Server URL を入力します。
 
    >[!NOTE]

@@ -8,10 +8,10 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 55%
+source-wordcount: '1115'
+ht-degree: 47%
 
 ---
 
@@ -45,12 +45,12 @@ ht-degree: 55%
 
    [http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
 
-1. 「**[!UICONTROL 顧客 ID]**」フィールドをタップし、「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
-1. 次をタップします。 **[!UICONTROL +作成]** アイコンをクリックして、ルールを追加します。 Visual Editor が開きます。
+1. を選択します。 **[!UICONTROL 顧客 ID]** フィールドに値を入力し、 **[!UICONTROL ルールを編集]** アイコン。 ルールエディターウィンドウが表示されます。
+1. を選択します。 **[!UICONTROL +作成]** アイコンをクリックして、ルールを追加します。 Visual Editor が開きます。
 
    ビジュアルエディターでは、「**[!UICONTROL 条件]**」ステートメントがデフォルトで選択されています。また、ルールエディターの起動元となったフォームオブジェクト（この場合は「**[!UICONTROL 顧客 ID]**」）が、「**[!UICONTROL 条件]**」ステートメントで指定されています。
 
-1. 「**[!UICONTROL 状態の選択]**」ドロップダウンをタップして「**[!UICONTROL 変更済み]**」を選択します。
+1. を選択します。 **[!UICONTROL 状態を選択]** ドロップダウンして「 」を選択します。 **[!UICONTROL 変更済み]**.
 
    ![whencustomeridischanged](assets/whencustomeridischanged.png)
 
@@ -64,7 +64,7 @@ ht-degree: 55%
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   「**[!UICONTROL 完了]**」をクリックして、ルールを保存します。ルールエディターウィンドウで「**[!UICONTROL 閉じる]**」をタップします。
+   選択 **[!UICONTROL 完了]** 」と入力してルールを保存します。 ルールエディターウィンドウで、「 」を選択します。 **[!UICONTROL 閉じる]**.
 
 1. アダプティブフォームのプレビューを表示します。ID を **[!UICONTROL 顧客 ID]** フィールドに入力します。 これで、フォームは、データベースから顧客の詳細を取得できるようになります。
 
@@ -74,8 +74,8 @@ ht-degree: 55%
 
 顧客の詳細がデータベースから取得されたら、配送先住所、都道府県、郵便番号を更新できます。 以下の手順では、フォームデータモデルサービスを呼び出して、顧客情報をデータベースに更新します。
 
-1. 「**[!UICONTROL 送信]**」フィールドを選択して「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
-1. **[!UICONTROL 送信]** - クリックルールを選択して「**[!UICONTROL 編集]**」アイコンをタップします。送信ルールを編集するためのオプションが表示されます。
+1. を選択します。 **[!UICONTROL 送信]** フィールドに値を入力し、 **[!UICONTROL ルールを編集]** アイコン。 ルールエディターウィンドウが表示されます。
+1. を選択します。 **[!UICONTROL 送信 — クリック]** ルールを選択し、 **[!UICONTROL 編集]** アイコン。 送信ルールを編集するためのオプションが表示されます。
 
    ![submit-rule](assets/submit-rule.png)
 
@@ -97,7 +97,7 @@ ht-degree: 55%
    >「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL 顧客 ID]**」フィールドは、対応する [テーブル名].[プロパティ] 形式のフィールド（例：customerdetails.name）にドラッグ＆ドロップしないでください。顧客名と顧客 ID が誤って変更されるのを避けるためです。
 
 1. 「[!UICONTROL フォームオブジェクト]」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「ID」フィールドにドロップします。先頭にテーブル名（このユースケースでは customerdetails）が付いていないフィールドは、更新サービスの検索パラメーターとして機能します。 このユースケースでは、「**[!UICONTROL ID]**」フィールドにより、**顧客詳細**&#x200B;テーブルのレコードを一意に特定することができます。
-1. 「**[!UICONTROL 完了]**」をクリックして、ルールを保存します。ルールエディターウィンドウで「**[!UICONTROL 閉じる]**」をタップします。
+1. 選択 **[!UICONTROL 完了]** 」と入力してルールを保存します。 ルールエディターウィンドウで、「 」を選択します。 **[!UICONTROL 閉じる]**.
 1. アダプティブフォームのプレビューを表示します。顧客の詳細を取得し、配送先住所を更新して、フォームを送信します。 同じ顧客の詳細を再度取得すると、更新された配送先住所が表示されます。
 
 ## 手順 3:（ボーナスセクション）コードエディターを使用して検証を実行し、エラーメッセージを表示する {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
@@ -108,12 +108,12 @@ ht-degree: 55%
 
 次の手順では、データベース内に存在しない顧客 ID がフォームに入力された場合にエラーメッセージを表示するためのルールを作成する方法を示します。このルールによってフォーカスが「**[!UICONTROL 顧客 ID]**」フィールドに移動し、このフィールドがリセットされます。このルールでは、データモデルサービスの [dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) を使用して、フォームに入力された顧客 ID がデータベース内に存在するかどうかが確認されます。
 
-1. 「**[!UICONTROL 顧客 ID]**」フィールドをタップし、`Edit Rules` アイコンをタップします。[!UICONTROL ルールエディター]ウィンドウが表示されます。
-1. 次をタップします。 **[!UICONTROL +作成]** アイコンをクリックして、ルールを追加します。 Visual Editor が開きます。
+1. を選択します。 **[!UICONTROL 顧客 ID]** フィールドに値を入力し、 `Edit Rules` アイコン。 [!UICONTROL ルールエディター]ウィンドウが表示されます。
+1. を選択します。 **[!UICONTROL +作成]** アイコンをクリックして、ルールを追加します。 Visual Editor が開きます。
 
    ビジュアルエディターでは、「**[!UICONTROL 条件]**」ステートメントがデフォルトで選択されています。また、ルールエディターの起動元となったフォームオブジェクト（この場合は「**[!UICONTROL 顧客 ID]**」）が、「**[!UICONTROL 条件]**」ステートメントで指定されています。
 
-1. 「**[!UICONTROL 状態の選択]**」ドロップダウンをタップして「**[!UICONTROL 変更済み]**」を選択します。
+1. を選択します。 **[!UICONTROL 状態を選択]** ドロップダウンして「 」を選択します。 **[!UICONTROL 変更済み]**.
 
    ![whencustomeridischanged](assets/whencustomeridischanged.png)
 

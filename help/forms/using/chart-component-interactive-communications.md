@@ -11,10 +11,10 @@ discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2608'
-ht-degree: 84%
+source-wordcount: '2621'
+ht-degree: 80%
 
 ---
 
@@ -28,13 +28,13 @@ ht-degree: 84%
 
 インタラクティブ通信にグラフを追加して設定するには、次の手順を実行します。
 
-1. インタラクティブ通信のサイドキックから&#x200B;**コンポーネント**&#x200B;をタップしてください。
+1. 選択 **コンポーネント** インタラクティブ通信のサイドキックから
 1. **グラフ**&#x200B;コンポーネントを次のいずれかのコンポーネントにドラッグ＆ドロップします。
 
    * 印刷チャネル：ターゲット領域または 画像フィールド
    * Web チャネル：パネルまたはターゲット領域
 
-1. インタラクティブ通信エディターでグラフコンポーネントをタップし、コンポーネントツールバーから&#x200B;**[!UICONTROL 設定（]** ![configure_icon](assets/configure_icon.png)）を選択します。
+1. インタラクティブ通信エディターでグラフコンポーネントを選択し、「 」を選択します。 **[!UICONTROL を設定 (]** ![configure_icon](assets/configure_icon.png)) をコンポーネントツールバーから削除します。
 
    グラフのプロパティが左側のペインに表示されます。
 
@@ -47,13 +47,13 @@ ht-degree: 84%
    Web チャネルの線グラフの基本プロパティ
 
 1. チャネルタイプに基づいて [グラフのプロパティ](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) を設定します。
-1. （印刷チャネルの場合のみ）**[!UICONTROL エージェント設定]**&#x200B;で、このグラフをエージェントで使用することが必須かどうかを指定します。**[!UICONTROL このグラフの使用がエージェントにとって必須です]**&#x200B;オプションを選択していない場合、エージェント UI の&#x200B;**[!UICONTROL コンテンツ]**&#x200B;タブにあるグラフの目のアイコンをタップして、グラフを表示または非表示にできます。
+1. （印刷チャネルの場合のみ）**[!UICONTROL エージェント設定]**&#x200B;で、このグラフをエージェントで使用することが必須かどうかを指定します。次の場合： **[!UICONTROL エージェントがこのグラフを使用するには t が必須です]** オプションが選択されていない場合、エージェントは、 **[!UICONTROL コンテンツ]** 」タブを使用して、グラフの表示/非表示を切り替えることができます。
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
-1. ![done_icon](assets/done_icon.png) をタップして、グラフのプロパティを保存します。
+1. 選択 ![done_icon](assets/done_icon.png) をクリックして、グラフのプロパティを保存します。
 
-   **[!UICONTROL プレビュー]**&#x200B;をタップして、グラフに関連付けられた外観とデータを表示します。**[!UICONTROL 編集]**&#x200B;をタップして、グラフのプロパティを再設定します。
+   選択 **[!UICONTROL プレビュー]** をクリックして、グラフに関連付けられた外観とデータを表示します。 選択 **[!UICONTROL 編集]** グラフのプロパティを再設定する場合。
 
 ## グラフのプロパティを設定 {#configure-chart-properties}
 

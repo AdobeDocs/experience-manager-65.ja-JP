@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 77%
+source-wordcount: '332'
+ht-degree: 53%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 77%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 フォームポータルのコンポーネントは、デフォルトでは使用できません。 AEM サイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
@@ -30,15 +30,15 @@ ht-degree: 77%
 
 1. 静的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページのヘッダーで、![canvas-drop-down](assets/canvas-drop-down.png) > **Design** をタップすると、デザインモードでページが表示されます。
-   1. 任意の（青色の境界線の付いている）コンポーネントをタップしてから「![フィールドレベル](assets/field-level.png)」をタップし、現在のコンポーネントが含まれている段落システムを選択します。
-   1. 段落システムで「![settings_icon](assets/settings_icon.png)」をタップして段落システムの編集ダイアログを開きます。
-   1. **[!UICONTROL 許可されたコンポーネント]**&#x200B;のリストから、**[!UICONTROL Document Services]** コンポーネントと **[!UICONTROL Document Services Predicates]** コンポーネントのチェックボックスをオンにします。「**[!UICONTROL OK]**」をタップします。
+   1. ページヘッダーで、「 」を選択します。 ![キャンバスドロップダウン](assets/canvas-drop-down.png) > **デザイン** をクリックして、デザインモードでページを開きます。
+   1. 任意のコンポーネント（青い境界線付き）を選択し、「 」を選択します。 ![フィールドレベル](assets/field-level.png) 現在のコンポーネントを含む段落システムを選択します。
+   1. 段落システムで、 ![settings_icon](assets/settings_icon.png) をクリックして、段落システムの編集ダイアログを開きます。
+   1. **[!UICONTROL 許可されたコンポーネント]**&#x200B;のリストから、**[!UICONTROL Document Services]** コンポーネントと **[!UICONTROL Document Services Predicates]** コンポーネントのチェックボックスをオンにします。「**[!UICONTROL OK]**」を選択します。
 
 1. 動的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページのヘッダーで、「![プロパティ](assets/properties.png)>**テンプレートの編集**」の順にタップしてページのテンプレートを開きます。
-   1. 「**レイアウトコンテナ**」と「![FeedManagement](/help/forms/using/assets/feedmanagement.png)」をタップします。「**許可されたコンポーネント**」タブで「**Document Services」オプションと「Document Service Predicates**」オプションを有効にして「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
+   1. ページヘッダーで、「 」を選択します。 ![プロパティ](assets/properties.png) > **テンプレートを編集** をクリックして、ページのテンプレートを開きます。
+   1. 選択 **レイアウトコンテナ** を選択し、 ![FeedManagement](/help/forms/using/assets/feedmanagement.png). Adobe Analytics の **許可されたコンポーネント** タブ、有効 **Document Services と Document Services の述語** オプション、および選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >

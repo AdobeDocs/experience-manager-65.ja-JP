@@ -6,10 +6,10 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: d6587ef59332d6b4d419c7d7b6e29930f366d171
-workflow-type: ht
-source-wordcount: '5499'
-ht-degree: 100%
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+workflow-type: tm+mt
+source-wordcount: '5468'
+ht-degree: 94%
 
 ---
 
@@ -125,7 +125,7 @@ Google Cloud を設定するには：
    必要に応じて、Google アカウントの資格情報を使用して&#x200B;**[!UICONTROL ログイン]**&#x200B;し、「**[!UICONTROL コンソール]**」オプションを確認します。
 
 1. ダッシュボードページで、**[!UICONTROL Google Cloud Platform]** の右側にある「プロジェクト」ドロップダウンリストをクリックして、プロジェクトの選択ダイアログボックスを開きます。
-1. プロジェクトの選択ダイアログボックスで、「**[!UICONTROL 新しいプロジェクト]**」をタップします。
+1. プロジェクトの選択ダイアログボックスで、「**[!UICONTROL 新しいプロジェクト]**」を選択します。
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
@@ -137,14 +137,14 @@ Google Cloud を設定するには：
 
 1. 次のいずれかの操作を行います。
 
-   * プロジェクトのダッシュボードの「スタートガイド」カードで、「**[!UICONTROL API を探索して有効にする]**」をタップします。
-   * プロジェクトのダッシュボードの「API」カードで「**[!UICONTROL API の概要に移動]**」をタップします。
+   * プロジェクトのダッシュボードの「はじめに」カードで、 **[!UICONTROL API の確認と有効化]**.
+   * プロジェクトのダッシュボードの「API」カードで「**[!UICONTROL API の概要に移動]**」を選択します。
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. API とサービスページの上部にある「**[!UICONTROL API とサービスを有効にする]**」をタップします。
-1. API ライブラリページの左側の「**[!UICONTROL カテゴリ]**」で、「**[!UICONTROL YouTube]**」をタップします。ページの右側で「**[!UICONTROL YouTube Data API]**」を選択します。
-1. YouTube Data API v3 ページで、「**[!UICONTROL 有効にする]**」をタップします。
+1. API とサービスページの上部にある「**[!UICONTROL API とサービスを有効にする]**」を選択します。
+1. API ライブラリページの左側の「**[!UICONTROL カテゴリ]**」で、「**[!UICONTROL YouTube]**」を選択します。ページの右側で、「**[!UICONTROL YouTube Data API]**」を選択します。
+1. YouTube Data API v3 ページで、「**[!UICONTROL 有効にする]**」を選択します。
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
@@ -162,8 +162,8 @@ Google Cloud を設定するには：
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
-1. 「**[!UICONTROL 必要な認証情報]**」をタップします。
-1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 2 で、「**[!UICONTROL OAuth 2.0 クライアント ID を作成する]**」の下の「名前」フィールドに、必要に応じて一意の名前を入力します。または、Google で指定されるデフォルトの名前を使用することもできます。
+1. 「**[!UICONTROL 必要な認証情報]**」を選択します。
+1. **[!UICONTROL プロジェクトへの資格情報の追加]**&#x200B;ページの手順 2 で、「**[!UICONTROL OAuth 2.0 クライアント ID を作成する]**」の下の「名前」フィールドに、必要に応じて一意の名前を入力します。または、Google で指定されるデフォルトの名前を使用することもできます。
 1. 「**[!UICONTROL 承認済みの JavaScript 生成元]**」の下にあるテキストフィールドに、次のパスに従って、実際に使用するドメインとポート番号を入力します。入力が終わったら、**[!UICONTROL Enter]** キーを押して、パスをリストに追加します。
 
    `https://<servername.domain>:<port_number>`
@@ -183,7 +183,7 @@ Google Cloud を設定するには：
    **注意**：上記のパスはデモ用の例です。
 
 1. 「**[!UICONTROL OAuth クライアント ID の作成]**」をクリックします。
-1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 3 で、「**[!UICONTROL OAuth 2.0 同意画面を設定する]**」の下で、現在使用している Gmail メールアドレスを選択します。
+1. **[!UICONTROL プロジェクトへの資格情報の追加]**&#x200B;ページの手順 3 で、「**[!UICONTROL OAuth 2.0 同意画面を設定する]**」の下で、現在使用している Gmail メールアドレスを選択します。
 
    ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
 
@@ -192,7 +192,7 @@ Google Cloud を設定するには：
    同意画面は、Experience Manager 管理者が YouTube の認証をおこなう際に表示され、Experience Manager は YouTube に権限を要求します。
 
 1. 「**[!UICONTROL 続行]**」をクリックします。
-1. プロジェクトへの認証情報の追加ページの手順 4 で、「**[!UICONTROL 認証情報をダウンロードする]**」の下の「**[!UICONTROL ダウンロード]**」をタップします。
+1. プロジェクトへの認証情報の追加ページの手順 4 で、「**[!UICONTROL 認証情報をダウンロードする]**」の下の「**[!UICONTROL ダウンロード]**」を選択します。
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -234,7 +234,7 @@ Experience Manager で、YouTube にビデオを公開するには、1 つ以上
 
 ### YouTube への公開のレプリケーションエージェントを有効にする {#enabling-the-youtube-publish-replication-agent}
 
-YouTube への公開のレプリケーションエージェントを有効化した後、Google Cloud アカウントへの接続をテストする場合は、「**[!UICONTROL 接続をテスト]**」をタップします。ブラウザータブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらの一覧がテストの一部として表示されます。
+YouTube公開レプリケーションエージェントを有効にした後、Google Cloud アカウントへの接続をテストする場合は、 **[!UICONTROL 接続をテスト]**. ブラウザータブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらの一覧がテストの一部として表示されます。
 
 1. Experience Manager の左上隅にある Experience Manager ロゴをクリックし、左側のレールで&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL デプロイメント]**／**[!UICONTROL レプリケーション]**／**[!UICONTROL 作成者のエージェント]**&#x200B;をクリックします。
 1. 作成者のエージェントページで、「**[!UICONTROL YouTube の公開]**」をクリックします。
@@ -254,10 +254,10 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 #### Experience Manager 6.4 以降での YouTube のセットアップ {#setting-up-youtube-in-aem-and-later}
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
-1. 左上隅にある Experience Manager ロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL Cloud Services]**／**[!UICONTROL YouTube 公開設定]**&#x200B;をタップします。
-1. 「**[!UICONTROL グローバル]**」をタップします（選択しないでください）。
+1. 左上隅のExperience Managerロゴを選択し、左側のレールで「 」を選択します。 **[!UICONTROL ツール]**（ハンマーのアイコン） > **[!UICONTROL Cloud Service]** > **[!UICONTROL YouTube Publishing Configuration]**.
+1. 「**[!UICONTROL グローバル]**」を選択します。
 
-1. グローバルページの右上付近にある「**[!UICONTROL 作成]**」をタップします。
+1. グローバルページの右上隅にある「**[!UICONTROL 作成]**」を選択します。
 1. YouTube 設定を作成ページの「Google Cloud Platform 設定」で、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
    このプロジェクト ID は、先ほど Google Cloud 設定を行ったときに指定したものです。YouTube 設定を作成ページを開いたままにしておきます。このページには後で戻ります。
@@ -267,33 +267,33 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 1. 任意のテキストエディターを使用して、「[Google Cloud 設定](/help/assets/video.md#configuring-google-cloud-settings)」のタスクでダウンロードして保存しておいた JSON ファイルを開きます。
 1. この JSON テキスト全体を選択してコピーします。
 1. YouTube アカウント設定ダイアログボックスに戻ります。「**[!UICONTROL JSON 設定]**」フィールドに JSON テキストを貼り付けます。
-1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
+1. ページの右上隅にある「**[!UICONTROL 保存]**」を選択します。
 
    次に、Experience Manager で YouTube チャンネルをセットアップします。
 
-1. 「**[!UICONTROL チャネルを追加]**」をタップします。
+1. 「**[!UICONTROL チャンネルを追加]**」を選択します。
 1. 「チャネル名」フィールドに、前に「**[!UICONTROL YouTube への 1 つ以上のチャネルの追加]**」タスクで作成したチャネルの名前を入力します。
 
    オプションで、必要に応じて説明を追加できます。
 
-1. 「**[!UICONTROL 追加]**」をタップします。
+1. 「**[!UICONTROL 追加]**」を選択します。
 1. YouTube または Google の認証画面が表示されます。まだ Google Cloud アカウントにログインしていない場合は、この手順をスキップします。
 
    * 前述の Google プロジェクト ID と JSON テキストに関連付けられた Google のユーザー名とパスワードを入力します。
-   * アカウントのチャネル数に応じて、2 つ以上の項目が表示されます。チャネルを選択します。メールアドレスを選択しないでください（チャネルではありません）。
-   * 次のページで、「**[!UICONTROL 確定]**」をタップして、このチャネルへのアクセスを許可します。
+   * アカウントのチャネル数に応じて、2 つ以上の項目が表示されます。チャネルを選択します。メールアドレスはチャネルではないので、選択しないでください。
+   * 次のページで、「**[!UICONTROL 確定]**」を選択して、このチャネルへのアクセスを許可します。
 
-1. 「**[!UICONTROL 許可]**」をタップします。
+1. 「**[!UICONTROL 許可]**」を選択します。
 
    次に、タグを公開用にセットアップします。
 
-1. **[!UICONTROL 公開用タグの設定]** - Cloud Services／YouTube ページで、鉛筆アイコンをタップして、使用するタグのリストを編集します。
-1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、Experience Manager で利用可能なタグのリストを表示します。
-1. 1 つ以上のタグをタップして追加します。
+1. **[!UICONTROL 公開用タグの設定]** - クラウドサービス／YouTube ページで、鉛筆アイコンを選択して、使用するタグのリストを編集します。
+1. ドロップダウンリストアイコン（上下逆のキャレット）を選択して、使用可能なタグのリストをExperience Managerで表示できます。
+1. 1 つ以上のタグを選択して追加できます。
 
-   追加したタグを削除するには、そのタグを選択して「**[!UICONTROL X]**」をタップします。
+   追加したタグを削除するには、そのタグを選択して、**[!UICONTROL X]** を選択します。
 
-1. 目的のタグの追加が終了したら、「**[!UICONTROL 保存]**」をタップします。
+1. 使用するタグの追加が終了したら、「**[!UICONTROL 保存]**」を選択します。
 
    次は、YouTube チャンネルにビデオを公開します。
 
@@ -301,10 +301,10 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
 
-1. 左上隅にある Experience Manager ロゴをタップし、左のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL デプロイメント]**／**[!UICONTROL クラウドサービス]**&#x200B;をタップします。
-1. 「サードパーティのサービス」ヘッダーの下の「YouTube」で、「**[!UICONTROL 今すぐ設定]**」をタップします。
+1. 左上隅のExperience Managerロゴを選択し、左側のレールで「 」を選択します。 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL 導入]** > **[!UICONTROL Cloud Service]**.
+1. 「サードパーティのサービス」ヘッダーの下の「YouTube」で、「**[!UICONTROL 今すぐ設定]**」を選択します。
 1. 設定を作成ダイアログボックスで、タイトル（必須）と名前（オプション）をそれぞれのフィールドに入力します。
-1. 「**[!UICONTROL 作成]**」をタップします。
+1. 「**[!UICONTROL 作成]**」を選択します。
 1. YouTube アカウント設定ダイアログボックスで、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
    このプロジェクト ID は、先ほど [Google Cloud 設定を行った](/help/assets/video.md#configuring-google-cloud-settings)ときに指定したものです。YouTube アカウント設定ダイアログボックスを開いたままにしておきます。このダイアログボックスには後で戻ります。
@@ -312,33 +312,33 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 1. プレーンテキストのエディターを使用して、「Google Cloud 設定」のタスクでダウンロードして保存しておいた JSON ファイルを開きます。
 1. この JSON テキスト全体を選択してコピーします。
 1. YouTube アカウント設定ダイアログボックスに戻ります。「**[!UICONTROL JSON 設定]**」フィールドに JSON テキストを貼り付けます。
-1. 「**[!UICONTROL OK]**」をタップします。
+1. 「**[!UICONTROL OK]**」を選択します。
 
    次に、Experience Manager で YouTube チャンネルをセットアップします。
 
-1. 「**[!UICONTROL 利用可能なチャネル]**」の右にある「**+**」（プラス記号のアイコン）をタップします。
+1. 「**[!UICONTROL 利用可能なチャネル]**」の右にある「**+**」（プラス記号のアイコン）を選択します。
 1. YouTube チャンネル設定ダイアログボックスの「タイトル」フィールドに、前の「**[!UICONTROL YouTube への 1 つ以上のチャネルの追加]**」タスクで作成したチャネルの名前を入力します。
 
    オプションで、必要に応じて説明を追加できます。
 
-1. 「**[!UICONTROL OK]**」をタップします。
+1. 「**[!UICONTROL OK]**」を選択します。
 1. YouTube または Google の認証画面が表示されます。まだ Google Cloud アカウントにログインしていない場合は、この手順をスキップします。
 
    * 前述の Google プロジェクト ID と JSON テキストに関連付けられた Google のユーザー名とパスワードを入力します。
-   * アカウントのチャネル数に応じて、2 つ以上の項目が表示されます。チャネルを選択します。メールアドレスを選択しないでください（チャネルではありません）。
-   * 次のページで、「**[!UICONTROL 確定]**」をタップして、このチャネルへのアクセスを許可します。
+   * アカウントのチャネル数に応じて、2 つ以上の項目が表示されます。チャネルを選択します。メールアドレスはチャネルではないので、選択しないでください。
+   * 次のページで、「**[!UICONTROL 確定]**」を選択して、このチャネルへのアクセスを許可します。
 
-1. 「**[!UICONTROL 許可]**」をタップします。
+1. 「**[!UICONTROL 許可]**」を選択します。
 
    次に、タグを公開用にセットアップします。
 
-1. **[!UICONTROL 公開用タグの設定]** - Cloud Services／YouTube ページで、鉛筆アイコンをタップして、使用するタグのリストを編集します。
-1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、Experience Manager で利用可能なタグのリストを表示します。
-1. 1 つ以上のタグをタップして追加します。
+1. **[!UICONTROL 公開用タグの設定]** - クラウドサービス／YouTube ページで、鉛筆アイコンを選択して、使用するタグのリストを編集します。
+1. ドロップダウンリストアイコン（上下逆のキャレット）を選択して、使用可能なタグのリストをExperience Managerで表示できます。
+1. 1 つ以上のタグを選択して追加できます。
 
-   追加したタグを削除するには、そのタグを選択して「**X**」をタップします。
+   追加したタグを削除するには、そのタグを選択して、**X** を選択します。
 
-1. 目的のタグの追加を終了するには、「**[!UICONTROL OK]**」をタップします。
+1. 使用するタグの追加が終了したら、「**[!UICONTROL OK]**」を選択します。
 
    次は、YouTube チャンネルにビデオを公開します。
 
@@ -350,18 +350,18 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 アップロードしたビデオのデフォルト YouTube プロパティの設定を自動化するには：
 
-1. 左上隅にある Experience Manager ロゴをタップし、左のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;をクリックします。
+1. 左上隅で、Experience Managerロゴを選択し、左側のレールで、 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL Assets]** > **[!UICONTROL メタデータスキーマ]**.
 1. 「**[!UICONTROL デフォルト値]**」をクリックします（「デフォルト値」の左側にある選択ボックスにチェックマークを追加しないでください）。
-1. **[!UICONTROL デフォルト値]**&#x200B;ページで、「**[!UICONTROL ビデオ]**」の左側にあるボックスをオンにし、「**[!UICONTROL 編集]**」をタップします。
-1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブをタップします。
+1. **[!UICONTROL デフォルト値]**&#x200B;ページで、「**[!UICONTROL ビデオ]**」の左側にあるボックスをオンにし、「**[!UICONTROL 編集]**」を選択します。
+1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブを選択します。
 1. 「YouTube への公開」の下で、「**[!UICONTROL YouTube カテゴリ]**」をクリックします。
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターは開いたままにしておきます。
 
-   * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値（「人とブログ」または「科学と技術」など）を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
+   * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値（「人とブログ」または「科学と技術」など）を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターは開いたままにしておきます。
 
-1. 「YouTube への公開」の見出し下にある「**[!UICONTROL YouTube のプライバシー]**」をタップします。
+1. 「YouTube への公開」の下で、「**[!UICONTROL YouTube のプライバシー]**」を選択します。
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターは開いたままにしておきます。
@@ -369,7 +369,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    * **[!UICONTROL 選択肢]**&#x200B;で、使用するデフォルト値を選択してコピーします。選択肢は 2 つが 1 組になっています。1 組の下のフィールドは、コピーするデフォルト値（公開、非公開またはプライベート）です。コピーした値を、開いているテキストエディターに貼り付けます。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
 
 1. メタデータスキーマエディターページの右上隅にある「**[!UICONTROL キャンセル]**」をクリックします。
-1. Experience Manager の左上隅にある Experience Manager ロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL メタデータプロファイル]**&#x200B;をクリックします。
+1. Experience Managerの左上隅で、Experience Managerロゴを選択し、左側のレールで、 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL Assets]** > **[!UICONTROL メタデータプロファイル]**.
 
 1. メタデータプロファイルページの右上隅にある「**[!UICONTROL 作成]**」をクリックします。
 1. メタデータプロファイルを追加ダイアログボックスの「**[!UICONTROL プロファイルのタイトル]**」テキストフィールドに、「`YouTube Video`」と入力した後、「**[!UICONTROL 作成]**」をクリックします。
@@ -483,10 +483,10 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 1. YouTube チャネルで非公開にするビデオアセットの場所に移動します。
 1. アセット選択モードで、1 つまたは複数の公開済みビデオアセットを選択します。
-1. ツールバーで「**[!UICONTROL 公開を管理]**」をクリックします。3 点ドット（...）アイコンをタップします。ツールバーにあるので、**[!UICONTROL パブリケーションの管理]**&#x200B;が開きます。
-1. 公開を管理ページで、「**[!UICONTROL 非公開]**」をタップします。
-1. ページの右上隅にある「**[!UICONTROL 次へ]**」をタップします。
-1. ページの右上隅にある「**[!UICONTROL 非公開]**」をタップします。
+1. ツールバーで「**[!UICONTROL 公開を管理]**」をクリックします。3 つのドットのアイコン (..) ツールバーにあるので、**[!UICONTROL パブリケーションの管理]**&#x200B;が開きます。
+1. 公開を管理ページで、「**[!UICONTROL 非公開]**」を選択します。
+1. ページの右上隅にある「**[!UICONTROL 次へ]**」を選択します。
+1. ページの右上隅にある「**[!UICONTROL 非公開]**」を選択します。
 
 ## ビデオエンコーディングと YouTube への公開の進行状況を監視 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -504,11 +504,11 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   この列は、デフォルトでは表示されません。この列を有効にするには、ビュードロップダウンメニューから「**[!UICONTROL 設定を表示]**」を選択し、「**[!UICONTROL 処理ステータス]**」列を追加して、「**[!UICONTROL 更新]**」をタップまたはクリックします。
+   この列は、デフォルトでは表示されません。列を有効にするには、「 **[!UICONTROL 設定を表示]** 「ビュー」ドロップダウンメニューから、「 **[!UICONTROL 処理ステータス]** 列とクリック **[!UICONTROL 更新]**.
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. アセット詳細の進行状況を表示します。アセットを選択したら、ドロップダウンメニューを開いて「**[!UICONTROL タイムライン]**」を選択します。タイムラインを、エンコーディングや YouTube への公開などのワークフローアクティビティに絞り込むには、「**[!UICONTROL ワークフロー]**」を選択します。
+1. アセット詳細の進行状況を表示します。アセットをクリックしたら、ドロップダウンメニューを開いて、「 」を選択します。 **[!UICONTROL タイムライン]**. タイムラインを、エンコーディングや YouTube への公開などのワークフローアクティビティに絞り込むには、「**[!UICONTROL ワークフロー]**」を選択します。
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -532,7 +532,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   インスタンスを選択し、「**[!UICONTROL 履歴を開く]**」をタップします。
+   インスタンスを選択し、「**[!UICONTROL 履歴を開く]**」を選択します。
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
@@ -578,18 +578,18 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 * YouTube への公開ジョブの場合、次の手順に従います。
 
-1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;をタップします。
-1. ワークフローモデルページで「**[!UICONTROL YouTube に公開]**」を選択し、ツールバーで「**[!UICONTROL 編集]**」をタップします。
-1. 「YouTube に公開」ワークフローページの右上隅付近にある「**[!UICONTROL 編集]**」をタップします。
-1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回タップしてインラインツールバーを表示します。
+1. 「Experience Manager」で、「 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**.
+1. ワークフローモデルページで、「 」を選択します。 **[!UICONTROL YouTubeに公開]**&#x200B;を選択し、「 **[!UICONTROL 編集]** をクリックします。
+1. YouTubeに公開ワークフローページの右上隅にある「 」を選択します。 **[!UICONTROL 編集]**.
+1. YouTubeアップロードコンポーネントにマウスポインターを置いてから、1 回選択するとインラインツールバーが表示されます。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. インラインツールバーで、設定アイコン（レンチ）をタップします。「**[!UICONTROL 引数]**」タブをクリックします。
+1. インラインツールバーで、設定アイコン（レンチ）を選択します。 「**[!UICONTROL 引数]**」タブをクリックします。
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
-1. YouTube のアップロードプロセス - ステップのプロパティダイアログボックスで、「**[!UICONTROL 引数]**」タブをタップします。
+1. YouTubeアップロードプロセス — ステップのプロパティダイアログボックスで、 **[!UICONTROL 引数]** タブをクリックします。
 
    ![6_5_publishtoyoutubeworkflow-arguments-tab](assets/6_5_publishtoyoutubeworkflow-arguments-tab.png)
 
@@ -605,8 +605,8 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >
    >これらのメールは YouTube に固有で、かつ一般的なワークフローメール通知です。結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つのメール通知セットを受け取ることができます。
 
-1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;**[!UICONTROL 完了]**&#x200B;アイコン（チェックマーク）をタップします。
-1. YouTube に公開ワークフローページで、右上隅にある「**[!UICONTROL 同期]**」をタップします。
+1. 作業が完了したら、ダイアログボックスの右上隅付近にある **[!UICONTROL 完了]** アイコン（チェックマーク）をクリックします。
+1. YouTubeに公開ワークフローページの右上隅付近にある、「 」を選択します。 **[!UICONTROL 同期]**.
 
 ## ビデオアセットに注釈を付ける {#annotate-video-assets}
 

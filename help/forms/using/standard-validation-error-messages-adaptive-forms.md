@@ -11,16 +11,16 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2416'
-ht-degree: 76%
+source-wordcount: '2357'
+ht-degree: 92%
 
 ---
 
 # アダプティブフォームのエラーハンドラー {#error-handlers-in-adaptive-form}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -32,9 +32,9 @@ AEM Forms には、すぐに使用できる、フォーム送信の成功ハン�
 
 ![フォームへのカスタムエラーハンドラーの追加方法を理解するためのエラーハンドラーワークフロー](/help/forms/using/assets/error-handler-workflow.png)
 
-アダプティブフォームは、事前設定された検証条件に基づいて、フィールドに指定した入力を検証し、外部サービスを呼び出すように設定された REST エンドポイントから返される様々なエラーを確認します。 アダプティブフォームで使用するデータソースに基づいて、検証条件を設定できます。例えば、RESTful web サービスをデータソースとして使用する場合、Swagger 定義ファイルで検証条件を定義できます。
+アダプティブフォームは、事前設定された検証条件に基づいて、フィールドに指定された入力を検証し、外部サービスを呼び出すように設定された REST エンドポイントから返される様々なエラーを確認します。アダプティブフォームで使用するデータソースに基づいて、検証条件を設定できます。例えば、RESTful web サービスをデータソースとして使用する場合、Swagger 定義ファイルで検証条件を定義できます。
 
-入力値が検証条件を満たす場合、その値は他のデータソースに送信され、アダプティブフォームはエラーハンドラーを使用してエラーメッセージを表示します。 この方法と同様に、アダプティブFormsはカスタムエラーハンドラーと統合して、データ検証を実行します。 入力値が検証条件を満たさない場合、アダプティブフォームのフィールドレベルでエラーメッセージが表示されます。サーバーから返される検証エラーメッセージが、標準メッセージ形式の場合に発生します。
+入力値が検証条件を満たす場合、その値は他のデータソースに送信され、アダプティブフォームはエラーハンドラーを使用してエラーメッセージを表示します。 この方法と同様に、アダプティブフォームをカスタムエラーと統合して、データ検証を実行します。入力値が検証条件を満たさない場合、アダプティブフォームのフィールドレベルでエラーメッセージが表示されます。サーバーから返される検証エラーメッセージが、標準メッセージ形式の場合に発生します。
 
 
 ## エラーハンドラーの使用 {#uses-of-error-handler}
@@ -188,12 +188,12 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 
 ## ルールエディターを使用してエラーハンドラーを追加 {#add-error-handler-using-rule-editor}
 
-[ルールエディターのサービスの呼び出し](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke)アクションを使用して、アダプティブフォームで使用するデータソースに基づいて検証条件を定義します。RESTful web サービスをデータソースとして使用する場合、Swagger 定義ファイルで検証条件を定義できます。アダプティブFormsのエラーハンドラー関数とルールエディターを使用すると、エラー処理を効果的に管理およびカスタマイズできます。 ルールエディターを使用して条件を定義し、ルールがトリガーされたときに実行するアクションを設定します。アダプティブフォームは、事前設定された検証条件に基づいて、フィールドに入力した内容を検証します。入力値が検証条件を満たさない場合、エラーメッセージはアダプティブフォームのフィールドレベルで表示されます。
+[ルールエディターのサービスの呼び出し](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke)アクションを使用して、アダプティブフォームで使用するデータソースに基づいて検証条件を定義します。RESTful web サービスをデータソースとして使用する場合、Swagger 定義ファイルで検証条件を定義できます。アダプティブフォームのエラーハンドラー関数とルールエディターを利用すると、エラー処理を効果的に管理およびカスタマイズできます。ルールエディターを使用して条件を定義し、ルールがトリガーされたときに実行するアクションを設定します。アダプティブフォームは、事前設定された検証条件に基づいて、フィールドに入力した内容を検証します。入力値が検証条件を満たさない場合、エラーメッセージはアダプティブフォームのフィールドレベルで表示されます。
 
 >[!NOTE]
 >
 > * ルールエディターのサービスの呼び出しアクションでエラーハンドラーを使用するには、フォームデータモデルを使用してアダプティブフォームを設定します。
-> * エラー応答が標準のスキーマにある場合に、フィールドにエラーメッセージを表示するデフォルトのエラーハンドラーが提供されます。 デフォルトのエラーハンドラーは、カスタムエラーハンドラー関数から呼び出すこともできます。
+> * デフォルトのエラーハンドラーは、エラー応答が標準スキーマにある場合にフィールドにエラーメッセージを表示するために使用します。デフォルトのエラーハンドラーは、カスタムエラーハンドラー関数から呼び出すこともできます。
 
 ルールエディターを使用して、次の操作を実行できます。
 
@@ -203,16 +203,16 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 
 ### デフォルトのエラーハンドラー関数を追加 {#add-default-errror-handler}
 
-デフォルトのエラーハンドラーは、エラー応答が標準のスキーマの場合、またはサーバー側の検証エラーの場合に、フィールドにエラーメッセージを表示する機能がサポートされています。
-デフォルトのエラーハンドラーを使用する方法を理解するには、 [ルールエディターの Invoke Service](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke) 「 」アクションでは、2 つのフィールドを持つ簡単なアダプティブフォームの例を見てみましょう。 **ペット ID** および **ペット名** デフォルトのエラーハンドラを **ペット ID** 外部サービスを呼び出すように設定された REST エンドポイントが返す様々なエラーを確認するフィールド。例えば、 `200 - OK`,`404 - Not Found`, `400 - Bad Request`. ルールエディターの「サービスを起動」アクションを使用してデフォルトのエラーハンドラーを追加するには、次の手順を実行します。
+デフォルトのエラーハンドラーは、エラー応答が標準スキーマの場合、またはサーバーサイドの検証エラーの場合に、フィールドにエラーメッセージを表示する機能をサポートしています。
+[ルールエディターのサービスの呼び出し](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke) action, take an example of a simple Adaptive Form with two fieldsアクションを使用してカスタムエラーハンドラーを作成および使用する方法を理解するために、「**ペット ID**」および「**ペット名**」という 2 つのフィールドを持つアダプティブフォームを例に、「**ペット ID**」でカスタムエラーハンドラーを使用して、`200 - OK`、`404 - Not Found`、`400 - Bad Request` などの外部サービスを呼び出すように設定された REST エンドポイントが返す様々なエラーをチェックしましょう。ルールエディターのサービスの呼び出しアクションを使用してデフォルトのエラーハンドラーを追加するには、次の手順を実行します。
 
-1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択してから、**[!UICONTROL ルールエディター]**&#x200B;をタップしてルールエディターを開きます。
-1. 「**[!UICONTROL 作成]**」をタップします。
-1. ルールの&#x200B;**条件**&#x200B;セクションで条件を作成します。例： **条件[ペット ID フィールドの名前]** が変更されました。「 」を **状態を選択** 」ドロップダウンリストから選択できます。
+1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択して、 **[!UICONTROL ルールエディター]** をクリックして、ルールエディターを開きます。
+1. 「**[!UICONTROL 作成]**」を選択します。
+1. ルールの&#x200B;**条件**&#x200B;セクションで条件を作成します。例： **条件[ペット ID フィールドの名前]** が変更されました。 「 」を **状態を選択** 」ドロップダウンリストから選択できます。
 1. 「**Then**」セクションの&#x200B;**[!UICONTROL アクションの選択]**&#x200B;ドロップダウンリストで「**サービスの呼び出し**」を選択します。
 1. 「**入力**」セクションから、**Post サービス**&#x200B;とそれに対応するデータ連結を選択します。例えば、**ペット ID** を検証する場合は、**Post サービス**&#x200B;を **GET /pet/{petId}** として選択し、「**入力**」セクションで「**ペット ID**」を選択します。
-1. 「**出力**」セクションからデータ連結を選択します。選択 **ペット名** （内） **出力** 」セクションに入力します。
-1. 選択 **[!UICONTROL デフォルトのエラーハンドラー]** から **エラーハンドラー** 」セクションに入力します。
+1. 「**出力**」セクションからデータ連結を選択します。例えば、「**出力**」セクションで「**ペット名**」を選択します。
+1. 「**[!UICONTROL エラーハンドラー]**」セクションから「**カスタムエラーハンドラー**」を選択します。
 1. 「**[!UICONTROL 完了]**」をクリックします。
 
 ![フォーム内のフィールド検証チェックにデフォルトのエラーハンドラーを追加する](/help/forms/using/assets/default-error-handler.png)
@@ -229,10 +229,9 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 * 分析イベントを任意の分析プラットフォームに送信します。例：Adobe Analytics.
 * エラーメッセージが表示されるモーダルダイアログを表示します。
 
-上記のアクションに加えて、カスタムエラーハンドラーを使用して、特定のユーザー要件を満たすカスタマイズされた関数を実行できます。
+上記のアクションに加えて、カスタムエラーハンドラーを使用すると、特定のユーザー要件を満たすカスタマイズされた関数を実行できます。
 
-カスタムエラーハンドラーは、外部サービスから返されたエラーに応答し、カスタマイズされた応答をエンドユーザーに配信するように設計された関数（クライアントライブラリ）です。注釈 `@errorHandler` 付きのクライアントライブラリは、カスタムエラーハンドラー関数と見なされます。この注釈は、`.js` ファイルで指定されたエラーハンドラー関数を特定するのに役立ちます。
-
+カスタムエラーハンドラーは、外部サービスから返されたエラーに応答し、カスタマイズされた応答をエンドユーザーに配信するように設計された関数（クライアントライブラリ）です。注釈 `@errorHandler` 付きのクライアントライブラリは、カスタムエラーハンドラー関数と見なされます。この注釈は、 `.js` ファイル。
 
 [ルールエディターのサービスの呼び出し](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke)アクションを使用してカスタムエラーハンドラーを作成および使用する方法を理解するために、「**ペット ID**」および「**ペット名**」という 2 つのフィールドを持つアダプティブフォームを例に、「**ペット ID**」でカスタムエラーハンドラーを使用して、`200 - OK`、`404 - Not Found`、`400 - Bad Request` などの外部サービスを呼び出すように設定された REST エンドポイントが返す様々なエラーをチェックしましょう。
 
@@ -262,7 +261,8 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 1. という名前のフォルダーを作成します。 `js` の下に `clientlibs` フォルダー。
 1. という名前の JavaScript ファイルを作成します。 `functions.js` の下に `js` フォルダー
 1. という名前のファイルを作成します。 `js.txt` の下に `clientlibs` フォルダー。
-1. 変更を保存します。作成したフォルダー構造は次のようになります。
+1. 変更を保存します。
+作成したフォルダー構造は次のようになります。
 
    ![作成されたクライアントライブラリフォルダー構造](/help/forms/using/assets/customclientlibrary_folderstructure.png)
 1. 次をダブルクリックします。 `functions.js` ファイルを開き、エディターを開きます。 ファイルには、カスタムエラーハンドラーのコードが含まれています。
@@ -310,8 +310,8 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 
 **[!UICONTROL ルールエディターのサービスの呼び出し]**&#x200B;アクションを使用してカスタムエラーハンドラーを使用するには、次の手順を実行します。
 
-1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択してから、**[!UICONTROL ルールエディター]**&#x200B;をタップしてルールエディターを開きます。
-1. 「**[!UICONTROL 作成]**」をタップします。
+1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択して、 **[!UICONTROL ルールエディター]** をクリックして、ルールエディターを開きます。
+1. 「**[!UICONTROL 作成]**」を選択します。
 1. ルールの&#x200B;**条件**&#x200B;セクションで条件を作成します。例えば、**[ペット ID の名前フィールド]**&#x200B;が変更された場合は、「**状態を選択** 」ドロップダウンリストから「**変更済み**」を選択します。
 1. 「**Then**」セクションの&#x200B;**[!UICONTROL アクションの選択]**&#x200B;ドロップダウンリストで「**サービスの呼び出し**」を選択します。
 1. 「**入力**」セクションから、**Post サービス**&#x200B;とそれに対応するデータ連結を選択します。例えば、**ペット ID** を検証する場合は、**Post サービス**&#x200B;を **GET /pet/{petId}** として選択し、「**入力**」セクションで「**ペット ID**」を選択します。
@@ -339,7 +339,7 @@ If the server validation error message does not display in the standard format, 
 
 Before adding custom handler, you must configure the adaptive form for asynchronous submission. Execute the following steps:
 
-1. In adaptive form authoring mode, select the Form Container object and tap ![adaptive form properties](assets/configure_icon.png) to open its properties.
+1. In adaptive form authoring mode, select the Form Container object and select ![adaptive form properties](assets/configure_icon.png) to open its properties.
 1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
 1. Select **[!UICONTROL Revalidate on server]** to validate the input field values on server before submission.
 1. Select the Submit Action:
@@ -349,7 +349,7 @@ Before adding custom handler, you must configure the adaptive form for asynchron
 
     ![adaptive form submission properties](assets/af_submission_properties.png)
 
-1. Tap ![Save](assets/save_icon.png) to save the properties.
+1. Select ![Save](assets/save_icon.png) to save the properties.
 
 ### Add custom error handler on Adaptive Form submission {#add-custom-error-handler-af-submission}
 
@@ -357,10 +357,10 @@ AEM Forms provides out-of-the-box success and error handlers for form submission
 
 Execute the following steps to add custom error handler on Adaptive Form submission:
 
-1. Open an Adaptive Form in authoring mode, select any form object, and tap  to open the rule editor.
-1. Select **[!UICONTROL Form]** in the Form Objects tree and tap **[!UICONTROL Create]**.
+1. Open an Adaptive Form in authoring mode, select any form object, and select  to open the rule editor.
+1. Select **[!UICONTROL Form]** in the Form Objects tree and select **[!UICONTROL Create]**.
 1. Select **[!UICONTROL Error in Submission]** from the Event drop-down list.
-1. Write a rule to convert custom error structure to the standard error structure and tap **[!UICONTROL Done]** to save the rule.
+1. Write a rule to convert custom error structure to the standard error structure and select **[!UICONTROL Done]** to save the rule.
 
 The following is a sample code to convert a custom error structure to the standard error structure:
 
@@ -411,6 +411,6 @@ Using this custom error handler, the adaptive form converts the fields listed in
 
 ## 追加情報 {#additional-information}
 
-* [スタンドアロンのコアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [スタンドアロンのコアコンポーネントベースのアダプティブフォームを作成](/help/forms/using/create-an-adaptive-form-core-components.md)
 * [フォームのスタイルまたはテーマを作成](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [AEM Sites ページへのアダプティブフォームの作成または追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)

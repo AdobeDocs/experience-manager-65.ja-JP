@@ -1,14 +1,14 @@
 ---
-title: Android&trade を設定するスタジオプロジェクトと Android&trade；を構築するアプリ
-description: Android&trade を設定する手順Studio プロジェクトを作成し、Adobe Experience Manager(AEM)Formsアプリ用のインストーラーを構築します。
+title: Android&trade; studio プロジェクトを設定し、Android&trade；アプリを構築します。
+description: Android&trade; Studio プロジェクトを設定し、Adobe Experience Manager (AEM) Formsアプリ用のインストーラーを構築する手順
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 exl-id: 47d6af00-34d8-4e5d-8117-86fc1b6f58cb
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 62%
+source-wordcount: '584'
+ht-degree: 58%
 
 ---
 
@@ -21,12 +21,12 @@ AEM Formsは、AEM Formsアプリの完全なソースコードを提供しま�
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行してください。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
+1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
-1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
+   2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに適したパッケージ名を選択し、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
+1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して、**[!UICONTROL インストール]**&#x200B;をクリックします。
 
 次の画像は、`adobe-lc-mobileworkspace-src-<version>.zip` から抽出した内容を示しています。
@@ -65,7 +65,7 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
 
 1. Android™ Studio を起動します。
 
-   **Macユーザー向け**:を更新します。 `local.properties` ファイルが `[User_Home]/Projects/[your-project]/android` フォルダーとポイント `sdk.dir` 変数を `SDK` デスクトップ上の場所
+   **Macユーザー向け**：を更新します。 `local.properties` ファイルが `[User_Home]/Projects/[your-project]/android` フォルダーとポイント `sdk.dir` 変数を `SDK` の場所を指定します。
 
    **Windows® ユーザーの場合**：`%HOMEPATH%\Projects\[your-project]\android` フォルダー内の `local.properties` ファイルを更新用に開き、デスクトップ上の `SDK` の場所を指すように `sdk.dir` 変数を編集します。
 

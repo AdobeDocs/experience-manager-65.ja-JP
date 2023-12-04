@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
-workflow-type: ht
-source-wordcount: '1005'
-ht-degree: 100%
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+workflow-type: tm+mt
+source-wordcount: '986'
+ht-degree: 98%
 
 ---
 
@@ -139,7 +139,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    1. `https://'[server]:[port]'/aem/start.html` にアクセスして、管理者の資格情報を使用してログインします。
    1. **[!UICONTROL ツール／ワークフロー／インスタンス]**&#x200B;の順に移動します。
-   1. ユーザーの関連ワークフローインスタンスを選択し、「**[!UICONTROL 終了]**」をタップして実行中のインスタンスを終了します。
+   1. ユーザーに関連するワークフローインスタンスを選択し、「 」を選択します **[!UICONTROL 終了]** ：実行中のインスタンスを終了します。
 
       ワークフローインスタンスの操作方法について詳しくは、[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)を参照してください。
 

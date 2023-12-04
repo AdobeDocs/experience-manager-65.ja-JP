@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e18aa345-034c-473b-b4c2-01678bb10616
 exl-id: 171754a2-1ba5-42dc-b6d2-3d730807cc31
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '2448'
-ht-degree: 40%
+source-wordcount: '2410'
+ht-degree: 37%
 
 ---
 
@@ -58,9 +58,9 @@ AEM Forms アプリケーションでは、次のようにフォームを同期�
 1. オーサーインスタンスでは、フォームを選択し、**[!UICONTROL 「プロパティの表示」]**&#x200B;をクリックします。
 
 1. プロパティページで、「**[!UICONTROL 詳細]**」をクリックします。
-1. 「詳細」で「**[!UICONTROL AEM Forms アプリと同期]**」オプションを有効にし、「**[!UICONTROL 保存]**」をタップします。
+1. 「詳細」で、次のオプションを有効にします。 **[!UICONTROL AEM Forms App と同期]** を選択し、 **[!UICONTROL 保存]**.
 
-フォームが公開されると、アプリケーションはサーバーと同期してフォームを取得します。 複数のフォームを同期するには、オーサーインスタンスで、フォームマネージャーから複数のフォームを選択して、「**[!UICONTROL AEM Forms アプリケーションと同期]**」をタップします。
+フォームが公開されると、アプリケーションはサーバーと同期してフォームを取得します。 複数のフォームを同期するには、オーサーインスタンスで、Forms Manager で複数のフォームを選択し、「 **[!UICONTROL AEM Forms App と同期]**.
 
 ## モバイルデバイスのサポート {#mobile-device-support}
 
@@ -183,12 +183,12 @@ AEM Forms アプリケーションのソースコードは、ソフトウエア�
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
+1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
-1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
+   2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに適したパッケージ名を選択し、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
+1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
 
 **iOS向け**:

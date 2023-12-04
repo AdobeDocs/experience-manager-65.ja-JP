@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '4520'
+source-wordcount: '4422'
 ht-degree: 99%
 
 ---
@@ -354,7 +354,7 @@ iOS、Android™ 2.x および Android™ 3.x デバイスでサポートされ�
    <td><p>ユーザインターフェイスを表示または非表示</p> </td>
   </tr>
   <tr>
-   <td><p><strong>ダブルタップ</strong></p> </td>
+   <td><p><strong>ダブル選択</strong></p> </td>
    <td><p>適用なし</p> </td>
    <td><p>ズームインまたはリセット</p> </td>
    <td><p>ズームインまたはリセット</p> </td>

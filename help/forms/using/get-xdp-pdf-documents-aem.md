@@ -11,7 +11,7 @@ discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 33%
@@ -38,7 +38,7 @@ AEM Formsにアップロードすることで、ローカルファイルシス�
 
 1. `https://'[server]:[port]'/aem/forms.html` にアクセスして AEM Forms ユーザーインターフェイスにログインします。
 1. フォームをアップロードするフォルダー、またはフォームを含むフォルダーに移動します。
-1. アクションツールバーで、 **作成/ファイルのアップロード**.
+1. アクションツールバーで、「 」を選択します。 **作成/ファイルのアップロード**.
 
    ![作成にあるローカルストレージのファイルオプション](assets/step.png)
 

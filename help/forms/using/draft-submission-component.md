@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 61%
+source-wordcount: '744'
+ht-degree: 59%
 
 ---
 
@@ -32,11 +32,11 @@ ht-degree: 61%
 以下の手順を実行して、ドラフトと送信コンポーネントを追加して設定します。
 
 1. 次をドラッグ&amp;ドロップ： **ドラフトと送信** コンポーネントブラウザーの「ドキュメントサービス」カテゴリの下のコンポーネントをページに移動します。
-1. コンポーネントをタップし、プロパティブラウザーで ![settings_icon](assets/settings_icon.png) をタップしてコンポーネントの編集画面を開きます。
+1. コンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png) をクリックして、コンポーネントの編集ダイアログを開きます。
 
    ![ドラフトと送信コンポーネント](assets/drafts-submissions-edit.png)
 
-1. 編集ダイアログで、次の詳細を指定してをタップします。 **完了** をクリックして設定を保存します。
+1. 編集ダイアログで、次の詳細を指定し、「 」を選択します。 **完了** をクリックして設定を保存します。
 
 <table>
  <tbody>

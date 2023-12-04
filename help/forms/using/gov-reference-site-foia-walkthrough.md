@@ -4,10 +4,10 @@ description: We.Gov リファレンスサイトのチュートリアルを参照
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 57b5ce89-6b01-4087-a485-6d9696f06378
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '842'
+ht-degree: 22%
 
 ---
 
@@ -39,7 +39,7 @@ Freedom of Information Act では、Sarah は 2013 年から 2016 年まで、�
 
 ### 実際の動作確認 {#see-it-yourself}
 
-ブラウザーで、`https://<hostname>:<PublishPort>/wegov` を開きます。We.Gov サイトで、「申請」／「すべての申請」をタップします。「すべての申請」ページの「情報公開法の請求申請」で「申請」をタップします。
+ブラウザーで、`https://<hostname>:<PublishPort>/wegov` を開きます。We.Gov サイトで、「Applications」>「All Applications」を選択します。 「全アプリケーション」ページで、「FOIA 要求のアプリケーション」の下の「適用」を選択します。
 
 ## Sarah が情報公開法に基づいて申請を開始 {#sarah-starts-her-application-for-information-under-foia}
 
@@ -54,7 +54,7 @@ Sarah は「**申請**」をクリックし、「情報公開法請求フォー�
 
 児童・家庭援護庁の 2013 年度から 2016 年度までの訴訟の記録の写しの請求
 
-Sarah はいつでも **保存** フォームの下書きを保存し、後でフォームに戻ってフォームに入力し、送信します。 Sarah はフォームを送信します。
+Sarah は、いつでも **保存** フォームの下書きを保存し、後でフォームに戻ってフォームに入力し、送信します。 Sarah はフォームを送信します。
 
 >[!NOTE]
 >

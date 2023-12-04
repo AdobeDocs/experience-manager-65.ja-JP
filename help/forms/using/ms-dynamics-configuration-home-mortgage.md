@@ -4,10 +4,10 @@ description: We.Finance リファレンスサイトの住宅ローンワーク�
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 47%
+source-wordcount: '410'
+ht-degree: 35%
 
 ---
 
@@ -37,17 +37,17 @@ Dynamics 365 のセットアップと設定を開始する前に、次の点を�
    `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
 1. 下にスクロールして住宅ローン計算機を表示します。
-1. 右側の列の（計算ツールの）パネルをハイライト表示し、をタップしてポップアップメニューを表示します。 ポップアップメニューで、「設定」をタップします。 「AEM Formsコンテナを編集」ダイアログが表示されます。
+1. 右側の列の（計算ツールの）パネルをハイライト表示し、を選択してポップアップメニューを表示します。 ポップアップメニューで、「設定」を選択します。 「AEM Formsコンテナを編集」ダイアログが表示されます。
 
    ![calculatorconfigurepanel](assets/calculatorconfigurepanel.png)
 
-1. AEM Forms コンテナを編集ダイアログでアセットのパスを参照し、以下のパスにある home-mortgage-calculator を選択して「**確認**」をタップします。
+1. AEM Formsコンテナを編集ダイアログで、アセットパスを参照し、次のパスにある home-mortgage-calculator を選択して、「 」を選択します。 **確認**:
 
    formsanddocuments/We.Finance/MS Dynamics/
 
    ![selectassetpath](assets/selectassetpath.png)
 
-1. 「**完了**」をタップします。
+1. 「**完了**」を選択します。
 1. 編集したページを公開します。
 
    >[!NOTE]
@@ -60,7 +60,7 @@ Dynamics 365 のセットアップと設定を開始する前に、次の点を�
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. ソリューションパッケージを Microsoft® Dynamics インスタンスに読み込みます。Microsoft® Dynamics インスタンスで、**設定**／**ソリューション**&#x200B;に移動し、「**読み込み**」をタップします。
+   1. ソリューションパッケージを Microsoft® Dynamics インスタンスに読み込みます。Microsoft® Dynamics インスタンスで、に移動します。 **設定** > **ソリューション** 次に、「 **インポート**.
 
 1. リファレンスサイトで使用するユーザーの連絡先の詳細を設定するには、Sarah Rose Contact.CSV パッケージをMicrosoft® Dynamics インスタンスにインポートします。
 
@@ -68,4 +68,4 @@ Dynamics 365 のセットアップと設定を開始する前に、次の点を�
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. パッケージを Microsoft® Dynamics インスタンスに読み込みます。Microsoft® Dynamics インスタンスで、**営業**／**連絡先**&#x200B;に移動し、「**データを読み込み**」をタップします。
+   1. パッケージを Microsoft® Dynamics インスタンスに読み込みます。Microsoft® Dynamics インスタンスで、に移動します。 **セールス** > **連絡先** 次に、「 **データを読み込み**.

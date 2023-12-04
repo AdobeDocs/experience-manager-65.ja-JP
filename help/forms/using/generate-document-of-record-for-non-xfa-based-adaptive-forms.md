@@ -7,16 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '3544'
-ht-degree: 74%
+source-wordcount: '3533'
+ht-degree: 71%
 
 ---
 
 # アダプティブフォームにおけるレコードのドキュメント生成{#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -266,7 +266,7 @@ ht-degree: 74%
 
 1. AEM オーサーインスタンスで、**フォーム／フォームとドキュメント**&#x200B;をクリックします。
 1. フォームを選択し、「**プロパティの表示**」をクリックします。
-1. 「プロパティ」ウィンドウで、「**フォームモデル**」をタップします。
+1. プロパティウィンドウで、「 」を選択します。 **フォームモデル**.
 フォームモデルの選択は、フォームの作成時にも行うことができます。
 
    >[!NOTE]
@@ -302,8 +302,8 @@ ht-degree: 74%
 
 「レコードのドキュメント」タブに入力したブランディング情報をローカライズするには、ブラウザーのロケールが適切に設定されていることを確認する必要があります。 レコードのドキュメントのブランディング情報をカスタマイズするには、次の手順を実行します。
 
-1. レコードのドキュメント内でパネル（ルートパネル）を選択して、「![設定](assets/configure.png)」をタップします。
-1. ![dortab](/help/forms/using/assets/dortab.png) をタップします。「レコードのドキュメント」タブが表示されます。
+1. レコードのドキュメント内のパネル（ルートパネル）を選択し、「 」を選択します。 ![設定](assets/configure.png).
+1. 選択 ![ドータ](/help/forms/using/assets/dortab.png). 「レコードのドキュメント」タブが表示されます。
 1. レコードのドキュメントをレンダリングするためのデフォルトのテンプレートまたはカスタムのテンプレートを選択します。 デフォルトのテンプレートを選択すると、レコードのドキュメントのサムネールプレビューが「テンプレート」ドロップダウンの下に表示されます。
 
    ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
@@ -348,7 +348,7 @@ ht-degree: 74%
    </proto>
    ```
 
-1. ブランディングの変更内容を保存するには、「完了」をタップします。
+1. ブランディングの変更を保存するには、「完了」を選択します。
 
 ## レコードのドキュメントのパネルに表示される表と列のレイアウト {#table-and-column-layouts-for-panels-in-document-of-record}
 
@@ -409,12 +409,12 @@ ht-degree: 74%
 
 レコードのドキュメントに改ページを適用するには：
 
-1. パネルをタップし、「![設定](/help/forms/using/assets/configure.png)」を選択します。
+1. パネルを選択し、「 」を選択します。 ![設定](/help/forms/using/assets/configure.png)
 1. 「**[!UICONTROL レコードのドキュメント]**」を展開すると、プロパティが表示されます。
 
-1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
-1. 「**[!UICONTROL 次のページの先頭]**」／「**[!UICONTROL 選択]**」をタップします。また、「**[!UICONTROL ページの先頭]**」をタップしてマスターページを選択し、「**[!UICONTROL 選択]**」をタップして改ページを適用することもできます。
-1. 「![保存](/help/forms/using/assets/save_icon.png)」をタップして、プロパティを保存します。
+1. Adobe Analytics の **[!UICONTROL ページ編集]** セクション、選択 ![フォルダー](/help/forms/using/assets/folder-icon.png) （内） **[!UICONTROL 場所]** フィールドに入力します。
+1. 選択 **[!UICONTROL 次のページの先頭]** を選択し、 **[!UICONTROL 選択]**. また、 **[!UICONTROL ページの先頭]**&#x200B;をクリックし、マスターページを選択して、「 **[!UICONTROL 選択]** をクリックして改ページを適用します。
+1. 選択 ![保存](/help/forms/using/assets/save_icon.png) をクリックしてプロパティを保存します。
 
 選択したパネルは次のページに移動します。
 
@@ -429,13 +429,13 @@ ht-degree: 74%
 
 2 つ目のマスターページのプロパティをパネルに適用し、3 つ目のマスターページのプロパティをそれ以降のパネルに適用するには、以下の手順を実行します。
 
-1. パネルをタップして 2 つ目のマスターページを適用し、「 ![設定](assets/cmppr.png).」を選択します。
-1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
-1. 「**[!UICONTROL ページ上]**」をタップして、2 つ目のマスターページを選択し、「**[!UICONTROL 選択]**」をタップします。
+1. 2 つ目のマスターページを適用するパネルを選択し、「 」を選択します。 ![設定](assets/cmppr.png).
+1. Adobe Analytics の **[!UICONTROL ページ編集]** セクション、選択 ![フォルダー](/help/forms/using/assets/folder-icon.png) （内） **[!UICONTROL 場所]** フィールドに入力します。
+1. 選択 **[!UICONTROL ページ上]**&#x200B;を選択し、2 つ目のマスターページを選択して、「 **[!UICONTROL 選択]**.
 AEM Forms は、アダプティブフォーム内の該当するパネルとそれ以降のすべてのパネルに 2 つ目のマスターページを適用します。
-1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 後]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
-1. 「**[!UICONTROL 移動先ページ]**」をタップして、3 つ目のマスターページを選択し、「**[!UICONTROL 選択]**」をタップします。 
-1. 「![保存](/help/forms/using/assets/save_icon.png)」をタップして、プロパティを保存します。
+1. Adobe Analytics の **[!UICONTROL ページ編集]** セクション、選択 ![フォルダー](/help/forms/using/assets/folder-icon.png) （内） **[!UICONTROL 後]** フィールドに入力します。
+1. 選択 **[!UICONTROL ページに移動]**」で、3 番目のマスターページを選択し、「 **[!UICONTROL 選択]**.
+1. 選択 ![保存](/help/forms/using/assets/save_icon.png) をクリックしてプロパティを保存します。
 AEM Forms は、アダプティブフォーム内の該当するパネルとそれ以降のすべてのパネルに 3 つ目のマスターページを適用します。
 
 

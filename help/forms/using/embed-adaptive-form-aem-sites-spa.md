@@ -10,16 +10,16 @@ discoiquuid: a74ed6c1-3006-4baf-bd77-ad4045e23c22
 docset: aem65
 feature: Adaptive Forms
 exl-id: b549f176-409a-4d81-8c2b-73d0dd0c6649
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 92%
+source-wordcount: '1107'
+ht-degree: 90%
 
 ---
 
 # AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの組み込み{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 ## 概要 {#overview}
 
@@ -59,7 +59,7 @@ AEM Forms コンテナコンポーネントを使用してアダプティブフ�
 1. アダプティブフォームやインタラクティブ通信を組み込む AEM Sites ページを、編集モードで開きます。
 1. 次のいずれかのオプションを使用して、ページ上で **AEM Form for SPA** コンポーネントを挿入します。
 
-   * Sites ページのレイアウトコンテナをタップし、**+** をタップして、**AEM form for SPA** コンポーネントを選択します。
+   * サイトページでレイアウトコンテナを選択し、「 」を選択します。 **+** をクリックし、 **AEM form for SPA** コンポーネント。
 
    * コンポーネントブラウザーパネルから、**AEM Form for SPA** コンポーネントをページ上にドラッグアンドドロップします。
    * または、アセットブラウザーでアダプティブフォームまたはインタラクティブ通信を検索して、Sites ページにドラッグアンドドロップします。これにより、AEM Formsにフォームが組み込まれ、SPA コンポーネントコンテナに格納されます。
@@ -68,7 +68,7 @@ AEM Forms コンテナコンポーネントを使用してアダプティブフ�
    >
    >1 つのページでの複数の AEM Forms SPA コンテナコンポーネントのレンダリングはサポートされていません。1 つのページに複数の AEM Forms SPA コンテナを追加することができますが、一度にレンダリングされるコンポーネントは 1 つだけです。 不一致を避けるために、1 つのページに 1 つのコンポーネントのみが表示されるようにします。
 
-1. Sites ページに埋め込まれた AEM Forms SPA コンテナコンポーネントをタップし、アクションバーの ![settings_icon](assets/settings_icon.png) をタップします。**AEM Forms SPA コンテナを編集**&#x200B;ダイアログが開きます。
+1. サイトページで埋め込まれたAEM Forms SPAコンテナコンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png) をクリックします。 **AEM Forms SPA コンテナを編集**&#x200B;ダイアログが開きます。
 1. **AEM Forms コンテナを編集**&#x200B;ダイアログで、次の設定を行います。
 
    * **アセットのタイプ：**&#x200B;埋め込むアセットのタイプを選択します。オプションには「**アダプティブフォーム**」と「**インタラクティブ通信**」があります。
@@ -78,7 +78,7 @@ AEM Forms コンテナコンポーネントを使用してアダプティブフ�
 
    * **テーマ**：アダプティブフォームまたはインタラクティブ通信のコンポーネントのスタイルを定義するテーマを選択します。スタイル設定には、フォントスタイル、背景色、サイズ、配置など、外観のプロパティが含まれます。
 
-1. 「![done_icon](assets/done_icon.png)」をタップして、変更内容を保存します。これで、アダプティブフォームまたはインタラクティブ通信がページに埋め込まれました。
+1. 選択 ![done_icon](assets/done_icon.png) をクリックして設定を保存します。 これで、アダプティブフォームまたはインタラクティブ通信がページに埋め込まれました。
 
 ## 埋め込まれたアダプティブフォームとインタラクティブ通信を公開する {#publish-embedded-adaptive-form-and-interactive-communication}
 
@@ -95,7 +95,7 @@ AEM Sites ページには、AEM Forms コンテナ内のアダプティブフォ
 埋め込まれたアダプティブフォームおよびインタラクティブ通信の構成やプロパティを変更するには、次のいずれかの操作を行います。
 
 * アダプティブフォームまたはインタラクティブ通信の元のフォームをそれぞれエディターで開き、修正します。
-* 編集モードで開いた Sites ページ内からアダプティブフォームまたはインタラクティブ通信をタップし、続けて「**新しいウィンドウで編集**」をタップします。元のフォームが編集モードで開きます。
+* 編集モードで Sites ページからアダプティブフォームまたはインタラクティブ通信を選択し、 **新しいウィンドウで編集**. 元のフォームが編集モードで開きます。
 
 ## 注意点とベストプラクティス {#considerations-and-best-practices}
 

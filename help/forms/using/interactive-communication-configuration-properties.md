@@ -1,7 +1,7 @@
 ---
 title: インタラクティブ通信の設定プロパティ
 seo-title: Interactive Communication configuration properties
-description: インタラクティブ通信で使用するデフォルトの設定プロパティの編集
+description: インタラクティブ通信のデフォルトの設定プロパティを編集
 seo-description: Edit default configuration properties for Interactive Communications
 uuid: 4030078f-64a3-40bb-9892-49e22a8da561
 contentOwner: anujkapo
@@ -12,10 +12,10 @@ discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 100%
+source-wordcount: '610'
+ht-degree: 44%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 
 ## ドキュメントフラグメントの設定 {#document-fragments-configuration}
 
-**Adobe Experience Manager web コンソール設定**&#x200B;ページの、「**ドキュメントフラグメント 設定**」をタップして、ドキュメントフラグメントの設定プロパティを表示します。
+選択 **ドキュメントフラグメントの設定** の **Adobe Experience Manager Web コンソールの設定** ページを開き、ドキュメントフラグメントの設定プロパティを表示します。
 
 <table>
  <tbody> 
@@ -57,24 +57,24 @@ ht-degree: 100%
      <li>numberGroupSeparator = ,</li> 
      <li>numberUseGroupSeparator = true</li> 
     </ul> </td> 
-   <td><p>—</p> </td> 
+   <td><p>--</p> </td> 
   </tr> 
   <tr> 
    <td>インデント</td> 
-   <td>リストドキュメントフラグメント内のテキストに適用される単一ユニットのインデント幅。</td> 
+   <td>リストドキュメントフラグメント内のテキストに適用される 1 単位のインデントの幅です。</td> 
    <td>12.7 mm</td> 
    <td>数値</td> 
   </tr> 
   <tr> 
    <td>最小幅のローマ数字</td> 
-   <td>リストドキュメントフラグメント内でローマ数字を使用する際に、箇条書きフィールドまたは番号フィールドに適用される最小幅。 </td> 
+   <td>リストドキュメントフラグメントでローマ数字を使用する場合に、箇条書きフィールドまたは数値フィールドに適用される最小の幅です。 </td> 
    <td>12.7 mm</td> 
    <td>数値</td> 
   </tr> 
   <tr> 
-   <td>最小幅の数字</td> 
-   <td>リストドキュメントフラグメント内でローマ数字以外の番号付きリストを使用する際に、箇条書きフィールドまたは番号フィールドに適用される最小幅。</td> 
-   <td>8.0 mm</td> 
+   <td>最小幅の数値</td> 
+   <td>リストドキュメントフラグメントでローマ数字以外の番号付きリストを使用する場合に、箇条書きまたは番号フィールドに適用される最小の幅。</td> 
+   <td>8.0mm</td> 
    <td>数値</td> 
   </tr> 
  </tbody> 
@@ -82,7 +82,7 @@ ht-degree: 100%
 
 ## 通信設定の作成 {#create-correspondence-configuration}
 
-**Adobe Experience Manager web コンソール設定**&#x200B;ページの、「**通信の作成設定**」をタップして、エージェント UI の設定プロパティを表示します。
+選択 **通信設定を作成** の **Adobe Experience Manager Web コンソールの設定** ページを開き、Agent UI の設定プロパティを表示します。
 
 <table>
  <tbody> 
@@ -93,14 +93,14 @@ ht-degree: 100%
    <td>指定できる値</td> 
   </tr> 
   <tr> 
-   <td>編集用に解決されたコンテンツの表示</td> 
-   <td>エージェント UI 上でテキストモジュールを編集する際に、チェックボックスを選択して、解決されたコンテンツ（プレースホルダーではなく実際の値）を表示します。</td> 
+   <td>編集用に解決されたコンテンツを表示</td> 
+   <td>このチェックボックスを選択すると、エージェント UI でテキストモジュールを編集中に、解決されたコンテンツ（プレースホルダーではなく実際の値）が表示されます。</td> 
    <td>未選択</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
-   <td>プレビュー時に透かしの適用</td> 
-   <td>チェックボックスを選択して、インタラクティブ通信の印刷チャネルのプレビュー表示に透かしを適用します。</td> 
+   <td>プレビュー中に透かしを適用</td> 
+   <td>プレビューモードでインタラクティブ通信の印刷チャネルに透かしを適用する場合は、このチェックボックスをオンにします。</td> 
    <td>未選択</td> 
    <td>適用なし</td> 
   </tr> 
@@ -115,17 +115,17 @@ ht-degree: 100%
 
 ## アダプティブフォームおよびインタラクティブ通信 web チャネルの設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-**Adobe Experience Manager web コンソール設定**&#x200B;ページの「**アダプティブフォームおよびインタラクティブ通信 web チャネルの設定**」をタップして、アダプティブフォームおよびインタラクティブ通信 web チャネルの設定プロパティを表示します。次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
+選択 **アダプティブフォームとインタラクティブ通信の Web チャネル設定** の **Adobe Experience Manager Web コンソールの設定** アダプティブFormsおよびインタラクティブ通信 Web チャネルの設定プロパティを表示するページ 次の表に、インタラクティブ通信に関連するプロパティを示します。
 
 | プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
-| プレースホルダーを表示 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に含まれているフィールドのプレースホルダー表示を有効にします。 | 選択 | 適用なし |
+| プレースホルダーを表示 | このチェックボックスをオンにすると、アダプティブフォームおよびインタラクティブ通信に含まれるフィールドのプレースホルダーが表示されます。 | 選択 | 適用なし |
 | 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 数値 |
-| 一意のファイル名を作成 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に添付ファイルとして含まれているファイルに一意の名前を付けます。 | 未選択 | 適用なし |
+| ファイル名を一意にする | アダプティブFormsおよびインタラクティブ通信で添付ファイルとして含まれるファイルに一意の名前を付ける場合は、このチェックボックスをオンにします。 | 未選択 | 適用なし |
 
 ## アダプティブフォームおよびインタラクティブ通信 web チャネルテーマの設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-**Adobe Experience Manager Web コンソール設定**&#x200B;ページの「**アダプティブフォームおよびインタラクティブ通信 web チャネルテーマの設定**」をタップして、アダプティブフォームおよびインタラクティブ通信 web チャネルテーマの設定プロパティを表示します。
+選択 **アダプティブフォームとインタラクティブ通信 Web チャネルのテーマの設定** の **Adobe Experience Manager Web コンソールの設定** アダプティブFormsおよびインタラクティブ通信 Web チャネルテーマの設定プロパティを表示するページ
 
 <table>
  <tbody> 
@@ -137,9 +137,9 @@ ht-degree: 100%
   </tr> 
   <tr> 
    <td>フォントリスト名</td> 
-   <td>フォントの一覧は、アダプティブフォームおよびインタラクティブ通信を作成する際に使用できるようになります。</td> 
+   <td>Adaptive Formsおよび Interactive Communications の作成時に使用できるフォントのリストです。</td> 
    <td><p>グルジア</p> <p>Book Antiqua</p> <p>Times New Roman</p> <p>Arial</p> <p>Arial Black</p> <p>Impact</p> <p>Palatino Linotype</p> </td> 
-   <td>すべての有効な Adobe サーバーフォント</td> 
+   <td>すべての有効なAdobeサーバーフォント</td> 
   </tr> 
  </tbody> 
 </table>
