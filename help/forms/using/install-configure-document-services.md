@@ -4,10 +4,10 @@ description: AEM Forms ドキュメントサービスをインストールして
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
+source-git-commit: 2ad9cea10bcd152f4d2d874553bdbd3133dbe847
 workflow-type: tm+mt
-source-wordcount: '5521'
-ht-degree: 74%
+source-wordcount: '5499'
+ht-degree: 76%
 
 ---
 
@@ -30,7 +30,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **Output サービス：** PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成します。レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。詳しくは、[Output サービス](/help/forms/using/output-service.md)を参照してください。
 
-* **PDF Generatorサービス：** PDF Generatorサービスは、ネイティブファイル形式をPDFに変換する API を提供します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。詳しくは、[PDF Generator サービス](aem-document-services-programmatically.md#pdfgeneratorservice)を参照してください。
+* **PDF Generator サービス：**&#x200B;ネイティブファイル形式を PDF に変換する API を提供します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。詳しくは、[PDF Generator サービス](aem-document-services-programmatically.md#pdfgeneratorservice)を参照してください。
 
 * **Reader Extension サービス：**&#x200B;使用権限を追加して Adobe Reader の機能を拡張することで、組織内でインタラクティブな PDF ドキュメントを容易に共有できます。このサービスにより、PDF ドキュメントを Adobe Reader で開いた場合には使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）が有効になります。詳しくは、[Reader Extension サービス](/help/forms/using/overview-aem-document-services.md#reader-extension-service)を参照してください。
 
@@ -42,7 +42,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
   Signature サービスは、Trust Store に保存されている証明書と秘密鍵証明書にアクセスします。 詳しくは、[Signature サービス](/help/forms/using/aem-document-services-programmatically.md)を参照してください。
 
-AEM Formsは強力なエンタープライズクラスのプラットフォームであり、ドキュメントサービスはAEM Formsの機能の 1 つに過ぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
+AEM Forms は強力なエンタープライズクラスのプラットフォームであり、ドキュメントサービスは AEM Forms の機能の 1 つです。機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
@@ -669,10 +669,6 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++
 
-+++Microsoft Office 2019 がMicrosoft Windows Server 2019 で動作していません
-
-* AEMサーバーとのアクティブなリモート接続がないことを確認します。
-
 +++HTML から PDF への変換に関する問題
 
 * フォントディレクトリが PDF Generator の設定 UI に追加されていることを確認します。
@@ -792,7 +788,9 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 *プライマリコンバーターからのエラーメッセージ：
 ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
-問題を解決するには、 [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+この問題を解決するには、[Word ファイルまたは Excel ファイルを Windows Server 上で PDF に変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)を参照してください。
+
++++
 
 +++ Windows Server 2019 で Excel ファイルをPDFに変換できません
 
@@ -801,14 +799,17 @@ Microsoft Excel 2019 をMicrosoft Windows Server 2019 上のPDFに変換する�
 * PDF Generatorサービスを使用している間、Windows コンピューターはAEMサーバー（Windows RDP セッション）とのアクティブなリモート接続を持つ必要があります。
 * デフォルトのプリンターはAdobe PDFに設定する必要があります。
 
->[!NOTE]
-* Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
+  >[!NOTE]
+  * Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
+
++++
 
 +++ XPS ファイルをPDFに変換できません
 
 問題を解決するには、 [Windows で機能固有のレジストリキーを作成する](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
 
 +++
+
 
 ## 次の手順 {#next-steps}
 
