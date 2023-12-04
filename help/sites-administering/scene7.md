@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '5483'
+source-wordcount: '5425'
 ht-degree: 96%
 
 ---
@@ -377,17 +377,17 @@ Experience Manager 6.3.2 以降では、アセットが CQ のターゲットフ
 
 >[!NOTE]
 >
->Experience Manager Assets から Dynamic Media Classic に自動アップロードできるファイルの最大サイズは 500 MB です。
+Experience Manager Assets から Dynamic Media Classic に自動アップロードできるファイルの最大サイズは 500 MB です。
 
 **Experience Manager Assets から自動アップロードするには、次の手順を実行します。**
 
 1. Experience Manager アイコンを選択し、**[!UICONTROL デプロイメント]**／**[!UICONTROL Cloud Services]** に移動します。
 1. 「Dynamic Media」見出しの下の「利用可能な設定」で、「**[!UICONTROL dms7 (Dynamic Media)]**」をクリックします。
-1. 「**[!UICONTROL 詳細]**」タブを選択し、「**[!UICONTROL 自動アップロードを有効にする]**」チェックボックスをオンにして、「**[!UICONTROL OK]**」を選択します。Dynamic Media Classicへのアップロードを含めるように DAM Asset ワークフローを設定する必要があります。
+1. 「**[!UICONTROL 詳細]**」タブを選択し、「**[!UICONTROL 自動アップロードを有効にする]**」チェックボックスをオンにして、「**[!UICONTROL OK]**」を選択します。Dynamic Media Classicへのアップロードを含めるように DAM Asset ワークフローを設定します。
 
    >[!NOTE]
    >
-   >非公開状態での Dynamic Media Classic へのアセットのプッシュについて詳しくは、[Dynamic Media Classic にプッシュしたアセットの状態（公開または非公開）の設定](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)を参照してください。
+   非公開状態での Dynamic Media Classic へのアセットのプッシュについて詳しくは、[Dynamic Media Classic にプッシュしたアセットの状態（公開または非公開）の設定](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)を参照してください。
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
@@ -398,8 +398,8 @@ Experience Manager 6.3.2 以降では、アセットが CQ のターゲットフ
 
    >[!NOTE]
    >
-   >* 自動化後にアセットを追加する場合、CQ ターゲットフォルダーに配置されていないアセットは、Dynamic Media Classic にアップロードされません。
-   >* Experience Manager は、Dynamic Media Classic にアップロードする前にすべてのメタデータを XMP として埋め込むため、メタデータノードのすべてのプロパティを Dynamic Media Classic で XMP として使用できます。
+   * 自動化後にアセットを追加する場合、CQ ターゲットフォルダーに配置されていないアセットは、Dynamic Media Classic にアップロードされません。
+   * Experience Manager は、Dynamic Media Classic にアップロードする前にすべてのメタデータを XMP として埋め込むため、メタデータノードのすべてのプロパティを Dynamic Media Classic で XMP として使用できます。
 
 ### Dynamic Media Classic にプッシュされたアセットの状態（公開／非公開）を設定 {#configuring-the-state-published-unpublished-of-assets-pushed-to-scene}
 
@@ -424,7 +424,7 @@ Dynamic Media Classic にアセットを公開せずにプッシュするには�
 
 >[!NOTE]
 >
->インストール環境が UNIX® 64 ビットオペレーティングシステムの場合、追加して指定する必要がある設定オプションについては、[https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) を参照してください。
+インストール環境が UNIX® 64 ビットオペレーティングシステムの場合、追加して指定する必要がある設定オプションについては、[https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) を参照してください。
 
 #### 非公開状態でのアセットのプッシュに関する既知の制限  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
@@ -435,13 +435,13 @@ Dynamic Media Classic にアセットを公開せずにプッシュするには�
 
 >[!NOTE]
 >
->すぐにアセットを公開するには、「**[!UICONTROL セキュアプレビューを有効にする]**」設定を引き続き「**[!UICONTROL 即時]**」にし、「**[!UICONTROL 自動アップロードを有効にする]**」を使用することをお勧めします。
+すぐにアセットを公開するには、「**[!UICONTROL セキュアプレビューを有効にする]**」設定を引き続き「**[!UICONTROL 即時]**」にし、「**[!UICONTROL 自動アップロードを有効にする]**」を使用することをお勧めします。
 
 ### Dynamic Media Classic にプッシュされたアセットの状態を非公開として設定 {#setting-the-state-of-assets-pushed-to-scene-as-unpublished}
 
 >[!NOTE]
 >
->ユーザーが Experience Manager でアセットを公開すると、S7 アセットが実稼働／ライブアセットに自動的にトリガーされます（そのアセットは、セキュアプレビュー／非公開ではなくなります）。
+ユーザーが Experience Manager でアセットを公開すると、S7 アセットが実稼働／ライブアセットに自動的にトリガーされます（そのアセットは、セキュアプレビュー／非公開ではなくなります）。
 
 **Dynamic Media Classic にプッシュしたアセットの状態を非公開として設定するには：**
 
@@ -513,7 +513,7 @@ WCM の Dynamic Media Classic を有効にすると、他の設定と同様に�
 
    >[!NOTE]
    >
-   >1 つの設定しかない場合、「**[!UICONTROL デフォルト設定]**」チェックボックスを選択しても、効果はありません。
+   1 つの設定しかない場合、「**[!UICONTROL デフォルト設定]**」チェックボックスを選択しても、効果はありません。
 
 ### アドホックフォルダーを設定 {#configuring-the-ad-hoc-folder}
 
@@ -570,11 +570,11 @@ Digital Asset Manager／Dynamic Media Classic アセットの同期でトリガ�
 
    >[!NOTE]
    >
-   >PSD ファイルをアップロードしていて、レイヤー抽出のテンプレートとして処理する場合は、**[!UICONTROL jobParam]**&#x200B;値フィールドに次の値を入力します。
+   PSD ファイルをアップロードしていて、レイヤー抽出のテンプレートとして処理する場合は、**[!UICONTROL jobParam]**&#x200B;値フィールドに次の値を入力します。
    >
-   >`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
+   `process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
    >
-   >PSD ファイルに「レイヤー」が存在することを確認します。厳密に 1 つの画像またはマスク付きの画像の場合、処理対象のレイヤーが存在しないので、1 つの画像として処理されます。
+   PSD ファイルに「レイヤー」が存在することを確認します。厳密に 1 つの画像またはマスク付きの画像の場合、処理対象のレイヤーが存在しないので、1 つの画像として処理されます。
 
 1. CRXDE Lite ページの左上隅の&#x200B;**[!UICONTROL すべて保存]**&#x200B;を選択します。
 
@@ -616,6 +616,6 @@ Dynamic Media Classic と Experience Manager の統合で問題が発生した�
 
 >[!CAUTION]
 >
->既存の Dynamic Media Classic 会社アカウントからアセットをインポートすると、Experience Manager に表示されるまでに長い時間がかかる場合があります。Dynamic Media Classic で指定するフォルダーに、多くのアセットを含まないフォルダーを指定していることを確認してください。例えば、ルートフォルダーのアセットが多すぎる場合があります。
+既存の Dynamic Media Classic 会社アカウントからアセットをインポートすると、Experience Manager に表示されるまでに長い時間がかかる場合があります。Dynamic Media Classic で指定するフォルダーに、多くのアセットを含まないフォルダーを指定していることを確認してください。例えば、ルートフォルダーのアセットが多すぎる場合があります。
 >
->統合をテストしたい場合などは、会社全体ではなく、サブフォルダーのみを指すルートフォルダーを用意してもよいでしょう。
+統合をテストしたい場合などは、会社全体ではなく、サブフォルダーのみを指すルートフォルダーを用意してもよいでしょう。

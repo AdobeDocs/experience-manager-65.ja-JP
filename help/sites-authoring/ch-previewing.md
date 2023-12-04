@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: ht
-source-wordcount: '369'
-ht-degree: 100%
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 84%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 このツールバーは、1 つ以上の UI モジュールを含む一連の UI モードで構成されます。
 
-* UI モードは、ツールバーの左側に表示されるアイコンです。アイコンをクリックまたはタップすると、そのモードに含まれる UI モジュールがツールバーに表示されます。
+* UI モードは、ツールバーの左側に表示されるアイコンです。アイコンをクリックすると、そのアイコンに含まれる UI モジュールがツールバーに表示されます。
 * UI モジュールは、1 つ以上の ContextHub ストアのデータを表示します。また、一部の UI モジュールでは、ストアデータを操作することもできます。
 
 ContextHub によって、いくつかの UI モードと UI モジュールがインストールされます。管理者が、異なる UI モードと UI モジュールを表示するように [ContextHub を設定](/help/sites-developing/ch-configuring.md)している場合があります。
@@ -36,11 +36,11 @@ ContextHub ツールバーは、プレビューモードで使用できます。
 
 ![screen_shot_2018-03-23at093730](assets/screen_shot_2018-03-23at093730.png)
 
-1. 編集用にページを開いた状態で、ツールバーの「プレビュー」をクリックまたはタップします。
+1. 編集用にページを開いた状態で、ツールバーの「プレビュー」をクリックします。
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. ツールバーを表示するには、ContextHub アイコンをクリックまたはタップします。
+1. ツールバーを表示するには、ContextHub アイコンをクリックします。
 
    ![Context Hub](do-not-localize/screen_shot_2018-03-23at093621.png)
 
@@ -66,6 +66,6 @@ UI モジュールは、1 つ以上の ContextHub ストアのデータをツー
 
 ### 全画面表示モード {#fullscreen-mode}
 
-ポップアップオーバーレイには、クリックまたはタップするとポップアップコンテンツを拡張してブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
+ポップアップオーバーレイには、クリックしてポップアップコンテンツを展開し、ブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
 
 ![全画面](do-not-localize/chlimage_1-18.png)

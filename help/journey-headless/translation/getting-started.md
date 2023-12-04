@@ -2,10 +2,10 @@
 title: AEM ヘッドレス翻訳の基本を学ぶ
 description: ヘッドレスコンテンツを整理する方法と AEM の翻訳ツールの仕組みについて説明します。
 exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 92%
+source-wordcount: '1472'
+ht-degree: 90%
 
 ---
 
@@ -78,15 +78,15 @@ AEM のコンテンツは、ヘッドレスであろうと従来の web ペー�
 
 コンテンツモデルはコンテンツの構造を定義するものなので、モデルのどのフィールドを翻訳する必要があるかを把握しておく必要があります。翻訳担当者は通常、コンテンツアーキテクトと協力してこれを定義します。コンテンツモデルのフィールドを参照するには、次の手順に従います。
 
-1. **ツール**／**アセット**／**コンテンツフラグメントモデル**&#x200B;に移動します。
-1. コンテンツフラグメントモデルは通常、フォルダー構造で保存されます。プロジェクトのフォルダーをタップまたはクリックします。
-1. モデルが一覧表示されます。モデルの詳細を確認するには、モデルをタップまたはクリックします。
+1. に移動します。 **ツール** > **Assets** > **コンテンツフラグメントモデル**.
+1. コンテンツフラグメントモデルは通常、フォルダー構造で保存されます。プロジェクトのフォルダーをクリックします。
+1. モデルが一覧表示されます。モデルをクリックして詳細を表示します。
    ![コンテンツフラグメントモデル](assets/content-fragment-models.png)
 1. **コンテンツフラグメントモデルエディター**&#x200B;が開きます。
    1. 左側の列には、モデルのフィールドが含まれています。重要なのはこの列です。
    1. 右側の列には、モデルに追加できるフィールドが含まれています。この列は無視できます。
       ![コンテンツフラグメントモデルエディター](assets/content-fragment-model-editor.png)
-1. モデルのフィールドの 1 つをタップまたはクリックします。そのフィールドが選択され、フィールドの詳細が右側の列に表示されます。
+1. モデルのフィールドの 1 つをクリックします。 そのフィールドが選択され、フィールドの詳細が右側の列に表示されます。
    ![コンテンツフラグメントモデルエディター（詳細表示）](assets/content-fragment-model-editor-detail.png)
 
 翻訳が必要なすべてのフィールドの「**プロパティ名**」フィールドをメモします。この情報は、後ほどジャーニーで必要になります。これらの「**プロパティ名**」は、コンテンツのどのフィールドを翻訳する必要があるかを AEM に知らせるために必要です。
@@ -192,4 +192,4 @@ AEM のコンテンツは、ヘッドレスであろうと従来の web ペー�
 * [翻訳プロジェクトの管理](/help/sites-administering/tc-manage.md) - AEM で機械翻訳と人間による翻訳の両方のプロジェクトを作成および管理する方法について説明します。
 * An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
 * The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
-* [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
+* [AEMのヘッドレスのTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

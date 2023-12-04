@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '10221'
+source-wordcount: '10266'
 ht-degree: 23%
 
 ---
@@ -731,7 +731,7 @@ Document Security データベースに保存されている設定情報を読�
 
 >[!NOTE]
 >
->設定ファイルを読み込むと、ファイル内の情報に基づいてシステムが再設定されます。 ただし、動的な透かしの設定とカスタムイベントの情報は例外で、書き出された設定ファイルには保存されません。 この情報は、新しいシステムで手動で設定する必要があります。 破損した設定を再構成したり、特定のエンタープライズデプロイメントシナリオのパラメータを調整するなど、Document Security および XML に詳しいシステム管理者またはプロフェッショナルサービスコンサルタントのみが設定ファイルの内容を変更します。
+>設定ファイルを読み込むと、ファイル内の情報に基づいてシステムが再設定されます。 ただし、動的な透かしの設定とカスタムイベントの情報は例外で、書き出された設定ファイルには保存されません。 この情報を新しいシステムで手動で設定します。 破損した設定を再構成したり、特定のエンタープライズデプロイメントシナリオのパラメータを調整するなど、Document Security および XML に詳しいシステム管理者またはプロフェッショナルサービスコンサルタントのみが設定ファイルの内容を変更します。
 
 **設定ファイルの書き出し**
 

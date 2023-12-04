@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '17027'
+source-wordcount: '16882'
 ht-degree: 83%
 
 ---
@@ -87,7 +87,7 @@ Signature サービスの操作をプログラムで実行する前に、Signatu
 
 **署名フィールドが追加された PDF ドキュメントを取得する**
 
-署名フィールドを追加した PDF ドキュメントを取得する必要があります。
+PDFフィールドが追加された署名ドキュメントを取得します。
 
 **署名フィールドを追加する**
 
@@ -99,7 +99,7 @@ Signature サービスが PDF ドキュメントに署名フィールドを追�
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの追加](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -162,12 +162,12 @@ Signature API（Web サービス）を使用して署名フィールドを追加
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -181,7 +181,7 @@ Signature API（Web サービス）を使用して署名フィールドを追加
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、署名フィールドを含む PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出して、PDF ドキュメントのファイルの場所を表す文字列値とファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
    * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `BLOB` オブジェクトを入力するには、`MTOM` プロパティにバイト配列のコンテンツを割り当てます。
 
@@ -240,7 +240,7 @@ Signature API（Web サービス）を使用して署名フィールドを追加
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **署名クライアントの作成**
 
@@ -309,12 +309,12 @@ Signature API（Web サービス）を使用して署名フィールド名を取
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -328,7 +328,7 @@ Signature API（Web サービス）を使用して署名フィールド名を取
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、署名フィールドを含む PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出して、PDF ドキュメントのファイルの場所を表す文字列値およびファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
    * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `BLOB` オブジェクトを入力するには、`MTOM` フィールドにバイト配列のコンテンツを割り当てます。
 
@@ -426,7 +426,7 @@ Signature サービスクライアントを作成し、変更する署名フィ�
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの追加](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -491,12 +491,12 @@ Signature API（web サービス）を使用して署名フィールドを変更
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -510,7 +510,7 @@ Signature API（web サービス）を使用して署名フィールドを変更
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、変更する署名フィールドを含む PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出して、PDF ドキュメントのファイル場所を示す文字列値およびファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
    * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `BLOB` オブジェクトを入力するには、`MTOM` プロパティに、バイト配列のコンテンツを割り当てます。
 
@@ -717,14 +717,14 @@ Signature API（Java）を使用した PDF ドキュメントのデジタル署�
 
    * 署名する PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクト。
    * デジタル署名を含む署名フィールドの名前を表す文字列値です。
-   * PDF ドキュメントへのデジタル署名に使用する資格情報を表す `Credential` オブジェクト。の作成 `Credential` を呼び出すことによって、オブジェクトを `Credential` オブジェクトの静的 `getInstance` メソッドを使用し、セキュリティ秘密鍵証明書に対応するエイリアス値を指定する string 値を渡す。
-   * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す、静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、SHA1 アルゴリズムを使用するには `HashAlgorithm.SHA1` を指定できます。
+   * PDFドキュメントにデジタル署名するために使用される資格情報を表す `Credential` オブジェクト。の作成 `Credential` を呼び出すことによって、オブジェクトを `Credential` オブジェクトの静的 `getInstance` メソッドを使用し、セキュリティ秘密鍵証明書に対応するエイリアス値を指定する string 値を渡す。
+   * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、SHA1 アルゴリズムを使用するには `HashAlgorithm.SHA1` を指定できます。
    * PDF ドキュメントがデジタル署名された理由を表す文字列値です。
    * 署名者の連絡先情報を表す string 値です。
-   * デジタル署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクト。例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
+   * デジタル署名のアピアランスを制御する `PDFSignatureAppearanceOptions` オブジェクト。 例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクト。
-   * オンライン証明書ステータスプロトコル（OCSP）サポートの設定を格納する `OCSPOptionSpec` オブジェクト。失効確認を実行しない場合、このパラメーターは使用されず、`null` を指定できます。
-   * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクトです。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
+   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPOptionSpec` オブジェクト。 失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
+   * 証明書失効リスト (CRL) の環境設定を格納する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
    * タイムスタンププロバイダー（TSP）がサポートする環境設定を格納する `TSPPreferences` オブジェクト。このパラメーターはオプションで、`null` にすることができます。詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
 
    `sign` メソッドは、署名済み PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
@@ -759,7 +759,7 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
 1. Signatures クライアントの作成
 
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -783,13 +783,13 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
 
    * 署名する PDF ドキュメントを表す `BLOB` オブジェクト。
    * デジタル署名を含む署名フィールドの名前を表す文字列値です。
-   * PDF ドキュメントへのデジタル署名に使用する資格情報を表す `Credential` オブジェクト。の作成 `Credential` オブジェクトを指定するには、コンストラクタを使用し、 `Credential` オブジェクトの `alias` プロパティ。
-   * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す、静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、`HashAlgorithm.SHA1` を指定して SHA1 アルゴリズムを使用することができます。
+   * PDFドキュメントにデジタル署名するために使用される資格情報を表す `Credential` オブジェクト。の作成 `Credential` オブジェクトを指定するには、コンストラクタを使用し、 `Credential` オブジェクトの `alias` プロパティ。
+   * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、`HashAlgorithm.SHA1` を指定して SHA1 アルゴリズムを使用することができます。
    * ハッシュアルゴリズムを使用するかどうかを指定するブール値です。
    * PDF ドキュメントがデジタル署名された理由を表す文字列値です。
    * 署名者の場所を表す string 値です。
    * 署名者の連絡先情報を表す string 値です。
-   * デジタル署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクト。例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
+   * デジタル署名のアピアランスを制御する `PDFSignatureAppearanceOptions` オブジェクト。 例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクト。失効確認を実行すると、署名に埋め込まれます。デフォルトは、`false` です。
    * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPOptionSpec` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
    * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
@@ -941,10 +941,10 @@ Forms と Signature API（Java）を使用してインタラクティブフォ�
    * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、SHA1 アルゴリズムを使用するには `HashAlgorithm.SHA1` を指定できます。
    * PDF ドキュメントがデジタル署名された理由を表す文字列値です。
    * 署名者の連絡先情報を表す string 値です。
-   * デジタル署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクト。例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
+   * デジタル署名のアピアランスを制御する `PDFSignatureAppearanceOptions` オブジェクト。 例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクト。
-   * オンライン証明書ステータスプロトコル（OCSP）サポートの設定を格納する `OCSPPreferences` オブジェクト。失効確認を実行しない場合、このパラメーターは使用されず、`null` を指定できます。
-   * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクトです。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
+   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPPreferences` オブジェクト。 失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
+   * 証明書失効リスト (CRL) の環境設定を格納する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
    * タイムスタンププロバイダー（TSP）がサポートする環境設定を保存する `TSPPreferences` オブジェクト。このパラメーターはオプションで、`null` を設定することもできます。
 
    この `sign` メソッドは、署名済み PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
@@ -974,7 +974,7 @@ Forms and Signature API（web サービス）を使用して、インタラク�
 
    Forms サービスに関連付けられたサービス参照に、次の WSDL 定義を使用します：`http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`。
 
-   `BLOB` データタイプは、両方のサービス参照に共通であるため、`BLOB` データタイプを使用する場合は完全に修飾してください。対応する web サービスのクイックスタートでは、すべての `BLOB` インスタンスが完全に修飾されています。
+   `BLOB` データタイプは、両方のサービス参照に共通であるため、`BLOB` データタイプを使用する場合は完全に修飾してください。対応する web サービスのクイックスタートで、すべての `BLOB` インスタンスは完全に修飾されています。
 
    >[!NOTE]
    >
@@ -983,7 +983,7 @@ Forms and Signature API（web サービス）を使用して、インタラク�
 1. Forms および Signatures クライアントを作成
 
    * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -1031,12 +1031,12 @@ Forms and Signature API（web サービス）を使用して、インタラク�
    * 署名する PDF ドキュメントを表す `BLOB` オブジェクトです。Forms サービスによって返された `BLOB` インスタンスを使用します。
    * 署名された署名フィールドの名前を表す文字列値です。
    * PDF ドキュメントへの電子署名に使用する資格情報を表す `Credential` オブジェクト。の作成 `Credential` オブジェクトを指定するには、コンストラクタを使用し、 `Credential` オブジェクトの `alias` プロパティ。
-   * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す、静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、`HashAlgorithm.SHA1` を指定して SHA1 アルゴリズムを使用することができます。
+   * PDF ドキュメントのダイジェストに使用するハッシュアルゴリズムを表す静的データメンバーを指定する `HashAlgorithm` オブジェクト。例えば、`HashAlgorithm.SHA1` を指定して SHA1 アルゴリズムを使用することができます。
    * ハッシュアルゴリズムを使用するかどうかを指定するブール値です。
    * PDF ドキュメントがデジタル署名された理由を表す文字列値です。
    * 署名者の場所を表す string 値です。
    * 署名者の連絡先情報を表す string 値です。
-   * デジタル署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクト。例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
+   * デジタル署名のアピアランスを制御する `PDFSignatureAppearanceOptions` オブジェクト。 例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクト。失効確認を実行すると、署名に埋め込まれます。デフォルトは、`false` です。
    * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
    * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
@@ -1109,7 +1109,7 @@ PDF ドキュメントを認証するには、次のタスクを実行します�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **署名クライアントの作成**
 
@@ -1218,12 +1218,12 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -1261,7 +1261,7 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
    * 認証される署名フィールドをロックするかどうかを指定する `System.Boolean` オブジェクトです。署名フィールドをロックすると、このフィールドは読み取り専用としてマークされ、プロパティは変更できません。また、必要な権限を持たないユーザーはこのフィールドをクリアできません。デフォルトは、`false` です。
    * 署名フィールドをロックするかどうかを指定する `System.Boolean` オブジェクトです。つまり、 `true` を前のパラメーターに渡す場合は、`true` をこのパラメーターに渡します。
    * オンライン証明書ステータスプロトコル（OCSP）のサポートの環境設定を保存する `OCSPPreferences` オブジェクトです。このオブジェクトは、PDF ドキュメントの認証に使用される資格情報のステータスに関する情報を提供します。失効確認を実行しない場合、このパラメーターは使用されず、`null` を指定できます。
-   * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクトです。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
+   * 証明書失効リスト (CRL) の環境設定を格納する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
    * タイムスタンププロバイダー（TSP）がサポートする環境設定を格納する `TSPPreferences` オブジェクト。例えば、 `TSPPreferences` オブジェクトの場合は、TSP の URL を設定できます。 `TSPPreferences` オブジェクトの `tspServerURL` データメンバー。 このパラメーターはオプションで、`null` にすることができます。
 
    `certify` メソッドは、認証済みPDF オブジェクトを表す `BLOB` オブジェクトを返します。
@@ -1319,9 +1319,9 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
-**Signature クライアントの作成**
+**署名クライアントの作成**
 
 Signature サービスの操作をプログラムで実行する前に、Signature サービスクライアントを作成します。
 
@@ -1337,9 +1337,9 @@ PDF ドキュメントの署名を検証するときに署名サービスが使�
 * 失効確認
 * タイムスタンプ値
 
-これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。 さまざまな時間値の詳細については、[AEM FormsAPI リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `VerificationTime` 列挙値を参照してください。
+これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。 様々な時間値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `VerificationTime` 列挙値を参照してください。
 
-また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms APIリファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `RevocationCheckStyle`列挙値を参照してください。
+また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `RevocationCheckStyle` 列挙値を参照してください。
 
 証明書の失効チェックを実行するには、`CRLOptionSpec` オブジェクトを使用して、証明書失効リスト（CRL）サーバーへの URL を指定します。ただし、CRL サーバーへの URL を指定しない場合、署名サービスは証明書から URL を取得します。
 
@@ -1351,13 +1351,13 @@ Signature サービスが使用する CRL および OCSP サーバーの順序�
 
 >[!NOTE]
 >
->証明書で指定された URL を上書きするには、`CRLOptionSpec` および `OCSPOptionSpec` オブジェクトを使用します。例えば、CRL サーバーを上書きする場合は、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッド。
+>証明書で指定された URL を上書きするには、`CRLOptionSpec` オブジェクトおよび `OCSPOptionSpec` オブジェクトを使用します。例えば、CRL サーバーを上書きする場合は、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッド。
 
 タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時刻を追跡するプロセスです。ドキュメントが署名された後は、誰もドキュメントを変更できません。タイムスタンプを使用すると、署名済みまたは認証済みのドキュメントの有効性を強制することができます。タイムスタンプオプションは、 `TSPOptionSpec` オブジェクトを使用して設定できます。例えば、タイムスタンププロバイダー（TSP）サーバーの URL を指定できます。
 
 >[!NOTE]
 >
->Java および web サービスのクイックスタートでは、検証時間が `VerificationTime.CURRENT_TIME` に設定されており、失効確認は `RevocationCheckStyle.BestEffort` に設定されています。CRL または OCSP のいずれのサーバー情報も指定されていないため、証明書からサーバー情報が取得されます。
+>Java および web サービスのクイックスタートでは、検証時刻が `VerificationTime.CURRENT_TIME` に設定され、失効確認が `RevocationCheckStyle.BestEffort` に設定されます。CRL または OCSP のいずれのサーバー情報も指定されていないため、証明書からサーバー情報が取得されます。
 
 **電子署名の検証**
 
@@ -1455,12 +1455,12 @@ Signature Service API（Web サービス）を使用してデジタル署名を�
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -1543,9 +1543,9 @@ AEM Formsは、PDFドキュメント内のすべての電子署名を検証す�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
-**Signature クライアントの作成**
+**署名クライアントの作成**
 
 Signature サービスの操作をプログラムで実行する前に、Signature サービスクライアントを作成します。
 
@@ -1561,9 +1561,9 @@ PDF ドキュメント内のすべての署名を検証する際に Signature �
 * 失効確認
 * タイムスタンプ値
 
-これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。 さまざまな時間値の詳細については、[AEM FormsAPI リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `VerificationTime` 列挙値を参照してください。
+これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。 様々な時間値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `VerificationTime` 列挙値を参照してください。
 
-また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms APIリファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `RevocationCheckStyle`列挙値を参照してください。
+また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `RevocationCheckStyle` 列挙値を参照してください。
 
 証明書に対して失効確認を実行するには、`CRLOptionSpec` オブジェクトを使用して証明書失効リスト（CRL）サーバーへの URL を指定します。ただし、CRL サーバーへの URL を指定しない場合、Signature サービスが証明書から URL を取得します。
 
@@ -1575,13 +1575,13 @@ Signature サービスが使用する CRL および OCSP サーバーの順序�
 
 >[!NOTE]
 >
->証明書で指定された URL を上書きするには、`CRLOptionSpec` および `OCSPOptionSpec` オブジェクトを使用します。例えば、CRL サーバーを上書きする場合は、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッド。
+>証明書で指定された URL を上書きするには、`CRLOptionSpec` オブジェクトおよび `OCSPOptionSpec` オブジェクトを使用します。例えば、CRL サーバーを上書きする場合は、 `CRLOptionSpec` オブジェクトの `setLocalURI` メソッド。
 
 タイムスタンプとは、署名済みまたは認証済みのドキュメントが変更された時刻を追跡するプロセスです。ドキュメントが署名された後は、誰もドキュメントを変更できません。タイムスタンプは、署名済みまたは認証済みのドキュメントの有効性を確保するのに役立ちます。タイムスタンプオプションは、`TSPOptionSpec` オブジェクトを使用して設定することができます。例えば、タイムスタンププロバイダー（TSP）サーバーの URL を指定できます。
 
 >[!NOTE]
 >
->Java および web サービスのクイックスタートでは、検証時間が `VerificationTime.CURRENT_TIME` に設定されており、失効確認は `RevocationCheckStyle.BestEffort` に設定されています。CRL または OCSP サーバーの情報が指定されていないので、サーバー情報は証明書から取得されます。
+>Java および web サービスのクイックスタートでは、検証時刻が `VerificationTime.CURRENT_TIME` に設定され、失効確認が `RevocationCheckStyle.BestEffort` に設定されます。CRL または OCSP サーバーの情報が指定されていないので、サーバー情報は証明書から取得されます。
 
 **すべての電子署名の取得**
 
@@ -1670,12 +1670,12 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -1752,7 +1752,7 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+これらの JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **署名クライアントの作成**
 
@@ -1834,12 +1834,12 @@ Signature API（Web サービス）を使用してデジタル署名を削除し
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えてください。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Signature クライアントの作成
 
-   * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。

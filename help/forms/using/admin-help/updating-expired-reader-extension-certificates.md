@@ -2,10 +2,10 @@
 title: Reader 拡張証明書の有効期限とその影響
 description: Reader 拡張証明書の有効期限とその影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 98%
+source-wordcount: '1088'
+ht-degree: 96%
 
 ---
 
@@ -38,7 +38,7 @@ Adobeは、公開鍵基盤 (PKI) を使用して、ライセンスおよび機�
 
 **質問：新しい証明書の説明は古い証明書とは異なりますか？**
 
-回答：新しい Acrobat Reader Extensions 証明書の説明には、プログラム名として **G3-P24** が記載されています。古い証明書（「証明書ルート CA」に基づく証明書）の説明では、**P24** がプログラム名として記載されています。
+回答：新しい Acrobat Reader Extensions 証明書の説明には、プログラム名として **G3-P24** が記載されています。古い証明書（「証明書ルート CA」に基づく証明書）の説明で、次のことを行います。 **P24** は、プログラム名として言及されます。
 
 **質問：最新の証明書を取得するにはどうすればよいですか？**
 
@@ -124,7 +124,7 @@ Applying new certificates on AEM Forms on JEE stack requires importing new crede
 
 #### Import and configure credentials 
 
-You can use the Trust Store Management pages to import a new credential. The Trust Store may contain more than one Reader Extensions credential. You must designate one of those credentials as the default Reader Extensions credential. The default credential is used when a Workbench user is unable to determine which credential to use during process creation. These rules apply to default credentials:
+You can use the Trust Store Management pages to import a new credential. The Trust Store may contain more than one Reader Extensions credential. Designate one of those credentials as the default Reader Extensions credential. The default credential is used when a Workbench user is unable to determine which credential to use during process creation. These rules apply to default credentials:
 
 * If you import a Reader Extensions credential and the Trust Store contains no other Reader Extensions credentials, it is set as the default.
 * If you import a Reader Extensions credential with the Default option selected, the default type is removed from an existing default credential. The imported credential becomes the default.

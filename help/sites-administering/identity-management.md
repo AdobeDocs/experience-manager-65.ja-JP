@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 84%
+source-wordcount: '1248'
+ht-degree: 83%
 
 ---
 
@@ -94,7 +94,7 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-プロファイルの詳細を確認するには、をクリックします。 **マイプロファイル** をクリックします。例えば、 `admin` アカウント：
+プロファイルの詳細を確認するには、 **マイプロファイル** をクリックします。例えば、 `admin` アカウント：
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
@@ -119,10 +119,10 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## プロファイル定義へのフィールドの追加 {#adding-fields-to-the-profile-definition}
 
-プロファイル定義にフィールドを追加できます。例えば、「お気に入りの色」フィールドをGeometrixxプロファイルに追加するには、次のようにします。
+プロファイル定義にフィールドを追加できます。 例えば、「お気に入りの色」フィールドをGeometrixxプロファイルに追加するには、次のようにします。
 
 1. Web サイトコンソールから Geometrixx Outdoors Site／英語／ユーザー／マイプロファイルに移動します。
-1. **マイプロファイル**&#x200B;ページをダブルクリックして編集用に開きます。
+1. 次をダブルクリックします。 **マイプロファイル** ページを開いて編集します。
 1. サイドキックの「**コンポーネント**」タブで、「**フォーム**」セクションを展開します。
 1. サイドキックからフォーム（「**会社情報**」フィールドの直下）に&#x200B;**ドロップダウンリスト**&#x200B;をドラッグします。
 1. **ドロップダウンリスト**&#x200B;コンポーネントをダブルクリックして設定用のダイアログを開き、次の情報を入力します。

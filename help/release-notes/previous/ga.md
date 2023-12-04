@@ -2,10 +2,10 @@
 title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4676'
-ht-degree: 99%
+source-wordcount: '4484'
+ht-degree: 98%
 
 ---
 
@@ -218,7 +218,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### マルチサイト管理（MSM） {#multi-site-management-msm}
 
-* PushOnModify を使用するロールアウト設定について、矛盾した状態を避けるためにページ移動操作の処理を改善しました。。
+* PushOnModify を使用するロールアウト設定の場合、ページ移動操作の処理を改善し、状態の不整合を回避します。
 * ライブコピー構造内にページを作成すると、デフォルトでスタンドアロンページが作成されます。
 * JS SDK を使用している単一ページアプリで MSM 機能を使用できます（SPA エディターとも呼ばれます）。
 
@@ -428,7 +428,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 新機能や機能強化、ドキュメントのリソースについては、[AEM 6.5 Forms の新機能および機能強化の概要](/help/forms/using/whats-new.md)を参照してください。
 
-### 顧客中心開発の使用 {#leverage-customer-focused-development}
+### 顧客中心開発の使用 {#use-customer-focused-development}
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
@@ -507,7 +507,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 >[!NOTE]
 >
->Oracle は Oracle Java™ SE 製品の長期サポート（LTS）モデルに移行しました。Java™ 9 および 10 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照してください）。アドビでは、AEM を実稼働環境で実行するためにのみ、Java™ の LTS リリース版をサポートしています。AEM 6.5 で使用するバージョンとしては、Java™ 11 をお勧めします。
+>Oracle は Oracle Java™ SE 製品の長期サポート（LTS）モデルに移行しました。Java™ 9 と 10 は非 LTS リリースで、Oracle別。 詳しくは、 [OracleJava™ SE サポート・ロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html). アドビでは、AEM を実稼働環境で実行するためにのみ、Java™ の LTS リリース版をサポートしています。AEM 6.5 で使用するバージョンとしては、Java™ 11 をお勧めします。
 
 ## 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 

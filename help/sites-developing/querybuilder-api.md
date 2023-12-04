@@ -8,10 +8,10 @@ content-type: reference
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2285'
-ht-degree: 72%
+source-wordcount: '2033'
+ht-degree: 67%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 72%
 
 の機能 [アセット共有 Query Builder](/help/assets/assets-finder-editor.md) は、Java™ API と REST API を通じて公開されます。 この節では、これらの API について説明します。
 
-サーバーサイド Query Builder（[`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)）はクエリの記述を受け入れ、XPath クエリを作成して実行します。必要に応じて、結果セットのフィルタリングや、ファセットの抽出も実行できます。
+サーバー側のクエリビルダー ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) は、クエリの説明を受け入れ、XPath クエリを作成して実行します。オプションで結果セットをフィルタリングし、必要に応じてファセットを抽出します。
 
 クエリの記述は、単に述語（[`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)）のセットです。例としては、XPath の `jcr:contains()` 関数に対応するフルテキスト述語などがあります。
 
@@ -43,7 +43,7 @@ REST API は、JSON で送信される応答を使用して、HTTP 経由で同�
 
 以下のサンプルは、Java™ プロパティのスタイル表記法で示されています。これらのサンプルを Java™ API で使用するには、この後の API サンプルのように Java™ `HashMap` を使用します。
 
-`QueryBuilder` JSON サーブレットについては、各例にローカルの CQ インストールへのリンク（デフォルトは `http://localhost:4502`）が含まれています。これらのリンクを使用する前に、CQ インスタンスにログインする必要があります。
+`QueryBuilder` JSON サーブレットについては、各例にローカルの CQ インストールへのリンク（デフォルトは `http://localhost:4502`）が含まれています。これらのリンクを使用する前に、CQ インスタンスにログインします。
 
 >[!CAUTION]
 >
@@ -197,7 +197,7 @@ tagid.property=jcr:content/cq:tags
 
 タグタイトルのパス（スペースなし）には、`tag` 述語を使用します。
 
-前の例ではページ（`cq:Page` ノード）を検索しているので、`tagid.property` 述語にはそのノードからの相対パス（`jcr:content/cq:tags`）を使用します。デフォルトでは、`tagid.property` は、単に `cq:tags` となります。
+前の例では、ページ ( `cq:Page` ノード )、そのノードからの相対パスを `tagid.property` 述語： `jcr:content/cq:tags`. デフォルトでは、`tagid.property` は、単に `cq:tags` となります。
 
 ### 複数のパスでの検索（グループを使用） {#search-under-multiple-paths-using-groups}
 
@@ -262,7 +262,7 @@ type=cq:Page
 
 ### プロパティの複数の値の検索 {#search-for-multiple-property-values}
 
-1 つのプロパティに対して複数の値を検索する場合（`"A" or "B" or "C"`）に、グループが大きくならないようにするには、`property` 述語に複数の値を指定します。
+プロパティの複数の値を検索する場合 ( `"A" or "B" or "C"`) を使用する場合、 `property` 述語：
 
 `http://localhost:4502/bin/querybuilder.json?property=jcr%3atitle&property.1_value=Products&property.2_value=Square&property.3_value=Events`
 

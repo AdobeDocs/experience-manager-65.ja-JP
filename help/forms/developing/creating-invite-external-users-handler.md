@@ -3,10 +3,10 @@ title: 外部ユーザー招待ハンドラーの作成
 description: 外部ユーザー招待ハンドラーを作成する方法を説明します。 これにより、Rights Managementサービスは外部ユーザーを招待してRights Managementユーザーにできます。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 93%
+source-wordcount: '1126'
+ht-degree: 83%
 
 ---
 
@@ -34,9 +34,9 @@ Rights Management サービス用に外部ユーザー招待ハンドラーを�
 
 開発環境を設定するには、Eclipse プロジェクトなどの Java プロジェクトを作成する必要があります。 サポートしている Eclipse のバージョンは `3.2.1` 以降です。
 
-Rights Management SPI にはプロジェクトのクラスパスに設定する `edc-server-spi.jar` ファイルが必要です。この JAR ファイルを参照しない場合、Java プロジェクトで Rights Management SPI を使用できません。この JAR ファイルは、AEM Forms SDK と共に `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` フォルダーにインストールされています。
+Rights ManagementSPI では `edc-server-spi.jar` プロジェクトのクラスパスに設定するファイル。 この JAR ファイルを参照しない場合、Java プロジェクトで Rights Management SPI を使用できません。この JAR ファイルは、AEM Forms SDK と共に `[install directory]\Adobe\Adobe_Experience_Manager_forms\sdk\spi` フォルダーにインストールされています。
 
-また、`edc-server-spi.jar` ファイルをプロジェクトのクラスパスに追加する場合は、Rights Management サービス API の使用に必要な JAR ファイルも追加する必要があります。これらのファイルは、外部ユーザー招待ハンドラー内で Rights Management サービス API を使用するために必要です。
+また、 `edc-server-spi.jar` ファイルをプロジェクトのクラスパスに追加する場合は、Rights Managementサービス API の使用に必要な JAR ファイルも追加する必要があります。 これらのファイルは、外部ユーザー招待ハンドラー内で Rights Management サービス API を使用するために必要です。
 
 ## 外部ユーザー招待ハンドラー実装の定義 {#define-invite-external-users-handler}
 
@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 承認ハンドラー用のコンポーネント XML ファイルの定義 {#define-component-xml-authorization-handler}
 
-外部ユーザー招待ハンドラーコンポーネントをデプロイするには、コンポーネント XML ファイルを定義する必要があります。 コンポーネントの XML ファイルは、コンポーネントごとに存在し、コンポーネントに関するメタデータを提供します。
+コンポーネントの XML ファイルを定義して、外部ユーザー招待ハンドラーコンポーネントをデプロイします。 コンポーネントの XML ファイルは、コンポーネントごとに存在し、コンポーネントに関するメタデータを提供します。
 
 以下の `component.xml` ファイルは、外部ユーザー招待ハンドラーに使用されます。サービス名は `InviteExternalUsersSample` でこのサービスが公開する操作の名前は `invitedUser` です。入力パラメーターは `java.util.List` インスタンスで、出力値は `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` インスタンスの配列です。
 
@@ -203,19 +203,19 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 外部ユーザー招待ハンドラーのパッケージ化 {#packaging-invite-external-users-handler}
 
-外部ユーザー招待ハンドラーを AEM Forms にデプロイするには、Java プロジェクトを JAR ファイルにパッケージ化する必要があります。外部ユーザー招待ハンドラーのビジネスロジックが依存する外部 JAR ファイル（`edc-server-spi.jar` および `adobe-rightsmanagement-client.jar` ファイル）は、JAR ファイルにも含まれます。また、コンポーネントの XML ファイルが存在する必要があります。`component.xml` ファイルと外部 JAR ファイルは、JAR ファイルのルートに配置する必要があります。
+外部ユーザー招待ハンドラーを AEM Forms にデプロイするには、Java プロジェクトを JAR ファイルにパッケージ化する必要があります。外部ユーザー招待ハンドラーのビジネスロジックが依存する外部 JAR ファイル ( `edc-server-spi.jar` および `adobe-rightsmanagement-client.jar` ファイルは、JAR ファイルにも含まれます。 また、コンポーネントの XML ファイルが存在する必要があります。`component.xml` ファイルと外部 JAR ファイルは、JAR ファイルのルートに配置する必要があります。
 
 >[!NOTE]
 >
 >下の図では、 `BootstrapImpl` クラスが表示されます。この節では、`BootstrapImpl` クラスを作成する方法については説明しません。
 
-次の図は、外部ユーザー招待ハンドラーの JAR ファイルにパッケージ化された Java プロジェクトのコンテンツを示しています。
+次の図は、招待外部ユーザーハンドラーの JAR ファイルにパッケージ化された Java プロジェクトのコンテンツを示しています。
 
 ![ユーザーの招待](assets/ci_ci_InviteUsers.png)
 
 A.コンポーネントに必要な外部 JAR ファイル B. JAVA ファイル
 
-外部ユーザー招待ハンドラーを JAR ファイルにパッケージ化する必要があります。前の図では、.JAVA ファイルが表示されています。JAR ファイルにパッケージ化した後は、対応する .CLASS ファイルも指定する必要があります。.CLASS ファイルがないと、認証ハンドラーは機能しません。
+外部ユーザー招待ハンドラーを JAR ファイルにパッケージ化します。 前の図では、.JAVA ファイルが表示されています。JAR ファイルにパッケージ化した後は、対応する .CLASS ファイルも指定する必要があります。.CLASS ファイルがないと、認証ハンドラーは機能しません。
 
 >[!NOTE]
 >
@@ -231,7 +231,7 @@ A.コンポーネントに必要な外部 JAR ファイル B. JAVA ファイル
 
 管理コンソールを使用して、招待する外部ユーザーを追加するには、次をおこないます。
 
-1. Workbench を使用して、外部ユーザー招待ハンドラーの JAR ファイルをデプロイします。
+1. Workbench を使用して、招待外部ユーザーハンドラーの JAR ファイルをデプロイします。
 1. アプリケーションサーバーを再起動します。
 1. 管理コンソールにログインします。
 1.  **[!UICONTROL サービス]**／**[!UICONTROL Rights Management]**／**[!UICONTROL 設定]**／ 招待済み&#x200B;**[!UICONTROL ユーザーの登録]**&#x200B;をクリックします。

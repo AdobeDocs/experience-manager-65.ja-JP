@@ -1,19 +1,17 @@
 ---
 title: ローンチの昇格
 description: コンテンツを公開する前にソース（実稼働）に戻すには、ローンチページを昇格させる必要があります。
-uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '772'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -62,7 +60,7 @@ ht-degree: 95%
 
    * **ローンチ**&#x200B;コンソール:
 
-      1. 対象のローンチを選択（サムネールをタップまたはクリック）します。
+      1. ローンチを選択します（サムネールをクリック）。
       1. 「**昇格**」を選択します。
 
 1. 最初の手順では、以下を指定できます。

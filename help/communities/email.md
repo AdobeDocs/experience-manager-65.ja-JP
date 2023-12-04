@@ -8,10 +8,10 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 6%
+source-wordcount: '796'
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ AEM Communitiesは次の電子メールを使用します。
 
 これは、 [電子メール通知の設定](../../help/sites-administering/notification.md)が、フィールドに違いがある場合は、 `"From" address` 次に該当 *not* 必須およびは空のままにする必要があります。
 
-例えば、（例としての値を入力）:
+例： （例としての値で入力）:
 
 ![email-config](assets/email-config.png)
 
@@ -180,24 +180,24 @@ E メールによる返信を許可する場合は、購読用のインスタン
 
 * **[!UICONTROL URL]**
 
-  *（必須）* 送信メールサーバー。 例：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`
+  *（必須）* 送信メールサーバー。 例：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`。
 
 * **[!UICONTROL 読み込み先パス]**&amp;ast;
 
   *（必須）* をに設定します。 `/content/usergenerated/mailFolder/postEmails`
 参照して `postEmails`フォルダーと選択 **OK**.
 
-* **[!UICONTROL 更新間隔 (単位：秒)]**
+* **[!UICONTROL 更新間隔（秒）]**
 
   *（オプション）* デフォルトのメールサービス用に設定されたメールサーバーには、更新間隔の値に関する要件がある場合があります。 例えば、Gmail では `300`.
 
 * **[!UICONTROL ログイン]**
 
-  *(オプション)*
+  *（オプション）*
 
 * **[!UICONTROL パスワード]**
 
-  *(オプション)*
+  *（オプション）*
 
 * 「**[!UICONTROL OK]**」を選択します。
 

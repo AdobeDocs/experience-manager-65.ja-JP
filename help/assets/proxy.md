@@ -4,10 +4,10 @@ description: プロキシは、プロキシワーカーを使用してジョブ�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 69%
+source-wordcount: '824'
+ht-degree: 68%
 
 ---
 
@@ -164,7 +164,7 @@ API の使用例を以下に示します。
 
    例として、IDS プロキシワーカーの `IDSJob.IDS_EXTENDSCRIPT_JOB` を参照してください。
 
-1. 外部手順は、イベントのトリガー化に使用され、完了するまで待ちます。これは、ID に対するポーリングでおこなわれます。 新しい機能を実装するには、独自の手順を開発する必要があります。
+1. 外部手順は、イベントのトリガー化に使用され、完了するまで待ちます。これは、ID に対するポーリングでおこなわれます。 新しい機能を実装するための独自の手順を開発します。
 
    `WorkflowExternalProcess` を実装してから、JobService API およびジョブトピックを使用してジョブイベントを準備し、JobService（OSGi サービス）にディスパッチします。
 

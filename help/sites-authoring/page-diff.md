@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 86%
+source-wordcount: '569'
+ht-degree: 81%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 86%
 
 ### 全画面表示および終了 {#fullscreen-and-exiting}
 
-特定のコンテンツに集中するには、並列比較による差分表示のいずれかの「サイド」の全画面表示アイコンをクリックすると、ブラウザーの全画面に拡大できます。
+特定のコンテンツに焦点を当てるには、並列比較による差分表示の「側」の全画面表示アイコンをクリックして、それをフルブラウザーウィンドウに拡大します。
 
 ![全画面モード](do-not-localize/chlimage_1-18.png)
 

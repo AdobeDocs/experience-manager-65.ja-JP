@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3589'
-ht-degree: 65%
+source-wordcount: '3499'
+ht-degree: 64%
 
 ---
 
@@ -1042,4 +1042,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  `/libs` 内の設定は参考にするだけに留め、変更しないでください。既存のステップを使用する場合は、次の場所にコピーします。 `/apps` そして、そこで修正を加えます。
+>  内の設定を編集しない `/libs`を使用する場合は、単に例として使用します。 既存のステップを使用する場合は、次の場所にコピーします。 `/apps` そして、そこで編集します。

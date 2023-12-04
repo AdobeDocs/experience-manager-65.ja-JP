@@ -8,10 +8,10 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 84%
+source-wordcount: '435'
+ht-degree: 85%
 
 ---
 
@@ -36,9 +36,9 @@ ht-degree: 84%
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
 1. を開きます。 **Sites** コンソール。例： [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
+1. ツールバーの右端（右上隅）で、アイコンをクリックして、 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
 
-1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップし、「 **設定を表示**. The **列の構成** ダイアログが開きます。 必要な変更を加えて、「**更新**」で確定します。
+1. ツールバーの右端（右上隅）で、アイコンをクリックし、「 **設定を表示**. The **列の構成** ダイアログが開きます。 必要な変更を加えて、「**更新**」で確定します。
 
    ![spad-02](assets/spad-02.png)
 

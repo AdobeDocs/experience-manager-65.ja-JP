@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 5fa385a7-f030-4c0c-8938-0991d02ef361
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1682'
 ht-degree: 82%
 
 ---
@@ -63,9 +63,9 @@ Forms サービスでサポートされている操作をプログラムで実�
 
 カスタム CSS ファイルを使用する HTML フォームをレンダリングするには、既存の CSS ファイルを参照していることを確認してください。
 
-**HTML フォームのレンダリング**
+**HTMLフォームのレンダリング**
 
-HTML フォームをレンダリングするには、Designer で作成され、XDP ファイルとして保存されたフォームデザインを指定する必要があります。HTML 変換タイプも選択する必要があります。たとえば、Internet Explorer 5.0 以降のダイナミック HTML をレンダリングする HTML 変換タイプを指定できます。
+HTML フォームをレンダリングするには、Designer で作成され XDP ファイルとして保存されたフォームデザインを指定します。変換タイプをHTMLします。 たとえば、Internet Explorer 5.0 以降のダイナミック HTML をレンダリングする HTML 変換タイプを指定できます。
 
 HTML フォームのレンダリングには、他のフォームタイプのレンダリングに必要な URI などの値も必要です。
 

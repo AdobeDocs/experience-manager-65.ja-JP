@@ -2,10 +2,10 @@
 title: コマースエクスペリエンスのオーサリング
 description: CIFアドオンは、コマース固有の機能を使用してAdobe Experience Managerオーサリングを拡張します。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '713'
-ht-degree: 94%
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ CIF アドオンは、コマース固有の機能を使用して AEM オーサ�
 
 ![選択していないティーザーコンポーネント](/help/commerce/cif/assets/authoring/teaser_component_without_selection.png)
 
-このコンポーネントの設定ダイアログには製品が必要です。CIF では SKU を製品識別子として使用します。作成者は、SKU を手動で入力するか、フォルダーアイコンをクリックして製品ピッカーを開くことができます。ピッカーを選択して閉じると、コンポーネントダイアログに選択した製品の名前が表示されます
+このコンポーネントの設定ダイアログには製品が必要です。CIF では SKU を製品識別子として使用します。作成者は、sku を手動で入力するか、フォルダーアイコンをクリックして製品ピッカーを開くことができます。 ピッカーを選択して閉じると、コンポーネントダイアログに選択した製品の名前が表示されます
 
 ![選択したティーザーコンポーネント](/help/commerce/cif/assets/authoring/teaser_component_with_selection.png)
 
@@ -47,7 +47,7 @@ CIF アドオンは、コマース固有の機能を使用して AEM オーサ�
 
 ![選択していないカルーセルコンポーネント](/help/commerce/cif/assets/authoring/carousel_component_without_selection.png)
 
-このコンポーネントの設定ダイアログには、1 : n のカテゴリが必要です。CIF では、カテゴリ識別子として UID / ID を使用します。作成者は、手動で UID を入力するか、フォルダーアイコンをクリックしてカテゴリピッカーを開くことができます。ピッカーを選択して閉じると、選択したカテゴリの名前がコンポーネントダイアログに表示されます。
+このコンポーネントの設定ダイアログには、1 : n のカテゴリが必要です。CIF では、カテゴリ識別子として UID / ID を使用します。作成者は、手動で UID を入力するか、フォルダーアイコンをクリックしてカテゴリピッカーを開くことができます。 ピッカーを選択して閉じると、選択したカテゴリの名前がコンポーネントダイアログに表示されます。
 
 ![選択したカルーセルコンポーネント](/help/commerce/cif/assets/authoring/carousel_component_with_selection.png)
 

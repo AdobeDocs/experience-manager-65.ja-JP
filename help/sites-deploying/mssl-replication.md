@@ -11,10 +11,10 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
-source-git-commit: b8027a8564f2dce408e7cd5b01f3b86c703c9e3a
-workflow-type: ht
-source-wordcount: '1392'
-ht-degree: 100%
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+workflow-type: tm+mt
+source-wordcount: '1319'
+ht-degree: 93%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-レプリケーションを実行するユーザーアカウントを指定する必要があります。パブリッシュインスタンスに信頼済みオーサー証明書をインストールすると、その証明書がこのユーザーアカウントに関連付けられます。
+レプリケーションを実行しているユーザーアカウントを特定します。 信頼された作成者証明書をパブリッシュインスタンスにインストールする場合、証明書はこのユーザーアカウントに関連付けられます。
 
 ## MSSL の資格情報の取得または作成 {#obtaining-or-creating-credentials-for-mssl}
 
@@ -148,7 +148,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 ### オーサーの秘密鍵のインストール {#install-the-author-private-key}
 
 1. オーサーインスタンスの User Management ページを開きます。（[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）
-1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックまたはタップします。
+1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックします。
 1. 「アカウント設定」領域に「キーストアを作成」リンクが表示されたら、そのリンクをクリックします。パスワードを設定して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「キーストアを管理」をクリックします。
 
@@ -167,7 +167,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 ### パブリッシュの証明書のインストール {#install-the-publish-certificate}
 
 1. オーサーインスタンスの User Management ページを開きます。（[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）
-1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックまたはタップします。
+1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックします。
 1. 「アカウント設定」領域に「TrustStore を作成」リンクが表示されたら、そのリンクをクリックします。TrustStore のパスワードを作成して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「TrustStore を管理」をクリックします。
 1. 「証明書を CER ファイルから追加」をクリックします。
@@ -191,7 +191,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 ### パブリッシュの秘密鍵をインストール {#install-the-publish-private-key}
 
 1. パブリッシュインスタンスの User Management ページを開きます。（[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）
-1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックまたはタップします。
+1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックします。
 1. 「アカウント設定」領域に「キーストアを作成」リンクが表示されたら、そのリンクをクリックします。パスワードを設定して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「キーストアを管理」をクリックします。
 1. 「秘密鍵をキーストアファイルから追加」をクリックします。
@@ -210,7 +210,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 
 ## パブリッシュでの HTTP サービスの設定 {#configure-the-http-service-on-publish}
 
-発行インスタンスで Apache Felix Jetty ベースの HTTP サービスプロパティを設定して、発行インスタンスが Granite キーストアにアクセスする際に HTTPS を使用するようにします。サービスの PID は `org.apache.felix.http` です。
+Granite キーストアへのアクセス時に HTTPS を使用するように、パブリッシュインスタンス上で Apache Felix Jetty Based HTTP Service のプロパティを設定します。 サービスの PID は、 `org.apache.felix.http`.
 
 次の表は、Web コンソールを使用する場合に設定する必要のある OSGi のプロパティを示しています。
 

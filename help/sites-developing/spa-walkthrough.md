@@ -4,9 +4,9 @@ description: この記事では、SPA の概念を説明し、基本的な SPA �
 topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1945'
 ht-degree: 88%
 
 ---
@@ -109,7 +109,7 @@ AEM SPA Editor を使用するSPAが構築されている場合、コンテン�
 
    ![手順 2](assets/spa-walkthrough-step-2.png)
 
-1. AEM内でコンテンツを通常どおりに編集します。変更が保持されます。
+1. AEM内でコンテンツを通常どおりに編集します。 変更が保持されます。
 
    ![手順 3](assets/spa-walkthrough-step-3.png)
 

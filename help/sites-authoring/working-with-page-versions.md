@@ -1,11 +1,11 @@
 ---
 title: コンテンツのページバージョンの操作
-description: ページバージョンを作成、比較および復元します Adobe Experience Managerで
+description: Adobe Experience Managerでページのバージョンを作成、比較および復元します。
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 70%
+source-wordcount: '1510'
+ht-degree: 68%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 70%
 1. バージョンを作成するページに移動して、そのページを表示します。
 1. [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)でページを選択します。
 1. **タイムライン**&#x200B;列を開きます。
-1. コメントフィールドの横にある矢印をクリックまたはタップして、オプションを表示します。
+1. コメントフィールドの横にある矢印をクリックして、オプションを表示します。
 
    ![タイムライン — バージョンとして保存](assets/screen-shot_2019-03-05at112335.png)
 
@@ -210,7 +210,7 @@ ht-degree: 70%
 
    ![モード選択で「タイムワープ」を選択します。](assets/wwpv-01.png)
 
-1. ダイアログで、目的の日時を設定し、「 」をクリックまたはタップします。 **日付を設定**. 時間を選択しない場合、現在の時間がデフォルトとして使用されます。
+1. ダイアログで、目的の日時を設定し、 **日付を設定**. 時間を選択しない場合、現在の時間がデフォルトとして使用されます。
 
    ![日付を設定](assets/wwpv-02.png)
 

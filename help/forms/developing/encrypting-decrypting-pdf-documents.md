@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '8184'
+source-wordcount: '8133'
 ht-degree: 97%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 97%
 
 **暗号化サービスについて**
 
-暗号化サービスを使用すると、ドキュメントの暗号化および復号化が可能になります。ドキュメントが暗号化されると、その内容が読み取れなくなります。 許可されたユーザーは、ドキュメントを復号化して、コンテンツにアクセスできます。 PDFドキュメントがパスワードで暗号化されている場合、ユーザーは開くパスワードを指定してから、Adobe ReaderまたはAdobe Acrobatでドキュメントを表示する必要があります。 同様に、PDFドキュメントが証明書で暗号化されている場合、PDFドキュメントを、PDFドキュメントの暗号化に使用された証明書（秘密鍵）に対応する公開鍵で復号化する必要があります。
+暗号化サービスを使用すると、ドキュメントの暗号化および復号化が可能になります。ドキュメントが暗号化されると、その内容が読み取れなくなります。承認済みユーザーは、ドキュメントを復号して内容を確認できます。PDF ドキュメントがパスワードで暗号化されている場合、ユーザーは開くパスワードを指定してから、Adobe Reader または Adobe Acrobat でドキュメントを表示する必要があります。同様に、PDF ドキュメントが証明書で暗号化されている場合は、、PDF ドキュメントの暗号化に使用された証明書 (秘密鍵) に対応する公開鍵で PDF ドキュメントを復号する必要があります。
 
 暗号化サービスを使用して、次のタスクを実行できます。
 
@@ -80,7 +80,7 @@ PDF ドキュメントをパスワードで暗号化する場合、ユーザー�
 
 **暗号化する PDF ドキュメントを取得**
 
-パスワードを使用してドキュメントを暗号化するには、暗号化されていない PDF ドキュメントを取得する必要があります。既に暗号化されている PDF ドキュメントを保護しようとすると、例外が発生します。
+暗号化されていないPDFドキュメントを取得し、パスワードを使用してドキュメントを暗号化します。 既に暗号化されている PDF ドキュメントを保護しようとすると、例外が発生します。
 
 **暗号化の実行時オプションを設定**
 
@@ -186,7 +186,7 @@ PDF ドキュメントを暗号化する際に、保護されたドキュメン�
 1. 暗号化クライアント API オブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して、`EncryptionServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `EncryptionServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -289,7 +289,7 @@ PDF ドキュメントを暗号化する際に、保護されたドキュメン�
 
 **暗号化する PDF ドキュメントを取得**
 
-暗号化するためには、暗号化されていない PDF ドキュメントを取得する必要があります。既に暗号化されている PDF ドキュメントを保護しようとすると、例外が発生します。
+暗号化する暗号化されていないPDFドキュメントを取得します。 既に暗号化されている PDF ドキュメントを保護しようとすると、例外が発生します。
 
 **証明書を参照**
 
@@ -401,7 +401,7 @@ Encryption API（Web サービス）を使用して、PDF ドキュメントを�
 1. 暗号化クライアント API オブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して、`EncryptionServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `EncryptionServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -499,7 +499,7 @@ Encryption API（Web サービス）を使用して、PDF ドキュメントを�
 
 **暗号化された PDF ドキュメントを取得**
 
-証明書ベースの暗号化を削除するには、暗号化された PDF ドキュメントを取得する必要があります。暗号化されていない PDF ドキュメントから暗号化を削除しようとすると、例外がスローされます。同様に、パスワードで暗号化されたドキュメントから証明書ベースの暗号化を削除しようとすると、例外がスローされます。
+証明書ベースの暗号化を削除するPDFドキュメントを取得します。 暗号化されていない PDF ドキュメントから暗号化を削除しようとすると、例外がスローされます。同様に、パスワードで暗号化されたドキュメントから証明書ベースの暗号化を削除しようとすると、例外がスローされます。
 
 **暗号化を削除**
 
@@ -582,7 +582,7 @@ Encryption API（Web サービス）を使用して、PDF ドキュメントを�
 1. 暗号化サービスクライアントを作成します。
 
    * `EncryptionServiceClient` オブジェクトを作成するには、このオブジェクトのデフォルトのコンストラクターを使用します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `EncryptionServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -660,7 +660,7 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
 
 **暗号化された PDF ドキュメントを取得**
 
-パスワードベースの暗号化を削除するには、暗号化された PDF ドキュメントを取得する必要があります。暗号化されていない PDF ドキュメントから暗号化を削除しようとすると、例外がスローされます。
+暗号化されたPDF・ドキュメントを取得し、パスワード・ベースの暗号化を削除します。 暗号化されていない PDF ドキュメントから暗号化を削除しようとすると、例外がスローされます。
 
 **パスワードを削除**
 
@@ -672,7 +672,7 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
 
 **関連項目**
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの追加](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -731,7 +731,7 @@ Encryption API（web サービス）を使用して、パスワードベース�
 1. 暗号化サービスクライアントを作成します。
 
    * `EncryptionServiceClient` オブジェクトを作成するには、このオブジェクトのデフォルトのコンストラクターを使用します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `EncryptionServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -807,7 +807,7 @@ Encryption API（web サービス）を使用して、パスワードベース�
 
 **暗号化された PDF ドキュメントを取得**
 
-ロックを解除するには、暗号化されたPDFドキュメントを取得する必要があります。 暗号化されていない PDF ドキュメントのロックを解除しようとすると、例外が発生します。
+ロックを解除する暗号化されたPDFドキュメントを取得します。 暗号化されていない PDF ドキュメントのロックを解除しようとすると、例外が発生します。
 
 **ドキュメントのロックを解除**
 
@@ -896,7 +896,7 @@ Encryption API（Java）を使用して、暗号化された PDF ドキュメン
 1. 暗号化サービスクライアントを作成します。
 
    * `EncryptionServiceClient` オブジェクトを作成するには、このオブジェクトのデフォルトのコンストラクターを使用します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `EncryptionServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -984,7 +984,7 @@ PDF ドキュメントを保護する暗号化のタイプを判断するには�
 
 **暗号化された PDF ドキュメントを取得**
 
-保護する暗号化のタイプを判断するには、PDF ドキュメントを入手する必要があります。
+PDF・ドキュメントを取得して、保護する暗号化の種類を決定します。
 
 **暗号化タイプの決定**
 
@@ -1052,7 +1052,7 @@ Encryption API（web サービス）を使用して、PDF ドキュメントを�
 1. サービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して、`EncryptionServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `EncryptionServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。

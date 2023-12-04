@@ -2,10 +2,10 @@
 title: AEM での GraphiQL IDE の使用
 description: Adobe Experience Manager で GraphiQL IDE を使用する方法について説明します。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 92%
+source-wordcount: '783'
+ht-degree: 91%
 
 ---
 
@@ -82,7 +82,7 @@ The **GraphiQL** ツールを使用すると、次のことが可能になり、
 
 どちらの場合も、エディターパネルに表示されるクエリは、次のいずれかの場合に実行されるクエリです。
 
-* 「**クエリを実行**」アイコンをクリックまたはタップする
+* をクリックします。 **クエリを実行** アイコン
 * キーボードショートカット `Control-Enter` を使用する
 
 ## クエリ変数 {#query-variables}

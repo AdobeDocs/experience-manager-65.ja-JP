@@ -1,7 +1,7 @@
 ---
 title: ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。
 seo-title: Reader extending policy-protected PDF documents using Portable Protection Library
-description: Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。DRM 保護された PDF ドキュメントを Reader 用に拡張するには、Portable Protection Library（PPL）を使用することができます。
+description: Reader拡張機能を使用すると、Acrobat Readerを介してAdobe PDFドキュメントのインタラクティブ機能を有効にできます。 DRM で保護されたライブラリドキュメントを Reader 用に拡張するには、Portable Protection Library (PPL) を使用します。PDF
 seo-description: Reader extensions enable interactive features in Adobe PDF documents through Acrobat Reader. You can use the Portable Protection Library (PPL) to reader extend the DRM protected PDF documents.
 uuid: 0da17641-d24c-43c2-b918-8b5abe1e5473
 contentOwner: khsingh
@@ -11,42 +11,42 @@ topic-tags: document_services
 discoiquuid: 83ca522e-d16e-4196-9aa7-84f85de8dee2
 feature: Document Security
 exl-id: fe5d83e8-5e36-4146-a20a-dab2213055e2
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '796'
-ht-degree: 100%
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+workflow-type: tm+mt
+source-wordcount: '783'
+ht-degree: 32%
 
 ---
 
 # ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。 {#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
 
-Document Security のポリシーによって保護された PDF ドキュメントを Reader 用に拡張するには、Document Security、Reader 拡張機能の概念および Java プログラム言語について詳しくなければなりません。
+ドキュメントセキュリティポリシーで保護されたPDFドキュメントを Reader-Extend するには、ドキュメントセキュリティ、Reader Extension、および Java プログラミング言語の概念を理解しておく必要があります。
 
-Document Security を使用して、特定の PDF ドキュメントへのアクセスを認証済のユーザーのみに制限することができます。また、保護されたドキュメントを受信者がどのように使用できるかを指定することができます。例えば、Document Security のポリシーによって保護されたドキュメントで、受信者が印刷、コピー、またはテキスト編集を行えるかどうかを指定できます。Document Security の詳細については、「[Document Security について](/help/forms/using/admin-help/document-security.md)」を参照してください。
+Document Security を使用して、特定のユーザードキュメントへのアクセスを、許可されたPDFに対してのみ制限できます。 また、受信者が保護されたドキュメントをどのように使用できるかを指定することもできます。 例えば、Document Security のポリシーで保護されたドキュメントの受信者がテキストの印刷、コピー、編集を行えるかどうかを指定できます。 Document Security の詳細については、 [document security について](/help/forms/using/admin-help/document-security.md).
 
-Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。通常これらのインタラクティブ機能は、Adobe Acrobat Professional と Standard でのみ可能になります。Reader 拡張機能により有効にできるインタラクティブ機能については、「[Adobe Experience Manager Forms DocAssurance サービス&#x200B;](/help/forms/using/overview-aem-document-services.md)**」を参照してください。**
+Reader Extensions を使用すると、Acrobat Readerを通じてAdobe PDFドキュメントのインタラクティブ機能を有効にすることができます。 これらのインタラクティブ機能は、通常、Adobe Acrobat Professional および Standard でのみ利用できます。 Reader 拡張機能により有効にできるインタラクティブ機能については、「[Adobe Experience Manager Forms DocAssurance サービス&#x200B;](/help/forms/using/overview-aem-document-services.md)**」を参照してください。**
 
-ポータブル保護ライブラリ（PPL）を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークに送信されるのは、セキュリティの証明書と保護ポリシーの詳細のみです。実際のドキュメントはクライアントの手元から離れることはなく、保護ポリシーはクライアント側のローカルに適用されます。
+ポータブル保護ライブラリ（PPL）を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークに送信されるのは、セキュリティの資格情報と保護ポリシーの詳細のみです。実際のドキュメントはクライアントから離れることはなく、保護ポリシーはクライアント上でローカルに適用されます。
 
-## Document Security のポリシーで保護された PDF ドキュメントの Reader 用の拡張 {#reader-extending-document-security-policy-protected-pdf-documents}
+## ReaderDocument Security のポリシーで保護されたPDFドキュメントの拡張 {#reader-extending-document-security-policy-protected-pdf-documents}
 
-ポリシーで保護されたドキュメントは暗号化されています。通常の Reader Extension API では、ポリシーで保護された PDF ドキュメントの使用権限を適用、削除、復元することはできません。Document Security のポリシーで保護された PDF ドキュメントの使用権限を適用、削除、復元できる API を提供しているのは、ポータブル保護ライブラリ（PPL）の Reader エクステンションサービスのみです。
+ポリシーで保護されたドキュメントは、暗号化されたドキュメントです。 ポリシーで保護されたPDFドキュメントの使用権限の適用、削除、取得に、標準の Reader Extension API を使用することはできません。 Document Security のポリシーで保護された PDF ドキュメントの使用権限を適用、削除、復元できる API を提供しているのは、ポータブル保護ライブラリ（PPL）の Reader エクステンションサービスのみです。
 
-### Reader Extensions サービス {#reader-extensions-service}
+### Reader拡張サービス {#reader-extensions-service}
 
-Reader Extension サービスでは、ポリシーで保護された PDF ドキュメントに使用権限を追加し、通常 Adobe Acrobat Reader で PDF ドキュメントを開いた場合に使用できる機能をアクティブにします。このサービスには、ポリシーで保護されたドキュメントの使用権限を削除および復元できる API も用意されています。
+Reader Extension サービスは、ポリシーで保護されたPDFドキュメントに使用権限を追加し、Adobe Acrobat Readerを使用してPDFドキュメントを開いた場合に通常使用できない機能をアクティベートします。 また、ポリシーで保護されたドキュメントの使用権限を削除および取得する API も用意されています。
 
-Reader Extensions サービスは、PDF 標準 1.6 に基づいた PDF ドキュメントを完全にサポートします。Acrobat Reader は別として、サードパーティユーザーは、ポリシーで保護された PDF ドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。
+Reader拡張サービスは、PDF標準 1.6 以降に基づくPDFドキュメントを完全にサポートします。 Acrobat Reader以外のサードパーティユーザーは、ポリシーで保護されたPDFドキュメントを使用するために、追加のソフトウェアやプラグインを必要としません。
 
-Reader Extensions サービスを使用すると、次のタスクを実行できます。
+拡張機能サービスを使用して、次のタスクをReaderできます。
 
-* ポリシーで保護された PDF ドキュメントに使用権限を適用。
-* ポリシーで保護された PDF ドキュメントの使用権限を削除。
+* ポリシーで保護されたPDF・ドキュメントに使用権限を適用する。
+* ポリシーで保護されたポリシードキュメントの使用権限をPDFします。
 * ポリシーで保護された PDF ドキュメントに適用された使用権限を取得します。
 
 ### Document Security のポリシーで保護された PDF ドキュメントに使用権限を適用します。 {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
 
-`applyUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントに使用権限を適用できます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。使用権限が与えられた PDF ドキュメントは、使用権限を付与されたドキュメントと呼ばれます。使用権限を付与されたドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
+`applyUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントに使用権限を適用できます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。PDFに使用権限が適用されているドキュメントは、「権限付きドキュメント」と呼ばれます。 Adobe Readerで権限を付与されたドキュメントを開いたユーザーは、そのドキュメントに対して有効になっている操作を実行できます。
 
 **構文：** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
@@ -58,11 +58,11 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
   </tr>
   <tr>
    <td><p>inputFile</p> </td>
-   <td><p>使用権限を付与する PDF ドキュメントを示す InputStream を指定します。LiveCycle Rights Management または AEM Forms Document Security で保護されたドキュメントを使用することができます。</p> </td>
+   <td><p>使用権限を適用するPDFドキュメントを表す InputStream を指定します。 LiveCycleRights ManagementまたはAEM Forms Document Security で保護されたドキュメントを使用できます。</p> </td>
   </tr>
   <tr>
    <td><p>certFile</p> </td>
-   <td><p>.jks ファイルを示すファイルオブジェクトを指定します。.jks ファイルはキーストアファイルです。このファイルは、使用権限を許可する証明書を指し示します。</p> </td>
+   <td><p>.jks ファイルを表す File オブジェクトを指定します。 .jks ファイルはキーストアファイルです。 使用権限を付与する証明書を指しています。</p> </td>
   </tr>
   <tr>
    <td><p>credentialPassword</p> </td>
@@ -70,12 +70,12 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
   </tr>
   <tr>
    <td><p>usageRights</p> </td>
-   <td><p><a href="https://help.adobe.com/ja_jp/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">usageRights</a> のオブジェクトタイプを指定します。usageRights のオブジェクトは、ポリシーで保護された PDF ドキュメントに適用できる個々の権限を表します。</p> </td>
+   <td><p>タイプのオブジェクトを指定します <a href="https://help.adobe.com/ja_jp/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">UsageRights</a>. usageRights オブジェクトは、ポリシーで保護されたPDF・ドキュメントに適用できる個々の権限を表します。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### ポリシーで保護された PDF ドキュメントに適用された使用権限を取得します。 {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
+### ポリシーで保護された PDF ドキュメントに適用された使用権限を取得します。  {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
 `getDocumentUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントの Reader 拡張機能の使用権限を取得できます。使用権限に関する情報を取得することで、ポリシーで保護された PDF ドキュメントで有効にされている Reader 拡張機能の機能を知ることができます。
 
@@ -89,7 +89,7 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
   </tr>
   <tr>
    <td><p>inDoc</p> </td>
-   <td><p>使用権限の復元元の PDF ドキュメントを示す InputStream を指定します。LiveCycle Rights Management または AEM Forms Document Security で保護されたドキュメントを使用することができます。</p> </td>
+   <td><p>使用権限を取得するPDFドキュメントを表す InputStream を指定します。 LiveCycleRights ManagementまたはAEM Forms Document Security で保護されたドキュメントを使用できます。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -140,9 +140,9 @@ System.out.println("RE rights for the file are :\n"+right1);
  fileWithRe.close();
 ```
 
-### ポリシーで保護された PDF ドキュメントの使用権限の削除 {#remove-usage-rights-of-a-policy-protected-pdf-document}
+### ポリシーで保護されたPDFドキュメントの使用権限を削除 {#remove-usage-rights-of-a-policy-protected-pdf-document}
 
-`removeUsageRights` Java API を使用して、ポリシーで保護されたドキュメントから使用権限を削除することができます。ドキュメントに対してその他の AEM Forms の操作を実行するには、ポリシーで保護された PDF ドキュメントから使用権限を削除する必要があります。例えば、PDF ドキュメントに対する電子署名（または認証）は、使用権限を設定する前に実行する必要があります。したがって、ポリシーで保護されたドキュメントに対して操作を行う場合、その PDF ドキュメントから使用権限を削除し、PDF ドキュメントへの電子署名など、その他の操作を行った後にドキュメントに対して使用権限を再び適用します。
+`removeUsageRights` Java API を使用して、ポリシーで保護されたドキュメントから使用権限を削除することができます。ドキュメントに対するその他のAEM Forms操作を実行するには、PDFで保護されたポリシードキュメントから使用権限を削除する必要があります。 例えば、PDF ドキュメントに対する電子署名（または認証）は、使用権限を設定する前に実行する必要があります。したがって、PDFで保護されたドキュメントに対して操作を実行する場合は、ポリシードキュメントから使用権限を削除し、ドキュメントの電子署名など他の操作を実行してから、ドキュメントに使用権限を再適用する必要があります。
 
 **構文：** `InputStream removeUsageRights(InputStream inputFile)`
 
@@ -154,7 +154,7 @@ System.out.println("RE rights for the file are :\n"+right1);
   </tr>
   <tr>
    <td><p> </p> <p>inputFile</p> </td>
-   <td>使用権限を削除する PDF ドキュメントを示す InputStream を指定します。<br />LiveCycle Rights Management または AEM Forms Document Security で保護されたドキュメントを使用することができます。</td>
+   <td>使用するPDFドキュメントを表す InputStream を指定<br /> 権限を削除します。 LiveCycleRights ManagementまたはAEM Forms Document Security で保護されたドキュメントを使用できます。</td>
   </tr>
  </tbody>
 </table>

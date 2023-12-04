@@ -12,10 +12,10 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2694'
-ht-degree: 67%
+source-wordcount: '2672'
+ht-degree: 66%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 67%
   </tr>
   <tr>
    <td>標準ロールアウト設定</td>
-   <td>ロールアウトトリガーでロールアウトプロセスを開始するのを許可したり、アクション（コンテンツの作成、更新、削除や子ノードの整理）を実行したりする標準のロールアウト設定です。。</td>
+   <td>ロールアウトトリガーでロールアウトプロセスを開始するのを許可したり、アクション (コンテンツの作成、更新、削除や子ノードの整理) を実行したりする、標準ロールアウト設定です。</td>
    <td>ロールアウト時</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> productUpdate<br /> orderChildren</td>
   </tr>
@@ -118,7 +118,7 @@ ht-degree: 67%
   </tr>
   <tr>
    <td>レガシー (5.6.0) カタログロールアウト設定</td>
-   <td>非推奨です。カタログロールアウトには、MSM ではなく Catalog Generator を使用してください。</td>
+   <td>廃止されました。 カタログのロールアウトには、MSM の代わりに Catalog Generator を使用します。</td>
    <td>ロールアウト時</td>
    <td>editProperties</td>
   </tr>
@@ -143,7 +143,7 @@ ht-degree: 67%
   </tr>
   <tr>
    <td>contentDelete</td>
-   <td><p>ソースに存在しないライブコピーのノードを削除します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Delete Action サービスを設定</a>して、除外するノードタイプ、段落項目およびページプロパティを指定してください。 </p> </td>
+   <td><p>ソースに存在しないライブコピーのノードを削除します。 <a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Delete Action サービスの設定</a> をクリックして、除外するノードタイプ、段落項目およびページプロパティを指定します。 </p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -394,7 +394,7 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 
    ![選択したロールアウト設定](assets/chlimage_1-2.png)
 
-1. 「**保存**」をクリックまたはタップします。
+1. 「**保存**」をクリックします。
 
 ### ブループリントページ用のロールアウト設定の指定 {#setting-the-rollout-configuration-for-a-blueprint-page}
 
@@ -413,7 +413,7 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 システムの既定値として使用するロールアウト設定を指定します。 デフォルトを指定するには、OSGi サービスを設定します。
 
 * **Day CQ WCM Live Relationship Manager**
-サービス PID は `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
+サービス PID は、 `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 このサービスを設定するには、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用します。
 

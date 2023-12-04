@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1455'
-ht-degree: 93%
+source-wordcount: '1447'
+ht-degree: 71%
 
 ---
 
@@ -57,7 +57,7 @@ Forms サービス Client API 操作をプログラムで実行には、事前�
 
 **使用権限の実行時オプションの設定**
 
-使用権限を有効にしたフォームをレンダリングするには、使用権限の実行時オプションを設定します。 また、使用権限をフォームに適用するために使用する資格情報のエイリアスも指定する必要があります。エイリアス値を指定したら、フォームに適用する各使用権限を指定します。
+使用権限を有効にしたフォームをレンダリングするには、使用権限の実行時オプションを設定します。 フォームに使用権限を適用するために使用される秘密鍵証明書のエイリアスを指定します。 エイリアス値を指定したら、フォームに適用する各使用権限を指定します。
 
 **権限付きフォームのレンダリング**
 
@@ -93,7 +93,7 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 
 1. プロジェクトファイルを含める
 
-   adobe-forms-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   Java プロジェクトのクラスパスに、adobe-forms-client.jar などのクライアント JAR ファイルを含めます。
 
 1. Forms Client API オブジェクトの作成
 
@@ -103,16 +103,16 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 1. 使用権限の実行時オプションを設定する
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
-   * `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを呼び出し、エイリアス値を表す文字列値を指定することによって、資格情報のエイリアスを指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 以下に例を示します。で、ユーザーがフォームのフィールドに入力して保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
+   * を呼び出して、秘密鍵証明書のエイリアスを指定します。 `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを使用してエイリアス値を表す string 値を指定します。
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 以下に例を示します。ユーザーがフォームフィールドに入力してフォームを保存できる使用権限を設定するには、 `ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドとパス `true`.
 
    >[!NOTE]
    >
-   >`ReaderExtensionSpec` オブジェクトの `setReCredentialPassword` メソッドを呼び出す必要はありません。このメソッドは、Forms サービスでは使用されません。
+   >を呼び出す必要はありません。 `ReaderExtensionSpec` オブジェクトの `setReCredentialPassword` メソッド。 このメソッドは、Forms サービスでは使用されません。
 
 1. 権限設定されたフォームをレンダリングする
 
-   `FormsServiceClient` オブジェクトの `renderPDFFormWithUsageRights` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFFormWithUsageRights` メソッドを使用して、次の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
@@ -124,13 +124,13 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
+   * の作成 `com.adobe.idp.Document` を呼び出すことによって、オブジェクトを `FormsResult` オブジェクトの `getOutputContent` メソッド。
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出して、`java.io.InputStream` オブジェクトを作成します。
-   * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成し、フォームデータストリームを設定します。
-   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアントの web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
+   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
+   * の作成 `java.io.InputStream` を呼び出すことによって、オブジェクトを `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
+   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
@@ -156,12 +156,12 @@ Forms API（web サービス）を使用して、権限が有効なフォーム�
 1. 使用権限の実行時オプションを設定する
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
-   * `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを呼び出し、エイリアス値を表す文字列値を指定することによって、資格情報のエイリアスを指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 ユーザーがフォームフィールドに入力し、フォームを保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
+   * を呼び出して、秘密鍵証明書のエイリアスを指定します。 `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを使用してエイリアス値を表す string 値を指定します。
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 ユーザーがフォームフィールドに入力してフォームを保存できる使用権限を設定するには、 `ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドとパス `true`.
 
 1. 権限設定されたフォームをレンダリングする
 
-   `FormsService` オブジェクトの `renderPDFFormWithUsageRights` メソッドを呼び出して、次の値を渡します。
+   を呼び出す `FormsService` オブジェクトの `renderPDFFormWithUsageRights` メソッドを使用して、次の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * フォームで結合するデータを格納する `BLOB` オブジェクト。フォームでデータを結合しない場合は、空の XML データソースを基にした `BLOB` オブジェクトを渡す必要があります。null の `BLOB` オブジェクトを渡すことはできません。このようなオブジェクトを渡すと例外が発生します。
@@ -173,12 +173,12 @@ Forms API（web サービス）を使用して、権限が有効なフォーム�
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを格納する `BLOB` オブジェクトを作成します。
+   * の作成 `BLOB` を呼び出してフォームデータを含むオブジェクト `FormsResult` オブジェクトの `getOutputContent` メソッド。
    * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを渡します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `BLOB` オブジェクト。
+   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
+   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッド。 このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * を呼び出す `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 

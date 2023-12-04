@@ -1,20 +1,16 @@
 ---
 title: Marketing Campaign Manager の使用
-seo-title: Working with the Marketing Campaign Manager
 description: Marketing Campaign Manager（MCM）は、マルチチャネルのキャンペーンを管理できるコンソールです。このマーケティング自動化ソフトウェアを使用して、ブランド、キャンペーンおよびエクスペリエンスと、関連するセグメント、リスト、リードおよびレポートをすべて管理できます。
-seo-description: The Marketing Campaign Manager (MCM) is a console that helps you manage multi-channel campaigns. With this marketing automation software you can manage all your brands, campaigns and experiences together with the related segments, lists, leads, and reports.
-uuid: 63b817e4-34b9-42b8-845b-e0b7d9af3a96
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 91%
+source-wordcount: '1161'
+ht-degree: 87%
 
 ---
 
@@ -115,14 +111,11 @@ AEM MCM では、リードの構成および追加ができます。これを行
 
 * **左側のパネル**：
 すべてのブランドとキャンペーンのリストが表示されます。
-ブランドをシングルクリックすると、次の両方の動作が行われます。
-
-   * 左側のパネルでリストが展開され、関連するキャンペーンがすべて表示されます。このリストには、キャンペーンごとに存在するエクスペリエンスの数も表示されます。
-   * 右側のパネルにブランドの概要が表示されます。
+ブランドをクリックすると、リストが展開され、関連するすべてのキャンペーンが左側のパネルに表示されます。このリストには、各キャンペーンに存在するエクスペリエンスの数も表示されます。 また、右側のパネルにブランドの概要が開きます。
 
 * **右側のパネル**：
 ブランドごとにアイコンが表示されます（過去のキャンペーンは表示されません）。
-これらのアイコンをダブルクリックして、ブランドの概要を表示できます。
+これらをダブルクリックすると、ブランド概要が開きます。
 
 #### ブランドの概要 {#brand-overview}
 

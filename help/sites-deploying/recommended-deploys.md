@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1778'
-ht-degree: 37%
+source-wordcount: '1759'
+ht-degree: 36%
 
 ---
 
@@ -177,7 +177,7 @@ AEM 用の MongoMK デプロイメントを検討する場合、一連の前提�
 1. MongoDB の専門知識は、既存または新しい MongoDB 環境の維持と維持に自信を持つために、パートナーまたは顧客チーム内に存在する必要があります。
 1. MongoDB の商用またはオープンソースバージョン (AEMは両方をサポート ) をデプロイすることを選択できますが、MongoDB Inc から直接 MongoDB Maintenance and Support 契約を購入する必要があります。
 1. AEMと MongoDB の全体的なアーキテクチャとインフラストラクチャは、AdobeのAEM Architect が明確に定義し、検証する必要があります。
-1. MongoDB を含むAEMデプロイメントのサポートモデルを確認する必要があります。
+1. MongoDB を含むAEMデプロイメントのサポートモデルを確認します。
 
 **MongoDB デプロイメントの重要なレコメンデーション：**
 

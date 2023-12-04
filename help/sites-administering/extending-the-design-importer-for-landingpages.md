@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3495'
-ht-degree: 31%
+source-wordcount: '3443'
+ht-degree: 29%
 
 ---
 
@@ -58,10 +58,10 @@ ht-degree: 31%
 
 zip のレイアウト例を次に示します。
 
-* /index.html -> ランディングページHTMLファイル
-* /css -> を CSS clientlib に追加するには、次の手順を実行します。
-* /img -> すべての画像とアセット
-* /js -> を JS clientlib に追加するには、以下を実行します。
+* /index.html > ランディングページHTMLファイル
+* /css > CSS clientlib に追加
+* /img > すべての画像とアセット
+* /js > JS clientlib に追加するには、をクリックします。
 
 このレイアウトは、HTML5 Boilerplate のレイアウトのベストプラクティスに基づいています。詳しくは、[https://html5boilerplate.com/](https://html5boilerplate.com/) を参照してください。
 
@@ -111,7 +111,7 @@ canvas div は `id="cqcanvas"` を含む HTML **div** です。この div を HT
 
 読み込む前に、次の制限事項に注意してください。
 
-### タグに適用された class や id などの属性は &amp;lt;body> タグは保持されません {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### &amp;lt;body> タグに適用されたクラスや ID などの属性は保持されません {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
 id や class などの属性が body タグに適用されている場合、例えば、 `<body id="container">` その場合、インポート後は保持されません。 したがって、読み込むデザインは、`<body>` タグに適用されている属性に依存しないようにしてください。
 
@@ -156,8 +156,8 @@ id や class などの属性が body タグに適用されている場合、例�
 
 リストを含むテキストを追加するには：
 
-* 1st
-* 2nd
+* 第 1
+* 2 位
 
 RTE エディターで編集できる
 
@@ -530,7 +530,7 @@ OSGi コンソールから設定可能なプロパティを公開するコンポ
 >
 >>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->また、検索パターン内で`CQ_DESIGN_PATH`を `VIPURL` と置換する必要がある場合、検索パターンは次のようになります。
+>また、 `CQ_DESIGN_PATH` 次を使用 `VIPURL` 検索パターンでは、検索パターンは次のようになります。
 >
 >`/\* *VIPURL *\*/ *(['"])`
 

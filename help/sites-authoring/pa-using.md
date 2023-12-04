@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 86%
+source-wordcount: '638'
+ht-degree: 88%
 
 ---
 
@@ -34,9 +34,9 @@ ht-degree: 86%
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
 1. を開きます。 **Sites** コンソール。例： [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
-1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
+1. ツールバーの右端（右上隅）で、アイコンをクリックして、 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
 
-1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップし、「 **設定を表示**. The **列の構成** ダイアログが開きます。 必要な変更を加えて、「**更新**」で確定します。
+1. ツールバーの右端（右上隅）で、アイコンをクリックし、「 **設定を表示**. The **列の構成** ダイアログが開きます。 必要な変更を加えて、「**更新**」で確定します。
 
    ![aa-04](assets/aa-04.png)
 

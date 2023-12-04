@@ -6,10 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2065'
-ht-degree: 16%
+source-wordcount: '2017'
+ht-degree: 13%
 
 ---
 
@@ -33,7 +33,7 @@ GDS の場所は、AEM forms のインストールプロセス中に決定され
 
 ### GDS の場所 {#gds-location}
 
-インストール時に場所の設定を空のままにした場合、アプリケーションサーバーのインストール下のディレクトリがデフォルトの場所になります。 アプリケーションサーバーの次のディレクトリをバックアップする必要があります。
+インストール時に場所の設定を空のままにした場合、アプリケーションサーバーのインストール下のディレクトリがデフォルトの場所になります。 アプリケーションサーバーの次のディレクトリをバックアップします。
 
 * (JBoss) `[appserver root]/server/'server'/svcnative/DocumentStorage`
 * (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`
@@ -46,7 +46,7 @@ GDS の場所をデフォルト以外の場所に変更した場合は、次の�
 
 クラスター環境では、通常、GDS はネットワーク上で共有されるディレクトリを指し、すべてのクラスターノードに対して読み取り/書き込みアクセス可能です。
 
-元の場所が使用できなくなった場合、回復中に GDS の場所が変更される可能性があります。 （[回復中の GDS の場所の変更](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照。）
+元の場所が使用できなくなった場合、回復中に GDS の場所が変更される可能性があります。 ( 詳しくは、 [回復中の GDS の場所の変更](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).)
 
 ### データベースをドキュメントストレージに使用する場合のバックアップオプション {#backup-options-when-database-is-used-for-document-storage}
 

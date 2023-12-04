@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 次の手順を使用して、モバイルページをオーサリングします。
 
 1. グローバルナビゲーションから&#x200B;**サイト**&#x200B;コンソールを開きます。
-1. **We.Retail**／**アメリカ合衆国**／**英語**&#x200B;のページを開きます。
+1. ページを開く **We.Retail** > **米国** > **英語**.
 
 1. **プレビュー**&#x200B;モードに切り替えます。
 1. ページ上部のデバイスアイコンをクリックして、目的のエミュレーターに切り替えます。

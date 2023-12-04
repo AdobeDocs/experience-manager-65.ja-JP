@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2558'
-ht-degree: 87%
+source-wordcount: '2519'
+ht-degree: 85%
 
 ---
 
@@ -152,7 +152,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **PDF ドキュメントとブックマーク XML ドキュメントを Map コレクションに追加する**
 
-ブックマークを追加する PDF ドキュメントと、ブックマーク XML ドキュメントの両方を Map コレクションに追加する必要があります。したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
+ブックマークを追加するPDF文書とブックマーク XML 文書の両方を Map コレクションに追加します。 したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
 
 **実行時オプションの設定**
 
@@ -164,11 +164,11 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **ブックマークを含む PDF ドキュメントの保存**
 
-返された Map オブジェクトから結果を抽出し、対応する PDF ドキュメントを保存する必要があります。（[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)にある「結果の抽出」を参照してください）。
+返されたマップオブジェクトから結果を抽出し、対応するPDF文書を保存します。 （[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)にある「結果の抽出」を参照してください）。
 
-**関連トピック**
+**関連項目**
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの追加](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 

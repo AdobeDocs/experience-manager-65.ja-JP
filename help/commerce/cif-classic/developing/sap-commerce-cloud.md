@@ -1,15 +1,15 @@
 ---
 title: SAP Commerce Cloud を使用した開発
-description: SAP Commerce Cloud 統合フレームワークには、API を備えた統合レイヤーが含まれています。。
+description: SAPCommerce Cloud統合フレームワークには、API を備えた統合レイヤーが含まれます。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2288'
-ht-degree: 32%
+source-wordcount: '2303'
+ht-degree: 31%
 
 ---
 
@@ -65,7 +65,7 @@ e コマースフレームワークは、任意の e コマースソリューシ
 
 以下の例を参照してください。
 
-| `cq:commerceProvider = geometrixx` | 標準のAEMインストールでは、特定の実装が必要です。例えば、汎用 API への最小限の拡張を含むGeometrixx例の場合、 |
+| `cq:commerceProvider = geometrixx` | 標準のAEMインストールでは、特定の実装が必要です。 例えば、汎用 API への最小限の拡張を含むGeometrixx例の場合、 |
 |--- |--- |
 | `cq:commerceProvider = hybris` | hybris 実装 |
 
@@ -562,7 +562,7 @@ AEMと様々な e コマースシステム間で統合が提供されます。 �
 
 AEMのフロントエンドは、既存の hybris 実装の前に配置できます。 また、hybris エンジンを既存のAEMインストールに追加できます。 これを行うには、システムは、次のいずれかのシステムで既存のユーザーを適切に処理できる必要があります。
 
-* AEM -> hybris
+* AEM > hybris
 
    * hybris にログインする際に、AEMユーザーが存在しない場合は、次の手順を実行します。
 
@@ -571,7 +571,7 @@ AEMのフロントエンドは、既存の hybris 実装の前に配置できま
 
    * 参照先: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
-* hybris -> AEM の場合
+* hybris > AEM
 
    * AEM へのログイン時に、システムがユーザーを認識していない場合は、
 

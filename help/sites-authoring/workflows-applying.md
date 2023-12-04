@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 94%
+source-wordcount: '647'
+ht-degree: 90%
 
 ---
 
@@ -111,7 +111,7 @@ ht-degree: 94%
 
 1. **スコープ**&#x200B;ステップで、以下のものを選択できます。
 
-   * 「**コンテンツを追加**」で[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)を開き、追加リソースを選択します。ブラウザーでは、「**選択**」をクリックまたはタップして、コンテンツをワークフローインスタンスに追加します。
+   * **コンテンツを追加** 開く [パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser) 追加のリソースを選択します。ブラウザーで、 **選択** をクリックして、コンテンツをワークフローインスタンスに追加します。
 
    * 追加のアクションを表示するための既存のリソース
 

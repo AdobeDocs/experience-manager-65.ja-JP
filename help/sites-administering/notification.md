@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 92%
+source-wordcount: '2037'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 92%
 
 AEM は、次のユーザーに対してメール通知を送信します。
 
-* 変更やレプリケーションなどのページイベントを購読済みである。The [通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) このようなイベントを購読する方法については、を参照してください。
+* 変更やレプリケーションなどのページイベントを購読済みである。 The [通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) このようなイベントを購読する方法については、を参照してください。
 
 * フォーラムイベントを購読したことがある
 * ワークフローで手順を実行する必要がある。[参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
@@ -287,7 +287,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 まず、メールサービスを設定します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます
-1. **Day CQ Mail Service** を探して、クリックします。
+1. を探して、「 **Day CQ Mail Service**
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.gmail.com`
    * SMTP サーバーポート：`25` または `587`（要件に応じて）
@@ -296,8 +296,8 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 
 次に、以下の手順に従って、SMTP OAuth プロバイダーを設定します。
 
-1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます。
-1. **CQ Mailer SMTP OAuth2 Provider** を探して、クリックします。
+1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます
+1. を探して、「 **CQ Mailer SMTP OAuth2 Provider**
 1. 必要な情報を以下のとおり入力します。
    * 認証 URL：`https://accounts.google.com/o/oauth2/auth`
    * トークン URL：`https://accounts.google.com/o/oauth2/token`
@@ -341,7 +341,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 
    ![Microsoft Outlook を設定する際の新しい登録ボタン](assets/oauth-outlook1.png)
 
-1. 必要に応じて情報を入力し、**登録**&#x200B;をクリックします。
+1. 必要に応じて情報を入力し、「 **登録**
 1. 新しく作成されたアプリに移動し、**API 権限**&#x200B;を選択します。
 1. **権限を追加**／**グラフ権限**／**委任権限**&#x200B;に移動します。
 1. アプリに対して以下の権限を選択し、「**権限を追加**」をクリックします。
@@ -354,7 +354,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 公開インスタンスごとに上記の手順を繰り返します。
 1. 要件に応じて設定を指定します
-1. 次に、「**証明書とシークレット**」に移動し、「**新しいクライアントシークレット**」をクリックし、画面の手順に従ってシークレットを作成します。このシークレットは後で使用するため、必ずメモしてください
+1. 次へ、に移動します。 **証明書と秘密鍵**&#x200B;をクリックし、 **新しいクライアント秘密鍵** 画面の手順に従って、秘密鍵を作成します。 このシークレットは後で使用するため、必ずメモしてください
 1. 左側のウィンドウで「**概要**」を押し、後で使用するために、「**アプリケーション（クライアント）ID**」および「**ディレクトリ（テナント）ID**」の値をコピーします。
 
 まとめるには、AEM側で Mailer サービスの OAuth2 を設定するために、次の情報が必要です。
@@ -370,15 +370,15 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 次に、OAuth2 の設定を AEM と統合します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` をブラウジングすることで、ローカルインスタンスの web コンソールに移動します。
-1.  **Day CQ Mail Service** を探してクリックします。
+1. を探してクリックします。 **Day CQ Mail Service**
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.office365.com`
    * SMTP ユーザー：メールフォーマットのユーザ名
    * 「From」アドレス：メーラーが送信するメッセージの「From」フィールドで使用するメールアドレス
    * SMTP サーバーポート：要件に応じて `25` または `587`
    * 「**SMPT は StarTLS を使用**」と「**SMTP には StarTLS が必要**」のチェックボックスをオンにします。
-   * **OAuth フロー**&#x200B;を確認して「**保存**」をクリックします。
-1.  **CQ メーラー SMTP OAuth2 プロバイダー** を探して、それをクリックします。
+   * **OAuth フロー** をチェックし、「**保存**」をクリックします。
+1. を探して、「 **CQ Mailer SMTP OAuth2 Provider**
 1. 必要な情報を以下のとおり入力します。
    * 「認証 URL」、「トークン URL」、「更新トークン URL」を、[この手順の最後](#microsoft-outlook)に説明した方法で作成し、入力します。
    * クライアント ID とクライアント秘密鍵：これらのフィールドに、前述のように取得した値を設定します。

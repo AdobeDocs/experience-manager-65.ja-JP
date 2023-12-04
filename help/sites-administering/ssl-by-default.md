@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 88%
+source-wordcount: '828'
+ht-degree: 90%
 
 ---
 
@@ -20,7 +20,7 @@ AEM のセキュリティを継続的に向上させる取り組みの中で、A
 
 ## デフォルトの SSL/TLS の有効化 {#enabling-ssl-tls-by-default}
 
-AEM ホーム画面から該当するインボックスメッセージをクリックすることで、デフォルトの SSL/TLS の設定を開始できます。インボックスを表示するには、画面の右上隅にあるベルのアイコンを押します。次に、「**すべて表示**」をクリックします。すべてのアラートのリストが順序付けられてリスト表示で表示されます。
+AEM ホーム画面から該当するインボックスメッセージをクリックすることで、デフォルトの SSL/TLS の設定を開始できます。インボックスを表示するには、画面の右上隅にあるベルのアイコンを押します。次に、「 **すべて表示**. すべてのアラートのリストが順序付けられてリスト表示で表示されます。
 
 リストで、**HTTPS を設定**&#x200B;アラートを選択して開きます。
 

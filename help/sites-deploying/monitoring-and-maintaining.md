@@ -10,10 +10,10 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '5939'
-ht-degree: 99%
+source-wordcount: '5793'
+ht-degree: 98%
 
 ---
 
@@ -126,7 +126,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
    ![バージョンのパージ設定](assets/version-purge-configuration.png)
 
    * **パスをパージ**
-パージするコンテンツの開始パスを設定します。例：`/content/wknd`。
+パージするコンテンツの開始パスを設定します。例： `/content/wknd`.
 
      >[!CAUTION]
      >
@@ -238,13 +238,13 @@ AEM WCM とリポジトリに対するすべてのアクセス要求が、ここ
 このログは、[!DNL Dynamic Media] が有効になっている場合にのみ使用されます。s7access ログには、`/is/image` および `/is/content` 経由で [!DNL Dynamic Media] に対して実行された各リクエストが記録されます。
 
    * `stderr.log`
-起動時に生成される様々な深刻度レベルのエラーメッセージを保持します。デフォルトでは、ログレベルの設定は次のようになっています。`Warning` (`WARN`)
+起動時に生成される様々な深刻度レベルのエラーメッセージを保持します。デフォルトでは、ログレベルはに設定されています。 `Warning` ( `WARN`)
 
    * `stdout.log`
 起動時のイベントを示すログメッセージを保持します。
 
    * `upgrade.log`
-すべてのアップグレード操作のログを提供します。アップグレード操作が実行されるのは、`com.day.compat.codeupgrade` および `com.adobe.cq.upgradesexecutor` の各パッケージです。
+から実行されるすべてのアップグレード操作のログを提供します。 `com.day.compat.codeupgrade` および `com.adobe.cq.upgradesexecutor` パッケージ。
 
 * `<cq-installation-dir>/crx-quickstart/repository/segmentstore`
 
@@ -483,7 +483,7 @@ Felix コンソールでは、`../system/console/slinglog` の Sling ログサ�
 
 #### Web コンソールの OSGi 監査記録 {#osgi-audit-records-from-the-web-console}
 
-OSGi イベントで生成される監査記録は、AEM Web コンソールの「**設定ステータス**」タブ／「**ログファイル**」タブから確認できます。 
+また、OSGi イベントは監査レコードを生成し、 **設定ステータス** タブ/ **ログファイル** AEM Web コンソールのタブ：
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -603,7 +603,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>truss/strace</td>
    <td>ページの読み込み</td>
-   <td><p>システムの呼び出しおよびシグナルをトレースする Unix／Linux コマンド。ログレベルを <code>INFO</code> に上げます。</p> <p>リクエストごとのページ読み込み数と、読み込んだページを分析します。</p> </td>
+   <td><p>システムコールとシグナルを追跡する Unix/Linux コマンド。 ログレベルをに上げます。 <code>INFO</code>.</p> <p>リクエストごとのページ読み込み数と、読み込んだページを分析します。</p> </td>
   </tr>
   <tr>
    <td>スレッドダンプ</td>

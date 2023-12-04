@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2205'
-ht-degree: 29%
+source-wordcount: '2148'
+ht-degree: 28%
 
 ---
 
@@ -58,7 +58,7 @@ AEMオーサーインスタンスで Dynamic Tag Managementステージング用
 
 AEMが Dynamic Tag Managementライブラリをホストする場合、Dynamic Tag Managementデプロイメントフックサービスを使用して、ライブラリの更新をAEMに自動的にプッシュできます。 Dynamic Tag Management web プロパティのプロパティが編集されるなど、ライブラリに変更が加えられると、ライブラリの更新がプッシュされます。
 
-デプロイメントフックを使用するには、Dynamic Tag Management がライブラリをホストしている AEM インスタンスに接続できなければなりません。Dynamic Tag Management サーバーが [AEM にアクセスできるようにする](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service)必要があります。
+デプロイメントフックを使用するには、Dynamic Tag Management がライブラリをホストしている AEM インスタンスに接続できなければなりません。[AEMへのアクセスを有効にする](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service) Dynamic Tag Managementサーバー用。
 
 AEM がファイアウォールの背後にある場合など、環境によっては AEM に到達できないことがあります。そのような場合には、AEM のポーリングインポーターオプションを使用して、ライブラリを定期的に取得できます。cron ジョブ式は、ライブラリのダウンロードのスケジュールを示します。
 

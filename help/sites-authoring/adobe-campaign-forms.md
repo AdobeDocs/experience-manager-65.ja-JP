@@ -8,10 +8,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 95%
+source-wordcount: '1281'
+ht-degree: 93%
 
 ---
 
@@ -96,7 +96,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
    * **Adobe Campaign：サービスの登録解除**：Adobe Campaign で受信者の登録をキャンセルできます。
 
 1. 各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。このコンポーネントでは、Adobe Campaignプロファイルの暗号化されたプライマリキーを受け取るために使用される URL パラメーターを定義します。 「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
-1. 「**暗号化されたプライマリキー**」コンポーネントをフォーム（任意の場所）にドラッグし、「**設定**」アイコンをクリックまたはタップします。「**Adobe Campaign**」タブで、URL パラメーターに任意の名前を指定します。チェックマークをクリックまたはタップして、変更を保存します。
+1. コンポーネントをドラッグします。 **暗号化されたプライマリキー** フォーム（任意の場所）に移動し、 **設定** アイコン。 「**Adobe Campaign**」タブで、URL パラメーターに任意の名前を指定します。チェックマークをクリックして、変更を保存します。
 
    このフォームへのリンクを生成するには、この URL パラメーターを使用して、Adobe Campaign プロファイルの暗号化されたプライマリキーを割り当てる必要があります。暗号化されたプライマリキーは、URL（パーセント）で適切にエンコードする必要があります。
 

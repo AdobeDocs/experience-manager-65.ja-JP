@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2770'
 ht-degree: 40%
 
 ---
@@ -102,7 +102,7 @@ Adobe Campaignと統合するには、ページにAdobe Campaignクラウドサ�
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. 「**クラウドサービス**」を選択し、「**+**」をクリックして設定を追加します。表示される任意の設定を選択します（どれでもかまいません）。「**+**」記号をクリックまたはタップして、別の設定を追加してから、「**Adobe Campaign**」を選択します。
+1. 「**クラウドサービス**」を選択し、「**+**」をクリックして設定を追加します。表示される任意の設定を選択します（どれでもかまいません）。次をクリック： **+** 別の設定を追加し、「 」を選択します。 **Adobe Campaign**.
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ E メールコンテンツを編集するには：
 
    ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-1. 現在選択されているペルソナに関連付けられている、Adobe Campaignからのシードデータを表示できます。 これをおこなうには、ContextHub バーでAdobe Campaignモジュールをクリックまたはタップします。 現在のプロファイルのすべてのシードデータが表示されるダイアログボックスが開きます。 再度別のペルソナに切り替えると、データが変化します。
+1. 現在選択されているペルソナに関連付けられている、Adobe Campaignからのシードデータを表示できます。 これをおこなうには、ContextHub バーでAdobe Campaignモジュールをクリックします。 現在のプロファイルのすべてのシードデータが表示されるダイアログボックスが開きます。 再度別のペルソナに切り替えると、データが変化します。
 
    ![chlimage_1-30](assets/chlimage_1-30a.png)
 

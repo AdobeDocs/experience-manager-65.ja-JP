@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 77%
+source-wordcount: '333'
+ht-degree: 71%
 
 ---
 
@@ -38,7 +38,7 @@ AEM 用 JavaScript SPA SDK を使用する単一ページアプリケーショ�
 1. フロントエンドコンポーネントは、自らを[コンポーネントマッピングストア](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module)に登録します。
 1. [モデルプロバイダー](/help/sites-developing/spa-blueprint.md#the-model-provider)でモデルが提供されると、[コンテナ](/help/sites-developing/spa-blueprint.md#container)はそのモデルコンテンツ（`:items`）を反復します。
 
-1. ページがある場合、そのページの子（`:children`）は、最初に[コンポーネントマッピング](/help/sites-developing/spa-blueprint.md#componentmapping)からコンポーネントクラスを取得してから、取得したクラスをインスタンス化します。
+1. ページがある場合、その子 ( `:children`) 最初に、 [コンポーネントマッピング](/help/sites-developing/spa-blueprint.md#componentmapping) 次に、インスタンス化します。
 
 ## アプリの初期化 {#app-initialization}
 

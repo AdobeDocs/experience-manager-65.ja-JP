@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '672'
 ht-degree: 7%
 
 ---
@@ -79,7 +79,7 @@ GDS ディレクトリの場所は、AEM forms のインストールプロセス
 
 ## デフォルトの GDS の場所の変更 {#change-the-default-gds-location}
 
-AEM forms のインストールが完了したら、管理コンソールで GDS の場所を変更できます。 プロセスを完了するには、手動でデータの場所を変更する必要があります。
+AEM forms のインストールが完了したら、管理コンソールで GDS の場所を変更できます。 プロセスを完了するために、データを手動で再配置します。
 
 >[!NOTE]
 >

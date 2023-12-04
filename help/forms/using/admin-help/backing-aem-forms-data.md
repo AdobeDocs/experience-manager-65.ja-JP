@@ -6,10 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 10%
+source-wordcount: '1515'
+ht-degree: 9%
 
 ---
 
@@ -37,7 +37,7 @@ GDS の場所をバックアップする頻度は、AEM Formsの使用方法と�
 
 ## データベース、GDS、AEMリポジトリおよびコンテンツ保存場所のルートディレクトリのバックアップ {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
-AEM Formsは、セーフバックアップ（スナップショット）モードまたはローリングバックアップ（継続的な有効範囲）モードのどちらかに設定する必要があります。 AEM Formsを設定していずれかのバックアップモードに入る前に、次の点を確認します。
+AEM Formsは、セーフバックアップ（スナップショット）モードか、ローリングバックアップ（継続的な対象）モードのどちらかに設定します。 AEM Formsを設定していずれかのバックアップモードに入る前に、次の点を確認します。
 
 * システムのバージョンを確認し、最後の完全なシステムイメージバックアップの実行後に適用されたパッチまたは更新を記録します。
 * ローリングモードまたはスナップショットモードのバックアップを使用する場合は、データベースのホットバックアップを実行できるように、データベースに正しいログ設定が設定されていることを確認します。 ( 詳しくは、 [AEM Formsデータベース](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).)

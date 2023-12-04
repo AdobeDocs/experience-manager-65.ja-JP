@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2444'
 ht-degree: 93%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 93%
 
 * `LiveAction` クラスには次のメソッドが含まれます。
 
-   * `getName`：アクションの名前を戻します。この名前は、アクションを参照するために使用されます（例えば、ロールアウト設定）。
+   * `getName`：アクションの名前を戻します。 この名前は、アクションを参照するために使用されます（例えば、ロールアウト設定）。
    * `execute`：アクションのタスクを実行します。
 
 * `LiveActionFactory` クラスには次のメンバーが含まれます。

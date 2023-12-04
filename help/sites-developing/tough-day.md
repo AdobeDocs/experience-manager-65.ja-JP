@@ -4,9 +4,9 @@ description: Tough Day テストは、すべての操作が同時におこなわ
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1824'
 ht-degree: 53%
 
 ---
@@ -238,7 +238,7 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-また、特定のスイート内の既存のテストは、`config`* *パラメーターを使用して再設定することもできます。また、（テストクラス名ではなく）テストのスイート名と実際の名前も指定する必要があります。 テスト名は、テストクラスの `name` プロパティで確認できます。テストプロパティの確認方法について詳しくは、[テストプロパティの変更](/help/sites-developing/tough-day.md#changing-the-test-properties)を参照してください。
+また、特定のスイート内の既存のテストは、`config`* *パラメーターを使用して再設定することもできます。また、（テストクラス名ではなく）テストのスイート名と実際の名前も指定します。 テスト名は、テストクラスの `name` プロパティで確認できます。テストプロパティの確認方法について詳しくは、[テストプロパティの変更](/help/sites-developing/tough-day.md#changing-the-test-properties)を参照してください。
 
 以下の例では0、`CreatePageTreeTest` のデフォルトのアセットタイトル（名前は `UploadAsset`）を「NewAsset」に変更しています。
 
@@ -260,7 +260,7 @@ tests:
       title : NewAsset
 ```
 
-また、事前定義されたスイートまたは公開者のテストを、 `exclude` パラメーター。 また、（テスト C ではなく）テストのスイート名と実際の名前を指定する必要があります `lass` 名前 ) を参照してください。 テスト名は、テストクラスの `name` プロパティで確認できます。以下の例では、（`UploadAsset` という名前の）`CreatePageTreeTest` テストを toughday スイートから削除しています。
+また、事前定義されたスイートまたは公開者のテストを、 `exclude` パラメーター。 また、（テスト C ではなく）テストのスイート名と実際の名前も指定します。 `lass` 名前 ) を参照してください。 テスト名は、テストクラスの `name` プロパティで確認できます。以下の例では、（`UploadAsset` という名前の）`CreatePageTreeTest` テストを toughday スイートから削除しています。
 
 コマンドラインパラメータを使用する場合：
 

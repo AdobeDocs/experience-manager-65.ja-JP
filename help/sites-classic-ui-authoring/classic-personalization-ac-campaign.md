@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 46%
+source-wordcount: '1185'
+ht-degree: 47%
 
 ---
 
@@ -81,7 +81,7 @@ Adobe Campaignと統合するには、ページにAdobe Campaignクラウドサ�
 
    >[!NOTE]
    >
-   >必ずタップまたはクリックしてください **OK** または **適用** クラウドサービスを追加した後。 これにより、 **Adobe Campaign** 」タブが正しく機能しない問題を修正しました。
+   >必ず「 **OK** または **適用** クラウドサービスを追加した後。 これにより、 **Adobe Campaign** 」タブが正しく機能しない問題を修正しました。
 
 1. デフォルトの&#x200B;**メール**&#x200B;テンプレート以外の、（Adobe Campaign の）特定のメール配信テンプレートを適用したい場合は、「**ページのプロパティ**」を再度選択します。「**Adobe Campaign**」タブで、関連する Adobe Campaign インスタンス内でのメール配信テンプレートの内部名を入力します。
 

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 93%
+source-wordcount: '831'
+ht-degree: 91%
 
 ---
 
@@ -111,7 +111,7 @@ ht-degree: 93%
 
 * **ツール**&#x200B;コンソールで、**ツール**／**サイト**／**ローンチ**&#x200B;と選択します。
 
-* または、[ に直接アクセスします。https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* または、 [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
 ## 「参照」のローンチ（サイトコンソール） {#launches-in-references-sites-console}
 
@@ -121,6 +121,6 @@ ht-degree: 93%
 
    ![「リファレンス」タブ — ローンチ](assets/screen-shot_2019-03-05at121901-1.png)
 
-1. 適切なローンチをタップまたはクリックすると、使用可能なアクションのリストが表示されます。
+1. 適切なローンチをクリックすると、使用可能なアクションのリストが表示されます。
 
    ![起動を選択して実行可能なアクションを表示](assets/screen-shot_2019-03-05at121952-1.png)

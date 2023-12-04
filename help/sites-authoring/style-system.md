@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 86%
+source-wordcount: '1293'
+ht-degree: 83%
 
 ---
 
@@ -80,7 +80,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 
    ![作成者にとってのスタイルシステム](assets/style-system-author.png)
 
-1. **リスト**&#x200B;コンポーネントのツールバーで「**スタイル**」ボタンをタップまたはクリックしてスタイルメニューを開き、コンポーネントの外観を変更します。
+1. 次をクリック： **スタイル** ボタンをクリックします。 **リスト** component ：スタイルメニューを開き、コンポーネントの外観を変更します。
 
    ![スタイルの選択](assets/style-system-author2.png)
 
@@ -90,7 +90,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 
 ### テンプレート作成者として {#as-a-template-author}
 
-1. WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）の編集時に、**ページ情報／テンプレートの編集**&#x200B;でページのテンプレートを編集します。
+1. WKND の英語のマスターホームページ ( ) の編集中 `http://<host>:<port>/sites.html/content/wknd/language-masters/en`、を使用してページのテンプレートを編集します。 **ページ情報/テンプレートを編集**.
 
    ![テンプレートを編集](assets/style-system-edit-template.png)
 

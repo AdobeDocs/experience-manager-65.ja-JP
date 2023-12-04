@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 42%
+source-wordcount: '528'
+ht-degree: 46%
 
 ---
 
@@ -34,10 +34,10 @@ AEMをAdobe Targetと統合するには、有効なAdobe Targetアカウント�
 
 Test &amp; Target [レプリケーションエージェント](/help/sites-deploying/replication.md)を作成者インスタンス上で有効にする必要があります。AEM のインストールに [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 実行モードを使用した場合、このレプリケーションエージェントはデフォルトでは有効になっていません。実稼動環境の保護について詳しくは、 [セキュリティチェックリスト](/help/sites-administering/security-checklist.md).
 
-1. AEMホームページで、「 」をクリックまたはタップします。 **ツール** > **導入** > **レプリケーション**.
-1. クリックまたはタップ **作成者のエージェント**.
-1. クリックまたはタップ **Test と Target（test と Target）** レプリケーションエージェントをクリックまたはタップします。 **編集**.
-1. 「有効」オプションを選択し、「 」をクリックまたはタップします。 **OK**.
+1. AEMホームページで、 **ツール** > **導入** > **レプリケーション**.
+1. クリック **作成者のエージェント**.
+1. 次をクリック： **Test と Target（test と Target）** レプリケーションエージェントを選択し、「 **編集**.
+1. 「有効」オプションを選択し、「 **OK**.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
 
 ## アクティビティ設定ノードの保護 {#securing-the-activity-settings-node}
 
-アクティビティ設定ノードを保護する必要があります **cq:ActivitySettings** 通常のユーザーがアクセスできないように、パブリッシュインスタンス上で実行します。 アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
+パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護し、通常のユーザーがアクセスできないようにします。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
 The **cq:ActivitySettings** ノードは、CRXDE lite の下の `/content/campaigns/*nameofbrand*`* *activitys jcr:content ノードの下で、* *例： `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. このノードは、コンポーネントのターゲティング後にのみ作成されます。
 

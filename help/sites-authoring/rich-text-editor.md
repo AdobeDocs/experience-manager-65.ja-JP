@@ -1,11 +1,11 @@
 ---
 title: リッチテキストエディターを使用したコンテンツのオーサリング
-description: リッチテキストエディターを使用したコンテンツのオーサリング Adobe Experience Manager 6.5 のバージョン。
+description: リッチテキストエディターを使用したAdobe Experience Manager 6.5 でのコンテンツのオーサリング
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 87%
+source-wordcount: '264'
+ht-degree: 77%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 87%
 
 ## インプレース編集 {#in-place-editing}
 
-シングルタップまたはクリックでテキストベースのコンポーネントを選択すると、他のコンポーネントと同様に、[コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
+テキストベースのコンポーネントを 1 回クリックして選択すると、 [コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 他のコンポーネントと同様です。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-もう一度タップまたはクリックするか、最初にゆっくりダブルタップまたはクリックしてコンポーネントを選択すると、独自のツールバーを持つインプレース編集が開きます。 ここで、コンテンツの編集や、基本的な書式変更ができます。
+もう一度タップまたはクリックするか、最初にコンポーネントをゆっくりダブルクリックして選択すると、独自のツールバーを持つインプレース編集が開きます。 ここで、コンテンツの編集や、基本的な書式変更ができます。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 

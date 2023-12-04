@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 96%
+source-wordcount: '1726'
+ht-degree: 88%
 
 ---
 
@@ -28,10 +28,10 @@ There are two options to disable ContextHub:
 
 * Edit the ContextHub's configuration and check the option **Disable ContextHub**
 
-    1. In the rail click or tap **Tools &gt; Sites &gt; ContextHub**
-    1. Click or tap the appropriate **Configuration Container**
-    1. Select the **ContextHub Configuration** and click or tap **Edit Selected Element**
-    1. Click or tap **Disable ContextHub** and click or tap **Save**
+    1. In the rail click **Tools &gt; Sites &gt; ContextHub**
+    1. Click the appropriate **Configuration Container**
+    1. Select the **ContextHub Configuration** and click **Edit Selected Element**
+    1. Click **Disable ContextHub** and click **Save**
 
 or
 -->
@@ -74,10 +74,10 @@ UI モードは、ツールバーの左側に一連のアイコンとして表�
 
 UI モードを追加すると、関連する ContextHub モジュールをグループ化できます。UI モードの作成時に、ContextHub ツールバーに表示されるタイトルとアイコンを指定します。
 
-1. Experience Manager パネルで、ツール／サイト／ContextHub をクリックまたはタップします。
-1. デフォルトの設定コンテナをクリックまたはタップします。
-1. 「ContextHub 設定」をクリックまたはタップします。
-1. 「作成」ボタンをクリックまたはタップして、「ContextHub UI モード」をクリックまたはタップします。
+1. Experience Managerレールで、ツール/サイト/Context Hub をクリックします。
+1. デフォルトの設定コンテナをクリックします。
+1. 「 Context Hub 設定」をクリックします。
+1. 「作成」ボタンをクリックし、「ContextHub UI モード」をクリックします。
 
    ![chlimage_1-320](assets/chlimage_1-320.png)
 
@@ -87,7 +87,7 @@ UI モードを追加すると、関連する ContextHub モジュールをグ�
    * モードアイコン： [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 例えば、 `coral-Icon--user`
    * 有効：ContextHub ツールバーに UI モードを表示する場合に選択します
 
-1. 「保存」をクリックまたはタップします。
+1. 「保存」をクリックします。
 
 ### UI モジュールの追加 {#adding-a-ui-module}
 
@@ -108,11 +108,11 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
 | [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | ページのタグに関する統計が表示されます | tagcloud |
 | [granite.profile](/help/sites-developing/ch-samplemodules.md#granite-profile-ui-module-type) | authorizableID、displayName、familyName など、現在のユーザーのプロファイル情報が表示されます。displayName と familyName の値は変更できます。 | プロファイル |
 
-1. Experience Manager パネルで、ツール／サイト／ContextHub をクリックまたはタップします。
-1. UI モジュールを追加する設定コンテナをクリックまたはタップします。
+1. Experience Managerレールで、ツール/サイト/ContextHub をクリックします。
+1. UI モジュールを追加する設定コンテナをクリックします。
 1. UI モジュールを追加する ContextHub 設定コンテナをクリックまたはタップします。
-1. UI モジュールを追加する UI モードをクリックまたはタップします。
-1. 「作成」ボタンをクリックまたはタップして、「ContextHub UI モジュール（汎用）」をクリックまたはタップします。
+1. UI モジュールを追加する UI モードをクリックします。
+1. 「作成」ボタンをクリックし、「 ContextHub UI モジュール（汎用） 」をクリックします。
 
    ![chlimage_1-321](assets/chlimage_1-321.png)
 
@@ -123,7 +123,7 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
    * 有効：オンにすると ContextHub ツールバーに UI モジュールが表示されます。
 
 1. （オプション）デフォルトのストアの設定をオーバーライドするには、UI モジュールを設定する JSON オブジェクトを入力します。
-1. 「保存」をクリックまたはタップします。
+1. 「保存」をクリックします。
 
 ## ContextHub ストアの作成 {#creating-a-contexthub-store}
 
@@ -151,14 +151,14 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | デバイス情報、ブラウザーの種類、画面の向きなど、クライアントに関する情報を格納します |
 | [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | ページのタグとタグの数を格納します。 |
 
-1. Experience Manager パネルで、ツール／サイト／ContextHub をクリックまたはタップします。
-1. デフォルトの設定コンテナをクリックまたはタップします。
-1. 「Contexthub 設定」をクリックまたはタップします。
-1. ストアを追加するには、「作成」アイコンをクリックまたはタップして、「ContextHub ストア設定」をクリックまたはタップします。
+1. Experience Managerレールで、ツール/サイト/ContextHub をクリックします。
+1. デフォルトの設定コンテナをクリックします。
+1. 「 Contexthub 設定」をクリックします。
+1. ストアを追加するには、作成アイコンをクリックし、「ContextHub ストア設定」をクリックします。
 
    ![chlimage_1-322](assets/chlimage_1-322.png)
 
-1. 次の基本設定のプロパティの値を指定して「次へ」をクリックまたはタップします。
+1. 基本的な設定プロパティの値を指定し、「次へ」をクリックします。
 
    * **設定タイトル：**&#x200B;ストアを識別するタイトル。
    * **ストアタイプ：**&#x200B;ストアのベースとなるストア候補の storeType プロパティの値。
@@ -166,7 +166,7 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
    * **有効：**&#x200B;オンにするとストアが有効になります。
 
 1. （オプション）デフォルトのストアの設定をオーバーライドするには、「詳細設定（JSON）」ボックスに JSON オブジェクトを入力します。
-1. 「保存」をクリックまたはタップします。
+1. 「保存」をクリックします。
 
 ## JSONP サービスの使用例  {#example-using-a-jsonp-service}
 
@@ -241,10 +241,10 @@ ContextHub のデバッグモードを有効にして、トラブルシューテ
 
 ContextHub の設定を編集し、「**デバッグ**」オプションをオンにします。
 
-1. レールで、**ツール／サイト／ContextHub** をクリックまたはタップします。
-1. デフォルトの「**設定コンテナ**」をクリックまたはタップします。
-1. 「**ContextHub 設定** 」を選択し、「**選択した要素を編集**」をクリックまたはタップします。
-1. 「**デバッグ**」をクリックまたはタップし、「**保存**」をクリックまたはタップします。
+1. レールで、 **ツール/サイト/ ContextHub**
+1. デフォルトの **設定コンテナ**
+1. を選択します。 **ContextHub 設定** をクリックします。 **選択した要素を編集**
+1. クリック **デバッグ** をクリックします。 **保存**
 
 ### CRXDE による有効化 {#via-crxde}
 

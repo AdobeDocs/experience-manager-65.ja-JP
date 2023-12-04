@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '4963'
+source-wordcount: '4830'
 ht-degree: 60%
 
 ---
@@ -391,7 +391,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.property.types</td>
-   <td>登録済みのノードタイプが指定可能なプロパティタイプを表す javax.jcr.PropertyType 定数の配列。長さがゼロの配列は、登録済みのノードタイプがプロパティ定義を指定できないことを示します。プロパティタイプは、STRING、URI、BOOLEAN、LONG、DOUBLE、DECIMAL、BINARY、DATE、NAME、PATH、WEAKREFERENCE、REFERENCE および UNDEFINED（サポートされている場合）です。</td>
+   <td>登録済みのノードタイプが指定できるプロパティタイプを表す javax.jcr.PropertyType 定数の配列です。長さ 0 の配列は、登録されたノードタイプがプロパティ定義を指定できないことを示します。 プロパティの型は、STRING、URI、BOOLEAN、LONG、DOUBLE、DECIMAL、BINARY、DATE、NAME、PATH、WEAKREFERENCE、REFERENCE、UNDEFINED（サポートされている場合）です。</td>
   </tr>
   <tr>
    <td>node.type.management.orderable.child.nodes.supported</td>
@@ -602,7 +602,7 @@ CRX リポジトリに関する情報
 * 引数：なし
 * 戻り値：なし
 
-**joinCluster** このリポジトリを、クラスターのプライマリによって制御されるノードとしてクラスターに追加します。認証のためにユーザー名とパスワードを指定する必要があります。接続では基本認証を使用します。セキュリティ資格情報は、サーバーに送信される前に base-64 エンコードされます。
+**joinCluster** このリポジトリを、クラスターのプライマリによって制御されるノードとしてクラスターに追加します。認証の目的でユーザー名とパスワードを入力します。 接続では基本認証を使用します。セキュリティ資格情報は、サーバーに送信される前に base-64 エンコードされます。
 
 * 引数：
 
@@ -887,7 +887,7 @@ OSGi サービスでデプロイされる MBean により、サービスの属�
 
 JMX コンソールのメインページには、サービスの表が含まれます。表の行ごとに、MBean によって公開されるサービスを 1 つずつ表します。
 
-1. Web コンソールを開き、「JMX」タブをクリックします。([http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+1. Web コンソールを開き、「JMX」タブをクリックします。 ([http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
 2. サービスのセル値をクリックして、サービスの属性と操作を表示します。
 3. 属性値を変更するには、値をクリックし、表示されるダイアログボックスで値を指定して、[ 保存 ] をクリックします。
 4. サービス操作を呼び出すには、操作名をクリックし、表示されるダイアログボックスで引数の値を指定して、[ 呼び出し ] をクリックします。

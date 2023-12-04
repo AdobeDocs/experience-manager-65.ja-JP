@@ -7,10 +7,10 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3949'
-ht-degree: 97%
+source-wordcount: '3908'
+ht-degree: 98%
 
 ---
 
@@ -71,7 +71,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 
 ### Connected Assets のアーキテクチャ {#connected-assets-architecture}
 
-Experience Managerを使用すると、リモート DAM デプロイメントをソースとして複数のExperience Managerに接続できます [!DNL Sites] デプロイメント。 ただし、1 つの [!DNL Sites] デプロイメントに接続できるリモート DAM デプロイメントは 1 つだけです。
+Experience Manager を使用すると、リモート DAM デプロイメントをソースとして複数の Experience Manager [!DNL Sites] デプロイメントに接続できます。ただし、1 つの [!DNL Sites] デプロイメントに接続できるリモート DAM デプロイメントは 1 つだけです。
 
 リモート DAM デプロイメントに接続するための Sites インスタンスの最適な数を評価します。接続された各 Sites インスタンスがリモート DAM のデータトラフィックに寄与するため、デプロイメントに Sites インスタンスを段階的に接続し、リモート DAM のパフォーマンスに影響がないことをテストすることをお勧めします。
 
@@ -140,7 +140,7 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
 設定済みの [!DNL Sites] デプロイメントと [!DNL Assets] デプロイメントの間の接続を確認できます。
 
 ![設定済み Connected Assets の接続テスト [!DNL Sites]](assets/connected-assets-multiple-config.png)
-*図：Connected Assets が設定された [!DNL Sites] の接続テスト*
+*図：設定済み Connected Assets の接続テスト [!DNL Sites]。*
 
 ## Dynamic Media アセットの使用 {#dynamic-media-assets}
 
@@ -231,7 +231,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
    ![アセットプロパティのリモート参照ページ](assets/connected-assets-remote-reference.png)
 
 1. [!DNL Sites] ページの参照は、各ローカル [!DNL Sites] の参照の合計数を表示します。すべての参照を見つけて、参照の総数を表示するのは時間がかかる場合があります。
-1. 参照のリストはインタラクティブで、DAM ユーザーは参照をクリックして参照ページを開くことができます。何らかの理由でリモート参照を取得できない場合は、失敗の通知が表示されます。
+1. 参照のリストはインタラクティブで、DAM ユーザーは参照をクリックして参照ページを開くことができます。 何らかの理由でリモート参照を取得できない場合は、失敗の通知が表示されます。
 1. ユーザーはアセットを移動または削除できます。アセットを移動または削除すると、選択したすべてのアセット／フォルダーの参照の合計数が警告ダイアログに表示されます。参照がまだ取得されていないアセットを削除すると、警告ダイアログが表示されます。
 
    ![強制削除警告](assets/delete-referenced-asset.png)
@@ -314,7 +314,7 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 
 * アセットの使用状況に関するインサイトを取得するには、[!DNL Sites] インスタンスで[アセットインサイト](/help/assets/asset-insights.md)機能を設定します。
 
-* リモートアセットを [画像コンポーネント設定ダイアログ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=en#configure-dialog). ただし、リモートアセットを、 **[!UICONTROL 設定]**.
+* リモートアセットを [画像コンポーネント設定ダイアログ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=ja). ただし、リモートアセットを、 **[!UICONTROL 設定]**.
 
 ### 権限とアセット管理 {#permissions-and-managing-assets}
 

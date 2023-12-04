@@ -8,10 +8,10 @@ content-type: reference
 feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 41%
+source-wordcount: '984'
+ht-degree: 31%
 
 ---
 
@@ -56,12 +56,12 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
 混在メディアを含むコンテンツフラグメントを翻訳するには、まずデフォルトの翻訳フレームワークを編集して、コンテンツフラグメントに関連付けられたインラインアセットおよびコレクションの翻訳を有効にします。
 
-1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール／デプロイメント／クラウドサービス]**&#x200B;に移動します。
-1. **[!UICONTROL Adobe Marketing Cloud]** の下にある「**[!UICONTROL 翻訳統合]**」を見つけ、「**[!UICONTROL 設定を表示]**」をクリックまたはタップします。
+1. AEMのロゴをクリックし、に移動します。 **[!UICONTROL ツール/導入/Cloud Service]**.
+1. 場所 **[!UICONTROL 翻訳の統合]** under **[!UICONTROL Adobe Marketing Cloud]**&#x200B;をクリックし、 **[!UICONTROL 設定を表示]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
-1. 利用可能な設定のリストで、「**[!UICONTROL デフォルト設定（翻訳統合の設定）]**」をクリックまたはタップして、**[!UICONTROL デフォルト設定]**&#x200B;ページを開きます。
+1. 使用可能な設定のリストで、 **[!UICONTROL デフォルト設定（翻訳統合設定）]** 開く **[!UICONTROL デフォルトの設定]** ページに貼り付けます。
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
@@ -69,7 +69,7 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. 次に移動： **[!UICONTROL Assets]** 「 」タブで「 」を選択します。 **[!UICONTROL インラインメディアアセットと関連するコレクション]** から **[!UICONTROL コンテンツフラグメントアセットを翻訳]** リスト。 クリックまたはタップ **[!UICONTROL OK]** をクリックして変更を保存します。
+1. 次に移動： **[!UICONTROL Assets]** 「 」タブで「 」を選択します。 **[!UICONTROL インラインメディアアセットと関連するコレクション]** から **[!UICONTROL コンテンツフラグメントアセットを翻訳]** リスト。 「**[!UICONTROL OK]**」をクリックして、変更を保存します。
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
@@ -77,7 +77,7 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. 「**[!UICONTROL アセットを挿入]**」アイコンをクリックまたはタップします。
+1. 次をクリック： **[!UICONTROL アセットを挿入]** アイコン。
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -85,15 +85,15 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![コンテンツフラグメントへのアセットの挿入](assets/column-view.png)
 
-1. 「**[!UICONTROL コンテンツを関連付け]**」アイコンをクリックまたはタップします。
+1. 次をクリック： **[!UICONTROL コンテンツを関連付け]** アイコン。
 
    ![chlimage_1-451](assets/chlimage_1-451.png)
 
-1. 「**[!UICONTROL コンテンツを関連付け]**」をクリックまたはタップします。
+1. クリック **[!UICONTROL コンテンツを関連付け]**.
 
    ![chlimage_1-452](assets/chlimage_1-452.png)
 
-1. コレクションを選択し、コンテンツフラグメントに含めます。 クリックまたはタップ **[!UICONTROL 保存]**.
+1. コレクションを選択し、コンテンツフラグメントに含めます。 「**[!UICONTROL 保存]**」をクリックします。
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
@@ -102,11 +102,11 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. 「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップして言語コピーを表示します。
+1. クリック **[!UICONTROL 言語コピー]** under **[!UICONTROL コピー]** 言語コピーを表示します。
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. パネルの下部にある「**[!UICONTROL 作成と翻訳]**」をクリックまたはタップして&#x200B;**[!UICONTROL 作成と翻訳]**&#x200B;ダイアログを表示します。
+1. クリック **[!UICONTROL 作成と翻訳]** パネルの下部から、 **[!UICONTROL 作成と翻訳]** ダイアログ。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
@@ -118,7 +118,7 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![chlimage_1-458](assets/chlimage_1-458.png)
 
-1. 「**[!UICONTROL プロジェクトタイトル]**」ボックスにプロジェクトのタイトルを指定し、「**作成**」をクリックまたはタップします。
+1. プロジェクトのタイトルを **[!UICONTROL プロジェクトタイトル]** ボックスをクリックし、 **作成**.
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
@@ -126,7 +126,7 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
-1. プロジェクトのタイトルをクリックまたはタップして、プロジェクトの詳細ページを開きます。
+1. プロジェクトタイルをクリックして、プロジェクトの詳細ページを開きます。
 
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
@@ -139,7 +139,7 @@ AEMを使用すると、様々なタイプのメディアアセットやコレ�
 
    ![chlimage_1-463](assets/chlimage_1-463.png)
 
-1. コンテンツフラグメントをクリックまたはタップして、翻訳後の関連アセットのパスを確認します。
+1. コンテンツフラグメントをクリックして、翻訳後の関連アセットのパスを確認します。
 
    ![chlimage_1-464](assets/chlimage_1-464.png)
 

@@ -1,18 +1,14 @@
 ---
 title: スペースとエンティティ
-seo-title: Developing AEM Mobile Content Services
 description: このページは、AEM Mobile Content Services を開発するためのランディングページです。
-seo-description: This page serves a landing page for developing AEM Mobile Content Services.
-uuid: eab5a61b-a9e8-4863-90a3-df1f18510cd8
 contentOwner: Jyotika Syal
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
 exl-id: 44591900-b01b-4a33-9910-839564477e7d
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 3%
+source-wordcount: '1206'
+ht-degree: 5%
 
 ---
 
@@ -56,7 +52,7 @@ ht-degree: 3%
 
 ## スペースの管理 {#managing-a-space}
 
-スペースを作成したら、左側のをクリックしてリストのスペースを管理します。
+スペースを作成したら、左側をクリックしてリスト内のスペースを管理します。
 
 スペースのプロパティを表示したり、スペースを削除したり、スペースとそのコンテンツをAEMパブリッシュインスタンスに公開したりできます。
 
@@ -220,7 +216,7 @@ The **言語コピー** 作成者は、マスター言語コピーをコピー�
    >
    >エンティティへのアセットの追加が完了したら、次のいずれかを選択します。 **保存** 変更を保存するか、 **保存して閉じる** 保存して、エンティティが定義されているスペースコンソールのリストにリダイレクトします。
 
-   さらに、スペースコンソールのリストからエンティティを選択し、 **プロパティ** をクリックして、定義されたエンティティのプロパティを表示および編集します。
+   さらに、スペースコンソールのリストからエンティティを選択し、「 **プロパティ** をクリックして、定義されたエンティティのプロパティを表示および編集します。
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 

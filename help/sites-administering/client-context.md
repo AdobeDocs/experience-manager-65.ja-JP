@@ -7,10 +7,10 @@ topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 40%
+source-wordcount: '1961'
+ht-degree: 37%
 
 ---
 
@@ -158,7 +158,7 @@ ClientContext を使用すると、詳細をインタラクティブに変更で
 
 次の選択スライダーを使用してプロファイルを選択することもできます。
 
-1. 現在のユーザーを表すアイコンをダブルクリックします。セレクターが開きます。矢印を使用して移動し、使用可能なプロファイルを確認します。
+1. 現在のユーザーを表すアイコンをダブルクリックします。 セレクターが開きます。矢印を使用して移動し、使用可能なプロファイルを確認します。
 
    ![ユーザーセレクター](assets/clientcontext_profileselector.png)
 
@@ -206,7 +206,7 @@ ClientContext を編集して、特定のプロパティの値を設定（また
 
 ### プロパティコンポーネントの追加 {#adding-a-property-component}
 
-**ClientContext のデザインページ**&#x200B;を開いたら、使用可能なコンポーネントを使用して完全に新しいプロパティを&#x200B;**追加**&#x200B;できます（コンポーネントは、サイドキック、または「**コンポーネントまたはアセットをここにドラッグします**」ボックスをダブルクリックすると開く「**新規コンポーネントを挿入**」ダイアログにリストされます）。
+を開いた後、 **ClientContextデザインページ**&#x200B;また、 **追加** 使用可能なコンポーネントを使用した完全に新しいプロパティ ( コンポーネントはサイドキックまたは **新規コンポーネントを挿入** ダブルクリックした後に開くダイアログ **コンポーネントまたはアセットをここにドラッグ** ボックス ):
 
 ![ClientContext ウィンドウへのプロパティの追加](assets/clientcontext_alisonparker_new.png)
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 93%
+source-wordcount: '586'
+ht-degree: 87%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 93%
 
 #### タスクの詳細 {#task-details}
 
-特定のタスクの詳細を表示するには、インボックスで、タスクをタップまたはクリックして選択し、ツールバーの「**開く**」をタップまたはクリックします。
+特定のタスクの詳細については、インボックスで、タスクをクリックして選択し、「 **開く** 」と入力します。
 
 ![タスクの詳細](assets/project-task-detail.png)
 
@@ -70,12 +70,12 @@ ht-degree: 93%
 タスクを追加するには：
 
 1. プロジェクト内で、**タスク**&#x200B;タイルを探します。
-1. タイルの右上にある下向きの山形をタップまたはクリックし、「**タスクを作成**」を選択します。
+1. タイルの右上にある下向きの山形をクリックし、を選択します。 **タスクを作成**.
 1. **タスクを追加**&#x200B;ウィンドウで、タスクの詳細（優先度、担当者、期限など）を指定します。
 
    ![タスクの追加](assets/project-add-task.png)
 
-1. 「**送信**」をタップまたはクリックします。
+1. 「**送信**」をクリックします。
 
 ## インボックス内でのタスクの使用 {#working-with-tasks-in-the-inbox}
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3306'
-ht-degree: 73%
+source-wordcount: '3251'
+ht-degree: 71%
 
 ---
 
@@ -53,7 +53,7 @@ Experience Server は、AEM の基でありカスタムアプリケーション�
 
 ### Sling の概要 {#introduction-to-sling}
 
-AEM は、コンテンツ指向アプリケーションの開発を容易にする REST 原則に基づく Web アプリケーションフレームワーク [Sling](https://sling.apache.org/index.html) を使用して構築されています。Sling は、Apache Jackrabbit などの JCR リポジトリを使用します。AEMがある場合は、CRX コンテンツリポジトリをデータストアとして使用します。 Sling は Apache Software Foundation に貢献してきました。詳しい情報は Apache にあります。
+AEMは [Sling](https://sling.apache.org/index.html):REST 原則に基づく Web アプリケーションフレームワークで、コンテンツ指向アプリケーションの容易な開発を提供します。 Sling は、Apache Jackrabbit などの JCR リポジトリを使用します。AEMがある場合は、CRX コンテンツリポジトリをデータストアとして使用します。 Sling は Apache Software Foundation に貢献してきました。詳しい情報は Apache にあります。
 
 Sling を使用する場合、レンダリングされるコンテンツのタイプは、処理に関する第一の考慮事項ではありません。主な考慮事項は、URL を解決して得られるコンテンツオブジェクト用に、レンダリングを実行するためのスクリプトが見つかるかどうかです。このことは、要件に合わせて簡単にカスタマイズ可能なページを Web コンテンツ作成者が構築する際に非常に役立ちます。
 
@@ -61,7 +61,7 @@ Sling を使用する場合、レンダリングされるコンテンツのタ�
 
 Sling を使用した開発の概要について詳しくは、『[15 分間でわかる Sling](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html)』を参照してください。
 
-次の図は、Sling スクリプトの解決を説明しています。HTTP リクエストからコンテンツノード、コンテンツノードからリソースタイプ、リソースタイプからスクリプトへ、および使用可能なスクリプティング変数を取得する方法を示します。
+次の図は、Sling スクリプトの解決を説明しています。 HTTP リクエストからコンテンツノード、コンテンツノードからリソースタイプ、リソースタイプからスクリプトへ、および使用可能なスクリプティング変数を取得する方法を示します。
 
 ![Apache Sling スクリプトの解決について](assets/sling-cheatsheet-01.png)
 
@@ -71,7 +71,7 @@ Sling を使用した開発の概要について詳しくは、『[15 分間で�
 
 ### Sling はコンテンツ中心型 {#sling-is-content-centric}
 
-Sling は *コンテンツ中心型* です。これは、各（HTTP）リクエストが JCR リソース（リポジトリーノード）の形でコンテンツにマッピングされるため、コンテンツに焦点を当てた処理が行われることを意味します。
+Sling は&#x200B;*コンテンツ中心型*&#x200B;です。つまり、(HTTP) 要求が JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるため、処理はコンテンツに焦点を当てます。
 
 * 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
 * 第 2 に、表現（スクリプト）は、リソースプロパティから、リクエストの特定の部分（セレクターや拡張子など）と組み合わせて配置されます。
@@ -106,7 +106,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 **ホスト** - web サイトの名前。
 
-**コンテンツパス** レンダリングするコンテンツを指定するパス。拡張機能で使用されます。 この例では、 `tools/spy.html`.
+**コンテンツのパス** - レンダリングされるコンテンツを指定するパス。拡張機能で使用されます。 この例では、 `tools/spy.html`.
 
 **セレクター** コンテンツをレンダリングする代替の方法に使用します。この例では、A4 形式のプリンターに適したバージョンです。
 
@@ -141,7 +141,7 @@ Sling では JCR 以外のノードもリソースとして扱えますが、こ
 
 ### スクリプトの検索 {#locating-the-script}
 
-適切なリソース（コンテンツノード）が見つかると、**sling リソースタイプ**&#x200B;が抽出されます。これは、コンテンツのレンダリングに使用するスクリプトを見つけるパスです。
+適切なリソース（コンテンツノード）が見つかったら、**Sling リソースタイプ**&#x200B;が抽出されます。これは、コンテンツのレンダリングに使用するスクリプトを検出するパスです。
 
 `sling:resourceType` によって指定されるパスは、次のいずれかです。
 
@@ -211,8 +211,10 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 特定のリクエストに複数のスクリプトが該当する場合は、一致率が最も高いスクリプトが選択されます。一致は具体的であるほど良くなります。つまり、リクエスト拡張子であれ、メソッド名の一致であれ、セレクターの一致が多いほど良くなります。
 
-例えば、次のリソースにアクセスするためのリクエストについて考えます。
-`/content/corporate/jobs/developer.print.a4.html`リソースのタイプは次のとおりとします。`sling:resourceType="hr/jobs"`
+例えば、リソースにアクセスするリクエストがあるとします。
+`/content/corporate/jobs/developer.print.a4.html`
+のタイプ
+`sling:resourceType="hr/jobs"`
 
 次のスクリプトのリストが正しい場所にあると仮定します。
 
@@ -320,7 +322,7 @@ OSGi は、モジュラー型アプリケーションおよびライブラリを
 * 停止
 * 更新
 * アンインストール
-* ステータスの参照
+* ステータスを確認する
 * 特定のバンドルに関する詳細な情報（シンボリック名、バージョン、場所など）へのアクセス
 
 詳しくは、 [Web コンソール](/help/sites-deploying/web-console.md), [OSGi 設定](/help/sites-deploying/configuring-osgi.md)、および [OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md) を参照してください。

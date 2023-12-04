@@ -7,10 +7,10 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6945'
-ht-degree: 6%
+source-wordcount: '6922'
+ht-degree: 5%
 
 ---
 
@@ -196,7 +196,7 @@ Adobeサポートポータルを使用すると、実装パートナーやお客
 
 ### ビジネス KPI {#business-kpis}
 
-組織は、目標達成の成功度合いを評価するために、主要業績評価指標（KPI）を使用します。
+組織は、主要業績評価指標 (KPI) を使用して、ターゲット到達時の成功を評価します。
 
 ビジネス KPI は、企業が主要なビジネス目標を効果的に達成していることを示す測定可能な値を定義します。 実際のビジネスやシナリオに適した KPI を選択することが重要です。何が KPI であるか、どのように測定するか、誰がどのように使用するかを明確に定義する必要があります。
 
@@ -555,7 +555,7 @@ AEMと高レベルのソリューション設計の両方に関する実行可�
 
 ### 実績 KPI と実績 KPI {#historical-performance-and-historical-performance-kpis}
 
-レガシーシステムからパフォーマンス統計とパフォーマンス KPI を収集し、文書化する必要があります。 これらは基準点として使用され、新しいソリューションのベンチマークに使用されます。
+レガシーシステムからパフォーマンス統計とパフォーマンス KPI を収集し、文書化します。 これらは基準点として使用され、新しいソリューションのベンチマークに使用されます。
 
 ### 重要な主要なソリューション/機能の特定 {#identify-critical-key-solutions-functionalities}
 

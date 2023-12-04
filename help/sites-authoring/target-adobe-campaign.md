@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: fc6fccba-41c5-4c13-aac0-b4ef67767abe
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 82%
+source-wordcount: '801'
+ht-degree: 76%
 
 ---
 
@@ -74,7 +74,7 @@ Adobe Campaign のニュースレターのターゲット設定を行うには�
 
 ターゲットコンテンツを使用してニュースレターを作成するには：
 
-1. ターゲットコンテンツを使用してニュースレターを作成します。Geometrixx Outdoors の「メールキャンペーン」で、**作成**／**ページ**&#x200B;をクリックまたはタップし、Adobe Campaign メールテンプレートのいずれかを選択します。
+1. ターゲットコンテンツを含むニュースレターを作成します。「Geometrixx Outdoorsのメールキャンペーン」で、 **作成** > **ページ**&#x200B;をクリックし、いずれかのAdobe Campaign Mail テンプレートを選択します。
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
@@ -86,7 +86,7 @@ Adobe Campaign のニュースレターのターゲット設定を行うには�
 
    >[!NOTE]
    >
-   >AEM に付属している電子メールサンプルでは、デフォルトで、Adobe Campaign がターゲティングエンジンとして使用されます。カスタムニュースレターでは、Adobe Campaign をターゲティングエンジンとして明示的に選択しなければならないことがあります。その場合は、ターゲット設定時にツールバーの「+」をタップまたはクリックし、新しいアクティビティのタイトルを入力して、ターゲティングエンジンとして「**Adobe Campaign**」を選択します。
+   >AEM に付属している電子メールサンプルでは、デフォルトで、Adobe Campaign がターゲティングエンジンとして使用されます。カスタムニュースレターでは、Adobe Campaign をターゲティングエンジンとして明示的に選択しなければならないことがあります。ターゲティングする場合、ツールバーの「 + 」をクリックし、新しいアクティビティのタイトルを入力して、「 」を選択します **Adobe Campaign** をターゲティングエンジンとして追加しました。
 
 1. 「**デフォルト**」をクリックし、追加したテキストおよびパーソナライゼーションコンポーネントをクリックすると、矢が刺さった的のアイコンが表示されます。コンポーネントのターゲットを設定するには、このアイコンをクリックします。
 

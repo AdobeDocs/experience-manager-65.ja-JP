@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 82%
+source-wordcount: '220'
+ht-degree: 71%
 
 ---
 
@@ -41,7 +41,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m` ショートカットは使用できなくなります。ショートカットをもう一度使用できるようにするには、エディターバーの上部をクリックするか、編集モードに戻る必要があります。
+>ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m` ショートカットは使用できなくなります。ショートカットを再び使用できるようにするには、エディターの上部バーをクリックするか、編集モードに戻る必要があります。
 
 [コンソール](/help/sites-authoring/keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 

@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1915'
-ht-degree: 95%
+source-wordcount: '1911'
+ht-degree: 84%
 
 ---
 
@@ -70,7 +70,7 @@ AEM Formsが、JBOSS 以外のサポート対象の J2EE アプリケーショ�
 
 **バーコードデータを含む PDF フォームの取得**
 
-ユーザーデータが入力されたバーコードを含む PDF フォームを取得する必要があります。
+ユーザーPDFが入力されたバーコードを含むバーコードフォームを取得します。
 
 **データを PDF フォームからデコード**
 
@@ -128,7 +128,7 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
 1. データを PDF フォームからデコード
 
-   `BarcodedFormsServiceClient` オブジェクトの `decode` メソッドを呼び出し、次の値を渡すことにより、フォームデータをデコードします。
+   を呼び出してフォームデータをデコードする `BarcodedFormsServiceClient` オブジェクトの `decode` メソッドを使用して、次の値を渡します。
 
    * PDF フォームを含む `com.adobe.idp.Document` オブジェクト。
    * PDF417 バーコードをデコードするかどうかを指定する `java.lang.Boolean` オブジェクト。
@@ -145,9 +145,9 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
 1. データを XML データソースに変換する
 
-   `BarcodedFormsServiceClient` オブジェクトの `extractToXML` メソッドを呼び出し、次の値を渡すことにより、デコードされたデータを XDP または XFDF データに変換します。
+   デコードされたデータを、 `BarcodedFormsServiceClient` オブジェクトの `extractToXML` メソッドを使用して、次の値を渡します。
 
-   * デコードされたデータを含む `org.w3c.dom.Document` オブジェクト（`decode` メソッドの戻り値を使用していることを確認してください）。
+   * The `org.w3c.dom.Document` デコードされたデータを含むオブジェクト ( `decode` メソッドの戻り値 )。
    * 行の区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。`Delimiter.Carriage_Return` を指定することをお勧めします。
    * フィールド区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。例えば、`Delimiter.Tab` を指定します。
    * バーコードデータを XDP または XFDF XML データに変換するかどうかを指定する `com.adobe.livecycle.barcodedforms.XMLFormat` 定義済みリスト値。例えば、データを XDP データに変換するには `XMLFormat.XDP` を指定します。
@@ -162,7 +162,7 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
    * 次の項目を反復 `java.util.List` 各 `org.w3c.dom.Document` オブジェクトを指定します。
    * リストの各要素に対して、 `org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します（`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換するアプリケーションロジックは、「Java API を使用したバーコード化されたフォームデータのデコード」の例で示しています）。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` を呼び出し、XML ファイルを表す File オブジェクトを渡すことにより、XML データを XML ファイルとして保存します。
+   * を呼び出して、XML データを XML ファイルとして保存します。 `com.adobe.idp.Document` オブジェクトの `copyToFile`、および XML ファイルを表す File オブジェクトを渡す
 
 **関連トピック**
 
@@ -189,13 +189,13 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、バーコードを含む PDF ドキュメントを保存するために使用されます。
    * コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
-   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `binaryData` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトを入力します。
 
 1. データを PDF フォームからデコード
 
-   `BarcodedFormsServiceService` オブジェクトの `decode` メソッドを呼び出し、次の値を渡すことにより、フォームデータをデコードします。
+   を呼び出してフォームデータをデコードする `BarcodedFormsServiceService` オブジェクトの `decode` メソッドを使用して、次の値を渡します。
 
    * PDF フォームを含む `BLOB` オブジェクト。
    * PDF417 バーコードをデコードするかどうかを指定する `Boolean` オブジェクト。
@@ -212,10 +212,10 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 
 1. データを XML データソースに変換する
 
-   `BarcodedFormsServiceService` オブジェクトの `extractToXML` メソッドを呼び出し、次の値を渡して、デコードされたデータを XDP データまたは XFDF データに変換します。
+   デコードされたデータを、 `BarcodedFormsServiceService` オブジェクトの `extractToXML` メソッドを使用して、次の値を渡します。
 
-   * デコードされたデータを含む文字列値（`decode` メソッドの戻り値を使用していることを確認します）
-   * 行の区切り文字を指定する `Delimiter` 列挙値`Delimiter.Carriage_Return` を指定することをお勧めします。
+   * デコードされたデータを含む string 値 ( `decode` メソッドの戻り値 )。
+   * 行の区切りを指定する `Delimiter` 定義済みリスト値。`Delimiter.Carriage_Return` を指定することをお勧めします。
    * フィールド区切りを指定する `Delimiter` 定義済みリスト値。例えば、`Delimiter.Tab` を指定します。
    * バーコードデータを XDP または XFDF XML データに変換するかどうかを指定する `XMLFormat` 定義済みリスト値。例えば、データを XDP データに変換するには `XMLFormat.XDP` を指定します。
 
@@ -228,9 +228,9 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 1. デコードされたデータを処理
 
    * コンストラクターを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列の値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列を生成します。
-   * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `binaryData` データメンバー。
+   * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 

@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 28%
+source-wordcount: '1530'
+ht-degree: 27%
 
 ---
 
@@ -107,7 +107,7 @@ AEMユーザーを Salesforce リードとしてエクスポートするには�
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. リードとして作成するAEMユーザーを **ペイロード** このワークフロー（ホーム/ユーザー）の場合。 ユーザーのプロファイルノードは、次のような情報が含まれているので、必ず選択してください。 **givenName**、および  **familyName**(Salesforce リードの **名** および **姓** フィールド。
+1. リードとして作成するAEMユーザーを **ペイロード** このワークフロー用（ホーム/ユーザー）。 ユーザーのプロファイルノードは、次のような情報が含まれているので、必ず選択してください。 **givenName**、および  **familyName**(Salesforce リードの **名** および **姓** フィールド。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 

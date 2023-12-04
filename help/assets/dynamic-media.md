@@ -10,10 +10,10 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Collaboration,Asset Management
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 100%
+source-wordcount: '418'
+ht-degree: 85%
 
 ---
 
@@ -29,7 +29,7 @@ Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタ�
 
 ## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Media では、公開前のアセットを管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
+Dynamic Mediaを使用すると、アセットを公開する前に管理できます。 一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
 
 Dynamic Media 限定の機能は次のとおりです。
 
@@ -82,7 +82,7 @@ Dynamic Media 対応のアセットには `pyramid.tiffs` が含まれます。
 
 ### アセットのビューの変化 {#asset-views-change}
 
-Dynamic Media を有効にすると、「`+`」ボタンをクリックしてズームインし、「`-`」ボタンをクリックしてズームアウトすることができます。クリックまたはタップして、特定の領域にズームインすることもできます。元に戻すアイコンをクリックすると元のバージョンに戻ります。また、斜めの矢印をクリックすると、画像を全画面表示にすることができます。Dynamic Media を有効にした場合の画面は次のようになります。
+Dynamic Mediaを有効にした場合、 `+` および `-` ボタン。 クリックして特定の領域にズームインすることもできます。 「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像を全画面表示にすることができます。 Dynamic Media enabled は次のようになります。
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 

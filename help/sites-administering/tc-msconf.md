@@ -4,10 +4,10 @@ description: AEM を Microsoft Translator に接続して翻訳ワークフロ�
 feature: Language Copy
 role: Admin
 exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 97%
+source-wordcount: '452'
+ht-degree: 80%
 
 ---
 
@@ -30,9 +30,9 @@ AEM ページのコンテンツまたはアセットの翻訳に Microsoft Trans
 
 Microsoft Translator 設定を作成するには、次の手順に従います。
 
-1. [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps)で、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;をクリックまたはタップします。
+1. Adobe Analytics の [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps) click **ツール** > **Cloud Service** > **翻訳Cloud Service**.
 1. 設定を作成する場所に移動します。通常は、これはサイトのルートにあります。また、グローバルなデフォルト設定にすることもできます。
-1. 「**作成**」ボタンをタップまたはクリックします。
+1. 次をクリック： **作成** 」ボタンをクリックします。
 1. 設定を定義します。
    1. ドロップダウンで **Microsoft Translator** を選択します。
    1. 設定のタイトルを入力します。このタイトルによって、クラウドサービスコンソールおよびページプロパティのドロップダウンリストで設定が識別されます。
@@ -45,26 +45,26 @@ Microsoft Translator 設定を作成するには、次の手順に従います�
 
    ![翻訳設定の編集](assets/edit-translation-config.png)
 
-1. 「**接続**」をタップまたはクリックして、接続を確認します。
-1. 「**保存して閉じる**」をタップまたはクリックします。
+1. クリック **接続** 接続を確認します。
+1. 「**保存して閉じる**」をクリックします。
 
 ## Microsoft Translator 体験版ライセンス設定のアップグレード {#upgrading-the-microsoft-translator-trial-license-configuration}
 
 Microsoft Translation 設定ページには、実稼動システムに適したアカウントのサブスクリプションを取得する場合に役立つ、Microsoft web サイトへのリンクが表示されます。
 
-1. [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps)で、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;をタップまたはクリックします。
-1. 既存の Microsoft Translator 設定をタップまたはクリックします。
-1. 「**編集**」をタップまたはクリックします。
-1. **設定を編集**&#x200B;ウィンドウで、「**購読をアップグレード**」をタップまたはクリックします。サービスの詳細を表示する Microsoft Web ページが開きます。
+1. Adobe Analytics の [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps) click **ツール** > **Cloud Service** > **翻訳Cloud Service**.
+1. 既存のMicrosoft Translator 設定をクリックします。
+1. クリック **編集**.
+1. Adobe Analytics の **設定を編集** ウィンドウ、クリック **配信登録のアップグレード**. サービスの詳細を表示する Microsoft Web ページが開きます。
 
 ## Microsoft Translator エンジンのカスタマイズ {#customizing-your-microsoft-translator-engine}
 
 Microsoft Translation 設定ページには、Microsoft Translator エンジンをカスタマイズする場合に役立つ、Microsoft Web サイトへのリンクが表示されます
 
-1. [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps)で、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;をタップまたはクリックします。
-1. 既存の Microsoft Translator 設定をタップまたはクリックします。
-1. 「**編集**」をタップまたはクリックします。
-1. **設定を編集**&#x200B;ウィンドウで、「**トランスレーターをカスタマイズ**」をタップまたはクリックします。表示された Microsoft の web ページを使用して、サービスをカスタマイズします。
+1. Adobe Analytics の [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps) click **ツール** > **Cloud Service** > **翻訳Cloud Service**.
+1. 既存のMicrosoft Translator 設定をクリックします。
+1. クリック **編集**.
+1. Adobe Analytics の **設定を編集** ウィンドウ、クリック **Translator をカスタマイズ**. 表示された Microsoft の web ページを使用して、サービスをカスタマイズします。
 
 ## Translator サービス設定のアクティベート {#activating-the-translator-service-configurations}
 

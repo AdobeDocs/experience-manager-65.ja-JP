@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 87%
+source-wordcount: '951'
+ht-degree: 84%
 
 ---
 
@@ -222,7 +222,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. **グループ設定を編集**&#x200B;フォームが開きます。
 
-   グループ ID は元の ID と同じですが、先頭には `Copy of` が付きます。ID にスペースを含めることはできないので、これを編集する必要があります。その他の詳細は元の情報とすべて同じです。
+   グループ ID は元の ID と同じですが、先頭にはが付きます。 `Copy of`. この ID はスペースを含めることができないので、編集します。 その他の詳細はすべて元の詳細と同じです。
 
    [新規グループの追加](#adding-a-new-group)の場合と同様に、詳細を編集して保存できます。
 

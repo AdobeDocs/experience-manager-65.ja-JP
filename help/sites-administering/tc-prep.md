@@ -4,10 +4,10 @@ description: Adobe Experience Managerで翻訳するコンテンツを準備す�
 contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 69%
+source-wordcount: '669'
+ht-degree: 50%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 69%
 1. 言語マスターのコンテンツをオーサリングします。
 1. サイトの各言語コピーの言語ルートを作成します。例えば、Geometrixxサンプルサイトのフランス語の言語コピーは/content/geometrixx/fr です。
 
-翻訳するコンテンツの準備が完了したら、言語コピーおよび関連する翻訳プロジェクトの不足ページを自動的に作成できます（[翻訳プロジェクトの作成](/help/sites-administering/tc-manage.md)を参照）。AEM のコンテンツ翻訳プロセスの概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
+翻訳するコンテンツを準備した後、言語コピーと関連する翻訳プロジェクトに、見つからないページを自動的に作成できます。 ( 詳しくは、 [翻訳プロジェクトの作成](/help/sites-administering/tc-manage.md).) AEMのコンテンツ翻訳プロセスの概要については、 [多言語 Web サイトのコンテンツの翻訳](/help/sites-administering/translation.md).
 
 ## 言語ルートの作成 {#creating-a-language-root}
 
@@ -56,20 +56,20 @@ ht-degree: 69%
 次の手順では、タッチ操作向け UI を使用して、Web サイトの言語コピーを作成します。 クラシック UI の使用手順については、 [クラシック UI を使用した言語ルートの作成](/help/sites-administering/tc-lroot-classic.md).
 
 1. Sites に移動します。
-1. 言語コピーを作成するサイトをクリックまたはタップします。
+1. 言語コピーを作成するサイトをクリックします。
 
-   例えば、Geometrixx Outdoorsサイトの言語コピーを作成するには、「Geometrixx Outdoorsサイト」をクリックまたはタップします。
+   例えば、Geometrixx Outdoorsサイトの言語コピーを作成するには、「Geometrixx Outdoorsサイト」をクリックします。
 
-1. 「作成」をクリックまたはタップして、「ページを作成」をクリックまたはタップします。
+1. 「作成」をクリックし、「ページを作成」をクリックします。
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
-1. ページテンプレートを選択して、「次へ」をクリックまたはタップします。
+1. ページテンプレートを選択し、「次へ」をクリックします。
 1. 「名前」フィールドに、の形式で国コードを入力します。 `<language-code>` または `<language-code>_<country-code>`例： `en`, `en_US`, `en_us`, `en_GB`, `en_gb`. ページのタイトルを入力します。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 「作成」をクリックまたはタップします。確認のダイアログボックスで、「**完了**」をクリックまたはタップして Sites コンソールに戻ります。または「**開く**」をクリックまたはタップして言語コピーを開きます。
+1. 「作成」をクリックします。確認ダイアログボックスで、次のいずれかをクリックします。 **完了** サイトコンソールに戻るには、または **開く** をクリックして、言語コピーを開きます。
 
 ## 言語ルートのステータスの確認 {#seeing-the-status-of-language-roots}
 
@@ -79,8 +79,8 @@ ht-degree: 69%
 
 次の手順では、タッチ操作向け UI を使用してページの参照パネルを開きます。
 
-1. サイトコンソールで、サイトのページを選択し、「**参照**」をクリックまたはタップします。
+1. サイトコンソールで、サイトのページを選択し、 **参照**.
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
-1. 参照パネルで、「**言語コピー**」をクリックまたはタップします。Web サイトの言語コピーが言語コピーパネルに表示されます。
+1. 参照パネルで、 **言語コピー**. 言語コピーパネルには、Web サイトの言語コピーが表示されます。

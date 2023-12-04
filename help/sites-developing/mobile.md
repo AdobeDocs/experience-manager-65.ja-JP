@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3787'
-ht-degree: 38%
+source-wordcount: '3720'
+ht-degree: 37%
 
 ---
 
@@ -146,8 +146,7 @@ AEM モバイルフレームワークを使用すると、要求を発行する�
 
 * デバイスグループが画像をサポートしているかどうかを確認
   `if (deviceGroup.hasCapability(DeviceCapability.CAPABILITY_IMAGES)) {`
-...
-または
+...または
   `if MobileUtil.hasCapability(request, DeviceCapability.CAPABILITY_IMAGES) {`
 ...
 
@@ -249,7 +248,8 @@ AEMがインストールするグループが要件を満たさない場合は�
 1. CRXDE で、デバイスグループ用のスタイルを格納する **static.css** ファイルを `/etc/mobile/groups/special` ノードの下に追加します。
 
 1. **Special Phones** ページを開きます。
-1. デバイスグループを設定するには、「**設定**」の横にある「**編集**」ボタンをクリックします。「**一般**」タブで、次の設定をおこないます。
+1. デバイスグループを設定するには、 **編集** 隣のボタン **設定**.
+次の日： **一般** タブ：
 
    * **タイトル**：モバイルデバイスグループの名前
    * **説明**：グループの説明。
@@ -305,7 +305,7 @@ WURFL™ データベースの XML コードは、`wurfl.xml` ファイル（`/l
 WURFL™データベースが進化しているので、カスタマイズまたは置き換えが必要になる場合があります。 モバイルデバイスデータベースを更新するには、次のオプションがあります。
 
 * この使用を許可するライセンスをお持ちの場合は、ファイルを最新バージョンに置き換えます。 「別の WURFL データベースのインストール」を参照してください。
-* AEM で使用可能なバージョンを使用して、ユーザーエージェント文字列を照合し、既存の WURFL™ デバイスを指定する正規表現を設定します。[正規表現に基づくユーザーエージェント照合の追加](#adding-a-regexp-based-user-agent-matching)を参照してください。
+* AEMで使用可能なバージョンを使用して、User-Agent 文字列に一致し、既存の WURFL™デバイスを指す正規表現を設定します。 詳しくは、 [正規表現に基づくユーザーエージェントの照合の追加](#adding-a-regexp-based-user-agent-matching).
 
 #### WURFL™機能へのユーザーエージェントのマッピングのテスト {#testing-the-mapping-of-a-user-agent-to-wurfl-capabilities}
 
@@ -336,7 +336,7 @@ AEM は `wurfl.xml` ファイルを自動的に解析して、`/var/mobile/devic
 1. In **CRXDE Lite**/apps/wcm/mobile/devicespecs/regexp の下にノードを作成します。例： `apple_ipad_ver1`.
 1. ノードに次のプロパティを追加します。
 
-   * **regexp**:user-agent を定義する正規表現。例：&#42;Mozilla.&#42;iPad.&#42;AppleWebKit。&#42;Safari.&#42;
+   * **regexp**:user-agent を定義する正規表現。例：&#42;Mozilla.&#42;iPad。&#42;AppleWebKit。&#42;Safari。&#42;
    * **deviceId**:wurfl.xml で定義されているデバイス ID（例： ）。 `apple_ipad_ver1`
 
 上記の設定によって、ユーザーエージェントが指定の正規表現に一致するデバイスが、WURFL™ デバイス ID である apple_ipad_ver1（存在する場合）にマップされます。

@@ -1,20 +1,16 @@
 ---
 title: ファイル形式と PDF の変換
-seo-title: Converting Between File Formats and PDF
 description: Generate PDF サービスを使用して、ネイティブファイル形式を PDF に変換します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
-seo-description: Use the Generate PDF service to convert native file formats to PDF. Generate PDF service also converts PDF to other file formats and optimizes the size of PDF documents.
-uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '7847'
-ht-degree: 90%
+source-wordcount: '7812'
+ht-degree: 89%
 
 ---
 
@@ -211,7 +207,7 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 1. PDF 生成クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例えば、`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`） 。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -368,7 +364,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 1. PDF 生成クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例えば、`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`） 。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -519,7 +515,7 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 1. Generate PDF クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例えば、`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`） 。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
    * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -533,7 +529,7 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、変換された PDF ドキュメントの保存に使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
    * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
    * `MTOM` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
@@ -634,7 +630,7 @@ WinID がテキスト、サブウィンドウ、ウィンドウクラス ID な�
   <tr>
    <td><p>その他のアプリケーション固有のダイアログボックスの手順 </p></td>
    <td><p>アプリケーション固有のダイアログボックスの手順に対する上書きと追加を指定します。この節では、このような情報の例を示します。 </p><p>この情報は、appmon.<i>`[appname]`</i>.addition.<i>`[locale]`</i>.xml ファイルに含まれます。（例：appmon.addition.en_US.xml）</p></td>
-   <td><p>このタイプのファイルは、XML 編集アプリケーションを使用して作成および変更できます。（<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">ネイティブアプリケーション用の追加のダイアログ XML ファイルの作成または変更</a>を参照。） </p><p><strong>重要</strong>：サーバーがサポートするネイティブアプリケーションごとに、追加のアプリケーション固有のダイアログボックスの手順を作成する必要があります。 </p></td>
+   <td><p>このタイプのファイルは、XML 編集アプリケーションを使用して作成および変更できます。（<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">ネイティブアプリケーション用の追加のダイアログ XML ファイルの作成または変更</a>を参照。） </p><p><strong>重要</strong>：サーバーがサポートするネイティブアプリケーションごとに、追加のアプリケーション固有のダイアログボックスの手順を作成します。 </p></td>
   </tr>
  </tbody>
 </table>
@@ -673,7 +669,7 @@ GeneratePDFサービスでスクリプト XML ファイルをサポートする�
 
 スクリプト XML ファイル内の手順は、分岐の機会がなく、順番に実行されます。サポートされている唯一の条件付きテストは、タイムアウト／再試行です。これにより、特定の期間内および特定の回数の再試行後に手順が正常に完了しなかった場合にスクリプトが終了します。
 
-順次的な手順に加えて、手順内の命令も順に実行されます。手順と指示が、ユーザーが同じ手順を実行する順序を反映していることを確認する必要があります。
+順次的な手順に加えて、手順内の命令も順に実行されます。手順と手順が、ユーザーが同じ手順を実行する順序を反映していることを確認します。
 
 スクリプト XML ファイルの各ステップは、ステップの指示が正常に実行された場合に表示されるウィンドウ要素を識別します。 スクリプトでの手順の実行中に予期しないダイアログボックスが表示された場合、PDF 生成サービスは、次のセクションで説明するようにダイアログ XML ファイルを検索します。
 
@@ -796,7 +792,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 #### window 要素と windowList 要素の順序付け {#ordering-the-window-and-windowlist-elements}
 
-`window` および `windowList` 要素は次の順序にする必要があります。
+注文 `window` および `windowList` 要素を次に示します。
 
 * 複数の `window` 要素が `windowList` または `dialog` 要素の子として表示される場合、それらの `window` 要素を降順で並べ替えます。`caption` 名の長さは順序での位置を示します。
 * 複数の `windowList` 要素が `window` 要素に表示される場合は、それらの `windowList` 要素を降順で並べ替えます。最初の `indexes/` 要素の `caption` 属性の長さは順序内の位置を示します。
@@ -864,7 +860,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 >
 native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
 
-`window` 要素で子として表示される `windowList` 要素に順序を付ける必要があります。（[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
+注文 `windowList` の子として表示される要素 `window` 要素を選択します。 （[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
 
 ### 一般ダイアログ XML ファイルの変更 {#modifying-the-general-dialog-xml-file}
 
@@ -1062,7 +1058,7 @@ AEM Forms には、Generate PDFサービスでメモ帳を使用してファイ�
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the Print dialog and click on the 'Preferences' button and the expected window in this case is the dialog with the caption '"Printing Preferences' -->
+    <!-- In this step, we acquire the Print dialog and click the 'Preferences' button and the expected window in this case is the dialog with the caption '"Printing Preferences' -->
     <step>
         <acquiredWindow>
             <window caption="Print">
@@ -1080,7 +1076,7 @@ AEM Forms には、Generate PDFサービスでメモ帳を使用してファイ�
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the dialog "Printing Preferences' and select the combo box which is the 10th child of window with caption '"Adobe PDF Settings' and select the first index. (Note: All indeces start with 0.) Besides this we uncheck the box which  has the caption '"View Adobe PDF results' and we click on the button OK. The expectation is that 'Printing Preferences' dialog disappears. -->
+    <!-- In this step, we acquire the dialog "Printing Preferences' and select the combo box which is the 10th child of window with caption '"Adobe PDF Settings' and select the first index. (Note: All indeces start with 0.) Besides this we uncheck the box which has the caption '"View Adobe PDF results' and we click the button OK. The expectation is that 'Printing Preferences' dialog disappears. -->
     <step>
         <acquiredWindow>
             <window caption="Printing Preferences">
@@ -1104,7 +1100,7 @@ AEM Forms には、Generate PDFサービスでメモ帳を使用してファイ�
         </expectedWindow>
     </step>
 
-    <!-- In this step, we acquire the 'Print' dialog and click on the Print button. The expectation is that the dialog with caption 'Print' disappears. In this case we use the regular expression '^Print$' for specifying the caption given there could be multiple dialogs with caption that includes the word Print. -->
+    <!-- In this step, we acquire the 'Print' dialog and click the Print button. The expectation is that the dialog with caption 'Print' disappears. In this case we use the regular expression '^Print$' for specifying the caption given there could be multiple dialogs with caption that includes the word Print. -->
     <step>
         <acquiredWindow>
             <window caption="Print">
@@ -1123,7 +1119,7 @@ AEM Forms には、Generate PDFサービスでメモ帳を使用してファイ�
             <window caption="Save PDF File As"/>
         </expectedWindow>
     </step>
-    <!-- Finally in this step, we acquire the dialog with caption "Save PDF File As" and in the Edit widget type the destination path for the output PDF file and click on the Save button. The expectation is that the dialog disappears-->
+    <!-- Finally in this step, we acquire the dialog with caption "Save PDF File As" and in the Edit widget type the destination path for the output PDF file and click the Save button. The expectation is that the dialog disappears-->
     <step>
         <acquiredWindow>
             <window caption="Save PDF File As">

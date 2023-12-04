@@ -2,7 +2,7 @@
 title: ユーザーの登録
 seo-title: Registering as a User
 description: ユーザーの組織に属していない場合でも、Document Security ユーザーから受け取った、ポリシーで保護されたドキュメントを使用する方法を説明します。
-seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user's organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 7%
+source-wordcount: '695'
+ht-degree: 5%
 
 ---
 
@@ -41,13 +41,13 @@ ht-degree: 7%
 招待ユーザーで、Document Security から電子メール登録メッセージを受け取った場合は、メッセージ内の URL を使用して、オンライン登録ページを開き、登録を行うことができます。 登録後、アカウントのアクティベートに関する通知を受信します。
 
 1. Document Security 登録電子メールを開きます。 メッセージに含まれる URL は、Document Security の外部ユーザー登録ページへのリンクです。
-1. URL をクリックするか、ブラウザーにコピー＆ペーストします。外部ユーザーの登録ページが表示されます。
+1. URL をクリックするか、URL をコピーしてブラウザーに貼り付けます。 外部ユーザーの登録ページが表示されます。
 1. 該当するボックスに名前、電話番号、住所、組織、およびパスワードを入力し、[ パスワードの確認 ] ボックスにパスワードを再入力します。 パスワードには、任意の 8 文字のテキストを使用できます。
-1. 「保存」をクリックします。電子メールでアクティベート用の電子メールメッセージを確認するよう通知する「ありがとうございます」メッセージが表示されます。 次に、登録プロセスを完了するには、アカウントをアクティベートする必要があります。
+1. 「保存」をクリックします。電子メールでアクティベート用の電子メールメッセージを確認するよう通知する「ありがとうございます」メッセージが表示されます。 次に、アカウントをアクティベートして登録プロセスを完了します。
 
 ## 招待ユーザーアカウントのアクティベート {#activate-your-invited-user-account}
 
-登録後、Document Security からアクティベーション用の電子メールが送信されます。 メッセージ内の URL を使用して、アカウントをアクティベートする必要があります。 その後、Document Security にログインして、アクセス可能なポリシーで保護されたドキュメントを使用できます。 管理者が外部ユーザーに対して有効にした機能に応じて、ポリシーの作成、ドキュメントへのポリシーの適用、他の外部ユーザーのポリシーへの追加の権限が与えられます。
+登録後、Document Security からアクティベーション用の電子メールが送信されます。 メッセージ内の URL を使用して、アカウントをアクティブ化します。 その後、Document Security にログインして、アクセス可能なポリシーで保護されたドキュメントを使用できます。 管理者が外部ユーザーに対して有効にした機能に応じて、ポリシーの作成、ドキュメントへのポリシーの適用、他の外部ユーザーのポリシーへの追加の権限が与えられます。
 
 管理者がアカウントを無効にするか削除するまで、アカウントはアクティブなままです。
 

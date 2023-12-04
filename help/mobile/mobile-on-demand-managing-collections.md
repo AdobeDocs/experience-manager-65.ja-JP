@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
-source-git-commit: 69a249e63e2e6b96ba08f9846baa3e91d42b865f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '790'
 ht-degree: 4%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->最初に Mobile On-Demand 接続を関連付ける必要があります。
+>最初に Mobile On-Demand 接続を関連付けます。
 
 ## コレクションの編集 {#editing-a-collection}
 

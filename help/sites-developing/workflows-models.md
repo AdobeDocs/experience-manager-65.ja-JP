@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2451'
-ht-degree: 46%
+source-wordcount: '2462'
+ht-degree: 45%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 46%
 
 ### モデルへのステップの追加 {#adding-a-step-to-a-model}
 
-実行するアクティビティを表す手順をモデルに追加する必要があります。各手順は特定のアクティビティを実行します。 標準のAEMインスタンスでは、様々なステップコンポーネントを使用できます。
+実行するアクティビティを表す手順をモデルに追加します。各手順は特定のアクティビティを実行します。 標準のAEMインスタンスでは、様々なステップコンポーネントを使用できます。
 
 モデルを編集すると、使用可能なステップが **ステップブラウザー**. 次に例を示します。
 
@@ -144,7 +144,7 @@ ht-degree: 46%
 
 1. を開くには、 **ステップのプロパティ** ステップのダイアログは、次のいずれかを実行します。
 
-   * ワークフローモデルの* *ステップをクリックまたはタップし、コンポーネントのツールバーから&#x200B;**設定**&#x200B;を選択します。
+   * ワークフローモデルのステップをクリックし、「 」を選択します。 **設定** を選択します。
 
    * ステップをダブルクリックします。
 
@@ -218,7 +218,7 @@ ht-degree: 46%
 
 ### ワークフローステージの設定（ワークフローの進行状況を表示） {#configuring-workflow-stages-that-show-workflow-progress}
 
-[ワークフローステージは、タスクを処理する際のワークフローの進行状況を視覚化するのに役立ちます。](/help/sites-developing/workflows.md#workflow-stages)
+[ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages) タスクを処理する際のワークフローの進行状況を視覚化します。
 
 >[!CAUTION]
 >

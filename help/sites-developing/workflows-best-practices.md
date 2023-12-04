@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1922'
-ht-degree: 23%
+source-wordcount: '1925'
+ht-degree: 22%
 
 ---
 
@@ -297,7 +297,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 次の項目を定義できます。 [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)次に、特定のワークフローステージにタスク/ステップを割り当てます。
 
-この情報は&#x200B;[**、**&#x200B;インボックス&#x200B;**から作業項目の「ワークフロー情報**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)」タブをクリックしたときにワークフローの進行状況を表示するために使用されます。既存のワークフローモデルを編集してステージを追加することができます。
+この情報は、 [**ワークフロー情報** 作業項目のタブ **インボックス**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions). 既存のワークフローモデルを編集してステージを追加することができます。
 
 ### ページプロセスステップを有効化 {#activate-page-process-step}
 

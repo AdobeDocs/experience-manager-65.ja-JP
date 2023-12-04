@@ -11,10 +11,10 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2567'
-ht-degree: 86%
+source-wordcount: '2306'
+ht-degree: 85%
 
 ---
 
@@ -490,7 +490,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 ## ボーナスチャレンジ {#bonus-challenge}
 
-製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。次の場所でコンポーネントダイアログを更新する必要があります。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
+製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。次の場所にあるコンポーネントダイアログを更新します。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
 
 ![新しいバッジの実装の課題](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 

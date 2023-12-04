@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 95%
+source-wordcount: '1275'
+ht-degree: 92%
 
 ---
 
@@ -30,7 +30,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 * [**レイアウトコンテナ**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)&#x200B;コンポーネント
 
-  このコンポーネントが提供するグリッド段落システムを使用すると、レスポンシブグリッド内にコンポーネントを追加して配置できるようになります。ページのデフォルトの parsys として使用したり、コンポーネントブラウザーで作成者が使用できるようにしたりできます。
+  このコンポーネントは、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。 ページのデフォルトの parsys として使用したり、コンポーネントブラウザーで作成者が使用できるようにしたりできます。
 
    * デフォルトの&#x200B;**レイアウトコンテナ**&#x200B;コンポーネントは以下の場所で定義します。
 
@@ -45,7 +45,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
         レイアウトコンテナをページの標準とし、この中でユーザーがレイアウトコンテナをさらに追加できるようにすることができます。例えば、列を制御する場合などです。
 
 * **[レイアウトモード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-レイアウトコンテナをページに配置したら、**レイアウト**&#x200B;モードを使用してレスポンシブグリッド内にコンテンツを配置することができます。
+レイアウトコンテナをページに配置したら、 **レイアウト** モード：レスポンシブグリッド内にコンテンツを配置します。
 
 * [**エミュレーター**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 これにより、コンポーネントのサイズをインタラクティブに変更することで、デバイスやウィンドウのサイズに従ってレイアウトを並べ替えるレスポンシブ Web サイトを作成および編集できます。 その後、ユーザーはエミュレーターを使用してコンテンツがどのようにレンダリングされるかを確認できます。
@@ -63,7 +63,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 >[!NOTE]
 >
->標準のインストールでは、レスポンシブレイアウトは [We.Retail 参照サイト](/help/sites-developing/we-retail.md)に対して設定されています。他のページの[レイアウトコンテナコンポーネントをアクティベート](#enable-the-layout-container-component-for-page)する必要があります。
+>標準のインストールでは、レスポンシブレイアウトは [We.Retail 参照サイト](/help/sites-developing/we-retail.md)に対して設定されています。[レイアウトコンテナコンポーネントをアクティブにする](#enable-the-layout-container-component-for-page) （他のページ用）
 
 ## レスポンシブエミュレーターの設定 {#configuring-the-responsive-emulator}
 

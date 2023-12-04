@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 3%
+source-wordcount: '1028'
+ht-degree: 2%
 
 ---
 
@@ -25,12 +25,12 @@ ht-degree: 3%
 
 GitHub から入手可能なコードを使用してモバイルアプリケーションを構築する方法に関する詳細な手順記事を利用できます [ここ](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
 
-## パブリッシュインスタンスへのアプリの移動 {#moving-the-application-to-the-publish-instance}
+## パブリッシュインスタンスへのアプリケーションの移動 {#moving-the-application-to-the-publish-instance}
 
 アプリケーションファイルをパブリッシュインスタンスに移動して、インストールされているモバイルアプリケーションのインスタンスにコンテンツの更新を提供し、公開されたコンテンツを使用してアプリを構築できるようにします。 アプリケーションは、リポジトリ内の 2 つのノードブランチで構成されます。
 
-* `/content/phonegap/apps/<application name>`:作成者が作成およびアクティブ化する Web ページ。
-* `/content/phonegap/content/<application name>`:アプリケーション設定ファイルとコンテンツ同期設定。
+* `/content/phonegap/apps/<application name>`：作成者が作成およびアクティブ化した Web ページ。
+* `/content/phonegap/content/<application name>`：アプリケーション設定ファイルとコンテンツ同期設定。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ AEMには、コンテンツを一括でパブリッシュインスタンスに�
 * [「ツリーをアクティベート」コマンドを使用する](/help/sites-authoring/publishing-pages.md) レプリケーションコンソールの
 * [パッケージの作成](/help/sites-administering/package-manager.md) コンテンツを格納し、パッケージをレプリケートします。
 
-例えば、phonegapapp という名前のモバイルアプリケーションが作成されます。 次のノードをパブリッシュインスタンスに移動する必要があります。/content/phonegap/content/phonegapapp.
+例えば、phonegapapp という名前のモバイルアプリケーションが作成されます。 次のノードをパブリッシュインスタンスに移動する必要があります。 /content/phonegap/content/phonegapapp
 
 **ヒント：** パッケージをオーサーインスタンスからパブリッシュインスタンスに移動するには、パッケージで「レプリケート」コマンドを使用します。
 
@@ -66,7 +66,7 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
 
    UNIX®または Linux®システムでは、場合によっては、コマンドの先頭にを付ける必要があります。 `sudo`.
 
-   端末は、一連の HTTPGETコマンドの結果を示します。 インストールが正常に完了すると、次の例のように、ターミナルはライブラリのインストール先を示します。
+   この端末は、一連の HTTPGETコマンドの結果を示します。 インストールが正常に完了すると、次の例のように、ターミナルはライブラリのインストール先を示します。
 
    ```xml
    /usr/local/bin/phonegap -> /usr/local/lib/node_modules/phonegap/bin/phonegap.js
@@ -101,7 +101,7 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
    >
    >キャッシュには、インストールされたアプリケーションのコンテンツの更新が格納されます。 キャッシュをクリアすると、キャッシュされたすべての更新が無効になります。
 
-1. ツールバーの「 CLI Assets をダウンロード」アイコンをクリックまたはタップします。
+1. ツールバーの「 CLI Assets をダウンロード」アイコンをクリックします。
 
    ![重複するタブレット記号で示される CLI Assets アイコンをダウンロードします。](do-not-localize/chlimage_1-1.png)
 
@@ -128,12 +128,12 @@ PhoneGap CLI を使用して、アプリケーションをコンパイルして�
 
 PhoneGap クラウドサービスを使用してアプリを構築します。 この手順を実行するには、まずPhoneGap Build設定を作成する必要があります。
 
-### PhoneGap Build に接続しています {#connecting-to-phonegap-build}
+### PhoneGap Buildへの接続 {#connecting-to-phonegap-build}
 
 AEM内でPhoneGap Buildサービスを使用できるようにPhoneGap Build設定を作成します。 モバイルアプリケーションの構築に使用するPhoneGap Buildアカウントのユーザー名とパスワードを指定します。
 
-1. ツールページを開きます。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html)).
-1. 「CQ Operations」領域で、「Cloud Services」をクリックします。
+1. ツールページを開きます。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html)) をクリックします。
+1. 「CQ Operations」領域で、「Cloud Service」をクリックします。
 1. 「今すぐ設定」リンクをクリックして、PhoneGap Buildを表示します。
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
@@ -156,7 +156,7 @@ AEM内でPhoneGap Buildサービスを使用できるようにPhoneGap Build設�
 
 1. スプラッシュページを選択し、「リモートビルド」アイコンをクリックします。
 
-   ![2 つの丸歯車が示すリモートアイコンを作成します。](do-not-localize/chlimage_1-3.png)
+   ![2 つの丸い歯車が示すリモートアイコンを作成します。](do-not-localize/chlimage_1-3.png)
 
    **注意：** ビルドが正常に完了した場合、AEM Beta バージョンではインボックス通知が作成されません。
 

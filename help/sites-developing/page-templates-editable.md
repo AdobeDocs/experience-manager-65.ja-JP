@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '3219'
-ht-degree: 98%
+source-wordcount: '3186'
+ht-degree: 96%
 
 ---
 
@@ -217,7 +217,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 ### 設定ブラウザーの使用 {#using-the-configuration-browser}
 
-1. **グローバルナビゲーション**／**ツール**／**設定ブラウザー**&#x200B;に移動します。
+1. に移動します。 **グローバルナビゲーション** > **ツール** > **設定ブラウザー**.
 
    **グローバル**&#x200B;フォルダーを含めた既存のフォルダーは左側に一覧表示されます。
 
@@ -264,8 +264,8 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
   <tr>
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/templates</code></td>
    <td>テンプレート作成者<br /> </td>
-   <td>読み込み、書き込み、レプリケート</td>
-   <td>テンプレート作成者は、以下の場所でテンプレートを作成、読み取り、更新、削除、および複製しますサイト固有の <code>/conf</code> 空間</td>
+   <td>読み取り、書き込み、複製</td>
+   <td>サイト固有のテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者 <code>/conf</code> space</td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -281,7 +281,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/policies</code></td>
    <td><code>Template Author</code></td>
    <td>読み込み、書き込み、レプリケート</td>
-   <td>テンプレート作成者は、以下の場所でテンプレートを作成、読み取り、更新、削除、および複製しますサイト固有の <code>/conf</code> 空間</td>
+   <td>サイト固有のテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者 <code>/conf</code> space</td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -592,8 +592,8 @@ GitHub のコード
 
    * [サブブランチの該当するページまたはルートページの&#x200B;**ページプロパティ**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;で、許可されたテンプレートのパスを定義します。
    * プロパティを設定します。
-     `cq:allowedTemplates` 
-を必要な分岐の `jcr:content` ノードに設定します。
+     `cq:allowedTemplates`
+次の日： `jcr:content` 必要なブランチのノードに設定します。
 
    例えば、次の値を使用します。
 

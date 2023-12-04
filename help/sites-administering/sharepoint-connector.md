@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 60%
+source-wordcount: '1482'
+ht-degree: 56%
 
 ---
 
@@ -47,7 +47,7 @@ SharePointコネクタは、次の基本機能をサポートしています。
 * ソフトウェア配布からコネクタパッケージ配布ファイルをダウンロードします。
 * 有効な *license.properties* ファイルを、 *cq-quickstart-6.4.0.jar* ファイル。
 
-* .jar ファイルをダブルクリックまたはタップしてAEMを起動するか、コマンドラインから起動します。
+* .jar ファイルをダブルクリックしてAEMを起動するか、コマンドラインから起動します。
 * パッケージマネージャーからコネクタパッケージをインストールします。
 * コネクタオプションを設定します。
 
@@ -98,12 +98,12 @@ SharePoint コネクタは[ソフトウェア配布](https://experience.adobe.co
 
 1. Adobeサポートチケットを開き、コネクタ featurepack をリクエストします。
 1. パッケージが使用可能になったら、そのパッケージをダウンロードし、AEMインスタンス用のパッケージマネージャーを開きます。
-1. パッケージ説明ページで&#x200B;**インストール**&#x200B;をタップまたはクリックします。
-1. **パッケージをインストール**&#x200B;ダイアログで、**インストール**&#x200B;をタップまたはクリックします。
+1. クリック **インストール** パッケージの説明ページから。
+1. 次から： **パッケージをインストール** ダイアログ、クリック **インストール**.
 
    **メモ**：管理者としてログインしていることを確認してください
 
-1. パッケージがインストールされたら、**閉じる**&#x200B;をタップまたはクリックします。
+1. パッケージがインストールされたら、 **閉じる**.
 
 ## SharePoint コネクターの設定 {#configuring-sharepoint-connector}
 
@@ -119,7 +119,7 @@ SharePoint サーバーの URL および高度なオプションを設定する�
 1. **Day JCR Connector for Microsoft Sharepoint** バンドルを探します。
 1. 設定値を編集.
 1. SharePointサーバーの URL を **Workspaces**.
-1. 「**保存**」をタップまたはクリックします。
+1. 「**保存**」をクリックします。
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -172,7 +172,7 @@ DAM 同期サービスを有効にします。このサービスはデフォル�
 
 1. OSGi web コンソールのコンポーネント（[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)）に移動します。
 1. 「com.day.cq.dam.jcrconnectors.impl.AssetSynchronizationService」を検索します。
-1. 「有効」をクリックします。
+1. 「有効にする」をクリックします。
 
 必要に応じて、異なる同期サイクル間の同期遅延を設定できます。
 
@@ -198,14 +198,14 @@ SharePoint ではクラシック認証方式と要求ベースの認証方式を
 
 Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン 4.0 用 AEM JCR Connector は、次のモードで動作する要求ベースの認証 (Microsoftが推奨 ) をサポートしています。
 
-* **基本/NTLM 認証**:コネクタは、まず基本認証を使用して接続を試みます。 使用できない場合は、NTLM ベースの認証に切り替わります。
+* **基本/NTLM 認証**：コネクタは、最初に基本認証を使用した接続を試みます。 使用できない場合は、NTLM ベースの認証に切り替わります。
 * **フォームベースの認証**：SharePoint では、ユーザーがログインフォーム（通常は web ページ）に入力した資格情報に基づいてユーザーの検証が行われます。システムは、後続の要求の ID を再確立するためのキーを含む認証済み要求に対してトークンを発行します。
 
 **Formsベースの認証の設定**
 
 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
 
-1. OSGI／設定をクリックします。
+1. OSGI/設定をクリックします。
 1. 「Day JCR Connector for Microsoft Sharepoint」を探します。
 1. 「設定値を編集」をクリックします。
 1. 「Sharepoint Connection Factory」の値として「com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory」を設定します。
@@ -236,7 +236,7 @@ AEM でユーザーを作成するには、以下の手順に従います。
 1. 対応するパスワードを指定します。
 1. 緑色のチェックマークをクリックして、ユーザーを作成します。
 
-管理者グループにユーザーを追加するには：
+管理者グループにユーザーを追加するには、次の手順を実行します。
 
 1. グループ管理に移動します。
 1. 『a』ノードをクリックします。

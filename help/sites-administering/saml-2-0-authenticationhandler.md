@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 76%
+source-wordcount: '821'
+ht-degree: 70%
 
 ---
 
@@ -60,7 +60,7 @@ AEM には、[SAML](https://saml.xml.org/saml-specifications) 認証ハンドラ
 
 >[!CAUTION]
 >
->ID プロバイダーのホスト名は **Apache Sling Referrer Filter** の OSGi 設定に追加する必要があります。詳しくは、[web コンソール](/help/sites-deploying/configuring-osgi.md)に関するセクションを参照してください。
+>ID プロバイダーのホスト名を **Apache Sling Referrer Filter** OSGi 設定。 詳しくは、 [Web コンソール](/help/sites-deploying/configuring-osgi.md) 」の節を参照してください。
 
 **サービスプロバイダーのエンティティ ID** このサービスプロバイダーを ID プロバイダーとして一意に識別する ID です。このプロパティが空の場合は、認証ハンドラーが無効になります。
 
@@ -135,7 +135,7 @@ SAML アサーションは署名され、オプションで暗号化できます
 SAML の設定ミスに起因する問題をデバッグするロガーを設定できます。 手順は次のとおりです。
 
 1. Web コンソール（*http://localhost:4502/system/console/configMgr*）に移動
-1. **Apache Sling Logging Logger Configuration** という名前のエントリを検索してクリックします。
+1. を検索して、 **Apache Sling Logging Logger Configuration**
 1. 次の設定でロガーを作成します。
 
    * **ログレベル：** デバッグ

@@ -2,10 +2,10 @@
 title: AEM FAQ
 description: これらの FAQ を使用して、AEMの一般的なワークフローや問題を理解、設定、トラブルシューティングします。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 45%
+source-wordcount: '1011'
+ht-degree: 38%
 
 ---
 
@@ -86,7 +86,7 @@ AEM コンテンツサービスを React アプリケーションから使用す
 
 #### 言語コピーを作成する際の OOTB 設定のデフォルト設定を教えてください。 {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-一方で、タッチ UI を利用して言語コピーを作成するときは（**参照**／**言語コピーを更新**）、新しい DAM フォルダーが新しい言語下に作成され、アセットはそのフォルダーから参照されます。
+タッチ UI(**参照** > **言語コピーを更新**) の場合、新しい DAM フォルダーが新しい言語の下に作成され、アセットがそこから参照されます。
 
 これは OOTB 設定のデフォルト設定です。翻訳設定で「**ページのアセットを翻訳**」を「**翻訳しない**」に設定できます。AEM 6.4 の場合は、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;を選択して設定します。
 

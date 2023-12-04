@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '6087'
+source-wordcount: '6076'
 ht-degree: 26%
 
 ---
@@ -503,7 +503,7 @@ HTMLでは、次のプレースホルダーを使用できます。プレース�
 |---|---|
 | {name} | ボタンの名前（例： ）**作成者、戻る、更新**&#x200B;など。 |
 | {id} | ボタンの CSS ID。 |
-| {URL} | ボタンのターゲットの URL。 |
+| {url} | ボタンのターゲットの URL。 |
 | {text} | ボタンのラベル。 |
 | {onclick} | JavaScript **onclick** 関数（次を含む） {url}) をクリックします。 |
 
@@ -727,7 +727,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 AEM WCM が提供するコンテンツにアクセスするには、ポータルサーバーがAEM Portal Directorポートレットに適合している必要があります。 これをおこなうには、この節で説明する手順に従って、ポートレットをインストール、設定、ポータルページに追加します。
 
-デフォルトでは、ポートレットは localhost:4503 のパブリッシュインスタンスに接続し、localhost:4502 のオーサーインスタンスに接続します。 これらの値は、ポートレットのデプロイ時に変更できます。 ポータルディレクタは、リポジトリ内の/libs/portal/directory の下にコンテンツとして表示されます。 使用する前に、アプリケーションの war ファイルをダウンロードする必要があります。
+デフォルトでは、ポートレットは localhost:4503 のパブリッシュインスタンスに接続し、localhost:4502 のオーサーインスタンスに接続します。 これらの値は、ポートレットのデプロイ時に変更できます。 ポータルディレクタは、リポジトリ内の/libs/portal/directory の下にコンテンツとして表示されます。 使用する前に、アプリケーションの war ファイルをダウンロードします。
 
 ### WAR ファイルのダウンロード {#downloading-the-war-file}
 

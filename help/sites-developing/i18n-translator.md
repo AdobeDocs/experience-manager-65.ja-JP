@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: a8d50c09-72d0-406e-874e-50a985227a56
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
-source-wordcount: '2319'
+source-wordcount: '2320'
 ht-degree: 35%
 
 ---
@@ -211,7 +211,7 @@ Translator ツールの下部にある検索バーには、文字列選択オプ
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-   * をダブルクリックします。 **文字列** または **コメント** 必要な文字列を開くためのフィールド **文字列を編集** ダイアログで、必要に応じて翻訳を編集し、 **OK** ダイアログを閉じるには：
+   * 次をダブルクリックします。 **文字列** または **コメント** 必要な文字列を開くためのフィールド **文字列を編集** ダイアログで、必要に応じて翻訳を編集し、 **OK** ダイアログを閉じるには：
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
