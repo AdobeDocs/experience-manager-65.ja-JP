@@ -4,10 +4,10 @@ description: AEM Forms ドキュメントサービスをインストールして
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 03ed3606e89d87bf2f95b56a1eeb6b7dc4bec13a
 workflow-type: tm+mt
-source-wordcount: '5512'
-ht-degree: 78%
+source-wordcount: '5521'
+ht-degree: 74%
 
 ---
 
@@ -24,13 +24,13 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **DocAssurance サービス：**&#x200B;ドキュメントの暗号化と復号、使用権限の追加による Adobe Reader の機能拡張、ドキュメントへのデジタル署名の追加を実行できます。DocAssurance サービスには、3 つのサービス（署名、暗号化、Reader 拡張機能）があります。詳しくは、[DocAssurance サービス](/help/forms/using/overview-aem-document-services.md)を参照してください。
 
-* **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。ドキュメントが暗号化されると、その内容が読み取れなくなります。 許可されたユーザーは、ドキュメントを復号化して、コンテンツにアクセスできます。 詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
+* **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。ドキュメントが暗号化されると、その内容が読み取れなくなります。許可されたユーザーは、ドキュメントを復号化して、コンテンツにアクセスできます。 詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
 
 * **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとして処理します。詳しくは、[ Forms サービス](/help/forms/using/forms-service.md)を参照してください。
 
 * **Output サービス：** PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成します。レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。詳しくは、[Output サービス](/help/forms/using/output-service.md)を参照してください。
 
-* **PDF Generator サービス：**&#x200B;ネイティブファイル形式を PDF に変換する API を提供します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。詳しくは、[PDF Generator サービス](aem-document-services-programmatically.md#pdfgeneratorservice)を参照してください。
+* **PDF Generatorサービス：** PDF Generatorサービスは、ネイティブファイル形式をPDFに変換する API を提供します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。詳しくは、[PDF Generator サービス](aem-document-services-programmatically.md#pdfgeneratorservice)を参照してください。
 
 * **Reader Extension サービス：**&#x200B;使用権限を追加して Adobe Reader の機能を拡張することで、組織内でインタラクティブな PDF ドキュメントを容易に共有できます。このサービスにより、PDF ドキュメントを Adobe Reader で開いた場合には使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）が有効になります。詳しくは、[Reader Extension サービス](/help/forms/using/overview-aem-document-services.md#reader-extension-service)を参照してください。
 
@@ -42,7 +42,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
   Signature サービスは、Trust Store に保存されている証明書と秘密鍵証明書にアクセスします。 詳しくは、[Signature サービス](/help/forms/using/aem-document-services-programmatically.md)を参照してください。
 
-AEM Forms は強力なエンタープライズクラスのプラットフォームであり、ドキュメントサービスは AEM Forms の機能の 1 つです。機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
+AEM Formsは強力なエンタープライズクラスのプラットフォームであり、ドキュメントサービスはAEM Formsの機能の 1 つに過ぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
@@ -406,7 +406,8 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    >[!NOTE]
    >
-   アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。アドビ以外が提供しているフォントをアドビのソフトウェアで使用する前に、適用されるすべてのアドビ以外の使用許諾契約書に準拠していることを確認してください。特に、サーバー環境でフォントを使用する際は注意が必要です。新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
+   アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。Adobeでは、Adobe以外のフォントをAdobeソフトウェア ( 特にサーバー環境でのAdobeの使用に関して ) で使用する前に、該当するすべての非フォント使用許諾契約に準拠していることを確認することをお勧めします。
+新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
    >
 
 ### PDF Generator サービスを実行するためのローカルユーザーアカウントの設定  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
@@ -578,7 +579,7 @@ Assembler サービスは、Reader拡張サービス、Signature サービス、
 
 [System Readiness ツール](#srt-configuration)は、PDF Generator 変換を実行するようにマシンが正しく設定されているかどうかを確認します。ツールは、指定されたパスでレポートを生成します。ツールを実行するには：
 
-1. コマンドプロンプトを開き、`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` フォルダーに移動します。
+1. コマンドプロンプトを開きます。`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` フォルダーに移動します。
 
 1. コマンドプロンプトから次のコマンドを実行します。
 
@@ -647,7 +648,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Microsoft® Windows**
 
-* Microsoft Office 32 ビット[サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)のインストールが完了していること、およびすべてのアプリケーションでダイアログを開くことがキャンセルされていることを確認します。
+* 32 ビット版であることを確認します。 [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Microsoft Office のインストールが完了し、すべてのアプリケーションでダイアログを開く操作がキャンセルされました。
 * PDF Generator ユーザーが PDF 設定 UI に追加されていることを確認します。
 * PDF Generator ユーザーが管理グループのメンバーであり、[プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege)権限がそのユーザーに対して設定されていることを確認します。
 * ユーザーが PDF Generator UI で設定されており、次のアクションを実行していることを確認します。
@@ -667,6 +668,10 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * OpenOffice のインストールに問題がある場合は、OpenOffice のインストールに必要な [32 ビットライブラリ](#extrarequirements)が利用可能であることを確認します。
 
 +++
+
++++Microsoft Office 2019 がMicrosoft Windows Server 2019 で動作していません
+
+* AEMサーバーとのアクティブなリモート接続がないことを確認します。
 
 +++HTML から PDF への変換に関する問題
 
@@ -787,8 +792,23 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 *プライマリコンバーターからのエラーメッセージ：
 ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
-この問題を解決するには、[Word ファイルまたは Excel ファイルを Windows Server 上で PDF に変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)を参照してください。
+問題を解決するには、 [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 
++++ Windows Server 2019 で Excel ファイルをPDFに変換できません
+
+Microsoft Excel 2019 をMicrosoft Windows Server 2019 上のPDFに変換する場合は、次の点を確認する必要があります。
+
+* PDF Generatorサービスを使用している間、Windows コンピューターはAEMサーバー（Windows RDP セッション）とのアクティブなリモート接続を持つ必要があります。
+* デフォルトのプリンターはAdobe PDFに設定する必要があります。
+
+>[!NOTE]
+* Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
+
++++ XPS ファイルをPDFに変換できません
+
+問題を解決するには、 [Windows で機能固有のレジストリキーを作成する](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
+
++++
 
 ## 次の手順 {#next-steps}
 
