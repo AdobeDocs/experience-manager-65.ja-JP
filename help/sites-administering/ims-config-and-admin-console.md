@@ -7,10 +7,10 @@ topic-tags: Security
 content-type: reference
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8c0c2d89fca7a5ba1a834108ae54fed524b3cbab
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 76%
+source-wordcount: '1604'
+ht-degree: 75%
 
 ---
 
@@ -19,10 +19,6 @@ ht-degree: 76%
 >[!NOTE]
 >
 >この機能は、Managed Servicesのお客様のみがAdobeできます。
-
->[!NOTE]
->
->Adobe Experience Manager(AEM) は、現在、プロファイルへのグループの割り当てをサポートしていません。 代わりに、ユーザーを個別に追加する必要があります。
 
 ## はじめに {#introduction}
 
