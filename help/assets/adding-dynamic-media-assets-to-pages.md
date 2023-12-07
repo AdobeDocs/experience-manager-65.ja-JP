@@ -1,20 +1,18 @@
 ---
 title: ページへの Dynamic Media アセットの追加
 description: Adobe Experience Manager で Dynamic Media コンポーネントをページに追加する方法.
-uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3263'
-ht-degree: 99%
+source-wordcount: '3219'
+ht-degree: 98%
 
 ---
 
@@ -206,7 +204,7 @@ Dynamic Media コンポーネントを使用して、ダイナミックビデオ
 
 >[!NOTE]
 >
->デフォルトでは、Dynamic Media ビデオコンポーネントはアダプティブです。ビデオコンポーネントを固定サイズにする場合は、そのコンポーネントで、**[!UICONTROL 詳細]**&#x200B;タブの&#x200B;**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さ]**&#x200B;を使用してサイズを設定してください。
+>デフォルトでは、Dynamic Mediaビデオコンポーネントはアダプティブです。 画像コンポーネントを固定サイズにする場合は、その画像コンポーネントを **[!UICONTROL 幅]** および **[!UICONTROL 高さ]** （内） **[!UICONTROL 詳細]** タブをクリックします。
 
 * **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 

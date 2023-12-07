@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '6130'
 ht-degree: 76%
@@ -84,7 +84,7 @@ ht-degree: 76%
 
    | **コンポーネント** | **機能** |
    |---|---|
-   | グラフ | インタラクティブ通信で使用できるグラフを追加して、フォームデータモデルのコレクションから取得された 2 次元のデータを視覚的に表現できます。詳しくは、[インタラクティブ通信内でグラフを使用する](/help/forms/using/chart-component-interactive-communications.md)を参照してください。 |
+   | グラフ | インタラクティブ通信で使用できるグラフを追加すると、フォームデータモデルのコレクションから取得した 2 次元データを視覚的に表現することができます。詳しくは、[インタラクティブ通信内でグラフを使用する](/help/forms/using/chart-component-interactive-communications.md)を参照してください。 |
    | ドキュメントフラグメント | テキスト、リスト、条件などの再利用可能なコンポーネントをインタラクティブ通信に追加できます。 追加されるコンポーネントは、フォームデータモデルベースの場合も、フォームデータモデルがない場合もあります。 |
    | 画像 | 画像を挿入できます。 |
 

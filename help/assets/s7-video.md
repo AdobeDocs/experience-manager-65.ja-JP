@@ -1,19 +1,17 @@
 ---
 title: ビデオ
 description: 自動エンコード用のビデオを Dynamic Media Classic にアップロードし、Experience Manager Assets から直接 Dynamic Media Classic ビデオにアクセスできる、一元化されたビデオアセット管理 Adobe Experience Manager Assets について説明します。Dynamic Media Classic のビデオの統合により、最適化されたビデオの範囲が、すべての画面に拡張されます。
-uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
-discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1551'
 ht-degree: 90%
 
 ---

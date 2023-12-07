@@ -1,19 +1,17 @@
 ---
 title: コンテンツの HTTP/2 配信
 description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を削減しながら情報をより高速に転送できるようになりました。
-uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '735'
-ht-degree: 86%
+source-wordcount: '749'
+ht-degree: 93%
 
 ---
 
@@ -39,16 +37,16 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 アドビ独自のテストでは、以下の結果が出ています。
 
-* 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。パフォーマンスの最も顕著な向上は、iOSデバイスでした。
+* 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。最もパフォーマンスが向上したのは iOS デバイスでした。
 * ビューアの場合、読み込み時間のパフォーマンスが 15％向上しました。
 
-次のデモは、HTTP/1 と HTTP/2 の読み込みの違いを示しています。
+以下のデモは、HTTP/1 と HTTP/2 の読み込み時間を比較して示しています。
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 に切り替える資格はありますか？ {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 への移行対象となるお客様 {#am-i-eligible-to-switch-over-to-http}
 
-HTTP/2 を使用するには、次の要件を満たす必要があります。
+HTTP/2 を使用するには、以下の要件を満たしている必要があります。
 
 * リッチメディアリクエストにセキュア HTTPS を使用している。
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media ライセンスの一部として使用している。
@@ -92,7 +90,7 @@ HTTP/2 への切り替えは、お客様からのリクエストが必要とな�
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
-キャッシュされていないコンテンツは、キャッシュが再構築されるまで、Adobeの元のサーバーに直接ヒットします。 このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
+キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
 ## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 

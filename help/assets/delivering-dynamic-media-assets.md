@@ -1,20 +1,18 @@
 ---
 title: Dynamic Media アセットの配信
-description: Dynamic Media アセットの配信方法について説明します。（ビデオや画像など）を Web ページに追加できます。
-uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
+description: ビデオや画像などのDynamic Mediaアセットを Web ページに配信する方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
-source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 75%
+source-wordcount: '323'
+ht-degree: 95%
 
 ---
 

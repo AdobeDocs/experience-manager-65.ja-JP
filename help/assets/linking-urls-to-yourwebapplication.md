@@ -1,19 +1,17 @@
 ---
 title: Web アプリケーションに URL をリンクする
 description: Dynamic Media で web アプリケーションに URL をリンクする方法
-uuid: cf599e66-b1f9-40c0-b572-cea19f2e6793
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Configuration
-source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
-workflow-type: ht
-source-wordcount: '1279'
-ht-degree: 100%
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+workflow-type: tm+mt
+source-wordcount: '1284'
+ht-degree: 98%
 
 ---
 
@@ -69,19 +67,19 @@ URL 文字列を取得する方法はいくつかあります。ただし、次�
 
    * 画像を選択した場合は、ドロップダウンメニューで「**[!UICONTROL レンディション]**」を選択します。
 
-      「**[!UICONTROL 動的]**」ヘッダーの下にあるプリセット名を選択すると、右側のフレームにレンディションが表示されます。「動的」ヘッダーを表示するには、必要に応じて、レンディションリストをスクロールします。
+     「**[!UICONTROL 動的]**」ヘッダーの下にあるプリセット名を選択すると、右側のフレームにレンディションが表示されます。「動的」ヘッダーを表示するには、必要に応じて、レンディションリストをスクロールします。
 
-      左パネルの下部にある「**[!UICONTROL URL]**」を選択します。
+     左パネルの下部にある「**[!UICONTROL URL]**」を選択します。
 
-      ![chlimage_1-270](assets/chlimage_1-270.png)
+     ![chlimage_1-270](assets/chlimage_1-270.png)
 
    * スピンセット、画像セット、カルーセルセットまたはビデオを選択した場合は、ドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択します。
 
-      左パネルで、ビューアプリセット名を選択します。セットまたはビデオのプレビューが別のページで開きます。
+     左パネルで、ビューアプリセット名を選択します。セットまたはビデオのプレビューが別のページで開きます。
 
-      左パネルの下部にある「**[!UICONTROL URL]**」を選択します。
+     左パネルの下部にある「**[!UICONTROL URL]**」を選択します。
 
-      ![chlimage_1-271](assets/chlimage_1-271.png)
+     ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Web ブラウザーにテキストを選択してコピーすると、アセットをプレビューしたり、Web コンテンツページに追加できます。
 
@@ -115,11 +113,11 @@ Dynamic Media では静的アセットの配信をサポートしています。
 
       * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
-         例： `https://aem.com/is/content/adobe/image.gif`
+        例： `https://aem.com/is/content/adobe/image.gif`
+
    * **[!UICONTROL アセット]**／**[!UICONTROL 動的レンディション]**&#x200B;を選択し、静的アセットの動的レンディションを選択して URL をコピーします。
 
-      コピーした URL を変更して、`is/image/` の代わりにパスの `is/content` を使用します。
-
+     コピーした URL を変更して、`is/image/` の代わりにパスの `is/content` を使用します。
 
 ## 公開されたビデオレンディションのビデオ URL の取得 {#obtaining-a-video-url-for-a-published-video-rendition}
 
@@ -173,14 +171,13 @@ Dynamic Media では静的アセットの配信をサポートしています。
 
    * 「**[!UICONTROL 登録 ID]**」の下で、ID の最後の部分にある顧客名をコピーします。コピーした顧客名は後の手順で必要になります。
 
-      例えば、登録 ID が `87654321|demoCo` の場合、コピーする顧客名は `demoCo` です。
-
+     例えば、登録 ID が `87654321|demoCo` の場合、コピーする顧客名は `demoCo` です。
 
 1. 使用しているビデオ配信プロトコルに基づいて、それぞれのプロトコルセレクターをコピーします。コピーしたプロトコルセレクターは後の手順で必要になります。
 
    | 使用しているビデオ配信プロトコル | 使用するプロトコルセレクター |
    |---|---|
-   | HTTP<br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービス URL 値の https を http に変更してください。 | `public/` |
+   | HTTP <br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービス URL 値で https を http に変更してください。 | `public/` |
    | HTTPS | `public-ssl/` |
 
 1. Dynamic Media で処理される Experience Manager のビデオアセットのフルパスをコピーします。コピーしたビデオアセットパスは後の手順で必要になります。

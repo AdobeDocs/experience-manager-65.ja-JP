@@ -1,19 +1,17 @@
 ---
 title: Dynamic Media アセットの公開
 description: ビデオや画像など、Dynamic Mediaのアセットを公開する方法について説明します。このようなアセットの HTTP/2 配信も含まれます。
-uuid: b1bee905-86cf-4284-8d4e-067e11557899
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publishing
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 76%
+source-wordcount: '478'
+ht-degree: 89%
 
 ---
 

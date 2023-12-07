@@ -1,19 +1,17 @@
 ---
 title: 一括アセット移行用の機能パック 18912 をインストールする
 description: 機能パック 18912 では、FTP 経由でアセットを一括取り込みするか、Dynamic Media Classic から Adobe Experience Manager 上の Dynamic Media にアセットを移行できます。このオプションの機能パックは、アドビサポートから入手できます。
-uuid: 45c2f5f8-4368-4d7b-a43e-fe96cfb272fd
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
-discoiquuid: 5d5eebe4-46c9-4028-9354-c5f27944fcdc
 docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 53ea2cf7-d633-4ab9-a869-ce76eb1c01e5
-source-git-commit: fc148a5f5e0fcaac2980dc73004fa92ac3b91fb3
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '407'
 ht-degree: 92%
 
 ---
@@ -37,7 +35,7 @@ ht-degree: 92%
 **一括アセット移行用の機能パック 18912 をインストールするには：**
 
 1. Experience Manager インスタンスで、**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;に移動して、「**[!UICONTROL ユーザーを作成]**」を選択します。このサービスのユーザーは、`/content/dam.` に対する&#x200B;*読み取り／書き込み*&#x200B;権限を持っている必要があります。
-1. 内 **[!UICONTROL ID]** および **[!UICONTROL パスワード]** フィールドに、ユーザー名とパスワードを入力します。例： **FTP ユーザー**. この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。 アセットが FTP からアップロードされると、アセットは、FTP サーバーにアップロードされたと見なされ、Experience Manager にプッシュされます。
+1. Adobe Analytics の **[!UICONTROL ID]** および **[!UICONTROL パスワード]** フィールドに、ユーザー名とパスワードを入力します。例： **FTP ユーザー**. この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。 アセットが FTP からアップロードされると、アセットは、FTP サーバーにアップロードされたと見なされ、Experience Manager にプッシュされます。
 1. [Experience Manager のアドビカスタマーサポート](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)に連絡して、機能パック 18912 のダウンロードのためのアクセス権をリクエストしてください。サポートに連絡する際には、次の情報が必要になる場合があります。
 
    * オーサーインスタンスのサーバー IP アドレスとポート番号（デフォルトのポート番号は 4502）。

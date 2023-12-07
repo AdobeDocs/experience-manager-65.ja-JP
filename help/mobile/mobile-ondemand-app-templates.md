@@ -5,7 +5,7 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 3%
@@ -41,7 +41,7 @@ We.Unlimited App は、完全に設定可能で管理可能なAEM Mobile On-Dema
 アプリテンプレートに基づいてアプリを作成する手順は次のとおりです。
 
 1. AEM Mobileアプリカタログに移動します。 *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. 選択 **作成** -> **アプリ** 次に示すように
+1. 選択 **作成** > **アプリ** 次に示すように
 
 このテンプレートを使用してアプリを作成したら、記事、バナー、コレクションをアプリに追加できます。 記事、バナー、コレクションを再度作成するには、 [コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 

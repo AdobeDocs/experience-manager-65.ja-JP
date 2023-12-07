@@ -1,27 +1,23 @@
 ---
 title: クライアント側のカスタマイズ
-seo-title: Client-side Customization
 description: AEM Communitiesでのクライアント側での動作や外観のカスタマイズ
-seo-description: Customizing behavior or appearance client-side in AEM Communities
-uuid: 57978c39-9a8a-4098-9001-c8bbe7ee786f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 1%
+source-wordcount: '1235'
+ht-degree: 0%
 
 ---
 
 # クライアント側のカスタマイズ  {#client-side-customization}
 
-| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
+| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ⇒](server-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars ヘルパー ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars ヘルパー⇒](handlebars-helpers.md)** |
 
 クライアント側でAEM Communitiesコンポーネントの外観や動作をカスタマイズするには、いくつかの方法があります。
 
@@ -204,6 +200,6 @@ The [コミュニティコンポーネントガイド](components-guide.md) 各 
 * 最初のページへの短い時間：最初のページがすばやく読み込まれるようにしたい場合があります。 この場合、JavaScript は複数の小さなファイルに含まれ、必要な場所でのみ参照されます。
 * 最初のページ読み込みとそれ以降のダウンロードの間のバランス。
 
-| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
+| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ⇒](server-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars ヘルパー ⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars ヘルパー⇒](handlebars-helpers.md)** |

@@ -1,21 +1,19 @@
 ---
 title: Dynamic Media のトラブルシューティング - Scene7 モード
 description: Dynamic MediaをScene7モードで実行している際の、のセットアップ、設定および一般的な問題のトラブルシューティングと解決方法について説明します。
-uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
 role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1395'
-ht-degree: 73%
+source-wordcount: '1393'
+ht-degree: 91%
 
 ---
 
@@ -96,7 +94,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
     </ol> </td>
    <td><p>ページを更新するか、別のページに移動してから戻ります（サイドレール JSP を再コンパイルする必要があります）。</p> <p>それでも動作しない場合：</p>
     <ul>
-     <li>アセットを公開します。</li>
+     <li>アセットを公開.</li>
      <li>アセットを再度アップロードして公開します。</li>
     </ul> </td>
   </tr>
@@ -159,7 +157,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
     </ul> </td>
    <td>
     <ol>
-     <li>フォルダーにビデオプロファイルを割り当てます。</li>
+     <li>ビデオプロファイルをフォルダーに適用します.。</li>
      <li>複数のエンコーディングプリセットを含めるには、ビデオプロファイルを編集します。</li>
      <li>ビデオの処理が終了するまで待ちます。</li>
      <li>ビデオを再読み込みする前に、Dynamic Media エンコーディングビデオワークフローが実行されていないことを確認します。<br /> </li>
@@ -199,7 +197,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
     </ul> </td>
    <td>
     <ol>
-     <li>フォルダーにビデオプロファイルを割り当てます。</li>
+     <li>ビデオプロファイルをフォルダーに適用します.。</li>
      <li>ビデオの処理が終了するまで待ちます。<br /> </li>
     </ol> </td>
   </tr>
@@ -210,12 +208,12 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 ビューアで問題が発生している場合、次のトラブルシューティングガイドに従ってください。
 
-### 問題：ビューアプリセットが公開されていない {#viewers-not-published}
+### 問題：ビューアプリセットが公開されない {#viewers-not-published}
 
 **デバッグの方法**
 
 1. サンプルマネージャー診断ページ `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html` に移動します。
-1. 計算された値を確認します。正しく動作すると、次のように表示されます。`_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets` です。
+1. 計算された値を確認します。正しく動作すると、次のように表示されます。 `_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets`.
 
    >[!NOTE]
    >

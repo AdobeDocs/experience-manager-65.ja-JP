@@ -1,19 +1,17 @@
 ---
 title: レスポンシブサイト用に最適化された画像の配信
-description: レスポンシブコード機能を使用して、最適化された画像を配信する方法
-uuid: 7c6baef5-7513-4644-94ed-2383e8724c17
+description: レスポンシブコード機能を使用して最適化された画像を配信する方法
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: Asset Management
 role: User, Admin
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 100%
+source-wordcount: '340'
+ht-degree: 96%
 
 ---
 
@@ -52,6 +50,6 @@ ht-degree: 100%
 
 ## HTTP/2 を使用して Dynamic Media アセットを配信する {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
+HTTP/2 は、ブラウザーとサーバーの通信方法を改善する、新しく更新された web プロトコルです。情報の転送を高速化し、必要な処理能力を削減します。Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
 
 Dynamic Media アカウントでの HTTP/2 の使用方法について詳しくは、[コンテンツの HTTP/2 配信](http2.md)を参照してください。

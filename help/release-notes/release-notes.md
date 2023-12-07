@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: f8f82ad5805095f331432471b614225f761e645c
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '3530'
+source-wordcount: '3552'
 ht-degree: 97%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 97%
 #### GraphQL クエリエディター{#sites-graphql-query-editor-6519}
 
 * GraphQL エディターのユーザーインターフェイスでは、クエリの数が多い場合（例えば、25 を超える場合）、永続化されたクエリをすべてスクロールすることはできません。（SITES-16008）
-* GraphQL エディターは、永続クエリの公開ステータスを保存しません。GraphQL エディターに非公開ボタンが表示されますが、永続クエリが公開されていることを示すアイコンは表示されません。ページを更新すると、永続クエリが公開されていないことがわかります。（SITES-15858）
+* GraphQL Editor は、永続化されたクエリの公開ステータスを保存しません。 GraphQL エディターに非公開ボタンが表示されますが、永続クエリが公開されていることを示すアイコンは表示されません。ページを更新すると、永続クエリが公開されていないことがわかります。（SITES-15858）
 
 #### ローンチ{#sites-launches-6519}
 
@@ -242,7 +242,7 @@ ht-degree: 97%
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 次の場所からサービスパックをダウンロードします。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 

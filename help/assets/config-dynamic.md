@@ -2,21 +2,19 @@
 title: Dynamic Media の設定 - ハイブリッドモード
 description: Dynamic Media - ハイブリッドモードの設定方法を学習します。
 mini-toc-levels: 3
-uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '7791'
-ht-degree: 84%
+source-wordcount: '7684'
+ht-degree: 83%
 
 ---
 
@@ -95,7 +93,7 @@ Dynamic Media を画像専用、ビデオ専用、またはその両方の用途
   </tr>
   <tr>
    <td>実稼動前（開発、QE、ステージなど）に画像のみを配信</td>
-   <td>画像は Experience Manager パブリッシュノードを通じて配信されます。このシナリオでは、トラフィックが最小限となるので、画像をアドビのデータセンターに配信する必要はありません。また、実稼動環境の起動前に、コンテンツの安全にプレビューできます。</td>
+   <td>画像は Experience Manager パブリッシュノードを通じて配信されます。このシナリオでは、トラフィックは最小限なので、Adobeのデータセンターに画像を配信する必要はありません。 また、実稼動環境の起動前に、コンテンツの安全にプレビューできます。</td>
    <td>
     <ol>
      <li>Experience Manager <strong>オーサー</strong>ノードで、<a href="#enabling-dynamic-media">Dynamic Media を有効化</a>します。</li>
@@ -301,7 +299,7 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
    * 「**[!UICONTROL キーストアファイル]**」を選択します。アドビから提供されたキーストアファイルに移動して選択し、「**[!UICONTROL 開く]**」をタップします。
    * 「**[!UICONTROL キーストアファイルパスワード]**」フィールドで、キーストアファイルパスワードを入力します。これは、手順 5 で作成したキーストアパスワード&#x200B;**ではなく**、プロビジョニング中に送信されたウェルカムメールでアドビから提供されたキーストアファイルパスワードです。キーストアファイルパスワードを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
    * 「**[!UICONTROL 秘密鍵のパスワード]**」フィールドで、秘密鍵のパスワードを入力します（以前の手順で指定した秘密鍵のパスワードと同じでも可）。秘密鍵のパスワードは、プロビジョニング中にアドビから送信されたウェルカムメールに記載されています。秘密鍵のパスワードを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
-   * 「**[!UICONTROL 秘密鍵のエイリアス]**」フィールドに秘密鍵のエイリアスを入力します。例：`*companyname*-alias`。秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたウェルカムメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
+   * Adobe Analytics の **[!UICONTROL 秘密鍵のエイリアス]** 「 」フィールドに、秘密鍵のエイリアスを入力します。 例：`*companyname*-alias`。秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたウェルカムメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 

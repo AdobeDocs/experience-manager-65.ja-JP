@@ -5,10 +5,10 @@ contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 82%
+source-wordcount: '1552'
+ht-degree: 81%
 
 ---
 
@@ -105,7 +105,7 @@ Web インターフェイスから [!DNL Adobe InDesign] テンプレートを�
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   また、キーワード、タグ、公開ステータスに基づいて画像を検索できます。[!DNL Experience Manager Assets]リポジトリを参照して、目的の画像の場所に移動できます。
+   また、キーワードやタグを使用し、公開ステータスに基づいて画像を検索することもできます。 [!DNL Experience Manager Assets]リポジトリを参照して、目的の画像の場所に移動できます。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 

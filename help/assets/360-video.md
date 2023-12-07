@@ -1,20 +1,18 @@
 ---
 title: 360/VR ビデオ
-description: Dynamic Media で 360 および VR（Virtual Reality）ビデオを操作する方法を学びます。
-uuid: c21bf2c0-7acc-401f-857e-0186de86e7a1
+description: Dynamic Mediaで 360 と Virtual Reality(VR) ビデオを操作する方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 feature: 360 VR Video
 role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: c0a60ec39e35fa8113ce9e1795561709b9c7e289
-workflow-type: ht
-source-wordcount: '1109'
-ht-degree: 100%
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+workflow-type: tm+mt
+source-wordcount: '1143'
+ht-degree: 92%
 
 ---
 
@@ -22,15 +20,15 @@ ht-degree: 100%
 
 360 度ビデオでは、すべての方向のビューが同時に記録されます。このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を使用します。
 
-Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネイティブサポートが含まれています。デフォルトでは、表示または再生するための追加設定は不要です。360 ビデオは、.mp4、.mkv、.mov といった標準のビデオ拡張子を使用して配信されます。最も一般的なコーデックは H.264 です。
+Dynamic Media - Scene7モードには、360 ビデオアセット配信のネイティブサポートが含まれています。 デフォルトでは、表示や再生のために追加の設定は必要ありません。360 ビデオは、.mp4、.mkv、.mov などの標準のビデオ拡張子を使用して配信します。最も一般的なコーデックは H.264 です。
 
 この節では、360/VR ビデオビューアを操作して、部屋、物件、場所、風景、医療処置などの没入感のある視聴体験のために、エクイレクタングラー形式のビデオをレンダリングする方法について説明します。
 
 空間オーディオは現在サポートされていません。オーディオをステレオにミックスした場合、お客様がカメラの表示角度を変更してもバランス（L/R）は変化しません。
 
-[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)も参照してください。
+関連トピック [ビューアプリセットの管理](/help/assets/managing-viewer-presets.md).
 
-## 360 ビデオの視聴 {#video-in-action}
+## 360 ビデオの動作 {#video-in-action}
 
 「[Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」を選択して、ブラウザーウィンドウを開き、360 度ビデオを視聴します。ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
@@ -39,7 +37,7 @@ Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネ�
 
 ## 360/VR ビデオと Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
-Adobe Premier Pro を使用すれば、360/VR シーンを表示および編集できます。例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
+AdobePremier Pro を使用して、360/VR フッテージを表示および編集できます。 例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
 
 [360/VR ビデオの編集](https://helpx.adobe.com/jp/premiere-pro/how-to/edit-360-vr-video.html)を参照してください。
 
@@ -63,11 +61,13 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 
       * 1080p - 1920 x 1080：フル HD または FHD 解像度と呼ばれます。
       * 2160p - 3840 x 2160：4K、UHD または Ultra HD 解像度と呼ばれます。この大きなディスプレイ解像度は、ハイエンドのテレビやコンピューターモニターでよく見られます。2160p 解像度がよく「4K」と呼ばれるのは、その幅が 4000 ピクセルに近いからです。つまり、そのピクセル数は 1080p の 4 倍になります。
+
    * より高品質のレンディションを含む[カスタムアダプティブビデオプロファイルを作成](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)します。例えば、次の 3 つの設定を含むアダプティブビデオプロファイルを作成します。
 
       * width=auto; height=720; bitrate=2500 kbps
       * width=auto; height=1080; bitrate=5000 kbps
       * width=auto; height=1440; bitrate=6600 kbps
+
    * 360 ビデオアセット専用のフォルダー内の 360 ビデオコンテンツを処理します。
 
    このアプローチを使用する場合は、エンドユーザーのネットワークや CPU の要件も高くなります。
@@ -85,9 +85,9 @@ Experience Manager ではデフォルトで、縦横比（幅／高さ）が 2.0
    * **プロパティタイプ**：Double
    * **値**：縦横比を表す浮動小数点（デフォルトは 2.0）。
 
-このプロパティの設定が完了すると、既存のビデオと新しくアップロードされたビデオの両方で、すぐに設定が有効になります。
+このプロパティを設定すると、既存のビデオと新しくアップロードされたビデオの両方で、このプロパティが直ちに有効になります。
 
-この縦横比は、アセットの詳細ページや[ビデオ 360 メディア WCM コンポーネント](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components)向けの 360 ビデオアセットに適用されます。
+縦横比は、アセットの詳細ページと [ビデオ 360 メディア WCM コンポーネント](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components).
 
 まず、360 ビデオをアップロードします。
 
@@ -122,7 +122,8 @@ Experience Manager ではデフォルトで、縦横比（幅／高さ）が 2.0
 
    * 「ビューア」リストから **[!UICONTROL Video360VR]** を選択します。
 
-      バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットで視聴する、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
+     バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットで視聴する、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
+
    ![宇宙空間に浮かぶ国際宇宙ステーションのクローズアップ画面、背景には地球と太陽が部分的に見える](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 

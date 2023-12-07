@@ -1,19 +1,17 @@
 ---
 title: Web ページに Dynamic Media ビデオ、画像ビューア、またはディメンショナルビューアを埋め込む
 description: Web ページに Dynamic Media ビデオ、画像、または 3D 画像を埋め込む方法を説明します。
-uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: Viewers
 role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 100%
+source-wordcount: '383'
+ht-degree: 96%
 
 ---
 
@@ -29,7 +27,7 @@ Adobe Experience Manager を WCM として使用&#x200B;*していない*&#x200B
 
 >[!NOTE]
 >
->埋め込みコードは、選択したアセットを公開するまではコピーできません。また、ビューアプリセットまたは画像プリセットを公開する必要もあります。
+>埋め込みコードは、選択したアセットを公開するまでコピーできません。 また、ビューアプリセットまたは画像プリセットを公開する必要もあります。
 >
 >[アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 >
@@ -57,6 +55,6 @@ Adobe Experience Manager を WCM として使用&#x200B;*していない*&#x200B
 
 ## HTTP/2 を使用した Dynamic Media アセットの配信 {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。HTTP/2 上で Dynamic Media アセットの配信が可能になり、応答時間と読み込み時間が短縮されました。
+HTTP/2 は、ブラウザーとサーバーの通信方法を改善する、新しく更新された web プロトコルです。情報の転送を高速化し、必要な処理能力を削減します。Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
 
 Dynamic Media アカウントでの HTTP/2 の使用方法について詳しくは、[コンテンツの HTTP/2 配信](http2.md)を参照してください。
