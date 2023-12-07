@@ -1,14 +1,11 @@
 ---
 title: OSGi 上の Forms 中心のワークフロー | ユーザーデータの処理
-seo-title: Forms-centric workflows on OSGi | Handling user data
 description: OSGi 上の Forms 中心のワークフロー | ユーザーデータの処理
-uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 98%

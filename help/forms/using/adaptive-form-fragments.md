@@ -1,19 +1,15 @@
 ---
 title: アダプティブフォームフラグメント
-seo-title: Adaptive form fragments
 description: アダプティブフォームは、任意のアダプティブフォーム内で使用する際に、パネルやフィールドのグループなどのフォームセグメントを作成するメカニズムを提供します。 また、既存のパネルをフラグメントとして保存することもできます。
-seo-description: Adaptive forms provides a mechanism to create a form segment, such as a panel or a group of fields, as use it in any adaptive form. You can also save an existing panel as fragment.
-uuid: bb4830b5-82a0-4026-9dae-542daed10e6f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2134'
-ht-degree: 48%
+source-wordcount: '2120'
+ht-degree: 52%
 
 ---
 
@@ -24,7 +20,7 @@ ht-degree: 48%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html) |
 | AEM 6.5 | この記事 |
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 すべてのフォームは特定の目的用に設計されますが、ほとんどのフォームには、いくつかの共通するセグメントがあります（例：名前と住所、家族の詳細、収入の詳細などの個人情報などを入力するためのセグメント）。フォームのデベロッパーは、新しいフォームを作成するたびに、こうした共通セグメントを作成する必要があります。
 
@@ -69,7 +65,7 @@ ht-degree: 48%
 
 編集モードでは、アダプティブフォームコンポーネントをAEMサイドキックからフラグメントにドラッグ&amp;ドロップできます。 アダプティブフォームのコンポーネントについて詳しくは、 [アダプティブフォームのオーサリングの概要](../../forms/using/introduction-forms-authoring.md).
 
-さらに、フラグメントのフォームモデルとして、XML スキーマまたは XDP フォームテンプレートを選択していた場合は、フォームモデル階層を示す新しいタブがコンテンツファインダーに表示されます。これにより、フォームモデルの要素をフラグメントにドラッグ&amp;ドロップできます。 追加されたフォームモデルエレメントはフォームコンポーネントに変換されますが、関連の XDP または XSD からの元のプロパティは保持されます。
+さらに、フラグメントのフォームモデルとして、XML スキーマまたは XDP フォームテンプレートを選択していた場合は、フォームモデル階層を示す新しいタブがコンテンツファインダーに表示されます。これにより、フォームモデルの要素をフラグメントにドラッグ＆ドロップできます。追加されたフォームモデルの要素はフォームコンポーネントに変換されますが、関連の XDP または XSD からの元のプロパティは保持されます。
 
 ### パネルをフラグメントとして保存 {#save-panel-as-a-fragment}
 
@@ -205,11 +201,11 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
   </tr>
   <tr>
    <td><p>プレビュー</p> </td>
-   <td><p>フラグメントを HTML でプレビューするか、あるいは XML ファイルからのデータをフラグメントとマージしてカスタムプレビューを生成するかのオプションが与えられます。詳しくは、 <a href="/help/forms/using/previewing-forms.md" target="_blank">フォームのプレビュー</a>.<br /> <br /> </p> </td>
+   <td><p>フラグメントを HTML でプレビューするか、あるいは XML ファイルからのデータをフラグメントとマージしてカスタムプレビューを生成するかのオプションが与えられます。詳しくは、<a href="/help/forms/using/previewing-forms.md" target="_blank">フォームのプレビュー</a>を参照してください。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>レビューの開始／レビューの管理</p> </td>
-   <td><p>選択されているフラグメントのレビューを開始したり管理したりできます。詳しくは、 <a href="../../forms/using/create-reviews-forms.md" target="_blank">レビューの作成と管理</a>.<br /> <br /> </p> </td>
+   <td><p>選択されているフラグメントのレビューを開始したり管理したりできます。詳しくは、<a href="../../forms/using/create-reviews-forms.md" target="_blank">レビューの作成と管理</a>を参照してください。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>辞書の作成</p> </td>

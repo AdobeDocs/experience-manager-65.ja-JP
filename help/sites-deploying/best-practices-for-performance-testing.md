@@ -1,16 +1,14 @@
 ---
 title: パフォーマンステストのベストプラクティス
 description: パフォーマンステストに使用される全体的な戦略と方法論、およびプロセスの支援に役立ついくつかのツールについて説明します。
-uuid: ab8720d6-b864-4d00-9e07-2e1699cfe7db
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 18f843ed3ffb719d168b67826baaffd926ffd2dd
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1790'
 ht-degree: 99%
 
 ---

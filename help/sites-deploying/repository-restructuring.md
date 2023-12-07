@@ -1,19 +1,15 @@
 ---
 title: AEM 6.5 におけるリポジトリの再構築
-seo-title: Repository Restructuring in AEM 6.5
 description: AEM 6.5 におけるリポジトリ再構築の基礎と基本的な考え方について説明します。
-seo-description: Learn about the basics and reasoning behind the repository restructuring in AEM 6.5
-uuid: e9cd3e88-e352-44a8-9b97-69488d3267cb
 contentOwner: chaikels
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
-discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
 feature: Upgrading
 exl-id: 2572aa8d-2a3a-4e5b-ae5f-07e1017ea0f4
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '547'
 ht-degree: 93%
 
 ---

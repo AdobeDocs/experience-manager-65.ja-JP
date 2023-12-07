@@ -1,19 +1,15 @@
 ---
 title: ターゲットコンテンツ用マルチサイト管理の構造
-seo-title: How Multisite Management for Targeted Content is Structured
-description: 図は、ターゲットコンテンツ用マルチサイトサポートの構造を示しています。
-seo-description: A diagram shows how multisite support for targeted content is structured
-uuid: 2d30cdf0-ab77-490d-aac0-db3a0d417a58
+description: 図は、ターゲットコンテンツ用マルチサイト管理の構造を示しています
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 7dd851ab-3fa7-426e-89cb-08b67e9b5999
 exl-id: d8ba91ff-ad6e-4540-baff-a2c0c764a299
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 100%
+source-wordcount: '179'
+ht-degree: 45%
 
 ---
 
@@ -25,12 +21,12 @@ ht-degree: 100%
 
 ![chlimage_1-268](assets/chlimage_1-268.png)
 
-ターゲットコンテンツを参照するために、ページまたはサイトを領域にマップできます。設定されている領域がない場合、AEM はこの特定のブランドのマスター領域にフォールバックします。
+ターゲットコンテンツを検索するために、ページまたはサイトを特定の領域にマッピングできます。 領域が設定されていない場合、AEMはこの特定のブランドのマスター領域にフォールバックします。
 
 以下の図は、site1、site2、site3 という 3 つのサイトに対してロジックがどのように機能するかを示したものです。
 
 ![chlimage_1-269](assets/chlimage_1-269.png)
 
-* 領域マッピングに基づいて、site1 は、brand1 用として myarea1 領域を、brand2 用として otherarea2 領域を参照します。
-* brand1 用の領域マッピングのみが定義されているので、site2 は brand1 用として myarea1 領域を、brand2 用としてマスター領域を参照します。
-* site3 に対してはマスター領域以外の領域マッピングがまったく定義されていないので、site3 は brand1 用と brand2 用としてマスター領域を参照します。
+* site1 は領域マッピングに基づいて、brand1 の myarea1 を検索し、brand2 の otherarea2 を検索します。
+* site2 は、brand1 の領域マッピングのみが定義されているので、brand1 の myarea1 と brand2 のマスター領域を検索します。
+* site3 では、このサイトの他の領域マッピングが定義されていないので、brand1 と brand2 のマスター領域を検索します。

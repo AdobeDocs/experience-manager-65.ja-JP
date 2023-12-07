@@ -1,38 +1,34 @@
 ---
 title: タスクの詳細ページのカスタマイズ
-seo-title: Customizing the task details page
-description: AEM Forms Workspace のタスクの詳細ページをカスタマイズして、タスクについて表示されるデフォルトの情報を変更する方法。
-seo-description: How-to customize the task details page in AEM Forms workspace to modify the default information displayed about a task.
-uuid: d85fae55-8e66-4595-8560-5485622b6841
+description: AEM Forms Workspace のタスクの詳細ページをカスタマイズして、タスクに関して表示されるデフォルト情報を変更する方法。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 exl-id: 48c24442-22d2-4d1a-9462-0aba78340281
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 100%
+ht-degree: 30%
 
 ---
 
 # タスクの詳細ページのカスタマイズ {#customizing-the-task-details-page}
 
-タスクの詳細ページには、タスクおよびそのプロセスに関する情報が含まれています。しかしながら、タスクの詳細ページをカスタマイズして情報を追加したり、削除したりすることができます。
+タスクの詳細ページには、タスクとそのプロセスに関する情報が含まれます。 ただし、タスクの詳細ページをカスタマイズして、情報を追加または削除できます。
 
-次の情報をタスクの詳細ページに追加することができます。
+次の情報をタスクの詳細ページに追加できます。
 
-* タスクの JSON オブジェクトで入手できる情報（[AEM Forms Workspace JSON オブジェクトの説明の「タスク」セクション](/help/forms/using/html-workspace-json-object-description.md)）
-* プロセスインスタンスの JSON オブジェクトで入手できる情報（[AEM Forms Workspace JSON オブジェクトの説明の「プロセスインスタンス」セクション](/help/forms/using/html-workspace-json-object-description.md)）
+* タスクの JSON オブジェクトで使用できる情報 ( [AEM Forms Workspace JSON オブジェクトの説明](/help/forms/using/html-workspace-json-object-description.md))
+* プロセスインスタンスの JSON オブジェクトに含まれる情報 ( [AEM Forms Workspace JSON オブジェクトの説明](/help/forms/using/html-workspace-json-object-description.md))
 
 タスクの詳細ページをカスタマイズするには：
 
-1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
-1. 追加の情報を表示するには、対応するキーと値のペアを`todo`ブロック／`details`ブロック／`app`ブロック／[ `required` ブロック] にある `translation.json` ファイルに追加してください。
+1. フォロー [AEM Forms Workspace のカスタマイズの一般的な手順です。](/help/forms/using/generic-steps-html-workspace-customization.md)
+1. 追加情報を表示するには、対応するキーと値のペアを `translation.json` ～にファイルを送る `todo`ブロック > `details`ブロック > `app`ブロック > [`required`ブロック].
 
-   [ `required`ブロック]は、タスク情報の task ブロック、プロセス情報の process ブロック、および保留中のタスク情報の currentpendingtask ブロックなど、使用可能なブロックを指します。
+   The [`required`ブロック] は、タスク情報のタスクブロック、プロセス情報のプロセスブロック、保留中のタスク情報の現在の保留中のタスクブロックなど、使用可能なブロックを指します。
 
-   たとえば、タスクの詳細ページに必要なルート選択に関する情報を追加するには、以下のキーと値のペアを task ブロックに追加することができます。
+   たとえば、タスクの詳細ページで Route Selection Required に関する情報を追加するには、次のキーと値のペアを task ブロックに追加します。
 
    ```json
    "todo" : {
@@ -53,7 +49,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >対応するキーと値のペアをすべてのサポートされている言語に追加します。
+   >対応するキーと値のペアを、サポートされるすべての言語に追加します。
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 

@@ -1,19 +1,15 @@
 ---
 title: ポリシーセットの作成および管理
-seo-title: Creating and managing policy sets
 description: ポリシーセットは、共通のビジネス目的を持つポリシーをグループ化するために使用します。 ポリシーセット内のポリシーを作成、編集、削除できます。
-seo-description: Policy sets are used to group policies that have a common business purpose. You can create, edit and delete policies in a policy set.
-uuid: 11faf67c-b9b7-4394-8672-d43cace131ad
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a4fb1a11-8fe3-4092-a036-1c079aea1250
 feature: Document Security
 exl-id: 736926af-ae41-4da3-b181-444de72407bd
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1297'
 ht-degree: 4%
 
 ---

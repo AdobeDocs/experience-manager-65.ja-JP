@@ -1,18 +1,14 @@
 ---
 title: 認証プロバイダーの設定
-seo-title: Configuring authentication providers
 description: 認証プロバイダーの追加、編集、削除、認証設定の変更、ユーザーのジャストインタイムプロビジョニングについての説明を参照してください。
-seo-description: Add, edit, or delete authentication providers, change authentication settings, and read about just-in-time provisioning of users.
-uuid: 90e7690b-1ce0-4604-b58f-6dca4f2372cf
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1578'
 ht-degree: 40%
 
 ---

@@ -1,14 +1,12 @@
 ---
 title: ページプロパティの編集
 description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ライブコピーに接続されているページもあれば、接続されておらずライブコピー情報が必要に応じて利用可能になるページもあるといったことです。
-uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 95%

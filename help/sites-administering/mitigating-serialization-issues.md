@@ -1,18 +1,14 @@
 ---
 title: AEM でのシリアル化の問題の軽減
-seo-title: Mitigating serialization issues in AEM
 description: AEM でのシリアル化の問題を軽減する方法について説明します。
-seo-description: Learn how to mitigate serialization issues in AEM.
-uuid: c3989dc6-c728-40fd-bc47-f8427ed71a49
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
 exl-id: 01e9ab67-15e2-4bc4-9b8f-0c84bcd56862
-source-git-commit: 614c4c88f3f09feb5a400ade9f45f634ac4fbcd5
-workflow-type: ht
-source-wordcount: '910'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '904'
 ht-degree: 100%
 
 ---
@@ -76,9 +72,10 @@ NotSoSerial エージェントは、アプリケーションサーバーの AEM 
 1. **逆シリアル化ファイアウォール設定**&#x200B;を検索してクリックします。
 
    >[!NOTE]
-   >次の URL にアクセスして、設定ページに直接アクセスすることもできます。
-   >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
-
+   >
+   次の URL にアクセスして、設定ページに直接アクセスすることもできます。
+   >
+   * `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 この設定には、許可リスト、ブロックリスト、逆シリアル化ログが含まれています。
 
@@ -109,7 +106,8 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 エージェントの問題のトラブルシューティングについて詳しくは、以下の[動的なエージェントの読み込みによるエラー処理](#handling-errors-with-dynamic-agent-loading)を参照してください。
 
 >[!NOTE]
->`org.apache.commons.collections.functors` を許可リストに追加すると、ヘルスチェックは常に失敗します。
+>
+`org.apache.commons.collections.functors` を許可リストに追加すると、ヘルスチェックは常に失敗します。
 
 ## 動的なエージェントの読み込みによるエラー処理 {#handling-errors-with-dynamic-agent-loading}
 
@@ -124,10 +122,12 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
    ```
 
    >[!NOTE]
-   >エージェントはフォークされた JVM では有効にできないので、CQ／AEM の -nofork オプションを、適切な JVM メモリ設定で使用する必要があります。
+   >
+   エージェントはフォークされた JVM では有効にできないので、CQ／AEM の -nofork オプションを、適切な JVM メモリ設定で使用する必要があります。
 
    >[!NOTE]
-   >Adobe 配布版の NotSoSerial エージェント JAR は、AEM インストールの `crx-quickstart/opt/notsoserial/` フォルダーにあります。
+   >
+   Adobe 配布版の NotSoSerial エージェント JAR は、AEM インストールの `crx-quickstart/opt/notsoserial/` フォルダーにあります。
 
 1. JVM を停止して再開します。
 

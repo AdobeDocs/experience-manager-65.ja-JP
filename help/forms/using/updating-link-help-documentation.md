@@ -1,29 +1,25 @@
 ---
 title: ドキュメントへのリンクの更新
-seo-title: Updating the link to the documentation
-description: AEM Forms Workspace の Workspace Help のリンク先を更新して、カスタムドキュメントリンクに指定する方法。
-seo-description: How-to update the destination of Workspace Help link in AEM Forms workspace to point to your custom documentation link.
-uuid: 64056d10-1451-44ed-8f25-81a21037dc75
+description: AEM Forms Workspace の Workspace ヘルプリンクの宛先を更新して、カスタムドキュメントリンクを指すようにする方法。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 exl-id: ca637bea-05c1-4920-9283-e782f07607de
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 100%
+ht-degree: 43%
 
 ---
 
 # ドキュメントへのリンクの更新 {#updating-the-link-to-the-documentation}
 
-AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセスするには、**ヘルプ／Workspace ヘルプ**&#x200B;を選択します。これは、アドビの Web サイトのオンラインドキュメントを指しています。ただし、それを更新して他の URL を指定するようにすることができます。
+AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセスするには、 **ヘルプ/Workspace ヘルプ**. Adobeの Web サイト上のオンラインドキュメントを指しています。 ただし、他の URL を指すように更新することもできます。
 
-デフォルトのヘルプ URL を変更する場合は以下の使用事例を考慮してください。
+デフォルトのヘルプ URL を変更する場合は、次の使用例を検討してください。
 
-* 選択した言語でローカライズされたヘルプを指定する場合。
+* 選択した言語でローカライズされたヘルプを提供する場合。
 * カスタマイズされた Workspace にカスタマイズされたヘルプコンテンツを指定する場合。
 
 オンラインドキュメントの URL を更新するには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」の後に以下の手順を実行します。

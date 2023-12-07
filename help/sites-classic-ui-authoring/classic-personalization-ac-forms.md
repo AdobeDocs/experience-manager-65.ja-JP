@@ -1,16 +1,14 @@
 ---
 title: AEM での Adobe Campaign フォームの作成
 description: AEM では、web サイトで Adobe Campaign とやり取りするフォームを作成して使用できます。特定のフィールドをフォームに挿入して、Adobe Campaign データベースにマッピングできます。
-uuid: 7b1028f3-268a-4d4d-bc9f-acd176f5ef3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1227'
 ht-degree: 90%
 
 ---

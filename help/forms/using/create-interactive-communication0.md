@@ -1,16 +1,12 @@
 ---
 title: 「チュートリアル：インタラクティブ通信の作成 」
-seo-title: Create an Interactive Communication for Print and Web
 description: すべての構築ブロックを使ってインタラクティブ通信を作成する
-seo-description: Create an Interactive Communication using all building blocks
-uuid: 5ffaa86f-87c7-4673-8b41-63ec61421be2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ac5d8d4f-fc13-4e8d-819c-c5db07fa6870
 docset: aem65
 feature: Interactive Communication
 exl-id: aaacee66-6bbe-498b-91b1-3a9545ff1aeb
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 39%

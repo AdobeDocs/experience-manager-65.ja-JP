@@ -1,19 +1,15 @@
 ---
 title: ユーザーとユーザーグループの管理
-seo-title: Managing Users and User Groups
 description: AEM Communitiesのユーザーは、自己登録とプロファイルの編集が可能です
-seo-description: Users of AEM Communities can self-register and edit their profiles
-uuid: aeba424e-ea7e-4da5-b94f-ea8af4caa7d2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1910'
 ht-degree: 1%
 
 ---
@@ -52,7 +48,7 @@ AEM Communitiesのパブリッシュ環境では、ユーザーは自己登録�
 
 グループの名前は、 [コミュニティサイトの作成](sites-console.md#step13asitetemplate). 一意の ID を使用することで、同じサーバー上の同じ名前のコミュニティサイトとコミュニティグループに対する名前の競合を回避できます。
 
-例えば、サイト名が「*エンゲージ*&quot; &quot;We.Retail Engage&quot;というタイトルのサイトの場合、作成されるユーザーグループの 1 つは次のようになります。
+例えば、サイト名が「*エンゲージ*&quot; &quot; Engage&quot;というタイトルのサイトの場合、作成されるユーザーグループの 1 つは次のようになります。
 
 * コミュニティ *エンゲージ* メンバー
 
@@ -213,8 +209,8 @@ AEMは、ユーザーの認証とユーザーアカウントの作成に LDAP �
 
    * 次のプロパティを設定します。
 
-      * **[!UICONTROL User auto membership]**: `community-<site name>-<uid>-members`
-      * **[!UICONTROL User Path Prefix]**: `/community`
+      * **[!UICONTROL ユーザーの自動メンバーシップ]**: `community-<site name>-<uid>-members`
+      * **[!UICONTROL ユーザーパスのプレフィックス]**: `/community`
       * **[!UICONTROL Group Path Prefix]**: `/community`
 
 4. [外部ログインモジュール](../../help/sites-administering/ldap-config.md#the-external-login-module)

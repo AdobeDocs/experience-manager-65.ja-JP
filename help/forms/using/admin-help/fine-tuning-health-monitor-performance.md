@@ -1,18 +1,15 @@
 ---
 title: ヘルスモニターのパフォーマンスに関する微調整
-seo-title: Fine-tuning Health Monitor performance
 description: ヘルスモニターのパフォーマンスを微調整する方法を説明します。 JAVA 設定オプションを使用して、フォーム環境のパフォーマンスに影響を与えるシステム統計を制御します。
-uuid: 770b10cb-065f-41b5-9594-a291e4311151
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 exl-id: 41042e08-5e14-4809-89b7-16d98a72d1b4
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 26%
+source-wordcount: '426'
+ht-degree: 22%
 
 ---
 
@@ -72,7 +69,7 @@ ht-degree: 26%
 
 1. Web ブラウザーの URL 行に https://[host name]:&#39;port&#39;/console と入力して、WebLogic 管理コンソールを起動します。
 1. WebLogic Server ドメイン用に作成したユーザー名とパスワードを入力し、「Log Under Change Center」で「Lock &amp; Edit」をクリックします。
-1. ドメイン構造で環境／サーバーをクリックし、右側のウィンドウで管理対象サーバーの名前をクリックします。
+1. 「Domain Structure」で、 Environment / Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「設定タブ」、「サーバー起動」タブをクリックします。
 1. 「引数」ボックスで、現在の内容の末尾に必要な引数を追加します。 例えば、‑ `Dadobe.healthmonitor.enabled=false` を追加すると、ヘルスモニターが無効になります。
 1. 「保存」をクリックし、「変更をアクティベート」をクリックします。

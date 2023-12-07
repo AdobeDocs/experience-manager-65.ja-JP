@@ -1,19 +1,15 @@
 ---
 title: コミュニティのための FFmpeg
-seo-title: FFmpeg for Communities
 description: コミュニティ用の FFmpeg のインストールと設定の方法
-seo-description: How to install and configure FFmpeg for Communities
-uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
-source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '251'
 ht-degree: 3%
 
 ---
@@ -31,7 +27,7 @@ AEMをホストするサーバーに FFmpeg をインストールする必要が
 1. に移動します。 [https://www.ffmpeg.org](https://www.ffmpeg.org/).
 1. お使いの環境（Macintosh、Windows または Linux）向けの最新バージョンの FFmpeg をダウンロードします。
 
-   * 古いバージョンのセキュリティ脆弱性により、FFmpeg を最新の状態に保つことが重要です。
+   * 古いバージョンのセキュリティの脆弱性により、FFmpeg を最新の状態に保つことが重要です。
 
 1. OS の手順に従って FFmpeg をインストールします。
 
@@ -39,7 +35,7 @@ AEMをホストするサーバーに FFmpeg をインストールする必要が
 
    システム内の任意のディレクトリから FFmpeg を実行できるはずです。
 
-   * 例：`ffmpeg -version`
+   * 例：`ffmpeg -version`。
 
 ## FFmpeg トランスコーディングサービスを設定 {#configure-ffmpeg-transcoding-service}
 
@@ -54,14 +50,14 @@ AEMをホストするサーバーに FFmpeg をインストールする必要が
 * 場所 **[!UICONTROL DAM アセットの更新]**.
 * ダブルクリックして、編集用のワークフローをクラシック UI で開きます。
 
-   結果の場所： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+  結果の場所： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
 * 次をダブルクリックします。 **[!UICONTROL FFmpeg トランスコード]** ステップ：ステップのプロパティダイアログにアクセスします。
-* 以下 **[!UICONTROL プロセス]** タブ：
+* の下 **[!UICONTROL プロセス]** タブ：
 
-   * **[!UICONTROL アルグメント]**:すべてのエントリをクリアしてトランスコードを無効にします。デフォルト値： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL アルグメント]**：すべてのエントリをクリアして、トランスコードを無効にします。デフォルト値： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
-   ![configure-ffmpeg](assets/configure-ffmpeg.png)
+  ![configure-ffmpeg](assets/configure-ffmpeg.png)
 
 * 選択 **[!UICONTROL OK]** 閉じる `Step Properties` ダイアログ。
 

@@ -1,19 +1,15 @@
 ---
 title: タスクの概要ペインでの情報の表示
-seo-title: Displaying information in the Task Summary pane
 description: AEM Forms Workspace では、タスクの概要ペインを設定して、タスクを要約したり、他の Web ページを表示したりできます。
-seo-description: In AEM Forms workspace, a Task Summary pane can be configured to summarize the task or display any other web page.
-uuid: 2fcc3d9f-0ec2-4250-8dc1-9746fd72ea60
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 exl-id: 0b3087fe-a3fb-4eac-ad4b-c123526e8195
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 37%
+source-wordcount: '269'
+ht-degree: 36%
 
 ---
 

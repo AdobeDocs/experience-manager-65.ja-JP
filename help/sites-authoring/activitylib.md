@@ -1,17 +1,13 @@
 ---
 title: アクティビティの管理
-seo-title: Managing Activities
 description: アクティビティコンソールでは、ブランドのマーケティングアクティビティを作成、整理、管理できます
-seo-description: The Activities console enables you to create, organize, and manage the marketing activities of your brands
-uuid: 0aebf88e-f298-410a-8c82-4076b671624f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1937'
 ht-degree: 80%

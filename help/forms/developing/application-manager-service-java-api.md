@@ -1,18 +1,15 @@
 ---
 title: Application Manager サービス JavaAPI クイックスタート（SOAP）
-seo-title: Application Manager Service JavaAPI Quick Start(SOAP)
 description: Application Manager サービス JavaAPI クイックスタート（SOAP）
-uuid: 01a9bce3-868b-495b-bdee-bc60f029129e
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 role: Developer
 exl-id: 1d2d6d64-f16e-4381-8691-f3c2744481ea
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '200'
 ht-degree: 81%
 
 ---

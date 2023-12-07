@@ -1,19 +1,15 @@
 ---
 title: ページオーサリング用コンポーネント
-seo-title: Components for Page Authoring
 description: コンポーネントは、サイドキックの「コンポーネント」タブと「新規コンポーネントを挿入」セレクターでページを編集するとき（「コンポーネントまたはアセットをここにドラッグ」領域でダブルクリックしたとき）に使用できます。
-seo-description: The components are available when editing a page from the Components tab of the sidekick and the Insert New Component selector (when you double-click in the Drag components or assets here area).
-uuid: c353073d-d4d1-4529-b8bd-d0ca302cc9a0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6026'
+source-wordcount: '5991'
 ht-degree: 96%
 
 ---
@@ -182,12 +178,12 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 
       * **詳細検索のオプション**
 
-         * **QueryBuilder 述語の表記**
-「QueryBuilder 述語の表記」を使用して検索クエリを入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれるすべてのページがカルーセルに表示されます。
-クエリ式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
+         * **Querybuilder 述語の表記法**
+検索クエリは、 Querybuilder 述語の表記を使用して入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれるすべてのページがカルーセルに表示されます。
+クエリー式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
 
    * **並べ替え順**
-`jcr:title`、`jcr:created`、`cq:lastModified`、または `cq:template` をドロップダウンメニューから選択します。
+選択 `jcr:title`, `jcr:created`, `cq:lastModified`または `cq:template` をドロップダウンメニューから選択します。
 
    * **制限**
 オプション。カルーセルで使用する項目の最大数です。
@@ -1044,11 +1040,10 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
       * **コンテンツを作成**
 
-         * コンテンツのパス
-フォームがダンプするコンテンツのコンテンツパス。スラッシュ（`/`）で終わるパスを入力します。スラッシュは、フォームのポートごとに、特定の場所に新しいノードが作成されることを意味します。例は次のとおりです。
+         * コンテンツのパスフォームがダンプするすべてのコンテンツのコンテンツパス。 スラッシュ（`/`）で終了するパスを入力します。スラッシュは、各フォームポートに対し、特定の場所に新しいノードが作成されることを意味します。次に例を示します。
            `/forms/feedback/`
 
-         * **タイプ**
+         * **種類**
 
            必要な種類を選択します。
 

@@ -1,16 +1,12 @@
 ---
 title: Xcode プロジェクトの設定と iOS アプリケーションの構築
-seo-title: Set up the Xcode project and build the iOS app
 description: iOS用の標準AEM Formsアプリケーションの作成方法を説明します。
-seo-description: Explains how to build standard AEM Forms app for iOS.
-uuid: 29779bbb-06b4-4ece-9f29-786afab59eaf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 exl-id: 78ce6107-8821-47d6-86ab-7ab968945e7c
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 75%

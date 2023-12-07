@@ -1,21 +1,17 @@
 ---
 title: コミュニティの通知
-seo-title: Communities Notifications
-description: AEM Communities には、サインインしているコミュニティメンバーにとって興味深いイベントを表示する通知が用意されています
-seo-description: AEM Communities has notifications that display events of interest to the signed-in community member
-uuid: 2f5ea4b5-7308-414e-a3f8-2e8aa76b1ef4
+description: AEM Communitiesには、サインインしたコミュニティメンバーに関心のあるイベントを表示する通知が用意されています
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
 role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 37%
+ht-degree: 1%
 
 ---
 
@@ -23,9 +19,9 @@ ht-degree: 37%
 
 ## 概要 {#overview}
 
-AEM Communities には、サインインしているコミュニティメンバーにとって興味深いイベントを表示する通知セクションが用意されています。
+AEM Communitiesには、サインインしているコミュニティメンバーに関心のあるイベントを表示する通知セクションが用意されています。
 
-通知は[アクティビティ](/help/communities/essentials-activities.md)や[購読](/help/communities/subscriptions.md)と同様に、以下に基づいて生成されます。：
+通知は、 [アクティビティ](/help/communities/essentials-activities.md) および [購読](/help/communities/subscriptions.md) 原因は次のとおりです。
 
 * コンテンツを投稿するメンバー。
 * 別のメンバーに従うことを選択したメンバー。
@@ -46,22 +42,22 @@ AEM Communities には、サインインしているコミュニティメンバ�
 
 コミュニティの時点 [FP1](/help/communities/deploy-communities.md#latestfeaturepack)に設定できる通知チャネルは次のとおりです。
 
-* Web チャネル ( `Notifications` リンク。
+* Web チャネル（を使用してアクセス） `Notifications` リンク。
 * E メールチャネル（E メールが正しく設定されている場合に使用できます）。
 
-今後のチャネルとしてモバイルおよびデスクトップがあります。
+将来のチャネルはモバイルとデスクトップです。
 
 ### 要件 {#requirements}
 
-**電子メールの設定**
+**電子メールを設定**
 
 通知の電子メールチャネルを機能させるには、電子メールを設定する必要があります。
 
-電子メールを設定する手順については、[電子メールの設定](/help/communities/analytics.md)を参照してください。
+電子メールの設定手順については、 [電子メールの設定](/help/communities/analytics.md).
 
-**フォローの有効化**
+**フォローを有効にする**
 
-フォローを有効にするようにコンポーネントを設定する必要があります。次の機能を使用できます。 [ブログ](/help/communities/blog-feature.md), [フォーラム](/help/communities/forum.md), [Q&amp;A](/help/communities/working-with-qna.md), [カレンダー](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md)、および [コメント](/help/communities/comments.md).
+以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を使用できます。 [ブログ](/help/communities/blog-feature.md), [フォーラム](/help/communities/forum.md), [Q&amp;A](/help/communities/working-with-qna.md), [カレンダー](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md)、および [コメント](/help/communities/comments.md).
 
 **メモ**：
 
@@ -69,15 +65,15 @@ AEM Communities には、サインインしているコミュニティメンバ�
 
 * メンバープロファイルは、他のメンバーがフォローできるように既に設定されています。
 
-## フォローによる通知 {#notifications-from-following}
+## フォローからの通知 {#notifications-from-following}
 
 ![通知](assets/notifications.png)
 
-「**[!UICONTROL フォロー]**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。毎回 **[!UICONTROL フォロー]** ボタンが選択されている場合、選択のオン/オフを切り替えることができます。 この `Email Subscriptions` 選択が存在するのは、設定時のみです。
+The **[!UICONTROL フォロー]** ボタンを使用すると、エントリをアクティビティ、購読、通知としてフォローできます。 毎回、 **[!UICONTROL フォロー]** ボタンが選択されている場合、選択のオン/オフを切り替えることができます。 The `Email Subscriptions` 選択が存在するのは、設定時のみです。
 
-フォロー方法が選択されると、ボタンのテキストが「**[!UICONTROL フォロー中]**」に変わります。 便宜上、 `Unfollow All` をクリックして、すべてのメソッドをオフにします。
+次のいずれかの方法を選択した場合、ボタンのテキストは **[!UICONTROL フォロー中]**. 便宜上、 `Unfollow All` をクリックして、すべてのメソッドをオフにします。
 
-この **[!UICONTROL フォロー]** ボタンが表示されます。
+The **[!UICONTROL フォロー]** ボタンが表示されます。
 
 * 別のメンバーのプロファイルを表示する場合。
 * フォーラム、Q&amp;A、ブログなどのメイン機能ページでは、次の操作を実行できます。
@@ -90,19 +86,19 @@ AEM Communities には、サインインしているコミュニティメンバ�
 
 ## 通知設定の管理 {#managing-notification-settings}
 
-通知ページから通知設定リンクを選択すると、各メンバーは通知の受信方法を管理することができます。
+「通知」ページから「通知設定」リンクを選択すると、各メンバーは通知の受信方法を管理できます。
 
-Web チャネルは常に有効になっています。
+Web チャネルは常に有効です。
 
 ![notifications14](assets/notifications1.png)
 
-電子メールチャネルでは、Web チャネルの場合と同様の設定が用意されていますが、別途適切な[電子メールの設定](/help/communities/email.md)が必要です。
+適切な [電子メールの設定](/help/communities/email.md)では、Web チャネルの場合と同じ設定を提供します。
 
-電子メールチャネルは、デフォルトでオフになっています。
+E メールチャネルは、デフォルトではオフになっています。
 
 ![notifications2](assets/notifications2.png)
 
-これはメンバーがオンにすることもできますが、それでも電子メールの設定によって決まります。
+メンバーがオンにすることもできますが、設定中の電子メールに依存します。
 
 ![notifications3](assets/notifications3.png)
 
@@ -110,23 +106,23 @@ Web チャネルは常に有効になっています。
 
 ### Web 通知 {#web-notifications}
 
-A [ウィザードが作成したコミュニティサイト](/help/communities/sites-console.md) に、 `Notifications` 機能を使用します。 メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
+A [ウィザードが作成したコミュニティサイト](/help/communities/sites-console.md) に、 `Notifications` 機能を追加しました。 メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
 
-公開されたサイトにアクセスする際に、 `Notifications` リンクは、メンバーのすべての通知を表示します。
+公開されたサイトにアクセスする際に、 `Notifications` リンクは、メンバーに関するすべての通知を表示します。
 
 ![notifications4](assets/notifications4.png)
 
 ### メール通知 {#email-notifications}
 
-電子メールチャネルを有効にすると、メンバーは、Web 上のコンテンツへのリンクが記載されている電子メールを受信します。
+E メールチャネルが有効になると、メンバーは Web 上のコンテンツへのリンクを含む E メールを受け取ります。
 
 ![notifications5](assets/notifications5.png)
 
 ## 電子メール通知のカスタマイズ {#customize-email-notifications}
 
-組織は、 [重ね](/help/communities/client-customize.md#overlays) テンプレートの場所： **/libs/settings/community/templates/email/html**.
+組織は、 [重ね合わせ](/help/communities/client-customize.md#overlays) テンプレートの場所： **/libs/settings/community/templates/email/html**.
 
-例えば、（コミュニティコンポーネントの）メンションメール通知を変更するには、 **if** 動詞の条件 **メンション** を有効にしたコンポーネントのテンプレートで **@mentions** サポート。
+例えば、（コミュニティコンポーネントの）メンションメール通知を変更するには、 **if** 動詞の条件 **メンション** を有効にしたコンポーネントのテンプレートで、 **@mentions** サポート。
 
 ブログコメント内の@mentionの電子メール通知テンプレートを変更するには、次の場所にある標準のテンプレートを配置します。 **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 

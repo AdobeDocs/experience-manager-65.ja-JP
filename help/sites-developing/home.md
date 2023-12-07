@@ -1,12 +1,10 @@
 ---
 title: AEM 6.5 開発ユーザーガイド
-seo-title: AEM 6.5 Developing User Guide
 description: AEM インスタンスを構築する方法を説明します。プラットフォームとコンポーネントの詳細を説明し、開発ツールとパーソナライゼーションに関する情報を確認します。
-seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '341'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '294'
 ht-degree: 100%
 
 ---

@@ -1,20 +1,16 @@
 ---
 title: AEM アプリケーションへのタグ付けの構築
-seo-title: Building Tagging into an AEM Application
 description: カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作します
-seo-description: Programmatically work with tags or extending tags within a custom AEM application
-uuid: 0549552e-0d51-4162-b418-babf4ceee046
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
-source-git-commit: 325af649564d93beedfc762a8f5beacec47b1641
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 67%
+source-wordcount: '849'
+ht-degree: 75%
 
 ---
 
@@ -24,7 +20,7 @@ ht-degree: 67%
 
 * [タグ付け API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/tagging/package-summary.html)
 
-これは
+これは、
 
 * [タグ付けフレームワーク](/help/sites-developing/framework.md)
 
@@ -43,7 +39,7 @@ AEM の[タグ付けフレームワーク](/help/sites-developing/framework.md)�
 
 ### JCR ベースの TagManager の取得 {#getting-a-jcr-based-tagmanager}
 
-TagManager インスタンスを取得するには、JCR が必要です `Session` および `getTagManager(Session)`:
+TagManager インスタンスを取得するには、JCR が必要です `Session` または `getTagManager(Session)`:
 
 ```java
 @Reference
@@ -60,7 +56,7 @@ TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
 
 ### Tag オブジェクトの取得 {#retrieving-a-tag-object}
 
-A `Tag` は、 `TagManager`（既存のタグを解決するか作成する）:
+A `Tag` ～を通じて取り出すことができる `TagManager`（既存のタグを解決するか作成する）:
 
 ```java
 Tag tag = tagManager.resolve("my/tag"); // for existing tags
@@ -134,7 +130,7 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## タグのガベージコレクター {#the-tag-garbage-collector}
 
-タグのガベージコレクターは、非表示および未使用のタグをクリーンアップするバックグラウンドサービスです。非表示および未使用のタグとは、`cq:movedTo`プロパティが設定された`/content/cq:tags`の下にあるタグのことで、コンテンツノードでは使用されません（カウントはゼロになります）。この遅延削除プロセスを使用すると、コンテンツノード ( `cq:tags` プロパティ ) は、移動または結合操作の一環として更新する必要はありません。 `cq:tags` プロパティの参照は、`cq:tags` プロパティがアップデートされると自動的にアップデートされます（例：ページプロパティダイアログを介して）。
+タグのガベージコレクターは、非表示および未使用のタグをクリーンアップするバックグラウンドサービスです。非表示および未使用のタグとは、`cq:movedTo`プロパティが設定された`/content/cq:tags`の下にあるタグのことで、コンテンツノードでは使用されません（カウントはゼロになります）。この遅延削除プロセスを使用すると、移動や結合操作の一環としてコンテンツノード（`cq:tags` プロパティ）をアップデートする必要がありません。`cq:tags` プロパティの参照は、`cq:tags` プロパティがアップデートされると自動的にアップデートされます（例：ページプロパティダイアログを介して）。
 
 タグのガベージコレクターは、デフォルトで 1 日に 1 回実行されます。次の場所で設定できます。
 
@@ -152,7 +148,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 ## 他の言語のタグ {#tags-in-different-languages}
 
-タグの管理に関するドキュメントの[他の言語でのタグ管理](/help/sites-administering/tags.md#managing-tags-in-different-languages)の節で説明されているように、タグの `title` は別の言語で定義できます。言語に依存するプロパティがタグノードに追加されます。このプロパティは `jcr:title.<locale>` の形式を持ちます（例：フランス語訳は `jcr:title.fr`）この `<locale>` は小文字の ISO ロケール文字列である必要があり、「 — 」の代わりに「_」を使用します。次に例を示します。 `de_ch`.
+タグの管理に関するドキュメントの[他の言語でのタグ管理](/help/sites-administering/tags.md#managing-tags-in-different-languages)の節で説明されているように、タグの `title` は別の言語で定義できます。言語に依存するプロパティがタグノードに追加されます。このプロパティは `jcr:title.<locale>` の形式を持ちます（例：フランス語訳は `jcr:title.fr`）The `<locale>` は小文字の ISO ロケール文字列である必要があり、「 — 」の代わりに「_」を使用します。次に例を示します。 `de_ch`.
 
 **Animals** タグが **Products** ページに追加されると、値 `stockphotography:animals` は /content/geometrixx/en/products/jcr:content ノードの `cq:tags` プロパティに追加されます。翻訳は、タグノードから参照されます。
 
@@ -182,13 +178,13 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 
    * `slingRequest.getLocale()`
 
-この `currentPage` および `slingRequest` は、 [&lt;cq:definedobjects>](/help/sites-developing/taglib.md) タグを使用します。
+The `currentPage` および `slingRequest` は、 [&lt;cq:definedobjects>](/help/sites-developing/taglib.md) タグを使用します。
 
 タグ付けの場合、ローカリゼーションはタグとしてのコンテキストに依存します `titles`は、ページ言語、ユーザー言語またはその他の言語で表示できます。
 
 ### タグを編集ダイアログへの新しい言語の追加 {#adding-a-new-language-to-the-edit-tag-dialog}
 
-以下の手順では、 **タグ編集** ダイアログ：
+以下の手順で、に言語（フィンランド語）を追加する方法を説明します。 **タグ編集** ダイアログ：
 
 1. **CRXDE** で、ノード `/content/cq:tags` の複数値プロパティ `languages` を編集します。
 
@@ -202,4 +198,4 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 
 >[!CAUTION]
 >
->サービスパックをインストールすると、/content/cq:tags ノードの languages プロパティがデフォルトにリセットされます。 したがって、インストール前にプロパティから追加する必要があります。
+>サービスパックをインストールすると、/content/cq:tags ノードの languages プロパティがデフォルトにリセットされます。 したがって、インストール前にプロパティから追加しておく必要があります。

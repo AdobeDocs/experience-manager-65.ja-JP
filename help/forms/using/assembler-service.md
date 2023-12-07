@@ -1,19 +1,15 @@
 ---
 title: Assembler サービスの使用
-seo-title: Using Assembler Service
 description: Assembler サービスを使用すると、PDFドキュメントと XDP ドキュメントを組み合わせ、並べ替え、拡張し、PDFドキュメントに関する情報を取得できます。
-seo-description: The Assembler service lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents.
-uuid: 1efce50b-2d98-408e-aa43-ac4999de41a8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 6a99042f-79c7-494b-bca0-73f2b5725b58
 docset: aem65
 exl-id: 2acd6b19-0fe8-4994-b0f4-c9d5b9f3fdf1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2115'
-ht-degree: 17%
+source-wordcount: '2118'
+ht-degree: 20%
 
 ---
 
@@ -25,9 +21,9 @@ Assembler サービスを使用すると、PDFドキュメントと XDP ドキ�
 
 ## PDF ドキュメントのアセンブリ {#assemble-pdf-documents}
 
-Assembler サービスを使用すると、複数のPDFドキュメントを 1 つのPDFドキュメントまたはPDFPortfolioに組み立てることができます。 また、ナビゲーションを支援する機能やセキュリティを強化するPDFドキュメントに機能を適用することもできます。 次に、PDF・ドキュメントのアセンブリ方法を示します。
+Assembler サービスを使用すると、複数のPDFドキュメントを 1 つのPDFドキュメントまたはPDFPortfolioに組み立てることができます。 また、ナビゲーションを支援する機能やセキュリティを強化するPDFドキュメントに機能を適用することもできます。 次に、PDF ドキュメントのアセンブリ方法を示します。
 
-### 単純なPDF文書のアセンブリ {#assemble-a-simple-pdf-document}
+### 単純な PDF ドキュメントのアセンブリ {#assemble-a-simple-pdf-document}
 
 次の図は、3 つのソースドキュメントを 1 つの結果ドキュメントにマージする様子を示しています。
 
@@ -262,7 +258,7 @@ Assembler サービスを使用して、XDP ドキュメントをPDFドキュメ
 
 ## PDF ドキュメントのディスアセンブリ {#disassemble-pdf-documents}
 
-Assembler サービスを使用して、Assembler ドキュメントをPDFできます。 このサービスでは、ソースドキュメントからページを抽出したり、しおりに基づいてソースドキュメントを分割したりできます。 通常、このタスクは、PDFドキュメントが多数の個々のドキュメント（ステートメントの集まりなど）から最初に作成された場合に役立ちます。
+Assembler サービスを使用して、Assembler ドキュメントをPDFできます。 このサービスでは、ソースドキュメントからページを抽出したり、しおりに基づいてソースドキュメントを分割したりできます。 通常、このタスクは PDF ドキュメントが最初に多数の個別ドキュメント（明細書など）から作成された場合に役立ちます。
 
 ### ソースドキュメントからのページの抽出 {#extract-pages-from-a-source-document}
 
@@ -298,7 +294,7 @@ Assembler サービスを使用して、Assembler ドキュメントをPDFでき
 
 ## ドキュメントがPDF/A に準拠しているかどうかを確認 {#determine-whether-documents-are-pdf-a-compliant}
 
-Assembler サービスを使用して、PDFドキュメントがPDF/A に準拠しているかどうかを判断できます。 PDF/A は、ドキュメントのコンテンツを長期保存するためのアーカイブ形式です。 フォントはドキュメントに埋め込まれ、ファイルは非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。
+Assembler サービスを使用して、PDFドキュメントがPDF/A に準拠しているかどうかを判断できます。 PDF/A は、ドキュメントのコンテンツを長期保存するためのアーカイブ形式です。 フォントはドキュメントに埋め込まれ、ファイルは非圧縮になります。その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。
 
 ## PDF文書に関する情報の取得 {#obtain-information-about-a-pdf-document}
 

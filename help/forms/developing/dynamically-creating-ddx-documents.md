@@ -1,20 +1,16 @@
 ---
 title: DDX ドキュメントの動的な作成
-seo-title: Dynamically Creating DDX Documents
 description: Java API と web サービス API を使用して DDX ドキュメントを動的に作成します。DDX ドキュメントを動的に作成すると、実行時に取得された DDX ドキュメント内の値を使用できます。
-seo-description: Create a DDX document dynamically using the Java API and Web Service API. Dynamically creating a DDX document enables you to use values in the DDX document that are obtained during run-time.
-uuid: b73e8069-6c9f-4517-a0ae-f3d503191d2d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 role: Developer
 exl-id: b3c19c82-e26f-4dc8-b846-6aec705cee08
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2162'
+source-wordcount: '2153'
 ht-degree: 80%
 
 ---
@@ -237,7 +233,7 @@ Assembler サービス API（web サービス）を使用して、DDX ドキュ�
 1. DDX ドキュメントを変換します。
 
    * コンストラクターを使用して `System.IO.MemoryStream` オブジェクトを作成します。
-   * DDX ドキュメントを表す `XmlElement` オブジェクトを使った DDX ドキュメントで、`MemoryStream` オブジェクトを入力します。`XmlElement` オブジェクトの `Save` メソッドを呼び出し、`MemoryStream` オブジェクトを渡します
+   * DDX ドキュメントを表す `XmlElement` オブジェクトを使った DDX ドキュメントで、`MemoryStream` オブジェクトを入力します。を呼び出す `XmlElement` オブジェクトの `Save` メソッドを使用して、 `MemoryStream` オブジェクト。
    * バイト配列を作成し、 `MemoryStream` オブジェクト。 次のコードは、このアプリケーションロジックを示しています。
 
      ` int bufLen = Convert.ToInt32(stream.Length);  byte[] byteArray = new byte[bufLen];  stream.Position = 0;  int count = stream.Read(byteArray, 0, bufLen);`

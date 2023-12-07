@@ -1,16 +1,12 @@
 ---
 title: BrightEdge Content Optimizer との結合
-seo-title: Integrating with BrightEdge Content Optimizer
 description: AEMと BrightEdge Content Optimizer の統合について説明します。
-seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
-uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 8%

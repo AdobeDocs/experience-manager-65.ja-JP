@@ -1,14 +1,12 @@
 ---
 title: AEM Modernization Tools
-seo-title: AEM Modernization Tools
 description: AEM Modernization Tools は、従来の AEM 機能を最新のテクノロジーに変換する際に役立ちます。
-seo-description: AEM Modernization Tools help you easily convert your legacy AEM features to the latest technology
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 8865a641-fdac-43ab-b1c3-722f120cd749
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: ht
-source-wordcount: '87'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '78'
 ht-degree: 100%
 
 ---

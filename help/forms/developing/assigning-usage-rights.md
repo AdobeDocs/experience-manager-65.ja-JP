@@ -1,19 +1,15 @@
 ---
 title: 使用権限の割り当て
-seo-title: Assigning Usage Rights
 description: Acrobat Reader DC エクステンション Java クライアント API と web サービス API を使用して、PDF ドキュメントに使用権限を適用したり削除したりできます。
-seo-description: Use the Acrobat Reader DC extensions Java Client API and Web Service API to apply and remove usage rights from PDF documents.
-uuid: 8c2020df-ea3c-49fa-916f-38a458f40d2b
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3914'
+source-wordcount: '3897'
 ht-degree: 97%
 
 ---
@@ -164,12 +160,12 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスを置き換えます。
 
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
    * デフォルトのコンストラクタを使用して `ReaderExtensionsServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する 文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
    * `ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -183,7 +179,7 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、使用権限が適用される PDF ドキュメントを保存するために使用されます。
    * コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを入力します。
 
@@ -320,12 +316,12 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスを置き換えます。
 
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
    * デフォルトのコンストラクタを使用して `ReaderExtensionsServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する 文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
    * `ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -339,7 +335,7 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、使用権限が削除された権限付き PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、PDF ドキュメントのファイルの場所を表す文字列値とファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `MTOM` プロパティにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
@@ -455,12 +451,12 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して資格情�
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスを置き換えます。
 
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `ReaderExtensionsServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する 文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
    * `ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。

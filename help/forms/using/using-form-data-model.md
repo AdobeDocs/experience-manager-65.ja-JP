@@ -1,16 +1,12 @@
 ---
 title: フォームデータモデルの使用
-seo-title: Use form data model
 description: フォームデータモデルを使用して、アダプティブフォームとインタラクティブ通信を作成し、操作する方法について説明します。
-seo-description: Learn how to use form data model to create and work with adaptive forms and interactive communications.
-uuid: 9d8d8f43-9a50-4905-a6ef-a5ea3b9c11f7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
-discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 41%

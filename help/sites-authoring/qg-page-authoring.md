@@ -1,17 +1,13 @@
 ---
 title: ページオーサリングのクイックガイド
-seo-title: Quick Guide to Authoring Pages
 description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
-seo-description: A quick, high-level guide to the key actions of authoring page content
-uuid: ef7ab691-f80d-4eeb-9f4a-afbf1bc83669
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 75%

@@ -1,16 +1,14 @@
 ---
 title: AEM 6.5 と Adobe Campaign の統合
 description: Adobe Campaign との統合に対する AEM 6.5 のサポートについて説明します。
-uuid: 6113279e-d1f5-46c3-ac94-50270fa55060
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '314'
 ht-degree: 91%
 
 ---

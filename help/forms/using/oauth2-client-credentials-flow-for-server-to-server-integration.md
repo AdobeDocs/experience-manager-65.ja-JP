@@ -1,13 +1,11 @@
 ---
 title: OAuth 2.0 クライアント資格情報フローを使用した Salesforce と AEM Forms の統合
-seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: OAuth 2.0 クライアント資格情報フローを使用した Salesforce と AEM Forms の統合手順
-seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
-source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
+exl-id: 4c356aa6-ebd4-40b9-89e3-bc4519e4a7c5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 52%
+source-wordcount: '402'
+ht-degree: 50%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 52%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 OAuth 2.0 クライアント資格情報を使用して、AEM Formsを Salesforce アプリケーションと統合できます。 OAuth 2.0 クライアント資格情報は、ユーザーの関与なしに直接通信するための標準で安全な方法です。

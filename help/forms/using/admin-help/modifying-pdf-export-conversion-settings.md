@@ -1,32 +1,28 @@
 ---
 title: PDF の書き出しの変換設定の変更
-seo-title: Modifying the PDF Export conversion settings
-description: PDF の書き出しの変換設定を変更する方法について説明します。
-seo-description: Learn how to modify the PDF Export conversion settings.
-uuid: 7bade010-f422-4a76-a876-705e3cf346e6
+description: 書き出しの変換設定のPDFを変更する方法を説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 982f7b7e-9ba9-437f-a337-76c355b328ac
 feature: PDF Generator
 exl-id: 48a5d992-4681-41a8-8d1d-4da6767134c2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 100%
+ht-degree: 18%
 
 ---
 
 # PDF の書き出しの変換設定の変更 {#modifying-the-pdf-export-conversion-settings}
 
-以下の手順で、PDF、EPS、DOC、TXT、RTF、XML、HTML の各ファイルの書き出しに使用される変換設定を変更します。デフォルトでは、PDF ファイルでは、Adobe Acrobat Professional または Acrobat Standard で設定されたデフォルトの「名前を付けて保存」の設定が使用されます。例えば、PDF ファイルを EPS に変換するための Acrobat のデフォルトの「名前を付けて保存」の設定によって、PDF ファイルの 1 ページだけが EPS に変換されます。
+PDF、EPS、DOC、TXT、RTF、XML、またはHTMLファイルを書き出す際の変換設定を変更するには、以下の手順に従います。 デフォルトでは、PDF ファイルでは、Adobe Acrobat Professional または Acrobat Standard で設定されたデフォルトの「名前を付けて保存」の設定が使用されます。例えば、AcrobatでPDFファイルをEPSに変換するためのデフォルトの「名前を付けて保存」設定を使用すると、PDFファイルからEPSに変換されたページは 1 ページのみになります。
 
 >[!NOTE]
 >
->あるファイル形式の「名前を付けて保存」の設定を変更すると、PDF Generator から書き出されるときに、その形式のすべての変換に対して、変更した設定が適用されます。
+>1 つのファイル形式の [ 名前を付けて保存 ] の設定を変更すると、PDF Generatorから書き出されると、同じ種類のすべての変換に適用されます。
 
-1. Acrobat で PDF ファイルを開いた状態で、ファイル／名前を付けて保存を選択します。
-1. 「ファイルの種類」リストで、該当する形式を選択します。
-1. 「設定」をクリックし、必要に応じてファイル形式を設定します。
-1. 「OK」をクリックし、「保存」をクリックして PDF ファイルを書き出します。
+1. AcrobatでPDFファイルを開き、ファイル/名前を付けて保存を選択します。
+1. [ ファイルの種類 ] ボックスの一覧で、適切な形式を選択します。
+1. 「設定」をクリックし、必要に応じてファイル形式設定を指定します。
+1. 「 OK 」をクリックし、「保存」をクリックしてPDF・ファイルを書き出します。

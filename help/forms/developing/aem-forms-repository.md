@@ -1,19 +1,15 @@
 ---
 title: AEM Forms リポジトリの操作
-seo-title: Working with AEM Forms Repository
 description: AEM Forms リポジトリを管理して、Java API や web サービス API によるフォルダー作成や、リソースの書き込み、リスト化、読み取り、更新および検索をおこないます。さらに、リソースの関係の作成方法や、リソースのロックと削除の方法についても説明します。
-seo-description: Manage AEM Forms repository to create folders, write, list, read, update resources, and search resources using the Java API and Web Service API. In addition, learn how to create resource relationships, lock and delete resources.
-uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '9095'
+source-wordcount: '9036'
 ht-degree: 96%
 
 ---

@@ -1,27 +1,23 @@
 ---
 title: チェックリスト
-seo-title: The Checklist
-description: プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。
-seo-description: The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
-uuid: e8ab9042-4d54-445d-b104-23d5d38f58b6
+description: プロジェクトチェックリストは、プロジェクト配信のベストプラクティスのセットとして用意されています。 プロジェクトのライフサイクルのすべての段階を通じて、現在のステータスを高レベルで監視できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
-discoiquuid: 917b4fec-d5fe-4402-b69c-3c9645e6f934
 exl-id: 16851d65-df55-471a-8848-c73c28db8ac0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 100%
+source-wordcount: '318'
+ht-degree: 22%
 
 ---
 
 # チェックリスト{#the-checklist}
 
-プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。
+プロジェクトチェックリストは、プロジェクト配信のベストプラクティスのセットとして用意されています。 プロジェクトのライフサイクルのすべての段階を通じて、現在のステータスを高レベルで監視できます。
 
-プロジェクトに関わるペルソナ（役割）ごとにチェックリストがあります。チェックリストでは、成果物の詳細が、フェーズおよびマイルストーン別に説明されています。また、成果物の生成に必要なドキュメントも示しています。ドキュメントのステータスと品質を追跡することにより、プロジェクト全体のステータスを監視し、透過性と信頼性を提供できます。
+プロジェクトに関係する各ペルソナ（役割）のチェックリストがあります。 これらは、フェーズ別およびマイルストーン別に分類された、成果物の詳細を示します。 また、成果物の生成に必要なドキュメントも示します。 ドキュメントのステータスと品質を追跡することで、プロジェクト全体のステータスを監視し、透明性と説明責任を提供できます。
 
 ## ダウンロード {#download}
 
@@ -31,27 +27,27 @@ AEM プロジェクトのベストプラクティスチェックリスト v2
 
 ## ワークシート {#worksheets}
 
-スプレッドシートでは次のワークシートが提供されています。
+スプレッドシートには、次のワークシートが表示されます。
 
 * **説明**
-   * スプレッドシートの使用方法と、使用するメカニズムに関する説明が提供されています。
-* **[プロジェクトのハートビート](/help/managing/best-practices.md#project-heartbeat-dashboard)**
-* **[役割別のスタータス](/help/managing/best-practices.md#status-by-role)**
-* [ペルソナ](/help/managing/best-practices.md#persona)、[フェーズおよびマイルストーン](/help/managing/best-practices.md#phases-and-milestones)に応じた一連のチェックリスト
+   * スプレッドシートの使用方法と、使用するメカニズムの説明を示します。
+* **[プロジェクトハートビート](/help/managing/best-practices.md#project-heartbeat-dashboard)**
+* **[ロール別ステータス](/help/managing/best-practices.md#status-by-role)**
+* 一連のチェックリスト ( [ペルソナ](/help/managing/best-practices.md#persona), [フェーズとマイルストーン](/help/managing/best-practices.md#phases-and-milestones)
 * **用語集**
    * 用語集には、プロジェクトチェックリストのすべての成果物ドキュメントの詳細が記載されています。
-   * [用語集](/help/managing/best-practices-glossary.md)は、ドキュメントの一部としても入手できます。
+   * The [用語集](/help/managing/best-practices-glossary.md) は、ドキュメントの一部としても利用できます。
 * **[ペルソナの定義](/help/managing/best-practices.md#persona)**
 
 ## チェックリストの使用 {#using-the-checklists}
 
-高品質のプロジェクトの提供を成功させるには、チェックリスト内のすべての項目を、可能な限り順番どおりに完了する必要があります。
+高品質のプロジェクトを正常に配信するには、チェックリスト内のすべての項目を、できれば順番に完了する必要があります。
 
 1. チェックリストは、関与する&#x200B;**[ペルソナ](/help/managing/best-practices.md#persona)**（役割）に応じて定義されます。各自が、プロジェクトでの自分の役割に応じたチェックリストを使用する必要があります。
 1. チェックリストは、各マイルストーンの&#x200B;**[必須ドキュメント](/help/managing/best-practices.md#required-documents)**&#x200B;と&#x200B;**[成果物](/help/managing/best-practices.md#deliverables)**&#x200B;をカバーしています。関連するペルソナが、ステータスフィールドと品質フィールドを適切に設定する必要があります。
 
    >[!NOTE]
    >
-   >個々の必須ドキュメントと成果物の間には、直接の 1:1 の関係はありません。
+   >個々の必要なドキュメントと成果物の間には、直接の 1 対 1 の関係はありません。
 
-1. **[必須ドキュメント](/help/managing/best-practices.md#required-documents)**&#x200B;および&#x200B;**[成果物](/help/managing/best-practices.md#deliverables)**&#x200B;のスタータスに基づいて、**[プロジェクトハートビート](/help/managing/best-practices.md#project-heartbeat-dashboard)**&#x200B;と&#x200B;**[役割別のステータス](/help/managing/best-practices.md#status-by-role)**&#x200B;のワークシートは自動的に更新され、プロジェクトの進行状況とヘルスの最新情報が提示されます。
+1. のステータスに基づいて、 **[必須ドキュメント](/help/managing/best-practices.md#required-documents)** および **[成果物](/help/managing/best-practices.md#deliverables)**」、「 **[プロジェクトハートビート](/help/managing/best-practices.md#project-heartbeat-dashboard)** および **[ロール別ステータス](/help/managing/best-practices.md#status-by-role)** は自動的に更新され、プロジェクトの進行状況と正常性を最新で示します。

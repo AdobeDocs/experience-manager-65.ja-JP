@@ -1,17 +1,13 @@
 ---
 title: ルートアクションで使用されるイメージのカスタマイズ
-seo-title: Customize images used in route actions
 description: LiveCycle AEM Forms Workspace のルートアクションで使用される画像をカスタマイズする方法。
-seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
-uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 exl-id: 687c6569-7189-4039-9c7a-bc29658a7756
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: ht
-source-wordcount: '307'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '290'
 ht-degree: 100%
 
 ---

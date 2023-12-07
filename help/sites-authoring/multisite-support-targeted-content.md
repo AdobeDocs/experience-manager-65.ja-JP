@@ -1,16 +1,12 @@
 ---
 title: マルチサイトでのターゲットコンテンツの操作
-seo-title: Working with Targeted Content in Multisites
 description: アクティビティ、エクスペリエンス、オファーなどのターゲットコンテンツを複数のサイトにまたがって管理する必要がある場合は、AEM に組み込まれているターゲットコンテンツ用マルチサイトサポートを利用できます。
-seo-description: If you need to manage targeted content, such as activities, experiences, and offers between your sites, you can take advantage of AEM's built-in multisite support for targeted content
-uuid: acb2ffe1-d846-4580-bb69-d5af860796db
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2837'
 ht-degree: 84%

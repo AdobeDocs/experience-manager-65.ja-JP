@@ -1,21 +1,17 @@
 ---
 title: デバイスグループフィルターの作成
-seo-title: Creating Device Group Filters
 description: デバイスグループフィルターを作成して、一連のデバイス機能要件を定義する
-seo-description: Create a device group filter to define a set of device capability requirements
-uuid: 30c0699d-2388-41b5-a062-f5ea9d6f08bc
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
 content-type: reference
-discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 50%
+source-wordcount: '760'
+ht-degree: 45%
 
 ---
 
@@ -110,7 +106,7 @@ cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML
 
 >[!NOTE]
 >
->AEM にデプロイされる WURFL™ データベースには、フィルター条件として使用する機能が含まれます（[デバイスの検出](/help/sites-developing/mobile.md#server-side-device-detection)を参照）。
+>AEMにデプロイされる WURFL™データベースに、フィルター条件として使用する機能が含まれていることを確認します。 ( 詳しくは、 [デバイス検出](/help/sites-developing/mobile.md#server-side-device-detection).)
 
 ### 画面サイズのフィルターの例 {#example-filter-for-screen-size}
 
@@ -177,7 +173,7 @@ getTitle メソッドと getDescription メソッドが返す文字列値は、�
 
 次の POM コードは、Maven を使用してアプリケーションをビルドする場合に役立ちます。POM は、必要な複数のプラグインおよび依存関係を参照します。
 
-**プラグイン:**
+**プラグイン：**
 
 * Apache Maven Compiler Plugin：ソースコードから Java クラスをコンパイルします。
 * Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。

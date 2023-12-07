@@ -1,17 +1,13 @@
 ---
 title: フォームとドキュメントの公開と非公開
-seo-title: Publishing and unpublishing forms and documents
 description: フォームの公開と非公開をスケジュールできます。公開されたフォームはパブリッシュインスタンスに複製されます。
-seo-description: You can schedule publishing and unpublishing of forms. Published forms are replicated on the publish instance.
-uuid: 0bad5608-b7a8-4599-81cc-2cd0a3dc7dd5
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 content-strategy: max-2018
-discoiquuid: 32a7a50c-74f4-49bc-a0bd-a9ec142527cb
 docset: aem65
 exl-id: f26c4268-7885-4e61-a258-219d98288548
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 65%

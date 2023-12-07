@@ -1,19 +1,15 @@
 ---
 title: チュートリアル - 最初のインタラクティブ通信を作成する
-seo-title: Create your first Interactive Communication
 description: 最初のインタラクティブ通信の作成方法を説明します。
-seo-description: Learn to create your first Interactive Communication.
-uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications, introduction
-discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 feature: Interactive Communication
 exl-id: b20bb719-5686-466e-8dde-279b8471bfe3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 26%
+source-wordcount: '976'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +21,7 @@ ht-degree: 26%
 
 Interactive Communications は、ビジネス通信、ドキュメント、声明書、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。 インタラクティブ通信は、印刷チャネルと Web チャネルの 2 つのチャネルを使用して配信できます。 印刷チャネルはPDFや紙のコミュニケーションを作成するために使用され、Web チャネルはオンラインエクスペリエンスを提供するために使用されます。
 
-このチュートリアルでは、インタラクティブ通信を作成するためのエンドツーエンドのフレームワークを提供します。 このチュートリアルは、1 つのユースケースと複数のガイドに整理されています。 各ガイドでは、インタラクティブ通信を作成するための構築ブロックとして使用される機能を作成する方法について説明します。
+このチュートリアルでは、インタラクティブ通信を作成するためのエンドツーエンドのフレームワークを提供します。 このチュートリアルは、1 つのユースケースと複数のガイドで構成されています。各ガイドでは、インタラクティブ通信を作成するための構築ブロックとして使用される機能を作成する方法について説明します。
 
 次の図は、インタラクティブ通信の作成に必要な構築ブロックを示しています。
 

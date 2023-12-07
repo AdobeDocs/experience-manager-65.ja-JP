@@ -1,16 +1,12 @@
 ---
 title: Adobe Target との統合
-seo-title: Integrating with Adobe Target
 description: Adobe Experience ManagerとAdobe Targetを統合する方法を説明します。
-seo-description: Learn about integrating AEM with Adobe Target.
-uuid: b90346e8-9757-4272-a870-bbe5e647303f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 73%

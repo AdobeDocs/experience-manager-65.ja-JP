@@ -1,20 +1,16 @@
 ---
 title: 大量の保護された情報の配布
-seo-title: High-volume secure information delivery
 description: Document Security は、大量実稼動環境のドキュメントに対してではなく、ユーザーに対するライセンスの関連付けをサポートします。
-seo-description: Document security supports the association of licenses to users, rather than to the documents in mass production environments.
-uuid: 9747d283-506c-434e-9850-e50b95290cc8
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
 feature: Document Security
 exl-id: 616e8821-ca96-4471-9120-0e1076a06178
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 6%
+source-wordcount: '319'
+ht-degree: 5%
 
 ---
 

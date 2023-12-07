@@ -1,16 +1,14 @@
 ---
 title: ページのオーサリング
 description: AEM でのオーサリングについて、次の 2 種類の概要があります。（1）作成者が行う最初の手順 - 新規の作成者向けの概要と、（2）ページのオーサリングのクイックガイド - 主なアクションに関するクイックガイド（概要レベル）。
-uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: a3606d72-1bd8-4886-9285-6457dae66486
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '299'
 ht-degree: 86%
 
 ---

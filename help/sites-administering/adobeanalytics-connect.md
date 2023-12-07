@@ -1,20 +1,16 @@
 ---
 title: Adobe Analytics への接続とフレームワークの作成
-seo-title: Connecting to Adobe Analytics and Creating Frameworks
 description: AEM と SiteCatalyst の接続およびフレームワークの作成について説明します。
-seo-description: Learn about connecting AEM to SiteCatalyst and creating frameworks.
-uuid: 3820dd24-4193-42ea-aef2-4669ebfeaa9d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: bbd18486a77d7b46454aacff23147b38860bd895
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1523'
-ht-degree: 93%
+source-wordcount: '1484'
+ht-degree: 92%
 
 ---
 

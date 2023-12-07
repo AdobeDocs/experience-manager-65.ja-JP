@@ -1,16 +1,12 @@
 ---
 title: ヘルスモニターの概要
-seo-title: Overview of Health Monitor
 description: このドキュメントでは、ヘルスモニターの概要とアクセス方法の詳細を説明します。
-seo-description: This document provides the overview of the Health monitor, and details about how you can access it.
-uuid: 5934fd2d-80a5-4c6d-b3ee-882c2865705b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c303e967-944d-40b0-96ca-f91e2f42a0d0
 exl-id: 05f8b430-141e-4921-98b1-a0d8f636e478
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 2%

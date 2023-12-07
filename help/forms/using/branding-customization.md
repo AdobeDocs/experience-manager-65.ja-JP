@@ -1,16 +1,12 @@
 ---
 title: ブランディングのカスタマイズ
-seo-title: Branding Customization
 description: アプリケーションアイコン、アプリケーション名、起動画像およびログインページをカスタマイズして、AEM Formsアプリに対して組織固有の明確なルックアンドフィールを提供します。
-seo-description: Customize the application icon, application name, launch images, and login page to provide a distinct organization-specific look and feel to AEM Forms app.
-uuid: fece0fa8-c417-45eb-93f1-a91b49835fa0
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 47%

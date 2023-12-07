@@ -1,17 +1,13 @@
 ---
 title: HTML5 フォームのデフォルトスタイルの変更
-seo-title: Changing default styles of HTML5 forms
 description: HTML5 フォームのスタイル設定は CSS に基づいています。 フォームのデフォルトのスタイルを変更できます。
-seo-description: HTML5 forms styling is based on CSS. You can change the default styles of the form.
-uuid: 5e23237d-42d8-4d29-b79e-4dc276ef65ff
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 582b0fe8-a92b-4a1d-b859-57f13f53d0d8
 docset: aem65
 feature: Mobile Forms
 exl-id: 4c84cfd1-50a4-416f-b4a5-7f2f4c7f10af
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 43%

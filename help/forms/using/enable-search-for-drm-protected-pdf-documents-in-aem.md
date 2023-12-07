@@ -1,20 +1,16 @@
 ---
 title: Document Security によって保護された PDF ドキュメントを AEM で検索可能にする
-seo-title: Enable AEM to search document security protected PDF documents
 description: DRM 保護されたドキュメントでネイティブAEM検索を有効にして全文検索を実行する方法をPDFします。
-seo-description: Learn how to enable native AEM search to perform full-text search on DRM protected PDF documents.
-uuid: ec6e5d53-a74c-4958-a389-7937d073c083
 contentOwner: khsingh
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 geptopics: SG_AEMFORMS/categories/working_with_document_security
-discoiquuid: b79c147c-f846-4e48-bec0-8b658502bb6f
 docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '684'
 ht-degree: 56%
 
 ---

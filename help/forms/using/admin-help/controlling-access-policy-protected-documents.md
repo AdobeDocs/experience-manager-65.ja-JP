@@ -1,17 +1,13 @@
 ---
 title: ポリシーで保護されたドキュメントへのアクセス制御
-seo-title: Controlling access to policy-protected documents
 description: ポリシーで保護されたドキュメントへのアクセスを表示、管理、制御する方法を確認します。
-seo-description: See how you can view, manage and control the access to your policy-protected documents.
-uuid: 2d9f95e9-e4ee-47e2-988e-a191d1d1d264
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2167'
 ht-degree: 22%

@@ -1,20 +1,16 @@
 ---
 title: コンソールのカスタマイズ
-seo-title: Customizing the Consoles
 description: AEMには、オーサーインスタンスのコンソールをカスタマイズできる様々なメカニズムが用意されています。
-seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
-uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 45%
+source-wordcount: '646'
+ht-degree: 43%
 
 ---
 

@@ -1,15 +1,11 @@
 ---
 title: AEM Forms でターゲット設定されたエクスペリエンスを作成する
-seo-title: Create targeted experiences in AEM Forms
 description: AEM Formsの Target を使用して、ターゲットとなる顧客向けにカスタマイズされたエクスペリエンスを作成します。
-seo-description: Use Target in AEM Forms to create customized experiences for targeted customers.
-uuid: 174b6054-8fe3-4ab2-8afd-435e5dff9044
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: 6cf54a08-d429-4a58-8429-a1cb784448d1
 exl-id: fdc91054-3f7e-4cbf-bdfa-7d7a621747f1
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 65%

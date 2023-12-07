@@ -1,26 +1,22 @@
 ---
 title: 参照用のアダプティブフォームフラグメント
-seo-title: Reference adaptive form fragments
-description: AEM Forms には、フォームをすばやく作成するためにアセットとして使用できるアダプティブフォームフラグメントが用意されています。
-seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
-uuid: 85401274-6691-4726-8b70-b93fd46de053
+description: AEM Formsには、アセットとして使用してすばやくフォームを作成できるアダプティブフォームフラグメントが用意されています。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
 exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
-source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 100%
+source-wordcount: '381'
+ht-degree: 65%
 
 ---
 
 # 参照用のアダプティブフォームフラグメント{#reference-adaptive-form-fragments}
 
-[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用して、アダプティブフォームフラグメントをフォームにドラッグ＆ドロップし、それをフォームエディターで編集できます。
+[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md) は、フォームの作成時に使用できるフィールドのグループ、またはフィールドのグループを含むパネルです。 これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用して、アダプティブフォームフラグメントをフォームにドラッグ＆ドロップし、それをフォームエディターで編集できます。
 
-アダプティブフォームの作成者を対象に、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で参照用のフラグメントが提供されています。次のフラグメントが含まれています。
+アダプティブフォームの作成者を対象に、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で参照用のフラグメントが提供されています。これには、次のフラグメントが含まれます。
 
 * アドレス
 * 連絡先情報
@@ -33,13 +29,13 @@ ht-degree: 100%
 * 利用条件
 * 署名付き利用条件
 
-パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、[パッケージの作業方法](/help/sites-administering/package-manager.md)を参照してください。
+このパッケージをインストールすると、参照フラグメントを含む参照フラグメントフォルダーが「Forms &amp; Documents」の下に作成されます。 パッケージのインストールについては、[パッケージの作業方法](/help/sites-administering/package-manager.md)を参照してください。
 
 ![すべてのフラグメントが表示されている](assets/ootb-frags.png)
 
 ## アドレス {#address}
 
-住所を指定するためのフィールドが含まれています。使用できるフィールドは、住所、郵便番号、市、州および国です。指定された米国の郵便番号に対応する市と州を入力する事前設定済みの Web サービスも含まれています。
+郵送先住所を指定するフィールドが含まれます。 使用可能なフィールドは、住所、郵便番号、市区町村、都道府県、国です。 また、指定した米国の郵便番号の市区町村と州を入力する事前設定済み Web サービスも含まれています。
 
 ![住所フラグメント](assets/address.png)
 
@@ -49,7 +45,7 @@ ht-degree: 100%
 
 ## 連絡先情報 {#contact-information}
 
-電話番号と電子メールアドレスを取得するためのフィールドが含まれています。
+電話番号とメールアドレスを取得するためのフィールドが含まれています。
 
 ![連絡先情報フラグメント](assets/contact-info.png)
 
@@ -59,7 +55,7 @@ ht-degree: 100%
 
 ## クレジットカード情報 {#credit-card-information}
 
-支払い処理に使用できるクレジットカード情報を取得するためのフィールドが含まれています。[ ![クレジットカード情報フラグメント](assets/cc-info.png)](assets/cc-info-1.png)
+支払い処理に使用できるクレジットカード情報を取得するためのフィールドが含まれています。[![クレジットカード情報フラグメント](assets/cc-info.png)](assets/cc-info-1.png)
 
 ## 現在の職業 {#current-employment}
 
@@ -83,7 +79,7 @@ ht-degree: 100%
 
 ## 職歴 {#employment-history}
 
-職歴を取得するためのフィールドが含まれています。複数の会社を追加できます。
+雇用履歴をキャプチャするためのフィールドが含まれます。 複数の組織を追加できます。
 
 ![職歴フラグメント](assets/emp-history.png)
 
@@ -93,7 +89,7 @@ ht-degree: 100%
 
 ## 収入と支出 {#income-expenditure}
 
-1 か月のキャッシュフローと支出を取得するためのフィールドが含まれています。ユーザーに詳しい財務情報を提供するように求めるフォームでは、このフラグメントを使用して収入と支出を取得できます。
+1 か月のキャッシュフローと支出を取得するためのフィールドが含まれています。ユーザーに財務の詳細を入力するよう求めるFormsは、このフラグメントを使用して収入と支出をキャプチャできます。
 
 ![収入と支出フラグメント](assets/income.png)
 

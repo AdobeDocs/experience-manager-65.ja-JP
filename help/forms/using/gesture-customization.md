@@ -1,14 +1,12 @@
 ---
 title: ジェスチャーのカスタマイズ
 description: AEM Formsアプリでジェスチャーをカスタマイズする方法を説明します。 ジェスチャーをカスタマイズして、アプリケーションとの個別の対話方法を提供できます。
-uuid: 117e0e21-66bd-42f1-879c-6c1443991974
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 68%

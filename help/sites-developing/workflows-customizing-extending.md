@@ -1,16 +1,12 @@
 ---
 title: ワークフロー機能の拡張
-seo-title: Extending Workflow Functionality
 description: Adobe Experience Managerのワークフロー機能を拡張する方法を説明します。
-seo-description: null
-uuid: 9f4ea2a8-8b21-4e7c-ac73-dd37d9ada111
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '3499'
 ht-degree: 64%

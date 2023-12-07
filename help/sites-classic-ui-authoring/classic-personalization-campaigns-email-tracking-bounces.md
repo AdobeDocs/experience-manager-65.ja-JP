@@ -1,18 +1,14 @@
 ---
 title: バウンス（配信不能）メールの追跡
-seo-title: Tracking Bounced Emails
 description: 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効なメールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。
-seo-description: When you send a newsletter to many users, there are usually some invalid emails addresses in the list. Sending newsletters to those addresses bounce back. AEM is capable of managing those bounces and can stop sending newsletters to those addresses after the configured bounce counter is exceeded.
-uuid: 749959f2-e6f8-465f-9675-132464c65f11
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: fde9027b-9057-48c3-ae34-3f3258c5b371
 exl-id: 6cda0a68-0df9-44e7-ae4f-9951411af6dd
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
-workflow-type: ht
-source-wordcount: '703'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '678'
 ht-degree: 100%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 100%
 >
 >アドビは、AEM SMTP サービスによって送信される開封済みまたはバウンス済みのメールの追跡をさらに強化する予定はありません。
 >
->[Adobe Campaign および AEM の統合を使用](/help/sites-administering/campaign.md)することをお勧めします。
+>レコメンデーションは、[Adobe Campaign および AEM の統合を使用](/help/sites-administering/campaign.md)することです。
 
 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効なメールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。デフォルトではバウンス率は 3 になっていますが、設定可能です。
 

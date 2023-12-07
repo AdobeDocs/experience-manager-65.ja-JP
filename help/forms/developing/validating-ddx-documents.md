@@ -1,20 +1,16 @@
 ---
 title: DDX ドキュメントの検証
-seo-title: Validating DDX Documents
 description: Java API と web サービス API を使用して、プログラムによる DDX ドキュメントの検証を行います。
-seo-description: Validate a DDX document programmatically using the Java API and the Web Service API.
-uuid: da668170-d2e9-4fff-aef5-432a856bd0bd
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 role: Developer
 exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1507'
 ht-degree: 98%
 
 ---

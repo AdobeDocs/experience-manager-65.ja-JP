@@ -1,16 +1,12 @@
 ---
 title: クラシック UI へのアクセスの有効化
-seo-title: Enabling Access to Classic UI
 description: Adobe Experience Managerでクラシック UI へのアクセスを有効にする方法を説明します。
-seo-description: Lear how to enable access to Classic UI.
-uuid: 08698023-6e0d-4160-8c4d-d282e74182bc
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: f3683696-663d-4de5-a388-1709f44d58c1
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 35%

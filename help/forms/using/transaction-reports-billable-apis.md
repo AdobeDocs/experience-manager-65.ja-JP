@@ -1,18 +1,14 @@
 ---
 title: トランザクションレポート請求可能 API
-seo-title: Transaction Reports Billable APIs
 description: トランザクションとして計上されるすべての API のリスト
-seo-description: List of all the APIs that are accounted as transactions
-uuid: d2f38ae4-75df-426f-af34-52ae6fb324f3
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
-source-git-commit: d636d987f5d62c9169bc4015d7ac50090e362faa
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2089'
-ht-degree: 90%
+source-wordcount: '1719'
+ht-degree: 89%
 
 ---
 

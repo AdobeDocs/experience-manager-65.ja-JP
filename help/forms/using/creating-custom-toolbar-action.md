@@ -1,19 +1,15 @@
 ---
 title: カスタムツールバーアクションの作成
-seo-title: Creating a custom toolbar action
-description: フォーム開発者は、AEM Forms のアダプティブフォーム用にカスタムツールバーアクションを作成できます。カスタムアクションフォームを使用して、作成者はより多くのワークフローとオプションをエンドユーザーに提供できます。
-seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
-uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
+description: フォーム開発者は、AEM Formsでアダプティブフォーム用のカスタムツールバーアクションを作成できます。 カスタムアクションフォームを使用すると、作成者はエンドユーザーに多くのワークフローやオプションを提供できます。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 100%
+ht-degree: 65%
 
 ---
 
@@ -21,15 +17,15 @@ ht-degree: 100%
 
 ## 前提条件 {#prerequisite}
 
-カスタムツールバーアクションを作成する前に、「[クライアント側のライブラリを使用する方法](/help/sites-developing/clientlibs.md)」と「[CRXDE Lite を使用した開発](/help/sites-developing/developing-with-crxde-lite.md)」を参照して理解を深めてください。
+カスタムツールバーアクションを作成する前に、 [クライアント側ライブラリの使用](/help/sites-developing/clientlibs.md) および [開発とCRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## アクションとは {#what-is-an-action-br}
 
-アダプティブフォームは、フォーム作成者がオプションの組み合わせを設定できるツールバーを提供します。これらのオプションは、アダプティブフォームのアクションとして定義されます。パネルのツールバーの「編集」ボタンをクリックして、アダプティブフォームがサポートするアクションを設定します。
+アダプティブフォームには、フォーム作成者が一連のオプションを設定できるツールバーが用意されています。 これらのオプションは、アダプティブフォームのアクションとして定義されます。 パネルのツールバーの「編集」ボタンをクリックして、アダプティブフォームがサポートするアクションを設定します。
 
 ![デフォルトのツールバーアクション](assets/default_toolbar_actions.png)
 
-デフォルトで提供される一連のアクションに加え、カスタムアクションをツールバーに作成することができます。例えば、アクションを追加することで、フォームを送信する前にアダプティブフォームのすべてのフィールドを、ユーザーがレビューできるようにすることが可能です。
+デフォルトで提供される一連のアクションに加えて、ツールバーでカスタムアクションを作成できます。 例えば、フォームを送信する前に、ユーザーがすべてのアダプティブフォームフィールドを確認できるようにするアクションを追加することができます。
 
 ## アダプティブフォームでカスタムアクションを作成する手順 {#steps}
 
@@ -44,9 +40,9 @@ ht-degree: 100%
    ![ツールバーのカスタマイズに使用するノードの階層](assets/action3.png)
 
 1. `reviewbeforesubmit` ノード内の `cq:template` ノードを選択します。`guideNodeClass` プロパティの値が `guideButton` となっていることを確認し、それに合わせて `jcr:title` プロパティを変更します。
-1. `cq:Template` ノードの type プロパティを変更します。この例では、タイプのプロパティをボタンに変更します。
+1. `cq:Template` ノードの type プロパティを変更します。現在の例では、type プロパティを button に変更します。
 
-   このコンポーネントで、生成された HTML に type の値が CSS クラスとして追加されます。ユーザーはこの CSS クラスを使用して、アクションのスタイルを設定できますボタン、送信、リセット、保存の各 type 値には、モバイルデバイスとデスクトップデバイスの両方に対応するデフォルトのスタイルが用意されています。
+   type の値が、コンポーネント用に生成されたHTMLに CSS クラスとして追加されます。 ユーザーは、その CSS クラスを使用して、アクションのスタイルを設定できます。 ボタン、送信、リセット、保存の各 type 値には、モバイルデバイスとデスクトップデバイスの両方に対応するデフォルトのスタイルが用意されています。
 
 1. アダプティブフォームを編集するツールバーのダイアログから、カスタムアクションを選択します。パネルのツールバーに「レビュー」ボタンが表示されます。
 
@@ -186,6 +182,6 @@ ht-degree: 100%
 
 ## サンプル {#samples}
 
-コンテンツパッケージは次のアーカイブにあります。このパッケージには、上記のカスタムツールバーアクションのデモに関連するアダプティブフォームが含まれています。
+次のアーカイブには、コンテンツパッケージが含まれています。 このパッケージには、上記のカスタムツールバーアクションのデモに関連するアダプティブフォームが含まれています。
 
 [ファイルを取得](assets/customtoolbaractiondemo.zip)

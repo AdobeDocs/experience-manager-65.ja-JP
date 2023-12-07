@@ -1,19 +1,15 @@
 ---
 title: PDF/A ドキュメントの操作
-seo-title: Working with PDF/A Documents
 description: DocConverter サービスを使用して、PDF ドキュメントが PDF/A ドキュメントかどうかを判断し、PDF ドキュメントであればこれを PDF/A ドキュメントに変換します。
-seo-description: Use the  DocConverter service to determine if a PDF document is a PDF/A document and convert PDF documents to PDF/A documents.
-uuid: c258d253-068a-4412-955a-21d8a4792d6f
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2356'
+source-wordcount: '2331'
 ht-degree: 99%
 
 ---

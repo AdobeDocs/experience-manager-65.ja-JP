@@ -1,20 +1,16 @@
 ---
 title: AEM 6.5 のカスタムユーザグループマッピング
-seo-title: Custom User Group Mapping in AEM 6.5
 description: Adobe Experience Managerでのカスタムユーザーグループマッピングの仕組みを説明します。
-seo-description: Lear how Custom User Group Mapping works in AEM.
-uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '469'
 ht-degree: 97%
 
 ---

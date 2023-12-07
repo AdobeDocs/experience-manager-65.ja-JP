@@ -1,14 +1,12 @@
 ---
 title: Adobe Experience Manager で Adobe Campaign フォームを作成
 description: Adobe Experience Manager では、web サイトで Adobe Campaign とやり取りするフォームを作成して使用できます
-uuid: 61778ea7-c4d7-43ee-905f-f3ecb752aae2
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
-discoiquuid: d53ef3e2-14ca-4444-b563-be67be15c040
 exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 93%

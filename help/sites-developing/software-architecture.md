@@ -1,16 +1,14 @@
 ---
 title: ソフトウェアのアーキテクチャ
 description: Adobe Experience Manager用のソフトウェアを設計するためのベストプラクティスをいくつか学びます。
-uuid: a557f6ca-c3f1-486e-a45e-6e1f986fab41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
 exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '612'
 ht-degree: 98%
 
 ---

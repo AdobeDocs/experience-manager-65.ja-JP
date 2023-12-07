@@ -1,18 +1,14 @@
 ---
 title: Forms を HTML としてレンダリング
-seo-title: Rendering Forms as HTML
 description: Forms サービスを使用し、web ブラウザーからの HTTP リクエストに応じてフォームを HTML としてレンダリングします。Java API および Web Service API を使用し、フォームを HTML としてレンダリングできます。
-seo-description: Use the Forms service to render forms as HTML in response to an HTTP request from a web browser. You can use the Java API and Web Service API to render forms as HTML.
-uuid: bd8edb6f-333b-4ceb-9877-618f5377f56f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '4102'
 ht-degree: 79%

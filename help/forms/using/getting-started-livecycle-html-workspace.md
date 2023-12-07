@@ -1,16 +1,12 @@
 ---
 title: AEM Forms Workspace の概要
-seo-title: Getting started with AEM Forms workspace
 description: AEM FormsLiveCycleを使用して、ビジネス自動化プロセスを管理する方法。
-seo-description: How to get started with using the LiveCycle AEM Forms workspace to manage your business automation processes.
-uuid: 35ca1a51-92c3-40d8-8de3-604be8704752
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 exl-id: d2a962b6-16be-4866-a856-5064f81c9610
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 30%

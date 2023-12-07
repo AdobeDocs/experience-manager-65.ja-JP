@@ -1,17 +1,13 @@
 ---
 title: フォームポータルページの作成
-seo-title: Creating a forms portal page
 description: Forms Portal では、Web 開発者に、Adobe Experience Manager(AEM) を使用して作成された Web サイトでフォームポータルを作成してカスタマイズするためのコンポーネントが支給されます。
-seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
-uuid: a5017de5-616c-4ce4-81aa-f28c741f8e8f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 49%

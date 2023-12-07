@@ -1,17 +1,13 @@
 ---
 title: AEM Forms のデータ統合機能
-seo-title: AEM Forms Data Integration
 description: データ統合を使用すると、AEM Formsを異なるデータソースと統合し、フォームデータモデルを作成して、アダプティブフォームとインタラクティブ通信を作成して操作することができます。
-seo-description: Data Integration lets you integrate AEM Forms with disparate data sources and create form data model to create and work with adaptive forms and interactive communications.
-uuid: 01df045e-1b26-437c-9674-fd223ecd5097
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
-discoiquuid: e397c6ce-d73f-4183-8445-1897a8906960
 docset: aem65
 feature: Form Data Model
 exl-id: dd1146e4-952d-4dfa-8084-46c6096c4177
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 53%

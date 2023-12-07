@@ -1,19 +1,15 @@
 ---
 title: フォームメタデータの管理
-seo-title: Manage form metadata
 description: メタデータを使用すると、アセットの分類および編成を容易に行うことができ、ユーザーが特定のアセットを検索しやすくなります。
-seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
-uuid: d982df6f-a256-4bad-868f-74fcd08350f8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
 role: Admin
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1967'
 ht-degree: 83%
 
 ---

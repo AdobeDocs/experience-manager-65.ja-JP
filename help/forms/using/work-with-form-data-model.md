@@ -1,16 +1,12 @@
 ---
 title: フォームデータモデルの操作
-seo-title: Work with form data model
 description: データ統合機能は、フォームデータモデルを設定および操作するためのフォームデータモデルエディターを提供します。
-seo-description: Data Integration provides form data model editor to configure and work with form data models.
-uuid: ed78f7f7-8123-4778-9252-89924cec09d6
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 feature: Form Data Model
 exl-id: 16b76265-9ec4-4993-9ac0-b7aef1b1e5f1
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '4159'
 ht-degree: 78%

@@ -1,13 +1,11 @@
 ---
 title: PhoneGap
 description: このページは、AEMで PhoneGap Enterprise を使用してアプリを開発する際の出発点となります。 AEMは PhoneGap と統合されているので、AEMページを使用して簡単にアプリを作成できます。 PhoneGap を使用すると、ユーザーがコンテンツを操作できるユーティリティアプリを作成できます。
-uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 exl-id: 9a97e11b-a683-490a-ab7b-158de32984ef
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 9%

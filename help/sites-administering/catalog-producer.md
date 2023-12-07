@@ -1,16 +1,12 @@
 ---
 title: カタログ作成機能
-seo-title: Catalog Producer
-seo-description: Learn how to use Catalog Producer in AEM Assets to generate product catalogs using your digital assets.
-uuid: da822d83-8b99-4089-ae1b-11d897d4044e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 90e36522-3af1-4a8a-b044-1c828c52974e
 description: カタログ作成機能
 exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 41%

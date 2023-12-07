@@ -1,15 +1,11 @@
 ---
 title: ベストプラクティス
-seo-title: Best Practices
-description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
-seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
-uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
+description: オーサリングのベストプラクティスでは、AEM をできるだけ効率的かつ効果的に使用する方法について説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 100%
@@ -19,7 +15,7 @@ ht-degree: 100%
 
 # ベストプラクティス {#best-practices}
 
-オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+オーサリングのベストプラクティスでは、AEM をできるだけ効率的かつ効果的に使用する方法について説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
 
 次の領域について、ベストプラクティスに関するドキュメントが提供されています。
 
@@ -33,7 +29,7 @@ ht-degree: 100%
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-以降の表では、特定のドキュメントの説明とリンクを示します。
+特定のドキュメントの説明とリンクは、以下の表に示されています。
 
 ## Assets {#assets}
 
@@ -49,10 +45,10 @@ Assets のベストプラクティスについては、Dynamic Media 機能お�
   <tr>
    <td>ビデオエンコーディング</td>
    <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">エンコーディングのベストプラクティス</a></td>
-   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを示します。</td>
+   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを説明します。</td>
   </tr>
   <tr>
-   <td>ダイナミックイメージング</td>
+   <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging のベストプラクティス</a></td>
    <td><p>Dynamic Media 機能を使用している場合や、Dynamic Media Classic と統合している場合に、最良の結果を得るために画像をシャープにする方法と、画像の品質を最適化する方法について説明します。 </p> </td>
   </tr>
@@ -64,9 +60,9 @@ Assets のベストプラクティスについては、Dynamic Media 機能お�
  </tbody>
 </table>
 
-## サイト {#sites}
+## Sites {#sites}
 
-Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+Web サイトのコンテンツの管理とオーサリングには、次のようなベストプラクティスがあります。
 
 オーサリング：[オーサー環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - ページの作成方法の概要について説明します。
 

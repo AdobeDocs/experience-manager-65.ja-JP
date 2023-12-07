@@ -1,16 +1,12 @@
 ---
 title: Process Reporting の仕組み
-seo-title: How Process Reporting Works
 description: JEE 上 の AEM Forms Process Reporting を構成するサービスの説明と Process Reporting UI の概要
-seo-description: Description of the services that make up the AEM Forms on JEE Process Reporting and an introduction to the Process Reporting UI
-uuid: 37e31985-088a-4ef6-ba57-10a01597a873
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
-discoiquuid: a6ff50df-273d-48f7-b0c6-0e69e900b97f
 docset: aem65
 exl-id: 66dfac36-5b7e-40be-9921-efa9f2a9521c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 96%

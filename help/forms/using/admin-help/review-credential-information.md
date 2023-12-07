@@ -1,17 +1,15 @@
 ---
 title: 資格情報の使用に関する情報の確認
 description: 秘密鍵証明書の使用情報を確認する方法を説明します。 秘密鍵証明書の使用に関する情報は、Acrobat Reader拡張機能を通じてアクセスできます。
-uuid: 02af75f9-c235-470d-a98b-a2102aa31381
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
 exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 11%
+source-wordcount: '193'
+ht-degree: 9%
 
 ---
 

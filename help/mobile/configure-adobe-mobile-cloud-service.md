@@ -1,20 +1,16 @@
 ---
 title: Adobe Mobile Services Cloud Service の設定
-seo-title: Configure your Adobe Mobile Services Cloud Service
 description: このページでは、Mobile Services のAdobeCloud Serviceを設定します。
-seo-description: Follow this page to configure your Adobe Mobile Services Cloud Service.
-uuid: 21fe5b24-dc4d-4ee4-9e7f-ed4783baf276
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
-discoiquuid: 962e9e98-a303-435b-a938-31319282e022
 legacypath: /content/docs/en/aem/6-1/develop/mobile-apps/apps/managing-aem-mobile-apps/configure-your-adobe-phonegap-build-cloud-service1
 exl-id: 209c36f9-1a4b-4eea-8dde-22e0fc9718c1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 5%
+source-wordcount: '449'
+ht-degree: 6%
 
 ---
 

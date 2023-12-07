@@ -1,19 +1,15 @@
 ---
 title: アセットの命名規則のテスト
-seo-title: Naming conventions for assets
 description: リポジトリーのノードは、Java コンテンツリポジトリーの命名規則の対象です。ただし、アセットノード名には Adobe Experience Manager によって追加の規則が課せられます。
-seo-description: Nodes in the repository are subject to naming conventions of the Java Content Repository. However, Adobe Experience Manager imposes further conventions for the name of asset nodes.
-uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-discoiquuid: 55e66c66-0120-4ed4-94c5-d65a434bb59b
 exl-id: bb6a5913-0871-47c7-8641-936e98920ec0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 100%
+source-wordcount: '131'
+ht-degree: 69%
 
 ---
 
@@ -25,12 +21,12 @@ ht-degree: 100%
 
 クラシック UI にはさらに厳しい制約があります。
 
-* アセット名が有効とされるのは、明示的なノード名が次のいずれかの場合です。
+* 次のいずれかの場合に、明示的なノード名でアセット名を検証します。
 
-   * ノード名に変換されるようにアセットタイトルが提供されている。
+   * ノード名に変換するために、アセットのタイトルが指定されます。
    * 明示的なノード名が提供されている。
 
-* 有効な文字（アセットがクラシック UI で作成されるとき次の文字のみが有効です）：
+* 有効な文字（クラシック UI でアセットを作成した場合、実際には次の文字のみが有効です）:
 
    * a～z
    * A～Z

@@ -1,17 +1,15 @@
 ---
 title: パフォーマンスの最適化
 description: パフォーマンスを最適化するために AEM の特定の側面を設定する方法を説明します。
-uuid: a4d9fde4-a4c7-4ee5-99b6-29b0ee7dc35b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6503'
+source-wordcount: '6469'
 ht-degree: 99%
 
 ---
@@ -126,8 +124,7 @@ JVM および OS レベルの調整は、通常、大幅なパフォーマンス
 
 通常のパフォーマンス最適化では、次の要素を使用します。
 
-* ：
-`request.log`
+* `request.log`
 * コンポーネントベースのタイミング
 * Java™プロファイラー。
 

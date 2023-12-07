@@ -1,19 +1,15 @@
 ---
 title: グラフィックレンダリング用のフォントの追加
-seo-title: Adding Fonts for Graphic-Rendering
 description: AEMを使用すると、コンテンツから動的に取得したテキストを組み込んだグラフィックを生成できます。
-seo-description: AEM lets you generate graphics incorporating text dynamically taken from your content
-uuid: 67d9b10f-e986-4d29-bde2-10e08075fe17
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 74%
+source-wordcount: '171'
+ht-degree: 72%
 
 ---
 

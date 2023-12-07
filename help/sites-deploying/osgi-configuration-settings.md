@@ -1,21 +1,17 @@
 ---
 title: OSGi 設定
-seo-title: OSGi Configuration Settings
 description: この記事では、プロジェクトの実装に関連する OSGi 設定（バンドルに従ってリストされます）について説明します。このリストはガイドラインの役目を果たすものであり、すべてを網羅しているわけではありません。
-seo-description: This article details the OSGi configuration settings (listed according to bundle) that are relevant to project implementation. The list acts as a guideline and it is not exhaustive.
-uuid: 192d3287-ec99-403b-bab0-45721e4e3abd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3429'
-ht-degree: 98%
+source-wordcount: '3360'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 98%
 
 [OSGi](https://www.osgi.org/) は、AEM の技術スタックにおける基本要素です。AEM の複合バンドルおよびそれらの設定を制御するために使用します。
 
-OSGi は「*標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます*」。
+OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネントを使用してアプリケーションを構築できる、標準化されたプリミティブを提供します。 これらのコンポーネントは、アプリケーションに組み込み、デプロイできます*&quot;.
 
 この機能により、バンドルの管理が容易になり、バンドルを個別に停止、インストールおよび起動できます。相互依存関係は自動的に処理されます。各 OSGi コンポーネント（[OSGi の仕様](https://docs.osgi.org/specification/)を参照）は、各種バンドルの 1 つに含まれています。AEM で作業する場合、このようなバンドルの設定を管理する方法はいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
@@ -211,7 +207,7 @@ JSON を無効にしないでください。
 
 * **Virtual URLs**：バニティ URL のマッピングを定義します。
 
-* **URL Mappings**：エイリアスを定義します（例：`/content` から `/` へのマッピング）。
+* **URL マッピング** エイリアスを定義する。 例： `/content` から `/`.
 
 * **Mapping Location**：`/etc/map` で外面化されるマッパー設定です。
 
@@ -339,7 +335,7 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 この認証ハンドラーをアクティブにする対象のパス。このパラメーターを空のままにすると、認証ハンドラーは無効になります。例えば、/ というパスを指定すると、認証ハンドラーはリポジトリ全体に対して使用されます。
 
 * **Service Ranking**
-OSGi フレームワークサービスランキングの値は、このサービスの呼び出しに使用する順序を示すために使用されます。これは `int` 値で、値が大きいほど優先度が高くなります。
+OSGi フレームワークサービスランキングの値は、このサービスの呼び出しに使用する順序を示すために使用されます。この値は `int` 値が大きいほど、優先度が高くなります。
 デフォルト値は `0` です。
 
 * **Header Names**

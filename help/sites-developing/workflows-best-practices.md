@@ -1,16 +1,12 @@
 ---
 title: ワークフローのベストプラクティス
-seo-title: Workflow Best Practices
 description: Adobe Experience Managerでのワークフローの操作に関するベストプラクティスについて説明します。
-seo-description: null
-uuid: 79be4055-c2ef-428e-9054-103c6cfde1d2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 exl-id: 14775476-6fe5-4583-8ab5-b55fef892174
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1925'
 ht-degree: 22%

@@ -1,16 +1,12 @@
 ---
 title: コメントコンポーネントの拡張
-seo-title: Extend Comments Component
 description: コメントコンポーネントを拡張して、特定の用途での外観や動作を変更する
-seo-description: Extend the Comments component to alter its appearance or behavior for specific uses
-uuid: 6f439097-b1d0-4e7d-afcf-01d8f43aa866
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 exl-id: e57198cb-8fd9-43e2-b416-e40e462561c8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 7%

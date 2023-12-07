@@ -1,19 +1,15 @@
 ---
 title: ページ編集のための取り消しの設定
-seo-title: Configuring Undo for Page Editing
 description: AEMでページ編集の取り消しサポートを設定する方法について説明します。
-seo-description: Learn how to configure Undo support for page editing in AEM.
-uuid: e5a49587-a2a6-41d5-b449-f7a8f7e4cee6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
 exl-id: 2cf3ac3f-ee17-480d-a32a-c57631502693
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 67%
+ht-degree: 65%
 
 ---
 
@@ -45,7 +41,7 @@ ht-degree: 67%
 
 次のリストに、Web コンソールに表示されるプロパティと、対応する OSGi パラメーターの名前を、（必要に応じて）説明およびデフォルト値と共に示します。
 
-* **Enable（有効）**
+* **有効にする**
 ( `cq.wcm.undo.enabled`)
 
    * **説明**：ページの作成者が変更内容を取り消しおよびやり直しできるかどうかを決定します。
@@ -53,7 +49,7 @@ ht-degree: 67%
    * **タイプ**：`Boolean`
 
 * **パス**
-（ `cq.wcm.undo.path`)
+( `cq.wcm.undo.path`)
 
    * **説明**：バイナリの取り消しデータを永続化するリポジトリパス。 作成者が画像などのバイナリデータを変更した場合、元のバージョンのデータはここに保持されます。 バイナリデータへの変更が取り消されると、この取り消しのバイナリデータがページに復元されます。
    * **デフォルト**：`/var/undo`
@@ -99,7 +95,7 @@ ht-degree: 67%
    * **タイプ**：`Boolean`
 
 * **マーカーモード**
-（ `cq.wcm.undo.markermode`)
+( `cq.wcm.undo.markermode`)
 
    * **説明**：取り消しややり直しが発生したときに影響を受ける段落を示すために使用する視覚的なキューを指定します。次の値を指定できます。
 
@@ -110,7 +106,7 @@ ht-degree: 67%
    * **タイプ**：`String`
 
 * **優れたコンポーネント**
-（ `cq.wcm.undo.whitelist`)
+( `cq.wcm.undo.whitelist`)
 
    * **説明**：取り消しコマンドとやり直しコマンドの影響を受けるコンポーネントのリストです。 取り消し/やり直しで正しく機能する場合は、コンポーネントのパスをこのリストに追加します。 コンポーネントをグループで指定するには、アスタリスク（&amp;ast;）を付けます。
 
@@ -128,7 +124,7 @@ ht-degree: 67%
    * **タイプ**：`String[]`
 
 * **無効なコンポーネント**
-（ `cq.wcm.undo.blacklist`)
+( `cq.wcm.undo.blacklist`)
 
    * **説明**：取り消しコマンドの影響を受けたくないコンポーネントやコンポーネント操作のリスト。取り消しコマンドで正しく動作しないコンポーネントやコンポーネント操作を追加します。
 

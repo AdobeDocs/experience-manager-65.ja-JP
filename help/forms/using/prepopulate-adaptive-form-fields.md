@@ -1,29 +1,25 @@
 ---
 title: アダプティブフォームのフィールドの事前入力
-seo-title: Prefill adaptive form fields
 description: 既存データを使用して、アダプティブフォームのフィールドを事前入力します。
-seo-description: With adaptive forms, you users can prefill basic information in a form by logging in with their social profiles. This article describes how you can accomplish this.
-uuid: 574de83a-7b5b-4a1f-ad37-b9717e5c14f1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 feature: Adaptive Forms
 exl-id: 29cbc330-7b3d-457e-ba4a-7ce6091f3836
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2248'
-ht-degree: 65%
+source-wordcount: '2203'
+ht-degree: 81%
 
 ---
 
 # アダプティブフォームのフィールドの事前入力{#prefill-adaptive-form-fields}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html?lang=ja) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html) |
 | AEM 6.5 | この記事 |
 
 ## はじめに {#introduction}
@@ -37,8 +33,8 @@ ht-degree: 65%
 アダプティブフォームの連結されたフィールドと連結されていないフィールドの両方を事前に入力することができます。 事前入力データには、アダプティブフォームの連結されたフィールドと連結されていないフィールドの両方を事前入力する afBoundData セクションと afUnBoundData セクションが含まれています。 `afBoundData` セクションには連結されたフィールドとパネルの事前入力データが含まれています。このデータは関連するフォームモデルスキーマに準拠している必要があります。
 
 * アダプティブフォームの場合は、 [XFA フォームテンプレート](../../forms/using/prepopulate-adaptive-form-fields.md)の場合は、XFA テンプレートのデータスキーマに準拠している事前入力 XML を使用します。
-* アダプティブフォームの場合： [XML スキーマ](#xml-schema-af)の場合は、XML スキーマ構造に準拠している事前入力 XML を使用します。
-* アダプティブフォームの場合： [JSON スキーマ](#json-schema-based-adaptive-forms)の場合は、JSON スキーマに準拠している事前入力 JSON を使用します。
+* を使用してアダプティブフォームを作成する場合 [XML スキーマ](#xml-schema-af)の場合は、XML スキーマ構造に準拠している事前入力 XML を使用します。
+* を使用してアダプティブフォームを作成する場合 [JSON スキーマ](#json-schema-based-adaptive-forms)の場合は、JSON スキーマに準拠している事前入力 JSON を使用します。
 * FDM スキーマを使用しているアダプティブフォームの場合は、FDM スキーマに準拠している事前入力 JSON を使用します。
 * を含むアダプティブフォームの場合 [フォームモデルがありません](#adaptive-form-with-no-form-model)、連結されたデータがありません。 すべてのフィールドは、連結されていないフィールドであり、連結されていない XML を使用して事前入力されています。
 
@@ -139,9 +135,9 @@ XML スキーマをモデルとするフィールドの場合、以下の XML �
 
 >[!NOTE]
 >
->連結されているパネル（サイドキックまたは「データソース」タブからコンポーネントをドラッグして作成された、空ではない `bindRef` が含まれているパネル）では、連結されていないフィールドを使用しないことをお勧めします。これらの連結していないフィールドのデータの損失を招くことがあります。また、フィールド名は、特に連結されていないフィールドに対して、フォーム間で一意にすることをお勧めします。
+>連結されているパネル（サイドキックまたは「データソース」タブからコンポーネントをドラッグして作成された、空ではない `bindRef` が含まれているパネル）では、連結されていないフィールドを使用しないことをお勧めします。これらの連結していないフィールドのデータの損失を招くことがあります。また、フィールド名は、特に連結していないフィールドについては、フォーム間で一意のフィールド名を設定することをお勧めします。
 
-#### afData および afBoundData ラッパーを使用しない例 {#an-example-without-afdata-and-afbounddata-wrapper}
+#### afData および afBoundData ラッパーがない場合の例 {#an-example-without-afdata-and-afbounddata-wrapper}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><config>
@@ -174,7 +170,7 @@ JSON スキーマに基づくアダプティブフォームの場合、事前入
 }}}}}
 ```
 
-JSON スキーマモデルを使用するフィールドの場合、以下の JSON のサンプルに示すように、afBoundData オブジェクトのデータは事前入力されます。これは、1 つ以上の連結されていないテキストフィールドでアダプティブフォームを事前入力する場合に使用できます。以下は `afData/afBoundData` ラッパーが含まれるデータの一例です。
+JSON スキーマモデルを使用するフィールドの場合、以下の JSON のサンプルに示すように、afBoundData オブジェクトのデータは事前入力されます。これは、1 つ以上の連結されていないテキストフィールドをアダプティブフォームに事前入力する場合に使用できます。 以下は `afData/afBoundData` ラッパーが含まれるデータの一例です。
 
 ```json
 {
@@ -204,15 +200,15 @@ JSON スキーマモデルを使用するフィールドの場合、以下の JS
 
 >[!NOTE]
 >
->連結パネル (Sidekickまたは「データソース」タブからコンポーネントをドラッグして作成された、空でない bindRef を含むパネル ) で、連結されていないフィールドを使用すると、 **not** 非連結フィールドのデータが失われる可能性があるので、お勧めします。 特に連結されていないフィールドに対しては、フォーム全体に一意のフィールド名を付けることをお勧めします。
+>連結されているパネル（サイドキックまたは「データソース」タブからコンポーネントをドラッグして作成された、空ではない bindRef が含まれているパネル）では、連結されていないフィールドを使用することは&#x200B;**お勧めしません**。連結されていないフィールドで、データ損失が発生する可能性があるためです。特に連結していないフィールドについては、フォーム間で一意のフィールド名を設定することをお勧めします。
 
 ### フォームモデルのないアダプティブフォーム {#adaptive-form-with-no-form-model}
 
 フォームモデルが含まれていないアダプティブフォームの場合、すべてのフィールドのデータは、`<afUnboundData> tag` の `<data>` タグの下にあります。
 
-また、次の点にも注意してください。
+また、次のことに留意してください：
 
-各種フィールドに送信されたユーザーデータのための XML タグは、フィールド名を使用して生成されます。したがって、フィールド名は一意である必要があります。
+各種フィールドに送信されたユーザーデータのための XML タグは、フィールド名を使用して生成されます。したがって、一意のフィールド名を設定する必要があります。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><afData>
@@ -260,18 +256,18 @@ JSON スキーマモデルを使用するフィールドの場合、以下の JS
 
    >[!NOTE]
    >
-   >crx プロトコルは、事前入力済みデータのセキュリティを管理するので、デフォルトで許可されています。汎用正規表現を使用する他のプロトコルを介した事前入力は、脆弱性の原因となる場合があります。 設定で、データを保護するためのセキュア URL 設定を指定します。
+   >crx プロトコルは、事前入力済みデータのセキュリティを管理するので、デフォルトで許可されています。汎用的な正規表現を使用して他のプロトコル経由で事前入力すると、脆弱性が発生する可能性があります。データを保護するため、設定では安全性の高い URL を指定してください。
 
-## 繰り返し可能なパネルの好奇心が強いケース {#the-curious-case-of-repeatable-panels}
+## 繰り返し可能なパネルの例外的なケース {#the-curious-case-of-repeatable-panels}
 
 通常、連結（フォームスキーマ）フィールドと連結されていないフィールドは、同じアダプティブフォームで作成されますが、連結が繰り返し可能な場合に、次の例外がいくつかあります。
 
 * XFA フォームテンプレート、XSD、JSON スキーマ、FDM スキーマを使用したアダプティブフォームでは、連結されていない繰り返し可能なパネルはサポートされていません。
-* 連結された繰り返し可能パネルで、連結されていないフィールドを使用しないでください。
+* 連結された繰り返し可能なパネル内で、連結されていないフィールドを使用しないでください。
 
 >[!NOTE]
 >
->連結されていないフィールドにエンドユーザーが入力したデータ内で、連結されたフィールドと連結されていないフィールドが重なっている場合、それらのフィールドを混在させないでください。 可能な場合は、スキーマまたは XFA フォームテンプレートを変更し、連結されていないフィールドのエントリを追加して、連結されたデータも、送信されたデータ内の他のフィールドと同様に使用できるようにする必要があります。
+>連結されていないフィールドにエンドユーザーが入力したデータ上で、連結されているフィールドと連結されていないフィールドが重複する場合は、これらのフィールドを混在させないようにします。可能な場合は、スキーマまたは XFA フォームテンプレートを変更し、連結されていないフィールドのエントリを追加します。これにより、フィールドが連結されて、そのデータを送信済みデータの他のフィールドのデータと同様に使用できます。
 
 ## ユーザーデータの事前入力でサポートされるプロトコル {#supported-protocols-for-prefilling-user-data}
 
@@ -306,7 +302,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 ```
 
 * SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。[事前入力サービスの作成と実行](../../forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service)を参照してください。
-* 識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログインしたユーザーの識別子は、使用できるメタデータの例です。
+* 識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログイン済みユーザーの識別子は、使用できるメタデータの一例です。
 
 >[!NOTE]
 >
@@ -332,9 +328,9 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 %>
 ```
 
-すべてのデータを含む単純な XML または JSON 文字列を記述し、slingRequest に設定できます。 これは、slingRequest data 属性を設定するページに含むすべてのコンポーネントのレンダラー JSP で、簡単にできます。
+すべてのデータが含まれている単純な XML または JSON 文字列を記述して、slingRequest に設定できます。これは、slingRequest data 属性を設定するページに含むすべてのコンポーネントのレンダラー JSP で、簡単にできます。
 
-例えば、特定のタイプのヘッダーを持つページに特定のデザインを使用する場合などです。 これを達成するには、頁コンポーネントに含んで、`header.jsp` 属性を設定することができる独自の `data` を作成します。
+例えば、特定のタイプのヘッダーを使用して、特定のデザインのページを作成するとします。これを達成するには、頁コンポーネントに含んで、`header.jsp` 属性を設定することができる独自の `data` を作成します。
 
 例えば、Facebook、Twitter、LinkedIn などのソーシャルアカウントを使用して、ログイン時にデータを事前入力するとします。この場合、`header.jsp`ユーザーアカウントからデータを取得し、データパラメーターを設定するに単純な JSP を含めることができます。
 
@@ -360,25 +356,25 @@ prefill-page component.zip
 
 #### 事前入力サービスの作成 {#create-a-prefill-service}
 
-ボイラープレートパッケージ（サンプルの事前入力サービスパッケージ）には、AEM Forms事前入力サービスのサンプル実装が含まれています。 コードエディターでテンプレートパッケージを開きます。 例えば、Eclipse でテンプレートプロジェクトを開いて編集します。 コードエディターでテンプレートパッケージを開いた後、次の手順を実行してサービスを作成します。
+ボイラープレートパッケージ（サンプルの事前入力サービスパッケージ）には、AEM Forms事前入力サービスのサンプル実装が含まれています。 ボイラープレートパッケージをコードエディターで開きます。例えば、ボイラープレートプロジェクトを Eclipse で開いて編集します。ボイラープレートパッケージをコードエディターで開いたら、以下の手順でサービスを作成します。
 
-1. src\main\java\com\adobe\test\Prefill.javaファイルを編集用に開きます。
-1. コードで、次の値を設定します。
+1. src\main\java\com\adobe\test\Prefill.java ファイルを開いて編集します。
+1. コードで、以下の値を設定します。
 
    * `nodePath:` crx-repository の場所を指すノードパス変数には、データ（事前入力）ファイルのパスが含まれています。例：/content/prefilldata.xml
    * `label:` label パラメーターは、サービスの表示名を指定します。例：Default Prefill Service
 
 1. `Prefill.java` ファイルを保存して閉じます。
 1. `AEM Forms Client SDK` パッケージをボイラープレートプロジェクトのビルドパスに追加します。
-1. プロジェクトをコンパイルし、バンドルの.jar を作成します。
+1. プロジェクトをコンパイルし、バンドルの .jar を作成します。
 
-#### 事前入力サービスを開始して使用する {#start-and-use-the-prefill-service}
+#### 事前入力サービスを起動し、使用します {#start-and-use-the-prefill-service}
 
 事前入力サービスを起動するには、JAR ファイルを AEM Forms Web コンソールにアップロードし、サービスをアクティブ化します。これで、変換サービスがアダプティブフォームエディターに表示され始めます。 事前入力サービスをアダプティブフォームに関連付けるには、次の手順を実行します。
 
 1. Forms Editor でアダプティブフォームを開き、フォームコンテナのプロパティパネルを開きます。
 1. プロパティコンソールで、AEM Forms コンテナ／基本／事前入力サービスに移動します。
-1. デフォルトの事前入力サービスを選択し、 **[!UICONTROL 保存]**. サービスはフォームに関連付けられます。
+1. Default Prefill Service を選択し、「**[!UICONTROL 保存]**」をクリックします。サービスはフォームに関連付けられます。
 
 ## クライアントでのデータの事前入力 {#prefill-at-client}
 

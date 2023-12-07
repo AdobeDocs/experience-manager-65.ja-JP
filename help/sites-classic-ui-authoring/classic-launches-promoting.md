@@ -1,17 +1,15 @@
 ---
 title: ローンチの昇格
 description: コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページを昇格させると、ソースページの対応するページが、昇格したページのコンテンツに置き換わります。
-uuid: 91f1c6ac-8c4e-4459-aaab-feaa32befc45
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 3013adc3-bec6-4ecc-aefd-f8df2b86dfef
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
-workflow-type: ht
-source-wordcount: '314'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '315'
 ht-degree: 100%
 
 ---
@@ -46,7 +44,7 @@ ht-degree: 100%
 1. 作成者がローンチページを昇格させるときに、ローンチページをワークフローパッケージに格納します。
 1. パッケージをペイロードとして使用し、ワークフローモデルを開始します。
 
-ページの昇格時に自動的にワークフローを開始するには、パッケージノードの[ワークフローランチャーを設定](/help/sites-administering/workflows-starting.md#workflows-launchers)します。
+ページが昇格した場合に自動的にワークフローを開始するには、パッケージノードに[ワークフローランチャーを設定](/help/sites-administering/workflows-starting.md#workflows-launchers)します。
 
 例えば、作成者がローンチページを昇格させたときに、ページのアクティベーションリクエストを自動的に生成できます。パッケージノードの変更時に「アクティベーションをリクエスト」ワークフローを開始するように、ワークフローランチャーを設定します。
 

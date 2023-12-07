@@ -1,17 +1,13 @@
 ---
 title: AEM Forms におけるアセットの読み込みと書き出し
-seo-title: Importing and exporting assets to AEM Forms
 description: アダプティブフォームおよびテンプレートは、AEMインスタンスとの間で読み込み、書き出しを行うことができます。 これは、フォームを移行したり、複数のシステム間で移動したりするのに役立ちます。
-seo-description: You can import and export adaptive forms and templates from and in to AEM instances. This helps in migrating forms or moving them across systems.
-uuid: 937daedd-56f3-4e02-b695-b194b494d9bf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
 role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2509'
 ht-degree: 58%

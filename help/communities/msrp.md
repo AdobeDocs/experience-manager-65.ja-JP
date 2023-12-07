@@ -1,20 +1,16 @@
 ---
 title: MSRP - MongoDB ストレージリソースプロバイダー
-seo-title: MSRP - MongoDB Storage Resource Provider
 description: リレーショナルデータベースを共通ストアとして使用するようにAEM Communitiesを設定する
-seo-description: Set up AEM Communities to use a relational database as its common store
-uuid: 9fc06d4f-a60f-4ce3-8586-bcc836aa7de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 5%
+source-wordcount: '1142'
+ht-degree: 3%
 
 ---
 
@@ -39,7 +35,7 @@ AEM Communitiesが MSRP を共通ストアとして使用するように設定�
 
    * Solr バージョン 7.0
    * Solr には Java 1.7 以降が必要です
-   * サービスは不要
+   * サービスは不要です
    * 実行モードの選択：
       * スタンドアロンモード
       * [SolrCloud モード](solr.md#solrcloud-mode) （実稼動環境に推奨）
@@ -51,11 +47,11 @@ AEM Communitiesが MSRP を共通ストアとして使用するように設定�
 
 ### MSRP を選択 {#select-msrp}
 
-この [ストレージ設定コンソール](srp-config.md) では、使用する SRP の実装を指定するデフォルトのストレージ設定を選択できます。
+The [ストレージ設定コンソール](srp-config.md) では、使用する SRP の実装を指定するデフォルトのストレージ設定を選択できます。
 
 オーサー環境でストレージ設定コンソールにアクセスするには、次の手順に従います。
 
-* グローバルナビゲーションから、 **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL ストレージ設定]**.
+* グローバルナビゲーションから、「 」を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL Communities]** > **[!UICONTROL ストレージ設定]**.
 
 ![msrp](assets/msrp.png)
 
@@ -64,27 +60,27 @@ AEM Communitiesが MSRP を共通ストアとして使用するように設定�
 
    * **[!UICONTROL MongoDB URI]**
 
-     *デフォルト*:mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+     *デフォルト*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL MongoDB データベース]**
 
-     *デフォルト*:コミュニティ
+     *デフォルト*：コミュニティ
 
    * **[!UICONTROL MongoDB UGC コレクション]**
 
-     *デフォルト*:コンテンツ
+     *デフォルト*：コンテンツ
 
    * **[!UICONTROL MongoDB 添付ファイルコレクション]**
 
-     *デフォルト*:添付ファイル
+     *デフォルト*：添付ファイル
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper ホスト**
+   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) ホスト**
 
      で実行する場合 [SolrCloud モード](solr.md#solrcloud-mode) 外部の ZooKeeper で、この値を `HOST:PORT` ZooKeeper の *my.server.com:2181*
 
-     ZooKeeper アンサンブルの場合は、コンマ区切りで入力します。 `HOST:PORT` 値： *host1:2181,host2:2181*
+     ZooKeeper アンサンブルの場合は、コンマ区切りで入力します。 `HOST:PORT` 値 ( 例： *host1:2181,host2:2181*
 
      Solr をスタンドアロンモードで実行する場合は、内部 ZooKeeper を使用して空白のままにします。
      *デフォルト*: *&lt;blank>*
@@ -92,11 +88,11 @@ AEM Communitiesが MSRP を共通ストアとして使用するように設定�
       * **[!UICONTROL Solr URL]**
 スタンドアロンモードで Solr との通信に使用する URL です。
 SolrCloud モードで実行する場合は空白のままにします。
-        *デフォルト*:https://127.0.0.1:8983/solr/
+        *デフォルト*: https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr コレクション]**
 Solr コレクション名です。
-        *デフォルト*:collection1
+        *デフォルト*: collection1
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
@@ -137,7 +133,7 @@ Oak コレクションと MSRP コレクションの両方を集中的に使用�
 MSRP で設定された以前のバージョンからアップグレードする場合は、次の操作が必要です。
 
 1. を実行します。 [AEM Communitiesへのアップグレード](upgrade.md)
-1. 新しい Solr 設定ファイルをインストールします
+1. 新しい Solr 設定ファイルをインストールします。
    * の場合 [標準の MLS](solr.md#installing-standard-mls)
    * の場合 [高度な MLS](solr.md#installing-advanced-mls)
 1. MSRP のインデックス再作成の節を参照 [MSRP インデックス再作成ツール](#msrp-reindex-tool)
@@ -156,7 +152,7 @@ MSRP は、すべてのオーサーインスタンスとパブリッシュイン
 
 ## ユーザーデータの管理 {#managing-user-data}
 
-以下に関する情報： *ユーザー*, *ユーザープロファイル* および *ユーザーグループ*&#x200B;パブリッシュ環境に入力されることが多い場合は、次にアクセスします。
+に関する情報 *ユーザー*, *ユーザープロファイル* および *ユーザーグループ*&#x200B;パブリッシュ環境に入力されることが多い場合は、次にアクセスします。
 
 * [ユーザー同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
@@ -165,7 +161,7 @@ MSRP は、すべてのオーサーインスタンスとパブリッシュイン
 
 新しい設定ファイルをインストールしたり、破損した Solr インデックスを修復する際に、MSRP 用の Solr のインデックスを再作成するための HTTP エンドポイントがあります。
 
-このツールを使用すると、MongoDB は *真実* （MSRP 用）バックアップは MongoDB からのみ取得する必要があります。
+このツールを使用すると、MongoDB は *真実* MSRP の場合、バックアップは MongoDB からのみ実行する必要があります。
 
 UGC ツリー全体のインデックスを再作成することも、*path *data パラメーターで指定された特定のサブツリーのみを再作成することもできます。
 
@@ -175,8 +171,8 @@ UGC ツリー全体のインデックスを再作成することも、*path *dat
 
 適切なデフォルト値は 5000 です。
 
-* メモリが問題の場合は、より小さい数値を指定します
-* 速度が問題の場合は、速度を上げるために大きい数値を指定します
+* メモリが問題の場合は、より小さい数値を指定します。
+* 速度が問題の場合は、速度を上げるために大きい数値を指定します。
 
 ### cURL コマンドを使用した MSRP インデックス再作成ツールの実行 {#running-msrp-reindex-tool-using-curl-command}
 
@@ -186,16 +182,16 @@ UGC ツリー全体のインデックスを再作成することも、*path *dat
 
 cURL -u *サインイン* -d *データ* *reindex-url*
 
-*サインイン* = administrator-id:password 例：admin:admin
+*サインイン* = administrator-id:password 例： admin:admin
 
 *データ* = &quot;batchSize=*サイズ*&amp;path=*path&quot;*
 
 *サイズ* =操作ごとにインデックスを再作成する UGC エントリの数
 `/content/usergenerated/asi/mongo/`
 
-*パス* =再インデックスする UGC のツリーのルート位置
+*パス* =インデックスを再作成する UGC のツリーのルート位置
 
-* すべての UGC を再インデックスするには、 `asipath`プロパティ
+* すべての UGC を再インデックスするには、 `asipath`のプロパティ
   `/etc/socialconfig/srpc/defaultconfiguration`
 * インデックスを一部の UGC に制限するには、次のサブツリーを指定します。 `asipath`
 
@@ -222,7 +218,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ストレージオプションの設定を確認して、MSRP がデフォルトのプロバイダーに設定されていることを確認します。 デフォルトでは、ストレージリソースプロバイダーは JSRP です。
 
-すべてのオーサーインスタンスとパブリッシュAEMインスタンスで、 [ストレージ設定コンソール](srp-config.md) AEMリポジトリを確認します。
+すべてのオーサーインスタンスとパブリッシュAEMインスタンスで、 [ストレージ設定コンソール](srp-config.md) またはAEMリポジトリを確認します。
 
 * JCR で、 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -243,7 +239,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ログに次のエラーが表示される場合は、Solr スキーマファイルが正しく設定されていないことを示します。
 
-#### JsonMappingException:未定義のフィールド provider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException: undefined field provider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
@@ -253,7 +249,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ... 124 common frames omitted
 ```
 
-エラーを解決するには、 [標準の MLS のインストール](solr.md#installing-standard-mls)、次を確認します。
+エラーを解決するには、 [標準の MLS のインストール](solr.md#installing-standard-mls)、次の点を確認します。
 
 * XML 設定ファイルが正しい Solr の場所にコピーされました。
 * 新しい設定ファイルが既存の設定ファイルに置き換えられた後、Solr が再起動されました。

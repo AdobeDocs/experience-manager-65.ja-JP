@@ -1,21 +1,17 @@
 ---
 title: コミュニティ機能
-seo-title: Community Functions
 description: コミュニティ機能コンソールへのアクセス方法を説明します。
-seo-description: Learn how to access the Community Functions console
-uuid: d3d70134-f318-4709-a673-b01a3467d980
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2220'
-ht-degree: 6%
+source-wordcount: '2215'
+ht-degree: 2%
 
 ---
 
@@ -228,7 +224,7 @@ ht-degree: 6%
 
   選択すると、権限を持つメンバーのみがトピックを投稿できるようになります。 [権限を持つメンバーのセキュリティグループ](/help/communities/users.md#privileged-members-group). 選択しない場合、すべてのコミュニティメンバーが投稿できます。 初期設定はオフです。
 
-* **公開作成を許可**
+* **公開の作成を許可**
 
   選択すると、権限を持つコミュニティメンバーは、パブリッシュ環境でグループを作成できます。 選択を解除すると、新しいグループ（サブコミュニティ）は、コミュニティサイトのグループコンソールからオーサー環境でのみ作成できます。
 初期設定ではオンになっています。

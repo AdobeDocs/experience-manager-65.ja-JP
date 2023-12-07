@@ -1,15 +1,11 @@
 ---
 title: タスクまたはフォームをドラフトとして保存する
-seo-title: Saving a task or form as a draft
 description: AEM Formsアプリケーションでタスクまたはフォームのドラフトコピーを保存する手順
-seo-description: Steps to save a draft copy of a task or a form in the AEM Forms app
-uuid: 1192d2c2-05a4-4a96-9015-e56111aa2646
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 9950288c-b5a2-4945-afad-be9ce2abc8e9
 exl-id: b4a23b2e-ab18-402c-8dfa-2533ee692912
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 19%

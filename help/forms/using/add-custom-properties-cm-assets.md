@@ -1,20 +1,16 @@
 ---
 title: Correspondence Management アセットへのカスタムプロパティの追加
-seo-title: Add custom properties to Correspondence Management assets
 description: Correspondence Management アセットにカスタムプロパティを追加する方法を説明します。
-seo-description: Learn how to add custom properties to Correspondence Management assets.
-uuid: 4716e181-d3ea-424b-9544-376cc649bce7
 content-type: reference
 topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '4428'
-ht-degree: 53%
+source-wordcount: '4431'
+ht-degree: 52%
 
 ---
 
@@ -71,7 +67,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 1. 次の手順を使用し、新規作成した items フォルダーにすべてのアセットのカスタムプロパティ用のノードを追加します（例：GeoLocation）。
 
-   1. items フォルダーを右クリックし、**作成**／**ノードを作成**&#x200B;を選択します。
+   1. items フォルダを右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
 
       ![CRX でのノードの作成](assets/itemscreatenode.png)
 
@@ -338,7 +334,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 1. 新規作成した items フォルダーに、アセットのカスタムタブ用のノードを追加します（ここでは「mytab」とします。この名前はユーザーインターフェイスには表示されません）。手順は次のとおりです。
 
-   1. items フォルダーを右クリックし、**作成**／**ノードを作成**&#x200B;を選択します。
+   1. items フォルダを右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
       **名前：** mytab（またはこのプロパティに与える任意の名前）
@@ -426,7 +422,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 1. 次の手順を使用し、新規作成した items フォルダーにアセットのカスタムタブ用のノードを追加します（例：customtab）。
 
-   1. items フォルダーを右クリックし、**作成**／**ノードを作成**&#x200B;を選択します。
+   1. items フォルダを右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 
       **名前：** customtab（またはこのプロパティに与える任意の名前）

@@ -1,18 +1,14 @@
 ---
 title: コンテンツのプロパティを使用したコンテンツのエクスポート
-seo-title: Using Content Properties to Export Content
 description: 以下のページに、アプリのプロパティとノードを示します。
-seo-description: The following page shows App Properties and Nodes.
-uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
 exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '332'
 ht-degree: 10%
 
 ---
@@ -46,7 +42,7 @@ ht-degree: 10%
   <tr>
    <td>dps-exportTemplate</td>
    <td>String:Path</td>
-   <td><p>アプリの書き出し設定のパス。 書き出し設定は、2 つの子 ContentSync 書き出し設定テンプレートを持つフォルダーです。</p> <p><i>dps-article</i>:記事のコンテンツを書き出すためのコンテンツ同期書き出し設定</p> <p><i>dps-HTMLResources</i>:アプリ/記事の共有リソースを書き出すためのコンテンツ同期書き出し設定</p> </td>
+   <td><p>アプリの書き出し設定のパス。 書き出し設定は、2 つの子 ContentSync 書き出し設定テンプレートを持つフォルダーです。</p> <p><i>dps-article</i>：記事のコンテンツを書き出すための ContentSync 書き出し設定</p> <p><i>dps-HTMLResources</i>：アプリ/記事の共有リソースを書き出すためのコンテンツ同期書き出し設定</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
@@ -61,7 +57,7 @@ ht-degree: 10%
   <tr>
    <td>dps-resourceType</td>
    <td>文字列</td>
-   <td>コンテンツタイプ.</td>
+   <td>コンテンツタイプ。</td>
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploaded</td>
@@ -86,8 +82,8 @@ ht-degree: 10%
  </tbody>
 </table>
 
-以下を使用できます。 ***コンテンツプロパティ*** コンテンツを作成します。 記事と共有リソースを作成および書き出すには、次のリソースを参照してください。
+以下を使用できます。 ***コンテンツのプロパティ*** コンテンツを作成します。 記事と共有リソースを作成および書き出すには、次のリソースを参照してください。
 
-* [コンテンツプロパティ](/help/mobile/content-properties.md)
+* [コンテンツのプロパティ](/help/mobile/content-properties.md)
 * [記事のエクスポート設定の作成](/help/mobile/creating-article-export-configuration.md)
 * [共有リソースのエクスポート設定の作成](/help/mobile/creating-shared-resources-export-configuration.md)

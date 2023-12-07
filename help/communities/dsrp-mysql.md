@@ -1,20 +1,16 @@
 ---
 title: DSRP 向け MySQL 設定
-seo-title: MySQL Configuration for DSRP
 description: MySQL サーバーに接続し、UGC データベースを確立する方法
-seo-description: How to connect to the MySQL server and establish the UGC database
-uuid: c058cc88-7ca2-4aed-9a36-b080e603f886
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 role: Admin
 exl-id: eafb60be-2963-4ac9-8618-50fd9bc6fe6c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 4%
+source-wordcount: '705'
+ht-degree: 2%
 
 ---
 
@@ -98,7 +94,7 @@ MySQL Workbench を初めて起動したときは、他の目的で既に使用�
 
 1. 選択 `Test Connection` 実行中の MySQL サービスへの接続を検証するには、以下を実行します。
 
-**備考**:
+**メモ**:
 
 * デフォルトのポートは `3306`
 * 選択した接続名が、データソース名としてに入力されます。 [JDBC OSGi 設定](#configurejdbcconnections)

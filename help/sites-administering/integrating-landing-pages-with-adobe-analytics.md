@@ -1,16 +1,12 @@
 ---
 title: ランディングページと Adobe Analytics の統合
-seo-title: Integrating Landing Pages with Adobe Analytics
 description: ランディングページをAdobe Analyticsと統合する方法を説明します。
-seo-description: Learn how to integrate landing pages with Adobe Analytics.
-uuid: 8f6672d1-497f-4ccb-b3cc-f6120fc467ba
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 56%

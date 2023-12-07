@@ -1,25 +1,23 @@
 ---
 title: SCF Handlebars ヘルパー
 description: SCF での作業を容易にする Handlebars ヘルパーメソッド
-uuid: 9c514199-871e-4b68-8147-2052d2eeda15
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 5%
+source-wordcount: '1453'
+ht-degree: 3%
 
 ---
 
 # SCF Handlebars ヘルパー {#scf-handlebars-helpers}
 
-| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
+| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ⇒](server-customize.md)** |
 |---|---|
-|   | **[クライアント側のカスタマイズ ⇒](client-customize.md)** |
+|   | **[クライアント側のカスタマイズ⇒](client-customize.md)** |
 
 Handlebars ヘルパー（ヘルパー）は、SCF コンポーネントの操作を容易にするために Handlebars スクリプトから呼び出すメソッドです。
 
@@ -599,6 +597,6 @@ clientlib は以下を実行する必要があります。
 
 注意： SCF ヘルパーは、 `/etc/clientlibs/social/commons/scf/helpers.js`.
 
-| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
+| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ⇒](server-customize.md)** |
 |---|---|
-|   | **[クライアント側のカスタマイズ ⇒](client-customize.md)** |
+|   | **[クライアント側のカスタマイズ⇒](client-customize.md)** |

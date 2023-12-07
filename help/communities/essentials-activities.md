@@ -1,40 +1,36 @@
 ---
 title: アクティビティストリームの基本事項
-seo-title: Activity Stream Essentials
-description: メンバーが実行した最近のアクティビティのリスト、または単一のコンテンツスレッドの最近のアクティビティのリスト
-seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
-uuid: 30c5ac08-0af0-4670-9d81-0beb5c93e00a
+description: メンバーが実行した最近のアクティビティのリスト、またはコンテンツの単一のスレッド上の最近のアクティビティのリスト
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
 exl-id: d98bcbe4-3f80-49ec-b40c-417be0d97350
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 62%
+source-wordcount: '267'
+ht-degree: 4%
 
 ---
 
 # アクティビティストリームの基本事項 {#activity-stream-essentials}
 
-フォーラムまたはブログへの投稿など、サインインしているコミュニティメンバーのアクティビティを 1 つのストリームにまとめ、アクティビティストリームコンポーネントの設定を使用して、さまざまな方法でフィルタリングしたり、表示したりできます。
+フォーラムやブログへの投稿など、サインインしたコミュニティメンバーのアクティビティは、ストリームに収集され、アクティビティストリームコンポーネントの設定を通じて、様々な方法でフィルタリングおよび表示できます。
 
-コミュニティメンバーが関心のある投稿や他のコミュニティメンバーをフォローしているときは、フォロー機能によって、別のアクティビティセットが追加されます。
+コミュニティメンバーが関心のある投稿や他のコミュニティメンバーの投稿をフォローする際に、フォロー機能は別のアクティビティのセットを追加します。
 
-どの[コミュニティサイト](/help/communities/overview.md#communitiessites)にも、サインインしているメンバーのユーザープロファイルページが用意されており、メンバーのアクティビティが同じ形式で表示されます。
+すべて [コミュニティサイト](/help/communities/overview.md#communitiessites) 同じ方法でメンバーアクティビティを表示するサインイン済みメンバーのユーザープロファイルページを含めます。
 
 ## 概念  {#concepts}
 
 An *アクティビティストリーム* は、メンバーが実行した最近のアクティビティのリスト、またはフォーラムトピックやブログなどの単一のコンテンツスレッド上での最近のアクティビティのリストです。
 
-メンバーは、別の個人やコンテンツをフォローすることによって、アクティビティストリームをフォローできます。
+メンバーは、別の個人またはコンテンツをフォローすることで、アクティビティストリームをフォローします。
 
-ニュースフィード&#x200B;**&#x200B;とは、メンバーがフォローしている複数のアクティビティストリームを単一のストリームに統合したものです。
+A *ニュースフィード* は、メンバーが続くアクティビティストリームを単一のストリームに結合したものです。
 
-*[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)*&#x200B;とは、メンバー間のフォロー関係を表したものです。
+A *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)* は、あるメンバーと別のメンバーとの次の関係をキャプチャします。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -45,7 +41,7 @@ An *アクティビティストリーム* は、メンバーが実行した最�
    <td>social/activitystreams/components/hbs/activitystreams</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
+   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>

@@ -1,16 +1,12 @@
 ---
 title: SAML 2.0 認証ハンドラー
-seo-title: SAML 2.0 Authentication Handler
 description: AEMの SAML 2.0 認証ハンドラーについて説明します。
-seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
-uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 70%

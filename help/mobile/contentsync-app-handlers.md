@@ -1,18 +1,14 @@
 ---
 title: 既製のアプリハンドラー
-seo-title: Out of the Box App Handlers
 description: このページでは、AEMを使用したAdobe PhoneGap Enterprise 向けの標準ハンドラーについて説明します。
-seo-description: Follow this page to learn about the out-of-the-box handlers for Adobe PhoneGap Enterprise with AEM.
-uuid: 436038cb-fb76-4bb5-ae79-5d4043b81dd9
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: fec86f03-f81e-460a-9f84-d6304c95128c
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1408'
 ht-degree: 1%
 
 ---

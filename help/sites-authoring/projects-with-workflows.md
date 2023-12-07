@@ -1,16 +1,12 @@
 ---
 title: プロジェクトワークフローの操作
-seo-title: Working with Project Workflows
 description: すぐに使用可能な様々なプロジェクトワークフローが用意されています。
-seo-description: A variety of project workflows are available out of the box.
-uuid: 376922ca-e09e-4ac8-88c8-23dac2b49dbe
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
-discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 69%

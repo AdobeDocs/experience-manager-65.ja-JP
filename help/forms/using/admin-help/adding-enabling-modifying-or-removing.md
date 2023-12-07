@@ -1,16 +1,12 @@
 ---
 title: エンドポイントの追加、有効化、変更または削除
-seo-title: Adding, enabling, modifying, or removing endpoints
 description: エンドポイントを追加、有効化、変更、削除する方法について説明します。
-seo-description: Learn how to add, enable, modify and remove endpoints.
-uuid: c53f225b-3d55-42f6-8982-0cd7dde0c4f5
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 7d0d4f96-fc72-4e2b-a2cc-5741b0a30f74
 exl-id: b7461d5c-95d1-4da2-9d2a-f54c410a87f9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 10%

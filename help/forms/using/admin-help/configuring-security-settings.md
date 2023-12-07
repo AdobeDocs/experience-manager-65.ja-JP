@@ -1,18 +1,16 @@
 ---
 title: セキュリティ設定の指定
 description: セキュリティ設定を構成する方法を説明します。 アクセスを制限することで、PDF・ドキュメントを保護できます。 ドキュメントの暗号化、認証、パスワード保護を行うことができます。
-uuid: 9747f268-3551-4064-8dba-e1de4a577843
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a89ab508-173f-4b1c-88d9-ef944af4d9ae
 feature: PDF Generator
 exl-id: be076477-2681-4570-953d-6c44d3c30843
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1381'
-ht-degree: 53%
+source-wordcount: '1418'
+ht-degree: 54%
 
 ---
 

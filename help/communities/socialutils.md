@@ -1,25 +1,21 @@
 ---
 title: SocialUtils のリファクタリング
-seo-title: SocialUtils Refactoring
-description: パッケージ com.adobe.cq.social.ugcbase.SocialUtils は AEM 6.1 で廃止されました
-seo-description: The package com.adobe.cq.social.ugcbase.SocialUtils was deprecated in AEM 6.1
-uuid: 54a0d98e-5ead-4c12-850f-8252ea9b3263
+description: AEM 6.1 では、com.adobe.cq.social.ugcbase.SocialUtils パッケージが非推奨（廃止予定）となりました。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 90%
+source-wordcount: '295'
+ht-degree: 2%
 
 ---
 
 # SocialUtils のリファクタリング {#socialutils-refactoring}
 
-## SocialUtils パッケージの廃止 {#socialutils-package-deprecated}
+## SocialUtils パッケージは廃止されました {#socialutils-package-deprecated}
 
 パッケージ `com.adobe.cq.social.ugcbase.SocialUtils` はAEM 6.1 で非推奨（廃止予定）となりました。
 
@@ -38,9 +34,9 @@ ht-degree: 90%
 | Resource getUGCResource(Resource userResource, String resourceTypeHint) |  |
 | boolean hasModeratePermissions(Resource resource) |  |
 | String resourceToACLPath(Resource resource) |  |
-| String resourceToUGCStoragePath(Resource resource) | String resourceToUGCPath(Resource resource) に代わるメソッド |
+| String resourceToUGCStoragePath(Resource resource) | String resourceToUGCPath(Resource resource) を置き換えます。 |
 | String UGCToResourcePath(Resource resource) |  |
-| String UGCToResourcePath(String ugcPath) | メソッドの署名を変更 |
+| String UGCToResourcePath(String ugcPath) | メソッドの署名が変更されました |
 | String UGCToResourcePath(String ugcPath, ResourceResolver resolver) | 新規 |
 
 | のメソッド `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities |
@@ -56,7 +52,7 @@ ht-degree: 90%
 | String getAvatar(UserProperties userProperties, String absoluteDefaultAvatar) |
 | String getAvatar(UserProperties userProperties, String absoluteDefaultAvatar, SocialUtils.AVATAR_SIZE size) |
 | Page getContainingPage(Resource resource) |
-| String getSocialProfileURL(String username, ResourceResolver resolver, Page page) |
+| String getSocialProfileURL(String username, ResourceResolver resolver, Page) |
 | UserProperties getUserProperties(ResourceResolver resolver, String userId) |
 
 ## 内部でのみ使用 {#for-internal-use-only}
@@ -84,7 +80,7 @@ ht-degree: 90%
 |---|
 | Resource getResourceAtPath(ResourceResolver resolver, String path) |
 | Resource getResourceAtPath(ResourceResolver resolver, String path, String resourceType) |
-| Configuration getStorageCloudServiceConfig(Resource resource) |
+| 設定 getStorageCloudServiceConfig(Resource resource) |
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
 | boolean mayAccessUGC(ResourceResolver resolver) |

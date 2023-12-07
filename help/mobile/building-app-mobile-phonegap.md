@@ -1,14 +1,12 @@
 ---
 title: モバイルアプリケーションのビルド
 description: このページでは、GitHub から入手可能なコードを使用してモバイルアプリケーションを構築する方法に関する詳細な手順を説明しています。 アプリケーションをビルドして、テスト用またはアプリストアに公開用に、デバイスまたはシミュレーターにインストールします。 PhoneGap コマンドラインインターフェイスを使用して、またはPhoneGap Buildを使用してクラウド内で、アプリケーションをローカルに構築できます。
-uuid: 1ff6fe1a-24cc-4973-a2cd-8d356bc649b0
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 2%

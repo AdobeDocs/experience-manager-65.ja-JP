@@ -1,19 +1,15 @@
 ---
 title: アプリのメタデータの編集
-seo-title: Editing App Metadata
 description: アプリをベンダーのストアにリリースするには、アプリのメタデータが必要です。 このページでは、アプリデータの編集について説明します。
-seo-description: App metadata is required details for releasing an application to a vendor's store. Follow this page to learn about editing app data.
-uuid: c140be0f-8403-416e-af0f-29072a2ab942
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: 07b38da6-2efa-4a43-9afa-7151a241a5ad
 exl-id: 897a04b9-e357-4f1c-8aa0-2c2528f8556d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 8%
+source-wordcount: '377'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +19,7 @@ ht-degree: 8%
 >
 >Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-この **アプリを管理** タイルと「アプリを管理」ページでは、アプリケーションのメタデータを表示および編集する手段を提供します。 アプリをベンダーのストアにリリースするには、アプリのメタデータが必要です。 これには、一般的なメタデータ、iOSのメタデータ、スクリーンショットが含まれる場合があります。 詳しくは、 [アプリを管理タイル](/help/mobile/phonegap-app-details-tile.md) 共通メタデータとiOSメタデータについて詳しくは、を参照してください。
+The **アプリを管理** タイルと「アプリを管理」ページでは、アプリケーションのメタデータを表示および編集する手段を提供します。 アプリをベンダーのストアにリリースするには、アプリのメタデータが必要です。 これには、一般的なメタデータ、iOSのメタデータ、スクリーンショットが含まれる場合があります。 詳しくは、 [アプリを管理タイル](/help/mobile/phonegap-app-details-tile.md) 共通メタデータとiOSメタデータについて詳しくは、を参照してください。
 
 ## アプリのデータの編集 {#editing-the-app-data}
 
@@ -33,7 +29,7 @@ ht-degree: 8%
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. 詳細を表示または編集するには、「。..」をクリックします。 の右下隅に **アプリを管理** タイル。
+1. 詳細を表示または編集するには、 **アプリを管理** タイル。
 
 1. 次の図に示すように、使用可能な 5 つのタブのいずれかで詳細を入力または表示します。
 
@@ -58,7 +54,7 @@ ht-degree: 8%
 
 アセットをスクリーンショットとして追加するには：
 
-1. 次の **アプリを管理** ページで、「追加」（プラスアイコン）をクリックします。
+1. 次の項目を編集モードで **アプリを管理** ページで、「追加」（プラスアイコン）をクリックします。
 1. アセットを選択し、 **選択** をクリックしてアセットを追加します。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)

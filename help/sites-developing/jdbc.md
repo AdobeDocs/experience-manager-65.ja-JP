@@ -1,19 +1,15 @@
 ---
 title: SQL データベースへの接続
-seo-title: Connecting to SQL Databases
 description: 外部 SQL データベースにアクセスして、AEM アプリケーションがデータを操作できるようにします
-seo-description: Access an external SQL database to so that your AEM applications can interact with the data
-uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 85%
+source-wordcount: '895'
+ht-degree: 83%
 
 ---
 
@@ -27,7 +23,7 @@ ht-degree: 85%
 
 ## JDBC データベースドライバーのバンドル {#bundling-the-jdbc-database-driver}
 
-一部のデータベースベンダーは、OSGi バンドルで JDBC ドライバーを提供しています。例えば、 [MySQL](https://dev.mysql.com/downloads/connector/j/).データベースの JDBC ドライバーが OSGi バンドルとして使用できない場合は、ドライバー JAR を取得し、OSGi バンドルに含めます。バンドルは、データベースサーバーとの対話に必要なパッケージを書き出す必要があります。また、バンドルは、参照するパッケージもインポートする必要があります。
+一部のデータベースベンダーは、OSGi バンドルで JDBC ドライバーを提供しています。例えば、 [MySQL](https://dev.mysql.com/downloads/connector/j/). データベースの JDBC ドライバーが OSGi バンドルとして使用できない場合は、ドライバー JAR を取得し、OSGi バンドルに含めます。 バンドルは、データベースサーバーとの対話に必要なパッケージを書き出す必要があります。 また、バンドルは、参照するパッケージもインポートする必要があります。
 
 次の例では、[Maven 用プラグインのバンドル](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)を使用して、HSQLDB ドライバーを OSGi バンドル内にラップします。POM では、このプラグインに対して、hsqldb.jar ファイルを埋め込み、そのファイルを依存関係として識別するように指示します。すべての org.hsqldb パッケージが書き出されます。
 
@@ -110,7 +106,7 @@ CQ で作業する場合は、いくつかの方法でこのようなサービ�
 
 * 検証クエリ ( `jdbc.validation.query`)：接続が成功したことを検証するために使用する SQL 文（例： ） `select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`. データタイプは `String` です。
 
-* デフォルトで読み取り専用（default.readonly）：この接続を読み取り専用アクセスにする場合に、このオプションを選択します。データタイプは `Boolean` です。
+* Readonly By Default(default.readonly)：接続で読み取り専用アクセスを提供する場合に、このオプションを選択します。 データタイプは `Boolean` です。
 * デフォルトで自動コミット（`default.autocommit`）：データベースに送信される SQL コマンドごとに個別のトランザクションを作成し、各トランザクションを自動的にコミットする場合は、このオプションを選択します。コード内でトランザクションを明示的にコミットする場合は、このオプションを選択しないでください。データタイプは `Boolean` です。
 
 * プールサイズ（`pool.size`）：データベースに対して使用可能にする同時接続の数です。データタイプは `Long` です。

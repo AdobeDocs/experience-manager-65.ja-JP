@@ -1,16 +1,12 @@
 ---
 title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
-seo-title: Using AEM translation workflow to localize adaptive forms and document of record
 description: アダプティブフォームとレコードのドキュメントをローカライズするには、AEM翻訳ワークフローを使用する方法を説明します。
-seo-description: Learn to use AEM translation workflows to localize adaptive forms and document of record.
-uuid: 6c87a283-0203-4cf7-989a-3770ddbbbd6e
 content-type: reference
 topic-tags: develop
-discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
 feature: Adaptive Forms
 exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 76%

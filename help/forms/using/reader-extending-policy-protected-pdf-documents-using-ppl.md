@@ -1,17 +1,13 @@
 ---
 title: ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。
-seo-title: Reader extending policy-protected PDF documents using Portable Protection Library
 description: Reader拡張機能を使用すると、Acrobat Readerを介してAdobe PDFドキュメントのインタラクティブ機能を有効にできます。 DRM で保護されたライブラリドキュメントを Reader 用に拡張するには、Portable Protection Library (PPL) を使用します。PDF
-seo-description: Reader extensions enable interactive features in Adobe PDF documents through Acrobat Reader. You can use the Portable Protection Library (PPL) to reader extend the DRM protected PDF documents.
-uuid: 0da17641-d24c-43c2-b918-8b5abe1e5473
 contentOwner: khsingh
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-discoiquuid: 83ca522e-d16e-4196-9aa7-84f85de8dee2
 feature: Document Security
 exl-id: fe5d83e8-5e36-4146-a20a-dab2213055e2
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 32%

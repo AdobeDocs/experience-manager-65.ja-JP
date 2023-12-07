@@ -1,17 +1,13 @@
 ---
 title: HTML5 フォーム のデバッグ
-seo-title: Debugging HTML5 forms
 description: このドキュメントでは、既知の問題をトラブルシューティングする手順を示します。
-seo-description: The document list steps to troubleshoot various known issues.
-uuid: df1835aa-6033-4ecb-97c8-4c3b7b96b943
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 feature: Mobile Forms
 exl-id: 7330c03f-7102-43c0-aac6-825cce8a113d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 39%

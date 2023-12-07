@@ -1,18 +1,14 @@
 ---
 title: AEM での Sling Resource Merger の使用
-seo-title: Using the Sling Resource Merger in AEM
 description: Sling Resource Merger は、リソースにアクセスおよびマージするためのサービスを提供します
-seo-description: The Sling Resource Merger provides services to access and merge resources
-uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1247'
 ht-degree: 93%
 
 ---

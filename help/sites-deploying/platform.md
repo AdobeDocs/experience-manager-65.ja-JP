@@ -1,19 +1,15 @@
 ---
 title: AEM プラットフォームの概要
-seo-title: Introduction to the AEM Platform
 description: この記事では、AEM プラットフォームとその最も重要なコンポーネントの概要を説明します。
-seo-description: This article provides a general overview of the AEM platform and its most important components.
-uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: ht
-source-wordcount: '754'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '761'
 ht-degree: 100%
 
 ---

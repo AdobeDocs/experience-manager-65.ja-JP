@@ -1,21 +1,17 @@
 ---
 title: セキュリティチェックリスト
-seo-title: Security Checklist
 description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
-seo-description: Learn about the various security considerations when configuring and deploying AEM.
-uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3004'
-ht-degree: 98%
+source-wordcount: '2959'
+ht-degree: 97%
 
 ---
 
@@ -278,7 +274,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 **DoS を防ぐための Sling の設定**
 
-Sling は&#x200B;*コンテンツ中心型*&#x200B;です。（HTTP）リクエストがそれぞれ JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、コンテンツに焦点を当てた処理が行われます。
+Sling は&#x200B;*コンテンツ中心型*&#x200B;です。(HTTP) 要求が JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、処理はコンテンツに焦点を当てます。
 
 * 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
 * 次に、レンダラーまたはスクリプトが、リクエストの特定の部分（セレクターや拡張子など）と共にリソースプロパティから配置されます。

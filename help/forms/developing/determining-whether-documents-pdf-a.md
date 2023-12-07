@@ -1,27 +1,23 @@
 ---
 title: ドキュメントが PDF/A に準拠しているかどうかの検証
-seo-title: Determining Whether Documents Are PDF/A-Compliant
 description: Assembler サービスでは、Java API と web サービス API を使用して、PDF ドキュメントが PDF/A に準拠しているかどうかを判断できます。
-seo-description: Use the Assembler service to determine if a PDF document is PDF/A-compliant using the Java API and Web Service API.
-uuid: 4e9d8c8f-2153-411b-9c4b-2d14b3c8f4bb
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: c429d6e1-7847-43c8-bf75-cb0078dbb9d5
 role: Developer
 exl-id: 096fd2ac-616f-484a-b093-9d98b2f87093
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2081'
-ht-degree: 98%
+source-wordcount: '2065'
+ht-degree: 99%
 
 ---
 
 # ドキュメントが PDF/A に準拠しているかどうかの検証 {#determining-whether-documents-are-pdf-a-compliant}
 
-Assembler サービスを使用して、PDF ドキュメントが PDF/A に準拠しているかどうかを判断できます。PDF/A ドキュメントは、ドキュメントのコンテンツを長期間保存するためのアーカイブ形式として存在します。フォントはドキュメントに埋め込まれ、ファイルは非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。
+Assembler サービスを使用して、PDF ドキュメントが PDF/A に準拠しているかどうかを判断できます。PDF/A ドキュメントは、ドキュメントのコンテンツを長期間保存するためのアーカイブ形式として存在します。フォントはドキュメントに埋め込まれ、ファイルは非圧縮になります。その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。
 
 PDF/A-1 仕様は、A と B という 2 つの適合レベルで構成されます。2 つのレベルの主な違いは、適合レベル B には必要ない論理構造（アクセシビリティ）のサポートです。適合レベルに関係なく、PDF/A-1 では、生成されたPDF/A ドキュメント内にすべてのフォントが埋め込まれていることを示します。現時点では、検証（および変換）では PDF/A-1b のみがサポートされています。
 

@@ -1,24 +1,22 @@
 ---
 title: Forms でのレビューの作成と管理
-seo-title: Creating and managing reviews in forms
-description: レビューとは、1 人以上のレビュー担当者にフォームへのコメントを許可するメカニズムです。
-seo-description: A Review is a mechanism that allows one or more reviewers to comment on a form.
+description: レビューとは、1 人以上のレビュー担当者がフォームにコメントすることを許可するメカニズムです。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 93%
+source-wordcount: '701'
+ht-degree: 100%
 
 ---
 
-# フォームへのレビューの作成と管理{#creating-and-managing-reviews-to-forms}
+# フォームでのレビューの作成と管理{#creating-and-managing-reviews-to-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+[新しいアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)、または [AEM Sites ページにアダプティブフォームを追加する](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)際には、<span class="preview"> 最新の拡張可能なデータキャプチャである[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -27,7 +25,7 @@ ht-degree: 93%
 
 ## レビュー {#review}
 
-レビューとは、1 人以上のレビュー担当者に対してフォームへのコメントを許可するメカニズムです。
+レビューとは、1 人以上のレビュー担当者がフォームにコメントすることを許可するメカニズムです。
 
 ## レビューの設定 {#setting-up-a-review}
 
@@ -35,9 +33,9 @@ ht-degree: 93%
 1. フォームに進行中のレビューがない場合には、「**レビューを開始**」![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンがアクションバーに表示されます。**レビューを開始** ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
 1. 以下の情報を入力します。
 
-   * **タイトル**：必須。英数字、ハイフン、アンダースコアを含めることができます。
+   * **タイトル**：必須。英数字、ハイフンおよびアンダースコアを含めることができます。
    * **説明**：任意。レビューの目的／内容の説明。
-   * **期限**：任意。レビューが終了する日付です。期限を過ぎている場合、タスクが「期限切れ」と表示されます。
+   * **期限**：任意。レビューが終了する日付。期限を過ぎている場合、タスクが「期限切れ」と表示されます。
    * **レビュー担当者名**：少なくとも 1 つは必須です。コンボボックスを使用して、レビュー担当者を追加し、一致するすべての名前の名前リストを入力します。名前を選択し、「**追加**」をクリックします。「**レビュー担当者**」タブの次のセクションには、すべてのレビュー担当者の名前が表示されます。
 
 1. 「**開始**」をクリックして、レビューを開始します。
@@ -58,7 +56,7 @@ ht-degree: 93%
 
    レビュー担当者通知アラート
 
-1. フォームのレビュー担当者はコメントボックスを使用することができます。他のユーザーはコメントを読むことはできますが、自分で追加することはできません。
+1. フォームのレビュー担当者はコメントボックスを使用できます。他のユーザーはコメントを読むことはできますが、自分で追加することはできません。
 
 ## レビューの管理 {#managing-a-review}
 
@@ -73,7 +71,7 @@ ht-degree: 93%
 
    **レビューを管理** ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
 
-   イニシエーター以外のユーザーに対しては、レビューを管理アイコンは表示されません。
+   開始者以外のユーザーに対しては、レビューを管理アイコンは表示されません。
 
 1. 次の情報を含む画面が表示されます。
 
@@ -83,16 +81,16 @@ ht-degree: 93%
 
    * **レビューの期限**：編集可能です。期限は、現在の日付と時刻よりも後の日付に変更することができます。
 
-   * **期限**：編集可能です。レビュー担当者を追加または削除できます。タスクが期限切れの場合は、期限を現在の日付以降に延長した場合にのみ、レビュー担当者を追加できます。
+   * **レビュー担当者**：編集可能です。レビュー担当者を追加または削除できます。タスクが期限切れの場合は、期限を現在の日付以降に延長した場合にのみ、レビュー担当者を追加できます。
 
-1. レビューを終了するには、「**終了**」をクリックします。
+1. レビューを終了するには、「**レビューを終了**」をクリックします。
 
 ### レビューが修正されると発生するアクション {#actions-that-occur-when-a-review-is-modified}
 
 本セクションでは、**レビューの更新／終了**&#x200B;時に発生する動作について説明します。
 
-1. レビューの説明が修正された場合、レビュー担当者およびイニシエーターの対応するタスクが更新されます。
-1. レビューの期限が修正された場合、レビュー担当者の対応するタスクは新しい期限に更新されます。
+1. レビューの説明が変更された場合、レビュー担当者およびイニシエーターの対応するタスクが更新されます。
+1. レビューの期限が変更された場合、レビュー担当者の対応するタスクの期限が更新されます。
 
 1. レビュー担当者が削除された場合：
 

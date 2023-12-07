@@ -1,14 +1,12 @@
 ---
 title: AEM Forms JEE パッチインストーラー
 description: AEM Forms JEE パッチインストーラーを使用して AEM 6.5 Forms コンポーネントの問題を修正する方法について説明します。
-uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
-discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: f0b59ff25f49f5ca12bc6966882f68b5231a9511
-workflow-type: ht
-source-wordcount: '535'
-ht-degree: 100%
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '509'
+ht-degree: 94%
 
 ---
 
@@ -33,7 +31,8 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
-   * **Windows** インストールメディアの適切なディレクトリまたはハードディスク上にあるインストーラーのコピー先フォルダーに移動して、aemforms65_cfp_install.exe ファイルをダブルクリックします。
+   * **Windows**
+インストーラーをコピーしたハードディスク上のインストールメディアまたはフォルダーの適切なディレクトリに移動し、 aemforms65_cfp_install.exe ファイルをダブルクリックします。
 
       * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`

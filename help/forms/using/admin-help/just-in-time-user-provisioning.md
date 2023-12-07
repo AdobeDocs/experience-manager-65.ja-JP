@@ -1,19 +1,15 @@
 ---
 title: ジャストインタイムのユーザープロビジョニング
-seo-title: Just-in-time user provisioning
 description: ジャストインタイムプロビジョニングを使用して、認証が正常に完了した後でユーザーを User Management に追加し、新しいユーザーに関連する役割とグループを動的に割り当てます。
-seo-description: Use just-in-time provisioning to add users to User Management after successfull authentication and dynamically assign relevant roles and groups to the new user.
-uuid: a5ad4698-70bb-487b-a069-7133e2f420c2
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 33%
+source-wordcount: '575'
+ht-degree: 32%
 
 ---
 
@@ -90,7 +86,7 @@ public Boolean assign(User user);
 
 1. 「ジャストインタイムプロビジョニングの API」の節にある、DSC による API の実装を記述します。
 1. DSC をForms Server にデプロイします。
-1. ジャストインタイムが有効なドメインの作成:
+1. ジャストインタイムが有効なドメインを作成します。
 
    * 管理コンソールで、設定/User Management/ドメイン管理/新しいエンタープライズドメインをクリックします。
    * ドメインを設定し、「ジャストインタイムプロビジョニングを有効にする」を選択します。 <!--Fix broken link (See Setting up and managing domains).-->

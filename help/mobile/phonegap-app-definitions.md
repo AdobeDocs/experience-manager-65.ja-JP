@@ -1,18 +1,14 @@
 ---
 title: アプリの定義
-seo-title: App definitions
 description: このページでは、アプリに適したスペースやその他の設定を識別するためのアプリの定義について説明します。 アプリの定義を使用すると、アプリを再コンパイルする必要なく、ユーザーがスペースを追加できます。
-seo-description: Follow this page to learn about app definitions, that are a way to identify what spaces and other configurations are appropriate for the app. App definitions allows the user to add space, without having to recompile the app.
-uuid: bdb4063b-1597-47e2-96d4-c4cc7c78c3d7
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
 exl-id: 4c1c44fd-e685-462c-83a0-3cd2f74ab5c7
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 10%
 
 ---
@@ -35,7 +31,7 @@ ht-degree: 10%
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. 選択 **アプリ** から **モバイル** をクリックし、 **を作成します。**
+1. 選択 **アプリ** から **モバイル** をクリックします。 **を作成します。**
 
    選択 **アプリ** 新しいアプリを作成するための詳細を入力します。
 

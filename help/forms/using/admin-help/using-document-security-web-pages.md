@@ -1,17 +1,13 @@
 ---
 title: Document Security Web ページの使用
-seo-title: Using the document security webpages
 description: Document Security Web ページにログイン、移動、および使用する方法について説明します。
-seo-description: Learn how you can login, navigate and use the document security web pages.
-uuid: b4863343-cda5-474a-a101-a20e39b1f8c7
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 feature: Document Security
 exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%

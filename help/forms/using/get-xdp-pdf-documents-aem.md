@@ -1,17 +1,13 @@
 ---
 title: AEM Forms での XDP および PDF ドキュメントの取得
-seo-title: Getting XDP and PDF documents in AEM Forms
 description: AEM Formsでは、アダプティブフォームで使用するフォームやサポートされているアセットをアップロードできます。 また、フォームや関連リソースを ZIP として一括アップロードすることもできます。
-seo-description: AEM Forms lets you upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
-uuid: cd49b4a8-c282-4059-95a0-c98f6c92ab14
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 33%

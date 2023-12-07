@@ -1,17 +1,13 @@
 ---
 title: Document Security サーバーのインストールと設定
-seo-title: Installing and configuring the document security server
 description: Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。許可されたユーザーのみが保護されたドキュメントにアクセスできます。
-seo-description: Use document security to safely distribute any information that you have saved in a supported format. Only authorized users can access protected documents.
-uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
-discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
 role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 87%
+source-wordcount: '569'
+ht-degree: 86%
 
 ---
 
@@ -23,7 +19,7 @@ Adobe Experience Manager Forms Document Security を使用すると、許可さ�
 
 ドキュメントを保護するには、ポリシーを使用します。ポリシーで指定する機密設定によって、ポリシーを適用したドキュメントを受信者が使用する方法が決まります。 例えば、テキストの印刷やコピー、テキストの編集、保護されたドキュメントへの署名やコメントの追加を受信者が実行できるかどうかを指定できます。
 
-ポリシーは Document Security サーバーに保存されます。クライアントアプリケーションを使用してドキュメントにポリシーを適用します。 ドキュメントにポリシーを適用すると、ポリシーで指定された機密性設定によって、ドキュメントに含まれる情報が保護されます。ポリシーで保護されたドキュメントは、ポリシーで許可されている受信者に配布できます。
+ポリシーは Document Security サーバーに保存され、クライアントアプリケーションを使用してドキュメントにポリシーを適用します。 ドキュメントにポリシーを適用すると、ポリシーで指定された機密性設定によって、ドキュメントに含まれる情報が保護されます。ポリシーで保護されたドキュメントは、ポリシーで許可されている受信者に配布できます。
 
 また、Document Security は、ドキュメントの保護、保護されたドキュメントの表示、保護されたドキュメントのインデックス作成を行うためのクライアント、ビューア、およびインデクサーも提供します。Document Security について詳しくは、 [Document Security について](/help/forms/using/admin-help/document-security.md)を参照してください。
 

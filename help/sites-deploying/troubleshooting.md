@@ -1,16 +1,14 @@
 ---
-title: トラブルシューティング：AEM のインストールに関する問題
+title: AEM のインストールに関する問題のトラブルシューティング
 description: この記事では、AEM で発生する可能性のあるインストールの問題について説明します。
-uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '1171'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '1160'
 ht-degree: 100%
 
 ---
@@ -57,7 +55,7 @@ jar ファイルは汎用の ZIP 形式を使用しているので、一部の�
 * AEM WCM Quickstart でコンテキストメニューを使用（通常はマウスの右クリック）し、「プログラムから開く」を選択します。
 * Java™ または Sun Java™ が表示されているかを確認し、それを使用して AEM WCM を実行します。複数のバージョンの Java™ がインストールされている場合は、サポートされているバージョンを選択します。
 
-   この時点で成功した場合、選択したプログラムを常に使用して .jar ファイルを実行するためのオプションが表示されるので、そのオプションを選択します。これで、ダブルクリックによって起動できるようになります。
+  この時点で成功した場合、選択したプログラムを常に使用して .jar ファイルを実行するためのオプションが表示されるので、そのオプションを選択します。これで、ダブルクリックによって起動できるようになります。
 
 * サポートされている Java™ バージョンを再インストールすると、正しい関連付けが復元される場合があります。
 * このドキュメントで前述したように、コマンドラインまたは起動／停止スクリプトを使用して、常に CRX を実行することができます。

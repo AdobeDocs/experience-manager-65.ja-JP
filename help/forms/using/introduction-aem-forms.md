@@ -1,20 +1,16 @@
 ---
 title: AEM Forms の概要
-seo-title: Introduction to AEM Forms
 description: Adobe Experience Manager Formsを使用すると、ビジネスユーザーは、魅力的でレスポンシブなアダプティブフォームを Web サイトやモバイルサイトに統合でき、デジタル登録プロセスを簡素化し、顧客のコンバージョン率を高めることができます。
-seo-description: With Adobe Experience Manager Forms, business users can integrate engaging, responsive, and adaptive forms into web and mobile sites, simplifying the digital enrollment process and increasing customer conversion rates.
-uuid: a6564997-4227-4d5d-b27d-47a55a386238
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
-discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: f8f82ad5805095f331432471b614225f761e645c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 28%
+source-wordcount: '952'
+ht-degree: 22%
 
 ---
 
@@ -29,11 +25,11 @@ AEM Formsの最新の機能と機能強化について詳しくは、 [AEM Forms
 
 ## AEM Formsについて {#about-aem-forms}
 
-Adobe Experience Manager（AEM）は、複雑なデジタルフォームを作成、管理、公開、更新するための、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。
+Adobe Experience Manager(AEM) は、複雑なデジタルフォームの作成、管理、公開、更新を容易におこなえるソリューションで、バックエンドのプロセス、ビジネスルール、データとの統合を実現します。
 
 AEM Forms では、通信管理機能、ドキュメントセキュリティ、統合された分析とともに、フォームのオーサリング、管理、公開を組み合わせて、魅力的なエンドツーエンドのエクスペリエンスを作成します。AEM Forms は、すべての Web チャネルやモバイルチャネルで動作するように設計されており、ビジネスプロセスに効率的に統合することができます。これにより、効率を向上させながらも、文書業務やエラーを削減することができます。
 
-大企業では、一度フォームを作成したら、そのフォームがコンテンツ管理システムにコピーして再利用されることも多くあります。フォームの大規模なデータベースを最新の状態に保ち、検出可能な状態に保つことは、非常に困難な作業です。 AEM はカスタマイズ可能な「フォームポータル」を提供することにより、Web チャネルおよびモバイルチャネルの双方から必要なフォームを見つけ、アクセスできる状態に保ちます。
+大企業では、一度フォームを作成したら、そのフォームがコンテンツ管理システムにコピーして再利用されることも多くあります。フォームの大規模なデータベースを最新の状態に保ち、検出可能な状態に保つことは、非常に困難な作業です。 AEMは、カスタマイズ可能なForms Portal を提供し、Web チャネルとモバイルチャネルの両方で、必要なフォームを見つけてアクセスできるようにします。
 
 AEM Formsには、アダプティブフォームだけでなく、XFA フォーム、PDF forms、関連アセットも管理できるフォーム管理ツールが用意されています。 詳しくは、 [フォーム管理の概要](../../forms/using/introduction-managing-forms.md).
 

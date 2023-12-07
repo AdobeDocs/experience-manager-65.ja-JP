@@ -1,21 +1,17 @@
 ---
 title: HTML5 フォームのベストプラクティス
-seo-title: Best practices for HTML5 forms
 description: 最適なパフォーマンスが得られるように XFA ベースの HTML5 フォームを調整します。
-seo-description: Learn how to tune your XFA-based HTML5 Forms for best performance.
-uuid: 3804effd-f1f2-4d7a-8e52-717b5c1c62cf
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 content-type: reference
-discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
 exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 23%
+source-wordcount: '1402'
+ht-degree: 20%
 
 ---
 
@@ -82,5 +78,5 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
 
 ## クイックリファレンスカード {#quick-reference-card}
 
-以下のカード（カードをクリックすると、高解像度のバージョンがダウンロードされます）を印刷し、クイックリファレンスとして手元に置いておくことができます。
-[![ HTML5 フォームのベストプラクティスクイックリファレンスカード](do-not-localize/best-practices_reference_card.png)](assets/html5_forms_best_practices_reference_card.pdf)
+次のカードを印刷（カードをクリックして高解像度バージョンをダウンロード）し、すばやく参照できるようにデスクに保管することができます。
+[![HTML5 Formsベストプラクティスクイックリファレンスカード](do-not-localize/best-practices_reference_card.png)](assets/html5_forms_best_practices_reference_card.pdf)

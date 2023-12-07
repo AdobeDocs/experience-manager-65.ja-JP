@@ -1,17 +1,13 @@
 ---
 title: Granite の操作 - ユーザー管理とグループ管理
-seo-title: Granite Operations - User and Group Administration
 description: Granite のユーザーおよびグループ管理について説明します。
-seo-description: Learn about Granite user and group administration.
-uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 84%

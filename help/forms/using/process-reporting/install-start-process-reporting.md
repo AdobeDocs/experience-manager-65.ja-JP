@@ -1,17 +1,15 @@
 ---
 title: プロセスレポートの基本を学ぶ
 description: AEM Forms on JEE プロセスレポートの使用を開始するための手順
-uuid: 685cad39-da2c-411d-a0b0-201917438bcf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
-discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1673'
-ht-degree: 100%
+source-wordcount: '1676'
+ht-degree: 98%
 
 ---
 
@@ -68,7 +66,7 @@ AEM Forms プロセスデータのパージについて詳しくは、[プロセ
 1. AEM Forms サーバーインスタンスを再起動します。
 
 1. AEM Forms サーバーインスタンスを停止します。
-1. WebSphere® 管理コンソールにログインします。ナビゲーションツリーで&#x200B;**サーバー**／**アプリケーション・サーバー**&#x200B;をクリックし、右側のパネルでサーバー名をクリックします。
+1. WebSphere® Administrative Console にログインします。 ナビゲーションツリーで、 **サーバー** > **アプリケーションサーバー** 次に、右側のウィンドウで、サーバ名をクリックします。
 
 1. 「サーバーインフラストラクチャー」で、**Java™ とプロセス管理**／**プロセス定義**&#x200B;をクリックします。
 

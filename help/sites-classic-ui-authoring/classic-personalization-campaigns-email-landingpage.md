@@ -1,20 +1,16 @@
 ---
 title: 効果的なニュースレターのランディングページの作成
-seo-title: Creating an Effective Newsletter Landing Page
 description: 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）にできるだけ多くの人を登録するのに役立ちます。 ニュースレターのサインアップから収集した情報を使用して、リードを取得できます。
-seo-description: An effective newsletter landing page helps you get as many people as possible to sign up for your newsletter (or other email marketing campaign). You can use the information you gather from your newsletter sign ups to get leads.
-uuid: 0799b954-076b-4e95-8724-3661ae8fddb6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: b41de64a-7d27-4633-a8d5-ac91d47eb1bb
 docset: aem65
 exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 27%
+source-wordcount: '596'
+ht-degree: 25%
 
 ---
 

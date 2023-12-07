@@ -1,21 +1,17 @@
 ---
 title: 複数の XDP フラグメントのアセンブル
-seo-title: Assembling Multiple XDP Fragments
 description: Java API と Web Service API を使用して、複数の XDP フラグメントを単一の XDP ドキュメントにアセンブルします。
-seo-description: Assemble multiple XDP fragments into a single XDP document using the Java API and Web Service API.
-uuid: 0e35ff85-ff40-4878-ae31-aa8da75bd3ec
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: c4706632-02e5-4510-ad9c-4f732d5fbdad
 docset: aem65
 role: Developer
 exl-id: 54d98c69-2b2e-46cb-9f6a-7e9bdbe5c378
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1859'
 ht-degree: 96%
 
 ---

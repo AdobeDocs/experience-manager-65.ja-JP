@@ -1,24 +1,20 @@
 ---
 title: Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする
-seo-title: Enabling online commenting for Adobe Reader web browser plug-in
-description: Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする方法について説明します。
-seo-description: Learn how to enable online commenting for Adobe Reader web browser plug-in.
-uuid: 3ac5270f-2b8a-47b1-b0ca-a5607476923f
+description: Adobe Reader Web ブラウザープラグインのオンラインコメントを有効にする方法を説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9c4f8e1e-c2f7-4648-9a2a-104bd540a47a
 exl-id: 6db1e998-f810-4715-b0b7-981e8d807cf8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '113'
-ht-degree: 100%
+ht-degree: 15%
 
 ---
 
 # Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする {#enabling-online-commenting-for-adobe-reader-web-browser-plug-in}
 
-PDF ファイル内の注釈およびマークアップツールバー（Adobe Reader Web ブラウザープラグインの使用中に表示される）を有効にするには、レビューサーバーなどのコラボレーションバックエンドを配置する必要があります。コラボレーションバックエンドがない場合は、PDF ファイルを一旦コンピューターに保存し、Adobe Reader でレビューおよびマークアップしてから、元の作者に送り返す必要があります。
+Adobe Reader Web ブラウザープラグインを使用して表示するPDFファイル内でコメントとマークアップツールバーを有効にするには、レビューサーバーなどのコラボレーションバックエンドを配置する必要があります。 コラボレーションバックエンドを使用できない場合は、PDFファイルをコンピュータに保存し、Adobe Readerで確認してマークアップし、作成者に送り返す必要があります。
 
-コラボレーションのない環境でオンライン注釈が必要な場合は、アドビサポートにお問い合わせください。
+共同作業を行わない環境でオンラインコメントが必要な場合は、Adobeサポートにお問い合わせください。

@@ -1,20 +1,16 @@
 ---
 title: カスタムポータルにおける通信を作成の UI の統合
-seo-title: Integrating Create Correspondence UI with your custom portal
-description: 通信の作成 UI とカスタムポータルを統合する方法について説明します。
-seo-description: Learn how to integrate create correspondence UI with your custom portal
-uuid: 68ef5bf2-b271-4c44-8840-6c495069164d
+description: 通信の作成 UI をカスタムポータルに統合する方法を説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
-discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 feature: Correspondence Management
 exl-id: c3b6ee31-ccbb-4446-86c8-f618226fefc4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 100%
+ht-degree: 37%
 
 ---
 
@@ -22,11 +18,11 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-ここでは、通信を作成のソリューションをお使いの環境に統合する方法の詳細を説明します。
+この記事では、通信を作成ソリューションを環境に統合する方法について詳しく説明します。
 
 ## URL ベースの呼び出し {#url-based-invocation}
 
-通信を作成アプリケーションをカスタムポータルから呼び出す 1 つの方法として、次の要求パラメーターを持つ URL を準備する方法が挙げられます。
+カスタムポータルから通信を作成アプリケーションを呼び出す方法の 1 つは、次の要求パラメーターを使用して URL を準備することです。
 
 * 文字テンプレートの識別子（cmLetterId パラメーターを使用）。
 
@@ -37,26 +33,26 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->この呼び出し方法は安全ではありません。必要なパラメーターが URL に明示される GET 要求として渡されるからです。
+>このような呼び出し方法では、必要なパラメーターが URL で同じ（明確に表示される）を公開することで、GETリクエストとして渡されるので、安全ではありません。
 
 >[!NOTE]
 >
->通信を作成アプリケーションを呼び出す前に、データを保存、アップロードして、指定された dataURL で通信を作成の UI を呼び出します。この処理は、カスタムポータル自体で実行されるか、または異なるバックエンドプロセスで実行される可能性があります。
+>通信を作成アプリケーションを呼び出す前に、データを保存してアップロードし、指定された dataURL で通信を作成 UI を呼び出します。 これは、カスタムポータル自体から実行することも、別のバックエンドプロセスを通じて実行することもできます。
 
 ## インラインデータベースの呼び出し {#inline-data-based-invocation}
 
-通信作成用アプリケーションを呼び出す別の（そしてより安全な）方法は、https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html の URL をシンプルにヒットしながら、通信作成用アプリケーションを呼び出すパラメーターとデータを POST リクエストとして送信（エンドユーザーからはそれらを隠して）すること、が考えられます。つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
+通信作成用アプリケーションを呼び出す別の（そしてより安全な）方法は、https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html の URL をシンプルにヒットしながら、通信作成用アプリケーションを呼び出すパラメーターとデータを POST リクエストとして送信（エンドユーザーからはそれらを隠して）すること、が考えられます。つまり、以前のアプローチでは不可能で、理想的ではなかった、同じリクエストの一環として、通信を作成アプリケーションの XML データをインラインで渡すことができます。
 
-### レターを指定するパラメーター {#parameters-for-specifying-letter}
+### レターを指定するためのパラメーター {#parameters-for-specifying-letter}
 
 | **名前** | **タイプ** | **説明** |
 |---|---|---|
 | cmLetterInstanceId | 文字列 | レターインスタンスの ID です。 |
-| cmLetterId | 文字列 | レターテンプレートの名前です。 |
+| cmLetterId | 文字列 | レターテンプレートの名前。 |
 
-テーブル中のパラメーターの順序が、レターの読み込みに使用されるパラメーターの優先順位を指定します。
+テーブル内のパラメーターの順序は、レターの読み込みに使用するパラメーターの優先順位を指定します。
 
-### XML データソースを指定するパラメーター {#parameters-for-specifying-the-xml-data-source}
+### XML データソースを指定するためのパラメーター {#parameters-for-specifying-the-xml-data-source}
 
 <table>
  <tbody>
@@ -68,7 +64,7 @@ ht-degree: 100%
   <tr>
    <td>cmDataUrl<br /> </td> 
    <td>URL</td> 
-   <td>cq、ftp、http、file などの基本的なプロトコルを使用してソースファイルから取得する XML データです。<br /> </td> 
+   <td>cq、ftp、http、file などの基本的なプロトコルを使用したソースファイルからの XML データ。<br /> </td> 
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
@@ -78,12 +74,12 @@ ht-degree: 100%
   <tr>
    <td>cmUseTestData</td> 
    <td>ブール値</td> 
-   <td>データディクショナリに添付されたテストデータを再利用します。</td> 
+   <td>データディクショナリに添付されたテストデータを再利用する。</td> 
   </tr>
  </tbody>
 </table>
 
-テーブル中のパラメーターの順序が、XML データの読み込みに使用されるパラメーターの優先順位を指定します。
+テーブル内のパラメーターの順序は、XML データの読み込みに使用するパラメーターのプリファレンスを指定します。
 
 ### その他のパラメーター {#other-parameters}
 
@@ -97,12 +93,12 @@ ht-degree: 100%
   <tr>
    <td>cmPreview<br /> </td> 
    <td>ブール値</td> 
-   <td>「True」に設定されている場合、レターをプレビューモードで開きます<br /> </td> 
+   <td>True に設定すると、レターがプレビューモードで開きます<br /> </td> 
   </tr>
   <tr>
    <td>ランダム</td> 
    <td>Timestamp</td> 
-   <td>ブラウザーのキャッシュに関する問題を解決します。</td> 
+   <td>ブラウザーのキャッシュの問題を解決するには、以下を実行します。</td> 
   </tr>
  </tbody>
 </table>

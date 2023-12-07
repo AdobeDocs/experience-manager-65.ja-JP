@@ -1,18 +1,14 @@
 ---
 title: Livefyre との統合
-seo-title: Integrating with Livefyre
 description: Livefyre の業界最高レベルのキュレーション機能を AEM 6.5 インスタンスと統合する方法を説明します。これにより、ソーシャルネットワークからの有用なユーザー生成コンテンツ（UGC）をサイトに数分で公開できます。
-seo-description: Learn how to integrate and use Livefyre with AEM 6.5.
-uuid: c355705d-6e0f-4a33-aa1f-d2d1c818aac0
 contentOwner: ind14750
 content-type: reference
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '50'
+source-wordcount: '44'
 ht-degree: 100%
 
 ---

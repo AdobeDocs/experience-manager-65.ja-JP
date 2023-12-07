@@ -1,16 +1,12 @@
 ---
 title: グローバルドキュメントストレージディレクトリ
-seo-title: Global document storage directory
 description: グローバルドキュメントストレージ (GDS) ディレクトリは、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。
-seo-description: The global document storage (GDS) directory is a directory used to store long-lived files that are used within a process.
-uuid: 7681672c-a0dc-4445-8004-1b1e2ed3d301
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 7%

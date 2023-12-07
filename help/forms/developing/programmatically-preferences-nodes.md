@@ -1,17 +1,13 @@
 ---
 title: PreferencesNodes をプログラムで管理する
-seo-title: Programmatically managing the PreferencesNodes
 description: Preferences Manager サービス API (Java) を使用して、環境設定ノードをプログラムで管理してください。
-seo-description: Use the Preferences Manager Service API (Java) to programmatically manage the Preferences Nodes.
-uuid: f0cb117a-a6cc-4ca5-8511-b3bc9f6738e9
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 9d4dba7f-49d8-4112-bc8a-04dafc99a936
 role: Developer
 exl-id: 108eb249-879b-4e4f-b431-8118b8656e62
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 96%

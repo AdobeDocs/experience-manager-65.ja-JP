@@ -1,20 +1,16 @@
 ---
 title: 送信された XML データを使用した PDF ドキュメントの作成
-seo-title: Creating PDF Documents with SubmittedXML Data
 description: Forms サービスを使用して、ユーザーがインタラクティブフォームに入力したフォームデータを取得します。フォームデータを別の AEM Forms サービス操作に渡し、そのデータを使用して PDF ドキュメントを作成します。
-seo-description: Use the Forms service to retrieve the form data that the user entered into an interactive form. Pass the form data to another AEM Forms service operation and create a PDF document using the data.
-uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 role: Developer
 exl-id: d9d5b94a-9d10-4d90-9e10-5142f30ba4a3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1312'
 ht-degree: 100%
 
 ---
@@ -78,7 +74,7 @@ Document Management サービス API を使用して、PDF ドキュメントを
 
 **関連項目**
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの追加](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -108,7 +104,7 @@ Forms、Output、Document Management API（Java）を使用して、送信され
       * `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` などの `HTTP_USER_AGENT` ヘッダー値を指定する文字列値。
       * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
-      `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
+     `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
    * `FormsResult` オブジェクトの `getAction` メソッドを呼び出して、Forms サービスがフォームデータの処理を完了したかどうかを判断します。このメソッドが値 `0` を返した場合、処理するデータの準備が整っています。
    * フォームデータを取得するには、`FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。（このオブジェクトには、Output サービスに送信できるフォームデータが含まれています。）
@@ -117,7 +113,6 @@ Forms、Output、Document Management API（Java）を使用して、送信され
    * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
    * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
    * XML ドキュメント内の各ノードの値を取得します。このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
-
 
 1. Output サービスを使用して、非インタラクティブ PDF ドキュメントを作成します。
 
@@ -150,6 +145,6 @@ Forms、Output、Document Management API（Java）を使用して、送信され
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの追加](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)

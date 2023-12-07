@@ -1,18 +1,14 @@
 ---
 title: システム情報の表示
-seo-title: View system information
 description: リソース監視のグラフおよびAEM forms を実行しているサーバーに関する情報を表示する方法について説明します。
-seo-description: Learn how you can view resource monitoring charts and information about the server that is running AEM forms.
-uuid: 983c1cc7-a8b3-48b2-a4c8-7b28a2e32537
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: d51460d9-c96c-4661-b93e-e015427878ab
 exl-id: 27a2e81c-47b0-4de8-95bd-7cb34b9450da
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '541'
 ht-degree: 62%
 
 ---

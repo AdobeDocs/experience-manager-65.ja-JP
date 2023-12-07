@@ -1,16 +1,14 @@
 ---
 title: ページへのワークフローの適用
 description: ワークフローは、web サイトコンソールから、またはページの編集中にサイドキックから開始できます。
-uuid: 55f6f1d7-da54-4732-b9ff-b7479622db51
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
-workflow-type: ht
-source-wordcount: '253'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '249'
 ht-degree: 100%
 
 ---
@@ -22,7 +20,7 @@ ht-degree: 100%
 * 適用されるワークフロー。
 
 
-   （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
+  （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
 * オプション：
 
    * ワークフローを開始した理由に関するコメント。

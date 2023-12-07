@@ -1,31 +1,27 @@
 ---
 title: アダプティブフォームのキーワード
-seo-title: Adaptive forms keywords
 description: アダプティブフォームでは、これらの予約語を識別子として使用することはできません。
-seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
-uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 24%
+source-wordcount: '253'
+ht-degree: 79%
 
 ---
 
 # アダプティブフォームのキーワード {#adaptive-forms-keywords}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
 アダプティブフォームのキーワードは、事前に定義され、アダプティブフォーム用に特別な意味を持つ予約済みの識別子です。 アダプティブフォームでは、これらのキーワードを識別子として使用することはできません。 次の表に、アダプティブフォーム用に予約されているすべてのキーワードを示します。
 
 <table>
  <tbody>
   <tr>
-   <td><p>初期化する</p> </td>
+   <td><p>intialize</p> </td>
    <td><p>getOnOffValues</p> </td>
    <td><p>minOccur</p> </td>
   </tr>
@@ -46,7 +42,7 @@ ht-degree: 24%
   </tr>
   <tr>
    <td><p>playJson</p> </td>
-   <td><p>準備</p> </td>
+   <td><p>prepare</p> </td>
    <td><p>instanceCount</p> </td>
   </tr>
   <tr>
@@ -57,7 +53,7 @@ ht-degree: 24%
   <tr>
    <td><p>calcExp</p> </td>
    <td><p>queueExpressions</p> </td>
-   <td><p>インスタンス</p> </td>
+   <td><p>instances</p> </td>
   </tr>
   <tr>
    <td><p>title</p> </td>
@@ -67,7 +63,7 @@ ht-degree: 24%
   <tr>
    <td><p>valueCommitScript</p> </td>
    <td><p>autoSaveStart</p> </td>
-   <td><p>訪問</p> </td>
+   <td><p>visit</p> </td>
   </tr>
   <tr>
    <td><p>validateExp</p> </td>
@@ -77,7 +73,7 @@ ht-degree: 24%
   <tr>
    <td><p>placeholderText</p> </td>
    <td><p>autoSaveStartExpression</p> </td>
-   <td><p>子</p> </td>
+   <td><p>children</p> </td>
   </tr>
   <tr>
    <td><p>value</p> </td>
@@ -135,7 +131,7 @@ ht-degree: 24%
    <td><p>索引</p> </td>
   </tr>
   <tr>
-   <td><p>高さ</p> </td>
+   <td><p>height</p> </td>
    <td><p>showComment</p> </td>
    <td><p>visible</p> </td>
   </tr>
@@ -205,7 +201,7 @@ ht-degree: 24%
    <td><p>isLastPart</p> </td>
   </tr>
   <tr>
-   <td><p>instanceManager</p> </td>
+   <td><p>InstanceManager</p> </td>
    <td><p>completionAfterMessage</p> </td>
    <td><p>isFirstPart</p> </td>
   </tr>
@@ -215,7 +211,7 @@ ht-degree: 24%
    <td><p>currentActivePart</p> </td>
   </tr>
   <tr>
-   <td><p>概要</p> </td>
+   <td><p>summary</p> </td>
    <td><p>completionFailureScript</p> </td>
    <td><p>sectionName</p> </td>
   </tr>

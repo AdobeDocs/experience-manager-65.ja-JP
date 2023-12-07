@@ -1,16 +1,12 @@
 ---
 title: フォームデータモデルの作成
-seo-title: Create form data model
 description: ここでは、データソースを使用せずにフォームデータモデルを作成する方法と、既に設定されているデータソースを使用してフォームデータモデルを作成する方法について説明します。
-seo-description: Learn how to create form data models with or without configured data sources.
-uuid: 5a94f733-0c08-41bb-983f-e7d34816d8fb
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
-discoiquuid: 7c392909-ff84-4411-b44f-16f99dffac54
 docset: aem65
 feature: Form Data Model
 exl-id: 7f5978c3-6c9f-4ce4-b0fb-660ac1d49244
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 57%

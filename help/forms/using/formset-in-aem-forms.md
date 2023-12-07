@@ -1,19 +1,15 @@
 ---
 title: AEM Forms におけるフォームセット
-seo-title: Form set in AEM Forms
 description: この記事では、フォームセットを紹介し、HTML5 のフォームを組み合わせてフォームセットを作成する方法を説明します。 この記事では、フォームセットに xml データを事前入力する方法と、Process Management でフォームセットを使用する方法についても説明します。
-seo-description: This article introduces form set and explains how to create form sets by stitching together HTML5 forms. This article also explains how you can prefill xml data to a form set and how you can use form sets in process management.
-uuid: a1a2f267-26a9-4f45-bcfc-dbdedad95973
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-discoiquuid: 80e3eec4-95e0-4731-a0e5-a617e9bcb069
 docset: aem65
 feature: Mobile Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2804'
 ht-degree: 21%
 
 ---

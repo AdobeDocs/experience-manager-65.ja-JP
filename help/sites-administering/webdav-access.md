@@ -1,19 +1,15 @@
 ---
 title: WebDAV アクセス
-seo-title: WebDAV Access
 description: WebDAV を使用して Web Experience Manager にアクセスするAdobeについて説明します。
-seo-description: Learn about WebDAV access in AEM.
-uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
-discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 99%
+source-wordcount: '1117'
+ht-degree: 98%
 
 ---
 
@@ -210,7 +206,7 @@ GNOME を使用して WebDAV を介して AEM に接続するには：
 1. **フォルダー**&#x200B;で、`/dav` と入力します
 1. ユーザー名に `admin` と入力します。あらかじめ設定されている管理者アカウントを使用してテストすることをお勧めします。
 1. ポートは空白のままにして、接続用の名前を入力します。
-1. **接続**&#x200B;をクリックします。パスワードを要求する画面が表示されます。
+1. 「**接続**」をクリックします。AEMに、パスワードの入力が求められます。
 1. パスワードに `admin` と入力し、**接続**&#x200B;をクリックしてください。
 
 以上で、AEM が GNOME のボリュームとしてマウントされ、他のボリュームと同じように使用できるようになります。

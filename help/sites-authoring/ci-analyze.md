@@ -1,17 +1,13 @@
 ---
 title: ページパフォーマンスの分析
-seo-title: Analyzing Page Performance
 description: コンテンツインサイトページを使用して、作成中のページのパフォーマンスを分析する
-seo-description: Use the Content Insight page to analyze the performance of the page that you are authoring
-uuid: 563d3e98-20d9-4cca-a174-bafd6e65c1bb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 90%

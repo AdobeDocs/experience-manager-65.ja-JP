@@ -1,16 +1,12 @@
 ---
 title: Web サイト管理
-seo-title: Website Administration
 description: Adobe Experience Managerを使用して多言語の Web サイトを管理する方法について説明します。
-seo-description: Learn how to manage multilingual websites in AEM.
-uuid: a32d458b-a5ad-46ef-a68c-4717c63b4bdd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
-discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 36%

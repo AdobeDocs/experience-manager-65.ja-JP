@@ -1,18 +1,14 @@
 ---
 title: 記事のエクスポート設定の作成
-seo-title: Creating Article Export Configuration
 description: このページでは、Adobe Experience Manager(AEM) からAEM Mobileにアップロードするコンテンツを書き出す方法について説明します。
-seo-description: Follow this page to learn about exporting content from Adobe Experience Manager (AEM) for upload to AEM Mobile.
-uuid: 089bc15b-669e-4623-bdbb-fd9abf46e098
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: bc681589-5d46-44cd-888d-b0722a2fd006
 exl-id: 5295f383-3b46-4456-9177-65de68e39a85
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '292'
 ht-degree: 4%
 
 ---

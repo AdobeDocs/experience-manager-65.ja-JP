@@ -1,18 +1,14 @@
 ---
 title: Output のキャッシュの構成
-seo-title: Configuring caching for Output
 description: Output サービスは、フォームデザイン、フラグメントおよび画像をキャッシュします。 出力のキャッシュを設定する方法を説明します。
-seo-description: The Output service caches the form designs, fragments and images. Learn how to configure the caching for output.
-uuid: 00bffeb5-c9c4-4a46-98b5-e14ec9f4514e
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: e5398abd-f62c-485d-9f4b-a316c0de2b6b
 exl-id: 1015f5c9-6ab8-4656-a5c8-40f82b9938b9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1442'
 ht-degree: 22%
 
 ---

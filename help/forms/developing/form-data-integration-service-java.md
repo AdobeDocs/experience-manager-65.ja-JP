@@ -1,19 +1,15 @@
 ---
 title: Form Data Integration サービス JavaAPI クイックスタート（SOAP）
-seo-title: Form Data Integration Service JavaAPI Quick Start(SOAP)
 description: Form Data Integration サービスを使用して、Java API を使用して、データを PDF フォームに読み込み、PDF フォームからデータを書き出します。
-seo-description: Use the Form Data Integration service to import data into a PDF form and export data from a PDF form using the Java API.
-uuid: bde8e83d-56d3-4331-a025-82b327c219b7
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '249'
 ht-degree: 81%
 
 ---

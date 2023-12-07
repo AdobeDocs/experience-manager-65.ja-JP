@@ -1,17 +1,13 @@
 ---
 title: タスクの割り当て手順におけるカスタムのメールテンプレートの使用
-seo-title: Use custom email templates in an Assign Task step
 description: フォームワークフローの電子メール通知用のカスタム電子メールテンプレート
-seo-description: Custom email templates for forms workflow email notifications
-uuid: ba453d54-813f-4a4f-a82e-1a6a28b6939c
 topic-tags: publish
-discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
 exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 39%
+source-wordcount: '509'
+ht-degree: 38%
 
 ---
 

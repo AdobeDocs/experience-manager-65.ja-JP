@@ -1,17 +1,13 @@
 ---
 title: アプリケーションの同期
-seo-title: Synchronizing the app
 description: モバイルデバイス上のAEM FormsアプリをAEM Formsサーバーと同期します。
-seo-description: Synchronize the AEM Forms app on your mobile device with the AEM Forms server.
-uuid: 3a6fb2d5-2ec4-4f78-a42a-fc921b66238e
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 exl-id: 6bb1d6df-b322-4112-bc25-6300877ee146
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 20%

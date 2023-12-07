@@ -1,15 +1,11 @@
 ---
 title: モバイルアプリ
-seo-title: Learn about how Adobe Experience Manager Mobile offers deployment flexibility, using various content sources.
 description: "モバイルアプリ"
-seo-description: null
-uuid: 4a91241e-8c78-42fe-a5d3-732a6c34cbfd
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: eda55579-4140-477b-b4d0-a87d14ec3237
 exl-id: 0a98881d-08f3-47e7-bae1-5500d1fe6514
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 1%

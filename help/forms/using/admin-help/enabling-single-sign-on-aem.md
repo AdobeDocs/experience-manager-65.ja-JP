@@ -1,16 +1,12 @@
 ---
 title: AEM forms でのシングルサインオンの有効化
-seo-title: Enabling single sign-on in AEM forms
 description: HTTP ヘッダーと SPNEGO を使用してシングルサインオン (SSO) を有効にする方法を説明します。
-seo-description: Learn how to enable single sign-on (SSO) using HTTP headers and SPNEGO.
-uuid: 2bc08b4f-dcbe-4a16-9025-32fc14605e13
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1520'
 ht-degree: 28%

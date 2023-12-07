@@ -1,17 +1,13 @@
 ---
 title: データストアのガベージコレクション
-seo-title: Data Store Garbage Collection
 description: データストアのガベージコレクションを設定してディスク領域を解放する方法を説明します。
-seo-description: Learn how to configure Data Store Garbage Collection to free up disk space.
-uuid: 49488a81-986a-4d1a-96c8-aeb6595fc094
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1890'
 ht-degree: 35%

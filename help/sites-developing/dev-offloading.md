@@ -1,31 +1,27 @@
 ---
 title: オフロードのためのジョブの作成と使用
-seo-title: Creating and Consuming Jobs for Offloading
-description: Apache Sling Discovery 機能が提供する Java API によって、JobManager ジョブとそれを使用する JobConsumer サービスを作成できます
-seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
-uuid: d6a5beb0-0618-4b61-9b52-570862eac920
+description: Apache Sling Discovery 機能は、JobManager ジョブとそれらを使用する JobConsumer サービスを作成できる Java API を提供します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 exl-id: 4e6f452d-0251-46f3-ba29-1bd85cda73a6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 100%
+source-wordcount: '393'
+ht-degree: 40%
 
 ---
 
 # オフロードのためのジョブの作成と使用{#creating-and-consuming-jobs-for-offloading}
 
-Apache Sling Discovery 機能が提供する Java API によって、JobManager ジョブとそれを使用する JobConsumer サービスを作成できます。
+Apache Sling Discovery 機能は、JobManager ジョブとそれらを使用する JobConsumer サービスを作成できる Java API を提供します。
 
-オフロードトポロジの作成およびトピック使用の設定について詳しくは、[ジョブのオフロード](/help/sites-deploying/offloading.md)を参照してください。
+オフロードトポロジの作成とトピック使用の設定について詳しくは、 [ジョブのオフロード](/help/sites-deploying/offloading.md).
 
 ## ジョブペイロードの処理 {#handling-job-payloads}
 
-オフロードフレームワークによって、ジョブペイロードを識別するために使用する 2 つのジョブプロパティが定義されています。これらのプロパティは、オフロードレプリケーションエージェントによって使用され、トポロジ内のインスタンスにレプリケートするリソースが識別されます。
+オフロードフレームワークは、ジョブペイロードを識別するために使用する 2 つのジョブプロパティを定義します。 オフロードレプリケーションエージェントは、次のプロパティを使用して、トポロジ内のインスタンスにレプリケートするリソースを識別します。
 
 * `offloading.job.input.payload`：コンテンツパスのコンマ区切りのリスト。コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
 * `offloading.job.output.payload`：コンテンツパスのコンマ区切りのリスト。ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
@@ -35,17 +31,17 @@ Apache Sling Discovery 機能が提供する Java API によって、JobManager 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
 
-ジョブはペイロードを必要としません。ただし、ジョブでリソースの操作が必要であり、ジョブを作成しなかったコンピューターにジョブがオフロードされる場合は、ペイロードが必要です。
+ジョブにペイロードは必要ありません。 ただし、ジョブでリソースの操作が必要で、ジョブを作成しなかったコンピューターにジョブがオフロードされる場合は、ペイロードが必要です。
 
-## オフロードのためのジョブの作成 {#creating-jobs-for-offloading}
+## オフロード用のジョブの作成 {#creating-jobs-for-offloading}
 
-自動的に選択された JobConsumer によって実行されるジョブを作成するために、JobManager.addJob メソッドを呼び出すクライアントを作成します。以下の情報を入力してジョブを作成します。
+JobManager.addJob メソッドを呼び出して、自動的に選択された JobConsumer が実行するジョブを作成するクライアントを作成します。 ジョブを作成するには、次の情報を指定します。
 
 * トピック：ジョブトピック。
 * 名前：（オプション）
-* プロパティマップ：入力ペイロードパスや出力ペイロードパスなど、任意の数のプロパティを含む `Map<String, Object>` オブジェクト。この Map オブジェクトは、ジョブを実行する JobConsumer オブジェクトで使用可能です。
+* プロパティマップ：入力ペイロードパスや出力ペイロードパスなど、任意の数のプロパティを含む `Map<String, Object>` オブジェクト。この Map オブジェクトは、ジョブを実行する JobConsumer オブジェクトで使用できます。
 
-以下の例のサービスでは、特定のトピックおよび入力ペイロードパスのジョブが作成されます。
+次のサービスの例では、特定のトピックと入力ペイロードパスに対してジョブを作成します。
 
 ```java
 package com.adobe.example.offloading;
@@ -168,7 +164,7 @@ public class MyJobConsumer implements JobConsumer {
 }
 ```
 
-MyJobConsumer クラスによって、入力ペイロード /content/geometrixx/de/services に対して以下のログメッセージが生成されます。
+MyJobConsumer クラスは、/content/geometrixx/de/services の入力ペイロードに対して、次のログメッセージを生成します。
 
 ```shell
 10.06.2013 16:02:40.803 *INFO* [pool-7-thread-17-<main queue>(com/adobe/example/offloading)] com.adobe.example.offloading.MyJobConsumer Consuming job of topic: com/adobe/example/offloading
@@ -182,7 +178,7 @@ Consumed プロパティは、CRXDE Lite を使用して確認できます。
 
 ## Maven の依存関係 {#maven-dependencies}
 
-Maven でオフロード関連クラスを解決できるように、以下の依存関係定義を pom.xml ファイルに追加します。
+Maven がオフロード関連のクラスを解決できるように、次の依存関係定義を pom.xml ファイルに追加します。
 
 ```xml
 <dependency>
@@ -199,7 +195,7 @@ Maven でオフロード関連クラスを解決できるように、以下の�
 </dependency>
 ```
 
-前述の例でも、以下の依存関係定義が必要でした。
+前述の例では、次の依存関係の定義も必要でした。
 
 ```xml
 <dependency>

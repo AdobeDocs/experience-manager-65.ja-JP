@@ -1,18 +1,14 @@
 ---
 title: 参照レターテンプレート
-seo-title: Reference letter templates
-description: AEM Forms には、すばやくレターを作成できる Correspondence Management のレターレイアウトテンプレートが用意されています。
-seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
-uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
+description: AEM Formsには、Correspondence Management のレターレイアウトテンプレートが用意されており、これを使用してレターをすばやく作成できます。
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: correspondence-management
-discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 exl-id: 40d127b5-1ce6-41fb-ac4c-2bf7ae79da82
-source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 100%
+source-wordcount: '453'
+ht-degree: 21%
 
 ---
 
@@ -20,82 +16,82 @@ ht-degree: 100%
 
 Correspondence Management のレターテンプレートには、一般的なフォームフィールド、ヘッダーやフッターなどのレイアウト機能、コンテンツを配置するための空の「ターゲット領域」が含まれています。
 
-Correspondence Management のレターテンプレートは、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で入手できます。使用するブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。パッケージには次のテンプレートが含まれています。
+Correspondence Management のレターテンプレートは、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で入手できます。使用するブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。このパッケージには、次のテンプレートが含まれています。
 
 * クラシック
 * クラシックシンプル
-* バランスレフト
-* バランスライト
-* ビジュアルレフト
+* バランス（左）
+* バランス（右）
+* Visual Left
 * ビジュアルトップ
-* ビジュアルトップ - クラシック
+* ビジュアルトップ — クラシック
 
-パッケージをインストールすると、レイアウトテンプレート（XDP）が次の場所のテンプレートフォルダーに一覧表示されます。
+パッケージをインストールすると、レイアウトテンプレート (XDP) が次の場所にある templates-folder に一覧表示されます。
 
 `https://'[server]:[port]'/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
 
-次のフィールドは、このパッケージにあるすべてのテンプレートで共通のフィールドです。
+このパッケージのすべてのテンプレートで共通するフィールドは次のとおりです。
 
 * 日付
 * 挨拶
-* 結びの挨拶
-* 署名
+* 終了テキスト
+* 署名テキスト
 
 ![一覧表示されたすべての CM レターテンプレート](assets/templatescorrespondence.png)
 
-AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールすると、テンプレートがテンプレートフォルダーに一覧表示されます。
+AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールすると、テンプレートが templates-folder に一覧表示されます。
 
 ## クラシック {#classic}
 
-クラシックテンプレートはロゴが上部に配置されるので、一般的なビジネスレターに適しています。
+上にロゴが付いているクラシックテンプレートは、普通のプロフェッショナルなレターに適しています。
 
 ![クラシック](assets/classic.png)
 
-クラシックテンプレートを使用して作成されたレターの PDF プレビュー
+クラシックPDFを使用して作成されたレターのテンプレートプレビュー
 
 ## クラシックシンプル {#classic-simple}
 
-電話番号と電子メールアドレスを取得するためのフィールドが含まれています。クラシックシンプルのテンプレートは、受信者のアドレスを入力するフィールドが含まれていないこと以外はクラシックのテンプレートと同じです。
+電話番号とメールアドレスを取得するためのフィールドが含まれています。クラシックシンプルテンプレートは、クラシックテンプレートに似ていますが、受信者のアドレスを入力できるフィールドがない点が異なります。
 
 ![連絡先情報フラグメント](assets/classicsimple.png)
 
-クラシックシンプルテンプレートを使用して作成されたレターの PDF プレビュー
+クラシックシンプルテンプレートを使用して作成されたレターのPDFプレビュー
 
-## バランスレフト {#balanced-left}
+## バランス（左） {#balanced-left}
 
-バランスレフトのテンプレートは、レターの左にロゴが配置されます。
+バランスレフトテンプレートでは、レターの左側にロゴが表示されます。
 
 ![balancedleft](assets/balancedleft.png)
 
-バランスレフトのテンプレートを使用して作成されたレターの PDF プレビュー
+バランスレフトPDFを使用して作成されたレターのテンプレートプレビュー
 
-## バランスライト {#balanced-right}
+## バランス（右） {#balanced-right}
 
-バランスライトのテンプレートは、会社のロゴが右に配置され、受信者の住所をレターに入力するスペースが設けられています。バランスライトのテンプレートには、レターが複数ページにわたる場合にリフローできるフッターも含まれています。
+バランスライトテンプレートは、会社のロゴを左側に表示し、レター自体に受信者のアドレスを入力するスペースを提供します。 バランスライトテンプレートには、レターに複数のページが含まれる場合にリフローするフッターも含まれています。
 
 ![balancedright](assets/balancedright.png)
 
-バランスライトのテンプレートを使用して作成されたレターの PDF プレビュー
+バランスライトテンプレートを使用して作成されたレターのPDFプレビュー
 
-## ビジュアルレフト {#visual-left}
+## Visual Left {#visual-left}
 
-ビジュアルレフトのテンプレートは、会社のロゴが配置されるサイドヘッダーが含まれています。ビジュアルレフトのテンプレートにはサブジェクトフィールドがありますが、フッターはありません。
+Visual Left テンプレートのページ左側には、会社のロゴがサイドヘッドの上に配置されたサイドヘッドがあります。 Visual Left テンプレートには件名フィールドがありますが、フッターはありません。
 
 ![visualleft](assets/visualleft.png)
 
-ビジュアルレフトのテンプレートを使用して作成されたレターの PDF プレビュー
+Visual Left テンプレートを使用して作成されたレターのPDFプレビュー
 
 ## ビジュアルトップ {#visual-top}
 
-ビジュアルトップのテンプレートは、上部にビジュアルマージンがあります。ビジュアルトップのテンプレートには、ページ自体に受信者のアドレスを入力するためのフィールドがあります。ビジュアルトップのテンプレートには、複数ページにわたるレターをリフローするサブジェクトフィールドとフッターがあります。
+ビジュアルトップテンプレートの上部に視覚的な余白が表示されます。 「ビジュアルトップ」テンプレートには、ページ自体に受信者のアドレスを入力するためのフィールドがあります。 ビジュアルトップテンプレートには、複数ページに拡張されるレターの件名フィールドとフッターが含まれます。
 
 ![visualtop](assets/visualtop.png)
 
-ビジュアルトップのテンプレートを使用して作成されたレターの PDF プレビュー
+ビジュアルトップテンプレートを使用して作成されたレターのPDFプレビュー
 
-## ビジュアルトップ - クラシック {#visual-top-classic}
+## ビジュアルトップ — クラシック {#visual-top-classic}
 
-ビジュアルトップ - クラシックのテンプレートには、ページの上部に会社のロゴが配置されるヘッダーがあります。ビジュアルトップ - クラシックのテンプレートにはサブジェクトを入力するフィールドはありますが、フッターはありません。
+ビジュアルトップ — クラシックテンプレートでは、ページの上に会社のロゴが付いたヘッダーが表示されます。 ビジュアルトップ — クラシックテンプレートには、件名を入力するフィールドがありますが、フッターはありません。
 
 ![visualtopclassic](assets/visualtopclassic.png)
 

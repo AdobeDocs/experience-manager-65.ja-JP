@@ -1,16 +1,12 @@
 ---
 title: インタラクティブ通信内の条件
-seo-title: Conditions in Interactive Communications
 description: インタラクティブ通信で使用する条件フラグメントの作成と編集 — 条件は、インタラクティブ通信の構築に使用する 4 種類のドキュメントフラグメントの 1 つです。 残りの 3 つは、テキスト、リスト、レイアウトフラグメントです。
-seo-description: Creating and editing conditions to be used in Interactive Communications
-uuid: c98f02d5-1769-46dd-ab35-6e8145a24939
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
 feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 46%

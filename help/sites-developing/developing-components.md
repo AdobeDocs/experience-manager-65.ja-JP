@@ -1,21 +1,17 @@
 ---
 title: AEM コンポーネントの開発
-seo-title: Developing AEM Components
 description: AEM コンポーネントを使用して、web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
-seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
-uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '3447'
-ht-degree: 91%
+source-wordcount: '3246'
+ht-degree: 90%
 
 ---
 
@@ -350,7 +346,7 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 
 >[!NOTE]
 >
->AEMを操作する場合、このようなサービスの設定を管理する方法はいくつかあります。詳しくは、 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
+>AEMを操作する場合、このようなサービスの設定を管理する方法はいくつかあります。 詳しくは、 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
 
 ## コンポーネントの有効化と段落システムへの追加 {#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -453,7 +449,7 @@ GitHub のコード
 
 * コンポーネント
 
-   * クラシック UI 固有の関数を使用する [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code)  コードを移行します。
+   * 移行 [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) クラシック UI 固有の関数を使用するコード
    * RTE プラグイン。詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
    * クラシック UI 固有の関数を使用する[ `cq:listener` コードを移行](#migrating-cq-listener-code)します。
 

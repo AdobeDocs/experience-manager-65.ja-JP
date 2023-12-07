@@ -1,15 +1,13 @@
 ---
 title: Forms Designer ヘルプ
-seo-title: Forms Designer help
 description: Forms Designer は、フォームの送信に関する支援を提供します。
-seo-description: Forms Designer help
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 1847fc04-ba02-4c7c-b957-b5d7c79a2597
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: ht
-source-wordcount: '71'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '38'
 ht-degree: 100%
 
 ---

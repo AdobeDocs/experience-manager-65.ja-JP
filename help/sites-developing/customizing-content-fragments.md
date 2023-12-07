@@ -1,16 +1,14 @@
 ---
 title: コンテンツフラグメントのカスタマイズと拡張
-seo-title: Customizing and Extending Content Fragments
-description: コンテンツフラグメントは、標準アセットを拡張します。カスタマイズ方法を学びます。
-seo-description: A content fragment extends a standard asset. Learn how you can customize them.
+description: コンテンツフラグメントは、標準アセットを拡張します。 カスタマイズ方法を学びます。
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '2794'
-ht-degree: 64%
+source-wordcount: '2728'
+ht-degree: 62%
 
 ---
 
@@ -90,7 +88,7 @@ ht-degree: 64%
    * 各要素のデータは、その要素名のプロパティとしてそれぞれのサブノードに格納されます。例えば、`text` 要素のコンテンツは、`text` プロパティとして `jcr:content/data/master` に格納されます。
 
 * メタデータと関連コンテンツは、`jcr:content/metadata` に格納されます。
-ただし、タイトルと説明は従来のメタデータと見なされないので、次の場所に格納されます。 `jcr:content`
+ただし、タイトルと説明は従来のメタデータと見なされないので、`jcr:content` に格納されます。
 
 #### シンプルコンテンツフラグメントのアセットへのマッピング {#mapping-simple-content-fragments-to-assets}
 
@@ -161,7 +159,7 @@ ht-degree: 64%
 このパラメーターは、OSGi バンドルの **コンテンツフラグメントコンポーネント設定**&#x200B;用に、[web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)で設定できます。
 
 * **リソースタイプ**
-以下のリスト`sling:resourceTypes` を使用して、コンテンツフラグメントのレンダリングに使用するコンポーネントと、バックグラウンド処理を適用する場所を定義できます。
+リスト `sling:resourceTypes` を使用して、コンテンツフラグメントのレンダリングに使用するコンポーネントと、バックグラウンド処理の適用先を定義できます。
 
 * **Reference Properties**
 プロパティのリストを設定し、それぞれのコンポーネントに対応するフラグメントの参照を格納する場所を指定できます。
@@ -323,7 +321,7 @@ ht-degree: 64%
       * コレクションを追加する
       * コレクションを削除する
 
-   * フラグメントのモデルにアクセスするまたはテンプレート
+   * フラグメントのモデルまたはテンプレートにアクセスする
 
   フラグメントの主要要素を表すインターフェイスは、次のとおりです。
 

@@ -1,18 +1,14 @@
 ---
 title: インタラクティブ通信の設定プロパティ
-seo-title: Interactive Communication configuration properties
 description: インタラクティブ通信のデフォルトの設定プロパティを編集
-seo-description: Edit default configuration properties for Interactive Communications
-uuid: 4030078f-64a3-40bb-9892-49e22a8da561
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 topic-tags: interactive-communications
-discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
 feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 44%

@@ -1,25 +1,21 @@
 ---
 title: 詳細なシステム属性の設定
-seo-title: Configure advanced system attributes
-description: システム属性の詳細設定ページを使用して、ファイルの書き出し、編集、読み込みを行うことなく、設定ファイルの特定の設定を変更します。
-seo-description: Use the Configure Advanced System Attributes page to modify certain settings in the configuration file without the need to export, edit, and import the file.
-uuid: 6bcfbaa9-f492-46aa-97d2-00fc3e67d0d7
+description: '[ システム属性の詳細設定 ] ページを使用すると、ファイルの書き出し、編集、読み込みを行わずに、設定ファイル内の特定の設定を変更できます。'
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 533ad3f7-3905-420d-8bb9-8ae8f14fb28e
 exl-id: 809af2c0-6f5c-4dd4-af48-dbf476c9ea45
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 100%
+source-wordcount: '480'
+ht-degree: 88%
 
 ---
 
 # 詳細なシステム属性の設定 {#configure-advanced-system-attributes}
 
-システム属性の詳細設定ページを使用して、ファイルの書き出し、編集、読み込みを行うことなく、設定ファイルの特定の設定を変更します。（[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)を参照）。
+[ システム属性の詳細設定 ] ページを使用すると、ファイルの書き出し、編集、読み込みを行わずに、設定ファイル内の特定の設定を変更できます。 ( 詳しくは、 [設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
 
 1. 管理コンソールで、**[!UICONTROL 設定／User Management／設定／システム属性の詳細設定]**&#x200B;をクリックしてください。
 1. （オプション）次のセッション属性を変更します。

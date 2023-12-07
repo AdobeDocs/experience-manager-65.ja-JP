@@ -1,16 +1,14 @@
 ---
 title: 画像エディター
-description: 画像エディターは AEM の中核となる要素であり、コンテンツ作成者はこれを使用することで、画像を容易に操作できます。
-uuid: de6ac71b-380a-4b67-b697-ac34a79a9cc4
+description: 画像エディターは AEM の中核となる要素です。コンテンツ作成者は画像エディターを使用することで、画像を容易に操作できます。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
-discoiquuid: f6347492-cf48-4835-b8fd-ce9a75a09abe
 exl-id: af6cf1e0-8901-4621-9f72-e791cb8d68ae
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: ht
-source-wordcount: '312'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '292'
 ht-degree: 100%
 
 ---

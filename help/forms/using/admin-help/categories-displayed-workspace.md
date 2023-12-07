@@ -1,18 +1,14 @@
 ---
 title: Workspace に表示されるカテゴリの管理
-seo-title: Managing the categories displayed in Workspace
 description: Workspace では、ユーザーが開始できるプロセスは、左側のナビゲーションウィンドウのカテゴリに表示されます。 Workspace に表示されるこれらのカテゴリを管理する方法について説明します。
-seo-description: In Workspace, the processes that a user can start are displayed in categories in the left navigation pane. Learn how you can manage these categories displayed in Workspace.
-uuid: c2a275f5-872e-467f-9f07-4b130631e8a8
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 0d1536a2-10ac-4031-bd7f-264b02d0d75f
 exl-id: 62621fe9-f69f-4bc0-aecc-d7bcc3064516
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '482'
 ht-degree: 9%
 
 ---
@@ -51,4 +47,4 @@ MySQL をAEM forms データベースとして使用している場合、管理�
 削除できるのは、使用されていないカテゴリだけです。
 
 1. 管理コンソールで、サービス/アプリケーションおよびサービス/カテゴリの管理をクリックします。
-1. カテゴリの管理ページで、削除するカテゴリのチェックボックスを選択し、「削除」をクリックします。 カテゴリが表示されなくなりました。
+1. カテゴリの管理ページで、削除するカテゴリのチェックボックスを選択し、「削除」をクリックします。 カテゴリは表示されなくなりました。

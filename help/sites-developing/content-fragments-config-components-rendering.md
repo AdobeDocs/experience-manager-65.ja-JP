@@ -1,18 +1,14 @@
 ---
 title: レンダリングコンポーネントのコンテンツフラグメントの設定
-seo-title: Content Fragments Configuring Components for Rendering
 description: レンダリングコンポーネントのコンテンツフラグメントの設定
-seo-description: Content Fragments Configuring Components for Rendering
-uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '463'
 ht-degree: 95%
 
 ---

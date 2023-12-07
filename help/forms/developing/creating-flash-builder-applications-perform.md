@@ -1,19 +1,15 @@
 ---
 title: HTTP トークンを使用した SSO 認証を実行する Flash Builder アプリケーションの作成
-seo-title: Creating Flash Builder applicationsthat perform SSO authentication using HTTP tokens
 description: HTTP トークンを使用してシングルサインオン（SSO）認証を実行する Flash Builder を使用し、クライアントアプリケーションを作成してください。操作のユーザーを 1 回認証し、その認証を使用して複数の AEM Forms 操作を実行してください。
-seo-description: Create a client application using Flash Builder that performs single-sign on (SSO) authentication using HTTP tokens. Authenticate a user for an operation once and use that authentication to perform multiple AEM Forms operations.
-uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
-discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1783'
 ht-degree: 98%
 
 ---

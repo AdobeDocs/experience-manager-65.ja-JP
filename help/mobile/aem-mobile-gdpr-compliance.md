@@ -1,13 +1,12 @@
 ---
 title: Adobe Experience Manager Mobile - GDPR 対応
 description: Adobe Experience Managerが GDPR への準拠義務を支援する準備ができている方法を説明します。
-uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 2%
+source-wordcount: '683'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +36,7 @@ Adobeの GDPR リクエストを開始できるよう、カスタマーケアに
 
 顧客データを検索するには、次の ID が必要です。 受け取ったサブセットは、他の ID がこのユーザーに適用されなかったことを意味します。
 
-必須:
+必須：
 
 * 顧客の契約 ID : *dpsc-contractId*
 

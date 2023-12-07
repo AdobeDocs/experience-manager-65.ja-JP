@@ -1,17 +1,13 @@
 ---
 title: AEM Forms 中心のワークフローステップのためのユーザーまたはグループの動的な選択
-seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
 description: 実行時に AEM Forms Workflow のユーザーまたはグループを選択する方法について説明します。
-seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
-uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
-discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 46%
+source-wordcount: '873'
+ht-degree: 89%
 
 ---
 
@@ -121,8 +117,8 @@ function getAdobeSignRecipients() {
 以下のコードサンプルをコンパイルするには、[AEM Forms Client SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) jar および [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルが必要です。これらの jar ファイルを外部の依存関係として OSGi バンドルプロジェクトに追加します。 任意の Java IDE を使用して、OSGi バンドルを作成できます。 次の手順は、Eclipse を使用して OSGi バンドルを作成する手順を示しています。
 
 1. Eclipse IDE を開きます。 **[!UICONTROL ファイル]**／**[!UICONTROL 新規プロジェクト]**&#x200B;に移動します。
-1. ウィザードを選択画面で、「 」を選択します。 **[!UICONTROL Maven プロジェクト]**&#x200B;をクリックし、 **[!UICONTROL 次へ]**.
-1. 新しい Maven プロジェクトで、デフォルトをそのままにして、「 **[!UICONTROL 次へ]**. アーキタイプを選択して「**[!UICONTROL 次へ]**」をクリックします。例えば、maven-archetype-quickstart などです。 指定 **[!UICONTROL グループ ID]**, **[!UICONTROL アーティファクト ID]**, **[!UICONTROL version]**、および **[!UICONTROL パッケージ]** プロジェクトの場合は、をクリックします。 **[!UICONTROL 完了]**. プロジェクトが作成されます。
+1. ウィザードを選択画面で、**[!UICONTROL Maven プロジェクト]**&#x200B;を選択し、「**[!UICONTROL 次へ]**」をクリックします。
+1. 新しい Maven プロジェクトで、デフォルトをそのままにして、「 **[!UICONTROL 次へ]**. アーキタイプを選択して「**[!UICONTROL 次へ]**」をクリックします。例えば、maven-archetype-quickstart などです。 指定 **[!UICONTROL グループ ID]**, **[!UICONTROL アーティファクト ID]**, **[!UICONTROL version]**、および **[!UICONTROL パッケージ]** プロジェクトの場合は、をクリックします。 **[!UICONTROL 完了]**. プロジェクト構造が作成されます。
 1. 編集用に pom.xml ファイルを開き、ファイルのすべてのコンテンツを以下に置き換えます。
 
    ```xml

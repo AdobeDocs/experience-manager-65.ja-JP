@@ -1,16 +1,12 @@
 ---
 title: AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの組み込み
-seo-title: Embed adaptive forms or Interactive Communications in AEM Sites pages
 description: AEM Sites ページにアダプティブフォームやインタラクティブコミュニケーションを組み込みます。ユーザーは、Sites のページから移動せずにフォームを記入および送信できます。
-seo-description: You can embed adaptive forms or Interactive Communication in AEM Sites pages. Users can fill and submit forms without leaving the Sites page.
-uuid: 4c75494e-e9d2-43b9-bbae-562e0eda8abb
 topic-tags: author, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: a74ed6c1-3006-4baf-bd77-ad4045e23c22
 docset: aem65
 feature: Adaptive Forms
 exl-id: b549f176-409a-4d81-8c2b-73d0dd0c6649
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 90%

@@ -1,17 +1,15 @@
 ---
 title: AEM のコンソールのキーボードショートカット
 description: これらのキーボードショートカットを使用すると、オーサリング時に時間を節約できます
-uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 94%
+ht-degree: 93%
 
 ---
 
@@ -29,7 +27,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 | 場所 | ショートカット | 説明 |
 |---|---|---|
-| 一般 | `Ctrl+Click` | 複数選択 デスクトップデバイス上 |
+| 一般 | `Ctrl+Click` | デスクトップデバイスでの複数選択 |
 | コンソール - 列表示およびコンテンツ表示 | `Right Arrow` | Web サイトの構造を下に移動／ツリーノードを展開 |
 |  | `Left Arrow` | ツリー構造を上に移動／ツリーノードを折りたたむ |
 |  | `Down Arrow` | ページのリストを（同じレベルで）下に移動 |

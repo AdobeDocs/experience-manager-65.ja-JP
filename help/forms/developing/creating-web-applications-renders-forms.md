@@ -1,20 +1,16 @@
 ---
 title: Forms をレンダリングする web アプリケーションの作成
-seo-title: Creating Web Applications thatRenders Forms
 description: Java サーブレットを使用して Forms サービスを呼び出し、フォームをレンダリングする web ベースのアプリケーションを作成します。Java サーブレットは、フォームを返す Forms サービスとクライアント Web ブラウザーの間のリンクとして機能します。
-seo-description: Create a web-based application that uses Java servlets to invoke the Forms service and render forms. The Java servlet serves as the link between the Forms service that returns a form and a client web browser.
-uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1832'
 ht-degree: 93%
 
 ---
@@ -71,7 +67,7 @@ Web アプリケーションで使用される XML データファイルが Data
 
 フラグメントに基づいて Forms をレンダリングする Web ベースのアプリケーションを作成するには、次の手順を実行します。
 
-1. Web プロジェクトを作成.
+1. Web プロジェクトを作成します。
 1. Java サーブレットを表す Java アプリケーションロジックを作成します。
 1. Web アプリケーション用の Web ページを作成します。
 1. Web アプリケーションを WAR ファイルにパッケージ化します。

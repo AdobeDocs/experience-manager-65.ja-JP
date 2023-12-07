@@ -1,17 +1,13 @@
 ---
 title: カスタム実装のトランザクションの記録
-seo-title: Record a transaction for custom implementations
 description: トランザクションとして自動的に計上されないアクションを記録するには、TransactionRecorder API を使用します
-seo-description: Use the TransactionRecorder API to record actions which are not accounted as transactions automatically
-uuid: a22b1a0b-7553-4a17-8fb4-a3bee97b4a98
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
-discoiquuid: 0d961630-573b-4c8e-902f-996f1d1265b6
 exl-id: a1d97b15-14a6-4c3d-bdd3-6366f7acdfc8
-source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
-workflow-type: ht
-source-wordcount: '222'
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '202'
 ht-degree: 100%
 
 ---

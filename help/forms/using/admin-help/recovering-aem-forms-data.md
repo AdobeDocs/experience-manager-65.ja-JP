@@ -1,18 +1,14 @@
 ---
 title: AEM Forms データの回復
-seo-title: Recovering the AEM forms data
 description: ここでは、AEM Forms データの回復に必要な手順について説明します。
-seo-description: This document describes the steps required to recover the AEM forms data.
-uuid: b5735196-5a8d-4358-884f-e9b8d8f4f682
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1117'
 ht-degree: 97%
 
 ---

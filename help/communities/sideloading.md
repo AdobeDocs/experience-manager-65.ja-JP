@@ -1,19 +1,15 @@
 ---
 title: コンポーネントのサイドローディング
-seo-title: Component Sideloading
-description: コミュニティコンポーネントのサイドローディングは、Web ページが、サイト訪問者の選択に応じて表示内容が動的に変わる単純なシングルページアプリケーションとして設計されている場合に便利です
-seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
-uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
+description: コミュニティコンポーネントのサイドロードは、Web ページが単純な単一ページアプリとして設計され、サイト訪問者が選択した内容に応じて表示内容を動的に変更する場合に役立ちます
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 exl-id: 960e132c-b370-43d1-bd8f-e7d0ded7c0b3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 76%
+ht-degree: 1%
 
 ---
 
@@ -21,15 +17,15 @@ ht-degree: 76%
 
 ## 概要 {#overview}
 
-コミュニティコンポーネントのサイドローディングは、Web ページが、サイト訪問者の選択に応じて表示内容が動的に変わる単純なシングルページアプリケーションとして設計されている場合に便利です.
+コミュニティコンポーネントのサイドロードは、Web ページが単純な単一ページアプリとして設計され、サイト訪問者が選択した内容に応じて表示内容を動的に変更する場合に役立ちます。
 
-これは、コミュニティコンポーネントがページテンプレートに存在せず、サイト訪問者の選択後に動的に追加される場合に実現されます。
+これは、コミュニティコンポーネントがページテンプレートに存在せず、代わりにサイト訪問者の選択に従って動的に追加される場合に実行されます。
 
-ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。ページの読み込み後に動的に追加された SCF コンポーネントを登録するには、SCF を呼び出してコンポーネントを「サイドロード」する必要があります。
+ソーシャルコンポーネントフレームワーク (SCF) は軽量な存在なので、最初のページ読み込み時に存在する SCF コンポーネントのみが登録されます。 ページの読み込み後に動的に追加された SCF コンポーネントを登録するには、SCF を呼び出してコンポーネントを「サイドロード」する必要があります。
 
-コミュニティコンポーネントをサイドローディングするようページが設計されている場合、ページ全体をキャッシュすることができます。
+Communities コンポーネントをサイドロードするように設計されているページでは、ページ全体をキャッシュできます。
 
-SCF コンポーネントを動的に追加する手順は、次のとおりです。
+SCF コンポーネントを動的に追加する手順は次のとおりです。
 
 1. [DOM にコンポーネントを追加します。](#dynamically-add-component-to-dom)
 
@@ -38,29 +34,29 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 * [動的な追加](#dynamic-inclusion)
    * 動的に追加されたすべてのコンポーネントをブーストラップ
 * [動的な読み込み](#dynamic-loading)
-   * 特定のコンポーネントをオンデマンドで追加
+   * 特定のコンポーネントをオンデマンドで 1 つ追加
 
 >[!NOTE]
 >
->[存在しないリソース](scf.md#add-or-include-a-communities-component)のサイドローディングはサポートされていません。
+>サイドローディング [存在しないリソース](scf.md#add-or-include-a-communities-component) はサポートされていません。
 
-## DOM に対するコンポーネントの動的な追加 {#dynamically-add-component-to-dom}
+## DOM にコンポーネントを動的に追加 {#dynamically-add-component-to-dom}
 
-動的なインクルードの場合も動的なロードの場合も、最初にコンポーネントを DOM に追加する必要があります。
+コンポーネントが動的に含まれるか動的に読み込まれるかに関わらず、まず DOM に追加する必要があります。
 
-SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCF はページが最初に読み込まれたときにのみ DOM を調べるので、SCF が明示的に呼び出されるまで、DOM へのこの追加は無視されます。
+SCF コンポーネントを追加する際に最も一般的なタグは DIV タグですが、他のタグも使用できます。 SCF はページが最初に読み込まれたときにのみ DOM を調べるので、SCF が明示的に呼び出されるまで、DOM へのこの追加は無視されます。
 
-どのタグを使用する場合も、最低限、要素が通常の SCF ルート要素パターンに準拠している必要があります。そのためには、次の 2 つの属性を含めます。
+どのタグを使用する場合でも、少なくとも、その要素は、次の 2 つの属性を含めることで、通常の SCF ルート要素パターンに準拠している必要があります。
 
 * **data-component-id**
 
-   追加されたコンポーネントへの有効なパス。
+  追加されたコンポーネントへの有効なパス。
 
 * **data-scf-component**
 
-   コンポーネントの resourceType。
+  コンポーネントの resourceType です。
 
-以下に示すのは、追加されるコメントコンポーネントの例です。
+次に、追加されたコメントコンポーネントの例を示します。
 
 ```xml
 <div
@@ -71,22 +67,22 @@ SCF コンポーネントを追加する際に最もよく使用されるタグ�
 </div>
 ```
 
-## SCF の呼び出しによるサイドローディング {#sideload-by-invoking-scf}
+## SCF の呼び出しによるサイドロード {#sideload-by-invoking-scf}
 
-### 動的なインクルード {#dynamic-inclusion}
+### 動的な組み込み {#dynamic-inclusion}
 
-動的なインクルードでは、ブートストラップ要求を使用します。これにより、SCF によって DOM が確認され、ページ上で見つかったすべての SCF コンポーネントがブートストラップされます。
+動的インクルージョンは、ブーストラップリクエストを使用するので、SCF が DOM を調べて、ページ上のすべての SCF コンポーネントをブートスラップします。
 
-ページロード後にいつでも次のような JQuery イベントを実行して、SCF コンポーネントを初期化できます。
+ページの読み込み後に SCF コンポーネントを初期化するには、次のような JQuery イベントを発生させます。
 
 `$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
-### 動的なロード {#dynamic-loading}
+### 動的読み込み {#dynamic-loading}
 
-動的なロードでは、ロードする SCF コンポーネントを制御できます。
+動的な読み込みは、SCF コンポーネントの読み込みを制御します。
 
-次の JavaScript メソッドを使用すると、DOM にあるすべての SCF コンポーネントをブートストラップする代わりに、ロードする特定の SCF コンポーネントを指定できます。
+DOM 内のすべての SCF コンポーネントをブートストラップする代わりに、次の JavaScript メソッドを使用して、読み込む特定の SCF コンポーネントを指定することができます。
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-ここで、 `someId` が `data-component-id` 属性。
+ここで、 `someId` は、 `data-component-id` 属性。

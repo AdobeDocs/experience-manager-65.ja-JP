@@ -1,17 +1,13 @@
 ---
 title: ファイルタイプ設定の指定
-seo-title: Configuring file type settings
 description: ファイルタイプの設定を行う方法を説明します。
-seo-description: Learn how to configure file type settings.
-uuid: d01f430b-9637-4a5f-b3a7-d5ef3e5ecbc5
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: adbe8416-c8d7-4581-940b-df62eadf0e26
-source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '6163'
+source-wordcount: '6157'
 ht-degree: 35%
 
 ---

@@ -1,19 +1,15 @@
 ---
 title: アダプティブフォームのカスタムレイアウトコンポーネントの作成
-seo-title: Creating custom layout components for adaptive forms
-description: アダプティブフォームのカスタムレイアウトコンポーネントの作成手順
-seo-description: Procedure to create custom layout components for adaptive forms.
-uuid: f0bb5fcd-3938-4804-ad0c-d96d3083fd01
+description: アダプティブフォームのカスタムレイアウトコンポーネントを作成する手順です。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
 exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 100%
+ht-degree: 70%
 
 ---
 
@@ -21,11 +17,11 @@ ht-degree: 100%
 
 ## 前提条件 {#prerequisite}
 
-カスタムレイアウトの作成および使用を可能にするレイアウトについての知識が必要です。「[パネルレイアウトの変更](../../forms/using/layout-capabilities-adaptive-forms.md)」を参照してください。
+カスタムレイアウトの作成/使用を可能にするレイアウトに関する知識。 詳しくは、 [パネルレイアウトの変更](../../forms/using/layout-capabilities-adaptive-forms.md).
 
-## アダプティブフォームのパネルレイアウトのコンポーネント {#adaptive-form-panel-layout-component}
+## アダプティブフォームパネルレイアウトコンポーネント {#adaptive-form-panel-layout-component}
 
-アダプティブフォームのパネルレイアウトのコンポーネントは、ユーザーインターフェイスに考慮して、パネル内のアダプティブフォームのコンポーネントをどのようにレイアウトするかをコントロールします。
+アダプティブフォームのパネルレイアウトコンポーネントは、ユーザーインターフェイスに対する、パネル内のアダプティブフォームのコンポーネントのレイアウト方法を制御します。
 
 ## カスタムパネルレイアウトの作成 {#creating-a-custom-panel-layout}
 
@@ -201,7 +197,7 @@ qtip
    </div>
    ```
 
-1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
+1. アダプティブフォームをオーサリングモードで開きます。 定義したパネルレイアウトが、パネルレイアウトを設定するためのリストに追加されます。
 
    ![パネルレイアウトリストに表示されたカスタムパネルレイアウト](assets/auth-layt.png) ![カスタムパネルレイアウトを使用したアダプティブフォームのスクリーンショット](assets/s1.png) ![カスタムレイアウトの切り替え機能を示したスクリーンショット](assets/s2.png)
 

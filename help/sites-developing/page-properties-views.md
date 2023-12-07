@@ -1,19 +1,15 @@
 ---
 title: ページプロパティのビューのカスタマイズ
-seo-title: Customizing Views of Page Properties
 description: 各ページには、必要に応じて編集できる一連のプロパティがあります
-seo-description: Every page has a set of properties that you can edit as required
-uuid: cbfca6e6-cb9e-43b1-8889-09a7cc9f8a51
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 72%
+source-wordcount: '475'
+ht-degree: 71%
 
 ---
 

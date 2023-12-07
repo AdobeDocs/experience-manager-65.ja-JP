@@ -1,17 +1,13 @@
 ---
 title: 使用するテンプレートに基づいたコンポーネントの表示
-seo-title: Displaying components based on the template used
 description: フォームを作成する際に、選択したテンプレートに基づいてサイドバーのコンポーネントを有効にする方法を学びます。
-seo-description: When you create a form, learn how you can enable components in the sidebar based on the template selected.
-uuid: 790d201b-318d-4d02-9bc5-9d6bc41d057a
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 content-type: reference
-discoiquuid: f658da57-0134-4458-9ef9-a99787b66742
 docset: aem65
 exl-id: 1fc56829-db81-4450-b1d8-b4a31110199e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 63%

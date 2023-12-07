@@ -1,20 +1,16 @@
 ---
 title: Forms の開発（クラシック UI）
-seo-title: Developing Forms (Classic UI)
 description: Adobe Experience Managerクラシック UI 用のフォームを開発する方法を説明します。
-seo-description: Learn how to develop forms
-uuid: 33859f29-edc5-4bd5-a634-35549f3b5ccf
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1945'
-ht-degree: 51%
+source-wordcount: '1930'
+ht-degree: 49%
 
 ---
 
@@ -104,7 +100,7 @@ The **項目読み込みパス** を使用して、リポジトリ内のフォ�
 
 `/apps` に独自のアクションを追加するには、次の手順を実行します。
 
-1. `sling:Folder` タイプのノードを作成します。実装するアクションを反映した名前を指定してください。
+1. `sling:Folder`というタイプのノードを作成します。実装するアクションを反映する名前を指定します。
 
    次に例を示します。
 
@@ -199,7 +195,7 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 
 （`/apps` に）個々のフィールドの独自の制約を追加するには、次の手順を実行します。
 
-1. `sling:Folder` タイプのノードを作成します。実装する制約を反映した名前を指定します。
+1. `sling:Folder`というタイプのノードを作成します。実装する制約を反映する名前を指定します。
 
    次に例を示します。
 
@@ -245,7 +241,7 @@ An `addfields` スクリプトは、フォーム開始のHTMLが記述された�
 
 フォーム内の他のフィールドの値に応じて、フォームのコンポーネントの表示と非表示を切り替えるようにフォームを設定できます。
 
-特定の条件下でのみフィールドが必要とされる場合、フォームフィールドの表示を変更することは役立ちます。例えば、フィードバックフォームで、製品情報を電子メールで顧客に送信したいかどうかを尋ねる質問が発生した場合です。 「はい」を選択すると、顧客が電子メールアドレスを入力できるテキストフィールドが表示されます。
+フォームフィールドの表示/非表示を変更すると、特定の条件でのみフィールドが必要な場合に便利です。 例えば、フィードバックフォームで、製品情報を電子メールで顧客に送信したいかどうかを尋ねる質問が発生した場合です。 「はい」を選択すると、顧客が電子メールアドレスを入力できるテキストフィールドが表示されます。
 
 フォームコンポーネントを表示または非表示にする条件を指定するには、**表示 / 非表示のルールを編集**&#x200B;ダイアログボックスを使用します。
 

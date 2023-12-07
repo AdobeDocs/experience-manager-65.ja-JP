@@ -1,17 +1,13 @@
 ---
 title: エディター
-seo-title: Editor
 description: クラシック UI エディターへの切り替え方法を説明します。
-seo-description: Learn how to switch back to the Classic UI Editor.
-uuid: ca8b07e7-014f-428e-82bd-87f3aae12f6e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 54903f3a-1e7e-4083-a2c9-b2ea4555d7fc
 docset: aem65
 exl-id: 8540e1f0-22d7-4f48-85d9-7c44eb7185df
-source-git-commit: 1c89ac7c4740222a3f51abd677e0ce71a7004377
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 100%

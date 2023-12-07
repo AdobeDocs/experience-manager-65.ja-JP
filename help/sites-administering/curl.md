@@ -1,16 +1,12 @@
 ---
 title: AEM での cURL の使用
-seo-title: Using cURL with AEM
 description: 一般的なAdobe Experience Managerタスクで cURL を使用する方法を説明します。
-seo-description: Learn how to use cURL with AEM.
-uuid: 771b9acc-ff3a-41c9-9fee-7e5d2183f311
 contentOwner: Silviu Raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 33%

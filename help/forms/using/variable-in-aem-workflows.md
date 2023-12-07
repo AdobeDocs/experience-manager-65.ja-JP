@@ -1,16 +1,12 @@
 ---
 title: AEM Forms ワークフローの変数
-seo-title: Variables in AEM Forms Workflows
 description: 変数を作成、変数の値を設定し、AEM Forms Workflow ステップで使用してください。
-seo-description: Create a variable, set a value for the variable, and use it in AEM Forms workflow steps.
-uuid: 634a75c4-4899-478f-9e5d-a870f5efa583
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2080'
 ht-degree: 88%

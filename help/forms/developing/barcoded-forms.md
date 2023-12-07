@@ -1,17 +1,13 @@
 ---
 title: Barcoded Forms の操作
-seo-title: Working with barcoded forms
 description: Java API および web サービス API を使用して、PDF フォームまたはバーコードを含む画像からデータをデコードします。
-seo-description: Decode data from a PDF form or an image that contains a barcode using the Java API and Web Service API.
-uuid: e56c3c94-384d-401f-b418-dd34cdc57eda
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1911'
 ht-degree: 84%

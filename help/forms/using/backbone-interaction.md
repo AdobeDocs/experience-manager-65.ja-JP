@@ -1,18 +1,14 @@
 ---
 title: Backbone インタラクション
-seo-title: Backbone interaction
 description: AEM Forms Workspace での Backbone JavaScript モデルの使用に関する概念情報です。
-seo-description: Conceptual information about use of Backbone JavaScript models in AEM Forms workspace.
-uuid: 040f42cb-3b76-4657-ba05-9e52647efb12
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 538591fe-29e4-40c4-a045-06095cc0c6b8
 docset: aem65
 exl-id: 8fd9770b-6ec4-4b09-b6b2-47a5e5d40f79
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '436'
 ht-degree: 34%
 
 ---
@@ -35,7 +31,7 @@ Backbone は、Web アプリケーションで MVC アーキテクチャを作�
 * 類似したコンポーネントのコレクションにすることができます。
 * Backbone モデル、Backbone ビュー、およびHTMLテンプレートで構成されます。
 * サービスへの参照が含まれます。
-* 必要なユーティリティへの参照を含みます。
+* 必要なユーティリティへの参照が含まれます。
 
 コンポーネントを初期化すると、次のオブジェクトが作成されます。
 
@@ -58,4 +54,4 @@ Backbone ビューには、対応するハンドラとのユーザーインタ�
 1. この Ajax 呼び出しの成功コールバックは、タスクモデルで定義されます。
 1. タスクモデルは、レンダリング呼び出しが完了した通知として Backbone イベントを発生させます。
 1. 別のビューであるタスクの詳細ビューは、タスクモデルからこのイベントをリッスンします。
-1. 次に、タスクの詳細ビューは、タスクの詳細テンプレートを変更し、レンダリングされたタスク（フォーム、詳細、添付ファイル、メモなど）をユーザーに表示します。
+1. 次に、タスクの詳細ビューは、タスクの詳細テンプレートを変更して、レンダリングされたタスク（フォーム、詳細、添付ファイル、メモなど）をユーザーに表示します。

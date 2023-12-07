@@ -1,18 +1,16 @@
 ---
 title: デザインモードでのコンポーネントの設定
 description: AEM インスタンスを標準でインストールすると、サイドキックで直ちに様々なコンポーネントを使用できます。これらに加えて、他の様々なコンポーネントも使用できます。デザインモードを使用して、このようなコンポーネントを有効または無効にできます。
-uuid: 2cd5dad0-2f9c-4f34-aae8-1638d1445eb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: ht
-source-wordcount: '509'
-ht-degree: 100%
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+workflow-type: tm+mt
+source-wordcount: '508'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +22,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 >[!NOTE]
 >
->これらのコンポーネントを編集する際は慎重に行ってください。デザインの設定は、通常、web サイト全体のデザインで重要な部分なので、適切な権限（および十分な経験）のあるユーザー（通常は、管理者または開発者）のみが変更を行う必要があります。詳しくは、[コンポーネントの開発](/help/sites-developing/components.md)を参照してください。
+>これらのコンポーネントを編集する際は注意が必要です。デザイン設定は、多くの場合、Web サイト全体のデザインに不可欠な要素なので、適切な権限（および経験）を持つユーザー、多くの場合は管理者または開発者のみが変更する必要があります。 詳しくは、[コンポーネントの開発](/help/sites-developing/components.md)を参照してください。
 
 具体的には、ページの段落システムで許可された構成要素を追加したり、削除したりすることです。段落システム（`parsys`）は、他のすべての段落コンポーネントを含む複合コンポーネントです。段落システムを使用すると、作成者は異なるタイプのコンポーネントを、他のすべての段落コンポーネントを含むページに追加できます。各段落タイプは、コンポーネントとして表されます。
 

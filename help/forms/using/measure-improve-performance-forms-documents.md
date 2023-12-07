@@ -1,18 +1,14 @@
 ---
 title: フォームのコンバージョン率の測定と効率性の改善
-seo-title: Measure and improve effectiveness and conversion of forms
 description: AEM Formsは、Adobe TargetおよびAdobe Analyticsの各ソリューションと統合されており、フォームのパフォーマンスとコンバージョン率を測定および改善できます。
-seo-description: AEM Forms integrates with Adobe Target and Adobe Analytics solutions that lets you measure and improve the performance and conversion rate of your forms.
-uuid: fd2f087c-39f5-457d-8b44-c3ec4400b3fc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
-discoiquuid: a128877d-239c-4272-99c2-72d6486d5703
 docset: aem65
 exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1273'
 ht-degree: 29%
 
 ---

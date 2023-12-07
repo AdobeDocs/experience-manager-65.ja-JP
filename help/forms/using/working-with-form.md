@@ -1,15 +1,11 @@
 ---
 title: フォームの操作
-seo-title: Working with a Form
 description: AEM Formsアプリでタスクまたは Startpoint に関連付けられたフォームを表示し、更新する
-seo-description: View and update the form associated with a task or Startpoint in the AEM Forms app
-uuid: 7481ca5c-a2c0-4697-9008-1e51bce2012e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 38%

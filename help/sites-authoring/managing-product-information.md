@@ -1,16 +1,12 @@
 ---
 title: クリエイティブプロジェクトと PIM 統合
-seo-title: Creative Project and PIM Integration
 description: クリエイティブプロジェクトは、写真撮影リクエストの生成、撮影した写真のアップロード、撮影した写真に対する共同作業、承認済みアセットのパッケージ化を含む、写真撮影ワークフロー全体を合理化します
-seo-description: Creative Project streamlines the entire photo shoot workflow that including generating a photo shoot request, uploading a photo shoot, collaborating on a photo shoot, and packaging approved assets
-uuid: 09f27d36-e725-45cb-88d1-27383aedceed
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
-discoiquuid: 0e5d0a45-c663-4d91-b793-03d39119d103
 exl-id: c4eff50e-0d55-4a61-98fd-cc42138656cb
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2887'
 ht-degree: 19%

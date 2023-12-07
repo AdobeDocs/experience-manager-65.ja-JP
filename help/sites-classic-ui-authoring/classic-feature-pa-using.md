@@ -1,33 +1,29 @@
 ---
 title: ページ分析データの表示
-seo-title: Seeing Page Analytics Data
-description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
-seo-description: Use page analytics data to gauge the effectiveness of their page content.
-uuid: a3d1e4d6-56af-44a5-832f-63167ea8af52
+description: ページ分析データを使用して、ページコンテンツの効果性を測定します。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
-discoiquuid: 28529cae-6fbd-4879-a5b8-3ec8e1bcd586
 docset: aem65
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 100%
+source-wordcount: '91'
+ht-degree: 48%
 
 ---
 
 
 # ページ分析データの表示 {#seeing-page-analytics-data}
 
-ページ分析データを使用すると、ページコンテンツの効果を測定できます。
+ページ分析データを使用して、ページコンテンツの効果性を測定します。
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
-ページ分析データはサイトコンソールに表示されます。サイトがリスト形式で表示されているとき、デフォルトでは次の列が表示されます。
+ページ分析データがサイトコンソールに表示されます。 サイトがリスト形式で表示される場合、次の列がデフォルトで使用可能です。
 
 * ページ表示
-* 個別訪問者数
+* ユニーク訪問者
 * ページ滞在時間
 
 >[!NOTE]

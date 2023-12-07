@@ -1,18 +1,14 @@
 ---
 title: シングルサインオンとタイムアウトハンドラー
-seo-title: Single Sign On and timeout handlers
 description: AEM Forms Workspace のセッションタイムアウト値の設定方法。
-seo-description: How-to set the session timeout value for AEM Forms workspace.
-uuid: 17583fd5-6453-41d3-bb63-a639983fbea9
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
-discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 exl-id: 4f824d80-f3f8-4010-9583-5a9ab1151a7b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '189'
 ht-degree: 40%
 
 ---

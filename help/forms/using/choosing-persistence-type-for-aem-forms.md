@@ -1,28 +1,24 @@
 ---
 title: AEM Forms のインストールに永続性タイプを選択する
-seo-title: Choosing a persistence type for an AEM Forms installation
-description: 永続性タイプを選択することをお勧めします。これにより、効率的で拡張性の高い AEM Forms 環境を構築することができます。
-seo-description: Choose a persistence type wisely. It helps you build an efficient and scale able AEM Forms environment.
-uuid: 1c692502-5039-4757-9358-1772772b3904
+description: 永続性タイプを選択することをお勧めします。 これにより、効率的で拡張性の高いAEM Forms環境を構築できます。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
-discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
 role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 100%
+ht-degree: 17%
 
 ---
 
 # AEM Forms のインストールに永続性タイプを選択する {#choosing-a-persistence-type-for-an-aem-forms-installation}
 
-永続性タイプを選択することをお勧めします。これにより、効率的で拡張性の高い AEM Forms 環境を構築することができます。
+永続性タイプを選択することをお勧めします。 これにより、効率的で拡張性の高いAEM Forms環境を構築できます。
 
-永続性とは、物理ストレージにコンテンツを保存する方法です。これは、実際のデータ構造とデータのストレージの仕組みを定義します。MicroKernel は、AEM Forms の永続性マネージャーとして機能します。AEM Forms は TarMK、MongoMK、RDBMK の永続性タイプ（MicroKernals）をサポートしています。AEM Forms インスタンスの用途とデプロイの種類（シングルサーバー、ファーム、クラスター環境）に応じて AEM Forms の永続性タイプを選択できます。
+永続性は、物理ストレージにコンテンツを保存する方法です。 データの実際のデータ構造と保存メカニズムを定義します。 MicroKernel は、AEM Formsの永続性マネージャーとして機能します。 AEM Formsは、TarMK、MongoMK、RDBMK の永続性 (MicroKernals) をサポートします。 AEM Formsインスタンスの目的とデプロイメントの種類（シングルサーバー、ファーム、クラスター）に応じて、AEM Formsの永続性タイプを選択できます。
 
 >[!NOTE]
 >
@@ -39,13 +35,13 @@ ht-degree: 100%
    <th><strong>RDBMK</strong></th>
   </tr>
   <tr>
-   <th><strong>スタンドアロンセットアップ</strong></th>
+   <th><strong>スタンドアロン設定</strong></th>
    <td>サポート対象<br /> </td>
    <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
   <tr>
-   <th><strong>クラスターセットアップ</strong></th>
+   <th><strong>クラスターの設定</strong></th>
    <td>サポート対象外</td>
    <td>サポート対象</td>
    <td>サポート対象</td>
@@ -53,18 +49,18 @@ ht-degree: 100%
   <tr>
    <th><strong>ライセンスコスト</strong></th>
    <td>AEM に含まれる </td>
-   <td>別途ライセンスが必要</td>
-   <td>別途ライセンスが必要</td>
+   <td>別個のライセンスが必要です</td>
+   <td>別個のライセンスが必要です</td>
   </tr>
  </tbody>
 </table>
 
-TarMK はパフォーマンスを考慮して設計されています。一方、MongoMK と RDBMK はスケーラビリティを考慮して設計されています。オーサーインスタンスと発行インスタンスの両方において、「[TarMK の代わりに Mongo または Relational Database Microkernel を選択する](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)」セクションで説明されている使用例を除き、すべての AEM Forms デプロイメントシナリオのデフォルトの永続性テクノロジーとして TarMK を使用することを強くお勧めします。
+TarMK はパフォーマンスを目的として設計されていますが、MongoMK と RDBMK はスケーラビリティを目的として設計されています。 Adobeでは、オーサーインスタンスとパブリッシュインスタンスの両方について、すべてのAEM Formsデプロイメントシナリオのデフォルトの永続化テクノロジーとして TarMK を強く推奨しています。ただし、の節で説明する使用例は除きます [TarMK での Mongo またはリレーショナルデータベースマイクロカーネルの選択](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p).
 
-サポートされる Microkernel については、「[OSGi の AEM Forms の技術要件](/help/sites-deploying/technical-requirements.md)」または「[JEE がサポートされるプラットフォームの組み合わせにおける AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md)」の記事の一覧を参照してください。
+サポートされる Microkernel の一覧については、 [AEM Forms on OSGi の技術要件](/help/sites-deploying/technical-requirements.md) または [JEE 上のAEM Formsでサポートされているプラットフォームの組み合わせ](/help/forms/using/aem-forms-jee-supported-platforms.md) 記事。
 
-## TarMK の代わりに Mongo または Relational Database Microkernel を選択する {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
+## TarMK での Mongo またはリレーショナルデータベースマイクロカーネルの選択 {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
 
-スケーラブルなクラスター化された AEM Forms 環境は、並列的に構成された 2 つ以上のアクティブなオーサーインスタンスの組み合わせです。そのため、すべての同時オーサリングのアクティビティをサポートしている 1 つのサーバーが維持できなくなるような場合に備え、2 つ以上のオーサーインスタンスを実行することができます。
+スケーラブル（クラスター化）AEM Forms環境は、水平に設定された 2 つ以上のアクティブなオーサーインスタンスのセットです。 すべての同時オーサリングアクティビティをサポートする単一のサーバーが持続可能でなくなった場合は、複数のオーサーインスタンスを実行するよう選択できます。
 
-JEE 環境でのスケーラブルなクラスター化された AEM Formsに対応しているのは、MongoMK および RDBMK の永続性タイプのみです。サーバーの数やスケーラブル環境の規模は各インストールに応じて異なります。考慮事項と使用例については、「[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)」および「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」の記事の一覧を参照してください。RDBMK や TarMK を使用した AEM Forms の運用規模を計画するにあたって詳細情報が必要な場合は、AEM Forms のサポートにお問い合わせいただくこともできます。
+JEE 環境上のスケーラブルな（クラスター化された）AEM Formsに対しては、MongoMK と RDBMK の永続性タイプのみがサポートされます。 サーバーの数やスケーラブル環境のサイズは、インストールごとに異なります。 考慮事項と例のリストについては、 [推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md) およびまたは [AEM Formsのアーキテクチャとデプロイメントトポロジ](/help/forms/using/aem-forms-architecture-deployment.md) 記事。 また、RDBMK および TarMK を使用したAEM Formsの容量計画の詳細については、AEM Formsサポートにお問い合わせください。

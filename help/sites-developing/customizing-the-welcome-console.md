@@ -1,19 +1,15 @@
 ---
 title: ようこそコンソールのカスタマイズ（クラシック UI）
-seo-title: Customizing the Welcome Console (Classic UI)
-description: ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます
-seo-description: The Welcome console provides a list of links to the various consoles and functionality within AEM
-uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
+description: ようこそコンソールには、AEM内の様々なコンソールおよび機能へのリンクのリストが表示されます
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 100%
+source-wordcount: '449'
+ht-degree: 57%
 
 ---
 
@@ -21,28 +17,28 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->このページでは、従来の UI が使用されています。
+>このページでは、クラシック UI について説明します。
 >
->標準のタッチ操作対応 UI について詳しくは、[コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md)を参照してください。
+>詳しくは、 [コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md) を参照してください。
 
 ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます。
 
 ![cq_welcomescreen](assets/cq_welcomescreen.png)
 
-表示されるリンクを設定できます。設定は、特定のユーザーまたはグループ向けに定義できます。実行されるアクションは、ターゲットタイプによって異なります（アクションが表示されるコンソールのセクションと相関関係があります）。
+表示されるリンクを設定できます。 これは、特定のユーザーやグループに対して定義できます。 実行されるアクションは、ターゲットのタイプ（ターゲットが属するコンソールのセクションと相関関係がある）によって異なります。
 
-* [メインコンソール](#links-in-main-console-left-pane) - メインコンソール（左パネル）のリンク
-* [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane) - サイドバー（右パネル）のリンク
+* [メインコンソール](#links-in-main-console-left-pane)  — メインコンソール（左側のペイン）内のリンク
+* [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane)  — サイドバー（右側のパネル）のリンク
 
-## メインコンソール（左パネル）のリンク {#links-in-main-console-left-pane}
+## メインコンソールのリンク（左側のウィンドウ） {#links-in-main-console-left-pane}
 
-AEM のメインコンソールが一覧表示されます。
+AEMのメインコンソールが表示されます。
 
 ![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 
 ### メインコンソールのリンクを表示するかどうかの設定 {#configuring-whether-main-console-links-are-visible}
 
-ノードレベルでの権限によって、リンクを表示するかどうかが決定されます。次のノードが対象となります。
+ノードレベルの権限によって、リンクを表示できるかどうかが決まります。 次のノードが対象となります。
 
 * **Web サイト:** `/libs/wcm/core/content/siteadmin`
 
@@ -64,11 +60,11 @@ AEM のメインコンソールが一覧表示されます。
 
 * **ツール**&#x200B;へのアクセスを制限するには、読み取りアクセス権を次の場所から削除します。
 
-   `/libs/wcm/core/content/misc`
+  `/libs/wcm/core/content/misc`
 
-目的の権限の設定方法について詳しくは、[セキュリティ](/help/sites-administering/security.md)の節を参照してください。
+詳しくは、 [セキュリティセクション](/help/sites-administering/security.md) を参照してください。
 
-### サイドバー（右パネル）のリンク {#links-in-sidebar-right-pane}
+### サイドバーのリンク（右側のウィンドウ） {#links-in-sidebar-right-pane}
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
@@ -159,35 +155,35 @@ AEM のメインコンソールが一覧表示されます。
  </tbody>
 </table>
 
-#### サイドバーのリンクを表示するかどうかの設定 {#configuring-whether-sidebar-links-are-visible}
+#### サイドバーリンクを表示するかどうかの設定 {#configuring-whether-sidebar-links-are-visible}
 
-リンクを表すノードへの読み取りアクセス権を削除することによって、特定のユーザーまたはグループからリンクを非表示にできます。
+リンクを表すノードへの読み取りアクセス権を削除することで、特定のユーザーやグループからリンクを非表示にすることができます。
 
 * リソース - 次の場所へのアクセス権を削除します。
 
-   `/libs/cq/core/content/welcome/resources/<link-target>`
+  `/libs/cq/core/content/welcome/resources/<link-target>`
 
 * ドキュメント - 次の場所へのアクセス権を削除します。
 
-   `/libs/cq/core/content/welcome/docs/<link-target>`
+  `/libs/cq/core/content/welcome/docs/<link-target>`
 
 * 機能 - 次の場所へのアクセス権を削除します。
 
-   `/libs/cq/core/content/welcome/features/<link-target>`
+  `/libs/cq/core/content/welcome/features/<link-target>`
 
 次に例を示します。
 
 * **レポート**&#x200B;へのリンクを削除するには、次の場所から読み取りアクセス権を削除します。
 
-   `/libs/cq/core/content/welcome/resources/reports`
+  `/libs/cq/core/content/welcome/resources/reports`
 
 * **パッケージ**&#x200B;へのリンクを削除するには、次の場所から読み取りアクセス権を削除します。
 
-   `/libs/cq/core/content/welcome/features/packages`
+  `/libs/cq/core/content/welcome/features/packages`
 
-目的の権限の設定方法について詳しくは、[セキュリティ](/help/sites-administering/security.md)の節を参照してください。
+詳しくは、 [セキュリティセクション](/help/sites-administering/security.md) を参照してください。
 
-### リンク選択の仕組み {#link-selection-mechanism}
+### リンク選択のメカニズム {#link-selection-mechanism}
 
 `/libs/cq/core/components/welcome/welcome.jsp` では、次のプロパティを持つノードに対してクエリを実行する [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html) を使用します。
 
@@ -199,7 +195,6 @@ AEM のメインコンソールが一覧表示されます。
 >
 >* `select * from cq:Console`
 >
-
 
 ユーザーまたはグループが Mixin `cq:Console` を持つノードに対して読み取り権限を持たない場合、そのノードは `ConsoleUtil` 検索で取得されないので、コンソールに表示されません。
 
