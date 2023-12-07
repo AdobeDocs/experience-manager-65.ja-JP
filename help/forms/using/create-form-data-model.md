@@ -5,10 +5,10 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 4158315c28412bb9498c7d49d21b3f4d72681fc6
 workflow-type: tm+mt
-source-wordcount: '1491'
-ht-degree: 73%
+source-wordcount: '1533'
+ht-degree: 71%
 
 ---
 
@@ -163,7 +163,7 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
       ![id-arg](assets/id-arg.png)
 
-   1. 選択 **[!UICONTROL 完了]** をクリックして、データモデルオブジェクトのプロパティを保存します。 次に、「保存&#x200B;]**」を選択して**[!UICONTROL 、フォームデータモデルを保存します。
+   1. データモデルオブジェクトのプロパティを保存する完了&#x200B;]**を選択します**[!UICONTROL 。次に、「保存&#x200B;]**」を選択して**[!UICONTROL 、フォームデータモデルを保存します。
 
       **[!UICONTROL get]** サービスと **[!UICONTROL update]** サービスが、データモデルオブジェクトのデフォルトのサービスとして追加されます。
 
@@ -221,7 +221,7 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
 1. 次に移動： **[!UICONTROL モデル]** タブで、 **customerdetails** データモデルオブジェクトを選択し、 **[!UICONTROL モデルオブジェクトのテスト]**.
 1. [!UICONTROL モデル／サービスのテスト]ウィンドウの「**[!UICONTROL モデル／サービスを選択]**」ドロップダウンで「**[!UICONTROL モデルオブジェクトを読み込み]**」を選択します。
-1. Adobe Analytics の **customerdetails** セクションで、 **id** 設定済みの [!DNL MySQL] データベースと選択 **[!UICONTROL テスト]**.
+1. customerdetails **セクションで、構成済みの[!DNL MySQL]データベースに存在する id** 引数の値&#x200B;**を指定し、[テスト]**] を選択します&#x200B;**[!UICONTROL 。**
 
    指定した id 引数に関連付けられている顧客の詳細情報がデータベースから取得され、以下のように **[!UICONTROL Output]** セクションに表示されます。
 
@@ -236,3 +236,8 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
    次に、ID 7107215の読み取りモデルサービスを再びテストすると、以下に示すように、更新された顧客の詳細が取得されて表示されます。
 
    ![read-updated](assets/read-updated.png)
+
+
+>[!NOTE]
+>
+> アダプティブフォームでフォームデータモデルを使用してSharePointのリスト設定を作成および使用し、データや生成されたレコードのドキュメントをSharePointリストに保存することができます。 参照： [アダプティブフォームのMicrosoft® SharePointリストへの接続](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration)（詳細な手順）

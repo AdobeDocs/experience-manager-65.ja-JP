@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
 workflow-type: tm+mt
-source-wordcount: '2134'
-ht-degree: 85%
+source-wordcount: '2595'
+ht-degree: 81%
 
 ---
 
@@ -166,6 +166,64 @@ Forms Portal と送信アクションについて詳しくは、 [ドラフト�
 アダプティブフォームエディターには「**Microsoft Power Automate フローの呼び出し**」送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドフローに送信することができます。送信アクションを使用して、取得したデータをMicrosoft® Power Automate に送信するには、次の手順を実行します。 [AEM FormsインスタンスをMicrosoft® Power Automate に接続する](/help/forms/using/forms-microsoft-power-automate-integration.md)
 
 「[Microsoft® Power Automate フローの呼び出し](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)」送信アクションを使用して、Power Automate フローにデータを送信する
+
+## Microsoft® SharePointリストに送信{#submit-to-sharedrive}
+
+<span class="preview"> これはプレリリース機能で、 [プレリリースチャネル](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=ja?cloud-environments). </span>
+
+「**[!UICONTROL SharePoint に送信]**」送信アクションは、アダプティブフォームと Microsoft® SharePoint ストレージを接続します。接続されたMicrosoft® Sharepoint ストレージに、フォームデータファイル、添付ファイル、またはレコードのドキュメントを送信できます。
+
+### アダプティブフォームのMicrosoft® SharePointリストへの接続 {#connect-af-sharepoint-list}
+
+次の手順で [!UICONTROL SharePointリストに送信] アダプティブフォームでの送信アクション：
+
+1. [SharePoint List 設定の作成](#create-sharepoint-list-configuration):AEM FormsをMicrosoft® Sharepoint リストストレージに接続します。
+1. [アダプティブフォーム内でのフォームデータモデルを使用した送信の使用](#use-submit-using-fdm)：アダプティブフォームを設定済みのMicrosoft® SharePointに接続します。
+
+#### SharePoint List 設定の作成 {#create-sharepoint-list-configuration}
+
+AEM FormsをMicrosoft® Sharepoint リストに接続するには：
+
+1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Cloud Service]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. **設定コンテナ**&#x200B;を選択します。設定は、選択した設定コンテナに保存されます。
+1. クリック **[!UICONTROL 作成]** > **[!UICONTROL SharePoint List]** 」をドロップダウンリストから選択します。 SharePoint 設定ウィザードが表示されます。
+1. 「**[!UICONTROL タイトル]**」、「**[!UICONTROL クライアント ID]**」、「**[!UICONTROL クライアント秘密鍵]**」および「**[!UICONTROL OAuth URL]**」を指定します。OAuth URL のクライアント ID、クライアントの秘密鍵、テナント ID を取得する方法について詳しくは、[Microsoft® のドキュメント](https://learn.microsoft.com/ja-jp/graph/auth-register-app-v2)を参照してください。
+   * アプリの `Client ID` と `Client Secret` は Microsoft® Azure Portal から取得できます。
+   * Microsoft® Azure Portal で、リダイレクト URI を `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html` として追加します。`[author-instance]` をオーサーインスタンスの URL に置き換えます。
+   * API 権限の追加 `offline_access` および `Sites.Manage.All` （内） **Microsoft® Graph** タブを使用して、読み取り/書き込み権限を設定します。 追加 `AllSites.Manage` の権限 **SharePoint** タブをクリックして、SharePointデータをリモートで操作します。
+   * OAuth URL `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize` を使用します。`<tenant-id>` を Microsoft® Azure Portal のアプリの `tenant-id` に置き換えます。
+
+     >[!NOTE]
+     >
+     **クライアント秘密鍵**&#x200B;フィールドは、Azure Active Directory アプリケーションの設定に応じて、必須またはオプションになります。アプリケーションでクライアント秘密鍵を使用するように設定されている場合は、クライアントの秘密鍵を指定する必要があります。
+
+1. 「**[!UICONTROL 接続]**」をクリックします。接続に成功した場合、`Connection Successful` のメッセージが表示されます。
+1. 選択 **[!UICONTROL SharePoint Site]** および **[!UICONTROL SharePoint List]** 」をドロップダウンリストから選択します。
+1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
+
+#### アダプティブフォーム内でのフォームデータモデルを使用した送信の使用 {#use-submit-using-fdm}
+
+作成したSharePointリスト設定をアダプティブフォーム内で使用して、データや生成後のレコードのドキュメントをSharePointリストに保存することができます。 アダプティブフォームでSharePointリストストレージ設定を使用するには、以下の手順を実行します。
+
+1. [Microsoft® SharePointリスト設定を使用したフォームデータモデルの作成](/help/forms/using/create-form-data-model.md)
+1. [データを取得して送信するためのフォームデータモデルの設定](/help/forms/using/work-with-form-data-model.md#configure-services)
+1. [アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md).
+1. [フォームデータモデルを使用した送信アクションの設定](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
+
+フォームを送信すると、データは指定したMicrosoft® Sharepoint リストストレージに保存されます。
+
+>[!NOTE]
+>
+Microsoft® SharePointリストでは、次の列タイプはサポートされていません。
+* 画像列
+* メタデータ列
+* ユーザー列
+* 外部データ列
+
+
+>[!NOTE]
+>
+設定の値をセットするには、[AEM SDK を使用して OSGi 設定を生成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#generating-osgi-configurations-using-the-aem-sdk-quickstart)し、Cloud Service インスタンスに[設定をデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=ja#deployment-process)します。
 
 ## アダプティブフォームにおけるサーバー側の再検証 {#server-side-revalidation-in-adaptive-form}
 
