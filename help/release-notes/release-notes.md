@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 1c3df6ea88f1dfbab5d9df2dcd4907e72829287a
 workflow-type: tm+mt
-source-wordcount: '4233'
-ht-degree: 77%
+source-wordcount: '4232'
+ht-degree: 75%
 
 ---
 
@@ -61,6 +61,8 @@ ht-degree: 77%
 * **[Microsoft® SharePointリストとのアダプティブFormsの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**:AEM Formsは、フォームデータを直接SharePointリストに送信するための OOTB 統合機能を備えており、SharePointのリスト機能を使用できます。 Microsoft SharePointリストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームをSharePointリストに接続することができます。
 
 * **[アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定をサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターで、アダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
+
+* **64 ビット XMLFM**:XMLFM の 64 ビット版では、パフォーマンス、拡張性、メモリ管理の改善が導入されています。 これは、サーバー側にデプロイされる最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットは、32 ビット対応のメモリリソースに比べて、大幅に大きなメモリリソースにアクセスする固有の機能を備えているため、より大きなレンダリングワークロードのシームレスな処理を実現します。 このマイルストーンは、パフォーマンスの飛躍を表すだけでなく、AEM Formsサーバー内のネイティブサービスフレームワークに対する主な機能強化も導入します。 このアップデートでは、AEM Formsサーバーが 64 ビットのネイティブサービスをシームレスにサポートするように装備しています。
 
 
 **非推奨（廃止予定）の機能**
@@ -469,23 +471,27 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 #### インストール
 
 * JBoss® 7.1.4 プラットフォームで、Experience Manager 6.5.16.0 以降のサービスパックをインストールすると、`adobe-livecycle-jboss.ear` デプロイメントが失敗します。（CQ-4351522、CQDOC-20159）
-* Windows Server 2022 上の AEM Forms 6.5.18.0 JBoss® Turnkey フルインストーラー環境にアップグレードした後、Java™ 11 を使用して出力クライアントアプリケーションコードをコンパイルすると、次のコンパイルエラーが発生する場合があります。
 
+<!-- 
+* After upgrading to AEM Forms 6.5.18.0 JBoss&reg; Turnkey full installer environment on Windows Server 2022, when compiling Output client application code using Java&trade; 11, the following compilation error may occur:
+  
   ```
   error: error reading [AEM_Forms_Installation_dir]\sdk\client-libs\common\adobe-output-client.jar; java.net.URISyntaxException: 
   Illegal character in path at index 70: file:/[AEM_Forms_Installation_dir]/sdk/client-libs/common/${clover.jar.name} 1 error
+  
   ```
+  
+  To resolve the issue, perform the following steps:
+    1. Navigate to `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` and unzip `adobe-output-client.jar` to extract the `Manifest.mf` file.
+    1. Update the `Manifest.mf` file by removing the entry `${clover.jar.name}` from the class-path attribute. 
 
-  問題を解決するには、次の手順に従います。
-   1. `[AEM_Forms_Installation_dir]\sdk\client-libs\common\` に移動し、`adobe-output-client.jar` を展開して `Manifest.mf` ファイルを抽出します。
-   1. class-path 属性からエントリ `${clover.jar.name}` を削除して、`Manifest.mf` ファイルを更新します。
+        >[!NOTE]
+        >
+        > You can also use an in-place editing tool, for example, 7-zip, to update the `Manifest.mf` file.  
 
-      >[!NOTE]
-      >
-      > また、7-zip などのインプレース編集ツールを使用して、`Manifest.mf` ファイルを更新することもできます。
+    1. Save the updated the `Manifest.mf` in the `adobe-output-client.jar` archive. 
+    1. Save the modified `adobe-output-client.jar` file and rerun the setup. (CQDOC-20878) -->
 
-   1. 更新した `Manifest.mf` を `adobe-output-client.jar` アーカイブに保存します。
-   1. 変更した `adobe-output-client.jar` ファイルを保存し、設定を再実行します。（CQDOC-20878）
 * AEM サービスパック 6.5.19.0 フルインストーラーをインストールした後、JBoss® Turnkey を使用した JEE での EAR デプロイメントが失敗します。
 問題を解決するには、設定マネージャーを実行する前に、`<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` ファイルを見つけて、すべての出現箇所について `Adobe_Adobe_JAVA_HOME` を `Adobe_JAVA_HOME` に更新します。（CQDOC-20803）
 
