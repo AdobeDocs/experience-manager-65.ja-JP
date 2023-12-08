@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
-source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '2291'
-ht-degree: 47%
+source-wordcount: '2359'
+ht-degree: 46%
 
 ---
 
@@ -163,6 +163,10 @@ ht-degree: 47%
 ### フラグメントの変更 {#change-fragments}
 
 アダプティブフォームフラグメントを別のフラグメントで置き換えたり変更したりするには、 **フラグメントアセットを選択** プロパティを編集して、アダプティブフォームフラグメントパネル用のコンポーネントを編集ダイアログに表示します。
+
+### アダプティブフォームフラグメントのレコードのドキュメントを生成する {#generate-DOR-for-fragments}
+
+レコードのドキュメント (DOR) を使用すると、フォームの情報を印刷形式またはドキュメント形式で保持できます。 これにより、顧客に関する情報を後からいつでも追跡でき、レコードのドキュメントを使用して、フォームとコンテンツをPDF形式でアーカイブすることもできます。 [アダプティブフォームフラグメントのレコードのドキュメントを生成する方法を説明します](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 ### アダプティブフォーム内でのフォームフラグメントの複数回の使用 {#using-form-fragment-mutiple-times-in-af}
 

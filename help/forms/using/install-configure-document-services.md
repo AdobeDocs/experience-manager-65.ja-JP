@@ -4,10 +4,10 @@ description: AEM Forms ドキュメントサービスをインストールして
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '5499'
-ht-degree: 75%
+source-wordcount: '5599'
+ht-degree: 74%
 
 ---
 
@@ -556,6 +556,16 @@ Assembler サービスは、Reader拡張サービス、Signature サービス、
   </tr>
  </tbody>
 </table>
+
+### （Windows のみ）Microsoft® Project のレジストリエントリを構成する {#configure-registry-entry-for-microsoft-project}
+
+コンピューターにAEM FormsアドオンとMicrosoft® Project をインストールしたら、64 ビットの場所にあるMicrosoft® Project のエントリを登録します。 これにより、プロジェクトから PDFG 変換テストの実行を容易におこなえます。 レジストリエントリのプロセスの概要を次に示します。
+
+1. Microsoft® Windows レジストリエディター (regedit) を開き、レジストリエディターを開くには、スタート/ファイル名を指定して実行に移動し、「 regedit 」と入力して、「OK」をクリックします。
+1. に移動します。 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp`をクリックし、新しい **バイナリ値** レジストリと名前を変更してから、 **プロジェクト**.
+1. 作成したバイナリレジストリのデータ値を 01 に変更し、「OK」をクリックします。
+1. レジストリエントリを閉じます。
+
 
 ## 既知の問題とトラブルシューティング {#known-issues-and-troubleshooting}
 

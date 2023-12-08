@@ -3,10 +3,10 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3597'
-ht-degree: 89%
+source-wordcount: '3625'
+ht-degree: 86%
 
 ---
 
@@ -202,6 +202,15 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 1. Linux® Kernel 2.6、3. x、4. x および 5. x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
 1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
 1. Adobe Managed Services でサポートされている Linux® ディストリビューション。
+
+   >[注意！]
+Linux ベースのサーバー（OSGI および JEE スタック）の場合、AEM Formsアドオンには次のようなランタイム依存関係が必要です。
+   * glibc.x86_64 (2.17-196)
+   * libX11.x86_64 (1.6.7-4)
+   * zlib.x86-64 (1.2.7-17)
+   * libxcb.x86_64 (1.13-1.el7)
+   * libXau.x86_64 (1.0.8-2.1.el7)
+
 1. Microsoft® Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
 1. AEM Forms は、Microsoft® Window Server でサポートされていますが、サポートレベル R 制限はありません。
 1. AEM Formsは、Microsoft® Windows Server 2016 のサポートを削除しました。
@@ -215,7 +224,6 @@ AEM Forms 6.5 をインストールする場合は、次の 32 ビット版の M
 * Microsoft® Visual C++ 2012 再頒布可能パッケージ
 * Microsoft® Visual C++ 2013 再頒布可能パッケージ
 * Microsoft® Visual C++ 2019（VC14.28 以降）再頒布可能パッケージ
-
 
 
 ### 仮想／クラウドコンピューティング環境 {#virtual-cloud-computing-environments}
@@ -349,11 +357,11 @@ Adobe Experience Manager（インスタンス、Dispatcher）のすべての要�
 
 IP アドレスを指定する必要がある場合は、次から（必要に応じて）選択できます。
 
-* IPv6 アドレス。例：`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6 アドレス。 例：`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
-* IPv4 アドレス。例：`https://123.1.1.4:4502`
+* IPv4 アドレス。 例：`https://123.1.1.4:4502`
 
-* サーバー名。例：`https://www.yourserver.com:4502`
+* サーバー名。 例：`https://www.yourserver.com:4502`
 
 * デフォルトの `localhost` は、IPv4 と IPv6 の両方のネットワークインストール用に変換されます。例：`https://localhost:4502`
 
@@ -520,7 +528,8 @@ PDF Generator は、サポート対象のオペレーティングシステムと
 * ビデオハードウェアアクセラレーション（オプション）
 * Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC
 * Designer をインストールするための管理者権限。
-* Microsoft Visual C++ 2019（VC 14.28 以降）32 ビットランタイム
+* Microsoft Visual C++ 2019 （VC 14.28 以降） 32 ビット版AEM Forms Designer の 32 ビット版ランタイム
+* Microsoft Visual C++ 2019（VC 14.28 以降）64 ビットAEM Forms Designer 用 64 ビットランタイム（OSGI と JEE スタックの両方）
 
 ### AEM Assets XMPメタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
@@ -535,6 +544,6 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 * **ファイル形式**：JPEG、PNG、TIFF、PDF、INDD、AI、EPS
 
-### AEM Assets がメタデータの多いアセットを Linux で処理するための要件® {#assetsonlinux}
+### AEM Assetsが Linux®でメタデータの多いアセットを処理するための要件 {#assetsonlinux}
 
 XMPFilesProcessor プロセスは、 GLIBC_2.14 ライブラリを動作させる必要がある。 GLIBC_2.14 を含む Linux®カーネルを使用します。例えば、Linux®カーネルバージョン 3.1.x です。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。

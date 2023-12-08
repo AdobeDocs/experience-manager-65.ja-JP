@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3552'
-ht-degree: 97%
+source-wordcount: '4233'
+ht-degree: 77%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 97%
 | -------- | ---------------------------- |
 | バージョン | 6.5.19.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023年11月30日木曜日（PT）<!-- UPDATE FOR EACH NEW RELEASE --> |
+| 日付 | 2023 年 12 月 07 日（木） <!-- UPDATE FOR EACH NEW RELEASE --> |
 | ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.19.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## [!DNL Experience Manager] 6.5.19.0 の内容 {#what-is-included-in-aem-6519}
@@ -38,12 +38,30 @@ ht-degree: 97%
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-**主な機能および機能強化**
+## 主な機能および機能強化
 
 このリリースの主な機能と機能強化は次のとおりです。
 
 * Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。（Sites-13448、Sites-13433）
 * AEMでサーバー側の並べ替えがサポートされ、リスト表示でのプロジェクトのナビゲーションをより迅速におこなえるようになりました。 プロジェクトノードは、インターフェイスに表示される前に、ユーザが選択した列に基づいて並べ替えられます。
+
+### [!DNL Forms]
+
+* **新しいアダプティブフォームコアコンポーネント**：フォームのスケーラビリティを高めるために、縦並びのタブ、「利用条件」および「チェックボックス」が追加されました。
+   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：コアコンポーネントに基づくアダプティブFormsで、チェックボックスコンポーネントを含めることができるようになりました。 ユーザーは、特定のオプションの選択または選択解除を行い、バイナリ選択をおこなうことができます。 これは通常、小さなボックスとして表示され、クリックまたはタップすると、2 つの状態（チェック済みとオフ）を切り替えることができます。 このチェックボックスは、はい/いいえ、真/偽の選択肢を提示するために使用される一般的なフォーム要素です。
+
+   * **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：コアコンポーネントに基づくアダプティブFormsで、利用条件コンポーネントを含めることができるようになりました。 フォーム作成者は、フォーム内に特定のセクションを導入できます。このセクションには、サービス、製品、プラットフォームの使用に関連する利用条件、または法的契約が表示されます。 このコンポーネントは、フォームを送信することで、同意するルール、規制、義務をユーザーに通知するように設計されています。
+
+     ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
+
+   * **[垂直タブコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：コアコンポーネントに基づくアダプティブFormsで、フォームコンテンツをタブの縦並びのリストに整理でき、構造化されたナビゲーション可能なレイアウトが提供されるようになりました。 フォーム内で縦置きのタブを使用すると、ナビゲーションが簡単になり、フォームコンテンツの構成が改善され、特にフォームに複数のセクションや複雑な情報が含まれる場合に、ユーザーの操作性が向上します。
+
+* **[64 ビット版のAEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64 ビット版のAEM Forms Designer では、パフォーマンス、拡張性、メモリ管理の機能が強化され、フォーム作成エクスペリエンスが強化されます。 64 ビットアーキテクチャを使用すると、より大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率を確保できます。 フォームデザインの機能を向上させ、この最先端リリースでAEM Forms Designer の将来を受け入れます。
+
+* **[Microsoft® SharePointリストとのアダプティブFormsの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**:AEM Formsは、フォームデータを直接SharePointリストに送信するための OOTB 統合機能を備えており、SharePointのリスト機能を使用できます。 Microsoft SharePointリストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームをSharePointリストに接続することができます。
+
+* **[アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定をサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターで、アダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
+
 
 **非推奨（廃止予定）の機能**
 
@@ -149,9 +167,11 @@ ht-degree: 97%
 
 ### [!DNL Forms]{#forms-6519}
 
-[!DNL Experience Manager] Forms の修正プログラムは、[!DNL Experience Manager] サービスパックリリース予定日の 1 週間後に、別のアドオンパッケージとして提供されます。この場合、AEM 6.5.19.0 Forms アドオンパッケージリリースは、2023年11月30日木曜日（PT）に予定されています。Forms の修正および機能強化のリストは、リリース後にこの節に追加されます。
+#### [!DNL Adaptive Forms]
 
-* `fd-cloudservice` ユーザーのアクセス制御リストを追加して、`cloudconfigs/microsoftoffice` の下の Microsoft® の設定を読み取りまたは更新できるようにします。（FORMS-11142）
+<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.19.0 Forms add-on package release is scheduled for Thursday, November 30, 2023. A list of Forms fixes and enhancements would be added to this section post the release.-->
+
+<!--* Adding Access Control List for `fd-cloudservice` user to be able to read or update the Microsoft&reg; configurations under `cloudconfigs/microsoftoffice`. (FORMS-11142) -->
 
 <!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
 * **Document Services**
@@ -166,6 +186,32 @@ ht-degree: 97%
 <!--### Commerce{#commerce-6519}
 
 * A -->
+
+* ユーザーがアダプティブフォームにツールバーを追加すると、フォームコンテナラベルには、作成者がForms用に選択した優先言語に変更されないので、異常な動作が表示されます。 （FORMS-11371）
+* AEM Forms Workspace では、ドロップダウンフィールドにより、UI の最初のオプションがデフォルトで選択されます。 （FORMS-11346）
+* 5 文字のロケールを使用し、小数点記号がレター内で正しくレンダリングされない場合、AEMの言語設定は効果を示しません。 （FORMS-11344）
+* ユーザーが Workbench プロセスを使用して XML 出力を生成する場合、一部のファイルで失敗します。 （FORMS-11314）
+* ユーザーが英語以外の言語でレコードのドキュメント (DOR) のプレビューを生成した場合、そのレコードは機能しません。 （FORMS-11106）
+* ユーザーが、JDK11 を使用して Linux に基づく OSGi インスタンスで PDFG を使用して一部の画像ファイルを変換しても、変換はおこなわれません。 （FORMS-11105）
+* ユーザーがAEM Formsアドオンをインストールすると、AEM Sitesのコンテンツツリーパネルが壊れます。 （FORMS-10912）
+* ユーザーが日付選択コンポーネントから NVDA スクリーンリーダーを使用して日付をコピーすると、正しく読み取れません。 (FORMS-10805) 
+* Formsのルールエディターで、データ値タイプが Boolean の場合、ユーザーはラジオボタン/チェックボックスの値を設定できません。 （FORMS-10713）
+* ユーザーがアダプティブフォームに追加した項目は、ドロップダウンリストの逆の順序で追加されます。 （FORMS-10456）
+* ルールエディターでドロップダウンをクリアした場合、最初に指定した値は、値がクリアされていても表示されます。 (FORMS-9963) 
+* ユーザーは、NVDA などのスクリーンリーダーを使用してフォームタイトルにアクセスできません。 (FORMS-8815) 
+* ユーザーは、NVDA などのスクリーンリーダーを使用してフォームのサブタイトルにアクセスできません。 (FORMS-8814) 
+* HTML フォームのページソースでは、アクセスキー属性が空で、機能しません。 (FORMS-5753) 
+* Workspace についてダイアログでは、「Adobe Experience Manager - Forms」というテキストがテキストとして表示されます。 （FORMS-5748）
+
+#### [!DNL Forms Designer]{#forms-designer-6519}
+
+* ユーザーがスクリーンリーダーで非インタラクティブPDF formsを読み上げようとすると、一部のリスト項目が読み上げられず、スキップされません。 (LC-3921645) 
+* ユーザーが編集可能フィールド内をタブで移動しても、一貫してすべてのPDFフォームフィールドを横断するわけではありません。 (LC-3921631) 
+* Forms Designer でのタグ付けが正しい場合でも、PDFでタグの順序がランダムに変更されます。 (LC-3921313) 
+* Adobe Acrobat ReaderまたはAdobe Acrobat DC のタグで、リストが正しく表示されません。 （LC-3921306）
+* Forms Designer で正しく割り当てられた見出しレベルは、 `<P>` タグをAdobe Acrobatに追加します。 (LC-3921305) 
+* テーブルでは、オブジェクトを割り当てた後にその ID を変更することはできません。 (LC-3921134) 
+* 結合されたセルがテーブル内にある場合、AEM Forms Designer の複雑なテーブルで span（行と列）と scope を設定する GUI は使用できません。 (LC-3919532) 
 
 ### 基盤{#foundation-6519}
 
@@ -418,8 +464,6 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 #### サポートされているプラットフォーム
 
-* 1.8.0_281 より後の JDK バージョンは、WebLogic JEE サーバーではサポートされていません。（FORMS-8498、CQDOC-20383）
-* [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。（CQDOC-18312）
 * JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。（FORMS-10659）
 
 #### インストール
@@ -467,15 +511,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
-* アダプティブフォームのガイドコンテナにリダイレクト URL が設定されると、インライン署名が機能しなくなります。（FORMS-10493）
-この問題を解決するには、[6.5.18.0 のホットフィックス](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
-* すべてのレコードのドキュメント（DoR）テンプレートが公開に失敗します。英語ロケールベースの DoR テンプレートと、これに関連するフォームベースの DoR テンプレートのみが公開されます。（FORMS-10535）
-この問題を解決するには、[6.5.18.0 のホットフィックス](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* ユーザーが送信アクションを実行すると、送信は次のエラーで失敗します。
+  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
+問題を解決するには、 [JSP、Java、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
 
-
-#### インタラクティブコミュニケーション
-
-* AEM サービスパック 18 にアップグレードした後は、編集モードで大きなインライン画像を使用したインタラクティブ通信を開くことはできません。(FORMS-10578) 問題を解決するには、 [6.5.18.0のホットフィックス](/help/release-notes/aem-forms-hotfix.md).
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 

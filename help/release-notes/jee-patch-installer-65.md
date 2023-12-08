@@ -3,10 +3,10 @@ title: AEM Forms JEE パッチインストーラー
 description: AEM Forms JEE パッチインストーラーを使用して AEM 6.5 Forms コンポーネントの問題を修正する方法について説明します。
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 94%
+source-wordcount: '528'
+ht-degree: 88%
 
 ---
 
@@ -53,7 +53,7 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. **[Windows のみ]：**&#x200B;次の手順を実行します。
    * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
-   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、[ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルおよび [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルを置き換えてから、**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行します。
+   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。実行前 **Configuration Manager** using **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 *`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリを開き、 **ConfigurationManager.lax** および **ConfigurationManager_IPV6.lax** 最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) および [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイル、検索、置換 **axis-1.4.1.1.jar** 次を使用 **axis-1.4.1.2.jar** を 2 つのファイルに追加します。
 
    >[!NOTE]
    >

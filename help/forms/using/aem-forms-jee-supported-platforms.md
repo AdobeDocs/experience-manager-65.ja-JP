@@ -7,10 +7,10 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 1630805be43ce9bb52a8fe1bbe50b2b934d4922c
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3984'
+ht-degree: 35%
 
 ---
 
@@ -197,7 +197,7 @@ Adobe Experience Manager Formsでは、Java™ Virtual Machine を実行する�
 - IBM® DB2®は、新規インストールではサポートされていません。 AEM 6.5 Formsにアップグレードする既存のお客様のみがサポートされます。
 - MongoDB はサードパーティのソフトウェアで、AEM ライセンスパッケージには含まれていません。詳しくは、 [MongoDB ライセンスポリシー](https://www.mongodb.org/about/licensing/).
 - AEMのデプロイメントを最大限に活用するには、Adobeで、プロフェッショナルサポートを受けられるように MongoDB Enterprise バージョンのライセンスを取得することをお勧めします。
-- アドビカスタマーケアは、MongoDB を AEM で利用することに関連する問題の絞り込みを支援いたします。詳しくは、[MongoDB for Adobe Experience Manager のページ](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)を参照してください。
+- Adobeカスタマーケアは、AEMでの MongoDB の使用に関する問題の認定に役立ちます。 詳しくは、[MongoDB for Adobe Experience Manager のページ](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)を参照してください。
 - 「ファイルシステム」には、POSIX に準拠したブロックストレージが含まれます。これには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスは異なり、全体的なパフォーマンスに影響を与える場合があることに注意してください。network/remote ファイルシステムでテスト用AEMを読み込むことをお勧めします。
 - MongoDB Storage Engine WiredTiger のみがサポートされています。
 - MongoDB Sharding は AEM ではサポートしていません。
@@ -239,15 +239,15 @@ Adobe Experience Manager Formsでは、Java™ Virtual Machine を実行する�
   <tr>
    <td><p><strong> プラットフォーム</strong></p> </td>
    <td><p><strong>サポートレベル</strong></p> </td>
-   <td><p><strong>サポートしているパッチ定義</strong></p> </td>
+   <td><p><strong>サポートされているパッチ定義</strong></p> </td>
   </tr>
   <tr>
-   <td>Oracle WebLogic Server 12.2.1（12c R2）（非推奨）</td>
+   <td>OracleWebLogic Server 12.2.1 (12c R2) （非推奨） <sup>[9]</sup></td>
    <td>A：サポート対象</td>
    <td>サービスパックと重要な更新</td>
   </tr>
   <tr>
-   <td>OracleWebLogic Server 14c </td>
+   <td>OracleWebLogic Server 14c <sup>[9]</sup></td>
    <td>A：サポート対象</td>
    <td>サービスパックと重要な更新</td>
   </tr>
@@ -355,6 +355,9 @@ JEE サーバー上のAEM Formsを設定するプラットフォームを選択�
 1. JEE 上のAEM Formsは、CentOS 上の WebSphere®アプリケーションサーバーをサポートしていません。
 1. JEE 上のAEM Formsは、JBoss®の役割に基づくアクセス制御 (RBAC) をサポートしていません。
 1. JEE 上のAEM Formsは、OracleJava™ SE 11（64 ビット）SDK( アプリケーションサーバー JBoss® EAP 7.4 のみ ) をサポートします。
+1. 1.8.0_281 より高い JDK バージョンは、WebLogic Server ではサポートされていません。 （FORMS-8498）
+1. [!DNL Microsoft® Windows Server 2019] はをサポートしていません。 [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] の自動インストールはサポートされていません [!DNL Experience Manager Forms 6.5.10.0 and later]. （CQDOC-18312）
+
 
 また、JEE 上のAEM FormsのデプロイメントでAdobeソフトウェアを選択する際は、次の点を考慮してください。
 
@@ -471,7 +474,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >
 PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
 >
-さらに、次の点に注意してください。：
+さらに、次の点に注意してください。
 >
 - PDF Generatorには 32 ビット版のが必要です [Acrobat 2020 classic track バージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) をクリックして変換を実行します。
 - PDF Generatorは、32 ビット版のMicrosoft® Office Professional Plus と、変換に必要なその他のソフトウェアの小売バージョンのみをサポートしています。
@@ -479,9 +482,10 @@ PDF Generator は、サポート対象のオペレーティングシステムと
 - PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 - OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
 - Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメントに応じたAEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
-- PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。-PDF Generatorは、Microsoft® Visio 2019 を使用してファイルを変換できません。 Microsoft® Visio 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
+- PDF GeneratorサービスはMicrosoft® Windows 10 をサポートしていません。
+-PDF Generatorは、Microsoft® Visio 2019 を使用してファイルを変換できません。 Microsoft® Visio 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
 - PDF Generatorは、Microsoft® Project 2019 を使用してファイルを変換できません。引き続き、 Microsoft® Project 2016 を使用して.MPP ファイルを変換できます。
-- PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
+- PDF Generatorは、Microsoft® Visio 2019 を使用してファイルを変換できません。
 - PDF Generatorは、Microsoft® Project 2019 を使用してファイルを変換できません。
 >
 

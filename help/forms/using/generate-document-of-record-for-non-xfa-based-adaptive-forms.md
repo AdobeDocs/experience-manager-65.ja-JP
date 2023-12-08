@@ -7,14 +7,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
-source-wordcount: '3533'
-ht-degree: 71%
+source-wordcount: '3583'
+ht-degree: 69%
 
 ---
 
-# アダプティブフォームにおけるレコードのドキュメント生成{#generate-document-of-record-for-adaptive-forms}
+# アダプティブフォームまたはアダプティブフォームフラグメントのレコードのドキュメントを生成する {#generate-document-of-record-for-adaptive-forms}
 
 <span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
 
@@ -28,7 +28,7 @@ ht-degree: 71%
 
 フォームを送信した後、顧客は通常、印刷するかまたはドキュメント形式で保存するかのどちらかで、フォームに記入した情報を今後の参考のために記録しておきたいと考えます。これを、レコードのドキュメントといいます。
 
-この記事では、アダプティブフォームでレコードのドキュメントを生成する方法について説明します。
+この記事では、アダプティブFormsまたはアダプティブフォームフラグメントのレコードのドキュメントを生成する方法について説明します。
 
 >[!NOTE]
 >
@@ -69,6 +69,8 @@ ht-degree: 71%
 アダプティブフォーム用のレコードのドキュメントを生成するには、次のコンポーネントが必要です。
 
 **アダプティブフォーム**&#x200B;レコードのドキュメントを生成するアダプティブフォーム。
+
+**アダプティブフォームフラグメント** レコードのドキュメントを生成するアダプティブフォームフラグメントです。
 
 **基本テンプレート（推奨）** AEM Designer で作成された XFA テンプレート（XDP ファイル）。基本テンプレートは、レコードのドキュメントテンプレートのスタイリングとブランディング情報を指定するために使用されます。
 
@@ -396,6 +398,10 @@ ht-degree: 71%
    * **[!UICONTROL オーバーフロー]**／**[!UICONTROL コンテンツ領域に移動]**／コンテンツ領域名：指定したコンテンツ領域への入力を開始します。
    * **[!UICONTROL オーバーフロー]**／**[!UICONTROL ページに移動]**／ページ名：指定したページへの入力を開始します。
 
+  >[!NOTE]
+  >
+  > アダプティブフォームフラグメントではページネーションプロパティを使用できません。
+
 レコードのドキュメントで改ページを適用し、複数のマスターページを適用する方法について詳しくは、 [レコードのドキュメントに対する改ページの適用](#apply-page-breaks-in-dor)および[レコードのドキュメントに対する複数のマスターページの適用](#apply-multiple-master-pages-dor)を参照してください。
 
 **フォームレベルの設定**
@@ -438,6 +444,9 @@ AEM Forms は、アダプティブフォーム内の該当するパネルとそ�
 1. 選択 ![保存](/help/forms/using/assets/save_icon.png) をクリックしてプロパティを保存します。
 AEM Forms は、アダプティブフォーム内の該当するパネルとそれ以降のすべてのパネルに 3 つ目のマスターページを適用します。
 
+>[!NOTE]
+>
+> アダプティブフォームフラグメントのレコードのドキュメントに複数のマスターページを適用することはできません。
 
 ## レコードのドキュメントで作業する場合の主な注意点 {#key-considerations-when-working-with-document-of-record}
 
