@@ -9,9 +9,9 @@ breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
 feature: Forms Service
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
 workflow-type: tm+mt
-source-wordcount: '3911'
+source-wordcount: '3752'
 ht-degree: 98%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 98%
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
    + [Microsoft Dynamics OData の設定](using/ms-dynamics-odata-configuration.md)
-   + [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 統合 認証](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+   + [OAuth 2.0 クライアント資格情報を使用した Salesforce 統合フロー認証](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [フォームデータモデルの作成](using/create-form-data-models.md)
    + [フォームデータモデルの操作](using/work-with-form-data-model.md)
    + [フォームデータモデルの使用](using/using-form-data-model.md)
@@ -705,4 +705,5 @@ ht-degree: 98%
    + [JEE サーバークラスター上の AEM Forms の設定とトラブルシューティング](developing/configure-server-cluster.md)
    + [動的 PDF Forms でのハッシュの生成と操作](developing/hashing-forms.md)
    + [WS-Security ヘッダーを使用した資格情報の受け渡し](developing/passing-credentials.md)
+   + [Output サービス、Formsサービス、またはレコードのドキュメント (DoR) サービスを使用できません](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 
