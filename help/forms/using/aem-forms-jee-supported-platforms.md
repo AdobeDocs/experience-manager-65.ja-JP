@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
-source-wordcount: '3984'
+source-wordcount: '3976'
 ht-degree: 35%
 
 ---
@@ -356,8 +356,10 @@ JEE サーバー上のAEM Formsを設定するプラットフォームを選択�
 1. JEE 上のAEM Formsは、JBoss®の役割に基づくアクセス制御 (RBAC) をサポートしていません。
 1. JEE 上のAEM Formsは、OracleJava™ SE 11（64 ビット）SDK( アプリケーションサーバー JBoss® EAP 7.4 のみ ) をサポートします。
 1. 1.8.0_281 より高い JDK バージョンは、WebLogic Server ではサポートされていません。 （FORMS-8498）
-1. [!DNL Microsoft® Windows Server 2019] はをサポートしていません。 [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] の自動インストールはサポートされていません [!DNL Experience Manager Forms 6.5.10.0 and later]. （CQDOC-18312）
 
+<!-- 
+1. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312) 
+-->
 
 また、JEE 上のAEM FormsのデプロイメントでAdobeソフトウェアを選択する際は、次の点を考慮してください。
 
@@ -871,6 +873,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 |  | | IBM® Content Manager Server 8.5 Fix pack 2 |
 |  | | IBM® Content Manager Client 8.5 |
 |  | | Microsoft® SQL Server 2016 |
+|  | | Microsoft® Windows Server 2016 |
 
 ### リリース 6.5.10.0(9 月 1 日 (20222))
 

@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 302a76fb9470e2ef177f60aea10312d6091becb9
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 81%
+source-wordcount: '2581'
+ht-degree: 80%
 
 ---
 
@@ -203,7 +203,7 @@ AEM FormsをMicrosoft® Sharepoint リストに接続するには：
 
 作成したSharePointリスト設定をアダプティブフォーム内で使用して、データや生成後のレコードのドキュメントをSharePointリストに保存することができます。 アダプティブフォームでSharePointリストストレージ設定を使用するには、以下の手順を実行します。
 
-1. [Microsoft® SharePointリスト設定を使用したフォームデータモデルの作成](/help/forms/using/create-form-data-model.md)
+1. [Microsoftを使用してフォームデータモデルを作成する](/help/forms/using/create-form-data-model.md)
 1. [データを取得して送信するためのフォームデータモデルの設定](/help/forms/using/work-with-form-data-model.md#configure-services)
 1. [アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md).
 1. [フォームデータモデルを使用した送信アクションの設定](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)

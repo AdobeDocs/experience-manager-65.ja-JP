@@ -5,10 +5,10 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 4%
+source-wordcount: '637'
+ht-degree: 3%
 
 ---
 
@@ -49,6 +49,11 @@ AEM Formsは、 [フォームデータをSharePoint List に直接送信](/help/
 #### アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定をサポート
 
 これで簡単に [アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドをカスタマイズする](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+
+#### 64 ビット版の XMLFM を含む
+
+XMLFM の 64 ビットイテレーションは、高いパフォーマンス、拡張性、および高度なメモリ管理を導入します。 これは、サーバー側にデプロイされる最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットは、32 ビット対応のメモリリソースに比べて、大幅に大きなメモリリソースにアクセスする固有の機能を備えているため、より大きなレンダリングワークロードのシームレスな処理を実現します。 このマイルストーンは、パフォーマンスの飛躍を表すだけでなく、AEM Formsサーバー内のネイティブサービスフレームワークに対する主な機能強化も導入します。 このアップデートでは、AEM Formsサーバーが 64 ビットのネイティブサービスをシームレスにサポートするように装備しています。
+
 
 
 ## バグの修正
