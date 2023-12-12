@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 7d46ba0eaa73d9f7a67034ba81d7fa379aa0112c
+source-git-commit: 25c444e2093d118259925034e0d630ab0effc473
 workflow-type: tm+mt
-source-wordcount: '6381'
-ht-degree: 88%
+source-wordcount: '3865'
+ht-degree: 78%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [コンポーネント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)の基底クラスであり、幅と高さを使用して、ボックスとしてサイズを変更します。
 
-  BoxComponent は、サイズと位置を自動的に調整するボックスモデルを提供し、コンポーネントのレンダリングモデルで正常に動作します。
+  BoxComponent は、サイズと位置の調整を自動的に行うボックスモデルを提供し、コンポーネントレンダリングモデル内で正しく機能します。
 
 * browsedialog
 
@@ -123,7 +123,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.Ext.chart.Chart](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart)
 
-  CQ.Ext.chart パッケージは、Flash ベースのグラフを使用したデータの視覚化を実現します。各グラフは、CQ.Ext.data.Store に直接バインドされ、グラフの自動更新が可能になります。グラフの外観を変更するには、[chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) および [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) の設定オプションを確認します。
+  CQ.Ext.chart パッケージは、Flash ベースのチャートを使用してデータを視覚化する機能を提供します。 各グラフは、CQ.Ext.data.Store に直接バインドされ、グラフの自動更新が可能になります。グラフの外観を変更するには、[chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) および [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) の設定オプションを確認します。
 
 * チェックボックス
 
@@ -251,7 +251,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.CustomContentPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.CustomContentPanel)
 
-  CustomContentPanel は、[CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) で使用するための特殊なパネルです。CustomContentPanel のコンテンツは、ダイアログ内のその他のフィールドとは異なる URL から取得および送信されます。
+  CustomContentPanel は、 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)：その内容は、ダイアログの他のフィールドとは異なる URL から取得されて送信されます。
 
 * cycle
 
@@ -293,7 +293,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  Dialog は、ボディにフォーム、フッターにボタングループを備える特殊なウィンドウです。通常はコンテンツの編集に使用されますが、情報のみを表示することもできます。
+  ダイアログは、本文にフォームが含まれ、フッターにボタングループが含まれる特別なウィンドウです。 通常はコンテンツの編集に使用されますが、情報のみを表示することもできます。
 
 * dialogfieldset
 
@@ -413,7 +413,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.Ext.form.HtmlEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)
 
-   軽量の HTML エディターコンポーネントを提供します。ツールバーの機能の一部は、Safari ではサポートされておらず、必要に応じて自動的に非表示になります。該当する場合、設定オプションに記載されています。
+   軽量の HTML エディターコンポーネントを提供します。一部のツールバー機能は Safari ではサポートされておらず、必要に応じて自動的に非表示になります。 該当する場合、設定オプションに記載されています。
 
   エディターのツールバーボタンには、[buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor) プロパティで定義されたツールチップがあります。
 
@@ -463,7 +463,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.Ext.list.ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)
 
-  CQ.Ext.list.ListView は、[Grid](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) に似たビューの高速かつ軽量の実装です。
+  CQ.Ext.list.ListView は、 [グリッドに似た](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) 表示。
 
 * livecopyproperties
 
@@ -793,7 +793,7 @@ Adobe Experience Managerで使用可能な xtype を以下に示します。
 
   [CQ.wcm.Statistics](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Statistics)
 
-  Statistics は、ページインプレッション数をグラフとして表示します。このウィジェットでは、統計を表示する期間を選択できます。
+  Statistics は、ページインプレッション数をグラフとして表示します。ウィジェットを使用すると、統計を表示する期間を選択できます。
 
 * store
 
