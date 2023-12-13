@@ -3,9 +3,9 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3624'
 ht-degree: 86%
 
 ---
@@ -203,8 +203,9 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
 1. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
-   >[注意！]
-Linux ベースのサーバー（OSGI および JEE スタック）の場合、AEM Formsアドオンには次のようなランタイム依存関係が必要です。
+   >[!NOTE]
+   >
+   Linux ベースのサーバー（OSGI および JEE スタック）の場合、AEM Formsアドオンには次のようなランタイム依存関係が必要です。
    * glibc.x86_64 (2.17-196)
    * libX11.x86_64 (1.6.7-4)
    * zlib.x86-64 (1.2.7-17)

@@ -9,9 +9,9 @@ breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
 feature: Forms Service
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
 workflow-type: tm+mt
-source-wordcount: '3762'
+source-wordcount: '3765'
 ht-degree: 97%
 
 ---
@@ -699,7 +699,7 @@ ht-degree: 97%
    + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
    + [AEM 6.5.15.0 サービスパックのインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
-   + [AEM Formsが完全に起動していない場合でも、複数のサービスを実行する](/help/forms/using/executing-multiple-services-even-aem-forms-has-not-started.md)
+   + [AEM Formsサーバーが完全に稼働していない場合でもドキュメントを処理](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
    + [Output サービス、Formsサービス、またはレコードのドキュメント (DoR) サービスを使用できません](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
