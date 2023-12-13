@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
+source-git-commit: d3f18320ca8a9a100e1aa6344a1c9424d0ff03ca
 workflow-type: tm+mt
-source-wordcount: '4232'
+source-wordcount: '4225'
 ht-degree: 75%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 75%
 * **新しいアダプティブフォームコアコンポーネント**：フォームのスケーラビリティを高めるために、縦並びのタブ、「利用条件」および「チェックボックス」が追加されました。
    * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：コアコンポーネントに基づくアダプティブFormsで、チェックボックスコンポーネントを含めることができるようになりました。 ユーザーは、特定のオプションの選択または選択解除を行い、バイナリ選択をおこなうことができます。 これは通常、小さなボックスとして表示され、クリックまたはタップすると、2 つの状態（チェック済みとオフ）を切り替えることができます。 このチェックボックスは、はい/いいえ、真/偽の選択肢を提示するために使用される一般的なフォーム要素です。
 
-   * **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：コアコンポーネントに基づくアダプティブFormsで、利用条件コンポーネントを含めることができるようになりました。 フォーム作成者は、フォーム内に特定のセクションを導入できます。このセクションには、サービス、製品、プラットフォームの使用に関連する利用条件、または法的契約が表示されます。 このコンポーネントは、フォームを送信することで、同意するルール、規制、義務をユーザーに通知するように設計されています。
+   * **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：コアコンポーネントに基づくアダプティブFormsで、利用条件コンポーネントを含めることができるようになりました。 Formsの作成者は、フォーム内に特定のセクションを導入し、サービス、製品、プラットフォームの使用に関連する利用条件、または法的契約をユーザーに提示できます。 このコンポーネントは、フォームを送信することで、同意するルール、規制、義務をユーザーに通知するように設計されています。
 
      ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
 
@@ -58,11 +58,11 @@ ht-degree: 75%
 
 * **[64 ビット版のAEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64 ビット版のAEM Forms Designer では、パフォーマンス、拡張性、メモリ管理の機能が強化され、フォーム作成エクスペリエンスが強化されます。 64 ビットアーキテクチャを使用すると、より大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率を確保できます。 フォームデザインの機能を向上させ、この最先端リリースでAEM Forms Designer の将来を受け入れます。
 
-* **[Microsoft® SharePointリストとのアダプティブFormsの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**:AEM Formsは、フォームデータを直接SharePointリストに送信するための OOTB 統合機能を備えており、SharePointのリスト機能を使用できます。 Microsoft SharePointリストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームをSharePointリストに接続することができます。
+* **[Microsoft® SharePointリストとのアダプティブFormsの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**:AEM Formsは、フォームデータを直接SharePointリストに送信するための OOTB 統合機能を提供します。これにより、SharePointのリスト機能を使用できます。 Microsoft® SharePointリストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームをSharePointリストに接続することができます。
 
 * **[アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定をサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターで、アダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
 
-* **64 ビット XMLFM**:XMLFM の 64 ビット版では、パフォーマンス、拡張性、メモリ管理の改善が導入されています。 これは、サーバー側にデプロイされる最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットは、32 ビット対応のメモリリソースに比べて、大幅に大きなメモリリソースにアクセスする固有の機能を備えているため、より大きなレンダリングワークロードのシームレスな処理を実現します。 このマイルストーンは、パフォーマンスの飛躍を表すだけでなく、AEM Formsサーバー内のネイティブサービスフレームワークに対する主な機能強化も導入します。 このアップデートでは、AEM Formsサーバーが 64 ビットのネイティブサービスをシームレスにサポートするように装備しています。
+* **64 ビット XMLFM**:XMLFM の 64 ビット版では、パフォーマンス、拡張性、メモリ管理の改善が導入されています。 これは、サーバー側にデプロイされる最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットは、32 ビット対応のメモリリソースに比べて大きなメモリリソースにアクセスする独自の機能を備えており、より大きなレンダリングワークロードをシームレスに処理できます。 このマイルストーンは、パフォーマンスの飛躍を表すだけでなく、AEM Forms Server 内のネイティブサービスフレームワークに対する主な機能強化も導入します。 このアップデートでは、AEM Forms Server が 64 ビットのネイティブサービスをシームレスにサポートするようになっています。
 
 **非推奨（廃止予定）の機能**
 
@@ -190,17 +190,17 @@ ht-degree: 75%
 
 * ユーザーがアダプティブフォームにツールバーを追加すると、フォームコンテナラベルには、作成者がForms用に選択した優先言語に変更されないので、異常な動作が表示されます。 （FORMS-11371）
 * AEM Forms Workspace では、ドロップダウンフィールドにより、UI の最初のオプションがデフォルトで選択されます。 （FORMS-11346）
-* 5 文字のロケールを使用し、小数点記号がレター内で正しくレンダリングされない場合、AEMの言語設定は効果を示しません。 （FORMS-11344）
+* 5 文字のロケールを使用し、小数点文字がレター内で正しくレンダリングされない場合、AEMの言語設定は影響を受けません。 （FORMS-11344）
 * ユーザーが Workbench プロセスを使用して XML 出力を生成する場合、一部のファイルで失敗します。 （FORMS-11314）
 * ユーザーが英語以外の言語でレコードのドキュメント (DOR) のプレビューを生成した場合、そのレコードは機能しません。 （FORMS-11106）
-* ユーザーが、JDK11 を使用して Linux に基づく OSGi インスタンスで PDFG を使用して一部の画像ファイルを変換しても、変換はおこなわれません。 （FORMS-11105）
+* ユーザーが、JDK11 を使用して Linux®に基づく OSGi インスタンス上の PDFG で一部の画像ファイルを変換しても、変換はおこなわれません。 （FORMS-11105）
 * ユーザーがAEM Formsアドオンをインストールすると、AEM Sitesのコンテンツツリーパネルが壊れます。 （FORMS-10912）
 * ユーザーが日付選択コンポーネントから NVDA スクリーンリーダーを使用して日付をコピーすると、正しく読み取れません。 (FORMS-10805) 
 * Formsのルールエディターで、データ値タイプが Boolean の場合、ユーザーはラジオボタン/チェックボックスの値を設定できません。 （FORMS-10713）
 * ユーザーがアダプティブフォームに追加した項目は、ドロップダウンリストの逆の順序で追加されます。 （FORMS-10456）
 * ルールエディターでドロップダウンをクリアした場合、最初に指定した値は、値がクリアされていても表示されます。 (FORMS-9963) 
 * ユーザーは、NVDA などのスクリーンリーダーを使用してフォームタイトルにアクセスできません。 (FORMS-8815) 
-* ユーザーは、NVDA などのスクリーンリーダーを使用してフォームのサブタイトルにアクセスできません。 (FORMS-8814) 
+* ユーザーがにアクセスできない `Sub Title` NVDA などのスクリーンリーダーを使用したフォーム。 (FORMS-8814) 
 * HTML フォームのページソースでは、アクセスキー属性が空で、機能しません。 (FORMS-5753) 
 * Workspace についてダイアログでは、「Adobe Experience Manager - Forms」というテキストがテキストとして表示されます。 （FORMS-5748）
 
@@ -518,7 +518,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * ユーザーが送信アクションを実行すると、送信は次のエラーで失敗します。
   ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
-問題を解決するには、 [JSP、Java、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
+問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
 
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
