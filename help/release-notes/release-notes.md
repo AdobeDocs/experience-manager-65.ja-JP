@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: d3f18320ca8a9a100e1aa6344a1c9424d0ff03ca
+source-git-commit: 2118cecd8e66e41a1ce1c859cf62b1f18f7cb891
 workflow-type: tm+mt
-source-wordcount: '4225'
-ht-degree: 75%
+source-wordcount: '4270'
+ht-degree: 74%
 
 ---
 
@@ -212,7 +212,8 @@ ht-degree: 75%
 * Adobe Acrobat ReaderまたはAdobe Acrobat DC のタグで、リストが正しく表示されません。 （LC-3921306）
 * Forms Designer で正しく割り当てられた見出しレベルは、 `<P>` タグをAdobe Acrobatに追加します。 (LC-3921305) 
 * テーブルでは、オブジェクトを割り当てた後にその ID を変更することはできません。 (LC-3921134) 
-* 結合されたセルがテーブル内にある場合、AEM Forms Designer の複雑なテーブルで span（行と列）と scope を設定する GUI は使用できません。 (LC-3919532) 
+* 結合されたセルがテーブル内にある場合、AEM Forms Designer の複雑なテーブルで span（行と列）と scope を設定する GUI は使用できません。 （LC-3919532）
+  <!--* After applying AEM Service Pack 6.5.15.0 patch installer, notice generation fails intermittently  . (LC-3921530)-->
 
 ### 基盤{#foundation-6519}
 
@@ -517,8 +518,9 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * ユーザーが送信アクションを実行すると、送信は次のエラーで失敗します。
-  ` javax.servlet.ServletException: java.lang.NoSuchMethodError`
-問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
+  `javax.servlet.ServletException: java.lang.NoSuchMethodError`
+問題を解決するには、 [JSP、Java、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
+* Adminui で、ホーム/サービス/PDF Generator/Adobe PDF設定のパスでPDFドキュメントのフォントを選択しようとすると、フォントリストに空白が表示されます。 「常に埋め込む」リストと「埋め込まない」リストにフォントを追加できません。 （FORMS-12095）
 
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
