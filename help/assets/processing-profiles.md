@@ -9,10 +9,10 @@ docset: aem65
 role: User, Admin
 feature: Workflow,Asset Management,Renditions
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: bf6566bb9e3e77924b89b31fc2ef4a59545a66da
 workflow-type: tm+mt
 source-wordcount: '1392'
-ht-degree: 91%
+ht-degree: 80%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 91%
 
 後で変更した既存の処理プロファイルがあるフォルダー内のアセットを再処理できます。
 
-例えば、画像プロファイルを作成してフォルダーに割り当てたとします。フォルダーにアップロードした画像アセットには、画像プロファイルが自動的にアセットに適用されます。ただし、後でプロファイルに新しいスマート切り抜き率を追加することにします。その場合は、もう一度アセットを選択してフォルダーに再度アップロードするのではなく、「*Scene7 : アセットを再処理*」ワークフローを実行するだけです。
+例えば、画像プロファイルを作成してフォルダーに割り当てたとします。フォルダーにアップロードした画像アセットには、画像プロファイルが自動的にアセットに適用されます。ただし、後でプロファイルに新しいスマート切り抜き率を追加することにします。その場合は、アセットを選択してフォルダーに再度アップロードする代わりに、 *Dynamic Media Reprocess* <!-- *Scene7: Reprocess Assets* --> ワークフロー。
 
 処理が初めて失敗したアセットに対して、再処理ワークフローを実行できます。このように、処理プロファイルを編集していなくても、処理プロファイルを適用していなくても、いつでもアセットフォルダーに対して再処理ワークフローを実行することができます。
 
@@ -61,11 +61,11 @@ ht-degree: 91%
 >
 >再処理ワークフローが期待どおりに動作するように、Dynamic Media サーバー上で移行公開エージェントを無効にする必要があります。
 
-<!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media's Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job, and so on, until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
+<!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media's Image Production System) job. When you run the Dynamic Media Reprocess workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job, and so on, until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
 **フォルダー内のアセットを再処理するには：**
 
-1. Experience Manager のアセットページで、処理プロファイルが割り当てられている、「**[!UICONTROL Scene7：アセットを再処理]**」ワークフローの適用対象となるアセットフォルダーに移動します。
+1. Experience Managerーのアセットページで、処理プロファイルが割り当てられていて、を適用するアセットフォルダーに移動します。 **[!UICONTROL Dynamic Media Reprocess]** ワークフロー、
 
    既に処理プロファイルが割り当てられているフォルダーには、カード表示のフォルダー名のすぐ下にプロファイルの名前が表示されます。
 
@@ -81,7 +81,7 @@ ht-degree: 91%
    ![アセット再処理ワークフロー（その 1）](/help/assets/assets/reprocess-assets1.png)
 
 1. 「**[!UICONTROL ワークフローを開始]**」を選択します。
-1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
+1. 次から： **[!UICONTROL ワークフローを開始]** ドロップダウンリストで、「 」を選択します。 **[!UICONTROL Dynamic Media Reprocess]**.
 1. （オプション）「**ワークフローのタイトルを入力**」テキストフィールドに、ワークフローの名前を入力します。必要に応じて、ワークフローインスタンスを参照する名前を使用できます。
 
    ![アセット再処理ワークフロー（その 2）](/help/assets/assets/reprocess-assets2.png)
@@ -97,12 +97,12 @@ ht-degree: 91%
 **再処理ワークフローのバッチサイズを調整するには（オプション）**：
 
 1. Experience Manager で、「**[!UICONTROL Adobe Experience Manager]**」を選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**（ハンマー）アイコン／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;を選択します。
-1. ワークフローモデルページのカード表示またはリスト表示で、「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
+1. ワークフローモデルページのカード表示またはリスト表示で、 **[!UICONTROL Dynamic Media Reprocess]**.
 
-   ![カード表示で「Scene7：アセットを再処理」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
+   ![カード表示で「 Dynamic Media Reprocess 」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「Scene7：アセットを再処理」ワークフローモデルページが開きます。
-1. 「Scene7：アセットを再処理」ワークフローページで、右上隅付近の「**[!UICONTROL 編集]**」を選択して、ワークフローを「ロック解除」します。
+1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「 Dynamic Media再処理」ワークフローモデルページが開きます。
+1. Dynamic Media再処理ワークフローページの右上隅付近にある、「 」を選択します。 **[!UICONTROL 編集]** をクリックして、ワークフローを「ロック解除」します。
 1. ワークフローで、Scene7 バッチアップロードコンポーネントを選択してツールバーを開き、ツールバーの「**[!UICONTROL 設定]**」を選択します。
 
    ![Scene7 バッチアップロードコンポーネント](/help/assets/assets-dm/reprocess-assets8.png)
@@ -119,11 +119,11 @@ ht-degree: 91%
 
 1. **[!UICONTROL Scene7 へのバッチアップロード - ステップのプロパティ]** ダイアログボックスの右上隅にある「**[!UICONTROL 完了]**」を選択します。
 
-1. 「Scene7：アセットを再処理」ワークフローモデルページの右上隅にある「**[!UICONTROL 同期]**」を選択します。「**[!UICONTROL 同期済み]**」と表示された場合、ワークフローランタイムモデルは正常に同期されており、フォルダー内のアセットを再処理する準備が整います。
+1. Dynamic Media再処理ワークフローモデルページの右上隅で、「 」を選択します。 **[!UICONTROL 同期]**. 「**[!UICONTROL 同期済み]**」と表示された場合、ワークフローランタイムモデルは正常に同期されており、フォルダー内のアセットを再処理する準備が整います。
 
    ![ワークフローモデルの同期](/help/assets/assets-dm/reprocess-assets1.png)
 
-1. 「Scene7：アセットを再処理」ワークフローモデルを表示しているブラウザータブを閉じます。
+1. 「 Dynamic Media再処理」ワークフローモデルを表示するブラウザータブを閉じます。
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
 1. In the upper-left corner of the page, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then select the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
@@ -143,4 +143,4 @@ ht-degree: 91%
 
 1. On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
 1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
-1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
+1. Repeat steps 1-7 to re-synchronize the new batch size to the Dynamic Media Reprocess workflow model.-->
