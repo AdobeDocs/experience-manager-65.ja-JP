@@ -5,10 +5,11 @@ contentOwner: Adobe
 feature: Asset Management,Metadata,Search
 role: User
 exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+hide: true
+source-git-commit: 477c62b857ab98d8617c7bd8ba226019d42d330d
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 94%
+source-wordcount: '498'
+ht-degree: 89%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->アセットセレクターは、以前のバージョンの [!DNL Experience Manager] では[アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html)と呼ばれていました。
+>The [アセットセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en) が呼び出された [アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html) 以前のバージョンの [!DNL Experience Manager].
 
 アセットセレクターを使用すると、[!DNL Adobe Experience Manager] アセットでアセットを参照、検索およびフィルターすることができます。アセットセレクターを使用して選択したアセットのメタデータを取得できます。アセットセレクターインターフェイスをカスタマイズするには、サポートされているリクエストパラメーターを使用して開始します。これらのパラメーターは、特定のシナリオのアセットセレクターのコンテキストを設定します。
 
@@ -58,3 +59,7 @@ ht-degree: 94%
    ![chlimage_1-443](assets/chlimage_1-443.png)
 
 1. クリック **[!UICONTROL 選択]** をクリックします。
+
+>[!MORELIKETHIS]
+>
+>* [AEM as a Cloud Serviceのマイクロフロントエンドアセットセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)
