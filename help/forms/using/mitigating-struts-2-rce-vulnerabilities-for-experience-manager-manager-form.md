@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 762da8c5e1d82b179f64d14f966397c8c3b90e9d
+source-git-commit: e35f7a683928b7de7ab0b02e6aa3401eeccacd95
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%
@@ -70,6 +70,7 @@ Java EE Web アプリケーションを開発するための一般的でオー�
        
        
        patch-archive.bat -root=C:\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace C:\Users\labuser\Desktop\struts2-core.jar -action=replace C:\Users\labuser\Desktop\struts2-core.jar
+       
        
        &quot;&#39;
    
