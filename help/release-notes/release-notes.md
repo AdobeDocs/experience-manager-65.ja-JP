@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 2118cecd8e66e41a1ce1c859cf62b1f18f7cb891
+source-git-commit: b5ecac71b07bfceb2708f20fe50965dec25e2194
 workflow-type: tm+mt
-source-wordcount: '4270'
+source-wordcount: '4259'
 ht-degree: 74%
 
 ---
@@ -145,7 +145,7 @@ ht-degree: 74%
 * ページコンソールのアセットタイプフィルターで、複数のドキュメントファイルタイプの選択が機能しません。1 つの特定のファイルタイプの結果が利用可能な場合でも、結果が見つかりません。その結果、作成者は複数のドキュメントをフィルタリングできなくなります。複数のドキュメントタイプを使用し、一度に 1 つずつフィルタリングする必要があります。（SITES-14047）
 * AEM 6.5.17 および AEM 6.5.18 からインスタンスをアップグレードした後、ページエディター内で「**[!UICONTROL ページを公開]**」を選択すると、存在しない URL にリダイレクトされます。ユーザーは、公開ウィザードにリダイレクトされます。（SITES-15856）
 * オペレーティングシステムのクリップボードからのペースト中の AEM のクリップボードからの冗長コピー。（SITES-15704）
-* Assets で「**[!UICONTROL ドキュメント]**」を選択し、**[!UICONTROL Filtertype]** で「**[!UICONTROL Microsoft® Word]**」または「**[!UICONTROL Microsoft® Excel]**」を選択すると、両方のタイプのファイルが存在しても結果が表示されません。（SITES-14837）
+* Assets で、選択 **[!UICONTROL ドキュメント]**&#x200B;次に、 **[!UICONTROL Filtertype]**，選択 **[!UICONTROL Microsoft®® Word]** または **[!UICONTROL Microsoft®® Excel]** は、両方のタイプのファイルが存在する場合でも結果を表示しません。 （SITES-14837）
 
 ### [!DNL Assets]{#assets-6519}
 
@@ -519,9 +519,9 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * ユーザーが送信アクションを実行すると、送信は次のエラーで失敗します。
   `javax.servlet.ServletException: java.lang.NoSuchMethodError`
-問題を解決するには、 [JSP、Java、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
-* Adminui で、ホーム/サービス/PDF Generator/Adobe PDF設定のパスでPDFドキュメントのフォントを選択しようとすると、フォントリストに空白が表示されます。 「常に埋め込む」リストと「埋め込まない」リストにフォントを追加できません。 （FORMS-12095）
-
+問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
+* AEM Service Pack 6.5.14.0以降をインストールした後、に移動したときに、JEE Admin UI からPDFドキュメントのフォントを選択できなくなる `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`フォントリストが空に表示されるので、 （FORMS-12095）
+  <!--The font enumeration fails due to the missing Ps2Pdf service file.-->
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
