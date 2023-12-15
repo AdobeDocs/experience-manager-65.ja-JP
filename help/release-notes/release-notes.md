@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 287717e39ff58396de6d63a89e2b3d8fef4e6888
+source-git-commit: 8fc35ac465240cafdce5346f2f7e9ba15c8d1fef
 workflow-type: tm+mt
-source-wordcount: '4288'
+source-wordcount: '4333'
 ht-degree: 73%
 
 ---
@@ -522,7 +522,13 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
   `javax.servlet.ServletException: java.lang.NoSuchMethodError`
 問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
 * AEM Service Pack 6.5.14.0以降をインストールした後、に移動したときに、JEE Admin UI からPDFドキュメントのフォントを選択できなくなる `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`フォントリストが空に表示されるので、 （FORMS-12095）
-  <!--The font enumeration fails due to the missing Ps2Pdf service file.-->
+
+#### JEE 上の AEM Forms
+
+* Java EE Web アプリケーションを開発するための一般的でオープンソースな Web アプリケーションフレームワークである Struts 2 RCE に対して、重要なセキュリティ脆弱性が報告されています。 Adobeがリリースされました [AEM 6.5 サービスパック 19.1(6.5.19.1)](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md) :JEE 上のAEM Formsの脆弱性に対処するため。
+
+
+<!--The font enumeration fails due to the missing Ps2Pdf service file.-->
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
