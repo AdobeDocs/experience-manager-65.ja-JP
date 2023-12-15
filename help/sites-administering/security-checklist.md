@@ -393,7 +393,7 @@ AEM 6.1 以降、`AuthorizableNodeName` インターフェイスの新しい実�
 
 すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。権限の最小化の原則に従って、これらのプロパティへのアクセスを制限する必要があります。
 
-これをサポートするため、アドビでは、お客様の構築基盤として権限堅牢化パッケージを提供しています。これは、リポジトリルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティへの匿名アクセスを制限することで機能します。このパッケージは[こちら](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip)からダウンロードでき、サポートされているすべてのバージョンの AEM にインストールできます。
+これをサポートするため、アドビでは、お客様の構築基盤として権限堅牢化パッケージを提供しています。これは、リポジトリルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティへの匿名アクセスを制限することで機能します。このパッケージは[こちら](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip)からダウンロードでき、サポートされているすべてのバージョンの AEM にインストールできます。
 
 変更点を説明するために、パッケージをインストールする前に匿名で表示できる次のノードプロパティと、
 
