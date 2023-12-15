@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: b5ecac71b07bfceb2708f20fe50965dec25e2194
+source-git-commit: e67d7aa9ab1dd00daad3518904bded258e31128c
 workflow-type: tm+mt
-source-wordcount: '4259'
-ht-degree: 74%
+source-wordcount: '4288'
+ht-degree: 73%
 
 ---
 
@@ -213,7 +213,8 @@ ht-degree: 74%
 * Forms Designer で正しく割り当てられた見出しレベルは、 `<P>` タグをAdobe Acrobatに追加します。 (LC-3921305) 
 * テーブルでは、オブジェクトを割り当てた後にその ID を変更することはできません。 (LC-3921134) 
 * 結合されたセルがテーブル内にある場合、AEM Forms Designer の複雑なテーブルで span（行と列）と scope を設定する GUI は使用できません。 （LC-3919532）
-  <!--* After applying AEM Service Pack 6.5.15.0 patch installer, notice generation fails intermittently  . (LC-3921530)-->
+* AEM Forms Service Pack 6.5.15.0に forms アドオンパッケージをインストールした後にPDFドキュメントを生成しようとすると、断続的に失敗し、次のエラーが表示されます。
+   * `OutputServiceException AEM_OUT_001_003:Unexpected Exception: 0 Out of Memory Caused by: org.omg.CORBA.COMM_FAILURE: null` (LC-3921530)
 
 ### 基盤{#foundation-6519}
 
