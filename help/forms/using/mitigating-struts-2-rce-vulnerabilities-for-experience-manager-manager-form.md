@@ -1,20 +1,20 @@
 ---
-title: JEE 上のExperience Manager Formsの Struts 2 RCE 脆弱性の緩和
-description: JEE 上のExperience Manager Formsの Struts 2 RCE 脆弱性の緩和
+title: JEE 上のExperience Manager Formsの Struts 2 脆弱性の緩和
+description: JEE 上のExperience Manager Formsの Struts 2 脆弱性の緩和
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 531eed9bb6d7792a6da0104b533a505738a64786
+source-git-commit: 5f5fcc10927d62cdfaeb0770c34052ceda02b2e8
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
 
 
-# Experience Manager Formsの Struts 2 RCE 脆弱性の緩和 {#mitigatin-struts2-rce-vulnerabilities-for-aem-forms}
+# Experience Manager Formsの Struts 2 脆弱性の緩和 {#mitigatin-struts2-rce-vulnerabilities-for-aem-forms}
 
 ## イシュー
 
@@ -46,20 +46,22 @@ Java EE Web アプリケーションを開発するための一般的でオー�
    * patch-archive.bat
    * patch-archive.sh
 1. ターミナルウィンドウを開き、抽出したファイルを含むフォルダーに移動します。
-1. 手動パッチ適用ツールを使用して、すべての struts2 jar ファイルを検索、リスト、および置換します。 struts2-core-2.5.30 jar ファイルと struts2-core.jar を検索して置き換えるには、次の手順を実行します。
+1. 手動パッチ適用ツールを使用して、すべての struts2 jar ファイルを検索、リスト、および置換します。 このツールは、実行時に依存関係をダウンロードするので、インターネット接続が必要です。 したがって、ツールを実行する前に、インターネットに接続していることを確認します。
+
+struts2-core-2.5.30 jar ファイルと struts2-core.jar を検索して置き換えるには、次の手順を実行します。
 
 
 >[!BEGINTABS]
 
 >[!TAB Windows]
 
-1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、上記のコマンドのパスをAEM Form サーバーのパスに置き換えます。
+1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、コマンドのパスをAEM Formsサーバーのパスに置き換えます。
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、 上記のコマンドのパスを、AEM Form サーバーのパスと `struts2-core-2.5.33.jar` ファイル。
+1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、 コマンド内のパスをAEM Formsサーバーのパスと `struts2-core-2.5.33.jar` ファイル。
 
 
    ```
@@ -74,13 +76,13 @@ Java EE Web アプリケーションを開発するための一般的でオー�
 
 >[!TAB Linux]
 
-1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、上記のコマンドのパスをAEM Form サーバーのパスに置き換えます。
+1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、コマンドのパスをAEM Formsサーバーのパスに置き換えます。
 
    ```
    patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、上記のコマンドのパスをAEM Form サーバーのパスと置き換えます。 `struts2-core-2.5.33.jar` ファイル。
+1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、コマンドのパスをAEM Formsサーバーのパスに置き換え、 `struts2-core-2.5.33.jar` ファイル。
 
    ```
    patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace \temp\struts2-core-2.5.33.jar
