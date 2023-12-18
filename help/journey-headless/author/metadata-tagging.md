@@ -3,9 +3,9 @@ title: コンテンツフラグメントのメタデータとタグの定義に�
 description: コンテンツフラグメントのメタデータとタグの定義について
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '257'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -32,11 +32,11 @@ ht-degree: 85%
 
   ![コンテンツフラグメント作成 - 名前の指定](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
-* The **バリエーション** コンテンツフラグメントエディターの「 」タブで、事前定義済みの **タグ** を次のように設定します。
+* コンテンツフラグメントエディターの「**バリエーション**」タブでは、プロジェクトから事前定義済みの&#x200B;**タグ**&#x200B;を追加できます。
 
   ![コンテンツフラグメントエディター - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
-* The **メタデータ** コンテンツフラグメントエディターの「 」タブで、メタデータの各種フィールドと定義済みのフィールドを追加できます。 **タグ** を次のように設定します。
+* コンテンツフラグメントエディターの「**メタデータ**」タブでは、メタデータの各種フィールドと定義済みの&#x200B;**タグ**&#x200B;をプロジェクトから追加できます。
 
   ![コンテンツフラグメントエディター - メタデータ](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
 

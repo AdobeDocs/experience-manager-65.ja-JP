@@ -1,21 +1,21 @@
 ---
 title: AEM 6.5 における Assets リポジトリの再構築
-description: Adobe Experience Manager(AEM)6.5 for Assets の新しいリポジトリ構造に移行するために必要な変更を行う方法を説明します。
+description: Adobe Experience Manager（AEM）6.5 での Assets の新しいリポジトリ構造に移行するために、必要な変更を加える方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 28ddd23c-5907-4356-af56-ebc7589a2b5d
 source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1041'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
 # AEM 6.5 における Assets リポジトリの再構築 {#assets-repository-restructuring-in-aem}
 
-親の説明に従って [AEM 6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md) このページでは、Adobe Experience Manager(AEM)6.5 にアップグレードするお客様は、このページを使用して、AEM Assetsソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
+[Adobe Experience Manager（AEM）6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明しているように、AEM 6.5 にアップグレードする場合は、AEM Assets ソリューションに影響を与えるリポジトリ変更に伴う作業量を考慮する必要があります。一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
@@ -48,7 +48,7 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>カスタムコードがこの場所（つまり、コードがこのパスに明示的に依存）している場合は、アップグレードする前に新しい場所を使用するようにコードを更新する必要があります。 理想的には、Java™ API を使用して、JCR 内の特定のパスへの依存を減らすことができます。</p> <p>クライアントがダウンロードする zip ファイルを保持する一時的な場所。 クライアントがアセットのダウンロードをリクエストするので、更新する必要はありません。 新しい場所にファイルが生成されます。</p> </td>
+   <td><p>カスタムコードがこの場所に依存（つまり、コードがこのパスに明示的に依存）している場合は、アップグレードする前に新しい場所を使用するようにコードを更新する必要があります。 理想的には、Java™ API を使用できれば、JCR 内の特定のパスへの依存を減らすことができます。</p> <p>クライアントがダウンロードする zip ファイルを一時的に保存するための場所。クライアントがアセットのダウンロードをリクエストしたときから、更新する必要はありません。新しい場所にファイルが生成されます。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
@@ -73,11 +73,11 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>電子メールテンプレートが顧客によって変更された場合は、次の操作を実行して、新しいリポジトリ構造に合わせます。</p>
+   <td><p>メールテンプレートが顧客によって変更されている場合は、新しいリポジトリ構造に合わせるために次の操作を実行します。</p>
     <ol>
      <li><code>/libs/settings/dam/notification</code> メールテンプレートを <strong><code>/etc/notification/email/default</code></strong> から <strong><code>/apps/settings/notification/email/default</code></strong> にコピーする必要があります。
       <ol>
-       <li>宛先が<strong> <code>/apps</code></strong>の場合、この変更は SCM に保持されます。</li>
+       <li>コピー先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保存されます。</li>
       </ol> </li>
      <li><strong><code>/etc/dam/notification/email/default</code></strong> フォルダー内のメールテンプレートを移動したら、このフォルダーを削除します。<br />
       <ol>
@@ -106,14 +106,14 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>SCM で管理され、実行時にデザインダイアログを介して書き込まれないデザインに対して、次の操作を実行して最新のモデルに合わせます。</p>
+   <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインについては、次の操作を実行して最新のモデルに合わせます。</p>
     <ol>
      <li>デザインを以前の場所から <code>/apps</code> 内の新しい場所にコピーします。</li>
-     <li>デザイン内の CSS、JavaScript、静的リソースをに変換する <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a> 次を使用 <code>allowProxy = true</code>.</li>
-     <li>の以前の場所への参照を更新 <code>cq:designPath</code> ～を通じて財産を所有する <strong>AEM / DAM 管理者/アセット共有ページ/ページプロパティ/詳細タブ/デザインフィールド</strong>.</li>
-     <li>新しいクライアントライブラリカテゴリを使用するには、以前の場所を参照しているページを更新します。 これには、ページ実装コードを更新する必要があります。</li>
-     <li>Dispatcher のルールを更新し、 <code>/etc.clientlibs/</code> プロキシサーブレット。</li>
-    </ol> <p>SCM で管理されず、デザインダイアログを介して実行時に変更されたデザインの場合は、オーサリング可能なデザインをから移動しないでください。 <code>/etc</code>.</p> </td>
+     <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li>
+     <li><strong>AEM／DAM 管理／アセット共有ページ／ページのプロパティ／詳細タブ／デザインフィールド</strong>を使用して、<code>cq:designPath</code> プロパティで以前の場所への参照を更新します。</li>
+     <li>新しいクライアントライブラリカテゴリを使用するには、以前の場所を参照しているページを更新します。それには、ページの実装コードを更新する必要があります。</li>
+     <li>Dispatcher ルールを更新して、<code>/etc.clientlibs/</code> プロキシサーブレット経由でクライアントライブラリを提供できるようにします。</li>
+    </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されるデザインの場合は、オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</p> </td>
   </tr>
   <tr>
    <td><strong>メモ</strong></td>
@@ -136,13 +136,13 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>電子メールテンプレート (<strong>downloadasset</strong> または <strong>transientworkflowcompleted</strong>) が変更された後、以下の手順に従って新しい構造に合わせます。</p>
+   <td><p>メールテンプレート（<strong>downloadasset</strong> または <strong>transientworkflowcompleted</strong>）が変更されている場合は、以下の手順に従って新しい構造に合わせます。</p>
     <ol>
      <li>更新されたメールテンプレートを <strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong> から <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong> にコピーします。
       <ol>
-       <li>宛先が<strong> <code>/apps</code></strong>の場合、この変更は SCM に保持されます。</li>
+       <li>コピー先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保存されます。</li>
       </ol> </li>
-     <li><code>/etc/dam/workflow/notification/email/downloadasset </code> フォルダー内のメールテンプレートを移動したら、このフォルダーを削除します。<br />
+     <li>フォルダー内のメールテンプレートを移動したら、このフォルダー <code>/etc/dam/workflow/notification/email/downloadasset </code> を削除します。<br />
       <ol>
        <li><strong> <code>/etc</code></strong> 内のメールテンプレートが更新されていない場合は、このフォルダーを削除してかまいません。インストールされた AEM 6.4 の一部として元のメールテンプレートが <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> に存在するからです。</li>
       </ol> </li>
@@ -150,7 +150,7 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td>While <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> は、参照に対して技術的にサポートされます ( 通常の Sling CAConfig 参照によって/apps の前、ただし <code>/etc</code>) テンプレートを <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>. ただし、電子メールテンプレートの編集を容易にするランタイム UI がないので、この方法はお勧めしません。</td>
+   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> はルックアップ対象として技術的にサポートされていますが（通常の Sling CAConfig ルックアップでは /apps より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> に格納することができます。ただし、メールテンプレートを容易に編集できるランタイム UI がないので、これはお勧めできません。</td>
   </tr>
  </tbody>
 </table>
@@ -181,7 +181,7 @@ ht-degree: 48%
     <ol>
      <li>更新されたメールテンプレートを <strong><code>/etc/dam/adhocassetshare</code></strong> から <strong><code>/apps/settings/dam/adhocassetshare</code></strong> にコピーします。
       <ol>
-       <li>宛先が<strong><code>/apps</code></strong>の場合、この変更は SCM に保持されます。</li>
+       <li>コピー先が <strong><code>/apps</code></strong> にあるので、この変更は SCM に保存されます。</li>
       </ol> </li>
      <li><strong><code>/etc/dam/adhocassetshare</code></strong> フォルダー内のメールテンプレートを移動したら、このフォルダーを削除します。<br />
       <ol>
@@ -191,7 +191,7 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td>While <code>/conf/global/settings/dam/adhocassetshare</code> は、参照に対して技術的にサポートされます ( 参照は、 <code>/apps</code> 通常の Sling CAConfig 参照を介して、しかし、 <code>/etc</code>) の代わりに使用する場合、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code>. ただし、メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td>
+   <td><code>/conf/global/settings/dam/adhocassetshare</code> はルックアップ対象として技術的にサポートされていますが（通常の Sling CAConfig ルックアップでは <code>/apps</code> より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code> に格納することができます。ただし、メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td>
   </tr>
  </tbody>
 </table>
@@ -214,7 +214,7 @@ ht-degree: 48%
     <ol>
      <li>すべてのカスタムスクリプトまたは変更済みスクリプトを <strong><code>/etc/dam/indesign/scripts</code></strong> から <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br /> にコピーします。
       <ol>
-       <li>AEMが提供する未変更のスクリプトは、 <strong><code>/libs/settings</code></strong> AEM 6.5 の場合</li>
+       <li>AEM に用意されている未変更のスクリプトは、AEM 6.5 では <strong><code>/libs/settings</code></strong> から利用できるので、新規または変更済みのスクリプトのみコピーします。</li>
       </ol> </li>
      <li>メディア抽出プロセスワークフローステップを使用するすべてのワークフローモデルを探し、以下の操作を実行します。
       <ol>
@@ -244,7 +244,7 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>プロジェクトレベルのカスタマイズは、同等の下で切り取り&amp;貼り付ける必要があります <code>/apps</code> または <code>/conf</code> 該当するパス。</p> <p>AEM 6.4 のリポジトリ構造に合わせるには：</p>
+   <td><p>必要に応じて、プロジェクトレベルのカスタマイズを、対応する <code>/apps</code> パスまたは <code>/conf</code> パスにカット＆ペーストする必要があります。</p> <p>AEM 6.4 のリポジトリ構造に合わせるには：</p>
     <ol>
      <li>変更されたビデオ設定を <code>/etc/dam/video</code> からコピーし、次の場所に貼り付けます： <code>/apps/settings/dam/video</code></li>
      <li>削除 <code>/etc/dam/video</code></li>
@@ -257,7 +257,7 @@ ht-degree: 48%
  </tbody>
 </table>
 
-### ビューアプリセット設定 {#viewer-preset-configurations}
+### ビューアープリセット設定 {#viewer-preset-configurations}
 
 <table>
  <tbody>
@@ -271,11 +271,11 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>標準提供のビューアプリセットの場合、新しい場所でのみ使用できます。</p> <p>カスタムビューアプリセットの場合：</p>
+   <td><p>規定のビューアープリセットの場合は、新しい場所でのみ使用できます。</p> <p>カスタムビューアープリセットの場合：</p>
     <ul>
-     <li>移行スクリプトを実行して、次の場所からノードを移動 <code>/etc</code> から <code>/conf</code>. スクリプトは、 <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li>
-     <li>または、設定を編集すると、新しい場所に自動保存されます。</li>
-    </ul> <p>次を指すように copyURL/埋め込みコードを調整する必要はありません。 <code>/conf</code>. に対する既存のリクエスト <code>/etc</code> が次の正しいコンテンツにリルーティングされます： <code>/conf</code>.</p> </td>
+     <li>移行スクリプトを実行して、<code>/etc</code> から <code>/conf</code> にノードを移動できます。スクリプトは <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em> にあります。</li>
+     <li>または、設定を編集して、新しい場所に自動保存することもできます。</li>
+    </ul> <p>なお、<code>/conf</code> を指すようにコピー URL または埋め込みコードを調整する必要はありません。<code>/etc</code> への既存のリクエストは、<code>/conf</code> 内の適切なコンテンツに再ルーティングされます。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>

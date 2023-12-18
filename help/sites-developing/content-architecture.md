@@ -7,35 +7,35 @@ content-type: reference
 topic-tags: best-practices
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '426'
-ht-degree: 45%
+ht-degree: 100%
 
 ---
 
 # コンテンツのアーキテクチャ{#content-architecture}
 
-## David のモデルに従う {#follow-david-s-model}
+## David&#39;s Model に準拠 {#follow-david-s-model}
 
-David&#39;s Model は、数年前に David Nuescheler が書いたものですが、今日ではその考えが正しいと考えています。 David&#39;s Model の主な定義は次のとおりです。
+David&#39;s Model は何年も前に David Nuescheler によって作成されたものですが、その考え方は今でも通用します。David&#39;s Model の主な考えは以下のとおりです。
 
 * データが第一、構造は二の次（おそらくですが）。
-* コンテンツ階層を推進し、実現させないでください。
+* コンテンツ階層を推進し、成り行き任せにしない。
 * ワークスペース は `clone()`、`merge()`、`update()` のためのもの。
-* 同じ名前の兄弟には注意が必要です。
-* 参照は有害と見なされます。
-* ファイルはファイルです。
+* 同じ名前の兄弟に注意する。
+* 参照は害が多いと考えられる。
+* ファイルはファイルである。
 * ID は有害。
 
-David&#39;s Model は、Jackrabbit Wiki の [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+David モデルについては、Jackrabbit wiki（[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)）に詳しい解説があります。
 
-### すべてがコンテンツです {#everything-is-content}
+### すべてがコンテンツである {#everything-is-content}
 
-データベースなどの別々のサードパーティデータソースに依存するのではなく、すべてをリポジトリに保存する必要があります。 これは、作成したコンテンツ、画像、コード、設定などのバイナリデータに当てはまります。 これにより、1 つの API セットを使用してすべてのコンテンツを管理し、レプリケーションを通じてこのコンテンツのプロモーションを管理できます。 また、バックアップ、ログなどの単一のソースも得られます。
+あらゆるデータの格納には、データベースなど別個のサードパーティデータソースを利用するのではなく、リポジトリを使用する必要があります。これは、作成済みコンテンツ、画像などのバイナリデータ、コード、設定などに当てはまります。このようにすると、1 つの API セットを使用してすべてのコンテンツを管理でき、レプリケーションによってこのコンテンツのプロモーションを管理できます。また、バックアップやログなどの単一ソースも得られます。
 
-### 「コンテンツモデルが最初」のデザイン原則を使用 {#use-the-content-model-first-design-principle}
+### 「コンテンツモデルが第一」のデザイン原則を使用 {#use-the-content-model-first-design-principle}
 
-新機能をビルドするときには、常に JCR コンテンツ構造の設計から始め、次にデフォルトの Sling サーブレットを使用したコンテンツの読み込みおよび書き込みに進みます。これにより、標準のアクセス制御メカニズムで実装が適切に動作し、不要な CRUD スタイルのサーブレットが生成されるのを防ぐことができます。
+新機能をビルドするときには、常に JCR コンテンツ構造の設計から始め、次にデフォルトの Sling サーブレットを使用したコンテンツの読み込みおよび書き込みに進みます。これにより、初期設定済みのアクセス制御メカニズムで実装が適切に動作することを保証し、不要な CRUD 形式のサーブレットの生成を回避できます。
 
 ### RESTful に準拠 {#be-restful}
 
@@ -43,22 +43,22 @@ David&#39;s Model は、Jackrabbit Wiki の [https://wiki.apache.org/jackrabbit/
 
 ### 新しいノードタイプの定義を回避 {#avoid-defining-new-node-types}
 
-ノードタイプはインフラストラクチャレイヤー内の下位レベルで機能し、ほとんどの要件は nt:unstructured、oak:Unstructured、sling:Folder または cq:Page のノードタイプに割り当てられた sling:resourceType を使用することで満たすことができます。ノードタイプはリポジトリ内のスキーマと同じで、ノードタイプの変更は将来的に高価になる場合があります。
+ノードタイプはインフラストラクチャレイヤー内の下位レベルで機能し、ほとんどの要件は nt:unstructured、oak:Unstructured、sling:Folder または cq:Page のノードタイプに割り当てられた sling:resourceType を使用することで満たすことができます。ノードタイプはリポジトリではスキーマと同等で、ノードタイプを変更すると後でコストがかかる可能性があります。
 
 ### JCR の命名規則に準拠 {#adhere-to-naming-conventions-in-the-jcr}
 
-命名規則に従うと、コードベースの一貫性が向上し、不具合の発生率が低下し、システムで作業する開発者の速度が向上します。 AEM の開発においてアドビが使用した規則は次のとおりです。
+命名規則に準拠することにより、コードベースの一貫性が高まるので、不具合の発生率を低下させ、システムで作業する開発者の速度を高めることができます。AEM の開発においてアドビが使用した規則は次のとおりです。
 
 * ノード名
 
    * すべて小文字
-   * ハイフンを使用した単語の分離
+   * 単語間の区切りにハイフンを使用
 
 * プロパティ名
 
-   * キャメルケース（小文字で開始）
+   * キャメルケース、小文字で開始
 
-* コンポーネント (JSP/HTML)
+* コンポーネント（JSP/HTML）
 
    * すべて小文字
-   * ハイフンを使用した単語の分離
+   * 単語間の区切りにハイフンを使用

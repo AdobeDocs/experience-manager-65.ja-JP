@@ -7,9 +7,9 @@ feature: Renditions
 exl-id: 1e4ddd73-a31c-4ddd-94eb-1dac6a4835b3
 hide: true
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1072'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -127,7 +127,7 @@ ImageMagick 処理機能を使用して既存アセットの FPO レンディシ
 
 ワークフローが完了したら、生成された FPO レンディションを確認できます。Experience ManagerAssets ユーザーインターフェイスで、アセットをクリックして大きいプレビューを開きます。左側のパネルを開き、「レンディション」を選択します。または、プレビューが開いたときに、キーボードショートカット `Alt + 3` を使用します。
 
-「**[!UICONTROL FPO レンディション]**」をクリックして、プレビューを読み込みます。オプションで、レンディションを右クリックして、ファイルシステムに保存できます。
+「**[!UICONTROL FPO レンディション]**」をクリックして、プレビューを読み込みます。オプションで、レンディションを右クリックしてファイルシステムに保存できます。
 
 ![rendition_list](assets/rendition_list.png)
 

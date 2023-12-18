@@ -6,9 +6,9 @@ role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3148'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -260,7 +260,7 @@ Experience Manager には、クエリに使用するためのインデックス�
 
 ## ビジュアル検索または類似性検索の設定 {#configure-visual-similarity-search}
 
-ビジュアル検索機能を使用すると、AdobeAsset Link パネルを使用して、AEM Assetsリポジトリ内で視覚的に類似したアセットを検索できます。 この機能は 6.5.0 以降のバージョンで使用可能で、インデックス付きのアセットのみが検索されます。詳しくは、[ビジュアル検索の設定方法](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch?lang=ja)を参照してください。
+ビジュアル検索機能を使用すると、Adobe Asset Link パネルを使用して、AEM Assets リポジトリ内で視覚的に類似したアセットを検索できます。この機能は 6.5.0 以降のバージョンで使用可能で、インデックス付きのアセットのみが検索されます。詳しくは、[ビジュアル検索の設定方法](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch?lang=ja)を参照してください。
 
 ## Adobe InDesign 用の配置専用レンディションの生成 {#fpo-renditions}
 

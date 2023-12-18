@@ -1,84 +1,84 @@
 ---
 title: ドメインの追加
-description: ドメインの管理設定を使用してエンタープライズドメイン、ローカルドメインまたはハイブリッドドメインを追加する方法と、ドメイン名および ID に関する一般的な考慮事項について説明します。
+description: ドメインの管理設定を使用してエンタープライズドメイン、ローカルドメイン、またはハイブリッドドメインを追加する方法と、ドメイン名と ID に関する一般的な考慮事項について説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: c708936d-7aa7-4b92-be2d-d97008f187d2
 source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '922'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # ドメインの追加 {#adding-domains}
 
-## エンタープライズドメインの追加 {#add-an-enterprise-domain}
+## エンタープライズドメインを追加 {#add-an-enterprise-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「新規エンタープライズドメイン」をクリックします。
-1. 「 ID 」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します。 ( [ドメイン名と ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids).)
-1. アカウントのロックを有効にするかどうかを指定します。 ( [アカウントロックの設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) デフォルトでは、「アカウントロックを有効にする」が選択されています。
-1. 「認証を追加」をクリックし、「認証プロバイダー」リストで、組織が使用している認証メカニズムに応じてプロバイダーを選択します。 値には、LDAP、Kerberos、SAML、またはカスタム認証プロバイダーを指定できます。
+1. 「ID」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します（[ドメイン名および ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids)を参照）。
+1. アカウントロックを有効にするかどうかを指定します（[アカウントロックの設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。デフォルトでは、「アカウントロックを有効にする」が選択されています。
+1. 「認証を追加」をクリックし、「認証プロバイダー」リストで、組織が使用している認証メカニズムに応じてプロバイダーを選択します。選択できる値は、「LDAP」、「Kerberos」、「SAML」または「カスタム」認証プロバイダーです。
 
-   LDAP を選択した場合は、ディレクトリ設定で指定した LDAP サーバーを使用するか、別の LDAP サーバーを選択して認証に使用できます。 別のサーバーを選択する場合、ユーザーは両方の LDAP サーバーに存在する必要があります。
+   LDAP を選択すると、ディレクトリ設定で指定した LDAP サーバーを使用するか、異なる LDAP サーバーを選択して認証に使用することができます。異なるサーバーを選択する場合、ユーザーは両方の LDAP サーバーに存在する必要があります。
 
-1. ページで必要な追加情報を入力します。 ( [認証設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. ディレクトリまたはカスタムの SPI(Service Provider Interface) を追加します。 ( [ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 必要な追加情報をページに入力します（[認証の設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings)を参照）。
+1. ディレクトリまたはカスタムのサービスプロバイダーインターフェイス（SPI）を追加します（[ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)を参照）。
 1. 「完了」をクリックし、「OK」をクリックします。
 
-エンタープライズドメインを作成した後、User Management で使用する前に、手動でトリガーを同期するか、ディレクトリを作成して同期を実行します。 その後、ディレクトリ同期スケジュールを設定し、必要に応じて手動で同期を実行できます。 ( [ディレクトリの同期](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories).)
+エンタープライズドメインを作成したら、User Management でディレクトリを使用する前に、手動でディレクトリを同期するか、同期を行うトリガーを作成する必要があります。その後、必要に応じてディレクトリの同期スケジュールを設定したり、手動で同期を実行したりすることができます（[ディレクトリの同期](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories)を参照）。
 
 ## ローカルドメインを追加 {#add-a-local-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「新規ローカルドメイン」をクリックします。
-1. 「 ID 」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します。 ( [ドメイン名と ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids).)
-1. アカウントのロックを有効にするかどうかを指定し、[OK] をクリックします。 ( [アカウントロックの設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) デフォルトでは、「アカウントロックを有効にする」が選択されています。
+1. 「ID」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します（[ドメイン名および ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids)を参照）。
+1. アカウントロックを有効にするかどうかを指定して、「OK」をクリックします（[アカウントロックの設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。デフォルトでは、「アカウントロックを有効にする」が選択されています。
 
-## ハイブリッドドメインの追加 {#add-a-hybrid-domain}
+## ハイブリッドドメインを追加 {#add-a-hybrid-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「新しいハイブリッドドメイン」をクリックします。
-1. 「 ID 」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します。 ( [ドメイン名と ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids).)
-1. 「認証を追加」をクリックし、「認証プロバイダー」リストで、組織が使用している認証メカニズムに応じてプロバイダーを選択します。 値には、LDAP、Kerberos、SAML、またはカスタム認証プロバイダーを指定できます。
-1. ページで必要な追加情報を入力します。 ( [認証設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. 「 OK 」をクリックし、もう一度「 OK 」をクリックします。
+1. 「ID」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します（[ドメイン名および ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids)を参照）。
+1. 「認証を追加」をクリックし、「認証プロバイダー」リストで、組織が使用している認証メカニズムに応じてプロバイダーを選択します。選択できる値は、「LDAP」、「Kerberos」、「SAML」または「カスタム」認証プロバイダーです。
+1. 必要な追加情報をページに入力します（[認証の設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings)を参照）。
+1. 「OK」をクリックし、「OK」を再度クリックします。
 
-## ドメイン名と ID に関する重要な考慮事項 {#important-considerations-for-domain-names-and-ids}
+## ドメイン名および ID に関する重要な考慮事項 {#important-considerations-for-domain-names-and-ids}
 
-ドメイン名と ID を選択する際は、次の点に注意してください。
+ドメイン名および ID の選択時には、次の点を考慮してください。
 
 ### 一般的な考慮事項 {#general-considerations}
 
-* DB2 以外のデータベースプロバイダーを使用している場合、ドメイン ID には最大 50 バイトを含めることができます。 1 バイトの ASCII 文字を使用する場合、上限は 50 文字です。 ドメイン識別子にマルチバイト文字が含まれる場合、この制限は小さくなります。 例えば、識別子に 3 バイト文字が含まれるドメインを作成した場合、上限は 16 文字です。 また、4 バイト文字を含むドメインは作成できません。 この制限を超えるドメイン ID を作成した場合、AEM forms は不安定な状態になります。 この不安定な状態から回復するには、（このページ）[拡張文字またはマルチバイト文字を含むドメインの削除](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)を参照してください。
-* AEM forms 内で作成できるエンタープライズドメインおよびローカルドメインの数は、各ドメイン ID の長さによって異なります。 エンタープライズドメインまたはハイブリッドドメインを追加すると、User Management によってAEM forms 設定ファイル (config.xml) の AuthProviders ノードの configInstance 文字列が更新されます。 configInstance 文字列には、承認プロバイダーに関連付けられているすべてのドメインの絶対パスのコロン区切りリストが含まれます。 この文字列のサイズ制限は 8192 文字です。 この上限に達すると、追加のドメインを作成できなくなります。
+* DB2 以外のデータベースプロバイダーを使用している場合、ドメイン ID には、最大 50 バイトまで含めることができます。1 バイトの ASCII 文字を使用する場合、上限は 50 文字です。ドメイン ID にマルチバイト文字が含まれている場合、この上限は低くなります。例えば、ID に 3 バイト文字が含まれるドメインを作成した場合、上限は 16 文字です。また、4 バイト文字を含むドメインは作成できません。この上限を超えるドメイン ID を作成すると、AEM Forms が不安定な状態になります。この不安定な状態から回復するには、（このページ）[拡張文字またはマルチバイト文字を含むドメインの削除](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)を参照してください。
+* AEM forms 内で作成できるエンタープライズドメインとローカルドメインの数は、各ドメイン ID の長さによって異なります。エンタープライズドメインまたはハイブリッドドメインを追加すると、User Management によって AEM Forms 設定ファイル（config.xml）の AuthProviders ノードの configInstance 文字列が更新されます。configInstance 文字列には、認証プロバイダーに関連付けられているすべてのドメインの絶対パスをコロン区切りで記載したリストが含まれます。この文字列のサイズの上限は 8,192 文字です。この上限に達すると、追加のドメインを作成できません。
 
 ### DB2 を使用する際の考慮事項 {#considerations-when-using-db2}
 
-AEM forms データベースに DB2 を使用する場合、ドメイン ID の許可される最大長は、使用する文字の種類によって異なります。
+AEM Forms データベースに DB2 を使用する場合、ドメイン ID の許可される最大長は、使用する文字の種類によって異なります。
 
-* 1 バイト (ASCII) で 100 文字（例えば、英語、フランス語、ドイツ語の言語で使用されている文字）
-* 全角 50 文字（例えば、中国語、日本語、韓国語で使用される文字）
-* 4 バイト文字で 25 文字（例えば、繁体字中国語で使用される文字）
+* 1 バイト文字（ASCII）で 100 文字（例えば、英語、フランス語またはドイツ語で使用されている文字）
+* 2 バイト文字で 50 文字（例えば、中国語、日本語または韓国語で使用されている文字）
+* 4 バイト文字で 25 文字（例えば、繁体字中国語で使用されている文字）
 
 ### MySQL を使用する際の考慮事項 {#considerations-when-using-mysql}
 
-MySQL をAEM forms データベースとして使用する場合、次の制限が適用されます。
+MySQL を AEM Forms データベースとして使用している場合、以下の制限があります。
 
-* ドメイン ID とドメイン名には 1 バイト (ASCII) 文字のみを使用します。 拡張 ASCII 文字を使用すると、AEM forms は不安定な状態になり、ドメインを削除しようとすると例外がスローされる場合があります。 この不安定な状態から回復するには、（このページ）[拡張文字またはマルチバイト文字を含むドメインの削除](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)を参照してください。
-* 大文字と小文字が異なる同じ名前の 2 つのドメインを作成することはできません。 例えば、という名前のドメインを作成しようとした場合 *Adobe* ( という名前のドメインが *adobe* は既に存在するので、エラーが発生します。
-* User Management では、拡張文字の使用だけで異なる 2 つのドメイン名を区別することはできません。 例えば、「*abcde*」という名前のドメインと「*âbcdè*」という名前のドメインを作成した場合、これら 2 つは同じと見なされます。
+* ドメイン ID とドメイン名には 1 バイト（ASCII）文字のみを使用します。拡張 ASCII 文字を使用すると、AEM Forms の動作が不安定になり、ドメインを削除しようとすると例外がスローされる場合があります。この不安定な状態から回復するには、（このページ）[拡張文字またはマルチバイト文字を含むドメインの削除](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)を参照してください。
+* 同じ名前で、大文字／小文字が異なる 2 つのドメインを作成することはできません。例えば、「*adobe*」というドメインが既に存在する場合に「*Adobe*」というドメインを作成しようとすると、エラーが発生します。
+* User Management では、拡張文字の使用においてのみ異なる 2 つのドメイン名を区別することはできません。例えば、「*abcde*」という名前のドメインと「*âbcdè*」という名前のドメインを作成した場合、これら 2 つは同じと見なされます。
 
-### 拡張文字またはマルチバイト文字を含むドメインを削除する {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
+### 拡張文字またはマルチバイト文字を含むドメインを削除 {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
 
-1. 設定ファイルを書き出します。詳しくは、 [設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).
-1. 設定ファイルを開き、「ドメイン」ノードの下で、name 属性が拡張文字またはマルチバイト文字で作成されたドメインの名前と一致するノードを探します。 そのドメインに関連するノード全体を削除します。
-1. データベースで、 edcprincipaldomainentity テーブルのドメインを検索します。
+1. [設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)の説明に従って、設定ファイルを書き出します。
+1. 設定ファイルを開き、Domains ノードの下で、name 属性が拡張文字またはマルチバイト文字を使用して作成されたドメインの名前と一致するノードを探します。そのドメインに関連するノード全体を削除します。
+1. データベースで、edcprincipaldomainentity テーブル内のドメインを検索します。
 
    * edcprincipaldomainentity から `*` を選択します。
-   * 拡張文字またはマルチバイト文字を含むドメイン名を検索し、そのステータスを「廃止」に設定します。
+   * 拡張文字またはマルチバイト文字を含むドメイン名を検索し、そのステータスを廃止に設定します。
 
-1. 更新した設定ファイルを読み込みます。詳しくは、 [設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).
+1. [設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)の説明に従って、更新した設定ファイルを読み込みます。

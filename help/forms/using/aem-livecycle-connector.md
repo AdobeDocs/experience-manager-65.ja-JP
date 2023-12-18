@@ -1,31 +1,31 @@
 ---
 title: AEM Forms と Adobe LiveCycle の接続
-description: Adobe Experience Manager(AEM)LiveCycleコネクタを使用すると、AEMアプリとワークフロー内からLiveCycle ES4 Acrobat Services を開始できます。
+description: Adobe Experience Manager（AEM）LiveCycle コネクタを使用すると、AEM アプリとワークフロー内から LiveCycle ES4 Acrobat Services を開始することができます。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
 source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1026'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
 # AEM Forms と Adobe LiveCycle の接続 {#connecting-aem-forms-with-adobe-livecycle}
 
-Adobe Experience Manager(AEM)LiveCycleコネクタを使用すると、AEM Web アプリおよびワークフロー内からAdobeLiveCycleES4 Acrobat Services をシームレスに呼び出すことができます。 LiveCycleは、リッチなクライアント SDK を提供し、クライアントアプリケーションは Java™ API を使用してLiveCycleサービスを開始できます。 AEMLiveCycleコネクタは、OSGi 環境内でこれらの API の使用を簡単にします。
+Adobe Experience Manager (AEM) LiveCycle コネクタを使用すると、AEM web アプリとワークフローから Adobe LiveCycle ES4 Acrobat Services をシームレスに呼び出すことができます。LiveCycle はリッチクライアント SDK を提供します。これにより、クライアントアプリケーションは Java™ API を使用して LiveCycle サービスを開始できます。AEM LiveCycle コネクタは OSGi 環境でこれらの API の使用を簡素化します。
 
 ## AEM サーバーの Adobe LiveCycle への接続 {#connecting-aem-server-to-adobe-livecycle}
 
-AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)」の一部です。AEM Formsアドオンパッケージをインストールした後、次の手順を実行して、LiveCycleサーバーの詳細をAEM Web コンソールに追加できます。
+AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)」の一部です。AEM Forms アドオンパッケージをインストールしたら、次の手順を実行して、LiveCycle サーバーの詳細を AEM web コンソールに追加します。
 
-1. AEM Web Console Configuration Manager で、AdobeLiveCycleClient SDK configuration Component を探します。
-1. コンポーネントをクリックして、設定サーバーの URL、ユーザー名、パスワードを編集できます。
+1. AEM web コンソールの設定マネージャーで、Adobe LiveCycle Client SDK 設定コンポーネントを見つけます。
+1. コンポーネントをクリックして、構成サーバーの URL、ユーザー名、パスワードを編集します。
 1. 設定を確認し、「**保存**」をクリックします。
 
-プロパティは説明なしですが、重要なプロパティは次のとおりです。
+プロパティは一目瞭然ですが、重要なプロパティは次のとおりです。
 
 * **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycle と AEM の間で HTTPS を経由して通信する場合、次の JVM で AEM を起動
 
@@ -36,29 +36,29 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
   option.
 
-* **ユーザー名**- AEMとLiveCycle間の通信を確立するために使用されるアカウントのユーザー名を指定します。 アカウントは、Acrobat Services の開始権限を持つLiveCycleユーザーアカウントです。
+* **ユーザー名** - AEM と LiveCycle 間の通信を確立するのに使用するアカウントのユーザー名を指定します。アカウントは、Acrobat Services の開始を許可されている LiveCycle ユーザーアカウントです。
 * **パスワード** - パスワードを指定します。
-* **サービス名** - 「ユーザー名」フィールドと「パスワード」フィールドに入力されたユーザー資格情報を使用して開始するサービスを指定します。 デフォルトでは、LiveCycleサービスの開始中に資格情報は渡されません。
+* **サービス名** - 「Username」フィールドと「Password」フィールドで入力するユーザー資格情報を使用して開始されるサービスを指定します。デフォルトでは、LiveCycle サービスを開始する際に資格情報は渡されません。
 
 ## Document Services の開始 {#starting-document-services}
 
-クライアントアプリケーションは、Java™ API、Web サービス、Remoting、および REST を使用して、LiveCycleサービスをプログラムで開始できます。 Java™クライアントの場合、アプリケーションはLiveCycleSDK を使用できます。 LiveCycleSDK は、これらのサービスをリモートで開始するための Java™ API を提供します。 例えば、Microsoft® Word ドキュメントをPDFに変換する場合、クライアントは GeneratePDFService を開始します。 呼び出しフローは、次の手順で構成されます。
+クライアントアプリケーションは、Java™ API、web サービス、Remoting、REST を使用して LiveCycle サービスをプログラムで開始することができます。Java™ クライアントの場合、アプリケーションは LiveCycleSDK を使用できます。LiveCycle SDK は、これらのサービスをリモートで開始する Java™ API を提供します。例えば、Microsoft® Word ドキュメントを PDF に変換するには、クライアントは GeneratePDFService を開始します。呼び出しのフローは次の手順から成ります。
 
 1. ServiceClientFactory インスタンスを作成します。
-1. 各サービスはクライアントクラスを提供します。 サービスを開始するには、サービスのクライアントインスタンスを作成します。
+1. 各サービスがクライアントクラスを提供します。サービスを開始するには、サービスのクライアントインスタンスを作成します。
 1. サービスを開始し、結果を処理します。
 
-AEMLiveCycleコネクタは、標準の OSGi の手段を使用してアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開するので、フローを簡素化します。 LiveCycle コネクターには、以下の機能が用意されています。
+AEM LiveCycle コネクタは、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycle コネクターには、以下の機能が用意されています。
 
-* OSGi サービスとしてのクライアントインスタンス：OSGi バンドルとしてパッケージ化されたクライアントは、 [Acrobat Services リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 」セクションに入力します。 各クライアント jar は、OSGi Service Registry を使用して、クライアントインスタンスを OSGi サービスとして登録します。
-* ユーザー資格情報の伝達：LiveCycleサーバーへの接続に必要な接続の詳細は、一元的に管理されます。
+* OSGi サービスとしてのクライアントインスタンス：OSGI バンドルとしてパッケージ済みのクライアントは、[Acrobat Services リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)セクションに一覧表示されます。各クライアント jar は、OSGi サービスレジストリを使用する OSGi サービスとしてクライアントインスタンスを登録します。
+* ユーザー資格情報の伝播：LiveCycle サーバーに接続するために必要な接続の詳細情報は、一元的に管理されます。
 * ServiceClientFactory サービス：プロセスを開始するために、クライアントアプリケーションは ServiceClientFactory インスタンスにアクセスできます。
 
-### OSGi Service Registry の Service References を介した開始 {#starting-via-service-references-from-osgi-service-registry}
+### Service References を介した OSGi Service Registry からの開始 {#starting-via-service-references-from-osgi-service-registry}
 
-AEM内から公開されたサービスを開始するには、次の手順に従います。
+公開されたサービスを AEM の中から開始するには、次の手順を実行します。
 
-1. Maven の依存関係を特定します。 maven pom.xml ファイルの必要なクライアント jar に依存関係を追加します。 少なくとも、adobe-livecycle-client と adobe-usermanager-client jar に依存関係を追加します。
+1. Maven 依存性を判定します。maven pom.xml ファイルで、必要なクライアント jar に依存性を追加します。少なくとも adobe-livecycle-client jar および adobe-usermanager-client jar に依存性を追加する必要があります。
 
    ```xml
    <dependency>
@@ -78,7 +78,7 @@ AEM内から公開されたサービスを開始するには、次の手順に�
    </dependency>
    ```
 
-   サービスを開始するには、対応する Maven 依存関係をサービスに追加します。 依存関係のリストについては、 [Acrobat Services リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). 例えば、Generate PDF サービスの場合は、次の依存関係を追加します。
+   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、[Acrobat サービスリスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)を参照してください。例えば、Generate PDF サービスの場合は、次の依存関係を追加します。
 
    ```xml
    <dependency>
@@ -88,7 +88,7 @@ AEM内から公開されたサービスを開始するには、次の手順に�
    </dependency>
    ```
 
-1. サービス参照を取得します。 サービスインスタンスへのハンドルを取得します。 Java™クラスを記述する場合は、Declarative Services 注釈を使用できます。
+1. サービス参照を取得します。サービスインスタンスへのハンドルを取得します。Java クラスを作成している場合、Declarative Services の注釈を使用できます。
 
    ```java
    import com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient;
@@ -112,7 +112,7 @@ AEM内から公開されたサービスを開始するには、次の手順に�
                );
    ```
 
-   上記のコードスニペットは、ドキュメントをPDFに変換するために、GeneratePdfServiceClient の createPDF API を開始します。 次のコードを使用して、JSP でも同様の呼び出しを実行できます。 主な違いは、次のコードが Sling ScriptHelper を使用して GeneratePdfServiceClient にアクセスする点です。
+   上記のコードスニペットでは、ドキュメントを PDF に変換するために GeneratePdfServiceClient の createPDF API を開始します。次のコードを使用し、JSP で同じ呼び出しを実行できます。主な違いは、次のコードでは Sling ScriptHelper を使用して GeneratePdfServiceClient にアクセスする点です。
 
    ```jsp
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
@@ -134,7 +134,7 @@ AEM内から公開されたサービスを開始するには、次の手順に�
 
 ### ServiceClientFactory を介した開始 {#starting-via-serviceclientfactory}
 
-ServiceClientFactory クラスが必要になる場合があります。 例えば、プロセスを呼び出すには ServiceClientFactory が必要です。
+ServiceClientFactory クラスが必要になる場合があります。例えば、プロセスを呼び出すには ServiceClientFactory が必要です。
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.ServiceClientFactoryProvider;
@@ -150,15 +150,15 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 ## RunAs サポート {#runas-support}
 
-ほとんどのAcrobat ServicesLiveCycleでは認証が必要です。 コードに明示的な資格情報を指定せずに、次のいずれかのオプションを使用して、これらのサービスを開始できます。
+LiveCycle のほとんどの Document Service には認証が必要です。次のオプションのいずれかを使用すると、コードに資格情報を明示的に指定せずにこれらのサービスを開始できます。
 
 ### 許可リスト設定 {#allowlist-configuration}
 
-LiveCycleクライアント SDK 設定には、サービス名に関する設定が含まれています。 この設定は、呼び出しロジックが初期設定の状態で管理者の資格情報を使用するサービスのリストです。 例えば、DirectoryManager サービス（User Management API の一部）をこのリストに追加した場合、任意のクライアントコードがサービスを直接使用できます。 さらに、呼び出しレイヤーは、設定された資格情報を、LiveCycleサーバーに送信される要求の一部として自動的に渡します。
+LiveCycle Client SDK 設定には、サービス名についての設定が含まれています。この設定は、呼び出しロジックが追加設定なしに管理者資格情報を使用するサービスのリストです。例えば、DirectoryManager サービス（User Management API の一部）をこのリストに追加した場合、任意のクライアントコードがサービスを直接使用できます。さらに、呼び出しレイヤーは、設定された資格情報を、LiveCycle サーバーに送信されるリクエストの一部として自動的に渡します。
 
 ### RunAsManager {#runasmanager}
 
-統合の一環として、新しいサービス RunAsManager が提供されます。 これにより、LiveCycleサーバーの呼び出し時に使用する秘密鍵証明書をプログラムで制御できます。
+統合の一部として、新しいサービス RunAsManager を提供されます。このサービスにより、LiveCycle サーバーへの呼び出しをする際に、資格情報をプログラムで制御できます。
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.security.PasswordCredential;
@@ -177,7 +177,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 assertNotNull(components);
 ```
 
-別の資格情報を渡す場合は、PasswordCredential インスタンスを取得するオーバーロードされたメソッドを使用できます。
+異なる資格情報を渡す場合は、PasswordCredential インスタンスが必要となる、過度に負荷がかかる方法を使用できます。
 
 ```java
 PasswordCredential credential = new PasswordCredential("administrator","password");
@@ -190,7 +190,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 
 ### InvocationRequest プロパティ {#invocationrequest-property}
 
-プロセスを呼び出す場合、または ServiceClientFactory クラスを直接使用し、InvocationRequest を作成する場合は、設定された資格情報を呼び出し層が使用する必要があることを示すプロパティを指定できます。
+プロセスを呼び出す場合、または ServiceClientFactory クラスを直接使用して InvocationRequest を作成する場合は、設定済みの資格情報を呼び出しレイヤーが使用する必要があることをプロパティが示すように指定できます。
 
 ```java
 import com.adobe.idp.dsc.InvocationResponse
@@ -209,9 +209,9 @@ ir.setProperty(InvocationProperties.INVOKER_TYPE,InvocationProperties.INVOKER_TY
 InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir);
 ```
 
-## Acrobat Services リスト {#document-services-list}
+## Acrobat サービスリスト {#document-services-list}
 
-### AdobeLiveCycleクライアント SDK API バンドル {#adobe-livecycle-client-sdk-api-bundle}
+### Adobe LiveCycle クライアント SDK API バンドル {#adobe-livecycle-client-sdk-api-bundle}
 
 次のサービスを使用できます。
 
@@ -236,7 +236,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleクライアント SDK バンドル {#adobe-livecycle-client-sdk-bundle}
+### Adobe LiveCycle クライアント SDK バンドル {#adobe-livecycle-client-sdk-bundle}
 
 次のサービスを使用できます。
 
@@ -253,7 +253,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleTaskManager Client バンドル {#adobe-livecycle-taskmanager-client-bundle}
+### Adobe Livecycle TaskManager クライアントバンドル {#adobe-livecycle-taskmanager-client-bundle}
 
 次のサービスを使用できます。
 
@@ -274,7 +274,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle Workflowクライアントバンドル {#adobe-livecycle-workflow-client-bundle}
+### Adobe LiveCycle Workflow クライアントバンドル {#adobe-livecycle-workflow-client-bundle}
 
 次のサービスを使用できます。
 
@@ -290,7 +290,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle PDF Generator Client バンドル {#adobe-livecycle-pdf-generator-client-bundle}
+### Adobe LiveCycle PDF ジェネレータークライアントバンドル {#adobe-livecycle-pdf-generator-client-bundle}
 
 次のサービスを使用できます。
 
@@ -306,7 +306,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleApplication Manager Client バンドル {#adobe-livecycle-application-manager-client-bundle}
+### Adobe LiveCycle アプリケーションマネージャークライアントバンドル {#adobe-livecycle-application-manager-client-bundle}
 
 次のサービスを使用できます。
 
@@ -324,7 +324,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleAssembler Client バンドル {#adobe-livecycle-assembler-client-bundle}
+### Adobe LiveCycle アセンブラークライアントバンドル {#adobe-livecycle-assembler-client-bundle}
 
 次のサービスを使用できます。
 
@@ -340,7 +340,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleフォームデータ統合クライアントバンドル {#adobe-livecycle-form-data-integration-client-bundle}
+### Adobe LiveCycle フォームデータ統合クライアントバンドル {#adobe-livecycle-form-data-integration-client-bundle}
 
 次のサービスを使用できます。
 
@@ -356,7 +356,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Forms Client バンドル {#adobe-livecycle-forms-client-bundle}
+### Adobe LiveCycle Forms クライアントバンドル {#adobe-livecycle-forms-client-bundle}
 
 次のサービスを使用できます。
 
@@ -372,7 +372,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Output Client バンドル {#adobe-livecycle-output-client-bundle}
+### Adobe LiveCycle 出力クライアントバンドル {#adobe-livecycle-output-client-bundle}
 
 次のサービスを使用できます。
 
@@ -388,7 +388,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Reader Extensions Client バンドル {#adobe-livecycle-reader-extensions-client-bundle}
+### Adobe LiveCycle リーダー拡張機能クライアントバンドル {#adobe-livecycle-reader-extensions-client-bundle}
 
 次のサービスを使用できます。
 
@@ -404,7 +404,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleRights Manager Client バンドル {#adobe-livecycle-rights-manager-client-bundle}
+### Adobe LiveCycle 権限マネージャークライアントバンドル {#adobe-livecycle-rights-manager-client-bundle}
 
 次のサービスを使用できます。
 
@@ -426,7 +426,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycle署名クライアントバンドル {#adobe-livecycle-signatures-client-bundle}
+### Adobe LiveCycle 署名クライアントバンドル {#adobe-livecycle-signatures-client-bundle}
 
 次のサービスを使用できます。
 
@@ -442,7 +442,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleTruststore Client バンドル {#adobe-livecycle-truststore-client-bundle}
+### Adobe LiveCycle Truststore クライアントバンドル {#adobe-livecycle-truststore-client-bundle}
 
 次のサービスを使用できます。
 
@@ -461,7 +461,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### AdobeLiveCycleリポジトリークライアントバンドル {#adobe-livecycle-repository-client-bundle}
+### Adobe LiveCycle リポジトリクライアントバンドル {#adobe-livecycle-repository-client-bundle}
 
 次のサービスを使用できます。
 

@@ -1,15 +1,15 @@
 ---
 title: AEM 6.5 における e コマースリポジトリの再構築
-description: AEM 6.5 for E-Commerce の新しいリポジトリ構造に移行するために必要な変更を行う方法を説明します。
+description: AEM 6.5 e コマースの新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 78b7c497-c474-4308-bfab-8f424b5f7268
 source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '201'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 37%
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
-### 商品、注文、収集、分類、発送方法、支払い方法のデータ {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
+### 製品、注文、コレクション、分類、発送方法、支払い方法のデータ {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
 
 <table>
  <tbody>
@@ -33,11 +33,11 @@ ht-degree: 37%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>次の項目を使用できます。 <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">遅延移行</a> e コマースデータを移行するタスクです。</p> <p>次の手順を実行します。</p>
+   <td><p><a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">遅延移行</a>タスクを使用して、e コマースデータを移行できます。</p> <p>以下の手順が実行されます。</p>
     <ul>
-     <li>新しい位置を指すように、古い位置への参照を調整します</li>
-     <li>古い場所から新しい場所にコンテンツを移動</li>
-     <li>古い場所を削除して、最後にシステム全体で新しい場所の使用を有効にします。</li>
+     <li>新しい場所を指すように古い場所の参照が変更されます。</li>
+     <li>古い場所から新しい場所にコンテンツが移動されます。</li>
+     <li>システム全体で最終的に新しい場所が利用されるように、古い場所が削除されます。</li>
     </ul> <p>タスクの対象となる場所は次のとおりです。</p>
     <ul>
      <li>/etc/commerce/products</li>
@@ -45,7 +45,7 @@ ht-degree: 37%
      <li>/etc/commerce/orders<br /> </li>
      <li>/etc/commerce/payment-methods<br /> </li>
      <li>/etc/commerce/shipping-methods<br /> </li>
-    </ul> <p>大規模なカタログの場合、Adobeでは、次の Java™システムプロパティをAEMに渡して、コマース移行タスクを個別に実行することをお勧めします。</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>移行後、AEMを再起動します。</p> </td>
+    </ul> <p>大規模なカタログの場合、アドビでは、次の Java™ システムプロパティを AEM に渡して、コマース移行タスクを個別に実行することをお勧めします。</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>移行後、AEM を再起動します。</p> </td>
   </tr>
   <tr>
    <td><strong>メモ</strong></td>

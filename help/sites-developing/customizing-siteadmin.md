@@ -1,6 +1,6 @@
 ---
 title: Web サイトコンソールのカスタマイズ（クラシック UI）
-description: Web サイト管理コンソールを拡張して、カスタム列を表示できます
+description: カスタム列を表示するように web サイト管理コンソールを拡張できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -8,23 +8,23 @@ content-type: reference
 docset: aem65
 exl-id: 2b9b4857-821c-4f2f-9ed9-78a1c9f5ac67
 source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '779'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
 # Web サイトコンソールのカスタマイズ（クラシック UI）{#customizing-the-websites-console-classic-ui}
 
-## Web サイト (siteadmin) コンソールへのカスタム列の追加 {#adding-a-custom-column-to-the-websites-siteadmin-console}
+## Web サイト（siteadmin）コンソールにカスタム列を追加 {#adding-a-custom-column-to-the-websites-siteadmin-console}
 
-Web サイト管理コンソールを拡張して、カスタム列を表示できます。 このコンソールは JSON オブジェクトをベースに構築されており、これを拡張するには `ListInfoProvider` インターフェイスを実装する OSGI サービスを作成します。こうしたサービスが、コンソール構築のためにクライアントに送信される JSON オブジェクトを修正します。
+カスタム列を表示するように web サイト管理コンソールを拡張できます。このコンソールは JSON オブジェクトをベースに構築されており、これを拡張するには `ListInfoProvider` インターフェイスを実装する OSGI サービスを作成します。こうしたサービスが、コンソール構築のためにクライアントに送信される JSON オブジェクトを修正します。
 
-このステップバイステップのチュートリアルでは、`ListInfoProvider` インターフェイスを実装して web サイト管理コンソールに新しい列を表示する方法について説明します。次の手順で構成されます。
+このステップバイステップのチュートリアルでは、`ListInfoProvider` インターフェイスを実装して web サイト管理コンソールに新しい列を表示する方法について説明します。主な手順は以下のとおりです。
 
-1. [OSGi サービスの作成](#creating-the-osgi-service) をクリックし、それを含むバンドルをAEMサーバーにデプロイします。
-1. （オプション） [新しいサービスのテスト](#testing-the-new-service) コンソールの構築に使用される JSON オブジェクトをリクエストする JSON 呼び出しを発行する。
-1. [新しい列の表示](#displaying-the-new-column) リポジトリ内のコンソールのノード構造を拡張します。
+1. [OSGI サービスを作成](#creating-the-osgi-service)し、それを含むバンドルを AEM サーバーにデプロイします。
+1. （オプション）コンソールの構築に使用される JSON オブジェクトをリクエストする JSON 呼び出しを発行して、[新しいサービスをテスト](#testing-the-new-service)します。
+1. リポジトリ内のコンソールのノード構造を拡張して、[新しい列を表示](#displaying-the-new-column)します。
 
 >[!NOTE]
 >
@@ -47,15 +47,15 @@ Web サイト管理コンソールを拡張して、カスタム列を表示で�
 * `info`：更新する JSON オブジェクト。グローバルリストまたは現在のリスト項目に 1 つずつ
 * `resource`：Sling リソース
 
-実装例を以下に示します。
+実装例は以下の通りです。
 
 * 各項目に *starred* プロパティを追加します。これは、ページ名が「*e*」で始まる場合は `true` で、それ以外は `false` です。
 
-* を追加します。 *starredCount* プロパティ。リスト用にグローバルで、開始リスト項目の数を含みます。
+* *starredCount* プロパティを追加します。このプロパティはリストに対してグローバルで、星印の付いたリスト項目の数が格納されます。
 
-OSGi サービスを作成するには：
+OSGI サービスを作成するには：
 
-1. CRXDE LITE: [バンドルを作成](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
+1. CRXDE Lite で、[バンドルを作成](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle)します。
 1. 以下のサンプルコードを追加します。
 1. バンドルをビルドします。
 
@@ -104,13 +104,13 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >[!CAUTION]
 >
 >* 指定されたリクエストやリソースに基づいて、情報を JSON オブジェクトに追加すべきかどうかを実装環境に応じて判断する必要があります。
->* 次の場合、 `ListInfoProvider` 実装は、応答オブジェクトに存在するプロパティを定義します。その値は指定した値で上書きされます。
+>* `ListInfoProvider` の実装が、応答オブジェクト内に存在するプロパティを定義している場合、そのプロパティの値は、指定した値で上書きされます。
 >
->  [サービスランキング](https://docs.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING)を使用して、複数の `ListInfoProvider` 実装の実行順序を管理できます。
+>  [サービスランキング](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING)を使用して、複数の `ListInfoProvider` 実装の実行順序を管理できます。
 
 ### 新しいサービスのテスト {#testing-the-new-service}
 
-Web サイト管理コンソールを開き、サイトを閲覧すると、ブラウザーは、コンソールの構築に使用される JSON オブジェクトを取得するための Ajax 呼び出しを発行します。 例えば、`/content/geometrixx` フォルダーを閲覧すると、コンソールを構築するために、次のリクエストが AEM サーバーに送信されます。
+Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための Ajax 呼び出しを発行します。例えば、`/content/geometrixx` フォルダーを閲覧すると、コンソールを構築するために、次のリクエストが AEM サーバーに送信されます。
 
 [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -135,14 +135,14 @@ Web サイト管理コンソールを開き、サイトを閲覧すると、ブ�
 
    * **pageText** を削除
 
-   * 設定 **pathRegex** から `/content/geometrixx(/.*)?`
-これにより、すべてのGeometrixxWeb サイトでグリッド設定が有効になります。
+   * **pathRegex** を `/content/geometrixx(/.*)?` に設定
+これによりすべての Geometrixx web サイトに対してグリッド設定がアクティブになります。
 
    * **storeProxySuffix** を `.pages.json` に設定
 
    * 複数値プロパティ **storeReaderFields** を編集し、`starred` 値を追加します。
 
-   * MSM 機能を有効にするには、次の MSM パラメーターを multi-String プロパティに追加します **storeReaderFields**:
+   * MSM 機能をアクティベートするには、次の MSM パラメーターを複数文字列プロパティ **storeReaderFields** に追加します。
 
       * **msm:isSource**
       * **msm:isInBlueprint**
@@ -156,9 +156,10 @@ Web サイト管理コンソールを開き、サイトを閲覧すると、ブ�
 
    * **xtype**：文字列タイプの `gridcolumn`
 
-1. （オプション）表示しない列を次の場所にドロップします。 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
+1. （オプション）表示したくない列を `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` でドロップします。
 
-1. `/siteadmin` は、デフォルトとして `/libs/wcm/core/content/siteadmin` を指すバニティーパスです。次のバージョンの siteadmin にリダイレクトする： `/apps/wcm/core/content/siteadmin`、プロパティを定義します。 `sling:vanityOrder` の値が次の値より大きくなる `/libs/wcm/core/content/siteadmin`. デフォルト値は 300 なので、それより大きい値が適しています。
+1. `/siteadmin` は、デフォルトとして `/libs/wcm/core/content/siteadmin` を指すバニティーパスです。
+このパスを `/apps/wcm/core/content/siteadmin` のサイト管理のバージョンにリダイレクトするには、プロパティ `sling:vanityOrder` が `/libs/wcm/core/content/siteadmin` で定義されているより大きい値を持つように定義します。デフォルト値は 300 なので、それより大きい値が適しています。
 
 1. Web サイト管理コンソールに移動し、次の Geometrixx サイトに移動します。 
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx)。
@@ -169,7 +170,7 @@ Web サイト管理コンソールを開き、サイトを閲覧すると、ブ�
 
 >[!CAUTION]
 >
->複数のグリッド設定が、 **pathRegex** プロパティの先頭にあるプロパティが使用されますが、最も具体的なプロパティではありません。つまり、設定の順序が重要です。
+>**pathRegex** プロパティによって定義されるリクエストパスに複数のグリッド設定が一致する場合は、最も詳しい設定ではなく、最初の設定が使用されます。つまり、設定の順序が重要です。
 
 ### サンプルパッケージ {#sample-package}
 

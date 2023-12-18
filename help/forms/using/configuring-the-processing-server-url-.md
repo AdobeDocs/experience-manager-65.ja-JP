@@ -1,6 +1,6 @@
 ---
 title: AEM DS の設定
-description: フォームを送信する前に処理サーバーの URL を指定する方法を説明します。
+description: フォームを送信する前に処理サーバーの URL を指定する方法を確認します。
 contentOwner: amgoyal
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
@@ -8,24 +8,24 @@ docset: aem65
 role: Admin
 exl-id: c43cab7b-3421-4e1b-a834-b2dd6eb23c1d
 source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '244'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
 # AEM DS の設定{#configuring-aem-ds-settings}
 
-この記事では、 **AEM DS Settings Service**. この設定は、次のような複数のシナリオで使用できます。
+この記事では、**AEM DS 設定サービス**&#x200B;を設定する方法について説明します。この設定は、次のような複数のシナリオで使用できます。
 
 * Correspondence Management では
 
    * AEM Forms Workflow を設定する場合
-   * Forms Portal を使用してドラフト/送信をリモートで保存する場合
+   * フォームポータルを使用してドラフトまたは送信をリモートで保存する場合
 
 * アダプティブフォームでは、パブリッシュインスタンスからアダプティブフォームが送信された場合などに使用します。
 
-次に、 **[!UICONTROL AEM DS 設定]**:
+次に、**[!UICONTROL AEM DS 設定]**&#x200B;を行う手順を示します。
 
 1. 次の URL で、パブリッシュインスタンスにある Configuration Manager を開きます。\
    *https://localhost:port/system/console/configMgr*
@@ -42,7 +42,7 @@ ht-degree: 37%
 
 1. 次の情報をそれぞれのフィールドに追加します。
 
-   **[!UICONTROL 処理サーバー URL]**：処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。 これは、AEMオーサーインスタンスの URL と同じか、他のサーバー URL(https://localhost:port/) と同じにすることができます。
+   **[!UICONTROL 処理サーバー URL]**：処理サーバーは、Forms または AEM ワークフローをトリガーする必要のあるサーバーです。これは、AEM オーサーインスタンスの URL と同じか、他のサーバー URL（つまり、https://localhost:port/）になります。
 
    **[!UICONTROL 処理サーバーのユーザー名]**：ワークフローユーザーのユーザー名は、[使用するサーバー URL に基づいています]
 
@@ -53,6 +53,6 @@ ht-degree: 37%
    >
    >    
    >    
-   >    * FormsまたはAEMワークフローを使用している場合、パブリッシュサーバーから送信する前に、DS 設定サービスを設定する必要があります。 そうしないと、フォームの送信が失敗します。
+   >    * Forms または AEM ワークフローを使用する場合は、パブリッシュサーバーから送信する前に、DS 設定サービスを設定する必要があります。これを設定しないと、フォームの送信が失敗します。
    >    
    >

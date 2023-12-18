@@ -1,23 +1,23 @@
 ---
 title: JavaScript ファイルの縮小
-description: AEM Forms Workspace のカスタマイズ後に縮小コードを生成して Web 用の JS ファイルを最適化するための手順です。
+description: AEM Forms Workspace のカスタマイズ後に縮小コードを生成して web 用の JS ファイルを最適化するための手順です。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: d88c6831-8ae9-426d-acb5-2a7e066ad158
 source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '188'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 # JavaScript ファイルの縮小 {#minification-of-the-javascript-files}
 
-縮小により、ソースコードから、空白、新しい行、コメントなどの冗長な文字が削除されます。 これにより、コードのサイズが小さくなるので、パフォーマンスが向上します。 縮小化は機能に影響を与えませんが、コードの読みやすさが低下します。
+縮小では、ソースコードから、空白、改行、コメントなどの冗長な文字を削除します。これにより、コードのサイズが小さくなるので、パフォーマンスが向上します。縮小は機能に影響しませんが、コードの読みやすさが低下します。
 
-セマンティックの変更用に縮小コードを生成するには、次の手順に従います。
+セマンティックの変更のために縮小コードを生成するには、次の手順に従います。
 
 1. src-package の `client-html/src/main/webapp/js` を filesystem にコピーします。
 
@@ -27,7 +27,7 @@ ht-degree: 29%
 
 1. モデルやビューの追加または更新の場合は、client-html/src/main/webapp/js の下にある `main.js` のパスを更新します。
 
-   例えば、新しい Sharequeue モデル (mySharequeue) を追加する場合は、次のように変更します。
+   例えば、新しい Sharequeue モデル、mySharequeue を追加する場合は、次のように変更します。
 
    ```javascript
    sharequeuemodel : pathprefix + 'runtime/models/sharequeue',
@@ -41,7 +41,7 @@ ht-degree: 29%
 
 1. エイリアスの変更や追加が `main.js` にある場合は、`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` をアップデートします。
 
-   例えば、新しい Sharequeue モデル (mySharequeue) を追加する場合は、次のように変更します。
+   例えば、新しい Sharequeue モデル、mySharequeue を追加する場合は、次のように変更します。
 
    ```xml
    <sharequeue
@@ -65,7 +65,7 @@ ht-degree: 29%
    mvn clean install
    ```
 
-   縮小された main.js と registry.js を使用して、client-html/src/main/webapp/js の下に縮小された —files フォルダーが生成されます。
+   これにより、client-html/src/main/webapp/js の下に、縮小されたファイルのフォルダーと、縮小された main.js と registry.js が生成されます。
 
 >[!NOTE]
 >

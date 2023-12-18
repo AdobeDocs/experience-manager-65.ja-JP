@@ -5,15 +5,15 @@ feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '684'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 # GraphQL のコンテンツフラグメントを使用したヘッドレスコンテンツ配信 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化されたコンテンツをヘッドレスで配信できます。単一の API クエリをカスタマイズする機能を使用すると、レンダリングする必要のある特定のコンテンツを（単一の API クエリへの応答として）取得して配信できます。
+Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化されたコンテンツをヘッドレスで配信できます。単一の API クエリをカスタマイズできる機能により、レンダリングする特定のコンテンツを（単一の API クエリに対する応答として）取得して配信できます。
 
 <!--
 >[!NOTE]
@@ -50,7 +50,7 @@ GraphQL とは次のことを意味します。
 
   [GraphQL.org](https://graphql.org) を参照
 
-The [AEM GraphQL API](#aem-graphql-api) を使用すると、 [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)；の場合、各クエリは特定のモデルタイプに従っています。 返されたコンテンツは、アプリケーションで使用できます。
+[AEM GraphQL API](#aem-graphql-api) を使用すると、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)で（複雑な）クエリを実行できます。各クエリは、特定のモデルタイプに従っています。返されたコンテンツは、アプリケーションで使用できます。
 
 ## AEM GraphQL API {#aem-graphql-api}
 

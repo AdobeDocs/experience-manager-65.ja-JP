@@ -3,9 +3,9 @@ title: Adobe Experience Manager でのヘッドレス向けオーサリング
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをオーサリングする方法を紹介します。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '659'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -82,8 +82,8 @@ AEM の場合は、コンテンツアーキテクトの役割（多くの場合�
 
 * [AEM ヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md)
 
-* [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+* [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
 
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

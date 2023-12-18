@@ -3,9 +3,9 @@ title: JEE 上の AEM Forms のカスタム DSC を使用したファイルの�
 description: JEE 上の AEM Forms のカスタム DSC を使用してファイルを圧縮および解凍する方法を説明します
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
 source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '484'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
@@ -13,21 +13,21 @@ ht-degree: 64%
 
 ## 必要な知識 {#prerequisites}
 
-JEE 上のAEM Forms Process Management、基本的な Java™プログラミング、カスタムコンポーネントの作成の経験があります。
+JEE 上の AEM Forms のプロセス管理、基本的な Java™ プログラミング、およびカスタムコンポーネントの作成を備えたエクスペリエンス。
 
 **その他の必要な製品**
 
-Java™エディター（など） [Eclipse](https://www.eclipse.org/) または [Netbeans IDE](https://netbeans.apache.org/)
+[Eclipse](https://www.eclipse.org/) や [Netbeans IDE](https://netbeans.apache.org/) などの Java™ エディター
 
 ## ユーザーレベル {#user-level}
 
 中級者
 
-JEE 上のAEM Formsを使用すると、開発者はカスタム ASC(Acrobat Services Container) を作成して、すぐに使える機能を強化して作成できます。 このようなコンポーネントを作成すると、AEM Forms on JEE ランタイム環境にプラグインでき、意図する目的に活用できます。この記事では、カスタム ZIP サービスを作成する方法を説明します。このサービスを使用して、ファイルのリストを .zip ファイルに圧縮し、.zip をドキュメントのリストに解凍します。
+JEE 上の AEM Forms を使用すると、開発者はカスタム ASC（Acrobat サービスコンテナ）を作成して、強化された、すぐに使える機能を作成できます。このようなコンポーネントを作成すると、AEM Forms on JEE ランタイム環境にプラグインでき、意図する目的に活用できます。この記事では、カスタム ZIP サービスを作成する方法を説明します。このサービスを使用して、ファイルのリストを .zip ファイルに圧縮し、.zip をドキュメントのリストに解凍します。
 
 ## カスタム ASC コンポーネントの作成 {#create-custom-dsc-component}
 
-2 つのサービス操作を持つカスタム ASC コンポーネントを作成し、ドキュメントのリストを圧縮および解凍できるようにします。 このコンポーネントは、圧縮と解凍に java.util.zip パッケージを使用します。
+2 つのサービス操作を含むカスタム ASC コンポーネントを作成して、ドキュメントのリストを圧縮および解凍できるようにします。このコンポーネントは、圧縮と解凍に java.util.zip パッケージを使用します。
 
 カスタム ASC コンポーネントを作成するには：
 
@@ -189,7 +189,7 @@ component.xml ファイルは、次のように表示されます。
 
 ## コンポーネントのパッケージ化とデプロイ {#packaging-deploying-component}
 
-1. Java™プロジェクトをコンパイルし、.JAR ファイルを作成します。
+1. Java™ プロジェクトをコンパイルし、.JAR ファイルを作成します。
 1. Workbench から、AEM Forms on JEE ランタイムにコンポーネント（.JAR ファイル）をデプロイします。
 1. Workbench からサービスを開始します（下図を参照）。
 
@@ -205,7 +205,7 @@ component.xml ファイルは、次のように表示されます。
 
 ![Zip ドキュメント](assets/zip-doc.jpg)
 
-次のワークフローオーケストレーションは、指定した ZIP ファイルを解凍し、別の ZIP ファイルに圧縮して戻す方法を示します（下図を参照）。
+次のワークフローオーケストレーションでは、指定された ZIP ファイルを解凍し、別の ZIP ファイルに圧縮し直して、出力を返す方法を示します（下図を参照）。
 
 ![Zip を解凍するワークフロー](assets/unzip-zip-process.jpg)
 
@@ -215,10 +215,10 @@ component.xml ファイルは、次のように表示されます。
 
 * 指定したフォルダー内のすべてのファイルを検索し、ファイルを圧縮ドキュメントとして返す。
 
-* 複数のPDF文書を含む ZIP ファイルを指定します。このファイルは、解凍後に Reader 用に拡張できます。 これには、AEM Forms on JEE の Reader Extensions モジュールが必要です。
+* 解凍後に Reader を拡張できる複数の PDF ドキュメントを含む ZIP ファイルを提供する。これには、AEM Forms on JEE の Reader Extensions モジュールが必要です。
 
-* GeneratePDFサービスを使用して、圧縮解除およびPDFドキュメントとして変換できる異種のドキュメントを含む ZIP ファイルを指定します。
+* Generate PDF サービスを使用して解凍し、PDF ドキュメントに変換できる、異なるタイプのドキュメントを含んだ ZIP ファイルを提供する。
 
-* ポリシーでドキュメントのリストを保護し、ZIP ファイルとして返します。
+* ポリシーでドキュメントのリストを保護し、ZIP ファイルとして返す。
 
-* ユーザーがプロセスインスタンスのすべての添付ファイルを 1 つの ZIP ファイルとしてダウンロードできるようにします。
+* ユーザーがプロセスインスタンスのすべての添付ファイルを単一の ZIP ファイルとしてダウンロードできるようにする。

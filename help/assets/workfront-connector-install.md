@@ -6,7 +6,7 @@ feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
 source-git-commit: 6f01f5725ed2b0533756830c1a5e55b7464708f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '489'
 ht-degree: 100%
 

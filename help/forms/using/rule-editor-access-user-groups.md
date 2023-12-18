@@ -1,6 +1,6 @@
 ---
-title: 選択したユーザーグループにルールエディターへのアクセスを許可する
-description: 選択したユーザーグループに対して、ルールエディターへのアクセス制限を付与します。
+title: 選択したユーザーグループにルールエディターへのアクセスを許可
+description: 選択したユーザーグループにルールエディターへの制限付きアクセスを許可します。
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,45 +8,45 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: a1a2b277-3133-404b-a7fc-337cedddb12c
 source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '378'
-ht-degree: 45%
+ht-degree: 100%
 
 ---
 
-# 選択したユーザーグループにルールエディターへのアクセスを許可する{#grant-rule-editor-access-to-select-user-groups}
+# 選択したユーザーグループにルールエディターへのアクセスを許可{#grant-rule-editor-access-to-select-user-groups}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用したアダプティブFormsのオーサリングに関する古いアプローチについて説明します。 </span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 ## 概要 {#overview}
 
-アダプティブFormsでは、様々なスキルを持つ様々なタイプのユーザーが作業をおこなうことができます。 正しい知識を使用してスクリプトや複雑なルールを操作できる上級ユーザーもいれば、アダプティブフォームのレイアウトや基本的なプロパティ以外の操作はできない初心者レベルのユーザーもいます。
+アダプティブフォームで作業を行うユーザーのタイプやスキルは、それぞれ異なっています。正しい知識を使用してスクリプトや複雑なルールを操作できる上級ユーザーもいれば、アダプティブフォームのレイアウトや基本的なプロパティ以外の操作はできない初心者レベルのユーザーもいます。
 
-AEM Formsを使用すると、ユーザーの役割や機能に基づいて、ルールエディターへのアクセスを制限できます。 Adaptive Forms Configuration Service の設定で、 [ユーザーグループ](/help/sites-administering/security.md) ルールエディターを表示してアクセスできる
+AEM Forms では、各ユーザーの役割や職務に応じて、ルールエディターへのアクセスを制限できます。アダプティブフォームの設定サービスを使用して、ルールエディターを表示してアクセスできる[ユーザーグループ](/help/sites-administering/security.md)を指定できます。
 
-## ルールエディターにアクセスできるユーザーグループの指定 {#specify-user-groups-that-can-access-rule-editor}
+## ルールエディターにアクセスできるユーザーグループを指定 {#specify-user-groups-that-can-access-rule-editor}
 
 1. 管理者として AEM Forms にログインします。
 1. オーサーインスタンスで、![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager／ツール![ハンマー](assets/hammer.png)／操作／Web コンソール をクリックしてください。新しいウィンドウに Web コンソールが表示されます。
 
    ![1-2](assets/1-2.png)
 
-1. Web コンソールウィンドウで、を探して「 **[!UICONTROL アダプティブフォームとインタラクティブ通信の Web チャネル設定]**. **[!UICONTROL アダプティブフォームとインタラクティブ通信の Web チャネル設定]** ダイアログボックスが表示されます。 値を変更せずに、「**保存**」をクリックします。
+1. Web コンソールウィンドウで、**[!UICONTROL アダプティブフォームとインタラクティブ通信の web チャネル設定]**&#x200B;を探してクリックします。**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 web チャネルの設定]**&#x200B;ダイアログが表示されます。値を変更せずに、「**保存**」をクリックします。
 
-   これにより、CRX-repository に/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
+   これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
 
-1. 管理者として CRXDE にログインします。/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルを開いて編集します。
+1. 管理者として CRXDE にログインします。編集のため、/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルを開きます。
 1. 次のプロパティを使用して、ルールエディターにアクセスできるグループの名前（例えば RuleEditorsUserGroup）を指定し、「**すべて保存**」をクリックします。
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
-   複数のグループに対するアクセスを有効にするには、コンマ区切り値のリストを指定します。
+   複数のグループにアクセスを有効にするには、コンマ区切りの値のリストを指定します。
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
 
    ![ユーザーを作成](assets/create_user_new.png)
 
-   これで、指定したユーザーグループ（ここでは RuleEditorsUserGroup）に属していないユーザーがフィールドをタップしたときに、ルールを編集アイコン ( ![edit-rules1](assets/edit-rules1.png)) は、コンポーネントツールバーでは使用できません。
+   これで、指定されたユーザーグループ（ここでは RuleEditorsUserGroup）に属していないユーザーがフィールドをタップした場合、コンポーネントのツールバーにルールを編集アイコン（![edit-rules1](assets/edit-rules1.png)）が表示されなくなります。
 
    ![componentstoolbarwither](assets/componentstoolbarwithre.png)
 
