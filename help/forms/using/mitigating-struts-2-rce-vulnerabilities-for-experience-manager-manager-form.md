@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-source-git-commit: 5f5fcc10927d62cdfaeb0770c34052ceda02b2e8
+source-git-commit: e42d01f1e5e44b12b755c20f826331ddbad8ab58
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '524'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## イシュー
 
-Java EE Web アプリケーションを開発するための一般的でオープンソースな Web アプリケーションフレームワークである Struts 2 RCE に対して、重要なセキュリティ脆弱性が報告されています。 次の脆弱性が分析されました。
+Java EE Web アプリケーションを開発するための一般的でオープンソースな Web アプリケーションフレームワークである Struts 2 に対して、重要なセキュリティ脆弱性が報告されています。 次の脆弱性が分析されました。
 
 | 脆弱性 | 影響 | 影響のないもの |
 |---|---|---|
@@ -48,48 +48,62 @@ Java EE Web アプリケーションを開発するための一般的でオー�
 1. ターミナルウィンドウを開き、抽出したファイルを含むフォルダーに移動します。
 1. 手動パッチ適用ツールを使用して、すべての struts2 jar ファイルを検索、リスト、および置換します。 このツールは、実行時に依存関係をダウンロードするので、インターネット接続が必要です。 したがって、ツールを実行する前に、インターネットに接続していることを確認します。
 
-struts2-core-2.5.30 jar ファイルと struts2-core.jar を検索して置き換えるには、次の手順を実行します。
+検索と置換を行うには `struts2-core-2.5.30.jar` および `struts2-core.jar` ファイル：
+
 
 
 >[!BEGINTABS]
 
 >[!TAB Windows]
 
-1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、コマンドのパスをAEM Formsサーバーのパスに置き換えます。
+1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、コマンドのパスをAEM Forms Server のパスに置き換えます。
+
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、 コマンド内のパスをAEM Formsサーバーのパスと `struts2-core-2.5.33.jar` ファイル。
+1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、コマンドのパスをAEM Forms Server のパスに置き換え、 `struts2-core-2.5.33.jar` ファイル。
+
 
 
    ```
    patch-archive.bat -root=C:\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace C:\temp\struts2-core-2.5.33.jar
    
    
-   patch-archive.bat -root=C:\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace C:\Users\labuser\Desktop\struts2-core.jar -action=replace C:\Users\labuser\Desktop\struts2-core.jar
+   patch-archive.bat -root=C:\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace C:\Users\labuser\Desktop\struts2-core.jar        
    ```
+
+   上記の手順では、 `struts2-core-2.5.30.jar` および `struts2-core.jar` ファイル。
+
+1. 古い EAR をデプロイ解除し、パッチを適用した EAR ファイルをアプリケーションサーバーにデプロイします。
+
 
 1. AEM Forms Server を起動します。
 
 
 >[!TAB Linux]
 
-1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、コマンドのパスをAEM Formsサーバーのパスに置き換えます。
+1. 次のコマンドを実行して、すべての struts2 jar ファイルを一覧表示します。 コマンドを実行する前に、コマンドのパスをAEM Forms Server のパスに置き換えます。
+
 
    ```
-   patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$
+   patch-archive.sh -root=/Users/labuser/Adobe.Adobe_Experience_Manager_Forms/.../export -pattern=.*struts2-core-2.5.30.jar$
    ```
 
-1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、コマンドのパスをAEM Formsサーバーのパスに置き換え、 `struts2-core-2.5.33.jar` ファイル。
+1. 再帰的なインプレース置換を行うには、次のコマンドをリストの順序で実行します。 コマンドを実行する前に、コマンドのパスをAEM Forms Server のパスに置き換え、 `struts2-core-2.5.33.jar` ファイル。
+
 
    ```
-   patch-archive.sh -root=\Users\labuser\Adobe\Adobe_Experience_Manager_Forms\...\export -pattern=.*struts2-core-2.5.30.jar$ -action=replace \temp\struts2-core-2.5.33.jar
+   patch-archive.sh -root=/Users/labuser/Adobe/Adobe_Experience_Manager_Forms/.../export -pattern=.*struts2-core-2.5.30.jar$ -action=replace /temp/struts2-core-2.5.33.jar
    
    
-   patch-archive.sh -root=\Users\labuser\Desktop\check -pattern=.*struts2-core.jar$ -action=replace \Users\labuser\Desktop\struts2-core.jar -action=replace \Users\labuser\Desktop\struts2-core.jar
+   patch-archive.sh -root=/Users/labuser/Desktop/check -pattern=.*struts2-core.jar$ -action=replace /Users/labuser/Desktop/struts2-core.jar
    ```
+
+   上記の手順では、 `struts2-core-2.5.30.jar` および `struts2-core.jar` ファイル。
+
+1. 古い EAR をデプロイ解除し、パッチを適用した EAR ファイルをアプリケーションサーバーにデプロイします。
 
 1. AEM Forms Server を起動します。
 
