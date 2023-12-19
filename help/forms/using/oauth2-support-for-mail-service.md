@@ -27,7 +27,7 @@ ht-degree: 100%
    >
    > * **任意の組織ディレクトリ（任意の Azure AD ディレクトリ - マルチテナント）内のアカウント**&#x200B;の場合、個人用のメールアカウントではなく、職場アカウントを使用することをお勧めします。
    > * **個人用の Microsoft® アカウントのみ**&#x200B;のアプリケーションはサポートされていません。
-   * **マルチテナントおよび個人用の Microsoft® アカウント**&#x200B;アプリケーションを使用することをお勧めします。
+   >* **マルチテナントおよび個人用の Microsoft® アカウント**&#x200B;アプリケーションを使用することをお勧めします。
 
 1. 次に、**証明書とシークレット**&#x200B;に移動し、「**新しいクライアントシークレット**」をクリックし、画面上の手順に従ってシークレットを作成します。このシークレットは後で使用するので、必ずメモしてください。
 
@@ -56,7 +56,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   「**アクセストークン**」チェックボックスと「**ID トークン**」チェックボックスを選択する必要があります。
+   >「**アクセストークン**」チェックボックスと「**ID トークン**」チェックボックスを選択する必要があります。
 
 1. 左側のパネルで「**概要**」をクリックし、後で使用するために、**アプリケーション (クライアント) ID**、**ディレクトリ (テナント) ID** および&#x200B;**クライアントシークレット**&#x200B;の値をコピーします。
 
@@ -72,7 +72,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   シングルテナントアプリケーションの場合は、認可コードを生成するために、次の URL の `common` を `[tenantid]` に置き換えます。`https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
+   >シングルテナントアプリケーションの場合は、認可コードを生成するために、次の URL の `common` を `[tenantid]` に置き換えます。`https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
 1. 上記の URL を入力すると、ログイン画面にリダイレクトされます。
    ![ログイン画面](/help/forms/using/assets/azure_loginscreen.png)
@@ -97,8 +97,8 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   シングルテナントアプリケーションで更新トークンを生成するには、次の cURL コマンドを使用して `common` を `[tenantid]` に置き換えます。
-   `curl -H "ContentType application/x-www-form-urlencoded" -d "client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]" -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
+   >シングルテナントアプリケーションで更新トークンを生成するには、次の cURL コマンドを使用して `common` を `[tenantid]` に置き換えます。
+   >`curl -H "ContentType application/x-www-form-urlencoded" -d "client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]" -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
 
 1. 更新トークンをメモしておきます。
 
@@ -110,7 +110,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   OAuth 2.0 認証サービスを有効にするには、「**SMTP サーバーが認証を必要とするかどうか (SMTP 認証)**」チェックボックスをオンにする必要があります。
+   >OAuth 2.0 認証サービスを有効にするには、「**SMTP サーバーが認証を必要とするかどうか (SMTP 認証)**」チェックボックスをオンにする必要があります。
 
 1. 「**OAuth 2.0 認証設定**」を `True` に設定します。
 1. **クライアント ID** と&#x200B;**クライアントシークレット**&#x200B;の値を Azure Portal からコピーします。
@@ -123,8 +123,8 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   * Transport Security プロトコルの有効な値は、「blank」、「SSL」または「TLS」です。oAuth 認証サービスを有効にするために、**SMTP Transport Security** と **Receive Transport Security** の値を **TLS** に設定します。
-   * メールエンドポイントを使用している場合、**POP3 プロトコル**&#x200B;は OAuth でサポートされていません。
+   >* Transport Security プロトコルの有効な値は、「blank」、「SSL」または「TLS」です。oAuth 認証サービスを有効にするために、**SMTP Transport Security** と **Receive Transport Security** の値を **TLS** に設定します。
+   >* メールエンドポイントを使用している場合、**POP3 プロトコル**&#x200B;は OAuth でサポートされていません。
 
    ![接続設定](/help/forms/using/assets/oauth_connectionsettings.png)
 
@@ -134,7 +134,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   Auth 2.0 認証設定をワークベンチの特定のプロセスに対する基本認証に変更する場合は、「**接続設定**」タブの「**グローバル設定を使用**」の下で、**OAuth 2.0 認証**&#x200B;の値を「False」に設定できます。
+   >Auth 2.0 認証設定をワークベンチの特定のプロセスに対する基本認証に変更する場合は、「**接続設定**」タブの「**グローバル設定を使用**」の下で、**OAuth 2.0 認証**&#x200B;の値を「False」に設定できます。
 
 ## OAuth タスク通知を有効にする手順は次のとおりです。 {#enable_oauth_task}
 
@@ -148,7 +148,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html?lang=ja#create-an-email-endpoint-for-the-complete-task-service)します。
+   >タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html?lang=ja#create-an-email-endpoint-for-the-complete-task-service)します。
 
 ## メールのエンドポイントを設定する手順は次のとおりです。 {#configure_email_endpoint}
 
@@ -162,7 +162,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   メールエンドポイントの設定に関する詳細は、[メールエンドポイントの設定](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html?lang=ja)をクリックします。
+   >メールエンドポイントの設定に関する詳細は、[メールエンドポイントの設定](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html?lang=ja)をクリックします。
 
 ## トラブルシューティング {#troubleshooting}
 

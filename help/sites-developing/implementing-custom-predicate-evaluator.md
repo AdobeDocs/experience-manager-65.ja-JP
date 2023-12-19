@@ -102,13 +102,13 @@ replic.action=Activate
 
 >[!NOTE]
 >
-Maven を使用した新しい AEM プロジェクトの設定については、[Apache Maven を使用した AEM プロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
+>Maven を使用した新しい AEM プロジェクトの設定については、[Apache Maven を使用した AEM プロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
 
 まず、プロジェクトの Maven の依存関係を更新します。`PredicateEvaluator` は `cq-search` アーティファクトの一部なので、Maven の pom.xml ファイルに追加する必要があります。
 
 >[!NOTE]
 >
-`cq-search` は `OSGi` コンテナで提供されるので、`cq-search` の依存関係の範囲は `provided` に設定されます。
+>`cq-search` は `OSGi` コンテナで提供されるので、`cq-search` の依存関係の範囲は `provided` に設定されます。
 
 pom.xml
 
@@ -137,7 +137,7 @@ pom.xml
 
 >[!NOTE]
 >
-次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。詳しくは、[Java™ のドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
+>次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。詳しくは、[Java™ のドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
 
 1. `com.day.cq.search.eval.AbstractPredicateEvaluator` を拡張する Java™ クラスを作成します。
 1. 次のように、`@Component` を使用してクラスに注釈を付けます
@@ -165,11 +165,11 @@ pom.xml
 
 >[!NOTE]
 >
-`factory` は、`com.day.cq.search.eval.PredicateEvaluator/` で始まりカスタム `PredicateEvaluator` の名前で終わる一意の文字列にする必要があります。
+>`factory` は、`com.day.cq.search.eval.PredicateEvaluator/` で始まりカスタム `PredicateEvaluator` の名前で終わる一意の文字列にする必要があります。
 
 >[!NOTE]
 >
-`PredicateEvaluator` の名前は述語名で、クエリを組み立てる際に使用されます。
+>`PredicateEvaluator` の名前は述語名で、クエリを組み立てる際に使用されます。
 
 1. オーバーライド：
 
