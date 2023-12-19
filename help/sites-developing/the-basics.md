@@ -9,7 +9,7 @@ exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '3251'
-ht-degree: 71%
+ht-degree: 72%
 
 ---
 
@@ -133,8 +133,8 @@ Sling を使用して、特定のエンティティをレンダリングする�
 
 リクエストを分解し、必要な情報を抽出します。リポジトリーで、リクエストされたリソース（コンテンツノード）を検索します。
 
-* 最初の Sling は、リクエストで指定された場所にノードが存在するかどうかを確認します。例えば、 `../content/corporate/jobs/developer.html`
-* ノードが見つからない場合、拡張機能は削除され、検索が繰り返されます。例： `../content/corporate/jobs/developer`
+* 最初の Sling では、リクエストで指定されている場所（`../content/corporate/jobs/developer.html` など）にノードが存在するかどうかを確認します。
+* ノードが見つからない場合は、拡張子なしで検索を繰り返します（`../content/corporate/jobs/developer` など）。
 * ノードが見つからない場合、Sling は http コード 404(Not Found) を返します。
 
 Sling では JCR 以外のノードもリソースとして扱えますが、これは詳細な機能です。
@@ -236,7 +236,7 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 * リソースの `sling:resourceSuperType` プロパティを使用。
 * `sling:resourceSuperType` が示すノードの `sling:resourceType` プロパティを使用。
 
-次に例を示します。
+例：
 
 * ／
 

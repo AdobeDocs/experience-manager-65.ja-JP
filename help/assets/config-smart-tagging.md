@@ -7,8 +7,8 @@ feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2244'
-ht-degree: 98%
+source-wordcount: '2227'
+ht-degree: 99%
 
 ---
 

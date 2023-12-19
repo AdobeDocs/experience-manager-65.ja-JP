@@ -12,7 +12,7 @@ feature: Forms Service
 source-git-commit: 287717e39ff58396de6d63a89e2b3d8fef4e6888
 workflow-type: tm+mt
 source-wordcount: '3774'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -132,11 +132,11 @@ ht-degree: 97%
    + [フォームデータモデルの作成](using/create-form-data-models.md)
    + [フォームデータモデルの操作](using/work-with-form-data-model.md)
    + [フォームデータモデルの使用](using/using-form-data-model.md)
-+ アダプティブForms — コアコンポーネント {#adaptive-forms-core-components}
-   + [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md)
-   + [コアコンポーネントベースのアダプティブフォームの作成](/help/forms/using/create-an-adaptive-form-core-components.md)
-   + [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
-   + [コアコンポーネントベースのアダプティブFormsでカスタムエラーハンドラーを作成して使用する](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
++ アダプティブフォーム - コアコンポーネント {#adaptive-forms-core-components}
+   + [環境でコアコンポーネントを有効にする](/help/forms/using/enable-adaptive-forms-core-components.md)
+   + [コアコンポーネントベースのアダプティブフォームを作成](/help/forms/using/create-an-adaptive-form-core-components.md)
+   + [コアコンポーネントベースのアダプティブフォームのテーマを作成](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
+   + [コアコンポーネントベースのアダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
 + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
    + [アダプティブフォームの操作のベストプラクティス](using/adaptive-forms-best-practices.md)
    + [アダプティブフォームの作成](using/creating-adaptive-form.md)
@@ -164,7 +164,7 @@ ht-degree: 97%
    + [送信レビュー担当者のフォームへの関連付け](using/adding-reviewers-form.md)
    + [フォームのフィールドのための文脈依存ヘルプの作成](using/authoring-in-field-help.md)
    + [レイアウトモードを使用したコンポーネントのサイズ変更](/help/forms/using/resize-using-layout-mode.md)
-   + [アダプティブフォームデータをMicrosoftに接続して送信する](/help/forms/using/forms-microsoft-power-automate-integration.md)
+   + [アダプティブフォームデータを Microsoft に接続して送信](/help/forms/using/forms-microsoft-power-automate-integration.md)
 + アダプティブフォーム - 高度なオーサリング {#adaptive-forms-advanced-authoring}
    + [JSON スキーマを使用したアダプティブフォームの作成](using/adaptive-form-json-schema-form-model.md)
    + [XML スキーマを使ったアダプティブフォームの作成](using/adaptive-form-xml-schema-form-model.md)
@@ -189,7 +189,7 @@ ht-degree: 97%
    + [Adobe Sign の AEM Forms への統合](using/adobe-sign-integration-adaptive-forms.md)
    + [フォームのアセットのレビューの作成と管理](using/create-reviews-forms.md)
    + [AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの組み込み](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [アダプティブFormsのカスタムエラーハンドラーを作成して使用する](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [アダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + インタラクティブコミュニケーション {#interactive-communications}
    + [インタラクティブ通信オーサリング UI の概要](using/introduction-interactive-communication-authoring.md)
    + [インタラクティブ通信の作成](using/create-interactive-communication.md)

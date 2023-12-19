@@ -1,6 +1,6 @@
 ---
 title: パターン検出を使用したアップグレードの複雑性の評価
-description: パターン検出を使用して、アップグレードの複雑さを評価する方法を説明します。
+description: パターン検出を使用してアップグレードの複雑さを評価する方法について説明します。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
@@ -10,8 +10,8 @@ feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 37%
+source-wordcount: '498'
+ht-degree: 97%
 
 ---
 
@@ -19,22 +19,22 @@ ht-degree: 37%
 
 ## 概要 {#overview}
 
-この機能を使用すると、次のパターンを検出することで、既存のAEMインスタンスのアップグレード可能性をチェックできます。
+この機能を使用すると、次の使用されているパターンを検出することで、既存の AEM インスタンスのアップグレード可能性を確認できます。
 
-1. 特定のルールに違反し、アップグレードによって影響を受ける領域または上書きされる領域で実行される
-1. AEM 6.5 との下位互換性のないAEM 6.x 機能または API を使用しており、アップグレード後に動作しなくなる可能性があります。
+1. 特定のルールに違反しており、アップグレードで影響を受けているか上書きされる領域で実行されている
+1. AEM 6.5 と下位互換性のない AEM 6.x の機能や API を使用しており、アップグレード後に動作しない可能性がある
 
-これは、AEM 6.5 へのアップグレードに関わる開発作業の評価に役立ちます。
+これにより、AEM 6.5 へのアップグレードに必要な開発の作業量を評価できます。
 
 ## 設定方法 {#how-to-set-up}
 
-パターン検出は、 [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) 6.1 から 6.5 への任意のソースAEMバージョンでAEM 6.5 のアップグレードをターゲットとして作業する インストールするには、 [パッケージマネージャー](/help/sites-administering/package-manager.md).
+パターン検出は、AEM 6.5 のアップグレードをターゲットとした 6.1 から 6.5 までの任意のソース AEM バージョンで機能する [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。この機能は、[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用してインストールできます。
 
 ## 使用方法 {#how-to-use}
 
 >[!NOTE]
 >
->パターン検出は、環境インスタンスを含む、あらゆるローカル開発で実行できます。 ただし、次の操作を行います。
+>パターン検出は、ローカル開発インスタンスを含むあらゆる開発で実行できます。ただし、次の操作を行います。
 >
 >* 検出率を上げる
 >* ビジネスにとって重大なインスタンスの減速を避ける
@@ -53,11 +53,11 @@ ht-degree: 37%
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
 * **事後対応 JSON Lines インターフェイスを使用し、**各行に個別の JSON ドキュメントを生成します。
 
-これらの方法の両方について、以下で詳しく説明します。
+これらの両方の方法については、以下で詳しく説明します。
 
-## Reactive Interface {#reactive-interface}
+## 事後対応インターフェイス {#reactive-interface}
 
-リアクティブインターフェイスを使用すると、疑いが検出されたらすぐに違反レポートを処理できます。
+事後対応インターフェイスを使用すると、疑念が検出された場合にすぐに違反レポートを処理できます。
 
 出力は現在、次の 2 つの URL で使用できます。
 
@@ -66,7 +66,7 @@ ht-degree: 37%
 
 ## プレーンテキストインターフェイスの処理 {#handling-the-plain-text-interface}
 
-出力内の情報は、一連のイベントエントリの形式で表示されます。 違反を公開するチャネルと、現在の進行状況を公開するチャネルの 2 つがあります。
+出力内の情報は、一連のイベントエントリとして書式設定されます。違反を公開するチャネルと、現在の進行状況を公開するチャネルの 2 つがあります。
 
 これらは、次のコマンドを使用して取得できます。
 
@@ -96,7 +96,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## JSON インターフェイスの処理 {#handling-the-json-interface}
 
-同様に、JSON も [jq ツール](https://stedolan.github.io/jq/) 公開され次第。
+同様に、[jq ツール](https://stedolan.github.io/jq/)を使用すると、公開された JSON をすぐに処理できます。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -121,7 +121,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 }
 ```
 
-進行状況は 5 秒ごとにレポートされ、疑わしいメッセージとしてマークされている以外のメッセージを除外することで、取得できます。
+進行状況は 5 秒ごとにレポートされ、疑念のあるメッセージとしてマークされていないメッセージを除外することで取得できます。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == false)'
@@ -210,14 +210,14 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 検出範囲 {#scope}
 
-現在、パターン検出では次の項目を確認できます。
+現在、パターン検出では以下の項目を確認できます。
 
 * OSGi バンドルの書き出しと読み込みの不一致
-* Sling リソースタイプとスーパータイプ（検索パスコンテンツオーバーレイを使用）のオーバー使用状況
+* Sling リソースタイプとスーパータイプ（検索パスコンテンツオーバーレイを含む）の過剰使用
 * Oak インデックスの定義（互換性）
 * VLT パッケージ（過剰使用）
-* rep:User nodes の互換性（OAuth 設定のコンテキスト内）
+* rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
 
 >[!NOTE]
 >
->パターン検出は、アップグレードに関する警告を正確に予測しようとします。 ただし、場合によっては、偽陽性が生成されることがあります。
+>パターン検出は、アップグレードに関する警告を正確に予測しようとします。 ただし、シナリオによっては誤検知が発生する可能性があります。

@@ -4,8 +4,8 @@ description: AEM ヘッドレスデベロッパージャーニーのこの部分
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 92%
+source-wordcount: '1029'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 92%
 
 では、他の API が必要なのでしょうか？
 
-Assets HTTP API を使用すると、 **読み取り** コンテンツを選択しますが、 **作成**, **更新** および **削除** コンテンツ — GraphQL API では実行できないアクション。
+Assets HTTP API を使用すると、コンテンツを&#x200B;**読み取る**&#x200B;ことができます。また、コンテンツを&#x200B;**作成**、**アップデート**、**削除**&#x200B;することができます。これらは、GraphQL API では実行できないアクションです。
 
 Assets REST API は、最新の Adobe Experience Manager バージョンの標準インストールで利用できます。
 
@@ -54,7 +54,7 @@ Assets HTTP API には次の API が含まれます。
 
 現在の Assets HTTP API の実装は、**REST** アーキテクチャスタイルに基づいており、**CRUD** 操作（作成、読み取り、アップデート、削除）を使用して（AEM に保存された）コンテンツにアクセスできます。
 
-この操作を使用すると、API は、JavaScript フロントエンドアプリケーションにコンテンツサービスを提供することで、Adobe Experience Managerをヘッドレス CMS(Content Management System) として操作できます。 または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
+これらの操作により、API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、Adobe Experience Manager をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 
 <!--
 >[!NOTE]
@@ -262,7 +262,7 @@ Assets REST API は `/api/assets` エンドポイントを使用しており、�
 
 `GET /{cfParentPath}/{cfName}.json`
 
-次に例を示します。
+例：
 
 `http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
@@ -329,6 +329,6 @@ AEM Assets REST API の使用の詳細については、次を参照してくだ
 * [AEM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [CORS／AEM の説明](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [ビデオ - AEM を使用した CORS 向けの開発](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
-* An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

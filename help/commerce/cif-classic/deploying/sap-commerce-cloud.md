@@ -7,8 +7,8 @@ content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 66%
+source-wordcount: '712'
+ht-degree: 98%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->このページには、hybris web サイトへのリンクが含まれています。特定のページにログインするには、アカウントが必要です。
+>このページには、hybris web サイトへのリンクが含まれています。特定のページでは、ログインアカウントが必要です。
 
 ## SAP Commerce Cloud を使用した e コマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
 
@@ -26,7 +26,7 @@ ht-degree: 66%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-のデプロイ [必要な e コマースパッケージ](#packages-needed-for-ecommerce-with-hybris) e コマースフレームワークの全機能と、hybris 実装（デモカタログを含む）に付属する e コマース機能のリファレンス実装を提供します。
+[必要な e コマースパッケージ](#packages-needed-for-ecommerce-with-hybris)をデプロイすると、e コマースフレームワークのすべての機能と共に、hybris 実装（デモカタログを含む）に付属する e コマース機能のリファレンス実装が提供されます。
 
 これは、Geometrixx Outdoors サイトの英語（米国）ブランチ（`/content/geometrixx-outdoors/en_US`）の配下で使用できます。
 
@@ -44,8 +44,8 @@ e コマース統合フレームワークの Hybris 拡張が更新されて、[
 >[!NOTE]
 >
 >* バージョン 18.11 以降をサポートしています。
->* を実行するには Java™ 7 が必要です。 [hybris 5 サーバー。](https://www.sap.com/products/crm.html)
-* hybris のアドオンである [Telco Accelerator](https://www.sap.com/products/crm.html) は、AEM 拡張機能ではサポートされていません。
+>* [Hybris 5 サーバー](https://www.sap.com/japan/products/crm.html)を実行するには Java™ 7 が必要です。
+* hybris のアドオンである [Telco Accelerator](https://www.sap.com/japan/products/crm.html) は、AEM 拡張機能ではサポートされていません。
 >
 
 ### hybris を使用した e コマースに必要なパッケージ {#packages-needed-for-ecommerce-with-hybris}
@@ -70,14 +70,14 @@ e コマース機能をインストールするには、次が必要です。
 
 ### hybris を使用した e コマースのインストール {#installation-of-ecommerce-with-hybris}
 
-（デモカタログを使用して）完全に 1 つの設定をインストールするには、次の基本的な手順に従います。Geometrixx Outdoors
+（デモカタログ Geometrixx Outdoors を使用して）包括的な設定をインストールするには、次の基本的な手順に従います。
 
 1. [AEM をインストールします](/help/sites-deploying/deploy.md)。
 1. Geometrixx-all パッケージのインストール
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
-1. を使用して、デモコンテンツパッケージをインストールします。 [パッケージマネージャー](/help/sites-administering/package-manager.md):
+1. [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用して、デモコンテンツパッケージをインストールします。
 
    1. ` [cq-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-hybris-content)`
    1. ` [cq-geometrixx-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-geometrixx-hybris-content)`
@@ -85,7 +85,7 @@ e コマース機能をインストールするには、次が必要です。
 1. [hybris サーバーをダウンロードして構築します](#download-and-build-your-hybris-server)。
 1. e コマースエンジンでカタログを構成します。
 
-   1. [アウトドアストアのGeometrixx](#setup-the-geometrixx-outdoors-store).
+   1. [Geometrixx Outdoors ストアを設定します](#setup-the-geometrixx-outdoors-store)。
 
 1. AEM で必要な補助ページを[作成](/help/sites-authoring/qg-page-authoring.md)します。
 
@@ -95,25 +95,25 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
 >[!NOTE]
 >
-開発者向けの [API ドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) は、もダウンロードできます。
+開発者は、[API のドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)をダウンロードすることもできます。
 
 ### hybris サーバーのダウンロードと構築 {#download-and-build-your-hybris-server}
 
-この手順では、hybris サーバーをダウンロードして構築します。 また、hybris と cq 間の接続に必要な初期設定も行います。 その後、拡張機能はデフォルト設定で使用できます。
+この手順では、hybris サーバーをダウンロードして構築します。また、hybris と cq 間の接続に必要な初期設定も行います。拡張はデフォルト設定で使用できます。
 
 >[!CAUTION]
 >
-5.5.1 より以前の hybris バージョンはサポートされていません。
+5.5.1 より前の hybris バージョンはサポートされていません。
 
 >[!NOTE]
 >
-これを完了するには、 [Groovy](https://groovy-lang.org/) をシステムにインストールします。
+この手順を完了するには、システムに [Groovy](https://groovy-lang.org/) がインストールされている必要があります。
 
 1. hybris ダウンロードサイトから、**hybris Commerce Suite** のディストリビューションファイルをダウンロードします。
 
    >[!CAUTION]
    >
-   これにアクセスするには、（hybris の）アカウントが必要です。
+   これにアクセスするには（hybris からの）アカウントが必要です。
 
 1. 配布ファイルを（&lt;hybris-root-directory>と呼ばれる）必要な場所に解凍します。
 1. コマンドラインから、次の操作を実行します。
@@ -144,7 +144,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    >[!NOTE]
    >
-   hybris 5.6.0 以降の場合は、次の setup.groovy を使用します。
+   hybris 5.6.0 以降の場合は、次の setup.groovy を使用してください。
 
    5.6.0 以降
 
@@ -171,17 +171,17 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    [http://localhost:9002](http://localhost:9002)
 
-1. クリック **初期設定** 次に、（既存のデータを削除して）初期化アクションを確認します。
+1. 「**初期化**」をクリックし、初期化アクション（既存のデータを削除）を実行します。
 
-   コンソールに進行状況が表示され、 `FINISHED` 完了を示しています。
+   コンソールに進行状況が表示されます。「`FINISHED`」は処理が完了したことを示します。
 
    >[!NOTE]
    >
    お使いのシステムによっては、この処理が完了するまでに数分かかる場合があります。
 
-### Geometrixx Outdoorsストアの設定 {#setup-the-geometrixx-outdoors-store}
+### Geometrixx Outdoors ストアを設定 {#setup-the-geometrixx-outdoors-store}
 
-この手順では、デモストア (Geometrixxオンライン ) をアップロードして設定します。
+この手順では、Geometrixx オンラインのデモストアをアップロードして設定します。
 
 1. hybris インスタンスを起動します。コマンドラインから、次の操作を実行します。
 
@@ -212,7 +212,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
 [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 「**開始**」をクリックして、指定したファイルを読み込みます。The **結果** 「 」タブには、ログエントリが表示されます。
+1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
 
 1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
@@ -222,7 +222,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
 [ファイルを入手](/help/sites-deploying/assets/base-store.csv)
 
-   hybris 5.7 の場合は、次を使用します。
+   hybris 5.7 の場合は、次の手順を使用してください。
 
 [ファイルを入手](/help/sites-deploying/assets/base-store-5_7.csv)
 
@@ -230,7 +230,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    `en_US - English (United States)`
 
-1. 「**開始**」をクリックして、指定したファイルを読み込みます。The **結果** 「 」タブには、ログエントリが表示されます。
+1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
 
 1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 

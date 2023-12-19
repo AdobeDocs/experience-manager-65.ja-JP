@@ -4,8 +4,8 @@ description: ヘッドレスの概念、AEM へのマッピング方法、AEM �
 exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
 source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 92%
+source-wordcount: '747'
+ht-degree: 93%
 
 ---
 
@@ -78,6 +78,6 @@ AEM ヘッドレス翻訳ジャーニーを開始していただきありがと�
 [AEM ヘッドレス翻訳の基本を学ぶ](getting-started.md)のドキュメントを確認して、ヘッドレス翻訳ジャーニーの次のステップに進むことをお勧めします。ヘッドレスジャーニーの続行に必須ではありませんが、この記事で取り上げたいくつかの概念について詳しく説明している追加のオプションリソースを以下に挙げておきます。
 
 * [MSM と翻訳](/help/sites-administering/msm-and-translation.md) - AEM のマルチサイトマネージャーの詳細と翻訳ツールとの連携方法について説明します。
-* An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

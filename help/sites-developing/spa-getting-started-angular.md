@@ -1,6 +1,6 @@
 ---
 title: AEM での SPA の概要 - Angular
-description: この記事では、サンプルのSPAアプリケーションを紹介し、その設定方法を説明し、Angularフレームワークを使用して独自のSPAをすぐに使い始める方法を説明します。
+description: この記事では、サンプルの SPA アプリケーションを紹介し、その設定方法を説明するほか、Angular フレームワークを使用して独自の SPA の運用をすぐに開始する方法についても説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
@@ -9,13 +9,13 @@ exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '999'
-ht-degree: 84%
+ht-degree: 89%
 
 ---
 
 # AEM での SPA の概要 - Angular{#getting-started-with-spas-in-aem-angular}
 
-単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築することを望み、作成者は SPA フレームワークを使用して構築されたサイトのコンテンツを AEM 内でシームレスに編集することを望みます。
+単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者にとっては、SPA フレームワークを使用してサイトを構築できると都合がよく、作成者にとっては、SPA フレームワークを使用して構築されたサイトのコンテンツを AEM 内でシームレスに編集できると便利です。
 
 SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、Angular フレームワーク上のシンプルな SPA アプリケーションを紹介し、その組み合わせ方法を説明します。これにより、独自の SPA をすぐに使い始めることができます。
 
@@ -251,7 +251,7 @@ export class ImageComponent {
 MapTo('my-angular-app/components/image')(ImageComponent, ImageEditConfig);
 ```
 
-AEMのSPAの中心概念は、SPAコンポーネントをAEMコンポーネントにマッピングし、コンテンツが変更された場合（および逆の場合）にコンポーネントを更新するという考えです。 この通信モデルの概要については、[SPA エディターの概要](/help/sites-developing/spa-overview.md)のドキュメントを参照してください。
+AEM の SPA の中核概念は、SPA コンポーネントを AEM コンポーネントにマッピングし、コンテンツが変更されたときにコンポーネントも更新する（またはその逆も含む）というものです。この通信モデルの概要については、[SPA エディターの概要](/help/sites-developing/spa-overview.md)のドキュメントを参照してください。
 
 `MapTo('my-angular-app/components/image')(Image, ImageEditConfig);`
 

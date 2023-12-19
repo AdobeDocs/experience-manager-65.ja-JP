@@ -4,8 +4,8 @@ description: AEM ヘッドレスデベロッパージャーニーのこの部分
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 97%
+source-wordcount: '1803'
+ht-degree: 98%
 
 ---
 
@@ -226,6 +226,6 @@ AEM でヘッドレスストアを停止する必要はありません。[ジャ
 
    * [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=ja) の設定（*CDN Rewriter の検索*）
 
-* [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

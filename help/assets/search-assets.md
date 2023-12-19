@@ -9,7 +9,7 @@ exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
 source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
 workflow-type: tm+mt
-source-wordcount: '5736'
+source-wordcount: '5649'
 ht-degree: 98%
 
 ---
@@ -121,7 +121,7 @@ ht-degree: 98%
 
 1. [!DNL Assets] のユーザーインターフェイスから、アセットのプロパティページを開きます。「**[!UICONTROL 詳細]**」をクリックし、「**[!UICONTROL 検索キーワードに採用]**」の下の「**[!UICONTROL 追加]**」をクリックします。
 1. 「**[!UICONTROL 昇格を検索]**」ボックスで、画像検索時の強化の対象となるキーワードを指定し、「**[!UICONTROL 追加]**」をクリックします。同じ方法で複数のキーワードを指定できます。
-1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。昇格したこのキーワードの対象となるアセットが、検索結果の上位に表示されます。
+1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。指定したキーワードに対して昇格したアセットが、検索結果の上位に表示されます。
 
 ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、「[ での検索](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=ja)」を参照してください。 [!DNL Experience Manager]
 
@@ -194,7 +194,7 @@ ht-degree: 98%
 
 複雑なクエリの検索形式の例：
 
-* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）： `title:"John Doe" creatortool:Adobe*`
+* 複数のファセットフィールドを持つすべてのアセットを表示する ( 例：title=John Doe、creatortool=Adobe Photoshop): `title:"John Doe" creatortool:Adobe*`
 * ファセット値が 1 語でなく文になっているアセットをすべて表示する（例：title=Scott Reynolds）：`title:"Scott Reynolds"`
 * 1 つのプロパティに複数の値が指定されているアセットを表示する（例：title=Scott Reynolds または John Doe）：`title:"Scott Reynolds" OR "John Doe"`
 * プロパティ値が特定の文字列で始まるアセットを表示する（例：title=Scott Reynolds）：`title:Scott*`
@@ -469,11 +469,11 @@ PSD ファイルや PDF ファイルなどのアセットをユーザーがア�
 
 ### ワークフローを作成 {#create-workflow}
 
-バージョンの作成機能と同様に、検索結果に表示されるアセットのワークフローを作成することもできます。アセットを選択し、 **[!UICONTROL 作成]** > **[!UICONTROL ワークフロー]**. ワークフローモデルを選択し、ワークフローのタイトルを指定して、「**[!UICONTROL 開始]**」をクリックします。
+バージョンの作成機能と同様に、検索結果に表示されるアセットのワークフローを作成することもできます。アセット（複数も可）を選択し、**[!UICONTROL 作成]**／**[!UICONTROL ワークフロー]**&#x200B;をクリックします。ワークフローモデルを選択し、ワークフローのタイトルを指定して、「**[!UICONTROL 開始]**」をクリックします。
 
 ### 関連付けと関連付けを解除 {#relate-unrelate-assets}
 
-検索結果に表示されるアセットの関連付けと関連付けを解除を実行します。アセットを選択し、 **[!UICONTROL 関連付け]** または **[!UICONTROL 関連付けを解除]**.
+検索結果に表示されるアセットの関連付けと関連付けを解除を実行します。アセット（複数も可）を選択し、「**[!UICONTROL 関連付け]**」または「**[!UICONTROL 関連付けを解除]**」をクリックします。
 
 ## 予期しない検索結果と問題 {#unexpected-results}
 

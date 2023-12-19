@@ -4,8 +4,8 @@ description: AEM ヘッドレスデベロッパージャーニーのこのパー
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 95%
+source-wordcount: '1301'
+ht-degree: 98%
 
 ---
 
@@ -79,7 +79,7 @@ GraphQL is used in various locations in AEM; for example:
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-AEM GraphQL API は、標準のGraphQL API 仕様に基づいたカスタマイズバージョンです。コンテンツフラグメントに対して（複雑な）クエリを実行できるように特別に設定されています。
+AEM GraphQL API は、標準の GraphQL API 仕様に基づいたカスタマイズバージョンで、コンテンツフラグメントに対して（複雑な）クエリを実行できるように特別に設定されています。
 
 コンテンツは、コンテンツフラグメントモデルに従って構造化されているので、コンテンツフラグメントが使用されます。これは GraphQL の基本要件を満たしています。
 
@@ -133,7 +133,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 * コンテンツフラグメントモデルの定義時に使用できる特定のデータタイプです。
 * 特定のコンテンツフラグメントモデルに依存する別のフラグメントを参照します。
-* 構造化データを作成して、その後で取得できます。
+* 構造化データを作成したあと取得できます。
 
    * **マルチフィード**&#x200B;として定義した場合、複数のサブフラグメントをプライムフラグメントで参照（取得）できます。
 

@@ -9,13 +9,13 @@ exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1531'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
 # Cloud Service フレームワークを使用した Analytics {#analyticsusingcloudframework}
 
-AEM Formsは、発行されたフォームおよびドキュメントのパフォーマンス指標を取得して追跡する Analytics と統合されます。 これらの指標分析の意図は、フォームやドキュメントをさらに使いやすくするために必要な変更に関して、十分な情報に基づいた決定を行えるよう支援することです。
+AEM Forms は Analytics と統合されており、公開中のフォームやドキュメントのパフォーマンス指標を取得およびトラックできます。これらの指標分析の意図は、フォームやドキュメントをさらに使いやすくするために必要な変更に関して、十分な情報に基づいた決定を行えるよう支援することです。
 
 >[!NOTE]
 >

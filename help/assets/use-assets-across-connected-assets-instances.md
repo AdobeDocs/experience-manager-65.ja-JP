@@ -314,7 +314,7 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 
 * アセットの使用状況に関するインサイトを取得するには、[!DNL Sites] インスタンスで[アセットインサイト](/help/assets/asset-insights.md)機能を設定します。
 
-* リモートアセットを [画像コンポーネント設定ダイアログ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=ja). ただし、リモートアセットを、 **[!UICONTROL 設定]**.
+* リモートアセットを[画像コンポーネント設定ダイアログ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=ja#configure-dialog)にドラッグすることはできません。ただし「**[!UICONTROL 設定]**」をクリックせずに、リモートアセットを Sites ページの画像コンポーネントに直接ドラッグすることができます。
 
 ### 権限とアセット管理 {#permissions-and-managing-assets}
 

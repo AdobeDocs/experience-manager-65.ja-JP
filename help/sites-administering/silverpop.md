@@ -10,7 +10,7 @@ exl-id: 6c4b8aaa-bda0-4066-a3fc-d91a5ab1621c
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '593'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 93%
 >
 >Silverpop integration is **not** available out of the box. Download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document. -->
 
-AEM を Silverpop Engage と統合すると、AEM で作成したメールを Silverpop を使用して管理および送信できます。また、AEMページ上のAEM forms を使用して、Silverpop のリード管理機能を使用することもできます。
+AEM を Silverpop Engage と統合すると、AEM で作成したメールを Silverpop を使用して管理および送信できます。また、AEM ページ上の AEM Forms を使用して、Silverpop のリード管理機能を使用できます。
 
 この統合によって次の機能を使用できるようになります。
 

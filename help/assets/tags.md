@@ -12,7 +12,7 @@ role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '6618'
+source-wordcount: '6664'
 ht-degree: 99%
 
 ---
@@ -536,7 +536,7 @@ Experience Platform タグで使用可能なすべての拡張機能は、 **[!U
 
 必要に応じて、次の拡張機能をインストールし、設定する必要があります。
 
-* （必須）*Experience Cloud ID サービス*&#x200B;拡張機能。
+* （必須） *Experience CloudID サービス* 拡張子。
 
 追加の設定は必要ありません。提案されたあらゆる値を受け入れます。完了したら、必ず「**[!UICONTROL 保存]**」を選択します。
 

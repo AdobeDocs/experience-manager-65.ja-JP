@@ -9,8 +9,8 @@ thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 95%
+source-wordcount: '797'
+ht-degree: 97%
 
 ---
 
@@ -57,7 +57,7 @@ CIF アドオンは、 [ソフトウェア配布ポータル](https://experience
 
 AEM と CIF アドオンを使用するローカル CIF プロジェクト開発の場合は、次の手順に従います。
 
-1. AEM 6.5 リリースを入手し、AEM 6.5 サービスパックをインストールします。AEM 6.5 Service Pack 7 が必要ですが、Adobeでは、最新の利用可能な Service Pack をインストールすることをお勧めします。
+1. AEM 6.5 リリースを入手し、AEM 6.5 サービスパックをインストールします。AEM 6.5 サービスパック 7 が必要ですが、入手可能な最新のサービスパックをインストールすることをお勧めします。
 
 1. AEM.jar を解凍し、`crx-quickstart` フォルダーを作成します。次を実行します。
 
@@ -91,7 +91,7 @@ CIF を使い始めるために事前に設定されたプロジェクトをブ�
 
 AEM プロジェクトの生成方法については、AEM プロジェクトのアーキタイプの「[使用手順](https://github.com/adobe/aem-project-archetype#usage)」を参照してください。プロジェクトに CIF を含めるには、`includeCommerce` オプションを使用します。
 
-次に例を示します。
+例：
 
 ```bash
 mvn -B archetype:generate \

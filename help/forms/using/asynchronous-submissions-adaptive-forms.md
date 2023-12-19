@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームの非同期送信
-description: アダプティブフォームの非同期送信を設定する方法を説明します。
+description: アダプティブフォームの非同期送信を設定する方法について説明します。
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -10,28 +10,28 @@ exl-id: bd0589e2-b15a-4f0e-869c-2da4760b1ff4
 source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '781'
-ht-degree: 70%
+ht-degree: 78%
 
 ---
 
 # アダプティブフォームの非同期送信{#asynchronous-submission-of-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/asynchronous-submissions-adaptive-forms.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/asynchronous-submissions-adaptive-forms.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 これまでの Web フォームは、同期送信用に設定されていました。同期送信では、ユーザーがフォームを送信すると、確認確認ページ、「ありがとうございます」ページ、または送信エラーが発生した場合はエラーページにリダイレクトされます。 しかし、現在では、単一ページアプリケーションなどの最新の Web エクスペリエンスが広く使用されるようになっています。こうしたアプリケーションでは、バックグラウンドでクライアントとサーバー間の通信が実行されている間は、Web ページが静的な状態のままになります。非同期送信を設定することにより、アダプティブフォームでこうした Web エクスペリエンスを実現することができます。
 
 非同期送信では、ユーザーがフォームを送信すると、フォーム開発者は、別のフォームや Web サイトの別のセクションにリダイレクトするなど、別のエクスペリエンスを提供します。また、作成者は、別のデータストアへのデータ送信やカスタム解析エンジンの追加など、別のサービスを差し込むこともできます。非同期送信がある場合、アダプティブフォームは単一ページアプリケーションのように動作します。送信されたフォームデータがサーバー上で検証されても、フォームが再読み込みされないか、URL が変更されないからです。
 
-アダプティブフォームでの非同期送信の詳細については、以下を参照してください。
+アダプティブフォームでの非同期送信の詳細については、以下をお読みください。
 
 ## 非同期送信の設定 {#configure}
 
-アダプティブフォームの非同期送信を設定するには、次の手順を実行します。
+アダプティブフォームの非同期送信を設定するには：
 
 1. アダプティブフォームのオーサリングモードで、フォームコンテナオブジェクトを選択し、 ![cmppr1](assets/cmppr1.png) をクリックしてプロパティを開きます。
 1. 「**[!UICONTROL 送信]**」プロパティセクションで、「**[!UICONTROL 非同期送信を使用]**」を有効にします。
@@ -98,13 +98,13 @@ AEM Forms には、すぐに使用できる、フォーム送信の成功およ�
 
 ## ルールを使用したデフォルトハンドラーの上書き {#custom}
 
-フォーム開発者と作成者は、フォームレベルで、コードエディターでルールを記述して、デフォルトのハンドラーを上書きできます。 成功イベントおよびエラーイベントに対するサーバー応答は、フォームレベルで公開されます。開発者は、ルール内で `$event.data` を使用してサーバー応答にアクセスできます。
+フォームの開発者と作成者は、コードエディターを使用してフォームレベルでルールを記述することにより、デフォルトのハンドラーを上書きすることができます。成功イベントおよびエラーイベントに対するサーバー応答は、フォームレベルで公開されます。開発者は、ルール内で `$event.data` を使用してサーバー応答にアクセスできます。
 
 成功イベントとエラーイベントを処理するためのルールをコードエディターで記述するには、以下の手順を実行します。
 
 1. アダプティブフォームをオーサリングモードで開き、任意のフォームオブジェクトを選択して、 ![edit-rules1](assets/edit-rules1.png) をクリックして、ルールエディターを開きます。
 1. 選択 **[!UICONTROL フォーム]** フォームオブジェクトツリーで「 」を選択し、 **[!UICONTROL 作成]**.
-1. 選択 **[!UICONTROL コードエディター]** 「モード選択」ドロップダウンから、次の操作をおこないます。
+1. モード選択ドロップダウンで「**[!UICONTROL コードエディター]**」を選択します。
 1. コードエディターで、「 **[!UICONTROL コードを編集]**. 選択 **[!UICONTROL 編集]** をクリックします。
-1. 選択 **[!UICONTROL 送信成功]** または **[!UICONTROL 送信中にエラーが発生しました]** から **[!UICONTROL イベント]** 」ドロップダウンリストから選択できます。
+1. **[!UICONTROL イベント]**&#x200B;ドロップダウンで、「**[!UICONTROL 送信成功]**」または「**[!UICONTROL 送信中のエラー]**」を選択します。
 1. 選択したイベントのルールを作成し、「 」を選択します。 **[!UICONTROL 完了]** 」と入力してルールを保存します。

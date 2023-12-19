@@ -8,7 +8,7 @@ exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1349'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -139,7 +139,7 @@ AEM Forms には、必須の設定とオプションの設定がいくつかあ�
 
 インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。AEM 6.5 Forms で顧客通信を作成する場合は、インタラクティブ通信を使用することを推奨します。以前のバージョンからアップグレードまたは移行を行って、引き続きレター（Correspondence Management）を使用する予定の場合は、[AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=ja)をインストールします。
 
-AEMFD 互換性パッケージを使用すると、AEM 6.4 Forms、AEM 6.3 FormsおよびAEM 6.5 Forms上のAEM 6.2 Formsの以下のアセットを使用できます。
+AEMFD 互換性パッケージを使用すると、AEM 6.4 Forms、AEM 6.3 Forms および AEM 6.2 Forms の次のアセットを、AEM 6.5 Forms で使用できます。
 
 * ドキュメントフラグメント
 * レター

@@ -5,7 +5,7 @@ exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
 source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1601'
-ht-degree: 90%
+ht-degree: 92%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 90%
 
 ## 技術基盤 {#technology}
 
-ヘッドレスアプローチを使用すると、将来のデジタルエクスペリエンスの要件に簡単かつ迅速に対応できるテクノロジースタックを構築できます。
+ヘッドレスアプローチを使用すると、将来のデジタルエクスペリエンスの要求に簡単かつ迅速に適応できるテクノロジースタックを構築できます。
 
 以前の CMS 向けの API は主に REST ベースでした。Representational State Transfer（REST）は、ステートレス方式でリソースをテキストとして提供します。これにより、リソースを読み取り、事前に定義された一連の操作で変更できます。REST は、コンテンツのステートレス表現を確保することで、Web 上のサービス間で大きな相互運用性を確保できます。
 
@@ -126,6 +126,6 @@ AEM ヘッドレスジャーニーを開始していただきありがとうご�
 
 「 [AEM Headless - はじめに](getting-started.md)」ドキュメントを確認して、ヘッドレス開発のジャーニーの次のパートに進むことをお勧めしますが、以下のリソースではこのドキュメントで取り上げた概念についてより詳しく説明しています。追加的なオプションであり、ジャーニーを続ける上で必須のリソースではありません。
 
-* An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
-* [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法と、適切なオプションを選択する方法を調べます。
+* [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法を確認し、適切なオプションを選択することができます。

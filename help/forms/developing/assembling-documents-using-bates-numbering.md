@@ -11,7 +11,7 @@ exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1910'
-ht-degree: 86%
+ht-degree: 99%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 86%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-通し番号を使用すると、個別ページの ID を含む PDF ドキュメントをアセンブリすることができます。*通し番号*&#x200B;は、関連するドキュメントのバッチに一意の ID を適用する方法です。ドキュメント内の各ページ（またはドキュメントのセット）に、ページを一意に識別する通し番号が割り当てられます。たとえば、部品表情報を含み、アセンブリの製造に関連付けられている製造ドキュメントには、識別子を含めることができます。 Bates の数値には、連続して増分される数値と、オプションの接頭辞と接尾辞が含まれます。 プレフィックス + 数値 + サフィックスは&#x200B;*通し番号パターン*&#x200B;と言われます。
+通し番号を使用すると、個別ページの ID を含む PDF ドキュメントをアセンブリすることができます。*通し番号*&#x200B;は、関連するドキュメントのバッチに一意の ID を適用する方法です。ドキュメント内の各ページ（またはドキュメントのセット）に、ページを一意に識別する通し番号が割り当てられます。例えば、原材料情報を含む、1 つの組立部品の製造に関する生産ドキュメントに、1 つの識別子が割り当てられます。ベイツ番号の数値は連続した増分値で、オプションでプレフィックスやサフィックスが付きます。プレフィックス + 数値 + サフィックスは&#x200B;*通し番号パターン*&#x200B;と言われます。
 
 次の図は、ドキュメントのPDFに一意の ID が含まれるヘッダードキュメントを示しています。
 
 ![au_au_batesnumber](assets/au_au_batesnumber.png)
 
-このディスカッションの目的で、一意のページ識別子がドキュメントのヘッダーに配置されます。 次の DDX ドキュメントが使用されているとします。
+このディスカッションの目的として、個別ページの ID がドキュメントのヘッダーに配置されます。次の DDX ドキュメントが使用されているとします。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -48,7 +48,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->この節を読む前に、Assembler サービスを使用したPDFドキュメントの組み立てに関する知識を身に付けておくことをお勧めします。 この節では、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトからの結果の抽出など、概念については説明しません（[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照）。
+>このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。この節では、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトからの結果の抽出など、概念については説明しません（[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照）。
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Assembler サービス API（Java）を使用して、一意のページ ID（�
 
 1. プロジェクトファイルを含めます。
 
-   Java プロジェクトのクラスパスに、adobe-assembler-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -151,11 +151,11 @@ Assembler サービス API（Java）を使用して、一意のページ ID（�
 1. ベイツ番号の初期値を設定します。
 
    * コンストラクターを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * を呼び出して、初期の通し番号を設定します。 `AssemblerOptionSpec` オブジェクトの `setFirstBatesNumber` 初期値を指定する数値を渡す
+   * `AssemblerOptionSpec` オブジェクトの `setFirstBatesNumber` を呼び出し、初期値を指定する数値を渡すことで、ベイツ番号の初期値を設定します。
 
-1. 入力 PDF ドキュメントをアセンブリします。
+1. 入力 PDF ドキュメントを組み立てます。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、以下の必須の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出して、以下の必須の値を渡します。
 
    * DDX ドキュメントを表す `com.adobe.idp.Document` オブジェクト
    * 安全でない入力 PDF ファイルを含んだ `java.util.Map` オブジェクト
@@ -167,9 +167,9 @@ Assembler サービス API（Java）を使用して、一意のページ ID（�
 
    新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * を呼び出す `AssemblerResult` オブジェクトの `getDocuments` メソッド。 このアクションは `java.util.Map` オブジェクトを返します。
+   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。このアクションは `java.util.Map` オブジェクトを返します。
    * `com.adobe.idp.Document` オブジェクトが見つかるまで、`java.util.Map` オブジェクトを反復処理します。
-   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、PDFドキュメントを抽出します。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、PDF ドキュメントを抽出します。
 
 **関連情報**
 
@@ -196,7 +196,7 @@ Assembler サービス API（web サービス）を使用して、一意のペ�
    * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -208,16 +208,16 @@ Assembler サービス API（web サービス）を使用して、一意のペ�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントの保存に使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
 1. 入力 PDF ドキュメントを参照します。
 
    * 入力 PDF ドキュメントごとに、コンストラクタを使用して、`BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。入力 PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
    * `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを作成します。このコレクションオブジェクトは、入力 PDF ドキュメントを格納するために使用されます。
    * 入力 PDF ドキュメントごとに、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。例えば、2 つの入力 PDF ドキュメントを使用する場合、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
@@ -232,7 +232,7 @@ Assembler サービス API（web サービス）を使用して、一意のペ�
 
 1. 入力 PDF ドキュメントをアセンブリします。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invoke` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invoke` メソッドを呼び出して、以下の値を渡します。
 
    * DDX ドキュメントを表す `BLOB` オブジェクト。
    * 入力 PDF ドキュメントを格納する `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト。キーは PDF ソースファイルの名前と一致する必要があり、値はこれらのファイルに対応する `BLOB` オブジェクトである必要があります。
@@ -244,9 +244,9 @@ Assembler サービス API（web サービス）を使用して、一意のペ�
 
    新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * 次にアクセス： `AssemblerResult` オブジェクトの `documents` フィールド ( `Map` 結果PDF・ドキュメントを格納するオブジェクト。
-   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し実行します。次に、その配列メンバの `value` から `BLOB`.
-   * PDFドキュメントを表すバイナリデータを、そのドキュメントにアクセスして抽出します `BLOB` オブジェクトの `MTOM` プロパティ。 これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
+   * （結果の PDF ドキュメントを含む `Map` オブジェクトである）`AssemblerResult` オブジェクトの `documents` フィールドにアクセスします。
+   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し実行します。次に、その配列メンバーの `value` を `BLOB` にキャストします。
+   * PDF ドキュメントを表すバイナリデータを、`BLOB` オブジェクトの `MTOM` プロパティにアクセスして抽出します 。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
 
 **関連トピック**
 

@@ -10,17 +10,17 @@ exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
 source-git-commit: ab40115c373cc06a7600494288b2670deb914e1a
 workflow-type: tm+mt
 source-wordcount: '2071'
-ht-degree: 78%
+ht-degree: 81%
 
 ---
 
 # [!DNL Adobe Sign] の AEM [!DNL Forms] との統合{#integrate-adobe-sign-with-aem-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview"> [アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=en#adobe-acrobat-sign-for-government) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=jp#adobe-acrobat-sign-for-government) |
 | AEM 6.5 | この記事 |
 
 [!DNL Adobe Sign] により、アダプティブフォームの電子サインワークフローを有効にできます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
@@ -77,14 +77,14 @@ ht-degree: 78%
 
      `https://<shard>/public/oauth/v2`
 
-     次に例を示します。
+     例：
      `https://secure.na1.echosign.com/public/oauth/v2`
 
    * の **[!UICONTROL トークン URL にアクセス]** フィールドには、Adobe Signデータベースシャードを含むデフォルトの URL が含まれます。 URL の形式は次の通りです。
 
      `https://<shard>/oauth/v2/token`
 
-     次に例を示します。
+     例：
      `https://api.na1.echosign.com/oauth/v2/token`
 
    各パラメーターの意味は次のとおりです。
@@ -193,7 +193,7 @@ AEM Forms と Adobe Acrobat Sign Solutions の接続を開始する前に、
 
 #### Adobe Sign チームとのリダイレクト URL とスコープの共有および資格情報の受信
 
-Adobe Acrobat Sign for Government Solutions チームには、 `re-direct URL` Adobe Acrobat Signアプリケーション（以下に示す）でAEM Formsと政府機関との接続に使用する資格情報（クライアント ID とクライアント秘密鍵）を生成するために有効にするスコープ。
+Adobe Acrobat Sign for Government Solutions チームは、AEM Forms と Adobe Acrobat Sign Solutions for Government を接続するための資格情報（クライアント ID とクライアント秘密鍵）を生成するために、Adobe Acrobat Sign アプリケーション（下記）で `re-direct URL` と特定のスコープを有効にする必要があります。
 
 前の節の最後の手順で作成してメモした `scopes`（下記）と `re-direct URL` を、Adobe Acrobat Sign Solutions for Government の担当者である [Adobe Professional Services チームメンバー](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password)と共有します。
 
@@ -226,14 +226,14 @@ Adobe Acrobat Sign for Government Solutions チームには、 `re-direct URL` A
 
      `https://<shard>/api/gateway/adobesignauthservice/api/v1/authorize`
 
-     次に例を示します。
+     例：
      `https://secure.na1.adobesign.us/api/gateway/adobesignauthservice/api/v1/authorize`
 
    * の **[!UICONTROL トークン URL にアクセス]** フィールドには、Adobe Signデータベースシャードを含むデフォルトの URL が含まれます。 URL の形式は次の通りです。
 
      `https://<shard>/api/gateway/adobesignauthservice/api/v1/token`
 
-     次に例を示します。
+     例：
      `https://secure.na1.adobesign.us/api/gateway/adobesignauthservice/api/v1/token`
 
    各パラメーターの意味は次のとおりです。

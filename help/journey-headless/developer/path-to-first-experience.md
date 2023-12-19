@@ -4,7 +4,7 @@ description: AEM ヘッドレスデベロッパージャーニーのこの部分
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1950'
 ht-degree: 93%
 
 ---
@@ -151,4 +151,4 @@ AEM でのヘッドレス開発に取りかかる前に、必要な機能がす�
 * [コンテンツフラグメントモデルの作成](/help/assets/content-fragments/content-fragments-models.md) - コンテンツフラグメントモデルに関する技術ドキュメント
 * [コンテンツフラグメントの作成](/help/assets/content-fragments/content-fragments.md) - コンテンツフラグメントに関する技術ドキュメント
 * [GraphQL を使用したコンテンツのクエリ実行](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - GraphQL API に関する技術ドキュメント
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

@@ -8,8 +8,8 @@ feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
 source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 36%
+source-wordcount: '591'
+ht-degree: 90%
 
 ---
 
@@ -17,27 +17,28 @@ ht-degree: 36%
 
 ## 概要 {#overview}
 
-Correspondence Management の Correspondence Create の UI を使用して、進行中のレターインスタンスのドラフトを保存し、送信済みのレターインスタンスを保存できます。
+Correspondence Management の通信を作成 UI を使用して、作成中のレターインスタンスのドラフトを保存することができます。また、この UI には送信済みのレターインスタンスが存在します。
 
-Correspondence Management には、送信済みのレターインスタンスやドラフトを扱うためのリストインターフェイスを構築できる API が用意されています。 この API は、エージェントの送信済みとドラフトのレターインスタンスを一覧表示して開きます。これにより、エージェントはドラフトまたは送信済みのレターインスタンスで作業を続行することができます。
+Correspondence Management には、送信済みまたはドラフトのレターインスタンスを取り扱うための一覧表示インターフェイスを構築できる API が用意されています。この API は、エージェントの送信済みとドラフトのレターインスタンスを一覧表示して開きます。これにより、エージェントはドラフトまたは送信済みのレターインスタンスで作業を続行することができます。
 
-## レターインスタンスを取得中 {#fetching-letter-instances}
+## レターインスタンスの取得 {#fetching-letter-instances}
 
 Correspondence Management は、LetterInstanceService サービスを通じてレターインスタンスを取得する API を公開します。
 
 | メソッド | 説明 |
 |--- |--- |
 | getAllLetterInstances | 入力クエリパラメーターに基づいてレターインスタンスを取得します。すべてのレターインスタンスを取得するには、クエリパラメーターを null として渡します。 |
-| getLetterInstance | レターインスタンス ID に基づいて、指定されたレターインスタンスを取得します。 |
-| letterInstanceExists | 指定された名前の LetterInstance が存在するかどうかを確認します。 |
+| getLetterInstance | レターインスタンス ID に基づいて指定したレターインスタンスを取得します。 |
+| letterInstanceExists | LetterInstance が指定した名前で存在するかどうかをチェックします。 |
 
 >[!NOTE]
 >
->LetterInstanceService は OSGI サービスで、そのインスタンスは Java™クラスの@Referenceまたは sling.getService(LetterInstanceService) を使用して取得できます。 クラス）を使用して取得できます。
+>LetterInstanceService は OSGI サービスであり、そのインスタンスは Java™ クラスの @Reference 
+または sling.getService（LetterInstanceService を使用して取得できます。クラス）を使用して取得できます。
 
 ### getAllLetterInstances の使用 {#using-nbsp-getallletterinstances}
 
-下記の API は、クエリオブジェクトに基づいてレターインスタンスを検索します（送信済みとドラフトの両方）。クエリオブジェクトが null の場合は、すべてのレターインスタンスを返します。 この API は、 [LetterInstanceVO](https://helpx.adobe.com/jp/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) オブジェクト。レターインスタンスの追加情報を抽出するために使用できます。
+下記の API は、クエリオブジェクトに基づいてレターインスタンスを検索します（送信済みとドラフトの両方）。クエリオブジェクトが null の場合、すべてのレターインスタンスを返します。この API は [LetterInstanceVO](https://helpx.adobe.com/jp/aem-forms/6-2/javadocs/com/adobe/icc/dbforms/obj/LetterInstanceVO.html) オブジェクトのリストを返します。このリストは、レターインスタンスの追加情報の抽出に使用することができます。
 
 **構文**： `List getAllLetterInstances(Query query) throws ICCException;`
 
@@ -48,15 +49,15 @@ Correspondence Management は、LetterInstanceService サービスを通じて�
    <td><strong>説明</strong></td>
   </tr>
   <tr>
-   <td>クエリ</td>
-   <td>クエリパラメーターは、レターインスタンスの検索/フィルタリングに使用されます。 ここでは、クエリはオブジェクトの最上位の属性/プロパティのみをサポートします。 クエリはステートメントで構成され、ステートメントオブジェクトで使用される「attributeName」はレターインスタンスオブジェクトのプロパティの名前である必要があります。<br /> </td>
+   <td>query</td>
+   <td>query パラメーターは、レターインスタンスの検索またはフィルタリングに使用されます。ここで、query はオブジェクトの最上位の属性またはプロパティのみサポートします。query は、ステートメントで構成されます。ステートメントのオブジェクトで使用される「attributeName」は、レターインスタンスオブジェクト内のプロパティの名前です。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-#### 例 1:SUBMITTED 型のすべてのレターインスタンスを取得する {#example-fetch-all-the-letter-instances-of-type-submitted}
+#### 例 1：タイプが送信済みのすべてのレターインスタンスを取得する {#example-fetch-all-the-letter-instances-of-type-submitted}
 
-次のコードは、送信済みのレターインスタンスのリストを返します。 ドラフトのみを取得するには、`LetterInstanceType.COMPLETE.name()`を`LetterInstanceType.DRAFT.name().`に変更します
+以下のコードは、送信済みのレターインスタンスのリストが返します。ドラフトのみを取得するには、`LetterInstanceType.COMPLETE.name()`を`LetterInstanceType.DRAFT.name().`に変更します
 
 ```java
 @Reference
@@ -121,7 +122,7 @@ LetterInstanceVO letterInstance = letterInstanceService.getLetterInstance(letter
 
 | **パラメーター** | **説明** |
 |---|---|
-| letterInstanceName | 存在するかどうかを確認するレターインスタンスの名前。 |
+| letterInstanceName | 存在するかどうかを確認したいレターインスタンスの名前。 |
 
 ```java
 @Reference
@@ -132,23 +133,23 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 ## レターインスタンスを開く {#opening-letter-instances}
 
-レターインスタンスのタイプは、「送信済み」または「ドラフト」にすることができます。 両方のタイプのレターインスタンスを開くと、異なる動作を示します。
+レターインスタンスのタイプは、送信済みまたはドラフトのいずれかです。両タイプのレターインスタンスを開くと、それぞれ異なる動作を示します。
 
-* 送信済みのレターインスタンスがある場合は、そのレターインスタンスを表すPDFが開きます。 サーバー上に保存される送信済みのレターインスタンスには、dataXML と処理済みの XDP も含まれます。これを使用して、PDF/A の作成などの事例を実行し、さらにカスタムで使用できます。
+* 送信済みのレターインスタンスがある場合は、そのレターインスタンスを表すPDFが開きます。 サーバー上に残存する送信済みのレターインスタンスにも dataXML と処理された XDP が含まれ、それらを PDF/A の作成のようなケースの実行やカスタマイズに使用することができます。
 * ドラフトレターインスタンスがある場合、通信を作成用 UI は、ドラフトが作成された時点の正確な前の状態に再読み込みされます。
 
-### ドラフトレターインスタンスを開く  {#opening-draft-letter-instance-nbsp}
+### ドラフトのレターインスタンスを開く {#opening-draft-letter-instance-nbsp}
 
-CCR UI は、再読み込みされたレターに使用できる cmLetterInstanceId パラメーターをサポートしています。
+CCR UI は cmLetterInstanceId パラメーターをサポートしており、これを使ってレターを再読み込みできます。
 
 `https://[hostName]:[portNo]/[contextPath]//aem/forms/createcorrespondence.html?random=[randomNo]&cmLetterInstanceId=[letterInstanceId]`
 
 >[!NOTE]
 >
-通信の再読み込み時に cmLetterId または cmLetterName/State/Version を指定する必要はありません。再読み込みされた通信に関するすべての詳細は、送信済みデータに既に含まれています。RandomNo は、ブラウザーのキャッシュの問題を回避するために使用されます。タイムスタンプを乱数として使用できます。
+通信の再読み込み時に cmLetterId または cmLetterName/State/Version を指定する必要はありません。再読み込みされた通信に関するすべての詳細は、送信済みデータに既に含まれています。RandomNo はブラウザーのキャッシュの問題を避けるために使用されます。乱数のタイムスタンプを使用できます。
 
 ### 送信済みのレターインスタンスを開く {#opening-submitted-letter-instance}
 
-送信済みのPDFは、次のレターインスタンス ID を使用して直接開くことができます。
+送信済み PDF は、次のレターインスタンス ID を使用して直接開くことができます。
 
 `https://[hostName]:[portNo]/[contextPath]/[letterInstanceId]`

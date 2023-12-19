@@ -5,7 +5,7 @@ exl-id: 764f78a7-1d3d-4406-85b1-b80dffae2350
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 90%
+ht-degree: 91%
 
 ---
 
@@ -190,6 +190,6 @@ AEM のコンテンツは、ヘッドレスであろうと従来の web ペー�
 * [翻訳対象コンテンツの特定](/help/sites-administering/tc-rules.md) - 翻訳が必要なコンテンツを翻訳ルールで特定する方法について説明します。
 * [翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md) - サードパーティの翻訳サービスと統合できるように翻訳統合フレームワークを設定する方法について説明します。
 * [翻訳プロジェクトの管理](/help/sites-administering/tc-manage.md) - AEM で機械翻訳と人間による翻訳の両方のプロジェクトを作成および管理する方法について説明します。
-* An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
-* [AEMのヘッドレスのTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)
+* [Adobe Experience Manager as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

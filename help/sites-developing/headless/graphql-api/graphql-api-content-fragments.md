@@ -5,8 +5,8 @@ feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '4847'
-ht-degree: 90%
+source-wordcount: '4781'
+ht-degree: 95%
 
 ---
 
@@ -104,7 +104,7 @@ AEM は、クエリ（両方のタイプ）を Dispatcher と CDN によって�
 
 ### GraphQL クエリのベストプラクティス（Dispatcher と CDN） {#graphql-query-best-practices}
 
-[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md) パブリッシュインスタンスでは、次のように使用することをお勧めします。
+[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)は、パブリッシュインスタンスで次のように使用することをお勧めします。
 
 * キャッシュされます
 * AEM で一元管理されます
@@ -118,7 +118,7 @@ POST リクエストを使用する GraphQL クエリは、キャッシュされ
 
 また、GraphQLはGETリクエストもサポートしますが、これらのリクエストは、永続化されたクエリを使用して回避できる制限（URL の長さなど）に達する可能性があります。
 
-詳しくは、 [永続クエリのキャッシュの有効化](#enable-caching-persisted-queries) 詳しくは、を参照してください。
+詳しくは、[永続クエリのキャッシュの有効化](#enable-caching-persisted-queries)を参照してください。
 
 >[!NOTE]
 >
@@ -195,7 +195,7 @@ GraphQL の仕様には、特定のインスタンス上のデータをクエリ
 
    * そのうちの 3 つ（`author`、`main`、`referencearticle`）は、ユーザーが管理しています。
 
-   * その他のフィールドは AEM によって自動的に追加され、特定のコンテンツフラグメントに関する情報を提供するための便利な方法を表しています。この例では、（[ヘルパーフィールド](#helper-fields)）`_path`、`_metadata`、`_variations` です。
+   * その他のフィールドはAEMによって自動的に追加され、特定のコンテンツフラグメントに関する情報を提供する便利な方法です。 この例では、( [ヘルパーフィールド](#helper-fields)) `_path`, `_metadata`, `_variations`.
 
 1. ユーザーが Article モデルに基づいてコンテンツフラグメントを作成すると、GraphQL を使用してそれをクエリできます。例については、（[GraphQL で使用するコンテンツフラグメント構造のサンプル](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)に基づいた）[サンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries)を参照してください。
 
@@ -259,7 +259,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | 定義済みリスト |  `String` |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  `[String]` |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
 | コンテンツ参照 |  `String` |  AEM 内の別のアセットへのパスを表示するために使用します |
-| フラグメント参照 |  *モデルタイプ*<br><br>単一のフィールド： `Model` - 直接参照されるモデル型 <br><br>マルチフィールド（1 つの参照タイプ）：`[Model]` - 型の配列 `Model`（配列から直接参照）<br><br>複数の参照型を持つマルチフィールド：`[AllFragmentModels]` - 和集合型を持つ配列から参照される、すべてのモデル型の配列 | モデルの作成時に定義された、特定のモデル型の 1 つ以上のコンテンツフラグメントの参照に使用します |
+| フラグメント参照 |  *モデルタイプ* <br><br>単一のフィールド： `Model`  — 直接参照されるモデルタイプ <br><br>複数フィールド（1 つの参照タイプ）: `[Model]`  — 型の配列 `Model`（配列から直接参照） <br><br>複数の参照型を持つマルチフィールド： `[AllFragmentModels]`  — 和集合型を持つ配列から参照される、すべてのモデル型の配列 | モデルの作成時に定義された、特定のモデル型の 1 つ以上のコンテンツフラグメントの参照に使用します |
 
 {style="table-layout:auto"}
 
@@ -288,7 +288,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 }
 ```
 
-特定のタイプのコンテンツフラグメントを 1 つ取得するには、まずそのパスも決定する必要があります。次に例を示します。
+特定のタイプのコンテンツフラグメントを 1 つ取得するには、まずそのパスも決定する必要があります。例：
 
 ```graphql
 {
@@ -559,7 +559,7 @@ GraphQL クエリでフィルタリングを使用して、特定のデータを
    * ASC（昇順）または DESC（降順）。デフォルトでは ASC が適用されます
    * 方向は、フィールドごとに指定できます。つまり、あるフィールドを昇順で、別のフィールドを降順で並べ替えることができます（name、firstName DESC）
 
-次に例を示します。
+例：
 
 ```graphql
 query {
@@ -591,7 +591,7 @@ query {
 >
 >この形式は、パフォーマンスに悪影響を及ぼす可能性があります。
 
-次に例を示します。
+例：
 
 ```graphql
 query {
@@ -689,25 +689,25 @@ query {
 >
 >* 内部の技術的制約により、ネストされたフィールドに並べ替えとフィルタリングを適用すると、パフォーマンスが低下します。そのため、ルートレベルで格納されたフィルターや並べ替えのフィールドを使用してください。これは、ページ分割された大きな結果セットをクエリする場合にも推奨される方法です。
 
-## GraphQLの永続クエリ — Dispatcher でのキャッシュの有効化 {#graphql-persisted-queries-enabling-caching-dispatcher}
+## GraphQL の永続クエリ - Dispatcher でのキャッシュの有効化 {#graphql-persisted-queries-enabling-caching-dispatcher}
 
 >[!CAUTION]
 >
->Dispatcher でのキャッシュが有効な場合、 [CORS フィルター](#cors-filter) が不要なので、セクションを無視できます。
+>Dispatcher でのキャッシュが有効な場合、[CORS フィルター](#cors-filter)が不要なので、セクションを無視できます。
 
 永続化されたクエリのキャッシュは、Dispatcher ではデフォルトで有効になっていません。 複数のオリジンで CORS（クロスオリジンリソース共有）を使用している場合、Dispatcher 設定を確認し、場合によっては更新する必要があるので、デフォルトを有効にすることはできません。
 
 >[!NOTE]
 >
->Dispatcher は `Vary` ヘッダー。
+>Dispatcher では `Vary` ヘッダーはキャッシュされません。
 >
 >他の CORS 関連ヘッダーのキャッシュは、Dispatcher で有効にすることができますが、CORS オリジンが複数ある場合は不十分な可能性があります。
 
 ### 永続クエリのキャッシュの有効化 {#enable-caching-persisted-queries}
 
-永続化されたクエリのキャッシュを有効にするには、Dispatcher 変数を定義します `CACHE_GRAPHQL_PERSISTED_QUERIES`:
+永続クエリーのキャッシュを有効にするには、Dispatcher 変数 `CACHE_GRAPHQL_PERSISTED_QUERIES` を定義します。
 
-1. 変数を Dispatcher ファイルに追加します。 `global.vars`:
+1. 変数を Dispatcher ファイル `global.vars` に追加します。
 
    ```xml
    Define CACHE_GRAPHQL_PERSISTED_QUERIES
@@ -736,18 +736,18 @@ query {
 
 >[!NOTE]
 >
->を [キャッシュ可能なドキュメントに対する Dispatcher の要件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)を指定しない場合、Dispatcher はサフィックスを追加します `.json` をすべての永続化されたクエリ URL に追加し、結果をキャッシュできるようにします。
+>を [キャッシュ可能なドキュメントに対する Dispatcher の要件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html?lang=ja#how-does-the-dispatcher-return-documents%3F)を指定しない場合、Dispatcher はサフィックスを追加します `.json` をすべての永続化されたクエリ URL に追加し、結果をキャッシュできるようにします。
 >
->このサフィックスは、永続化されたクエリのキャッシュが有効になると、書き換えルールによって追加されます。
+>この接頭辞は、永続クエリのキャッシュが有効になると、書き換えルールによって追加されます。
 
 ### Dispatcher での CORS の設定 {#cors-configuration-in-dispatcher}
 
-CORS リクエストを使用するお客様は、Dispatcher で CORS の設定を確認および更新する必要が生じる場合があります。
+CORS リクエストを使用するお客様に、Dispatcher で CORS の設定を確認および更新する必要が生じる場合があります。
 
-* The `Origin` ヘッダーは、Dispatcher を介してAEMパブリッシュに渡さないでください。
-   * 次を確認します。 `clientheaders.any` ファイル。
+* Dispatcher を介して AEM パブリッシュに `Origin` ヘッダーを渡さないでください。
+   * `clientheaders.any` ファイルを確認します。
 * 代わりに、許可されたオリジンに対して、Dispatcher レベルで CORS リクエストを評価する必要があります。 また、この方法では、CORS 関連のヘッダーが、どの場合でも 1 か所で正しく設定されます。
-   * このような設定は、 `vhost` ファイル。 次に設定例を示します。簡単にするために、CORS 関連の部分のみが提供されています。 特定の使用例に合わせて調整できます。
+   * このような設定は `vhost` ファイルに追加されます。次に設定例を示します。簡単にするために、CORS 関連の部分のみが提供されています。特定のユースケースに合わせて調整してください。
 
   ```xml
   <VirtualHost *:80>
@@ -894,7 +894,7 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
 
    * 操作の場合：
 
-      * `_operator`：特定の演算子（`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`）を適用します
+      * `_operator` ：特定の演算子を適用します。 `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
          * [サンプルクエリ - 「Jobs」という名前を持たないすべての人物](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)を参照してください
          * [サンプルクエリ - `_path` が特定のプレフィックスで始まるすべてのアドベンチャーを参照してください](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
 
@@ -917,7 +917,7 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
 
 >[!CAUTION]
 >
->次の場合 [Dispatcher のキャッシュが有効になっている](#graphql-persisted-queries-enabling-caching-dispatcher) その場合、CORS フィルターは不要なので、このセクションは無視できます。
+>[Dispatcher のキャッシュが有効になっている](#graphql-persisted-queries-enabling-caching-dispatcher)場合、CORS フィルターは不要なので、このセクションは無視できます。
 
 >[!NOTE]
 >

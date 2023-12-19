@@ -7,8 +7,8 @@ feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 91%
+source-wordcount: '631'
+ht-degree: 95%
 
 ---
 
@@ -110,7 +110,7 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
    * このコードは、`assetAnalytics.dispatcher.init()` を呼び出す前に、`_satellite.getToolsByType('sc')[0].getS()` が初期化され、`assetAnalytics,dispatcher.init` が使用可能であることを確認します。このため、手順 11 ではこのコードの追加をスキップできます。
    * Insights ページトラッカーコード（**[!UICONTROL ツール／Assets／Insights ページトラッカー]**）内のコメントに記述されているように、ページトラッカーが `AppMeasurement` オブジェクトを作成しないとき、最初の 3 つの引数（RSID、トラッキングサーバー、訪問者の名前空間）は関係ありません。これを示すため代わりに空の文字列が渡されます。\
       その他の引数は、インサイト設定ページ（**[!UICONTROL ツール／アセット／インサイト設定]**）で設定された内容に対応しています。
-   * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグを設定する場合は、配列セレクターのインデックスを適切に変更します。 配列内のエントリは、DTM インターフェイスで使用できるSiteCatalystツールに従って並べられます。
+   * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグが設定されている場合は、配列セレクターのインデックスをそれに応じて変更します。配列のエントリは、DTM インターフェイスで使用可能な SiteCatalyst ツールの順に並んでいます。
 
 1. 保存して、コードエディターウィンドウを閉じます。その後、変更内容をツール設定で保存します。
 1. 「**[!UICONTROL 承認]**」タブで、承認が保留されている両方の項目を承認します。DTM タグを Web ページに挿入する準備ができました。

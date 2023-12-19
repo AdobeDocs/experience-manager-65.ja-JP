@@ -1,6 +1,6 @@
 ---
 title: AEM インボックスでの Forms アプリケーションとタスクの管理
-description: AEM Inbox を使用すると、アプリケーションの送信やタスクの管理を通じて、Forms中心のワークフローを起動できます。
+description: AEM インボックスを使用することで、アプリケーションの送信やタスクの管理を通じて Forms 中心のワークフローを起動できます。
 contentOwner: vishgupt
 topic-tags: document_services, publish
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,7 +9,7 @@ exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1067'
-ht-degree: 86%
+ht-degree: 87%
 
 ---
 

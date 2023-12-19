@@ -8,8 +8,8 @@ content-type: reference
 exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 93%
+source-wordcount: '825'
+ht-degree: 94%
 
 ---
 
@@ -34,7 +34,7 @@ Adobe Experience Manager（AEM）を使用すると、Adobe Experience Cloud の
 
 Adobe Analytics を使用すると、サイトのデータを分析できます。
 
-Adobe Analyticsとの統合により、次の操作が可能になります。
+Adobe Analytics との統合によって、次の操作ができるようになります。
 
 * Analytics のユーザートラッキングを有効にする。
 * 実行モード（例えば、オーサー、パブリッシュ）を別のレポートスイートにマッピングする。

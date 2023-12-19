@@ -4,8 +4,8 @@ description: Adobe Experience Manager の強力で柔軟なヘッドレス機能
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
 source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 89%
+source-wordcount: '720'
+ht-degree: 90%
 
 ---
 
@@ -81,6 +81,6 @@ Adobe Experience Manager（AEM）では、AEM GraphQL API を使用して、コ�
 * AEM ヘッドレスデベロッパージャーニー
    * [CMS ヘッドレス開発について](/help/journey-headless/developer/learn-about.md)
    * [コンテンツをモデル化する方法](/help/journey-headless/developer/model-your-content.md)
-* [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

@@ -5,7 +5,7 @@ exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '783'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 91%
 >[!NOTE]
 >GraphiQL IDE を使用する前に、[設定ブラウザー](/help/assets/content-fragments/content-fragments-configuration-browser.md)で[エンドポイントを設定](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)しておく必要があります。
 
-The **GraphiQL** ツールを使用すると、次のことが可能になり、GraphQLクエリをテストおよびデバッグできます。
+**GraphiQL** ツールを使用すると、次のことが可能になるので、GraphQL クエリーをテストおよびデバッグできます。
 
 * クエリに使用する Sites 設定に適した&#x200B;**エンドポイント**&#x200B;を選択する
 * 新しいクエリを直接入力する
 * **[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)**&#x200B;を作成してアクセスする
-* クエリを実行して結果をすぐに確認する
+* クエリーを実行して結果をすぐに確認する
 * **クエリ変数**&#x200B;を管理する
 * **永続クエリ**&#x200B;を保存して管理する
 * **永続クエリ**&#x200B;を公開または非公開にする（`dev-publish` との間など）
@@ -89,7 +89,7 @@ The **GraphiQL** ツールを使用すると、次のことが可能になり、
 
 <!-- more details needed here? -->
 
-また、GraphiQL IDE を使用して、 [クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables).
+GraphiQL IDE では、[クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)を管理することもできます。
 
 例：
 
@@ -140,7 +140,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## URL をコピーしてクエリに直接アクセスする {#copy-url}
 
-The **URL をコピー** 「 」オプションを使用すると、永続化されたクエリに直接アクセスして結果を確認するために使用する URL をコピーして、クエリをシミュレートできます。 これは、ブラウザーでアクセスするなどしてテストに使用できます。
+「**URL をコピー**」オプションを使用すると、永続クエリに直接アクセスするのに使用する URL をコピーしてクエリをシミュレートし、結果を確認することができます。これは、ブラウザーでアクセスするなどしてテストに使用できます。
 
 <!--
   >[!NOTE]

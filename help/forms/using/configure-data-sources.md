@@ -9,7 +9,7 @@ exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
 source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
 workflow-type: tm+mt
 source-wordcount: '2073'
-ht-degree: 80%
+ht-degree: 81%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 80%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
 ![データ統合](do-not-localize/data-integeration.png)
 
-AEM Forms Data Integration を使用すると、異なるデータソースを設定して接続できます。 以下のタイプがサポートされています。これらのタイプは、すぐに使用できます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
+AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のタイプがサポートされています。これらのタイプは、すぐに使用できます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
 * リレーショナルデータベース — MySQL、Microsoft SQL Server、IBM DB2、OracleRDBMS、postgreSQL、Sybase
 * AEM ユーザープロファイル

@@ -1,6 +1,6 @@
 ---
 title: メールによるフォーム送信確認の送信
-description: AEM Formsでは、フォームの送信時にユーザーに確認応答を送信する電子メール送信アクションを設定できます。
+description: AEM Forms では、フォームの送信時に確認をユーザーに送信するメール送信アクションを設定できます。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
@@ -9,19 +9,19 @@ exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 71%
+ht-degree: 97%
 
 ---
 
 # メールによるフォーム送信確認の送信 {#sending-a-form-submission-acknowledgement-via-email}
 
-## アダプティブフォームのデータ送信 {#adaptive-form-data-submission}
+## アダプティブフォームデータの送信 {#adaptive-form-data-submission}
 
-アダプティブフォームには、すぐに使用できる複数の機能が用意されています [アクションを送信](../../forms/using/configuring-submit-actions.md) フォームデータを異なるエンドポイントに送信するためのワークフロー。
+アダプティブフォームには、いくつかのすぐに使用できる[送信アクション](../../forms/using/configuring-submit-actions.md)ワークフローが用意されており、フォームデータを複数のエンドポイントに送信できます。
 
 例えば、**[!UICONTROL メールを送信]**&#x200B;アクションは、アクティビティフォームの送信に成功したときに、メールを送信します。これは、フォームデータと PDF をメールで送信するように設定することもできます。
 
-この記事では、アダプティブフォームで電子メールアクションを有効にする手順と、様々な設定について詳しく説明します。
+この記事では、アダプティブフォームでメールアクションを有効にする手順や、様々な設定について詳しく説明します。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ ht-degree: 71%
 
    **[!UICONTROL 件名]**&#x200B;および&#x200B;**[!UICONTROL メールテンプレート]**&#x200B;フィールドに、それぞれ件名とメール本文を指定します。
 
-   また、フィールドに変数のプレースホルダーを指定することもできます。指定した場合、エンドユーザーがフォームを正常に送信したときにフィールドの値が処理されます。 詳しくは、 [アダプティブフォームのフィールド名を使用した電子メールコンテンツの動的作成](../../forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
+   フィールドに変数プレースホルダーを指定することもできます。この場合、フィールドの値は、フォームがエンドユーザーによって正しく送信されたときに処理されます。詳しくは、[アダプティブフォームのフィールド名を使用したメールコンテンツの動的作成](../../forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p)を参照してください。
 
    フォームに添付ファイルがあり、それをメールに添付する場合は、**[!UICONTROL 添付ファイルを含める]**&#x200B;を選択してください。
 
@@ -59,9 +59,9 @@ ht-degree: 71%
 
 1. 「![保存](assets/save_icon.svg)」をクリックして、変更を保存します。
 
-### アダプティブフォームのフィールド名を使用した電子メールコンテンツの動的作成 {#using-adaptive-form-field-names-to-dynamically-create-email-content}
+### アダプティブフォームのフィールド名を使用したメールコンテンツの動的作成 {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
-アダプティブフォーム内のフィールド名はプレースホルダーと呼ばれ、ユーザーがフォームを送信した後にそのフィールドの値に置き換えられます。
+アダプティブフォームのフィールド名はプレースホルダーと呼ばれ、ユーザーがフォームを送信した後にそのフィールドの値によって置き換えられます。
 
 **[!UICONTROL メールを送信]**&#x200B;アクションでは、アクションを実行する際に処理されるプレースホルダーを使用できます。これは、ユーザーがフォームを送信する際に、メールのヘッダー（**[!UICONTROL 宛先]**、**[!UICONTROL CC]**、**[!UICONTROL BCC]**、**[!UICONTROL 件名]**&#x200B;など）が生成されることを意味します。
 
@@ -79,7 +79,7 @@ ht-degree: 71%
 
 また、変数プレースホルダーは、「**[!UICONTROL 件名]**」および「**[!UICONTROL メールテンプレート]**」フィールドにも使用できます。
 
-次に例を示します。
+例：
 
 `Hi ${first_name} ${last_name},`
 

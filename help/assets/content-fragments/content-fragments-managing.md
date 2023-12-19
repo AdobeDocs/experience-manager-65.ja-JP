@@ -6,8 +6,8 @@ role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 94%
+source-wordcount: '1712'
+ht-degree: 96%
 
 ---
 
@@ -110,7 +110,7 @@ ht-degree: 94%
 
 * **編集**
 
-   * 以下が可能です。 [コンテンツ編集用にフラグメントを開く](/help/assets/content-fragments/content-fragments-variations.md) 要素、バリエーション、関連するコンテンツおよびメタデータと共に表示されます。
+   * フラグメントの要素、バリエーション、および関連付けられているコンテンツやメタデータと共に[コンテンツを編集するためにフラグメントを開く](/help/assets/content-fragments/content-fragments-variations.md)ことができます。
 
 * **タグを管理**
 * **コレクションに追加**
@@ -311,7 +311,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 * フラグメント内の選択されたテキストセグメントに固有
 >
 
-次に例を示します。
+例：
 
 ![タイムライン](assets/cfm-managing-05.png)
 
@@ -333,7 +333,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
    * 挿入されたテキスト - 緑
    * 置き換えられたテキスト - 青
 
-* 全画面表示アイコンを使用すると、どちらかのバージョンで開いた後、並列表示に切り替えることができます
+* 全画面表示アイコンを使用すると、いずれかのバージョンで開いた後で、並列表示に切り替えることができます
 * 特定のバージョンに&#x200B;**戻す**&#x200B;ことができます
 * 「**完了**」を選択すると、コンソールに戻ります
 

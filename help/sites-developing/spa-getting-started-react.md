@@ -1,6 +1,6 @@
 ---
 title: React を使用した AEM での SPA の概要
-description: この記事では、サンプルのSPAアプリケーションを紹介し、その設定方法を説明し、React フレームワークを使用して独自のSPAをすぐに使い始めるための方法について説明します。
+description: この記事では、サンプルの SPA アプリケーションを紹介し、その設定方法を説明するほか、React フレームワークを使用して独自の SPA の運用を速やかに開始する方法についても説明します。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -10,13 +10,13 @@ exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 86%
+ht-degree: 91%
 
 ---
 
 # React を使用した AEM での SPA の概要{#getting-started-with-spas-in-aem-react}
 
-単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築することを望み、作成者は SPA フレームワークを使用して構築されたサイトのコンテンツを AEM 内でシームレスに編集することを望みます。
+単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者にとっては、SPA フレームワークを使用してサイトを構築できると都合がよく、作成者にとっては、SPA フレームワークを使用して構築されたサイトのコンテンツを AEM 内でシームレスに編集できると便利です。
 
 SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、React フレームワーク上のシンプルな SPA アプリケーションを紹介し、その設定方法を説明するほか、独自の SPA の運用をすぐに開始する方法についても説明します。
 
@@ -222,7 +222,7 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-AEMのSPAの中心概念は、SPAコンポーネントをAEMコンポーネントにマッピングし、コンテンツが変更された場合（および逆の場合）にコンポーネントを更新するという考えです。 この通信モデルの概要については、[SPA エディターの概要](/help/sites-developing/spa-overview.md)のドキュメントを参照してください。
+AEM の SPA の中核概念は、SPA コンポーネントを AEM コンポーネントにマッピングし、コンテンツが変更されたときにコンポーネントも更新する（またはその逆も含む）というものです。この通信モデルの概要については、[SPA エディターの概要](/help/sites-developing/spa-overview.md)のドキュメントを参照してください。
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 

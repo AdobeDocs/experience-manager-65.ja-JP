@@ -8,7 +8,7 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3476'
 ht-degree: 99%
 
 ---
@@ -141,7 +141,7 @@ Amazon の Simple Storage Service（S3）にデータを格納するように AE
 
 >[!NOTE]
 >
->AEM 6.5 では、Amazon S3 でのデータの保存がサポートされますが、他のプラットフォームにデータを保存するようサポートが拡張されるわけではありません。他のプラットフォームでは、Amazon S3 API を独自に実装している可能性があります。
+>AEM 6.5 では、Amazon S3 でのデータの保存がサポートされますが、他のプラットフォームでのデータ保存までサポートが拡張されるわけではありません。他のプラットフォームでは、Amazon S3 API の独自の実装方法がある可能性があります。
 
 S3 データストア機能を有効にするには、S3 データストアコネクタを含む機能パックをダウンロードしてインストールする必要があります。[アドビリポジトリ](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)に移動し、1.10.x バージョンの機能パックの中から最新のバージョン（com.adobe.granite.oak.s3connector-1.10.0.zip など）をダウンロードします。さらに、[AEM 6.5 リリースノート](/help/release-notes/release-notes.md)ページに記載されている最新の AEM サービスパックをダウンロードしてインストールする必要もあります。
 
@@ -455,7 +455,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 上述の設定に加えて、次の設定も指定できます。
 
-* path：データストアのパスです。デフォルト値は `<aem-install>/repository/datastore.` です。
+* path：データストアのパス。 デフォルトは `<aem-install>/repository/datastore.` です
 * RecordLength：データストアに格納するオブジェクトの最小サイズです。デフォルト値は 16 KB です。
 * maxCachedBinarySize：このサイズ以下のサイズのバイナリは、メモリキャッシュに格納されます。サイズはバイト単位です。デフォルト値は 17408 KB（17 KB）です。
 * cacheSize：キャッシュのサイズです。値はバイト数で指定されます。デフォルト値は 64 GB です。

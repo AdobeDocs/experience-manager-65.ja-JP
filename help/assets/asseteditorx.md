@@ -7,8 +7,8 @@ feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 80%
+source-wordcount: '653'
+ht-degree: 100%
 
 ---
 
@@ -52,21 +52,21 @@ Geometrixx には次のサンプルページがあります。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
-一部の [!DNL Assets] コンポーネントでは、 ウィジェットライブラリが使用されます。コンテンツのコンテキストで適切にレンダリングするには、追加のスタイルシートを読み込む必要があります。 タグアクションコンポーネントには、もう 1 つ必要です。
+一部の [!DNL Assets] コンポーネントでは、 ウィジェットライブラリが使用されます。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
-### Geometrixxスタイルシート {#geometrixx-style-sheet}
+### Geometrixx スタイルシート {#geometrixx-style-sheet}
 
 サンプルページコンポーネントでは、すべてのセレクターが `static.css`（`/etc/designs/geometrixx/static.css`）の `.asseteditor` で始まっている必要があります。ベストプラクティス：すべての `.asseteditor` セレクターをスタイルシートにコピーし、ルールを必要に応じて調整します。
 
 ### FormChooser：最終的に読み込まれるリソースの調整 {#formchooser-adjustments-for-eventually-loaded-resources}
 
-アセットエディターはフォーム選択機能を使用します。この機能を使用すると、フォームセレクターとフォームのパスをアセットの URL に追加するだけで、同じフォームページ上のリソース（この場合はアセット）を編集できます。
+アセットエディターは Form Chooser を使用しています。これにより、フォームセレクターとフォームのパスをアセットの URL に追加するだけで、同じフォームページでリソース（ここではアセット）を編集できるようになります。
 
-次に例を示します。
+例：
 
 * プレーンフォームページ：[http://localhost:4502/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/geometrixx/jp/press/asseteditor.html)
 * フォームページに読み込まれるアセット：[http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)
@@ -208,16 +208,16 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 
 現在使用可能なメタデータは `/libs/dam/options/metadata` で定義されています。
 
-* このディレクトリ内の第 1 レベルには、名前空間が含まれます。
-* 各名前空間内の項目は、ローカルパーツ項目の結果など、メタデータを表します。
+* このディレクトリ内の最初のレベルには名前空間が含まれます。
+* それぞれの名前空間内の項目は、ローカルパーツ項目の結果などのメタデータを表します。
 * メタデータコンテンツには、タイプの情報と複数値オプションが含まれます。
 
 これらのオプションは `/apps/dam/options/metadata` で上書きできます。
 
 1. `/libs` 配下のディレクトリを `/apps` の下にコピーします。
 
-1. 項目を削除、変更、または追加します。
+1. 項目を削除、変更または追加します。
 
 >[!NOTE]
 >
->新しい名前空間を追加する場合は、リポジトリ/CRX に登録する必要があります。 送信しない場合は、メタデータフォームを送信するとエラーが発生します。
+>新しい名前空間を追加する場合は、リポジトリ／CRX に登録する必要があります。この作業を行わない場合、メタデータフォームで送信を行うとエラーが発生します。

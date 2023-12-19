@@ -14,7 +14,7 @@ ht-degree: 92%
 
 # 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 
@@ -114,7 +114,7 @@ ht-degree: 92%
 1. サブフォームの繰り返し回数の最大値を指定する場合は、「最大値」を選択して、関連するボックスに数値を入力します。「最大値」に値を入力しなければ、サブフォームの繰り返し回数は無制限になります。
 1. サブフォームの繰り返し回数をデータ量に関係なく指定する場合は、「初期値」オプションを選択して、関連するボックスに数値を入力します。このオプションを選択した場合は、データが使用できないときやデータ項目が指定された「初期値」の値より少ないときにも、フォーム上に空のサブフォームインスタンスが配置されます。
 1. 親サブフォームにボタンを 2 つ追加します。ひとつはインスタンスの追加に、もうひとつは繰り返し可能なサブフォームのインスタンスの削除に使用します。詳しい手順については、「[アクションの作成](https://help.adobe.com/ja_JP/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2)」を参照してください。
-1. ここで、アダプティブフォームにフォームテンプレートをリンクします。詳しい手順については、[テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template)を参照してください。
+1. ここで、アダプティブフォームにフォームテンプレートをリンクします。手順について詳しくは、[テンプレートに基づいてアダプティブフォームを作成](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template)を参照してください。
 1. 手順 9 で作成したボタンを使用して、サブフォームを追加および削除します。
 
 添付の .zip ファイルには、繰り返し可能なサブフォーラムのサンプルが含まれています。
@@ -123,7 +123,7 @@ ht-degree: 92%
 
 ## XML スキーマ（XSD）の繰り返し設定の使用  {#using-repeat-settings-of-an-xml-schema-xsd-br}
 
-XML スキーマ、または任意の複合タイプ要素の minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。XML スキーマについて詳しくは、[XML スキーマをフォームモデルとして使用するアダプティブフォームを作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)を参照してください。
+XML スキーマ、または任意の複合タイプ要素の minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。XML スキーマについて詳しくは、[XML スキーマをフォームモデルとして使用してアダプティブフォームを作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)を参照してください。
 
 以下のコードでは、`SampleType` パネルで minOccurs および maxOccurs プロパティが使用されています。
 

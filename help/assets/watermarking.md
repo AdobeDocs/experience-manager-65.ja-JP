@@ -8,8 +8,8 @@ exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 87%
+source-wordcount: '319'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 87%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/watermark-assets.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-[!DNL Adobe Experience Manager Assets] では、アセットにデジタル透かしを追加できます。この透かしは、アセットの信頼性や著作権の所有権を確認するのに役立ちます。 [!DNL Experience Manager Assets] では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
+[!DNL Adobe Experience Manager Assets] ではアセットにデジタル透かしを追加することができ、ユーザーがアセットの信頼性や著作権の所有権を確認できるようになります。[!DNL Experience Manager Assets] では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
 
 アセットに透かしを適用できるようにするには、[!UICONTROL DAM アセットの更新] ワークフローに透かしステップを追加してください。
 

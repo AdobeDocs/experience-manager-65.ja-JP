@@ -1,11 +1,11 @@
 ---
 title: 製品コックピット
-description: 製品コックピットの操作 リンクされた製品カタログと関連コンテンツの統合された概要を提供します。
+description: リンクされた製品カタログと関連コンテンツの統一された概要を提供する製品コックピットの操作。
 exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -29,11 +29,11 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->ステージングされたカタログ機能は、Adobe Commerce およびトークンベースの認証をサポートするサードパーティ製のコネクタでのみ使用できます。
+>ステージングされたカタログ機能は、Adobe Commerce と、トークンベースの認証をサポートするサードパーティ製のコネクタでのみ使用できます。
 
 ## 製品コックピットを開く {#opening-product-cockpit}
 
-製品コックピットにアクセスする最も簡単な方法は、AEMのメインメニューの「コマース」メニューを使用することです。 オムニサーチ（コマースを検索）を使用したり、`https://<yourAEMInstance>/commerce.html` を開いたりすることもできます。
+製品コックピットにアクセスする最も簡単な方法は、AEM のメインメニューの「コマース」メニューを使用することです。オムニサーチ（コマースを検索）を使用したり、`https://<yourAEMInstance>/commerce.html` を開いたりすることもできます。
 
 ![AEM メニュー](/help/commerce/cif/assets/aem-menu.png)
 
@@ -47,13 +47,13 @@ ht-degree: 93%
 
 ![カテゴリの子](/help/commerce/cif/assets/catalog-category-children.png)
 
-製品をクリックすると、製品のバリエーションが（使用可能な場合）読み込まれます。
+製品をクリックすると、製品のバリエーションが読み込まれます（使用可能な場合）。
 
 ![製品のバリエーション](/help/commerce/cif/assets/catalog-product-variation.png)
 
 >[!NOTE]
 >
->AEM の製品カタログデータは、設定されたコマースエンドポイントを介してリアルタイムに取得されるデータです。製品カタログデータは AEM に保存されません。
+>AEM の製品カタログデータは、設定されたコマースエンドポイントを介してリアルタイムに取得されるデータです。製品カタログデータは AEM に保存されていません。
 
 ## 製品カタログの検索 {#searching-product-catalog}
 

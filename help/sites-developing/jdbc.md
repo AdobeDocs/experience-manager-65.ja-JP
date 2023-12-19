@@ -82,7 +82,7 @@ ht-degree: 83%
 
 次のリンクより、一般的なデータベース製品のダウンロードページを開くことができます。
 
-* [Microsoft® SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+* [Microsoft® SQL Server](https://www.microsoft.com/ja-jp/sql-server/sql-server-downloads)
 * [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 

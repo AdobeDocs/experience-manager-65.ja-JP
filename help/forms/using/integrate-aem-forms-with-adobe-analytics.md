@@ -6,13 +6,13 @@ exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1762'
-ht-degree: 77%
+ht-degree: 78%
 
 ---
 
 # [!DNL Adobe Launch] を使用した Analytics {#analyticsusingadobelaunch}
 
-AEM Formsとの統合 [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=ja) を使用して、発行済みフォームのパフォーマンス指標を取得および追跡できます。 これらの指標を分析する目的は、ビジネスユーザーがエンドユーザーの行動に関するインサイトを得て、データキャプチャエクスペリエンスを最適化できるようにすることです。Adobe Analytics for Adaptive Forms を介して、ログインしているユーザーとログインしていない（匿名）ユーザーの両方の動作を取得および追跡できます。
+AEM Forms は [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=ja) と統合されているので、公開したフォームのパフォーマンス指標を取得および追跡できます。これらの指標を分析する目的は、ビジネスユーザーがエンドユーザーの行動に関するインサイトを得て、データキャプチャエクスペリエンスを最適化できるようにすることです。Adobe Analytics for Adaptive Forms を介して、ログインしているユーザーとログインしていない（匿名）ユーザーの両方の動作を取得および追跡できます。
 
 Cloud Service フレームワークを使用して分析を実行することもできます。AEM Forms を Cloud Service フレームワークと統合する方法について詳しくは、[Cloud Service フレームワークを使用した Analytics](/help/forms/using/configure-analytics-forms-documents.md) を参照してください。Cloud Service フレームワークを使用して Analytics よりも Adobe Launch を使用する主な利点は、標準のイベントに加えて、カスタムイベントも定義できる点です。 カスタマイズされたイベントは、ルールエディターまたは顧客の clientlib を使用して定義され、[!DNL Adobe Analytics] のイベントにマップされます。
 

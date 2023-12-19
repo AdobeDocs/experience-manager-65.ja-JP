@@ -1,6 +1,6 @@
 ---
 title: SharePoint Connector のライセンス、著作権情報および免責事項
-description: SharePoint Connector のライセンス、著作権情報、免責事項について説明します。
+description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
@@ -9,18 +9,18 @@ docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
 source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 62%
+source-wordcount: '333'
+ht-degree: 100%
 
 ---
 
 # SharePoint Connector のライセンス、著作権情報および免責事項{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-この節では、Day JCR Connector for MS® SharePointで明示的に記述する必要があるすべてのライセンス、著作権に関する通知、免責事項を示します。
+この節では、Day JCR Connector for MS SharePoint に関して明示的に記載する必要があるすべてのライセンス、著作権情報および免責事項について説明します。
 
-## コネクタのサードパーティライブラリの概要 {#overview-of-connector-rd-party-libraries}
+## Connector サードパーティライブラリの概要 {#overview-of-connector-rd-party-libraries}
 
-次の表に、SharePoint Connector コアライブラリ内で使用されるサードパーティライブラリと、それらのライブラリでカバーされるライセンス、著作権情報、免責事項を示します。
+以下の表に、SharePoint Connector のコアライブラリ内で使用されるサードパーティライブラリ、およびそれらに適用されるライセンス、著作権情報または免責事項を示します。
 
 | ライブラリ | ライセンスタイプ |
 |---|---|
@@ -61,7 +61,7 @@ ht-degree: 62%
 
 ## CRX サードパーティライブラリの概要 {#overview-of-crx-rd-party-libraries}
 
-次の表に、CRX 内で使用されるサードパーティのライブラリと、それらが適用されるライセンス、著作権情報、免責事項を示します。
+以下の表に、CRX 内で使用されるサードパーティライブラリ、およびそれらに適用されるライセンス、著作権情報、または免責事項を記載します。
 
 <table>
  <colgroup>
@@ -153,7 +153,7 @@ ht-degree: 62%
 
 ## CQSE サードパーティライブラリの概要 {#overview-of-cqse-rd-party-libraries}
 
-次の表に、Communiqué Servlet Engine 内で使用されるサードパーティのライブラリと、それらが適用されるライセンス、著作権情報、免責事項を示します。
+以下の表に、Communiqué Servlet Engine 内で使用されるサードパーティライブラリ、およびそれらに適用されるライセンス、著作権情報、または免責事項を記載します。
 
 <table>
  <colgroup>
@@ -962,7 +962,7 @@ ht-degree: 62%
      (LFI#134403/Form ID#011801)
 ```
 
-## Sun サーブレット {#sun-servlet}
+## Sun Servlet {#sun-servlet}
 
 ```xml
      Java(TM) Servlet API Specification ("Specification")

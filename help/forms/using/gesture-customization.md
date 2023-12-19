@@ -9,7 +9,7 @@ exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 68%
+ht-degree: 88%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 68%
 
 AEM Forms アプリケーションのジェスチャーをカスタマイズして、アプリケーションを操作するための独自の方法を提供できます。例えば、タスクまたはスタートポイントを開いたり閉じたりするジェスチャーを新たに追加できます。
 
-## AEM Formsアプリでジェスチャーをカスタマイズするには {#to-customize-gestures-in-aem-forms-app}
+## AEM Forms アプリケーションのジェスチャーをカスタマイズするには {#to-customize-gestures-in-aem-forms-app}
 
-AEM Formsアプリでは、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。 次の例では、AEM Forms アプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはスタートポイントを開くための手順を示しています。
+AEM Forms アプリケーションでは、左スワイプで新しいタスクまたはスタートポイントを開くことができますが、右スワイプでは何も操作できません。次の例では、AEM Forms アプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはスタートポイントを開くための手順を示しています。
 
 1. プロジェクトを開きます。
 
@@ -43,7 +43,7 @@ AEM Formsアプリでは、左スワイプは新しいタスクまたは Startpo
 
    `"EventName Selector": "Function"`
 
-   トリガー時に、 `EventName`次で指定されたHTML要素に対して： `Selector`、 `Function`が呼び出されます。
+   `Selector` で指定された HTML 要素で `EventName` という名前の Javascript イベントをトリガーすると、`Function` が呼び出されます。
 
 1. 検索
 
@@ -66,6 +66,6 @@ AEM Formsアプリでは、左スワイプは新しいタスクまたは Startpo
      &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;、
 
 1. `task.js` ファイルを保存して閉じます。
-1. AEM Formsアプリをビルドして実行します。 これで、左スワイプと右スワイプを使用してを開くことができます。
+1. AEM Forms アプリケーションをビルドして実行します。これで、左スワイプと右スワイプを使用して開くことができます。
 
 同様に、さまざまな組み合わせのジェスチャー、HTML 要素、および関数に対して、他のビューで変更を行うことができます。

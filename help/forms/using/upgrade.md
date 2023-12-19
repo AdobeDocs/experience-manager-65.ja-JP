@@ -9,8 +9,8 @@ role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 81%
+source-wordcount: '364'
+ht-degree: 90%
 
 ---
 
@@ -61,7 +61,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 JEE 上のAEM 6.5.18.0 Formsには、次の 2 種類のインストーラーが用意されています。 [完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) および [パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja).
 
-**完全インストーラー**：フルインストーラーを使用して、新しいAEM Formsインスタンスを設定するか、JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.18.0 Formsへのアップグレードを実行できます。
+**完全なインストーラー**：完全なインストーラーを使用すると、新しい AEM Forms インスタンスを設定したり、AEM 6.5.x.x Forms on JEE から AEM 6.5.18.0 Forms on JEE へのアップグレードを実行したりすることができます。
 
 **パッチインストーラー**：パッチインストーラーは、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。パッチインストーラーを使用すると、AEM Forms の最新バージョンにアップグレードできます。
 

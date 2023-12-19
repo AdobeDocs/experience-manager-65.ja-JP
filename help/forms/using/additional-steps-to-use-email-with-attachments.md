@@ -4,8 +4,8 @@ description: JEE 上のAEM Formsプラットフォームで添付ファイルを
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
 source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 64%
+source-wordcount: '236'
+ht-degree: 82%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 64%
 
 1. jar を [java.mail-1.0.jar](/help/forms/using/java.mail-1.0.jar) としてダウンロードし、ダウンロードした jar ファイルを解凍してマニフェストファイルを取得します。
 
-1. のマニフェストファイルを使用 `java.mail-1.0.jar` 手順 1 から取得し、次のようなカスタム jar ファイルを作成します。 `java.mail-1.5.jar`.
+1. 手順 1 で取得した `java.mail-1.0.jar` のマニフェストファイルを使用して、カスタム jar ファイル（例：`java.mail-1.5.jar`）を作成します。
 
 1. マニフェストファイルを開き、`1.5.0` を `1.5.6` に、`Bundle-Version: 1.0` を `Bundle-Version:1.5` にすべて置き換えます。
 
-1. カスタム jar の作成 (`java.mail-1.5.jar`) ファイルに追加します。 `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` 次のフォルダー：
+1. `C:\Adobe\Adobe_Experience_Manager_Forms\java\jdk\bin` フォルダーで、次のようにコマンドを使用して、カスタム jar（`java.mail-1.5.jar`）ファイルを作成します。
    `jar -cfm java.mail-1.5.jar manifest.mf`
 
    上記のコマンドで、*manifest.mf* はマニフェストファイルの名前で、*java.mail-1.5.jar* は、上記のコマンドを実行した後に作成されるファイルの名前です。
@@ -43,8 +43,8 @@ ht-degree: 64%
 
 1. 手順 5 でダウンロードした `javax.mail-1.5.6.redhat-1.jar` ファイルをインストールします。
 
-1. 停止 **JBoss®** から **サービスコンソール** 次のプロパティをに追加します。 **Sling.properties** ファイル：
+1. **サービスコンソール**&#x200B;から **JBoss®** を停止し、次のプロパティを **Sling.properties** ファイルに追加します。
    * `org.osgi.framework.system.packages.extra=javax.activation; version\=1.2.0`
    * `sling.bootdelegation.activation=javax.activation.*`
 
-1. 再起動 **JBoss®**.
+1. **JBoss®** を再起動します。

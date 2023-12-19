@@ -1,6 +1,6 @@
 ---
 title: クライアントサイドライブラリの使用
-description: AEMにはクライアントサイドライブラリフォルダーが用意されています。これを使用すると、クライアントサイドコードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます
+description: AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアントサイドコードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義できます。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '2853'
-ht-degree: 89%
+source-wordcount: '2791'
+ht-degree: 93%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 89%
 
 最近の web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題に対処するために、AEMでは次の機能を提供しています。 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアントサイドライブラリシステムは、正しいコードを読み込むための正しいリンクを最終的な Web ページに生成する処理をおこないます。
+この問題への対処に役立つように、AEM では、**クライアントサイドライブラリフォルダー**&#x200B;が提供されています。これにより、クライアントサイドのコードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義することができます。クライアントサイドのライブラリスステムは、最終的な web ページで正しいコードをロードするための正しいリンクを生成する作業を担当します。
 
-## AEMでのクライアント側ライブラリの仕組み {#how-client-side-libraries-work-in-aem}
+## AEM でのクライアントサイドライブラリの機能 {#how-client-side-libraries-work-in-aem}
 
 クライアントサイドライブラリ（JS ファイルまたは CSS ファイル）をページの HTML に含めるための標準的な方法は、`<script>` タグまたは `<link>` タグを使用して、そのページの JSP に該当するファイルのパスを含めることです。例：
 
@@ -34,9 +34,9 @@ ht-degree: 89%
 ...
 ```
 
-この方法は AEM で機能しますが、ページやそれに含まれるコンポーネントが複雑になると、問題につながる可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的な HTML 出力に含まれる危険性があります。これを回避してクライアントサイドライブラリを論理的に整理するために、AEM では&#x200B;**クライアントサイドライブラリフォルダー**&#x200B;を使用します。
+この方法はAEMで機能しますが、ページとその構成コンポーネントが複雑になった場合に問題が発生する可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的なHTML出力に含まれる可能性があります。 この問題を回避し、を使用してクライアント側ライブラリを論理的に整理できるようにするには、次の手順を実行しますAEM **クライアントサイドライブラリフォルダー**.
 
-クライアントサイドライブラリフォルダーは、タイプが `cq:ClientLibraryFolder` のリポジトリーノードです。[CND 注釈](https://jackrabbit.apache.org/node-type-notation.html)での定義は次のとおりです。
+クライアント側ライブラリフォルダーは、タイプが `cq:ClientLibraryFolder`. の定義 [CND 表記](https://jackrabbit.apache.org/node-type-notation.html) 次に該当
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder
@@ -57,13 +57,13 @@ ht-degree: 89%
 * `embed`：他のライブラリからコードを埋め込むために使用します。ノード F がノード G および H を埋め込むと、結果として得られる HTML は、ノード G および H からのコンテンツの合成になります。
 * `allowProxy`：クライアントライブラリが `/apps` の下にある場合、このプロパティを使用すると、プロキシサーブレット経由でクライアントライブラリにアクセスできます。後述の[クライアントライブラリのフォルダーの配置とプロキシクライアントライブラリのサーブレットの使用](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)を参照してください。
 
-## クライアント側ライブラリの参照 {#referencing-client-side-libraries}
+## クライアントサイドライブラリの参照 {#referencing-client-side-libraries}
 
-AEMサイトの開発には HTL が推奨されるテクノロジーなので、AEMにクライアント側ライブラリを含めるには HTL を使用する必要があります。 ただし、JSP を使用しておこなうこともできます。
+HTL は、AEM のサイト開発での推奨テクノロジーなので、HTL を使用して AEM にクライアントサイドライブラリを含める必要があります。ただし、JSP を使用して行うこともできます。
 
 ### HTL の使用 {#using-htl}
 
-HTL では、クライアントライブラリは AEM 提供のヘルパーテンプレートを介して読み込まれます。テンプレートには [`data-sly-use`](https://helpx.adobe.com/jp/experience-manager/htl/using/block-statements.html#use) を使用してアクセスできます。このファイルには 3 つのテンプレートが含まれ、[`data-sly-call`](https://helpx.adobe.com/jp/experience-manager/htl/using/block-statements.html#template-call) で呼び出すことができます。
+HTL では、クライアントライブラリは AEM 提供のヘルパーテンプレートを介して読み込まれます。テンプレートには [`data-sly-use`](https://helpx.adobe.com/jp/experience-manager/htl/using/block-statements.html#use) を使用してアクセスできます。このファイルには 3 つのテンプレートがあり、[`data-sly-call`](https://helpx.adobe.com/jp/experience-manager/htl/using/block-statements.html#template-call) で呼び出すことができます。
 
 * **css** - 参照されるクライアントライブラリの CSS ファイルのみを読み込みます。
 * **js** - 参照されるクライアントライブラリの JavaScript ファイルのみを読み込みます.
@@ -88,17 +88,17 @@ HTL では、クライアントライブラリは AEM 提供のヘルパーテ�
 <ui:includeClientLib categories="cq.jquery"/>
 ```
 
-生成されたHTMLページには、次のコードが含まれます。
+生成される HTML ページには以下のコードが含まれます。
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 ```
 
-JS、CSS またはテーマライブラリをフィルタリングするための属性を含め、詳しくは、 [ui:includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib).
+JS、CSS またはテーマライブラリをフィルタリングするための属性を含めた詳細については、[ui:includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib) を参照してください。
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>` は、以前はクライアントライブラリを含めるために一般的に使用されていましたが、AEM 5.6 から非推奨（廃止予定）となりました。したがって、上記のとおり [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)  を代わりに使用する必要があります。
+>`<cq:includeClientLib>` は、以前はクライアントライブラリを含めるために一般的に使用されていましたが、AEM 5.6 から非推奨（廃止予定）となりました。そのため、上記のとおり [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) を代わりに使用する必要があります。
 
 ## クライアントライブラリフォルダーの作成 {#creating-client-library-folders}
 
@@ -108,7 +108,7 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 クライアントライブラリフォルダーには次の項目が含まれます。
 
-* JS／CSS ソースファイル（いずれかまたは両方）を結合します。
+* 結合する JS または CSS ソースファイル。
 * 画像ファイルなど、CSS スタイルをサポートするリソース。
 
   **メモ：**&#x200B;サブフォルダーを使用してソースファイルを整理できます。
@@ -162,7 +162,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 1. Web ブラウザーで CRXDE Lite を開きます（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）。
 1. クライアントライブラリフォルダーの配置先のフォルダーを選択して、**作成／ノードを作成**&#x200B;をクリックします。
-1. ライブラリファイルの名前を入力し、タイプリストで `cq:ClientLibraryFolder` を選択します。「**OK**」をクリックし、「**すべて保存**」をクリックします。
+1. ライブラリファイルの名前を入力し、[ タイプ ] リストでを選択します。 `cq:ClientLibraryFolder`. 「**OK**」をクリックし、「**すべて保存**」をクリックします。
 1. ライブラリが所属するカテゴリ（1 つまたは複数）を指定するには、`cq:ClientLibraryFolder` ノードを選択し、次のプロパティを追加して、「**すべて保存**」をクリックします。
 
    * 名前：categories
@@ -243,7 +243,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 このような場合、必要なすべてのクライアントライブラリコードを 1 つのファイルに組み合わせて、ページ読み込み時のリクエストの行き来の数を減らすと便利です。これを行うには、`cq:ClientLibraryFolder` ノードの embed プロパティを使用して、必要なライブラリをアプリ固有のクライアントライブラリに `embed` します。
 
-次のクライアントライブラリカテゴリが AEM に含まれています。特定のサイトを機能させるために必要なもののみを埋め込んでください。ただし、**このリストの順序は保持する必要があります**。
+AEMには、次のクライアントライブラリカテゴリが含まれています。特定のサイトの機能に必要なもののみを埋め込む必要があります。 しかし、 **ここに記載されている順序を維持する必要があります**:
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -321,12 +321,12 @@ body {
 
 AEM では、プラグ可能なプリプロセッサーを使用でき、AEM のデフォルトプリプロセッサーとして、CSS および JavaScript 用の [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) と YUI が定された JavaScript 用の [Google Closure Compiler（GCC）](https://developers.google.com/closure/compiler/)をサポートします。
 
-プラガブルプリプロセッサーは、次のように柔軟に使用できます。
+プラグ可能なプリプロセッサーを使用すると、次のような柔軟な使い方ができるようになります。
 
-* スクリプトソースを処理できる ScriptProcessors を定義する
+* スクリプトソースを処理できる ScriptProcessor を定義
 * プロセッサーはオプションを使用して設定できる
 * プロセッサーは縮小用に使用できるが、縮小以外の場合にも使用できる
-* clientlib はどのプロセッサーを使用するかを定義できる
+* clientlib は、使用するプロセッサーを定義できる
 
 >[!NOTE]
 >
@@ -334,7 +334,7 @@ AEM では、プラグ可能なプリプロセッサーを使用でき、AEM の
 
 >[!CAUTION]
 >
->縮小化したライブラリをクライアントライブラリに配置しないでください。代わりに、生のライブラリを提供し、縮小が必要な場合は、プリプロセッサーのオプションを使用します。
+>縮小化したライブラリをクライアントライブラリに配置しないでください。代わりに、未加工のライブラリを提供し、縮小が必要な場合は、プリプロセッサーのオプションを使用します。
 
 ### 使用方法 {#usage}
 
@@ -388,7 +388,7 @@ GCC オプションについて詳しくは、[GCC ドキュメント](https://d
 
 ### システムのデフォルト縮小ツールの設定 {#set-system-default-minifier}
 
-YUI は、AEM のデフォルト縮小ツールとして設定されています。これを GCC に変更するには、次の手順に従います。
+YUI は、AEM のデフォルトの縮小ツールとして設定されています。これを GCC に変更するには、次の手順に従います。
 
 1. Apache Felix Config Manager（[https://localhost:4502/system/console/configMgrr](https://localhost:4502/system/console/configMgr)）に移動します。
 1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;を検索して編集します。
@@ -422,7 +422,7 @@ AEM には、クライアントライブラリフォルダーをデバッグお�
 1. Web ブラウザーのアドレスボックスで、HTML の URL に次のテキストを付加します。
 
    `?debugClientLibs=true`
-1. ページが読み込まれたら、ページソースを表示します。
+1. ページが読み込まれたら、ページのソースを表示します。
 1. リンク要素の href として指定されているリンクをクリックしてファイルを開き、ソースコードを表示します。
 
 ### クライアントライブラリの確認 {#discover-client-libraries}
@@ -451,10 +451,10 @@ AEM には、クライアントライブラリフォルダーをデバッグお�
 
 ## 開発および実稼働用のライブラリ処理の設定 {#configuring-library-handling-for-development-and-production}
 
-HTML ライブラリマネージャーサービスは、実行時に `cq:ClientLibraryFolder` タグを処理してライブラリを生成します。環境、開発または実稼動のタイプによって、サービスの設定方法が決まります。
+HTML ライブラリマネージャーサービスは、実行時に `cq:ClientLibraryFolder` タグを処理してライブラリを生成します。環境のタイプ（開発か本番か）によって、サービスの設定方法が変わります。
 
-* セキュリティの向上：デバッグを無効にする
-* パフォーマンスの向上：空白を削除し、ライブラリを圧縮します。
-* 可読性の向上：空白を含め、圧縮しないでください。
+* セキュリティを強化：デバッグを無効化
+* パフォーマンスを向上：空白を削除してライブラリを圧縮
+* 読みやすさを改善：空白を含めて圧縮しない
 
-サービスの設定について詳しくは、 [AEMHTMLライブラリマネージャー](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager).
+サービスの設定について詳しくは、[AEM HTML ライブラリマネージャー](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager)を参照してください。

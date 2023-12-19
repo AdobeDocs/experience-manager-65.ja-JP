@@ -1,6 +1,6 @@
 ---
 title: Image Server 用の Dynamic Media の公開設定
-description: アセットを公開できるようにDynamic Media Publish Server の設定を行う方法を説明します。 また、アセットを公開する前にテストすることもできます。
+description: アセットを公開できるように Image Server 用の Dynamic Media の公開設定を行う方法を説明します。アセットを公開する前にテストすることもできます。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
@@ -11,8 +11,8 @@ mini-toc-levels: 4
 exl-id: c86e79c4-e887-4ee3-bb54-eeffb34a33c2
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '3509'
-ht-degree: 99%
+source-wordcount: '3351'
+ht-degree: 100%
 
 ---
 

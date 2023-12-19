@@ -1,30 +1,30 @@
 ---
 title: ページエクスポーター
-description: Adobe Experience Manager(AEM) ページエクスポーターの使用方法を説明します。
+description: Adobe Experience Manager（AEM）のページエクスポーターの使用方法を説明します。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 65%
+source-wordcount: '997'
+ht-degree: 97%
 
 ---
 
 # ページエクスポーター{#the-page-exporter}
 
-Adobe Experience Manager(AEM) では、画像を含む完全な Web ページとしてページを書き出すことができます。 `.js`、および `.css` ファイル。
+Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js` ファイル、`.css` ファイルを含む完全な web ページとして、ページをエクスポートできます。
 
-設定した場合、 `html` 次を使用 `export.zip` 」と入力します。 これにより、HTML 形式でレンダリングされたページと参照元のアセットを含む、アーカイブ（zip）ファイルが生成されます。ページ内のすべてのパス（例えば、画像へのパス）は、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。アーカイブ（zip）ファイルは、ブラウザーからダウンロードできます。
+設定が完了したら、URL の `html` を `export.zip` に置き換えることにより、ページのエクスポートをブラウザーからリクエストします。これにより、HTML 形式でレンダリングされたページと参照元のアセットを含む、アーカイブ（zip）ファイルが生成されます。ページ内のすべてのパス（例えば、画像へのパス）は、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。アーカイブ（zip）ファイルは、ブラウザーからダウンロードできます。
 
 >[!NOTE]
 >
->ブラウザーと設定に応じて、ダウンロードは次のいずれかになります。
+>ブラウザーとその設定に応じて、ダウンロードは次のいずれかになります。
 >
 >* アーカイブファイル（`<page-name>.export.zip`）
 >* フォルダー（`<page-name>`）（アーカイブファイルを実際に展開済み）
 
 ## ページのエクスポート {#exporting-a-page}
 
-次の手順では、ページをエクスポートする方法を説明します。サイトにエクスポートテンプレートが存在すると仮定しています。書き出しテンプレートは、ページの書き出し方法を定義し、サイトに固有のものです。 エクスポートテンプレートを作成するには、 [サイト用のページエクスポーター設定の作成](#creating-a-page-exporter-configuration-for-your-site).
+次の手順では、ページをエクスポートする方法を説明します。サイトにエクスポートテンプレートが存在すると仮定しています。エクスポートテンプレートは、ページをエクスポートする方法を定義したものであり、サイトに固有のものです。エクスポートテンプレートを作成するには、[サイト用のページエクスポーター設定の作成](#creating-a-page-exporter-configuration-for-your-site)の節を参照してください。
 
 ページをエクスポートするには：
 
@@ -44,26 +44,26 @@ Adobe Experience Manager(AEM) では、画像を含む完全な Web ページと
    次は例です。
    * localhost:4502/content/we-retail/language-masters/en.html
 
-   次の方法でアクセス：
+   次の方法でアクセスされます。
    * localhost:4502/content/we-retail/language-masters/en.export.zip
 
 1. アーカイブファイルをファイルシステムにダウンロードします。
 
-1. ファイルシステムで、必要に応じてそのファイルを解凍します。展開すると、選択したページと同じ名前のフォルダーが存在します。 このフォルダーには次が含まれます。
+1. ファイルシステムで、必要に応じてそのファイルを解凍します。展開すると、選択したページと同じ名前のフォルダーが作成されます。このフォルダーには次が含まれます。
 
-   * サブフォルダー `content`：リポジトリ内のページへのパスを反映した一連のサブフォルダーのルート。
+   * サブフォルダー `content`（リポジトリ内のページへのパスを反映した一連のサブフォルダーのルート）
 
-      * この構造の中に、選択したページの html ファイルがあります（`<page-name>.html`）
+      * この構造の中にある、選択したページの HTML ファイル（`<page-name>.html`）
 
-   * その他のリソース (`.js` ファイル、 `.css` ファイルや画像など ) は、エクスポートテンプレートの設定に従って配置されます。
+   * その他のリソース（`.js` ファイル、 `.css` ファイル、画像など）。エクスポートテンプレートの設定に従って配置されます。
 
-1. ページの HTML ファイル (`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`) をブラウザーで確認して、レンダリングを確認できるようにします。
+1. ページの HTML ファイル（`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`）をブラウザーで開き、レンダリングを確認します。
 
 ## サイト用のページエクスポーター設定の作成 {#creating-a-page-exporter-configuration-for-your-site}
 
 ページエクスポーターは、[コンテンツ同期フレームワーク](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html)に基づいています。「**ページプロパティ**」ダイアログで利用できる設定は、ページに必要な依存関係を定義するエクスポートテンプレートです。
 
-ページの書き出しがトリガーされると、書き出しテンプレートが参照されます。ページパスとデザインパスの両方が動的に適用されます。 その後、標準のコンテンツ同期機能を使用して、zip ファイルが作成されます。
+ページのエクスポートがトリガーされると、エクスポートテンプレートが参照され、ページパスとデザインパスの両方が動的に適用されます。その後、標準のコンテンツ同期機能を使用して、zip ファイルが作成されます。
 
 標準インストールの AEM では、`/etc/contentsync/templates/default` の下にデフォルトテンプレートが含まれています。
 
@@ -74,7 +74,7 @@ Adobe Experience Manager(AEM) では、画像を含む完全な Web ページと
 * テンプレートのノード構造を JSON 形式でブラウザーに表示するには、次の URL をリクエストします。
   `http://localhost:4502/etc/contentsync/templates/default.json`
 
-ページエクスポーターテンプレートを作成する最も簡単な方法は次のとおりです。
+新しいページエクスポーターのテンプレートは、次の方法で簡単に作成できます。
 
 * `default` テンプレートをコピーします。
 
@@ -96,9 +96,9 @@ Adobe Experience Manager(AEM) では、画像を含む完全な Web ページと
 
 テンプレートを設定したら、使用可能にします。
 
-1. CRXDE で `/content` の分岐の対象ページに移動します。個々のページ、またはサブツリーのルートページを指定できます。
+1. CRXDE で `/content` ブランチの対象ページに移動します。個々のページや、サブツリーのルートページの場合があります。
 
-1. 次の日： `jcr:content` ページのノードで、次のプロパティを作成します。
+1. ページの `jcr:content` ノードで、次のプロパティを作成します。
    * `Name`：`cq:exportTemplate`
    * `Type`：`String`
    * `Value`：テンプレートへのパス（例： `/etc/contentsync/templates/mysite`）
@@ -115,10 +115,10 @@ Adobe Experience Manager(AEM) では、画像を含む完全な Web ページと
 * `page`
 page ノードを使用して、ページの HTML を zip ファイルにコピーします。次のような特徴があります。
 
-   * 必須ノードです。
-   * 次の場所にあります。 `/etc/contentsync/templates/<mysite>`.
-   * プロパティで定義 `Name`に設定 `page`.
-   * ノードタイプは `nt:unstructured`
+   * 必須ノード。
+   * `/etc/contentsync/templates/<mysite>` の下にある。
+   * プロパティ `Name` を `page` に設定して定義されている。
+   * ノードタイプは `nt:unstructured`。
 
   `page` ノードには以下のプロパティがあります。
 
@@ -136,10 +136,10 @@ rewrite ノードでは、エクスポートしたページでリンクを書き
 * `design`
 design ノードを使用して、エクスポートされるページに使用されているデザインをコピーします。次のような特徴があります。
 
-   * オプション.
-   * 次の場所にあります。 `/etc/contentsync/templates/<mysite>`.
-   * プロパティで定義 `Name` に設定 `design`.
-   * ノードタイプは `nt:unstructured`.
+   * オプション。
+   * `/etc/contentsync/templates/<mysite>` の下にある。
+   * プロパティ `Name` を `design` に設定して定義される。
+   * ノードタイプは `nt:unstructured`。
 
   `design` ノードには次のプロパティがあります。
 
@@ -148,12 +148,12 @@ design ノードを使用して、エクスポートされるページに使用�
    * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
 * `generic`
-汎用ノードを使用して、clientlibs などのリソースをコピーできます。`.js` ファイルまたは `.css` ファイルを zip ファイルへ。次のような特徴があります。
+汎用ノードは、clientlibs などのリソースのコピーに使用されます。 `.js` または `.css` ファイルを zip ファイルに保存します。 次のような特徴があります。
 
-   * オプション.
-   * 次の場所にあります。 `/etc/contentsync/templates/<mysite>`.
-   * 特定の名前はありません。
-   * ノードタイプは `nt:unstructured`.
+   * オプション。
+   * `/etc/contentsync/templates/<mysite>` の下にある。
+   * 特定の名前はない。
+   * ノードタイプは `nt:unstructured`。
    * `type` プロパティと `type` に関連したプロパティを持ちます。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
   例えば、次の設定ノードは、 `mysite.clientlibs.js` ファイルを zip ファイルに保存します。
@@ -175,17 +175,17 @@ design ノードを使用して、エクスポートされるページに使用�
 As you may have noticed in the node structure, the **Geometrixx** page export template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
 -->
 
-特定の要件を満たすには、 [カスタム更新ハンドラー](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html).
+特定の要件を満たすには、[カスタム更新ハンドラー](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html)を実装する必要があります。
 
 <!-- To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
 -->
 
-## プログラムによるページのエクスポート {#programmatically-exporting-a-page}
+## プログラムによるページの書き出し {#programmatically-exporting-a-page}
 
-プログラムによってページを書き出すには、 [PageExporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGi サービス。 このサービスを使用すると、次のことができます。
+プログラムによってページを書き出すには、[PageExporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI サービスを使用できます。このサービスを使用すると、次のことができます。
 
-* ページを書き出し、HTTP サーブレット応答に書き込みます。
-* ページを書き出し、zip ファイルを特定の場所に保存します。
+* ページを書き出して HTTP サーブレット応答に書き込む。
+* ページを書き出して zip ファイルを特定の場所に保存する。
 
 `export` セレクターおよび `zip` 拡張子にバインドされているサーブレットは PageExporter サービスを使用します。
 

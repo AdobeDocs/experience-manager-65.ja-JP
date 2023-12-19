@@ -1,6 +1,6 @@
 ---
 title: Designer でのページゼロコンテンツの変更
-description: XFAPDFをAdobe PDF以外のビューアで表示するときに、XFA メッセージの Page Zero に表示されるメッセージを変更する方法を知っていますか？
+description: XFA PDF を アドビ以外の PDF ビューアーで表示するとき、Page Zero に表示されるメッセージを変更する方法をご存知ですか。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
@@ -9,7 +9,7 @@ exl-id: 466b7e85-a2f8-4e1e-8afc-1566b0ccb84c
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 80%
+ht-degree: 91%
 
 ---
 
@@ -29,8 +29,8 @@ ht-degree: 80%
 
 1. [!UICONTROL フォームのプロパティ]ダイアログで、![プラス](assets/plus.png)（プラスアイコン）をクリックしてカスタムプロパティを追加します。
 
-1. 指定 **_pagezerocontent** をプロパティの名前として設定します。
-1. 新しい Page Zero メッセージをリッチテキスト形式で値として追加します。 以下に例を示します。
+1. プロパティの名前として **_pagezerocontent** を指定します。
+1. 新しい Page Zero メッセージを、リッチテキスト形式で値として追加します。以下に例を示します。
 
 
    `<body xmlns="https://www.w3.org/1999/xhtml" xmlns:xfa="https://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </code></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">You are seeing this message maybe because you are using a non Adobe PDF Viewer or an Old version of Adobe Reader. You can upgrade to the latest version of Adobe Reader for Windows, Mac, or Linux by visiting <span style="xfa-spacerun:yes"> </code>https://www.adobe.com/go/reader_download.</p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </code></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">For more assistance with Adobe Reader visit <span style="xfa-spacerun:yes"> </code>https://www.adobe.com/go/acrreader.</p></body>`
@@ -43,4 +43,4 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->作成したカスタムプロパティは、フォームを再度開いたときに、フォームのプロパティダイアログに正しく表示されない場合があります。 ただし、正常に機能し、フォームに更新された Page Zero メッセージが表示されます。
+>作成したカスタムプロパティは、フォームを再度開いたときに、フォームのプロパティダイアログに正しく表示されない場合があります。 その場合でも、動作には問題ありません。フォームには、更新後の Page Zero メッセージが表示されます。

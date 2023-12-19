@@ -10,8 +10,8 @@ role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
 source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 32%
+source-wordcount: '289'
+ht-degree: 56%
 
 ---
 
@@ -36,9 +36,9 @@ ht-degree: 32%
    <td>forms-users <sup>[1]</sup></td> 
    <td>
     <ul> 
-     <li>アダプティブフォームの作成、プレビュー、公開、送信</li> 
-     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、公開する</li> 
-     <li>アセットのAEMインスタンスへのアップロード</li> 
+     <li>アダプティブフォームを作成、プレビュー、公開、送信</li> 
+     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、公開</li> 
+     <li>AEM インスタンスにアセットをアップロード</li> 
      <li>テーマを作成</li> 
     </ul> </td> 
   </tr>
@@ -46,20 +46,20 @@ ht-degree: 32%
    <td>forms-power-users</td> 
    <td>
     <ul> 
-     <li>アダプティブフォームの作成、プレビュー、公開、送信</li> 
-     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、公開する</li> 
+     <li>アダプティブフォームを作成、プレビュー、公開、送信</li> 
+     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、公開</li> 
      <li>コードエディターを使用してアダプティブフォームのスクリプトを作成する</li> 
-     <li>スクリプトを含むアセットのアップロード</li> 
+     <li>スクリプトを含むアセットをアップロード</li> 
      <li>テーマを作成</li> 
-     <li>XDP を含むパッケージのインポート</li> 
+     <li>XDP を含むパッケージを読み込み</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td>forms-submission-reviewers</td> 
    <td>
     <ul> 
-     <li>送信をレビュー</li> 
-     <li>送信を承認または却下</li> 
+     <li>送信されたフォームをレビュー</li> 
+     <li>送信されたフォームを承認または拒否</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -87,7 +87,7 @@ ht-degree: 32%
    <td><p>workflow-editors</p> </td> 
    <td>
     <ul> 
-     <li>インボックスアプリケーションの作成</li> 
+     <li>インボックスアプリケーションを作成</li> 
      <li>ワークフローモデルを作成</li> 
     </ul> </td> 
   </tr>

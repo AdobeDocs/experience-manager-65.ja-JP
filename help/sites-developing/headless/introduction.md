@@ -4,8 +4,8 @@ description: コンテンツモデル、コンテンツフラグメント、Grap
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 91%
+source-wordcount: '507'
+ht-degree: 97%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 91%
 
 ## ヘッドフルとヘッドレスの比較 {#headful-headless}
 
-このドキュメントでは、AEM の完全なヘッドレス実装モデルを重点的に説明します。ただし、ヘッドフルとヘッドレスは、AEMではバイナリ選択である必要はありません。 ヘッドレス機能を使用すると、コンテンツを管理し様々なエンドポイントに配信できると同時に、コンテンツ作成者が単一ページアプリケーションを編集できるようになります。すべてが AEM にあります。
+このドキュメントでは、AEM の完全なヘッドレス実装モデルを重点的に説明します。ただし、AEM でヘッドフルとヘッドレスは二者択一である必要はありません。ヘッドレス機能を使用すると、コンテンツを管理し様々なエンドポイントに配信できると同時に、コンテンツ作成者が単一ページアプリケーションを編集できるようになります。すべてが AEM にあります。
 
 >[!TIP]
 >
@@ -55,4 +55,4 @@ AEMヘッドレス機能を使い始めるために利用できるリソース�
 | [ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) | **AEM とヘッドレステクノロジーを初めて使用するユーザー**&#x200B;の場合は、まずここから始めて、ヘッドレスの基本概念から初めてのヘッドレスプロジェクトの運用開始まで、AEM とそのヘッドレス機能の概要を包括的に理解してください。 | ガイド | **AEM とヘッドレスを初めて使用する**&#x200B;開発者 | 1 時間 |
 | [ヘッドレスをはじめる前に](/help/sites-developing/headless/getting-started/introduction.md) | **AEM の経験豊富なユーザー**&#x200B;が主な AEM ヘッドレス機能の概要を知りたい場合は、このクイックスタート概要を確認してください。 | クイックスタート | **AEM エクスペリエンス**&#x200B;の開発者、管理者 | 20 分 |
 | [AEM ヘッドレスをはじめる前に：実践チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) | **AEM を熟知していて実践的なアプローチを希望する場合は、このチュートリアルでシンプルなヘッドレスプロジェクトの作成に取り組んでください。** | チュートリアル | デベロッパー向け | 2 時間 |
-| [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja) | このリソースのコレクションは、 **新規** および **経験豊富な** 開発者。 | リソースのコレクション | デベロッパー向け | |
+| [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja) | このリソースのコレクションは、**初心者**&#x200B;のデベロッパー向けにも、**経験豊富な**&#x200B;デベロッパー向けにも提供されています。 | リソースのコレクション | デベロッパー向け | |

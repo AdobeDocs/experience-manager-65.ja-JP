@@ -4,8 +4,8 @@ description: 統合フレームワークを使用すると、製品データをA
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 86%
+source-wordcount: '144'
+ht-degree: 87%
 
 ---
 

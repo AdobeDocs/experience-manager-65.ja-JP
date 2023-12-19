@@ -10,7 +10,7 @@ exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '5284'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -394,7 +394,7 @@ Target コンポーネントにドラッグされたコンポーネントは、�
 
 ## ターゲット設定：オーディエンスの設定 {#target-configuring-the-audiences}
 
-[ターゲティングプロセス](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)のターゲット設定手順には、作成手順で操作したエクスペリエンスとオーディエンスのマッピングを含みます。Target ページには、各エクスペリエンスがターゲティングするオーディエンスが表示されます。各エクスペリエンスのオーディエンスを指定または変更できます。また、Adobe Targetを使用している場合は、特定のエクスペリエンスに対する特定のオーディエンスのトラフィックの割合をターゲットにする A/B テストを作成できます。
+[ターゲティングプロセス](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings)のターゲット設定手順には、作成手順で操作したエクスペリエンスとオーディエンスのマッピングを含みます。Target ページには、各エクスペリエンスがターゲティングするオーディエンスが表示されます。各エクスペリエンスのオーディエンスを指定または変更できます。Adobe Target を使用する場合は、A/B テストを作成して、オーディエンスの一定割合のトラフィックを特定のエクスペリエンスにターゲット設定することもできます。
 
 ### AEMのターゲット設定またはAdobe Target（エクスペリエンスのターゲット設定）を使用している場合は、 {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
 
@@ -688,7 +688,7 @@ Target コンポーネントをカスタマイズするには、次の 2 つの�
   </tr>
   <tr>
    <td><strong>解決されたセグメントを含める</strong></td>
-   <td><p>このチェックボックスをオンにすると、mbox 呼び出しで解決されたすべてのセグメントと、ページおよびフレームワークで設定されたすべてのパラメーターが含められます。</p> <p>これは、AEM セグメントを同期している XML API を使用する状況でのみ機能します。AEMでAdobe Targetで処理されないセグメント（スクリプトセグメントなど）がある場合、このオプションを使用すると、AEMでセグメントを解決し、セグメントがアクティブであることをAdobe Targetに情報を送信できます。</p> </td>
+   <td><p>このチェックボックスをオンにすると、mbox 呼び出しで解決されたすべてのセグメントと、ページおよびフレームワークで設定されたすべてのパラメーターが含められます。</p> <p>これは、AEM セグメントを同期している XML API を使用する状況でのみ機能します。AEM で Adobe Target によって処理されないセグメント（スクリプトセグメントなど）がある場合、このオプションを使用すると、AEM でセグメントを解決し、セグメントがアクティブであるという情報を Adobe Target に送信できます。</p> </td>
   </tr>
   <tr>
    <td><strong>継承されたコンテキストパラメーター</strong></td>

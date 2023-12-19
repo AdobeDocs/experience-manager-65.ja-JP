@@ -10,7 +10,7 @@ exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '569'
-ht-degree: 81%
+ht-degree: 84%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 81%
 
 選択されたサイドが画面全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
 
-![上部のバーを使用して、ページを切り替えることができます](assets/chlimage_1-110.png)
+![上部のバーでページの切り替えが可能](assets/chlimage_1-110.png)
 
 また全画面表示を終了するアイコンをクリックして、全画面表示を閉じることができます。
 

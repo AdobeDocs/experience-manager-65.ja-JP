@@ -1,6 +1,6 @@
 ---
 title: 既存のドメインの編集と変換
-description: ドメインの管理ページで既存のドメインの設定を変更する方法を説明します。 既存のエンタープライズドメインをハイブリッドドメインに、または反対に変換する。
+description: ドメインの管理ページで既存のドメインの設定を変更する方法を説明します。既存のエンタープライズドメインをハイブリッドドメインに（またはその逆に）変換します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
@@ -9,22 +9,22 @@ exl-id: 34ac5f8b-f209-4f99-ad71-4df6f2c88c1e
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
 # 既存のドメインの編集と変換{#editing-and-converting-existing-domains}
 
-ドメインの管理ページで、既存のドメインの設定を変更できます。 既存のエンタープライズドメインをハイブリッドドメインに変換することもできます。
+ドメインの管理ページで、既存のドメインの設定を変更できます。既存のエンタープライズドメインをハイブリッドドメインに変換することもできます。
 
-## 既存のドメインの編集 {#edit-an-existing-domain}
+## 既存のドメインを編集 {#edit-an-existing-domain}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 編集するドメインの名前をクリックします。
-1. ドメイン名を変更するには、[ 名前 ] ボックスのテキストを変更します。
-1. エンタープライズドメインまたはハイブリッドドメインの認証情報を変更するには、ページの下部にある適切な認証名をクリックします。 認証を編集ページで、必要に応じて設定を変更します。 ( 詳しくは、 [認証設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. エンタープライズドメインのディレクトリ情報を変更するには、ページの下部にある適切なディレクトリ名をクリックします。 ディレクトリを編集ページで、必要に応じて設定を変更します。 ( 詳しくは、 [ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
-1. 変更が完了したら、[OK] をクリックします。
+1. ドメイン名を変更するには、「名前」ボックスのテキストを変更します。
+1. エンタープライズドメインまたはハイブリッドドメインの認証情報を変更するには、ページの下部にある目的の認証名をクリックします。認証を編集ページで、必要に応じて設定を変更します（[認証の設定](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings)を参照）。
+1. エンタープライズドメインのディレクトリ情報を変更するには、ページの下部で目的のディレクトリ名をクリックします。ディレクトリを編集ページで、必要に応じて設定を変更します（[ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)を参照）。
+1. 変更が完了したら、「OK」をクリックします。
 
 ## エンタープライズドメインのハイブリッドドメインへの変換 {#convert-an-enterprise-domain-to-a-hybrid-domain}
 
@@ -44,4 +44,4 @@ ht-degree: 11%
 1. 変換するハイブリッドドメインの名前をクリックします。
 1. 「エンタープライズドメインに変換」をクリックします。
 1. ユーザーおよびグループのデータとユーザーの認証に関して表示される情報を確認し、「OK」をクリックします。
-1. 「ディレクトリを追加」をクリックし、必要なディレクトリ情報を設定します。 ( 詳しくは、 [ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. 「ディレクトリを追加」をクリックし、必要なディレクトリ情報を設定します（[ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)を参照）。

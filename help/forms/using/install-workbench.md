@@ -7,8 +7,8 @@ role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '2242'
-ht-degree: 88%
+source-wordcount: '2184'
+ht-degree: 87%
 
 ---
 
@@ -87,7 +87,7 @@ Workbench は、開発者とフォーム作成者が、自動化されたビジ�
 
 * ハードウェア要件： Intel® Pentium® 4 または AMD®同等の 1 GHz プロセッサ。
 * Java™ ランタイム環境（JRE）7.0 アップデート 51 または 7.0 の以降のアップデート。
-* 1024 X 768 ピクセル以上のモニター解像度、16 ビットカラー以上.
+* 1024 X 768 ピクセル以上のモニタ解像度（16 ビットカラー以上）。
 * AEM Forms サーバーに対する TCP/IPv4 または TCP/IPv6 ネットワーク接続。
 * Visual C++ 再頒布可能ランタイムパッケージ 2012 32 ビットをインストールします。
 * Visual C++ 再頒布可能ランタイムパッケージ 2013 32 ビットをインストールします。
@@ -119,7 +119,7 @@ Workbench のインストールには、対応する英語版の Designer がデ
   </tr>
   <tr>
    <td><p>Designer（スタンドアロン）</p> </td>
-   <td><p>なし. <br />Workbench に付属する Designer のバージョンは英語版のみです。<br />Workbench インストーラーでは、新しいバージョンの Designer は再インストールされません。 代わりに、Workbench インストーラーにバンドルされている更新バージョンにパッチが適用されます。 また、ローカライズ版の Designer を Workbench 内で使用することもできます。<br /> </p> </td>
+   <td><p>なし. <br />Workbench に付属する Designer のバージョンは英語版のみです。<br />Workbench インストーラーでは、新しいバージョンの Designer は再インストールされません。 代わりに、Workbench インストーラーにバンドルされている更新バージョンにパッチが適用されます。 これにより、Workbench 内でローカライズ版の Designer を使用することもできます。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -205,7 +205,7 @@ HTTPS には、証明書で指定されている名前を使用して接続し�
 
    >[!NOTE]
    >
-   証明書を書き出すには、Web ブラウザーを開き、管理コンソールにログインします。ブラウザーに証明書をインストールし、ブラウザーから証明書を一時的なストレージの場所 ( または直接 [Workbench_HOME]/workbench/jre/lib/security ディレクトリ ) に保存されます。
+   証明書を書き出すには、Web ブラウザーを開き、管理コンソールにログインします。 ブラウザーに証明書をインストールし、ブラウザーから証明書を一時的なストレージの場所 ( または直接 [Workbench_HOME]/workbench/jre/lib/security ディレクトリ ) に保存されます。
 
 1. 証明書を [Workbench_HOME]/workbench/jre/lib/security ディレクトリにコピーします。
 

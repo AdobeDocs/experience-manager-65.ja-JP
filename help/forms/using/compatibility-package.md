@@ -1,6 +1,6 @@
 ---
 title: 互換性パッケージ
-description: 互換性パッケージをAEM Forms 6.5 にインストールすると、AEM Forms 6.4 以前のバージョンと、廃止されたアダプティブフォームのテンプレートおよびページの Correspondence Management アセットを使用できます。
+description: AEM Forms 6.5 に互換性パッケージをインストールすると、AEM Forms 6.4 以前のバージョンの Correspondence Management アセットと、非推奨のアダプティブフォームテンプレートおよびページが使用できるようになります
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management, installing
@@ -11,7 +11,7 @@ exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 57%
 
 インタラクティブ通信は、AEM Forms 6.5 で顧客コミュニケーションを作成するためのデフォルトの推奨アプローチです。AEM Forms 6.5 で引き続きレターを使用するには、最新の [AEMFD 互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールする必要があります。
 
-AEMFD 互換性パッケージでは、 [AEM Forms 6.5 上のAEM Forms 6.4、6.3 および 6.2 の次のアセットを使用します。](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、AEM Forms 6.4、6.3、6.2 の次のアセットも使用できます。](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
 * ドキュメントフラグメント
 * レター
@@ -38,9 +38,9 @@ AEMFD 互換性パッケージでは、 [AEM Forms 6.5 上のAEM Forms 6.4、6.3
 
 1. 最新の 6.5 [互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールします。
 
-   パッケージのアップロードとインストールについて詳しくは、 [パッケージの操作方法](/help/sites-administering/package-manager.md).
+   パッケージのアップロードおよびインストールについて詳しくは、[パッケージの操作方法](/help/sites-administering/package-manager.md)を参照してください。
 
-1. ログが安定したら、サーバーを再起動します。
+1. ログの状態が安定したら、サーバーを再起動します。
 1. アセットに 6.5 との互換性を持たせるには、移行ユーティリティを使用します。
 
    詳しくは、[移行ユーティリティ](../../forms/using/migration-utility.md)を参照してください。
@@ -67,7 +67,7 @@ AEMFD 互換性パッケージでは、 [AEM Forms 6.5 上のAEM Forms 6.4、6.3
    * /libs/fd/afaddon/templates/advancedEnrollmentTemplate
    * /libs/fd/afaddon/templates/advancedEnrollmentTemplate2
 
-* アダプティブフォームの非推奨ページ：
+* アダプティブフォームの非推奨になったページ
 
    * /libs/fd/af/components/page/survey
    * /libs/fd/af/components/page/tabbedenrollment

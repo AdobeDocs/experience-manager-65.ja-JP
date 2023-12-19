@@ -1,6 +1,6 @@
 ---
 title: エラーダイアログのカスタマイズ
-description: 異なるフォルト説明を追加するためにLiveCycleAEM Forms Workspace のエラーダイアログをカスタマイズする方法。
+description: LiveCycle AEM Forms ワークスペースのエラーダイアログをカスタマイズして、様々なエラー説明を追加する方法。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -8,17 +8,17 @@ exl-id: 8d2b07f5-5c4e-4111-8f78-eb1b156221bc
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
 # エラーダイアログのカスタマイズ {#customizing-error-dialogs}
 
-AEM Forms workspace では、エラーダイアログをカスタマイズできます。 [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行して次の手順に従い、エラーダイアログをカスタマイズします。
+AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行して次の手順に従い、エラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
-1. `/apps/ws/locales/en-US/translation.json` ファイルで、`wserror` の値をカスタマイズした値に変更します。次に例を示します。
+1. `/apps/ws/locales/en-US/translation.json` ファイルで、`wserror` の値をカスタマイズした値に変更します。例：
 
    ```json
    "wserror" : {
@@ -44,7 +44,7 @@ AEM Forms workspace では、エラーダイアログをカスタマイズでき
 
    >[!NOTE]
    >
-   >対応するキーと値のペアを、サポートされるすべての言語に追加します。
+   >対応するキーと値のペアをすべてのサポートされている言語に追加します。
 
 ## CSS のカスタマイズ {#customizing-css}
 
@@ -224,7 +224,7 @@ AEM Forms workspace では、エラーダイアログをカスタマイズでき
 
 ## 例 {#examples}
 
-* **エラーダイアログをカスタマイズするには、次の値を変更します。**
+* **エラーダイアログをカスタマイズするには、** を変更します。
 
 ```css
 .error-dialog{

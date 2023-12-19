@@ -1,7 +1,7 @@
 ---
-title: AEM 6.5 FormsでアダプティブFormsコアコンポーネントを有効にするにはどうすればよいですか？
-description: AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にする手順ガイドです。
-keywords: コアコンポーネント、コアコンポーネントアダプティブForms、コアコンポーネント 6.5、アダプティブFormsコアコンポーネント (AEM 6.5)、AF コアコンポーネント (AEM 6.5、AEM 6.5 Formsコアコンポーネント ) の有効化
+title: AEM 6.5 Forms でアダプティブフォームコアコンポーネントを有効にする方法
+description: AEM 6.5 Forms 環境でアダプティブフォームコアコンポーネントを有効にする手順ガイドです。
+keywords: コアコンポーネントの有効化, コアコンポーネントアダプティブフォーム, コアコンポーネント 6.5, アダプティブフォームコアコンポーネント（AEM 6.5）, AF コアコンポーネント（AEM 6.5）, AEM 6.5 Forms コアコンポーネント
 contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
@@ -9,21 +9,21 @@ role: Admin, Developer
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 source-git-commit: 1da3abac8a7f09d41127818a5abacf29524f1365
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 52%
+source-wordcount: '965'
+ht-degree: 84%
 
 ---
 
-# AEM 6.5 FormsでのアダプティブFormsコアコンポーネントの有効化 {#enable-adaptive-forms-core-components}
+# AEM 6.5 Forms でアダプティブフォームコアコンポーネントを有効にする {#enable-adaptive-forms-core-components}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-**適用先：** ✅アダプティブフォームのコアコンポーネ❎ントアダプティブフォームの基盤コンポーネント
+**適用先：**✅ アダプティブフォームのコアコンポーネント ❎ アダプティブフォームの基盤コンポーネント
 
-アダプティブFormsコアコンポーネントを有効にすると、作成、公開、配信を開始できます [コアコンポーネントベースのアダプティブForms](create-an-adaptive-form-core-components.md) および [ヘッドレスアダプティブForms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp) AEM 6.5 Forms環境から
+アダプティブフォームコアコンポーネントを有効にすると、AEM 6.5 Forms 環境から、[コアコンポーネントベースのアダプティブフォーム](create-an-adaptive-form-core-components.md)および[ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp)の作成、公開、配信を開始できます。
 
 AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にするには、 [AEM Archetype 41 以降](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) すべてのオーサーインスタンスとパブリッシュインスタンス上の（フォームオプションが有効な）プロジェクトをベースにする。
 
@@ -31,7 +31,7 @@ AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有�
 
 ## 前提条件 {#prerequisites}
 
-AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にする前に、次の手順を実行します。
+AEM 6.5 Forms 環境でアダプティブフォームコアコンポーネントを有効にする前に、以下の操作が必要です。
 
 * [AEM 6.5 Forms サービスパック 16（6.5.16.0）以降にアップグレードします](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)。
 
@@ -43,8 +43,8 @@ AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有�
 
 AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetype)をベースにしたプロジェクトを作成し、すべてのオーサーインスタンスとパブリッシュインスタンスにデプロイするには：
 
-1. AEM 6.5 Formsインスタンスをホストし、実行しているコンピューターに、管理者としてログインします。
-1. コマンドプロンプトまたはターミナルを開き、次のコマンドを実行してAEM Archetype プロジェクトを作成します（フォームオプションが有効な状態）。
+1. AEM 6.5 Forms インスタンスをホストして実行しているコンピューターに、管理者としてログインします。
+1. コマンドプロンプトまたはターミナルを開き、次のコマンドを実行して AEM アーキタイププロジェクトを作成します（フォームオプションを有効にします）。
 
    * Microsoft Windows
 
@@ -76,11 +76,11 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 
    上記のコマンドを実行する際は、次の点を考慮してください。
 
-   * この `aemVersion` プロパティから `6.5.15.0` 他の何かに
+   * `aemVersion` プロパティの値は、`6.5.15.0` からそれ以外に変更しないでください。
 
-   * を設定します。 `archetypeVersion` プロパティを `41` または後で。 最新バージョンについては、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) ドキュメント。
+   * `archetypeVersion` プロパティを `41` 以降に設定します。最新バージョンについては、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)ドキュメントの必要システム構成の節を参照してください。
 
-   * コマンドを更新して、 `appTitle`, `appId`、および `groupId`. また、  `includeFormsenrollment` プロパティを `y`. フォームポータルを使用する場合は、`includeExamples=y` オプションを設定して、フォームポータルのコアコンポーネントをプロジェクトに含めます。
+   * `appTitle`、`appId`、`groupId`などの、環境に固有の値を反映するようにコマンドを更新します。また、`includeFormsenrollment` プロパティの値を `y` に設定します。フォームポータルを使用する場合は、`includeExamples=y` オプションを設定して、フォームポータルのコアコンポーネントをプロジェクトに含めます。
 
 
 1. （アーキタイプバージョン 41 ベースのプロジェクトの場合のみ）AEM アーキタイププロジェクトの作成後に、コアコンポーネントベースのアダプティブフォームのテーマを有効にします。テーマを有効にするには、次の手順を実行します。
@@ -113,7 +113,7 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 
       >[!NOTE]
       >
-      >* その他のトポロジを設定する場合は、送信、事前入力およびその他の URL を Dispatcher レイヤーのに必ず追加しま許可リストに加えるす。
+      >* その他のトポロジをセットアップする場合は、Dispatcher レイヤーの送信、事前入力、およびその他の URL を必ず許可リストに登録してください。
 
    1. ファイルを保存して閉じます。
 
@@ -139,8 +139,8 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 >
 >
 >
-> * パブリッシュインスタンスでログインダイアログにアクセスできない場合は、パッケージマネージャーを使用してパッケージをインストールするには、次の URL を使用してみてください。 `http://[Publish Server URL]:[PORT]/system/console` ログインします。 これにより、パブリッシュインスタンスのログインページにアクセスして、インストールプロセスを続行できます。
-> * 環境にデプロイした後で、アーキタイププロジェクトを削除または破棄しないでください。 カスタマイズされた新しいアダプティブFormsコアコンポーネントテーマを環境に追加するには、アーキタイププロジェクトが必要です。
+> * パブリッシュインスタンスでログインダイアログにアクセスできない場合に、パッケージマネージャーを使用してパッケージをインストールするには、ログインに URL `http://[Publish Server URL]:[PORT]/system/console` を使用してみてください。これにより、パブリッシュインスタンスのログインページにアクセスして、インストールプロセスを続行できます。
+> * 環境にデプロイした後で、アーキタイププロジェクトを削除または破棄しないでください。カスタマイズされた新しいアダプティブフォームコアコンポーネントテーマを環境に追加するには、アーキタイププロジェクトが必要です。
 
 お使いの環境でコアコンポーネントが有効になります。空のコアコンポーネントベースのアダプティブフォームテンプレートと Canvas 3.0 テーマが使用中の環境にデプロイされ、[コアコンポーネントベースのアダプティブフォームを作成](create-an-adaptive-form-core-components.md)できるようになります。
 
@@ -162,7 +162,7 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 
 ## 次の手順
 
-* [コアコンポーネントベースのアダプティブフォームの作成](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* [コアコンポーネントベースのアダプティブFormsのテンプレートを作成する](template-editor.md)
+* [コアコンポーネントベースのアダプティブフォームを作成](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [AEM Sites ページまたはエクスペリエンスフラグメントにアダプティブフォームを作成または追加](create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [コアコンポーネントベースのアダプティブフォームのテーマを作成](create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [コアコンポーネントベースのアダプティブフォームのテンプレートを作成](template-editor.md)

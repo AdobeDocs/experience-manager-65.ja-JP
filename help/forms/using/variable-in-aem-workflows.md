@@ -9,7 +9,7 @@ exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2080'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 88%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です。ワークフローステップで変数の名前を使用して、変数に格納されている値を取得できます。変数名を使用して、ルーティング上の決定を行う式を定義することもできます。
@@ -51,7 +51,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 変数を作成するには、次の手順を実行します。
 
-1. AEMインスタンスで、「ツール」に移動します。 ![ツール](/help/forms/using/assets/hammer.png) /ワークフロー/モデル
+1. AEM インスタンスで、![ツール](/help/forms/using/assets/hammer.png)／ワークフロー／モデルに移動します。
 1. 選択 **[!UICONTROL 作成]** ワークフローモデルのタイトルと名前（オプション）を指定します。 モデルを選択し、「 」を選択します。 **[!UICONTROL 編集]**.
 1. ワークフローモデルのサイドキックで使用可能な変数アイコンを選択し、「 」を選択します。 **[!UICONTROL 変数を追加]**.
 
@@ -177,7 +177,7 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 #### 移動ステップ {#go-to-step}
 
-The **ステップに移動** ルーティング式の結果に応じて、実行するワークフローモデル内の次のステップを指定できます。
+**移動ステップ**&#x200B;を使用すると、ルーティング式の結果に応じて、ワークフローモデル内で実行する次のステップを指定できます。
 
 OR 分割ステップと同様に、ルール定義、ECMA スクリプト、または外部スクリプトを使用して、移動ステップのルーティング式を定義できます。
 

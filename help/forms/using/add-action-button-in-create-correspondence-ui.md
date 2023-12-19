@@ -1,6 +1,6 @@
 ---
 title: 「通信を作成」UI へのカスタムアクションまたはボタンの追加
-description: 通信を作成 UI でカスタムアクション/ボタンを追加する方法を説明します。
+description: 通信作成 UI にカスタムアクションまたはボタンを追加する方法について説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
@@ -9,8 +9,8 @@ feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1879'
-ht-degree: 78%
+source-wordcount: '1854'
+ht-degree: 98%
 
 ---
 
@@ -18,23 +18,23 @@ ht-degree: 78%
 
 ## 概要 {#overview}
 
-Correspondence Management ソリューションを使用すると、通信を作成ユーザーインターフェイスにカスタムアクションを追加できます。
+Correspondence Management ソリューションでは、通信作成ユーザーインターフェイスにカスタムアクションを追加できます。
 
 このドキュメントのシナリオでは、通信作成ユーザーインターフェイスにボタンを作成し、レターをレビュー用の PDF としてメールに添付して共有する方法について説明します。
 
 ### 前提条件 {#prerequisites}
 
-このシナリオを完了するには、次が必要です。
+このシナリオを完了するには、以下が必要になります。
 
-* CRX および JavaScript に関する知識
-* LiveCycleサーバ
+* CRX および JavaScript についての知識
+* LiveCycle サーバー
 
-## シナリオ：通信を作成ユーザーインターフェイスでボタンを作成してレビュー用にレターを送信する {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
+## シナリオ：通信作成ユーザーインターフェイスでボタンを作成してレビュー用にレターを送信する {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
 
-「通信を作成」ユーザーインターフェイスに、アクション付きのボタン（ここではレビュー用のレターを送信）を追加するには、次の操作を行います。
+アクション付きのボタン（ここではレビュー用のレターを送信）を通信作成ユーザーインターフェイスに追加するには、次の操作を行います。
 
-1. 通信を作成ユーザーインターフェイスにボタンを追加する
-1. ボタンへのアクション処理の追加
+1. 通信作成ユーザーインターフェイスにボタンを追加します
+1. ボタンにアクション処理を追加します
 1. LiveCycle プロセスを追加してアクション処理を有効化します
 
 ### 通信作成ユーザーインターフェイスへのボタンの追加 {#add-the-button-to-the-create-correspondence-user-interface}
@@ -65,14 +65,14 @@ Correspondence Management ソリューションを使用すると、通信を作
 
    1. /libs/fd/cm/config/defaultApp/acmExtensionsConfig.xml に移動します。
 
-   1. acmExtensionsConfig.xml ファイルを右クリックし、「 」を選択します。 **コピー**.
+   1. acmExtensionsConfig.xml ファイルを右クリックして「**コピー**」を選択します。
 
       ![acmExtensionsConfig.xml をコピー](assets/3_acmextensionsconfig_xml_copy.png)
 
-   1. を右クリックします。 **defaultApp** 「/apps/fd/cm/config/defaultApp/」のフォルダーで、「 **貼り付け**.
+   1. 「/apps/fd/cm/config/defaultApp/」にある **defaultApp** フォルダーを右クリックし、「**ペースト**」を選択します。
    1. 「**すべて保存**」をクリックします。
 
-1. apps フォルダーに新しく作成した acmExtensionsConfig.xml のコピーをダブルクリックします。 ファイルが編集用に開きます。
+1. apps フォルダーに新しく作成した acmExtensionsConfig.xml のコピーをダブルクリックします。ファイルが開いて編集可能になります。
 1. 次のコードを検索します。
 
    ```xml
@@ -99,13 +99,13 @@ Correspondence Management ソリューションを使用すると、通信を作
 
    ![customAction タグ](assets/5_acmextensionsconfig_xml.png)
 
-   modelExtension タグには、アクションボタンのアクション、権限、外観を設定する customAction 子タグのセットが含まれています。 次に、customAction 設定タグのリストを示します。
+   modelExtension タグには、アクションボタンのアクション、権限、表示方法を設定する customAction 子タグのセットが含まれています。以下は customAction 設定タグの一覧です。
 
    | **名前** | **説明** |
    |---|---|
    | name | 実行するアクションを表す英数字の名前。このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
-   | label | アクションボタンに表示するラベル |
-   | tooltip | ボタンのツールチップテキスト。ユーザーがボタンの上にマウスポインターを置くと表示されます。 |
+   | label | アクションボタンに表示するラベル。 |
+   | tooltip | ボタンのツールチップテキスト。ボタンにカーソルを置くと表示されます。 |
    | styleName | アクションボタンに適用するカスタムスタイルの名前。 |
    | permissionName | ユーザーが permissionName で指定されている権限を持っている場合にのみ、対応するアクションが表示されます。permissionName を `forms-users` として指定すると、このオプションにすべてのユーザーがアクセスできます。 |
    | actionHandler | ユーザーがボタンをクリックすると呼び出される ActionHandler クラスの完全修飾名。 |
@@ -120,7 +120,7 @@ Correspondence Management ソリューションを使用すると、通信を作
 
 1. 「**すべて保存**」をクリックします。
 
-#### /apps ブランチにプロパティファイルを含むロケールフォルダーを作成します。 {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
+#### /apps ブランチ内のプロパティファイルを使用してローカルフォルダーを作成 {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
 ACMExtensionsMessages.properties ファイルには、通信の作成ユーザーインターフェイス内のさまざまなフィールドのラベルとツールチップメッセージが含まれています。カスタマイズしたアクションやボタンを機能させるために、/apps branch にこのファイルのコピーを作成します。
 
@@ -158,9 +158,9 @@ ACMExtensionsMessages.properties ファイルには、通信の作成ユーザ�
 
 1. 「**すべて保存**」をクリックします。
 
-#### AdobeAsset Composer 構築ブロックバンドルの再起動 {#restart-the-adobe-asset-composer-building-block-bundle}
+#### Adobe Asset Composer 構築ブロックバンドルを再起動 {#restart-the-adobe-asset-composer-building-block-bundle}
 
-サーバー側で変更を加えるたびに、AdobeAsset Composer 構築ブロックバンドルを再起動します。 このシナリオでは、サーバーサイドの acmExtensionsConfig.xml および ACMExtensionsMessages.properties ファイルが編集されるため、Adobe Asset Composer 構築ブロックバンドルを再起動する必要があります。
+サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバーサイドの acmExtensionsConfig.xml および ACMExtensionsMessages.properties ファイルが編集されるため、Adobe Asset Composer 構築ブロックバンドルを再起動する必要があります。
 
 >[!NOTE]
 >
@@ -172,11 +172,11 @@ ACMExtensionsMessages.properties ファイルには、通信の作成ユーザ�
 
    ![Adobe Asset Composer 構築ブロック](assets/6_assetcomposerbuildingblockbundle.png)
 
-AdobeAsset Composer 構築ブロックバンドルを再起動すると、通信を作成ユーザーインターフェイスにカスタムボタンが表示されます。 通信を作成ユーザーインターフェイスでレターを開いて、カスタムボタンをプレビューできます。
+Adobe Asset Composer 構築ブロックバンドルを再起動すると、通信作成ユーザーインターフェイスにカスタムボタンが表示されます。通信作成ユーザーインターフェイスでレターを開いて、カスタムボタンをプレビューできます。
 
-### ボタンにアクション処理を追加する {#add-action-handling-to-the-button}
+### ボタンにアクション処理を追加 {#add-action-handling-to-the-button}
 
-通信を作成ユーザーインターフェイスは、デフォルトでは、次の場所にある cm.domain.js ファイルに ActionHandler が実装されています。
+通信作成ユーザーインターフェイスでは、デフォルトで、次の場所にある cm.domain.js ファイルに ActionHandler が実装されています。
 
 /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccr/js/cm.domain.js
 
@@ -217,10 +217,10 @@ AdobeAsset Composer 構築ブロックバンドルを再起動すると、通信
 
       `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
-      ファイルに「 ccrcustomization.js 」という名前を付けます。
+      ファイルに ccrcustomization.js という名前を付けます。
 
    1. ccrcustomization.js ファイルをダブルクリックして、CRX で開きます。
-   1. ファイルに次のコードを貼り付け、 **すべて保存**:
+   1. ファイルに次のコードを貼り付けて、「**すべて保存**」をクリックします。
 
       ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
@@ -319,12 +319,12 @@ AdobeAsset Composer 構築ブロックバンドルを再起動すると、通信
       '</div>';
       ```
 
-### アクションを有効にするLiveCycleプロセスを追加します <span class="acrolinxCursorMarker"></code>処理中 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### LiveCycle プロセスを追加してアクション<span class="acrolinxCursorMarker"></code>処理を有効にする {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 このシナリオでは、以下のコンポーネントを有効にします。これらのコンポーネントは、添付されている components.zip ファイルに含まれています。
 
-* DSC コンポーネント jar (DSCSample.jar)
-* レビュープロセス LCA(SendLetterForReview.lca) 用の送信レター
+* DSC コンポーネント jar（DSCSample.jar）
+* レビュープロセス用のレター送信 LCA（SendLetterForReview.lca）
 
 components.zip ファイルをダウンロードして解凍し、DSCSample.jar および SendLetterForReview.lca ファイルを取得します。これらのファイルは、次の手順に従って使用します。
 [ファイルを入手](assets/components.zip)
@@ -387,9 +387,9 @@ Experience Manager サーバーにアクセスする必要のある LiveCycle �
 
 1. 「**保存**」をクリックします。
 
-#### 電子メールサービスを設定する {#configure-the-email-service}
+#### メールサービスを設定 {#configure-the-email-service}
 
-このシナリオでは、Correspondence Management で電子メールを送信できるようにするには、LiveCycleサーバーで電子メールサービスを設定します。
+このシナリオでは、Correspondence Management でメールを送信できるようにするため、LiveCycle サーバーでメールサービスを設定します。
 
 1. 管理者の資格情報を使用して、`https:/[lc server]:[lc port]/adminui` から Livecycle サーバーにログインします。
 
@@ -426,9 +426,9 @@ Correspondence Management API を使用するには、DSCSample.jar（このド�
 
 #### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
 
-DSCSample.jar ファイルは renderLetter API を使用して、DSC で入力された XML データの PDF バイトとしてレターをレンダリングします。renderLetter およびその他の API について詳しくは、 [レターレンダリングサービス](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
+DSCSample.jar ファイルは renderLetter API を使用して、DSC で入力された XML データの PDF バイトとしてレターをレンダリングします。renderLetter およびその他の API について詳しくは、[レターのレンダリングサービス](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)を参照してください。
 
-1. Workbench を起動し、ログインします。
+1. Workbench を起動してログインします。
 1. **Window／表示を確認／コンポーネント**&#x200B;をクリックします。コンポーネント表示が Workbench ES2 に追加されます。
 
 1. 「**コンポーネント**」を右クリックし、「**コンポーネントをインストールt**」を選択します。
@@ -436,9 +436,9 @@ DSCSample.jar ファイルは renderLetter API を使用して、DSC で入力�
 1. ファイルブラウザーで **DSCSample.jar** ファイルを選択し、「**開く**」をクリックします。
 1. 「**RenderWrapper**」を右クリックし、「**コンポーネントを開始**」を選択します。コンポーネントが起動すると、コンポーネント名の横に緑色の矢印が表示されます。
 
-## レビュー用にレターを送信 {#send-letter-for-review}
+## レビュー用のレターを送信 {#send-letter-for-review}
 
-レビュー用にレターを送信するためのアクションとボタンを設定したら、次の手順を実行します。
+レビュー用のレターを送信するためのアクションとボタンを設定した後、次の操作を行います。
 
 1. ブラウザーのキャッシュをクリアします。
 

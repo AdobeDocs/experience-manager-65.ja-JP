@@ -1,10 +1,10 @@
 ---
 title: エクスペリエンスフラグメント
-description: エクスペリエンスフラグメント  (Adobe Experience Manager Sitesオーサリング )
+description: Adobe Experience Manager Sitesオーサリングのエクスペリエンスフラグメント。
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1441'
 ht-degree: 95%
 
 ---
@@ -116,7 +116,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
 1. 必要なテンプレートを取得するための正規表現を「**許可されたテンプレート**」フィールドに指定します。
 
-   次に例を示します。
+   例：
    `/conf/(.*)/settings/wcm/templates/experience-fragment(.*)?`
 
    以下を参照してください。
@@ -220,7 +220,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    ![xf-authoring-06](assets/xf-authoring-06.png)
 
-1. **作成** 以下を作成できます。
+1. 「**作成**」では以下を作成できます。
 
    * **バリエーション**
    * **バリエーションを[ライブコピー](/help/sites-administering/msm.md#live-copies)**&#x200B;として。
@@ -349,7 +349,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    * **ソーシャルメディアのステータス**
 
-      * ソーシャルメディアバリエーションの詳細。
+      * ソーシャルメディアのバリエーションの詳細。
 
 ## プレーン HTML レンディション {#the-plain-html-rendition}
 

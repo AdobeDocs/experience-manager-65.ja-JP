@@ -1,6 +1,6 @@
 ---
 title: フォームポータルのコンポーネントの有効化
-description: デフォルトでは、Forms Portal コンポーネントは無効になっています。 Document Services グループと Document Services Predicates グループを有効にして、Forms Portal コンポーネントを有効にします。
+description: 出荷時の設定では、フォームポータルコンポーネントは無効になっています。Document Services グループと Document Services Predicates グループを有効にして、フォームポータルコンポーネントを有効にします。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
@@ -9,7 +9,7 @@ exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '332'
-ht-degree: 53%
+ht-degree: 73%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 53%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-フォームポータルのコンポーネントは、デフォルトでは使用できません。 AEM サイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
+フォームポータルコンポーネントは、出荷時の設定では使用できません。AEM サイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
 
 1. Web サイトのオーサーインスタンスにログインし、AEM Sites ページを開きます。
 
@@ -38,7 +38,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->また、コンポーネントを選択することで、これらのカテゴリから特定のコンポーネントを有効にすることもできます。 コンポーネントとその使用方法について詳しくは、 [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md) および [ページへのリンクコンポーネントの埋め込み](/help/forms/using/embedding-link-component-page.md).
+>また、コンポーネントを選択して、これらのカテゴリから特定のコンポーネントを有効にすることもできます。コンポーネントとその使用方法について詳しくは、[フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)と[ページでのリンクコンポーネントの埋め込み](/help/forms/using/embedding-link-component-page.md)を参照してください。
 
 これで、コンポーネントブラウザーで Document Services コンポーネントカテゴリと Document Services Predicates コンポーネントカテゴリを使用できるようになります。コンポーネントは、同じテンプレートを使用するすべてのページで有効になります。
 

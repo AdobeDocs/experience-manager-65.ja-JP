@@ -9,8 +9,8 @@ role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 80%
+source-wordcount: '347'
+ht-degree: 95%
 
 ---
 
@@ -18,15 +18,15 @@ ht-degree: 80%
 
 JEE 上のAEM 6.5.18.0 Formsには、完全インストーラーとパッチインストーラーの 2 種類のインストーラーが用意されています。
 
-**完全インストーラー**: [JEE 上のAEM 6.5.18.0フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) 新しいAEM Formsインスタンスを設定するか、JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.18.0 Formsへのアップグレードを実行する場合。
+**フルインストーラー**：[JEE 上の AEM 6.5.18.0 フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を使用して新しい AEM Forms インスタンスを設定したり、JEE 上の AEM 6.5.x.x Forms から JEE 上の AEM 6.5.18.0 Forms へのアップグレードを実行したりできます。
 
 **パッチインストーラー**：[JEE 上の AEM 6.5.18.0 パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)は、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。パッチインストーラーを使用して、AEM Forms の最新バージョンにアップグレードできます。
 
 次の表は、フルインストーラーとパッチインストーラーを使用する際のシナリオを示しています。
 
-![フルおよびパッチインストーラーのシナリオ](assets/full-and-patch-installer.png)
+![フルインストーラーとパッチインストーラーのシナリオ](assets/full-and-patch-installer.png)
 
-JEE 上の既存のAEM Forms 6.5.x.x をAEM 6.5.18.0 JEE 上のFormsにアップグレードするには、次の手順を実行します。
+フルインストーラーを使用して既存の JEE 上の AEM Forms 6.5.x.x を JEE 上の AEM 6.5.18.0 Forms にアップグレードするには、以下の手順を実行します。
 
 1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から JEE 上の AEM 6.5 Forms インストーラーをダウンロードします。インストーラーを使用するには、有効なメンテナンス＆サポート契約が必要です。
 1. [アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)で、アップグレードを正しく実行するためのチェック項目を確認します。

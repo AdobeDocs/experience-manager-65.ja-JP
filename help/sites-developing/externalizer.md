@@ -1,6 +1,6 @@
 ---
 title: URL の外部化
-description: Externalizer は、プログラムによってリソースパスを外部および絶対 URL に変換できる OSGi サービスです
+description: Externalizer は、プログラムによってリソースパスを外部の絶対 URL に変換できる OSGi サービスです
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -9,22 +9,22 @@ docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 52%
+source-wordcount: '473'
+ht-degree: 98%
 
 ---
 
 # URL の外部化{#externalizing-urls}
 
-Adobe Experience Manager(AEM) では、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/page`) を外部 URL や絶対 URL( 例えば、 `https://www.mycompany.com/path/to/my/page`) を追加する必要があります。
+Adobe Experience Manager（AEM）の **Externalizer** は、あらかじめ設定された DNS を接頭辞として、リソースパス（例えば `/path/to/my/page`）をプログラム的に外部の絶対URL（例えば `https://www.mycompany.com/path/to/my/page`）に変換できる OSGi サービスです。
 
 インスタンスが Web レイヤーの背後で実行されている場合、自身の外部向け URL がわかりません。また、リンクをリクエストスコープの範囲外で作成する必要がある場合があります。これらの理由で、このサービスは、そのような外部 URL を設定して組み立てるための一元化された場所を提供します。
 
-このページでは、 **Externalizer** サービスとその使用方法について説明します。 詳しくは、 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
+このページでは、**Externalizer** サービスの設定方法と使用方法について説明します。詳しくは、 [Javadocs](ttps://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Externalizer サービスの設定 {#configuring-the-externalizer-service}
 
-The **Externalizer** サービスを使用すると、プログラムによるリソースパスのプレフィックス付けに使用できる複数のドメインを一元的に定義できます。 各ドメインは、プログラムによってドメインを参照する際に使用される一意の名前で識別されます。
+**Externalizer** サービスでは、プログラムでリソースパスに接頭辞を付けるために使用可能な複数のドメインを一元的に定義できます。各ドメインは一意の名前によって識別され、その名前を使用して、プログラムからそのドメインを参照できます。
 
 **Externalizer** サービスのドメインマッピングを定義するには：
 
@@ -40,16 +40,16 @@ The **Externalizer** サービスを使用すると、プログラムによる�
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. を定義 **ドメイン** マッピング：マッピングは、ドメイン、スペースおよびドメインを参照するコード内で使用できる一意の名前で構成されます。
+1. **ドメイン**&#x200B;マッピングを定義します。マッピングは、次のようなコード内でドメインを参照するために使用できる独自の名前、スペース、ドメインにより構成されます。
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
    ここで、
 
-   * **スキーム** は http または https ですが、ftp などでもかまいません。
+   * **スキーム**&#x200B;は http または https ですが、ftp などでもかまいません。
 
-      * 必要に応じて、https を使用して https リンクを強制します。
-      * URL の外部化を要求する際に、クライアントコードがスキームを上書きしない場合に使用されます。
+      * 必要に応じて、https を使用して https リンクを強制的に適用します。
+      * URL の外部化を要求する際にクライアントコードがスキームを上書きしない場合に使用されます。
 
    * **server** はホスト名です（ドメイン名または IP アドレス）。
    * **port**（オプション）はポート番号です。
@@ -57,7 +57,7 @@ The **Externalizer** サービスを使用すると、プログラムによる�
 
    例：`production https://my.production.instance`
 
-   AEMでは次のマッピング名が使用されるので、事前に定義されており、設定する必要があります。
+   次のマッピング名は事前定義されており、AEM で使用されるので、設定されている必要があります。
 
    * `local` - ローカルインスタンス
    * `author` - オーサリングシステムの DNS
@@ -65,7 +65,7 @@ The **Externalizer** サービスを使用すると、プログラムによる�
 
    >[!NOTE]
    >
-   >カスタム設定を使用すると、次のようなカテゴリを追加できます。 `production`, `staging`または外部のAEM以外のシステム ( `my-internal-webservice`. このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
+   >カスタム設定を使用すると、`production` や `staging` などのカテゴリまたは `my-internal-webservice` などの AEM 以外の外部システムを追加できます。このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
 
 1. 「**保存**」をクリックして変更を保存します。
 
@@ -125,4 +125,4 @@ The **Externalizer** サービスを使用すると、プログラムによる�
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. 他の例については、関連する [Javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
+1. 他の例については、関連する [Javadoc](ttps://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。

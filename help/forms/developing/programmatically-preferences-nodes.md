@@ -10,7 +10,7 @@ exl-id: 108eb249-879b-4e4f-b431-8118b8656e62
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -38,4 +38,4 @@ User Management PreferencesManagerService 操作をプログラムで実行す�
 
 **適切な役割または権限の操作を呼び出す**
 
-サービスクライアントを作成したら、Preferences Manager 操作を呼び出すことができます。サービスクライアントを使用すると、権限を読み取り、設定できます。
+サービスクライアントを作成したら、Preferences Manager 操作を呼び出すことができます。サービスクライアントを使用すると、権限の読み取りと設定が可能です。

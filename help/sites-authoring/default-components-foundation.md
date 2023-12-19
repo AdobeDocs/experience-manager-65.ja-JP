@@ -4,8 +4,8 @@ description: Adobe Experience Manager 6.5 の基盤コンポーネントにつ�
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '7204'
-ht-degree: 97%
+source-wordcount: '6872'
+ht-degree: 98%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 97%
 
 基盤コンポーネントは、標準の web ページ用のコンテンツを作成するためのものです。AEM の標準のインストールでそのまま使用できるコンポーネントのサブセットとなります。
 
-一部のコンポーネントは、コンポーネントブラウザーからすぐに使用できます。他の様々なコンポーネントも、[デザインモード](/help/sites-authoring/default-components-designmode.md)（静的テンプレートに基づいたページの場合）または[テンプレートの編集](/help/sites-authoring/templates.md)（編集可能テンプレートに基づいたページの場合）を使用して利用できます。
+一部のコンポーネントは、コンポーネントブラウザーから直ちに使用できます。 その他の様々な機能は、 [デザインモード](/help/sites-authoring/default-components-designmode.md) （ページが静的テンプレートに基づいている場合）または [テンプレートの編集](/help/sites-authoring/templates.md) （ページが編集可能なテンプレートに基づいている場合）
 
 基盤コンポーネントの使用はサポートされていますが、基盤コンポーネントはほぼ廃止され、より拡張性と柔軟性の高いコアコンポーネントに置き換わりました。
 
@@ -109,7 +109,7 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 
 #### プロパティ {#properties}
 
-ダイアログを使用すると、アダプティブ画像コンポーネントのインスタンスのプロパティを編集できます。その多くは、そのインスタンスの基となる画像コンポーネントに共通しています。 プロパティは、次の 2 つのタブで使用できます。
+ダイアログを使用すると、アダプティブ画像コンポーネントのインスタンスのプロパティを編集できます。プロパティの多くは、基本となる画像コンポーネントと共通しています。プロパティは、次の 2 つのタブで使用できます。
 
 * **画像**
 
@@ -149,7 +149,7 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。代わりに、[カルーセルコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=ja)を使用することをお勧めします。
 
-カルーセルコンポーネントを使用すると、個々のページに関連付けられた画像を表示できます。
+カルーセルコンポーネントを使用すると、個々のページに関連付けられている画像を次のように表示できます。
 
 * 一度に 1 つずつ
 * 短時間
@@ -201,12 +201,12 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 
       * **詳細検索のオプション**
 
-         * **QueryBuilder 述語の表記**
-「QueryBuilder 述語の表記」を使用して検索クエリを入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれるすべてのページがカルーセルに表示されます。
-クエリ式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
+         * **Querybuilder 述語の表記法**
+検索クエリは、 Querybuilder 述語の表記を使用して入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれるすべてのページがカルーセルに表示されます。
+クエリー式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
 
    * **並べ替え順**
-`jcr:title`、`jcr:created`、`cq:lastModified`、または `cq:template` をドロップダウンメニューから選択します。
+選択 `jcr:title`, `jcr:created`, `cq:lastModified`または `cq:template` をドロップダウンメニューから選択します。
 
    * **制限**
 オプション。カルーセルで使用する項目の最大数です。
@@ -811,7 +811,7 @@ Flash コンポーネントを使用すると、Flash ムービーを読み込�
 >
 >**テキスト**&#x200B;基盤コンポーネントは、**テーブル**&#x200B;基盤コンポーネントと同様に、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)をベースとしています。
 
-テキストコンポーネントを使用すると、WYSIWYG エディターを使用してテキストブロックを入力できます。このエディターには、 [リッチテキストエディター](/help/sites-authoring/rich-text-editor.md). 様々なアイコンを使用して、フォントの特性、配置、リンク、リスト、インデントなど、テキストの書式を設定できます。
+テキストコンポーネントを使用すると、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)の機能を備えた WYSIWYG エディターでテキストブロックを入力できます。フォントの文字、配置、リンク、リスト、インデントなど、多様なアイコンでテキストの書式を設定できます。
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -848,7 +848,7 @@ Flash コンポーネントを使用すると、Flash ムービーを読み込�
 
 * **画像のプロパティ**（**詳細画像プロパティ**）
 
-  以下を指定できます。
+  次の項目を設定できます。
 
    * **画像アセット**
 
@@ -1009,7 +1009,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 * **タイトルとテキスト**
 
-  このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。また、必要に応じて、フィールドが複数選択可能かどうかや、選択可能な項目など、他の主要情報を定義できます。
+  このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。適切な場合は、フィールドで複数選択が有効かどうかや、選択肢に使用できる項目など、その他の主要な情報を定義することもできます。
 
 * **初期値**
 
@@ -1360,7 +1360,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=ja)を利用することをお勧めします。
 
-チェックボックスを使用すると、1 つ以上のチェックボックスのリストを作成できます。複数のチェックボックスを同時に選択できます。
+チェックボックスを使用すると、1 つまたは複数のチェックボックスのリストを構築できます。チェックボックスでは同時に複数の項目を選択できます。
 
 ![dc_form_checkboxgroupuse](assets/dc_form_checkboxgroupuse.png)
 
@@ -1511,7 +1511,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。アドビでは、代わりに[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=ja)を使用することをお勧めします。
 
-このコンポーネントを使用すると、次のいずれかのデフォルトのテキストを持つ送信ボタンを作成できます。
+このコンポーネントを使用すると、デフォルトのテキストを指定した送信ボタンを作成できます。
 
 ![dc_form_submitbutton](assets/dc_form_submitbutton.png)
 
@@ -1525,7 +1525,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 >
 >この基盤コンポーネントは非推奨（廃止予定）になりました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を使用することをお勧めします。
 
-このフィールドでタグを選択できます。
+このフィールドでは、タグを選択できます。
 
 ![dc_form_tags_use](assets/dc_form_tags_use.png)
 

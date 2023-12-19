@@ -10,7 +10,7 @@ exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 86%
+ht-degree: 96%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 86%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-aem-forms-with-adobe-analytics.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-aem-forms-with-adobe-analytics.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
-Adobe AnalyticsとAEMの統合により、Web ページのアクティビティを追跡できます。
+Adobe Analytics と AEM の統合により、web ページのアクティビティを追跡できます。
 
 * Adobe Analytics 設定により、AEM で Adobe Analytics を認証できます。
 * Adobe Analytics レポートスイートに送信されたデータはフレームワークで特定されます。
@@ -46,7 +46,7 @@ Adobe AnalyticsとAEMの統合により、Web ページのアクティビティ�
 
 >[!NOTE]
 >
->ハウツー記事も参照してください。 [DTM を使用したAEMとAdobe TargetおよびAdobe Analyticsの統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja).
+>方法については、[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)も参照してください。
 
 ## その他の情報 {#further-information}
 

@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームのキーワード
-description: アダプティブフォームでは、これらの予約語を識別子として使用することはできません。
+description: アダプティブフォームでは、以下の予約済みの単語を識別子として使用することはできません。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms
@@ -8,15 +8,15 @@ exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
 # アダプティブフォームのキーワード {#adaptive-forms-keywords}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
-アダプティブフォームのキーワードは、事前に定義され、アダプティブフォーム用に特別な意味を持つ予約済みの識別子です。 アダプティブフォームでは、これらのキーワードを識別子として使用することはできません。 次の表に、アダプティブフォーム用に予約されているすべてのキーワードを示します。
+アダプティブフォームのキーワードは事前に定義されており、アダプティブフォームにおいて特別の意味を持つ予約済みの識別子です。アダプティブフォームでは、これらのキーワードを識別子として使用することはできません。次の表は、アダプティブフォームで予約済みの識別子であるすべてのキーワードを一覧表示したものです。
 
 <table>
  <tbody>

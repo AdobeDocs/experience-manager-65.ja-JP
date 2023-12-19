@@ -9,14 +9,14 @@ role: Developer
 exl-id: 659eb9b0-93a0-4bae-8836-d4bc9c3a8c77
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 35%
+source-wordcount: '428'
+ht-degree: 100%
 
 ---
 
 # Application Manager Client Java API クイックスタート（SOAP） {#application-manager-client-javaapi-quick-start-soap}
 
-Application Manager クライアントでは、次の Java™ API クイックスタート (SOAP) を使用できます。
+Application Manager Client では、次の Java™ API クイックスタート（SOAP）を使用できます。
 
 [クイックスタート（SOAP モード）：Java を使用したアプリケーションバージョンの作成](#quick-start-soap-mode-creating-application-version-using-the-java-api)
 
@@ -38,11 +38,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「 AEM Formsによるプログラミング」のクイックスタートは、JBoss®および Windows オペレーティングシステムにデプロイされているForms Server に基づいています。 ただし、UNIX®などの別のオペレーティング・システムを使用している場合は、windows 固有のパスを、該当するオペレーティング・システムでサポートされるパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>AEM Forms によるプログラミングにあるクイックスタートは、JBoss と Windows オペレーティングシステムにデプロイされる Forms Server に基づいています。UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換える必要があります。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションのバージョンの作成 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用したアプリケーションバージョンの作成 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
-次の Java™コードの例は、Java™ API を使用してアプリケーションを作成します。
+次の Java™ コードの例では、JAVA™ API を使用してアプリケーションを作成します。
 
 ```java
 /*
@@ -139,9 +139,9 @@ public class CreateApplicationVersion_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションの書き出し {#quick-start-soap-mode-exporting-applications-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用したアプリケーションのエクスポート {#quick-start-soap-mode-exporting-applications-using-the-java-api}
 
-次の Java™コードの例は、Java™ API を使用してアプリケーションを書き出します。
+次の Java™ コードの例では、JAVA™ API を使用してアプリケーションをエクスポートします。
 
 ```java
 /*
@@ -242,13 +242,13 @@ public class ExportLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションのインポート {#quick-start-soap-mode-importing-applications-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用したアプリケーションのインポート {#quick-start-soap-mode-importing-applications-using-the-java-api}
 
-次の Java™コードの例では、Java™ API を使用してアプリケーションを読み込みます。
+次の Java™ コードの例では、JAVA™ API を使用してアプリケーションをインポートします。
 
 >[!NOTE]
 >
-Java™ API importApplication() は、同じ名前の既存のアプリケーションを新しいアプリケーションに置き換えます。 既存のアプリケーションを更新するには、API updateApplication() の代わりに API importApplication() を使用します。
+Java™ API importApplication() は、同じ名前の既存のアプリケーションをより新しいアプリケーションに置き換えます。既存のアプリケーションを更新するには、API updateApplication() の代わりに API importApplication() を使用します。
 
 ```java
 /*
@@ -329,9 +329,9 @@ public class ImportLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションの取得 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用したアプリケーションの取得 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
 
-次の Java™コードの例では、Java™ API を使用してアプリケーションを取得しています。
+次の Java™ コードの例では、Java™ API を使用してアプリケーションを取得します。
 
 ```java
 /*
@@ -436,11 +436,11 @@ public class GetApplication_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションの取得 {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用したアプリケーションの取得 {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
 
-次の Java™コードの例では、Java™ API を使用してアプリケーションを取得します。
+次の Java™ コードの例では、Java™ API を使用してアプリケーションを取得します。
 
-**注意**:AEM Forms Application API を取得すると、getApplications() は、デプロイされたアプリケーションのみを返します。
+**メモ**：AEM Forms アプリケーション API の getApplications() で取得すると、デプロイされたアプリケーションのみが返されます。
 
 ```java
 /*
@@ -535,7 +535,7 @@ public class GetApplications_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）: Java™ API を使用したアプリケーションのステータスの取得 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用したアプリケーションのステータスの取得 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
 ```java
 /*
@@ -640,9 +640,9 @@ public class GetApplicationStatus_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用して、LiveCycleES2 以降のアプリケーションアーカイブをプレビューする {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用した、LiveCycle ES2 および以降のアプリケーションアーカイブのプレビュー {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
-次の Java™コードの例は、Java™ API を使用して、AEM Forms以降のアプリケーションアーカイブをプレビューするためのものです。
+次の Java™ コードの例は、Java™ API を使用した AEM Forms および以降のアプリケーションアーカイブをプレビューする場合に使用します。
 
 ```java
 /*
@@ -719,9 +719,9 @@ public class PreviewLCA_SOAP {
 }
 ```
 
-## クイックスタート（SOAP モード）:Java™ API を使用したアプリケーションアーカイブの削除 {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用したアプリケーションアーカイブの削除 {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
 
-次の Java™コードの例は、アプリケーションアーカイブを削除する場合です。
+次の Java™ コードの例は、アプリケーションアーカイブの削除を示しています。
 
 ```java
 /*

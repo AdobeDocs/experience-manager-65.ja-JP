@@ -10,7 +10,7 @@ exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '1829'
-ht-degree: 87%
+ht-degree: 91%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 87%
 
    表示されるオプションは、実稼働環境によって異なります。コンポーネントについて詳しくは、[デフォルトコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-default-components.md)を参照してください。
 
-1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定してコンテンツを追加するためのウィンドウが開きます。
+1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定してコンテンツを追加できるウィンドウが開きます。
 
 ### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
 
@@ -211,7 +211,7 @@ ht-degree: 87%
 
   ![鉛筆記号で示される編集アイコン。](do-not-localize/chlimage_1-6.png)
 
-* 虫眼鏡アイコンを使用すると、プレビューモードを選択できます。このモードでは、パブリッシュ環境と同じようにページを表示できます（ページの更新が必要になる場合もあります）。
+* 虫眼鏡アイコンを使用すると、プレビューモードを選択できます。プレビューモードでは、ページが公開環境と同じ形式で表示されます（ページの更新が必要になる場合もあります）。
 
   ![虫眼鏡記号で示されるプレビューモードアイコン。](do-not-localize/chlimage_1-7.png)
 
@@ -221,7 +221,7 @@ ht-degree: 87%
 
 ## 検索と置換 {#find-replace}
 
-同じフレーズを大規模に編集する場合、 **[検索と置換](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)** メニューオプションを使用すると、web サイトの特定のセクション内で、特定の文字列を持つ複数のインスタンスを検索および置換できます。
+同じフレーズを大規模に編集する場合、「**[検索して置換](/help/sites-classic-ui-authoring/author-env-search.md#find-and-replace)**」メニューオプションを使用すると、web サイトのセクション内で文字列のインスタンスを複数検索して置換できます。
 
 ## ページのロック {#locking-a-page}
 

@@ -10,7 +10,7 @@ exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1540'
-ht-degree: 75%
+ht-degree: 84%
 
 ---
 
@@ -36,7 +36,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **作成**
 
-   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するので、シナリオによって異なる場合があります。
+   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
 
 * フォルダー内のページの並べ替え
 
@@ -46,7 +46,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * リンクのナビゲーション
 
-   * **編集**&#x200B;モードでは&#x200B;***リンクを使用して移動することはできません***。リンクを使用して移動するには、次の操作が必要です。 [ページをプレビュー](/help/sites-authoring/editing-content.md#previewing-pages) 次のいずれかを使用します。
+   * **編集**&#x200B;モードでは&#x200B;***リンクを使用して移動することはできません***。リンクを使用して移動するには、次のいずれかを使用して[ページをプレビュー](/help/sites-authoring/editing-content.md#previewing-pages)する必要があります。
 
       * [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)
       * [公開済みとして表示](/help/sites-authoring/editing-content.md#view-as-published)
@@ -55,7 +55,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 >[!NOTE]
 >
->オーサリングをより簡単にするためのキーボードショートカットがいくつか用意されています。
+>オーサリング作業がより簡単になる、いくつかのキーボードショートカットがあります。
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
@@ -63,7 +63,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ### ページの検索 {#finding-your-page}
 
-ページの検索には様々な特徴があります。移動や検索をおこなうには、次のようにします。
+ページの検索には様々な特徴があります。移動や検索を行うには、次のようにします。
 
 1. を開きます。 **Sites** コンソール ( **Sites** オプションを [グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)) - Adobe Experience Managerリンク（左上）を選択するとトリガー（ドロップダウン）されます。
 
@@ -71,7 +71,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. を使用してツリーの上に移動 [ヘッダーのパンくずリスト](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)：選択した場所に戻ることができます。
+1. [ヘッダーのパンくず](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)を使用してツリーの上に移動します。これにより、選択した場所に戻ることができます。
 
    ![qgtap-01](assets/qgtap-01.png)
 
@@ -81,14 +81,14 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-宛先 [ページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page):
+[新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)するには：
 
-1. [場所に移動します。](#finding-your-page) ページを作成する場所です。
+1. ページを作成する[場所に移動](#finding-your-page)します。
 1. 「**作成**」アイコンを使用して、リストから「**ページ**」を選択します。
 
    ![qgtap-02](assets/qgtap-02.png)
 
-1. [新しいページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)に必要な情報を収集するためのウィザードが開きます。画面に表示される指示に従います。
+1. [新しいページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)に必要な情報を収集するためのウィザードが開きます。画面の指示に従って操作します。
 
 ### その他のアクションを実行するページの選択 {#selecting-your-page-for-further-action}
 
@@ -140,7 +140,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
    * ツールバー（[ページが選択されている](#selectiingyourpageforfurtheraction)場合）
 
-1. エディターが開いたら、次の操作を実行できます。
+1. エディターが開くと、次の操作を実行できます。
 
    * 次の方法を使用して、[新しいコンポーネントをページに追加](/help/sites-authoring/editing-content.md#inserting-a-component)します。
 
@@ -195,7 +195,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    >[!NOTE]
    >
-   >コンテンツ内のリンクを使用して移動するには、 [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode).
+   >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
 
 ### ページプロパティの編集 {#editing-the-page-properties}
 
@@ -267,7 +267,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * 移動：
 
-      * ページの移動に必要な情報を収集するためのウィザードが開きます。 画面に表示される指示に従います。
+      * ページの移動に必要な情報を収集するためのウィザードが開きます。画面の指示に従って操作します。
 
    * 削除：
 
@@ -291,7 +291,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ### ページ参照へのアクセス {#accessing-page-references}
 
-[参照へのクイックアクセス](/help/sites-authoring/author-environment-tools.md#references) 参照レールで、ページに、またはページからを使用できます。
+参照パネルでは、ページへの（またはページからの）[参照に対するクイックアクセス](/help/sites-authoring/author-environment-tools.md#references)を使用できます。
 
 1. （**ページ選択**&#x200B;の前または後に）ツールバーアイコンを使用して「[参照](#selecting-your-page-for-further-action)」を選択します。
 
@@ -335,4 +335,4 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * **違いを表示**
 
-      * （2 つのバージョン間の）違いが強調表示されたページが開きます。
+      * （2 つのバージョン間の）違いがハイライト表示されたページが開きます。

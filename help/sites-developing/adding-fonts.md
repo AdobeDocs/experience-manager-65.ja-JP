@@ -1,6 +1,6 @@
 ---
 title: グラフィックレンダリング用のフォントの追加
-description: AEMを使用すると、コンテンツから動的に取得したテキストを組み込んだグラフィックを生成できます。
+description: AEM では、コンテンツから動的に取得したテキストを組み込んだグラフィックを生成できます
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -9,13 +9,13 @@ exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 72%
+ht-degree: 86%
 
 ---
 
 # グラフィックレンダリング用のフォントの追加{#adding-fonts-for-graphic-rendering}
 
-AEMを使用すると、コンテンツから動的に取り込んだテキストを組み込んだグラフィックを生成できます。
+AEM では、コンテンツから動的に取得したテキストを組み込んだグラフィックを生成できます
 
 その際に、独自のフォントを読み込んで使用することもできます。
 

@@ -11,7 +11,7 @@ exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '4102'
-ht-degree: 79%
+ht-degree: 80%
 
 ---
 
@@ -216,7 +216,7 @@ HTML フォームのレンダリング時に、HTML 実行時オプションを�
 * `Upload`：現在のフォームに添付するファイルを選択するためのユーザーインターフェイスを提供します。
 * `Download`：添付ファイルを表示するユーザインタフェースを提供します。
 
-HTMLフォーム上にHTMLツールバーが表示されている場合、ユーザーは最大 10 個のファイルを選択して、フォームデータと共に送信できます。 ファイルが送信されると、Forms サービスはファイルを取得することができます。
+HTML フォーム上に HTML ツールバーが表示されている場合、ユーザーは最大 10 個のファイルを選択して、フォームデータと共に送信することができます。ファイルが送信されると、Forms サービスはファイルを取得することができます。
 
 フォームを HTML としてレンダリングする際に、ユーザーエージェント値を指定することができます。ユーザーエージェント値は、ブラウザーとシステムの情報を提供します。これはオプションの値で、空の文字列値を渡すことができます。Java API クイックスタートを使用した HTML フォームのレンダリングでは、ユーザーエージェント値を取得する方法、それを使用してフォームを HTML としてレンダリングする方法を示しています。
 
@@ -284,7 +284,7 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
 
 1. HTML フォームのレンダリング
 
-   を呼び出す `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを使用して、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを呼び出して、以下の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
@@ -302,7 +302,7 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
    * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
    * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
-   * の作成 `java.io.InputStream` を呼び出すことによって、オブジェクトを `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`java.io.InputStream` オブジェクトを作成します。
    * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
    * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
@@ -342,7 +342,7 @@ Forms API（web サービス）を使用して HTML フォームをレンダリ�
 
 1. HTML フォームのレンダリング
 
-   を呼び出す `FormsService` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを使用して、次の値を渡します。
+   `FormsService` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを呼び出して、以下の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。

@@ -1,6 +1,6 @@
 ---
 title: コンテンツの HTTP/2 配信
-description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を削減しながら情報をより高速に転送できるようになりました。
+description: HTTP/2 によりブラウザーとサーバーの通信がどのように改善され、必要な処理能力を抑えながら情報をより高速に転送できるのかを説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -11,7 +11,7 @@ feature: Publishing,Configuration
 source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 93%
 
 HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 
-次の Web サイトでは、HTTP/2 とその利点について簡単かつ簡単に説明します。
+HTTP/2 とその利点については、次の web サイトで簡潔に説明されています。
 
 [HTTP/2 について知っておく必要がある事項](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
@@ -44,13 +44,13 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 への移行対象となるお客様 {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 に切り替えるには {#am-i-eligible-to-switch-over-to-http}
 
 HTTP/2 を使用するには、以下の要件を満たしている必要があります。
 
 * リッチメディアリクエストにセキュア HTTPS を使用している。
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media ライセンスの一部として使用している。
-* 専用の（company-h.assetsadobe#.com 以外の）ドメインを使用します。
+* 専用ドメイン（company-h.assetsadobe#.com 以外）を使用している。
 
   既に専用ドメインがある場合、アドビのカスタマーサポート経由でオプトインできます。
 
@@ -90,7 +90,7 @@ HTTP/2 への切り替えは、お客様からのリクエストが必要とな�
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
-キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
+キャッシュされていないコンテンツは、キャッシュが再作成されるまでアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
 ## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 

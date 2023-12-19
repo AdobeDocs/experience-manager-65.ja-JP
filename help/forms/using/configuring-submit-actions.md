@@ -1,6 +1,6 @@
 ---
 title: 送信アクションの設定
-description: Formsでは、送信アクションを設定して、送信後のアダプティブフォームの処理方法を定義することができます。 組み込みの送信アクションを使用することも、独自のアクションを一から書き込むこともできます。
+description: Forms では、アダプティブフォームが送信された後どのように処理されるかを定義するために、送信アクションを設定できます。組み込みの送信アクションを使用するか、または独自のアクションを一から書くことができます。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
@@ -9,23 +9,23 @@ exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
 source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
 workflow-type: tm+mt
 source-wordcount: '2581'
-ht-degree: 80%
+ht-degree: 92%
 
 ---
 
 # 送信アクションの設定 {#configuring-the-submit-action}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
 ## 送信アクションの概要 {#introduction-to-submit-actions}
 
-送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックするとトリガーされます。 アダプティブフォームで送信アクションを設定することができます。 アダプティブフォームには、すぐに使用できる送信アクションがいくつか用意されています。 デフォルトの送信アクションをコピーし、拡張することにより、独自の送信アクションを作成できます。ただし、要件に応じて、送信したフォームのデータを処理する独自の送信アクションを書いて登録できます。送信アクションは、[同期または非同期の送信](../../forms/using/asynchronous-submissions-adaptive-forms.md)を使用できます。
+送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックしたときにトリガーされます。アダプティブフォームでの送信アクションを設定することができます。アダプティブフォームには、すぐに使用できる送信アクションがいくつか用意されています。デフォルトの送信アクションをコピーし、拡張することにより、独自の送信アクションを作成できます。ただし、要件に応じて、送信したフォームのデータを処理する独自の送信アクションを書いて登録できます。送信アクションは、[同期または非同期の送信](../../forms/using/asynchronous-submissions-adaptive-forms.md)を使用できます。
 
 サイドバーにある「アダプティブフォームコンテナ」プロパティの「**送信**」セクションで、送信アクションを設定できます。
 
@@ -33,11 +33,11 @@ ht-degree: 80%
 
 送信アクションの設定
 
-アダプティブフォームで使用できるデフォルトの送信アクションは次のとおりです。
+アダプティブフォームで使用可能なデフォルトの送信アクションは次のとおりです。
 
 * REST エンドポイントへの送信
 * メールを送信
-* 電子メールでPDFを送信
+* メールで PDF を送信
 * Forms ワークフローを起動
 * フォームデータモデルを使用して送信
 * フォームポータル送信アクション
@@ -61,13 +61,13 @@ ht-degree: 80%
 
 ## REST エンドポイントへの送信 {#submit-to-rest-endpoint}
 
-The **REST エンドポイントに送信** 送信オプションでは、フォームに入力されたデータを HTTP データリクエストの一環として設定済みの確認ページにGETを渡します。 リクエストにフィールド名を追加できます。リクエストのフォーマットを以下に示します。
+「**REST エンドポイントへの送信**」オプションでは、フォームに記入されたデータが、HTTP GET リクエストの一環として設定済みの確認ページに渡されます。リクエストにフィールド名を追加できます。リクエストのフォーマットを以下に示します。
 
 `{fieldName}={request parameter name}`
 
 以下の画像に示すとおり、`param1` と `param2` が、**textbox** フィールドと **numericbox** フィールドからコピーした値を持つパラメーターとして次のアクションに向けて渡されます。
 
-また、**POST リクエストを有効にする**&#x200B;ことで、リクエストを投稿するための URL を指定することもできます。フォームをホストする Experience Manager サーバーにデータを送信するには、Experience Manager サーバーのルートパスに対応する相対パスを使用します。例：/content/forms/af/SampleForm.html 他のサーバーにデータを送信するには、絶対パスを使用します。
+また、**POST リクエストを有効にする**&#x200B;ことで、リクエストを投稿するための URL を指定することもできます。フォームをホストする Experience Manager サーバーにデータを送信するには、Experience Manager サーバーのルートパスに対応する相対パスを使用します。例えば、/content/forms/af/SampleForm.html のようにします。他のサーバーにデータを送信するには、絶対パスを使用します。
 
 ![REST エンドポイント送信アクションの設定](assets/action-config.png)
 
@@ -77,7 +77,7 @@ REST エンドポイント送信アクションの設定
 >
 フィールドを REST URL 内のパラメーターとして渡すには、すべてのフィールドが異なる要素名を持っている必要があります。これは、異なるパネルに置かれているフィールドにも適用されます。
 
-### 送信されたデータをリソースまたは外部の REST エンドポイントに投稿  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
+### 送信されたデータをリソースまたは外部の REST エンドポイントに投稿 {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
 **REST エンドポイントへの送信**&#x200B;アクションを使用して、送信されたデータを REST URL に POST できます。URL は、内部（フォームがレンダリングされるサーバー）または外部サーバーのどちらのものでも使用できます。
 
@@ -106,9 +106,9 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-フォームデータを電子メールに含めるには、異なるパネルに配置されている場合でも、すべてのフォームフィールドに異なる要素名を付ける必要があります。
+フォームデータをメールに含める場合、すべてのフォームフィールドは、異なるパネルに配置されている場合でも、異なる要素名を持つ必要があります。
 
-## 電子メールでPDFを送信 {#send-pdf-via-email}
+## メールで PDF を送信 {#send-pdf-via-email}
 
 「**メールで PDF を送信**」送信アクションでは、フォームの送信が完了すると同時に、1 人または複数の受信者にフォームデータを含む PDF が添付されたメールが送信されます。
 
@@ -124,9 +124,9 @@ REST エンドポイント送信アクションの設定
 
 ## フォームデータモデルを使用して送信 {#submit-using-form-data-model}
 
-「**フォームデータモデルを使用して送信**」送信アクションでは、フォームデータモデルの特定のデータモデルオブジェクトで送信したアダプティブフォームデータをデータソースに書き込みます。送信アクションを設定する際に、データソースに書き戻す送信済みデータを持つデータモデルオブジェクトを選択できます。
+「**フォームデータモデルを使用して送信**」送信アクションでは、フォームデータモデルの特定のデータモデルオブジェクトで送信したアダプティブフォームデータをデータソースに書き込みます。送信アクションの設定時に、送信されたデータをデータソースに書き戻すデータモデルオブジェクトを選択できます。
 
-さらに、フォームデータモデルとレコードのドキュメント (DoR) を使用して、フォームの添付ファイルをデータソースに送信できます。
+さらに、フォームデータモデルとレコードのドキュメント（DoR）を使用して、フォーム添付ファイルをデータソースに送信できます。
 
 フォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](../../forms/using/data-integration.md)」を参照してください。
 
@@ -134,7 +134,7 @@ REST エンドポイント送信アクションの設定
 
 「**フォームポータル送信アクション**」オプションでは、フォームデータが AEM Forms ポータルで使用できるようになります。
 
-Forms Portal と送信アクションについて詳しくは、 [ドラフトと送信コンポーネント](../../forms/using/draft-submission-component.md).
+フォームポータルと送信アクションについて詳しくは、[ドラフトと送信コンポーネント](../../forms/using/draft-submission-component.md)を参照してください。
 
 ## AEM ワークフローを起動 {#invoke-an-aem-workflow}
 
@@ -163,9 +163,9 @@ Forms Portal と送信アクションについて詳しくは、 [ドラフト�
 * キャプチャしたデータに対する複雑な計算を実行する
 * 事前に定義されたスケジュールでアダプティブフォームのデータをストレージシステムに保存する
 
-アダプティブフォームエディターには「**Microsoft Power Automate フローの呼び出し**」送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドフローに送信することができます。送信アクションを使用して、取得したデータをMicrosoft® Power Automate に送信するには、次の手順を実行します。 [AEM FormsインスタンスをMicrosoft® Power Automate に接続する](/help/forms/using/forms-microsoft-power-automate-integration.md)
+アダプティブフォームエディターには **Microsoft Power Automate フローの呼び出し**&#x200B;送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドのフローに送信できます。キャプチャしたデータを送信アクションを使用して Microsoft® Power Automate に送信するには、[AEM Forms インスタンスを Microsoft® Power Automate に接続します](/help/forms/using/forms-microsoft-power-automate-integration.md)。
 
-「[Microsoft® Power Automate フローの呼び出し](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)」送信アクションを使用して、Power Automate フローにデータを送信する
+正しく設定したら、[Microsoft® Power Automateフローの呼び出し](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)送信アクションを使用して、Power Automate フローにデータを送信します。
 
 ## Microsoft® SharePointリストに送信{#submit-to-sharedrive}
 
@@ -227,7 +227,7 @@ Microsoft® SharePointリストでは、次の列タイプはサポートされ�
 
 通常、どのようなオンラインデータ取得システムでも、ビジネスルールを適用するために、開発者はクライアントサイドに何らかの JavaScript 検証を配置します。しかし、最新のブラウザーでは、エンドユーザーが Web Browser DevTools Console などの様々な手法を使用してこれらの検証を回避し、手動で送信を行える方法が存在します。このような手法は、アダプティブフォームにも有効です。フォーム開発者は、多様な検証ロジックを作成できますが、エンドユーザーは、これらの検証ロジックを回避し、無効なデータをサーバーに送信できます。無効なデータは、フォーム作成者が適用したビジネスルールを破ることになります。
 
-サーバー側の再検証機能を使用すると、アダプティブフォームの作成者がサーバー上でアダプティブフォームをデザインする際に指定した検証を実行することもできます。 これは、フォームの検証で表されるデータ送信の漏洩やビジネスルール違反の可能性を阻止します。
+サーバーサイドの再検証機能は、アダプティブフォーム作成者がアダプティブフォームのデザイン中に指定した検証を、サーバー上でも実行するための機能です。これは、フォームの検証で表されるデータ送信の漏洩やビジネスルール違反の可能性を阻止します。
 
 ### サーバー側で検証されるもの  {#what-to-validate-on-server-br}
 
@@ -249,7 +249,7 @@ Microsoft® SharePointリストでは、次の列タイプはサポートされ�
 
 >[!NOTE]
 >
-サーバーサイド検証により、フォームモデルが検証されます。検証用に別個のクライアントライブラリを作成し、同じクライアントライブラリ内でHTMLのスタイル設定や DOM 操作など他の要素と混在させないことをお勧めします。
+サーバーサイド検証により、フォームモデルが検証されます。検証のために別個のクライアントライブラリを作成し、1 つのクライアントライブラリに HTML のスタイルや DOM 操作を混在させないことをお勧めします。
 
 ### 検証式でのカスタム関数のサポート {#supporting-custom-functions-in-validation-expressions-br}
 
@@ -263,6 +263,6 @@ Microsoft® SharePointリストでは、次の列タイプはサポートされ�
 
 ## 送信アクションに対するエラー処理 {#error-handling-on-submit-action}
 
-Experience Manager セキュリティおよび堅牢化ガイドラインの一部として、404.jsp や 500.jsp などのカスタムエラーページを設定してください。これらのハンドラーは、フォームの送信時に 404 エラーまたは 500 エラーが表示されるときに呼び出されます。 また、これらのハンドラーは、パブリッシュノードでこれらのエラーコードがトリガーされるときにも呼び出されます。
+Experience Manager セキュリティおよび堅牢化ガイドラインの一部として、404.jsp や 500.jsp などのカスタムエラーページを設定してください。これらのハンドラーは、フォーム送信時に 404 または 500 エラーが表示される場合に呼び出されます。また、これらのハンドラーは、パブリッシュノードでこれらのエラーコードがトリガーされるときにも呼び出されます。
 
 詳しくは、「[エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md)」を参照してください。

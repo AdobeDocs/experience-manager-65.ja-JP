@@ -10,8 +10,8 @@ exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
 source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 48%
+source-wordcount: '2434'
+ht-degree: 99%
 
 ---
 
@@ -20,37 +20,37 @@ ht-degree: 48%
 
 ## はじめに {#introduction}
 
-デプロイメントが [パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)のメンバーは、任意のパブリッシュノードにログインして、自分のデータを表示できる必要があります。
+デプロイメントが[パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)であるとき、メンバーはすべてのパブリッシュノードにログインしてその中のデータを閲覧できる必要があります。
 
 パブリッシュ環境で作成されたユーザーとユーザーグループ（ユーザーデータ）は、オーサー環境では必要ありません。
 
-オーサー環境で作成されたほとんどのユーザーデータは、オーサー環境にとどまり、パブリッシュインスタンスにはコピーされません。
+オーサー環境で作成されたほとんどのユーザーデータは、オーサー環境に残るものと想定されており、パブリッシュインスタンスにはコピーされません。
 
-1 つのパブリッシュインスタンスでおこなわれた登録と変更を、他のパブリッシュインスタンスと同期して、同じユーザーデータにアクセスできるようにする必要があります。
+他のパブリッシュインスタンスが同じユーザーデータにアクセスするには、1 つのパブリッシュインスタンスに加えられた登録と変更をそれらのパブリッシュインスタンスに同期する必要があります。
 
-AEM 6.1 以降では、ユーザーの同期が有効になっている場合、ユーザーデータはファーム内のパブリッシュインスタンス間で自動的に同期され、オーサー環境では作成されません。
+AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータがファーム内のパブリッシュインスタンス全体に自動的に同期され、オーサー環境には作成されません。
 
 ## Sling 配布 {#sling-distribution}
 
-ユーザーデータは [ACL](/help/sites-administering/security.md) と共に Oak JCR の下のレイヤーの [Oak Core](/help/sites-deploying/platform.md) に格納され、[Oak API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/oak/api/package-tree.html) を使用してアクセスできます。頻繁に更新されない場合、を使用して他のパブリッシュインスタンスとユーザーデータを同期させるのは妥当です。 [Sling コンテンツ配布](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md) （Sling 配布）。
+ユーザーデータは [ACL](/help/sites-administering/security.md) と共に Oak JCR の下のレイヤーの [Oak Core](/help/sites-deploying/platform.md) に格納され、[Oak API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/oak/api/package-tree.html) を使用してアクセスできます。アップデートの頻度が少ない場合は、[Sling コンテンツ配布](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)（Sling 配布）を使用してユーザーデータを他のパブリッシュインスタンスに同期するのが適切です。
 
 従来のレプリケーションと比較して、Sling 配布を使用してユーザーを同期する利点は次のとおりです。
 
-* *ユーザー*, *ユーザープロファイル*、および *ユーザーグループ* パブリッシュで作成済みは、オーサーで作成されません
+* パブリッシュインスタンスで作成された&#x200B;*ユーザー*、*ユーザープロファイル*&#x200B;および&#x200B;*ユーザーグループ*&#x200B;はオーサーには作成されません
 
 * Sling 配布により JCR イベントにプロパティが設定されることで、レプリケーションが無限に繰り返されることなく、パブリッシュ側のイベントリスナーで実行できます
-* Sling 配布では、ユーザーデータを非開始のパブリッシュインスタンスにのみ送信するので、不要なトラフィックは不要になります
+* Sling 配布は派生元でないパブリッシュインスタンスにのみユーザーデータを送信するので、不要なトラフィックが発生しません
 * ユーザーノードで設定された [ACL](/help/sites-administering/security.md) が同期に含まれます
 
 >[!NOTE]
 >
->セッションが必要な場合は、SSO ソリューションかスティッキーセッションのどちらかを使用し、別のパブリッシュインスタンスに切り替えられた場合はユーザーにログインしてもらうことをお勧めします。
+>セッションが必要な場合は、SSO ソリューションか定着セッションを使用して、別のパブリッシュインスタンスに切り替わった際にはお客様にログインしてもらうことをお勧めします。
 
 >[!CAUTION]
 >
->ユーザー同期が有効化されている場合でも、**administrators** グループの同期はサポートされません。代わりに、「差分をインポート」できなかった場合は、エラーログに記録されます。
+>ユーザー同期が有効化されている場合でも、**管理者**&#x200B;グループの同期はサポートされません。代わりに、「差分の読み込み」が失敗した旨を示すログがエラーログに記録されます。
 >
->したがって、デプロイメントがパブリッシュファームの場合、ユーザーが **管理者** グループの作成時に変更を加える場合は、各パブリッシュインスタンスで手動で変更する必要があります。
+>このため、デプロイメントがパブリッシュファームで、**管理者**&#x200B;グループに対してユーザーが追加または削除された場合、変更は各パブリッシュインスタンスに対して手動で実行する必要があります。
 
 ## ユーザー同期の有効化 {#enable-user-sync}
 
@@ -62,13 +62,13 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 >
 >ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
 
-ユーザー同期では、作成者環境でユーザーデータが作成されていない場合でも、ユーザーデータの配布を管理する際に作成者環境が必要となります。 すべての設定はオーサー環境で行われるわけではありませんが、各手順で、オーサー環境とパブリッシュ環境のどちらで実行するかが明確に示されます。
+ユーザー同期では、オーサーで作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべてではありませんが、設定の大多数はオーサー環境にあり、それをオーサー環境またはパブリッシュ環境で実行するかどうかは各手順で明確に識別します。
 
 ユーザー同期の有効化に必要な手順と、[トラブルシューティング](#troubleshooting)の節を以下に示します。
 
 ### 前提条件 {#prerequisites}
 
-1. ユーザーとユーザーグループが既に 1 つのパブリッシュインスタンス上に作成されている場合は、次の操作を行うことをお勧めします。 [手動同期](#manually-syncing-users-and-user-groups) ユーザー同期を設定して有効にする前に、すべてのパブリッシュインスタンスに対してユーザーデータを送信します。
+1. 1 つのパブリッシュインスタンスでユーザーおよびユーザーグループが既に作成されている場合は、ユーザー同期を設定して有効にする前に、ユーザーデータをすべてのパブリッシュインスタンスと[手動で同期](#manually-syncing-users-and-user-groups)することをお勧めします。
 
 ユーザー同期を有効にすると、新規に作成されたユーザーおよびグループのみが同期されるようになります。
 
@@ -90,7 +90,8 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
    * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
 
-      * 既存の設定を選択し、編集用に開く（鉛筆アイコン）確認 `name`: **`socialpubsync`**
+      * 既存の設定を選択し、編集用に開きます（鉛筆アイコン）
+`name`: **`socialpubsync`** を確認します
 
       * 「`Enabled`」チェックボックスをオンにします
       * 「`Save`」を選択します。
@@ -101,7 +102,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 **権限の設定**
 
-手順 3 で、許可されたユーザーを使用して、オーサー環境で Sling 配布を設定します。
+この承認済みユーザーは、手順 3 のオーサー環境での Sling 配布の設定に使用します。
 
 * **各パブリッシュインスタンスで**
 
@@ -110,7 +111,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
       * 例： [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
 
-   * ユーザーの作成
+   * ユーザーを作成します
 
       * 例：`usersync-admin`
 
@@ -135,7 +136,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 * `/home` ノードを選択します
 * 右側のペインで「`Access Control`」タブを選択します
-* ACL エントリを追加するには、 `+` ボタン
+* ACL エントリを追加するには、`+` ボタンを選択します
 
    * **プリンシパル**：*ユーザー同期用に作成されたユーザーを検索*
    * **タイプ**：`Allow`
@@ -156,9 +157,9 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 **権限の設定**
 
-承認されたユーザーが、 **`administrators`** ユーザーグループがすべてのパブリッシュインスタンスで作成された場合、許可されたユーザーは、オーサーインスタンスからパブリッシュインスタンスにユーザーデータを同期する権限を持っていると認識される必要があります。
+**`administrators`** ユーザーグループのメンバーである承認済みユーザーがすべてのパブリッシュインスタンスで作成されたら、ユーザーデータをオーサー環境からパブリッシュ環境に同期する権限があるので、その承認済みユーザーをオーサー環境で識別する必要があります。
 
-* **作成者**
+* **オーサー環境で**
 
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -166,19 +167,20 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
    * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name` を見つけます。
-   * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します。確認 `property name`: **`socialpubsync-publishUser`**
+   * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+`property name`: **`socialpubsync-publishUser`** を確認します
 
-   * ユーザー名とパスワードを [認証済みユーザー](#createauthuser) 手順 2 でパブリッシュで作成
+   * 手順 2 でパブリッシュ環境で作成した[承認済みユーザー](#createauthuser)のユーザー名とパスワードを設定します
 
       * 例：`usersync-admin`
 
-![暗号化されたパスワードトランスポート秘密鍵プロバイダー](assets/chlimage_1-22.png)
+![Encrypted Password Transport Secret Provider](assets/chlimage_1-22.png)
 
 ### 4. Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
 
 **ユーザー同期を有効にする**
 
-* **各パブリッシュインスタンスで**:
+* **各パブリッシュインスタンスの場合**
 
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -187,12 +189,13 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
    * `Apache Sling Distribution Agent - Queue Agents Factory` を見つけます
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します。確認 `Name`: `socialpubsync-reverse`
+      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+`Name`: `socialpubsync-reverse` を確認します
 
       * 「`Enabled`」チェックボックスをオンにします
       * 「`Save`」を選択します。
 
-   * **繰り返し** 各パブリッシュインスタンスに対して
+   * 各パブリッシュインスタンスで&#x200B;**繰り返し**&#x200B;ます
 
 ![Queue Agents Factory](assets/chlimage_1-23.png)
 
@@ -200,7 +203,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 **グループ同期の有効化**
 
-* **各パブリッシュインスタンスで**:
+* **各パブリッシュインスタンスで**
 
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -209,7 +212,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
    * **`Adobe Social Sync - Diff Observer Factory`** を見つけます
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します。
+      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
 
         `agent name` が `socialpubsync-reverse` であることを確認します
 
@@ -222,9 +225,9 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 **（オプション）ポーリング間隔の変更**
 
-デフォルトでは、オーサーは 30 秒ごとに変更をポーリングします。 この間隔を変更するには、以下の手順を実行します。
+デフォルトでは、オーサーは 30 秒ごとに変更をポーリングします。この間隔を変更するには、以下の手順を実行します。
 
-* **作成者**
+* **オーサー環境で**
 
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -233,7 +236,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
    * `Apache Sling Distribution Trigger - Scheduled Triggers Factory` を見つけます。
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します。
+      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
 
          * `Name` が `socialpubsync-scheduled-trigger` であることを確認します
 
@@ -244,13 +247,13 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 ## 複数のパブリッシュインスタンスの設定 {#configure-for-multiple-publish-instances}
 
-デフォルトの設定は、1 つのパブリッシュインスタンス用です。 ユーザーの同期を有効にする理由は、パブリッシュファームの場合など、複数のパブリッシュインスタンスを同期するためなので、追加のパブリッシュインスタンスを Sync Agents Factory に追加する必要があります。
+デフォルトの設定は、単一のパブリッシュインスタンス用の設定です。ユーザー同期を有効にする理由は、複数のパブリッシュインスタンス（パブリッシュファーム用になど）を同期するためなので、追加のパブリッシュインスタンスを Sync Agents Factory に追加する必要があります。
 
 ### 7. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory-1}
 
 **パブリッシュインスタンスを追加するには：**
 
-* **作成者**
+* **オーサー環境で**
 
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -259,18 +262,19 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
    * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します。確認 `Name`: `socialpubsync`
+      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+`Name`: `socialpubsync` を確認します
 
 ![Sync Agents Factory](assets/chlimage_1-25.png)
 
 * **エクスポーターエンドポイント**
-各パブリッシュインスタンスには、エクスポーターエンドポイントが必要です。 例えば、パブリッシュインスタンスが 2 つある場合、localhost:4503 と 4504 には、次の 2 つのエントリが存在するはずです。
+各パブリッシュインスタンスにエクスポーターエンドポイントが必要です。例えば、パブリッシュインスタンスが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **インポーターエンドポイント**
-各パブリッシュインスタンスにインポーターエンドポイントが必要です。 例えば、パブリッシュインスタンスが 2 つある場合、localhost:4503 と 4504 には、次の 2 つのエントリが存在するはずです。
+各パブリッシュインスタンスにインポーターエンドポイントが必要です。例えば、パブリッシュインスタンスが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
@@ -283,7 +287,7 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 複数のパブリッシュインスタンス間で同期するカスタムデータがある場合は、次のようにします。
 
-* **各パブリッシュインスタンスで**:
+* **各パブリッシュインスタンスで**
 
    * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -291,26 +295,27 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
       * 例：`https://localhost:4503/system/console/configMgr`
 
    * `AEM Communities User Sync Listener`を見つけます。
-   * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します。確認 `Name`: `socialpubsync-scheduled-trigger`
+   * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+`Name`: `socialpubsync-scheduled-trigger` を確認します
 
 ![AEM Communities User Sync Listener](assets/chlimage_1-26.png)
 
 * **ノードタイプ**
-これは、同期されるノードタイプのリストです。 sling:Folder 以外のノードタイプをここにリストする必要があります（sling:folder は別に処理されます）。
+同期するノードタイプのリストです。sling:Folder 以外のすべてのノードタイプがここにリストされる必要があります（sling:folder は別個に処理されます）。
 同期されるノードタイプのデフォルトのリストは次のとおりです。
 
    * rep:User
    * nt:unstructured
    * nt:resource
 
-* **無視可能なプロパティ**
-これは、変更が検出された場合に無視されるプロパティのリストです。 これらのプロパティに対する変更は、他の変更の副作用として ( 同期は常にトリガーレベルにあるので ) 同期される場合がありますが、これらのプロパティに対する変更は、それ自体ではノード同期されません。
+* **Ignorable Properties**
+何らかの変更が検出された場合に無視されるプロパティのリストです。これらのプロパティに対する変更は、他の変更の副作用として同期される場合がありますが（同期は常にノードレベルで行われるので）、これらのプロパティに対する変更そのものが同期をトリガーすることはありません。
 無視されるデフォルトのプロパティは次のとおりです。
 
    * cq:lastModified
 
-* **無視可能なノード**
-同期中に無視されるサブパス。 これらのサブパスの下には、いつでも何も同期されません。
+* **Ignorable Nodes**
+同期中に無視されるサブパスです。このサブパスの下にあるものはどのタイミングでも同期されません。
 無視されるデフォルトのノードは次のとおりです。
 
    * .tokens
@@ -328,43 +333,43 @@ AEM 6.1 以降では、ユーザーの同期が有効になっている場合、
 
 >[!CAUTION]
 >
->2 つ以上のパブリッシュインスタンス間で Sling ID が一致する場合、ユーザーグループの同期は失敗します。
+>2 つ以上のパブリッシュインスタンスで Sling ID が一致すると、ユーザーグループの同期が失敗します。
 
-Sling ID がパブリッシュファーム内の複数のパブリッシュインスタンスに対して同じ場合、ユーザーグループは同期されません。
+Sling ID がパブリッシュファームの複数のパブリッシュインスタンスで同じである場合、ユーザーグループは同期されません。
 
-すべての Sling ID の値が異なることを検証するには、各パブリッシュインスタンスで次の手順を実行します。
+すべての Sling ID の値が異なることを確認するには、各パブリッシュインスタンスで次の手順を実行します。
 
 1. `http://<host>:<port>/system/console/status-slingsettings`を参照してください。
 1. **Sling ID** の値を確認します。
 
 ![Sling ID の値の確認](assets/chlimage_1-27.png)
 
-パブリッシュインスタンスの Sling ID が他のパブリッシュインスタンスの Sling ID と一致する場合は、次のようになります。
+あるパブリッシュインスタンスの Sling ID が他のパブリッシュインスタンスの Sling ID と一致する場合は、次のようにします。
 
-1. 一致する Sling ID を持つパブリッシュインスタンスの 1 つを停止します。
+1. Sling ID が一致するパブリッシュインスタンスの一方を停止する
 1. crx-quickstart/launchpad/felix ディレクトリで
 
    * *sling.id.file* という名前のファイルを検索して削除する
 
-      * 例えば、Linux®システムの場合：
+      * Linux® システムの例を次に示します。
         `rm -i $(find . -type f -name sling.id.file)`
 
-      * 例えば、Windows システムの場合、次のようになります。
+      * Windows システムの例を次に示します。
         `use windows explorer and search for *sling.id.file*`
 
-1. パブリッシュインスタンスを起動します。
+1. パブリッシュインスタンスを開始する
 
-   * 起動時に、新しい Sling ID が割り当てられます
+   * 開始時に新しい Sling ID が割り当てられる
 
 1. **Sling ID** が一意であることを確認する
 
-すべてのパブリッシュインスタンスに一意の Sling ID が割り当てられるまで、これらの手順を繰り返します。
+すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
 
 ## Vault Package Builder Factory {#vault-package-builder-factory}
 
-更新を正しく同期するには、ユーザ同期用に Vault パッケージビルダーを変更する必要があります。
+更新が適切に同期されるようにするには、ユーザー同期用に Vault Package Builder を変更する必要があります。
 
-* 各AEMパブリッシュインスタンスで
+* 各 AEM パブリッシュインスタンスで
 * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
    * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
@@ -401,19 +406,19 @@ Sling ID がパブリッシュファーム内の複数のパブリッシュイ�
 
 ### セキュリティコンソールを使用してユーザーやユーザーグループが作成される場合 {#users-or-user-groups-are-created-using-security-console}
 
-設計上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境にも反対にも表示されません。
+設計上、パブリッシュ環境で作成されたユーザーデータはオーサー環境には表示されません。その逆も同様です。
 
-次の場合に [ユーザー管理とセキュリティ](/help/sites-administering/security.md) コンソールは、パブリッシュ環境で新しいユーザーを追加するために使用され、必要に応じて、ユーザー同期は新しいユーザーとそのグループメンバーシップを他のパブリッシュインスタンスと同期します。 また、ユーザー同期は、セキュリティコンソールを使用して作成されたユーザーグループを同期します。
+[ユーザー管理とセキュリティ](/help/sites-administering/security.md)コンソールを使用して新しいユーザーをパブリッシュ環境に追加すると、ユーザー同期により、必要に応じて新しいユーザーとそのグループメンバーシップがその他のパブリッシュインスタンスに同期されます。ユーザー同期により、セキュリティコンソールによって作成されたユーザーグループも同期されます。
 
 ## トラブルシューティング {#troubleshooting}
 
 ### ユーザー同期をオフラインにする方法 {#how-to-take-user-sync-offline}
 
-ユーザー同期をオフラインにするには、次の手順に従います。 [パブリッシュインスタンスを削除する](#how-to-remove-a-publish-instance) または [データの手動同期](#manually-syncing-users-and-user-groups)を指定する場合、配布キューは空で静止している必要があります。
+[パブリッシュインスタンスを削除](#how-to-remove-a-publish-instance)したり、[データを手動で同期](#manually-syncing-users-and-user-groups)したりするためにユーザー同期をオフラインにする場合は、配布キューが空であり、静止している必要があります。
 
 配布キューの状態をチェックするには：
 
-* 作成者：
+* オーサー環境で
 
    * [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用する場合
 
@@ -430,13 +435,13 @@ Sling ID がパブリッシュファーム内の複数のパブリッシュイ�
 
 配布キューが空である場合は、ユーザー同期を無効にします。
 
-* 作成者
+* オーサー環境で
 
-   * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」チェックボックスをオフにします
+   * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」*チェックボックスをオフ*にします
 
-タスクが完了したら、ユーザー同期を再度有効にします。
+タスク完了後にユーザー同期を再び有効にするには、以下のように行います。
 
-* 作成者
+* オーサー環境で
 
    * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」チェックボックスをオンにします
 
@@ -444,9 +449,9 @@ Sling ID がパブリッシュファーム内の複数のパブリッシュイ�
 
 ユーザー同期診断は、設定をチェックして問題の特定を試みるツールです。
 
-作成者の場合は、メインコンソールから **ツール、操作、診断、ユーザー同期診断。**
+オーサー環境で、メインコンソールから&#x200B;**ツール／操作／診断／ユーザー同期診断**&#x200B;の順に移動します。
 
-ユーザー同期診断コンソールを入力するだけで結果が表示されます。
+ユーザー同期診断コンソールに入ると、結果が表示されます。
 
 ユーザー同期が有効になっていない場合は、次のように表示されます。
 
@@ -454,11 +459,11 @@ Sling ID がパブリッシュファーム内の複数のパブリッシュイ�
 
 #### パブリッシュインスタンスの診断を実行する方法 {#how-to-run-diagnostics-for-publish-instances}
 
-診断をオーサー環境から実行した場合、パス/失敗の結果には [情報] 設定済みのパブリッシュインスタンスのリストを確認するためのセクションを表示しています。
+診断がオーサー環境から実行された場合は、成否の結果に「[情報]」セクションが含まれています。このセクションには、設定済みのパブリッシュインスタンスのリストが確認用に表示されます。
 
-リストには、そのインスタンスの診断を実行する各パブリッシュインスタンスの URL が含まれます。 URL パラメーター `syncUser` が診断の URL に追加され、その値は[手順 2](#createauthuser) で作成した&#x200B;*承認済み同期ユーザー* に設定されています。
+このリストには、各パブリッシュインスタンスに対して診断を実行する URL が含まれています。URL パラメーター `syncUser` が診断の URL に追加され、その値は[手順 2](#createauthuser) で作成した&#x200B;*承認済み同期ユーザー*&#x200B;に設定されています。
 
-**注意**:URL を起動する前に、 *認証済み同期ユーザー* は、既にそのパブリッシュインスタンスにサインインしている必要があります。
+**メモ**：URL を起動する前に、*承認済み同期ユーザー*&#x200B;がそのパブリッシュインスタンスに既にログインしている必要があります。
 
 ![パブリッシュインスタンスの診断](assets/chlimage_1-29.png)
 
@@ -472,19 +477,19 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-30.png)
 
-#### （オーサー）1 つの Apache Sling Distribution トランスポート資格情報 — ユーザー資格情報に基づく DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
+#### （オーサー）1 つの Apache Sling Distribution トランスポート認証情報 - ユーザ認証情報に基づく DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-31.png)
 
-#### （パブリッシュ）1 つの Apache Sling 配布エージェント — Queue Agents Factory {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
+#### （パブリッシュ）1 つの Apache Sling Distribution Agent - Queue Agents Factory {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-32.png)
 
-#### （公開）1 つのAdobe Social Sync - Diff Observer Factory {#publish-one-adobe-social-sync-diff-observer-factory}
+#### （パブリッシュ）1 つの Adobe Social Sync - Diff Observer Factory {#publish-one-adobe-social-sync-diff-observer-factory}
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-33.png)
 
-#### （オーサー）1 つの Apache Sling 配布トリガー — スケジュール済みトリガーファクトリ {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
+#### （オーサー）1 つの Apache Sling Distribution Trigger - Scheduled Triggers Factory {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-34.png)
 
@@ -498,11 +503,11 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 その後その節を検証します [2. 承認済みユーザーの作成](#createauthuser)に正しく従っていることを確認してください。
 
-この節では、すべてのパブリッシュインスタンスに存在する承認済みユーザーを作成し、オーサーの「シークレットプロバイダー」OSGi 設定で識別する方法について説明します。 デフォルトでは、ユーザーは `admin` です。
+この節では、すべてのパブリッシュインスタンスに存在する承認済みユーザーを作成し、それらをオーサー環境の「秘密鍵プロバイダー」OSGi 設定で特定する方法について説明します。デフォルトでは、ユーザーは `admin` です。
 
 承認済みユーザーは **`administrators`** ユーザーグループのメンバーにして、そのグループの権限は変更しないでください。
 
-権限を持つユーザーは、すべてのパブリッシュインスタンスに対して、次の権限と制限を明示的に持っている必要があります。
+承認済みユーザーは、すべてのパブリッシュインスタンスに対する以下の権限および制限を明示的に保持している必要があります。
 
 | **path** | **jcr:all** | **rep:glob** |
 |---|---|---|
@@ -510,7 +515,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 | /home/users | X | &#42;/activities/&#42; |
 | /home/groups | X | &#42;/activities/&#42; |
 
-を `administrators` グループに属している場合、権限を持つユーザーは、すべてのパブリッシュインスタンスに対して次の権限を持っている必要があります。
+承認済みユーザーは `administrators` グループのメンバーであるので、すべてのパブリッシュインスタンスに対する以下の権限があります。
 
 | **path** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
@@ -522,13 +527,13 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ### ユーザーグループ同期の失敗 {#user-group-sync-failed}
 
-2 つ以上のパブリッシュインスタンス間で Sling ID が一致する場合、ユーザーグループの同期は失敗します。
+2 つ以上のパブリッシュインスタンスで Sling ID が一致すると、ユーザーグループの同期が失敗します。
 
 [9. 一意の Sling ID](#unique-sling-id) の節を参照してください
 
 ### ユーザーおよびユーザーグループの手動同期 {#manually-syncing-users-and-user-groups}
 
-* ユーザーとユーザーグループが存在するパブリッシュインスタンス上：
+* ユーザーおよびユーザーグループが存在するパブリッシュインスタンスで
 
    * [ユーザー同期が有効になっている場合は無効にします](#how-to-take-user-sync-offline)
    * `/home` の[パッケージを作成](/help/sites-administering/package-manager.md#creating-a-new-package)します
@@ -540,7 +545,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
    * [パッケージをエクスポート](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
-* 他のパブリッシュインスタンスの場合：
+* その他のパブリッシュインスタンスで
 
    * [パッケージをインポートします](/help/sites-administering/package-manager.md#installing-packages)
 
@@ -548,11 +553,11 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ### パブリッシュインスタンスが使用できなくなった場合 {#when-a-publish-instance-becomes-unavailable}
 
-パブリッシュインスタンスが使用できなくなった場合、将来オンラインに戻る場合は削除しないでください。 変更はパブリッシュインスタンスのキューに入れられ、オンラインに戻ると、変更が処理されます。
+パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。変更はパブリッシュインスタンスのキューに加えられ、オンラインに戻ると、変更が処理されます。
 
-パブリッシュインスタンスがオンラインに戻らない場合、恒久的にオフラインになる場合は、削除する必要があります。キューの構築により、オーサー環境でのディスク容量の使用量が目立つからです。
+パブリッシュインスタンスがオンラインに戻ることがない場合や、永続的にオフラインのままである場合は、削除する必要があります。そのままにしておくと、キューの蓄積によってオーサー環境のディスク領域の使用量が著しく増加します。
 
-パブリッシュインスタンスがダウンした場合、オーサーログには次のような例外があります。
+パブリッシュインスタンスが停止した場合、オーサー環境のログに以下のような例外が記録されます。
 
 ```
 28.01.2016 15:57:48.475 ERROR
@@ -564,12 +569,12 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ### パブリッシュインスタンスを削除する方法 {#how-to-remove-a-publish-instance}
 
-パブリッシュインスタンスを [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)を指定する場合、配布キューは空で静止している必要があります。
+[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) からパブリッシュインスタンスを削除するには、配布キューが空であり、静止している必要があります。
 
-* 作成者：
+* オーサー環境で
 
    * [ユーザー同期をオフラインにする](#how-to-take-user-sync-offline)
-   * follow [手順 7](#apache-sling-distribution-agent-sync-agents-factory) 両方のサーバーリストからパブリッシュインスタンスを削除するには：
+   * [手順 7](#apache-sling-distribution-agent-sync-agents-factory) に従って、次の両方のサーバーリストからパブリッシュインスタンスを削除します。
 
       * `Exporter Endpoints`
       * `Importer Endpoints`

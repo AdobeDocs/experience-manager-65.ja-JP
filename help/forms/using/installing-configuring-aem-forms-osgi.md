@@ -1,6 +1,6 @@
 ---
 title: データ取得機能をインストールして設定する
-description: アダプティブフォーム、PDF forms、HTML5 Formsをインストールして設定します。 アダプティブフォーム用にAdobe AnalyticsとAdobe Targetを設定し、フォームの使用状況を分析し、ユーザーのプロファイルに基づいてターゲットを設定します。
+description: アダプティブフォーム、PDF フォームおよび HTML5 フォームをインストールして設定します。アダプティブフォーム用に Adobe Analytics および Adobe Target を設定して、プロファイルに基づいてフォームの使用状況を分析し、対象ユーザーを絞ります。
 topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
@@ -9,7 +9,7 @@ exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1848'
-ht-degree: 65%
+ht-degree: 98%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 65%
 
 ## はじめに {#introduction}
 
-AEM Formsには、エンドユーザーからデータを取得するための一連のフォーム ( アダプティブフォーム、HTML5 Forms、PDF forms) が用意されています。 また、Web ページ上の使用可能なすべてのフォームを一覧表示し、フォームの使用状況を分析し、ユーザーのプロファイルに基づいてユーザーをターゲットにするためのツールも提供します。 これらの機能は、AEM Formsアドオンパッケージに含まれています。 アドオンパッケージは、AEM のオーサーインスタンスまたはパブリッシュインスタンスにデプロイされます。
+AEM Forms は、エンドユーザーからデータを取得するためのアダプティブフォーム、HTML5 フォームおよび PDF フォームのフォームセットを提供します。また、web ページ上の利用可能なすべてのフォームを一覧表示し、フォームの使用状況を分析して対象ユーザーを絞るためのツールも提供します。これらの機能は、AEM Forms のアドオンパッケージに含まれています。アドオンパッケージは、AEM のオーサーインスタンスまたはパブリッシュインスタンスにデプロイされます。
 
-**アダプティブフォーム：** これらのフォームは、デバイスの画面サイズに応じて外観を変更し、魅力的でインタラクティブです。 アダプティブFormsは、Adobe Analytics、Adobe Sign、Adobe Targetとも統合できます。 これにより、デモグラフィやその他の機能に基づいて、パーソナライズされたフォームやプロセス指向のエクスペリエンスをユーザーに提供できます。 また、アダプティブフォームをAdobe Signと統合することもできます。
+**アダプティブフォーム**：インタラクティブで魅力的なこのフォームは、デバイスの画面サイズに基づいて外観を変更できます。アダプティブフォームは、Adobe Analytics、Adobe Sign、Adobe Target とも統合できます。これにより、人口統計やその他の機能に基づいて、パーソナライズされたフォームとプロセス志向のエクスペリエンスをユーザーに提供できます。さらに、アダプティブフォームを Adobe Sign に統合することも可能です。
 
-**PDF forms** は、ピクセルパーフェクトな印刷およびPDFドキュメント内のデジタル情報のキャプチャに適しています。 デジタルアバターでは、Adobe AcrobatまたはAcrobat Readerを使用してこれらのフォームに入力できます。 これらのフォームを Web サイト上でホストすることも、フォームポータルを使用してAEMサイト上で一覧表示することもできます。 また、これらのフォームを添付ファイルとして他のユーザーに電子メールで送信することもできます。 これらのフォームは、デスクトップ環境に最適です。
+**PDF フォーム**&#x200B;は、ピクセルパーフェクトな印刷と、PDF ドキュメント内でのデジタル情報取得に適しています。デジタルアバターでは、Adobe Acrobat または Acrobat Reader を使用してフォームを入力できます。このフォームを web サイト上でホストするか、フォームポータルを使用して AEM サイト上に一覧表示できます。また、このフォームを添付ファイルとして他のユーザーにメールで送ることもできます。このフォームはデスクトップ環境に最適です。
 
-**HTML5 Forms** は、ブラウザーに適したバージョンのPDF formsです。 HTML5 Formsは、PDFプラグインをサポートしない環境に適しています。 HTML5 Formsを使用すると、XFA ベースのPDFがサポートされていないモバイルデバイスおよびデスクトップブラウザーでの XFA ベースのフォームのレンダリングが可能になります。 これらのフォームは、タブレットとデスクトップ環境に最適です。
+**HTML5 フォーム**&#x200B;は、、PDF フォームをブラウザーで使いやすくしたバージョンです。HTML5 Forms は、PDF プラグインをサポートしていない環境に適しています。HTML5 Forms により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上の、XFA ベースのフォームのレンダリングが可能です。このフォームはタブレットおよびデスクトップ環境に最適です。
 
-AEM Formsは強力なエンタープライズクラスのプラットフォームであり、データキャプチャ ( アダプティブフォーム、PDF forms、HTML5 Forms) はAEM Formsの機能の 1 つに過ぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
+AEM Forms は強力なエンタープライズクラスのプラットフォームで、データキャプチャ（アダプティブフォーム、PDF フォームおよび HTML5 フォーム）機能は AEM Forms のみが持つ機能の 1 つです。機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。AEM Formsのデータキャプチャ機能を実行するには、少なくとも 1 つのAEMオーサーインスタンスとAEMパブリッシュインスタンスのみが必要です。 AEM Forms AEM Formsのデータキャプチャ機能を実行する場合は、次のトポロジをお勧めします。 トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
+AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。AEM Forms のデータキャプチャ機能を実行するには、少なくとも 1 つの AEM オーサーインスタンスおよび AEM パブリッシュインスタンスのみを必要とします。AEM Forms のデータキャプチャ機能を実行するには、次のトポロジを推奨します。トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
 
 ![推奨トポロジ](assets/recommended-topology.png)
 
@@ -40,17 +40,17 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。サポート対象のハードウェアとソフトウェアの一覧について詳しくは、「[技術要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
-* AEM インスタンスが稼働していること。Windows ユーザーの場合は、昇格されたモードで AEM インスタンスをインストールします。AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。少なくとも 2 つ必要です [AEMインスタンス（1 つのオーサーと 1 つのパブリッシュ）](/help/sites-deploying/deploy.md) AEM Formsのデータキャプチャ機能を実行するには：
+* AEM インスタンスが稼働していること。Windows ユーザーの場合は、昇格されたモードで AEM インスタンスをインストールします。AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。AEM Forms のデータキャプチャ機能を実行するには、少なくとも 2 つの [AEM インスタンス（1 つはオーサー、もう 1 つはパブリッシュ）](/help/sites-deploying/deploy.md)を必要とします。
 
    * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **公開**：公開されたコンテンツをインターネットや内部ネットワークを介して公開するAEMインスタンス。
+   * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
 
 * メモリ要件が満たされていること。AEM Forms アドオンパッケージでは、次が必要です。
 
-   * 15 GB の一時領域 (Microsoft Windows ベースのインストール用 )
+   * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
    * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
-* オーサーインスタンスとパブリッシュインスタンスのレプリケーションとリバースレプリケーションが設定されている。 詳しくは、 [レプリケーション](/help/sites-deploying/replication.md).
+* オーサーインスタンスとパブリッシュインスタンスに対してレプリケーションとリバースレプリケーションが設定されていること。詳しくは、[レプリケーション](/help/sites-deploying/replication.md)を参照してください。
 * UNIX ベースのシステムの場合：
 
    *  インストールメディアから次の 32 ビット版パッケージをインストールします。
@@ -105,7 +105,7 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Formsデータキャプチャおよびその他の機能が含まれています。 次の手順を実行してアドオンパッケージをインストールします。
+AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms のデータキャプチャおよびその他の機能が含まれています。次の手順を実行してアドオンパッケージをインストールします。
 
 1. [ソフトウェア配布](https://experience.adobe.com/jp/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
@@ -189,12 +189,12 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
    Apache Felix Configuration Manager に管理者としてログインします。Configuration Manager のデフォルト URL は `https://[server]:[port_number]/system/console/configMgr` です。**Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。URL の形式は、`https://[server]:[port]` です。
 
-#### キャッシュの設定 {#configure-cache}
+#### キャッシュを設定 {#configure-cache}
 
-キャッシュは、データアクセス時間の短縮、待ち時間の短縮、入出力 (I/O) 速度の向上を実現するメカニズムです。 アダプティブフォームのキャッシュには、アダプティブフォームのHTMLコンテンツと JSON 構造のみが保存されます。事前入力されたデータは保存されません。 これにより、アダプティブフォームのレンダリングに要する時間を短縮できます。
+キャッシュは、データへのアクセスにかかる時間を短縮し、待ち時間を削減して I/O（入出力）速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、アダプティブフォームのレンダリングの時間を短縮します。
 
-* アダプティブフォームのキャッシュを使用する場合は、 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja) アダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュする場合。
-* カスタムコンポーネントを開発する際は、開発に使用するサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
+* アダプティブフォームのキャッシュを使用するときは、[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
+* カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
 次の手順を実行してアダプティブフォームのキャッシュを設定します。
 
@@ -205,35 +205,35 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
    >
    >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュ設定を無効にしたり変更したりすると、キャッシュがリセットされ、すべてのフォームとドキュメントがキャッシュから削除されます。
 
-#### フォームデータモデル用の SSL 通信の設定 {#configure-ssl-communcation-for-form-data-model}
+#### フォームデータモデルに SSL 通信を設定 {#configure-ssl-communcation-for-form-data-model}
 
-フォームデータモデルの SSL 通信を有効にすることができます。フォームデータモデルの SSL 通信を有効にするには、任意のAEM Formsインスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。 次のコマンドを実行して証明書を追加することができます。 ``
+フォームデータモデルの SSL 通信を有効にすることができます。フォームデータモデルの SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行して証明書を追加することができます。 ``
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
-#### Adobe Signの設定 {#configure-adobe-sign}
+#### Adobe Sign を設定 {#configure-adobe-sign}
 
-Adobe Signを使用すると、アダプティブフォームの電子署名ワークフローが有効になります。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
+Adobe Sign では、アダプティブフォームの電子サインワークフローを有効にすることができます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
-Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、追加のアクションのためにサービスプロバイダーにそのフォームが送信されます。サービスプロバイダーは、申し込みを確認し、Adobe Signを使用して申し込みを承認済みとマークします。 これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
+Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、追加のアクションのためにサービスプロバイダーにそのフォームが送信されます。サービスプロバイダーは申込フォームを確認し、Adobe Sign を使用して申請を承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
-AEM FormsでAdobe Signを使用するには、 [Adobe SignとAEM Formsの統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
+AEM Forms で Adobe Sign を使用するには、[Adobe Sign を AEM Forms に統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)を参照してください。
 
 #### Adobe Analytics の設定 {#configure-adobe-analytics}
 
-AEM Formsは、Adobe Analyticsと統合され、発行済みのフォームおよびドキュメントのパフォーマンス指標を取得して追跡できます。 これらの指標分析の意図は、フォームやドキュメントをさらに使いやすくするために必要な変更に関して、十分な情報に基づいた決定を行えるよう支援することです。
+AEM Forms は、Adobe Analytics と統合されているため、公開済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに使いやすくするために必要な変更に関して、十分な情報に基づいた決定を行えるよう支援することです。
 
 AEM Forms で Adobe Analytics を使用するには、「[分析とレポートの設定](/help/forms/using/configure-analytics-forms-documents.md)」を参照してください。
 
-#### Adobe Target の統合 {#integrate-adobe-target}
+#### Adobe Target を統合 {#integrate-adobe-target}
 
 顧客は、フォームのエクスペリエンスに魅力がない場合、フォームを放棄してしまいます。顧客にとって不満が生じる一方で、組織のサポート量とコストが増加する可能性もあります。コンバージョン率を向上させるカスタマーエクスペリエンス（顧客体験）を正しく認識して提供することは非常に重要であり、難題でもあります。この問題を解決する鍵は AEM Forms にあります。
 
-AEM forms は、Adobe Marketing CloudソリューションであるAdobe Targetと統合して、パーソナライズされた魅力的な顧客体験を複数のデジタルチャネルで提供します。 Adobe Target を A/B テストのアダプティブフォームに対して使用するには、「[Adobe Target を AEM Forms に統合する](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)」を参照してください。 
+AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target と統合することで、個々の顧客に合わせてパーソナライズした魅力的な顧客体験を、複数のデジタルチャネルにわたって提供します。Adobe Target を A/B テストのアダプティブフォームに対して使用するには、「[Adobe Target を AEM Forms に統合する](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)」を参照してください。 
 
 ## 次の手順 {#next-steps}
 
-AEM Formsのデータキャプチャ機能を使用する環境を設定しました。 この機能を使用するための次の手順は次のとおりです。
+AEM Forms のデータキャプチャ機能を使用する環境を設定しました。この機能を使用するための次の手順は、以下のとおりです。
 
 * [最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)
 * [最初の PDF フォームを作成する](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)

@@ -7,22 +7,22 @@ role: Admin
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
 source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
-source-wordcount: '973'
-ht-degree: 44%
+source-wordcount: '923'
+ht-degree: 70%
 
 ---
 
 # Document Security | ユーザーデータの処理 {#document-security-handling-user-data}
 
-AEM Forms Document Security を使用すると、事前定義済みのセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーのみがドキュメントを使用できるようになります。 ドキュメントを保護するには、ポリシーを使用します。ポリシーとは、セキュリティ設定と、許可されたユーザーのリストを含む情報の集まりです。 1 つ以上のドキュメントにポリシーを適用し、AEM Forms JEE のユーザー管理に追加されたユーザーを許可することができます。
+AEM Forms Document Security を使用すると、事前定義されたセキュリティ設定を作成および保存して、ドキュメントに適用できます。これにより、許可されたユーザーのみがドキュメントを使用できるようになります。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定と許可されたユーザーのリストを含む情報のコレクションです。1 つ以上のドキュメントにポリシーを適用し、AEM Forms JEE User Management に追加されるユーザーを許可することができます。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
-Document Security は、My Sql、Oracle、MS® SQL Server、IBM® DB2®など、保護されたドキュメントに関連するポリシーとデータをデータベースに格納します。 さらに、ポリシー内の承認済みユーザーのデータは、ユーザー管理に保存されます。 User Management に格納されるデータについて詳しくは、[Forms User Management | ユーザーデータの処理](/help/forms/using/user-management-handling-user-data.md)を参照してください。
+Document Security は、My Sql、Oracle、MS® SQL Server、IBM® DB2®など、保護されたドキュメントに関連するポリシーとデータをデータベースに格納します。 さらに、ポリシー内の承認済みユーザーのデータを、User Management に格納します。User Management に格納されるデータについて詳しくは、[Forms User Management | ユーザーデータの処理](/help/forms/using/user-management-handling-user-data.md)を参照してください。
 
-次の表は、Document Security がデータベーステーブル内のデータを整理する方法を示しています。
+次の表は、Document Security がデータベーステーブルでデータをどのように整理しているかを示しています。
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ Document Security は、My Sql、Oracle、MS® SQL Server、IBM® DB2®など、
   </tr>
   <tr>
    <td><code>EdcPrincipalKeyEntity</code></td>
-   <td>ユーザーのプリンシパルキーに関する情報を格納します。 キーは、オフラインの Document Security ワークフローで使用されます。</td>
+   <td>ユーザーのプリンシパルキーに関する情報を格納します。キーは、オフラインの Document Security ワークフローで使用されます。</td>
   </tr>
   <tr>
    <td><code>EdcAuditEntity</code></td>
@@ -40,7 +40,7 @@ Document Security は、My Sql、Oracle、MS® SQL Server、IBM® DB2®など、
   </tr>
   <tr>
    <td><p><code>EdcLicenseEntity</code></p> </td>
-   <td>保護されたドキュメントのレコードを格納します。 保護されたすべてのドキュメントのライセンスの詳細を保存します。</td>
+   <td>保護されたドキュメントのレコードを格納します。すべての保護されたドキュメントのライセンスの詳細を格納します。</td>
   </tr>
   <tr>
    <td><p><code>EdcDocumentEntity</code></p> </td>
@@ -56,7 +56,7 @@ Document Security は、My Sql、Oracle、MS® SQL Server、IBM® DB2®など、
   </tr>
   <tr>
    <td><code>EdcPolicyEntity</code></td>
-   <td>ポリシーに関する情報を格納します。 各ポリシーは、この表の行に対応します。</td>
+   <td>ポリシーに関する情報を格納します。各ポリシーは、この表の行に対応します。</td>
   </tr>
   <tr>
    <td><code>EdcPolicyXmlEntity</code></td>
@@ -91,7 +91,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 プリンシパル ID がわかったら、ユーザーデータを書き出したり、削除したりできます。
 
-### ユーザーデータの書き出し {#export-user-data}
+### ユーザーデータを書き出し {#export-user-data}
 
 次のデータベースコマンドを実行して、プリンシパル ID のユーザーデータをデータベーステーブルから書き出すことができます。 `select` コマンドで、`<principal_id>` を、書き出すデータを持つユーザーのプリンシパル ID に置き換えます。
 
@@ -195,9 +195,9 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. **[!UICONTROL サービス／Document Security／ポリシーセット]**&#x200B;に移動します。
    1. ポリシーセットを開き、ポリシーからユーザーを削除します。
 
-   **Document Security Web ページの使用**
+   **Document Security web ページの使用**
 
-   個人用ポリシーを作成する権限を持つ Document Security ユーザーは、自分のポリシーからユーザーデータを削除できます。 この作業を行うには、以下の手順を実行します。
+   個人用ポリシーを作成する権限を持つ Document Security ユーザーは、自分のポリシーからユーザーデータを削除できます。この作業を行うには、以下の手順を実行します。
 
    1. 個人用ポリシーを持つユーザーは、Document Security Web ページ ( https:// ) にログインします。[*server*]:[*ポート*]/edc.
    1. **[!UICONTROL サービス／Document Security／マイポリシー]**&#x200B;に移動します。

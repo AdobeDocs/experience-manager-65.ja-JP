@@ -11,7 +11,7 @@ exl-id: 4677b9e5-3811-4de3-b4f4-9574b5898486
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1763'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ Assembler サービスは、入力 PDF ドキュメントが Acrobat フォー�
 
 >[!NOTE]
 >
->この節を読む前に、Assembler サービスを使用したPDFドキュメントの組み立てに関する知識を身に付けておくことをお勧めします。 このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照）。
+>このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照）。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Assembler サービス API（Java）を使用して、非インタラクティ�
 
 1. プロジェクトファイルを含めます。
 
-   Java プロジェクトのクラスパスに、adobe-assembler-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. Assembler クライアントを作成します。
 
@@ -135,11 +135,11 @@ Assembler サービス API（Java）を使用して、非インタラクティ�
 1. 実行時オプションを設定します。
 
    * コンストラクタを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドとパス `false`.
+   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
 
 1. PDF ドキュメントをアセンブリします。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを呼び出して、以下の値を渡します。
 
    * DDX ドキュメントを表す `com.adobe.idp.Document` オブジェクト。この DDX ドキュメントに PDF ソース要素の値 `inDoc` が含まれていることを確認してください。
    * インタラクティブ PDF ドキュメントを格納する `com.adobe.idp.Document` オブジェクト。
@@ -150,7 +150,7 @@ Assembler サービス API（Java）を使用して、非インタラクティ�
 1. 非インタラクティブ PDF ドキュメントを保存します。
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * を呼び出す `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します。 必ず `invokeOneDocument` メソッドが返した `Document` オブジェクトを使用するように確認します。
+   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします。必ず `invokeOneDocument` メソッドが返した `Document` オブジェクトを使用するようにしてください。
 
 * 「クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ」
 
@@ -171,7 +171,7 @@ Assembler Service API（web サービス）を使用して、非インタラク�
    * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -183,26 +183,26 @@ Assembler Service API（web サービス）を使用して、非インタラク�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントの保存に使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列のコンテンツを割り当てて、`BLOB`オ ブジェクトを入力します。
 
 1. インタラクティブ PDF ドキュメントを参照します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
    * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドを割り当てることにより、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. 実行時オプションを設定します。
 
    * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` から `AssemblerOptionSpec` オブジェクトの `failOnError` データメンバー。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、`false` を `AssemblerOptionSpec` オブジェクトの `failOnError` データメンバーに割り当てます。
 
 1. PDF ドキュメントをアセンブリします。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを呼び出して、以下の値を渡します。
 
    * DDX ドキュメントを表す `BLOB` オブジェクト
    * インタラクティブ PDF ドキュメントを表す `BLOB` オブジェクト
@@ -213,9 +213,9 @@ Assembler Service API（web サービス）を使用して、非インタラク�
 1. 非インタラクティブ PDF ドキュメントを保存します。
 
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、非インタラクティブ PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
-   * `invokeOneDocument` メソッドから返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
+   * `invokeOneDocument` メソッドから返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 * 「クイックスタート（MTOM）：web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 

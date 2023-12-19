@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Manager Sites開発のエクスペリエンスフラグメント
+title: Adobe Experience Manager Sites でのエクスペリエンスフラグメント開発
 description: Adobe Experience Manager用のエクスペリエンスフラグメントをカスタマイズする方法を説明します。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,8 +9,8 @@ docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 86%
+source-wordcount: '1781'
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 86%
 
 URL で `.plain.` セレクターを使用すると、プレーン HTML レンディションにアクセスできます。
 
-これはブラウザーから使用できますが、主な目的は、他のアプリケーション（サードパーティの Web アプリ、カスタムモバイル実装など）が URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
+これはブラウザーから利用できますが、主な目的は、他のアプリケーション（例えば、サードパーティ web アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
 
 プレーン HTML レンディションは、次のようなパスにプロトコル、ホストおよびコンテキストパスを追加します。
 
@@ -40,7 +40,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 * または、`-src` か `-href` で終わる
 
-次に例を示します。
+例：
 
 `.../brooklyn-coat/master.plain.html`
 
@@ -48,7 +48,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 >
 >リンクは、常にパブリッシュインスタンスを参照します。これらはサードパーティによって使用されるので、リンクは常にオーサーインスタンスからではなくパブリッシュインスタンスから呼び出されます。
 >
->詳しくは、 [URL の外部化](/help/sites-developing/externalizer.md).
+>詳しくは、[URL の外部化](/help/sites-developing/externalizer.md)を参照してください。
 
 ![xf-14](assets/xf-14.png)
 
@@ -71,7 +71,7 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
 
 ## ソーシャルバリエーション {#social-variations}
 
-ソーシャルバリエーションをソーシャルメディア（テキストおよび画像）に投稿できます。Adobe Experience Manager(AEM) では、これらのソーシャルバリアントに、テキストコンポーネントや画像コンポーネントなどのコンポーネントを含めることができます。
+ソーシャルバリエーションをソーシャルメディア（テキストおよび画像）に投稿できます。Adobe Experience Manager（AEM）では、これらのソーシャルバリエーションに、テキストコンポーネントや画像コンポーネントなどのコンポーネントを含めることができます。
 
 ソーシャル投稿の画像やテキストは、（構築ブロックまたはレイアウトコンテナの）任意の深さレベルの任意の画像リソースタイプまたはテキストリソースタイプから取得できます。
 
@@ -98,7 +98,7 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
 >
 >エクスペリエンスフラグメントでサポートされているのは、[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)***だけ***&#x200B;です。
 
-エクスペリエンスフラグメント用の新しいテンプレートを開発する際は、 [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md).
+エクスペリエンスフラグメントの新しいテンプレートを開発する際は、[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)の標準的な手法に従うことができます。
 
 **エクスペリエンスフラグメントを作成**&#x200B;ウィザードで検出されるエクスペリエンスフラグメントテンプレートを作成するには、次のいずれかのルールセットに従う必要があります。
 
@@ -162,12 +162,12 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 
    1. `src` 属性
    1. `href` 属性
-   1. `*-src` 属性（例：data-src、custom-src など）
-   1. `*-href` 属性 ( `data-href`, `custom-href`, `img-href`など )
+   1. `*-src` 属性（data-src、custom-src など）
+   1. `*-href` 属性（`data-href`、`custom-href`、`img-href` など）
 
    >[!NOTE]
    >
-   >通常、HTML内の内部リンクは相対リンクですが、カスタムコンポーネントがHTML内で完全な URL を指定する場合もあります。 デフォルトでは、AEM はこれらの完全な URL を無視し、変更しません。
+   >通常、HTML 内の内部リンクは相対リンクですが、カスタムコンポーネントの HTML で完全な URL が指定されている場合もあります。デフォルトでは、AEM はこれらの完全な URL を無視し、変更しません。
 
    これらの属性のリンクは AEM Link Externalizer `publishLink()` を通じて実行され、あたかもパブリッシュインスタンス上にあるかのように URL が再作成され、一般に公開されます。
 
@@ -184,7 +184,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 >
 >このインターフェイスは [AEM 6.5 SP1（6.5.1.0）](/help/release-notes/previous/6.5.1.md)で導入されました。
 
-（[デフォルトのリンク書き換え](#default-link-rewriting)では対応していない）より複雑な場合のために、AEM では Link Rewriter Provider インターフェイスを提供しています。これは、バンドルにサービスとして実装できる `ConsumerType` インターフェイスです。このインターフェイスは、エクスペリエンスフラグメントからレンダリングされる HTML オファーの内部リンクに対して AEM で実行される変更をバイパスします。このインターフェイスを使用すると、内部HTMLのリンクを書き換えるプロセスを、ビジネスニーズに合わせてカスタマイズできます。
+（[デフォルトのリンク書き換え](#default-link-rewriting)では対応していない）より複雑な場合のために、AEM では Link Rewriter Provider インターフェイスを提供しています。これは、バンドルにサービスとして実装できる `ConsumerType` インターフェイスです。このインターフェイスは、エクスペリエンスフラグメントからレンダリングされる HTML オファーの内部リンクに対して AEM で実行される変更をバイパスします。このインターフェイスを使用すると、内部 HTML リンクの書き換えプロセスをビジネスニーズに合わせてカスタマイズできます。
 
 このインターフェイスをサービスとして実装する使用例としては、例えば次のものがあります。
 
@@ -212,7 +212,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 ### Link Rewriter Provider インターフェイスの使用方法 {#how-to-use-the-link-rewriter-provider-interface}
 
-このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含むバンドルを作成する必要があります。
+このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含んだバンドルを作成する必要があります。
 
 このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Adobe Target に書き出し」機能での書き換えにプラグインするために使用されます。
 
@@ -261,7 +261,7 @@ public class GeneralLinkRewriter implements ExperienceFragmentLinkRewriterProvid
 
 `shouldRewrite(ExperienceFragmentVariation experienceFragment);`
 
-次に例を示します。
+例：
 
 ```java
 @Override
@@ -291,13 +291,13 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 このメソッドは入力として次のパラメーターを受け取ります。
 
-* `link`：
+* `link`
 処理中のリンクの `String` 表現です。これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
 
-* `tag`：
+* `tag`
 処理中の HTML 要素の名前です。
 
-* `attribute`：
+* `attribute`
 正確な属性名です。
 
 例えば、Target システムに書き出しがこの要素を処理している場合は、`CSSInclude` を次のように定義できます。
@@ -312,7 +312,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", attribute="href" )
 ```
 
-サービスを作成する際には、指定された入力に基づいて判断し、それに応じてリンクを書き換えることができます。
+サービスを作成する際は、指定された入力に基づいて判断し、それに応じてリンクを書き換えることができます。
 
 この例では、URL の `/etc.clientlibs` 部分を削除し、適切な外部ドメインを追加するとしましょう。話を簡単にするために、`rewriteLinkExample2` に示すように、サービスのリソースリゾルバーにアクセスできると考えます。
 
@@ -347,7 +347,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->上記のメソッドが `null` を返した場合、Target システムに書き出しは、リンクをそのままの状態（リソースへの相対リンク）にしておきます。
+>上記のメソッドが `null` を返した場合、「Target に書き出し」システムは、リンクをそのままの状態（リソースへの相対リンク）にしておきます。
 
 #### 優先度 - getPriority {#priorities-getpriority}
 

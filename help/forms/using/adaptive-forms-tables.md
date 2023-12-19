@@ -9,17 +9,17 @@ exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
 source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2459'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
 # アダプティブフォームのテーブル{#tables-in-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/adaptive-forms-tables.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/adaptive-forms-tables.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
@@ -59,7 +59,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 テーブルの行または列を追加／削除したり、行を上下に移動させることができます。
 
-行または列を追加／削除する、または行を移動させるには、行または列に含まれるセルのいずれかをクリックします。列の一番上および行の左側にドロップダウンメニューが表示されます。上部のメニューには列を追加または削除するオプションが用意されていますが、左側のメニューでは行を追加、削除または移動できます。
+行または列を追加／削除する、または行を移動させるには、行または列に含まれるセルのいずれかをクリックします。列の一番上および行の左側にドロップダウンメニューが表示されます。上部のメニューには列を追加または削除するオプションが表示され、左側のメニューには行を追加、削除または移動させるオプションが表示されます。
 
 * 追加の操作では、選択された行の下に行が、そして選択された列の右隣に列が追加されます。
 * 削除の操作では、選択された行または列が削除されます。
@@ -153,7 +153,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 ## テーブルの式 {#expressions-in-a-table}
 
-アダプティブフォームのテーブルでは、JavaScript で式を記述して、テーブルや行の表示と非表示、すべての数値の合計、セル内の合計の表示、セルの有効/無効、ユーザー入力の検証などの動作を誘導できます。 これらの式は、アダプティブフォームのスクリプトモデル API を使用します。
+アダプティブフォームのテーブルでは、表または行の表示／非表示、すべての数値を加算したセル内の合計表示、セルの有効化または無効化、ユーザー入力の検証などの動作を誘導する式を JavaScript で作成できます。これらの式は、アダプティブフォームのスクリプトモデル API を使用します。
 
 テーブルと行では、式によって返される値を基にその表示をコントロールする表示式のみがサポートされていますが、セルでは、以下の式がサポートされています。
 
@@ -211,7 +211,7 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 ## テーブルでのデータの結合 {#merge-data-in-a-table}
 
-アダプティブフォームの表を使用すると、XML ファイルのデータを使用して、実行時に表に値を入力できます。 データ XML ファイルは、AEM Forms サーバーが稼動しているマシンのローカルファイルシステム、または CRX リポジトリに置くことができます。
+アダプティブフォームのテーブルを使用すると、実行時に、XML ファイルのデータを使用してテーブルにデータを入力することができます。データ XML ファイルは、AEM Forms サーバーが稼動しているマシンのローカルファイルシステム、または CRX リポジトリに置くことができます。
 
 XML ファイルからのデータを使って銀行取引概略表に入力する例を次に示します。
 

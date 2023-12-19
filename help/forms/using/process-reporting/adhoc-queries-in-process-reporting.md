@@ -8,8 +8,8 @@ docset: aem65
 exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
 source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '1672'
-ht-degree: 96%
+source-wordcount: '1635'
+ht-degree: 98%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 96%
 
 ## プロセスレポートのアドホッククエリ {#ad-hoc-queries-in-process-reporting-1}
 
-プロセスレポートのアドホッククエリを使用すると、AEM Forms環境で定義されたAEM Formsプロセスインスタンスのプロセスとタスクの詳細を検索するために使用できるカスタムクエリを作成できます。
+プロセスレポートのアドホッククエリを使用すると、AEM Forms 環境で定義された AEM Forms プロセスインスタンスのプロセスとタスクの詳細を検索するために使用できるカスタムクエリを作成できます。
 
 また、アドホッククエリは、プロセスおよびタスクのプロパティフィルターを使用して定義できます。その後、これらのフィルターを保存し、後でレポートを実行するために使用できます。
 

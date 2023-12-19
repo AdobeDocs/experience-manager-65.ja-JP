@@ -10,7 +10,7 @@ exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '924'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -45,7 +45,7 @@ AEM で開発を行う場合は、編集可能テンプレートを使用する�
 
 * 作成者によって[作成](/help/sites-authoring/templates.md#creating-a-new-template-template-author)および[編集](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)できます。
 
-* テンプレートで作成されるすべてのページで以下を定義できるようにが導入されました。
+* テンプレートを使用して作成されたページに、次の項目を定義できるようにするために導入されました。
 
    * 構造
    * 初期コンテンツ

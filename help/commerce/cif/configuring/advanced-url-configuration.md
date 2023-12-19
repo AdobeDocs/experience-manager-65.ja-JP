@@ -11,8 +11,8 @@ thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 86%
+source-wordcount: '805'
+ht-degree: 100%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 86%
 
 ## 設定 {#configuration}
 
-次の手順で `UrlProvider` SEO 要件と必要に応じて、サービスで「CIF URL Provider configuration」の OSGI 設定を提供する必要があります。
+SEO の要件とニーズに応じて `UrlProvider` サービスを設定するには、プロジェクトで「CIF URL プロバイダーの設定」の OSGI 設定を指定する必要があります。
 
 >[!NOTE]
 >
->AEM CIFコアコンポーネントのリリース 2.0.0 以降、URL プロバイダー設定では、1.x リリースで既知のフリーテキスト設定可能な形式の代わりに、事前に定義された URL 形式のみが提供されます。 さらに、セレクターを使用して URL 内のデータを渡すことはなくなり、代わりにサフィックスが使用されます。
+>AEM CIF コアコンポーネントのリリース 2.0.0 以降では、URL プロバイダーの設定には、1.x リリースで知られている設定可能なフリーテキスト形式ではなく、事前に定義された URL 形式のみが提供されます。さらに、セレクターを使用して URL 内のデータを渡すことはなくなり、代わりにサフィックスが使用されます。
 
 ### 製品ページの URL 形式 {#product}
 
@@ -50,11 +50,11 @@ ht-degree: 86%
 * `{{sku}}` は製品の SKU（例：`VP09`）に置き換えられます
 * `{{url_key}}` は製品の `url_key` プロパティ（例：`lenora-crochet-shorts`）に置き換えられます
 * `{{url_path}}` は製品の `url_path`（例：`venia-bottoms/venia-pants/lenora-crochet-shorts`）に置き換えられます
-* `{{variant_sku}}` は、現在選択されているバリアント（例：`VP09-KH-S`）に置き換えられます
+* `{{variant_sku}}` は現在選択されているバリアント（例：`VP09-KH-S`）に置き換えられます
 
-`url_path` が非推奨になったため、あらかじめ定義された製品 URL 形式は製品の `url_rewrites` を使用し、`url_path` が利用できない場合は最もパスセグメントが多いものを代わりに選択します。
+`url_path` が非推奨になったため、事前定義された製品 URL 形式は製品の `url_rewrites` を使用し、`url_path` が利用できない場合は、最もパスセグメントが多いものを代わりに選択します。
 
-上記のサンプルデータでは、デフォルトの URL 形式を使用して設定された製品バリアント URL は `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S` のようになります。
+上記のサンプルデータでは、デフォルトの URL 形式を使用して形式設定された製品バリアント URL は `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S` のようになります。
 
 ### カテゴリページの URL 形式 {#product-list}
 
@@ -69,23 +69,23 @@ ht-degree: 86%
 * `{{url_key}}` はカテゴリの `url_key` プロパティに置き換えられます
 * `{{url_path}}` はカテゴリの `url_path` に置き換えられます
 
-上記のサンプルデータでは、デフォルトの URL 形式を使用して設定されたカテゴリページ URL は `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html` のようになります。
+上記のサンプルデータでは、デフォルトの URL 形式を使用して形式設定されたカテゴリページ URL は `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html` のようになります。
 
 >[!NOTE]
 > 
->`url_path` は、製品またはカテゴリの上位層の `url_keys` と製品またはカテゴリの `url_key` をスラッシュ `/` で区切って連結したものです。
+>`url_path` は、製品またはカテゴリの上位層の `url_keys` と、製品またはカテゴリの `url_key` をスラッシュ `/` で区切って連結したものです。
 
 ### 特定のカテゴリーページ／製品ページ {#specific-pages}
 
-次を作成できます。 [複数のカテゴリおよび製品ページ](multi-template-usage.md) カタログの特定のカテゴリまたは製品のサブセットのみ。
+カタログのカテゴリまたは製品の特定のサブセットに対してのみ、[複数のカテゴリページおよび製品ページ](multi-template-usage.md)を作成できます。
 
 `UrlProvider` は、そのようなページへのディープリンクをオーサー層インスタンスで生成するように事前に設定されています。 これは、編集者がプレビューモードでサイトを閲覧し、特定の製品ページまたはカテゴリーページに移動したあと編集モードに切り替えてページを編集する場合に便利な機能です。
 
-一方、パブリッシュ層インスタンスでは、例えば検索エンジンのランキングを落とさないように、カタログページの URL を安定した状態に保つ必要があります。そのため、パブリッシュ層インスタンスは、デフォルトでは特定のカタログページへのディープリンクをレンダリングしません。 この動作を変更するには、 _CIF URL プロバイダー固有のページ戦略_ は、常に特定のページ url を生成するように設定できます。
+一方、パブリッシュ層インスタンスでは、例えば検索エンジンのランキングを落とさないように、カタログページの URL を安定した状態に保つ必要があります。そのため、パブリッシュ層インスタンスは、デフォルトでは特定のカタログページへのディープリンクをレンダリングしません。 この動作を変更するには、常に特定のページの URL を生成するように _CIF URL プロバイダー固有のページ戦略_&#x200B;を設定します。
 
 ## カスタム URL 形式 {#custom-url-format}
 
-プロジェクトで実装できるカスタム URL 形式を指定するには、 [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) または [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) サービスインターフェイスを使用し、実装を OSGi サービスとして登録します。 これらの実装が使用できる場合は、設定されている事前定義済み形式に置き換えます。複数の実装が登録されている場合、サービスランキングの高い実装は、サービスランキングの低い実装に置き換わます。
+カスタム URL 形式を指定するには、プロジェクトで [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) または [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) サービスインターフェイスを実装し、その実装を OSGi サービスとして登録します。これらの実装が使用できる場合は、設定されている事前定義済みの形式が置き換えられます。複数の実装が登録されている場合、サービスランキングの高い実装は、サービスランキングの低い実装に置き換わます。
 
 カスタム URL 形式の実装では、指定されたパラメーターから URL を作成するメソッドと URL を解析して同じパラメーターを返すメソッドのペアを実装する必要があります。
 

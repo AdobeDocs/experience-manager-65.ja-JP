@@ -10,8 +10,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 91%
+source-wordcount: '523'
+ht-degree: 95%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 91%
 
 標準のライブコピーを編集する場合と同じ方法で変更できます。例えば次のようにします。
 
-* 閉じた鍵アイコンをクリックすると、この同期が解除され、ローンチのコンテンツを新しく更新できます。 ロックを解除（開いた鍵アイコン）すると、ソース分岐内の同じ場所に変更を加えても、ユーザーの変更が上書きされなくなります。
+* 閉じられた鍵アイコンをクリックするとこの同期が解除され、ローンチのコンテンツを新たに更新できるようになります。ロックを解除（開いた鍵アイコン）すると、ソース分岐内の同じ場所に変更を加えても、ユーザーの変更が上書きされなくなります。
 * 特定のページの継承を&#x200B;**一時停止**（および&#x200B;**再開**）します。
 
 詳しくは、「[ライブコピーのコンテンツの変更](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)」を参照してください。

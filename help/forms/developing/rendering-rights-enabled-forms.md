@@ -11,7 +11,7 @@ exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1447'
-ht-degree: 71%
+ht-degree: 77%
 
 ---
 
@@ -100,7 +100,7 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
    * を呼び出して、秘密鍵証明書のエイリアスを指定します。 `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを使用してエイリアス値を表す string 値を指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 以下に例を示します。ユーザーがフォームフィールドに入力してフォームを保存できる使用権限を設定するには、 `ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドとパス `true`.
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。以下に例を示します。ユーザーがフォームフィールドに入力してフォームを保存できる使用権限を設定するには、 `ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドとパス `true`.
 
    >[!NOTE]
    >
@@ -108,7 +108,7 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 
 1. 権限設定されたフォームをレンダリングする
 
-   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFFormWithUsageRights` メソッドを使用して、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `renderPDFFormWithUsageRights` メソッドを呼び出して、以下の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
@@ -124,7 +124,7 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
    * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
    * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
-   * の作成 `java.io.InputStream` を呼び出すことによって、オブジェクトを `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`java.io.InputStream` オブジェクトを作成します。
    * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
    * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
@@ -153,11 +153,11 @@ Forms API（web サービス）を使用して、権限が有効なフォーム�
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
    * を呼び出して、秘密鍵証明書のエイリアスを指定します。 `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを使用してエイリアス値を表す string 値を指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限を付与できる場合のみです。 つまり、秘密鍵証明書で設定できない場合は、使用権限を設定できません。 ユーザーがフォームフィールドに入力してフォームを保存できる使用権限を設定するには、 `ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドとパス `true`.
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。ユーザーがフォームフィールドに入力してフォームを保存できる使用権限を設定するには、 `ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドとパス `true`.
 
 1. 権限設定されたフォームをレンダリングする
 
-   を呼び出す `FormsService` オブジェクトの `renderPDFFormWithUsageRights` メソッドを使用して、次の値を渡します。
+   `FormsService` オブジェクトの `renderPDFFormWithUsageRights` メソッドを呼び出して、以下の値を渡します。
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * フォームで結合するデータを格納する `BLOB` オブジェクト。フォームでデータを結合しない場合は、空の XML データソースを基にした `BLOB` オブジェクトを渡す必要があります。null の `BLOB` オブジェクトを渡すことはできません。このようなオブジェクトを渡すと例外が発生します。

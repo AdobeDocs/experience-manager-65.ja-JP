@@ -10,7 +10,7 @@ exl-id: b55d9edc-a210-407a-aa4b-a91bb358be7b
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 89%
 
 Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理](/help/assets/content-fragments/content-fragments.md)されます。
 
-チャネルに特化しないコンテンツを、チャネル固有のバリエーションと共に作成できます。 その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
+これにより、チャネルに依存しないコンテンツを様々なバリエーション（チャネル固有）で作成できます。その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
 
 >[!CAUTION]
 >

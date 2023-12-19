@@ -8,13 +8,13 @@ exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '1844'
-ht-degree: 78%
+ht-degree: 99%
 
 ---
 
 # JSON スキーマを使用したアダプティブフォームの作成 {#creating-adaptive-forms-using-json-schema}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -35,13 +35,13 @@ ht-degree: 78%
 
 JSON スキーマの使用上の主な特長を以下に示します。
 
-* JSON の構造は、アダプティブフォームのオーサリングモードの「コンテンツファインダー」タブにツリーとして表示されます。 JSON 階層からアダプティブフォームに要素をドラッグして追加することができます。
+* JSON の構造は、アダプティブフォームのオーサリングモードの「コンテンツファインダー」タブでツリーとして表示されます。JSON 階層からアダプティブフォームに要素をドラッグして追加できます。
 * 関連付けられたスキーマに準拠する JSON を使用して、フォームに事前入力できます。
 * ユーザーが入力したデータは、送信時には関連付けられたスキーマに適合する JSON として送信されます。
 
-JSON スキーマは、単純型要素と複合型要素で構成されています。要素には、その要素にルールを追加する属性が含まれています。これらの要素と属性がアダプティブフォームにドラッグされると、対応するアダプティブフォームコンポーネントに自動的にマッピングされます。
+JSON スキーマは、単純型要素と複合型要素で構成されています。要素には、その要素にルールを追加する属性が含まれています。これらの要素や属性がアダプティブフォーム上にドラッグされると、自動的に該当するアダプティブフォームコンポーネントにマッピングされます。
 
-この JSON 要素とアダプティブフォームコンポーネントのマッピングは、次のようになります。
+JSON 要素とアダプティブフォームコンポーネントのマッピングは、次のように行われます。
 
 ```json
 "birthDate": {
@@ -311,7 +311,7 @@ JSON スキーマの例を示します。
 
 ### 再使用可能なスキーマ定義 {#reusable-schema-definitions}
 
-定義キーを使用して、再使用可能なスキーマを識別します。再使用可能なスキーマ定義を使用して、フラグメントを作成します。これは、XSD で複合タイプを識別する場合と似ています。 定義を含む JSON スキーマのサンプルを以下に示します。
+定義キーを使用して、再使用可能なスキーマを識別します。再使用可能なスキーマ定義を使用して、フラグメントを作成します。これは、XSD での複合型の識別と同じです。定義を含む JSON スキーマのサンプルを以下に示します。
 
 ```json
 {
@@ -364,7 +364,7 @@ JSON スキーマの例を示します。
 
 ## フォームオブジェクトのスクリプトまたは式の設定  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript はアダプティブフォームの式言語です。 すべての式は有効な JavaScript 式で、アダプティブフォームのスクリプティングモデル API を使用します。 フォームオブジェクトを事前設定して、フォームイベントの[式を評価](adaptive-form-expressions.md)できます。
+アダプティブフォームの式言語は JavaScript です。すべての式は、有効な JavaScript™ の式で、アダプティブフォームのスクリプトモデル API を使用しています。フォームオブジェクトを事前設定して、フォームイベントの[式を評価](adaptive-form-expressions.md)できます。
 
 アダプティブフォームの式やスクリプトをアダプティブフォームのコンポーネント用に事前設定するには、aem:afproperties プロパティを使用します。例えば、initialize イベントがトリガーされると、次のコードは電話フィールドの値を設定し、値をログに出力します。
 
@@ -565,7 +565,7 @@ JavaScript はアダプティブフォームの式言語です。 すべての�
    <td> </td>
   </tr>
   <tr>
-   <td>図面</td>
+   <td>描画</td>
    <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
@@ -707,7 +707,7 @@ JSON スキーマの要素に次の制限を追加して、アダプティブフ
   <tr>
    <td><p><code>pattern</code></p> </td>
    <td><p>文字列</p> </td>
-   <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピングされます。</p> </td>
+   <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピングされます。</p> </td>
    <td>
     <ul>
      <li>XSD スキーマにマップされるすべてのアダプティブフォームコンポーネント </li>
@@ -730,14 +730,14 @@ JSON スキーマの要素に次の制限を追加して、アダプティブフ
 
 
 
-## スキーマ準拠データを有効にする {#enablig-schema-compliant-data}
+## スキーマ準拠データの有効化 {#enablig-schema-compliant-data}
 
-フォーム送信時に、すべての JSON スキーマベースのアダプティブFormsでスキーマに準拠したデータを生成するには、次の手順に従います。
+フォーム送信時にすべての JSON スキーマベースのアダプティブフォームでスキーマに準拠したデータを生成できるようにするには、次の手順に従います。
 
-1. Experience ManagerWeb コンソール ( ) に移動します。 `https://server:host/system/console/configMgr`.
-1. **[!UICONTROL アダプティブフォームおよびインタラクティブ通信 web チャネルの設定]**
+1. `https://server:host/system/console/configMgr` で Experience Manager web コンソールに移動します。
+1. **[!UICONTROL アダプティブフォームおよびインタラクティブ通信 web チャネルの設定]**&#x200B;を見つけます。
 1. 「 」を選択して、設定を編集モードで開きます。
-1. を選択します。 **[!UICONTROL スキーマ準拠データを生成]** チェックボックス。
+1. **[!UICONTROL スキーマ準拠データを生成]**&#x200B;チェックボックスをオンにします。
 1. 設定を保存します。
 
 ![アダプティブフォームおよびインタラクティブ通信 web チャネルの設定](/help/forms/using/assets/af-ic-web-channel-configuration.png)

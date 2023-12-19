@@ -1,6 +1,6 @@
 ---
 title: フォームのフィールドのための文脈依存ヘルプの作成
-description: AEM Formsを使用すると、アダプティブフォームのフィールドやパネルに文脈依存ヘルプを、テキストまたはビデオなどのリッチメディアとして追加できます。
+description: AEM Forms では、文脈依存ヘルプをテキストまたはビデオなどのリッチメディアの形でアダプティブフォームフィールドやパネルに追加することができます。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
@@ -9,23 +9,23 @@ exl-id: 6569bfba-9af5-4060-8640-e51d7af46614
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 # フォームのフィールドのための文脈依存ヘルプの作成{#authoring-in-context-help-for-form-fields}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 ## はじめに {#introduction}
 
-エンドユーザーがフォームに記入しているときに、特定のフォームフィールドへの記入方法がわからない場合があります。このような問題に対処するため、アダプティブフォームでは、テキストの追加や、豊富な文脈依存ヘルプをフォームフィールドに追加する機能を提供しています。 これにより、フォーム入力エクスペリエンスを向上し、エンドユーザーにとっての曖昧さを回避することができます。
+エンドユーザーがフォームに記入しているときに、特定のフォームフィールドへの記入方法がわからない場合があります。そのような問題を解決するために、アダプティブフォームでは、テキストのまたは高度な文脈依存ヘルプをフォームフィールドに追加できるようにしています。これにより、フォーム入力エクスペリエンスを向上し、エンドユーザーにとっての曖昧さを回避することができます。
 
-この記事では、アダプティブフォームのオーサリング中に文脈依存ヘルプを追加する方法について説明します。
+この記事では、フォーム作成者がアダプティブフォームの作成中に文脈依存ヘルプを追加する方法を説明します。
 
-## コンテキストヘルプの追加 {#add-in-context-help}
+## 文脈依存ヘルプを追加 {#add-in-context-help}
 
-文脈依存ヘルプは、サイドバーにある「プロパティ」タブの「ヘルプコンテンツ」セクションで次のオプションを使用して指定できます。
+文脈依存ヘルプは、サイドバーにある「プロパティ」タブの「ヘルプコンテンツ」セクションで、以下のオプションを利用して指定できます。
 
 * [簡単な説明](../../forms/using/authoring-in-field-help.md#p-short-description-p)
 * [詳細な説明](../../forms/using/authoring-in-field-help.md#p-long-description-p)
@@ -54,7 +54,7 @@ ht-degree: 90%
 
 ![フォームフィールドのための文脈依存ヘルプとしてのリッチメディアの追加](assets/long-descriptions.png)
 
-詳細な説明を追加すると、**が表示されますか？** アイコンがフィールドの隣に表示されます。アイコンをクリックすると、詳細な説明セクションに追加されたコンテンツが表示されます。
+詳細な説明を追加すると、**が表示されますか？** アイコンがフィールドの隣に表示されます。アイコンをクリックすると、「詳細な説明」セクションに追加されたコンテンツが表示されます。
 
 ![リッチメディアを使用した文脈依存ヘルプの例](assets/photoshop.png)
 
@@ -64,6 +64,6 @@ ht-degree: 90%
 
 ![フォームパネルへの文脈依存ヘルプの追加](assets/panel-level-help.png)
 
-パネルにヘルプを追加すると、**が表示されますか？** アイコンがパネルの説明の隣に表示されます。このアイコンをクリックすると、パネル編集ダイアログの「ヘルプコンテンツ」セクションに、追加されたコンテンツが表示されます。
+パネルにヘルプを追加すると、**が表示されますか？** アイコンがパネルの説明の隣に表示されます。アイコンをクリックすると、パネル編集ダイアログの「ヘルプコンテンツ」セクションに追加されたコンテンツが表示されます。
 
 ![フォームパネルレベルでの文脈依存ヘルプの例](assets/photoshop-1.png)

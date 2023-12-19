@@ -13,7 +13,7 @@ ht-degree: 72%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 不在にする予定がある場合は、その期間に割り当てられる項目に対して実行する操作を指定できます。

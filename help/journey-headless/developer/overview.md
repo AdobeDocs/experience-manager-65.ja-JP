@@ -4,8 +4,8 @@ description: AEM ヘッドレス CMS のドキュメント。AEMの強力で柔�
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 89%
+source-wordcount: '1204'
+ht-degree: 91%
 
 ---
 
@@ -54,7 +54,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 
 このジャーニーでは、多くのトピックを参照します。以下の記事では、AEM でのヘッドレスに関する基本的な知識と、詳細な技術ドキュメントへのリンクを示します。
 
-ジャーニーの特定の部分に直接移動することもできますが、多くの概念は、それまでの記事で紹介された概念に基づいています。したがって、AEMでヘッドレスを初めて使用する場合は、最初から順に進めることをお勧めします。
+ジャーニーの特定の部分に直接移動することもできますが、多くの概念は、それまでの記事で紹介された概念に基づいています。したがって、AEM のヘッドレスを初めて使用する場合は、最初から順に進めることをお勧めします。
 
 | # | 記事 | 説明 |
 |---|---|---|
@@ -92,6 +92,6 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 * [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) - Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法の入門的解説が必要であれば、ここから始めてください。
 * [AEM 技術ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja) - AEM およびヘッドレステクノロジーを既にしっかり理解している場合は、アドビの詳細な技術ドキュメントを直接参照することをお勧めします。
 
-   * An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+   * [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
 
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

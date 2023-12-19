@@ -1,6 +1,6 @@
 ---
 title: アダプティブフォームのローカリゼーション用に新しいロケールをサポート
-description: AEM Formsでは、アダプティブフォームのローカライズ用に新しいロケールを追加できます。 デフォルトでサポートされているロケールは、英語、フランス語、ドイツ語、日本語です。
+description: AEM Forms は、アダプティブフォームのローカライズ用に新しくロケールを追加できます。デフォルトでサポートされているロケールは、英語、フランス語、ドイツ語、日本語です。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
@@ -10,8 +10,8 @@ role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
 source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 88%
+source-wordcount: '796'
+ht-degree: 98%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 88%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 ## ロケールの辞書について {#about-locale-dictionaries}
@@ -28,7 +28,7 @@ ht-degree: 88%
 
 **フォーム固有の辞書**&#x200B;は、アダプティブフォーム使用する文字列を含みます。例えば、ラベル、フィールド名、エラーメッセージ、ヘルプの説明文などです。各ロケールごとに、XLIFF ファイルのセットの形で管理されています。`https://<host>:<port>/libs/cq/i18n/translator.html` からアクセスできます。
 
-**グローバル辞書** 2 つのグローバル辞書があり、AEM クライアントライブラリで JSON オブジェクトの形で管理されています。これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバル辞書は通常頻繁には更新されないので、ロケールごとに別々の JavaScript ファイルを保持することで、同じサーバー上の異なるアダプティブフォームにアクセスする際にブラウザーがそれらをキャッシュし、ネットワーク帯域幅の使用量を削減できます。
+**グローバル辞書** 2 つのグローバル辞書があり、AEM クライアントライブラリで JSON オブジェクトの形で管理されています。これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバルの辞書が頻繁に更新されることはほとんどありません。各ロケールごとに別の JavaScript ファイルを保持することで、ブラウザーによりそれらがキャッシュされるため、同一サーバー上で異なるアダプティブフォームにアクセスする際に、ネットワーク帯域幅の使用量を減らすことができます。
 
 ### アダプティブフォームのローカリゼーションの仕組み {#how-localization-of-adaptive-form-works}
 
@@ -38,8 +38,8 @@ ht-degree: 88%
 
 * 指定した順序で次のパラメーターを確認します。
 
-   * リクエストパラメーター`afAcceptLang`
-ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡して、ロケールを強制します。例えば、次の URL では、日本語ロケールでのフォームのレンダリングが強制されます。
+   * リクエストパラメーター `afAcceptLang`
+ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡して、ロケールを強制的に指定します。例えば、次の URL では、日本語ロケールでのフォームのレンダリングが強制されます。
      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * ユーザー向けに設定されるブラウザーのロケールです。これは、`Accept-Language` ヘッダーを使用したリクエストで指定されます。
@@ -75,7 +75,7 @@ ht-degree: 88%
 
 1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。
 1. **Guide Localization Service** をクリックしてコンポーネントを編集します。
-1. 追加するロケールを、サポート対象のロケールのリストに追加します。
+1. 追加するロケールをサポート対象のロケールの一覧に追加しします。
 
 ![GuideLocalizationService](assets/configservice.png)
 
@@ -95,7 +95,7 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-タイプのノードの作成 `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`（カテゴリを含む） `guides.I18N.<locale>` および依存関係 `xfaforms.3rdparty`, `xfaforms.I18N.<locale>` および `guide.common`.&quot;
+`etc/<folderHierarchy>` の下にタイプ `cq:ClientLibraryFolder` のノードを作成します。カテゴリは `guides.I18N.<locale>`、依存関係は `xfaforms.3rdparty`、`xfaforms.I18N.<locale>`、`guide.common` です。
 
 クライアントライブラリに次のファイルを追加します。
 

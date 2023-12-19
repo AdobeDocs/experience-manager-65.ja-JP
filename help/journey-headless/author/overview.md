@@ -4,8 +4,8 @@ description: AEM の強力で柔軟なヘッドレス機能とその能力およ
 exl-id: b8cdbd0f-c034-4c9f-976f-5e39b1bd33bf
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 89%
+source-wordcount: '847'
+ht-degree: 95%
 
 ---
 
@@ -49,14 +49,14 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 
 このジャーニーでは、多くのトピックを参照します。以下の記事では、AEM でのヘッドレスに関する基本的な知識と、詳細な技術ドキュメントへのリンクを示します。
 
-ジャーニーの特定の部分に直接移動することもできますが、多くの概念は、それまでの記事で紹介された概念に基づいています。したがって、AEMでヘッドレスを初めて使用する場合は、最初から順に進めることをお勧めします。
+ジャーニーの特定の部分に直接移動することもできますが、多くの概念は、それまでの記事で紹介された概念に基づいています。したがって、AEM のヘッドレスを初めて使用する場合は、最初から順に進めることをお勧めします。
 
 | # | 記事 | 説明 |
 |---|---|---|
 | 0 | AEM ヘッドレスコンテンツ作成者ジャーニー | このドキュメント |
 | 1 | [AEM ヘッドレスのオーサリング - 概要](introduction.md) | Adobe Experience Manager のヘッドレス機能の概要と、プロジェクトのコンテンツをオーサリングする方法を説明します。 |
 | 2 | [AEM を使用したヘッドレス向けのオーサリングの基本](basics.md) | コンテンツフラグメントを使用したヘッドレス CMS のコンテンツオーサリングの概念と仕組みについて説明します。 |
-| 3 | [コンテンツフラグメントでの参照の使用について](references.md) | コンテンツフラグメントでの参照の使用方法について説明します。また、ネストされたフラグメントを使用して、ヘッドレス CMS 用の複数レベルの構造を作成および管理することもできます。 |
+| 3 | [コンテンツフラグメントでの参照の使用について](references.md) | コンテンツフラグメントでの参照の使用方法について説明します。また、ネストされたフラグメントを使用して、ヘッドレス CMS の複数レベルの構造を作成および管理することもできます。 |
 | 4 | [コンテンツフラグメントのメタデータとタグの定義について](metadata-tagging.md) | コンテンツフラグメントのメタデータとタグの定義について説明します。 |
 
 ## 次の手順 {#what-is-next}
@@ -82,6 +82,6 @@ However, Adobe wants you to succeed as you get started with your AEM Headless pr
 * [AEM ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) - AEM の強力で柔軟なヘッドレス機能、その性能、および初めての開発プロジェクトでの活用方法を説明するガイド付きジャーニーは、ここから始めてください。
 * [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) - Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法の入門的解説が必要であれば、ここから始めてください。
 * [AEM 技術ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja) - AEM およびヘッドレステクノロジーを既にしっかり理解している場合は、アドビの詳細な技術ドキュメントを直接参照することをお勧めします。
-   * An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+   * [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
 * [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - 技術指向の方が実践による学習を希望する場合は、API とフレームワーク別に整理された実践チュートリアルを利用してください。このチュートリアルでは、AEM ヘッドレスに基づくアプリケーションの作成と使用の詳細を紹介しています。
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

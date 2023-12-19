@@ -11,7 +11,7 @@ exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
 source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
 workflow-type: tm+mt
 source-wordcount: '2354'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -88,7 +88,7 @@ Dynamic Media の 3D アセットを操作する前に、Experience Manager の�
 
 ## 3D アセットの表示とインタラクションについて {#viewing-three-d-assets}
 
-この節では、3D アセットの表示およびインタラクション方法を、アセットの詳細ページ内から、またはExperience Manager Sitesの 3D メディアコンポーネント内から、2 種類の方法で説明します。
+この節では、3D アセットの表示および操作を行う 2 つの方法として、アセットの詳細ページ内から行う方法と、Experience Manager Sites の 3D メディアコンポーネント内から行う方法を説明します。
 
 このインタラクティブ 3D ビューアには、3D アセットをオービット、ズームおよびパンできる、インタラクティブなカメラコントロールのコレクションが含まれます。
 

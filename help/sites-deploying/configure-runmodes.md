@@ -9,8 +9,8 @@ feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 83%
+source-wordcount: '746'
+ht-degree: 90%
 
 ---
 
@@ -69,7 +69,7 @@ ht-degree: 83%
 
 ## samplecontent と nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
 
-これらのモードを使用すると、サンプルコンテンツの使用を制御できます。 サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージ、設定などを含めることができます。
+これらのモードを使用すると、サンプルコンテンツの使用を制御できます。サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージ、設定などを含めることができます。
 
 * The `samplecontent` 実行モードでは、このコンテンツがインストールされます（デフォルトのモード）。
 
@@ -81,7 +81,7 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
 特定の実行モードで使用される設定プロパティの値のコレクションをリポジトリに保存できます。
 
-実行モードは、フォルダー名のサフィックスで示されます。 これにより、すべての設定をとして 1 つのリポジトリに保存できます。 次に例を示します。
+実行モードは、フォルダー名の接尾辞で示されます。これにより、すべての設定を 1 つのリポジトリに保存できます。例：
 
 * `config`
 
@@ -103,7 +103,7 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
 >[!NOTE]
 >
->の場合 [インストール実行モード](#installation-run-modes) （例えば、author）インストール後に実行モードを変更することはできません。 ただし、個々の設定プロパティに対する変更は、再起動時に有効になります。
+>[インストール実行モード](#installation-run-modes)（オーサーなど）の場合、インストール後に実行モードを変更できません。ただし、個々の設定プロパティに対する変更は、再起動時に有効になります。
 
 ## 実行モードにインストールする追加バンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 

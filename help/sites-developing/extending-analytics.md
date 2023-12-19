@@ -1,6 +1,6 @@
 ---
 title: イベント追跡の拡張
-description: AEM Analytics を使用すると、Web サイトでのユーザーのインタラクションを追跡できます
+description: AEM Analytics では、web サイトでのユーザーインタラクションを追跡できます
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -9,15 +9,15 @@ exl-id: a71d20e6-0321-4afb-95fe-6de8b7b37245
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 74%
+ht-degree: 98%
 
 ---
 
 # イベント追跡の拡張{#extending-event-tracking}
 
-AEM Analytics を使用すると、Web サイトでのユーザーのインタラクションを追跡できます。 開発者は、次の作業が必要になる場合があります。
+AEM Analytics では、web サイトでのユーザーインタラクションを追跡できます。開発者は次の作業が必要になる場合があります。
 
-* 訪問者がコンポーネントとどのようにやり取りしているかを追跡します。 これを行うには、[カスタムイベント](#custom-events)を使用します。
+* 訪問者がコンポーネントとどのようなやり取りを行っているかの追跡。これを行うには、[カスタムイベント](#custom-events)を使用します。
 * [ContextHub の値へのアクセス](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)。
 * [レコードのコールバックの追加](#adding-record-callbacks)。
 
@@ -29,9 +29,9 @@ AEM Analytics を使用すると、Web サイトでのユーザーのインタ�
 
 ## カスタムイベント {#custom-events}
 
-カスタムイベントは、ページ上の特定のコンポーネントの可用性に依存するあらゆるものを追跡します。 また、ページコンポーネントは別のコンポーネントとして扱われるので、テンプレートに固有のイベントも含まれます。
+カスタムイベントはページ内の特定のコンポーネントの可用性に依存する要素を追跡します。また、ページコンポーネントは別のコンポーネントとして扱われるので、テンプレートに固有のイベントも含まれます。
 
-### ページ読み込み時のカスタムイベントの追跡 {#tracking-custom-events-on-page-load}
+### ページの読み込み時のカスタムイベントの追跡 {#tracking-custom-events-on-page-load}
 
 これを行うには、疑似属性 `data-tracking`（下位互換性のために、古いレコード属性がまだサポートされています）を使用します。これは任意の HTML タグに追加できます。
 
@@ -108,6 +108,6 @@ ContextHub の利用開始の通知を受けるには、`ContextHub.eventing.on(
 
 関数 `CQ_Analytics.registerBeforeCallback(callback,rank)` と `CQ_Analytics.registerAfterCallback(callback,rank)` を使用して、before コールバックと after コールバックを登録します。
 
-両方の関数は、最初の引数として関数を取り、2 番目の引数としてランクを取ります。この関数は、コールバックの実行順序を示します。
+どちらの関数も、先頭の引数では関数を、2 番目の引数ではランクを受け取ります。このランクによって、コールバックの実行順序が決定されます。
 
-コールバックが false を返した場合、実行チェーン内の以降のコールバックは実行されません。
+コールバックが false を返す場合、実行チェーンの後続のコールバックは実行されません。

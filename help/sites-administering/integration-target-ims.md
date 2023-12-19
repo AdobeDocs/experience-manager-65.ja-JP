@@ -1,11 +1,11 @@
 ---
 title: IMS を使用した Adobe Target との統合
-description: IMS を使用した AEM と Adobe Target の統合について説明します。
+description: IMS を使用したAEMとAdobe Targetの統合について説明します。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 70%
+source-wordcount: '1533'
+ht-degree: 99%
 
 ---
 
@@ -37,7 +37,7 @@ Target Standard API を介して AEM と Adobe Target を統合するには、Ad
 * 組織のシステム管理者は、Admin Console を使用して、組織内で必要な開発者を関連する製品プロファイルに追加する必要があります。
 
    * これにより、Adobe Developer Console 内で統合を有効にするための権限が特定の開発者に与えられます。
-   * 詳しくは、 [開発者の管理](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html).
+   * 詳しくは、[開発者の管理](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)を参照してください。
 
 
 ## IMS 設定の指定 - 公開鍵の生成 {#configuring-an-ims-configuration-generating-a-public-key}
@@ -45,51 +45,51 @@ Target Standard API を介して AEM と Adobe Target を統合するには、Ad
 設定の最初の段階は、AEMで IMS 設定を作成し、公開鍵を生成することです。
 
 1. AEM で、**ツール**&#x200B;メニューを開きます。
-1. Adobe Analytics の **セキュリティ** セクション、選択 **Adobe IMS設定**.
-1. **作成**&#x200B;を選択して、**Adobe IMS テクニカルアカウント設定**&#x200B;を開きます。
-1. **クラウド設定**&#x200B;の下のドロップダウンを使用して、**Adobe Target** を選択します。
+1. 「**セキュリティ**」セクションで、「**Adobe IMS 設定**」を選択します。
+1. 「**作成**」を選択して、**Adobe IMS テクニカルアカウント設定**&#x200B;を開きます。
+1. **クラウド設定**&#x200B;の下のドロップダウンを使用して、「**Adobe Target**」を選択します。
 1. **新しい証明書の作成**&#x200B;をアクティブにして、新しいエイリアスを入力します。
 1. 「**証明書の作成**」で確認します。
 
-   ![Adobe IMSテクニカルアカウント設定ウィザード](assets/integrate-target-io-01.png)
+   ![Adobe IMS テクニカルアカウント設定ウィザード](assets/integrate-target-io-01.png)
 
 1. 「**ダウンロード**」（または「**公開鍵のダウンロード**」）を選択してファイルをローカルドライブにダウンロードし、[Adobe Target と AEM の統合に向けて IMS を設定する](#configuring-ims-for-adobe-target-integration-with-aem)際に使用できるようにします。
 
    >[!CAUTION]
    >
-   >この設定は開いたままにしておきます。この設定は、次の場合に再び必要になります。 [AEMでの IMS 設定の完了](#completing-the-ims-configuration-in-aem).
+   >この設定は、[AEM で IMS 設定を完了する](#completing-the-ims-configuration-in-aem)際に再び必要になるため、開いたままにしてください。
 
-   ![Adobe I/Oに証明書を追加するための情報メッセージ](assets/integrate-target-io-02.png)
+   ![Adobe I/O に証明書を追加する情報メッセージ](assets/integrate-target-io-02.png)
 
 ## Adobe Target と AEM の統合に向けた IMS の設定 {#configuring-ims-for-adobe-target-integration-with-aem}
 
-Adobe Developerコンソールを使用して、AEMで使用できるAdobe Targetのプロジェクト（統合）を作成し、必要な権限を割り当てます。
+Adobe Developer Console を使用して、AEM で使用できる Adobe Target とのプロジェクト（統合）を作成し、必要な権限を割り当てます。
 
 ### プロジェクトの作成 {#creating-the-project}
 
-AEMで使用できるAdobe Targetを使用したプロジェクトを作成するには、Adobe Developerコンソールを開きます。
+AEM で使用できる Adobe Target とのプロジェクトを作成するには、Adobe Developer Console を開きます。
 
 >[!CAUTION]
 >
->現在、AdobeはAdobe Developerコンソールの **サービスアカウント (JWT)** 資格情報のタイプ。
+>現在、アドビでは Adobe Developer Console の **サービスアカウント（JWT）**&#x200B;資格情報タイプのみをサポートします。
 >
->次を使用しない **OAuth サーバー間通信** 秘密鍵証明書のタイプ。今後サポートされる予定です。
+>**OAuth サーバー間**&#x200B;資格情報タイプは使用しないでください。これは今後サポートされる予定です。
 
 1. Adobe Developer Console を開いて、プロジェクトを表示します。
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 自分が持つプロジェクトが表示されます。選択 **新規プロジェクトを作成**  — 場所と使用方法は、次の条件によって異なります。
+1. 自分が持つプロジェクトが表示されます。「**新規プロジェクトを作成**」を選択します。場所と使用方法は、次のとおりです。
 
    * まだプロジェクトがない場合は、「**新規プロジェクトを作成**」が中央の下に表示されます。
      ![新規プロジェクトの作成 - 最初のプロジェクト](assets/integration-target-io-02.png)
-   * 既存のプロジェクトがある場合は、それらのプロジェクトがリストされ、 **新規プロジェクトを作成** は右上にあります。
+   * 既存のプロジェクトがある場合は、それらのプロジェクトがリストされ、「**新規プロジェクトを作成**」は右上に表示されます。
      ![新規プロジェクトの作成 - 複数のプロジェクト](assets/integration-target-io-03.png)
 
 
 1. **プロジェクトに追加**&#x200B;を選択し、続いて **API** を選択します。
 
-   ![Adobe 開発者コンソール](assets/integration-target-io-10.png)
+   ![Adobe Developer Console](assets/integration-target-io-10.png)
 
 1. **Adobe Target** を選択し、続いて&#x200B;**次へ**&#x200B;を選択します。
 
@@ -97,13 +97,13 @@ AEMで使用できるAdobe Targetを使用したプロジェクトを作成す�
    >
    >Adobe Target を購読しているが、リストに表示されない場合は、 [前提条件](#prerequisites)を確認する必要があります。
 
-   ![次へをクリック](assets/integration-target-io-12.png)
+   ![「次へ」をクリック](assets/integration-target-io-12.png)
 
-1. **公開鍵**&#x200B;をアップロードして、完了したら&#x200B;**次へ**&#x200B;をクリックして進みます。
+1. **公開鍵**&#x200B;をアップロードして、完了したら「**次へ**」をクリックして進みます。
 
-   ![開発者コンソールを使用した統合の追加](assets/integration-target-io-13.png)
+   ![Developer Console を使用した統合の追加](assets/integration-target-io-13.png)
 
-1. 資格情報を確認して、**次へ**&#x200B;をクリックして進みます。
+1. 資格情報を確認して、「**次へ**」をクリックして進みます。
 
    ![プロジェクトの作成](assets/integration-target-io-15.png)
 
@@ -145,7 +145,7 @@ Adobe Developer Console - プロジェクトから、すべての統合プロジ
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-設定の詳細を表示するには、 **表示** （特定のプロジェクトエントリの右側）。 次のものが含まれます。
+設定の詳細を表示するには、「**表示**」（特定のプロジェクトエントリの右側）を選択します。次のものが含まれます。
 
 * プロジェクトの概要
 * Insights
@@ -156,11 +156,11 @@ Adobe Developer Console - プロジェクトから、すべての統合プロジ
 * API
    * 例：Adobe Target
 
-これらの一部は、IMS に基づいてAEMでAdobe Targetの統合を完了する必要があります。
+これらの一部については、IMS に基づいて AEM で Adobe Target の統合を完了する必要があります。
 
 ## AEM での IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 
-AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要な値を追加することで、IMS 設定を完了できます。
+AEM に戻り、Adobe Developer Console の Target 向け統合から必要な値を追加して、IMS 設定を完了できます。
 
 1. [AEM で IMS 設定を開く](#configuring-an-ims-configuration-generating-a-public-key)に戻ります。
 1. 「**次へ**」を選択します。
@@ -189,7 +189,7 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
    * `https://localhost<port>/libs/cq/adobeims-configuration/content/configurations.html`
 
-   次に例を示します。
+   例：
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
@@ -198,7 +198,7 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
    ![Adobe IMS 設定](assets/integrate-target-io-12.png)
 
-1. 成功した場合は、次のメッセージが表示されます。
+1. 成功すると、次のメッセージが表示されます。
 
    ![設定の確認](assets/integrate-target-io-13.png)
 
@@ -209,15 +209,15 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 1. **ツール**&#x200B;メニューを開きます。次に、**クラウドサービス**&#x200B;セクション内で、**従来のクラウドサービス**&#x200B;を選択します。
 1. **Adobe Target** までスクロールダウンし、「**今すぐ設定**」を選択します。
 
-   The **設定を作成** ダイアログボックスが開きます。
+   **設定を作成**&#x200B;ダイアログボックスが開きます。
 
-1. を入力します。 **タイトル** 必要に応じて、 **名前** （空白の場合、タイトルから生成されます）。
+1. 「**タイトル**」と、必要に応じて「**名前**」を入力します（空白の場合、タイトルから生成されます）。
 
    また、必要なテンプレートを選択することもできます（複数のテンプレートを使用できる場合）。
 
 1. 「**作成**」で確認します。
 
-   The **コンポーネントを編集** ダイアログボックスが開きます。
+   **コンポーネントを編集**&#x200B;ダイアログボックスが開きます。
 
 1. **Adobe Target 設定**&#x200B;タブに詳細を入力します。
 
@@ -227,7 +227,7 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
      >[!NOTE]
      >
-     >IMS の場合、この値は Target 自体から取得する必要があります。 Target にログインし、URL からテナント ID を抽出できます。
+     >IMS の場合、この値は Target 自体から取得する必要があります。Target にログインし、URL からテナント ID を抽出できます。
      >
      >例えば、URL が次のような場合：
      >
@@ -241,15 +241,15 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
    * **API のタイプ**：REST
 
-   * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定を選択します。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、 [A4T Analytics Cloud設定の指定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
+   * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics Cloud 設定を選択します。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、[A4T Analytics Cloud の設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)のメモを参照してください。
 
    * **正確なターゲティングの使用**：デフォルトではこのチェックボックスはオンになっています。選択した場合、クラウドサービス設定は、コンテキストの読み込みを待ってからコンテンツを読み込みます。次のメモを参照してください。
 
-   * **Adobe Targetからセグメントを同期**：このオプションを選択すると、Target で定義されているセグメントをダウンロードしてAEMで使用できます。 インラインセグメントはサポートされておらず、常に Target のセグメントを使用する必要があるので、API Type プロパティが REST の場合は、このオプションを選択します。 （AEM の用語「セグメント」は、Target の「オーディエンス」と同じです。）
+   * **Adobe Target からセグメントを同期**：Target で定義されているセグメントをダウンロードして AEM で使用するには、このオプションをオンにします。API タイプのプロパティが REST の場合は、このオプションを選択します。インラインセグメントがサポートされず、常に Target のセグメントを使用する必要があるためです。（AEM の用語「セグメント」は、Target の「オーディエンス」と同じです。）
 
    * **クライアントライブラリ**：AT.js クライアントライブラリと mbox.js（非推奨）のどちらを使用するかを選択します。
 
-   * **Tag Management System を使用してクライアントライブラリを配信する**:DTM（非推奨）、Tag Launch、またはその他のAdobe管理システムを使用します。
+   * **タグ管理システムを使用したクライアントライブラリの配信**：DTM（非推奨）、Adobe Launch またはその他のタグ管理システムを使用します。
 
    * **カスタムの AT.js**：タグ管理ボックスをオンにした場合またはデフォルトの AT.js を使用する場合は空にします。それ以外の場合は、カスタム AT.js をアップロードします。AT.js を選択した場合にのみ表示されます。
 
@@ -261,26 +261,26 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
    接続に成功すると、「**接続に成功しました**」というメッセージが表示されます。
 
-1. 選択 **OK** メッセージに続いて **OK** をクリックして設定を確認できるようにします。
+1. メッセージで「**OK**」を選択し、ダイアログボックスで「**OK**」を選択すると、設定を確認できます。
 
-1. 次に進むことができます： [Target フレームワークの追加](/help/sites-administering/target-configuring.md#adding-a-target-framework) :Target に送信する ContextHub またはClientContextのパラメーターを設定します。 AEM エクスペリエンスフラグメントを Target に書き出す場合は、この設定が不要な場合があります。
+1. これで、[Target フレームワークの追加](/help/sites-administering/target-configuring.md#adding-a-target-framework)に進み、Target に送信する ContextHub または ClientContext パラメーターを設定できます。AEM エクスペリエンスフラグメントを Target に書き出す場合は、この設定が不要な場合があります。
 
 ### テナント ID と クライアントコード {#tenant-client}
 
 [Adobe Experience Manager 6.5.8.0](/help/release-notes/release-notes.md) では、Target 設定ウィンドウに「クライアントコード」フィールドが追加されました。
 
-「テナント ID 」フィールドと「クライアントコード」フィールドを設定する際は、次の点に注意してください。
+「テナント ID」フィールドおよび「クライアントコード」フィールドを設定する場合は、次の点に注意してください。
 
 1. ほとんどのお客様の場合、テナント ID とクライアントコードは同じです。つまり、両方のフィールドに同じ情報が含まれ、フィールドは同じになります。両方のフィールドにテナント ID を必ず入力してください。
 2. 従来の目的では、テナント ID とクライアントコードのフィールドに異なる値を入力することもできます。
 
 どちらの場合も、次の点に注意してください。
 
-* デフォルトでは、（最初に追加された場合は）「クライアントコード」も「テナント ID」フィールドに自動的にコピーされます。
+* デフォルトでは、「クライアントコード」（最初に追加した場合）も「テナント ID」フィールドに自動的にコピーされます。
 * オプションで、デフォルトのテナント ID セットを変更できます。
-* そのため、Target へのバックエンド呼び出しはテナント ID に基づき、Target へのクライアント側呼び出しはクライアントコードに基づきます。
+* これにより、バックエンドから Target への呼び出しはテナント ID に基づいて行われ、クライアントサイドから Target への呼び出しはクライアントコードに基づいて行われます。
 
-前述のように、最初のケースはAEM 6.5 で最も一般的です。どちらにしても、必ず **両方** フィールドには、必要に応じて正しい情報が含まれます。
+前述のように、AEM 6.5 では最初のケースが最も一般的です。いずれにせよ、**両方**&#x200B;のフィールドに、要件に応じた正しい情報が含まれていることを確認してください。
 
 >[!NOTE]
 >

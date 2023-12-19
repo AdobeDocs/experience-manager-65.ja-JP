@@ -1,6 +1,6 @@
 ---
 title: Form Bridge と HTML5 フォームのカスタムポータルの統合
-description: FormBridge API を使用して、HTMLページからフォームフィールドの値を取得または設定し、フォームを送信することができます。
+description: FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定し、フォームを送信できます。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
@@ -10,33 +10,33 @@ exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 23%
+ht-degree: 91%
 
 ---
 
 # Form Bridge と HTML5 フォームのカスタムポータルの統合{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge は、フォームを操作するHTML5 forms ブリッジ API です。 FormBridge API リファレンスについては、[FormBridge API リファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
+FormBridge は、フォームの操作を可能にする HTML5 forms ブリッジ API です。FormBridge API リファレンスについては、[FormBridge API リファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
 
-FormBridge API を使用して、HTMLページからフォームフィールドの値を取得または設定し、フォームを送信することができます。 例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
+FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定し、フォームを送信できます。例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
 
-既存のHTMLアプリケーションは、FormBridge API を使用してフォームを操作し、HTMLページに埋め込むことができます。 次の手順を使用して、Form Bridge API を使用してフィールドの値を設定できます。
+既存のHTMLアプリケーションは、FormBridge API を使用してフォームを操作し、HTMLページに埋め込むことができます。 次の手順で、Form Bridge API を使用してフィールドの値を設定できます。
 
-## Web ページへのHTML5 フォームの統合 {#integrating-html-forms-to-a-web-page}
+## HTML5 フォームと web ページの統合 {#integrating-html-forms-to-a-web-page}
 
 1. **プロファイルの選択またはプロファイルの作成**
 
    1. CRX DE インターフェイスで、`https://'[server]:[port]'/crx/de` に移動します。
-   1. 管理者の資格情報を使用してログインします。
+   1. 管理者の資格情報でログインします。
    1. プロファイルを作成するか、既存のプロファイルを選択します。
 
       プロファイルの作成方法について詳しくは、 [プロファイルの作成](/help/forms/using/custom-profile.md).
 
-1. **HTMLプロファイルの変更**
+1. **HTML プロファイルを変更**
 
-   XFA ランタイム、XFA ロケールライブラリ、および XFA フォームHTMLスニペットをプロファイルレンダラーに含め、Web ページをデザインし、フォームを Web ページ内に配置します。
+   XFA ランタイム、XFA ロケールライブラリ、および XFA フォーム HTML スニペットをプロファイルレンダラーに含め、web ページをデザインし、フォームを web ページ内に配置します。
 
-   例えば、次のコードスニペットを使用して、2 つの入力フィールドとフォームを含むアプリを作成し、フォームと外部アプリの間のやり取りを示します。
+   例えば、次のコードスニペットを使用して、2 つの入力フィールドとフォームを含むアプリを作成し、フォームと外部アプリの間のインタラクションを示します。
 
    ```xml
    <%@ page session="false"
@@ -75,21 +75,21 @@ FormBridge API を使用して、HTMLページからフォームフィールド�
    >**9 行目**&#x200B;には、このページをデザインするための、CSS スタイルと JavaScript ファイルの追加 JSP 参照が含まれています。
    >
    >
-   >The &lt;div id=&quot;rightdiv&quot;> ～に追い付く **18 行目** には、XFA フォームのHTMLスニペットが含まれています。
+   >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
    >
    >
-   ページは、次の 2 つのコンテナにスタイル設定されます。 **left** および **右**. 右側のコンテナにはフォームがあります。 左側のコンテナには、2 つの入力フィールドと、外部HTMLページの一部があります。
+   ページは 2 つのコンテナ、**left** と **right** にスタイル設定されます。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
    >
    >
-   次のスクリーンショットは、フォームがブラウザーでどのように表示されるかを示しています。
+   次のスクリーンショットは、フォームがブラウザーでどのように表示されるかを示します。
 
    ![ポータル](assets/portal.jpg)
 
-   左側は、 **HTMLページ**. フィールドを含む右側は、 **xfa フォーム**.
+   左側は **HTML ページ**&#x200B;の一部です。右側でフィールドを含んでいるのは **xfa フォーム**&#x200B;です。
 
 1. **ページからのフォームフィールドへのアクセス**
 
-   次に、フォームフィールドに値を設定するために追加できるサンプルスクリプトを示します。
+   以下は、フォームフィールドに値を設定する際に追加できるサンプルスクリプトです。
 
    たとえば、「**名前 (名)**」と「**名前 (姓)**」のフィールドにある値を使用して **EmployeeName**&#x200B;を設定する場合、**window.formBridge.setFieldValue** 関数を呼び出します。
 

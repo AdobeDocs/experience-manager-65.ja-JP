@@ -5,7 +5,7 @@ exl-id: 4c356aa6-ebd4-40b9-89e3-bc4519e4a7c5
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '402'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
@@ -16,24 +16,24 @@ ht-degree: 50%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-OAuth 2.0 クライアント資格情報を使用して、AEM Formsを Salesforce アプリケーションと統合できます。 OAuth 2.0 クライアント資格情報は、ユーザーの関与なしに直接通信するための標準で安全な方法です。
+OAuth 2.0 クライアント資格情報を使用すると、AEM Forms を Salesforce アプリケーションと統合できます。OAuth 2.0 クライアント資格情報は、ユーザーが関与しない、直接通信の標準的で安全な方法です。
 
-![AEM Formsと Salesforce アプリケーション間の通信を設定する際のワークフロー](/help/forms/using/assets/salesforce-workflow.png)
+![AEM Forms と Salesforce アプリケーション間の通信を設定する際のワークフロー](/help/forms/using/assets/salesforce-workflow.png)
 
-AEM Formsが、Salesforce 接続アプリケーションで定義されたクライアント資格情報（消費者キーと消費者の秘密鍵）を交換して、アクセストークンを取得します。
+AEM Forms が、Salesforce 接続アプリケーションで定義されたクライアント資格情報（Consumer key とConsumer secret）を交換して、アクセストークンを取得します。
 
-認証コードフロー認証を使用した認証に OAuth 2.0 クライアント資格情報を使用すると、次のような複数のメリットがあります。
+認証コードフローの認証と比べて、OAuth 2.0 クライアント資格情報を使用すると、次のような複数のメリットがあります。
 
-* OAuth 2.0 クライアント資格情報認証では、1 人のユーザーにつき 5 つ以上の接続を使用できます。
-* AEMデータソースの設定は、AEMユーザーの非アクティブ化、アクセスの変更、パスワードの更新に対して引き続き機能します。
+* OAuth 2.0 クライアント資格情報認証では、1 人のユーザーにつき 5 つ以上の接続が可能です。
+* AEM データソース設定では、AEM ユーザーの非アクティブ化、アクセス変更、パスワードの更新が引き続き行われます。
 
 ## 前提条件 {#prerequisites}
 
-Salesforce アプリケーションとAEM環境間の通信を設定する前に、次の手順を実行します。
+Salesforce アプリケーションと AEM 環境の間で通信を設定する前に、次の手順を実行します。
 
-* の作成 [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) と組織の API のみのユーザーを含め、アプリの消費者キーと消費者の秘密鍵を取得します。
+* [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5)と、組織の API 専用ユーザーを作成し、アプリの Consumer key と Consumer secret を取得します。
 
-* Swagger ファイルが組織の API に合わせて適切に設定されていることを確認します。 または、 [Swagger ファイルを作成する](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=ja) 最初から、AEM環境での使用に合わせてカスタマイズされます。
+* Swagger ファイルが組織の API に合わせて適切に設定されていることを確認します。または、AEM 環境での利用に合わせて、最初から [Swagger ファイルを作成](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=ja)することもできます。
 >[!NOTE]
 >
 > AEM 6.5 では、Swagger 2.0 ファイル仕様のみをサポートします。
@@ -67,4 +67,4 @@ Salesforce アプリケーションとAEM環境間の通信を設定する前に
 1. 「**[!UICONTROL 接続をテスト]**」をクリックします。
 1. 接続に成功した場合は、「**[!UICONTROL 作成]**」ボタンをクリックします。
 
-次に、以下を実行できます。 [フォームデータモデルの作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=ja) 設定済みのデータソースを Adaptive Formsと統合する場合。
+これで、[フォームデータモデルを作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=ja)して、設定したデータソースをアダプティブフォームと統合できます。

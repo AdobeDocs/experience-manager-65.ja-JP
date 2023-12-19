@@ -4,8 +4,8 @@ description: AEM の強力な翻訳ツールを使用してヘッドレスコン
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 91%
+source-wordcount: '1037'
+ht-degree: 94%
 
 ---
 
@@ -59,7 +59,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 
 このジャーニーでは、多くのトピックを参照します。以下の記事では、AEM でのヘッドレスコンテンツの翻訳に関する基本的な知識と、詳細な技術ドキュメントへのリンクを示します。
 
-ジャーニーの特定の部分に直接移動することもできますが、多くの概念は、それまでの記事で紹介された概念に基づいています。したがって、AEMでヘッドレス翻訳を初めて使用する場合は、最初から順に進めることをお勧めします。
+ジャーニーの特定の部分に直接移動することもできますが、多くの概念は、それまでの記事で紹介された概念に基づいています。そのため、AEM でヘッドレス翻訳に初めて取り組む場合は、最初から順に進めていくことをお勧めします。
 
 | # | 記事 | 説明 |
 |---|---|---|
@@ -85,6 +85,6 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 * [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) - Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法の入門的解説が必要であれば、ここから始めてください。
 * [AEM ヘッドレス開発者ジャーニー](/help/journey-headless/developer/overview.md) - AEM の強力で柔軟なヘッドレス機能とその能力および初めての開発プロジェクトでの活用方法を説明するガイド付きジャーニーは、ここから始めてください。
 * [AEM 技術ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja) - AEM およびヘッドレステクノロジーを既にしっかり理解している場合は、アドビの詳細な技術ドキュメントを直接参照することをお勧めします。
-   * An [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
+   * [AEM as a Headless CMS の概要](/help/sites-developing/headless/introduction.md)
 * [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - 技術指向の方が実践による学習を希望する場合は、API とフレームワーク別に整理された実践チュートリアルを利用してください。このチュートリアルでは、AEM ヘッドレスに基づくアプリケーションの作成と使用の詳細を紹介しています。
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

@@ -1,6 +1,6 @@
 ---
 title: CSV ファイルへの書き出し
-description: ページに関する情報をローカルシステムの CSV ファイルに書き出す
+description: ページの情報をローカルシステムの CSV ファイルに書き出す
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
@@ -10,7 +10,7 @@ exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 77%
+ht-degree: 81%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 77%
 >
 >ブラウザーのダウンロード機能（およびデフォルトのダウンロード先）が使用されます。
 
-The **CSV の書き出しファイルを作成** ウィザードで次の項目を選択できます。
+**CSV 書き出しを作成**&#x200B;ウィザードでは、以下を選択できます。
 
 * 書き出すプロパティ
    * メタデータ
@@ -44,7 +44,7 @@ The **CSV の書き出しファイルを作成** ウィザードで次の項目�
 * 深さ
    * 親パス
    * 直属の子要素のみ
-   * 子の追加のレベル
+   * 追加の子のレベル
    * レベル
 
 生成された `export.csv` ファイルは、Excel（または互換性のあるその他のアプリケーション）で開くことができます。

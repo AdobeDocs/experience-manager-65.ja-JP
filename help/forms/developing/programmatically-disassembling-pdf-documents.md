@@ -10,7 +10,7 @@ exl-id: c5e712e0-5c3f-48cd-91cf-fd347222a6b2
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1749'
-ht-degree: 85%
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ PDF・ドキュメントを分解するには、 `PDFsFromBookmarks` 要素が D
 
 >[!NOTE]
 >
->この節を読む前に、Assembler サービスを使用したPDFドキュメントの組み立てに関する知識を身に付けておくことをお勧めします。 （[プログラムによる PDF ドキュメントの組み立て](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照してください）。
+>この節を読む前に、Assembler サービスを使用した PDF ドキュメントの組み立てを理解しておくことをお勧めします（[プログラムによる PDF ドキュメントの組み立て](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照してください）。
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Assembler サービス API（Java）を使用して PDF ドキュメントを分
 
 1. プロジェクトファイルを含めます。
 
-   Java プロジェクトのクラスパスに、adobe-assembler-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -142,11 +142,11 @@ Assembler サービス API（Java）を使用して PDF ドキュメントを分
 1. 実行時オプションを設定します。
 
    * コンストラクタを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドとパス `false`.
+   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
 
 1. PDF ドキュメントを分割します。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、以下の必須の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出して、以下の必須の値を渡します。
 
    * 使用する DDX ドキュメントを表す `com.adobe.idp.Document` オブジェクト
    * 分割する PDF ドキュメントを含む `java.util.Map` オブジェクト
@@ -158,9 +158,9 @@ Assembler サービス API（Java）を使用して PDF ドキュメントを分
 
    分割された PDF ドキュメントを取得するには、以下のアクションを実行します。
 
-   * を呼び出す `AssemblerResult` オブジェクトの `getDocuments` メソッド。 これにより、`java.util.Map` オブジェクトが返されます。
+   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。これは `java.util.Map` オブジェクトを返します。
    * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで、`java.util.Map` オブジェクトを繰り返し処理します。
-   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、PDFドキュメントを抽出します。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、PDF ドキュメントを抽出します。
 
 **関連トピック**
 
@@ -189,7 +189,7 @@ Assembler サービス API（web サービス）を使用して PDF ドキュメ
    * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -201,16 +201,16 @@ Assembler サービス API（web サービス）を使用して PDF ドキュメ
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、DDX ドキュメントを保存するために使用されます。
    * コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。DDX ドキュメントのファイルの場所を表す文字列値と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `MTOM` プロパティにバイト配列の内容を割り当てることによって、`BLOB` オブジェクトにデータを入力します。
 
 1. 分割する PDF ドキュメントを参照します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
    * コンストラクタを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * バイト配列の内容を `MTOM` フィールドに割り当てることで、`BLOB` オブジェクトにデータを入力します。
    * `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを作成します。このコレクションオブジェクトは、ディスアセンブルする PDF を保存するために使用されます。
    * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
@@ -221,11 +221,11 @@ Assembler サービス API（web サービス）を使用して PDF ドキュメ
 1. 実行時オプションを設定します。
 
    * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` から `AssemblerOptionSpec` オブジェクトの `failOnError` フィールドに入力します。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` を `AssemblerOptionSpec` オブジェクトの `failOnError` フィールドに割り当てます。
 
 1. PDF ドキュメントを分割します。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出して、以下の値を渡します。
 
    * PDF ドキュメントをディスアセンブルする DDX ドキュメントを表す `BLOB` オブジェクト
    * ディスアセンブルする PDF ドキュメントを含む `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト
@@ -237,9 +237,9 @@ Assembler サービス API（web サービス）を使用して PDF ドキュメ
 
    新しく作成した PDF ドキュメントを取得するには、次の操作を実行します。
 
-   * 次にアクセス： `AssemblerResult` オブジェクトの `documents` フィールド ( `Map` 分解されたPDF文書を含むオブジェクト。
-   * `Map`オブジェクトを反復処理して、各結果ドキュメントを取得します。次に、その配列メンバの `value` から `BLOB`.
-   * PDFドキュメントを表すバイナリデータを、そのドキュメントにアクセスして抽出します `BLOB` オブジェクトの `MTOM` プロパティ。 これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
+   * `AssemblerResult` オブジェクトの `documents` フィールドにアクセスします。これは、分割された PDF ドキュメントを含む `Map` オブジェクトです。
+   * `Map` オブジェクトを反復処理して、結果として得られる各ドキュメントを取得します。次に、その配列メンバーの `value` を `BLOB` にキャストします。
+   * `BLOB` オブジェクトの `MTOM` プロパティにアクセスして、PDF ドキュメントを表すバイナリデータを抽出します。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
 
 **関連トピック**
 

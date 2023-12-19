@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
 source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 73%
+source-wordcount: '1010'
+ht-degree: 79%
 
 ---
 
@@ -90,10 +90,10 @@ ht-degree: 73%
 
 ## ワークフローインスタンスのエラーの修正 {#fixing-workflow-instance-failures}
 
-ワークフローが失敗した場合、AEMは **失敗** コンソールを使用して、原因が処理された後に調査し、適切なアクションを取ることができます。
+ワークフローが失敗した場合、AEM の&#x200B;**エラー**&#x200B;コンソールを使用してエラーの原因を調べ、特定された原因に応じて適切なアクションを取ることができます。
 
-* **失敗の詳細**
-ウィンドウを開き、 **失敗メッセージ**, **手順**、および **エラースタック**.
+* **エラーの詳細**
+ウィンドウが開き、**エラーメッセージ**、**ステップ**、**エラースタック**&#x200B;が表示されます。
 
 * **履歴を開く**&#x200B;ワークフローの履歴の詳細を表示します。
 
@@ -117,7 +117,7 @@ ht-degree: 73%
 
 また、様々な条件を満たすワークフローインスタンスをパージするために、サービスの設定を複数作成することもできます。例えば、特定のワークフローモデルが予想より長い時間実行されている場合に、そのインスタンスをパージする設定を作成します。 さらに、リポジトリーのサイズを最小限に抑えるために、特定の日数が経過した後に完了したワークフローをすべてパージするもう 1 つの設定を作成します。
 
-サービスを設定するには、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリに OSGi 設定を追加します。](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 次の表では、どちらの方法でも必要になるプロパティについて説明しています。
+サービスを設定するには、[web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用するか、[リポジトリに OSGi 設定を追加する](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)ことができます。次の表では、どちらの方法でも必要になるプロパティについて説明しています。
 
 >[!NOTE]
 >

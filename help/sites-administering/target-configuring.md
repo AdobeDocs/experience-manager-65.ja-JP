@@ -9,7 +9,7 @@ exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '2122'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -205,7 +205,7 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
    ![プロファイルデータ](assets/chlimage_1-163.png)
 
-1. 該当する列の「**共有**」チェックボックスをオンにして、Target システムで表示する変数を選択します。
+1. 該当する列の「**共有**」チェックボックスをオンにして、Adobe Target システムで表示する変数を選択します。
 
    ![共有](assets/chlimage_1-164.png)
 
@@ -255,7 +255,7 @@ AEM で Target フレームワークを作成した後、web ページをフレ�
 
    >[!NOTE]
    >
-   ページに関連付けたフレームワークがまだアクティベートされていない場合は、ウィザードが開き、それを公開することもできます。
+   ページにアタッチしたフレームワークがまだアクティベートされていなかった場合は、ウィザードが開き、フレームワークを公開することもできます。
 
 ## Target の接続に関する問題のトラブルシューティング {#troubleshooting-target-connection-problems}
 

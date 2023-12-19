@@ -8,7 +8,7 @@ exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1719'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
 
 * **送信済みフォーム：** AEM Forms で作成された任意のタイプのフォームからデータが送信され、そのデータが任意のデータストレージリポジトリーまたはデータベースに送信された場合、そのデータはフォーム送信と見なされます。例えば、アダプティブフォーム、HTML5 フォーム、PDF Forms、フォームセットは、送信済みフォームとして計上されます。フォームセット内の各フォームは、送信と見なされます。例えば、フォームセットに 5 つのフォームが含まれている場合、フォームセットが送信されると、トランザクションレポートサービスはそのフォームセットを 5 件の送信としてカウントします。
 
-* **レンダリングされたドキュメント：** テンプレートとデータを組み合わせたドキュメントの生成、ドキュメントのデジタル署名または認証、ドキュメントサービスの課金可能なドキュメントサービス API の使用、ある形式から別の形式へのドキュメントの変換は、ドキュメントのレンダリングとして計上されます。
+* **レンダリング済みドキュメント：** テンプレートとデータを組み合わせたドキュメントの生成、ドキュメントの電子署名または認証、ドキュメントサービスの課金可能なドキュメントサービス API の使用、ある形式から別の形式へのドキュメントの変換は、レンダリング済みドキュメントとして計上されます。
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/docassurance/client/api/DocAssuranceService.html#secureDocument-com.adobe.aemfd.docmanager.Document-com.adobe.fd.docassurance.client.api.EncryptionOptions-com.adobe.fd.docassurance.client.api.SignatureOptions-com.adobe.fd.docassurance.client.api.ReaderExtensionOptions-com.adobe.fd.signatures.pdf.inputs.UnlockOptions-" target="_blank">secureDocument</a><br /> </td>
-   <td>この API を使用すると、ドキュメントを保護できます。 API を使用して、PDFドキュメントの署名、認証、Reader 用の拡張、暗号化を行うことができます。</td>
+   <td>この API を使用すると、ドキュメントを保護できます。API を使用して、PDF ドキュメントの署名、認証、Reader 用の拡張、暗号化を行うことができます。</td>
    <td>処理済みドキュメント</td>
    <td>secureDocument の署名および認証操作のみが請求されます。</td>
   </tr>
@@ -321,10 +321,10 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
  </tbody>
 </table>
 
-呼び出し API の使用状況は、次の操作を 1 つ以上実行すると、トランザクションとしてカウントされます。
-1. 非PDF形式からPDF形式への変換 例えば、XDP 形式からPDF形式への変換は、インタラクティブな通信形式と非インタラクティブな通信形式の両方に対応しており、Word からPDFへの変換もおこなわれます。
-1. PDF形式からPDF/A 形式への変換。
-1. PDF形式から非PDF形式への変換 例としては、PDF形式から画像形式への変換、またはPDF形式からテキスト形式への変換があります。
+次の操作を 1 つ以上実行すると、呼び出し API の使用がトランザクションとしてカウントされます。
+1. 非 PDF 形式から PDF 形式への変換。例えば、インタラクティブな通信形式と非インタラクティブな通信形式の両方に対応している XDP 形式から PDF 形式への変換や、Word から PDF への変換です。
+1. PDF 形式から PDF/A 形式への変換。
+1. PDF 形式から非 PDF 形式への変換。例としては、PDF 形式から画像形式への変換、または PDF 形式からテキスト形式への変換があります。
 
 >[!NOTE]
 >
@@ -343,7 +343,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/pdfutility/services/PDFUtilityService.html#convertPDFtoXDP-com.adobe.aemfd.docmanager.Document-" target="_blank">convertPDFtoXDP</a></td>
-   <td>PDF ドキュメントを画像ファイルに変換します。PDFドキュメントを XDP ファイルに正しく変換するには、AcroForms ディクショナリ内にPDFドキュメントに XFA ストリームが含まれている必要があります。</td>
+   <td>PDF ドキュメントを画像ファイルに変換します。PDF ドキュメントを XDP ファイルに正常に変換するには、AcroForm 辞書内の XFA ストリームが PDF ドキュメントに含まれている必要があります。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -470,7 +470,7 @@ OSGi 上の Form 中心の AEM Workflows のタスクとドキュメントサー
 <table>
  <tbody>
   <tr>
-   <td><p>使用例</p> </td>
+   <td><p>ユースケース</p> </td>
    <td>トランザクションレポートカテゴリ</td>
    <td>追加情報</td>
   </tr>
