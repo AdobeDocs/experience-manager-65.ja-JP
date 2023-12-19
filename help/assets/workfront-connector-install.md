@@ -5,10 +5,10 @@ role: Admin
 feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
-source-git-commit: 6f01f5725ed2b0533756830c1a5e55b7464708f6
-workflow-type: ht
-source-wordcount: '489'
-ht-degree: 100%
+source-git-commit: 80cb3f696fb9050bb2135d2cd0c8f0be47272fa7
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 92%
 
 ---
 
@@ -46,6 +46,10 @@ ht-degree: 100%
 
 1. [!UICONTROL パッケージマネージャー]を使ってパッケージをインストールします。パッケージのインストール方法については、[パッケージマネージャーのドキュメント](/help/sites-administering/package-manager.md)を参照してください。
 1. [!DNL Experience Manager] ユーザーグループに `wf-workfront-users` を作成し、`jcr:all` 権限を `/content/dam` に割り当てます。
+1. の標準提供のインデックス定義にカスタムプロパティを追加します。 **`ntFolderDamLucene(/oak:index/ntFolderDamLucene)`**. 次の手順を実行します。
+   * を追加します。 **`nt:unstructured`** プロパティ名 **`wfReferenceNumber`** 移動先：
+     `/oak:index/ntFolderDamLucene/indexRules/nt:folder/properties/wfReferenceNumber`。
+   * インデックスの再作成 `index /oak:index/ntFolderDamLucene` 再インデックスフラグを `true`.
 
 システムユーザー `workfront-tools` が自動的に作成され、必須の権限が自動的に管理されます。このコネクタを使用するすべての [!DNL Workfront] ユーザーが、このグループの一部として自動的に追加されます。
 
