@@ -256,7 +256,7 @@ null ケースを適切に処理することが重要です。JSP レンダリ�
    <td> </td>
   </tr>
   <tr>
-   <td><a href="ttps://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html">Externalizer</a></td>
+   <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html">Externalizer</a></td>
    <td>リクエストオブジェクトがない場合でも、絶対 URL を外部化する場合<br /> </td>
   </tr>
  </tbody>
