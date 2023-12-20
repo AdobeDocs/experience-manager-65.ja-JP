@@ -7,9 +7,9 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: 2a97935a81cf9c0a1a832dd27b62d388805863e0
+source-git-commit: 1f1deb4f5d2033420aa1cece95666894b2f56aad
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1423'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ SolrCloud のインストール手順に従うことをお勧めします。
 ### JVM 設定例 {#jvm-configuration-example}
 
 ```shell
-JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
+JVM_OPTS="-server -Xmx2048m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
 ```
 
 ### SolrCloud のコマンド設定 {#solrcloud-setup-commands}
@@ -80,8 +80,7 @@ SolrCloud モードで実行する場合は、MLS をインストールする前
 参照：
 [https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create](https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create)
 
-使用方法:
-./bin/solr create \
+使用方法： 。/bin/solr create \
 -c *mycollection-name*\
 -d *config-dir* \
 -n *myconfig-name* \
