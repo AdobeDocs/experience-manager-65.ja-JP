@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ee5e8ebb-773f-4aa6-9c3e-2cc3bf4a3bbd
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 719dd7b30c8ce3f02fe46c632b1589fcc74a1759
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 38%
+source-wordcount: '102'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 38%
 * [サードパーティのサービスとの統合](/help/sites-administering/third-party-services.md)
 * [Analytics と外部プロバイダー](/help/sites-administering/external-providers.md)
 * [カタログ作成機能](/help/sites-administering/catalog-producer.md)
-* [SharePoint コネクター](/help/sites-administering/sharepoint-connector.md)
 * [スマートタグの理解、適用、キュレーション](/help/assets/enhanced-smart-tags.md)
 
 AEMと他のAdobeやサードパーティのサービスとの統合について、次の情報を参照できます。

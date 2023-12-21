@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5 のリリースノート
 description: AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '257'
 ht-degree: 100%
 
 ---
@@ -27,7 +27,6 @@ AEM リリースノートでは、AEM の最新リリースに関する重要な
 |--- |---|
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
-| [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEM でのオーサリングの概念を説明します。 |
 | [クラシック UI オーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。 |
@@ -36,7 +35,6 @@ AEM リリースノートでは、AEM の最新リリースに関する重要な
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEM インスタンスを構築する方法を説明します。 |
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | AEM の Commerce 統合フレームワークについて説明します。 |
-| [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 
 ## 主要な AEM リソース
 
@@ -47,7 +45,7 @@ AEM リリースノートでは、AEM の最新リリースに関する重要な
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja)
-* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
 
 ## 著作権、ライセンス、免責事項 {#copyright-licenses-and-disclaimers}
 

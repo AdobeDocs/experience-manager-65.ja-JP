@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5 Forms ガイド
 description: この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '286'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,6 @@ ht-degree: 100%
 | [リリースノート](/help/release-notes/home.md) | AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
-| [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEM でのオーサリングの概念を説明します。 |
 | [クラシック UI オーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。 |
@@ -42,7 +41,6 @@ ht-degree: 100%
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEM インスタンスを構築する方法を説明します。 |
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | AEM の Commerce 統合フレームワークについて説明します。 |
-| [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 
 ## 主要な AEM リソース
 

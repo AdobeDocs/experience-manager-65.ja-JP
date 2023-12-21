@@ -7,9 +7,10 @@ breadcrumb-title: モバイルガイド
 user-guide-description: モバイルアプリ用のコンテンツを作成および管理します。
 feature: Mobile
 role: User
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+hide: true
+source-git-commit: 829eadb61062f20be74e36b52175627f1f377c50
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '322'
 ht-degree: 97%
 
 ---
@@ -83,7 +84,6 @@ ht-degree: 97%
    + [モバイルアプリのページテンプレート](phonegap-apps-arch-page-templates.md)
    + [Adobe Target Cloud Service の設定](aem-mobile-configuring-cloud-service.md)
    + [単一ページアプリケーション](phonegap-single-page-applications.md)
-   + [リポジトリ内のモデル](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/administering/administer-mobile-apps.html?lang=ja)
    + [AEM PhoneGap の起動](starting-aem-phonegap-app.md)
    + [モバイルアプリのテスト](develop-mobile-apps-testing.md)
    + [アプリの構造](phonegap-structure-an-app.md)

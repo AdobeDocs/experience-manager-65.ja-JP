@@ -7,10 +7,11 @@ breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature: Communities
 role: User
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+hide: true
+source-git-commit: e0db340b4fd4e4f7fe7ed623fb2ee9f1b789e39e
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 100%
+source-wordcount: '423'
+ht-degree: 92%
 
 ---
 
@@ -21,12 +22,11 @@ ht-degree: 100%
 + AEM Communities の概要 {#introduction}
    + [コミュニティサイト](administer-landing.md)
    + [AEM Communities の概要](overview.md)
-   + [AEM Communities リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/sp-release-notes.html?lang=ja)
-   + [AEM Communities 使用の手引き](getting-started.md)
+   + [AEM Communitiesの概要](getting-started.md)
    + [初期セットアップ](setup.md)
    + [新しいコミュニティサイトの作成](create-site.md)
    + [公開したサイトを使ってみる](published-site.md)
-   + [ネストされたグループの作成](nested-groups.md)
+   + [ネストされたグループのオーサリング](nested-groups.md)
 + デプロイ {#deploy}
    + [Communities のデプロイ](deploy-communities.md)
    + [AEM 6.5 Communities へのアップグレード](upgrade.md)
@@ -34,9 +34,8 @@ ht-degree: 100%
    + [Communities 用の Dispatcher の設定](dispatcher.md)
 + 管理 {#administer}
    + [AEM Communities のユーザーおよび UGC 管理サービス](user-ugc-management-service.md)
-   + [コミュニティサイト](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html?lang=ja)
    + [コミュニティコンソール](consoles.md)
-   + [コミュニティ機能のための Analytics の設定](analytics.md)
+   + [コミュニティ機能用の Analytics 設定](analytics.md)
    + [メッセージングの設定](messaging.md)
    + [コミュニティコンテンツのモデレート](moderate-ugc.md)
    + [メールの設定](email.md)
@@ -84,7 +83,7 @@ ht-degree: 100%
    + [SCF Handlebars ヘルパー](handlebars-helpers.md)
    + [ストレージリソースプロバイダーの概要](srp.md)
    + [コミュニティサイトの基本事項](sites-for-developers.md)
-   + [アクティビティストリームの基本事項](essentials-activities.md)
+   + [Activity Stream Essentials](essentials-activities.md)
    + [ブログの基本事項](blog-developer-basics.md)
    + [カレンダーの基本事項](calendar-basics-for-developers.md)
    + [コミュニティコンポーネントの clientlib](clientlibs.md)
@@ -153,4 +152,3 @@ ht-degree: 100%
    + [アクティビティのトレンド](trends.md)
    + [Social タグクラウドの使用](tagcloud.md)
    + [投票の使用](voting.md)
-   + [サンプルページの作成](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html?lang=ja)

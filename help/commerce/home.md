@@ -2,9 +2,9 @@
 title: AEM Content and Commerce
 description: AEM Content and Commerce の使用と管理の方法を理解します。統合に関する役立つ記事や、AEM ストアフロントの使用を開始する方法も用意されています。
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '336'
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+workflow-type: tm+mt
+source-wordcount: '259'
 ht-degree: 100%
 
 ---
@@ -16,6 +16,7 @@ AEM Content and Commerce の使用と管理の方法を理解します。統合�
 >[!NOTE]
 >
 >AEM as a Cloud Service を使用した AEM Content and Commerce については、[AEM Content and Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) を参照してください。
+>
 
 ## Commerce の主要記事 {#key-articles}
 
@@ -29,7 +30,6 @@ AEM Content and Commerce の使用と管理の方法を理解します。統合�
 | [リリースノート](/help/release-notes/home.md) | AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。 |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
-| [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEM でのオーサリングの概念を説明します。 |
 | [クラシック UI オーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。 |
@@ -37,7 +37,6 @@ AEM Content and Commerce の使用と管理の方法を理解します。統合�
 | [デプロイユーザーガイド](/help/sites-deploying/home.md) | このガイドでは、AEM の基本について説明します。 |
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEM インスタンスを構築する方法を説明します。 |
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
-| [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 
 ## 主要な AEM リソース
 

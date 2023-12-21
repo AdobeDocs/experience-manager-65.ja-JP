@@ -5,9 +5,9 @@ user-guide-title: Assets ガイド
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '325'
+source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+workflow-type: tm+mt
+source-wordcount: '250'
 ht-degree: 100%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 100%
 |--- |---|
 | [リリースノート](/help/release-notes/home.md) | 最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
-| [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | Adobe Experience Manager の管理方法を説明します。 |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、 Experience Manager でのオーサリングの概念を説明します。 |
 | [クラシック UI オーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインタフェイスを使用した Experience Manager でのオーサリングの概念を説明します。 |
@@ -37,8 +36,6 @@ ht-degree: 100%
 | [開発ユーザーガイド](/help/sites-developing/home.md) | Experience Manager のデプロイメントを構築する方法を説明します。 |
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、Experience Manager プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | Experience Manager の Commerce Integration Framework について説明します。 |
-| [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-
 
 ## 主要な [!DNL Experience Manager] リソース
 

@@ -2,8 +2,8 @@
 title: ヘッドレスをはじめる前に
 description: このクイックスタートガイドでは、コンテンツモデル、コンテンツフラグメント、GraphQL API など、Adobe Experience Manager（AEM）6.5 の強力なヘッドレス機能の基本事項について説明します。
 exl-id: 55ebd893-b3cc-47c5-ad84-46df984197fb
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
+source-git-commit: 487136be68e04fd74affe43790587b37d4c3d3ef
+workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 >
 >この入門ガイドでは、AEM とヘッドレステクノロジーの両方に関する知識を前提としています。
 >
->AEM またはヘッドレスのいずれかを初めて使用する場合は、[ヘッドレスドキュメントジャーニー](/help/journey-headless/home.md)を参照し、ヘッドレスについて、および AEM によるヘッドレスのサポートについての包括的な概要を理解してください。
+>AEM またはヘッドレスのいずれかを初めて使用する場合は、[ヘッドレスドキュメントジャーニー](/help/journey-headless/overview.md)を参照し、ヘッドレスについて、および AEM によるヘッドレスのサポートについての包括的な概要を理解してください。
 
 ## 対象読者 {#audience}
 
