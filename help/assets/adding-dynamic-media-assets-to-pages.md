@@ -9,10 +9,10 @@ docset: aem65
 role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 75ac5b860e8456e6113de22677926e75d84f8715
 workflow-type: tm+mt
 source-wordcount: '3219'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -243,7 +243,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
   コンポーネントの「**[!UICONTROL 編集]**」を選択して、次の詳細設定を編集できます。
 
-* **[!UICONTROL 縦横比の一致を有効にする]** - 元の画像の縦横比に最も適した縦横比のスマート切り抜きレンディションを Dynamic Media で選択する場合に選択します。
+* **[!UICONTROL 縦横比の一致を有効にする]** - Dynamic Mediaで、元の画像の縦横比に最も適した縦横比のスマート切り抜きレンディションを選択するには、このオプションを選択します。
 
 * **[!UICONTROL 高解像度デバイス向けに最適化]** - DPR（デバイスピクセル比）の最適化を許可する場合は、このチェックボックスをオン（デフォルト）にします。
 
