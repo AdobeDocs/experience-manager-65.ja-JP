@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 のドキュメントを使用して、ソフトウェアの仕組みとユーザーにとっての機能を確認してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 097bded5ed2d1db6426dcb9ac4fa9582cdc213bf
+source-git-commit: 4a4f464d4140cbb3882b57786b9003a89b7a9a43
 workflow-type: tm+mt
-source-wordcount: '7327'
+source-wordcount: '7328'
 ht-degree: 97%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 97%
    + 管理 {#administering}
       + [管理ユーザーガイドの概要](/help/sites-administering/home.md)
       + Sites の機能 {#introduction}
-         + [Web サイト管理](/help/sites-administering/msm-and-translation.md)
+         + [MSM と翻訳](/help/sites-administering/msm-and-translation.md)
          + [非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)
          + [コンテンツの再利用：マルチサイトマネージャとライブコピー](/help/sites-administering/msm.md)
          + [ライブコピーの概要コンソール](/help/sites-administering/msm-livecopy-overview.md)
