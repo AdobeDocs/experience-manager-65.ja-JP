@@ -4,9 +4,9 @@ description: アダプティブフォームを AEM Sites ページに組み込�
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author, interactive-communications
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 92%

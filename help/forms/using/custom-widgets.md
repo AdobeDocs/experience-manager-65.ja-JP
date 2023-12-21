@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
-feature: Mobile Forms
+feature: HTML5 Forms
 exl-id: 76bd1e2d-9e65-452c-8cef-123d28886a62
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 46%

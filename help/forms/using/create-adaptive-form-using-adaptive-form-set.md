@@ -4,9 +4,9 @@ description: AEM Forms では、アダプティブフォームを統合して 1 
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 100%

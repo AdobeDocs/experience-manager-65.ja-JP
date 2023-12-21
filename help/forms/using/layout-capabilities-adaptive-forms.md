@@ -3,10 +3,11 @@ title: アダプティブフォームのレイアウトの機能
 description: 様々なデバイスでのアダプティブフォームのレイアウトと外観は、レイアウト設定で管理できます。 各種レイアウトとレイアウトの適用方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
+feature: Adaptive Forms, Foundation Components
+discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
-feature: Adaptive Forms
 exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 68%
@@ -15,7 +16,7 @@ ht-degree: 68%
 
 # アダプティブフォームのレイアウトの機能{#layout-capabilities-of-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |

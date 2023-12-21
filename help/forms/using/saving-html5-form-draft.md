@@ -4,9 +4,10 @@ description: HTML5 フォームをドラフトとして保存し、後でフォ�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
+feature: HTML5 Forms
 exl-id: a9879445-d626-4279-8a95-a9009294b483
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 54%

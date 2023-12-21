@@ -4,9 +4,9 @@ description: AEM Forms のテーブルコンポーネントを使用すると、
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '2459'
 ht-degree: 97%

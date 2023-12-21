@@ -2,8 +2,9 @@
 title: アダプティブフォームのデータを Microsoft&reg; Power Automate に接続して送信する方法
 description: アダプティブフォームのデータを Microsoft&reg; Power Automate に接続して送信する手順についてのガイドです。
 keywords: アダプティブフォーム Microsoft Power Automate、アダプティブフォームのデータを Microsoft Power Automate に送信
+feature: Adaptive Forms, Foundation Components
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 90%

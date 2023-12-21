@@ -3,9 +3,10 @@ title: 繰り返し可能なセクションを使用したフォームの作成
 description: 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
+discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
+feature: Adaptive Forms, Foundation Components
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 92%

@@ -4,9 +4,9 @@ description: フォームを XFA/XDP ファイルと同期する方法につい�
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 97%

@@ -4,9 +4,10 @@ description: HTML5 のフォームは、ヘブライ語などの右から左に�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
+feature: HTML5 Forms
 exl-id: c65f425b-b0bc-4ec7-ac56-7f24bd8b52d8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 26%

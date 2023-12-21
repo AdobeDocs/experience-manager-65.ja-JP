@@ -4,9 +4,9 @@ description: AEM Forms には、アクセシビリティ標準に準拠できる
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '2099'
 ht-degree: 94%

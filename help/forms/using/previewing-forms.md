@@ -3,9 +3,10 @@ title: フォームのプレビュー
 description: 発行またはアクティベートする前にフォームをプレビューし、期待通りにフォームが動作することを確認できます。 プレビューオプションは、サポートされているフォームタイプによって異なる場合があります。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
+discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
+feature: Adaptive Forms, Foundation Components
 exl-id: aed5703e-4fe6-4839-9657-c660ac48521e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 50%
@@ -14,7 +15,7 @@ ht-degree: 50%
 
 # フォームのプレビュー {#previewing-a-form}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成するより従来的な方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 ## 概要 {#overview}
 
@@ -35,7 +36,7 @@ AEM Formsでは、リポジトリ内に存在するフォームとドキュメ�
    <td>PDFプレビュー</td>
   </tr>
   <tr>
-   <td>PDFフォーム</td>
+   <td>PDF フォーム</td>
    <td>PDF プレビューとデータを使用したプレビュー<br /> </td>
   </tr>
   <tr>

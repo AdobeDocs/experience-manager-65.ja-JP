@@ -2,9 +2,9 @@
 title: AEM Sites ページへのアダプティブフォームの作成または追加
 description: アダプティブフォームを容易に作成したり、シームレスに AEM Sites ページに追加したりする方法を学びます。動的でカスタマイズ可能なフォームを web サイトに統合し、デジタルエクスペリエンスを最適化して最大限の効果を得るための手順とベストプラクティスについて説明します。
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
 workflow-type: tm+mt
 source-wordcount: '2881'
 ht-degree: 97%

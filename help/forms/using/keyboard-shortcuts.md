@@ -4,11 +4,11 @@ description: この記事では、Windows オペレーティングシステム�
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
-workflow-type: ht
-source-wordcount: '1208'
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+workflow-type: tm+mt
+source-wordcount: '1192'
 ht-degree: 100%
 
 ---

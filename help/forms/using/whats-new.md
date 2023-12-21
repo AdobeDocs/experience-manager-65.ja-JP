@@ -5,7 +5,7 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
+source-git-commit: ea11ecff5be51a19ab901a588200519a70cf9efc
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 3%
@@ -58,7 +58,7 @@ XMLFM の 64 ビットイテレーションは、高いパフォーマンス、�
 
 ## バグの修正
 
-このリリースには、お客様から報告された 20 件以上の問題の修正も含まれています。 サービスパックに含まれる修正の詳細なリストについては、 [リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=en#forms-6519)
+このリリースには、お客様から報告された 20 件以上の問題の修正も含まれています。 サービスパックに含まれる修正の詳細なリストについては、 [リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja#forms-6519)
 
 
 ## サービスパックのインストール

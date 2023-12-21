@@ -4,9 +4,10 @@ description: HTML5 フォームプロファイルは、プロファイルレン�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+discoiquuid: cb75b826-d044-44be-b364-790c046513e0
+feature: HTML5 Forms
 exl-id: 022b9953-2d64-473f-87b7-aac1602f6a7e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 35%

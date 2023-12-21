@@ -3,9 +3,9 @@ title: アダプティブフォームの操作のベストプラクティス
 description: AEM Forms プロジェクトの設定、アダプティブフォームの開発、AEM Forms システムのパフォーマンスの最適化のための、ベストプラクティスを説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '4666'
 ht-degree: 97%

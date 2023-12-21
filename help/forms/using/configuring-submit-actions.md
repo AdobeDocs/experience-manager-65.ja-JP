@@ -4,9 +4,9 @@ description: Forms では、アダプティブフォームが送信された後�
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 9b18d92ffabc141e83ba9a7c3694257d3dee1ea1
+source-git-commit: 9f88eeb6770c59f7a52db30f19f3a1a78cbc401b
 workflow-type: tm+mt
 source-wordcount: '2581'
 ht-degree: 92%

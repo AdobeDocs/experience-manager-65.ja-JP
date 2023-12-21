@@ -4,9 +4,9 @@ description: セパレーターコンポーネントを使用して、フォー�
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 11cbf865-c8e2-4833-b0b8-a3cb5e42f5cd
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 98%

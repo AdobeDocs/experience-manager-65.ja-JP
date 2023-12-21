@@ -3,9 +3,10 @@ title: アダプティブフォームのキーワード
 description: アダプティブフォームでは、以下の予約済みの単語を識別子として使用することはできません。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms
+discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
+feature: Adaptive Forms, Foundation Components
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 100%

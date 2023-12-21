@@ -3,11 +3,11 @@ title: HTML5 フォームのエラーメッセージのカスタマイズ
 description: HTML5 フォームのエラーメッセージの表示をカスタマイズする方法（メッセージの位置や表示方法の変更を含む）について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
-feature: Mobile Forms
+feature: HTML5 Forms
 exl-id: c4ae53a3-8de1-4985-a73e-829749de9814
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
-workflow-type: ht
-source-wordcount: '499'
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+workflow-type: tm+mt
+source-wordcount: '497'
 ht-degree: 100%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 100%
 
 すべてのフィールドのエラーメッセージを同時に表示するには、添付されているパッケージを使用します。エラーメッセージを単独で表示するには、デフォルトのプロファイルを使用します。
 
-### エラーメッセージの表示方法のカスタマイズ {#customizing-the-appearance-of-error-messages-nbsp}
+### エラーメッセージの表示方法のカスタマイズ  {#customizing-the-appearance-of-error-messages-nbsp}
 
 1. etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css フォルダーに移動します。
 
@@ -114,7 +114,7 @@ ht-degree: 100%
 1. CustomErrorManager-1.0-SNAPSHOT フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使用し、パッケージをアップロードしてインストールします。
 
-## 新しいプロファイルでフォームをレンダリングします。 {#render-the-form-with-the-new-profile-nbsp}
+## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
 出荷時の設定では、HTML5 フォームはデフォルトのプロファイル `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;` を使用します。
 

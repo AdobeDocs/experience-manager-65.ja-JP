@@ -1,13 +1,13 @@
 ---
 title: XML スキーマを使用してアダプティブフォームを作成する方法
 description: XML スキーマをアダプティブフォームのフォームモデルとして使用する方法を説明します。既存の XSD テンプレートを適用してアダプティブフォームを作成し、スキーマ要素を XSD からアダプティブフォームにドラッグ＆ドロップすることができます。 XML スキーマのサンプルをさらに詳しく調べて、XML スキーマを使用してフィールドに特別なプロパティを追加し、アダプティブフォームコンポーネントの許容値を制限します。
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
-workflow-type: ht
-source-wordcount: '1130'
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+workflow-type: tm+mt
+source-wordcount: '1121'
 ht-degree: 100%
 
 ---

@@ -7,8 +7,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
+feature: Adaptive Forms, Core Components
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 97%

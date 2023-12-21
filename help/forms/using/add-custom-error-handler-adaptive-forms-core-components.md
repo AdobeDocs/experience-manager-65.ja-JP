@@ -4,9 +4,9 @@ description: AEM Forms は、外部サービスを呼び出すように設定さ
 keywords: カスタムエラーハンドラーを追加、デフォルトのエラーハンドラーを追加、フォームにエラーハンドラーを追加、ルールエディターのサービス呼び出しを使用してカスタムエラーハンドラーを追加、ルールエディターを設定してカスタムエラーハンドラーを追加、ルールエディターを使用してカスタムエラーハンドラーを追加
 contentOwner: Ruchita Srivastav
 content-type: reference
-feature: Adaptive Forms
+feature: Adaptive Forms, Core Components
 exl-id: 2118d77f-1314-48f1-88e3-e27dd8e9f17b
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
 workflow-type: tm+mt
 source-wordcount: '2278'
 ht-degree: 98%

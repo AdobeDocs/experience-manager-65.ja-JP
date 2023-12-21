@@ -5,9 +5,10 @@ contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
+feature: HTML5 Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 33%

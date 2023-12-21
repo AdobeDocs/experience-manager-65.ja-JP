@@ -4,11 +4,11 @@ description: 外部 Web ページにアダプティブフォームを埋め込�
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
-source-git-commit: 65c5a4442f17e6bc52deaa1588f535a05698083f
-workflow-type: ht
-source-wordcount: '1039'
+source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+workflow-type: tm+mt
+source-wordcount: '1028'
 ht-degree: 100%
 
 ---
@@ -116,7 +116,7 @@ Web ページに数行の JavaScript を挿入することで、アダプティ�
 
 Dispatcher なしで Apache 2.4 リバースプロキシサーバーをセットアップする例を示します。この例では、AEM サーバーを `/forms` コンテキストパスでホストし、リバースプロキシの `/forms` をマッピングします。これで、Apache サーバーの `/forms` へのすべてのリクエストは、AEM インスタンスにダイレクトされます。このトポロジにより、前に `/forms` の付いたすべてのリクエストが AEM サーバー経由になるため、Dispatcher レイヤーのルールの数を減らすことができます。
 
-1. `httpd.conf` 設定ファイルを開き、次のコードの行をコメント解除します。または、これらのコードの行をファイルに追加することができます。
+1. `httpd.conf`設定ファイルを開き、次のコードの行をコメント解除します。または、これらのコードの行をファイルに追加することができます。
 
    ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so

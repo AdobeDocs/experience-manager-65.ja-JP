@@ -5,12 +5,12 @@ contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+feature: HTML5 Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
-source-wordcount: '3896'
-ht-degree: 20%
+source-wordcount: '3916'
+ht-degree: 19%
 
 ---
 
@@ -476,7 +476,7 @@ ht-degree: 20%
    <td>なし</td>
   </tr>
   <tr>
-   <td>instanceManager</td>
+   <td>InstanceManager</td>
    <td>instanceManager オブジェクトは、フォームモデルオブジェクトのインスタンスの作成、削除、移動を管理します。<br /> </td>
    <td>なし</td>
   </tr>
@@ -544,7 +544,7 @@ ht-degree: 20%
 
 | プロパティ | 説明 | 例外 |
 |---|---|---|
-| instanceManager | instanceManager オブジェクトは、フォームモデルオブジェクトのインスタンスの作成、削除、移動を管理します。 | なし |
+| InstanceManager | instanceManager オブジェクトは、フォームモデルオブジェクトのインスタンスの作成、削除、移動を管理します。 | なし |
 
 ## content {#content}
 
@@ -579,7 +579,7 @@ ht-degree: 20%
  </tbody>
 </table>
 
-## 塗り {#fill}
+## 塗りつぶし {#fill}
 
 <table>
  <tbody>
@@ -1152,7 +1152,7 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
    <td>while (i lt 5) do i = i + 1 endwhile</td>
   </tr>
   <tr>
-   <td>（ 用）</td>
+   <td>対象：</td>
    <td><br type="_moz" /> </td>
    <td>（i = 100 ダウン 1） <br /> do s = s + i endfor</td>
   </tr>
@@ -1175,14 +1175,14 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
 
    1. Abs()
    1. Avg()
-   1. 切り上げ()
+   1. Ceil()
    1. Count()
-   1. 切り捨て()
+   1. Floor()
    1. Max()
    1. Min()
    1. Mod()
-   1. 丸め()
-   1. 合計()
+   1. Round()
+   1. Sum()
 
 1. **科学関数**
 
@@ -1192,9 +1192,9 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
    1. Atan2()
    1. Cos()
    1. Sin()
-   1. タン()
+   1. Tan()
    1. Exp()
-   1. ログ()
+   1. Log()
    1. Pow()
    1. Sqrt()
    1. Deg2Rad()
@@ -1203,7 +1203,7 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
 
 1. **財務関数**
 
-   1. 4 月()
+   1. Apr()
    1. Cterm()
    1. Fv()
    1. Ipmt()
@@ -1219,7 +1219,7 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
    1. Choose()
    1. If()
    1. Oneof()
-   1. 内部()
+   1. Within()
 
 1. **文字列関数**
 
@@ -1230,9 +1230,9 @@ FormCalc は、e フォーム中心のロジックと計算のルートを作成
    1. Lower()
    1. Ltrim()
    1. Replace()
-   1. 右()
+   1. Right()
    1. Rtrim()
-   1. スペース()
+   1. Space()
    1. Stuff()
    1. Substr()
    1. Upper()

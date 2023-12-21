@@ -4,9 +4,10 @@ description: デフォルトでは、添付ファイルのサポートはHTML5 �
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-feature: Mobile Forms
+discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
+feature: HTML5 Forms
 exl-id: 68912260-179a-4d1b-b944-0a1777c021ac
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 72%
