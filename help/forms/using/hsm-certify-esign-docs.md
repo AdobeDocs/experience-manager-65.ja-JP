@@ -5,9 +5,10 @@ contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-source-git-commit: 4a4a75018e960733908f40c631a24203290be55c
-workflow-type: ht
-source-wordcount: '655'
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+workflow-type: tm+mt
+source-wordcount: '650'
 ht-degree: 100%
 
 ---
@@ -92,9 +93,9 @@ Perform the following steps to setup certificates:
 エイリアスには、HSM または eToken に必要なすべてのパラメーターが含まれます。eSign またはデジタル署名に必要な HSM や eToken の各資格情報に対してエイリアスを作成するには、以下の手順を実行します。
 
 1. AEM コンソールを開きます。AEM コンソールのデフォルト URL は、https://&lt;host>:&lt;port>/system/console/configMgr です。
-1. **HSM クレデンシャル設定サービス**&#x200B;を開き、次のフィールドに値を指定してください。
+1. **HSM 資格情報設定サービス**&#x200B;を開き、次のフィールドに値を指定してください。
 
-   * **Credential Alias**（クレデンシャルのエイリアス）：エイリアスを識別するための文字列を指定します。この値は、署名フィールドへの署名操作といった、Digital Signatures の一部の操作でプロパティとして使用されます。
+   * **Credential Alias**（資格情報のエイリアス）：エイリアスを識別するための文字列を指定します。この値は、署名フィールドへの署名操作といった、Digital Signatures の一部の操作でプロパティとして使用されます。
    * **DLL Path**：サーバー上の HSM または eToken クライアントライブラリのパスを指定します。例えば、`C:\Program Files\LunaSA\cryptoki.dll` のようになります。クラスター環境では、クラスター内のすべてのサーバーが同じパスを使用する必要があります。
    * **HSM PIN**：デバイスキーへのアクセスに必要なパスワードを指定します。
    * **HSM Slot Id**：整数タイプのスロット識別子を指定します。スロット ID は、クライアントごとに設定されます。これは、署名または証明用の秘密鍵を含む HSM 上のスロットを識別するために使用されます。

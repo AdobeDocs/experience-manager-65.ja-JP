@@ -4,11 +4,11 @@ description: Document Services API を使用して、デジタル署名、暗号
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
-source-wordcount: '6419'
-ht-degree: 45%
+source-wordcount: '6348'
+ht-degree: 44%
 
 ---
 
@@ -275,7 +275,7 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>pageNumber</code></td>
-   <td>署名フィールドを追加するページ番号です。 有効な値は、1 からドキュメントに含まれるページ数までです。 このパラメーターは必須であり、Null 値は取れません。<br /> </td>
+   <td>署名フィールドを追加するページ番号です。 有効な値は、1 からドキュメントに含まれるページ数までです。 このパラメーターは必須で、null 値を受け入れることはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>positionRectangle</code></td>
@@ -892,7 +892,7 @@ public class GetSignatureFields {
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名フィールドの名前です。このパラメーターは必須であり、Null 値は取れません。<br /> </td>
+   <td>署名フィールドの名前です。このパラメーターは必須で、null 値を受け入れることはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>pdfSignatureFieldProperties</code></td>

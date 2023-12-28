@@ -4,8 +4,8 @@ description: トランザクションとして計上されるすべての API �
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
-exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+feature: Transaction Reports
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
 source-wordcount: '1719'
 ht-degree: 100%

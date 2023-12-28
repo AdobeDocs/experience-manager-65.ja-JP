@@ -5,11 +5,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
+feature: Document Services
 exl-id: 4c8a3877-1a3c-410d-ad1f-69c73ba4fcc1
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
 source-wordcount: '1413'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -101,17 +102,17 @@ DocAssurance サービスには、3 つのサービス（署名、暗号化お�
 
 ### Signature Service {#signature-service}
 
-Signature サービスを使用すると、AEMサーバー上で電子署名とドキュメントを操作できます。 例えば、通常、Signature サービスは次の状況で使用されます。
+Signature サービスを使用すると、AEMサーバー上で電子署名とドキュメントを操作できます。 例えば、通常、署名サービスは次のような状況で使用されます。
 
-* AEMサーバーは、AcrobatまたはAdobe Readerを使用して開くユーザーにフォームが送信される前に、フォームを認証します。
-* AEMサーバーは、AcrobatまたはAdobe Readerを使用してフォームに追加された署名を検証します。
-* AEMサーバーは公証人に代わってフォームに署名します。
+* ユーザーにフォームが送信されて Acrobat または Adobe Reader で開かれる前に、AEM サーバーでフォームを認証する場合。
+* Acrobat または Adobe Reader を使用してフォームに追加された署名を、AEM サーバーが検証する場合。
+* AEM サーバーが公証人に代わってフォームに署名する場合。
 
 Signature サービスは、Trust Store に保存されている証明書と秘密鍵証明書にアクセスします。
 
 ### 暗号化サービス {#encryption-service}
 
-Encryption サービスを使用すると、ドキュメントの暗号化と復号化をおこなうことができます。 ドキュメントが暗号化されると、その内容が読み取れなくなります。PDFドキュメント全体（コンテンツ、メタデータ、添付ファイルを含む）、メタデータ以外のすべて、または添付ファイルのみを暗号化できます。 許可されたユーザーは、ドキュメントを復号化して、コンテンツにアクセスできます。 PDFドキュメントがパスワードで暗号化されている場合、ユーザーは開くパスワードを指定してから、Adobe ReaderまたはAcrobatでドキュメントを表示する必要があります。 PDFドキュメントが証明書で暗号化されている場合、ユーザーはPDFドキュメントを秘密鍵（証明書）で復号化する必要があります。 PDFドキュメントの復号化に使用する秘密鍵は、暗号化に使用した公開鍵に対応している必要があります。
+Encryption サービスを使用すると、ドキュメントの暗号化と復号化をおこなうことができます。 ドキュメントを暗号化すると、その内容は判読できなくなります。PDFドキュメント全体（コンテンツ、メタデータ、添付ファイルを含む）、メタデータ以外のすべて、または添付ファイルのみを暗号化できます。 許可されたユーザーはドキュメントを復号化して、内容にアクセスできます。PDFドキュメントがパスワードで暗号化されている場合、ユーザーは開くパスワードを指定してから、Adobe ReaderまたはAcrobatでドキュメントを表示する必要があります。 PDFドキュメントが証明書で暗号化されている場合、ユーザーはPDFドキュメントを秘密鍵（証明書）で復号化する必要があります。 PDFドキュメントの復号化に使用する秘密鍵は、暗号化に使用した公開鍵に対応している必要があります。
 
 ### Reader拡張サービス {#reader-extension-service}
 

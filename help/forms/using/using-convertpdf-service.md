@@ -4,11 +4,11 @@ description: Adobe Experience Manager Forms ConvertPDF サービスを使用し�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
-exl-id: 575bab27-d973-47fa-a0da-fa889cec6f27
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+feature: Document Services
+source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 28%
+source-wordcount: '382'
+ht-degree: 38%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 28%
 
 ## 概要 {#overview}
 
-ConvertPDFサービスは、PDFドキュメントを PostScript または画像ファイル (JPEG、JPEG2000、PNG およびTIFF) に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでの無人サーバーベースの印刷に便利です。 PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
+ConvertPDFサービスは、PDFドキュメントを PostScript または画像ファイル (JPEG、JPEG2000、PNG およびTIFF) に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでサーバーベースの無人印刷を行う場合に便利です。PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
 
 Convert Convert サービスを使用すると、次のことがPDFできます。
 
-* PDF ドキュメントを PostScript に変換します。PostScript に変換する場合は、変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 または 3 のどちらに変換するかを指定できます。 PostScript ファイルに変換するPDFドキュメントは、非インタラクティブである必要があります。
+* PDF ドキュメントを PostScript に変換します。PostScript に変換する際に、この変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 と 3 のどちらに変換するかを指定できます。PostScript ファイルに変換する PDF ドキュメントは、非インタラクティブである必要があります。
 * PDFドキュメントをJPEG、JPEG2000、PNG およびTIFFの画像形式に変換します。 これらの画像形式のいずれかに変換する場合は、変換処理を使用して、ソースドキュメントと画像オプションの仕様を指定できます。 この仕様には、画像変換形式、画像解像度、色変換など、様々な環境設定が含まれます。
 
 ## サービスのプロパティを設定します   {#properties}
