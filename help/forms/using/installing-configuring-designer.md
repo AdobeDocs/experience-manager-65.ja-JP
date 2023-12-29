@@ -8,8 +8,9 @@ topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
+feature: Forms Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: 77615c5b2fe91f7f1b1017e8d40b744facba4158
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 80%
