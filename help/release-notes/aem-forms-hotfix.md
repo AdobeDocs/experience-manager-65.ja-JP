@@ -1,17 +1,17 @@
 ---
-title: AEM Form Service Pack のホットフィックス
-description: AEM Forms Service Pack のホットフィックスをダウンロードしてインストールする方法に関する情報を提供します。
-source-git-commit: 169d407835098add0312b0d12c2c80035b525762
+title: AEM Formsのホットフィックス
+description: AEM Formsのホットフィックスをダウンロードしてインストールする方法に関する情報を提供します。
+exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
+source-git-commit: 276b0122fb3d88c584dd6b2b4c2c6f6eda9d0537
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 17%
+source-wordcount: '200'
+ht-degree: 14%
 
 ---
 
+# Adobe Experience Manager Forms Hotfixes{#aem-form-hotfix}
 
-# Adobe Experience Manager Hotfixes{#aem-form-hotfix}
-
-最新の [AEM Service Pack](/help/release-notes/release-notes.md) は、セキュリティ、パフォーマンス、安定性、お客様向けの主な修正および機能強化を含むを、Adobe Experience Manager 6.5 の一般リリース以降にリリースされたお勧めです。
+この記事では、既知の問題に対処し、システムの安定性を向上し、AEM Formsの全体的なパフォーマンスを向上させるために実装された重要な修正について説明します。
 
 ## アダプティブFormsのホットフィックス {#hotfix-for-adaptive-forms}
 
@@ -19,8 +19,8 @@ ht-degree: 17%
   <tbody>
   <tr>
     <td><strong>日付</strong></td>
-    <td><strong>ホットフィックス名</strong></td>
-    <td><strong>修正</strong></td>
+    <td><strong>修正プログラムのダウンロードリンク (AEM Software Distribution リンク )</strong></td>
+    <td><strong>修正された問題</strong></td>
    </tr>
    <tr>
     <td>2023年11月20日（PT）</td>
@@ -46,7 +46,7 @@ ht-degree: 17%
 
 ホットフィックスをダウンロードしてインストールするには、次の手順を実行します。
 
-1. ダウンロード [ホットフィックス](#hotfix-for-adaptive-forms) SD リンクから。
+1. ダウンロード [ホットフィックス](#hotfix-for-adaptive-forms) を「Software Distribution」リンクからダウンロードします。
 1. ホットフィックスアーカイブファイルを抽出して、Experience Manager パッケージ（.zip）とバンドル（.jar）ファイルを取得できるようにします。
-1. パッケージマネージャーを通じてパッケージ（.zip）をアップロードしてインストールします。
-1. 設定マネージャーのバンドル `https://server:host/system/console/bundles` を開き、バンドル（.jar）をアップロードしてインストールします。
+1. を使用してパッケージ (.zip) をアップロードしインストールします。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
+1. Configuration Manager バンドルを開きます。 `https://server:host/system/console/bundles`バンドル (.jar) をアップロードし、インストールします。 ホットフィックスがインストールされている。
