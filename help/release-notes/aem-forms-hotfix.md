@@ -2,10 +2,10 @@
 title: AEM Formsのホットフィックス
 description: AEM Formsのホットフィックスをダウンロードしてインストールする方法に関する情報を提供します。
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 276b0122fb3d88c584dd6b2b4c2c6f6eda9d0537
+source-git-commit: 4c47fc5d03732d206c9eb18feb6e44018e936472
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 14%
+source-wordcount: '201'
+ht-degree: 13%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 14%
      <td>
      <ul>
      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-linux-pkg-6.0.1016-002.zip">Linux 用AEM Service Pack 6.5.18.0のホットフィックス</a> </li>
-     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-win-pkg-6.0.1016-002.zip">Windows 向けAEM Service Pack 6.5.18.0のホットフィックス</a> </li>
-     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-osx-pkg-6.0.1016-002.zip">Mac OS 用AEM Service Pack 6.5.18.0のホットフィックス</a></li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-win-pkg-6.0.1016-002.zip">Microsoft Windows 向けAEM Service Pack 6.5.18.0のホットフィックス</a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-osx-pkg-6.0.1016-002.zip">Apple macOSのAEM Service Pack 6.5.18.0のホットフィックス</a></li>
      </ul>
      </td>
     <td>
@@ -46,7 +46,7 @@ ht-degree: 14%
 
 ホットフィックスをダウンロードしてインストールするには、次の手順を実行します。
 
-1. ダウンロード [ホットフィックス](#hotfix-for-adaptive-forms) を「Software Distribution」リンクからダウンロードします。
+1. ダウンロード [ホットフィックス](#hotfix-for-adaptive-forms) を「ソフトウェア配布」リンクからクリックします。
 1. ホットフィックスアーカイブファイルを抽出して、Experience Manager パッケージ（.zip）とバンドル（.jar）ファイルを取得できるようにします。
 1. を使用してパッケージ (.zip) をアップロードしインストールします。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing).
 1. Configuration Manager バンドルを開きます。 `https://server:host/system/console/bundles`バンドル (.jar) をアップロードし、インストールします。 ホットフィックスがインストールされている。
