@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: b0ba4e0c91d3c40acf5bf7336ba2af0c8c01cd32
+source-git-commit: 5c10c5d20338b696fdab2291c714a7d6313cca8a
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1689'
 ht-degree: 91%
 
 ---
@@ -32,7 +32,6 @@ ht-degree: 91%
 | 領域 | 機能 | 代替手段 | バージョン（SP） |
 |---|---|---|---|
 | Sites | **Adobe AEM Managed Polling Configuration** サービス：`com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | **Adobe AEM Analytics Report Sling Importer** サービス。詳しくは、 Adobe Analytics への接続とフレームワークの作成 - [読み込み間隔の設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)を参照してください。 | 6.5.19.0 |
-| Screens | AEM の ActiveMQ。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。 | アドビでは、ロードバランサーを使用することをお勧めします。 |  |
 | [!DNL Sites] | **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 |   | 6.5.11.0 |
 | [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | 現在の[モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud 統合 | AEM／Creative Cloud フォルダー共有は、AEM 6.2 で導入されました。これにより、クリエイティブユーザーが AEM のアセットにアクセスできるようになり、アセットを [!DNL Creative Cloud] アプリケーションで開いたり、AEM に新しいファイルをアップロードまたは変更を保存したりできるようになります。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが向上し、Photoshop、InDesign および Illustrator 内から AEM のアセットへの直接アクセスが強化されています。AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。この機能は AEM に含まれてはいますが、代替ソリューションを使用することをお勧めします。 | Adobe Asset Link や AEM Desktop App などの新しい Creative Cloud 統合機能に切り替えることをお勧めします。 |  |
@@ -76,7 +75,7 @@ ht-degree: 91%
 | デベロッパー向け | HTML クライアントライブラリマネージャーで `customJavaScriptPath` がサポートされなくなりました。 | 代替機能はありません |  |
 | [!DNL Assets] | アセットのオフロード機能は、[!DNL Adobe Experience Manager] 6.5 でサポートされなくなりました。 | 代替機能はありません。 |  |
 | キャッシュ | `system/console/slingjsp` は削除され、AEM 6.5 では使用できなくなりました。 | クラスとわずかなキャッシュが、Apache Sling Commons FileSystem ClassLoader バンドルに格納されています。AEM web コンソールでバンドル番号を確認し、ファイルシステムから直接キャッシュフォルダーを削除できます（`crx-quickstart/launchpad/felix/bundle<ID>`）。 |  |
-| スクリーン | Adobeは、com.adobe.cq.screens.mq.activemq バンドルと関連する設定をさらに保守および更新する予定はありません。 | 代替手段はありません。 |  |
+| スクリーン | activemq バンドルのサポートと関連する設定が削除されました。 |  |  |
 
 <!-- ## Pre-announcement for next release {#pre-announcement-for-next-release}
 
