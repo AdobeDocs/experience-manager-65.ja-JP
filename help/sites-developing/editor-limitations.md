@@ -8,20 +8,20 @@ topic-tags: introduction
 exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
 source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 39%
+source-wordcount: '308'
+ht-degree: 59%
 
 ---
 
 # 編集者の制限事項{#editor-limitations}
 
-タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項の概要を説明し、可能な場合は解決策や回避策を提供します。
+タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
 
-## 機能の制限 {#functional-limitations}
+## 機能の制限事項 {#functional-limitations}
 
 作成者は、エディターを使用してページを作成する際に、次の機能上の制限を受ける場合があります。
 
-### リンクがアクティブではありません {#links-not-active}
+### リンクがアクティブにならない {#links-not-active}
 
 [ページの編集](/help/sites-authoring/editing-content.md)時に、リンクがアクティブになりません。
 
@@ -33,11 +33,11 @@ ht-degree: 39%
 
 ## CSS の制限 {#css-limitations}
 
-開発者は、エディターでの CSS の操作に次の制限が生じる場合があります。
+開発者は、エディターでの CSS の操作に次の制限を受ける場合があります。
 
-### 絶対位置の要素 {#absolutely-positioned-elements}
+### 要素が絶対配置される {#absolutely-positioned-elements}
 
-絶対に配置された要素は、オーバーレイの位置で問題を引き起こす可能性があります。
+絶対配置された要素により、そのオーバーレイの位置に問題が生じる可能性があります。
 
 * この場合、エディターはまったく同じ寸法のオーバーレイを作成するので、絶対位置にある要素の寸法が正しいことを確認してください。
 

@@ -8,7 +8,7 @@ topic-tags: administering-adobe-phonegap-enterprise
 exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
 source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
    このグループの ID を「app-authors」に設定し、AEM内でのモバイルアプリケーションのオーサリングに特有の特定のタイプのオーサーユーザーグループであることを示します。
 
-1. メンバーをグループに追加：発言者
+1. メンバーをグループに追加：作成者
 
    ![chlimage_1-18](assets/chlimage_1-18.png)
 
@@ -64,7 +64,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
 ### AEM Mobile Application Administrators グループ（app-admins グループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-admins グループのメンバーは、app-authors に含まれているのと同じ権限でアプリケーションコンテンツを作成できます **および** また、次のことも担当します。
+app-admins グループのメンバーは、app-authors に含まれているのと同じ権限でアプリケーションコンテンツを作成できます **および** さらに、次のことも担当します。
 
 * AEMでのPhoneGap BuildおよびAdobeMobile Services クラウドサービスの設定
 * アプリケーションコンテンツ同期 OTA 更新のステージング、公開、クリア
@@ -117,7 +117,7 @@ app-admins グループのメンバーは、app-authors に含まれているの
 
 現在、タイルには権限を必要とするアクションはありませんが、アプリケーションの詳細ページには次のアクションがあります。
 
-* *編集* app-author および app-admin (UIトリガー- jcr:write - /content/phonegap/上{suffix})
+* *編集* app-author および app-admin の場合 (UIトリガー- jcr:write - /content/phonegap/上{suffix})
 * *ダウンロード* app-author および app-admin (UIトリガー- /content/phonegap/上{suffix})
 
 以下の画像に、アプリの「ダウンロード」および「編集」オプションを示します。

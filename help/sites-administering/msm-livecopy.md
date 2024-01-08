@@ -6,7 +6,7 @@ exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
 workflow-type: tm+mt
 source-wordcount: '4194'
-ht-degree: 58%
+ht-degree: 59%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 58%
 
    ![ライブコピーを作成](assets/chlimage_1-212.png)
 
-1. ソースページを選択し、「 **次へ**. 次に例を示します。
+1. ソースページを選択し、「 **次へ**. 例：
 
    ![ソースページを選択](assets/chlimage_1-213.png)
 
@@ -158,7 +158,7 @@ ht-degree: 58%
 
    デフォルトでは、使用可能なすべての言語が選択されます。言語を削除するには、 **X** 言語の横に表示されます。
 
-   次に例を示します。
+   例：
 
    ![初期言語を選択](assets/chlimage_1-217.png)
 
@@ -194,7 +194,7 @@ ht-degree: 58%
 
    >[!NOTE]
    >
-   >詳しくは、ナレッジベースの記事も参照してください。 [ライブコピーのステータスメッセージ — 最新/緑/同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
+   >詳しくは、ナレッジベースの記事[ライブコピーのステータスメッセージ - 最新／緑／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)も参照してください。
 
 ### ブループリントページのライブコピーの確認 {#seeing-the-live-copies-of-a-blueprint-page}
 
@@ -543,7 +543,7 @@ ht-degree: 58%
 
 ### ライブコピーページのリセット {#resetting-a-live-copy-page}
 
-ライブコピーページのリセット先：
+ライブコピーページをリセットすると、次のようになります。
 
 * すべての継承のキャンセルが削除され、かつ
 * ページをソースページと同じ状態に戻します。

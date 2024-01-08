@@ -8,8 +8,8 @@ topic-tags: administering-adobe-phonegap-enterprise
 exl-id: 2f02f541-92db-469b-bf23-ec64d2e282ff
 source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 11%
+source-wordcount: '170'
+ht-degree: 10%
 
 ---
 

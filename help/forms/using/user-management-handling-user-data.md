@@ -8,7 +8,7 @@ exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
 source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
 workflow-type: tm+mt
 source-wordcount: '904'
-ht-degree: 30%
+ht-degree: 32%
 
 ---
 
@@ -103,7 +103,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 プリンシパル ID がわかったら、ユーザーデータを書き出したり、削除したりできます。
 
-#### ユーザーデータの書き出し {#export-user-data}
+#### ユーザーデータを書き出し {#export-user-data}
 
 次のデータベースコマンドを実行して、プリンシパル ID のユーザー管理データをデータベーステーブルから書き出すことができます。 `select` コマンドで、`<principal_id>` を、書き出すデータを持つユーザーのプリンシパル ID に置き換えます。
 
@@ -170,7 +170,7 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 Forms JEE ユーザーが少なくとも 1 つのAEM Formsオーサーインスタンスにアクセスした場合、AEMリポジトリにデータが格納されます。 ユーザーデータにアクセスしてAEMリポジトリから削除できます。
 
-#### ユーザーデータへのアクセス {#access-user-data}
+#### ユーザーデータにアクセス {#access-user-data}
 
 AEM リポジトリで作成されたユーザーを表示するには、AEM 管理者の資格情報を使用して `https://'[server]:[port]'/lc/useradmin` にログインします。URL の `server` と `port` は、AEM オーサーインスタンスのサーバーとポートであることに注意してください。ここでは、ユーザー名を使用してユーザーを検索できます。 ユーザーをダブルクリックして、そのユーザーのプロパティ、権限、グループなどの情報を表示できます。 ユーザーの `Path` プロパティは、AEM リポジトリで作成されたユーザーノードへのパスを指定します。
 

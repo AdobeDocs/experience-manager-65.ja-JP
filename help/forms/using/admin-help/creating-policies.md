@@ -10,7 +10,7 @@ exl-id: 5e57451c-1a89-442c-8404-841e95d5ceff
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '4713'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -279,7 +279,7 @@ Document Security に「権限とオプション」タブが表示されます�
 **暗号化アルゴリズムとキーの長さ：**&#x200B;ドキュメントの保護に使用します。次のオプションから選択できます。
 
 * AES 128 ビット
-* AES 256 ビット。 このオプションは、Acrobat 9.0 以降でのみサポートされます。 PDFファイルに AES 256 暗号化を使用するには、Java Cryptography Extension(JCE)Unlimited Strength Jurisdiction Policy ファイルを取得してインストールします。 それらのファイルで、[JAVE_HOME]/lib/security フォルダーの local_policy.jar ファイルと US_export_policy.jar ファイルを置き換えます。例えば、Sun JDK 1.6 を使用している場合、ダウンロードファイルを [dep root]/Java/jdk1.6.0_26/lib/security フォルダーにコピーします。これらのファイルは、 [Java SE ダウンロード](https://java.sun.com/javase/downloads/index.jsp).
+* AES 256 ビット。 このオプションは、Acrobat 9.0 以降でのみサポートされます。 PDF ファイルに AES 256 暗号化を使用するには、Java Cryptography Extension（JCE）Unlimited Strength Jurisdiction Policy ファイルを入手し、インストールします。それらのファイルで、[JAVE_HOME]/lib/security フォルダーの local_policy.jar ファイルと US_export_policy.jar ファイルを置き換えます。例えば、Sun JDK 1.6 を使用している場合、ダウンロードファイルを [dep root]/Java/jdk1.6.0_26/lib/security フォルダーにコピーします。これらのファイルは、 [Java SE ダウンロード](https://java.sun.com/javase/downloads/index.jsp).
 * 暗号化しない。Acrobat 9.0 以降では、現在、このオプションがサポートされています。 このオプションを選択すると、「ドキュメントの制限」オプションは無効になります。 このオプションは、ドキュメントの監査やバージョン管理に Document Security を使用し、ドキュメントの暗号化を行わない場合に役立ちます。
 
 **ドキュメントの制限：**&#x200B;暗号化する PDF ドキュメントコンポーネントを選択します。その他のクライアントアプリケーションは、ドキュメント全体を暗号化しますが、リンクされたファイルや埋め込みファイルは暗号化しません。 次のオプションから選択できます。

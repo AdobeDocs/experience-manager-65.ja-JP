@@ -4,7 +4,7 @@ description: Adobe Experience Manager Commerce でカスタム HTTP ヘッダー
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '267'
 ht-degree: 82%
 
 ---

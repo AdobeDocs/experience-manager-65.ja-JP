@@ -9,8 +9,8 @@ role: Developer
 exl-id: 554b19d6-47c3-4171-b59d-343f1ad935b2
 source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 47%
+source-wordcount: '267'
+ht-degree: 38%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 47%
 
 DocConverter サービスで Java™ API クイックスタート (SOAP) を使用できます。
 
-[クイックスタート（SOAP モード）：Java を使用した PDF/A の適合性の判断](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[クイックスタート（SOAP モード）: Java を使用したPDF/A 準拠の判断](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した PDF/A ドキュメントへのドキュメントの変換](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[クイックスタート（SOAP モード）: Java を使用してドキュメントをPDF/A ドキュメントに変換する](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
 AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 

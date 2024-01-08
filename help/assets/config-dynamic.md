@@ -299,7 +299,7 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
    * 「**[!UICONTROL キーストアファイル]**」を選択します。アドビから提供されたキーストアファイルに移動して選択し、「**[!UICONTROL 開く]**」をタップします。
    * 「**[!UICONTROL キーストアファイルパスワード]**」フィールドで、キーストアファイルパスワードを入力します。これは、手順 5 で作成したキーストアパスワード&#x200B;**ではなく**、プロビジョニング中に送信されたウェルカムメールでアドビから提供されたキーストアファイルパスワードです。キーストアファイルパスワードを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
    * 「**[!UICONTROL 秘密鍵のパスワード]**」フィールドで、秘密鍵のパスワードを入力します（以前の手順で指定した秘密鍵のパスワードと同じでも可）。秘密鍵のパスワードは、プロビジョニング中にアドビから送信されたウェルカムメールに記載されています。秘密鍵のパスワードを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
-   * Adobe Analytics の **[!UICONTROL 秘密鍵のエイリアス]** 「 」フィールドに、秘密鍵のエイリアスを入力します。 例：`*companyname*-alias`。秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたウェルカムメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
+   * Adobe Analytics の **[!UICONTROL 秘密鍵のエイリアス]** 「 」フィールドに、秘密鍵のエイリアスを入力します。 例えば、`*companyname*-alias` のようになります。秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたウェルカムメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーサポートにお問い合わせください。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -693,9 +693,9 @@ Dynamic Media を（1）実稼動で画像に使用している場合、*また�
     </ul> </td>
   </tr>
   <tr>
-   <td>Dynamic Mediaビデオ配信</td>
+   <td>ダイナミックメディアのビデオ配信</td>
    <td>filter-video</td>
-   <td>次で始まる <strong>video/</strong></td>
+   <td><strong>video/</strong> で始まる</td>
    <td>標準の「filter-video」では、次のようになります。
     <ul>
      <li>プロキシビデオのレンディション、ビデオサムネールやポスター画像、メタデータ（親ビデオとビデオレンディションの両方）がレプリケーションに含まれます（<strong>cqdam</strong> で始まるすべてのレンディション）。</li>
@@ -705,7 +705,7 @@ Dynamic Media を（1）実稼動で画像に使用している場合、*また�
   <tr>
    <td>Dynamic Media Classic（Scene7）統合</td>
    <td><p>filter-images</p> <p>filter-sets</p> <p>filter-video</p> </td>
-   <td><p>次で始まる <strong>image/</strong></p> <p>次を含む <strong>application/</strong> およびで終わる <strong>設定</strong>.</p> <p>次で始まる <strong>video/</strong></p> </td>
+   <td><p>次で始まる <strong>image/</strong></p> <p>次を含む <strong>application/</strong> およびで終わる <strong>設定</strong>.</p> <p><strong>video/</strong> で始まる</p> </td>
    <td><p>Adobe Dynamic Media クラウドレプリケーションサービスの URL ではなく、Experience Manager パブリッシュサーバーを指すようにトランスポート URI を設定します。このフィルターを設定すると、Experience Manager パブリッシュインスタンスではなく、Dynamic Media Classic でアセットを配信できます。</p> <p>デフォルトの「filter-images」、「filter-sets」、「filter-video」では次のようになります。</p>
     <ul>
      <li>PTIFF 画像、プロキシビデオのレンディション、メタデータがレプリケーションに含まれます。ただし、Experience Manager - Dynamic Media Classic 統合を実行している場合は、これらは JCR に存在しないので、実質的には何も起こりません。</li>

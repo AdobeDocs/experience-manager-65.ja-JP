@@ -8,8 +8,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
 source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 71%
+source-wordcount: '904'
+ht-degree: 70%
 
 ---
 

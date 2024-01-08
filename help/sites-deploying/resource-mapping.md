@@ -9,9 +9,9 @@ docset: aem65
 feature: Configuring
 exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: ht
-source-wordcount: '521'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 96%
 
 ---
 
@@ -84,7 +84,7 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 >[!NOTE]
 >
->正規表現の定義方法について説明したリソースは多数あります（例：[https://www.regular-expressions.info/](https://www.regular-expressions.info/)）。
+>正規表現の定義方法を説明するリソースが多数あります。 例： [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
 
 ### AEM でのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
 

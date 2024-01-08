@@ -8,8 +8,8 @@ role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Collaboration,Dynamic Media Classic
 source-git-commit: a7f1f41d54663b753bc22c6e5d54b4cb621609fd
-workflow-type: ht
-source-wordcount: '1077'
+workflow-type: tm+mt
+source-wordcount: '1014'
 ht-degree: 100%
 
 ---
@@ -47,7 +47,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2020 年 4 月、第 3 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2020_April.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * 困難な時期にリッチメディアへの投資が役立つ 3 つの方法を紹介する
    * スマートイメージングでページの読み込みを軽量化する方法が学べる Web セミナーへの新規登録
@@ -58,7 +58,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2020 年 2 月、第 2 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * 新しいスキルビルダーの Web セミナーに参加し、Dynamic Media Classic のエキスパートになる
    * Adobe Summit 2020 から Dynamic Media を探す
@@ -69,7 +69,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2020 年 1 月、第 1 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_01_2020_Jan.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * 5 つの新しいスキルビルダー Web セミナーを使用して、Dynamic Media Classic のスキルを習得する
    * 無料の監査を活用して、Dynamic Media Classic からより多くの価値を得る
@@ -79,7 +79,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 11 月、第 11 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_11_2019_Nov.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * Dynamic Media Classic ユーザーインターフェイスの更新
    * 新しい強力なセキュリティ機能
@@ -89,7 +89,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 10 月、第 10 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_10_2019_Oct.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * Dynamic Media ビューアでの訪問者のアクションに関する高度な分析を取得する方法
    * 高画質の画像やビデオの配信で得られる驚きの結果の解説図とヒント
@@ -100,7 +100,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 9 月、第 09 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_09_2019_Sept.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * 9 つの「潜在的な問題」を取り除いてカスタマーエクスペリエンスを強化
    * 通常よりも訪問者トラフィックが多い日への備えに関する Dynamic Media チームからの支援について
@@ -111,7 +111,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 8 月、第 08 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_08_2019_Aug.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * Dynamic Media にアップグレードした場合にのみ利用できる有用な機能の紹介
    * Experience Manager Assets と Dynamic Media をすばやく習得できるように工夫されている Web セミナーシリーズの概要
@@ -121,7 +121,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 7 月、第 07 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_07_2019_July.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * 価値の高いアセットを適切に管理して、訪問者の再訪を維持できるエクスペリエンスを自信を持って提供するためのリソースと情報
    * デジタルアセットの保護に関する今後の Web セミナーの紹介
@@ -132,7 +132,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 6 月、第 06 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_06_2019_June.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * Experience Manager Assets 内の Dynamic Media へのアップグレードで得られる大きなメリットを紹介するビデオについて
    * Experience League の主なハウツービデオの視聴
@@ -143,7 +143,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 5 月、第 05 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_05_2019_May.html?lang=ja)**
 
-   この号の主な内容：
+  この号の主な内容：
 
    * ブログ投稿で Dynamic Media Classic の隠された機能のトップ 10 を学びます。
    * Experience League の主なハウツービデオの視聴
@@ -153,9 +153,9 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 4 月、第 04 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2019_April.html?lang=ja)**
 
-   Dynamic Media ニュースレターの創刊号へようこそ。アドビの新しい月刊ニュースレターには、ニュース、イベント、リソースが多数掲載されています。コンテンツは、 Experience Manager Assets や Adobe Dynamic Media Classic の Dynamic Media ユーザーを対象としています。
+  Dynamic Media ニュースレターの創刊号へようこそ。アドビの新しい月刊ニュースレターには、ニュース、イベント、リソースが多数掲載されています。コンテンツは、 Experience Manager Assets や Adobe Dynamic Media Classic の Dynamic Media ユーザーを対象としています。
 
-   この号の主な内容：
+  この号の主な内容：
 
    * アドビの Dynamic Media Classic の隠された機能に関する Web セミナーへの登録について
    * お客様のリッチメディア戦略の策定をサポートできるよう、アドビのオンデマンドウェビナーシリーズについて説明します。

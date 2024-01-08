@@ -7,8 +7,8 @@ feature: Asset Insights,Asset Reports
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 100%
+source-wordcount: '251'
+ht-degree: 91%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
    ![chlimage_1-72](assets/chlimage_1-210.png)
 
 1. 「**[!UICONTROL インサイト設定]**」カードをクリックします。
-1. ウィザードで、データセンターを選択し、会社名、ユーザー名、共有暗号鍵などの資格情報を指定します。
+1. ウィザードで、データセンターを選択し、組織名、ユーザー名、共有暗号鍵などの資格情報を指定します。
 
    ![Experience Manager で Adobe Analytics をアセットインサイト用に設定](assets/insights_config2.png)
 

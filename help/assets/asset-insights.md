@@ -7,8 +7,8 @@ feature: Asset Insights,Asset Reports
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
-source-wordcount: '779'
+workflow-type: tm+mt
+source-wordcount: '771'
 ht-degree: 100%
 
 ---

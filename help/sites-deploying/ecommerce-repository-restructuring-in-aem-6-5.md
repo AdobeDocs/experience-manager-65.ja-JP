@@ -7,8 +7,8 @@ topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 78b7c497-c474-4308-bfab-8f424b5f7268
 source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
-workflow-type: ht
-source-wordcount: '201'
+workflow-type: tm+mt
+source-wordcount: '208'
 ht-degree: 100%
 
 ---

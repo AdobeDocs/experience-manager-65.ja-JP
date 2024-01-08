@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
 source-git-commit: e2a3470784beb04c2179958ac6cb98861acfaa71
 workflow-type: tm+mt
-source-wordcount: '2676'
+source-wordcount: '2605'
 ht-degree: 0%
 
 ---

@@ -9,8 +9,8 @@ docset: aem65
 feature: Upgrading
 exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
 source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
-source-wordcount: '500'
+workflow-type: tm+mt
+source-wordcount: '485'
 ht-degree: 100%
 
 ---

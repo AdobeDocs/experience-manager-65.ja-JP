@@ -10,7 +10,7 @@ exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '677'
-ht-degree: 61%
+ht-degree: 63%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 61%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（内に存在）を再作成します。 `/libs`) （下） `/apps`
+>1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
 >
 >1. `/apps` 内で変更作業を行う
 >

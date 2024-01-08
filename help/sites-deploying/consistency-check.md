@@ -7,8 +7,8 @@ content-type: reference
 feature: Configuring
 exl-id: 10dde29b-5dc7-4d4e-80ae-3d4fd0397f7e
 source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
-source-wordcount: '153'
+workflow-type: tm+mt
+source-wordcount: '147'
 ht-degree: 100%
 
 ---

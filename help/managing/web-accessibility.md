@@ -4,7 +4,7 @@ description: Adobe Experience Manager（AEM）と web アクセシビリティ�
 exl-id: db8785b9-09eb-444a-addc-74c520e710a9
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '397'
 ht-degree: 91%
 
 ---

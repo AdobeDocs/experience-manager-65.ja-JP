@@ -8,8 +8,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1021'
-ht-degree: 16%
+source-wordcount: '1030'
+ht-degree: 14%
 
 ---
 
@@ -84,7 +84,7 @@ AEM forms 管理者は、ヘルスモニターを使用して、キュー内の�
 
 1. Web ブラウザーに`https://[host name]:[port]/console`と入力して、WebLogic 管理コンソールを起動します。
 1. WebLogic Server ドメイン用に作成したユーザー名とパスワードを入力し、「Log Under Change Center」で「Lock &amp; Edit」をクリックします。
-1. ドメイン構造で環境／サーバーをクリックし、右側のウィンドウで管理対象サーバーの名前をクリックします。
+1. 「Domain Structure」で、 Environment / Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「設定タブ」、「サーバー起動」タブをクリックします。
 1. 「引数」ボックスで、現在の内容の末尾に必要な引数を追加します。 例えば、ヘルスモニターを無効にするには、次を追加します。
 

@@ -4,9 +4,9 @@ description: AEM で GraphQL を使用し、サンプルコンテンツとクエ
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
-workflow-type: ht
-source-wordcount: '1586'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '1588'
+ht-degree: 99%
 
 ---
 
@@ -355,7 +355,7 @@ query {
 }
 ```
 
-### サンプルクエリ - すべての都市の名前都市滞在型休暇としてタグ付けされた {#sample-names-all-cities-tagged-city-breaks}
+### サンプルクエリ — 区切り文字としてタグ付けされたすべての都市の名前 {#sample-names-all-cities-tagged-city-breaks}
 
 次の場合：
 
@@ -1145,7 +1145,7 @@ query {
 
 ## WKND プロジェクトを使用したサンプルクエリ {#sample-queries-using-wknd-project}
 
-これらのサンプルクエリは WKND プロジェクトに基づいています。以下が含まれています。
+これらのサンプルクエリは WKND プロジェクトに基づいています。以下の項目があります。
 
 * 次の URL で入手できるコンテンツフラグメントモデル：
   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1426,7 +1426,7 @@ query {
 
 #### 添付ファイルを含んだ複数のコンテンツフラグメントのサンプルクエリ {#sample-wknd-multiple-fragments-attachments}
 
-次のクエリは、すべての `attachments`、つまり `content-reference` タイプの特定のフィールド（サブグループ）を返します。
+次のクエリは、すべての `attachments`（`content-reference` タイプの特定のフィールド（サブグループ））を返します。
 
 >[!NOTE]
 >
@@ -1676,7 +1676,7 @@ query {
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
 | name（氏名） | 1 行のテキスト | |
-| 名前（名） | 1 行のテキスト | |
+| 名 | 1 行のテキスト | |
 | 授賞歴 | フラグメント参照（複数フィールド） | [Award](#model-award) |
 
 #### Award（賞） {#model-award}

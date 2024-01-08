@@ -9,8 +9,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 76%
+source-wordcount: '281'
+ht-degree: 75%
 
 ---
 

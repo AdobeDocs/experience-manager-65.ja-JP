@@ -3,8 +3,8 @@ title: 買い物かごおよび Dispatcher の設定
 description: 買い物かごとAdobe Experience Manager Dispatcher の設定について説明します。
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 91%
+source-wordcount: '94'
+ht-degree: 87%
 
 ---
 

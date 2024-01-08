@@ -7,8 +7,8 @@ topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: ht
-source-wordcount: '1050'
+workflow-type: tm+mt
+source-wordcount: '1043'
 ht-degree: 100%
 
 ---

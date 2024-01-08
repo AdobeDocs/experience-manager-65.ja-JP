@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: 946f0f6d-86af-41c1-98ef-98c8f5566e95
 source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 100%
 

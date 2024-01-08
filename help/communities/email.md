@@ -180,7 +180,7 @@ E メールによる返信を許可する場合は、購読用のインスタン
 
 * **[!UICONTROL URL]**
 
-  *（必須）* 送信メールサーバー。 例：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`。
+  *（必須）* 送信メールサーバー。 例えば、`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****` のように指定します。
 
 * **[!UICONTROL 読み込み先パス]**&amp;ast;
 

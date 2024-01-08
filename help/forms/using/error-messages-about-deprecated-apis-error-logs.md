@@ -2,8 +2,8 @@
 title: エラーログにある非推奨 API に関するエラーメッセージ
 description: エラーログにある非推奨 API に関するエラーメッセージ
 source-git-commit: b05666883645ca11784292e4bfb5bf9c1e35a43b
-workflow-type: ht
-source-wordcount: '102'
+workflow-type: tm+mt
+source-wordcount: '94'
 ht-degree: 100%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 100%
 ## 問題 {#issue}
 
 * 次のエラーメッセージが error.log ファイルに表示されます。
-   ` *WARN* [default task-36] org.apache.jackrabbit.oak.spi.security.principal.AclGroupDeprecation use of deprecated java.acl.Group-related API - this method is going to be removed in future Oak releases - see OAK-7358 for details`（NPR-38282）
+  ` *WARN* [default task-36] org.apache.jackrabbit.oak.spi.security.principal.AclGroupDeprecation use of deprecated java.acl.Group-related API - this method is going to be removed in future Oak releases - see OAK-7358 for details`（NPR-38282）
 
 ## 解決方法 {#workaround}
 

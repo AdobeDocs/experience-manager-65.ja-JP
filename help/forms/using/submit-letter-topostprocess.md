@@ -10,7 +10,7 @@ exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 64%
+ht-degree: 68%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->FormsまたはAEMワークフローを使用している場合、パブリッシュサーバーから送信する前に、DS 設定サービスを設定する必要があります。 そうしないと、フォームの送信が失敗します。
+>Forms または AEM ワークフローを使用する場合は、パブリッシュサーバーから送信する前に、DS 設定サービスを設定する必要があります。これを設定しないと、フォームの送信が失敗します。
 
 ## レターインスタンスの取得 {#letter-instances-retrieval}
 

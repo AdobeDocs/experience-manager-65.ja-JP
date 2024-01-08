@@ -15,7 +15,7 @@ ht-degree: 26%
 
 # ワークフローの管理{#administering-workflows}
 
-ワークフローを使用すると、Adobe Experience Manager(AEM) アクティビティを自動化できます。ワークフロー：
+ワークフローを使用すると、Adobe Experience Manager(AEM) アクティビティを自動化できます。 ワークフロー：
 
 * 特定の順序で実行される一連のステップで構成されます。
 

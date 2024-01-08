@@ -7,8 +7,8 @@ feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
-source-wordcount: '574'
+workflow-type: tm+mt
+source-wordcount: '555'
 ht-degree: 100%
 
 ---

@@ -9,7 +9,7 @@ exl-id: cd7dbdac-dc76-4a1f-b850-0a9f47ae08de
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -76,7 +76,7 @@ Web チャネルテンプレートを作成するには、以下の手順を実�
    1. 選択 **[!UICONTROL ツール]** ![ツール](assets/tools.png) > **[!UICONTROL テンプレート]**.
    1. 適切なテンプレートに移動して選択し、「 」を選択します。 **[!UICONTROL 有効にする]** アラートメッセージで、 **[!UICONTROL 有効にする]**.
 
-      テンプレートが有効になり、そのステータスが「有効」と表示されます。 次に、新しく作成した Web チャネルテンプレートを使用するインタラクティブ通信の作成に進むことができます。
+      これでテンプレートが有効になり、テンプレートのステータスとして「有効」が表示されます。次に、新しく作成した Web チャネルテンプレートを使用するインタラクティブ通信の作成に進むことができます。
 
 ### Web チャネルのマスターとしての印刷チャネル {#print-channel-as-master-for-web-channel}
 

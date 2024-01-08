@@ -9,7 +9,7 @@ exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
 source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
 source-wordcount: '593'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ playpage テンプレートをレンダリングするコンポーネントを�
 
 最初の手順は、リソースのスーパータイププロパティを `/apps/an-scf-sandbox/components/playpage` ノードを継承し、スーパータイプのスクリプトとプロパティを継承します。
 
-CRXDE Lite の使用:
+使用中のCRXDE Lite:
 
 1. ノードを選択 `/apps/an-scf-sandbox/components/playpage`.
 1. 「プロパティ」タブで、次の値を持つ新しいプロパティを入力します。
@@ -152,7 +152,7 @@ CRXDE Lite の使用:
 * 画像
 * テーブル
 * テキスト
-* タイトル (基盤)
+* タイトル (Foundation)
 
 >[!NOTE]
 >
@@ -179,4 +179,4 @@ CRXDE Lite の使用:
 
 サイトが公開された後、パブリッシュインスタンス上のルートページを参照すると、英語のページにリダイレクトされます。
 
-コミュニティ SCF コンポーネントを再生する前の最後の手順は、クライアントライブラリフォルダー (clientlibs) を追加することです.... [clientlib の追加](add-clientlibs.md)
+コミュニティ SCF コンポーネントを再生する前の最後の手順は、クライアントライブラリフォルダー (clientlibs) を追加することです.... [clientlibs を追加](add-clientlibs.md)

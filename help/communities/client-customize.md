@@ -164,7 +164,7 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 
 * `/etc/clientlibs/social/hbs/&lt;component name&gt;`
 
-次に例を示します。
+例：
 
 * クライアントフォルダーノード： `/etc/clientlibs/social/hbs/forum`
 * Categories プロパティ： `cq.social.hbs.forum`
@@ -183,7 +183,7 @@ The [コミュニティコンポーネントガイド](components-guide.md) 各 
 
 * `/libs/social/&lt;feature&gt;/components/hbs/&lt;component name&gt;/clientlibs`
 
-次に例を示します。
+例：
 
 * クライアントフォルダーノード： `/libs/social/forum/hbs/forum/clientlibs`
 * Categories プロパティ： `cq.social.author.hbs.forum`

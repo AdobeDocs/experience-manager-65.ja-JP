@@ -10,8 +10,8 @@ exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
 source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '6808'
-ht-degree: 43%
+source-wordcount: '6733'
+ht-degree: 42%
 
 ---
 

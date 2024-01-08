@@ -3,7 +3,7 @@ title: コンテンツフラグメントへのアクセスとヘッドレス配�
 description: AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 100%
 

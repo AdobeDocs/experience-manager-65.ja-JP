@@ -10,8 +10,8 @@ feature: Upgrading
 exl-id: 946c7c2a-806b-4461-a38b-9c2e5ef1e958
 source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 28%
+source-wordcount: '693'
+ht-degree: 27%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 28%
 |---|---|---|---|
 | `Cq561ProjectContentUpgrade` | &lt; 5.6.1 | 即時 |  |
 | `Cq60MSMContentUpgrade` | &lt; 6.0 | 即時 | 削除された `LiveRelationShips` からすべての `VersionStorage` を検出し、親に実行プロパティを追加します。 |
-| `Cq61CloudServicesContentUpgrade` | &lt; 6.1 | 即時 | デフォルト設定でセキュリティで保護されたクラウドサービスを再構築 |
+| `Cq61CloudServicesContentUpgrade` | &lt; 6.1 | 即時 | デフォルト設定でセキュリティで保護されたクラウドサービスを再構築します |
 | `Cq62ConfContentUpgrade` | &lt; 6.2 | 即時 | 次の場所にあるプロパティベースのリンクを削除 **/content** から **/conf** （OSGi メカニズムに置き換え）、対応する OSGi 設定を生成します。 |
 | `Cq62FormsContentUpgrade` | &lt; 6.2 | 即時 | merge_preserve の処理により、デフォルトで保護された拒否ルールが与えられた権限を上書きするので、アップグレード時に並べ替えを行う必要が生じます |
 | `CQ62Html5SmartFileUpgrade` | &lt; 6.2 | 即時 | Html5SmartFile ウィジェットを使用してコンポーネントを検出し、コンテンツ内でのコンポーネントの使用を検索し、永続性を再構築し、バイナリを下のレベルに効果的に移動し、コンポーネントレベルに保存しません。 |

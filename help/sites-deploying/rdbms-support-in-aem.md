@@ -10,8 +10,8 @@ feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 65%
+source-wordcount: '592'
+ht-degree: 63%
 
 ---
 

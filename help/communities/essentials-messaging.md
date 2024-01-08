@@ -9,8 +9,8 @@ docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 4%
+source-wordcount: '362'
+ht-degree: 5%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 4%
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
->次に例を示します。
+>例：
 >
 >```
 >valid: mb.setInboxPath( "/mail/inbox" );
@@ -126,7 +126,7 @@ ht-degree: 4%
    * 記号名： `com.engage.media.social.messaging.MessagingNotification`
    * 名前：はじめにチュートリアルメッセージ通知
    * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するためのサンプルサービス
-   * パッケージ: `com.engage.media.social.messaging.notification`
+   * パッケージ： `com.engage.media.social.messaging.notification`
 
 1. に移動します。 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`、次に、
 

@@ -9,8 +9,8 @@ feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
 source-git-commit: ee1134be6ad81cc6638ee9004f7dad475a6cc67d
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 67%
+source-wordcount: '1175'
+ht-degree: 66%
 
 ---
 

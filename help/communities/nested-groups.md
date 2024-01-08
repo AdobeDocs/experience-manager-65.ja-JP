@@ -10,7 +10,7 @@ exl-id: 55803b7a-9064-4392-9cc2-9f113fa8dc29
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
 source-wordcount: '599'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -75,7 +75,7 @@ AEMオーサーインスタンスで、グローバルナビゲーションか�
       * **[!UICONTROL サムネール]**
          * `optional.*`
 
-      * **[!UICONTROL 「次へ]**」を選択します。
+      * **[!UICONTROL 次を選択]**.
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
@@ -101,21 +101,21 @@ The `arts` グループには、 `groups` フォルダー内に作成されま�
 
    * タイトル: `Visual Arts`
    * 名前：`visual`
-   * テンプレート: `Reference Group`
+   * テンプレート： `Reference Group`
    * メンバーシップ： select `Optional Membership`：すべてのメンバーに対して開かれる公開グループ。
 
 1. **[!UICONTROL 聴覚]**
 
    * タイトル: `Auditory Arts`
    * 名前：`auditory`
-   * テンプレート: `Reference Group`
+   * テンプレート： `Reference Group`
    * メンバーシップ： select `Required Membership`：メンバーが参加できる、開いたグループ。
 
-1. **[!UICONTROL History]**
+1. **[!UICONTROL 履歴]**
 
    * タイトル: `Art History`
    * 名前：`history`
-   * テンプレート: `Reference Group`
+   * テンプレート： `Reference Group`
    * メンバーシップ： select `Restricted Membership`：シークレットグループ。招待されたメンバーにのみ表示されます。 例として、を [デモユーザー](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
 
 ページを更新して、3 つのネストされたグループ（サブコミュニティ）をすべて表示します。

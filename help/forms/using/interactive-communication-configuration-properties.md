@@ -11,7 +11,7 @@ exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 44%
+ht-degree: 48%
 
 ---
 
@@ -58,13 +58,13 @@ ht-degree: 44%
   <tr> 
    <td>インデント</td> 
    <td>リストドキュメントフラグメント内のテキストに適用される 1 単位のインデントの幅です。</td> 
-   <td>12.7 mm</td> 
+   <td>12.7mm</td> 
    <td>数値</td> 
   </tr> 
   <tr> 
    <td>最小幅のローマ数字</td> 
    <td>リストドキュメントフラグメントでローマ数字を使用する場合に、箇条書きフィールドまたは数値フィールドに適用される最小の幅です。 </td> 
-   <td>12.7 mm</td> 
+   <td>12.7mm</td> 
    <td>数値</td> 
   </tr> 
   <tr> 

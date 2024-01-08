@@ -7,7 +7,7 @@ feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
 source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '814'
 ht-degree: 93%
 
 ---

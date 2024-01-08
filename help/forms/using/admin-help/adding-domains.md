@@ -7,8 +7,8 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: c708936d-7aa7-4b92-be2d-d97008f187d2
 source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
-workflow-type: ht
-source-wordcount: '922'
+workflow-type: tm+mt
+source-wordcount: '929'
 ht-degree: 100%
 
 ---

@@ -10,7 +10,7 @@ exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '3478'
-ht-degree: 70%
+ht-degree: 74%
 
 ---
 
@@ -244,9 +244,9 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
 
 1. メモリ内 XML データソースの作成
 
-   * Java の作成 `DocumentBuilderFactory` オブジェクトを `DocumentBuilderFactory` クラス&#39; `newInstance` メソッド。
-   * Java の作成 `DocumentBuilder` オブジェクトを `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッド。
-   * を呼び出します。 `DocumentBuilder` オブジェクトの `newDocument` メソッドを使用して `org.w3c.dom.Document` オブジェクト。
+   * `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java の `DocumentBuilderFactory` オブジェクトを作成します。
+   * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。
+   * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
    * を呼び出して、XML データソースのルート要素を作成します。 `org.w3c.dom.Document` オブジェクトの `createElement` メソッド。 これにより、ルート要素を表す `Element` オブジェクトが作成されます。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `Document` オブジェクトの `appendChild` メソッドを使用し、ルート要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
@@ -274,19 +274,19 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
 
 1. XML データソースの変換
 
-   * の作成 `javax.xml.transform.Transformer` を呼び出すことによって、オブジェクトを `javax.xml.transform.Transformer` オブジェクトの静的 `newInstance` メソッド。
-   * の作成 `Transformer` を呼び出すことによって、オブジェクトを `TransformerFactory` オブジェクトの `newTransformer` メソッド。
+   * `javax.xml.transform.Transformer` オブジェクトの静的 `newInstance` メソッドを呼び出すことによって、`javax.xml.transform.Transformer` オブジェクトを作成します。
+   * `TransformerFactory` オブジェクトの `newTransformer` メソッドを呼び出すことによって、`Transformer` オブジェクトを作成します。
    * コンストラクターを使用して、`ByteArrayOutputStream` オブジェクトを作成します。
    * コンストラクターを使用して手順 1 で作成した `org.w3c.dom.Document` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
    * コンストラクターを使用して `ByteArrayOutputStream` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
    * Java の設定 `ByteArrayOutputStream` を呼び出すことによって、オブジェクトを `javax.xml.transform.Transformer` オブジェクトの `transform` メソッドおよび `javax.xml.transform.dom.DOMSource` そして `javax.xml.transform.stream.StreamResult` オブジェクト。
    * バイト配列を作成して、`ByteArrayOutputStream` オブジェクトのサイズをバイト配列に割り当てます。
-   * を呼び出してバイト配列を生成します。 `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッド。
+   * `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出して、バイト配列に入力します。
    * コンストラクターを使用してバイト配列を渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
 
 1. 事前入力されたフォームをレンダリング
 
-   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを使用して、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して、以下の値を渡します。
 
    * ファイル名拡張子を含んだフォームデザイン名を指定する文字列値。
    * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。手順 1 と 2 で作成した `com.adobe.idp.Document` オブジェクトを使用するようにしてください。
@@ -298,7 +298,7 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
 
    * フォームデータストリームをクライアントの web ブラウザーに送信するために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
    * の作成 `com.adobe.idp.Document` を呼び出すことによって、オブジェクトを `FormsResult` オブジェクトの `getOutputContent` メソッド。
-   * の作成 `java.io.InputStream` を呼び出すことによって、オブジェクトを `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`java.io.InputStream` オブジェクトを作成します。
    * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
    * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
@@ -321,9 +321,9 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
 
 1. メモリ内 XML データソースの作成
 
-   * Java の作成 `DocumentBuilderFactory` オブジェクトを `DocumentBuilderFactory` クラス&#39; `newInstance` メソッド。
-   * Java の作成 `DocumentBuilder` オブジェクトを `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッド。
-   * を呼び出します。 `DocumentBuilder` オブジェクトの `newDocument` メソッドを使用して `org.w3c.dom.Document` オブジェクト。
+   * `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java の `DocumentBuilderFactory` オブジェクトを作成します。
+   * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。
+   * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
    * を呼び出して、XML データソースのルート要素を作成します。 `org.w3c.dom.Document` オブジェクトの `createElement` メソッド。 これにより、ルート要素を表す `Element` オブジェクトが作成されます。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `Document` オブジェクトの `appendChild` メソッドを使用し、ルート要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
@@ -350,19 +350,19 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
 
 1. XML データソースの変換
 
-   * の作成 `javax.xml.transform.Transformer` を呼び出すことによって、オブジェクトを `javax.xml.transform.Transformer` オブジェクトの静的 `newInstance` メソッド。
-   * の作成 `Transformer` を呼び出すことによって、オブジェクトを `TransformerFactory` オブジェクトの `newTransformer` メソッド。
+   * `javax.xml.transform.Transformer` オブジェクトの静的 `newInstance` メソッドを呼び出すことによって、`javax.xml.transform.Transformer` オブジェクトを作成します。
+   * `TransformerFactory` オブジェクトの `newTransformer` メソッドを呼び出すことによって、`Transformer` オブジェクトを作成します。
    * コンストラクターを使用して、`ByteArrayOutputStream` オブジェクトを作成します。
    * コンストラクターを使用して手順 1 で作成した `org.w3c.dom.Document` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
    * コンストラクターを使用して `ByteArrayOutputStream` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
    * Java の設定 `ByteArrayOutputStream` を呼び出すことによって、オブジェクトを `javax.xml.transform.Transformer` オブジェクトの `transform` メソッドおよび `javax.xml.transform.dom.DOMSource` そして `javax.xml.transform.stream.StreamResult` オブジェクト。
    * バイト配列を作成して、`ByteArrayOutputStream` オブジェクトのサイズをバイト配列に割り当てます。
-   * を呼び出してバイト配列を生成します。 `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッド。
+   * `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出して、バイト配列に入力します。
    * コンストラクターを使用して `BLOB` オブジェクトを作成し、`setBinaryData` メソッドを呼び出して、バイト配列を渡します。
 
 1. 事前入力されたフォームをレンダリング
 
-   を呼び出す `FormsService` オブジェクトの `renderPDFForm` メソッドを使用して、次の値を渡します。
+   `FormsService` オブジェクトの `renderPDFForm` メソッドを呼び出して、以下の値を渡します。
 
    * ファイル名拡張子を含んだフォームデザイン名を指定する文字列値。
    * フォームに結合するデータを含む `BLOB` オブジェクト。手順 1 と 2 で作成した `BLOB` オブジェクトを使用していることを必ず確認してください。

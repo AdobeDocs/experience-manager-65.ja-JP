@@ -4,8 +4,8 @@ description: Adobe Experience Manager 6.5 でパーソナライズされたコ�
 exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 65%
+source-wordcount: '526'
+ht-degree: 62%
 
 ---
 
@@ -57,7 +57,7 @@ AEM は、ページリクエストの処理や、表示コンテンツの判断�
 
 ### Adobe Target {#adobe-target}
 
-Adobe Target ターゲティングエンジンを使用すると、ページへの訪問から収集された情報が Adobe Target で追跡されます。
+Adobe Targetのターゲティングエンジンにより、ページ訪問から収集された情報がAdobe Targetで追跡されます。
 
 * このターゲティングエンジンを使用する場合、エクスペリエンスのオーディエンス定義には、Adobe Target から読み込んだセグメントを使用します。
 * Adobe Target エンジンを使用するアクティビティは、[Target と同期](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)します。

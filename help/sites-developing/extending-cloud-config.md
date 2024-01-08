@@ -8,7 +8,7 @@ content-type: reference
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
 source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '552'
 ht-degree: 31%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 31%
 * Analytics ノードからパスで参照されます。
 * 容易に拡張可能。
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) など、より複雑な設定に対応できる柔軟性がある。
-* 依存関係のサポート ( 例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定 )。
+* 依存関係のサポート ( 例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインにはが必要です [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定 )。
 
 ## 構造 {#structure}
 
@@ -142,13 +142,13 @@ API に関するリファレンスドキュメントについては、 [com.day.
 「 」タブには次の項目も表示されます。
 
 * サービスを有効にできる場所へのリンク
-* パスフィールドから設定（サービスのサブノード）を選択します
+* パスフィールドから設定（サービスのサブノード）を選択します。
 
 #### パスワードの暗号化 {#password-encryption}
 
 サービスのユーザー資格情報を保存する場合は、すべてのパスワードを暗号化する必要があります。
 
-これを行うには、非表示のフォームフィールドを追加します。 このフィールドには注釈が必要です `@Encrypted` プロパティ名につまり、 `password` フィールドの名前は次のように書き込まれます。
+これを行うには、非表示のフォームフィールドを追加します。 このフィールドには注釈が必要です `@Encrypted` プロパティ名 ( `password` フィールドの名前は次のように書き込まれます。
 
 `password@Encrypted`
 
@@ -204,7 +204,7 @@ API に関するリファレンスドキュメントについては、 [com.day.
   </tr>
   <tr>
    <td>visible</td>
-   <td>ページプロパティダイアログでの表示デフォルトで表示（オプション）</td>
+   <td>ページプロパティダイアログでの表示/非表示。デフォルトで表示（オプション）</td>
   </tr>
  </tbody>
 </table>

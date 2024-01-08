@@ -11,7 +11,7 @@ exl-id: a3a6a06d-ec90-4147-a5f0-e776a086ee12
 source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
 workflow-type: tm+mt
 source-wordcount: '1822'
-ht-degree: 82%
+ht-degree: 84%
 
 ---
 
@@ -117,7 +117,7 @@ Forms API（Java）を使用して値でフォームをレンダリング：
 
 1. 値でフォームをレンダリング
 
-   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを使用して、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して、以下の値を渡します。
 
    * 空の文字列の値（通常、このパラメーターにはフォームデザインの名前を指定する文字列の値が必要です）。
    * フォームデザインを含む `com.adobe.idp.Document` オブジェクト。通常、このパラメーター値はフォームにマージするデータ用に予約されています。
@@ -133,7 +133,7 @@ Forms API（Java）を使用して値でフォームをレンダリング：
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
    * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
    * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
-   * の作成 `java.io.InputStream` を呼び出すことによって、オブジェクトを `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`java.io.InputStream` オブジェクトを作成します。
    * バイト配列を作成し、`InputStream` オブジェクトのサイズを割り当てます。を呼び出す `InputStream` オブジェクトの `available` メソッドを使用して `InputStream` オブジェクト。
    * を呼び出して、フォームデータストリームを byte 配列に入力します。 `InputStream` オブジェクトの `read`メソッドを使用し、バイト配列を引数として渡す。
    * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
@@ -171,7 +171,7 @@ Forms API（web サービス）を使用して値でフォームをレンダリ�
 
 1. 値でフォームをレンダリング
 
-   を呼び出す `FormsService` オブジェクトの `renderPDFForm` メソッドを使用して、次の値を渡します。
+   `FormsService` オブジェクトの `renderPDFForm` メソッドを呼び出して、以下の値を渡します。
 
    * 空の文字列の値（通常、このパラメーターにはフォームデザインの名前を指定する文字列の値が必要です）。
    * フォームデザインを含む `BLOB` オブジェクト。通常、このパラメーター値はフォームにマージするデータ用に予約されています。

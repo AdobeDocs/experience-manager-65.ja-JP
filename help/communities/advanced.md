@@ -10,7 +10,7 @@ role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 * 高度なスコアルール：
 
    * `scoringType` を `advanced` に設定
-   * 次を必要とする `stopwords`
+   * が必要 `stopwords`
 
 * 高度なバッジルール：
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 * **スコア付けの重み付け**
 
   トピックの場合、スコアの計算時に最も優先度が高い動詞を指定します。 1 つ以上のトピックを入力できますが、次に限定されます **1 つの話題に対する 1 つの動詞**. 詳しくは、 [トピックと動詞](/help/communities/implementing-scoring.md#topics-and-verbs).
-次の形式で入力 `topic,verb` コンマはエスケープされます。 次に例を示します。
+次の形式で入力 `topic,verb` コンマはエスケープされます。 例：
   `/social/forum/hbs/social/forum\,ADD`
 デフォルトでは、Q&amp;A とフォーラムコンポーネントの ADD 動詞が設定されています。
 

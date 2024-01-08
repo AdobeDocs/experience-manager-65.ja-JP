@@ -9,7 +9,7 @@ exl-id: 169f3d94-ac00-41c7-853e-ecf0dbee559f
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -25,4 +25,4 @@ Formsサービスについて詳しくは、 [サービスリファレンス](ht
 
 管理コンソールのFormsページを使用して、Formsサービスの動作を設定できます。 これらの設定は、サービスのすべての呼び出しに適用されます。 AEM forms SDK を通じて送信されるパラメーターは、管理コンソールで設定された設定より優先されますが、影響を受けるのは特定の呼び出しのみです。
 
-管理コンソールでForms設定を変更したら、「保存」をクリックします。 変更を有効にするために、サーバーを再起動する必要はありません。 ただし、キャッシュモードの設定を行う場合は、Formsサービスの停止と再起動が必要になる場合があります。 ( 詳しくは、 [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)
+管理コンソールでForms設定を変更したら、「保存」をクリックします。 変更を有効にするために、サーバーを再起動する必要はありません。 ただし、キャッシュモードの設定を行う場合は、Formsサービスの停止と再起動が必要になる場合があります。 （[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください。）

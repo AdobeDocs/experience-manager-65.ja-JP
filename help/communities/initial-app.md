@@ -9,7 +9,7 @@ exl-id: cbf9ce36-53a2-4f4b-a96f-3b05743f6217
 source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 15%
+ht-degree: 14%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 15%
    * ラベル：`playpage`
    * タイトル：`An SCF Sandbox Play Template`
    * 説明：`An SCF Sandbox template for play pages`
-   * リソースタイプ: `an-scf-sandbox/components/playpage`
+   * リソースタイプ： `an-scf-sandbox/components/playpage`
    * ランキング： &lt;leave as=&quot;&quot; default=&quot;&quot;>
 
    ラベルは、ノード名に使用されます。
@@ -83,7 +83,7 @@ ht-degree: 15%
 
 を作成します。 *コンポーネント* コンテンツを定義し、 [playpage テンプレート](#createthepagetemplate).
 
-1. CRXDE Lite で、**`/apps/an-scf-sandbox/components`** を右クリックして、**[!UICONTROL 作成／コンポーネント]**&#x200B;をクリックします。
+1. CRXDE Liteで右クリック **`/apps/an-scf-sandbox/components`** をクリックします。 **[!UICONTROL 作成/コンポーネント]**.
 1. ノードの名前（ラベル）を *playpage*&#x200B;の場合、コンポーネントへのパスは
 
    `/apps/an-scf-sandbox/components/playpage`

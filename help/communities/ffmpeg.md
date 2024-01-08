@@ -35,7 +35,7 @@ AEMをホストするサーバーに FFmpeg をインストールする必要が
 
    システム内の任意のディレクトリから FFmpeg を実行できるはずです。
 
-   * 例：`ffmpeg -version`。
+   * 例えば、`ffmpeg -version` のように指定します。
 
 ## FFmpeg トランスコーディングサービスを設定 {#configure-ffmpeg-transcoding-service}
 

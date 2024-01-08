@@ -3,8 +3,8 @@ title: IMS を使用した Adobe Analytics との統合
 description: IMS を使用した AEM と Adobe Analytics の統合について説明します
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
 source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
-workflow-type: ht
-source-wordcount: '1068'
+workflow-type: tm+mt
+source-wordcount: '1042'
 ht-degree: 100%
 
 ---

@@ -9,13 +9,13 @@ exl-id: 1fe0e7b4-6109-4f7a-8858-8237a1c5c93b
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 57%
+ht-degree: 65%
 
 ---
 
 # 証明書の管理 {#managing-certificates}
 
-Trust Store の管理を使用すると、電子署名と証明書認証の検証のために、サーバーで信頼する証明書の読み込み、編集、削除を行うことができます。 任意の数の証明書を読み込み、書き出すことができます。 証明書が読み込まれたら、信頼設定と Trust Store の種類を編集できます。 Trust Store の種類を組み合わせる際は、次のオプションを考慮してください。
+Trust Store 管理を使用すると、電子署名の検証および証明書認証のために、サーバー上で信頼する証明書の読み込み、編集、削除ができます。証明書はいくつでも読み込みと書き出しを行うことができます。証明書が読み込まれたら、信頼設定および Trust Store のタイプを編集できます。Trust Store の種類を組み合わせる際は、次のオプションを考慮してください。
 
 * **Trust for Certificate Authentication with CA：** CRL の検証では、「ID で信頼」も選択します。
 * **Trust for Certificate Authentication with ICA：**「ID で信頼」だけを選択します。ICA は証明書認証では信頼しないでください。証明書認証用の ICA を信頼すると、ICA はパス構築用の CA になります。 ICA が証明書認証と ID の両方に対して信頼されている場合、ICA が CA になるので、CA ベンダー証明書は無視されます。

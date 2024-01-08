@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
 source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 5%
+source-wordcount: '1290'
+ht-degree: 1%
 
 ---
 
@@ -73,11 +73,11 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 ![レビュー](assets/configure-review3.png)
 
-* **[!UICONTROL 応答を許可]**
+* **[!UICONTROL 返信を許可]**
 
   オンにすると、レビューへの返信が許可されます。 初期設定はオフです。
 
-* **[!UICONTROL 終了]**
+* **[!UICONTROL 閉じる]**
 
   オンにすると、レビューは新しいレビューと返信に対して閉じられます。 初期設定はオフです。
 
@@ -93,7 +93,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
   テキストボックスに入力できる最大文字数。 デフォルトは 4096 文字です。
 
-* **[!UICONTROL 許可されるファイルタイプ]**
+* **[!UICONTROL 許可されているファイルタイプ]**
 
   次の場合にのみ関連します。 **[!UICONTROL ファイルのアップロードを許可]** がオンになっている。 「ドット」区切り記号を使用したファイル拡張子のコンマ区切りリスト。 例： .jpg、.jpeg、.png、.doc、.docx、.pdf。 ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
 
@@ -109,7 +109,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 ![user-moderation](assets/configure-review4.png)
 
-* **[!UICONTROL 事前モデレート]**
+* **[!UICONTROL モデレート前]**
 
   オンにすると、レビューが公開サイトに表示される前に承認が必要になります。 初期設定はオフです。
 
@@ -121,7 +121,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
   オンにすると、モデレーターはレビューを拒否できます。 初期設定はオフです。
 
-* **[!UICONTROL レビューを閉じる / 再度開く]**
+* **[!UICONTROL レビューを閉じる/再度開く]**
 
   オンにすると、モデレーターはレビューを閉じて再度開くことができます。 初期設定はオフです。
 
@@ -141,7 +141,7 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
   メンバーがレビューに何回フラグを設定したらモデレーターに通知するかを指定します。 初期設定は 1 回 (1) です。
 
-* **[!UICONTROL フラグ付けの制限]**
+* **[!UICONTROL フラグ付け制限]**
 
   レビューに何回フラグを設定したら、そのレビューを公開ビューから非表示にするかを入力します。 この数は **[!UICONTROL モデレートのしきい値]**. デフォルトは 5 です。
 
@@ -195,15 +195,15 @@ Web サイトでは、必須の評価にアスタリスクが付いています�
 
 ![コメント投票](assets/configure-review7.png)
 
-* **[!UICONTROL コメントリソースタイプ]**
+* **[!UICONTROL コメントのリソースタイプ]**
 
-  拡張の resourceType に移動します。 `comment`/apps 内のコンポーネント（単一のコメント）。 例：`/apps/social/commons/components/hbs/comments/comment`
+  拡張の resourceType に移動します。 `comment`/apps 内のコンポーネント（単一のコメント）。 例えば、`/apps/social/commons/components/hbs/comments/comment` のように指定します。
 
   このリソースは、訪問者がコメントを投稿したときに作成された UGC の resourceType を識別します。
 
 * **[!UICONTROL 投票リソースタイプ]**
 
-  拡張の resourceType に移動します。 `voting`/apps 内のコンポーネント。 例：`/apps/social/components/hbs/voting`
+  拡張の resourceType に移動します。 `voting`/apps 内のコンポーネント。 例えば、`/apps/social/components/hbs/voting` のように指定します。
 
   このリソースは、訪問者が投票を投稿したときに作成された UGC のリソースタイプを識別します。
 

@@ -8,7 +8,7 @@ content-type: reference
 exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
 source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '225'
 ht-degree: 7%
 
 ---
@@ -52,7 +52,7 @@ The `following` コンポーネントは、現在のメンバーをフォロー�
    <td>詳しくは、 <a href="socialgraph.md">ソーシャルグラフの使用</a></td>
   </tr>
   <tr>
-   <td><strong> <br /> プロパティ（オプション）</strong></td>
+   <td><strong> オプション<br /> プロパティ</strong></td>
    <td>
     <ul>
      <li>名前： <strong><code>outgoing</code></strong></li>

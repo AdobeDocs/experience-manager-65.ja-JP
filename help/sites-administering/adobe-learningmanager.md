@@ -7,8 +7,8 @@ content-type: reference
 docset: aem65
 exl-id: b325fc82-01e3-4122-8a86-ed605b135b01
 source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
-workflow-type: ht
-source-wordcount: '83'
+workflow-type: tm+mt
+source-wordcount: '80'
 ht-degree: 100%
 
 ---

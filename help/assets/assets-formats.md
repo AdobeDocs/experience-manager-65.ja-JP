@@ -8,8 +8,8 @@ feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 hide: true
 source-git-commit: c1878d6aadba9c795168459dbd5f09abfe0fc327
-workflow-type: ht
-source-wordcount: '1751'
+workflow-type: tm+mt
+source-wordcount: '1866'
 ht-degree: 100%
 
 ---

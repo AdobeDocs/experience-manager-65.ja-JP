@@ -9,8 +9,8 @@ docset: aem65
 exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
 source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
 workflow-type: tm+mt
-source-wordcount: '1602'
-ht-degree: 44%
+source-wordcount: '1601'
+ht-degree: 43%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 44%
 
 各テンプレートには、使用可能なコンポーネントが表示されます。
 
-* テンプレートは [コンポーネント](/help/sites-developing/components.md);
+* テンプレートは、 [コンポーネント](/help/sites-developing/components.md);
 * コンポーネントはウィジェットを使用し、ウィジェットにアクセスできます。ウィジェットはコンテンツのレンダリングに使用されます。
 
 >[!NOTE]
@@ -64,7 +64,7 @@ ht-degree: 44%
    <td>テンプレートの作成日。<br /> </td>
   </tr>
   <tr>
-   <td> jcr :description</td>
+   <td> jcr:description</td>
    <td> 文字列</td>
    <td>テンプレートの説明。<br /> </td>
   </tr>
@@ -111,16 +111,16 @@ ht-degree: 44%
 
 ### テンプレートの構造 {#the-structure-of-a-template}
 
-テンプレートは、タイプのノードの下に作成されます **cq:Template**.
+テンプレートは、タイプのノードの下に作成されます。 **cq:Template**.
 
 ![screen_shot_2012-02-13at63646pm](assets/screen_shot_2012-02-13at63646pm.png)
 
 特に、様々なプロパティを設定できます。
 
-* **jcr:title**  — テンプレートのタイトル。は、ページの作成時にダイアログに表示されます。
-* **jcr:description**  — テンプレートの説明。は、ページの作成時にダイアログに表示されます。
+* **jcr:title**  — テンプレートのタイトル。ページの作成時にダイアログに表示されます。
+* **jcr:description**  — テンプレートの説明。ページの作成時にダイアログに表示されます。
 
-このノードには、結果ページのコンテンツノードの基礎として使用される jcr:content(cq:PageContent) ノードが含まれます。これは、sling:resourceType を使用して、新しいページの実際のコンテンツのレンダリングに使用されるコンポーネントを参照します。
+このノードには、結果ページのコンテンツノードの基礎として使用される jcr:content(cq:PageContent) ノードが含まれます。このノードは、sling:resourceType を使用して、新しいページの実際のコンテンツのレンダリングに使用されるコンポーネントを参照します。
 
 ![screen_shot_2012-02-13at64010pm](assets/screen_shot_2012-02-13at64010pm.png)
 
@@ -154,9 +154,9 @@ AEMには、すぐに使用できる様々なデフォルトテンプレート�
 1. CRXDE Liteで、 **ツール** メニューとクリック **クエリ**.
 
 1. 「クエリ」タブで、
-1. 形式 **タイプ**&#x200B;を選択します。 **XPath**.
+1. As **タイプ**&#x200B;を選択します。 **XPath**.
 
-1. 内 **クエリ** 入力フィールドに次の文字列を入力します。//element(&#42;, cq:Template)
+1. Adobe Analytics の **クエリ** 入力フィールドに次の文字列を入力します。 //element(&#42;, cq:Template)
 
 1. クリック **実行**. 結果ボックスにリストが表示されます。
 
@@ -269,15 +269,15 @@ AEMのページテンプレートは、ページの作成に使用される単�
 
 既存のテンプレートに基づいてテンプレートを作成するには：
 
-1. 既存のテンプレート（できれば目的の定義にできるだけ近い定義を持つ）を新しいノードにコピーします。
+1. 既存のテンプレート（できれば、目的の定義にできるだけ近い定義を持つ）を新しいノードにコピーします。
 
-   テンプレートは、 **/apps/&lt;website-name>/templates/&lt;template-name>**.
+   テンプレートは、に保存されます。 **/apps/&lt;website-name>/templates/&lt;template-name>**.
 
    >[!NOTE]
    >
    >使用可能なテンプレートのリストは、新しいページの場所と、各テンプレートで指定されている配置制限によって異なります。 詳しくは、 [Template Availability](#templateavailibility).
 
-1. を **jcr:title** 新しい役割を反映する新しいテンプレートノードを作成します。 また、 **jcr:description** 必要に応じて。 ページの使用可能なテンプレートを必要に応じて変更してください。
+1. 次を変更： **jcr:title** 新しい役割を反映する新しいテンプレートノードを作成します。 また、 **jcr:description** 必要に応じて。 ページの使用可能なテンプレートを必要に応じて変更してください。
 
    >[!NOTE]
    >
@@ -285,7 +285,7 @@ AEMのページテンプレートは、ページの作成に使用される単�
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. テンプレートの基になるコンポーネントをコピーします ( これは **sling:resourceType** プロパティ **jcr:content** ノードを使用して ) インスタンスを作成します。
+1. テンプレートの基になるコンポーネントをコピーします ( これは、 **sling:resourceType** のプロパティ **jcr:content** ノードを使用して ) インスタンスを作成します。
 
    コンポーネントは、に格納されます。 **/apps/&lt;website-name>/components/&lt;component-name>**.
 
@@ -296,10 +296,10 @@ AEMのページテンプレートは、ページの作成に使用される単�
 
    >[!NOTE]
    >
-   >変更： **/apps/&lt;website>/templates/&lt;template-name>** ノードは、（選択リストのように）テンプレートインスタンスに影響を与えます。
+   >に対する変更 **/apps/&lt;website>/templates/&lt;template-name>** ノードは、（選択リストのように）テンプレートインスタンスに影響を与えます。
    >
    >
-   変更： **/apps/&lt;website>/components/&lt;component-name>** ノードは、テンプレートを使用する際に作成されるコンテンツページに影響を与えます。
+   に対する変更 **/apps/&lt;website>/components/&lt;component-name>** ノードは、テンプレートを使用する際に作成されるコンテンツページに影響を与えます。
 
    これで、新しいテンプレートを使用して、Web サイト内にページを作成できます。
 
@@ -316,6 +316,6 @@ AEMのページテンプレートは、ページの作成に使用される単�
 この例では、特定のコンテンツパスに対してテンプレートを使用する方法を示します。 ページ作成者がページの作成時に使用できるテンプレートは、 [Template Availability](/help/sites-developing/templates.md#template-availability).
 
 1. CRXDE Lite で、ページに使用するテンプレート（ニュースレターテンプレートなど）に移動します。
-1. を `allowedPaths` プロパティおよび使用する他のプロパティ [テンプレートの可用性](/help/sites-developing/templates.md#template-availability). 例えば `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` は、このテンプレートが `/content/geometrixx-outdoors` 以下の任意のパスで許可されることを意味します。
+1. 次を変更： `allowedPaths` プロパティおよび使用するその他のプロパティ [テンプレートの可用性](/help/sites-developing/templates.md#template-availability). 例えば `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` は、このテンプレートが `/content/geometrixx-outdoors` 以下の任意のパスで許可されることを意味します。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)

@@ -10,8 +10,8 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '6061'
-ht-degree: 98%
+source-wordcount: '5853'
+ht-degree: 97%
 
 ---
 
@@ -627,7 +627,7 @@ Lucene バイナリクリーンアップタスクには、**AEM／ツール／�
 
 ## カスタムメンテナンスタスク {#custom-maintenance-tasks}
 
-カスタムメンテナンスタスクは OSGi サービスとして実装できます。メンテナンスタスクのインフラストラクチャは Apache Sling のジョブ処理に基づいているので、メンテナンスタスクでは Java™ インターフェイス ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)` を実装する必要があります。さらに、以下に示すいくつかのサービス登録プロパティがメンテナンスタスクとして検出されることを宣言する必要があります。
+カスタムメンテナンスタスクは OSGi サービスとして実装できます。 メンテナンスタスクインフラストラクチャは Apache Sling のジョブ処理に基づいているので、メンテナンスタスクは Java™インターフェイスを実装する必要があります ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. さらに、次に示すように、メンテナンスタスクとして検出されるサービス登録プロパティを複数宣言する必要があります。
 
 <table>
  <tbody>

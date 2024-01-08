@@ -10,7 +10,7 @@ exl-id: dd32808e-b773-48a2-90e1-7a277d349493
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '1911'
-ht-degree: 84%
+ht-degree: 88%
 
 ---
 
@@ -185,8 +185,8 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、バーコードを含む PDF ドキュメントを保存するために使用されます。
    * コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `binaryData` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトを入力します。
 
 1. データを PDF フォームからデコード
@@ -224,9 +224,9 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 1. デコードされたデータを処理
 
    * コンストラクターを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列の値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `binaryData` データメンバー。
+   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 

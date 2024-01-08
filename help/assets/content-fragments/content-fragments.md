@@ -5,8 +5,8 @@ feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
-workflow-type: ht
-source-wordcount: '1972'
+workflow-type: tm+mt
+source-wordcount: '1966'
 ht-degree: 100%
 
 ---

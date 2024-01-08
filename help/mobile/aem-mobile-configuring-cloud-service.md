@@ -8,7 +8,7 @@ topic-tags: developing-adobe-phonegap-enterprise
 exl-id: d370d772-ef4d-4f38-826c-e90d07735822
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1254'
 ht-degree: 2%
 
 ---

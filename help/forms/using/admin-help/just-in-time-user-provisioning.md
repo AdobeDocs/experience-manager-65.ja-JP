@@ -9,7 +9,7 @@ exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
@@ -94,7 +94,7 @@ public Boolean assign(User user);
 
 1. 新しいドメインを保存します。
 
-## 舞台裏 {#behind-the-scenes}
+## 機能の仕組み {#behind-the-scenes}
 
 ユーザーがAEM forms にログインしようとしていて、認証プロバイダーがユーザーの資格情報を受け入れたとします。 ユーザーが User Management データベースにまだ存在しない場合、そのユーザーの ID チェックは失敗します。 AEM forms では、次のアクションが実行されるようになりました。
 

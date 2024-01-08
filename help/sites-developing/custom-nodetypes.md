@@ -8,7 +8,7 @@ content-type: reference
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
 source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1848'
 ht-degree: 75%
 
 ---
@@ -161,7 +161,7 @@ AEMでは、これらのノードタイプに加えて、様々なカスタム�
 * `@prop jcr:description` - このページの説明。
 * `@prop cq:template` - ページの作成に使用されるテンプレートへのパス。
 * `@prop cq:allowedTemplates`  — 許可されたテンプレートへのパスを決定するために使用される正規表現のリスト。
-* `@prop pageTitle` - `<title>` タグを使用します。
+* `@prop pageTitle`  — に表示されるタイトル `<title>` タグを使用します。
 * `@prop navTitle`  — ナビゲーションで使用されるタイトル。
 * `@prop hideInNav` - ナビゲーション内でこのページを非表示にするかを指定します。
 * `@prop onTime` - このページが有効になる時刻。
@@ -444,7 +444,7 @@ DAM アセットを表すサムネール。
 
 **説明**
 
-ノードタイプ `cq:attributes` は、ContentBusバージョンタグ用です。 このノードには一連のプロパティのみが含まれます。このうち、3 つは事前定義済みの「created」、「csd」および「timestamp」です。
+ノードタイプ `cq:attributes` は、ContentBusバージョンタグ用です。 このノードには一連のプロパティのみが含まれます。そのうち、3 つは事前に定義された「created」、「csd」および「timestamp」です。
 
 * `@prop created (long) mandatory copy` - バージョン情報の作成時のタイムスタンプ。通常は、以前のバージョンのチェックイン時またはページ作成時。
 * `@prop csd (string) mandatory copy` - csd 標準属性。ページノードの cq:csd プロパティのコピー。
@@ -485,7 +485,7 @@ DAM アセットを表すサムネール。
 
 ポールの設定。
 
-* `@prop source (String) mandatory`  — データソース URI。必須で、空にはできません。
+* `@prop source (String) mandatory`  — データソース URI。 必須で、空にはできません。
 * `@prop target (String)` - データソースから取得されたデータが保存されるターゲットの場所。オプションで、デフォルトは cq:PollConfig ノードです。
 * `@prop interval (Long)` - データソースから新しいデータまたは更新されたデータをポーリングする間隔（秒）。オプションで、デフォルトは 30 分（1800 秒）です。
 * [Adobe Experience Manager の Custom Data Importer Service の作成](https://helpx.adobe.com/jp/experience-manager/using/polling.html)
@@ -580,7 +580,7 @@ LiveSync mixin を定義します。ノードがプライマリソース（制�
 
 LiveSyncCancelled mixin を定義します。親の 1 つにより LiveRelationship に関与する可能性のあるライブコピー（制御）ノードの LiveSync 動作をキャンセルします。
 
-* `@prop cq:isCancelledForChildren` - LiveSync がキャンセルされるかどうかを定義します。子ども向けです。
+* `@prop cq:isCancelledForChildren` - LiveSync をキャンセルするかどうかを定義します。子に対しても同様です。
 
 **定義**
 

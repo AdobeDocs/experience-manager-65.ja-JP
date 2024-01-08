@@ -7,8 +7,8 @@ feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
 source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 100%
+source-wordcount: '340'
+ht-degree: 90%
 
 ---
 
@@ -67,10 +67,10 @@ ht-degree: 100%
 
 [!DNL Camera Raw] 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。[!DNL Camera Raw] 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
 
-## ベストプラクティス、既知の問題、および制限 {#best-practices}
+## ベストプラクティス、既知の問題および制限事項 {#best-practices}
 
 この機能には次の制限があります。
 
-* この機能は JPEG レンディションのみをサポートします。これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされます。
-* メタデータの書き戻しは、RAW および DNG 形式ではサポートされていません。
+* この機能は JPEG レンディションのみをサポートします。Windows 64 ビット、Mac OS、および RHEL 7.x でサポートされています。
+* RAW および DNG 形式では、メタデータの書き戻しはサポートされていません。
 * [!DNL Camera Raw] ライブラリには、一度に処理できる合計ピクセルに関する制限があります。現在、最初に検出された条件に応じて、ファイルの長辺で最大 65000 ピクセルまたは 512 MP を処理できます。

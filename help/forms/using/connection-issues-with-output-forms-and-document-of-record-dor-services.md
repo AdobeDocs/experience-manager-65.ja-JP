@@ -5,21 +5,21 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 role: Admin
-source-git-commit: cf5da092fabbc7834108dc54d65eb97e160984ce
+exl-id: bd58099c-08cd-4056-afb6-a5935454429a
+source-git-commit: 15d85c48727cfcb7cb1f9de4da5dad9df674c0bd
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 1%
 
 ---
 
-
 # Output サービス、Formsサービス、またはレコードのドキュメント (DoR) サービスを使用できません {#unable-to-use-output-service-forms-service-or-document-of-record-service}
 
-## イシュー
+## 問題
 
 AEM Forms 6.5 Service Pack 19 をインストールした後、Output サービス、Formsサービスまたはレコードのドキュメント (DoR) サービスを使用しようとすると、 `Connection to failed service` エラー。
 
-## ソリューション
+## 解決策
 
 問題を解決するには：
 

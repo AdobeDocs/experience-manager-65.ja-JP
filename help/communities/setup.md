@@ -9,7 +9,7 @@ exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
 source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
 workflow-type: tm+mt
 source-wordcount: '684'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -48,7 +48,7 @@ AEM Communitiesの場合、
 
 * [最新リリース](deploy-communities.md#latest-releases)
 
-## Analytics の設定 {#configure-analytics}
+## Analytics を設定 {#configure-analytics}
 
 条件 [Adobe Analyticsはコミュニティサイト用に設定されています](analytics.md)では、コミュニティメンバーのエクスペリエンスを向上させ、サイトの管理者にフィードバックを提供する、コミュニティアクティビティに関する情報を利用できます。
 

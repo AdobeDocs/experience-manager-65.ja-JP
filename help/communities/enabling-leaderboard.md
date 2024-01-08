@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 8b4d56d9-ba73-4eda-9773-3daaa9237abe
 source-git-commit: b8887b4a6f757352e9dbfdf074c10e9ccd6dbd4f
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 11%
+source-wordcount: '418'
+ht-degree: 3%
 
 ---
 
@@ -89,7 +89,7 @@ The `Leaderboard` コンポーネントを使用すると、獲得したポイ�
 
   （必須）表示するバッジを生成する特定のルール。
 
-* **最大表示数**
+* **表示の制限**
 
   1 ページに表示するメンバーの数。 初期設定は 10 です。
 
@@ -101,7 +101,7 @@ The `Leaderboard` コンポーネントを使用すると、獲得したポイ�
 
 * 「設定」タブ
 
-   * 表示名 = `Participation Board`
+   * 表示名= `Participation Board`
    *  `checked`：
 
       * バッジ
@@ -110,10 +110,10 @@ The `Leaderboard` コンポーネントを使用すると、獲得したポイ�
 
 * 「ルール」タブ
 
-   * ルールの場所 = `/content/sites/<site name>/jcr:content`
-   * スコアルール = `/libs/settings/community/scoring/rules/forums-scoring`
-   * バッジルール = `/libs/settings/community/badging/rules//reference-badging`
-   * 最大表示数 = `10`
+   * ルールの場所= `/content/sites/<site name>/jcr:content`
+   * スコアルール= `/libs/settings/community/scoring/rules/forums-scoring`
+   * バッジルール= `/libs/settings/community/badging/rules//reference-badging`
+   * 表示の制限= `10`
 
 ![参加者のリーダーボード](assets/participants-leaderboard.png)
 
@@ -125,7 +125,7 @@ The `Leaderboard` コンポーネントを使用すると、獲得したポイ�
 
 * 「設定」タブ
 
-   * 表示名 = `Expertise Board`
+   * 表示名= `Expertise Board`
    *  `checked`：
 
       * バッジ
@@ -133,10 +133,10 @@ The `Leaderboard` コンポーネントを使用すると、獲得したポイ�
 
 * 「ルール」タブ
 
-   * ルールの場所 = `/content/sites/<site name>/jcr:content`
-   * スコアルール = `/libs/settings/community/scoring/rules/adv-forums-scoring`
-   * バッジルール = `/libs/settings/community/badging/rules/adv-forums-badging`
-   * 最大表示数 = `10`
+   * ルールの場所= `/content/sites/<site name>/jcr:content`
+   * スコアルール= `/libs/settings/community/scoring/rules/adv-forums-scoring`
+   * バッジルール= `/libs/settings/community/badging/rules/adv-forums-badging`
+   * 表示の制限= `10`
 
 ![専門家のリーダーボード](assets/experts-leaderboard.png)
 

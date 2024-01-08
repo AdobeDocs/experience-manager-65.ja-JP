@@ -8,7 +8,7 @@ content-type: reference
 exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1158'
 ht-degree: 5%
 
 ---
@@ -107,7 +107,7 @@ The [Oak インデックスマネージャ](https://adobe-consulting-services.gi
 | isSpam | *ブール型* |
 | 読み取り | *ブール型* |
 | 影響 | *ブール型* |
-| attachments | *ブール型* |
+| 添付ファイル | *ブール型* |
 | 好感度 | *Long* |
 | フラグ付き | *ブール型* |
 | 追加済み | *日付* |
@@ -124,7 +124,7 @@ The [Oak インデックスマネージャ](https://adobe-consulting-services.gi
 | publishJobId | *文字列* |
 | 回答済み | *ブール型* |
 | chosensered | *ブール型* |
-| tag | *文字列* |
+| タグ | *文字列* |
 | cq:Tag | *文字列* |
 | author_display_name | *文字列* |
 | location_t | *文字列* |
@@ -145,10 +145,10 @@ Solr は、スキーマを使用するクエリ言語の例です。
 | **サフィックス** | **データタイプ** |
 |---|---|
 | _b | *ブール型* |
-| _dt | *Calendar* |
-| _d | *倍精度浮動小数点* |
+| _dt | *カレンダー* |
+| _d | *ダブル* |
 | _tl | *Long* |
-| _秒 | *文字列* |
+| _s | *文字列* |
 | _t | *テキスト* |
 
 **メモ：**
@@ -178,7 +178,7 @@ AND および OR 論理のフィルター構文は、次のように表現され
 
 フィルター演算子は次のとおりです。
 
-| EQ | equals |
+| EQ | が次の値と等しい |
 |---|---|
 | NE | 等しくない |
 | LT | より小さい |

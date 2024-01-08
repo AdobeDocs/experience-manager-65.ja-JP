@@ -10,8 +10,8 @@ exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
 source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 15%
+source-wordcount: '295'
+ht-degree: 13%
 
 ---
 

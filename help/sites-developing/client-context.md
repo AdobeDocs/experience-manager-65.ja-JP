@@ -1,6 +1,6 @@
 ---
 title: ClientContext の詳細
-description: ClientContext はユーザーデータを動的にまとめたコレクションを表します.
+description: ClientContext は、動的に組み立てられたユーザーデータのコレクションを表します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
@@ -10,7 +10,7 @@ feature: Context Hub
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
 source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
 workflow-type: tm+mt
-source-wordcount: '3000'
+source-wordcount: '2969'
 ht-degree: 90%
 
 ---

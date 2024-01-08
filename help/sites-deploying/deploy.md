@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 56%
+source-wordcount: '1792'
+ht-degree: 52%
 
 ---
 
@@ -73,18 +73,18 @@ Adobe Experience Managerは、商用 Web サイトや関連サービスを構築
 * **Web サイト**
 * **モバイルアプリケーション**
 * **デジタルパブリケーション**
-* **フォームとドキュメント**
+* **Forms &amp; Documents**
 * **デジタルアセット**
 * **Communities**
 * **オンライン取引**
 
 最後に、ユーザーはこれらのインフラストラクチャレベルおよびアプリケーションレベルの構築ブロックを使用して、独自のアプリケーションを構築することで、カスタマイズされたソリューションを作成できます。
 
-AEM サーバーは **Java ベース**&#x200B;であり、Java プラットフォームをサポートするほとんどのオペレーティングシステムで動作します。クライアントと AEM とのやり取りはすべて、**web ブラウザー**&#x200B;経由で行われます。
+AEMサーバーは **Java ベース** およびは、そのプラットフォームをサポートするほとんどのオペレーティングシステムで動作します。 クライアントとAEMとのやり取りはすべて、 **web ブラウザー**.
 
 >[!NOTE]
 >
->アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブForms機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Formsの有効なライセンスを取得する必要があります。
+>アダプティブFormsの機能 (AEM 6.5 QuickStart で使用可能 ) は、調査と評価の目的でのみ設計されています。 アダプティブフォームの機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
 
 ### 典型的なデプロイメントシナリオ {#typical-deployment-scenarios}
 
@@ -141,7 +141,7 @@ Cloud Manager とそのリソースについて詳しくは、 [**Cloud Manager 
 
 ### ソフトウェアの入手 {#getting-the-software}
 
-メンテナンスおよびサポートの有効な契約を持つお客様には、コードが記載されているメール通知が届き、[**アドビの Licensing Web サイト**](https://licensing.adobe.com/)から AEM をダウンロードできます。ビジネスパートナーは、[**spphelp@adobe.com**](mailto:spphelp@adobe.com) 宛てにダウンロードアクセスを要求できます。
+有効なメンテナンスおよびサポート契約を締結しているお客様には、コードが記載された電子メール通知が届き、AEMを [**Adobeライセンス Web サイト**](https://licensing.adobe.com/). ビジネスパートナーは、からのダウンロードアクセスをリクエストできます。 [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
 AEMソフトウェアパッケージは、次の 2 つの形式で使用できます。
 
@@ -149,7 +149,7 @@ AEMソフトウェアパッケージは、次の 2 つの形式で使用でき�
 
 * **cq-quickstart-6.5.0.war：**&#x200B;サードパーティのアプリケーションサーバーにデプロイするための *war* ファイル。
 
-次の節では、**スタンドアロンインストール**&#x200B;について説明します。アプリケーションサーバーへの AEM のインストールについて詳しくは、[アプリケーションサーバーのインストール](/help/sites-deploying/application-server-install.md) を参照してください。
+次の節では、 **スタンドアロンインストール**. アプリケーションサーバーへのAEMのインストールについて詳しくは、 [アプリケーションサーバーのインストール](/help/sites-deploying/application-server-install.md).
 
 ### デフォルトのローカルインストール {#default-local-install}
 

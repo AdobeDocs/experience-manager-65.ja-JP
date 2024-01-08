@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
 source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 3%
+source-wordcount: '932'
+ht-degree: 2%
 
 ---
 
@@ -111,7 +111,7 @@ slinglog ファイルを簡単にセットアップするには：
 
    * ログファイルの場所は &lt; です。*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * 例：`.../crx-quickstart/logs/scoring-debug.log`
+   * 例えば、`.../crx-quickstart/logs/scoring-debug.log` のように指定します。
 
 ![scoring-log](assets/scoring-log.png)
 

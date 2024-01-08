@@ -19,7 +19,7 @@ ht-degree: 87%
 
 以下の手順を実行する前に、CRX リポジトリのバックアップを取ります。
 
-## ソリューション {#solution}
+## 解決策 {#solution}
 
 1. `https://[AEM Forms Server]:[port]/system/console/bundles` にアクセスします。
 

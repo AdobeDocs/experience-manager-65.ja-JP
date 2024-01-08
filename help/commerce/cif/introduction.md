@@ -5,7 +5,7 @@ thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '850'
 ht-degree: 98%
 
 ---

@@ -9,8 +9,8 @@ role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '1530'
-ht-degree: 68%
+source-wordcount: '1528'
+ht-degree: 56%
 
 ---
 
@@ -20,35 +20,35 @@ ht-degree: 68%
 
 Forms サービスでは、次のクイックスタートを利用できます。
 
-[クイックスタート（SOAP モード）：Java を使用したインタラクティブ PDF フォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用したインタラクティブPDFフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使ったクライアントでのフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用してクライアントでフォームをレンダリングする](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用したフラグメントベースのフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用してフラグメントに基づいてフォームをレンダリングする](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した権限が有効なフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用した、権限が有効なフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した HTML フォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用したHTMLフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した、カスタムツールバーでの HTML フォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用して、カスタムHTMLーでツールバーフォームをレンダリングする](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用して、XML として送信された PDF Forms の処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用して XML として送信されたPDF formsの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用して、PDF として送信された PDF フォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[クイックスタート（SOAP モード）: Java を使用して、PDFとして送信されたPDF formsの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用して、XML として送信された HTML フォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用して、XML として送信されたHTMLフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した、送信済み XML データを含む PDF ドキュメントの作成](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用して、送信済み XML データを使用したPDFドキュメントを作成します](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した、編集可能なレイアウトを含む Forms の事前入力](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[クイックスタート（SOAP モード）: Java を使用して、Formsに編集可能なレイアウトを自動入力する](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した、計算スクリプトを含むフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用した計算スクリプトを含むフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用したパフォーマンスの最適化](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用したパフォーマンスの最適化](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した値によるレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用した値によるレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java を使用した、Forms サービスへのドキュメントの受け渡し](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[クイックスタート（SOAP モード）:Java を使用してForms Service にドキュメントを渡す](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 Forms Service API を使用するアプリケーションロジックは Java™サーブレットとして実装されています。 AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 

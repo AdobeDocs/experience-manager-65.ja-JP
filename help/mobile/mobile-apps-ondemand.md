@@ -8,7 +8,7 @@ topic-tags: authoring-on-demand-services-app
 exl-id: 357e75f8-2c98-4377-afef-016d58505b4d
 source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '270'
 ht-degree: 8%
 
 ---
@@ -31,18 +31,18 @@ ht-degree: 8%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-An ***AEM オーサー* ( または *マーケター*)**は、カスタム開発または標準提供のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこないます。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Experience Cloudとの統合を含む、リッチで関連性の高いエクスペリエンスを作成します。
+An ***AEM Author* ( または *マーケター*)**は、カスタム開発または標準提供のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこないます。 AEMの組み込みコンテンツエディターは、 *AEM Authors* ：アプリ内で、他のAdobe Experience Cloudとの統合を含む、リッチで関連性の高いエクスペリエンスを作成します。
 
 AEMの作成者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを実行します。
 
-**AEM Mobile On-demand Servicesアプリ用AEMコンテンツのオーサリング** には次の操作が含まれます。
+**AEM Mobile On-demand Servicesアプリ用のAEMコンテンツのオーサリング** には次のアクションが含まれます。
 
 * [AEM Mobile アプリケーションのダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [アプリケーションの作成および設定アクション](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [クラウド設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-詳しくは、 **コンテンツサービス**&#x200B;を参照してください。 [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md) をクリックして開始します。
+詳しくは、以下を参照してください。 **コンテンツサービス**&#x200B;を参照してください。 [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md) をクリックして開始します。
 
 >[!NOTE]
 >

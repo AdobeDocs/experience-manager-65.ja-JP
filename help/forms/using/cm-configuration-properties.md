@@ -7,8 +7,8 @@ topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
 source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
-workflow-type: ht
-source-wordcount: '845'
+workflow-type: tm+mt
+source-wordcount: '846'
 ht-degree: 100%
 
 ---

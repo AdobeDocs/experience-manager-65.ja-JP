@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 2a4297e4-2d88-4fa6-8fea-3fea06753605
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 9%
+source-wordcount: '343'
+ht-degree: 5%
 
 ---
 
@@ -63,7 +63,7 @@ The `Community Activity List` コンポーネントを使用すると、メン�
 
   デフォルトは `Members` です。
 
-* **表示タイトル**
+* **タイトルを表示**
 
   データの上に表示する説明的なタイトル（例： ） `Trending Content`.
 初期設定ではタイトルはありません。
