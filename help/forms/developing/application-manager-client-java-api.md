@@ -248,7 +248,7 @@ public class ExportLCA_SOAP {
 
 >[!NOTE]
 >
-Java™ API importApplication() は、同じ名前の既存のアプリケーションをより新しいアプリケーションに置き換えます。既存のアプリケーションを更新するには、API updateApplication() の代わりに API importApplication() を使用します。
+>Java™ API importApplication() は、同じ名前の既存のアプリケーションをより新しいアプリケーションに置き換えます。既存のアプリケーションを更新するには、API updateApplication() の代わりに API importApplication() を使用します。
 
 ```java
 /*
