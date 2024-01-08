@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 13%
+source-wordcount: '601'
+ht-degree: 7%
 
 ---
 
@@ -39,7 +39,7 @@ Dispatcher のキャッシュをサポートするように設定した場合、
 
 ### 要件 {#requirements}
 
-* Dispatcher バージョン 4.1.2 以降 ( [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en) （最新バージョンの場合）
+* Dispatcher バージョン 4.1.2 以降 ( [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja) （最新バージョンの場合）
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
@@ -59,7 +59,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
   ![dispatcher](assets/dispatcher.png)
 
 * **フィルターパターン**
-  *（必須）* コミュニティページへの 1 つ以上のパス。 例：`/content/sites/engage/(.*)`
+  *（必須）* コミュニティページへの 1 つ以上のパス。 例：`/content/sites/engage/(.*)`。
 
 * **Cache-Control の最大経過時間**
   *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 値は 0 より大きい値にする必要があります。
@@ -76,7 +76,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 
 関連トピック：
 
-* [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja)
+* [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)
 
 >[!NOTE]
 >

@@ -6,10 +6,10 @@ content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 68%
+source-wordcount: '471'
+ht-degree: 78%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 68%
 
 ## 概要 {#overview}
 
-JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) と [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) フレームワーク（それ自体が [Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)に依存）に基づいています。
+JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) と [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) フレームワーク（それ自体が [Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)に依存）に基づいています。
 
-つまり、JSON を書き出す必要がある場合、コンポーネントに Sling モデルが必要です。 したがって、次の 2 つの手順に従って、任意のコンポーネントで JSON 書き出しを有効にします。
+つまり、JSON を書き出す必要がある場合、コンポーネントには Sling Model が必要です。したがって、次の 2 つの手順に従って、任意のコンポーネントで JSON 書き出しを有効にします。
 
 * [コンポーネントに Sling Model を定義する](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Sling Model インターフェイスに注釈を付ける](#annotate-the-sling-model-interface)
@@ -48,7 +48,7 @@ Sling Model の実装クラスに次のような注釈を付ける必要があ�
 
 >[!NOTE]
 >
->Jackson 注釈は、Sling Model クラスレベルではなく、Model インターフェイスレベルで指定されています。 これは、JSON 書き出しがコンポーネント API の一部と見なされるようにするためです。
+>Jackson 注釈は、Sling Model クラスレベルではなく、Model インターフェイスレベルで指定されています。 これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ JSON エクスポーターフレームワークで認識されるようにする
 
 対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
-モデルインターフェイスに適切に注釈を付け、シリアル化するメソッドを定義する必要があります。 デフォルトでは、ゲッターの通常の命名規則に従うすべてのメソッドがシリアル化され、JSON プロパティ名はゲッター名から自然に派生します。 これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
+シリアル化されるメソッドを定義するためには、モデルインターフェイスに適切に注釈を付ける必要があります。デフォルトでは、ゲッターの通常の命名規則に従うすべてのメソッドがシリアル化され、JSON プロパティ名はゲッター名から自然に派生します。 これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 
 ## 例 {#example}
 
@@ -87,7 +87,7 @@ GitHub のコード
 
 ## 関連ドキュメント {#related-documentation}
 
-詳しくは、次を参照してください。
+詳しくは、以下を参照してください。
 
 * [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/jp/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 

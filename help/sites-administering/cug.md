@@ -7,10 +7,10 @@ topic-tags: Security
 content-type: reference
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 66%
+source-wordcount: '706'
+ht-degree: 64%
 
 ---
 
@@ -116,11 +116,11 @@ Dispatcher を使用している場合は、次のプロパティを持つ Dispa
 
 * [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#identifying-virtual-hosts-virtualhosts):CUG が適用されるページのパスに一致します。
 * \sessionmanagement：以下を参照してください。
-* [キャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache):CUG が適用されるファイル専用のキャッシュディレクトリ。
+* [キャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache):CUG が適用されるファイル専用のキャッシュディレクトリ。
 
 ### CUG 用の Dispatcher セッション管理の設定 {#configuring-dispatcher-session-management-for-cugs}
 
-[dispatcher.any ファイルのセッション管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement)を CUG 用に設定します。CUG ページへのアクセスがリクエストされる際に使用される認証ハンドラーで、セッション管理の設定方法を指定します。
+[dispatcher.any ファイルのセッション管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)を CUG 用に設定します。CUG ページへのアクセスがリクエストされる際に使用される認証ハンドラーで、セッション管理の設定方法を指定します。
 
 ```xml
 /sessionmanagement
@@ -134,7 +134,7 @@ Dispatcher を使用している場合は、次のプロパティを持つ Dispa
 >Dispatcher ファームでセッション管理が有効になっている場合、ファームが処理するすべてのページはキャッシュされません。CUG の外にあるページをキャッシュするには、CUG 以外のページを処理する 2 つ目のファームを dispatcher.any に
 >作成します。
 
-1. `/directory` を定義して [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement) を設定します。次に例を示します。
+1. `/directory` を定義して [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) を設定します。次に例を示します。
 
    ```xml
    /sessionmanagement

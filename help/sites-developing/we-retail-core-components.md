@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 34%
@@ -17,7 +17,7 @@ ht-degree: 34%
 
 コアコンポーネントは、拡張が容易な最新の柔軟なコンポーネントで、プロジェクトに簡単に統合できます。 コアコンポーネントは、HTL、すぐに使用できる操作性、設定性、バージョン管理、拡張機能など、いくつかの主要なデザイン原則に基づいて構築されています。 We.Retail は、コアコンポーネントを基に構築されています。
 
-## 試す {#trying-it-out}
+## 試してみる {#trying-it-out}
 
 1. We.Retail サンプルコンテンツでAdobe Experience Manager(AEM) を起動し、 [コンポーネントコンソール](/help/sites-authoring/default-components-console.md).
 

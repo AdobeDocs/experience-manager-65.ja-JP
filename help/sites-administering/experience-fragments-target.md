@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 62%
@@ -156,7 +156,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
    >[!NOTE]
    >
-   >エクスペリエンスフラグメントが既に書き出されている場合は、**Adobe Target でアップデート** を選択します。
+   >エクスペリエンスフラグメントが既に書き出されている場合は、「**Adobe Target でアップデート**」を選択します。
 
 1. クリック **公開せずに書き出し** または **公開** 必要に応じて。
 
@@ -182,7 +182,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
 ## Adobe Target でのエクスペリエンスフラグメントの使用 {#using-your-experience-fragments-in-adobe-target}
 
-上記のタスクを実行すると、エクスペリエンスフラグメントがAdobe Targetのオファーページに表示されます。 以下を見る： [特定の Target ドキュメント](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=ja) そこで何を達成できるかを学ぶために
+上記のタスクを実行すると、エクスペリエンスフラグメントがAdobe Targetのオファーページに表示されます。 以下を見る： [特定の Target ドキュメント](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html) そこで何を達成できるかを学ぶために
 
 >[!NOTE]
 >

@@ -2,7 +2,7 @@
 title: キャッシュとパフォーマンス
 description: GraphQL とコンテンツキャッシュを有効にしてコマース実装のパフォーマンス最適化に利用できる様々な設定について説明します。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 89%

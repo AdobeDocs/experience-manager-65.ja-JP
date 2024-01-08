@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '6469'
 ht-degree: 99%
@@ -22,7 +22,7 @@ ht-degree: 99%
 >
 >パフォーマンスに関する問題のトラブルシューティングと修正について詳しくは、[パフォーマンスツリー](/help/sites-deploying/performance-tree.md)も参照してください。
 >
->さらに、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)に関するナレッジベース記事を参照することもできます。
+>さらに、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)に関するナレッジベース記事を参照することもできます。
 
 Web サイトが訪問者の要求に応答するまでにどの程度の時間がかかるかは、非常に重要な問題です。応答時間は個々の要求によって異なりますが、平均的なターゲット時間の値を定義することはできます。この値が達成可能で維持可能であることが判明したら、それを使用して、web サイトのパフォーマンスを監視し、潜在的な問題が発生しつつあるときにそれを示すことができます。
 
@@ -39,7 +39,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 >[!NOTE]
 >
 >* パフォーマンス最適化のための設定が完了したら、[Tough Day](/help/sites-developing/tough-day.md) の手順に従って、高負荷の環境をテストしてください。
->* [パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)も参照してください。
+>* [パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)も参照してください。
 
 ## パフォーマンスの最適化方法 {#performance-optimization-methodology}
 
@@ -201,7 +201,7 @@ JVM および OS レベルの調整は、通常、大幅なパフォーマンス
 
 >[!NOTE]
 >
->[パフォーマンスの最適化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)を参照してください。
+>[パフォーマンスの最適化](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)を参照してください。
 
 ### 検索インデックスの作成 {#search-indexing}
 
@@ -492,7 +492,7 @@ Dispatcher には、web サイトで活用するとパフォーマンスが最�
 >
 >通常、多くのキャッシュ戦略は適切な URL の選択を含んでおり、この追加データには依存しないことです。
 >
->Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュすることもできます。[HTTP 応答ヘッダーのキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache)を参照してください。
+>Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュすることもできます。[HTTP 応答ヘッダーのキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)を参照してください。
 >
 
 ### Dispatcher のキャッシュ率の計算 {#calculating-the-dispatcher-cache-ratio}
@@ -528,7 +528,7 @@ Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュ�
 
 #### URL パラメーターの使用回避 {#avoid-url-parameters}
 
-可能な限り、キャッシュするページの URL パラメーターは使用しないでください。例えば、ピクチャーギャラリーがある場合、次の URL はキャッシュされません（Dispatcher が [適切に設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache)されている場合を除く）。
+可能な限り、キャッシュするページの URL パラメーターは使用しないでください。例えば、ピクチャーギャラリーがある場合、次の URL はキャッシュされません（Dispatcher が [適切に設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)されている場合を除く）。
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -618,7 +618,7 @@ www.myCompany.com/news/main.large.html
 
 #### スティッキー接続 {#sticky-connections}
 
-[スティッキー接続](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#the-benefits-of-load-balancing)を使用すると、1 人のユーザー用のドキュメントがすべて同じサーバーで作成されるようになります。ユーザーがそのフォルダーを離れて後から戻ってきた場合も、この接続は維持されます。Web サイトのスティッキー接続に必要なすべてのドキュメントを保持するには、フォルダーを 1 つ定義します。他のドキュメントを中に含めないようにしてください。このシナリオでは、パーソナライズされたページとセッションデータを使用する場合に、ロードバランシングに影響が生じます。
+[スティッキー接続](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)を使用すると、1 人のユーザー用のドキュメントがすべて同じサーバーで作成されるようになります。ユーザーがそのフォルダーを離れて後から戻ってきた場合も、この接続は維持されます。Web サイトのスティッキー接続に必要なすべてのドキュメントを保持するには、フォルダーを 1 つ定義します。他のドキュメントを中に含めないようにしてください。このシナリオでは、パーソナライズされたページとセッションデータを使用する場合に、ロードバランシングに影響が生じます。
 
 #### MIME タイプ {#mime-types}
 

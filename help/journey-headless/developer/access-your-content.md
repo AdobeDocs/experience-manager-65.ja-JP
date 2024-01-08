@@ -2,7 +2,7 @@
 title: AEM Delivery API を使用してコンテンツにアクセスする方法
 description: AEM ヘッドレスデベロッパージャーニーのこのパートでは、GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスする方法を説明します。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 98%
@@ -133,7 +133,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 * コンテンツフラグメントモデルの定義時に使用できる特定のデータタイプです。
 * 特定のコンテンツフラグメントモデルに依存する別のフラグメントを参照します。
-* 構造化データを作成したあと取得できます。
+* 構造化データを作成し、取得できます。
 
    * **マルチフィード**&#x200B;として定義した場合、複数のサブフラグメントをプライムフラグメントで参照（取得）できます。
 

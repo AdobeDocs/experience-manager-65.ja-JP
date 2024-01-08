@@ -2,10 +2,10 @@
 title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 68%
+source-wordcount: '520'
+ht-degree: 83%
 
 ---
 
@@ -19,15 +19,15 @@ App Builder は、Adobe Experience Manager を拡張したカスタムエクス�
 
 App Builder を使用すると、次のような様々なユースケースで Adobe Experience Manager を容易に拡張できます。
 
-* ミドルウェア拡張機能 — 外部システムとAdobeアプリケーションとを接続し、カスタムコネクタを構築するか、事前に構築された統合のスイートを使用します。
+* ミドルウェア拡張 - カスタムコネクタを構築するか、事前に構築された統合のスイートを活用して、外部システムとアドビアプリケーションを接続します。
 * コアサービス拡張 - カスタム機能およびビジネスロジックを使用してデフォルトの動作を拡張することで、コアアプリケーション機能を拡張します。
 * ユーザーエクスペリエンス拡張 - コアエクスペリエンスを拡張してビジネス要件をサポートするか、顧客固有のデジタルプロパティ、ストアフロントおよびバックオフィスアプリを構築します。
 
-2020 年夏以降、App Builder は、Adobeの開発者プレビューを通じて、エンタープライズの顧客やパートナーが使用できるようになりました。 App Builder の一般リリース（GA）は 2021年12月に予定されています。Adobeは、Adobeの [体験版プログラム](https://developer.adobe.com/app-builder/trial/).
+Application Builder は、2020 年夏以降、アドビのデベロッパープレビューを通じて、法人のお客様やパートナーが利用できるようになりました。App Builder の一般リリース（GA）は 2021年12月に予定されています。Adobeは、Adobeの [体験版プログラム](https://developer.adobe.com/app-builder/trial/).
 
 >[!NOTE]
 >
->AEM as a Cloud Serviceのお客様が App Builder を使用する場合は、 [Adobe Developer App Builder を使用したAdobe Experience Manager as a Cloud Serviceの拡張](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html?lang=en).
+>AEM as a Cloud Serviceのお客様が App Builder を使用する場合は、 [Adobe Developer App Builder を使用したAdobe Experience Manager as a Cloud Serviceの拡張](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html?lang=ja).
 
 ## アーキテクチャ {#architecture}
 
@@ -35,10 +35,10 @@ App Builder を使用すると、次のような様々なユースケースで A
 
 * アドビ開発者コンソール - カスタムマイクロサービスおよび拡張機能の開発の場合、開発者は、プラグインや統合の作成に必要なすべてのツールと API にアクセスしながら、プロジェクトを構築および管理できます。
 * 開発者ツール - 開発者がカスタムの拡張機能や統合を容易に構築できるオープンソースのツール、SDK およびライブラリです。React Spectrum(Adobeの UI ツールキット ) を使用して、すべてのAdobeアプリに共通の UI を 1 つ用意します。
-* サービス —Adobeのサーバレスプラットフォーム上のインフラストラクチャをホスティングするための I/O Runtime、およびイベントベースの統合のための I/O イベント。 Adobeには、データとファイルの保存に関する標準のサポートも用意されています。
+* サービス - アドビのサーバーレスプラットフォーム上でインフラストラクチャをホスティングするための I/O Runtime や、イベントベースの統合のための I/O Events があります。また、データやファイルの保存も標準でサポートされています。
 * Adobe Experience Cloud - 開発者は、拡張機能や統合を送信して Experience Cloud 組織内で公開できます。その後、システム管理者がこれらの拡張機能を審査、管理および承認できます。App Builder のカスタム拡張機能およびツールは、公開されると、他の Adobe Experience Cloud アプリと一緒に表示されます。
 
-次の図は、App Builder 上に構築された標準アプリケーションがこれらの機能をどのように使用するかを示しています。
+次の図は、Application Builder 上で構築された標準アプリケーションでこれらの機能がどのように利用されているかを示しています。
 
 ![アーキテクチャ](assets/appbuilder-architecture.jpg)
 

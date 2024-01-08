@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '2959'
 ht-degree: 97%
@@ -108,11 +108,11 @@ Web コンソールへのアクセスに使用するパスワードを変更し�
 
 >[!NOTE]
 >
->詳しくは、[カスタムスクリプトまたはエラーハンドラーの作成方法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=ja)を参照してください。
+>詳しくは、[カスタムスクリプトまたはエラーハンドラーの作成方法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html)を参照してください。
 
 ### Dispatcher のセキュリティチェックリストの完了 {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher はインフラストラクチャの重要な部分です。[Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja)を確認することをお勧めします。
+AEM Dispatcher はインフラストラクチャの重要な部分です。[Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)を確認することをお勧めします。
 
 >[!CAUTION]
 >

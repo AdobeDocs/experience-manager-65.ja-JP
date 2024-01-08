@@ -7,7 +7,7 @@ topic-tags: platform
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 98%
@@ -116,7 +116,7 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >次のリソースを参照してください。
 >
 >* Red Hat® Linux® 上の Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
-* Linux® のチューニングのヒントについて詳しくは、こちらの[記事](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)を参照してください。
+* Linux® のチューニングのヒントについて詳しくは、こちらの[記事](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)を参照してください。
 >
 
 ## リポジトリのメンテナンス {#maintaining-the-repository}

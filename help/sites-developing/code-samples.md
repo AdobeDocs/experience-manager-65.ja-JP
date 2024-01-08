@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 29%
+source-wordcount: '140'
+ht-degree: 22%
 
 ---
 
@@ -21,7 +21,7 @@ AEMを初めて使用する開発者向けに設計された、次のような�
 
 独自の機能を開発するための出発点としてAEMプロジェクトを作成する Maven テンプレートを使用できます [ここ](https://github.com/adobe/aem-project-archetype).
 
-標準のタッチ操作対応 UI のコードサンプルを利用できます [ここ](/help/sites-developing/developing-components.md).
+標準のタッチ操作対応 UI のコードサンプルを利用できます。 [ここ](/help/sites-developing/developing-components.md).
 
 >[!NOTE]
 >

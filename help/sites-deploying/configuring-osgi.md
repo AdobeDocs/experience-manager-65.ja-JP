@@ -7,10 +7,10 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1954'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -52,9 +52,9 @@ OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネ�
 使用するメソッドに関わらず、次のことが可能です。
 
 * リポジトリのコンテンツをコピーまたはレプリケートすることにより、同一の設定を再作成できます。
-* セキュリティまたはその他の更新のために、FileVault または Subversion に設定をチェックアウトできます。
+* セキュリティや追加の更新のために、FileVault または Subversion に設定をチェックアウトできます。
 * パッケージとして保存し、他のインスタンスを設定する際に使用できます。
-* スクリプトを使用して設定のロールアウトを実行し、設定の詳細を反映できます。
+* スクリプトを使用して設定の詳細を反映させることにより、設定のロールアウトを実行できます。
 
 >[!NOTE]
 >
@@ -121,9 +121,9 @@ Web コンソールで行った設定変更は、設定ファイル（`.config`�
 
 >[!NOTE]
 >
->設定ファイルの形式は固有です。詳しくは、 Sling Apache のドキュメントを参照してください。
->* ～の詳細 [Apache Sling Provisioning Model と Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
->* のチュートリアルと例 [Sling でのリソースとプロパティの取得](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
+>設定ファイルは特殊な形式になっています。次について詳しくは、Sling Apache のドキュメントを参照してください。
+>* [Apache Sling Provisioning Model と Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) に関する詳細。
+>* [Sling でのリソースとプロパティの取得](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html)に関するチュートリアルと例。
 >
 >そのため、実際の変更は web コンソールを使用して行い、設定ファイルが作成、維持されるようにすることをお勧めします。
 
@@ -172,7 +172,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 >[!NOTE]
 >
->[特定のインスタンスのためだけにリポジトリベースの設定を定義する方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=ja)も参照してください。
+>[特定のインスタンスのためだけにリポジトリベースの設定を定義する方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html)も参照してください。
 
 ### リポジトリへの新しい設定の追加 {#adding-a-new-configuration-to-the-repository}
 

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1613'
 ht-degree: 98%
@@ -38,7 +38,7 @@ LDAP と AEM を連携するには、次の 3 つの OSGi 設定を作成する�
 
 >[!NOTE]
 >
->External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=ja)をご覧ください。
+>External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html)をご覧ください。
 >
 >Apache DS を使用した Experience Manager の設定例については、[Apache Directory Service を使用するための Adobe Experience Manager 6.5 の設定](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)を参照してください。
 

@@ -7,10 +7,10 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3186'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 96%
 >[!NOTE]
 >
 >次のチュートリアルは、新しいプロジェクトで編集可能なページテンプレートを設定する場合にも役立つ場合があります。
->[AEM Sites の概要（パート 2）- ベースページとテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=ja)
+>[AEM Sites の概要（パート 2）- ベースページとテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html)
 
 ## 新しいテンプレートの作成 {#creating-a-new-template}
 
@@ -73,7 +73,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
       * `We.Retail` サンプルコンテンツ外のカスタムフォルダーにテンプレートを作成する場合は、基盤コンポーネントを選択するか、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を使用できます。
 
    * ページ作成者がコンポーネントを追加または削除するには、テンプレートに段落システムを追加する必要があります。
-   * コンポーネントのロックを解除（再度ロックできます）して、初期コンテンツを定義できます。
+   * コンポーネントのロックを解除したり、再度ロックしたりして、初期コンテンツを定義することができます。
 
    テンプレート作成者が構造を定義する方法について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
 
@@ -215,7 +215,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 ### 設定ブラウザーの使用 {#using-the-configuration-browser}
 
-1. に移動します。 **グローバルナビゲーション** > **ツール** > **設定ブラウザー**.
+1. **グローバルナビゲーション**／**ツール**／**設定ブラウザー**&#x200B;に移動します。
 
    **グローバル**&#x200B;フォルダーを含めた既存のフォルダーは左側に一覧表示されます。
 
@@ -374,7 +374,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
    * テンプレートタイプがコピーされて、テンプレートが作成されます。
    * コピー後のテンプレートとテンプレートタイプとの関連付けは、情報を取得するだけの静的参照のみとなります。
 
-* テンプレートタイプを使用して、次の項目を定義できます。
+* テンプレートタイプを使用すると、以下の項目を定義できます。
 
    * ページコンポーネントのリソースタイプ。
    * ルートノードのポリシー。テンプレートエディターで許可されるコンポーネントを定義します。
@@ -398,7 +398,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
 
 * `/apps/settings/wcm/template-types`
 
-カスタマイズしたテンプレートタイプの定義は、ユーザー定義フォルダー（推奨）または `global` フォルダーに保存してください。次に例を示します。
+カスタマイズしたテンプレートタイプの定義は、ユーザー定義フォルダー（推奨）または `global` フォルダーに保存してください。例：
 
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/template-types`
 * `/conf/<my-folder>/settings/wcm/template-types`
@@ -447,7 +447,7 @@ GitHub のコード
 
 ## テンプレート定義 {#template-definitions}
 
-編集可能テンプレートの定義は、[ユーザー定義フォルダー](/help/sites-developing/page-templates-editable.md#template-folders)（推奨）または `global` フォルダーに格納されます。次に例を示します。
+編集可能テンプレートの定義は、[ユーザー定義フォルダー](/help/sites-developing/page-templates-editable.md#template-folders)（推奨）または `global` フォルダーに格納されます。例：
 
 * `/conf/<my-folder>/settings/wcm/templates`
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/templates`
@@ -565,7 +565,7 @@ GitHub のコード
 
 ### ページポリシー {#page-policies}
 
-ページポリシーを使用すると、 [コンテンツポリシー](#content-policies) （メイン parsys）ページの場合は、テンプレートまたは結果ページのいずれかで使用します。
+ページポリシーを使用すると、テンプレートまたは作成されるページで、ページ（メインの parsys）の[コンテンツポリシー](#content-policies)を定義できます。
 
 ### 使用するテンプレートの有効化と許可 {#enabling-and-allowing-a-template-for-use}
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1088'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 4</strong></td>
    <td>要求の送信元は Dispatcher ですか。</td>
-   <td><p>リクエストが適切にキャッシュされているかどうかを確認するには、<a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#debugging">Dispatcher のデバッグドキュメント</a>を確認してください。<br /> </p> </td>
+   <td><p>リクエストが適切にキャッシュされているかどうかを確認するには、<a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#debugging">Dispatcher のデバッグドキュメント</a>を確認してください。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>手順 5</strong></td>
@@ -225,12 +225,12 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 31</strong></td>
    <td>Dispatcher の前で CDN を使用します</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#using-dispatcher-with-a-cdn">CDN での Dispatcher の使用</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">CDN での Dispatcher の使用</a><br /> </td>
   </tr>
   <tr>
    <td><strong>手順 32</strong></td>
    <td>AEM サーバーのオフロードを行うには、Dispatcher レベルでセッション管理を使用します</td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement">セキュアセッションの有効化</a></p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">セキュアセッションの有効化</a></p> </td>
   </tr>
   <tr>
    <td><strong>手順 33</strong></td>
@@ -238,7 +238,7 @@ ht-degree: 100%
    <td>
     <ol>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja">一般的な Dispatcher 設定</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache">Dispatcher キャッシュの設定</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">Dispatcher キャッシュの設定</a></li>
     </ol> <p>キャッシュ率を向上させるには、リクエストをキャッシュ可能にします（Dispatcher のベストプラクティス）</p> <p>また、キャッシュ設定を最適化するために、以下の設定も考慮してください<br /> </p>
     <ol>
      <li>GET 以外の HTTP リクエストにキャッシュなしルールを設定する</li>
@@ -250,7 +250,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 34</strong></td>
    <td>Dispatcher のバージョンをアップグレードします</td>
-   <td><p>最新バージョンの Dispatcher は、次の場所でダウンロードできます。</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja">リンクをたどる</a></p> </td>
+   <td><p>最新バージョンの Dispatcher は、次の場所でダウンロードできます。</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja-JP">リンクをたどる</a></p> </td>
   </tr>
   <tr>
    <td><strong>手順 35</strong></td>
@@ -262,14 +262,14 @@ ht-degree: 100%
    <td>キャッシュの無効化を確認します</td>
    <td><br />
     <ul>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-the-authoring-environment">オーサー層のキャッシュ無効化</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">オーサー層のキャッシュ無効化</a></li>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance">パブリッシュ層のキャッシュ無効化</a></li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>手順 37 および 38</strong></td>
    <td>遅延読み込み</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=ja">AEM Web パフォーマンスに関する Gem セッション</a><br />を参照してください。 </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">AEM Web パフォーマンスに関する Gem セッション</a><br />を参照してください。 </td>
   </tr>
   <tr>
    <td><strong>手順 39</strong></td>
@@ -289,7 +289,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 49</strong></td>
    <td>ペイロードのサイズを縮小します</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=ja">画像サイズを縮小します</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
   </tr>
   <tr>
    <td><strong>手順 42 および 43</strong></td>
@@ -321,7 +321,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 50 および 51</strong></td>
    <td>JS コードが妨げになっています</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=ja">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=ja</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>

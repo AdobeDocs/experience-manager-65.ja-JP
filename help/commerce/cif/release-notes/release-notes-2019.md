@@ -2,7 +2,7 @@
 title: AEM Content and Commerce リリースノート 2019
 description: Adobe Experience Manager Content and Commerce リリースノート 2019.
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 99%

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 76%
+source-wordcount: '630'
+ht-degree: 74%
 
 ---
 
@@ -148,7 +148,7 @@ AEM の開発について詳しくは、以下のリソースのコレクショ�
 * [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites のチュートリアルとビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)
 * [AEM Sites の開発の手引き - WKND チュートリアル ](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=ja)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html)
 * [AEM 最新化ツール](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '2935'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -427,7 +427,7 @@ TarMK の使用時に優れたパフォーマンスを実現するには、次�
 
 ### TarMK 設定ガイドライン {#tarmk-settings-guideline}
 
-パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)。
+パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
 
 <table>
  <tbody>
@@ -537,7 +537,7 @@ MongoMK の使用時に優れたパフォーマンスを実現するには、次
 
 ### MongoMK 設定ガイドライン {#mongomk-settings-guidelines}
 
-パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)。
+パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
 
 <table>
  <tbody>

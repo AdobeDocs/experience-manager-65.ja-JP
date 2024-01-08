@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3229'
 ht-degree: 99%
@@ -183,7 +183,7 @@ function check(){
 
 >[!NOTE]
 >
->詳しくは、[OR 分岐ステップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=ja#use-a-variable)を参照してください。
+>詳しくは、[OR 分岐ステップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)を参照してください。
 
 ![OR 分割を使用したブランチ](assets/variables_orsplit_new.png)
 

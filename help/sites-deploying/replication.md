@@ -8,7 +8,7 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3363'
 ht-degree: 96%
@@ -105,7 +105,7 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 * [デフォルトエージェント](#replication-author-to-publish)
 オーサー環境からパブリッシュ環境へのレプリケーションに使用します。
 
-* Dispatcher フラッシュ Dispatcher キャッシュの管理に使用されます。 詳しくは、 [オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-the-authoring-environment) および [パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance) を参照してください。
+* Dispatcher フラッシュ Dispatcher キャッシュの管理に使用されます。 詳しくは、 [オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) および [パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance) を参照してください。
 
 * [リバースレプリケーション](#reverse-replication-publish-to-author)
 パブリッシュ環境からオーサー環境へのレプリケーションに使用します。リバースレプリケーションは、フォーラム、ブログ、コメントなどのコミュニティ機能には使用されません。アウトボックスが有効化されていないので、事実上、この機能は無効になっています。リバースレプリケーションを使用するには、カスタム設定が必要になります。

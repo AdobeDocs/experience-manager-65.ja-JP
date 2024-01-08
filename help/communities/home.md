@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5 Communities ガイド
 description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 コミュニティのデプロイ、管理、開発、オーサリングの方法を説明するこのガイドを参照してください。
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 7c691e275208287250f3540158a5e9948097b277
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 77%

@@ -7,16 +7,16 @@ topic-tags: configuring, Security
 content-type: reference
 feature: Configuring
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 34%
+source-wordcount: '723'
+ht-degree: 43%
 
 ---
 
 # シングルサインオン {#single-sign-on}
 
-シングルサインオン (SSO) を使用すると、ユーザーは認証資格情報（ユーザー名やパスワードなど）を 1 回入力した後で、複数のシステムにアクセスできます。 別のシステム（信頼された認証子）が認証を実行し、Experience Managerにユーザーの資格情報を提供します。 Experience Managerは、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
+シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。別個のシステム（信頼された認証と呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。Experience Manager は、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
 
 SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`）は、信頼された認証が提供する認証結果を処理します。SSO Authentication Handler は、次の順序で、特別な属性の値として SSO Identifier(SSID) を検索します。
 
@@ -35,7 +35,7 @@ SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuth
 
 ## SSO の設定 {#configuring-sso}
 
-AEMインスタンスに対して SSO を設定するには、 [SSO 認証ハンドラ](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+AEMインスタンスに対して SSO を設定するには、 [SSO 認証ハンドラー](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
 1. AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
@@ -83,7 +83,7 @@ AEMインスタンスに対して SSO を設定するには、 [SSO 認証ハン
 * `disp_iis.ini`
 * IIS
 >
-In `disp_iis.ini` 設定：( [Microsoft® Internet Information Server での Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en#microsoft-internet-information-server) 詳細はこちら
+In `disp_iis.ini` set: ( [Microsoft® Internet Information Server での Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) （詳細は）
 >
 * `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
 * `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
@@ -95,7 +95,7 @@ IIS では、次のように設定します。
 * 有効 **統合 Windows 認証**
 >
 
-コンテンツツリーの任意のセクションに適用されている認証ハンドラーを確認するには、 **認証子** Felix コンソールのオプション例：
+コンテンツツリーの任意のセクションに適用されている認証ハンドラーを確認するには、 **Authenticator** Felix コンソールのオプション。次に例を示します。
 
 `http://localhost:4502/system/console/slingauth`
 

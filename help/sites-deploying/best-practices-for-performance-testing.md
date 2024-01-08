@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 99%
@@ -72,7 +72,7 @@ ht-degree: 99%
 
 **タッチ UI の開発者モード**
 
-AEM 6 のタッチ操作対応 UI の新機能の 1 つに、開発者モードがあります。作成者が編集モードとプレビューモードを切り替えるのと同様に、開発者はオーサー UI でデベロッパーモードに切り替えることができます。これにより、ページ上の各コンポーネントのレンダリング時間を確認し、エラーのスタックトレースを確認できます。デベロッパーモードについて詳しくは、[CQ Gems のプレゼンテーション](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=ja)を参照してください。
+AEM 6 のタッチ操作対応 UI の新機能の 1 つに、開発者モードがあります。作成者が編集モードとプレビューモードを切り替えるのと同様に、開発者はオーサー UI でデベロッパーモードに切り替えることができます。これにより、ページ上の各コンポーネントのレンダリング時間を確認し、エラーのスタックトレースを確認できます。デベロッパーモードについて詳しくは、[CQ Gems のプレゼンテーション](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)を参照してください。
 
 **rlog.jar を使用したリクエストログの解読**
 
@@ -117,7 +117,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 1. /crx-quickstart/install フォルダーの下に配置します。
 
 >[!NOTE]
->詳しくは、[AEM 6.x |パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)を参照してください
+>詳しくは、[AEM 6.x |パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)を参照してください
 
 デフォルト設定は 10,000 ですが、ほとんどのデプロイメントでは 20,000 または 50,000 に引き上げる必要があります。
 
@@ -145,7 +145,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 * エラーログで、エラーや警告を確認します。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 * メモリと CPU の使用率、ディスク I/O、ネットワーク I/O などのシステムハードウェアリソースを監視します。これらのリソースが、パフォーマンスのボトルネックの原因になっていることがよくあります。
 * ページのアーキテクチャとページの処理方法を最適化して、URL パラメーターの使用を最小限に抑え、できるだけ多くのキャッシュを可能にします。
-* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)のドキュメントに従ってください。
+* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)のドキュメントに従ってください。
 
 * オーサーインスタンス上の特定のページやコンポーネントの編集に問題がある場合は、タッチ UI 開発者モードを使用して、該当するページを調べます。これにより、ページ上の各コンテンツ領域の内訳とそれぞれの読み込み時間がわかります。
 * サイト上のすべての JS と CSS を最小限にします。この[ブログ投稿](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)を参照してください。

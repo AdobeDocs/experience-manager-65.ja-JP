@@ -3,10 +3,10 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6f2b16a51d4ad0f5c199ff41e8abe150c27ecc01
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3624'
-ht-degree: 86%
+ht-degree: 94%
 
 ---
 
@@ -97,7 +97,7 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` | |
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
-1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境にAEMをデプロイする場合、Adobeは Java™の LTS リリースのみをサポートしています。 パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
+1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
    **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 のサポートは準備中です。**
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
@@ -128,7 +128,7 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 | Apache Solr | 検索サービス | A：サポート対象 |
 
 1. 「ファイルシステム」には、POSIX に準拠したブロックストレージが含まれます。ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスは異なり、全体的なパフォーマンスに影響を与える場合があることに注意してください。ネットワーク／リモートファイルシステムを使用してテスト AEM を読み込みます。
-1. MongoDB Enterprise バージョン 4.2 および 4.4 では、AEM 6.5 SP9 以降が必要です。
+1. MongoDB Enterprise バージョン 4.2 および 4.4 には、最低でも AEM 6.5 SP9 が必要です。
 1. MongoDB Sharding は AEM ではサポートしていません。
 1. MongoDB Storage Engine WiredTiger のみがサポートされています。
 1. AEM Forms のアップグレードのお客様に対してサポートされます。新規インストールの場合はサポートされていません。
@@ -142,7 +142,7 @@ AEM Communities の機能について詳しくは、[Communities のデプロイ
 
 >[!NOTE]
 >
-MongoDB はサードパーティのソフトウェアプログラムで、AEMライセンスパッケージには含まれていません。 詳しくは、[MongoDB ライセンスポリシー](https://www.mongodb.com/licensing/server-side-public-license/faq)のページを参照してください。
+MongoDB はサードパーティのソフトウェアで、AEM ライセンスパッケージには含まれていません。詳しくは、[MongoDB ライセンスポリシー](https://www.mongodb.com/licensing/server-side-public-license/faq)のページを参照してください。
 >
 MongoDB を使用した AEM のデプロイメントを最大限に活用するには、プロフェッショナルサポートを受けられるように MongoDB Enterprise バージョンのライセンスを取得することをお勧めします。詳しくは、「[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk)」を参照してください。
 >
@@ -164,9 +164,9 @@ MongoDB でオーサーとパブリッシュの両方を実行したい場合は
 
 ### サーブレットエンジン / アプリケーションサーバー {#servlet-engines-application-servers}
 
-Adobe Experience Managerは、スタンドアロンサーバー（quickstart JAR ファイル）として、またはサードパーティのアプリケーションサーバー（WAR ファイル）内の Web アプリケーションとして実行できます。
+Adobe Experience Manager は、スタンドアロンサーバー（Quickstart JAR ファイル）として、またはサードパーティのアプリケーションサーバー内の web アプリケーション（WAR ファイル）として実行できます。
 
-必要な最小のサーブレット API バージョンは Servlet 3.1 です。
+サーブレット API の必要な最小バージョンは Servlet 3.1 です
 
 | Platform | サポートレベル |
 |---|---|
@@ -190,7 +190,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
-| **Red Hat®ディストリビューションに基づく Linux®** | A：サポート対象 `[1]` `[3]` |
+| **Linux®（Red Hat® ディストリビューションに基づく）** | A：サポート対象 `[1]` `[3]` |
 | Linux®、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `[1]` `[2]` |
 | Linux®、SUSE® ディストリビューションベース | A：サポート対象 `[1]` |
 | Microsoft® Windows Server 2019 `[4]` | R：新規契約向けの制限サポート `[5]` |
@@ -241,7 +241,7 @@ Adobe Managed Services の外部で Azure または AWS に AEM をデプロイ�
 
 ### Dispatcher プラットフォーム（web サーバー） {#dispatcher-platforms-web-servers}
 
-Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンの Dispatcher をダウンロード](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
+Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンの Dispatcher をダウンロード](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja-JP)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
 Dispatcher バージョン 4.3.2 での使用では、次の web サーバーがサポートされています。
 
@@ -251,7 +251,7 @@ Dispatcher バージョン 4.3.2 での使用では、次の web サーバーが
 | Microsoft® IIS 10（Internet Information Server） | A：サポート対象 |
 | Microsoft® IIS 8.5（Internet Information Server） | Z：サポート対象外 |
 
-1. Apache httpd ソースコードに基づいて構築された Web サーバーは、ベースとなる httpd のバージョンと同じくらい多くのサポートを持っています。 これらに当てはまるか不明の場合は、アドビに問い合わせて、それぞれのサーバー製品に関するサポートレベルを確認してください。次の場合：
+1. Apache httpd のソースコードをベースとして構築された web サーバーは、ベースとした httpd のバージョンと同じサポートを備えています。これらに当てはまるか不明の場合は、アドビに問い合わせて、それぞれのサーバー製品に関するサポートレベルを確認してください。以下の場合に該当します。
 
    1. HTTP サーバーは、公式の Apache ソース配布のみを使用して構築されています。
    1. HTTP サーバーは、HTTP サーバーが実行されているオペレーティングシステムの一部として配信されました。例：IBM® HTTP Server、Oracle HTTP Server
@@ -332,13 +332,13 @@ Mozilla Firefox、Google Chrome、Microsoft® Edge のリリースは、数か�
 
 ### Web サイトでサポートされているブラウザー {#supported-browsers-for-websites}
 
-一般に、AEM Sitesでレンダリングされる Web サイトのブラウザーサポートは、AEMページテンプレートの実装、デザインおよびコンポーネントの出力に依存するので、これらの部分を実装する当事者の制御の下にあります。
+一般に、AEM Sites でレンダリングされる web サイトのブラウザーサポートは、AEM ページテンプレートの実装、設計およびコンポーネントの出力に依存するので、これらの部分を実装する当事者の管理下にあります。
 
 ### WebDAV クライアント {#webdav-clients}
 
 **Microsoft® Windows 7+**
 
-Microsoft® Windows 7 以降を使用して、SSL で保護されていないAEMインスタンスに接続する場合、セキュリティで保護されていないネットワークを介した基本認証を Windows で有効にする必要があります。 Web クライアントの Windows レジストリを次のように変更する必要があります。
+Microsoft® Windows 7 以降で、SSL で保護されていない AEM インスタンスに正常に接続するには、セキュリティで保護されていないネットワークを介したベーシック認証を Windows で有効にする必要があります。Web クライアントの Windows レジストリを次のように変更する必要があります。
 
 1. 以下のレジストリサブキーを探します。
 
@@ -396,7 +396,7 @@ Linux® で Dynamic Media を使用する場合は、次の必要条件を満た
 
 >[!NOTE]
 >
-LC_CTYPE（ロケール）が `en_US.UTF-8` 以外に設定されている場合、Dynamic Media は機能しません。その値を確認するには、コマンドプロンプトで「locale」と入力します。適切に設定されていない場合は、AEMを実行する前に&quot;export LC_CTYPE=&quot;と入力して、LC_CTYPE 環境変数を空の文字列に設定します。
+LC_CTYPE（ロケール）が `en_US.UTF-8` 以外に設定されている場合、Dynamic Media は機能しません。その値を確認するには、コマンドプロンプトで「locale」と入力します。そのように設定しない場合は、AEM を実行する前に「export LC_CTYPE=」と入力して、LC_CTYPE 環境変数を空の文字列に設定します。
 
 >[!NOTE]
 >
@@ -505,16 +505,16 @@ PDF Generator は、サポート対象のオペレーティングシステムと
 >
 さらに、次の点に注意してください。
 >
-* PDF Generatorには 32 ビット版のが必要です [Acrobat 2020 classic track バージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) またはAcrobat 2017 バージョン 17.011.30078を使用して、変換を実行してください。
+* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
 * PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
-* PDF Generatorは、Microsoft® Office Professional Plus の 32 ビット版の Retail と、Windows オペレーティングシステムでの変換に必要なその他のソフトウェアのみをサポートしています。
-* PDF Generatorは、Linux®オペレーティングシステム上の OpenOffice の 32 ビット版および 64 ビット版をサポートしています。
+* PDF Generator では、32 ビットリテール版の Microsoft® Office Professional Plus および Windows オペレーティングシステムでの変換に必要な、その他のソフトウェアのみサポートしています。
+* PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
 * PDF Generator は Microsoft® Office 365 をサポートしていません。
 * OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
 * Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 * PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
 * PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。Microsoft® Visio 2016 を引き続き使用して、`.VSD` ファイルや `.VSDX` ファイルを変換できます。
-* PDF Generatorは、Microsoft® Project 2019 を使用してファイルを変換できません。Microsoft® Project 2016 を引き続き使用して `.VSD` ファイルや `.VSDX` ファイルを変換できます。
+* PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。Microsoft® Project 2016 を引き続き使用して `.VSD` ファイルや `.VSDX` ファイルを変換できます。
 >
 
 ### AEM Forms Designer の要件 {#requirements-for-aem-forms-designer}
@@ -547,4 +547,4 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 ### AEM Assetsが Linux®でメタデータの多いアセットを処理するための要件 {#assetsonlinux}
 
-XMPFilesProcessor プロセスは、 GLIBC_2.14 ライブラリを動作させる必要がある。 GLIBC_2.14 を含む Linux®カーネルを使用します。例えば、Linux®カーネルバージョン 3.1.x です。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
+XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。GLIBC_2.14 を含む Linux®カーネルを使用します。例えば、Linux®カーネルバージョン 3.1.x です。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。

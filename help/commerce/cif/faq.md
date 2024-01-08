@@ -2,9 +2,9 @@
 title: Commerce Integration Framework を使用した AEM と Commerce の統合に関する FAQ
 description: Commerce Integration Framework を使用した AEM と Commerce の統合に関する FAQ
 exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
-source-git-commit: c96f83b84ed1473aee0ddcca08a0e585ec088aa1
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '956'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,7 @@ AEM で使用する CIF アドオンでは、コマースソリューション�
 
 ## 7. PIM はこのフレームワークでどのように機能しますか。
 
-PIM データは、GraphQL リクエストを介して AEM およびクライアントに公開されます。PIM データをコマースエンジン（Adobe Commerce など）から取得できるように、PIM をコマースエンジンと統合することをお勧めします。
+PIM データは、GraphQL リクエストを介して AEM およびクライアントに公開されます。レコメンデーションは、PIM データをコマースエンジン（Adobe Commerce など）から取得できるように、PIM をコマースエンジンと統合することです。
 
 ## 8. Dispatcher を使用して、価格や他のデータもキャッシュしますか。キャッシュ無効化の課題が頻繁に発生しませんか。
 
@@ -49,7 +49,7 @@ Dispatcher には、価格や在庫などの動的データはキャッシュさ
 
 Dispatcher にキャッシュされたページに対しては、TTL ベースのキャッシュ無効化を設定することをお勧めします。価格や在庫などの動的な情報については、クライアントサイドで日付をレンダリングすることをお勧めします。TTL ベースのキャッシュ無効化について詳しくは、[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=ja) を参照してください。
 
-## 10. コマースでの、AEM コンテンツをまたぐ統合検索に関して推奨事項はありますか。
+## 10. コマースでの、AEM コンテンツをまたぐ統合検索に関してレコメンデーションはありますか。
 
 製品検索の参照の実装が提供されていますが、コンテンツに関する統合検索はありません。この機能は顧客に固有のもので、プロジェクト固有のレベルでより適切に解決されます。
 

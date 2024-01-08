@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 8fc35ac465240cafdce5346f2f7e9ba15c8d1fef
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '4333'
 ht-degree: 73%
@@ -520,7 +520,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 * ユーザーが送信アクションを実行すると、送信は次のエラーで失敗します。
   `javax.servlet.ServletException: java.lang.NoSuchMethodError`
-問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en#resolution). （FORMS-8542）
+問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html#resolution). （FORMS-8542）
 * AEM Service Pack 6.5.14.0以降をインストールした後、に移動したときに、JEE Admin UI からPDFドキュメントのフォントを選択できなくなる `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`フォントリストが空に表示されるので、 （FORMS-12095）
 
 #### JEE 上の AEM Forms

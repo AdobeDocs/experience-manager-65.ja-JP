@@ -7,7 +7,7 @@ topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 93%
@@ -98,7 +98,7 @@ ht-degree: 93%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-詳しくは、[JVM からのスレッドダンプの取得方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)を参照してください。
+詳しくは、[JVM からのスレッドダンプの取得方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)を参照してください。
 
 ### 閉じられていない JCR セッションの確認 {#checking-for-unclosed-jcr-sessions}
 

@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '1712'
-ht-degree: 4%
+source-wordcount: '1659'
+ht-degree: 2%
 
 ---
 
@@ -359,7 +359,7 @@ Apache HTTP サーバーを使用している場合は、関連するすべて�
 Dispatcher を使用する場合は、以下を参照してください。
 
 * AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) ドキュメント
-* [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en)
+* [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)
 * [Communities 用の Dispatcher の設定](/help/communities/dispatcher.md)
 * [既知の問題](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

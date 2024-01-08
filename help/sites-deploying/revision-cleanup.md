@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '5811'
-ht-degree: 68%
+source-wordcount: '5752'
+ht-degree: 67%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 68%
 
 AEM 6.3 以降では、この機能のオンラインバージョンである「オンラインでのリビジョンクリーンアップ」が導入されました。オフラインのリビジョンクリーンアップでは AEM インスタンスをシャットダウンする必要があるのに対し、オンラインのリビジョンクリーンアップでは AEM インスタンスがオンラインの間に実行できます。オンラインのリビジョンクリーンアップはデフォルトでオンになっており、リビジョンのクリーンアップを実行する方法として推奨されます。
 
-**メモ**：オンラインでのリビジョンクリーンアップの概要および使用方法について詳しくは、[ビデオを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=en)。
+**メモ**：オンラインでのリビジョンクリーンアップの概要および使用方法について詳しくは、[ビデオを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html)。
 
 リビジョンのクリーンアッププロセスは、次の 3 つのフェーズで構成されます。 **推定**, **圧縮**、および **片付ける**. 見積もりフェーズでは、収集されるガベージの量に基づいて、次のフェーズ（コンパクション）を実行するかどうかが判断されます。コンパクションフェーズでは、未使用のコンテンツを除いて、セグメントと tar ファイルが書き換えられます。次に、クリーンアップフェーズでは、古いセグメントが削除され、古いセグメントに含まれる可能性のあるガベージも削除されます。 通常、オフラインモードではより多くの領域を再利用できます。これは、追加のセグメントを収集しないAEMの作業セットをオンラインモードで考慮する必要があるからです。
 
@@ -382,7 +382,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><p> </p> </td>
   </tr>
   <tr>
-   <td><strong>最新のオンラインでのリビジョンクリーンアップの実行に関する統計はどこで確認できますか。</strong></td>
+   <td><strong>オンラインでの最新のリビジョンクリーンアップ実行の統計はどこで確認できますか。</strong></td>
    <td><p>ステータス、進行状況および統計は、JMX(<code>SegmentRevisionGarbageCollection</code> MBean)。 <code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用します。</p> <p>統計は、最後のシステム起動以降にのみ利用できます。 外部監視ツールを使用すると、AEMの稼動時間を超えてデータを保持できます。 詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
    <td> </td>
   </tr>
@@ -523,7 +523,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>  
   <tr>
     <td>見積もり</td>
-    <td>TarMK GC #2：圧縮が一時停止されたので、見積もりはスキップされました。</td>
+    <td>TarMK GC #2：圧縮が一時停止されたので、推定がスキップされました。</td>
     <td>設定によってシステムでコンパクションが無効になっている場合は、見積もりフェーズがスキップされます。</td>
     <td>オンラインでのリビジョンクリーンアップの有効化.</td>
   </td>
@@ -537,7 +537,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
     <td>コンパクション</td>
-    <td>TarMK GC #2：コンパクションは一時停止されました。</td>
+    <td>TarMK GC #2：コンパクションが一時停止されました。</td>
     <td>設定によってコンパクションフェーズが一時停止している限り、推定フェーズもコンパクションフェーズも実行されません。</td>
     <td>オンラインでのリビジョンクリーンアップの有効化。</td>
   </td>

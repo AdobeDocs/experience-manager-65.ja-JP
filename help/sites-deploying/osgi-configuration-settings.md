@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3360'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -35,7 +35,7 @@ OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネ�
 
 >[!NOTE]
 >
->OSGi 設定の差分ツール（[AEM ツール](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html?lang=ja)の一部）を使用して、デフォルトの OSGi 設定のリストを表示できます。
+>OSGi 設定の差分ツール（[AEM ツール](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html)の一部）を使用して、デフォルトの OSGi 設定のリストを表示できます。
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ JSON を無効にしないでください。
 
 **Apache Sling リファラーフィルター**：CRX WebDAV と Apache Sling のクロスサイトリクエストフォージェリー（CSRF）に関する既知のセキュリティ問題に対処するには、リファラーフィルターを設定する必要があります。
 
-リファラーフィルターサービスは、以下を設定できる OSGi サービスです。
+リファラーフィルターサービスは OSGi のサービスの 1 つであり、次の設定が可能です。
 
 * どの http メソッドをフィルターするか
 * 空のリファラーヘッダーを使用できるかどうか
@@ -270,7 +270,7 @@ JSON を無効にしないでください。
 
 >[!CAUTION]
 >
->**縮小**&#x200B;または **Gzip** の設定を変更する場合は、clientlibs キャッシュの内容を削除します。詳しくは、[ナレッジベースの記事](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=ja)を参照してください。
+>**縮小**&#x200B;または **Gzip** の設定を変更する場合は、clientlibs キャッシュの内容を削除します。詳しくは、[ナレッジベースの記事](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html)を参照してください。
 
 >[!NOTE]
 >
@@ -347,8 +347,8 @@ OSGi フレームワークサービスランキングの値は、このサービ
 * **Parameter Names**
 ユーザー ID を指定する可能性のあるリクエストパラメーターの名前です。
 
-* **ユーザーマップ**
-選択したユーザーの場合、HTTP リクエストから抽出されたユーザー名を、credentials オブジェクト内の別のユーザー名に置き換えることができます。マッピングはここで定義します。 ユーザー名 `admin` はマップのどちらかの側に表示され、マッピングは無視されます。 「=」文字を使用する場合は、先頭に「\」を付けてエスケープする必要があります。
+* **User Map**
+選択したユーザーについて、HTTP リクエストから抽出されたユーザー名を、認証情報オブジェクト内の別のユーザー名に置き換えることができます。マッピングはここで定義します。ユーザー名 `admin` がマップの両側に表示される場合、マッピングは無視されます。「=」文字を使用する場合は、先頭に「\」を付けてエスケープする必要があります。
 
 * **Format**：ユーザー ID を指定する際の形式を示します。次のいずれかを使用します。
 

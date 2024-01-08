@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '3246'
-ht-degree: 90%
+ht-degree: 92%
 
 ---
 
@@ -93,13 +93,13 @@ AEM コンポーネントを使用して、web ページ上で使用できるコ
 
 ### JavaScript の使用 {#using-javascript}
 
-[HTL JavaScript Use-API を使用すると、HTL ファイルから JavaScript で書かれたヘルパーコードへのアクセスが可能になります](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=ja)。これにより、JavaScript コードを使用して、コンポーネントコンテンツの選択と設定のロジックを実装できます。
+[HTL JavaScript Use-API を使用すると、HTL ファイルから JavaScript で書かれたヘルパーコードへのアクセスが可能になります](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=ja)。この結果、JavaScript コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
 
 ### クライアント側 HTML ライブラリの使用 {#using-client-side-html-libraries}
 
 最近の web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題に対処するために、AEMでは次の機能を提供しています。 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアント側ライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
+この問題への対処に役立つように、AEM では、**クライアントサイドライブラリフォルダー**&#x200B;が提供されています。これにより、クライアントサイドのコードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
 詳しくは、[クライアントサイド HTML ライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
 
@@ -192,7 +192,7 @@ newComponent (cq:Component)
 >
 >次を参照してください。
 >
->* [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッション。
+>* [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッション。
 >* 「[コードサンプル - ダイアログフィールドのカスタマイズ方法](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)」で説明されている関連サンプルコード。
 >
 
@@ -449,7 +449,7 @@ GitHub のコード
 
 * コンポーネント
 
-   * 移行 [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) クラシック UI 固有の関数を使用するコード
+   * クラシック UI 固有の関数を使用する [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) コードの移行
    * RTE プラグイン。詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
    * クラシック UI 固有の関数を使用する[ `cq:listener` コードを移行](#migrating-cq-listener-code)します。
 
@@ -458,9 +458,9 @@ GitHub のコード
    * タッチ操作向け UI で使用されるダイアログを作成します。ただし、タッチ操作対応 UI 用のダイアログが定義されていないときは、互換性のために、タッチ操作対応 UI でクラシック UI ダイアログの定義を使用できます。
    * [AEM 最新化ツール](/help/sites-developing/modernization-tools.md)を使用すると、既存のコンポーネントを拡張するのに役立ちます。
    * [ExtJS を Granite UI コンポーネントへマッピング](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)では、ExtJS の xtype とノードタイプを、同等の Granite UI リソースタイプにマッピングする便利な概要について説明しています。
-   * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションを参照してください。
+   * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
    * vtypes から [Granite UI 検証](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
-   * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションを参照してください。
+   * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
 
 ### cq:listener コードの移行 {#migrating-cq-listener-code}
 

@@ -1,16 +1,16 @@
 ---
 title: 開発者モード
-description: 開発者モードで開かれるサイドパネルのタブには、現在のページに関する開発者向けの情報が表示されます.
+description: デベロッパーモードでは、いくつかのタブを持つサイドパネルが開き、現在のページに関する情報を開発者が提供します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
-source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 72%
+source-wordcount: '683'
+ht-degree: 71%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Manager(AEM) でページを編集する場合、 [モード](/
 
 * **[コンポーネント](#components)**：構造およびパフォーマンスに関する情報を表示します。
 * **[テスト](#tests)**：テストを実行し、結果を分析します。
-* **[エラー](#errors)** 発生した問題を確認する
+* **[エラー](#errors)** 発生した問題を確認する。
 
 これらのタブで、開発者は以下を実行できます。
 
@@ -54,7 +54,7 @@ Adobe Experience Manager(AEM) でページを編集する場合、 [モード](/
 >詳しくは以下を参照してください。
 >
 >* ヒントおよびツールの詳細については、ナレッジベースの記事「[AEM TouchUI の問題のトラブルシューティング](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」。
->* [AEM 6.0 の開発者モード](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=en)に関する AEM Gems セッション。
+>* [AEM 6.0 の開発者モード](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html)に関する AEM Gems セッション。
 >
 
 ## 開発者モードを開く {#opening-developer-mode}

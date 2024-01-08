@@ -2,7 +2,7 @@
 title: ヘッドレスアプリケーションの運用開始方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法について説明します。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 98%
@@ -94,7 +94,7 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 ローカル開発環境をセットアップしたら、静的な Node サーバーをローカルにデプロイすることで、React アプリに対するコンテンツ提供をシミュレートできます。
 
-ローカル開発環境のセットアップと、コンテンツのプレビューに必要なすべての依存関係について詳しくは、[実稼動デプロイメントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=ja)を参照してください。
+ローカル開発環境のセットアップと、コンテンツのプレビューに必要なすべての依存関係について詳しくは、[実稼動デプロイメントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html)を参照してください。
 
 ## AEM ヘッドレスアプリケーションの運用開始準備 {#prepare-your-aem-headless-application-for-golive}
 
@@ -141,7 +141,7 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 ## Maven を使用した実稼動環境へのデプロイ {#deploy-to-production-maven}
 
-Maven を使用した&#x200B;*従来の*&#x200B;デプロイメント（AMS 以外）の概要については、[WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=ja#build)を参照してください。
+Maven を使用した&#x200B;*従来の*&#x200B;デプロイメント（AMS 以外）の概要については、[WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build)を参照してください。
 
 ## Cloud Manager を使用した実稼動環境へのデプロイ {#deploy-to-production-cloud-manager}
 
