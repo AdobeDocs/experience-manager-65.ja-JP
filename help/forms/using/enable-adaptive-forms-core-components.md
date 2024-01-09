@@ -8,9 +8,9 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '953'
 ht-degree: 84%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 84%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-**適用先：**✅ アダプティブフォームのコアコンポーネント ❎ アダプティブフォームの基盤コンポーネント
+<!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
 アダプティブフォームコアコンポーネントを有効にすると、AEM 6.5 Forms 環境から、[コアコンポーネントベースのアダプティブフォーム](create-an-adaptive-form-core-components.md)および[ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp)の作成、公開、配信を開始できます。
 

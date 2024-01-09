@@ -9,10 +9,10 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
 workflow-type: tm+mt
-source-wordcount: '1743'
-ht-degree: 97%
+source-wordcount: '1731'
+ht-degree: 98%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 97%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-**適用先：**✅ アダプティブフォームのコアコンポーネント ❎ [アダプティブフォームの基盤コンポーネント](/help/forms/using/create-adaptive-form.md)
+<!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
 アダプティブフォームを使用すると、魅力的でレスポンシブ、かつ動的でアダプティブなフォームを作成できます。AEM Forms は、アダプティブフォームをすばやく作成するための、ビジネスユーザーにとってわかりやすい UI を提供します。UI はクイックタブナビゲーションを備えており、アダプティブフォームを作成するための事前設定済みのテンプレート、スタイル設定、フィールド、送信オプションを簡単に選択することができます。
 
 開始する前に、使用可能な Forms コンポーネントのタイプについて学習します。
 
-* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)：標準化されたデータキャプチャコンポーネントです。これらのコンポーネントは、デジタル登録エクスペリエンスのカスタマイズ機能を提供し、開発時間を短縮し、メンテナンスコストを削減します。開発者は、これらのコンポーネントを簡単にカスタマイズし、スタイルを設定できます。Adobeでは、アダプティブFormsの開発に、最新で拡張可能なコンポーネントを使用することをお勧めします。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)：標準化されたデータキャプチャコンポーネントです。これらのコンポーネントは、デジタル登録エクスペリエンスのカスタマイズ機能を提供し、開発時間を短縮し、メンテナンスコストを削減します。開発者は、これらのコンポーネントを簡単にカスタマイズし、スタイルを設定できます。これらの最新かつ拡張性の高いコンポーネントを活用してアダプティブフォームを開発することをお勧めします。
 
 * [アダプティブフォーム基盤コンポーネント](creating-adaptive-form.md)：従来の（古い）データキャプチャコンポーネントです。引き続きこれらを使用して、既存の基盤コンポーネントベースのアダプティブフォームを編集できます。 フォームを作成する場合は、[アダプティブフォームコアコンポーネント](/help/forms/using/create-adaptive-form.md)を使用してアダプティブフォームを作成することをお勧めします。
 

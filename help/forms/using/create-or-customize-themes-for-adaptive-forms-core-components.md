@@ -8,10 +8,10 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
 workflow-type: tm+mt
-source-wordcount: '1933'
-ht-degree: 98%
+source-wordcount: '1921'
+ht-degree: 99%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 | AEM 6.5 | この記事 |
 
 
-**適用先：**✅ アダプティブフォームのコアコンポーネント ❎ [アダプティブフォームの基盤コンポーネント](/help/forms/using/themes.md)
+<!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
 AEM Forms 6.5 では、テーマは、アダプティブフォームのスタイル（ルック＆フィール）を定義するために使用する AEM クライアントライブラリのことです。テーマには、コンポーネントとパネルのスタイルを設定するための詳細情報が含まれています。スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。テーマはアダプティブフォームを参照せずに独立して管理され、複数のアダプティブフォーム間で再利用できます。
 
@@ -37,11 +37,11 @@ AEM 6.5 環境は、コアコンポーネントベースのアダプティブフ
 
 ## テーマの構造について {#understanding-structure-of-theme}
 
-テーマとは、CSS ファイル、JavaScript ファイル、およびアダプティブフォームのスタイルを定義するリソース（アイコンなど）を含むパッケージのことです。アダプティブフォームのテーマは特定の組織に従い、次のコンポーネントで構成されます。
+テーマは、CSS ファイル、JavaScript ファイル、およびアダプティブフォームのスタイルを定義するリソース（アイコンなど）を網羅するパッケージです。アダプティブフォームのテーマは、次のコンポーネントで構成される特定の組織に従います。
 
-* `src/theme.scss`：このフォルダーには、テーマ全体に大きな影響を与える CSS ファイルが含まれます。ここで、テーマのスタイル設定と動作を一元的に定義および管理できます。このファイルを編集すると、テーマ全体で共通に適用される変更を加え、アダプティブフォームと AEM Sites の両方のページのアピアランスと機能に影響を与えることができます。
+* `src/theme.scss`：このフォルダーには、テーマ全体に大きな影響を与える CSS ファイルが含まれます。テーマのスタイル設定と動作を一元的に定義および管理できます。このファイルを編集するとテーマ全体で共通して適用され、アダプティブフォームと AEM Sites の両方のページの外観と機能を変更することができます。
 
-* `src/site`：このフォルダーには、AEM Sites ページ全体に適用される CSS ファイルが含まれます。これらのファイルは、AEM Sites ページの全体的な機能やレイアウトに影響を与えるコードとスタイルで構成されています。ここで行った変更は、サイトのすべてのページに反映されます。
+* `src/site`：このフォルダーには、AEM Sites のページ全体に適用される CSS ファイルが含まれます。これらのファイルは、AEM Sites ページの全体的な機能やレイアウトに影響を与えるコードとスタイルで構成されています。ここで行った変更は、サイトのすべてのページに反映されます。
 
 * `src/components`：このフォルダーの CSS ファイルは、AEMの個々のコアコンポーネント用に設計されています。コンポーネントの各専用フォルダーには、アダプティブフォーム内の特定のコンポーネントのスタイルを設定する `.scss` ファイルが含まれています。例えば、`/src/components/button/_button.scss` ファイルには、アダプティブフォームのボタンコンポーネントのスタイル情報が含まれています。
 
@@ -61,7 +61,7 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 
 ## テーマをカスタマイズ {#customize-a-theme-core-components-based-adaptive-forms}
 
-テーマのカスタマイズとは、テーマのアピアランスを変更し、パーソナライズするプロセスを指します。テーマをカスタマイズすると、デザイン要素、レイアウト、色、タイポグラフィ、および基になるコードが変更される場合があります。 これにより、テーマで提供される基本的な構造と機能を維持しながら、web サイトやアプリケーションに独自のカスタマイズされたアピアランスを作成できます。
+テーマのカスタマイズとは、テーマのアピアランスを変更し、パーソナライズするプロセスを指します。テーマをカスタマイズすると、デザイン要素、レイアウト、色、テキスト編集、基になるコードに変更を加えることができます。これにより、テーマで提供される基本的な構造と機能を維持しながら、web サイトやアプリケーションに独自のカスタマイズされたアピアランスを作成できます。
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 
 * [環境でのアダプティブフォームコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md)
 
-* [Apache Maven の最新リリースをインストールします。](https://maven.apache.org/download.cgi)Apache Maven は、主に Java™ プロジェクトで使用されるビルド自動処理ツールです。最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
+* [Apache Maven の最新リリースをインストールします。](https://maven.apache.org/download.cgi) Apache Maven は、主に Java™ プロジェクトで使用されるビルド自動処理ツールです。最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
 
 * [Adobe Experience Manager のクライアントライブラリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja)の作成方法を学ぶAEM は、クライアントライブラリを提供しています。これにより、クライアントサイドコードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義できます。
 
@@ -108,7 +108,7 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 
 コアコンポーネントベースのアダプティブフォームのテーマを複製するには、次のいずれかのテーマを選択します。
 
-* [カンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
+* [キャンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
 * [イーゼルテーマ](https://github.com/adobe/aem-forms-theme-easel)
 
@@ -116,13 +116,13 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 
 1. コマンドプロンプトまたはターミナルウィンドウをローカル開発環境で開きます。
 
-1. `git clone` コマンドを実行してテーマを複製します。
+1. `git clone` コマンドを実行して、テーマを複製します。
 
    ```
       git clone [Path of Git Repository of the theme]
    ```
 
-   [テーマの Git リポジトリのパス]を、対応するテーマの Git リポジトリの実際のURLに置き換えます。
+   [テーマの Git リポジトリのパス]を、テーマの対応する Git リポジトリの実際の URL に置き換えます。
 
    例えば、カンバステーマを複製するには、次のコマンドを実行します。
 
@@ -140,7 +140,7 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 
 * [テーマレベルのスタイルを設定する](#theme-customization-global-level)
 
-* [コンポーネントレベルのスタイルを設定する](#component-based-customization)
+* [コンポーネントレベルのスタイルの設定](#component-based-customization)
 
 ##### テーマレベルのスタイルを設定する {#theme-customization-global-level}
 
@@ -160,7 +160,7 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 
 また、特定のアダプティブフォームコアコンポーネント（ボタン、チェックボックス、コンテナ、フッターなど）のフォント、カラー、サイズ、その他の CSS プロパティをカスタマイズすることもできます。特定のコンポーネントに関連付けられた CSS ファイルを編集することで、そのスタイルを組織のブランディングに合わせることができます。コンポーネントのスタイルをカスタマイズするには、次の手順を実行します。
 
-1. `<your-theme-sources>/src/components/<component>/<component.scss>` ファイルを編集用に開きます。例えば、ボタンコンポーネントのフォントカラーを変更するには `<your-theme-sources>/src/components/button/button.scss` ファイルを開きます。
+1. `<your-theme-sources>/src/components/<component>/<component.scss>` ファイルを編集用に開きます。例えば、ボタンコンポーネントのフォントの色を変更するには、`<your-theme-sources>/src/components/button/button.scss` ファイルを開きます。
 1. 必要に応じて値を変更します。例えば、ポインタを合わせたときのボタンコンポーネントの色を緑に変更するには、`cmp-adaptiveform-button__widget:hover` クラスで `color: $white` プロパティの値を 16 進数コード #12b453 またはその他の緑の色合いに変更します。最終的なコードは次のようになります。
 
    ```
