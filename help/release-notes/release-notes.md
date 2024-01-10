@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 2c5791e972deef5fe81768d10ad53acaf946332a
 workflow-type: tm+mt
-source-wordcount: '4333'
+source-wordcount: '4308'
 ht-degree: 73%
 
 ---
@@ -64,9 +64,6 @@ ht-degree: 73%
 
 * **64 ビット XMLFM**:XMLFM の 64 ビット版では、パフォーマンス、拡張性、メモリ管理の改善が導入されています。 これは、サーバー側にデプロイされる最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットは、32 ビット対応のメモリリソースに比べて大きなメモリリソースにアクセスする独自の機能を備えており、より大きなレンダリングワークロードをシームレスに処理できます。 このマイルストーンは、パフォーマンスの飛躍を表すだけでなく、AEM Forms Server 内のネイティブサービスフレームワークに対する主な機能強化も導入します。 このアップデートでは、AEM Forms Server が 64 ビットのネイティブサービスをシームレスにサポートするようになっています。
 
-**非推奨（廃止予定）の機能**
-
-* AEM の ActiveMQ は、非推奨（廃止予定）です。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。アドビでは、現在ロードバランサーを使用することを推奨しています。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
