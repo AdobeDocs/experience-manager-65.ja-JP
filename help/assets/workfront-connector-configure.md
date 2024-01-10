@@ -5,9 +5,9 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 2cf980f643e1896ecd581fec44f963d7eb44766d
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1698'
 ht-degree: 94%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 94%
 1. クラウドサービスの「プロジェクトにリンクされたフォルダー」タブに移動します。
 1. リンクされたフォルダーの親パス：DAM 内で、リンクされたフォルダーを作成するフォルダーを選択します。空のままにすると、デフォルトで /content/dam に設定されます。Workfront ツールのメタデータスキーマと Workfront リンクフォルダーのメタデータスキーマが、選択したフォルダーに適用されていることを確認します。
 1. リンクされたフォルダー構造：コンマ区切り値を入力します。各値は `DE:<some-project-custom-form-field>`、Portfolio、プログラム、年、名前または「リテラル文字列値」（最後の 1 つには引用符がいります）のいずれかです。現在は、Portfolio、プログラム、年、DE:プロジェクトの種類、名前に設定されています。
+1. 権限の設定：追加 `jcr:all permissions` に対する権限 `/conf/workfront-tools/settings/cloudconfigs` 対象： `wf-workfront-users` グループ化します。
 1. Workfront のフォルダーのタイトルに構造内のすべてのフォルダーを含める必要がある場合は、「フォルダー構造名を使用して Workfront でリンクされたフォルダーのタイトルを作成」チェックボックスをオンにする必要があります。それ以外の場合は、最後のフォルダーのタイトルになります。
 1. サブフォルダーのマルチフィールドでは、リンクされたフォルダーの子フォルダーとして作成するフォルダーのリストを指定できます。
 1. プロジェクトのステータス：リンクされたフォルダーを作成するプロジェクトのステータスを選択します。
@@ -77,8 +78,8 @@ Workfront プロジェクトと AEM フォルダー間のメタデータマッ�
 
 マッピングを設定するには、次の手順に従います。
 
-1. 追加 `jcr:read` に対する権限 `/conf/global/settings/dam/adminui-extension/foldermetadataschema` 対象： `wf-workfront-users` グループ化します。
-1. **[!UICONTROL ツール]**／ **[!UICONTROL Assets]** ／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
+1. `wf-workfront-users` グループに対して `jcr:read` 権限を `/conf/global/settings/dam/adminui-extension/foldermetadataschema` に追加します。
+1. **[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
 1. 編集するフォルダーメタデータスキーマフォームを選択し、「編集」をクリックします。
 1. 編集するフォルダーメタデータスキーマフォームフィールドを選択し、右側のパネルの「設定」タブを選択します。
 1. [!UICONTROL Workfront フィールドからマッピング済み]フィールドで、選択した AEM フォルダープロパティにマッピングする Workfront フィールドの名前を選択します。次のオプションを使用できます。
