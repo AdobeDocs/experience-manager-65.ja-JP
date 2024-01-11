@@ -5,10 +5,10 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '1590'
-ht-degree: 87%
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Forms は強力なエンタープライズクラスのプラットフォー�
 >
 >OSGi での Forms 中心のワークフローを使用すると、JEE スタックに本格的なプロセス管理機能をインストールしなくても、OSGi スタックで様々なタスクのワークフローを迅速に構築およびデプロイできます。OSGi 上の Forms ベースの AEM ワークフローと JEE 上のプロセスマネジメントの[比較](capabilities-osgi-jee-workflows.md)を参照して、機能の違いと類似点を学びます。
 >
->比較の後、JEE スタックにプロセス管理機能をインストールする場合は、JEE スタックとプロセス管理機能のインストールと設定の詳細について、 [JEE での AEM Forms のインストールまたはアップグレード](/help/forms/home.md) を参照してください。
+>比較の後、JEE スタックにプロセス管理機能をインストールする場合は、JEE スタックとプロセス管理機能のインストールと設定の詳細について、 [JEE での AEM Forms のインストールまたはアップグレード](/help/forms/using/introduction-aem-forms.md) を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
@@ -60,7 +60,7 @@ Forms ベースのワークフローを OSGi 上でのインストールと設�
 
 * メモリ要件が満たされていること。AEM Forms アドオンパッケージでは、次が必要です。
 
-   * 15 GB の一時領域 (Microsoft Windows ベースのインストール用 )
+   * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
    * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
 * Unix ベースのシステムの追加必要システム構成：Unix ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
@@ -163,12 +163,12 @@ Dispatcher は、AEMのキャッシュおよびロードバランシングツー
 
    Apache Felix Configuration Manager に管理者としてログインします。Configuration Manager のデフォルト URL は https://&#39;server&#39;:[port_number]/system/console/configMgr です。**Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。URL の形式は、`https://'[server]:[port]'` です。
 
-#### キャッシュの設定 {#configure-cache}
+#### キャッシュを設定 {#configure-cache}
 
-キャッシュは、データアクセス時間の短縮、待ち時間の短縮、入出力 (I/O) 速度の向上を実現するメカニズムです。 アダプティブフォームのキャッシュには、アダプティブフォームのHTMLコンテンツと JSON 構造のみが保存されます。事前入力されたデータは保存されません。 これにより、アダプティブフォームのレンダリングに要する時間を短縮できます。
+キャッシュは、データへのアクセスにかかる時間を短縮し、待ち時間を削減して I/O（入出力）速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、アダプティブフォームのレンダリングの時間を短縮します。
 
-* アダプティブフォームのキャッシュを使用する場合は、 [AEM Dispatcher](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html) アダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュする場合。
-* カスタムコンポーネントを開発する際は、開発に使用するサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
+* アダプティブフォームのキャッシュを使用するときは、[AEM Dispatcher](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
+* カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
 次の手順を実行してアダプティブフォームのキャッシュを設定します。
 
@@ -179,13 +179,13 @@ Dispatcher は、AEMのキャッシュおよびロードバランシングツー
    >
    >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュ設定を無効にしたり変更したりすると、キャッシュがリセットされ、すべてのフォームとドキュメントがキャッシュから削除されます。
 
-#### Adobe Signの設定 {#configure-adobe-sign}
+#### Adobe Sign を設定 {#configure-adobe-sign}
 
-Adobe Signを使用すると、アダプティブフォームの電子署名ワークフローが有効になります。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
+Adobe Sign では、アダプティブフォームの電子サインワークフローを有効にすることができます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
 OSGi シナリオ上の Adobe Sign とフォームベースの一般的なワークフローでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームに、ユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申し込みフォームに入力、送信、署名すると、承認または却下のワークフローが開始されます。サービスプロバイダーは、AEM インボックスでアプリケーションを確認し、Adobe Sign を使用してアプリケーションに電子署名します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
-AEM FormsでAdobe Signを使用するには、 [Adobe SignとAEM Formsの統合](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+AEM Forms で Adobe Sign を使用するには、[Adobe Sign を AEM Forms に統合](../../forms/using/adobe-sign-integration-adaptive-forms.md)を参照してください。
 
 ## 次の手順 {#next-steps}
 

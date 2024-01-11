@@ -1,13 +1,13 @@
 ---
 title: ' [!DNL Adobe Experience Manager Assets] の概要'
-description: デジタルアセット管理とは何か、そのユースケース、および  [!DNL Adobe Experience Manager Asset]  の機能について説明します。
+description: デジタルアセットを Experience Manager で作成、管理、処理および配布します。これらのガイドでは、ベストプラクティス、アクセシビリティ機能および AEM 6.5 Assets の使用方法について説明します。
 contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '886'
 ht-degree: 97%
 
 ---

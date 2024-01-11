@@ -7,7 +7,7 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '5991'
 ht-degree: 98%
@@ -839,7 +839,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!NOTE]
 >
->AEM Forms について詳しくは、[AEM Forms のヘルプ](/help/forms/home.md)を参照してください。
+>AEM Forms について詳しくは、[AEM Forms のヘルプ](/help/forms/using/introduction-aem-forms.md)を参照してください。
 
 フォームは、次のように多様なコンポーネントから構成されます。
 

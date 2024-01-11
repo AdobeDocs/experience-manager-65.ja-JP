@@ -7,10 +7,10 @@ role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '3595'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 96%
 | | <ul><li>[!UICONTROL video]</li></ul> | `video/avi` や `video/mp4` などの MIME タイプを持つビデオアセットのスキーマフォーム |
 | [!UICONTROL collection] | | コレクションのスキーマフォーム |
 | [!UICONTROL contentfragment] | | [コンテンツフラグメント用のスキーマフォームです](/help/sites-developing/customizing-content-fragments.md)。 |
-| [!UICONTROL Forms] | | このスキーマフォームは [Adobe Experience Manager Forms](/help/forms/home.md) に関連するものです。 |
+| [!UICONTROL Forms] | | このスキーマフォームは [Adobe Experience Manager Forms](/help/forms/using/introduction-aem-forms.md) に関連するものです。 |
 | [!UICONTROL ugc_contentfragment] | | ソーシャルメディアから Experience Manager に統合されたユーザー生成コンテンツ断片およびアセットのスキーマフォーム |
 
 >[!NOTE]
@@ -194,7 +194,7 @@ ht-degree: 96%
 
    ![select_form](assets/select_form.png)
 
-1. （オプション）メタデータスキーマエディターで、条件を設定するフィールドを作成します。 「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。
+1. （オプション）メタデータスキーマエディターで、条件化するフィールドを作成します。「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。
 
    タブを作成するには、 `+` をクリックして、タブを追加し、メタデータフィールドを追加します。
 
@@ -220,7 +220,7 @@ ht-degree: 96%
 
    >[!NOTE]
    >
-   >選択肢を追加するときに「ドロップダウン」フィールドをクリックすると、インターフェイスが変形し、選択肢の「削除」オプションが機能しなくなります。変更を保存するまで、ドロップダウンをクリックしないでください。 この問題が発生した場合は、スキーマを保存してから再度開き、編集を続行します。
+   >選択肢を追加するときに「ドロップダウン」フィールドをクリックすると、インターフェイスが変形し、選択肢の「削除」オプションが機能しなくなります。変更を保存するまで、ドロップダウンをクリックしないでください。この問題が発生した場合は、スキーマを保存してから再度開き、編集を続行します。
 
 1. （オプション）他の必須フィールドを追加します。例えば、アセットタイプが「ビデオ」の場合、形式、コーデックおよび長さのフィールドがあります。
 

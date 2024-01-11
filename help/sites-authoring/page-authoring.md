@@ -2,7 +2,7 @@
 title: AEM でのコンテンツページのオーサリング
 description: Adobe Experience Manager 6.5 でコンテンツページをオーサリングする際に必要なタスク。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 76%
@@ -19,7 +19,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->ここでは、コンテンツページのオーサリングに関連するタスクについて取り上げます。この他にも、ページのオーサリングに密接に関連する機能が多数あります。それらについては、[オーサリングガイド](/help/sites-authoring/home.md)の他の節で説明しています。
+>ここでは、コンテンツページのオーサリングに関連するタスクについて取り上げます。この他にも、ページのオーサリングに密接に関連する機能が多数あります。それらについては、[オーサリングガイド](/help/sites-authoring/first-steps.md)の他の節で説明しています。
 
 ## ページのオーサリングに使用される機能の概要 {#quick-overview-of-features-used-for-authoring-pages}
 

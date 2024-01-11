@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '3699'
 ht-degree: 100%
@@ -34,7 +34,7 @@ AEM を実装するとき（特に初回）は、[AEM の機能とワークフ�
 * [Assets](/help/assets/assets.md)
 * [タグ](/help/sites-administering/tags.md)
 * [マルチサイト管理と翻訳](/help/sites-administering/msm-and-translation.md)
-* [Forms](/help/forms/home.md)
+* [Forms](/help/forms/using/introduction-aem-forms.md)
 * [Communities](/help/communities/deploy-communities.md)
 
 また、[リリースノート](/help/release-notes/release-notes.md)でをチェックして、AEM の様々なバージョンで新機能が追加された時期を確認します。

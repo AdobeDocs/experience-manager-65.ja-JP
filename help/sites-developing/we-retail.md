@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 35%
@@ -49,7 +49,7 @@ We.Retail は、AEMサンプルコンテンツとして配信されます。 使
 
 >[!CAUTION]
 >
->We.Retail は最新の AEM テクノロジーに基づいているので、[クラシック UI のオーサリング](/help/sites-classic-ui-authoring/home.md)には対応していません。
+>We.Retail は最新の AEM テクノロジーに基づいているので、[クラシック UI のオーサリング](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)には対応していません。
 
 ### 最新バージョン {#latest-version}
 

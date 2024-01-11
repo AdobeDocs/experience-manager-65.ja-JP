@@ -1,16 +1,16 @@
 ---
 title: AEM Forms の概要
-description: Adobe Experience Manager Formsを使用すると、ビジネスユーザーは、魅力的でレスポンシブなアダプティブフォームを Web サイトやモバイルサイトに統合でき、デジタル登録プロセスを簡素化し、顧客のコンバージョン率を高めることができます。
+description: この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 22%
+source-wordcount: '950'
+ht-degree: 25%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Edge 配信サービスの使用
-description: Edge 配信サービスの使用 (EDS)
+description: Edge 配信サービスの使用
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 93%
+source-wordcount: '586'
+ht-degree: 92%
 
 ---
 
@@ -57,4 +57,4 @@ AEM Assets Sidekick プラグインを設定した後、[Google Docs または M
 * Edge 配信の開始方法について詳しくは、Edge 配信ドキュメントの[ビルド](https://www.hlx.live/docs/#build)の節を参照してください。
 * Edge 配信を使用してコンテンツをオーサリングおよび公開する方法について詳しくは、[セクションの公開](https://www.hlx.live/docs/authoring)を参照してください。
 * サイドキック拡張機能の使用方法について詳しくは、[サイドキックの使用](https://www.hlx.live/docs/sidekick)のページを参照してください。
-* AEM オーサリングについては、[オーサリングの概念ページ](/help/sites-authoring/author.md)を参照してください)
+* AEMオーサリングの場合は、 [オーサリングの概念ページ](/help/sites-authoring/author.md))

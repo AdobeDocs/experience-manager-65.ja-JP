@@ -2,7 +2,7 @@
 title: 基盤コンポーネント
 description: Adobe Experience Manager 6.5 の基盤コンポーネントについて説明します。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '6872'
 ht-degree: 98%
@@ -977,7 +977,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!NOTE]
 >
->AEM Forms について詳しくは、[AEM Forms のヘルプ](/help/forms/home.md)を参照してください。
+>AEM Forms について詳しくは、[AEM Forms のヘルプ](/help/forms/using/introduction-aem-forms.md)を参照してください。
 
 フォームは、次のように多様なコンポーネントから構成されます。
 

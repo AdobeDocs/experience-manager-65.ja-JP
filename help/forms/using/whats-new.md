@@ -5,7 +5,7 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: ea11ecff5be51a19ab901a588200519a70cf9efc
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 3%
@@ -267,7 +267,7 @@ In line with planned EOL of Adobe Flash Player and overall direction of migratin
 #### Security improvements {#security-improvements}
 
 * AEM 6.5 Forms on JEE administration console UI is now based on Apache Struts 2.5.
-* AEM 6.5 Forms now uses jQuery to 3.2.1 and jQuery UI 1.12.1. See, [upgrade documentation](/help/forms/home.md) for the impact of the change.
+* AEM 6.5 Forms now uses jQuery to 3.2.1 and jQuery UI 1.12.1. See, [upgrade documentation](/help/forms/using/introduction-aem-forms.md) for the impact of the change.
 
 #### Accessibility improvements {#accessibility-improvements}
 

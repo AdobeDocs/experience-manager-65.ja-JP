@@ -2,7 +2,7 @@
 title: タスクを管理するインボックス
 description: Adobe Experience Manager 6.5 のインボックスを使用したタスクの管理
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 89%
@@ -39,7 +39,7 @@ ht-degree: 89%
 >* [プロジェクト](/help/sites-authoring/touch-ui-managing-projects.md)
 >* [プロジェクト - タスクの操作](/help/sites-authoring/task-content.md)
 >* [ワークフロー](/help/sites-authoring/workflows.md)
->* [フォーム](/help/forms/home.md)
+>* [フォーム](/help/forms/using/introduction-aem-forms.md)
 >
 
 ## ヘッダー内のインボックス {#inbox-in-the-header}
@@ -67,7 +67,7 @@ AEM 通知インボックスを開くには、次の手順に従います。
 
 1. ツールバーのインジケーターをクリックします。
 
-1. 「**すべて表示**」を選択します。The **AEM Inbox** が開きます。 インボックスには、ワークフロー、プロジェクトおよびタスクからの項目が表示されます。
+1. 「**すべて表示**」を選択します。**AEM インボックス**&#x200B;が開きます。インボックスには、ワークフロー、プロジェクトおよびタスクからの項目が表示されます。
 1. デフォルトの表示は[リスト表示](#inbox-list-view)ですが、[カレンダー表示](#inbox-calendar-view)に切り替えることもできます。これは、表示セレクター（ツールバーの右上部分）を使用しておこないます。
 
    両方の表示について、[表示設定](#inbox-view-settings)を定義することもできます。使用可能なオプションは現在の表示によって異なります。

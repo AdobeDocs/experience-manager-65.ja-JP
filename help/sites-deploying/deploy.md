@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: deploying
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
 workflow-type: tm+mt
 source-wordcount: '1792'
 ht-degree: 52%
@@ -287,9 +287,9 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 
 ログイン後、AEMにアクセスできます。 詳しくは、役割に応じて、以下を参照してください。
 
-* [オーサリング](/help/sites-authoring/home.md)
+* [オーサリング](/help/sites-authoring/first-steps.md)
 * [管理](/help/sites-administering/home.md)
-* [開発](/help/sites-developing/home.md)
+* [開発](/help/sites-developing/getting-started.md)
 * [管理](/help/managing/best-practices.md)
 
 ## 高度なデプロイメント {#advanced-deployment}

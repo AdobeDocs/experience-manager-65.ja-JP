@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 のドキュメントを使用して、ソフトウェアの仕組みとユーザーにとっての機能を確認してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 241e39ae402744ac200cfd9220245b080aec33af
+source-git-commit: 4be8b14ca9af543cec89c85ec5750f2065033406
 workflow-type: tm+mt
-source-wordcount: '7328'
-ht-degree: 97%
+source-wordcount: '7297'
+ht-degree: 98%
 
 ---
 
@@ -17,8 +17,7 @@ ht-degree: 97%
 # Adobe Experience Manager 6.5 ドキュメント {#content}
 
 + リリースノート {#release-notes}
-   + [AEM 6.5 リリースノート](/help/release-notes/home.md)
-   + [最新のリリースノート](/help/release-notes/release-notes.md)
+   + [リリースノート](/help/release-notes/release-notes.md)
    + 以前のリリースノート {#service-pack}
       + [6.5.18](/help/release-notes/previous/6.5.18.md)
       + [6.5.17](/help/release-notes/previous/6.5.17.md)
@@ -74,7 +73,6 @@ ht-degree: 97%
    + [同じサイト cookie サポート](/help/sites-administering/same-site-cookie-support.md)
 + Sites {#sites}
    + オーサリング{#authoring}
-      + [オーサリングユーザーガイドの概要](/help/sites-authoring/home.md)
       + AEM オーサリングの基本的なタスク、ツールおよび概念 {#essentials}
          + [作成者がおこなう最初の手順](/help/sites-authoring/first-steps.md)
          + [ページオーサリング](/help/sites-authoring/page-authoring.md)
@@ -270,7 +268,6 @@ ht-degree: 97%
          + [Screens のコンテンツ管理](/help/sites-administering/content-management-screens.md)
          + [WebDAV アクセス](/help/sites-administering/webdav-access.md)
    + クラシック UI オーサリング {#classic-ui}
-      + [クラシック UI オーサリングガイドの概要](/help/sites-classic-ui-authoring/home.md)
       + クラシック UI オーサリングの概要 {#introduction}
          + [作成者が行う最初の手順](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)
          + [クラシック UI でのオーサリング](/help/sites-classic-ui-authoring/classicui.md)
@@ -340,7 +337,6 @@ ht-degree: 97%
          + [Dynamic Media の操作](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
          + [アセットの命名規則のテスト](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 + アセット {#assets}
-   + [[!DNL Assets] ユーザーガイド](/help/assets/home.md)
    + [DAM について](/help/assets/assets.md)
    + [Assets のベストプラクティス](/help/assets/best-practices-for-assets.md)
    + [ [!DNL Assets] でのアクセシビリティ](/help/assets/accessibility.md)
@@ -504,7 +500,6 @@ ht-degree: 97%
       + [ [!DNL Workfront] への  [!DNL enhanced connector]  のインストール](/help/assets/workfront-connector-install.md)
       + [ [!DNL Workfront]用の [!DNL enhanced connector] の設定](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
-   + [AEM 6.5 Forms ユーザーガイド](/help/forms/home.md)
    + リリースノート {#release-notes-new-features}
       + [新機能](/help/forms/using/whats-new.md)
       + [よくある質問](/help/forms/using/frequently-asked-questions-faq.md)
@@ -1192,9 +1187,8 @@ ht-degree: 97%
       + [動的 PDF Forms でのハッシュの生成と操作](/help/forms/developing/hashing-forms.md)
       + [WS-Security ヘッダーを使用した資格情報の受け渡し](/help/forms/developing/passing-credentials.md)
 + コンテンツとコマース {#commerce}
-   + [AEM Content and Commerce](/help/commerce/home.md)
-   + [AEM Content and Commerce の主な変更点](/help/commerce/cif/changes.md)
    + [概要](/help/commerce/cif/introduction.md)
+   + [AEM Content and Commerce の主な変更点](/help/commerce/cif/changes.md)
    + 統合 {#integrations}
       + [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
       + [サードパーティコマースソリューション](/help/commerce/cif/integrating/third-party.md)
@@ -1240,7 +1234,7 @@ ht-degree: 97%
          + [SAP Commerce Cloud を使用した開発](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
 + Edge 配信サービス {#edge-delivery-services}
    + [Edge 配信の概要](/help/edge/overview.md)
-   + [エッジ配信の使用](/help/edge/using.md)
+   + [Edge 配信の使用](/help/edge/using.md)
 + ヘッドレス {#headless}
    + [AEM ヘッドレスジャーニー](/help/journey-headless/overview.md)
    + AEM ヘッドレスデベロッパージャーニー {#developer}
@@ -1276,7 +1270,6 @@ ht-degree: 97%
    + [ドキュメントジャーニーとは](/help/journey-documentation/home.md)
 + 実装 {#implementing}
    + 開発 {#developing}
-      + [開発ユーザーガイドの概要](/help/sites-developing/home.md)
       + 開発者向けの概要 {#introduction}
          + [AEM Sites の開発の手引き - WKND チュートリアル](/help/sites-developing/getting-started.md)
          + [AEM の中心概念](/help/sites-developing/the-basics.md)
@@ -1529,7 +1522,6 @@ ht-degree: 97%
          + [モバイルデバイス用サイトの作成](/help/sites-developing/mobile.md)
          + [エミュレーター](/help/sites-developing/emulators.md)
    + デプロイ {#deploying}
-      + [デプロイユーザーガイド](/help/sites-deploying/home.md)
       + AEM プラットフォームの概要 {#introduction}
          + [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
          + [技術要件](/help/sites-deploying/technical-requirements.md)
