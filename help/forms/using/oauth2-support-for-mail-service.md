@@ -2,10 +2,10 @@
 title: Microsoft&reg; Office 365 メールサーバープロトコルの OAuth2 ベース認証を設定
 description: Microsoft&reg; Office 365 メールサーバープロトコルの OAuth2 ベース認証を設定
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
-source-git-commit: 99808cb38c5d376ccb7fb550c5212138890cec11
+source-git-commit: 020b92463371294706e9873e0d8962583d19ac52
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 97%
+source-wordcount: '980'
+ht-degree: 87%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 97%
 
 1. [https://portal.azure.com/](https://portal.azure.com/) にログインし、検索バーで **Azure Active Directory** を検索して、結果をクリックします。
 または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
-1. **追加**／**アプリの登録**／**新しい登録**&#x200B;をクリックします。
+1. クリック **追加** > **アプリの登録** > **新規登録**.
 
    ![アプリの登録](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
@@ -33,7 +33,7 @@ ht-degree: 97%
 
    ![秘密鍵](/help/forms/using/assets/azure_secretkey.png)
 
-1. 権限を追加するには、新しく作成したアプリに移動し、**API 権限**／ **権限を追加**／**Microsoft® Graph**／**デリゲートされた権限**&#x200B;を選択します。
+1. 権限を追加するには、新しく作成されたアプリに移動し、を選択します。 **API 権限** > **権限を追加** > **Microsoft® Graph** > **委任された権限**.
 1. アプリの以下の権限のチェックボックスをオンにして、「**権限を追加**」をクリックします。
 
    * `IMAP.AccessUser.All`
@@ -81,7 +81,7 @@ ht-degree: 97%
 
    ![権限の許可](/help/forms/using/assets/azure_permission.png)
 
-1. 権限を許可すると、`https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]` のような新しい URL にリダイレクトされます。
+1. 権限を許可すると、次のように新しい URL にリダイレクトされます。 `https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]`
 
 1. 上記 URL の `<code>` の値を上記 URL の `0.ASY...` から `&session_state` にコピーします。
 
@@ -134,7 +134,7 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   Auth 2.0 認証設定をワークベンチの特定のプロセスに対する基本認証に変更する場合は、「**接続設定**」タブの「**グローバル設定を使用**」の下で、**OAuth 2.0 認証**&#x200B;の値を「False」に設定できます。
+   必要に応じて、Auth 2.0 認証設定を、Workbench の特定のプロセスに対する基本認証に変更できます。 これをおこなうには、 **OAuth 2.0 認証** の下の値が「False」 **グローバル設定を使用** （内） **接続設定** タブをクリックします。
 
 ## OAuth タスク通知を有効にする手順は次のとおりです。 {#enable_oauth_task}
 
@@ -148,7 +148,7 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html?lang=ja#create-an-email-endpoint-for-the-complete-task-service)します。
+   タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service)します。
 
 ## メールのエンドポイントを設定する手順は次のとおりです。 {#configure_email_endpoint}
 
@@ -162,7 +162,7 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   メールエンドポイントの設定に関する詳細は、[メールエンドポイントの設定](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-email-endpoints.html?lang=ja)をクリックします。
+   メールエンドポイントの設定に関する詳細は、[メールエンドポイントの設定](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html)をクリックします。
 
 ## トラブルシューティング {#troubleshooting}
 
