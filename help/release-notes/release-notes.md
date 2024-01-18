@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 2c5791e972deef5fe81768d10ad53acaf946332a
+source-git-commit: 5da11d1f1a8568c12cb9f6ccea9d71e61c1310c3
 workflow-type: tm+mt
-source-wordcount: '4308'
-ht-degree: 73%
+source-wordcount: '4376'
+ht-degree: 71%
 
 ---
 
@@ -444,6 +444,39 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
       "visualSimilaritySearch"
     ]
   "refresh": true
+  ```
+
+* オプションの変数を使用してGraphQLクエリを実行する場合、特定の値が **not** オプションの変数に指定された場合、その変数の値は `null`. つまり、フィルターは一致するのみとなります `null` 対応するプロパティの値。
+
+  例えば、以下のクエリでは、プロパティの値が指定されていません。 `lastName`:
+
+  ```graphql
+  query getAuthorsFilteredByLastName($authorLastName: String) {
+  authorList(filter:
+    {
+      lastName: {_expressions: {value: $authorLastName}
+      }}) {
+    items {
+      lastName
+      }
+    }
+  }
+  ```
+
+  次を持つ作成者のみ： `lastName` プロパティを null に設定すると、次の値が返されます。
+
+  ```graphql
+  {
+  "data": {
+    "authorList": {
+      "items": [
+        {
+          "lastName": null
+        }
+      ]
+    }
+  }
+  }
   ```
 
 * [!DNL Experience Manager] インスタンスを 6.5.0～6.5.4 から Java™ 11 の最新のサービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
