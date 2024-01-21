@@ -4,10 +4,10 @@ description: タフデイテストでは、すべての操作が同時に進行�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 61c7955c5370b5341d097dc36d08b2b92b89517b
 workflow-type: tm+mt
-source-wordcount: '1824'
-ht-degree: 97%
+source-wordcount: '1826'
+ht-degree: 96%
 
 ---
 
@@ -400,7 +400,7 @@ Tough Day 2 では、Tough Day 2 を実行したディレクトリにログフ�
 * **toughday.log**：アプリケーションの状態、デバッグ情報およびグローバルメッセージに関連するメッセージが含まれます。
 * **toughday_&lt;testname>.log**：指定したテストに関連するメッセージ。
 
-ログは上書きされません。その後の実行では、既存のログにメッセージが追加されます。ログには複数のレベルがあります。詳しくは、` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)` を参照してください。
+ログは上書きされません。その後の実行では、既存のログにメッセージが追加されます。ログには複数のレベルがあります。詳しくは、 [loglevel パラメーター。](#global-parameters).
 
 <!--
 #### Example Usage {#example-usage}
