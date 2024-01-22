@@ -1,6 +1,6 @@
 ---
 title: AEM プラットフォームの概要
-description: Adobe Experience Manager 6.5 のインストールとデプロイを含むAEMプラットフォームとその最も重要なコンポーネント、およびAdobeManaged Servicesクラウドのデプロイメントを含むそのアーキテクチャについて説明します。
+description: Adobe Experience Manager 6.5 のインストールとデプロイを含む AEM プラットフォームとその最も重要なコンポーネント、Adobe Managed Services クラウドデプロイメントを含むアーキテクチャについて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -10,7 +10,7 @@ exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
 source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 

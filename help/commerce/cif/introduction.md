@@ -1,12 +1,12 @@
 ---
 title: 概要
-description: AEMコンテンツとコマースの使用と管理方法を理解し、統合に関する便利な記事やAEM Storefront の使用を開始する方法を紹介します。
+description: AEM Content and Commerce の使用と管理の方法を理解します。統合に関する役立つ記事や、AEM ストアフロントの使用を開始する方法も用意されています。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
