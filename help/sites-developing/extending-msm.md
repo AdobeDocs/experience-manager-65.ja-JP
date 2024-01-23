@@ -7,10 +7,10 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 1ad4d5370356f160398b3c19080dc4494e12cba7
 workflow-type: tm+mt
 source-wordcount: '2444'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 93%
 
 主な MSM API オブジェクトは、次のようにやり取りします（[使用される用語](/help/sites-administering/msm.md#terms-used)も参照してください）。
 
-![メインの MSM API オブジェクト](assets/chlimage_1-73.png)
+![主な MSM API オブジェクト](assets/chlimage_1-73.png)
 
 * **`Blueprint`**
 
@@ -53,7 +53,7 @@ ht-degree: 93%
 
   ![ブループリント](assets/chlimage_1-74.png)
 
-   * ブループリント設定（`Blueprint`）の使用は任意ですが、これを使用すると、
+   * ブループリント設定（`Blueprint`）の使用は任意ですが、次の事項が可能になります。
 
       * 作成者がソースに対して「**ロールアウト**」オプションを使用できます（これにより、このソースから継承するライブコピーに変更を（明示的に）プッシュできます）。
       * 作成者が「**サイトを作成**」を使用できます。これにより、ユーザーが簡単に言語を選択し、ライブコピーの構造を設定できるようになります。
@@ -384,11 +384,9 @@ GitHub のコード
    ```java
    package com.adobe.example.msm;
    
-   import java.util.Collections;
+   import java.util.Collections;  
    
-   import org.apache.felix.scr.annotations.Component;
-   import org.apache.felix.scr.annotations.Property;
-   import org.apache.felix.scr.annotations.Service;
+   import com.day.cq.wcm.api.NameConstants;
    import org.apache.sling.api.resource.Resource;
    import org.apache.sling.api.resource.ResourceResolver;
    import org.apache.sling.api.resource.ValueMap;
@@ -396,6 +394,7 @@ GitHub のコード
    import org.apache.sling.commons.json.io.JSONWriter;
    import org.apache.sling.commons.json.JSONException;
    
+   import org.osgi.service.component.annotations.Component;
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    
@@ -409,116 +408,118 @@ GitHub のコード
    import com.day.cq.wcm.msm.api.LiveRelationship;
    import com.day.cq.wcm.api.WCMException;
    
-   @Component(metatype = false)
-   @Service
+   @Component(
+   service = LiveActionFactory.class,
+   property = {LiveActionFactory.LIVE_ACTION_NAME + "=" + ExampleLiveActionFactory.LIVE_ACTION_NAME})
    public class ExampleLiveActionFactory implements LiveActionFactory<LiveAction> {
-    @Property(value="exampleLiveAction")
-    static final String actionname = LiveActionFactory.LIVE_ACTION_NAME;
+     private static final Logger logger = LoggerFactory.getLogger(ExampleLiveActionFactory.class);
    
-    public LiveAction createAction(Resource config) {
-     ValueMap configs;
-     /* Adapt the config resource to a ValueMap */
-           if (config == null || config.adaptTo(ValueMap.class) == null) {
-               configs = new ValueMapDecorator(Collections.<String, Object>emptyMap());
-           } else {
-               configs = config.adaptTo(ValueMap.class);
-           }
+     public static final String LIVE_ACTION_NAME = "CustomAction";
    
-     return new ExampleLiveAction(actionname, configs);
-    }
-    public String createsAction() {
-     return actionname;
-    }
-    /************* LiveAction ****************/
-    private static class ExampleLiveAction implements LiveAction {
-     private String name;
-     private ValueMap configs;
-     private static final Logger log = LoggerFactory.getLogger(ExampleLiveAction.class);
+     public LiveAction createAction(Resource config) {
+       ValueMap configs;
+       /* Adapt the config resource to a ValueMap */
+       if (config == null || config.adaptTo(ValueMap.class) == null) {
+         configs = new ValueMapDecorator(Collections.<String, Object>emptyMap());
+       } else {
+         configs = config.adaptTo(ValueMap.class);
+       }  
+   
+       return new ExampleLiveAction(LIVE_ACTION_NAME, configs);
+     }
+     public String createsAction() {
+       return LIVE_ACTION_NAME;
+     }  
+   
+     /************* LiveAction ****************/
+     private static class ExampleLiveAction implements LiveAction {
+       private String name;
+       private ValueMap configs;
+       private static final Logger log = LoggerFactory.getLogger(ExampleLiveAction.class);  
    
      public ExampleLiveAction(String nm, ValueMap config){
-      name = nm;
-      configs = config;
-     }
+       name = nm;
+       configs = config;
+     }  
    
      public void execute(Resource source, Resource target,
-       LiveRelationship liverel, boolean autoSave, boolean isResetRollout)
-         throws WCMException {
+                         LiveRelationship liverel, boolean autoSave, boolean isResetRollout)
+                       throws WCMException {  
    
-      String lastMod = null;
+       String lastMod = null;  
    
-      log.info(" *** Executing ExampleLiveAction *** ");
+       log.info(" *** Executing ExampleLiveAction *** ");  
    
-      /* Determine if the LiveAction is configured to copy the cq:lastModifiedBy property */
-      if ((Boolean) configs.get("repLastModBy")){
+       /* Determine if the LiveAction is configured to copy the cq:lastModifiedBy property */
+       if ((Boolean) configs.get("repLastModBy")){  
    
-       /* get the source's cq:lastModifiedBy property */
-       if (source != null && source.adaptTo(Node.class) !=  null){
-        ValueMap sourcevm = source.adaptTo(ValueMap.class);
-        lastMod = sourcevm.get(com.day.cq.wcm.msm.api.MSMNameConstants.PN_PAGE_LAST_MOD_BY, String.class);
-       }
+         /* get the source's cq:lastModifiedBy property */
+         if (source != null && source.adaptTo(Node.class) !=  null){
+           ValueMap sourcevm = source.adaptTo(ValueMap.class);
+           lastMod = sourcevm.get(NameConstants.PN_PAGE_LAST_MOD_BY, String.class);
+         }  
    
-       /* set the target node's la-lastModifiedBy property */
-       Session session = null;
-       if (target != null && target.adaptTo(Node.class) !=  null){
-        ResourceResolver resolver = target.getResourceResolver();
-        session = resolver.adaptTo(javax.jcr.Session.class);
-        Node targetNode;
-        try{
-         targetNode=target.adaptTo(javax.jcr.Node.class);
-         targetNode.setProperty("la-lastModifiedBy", lastMod);
-         log.info(" *** Target node lastModifiedBy property updated: {} ***",lastMod);
-        }catch(Exception e){
-         log.error(e.getMessage());
-        }
-       }
-       if(autoSave){
-        try {
-         session.save();
-        } catch (Exception e) {
-         try {
-          session.refresh(true);
-         } catch (RepositoryException e1) {
-          e1.printStackTrace();
+         /* set the target node's la-lastModifiedBy property */
+         Session session = null;
+         if (target != null && target.adaptTo(Node.class) !=  null){
+           ResourceResolver resolver = target.getResourceResolver();
+           session = resolver.adaptTo(javax.jcr.Session.class);
+           Node targetNode;
+           try{
+             targetNode=target.adaptTo(javax.jcr.Node.class);
+             targetNode.setProperty("la-lastModifiedBy", lastMod);
+             log.info(" *** Target node lastModifiedBy property updated: {} ***",lastMod);
+           }catch(Exception e){
+             log.error(e.getMessage());
+           }
          }
-         e.printStackTrace();
-        }
+         if(autoSave){
+           try {
+             session.save();
+           } catch (Exception e) {
+             try {
+               session.refresh(true);
+             } catch (RepositoryException e1) {
+               e1.printStackTrace();
+             }
+             e.printStackTrace();
+           }
+         }
        }
-      }
      }
      public String getName() {
-      return name;
-     }
+       return name;
+     }  
    
      /************* Deprecated *************/
      @Deprecated
      public void execute(ResourceResolver arg0, LiveRelationship arg1,
-       ActionConfig arg2, boolean arg3) throws WCMException {
+                        ActionConfig arg2, boolean arg3) throws WCMException {
      }
      @Deprecated
      public void execute(ResourceResolver arg0, LiveRelationship arg1,
-       ActionConfig arg2, boolean arg3, boolean arg4)
-         throws WCMException {
+                         ActionConfig arg2, boolean arg3, boolean arg4)
+                       throws WCMException {
      }
      @Deprecated
      public String getParameterName() {
-      return null;
+       return null;
      }
      @Deprecated
-     public String[] getPropertiesNames() {
-      return null;
+       public String[] getPropertiesNames() {
+         return null;
      }
      @Deprecated
      public int getRank() {
-      return 0;
+       return 0;
      }
      @Deprecated
      public String getTitle() {
-      return null;
+       return null;
      }
      @Deprecated
      public void write(JSONWriter arg0) throws JSONException {
      }
-    }
    }
    ```
 
@@ -614,7 +615,7 @@ AEM では、言語コードと国コードのデフォルトセットを使用�
 * デフォルトの言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
 * デフォルトの国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
 
-MSM は、保存されている言語コードと国コードのリストを使用して、ページの言語バージョン名に関連付けられている国名を判断します。必要に応じて、リストの以下の側面を変更できます。
+MSM は、保存されている言語コードと国コードのリストを使用して、ページの言語バージョン名に関連付けられている国名を判断します。必要に応じて、リストの次の要素を変更できます。
 
 * 言語タイトル
 * 国名
@@ -630,7 +631,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 ![言語定義](assets/chlimage_1-76.png)
 
-言語の変更手順
+言語を変更するには、次の手順に従います。
 
 1. Web ブラウザーで CRXDE Lite（例：[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）を開きます。
 1. `/apps` フォルダーを選択し、「**作成**」をクリックして、「**フォルダーを作成**」をクリックします。
@@ -645,7 +646,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 1. **ツール**／**運営**／**Web コンソール**&#x200B;の順にクリックします。このコンソールから「**OSGi**」をクリックし、次に「**設定**」をクリックします。
 1. **Day CQ WCM Language Manager** を探してクリックし、「**言語リスト**」の値を `/apps/wcm/core/resources/languages` に変更して、「**保存**」をクリックします。
 
-   ![Day CQ WCM Language Manager](assets/chlimage_1-78.png)
+   ![Day CQ WCM 言語マネージャー](assets/chlimage_1-78.png)
 
 ## ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
@@ -655,11 +656,11 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 * 連絡先メール：
 
-   * このプロパティは、国（ブランドなど）ごとに異なるので、ロールアウトする必要はありません。
+   * このプロパティは各国（またはブランドなど）によって異なるので、ロールアウトする必要はありません。
 
 * キービジュアルのスタイル：
 
-   * プロジェクト要件は、このプロパティが（通常は）すべての国（またはブランドなど）共通なので、ロールアウトされることです。
+   * プロジェクトの要件としては、このプロパティは（通常は）すべての国（またはブランドなど）に共通なので、ロールアウトする必要があります。
 
 次のことを保証する必要があります。
 
@@ -688,11 +689,11 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 * `cq-msm-lockable` の値が次のような場合：
 
-   * **相対** ( 例： `myProperty` または `./myProperty`)
+   * **相対**（例：`myProperty` または `./myProperty`）
 
       * プロパティを `cq:propertyInheritanceCancelled` から追加および削除します。
 
-   * **絶対** ( 例： `/image`)
+   * **絶対**（例：`/image`）
 
       * チェーンを解除すると、`cq:LiveSyncCancelled` mixin を `./image` に追加し、`cq:isCancelledForChildren` を `true` に設定することで、継承がキャンセルされます。
 
