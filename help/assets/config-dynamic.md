@@ -11,14 +11,42 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+source-git-commit: 3fa8680480e0da1c58c99e8ce127ce228ab87803
 workflow-type: tm+mt
-source-wordcount: '7684'
+source-wordcount: '7733'
 ht-degree: 83%
 
 ---
 
 # Dynamic Media の設定 - ハイブリッドモード {#configuring-dynamic-media-hybrid-mode}
+
+>[!IMPORTANT]
+>
+>Secure Socket Layer 2.0 および 3.0 と Transport Layer Security 1.0 および 1.1 のサポートの終了。
+>2024 年 4 月 30 日をもって、AdobeDynamic Mediaは次のサポートを終了します。
+>
+>* SSL (Secure Socket Layer) 2.0
+>* SSL 3.0
+>* TLS（Transport Layer Security）1.0 および 1.1
+>* TLS 1.2 での以下の脆弱な暗号：
+> `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`
+> `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`
+> `TLS_RSA_WITH_AES_256_GCM_SHA384`
+> `TLS_RSA_WITH_AES_256_CBC_SHA256`
+> `TLS_RSA_WITH_AES_256_CBC_SHA`
+> `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`
+> `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
+> `TLS_RSA_WITH_AES_128_GCM_SHA256`
+> `TLS_RSA_WITH_AES_128_CBC_SHA256`
+> `TLS_RSA_WITH_AES_128_CBC_SHA`
+> `TLS_RSA_WITH_CAMELLIA_256_CBC_SHA`
+> `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`
+> `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
+> `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
+
+<!-- FOR ABOVE - CQDOC-19433 (original ticket)
+and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
+
 
 Dynamic Media - ハイブリッドを使用するには、有効化して設定する必要があります。Dynamic Media では、使用例に応じて、[サポートされる設定](#supported-dynamic-media-configurations)がいくつか用意されています。
 
