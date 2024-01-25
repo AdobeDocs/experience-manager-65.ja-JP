@@ -11,9 +11,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 3fa8680480e0da1c58c99e8ce127ce228ab87803
+source-git-commit: cc219931430ba571745e6ef254a034a689acd1cf
 workflow-type: tm+mt
-source-wordcount: '7733'
+source-wordcount: '7738'
 ht-degree: 83%
 
 ---
@@ -43,6 +43,8 @@ ht-degree: 83%
 > `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`
 > `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
 > `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
+>
+> 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
 <!-- FOR ABOVE - CQDOC-19433 (original ticket)
 and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
