@@ -8,10 +8,10 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
+source-git-commit: 6cec9874bff54dea63562f7a880429d54e83ba79
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 84%
+source-wordcount: '969'
+ht-degree: 82%
 
 ---
 
@@ -105,12 +105,11 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 1. 最新バージョンの Forms コアコンポーネントを含めるようにプロジェクトを更新します。
 
    1. [AEM Archetype Project Folder]/pom.xml を編集用に開きます。
-   1. のバージョンを設定 `core.forms.components.version` および `core.forms.components.af.version` から [最新のFormsコアコンポーネント](https://github.com/adobe/aem-core-forms-components/tree/release/650#system-requirements) のバージョンと両方がと同じバージョンであることを確認します。 **Forms Core Components** 表に記載されている、およびセットバージョンの `core.wcm.components.version` 以下で指定されたように **WCM コアコンポーネント**.
+   1. のバージョンを設定 `core.forms.components.version` および `core.forms.components.af.version` から [最新のFormsコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) のバージョンと両方がと同じバージョンであることを確認します。 **Forms Core Components** 表に記載されている、およびセットバージョンの `core.wcm.components.version` 以下で指定されたように [WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html).
 
       >[!WARNING]
       >
-      >* でアーキタイププロジェクトを作成する場合 `version 45`、 [AEM Archetype プロジェクトフォルダー]/pom.xmlは最初に、フォームコアコンポーネントのバージョンをに設定します。 `1.1.28`. アーキタイププロジェクトを構築またはデプロイする前に、フォームコアコンポーネントのバージョンをに更新します。 `1.1.26`.
-
+      >* バージョン 45 でアーキタイププロジェクトを作成する場合、 `[AEM Archetype Project Folder]/pom.xml` 最初は、フォームコアコンポーネントのバージョンを 1.1.28 に設定します。アーキタイププロジェクトを構築またはデプロイする前に、フォームコアコンポーネントのバージョンを 1.1.26 に更新します。最新バージョンは、 [AEM 6.5 Formsバージョン履歴](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history).
 
       >[!NOTE]
       >
