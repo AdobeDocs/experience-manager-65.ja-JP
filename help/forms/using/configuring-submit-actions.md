@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 23dd80f0555ddec1ca422b13fbf0d45acf5ab6a8
+source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
 workflow-type: tm+mt
-source-wordcount: '2580'
+source-wordcount: '2597'
 ht-degree: 92%
 
 ---
@@ -169,7 +169,11 @@ REST エンドポイント送信アクションの設定
 
 ## Microsoft® SharePointリストに送信{#submit-to-sharedrive}
 
-The **[!UICONTROL SharePointに送信]** 送信アクションは、アダプティブフォームをMicrosoft® SharePointストレージに接続します。 接続されたMicrosoft® Sharepoint ストレージに、フォームデータファイル、添付ファイル、またはレコードのドキュメントを送信できます。
+>[!NOTE]
+>
+Microsoft® SharePointリストへの送信機能は、AEM 6.5 Forms Service Pack 19(6.5.19.0) で導入されました。
+
+The **[!UICONTROL SharePointに送信]** 送信アクションは、アダプティブフォームをMicrosoft® SharePointストレージに接続します。 フォームデータファイル、添付ファイルまたはレコードのドキュメントを、接続された Microsoft® SharePoint ストレージに送信できます。
 
 ### アダプティブフォームのMicrosoft® SharePointリストへの接続 {#connect-af-sharepoint-list}
 
@@ -203,7 +207,7 @@ AEM FormsをMicrosoft® Sharepoint リストに接続するには：
 
 作成したSharePointリスト設定をアダプティブフォーム内で使用して、データや生成後のレコードのドキュメントをSharePointリストに保存することができます。 アダプティブフォームでSharePointリストストレージ設定を使用するには、以下の手順を実行します。
 
-1. [Microsoftを使用してフォームデータモデルを作成する](/help/forms/using/create-form-data-model.md)
+1. [Microsoft を使用してフォームデータモデルを作成する](/help/forms/using/create-form-data-model.md)
 1. [データを取得して送信するためのフォームデータモデルの設定](/help/forms/using/work-with-form-data-model.md#configure-services)
 1. [アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md).
 1. [フォームデータモデルを使用した送信アクションの設定](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
