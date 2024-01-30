@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: 152b6078d6a19f8220564188d4d5d5a7bdee4146
+source-git-commit: ff9d054d0b08f5f98f5edb63975a0dbc8370d42f
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 36%
+ht-degree: 33%
 
 ---
 
@@ -65,7 +65,7 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 Node root = session.getRootNode();
 ```
 
-`Node` インスタンスを作成すると、別のノードを作成してそのノードに値を追加するなどのタスクを実行できます。例えば、以下のコードでは、2 つのノードを作成し、2 番目のノードに値を追加します。
+次に、 `Node` インスタンスを使用すると、別のノードを作成し、そのノードに値を追加するなどのタスクを実行できます。 例えば、以下のコードでは、2 つのノードを作成し、2 番目のノードに値を追加します。
 
 ```java
 // Store content
