@@ -3,9 +3,9 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 3d1c3ac74c9303a88d028d957e3da6aa418e71ba
+source-git-commit: 312e2477bb6a7cccab74cd4637d6a402f61052d7
 workflow-type: tm+mt
-source-wordcount: '4697'
+source-wordcount: '4708'
 ht-degree: 96%
 
 ---
@@ -719,7 +719,7 @@ query {
   >
   >Dispatcher がサフィックスを追加する `.json` をすべての永続化されたクエリ URL に追加し、結果をキャッシュできるようにします。
   >
-  >これは、クエリが、キャッシュ可能なドキュメントに対する Dispatcher の要件に確実に従うようにするためです。
+  >これは、クエリが、キャッシュ可能なドキュメントに対する Dispatcher の要件に確実に従うようにするためです。 詳しくは、 [Dispatcher はどのようにドキュメントを返しますか？](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html?lang=ja#how-does-the-dispatcher-return-documents%3F)
 
 * `<conf.dispatcher.d/filters/ams_publish_filters.any>`
 
