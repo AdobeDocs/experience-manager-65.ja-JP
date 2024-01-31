@@ -3,10 +3,10 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 3d1c3ac74c9303a88d028d957e3da6aa418e71ba
 workflow-type: tm+mt
-source-wordcount: '4781'
-ht-degree: 95%
+source-wordcount: '4697'
+ht-degree: 96%
 
 ---
 
@@ -695,7 +695,7 @@ query {
 >
 >Dispatcher でのキャッシュが有効な場合、[CORS フィルター](#cors-filter)が不要なので、セクションを無視できます。
 
-永続化されたクエリのキャッシュは、Dispatcher ではデフォルトで有効になっていません。 複数のオリジンで CORS（クロスオリジンリソース共有）を使用している場合、Dispatcher 設定を確認し、場合によっては更新する必要があるので、デフォルトを有効にすることはできません。
+永続化されたクエリのキャッシュは、Dispatcher ではデフォルトで有効になっていません。複数のオリジンで CORS（クロスオリジンリソース共有）を使用している場合、Dispatcher 設定を確認し、場合によっては更新する必要があるので、デフォルトで有効にすることはできません。
 
 >[!NOTE]
 >
@@ -705,48 +705,36 @@ query {
 
 ### 永続クエリのキャッシュの有効化 {#enable-caching-persisted-queries}
 
-永続クエリーのキャッシュを有効にするには、Dispatcher 変数 `CACHE_GRAPHQL_PERSISTED_QUERIES` を定義します。
+永続化されたクエリのキャッシュを有効にするには、次の Dispatcher 設定ファイルの更新が必要です。
 
-1. 変数を Dispatcher ファイル `global.vars` に追加します。
+* `<conf.d/rewrites/base_rewrite.rules>`
 
-   ```xml
-   Define CACHE_GRAPHQL_PERSISTED_QUERIES
-   ```
+  ```xml
+  # Allow the dispatcher to be able to cache persisted queries - they need an extension for the cache file
+  RewriteCond %{REQUEST_URI} ^/graphql/execute.json
+  RewriteRule ^/(.*)$ /$1;.json [PT] 
+  ```
 
->[!NOTE]
->
->を使用して、永続化されたクエリに対して Dispatcher のキャッシュを有効にする場合 `Define CACHE_GRAPHQL_PERSISTED_QUERIES` an `ETag` ヘッダーが Dispatcher によって応答に追加されます。
->
->デフォルトでは、 `ETag` ヘッダーは、次のディレクティブを使用して設定します。
->
->```
->FileETag MTime Size 
->```
->
->ただし、この設定は応答の小さな変更を考慮しないので、永続化されたクエリ応答で使用すると、問題が発生する可能性があります。
->
->個人を成し遂げるには `ETag` の計算 *各* 一意の応答 `FileETag Digest` 設定は、dispatcher の設定で使用する必要があります。
->
->```xml
-><Directory />    
->   ...    
->   FileETag Digest
-></Directory> 
->```
+  >[!NOTE]
+  >
+  >Dispatcher がサフィックスを追加する `.json` をすべての永続化されたクエリ URL に追加し、結果をキャッシュできるようにします。
+  >
+  >これは、クエリが、キャッシュ可能なドキュメントに対する Dispatcher の要件に確実に従うようにするためです。
 
->[!NOTE]
->
->を [キャッシュ可能なドキュメントに対する Dispatcher の要件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html?lang=ja#how-does-the-dispatcher-return-documents%3F)を指定しない場合、Dispatcher はサフィックスを追加します `.json` をすべての永続化されたクエリ URL に追加し、結果をキャッシュできるようにします。
->
->この接頭辞は、永続クエリのキャッシュが有効になると、書き換えルールによって追加されます。
+* `<conf.dispatcher.d/filters/ams_publish_filters.any>`
+
+  ```xml
+  # Allow GraphQL Persisted Queries & preflight requests
+  /0110 { /type "allow" /method '(GET|POST|OPTIONS)' /url "/graphql/execute.json*" }
+  ```
 
 ### Dispatcher での CORS の設定 {#cors-configuration-in-dispatcher}
 
-CORS リクエストを使用するお客様に、Dispatcher で CORS の設定を確認および更新する必要が生じる場合があります。
+CORS リクエストを使用するお客様は、Dispatcher で CORS の設定を確認および更新する必要が生じる場合があります。
 
-* Dispatcher を介して AEM パブリッシュに `Origin` ヘッダーを渡さないでください。
+* `Origin` ヘッダーは、Dispatcher を介して AEM パブリッシュに渡さないでください。
    * `clientheaders.any` ファイルを確認します。
-* 代わりに、許可されたオリジンに対して、Dispatcher レベルで CORS リクエストを評価する必要があります。 また、この方法では、CORS 関連のヘッダーが、どの場合でも 1 か所で正しく設定されます。
+* 代わりに、許可されたオリジンに対して、Dispatcher レベルで CORS リクエストを評価する必要があります。また、この方法では、CORS 関連のヘッダーが、どの場合でも 1 か所で正しく設定されます。
    * このような設定は `vhost` ファイルに追加されます。次に設定例を示します。簡単にするために、CORS 関連の部分のみが提供されています。特定のユースケースに合わせて調整してください。
 
   ```xml
