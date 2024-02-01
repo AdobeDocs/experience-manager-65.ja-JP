@@ -1,14 +1,14 @@
 ---
-title: AEM Forms 6.5.12.0で以前のデータベースをバックアップできませんでした。
+title: MySQL の 6.5.12.0へのアップグレード中にデータベースのバックアップに失敗しました。
 description: ユーザーがExperience Manager6.5.12.0にアップグレードして「MySQL をアップグレード」をクリックすると、Configuration Manager は以前のExperience Manager Formsデータベースのバックアップに失敗します。
-source-git-commit: d232bfdad7b8413eb015f6fe5dd3442cebf1001d
+source-git-commit: bf974331157e21b28c0daa5b878ac927ce5a2304
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 7%
+source-wordcount: '106'
+ht-degree: 6%
 
 ---
 
-# 問題 (#issue)
+# MySQL の 6.5.12.0へのアップグレード中にデータベースをバックアップできない (#issue)
 
 ユーザーがExperience Manager6.5.12.0にアップグレードして「Upgrade MySQL」をクリックすると、Configuration Manager が以前のExperience Manager Formsデータベースのバックアップに失敗し、次のエラーが表示されます。
 
