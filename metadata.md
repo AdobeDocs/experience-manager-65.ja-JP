@@ -7,10 +7,11 @@ feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sit
 version: 6.5
 type: Documentation
 index: y
-source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
+recommendations: noDisplay
+source-git-commit: fc76dd7af48aa67380b0635589acf9322bff86fb
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 100%
+source-wordcount: '131'
+ht-degree: 88%
 
 ---
 
@@ -21,9 +22,9 @@ metadata.md ファイルには、リポジトリ内にあるユーザーガイ�
 
 | メタデータ | 機能 |
 |--- |--- |
-| solution-title | 記事ヘッダーでリンクとして使用されます。 |
+| solution-title | 記事のヘッダーでリンクとして使用されます。 |
 | solution-hub-url | 学習とサポートのハブページを開きます。 |
-| solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。まだ実装されていません。 |
+| solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。未実装。 |
 | getting-started-url | 「はじめに」のページへのリンク。 |
 | tutorials-url | ビデオチュートリアルへのリンク。 |
 | mini-toc-levels | 右側のレールに表示される見出しレベルの数を決定します。デフォルト値は 2 です。 |
@@ -33,5 +34,5 @@ TOC.md ファイル内
 
 | メタデータ | 機能 |
 |--- |--- |
-| user-guide-title | 記事ヘッダーでリンクとして使用されます。 |
+| user-guide-title | 記事のヘッダーでリンクとして使用されます。 |
 | user-guide-url | 学習とサポートのハブページを開きます。 |
