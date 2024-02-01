@@ -1,14 +1,14 @@
 ---
 title: MySQL の 6.5.12.0へのアップグレード中にデータベースのバックアップに失敗しました。
 description: ユーザーがExperience Manager6.5.12.0にアップグレードして「MySQL をアップグレード」をクリックすると、Configuration Manager は以前のExperience Manager Formsデータベースのバックアップに失敗します。
-source-git-commit: bf974331157e21b28c0daa5b878ac927ce5a2304
+source-git-commit: a6b1e97fd694f0fa1396697c42d84daaa9a6ac68
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '105'
 ht-degree: 6%
 
 ---
 
-# MySQL の 6.5.12.0へのアップグレード中にデータベースをバックアップできない (#issue)
+# MySQL 用に 6.5.12.0にアップグレード中にデータベースをバックアップできなかった問題 {#issue}
 
 ユーザーがExperience Manager6.5.12.0にアップグレードして「Upgrade MySQL」をクリックすると、Configuration Manager が以前のExperience Manager Formsデータベースのバックアップに失敗し、次のエラーが表示されます。
 
