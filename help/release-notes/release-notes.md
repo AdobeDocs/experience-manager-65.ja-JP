@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 040170454345df352ed259806193c41c23bf953d
+source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
 workflow-type: tm+mt
-source-wordcount: '4415'
+source-wordcount: '4417'
 ht-degree: 71%
 
 ---
@@ -553,7 +553,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html#resolution). （FORMS-8542）
 * AEM Service Pack 6.5.14.0以降をインストールした後、に移動したときに、JEE Admin UI からPDFドキュメントのフォントを選択できなくなる `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`フォントリストが空に表示されるので、 （FORMS-12095）
 <!-- When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) -->
-* JEE 上のAEM Formsで、コンテキストパスを利用するHTML5 Formsがレンダリングに失敗します。 (FORMS-12485)。 この問題に対するホットフィックスが利用できます。 ホットフィックスをダウンロードしてインストールするには、 [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
+* JEE 上のAEM Formsで、コンテキストパスを利用するHTML5 Formsがレンダリングに失敗します。 (FORMS-12485、FORMS-12691)。 この問題に対するホットフィックスが利用できます。 ホットフィックスをダウンロードしてインストールするには、 [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
 
 #### JEE 上の AEM Forms
 
