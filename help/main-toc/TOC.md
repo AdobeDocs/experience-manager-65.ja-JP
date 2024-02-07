@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 のドキュメントを使用して、ソフトウェアの仕組みとユーザーにとっての機能を確認してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 220e060de43758ce07e82bedcee8d26fb46a9a6f
+source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
 workflow-type: tm+mt
 source-wordcount: '7333'
 ht-degree: 97%
@@ -19,24 +19,24 @@ ht-degree: 97%
 + リリースノート {#release-notes}
    + [リリースノート](/help/release-notes/release-notes.md)
    + 以前のリリースノート {#service-pack}
-      + [6.5.18](/help/release-notes/previous/6.5.18.md)
-      + [6.5.17](/help/release-notes/previous/6.5.17.md)
-      + [6.5.16](/help/release-notes/previous/6.5.16.md)
-      + [6.5.15](/help/release-notes/previous/6.5.15.md)
-      + [6.5.14](/help/release-notes/previous/6.5.14.md)
-      + [6.5.13](/help/release-notes/previous/6.5.13.md)
-      + [6.5.12](/help/release-notes/previous/6.5.12.md)
-      + [6.5.11](/help/release-notes/previous/6.5.11.md)
-      + [6.5.10](/help/release-notes/previous/6.5.10.md)
-      + [6.5.9](/help/release-notes/previous/6.5.9.md)
-      + [6.5.8](/help/release-notes/previous/6.5.8.md)
-      + [6.5.7](/help/release-notes/previous/6.5.7.md)
-      + [6.5.6](/help/release-notes/previous/6.5.6.md)
-      + [6.5.5](/help/release-notes/previous/6.5.5.md)
-      + [6.5.4](/help/release-notes/previous/6.5.4.md)
-      + [6.5.3](/help/release-notes/previous/6.5.3.md)
-      + [6.5.2](/help/release-notes/previous/6.5.2.md)
-      + [6.5.1](/help/release-notes/previous/6.5.1.md)
+      + [6.5.18](/help/release-notes/previous/6-5-18.md)
+      + [6.5.17](/help/release-notes/previous/6-5-17.md)
+      + [6.5.16](/help/release-notes/previous/6-5-16.md)
+      + [6.5.15](/help/release-notes/previous/6-5-15.md)
+      + [6.5.14](/help/release-notes/previous/6-5-14.md)
+      + [6.5.13](/help/release-notes/previous/6-5-13.md)
+      + [6.5.12](/help/release-notes/previous/6-5-12.md)
+      + [6.5.11](/help/release-notes/previous/6-5-11.md)
+      + [6.5.10](/help/release-notes/previous/6-5-10.md)
+      + [6.5.9](/help/release-notes/previous/6-5-9.md)
+      + [6.5.8](/help/release-notes/previous/6-5-8.md)
+      + [6.5.7](/help/release-notes/previous/6-5-7.md)
+      + [6.5.6](/help/release-notes/previous/6-5-6.md)
+      + [6.5.5](/help/release-notes/previous/6-5-5.md)
+      + [6.5.4](/help/release-notes/previous/6-5-4.md)
+      + [6.5.3](/help/release-notes/previous/6-5-3.md)
+      + [6.5.2](/help/release-notes/previous/6-5-2.md)
+      + [6.5.1](/help/release-notes/previous/6-5-1.md)
       + [6.5.0](/help/release-notes/previous/ga.md)
    + [AEM Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)
    + [AEM Forms JEE パッチインストーラー](/help/release-notes/jee-patch-installer-65.md)
@@ -470,7 +470,7 @@ ht-degree: 97%
       + [コンテンツフラグメントを関連付けられたコンテンツ](/help/assets/content-fragments/content-fragments-assoc-content.md)
       + [メタデータ - フラグメントのプロパティ](/help/assets/content-fragments/content-fragments-metadata.md)
       + [コンテンツフラグメント - 削除に関する考慮事項](/help/assets/content-fragments/content-fragments-delete.md)
-      + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
+      + [マークダウン](/help/assets/content-fragments/content-fragments-markdown.md)
       + [構造ツリー](/help/assets/content-fragments/content-fragments-structure-tree.md)
       + [プレビュー - JSON 表現](/help/assets/content-fragments/content-fragments-json-preview.md)
       + [コンテンツフラグメントの翻訳プロジェクトの作成](/help/assets/creating-translation-projects-for-content-fragments.md)
@@ -1182,7 +1182,7 @@ ht-degree: 97%
       + [AEM Formsサーバーが完全に稼働していない場合でもドキュメントを処理](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [Output サービス、Formsサービス、またはレコードのドキュメント (DoR) サービスを使用できません](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [Experience Manager Formsの Struts 2 RCE 脆弱性の緩和](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
-      + [MySQL 用に 6.5.12.0にアップグレード中にデータベースをバックアップできなかった問題](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6.5.12.0.md)
+      + [MySQL 用に 6.5.12.0にアップグレード中にデータベースをバックアップできなかった問題](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [PDFの生成で、WorkBench 上に多数のPDFを印刷できない](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
@@ -1392,7 +1392,7 @@ ht-degree: 97%
             + [プレビュー - JSON 表現](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-json-preview.html)
          + 配信 API{#delivery-api}
             + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/mac-api-assets.html)
-            + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/assets-api-content-fragments.html)
+            + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/assets-api-content-fragments.html?lang=ja)
             + [コンテンツフラグメント GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/graphql-api-content-fragments.html)
             + [GraphQL エンドポイントの管理](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
             + [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/extending/graphiql-ide.html)

@@ -7,7 +7,7 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
 workflow-type: tm+mt
 source-wordcount: '1781'
 ht-degree: 97%
@@ -182,7 +182,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 
 >[!NOTE]
 >
->このインターフェイスは [AEM 6.5 SP1（6.5.1.0）](/help/release-notes/previous/6.5.1.md)で導入されました。
+>このインターフェイスは [AEM 6.5 SP1（6.5.1.0）](/help/release-notes/previous/6-5-1.md)で導入されました。
 
 （[デフォルトのリンク書き換え](#default-link-rewriting)では対応していない）より複雑な場合のために、AEM では Link Rewriter Provider インターフェイスを提供しています。これは、バンドルにサービスとして実装できる `ConsumerType` インターフェイスです。このインターフェイスは、エクスペリエンスフラグメントからレンダリングされる HTML オファーの内部リンクに対して AEM で実行される変更をバイパスします。このインターフェイスを使用すると、内部 HTML リンクの書き換えプロセスをビジネスニーズに合わせてカスタマイズできます。
 
