@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: cac14ac1-9cda-46ae-8aa3-94674bb79157
-source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
+source-git-commit: 6a5ff6df3939c6d1576327943b428f374e987bcb
 workflow-type: tm+mt
-source-wordcount: '4417'
-ht-degree: 71%
+source-wordcount: '4451'
+ht-degree: 70%
 
 ---
 
@@ -554,6 +554,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * AEM Service Pack 6.5.14.0以降をインストールした後、に移動したときに、JEE Admin UI からPDFドキュメントのフォントを選択できなくなる `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`フォントリストが空に表示されるので、 （FORMS-12095）
 <!-- When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) -->
 * JEE 上のAEM Formsで、コンテキストパスを利用するHTML5 Formsがレンダリングに失敗します。 (FORMS-12485、FORMS-12691)。 この問題に対するホットフィックスが利用できます。 ホットフィックスをダウンロードしてインストールするには、 [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
+* カスタム関数は、ECMAScript バージョン 5 の機能をサポートしています。 カスタム関数が ECMAScript バージョン 6 以降でサポートされている機能（例えば、let、const、arrow 関数）を使用している場合、ルールエディタは開けません。
 
 #### JEE 上の AEM Forms
 
