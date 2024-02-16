@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 のドキュメントを使用して、ソフトウェアの仕組みとユーザーにとっての機能を確認してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: f41cb88406db23c2af8988f7ee584db95184c6c4
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '7335'
 ht-degree: 97%
@@ -560,7 +560,7 @@ ht-degree: 97%
       + AEM Forms の設定 {#configure-aem-forms}
          + [AEM Forms サーバーのパフォーマンスチューニング](/help/forms/using/performance-tuning-aem-forms.md)
          + [アダプティブフォームのキャッシュの設定](/help/forms/using/configure-adaptive-forms-cache.md)
-         + [AEM DS の設定](/help/forms/using/configuring-the-processing-server-url-.md)
+         + [AEM DS の設定](/help/forms/using/configuring-the-processing-server-url.md)
          + [同期スケジューラの設定](/help/forms/using/configure-synchronization-scheduler.md)
          + [Connector for Microsoft SharePoint の設定](https://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
          + [AEM Forms と Adobe LiveCycle の接続](/help/forms/using/aem-livecycle-connector.md)
@@ -636,7 +636,7 @@ ht-degree: 97%
       + [アダプティブフォームコンポーネントのインラインスタイリング](/help/forms/using/inline-style-adaptive-forms.md)
       + [複数ステップのフォームシーケンスの概要](/help/forms/using/introduction-form-sequence.md)
       + [アダプティブフォームのレイアウトの機能](/help/forms/using/layout-capabilities-adaptive-forms.md)
-      + [AEM Forms のプレースホルダーテキスト](/help/forms/using/placeholder-text-in-aem-forms-.md)
+      + [AEM Forms のプレースホルダーテキスト](/help/forms/using/placeholder-text-in-aem-forms.md)
       + [フォームのプレビュー](/help/forms/using/previewing-forms.md)
       + [アダプティブフォームの再利用](/help/forms/using/reusing-adaptive-forms.md)
       + [アダプティブフォームにおけるセパレータコンポーネント](/help/forms/using/separator-component-in-adaptive-forms.md)

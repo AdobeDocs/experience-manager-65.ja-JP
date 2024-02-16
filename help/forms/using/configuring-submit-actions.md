@@ -6,10 +6,10 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
+source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
 workflow-type: tm+mt
 source-wordcount: '2597'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -140,7 +140,7 @@ REST エンドポイント送信アクションの設定
 
 「**[!UICONTROL AEM ワークフローを起動]**」送信アクションは、アダプティブフォームを [AEM ワークフロー](/help/sites-developing/workflows-models.md)と関連付けます。フォームが送信されると、関連するワークフローがオーサーインスタンスで自動的に起動します。データファイル、添付ファイル、レコードのドキュメントは、相対するフォルダーや、ワークフローのペイロードの場所または変数に保存できます。ワークフローが外部データストレージ用にマークされている場合、ペイロードオプションではなく変数オプションが使用可能になります。ワークフローモデルで使用できる変数のリストから選択できます。ワークフローの作成時ではなく、後の段階で外部データストレージの対象としてワークフローがマークされている場合は、必要な変数設定が適切に行われていることを確認します。
 
-「**AEM ワークフローを起動**」送信アクションを使用する前に、[Experience Manager DS の設定を行います](../../forms/using/configuring-the-processing-server-url-.md)。AEM ワークフローの作成について詳しくは、「[OSGi 上の Forms 中心のワークフロー](../../forms/using/aem-forms-workflow.md)」を参照してください。
+「**AEM ワークフローを起動**」送信アクションを使用する前に、[Experience Manager DS の設定を行います](../../forms/using/configuring-the-processing-server-url.md)。AEM ワークフローの作成について詳しくは、「[OSGi 上の Forms 中心のワークフロー](../../forms/using/aem-forms-workflow.md)」を参照してください。
 
 送信アクションは、ワークフローのペイロードの場所に以下を配置します。ただし、ワークフローモデルが外部データストレージ用にマークされている場合は「変数」オプションのみが表示され、ペイロードオプションは表示されないことに注意してください。
 
@@ -175,18 +175,18 @@ Microsoft® SharePointリストへの送信機能は、AEM 6.5 Forms Service Pac
 
 The **[!UICONTROL SharePointに送信]** 送信アクションは、アダプティブフォームをMicrosoft® SharePointストレージに接続します。 フォームデータファイル、添付ファイルまたはレコードのドキュメントを、接続された Microsoft® SharePoint ストレージに送信できます。
 
-### アダプティブフォームのMicrosoft® SharePointリストへの接続 {#connect-af-sharepoint-list}
+### アダプティブフォームを Microsoft® SharePoint リストに接続 {#connect-af-sharepoint-list}
 
 アダプティブフォームをMicrosoft® SharePointリストに接続するには：
 
-1. [SharePoint List 設定の作成](#create-sharepoint-list-configuration):AEM FormsをMicrosoft® Sharepoint リストストレージに接続します。
+1. [SharePoint リスト設定を作成](#create-sharepoint-list-configuration)：AEM Forms を Microsoft® Sharepoint リストストレージに接続します。
 1. [以下を使用します。 **フォームデータモデルを使用して送信** アダプティブフォームでの送信アクション](#use-submit-using-fdm)：アダプティブフォームのデータを設定済みのMicrosoft® SharePointに送信します。
 
-#### SharePoint List 設定の作成 {#create-sharepoint-list-configuration}
+#### SharePoint リスト設定を作成 {#create-sharepoint-list-configuration}
 
-AEM FormsをMicrosoft® Sharepoint リストに接続するには：
+AEM Forms を Microsoft® Sharepoint リストに接続するには、次の手順に従います。
 
-1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Cloud Service]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL Microsoft® SharePoint]** に移動します。
 1. **設定コンテナ**&#x200B;を選択します。設定は、選択した設定コンテナに保存されます。
 1. クリック **[!UICONTROL 作成]** > **[!UICONTROL SharePoint List]** 」をドロップダウンリストから選択します。 SharePoint 設定ウィザードが表示されます。
 1. 「**[!UICONTROL タイトル]**」、「**[!UICONTROL クライアント ID]**」、「**[!UICONTROL クライアント秘密鍵]**」および「**[!UICONTROL OAuth URL]**」を指定します。OAuth URL のクライアント ID、クライアントの秘密鍵、テナント ID を取得する方法について詳しくは、[Microsoft® のドキュメント](https://learn.microsoft.com/ja-jp/graph/auth-register-app-v2)を参照してください。
@@ -203,16 +203,16 @@ AEM FormsをMicrosoft® Sharepoint リストに接続するには：
 1. 選択 **[!UICONTROL SharePoint Site]** および **[!UICONTROL SharePoint List]** 」をドロップダウンリストから選択します。
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
 
-#### アダプティブフォーム内でのフォームデータモデルを使用した送信の使用 {#use-submit-using-fdm}
+#### アダプティブフォームで「フォームデータモデルを使用して送信」を使用 {#use-submit-using-fdm}
 
-作成したSharePointリスト設定をアダプティブフォーム内で使用して、データや生成後のレコードのドキュメントをSharePointリストに保存することができます。 アダプティブフォームでSharePointリストストレージ設定を使用するには、以下の手順を実行します。
+作成した SharePoint リスト設定をアダプティブフォーム内で使用すると、データや生成済みのレコードのドキュメントを SharePoint リストに保存できます。アダプティブフォームで SharePoint リストストレージ設定を使用するには、次の手順を実行します。
 
 1. [Microsoft を使用してフォームデータモデルを作成する](/help/forms/using/create-form-data-model.md)
 1. [データを取得して送信するためのフォームデータモデルの設定](/help/forms/using/work-with-form-data-model.md#configure-services)
 1. [アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md).
 1. [フォームデータモデルを使用した送信アクションの設定](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
 
-フォームを送信すると、データは指定したMicrosoft® Sharepoint リストストレージに保存されます。
+フォームを送信すると、データは指定した Microsoft® Sharepoint リストストレージに保存されます。
 
 >[!NOTE]
 >
