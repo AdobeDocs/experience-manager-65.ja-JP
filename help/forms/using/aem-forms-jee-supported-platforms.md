@@ -7,10 +7,10 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 667125e9f7f9f5c9fa438e1d55c0a059ceae64c3
+source-git-commit: 8ca683a973998e7b5d6a2f87210aaf324a5419ee
 workflow-type: tm+mt
-source-wordcount: '3984'
-ht-degree: 88%
+source-wordcount: '4019'
+ht-degree: 87%
 
 ---
 
@@ -92,11 +92,11 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >6.5 のリリースでは、アドビのお客様の中で最も使用率の低い、以下のインフラストラクチャコンポーネントはサポートされなくなりました。
 >
 >- IBM® DB2® データベース
-- IBM® AIX® および Sun Solaris™ オペレーティングシステム
+>- IBM® AIX® および Sun Solaris™ オペレーティングシステム
 >
-新規インストールに関しては、可能な場合は AEM Forms を最新の OSGi スタックでデプロイし、モバイル向けのレスポンシブなアダプティブフォーム、マルチチャンネルのインタラクティブ通信、そしてフォームデータモデルを使用したバックエンドのデータ統合などの最新技術を活用することが推奨されます。
+>新規インストールに関しては、可能な場合は AEM Forms を最新の OSGi スタックでデプロイし、モバイル向けのレスポンシブなアダプティブフォーム、マルチチャンネルのインタラクティブ通信、そしてフォームデータモデルを使用したバックエンドのデータ統合などの最新技術を活用することが推奨されます。
 >
-既存のお客様は、AEM Forms を引き続き JEE スタック上でデプロイしていただく必要があります。そのような場合は、AEM Forms JEE を本文書に記載されている対応インフラストラクチャでデプロイしていただく必要があります。前回の AEM Forms リリースをサポート対象ではないプラットフォームでご使用で、AEM 6.5 Forms にアップグレードされる場合は、アドビサポートにご連絡ください。サポート対象のプラットフォームへのアップグレードをお手伝いします。
+>既存のお客様は、AEM Forms を引き続き JEE スタック上でデプロイしていただく必要があります。そのような場合は、AEM Forms JEE を本文書に記載されている対応インフラストラクチャでデプロイしていただく必要があります。前回の AEM Forms リリースをサポート対象ではないプラットフォームでご使用で、AEM 6.5 Forms にアップグレードされる場合は、アドビサポートにご連絡ください。サポート対象のプラットフォームへのアップグレードをお手伝いします。
 
 ### Java™ 仮想マシン（JVM） {#java-virtual-machines-jvm}
 
@@ -144,8 +144,8 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 
 >[!NOTE]
 >
-- Java™ ベンダーが発表するセキュリティ情報を常に確認し、実稼働環境の安全性とセキュリティを確保すること、および最新の Java™ アップデートをインストールすることをお勧めします。
-- JEE 上の AEM Forms では、実稼動環境に対して 64 ビットの JVM のみがサポートされています。
+>- Java™ ベンダーが発表するセキュリティ情報を常に確認し、実稼働環境の安全性とセキュリティを確保すること、および最新の Java™ アップデートをインストールすることをお勧めします。
+>- JEE 上の AEM Forms では、実稼動環境に対して 64 ビットの JVM のみがサポートされています。
 
 ### データベースと CRX の永続性 {#databases-and-crx-persistence}
 
@@ -271,7 +271,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 
 >[!NOTE]
 >
-IBM® WebSphere® のクラスターは、Network Deployment エディションでのみサポートされます。
+>IBM® WebSphere® のクラスターは、Network Deployment エディションでのみサポートされます。
 
 ### サーバーオペレーティングシステム {#server-operating-systems}
 
@@ -479,21 +479,21 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 
 >[!NOTE]
 >
-PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
+>PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
 >
-さらに、次の点に注意してください。
+>さらに、次の点に注意してください。
 >
-- PDF Generator では、32 ビットリテール版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
-- PDF Generator は Microsoft® Office 365 をサポートしていません。
-- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
-- OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
-- Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメントに応じたAEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
-- PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
-PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。Microsoft® Visio 2016 を引き続き使用して、.VSD ファイルや .VSDX ファイルを変換できます。
-- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。Microsoft® Project 2016 を引き続き使用して、.MPP ファイルを変換できます。
-- PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
-- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
->
+>- PDF Generator では、32 ビットリテール版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
+>- PDF Generator は Microsoft® Office 365 をサポートしていません。
+>- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
+>- OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
+>- Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメントに応じたAEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+>- PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
+>PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。Microsoft® Visio 2016 を引き続き使用して、.VSD ファイルや .VSDX ファイルを変換できます。
+>- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。Microsoft® Project 2016 を引き続き使用して、.MPP ファイルを変換できます。
+>- PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
+>- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
+>- VL_KMS が一定期間通信を確立できないなどの理由で、Microsoft® Office のインストールが無効化またはライセンス解除された場合、インストールが再アクティブ化または再ライセンスされるまで、変換が失敗する場合があります。
 
 ### アクセシビリティサポートの例外事項 {#exceptions-to-accessibility-support}
 
@@ -607,7 +607,7 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 
 >[!NOTE]
 >
-Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html) を参照してください。
+>Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html) を参照してください。
 
 ### ブラウザー {#browsers}
 
@@ -650,13 +650,13 @@ Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Re
 
 >[!NOTE]
 >
-以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
+>以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
 >
-- Safari は Macintosh OS X でのみサポートされています。
-- Acrobat DC 以降のバージョンでは、Workspace は Macintosh OS X 10.6 および 10.7 上の Safari 5.1 をサポートしています。Safari 5.1 の Adobe Reader、Acrobat との互換性については、[https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html) を参照してください。
-- 管理コンソールは Safari ではサポートされていません。
-- Correspondence Management は、AEM 6.1 Forms で Windows® Internet Explorer 9.0 をサポートしていません。
-- フォームポータルは、アクセシビリティのために、JAWS 14.0 画面読み上げソフトウェアを Internet Explorer 11 でサポートしています。
+>- Safari は Macintosh OS X でのみサポートされています。
+>- Acrobat DC 以降のバージョンでは、Workspace は Macintosh OS X 10.6 および 10.7 上の Safari 5.1 をサポートしています。Safari 5.1 の Adobe Reader、Acrobat との互換性については、[https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html) を参照してください。
+>- 管理コンソールは Safari ではサポートされていません。
+>- Correspondence Management は、AEM 6.1 Forms で Windows® Internet Explorer 9.0 をサポートしていません。
+>- フォームポータルは、アクセシビリティのために、JAWS 14.0 画面読み上げソフトウェアを Internet Explorer 11 でサポートしています。
 
 #### モバイルクライアント {#mobile-clients}
 
@@ -687,7 +687,7 @@ Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Re
 
 >[!NOTE]
 >
-- Forms Portal は iPad の Safari でのみサポートされています。
+>- Forms Portal は iPad の Safari でのみサポートされています。
 
 ### AEM Forms アプリケーション {#aem-forms-workspace-app}
 
@@ -900,7 +900,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 >[!NOTE]
 >
-非推奨（廃止予定）のプラットフォームは、次回の完全なインストーラーリリースまで、またはプラットフォームのサードパーティベンダーサポートが提供終了（それ以前）まで、引き続きサポートを受けます。
+> 非推奨（廃止予定）のプラットフォームは、次回の完全なインストーラーリリースまで、またはプラットフォームのサードパーティベンダーサポートが提供終了（それ以前）まで、引き続きサポートを受けます。
 
 <!-- 
 - Oct 10, 2021
