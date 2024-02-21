@@ -2,10 +2,10 @@
 title: AEM FAQ
 description: これらの FAQ を使用して、AEMの一般的なワークフローや問題を理解、設定、トラブルシューティングします。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 1a7805f063daf6f3dd07a2ff2d182e58fe7e63b8
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 38%
+source-wordcount: '936'
+ht-degree: 40%
 
 ---
 
@@ -24,12 +24,6 @@ AEMのトラブルシューティングと設定に関する問題の回答を�
 #### バイナリレス配布を有効にする方法を教えてください。 {#how-do-i-enable-binary-less-distribution}
 
 バイナリレスディストリビューションを有効にするには、共有 BLOB ストアと共にデプロイします。エージェントが使用しているファクトリ PID（`org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*）* を含む OSGI 設定の `useBinaryReferences` プロパティを確認します。
-
-#### AEMサイトコンソールでページ階層を移動する際に、エラーメッセージをカスタマイズするにはどうすればよいですか？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
-
-（Chrome ブラウザーの）ネットワークパネルで、個人用の設定（JS が縮小されていない）を確認します。
-
-`Initiator` 列を表示して、リクエストのイニシエーターを判別します。AJAXの呼び出し元のファイルと行番号を提供します。 後で、エラー処理関数をトレースし、必要に応じてエラーメッセージを変更できます。
 
 #### AEMで Content-Authors 用の言語コピーを作成する際に権限を有効にするにはどうすればよいですか？ {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
 
