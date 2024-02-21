@@ -7,9 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
-source-wordcount: '6922'
+source-wordcount: '6926'
 ht-degree: 99%
 
 ---
@@ -1129,11 +1129,11 @@ AEM プラットフォーム上での通常の開発範囲外と見なされる�
 
 ### AEM 管理者トレーニングに選ばれたスタッフ {#staff-selected-for-aem-administrator-training}
 
-ソリューションを管理するためのトレーニングが必要な内部スタッフです。
+ソリューションを管理できるよう、トレーニングが必要な社内スタッフ。
 
 ### 作成者およびエンドユーザーのトレーニングに選ばれたスタッフ {#staff-selected-for-author-and-end-user-training}
 
-ソリューションでオーサリングを行うためのトレーニングが必要な内部スタッフです。
+ソリューションで作成できるようにトレーニングが必要な社内スタッフ。
 
 ### 利害関係者 {#stakeholders}
 

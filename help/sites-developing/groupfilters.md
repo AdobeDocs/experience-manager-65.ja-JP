@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 45%
+source-wordcount: '756'
+ht-degree: 39%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 45%
 
 作成したフィルターは、 [グループ設定。](/help/sites-developing/mobile.md#creating-a-device-group)
 
-## Filter Java クラス {#the-filter-java-class}
+## Filter Java™クラス {#the-filter-java-class}
 
-デバイスグループフィルターは、 [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイス。 デプロイすると、実装クラスは、デバイスグループの設定で使用できるフィルターサービスを提供します。
+デバイスグループフィルターは、 [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイス。 デプロイすると、実装クラスは、デバイスグループの設定で使用できるフィルターサービスを提供します。
 
-この記事で説明するソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。 そのため、サンプルの Java クラスでは `@Component` と `@Service` のアノテーションを使用します。クラスは次の構造を持ちます。
+この記事で説明するソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。 したがって、Java™クラスの例では、 `@Component`および `@Service` 注釈。 クラスは次の構造を持ちます。
 
 ```java
 package com.adobe.example.myapp;
@@ -63,9 +63,9 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 }
 ```
 
-次のメソッドのコードを指定する必要があります。
+次のメソッドのコードを指定します。
 
-* `getDescription`：フィルターの説明を返します。この説明はデバイスグループ設定ダイアログに表示されます。
+* `getDescription`：フィルターの説明を返します。この説明は、デバイスグループ設定ダイアログに表示されます。
 * `getTitle`：フィルターの名前を返します。この名前は、デバイスグループ用のフィルターを選択した場合に表示されます。
 * `matches`：デバイスに必要な機能が搭載されているかどうかを判断します。
 
@@ -93,7 +93,7 @@ The `matches` 関数の戻り値 `true` （デバイスの機能がすべての�
 * ユーザーエージェントの名前
 * デバイス機能を格納する Map オブジェクト。 Map キーは WURFL™の機能名で、値は WURFL™データベースの対応する値です。
 
-[com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスの静的なフィールドには WURFL™ の機能名のサブセットが含まれます。デバイスの機能の Map から値を取得する場合は、これらのフィールドの定数をキーとして使用します。
+[com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスの静的なフィールドには WURFL™ の機能名のサブセットが含まれます。デバイスの機能の Map から値を取得する場合は、これらのフィールドの定数をキーとして使用します。
 
 例えば、次のコード例では、デバイスが CSS をサポートするかどうかを指定します。
 
@@ -171,11 +171,11 @@ getTitle メソッドと getDescription メソッドが返す文字列値は、�
 
 ### Maven POM ファイル {#the-maven-pom-file}
 
-次の POM コードは、Maven を使用してアプリケーションをビルドする場合に役立ちます。POM は、必要な複数のプラグインおよび依存関係を参照します。
+次の POM コードは、Maven を使用してアプリケーションを構築する場合に役立ちます。 POM は、必要な複数のプラグインおよび依存関係を参照します。
 
 **プラグイン：**
 
-* Apache Maven Compiler Plugin：ソースコードから Java クラスをコンパイルします。
+* Apache Maven Compiler Plugin:Java™クラスをソースコードからコンパイルします。
 * Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。
 * Apache Felix Maven SCR Plugin：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
 
@@ -189,7 +189,7 @@ DeviceGroup インターフェイスと DeviceGroupFilter インターフェイ�
 
 この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。このバージョンが環境にデプロイされているバンドルのバージョンであることを確認するには、アドビの web コンソール（[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)）を使用してください。
 
-**POM：**（ユーザーの POM では別の groupId と version が使用されます。）
+**POM:** （POM で異なる groupId と version を使用している場合）
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"

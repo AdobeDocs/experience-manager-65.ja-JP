@@ -1,15 +1,15 @@
 ---
 title: アプリケーションの作成および設定アクション
-description: 多くの場合、アプリを作成することは、AEM Mobile On-Demand コンテンツを作成および管理するための最初の手順です。 このページでは、この機能について詳しく見ていきます。
+description: 多くの場合、アプリを作成することは、AEM Mobile On-Demand コンテンツを作成および管理するための最初の手順です。 詳しくは、このページを参照してください。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 8%
 
 オンデマンドアプリケーションの作成と、そのアプリのクラウド設定への関連付けについて詳しくは、 [コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
-**コンテンツ管理アクション** 次のコンテンツの作成と管理を含みます。
+**コンテンツ管理アクション** 次のコンテンツの作成と管理に関連します。
 
 * [記事の管理](/help/mobile/mobile-on-demand-managing-articles.md)
 * [バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)

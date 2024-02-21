@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
 workflow-type: tm+mt
 source-wordcount: '5752'
 ht-degree: 67%
@@ -552,7 +552,7 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
     <td>該当なし</td>
     <td>TarMK GC #2：5 回のサイクル後、32.902 分（1974140 ms）でコンパクションに失敗しました。</td>
-    <td>このメッセージは、回復不能なエラーが発生したとは限りませんが、一部の試行の後にコンパクションが終了したという意味だけです。 また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
+    <td>このメッセージは、回復不能なエラーが発生したとは限らず、一部の試行の後にコンパクションが終了したという意味です。 また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
     <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> およびオンラインでのリビジョンクリーンアップの実行の節の最後の質問を参照してください。</a></td>
   </td>
   </tr>

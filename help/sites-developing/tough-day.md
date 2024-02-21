@@ -4,9 +4,9 @@ description: タフデイテストでは、すべての操作が同時に進行�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 61c7955c5370b5341d097dc36d08b2b92b89517b
+source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1825'
 ht-degree: 96%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 ## タフデイ 2 について {#what-is-tough-day}
 
-「タフデイ 2」は、AEM インスタンスの限界についてストレステストを実行するためのアプリケーションです。デフォルトのテストスイートを使用して出荷時の設定のまま実行することも、テストのニーズに合わせて設定することもできます。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=ja)を参照してください。
+「Tough Day 2」は、AEMインスタンスの制限に応じてテストできるアプリケーションです。 デフォルトのテストスイートを使用して出荷時の設定のまま実行することも、テストのニーズに合わせて設定することもできます。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=ja)を参照してください。
 
 >[!CAUTION]
 >
@@ -49,7 +49,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 
 >[!NOTE]
 >
-タフデイ 2 にはクリーンアップ手順がありません。そのため、タフデイ 2 は、メインの実稼動インスタンスではなく、複製したステージングのインスタンスで実行することをお勧めします。ステージングインスタンスは、テスト後に削除する必要があります。
+>タフデイ 2 にはクリーンアップ手順がありません。そのため、タフデイ 2 は、メインの実稼動インスタンスではなく、複製したステージングのインスタンスで実行することをお勧めします。ステージングインスタンスは、テスト後に削除する必要があります。
 >
 
 ### ヘルプの表示 {#getting-help}
@@ -330,7 +330,7 @@ java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --ad
 
 >[!NOTE]
 >
-並列実行が原因で、実際のテスト実行回数は `count` パラメーターで設定された数と正確に一致しません。偏差が（`concurrency parameter` パラメーターによって制御される）実行スレッドの数に比例することを想定してください。
+>並列実行が原因で、実際のテスト実行回数は `count` パラメーターで設定された数と正確に一致しません。偏差が（`concurrency parameter` パラメーターによって制御される）実行スレッドの数に比例することを想定してください。
 
 ### ドライラン {#dry-run}
 
