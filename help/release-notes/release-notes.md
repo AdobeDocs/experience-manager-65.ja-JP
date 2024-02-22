@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 2ffb77762af1969f3c93e7dd33cb3de9349375f8
+source-git-commit: f48e77068f286ff107bb2511660bf540fea32474
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2888'
 ht-degree: 53%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 53%
 
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
-* ネストされた設定フォルダーはサポートされなくなり、AEM 6.5.18 またはAEM 6.5.19 にアップグレードした後、コンテンツフラグメントモデルフォルダーが表示されなくなりました。 （SITES-18110）重要
+* ネストされた設定フォルダーはサポートされなくなり、AEM 6.5.18 またはAEM 6.5.19 にアップグレードした後、コンテンツフラグメントモデルフォルダーが表示されなくなりました。 （SITES-18110）
 * 一部のサブフォルダーは、継承されたコンテンツフラグメントモデルから選択できません。 フォルダーをサポートするには、 `jcr:content` プロパティに含まれます。ユーザーインターフェイスを介して作成された DAM フォルダーにそのようなノードがある場合でも同様です。 （SITES-17943）
 
 #### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6520}
@@ -156,13 +156,7 @@ ht-degree: 53%
 
 * text -->
 
-#### [!DNL Forms Designer]{#forms-designer-6520}
-
-* text
-
-<!-- ### Foundation{#foundation-6520}
-
-* text -->
+### 基盤 {#foundation-6520}
 
 #### Communities {#communities-6520}
 
@@ -181,17 +175,9 @@ ht-degree: 53%
 * Aria-label &quot;close&quot;が **[!UICONTROL Assets]** > **[!UICONTROL ファイル]**&#x200B;をクリックし、フォルダーを選択して、ツールバーで「 」を選択します。 **[!UICONTROL プロパティ]** > **[!UICONTROL 権限]** タブ/メンバー名。 （NPR-41705）
 * ツールチップが切り捨てられ、 **[!UICONTROL キーストアのパスワード]** ロケール ENG、FRA、KOR、DEU、PTB の「SSL 設定」ページのフィールド。 （NPR-41367）
 
-<!-- #### Oak{#oak-6520}
-
-* text -->
-
 #### プラットフォーム{#foundation-platform-6520}
 
 * /api サーブレットが href json に正しいスキームを返さないことが原因で、Campaign とAEMの統合に関する問題が発生しました。 これは、AEMが X-Forward-Proto ヘッダーを受信していなかったためで、このヘッダーにより、HTTPS ではなく HTTP スキームで要求の応答が強制されていました。 そのため、OSGi 設定に基づいてスキームの選択を切り替える機能を追加する必要があります。 (GRANITE-48454)
-
-<!-- #### Replication{#foundation-replication-6520}
-
-* text -->
 
 #### Sling{#foundation-sling-6520}
 
