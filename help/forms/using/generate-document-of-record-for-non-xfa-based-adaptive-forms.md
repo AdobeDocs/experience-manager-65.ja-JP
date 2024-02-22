@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 05f54e451c72b0a1690ba4a2ca50db87711a8094
+source-git-commit: 22235790b2bfefaa1a3bf71f888f8eb343d9e1b7
 workflow-type: tm+mt
-source-wordcount: '3608'
+source-wordcount: '4257'
 ht-degree: 91%
 
 ---
@@ -310,7 +310,7 @@ ht-degree: 91%
 「レコードのドキュメント」タブに入力するブランディング情報をローカライズするには、ブラウザーのロケールが正しく設定されている必要があります。レコードのドキュメントのブランディング情報をカスタマイズするには、以下の手順を実施します。
 
 1. レコードのドキュメント内のパネル（ルートパネル）を選択し、「 」を選択します。 ![設定](assets/configure.png).
-1. 選択 ![ドータ](/help/forms/using/assets/dortab.png). 「レコードのドキュメント」タブが表示されます。
+1. ![dortab](/help/forms/using/assets/dortab.png) を選択します。「レコードのドキュメント」タブが表示されます。
 1. レコードのドキュメントをレンダリングするために、デフォルトテンプレートまたはカスタムテンプレートのいずれかを選択します。デフォルトテンプレートを選択すると、レコードのドキュメントのサムネイルがテンプレートドロップダウンの下に表示されます。
 
    ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
@@ -425,7 +425,7 @@ ht-degree: 91%
 
 1. Adobe Analytics の **[!UICONTROL ページ編集]** セクション、選択 ![フォルダー](/help/forms/using/assets/folder-icon.png) （内） **[!UICONTROL 場所]** フィールドに入力します。
 1. 選択 **[!UICONTROL 次のページの先頭]** を選択し、 **[!UICONTROL 選択]**. また、 **[!UICONTROL ページの先頭]**&#x200B;をクリックし、マスターページを選択して、「 **[!UICONTROL 選択]** をクリックして改ページを適用します。
-1. 選択 ![保存](/help/forms/using/assets/save_icon.png) をクリックしてプロパティを保存します。
+1. 「![保存](/help/forms/using/assets/save_icon.png)」を選択して、プロパティを保存します。
 
 選択したパネルは次のページに移動します。
 
@@ -461,3 +461,57 @@ AEM Forms は、アダプティブフォーム内の該当するパネルとそ�
 * アダプティブフォーム内のドキュメントフラグメントは、レコードのドキュメントには表示されません。ただし、アダプティブフォームのフラグメントはサポートされています。
 * XML スキーマベースのアダプティブフォームは、レコードの生成されたドキュメント内でのコンテンツのバインドに対応していません。
 * ユーザーがレコードのドキュメントのレンダリングを要求すると、ローカライズされたバージョンのレコードのドキュメントが、ロケールに合わせてオンデマンドで作成されます。レコードのドキュメントのローカライゼーションは、アダプティブフォームのローカライゼーションと同時に発生します。レコードのドキュメントおよびアダプティブフォームのローカライゼーションの詳細については、「[AEM 翻訳ワークフローを使用したアダプティブフォールおよびレコードのドキュメントのローカライズ](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)」を参照してください。
+
+## カスタム XCI ファイルの使用
+
+XCI ファイルは、ドキュメントの様々なプロパティを設定する場合に役立ちます。<!-- Forms as a Cloud Service has a master XCI file.--> カスタム XCI ファイルを使用して、既存の XCI ファイルで指定されている 1 つ以上のデフォルトのプロパティを上書きできます。 例えば、ドキュメントにフォントを埋め込むか、すべてのドキュメントに対してタグ付きプロパティを有効にするかを選択できます。XCI オプションを次の表に示します。
+
+| XCI オプション | 説明 |
+|--- |--- |
+| config/present/pdf/creator | ドキュメント情報ディクショナリの Creator エントリを使用して、ドキュメント作成者を識別します。このディクショナリについては、[PDF リファレンスガイド](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/)を参照してください。 |
+| config/present/pdf/producer | ドキュメント情報ディクショナリの Producer エントリを使用して、ドキュメントプロデューサーを識別します。このディクショナリについては、[PDF リファレンスガイド](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/)を参照してください。 |
+| config/present/layout | 出力を単一ページとするか連続ページとするかを制御します。 |
+| config/present/pdf/compression/level | PDF ドキュメントの生成時に使用する圧縮レベルを指定します。 |
+| config/present/pdf/fontInfo/embed | 出力ドキュメントに埋め込むフォントを制御します。 |
+| config/present/pdf/scriptModel | 出力 PDF ドキュメントに XFA 固有の情報を含めるかどうかを制御します。 |
+| config/present/common/data/adjustData | 結合後に XFA アプリケーションでデータを調整するかどうかを制御します。 |
+| config/present/pdf/renderPolicy | ページコンテンツをサーバー側で生成するか、後でクライアント側で生成するかを制御します。 |
+| config/present/common/locale | 出力ドキュメントで使用するデフォルトのロケールを指定します。 |
+| config/present/destination | present 要素に含まれている場合は、出力形式を指定します。openAction 要素に含まれている場合は、インタラクティブクライアントでドキュメントを開いたときに実行されるアクションを指定します。 |
+| config/present/output/type | ファイルに適用する圧縮の種類または生成する出力の種類を指定します。 |
+| config/present/common/temp/uri | フォームの URI を指定します。 |
+| config/present/common/template/base | フォームデザインの URI のベースを指定します。この要素がない場合や空の場合は、フォームデザインの場所がベースとして使用されます。 |
+| config/present/common/log/to | ログデータまたは出力データの書き込み先を制御します。 |
+| config/present/output/to | ログデータまたは出力データの書き込み先を制御します。 |
+| config/present/script/currentPage | ドキュメントを開いたときの初期ページを指定します。 |
+| config/present/script/exclude | 無視するイベントを Forms as a Cloud Service に通知します。 |
+| config/present/pdf/linearized | 出力 PDF ドキュメントを線形化するかどうかを制御します。 |
+| config/present/script/runScripts | Forms as a Cloud Service が実行するスクリプトのセットを制御します。 |
+| config/present/pdf/tagged | 出力 PDF ドキュメントへのタグの組み込みを制御します。タグは、PDF のコンテキストでは、ドキュメントの論理構造を公開するためにドキュメントに組み込まれる追加情報です。タグは、アクセシビリティの支援や書式の再設定に役立ちます。例えば、スクリーンリーダーがテキストの途中でページ番号を読み上げてしまわないように、ページ番号を装飾としてタグ付けすることができます。タグを使用すると、ドキュメントの有用性が高まる反面、ドキュメントのサイズが大きくなり、作成にかかる処理時間も長くなります。 |
+| config/present/pdf/fontInfo/alwaysEmbed | 出力ドキュメントに埋め込むフォントを指定します。 |
+| config/present/pdf/fontInfo/neverEmbed | 出力ドキュメントに埋め込まないフォントを指定します。 |
+| config/present/pdf/pdfa/part | ドキュメントが準拠する PDF/A 仕様のバージョン番号を指定します。 |
+| config/present/pdf/pdfa/amd | PDF/A 仕様の修正レベルを指定します。 |
+| config/present/pdf/pdfa/conformance | PDF/A 仕様の適合レベルを指定します。 |
+| config/present/pdf/version | 生成する PDF ドキュメントのバージョンを指定します |
+| config/present/pdf/version/map | ドキュメントのフォールバックフォントを指定します |
+
+
+<!--
+
+### Use a custom XCI file in your AEM Forms environment
+
+  1. Add the custom XCI file to your development project.
+  1. Specify the following inline property:(/help/implementing/deploying/configuring-osgi.md)
+  1. Deploy the project to your AEM Forms environment. <!--Cloud Service environment
+  
+-->
+
+### ローカルのForms開発環境でカスタム XCI ファイルを使用する
+
+1. XCI ファイルをアップロード環境にローカル開発します。
+1. 開く <!--Cloud Service SDK--> 設定マネージャー。 <!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネル]**」の設定を検索して開きます。
+1. XCI ファイルのパスを指定し、「**[!UICONTROL 保存]**」をクリックします。
+
+
