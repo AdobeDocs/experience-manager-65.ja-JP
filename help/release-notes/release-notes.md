@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 19fe527ce44d8ec5be50ebd32b46f13df96c52cc
+source-git-commit: 2ffb77762af1969f3c93e7dd33cb3de9349375f8
 workflow-type: tm+mt
-source-wordcount: '2928'
-ht-degree: 54%
+source-wordcount: '2889'
+ht-degree: 53%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 54%
 
 #### 管理ユーザーインターフェイス{#sites-adminui-6520}
 
-* The `Workflow Title` 次の項目でマークされている `*` 必要に応じて検証されますが、検証はおこなわれません。 （SITES-16491）標準
+* The `Workflow Title` 次の項目でマークされている `*` 必要に応じて検証されますが、検証はおこなわれません。 （SITES-16491）
 
 <!--#### Classic UI{#sites-classicui-6520}
 
@@ -68,12 +68,12 @@ ht-degree: 54%
 #### [!DNL Content Fragments]{#sites-contentfragments-6520}
 
 * ネストされた設定フォルダーはサポートされなくなり、AEM 6.5.18 またはAEM 6.5.19 にアップグレードした後、コンテンツフラグメントモデルフォルダーが表示されなくなりました。 （SITES-18110）重要
-* 一部のサブフォルダーは、継承されたコンテンツフラグメントモデルから選択できません。 フォルダーをサポートするには、 `jcr:content` プロパティに含まれます。ユーザーインターフェイスを介して作成された DAM フォルダーにそのようなノードがある場合でも同様です。 （SITES-17943）標準
+* 一部のサブフォルダーは、継承されたコンテンツフラグメントモデルから選択できません。 フォルダーをサポートするには、 `jcr:content` プロパティに含まれます。ユーザーインターフェイスを介して作成された DAM フォルダーにそのようなノードがある場合でも同様です。 （SITES-17943）
 
 #### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6520}
 
 <!-- REMOVED AS PER EMAIL FROM SAMEER DHAWAN FEBRUARY 19, 2024 * When upgrading AEM from 6.5.19.0 to 6.5.20.0, the path `/libs/cq/graphql/sites/graphiql` was getting deleted. (SITES-19530) CRITICAL -->
-* GraphQLクエリを実行して [結果をフィルター](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#filtering) 特定の値が **not** オプションの変数に指定された場合、変数はフィルター評価で無視されます。 （SITES-17051）標準
+* GraphQLクエリを実行して [結果をフィルター](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#filtering) 特定の値が **not** オプションの変数に指定された場合、変数はフィルター評価で無視されます。 （SITES-17051）
 
 <!--#### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-6520}
 
@@ -81,24 +81,24 @@ ht-degree: 54%
 
 #### [!DNL Content Fragments] - REST API{#sites-restapi-6520}
 
-* のアップグレードに伴う `org.json` ライブラリでは、小数のデシリアル化方法が変更されました。 「デフォルトで」を「Double」に変換し、今後は BigDecimals に変換する前の手順です。 代わりに、REST API を介して保存されたメタデータプロパティの値が、BigDecimal から倍精度浮動小数点に変換されます。 （SITES-16857）標準
+* のアップグレードに伴う `org.json` ライブラリでは、小数のデシリアル化方法が変更されました。 「デフォルトで」を「Double」に変換し、今後は BigDecimals に変換する前の手順です。 代わりに、REST API を介して保存されたメタデータプロパティの値が、BigDecimal から倍精度浮動小数点に変換されます。 （SITES-16857）
 
 #### コアバックエンド{#sites-core-backend-6520}
 
-* コンテンツフラグメントのクイック公開を使用すると、読み込みが続行され、公開されません。 つまり、サービスパックをAEM 6.5.7 からAEM 6.5.17 にアップグレードした後、クイック公開がコンテンツフラグメントで機能しない。ユーザーが管理公開を試みたときに機能しました。 ただし、クイック公開を試みると、公開されていませんでした。 特に、 `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` システムがひねくれる原因となった。 （SITES-17311）重要
-* Jackson エクスポーターでは、コンテンツフラグメントをシリアル化できません。ページ内で参照されているコンテンツフラグメント（Jackson エクスポーターコードを使用）とコンテンツフラグメントに追加されたタグがあると、ページ読み込みが中断します。 （SITES-18096）標準
+* コンテンツフラグメントのクイック公開を使用すると、読み込みが続行され、公開されません。 つまり、サービスパックをAEM 6.5.7 からAEM 6.5.17 にアップグレードした後、クイック公開がコンテンツフラグメントで機能しない。ユーザーが管理公開を試みたときに機能しました。 ただし、クイック公開を試みると、公開されていませんでした。 特に、 `com.day.cq.wcm.core.impl.reference.ActivationReferenceSearchBuilder` システムがひねくれる原因となった。 （SITES-17311）
+* Jackson エクスポーターでは、コンテンツフラグメントをシリアル化できません。ページ内で参照されているコンテンツフラグメント（Jackson エクスポーターコードを使用）とコンテンツフラグメントに追加されたタグがあると、ページ読み込みが中断します。 （SITES-18096）
 
 #### コアコンポーネント{#sites-core-components-6520}
 
-* AEMにCIFコアコンポーネントパッケージをインストールすると、原因がわかります `:type` 変更する既存のコンポーネントの値。 この変更により、ページが追加されたページではレンダリングされなくなります。 （SITES-17601）重要
+* AEMにCIFコアコンポーネントパッケージをインストールすると、原因がわかります `:type` 変更する既存のコンポーネントの値。 この変更により、ページが追加されたページではレンダリングされなくなります。 （SITES-17601）
 
 #### Campaign 統合{#sites-campaign-integration-6520}
 
-* AEMが許可リストに加える使用していた ( 別名： `whitelist` — 脆弱性の報告による。 この許可リストに加えるでは、お客様が必要な機能を使用できませんでした。 （SITES-16822）重大
+* AEMが許可リストに加える使用していた ( 別名： `whitelist` — 脆弱性の報告による。 この許可リストに加えるでは、お客様が必要な機能を使用できませんでした。 （SITES-16822）
 
 #### エクスペリエンスフラグメント{#sites-experiencefragments-6520}
 
-* MSM for Experience Fragments で、フォルダーやサブフォルダーを含むエクスペリエンスフラグメントコンテンツ構造への一括ロールアウトがサポートされるようになりました。 （SITES-16004）重要
+* MSM for Experience Fragments で、フォルダーやサブフォルダーを含むエクスペリエンスフラグメントコンテンツ構造への一括ロールアウトがサポートされるようになりました。 （SITES-16004）
 
 <!--#### Foundation Components (Legacy){#sites-foundation-components-legacy-6520}
 
@@ -110,31 +110,31 @@ ht-degree: 54%
 
 #### MSM - ライブコピー{#sites-msm-live-copies-6520}
 
-* An &quot;`Is not modifiable`コンポーネントのロールアウト時に「 」例外がスローされます。 特に、 `org.apache.sling.servlets.post.impl.operations.ModifyOperation` 応答の処理中に例外が発生しました。 （SITES-18809）重要
-* エクスペリエンスフラグメントの特定のライブコピーに対して変更をロールアウトできない。 （SITES-17930）重要
-* ユーザーがブループリントページのコンポーネントに注釈を追加してからロールアウトすると、ライブコピーの注釈数が正しく表示されない問題を修正しました。 （SITES-17099）重要
-* タッチグラフィカルユーザーインターフェイスで、親ページから子ページへの MSM ロールアウトボタンが壊れます。選択すると、次のエラーが表示されます。 `Uncaught TypeError: _g.shared is undefined`. （SITES-16991）重要
+* An &quot;`Is not modifiable`コンポーネントのロールアウト時に「 」例外がスローされます。 特に、 `org.apache.sling.servlets.post.impl.operations.ModifyOperation` 応答の処理中に例外が発生しました。 （SITES-18809）
+* エクスペリエンスフラグメントの特定のライブコピーに対して変更をロールアウトできない。 （SITES-17930）
+* ユーザーがブループリントページのコンポーネントに注釈を追加してからロールアウトすると、ライブコピーの注釈数が正しく表示されない問題を修正しました。 （SITES-17099）
+* タッチグラフィカルユーザーインターフェイスで、親ページから子ページへの MSM ロールアウトボタンが壊れます。選択すると、次のエラーが表示されます。 `Uncaught TypeError: _g.shared is undefined`. （SITES-16991）
 
 #### ページエディター{#sites-pageeditor-6520}
 
-* Formsテーマエディターのプレビューが壊れています。 「プレビュー」を選択すると、読み込みアイコンのみが表示されます。 (SITES-17164) ブロッカー
+* Formsテーマエディターのプレビューが壊れています。 「プレビュー」を選択すると、読み込みアイコンのみが表示されます。 （SITES-17164）
 
 ### [!DNL Assets]{#assets-6520}
 
-* メタデータエディターヘルパーでルールベースのフィールドを検証できず、「必須フィールドが見つかりません」というエラーメッセージが表示される。 （ASSETS-31396）重要
-* PDFを別の場所に移動した後、 **[!UICONTROL ページを表示]** オプションが表示されなくなります。 （ASSETS-30538）重要
-* 読み取り権限を持つ画像を選択できません。 （ASSETS-32199）標準
-* 表示設定でカードサイズを変更できません。 （ASSETS-31667）標準
-* .oft ファイルタイプのアップロード中にアップロードが失敗しました。 （ASSETS-30109）標準
-* カスタムメタデータフィールドをレポートに追加の列として追加しようとすると、チェックボックスがオンになりません。 (ASSETS-31671) 軽微な
-* Asset Service Pack 16 では、アセットの移動操作が適切にExperience Managerされません。 (ASSETS-30598) 軽微な
+* メタデータエディターヘルパーでルールベースのフィールドを検証できず、「必須フィールドが見つかりません」というエラーメッセージが表示される。 （ASSETS-31396）
+* PDFを別の場所に移動した後、 **[!UICONTROL ページを表示]** オプションが表示されなくなります。 （ASSETS-30538）
+* 読み取り権限を持つ画像を選択できません。 （ASSETS-32199）
+* 表示設定でカードサイズを変更できません。 （ASSETS-31667）
+* .oft ファイルタイプのアップロード中にアップロードが失敗しました。 （ASSETS-30109）
+* カスタムメタデータフィールドをレポートに追加の列として追加しようとすると、チェックボックスがオンになりません。 （ASSETS-31671）
+* Asset Service Pack 16 では、アセットの移動操作が適切にExperience Managerされません。 （ASSETS-30598）
 
 #### [!DNL Dynamic Media]{#assets-dm-6520}
 
-* アセットがAEMにアップロードされると、 `Update_asset` ワークフローがトリガーされます。 ただし、ワークフローは完了しません。 ワークフローは、製品のアップロードステップまで完了します。 次の手順はScene7のバッチアップロードですが、そのプロセスはAEMに取り込まれません。 （ASSETS-30443）重大
-* Dynamic MediaコンポーネントでDynamic Media以外のビデオを適切に処理するための、より優れた方法が必要です。 この問題は、インスタンス化中に例外が発生していました `dynamicmedia_sly.js`. （ASSETS-31301）重要
-* プレビューは、すべてのアセット、アダプティブビデオセットおよびビデオで機能します。 ただし、次の場合は 403 エラーがスローされます： `.m3u8` ファイル（ちなみに、まだパブリックリンクを通じて動作している） （ASSETS-31882）重要
-* The `scene7SmartCropProcessingStatus` ステータスを修正しました。 成功した場合でも失敗を表示するために使用されるスマート切り抜きビデオメタデータ。 (ASSETS-31255) 軽微な
+* アセットがAEMにアップロードされると、 `Update_asset` ワークフローがトリガーされます。 ただし、ワークフローは完了しません。 ワークフローは、製品のアップロードステップまで完了します。 次の手順はScene7のバッチアップロードですが、そのプロセスはAEMに取り込まれません。 （ASSETS-30443）
+* Dynamic MediaコンポーネントでDynamic Media以外のビデオを適切に処理するための、より優れた方法が必要です。 この問題は、インスタンス化中に例外が発生していました `dynamicmedia_sly.js`. （ASSETS-31301）
+* プレビューは、すべてのアセット、アダプティブビデオセットおよびビデオで機能します。 ただし、次の場合は 403 エラーがスローされます： `.m3u8` ファイル（ちなみに、まだパブリックリンクを通じて動作している） （ASSETS-31882）
+* The `scene7SmartCropProcessingStatus` ステータスを修正しました。 成功した場合でも失敗を表示するために使用されるスマート切り抜きビデオメタデータ。 （ASSETS-31255）
 
 ### [!DNL Forms]{#forms-6520}
 
@@ -166,7 +166,7 @@ ht-degree: 54%
 
 #### Communities {#communities-6520}
 
-* ユーザー同期を正常に構成した後、ユーザー同期診断が失敗しました。 （NPR-41693）標準
+* ユーザー同期を正常に構成した後、ユーザー同期診断が失敗しました。 （NPR-41693）
 
 <!-- #### Content distribution{#foundation-content-distribution-6520}
 
@@ -174,12 +174,12 @@ ht-degree: 54%
 
 #### 統合{#integrations-6520}
 
-* AEM 6.5 からAdobeSearch&amp;Promoteのすべてのコードと依存関係を削除します。 （NPR-40856）標準
+* AEM 6.5 からAdobeSearch&amp;Promoteのすべてのコードと依存関係を削除します。 （NPR-40856）
 
 #### ローカライゼーション{#localization-6520}
 
-* Aria-label &quot;close&quot;が **[!UICONTROL Assets]** > **[!UICONTROL ファイル]**&#x200B;をクリックし、フォルダーを選択して、ツールバーで「 」を選択します。 **[!UICONTROL プロパティ]** > **[!UICONTROL 権限]** タブ/メンバー名。 （NPR-41705）重要
-* ツールチップが切り捨てられ、 **[!UICONTROL キーストアのパスワード]** ロケール ENG、FRA、KOR、DEU、PTB の「SSL 設定」ページのフィールド。 （NPR-41367）標準
+* Aria-label &quot;close&quot;が **[!UICONTROL Assets]** > **[!UICONTROL ファイル]**&#x200B;をクリックし、フォルダーを選択して、ツールバーで「 」を選択します。 **[!UICONTROL プロパティ]** > **[!UICONTROL 権限]** タブ/メンバー名。 （NPR-41705）
+* ツールチップが切り捨てられ、 **[!UICONTROL キーストアのパスワード]** ロケール ENG、FRA、KOR、DEU、PTB の「SSL 設定」ページのフィールド。 （NPR-41367）
 
 <!-- #### Oak{#oak-6520}
 
@@ -187,7 +187,7 @@ ht-degree: 54%
 
 #### プラットフォーム{#foundation-platform-6520}
 
-* /api サーブレットが href json に正しいスキームを返さないことが原因で、Campaign とAEMの統合に関する問題が発生しました。 これは、AEMが X-Forward-Proto ヘッダーを受信していなかったためで、このヘッダーにより、HTTPS ではなく HTTP スキームで要求の応答が強制されていました。 そのため、OSGi 設定に基づいてスキームの選択を切り替える機能を追加する必要があります。 (GRANITE-48454) メジャー
+* /api サーブレットが href json に正しいスキームを返さないことが原因で、Campaign とAEMの統合に関する問題が発生しました。 これは、AEMが X-Forward-Proto ヘッダーを受信していなかったためで、このヘッダーにより、HTTPS ではなく HTTP スキームで要求の応答が強制されていました。 そのため、OSGi 設定に基づいてスキームの選択を切り替える機能を追加する必要があります。 (GRANITE-48454)
 
 <!-- #### Replication{#foundation-replication-6520}
 
@@ -195,21 +195,21 @@ ht-degree: 54%
 
 #### Sling{#foundation-sling-6520}
 
-* The `org.apache.sling.resourceMerger` バンドル 1.4.2 では、AEM 6.5、Service Pack 17 以降で例外がスローされます。 Sling resource merger 1.4.4 は、Service Pack 20 に含まれる必要があります。 （NPR-41630）標準
+* The `org.apache.sling.resourceMerger` バンドル 1.4.2 では、AEM 6.5、Service Pack 17 以降で例外がスローされます。 Sling resource merger 1.4.4 は、Service Pack 20 に含まれる必要があります。 （NPR-41630）
 
 #### 翻訳{#foundation-translation-6520}
 
-* AEM 6.5 Service Pack 18 のデプロイ後、翻訳ルールエディターの「フィルター」タブに問題が発生しました。 「コンテキスト」を選択し、「編集」>「保存」をクリックすると、次に同じコンテキストを開いたときに、HTML文字として二重引用符が表示されます。 基本的に、翻訳ルールが正しく保存されていませんでした。 （NPR-41624）重要
-* 翻訳後の文字列が翻訳プロバイダーからAEMに送り返されるコンテンツフラグメントの翻訳に関連する問題ですが、翻訳後の文字列が `/content/projects` レベルを変更し、コンテンツフラグメントを更新しない。 （NPR-41516）重要
-* 言語コピーを作成すると、エラーメッセージが表示されます。 コンテンツフラグメントモデルを使用して、コンテンツフラグメントがページプロパティで参照されているページで発生します。 （NPR-41441）重要
-* 言語コピー中に、エクスペリエンスフラグメント内のリンクが正しい言語に調整されない。 代わりに、エクスペリエンスフラグメントはプライマリロケールを指します。 （NPR-41343）標準
+* AEM 6.5 Service Pack 18 のデプロイ後、翻訳ルールエディターの「フィルター」タブに問題が発生しました。 「コンテキスト」を選択し、「編集」>「保存」をクリックすると、次に同じコンテキストを開いたときに、HTML文字として二重引用符が表示されます。 基本的に、翻訳ルールが正しく保存されていませんでした。 （NPR-41624）
+* 翻訳後の文字列が翻訳プロバイダーからAEMに送り返されるコンテンツフラグメントの翻訳に関連する問題ですが、翻訳後の文字列が `/content/projects` レベルを変更し、コンテンツフラグメントを更新しない。 （NPR-41516）
+* 言語コピーを作成すると、エラーメッセージが表示されます。 コンテンツフラグメントモデルを使用して、コンテンツフラグメントがページプロパティで参照されているページで発生します。 （NPR-41441）
+* 言語コピー中に、エクスペリエンスフラグメント内のリンクが正しい言語に調整されない。 代わりに、エクスペリエンスフラグメントはプライマリロケールを指します。 （NPR-41343）
 
 #### ユーザーインターフェイス{#foundation-ui-6520}
 
-* AEM 6.5、Service Pack 18 へのアップグレード後にコンソールエラーが発生する。 エラーは、 `coralUI3.js` ファイルに含まれ、AEMで任意のドロップダウンを選択したときに発生します。 特に、 `onOverlayToggle` イベント。 エラー `Uncaught TypeError: Cannot read properties of null (reading 'innerText')` が表示されます。 （NPR-41467）重要
-* AEMでは、 **[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL タグ付け]** > **[!UICONTROL 作成]** > **[!UICONTROL タグを作成]**、に非ラテン文字を入力する **タイトル** フィールドによって、 **名前** ハイフン ( `-` ) をクリックします。 （NPR-41623）標準
-* の著作権年が正しくありません `About Adobe Experience Manager` ダイアログボックス。 （NPR-41526）標準
-* 未翻訳です **[!UICONTROL プロファイルのプロパティ]** 文字列を使用して設定を編集できます。 すべてのロケールで発生します。 （NPR-41365）標準
+* AEM 6.5、Service Pack 18 へのアップグレード後にコンソールエラーが発生する。 エラーは、 `coralUI3.js` ファイルに含まれ、AEMで任意のドロップダウンを選択したときに発生します。 特に、 `onOverlayToggle` イベント。 エラー `Uncaught TypeError: Cannot read properties of null (reading 'innerText')` が表示されます。 （NPR-41467）
+* AEMでは、 **[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL タグ付け]** > **[!UICONTROL 作成]** > **[!UICONTROL タグを作成]**、に非ラテン文字を入力する **タイトル** フィールドによって、 **名前** ハイフン ( `-` ) をクリックします。 （NPR-41623）
+* の著作権年が正しくありません `About Adobe Experience Manager` ダイアログボックス。 （NPR-41526）
+* 未翻訳です **[!UICONTROL プロファイルのプロパティ]** 文字列を使用して設定を編集できます。 すべてのロケールで発生します。 （NPR-41365）
 
 <!-- #### WCM{#wcm-6520}
 
