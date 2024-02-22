@@ -3,10 +3,10 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 312e2477bb6a7cccab74cd4637d6a402f61052d7
+source-git-commit: 452813cf50110b515c181dba1ecbde4527808cfb
 workflow-type: tm+mt
-source-wordcount: '4708'
-ht-degree: 96%
+source-wordcount: '4796'
+ht-degree: 95%
 
 ---
 
@@ -259,7 +259,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | 定義済みリスト |  `String` |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  `[String]` |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
 | コンテンツ参照 |  `String` |  AEM 内の別のアセットへのパスを表示するために使用します |
-| フラグメント参照 |  *モデルタイプ* <br><br>単一のフィールド： `Model`  — 直接参照されるモデルタイプ <br><br>複数フィールド（1 つの参照タイプ）: `[Model]`  — 型の配列 `Model`（配列から直接参照） <br><br>複数の参照型を持つマルチフィールド： `[AllFragmentModels]`  — 和集合型を持つ配列から参照される、すべてのモデル型の配列 | モデルの作成時に定義された、特定のモデル型の 1 つ以上のコンテンツフラグメントの参照に使用します |
+| フラグメント参照 | *モデル型* <br><br>単一のフィールド：`Model` - 直接参照されるモデル型 <br><br>マルチフィールド（参照タイプが 1 つ）：`[Model]` - 型の配列 `Model`（配列から直接参照）<br><br>複数の参照型を持つマルチフィールド：`[AllFragmentModels]` - 和集合型を持つ配列から参照される、すべてのモデル型の配列 | モデルの作成時に定義された、特定のモデル型の 1 つ以上のコンテンツフラグメントの参照に使用します |
 
 {style="table-layout:auto"}
 
@@ -363,7 +363,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 
 #### バリエーション {#variations}
 
-コンテンツフラグメントのバリエーションに対するクエリを簡略化するために、`_variations` フィールドが実装されています。例：
+コンテンツフラグメントのバリエーションに対するクエリを簡略化するために、`_variations` フィールドが実装されています。次に例を示します。
 
 ```graphql
 {
@@ -523,6 +523,53 @@ GraphQL クエリでフィルタリングを使用して、特定のデータを
     items {
       lastName
       firstName
+    }
+  }
+}
+```
+
+オプションの変数を使用してGraphQLクエリを実行する場合、特定の値が **not** オプションの変数に指定した場合、変数はフィルター評価で無視されます。 つまり、クエリ結果にはすべての値 ( `null` およびでない `null`（フィルター変数に関連するプロパティ）。
+
+>[!NOTE]
+>
+>次の場合、 `null` 値は *明示的に* このような変数に指定した場合、フィルターは `null` 対応するプロパティの値。
+
+例えば、以下のクエリでは、プロパティの値が指定されていません。 `lastName`:
+
+```graphql
+query getAuthorsFilteredByLastName($authorLastName: String) {
+  authorList(filter:
+    {
+      lastName: {_expressions: {value: $authorLastName}
+      }}) {
+    items {
+      lastName
+    }
+  }
+}
+```
+
+すべての作成者が返されます。
+
+```graphql
+{
+  "data": {
+    "authorList": {
+      "items": [
+        {
+          "lastName": "Hammer"
+        },
+        {
+          "lastName": "Provo"
+        },
+        {
+          "lastName": "Wester"
+        },
+        {
+          "lastName": null
+        },
+         ...
+      ]
     }
   }
 }
@@ -880,9 +927,9 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
         >
         >また、コンテンツフラグメントのメタデータを一覧表示して、タグをクエリできます。
 
-   * 操作の場合：
+   * 操作は次のようになります。
 
-      * `_operator` ：特定の演算子を適用します。 `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
+      * `_operator`：特定の演算子（`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`）を適用します
          * [サンプルクエリ - 「Jobs」という名前を持たないすべての人物](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)を参照してください
          * [サンプルクエリ - `_path` が特定のプレフィックスで始まるすべてのアドベンチャーを参照してください](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
 
