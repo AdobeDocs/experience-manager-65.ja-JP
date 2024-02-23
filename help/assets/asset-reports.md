@@ -6,10 +6,10 @@ role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 93d0a38d13223a8580f54786bc4ffe149efe99f1
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 97%
+source-wordcount: '1155'
+ht-degree: 99%
 
 ---
 
@@ -113,9 +113,10 @@ ht-degree: 97%
    ![レポート列の選択または選択のキャンセル](assets/custom_columns.png)
 
 1. ツールバーから「**[!UICONTROL 作成]**」をクリックします。レポートの生成が開始されたことを通知するメッセージが表示されます。
-1. 次の日： [!UICONTROL アセットレポート] ページの生成ステータスは、例えば、レポートジョブの現在の状態に基づきます。 [!UICONTROL 成功], [!UICONTROL 失敗], [!UICONTROL 待機中]または [!UICONTROL Scheduled]. 通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。または、レポートを選択し、ツールバーの「**[!UICONTROL 表示]**」をクリックします。
+1. [!UICONTROL アセットレポート]ページのレポート生成ステータスは、レポートジョブの現在の状態（「[!UICONTROL 成功]」、「[!UICONTROL 失敗]」、「[!UICONTROL 待機中]」、「[!UICONTROL スケジュール済み]」など）に基づきます。通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。または、レポートを選択し、ツールバーの「**[!UICONTROL 表示]**」をクリックします。
 
-   ![生成されたレポート](assets/report_page.png)
+   <!--![A generated report](assets/report_page.png)-->
+   [レポートのステータス](assets/report-status.JPG)
 
    ツールバーの「**[!UICONTROL ダウンロード]**」をクリックすると、レポートを CSV 形式でダウンロードできます。
 
