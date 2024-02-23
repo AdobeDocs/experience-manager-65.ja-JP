@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: f48e77068f286ff107bb2511660bf540fea32474
+source-git-commit: 210299acf9f853a19bd513c84c1678e44ba81729
 workflow-type: tm+mt
-source-wordcount: '2888'
-ht-degree: 53%
+source-wordcount: '2456'
+ht-degree: 54%
 
 ---
 
@@ -399,13 +399,17 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題
 
-#### サポートされているプラットフォーム
+の既知の問題 [!DNL Experience Manager] Formsは、スケジュールされた [!DNL Experience Manager] サービスパックのリリース日です。 この場合、AEM 6.5.20.0 Forms アドオンパッケージリリースは、2024年2月29日木曜日（PT）に予定されています。リリース後のこの節には、フォームに関する既知の問題のリストが追加されます。
 
-* JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。（FORMS-10659）
+<!--
 
-#### インストール
+#### Supported platforms 
 
-* JBoss® 7.1.4 プラットフォームで、Experience Manager 6.5.16.0 以降のサービスパックをインストールすると、`adobe-livecycle-jboss.ear` デプロイメントが失敗します。（CQ-4351522、CQDOC-20159）
+* JDK 11.0.20 is not supported to install AEM Forms on JEE Installer. Only JDK 11.0.19 or earlier versions are supported to install AEM Forms on JEE Installer. (FORMS-10659)
+
+#### Installation 
+
+* On JBoss&reg; 7.1.4 platform, when user installs Experience Manager 6.5.16.0 or later service pack, `adobe-livecycle-jboss.ear` deployment fails. (CQ-4351522, CQDOC-20159)
 
 <!-- 
 * After upgrading to AEM Forms 6.5.18.0 JBoss&reg; Turnkey full installer environment on Windows Server 2022, when compiling Output client application code using Java&trade; 11, the following compilation error may occur:
@@ -425,47 +429,45 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
         > You can also use an in-place editing tool, for example, 7-zip, to update the `Manifest.mf` file.  
 
     1. Save the updated the `Manifest.mf` in the `adobe-output-client.jar` archive. 
-    1. Save the modified `adobe-output-client.jar` file and rerun the setup. (CQDOC-20878) -->
+    1. Save the modified `adobe-output-client.jar` file and rerun the setup. (CQDOC-20878) 
 
-* AEM Service Pack 6.5.20.0フルインストーラーをインストールした後、JBoss® Turnkey を使用して JEE で EAR デプロイメントが失敗します。 <!-- UPDATE FOR EACH NEW RELEASE -->
+* After installing AEM Service Pack 6.5.20.0 full installer, the EAR deployment fails on JEE using JBoss&reg; Turnkey. UPDATE FOR EACH NEW RELEASE To resolve the issue, locate the AEM_Forms_Installation_dir\jboss\bin\standalone.bat file and update `Adobe_Adobe_JAVA_HOME` to `Adobe_JAVA_HOME` for all occurrences before running the configuration manager. (CQDOC-20803).
 
-問題を解決するには、設定マネージャーを実行する前に、`<AEM_Forms_Installation_dir>\jboss\bin\standalone.bat` ファイルを見つけて、すべての出現箇所について `Adobe_Adobe_JAVA_HOME` を `Adobe_JAVA_HOME` に更新します。（CQDOC-20803）
+#### Install the servlet fragment (AEM Service Pack 6.5.14.0 or earlier)
 
-#### サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール
+* If you are upgrading to AEM Service Pack 6.5.15.0 or higher, and your AEM instance is operating on Tomcat 8.5.88, it is mandatory that you install the servlet fragment. Do this install *before* you proceed with the installation of Service Pack 6.5.15.0 or higher.
+* It is mandatory that you install the servlet fragment for all application servers except those running on JBoss&reg; EAP 7.4.0.
 
-* AEM Service Pack 6.5.15.0以降にアップグレードし、AEMインスタンスが Tomcat 8.5.88 で動作している場合は、サーブレットフラグメントをインストールする必要があります。 このインストールを実行 *前* Service Pack 6.5.15.0以降のインストールを続行します。
-* JBoss® EAP 7.4.0 で実行されているものを除き、すべてのアプリケーションサーバーのサーブレットフラグメントをインストールする必要があります。
+**To install the servlet fragment:**
 
-**サーブレットフラグメントをインストールするには：**
+1. Download the servlet fragment from [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
+1. Start the application server. 
+1. Wait for the logs to stabilize and check the bundle state.
+1. Open Web Console Bundles. The default URL is `http://[Server]:[Port]/system/console/bundles`.
+1. Select **[!UICONTROL Install]** or **[!UICONTROL Update]**. 
+1. Select the downloaded fragment 
+`org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar` 
+1. Select **[!UICONTROL Install]** or **[!UICONTROL Update]**. 
+1. Wait for the application server to stabilize.
+1. Stop the application server.
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)からサーブレットフラグメントをダウンロードします。
-1. アプリケーションサーバーを起動します。
-1. ログが安定するのを待ってから、バンドルの状態を確認します。
-1. Web コンソールのバンドルを開きます。デフォルトの URL は `http://[Server]:[Port]/system/console/bundles` です。
-1. 「**[!UICONTROL インストール]**」または「**[!UICONTROL 更新]**」を選択します。
-1. ダウンロードしたフラグメントを選択します
-   `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`
-1. 「**[!UICONTROL インストール]**」または「**[!UICONTROL 更新]**」を選択します。
-1. アプリケーションサーバーが安定するまで待ちます。
-1. アプリケーションサーバーを停止します。
+#### Adaptive Forms
 
-#### アダプティブフォーム
+* When an Adaptive Form is published, all its dependencies, including policies, get republished, even if no modifications have been made to them. (FORMS-10454)
+* When a user selects to configure a field for the first time in an adaptive form, the option to save a configuration does not display in Properties Browser. Selecting to configure some other field of the Adaptive Form in the same editor resolves the issue. 
+* When users perform the submit action, the submission fails with an error: 
+`javax.servlet.ServletException: java.lang.NoSuchMethodError`
+To resolve the issue, [recompile the Sling scripts such as JSP, Java&trade;, and Sightly](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html#resolution). (FORMS-8542)
+* After installing AEM Service Pack 6.5.14.0 and onwards, users are unable to select a font from the JEE Admin UI for PDF documents when navigating to `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`, as the font list appears empty. (FORMS-12095)
+ When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) 
+* On AEM Forms on JEE, the HTML5 Forms that use the context path, fail to render. (FORMS-12485, FORMS-12691). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
+* Adaptive Forms let you use custom functions with ECMAScript version 5 or earlier. When a custom function uses ECMAScript version 6 or later, like 'let', 'const', or arrow functions, the rule editor might not open properly.
 
-* アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
-* アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
-* ユーザーが送信アクションを実行すると、送信は次のエラーで失敗します。
-  `javax.servlet.ServletException: java.lang.NoSuchMethodError`
-問題を解決するには、 [JSP、Java™、Sightly などの Sling スクリプトを再コンパイルします。](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html#resolution). （FORMS-8542）
-* AEM Service Pack 6.5.14.0以降をインストールした後、に移動したときに、JEE Admin UI からPDFドキュメントのフォントを選択できなくなる `Home` > `Services` > `PDF Generator` > `Adobe PDF Settings`フォントリストが空に表示されるので、 （FORMS-12095）
-<!-- When a form is signed using the OOTB Scribble Signature component, it appears in the image dialogue but does not preview and appears blank when you click on it. (FORMS-12073). A hotfix is available for this issue. To download and install the hotfix, see [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md) -->
-* JEE 上のAEM Formsで、コンテキストパスを使用するHTML5 Formsがレンダリングに失敗します。 (FORMS-12485、FORMS-12691)。 この問題に対するホットフィックスが利用できます。 ホットフィックスをダウンロードしてインストールするには、 [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md).
-* アダプティブFormsでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。 カスタム関数で ECMAScript バージョン 6 以降（&#39;let&#39;、&#39;const&#39;、矢印関数など）が使用されている場合、ルールエディタが正しく開かない可能性があります。
+#### AEM Forms on JEE 
 
-#### JEE 上の AEM Forms
+* Critical security vulnerabilities have been reported for Struts 2 RCE, a popular and open-source web application framework for developing Java&trade; EE web applications. Adobe has released [AEM 6.5 Service Pack 19.1 (6.5.19.1)](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md) to address the vulnerability in AEM Forms on JEE. 
 
-* Java™ EE Web アプリケーションを開発するための一般的でオープンソースな Web アプリケーションフレームワークである Struts 2 RCE に対して、重要なセキュリティ脆弱性が報告されています。 Adobeがリリースされました [AEM 6.5 サービスパック 19.1(6.5.19.1)](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md) :JEE 上のAEM Formsの脆弱性に対処するため。
-
-<!--The font enumeration fails due to the missing Ps2Pdf service file.-->
+The font enumeration fails due to the missing Ps2Pdf service file.-->
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
