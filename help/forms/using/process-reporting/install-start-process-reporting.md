@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1676'
-ht-degree: 98%
+source-wordcount: '1710'
+ht-degree: 96%
 
 ---
 
@@ -95,6 +95,10 @@ AEM Forms プロセスデータのパージについて詳しくは、[プロセ
 1. AEM Forms サーバーインスタンスを再起動します。
 
 ![processdatapublisherservice](assets/processdatapublisherservice.png)
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ### ProcessDataStorage サービス {#processdatastorage-service}
 
@@ -275,3 +279,5 @@ AEM Forms 環境には、環境が設定された時点からのデータが含�
 * **[!UICONTROL 同期]**：埋め込まれたプロセスレポートリポジトリを AEM Forms データベースと同期します。
 * **[!UICONTROL ヘルプ]**：プロセスレポートに関するヘルプドキュメントを表示します。
 * **[!UICONTROL ログアウト]**：プロセスレポートからログアウトします
+
+

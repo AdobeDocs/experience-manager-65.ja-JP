@@ -5,10 +5,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 50%
+source-wordcount: '1506'
+ht-degree: 49%
 
 ---
 
@@ -309,6 +309,10 @@ AEM Forms Portal のドラフトと送信コンポーネントを使用すると
 1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
 1. 「**[!UICONTROL Install」または「Update]**」をクリックします。完了したら、サーバーを再起動します。
 1. （*Windows のみ*）オペレーティングシステムのシステムファイアウォールをオフにします。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
 

@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7812'
+source-wordcount: '7848'
 ht-degree: 98%
 
 ---
@@ -36,13 +36,13 @@ Generate PDF サービスは、ネイティブアプリケーションを使用�
 
 >[!NOTE]
 >
-Generate PDF サービスは、64 ビットバージョンの OpenOffice をサポートしていません。
+>Generate PDF サービスは、64 ビットバージョンの OpenOffice をサポートしていません。
 
 * PSD を変換する Adobe Photoshop® CS2（Windows のみ）
 
 >[!NOTE]
 >
-Windows Server 2003 または Windows Server 2008 がサポートされていないので、Photoshop CS3 および CS4 はサポートされていません。
+>Windows Server 2003 または Windows Server 2008 がサポートされていないので、Photoshop CS3 および CS4 はサポートされていません。
 
 * FM を変換する Adobe FrameMaker® 7.2 および 8（Windows のみ）
 * PMD、PM6、P65、PM を変換する Adobe PageMaker® 7.0（Windows のみ）
@@ -82,7 +82,7 @@ Generate PDF サービスを使用して、次のタスクを実行できます�
 
 >[!NOTE]
 >
-Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ## Word ドキュメントの PDF ドキュメントへの変換 {#converting-word-documents-to-pdf-documents}
 
@@ -90,11 +90,11 @@ Generate PDF サービスについて詳しくは、[AEM Forms のサービス�
 
 >[!NOTE]
 >
-その他のファイル形式について詳しくは、[追加のネイティブファイル形式のサポートの追加](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats)を参照してください。
+>その他のファイル形式について詳しくは、[追加のネイティブファイル形式のサポートの追加](converting-file-formats-pdf.md#adding-support-for-additional-native-file-formats)を参照してください。
 
 >[!NOTE]
 >
-AEM Forms サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>AEM Forms サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary-of-steps}
 
@@ -202,7 +202,7 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
    >[!NOTE]
    >
-   `localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
+   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. PDF 生成クライアントを作成します。
 
@@ -260,7 +260,7 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
 >[!NOTE]
 >
-PDF 生成サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>PDF 生成サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-1}
 
@@ -359,7 +359,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
    >[!NOTE]
    >
-   `localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
+   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. PDF 生成クライアントを作成します。
 
@@ -410,7 +410,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
 >[!NOTE]
 >
-Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-2}
 
@@ -510,7 +510,7 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 
    >[!NOTE]
    >
-   `localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
+   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. Generate PDF クライアントを作成します。
 
@@ -845,7 +845,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
-このコンテキストでは、「追加」という用語は、`appmon.[applicationname].addition.[locale].xml` ファイルの内容を意味します。このようなファイルは、ダイアログ XML ファイルの上書きと追加を指定します。
+>このコンテキストでは、「追加」という用語は、`appmon.[applicationname].addition.[locale].xml` ファイルの内容を意味します。このようなファイルは、ダイアログ XML ファイルの上書きと追加を指定します。
 
 また、以下の目的のために、ネイティブアプリケーション用の追加のダイアログ XML ファイルを変更することもできます。
 
@@ -858,7 +858,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
-native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
+>native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
 
 注文 `windowList` の子として表示される要素 `window` 要素を選択します。 （[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
 
@@ -878,7 +878,7 @@ native2pdfconfig.xml 設定ファイルで指定された一般のアプリケ�
 
 >[!NOTE]
 >
-アプリケーションの名前は、`GenericApp` 要素の `name` 属性の値として指定されます。この値は、そのアプリケーション用に開発するスクリプトで指定された、対応する名前と完全に一致する必要があります。同様に、`GenericApp` 要素の `displayName` 属性は、対応するスクリプトの `expectedWindow` ウィンドウのキャプションと完全に一致する必要があります。このような等価性は、`displayName` または `caption` 属性に表示される正規表現を解決した後に評価されます。
+>アプリケーションの名前は、`GenericApp` 要素の `name` 属性の値として指定されます。この値は、そのアプリケーション用に開発するスクリプトで指定された、対応する名前と完全に一致する必要があります。同様に、`GenericApp` 要素の `displayName` 属性は、対応するスクリプトの `expectedWindow` ウィンドウのキャプションと完全に一致する必要があります。このような等価性は、`displayName` または `caption` 属性に表示される正規表現を解決した後に評価されます。
 
 この例では、Generate PDF サービスで提供されるデフォルトの設定データを変更し、ファイル名拡張子が.txt のファイルを処理するために（Microsoft Word ではなく）メモ帳を使用するように指定しました。この変更を行う前は、このようなファイルを処理するネイティブアプリケーションとして Microsoft Word が指定されていました。
 
@@ -910,6 +910,10 @@ native2pdfconfig.xml 設定ファイルで指定された一般のアプリケ�
 ネイティブアプリケーション実行可能ファイルの場所を指定する環境変数を作成します。変数には `[applicationname]_PATH` 形式を使用する必要があります。ここでは、 *applicationname* は、XML 設定ファイルおよびスクリプトで使用されるアプリケーション名と完全に一致し、パスには二重引用符で囲んだ実行可能ファイルへのパスを含める必要があります。例えば、`Photoshop_PATH` のような環境変数になります。
 
 新しい環境変数を作成した後、Generate PDF サービスがデプロイされているサーバーを再起動する必要があります。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK サーバーを再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK サーバーを再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 **Windows XP 環境でのシステム変数の作成**
 

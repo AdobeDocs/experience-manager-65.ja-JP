@@ -2,10 +2,10 @@
 title: 添付ファイル付きの電子メールを取得するための追加手順
 description: JEE 上のAEM Formsプラットフォームで添付ファイルを含む電子メールを取得できない場合のエラーの修正方法を説明します。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 553aef43342a709dd8e645279999a71b9e0185f0
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 82%
+source-wordcount: '270'
+ht-degree: 72%
 
 ---
 
@@ -48,3 +48,7 @@ ht-degree: 82%
    * `sling.bootdelegation.activation=javax.activation.*`
 
 1. **JBoss®** を再起動します。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。

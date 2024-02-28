@@ -3,10 +3,10 @@ title: 外部ユーザー招待ハンドラーの作成
 description: 外部ユーザー招待ハンドラーを作成する方法を説明します。 これにより、Rights Managementサービスは外部ユーザーを招待してRights Managementユーザーにできます。
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 83%
+source-wordcount: '1160'
+ht-degree: 81%
 
 ---
 
@@ -233,6 +233,11 @@ A.コンポーネントに必要な外部 JAR ファイル B. JAVA ファイル
 
 1. Workbench を使用して、招待外部ユーザーハンドラーの JAR ファイルをデプロイします。
 1. アプリケーションサーバーを再起動します。
+
+   >[!NOTE]
+   >
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+
 1. 管理コンソールにログインします。
 1.  **[!UICONTROL サービス]**／**[!UICONTROL Rights Management]**／**[!UICONTROL 設定]**／ 招待済み&#x200B;**[!UICONTROL ユーザーの登録]**&#x200B;をクリックします。
 1. 招待ユーザーの登録を有効にするには、**[!UICONTROL 招待ユーザーの登録を有効にする]**&#x200B;ボックスをオンにします。**[!UICONTROL 組み込み登録システムを使用]**&#x200B;の下で「**[!UICONTROL いいえ]**」をクリックします。設定を保存します。

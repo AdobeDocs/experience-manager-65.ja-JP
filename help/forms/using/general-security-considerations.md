@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 100%
+source-wordcount: '1030'
+ht-degree: 96%
 
 ---
 
@@ -218,6 +218,10 @@ JBoss® Application Server は、デフォルトの HTTP ポートとして 8080
 
 1. ファイルを保存して閉じます。
 1. JBoss® アプリケーションサーバーを再起動します。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ## JEE 上の AEM Forms のセキュリティに関する考慮事項 {#aem-forms-on-jee-security-considerations}
 

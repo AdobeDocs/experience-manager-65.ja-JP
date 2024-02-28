@@ -6,10 +6,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: a054b60a-5e89-4c98-87bc-35669988d160
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 100%
+source-wordcount: '738'
+ht-degree: 95%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 100%
 1. Package Manager に移動します。デフォルトの URL は、`https://[localhost]:'port'/lc/crx/packmgr/index.jsp.` です。
 1. `adobe-lc-workspace-pkg-[version].zip` パッケージを検索してインストールします。
 1. アプリケーションサーバーを再起動します。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ## AEM Forms Workspace のログ {#aem-forms-workspace-nbsp-logging}
 

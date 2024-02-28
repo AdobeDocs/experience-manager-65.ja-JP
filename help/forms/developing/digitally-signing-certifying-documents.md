@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '16882'
-ht-degree: 83%
+source-wordcount: '16917'
+ht-degree: 87%
 
 ---
 
@@ -169,7 +169,7 @@ Signature API（Web サービス）を使用して署名フィールドを追加
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -181,8 +181,8 @@ Signature API（Web サービス）を使用して署名フィールドを追加
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、署名フィールドを含む PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出して、PDF ドキュメントのファイルの場所を表す文字列値とファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `BLOB` オブジェクトを入力するには、`MTOM` プロパティにバイト配列のコンテンツを割り当てます。
 
 1. 署名フィールドを追加する
@@ -201,9 +201,9 @@ Signature API（Web サービス）を使用して署名フィールドを追加
 1. PDFドキュメントを PDF ファイルとして保存する
 
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出して、署名フィールドを含む PDF ドキュメントのファイルの場所を表す文字列値およびファイルを開くモードを渡します。
-   * `addSignatureField` メソッドによって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `binaryData` データメンバー。
+   * `addSignatureField` メソッドによって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -316,7 +316,7 @@ Signature API（Web サービス）を使用して署名フィールド名を取
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -328,8 +328,8 @@ Signature API（Web サービス）を使用して署名フィールド名を取
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、署名フィールドを含む PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出して、PDF ドキュメントのファイルの場所を表す文字列値およびファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `BLOB` オブジェクトを入力するには、`MTOM` フィールドにバイト配列のコンテンツを割り当てます。
 
 1. 署名フィールド名の取得
@@ -479,7 +479,7 @@ Signature API（Java）を使用して署名フィールドを変更します。
 1. PDFドキュメントを PDF ファイルとして保存する
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します。 必ず `modifySignatureField` メソッドが返した `com.adobe.idp.Document` オブジェクトを使用するように確認します。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツをファイルにコピーします。必ず `modifySignatureField` メソッドが返した `com.adobe.idp.Document` オブジェクトを使用するようにしてください。
 
 ### Web サービス API を使用した署名フィールドの変更 {#modify-signature-fields-using-the-web-service-api}
 
@@ -498,7 +498,7 @@ Signature API（web サービス）を使用して署名フィールドを変更
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -510,8 +510,8 @@ Signature API（web サービス）を使用して署名フィールドを変更
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、変更する署名フィールドを含む PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出して、PDF ドキュメントのファイル場所を示す文字列値およびファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、および読み取るストリーム長を渡して、バイト配列にストリームデータを入力します。
    * `BLOB` オブジェクトを入力するには、`MTOM` プロパティに、バイト配列のコンテンツを割り当てます。
 
 1. ディクショナリの値を設定
@@ -541,9 +541,9 @@ Signature API（web サービス）を使用して署名フィールドを変更
 1. PDFドキュメントを PDF ファイルとして保存する
 
    * コンストラクターを呼び出し、署名フィールドを含む PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `addSignatureField` メソッドが返す `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * `addSignatureField` メソッドが返す `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -594,6 +594,10 @@ PDF ドキュメントの署名や認証に nCipher nShield HSM 資格情報を�
 ```
 
 この設定値を cknfastrc ファイルに追加すると、J2EE アプリケーションサーバーを再起動しなくても、新しい資格情報を使用できます。
+
+    >[！注意 ]
+    >
+    > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 **署名は信頼されていません**
 
@@ -761,7 +765,7 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -773,8 +777,8 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、署名された PDF ドキュメントを保存するために使用されます。
    * コンストラクタを呼び出し、署名する PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、および読み取るストリーム長を渡して、バイト配列にストリームデータを入力します。
    * `MTOM` プロパティをバイト配列の内容に割り当てることで、`BLOB` オブジェクトを生成します。
 
 1. PDF ドキュメントに署名
@@ -800,9 +804,9 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
 1. 署名済み PDF ドキュメントを保存
 
    * コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。署名済み PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `sign` メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * `sign` メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -919,7 +923,7 @@ Forms と Signature API（Java）を使用してインタラクティブフォ�
    * コンストラクターを使用して、Forms サービスに渡すフォームデータを含む XML ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。XML ファイルの場所を指定する文字列値を渡します。
    * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを渡すことにより、`com.adobe.idp.Document` オブジェクトを作成します。
    * 実行時オプションの設定に使用する `PDFFormRenderSpec` オブジェクトを作成します。を呼び出す `PDFFormRenderSpec` オブジェクトの `setGenerateServerAppearance` メソッドとパス `true`.
-   * を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを使用して、次の値を渡します。
+   * `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを呼び出して、以下の値を渡します。
 
       * レンダリングする PDF フォームを含む `com.adobe.idp.Document` オブジェクト。
       * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。
@@ -985,7 +989,7 @@ Forms and Signature API（web サービス）を使用して、インタラク�
    * デフォルトのコンストラクターを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -1002,16 +1006,16 @@ Forms and Signature API（web サービス）を使用して、インタラク�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、署名された PDF ドキュメントを保存するために使用されます。
    * コンストラクタを呼び出し、署名する PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、および読み取るストリーム長を渡して、バイト配列にストリームデータを入力します。
    * `MTOM` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを設定します。
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、フォームデータの格納に使用されます。
    * コンストラクターを呼び出し、フォームデータを含む XML ファイルのファイルの場所とファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、および読み取るストリーム長を渡して、バイト配列にストリームデータを入力します。
    * `MTOM` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを設定します。
    * 実行時オプションの設定に使用される `PDFFormRenderSpec` オブジェクトを作成します。値を割り当て `true` から `PDFFormRenderSpec` オブジェクトの `generateServerAppearance` フィールドに入力します。
-   * を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを使用して、次の値を渡します。
+   * `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを呼び出して、以下の値を渡します。
 
       * レンダリングする PDF フォームを含む `BLOB` オブジェクト。
       * フォームに結合するデータを含む `BLOB` オブジェクト。
@@ -1047,9 +1051,9 @@ Forms and Signature API（web サービス）を使用して、インタラク�
 1. 署名済み PDF ドキュメントを保存
 
    * コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。署名済み PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `sign` メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * `sign` メソッドが返した `BLOB` オブジェクトの内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -1225,7 +1229,7 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -1237,8 +1241,8 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、認証済みの PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、認証する PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリームの長さを渡す。
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `MTOM` データメンバーにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
 1. PDF ドキュメントの認証
@@ -1269,9 +1273,9 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
 1. 認証済み PDF ドキュメントを PDF ファイルとして保存
 
    * コンストラクタを呼び出し、認証された PDF ドキュメントを含む PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `certify` メソッドによって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `binaryData` データメンバー。
+   * `certify` メソッドによって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -1462,7 +1466,7 @@ Signature Service API（Web サービス）を使用してデジタル署名を�
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -1474,8 +1478,8 @@ Signature Service API（Web サービス）を使用してデジタル署名を�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、検証するデジタルまたは認証済み署名が含まれる PDF ドキュメントを格納するために使用されます。
    * コンストラクタを使用して `System.IO.FileStream` オブジェクトを作成します。署名済み PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   *  `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   *  `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを設定します。
 
 1. PKI 実行時オプションを設定する
@@ -1635,7 +1639,7 @@ Signature サービス API（Java）を使用して、複数の電子署名を�
 
 1. すべてのデジタル署名を取得する
 
-   を呼び出す `SignatureServiceClient` オブジェクトの `verifyPDFDocument` メソッドを使用して、次の値を渡します。
+   `SignatureServiceClient` オブジェクトの `verifyPDFDocument` メソッドを呼び出して、以下の値を渡します。
 
    * 複数のデジタル署名を含む PDF ドキュメントが格納されている `com.adobe.idp.Document` オブジェクト。
    * PKI 実行時オプションが格納されている `PKIOptions` オブジェクト。
@@ -1677,7 +1681,7 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -1689,8 +1693,8 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、検証する複数のデジタル署名を含む PDF ドキュメントを格納します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * バイト配列の内容の `MTOM` プロパティを割り当てることで、`BLOB` オブジェクトを生成します。
 
 1. PKI ランタイムオプションを設定
@@ -1701,7 +1705,7 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
 
 1. すべてのデジタル署名を取得する
 
-   を呼び出す `SignatureServiceClient` オブジェクトの `verifyPDFDocument` メソッドを使用して、次の値を渡します。
+   `SignatureServiceClient` オブジェクトの `verifyPDFDocument` メソッドを呼び出して、以下の値を渡します。
 
    * 複数のデジタル署名を含む PDF ドキュメントが格納されている `BLOB` オブジェクト。
    * PKI 実行時オプションが格納されている `PKIOptions` オブジェクト。
@@ -1812,7 +1816,7 @@ Signature API（Java）を使用してデジタル署名を削除するには、
 1. PDFドキュメントを PDF ファイルとして保存する
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッド。 `java.io.File` オブジェクトを渡して、`com.adobe.idp.Document` オブジェクトの内容をファイルにコピーします。  `clearSignatureField` メソッドから返された `Document` オブジェクトを必ず使用してください。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出します。`java.io.File` オブジェクトを渡して、`com.adobe.idp.Document` オブジェクトの内容をファイルにコピーします。  `clearSignatureField` メソッドから返された `Document` オブジェクトを必ず使用してください。
 
 **関連トピック**
 
@@ -1841,7 +1845,7 @@ Signature API（Web サービス）を使用してデジタル署名を削除し
    * デフォルトのコンストラクタを使用して `SignatureServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `SignatureServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/SignatureService?WSDL`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `SignatureServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * を設定します。 `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
       * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
@@ -1853,8 +1857,8 @@ Signature API（Web サービス）を使用してデジタル署名を削除し
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、削除するデジタル署名が含まれる PDF ドキュメントを格納するため使用されます。
    * `System.IO.FileStream` オブジェクトを作成します。このため、このオブジェクトのコンストラクターを呼び出し、署名付き PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティを割り当てることで、`BLOB` オブジェクトにバイト配列のコンテンツを入力します。
 
 1. 署名フィールドからデジタル署名を削除します。
@@ -1869,9 +1873,9 @@ Signature API（Web サービス）を使用してデジタル署名を削除し
 1. PDFドキュメントを PDF ファイルとして保存する
 
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、空の署名フィールドとファイルを開くモードを含む PDF ドキュメントのファイルの場所を表す文字列値を渡します。
-   * `sign` メソッドによって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * `sign` メソッドによって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列にデータを入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 

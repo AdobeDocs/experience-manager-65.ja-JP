@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '4570'
-ht-degree: 97%
+source-wordcount: '4604'
+ht-degree: 96%
 
 ---
 
@@ -619,7 +619,9 @@ AEM Forms は、アップロードサーブレットに渡されたトークン�
 
 >[!NOTE]
 >
-セキュリティで保護されていないドキュメントを受け入れるように AEM Forms を設定するには、「Flex アプリケーションからのセキュリティで保護されていないドキュメントのアップロードを許可」オプションを選択します。次に、アプリケーションまたはサービスを再起動して、設定が有効になることを確認します。
+* セキュリティで保護されていないドキュメントを受け入れるように AEM Forms を設定するには、「Flex アプリケーションからのセキュリティで保護されていないドキュメントのアップロードを許可」オプションを選択します。次に、アプリケーションまたはサービスを再起動して、設定が有効になることを確認します。
+* 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+
 
 ### クイックスタート：Remoting を使用してセキュリティで保護されたドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 

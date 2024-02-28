@@ -4,9 +4,9 @@ description: AEM Forms ドキュメントサービスをインストールして
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '5599'
+source-wordcount: '5633'
 ht-degree: 95%
 
 ---
@@ -79,7 +79,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 >[!NOTE]
 >
 >* Microsoft® Windows では、PDF Generator は、WebKit、Acrobat WebCapture、および PhantomJS の変換ルートをサポートし、HTML ファイルを PDF ドキュメントに変換します。
-* UNIX ベースのオペレーティングシステムでは、PDF Generator は、WebKit および PhantomJS の変換ルートをサポートし、HTML ファイルを PDF ドキュメントに変換します。
+>* UNIX ベースのオペレーティングシステムでは、PDF Generator は、WebKit および PhantomJS の変換ルートをサポートし、HTML ファイルを PDF ドキュメントに変換します。
 >
 
 ### UNIX ベースのオペレーティングシステムの追加要件 {#extrarequirements}
@@ -194,11 +194,11 @@ PDF Generator サービスを使用して、Microsoft® Word、Microsoft® Excel
 
 >[!NOTE]
 >
-* AEM Forms Server がオフラインまたはセキュア環境にあり、インターネットを使用して Adobe Acrobat をアクティブ化できない場合は、[オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=jp)を参照して、そのような場合に Adobe Acrobat のインスタンスをアクティブ化する手順を確認してください。
-* Adobe Acrobat、Microsoft® Word、Excel および PowerPoint は、Microsoft® Windows でのみ使用できます。UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールして、リッチテキストファイルやサポートされている Microsoft® Office ファイルを PDF ドキュメントに変換します。
-* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティソフトウェアのインストール後に表示されるすべてのダイアログボックスを閉じます。
-* インストールされているすべてのソフトウェアを少なくとも 1 回起動します。PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを解除します。
-* [Adobe Acrobat シリアル番号の有効期限を確認](https://helpx.adobe.com/jp/enterprise/kb/volume-license-expiration-check.html)してライセンスを更新する日付を設定するか、有効期限に基づいて[シリアル番号を移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)します。
+>* AEM Forms Server がオフラインまたはセキュア環境にあり、インターネットを使用して Adobe Acrobat をアクティブ化できない場合は、[オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=jp)を参照して、そのような場合に Adobe Acrobat のインスタンスをアクティブ化する手順を確認してください。
+>* Adobe Acrobat、Microsoft® Word、Excel および PowerPoint は、Microsoft® Windows でのみ使用できます。UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールして、リッチテキストファイルやサポートされている Microsoft® Office ファイルを PDF ドキュメントに変換します。
+>* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティソフトウェアのインストール後に表示されるすべてのダイアログボックスを閉じます。
+>* インストールされているすべてのソフトウェアを少なくとも 1 回起動します。PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを解除します。
+>* [Adobe Acrobat シリアル番号の有効期限を確認](https://helpx.adobe.com/jp/enterprise/kb/volume-license-expiration-check.html)してライセンスを更新する日付を設定するか、有効期限に基づいて[シリアル番号を移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)します。
 
 Acrobat をインストールしてから、Microsoft® Word を開きます。「**Acrobat**」タブで「**PDFを作成**」をクリックし、マシン上にある .doc または .docx のファイルを PDF ドキュメントに変換します。変換が成功すれば、AEM Forms が PDF Generator サービスで Acrobat を使用する準備が整います。
 
@@ -238,14 +238,14 @@ Acrobat をインストールしてから、Microsoft® Word を開きます。�
 
 >[!NOTE]
 >
-* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
-* JAVA_HOME および Acrobat_PATH（Windows のみ）は、必須の環境変数です。
-* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
-* Word、PowerPoint、Excel、Project などの Microsoft® Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
-* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
-* UNIX ベースのプラットフォームで OpenOffice を使用している場合は、以下のコマンドを実行して PATH 変数を設定します。
+>* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
+>* JAVA_HOME および Acrobat_PATH（Windows のみ）は、必須の環境変数です。
+>* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
+>* Word、PowerPoint、Excel、Project などの Microsoft® Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
+>* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
+>* UNIX ベースのプラットフォームで OpenOffice を使用している場合は、以下のコマンドを実行して PATH 変数を設定します。
 >
-`export OpenOffice_PATH=/opt/openoffice.org4`
+>  `export OpenOffice_PATH=/opt/openoffice.org4`
 
 ### （IBM® WebSphere® のみ）IBM® SSL ソケットプロバイダーの設定 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
@@ -306,6 +306,10 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 1. 環境変数の値を TRUE に設定します。
 1. AEM Forms のインスタンスを再起動します。
 
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+
 ### （Windows のみ）ユーザーアカウント制御（UAC）の無効化 {#disable-user-account-control-uac}
 
 1. システム構成ユーティリティにアクセスするには、**[!UICONTROL スタート／ファイル名を指定して実行]**&#x200B;を選択し、**[!UICONTROL MSCONFIG]** と入力します。
@@ -332,7 +336,7 @@ PDF Generator サービスは、HTML ファイルを PDF ドキュメントに�
 
 >[!NOTE]
 >
-新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
+>新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
 
 ### （UNIX ベースのプラットフォームのみ）HTML から PDF への変換用の追加設定  {#extra-configurations-for-html-to-pdf-conversion}
 
@@ -352,12 +356,12 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 
 >[!NOTE]
 >
-* Red Hat® Enterprise Linux® 6.x 以降で courier フォントは使用できません。courier フォントをインストールするには、font-ibm-type1-1.0.3.zip アーカイブをダウンロードします。/usr/share/fonts にあるアーカイブを抽出します。/usr/share/X11/fonts から /usr/share/fonts へのシンボリックリンクを作成します。
-* Html2PdfSvc/bin と /usr/share/fonts のディレクトリから、.lst フォントのキャッシュファイルをすべて削除します。
-* /usr/lib/X11/fonts ディレクトリ、および /usr/share/fonts ディレクトリが存在することを確認します。このディレクトリが存在しない場合は、ln コマンドを使用して /usr/share/X11/fonts から /usr/lib/X11/fonts へのシンボリックリンク、さらに /usr/share/fonts から /usr/share/X11/fonts への別のシンボリックリンクを作成します。また、courier フォントが使用可能であることを /usr/lib/X11/fonts で確認します。
-* すべてのフォント（Unicode および非 Unicode）が /usr/share/fonts または /usr/share/X11/fonts ディレクトリで使用できることを確認してください。
-* PDF Generator サービスを非 root ユーザーとして実行する場合は、すべてのフォントディレクトリへの読み取りおよび書き込みアクセス権を非 root ユーザーに与えます。
-* 新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
+>* Red Hat® Enterprise Linux® 6.x 以降で courier フォントは使用できません。courier フォントをインストールするには、font-ibm-type1-1.0.3.zip アーカイブをダウンロードします。/usr/share/fonts にあるアーカイブを抽出します。/usr/share/X11/fonts から /usr/share/fonts へのシンボリックリンクを作成します。
+>* Html2PdfSvc/bin と /usr/share/fonts のディレクトリから、.lst フォントのキャッシュファイルをすべて削除します。
+>* /usr/lib/X11/fonts ディレクトリ、および /usr/share/fonts ディレクトリが存在することを確認します。このディレクトリが存在しない場合は、ln コマンドを使用して /usr/share/X11/fonts から /usr/lib/X11/fonts へのシンボリックリンク、さらに /usr/share/fonts から /usr/share/X11/fonts への別のシンボリックリンクを作成します。また、courier フォントが使用可能であることを /usr/lib/X11/fonts で確認します。
+>* すべてのフォント（Unicode および非 Unicode）が /usr/share/fonts または /usr/share/X11/fonts ディレクトリで使用できることを確認してください。
+>* PDF Generator サービスを非 root ユーザーとして実行する場合は、すべてのフォントディレクトリへの読み取りおよび書き込みアクセス権を非 root ユーザーに与えます。
+>* 新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
 >
 
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
@@ -406,8 +410,8 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    >[!NOTE]
    >
-   アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。アドビ以外が提供しているフォントをアドビのソフトウェアで使用する前に、適用されるアドビ以外の使用許諾契約書すべてに準拠していることを確認してください。特に、サーバー環境でフォントを使用する際は注意が必要です。
-新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
+   >アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。アドビ以外が提供しているフォントをアドビのソフトウェアで使用する前に、適用されるすべてのアドビ以外の使用許諾契約書に準拠していることを確認してください。特に、サーバー環境でフォントを使用する際は注意が必要です。
+   >新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
    >
 
 ### PDF Generator サービスを実行するためのローカルユーザーアカウントの設定  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
@@ -519,7 +523,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
    >[!NOTE]
    >
-   実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、Reader Extensions の古い資格情報を削除してください。
+   >実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、Reader Extensions の古い資格情報を削除してください。
 
 1. **[!UICONTROL ユーザー設定を編集]** ページで「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
@@ -599,7 +603,7 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
    >[!NOTE]
    >
-   * pdfgen.api ファイルが Acrobat プラグインフォルダーで使用できないことが System Readiness ツールから報告された場合は、pdfgen.api ファイルを `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` ディレクトリから `[Acrobat_root]\Acrobat\plug_ins` ディレクトリにコピーします。
+   >* pdfgen.api ファイルが Acrobat プラグインフォルダーで使用できないことが System Readiness ツールから報告された場合は、pdfgen.api ファイルを `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` ディレクトリから `[Acrobat_root]\Acrobat\plug_ins` ディレクトリにコピーします。
 
 1. `[Path_of_reports_folder]` に移動します。SystemReadinessTool.html ファイルを開きます。レポートを検証して前述の問題を修正します。
 
@@ -810,7 +814,7 @@ Microsoft Excel 2019 をMicrosoft Windows Server 2019 上のPDFに変換する�
 * デフォルトのプリンターはAdobe PDFに設定する必要があります。
 
   >[!NOTE]
-  * Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
+  >* Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
 
 +++
 

@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 noindex: true
 feature: Document Security
 exl-id: 91cbd1f1-d53d-455b-8d2c-6918b521db81
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 57%
+source-wordcount: '673'
+ht-degree: 54%
 
 ---
 
@@ -60,6 +60,10 @@ AEMが Document Security で保護されたPDFとMicrosoft Office ドキュメ�
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
 
    「**保存**」をクリックします。AEMは、Document Security で保護されたPDFとMicrosoft Office ドキュメントを検索できます
+
+   >[!NOTE]
+   >
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ## ポリシーで保護されたサンプルPDFまたはMicrosoft Office ドキュメントのインデックスを作成する {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
 

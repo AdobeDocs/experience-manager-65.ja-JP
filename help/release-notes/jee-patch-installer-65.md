@@ -3,10 +3,10 @@ title: AEM Forms JEE パッチインストーラー
 description: AEM Forms JEE パッチインストーラーを使用して AEM 6.5 Forms コンポーネントの問題を修正する方法について説明します。
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 6b24067c1808475044a612f21d5d4d2793c13e17
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 88%
+source-wordcount: '562'
+ht-degree: 82%
 
 ---
 
@@ -81,6 +81,10 @@ SAML 認証を設定済みで、大きな IDP メタデータに関する問題�
    `um.saml.enable.large.xml=true`
 1. サーバーを再起動します。
 1. 既存の SAML 認証プロバイダーを削除し、SAML 設定の説明に従って、既存のドメインに対してそれらのプロバイダーを再度追加します。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ## 影響を受けるモジュール {#impacted-modules}
 

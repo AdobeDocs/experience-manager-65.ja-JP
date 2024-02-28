@@ -8,10 +8,10 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 56%
+source-wordcount: '718'
+ht-degree: 54%
 
 ---
 
@@ -84,3 +84,7 @@ AEM検索では、AEMアセットを検索および検索し、プレーンテ�
 1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護されたPDFドキュメントをアップロードします。
 
    これで、AEM検索を使用して、ポリシーで保護されたドキュメントを検索できるようになりました。
+
+   >[!NOTE]
+   >
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。

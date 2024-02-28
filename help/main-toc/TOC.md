@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 のドキュメントを使用して、ソフトウェアの仕組みとユーザーにとっての機能を確認してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: a4ece4c2e9128e61982fb45d90ee3c63352f8349
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '7342'
+source-wordcount: '7348'
 ht-degree: 97%
 
 ---
@@ -1186,6 +1186,7 @@ ht-degree: 97%
       + [Experience Manager Formsの Struts 2 RCE 脆弱性の緩和](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
       + [MySQL 用に 6.5.12.0にアップグレード中にデータベースをバックアップできなかった問題](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [PDFの生成で、WorkBench 上に多数のPDFを印刷できない](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
+      + [AEM SDK を適切に再起動する方法](/help/forms/using/restart-aem-sdk.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
       + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](/help/forms/developing/compressing-decompressing-custom-dsc.md)

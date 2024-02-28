@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1518'
 ht-degree: 22%
 
 ---
@@ -87,6 +87,10 @@ AEM forms のバックアップ方法には、次の 2 種類のバックアッ�
 1. システムの通常の操作が検証されるまで、Web、SOAP、EJB のプロセスイニシエーターなどの内部ソースまたは外部ソースからプロセスが開始されないことを確認します。
 
 メインのAEM forms データベースを移動または変更した場合は、使用しているアプリケーションサーバーに関連するインストールガイドで、AEM forms データソース IDP_DS および EDC_DS のデータベース接続情報の更新に関する情報を確認してください。
+
+>[!NOTE]
+> 
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 ### AEM forms のホスト名または IP アドレスの変更 {#changing-the-aem-forms-hostname-or-ip-address}
 

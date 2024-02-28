@@ -7,10 +7,10 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 97%
+source-wordcount: '980'
+ht-degree: 93%
 
 ---
 
@@ -57,6 +57,10 @@ AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms にアップグレー
       >パッケージのインストールが完了したら、AEM インスタンスを再起動します。**その際、すぐにサーバーを停止しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが &lt;crx-repository>/error.log ファイルに表示されなくなり、このログファイルが安定した状態になるまで待ちます。また、いくつかのパッケージについては、インストールされたままの状態になる場合があります。これらのパッケージの状態は無視しても問題ありません。
 
 1. AEM インスタンスを再起動します。
+
+   >[!NOTE]
+   >
+   「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 1. インストール後のアクティビティを実行します。
 

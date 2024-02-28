@@ -8,10 +8,10 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 100%
+source-wordcount: '355'
+ht-degree: 90%
 
 ---
 
@@ -42,6 +42,10 @@ AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、AEM Form
 
 1. ログの状態が安定したら、サーバーを再起動します。
 1. アセットに 6.5 との互換性を持たせるには、移行ユーティリティを使用します。
+
+   >[!NOTE]
+   >
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
    詳しくは、[移行ユーティリティ](../../forms/using/migration-utility.md)を参照してください。
 

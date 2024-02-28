@@ -6,16 +6,20 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_jee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: e1519477-b5a8-4947-8597-26b945a3b819
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 74%
+source-wordcount: '1762'
+ht-degree: 73%
 
 ---
 
 # AEM Forms の一般設定 {#general-aem-forms-settings}
 
 管理コンソールのコア設定ページには、システムパフォーマンスの向上に役立つ設定が表示されます。これらの設定を指定または更新したら、アプリケーションサーバーを再起動します。
+
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
 
 セーフバックアップモードの有効化について詳しくは、[セーフバックアップモードの有効化と無効化](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md#enabling-and-disabling-safe-backup-mode)を参照してください。
 
