@@ -39,7 +39,7 @@ ht-degree: 100%
 
 このリリースの主な機能と機能強化は次のとおりです。
 
-* Dynamic Media では、Apple iOS／iPadOS の可逆 HEIC 画像形式をサポートするようになりました。Dynamic Media 画像サービングおよびレンダリング API の[fmt](ttps://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html?lang=ja)を参照してください。
+* Dynamic Media では、Apple iOS／iPadOS の可逆 HEIC 画像形式をサポートするようになりました。Dynamic Media 画像サービングおよびレンダリング API の[fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html?lang=ja)を参照してください。
 
 * マルチサイトマネージャー（MSM）では、エクスペリエンスフラグメントをライブコピーに効率的に一括ロールアウトするために、フォルダーやサブフォルダーを含むエクスペリエンスフラグメント構造をサポートするようになりました。
 
