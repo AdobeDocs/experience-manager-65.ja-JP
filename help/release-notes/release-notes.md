@@ -2,7 +2,7 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
+source-git-commit: c36ef1c1bd261864930039c4d60a930ead12482e
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 70%
@@ -216,17 +216,6 @@ ht-degree: 70%
 * ユーザーがAEM Forms Designer で XDP を作成した場合、PDF出力時に、Button Form タグが親段落タグ (p-tag) 内にネストされない。 （LC-3921719）
 
 * ユーザーがAEM Forms Designer で XDP を作成するとき、ユーザーがフォームタグを移動すると、PDF時の出力時に、背景オブジェクトもタグ付けされます。 （LC-3921687）
-
-<!--LEFT BULLET LIST HERE IN CASE OF REUSE BY FORMS IN THE FUTURE 
-* **Document Services**
-  * text
-* **Adaptive Forms** 
-  * text
-* **Accessibility**
-  * text
-* **Interactive Communications**
-  * text -->
-<!--### Commerce{#commerce-6520} * text -->
 
 ### 基盤 {#foundation-6520}
 
