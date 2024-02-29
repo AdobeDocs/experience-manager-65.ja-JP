@@ -1,14 +1,14 @@
 ---
 title: SAML サービスプロバイダーの設定
-description: SAML サービスプロバイダーの設定を指定し、指定したサードパーティの ID プロバイダー (IDP) を介してAEM forms にログインし、認証できるようにします。
+description: SAML サービスプロバイダーの設定を指定し、指定したサードパーティの ID プロバイダー (IDP) を介したAEM forms へのログインと認証をユーザーに許可することができます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 4289c68feb51842b5649f7cff73c5c4bc38add6c
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '595'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 セキュリティアサーションマークアップ言語 (SAML) は、エンタープライズドメインまたはハイブリッドドメインの認証を設定する際に選択できるオプションの 1 つです。 SAML は、主に複数のドメインで SSO をサポートするために使用されます。 SAML を認証プロバイダーとして設定した場合、ユーザーは、指定したサードパーティの ID プロバイダー (IDP) を介してAEM forms にログインし、認証します。
 
-SAML について詳しくは、 [Security Assertion Markup Language (SAML) V2.0 の技術概要](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf).
+SAML について詳しくは、 [Security Assertion Markup Language (SAML) V2.0 の技術概要](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html).
 
 1. 管理コンソールで、設定/User Management/設定/SAML サービスプロバイダーの設定をクリックします。
 1. 「 Service Provider Entity ID 」ボックスに、AEM forms サービスプロバイダー実装の識別子として使用する一意の ID を入力します。 また、この一意の ID は、IDP（例えば `um.lc.com`）を設定するときにも指定します。AEM Forms にアクセスする URL も使用できます（例えば `https://AEMformsserver`）。
@@ -26,7 +26,7 @@ SAML について詳しくは、 [Security Assertion Markup Language (SAML) V2.0
 
    * Trust Manager を使用して、Trust Store の種類として「Document Signing Credential」を選択した状態で、PKCS #12形式の秘密鍵証明書を読み込みます。 ( 詳しくは、 [ローカル秘密鍵証明書の管理](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)
    * 「サービスプロバイダー秘密鍵証明書キーのエイリアス」リストで、Trust Store の秘密鍵証明書に割り当てたエイリアスを選択します。
-   * 「書き出し」をクリックして URL コンテンツをファイルに保存し、そのファイルを IDP に読み込みます。
+   * 「書き出し」をクリックして、URL コンテンツをファイルに保存し、そのファイルを IDP に読み込むことができます。
 
 1. （オプション）「 Service Provider Name ID Policy 」リストで、SAML アサーションでユーザーを識別するために IDP で使用される名前の形式を選択します。 「未指定」、「電子メール」、「Windows ドメイン修飾名」のオプションがあります。
 
@@ -53,8 +53,8 @@ SAML について詳しくは、 [Security Assertion Markup Language (SAML) V2.0
 
      `saml.sp.use.relaystate=true`
 
-   * 次のカスタムプロパティを追加して、カスタム Java Server Pages(JSP) の URL を設定します。この URL は、ID プロバイダーの登録済みリストをレンダリングするために使用されます。 カスタム Web アプリケーションをデプロイしていない場合は、デフォルトの User Management ページを使用してリストがレンダリングされます。
+   * 次のカスタムプロパティを追加して、カスタム Java™ Server Pages (JSP) の URL を設定できます。この URL は、ID プロバイダーの登録済みリストをレンダリングするために使用されます。 カスタム Web アプリケーションをデプロイしていない場合は、デフォルトの User Management ページを使用してリストがレンダリングされます。
 
    `saml.sp.discovery.url=/custom/custom.jsp`
 
-1. 保存をクリックします。
+1. 「保存」をクリックします。

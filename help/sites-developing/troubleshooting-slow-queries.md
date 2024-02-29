@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 4289c68feb51842b5649f7cff73c5c4bc38add6c
 workflow-type: tm+mt
-source-wordcount: '2230'
-ht-degree: 97%
+source-wordcount: '2236'
+ht-degree: 93%
 
 ---
 
@@ -35,7 +35,7 @@ AEM で処理に時間のかかるクエリは、主に以下の 3 つに分類�
 
 各結果候補を調査する動作をトラバースと呼びます。
 
-結果候補をそれぞれ調査する必要があるので、実際の結果セットを特定するためのコストは、結果候補の数に比例して増大します。
+各潜在的な結果を検査する必要があるので、実際の結果セットを決定するコストは、潜在的な結果の数に比例して増加します。
 
 クエリの制限を追加し、インデックスを調整すると、結果を迅速に取得できるように最適化された形式でインデックスデータを格納できます。また、結果候補セットを順次調査する必要性が低減するかなくなります。
 
@@ -119,7 +119,7 @@ cq:tags インデックスルールを追加した後
 
 同様に、`cq:tags` プロパティのインデックスルールを追加しない場合は、`cq:tags` に対する制限を持つフルテキストクエリであっても、インデックスからの結果ではフルテキスト一致がすべて返されるので、パフォーマンスは低下します。その後、cq:tags の制限がフィルタリングされます。
 
-インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリで返されないようにしてください。これを行うには、通常、コンテキスト構造を改良すると共に、クエリに適切なパス制限を指定します。
+インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリで返されないようにしてください。これは、コンテンツ構造を改善し、クエリに関連するパス制限を提供することで実行できます。
 
 `org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex` の DEBUG ログを有効にすると、Lucene インデックスが多数の結果を返して小さなサブセットをクエリ結果として返しているかどうかを識別するのに便利です。これにより、インデックスから読み込まれているドキュメントの数を確認できます。最終結果の数と読み込まれたドキュメントの数を比較すると釣り合うはずです。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
@@ -176,7 +176,7 @@ AEM では、以下のクエリ言語をサポートしています。
 * JCR-SQL2
 * XPath
 
-次の例では、AEM開発者が使用する最も一般的なクエリ言語として Query Builder を使用しますが、同じ原則が JCR-SQL2 および XPath にも当てはまります。
+次の例では、AEM開発者が使用する最も一般的なクエリ言語なので Query Builder を使用しますが、同じ原則が JCR-SQL2 および XPath にも当てはまります。
 
 1. クエリが既存の Lucene プロパティインデックスに解決されるように、ノードタイプの制限を追加します。
 
@@ -466,7 +466,7 @@ AEM のコンテンツアーキテクチャは柔軟です。そのため、コ�
 
    * XPath または JCR-SQL2 クエリステートメントから最適な Lucence プロパティインデックスを生成します。
 
-* **[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=ja-JP)**
+* **_AEM Chrome プラグイン_** <!-- For whatever reason, the URL to this extension was causing too many redirects when doing the request so it was removed entirely to get rid of the error; users can easily look up the extension in Google instead. DO NOT ADD THE URL AGAIN!-->
 
-   * Google Chrome web ブラウザーの拡張機能で、実行されたクエリとそのクエリプランなど、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開します。
-   * [Sling Log Tracer 1.0.2 以上](https://sling.apache.org/downloads.cgi)がインストールされ、AEM で有効になっている必要があります。
+   * The _AEM Chrome プラグイン_ は、実行クエリとそのクエリプランを含む、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開する、Google Chrome Web ブラウザー拡張機能です。
+   * をインストールして有効にする必要があります。 [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) (AEM)
