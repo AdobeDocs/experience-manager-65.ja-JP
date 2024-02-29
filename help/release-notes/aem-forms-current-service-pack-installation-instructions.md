@@ -2,9 +2,9 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境用のAEM Forms Service Pack のインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: 181d5ffcefcf55aa75cfaf29c42dbd8d8d665398
 workflow-type: tm+mt
-source-wordcount: '1748'
+source-wordcount: '1752'
 ht-degree: 81%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 81%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.19.0(OSGi)、6.5.19.1(JEE) |
+| バージョン | 6.5.20.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023 年 12 月 08 日 |
+| 日付 | 2024 年 2 月 30 日 |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -49,7 +49,8 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 ## JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-jee-service-pack}
 
-![JEE のインストール](/help/forms/using/assets/jeeinstallation.png)
+<!--
+![JEE Installation](/help/forms/using/assets/jeeinstallation.png) -->
 
 +++1。既存の環境のバックアップを作成
 
@@ -71,7 +72,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++ 3. Microsoft Visual C++再頒布可能パッケージをインストールする
++++3。Microsoft Visual C++再配布可能パッケージのインストール
 
 * をダウンロードしてインストールする [Visual Studio 2015、2017、2019、2022 用の 64 ビット版のMicrosoft Visual C++再頒布可能パッケージ](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) AEM 6.5 Formsがインストールされているコンピューター上。
 
@@ -81,7 +82,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++3。AEM Forms on JEE サービスパックのインストール
++++4。AEM Forms on JEE サービスパックのインストール
 
 1. アプリケーションサーバーを停止します。
 1. **AEM Forms on JEE サービスパックのインストーラーアーカイブ**&#x200B;をハードドライブに抽出します。
@@ -108,7 +109,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
    * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
-   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。実行前 **Configuration Manager** using **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 *`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリを開き、 **ConfigurationManager.lax** および **ConfigurationManager_IPV6.lax** 最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) および [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイル。
+   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。実行前 **Configuration Manager** using **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 *`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリを開き、 **ConfigurationManager.lax** および **ConfigurationManager_IPV6.lax** 最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) および [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイル、検索、置換 **axis-1.4.1.1.jar** 次を使用 **axis-1.4.1.2.jar** を 2 つのファイルに追加します。
 
      >[!NOTE]
      >
@@ -133,7 +134,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++4。サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール
++++5。サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール
 
 >[!NOTE]
 >
@@ -145,21 +146,21 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 1. フラグメントをダウンロードしていない場合は、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)からダウンロードします。
 
-1. アプリケーションサーバーを起動し、ログが安定するのを待ってから、バンドルの状態を確認します。
+2. アプリケーションサーバーを起動し、ログが安定するのを待ってから、バンドルの状態を確認します。
 
-1. Web コンソールのバンドルを開きます。デフォルトの URL は `http://[Server]:[Port]/system/console/bundles` です。
+3. Web コンソールのバンドルを開きます。デフォルトの URL は `http://[Server]:[Port]/system/console/bundles` です。
 
-1. 「インストール／更新」をクリックします。ダウンロードしたフラグメント「`org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`」を選択します。「**インストール**」または「**更新**」をクリックします。アプリケーションサーバーが安定するまで待つ
+4. 「インストール／更新」をクリックします。ダウンロードしたフラグメント「`org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`」を選択します。「**インストール**」または「**更新**」をクリックします。アプリケーションサーバーが安定するまで待つ
 
-1. アプリケーションサーバーを停止します。
+5. アプリケーションサーバーを停止します。
 
 +++
 
-+++5。AEM サービスパックをインストールします。
++++6。AEM サービスパックをインストールします。
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
-1. 次の場所からサービスパックをダウンロードします。 [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
 
@@ -185,7 +186,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++6。AEM Experience Manager Forms アドオンパッケージのインストール
++++7. AEM Experience Manager Forms アドオンパッケージのインストール
 
 1. [!DNL Experience Manager] サービスパックがインストールされていることを確認してください。
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
@@ -196,8 +197,9 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 ## OSGi 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-osgi-service-pack}
 
-![OSGi のインストール手順](/help/forms/using/assets/osgiinstallation.png)
 
+<!-- ![OSGi Installation Steps](/help/forms/using/assets/osgiinstallation.png)
+-->
 
 +++1。既存の環境のバックアップを作成
 
@@ -231,7 +233,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
-1. 次の場所からサービスパックをダウンロードします。 [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
 

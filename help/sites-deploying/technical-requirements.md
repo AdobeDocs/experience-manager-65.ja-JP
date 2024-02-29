@@ -3,9 +3,9 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: d5e7f0301259fdc12b507f9568befcc34ebe9408
+source-git-commit: 52969d5ab0975871c872195ab13649fb815cead8
 workflow-type: tm+mt
-source-wordcount: '3644'
+source-wordcount: '3650'
 ht-degree: 93%
 
 ---
@@ -534,6 +534,8 @@ Windows x86 の場合：
 * Designer をインストールするための管理者権限。
 * Microsoft Visual C++ 2019 （VC 14.28 以降） 32 ビット版AEM Forms Designer の 32 ビット版ランタイム
 * Microsoft Visual C++ 2019（VC 14.28 以降）64 ビットAEM Forms Designer 用 64 ビットランタイム（OSGI と JEE スタックの両方）
+
+[AEM Forms Designer のインストールと設定](/help/forms/using/installing-configuring-designer.md)
 
 ### AEM Assets XMPメタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
