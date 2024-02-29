@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: c36ef1c1bd261864930039c4d60a930ead12482e
+source-git-commit: 21f39dc697a5aa3944834786a627e990e7f3ca7f
 workflow-type: tm+mt
-source-wordcount: '3390'
+source-wordcount: '3385'
 ht-degree: 70%
 
 ---
@@ -46,12 +46,12 @@ ht-degree: 70%
 ### [!DNL Forms]
 
 * **JEE 上のAEM Formsでのトランザクションレポート**:JEE 上のAEM Formsでトランザクションレポート機能が導入され、コンバージョン、レンディション、送信などのドキュメントトランザクションを包括的に記録できるようになりました。 この機能強化により、効率が向上し、記録の管理が容易になります。 この機能はデフォルトで無効になっています。 Admin UI から有効にできます。
-* **ECDSA サポートによるセキュリティの強化**:AEM Formsは、JEE スタックと OSGi スタックの両方で、楕円曲線デジタル署名アルゴリズム (ECDSA) を堅牢にサポートするようになりました。 セキュリティを強化して、署名ドキュメントの署名、認証、およびPDFの検証を行えるようになりました。 次の EC 曲線アルゴリズムがサポートされます。
+* **ECDSA サポートによるセキュリティの強化**:AEM Formsでは、JEE スタックと OSGi スタックの両方で、楕円曲線デジタル署名アルゴリズム (ECDSA) の堅牢なサポートを提供するようになりました。 セキュリティを強化して、署名ドキュメントの署名、認証、およびPDFの検証を行えるようになりました。 次の EC 曲線アルゴリズムがサポートされます。
    * ECDSA 楕円曲線 P256 と SHA256 ダイジェストアルゴリズム
    * ECDSA 楕円曲線 P384 と SHA384 ダイジェストアルゴリズム
    * ECDSA 楕円曲線 P512 と SHA512 ダイジェストアルゴリズム
 * **Windows 11 とのシームレスな互換性 (Forms Designer 版 )**:AEM Forms Designer で Windows 11 がサポートされ、インストールと操作がスムーズになりました。 Forms Designer の再インストールや互換性の問題を気にすることなく、自信を持って Windows 11 にアップグレードできます。ワークフローが中断されないようにします。
-* **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**:AEM Forms Designer には、「Caption」と呼ばれるカスタムアクセシビリティロールが含まれ、ユーザーがパーソナライズされたキャプション要素を使用して XDP を作成できるようになりました。 この機能は、ユーザーがカスタムキャプションをドキュメントデザインに組み込めるようにすることで、アクセシビリティを向上させ、組み込み性とユーザーエクスペリエンスを向上させます。
+* **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**:AEM Forms Designer には、「Caption」と呼ばれるカスタムアクセシビリティロールが含まれ、ユーザーがパーソナライズされたキャプション要素を使用して XDP を作成できるようになりました。 この機能は、カスタムキャプションをドキュメントデザインに組み込むことでアクセシビリティを向上させ、インクルーシビティとユーザーエクスペリエンスを向上させます。
 
 <!-- ### [!DNL Forms]
 
@@ -152,32 +152,32 @@ ht-degree: 70%
 
 #### [!DNL Adaptive Forms]
 
-* ユーザーがAEMで公開された URL を持つメーリングプラットフォームにAEM Formsを統合しようとすると、URL を持つ送信アクションでPOSTが設定されている場合でも、AEM forms では、ページのレンダリング時に「method=post」が追加されません。 これにより、メーリングプラットフォームがこれをフォームとして認識しなくなります。 （FORMS-12614）
+* ユーザーがAEM FormsをAEM公開済み URL のメーリングプラットフォームに統合しようとしても、AEM Formsは `method=post` ページのレンダリング中に発生する問題を修正しました。 この問題は、 `POST` は、URL を使用した送信アクションに設定されます。 これにより、メーリングプラットフォームがこれをフォームとして認識しなくなります。 （FORMS-12614）
 * ユーザーがAEM Form Service Pack 6.5.18.0で表示パターンを持つ日付フィールドを選択すると、ユーザーはキーボードを使用して現在の日付を選択できません。 （FORMS-12736）
 * AEM Forms Service Pack 6.5.17.0および Service Pack 6.5.18.0では、ユーザーがカレンダーウィジェットで月を切り替えると、日付選択コンポーネントに追加の行が表示されます。 （FORMS-11869）
 * ユーザーがiOSデバイスの添付ファイルコンポーネントで「写真を撮る」を使用して画像をクリックすると、すべての画像が同じ名前でフォルダーに追加されます。 （FORMS-12224）
 * ラジオボタングループ内の既存のオプションを更新すると、誤った翻訳値が公開されます。 （FORMS-12575）
-* ユーザーが Android デバイスのアダプティブフォームに文字を追加した場合、Android デバイスでは、フォーカスアウト時にテキストフィールドに定義された最大文字数を超える文字を入力できます。 ただし、ユーザーが入力タイプ「HTML5」を選択した場合に機能します。 （FORMS-12748）
-* 一致するラベル Arial labeledby と Arial ラベルにより、スクリーンリーダーはこれら 2 つを区別できません。 この問題を解決するには、フォームフィールドのラベル「aria-labelledby」が「aria-describedby」に置き換えられます。 （FORMS-12436）
-* 作成者が「アダプティブForms — 埋め込み (v2)」コンポーネントを使用してアダプティブフォームをサイトページに埋め込み、埋め込みフォームに CAPTCHA コンポーネントを含める場合（CAPTCHA サービス/reCAPTCHA-v2）、ユーザーが「view as」を使用してサイトページを表示しようとすると、サイトページが表示されない「公開済み」というエラーがオーサーインスタンスに表示され、エラーが次のように表示されます (FORMS-11859)。
+* ユーザーが Android™デバイスのアダプティブフォームに文字を追加した場合、Android™デバイスでは、フォーカスアウト時にテキストフィールドに定義された最大文字数を超える文字を入力できます。 ただし、ユーザーが入力タイプ「HTML5」を選択した場合に機能します。 （FORMS-12748）
+* 一致するラベル Arial® labeledby と Arial®ラベルがあるので、スクリーンリーダーはこれら 2 つを区別できません。 この問題を解決するには、フォームフィールドのラベル「aria-labelledby」が「aria-describedby」に置き換えられます。 （FORMS-12436）
+* 作成者が「アダプティブForms — 埋め込み (v2)」コンポーネントを使用してアダプティブフォームをサイトページに埋め込み、埋め込みフォームに CAPTCHA コンポーネントを含める場合（CAPTCHA サービス/reCAPTCHA-v2）、ユーザーが「view as」を使用してサイトページを表示しようとすると、サイトページが表示されない発行済み」というメッセージがオーサーインスタンスに表示されます。 次のエラーは、と表示されます (FORMS-11859)。
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
 * ユーザーが日付選択コンポーネントを使用して日付を選択しようとすると、値は更新されず、NULL が表示されます。 （FORMS-12742、FORMS-12736）
 
-* ユーザーがAEM Form Service Pack 6.5.19.0にアップグレードした場合、既存の辞書に新しい言語を更新した後、「guideContainer」行と統合されて、新しいロケールをフォームに追加できません。 （FORMS-12947）
+* ユーザーがAEM Form Service Pack 6.5.19.0にアップグレードした場合、既存の辞書に新しい言語を更新した後、「guideContainer」行と統合されて、フォームにロケールを追加できません。 （FORMS-12947）
 
-* AEM Forms Service Pack 6.5.19.0では、Java 11 での Webservice の呼び出し操作が次のエラーで失敗します (FORMS-12329)。
+* AEM Forms Service Pack 6.5.19.0では、Java™ 11 上で呼び出された Webservice 操作が次のエラーで失敗します (FORMS-12329)。
   `java.lang.NoClassDefFoundError message:sun/misc/BASE64Decoder`
 
-* ユーザーがAEM Forms Service Pack 6.5.18.0の「EmailService」に対して「receive」操作を呼び出すと、例外がスローされます (FORMS-12050)。
+* ユーザーがAEM Forms Service Pack 6.5.18.0で「EmailService」の「receive」操作を呼び出すと、例外がスローされます (FORMS-12050)。
   `java.util.ServiceConfigurationError: javax.mail.Provider: Provider com.sun.mail.imap.IMAPProvider not a subtype`
 
-* AEM Forms Service Pack 6.5.18.0で FIPS モードが有効になっている場合、デフォルトの DOM で新しいユーザーを作成すると、次のエラーで失敗します (FORMS-11857)。
+* AEM Forms Service Pack 6.5.18.0で FIPS モードが有効になっている場合、デフォルトの DOM でのユーザーの作成に失敗し、次のエラーが表示されます (FORMS-11857)。
   `com.adobe.idp.cx.a: error seeding random number generator`
 
-* ユーザーがパスの下の ADMINUI でフォントを選択したとき `Home>Services>PDF Generator>Adobe PDF Settings`の場合、選択されません。 また、標準またはパーソナライズされたプロファイルでは、使用可能なフォントのリストボックスは空なので、 **常に埋め込む** または **埋め込まない**&#x200B;が含まれている場合、ユーザーはPDF Generatorを使用してPDFのフォントを設定できません。 ログには、関連するエラーメッセージは表示されません。 （FORMS-12095）
+* ユーザーがパスの下の ADMINUI でフォントを選択したとき `Home>Services>PDF Generator>Adobe PDF Settings`の場合、選択されません。 また、標準またはパーソナライズされたプロファイルでは、使用可能なフォントのリストボックスは空です。 したがって、 **常に埋め込む** または **埋め込まない**. ユーザーは、PDF Generatorを使用してPDFのフォントを設定できません。 ログには、関連するエラーメッセージは表示されません。 （FORMS-12095）
 
-* AEM Forms Service Pack 6.5.18.0では、ユーザーは新しいセキュリティ設定を作成できず、エラーやサーバーログは表示されませんが、画面にポップアップエラーメッセージが表示されます。 （FORMS-12212）
+* AEM Forms Service Pack 6.5.18.0では、ユーザーはセキュリティ設定を作成できず、エラーやサーバーログは表示されませんが、画面にポップアップエラーメッセージが表示されます。 （FORMS-12212）
 
 * AEM Forms Service Pack 6.5.18.0のユーザーが JEE 上のアダプティブフォームを送信した場合、アダプティブフォーム内の添付ファイルは JEE プロセスに送信されず、このプロセスによってアプリケーションが失敗します。 （FORMS-12232、FORMS-12228）
 
@@ -198,14 +198,14 @@ ht-degree: 70%
 
 * AEM Forms 6.5.18.0では、アダプティブフォームが発行されると、変更が加えられていない場合でも、ポリシーを含むすべての依存関係が再発行されます。 （FORMS-10454）
 
-* JBoss Turnkey 設定を使用してAEM Forms 6.5.19.1で Configuration Manager を実行中に「Microsoft SharePoint」を選択すると、LiveCycle Jboss EAR のインストールに失敗し、次のエラーが表示されます。(FORMS-12463)
+* JBoss®自動セットアップを使用したAEM Forms 6.5.19.1での Configuration Manager の実行中に「Microsoft SharePoint」を選択すると、LiveCycleJBoss® EAR のインストールに失敗し、次のエラーが表示されます。(FORMS-12463)
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
 
 
-* ユーザーがAEM Forms Service Pack 6.5.18.0にアップグレードした場合、例外処理が見つからず、タグ付きPDFオプションを有効にした出力サービスを通じて渡された XDP が失敗します。 （LC-3921757）
+* ユーザーがAEM Forms Service Pack 6.5.18.0にアップグレードした場合、例外処理が見つからず、タグ付きPDFオプションを有効にした状態で出力サービスを通じて渡された XDP が失敗します。 （LC-3921757）
 
 * ユーザーがAEM Forms Designer を使用してPDFを生成すると、見出しレベルは、グラフィック要素（長方形ボックスなど）と共にアクセシビリティツリーにタグ付けされます。 （LC-3921687）
 
