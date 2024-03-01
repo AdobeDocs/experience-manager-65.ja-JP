@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 8ffe992e4b243d2a3548d214e8ac44fb5df6483c
+source-git-commit: 3fe9b3d4cf6ddf7d64dbece7d62d7f18dfa183f2
 workflow-type: tm+mt
-source-wordcount: '4052'
+source-wordcount: '4054'
 ht-degree: 87%
 
 ---
@@ -576,9 +576,9 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 - JEE サーバー上の AEM Forms に対する TCP/IPv4 または TCP/IPv6 ネットワーク接続
 - Workbench を Windows にインストールするには、管理者権限が必要です。管理者以外のアカウントを使用してインストールする場合は、適切なアカウントの資格情報が求められます。
 
-### Designer {#designer}
+### デザイナー {#designer}
 
-- Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server または Microsoft® Windows® 10
+- Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10 または Windows® 11
 - 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
 - 1 GB の RAM（32 ビット OS の場合）または 2 GB の RAM（64 ビット OS の場合）
 - 16 GB のディスク空き容量（32 ビット OS の場合）または 20 GB のディスク空き容量（64 ビット OS の場合）
