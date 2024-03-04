@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 348b82f0bd0d99eeb771aa4ed2719ee10d8cee68
+source-git-commit: 53bfd33a8bbb10d0ed82968a115ed316f63efecb
 workflow-type: tm+mt
-source-wordcount: '3464'
+source-wordcount: '3466'
 ht-degree: 69%
 
 ---
@@ -464,9 +464,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * AEM 6.5 Forms Service Pack 18(6.5.18.0) またはAEM 6.5 Forms Service Pack 19(6.5.19.0) からAEM 6.5 Forms Service Pack 20(6.5.20.0) に更新すると、JSP コンパイルエラーが発生します。 アダプティブフォームを開いたり作成したりすることができず、ページエディター、AEM Forms UI、AEM Workflow エディターなどの他のAEMインターフェイスでエラーが発生しています。 次のようなエラーメッセージが表示されます。
 
-`Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
+  `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
-問題を解決するには、Adobeサポートにお問い合わせください。
+  問題の解決に関するサポートが必要な場合は、Adobeサポートに問い合わせることができます。
+
 
 * 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
 
