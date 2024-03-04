@@ -7,10 +7,10 @@ role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 hide: true
-source-git-commit: c1878d6aadba9c795168459dbd5f09abfe0fc327
+source-git-commit: c99d6f3c67c97ea382ace2e102b2cacbbd2e5db5
 workflow-type: tm+mt
-source-wordcount: '1866'
-ht-degree: 100%
+source-wordcount: '1884'
+ht-degree: 99%
 
 ---
 
@@ -273,16 +273,20 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 ## Dynamic Media - サポートしているラスターイメージ形式 {#supported-raster-image-formats-dynamic-media}
 
-| 形式 | アップロード<br>（入力形式） | 画像<br>プリセット<br>の作成<br>（出力形式） | 動的<br>レンディション<br>のプレビュー | 動的<br>レンディション<br>の配信 | 動的<br>レンディション<br>のダウンロード | この形式をサポートするタイプを設定 |
+| 形式 | アップロード（入力形式） | 画像プリセットの作成（出力形式） | 動的レンディションのプレビュー | 動的レンディションの配信 | 動的レンディションのダウンロード | この形式をサポートするタイプを設定 |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
+| AVIF | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | BMP | ✓ | − | − | − | − | [画像](/help/assets/image-sets.md), [混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
-| PSD ‡ | ✓ | − | − | − | − | − |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| HEIC | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、 [混在メディア](/help/assets/mixed-media-sets.md) および [スピン](/help/assets/spin-sets.md) |
 | PICT | ✓ | − | − | − | − | − |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
+| PSD ‡ | ✓ | − | − | − | − | − |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
+| WEBP | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+<!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
 ‡ 結合された画像は PSD ファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
