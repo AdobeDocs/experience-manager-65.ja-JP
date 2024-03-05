@@ -2,16 +2,16 @@
 cloud: Experience Cloud
 mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-65.ja-JP
-solution: Experience Manager
+solution: Experience Manager, Experience Manager 6.5
 feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
 version: 6.5
 type: Documentation
 index: y
 recommendations: noDisplay
-source-git-commit: fc76dd7af48aa67380b0635589acf9322bff86fb
+source-git-commit: 51c5338b9e01ce52db2df88ec05f0e735f678ca3
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 88%
+ht-degree: 97%
 
 ---
 
@@ -22,7 +22,7 @@ metadata.md ファイルには、リポジトリ内にあるユーザーガイ�
 
 | メタデータ | 機能 |
 |--- |--- |
-| solution-title | 記事のヘッダーでリンクとして使用されます。 |
+| solution-title | 記事ヘッダーでリンクとして使用します。 |
 | solution-hub-url | 学習とサポートのハブページを開きます。 |
 | solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。未実装。 |
 | getting-started-url | 「はじめに」のページへのリンク。 |
@@ -34,5 +34,5 @@ TOC.md ファイル内
 
 | メタデータ | 機能 |
 |--- |--- |
-| user-guide-title | 記事のヘッダーでリンクとして使用されます。 |
+| user-guide-title | 記事ヘッダーでリンクとして使用します。 |
 | user-guide-url | 学習とサポートのハブページを開きます。 |
