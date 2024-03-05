@@ -2,7 +2,7 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 7b920927fe400c05f6c7a744d4cb7366db0cae86
+source-git-commit: 70f52515fc877ad5f20e14c2a26a934d3dcdfe01
 workflow-type: tm+mt
 source-wordcount: '3486'
 ht-degree: 68%
@@ -383,7 +383,6 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
        `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html` -->
 
 
-
 * **Oak 関連**
 サービスパック 13 以降で、永続性キャッシュに影響する次のエラーログが表示されるようになりました。
 
@@ -462,7 +461,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6520}
 
-* AEM 6.5 Forms Service Pack 18(6.5.18.0) またはAEM 6.5 Forms Service Pack 19(6.5.19.0) からAEM 6.5 Forms Service Pack 20(6.5.20.0) に更新すると、JSP コンパイルエラーが発生します。 アダプティブフォームを開いたり作成したりすることができず、ページエディター、AEM Forms UI、AEM Workflow エディターなどの他のAEMインターフェイスでエラーが発生しています。 次のようなエラーメッセージが表示されます。
+* AEM 6.5 Forms Service Pack 18(6.5.18.0) またはAEM 6.5 Forms Service Pack 19(6.5.19.0) からAEM 6.5 Forms Service Pack 20(6.5.20.0) に更新すると、JSP コンパイルエラーが発生します。 アダプティブフォームを開いたり作成したりすることはできず、ページエディター、AEM Forms UI、AEMワークフローエディターなどの他のAEMインターフェイスでエラーが発生しています。 次のようなエラーメッセージが表示されます。
 
   `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
