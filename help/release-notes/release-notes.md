@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 015c36cad1e7da98888609622cf2150842d40c66
+source-git-commit: 7b920927fe400c05f6c7a744d4cb7366db0cae86
 workflow-type: tm+mt
-source-wordcount: '3485'
-ht-degree: 69%
+source-wordcount: '3486'
+ht-degree: 68%
 
 ---
 
@@ -470,11 +470,11 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
    1. オペレーティングシステムのホットフィックスをダウンロードします。
 
-   * [Microsoft Windows のホットフィックス](/help/release-notes/assets/Hotfix-windows.zip)
-   * [Linux のホットフィックス](/help/release-notes/assets/Hotfix-Linux.zip)
-   * [Apple macOSのホットフィックス](/help/release-notes/assets/Hotfix-osx.zip)
+      * [Microsoft Windows のホットフィックス](/help/release-notes/assets/Hotfix-windows.zip)
+      * [Linux のホットフィックス](/help/release-notes/assets/Hotfix-Linux.zip)
+      * [Apple macOSのホットフィックス](/help/release-notes/assets/Hotfix-osx.zip)
 
-   1. パッケージマネージャーを通じてパッケージ（.zip）をアップロードしてインストールします。
+   1. を使用してパッケージ (.zip) をアップロードしインストールします。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
 
 * 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
 
