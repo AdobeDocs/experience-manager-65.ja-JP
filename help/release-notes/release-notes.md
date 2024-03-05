@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 5f95281130f0f2cac6d115b59b828946c2f70d33
+source-git-commit: 015c36cad1e7da98888609622cf2150842d40c66
 workflow-type: tm+mt
-source-wordcount: '3462'
+source-wordcount: '3485'
 ht-degree: 69%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 69%
    * ECDSA 楕円曲線 P384 と SHA384 ダイジェストアルゴリズム
    * ECDSA 楕円曲線 P512 と SHA512 ダイジェストアルゴリズム
 * **Windows 11 とのシームレスな互換性 (Forms Designer 版 )**:AEM Forms Designer で Windows 11 がサポートされ、インストールと操作がスムーズになりました。 Forms Designer の再インストールや互換性の問題を気にすることなく、自信を持って Windows 11 にアップグレードできます。ワークフローが中断されないようにします。
-* **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**:AEM Forms Designer には、パーソナライズされたキャプション要素を持つ XDP を作成するための、「Caption」と呼ばれるカスタムアクセシビリティロールが含まれるようになりました。 この機能は、カスタムキャプションをドキュメントデザインに統合して、インクルーシビティとユーザーエクスペリエンスを向上させ、アクセシビリティを強化します。
+* **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**:AEM Forms Designer には、「Caption」と呼ばれるカスタムアクセシビリティロールが含まれ、ユーザーがパーソナライズされたキャプション要素を使用して XDP を作成できるようになりました。 この機能は、カスタムキャプションをドキュメントデザインに組み込むことでアクセシビリティを向上させ、インクルーシビティとユーザーエクスペリエンスを向上させます。
 
 <!-- ### [!DNL Forms]
 
@@ -466,8 +466,15 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
   `Unable to compile class for JSP: An error occurred at line: 162 in the jsp file: /libs/granite/ui/components/coral/foundation/anchorbutton/anchorbutton.jsp The method transformLinkInUriIfExternal(String) is undefined for the type ComponentHelper`
 
-  問題の解決に関するサポートが必要な場合は、Adobeサポートに問い合わせることができます。
+  この問題を解決するには、以下の手順を実行する必要があります。
 
+   1. オペレーティングシステムのホットフィックスをダウンロードします。
+
+   * [Microsoft Windows のホットフィックス](/help/release-notes/assets/Hotfix-windows.zip)
+   * [Linux のホットフィックス](/help/release-notes/assets/Hotfix-Linux.zip)
+   * [Apple macOSのホットフィックス](/help/release-notes/assets/Hotfix-osx.zip)
+
+   1. パッケージマネージャーを通じてパッケージ（.zip）をアップロードしてインストールします。
 
 * 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
 
