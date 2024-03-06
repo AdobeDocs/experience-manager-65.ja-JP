@@ -1,10 +1,10 @@
 ---
 title: Adobe Developer Console での JWT 資格情報の非推奨（廃止予定）
 description: AEM の Adobe Developer Console での JWT 資格情報の非推奨（廃止予定）の影響について説明します。
-source-git-commit: 18bee77ab6fcb2d635d389f929c1dd8e2bc25de5
+source-git-commit: 72974d27fecbd9c242f66e203b02463c22b93108
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 82%
+source-wordcount: '456'
+ht-degree: 80%
 
 ---
 
@@ -21,11 +21,6 @@ ht-degree: 82%
 現時点での主な留意点は、AEM の機能で新しい OAuth サーバー間資格情報がまだサポートされていないことです。最新の Service Pack 20 以前を実行している場合（Service Pack 21 以降が自動的に含まれる）、2024 年 4 月中旬までに、AEM 6.5 用にインストールする特別な互換性パッケージを通じてサポートが提供される予定です。 JWT 格情報を移行する手順が記載されたメールが届いている可能性がありますが、AEM で新しい OAuth サーバー間資格情報タイプがサポートされるまで、資格情報の移行を保留しても問題ありません。
 
 以下の節では、AEM で 4 月中旬にサポートされた後、お客様がサービスアカウント（JWT）資格情報を OAuth サーバー間資格情報に置き換える必要がある（場合によっては置き換えてはいけない）シナリオを示します。今後、資格情報を置き換える方法については、[こちら](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview)を参照してください。
-
->[!NOTE]
->
->[**AEM** Developer Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#crxde-lite-and-developer-console)（**Adobe** Developer Console と区別するために名前に **AEM** が含まれています）では、サーバー間 API に使用される [JWT トークン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=ja)を生成するユーティリティを提供します。これらの資格情報は非推奨（廃止予定）ではなく、引き続き使用できます。
-
 
 ## AEM と他のアドビソリューションの統合 {#integrating-aem-with-other-adobe-solutions}
 
