@@ -2,7 +2,7 @@
 title: AEM Formsのホットフィックス
 description: AEM Formsのホットフィックスをダウンロードしてインストールする方法に関する情報を提供します。
 exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
-source-git-commit: 5ab1fd033af0d6d5595fe41de003455ab9ba28a6
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 9%
@@ -50,7 +50,7 @@ ht-degree: 9%
      </td>
     <td>
     <ul>
-    <li> OOTB の手書き署名コンポーネントは、アダプティブフォームのプレビュー用にレンダリングできません。 (FORMS-12073)。</li>
+    <li> 標準の手書き署名コンポーネントが、アダプティブフォームでのプレビュー用にレンダリングされない。 (FORMS-12073)。</li>
     </ul>
     </td>    
    </tr>
