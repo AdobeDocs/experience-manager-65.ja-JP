@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
 exl-id: ff041ef0-e566-4373-818e-76680ff668d8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1769'
 ht-degree: 72%
 
 ---
@@ -76,7 +76,7 @@ AEM 内のタグには以下のような機能があります。
 
 名前空間を作成するには、 **`Create Namespace`** アイコン。
 
-名前空間はそれ自体がタグです。サブタグが含まれている必要はありません。ただし、分類の作成を続行するには、[サブタグを作成](#creating-tags)します。リーフタグかコンテナタグのいずれかにすることができます。
+名前空間自体はタグで、サブタグは含まれません。 ただし、分類の作成を続行するには、[サブタグを作成](#creating-tags)します。リーフタグかコンテナタグのいずれかにすることができます。
 
 ![chlimage_1-183](assets/chlimage_1-183a.png) ![creating_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
 
@@ -196,8 +196,8 @@ AEM 内のタグには以下のような機能があります。
 * **移動先**
 タグの移動先の新しいパスを参照します。
 
-* **変更後の名前**
-最初にタグの現在の`name` を表示します。新しい `name` を入力できます。
+* **名前をに変更**
+最初に現在の `name`」と入力します。 新しい `name` を入力できます。
 
 * 「**保存**」を選択
 

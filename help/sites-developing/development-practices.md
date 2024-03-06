@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 44%
 
 ---
@@ -64,4 +64,4 @@ Jackalope や Prosper などのカスタムフレームワークを使用して�
 
 ### YAGNI 機能を導入しない {#avoid-implementing-yagni-features}
 
-YAGNI(You Ann&#39;t Not Need It) の機能は、今は必要なくても、将来何かが必要になると期待したときに実装されるものです。 理想は、今すぐ機能する最も単純なものを導入し、継続的にリファクタリングをおこなって、システムのアーキテクチャが要件に応じて長期間で進化していくようにすることです。これにより、何が重要かに焦点を当て、コードの膨張や機能のクリープを防ぐことができます。
+YAGNI(You Are Not Not Need It) 機能は、今は必要ないにもかかわらず、将来何かが必要になると期待するときに実装されるものです。 理想は、今すぐ機能する最も単純なものを導入し、継続的にリファクタリングをおこなって、システムのアーキテクチャが要件に応じて長期間で進化していくようにすることです。これにより、何が重要かに焦点を当て、コードの膨張や機能のクリープを防ぐことができます。

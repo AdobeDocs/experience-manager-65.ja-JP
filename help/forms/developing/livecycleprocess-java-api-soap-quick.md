@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 91%
@@ -502,7 +502,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
            //Prepare parameters to use in the purge operation
               long age = 10;  // in seconds
-              boolean includeChildren = false;// don't include children by default
+              boolean includeChildren = false;// do not include children by default
               int status = 3;   // both completed and terminated by default
               short minor = 0;
               short major = 1;

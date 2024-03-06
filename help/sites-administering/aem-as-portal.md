@@ -7,9 +7,9 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
-source-wordcount: '6076'
+source-wordcount: '6074'
 ht-degree: 93%
 
 ---
@@ -612,7 +612,7 @@ Portal Director Locale Handler には、ロケール情報をチェックする�
 | **名前** | **説明** | **デフォルトの動作** |
 |---|---|---|
 | Authenticator | AEM に認証情報を提供します。 | オーサーとパブリッシュの両方に対して、設定可能なテクニカルユーザーを使用します。または、SSO を使用できます。 |
-| HTMLRewriter | リンクや画像などを書き換えます。 | AEM リンクをポータルリンクに書き換えます。UrlMapper と TextMapper を使用して拡張できます。 |
+| HTMLRewriter | リンクと画像を書き換えます | AEM リンクをポータルリンクに書き換えます。UrlMapper と TextMapper を使用して拡張できます。 |
 | HttpClientService | すべての HTTP 接続を処理します。 | 標準実装です。 |
 | LocaleHandler | ロケール情報を処理します。 | ロケールに従ってコンテンツへのリンクを書き換えます。 |
 | LocaleDetector | ユーザーのロケールを検出します。 | ポータルで指定されたロケールを使用します。 |

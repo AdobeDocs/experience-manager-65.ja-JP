@@ -2,10 +2,10 @@
 title: Adobe Experience Manager内での外部SPAの編集
 description: このドキュメントでは、スタンドアロンSPAをAdobe Experience Managerインスタンスにアップロードし、編集可能なコンテンツセクションを追加して、オーサリングを有効にするための推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2432'
-ht-degree: 87%
+source-wordcount: '2391'
+ht-degree: 86%
 
 ---
 
@@ -205,7 +205,7 @@ mvn clean install -PautoInstallSinglePackage
    >
    >この例では、ラップされていない React テキストコンポーネントが、ラップされた `AEMText` 作成済み。 これは、コンポーネントがページ／コンテナの一部であってスタンドアローンではない場合、コンテナがコンポーネントのマッピングを再帰的に行い、オーサリング機能を有効にするので、子ごとの追加ラッパーが不応になるためです。
 
-1. SPA でオーサリング可能なページを追加するには、[オーサリング可能なコンポーネントをページに追加](#add-authorable-component-to-page)の節と同じ手順に従います。」節を同じ手順に従います。 ただし、ここでは、`itemPath` プロパティをスキップできます。
+1. SPA でオーサリング可能なページを追加するには、[オーサリング可能なコンポーネントをページに追加](#add-authorable-component-to-page)の節と同じ手順に従います。ここでは、 `itemPath` プロパティを使用します。
 
 #### AEM でのページコンテンツの確認 {#verify-page-content}
 
@@ -360,7 +360,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ## フレームワークの制限 {#framework-limitations}
 
-RemotePage コンポーネントでは、実装によりアセットマニフェストが指定されることを想定しています。アセットマニフェストの例については[こちら](https://github.com/shellscape/webpack-manifest-plugin)を参照してください。 アセットマニフェストを提供することを想定しています。ただし、RemotePage コンポーネントは、React フレームワーク（および remote-page-next コンポーネントを介した Next.js）での動作のみがテストされているため、Angular などの他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
+RemotePage コンポーネントでは、実装によりアセットマニフェストが指定されることを想定しています。アセットマニフェストの例については[こちら](https://github.com/shellscape/webpack-manifest-plugin)を参照してください。ただし、RemotePage コンポーネントは React フレームワーク（および remote-page-next コンポーネントを介した Next.js）で動作するようにのみテストされているので、Angular など他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
 
 ## その他のリソース {#additional-resources}
 

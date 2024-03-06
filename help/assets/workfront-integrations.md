@@ -5,10 +5,10 @@ role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 hide: true
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: ht
-source-wordcount: '1154'
-ht-degree: 100%
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+workflow-type: tm+mt
+source-wordcount: '1174'
+ht-degree: 99%
 
 ---
 
@@ -47,11 +47,11 @@ ht-degree: 100%
 
 [!DNL Assets] と [!DNL Workfront] の間の様々なタイプの統合を通じて利用できる機能の詳細は、以下のとおりです。
 
-| 機能 | 説明 | [!DNL Workfront] と [!DNL Assets Essentials]：*コネクタが不要（OOTB）* | [!DNL Workfront for Experience Manager enhanced connector]：*コネクタが必要* | Workfront と [!DNL Experience Manager as a Cloud Service]：*コネクタが不要（OOTB）* |
+| 機能 | 説明 | [!DNL Workfront] および [!DNL Assets Essentials] *コネクタなし（標準）* | [!DNL Workfront for Experience Manager enhanced connector]：*コネクタが必要* | Workfrontと [!DNL Experience Manager as a Cloud Service] *コネクタなし（標準）* |
 |----|----|----|-----|-----|
 | デプロイメント方法 | どの [!DNL Assets] の提供に適切か。 | Assets Essentials | Adobe Managed Services、オンプレミス | Cloud Service |
 | **一般** |
-| [!DNL Workfront] から [!DNL Assets] へデジタルファイルを送信 | AEM Assets に WF ドキュメントの最新バージョンをアップロードして、ドキュメントの新しいバージョンとしてリンクさせることができます。 | ✓ | ✓ | ✓ |
+| [!DNL Workfront] から [!DNL Assets] へのデジタルファイルの送信  | WF ドキュメントの最新バージョンを AEM Assets にアップロードして、ドキュメントの新しいバージョンとしてリンクさせることができます。 | ✓ | ✓ | ✓ |
 | AEM フォルダーの Workfront オブジェクトへの手動リンク | 既存の AEM フォルダーは Workfront フォルダーとしてリンクでき、その子アセットは新しい Workfront ドキュメントとしてリンクされます。 | ✓ | ✓ | ✓ |
 | [!DNL Assets] を Workfront オブジェクトにリンク | AEM 内の既存のアセットを新しい Workfront ドキュメントにリンクしたり、既存のドキュメントの新しいバージョンとしてリンクしたりできます。 | ✓ | ✓ | ✓ |
 | リンクされたフォルダーに追加されたアセットは、AEM に自動的に送信されます | リンクされたフォルダーにドキュメントを追加すると、関連するアセットが新しいアセットとして AEM Assets に自動的にアップロードされます。 | ✓ | ✓ | ✓ |

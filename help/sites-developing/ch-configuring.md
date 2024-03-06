@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 88%
+source-wordcount: '1727'
+ht-degree: 89%
 
 ---
 
@@ -84,7 +84,7 @@ UI モードを追加すると、関連する ContextHub モジュールをグ�
 1. 次のプロパティの値を指定します。
 
    * UI モードのタイトル：UI モードを識別するタイトル。
-   * モードアイコン： [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) 例えば、 `coral-Icon--user`
+   * モードアイコン：使用する [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)のセレクター（例：`coral-Icon--user`）。
    * 有効：ContextHub ツールバーに UI モードを表示する場合に選択します
 
 1. 「保存」をクリックします。
@@ -110,7 +110,7 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
 
 1. Experience Managerレールで、ツール/サイト/ContextHub をクリックします。
 1. UI モジュールを追加する設定コンテナをクリックします。
-1. UI モジュールを追加する ContextHub 設定コンテナをクリックまたはタップします。
+1. UI モジュールを追加する ContextHub 設定をクリックまたはタップします。
 1. UI モジュールを追加する UI モードをクリックします。
 1. 「作成」ボタンをクリックし、「 ContextHub UI モジュール（汎用） 」をクリックします。
 
@@ -145,7 +145,7 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 | [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManager サービスをリッスンしてストアを自動的に更新します。 |
 | [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) | ブラウザーの場所の緯度と経度を格納します。 |
 | [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | ブラウザーの場所の日付、時間、季節を格納します。 |
-| [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 複数のデバイスのプロパティと機能を定義し、現在のクライアントデバイスを検出します |
+| [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 多数のデバイスのプロパティと機能を定義し、現在のクライアントデバイスを検出します |
 | [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | JSONP サービスからデータを取得して格納します。 |
 | [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) | 現在のユーザーのプロファイルデータを格納します |
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | デバイス情報、ブラウザーの種類、画面の向きなど、クライアントに関する情報を格納します |
@@ -239,7 +239,7 @@ ContextHub のデバッグモードを有効にして、トラブルシューテ
 
 ### 設定による有効化 {#via-the-configuration}
 
-ContextHub の設定を編集し、「**デバッグ**」オプションをオンにします。
+ContextHub の設定を編集し、「**デバッグ**」オプションをオンにします
 
 1. レールで、 **ツール/サイト/ ContextHub**
 1. デフォルトの **設定コンテナ**

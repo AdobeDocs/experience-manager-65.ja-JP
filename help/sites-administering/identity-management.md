@@ -7,9 +7,9 @@ topic-tags: Security
 content-type: reference
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1249'
 ht-degree: 83%
 
 ---
@@ -147,7 +147,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * ユーザーに対する表示およびアクセスが可能
 * 各プロパティに 2 つの状態を定義する
-* 定義した 2 つの状態の切り替えが可能
+* では、定義された 2 つの状態を切り替えることができます
 
 この定義を行うには、次の項目を使用します。
 

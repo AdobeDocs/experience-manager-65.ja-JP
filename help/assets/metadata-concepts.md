@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: abd3fbb5abb339d5b019fd2d7cf325404fb079e8
 workflow-type: tm+mt
-source-wordcount: '2717'
-ht-degree: 85%
+source-wordcount: '2665'
+ht-degree: 81%
 
 ---
 
@@ -86,7 +86,7 @@ ID3 タグは、MP3 ファイル形式用に設計されています。形式に
 
 ### Exif {#exif}
 
-Exchangeable image file format（Exif）は、デジタル写真で最も一般的に使用されるメタデータフォーマットです。JPEG、TIFF、RIFF、WAV など、多くのファイル形式でメタデータプロパティの固定語彙を埋め込む方法を提供します。Exif によって、メタデータの名前と値のペアとして、メタデータが格納されます。これらのメタデータの名前と値のペアはタグとも呼ばれます。[!DNL Experience Manager] のタグと混同しないようにしてください。最新のデジタルカメラは Exif メタデータを作成し、最新のグラフィックソフトウェアでサポートされています。Exif 形式は、特に画像に関するメタデータ管理で最も一般的な共通項です。
+Exchangeable image file format（Exif）は、デジタル写真で最も一般的に使用されるメタデータフォーマットです。JPEG、TIFF、RIFF、WAV など、多くのファイル形式でメタデータプロパティの固定語彙を埋め込む方法を提供します。Exif によって、メタデータが、メタデータ名とメタデータ値のペアとして格納されます。 これらのメタデータの名前と値のペアはタグとも呼ばれます。タグと混同しないように、 [!DNL Experience Manager]. 最新のデジタルカメラは Exif メタデータを作成し、最新のグラフィックソフトウェアでサポートされています。Exif 形式は、特に画像に関するメタデータ管理で最も一般的な共通項です。
 
 Exif の主な制限は、BMP、GIF、PNG などの一般的な画像ファイル形式ではサポートされないことです。
 
@@ -134,7 +134,7 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 * CC - [!DNL Creative Commons]。
 * [!DNL XMPRights]。
 * PLUS - [Picture Licensing Universal System](https://www.useplus.com)。
-* PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.idealliance.org/prism-metadata)。
+* PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf)。
 * PRL - PRISM Rights Language。
 * PUR - PRISM Usage Rights。
 * `xmpPlus` - PLUS と XMP の統合。
@@ -149,7 +149,7 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 ### 印刷固有のメタデータ {#print-specific-metadata}
 
 * PDF および PDF/X - Adobe PDF およびサードパーティのアプリケーション。
-* PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.idealliance.org/prism-metadata)。
+* PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf)。
 * XMP - [!DNL Extensible Metadata Platform]。
 * `xmpPG` - ページテキストの XMP メタデータ。
 
@@ -168,9 +168,9 @@ Dublin Core メタデータは、アセットをより検索しやすい形で�
 
 シンプルな DCMES(Dublin Core Metadata Element Set) には、次の表に示す 15 個のメタデータ要素が含まれています。 各 Dublin Core 要素はオプションで、繰り返し使用できます。 Dublin Core メタデータ情報は、メディアタイプ固有のメタデータと同様に追加または削除できます。
 
-DCMES 以外にも、Dublin Core Metadata Initiative によって作成された他のメタデータ要素があります。詳しくは、[Dublin Core Initiative](https://dublincore.org/) を参照してください。
+DCMES に加えて、Dublin Core Initiative によって作成された他のメタデータ要素もあります。 詳しくは、 [Dublin Core イニシアティブ](https://dublincore.org/) を参照してください。
 
-| プロパティ | 説明 |
+| Property | 説明 |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | contributor | コンテンツに貢献する責任を負う人または会社。 |
 | 対象範囲 | アセットの対象となる地理的な場所または期間。 |
@@ -183,7 +183,7 @@ DCMES 以外にも、Dublin Core Metadata Initiative によって作成された
 | 媒体社 | アセットを使用可能にする人または会社。 |
 | relation | 関連するアセット。 |
 | 権限 | このアセットに対する権限を持つユーザーに関する情報。 |
-| source | アセットの派生元となる関連アセット。 |
+| ソース | アセットの派生元となる関連アセット。 |
 | subject | アセットのトピック。 |
 | title | アセットの名前。 |
 | type | アセットの特性またはジャンル。 |
@@ -220,9 +220,7 @@ XMP は、データモデル、ストレージモデル、スキーマを提供�
 
 従来のメタデータ（EXIF、ID3、Microsoft Office など）はすべて XMP に自動変換され、製品カタログなどの顧客固有のメタデータスキーマをサポートするよう拡張できます。
 
-XMP のメタデータは、一連のプロパティで構成されます。これらのプロパティは、常に
-
-リソースとして参照される特定のエンティティに関連付けられます。つまり、プロパティはリソースの「説明」です。XMPがある場合、リソースは常にアセットです。
+XMP のメタデータは、一連のプロパティで構成されます。これらのプロパティは、常にリソースと呼ばれる特定のエンティティに関連付けられます。つまり、プロパティはリソースの「説明」です。 XMPがある場合、リソースは常にアセットです。
 
 ### XMP のエコシステム {#xmp-ecosystem}
 
@@ -260,7 +258,7 @@ XMP スキーマは、一連のプロパティ名を共通の XML 名前空間�
 
 XMP には、1 つ以上のスキーマからプロパティを選択し含めることができます。多くのアドビアプリケーションで使用される一般的なサブセットに含まれるプロパティの例を示します。
 
-* Dublin Core スキーマ：`dc:title`、`dc:creator`、`dc:subject`、`dc:format`、`dc:rights`。
+* Dublin Core スキーマ： `dc:title`, `dc:creator`, `dc:subject`, `dc:format`, `dc:rights`.
 * XMP 基本スキーマ：`xmp:CreateDate`、`xmp:CreatorTool`、`xmp:ModifyDate`、`xmp:metadataDate`
 * XMP Rights Management スキーマ：`xmpRights:WebStatement`、`xmpRights:Marked`
 * XMP Media Management スキーマ：`xmpMM:DocumentID`

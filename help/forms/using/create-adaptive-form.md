@@ -3,9 +3,9 @@ title: 'チュートリアル：アダプティブフォームの作成'
 description: アダプティブフォームの作成、レイアウトおよびプレビューについて説明します。また、送信アクションを設定する方法についても説明します。
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1314'
 ht-degree: 85%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 85%
 ## 手順 1：アダプティブフォームを作成する {#step-create-the-adaptive-form}
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。デフォルトの URL は、[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) です。
-1. 選択 **[!UICONTROL 作成]** を選択し、 **[!UICONTROL アダプティブフォーム]**. テンプレートを選択するためのオプションが表示されます。を選択します。 **[!UICONTROL 空白]** テンプレートを選択して選択します。 **[!UICONTROL 次へ]**.
+1. 「**[!UICONTROL 作成]**」を選択して、「**[!UICONTROL アダプティブフォーム]**」をクリックします。テンプレートを選択するためのオプションが表示されます。を選択します。 **[!UICONTROL 空白]** テンプレートを選択して選択します。 **[!UICONTROL 次へ]**.
 
 1. 「**[!UICONTROL プロパティを追加]**」オプションが表示されます。「**[!UICONTROL タイトル]**」フィールドと「**[!UICONTROL 名前]**」フィールドは入力必須です。
 
@@ -57,7 +57,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
 
 1. 「画像」を選択します。 ツールバーが表示されます。選択 ![cmppr](assets/cmppr.png). 画面の左側にプロパティブラウザーが表示されます。「**[!UICONTROL 参照]**」をタップして、ロゴ画像をアップロードします。選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). 画像がヘッダーに表示されます。
 
-   この記事に使用するロゴがない場合は、「ファイルを取得」を選択して、この記事で使用するロゴをダウンロードできます。
+   この記事に使用するロゴがない場合は、「ファイルを取得」を選択して、そのロゴをダウンロードできます。
 
 [ファイルを入手](assets/logo.png)
 

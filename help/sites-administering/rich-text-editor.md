@@ -3,10 +3,10 @@ title: Adobe Experience Manager でコンテンツを作成するようにリッ
 description: Adobe Experience Manager でコンテンツを作成するように Adobe Experience Manager リッチテキストエディターを設定する方法について学びます。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2883'
-ht-degree: 98%
+source-wordcount: '2887'
+ht-degree: 97%
 
 ---
 
@@ -318,7 +318,7 @@ RTE ツールバーに表示される Coral アイコンと使用可能なコマ
 
 >[!NOTE]
 >
->CoralUI 2 RTE は、プラグインダイアログのハンドルバーテンプレートを使用します。そのため、CoralUI 2 RTE clientlib は、ハンドルバー clientlib に対して依存関係があります。CoralUI 3 RTE は、ハンドルバーテンプレートを使用しないので、関連する依存関係はありません。カスタムプラグインがハンドルバーテンプレートを使用する場合、web ページにハンドルバー clientlib を含めます。
+>CoralUI 2 RTE は、プラグインダイアログのハンドルバーテンプレートを使用します。そのため、CoralUI 2 RTE clientlib は、ハンドルバー clientlib に対して依存関係があります。CoralUI 3 RTE は、ハンドルバーテンプレートを使用せず、関連する依存関係も持ちません。 カスタムプラグインがハンドルバーテンプレートを使用する場合、web ページにハンドルバー clientlib を含めます。
 
 ## その他の情報 {#further-information}
 

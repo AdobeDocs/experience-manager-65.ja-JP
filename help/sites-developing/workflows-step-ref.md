@@ -7,9 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '3229'
+source-wordcount: '3227'
 ht-degree: 99%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 99%
 
 * **メールでユーザーに通知する**
 
-   * ワークフローがステップに到達した際に、参加者にメールを送信することで、参加者に通知できます。
+   * ワークフローがステップに到達したら、参加者に電子メールを送信して通知します。
    * 有効にすると、プロパティ&#x200B;**ユーザー／グループ**&#x200B;で定義されたユーザーに対して、またはグループが定義されている場合、グループの各メンバーに対して、メールが送信されます。
 
 * **ユーザー／グループ**

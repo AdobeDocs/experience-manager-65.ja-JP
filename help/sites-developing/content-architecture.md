@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 100%
+source-wordcount: '421'
+ht-degree: 97%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 David&#39;s Model は何年も前に David Nuescheler によって作成されたものですが、その考え方は今でも通用します。David&#39;s Model の主な考えは以下のとおりです。
 
 * データが第一、構造は二の次（おそらくですが）。
-* コンテンツ階層を推進し、成り行き任せにしない。
+* コンテンツ階層を動かします。この動作は許可しません。
 * ワークスペース は `clone()`、`merge()`、`update()` のためのもの。
 * 同じ名前の兄弟に注意する。
 * 参照は害が多いと考えられる。

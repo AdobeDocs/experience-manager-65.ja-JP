@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '5752'
+source-wordcount: '5753'
 ht-degree: 67%
 
 ---
@@ -490,7 +490,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><strong><code>SegmentNotFoundException</code> インスタンスが <code>error.log</code> に記録される理由と復旧方法を教えてください。</strong></td>
    <td><p>A <code>SegmentNotFoundException</code> は、見つからなかったストレージユニット（セグメント）にアクセスしようとしたときに TarMK によって記録されます。 この問題を引き起こす可能性のあるシナリオは次の 3 つです。</p>
     <ol>
-     <li>推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API/SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えるアプリケーション。 つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。このケースは一時的なもので、データの破損にはつながりません。復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。これをおこなうには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
+     <li>推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API/SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えるアプリケーション。 つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。このケースは一時的であり、データの破損にはつながりません。 復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。これをおこなうには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
      <li>ディスク上のデータの破損を招いた外部イベント。これは、ディスク障害、ディスク容量不足、または必要なデータファイルの誤った変更などになります。この場合、インスタンスは、oak-run チェックを使用してオフラインにし、修復する必要があります。 oak-run チェックの実行方法についての詳細は、以下の <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメント</a> を参照してください。</li>
      <li>その他すべての発生に対して、 <a href="https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support" target="_blank">Adobeカスタマーケア</a>.</li>
     </ol> </td>
@@ -510,7 +510,7 @@ TarMK GC: no base state available, running full compaction instead
 |   |TarMK GC #2: estimation interrupted: ${REASON}. Skipping compaction. |The estimation phase terminated prematurely. Some examples of events that could interrupt the estimation phase: not enough memory or disk space on the host system. |Depends on the given reason. |
 | Compaction |TarMK GC #2: compaction paused |As long as the compaction phase is paused by configuration, neither the estimation phase nor the compaction phase will be executed. |Enable online revision cleanup. |
 |   |TarMK GC #2: compaction cancelled: ${REASON}. |The compaction phase terminated prematurely. Some examples of events that could interrupt the compaction phase: not enough memory or disk space on the host system. Moreover, compaction can also be cancelled by shutting down the system or by explicitly cancelling it via administrative interfaces such as the Maintenance Window within the Operations Dashobard. |Depends on the given reason. |
-|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message doesn't mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
+|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message does not mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
 | Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |-->
 
 <table style="table-layout:auto">

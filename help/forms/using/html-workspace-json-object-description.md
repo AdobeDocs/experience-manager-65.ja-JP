@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
-source-wordcount: '2115'
+source-wordcount: '2144'
 ht-degree: 18%
 
 ---
@@ -330,7 +330,7 @@ AEM Forms Workspace で使用される JSON オブジェクトを以下に示し
   <tr>
    <td>availableCommands.otherCommands<br /> </td>
    <td>T</td>
-   <td>ロック、ロック解除、放棄、返却、要求などの使用可能なコマンドが含まれます。<br /> </td>
+   <td>ロック、ロック解除、放棄、返却、要求などのコマンドが使用可能になっています。<br /> </td>
   </tr>
   <tr>
    <td>processInstanceInfo<br /> </td>
@@ -412,7 +412,7 @@ AEM Forms Workspace で使用される JSON オブジェクトを以下に示し
    <td>キューのタイプが含まれます。<br /> 0 — ユーザーキュー。<br />1.共有キュー.<br />2.グループキュー。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>クエリ</td>
+   <td>query</td>
    <td>T</td>
    <td>フィルターに関連付けられたクエリが含まれます。 このクエリは、完全なタスクリストからタスクを検索するために使用されます。<br type="_moz" /> </td>
   </tr>
@@ -833,7 +833,7 @@ AEM Forms Workspace で使用される JSON オブジェクトを以下に示し
    <td>ユーザーの郵送先住所。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>電話番号<br type="_moz" /> </td>
+   <td>電話<br type="_moz" /> </td>
    <td>F</td>
    <td>ユーザーの連絡先番号。<br type="_moz" /> </td>
   </tr>

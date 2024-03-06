@@ -1,19 +1,19 @@
 ---
 title: JBoss® Linux® 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールに関する問題
 description: AEM Forms JEE 6.5.15.0 サービスパックが JBoss® Linux® 環境に正しくインストールされず、アプリケーションサーバーにパッチの変更が適用されません。XML ディレクトリに「RUP_BOM.xml」ファイルを追加します。
-source-git-commit: 76a3a87408ceb13023737379c20fb44ce5fb180a
-workflow-type: ht
-source-wordcount: '205'
+exl-id: 96ecbe58-a859-4432-a2d8-3d5dc0eaf989
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+workflow-type: tm+mt
+source-wordcount: '204'
 ht-degree: 100%
 
 ---
-
 
 # JBoss® 環境での AEM Forms 6.5.15.0 JEE サービスパックのインストールに関する問題 {#aem-forms-installation-issue-environment}
 
 ## 問題 {#issue}
 
-AEM Forms JEE 6.5.15.0 サービスパックが JBoss® Linux® 環境に正しくインストールされません。`PatchInstallerProcessing[1-9*].log` ファイルにログエントリ `[AEM_Forms_JEE_DIR]/patch/AEMForms-6.5.0-0057/xml/RUP_BOM.xml not found! Assuming this component isn't in the installation. Skipping Processing` が記録されます。このエントリは、AEM Forms JEE 6.5.15.0 サービスパックのインストールが成功しなかったことを示しています。
+AEM Forms JEE 6.5.15.0 サービスパックが JBoss® Linux® 環境に正しくインストールされません。`PatchInstallerProcessing[1-9*].log` ファイルにログエントリ `[AEM_Forms_JEE_DIR]/patch/AEMForms-6.5.0-0057/xml/RUP_BOM.xml not found! Assuming this component is not in the installation. Skipping Processing` が記録されます。このエントリは、AEM Forms JEE 6.5.15.0 サービスパックのインストールが成功しなかったことを示しています。
 
 ## 適用先 {#applies-to}
 

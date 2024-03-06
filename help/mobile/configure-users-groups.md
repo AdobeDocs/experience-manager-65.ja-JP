@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 3%
@@ -101,7 +101,7 @@ app-admins グループのメンバーは、app-authors に含まれているの
 
    >[!CAUTION]
    >
-   >/var/contentsync アクセスが拒否されました。
+   >/var/contentsync アクセスがデフォルトで拒否されました。
    >
    >読み取り権限を省略すると、空の更新パッケージが作成およびレプリケートされる可能性があります。
 

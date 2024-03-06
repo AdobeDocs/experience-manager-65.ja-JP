@@ -8,10 +8,10 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 6cec9874bff54dea63562f7a880429d54e83ba79
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 82%
+source-wordcount: '968'
+ht-degree: 80%
 
 ---
 

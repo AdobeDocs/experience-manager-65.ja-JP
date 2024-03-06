@@ -5,9 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1502'
 ht-degree: 49%
 
 ---
@@ -230,7 +230,7 @@ AEM Forms Portal のドラフトと送信コンポーネントを使用すると
    `key` varchar(255) NOT NULL,
    `id` varchar(60) NOT NULL,
    PRIMARY KEY (`id`,`key`),
-   CONSTRAINT ‘additionalmetadatatable_fk’ FOREIGN KEY (`id`) REFERENCES `metadata` (`id`) ON DELETE CASCADE
+   CONSTRAINT 'additionalmetadatatable_fk' FOREIGN KEY (`id`) REFERENCES `metadata` (`id`) ON DELETE CASCADE
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
@@ -397,7 +397,7 @@ Forms Portal のデータベース実装では、追加のメタデータテー�
 
    >[!NOTE]
    >
-   >このスクリプトは、標準 (OOTB) 添付ウィジェットコンポーネント用です。 OOTB 添付ウィジェットをカスタマイズした場合は、上記のスクリプトを変更して、それぞれの変更を組み込みます。
+   >このスクリプトは、標準の添付ウィジェットコンポーネント用です。 標準の添付ファイルウィジェットをカスタマイズした場合は、上記のスクリプトを変更して、それぞれの変更を取り込みます。
 
 1. 手順 2 で作成したフォルダーに次のプロパティを追加し、「 」をクリックします。 **[!UICONTROL すべて保存]**.
 

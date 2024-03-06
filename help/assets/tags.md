@@ -10,10 +10,10 @@ docset: aem65
 feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '6664'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -65,7 +65,7 @@ Experience Platform タグでは、*データ要素*&#x200B;と&#x200B;*ルー�
 
 Experience Platform タグのデータ要素は、名前の付いたプロパティです。このプロパティの値は、静的に定義されるか、web ページの状態や Dynamic Media ビューアのデータに基づいて動的に計算されます。
 
-データ要素の定義で使用できるオプションは、Experience Platform タグプロパティにインストールされている拡張機能によって異なります。「コア」拡張機能はプレインストールされており、どのような設定でもすぐに使用できます。この「コア」拡張機能を使用すると、cookie、JavaScript コード、クエリ文字列、その他多くのソースから取得した値を持つデータ要素を定義できます。
+データ要素の定義で使用できるオプションは、Experience Platform タグプロパティにインストールされている拡張機能によって異なります。「コア」拡張機能はプレインストールされており、どのような設定でもすぐに使用できます。この「コア」拡張機能を使用して、cookie、JavaScript コード、クエリ文字列、その他多くのソースから取得した値を持つデータ要素を定義できます。
 
 Adobe Analytics でトラッキングを行う場合は、[拡張機能のインストールとセットアップ](#installing-and-setup-of-extensions)で説明されているように、他にいくつか拡張機能をインストールする必要があります。Dynamic Media ビューア拡張機能には、Dynamic Viewer イベントの引数である値のデータ要素を定義する機能が追加されています。例えば、ビューアのタイプや、読み込み時にビューアから報告されるアセット名、エンドユーザーがズームしたときに報告されるズームレベルなどを参照できます。
 
@@ -228,7 +228,7 @@ Dynamic Media ビューアは web ページ上で一意の識別子を持ちま�
 * **[!UICONTROL TrackKey]** ルールには、次の情報が含まれます。
 
    * Core Experience Platform タグ拡張機能のキー押下イベントをトリガーとして使用。
-   * **[!UICONTROL ZoomScale]** データ要素の値を Adobe Analytics に送信。
+   * **[!UICONTROL ZoomScale]** データ要素の値を Adobe Analytics に送信します。
 
 ここで、エンドユーザーが 2 つのビューアで web ページを読み込んだとします。*viewer1* では 50％の拡大率でズームインし、次に、*viewer2* では 25％の拡大率でズームインします。*viewer1*&#x200B;では、画像がパンされ、最後にキーボードのキーが選択されます。
 

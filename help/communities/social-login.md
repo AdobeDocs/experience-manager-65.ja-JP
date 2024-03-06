@@ -7,10 +7,10 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: 451fb472e170a79f9854efadf9be1d4fe0628b94
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 3%
+source-wordcount: '2672'
+ht-degree: 2%
 
 ---
 
@@ -65,7 +65,7 @@ facebook Graph API がバージョン 1.0 のときに、ソーシャルログ�
 
 >[!NOTE]
 >
->古いAEMバージョンの場合、ログで例外が発生する場合 **ここからトークンを抽出できません**、をそのAEMリリースの最新 CFP にアップグレードします。
+>古いAEMバージョンの場合、ログで例外が発生する場合 **このからトークンを抽出できません**、をそのAEMリリースの最新 CFP にアップグレードします。
 
 facebook Graph API のバージョン情報については、 [Facebook API 変更ログ](https://developers.facebook.com/docs/apps/changelog).
 
@@ -122,7 +122,7 @@ The [AdobeGranite OAuth Application and Provider](#adobe-granite-oauth-applicati
 
    >[!NOTE]
    >
-   >グループは、いつでも追加または削除できます。 ただし、既存のユーザーのメンバーシップには影響しません。 自動メンバーシップは、このフィールドの更新後に作成される新しいユーザーにのみ適用されます。 匿名ユーザーが無効になっているサイトの場合は、その非公開のコミュニティサイト向けに、対応するコミュニティメンバーグループにユーザーを追加するよう選択します。
+   >グループは、いつでも追加または削除できます。 ただし、既存のユーザーのメンバーシップには影響はありません。 自動メンバーシップは、このフィールドの更新後に作成される新しいユーザーにのみ適用されます。 匿名ユーザーが無効になっているサイトの場合は、その非公開のコミュニティサイト向けに、対応するコミュニティメンバーグループにユーザーを追加するよう選択します。
 
    * 選択 **[!UICONTROL 保存]**.
    * **[!UICONTROL 公開]**.
@@ -155,11 +155,11 @@ AEM Communitiesプロバイダーは、 [AdobeGranite OAuth Application and Prov
 
    * **[!UICONTROL Cloud Service設定]**
 
-     デフォルト値は `/etc/  cloudservices /  facebookconnect` です。編集しないでください。
+     デフォルト値は `/etc/  cloudservices /  facebookconnect`. 編集しないでください。
 
    * **[!UICONTROL OAuth Provider Service Config]**
 
-     デフォルト値は `/apps/social/facebookprovider/config/` です。編集しないでください。
+     デフォルト値は `/apps/social/facebookprovider/config/`. 編集しないでください。
 
    * **[!UICONTROL タグを有効にする]**
 
@@ -210,10 +210,10 @@ AEM Communitiesプロバイダーは、 [AdobeGranite OAuth Application and Prov
 
 最新の手順に従って、でTwitterアプリケーションを作成します。 [https://apps.twitter.com](https://apps.twitter.com/).
 
-一般に、
+一般的には以下のようになります。
 
 1. を入力します。 *名前* これにより、web サイトのTwitterに対するユーザーアプリケーションが識別されます。
-1. を入力します。 *説明*.
+1. 「*説明*」を入力します。
 1. の場合 *web サイト*  — 入力 `https://<server>`.
 1. の場合 *コールバック URL*  — 入力 `https://server`.
 
@@ -407,7 +407,7 @@ facebookまたはTwitterアプリ用に作成されたインスタンスを見�
 
    * 次の場所にあるインスタンスを見つけます。 **[!UICONTROL クライアント ID]** が **[!UICONTROL アプリ ID]**.
 
-     ![graniteoauth2](assets/graniteoauth2.png)
+     ![graniteauth2](assets/graniteoauth2.png)
 
      次のプロパティを除き、設定の他のプロパティは変更しないでください。
 

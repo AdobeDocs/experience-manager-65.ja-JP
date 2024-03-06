@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -573,7 +573,7 @@ JCR XPath の `rep:similar()` を使用した類似性検索。
 
 * **all**
 
-  （ブーリアン）タグのフルテキスト全体、つまりすべてのタイトルや説明などを検索します（「l `ang`」より優先されます）。
+  （ブール値）タグの全文、つまり、すべてのタイトル、説明などを検索します。 「l」よりも優先される `ang`&quot;.
 
 ### type {#type}
 

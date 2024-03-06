@@ -7,10 +7,10 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 48479725-8b52-4ff2-a599-d20958b26ee6
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 97%
+source-wordcount: '798'
+ht-degree: 94%
 
 ---
 
@@ -158,7 +158,7 @@ Venia 参照用ストアの使用を開始するには、[Git リポジトリー
 
 AEM Commerce アドオンと CIF コアコンポーネントは、AEM サーバーを介して、またはブラウザーを介して直接、コマース GraphQL エンドポイントに接続します。クライアントサイドの CIF コアコンポーネントと CIF アドオンのオーサリングツールは、デフォルトで `/api/graphql` に接続します。必要に応じて、 CIF Cloud Service 設定で調整できます（以下を参照）。
 
-CIF アドオンは、`/api/graphql` で GraphQL プロキシサーブレットを提供します。ローカルの AEM Dispatcher を使用しない場合は、GraphQL プロキシサーブレットも設定することをお勧めします。
+CIF アドオンは、`/api/graphql` で GraphQL プロキシサーブレットを提供します。ローカルのAEM Dispatcher を使用する予定がない場合は、GraphQLプロキシサーブレットも設定することをお勧めします。
 
 http://localhost:4502/system/console/configMgr に移動し、`Adobe CIF GraphQL Proxy Configuration` サービスの OSGI 設定を作成します。上記の GraphQL クライアントで使用したのと同じ GraphQL エンドポイントを、コマースシステムで使用します。
 

@@ -7,10 +7,10 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: f044ed75-bb72-4be1-aef6-2fb3b2a2697b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 76%
+source-wordcount: '692'
+ht-degree: 74%
 
 ---
 
@@ -68,7 +68,7 @@ agentFolder DDE の値は、Correspondence Management 設定プロパティに�
 
       ![jcr:content property](assets/3_jcrcontentntresource.png)
 
-      jcr:content のサブプロパティの中に、暗く表示されている jcr:data が含まれています。 jcr:data をダブルクリックします。 プロパティが編集可能になり、「ファイルの選択」ボタンがエントリに表示されます。「**ファイルを選択**」をクリックし、ロゴとして使用する画像ファイルを選択します。画像ファイルには、拡張子を付ける必要はありません。
+      jcr:content のサブプロパティの中に、暗く表示されている jcr:data が含まれています。 jcr:data をダブルクリックします。 プロパティが編集可能になり、「ファイルの選択」ボタンがエントリに表示されます。「**ファイルを選択**」をクリックし、ロゴとして使用する画像ファイルを選択します。画像ファイルの拡張子は必要ありません。
 
       ![JCR データ](assets/5_jcrdata.png)
 

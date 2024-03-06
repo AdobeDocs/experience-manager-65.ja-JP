@@ -2,10 +2,10 @@
 title: AEM FAQ
 description: これらの FAQ を使用して、AEMの一般的なワークフローや問題を理解、設定、トラブルシューティングします。
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: 1a7805f063daf6f3dd07a2ff2d182e58fe7e63b8
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '936'
-ht-degree: 40%
+ht-degree: 38%
 
 ---
 
@@ -78,11 +78,11 @@ AEM コンテンツサービスを React アプリケーションから使用す
 
 ユーザーがムービーファイルのアップロードに asset ノードの削除権限を持っていない場合、削除チャンクノードは失敗し、アップロードが再開します。
 
-#### 言語コピーを作成する際の OOTB 設定のデフォルト設定を教えてください。 {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
+#### 言語コピーの作成時の標準設定のデフォルト設定は何ですか？ {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
 タッチ UI(**参照** > **言語コピーを更新**) の場合、新しい DAM フォルダーが新しい言語の下に作成され、アセットがそこから参照されます。
 
-これは OOTB 設定のデフォルト設定です。翻訳設定で「**ページのアセットを翻訳**」を「**翻訳しない**」に設定できます。AEM 6.4 の場合は、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;を選択して設定します。
+これは、標準設定のデフォルト設定です。 翻訳設定で「**ページのアセットを翻訳**」を「**翻訳しない**」に設定できます。AEM 6.4 の場合は、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;を選択して設定します。
 
 #### AEM SegmentStore（AEM 6.3.1.1）の急増を引き起こす AEM コンポーネントを無効にする方法を教えてください。 {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}
 

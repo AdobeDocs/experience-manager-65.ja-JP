@@ -8,7 +8,7 @@ content-type: reference
 pagetitle: Configuring Email
 role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 4%
@@ -41,7 +41,7 @@ AEM Communitiesは次の電子メールを使用します。
 
 これは、 [電子メール通知の設定](../../help/sites-administering/notification.md)が、フィールドに違いがある場合は、 `"From" address` 次に該当 *not* 必須およびは空のままにする必要があります。
 
-例： （例としての値で入力）:
+次に例を示します（例として、値を入力します）。
 
 ![email-config](assets/email-config.png)
 
@@ -180,7 +180,7 @@ E メールによる返信を許可する場合は、購読用のインスタン
 
 * **[!UICONTROL URL]**
 
-  *（必須）* 送信メールサーバー。 例えば、`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****` のように指定します。
+  *（必須）* 送信メールサーバー。 例：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`。
 
 * **[!UICONTROL 読み込み先パス]**&amp;ast;
 

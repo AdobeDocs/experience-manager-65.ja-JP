@@ -6,9 +6,9 @@ contentOwner: AG
 role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2156'
+source-wordcount: '2136'
 ht-degree: 83%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 83%
 
 [!DNL Assets] 内では以下のメディアハンドラーを使用できます。また、これらのメディアハンドラーはよく使用される MIME タイプを処理できます。
 
-<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions should not be set to 1.5. Must be updated.
 -->
 
 | ハンドラー名 | サービス名（システムコンソールでの名称） | サポートされる MIME タイプ |
@@ -412,7 +412,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
      * * @return the number of words in the string
      * */
     private long wordCount(String text) {
-     // We need to keep track of the last character, if we have two whitespaces in a row we don't want to double count.
+     // We need to keep track of the last character, if we have two whitespaces in a row we do not want to double count.
      // The starting of the document is always a whitespace.
      boolean prevWhiteSpace = true;
      boolean currentWhiteSpace = true;

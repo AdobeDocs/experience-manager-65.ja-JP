@@ -2,10 +2,10 @@
 title: カスタム HTTP ヘッダー
 description: Adobe Experience Manager Commerce でカスタム HTTP ヘッダーを設定する方法を説明します。
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 82%
+ht-degree: 74%
 
 ---
 
@@ -34,7 +34,7 @@ HTTP ヘッダーの値は、プロジェクトのクラウドサービス設定
 
 ## 制限 {#restrictions}
 
-このサービスでは、標準のヘッダー名を含め、任意のヘッダー名を定義することができますが、設定することはできません。つまり、この機能を使用して標準の HTTP ヘッダーを上書きすることはできません。制限されるヘッダー名のリストは、[こちら](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers)を参照してくださいこれらに加えて、使用できないヘッダーが 2 つあります。
+このサービスでは、標準のヘッダー名を含むすべてのヘッダー名を定義できますが、設定には使用できません。 つまり、この機能を使用して標準の HTTP ヘッダーを上書きすることはできません。制限されるヘッダー名のリストは、[こちら](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers)を参照してくださいこれらに加えて、使用できないヘッダーが 2 つあります。
 
 * 「Store」 - CIF で Adobe Commerce ストアを識別するために使用
 * 「Preview-Version」 - CIF がステージングされた製品を取得するために使用

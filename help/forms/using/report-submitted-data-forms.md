@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish, developer-reference
 feature: Forms Portal
 exl-id: a685889e-5d24-471c-926d-dbb096792bc8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '539'
 ht-degree: 33%
 
 ---

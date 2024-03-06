@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 71%
+ht-degree: 82%
 
 ---
 
@@ -39,13 +39,13 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m` ショートカットは使用できなくなります。ショートカットを再び使用できるようにするには、エディターの上部バーをクリックするか、編集モードに戻る必要があります。
+>ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m` ショートカットは使用できなくなります。ショートカットをもう一度使用できるようにするには、エディターバーの上部をクリックするか、「編集」モードに戻る必要があります。
 
 [コンソール](/help/sites-authoring/keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
 >[!NOTE]
 >
->[コンソールのショートカットがアクティベート解除](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)されているかどうかにかかわらず、エディターのキーボードショートカットは、常にアクティブです。
+[コンソールのショートカットがアクティベート解除](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)されているかどうかにかかわらず、エディターのキーボードショートカットは、常にアクティブです。
 
 ## OS 特有の修飾子キー {#os-specific-modifier-keys}
 

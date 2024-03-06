@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '4518'
 ht-degree: 95%
@@ -140,7 +140,7 @@ AEM 6.0 ～ 6.2 では、AEM 起動スクリプトの JVM パラメーターを�
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-AEM 6.3 では、この 2 つのパラメーターは標準で事前に設定されており、OSGi QueryEngineSettings で保持することができます。
+AEM 6.3 では、上記の 2 つのパラメーターは初期設定で事前に設定されており、OSGi QueryEngineSettings を使用して保持できます。
 
 詳しくは、[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)を参照してください。
 

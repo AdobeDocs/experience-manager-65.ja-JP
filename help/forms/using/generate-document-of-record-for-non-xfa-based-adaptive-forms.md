@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 22235790b2bfefaa1a3bf71f888f8eb343d9e1b7
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '4257'
 ht-degree: 91%
@@ -282,7 +282,7 @@ ht-degree: 91%
 
 1. 「フォームモデル」タブの「レコードのドキュメントのテンプレート設定」セクションで、次のいずれかのオプションを選択します。
 
-   **なし**&#x200B;フォーム用のレコードのドキュメントを設定しない場合は、このオプションを選択します。
+   **なし** フォームのレコードのドキュメントを設定しない場合は、このオプションを選択します。
 
    **フォームテンプレートをレコードのドキュメントとして関連付ける**&#x200B;レコードのドキュメント用のテンプレートとして使用する XDP ファイルがある場合は、このオプションを選択します。このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。適切なファイルを選択します。
 

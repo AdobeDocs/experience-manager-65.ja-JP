@@ -4,10 +4,10 @@ description: We.Gov と We.Finance のデモパッケージを使用した AEM F
 contentOwner: anujkapo
 docset: aem65
 exl-id: 288d5459-bc69-4328-b6c9-4b4960bf4977
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 99%
+source-wordcount: '2478'
+ht-degree: 98%
 
 ---
 
@@ -194,7 +194,7 @@ Aya は、携帯電話で短いアダプティブフォームに入力して適�
 
    >[!NOTE]
    >
-   >年収が 200,000 ドルを超えるユーザーは対象外となります。
+   >年収が 200,000 ドルを超えるユーザーは、資格を持ちません。
 
 1. 「**自分が対象か確認**」をクリックします。
 1. 「**今すぐ申請**」をクリックして続行します。

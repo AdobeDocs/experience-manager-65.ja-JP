@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 100%
@@ -400,7 +400,7 @@ ht-degree: 100%
 
         To apply the Apache License to your work, attach the following
         boilerplate notice, with the fields enclosed by brackets "[]"
-        replaced with your own identifying information. (Don't include
+        replaced with your own identifying information. (Do not include
         the brackets!)  The text should be enclosed in the appropriate
         comment syntax for the file format. We also recommend that a
         file or class name and description of purpose be included on the
@@ -483,7 +483,7 @@ ht-degree: 100%
      example, modifying the Specification, other than to the extent of your
      fair use rights, or distributing the Specification to third parties).
 
-     *3. Pass-through Conditions*. You need not include limitations (a)-(c)
+     *3. Pass-through Conditions*. You do not need to include limitations (a)-(c)
      from the previous paragraph or any other particular "pass through"
      requirements in any license You grant concerning the use of your
      Independent Implementation or products derived from it. However, except
@@ -829,7 +829,7 @@ ht-degree: 100%
      its scope. No license is granted hereunder for any
      other purpose.
 
-     You need not include limitations (i)-(iii) from
+     You do not need to include limitations (i)-(iii) from
      the previous paragraph or any other particular
      "pass through" requirements in any license You
      grant concerning the use of your Independent
@@ -1121,7 +1121,7 @@ ht-degree: 100%
      A link or URL to the original W3C document.
 
      The pre-existing copyright notice of the original author, or if
-     it doesn't exist, a notice of the form: "Copyright &copy; [$date-of-document]
+     it does not exist, a notice of the form: "Copyright &copy; [$date-of-document]
      World Wide Web Consortium, (Massachusetts
      Institute of Technology, Institut National de Recherche en Informatique
      et en Automatique, Keio

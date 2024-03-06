@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2597'
+source-wordcount: '2593'
 ht-degree: 96%
 
 ---
@@ -235,7 +235,7 @@ Microsoft® SharePointリストでは、次の列タイプはサポートされ�
 
 ### サーバー側で検証されるもの  {#what-to-validate-on-server-br}
 
-アダプティブフォームの追加設定なし（OOTB）のフィールド検証で、サーバーで再実行されるものは次のとおりです。
+サーバーで再実行される、アダプティブフォームのすべての既製のフィールド検証は、次のとおりです。
 
 * 必須
 * 検証パターン形式文字列

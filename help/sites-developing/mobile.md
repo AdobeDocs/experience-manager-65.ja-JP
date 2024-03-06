@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3720'
-ht-degree: 37%
+source-wordcount: '3722'
+ht-degree: 36%
 
 ---
 
@@ -124,7 +124,7 @@ ht-degree: 37%
 
 #### モバイルコンポーネントの作成 {#creating-a-mobile-component}
 
-AEM モバイルフレームワークを使用すると、要求を発行するデバイスを感知するコンポーネントを開発できます。以降の節のコード例は、コンポーネントの jsp で AEM モバイル API を使用する方法を示しています。具体的には、次に示す処理の方法を示します。
+AEMモバイルフレームワークを使用すると、要求を発行するデバイスに対して機密性の高いコンポーネントを開発できます。 以下のコードサンプルは、コンポーネント jsp でAEMモバイル API を使用する方法と、特に以下の方法を示しています。
 
 * リクエストからデバイスを取得します。
   `Device device = slingRequest.adaptTo(Device.class);`
@@ -171,7 +171,7 @@ AEM モバイルフレームワークを使用すると、要求を発行する�
 * デバイスグループは、複数のエミュレーターの 1 つで構成されます。例えば、デバイスグループ設定ページ ( /etc/mobile/groups/touch ) には、 `emulators` 以下のプロパティ `jcr:content` ノード。
 注意：同じエミュレーターが複数のデバイスグループに属している可能性がありますが、あまり意味がありません。
 
-* デバイスグループの設定ダイアログから、 `emulators` プロパティは、目的のエミュレーターのパスを使用して設定します。 （例：`/libs/wcm/mobile/components/emulators/iPhone4`）。
+* デバイスグループの設定ダイアログから、 `emulators` プロパティは、目的のエミュレーターのパスを使用して設定します。 例：`/libs/wcm/mobile/components/emulators/iPhone4`。
 
 * エミュレーターコンポーネント ( 例： `/libs/wcm/mobile/components/emulators/iPhone4`) 基本モバイルエミュレーターコンポーネントを拡張する ( `/libs/wcm/mobile/components/emulators/base`) をクリックします。
 
@@ -355,7 +355,7 @@ AEM は `BrowserMap` に基づくデバイスのクライアントサイド検�
 
 >[!NOTE]
 >
-クライアントライブラリの統合について詳しくは、 [クライアント側HTMLライブラリの使用](/help/sites-developing/clientlibs.md).
+>クライアントライブラリの統合について詳しくは、 [クライアント側HTMLライブラリの使用](/help/sites-developing/clientlibs.md).
 
 ### 代替リンクの設定 {#providing-alternate-links}
 
@@ -374,17 +374,17 @@ When the value of `cq:variantDomain` のプロパティ `cq:siteVariant` ノー�
 
 >[!NOTE]
 >
-AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+>AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 ### デバイスグループ固有の URL の定義 {#defining-a-device-group-specific-url}
 
-代替リンクを使用しない場合は、各 `DeviceGroup` にグローバル URL を設定できます。Adobeでは、 `browsermap.standard` クライアントライブラリを作成しますが、デバイスグループは再定義されます。
+代替リンクを使用しない場合は、それぞれにグローバル URL を設定できます `DeviceGroup`. Adobeでは、 `browsermap.standard` クライアントライブラリを作成しますが、デバイスグループは再定義されます。
 
 BrowserMap は、同じ名前のデバイスグループを作成し、に追加することで、デバイスグループの定義を上書きできるように設計されています。 `BrowserMap` オブジェクトをカスタマイズしたクライアントライブラリから取得します。
 
 >[!NOTE]
 >
-詳しくは、 [カスタマイズされた BrowserMap](#creatingacustomisedbrowsermap).
+>詳しくは、 [カスタマイズされた BrowserMap](#creatingacustomisedbrowsermap).
 
 ### セレクターベースの URL の定義 {#defining-selector-based-urls}
 
@@ -410,7 +410,7 @@ BrowserMap は、同じ名前のデバイスグループを作成し、に追加
 
 >[!NOTE]
 >
-クライアントライブラリの統合について詳しくは、 [クライアント側HTMLライブラリの使用](/help/sites-developing/clientlibs.md).
+>クライアントライブラリの統合について詳しくは、 [クライアント側HTMLライブラリの使用](/help/sites-developing/clientlibs.md).
 
 カスタマイズした `BrowserMap` クライアントライブラリのAdobeでは、次の方法を推奨しています。
 
@@ -496,7 +496,7 @@ BrowserMap は、同じ名前のデバイスグループを作成し、に追加
 
 ### 特定のページからの BrowserMap の除外 {#excluding-browsermap-from-certain-pages}
 
-クライアント検出を必要としない一部のページから BrowserMap ライブラリを除外する場合は、request 属性を追加できます。
+クライアント検出が不要な一部のページから BrowserMap ライブラリを除外する場合は、request 属性を追加できます。
 
 ```xml
 <%
@@ -520,7 +520,7 @@ request.setAttribute("browsermap.enabled", false);
 
 >[!NOTE]
 >
-The `wcmmode` パラメーターがに設定されている `disabled` を使用して、パブリッシュインスタンスの動作をシミュレートします。
+>The `wcmmode` パラメーターがに設定されている `disabled` を使用して、パブリッシュインスタンスの動作をシミュレートします。
 
 上書きするデバイス値は cookie に保存されるので、 `device` 各 `URL`.
 
@@ -528,7 +528,7 @@ The `wcmmode` パラメーターがに設定されている `disabled` を使用
 
 >[!NOTE]
 >
-BrowserMap は、上書きするデバイス値を、 `BMAP_device`. この cookie を削除すると、CQ は現在のデバイス（デスクトップやモバイルなど）に応じて適切なバージョンの Web サイトを提供するようになります。
+>BrowserMap は、上書きするデバイス値を、 `BMAP_device`. この cookie を削除すると、CQ は現在のデバイス（デスクトップやモバイルなど）に応じて適切なバージョンの Web サイトを提供するようになります。
 
 ## モバイルの要求の処理 {#mobile-request-processing}
 
@@ -564,7 +564,7 @@ The **統計** ページは次のようになります。
 
 >[!NOTE]
 >
-**統計**&#x200B;ページは、モバイルデバイスが初めて AEM にアクセスし、そのデバイスが検出されると作成されます。それ以前にこのページを使用することはできません。
+>**統計**&#x200B;ページは、モバイルデバイスが初めて AEM にアクセスし、そのデバイスが検出されると作成されます。それ以前にこのページを使用することはできません。
 
 統計内にエントリを生成する必要がある場合は、次の手順を実行できます。
 

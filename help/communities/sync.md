@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '2471'
-ht-degree: 9%
+source-wordcount: '2403'
+ht-degree: 7%
 
 ---
 
@@ -75,7 +75,7 @@ Adobe Experience Manager(AEM)Communities のパブリッシュ環境から（設
 
 設計上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境にも反対にも表示されません。
 
-次の場合に [ユーザー管理とセキュリティ](/help/sites-administering/security.md) コンソールは、パブリッシュ環境で新しいユーザーを追加するために使用され、必要に応じて、ユーザー同期は新しいユーザーとそのグループメンバーシップを他のパブリッシュインスタンスと同期します。 また、ユーザー同期は、セキュリティコンソールを使用して作成されたユーザーグループを同期します。
+次の場合に [ユーザー管理とセキュリティ](/help/sites-administering/security.md) コンソールは、パブリッシュ環境で新しいユーザーを追加するために使用され、必要に応じて、ユーザー同期は新しいユーザーとそのグループメンバーシップを他のパブリッシュインスタンスと同期します。 ユーザー同期により、セキュリティコンソールによって作成されたユーザーグループも同期されます。
 
 ### ユーザーが投稿時にコンテンツを投稿 {#user-posts-content-on-publish}
 
@@ -83,9 +83,9 @@ Adobe Experience Manager(AEM)Communities のパブリッシュ環境から（設
 
 ## ベストプラクティス {#bestpractices}
 
-デフォルトでは、ユーザー同期は **無効**. ユーザー同期を有効にするには、OSGi の既存の設定を変更する必要があります&#x200B;*。*&#x200B;ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
+デフォルトでは、ユーザー同期は **無効**. ユーザー同期を有効にするには、変更が必要です *既存* OSGi 設定。 ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
 
-ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。
+ユーザー同期では、作成者にユーザーデータが作成されていない場合でも、ユーザーデータの配布を管理する際には作成者環境が必要です。
 
 **前提条件**
 
@@ -128,7 +128,7 @@ Apache Sling 同期エージェントを設定するには：
 
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### Adobe Granite Distribution - Encrypted Password Transport Secret Provider {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### AdobeGranite 配布 — 暗号化パスワードトランスポート秘密鍵プロバイダー {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 作成者は、作成者から発行へのユーザーデータの同期権限を持つ、認証済みユーザーを識別できます。
 
@@ -197,7 +197,7 @@ The [認証済みユーザーが作成されました](/help/sites-administering
 
    ![diff-obs](assets/diff-obs.png)
 
-### Apache Sling Distribution Trigger - Scheduled Triggers Factory {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling 配布トリガー — 予定トリガーファクトリ {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 この設定を使用すると、（作成者が変更を取り込んで発行者に送信する）ポーリング間隔を設定して、発行者間で変更を同期できます。
 
@@ -267,15 +267,15 @@ Sling 配布で、サブスクリプションとフォローに不一致があ�
 
    `system`
 
-   `rep:cache` （スティッキーセッションを使用するので、このノードを別のパブリッシャーに同期する必要はありません）。
+   `rep:cache` （スティッキーセッションが使用されるので、このノードを別の発行者に同期する必要はありません）。
 
    ![user-sync-listner](assets/user-sync-listner.png)
 
-### 一意の Sling ID の節を参照してください {#unique-sling-id}
+### 一意の Sling ID {#unique-sling-id}
 
 AEMオーサーインスタンスは、Sling ID を使用して、データの送信先と、パッケージを送り返す（または送り返す）必要のあるパブリッシャーを特定します。
 
-パブリッシュファーム内のすべてのパブリッシャーが一意の Sling ID を持っていることを確認します。 Sling ID がパブリッシュファーム内の複数のパブリッシュインスタンスに対して同じである場合、ユーザーの同期は失敗します。 作成者は、パッケージの取得元とインストール先を知りません。
+パブリッシュファーム内のすべてのパブリッシャーが一意の Sling ID を持っていることを確認します。 Sling ID がパブリッシュファーム内の複数のパブリッシュインスタンスに対して同じである場合、ユーザーの同期は失敗します。 作成者は、パッケージの取得元とインストール先を知らないので、
 
 パブリッシュファーム内のパブリッシャーの一意の Sling ID を、各パブリッシュインスタンスで確実に使用するには、次の手順を実行します。
 
@@ -284,7 +284,7 @@ AEMオーサーインスタンスは、Sling ID を使用して、データの�
 
    ![slingid](assets/slingid.png)
 
-   パブリッシュインスタンスの Sling ID が他のパブリッシュインスタンスの Sling ID と一致する場合は、次のようになります。
+   あるパブリッシュインスタンスの Sling ID が他のパブリッシュインスタンスの Sling ID と一致する場合は、次のようにします。
 
 1. 一致する Sling ID を持つパブリッシュインスタンスの 1 つを停止します。
 1. Adobe Analytics の `crx-quickstart/launchpad/felix` ディレクトリ、という名前のファイルを検索して削除します。 *sling.id.file.*
@@ -300,7 +300,7 @@ AEMオーサーインスタンスは、Sling ID を使用して、データの�
 1. パブリッシュインスタンスを起動します。 起動時に、新しい Sling ID が割り当てられます。
 1. を検証します。 **Sling ID** が一意になりました。
 
-すべてのパブリッシュインスタンスに一意の Sling ID が割り当てられるまで、これらの手順を繰り返します。
+すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
 
 ### Vault Package Builder Factory {#vault-package-builder-factory}
 

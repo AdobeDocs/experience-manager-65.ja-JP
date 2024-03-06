@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '494'
 ht-degree: 3%
 
 ---
@@ -95,7 +95,7 @@ app-admins グループのメンバーは、app-authors に含まれているの
 
    >[!CAUTION]
    >
-   >/var/contentsync アクセスが拒否されました。
+   >/var/contentsync アクセスがデフォルトで拒否されました。
    >
    >読み取り権限を省略すると、空の更新パッケージが作成およびレプリケートされる可能性があります。
 

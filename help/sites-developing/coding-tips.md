@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 55%
+source-wordcount: '857'
+ht-degree: 54%
 
 ---
 
@@ -33,11 +33,11 @@ AEM のコードベースでは、次のような規則が使用されます。
 * インターフェイスの単一の実装は、 `<Interface>Impl`、つまり、 `ReaderImpl`.
 * インターフェイスの複数の実装には、という名前が付けられます `<Variant><Interface>`、つまり、 `JcrReader` および `FileSystemReader`.
 * 抽象ベースクラスには `Abstract<Interface>` または `Abstract<Variant><Interface>` という名前を付けます。
-* パッケージには `com.adobe.product.module` という名前を付けます。それぞれの Maven アーティファクトまたは OSGi バンドルには独自のパッケージが必要です。
+* パッケージの名前はです。 `com.adobe.product.module`. それぞれの Maven アーティファクトまたは OSGi バンドルには独自のパッケージが必要です。
 * Java™の実装は、API の下の impl パッケージに配置されます。
 
 
-これらの規則は必ずしもお客様の実装に適用されるわけではありませんが、コードを維持できるように、規則を定義し、それに従うことが重要です。
+これらの規則は必ずしもお客様の実装に適用されるわけではありませんが、コードを保守できる状態に維持できるように、規則を定義し、それに従うことが重要です。
 
 名前を見れば、その目的が明らかになるようにすることが理想的です。名前が明確さに欠けるかどうかを判断するための一般的なコードテストは、変数やメソッドの目的を説明するコメントの有無です。
 
@@ -58,7 +58,7 @@ AEM のコードベースでは、次のような規則が使用されます。
  </tbody>
 </table>
 
-### 繰り返しをしない  {#don-t-repeat-yourself}
+### 繰り返さないでください  {#don-t-repeat-yourself}
 
 DRY（Don&#39;t repeat yourself）は、同じコードセットを繰り返してはならないということです。これは、文字列リテラルなどにも該当します。コードが重複していると、変更が必要な箇所を探し出して削除しなければならない場合に不具合が生じる可能性があります。
 

@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3212'
+source-wordcount: '3156'
 ht-degree: 1%
 
 ---
@@ -158,7 +158,7 @@ Amazon SNS を使用しない場合は、これらの手順をスキップでき
    1. ページの右上にある、「*ID プールを編集»*. ID プール ID が表示されます。 後で使用するために、このテキストを保存します。
    1. 同じページで、「Unauthenticated role」の横のドロップダウンを選択し、Cognito_&lt;pool name=&quot;&quot;>UNAUTHrole が選択されています。 変更を保存します。
 
-1. **アクセスを設定**
+1. **アクセスの設定**
 
    1. にログインします。 [ID とアクセスの管理](https://console.aws.amazon.com/iam/home) (IAM)。
    1. 「ロール」を選択します。
@@ -169,7 +169,7 @@ Amazon SNS を使用しない場合は、これらの手順をスキップでき
    <table>
     <tbody>
      <tr>
-     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "ステートメント": [</p> <p> {</p> <p> "アクション": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effect": "Allow",</p> <p> "リソース": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
+     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "ステートメント": [</p> <p> {</p> <p> "アクション": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effect": "Allow",</p> <p> "Resource": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
      </tr>
     </tbody>
     </table>
@@ -288,7 +288,7 @@ PhoneGap を使用してアプリを構築してデプロイするには、2 つ
 1. 通知を送信
 
    * アプリダッシュボードで、プッシュ通知タイルを見つけます。
-   * 通知を選択するか、右下の「詳細」ボタン ( ) をクリックします。.) をクリックして、通知のリストを表示します。 このリストは、通知の送信準備ができたか、既に送信されたか、送信中にエラーが発生したかを示します。
+   * 通知を選択するか、右下の「詳細」ボタン ( . ) をクリックします。) をクリックして、通知のリストを表示します。 このリストは、通知の送信準備ができたか、既に送信されたか、送信中にエラーが発生したかを示します。
    * 1 つの通知用のチェックボックスを選択し（のみ）、リストの上の「通知を送信」ボタンをクリックします。 表示されるダイアログで、「キャンセル」または「送信」の通知を実行できます。
 
 1. 結果の処理
@@ -354,7 +354,7 @@ AMS プッシュ通知の場合、通知は AMS サーバーから構成およ�
    >
    >リンクボタンのテキストは 20 文字に制限されています。
    >
-   >エンドユーザーがアプリケーションの最新バージョンを持っておらず、リンクされたパスを使用できない場合は、ディープリンクのアクションを確認すると、ユーザーはアプリのメインページに移動します。
+   >エンドユーザーがアプリケーションの最新バージョンを持っておらず、リンクされたパスが使用できない場合、ディープリンクのアクションを確認すると、ユーザーはアプリのメインページに移動します。
 
 1. 次を入力します。 **テキストの詳細** （内） **通知の作成ウィザード** をクリックします。 **作成**.
 

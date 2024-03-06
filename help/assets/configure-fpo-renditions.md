@@ -6,9 +6,9 @@ role: Admin
 feature: Renditions
 exl-id: 1e4ddd73-a31c-4ddd-94eb-1dac6a4835b3
 hide: true
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
-workflow-type: ht
-source-wordcount: '1072'
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+workflow-type: tm+mt
+source-wordcount: '1063'
 ht-degree: 100%
 
 ---

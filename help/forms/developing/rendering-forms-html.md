@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4102'
-ht-degree: 80%
+source-wordcount: '4104'
+ht-degree: 79%
 
 ---
 
@@ -97,9 +97,9 @@ form:ready イベントに含まれるフォームスクリプトは、フォー
 
 最初に、フォームを送信する前に呼び出されるコールバック関数を定義します。関数の名前はです `_user_onsubmit`. この関数は例外をスローしないと想定されます。例外がスローされても無視されます。JavaScript 関数は HTML の HEAD セクションに配置することをお勧めしますが、`xfasubset.js` を含むスクリプトタグが終わる前であれば任意の場所で宣言できます。
 
-フォームサーバーがドロップダウンリストを含む XDP をレンダリングすると、ドロップダウンリストの作成に加えて、2 つの非表示のテキストフィールドも作成されます。これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。したがって、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。 毎回それほど多くのデータを送信したくない場合は、それを無効にするカスタムスクリプトを作成できます。例：ドロップダウンリストの名前は、 `drpOrderedByStateProv` サブフォームヘッダーの下にラップされます。 HTML 入力要素の名前は `header[0].drpOrderedByStateProv[0]` になります。ドロップダウンのデータを格納して送信する非表示フィールドの名前には、`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]` という名前が付けられます。
+フォームサーバーがドロップダウンリストを含む XDP をレンダリングすると、ドロップダウンリストの作成に加えて、2 つの非表示のテキストフィールドも作成されます。これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。したがって、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。 毎回それほど多くのデータを送信したくない場合は、それを無効にするカスタムスクリプトを作成できます。 例：ドロップダウンリストの名前は、 `drpOrderedByStateProv` サブフォームヘッダーの下にラップされます。 HTML 入力要素の名前は `header[0].drpOrderedByStateProv[0]` になります。ドロップダウンのデータを格納して送信する非表示フィールドの名前には、`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]` という名前が付けられます。
 
-データをポストしない場合は、次の方法でこれらの入力要素を無効にできます。`var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
+データを投稿しない場合は、次の方法でこれらの入力要素を無効にできます。 `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
 ```java
 header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]

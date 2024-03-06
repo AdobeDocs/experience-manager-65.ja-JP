@@ -7,10 +7,10 @@ topic-tags: developing
 content-type: reference
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 3%
+source-wordcount: '690'
+ht-degree: 1%
 
 ---
 
@@ -26,8 +26,8 @@ The `categories` このクライアントライブラリに与えられるプロ
 
 1. 右クリック `an-scf-sandbox` を選択し、 `Create Node`
 
-   * 名前：`clientlibs`
-   * 型：`cq:ClientLibraryFolder`
+   * 名前： `clientlibs`
+   * 型： `cq:ClientLibraryFolder`
 
 1. クリック **OK**
 
@@ -35,8 +35,8 @@ The `categories` このクライアントライブラリに与えられるプロ
 
 Adobe Analytics の **プロパティ** 新しい `clientlibs` ノードに、 **カテゴリ** プロパティ：
 
-* 名前：**categories**
-* タイプ：**String**
+* 名前： **カテゴリ**
+* 型： **文字列**
 * 値： **apps.an-scf-sandbox**
 * クリック **追加**
 * クリック **すべて保存**
@@ -81,9 +81,9 @@ Adobe Analytics の **プロパティ** タブ `clientlibs` ノードで、複�
 
 この場合は、すべてを含め、作成者の clientlib であるより基本的な SCF クライアントライブラリをお勧めします。
 
-* 名前：**`embed`**
-* 型：**`String`**
-* Click **`Multi`**
+* 名前： **`embed`**
+* 型： **`String`**
+* クリック **`Multi`**
 * 値：**`cq.social.scf`**
 
    * ダイアログが表示され、 **`+`** 各エントリの後に、次の clientlib カテゴリを追加します。
@@ -151,7 +151,7 @@ include ステートメントは、 `head` のセクション `html` スクリ�
 
 この時点で、最小限のサンドボックスが存在します。 再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにできるように、パッケージとして保存する価値がある場合があります。 次に、フォルダー crx-quickstart/の名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールします。これらの最も基本的な手順を繰り返す必要はありません。
 
-このパッケージは、 [サンプルページの作成](/help/communities/create-sample-page.md) 飛び込んで遊び始めるのを待ちきれない人向けのチュートリアル！
+このパッケージは、 [サンプルページの作成](/help/communities/create-sample-page.md) 飛び込んで遊び始めるのを待ちきれない人向けのチュートリアルです。
 
 パッケージを作成するには：
 

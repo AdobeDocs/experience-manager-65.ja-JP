@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '965'
 ht-degree: 80%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 80%
 
 ## アクセス要件 {#access-requirements}
 
-プロジェクトは標準の AEM 機能なので、追加の設定は必要ありません。
+標準のAEM機能をプロジェクトするので、追加の設定は必要ありません。
 
 ただし、プロジェクト内のユーザーがプロジェクトを使用中（プロジェクトの作成、タスクやワークフローの作成、チームの表示と管理など）に、他のユーザーやグループを表示するには、`/home/users` および `/home/groups` に対する読み取りアクセス権が必要です。
 
@@ -39,7 +39,7 @@ ht-degree: 80%
 
    ![プロジェクトを作成ウィザード](assets/create-project-wizard.png)
 
-1. 次を定義： **タイトル** および **説明** をクリックし、 **サムネール** 画像（必要に応じて） ユーザーおよびユーザーが属するグループを追加または削除することもできます。
+1. 「**タイトル**」と「**説明**」を定義し、必要に応じて「**サムネール**」画像を追加します。ユーザーおよびユーザーが属するグループを追加または削除することもできます。
 
    ![ウィザードのプロパティ手順](assets/create-project-wizard-properties.png)
 

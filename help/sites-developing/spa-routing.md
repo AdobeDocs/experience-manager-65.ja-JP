@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '488'
 ht-degree: 86%
 
 ---
@@ -43,7 +43,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 
 >[!CAUTION]
 >
->`ModelRouter` の現在のバージョンでは、Sling Model エントリポイントの実際のリソースパスを指す URL のみ使用できます。バニティ URL やエイリアスの使用はサポートしていません。
+>`ModelRouter` の現在のバージョンでは、Sling Model エントリポイントの実際のリソースパスを指す URL のみ使用できます。バニティ URL またはエイリアスの使用はサポートされません。
 
 ## ルーティングのコントラクト {#routing-contract}
 

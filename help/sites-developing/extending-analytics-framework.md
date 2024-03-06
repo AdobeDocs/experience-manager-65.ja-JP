@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1609'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -59,7 +59,7 @@ s.doPlugins=s_doPlugins;
 
 ## Adobe Analytics プロパティの設定 {#configuring-adobe-analytics-properties}
 
-Adobe Analytics内には、フレームワークで設定できる定義済みの変数がいくつかあります。 変数 **charset**、**cookieLifetime**、**currencyCode** および **trackInlineStats** は、**Analytics 一般設定**&#x200B;リストにデフォルトで含まれています。
+Adobe Analytics内には、フレームワークで設定できる定義済みの変数がいくつかあります。 The **charset**, **cookieLifetime**, **currencyCode**、および **trackInlineStats** 変数は、 **一般的な Analytics 設定** リストに表示されます。
 
 ![aa-22](assets/aa-22.png)
 
@@ -105,7 +105,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 >[!CAUTION]
 >
->このリストに含まれる変数の一部は次のとおりです。 **必須** ( 例えば、Adobe Analyticsの呼び出しが **currencyCode**, **charSet**)
+>このリストに含まれる変数の一部は次のとおりです。 **必須** Adobe Analyticsの呼び出しが正しく機能する場合 ( 例： **currencyCode**, **charSet**) をクリックします。
 >
 >そのため、フレームワーク自体から変数を削除しても、Adobe Analytics の呼び出しがおこなわれると、デフォルト値を持つ変数が付加されます。
 

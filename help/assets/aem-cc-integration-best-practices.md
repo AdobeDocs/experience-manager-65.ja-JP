@@ -7,10 +7,10 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '3260'
-ht-degree: 93%
+source-wordcount: '3173'
+ht-degree: 91%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 93%
 | 編集 - DAM の外部で作業を進行中 | 対応 - デスクトップに同期しているユーザーの Creative Cloud ストレージアカウントでアセットが入手可能です。 | 対応 | |
 | 編集 - 変更をアップロードする | 対応 - [チェックインアクション](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)（オプションコメント付き） | 対応 | |
 | アップロード - 1 つのファイル | 対応 - 現在のアクティブなドキュメントをアップロードする | 対応 | [Web インターフェイスを使用してアップロード](manage-assets.md#uploading-assets) |
-| アップロード - 複数のファイル／フォルダーの階層構造 | 非対応 | はい | [Web インターフェイスを使用してアップロード](manage-assets.md#uploading-assets)またはカスタムスクリプティングやツールを使用します。 |
+| アップロード - 複数のファイル／フォルダーの階層構造 | 非対応 | はい | [Web インターフェイスを使用してアップロード](manage-assets.md#uploading-assets) またはカスタムスクリプティングやツールを使用します。 |
 | その他 - ユーザーとログイン | Creative Cloud デスクトップアプリケーションにログインした Creative Cloud ユーザーが認識されます（SSO） | [!DNL Experience Manager] ユーザーと資格情報 | 両方のソリューションのユーザーが [!DNL Experience Manager] ユーザークォータに対してカウントされます。 |
 | その他 - ネットワークとアクセス | ネットワークを介してユーザーのデスクトップから [!DNL Experience Manager] デプロイメントにアクセスできる必要があります | ネットワークを介してユーザーのデスクトップから [!DNL Experience Manager] デプロイメントにアクセスできる必要があります | [!DNL Adobe Asset Link] はネットワークプロキシ環境を共有しません。 |
 | その他 - 多数のアセットを移行する | いいえ | 不可 | [Assets 移行ガイド](assets-migration-guide.md) |
@@ -86,12 +86,12 @@ ht-degree: 93%
 * **作業中（WIP）またはクリエイティブ WIP：**&#x200B;アセットライフサイクルのフェーズ。アセットに対してまだ複数の変更が行われている最中であり、通常は、より広範なチームと共有するための準備がまだできていない状態。
 * **クリエイティブレディアセット**：様々なグループと共有する準備ができている、またはクリエイティブチームによりマーケティングチームや LOB チームとの共有用に選択／承認されている [!DNL Assets]。
 * **アセット承認**： 既に DAM にアップロードされているアセットに対して実行される承認プロセス。通常、ブランド承認および法的承認などが含まれます。
-* **最終アセット：**&#x200B;すべての承認／メタデータタグ付けが完了し、より広範なチームで使用する準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
+* **最終アセット：** すべての承認/メタデータのタグ付けを経て、より広範なチームが使用できる状態にあるアセット。 このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
 * **アセットの小規模な更新／変更：**&#x200B;デジタルアセットに対する迅速で小規模な変更。多くの場合、リタッチ作業や小規模な編集の要求、アセットレビューまたは承認に対応するために行われます（例えば、再配置、テキストサイズの変更、彩度／明るさや色の調整など）。
 * **アセットの大規模な更新／変更：**&#x200B;デジタルアセットに加えられる、大規模な作業が必要な変更。その変更作業は比較的長期にわたる場合もあります。通常は複数の変更が含まれます。アセットは、更新中、複数回保存する必要があります。アセットの大規模な更新により、ほとんどの場合、アセットのステージは WIP になります。
 * **DAM：**&#x200B;デジタルアセット管理。このドキュメントでは、特に断りのない限り [!DNL Experience Manager Assets] と同義です。
 * **クリエイティブユーザー：** Creative Cloud のアプリケーションとサービスを使用してデジタルアセットを作成するクリエイティブプロフェッショナル。クリエイティブチームに所属し、Creative Cloud を使用するが、デジタルアセットの作成は行わないメンバー（クリエイティブディレクターやクリエイティブチームマネージャーなど）を含む場合もあります。
-* **DAM ユーザー：** DAM システムの一般的な利用者。組織に応じて、DAM のユーザーにはマーケティング担当者もマーケティング担当以外のユーザーも含まれます ( 例えば、事業部門 (LOB) ユーザー、ライブラリアン、販売担当者など )。
+* **DAM ユーザー：** DAM システムの一般的な利用者。組織によっては、DAM ユーザーには、マーケティング分野のユーザーもマーケティング以外の分野のユーザーも含まれます（例えば、事業部門（LOB）ユーザー、ライブラリアン、販売担当者など）。
 
 ### [!DNL Experience Manager] と [!DNL Creative Cloud] の統合を使用する場合の考慮事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
@@ -117,7 +117,7 @@ ht-degree: 93%
 * Adobe Stock 内のアセットが [!DNL Experience Manager] に保存されると、それらは通常の [!DNL Assets] になり、バイナリが [!DNL Experience Manager] リポジトリに保存されます。[!DNL Adobe Stock] に関係する一部のメタデータが [!DNL Experience Manager] 内のアセットに保存されます。その他の点では、取り込みプロセスは他のあらゆるファイルの場合と同様です。例えば、スマートタグがアクティブな場合、保存時にこれらのアセットにタグが追加されます。
 * [!DNL Experience Manager] に保存されたアセットはコピーであり、[!DNL Adobe Stock] へのリンクではありません。
 
-**[!DNL Adobe Stock] から [!DNL Experience Manager] に保存されたアセットを[!DNL Creative Cloud]** で操作します。この統合は [!DNL Adobe Asset Link] とは独立していますが、[!DNL Adobe Asset Link] は [!DNL Stock] からそのように保存されたこれらのアセットを認識し、[!DNL Photoshop]、[!DNL Illustrator] または [!DNL InDesign] の [!DNL Adobe Asset Link] 拡張 UI でこれらのアセットに追加のメタデータと [!DNL Adobe Stock] ロゴを表示するようにします。[!DNL Experience Manager] に保存された時点で通常のアセットであるため、ファイルを閲覧したり開いたりすることができます。
+**[!DNL Adobe Stock] から [!DNL Experience Manager] に保存されたアセットを[!DNL Creative Cloud]** で操作します。この統合は [!DNL Adobe Asset Link] とは独立していますが、[!DNL Adobe Asset Link] は [!DNL Stock] からそのように保存されたこれらのアセットを認識し、[!DNL Photoshop]、[!DNL Illustrator] または [!DNL InDesign] の [!DNL Adobe Asset Link] 拡張 UI でこれらのアセットに追加のメタデータと [!DNL Adobe Stock] ロゴを表示するようにします。ファイルはに保存すると通常のアセットになるので、参照や開くなどに使用できます。 [!DNL Experience Manager].
 [!DNL Adobe Asset Link] 拡張機能が存在する [!DNL Creative Cloud] アプリケーションで作業するクリエイティブ ユーザーは、[!DNL Adobe Stock] から [!DNL Experience Manager] へすでにライセンスを供与されているアセットにアクセスできるだけでなく、[!DNL Creative Cloud] ライブラリ パネルで [!DNL Adobe Stock] アセットの検索、プレビュー、ライセンスを供与できます。
 [!DNL Adobe Stock] からライセンスを取得して [!DNL Experience Manager] に保存した [!DNL Assets] は、[!DNL Experience Manager Assets] デプロイメントにアクセスする幅広いチームで利用できるようになります。一方、[!DNL Creative Cloud] ライブラリパネルを介して [!DNL Adobe Stock] からアセットのライセンスを取得したクリエイターは、デフォルトでは自分たちの [!DNL Creative Cloud] アカウントでのみ利用できるようになっています。
 
@@ -143,13 +143,13 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 クリエイティブチーム（および組織）は通常、アセットのライフサイクルのステージごとにアセットを保存しようとは考えません。例えば、以下のような場合、アセットは保存されません。
 
-* アセットが未完成である場合、またはアセットのテストが予定されている場合。
+* まだ確定されていないアセット、または実験の対象となっているアセット。
 * アセットがクリエイティブ／内部チームのレビューサイクルで不合格になった場合。
 * 外部チームへの作業を示すのに、問題のアセットよりも適したアセットがある場合。
 
 通常、以下のクラスのアセットが DAM に保存されます。
 
-* 一定の成熟度に到達し、共有する準備ができていると判断されたアセット。
+* 特定の成熟度に達し、共有の準備ができていると見なされるアセット。
 * クリエイティブチームが事前に選択したアセット。
 * マーケティング部門が使用できる、または特定の契約や合意に応じて同部門から要求された、特定の形式のアセット（例えば、RAW ファイルから変換した JPG ファイル、PSD ファイルから作成した TIFF／画像ファイルなど）。
 

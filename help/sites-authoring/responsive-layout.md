@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '1798'
-ht-degree: 91%
+ht-degree: 93%
 
 ---
 
@@ -59,7 +59,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 >[!NOTE]
 >
->Adobe提供 [GitHub ドキュメント](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) フロントエンド開発者がAEMの外部でAEMグリッドを使用できるようにする参照として、レスポンシブレイアウトを使用します。例えば、将来のAEMサイト用に静的HTMLモックアップを作成する場合などです。
+>アドビはフロントエンド開発者用にレスポンシブレイアウトの [GitHub ドキュメント](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)をリファレンスとして提供しており、フロントエンド開発者は AEM の外部で AEM グリッドを使用できます（例えば、今後の AEM サイトの静的 HTML モックアップを作成する場合）。
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ AEM では、デバイスの幅に応じたレイアウトを定義できます�
 
 ## エミュレートするデバイスの選択 {#selecting-a-device-to-emulate}
 
-1. 必要なページを編集用に開きます。例：
+1. 必要なページを編集用に開きます。次に例を示します。
 
    `http://localhost:4502/editor.html/content/we-retail/us/en/experience.html`
 

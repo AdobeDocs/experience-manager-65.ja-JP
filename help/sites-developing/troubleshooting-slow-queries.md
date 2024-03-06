@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 4289c68feb51842b5649f7cff73c5c4bc38add6c
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2237'
 ht-degree: 93%
 
 ---
@@ -121,7 +121,7 @@ cq:tags インデックスルールを追加した後
 
 インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリで返されないようにしてください。これは、コンテンツ構造を改善し、クエリに関連するパス制限を提供することで実行できます。
 
-`org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex` の DEBUG ログを有効にすると、Lucene インデックスが多数の結果を返して小さなサブセットをクエリ結果として返しているかどうかを識別するのに便利です。これにより、インデックスから読み込まれているドキュメントの数を確認できます。最終結果の数と読み込まれたドキュメントの数を比較すると釣り合うはずです。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
+`org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex` の DEBUG ログを有効にすると、Lucene インデックスが多数の結果を返して小さなサブセットをクエリ結果として返しているかどうかを識別するのに便利です。これにより、インデックスから読み込まれているドキュメントの数を確認できます。結果の数と読み込まれたドキュメントの数を比較すると、結果は不釣り合いにならないはずです。 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
 #### デプロイメント後 {#post-deployment-1}
 

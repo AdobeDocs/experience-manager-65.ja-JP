@@ -7,10 +7,10 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4941'
-ht-degree: 88%
+source-wordcount: '4920'
+ht-degree: 85%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 88%
 >
 >この記事では、JSP を使用して、クラシック UI に基づいた web サイトを作成する方法について説明します。Adobeでは、Web サイトに最新のAdobe Experience Manager(AEM) テクノロジーを使用することをお勧めします（記事で詳しく説明）。 [AEM Sitesの開発の手引き](/help/sites-developing/getting-started.md).
 
-このチュートリアルでは、AEM で完全な機能を備えた web サイトを作成できます. Web サイトは汎用の web サイトに基づき、主に web 開発者をターゲットにしています。すべての開発は、1 つのオーサー環境内で行われます。
+このチュートリアルでは、AEMで完全な機能を備えた Web サイトを作成できます。 Web サイトは汎用の web サイトに基づき、主に web 開発者をターゲットにしています。すべての開発は、1 つのオーサー環境内で行われます。
 
 このチュートリアルでは、次の方法について説明します。
 
@@ -110,7 +110,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 * サンプル Web サイト内のコンテンツページの作成に使用される contentpage テンプレート。
 * コンテンツのページをレンダリングするために使用される contentpage コンポーネント。
-* contentpage スクリプト.
+* contentpage スクリプト。
 
 #### contentpage テンプレートの作成 {#creating-the-contentpage-template}
 
@@ -137,11 +137,11 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-   許可されているパスプロパティの値は、 *正規表現。* この式と一致するパスを持つページは、このテンプレートを使用できます。この場合、正規表現は **/content** フォルダーとすべてのサブページ。
+   許可されているパスプロパティの値は、 *正規表現。* この式と一致するパスを持つページは、このテンプレートを使用できます。 この場合、正規表現は **/content** フォルダーとすべてのサブページ。
 
    作成者が /content の下にページを作成すると、使用可能なテンプレートのリストに **contentpage** テンプレートが表示されます。
 
-1. **許可された親**&#x200B;パネルおよび&#x200B;**許可されている子**&#x200B;パネルで「**次へ**」をクリックして、「**OK**」をクリックします。CRXDE Lite で、「**すべて保存**」をクリックします。
+1. クリック **次へ** （内） **許可された親** および **許可されている子** パネルとクリック **OK**. CRXDE Liteで、 **すべて保存**.
 
    ![chlimage_1-31](assets/chlimage_1-31.png)
 
@@ -162,7 +162,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    この一致は、テンプレートをコンポーネントと結び付けるものなので、Web サイトを正常に機能させるために重要です。
 
-1. 「**次へ**」を数回クリックしてダイアログの許可されている子パネルを表示し、「**OK**」をクリックします。CRXDE Lite で、「**すべて保存**」をクリックします。
+1. クリック **次へ** ダイアログの「許可されている子」パネルが表示されるまで、をクリックします。次に、 **OK**. CRXDE Liteで、 **すべて保存**.
 
    この時点で構造は次のようになります。
 
@@ -226,7 +226,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
-1. 「**作成**」をクリックします。フォルダーツリーで、**/Websites/My Website** ページを選択して、**新規**／**新しいページ**&#x200B;をクリックします。
+1. 「**作成**」をクリックします。フォルダーツリーで、 **/Web サイト/My Website** ページを開き、をクリックします。 **新規** > **新しいページ**.
 1. ページを作成ダイアログで、次のプロパティ値を入力し、「作成」をクリックします。
 
    * タイトル：English
@@ -478,7 +478,7 @@ topnav を contentpage コンポーネントに含めるには、次の操作を
 
 1. ブラウザーで、**製品**&#x200B;ページを開きます。
 1. サイドキックの「**ページ**」タブで、「**ページのプロパティ**」をクリックします。
-1. ダイアログの「基本」タブで「**他のタイトルと説明**」を展開して、「**サブタイトル**」プロパティに「 **私たちの活動**」と入力します。「**OK**」をクリックします。
+1. ダイアログの「基本」タブで、を展開します。 **その他のタイトルと説明、** そして **字幕** プロパティ、タイプ **我々が何をするか**. 「**OK**」をクリックします。
 1. ここまでの手順を繰り返して、「**私たちのサービス**」というサブタイトルを&#x200B;**サービス**&#x200B;ページに追加します。
 1. ここまでの手順を繰り返して、「**私たちが得た信頼**」というサブタイトルを&#x200B;**顧客**&#x200B;ページに追加します。
 
@@ -870,7 +870,7 @@ contentpage コンポーネントに listchildren コンポーネントを組み
 この節では、ホームページへのリンクを含むロゴ画像を表示するスクリプトを作成する方法について説明します。
 
 1. CRXDE Lite で、`/apps/mywebsite/components/logo` の下の `logo.jsp` ファイルを開きます。
-1. 以下のコードでは、サイトのホームページへのリンクが作成され、ロゴイメージへの参照が追加されます。このコードを `logo.jsp` にコピーします。
+1. 次のコードは、サイトのホームページへのリンクを作成し、ロゴイメージへの参照を追加します。 コードをにコピーします。 `logo.jsp`:
 
    ```xml
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -906,7 +906,7 @@ contentpage コンポーネントに listchildren コンポーネントを組み
 
 #### ロゴデザインダイアログの作成 {#creating-the-logo-design-dialog}
 
-デザインモードでロゴコンポーネントを設定するためのダイアログを作成します。デザインモードのダイアログには、`design_dialog` という名前を付ける必要があります。
+デザインモードでロゴコンポーネントを設定するためのダイアログを作成します。 デザインモードのダイアログノードには、名前を付ける必要があります `design_dialog`.
 
 1. logo コンポーネントの下に dialog ノードを作成します。
 
@@ -968,7 +968,7 @@ public class img_GET extends AbstractImageServlet {
 
     protected Layer createLayer(ImageContext c)
             throws RepositoryException, IOException {
-        /* don't create the layer yet. handle everything later */
+        /* do not create the layer yet. handle everything later */
         return null;
     }
 

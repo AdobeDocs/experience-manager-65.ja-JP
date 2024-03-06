@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 91%
+source-wordcount: '727'
+ht-degree: 88%
 
 ---
 
@@ -35,7 +35,7 @@ SPA のページコンポーネントは、JSP ファイルまたは HTL のフ�
 * テンプレートが編集可能な場合は、クライアントライブラリカテゴリをページポリシーに追加します。
 * ページコンポーネントの `customfooterlibs.html` を使用したクライアントライブラリカテゴリを追加します。
 
-`cq.authoring.pagemodel.messaging` カテゴリの組み込みをページエディターのコンテキストに制限することを忘れないでください。
+必ず `cq.authoring.pagemodel.messaging` カテゴリをページエディターのコンテキストに追加します。
 
 ## 通信データタイプ {#communication-data-type}
 
@@ -89,7 +89,7 @@ SPA コンテンツを記述するメタリソースプロパティです。
 >
 >このドキュメントでは、We.Retail ジャーナルアプリケーションをデモの目的でのみ使用します。どのプロジェクト作業にも使用しないでください。
 >
->任意のAEMプロジェクトでは、 [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja):React またはAngularを使用したSPAプロジェクトをサポートし、SPA SDK を使用します。AEMのすべてのSPAプロジェクトは、SPA Starter Kit 用の Maven アーキタイプに基づく必要があります。
+>任意のAEMプロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja):React またはAngularを使用したSPAプロジェクトをサポートし、SPA SDK を使用します。AEMのすべてのSPAプロジェクトは、SPA Starter Kit 用の Maven アーキタイプに基づく必要があります。
 
 ## ページエディターオーバーレイの同期 {#page-editor-overlay-synchronization}
 

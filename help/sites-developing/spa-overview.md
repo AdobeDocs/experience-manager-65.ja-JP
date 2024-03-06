@@ -7,10 +7,10 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 90%
+source-wordcount: '1646'
+ht-degree: 91%
 
 ---
 
@@ -39,7 +39,7 @@ AEM の SPA について詳しくは、次のドキュメントを参照して�
 
 ## デザイン {#design}
 
-SPAのページコンポーネントは、JSP ファイルまたは HTL ファイルを介して子コンポーネントのHTML要素を提供しません。 この処理は SPA フレームワークに委任されます。子コンポーネントまたはモデルの表現は、JCR から JSON データ構造として取得されます。次に、その構造に従って、SPA コンポーネントがページに追加されます。この動作により、ページコンポーネントのボディの初期構成が、SPA 以外のコンポーネントの場合とは違う構成になります。
+SPA のページコンポーネントは、JSP ファイルまたは HTL ファイルを介して子コンポーネントの HTML 要素を提供しません。この処理は SPA フレームワークに委任されます。子コンポーネントまたはモデルの表現は、JCR から JSON データ構造として取得されます。次に、その構造に従って、SPA コンポーネントがページに追加されます。この動作により、ページコンポーネントのボディの初期構成が、SPA 以外のコンポーネントの場合とは違う構成になります。
 
 ### ページモデルの管理  {#page-model-management}
 

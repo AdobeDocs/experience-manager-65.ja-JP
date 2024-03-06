@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '4431'
-ht-degree: 97%
+source-wordcount: '4433'
+ht-degree: 95%
 
 ---
 
@@ -515,7 +515,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 ### アセット作成ページでのカスタムプロパティの表示 {#display-custom-properties-on-the-asset-creation-page}
 
-アセット作成ページにはタブレイアウトがないので、デフォルトでは、新しいタブに追加されたカスタムプロパティはプロパティページにのみ表示され、アセット作成ページには表示されません。アセット作成ページに他のプロパティと共にカスタムプロパティを表示するには、次の手順を実行する必要があります。
+デフォルトでは、新しいタブに追加されたカスタムプロパティは、プロパティページにのみ表示され、アセット作成ページにはタブレイアウトがないので、アセット作成ページには表示されません。 アセット作成ページに他のプロパティと共にカスタムプロパティを表示するには、次の手順を実行する必要があります。
 
 1. 以下のパスにある items フォルダーを右クリックしてから、「**ノードをオーバーレイ**」を選択してください。
 
@@ -756,7 +756,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
 ## カスタムプロパティの検索を有効にする {#enable-search-for-custom-properties}
 
-デフォルトでは、フルテキスト検索には、CRX/DE を使用して UI に追加したカスタムプロパティは含まれません。
+デフォルトでは、全文検索には、CRX/DE を使用して UI に追加したカスタムプロパティは含まれません。
 
 カスタムプロパティを検索に含めるには、カスタムプロパティのインデックス作成を許可する必要があります。
 

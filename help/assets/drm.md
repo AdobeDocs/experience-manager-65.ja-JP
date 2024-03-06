@@ -6,10 +6,10 @@ role: User, Admin
 feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
-source-wordcount: '1421'
-ht-degree: 100%
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+workflow-type: tm+mt
+source-wordcount: '1425'
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ ht-degree: 100%
 [!DNL Assets] コンソールには、アセットの様々な状態を表示できます。特定のアセットの現在の状態により、カード表示にその状態について記述されたラベル（期限切れ、公開済み、承認済み、拒否など）が表示されます。
 
 1. [!DNL Assets] ユーザーインターフェイスでアセットを選択します。
-1. ツールバーの「**[!UICONTROL 公開]**」をクリックします。ツールバーに「**公開**」が表示されていない場合は、ツールバーの「**[!UICONTROL 詳細]**」をクリックして&#x200B;**[!UICONTROL 公開]**／![公開オプション](assets/do-not-localize/publish-globe.png)を確認します。
+1. ツールバーの「**[!UICONTROL 公開]**」をクリックします。表示されない **公開** ツールバーで、 **[!UICONTROL その他]** ツールバーで、 **[!UICONTROL 公開]** ![公開オプション](assets/do-not-localize/publish-globe.png) オプション。
 1. メニューの「**[!UICONTROL 公開]**」を選択して、確認ダイアログを閉じます。
 1. 選択モードを終了します。アセットの公開ステータスは、カード表示のアセットのサムネールの下部に表示されます。リスト表示では、「公開」列にアセットが公開された時間が表示されます。
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 98%
+source-wordcount: '1118'
+ht-degree: 96%
 
 ---
 
@@ -188,7 +188,7 @@ macOS では、WebDAV を介して接続するために必要な設定手順は�
 
 ### Linux® {#linux}
 
-Linux® では、WebDAV を介して接続するために必要な設定は特にありませんが、接続を確立するためにいくつかの手順が必要になり、デスクトップ環境によって手順が異なります。
+Linux®で WebDAV を介して接続する場合は、設定は必要ありませんが、デスクトップ環境によって異なる接続を行うには、いくつかの手順が必要です。
 
 #### GNOME {#gnome}
 

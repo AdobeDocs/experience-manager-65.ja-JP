@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
 workflow-type: tm+mt
-source-wordcount: '1697'
-ht-degree: 91%
+source-wordcount: '1696'
+ht-degree: 90%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 91%
 
 #### 明示的 {#explicit}
 
-* カスタマイズ：様々なコンテンツソースからユーザーが選択します。
+* カスタマイズ：ユーザーが選択したコンテンツソースから選択します。
 
 #### 暗黙的 {#implicit}
 

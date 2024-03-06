@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 99%
+source-wordcount: '1543'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 99%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/custom-submit-action-form.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-アダプティブフォームでは、ユーザー指定のデータを処理するために、送信アクションが必要となります。送信アクションとは、アダプティブフォームを使って送信されるデータに対して実行されるタスクを決定するものです。Adobe Experience Manager（AEM）には、ユーザーによって送信されたデータを使って実行できるカスタムタスクを示す [OOTB 送信アクション](../../forms/using/configuring-submit-actions.md)が含まれています。例えば、メール送信やデータの格納などのタスクを実行することができます。
+アダプティブフォームでは、ユーザー指定のデータを処理するために、送信アクションが必要となります。送信アクションとは、アダプティブフォームを使って送信されるデータに対して実行されるタスクを決定するものです。Adobe Experience Manager (AEM) の [標準の送信アクション](../../forms/using/configuring-submit-actions.md) ユーザーが送信したデータを使用して実行できるカスタムタスクを示す 例えば、メール送信やデータの格納などのタスクを実行することができます。
 
 ## 送信アクションのワークフロー {#workflow-for-a-submit-action}
 
@@ -84,7 +84,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 >[!NOTE]
 >
->リダイレクト URL は、「ありがとうございます」ページ設定を使って作成者が指定します。[OOTB 送信アクション](../../forms/using/configuring-submit-actions.md)は、リダイレクト URL を使って、転送パスによって参照されるリソースからブラウザーをリダイレクトします。
+>リダイレクト URL は、「ありがとうございます」ページ設定を使って作成者が指定します。[標準の送信アクション](../../forms/using/configuring-submit-actions.md) リダイレクト URL を使用して、転送パスが参照するリソースからブラウザーをリダイレクトします。
 >
 >リクエストをリソースまたはサーブレットに転送するカスタム送信アクションを作成することができます。転送パスのリソース処理を実行するスクリプトによっておこなわれるリダイレクト URL へのリクエストのリダイレクトは、処理が完了したときにおこなわれるように設定することをお勧めします。
 
@@ -99,11 +99,11 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
    * 文字列型で値が **fd/af/components/guidesubmittype** の **guideComponentType**
    * 送信アクションが適用されるアダプティブフォームのタイプを指定する文字列型の **guideDataModel****xfa** は、XFA ベースのアダプティブフォームでサポートされており、また **xsd** は、XSD ベースのアダプティブフォームでサポートされています。**basic** は、XDP や XSD を使用しないアダプティブフォームでサポートされています。複数のタイプのアダプティブフォームでのアクションを表示するには、対応する文字列を追加します。各文字列はカンマで区切ります。例えば、XFA および XSD ベースのアダプティブフォームでアクションを表示したい場合、**xfa** および **xsd** を値にそれぞれ指定します。
 
-   * 文字列型の **jcr:description**。このプロパティの値は、アダプティブフォーム編集ダイアログの送信アクションタブにある送信アクションリストに表示されます。OOTB アクションは、**/libs/fd/af/components/guidesubmittype** にある CRX リポジトリに存在します。
+   * 文字列型の **jcr:description**。このプロパティの値は、アダプティブフォーム編集ダイアログボックスの「送信アクション」タブにある「送信アクション」リストに表示されます。 CRX リポジトリ内の場所に、標準のアクションが存在します。 **/libs/fd/af/components/guidesubmittype**.
 
 ## カスタム送信アクションの作成 {#creating-a-custom-submit-action}
 
-次の手順を実行し、CRX リポジトリにデータを保存した後、メール送信をおこなうカスタム送信アクションを作成します。アダプティブフォームには、CRX リポジトリにデータを保存する OOTB の送信アクション Store Content（廃止）が含まれています。さらに、CQ には、メール送信に使用される [Mail](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) API が含まれています。Mail API を使用する前に、システムコンソールを通して Day CQ Mail サービスを[設定](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&amp;wcmmode=disabled)します。リポジトリーにデータを保存するには、コンテンツを格納アクション（非推奨）を再利用できます。コンテンツを格納アクション（非推奨）は、CRX リポジトリーの /libs/fd/af/components/guidesubmittype/store にあります。
+次の手順を実行し、CRX リポジトリにデータを保存した後、メール送信をおこなうカスタム送信アクションを作成します。アダプティブフォームには、CRX リポジトリにデータを保存する、標準の送信アクション Store Content（非推奨）が含まれています。 さらに、CQ には、メール送信に使用される [Mail](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) API が含まれています。Mail API を使用する前に、システムコンソールを通して Day CQ Mail サービスを[設定](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&amp;wcmmode=disabled)します。リポジトリーにデータを保存するには、コンテンツを格納アクション（非推奨）を再利用できます。コンテンツを格納アクション（非推奨）は、CRX リポジトリーの /libs/fd/af/components/guidesubmittype/store にあります。
 
 1. URL https://&lt;server>:&lt;port>/crx/de/index.jspから、CRXDE Lite にログインします。/apps/custom_submit_action フォルダー内に sling:Folder プロパティを持つノードを作成し、名前を store_and_mail に設定します。custom_submit_action フォルダーが存在しない場合は作成します。
 
@@ -139,7 +139,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    post.POST.jsp スクリプトをアクションに追加します（/apps/custom_submit_action/store_and_mail/）。
 
-   OOTB の格納アクション（post.POST.jsp スクリプト）を実行します。CQ がコード内で提供する [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)（java.lang.String、java.lang.String、org.apache.sling.api.resource.Resource、org.apache.sling.api.SlingHttpServletRequest、org.apache.sling.api.SlingHttpServletResponse）API を、格納アクション内で実行します。次のコードを JSP ファイルに追加します。
+   そのまま使用できるストアアクション (post.POST.jsp スクリプト ) を実行します。 CQ がコード内で提供する [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)（java.lang.String、java.lang.String、org.apache.sling.api.resource.Resource、org.apache.sling.api.SlingHttpServletRequest、org.apache.sling.api.SlingHttpServletResponse）API を、格納アクション内で実行します。次のコードを JSP ファイルに追加します。
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 

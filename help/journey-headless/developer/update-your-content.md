@@ -2,7 +2,7 @@
 title: AEM Assets API を使用してコンテンツをアップデートする方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、REST API を使用してコンテンツフラグメントのコンテンツにアクセスし、アップデートする方法について説明します。
 exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 98%
@@ -262,7 +262,7 @@ Assets REST API は `/api/assets` エンドポイントを使用しており、�
 
 `GET /{cfParentPath}/{cfName}.json`
 
-例：
+次に例を示します。
 
 `http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
@@ -302,7 +302,7 @@ AEM Assets REST API の使用の詳細については、次を参照してくだ
 * Adobe Experience Manager Assets HTTP API（その他のリソース）
 * AEM Assets HTTP API でのコンテンツフラグメントのサポート（その他のリソース）
 
-## 次のステップ {#whats-next}
+## 次の手順 {#whats-next}
 
 これで、ここでの AEM ヘッドレスデベロッパージャーニーは完了です。次ができるようになったはずです。
 
@@ -313,7 +313,7 @@ AEM Assets REST API の使用の詳細については、次を参照してくだ
 * Have experience with sample code and know how the API works in practice.
 -->
 
-<!-- The "How to put it all together" page isn't going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
+<!-- The "How to put it all together" page is not going to be published until the first public release of the Headless SDK. Temporarily commenting out the reference below. -->
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 

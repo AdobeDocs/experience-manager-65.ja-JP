@@ -6,9 +6,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2973'
+source-wordcount: '2971'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ ht-degree: 0%
 
 * ハンドラーはを実装する必要があります *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接またはを実行するクラスの拡張）
 * ハンドラーは拡張できます *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
-* ハンドラーは、ContentSync キャッシュを更新した場合にのみ true を報告する必要があります。 誤って true とレポートされた場合、実際に更新が行われなかったときにAEMで更新が作成されます。
+* ハンドラーは、ContentSync キャッシュを更新した場合にのみ true を報告する必要があります。 誤って true とレポートされた場合、AEMは、実際に更新がおこなわれなかったときに更新を作成します。
 * ハンドラーは、コンテンツが変更された場合にのみキャッシュを更新する必要があります。 ホワイトが不要な場合は、キャッシュに書き込まないでください。 その結果、不要な更新が作成されます。
 
 >[!NOTE]
 >
->有効にする *ContentSync デバッグログ* パッケージの OSGI ロガー設定を使用 *com.day.cq.contentsync*. これにより、実行されたハンドラーと、キャッシュを更新し、キャッシュの更新を報告したかどうかを追跡できます。
+>有効にする *ContentSync デバッグログ* パッケージの OSGI ロガー設定を使用 *com.day.cq.contentsync*. これにより、実行したハンドラーを追跡し、キャッシュを更新したか、キャッシュの更新をレポートしたかを追跡できます。
 
 ## コンテンツ同期コンテンツの設定 {#configuring-the-content-sync-content}
 

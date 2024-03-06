@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 78%
+source-wordcount: '479'
+ht-degree: 62%
 
 ---
 
 # ビデオコンポーネントの設定 {#configure-the-video-component}
 
-[ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video)を使用すると、事前に定義された標準搭載（OOTB）のビデオアセットをページに配置できます。
+The [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) では、事前に定義された標準搭載のビデオアセットをページに配置できます。
 
 適切なトランスコードを行うために、管理者が FFmpeg を個別にインストールします。詳しくは、[FFmpeg のインストールと AEM の設定](#install-ffmpeg)を参照してください。HTML5 要素と共に使用する場合、管理者は[ビデオプロファイルの設定](#configure-video-profiles)も実施してください。
 
@@ -81,4 +81,4 @@ FFmpeg をにインストールするには、以下を実行します。 **macO
 
 >[!NOTE]
 >
->AEM インスタンスをアップグレードしても、標準（OOTB）ワークフローモデルへの変更は維持されません。アドビでは、変更したワークフローモデルを編集する前にコピーすることをお勧めします。例えば、[!UICONTROL DAM アセットの更新]モデルの FFmpeg トランスコーディング手順を修正する前に OOTB [!UICONTROL DAM アセットの更新]モデルをコピーして、アップグレード前に存在していたビデオプロファイル名を選択します。その後、`/apps` ノードをオーバーレイして、AEM で OOTB モデルへのカスタム変更を取得できます。
+>標準搭載のデフォルトのワークフローモデルに対する変更は、AEMインスタンスをアップグレードしても保持されません。 アドビでは、変更したワークフローモデルを編集する前にコピーすることをお勧めします。例えば、標準搭載のをコピーするには、 [!UICONTROL DAM アセットの更新] モデルを編集してから、 [!UICONTROL DAM アセットの更新] モデルを使用して、アップグレード前に存在したビデオプロファイル名を選択します。 次に、 `/apps` ノードを使用して、AEMが標準モデルに対するカスタムの変更を取得できるようにします。

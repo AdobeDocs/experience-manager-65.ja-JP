@@ -7,10 +7,10 @@ topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 0a4aca939c564720f63f055e9522e56942eaa128
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 1%
+source-wordcount: '796'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +56,7 @@ Rebekah Larsen (`rebekah.larsen@trashymail.com`) は、 [メンバーコンソ�
 
    * 本文のテキストを入力
 
-     毎年ハチドリの餌を吊り上げる時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ もっと早く変更しなければなりませんか？
+     毎年ハチドリの餌をつるしている時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ もっと早く変更しなければなりませんか？
 
    * 投稿を選択
    * ログアウトを選択
@@ -97,7 +97,7 @@ Rebekah Larsen (`rebekah.larsen@trashymail.com`) は、 [メンバーコンソ�
 
 公開時に、Boyd Larsen としてログインし、を選択してスレッドにアクセスします。 `Forum`を、 `Read more` 蜂雀の巣箱のために
 
-注意:
+注意：
 
 * Boyd はフォーラムに参加していません。
 * Boyd は何も削除できません。
@@ -113,7 +113,7 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 管理者 (admin) としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細を表示」を選択します。
 
-注意:
+注意：
 
 * 管理者は、フラグ設定、削除、編集、拒否、切り取り、閉じる、ピン、機能を実行できます。
 * 管理者は「管理」を選択してモデレートコンソールにアクセスできます。
@@ -126,7 +126,7 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 検索フィルターは、開く/閉じるを切り替えるサイドパネルです。
 
-ログアウト.
+ログアウトします。
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
@@ -134,7 +134,7 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 Aaron McDonald (`aaron.mcdonal@mailinator.com`) をクリックし、コミュニティモデレーターを選択して、「フォーラム」を選択し、Hummingbird の投稿の「詳細を表示」を選択してスレッドにアクセスします。
 
-注意:
+注意：
 
 * Aaron は、自分の投稿の返信、削除、編集または拒否を実行できます。
 * Aaron では、他のコンテンツにフラグ/許可、返信、削除、編集、拒否を設定することもできます。
@@ -149,7 +149,7 @@ Aaron McDonald (`aaron.mcdonal@mailinator.com`) をクリックし、コミュ�
 
 コミュニティモデレーターには、管理者と同じオプション（画像は検索サイドバーを閉じた状態で表示）がありますが、他のAEMコンソールにはアクセスできません。
 
-ログアウト.
+ログアウトします。
 
 ![moderator-access](assets/moderator-access.png)
 
@@ -157,7 +157,7 @@ Aaron McDonald (`aaron.mcdonal@mailinator.com`) をクリックし、コミュ�
 
 Rebekah Larsen (`rebekah.larsen@mailinator.com`) をクリックし、スレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「詳細を表示」を選択します。
 
-注意:
+注意：
 
 * Rebekah は、自分の投稿を削除または編集できます。
 * Rebekah は、他のコンテンツに返信したり、他のコンテンツにフラグを設定したりすることもできます。

@@ -5,10 +5,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 exl-id: fdc91054-3f7e-4cbf-bdfa-7d7a621747f1
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 65%
+source-wordcount: '840'
+ht-degree: 64%
 
 ---
 
@@ -51,7 +51,7 @@ AEM で Adobe Target を設定してアダプティブフォームやインタ�
 
    >[!NOTE]
    >
-   >アクティビティの保存時、次のエラーを無視することができます。「アクティビティは保存されましたが、Target に同期されませんでした。理由：次のエクスペリエンスにはオファーがありません」
+   >「アクティビティは保存されましたが、Target に同期されませんでした。 理由：次のエクスペリエンスにはオファーがありません」
 
 1. ターゲットを有効にするには、.jsp ファイルを編集して、アダプティブフォームテンプレートで使用しているクライアントライブラリが組み込まれるようにします。
 

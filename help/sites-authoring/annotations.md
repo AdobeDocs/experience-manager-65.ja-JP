@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 77%
+source-wordcount: '633'
+ht-degree: 75%
 
 ---
 
@@ -41,7 +41,7 @@ Web サイトのページにコンテンツを追加する場合、多くは、�
 
 >[!NOTE]
 >
->ページでフィードバックを提供するために、[コメント](/help/sites-authoring/basic-handling.md#timeline)も使用できます。
+>忘れないでください [コメント](/help/sites-authoring/basic-handling.md#timeline) は、ページにフィードバックを提供するためにも使用できます。
 
 >[!NOTE]
 >

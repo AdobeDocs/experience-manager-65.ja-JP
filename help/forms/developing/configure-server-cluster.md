@@ -2,10 +2,10 @@
 title: JEE 上のAEM Forms サーバークラスターの設定とトラブルシューティングの方法
 description: Adobe Experience Manager（AEM）Forms on JEE サーバークラスターの設定方法とトラブルシューティング方法について説明します。
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
-workflow-type: ht
-source-wordcount: '3959'
-ht-degree: 100%
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+workflow-type: tm+mt
+source-wordcount: '3945'
+ht-degree: 98%
 
 ---
 
@@ -147,7 +147,7 @@ GemFire が生成するログ情報を使用すると、どのクラスターメ
 [info 2011/08/05 09:28:10.128 EDT GemfireCacheAdapter <server.startup : 0> tid=0x64] DistributionManager ap-hp7(2821)<v1>:19498/59136 started on 239.192.81.1[33456]. There were 1 other DMs. others: [ap-hp8(4268)<v0>:18763/56449]
 ```
 
-**GemFire が余計なノードを見つけている場合**
+**GemFire がノードを見つけてはいけない場合はどうなりますか？**
 
 企業ネットワークを共有する個別の各クラスターは、TCP ロケーターを使用する場合、別々の TCP ロケーターを使用する必要があります。または、マルチキャスト UDP 設定を使用する場合、別々の UDP ポート番号を使用する必要があります。JEE 上の AEM Forms では UDP 自動検出がデフォルトで設定されており、同じデフォルトポート 33456 が複数のクラスターで使用されているので、通信を試行すべきでないクラスターが予期せず通信を行う可能性があります。例えば、実稼動クラスターと QA クラスターは分離したままにする必要がありますが、UDP マルチキャストを介して相互に接続する場合があります。
 
@@ -209,7 +209,7 @@ UNIX® システムでは、NFS 設定のデフォルトで、ファイルやオ
 クラスターが正しく機能するためには、すべてのクラスターメンバーが同じデータベースを共有する必要があります。これを間違える範囲は、大まかに以下のようになります。
 
 * IDP_DS、EDC_DS、AdobeDefaultSA_DS またはその他の必要なデータソースを別々のクラスターノード上で誤って設定し、ノードが異なるデータベースを指すようにします。
-* 誤って複数のノードを別々に設定して、データベースを共有する必要がない場合に、データベースを共有します。
+* 誤って複数のノードを別々に設定して、データベースを共有する必要がない場合に、誤って設定してしまった。
 
 アプリケーションサーバーによっては、JDBC 接続がクラスタースコープで定義されるのが自然な場合があるため、ノードごとに異なる定義を行うことはできません。ただし、JBoss® では、IDP_DS などのデータソースがノード 1 上では 1 つのデータベースを指し、ノード 2 上では別の何かを指すように設定しても問題ありません。
 
@@ -244,7 +244,7 @@ and ones like:
 
 ### Quartz スケジューラー {#quartz-scheduler}
 
-ほとんど場合、クラスターで JEE 上の AEM Forms の内部 Quartz スケジューラーを使用すると、JEE 上の AEM Forms の一般的なグローバルクラスター設定に自動的に従います。ただし、Gemfire での自動検出にマルチキャストでなく TCP ロケーターを使用している場合、Quartz の自動クラスター設定が失敗するバグ #2794033 があります。この場合、非クラスター化モードで Quartz が正しく実行されません。この結果、Quartz テーブルでデッドロックとデータの破損が発生します。この不具合はバージョン 9.0 よりも 8.2.x の方が顕著です。Quartz はあまり使用されなくなったものの、まだ存在しています。
+ほとんど場合、クラスターで JEE 上の AEM Forms の内部 Quartz スケジューラーを使用すると、JEE 上の AEM Forms の一般的なグローバルクラスター設定に自動的に従います。ただし、Gemfire での自動検出にマルチキャストでなく TCP ロケーターを使用している場合、Quartz の自動クラスター設定が失敗するバグ #2794033 があります。この場合、非クラスター化モードで Quartz が正しく実行されません。この結果、Quartz テーブルでデッドロックとデータの破損が発生します。Quartz はあまり使用されていないが、まだ存在しているので、バージョン 8.2.x は 9.0 よりも副作用が悪くなりました。
 
 この問題に対して、8.2.1.2 QF2.143 および 9.0.0.2 QF2.44 で修正を行いました。
 
@@ -274,7 +274,7 @@ Quartz が単一ノードで実行するように設定されていながら、�
 
 ```xml
 [1/20/11 10:40:57:584 EST] 00000035 ErrorLogger   E org.quartz.core.ErrorLogger schedulerError An error occured while marking executed job complete. job= 'Asynchronous.TaskFormDataSaved:12955380518320.5650479324757354'
- org.quartz.JobPersistenceException: Couldn't remove trigger: ORA-00060: deadlock detected while waiting for resource  [See nested exception: java.sql.SQLException: ORA-00060: deadlock detected while waiting for resource ]
+ org.quartz.JobPersistenceException: Could not remove trigger: ORA-00060: deadlock detected while waiting for resource  [See nested exception: java.sql.SQLException: ORA-00060: deadlock detected while waiting for resource ]
         at org.quartz.impl.jdbcjobstore.JobStoreSupport.removeTrigger(JobStoreSupport.java:1405)
         at org.quartz.impl.jdbcjobstore.JobStoreSupport.triggeredJobComplete(JobStoreSupport.java:2888)
         at org.quartz.impl.jdbcjobstore.JobStoreSupport$38.execute(JobStoreSupport.java:2872)

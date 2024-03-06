@@ -2,10 +2,10 @@
 title: オーサリングの基本
 description: コンテンツフラグメントを使用したヘッドレス CMS のコンテンツオーサリングの概念と仕組みについて説明します。
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 95%
+source-wordcount: '1694'
+ht-degree: 94%
 
 ---
 
@@ -102,7 +102,7 @@ AEM インストールは、通常、少なくとも次の 2 つの環境で構�
 
 ![フォルダー作成オプション](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
-詳細を入力し、次で確認できるダイアログが開きます。 **作成**:
+詳細を入力できるダイアログが開くので、入力後、「**作成**」で確定します。
 
 ![フォルダー作成ダイアログ](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
@@ -126,7 +126,7 @@ AEM インストールは、通常、少なくとも次の 2 つの環境で構�
 
 以下は参考までに説明しておきます。
 
-フォルダーを作成できる初期フォルダーがあらかじめ用意されているはずです。これは、一部の設定詳細を（通常は開発者またはシステム管理者が）ルートフォルダーに適用する必要があるからです。必要であれば、フォルダーの&#x200B;**プロパティ**&#x200B;の「**クラウドサービス**」タブで「**クラウドサービス設定**」を確認してください。
+フォルダーを作成できる初期フォルダーがあらかじめ用意されているはずです。これは、一部の設定詳細を（通常は開発者またはシステム管理者が）ルートフォルダーに適用する必要があるからです。これはおそらく興味のないものですが、必要に応じて、 **設定** （内） **Cloud Service** フォルダーの **プロパティ**:
 
 ![フォルダープロパティの作成 - 設定](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 35b50573-0be8-469d-a1ac-f51b9aaa5fef
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
 source-wordcount: '1267'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -121,7 +121,7 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 
 1. コピーしたコンポーネントの名前を `enrollmentpage` に変更します。
 
-1. **（コンテンツページをすでに持っている場合に限ります）** 自分の web サイトに `contentpage` コンポーネントがすでに存在する場合、次の手順（a-d）を実行します。自分の Web サイトに `contentpage` コンポーネントが存在しない場合は、`resourceSuperType` プロパティを OOTB の基本ページにポイントしたままにすることができます。
+1. **（コンテンツページをすでに持っている場合に限ります）** 自分の web サイトに `contentpage` コンポーネントがすでに存在する場合、次の手順（a-d）を実行します。既存の `contentpage`コンポーネントを Web サイトに追加する場合、 `resourceSuperType`プロパティを使用して、標準のベースページを指定します。
 
    1. `enrollmentpage` ノードの場合、`sling:resourceSuperType` プロパティの値を mycompany/components/page/contentpage に設定します。`contentpage` コンポーネントは、自分のサイトの基本ページコンポーネントです。他のページコンポーネントで拡張することができます。`enrollmentpage` の下で、`head.jsp`、`content.jsp`、`library.jsp` を除くスクリプトファイルを削除します。このケースでは `contentpage` である `sling:resourceSuperType` コンポーネントに、このようなスクリプトすべてが含まれます。ナビゲーションバーやフッターなどを含むヘッダー類は、`contentpage` コンポーネントから継承されます。
 

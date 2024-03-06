@@ -1,5 +1,5 @@
 ---
-title: Forms Portal コンポーネントのテンプレートのカスタマイズ
+title: フォームポータルコンポーネントのテンプレートのカスタマイズ
 description: AEM Formsユーザーインターフェイスを使用して、ユーザーがフォームにメタデータを追加する方法について説明します。 カスタムメタデータを使用すると、フォームの一覧と検索の操作性が向上します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -7,14 +7,14 @@ topic-tags: customization
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 51%
+source-wordcount: '1246'
+ht-degree: 48%
 
 ---
 
-# Forms Portal コンポーネントのテンプレートのカスタマイズ{#customizing-templates-for-forms-portal-components}
+# フォームポータルコンポーネントのテンプレートのカスタマイズ{#customizing-templates-for-forms-portal-components}
 
 ## 前提条件 {#prerequisites}
 
@@ -82,19 +82,19 @@ Forms Portal では、フォームリストにカスタムメタデータを使�
 
 すべてのフォームポータルコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。繰り返し可能なエントリは、リスト表示の基本エンティティです。 繰り返し可能なエントリの例としては、Search &amp; Lister、ドラフト&amp;送信、Link コンポーネントがあります。
 
-Forms Portal には、プレースホルダがカスタム/OOTB メタデータを表示するための構文が用意されています。 プレースホルダーは、フォーム、ドラフトまたは送信の結果を表示した後に入力されます。
+Forms Portal には、プレースホルダーがカスタム/標準のメタデータを表示するための構文が用意されています。 プレースホルダーは、フォーム、ドラフトまたは送信の結果を表示した後に入力されます。
 
 繰り返し可能なエントリを含めるには、**data-repeatable** の属性の値を **true** に設定します。
 
 *この例では、2 つの Div 要素がカスタムテンプレートの一番上に存在します。 1 つ目は、「__FP_boxes-container」CSS クラスで、リストされるフォームのコンテナ要素として機能します。 2 つ目は、&quot;__FP_boxes&quot; CSS クラスで、基本エンティティのテンプレートです。この場合はフォームです。 Div 要素に存在する&#x200B;**data-repeatable**の属性の値は&#x200B;**true**です。*
 
-それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります. フォームの特定の場所でカスタムメタデータを表示するには、そこに **${metadata_prop} プロパティ** を追加します。
+各プレースホルダーには、すぐに使用できる専用のメタデータセットがあります。 フォームの特定の場所でカスタムメタデータを表示するには、そこに **${metadata_prop} プロパティ** を追加します。
 
 *この例では、metadata プロパティは複数のインスタンスで使用されています。 例えば、**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**、および&#x200B;**path**で所定の方法で使用されます。*
 
 ## 標準提供のメタデータ {#out-of-the-box-metadata}
 
-様々なForms Portal コンポーネントは、リスト表示に使用できる排他的な OOTB メタデータのセットを提供します。
+様々なForms Portal コンポーネントには、リスト表示に使用できる標準メタデータの排他的なセットが用意されています。
 
 ### Search &amp; Lister コンポーネント {#search-amp-lister-component}
 
@@ -103,7 +103,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 * **説明**：フォームの説明
 * **formUrl**：フォームを HTML としてレンダリングする URL
 * **pdfUrl**：フォームを PDF としてレンダリングする URL
-* **アセットタイプ**：アセットの種類有効な値には、**フォーム**、**PDF フォーム**、**印刷フォーム**、および&#x200B;**アダプティブフォーム** などがあります。
+* **アセットタイプ**：アセットの種類有効な値は次のとおりです。 **フォーム**, **PDFフォーム**, **印刷フォーム**、および **アダプティブフォーム**
 
 * **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、「**__FP_display_none**」または空白です。
 
@@ -115,7 +115,7 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 
 ローカリゼーション、ソート、ユーザーインターフェイス上での設定プロパティ使用のサポート（Search &amp; Lister のみ）:
 
-1. **ローカリゼーションサポート**：スタティックテキストをローカライズするには、属性 `${localize-YOUR_TEXT}` を使用し、ローカライズされた値が存在しない場合は、値を用意します。
+1. **ローカリゼーションサポート**：静的テキストをローカライズするには、属性を使用します `${localize-YOUR_TEXT}` ローカライズされた値が存在しない場合は、その値を使用可能にします。
    *上記の例では、属性 `${localize-Apply}` と `${localize-Download}` は、「Apply」と「Download」のテキストをローカライズするのに使用します。*
 
 1. **並べ替えのサポート**：検索結果を並べ替えるには、HTML要素をクリックします。 テーブルレイアウトでの並べ替えを実装するには、特定のテーブルヘッダーに「data-sortKey」属性を追加します。 さらに、ソートしたいメタデータとしてその値を加えます。例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えることができます。
@@ -168,17 +168,17 @@ Forms Portal には、プレースホルダがカスタム/OOTB メタデータ�
 ## ヒント、テクニックおよび既知の問題 {#tips-tricks-and-known-issues}
 
 1. カスタムテンプレートでは一重引用符 (&#39;) を使用しないでください。
-1. カスタムメタデータでは、このプロパティは **jcr:content/metadata** ノードにのみ保存してください。他の場所に保存した場合、フォームポータルがメタデータを表示することができません。
+1. カスタムメタデータでは、このプロパティは **jcr:content/metadata** ノードにのみ保存してください。他の場所に保存した場合、Forms Portal はメタデータを表示できません。
 1. すべてのカスタムメタデータまたは既存のメタデータの名前にコロン（:）が含まれていないことを確認してください。含まれている場合、ユーザーインターフェイスに表示することができません。
 1. **data-repeatable** は、**リンク**&#x200B;コンポーネントにとっては意味はありません。アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
 
 ## 関連記事
 
-* [フォームポータルコンポーネントを有効にする](/help/forms/using/enabling-forms-portal-components.md)
-* [Forms Portal の作成ページ](/help/forms/using/creating-form-portal-page.md)
+* [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
+* [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントのデータベースへの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
-* [Forms Portal コンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [フォームポータルコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム公開の概要](/help/forms/using/introduction-publishing-forms.md)

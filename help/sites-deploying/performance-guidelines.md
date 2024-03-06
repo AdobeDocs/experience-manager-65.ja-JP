@@ -7,10 +7,10 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
-source-wordcount: '2935'
-ht-degree: 98%
+source-wordcount: '2939'
+ht-degree: 97%
 
 ---
 
@@ -347,10 +347,10 @@ AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を�
 
 **DON&#39;T**
 
-* 可能な場合は、JCR API を直接使用しない
-* /libs を変更せずに、オーバーレイを使用する
+* できる場合は、JCR API を直接使用しないでください。
+* /libs を変更せず、オーバーレイを使用します。
 * 可能な限りクエリを使用しない
-* Java™ コードで OSGi サービスを取得する場合は、Sling Binding を使用せずに以下を使用してください。
+* Java™コードで OSGi サービスを取得する際には Sling バインディングを使用せず、次のように使用します。
 
    * DS コンポーネントの @Reference
    * Sling Model の @Inject
