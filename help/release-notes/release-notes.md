@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: 70f52515fc877ad5f20e14c2a26a934d3dcdfe01
+source-git-commit: f00d2c88ba6727f8f8597fefeb467b612b23dea3
 workflow-type: tm+mt
-source-wordcount: '3486'
+source-wordcount: '3524'
 ht-degree: 68%
 
 ---
@@ -474,6 +474,8 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
       * [Apple macOSのホットフィックス](/help/release-notes/assets/Hotfix-osx.zip)
 
    1. を使用してパッケージ (.zip) をアップロードしインストールします。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
+
+   1. AEMサーバーを再起動し、再起動プロセスが完了したら、すべてのバンドルのアクティベーションステータスを確認します。 次の場所にアクセスして、バンドルのステータスを監視できます。 `https://server:host/system/console/bundles`. その他のタスクを進める前に、すべてのバンドルがアクティブであることを確認します。
 
 * 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
 
