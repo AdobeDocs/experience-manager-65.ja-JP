@@ -2,10 +2,11 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
-source-git-commit: f00d2c88ba6727f8f8597fefeb467b612b23dea3
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 39261357c17ef565a39ebc441aed356d69b4d8f9
 workflow-type: tm+mt
-source-wordcount: '3524'
-ht-degree: 68%
+source-wordcount: '3560'
+ht-degree: 67%
 
 ---
 
@@ -478,6 +479,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. AEMサーバーを再起動し、再起動プロセスが完了したら、すべてのバンドルのアクティベーションステータスを確認します。 次の場所にアクセスして、バンドルのステータスを監視できます。 `https://server:host/system/console/bundles`. その他のタスクを進める前に、すべてのバンドルがアクティブであることを確認します。
 
 * 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
+* アダプティブFormsでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。 カスタム関数で ECMAScript バージョン 6 以降（&#39;let&#39;、&#39;const&#39;、矢印関数など）が使用されている場合、ルールエディタが正しく開かない可能性があります。
 
 <!--Known issues in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.20.0 Forms add-on package release is scheduled for Thursday, February 29, 2024. A list of known issues for forms is added to this section post the release.-->
 
