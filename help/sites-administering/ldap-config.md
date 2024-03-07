@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1613'
-ht-degree: 98%
+source-wordcount: '1609'
+ht-degree: 96%
 
 ---
 
@@ -221,7 +221,7 @@ Sync Handler では、以下の設定オプションを使用できます。
 
 >[!NOTE]
 >
-AEM インスタンスで複数の LDAP 設定を使用する場合は、設定ごとに ID プロバイダーと同期ハンドラーを個別に作成する必要があります。
+>AEM インスタンスで複数の LDAP 設定を使用する場合は、設定ごとに ID プロバイダーと同期ハンドラーを個別に作成する必要があります。
 
 ## LDAP over SSL の設定 {#configure-ldap-over-ssl}
 
@@ -277,12 +277,12 @@ LDAP ID プロバイダーと外部ログインモジュールの両方に対し
 
 * ログレベル：デバッグ
 * ログファイル：logs/ldap.log
-* メッセージパターン： {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* メッセージパターン： {0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * ロガー：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * ログレベル：デバッグ
 * ログファイル：logs/external.log
-* メッセージパターン： {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* メッセージパターン： {0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## グループへの関連付けに関する注意事項 {#a-word-on-group-affiliation}

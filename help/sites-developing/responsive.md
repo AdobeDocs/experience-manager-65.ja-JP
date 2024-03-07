@@ -7,10 +7,10 @@ topic-tags: mobile-web
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '5375'
-ht-degree: 98%
+source-wordcount: '5293'
+ht-degree: 97%
 
 ---
 
@@ -175,7 +175,7 @@ responsive-1200px.css
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-**[!UICONTROL サイドキック]**&#x200B;でデバイスのプレビューを有効にするには、ページと **[!UICONTROL MobileEmulatorProvider]** サービスを設定する必要があります。別のページ設定で、「**[!UICONTROL デバイス]**」リストに表示されるデバイスのリストを制御します。
+でデバイスのプレビューを有効にするには **[!UICONTROL Sidekick]**&#x200B;を設定する場合は、ページと **[!UICONTROL MobileEmulatorProvider]** サービス。 別のページ設定で、「 **[!UICONTROL デバイス]** リスト。
 
 ### 「デバイス」リストの追加 {#adding-the-devices-list}
 
@@ -200,7 +200,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
   MobileEmulatorProvider サービスがファクトリサービスであるので、- `*alias*` サフィックスは必須です。このファクトリで一意となる任意のエイリアスを使用します。
 
-* jcr:primaryType: `sling:OsgiConfig`
+* `jcr:primaryType`：`sling:OsgiConfig`
 
 次のノードプロパティを追加します。
 
@@ -661,7 +661,7 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet クラ�
 
 ## 可変グリッドの開発 {#developing-a-fluid-grid}
 
-AEM では、可変グリッドを効率的かつ効果的に実装できます。ここでは、新しく作成した可変グリッドや既存のグリッドの実装（[Bootstrap](https://github.com/topics/twitter-bootstrap?l=css) など）を AEM アプリケーションに統合する方法について説明します。
+AEMを使用すると、流体グリッドを効率的かつ効果的に実装できます。 このページでは、可変グリッドまたは既存のグリッド実装 ( [Bootstrap](https://github.com/topics/twitter-bootstrap?l=css)) をAEMアプリケーションに追加します。
 
 可変グリッドについて詳しくない場合は、このページの下部にある[可変グリッドの概要](/help/sites-developing/responsive.md#developing-a-fluid-grid)セクションを参照してください。この説明では、可変グリッドの概要と設計に関するガイダンスが示されています。
 

@@ -4,9 +4,9 @@ description: SCF での作業を容易にする Handlebars ヘルパーメソッ
 topic-tags: developing
 content-type: reference
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 787e5a87f13498006e2ce897e85ee12704b58f09
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1445'
 ht-degree: 4%
 
 ---
@@ -135,7 +135,7 @@ Then content-loadmore would return
 
 * **形式**：文字列
 
-  （オプション）適用する日付フォーマット。 デフォルトは「YYYY-MM-DDTHH」です。:mm:ss.sssZ と表示され、結果は「2015-03-18T18」と表示されます。:17:13-07:00&quot;
+  （オプション）適用する日付フォーマット。 デフォルトは&quot;`YYYY-MM-DDTHH:mm:ss.sssZ`」と表示され、結果は「`2015-03-18T18:17:13-07:00`&quot;
 
 ### 例 {#examples-1}
 
@@ -226,7 +226,7 @@ Then content-loadmore would return
 {{i18n "hello" comment="greeting" default="bonjour"}}
 ```
 
-## 次を含む {#include}
+## 包含 {#include}
 
 コンポーネントをテンプレート内の既存のリソース以外として含めるためのヘルパーです。
 
@@ -338,7 +338,7 @@ AEM HTML クライアントライブラリを含むヘルパーです。js、css
 
 カットオフポイントに経過した時間を表示するヘルパーです。その後、通常の日付形式が表示されます。
 
-例：
+次に例を示します。
 
 * 12 時間前
 * 7 日前
@@ -522,7 +522,7 @@ template(data);
 
 サーバー側でカスタム SCF ヘルパーを実装して登録するには、Java™インターフェイスを実装するだけです [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)、作成する [OSGi サービス](../../help/sites-developing/the-basics.md#osgi) OSGi バンドルの一部としてインストールします。
 
-例：
+次に例を示します。
 
 ### FooTextHelper.java {#footexthelper-java}
 
@@ -569,7 +569,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 ### クライアント側カスタムヘルパー {#client-side-custom-helpers}
 
 クライアント側ヘルパーは、呼び出しによって登録される Handlebars スクリプトです `Handlebars.registerHelper()`.
-例：
+次に例を示します。
 
 ### custom-helpers.js {#custom-helpers-js}
 

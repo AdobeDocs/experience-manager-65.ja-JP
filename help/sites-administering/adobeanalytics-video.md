@@ -7,10 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1744'
-ht-degree: 72%
+source-wordcount: '1754'
+ht-degree: 68%
 
 ---
 
@@ -117,7 +117,7 @@ XX サフィックスは、マイルストーンを定義する追跡オフセ�
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>表示されたセグメントに関する情報が含まれます（例： 2）。:O:4-8 </td>
+   <td>表示されたセグメントに関する情報が含まれます。例： <code>2:O:4-8</code> </td>
   </tr>
  </tbody>
 </table>
@@ -331,7 +331,7 @@ eventdata.events.milestoneXX
 
    * *Start Timestamp* - ビデオの再生がいつ開始されたかを識別するタイムスタンプ（例：*1331035567*）
 
-   * *Play Session* - 再生セッションの詳細。このフィールドは、ユーザーによるビデオの操作を示します。ビデオの再生を開始した場所、ビデオを進めるためにビデオスライダーを使用したかどうか、ビデオの再生を停止した場所などのデータを含めることができます（例：*L10E24S58L58 - ビデオはセクション L10 の 25 秒で停止され、48 秒までスキップされました*）。
+   * *Play Session* - 再生セッションの詳細。このフィールドは、ユーザーによるビデオの操作を示します。例えば、ビデオの再生を開始した場所、ビデオの進行にビデオのスライダーを使用したかどうか、ビデオの再生を停止した場所 (*L10E24S58L58 — ビデオが 1 秒で停止しました。セクション L10 の 25 をスキップし、秒にスキップしました。 48*)
 
 ## レガシー秒 {#legacy-seconds}
 

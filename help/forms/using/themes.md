@@ -7,10 +7,10 @@ content-strategy: max-2018
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
 source-wordcount: '6084'
-ht-degree: 80%
+ht-degree: 81%
 
 ---
 
@@ -177,7 +177,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
      <li>このテーマに対応する clientlib が保存される「/etc」内のユーザー定義のリポジトリパス。</li>
      <li>デフォルト値 — 「/etc/clientlibs/fd/themes」 +テーマアセットの相対パス。</li>
      <li>場所が存在しない場合、フォルダー階層は自動生成されます。</li>
-     <li>この値を変更すると、clientlib ノード構造は、入力された新しい場所に移動されます。<br /> <em><strong>メモ：</strong>デフォルトの Clientlib の場所を変更する場合、CRXDE リポジトリで <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code> を <code>forms-users</code> および <code>crx:replicate</code> に割り当て、<code>jcr:read </code> を新しい場所にある <code>fd-service</code> に割り当てます。また、<code>forms-user</code></em> の <code>deny jcr:addChildNodes</code> を追加して別の ACL を添付します</li>
+     <li>この値を変更すると、clientlib ノード構造は、入力された新しい場所に移動されます。<br /> <em><strong>注意：</strong> デフォルトの clientlib の場所を変更した場合は、CRXDE リポジトリ内で、 <code>crx:replicate</code>, <code>rep:write</code>, <code>rep:glob:*</code>, <code>rep:itemNames::</code> <code>js.txt</code>, <code>jcr:read</code> から <code>forms-users</code> および <code>crx:replicate</code>, <code>jcr:read</code> から <code>fd-service</code> 新しい場所に置き換えます。 また、<code>forms-user</code></em> の <code>deny jcr:addChildNodes</code> を追加して別の ACL を添付します</li>
     </ul> </td>
   </tr>
   <tr>
@@ -362,7 +362,7 @@ AEM Formsのテーマは、フォームとインタラクティブ通信のパ�
 * **数値ボックスウィジェット**：サイドバーで外観をカスタマイズするコンポーネントを選択できます。
 * **フィールドウィジェット**：スタイル設定の汎用コンポーネントを選択できます。この例では、スタイル設定にすべてのテキスト入力コンポーネント（テキストボックス／数値ボックス／数値ステッパー／日付入力）が選択されています。
 
-* ![field-level](assets/field-level.png)：スタイル設定のために、汎用コンポーネントに切り替えることができます。数値ボックスを選択してこのアイコンを選択すると、フィールドコンポーネントが選択されます。 フィールドコンポーネントを選択してこのアイコンを選択すると、パネルが選択されます。 このアイコンをタップし続けると、最終的にスタイル設定用のレイアウトが選択されます。
+* ![field-level](assets/field-level.png)：スタイル設定のために、汎用コンポーネントに切り替えることができます。数値ボックスを選択してこのアイコンを選択すると、フィールドコンポーネントが選択されます。フィールドコンポーネントを選択してこのアイコンをクリックすると、パネルが選択されます。このアイコンをタップし続けると、最終的にスタイル設定用のレイアウトが選択されます。
 
 >[!NOTE]
 >
@@ -393,7 +393,7 @@ AEM Formsのテーマは、フォームとインタラクティブ通信のパ�
 <table>
  <tbody>
   <tr>
-   <td><strong>プロパティ</strong></td>
+   <td><strong>Property</strong></td>
    <td><strong>使用方法</strong></td>
   </tr>
   <tr>
@@ -585,7 +585,7 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 
 1. オーサーインスタンスで、**Adobe Experience Manager／Forms／テーマ**&#x200B;に移動します。
 1. テーマライブラリフォルダーを開きます。
-1. Theme Library フォルダーで、対応する標準のテーマの上にマウスポインターを置いて、「 」を選択します。 **コピー**.
+1. テーマライブラリフォルダーで、対応するすぐに使用可能なテーマにポインタを合わせ、「**コピー**」を選択します。
 1. コピーしたテーマをテーマライブラリフォルダーの外部に貼り付けます。
 1. コピーしたテーマをカスタマイズします。
 

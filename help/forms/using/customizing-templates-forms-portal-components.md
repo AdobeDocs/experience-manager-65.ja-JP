@@ -7,10 +7,10 @@ topic-tags: customization
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 48%
+source-wordcount: '1242'
+ht-degree: 46%
 
 ---
 
@@ -142,8 +142,8 @@ Forms Portal には、プレースホルダーがカスタム/標準のメタデ
 * **diffTime**：現在の時刻とドラフトの最後の保存アクションとの差。 または、現在の時刻と送信時に最後に送信されたアクションの差を指定します。
 * **iconClass**：ドラフト/送信の最初の文字を表示するために使用される CSS クラス。 Forms Portal には、様々な色の背景を提供する、次のクラスが含まれています。
 * **所有者**：ドラフト/送信を作成したユーザー。
-* **Today**：DD:MM:YYYY 形式のドラフト作成日または送信日。
-* **TimeNow**：HH:MM:SS 24 時間形式のドラフト作成日または送信日
+* **今日**：でのドラフト作成日または送信日 `DD:MM:YYYY` 形式を使用します。
+* **TimeNow**：でのドラフト作成時または送信時刻 `HH:MM:SS` 24 時間形式
 
 *注意：*
 
