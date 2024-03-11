@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 39261357c17ef565a39ebc441aed356d69b4d8f9
+source-git-commit: a0ad6c5d61a971c5210f7d6dd7ef85e5effab44a
 workflow-type: tm+mt
-source-wordcount: '3560'
-ht-degree: 67%
+source-wordcount: '3765'
+ht-degree: 64%
 
 ---
 
@@ -469,17 +469,24 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
   この問題を解決するには、以下の手順を実行する必要があります。
 
    1. オペレーティングシステムのホットフィックスをダウンロードします。
-
       * [Microsoft Windows のホットフィックス](/help/release-notes/assets/Hotfix-windows.zip)
       * [Linux のホットフィックス](/help/release-notes/assets/Hotfix-Linux.zip)
       * [Apple macOSのホットフィックス](/help/release-notes/assets/Hotfix-osx.zip)
 
    1. を使用してパッケージ (.zip) をアップロードしインストールします。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=en#accessing).
-
    1. AEMサーバーを再起動し、再起動プロセスが完了したら、すべてのバンドルのアクティベーションステータスを確認します。 次の場所にアクセスして、バンドルのステータスを監視できます。 `https://server:host/system/console/bundles`. その他のタスクを進める前に、すべてのバンドルがアクティブであることを確認します。
 
 * 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
 * アダプティブFormsでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。 カスタム関数で ECMAScript バージョン 6 以降（&#39;let&#39;、&#39;const&#39;、矢印関数など）が使用されている場合、ルールエディタが正しく開かない可能性があります。
+* Correspondence Management レターを作成できません。 ユーザーがレターを作成すると、「Object Object」という説明のエラーが表示され、レターは作成されません。 レイアウトのサムネールも、レター作成画面に読み込めません。 （FORMS-13496）
+* インタラクティブ通信サービスはPDFドキュメントを作成しますが、フォームフィールドにユーザーのデータが自動的に入力されることはありません。 事前入力サービスが期待どおりに動作していません。 （FORMS-13413、FORMS-13493）
+* Review and Correct(RnC) エディターの読み込みにautomated forms conversionしない。 （FORMS-13491）
+* AEM 6.5 Forms Service Pack 18(6.5.18.0) またはAEM 6.5 Forms Service Pack 19(6.5.19.0) からAEM 6.5 Forms Service Pack 20(6.5.20.0) に更新すると、JSP コンパイルエラーが発生します。 アダプティブフォームを開いたり作成したりすることはできず、ページエディター、AEM Forms UI、AEMワークフローエディターなどの他のAEMインターフェイスでエラーが発生しています。 （FORMS-13492）
+
+お客様は、最新のAEM 6.5 Forms Service Pack をインストールして、前述の問題を解決できます。  次に、サポートされているオペレーティングシステムへの直接リンクを示します。
+* [Apple macOS用AEM 6.5 Forms Service Pack 20](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)
+* [Microsoft Windows 用AEM 6.5 Forms Service Pack 20](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-WIN-PKG-6.0.1192.zip)
+* [Linux 用AEM 6.5 Forms Service Pack 20](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-LINUX-PKG-6.0.1192.zip)
 
 <!--Known issues in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.20.0 Forms add-on package release is scheduled for Thursday, February 29, 2024. A list of known issues for forms is added to this section post the release.-->
 
