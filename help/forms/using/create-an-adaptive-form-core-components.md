@@ -9,10 +9,10 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1731'
-ht-degree: 98%
+source-wordcount: '1733'
+ht-degree: 99%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 98%
 
 開始する前に、使用可能な Forms コンポーネントのタイプについて学習します。
 
-* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)：標準化されたデータキャプチャコンポーネントです。これらのコンポーネントは、デジタル登録エクスペリエンスのカスタマイズ機能を提供し、開発時間を短縮し、メンテナンスコストを削減します。開発者は、これらのコンポーネントを簡単にカスタマイズし、スタイルを設定できます。これらの最新かつ拡張性の高いコンポーネントを活用してアダプティブフォームを開発することをお勧めします。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)：標準化されたデータキャプチャコンポーネントです。これらのコンポーネントは、デジタル登録エクスペリエンスのカスタマイズ機能を提供し、開発時間を短縮し、メンテナンスコストを削減します。開発者は、これらのコンポーネントを簡単にカスタマイズし、スタイルを設定できます。アドビでは、これらの最新かつ拡張性の高いコンポーネントを活用してアダプティブフォームを開発することをお勧めします。
 
 * [アダプティブフォーム基盤コンポーネント](creating-adaptive-form.md)：従来の（古い）データキャプチャコンポーネントです。引き続きこれらを使用して、既存の基盤コンポーネントベースのアダプティブフォームを編集できます。 フォームを作成する場合は、[アダプティブフォームコアコンポーネント](/help/forms/using/create-adaptive-form.md)を使用してアダプティブフォームを作成することをお勧めします。
 
@@ -63,9 +63,9 @@ ht-degree: 98%
 
 1. ローカルの [AEM オーサーインスタンス](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja#author-and-publish-installs)にログインします。
 
-1. Experience Manager のログインページに資格情報を入力します。ログイン後、左上隅の「 」を選択します。 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms &amp; Documents]**.
+1. Experience Manager のログインページに資格情報を入力します。ログイン後、左上隅の **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL Forms]**／**[!UICONTROL フォームとドキュメント]**&#x200B;を選択します。
 
-1. 選択 **[!UICONTROL 作成]**  > **[!UICONTROL アダプティブFormsの作成]**.
+1. **[!UICONTROL 作成]**／**[!UICONTROL アダプティブフォームを作成]**&#x200B;を選択します。
 
 1. アダプティブフォームコアコンポーネントテンプレートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 
@@ -80,7 +80,7 @@ ht-degree: 98%
 1. 「**[!UICONTROL 作成]**」を選択します。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。
 
 
-1. 選択 **[!UICONTROL 編集]** をクリックして、新しく作成されたフォームを新しいタブで開きます。 フォームが編集用に開かれ、テンプレート内の利用可能なコンテンツが表示されます。また、新規作成されたフォームをカスタマイズするサイドバーも表示されます。
+1. 「**[!UICONTROL 編集]**」を選択して、新規作成されたフォームを新しいタブで開きます。フォームが編集用に開かれ、テンプレート内の利用可能なコンテンツが表示されます。また、新規作成されたフォームをカスタマイズするサイドバーも表示されます。
 
 
 ## アダプティブフォームのコアコンポーネントを使用してフォームを作成
@@ -89,7 +89,7 @@ ht-degree: 98%
 
 ## アダプティブフォームの送信アクションを設定 {#configure-submit-action-for-form}
 
-送信アクションを使用すると、アダプティブフォーム経由で取り込んだデータの送信先を選択できます。送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックするとトリガーされます。アダプティブフォームには、すぐに使用できる送信アクションがいくつか含まれています。デフォルトの送信アクションを拡張して、独自のカスタム送信アクションを作成することもできます。フォームの送信アクションを設定するには、次の手順を実行します。
+送信アクションを使用すると、アダプティブフォームを通じて取り込んだデータの送信先を選択できます。 送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックするとトリガーされます。アダプティブフォームには、すぐに使用できる送信アクションがいくつか含まれています。デフォルトの送信アクションを拡張して、独自のカスタム送信アクションを作成することもできます。フォームの送信アクションを設定するには、次の手順を実行します。
 
 1. コンテンツブラウザーを開き、アダプティブフォームの&#x200B;**[!UICONTROL ガイドコンテナ]**&#x200B;コンポーネントを選択します。
 1. ガイドコンテナプロパティ ![ガイドプロパティ](/help/forms/using/assets/configure-icon.svg) アイコンをクリックします。アダプティブフォームコンテナダイアログボックスが開きます。

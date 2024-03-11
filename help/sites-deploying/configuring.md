@@ -1,16 +1,16 @@
 ---
 title: 設定の基本概念
-description: 独自の要件に合わせてAdobe Experience Managerを設定する方法を説明します。
+description: 独自の要件に合わせた Adobe Experience Manager の設定方法を説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '2092'
-ht-degree: 97%
+source-wordcount: '2093'
+ht-degree: 99%
 
 ---
 
@@ -54,7 +54,7 @@ AEM では様々な設定を行えます。
 
 >[!NOTE]
 >
->AEM の設定は簡単です。ただし、一部の変更がアプリケーションに大きな影響を与える可能性があります。 このため、AEM の設定を開始する前に、必要な経験と知識を持っていることを確認し、必要であると分かっている変更のみを加えてください。OSGi コンソールを使用して行った変更は、実行中のシステムに&#x200B;**すぐに**&#x200B;適用されます（再起動は不要です）。
+>AEM の設定は簡単です。ただし、変更の内容によってはアプリケーションに大きな影響を与える可能性があります。このため、AEM の設定を開始する前に、必要な経験と知識を持っていることを確認し、必要であると分かっている変更のみを加えてください。OSGi コンソールを使用して行った変更は、実行中のシステムに&#x200B;**すぐに**&#x200B;適用されます（再起動は不要です）。
 
 ## プライマリ設定に関する考慮事項 {#primary-configuration-considerations}
 
@@ -117,7 +117,7 @@ AEM では、以下の設定が可能です。
 
 * 中央のログサービスのグローバルパラメーター
 * リクエストデータのログ（リクエスト情報用の特殊なログ設定）
-* 個々のサービスに固有の設定（個々のログファイルやログメッセージの形式など）
+* 個々のサービスに特有の設定（個々のログファイルおよびログメッセージの書式など）
 
 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
@@ -188,7 +188,7 @@ AEM ドキュメントサービスおよび AEM ドキュメントセキュリ�
 
 [オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。](/help/sites-deploying/offloading.md)オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。特殊化した処理により、使用可能なサーバーリソースの使用を最大限に活用できます。
 
-トポロジは、オフロードに使用される疎結合の Experience Manager クラスターです。クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに参加している疎結合Experience Managerクラスタです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
 
 トポロジのメンバーシップを表示または変更する方法について詳しくは、「[トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies)」セクションを参照してください。
 
@@ -287,7 +287,7 @@ AEM プロセスがこの上限を超えると、「`too many open files`」と�
 
 CQ は、次のようなユーザーにメール通知を送信します。
 
-* 変更やレプリケーションなどのページイベントを購読済みである。
+* 変更やレプリケーションなど、ページイベントを購読したことがある。
 * フォーラムイベントを購読したことがある
 * ワークフローで手順を実行する必要がある。
 

@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Document Management サービス（非推奨）では、次のクイックスタ
 
 >[!NOTE]
 >
->2011 年 8 月 5 日に、Adobeは Content Services ES のお客様をAdobe Digital Enterprise Platform Experience Services に移行します。 Content Services をご利用のお客様は、新しい ADEP Experience Services - Core に移行していただく製品ロードマップです。この新しいサービスには、Day Software との合併により得られた、最新のモジュラー CRX アーキテクチャで構築されたネイティブなコンテンツリポジトリが含まれています。
+>2011年8月5日（PT）より、アドビは、Content Services ES のお客様を Adobe Digital Enterprise Platform Experience Services に移行します。Content Services をご利用のお客様は、新しい ADEP Experience Services - Core に移行していただく製品ロードマップです。この新しいサービスには、Day Software との合併により得られた、最新のモジュラー CRX アーキテクチャで構築されたネイティブなコンテンツリポジトリが含まれています。
 
 [クイックスタート（SOAP モード）：Java API を使用した Content Services スペースの作成](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
@@ -42,11 +42,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「AEM forms によるプログラミング」のクイックスタートは、JBoss および Windows オペレーティングシステムにデプロイされているForms Server に基づいています。 UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換える必要があります。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>AEM Forms によるプログラミングにあるクイックスタートは、JBoss と Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換える必要があります。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した Content Services スペースの作成（非推奨） {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
-次の Java コードの例では、という名前の新しいスペースを作成します。 *テストディレクトリ* 会社の自宅で。 新しいスペースの識別子の値がコンソールに書き込まれます。
+次の Java コードの例では、Company Home にある *Test Directory* という名前の新しいスペースを作成します。新しいスペースの識別子の値がコンソールに書き込まれます。
 
 ```java
  /*
@@ -572,7 +572,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した Content Services コンテンツの一覧表示（非推奨） {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
-次の Java コードの例は、 /Company Home にあるコンテンツをリストします。 各ノードのタイプと名前が表示されます。
+次の Java コードの例は、/Company Home にあるコンテンツを一覧表示します。各ノードのタイプと名前が表示されます。
 
 ```java
  /*

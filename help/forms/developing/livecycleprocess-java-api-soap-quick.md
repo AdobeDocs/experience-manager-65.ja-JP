@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 91%
+source-wordcount: '423'
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->AEM Formsでのプログラミングのクイックスタートは、Unix などの別のオペレーティングシステムを使用している場合、Formsに基づいています。windows 固有のパスは、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+>Unix などの別のオペレーティングシステムを使用している場合、AEM Forms によるプログラミングのクイックスタートは Forms に基づいています。Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
 ## クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 

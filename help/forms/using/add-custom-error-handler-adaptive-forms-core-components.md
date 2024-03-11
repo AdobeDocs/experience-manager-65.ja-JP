@@ -6,10 +6,10 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 2118d77f-1314-48f1-88e3-e27dd8e9f17b
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '2278'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -73,10 +73,10 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
 
 ```javascript
     {
-        "type": "SERVER_SIDE_VALIDATION/FORM_SUBMISSION/SERVICE_INVOCATION/FAILURE/VALIDATION_ERROR", (required)
-        "title": "Server side validation failed/Third party service invocation failed", (optional)
-        "detail": "", (optional)
-        "instance": "", (optional)
+        "type": "SERVER_SIDE_VALIDATION/FORM_SUBMISSION/SERVICE_INVOCATION/FAILURE/VALIDATION_ERROR" (required)
+        "title": "Server side validation failed/Third party service invocation failed" (optional)
+        "detail": "" (optional)
+        "instance": "" (optional)
         "validationErrors" : [ (required)
             {
                 "fieldName":"<qualified fieldname of the field whose data sent is invalid>",
@@ -85,7 +85,7 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
     
             }
         ],
-        "originCode": <Origin http status code>, (optional - if there is SERVER_SIDE_VALIDATION)
+        "originCode": <Origin http status code> (optional - if there is SERVER_SIDE_VALIDATION)
         "originMessage" : "<unstructured error message returned by service>" (optional - if there is SERVER_SIDE_VALIDATION)
     }
 ```
@@ -191,9 +191,9 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
 デフォルトのエラーハンドラーは、エラー応答が標準スキーマの場合、またはサーバーサイドの検証エラーの場合に、フィールドにエラーメッセージを表示する機能をサポートしています。
 [ルールエディターのサービスの呼び出し](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke)アクションを使用してデフォルトのエラーハンドラーを使用する方法を理解するために、「**ペット ID**」と「**ペット名**」という 2 つのフィールドがある簡単なアダプティブフォームの例を見てみましょう。「**ペット ID**」フィールドでデフォルトのエラーハンドラーを使用して、外部サービス（`200 - OK`、`404 - Not Found`、`400 - Bad Request` など）を呼び出すように設定された REST エンドポイントが返す様々なエラーを確認します。ルールエディターのサービスの呼び出しアクションを使用してデフォルトのエラーハンドラーを追加するには、次の手順を実行します。
 
-1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択して、 **[!UICONTROL ルールエディター]** をクリックして、ルールエディターを開きます。
+1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択してから、**[!UICONTROL ルールエディター]**&#x200B;を選択してルールエディターを開きます。
 1. 「**[!UICONTROL 作成]**」を選択します。
-1. ルールの&#x200B;**条件**&#x200B;セクションで条件を作成します。例えば、**[ペット ID フィールドの名前]**&#x200B;が変更された場合という条件が考えられます。選択は、**状態を選択**&#x200B;ドロップダウンリストから変更できます。
+1. ルールの「**When**」セクションで条件を作成します。例えば、**[ペット ID フィールドの名前]**&#x200B;が変更された場合という条件が考えられます。選択は、**状態を選択**&#x200B;ドロップダウンリストから変更できます。
 1. 「**Then**」セクションの&#x200B;**[!UICONTROL アクションの選択]**&#x200B;ドロップダウンリストで「**サービスの呼び出し**」を選択します。
 1. **Post サービス**&#x200B;とそれに対応するデータ連結を「**入力**」セクションから選択します。例えば、**ペット ID**&#x200B;を検証する場合は、**Post サービス**&#x200B;を&#x200B;**GET /pet/{petId}**&#x200B;として選択し、「**入力**」セクションで「**ペット ID**」を選択します。
 1. 「**出力**」セクションからデータ連結を選択します。「**出力**」セクションで「**ペット名**」を選択します。
@@ -295,9 +295,9 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
 
 **[!UICONTROL ルールエディターのサービスの呼び出し]**&#x200B;アクションを使用してカスタムエラーハンドラーを使用するには、次の手順を実行します。
 
-1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択して、 **[!UICONTROL ルールエディター]** をクリックして、ルールエディターを開きます。
+1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択してから、**[!UICONTROL ルールエディター]**&#x200B;を選択してルールエディターを開きます。
 1. 「**[!UICONTROL 作成]**」を選択します。
-1. ルールの&#x200B;**条件**&#x200B;セクションで条件を作成します。例えば、**[ペット ID の名前フィールド]**&#x200B;が変更された場合は、「**状態を選択** 」ドロップダウンリストから「**変更済み**」を選択します。
+1. ルールの「**When**」セクションで条件を作成します。例えば、**[ペット ID の名前フィールド]**&#x200B;が変更された場合は、「**状態を選択** 」ドロップダウンリストから「**変更済み**」を選択します。
 1. 「**Then**」セクションの&#x200B;**[!UICONTROL アクションの選択]**&#x200B;ドロップダウンリストで「**サービスの呼び出し**」を選択します。
 1. **Post サービス**&#x200B;とそれに対応するデータ連結を「**入力**」セクションから選択します。例えば、**ペット ID**&#x200B;を検証する場合は、**Post サービス**&#x200B;を&#x200B;**GET /pet/{petId}**&#x200B;として選択し、「**入力**」セクションで「**ペット ID**」を選択します。
 1. 「**出力**」セクションからデータ連結を選択します。例えば、「**出力**」セクションで「**ペット名**」を選択します。

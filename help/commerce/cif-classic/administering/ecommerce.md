@@ -5,10 +5,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: ht
-source-wordcount: '749'
-ht-degree: 100%
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+workflow-type: tm+mt
+source-wordcount: '763'
+ht-degree: 96%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 100%
  </tbody>
 </table>
 
-e コマースでは、商品情報管理（PIM）と連動して、オンラインストアでの商品販売に焦点を合わせた web サイトの以下のアクティビティを扱います。
+e コマースは、Product Information Management(PIM) と共に、オンラインストアを通じた製品の販売に焦点を当てた Web サイトのアクティビティを処理します。
 
 * 商品の作成、ライフタイム、陳腐化
 * 価格管理

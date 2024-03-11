@@ -4,10 +4,10 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '4535'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 94%
 | Adobe Analytics | v1.4 Rest API | **サポート対象** |
 **パッケージのインストールに関する考慮事項：**
 
-* このパッケージは、他のデモパッケージや古いデモパッケージバージョンを含まないクリーンサーバーにインストールします。
-* オーサーモードで実行している OSGi サーバーにパッケージをインストールします。
+* パッケージは、他のデモパッケージや古いデモパッケージバージョンがない、クリーンなサーバーにインストールします。
+* パッケージは、オーサーモードで実行されている OSGi サーバーにインストールします。
 
 ### このパッケージに含まれる機能 {#what-does-this-package-include}
 
@@ -57,7 +57,7 @@ ht-degree: 94%
 
    * **we-gov-forms.ui.analytics-&lt;version>.zip** - *リポジトリ内に保存するすべての We.Gov Forms Analytics データが含まれます。*
 
-   * **we-gov-forms.config.public-&lt;version>.zip** - *フォームデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
+   * **we-gov-forms.config.public-&lt;version>.zip** - *フォームのデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
 
 このパッケージのアセットには、次のものが含まれます。
 
@@ -79,11 +79,11 @@ ht-degree: 94%
 ### ソフトウェア配布から {#from-software-distribution}
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
+1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」を選択します。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. を選択します。 **we-gov-forms.pkg.all-&lt;version>.zip** パッケージ名、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
+1. **we-gov-forms.pkg.all-&lt;version>.zip** パッケージ名を選択し、「**[!UICONTROL EULA 条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」を選択します。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
 
@@ -155,8 +155,8 @@ ht-degree: 94%
 
 1. 任意の SMTP サーバーに接続するようにサービスを設定します。
 
-   1. **SMTP サーバーのホスト名**：例（smtp.gmail.com）
-   1. **サーバーポート**：SSL を使用した gmail の例 - 465
+   1. **SMTP サーバーのホスト名**：例： (smtp.gmail.com)
+   1. **サーバーポート**：例えば、SSL を使用する gmail の場合は (465)
    1. **SMTP ユーザー：** demo@ &lt;companyname> .com
    1. **「差出人」のアドレス**：aemformsdemo@adobe.com
 
@@ -366,7 +366,7 @@ ht-degree: 94%
 
    ![Analytics クラウドサービス設定](assets/analytics_config.jpg)
 
-1. 「編集」ボタンをクリックして、Adobe Analytics設定を更新します（共有暗号鍵を指定する必要があります）。 「Analytics に接続」をクリックして接続し、「OK」をクリックして完了します。
+1. 「編集」ボタンをクリックして、Adobe Analytics 設定を更新します（シェアドシークレットを指定する必要があります）。「Analytics に接続」をクリックして接続し、「OK」をクリックして完了します。
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
@@ -480,7 +480,7 @@ AEM Forms を Adobe Forms と共にインストールして設定するには、
 
 #### IMS 設定の作成パート 1 {#creating-ims-config}
 
-フォーム変換ツールと正しく通信するようにサービスを設定するには、ユーザーがIdentity Management System(IMS) サービスをAdobe I/Oに登録できるように設定する必要があります。
+Forms 変換ツールと正しく通信するようにサービスを設定するには、ユーザーは Adobe I/O に登録できるように Identity Management System（IMS）サービスを設定する必要があります。
 
 1. https://&lt;aemserver>:&lt;port> > に移動します。Adobe Experience 
 Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定をクリックします。
@@ -501,7 +501,7 @@ Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定を�
 
 #### Adobe I/O での統合の作成 {#create-integration-adobeio}
 
-システム管理者に問い合わせない場合は、Adobeドメイン内で統合を作成できることを確認してください。
+アドビメイン内で統合を作成するためにシステム管理者に連絡しない場合は、ご自身に作成する能力があることを確認してください。
 
 1. [Adobe I/O コンソール](https://developer.adobe.com/console/)に移動します。
 
@@ -631,7 +631,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
    ![詳細な変換設定](assets/aftia-conversion-settings-2.jpg)
 
-1. 使用するすべてのオプションを設定したら、「 start conversion 」を選択します。
+1. 使用するすべてのオプションを設定したら、「変換を開始」を選択します。
 
 1. 変換処理が始まると、次の画面が表示されます。
 
@@ -697,7 +697,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 すべてのサイトページは、*https://&lt;aemserver>:&lt;port>/sites.html/content/we-gov* から利用できます。
 
-また、これらのサイトページでは、AEM Grid パッケージを使用して、一部のコンポーネントのレイアウトを制御します。
+また、これらのサイトページでは、AEM グリッドパッケージを使用して一部のコンポーネントのレイアウトを制御しています。
 
 #### スタイルシステム {#style-system}
 
@@ -705,7 +705,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 [スタイルシステム](../../sites-authoring/style-system.md)
 
-また、 [テンプレートカスタマイズスタイルシステム](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) サポートされるスタイルに関するドキュメント。
+また、サポートされるスタイルに関するドキュメントについては、[テンプレートのカスタマイズのスタイルシステム](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates)を参照してください。
 
 ### アダプティブフォームのカスタマイズ {#adaptive-forms-customization}
 

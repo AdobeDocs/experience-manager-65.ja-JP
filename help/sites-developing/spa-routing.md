@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '488'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 
 >[!NOTE]
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
 
 ## プロジェクトルーティング {#project-routing}
 
@@ -27,7 +27,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 
 ## アーキテクチャ {#architecture}
 
-詳しくは、 [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) SPA Blueprint ドキュメントの節を参照してください。
+詳しくは、SPA ブループリントドキュメントの [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager) の節を参照してください。
 
 ## ModelRouter {#modelrouter}
 
@@ -59,7 +59,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 <meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
-SPAのすべてのルートは、AEM内のアクセス可能なリソースに対応している必要があります ( 例：「 `/content/mysite/mypage"`) `PageModelManager` ルートが選択されると、対応するページモデルの読み込みが自動的に試行されます。 ただし、SPA では、必要に応じて、`PageModelManager` で無視する必要があるルートの「ブロックリスト」を定義することもできます。
+なお、ルートが選択されると、対応するページモデルの読み込みが `PageModelManager` で自動的に試行されるので、SPA のすべてのルートを AEM 内のアクセス可能なリソース（例：&quot;`/content/mysite/mypage"` など）に対応させる必要があります。ただし、SPA では、必要に応じて、`PageModelManager` で無視する必要があるルートの「ブロックリスト」を定義することもできます。
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>

@@ -2,10 +2,10 @@
 title: コンテンツフラグメントへのアクセスとヘッドレス配信クイック開始ガイド
 description: AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 
 ## GraphQL を使用したコンテンツフラグメントの配信方法 {#how-to-deliver-a-content-fragment}
 
-情報アーキテクトは、チャネルエンドポイントがコンテンツを配信するためのクエリを設計します。これらのクエリは、モデルごとにエンドポイントごとに 1 回だけ考慮する必要があります。 この入門ガイドでは、 1 つだけ作成する必要があります。
+情報アーキテクトは、チャネルエンドポイントがコンテンツを配信するためのクエリを設計します。これらのクエリは、モデルごとにエンドポイントごとに 1 回だけ考慮する必要があります。 この入門ガイドでは、作成できるのは 1 つだけです。
 
 1. AEM にログインし、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)にアクセスします。
    * 例：`http://<host>:<port>/aem/graphiql.html`

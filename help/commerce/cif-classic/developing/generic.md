@@ -1,12 +1,12 @@
 ---
 title: 開発（汎用）
-description: 統合フレームワークには、e コマース機能用のAEMコンポーネントを構築できる、API を備えた統合レイヤーが含まれています。
+description: 統合フレームワークには、API を備えた統合レイヤーが含まれており、e コマース機能用の AEM コンポーネントを作成できます。
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1853'
-ht-degree: 98%
+source-wordcount: '1856'
+ht-degree: 99%
 
 ---
 
@@ -471,7 +471,7 @@ e コマースプロジェクトには、次の場所にデフォルトの検索
 
    * ClientContext `SegmentMgr` がセグメントを解決し、ClientContext `CartMgr` がプロモーションを解決します。少なくとも 1 つの解決されたセグメントを対象とする各プロモーションがトリガーされます。
 
-      * トリガーされたプロモーションは、買い物かごを再計算するために、AJAX 呼び出しによってサーバーに返送されます。
+      * 発生したプロモーションは、買い物かごを再計算するAJAX呼び出しを通じてサーバーに送り返されます。
       * トリガーされたプロモーション（および追加された割引券）は、ClientContext パネルにも表示されます。
 
 割引券の買い物かごへの追加または買い物かごからの削除は、`CommerceSession` API を使用して実行されます。

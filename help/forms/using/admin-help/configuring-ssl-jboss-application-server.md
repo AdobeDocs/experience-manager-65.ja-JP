@@ -1,25 +1,25 @@
 ---
 title: JBoss Application Server に対する SSL の設定
-description: JBoss Application Server 用に SSL を設定する方法を説明します。
+description: JBoss Application Server での SSL の設定方法について説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '904'
-ht-degree: 70%
+ht-degree: 99%
 
 ---
 
 # JBoss Application Server に対する SSL の設定 {#configuring-ssl-for-jboss-application-server}
 
-JBoss Application Server で SSL を設定するには、認証用の SSL 秘密鍵証明書が必要です。 Java keytool を使用して、秘密鍵証明書を作成するか、認証局 (CA) から秘密鍵証明書を要求して読み込むことができます。 次に、JBoss で SSL を有効にする必要があります。
+JBoss Application Server で SSL を設定するには、認証用の SSL 秘密鍵証明書が必要です。資格情報は、Java keytool を使用して作成するか、認証局（CA）からリクエストして読み込むことができます。その後、JBoss で SSL を有効にする必要があります。
 
-キーストアの作成に必要な情報をすべて含む 1 つのコマンドを使用して、keytool を実行できます。
+keytool を使用すると、キーストアの作成に必要なすべての情報を 1 つのコマンドで指定できます。
 
-この手順では、次の手順を実行します。
+この手順では次のように指定します。
 
 * `[appserver root]` は、AEM Forms を実行するアプリケーションサーバーのホームディレクトリです。
 * `[type]` は、実行したインストールの種類に応じて異なる、フォルダー名です。
@@ -66,7 +66,7 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
    * `keytool -printcert -v -file [appserver root]\standalone\configuration\AEMForms_cert.cer`
    * `keytool -printcert -v -file [appserver root]\domain\configuration\AEMForms_cert.cer`
 
-1. の cacerts ファイルへの書き込みアクセス権を付与するには、以下を実行します。 `[JAVA_HOME]\jre\lib\security`必要に応じて、次のタスクを実行します。
+1. `[JAVA_HOME]\jre\lib\security` の cacerts ファイルへの書き込みアクセス権を付与するには、必要に応じて次のタスクを実行します。
 
    * （Windows）cacerts ファイルを右クリックして「プロパティ」を選択し、「読み取り専用」属性の選択を解除します。
    * （Linux）タイプ `chmod 777 cacerts`
@@ -76,8 +76,8 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
    `keytool -import -alias "AEMForms Cert" -file`*AEMForms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. パスワードとして`changeit`を入力します。Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
-1. `Trust this certificate? [no]`の入力を求められた場合：`yes` と入力します。「証明書がキーストアに追加されました」という確認メッセージが表示されます。
-1. Workbench から SSL 経由で接続する場合は、Workbench コンピューターに証明書をインストールします。
+1. 次を求められた場合： `Trust this certificate? [no]`, type `yes`. 「証明書がキーストアに追加されました」という確認メッセージが表示されます。
+1. Workbench から SSL 経由で接続している場合は、Workbench コンピューターに証明書をインストールします。
 1. テキストエディターで、次のファイルを開いて編集します。
 
    * シングルサーバー - `[appserver root]`¥standalone¥configuration¥lc_&lt;dbname/turnkey>.xml
@@ -136,13 +136,13 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
 
    * 自動インストールの場合：
 
-      * WindowsCampaign コントロールパネルで、[ 管理ツール ]、[ サービス ] の順にクリックします。
-      * 「JBoss for Adobe Experience Manager forms」を選択します。
-      * アクション/停止を選択します。
-      * サービスのステータスが停止と表示されるまで待ちます。
-      * アクション/開始を選択します。
+      * Windows のコントロールパネルで、「管理ツール」をクリックして「サービス」をクリックします。
+      * JBoss for Adobe Experience Manager Forms を選択します。
+      * 操作／停止を選択します。
+      * サービスのステータスが停止になるまで待ちます。
+      * 操作／開始を選択します。
 
-   * Adobeの事前設定または手動設定の JBoss インストールの場合：
+   * アドビにより事前設定された JBoss または手動で設定した JBoss のインストールの場合：
 
       * コマンドプロンプトで、*`[appserver root]`*¥bin に移動します。
       * 次のコマンドを入力して、サーバーを停止します。
@@ -150,7 +150,7 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
          * (Windows) `shutdown.bat -S`
          * (Linux) `./shutdown.sh -S`
 
-      * JBoss プロセスが完全にシャットダウンするまで待ちます（JBoss プロセスが、開始されたターミナルに制御を返す場合）。
+      * JBoss プロセスが完全にシャットダウンする（JBoss プロセスが起動したターミナルにコントロールを返す）まで待ちます。
       * 次のコマンドを入力して、サーバーを起動します。
 
          * (Windows) `run.bat -c <profile>`
@@ -158,9 +158,9 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
 
 1. SSL を使用して管理コンソールにアクセスするには、web ブラウザーで `https://[host name]:'port'/adminui` を入力してください。
 
-   JBoss のデフォルトの SSL ポートは 8443 です。 ここから、AEM forms にアクセスする際に、このポートを指定します。
+   JBoss のデフォルト SSL ポートは 8443 です。以降、AEM Forms にアクセスする際はこのポートを指定します。
 
-## CA からの資格情報のリクエスト {#request-a-credential-from-a-ca}
+## CA に証明書をリクエスト {#request-a-credential-from-a-ca}
 
 1. コマンドプロンプトで、*[JAVA HOME]*/bin に移動し、次のコマンドを入力してキーストアとキーを作成してください。
 
@@ -174,9 +174,9 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
 
    `keytool -certreq -alias`「AEMForms Cert」`-keystore`*keystorename* `.keystore -file`*AEMFormscertRequest.csr*
 
-1. 証明書ファイルの要求が満たされたら、次の手順を実行します。
+1. 証明書ファイルの要求が完了したら、次の手順を実行します。
 
-## CA から取得した資格情報を使用して SSL を有効にする {#use-a-credential-obtained-from-a-ca-to-enable-ssl}
+## CA から入手した証明書を使用して SSL を有効化 {#use-a-credential-obtained-from-a-ca-to-enable-ssl}
 
 1. コマンドプロンプトで、*`[JAVA HOME]`*¥bin に移動し、次のコマンドを入力して CSR が署名された CA のルート証明書を読み込みます。
 
@@ -195,6 +195,6 @@ JBoss Application Server で SSL を設定するには、認証用の SSL 秘密
    >[!NOTE]
    >
    >* `[JAVA_HOME]` を JDK がインストールされているディレクトリに置き換え、斜体のテキストは自分の環境に対応する値に置き換えます。
-   >* 読み込まれた CA 署名済み証明書は、自己署名済みの公開証明書が存在する場合は置き換えられます。
+   >* 自己署名の公開証明書が存在する場合は、読み込んだ CA 署名付き証明書に置き換えられます。
 
-1. SSL 秘密鍵証明書の作成の手順 13～18 を実行します。
+1. SSL 証明書の作成の手順 13～18 を実行します。

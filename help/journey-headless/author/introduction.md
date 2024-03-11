@@ -2,10 +2,10 @@
 title: Adobe Experience Manager でのヘッドレス向けオーサリング
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをオーサリングする方法を紹介します。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
-source-git-commit: 9c517590c2b78eed7c52e33e0a106237a2af3bb7
-workflow-type: ht
-source-wordcount: '659'
-ht-degree: 100%
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 96%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 従来は、CMS でコンテンツを管理し、web ページでのそのコンテンツのレンダリングするのも CMS でした。
 
-しかし、ヘッドレスでは、コンテンツセットを CMS で管理し、1 つ以上の（独立した）アプリケーションからそのコンテンツにアクセスすることができます。
+ヘッドレスとは、コンテンツセットを CMS で管理し、1 つ以上の（独立した）アプリケーションからアクセスできることを意味します。
 
 つまり、コンテンツを様々な形式で任意のデバイスに配信できるということです。これにより、プロセス全体がはるかに柔軟になり、レイアウトや書式設定を気にする必要もなくなります。
 

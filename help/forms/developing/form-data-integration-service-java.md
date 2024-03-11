@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 81%
+source-wordcount: '250'
+ht-degree: 100%
 
 ---
 
@@ -26,11 +26,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「AEM forms によるプログラミング」のクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM Forms によるプログラミング」のクイックスタートは、JBoss アプリケーションサーバーとMicrosoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-次の Java コードの例では、データを PDF フォームに読み込みます。データは、 *Loan_data.xml* PDFフォームは、 *ResultLoanForm.pdf*. （[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
+次の Java コードの例では、データを PDF フォームに読み込みます。データは *Loan_data.xml* という名前の XML ファイルにあり、PDF フォームは *ResultLoanForm.pdf* という名前の PDF ファイルとして保存されます。（[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
 
 ```java
  /*

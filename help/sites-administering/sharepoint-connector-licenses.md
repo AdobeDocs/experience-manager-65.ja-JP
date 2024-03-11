@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 100%
@@ -1099,7 +1099,7 @@ ht-degree: 100%
      W3C&reg; DOCUMENT NOTICE AND LICENSE
      Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
-     Wide Web Consortium, (Massachusetts Institute of
+     Wide Web Consortium (Massachusetts Institute of
      Technology, Institut National de
      Recherche en Informatique et en Automatique, Keio University). All Rights Reserved.
      <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
@@ -1122,7 +1122,7 @@ ht-degree: 100%
 
      The pre-existing copyright notice of the original author, or if
      it does not exist, a notice of the form: "Copyright &copy; [$date-of-document]
-     World Wide Web Consortium, (Massachusetts
+     World Wide Web Consortium (Massachusetts
      Institute of Technology, Institut National de Recherche en Informatique
      et en Automatique, Keio
      University). All Rights Reserved.
@@ -1185,7 +1185,7 @@ ht-degree: 100%
      W3C&reg; SOFTWARE NOTICE AND LICENSE
      Copyright &copy; 1994-2001 World
      Wide Web Consortium, World
-     Wide Web Consortium, (Massachusetts Institute of
+     Wide Web Consortium (Massachusetts Institute of
      Technology, Institut National de
      Recherche en Informatique et en Automatique, Keio University). All Rights Reserved.
      <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>

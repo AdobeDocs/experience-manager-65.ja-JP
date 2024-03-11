@@ -7,10 +7,10 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '1954'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 97%
 
 [OSGi](https://www.osgi.org/) は、Adobe Experience Manager（AEM）の技術スタックにおける基本要素です。AEM の複合バンドルおよびそれらの設定を制御するために使用します。
 
-OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネントを使用してアプリケーションを構築できる、標準化されたプリミティブを提供します。 これらのコンポーネントは、アプリケーションに組み込み、デプロイできます*&quot;.
+OSGi は「*標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます*」。
 
 これにより、バンドルの管理が容易になり、バンドルの停止、インストール、開始を個別に実行できます。相互依存関係は自動的に処理されます。各 OSGi コンポーネント ( [OSGi の仕様](https://docs.osgi.org/specification/)を参照) は、様々なバンドルの 1 つに含まれています。
 
@@ -80,7 +80,7 @@ Web コンソールで設定を更新するには：
 
 1. 次のいずれかの方法で、web コンソールの「**設定**」タブにアクセスします。
 
-   * Web コンソールを **ツール/操作** メニュー。 コンソールにログインしたら、次のドロップダウンメニューを使用できます。
+   * **ツール／操作**&#x200B;メニューのリンクから web コンソールを開きます。コンソールにログインしたら、次のドロップダウンメニューを使用できます。
 
      **OSGi >**
 
@@ -229,7 +229,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
    * タイプ：`sling:OsgiConfig`
    * 名前：永続 ID（PID）
 
-     例えば、AEM WCM Version Manager の場合は、 `com.day.cq.wcm.core.impl.VersionManagerImpl`
+     例えば、AEM WCM Version Manager の場合は `com.day.cq.wcm.core.impl.VersionManagerImpl` を使用します
 
    >[!NOTE]
    >
@@ -247,7 +247,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
    * タイプ：適宜。
    * 値：必要に応じて。
 
-   プロパティを作成する必要があるのは、設定対象のパラメーターのみです。その他は、AEM で設定されているデフォルト値を引き続き使用します。
+   設定するパラメーターのプロパティのみを作成する必要があります。その他のパラメーターは、AEMで設定されたデフォルト値を引き続き使用します。
 
 1. すべての変更を保存します。
 

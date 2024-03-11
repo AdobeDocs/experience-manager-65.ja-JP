@@ -6,10 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 98%
+source-wordcount: '955'
+ht-degree: 97%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 98%
 
 ## CSRF 攻撃の仕組み {#how-csrf-attacks-work}
 
-クロスサイトリクエストフォージェリー（CSRF）とは、有効なユーザーのブラウザーが悪質なリクエストの送信（iFrame を介する場合あり）に利用される、web サイトの脆弱性のことです。ブラウザーは Cookie をドメインベースで送信するので、ユーザーがアプリケーションにログインしている場合、ユーザーのデータが侵害される可能性があります。
+クロスサイトリクエストフォージェリ (CSRF) とは、有効なユーザーのブラウザーが、iFrame を介して悪意のあるリクエストを送信するために使用される、Web サイトの脆弱性です。 ブラウザーは Cookie をドメインベースで送信するので、ユーザーがアプリケーションにログインしている場合、ユーザーのデータが侵害される可能性があります。
 
 例えば、ブラウザーで管理コンソールにログインしている場合を想定します。リンクを含むメールメッセージを受信したとします。リンクをクリックすると、ブラウザーで新しいタブが開きます。開いたページには、認証済みの AEM Forms セッションの Cookie を使用して Forms サーバーに悪質なリクエストを行う非表示の iFrame が含まれています。User Management は有効な Cookie を受け取るので、そのリクエストを渡してしまいます。
 
@@ -30,7 +30,7 @@ ht-degree: 98%
 **Null リファラー**：ブラウザーの新しいウィンドウまたはタブを開き、アドレスを入力して Enter キーを押した場合、リファラーは null です。リクエストはまったく新規で、親 web ページから生成されたものではないので、このリクエストのリファラーはありません。Forms サーバーは、以下の場合に null リファラーを受け取ることができます。
 
 * SOAP または REST エンドポイントで Acrobat からリクエストが送信された場合
-* AEM forms SOAP または REST エンドポイントで HTTP リクエストを実行するデスクトップクライアント
+* AEM Forms の SOAP または REST エンドポイントで HTTP リクエストを行うデスクトップクライアント
 * ブラウザーの新しいウィンドウが開き、任意の AEM Forms web アプリケーションログインページの URL が入力された場合
 
 SOAP および REST エンドポイントで null リファラーを許可してください。すべての URI ログインページ（/adminui、/contentspace、それらに対応するマッピングされたリソースなど）でも、null リファラーを許可してください。例えば、/contentspace に対してマッピングされたサーブレット /contentspace/faces/jsp/login.jsp は、null リファラーの例外とすることが必要です。この例外は、web アプリケーションで GET フィルタリングを有効にしている場合にのみ必要です。null リファラーを許可するかどうかはアプリケーションで指定できます。[AEM Forms の堅牢化とセキュリティ](https://help.adobe.com/ja_JP/livecycle/11.0/HardeningSecurity/index.html)の「クロスサイトリクエストフォージェリー攻撃からの保護」を参照してください。

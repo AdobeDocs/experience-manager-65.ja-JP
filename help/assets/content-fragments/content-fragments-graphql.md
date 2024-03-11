@@ -4,10 +4,10 @@ description: ヘッドレスコンテンツ配信に AEM コンテンツフラ�
 feature: Content Fragments
 role: User
 exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
-workflow-type: ht
-source-wordcount: '684'
-ht-degree: 100%
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+workflow-type: tm+mt
+source-wordcount: '669'
+ht-degree: 94%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 Gra
 
 ヘッドレスコンテンツ管理システム（CMS）とは次のことを意味します。
 
-* 「*ヘッドレスコンテンツ管理システム（ヘッドレス CMS）は、API経由でコンテンツにアクセスし、あらゆるデバイスで表示できるようにするコンテンツリポジトリとして一から構築された、バックエンド専用のコンテンツ管理システム（CMS）です。*」
+* &quot;*ヘッドレスコンテンツ管理システム（ヘッドレス CMS）は、あらゆるデバイスで表示するために API を介してコンテンツにアクセスできるように、コンテンツリポジトリとして一から構築されたバックエンド専用のコンテンツ管理システム (CMS) です。*
 
   [ウィキペディア](https://en.wikipedia.org/wiki/Headless_content_management_system)を参照してください。
 

@@ -4,10 +4,10 @@ description: タフデイテストでは、すべての操作が同時に進行�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: b1012548630affd697edd27c90bdac4eeb35125f
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '1825'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -86,7 +86,7 @@ java -jar toughday2.jar --help_full
   </tr>
   <tr>
    <td>--help_full</td>
-   <td>上記のすべてを印刷し、さらに、テスト、パブリッシャー、スイートコンポーネントを印刷します。</td>
+   <td>上記のすべてを出力し、さらに、テスト、パブリッシャー、スイートコンポーネントを出力します。</td>
    <td> </td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 | `--port=<Val>` | ホストのポート。 | 4502 |  |
 | `--user=<Val>` | インスタンスのユーザー名。 | admin |  |
 | `--password=<Val>` | 指定されたユーザーのパスワード。 | admin |  |
-| `--duration=<Val>` | テストの期間。（**秒**）単位、（**分**）単位、（**時**）単位、（**日**）単位で表現できます。 | 1d |  |
+| `--duration=<Val>` | テストの期間。で表すことができます。 **s**&#x200B;秒 **m**&#x200B;分 **h**&#x200B;我々の **d** ays. | 1d |  |
 | `--timeout=<Val>` | テストが中断され、失敗としてマークされるまでのテストの実行時間。秒単位で表現できます。 | 180 |  |
 | `--suite=<Val>` | 値は、事前定義済みのテストスイートの 1 つまたはリスト（コンマ区切り）にすることができます。 | toughday |  |
 | `--configfile=<Val>` | ターゲットの yaml 設定ファイル。 |  |  |
@@ -238,7 +238,7 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-また、特定のスイート内の既存のテストは、`config`* *パラメーターを使用して再設定することもできます。また、（テストクラス名ではなく）テストのスイート名と実際の名前も指定します。 テスト名は、テストクラスの `name` プロパティで確認できます。テストプロパティの確認方法について詳しくは、[テストプロパティの変更](/help/sites-developing/tough-day.md#changing-the-test-properties)を参照してください。
+また、特定のスイート内の既存のテストは、`config`* *パラメーターを使用して再設定することもできます。スイート名と（テストクラス名ではなく）テストの実際の名前も指定します。テスト名は、テストクラスの `name` プロパティで確認できます。テストプロパティの確認方法について詳しくは、[テストプロパティの変更](/help/sites-developing/tough-day.md#changing-the-test-properties)を参照してください。
 
 以下の例では0、`CreatePageTreeTest` のデフォルトのアセットタイトル（名前は `UploadAsset`）を「NewAsset」に変更しています。
 
@@ -260,7 +260,7 @@ tests:
       title : NewAsset
 ```
 
-また、`exclude` パラメーターを使用して、事前に定義されたスイートからテストを削除したり、デフォルト設定から発行者を削除したりすることもできます。また、（テスト C ではなく）テストのスイート名と実際の名前も指定します。 `lass` 名前 ) を参照してください。 テスト名は、テストクラスの `name` プロパティで確認できます。以下の例では、（`UploadAsset` という名前の）`CreatePageTreeTest` テストを toughday スイートから削除しています。
+また、`exclude` パラメーターを使用して、事前に定義されたスイートからテストを削除したり、デフォルト設定から発行者を削除したりすることもできます。スイート名と（Test C `lass` 名ではなく）テストの実際の名前も指定します。テスト名は、テストクラスの `name` プロパティで確認できます。以下の例では、（`UploadAsset` という名前の）`CreatePageTreeTest` テストを toughday スイートから削除しています。
 
 コマンドラインパラメーターを使用する場合：
 

@@ -6,10 +6,10 @@ role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 97%
+source-wordcount: '1026'
+ht-degree: 98%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 97%
 
 1. [!DNL Assets] のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
 
-1. ツールバーの「**[!UICONTROL リンクを共有]**」![アセット共有アイコン](assets/do-not-localize/assets_share.png)をクリックします。クリック後に作成されるリンク **[!UICONTROL 共有]** は、事前に [!UICONTROL リンクを共有] フィールドに入力します。 リンクは、 **[!UICONTROL 送信]**.
+1. ツールバーの「**[!UICONTROL リンクを共有]**」![アセット共有アイコン](assets/do-not-localize/assets_share.png)をクリックします。「**[!UICONTROL 共有]**」をクリックすると作成されるリンクは、事前に「[!UICONTROL リンクを共有]」フィールドに表示されています。リンクは「**[!UICONTROL 送信]**」を選択するまで作成されません。
 
    ![「リンクを共有」が表示されるダイアログ](assets/share-assets-as-link.png)
 
@@ -58,7 +58,7 @@ ht-degree: 97%
 
 1. ユーザーが元のアセットをダウンロードできるようにするには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。ユーザーが共有アセットのレンディションのみをダウンロードできるようにするには、「**[!UICONTROL ファイルのレンディションのダウンロードを許可]**」を選択します。
 
-1. 「**[!UICONTROL 共有]**」をクリックします。メールでリンクをユーザーと共有することを確認するメッセージが表示されます。
+1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールによってユーザーと共有されることを確認するメッセージが表示されます。
 
 1. 共有アセットを表示するには、ユーザーが受け取ったメールのリンクをクリックまたはタップします。アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。プレビューを閉じるには、「**[!UICONTROL 戻る]**」をクリックします。フォルダーを共有したら、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
 

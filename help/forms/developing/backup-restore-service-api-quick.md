@@ -1,16 +1,16 @@
 ---
-title: Backup and Restore サービス API のクイックスタート
-description: AEM Forms Backup and Restore API のクイックスタートを使用して、効率的なバックアップ作成と復元のプロセスを有効にする方法を説明します。
+title: バックアップと復元サービス API のクイックスタート
+description: AEM Forms のバックアップと復元サービス API のクイックスタートにより、効率的なバックアップ作成および復元プロセスを有効にする方法について説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: c4cd9a61a226ace2a72d60b5b7b7432de12cb873
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 

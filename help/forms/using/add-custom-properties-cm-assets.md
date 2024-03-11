@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '4433'
-ht-degree: 95%
+source-wordcount: '4434'
+ht-degree: 97%
 
 ---
 
@@ -43,7 +43,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 すべてのアセットタイプおよびレターにカスタムプロパティを追加するには、次の手順を実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` に移動して、管理者でログインします。
-1. 次の手順に従って、apps フォルダーに、（ccrui フォルダー内の）css フォルダーと同様のパス/構造で css という名前のフォルダーを作成します。
+1. apps フォルダー内で、次の手順で css フォルダー（ccrui フォルダーに存在）に類似したパス／構造で、css という名前のフォルダーを作成します。
 
    1. 以下のパスにある items フォルダーを右クリックし、**ノードをオーバーレイ**&#x200B;を選択します。
 
@@ -101,7 +101,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
    >[!NOTE]
    >
-   >追加したすべてのアセットの共通プロパティは、アセットプロパティの「基本」タブに表示されます。デフォルトでは、すべてのアセットに追加された共通のプロパティは、プロパティページとアセット作成ページに表示されます。 共通のプロパティを非表示にするには、<!--link to show / hide properties]--> を実行する必要があります。
+   >追加したすべてのアセットの共通プロパティは、アセットプロパティの「基本」タブに表示されます。デフォルトでは、すべてのアセットに追加された共通プロパティは、プロパティページおよびアセット作成ページに表示されます。共通のプロパティを非表示にするには、<!--link to show / hide properties]--> を実行する必要があります。
 
 ### シナリオ：カスタムプロパティ／フィールドにカスタムドロップダウンおよび値を追加 {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
 
@@ -146,7 +146,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 
 1. プロパティノード（ここでは「geographicallocation」）に、`items` という名前の新しいノードを追加します。items ノードで、ドロップダウンの値ごとにノードを追加します。ドロップダウンのデフォルト値として機能するように、最初のノードを空白として追加し、ユーザーがフィールドに値を指定しないようにオプションを追加することをお勧めします。複数のオプション／ドロップダウンの値を追加するには、次の手順を繰り返します。
 
-   1. プロパティノード（ここでは geographicalLocation）を右クリックし、**作成**／**ノードを作成**&#x200B;を選択します。
+   1. プロパティノード（ここでは「geographicallocation」）を右クリックし、「 」を選択します。 **作成** > **ノードを作成**.
    1. フィールド名に `item1,` を入力し、タイプは nt:unstructured のままにして、「**OK**」をクリックします。
    1. 次のプロパティを新しく作成したノード（ここでは「item1」）に追加し、「**すべて保存**」をクリックします。
 
@@ -185,7 +185,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 次の手順を使用して、すべてのアセットにフィールド付きのタブを追加できます。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. 次の手順を使用して、apps フォルダに、（コンテンツフォルダ内の）cmmetadataproperties フォルダに似たパス/構造を持つ cmmetadataproperties という名前のフォルダを作成します。
+1. apps フォルダーに、（content フォルダー内の）cmmetadataproperties フォルダーに類似したパス／構造で cmmetadataproperties という名前のフォルダーを作成します。手順は次のとおりです。
 
    1. 次のパスにある cmmetadataproperties フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -385,7 +385,7 @@ Correspondence Management のユーザーインターフェイスをカスタマ
 * データディクショナリ
 * レター
 
-例えば、テキストアセットにのみ、プロパティ「受信者の場所」を追加して、アセットが関連する地域を特定することができます。![アセットに追加されたカスタムプロパティ](assets/newtabui.png)
+例えば、テキストアセットにのみプロパティ「受信者の場所」を追加して、アセットが関連する地理的領域を識別します。  ![アセットに追加されたカスタムプロパティ](assets/newtabui.png)
 
 アセットタイプにプロパティを追加するには、次の手順を実行します。
 
@@ -842,7 +842,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 ## 検索ページのデフォルト表示を変更 {#change-default-view-of-the-search-page}
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. apps フォルダーに、 /libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views の list フォルダーに似たパス/構造で list という名前のフォルダーを作成します。
+1. apps フォルダーで、/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views にある list フォルダーと類似したパス／構造で list という名前のフォルダーを作成します。
 
    1. 次のパスにある items フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -886,7 +886,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 >以下の手順により、フォーム、ドキュメント、アセット、サイトなどのすべてのコンソールのデフォルト表示が変更されます。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. apps フォルダーに、次のリストフォルダーに類似したパス/構造で list という名前のフォルダーを作成します。
+1. apps フォルダーで、以下のパスにある list フォルダーと類似したパス／構造で list という名前のフォルダーを作成します。
 
    /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/
 
@@ -929,7 +929,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
 
 カスタムプロパティを表示または非表示にするには、次の手順を実行します。
 
-1. カスタムプロパティノード（geographicallocation など）の下に、「granite:rendercondition」という名前で「nt:unstructured」タイプのノードを作成します。
+1. geographicallocation などのカスタムプロパティノードに、タイプが「nt:unstructured」の「granite:rendercondition」という名前のノードを作成します。
 1. 次のプロパティをノードに追加し、「**すべて保存**」をクリックします。
 
    <table>

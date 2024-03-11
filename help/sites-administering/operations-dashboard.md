@@ -1,6 +1,6 @@
 ---
 title: 操作ダッシュボード
-description: Adobe Experience Managerの操作ダッシュボードの使用方法を説明します。
+description: Adobe Experience Manager で操作ダッシュボードを使用する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
-source-wordcount: '5853'
-ht-degree: 97%
+source-wordcount: '5868'
+ht-degree: 95%
 
 ---
 
@@ -199,7 +199,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td><p>監視キューの長さは、すべてのイベントリスナーとバックグラウンドオブザーバーを繰り返し処理し、それらの <code>queueSize </code> を <code>maxQueueSize</code> と比較します。</p>
     <ul>
      <li><code>queueSize</code> 値が <code>maxQueueSize</code> 値を超えた場合（つまり、イベントがドロップされた場合）、重要ステータスを返します。</li>
-     <li><code>queueSize</code> 値が <code>maxQueueSize * WARN_THRESHOLD</code> を超えた場合、警告を返します（デフォルト値は 0.75）。 </li>
+     <li>が警告を返す場合、 <code>queueSize</code> 値が <code>maxQueueSize * WARN_THRESHOLD</code> （デフォルト値は 0.75） </li>
     </ul> <p>各キューの最大長は個別の設定（Oak と AEM）から取得され、このヘルスチェックからは設定できません。このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
@@ -223,11 +223,11 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>非同期インデックス</td>
    <td><p>非同期インデックスのチェック：</p>
     <ul>
-     <li>1 つ以上のインデックス作成レーンが失敗した場合に、重要ステータスを返します</li>
+     <li>少なくとも 1 つのインデックス作成レーンが失敗した場合、「重大」ステータスを返します。</li>
      <li>すべてのインデックス作成レーンについて <code>lastIndexedTime</code> をチェックし、次のことを行います。
       <ul>
        <li>2 時間以上前の場合は、重大ステータスを返します。 </li>
-       <li>2 時間～ 45 分前の場合は警告ステータスを返します </li>
+       <li>2 時間～ 45 分前の場合は、警告ステータスを返します。 </li>
        <li>45 分前未満の場合は OK ステータスを返します </li>
       </ul> </li>
      <li>いずれの条件も満たさない場合は、OK ステータスを返します</li>
@@ -263,17 +263,17 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
       Sling ジョブは、JobManager でのキューに登録されたジョブ数をチェックし、<code>maxNumQueueJobs</code> しきい値と比較します。
     </div>
     <ul>
-     <li>キューに <code>maxNumQueueJobs</code> より多くある場合、重要ステータスを返します</li>
-     <li>1 時間を超えて長時間実行されているアクティブなジョブがある場合は、重要ステータスを返します</li>
-     <li>キュー内にジョブがあり、最後に完了したジョブの時間が 1 時間を超えている場合は、重要ステータスを返します</li>
+     <li>は、 <code>maxNumQueueJobs</code> はキューに入っています</li>
+     <li>1 時間より古い長時間実行されているアクティブなジョブがある場合は、Critical を返します。</li>
+     <li>キューにジョブがあり、最後に完了したジョブ時間が 1 時間より古い場合は、Critical を返します。</li>
     </ul> <p>設定できるのは、キューに登録されたジョブのパラメーターの最大数のみで、デフォルト値は 1000 です。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingJobs%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=slingJobs,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>リクエストパフォーマンス</td>
    <td><p>このチェックは、<code>granite.request.metrics.timer</code> <a href="http://localhost:4502/system/console/slingmetrics" target="_blank">Sling 指標</a>を確認します。</p>
     <ul>
-     <li>75 パーセンタイルの値が重要ステータスのしきい値（デフォルト値は 500 ミリ秒）を超えている場合は、重要ステータスを返します</li>
-     <li>75 パーセンタイルの値が重要ステータスのしきい値（デフォルト値は 200 ミリ秒）を超えている場合は、警告ステータスを返します</li>
+     <li>第 75 百分位値が重大しきい値（デフォルト値は 500 ミリ秒）を超える場合、重大値を返します</li>
+     <li>75 番目のパーセンタイル値が警告しきい値を超えた場合（デフォルト値は 200 ミリ秒）、警告を返します</li>
     </ul> <p>このヘルスチェックの MBean は、<em> </em><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DrequestsStatus%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
@@ -284,8 +284,8 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>ディスク容量</td>
    <td><p>ディスク容量チェックは、<code>FileStoreStats</code> MBean を確認し、ノードストアのサイズおよびノードストアパーティション上の使用可能なディスク容量を取得します。</p>
     <ul>
-     <li>リポジトリサイズに対する使用可能なディスク容量の割合が警告ステータスのしきい値（デフォルト値は 10）未満の場合は、警告ステータスを返します</li>
-     <li>リポジトリサイズに対する使用可能なディスク容量の割合が重要ステータスのしきい値（デフォルト値は 2）未満の場合は、重要ステータスを返します</li>
+     <li>使用可能なディスク領域とリポジトリのサイズの比率が警告しきい値（デフォルト値は 10）未満の場合、警告を返します</li>
+     <li>使用可能なディスク容量とリポジトリのサイズの比率が、重大のしきい値（デフォルト値は 2）未満の場合、重大を返します。</li>
     </ul> <p>どちらのしきい値も設定可能です。このチェックは、セグメントストアを含むインスタンスに対してのみ機能します。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DDiskSpaceHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=DiskSpaceHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
@@ -308,15 +308,15 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>コードキャッシュのチェック</td>
    <td><p>Java™ 7 に存在する CodeCache バグをトリガーできるいくつかの JVM 条件を検証するヘルスチェックです。</p>
     <ul>
-     <li>コードキャッシュのフラッシュが有効な Java™ 7 でインスタンスが実行されている場合、警告ステータスを返します</li>
-     <li>Java™ 7 でインスタンスが実行されていて、予約済みコードキャッシュのサイズが最小しきい値よりも少ない（デフォルト値は 90MB）場合、警告ステータスを返します</li>
+     <li>インスタンスが Java™ 7 上で実行され、コードキャッシュのフラッシュが有効になっている場合、警告を返します。</li>
+     <li>インスタンスが Java™ 7 上で実行され、予約済みコードキャッシュのサイズが最小しきい値（デフォルト値は 90 MB）未満の場合、警告を返します</li>
     </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。このバグについて詳しくは、<a href="https://bugs.java.com/bugdatabase/">こちらのページで Bug ID 8012547 を検索してください</a>。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>リソース検索パスエラー</td>
    <td><p>パス <code>/apps/foundation/components/primary</code> にリソースがあるかどうかをチェックします。</p>
     <ul>
-     <li>は、次の下に子ノードがある場合、警告ステータスを返します <code>/apps/foundation/components/primary</code></li>
+     <li>の下に子ノードがある場合、警告を返します。 <code>/apps/foundation/components/primary</code></li>
     </ul> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DresourceSearchPathErrorHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=resourceSearchPathErrorHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
  </tbody>
@@ -424,7 +424,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 * すべての&#x200B;**エラー**&#x200B;メッセージを取り込む計画をしている場合は、設定は不要です。エラーメッセージはすべてデフォルトで取り込まれます。
 * **エラー**、**警告**、**情報**&#x200B;のすべてのメッセージを取り込む計画をしている場合は、ロガー名を「**root**」に、ロガーレベルを&#x200B;**情報**&#x200B;に設定します。
 
-* 特定のパッケージからのすべてのメッセージ（例えば、com.adobe.granite）をキャプチャする予定がある場合、ロガー名は「com.adobe.granite」に設定する必要があります。 また、ロガーレベルを&#x200B;**デバッグ**&#x200B;に設定します（これにより、**エラー**、**警告**、**情報**、**デバッグ**&#x200B;のすべてのメッセージが取り込まれます）。以下の図を参照してください。
+* 特定のパッケージ（com.adobe.granite など）からのすべてのメッセージを取り込む計画をしている場合は、ロガー名を「com.adobe.granite」に設定します。また、ロガーレベルを&#x200B;**デバッグ**&#x200B;に設定します（これにより、**エラー**、**警告**、**情報**、**デバッグ**&#x200B;のすべてのメッセージが取り込まれます）。以下の図を参照してください。
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 
@@ -438,7 +438,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 >[!NOTE]
 >
->診断ページの設定はログファイルへの記録内容には影響せず、その逆も同様です。したがって、エラーログで情報メッセージが見つかったとしても、ログメッセージの UI には表示されない場合があります。また、UI を使用すると、エラーログに影響を与えることなく、特定のパッケージからデバッグメッセージを取得できます。 ログファイルの設定方法について詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
+>診断ページの設定はログファイルへの記録内容には影響せず、その逆も同様です。したがって、エラーログで情報メッセージが見つかったとしても、ログメッセージの UI には表示されない場合があります。また、エラーログに影響を与えずに、特定のパッケージからのデバッグメッセージを UI を通して見つけることもできます。ログファイルの設定方法について詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
 >[!NOTE]
 >
@@ -627,7 +627,7 @@ Lucene バイナリクリーンアップタスクには、**AEM／ツール／�
 
 ## カスタムメンテナンスタスク {#custom-maintenance-tasks}
 
-カスタムメンテナンスタスクは OSGi サービスとして実装できます。 メンテナンスタスクインフラストラクチャは Apache Sling のジョブ処理に基づいているので、メンテナンスタスクは Java™インターフェイスを実装する必要があります ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. さらに、次に示すように、メンテナンスタスクとして検出されるサービス登録プロパティを複数宣言する必要があります。
+カスタムメンテナンスタスクは OSGi サービスとして実装できます。メンテナンスタスクのインフラストラクチャは Apache Sling のジョブ処理に基づいているので、メンテナンスタスクでは Java™ インターフェイス ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)` を実装する必要があります。さらに、以下に示すいくつかのサービス登録プロパティがメンテナンスタスクとして検出されることを宣言する必要があります。
 
 <table>
  <tbody>

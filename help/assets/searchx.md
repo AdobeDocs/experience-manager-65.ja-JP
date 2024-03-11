@@ -5,10 +5,10 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
 workflow-type: tm+mt
 source-wordcount: '814'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 93%
 
    >[!NOTE]
    >
-   >2 つ目の `siteadminsearchpanel`を設定する場合は、必ず `id` プロパティを使用してフォームの競合を防ぎます。
+   >2 つ目の `siteadminsearchpanel` を作成する場合は、フォームの競合を避けるために `id` プロパティを必ず設定してください。
 
 ## カスタム述語の作成 {#creating-custom-predicates}
 
@@ -53,13 +53,13 @@ ht-degree: 93%
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスは、既存の述語をコピー後に変更することです。述語の例は、 **/libs/cq/search/components/predicates**.
+ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、**/libs/cq/search/components/predicates** にあります。
 
 ### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
 プロパティ述語を作成するには、次の手順を実行します。
 
-1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： **/apps/weretail/components/titlepredicate**.
+1. プロジェクトディレクトリ（**/apps//weretail/components/titlepredicate** など）にコンポーネントフォルダーを作成します。
 1. **content.xml** を追加します。
 
    ```xml
@@ -126,7 +126,7 @@ ht-degree: 93%
                "name": id + ".value"
            });
    
-           // Depending on the predicate additional parameters allow to configure the
+           // Depending on the predicate, additional parameters let you configure the
            // predicate. Here we add an operation parameter to create a "like" query.
            // Again note the name set to the id and a suffix.
            qb.addField({
@@ -152,7 +152,7 @@ ht-degree: 93%
 
 グループ述語を作成するには、次の手順を実行します。
 
-1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： **/apps/weretail/components/picspredicate**.
+1. プロジェクトディレクトリ（**/apps/weretail/components/picspredicate** など）にコンポーネントフォルダーを作成します。
 1. **content.xml** を追加します。
 
    ```xml
@@ -253,14 +253,14 @@ ht-degree: 93%
 
 ### FulltextPredicate {#fulltextpredicate}
 
-| プロパティ | 型 | 説明 |
+| Property | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前です。デフォルトは `fulltext` |
 | searchCallback | 関数 | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
-| プロパティ | 型 | 説明 |
+| Property | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前です。デフォルトは `property` |
 | propertyName | String | JCR プロパティの名前。デフォルトは `jcr:title` |
@@ -268,7 +268,7 @@ ht-degree: 93%
 
 ### PathPredicate {#pathpredicate}
 
-| プロパティ | 型 | 説明 |
+| Property | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前です。デフォルトは `path` |
 | rootPath | String | 述語のルートパス。デフォルトは `/content/dam` |
@@ -277,7 +277,7 @@ ht-degree: 93%
 
 ### DatePredicate {#datepredicate}
 
-| プロパティ | 型 | 説明 |
+| Property | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前です。デフォルトは `daterange` |
 | propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
@@ -285,7 +285,7 @@ ht-degree: 93%
 
 ### OptionsPredicate {#optionspredicate}
 
-| プロパティ | 型 | 説明 |
+| Property | 型 | 説明 |
 |---|---|---|
 | title | String | 最上部のタイトルを追加します |
 | predicateName | String | 述語の名前です。デフォルトは `daterange` |

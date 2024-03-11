@@ -3,16 +3,16 @@ title: コマース統合フレームワークを使用した AEM とサード�
 description: 大規模企業では、ストアフロントを強化するために、追加のサードパーティ製コマースソリューションが必要になる場合があります。I/O Runtime を使用してサードパーティのコマースソリューションを Adobe Experience Manager に接続するような統合シナリオで、コマース統合フレームワーク（CIF）を使用できます。
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
-workflow-type: ht
-source-wordcount: '507'
-ht-degree: 100%
+source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+workflow-type: tm+mt
+source-wordcount: '489'
+ht-degree: 96%
 
 ---
 
 # コマース統合フレームワークを使用した AEM とサードパーティコマースの統合 {#aem-third-party}
 
-Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを介して接続できます。
+Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを通じて接続されます。
 
 ## アーキテクチャ {#architecture}
 
