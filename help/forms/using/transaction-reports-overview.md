@@ -6,24 +6,24 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Transaction Reports
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 98%
+source-wordcount: '476'
+ht-degree: 92%
 
 ---
 
-# トランザクションレポートの概要{#transaction-reports-overview}
+# OSGi 上のAEM Formsのトランザクションレポート {#transaction-reports-overview}
 
-## はじめに {#introduction}
+<!--## Introduction {#introduction}
 
-AEM Forms のトランザクションレポートを使用すると、AEM Forms のデプロイメントで指定した日以降に発生したすべてのトランザクション数を保持できます。目的は、製品の使用状況に関する情報を提供し、ビジネスの関係者がデジタル処理量を理解できるようにすることです。トランザクションの例を次に示します。
+Transaction reports in AEM Forms let you keep a count of all transactions taken place since a specified date on your AEM Forms deployment. The objective is to provide information about product usage and help business stakeholders understand their digital processing volumes. Examples of a transaction include:
 
-* アダプティブフォーム、HTML5 フォームまたはフォームセットの送信
-* インタラクティブ通信の印刷または web バージョンのレンディション
-* あるファイル形式から別のファイル形式へのドキュメントの変換
+* Submission of an adaptive form, an HTML5 Form, or a form set
+* Rendition of a print or a web version of an interactive communication
+* Conversion of a document from one file format to another
 
-トランザクションと見なされる項目の詳細については、[課金対象 API](../../forms/using/transaction-reports-billable-apis.md) を参照してください。
+For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis.md).-->
 
 トランザクションの記録はデフォルトで無効になっています。AEM web コンソールから[トランザクションの記録を有効](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports)にすることができます。オーサーインスタンス、処理インスタンスまたはパブリッシュインスタンスのトランザクションレポートを表示できます。すべてのトランザクションの集計合計に対して、作成者または処理インスタンスのトランザクションレポートを表示します。パブリッシュインスタンスで発生したトランザクションレポートのうち、レポートの実行元のパブリッシュインスタンスでのみ発生したすべてのトランザクション数を表示します。
 
@@ -37,7 +37,7 @@ PDF フォームの送信、エージェント UI によるインタラクティ
 
 ## サポートされるトポロジ {#supported-topology}
 
-トランザクションレポートは、OSGi 環境の AEM Forms でのみ使用できます。author-publish、author-processing-publish のほか、トポロジの処理のみがサポートされます。トポロジの例については、 [AEM Formsのアーキテクチャとデプロイメントトポロジ](../../forms/using/transaction-reports-overview.md).
+トランザクションレポートは、OSGi 環境の AEM Forms でのみ使用できます。author-publish、author-processing-publish のほか、トポロジの処理のみがサポートされます。トポロジについて詳しくは、[AEM Forms のアーキテクチャとデプロイメントトポロジ](../../forms/using/transaction-reports-overview.md)を参照してください。
 
 トランザクション数は、パブリッシュインスタンスからオーサーインスタンスまたは処理インスタンスにリバースレプリケートされます。指標となるオーサーとパブリッシュのトポロジを次に示します。
 
@@ -57,6 +57,6 @@ PDF フォームの送信、エージェント UI によるインタラクティ
 
 ## 関連記事 {#related-articles}
 
-* [トランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [トランザクションレポート請求可能 API](../../forms/using/transaction-reports-billable-apis.md)
-* [カスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
+* [OSGi 上のAEM Formsのトランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [OSGi 上のAEM Formsのトランザクションレポート請求可能な API](../../forms/using/transaction-reports-billable-apis.md)
+* [OSGi でのAEM Formsのカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)

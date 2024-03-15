@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 のドキュメントを使用して、ソフトウェアの仕組みとユーザーにとっての機能を確認してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: e39c52bc658e3a286272d1c94106b17a2f5579ad
+source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
 workflow-type: tm+mt
-source-wordcount: '7355'
+source-wordcount: '7397'
 ht-degree: 97%
 
 ---
@@ -610,7 +610,7 @@ ht-degree: 97%
       + [AEM Forms データ統合機能の概要](/help/forms/using/data-integration.md)
       + [データソースの設定](/help/forms/using/configure-data-sources.md)
       + [Microsoft Dynamics OData の設定](/help/forms/using/ms-dynamics-odata-configuration.md)
-      + [OAuth 2.0 クライアント資格情報を使用した Salesforce 統合フロー認証](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+      + [OAuth 2.0 クライアント資格情報フロー認証を使用した Salesforce 統合](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
       + [フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)
       + [フォームデータモデルの操作](/help/forms/using/work-with-form-data-model.md)
       + [フォームデータモデルの使用](/help/forms/using/using-form-data-model.md)
@@ -890,10 +890,16 @@ ht-degree: 97%
       + [使用するテンプレートに基づいたコンポーネントの表示](/help/forms/using/displaying-components-based-on-template.md)
       + [カスタムアダプティブフォームテーマの作成](/help/forms/using/creating-custom-adaptive-form-themes.md)
    + トランザクションレポート {#transaction-reports}
-      + [トランザクションレポートの概要](/help/forms/using/transaction-reports-overview.md)
-      + [トランザクションレポートの表示と理解](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-      + [トランザクションレポート請求可能 API](/help/forms/using/transaction-reports-billable-apis.md)
-      + [カスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
+      + [トランザクションレポートの概要](/help/forms/using/transaction-reports-overview-jee-osgi.md)
+      + OSGi 上のAEM Formsのトランザクションレポート {#transaction-reports-osgi}
+         + [トランザクションレポート](/help/forms/using/transaction-reports-overview.md)
+         + [トランザクションレポートの表示と理解](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+         + [OSGi 上のAEM Formsの課金対象 API のリスト](/help/forms/using/transaction-reports-billable-apis.md)
+         + [カスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
+      + JEE 上のAEM Formsのトランザクションレポート {#transaction-reports-jee}
+         + [トランザクションレポートの有効化と表示](/help/forms/using/transaction-report-overview-jee.md)
+         + [JEE 上のAEM Formsの課金対象 API のリスト](/help/forms/using/transaction-reports-billable-apis-jee.md)
+         + [カスタムコンポーネント API のトランザクションの記録](/help/forms/using/record-transaction-custom-component-jee.md)
    + JEE 上の AEM Forms の管理者ヘルプ {#administrator-help}
       + はじめに {#get-started}
          + [AEM Forms の一般設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
@@ -1182,7 +1188,7 @@ ht-degree: 97%
       + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
       + [AEM 6.5.15.0 サービスパックのインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
       + [JBoss Linux 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
-      + [AEM Formsサーバーが完全に稼働していない場合でもドキュメントを処理](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
+      + [AEM Forms サーバーが完全に起動および実行されていない場合でもドキュメントを処理](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [Output サービス、Formsサービス、またはレコードのドキュメント (DoR) サービスを使用できません](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [Experience Manager Formsの Struts 2 RCE 脆弱性の緩和](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
       + [MySQL 用に 6.5.12.0にアップグレード中にデータベースをバックアップできなかった問題](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
