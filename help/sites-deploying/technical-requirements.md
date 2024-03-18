@@ -3,10 +3,10 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 52969d5ab0975871c872195ab13649fb815cead8
+source-git-commit: b9a5b6f8f990a9dd0fcf77ea3972ad0c6f401831
 workflow-type: tm+mt
-source-wordcount: '3650'
-ht-degree: 93%
+source-wordcount: '3652'
+ht-degree: 99%
 
 ---
 
@@ -135,8 +135,8 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 1. MongoDB Storage Engine WiredTiger のみがサポートされています。
 1. AEM Forms のアップグレードのお客様に対してサポートされます。新規インストールの場合はサポートされていません。
 1. AEM Formsのみに適用：
-   * oracleデータベース 12c のサポートを削除し、Oracleデータベース 19c のサポートを追加しました。
-   * Microsoft® SQL Server 2016 のサポートが削除され、Microsoft® SQL Server 2019 のサポートが追加されました。
+   * Oracle Database 12c のサポートを削除し、Oracle Database 19c のサポートを追加しました。
+   * Microsoft® SQL Server 2016 のサポートを削除し、Microsoft® SQL Server 2019 のサポートを追加しました。
 1. AEM Formsではサポートされていません。
 
 >[!NOTE]
@@ -184,7 +184,7 @@ Adobe Experience Manager は、スタンドアロンサーバー（Quickstart JA
 
 1. AEM Forms を使用したデプロイメントに推奨されます。
 1. アプリケーションサーバーで AEM 6.5 デプロイメントを開始すると、制限付きサポートに移行します。既存のお客様は AEM 6.5 にアップグレードして、引き続きアプリケーションサーバーを使用することができます。新規のお客様には、前述のレベル R の説明にあるサポート基準とサポートプログラムが適用されます。
-1. 適用可能なAEM Formsのみ：
+1. 適用可能 AEM Forms のみ：
    * JBoss® EAP 7.1.4 のサポートを削除し、JBoss® EAP 7.4.10 のサポートを追加しました。
 
 ### サーバーオペレーティングシステム {#server-operating-systems}
@@ -194,7 +194,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
 | **Linux®（Red Hat® ディストリビューションに基づく）** | A：サポート対象 `[1]` `[3]` |
-| Linux®、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `[1]` `[2]` |
+| Linux®、Debian ディストリビューションベース（Ubuntu | A：サポート対象 `[1]` `[2]` |
 | Linux®、SUSE® ディストリビューションベース | A：サポート対象 `[1]` |
 | Microsoft® Windows Server 2019 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft® Windows Server 2016 `[4]` | R：新規契約向けの制限サポート `[5]` |
@@ -202,22 +202,22 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. x および 5. x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x, 5. x および 6. x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
 1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
 1. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
    >[!NOTE]
    >
-   >Linux ベースのサーバー（OSGI および JEE スタック）の場合、AEM Formsアドオンには次のようなランタイム依存関係が必要です。
-   >* glibc.x86_64 (2.17-196)
-   >* libX11.x86_64 (1.6.7-4)
-   >* zlib.x86-64 (1.2.7-17)
-   >* libxcb.x86_64 (1.13-1.el7)
-   >* libXau.x86_64 (1.0.8-2.1.el7)
+   >Linux ベースのサーバー（OSGI および JEE スタック）の場合、AEM Forms アドオンには次のようなランタイム依存関係が必要です。
+   >* glibc.x86_64（2.17-196）
+   >* libX11.x86_64（1.6.7-4）
+   >* zlib.x86-64（1.2.7-17）
+   >* libxcb.x86_64（1.13-1.el7）
+   >* libXau.x86_64（1.0.8-2.1.el7）
 
 1. Microsoft® Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
 1. AEM Forms は、Microsoft® Window Server でサポートされていますが、サポートレベル R 制限はありません。
-1. AEM Formsは、Microsoft® Windows Server 2016 のサポートを削除しました。
+1. AEM Forms では、Microsoft® Windows Server 2016 のサポートが削除されました。
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ Adobe Experience Manager は、クラウドコンピューティング環境上�
 
 アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 
-AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、このページに記載されている技術要件の一部として Cloud Service がサポートされていない限り ( 例：Azure Blob ストレージやAWS S3)。
+AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、Azure Blob Storage や AWS S3 などのクラウドサービスが、このページに記載されている技術要件の一部としてサポートされている場合を除きます。
 
 Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合のレコメンデーションは、クラウドプロバイダーと直接共同作業することです。または、選択したクラウド環境での AEM のデプロイをサポートしているアドビパートナーと協力することをお勧めします。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
 
@@ -361,11 +361,11 @@ Adobe Experience Manager（インスタンス、Dispatcher）のすべての要�
 
 IP アドレスを指定する必要がある場合は、次から（必要に応じて）選択できます。
 
-* IPv6 アドレス。 例：`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6 アドレス。例えば、`https://[ab12::34c5:6d7:8e90:1234]:4502` のように指定します。
 
-* IPv4 アドレス。 例：`https://123.1.1.4:4502`
+* IPv4 アドレス。例えば、`https://123.1.1.4:4502` のように指定します。
 
-* サーバー名。 例：`https://www.yourserver.com:4502`
+* サーバー名。例えば、`https://www.yourserver.com:4502` のように指定します。
 
 * デフォルトの `localhost` は、IPv4 と IPv6 の両方のネットワークインストール用に変換されます。例：`https://localhost:4502`
 
@@ -532,8 +532,8 @@ Windows x86 の場合：
 * ビデオハードウェアアクセラレーション（オプション）
 * Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC
 * Designer をインストールするための管理者権限。
-* Microsoft Visual C++ 2019 （VC 14.28 以降） 32 ビット版AEM Forms Designer の 32 ビット版ランタイム
-* Microsoft Visual C++ 2019（VC 14.28 以降）64 ビットAEM Forms Designer 用 64 ビットランタイム（OSGI と JEE スタックの両方）
+* 32 ビット AEM Forms Designer 用の Microsoft Visual C++ 2019（VC 14.28 以降）32 ビットランタイム
+* 64 ビットAEM Forms Designer 用の Microsoft Visual C++ 2019（VC 14.28 以降）64 ビットランタイム（OSGI と JEE スタックの両方に対応）
 
 [AEM Forms Designer のインストールと設定](/help/forms/using/installing-configuring-designer.md)
 
@@ -550,6 +550,6 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 * **ファイル形式**：JPEG、PNG、TIFF、PDF、INDD、AI、EPS
 
-### AEM Assetsが Linux®でメタデータの多いアセットを処理するための要件 {#assetsonlinux}
+### AEM Assets がメタデータの多いアセットを Linux® で処理するための要件 {#assetsonlinux}
 
-XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。GLIBC_2.14 を含む Linux®カーネルを使用します。例えば、Linux®カーネルバージョン 3.1.x です。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
+XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。GLIBC_2.14 を含む Linux® カーネルを使用します。例えば、Linux® カーネルバージョン 3.1.x です。PSD ファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
