@@ -1038,7 +1038,7 @@ AEM 内のコンポーネントは、次の 3 つの異なる階層の影響を�
 
 >[!NOTE]
 >
->クラシック UI の場合、ハンドラーで使用できるパラメーターについては、[`CQ.wcm.EditBar`](ttps://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) および [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) ウィジェットのドキュメントに記載されている「`before<action>` イベントおよび `after<action>` イベント」のセクションを参照してください。
+>クラシック UI の場合、ハンドラーで使用できるパラメーターについては、[`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) および [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) ウィジェットのドキュメントに記載されている「`before<action>` イベントおよび `after<action>` イベント」のセクションを参照してください。
 
 次の設定では、コンポーネントを削除、編集、挿入または移動した後にページが更新されます。
 
