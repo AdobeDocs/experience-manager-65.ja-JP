@@ -8,9 +8,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: af30cfed8f039207c0363d1ace5ac2b2a1cf84ba
 workflow-type: tm+mt
-source-wordcount: '6944'
+source-wordcount: '6607'
 ht-degree: 98%
 
 ---
@@ -640,35 +640,36 @@ forms-power-users グループに追加されたユーザーは、コードエ�
 >
 >カスタム関数の前のコメントは、概要で使用されます。概要は複数の行に拡張することができます。終端にはタグを使用します。説明を簡潔にするため、ルールビルダーでは 1 行以内に抑えるように心がけてください。
 
-**カスタム関数の追加**
+<!--
+**Adding a custom function**
 
-例えば、正方形の面積を計算するカスタム関数を追加するとします。横の長さは、ユーザーの入力を使用します。ユーザー入力は、フォーム内の数値ボックスを通して受け取ります。計算された出力は、フォーム内の別の数値ボックスに表示されます。カスタム機能を追加するには、最初にクライアントライブラリを作成し、次に CRX リポジトリーに追加する必要があります。
+For example, you want to add a custom function which calculates area of a square. Side length is the user input to the custom function, which is accepted using a numeric box in your form. The calculated output is displayed in another numeric box in your form. To add a custom function, you have to first create a client library, and then add it to the CRX repository.
 
-次の手順を実行して、クライアントライブラリを作成し、CRX リポジトリに追加します。
+Perform the following steps to create a client library and add it in the CRX repository.
 
-1. クライアントライブラリを作成します。詳しくは、「[クライアント側ライブラリの使用](/help/sites-developing/clientlibs.md)」を参照してください。
-1. CRXDE 上で、`categories`文字列タイプの値を持つプロパティを`customfunction`として`clientlib`フォルダーに追加します。
+1. Create a client library. For more information, see [Using Client-Side Libraries](/help/sites-developing/clientlibs.md).
+2. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
 
    >[!NOTE]
    >
-   >`customfunction`はカテゴリの例です。`clientlib` フォルダーで作成したカテゴリには、任意の名前を付けることができます。
+   >`customfunction`is an example category. You can choose any name for the category you create in the `clientlib`folder.
 
-CRX リポジトリにクライアントライブラリを追加した後は、アダプティブフォームでそれを使用します。これにより、カスタム関数をルールとしてフォーム内で使用することができます。次の手順を実行して、アダプティブフォームにクライアントライブラリを追加します。
+After you have added your client library in the CRX repository, use it in your adaptive form. It lets you use your custom function as a rule in your form. Perform the following steps to add the client library in your adaptive form.
 
-1. フォームを編集モードで開きます。
-フォームを編集モードで開くには、フォームを選択し、「**開く**」を選択します。
-1. 編集モードで、コンポーネントを選択し、![field-level](assets/field-level.png)／**アダプティブフォームコンテナ**&#x200B;を選択してから、「![cmppr](assets/cmppr.png)」を選択します。
-1. サイドバーの「クライアントライブラリの名前」の下から、クライアントライブラリを追加します。（この例では、「`customfunction`」）。
+1. Open your form in edit mode.
+   To open a form in edit mode, select a form and select **Open**.
+1. In the edit mode, select a component, then select ![field-level](assets/field-level.png) &gt; **Adaptive Form Container**, and then select ![cmppr](assets/cmppr.png).
+1. In the sidebar, under Name of Client Library, add your client library. ( `customfunction` in the example.)
 
-   ![カスタム関数をクライアントライブラリを追加する](assets/clientlib.png)
+   ![Adding the custom function client library](assets/clientlib.png)
 
-1. 入力数値ボックスを選択し、「![edit-rules](assets/edit-rules.png)」を選択してルールエディターを開きます。
-1. 「**ルールを作成**」を選択します。フォームの出力フィールドに入力の自乗値を保存するルールを、次のオプションを使用して作成します。
-   [![カスタム関数を使用してルールを作成し](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)「**完了**」を選択します。これでカスタム関数が追加されました。
+1. Select the input numeric box, and select ![edit-rules](assets/edit-rules.png) to open the rule editor.
+1. Select **Create Rule**. Using options shown below, create a rule to save the squared value of the input in the Output field of your form.
+   [ ![Using custom functions to create a rule](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)Select **Done**. Your custom function is added.
 
-#### 関数の宣言でサポートされるタイプ {#function-declaration-supported-types}
+#### Function declaration supported types {#function-declaration-supported-types}
 
-**文関数**
+**Function Statement**
 
 ```javascript
 function area(len) {
@@ -676,9 +677,9 @@ function area(len) {
 }
 ```
 
-この関数は、`jsdoc` コメント無しで追加されています。
+This function is included without `jsdoc` comments.
 
-**関数式**
+**Function Expression**
 
 ```javascript
 var area;
@@ -689,7 +690,7 @@ area = function(len) {
 };
 ```
 
-**関数式と文関数**
+**Function Expression and Statement**
 
 ```javascript
 var b={};
@@ -699,7 +700,7 @@ b.area = function(len) {
 }
 ```
 
-**変数としての関数宣言**
+**Function Declaration as Variable**
 
 ```javascript
 /** */
@@ -710,9 +711,9 @@ var x1,
     x2 =5, x3 =true;
 ```
 
-制限事項：カスタム関数は、変数リストから最初の関数宣言のみを選択します（共に使用する場合）。関数式は、すべての関数宣言に使用することができます。
+Limitation: custom function picks only the first function declaration from the variable list, if together. You can use function expression for every function declared.
 
-**オブジェクトとしての関数宣言**
+**Function Declaration as Object**
 
 ```javascript
 var c = {
@@ -727,7 +728,10 @@ var c = {
 
 >[!NOTE]
 >
->カスタム関数では、必ず `jsdoc` を使用します。`jsdoc` 型のコメントが奨励されていますが、カスタム関数として区別できるよう、空の `jsdoc` 型コメントを含めてください。これにより、カスタム関数のデフォルト処理が可能になります。
+>Ensure that you use `jsdoc` for every custom function. Although `jsdoc`comments are encouraged, include an empty `jsdoc`comment to mark your function as custom function. It enables default handling of your custom function.
+-->
+
+また、ルールエディターでカスタム関数を使用することもできます。 カスタム関数の作成手順については、この記事を参照してください。 [アダプティブFormsのカスタム関数](/help/forms/using/create-and-use-custom-functions.md).
 
 ## ルール管理 {#manage-rules}
 
