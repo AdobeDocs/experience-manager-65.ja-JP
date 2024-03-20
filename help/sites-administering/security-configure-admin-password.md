@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: b55ff9d5-8139-4ecf-ba09-5cf88207c5c4
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 5%
+source-wordcount: '304'
+ht-degree: 6%
 
 ---
 

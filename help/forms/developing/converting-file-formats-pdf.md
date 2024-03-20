@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '7848'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -588,7 +589,7 @@ Generate PDF サービスがネイティブファイル形式を変換するに�
 1. ファイル／印刷を選択して、印刷ダイアログボックスを開く
 1. 印刷ダイアログボックスが表示されることを確認する
 
-AppMon は、標準の Win32 API を使用して、サードパーティのアプリケーションとやり取りし、キーストロークやマウスクリックなどの UI イベントを転送します。これは、これらのアプリケーションを制御してPDFファイルを生成するのに役立ちます。
+AppMon は、標準の Win32 API を使用して、サードパーティのアプリケーションとやり取りし、キーストロークやマウスクリックなどの UI イベントを転送します。これは、これらのアプリケーションを制御して PDF ファイルを生成するのに役立ちます。
 
 これらの Win32 API の制限により、AppMon は、TextPad などの一部のアプリケーションで見つかるフローティングメニューバーや、Win32 API を使用してコンテンツを取得できない特定の種類のダイアログなど、特定の種類のウィンドウにこれらの UI イベントをディスパッチできません。
 
@@ -615,7 +616,7 @@ WinID がテキスト、サブウィンドウ、ウィンドウクラス ID な�
   <tr>
    <td><p>スクリプト </p></td>
    <td><p>PDF 生成サービスとネイティブアプリケーション間の相互作用を指定します。このようなやり取りは、通常、アプリケーションに対して、Adobe PDF ドライバーにファイルを印刷するよう指示します。 </p><p>スクリプトには、特定のダイアログボックスを開くようネイティブアプリケーションに指示し、それらのダイアログボックスのフィールドやボタンに対して特定の応答を提供する指示が含まれています。 </p></td>
-   <td><p>PDF 生成サービスには、サポートされているすべてのネイティブアプリケーションのスクリプトファイルが含まれています。これらのファイルは、XML 編集アプリケーションを使用して変更できます。</p><p>新しいネイティブアプリケーションのサポートを追加するには、スクリプトファイルを作成する必要があります。 （<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">ネイティブアプリケーション用の追加のダイアログ XML ファイルの作成または変更</a>を参照。） </p></td>
+   <td><p>PDF 生成サービスには、サポートされているすべてのネイティブアプリケーションのスクリプトファイルが含まれています。これらのファイルは、XML 編集アプリケーションを使用して変更できます。</p><p>新しいネイティブアプリケーションのサポートを追加するには、スクリプトファイルを作成する必要があります。（<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">ネイティブアプリケーション用の追加のダイアログ XML ファイルの作成または変更</a>を参照。） </p></td>
   </tr>
   <tr>
    <td><p>汎用ダイアログボックスの説明 </p></td>
@@ -669,7 +670,7 @@ PDF の生成サービスでスクリプト XML ファイルをサポートす�
 
 スクリプト XML ファイル内の手順は、分岐の機会がなく、順番に実行されます。サポートされている唯一の条件付きテストは、タイムアウト／再試行です。これにより、特定の期間内および特定の回数の再試行後に手順が正常に完了しなかった場合にスクリプトが終了します。
 
-順次的な手順に加えて、手順内の命令も順に実行されます。手順と手順が、ユーザーが同じ手順を実行する順序を反映していることを確認します。
+順次的な手順に加えて、手順内の命令も順に実行されます。手順と指示が、ユーザーが同じ手順を実行する順序を反映していることを確認します。
 
 スクリプト XML ファイルの各手順は、手順の指示を正常に実行した場合に表示されるウィンドウ要素を識別します。スクリプトでの手順の実行中に予期しないダイアログボックスが表示された場合、PDF 生成サービスは、次のセクションで説明するようにダイアログ XML ファイルを検索します。
 
@@ -792,7 +793,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 #### window 要素と windowList 要素の順序付け {#ordering-the-window-and-windowlist-elements}
 
-注文 `window` および `windowList` 要素を次に示します。
+`window` および `windowList` 要素は次の順序にします。
 
 * 複数の `window` 要素が `windowList` または `dialog` 要素の子として表示される場合、それらの `window` 要素を降順で並べ替えます。`caption` 名の長さは順序での位置を示します。
 * 複数の `windowList` 要素が `window` 要素に表示される場合は、それらの `windowList` 要素を降順で並べ替えます。最初の `indexes/` 要素の `caption` 属性の長さは順序内の位置を示します。
@@ -860,7 +861,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 >
 >native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
 
-注文 `windowList` の子として表示される要素 `window` 要素を選択します。 （[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
+`window` 要素で子として表示される `windowList` 要素に順序を付けます。（[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
 
 ### 一般ダイアログ XML ファイルの変更 {#modifying-the-general-dialog-xml-file}
 

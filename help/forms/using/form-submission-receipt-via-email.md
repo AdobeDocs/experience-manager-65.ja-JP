@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +40,7 @@ ht-degree: 97%
 
 1. アダプティブフォームを&#x200B;**[!UICONTROL 編集]**&#x200B;モードで開きます。
 
-1. Adobe Analytics の **[!UICONTROL コンテンツ]** タブ、選択 **[!UICONTROL フォームコンテナ]** を選択し、 ![設定](assets/configure-icon.svg) をクリックして、アダプティブフォームのプロパティを表示します。
+1. 「**[!UICONTROL コンテンツ]**」タブで、**[!UICONTROL フォームコンテナ]**&#x200B;を選択し、![設定](assets/configure-icon.svg)を選択して、アダプティブフォームのプロパティを表示します。
 
 1. 「**[!UICONTROL 送信]**」セクションで、**[!UICONTROL 送信アクション]**&#x200B;ドロップダウンリストから「**[!UICONTROL メールを送信]**」を選択します。
 

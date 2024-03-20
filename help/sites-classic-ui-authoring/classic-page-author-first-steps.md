@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: page-authoring, introduction
 exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '410'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +34,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-編集する前に、次の操作を行う必要があります。 [ページの作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
+編集前に、[ページを作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page)する必要があります。
 
 ### ページを開く {#opening-a-page}
 
@@ -41,7 +42,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### ページの編集 {#editing-a-page}
 
-インスタンスに既存のページが存在するか、または自分で新しいページを作成したかに関わらず、 [ページの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 基準：
+インスタンスに既存のページがあるか、新しいページを自分で作成した場合は、次の方法で[ページを編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)できます。
 
 * [コンポーネント（段落）の挿入](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
 * [コンポーネントの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)

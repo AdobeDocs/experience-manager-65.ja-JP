@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '975'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -56,8 +57,8 @@ ht-degree: 98%
 
 `-resize` パラメーターには、以下のオプションを設定できます。
 
-* `X`：[!DNL Experience Manager] と同様に機能。例えば、-resize 319 のように指定します。
-* `WxH`：縦横比が維持されない（例： ） `-resize 319x319`.
+* `X`：[!DNL Experience Manager] と同様に機能。例：-resize 319。
+* `WxH`：縦横比は維持されません（例：`-resize 319x319`）。
 * `Wx`：幅を固定し、アスペクト比を維持して高さを計算。例えば、`-resize 319x` のように指定します。
 * `xH`：高さを固定し、アスペクト比を維持して幅を計算。例えば、`-resize x319` のように指定します。
 

@@ -1,66 +1,67 @@
 ---
 title: BrightEdge Content Optimizer との結合
-description: AEMと BrightEdge Content Optimizer の統合について説明します。
+description: AEM と BrightEdge Content Optimizer の統合について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '490'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 # BrightEdge Content Optimizer との結合{#integrating-with-brightedge-content-optimizer}
 
-BrightEdge アカウントの資格情報を使用してAEMが接続できるように、BrightEdge クラウド設定を作成します。 複数のアカウントを使用する場合は、複数の設定を作成できます。
+BrightEdge クラウド設定を作成して、AEM で BrightEdge アカウントの資格情報を使用して接続できるようにします。複数のアカウントを使用している場合、複数の設定を作成できます。
 
-設定を作成する際に、タイトルを指定します。 ユーザーが設定を BrightEdge アカウントと関連付けられるように、タイトルはわかりやすいものにする必要があります。 ページ作成者または管理者が Web ページを BrightEdge アカウントに関連付けると、このタイトルがドロップダウンリストに表示されます。
+設定を作成する際には、タイトルを指定します。ユーザーが設定を BrightEdge アカウントと関連付けられるように、タイトルはわかりやすいものにする必要があります。ページ作成者または管理者が web ページを BrightEdge アカウントと関連付ける際に、このタイトルがドロップダウンリストに表示されます。
 
-1. レールで、ツール/操作/クラウド/Cloud Serviceをクリックします。
-1. BrightEdge Content Optimizer セクションに表示されるリンクをクリックします。 BrightEdge 設定が作成されているかどうかによって、リンクテキストが決まります。
+1. パネルで、ツール／操作／クラウド／クラウドサービスをクリックします。
+1. 「BrightEdge Content Optimizer」セクションに表示されるリンクをクリックします。BrightEdge 設定が作成されているかどうかによって、リンクテキストが決まります。
 
    * 今すぐ設定：このリンクは、設定が作成されていない場合に表示されます。
    * 設定を表示：このリンクは、1 つ以上の設定が作成されている場合に表示されます。
 
    ![chlimage_1-4](assets/chlimage_1-4a.png)
 
-1. 「設定を表示」をクリックした場合は、「使用可能な設定」の横の「 + 」リンクをクリックします。
-1. 設定のタイトルを入力します。 必要に応じて、リポジトリに設定を保存するために使用するノードの名前を入力します。 「作成」をクリックします。
-1. [BrightEdge Content Optimizer 設定 ] ダイアログで、BrightEdge アカウントのユーザー名とパスワードを入力し、[OK] をクリックします。
+1. 「設定を表示」をクリックした場合、「利用可能な設定」の横にある「+」リンクをクリックします。
+1. 設定のタイトルを入力します。オプションで、リポジトリに設定を保存するのに使用されるノードの名前を入力します。「作成」をクリックします。
+1. BrightEdge Content Optimizer 設定ダイアログで、BrightEdge アカウントのユーザー名とパスワードを入力して、「OK」をクリックします。
 
 ## BrightEdge 設定の編集 {#editing-a-brightedge-configuration}
 
-必要に応じて、BrightEdge 設定のユーザー名とパスワードを変更します。 変更は、設定を使用するすべてのページに影響します。
+必要に応じて、BrightEdge 設定のユーザー名とパスワードを変更します。変更は、設定を使用するすべてのページに影響します。
 
-1. レールで、ツール/操作/クラウド/Cloud Serviceをクリックします。
+1. パネルで、ツール／操作／クラウド／クラウドサービスをクリックします。
 1. 「BrightEdge Content Optimizer」セクションで、「設定を表示」をクリックします。
 
    ![chlimage_1-5](assets/chlimage_1-5a.png)
 
 1. 編集する設定の名前をクリックします。
-1. [ 編集 ] をクリックし、プロパティ値を変更して、[OK] をクリックします。
+1. 「編集」をクリックし、プロパティ値を変更して、「OK」をクリックします。
 
-## BrightEdge 設定へのページの関連付け {#associating-pages-with-a-brightedge-configuration}
+## ページと BrightEdge 設定との関連付け {#associating-pages-with-a-brightedge-configuration}
 
-ページを BrightEdge 設定に関連付けて、分析用にページデータを BrightEdge サービスに送信します。 ページを設定に関連付けると、子ページは関連付けを継承します。 通常は、サイトのホームページを関連付けて、すべてのページのデータが BrightEdge に送信されるようにします。
+ページを BrightEdge 設定に関連付けて、分析用にページデータを BrightEdge サービスに送信します。ページを設定に関連付ける場合は、子ページが関連付けを継承します。通常、すべてのページのデータが BrightEdge に送信されるように、サイトのホームページを関連付けます。
 
-1. 従来の Web サイトコンソールを開きます。 ([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
-1. Web サイトツリーで、BrightEdge 設定に関連付けるページを含むフォルダーまたはページを選択します。
-1. ページのリストで、設定するページを右クリックし、「プロパティ」をクリックします。
-1. 「Cloud Service」タブで、「サービスを追加」ボタンをクリックし、Cloud Serviceダイアログで「BrightEdge Content Optimizer」を選択して、「OK」をクリックします。
-1. BrightEdge Content Optimizer リストで、ページに関連付ける BrightEdge 設定を選択し、「OK」をクリックします。
+1. クラシック web サイトコンソールを開きます。([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
+1. Web サイトツリーで、BrightEdge 設定に関連付けるページが含まれるフォルダーまたはページを選択します。
+1. ページのリストで、設定するページを右クリックして、「プロパティ」をクリックします。
+1. 「クラウドサービス」タブで、「サービスを追加」ボタンをクリックし、クラウドサービスダイアログで BrightEdge Content Optimizer を選択して、「OK」をクリックします。
+1. BrightEdge Content Optimizer リストで、ページに関連付ける BrightEdge 設定を選択して、「OK」をクリックします。
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-## BrightEdge 設定のアクティブ化 {#activating-a-brightedge-configuration}
+## BrightEdge 設定のアクティベート {#activating-a-brightedge-configuration}
 
-BrightEdge 設定をアクティベートして、パブリッシュインスタンスにレプリケートし、公開済みのページで BrightEdge サービスとやり取りできるようにします。
+パブリッシュインスタンスにレプリケートして、公開されたページが BrightEdge サービスとやり取りできるように、BrightEdge 設定をアクティベートします。
 
-1. レールで、「サイト」をクリックし、BrightEdge 設定に関連付けたページを参照して選択します。
-1. 「公開」アイコンをクリックし、「公開」をクリックします。
+1. パネルで、「Sites」をクリックし、BrightEdge 設定に関連付けられたページを参照して選択します。
+1. 「公開」アイコンをクリックして、「公開」をクリックします。
 
    ![chlimage_1-7](assets/chlimage_1-7a.png)
 

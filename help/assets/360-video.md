@@ -1,6 +1,6 @@
 ---
 title: 360/VR ビデオ
-description: Dynamic Mediaで 360 と Virtual Reality(VR) ビデオを操作する方法を説明します。
+description: Dynamic Mediaで 360 と Virtual Reality(VR) ビデオを操作し、使用する方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -9,10 +9,11 @@ docset: aem65
 feature: 360 VR Video
 role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 0915db99a2d3589994d6267119a5443d69f9f1f7
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 92%
+source-wordcount: '1145'
+ht-degree: 98%
 
 ---
 
@@ -20,15 +21,15 @@ ht-degree: 92%
 
 360 度ビデオでは、すべての方向のビューが同時に記録されます。このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を使用します。
 
-Dynamic Media - Scene7モードには、360 ビデオアセット配信のネイティブサポートが含まれています。 デフォルトでは、表示や再生のために追加の設定は必要ありません。360 ビデオは、.mp4、.mkv、.mov などの標準のビデオ拡張子を使用して配信します。最も一般的なコーデックは H.264 です。
+Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネイティブサポートが含まれています。デフォルトでは、表示や再生のために追加の設定は必要ありません。360 ビデオは、.mp4、.mkv、.mov などの標準のビデオ拡張子を使用して配信します。最も一般的なコーデックは H.264 です。
 
 この節では、360/VR ビデオビューアを操作して、部屋、物件、場所、風景、医療処置などの没入感のある視聴体験のために、エクイレクタングラー形式のビデオをレンダリングする方法について説明します。
 
 空間オーディオは現在サポートされていません。オーディオをステレオにミックスした場合、お客様がカメラの表示角度を変更してもバランス（L/R）は変化しません。
 
-関連トピック [ビューアプリセットの管理](/help/assets/managing-viewer-presets.md).
+[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)も参照してください。
 
-## 360 ビデオの動作 {#video-in-action}
+## 360 ビデオの再生 {#video-in-action}
 
 「[Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」を選択して、ブラウザーウィンドウを開き、360 度ビデオを視聴します。ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
@@ -37,7 +38,7 @@ Dynamic Media - Scene7モードには、360 ビデオアセット配信のネイ
 
 ## 360/VR ビデオと Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
-AdobePremier Pro を使用して、360/VR フッテージを表示および編集できます。 例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
+Adobe Premier Pro を使用して、360/VR フッテージを表示および編集できます。例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
 
 [360/VR ビデオの編集](https://helpx.adobe.com/jp/premiere-pro/how-to/edit-360-vr-video.html)を参照してください。
 
@@ -85,9 +86,9 @@ Experience Manager ではデフォルトで、縦横比（幅／高さ）が 2.0
    * **プロパティタイプ**：Double
    * **値**：縦横比を表す浮動小数点（デフォルトは 2.0）。
 
-このプロパティを設定すると、既存のビデオと新しくアップロードされたビデオの両方で、このプロパティが直ちに有効になります。
+このプロパティの設定が完了すると、既存のビデオと新しくアップロードされたビデオの両方で、すぐに設定が有効になります。
 
-縦横比は、アセットの詳細ページと [ビデオ 360 メディア WCM コンポーネント](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components).
+この縦横比は、アセットの詳細ページや[ビデオ 360 メディア WCM コンポーネント](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components)向けの 360 ビデオアセットに適用されます。
 
 まず、360 ビデオをアップロードします。
 

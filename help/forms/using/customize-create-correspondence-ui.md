@@ -1,16 +1,17 @@
 ---
 title: 通信作成 UI をカスタマイズ
-description: AEM Forms環境でロゴなどの通信ユーザーインターフェイス (UI) をカスタマイズする方法を説明します。
+description: AEM Forms 環境でロゴなどの通信ユーザーインターフェイス（UI）をカスタマイズする方法について説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1099'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +72,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
       >[!NOTE]
       >
-      >`/libs` ブランチは変更しないでください。このブランチは、以下の場合に変更がおこなわれる可能性が高いので、加えた変更はすべて失われる可能性があります。
+      >`/libs` ブランチは変更しないでください。次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
       >
       >    
       >    
@@ -83,7 +84,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
    1. 「**OK**」をクリックします。指定したパスに css フォルダーが作成されます。
 
-1. apps フォルダーに、 `imgs` 次のようなパス/構造を持つ `imgs` フォルダー（ccrui フォルダー内）に保存します。
+1. apps フォルダー内に、ccrui フォルダーにある `imgs` フォルダーと同様のパスと構造を持つ、`imgs` というフォルダーを作成します。
 
    1. 次のパスにある **imgs** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 「ノードをオーバーレイ」ダイアログに次の値が表示されていることを確認します。

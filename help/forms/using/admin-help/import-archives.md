@@ -1,15 +1,16 @@
 ---
 title: アーカイブの読み込みと管理
-description: アーカイブの読み込みと管理の方法を説明します。 アーカイブは、Workbench で作成された LCA を読み込んで管理します。 アーカイブを読み込み、設定、使用および削除できます。
+description: アーカイブの読み込みと管理の方法について説明します。アーカイブを使用すると、Workbench で作成した LCA の読み込みと管理を行うことができます。アーカイブを読み込み、設定、使用および削除できます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1438'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +25,7 @@ Workbench で作成した LCA の読み込みと管理を行うには、「ア�
 1. 「参照」をクリックして読み込むアーカイブを選択し、「プレビュー」をクリックします。
 1. アーカイブでインストールされるリソースとオブジェクトのリストを確認します。取り消し機能はないので、既存のリソース、オブジェクト、サービス設定との競合がないことを確認してください。
 
-   サービス設定の読み込みを選択すると、AEM forms は LCA 内のプロセスで使用されるすべてのプロセス設定ファイル（エンドポイント、セキュリティプロファイル、サービス設定パラメーター）を読み込みます。
+   サービス設定の読み込みを選択すると、AEM Forms では、LCA のプロセスで使用されるすべてのプロセス設定ファイル（エンドポイント、セキュリティプロファイル、サービス設定パラメーター）が読み込まれます。
 
 1. 「読み込み」をクリックします。
 1. 読み込み結果を確認し、「設定をスキップ」をクリックして読み込みプロセスを終了するか、「設定」をクリックしてアーカイブを設定します。
@@ -77,7 +78,7 @@ Workbench で作成した LCA の読み込みと管理を行うには、「ア�
 
      **ADD_REMOVE_ENDPOINTS_PERM：**&#x200B;サービスのエンドポイントを追加、削除、変更します。
 
-     **CREATE_VERSION_PERM:** サービスのバージョンを作成するには
+     **CREATE_VERSION_PERM：**&#x200B;サービスのバージョンを作成します。
 
      **DELETE_VERSION_PERM：**&#x200B;サービスのバージョンを削除します。
 
@@ -144,7 +145,7 @@ Workbench で作成した LCA の読み込みと管理を行うには、「ア�
 
      **ADD_REMOVE_ENDPOINTS_PERM：**&#x200B;サービスのエンドポイントを追加、削除、変更します。
 
-     **CREATE_VERSION_PERM:** サービスのバージョンを作成するには
+     **CREATE_VERSION_PERM：**&#x200B;サービスのバージョンを作成します。
 
      **DELETE_VERSION_PERM：**&#x200B;サービスのバージョンを削除します。
 

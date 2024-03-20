@@ -1,16 +1,17 @@
 ---
 title: コンテンツフラグメントテンプレート
-description: コンテンツフラグメントを作成する際にテンプレートを選択し、新しいフラグメントに基本的な構造、要素、バリエーションを提供します。
+description: テンプレートは、コンテンツフラグメントの作成時に選択され、新しいフラグメントに基本構造、要素、バリエーションを提供します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '677'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 63%
 >
 >コンテンツフラグメントテンプレートは現在は廃止されています。フラグメントの作成には引き続き使用できますが、代わりにコンテンツフラグメントモデルを使用することをお勧めします。フラグメントテンプレートには新機能は追加されず、今後のバージョンで削除されます。
 
-コンテンツフラグメントの作成時に、テンプレートが選択されます。 新しいフラグメントには、基本的な構造、要素およびバリエーションが提供されます。 コンテンツフラグメントに使用するテンプレートは、Granite 設定マネージャーに依存しています。
+コンテンツフラグメントの作成時に選択されるテンプレートです。このテンプレートは、新しいフラグメントに基本構造、要素、バリエーションを提供します。コンテンツフラグメントに使用するテンプレートは、Granite 設定マネージャーに依存しています。
 
 既製のテンプレートは次の場所に保持されます。
 
@@ -54,10 +55,10 @@ ht-degree: 63%
 >
 >1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
 >
->1. `/apps` 内で変更作業を行う
+>1. `/apps` 内で必要な変更を加えます
 >
 
-テンプレートの基本構造は、次の場所に保持されます。
+テンプレートの基本構造は、以下の場所に保持されます。
 
 ```xml
 conf
@@ -70,7 +71,7 @@ conf
               ...
 ```
 
-特定の構造は次のようになります。
+具体的な構造は次のようになります。
 
 ```xml
 + <template-name>
@@ -113,22 +114,22 @@ conf
     <tr>
      <td><code>&lt;<em>template-name</em>&gt;</code></td>
      <td><code>nt:unstructured</code></td>
-     <td>このノードは、各テンプレートのルートです。 これは必須で、一意の名前を持つ必要があります。</td>
+     <td>このノードは各テンプレートのルートです。このノードは必須で、一意の名前が必要です。</td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>必須<br /> </p> </td>
-     <td>テンプレートのタイトル ( <strong>フラグメントを作成</strong> ウィザード ) を使用します。</td>
+     <td>テンプレートのタイトル（<strong>フラグメントを作成</strong>ウィザードに表示）。</td>
     </tr>
     <tr>
      <td><code>jcr:description</code></td>
      <td><p><code>String</code></p> <p>オプション</p> </td>
-     <td>テンプレートの目的を説明するテキスト ( <strong>フラグメントを作成</strong> ウィザード ) を使用します。</td>
+     <td>テンプレートの目的を説明するテキスト（<strong>フラグメントを作成</strong>ウィザードに表示）。</td>
     </tr>
     <tr>
      <td><code>initialAssociatedContent</code></td>
      <td><p><code>String[]</code></p> <p>オプション</p> </td>
-     <td>デフォルトで新しく作成されたコンテンツフラグメントに関連付ける必要があるコレクションへのパスを含む配列。</td>
+     <td>新規作成されたコンテンツフラグメントにデフォルトで関連付ける必要があるコレクションへのパスが格納された配列です。</td>
     </tr>
     <tr>
      <td><code>precreateElements</code></td>
@@ -138,7 +139,7 @@ conf
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>必須</p> </td>
-     <td><p>コンテンツ構造のバージョン。現在サポートされています：</p> <p><strong>注意</strong>：現在、このパラメーターは <code>2</code> に設定する必要があります。<br /> </p> </td>
+     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>：現在、このパラメーターは <code>2</code> に設定する必要があります。<br /> </p> </td>
     </tr>
    </tbody>
   </table>
@@ -155,7 +156,7 @@ conf
     <tr>
      <td><code>elements</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>必須</p> </td>
-     <td><p>コンテンツフラグメントの要素の定義を含むノード。 このノードは必須で、<strong>メイン</strong>要素の子ノードを 1 つ以上格納する必要がありますが、格納できる子ノードは [1..n] 個の子ノード。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます<i>。</i></p> </td>
+     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。このノードは必須で、<strong>メイン</strong>要素の子ノードを 1 つ以上格納する必要がありますが、格納できる子ノードは [1..n] 個の子ノード。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます<i>。</i></p> </td>
     </tr>
    </tbody>
   </table>
@@ -172,12 +173,12 @@ conf
     <tr>
      <td><code>&lt;<i>element-name</i>&gt;</code></td>
      <td><code>nt:unstructured</code></td>
-     <td>このノードは要素を定義します。 これは必須で、一意の名前を持つ必要があります。</td>
+     <td>このノードは要素を定義します。このノードは必須で、一意の名前が必要です。</td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>必須</p> </td>
-     <td>要素のタイトル（フラグメントエディターの要素セレクターに表示されます）。</td>
+     <td>要素のタイトルです（フラグメントエディターの要素セレクターに表示）。</td>
     </tr>
     <tr>
      <td><code>defaultContent</code></td>
@@ -197,7 +198,7 @@ conf
     <tr>
      <td><code>name</code></td>
      <td><p><code>String</code></p> <p>必須</p> </td>
-     <td>要素の内部名。フラグメントタイプに対して一意である必要があります。</td>
+     <td>要素の初期名で、フラグメントタイプに対して一意である必要があります。</td>
     </tr>
    </tbody>
   </table>
@@ -214,7 +215,7 @@ conf
     <tr>
      <td><code>variations</code><br /> </td>
      <td><p><code>nt:unstructured</code></p> <p>オプション</p> </td>
-     <td>このオプションのノードには、コンテンツフラグメントの初期バリエーションの定義が含まれます。</td>
+     <td>このオプションのノードには、コンテンツフラグメントの初期バリエーションの定義が格納されます。</td>
     </tr>
    </tbody>
   </table>
@@ -237,7 +238,7 @@ conf
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>必須</p> </td>
-     <td>バリエーションのタイトル ( フラグメントエディターの <strong>バリエーション</strong> タブ（左側のレール）を使用 ) に切り替えます。</td>
+     <td>バリエーションのタイトルです（フラグメントエディターの「<strong>バリエーション</strong>」タブ（左パネル）に表示）。</td>
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>

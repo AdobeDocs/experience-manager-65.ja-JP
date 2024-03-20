@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,7 @@ ContextHub には、ソリューションで利用できるサンプルストア
 
 >[!WARNING]
 >
->サンプルストア候補は、プロジェクト専用の独自設定を構築するのに役立つリファレンス設定として提供されています。 直接使用しないでください。
+>サンプルストア候補は、プロジェクト専用の設定を構築する際に役立つリファレンス設定として提供されています。直接使用しないでください。
 
 ## aem.segmentation サンプルストア候補 {#aem-segmentation-sample-store-candidate}
 
@@ -39,7 +40,7 @@ aem.segmentation ストア候補は、[`ContextHub.Store.PersistedJSONPStore`](/
 
 ### 設定 {#configuration-segmentation}
 
-aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。 デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
+aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
 
 ```xml
 {
@@ -53,7 +54,7 @@ aem.segmentation ストアを作成する場合、詳細な設定をする必要
 
 ## contexthub.geolocation サンプルストア候補 {#contexthub-geolocation-sample-store-candidate}
 
-contexthub.geolocation サンプルストア候補は、Googleマップを使用して、クライアントの場所に関する情報を取得し、格納します。
+contexthub.geolocation サンプルストア候補は、Google マップを使用して、クライアントの位置に関する情報を取得し、格納します。
 
 ### ソースの場所 {#source-location-geolocation}
 
@@ -107,7 +108,7 @@ contexthub.geolocation ストア候補は、[`ContextHub.Store.PersistedJSONPSto
 
 >[!NOTE]
 >
->Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用して行う必要があります。そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。それ以外の場合は、同じ接触チャネルのポリシーに準拠するために http が使用されます。 Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
+>Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用して行う必要があります。そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
 
 ## contexthub.surferinfo サンプルストア候補 {#contexthub-surferinfo-sample-store-candidate}
 

@@ -7,10 +7,11 @@ topic-tags: forms-manager
 docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '671'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +35,7 @@ AEM Forms にアップロードすることで、フォームをローカルフ�
 
 1. `https://'[server]:[port]'/aem/forms.html` にアクセスして AEM Forms ユーザーインターフェイスにログインします。
 1. フォームをアップロードするフォルダー、またはフォームを含むフォルダーに移動します。
-1. アクションツールバーで、「 」を選択します。 **作成/ファイルのアップロード**.
+1. アクションツールバーで、**作成／ファイルをアップロード**&#x200B;を選択します。
 
    ![作成にあるローカルストレージのファイルオプション](assets/step.png)
 

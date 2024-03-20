@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 98%
 >[!NOTE]
 >
 >アドビでは、この機能（リードおよびリストの管理）をさらに強化する予定はありません。
->使用することをお勧めします。 [Adobe CampaignとそのAEMの統合](/help/sites-administering/campaign.md).
+>[Adobe Campaign および AEM の統合](/help/sites-administering/campaign.md)を使用することをお勧めします。
 
 AEM web ページ上で使用する&#x200B;**フォーム**&#x200B;コンポーネントを利用して、**メールサービスプロバイダー**&#x200B;のメーリングリストに登録するようにユーザーに求めることができます。メールサービスのメーリングリストに登録するためのサインアップフォームを AEM ページに準備するには、対応するサービス設定を、登録する可能性のあるユーザーが訪れる AEM ページに適用する必要があります。
 
@@ -68,7 +69,7 @@ AEM ページを設定するには、次の手順に従います。
 メールサービスの購読と購読解除をパブリッシュインスタンスの登録フォーム経由で機能させるには、次の手順に従う必要があります。
 
 1. オーサーインスタンスで、パッケージマネージャーに移動します。
-1. パッケージを作成します。 フィルターを`/etc/key`に設定します。
+1. パッケージを作成します。フィルターを`/etc/key`に設定します。
 1. パッケージを作成してダウンロードします。
 1. パブリッシュインスタンスでパッケージマネージャーに移動し、このパッケージをアップロードします。
 1. パブリッシュ OSGi コンソールに移動し、**Adobe Granite 暗号サポート**&#x200B;という名前のバンドルを再起動します。

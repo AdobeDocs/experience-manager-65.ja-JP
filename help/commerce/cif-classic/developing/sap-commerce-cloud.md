@@ -1,15 +1,16 @@
 ---
 title: SAP Commerce Cloud を使用した開発
-description: SAPCommerce Cloud統合フレームワークには、API を備えた統合レイヤーが含まれます。
+description: SAP Commerce Cloud 統合フレームワークには、API を備えた統合レイヤーが含まれます。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '2303'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->e コマースフレームワークは、任意の e コマースソリューションで使用できます。ここで取り上げる特定の詳細と例については、 [hybris](https://www.sap.com/japan/products/crm.html) 解決策。
+>e コマースフレームワークは、任意の e コマースソリューションで使用できます。ここで取り上げる詳細や例は、[hybris](https://www.sap.com/japan/products/crm.html) のソリューションを参照してください。
 
 統合フレームワークには、API を備えた統合レイヤーが含まれています。次の操作が可能です。
 
@@ -405,7 +406,7 @@ public class AxisFilter implements VariantFilter {
 
 * 買い物かごは、`CommerceSession:` によって管理されます。
 
-   * The `CommerceSession` は追加や削除などを実行します。
+   * `CommerceSession` は追加や削除などを実行します。
    * `CommerceSession` は、買い物かごに対する様々な計算も実行します。
 
 * 買い物かごに直接関連はしませんが、`CommerceSession` はカタログの価格情報も提供する必要があります（価格を管理しているので）。
@@ -562,7 +563,7 @@ AEM と様々な e コマースシステム間で統合が提供されます。�
 
 AEM フロントエンドは、既存の hybris 実装の前に配置できます。また、hybris エンジンを既存の AEM インストールに追加できます。これを行うには、双方のシステムが相手側システムの既存のユーザーを適切に処理できるようにする必要があります。
 
-* AEM > hybris
+* AEM -> hybris の場合
 
    * hybris へのログイン時に、AEM ユーザーがまだ存在していない場合、
 
@@ -571,9 +572,9 @@ AEM フロントエンドは、既存の hybris 実装の前に配置できま�
 
    * 参照先: `com.adobe.cq.commerce.hybris.impl.HybrisSessionImpl#login()`
 
-* hybris > AEM
+* hybris -> AEM の場合
 
-   * AEM へのログイン時に、システムがユーザーを認識していない場合は、
+   * AEM へのログイン時に、システムがユーザーを認識していない場合：
 
       * 指定されたユーザー名とパスワードを使用して hybris へのログインを試行します。
       * 成功した場合は、同じパスワードを使用して AEM でユーザーを作成します（AEM 固有のソルトは AEM 固有のハッシュになります）。

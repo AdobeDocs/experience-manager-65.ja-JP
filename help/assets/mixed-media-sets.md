@@ -9,10 +9,11 @@ docset: aem65
 feature: Mixed Media Sets,Asset Management
 role: User, Admin
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1500'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -162,7 +163,7 @@ ht-degree: 98%
 
    >[!NOTE]
    >
-   >* 混在メディアセット内のアセットを編集するには - 混在メディアセットに移動します。セットを選択（選択しない）して、「プレビューをExperience Manager」(Set Preview) ページで開きます。 左パネルで、下向き矢印を選択してドロップダウンリストを開き、「**[!UICONTROL メンバーを設定]**」を選択します。メンバーを設定ページで、アセットの上にマウスポインターを置き、「**[!UICONTROL 編集]**」（鉛筆アイコン）を選択して編集ページを開きます。
+   >* 混在メディアセット内のアセットを編集するには - 混在メディアセットに移動します。セットを（選択ではなく）選択して、Experience Manager のプレビューを設定ページで開きます。左パネルで、下向き矢印を選択してドロップダウンリストを開き、「**[!UICONTROL メンバーを設定]**」を選択します。メンバーを設定ページで、アセットの上にマウスポインターを置き、「**[!UICONTROL 編集]**」（鉛筆アイコン）を選択して編集ページを開きます。
    >
    >* 混在メディアセット全体を削除するには - 任意の表示モード（カード表示や列表示など）から混在メディアセットに移動します。セットの上にマウスポインターを置き、「**選択**」（チェックマークアイコン）を選択します。キーボードの **[!UICONTROL Backspace]** キーを押すか、「**[!UICONTROL 詳細]**」（連続する 3 つのドット）を選択してから「**[!UICONTROL 削除]**」を選択します。
 

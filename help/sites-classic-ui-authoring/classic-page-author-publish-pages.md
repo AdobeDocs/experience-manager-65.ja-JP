@@ -7,10 +7,11 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1028'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +34,7 @@ ht-degree: 93%
 >  公開／非公開と同義です。
 >
 >* **レプリケート／レプリケーション**
->  これらは、ユーザーのコメントを公開またはリバースレプリケーションする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
+>  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
 >
 
 >[!NOTE]
@@ -76,7 +77,7 @@ Web サイトコンソールでページをアクティベートできます。�
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
-1. 選択したコンテンツが AEM WCM によってアクティベートされます。公開されたページが [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) （緑でマーク）を更新し、誰がコンテンツをアクティベートしたか、およびアクティベートした日時に関する情報を追加しました。
+1. 選択したコンテンツが AEM WCM によってアクティベートされます。公開されたページが、コンテンツをアクティベートしたユーザーや日時の情報と共に、[web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)に表示されます（緑でマーク）。
 
    ![screen_shot_2012-02-08at14335pm](assets/screen_shot_2012-02-08at14335pm.png)
 
@@ -150,7 +151,7 @@ Web サイトコンソールでページをアクティベートできます。�
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
-1. 次の日： **レプリケーション** コンソールで、 **ツリーをアクティベート**.
+1. **レプリケーション**&#x200B;コンソールで、「**ツリーをアクティベート**」をクリックします。
 
    次のウィンドウ（`https://localhost:4502/etc/replication/treeactivation.html`）が表示されます。
 

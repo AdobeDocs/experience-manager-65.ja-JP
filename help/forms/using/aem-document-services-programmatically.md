@@ -1,15 +1,16 @@
 ---
 title: AEM Document Services をプログラムとして使用する
-description: Document Services API を使用して、デジタル署名、暗号化、およびPDFドキュメントを生成する方法を説明します。
+description: Document Service API を使用して、電子署名、暗号化、PDF ドキュメントを生成する方法を学習します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 feature: Document Services
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6348'
-ht-degree: 44%
+ht-degree: 100%
 
 ---
 
@@ -33,13 +34,13 @@ ht-degree: 44%
 
 ## DocAssurance サービス {#docassurance-service}
 
-DocAssurance サービスには、次のサービスが含まれます。
+DocAssurance サービスには以下のサービスが含まれています。
 
 * Signature サービス
 * Encryption サービス
-* Reader拡張サービス
+* Reader Extension サービス
 
-DocAssurance サービスを使用して、次の操作を実行できます。
+DocAssurance サービスを使用して、以下の操作を実行できます。
 
 * [非表示署名の追加](/help/forms/using/aem-document-services-programmatically.md#p-adding-an-invisible-signature-field-p)
 
@@ -71,9 +72,9 @@ DocAssurance サービスを使用して、次の操作を実行できます。
 >
 >Document オブジェクトを Javadoc の入力パラメーターとして使用しているこれらすべてのサービスは、[https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/index.html) で確認することができます。
 
-### 非表示の署名フィールドの追加 {#adding-an-invisible-signature-field}
+### 非表示署名フィールドの追加 {#adding-an-invisible-signature-field}
 
-電子署名は、署名をグラフィカルに表現するフォームフィールドである署名フィールドに表示されます。 署名フィールドは、表示または非表示に設定することができます。署名者は、既存の署名フィールドを使用することも、プログラムによって署名フィールドを追加することもできます。 どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。PDF ドキュメントに複数の署名フィールドを追加できます。ただし、各署名フィールド名は一意である必要があります。
+署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。署名フィールドは、表示または非表示に設定することができます。署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。PDF ドキュメントに複数の署名フィールドを追加できます。ただし、各署名フィールド名は一意である必要があります。
 
 **構文**：`addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
 
@@ -91,7 +92,7 @@ DocAssurance サービスを使用して、次の操作を実行できます。
   </tr>
   <tr>
    <td><code>signatureFieldName</code><br /> </td>
-   <td>署名フィールドの名前です。このパラメーターは必須で、値に null を含めることはできません。<br /> </td>
+   <td>署名フィールドの名前です。このパラメーターは必須であり、null を値として持つことはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
@@ -235,7 +236,7 @@ public class AddInvisibleSignatureField {
 }
 ```
 
-ドキュメントの署名には [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) 仕様も使用できます。次のサンプルコードを使用して、に対する署名形式を設定します。 [CAdES。](https://en.wikipedia.org/wiki/CAdES_%28computing%29)
+ドキュメントの署名には [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) 仕様も使用できます。次のサンプルコードを使用して、[CAdES.](https://en.wikipedia.org/wiki/CAdES_%28computing%29)に署名フォーマットを設定できます。
 
 ```java
 SigningFormat signingFormat = SigningFormat.CAdES;
@@ -243,9 +244,9 @@ sigAppearence.setSigningFormat(signingFormat);
 signOptions.setSigAppearence(sigAppearence);
 ```
 
-### 署名フィールドの追加  {#adding-a-signature-field-nbsp}
+### 署名フィールドの追加 {#adding-a-signature-field-nbsp}
 
-プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。1 つの署名ドキュメントに複数の署名フィールドをPDFできます。 ただし、各署名フィールド名は一意である必要があります。
+プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。1 つの PDF ドキュメントに、複数の署名フィールドを追加することができます。ただし、それぞれの署名フィールドには一意の名前を設定する必要があります。
 
 **構文**：
 
@@ -272,15 +273,15 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名フィールドの名前。 このパラメーターは必須であり、Null 値は取れません。</td>
+   <td>署名フィールドの名前です。このパラメーターは必須であり、Null 値は取れません。</td>
   </tr>
   <tr>
    <td><code>pageNumber</code></td>
-   <td>署名フィールドを追加するページ番号です。 有効な値は、1 からドキュメントに含まれるページ数までです。 このパラメーターは必須で、null 値を受け入れることはできません。<br /> </td>
+   <td>署名フィールドを追加するページ番号です。有効な値は、1 からドキュメントに含まれるページ数までです。このパラメーターは必須であり、null 値を受け付けることはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>positionRectangle</code></td>
-   <td>署名フィールドの位置を指定する <code>PositionRectangle object</code> です。このパラメーターは必須であり、Null 値は取れません。指定した長方形が指定したページの切り抜きボックス上に一部でも重なっていない場合は、<code>InvalidArgumentException</code> が発生します。また、指定した長方形の高さと幅は、どちらにも 0 または負の値を指定できません。 左下の X 座標または左下の Y 座標は、0 以上、負ではなく、ページの切り抜きボックスを基準とした相対座標にすることができます。</td>
+   <td>署名フィールドの位置を指定する <code>PositionRectangle object</code> です。このパラメーターは必須であり、Null 値は取れません。指定した長方形が指定したページの切り抜きボックス上に一部でも重なっていない場合は、<code>InvalidArgumentException</code> が発生します。また、指定した長方形の高さと幅のいずれに対しても、0 または負の値を設定することはできません。左下の X 座標または Y 座標は、ページのクロップボックスを基準とする相対位置です。0 またはそれ以上の値を設定することができますが、負の値を設定することはできません。</td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
@@ -292,12 +293,12 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。 このパラメーターは、暗号化されたファイルに対してのみ必要です。</td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。このパラメーターは、ファイルが暗号化されている場合にのみ必要となります。</td>
   </tr>
  </tbody>
 </table>
 
-署名ドキュメントに署名フィールドを追加する Java コードのサンプルを以下にPDFします。
+PDF ドキュメントに署名フィールドを作成する Java コードのサンプルを以下に示します。
 
 ```java
 /*************************************************************************
@@ -455,12 +456,12 @@ public class AddSignatureField {
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。 これは、ファイルが暗号化されている場合にのみ必要です。</td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。ファイルが暗号化されている場合にのみ必要となります。</td>
   </tr>
  </tbody>
 </table>
 
-以下のコードサンプルでは、 [PAdES 4](https://en.wikipedia.org/wiki/PAdES).
+次のコードサンプルでは、[PAdES 4](https://en.wikipedia.org/wiki/PAdES) に従いタイムスタンプをドキュメントに追加します。
 
 ```java
 package com.adobe.signatures.test;
@@ -630,9 +631,9 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
 }
 ```
 
-### 署名を取得しています {#getting-signature}
+### 署名の取得 {#getting-signature}
 
-署名または認証する署名ドキュメント内のすべてのPDFフィールドの名前を取得できます。 PDFドキュメント内の署名フィールド名が不明な場合や、名前を検証する場合は、プログラムを使用して名前を取得します。 Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
+署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
 
 **構文**：`getSignature(Document doc, String signatureFieldName, UnlockOptions unlockOptions)`
 
@@ -650,16 +651,16 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名が含まれている署名フィールドの名前です。 署名フィールドの完全修飾名を指定します。 XFA フォームに基づくPDFドキュメントを使用する場合、署名フィールドの名前の一部を使用できます。 例えば、<code>form1[0].#subform[1].SignatureField3[3]</code> は <code>SignatureField3[3]</code> として指定できます。</td>
+   <td>署名が含まれている署名フィールドの名前です。署名フィールドの完全修飾名を指定します。XFA フォームに基づく PDF ドキュメントを使用する場合は、署名フィールドの名前の一部を使用できます。例えば、<code>form1[0].#subform[1].SignatureField3[3]</code> は <code>SignatureField3[3]</code> として指定できます。</td>
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。 これは、ファイルが暗号化されている場合にのみ必要です。</td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。ファイルが暗号化されている場合にのみ必要となります。</td>
   </tr>
  </tbody>
 </table>
 
-次の Java コードの例では、署名ドキュメント内の指定された署名フィールドの署名情報をPDFします。
+以下の Java コードの例を使用することで、PDF ドキュメント内にある特定の署名フィールドの署名情報を取得することができます。
 
 ```java
 /*************************************************************************
@@ -754,9 +755,9 @@ public class GetSignature {
 }
 ```
 
-### 署名フィールドリストを取得しています  {#getting-signature-field-list-nbsp}
+### 署名フィールドリストの取得 {#getting-signature-field-list-nbsp}
 
-署名または認証する署名ドキュメント内のすべてのPDFフィールドの名前を取得できます。 署名ドキュメント内の署名フィールド名が不明な場合は、プログラムによってPDFを取得し、検証することができます。 Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
+署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合に、プログラムによって名前を取得し、検証することができます。Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
 
 **構文**：`public List <PDFSignatureField> getSignatureFieldList (Document inDoc, UnlockOptions unlockOptions)`
 
@@ -765,9 +766,9 @@ public class GetSignature {
 | パラメーター | 説明 |
 |---|---|
 | `inDoc` | PDF を含む document オブジェクトです |
-| `unlockOptions` | 暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。 これは、ファイルが暗号化されている場合にのみ必要です。 |
+| `unlockOptions` | 暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。ファイルが暗号化されている場合にのみ必要となります。 |
 
-次の Java コードの例では、署名ドキュメント内の署名フィールドの名前をPDFします。
+以下の Java コードの例は、PDF ドキュメント内にある署名フィールドの名前を取得します。
 
 ```java
 /*************************************************************************
@@ -869,9 +870,9 @@ public class GetSignatureFields {
 }
 ```
 
-### 署名フィールドの変更  {#modifying-signature-fields-nbsp}
+### 署名フィールドの変更 {#modifying-signature-fields-nbsp}
 
-署名ドキュメント内の署名フィールドを変更することがPDFできます。 署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
+PDF ドキュメント内の署名フィールドを変更できます。署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
 
 フィールドロックディクショナリは、署名フィールドへの署名時にロックするフィールドのリストを指定します。フィールドがロックされると、ユーザーはそのフィールドを編集できません。シード値ディクショナリには、署名の適用時に使用される制約情報が含まれます。例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
 
@@ -893,7 +894,7 @@ public class GetSignatureFields {
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名フィールドの名前です。このパラメーターは必須で、null 値を受け入れることはできません。<br /> </td>
+   <td>署名フィールドの名前です。このパラメーターは必須であり、null 値を受け付けることはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>pdfSignatureFieldProperties</code></td>
@@ -901,7 +902,7 @@ public class GetSignatureFields {
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。 これは、ファイルが暗号化されている場合にのみ必要です。</td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。ファイルが暗号化されている場合にのみ必要となります。</td>
   </tr>
  </tbody>
 </table>
@@ -1036,13 +1037,13 @@ public class ModifySignatureField {
 }
 ```
 
-### 認証PDF書  {#certifying-pdf-documents-nbsp}
+### PDF ドキュメントの認証 {#certifying-pdf-documents-nbsp}
 
-認証済みPDFと呼ばれる特定の種類の署名を使用して認証することで、署名ドキュメントを保護できます。 認証済みの署名は、次の点でデジタル署名と区別されます。
+認証署名と呼ばれる特定のタイプの署名によって PDF ドキュメントを認証することで、PDF ドキュメントを保護することができます。認証署名は、以下の方法で電子署名と区別されます。
 
-* PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用されるときは、ドキュメント内の他の署名フィールドは未署名でなければいけません。認証署名は 1 つの PDF ドキュメントにつき 1 つです。署名ドキュメントの署名とPDFを行うには、署名前に認証を行ってください。 署名ドキュメントを認証した後、PDFフィールドに電子署名を行うことができます。
-* ドキュメントの作成者または作成者は、認証された署名を無効にすることなく、特定の方法でドキュメントを変更できるように指定できます。 例えば、ドキュメントでは、フォームへの入力やコメントを許可することができます。作成者が特定の変更を許可しない設定を行った場合は、その方法でのドキュメントの変更は Acrobat によって制限されます。そのような変更が行われた場合は、認証署名は無効となります。さらに、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名の場合、変更は防止されず、通常の編集操作で元の署名が無効になることはありません）。
-* 署名時に、文書の内容をあいまいにしたり誤解を招く可能性のある特定の種類のコンテンツを文書にスキャンします。 例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。このようなコンテンツに関する説明（法的証明）を提供できます。
+* PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用されるときは、ドキュメント内の他の署名フィールドは未署名でなければいけません。認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行ってください。PDF ドキュメントの認証後、他の署名フィールドに電子署名を行うことができます。
+* ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更を行うことができるよう指定することができます。例えば、ドキュメントでは、フォームへの入力やコメントを許可することができます。作成者が特定の変更を許可しない設定を行った場合は、その方法でのドキュメントの変更は Acrobat によって制限されます。そのような変更が行われた場合は、認証署名は無効となります。さらに、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
+* 署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。そのようなコンテンツに関する、説明（法的証明）を提供することができます。
 
 **構文**:
 
@@ -1077,12 +1078,12 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。これは、ファイルが暗号化されている場合にのみ必要です。<br /> </td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。ファイルが暗号化されている場合にのみ必要となります。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次のコードのサンプルは、PDFファイルに基づくPDFドキュメントを認証します。
+以下のコードのサンプルを使用することで、PDF ファイルに基づいた PDF ドキュメントを認証することができます。
 
 ```java
 /*************************************************************************
@@ -1343,48 +1344,48 @@ public class Certify {
 
 ### ドキュメントの保護 {#securing-documents}
 
-secureDocument を使用すると、PDF ドキュメントの暗号化、署名および認証、Reader 用の拡張を、個別に、または任意の順序で組み合わせて行うことができます。この機能にアクセスするには、対応する引数を渡します。 null の場合は、特定の処理が必要ないと見なされます。
+secureDocument を使用すると、PDF ドキュメントの暗号化、署名および認証、Reader 用の拡張を、個別に、または任意の順序で組み合わせて行うことができます。これらの機能にアクセスするには、対応する引数を渡してください。Null 値の場合、特別な処理の必要がないとみなされます。
 
-**パスワードを使用したPDFドキュメントの暗号化**
+**パスワードによる PDF ドキュメントの暗号化**
 
-PDF ドキュメントをパスワードで暗号化する場合、ユーザーは Adobe Reader または Acrobat で PDF ドキュメントを開くためのパスワードを指定する必要があります。また、別のAEM Forms Document Services の操作がドキュメントを使用する前に、パスワードで暗号化されたPDFドキュメントのロックを解除する必要があります。
+PDF ドキュメントをパスワードで暗号化する場合、ユーザーは Adobe Reader または Acrobat で PDF ドキュメントを開くためのパスワードを指定する必要があります。また、ほかの AEM Forms Document Services の操作によってドキュメントが使用される場合は、パスワードで暗号化された PDF ドキュメントのロックが解除されている必要があります。
 
-**証明書を使用したPDFドキュメントの暗号化**
+**証明書による PDF ドキュメントの暗号化**
 
-証明書ベースの暗号化では、公開鍵技術を使用して特定の受信者向けにドキュメントを暗号化できます。
+証明書ベースの暗号化では、公開鍵による暗号化を使用して、特定の受信者用にドキュメントを暗号化できます。
 
 様々な受信者に、ドキュメントに対する異なる権限を与えることができます。公開鍵のテクノロジーによって、暗号化の様々な側面が可能になります。
 
-アルゴリズムは、次のプロパティを持つキーと呼ばれる大きな数値を 2 つ生成するために使用します。
+アルゴリズムによって、大きい数字が 2 つ生成されます。この数字は以下のようなプロパティを持つ鍵として知られています。
 
-* 鍵のうち 1 つは、1 組のデータを暗号化するために使用されます。後で、他のキーのみを使用してデータを復号化できます。
+* 鍵のうち 1 つは、1 組のデータを暗号化するために使用されます。その後、もう一方の鍵のみがデータの復号に使用できます。
 * 1 つの鍵を、もう一方の鍵と区別することは不可能です。
-* キーの 1 つが、ユーザーの秘密鍵として機能します。 当該のユーザーのみがこの鍵にアクセスできることが重要です。
-* もう 1 つのキーはユーザーの公開鍵で、他のユーザーと共有できます。
+* 鍵のうち 1 つは、ユーザーの秘密鍵として機能します。当該のユーザーのみがこの鍵にアクセスできることが重要です。
+* もう 1 つの鍵はユーザーの公開鍵です。これは、他のユーザーと共有できます。
 
-公開鍵証明書には、ユーザーの公開鍵と識別情報が含まれます。 X.509 形式は、証明書の保存に使用されます。 証明書は、通常、認証局 (CA) によって発行され、デジタル署名されます。CA は、証明書の有効性に対する信頼性の尺度を提供する認識済みのエンティティです。 証明書には有効期限があり、この期限を過ぎると無効になります。
+公開鍵証明書には、ユーザーの公開鍵と識別情報が含まれます。証明書の保存には、X.509 形式が使用されます。通常、証明書は認証局（CA）で発行および電子署名されます。CA は、証明書の有効性における信頼度を提供する、承認されたエンティティです。証明書には有効期限があり、この期限を過ぎると無効になります。
 
-また、証明書失効リスト (CRL) は、有効期限より前に失効した証明書に関する情報を提供します。 CRL は、認証局によって定期的に公開されます。 証明書の失効ステータスは、ネットワーク上のオンライン証明書ステータスプロトコル (OCSP) を通じて取得することもできます。
+また、証明書の失効リスト（CRL）には、有効期限よりも前に失効した証明書に関する情報が示されます。CRL は認証局によって定期的に発行されます。証明書の失効ステータスは、ネットワークを通じてオンライン証明書ステータスプロトコル（OCSP）から取得することもできます。
 
 >[!NOTE]
 >
 >PDF ドキュメントを証明書で暗号化できるようにするには、まず AEM Trust Store に証明書が追加されていることを確認する必要があります。
 
-**使用権限のPDFドキュメントへの適用**
+**PDF ドキュメントへの使用権限の適用**
 
-拡張機能 Java クライアント API と Web サービスを使用して、PDFドキュメントにReader権限を適用できます。 使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。PDFに使用権限が適用されているドキュメントは、「権限付きドキュメント」と呼ばれます。 Adobe Readerで権限を付与されたドキュメントを開いたユーザーは、そのドキュメントに対して有効になっている操作を実行できます。
+Reader Extensions Java クライアント API および web サービスを使用すると、PDF ドキュメントに使用権限を適用することができます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。使用権限が与えられた PDF ドキュメントは、使用権限を付与されたドキュメントと呼ばれます。使用権限を付与されたドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-証明書を使用してPDFドキュメントのReaderを設定する前に、証明書をAEMキーストアに追加する必要があります。
+証明書を使用して PDF ドキュメントの Reader 用拡張を行う場合は、まず AEM キーストアに証明書が追加されていることを確認する必要があります。
 
-**デジタル署名PDF文書**
+**PDF ドキュメントへのデジタル署名**
 
 デジタル署名を PDF ドキュメントに適用して、一定レベルのセキュリティを提供できます。デジタル署名は、手書きの署名と同様に、署名者が自分自身を識別し、ドキュメントに関するステートメントを作成する手段を提供します。
 
-ドキュメントに電子署名を行う技術は、署名者と受信者の両方が、何が署名されたかを明確にし、ドキュメントが署名後に変更されなかったことを確実に示すのに役立ちます。
+ドキュメントの電子署名に使用されている技術は、署名者と受信者の両方が、何に署名されているのかを明確にし、その署名によりドキュメントに変更がないことを確認するのに役立ちます。
 
-PDFドキュメントは、公開鍵技術によって署名されます。 署名者には、公開鍵と秘密鍵の 2 つの鍵があります。 秘密鍵は、署名時に使用可能である必要があるユーザーの資格情報に保存されます。
+PDF ドキュメントは、公開鍵を用いて署名されます。署名者は公開鍵と秘密鍵の 2 つの鍵を持っています。秘密鍵はユーザーの資格情報に保存されます。資格情報は署名するときに利用可能になっている必要があります。
 
-公開鍵はユーザーの証明書に保存されます。この証明書は、受信者が署名を検証するために使用できる必要があります。 失効した証明書に関する情報は、証明機関 (CA) から配布された証明書失効リスト (CRL) およびオンライン証明書ステータスプロトコル (OCSP) 応答に含まれています。 署名時刻は、タイムスタンプ機関と呼ばれる、信頼できるソースから取得できます。
+公開鍵はユーザーの証明書に保存されています。署名を検証するには、受信者はその証明書を使用可能である必要があります。失効した証明書に関する情報は、認証機関から配布される証明書失効リスト（CRL）およびオンライン証明書ステータスプロトコル（OCSP）応答内にあります。署名が行われた時間は、タイムスタンプ局として知られる信頼できるソースから取得されます。
 
 >[!NOTE]
 >
@@ -1396,23 +1397,23 @@ PDFドキュメントは、公開鍵技術によって署名されます。 署�
 
 **PDF ドキュメントの認証**
 
-認証済みPDFと呼ばれる特定の種類の署名を使用して認証することで、署名ドキュメントを保護できます。 認証済みの署名は、次の点でデジタル署名と区別されます。
+認証署名と呼ばれる特定のタイプの署名によって PDF ドキュメントを認証することで、PDF ドキュメントを保護することができます。認証署名は、以下の方法で電子署名と区別されます。
 
 認証署名は PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用されるときは、ドキュメント内の他の署名フィールドは未署名でなければいけません。
 
 認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行う必要があります。
 
-署名ドキュメントを認証した後、PDFフィールドに電子署名を行うことができます。
+PDF ドキュメントの認証後、他の署名フィールドに電子署名を行うことができます。
 
-ドキュメントの作成者または作成者は、認証された署名を無効にすることなく、特定の方法でドキュメントを変更できるように指定できます。
+ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更を行うことができるよう指定することができます。
 
-例えば、フォームへの入力やコメント入力を許可するドキュメントなどがあります。作成者が、特定の変更を許可しないと指定した場合、
+例えば、フォームへの入力やコメント入力を許可するドキュメントなどがあります。作成者が特定の変更を許可しないように設定を行った場合は、
 
-Acrobat はユーザーがその方法でドキュメントを変更することを制限します。別のアプリケーションの使用などによる変更がおこなわれた場合、認証署名は無効になり、Acrobatはユーザーがドキュメントを開いたときに警告を発します。 （未認証の署名の場合、変更は防止されず、通常の編集操作で元の署名が無効になることはありません）。
+Acrobat はユーザーがその方法でドキュメントを変更することを制限します。別のアプリケーションを使用するなどしてそのような変更が行われた場合は、認証署名は無効となり、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
 
-署名時に、文書の内容をあいまいにしたり誤解を招く可能性のある特定の種類のコンテンツを文書にスキャンします。
+署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。
 
-例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。このようなコンテンツに関する説明（法的証明）を提供できます。
+例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。そのようなコンテンツに関する、説明（法的証明）を提供することができます。
 
 >[!NOTE]
 >
@@ -1454,12 +1455,12 @@ secureDocument(Document inDoc,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。これは、ファイルが暗号化されている場合にのみ必要です。<br /> </td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。ファイルが暗号化されている場合にのみ必要となります。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-**サンプル 1**：このサンプルは、パスワードの暗号化、署名フィールドの認証、Readerドキュメントの拡張の実行に使用されます。
+**サンプル 1**：このサンプルは、パスワードの暗号化、署名フィールドの認証、および PDF ドキュメントの Reader 用の拡張の実行に使用することができます。
 
 ```java
 /*************************************************************************
@@ -1761,7 +1762,7 @@ public class PassEncryptCertifyExtend {
 }
 ```
 
-**サンプル 2**：このサンプルは、PKI 暗号化の実行、署名フィールドへの署名、Readerドキュメントの拡張に使用されます。
+**サンプル 2**：このサンプルは、PKI 暗号化、署名フィールドへの署名、および PDF ドキュメントの Reader 用の拡張の実行に使用することができます。
 
 ```java
 /*************************************************************************
@@ -2121,12 +2122,12 @@ optionSpec.setJsScriptExecutionTimeoutInterval(100);
   </tr>
   <tr>
    <td><code>credentialPassword</code><br /> </td>
-   <td>秘密鍵証明書が暗号化されている場合は、秘密鍵証明書のパスワードを使用し、秘密鍵証明書が暗号化されていない場合は null を使用する必要があります。<br /> </td>
+   <td>証明書が暗号化されている場合は証明書のパスワード、証明書が暗号化されていない場合は null を使用する必要があります。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下のサンプルは、指定した秘密鍵証明書の使用権限情報を取得します。
+以下のサンプルを使用することで、秘密鍵証明書の使用権限情報を取得することができます。
 
 ```java
 /*************************************************************************
@@ -2192,7 +2193,7 @@ public void getCredentialUsageRights() {
 }
 ```
 
-### ドキュメント使用権限の取得 {#getting-document-usage-rights}
+### ドキュメントの使用権限の取得 {#getting-document-usage-rights}
 
 特定のドキュメントの使用権限情報を取得するには、この API を `docAssuranceService` API から呼び出します。
 
@@ -2208,12 +2209,12 @@ public void getCredentialUsageRights() {
   </tr>
   <tr>
    <td><code>inDocument</code><br /> </td>
-   <td>使用権限情報を取得するドキュメント<br /> </td>
+   <td>使用権限情報の取得元ドキュメント<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次のサンプルコードは、ドキュメントの使用権限情報を返します。
+以下のサンプルコードを使用することで、ドキュメントの使用権限情報を返すことができます。
 
 ```java
 /*************************************************************************
@@ -2330,12 +2331,12 @@ public void getDocumentUsageRights() {
   </tr>
   <tr>
    <td><code>unlockOptions</code><br /> </td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。 これは、ファイルが暗号化されている場合にのみ必要です。<br /> </td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。ファイルが暗号化されている場合にのみ必要となります。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下のサンプルでは、特定のドキュメントの使用権限を削除します。
+以下のサンプルを使用することで、特定文書の使用権限を削除することができます。
 
 ```java
 /*************************************************************************
@@ -2437,9 +2438,9 @@ public void removeDocumentUsageRights() {
 }
 ```
 
-#### 電子署名の検証 {#verifying-digital-signatures}
+#### デジタル署名の検証 {#verifying-digital-signatures}
 
-電子署名を検証することで、署名された PDF ドキュメントに変更がなく、電子署名が有効であることを確認することができます。電子署名を検証する際に、署名のステータスや、署名者の ID などの署名のプロパティを確認できます。 デジタル署名を信頼する前に、検証することをお勧めします。 デジタル署名を検証する場合は、デジタルPDFを含む署名ドキュメントを参照します。
+電子署名を検証することで、署名された PDF ドキュメントに変更がなく、電子署名が有効であることを確認することができます。デジタル署名の検証では、署名のステータスや、署名者の ID などのプロパティを確認することができます。デジタル署名を信用する前に、検証することをお勧めします。デジタル署名を検証する際は、デジタル署名を含む PDF ドキュメントを参照します。
 
 **構文**：`verify( inDoc, signatureFieldName, revocationCheckStyle, verificationTime, dssPrefs, ResourceResolver resourceResolver)`
 
@@ -2458,7 +2459,7 @@ public void removeDocumentUsageRights() {
   <tr>
    <td><code class="code">signatureField
       Name</code><br /> </td>
-   <td>検証する署名フィールドの名前。 完全修飾名または名前の一部を指定できます<br /> </td>
+   <td>検証する署名フィールドの名前です。完全修飾名もしくは名前の一部を指定できます。<br /> </td>
   </tr>
   <tr>
    <td><code>revocationCheckStyle</code></td>
@@ -2755,9 +2756,9 @@ public class VerifyFieldEncryptedPDF {
 }
 ```
 
-### 複数の電子署名の検証 {#verifying-multiple-digital-signatures}
+### 複数のデジタル署名の検証 {#verifying-multiple-digital-signatures}
 
-AEMを使用すると、PDFドキュメント内の電子署名を検証できます。 複数の署名者による署名が必要なビジネスプロセスで使用する場合、1 つの PDF ドキュメントに複数のデジタル署名を含めることができます。例えば、金融取引では、ローン担当者と管理者の両方の署名が必要です。 Signature service API を使用して、署名ドキュメント内のすべての署名をPDFできます。 複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。電子署名を信頼する前に、Adobeは、電子署名を検証することをお勧めします。
+AEM では、PDF ドキュメントのデジタル署名を検証できます。複数の署名者による署名が必要なビジネスプロセスで使用する場合、1 つの PDF ドキュメントに複数のデジタル署名を含めることができます。例えば、金融取引の場合は、ローン担当者と管理者の両方の署名が必要です。Signature サービス API を使用することで、PDF ドキュメント内のすべての署名を検証することができます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。デジタル署名を信頼する前に検証を行うことをお勧めします。
 
 **構文**：`verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
@@ -2792,7 +2793,7 @@ AEMを使用すると、PDFドキュメント内の電子署名を検証でき�
  </tbody>
 </table>
 
-以下のサンプルコードでは、 DocAssuranceService を使用して、既に暗号化されている署名ドキュメント内のPDFフィールドを検証します。
+以下のサンプルコードでは、既に暗号化されている PDF ドキュメント内の署名フィールドを検証するために、DocAssuranceService が使用されています。
 
 ```java
 /*************************************************************************
@@ -3053,9 +3054,9 @@ public class VerifyEncryptedPDFDoc {
 }
 ```
 
-### 電子署名の削除 {#removing-digital-signatures}
+### デジタル署名の削除 {#removing-digital-signatures}
 
-以前の電子署名を削除した後でのみ、署名フィールドに新しい電子署名を適用できます。 電子署名を上書きすることはできません。 既に署名が含まれている署名フィールドに電子署名を適用しようとすると、例外が発生します。
+署名フィールドに新しいデジタル署名を適用するには、古いデジタル署名を削除する必要があります。デジタル署名を上書きすることはできません。既にデジタル署名が含まれている署名フィールドにデジタル署名を適用しようとすると、例外が発生します。
 
 **構文**：`clearSignatureField(Document inDoc, String signatureFieldName, UnlockOptions unlockOptions)`
 
@@ -3077,12 +3078,12 @@ public class VerifyEncryptedPDFDoc {
   </tr>
   <tr>
    <td><code>unlockOptions</code><br /> </td>
-   <td>暗号化されたファイルのロックを解除するために必要なパラメーターが含まれます。ファイルが暗号化されている場合にのみ必要です<br /> </td>
+   <td>暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。これは、ファイルが暗号化されている場合にのみ必要です。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下の Java コードのサンプルを使用することで、署名フィールドから電子署名を削除することができます。
+以下の Java コードのサンプルを使用することで、署名フィールドからデジタル署名を削除することができます。
 
 ```java
 /*************************************************************************
@@ -3174,9 +3175,9 @@ public class ClearSignatureField {
 }
 ```
 
-### 認証署名フィールドを取得しています {#getting-certifying-signature-field}
+### 認証署名フィールドの取得 {#getting-certifying-signature-field}
 
-署名または認証する署名ドキュメント内のすべてのPDFフィールドの名前を取得できます。 PDFドキュメント内の署名フィールド名が不明な場合や、名前を検証する場合は、プログラムを使用して名前を取得できます。 Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
+署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
 
 **構文**：`getCertifyingSignatureField(Document inDoc, UnlockOptions unlockOptions)`
 
@@ -3194,12 +3195,12 @@ public class ClearSignatureField {
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
-   <td>UnlockOptions は、暗号化されたファイルのロックを解除するために必要なパラメータを含みます。 これは、ファイルが暗号化されている場合にのみ必要です。</td>
+   <td>UnlockOptions には、暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。ファイルが暗号化されている場合にのみ必要となります。</td>
   </tr>
  </tbody>
 </table>
 
-以下の Java コードの例では、ドキュメントの認証に使用された署名フィールドを取得します。
+以下の Java コードの例を使用して、ドキュメントの認証に使用された署名フィールドを取得することができます。
 
 ```java
 /*************************************************************************
@@ -3293,9 +3294,9 @@ public class GetCertifyingSignatureField {
 }
 ```
 
-### PDF暗号化タイプを取得中 {#getting-pdf-encryption-type}
+### PDF の暗号化タイプの取得 {#getting-pdf-encryption-type}
 
-署名または認証する署名ドキュメント内のすべてのPDFフィールドの名前を取得できます。 PDFドキュメント内の署名フィールド名が不明な場合や、名前を検証する場合は、プログラムを使用して名前を取得できます。 Signature サービスは、`asform1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
+署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signature サービスは、`asform1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
 
 **構文**：`void getPDFEncryption(Document inDoc)`
 
@@ -3309,12 +3310,12 @@ public class GetCertifyingSignatureField {
   </tr>
   <tr>
    <td><code>inDoc</code><br /> </td>
-   <td>入力として指定されたドキュメントです。 暗号化する場合としない場合があります。<br /> </td>
+   <td>入力ファイルとして指定されたドキュメントです。暗号化されたファイルと、されていないファイルの両方を指定できます。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次の Java コードの例では、署名ドキュメント内の指定された署名フィールドの署名情報をPDFします。
+以下の Java コードの例を使用することで、PDF ドキュメント内にある特定の署名フィールドの署名情報を取得することができます。
 
 ```java
 /*************************************************************************
@@ -3425,16 +3426,16 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
   </tr>
   <tr>
    <td><code>inDoc</code><br /> </td>
-   <td>入力として指定されたドキュメント。 パスワードで保護する必要があります。<br /> </td>
+   <td>入力ファイルとして指定されたドキュメントです。パスワードで保護されている必要があります。<br /> </td>
   </tr>
   <tr>
    <td><code>password</code><br /> </td>
-   <td>ドキュメントからセキュリティを削除するために使用するドキュメントを開くか、権限パスワードを指定します。<br /> </td>
+   <td>ドキュメントを開くパスワード、またはドキュメントからセキュリティを削除するために使用する権限パスワード。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次のコードのサンプルを使用すると、パスワードベースの暗号化をPDFドキュメントから削除できます。
+以下のコードサンプルを使用することで、パスワードベースの暗号化を PDF ドキュメントから削除することができます。
 
 ```java
     package com.adobe.docassurance.samples;
@@ -3510,7 +3511,7 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
 
 ### 証明書の暗号化の削除 {#removing-certificate-encryption}
 
-証明書ベースの暗号化をPDFドキュメントから削除して、ユーザーがAdobe ReaderまたはAcrobatでPDFドキュメントを開けるようにできます。 証明書で暗号化されたPDFドキュメントから暗号化を削除するには、秘密鍵を参照します。 暗号化を削除すると、そのPDFは保護されなくなります。
+証明書ベースの暗号化を PDF ドキュメントから削除できます。これにより、Adobe Reader または Acrobat で PDF ドキュメントを開くことができます。証明書で暗号化されている PDF ドキュメントから暗号化を削除するには、秘密鍵を参照します。暗号化を PDF ドキュメントから削除すると、そのドキュメントは保護されなくなります。
 
 **構文**：`removePDFCertificateSecurity(Document inDoc, String alias, ResourceResolver resourceResolver)`
 
@@ -3532,12 +3533,12 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
   </tr>
   <tr>
    <td><code>ResourceResolver</code></td>
-   <td>ResourceResolver ：特定のユーザーのキーストアにアクセスして秘密鍵証明書を取得します。</td>
+   <td>ResourceResolver を使用して、特定のユーザーのキーストアにアクセスし、資格情報を取得します。</td>
   </tr>
  </tbody>
 </table>
 
-以下の Java コードのサンプルを使用すると、証明書ベースの暗号化をPDFドキュメントから削除できます。
+以下の Java コードのサンプルを使用することで、証明書ベースの暗号化を PDF ドキュメントから削除することができます。
 
 ```java
     package com.adobe.docassurance.samples;
@@ -3632,7 +3633,7 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
 
 ## Output サービス {#output-service}
 
-Output サービスは、XDP ファイルをレンダリングする APIを.pdf、.pcl、.zpl、.ps 形式で提供します。 このサービスは、以下の API をサポートしています。
+Output サービスは、XDP ファイルをレンダリングするための API を .pdf、.pcl、.zpl、.ps 形式で提供します。このサービスは、以下の API をサポートしています。
 
 * **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)：**&#x200B;フォームデザインと、ネットワーク、ローカルファイルシステム、または HTTP 上の場所にリテラル値で保存されたデータをマージして PDF ドキュメントを生成します。
 
@@ -3644,7 +3645,7 @@ Output サービスは、XDP ファイルをレンダリングする APIを.pdf�
 
 ### generatePDFOutput {#generatepdfoutput}
 
-generatePDFOutput API は、フォームデザインとPDFを結合してデータドキュメントを生成します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。フォームデザイン、またはネットワーク、ローカルファイルシステム、HTTP の場所にリテラル値で保存されているデータの場合は、generatePDFOutput API を使用します。フォームデザインと XML データがアプリケーションに保存されている場合は、[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API を使用します。
+generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。フォームデザイン、またはネットワーク、ローカルファイルシステム、HTTP の場所にリテラル値で保存されているデータの場合は、generatePDFOutput API を使用します。フォームデザインと XML データがアプリケーションに保存されている場合は、[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API を使用します。
 
 **構文**：`Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
@@ -3658,7 +3659,7 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
   </tr>
   <tr>
    <td>uriOrFileName</td>
-   <td>入力ファイルのパスと名前を指定します。 ファイルのタイプは、PDFまたは XDP です。 ファイル名のみを指定した場合、ファイルは options で指定された contentRoot に対して読み込まれます。</td>
+   <td>入力ファイルのパスと名前を指定します。PDF または XDP のファイル形式に対応しています。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。</td>
   </tr>
   <tr>
    <td>data</td>
@@ -3666,12 +3667,12 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
   </tr>
   <tr>
    <td>options</td>
-   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、taggedPDF の各変数の値を指定します。 options パラメーターは、PDFOutputOptions タイプのオブジェクトを受け付けます。<br /> </td>
+   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、および taggedPDF の変数の値を指定します。options パラメーターは、PDFOutputOptions タイプのオブジェクトを受け付けます。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次の Java コードのサンプルを使用すると、フォームデザインと XML ファイルにPDFされたデータをマージして、保存ドキュメントが生成されます。
+以下の Java コードのサンプルを使用することで、フォームデザインと XML ファイルに保存されたデータをマージして PDF ドキュメントを生成することができます。
 
 ```java
     @Reference private OutputService outputService;
@@ -3751,7 +3752,7 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
 
 ### generatePDFOutput {#generatepdfoutput-1}
 
-generatePDFOutput API は、フォームデザインとPDFを結合してデータドキュメントを生成します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。フォームデザインまたはアプリケーションに保存されているデータの場合は、generatePrintedOutput API を使用します。フォームデザインと XML データが、ネットワーク上の場所、ローカル、または HTTP 上の場所にリテラル値で保存されている場合は、[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API を使用します。
+generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。フォームデザインまたはアプリケーションに保存されているデータの場合は、generatePrintedOutput API を使用します。フォームデザインと XML データが、ネットワーク上の場所、ローカル、または HTTP 上の場所にリテラル値で保存されている場合は、[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API を使用します。
 
 **構文**：`Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
@@ -3765,7 +3766,7 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
   </tr>
   <tr>
    <td>Inputdocument<br /> </td>
-   <td>入力ファイルのパスと名前を指定します。 ファイルのタイプは、PDFまたは XDP です。 ファイル名のみを指定した場合、ファイルは options で指定された contentRoot に対して読み込まれます。 <br /> </td>
+   <td>入力ファイルのパスと名前を指定します。PDF または XDP のファイル形式に対応しています。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。<br /> </td>
   </tr>
   <tr>
    <td>data</td>
@@ -3773,12 +3774,12 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
   </tr>
   <tr>
    <td>options</td>
-   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、taggedPDF の各変数の値を指定します。 options パラメーターは、PDFOutputOptions 型のオブジェクトを受け付けます。</td>
+   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、および taggedPDF の変数の値を指定します。この options パラメーターは、PDFOutputOptions タイプのオブジェクトを受け入れます。</td>
   </tr>
  </tbody>
 </table>
 
-次の Java コードのサンプルを使用すると、フォームデザインと XML ファイルにPDFされたデータをマージして、保存ドキュメントが生成されます。
+以下の Java コードのサンプルを使用することで、フォームデザインと XML ファイルに保存されたデータをマージして PDF ドキュメントを生成することができます。
 
 ```java
     @Reference private OutputService outputService;
@@ -3861,7 +3862,7 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
 
 ### generatePDFOutputBatch {#generatepdfoutputbatch}
 
-フォームデザインをデータとマージして、PDFドキュメントを作成します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePDFOutputBatch API は、フォームデザイン、またはネットワーク、ローカルファイルシステム、または HTTP 上の場所にリテラル値で保存されているデータに使用します。
+フォームデザインをデータとマージして PDF ドキュメントを作成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePDFOutputBatch API は、フォームデザイン、またはネットワークの場所、ローカルファイルシステム、HTTP 上の場所にリテラル値で保存されているデータに使用します。
 
 **構文**：`BatchResult generatePDFOutputBatch(Map templates, Map data, PDFOutputOptions options, BatchOptions batchOptions);`
 
@@ -3875,24 +3876,24 @@ generatePDFOutput API は、フォームデザインとPDFを結合してデー�
   </tr>
   <tr>
    <td>templates<br /> </td>
-   <td>キーのマップとテンプレートのファイル名を指定します。<br /> </td>
+   <td>キーのマップと、テンプレートのファイル名を指定します。<br /> </td>
   </tr>
   <tr>
    <td>data</td>
-   <td>キーとデータドキュメントのマップを指定します。 キーが Null でない場合、データドキュメントは templates マップで指定されたキーに対応するテンプレートでレンダリングされます。 </td>
+   <td>キーのマップと、データドキュメントを指定します。キーが Null でない場合、データドキュメントは templates マップで指定されたキーに対応するテンプレートでレンダリングされます。 </td>
   </tr>
   <tr>
    <td>options</td>
-   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、taggedPDF の各変数の値を指定します。 options パラメーターは、PDFOutputOptions 型のオブジェクトを受け付けます。</td>
+   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、および taggedPDF の変数の値を指定します。この options パラメーターは、PDFOutputOptions タイプのオブジェクトを受け入れます。</td>
   </tr>
   <tr>
    <td>batchOptions</td>
-   <td>変数 <code>generateManyFiles</code> の値を指定します。generateManyFiles フラグを設定して、複数のファイルを生成します。 options パラメーターは、BatchOptions 型のオブジェクトを受け付けます。</td>
+   <td>変数 <code>generateManyFiles</code> の値を指定します。複数のファイルを生成するには、generateManyFiles フラグを設定します。この options パラメーターは、BatchOptions タイプのオブジェクトを受け入れます。</td>
   </tr>
  </tbody>
 </table>
 
-以下の Java コードのサンプルを使用すると、フォームデザインと XML ファイルに格納されたPDFを結合して、データドキュメントを生成することができます。
+以下の Java コードのサンプルを使用することで、フォームデザインと XML ファイルに保存されたデータをマージして PDF ドキュメントを生成することができます。
 
 ```java
 private ArrayList generatePDFBatch(String contentRoot,String multipleFiles) {
@@ -3978,7 +3979,7 @@ String outputFolder="C:/Output";
 
 ### generatePrintedOutput {#generateprintedoutput}
 
-フォームデザインとデータファイルから PCL、PostScript、および ZPL 出力を生成します。 データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力をプリンターに直接送信したり、ファイルとして保存したりできます。 フォームデザインまたはアプリケーションに保存されているデータの場合は、generatePrintedOutput API を使用します。
+フォームデザインとデータから、PCL、PostScript、および ZPL 出力を生成します。データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力はプリンターに直接送信したり、ファイルとして保存したりできます。フォームデザインまたはアプリケーションに保存されているデータの場合は、generatePrintedOutput API を使用します。
 
 **構文**：`Document generatePrintedOutput(String uriOrFileName, Document data, PrintedOutputOptions);`
 
@@ -3992,7 +3993,7 @@ String outputFolder="C:/Output";
   </tr>
   <tr>
    <td>uriOrFileName<br /> </td>
-   <td>入力ファイルのパスと名前を指定します。 ファイル名のみを指定した場合、ファイルは options で指定された contentRoot に対して読み込まれます。 ファイルのタイプは、PDFまたは XDP です。<br /> </td>
+   <td>入力ファイルのパスと名前を指定します。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。PDF または XDP のファイル形式に対応しています。<br /> </td>
   </tr>
   <tr>
    <td>data</td>
@@ -4000,7 +4001,7 @@ String outputFolder="C:/Output";
   </tr>
   <tr>
    <td>options</td>
-   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、taggedPDF の各変数の値を指定します。 この options パラメーターは、 PrintedOutputOptions タイプのオブジェクトを受け付けます。<br /> </td>
+   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、および taggedPDF の変数の値を指定します。この options パラメーターは、 PrintedOutputOptions タイプのオブジェクトを受け付けます。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4069,7 +4070,7 @@ Document doc=null;
 
 ### generatePrintedOutput {#generateprintedoutput-1}
 
-指定されたフォームデザインとデータファイルに対して、PCL、PostScript、および ZPL 出力を生成します。 データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力は、プリンターに直接送信することも、ファイルとして保存することもできます。 フォームデザインまたはアプリケーションに保存されたデータに対しては、 generatePrintedOutput API を使用します。
+指定したフォームデザインとデータファイルに対して、PCL、PostScript、および ZPL 出力を生成します。データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力はプリンターに直接送信したり、ファイルとして保存したりできます。generatePrintedOutput API は、フォームデザイン、またはアプリケーションに保存されているデータに使用します。
 
 **構文**：`Document generatePrintedOutput(Document inputdocument, Document data, PrintedOutputOptions);`
 
@@ -4083,7 +4084,7 @@ Document doc=null;
   </tr>
   <tr>
    <td>Inputdocument<br /> </td>
-   <td>入力ファイルのパスと名前を指定します。 ファイル名のみを指定した場合、ファイルは options で指定された contentRoot に対して読み込まれます。 XDP のファイル形式に対応しています。 </td>
+   <td>入力ファイルのパスと名前を指定します。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。XDP のファイル形式に対応しています。 </td>
   </tr>
   <tr>
    <td>data</td>
@@ -4091,7 +4092,7 @@ Document doc=null;
   </tr>
   <tr>
    <td>options</td>
-   <td>このオブジェクトは、contentRoot、locale、printConfig、copies、および paginationOverride の値を設定するために使用されます。 この options パラメーターは、 PrintedOutputOptions タイプのオブジェクトを受け付けます。<br /> </td>
+   <td>contentRoot、locale、printConfig、copies、および paginationOverride の値の設定に使用されるオブジェクトです。この options パラメーターは、 PrintedOutputOptions タイプのオブジェクトを受け付けます。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4168,24 +4169,24 @@ Document doc=null;
   </tr>
   <tr>
    <td>テンプレート<br /> </td>
-   <td>キーのマップとテンプレートのファイル名を指定します。<br /> </td>
+   <td>キーのマップと、テンプレートのファイル名を指定します。<br /> </td>
   </tr>
   <tr>
    <td>data</td>
-   <td>キーとデータドキュメントのマップを指定します。 キーが null でない場合、データドキュメントはテンプレート Map で対応するキーのテンプレートと共にレンダリングされます。<br /> </td>
+   <td>キーのマップと、データドキュメントを指定します。キーの値が null 値でなかった場合、データドキュメントは　テンプレートのマップのキーに対応するテンプレートでレンダリングされます。<br /> </td>
   </tr>
   <tr>
    <td>options</td>
-   <td>PrintedOutputOptions 型のオブジェクトを指定します。 このオブジェクトは、contentRoot、locale、printConfig、copies、paginationOverride の値を設定するために使用されます。<br /> </td>
+   <td>PrintedOutputOptions タイプのオブジェクトを指定します。contentRoot、locale、printConfig、copies および paginationOverride の値の設定に使用されるオブジェクトです。<br /> </td>
   </tr>
   <tr>
    <td>batchOptions</td>
-   <td>変数 generateManyFiles の値を指定します。 generateManyFiles フラグを設定して、複数のファイルを生成します。 options パラメーターは、BatchOptions 型のオブジェクトを受け付けます。<br /> </td>
+   <td>変数 generateManyFiles の値を指定します。複数のファイルを生成するには、generateManyFiles フラグを設定します。この options パラメーターは、BatchOptions タイプのオブジェクトを受け入れます。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次の Java コードのサンプルを使用すると、複数のフォームデザインテンプレートとデータファイルから、PCL、PostScript、および ZPL の出力をバッチで生成できます。 出力タイプは、`printConfig` パラメーターに渡された値によって異なります。
+以下の Java コードのサンプルを使用することで、複数のフォームデザインテンプレートとデータファイルから、PCL、PostScript および ZPL 出力をバッチで生成することができます。出力タイプは、`printConfig` パラメーターに渡された値によって異なります。
 
 ```java
 @Reference private OutputService outputService;
@@ -4291,14 +4292,14 @@ String outputFolder="C:/Output";
 
 ## Forms サービス {#forms-service}
 
-Formsサービスは、インタラクティブなPDFフォームとの間でデータの読み込みと書き出しをおこなう API を提供します。 インタラクティブPDFフォームは、PDFから情報を表示および収集するために使用される 1 つ以上のフィールドを含むユーザードキュメントです。 このサービスは、以下の API をサポートしています。
+この Forms サービスは、インタラクティブ PDF フォームからデータを読み込む、または書き出すための API を提供します。インタラクティブ PDF フォームとは、ユーザーからの情報の表示と収集に使用される 1 つまたは複数のフィールドを含む PDF ドキュメントです。このサービスは、以下の API をサポートしています。
 
 * **[exportData](/help/forms/using/aem-document-services-programmatically.md#p-exportdata-p)：** PDF フォームからデータをエクスポートします。
 * **[importData](/help/forms/using/aem-document-services-programmatically.md#p-importdata-p)：**&#x200B;インタラクティブ PDF フォームにデータをインポートします。
 
 ### exportData {#exportdata}
 
-XML および XDP 形式でインタラクティブPDFフォームからフォームデータを書き出します。
+インタラクティブ PDF フォームからフォームデータを XML および XDP 形式で書き出します。
 
 **構文**：`Document exportData(Document xdpOrPdf, DataFormat dataFormat)`
 
@@ -4316,12 +4317,12 @@ XML および XDP 形式でインタラクティブPDFフォームからフォ�
   </tr>
   <tr>
    <td>dataFormat<br /> </td>
-   <td>データを書き出す形式を指定します。 列挙型 (XDP、XmlData、Auto) の変数を受け入れます。<br /> </td>
+   <td>データを書き出す形式を指定します。列挙型（XDP、XmlData、Auto）の変数を受け入れます。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-以下の Java コードのサンプルを使用することで、XML および XDP 形式でインタラクティブPDFフォームからフォームデータを書き出すことができます。
+以下の Java コードのサンプルを使用することで、インタラクティブ PDF フォームからフォームデータを XML および XDP 形式で書き出すことができます。
 
 #### サンプル {#sample}
 
@@ -4380,7 +4381,7 @@ try {
  }
 ```
 
-### importData {#importdata}
+### ImportData {#importdata}
 
 インタラクティブ PDF フォームにフォームデータをインポートします。
 
@@ -4400,7 +4401,7 @@ try {
   </tr>
   <tr>
    <td>データ<br /> </td>
-   <td>XML 形式のデータを含む XML ファイル。</td>
+   <td>XML 形式のデータを含む XML ファイルです。</td>
   </tr>
  </tbody>
 </table>
@@ -4461,19 +4462,19 @@ PDF Generator サービスは、ネイティブファイル形式を PDF に変�
 
 ### GeneratePDFService {#generatepdfservice}
 
-GeneratePDFService には、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（非推奨）、.jpg、.bmp、.tif、.png、.html など、様々なファイル形式をPDFに変換する API が用意されています。 また、様々なファイル形式にPDFを書き出し、PDFを最適化する API も提供します。 このサービスは、次の API をサポートしています。
+GeneratePDFService は、様々なファイル形式（.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（非推奨）、.jpg、.bmp、.tif、.png、.html など）を PDF に変換する API を提供します。また、PDF を様々なファイル形式に書き出したり、最適化したりするための API も提供します。このサービスは、以下の API をサポートしています。
 
-* **createPDF**：サポートされているファイルタイプをPDFドキュメントに変換します。 Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式をサポートしています。 これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
-* **exportPDF**：サポートされるファイルPDFに変換ドキュメントを変換します。 メソッドは、PDFを入力として受け入れ、PDFのコンテンツを指定したファイルタイプ形式で書き出します。 PDF ドキュメントは、次の形式でエクスポートすることができます。Encapsulated PostScript（eps）、HTML 3.2（htm、html）、CSS 1.0 を使用した HTML 4.01（htm、html）、JPEG（jpg、jpeg、jpe）、JPEG2000（jpf、jpx、jp2、j2k、j2c、jpc）、Microsoft Word 文書（doc、 docx） Microsoft Excel ブック（xlsx）、Microsoft PowerPoint プレゼンテーション（pptx）、PNG（png）、PostScript（ps）、リッチテキスト形式（rtf）、テキスト（Accessible）（txt）、テキスト（Plain）（txt）、TIFF（tif、tiff）、XML 1.0（xml）、PDF/A-1a（sRGB）、PDF/A-1b、PDF/A-2a（sRGB）、PDF/A-2b（sRGB）、PDF/A-3a（sRGB）、PDF/A-3b（sRGB）。PDF の出力用として[カスタムの Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を指定することもできます。
+* **createPDF**：対応するファイルタイプを PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
+* **exportPDF**：PDF ドキュメントを対応するファイルタイプに変換します。このメソッドは PDF を入力として受け入れ、PDF の内容を特定のファイルタイプで読み込みます（または書き出します）。PDF ドキュメントは、次の形式でエクスポートすることができます。Encapsulated PostScript（eps）、HTML 3.2（htm、html）、CSS 1.0 を使用した HTML 4.01（htm、html）、JPEG（jpg、jpeg、jpe）、JPEG2000（jpf、jpx、jp2、j2k、j2c、jpc）、Microsoft Word 文書（doc、 docx） Microsoft Excel ブック（xlsx）、Microsoft PowerPoint プレゼンテーション（pptx）、PNG（png）、PostScript（ps）、リッチテキスト形式（rtf）、テキスト（Accessible）（txt）、テキスト（Plain）（txt）、TIFF（tif、tiff）、XML 1.0（xml）、PDF/A-1a（sRGB）、PDF/A-1b、PDF/A-2a（sRGB）、PDF/A-2b（sRGB）、PDF/A-3a（sRGB）、PDF/A-3b（sRGB）。PDF の出力用として[カスタムの Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を指定することもできます。
 
-* **optimizePDF**:PDFドキュメントを最適化し、PDFドキュメントを別のタイプに変換します。 メソッドは、入力としてPDFドキュメントを受け付けます。
-* **htmlToPdf2**：HTML ページを PDF ドキュメントに変換します。入力としてHTMLページの URL を受け付けます。
+* **optimizePDF**：PDF ドキュメントを最適化し、PDF ドキュメントを別のタイプに変換します。このメソッドは、PDF ドキュメントを入力ファイルとして受け入れます。
+* **htmlToPdf2**：HTML ページを PDF ドキュメントに変換します。HTML ページの URL を入力として受け入れます。
 
 >[!NOTE]
 >
->AIX オペレーティングシステムで実行されているAEM Formsサーバーでは、HTMLtoPDF API は非推奨（廃止予定）となりました。
+>AIX オペレーティングシステムで稼動している AEM Forms サーバーでは、HTMLtoPDF API の使用は非推奨です。
 
-#### Microsoft Windows および Linux で使用可能なPDF GeneratorAPI {#pdf-generator-api-available-on-microsoft-windows-and-linux}
+#### PDF Generator の API は Microsoft Windows および Linux で利用できます {#pdf-generator-api-available-on-microsoft-windows-and-linux}
 
 <table>
  <tbody>
@@ -4502,7 +4503,7 @@ GeneratePDFService には、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、
    <td>✖</td>
   </tr>
   <tr>
-   <td>OCRPDF( 検索可能なPDF)</td>
+   <td>OCR PDF（検索可能な PDF）</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
@@ -4511,16 +4512,16 @@ GeneratePDFService には、.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、
 
 #### createPDF {#createpdf}
 
-createPDF API は、サポートされているファイルタイプをPDFドキュメントに変換します。 Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project など、様々なファイル形式をサポートしています。 これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
+createPDF API は対応するファイルタイプを PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などの様々なファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
 
-変換の場合は、一部のパラメーターのみが必須です。 入力ドキュメントは必須のパラメータです。 後で、セキュリティ権限、PDF出力設定およびメタデータ情報を出力PDFドキュメントに適用できます。
+変換の際は、一部のパラメーターのみが必須となります。入力ドキュメントは必須のパラメーターです。後から、出力 PDF ドキュメントにセキュリティ権限、PDF 出力設定およびメタデータ情報を適用することもできます。
 
-createPDF サービスは結果を java.util.Map で返します。 マップのキーは次のとおりです。
+createPDF サービスは、結果を java.util.Map で返します。マップのキーは次のとおりです。
 
-* ConvertedDoc：新しく作成されたPDF文書が含まれます。
-* LogDoc：ログファイルが含まれます。
+* ConvertedDoc：新しく作成した PDF ドキュメントを含みます。
+* LogDoc：ログファイルを含みます。
 
-createPDF サービスは次の例外をスローします。
+createPDF サービスは以下の例外をスローします。
 
 * ConversionException
 * InvalidParameterException
@@ -4538,11 +4539,11 @@ createPDF サービスは次の例外をスローします。
   </tr>
   <tr>
    <td>inputDoc<br /> </td>
-   <td>ドキュメントオブジェクトを指定します。 document オブジェクトには、入力ファイルが含まれています。 入力ドキュメントの上に com.adobe.aemfd.docmanager.Document オブジェクトを作成します。 必須のパラメーターです。</td>
+   <td>Document オブジェクトを指定します。Document オブジェクトには、入力ファイルが含まれます。com.adobe.aemfd.docmanager.Document オブジェクトを入力ドキュメントに作成します。必須のパラメーターです。</td>
   </tr>
   <tr>
    <td>inputFileName<br /> </td>
-   <td>入力ファイルの名前と拡張子。 必須のパラメーターです。<br /> </td>
+   <td>拡張子を含む入力ファイルの名前です。必須のパラメーターです。<br /> </td>
   </tr>
   <tr>
    <td>fileTypeSettings</td>
@@ -4550,30 +4551,30 @@ createPDF サービスは次の例外をスローします。
   </tr>
   <tr>
    <td>pdfSettings</td>
-   <td><p>PDFされたドキュメントの変換出力。 次の設定のみを適用できます。</p>
+   <td><p>変換されたドキュメントの PDF 出力です。以下の設定のみを適用できます。</p>
     <ul>
      <li>High_Quality_Print<br /> </li>
      <li>PDFA1b_2005_RGB<br /> </li>
      <li>PDFA1b_2005_CMYK<br /> </li>
      <li>PDFX1a_2001<br /> </li>
      <li>PDFX3_2002<br /> </li>
-     <li>プレス品質<br /> </li>
+     <li>Press_Quality<br /> </li>
      <li>Smallest_File_Size</li>
     </ul> <p>これはオプションのパラメーターです。<br /> </p> </td>
   </tr>
   <tr>
    <td>securitySettings</td>
-   <td><p>変換後のドキュメントのセキュリティ設定です。 次の設定を適用できます。</p>
+   <td><p>変換されたドキュメントのセキュリティ設定を表示します。以下の設定を適用できます。</p>
     <ul>
      <li>セキュリティなし</li>
-     <li>パスワードセキュリティ<br /> </li>
-     <li>証明書セキュリティ<br /> </li>
-     <li>Adobeポリシーサーバー</li>
+     <li>パスワードによるセキュリティ<br /> </li>
+     <li>証明書によるセキュリティ<br /> </li>
+     <li>Adobe Policy Server</li>
     </ul> <p>これはオプションのパラメーターです。</p> </td>
   </tr>
   <tr>
    <td>settingsDoc</td>
-   <td>このファイルには、PDFドキュメントの生成時に適用される設定 (Web ビュー用のPDFドキュメントの最適化など ) と、PDFドキュメントの作成後に適用される設定（初期ビューやセキュリティなど）が含まれます。 これはオプションのパラメーターです。<br /> </td>
+   <td>PDF ドキュメントの生成中に適用される設定（例えば、web 表示のための PDF ドキュメントの最適化）および PDF ドキュメントの作成後に適用される設定（例えば、初期表示やセキュリティ）を含むファイルです。これはオプションのパラメーターです。<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
@@ -4582,7 +4583,7 @@ createPDF サービスは次の例外をスローします。
  </tbody>
 </table>
 
-次の Java コードは、サポートされているファイルタイプのドキュメントをPDFドキュメントに変換します。
+以下の Java コードを使用することで、対応するファイルタイプのドキュメントを PDF ドキュメントに変換することができます。
 
 ```java
 @Reference GeneratePDFService generatePdfService;
@@ -4646,13 +4647,13 @@ File createPDF(File inputFile, String inputFilename, String fileTypeSettings, St
 
 #### exportPDF {#exportpdf}
 
-PDFドキュメントをサポートされるファイルタイプに変換します。 メソッドは、PDFを入力として受け入れ、PDFのコンテンツを指定したファイルタイプ形式で書き出します。
+PDF ドキュメントを対応するファイルタイプに変換します。このメソッドは PDF を入力として受け入れ、PDF の内容を特定のファイルタイプで読み込みます（または書き出します）。
 
-createPDF サービスは結果を java.util.Map で返します。 マップのキーは次のとおりです。
+createPDF サービスは、結果を java.util.Map で返します。マップのキーは次のとおりです。
 
-* ConvertedDoc：出力ドキュメントが含まれます。
+* ConvertedDoc：出力ドキュメントを含みます。
 
-createPDF サービスは次の例外をスローします。
+createPDF サービスは以下の例外をスローします。
 
 * ConversionException
 * InvalidParameterException
@@ -4678,15 +4679,15 @@ Map exportPDF(Document inputDoc, String inputFileName, String formatType, Docume
   </tr>
   <tr>
    <td>inputFileName<br /> </td>
-   <td>ファイル名と拡張子。<br /> </td>
+   <td>拡張子を含むファイルの名前です。<br /> </td>
   </tr>
   <tr>
    <td>formatType</td>
-   <td>exportPDF API の出力ファイル形式です。<br /> </td>
+   <td>exportPDF API 用の出力ファイル形式です。<br /> </td>
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>ファイルには、出力ドキュメントの生成時に適用される設定が含まれています。 一般に、XML ファイルです。</td>
+   <td>出力ドキュメントの生成時に適用する設定を含むファイルです。通常、XML ファイルになります。</td>
   </tr>
  </tbody>
 </table>
@@ -4743,9 +4744,9 @@ finally {
 
 #### optimizePDF {#optimizepdf}
 
-OptimizePDF API は、サイズを縮小してPDFファイルを最適化します。 この変換の結果、PDFファイルは元のバージョンよりも小さくなる可能性があります。 また、この操作では、PDF ドキュメントが最適化パラメーターで指定された PDF バージョンに変換されます。最適化されたPDFを含む OptimizePDFResult オブジェクトを返します。
+OptimizePDF API は、PDF ファイルのサイズを縮小することによって PDF ファイルを最適化します。この変換の結果、PDF ファイルは、元のバージョンよりも小さくなる場合があります。また、この操作では、PDF ドキュメントが最適化パラメーターで指定された PDF バージョンに変換されます。これは、最適化された PDF を含む OptimizePDFResult オブジェクトを返します。
 
-createPDF サービスは次の例外をスローします。
+createPDF サービスは以下の例外をスローします。
 
 * ConversionException
 * InvalidParameterException
@@ -4767,7 +4768,7 @@ OptimizePDFResult optimizePDF(Document inputDoc, String fileTypeSettings, Docume
   </tr>
   <tr>
    <td>inputDoc<br /> </td>
-   <td>入力ドキュメントを指定します。 必須パラメーターです。</td>
+   <td>入力ドキュメントを指定します。必須パラメーターです。</td>
   </tr>
   <tr>
    <td>fileTypeSettings<br /> </td>
@@ -4775,7 +4776,7 @@ OptimizePDFResult optimizePDF(Document inputDoc, String fileTypeSettings, Docume
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>このファイルには、PDFドキュメントの生成時に適用される設定 (Web ビュー用のPDFドキュメントの最適化など ) と、PDFドキュメントの作成後に適用される設定（初期ビューやセキュリティなど）が含まれます。 これはオプションのパラメーターです。<br /> </td>
+   <td>PDF ドキュメントの生成中に適用される設定（例えば、web 表示のための PDF ドキュメントの最適化）および PDF ドキュメントの作成後に適用される設定（例えば、初期表示やセキュリティ）を含むファイルです。これはオプションのパラメーターです。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4831,11 +4832,11 @@ File optimizePDF(File inputFile, String fileTypeSettings, File settingsFile) thr
 
 #### htmlToPdf2 {#htmltopdf}
 
-HTMLページを変換ドキュメントにPDFします。 入力としてHTMLページの URL を受け付けます。
+HTML ページを PDF ドキュメントに変換します。HTML ページの URL を入力として受け入れます。
 
-htmlToPdf2 サービスは HtmlToPdfResult オブジェクトを返します。 result.getConvertedDocument() を使用して変換されたPDFを取得できます。
+htmlToPdf2 サービスは HtmlToPdfResult オブジェクトを返します。result.getConvertedDocument() を通して変換済み PDF を取得することができます。
 
-htmlToPdf2 サービスは次の例外をスローします。
+htmlToPdf2 サービスは以下の例外をスローします。
 
 * ConversionException
 * InvalidParameterException
@@ -4857,7 +4858,7 @@ HtmlToPdfResult htmlToPdf2(String inputUrl, String fileTypeSettingsName, String 
   </tr>
   <tr>
    <td>inputDoc<br /> </td>
-   <td>入力ドキュメントを指定します。 必須パラメーターです。</td>
+   <td>入力ドキュメントを指定します。必須パラメーターです。</td>
   </tr>
   <tr>
    <td>fileTypeSettings<br /> </td>
@@ -4865,7 +4866,7 @@ HtmlToPdfResult htmlToPdf2(String inputUrl, String fileTypeSettingsName, String 
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>このファイルには、PDFドキュメントの生成時に適用される設定 (Web ビュー用のPDFドキュメントの最適化など ) と、PDFドキュメントの作成後に適用される設定（初期ビューやセキュリティなど）が含まれます。 これはオプションのパラメーターです。<br /> </td>
+   <td>PDF ドキュメントの生成中に適用される設定（例えば、web 表示のための PDF ドキュメントの最適化）および PDF ドキュメントの作成後に適用される設定（例えば、初期表示やセキュリティ）を含むファイルです。これはオプションのパラメーターです。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4922,14 +4923,14 @@ File htmlToPdf(String inputUrl, String fileTypeSettingsName, String securitySett
 
 ### DistillerService {#distillerservice}
 
-Distillerサービスは、PostScript、Encapsulated PostScript(EPS) およびプリンターテキストファイル (PRN) をPDFファイルに変換します。 Distiller サービスは、請求書や明細書など、容量の大きい印刷ドキュメントを電子ドキュメントに変換する際によく使用されます。ドキュメントを PDF に変換して、顧客にドキュメントの印刷バージョンと電子バージョンを送付できます。サポートされるファイル形式は、.ps、.eps、.prn です。 このサービスは、次の API をサポートしています。
+Distiller サービスでは、PostScript、Encapsulated PostScript（EPS）および プリンターテキストファイル（PRN）を PDF ファイルに変換できます。Distiller サービスは、請求書や明細書など、容量の大きい印刷ドキュメントを電子ドキュメントに変換する際によく使用されます。ドキュメントを PDF に変換して、顧客にドキュメントの印刷バージョンと電子バージョンを送付できます。ps、.eps、および .prn のファイル形式に対応しています。このサービスは、以下の API をサポートしています。
 
-createPDF サービスは結果を java.util.Map で返します。 マップのキーは次のとおりです。
+createPDF サービスは、結果を java.util.Map で返します。マップのキーは次のとおりです。
 
-* ConvertedDoc ：新しく作成された変換ドキュメントがPDFされます。
-* LogDoc ：ログファイルが含まれます。
+* ConvertedDoc：新しく作成した PDF ドキュメントを含みます。
+* LogDoc：ログファイルを含みます。
 
-createPDF サービスは次の例外をスローします。
+createPDF サービスは以下の例外をスローします。
 
 * ConversionException
 * InvalidParameterException
@@ -4937,7 +4938,7 @@ createPDF サービスは次の例外をスローします。
 
 #### createPDF {#createpdf-1}
 
-サポートされる形式をPDF文書に変換します。 このメソッドは、.ps、.eps、.prn 形式のファイルを入力として受け付けます。 出力 PDF ドキュメントには特定のセキュリティ権限、PDF 出力設定およびメタデータ情報を適用することができます。
+対応の形式を PDF ドキュメントに変換します。このメソッドは .ps、.eps、および .prn の形式を持つファイルを入力ファイルとして受け入れます。出力 PDF ドキュメントには特定のセキュリティ権限、PDF 出力設定およびメタデータ情報を適用することができます。
 
 **構文：**
 
@@ -4955,42 +4956,42 @@ Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, Strin
   </tr>
   <tr>
    <td>inputDoc<br /> </td>
-   <td>入力ドキュメントを指定します。 必須パラメーターです。</td>
+   <td>入力ドキュメントを指定します。必須パラメーターです。</td>
   </tr>
   <tr>
    <td>inputFileName</td>
-   <td>入力ファイルの完全な名前と、ファイルの拡張子を指定します。 必須パラメーターです。</td>
+   <td>入力ファイルの拡張子と、完全な名前を指定します。必須パラメーターです。</td>
   </tr>
   <tr>
    <td>pdfSettings</td>
-   <td><p>PDFされたドキュメントの変換出力設定。 次の設定のみを適用できます。</p>
+   <td><p>変換されるドキュメントの PDF 出力設定です。以下の設定のみを適用できます。</p>
     <ul>
      <li>High_Quality_Print<br /> </li>
      <li>PDFA1b_2005_RGB<br /> </li>
      <li>PDFA1b_2005_CMYK<br /> </li>
      <li>PDFX1a_2001<br /> </li>
      <li>PDFX3_2002<br /> </li>
-     <li>プレス品質<br /> </li>
+     <li>Press_Quality<br /> </li>
      <li>Smallest_File_Size</li>
     </ul> <p>これはオプションのパラメーターです。</p> </td>
   </tr>
   <tr>
    <td>securitySettings</td>
-   <td><p>変換後のドキュメントのセキュリティ設定です。 次の設定を適用できます。</p>
+   <td><p>変換されたドキュメントのセキュリティ設定を表示します。以下の設定を適用できます。</p>
     <ul>
      <li>セキュリティなし</li>
-     <li>パスワードセキュリティ<br /> </li>
-     <li>証明書セキュリティ<br /> </li>
-     <li>Adobeポリシーサーバー</li>
+     <li>パスワードによるセキュリティ<br /> </li>
+     <li>証明書によるセキュリティ<br /> </li>
+     <li>Adobe Policy Server</li>
     </ul> <p>これはオプションのパラメーターです。</p> </td>
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>このファイルには、PDFドキュメントの生成時に適用される設定 (Web ビュー用のPDFドキュメントの最適化など ) と、PDFドキュメントの作成後に適用される設定（初期ビューやセキュリティなど）が含まれます。 これはオプションのパラメーターです。<br /> </td>
+   <td>PDF ドキュメントの生成中に適用される設定（例えば、web 表示のための PDF ドキュメントの最適化）および PDF ドキュメントの作成後に適用される設定（例えば、初期表示やセキュリティ）を含むファイルです。これはオプションのパラメーターです。<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
-   <td>ファイルには、生成されたPDFドキュメントのメタデータ情報が含まれます。 これはオプションのパラメーターです。</td>
+   <td>生成された PDF ドキュメントのメタデータ情報を含むファイルです。これはオプションのパラメーターです。</td>
   </tr>
  </tbody>
 </table>

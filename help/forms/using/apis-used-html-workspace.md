@@ -5,10 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1059'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -385,7 +386,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>タスクのメモをサーバーにアップロードします。</td>
   </tr>
   <tr>
-   <td>uploadRMAToServer （html テンプレートから直接呼び出すこともできます）<br /> </td>
+   <td>uploadRMAToServer（HTML テンプレートから直接呼び出すこともできます）<br /> </td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadAttachment</td>
    <td>サーバーにタスクの添付ファイルをアップロードします。</td>

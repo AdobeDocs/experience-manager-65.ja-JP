@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1854'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +41,7 @@ Correspondence Management ソリューションでは、通信作成ユーザー
 ### 通信作成ユーザーインターフェイスへのボタンの追加 {#add-the-button-to-the-create-correspondence-user-interface}
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
-1. apps フォルダーに、 `defaultApp` （config フォルダー内の）defaultApp フォルダーに似たパス/構造を持つ フォルダーの作成手順は次のとおりです。
+1. config フォルダーにある defaultApp フォルダーに類似したパスまたはフォルダー構造で、`defaultApp` という名前のフォルダーを apps フォルダーに作成します。フォルダーの作成手順は次のとおりです。
 
    1. 次のパスにある **defaultApp** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 

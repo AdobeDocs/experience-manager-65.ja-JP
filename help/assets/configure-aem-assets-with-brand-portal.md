@@ -9,10 +9,11 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2068'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -256,7 +257,7 @@ IMS アカウントを設定するには：
 
 1. IMS アカウントの&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定します。
 
-   Adobe Analytics の **[!UICONTROL 認証サーバー]** フィールドで、次の URL を指定します。 [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/).
+   「**[!UICONTROL 認証サーバー]**」フィールドに、URL を [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) と指定します。
 
    **[!UICONTROL API キー]**&#x200B;にクライアント ID を指定し、[サービスアカウント（JWT）接続の作成](#createnewintegration)時にコピーした&#x200B;**[!UICONTROL クライアントの秘密鍵]**&#x200B;と&#x200B;**[!UICONTROL ペイロード]**（JWT ペイロード）を貼り付けます。
 

@@ -6,16 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '825'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Cloud との統合{#integrating-with-the-adobe-marketing-cloud}
 
-[Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html?lang=ja) には、実用的なリアルタイムのデータやインサイトを提供してオンラインイニシアチブを成功に導く、強力な web 分析と web サイト最適化製品が含まれています。また、オンラインビジネスを最適化するための統合されたオープンプラットフォームを提供します。Cloud は、顧客インサイトの力を集め、解放して、顧客の獲得、コンバージョン、保持の取り組み、およびコンテンツの作成と配信を最適化する統合アプリケーションで構成されます。
+[Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html?lang=ja) には、実用的なリアルタイムのデータやインサイトを提供してオンラインイニシアチブを成功に導く、強力な web 分析と web サイト最適化製品が含まれています。また、オンラインビジネスを最適化するための統合されたオープンプラットフォームを提供します。Adobe Experience Cloud は、顧客のインサイトを収集してその力を解き放ち、顧客獲得、コンバージョン、保持の取り組み、コンテンツの作成および配信を最適化する統合アプリケーションで構成されています。
 
 Adobe Experience Manager（AEM）を使用すると、Adobe Experience Cloud の次の製品とシームレスに統合できます。
 
@@ -37,7 +38,7 @@ Adobe Analytics を使用すると、サイトのデータを分析できます�
 Adobe Analytics との統合によって、次の操作ができるようになります。
 
 * Analytics のユーザートラッキングを有効にする。
-* 実行モード（例えば、オーサー、パブリッシュ）を別のレポートスイートにマッピングする。
+* 実行モード（オーサー、パブリッシュなど）をそれぞれ異なるレポートスイートにマッピングする。
 * クライアントコンテキスト変数をコンバージョン変数またはトラフィックプロパティとして送信する。
 * 定義済みの変数マッピングを使用する。
 * 完全なサイトセクションを一度に設定する。

@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 7d6fd230-e477-4286-9fb3-18a3474e3e48
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2105'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -83,7 +84,7 @@ Assembler サービス API を使用して、複数の PDF ドキュメントを
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
 
 **PDF Assembler クライアントの作成**
 
@@ -115,7 +116,7 @@ map.pdf ファイルと dorictions.pdf ファイルの両方をコレクショ�
 
 Assembler サービスは、`AssemblerResult` オブジェクトから取得できる `java.util.Map` オブジェクトを返し、その中には操作結果が含まれています。返された `java.util.Map` オブジェクトには、結果のドキュメントと例外が含まれます。
 
-次の表に、返されるに含まれるキー値とオブジェクト型の一部をまとめます `java.util.Map` オブジェクト。
+次のテーブルは、返された `java.util.Map` オブジェクトの中にあるキーの値とオブジェクトタイプの一部をまとめたものです。
 
 <table>
  <thead>

@@ -10,10 +10,11 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4422'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -112,7 +113,7 @@ Dynamic Media に付属するすべての標準提供のビューアのプリセ
   </tr>
   <tr>
    <td><strong>パノラマ画像</strong></td>
-   <td><p>パノラマ画像およびパノラマ VR ビューアでは、球形のパノラマ画像をレンダリングして、部屋、物件、場所、風景などの 360 度の視聴体験にユーザーを浸すことができます。</p> <p>アップロードした画像が球パノラマと見なされるには、次のいずれかまたは両方を満たす必要があります。</p>
+   <td><p>パノラマ画像およびパノラマ VR ビューアでは球状のパノラマ画像をレンダリングして、部屋、プロパティ、場所、風景などの 360 度の視聴エクスペリエンスにユーザーを没入させます。</p> <p>アップロードした画像が球パノラマと見なされるには、次のいずれかまたは両方を満たす必要があります。</p>
     <ul>
      <li>アスペクト比が 2:1 です。</li>
      <li>キーワード <code>equirectangular</code>、または <code>spherical</code> と <code>panorama</code>、または <code>spherical </code> と <code>panoramic</code> でタグ付けされている必要があります。<a href="/help/sites-authoring/tags.md">タグの使用</a>を参照してください。</li>
@@ -352,7 +353,7 @@ iOS、Android™ 2.x および Android™ 3.x デバイスでサポートされ�
    <td><p>ユーザインターフェイスを表示または非表示</p> </td>
   </tr>
   <tr>
-   <td><p><strong>ダブル選択</strong></p> </td>
+   <td><p><strong>ダブルクリック</strong></p> </td>
    <td><p>適用なし</p> </td>
    <td><p>ズームインまたはリセット</p> </td>
    <td><p>ズームインまたはリセット</p> </td>
@@ -402,8 +403,8 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
-1. 「 limit 」プロパティで、数を目的の数（例： ）に変更します。 `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. **[!UICONTROL すべて保存]** を選択します。
+1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
+1. 「**[!UICONTROL すべて保存]**」を選択します。
 
 ## ビューアプリセットを作成する {#creating-a-new-viewer-preset}
 

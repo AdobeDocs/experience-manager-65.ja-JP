@@ -1,16 +1,17 @@
 ---
 title: Adobe Experience Manager Sites でのエクスペリエンスフラグメント開発
-description: Adobe Experience Manager用のエクスペリエンスフラグメントをカスタマイズする方法を説明します。
+description: Adobe Experience Manager でのエクスペリエンスフラグメントのカスタマイズ方法について説明します。
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: a9d59e00efe8f0c2cbfca51901c441a2d65b70f2
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1781'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +47,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 >[!NOTE]
 >
->リンクは、常にパブリッシュインスタンスを参照します。これらはサードパーティによって使用されるので、リンクは常にオーサーインスタンスからではなくパブリッシュインスタンスから呼び出されます。
+>リンクは、常にパブリッシュインスタンスを参照します。リンクは、サードパーティによって使用されるので、常にオーサリングインスタンスではなく、パブリッシュインスタンスから呼び出されます。
 >
 >詳しくは、[URL の外部化](/help/sites-developing/externalizer.md)を参照してください。
 
@@ -214,7 +215,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含んだバンドルを作成する必要があります。
 
-このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Adobe Target に書き出し」機能での書き換えにプラグインするために使用されます。
+このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Target に書き出し」機能でのリンク書き換えにプラグインするために使用します。
 
 例えば、`ComponentService` の場合は次のようになります。
 

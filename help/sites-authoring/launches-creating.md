@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: site-features
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1039'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -62,9 +63,9 @@ ht-degree: 92%
 
    >[!NOTE]
    >
-   >ローンチにページや分岐を追加するには、それらがサイト内（共通の最上位ルートの下）に存在する必要があります。
+   >ローンチにページや分岐を追加するには、それらがサイト内（共通のトップレベルルートの下）に存在する必要があります。
    >
-   >サイトの最上位レベルの下に言語ルートが含まれている場合、ローンチのページとブランチは共通言語ルートの下にある必要があります。
+   >サイトのトップレベルの下に言語ルートがある場合、ローンチのページやブランチは共通の言語ルートに下にある必要があります。
    >
    >ソースパスに親ページまたは子ページを含むローンチを作成しようとすると、失敗し、「宛先はページへのパスに既に存在します。」というエラーが返されます。
 
@@ -76,7 +77,7 @@ ht-degree: 92%
 
    「**次へ**」をクリックして次に進みます。
 
-   ![ページを含めるかどうかを指定します](assets/chlimage_1-226.png)
+   ![ページを含めるかどうかを指定](assets/chlimage_1-226.png)
 
 1. ウィザードの&#x200B;**プロパティ**&#x200B;ステップでは、次の情報を指定できます。
 
@@ -89,7 +90,7 @@ ht-degree: 92%
 
    * **ローンチ日**：ローンチコピーがアクティベートされる日時（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
 
-   ![プロパティを指定](assets/chlimage_1-227.png)
+   ![プロパティの指定](assets/chlimage_1-227.png)
 
 1. 「**作成**」を使用してプロセスを完了し、新しいローンチを作成します。ローンチをすぐに開くかどうかを確認するダイアログが表示されます。
 
@@ -100,13 +101,13 @@ ht-degree: 92%
 
 ### 新しいテンプレートでのローンチの作成 {#create-launch-with-new-template}
 
-条件 [ローンチの作成](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 新しいテンプレートをオプションと共に使用するかどうかを選択できます。 **新しいテンプレートを使用してページを置き換える**
+[ローンチを作成](/help/sites-authoring/launches-creating.md#create-launch-with-new-template)する際に、「**新しいテンプレートを使用してページを置き換える**」オプションを使用して、新しいテンプレートを使用するかどうかを選択できます。
 
 >[!CAUTION]
 >
 >このオプションは、**Sites** コンソールからローンチを作成する場合にのみ使用できます。**ローンチ**&#x200B;コンソールからローンチを作成する場合は使用できません。
 
-![新しいテンプレートを使用してページを置き換えます](assets/chlimage_1-228.png)
+![新しいテンプレートを使用してページを置き換える](assets/chlimage_1-228.png)
 
 これを選択すると、次の処理が行われます。
 

@@ -6,10 +6,11 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 11cbf865-c8e2-4833-b0b8-a3cb5e42f5cd
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '361'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +31,7 @@ ht-degree: 98%
 
 セパレータコンポーネントのプロパティを指定するには：
 
-1. 区切り文字コンポーネントを選択し、「 」を選択します。 ![cmppr](assets/cmppr.png). プロパティがサイドバーで開きます。
+1. セパレータコンポーネントを選択して、![cmppr](assets/cmppr.png) を選択します。プロパティがサイドバーで開きます。
 1. 「インライン CSS プロパティ」セクションでタブをクリックし、CSS プロパティを指定します。例えば、「フィールド」タブで「**アイテムの追加**」をクリックします。2 つのフィールドを持った行が追加されます。
 1. 左から最初のフィールドで、適用したい CSS3 プロパティを指定します。例えば、**ボーダー**&#x200B;を指定します。下矢印をクリックしてプロパティを選択することもできます。ドロップダウンリストに含まれているプロパティは一部であり、サポートされている CSS3 プロパティであればこのフィールドで任意に指定することができます。
 1. 隣接するフィールドには、指定された CSS3 プロパティに対して有効な値を指定します。例えば、「**3px solid black**」を指定します。

@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1832'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -80,7 +81,7 @@ Web アプリケーションで使用される XML データファイルが Data
 
 ### Web プロジェクトの作成 {#creating-a-web-project}
 
-Formsサービスを呼び出す Java サーブレットを含む Web アプリケーションを作成する最初の手順は、Web プロジェクトを作成することです。 このドキュメントの基になる Java IDE は Eclipse 3.3 です。Eclipse IDE を使用して、Web プロジェクトを作成し、必要な JAR ファイルをプロジェクトに追加します。最後に、*index.html* という名前の HTML ページと Java サーブレットをプロジェクトに追加します。
+Forms サービスを呼び出す Java サーブレットを含む web アプリケーションを作成する最初の手順は、web プロジェクトを作成することです。このドキュメントの基になる Java IDE は Eclipse 3.3 です。Eclipse IDE を使用して、Web プロジェクトを作成し、必要な JAR ファイルをプロジェクトに追加します。最後に、*index.html* という名前の HTML ページと Java サーブレットをプロジェクトに追加します。
 
 次のリストは、Web プロジェクトに追加する必要がある JAR ファイルを指定します。
 
@@ -141,13 +142,13 @@ Java サーブレット内から Forms サービスを呼び出す Java アプ�
 Forms サービス API を使用してフラグメントに基づいてフォームをレンダリングするには、次のタスクを実行します。
 
 1. adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
-1. HTML フォームから送信されたラジオボタンの値を取得し、米国データとカナダデータのどちらを使用するかを指定します。アメリカ語が送信された場合、 `com.adobe.idp.Document` が *発注 US.xml*. 同様に、カナダの場合は、 `com.adobe.idp.Document` が *Purchase Order Canada.xml* ファイル。
+1. HTML フォームから送信されたラジオボタンの値を取得し、米国データとカナダデータのどちらを使用するかを指定します。米国データが送信された場合、*Purchase Order US.xml* のデータを格納する `com.adobe.idp.Document` を作成します。同様に、カナダの場合は、*Purchase Order Canada.xml* ファイルのデータを格納する `com.adobe.idp.Document` を作成します。
 1. 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）
 1. コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`FormsServiceClient` オブジェクトを作成します。
 1. コンストラクターを使用して、URI 値を格納する `URLSpec` オブジェクトを作成します。
 1. `URLSpec` オブジェクトの `setApplicationWebRoot` メソッドを呼び出して、アプリケーションの web ルートを表す文字列値を渡します。
-1. `URLSpec` オブジェクトの `setContentRootURI` メソッドを呼び出して、コンテンツルート URI 値を指定する文字列値を渡します。フォームデザインとフラグメントがコンテンツルート URI にあることを確認します。 そうでない場合、Forms サービスは例外をスローします。AEM Forms リポジトリを参照するには、`repository://` を指定してください。
-1. `URLSpec` オブジェクトの `setTargetURL` メソッドを呼び出して、フォームデータの送信先となるターゲット URL 値を指定する文字列値を渡します。フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、演算を実行するためのフォームの送信先の URL を指定することもできます。
+1. `URLSpec` オブジェクトの `setContentRootURI` メソッドを呼び出して、コンテンツルート URI 値を指定する文字列値を渡します。フォームデザインとフラグメントがコンテンツルート URI に配置されていることを確認します。そうでない場合、Forms サービスは例外をスローします。AEM Forms リポジトリを参照するには、`repository://` を指定してください。
+1. `URLSpec` オブジェクトの `setTargetURL` メソッドを呼び出して、フォームデータの送信先となるターゲット URL 値を指定する文字列値を渡します。フォームデザインでターゲット URL を定義する場合、空の文字列を渡すことができます。また、計算を実行するためのフォームの送信先の URL を指定することもできます。
 1. `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して、次の値を渡します。
 
    * ファイル名拡張子を含んだフォームデザイン名を指定する文字列値。
@@ -327,7 +328,7 @@ Java サーブレットは、次の Java コードを使用して、HTML ペー�
              }
 ```
 
-次のHTMLコードは、開発環境のセットアップ中に作成された index.html ファイルにあります。 （[Web プロジェクトの作成](/help/forms/developing/rendering-forms.md#creating-a-web-project)を参照）。
+次の HTML コードは、開発環境のセットアップ中に作成された index.html ファイルにあります。（[Web プロジェクトの作成](/help/forms/developing/rendering-forms.md#creating-a-web-project)を参照）。
 
 ```xml
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

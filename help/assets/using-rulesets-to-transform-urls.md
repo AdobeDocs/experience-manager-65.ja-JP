@@ -8,34 +8,35 @@ content-type: reference
 role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: Configuration,Rulesets
-source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 100%
+source-wordcount: '714'
+ht-degree: 79%
 
 ---
 
 # ルールセットを使用した URL の変換 {#using-rulesets-to-transform-urls}
 
-Dynamic Media でルールセットをデプロイして、URL を変換できます。ルールセットはスクリプティング言語（JavaScript など）で記述された命令セットで、XML データを評価して、そのデータが特定の条件を満たす場合に特定のアクションを実行します。各ルールは、1 つ以上の条件と 1 つ以上のアクションで構成されます。ルールは XML データを条件に対して評価し、条件を満たしている場合は適切なアクションを実行します。ルールセットの例としては、次のようなものがあります。
+Dynamic Media でルールセットをデプロイして、URL を変換できます。ルールセットはスクリプティング言語（JavaScript など）で記述された命令セットで、XML データを評価して、そのデータが特定の条件を満たす場合に特定のアクションを実行します。各ルールは、少なくとも 1 つの条件と、少なくとも 1 つのアクションで構成されます。 ルールは、XML データを条件と照らし合わせて評価し、条件が満たされた場合は、適切なアクションを実行します。 ルールセットの例を次に示します。
 
-* MIME タイプのサフィックスの付加。多くのサービスや Web サイトでは、`.jpg` を URL に付加するなど、画像のサフィックスが必要です。
+* MIME タイプのサフィックスの追加。 多くのサービスや Web サイトでは、`.jpg` を URL に付加するなど、画像のサフィックスが必要です。
 * SEO（検索エンジン最適化）のための URL へのフォルダーパスの作成。
 
-   「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
+  「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
 * SEO（検索エンジン最適化）のための URL へのメタデータの付加。
 
-   「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
+  「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
-* ダウンロードを開始するためのコンテンツ処理方法の設定。
-* パーソナライゼーションのための画像サービングテンプレーティング URL の簡略化。例えば、`rgb{XX,YY,ZZ}` を RTF 対応の `\redXX\greenYY\blueZZ` に変換します。
+* ダウンロードをトリガーするコンテンツ廃棄の設定
+* パーソナライズのための画像サービングテンプレート URL を簡素化します。 例えば、`rgb{XX,YY,ZZ}` を RTF 対応の `\redXX\greenYY\blueZZ` に変換します。
 
 * `$`、`{`、`}` などの特定の文字のエンコードと、ImageServer への特定の文字のデコードのリクエスト。例えば、Facebook は特殊文字を含む URL では正しく機能しません。
 
-   [URL からの特殊文字の削除](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html)を参照してください。
+  [URL からの特殊文字の削除](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html)を参照してください。
 
-Dynamic Media のコンテキストで、XML ベースのシステムを使用してアセット情報を管理する Web サイトは、XML ファイルを Dynamic Media にアップロードできます。これらのファイルのいずれかを、Dynamic Media のアセットを処理するための前処理ルールセットファイルとして指定できます。このファイルは、Dynamic Media と統合するシステムのビジネスロジックを満たすよう、標準 URL プロトコル形式を再構成します。XML ファイルをルールセット定義ファイルのパスとして指定します。
+Dynamic Mediaのコンテキストでは、XML ベースのシステムを使用してアセット情報を管理する Web サイトは、XML ファイルをDynamic Mediaにアップロードできます。 これらのファイルの 1 つを、Dynamic Mediaアセットを処理する前処理ルールセットファイルとして指定できます。 このファイルは、Dynamic Mediaと統合するシステムのビジネスロジックを満たすように、標準 URL プロトコル形式を再構成します。 XML ファイルをルールセット定義ファイルのパスとして指定します。
 
 >[!CAUTION]
 >
@@ -57,7 +58,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 **XML ルールセットをデプロイするには：**
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にサインインします。
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja)にサインインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、アドビカスタマーサポートにお問い合わせください。
 
@@ -78,6 +79,6 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 1. セットアップページの右下隅にある「**[!UICONTROL 閉じる]**」を選択します。
 1. Image Server 公開ジョブを実行します。
 
-   ルールセットの条件が現在の Dynamic Media の Image Server へのリクエストに適用されます。
+   ルールセットの条件は、ライブDynamic Media Image Servers へのリクエストに適用されます。
 
    ルールセットファイルを変更した場合、変更したルールセットファイルを再アップロードして再公開すると、変更内容が直ちに適用されます。

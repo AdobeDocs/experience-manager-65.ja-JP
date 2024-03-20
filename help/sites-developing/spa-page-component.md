@@ -7,10 +7,11 @@ topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 88%
+ht-degree: 97%
 
 ---
 
@@ -20,7 +21,7 @@ SPA では、ページコンポーネントは子コンポーネントの HTML �
 
 >[!NOTE]
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
 
 ## はじめに {#introduction}
 
@@ -89,7 +90,7 @@ SPA コンテンツを記述するメタリソースプロパティです。
 >
 >このドキュメントでは、We.Retail ジャーナルアプリケーションをデモの目的でのみ使用します。どのプロジェクト作業にも使用しないでください。
 >
->任意のAEMプロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja):React またはAngularを使用したSPAプロジェクトをサポートし、SPA SDK を使用します。AEMのすべてのSPAプロジェクトは、SPA Starter Kit 用の Maven アーキタイプに基づく必要があります。
+>AEM プロジェクトでは、[AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を使用する必要があります。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を使用します。AEM 上のすべての SPA プロジェクトは Maven アーキタイプ SPA 向け スターターキットを基にしている必要があります。
 
 ## ページエディターオーバーレイの同期 {#page-editor-overlay-synchronization}
 

@@ -2,7 +2,8 @@
 title: JBoss® Linux® 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールに関する問題
 description: AEM Forms JEE 6.5.15.0 サービスパックが JBoss® Linux® 環境に正しくインストールされず、アプリケーションサーバーにパッチの変更が適用されません。XML ディレクトリに「RUP_BOM.xml」ファイルを追加します。
 exl-id: 96ecbe58-a859-4432-a2d8-3d5dc0eaf989
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 100%

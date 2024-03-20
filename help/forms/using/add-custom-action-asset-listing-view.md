@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1333'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +44,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
 
-1. 次の手順を使用して、apps フォルダーに、selection フォルダーの items フォルダーと同様のパス/構造で items という名前のフォルダーを作成します。
+1. 次の手順で、apps フォルダーに、selection フォルダー内の items フォルダーに類似したパス／構造で items という名前のフォルダーを作成します。
 
    1. 次のパスにある **items** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -136,7 +137,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
         </tbody>
        </table>
 
-1. 次の手順に従って、apps フォルダーに、 admin フォルダーの items フォルダーと同様のパス/構造で js という名前のフォルダーを作成します。
+1. 次の手順で、apps フォルダーに、admin フォルダー内の items フォルダーに類似したパス／構造で js という名前のフォルダーを作成します。
 
    1. 次のパスにある **js** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -226,7 +227,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       上記のコードは、この手順で作成されたレターごとのコマンド処理のアクションに使用されます。その他のアセットの処理を行うアクションについては、JavaScript コードを変更してください。
 
-1. 次の手順を使用して、apps フォルダーに、 actionhandlers フォルダーの items フォルダーと同様のパス/構造で items という名前のフォルダーを作成します。
+1. 次の手順で、apps フォルダーに、actionhandlers フォルダー内の items フォルダーに類似したパス／構造で items という名前のフォルダーを作成します。
 
    1. 次のパスにある **items** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 

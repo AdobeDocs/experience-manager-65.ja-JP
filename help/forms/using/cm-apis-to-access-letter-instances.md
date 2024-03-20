@@ -1,15 +1,16 @@
 ---
 title: レターインスタンスにアクセスするための API
-description: API を検出し、それらを使用してAEM Forms環境のレターインスタンスにプログラム的にアクセスします。
+description: API を検出して使用し、AEM Forms 環境のレターインスタンスにプログラムでアクセスします。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '591'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -33,8 +34,8 @@ Correspondence Management は、LetterInstanceService サービスを通じて�
 
 >[!NOTE]
 >
->LetterInstanceService は OSGI サービスであり、そのインスタンスは Java™ クラスの @Reference 
-または sling.getService（LetterInstanceService を使用して取得できます。クラス）を使用して取得できます。
+>LetterInstanceService は OSGI サービスで、Java™で@Referenceを使用してインスタンスを取得できます
+>または JSP の sling.getService(LetterInstanceService.クラス）を使用して取得できます。
 
 ### getAllLetterInstances の使用 {#using-nbsp-getallletterinstances}
 
@@ -135,8 +136,8 @@ Boolean result = letterInstanceService.letterInstanceExists(letterInstanceName )
 
 レターインスタンスのタイプは、送信済みまたはドラフトのいずれかです。両タイプのレターインスタンスを開くと、それぞれ異なる動作を示します。
 
-* 送信済みのレターインスタンスがある場合は、そのレターインスタンスを表すPDFが開きます。 サーバー上に残存する送信済みのレターインスタンスにも dataXML と処理された XDP が含まれ、それらを PDF/A の作成のようなケースの実行やカスタマイズに使用することができます。
-* ドラフトレターインスタンスがある場合、通信を作成用 UI は、ドラフトが作成された時点の正確な前の状態に再読み込みされます。
+* 送信済みのレターインスタンスの場合、レターインスタンスを表す PDF が開きます。サーバー上に残存する送信済みのレターインスタンスにも dataXML と処理された XDP が含まれ、それらを PDF/A の作成のようなケースの実行やカスタマイズに使用できます。
+* ドラフトのレターインスタンスがある場合、通信作成用 UI が正確に前回のドラフトが作成された時点の状態に再読み込みされます。
 
 ### ドラフトのレターインスタンスを開く {#opening-draft-letter-instance-nbsp}
 
@@ -146,7 +147,7 @@ CCR UI は cmLetterInstanceId パラメーターをサポートしており、�
 
 >[!NOTE]
 >
-通信の再読み込み時に cmLetterId または cmLetterName/State/Version を指定する必要はありません。再読み込みされた通信に関するすべての詳細は、送信済みデータに既に含まれています。RandomNo はブラウザーのキャッシュの問題を避けるために使用されます。乱数のタイムスタンプを使用できます。
+>通信の再読み込み時に cmLetterId または cmLetterName/State/Version を指定する必要はありません。再読み込みされた通信に関するすべての詳細は、送信済みデータに既に含まれています。RandomNo はブラウザーのキャッシュの問題を避けるために使用されます。乱数のタイムスタンプを使用できます。
 
 ### 送信済みのレターインスタンスを開く {#opening-submitted-letter-instance}
 

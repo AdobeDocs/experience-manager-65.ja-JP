@@ -1,16 +1,17 @@
 ---
 title: アダプティブフォームのレイアウトの機能
-description: 様々なデバイスでのアダプティブフォームのレイアウトと外観は、レイアウト設定で管理できます。 各種レイアウトとレイアウトの適用方法について説明します。
+description: 各種デバイスごとのアダプティブフォームのレイアウトと外観はレイアウト設定で管理できます。各種レイアウトとレイアウトの適用方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms, Foundation Components
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1193'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -20,11 +21,11 @@ ht-degree: 68%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/layout-capabilities-adaptive-forms.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/layout-capabilities-adaptive-forms.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
-Adobe Experience Manager(AEM) を使用すると、使いやすいアダプティブフォームを作成して、エンドユーザーにダイナミックなエクスペリエンスを提供できます。 フォームレイアウトは、アダプティブフォームでの項目やコンポーネントの表示方法を制御します。
+Adobe Experience Manager（AEM）では、簡単に使用できるアダプティブフォームを作成でき、エンドユーザーに動的なエクスペリエンスを提供します。フォームのレイアウトは、アダプティブフォームでの各項目やコンポーネントの表示方法をコントロールします。
 
 ## 必要な知識 {#prerequisite-knowledge}
 
@@ -36,7 +37,7 @@ Adobe Experience Manager(AEM) を使用すると、使いやすいアダプテ�
 
 ## レイアウトのタイプ {#types-of-layouts}
 
-アダプティブフォームでは、次のタイプのレイアウトが提供されます。
+アダプティブフォームは次のタイプのレイアウトを提供します。
 
 **パネルレイアウト**&#x200B;は、パネル内の項目やコンポーネントをデバイス上で表示する方法をコントロールします。
 
@@ -56,7 +57,7 @@ Adobe Experience Manager(AEM) を使用すると、使いやすいアダプテ�
 
 ## パネルレイアウト {#panel-layout}
 
-フォーム作成者は、ルートパネルを含むアダプティブフォームの各パネルにレイアウトを関連付けることができます。
+フォーム作成者は、ルートパネルを含めたアダプティブフォームの各パネルにレイアウトを関連付けることができます。
 
 パネルレイアウトは `/libs/fd/af/layouts/panel` の場所で利用できます。
 
@@ -78,7 +79,7 @@ Adobe Experience Manager(AEM) を使用すると、使いやすいアダプテ�
 
 レスポンシブレイアウトを使用したフォームの大画面での表示例
 
-### ウィザード — 複数の手順を 1 つずつ表示するフォーム {#wizard-a-multi-step-form-showing-one-step-at-a-time}
+### ウィザード - 複数の手順を 1 つずつ表示するフォーム {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
 このパネルレイアウトを使用すると、フォーム上にガイド付きのナビゲーションが提供できます。例えば、ユーザーを 1 手順ずつガイドしながらフォーム内の必須情報を取得したい場合、このレイアウトを使用します。
 
@@ -120,13 +121,13 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ![タブを上に表示したアダプティブフォームのタブ付きレイアウト](assets/tabbed_layout_top.png)
 
-パネルの上に表示されるタブ
+パネルの上に表示されているタブ
 
 ## モバイルレイアウト {#mobile-layouts}
 
-モバイルレイアウトを使用すると、比較的小さい画面でモバイルデバイス上でわかりやすいナビゲーションが可能になります。 モバイルレイアウトでは、フォームのナビゲーションにタブ付きスタイルまたはウィザードスタイルを使用します。 モバイルレイアウトを適用すると、フォーム全体に対して 1 つのレイアウトが提供されます。
+モバイルレイアウトはモバイルデバイスの比較的小さい画面で、ユーザーが容易にナビゲーションできるようにします。モバイルレイアウトでは、フォームのナビゲーションにタブ付きスタイルまたはウィザードスタイルを使用します。モバイルレイアウトを適用するとフォーム全体を単一のレイアウトで表示します。
 
-このレイアウトは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションを制御します。 ナビゲーションバーで、**進む**&#x200B;と&#x200B;**戻る**&#x200B;のナビゲーションステップはそれぞれ **&lt;** と **>** のアイコンで示されます。
+このレイアウトでは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションをコントロールします。ナビゲーションバーで、**進む**&#x200B;と&#x200B;**戻る**&#x200B;のナビゲーションステップはそれぞれ **&lt;** と **>** のアイコンで示されます。
 
 モバイルレイアウトは`/libs/fd/af/layouts/mobile/`から使用できます。アダプティブフォームでは、デフォルトで次のモバイルレイアウトを使用できます。
 
@@ -138,7 +139,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### フォームのヘッダー部分にパネルタイトルを表示するレイアウト {#layout-with-panel-titles-in-the-form-header}
 
-このレイアウトは、名前が示すように、ナビゲーションメニューおよびナビゲーションバーと共にパネルタイトルを表示します。 このレイアウトでは、ナビゲーション用に「次へ」アイコンと「前へ」アイコンも表示されます。
+レイアウトの名称の通り、このレイアウトはナビゲーションメニューおよびナビゲーションバーと併せてパネルのタイトルを表示します。また、このレイアウトではナビゲーションに「進む」アイコンと「戻る」アイコンを使用します。
 
 ![フォームのヘッダー部分にパネルタイトルを表示するモバイルレイアウト](assets/mobile_layout_with.png)
 
@@ -146,7 +147,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### フォームのヘッダー部分にパネルタイトルを表示しないレイアウト {#layout-without-panel-titles-in-the-form-header}
 
-このレイアウトは、名前が示すように、ナビゲーションメニューとナビゲーションバーのみを表示し、パネルタイトルは表示されません。 このレイアウトでは、ナビゲーション用に「次へ」アイコンと「前へ」アイコンも表示されます。
+レイアウトの名称の通り、このレイアウトはナビゲーションメニューおよびナビゲーションバーのみ表示し、パネルのタイトルは表示しません。また、このレイアウトではナビゲーションに「進む」アイコンと「戻る」アイコンを使用します。
 
 ![フォームのヘッダー部分にパネルタイトルを表示しないモバイルレイアウト](assets/mobile_layout_without.png)
 
@@ -162,11 +163,11 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ツールバーレイアウトは `/libs/fd/af/layouts/toolbar` の場所で使用できます。アダプティブフォームではデフォルトで次のツールバーレイアウトを使用できます。
 
-### ツールバーのデフォルトのレイアウト {#default-layout-for-toolbar}
+### ツールバーのデフォルトレイアウト {#default-layout-for-toolbar}
 
-このレイアウトは、アダプティブフォームにアクションボタンを追加したときにデフォルトのレイアウトとして選択されます。 このレイアウトを選択すると、デスクトップとモバイルの両方のデバイスで同じレイアウトが表示されます。
+アダプティブフォームでアクションボタンを追加したときに、デフォルトレイアウトとしてこのレイアウトが選択されます。このレイアウトを選択すると、デスクトップおよびモバイルの両デバイスで同一のレイアウトを表示します。
 
-また、このレイアウトで設定したアクションボタンを含む複数のツールバーを追加できます。 アクションボタンは、フォームコントロールに関連付けられています。 ツールバーは、パネルの前または後に設定できます。
+また、このレイアウトで設定されたアクションボタンを含むツールバーを複数追加できます。アクションボタンはフォームのコントロールに関連付けられます。ツールバーはパネルの前または後に設定できます。
 
 ![ツールバーのデフォルト表示](assets/toolbar_layout_default.png)
 
@@ -174,11 +175,11 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### ツールバーをモバイルに最適化したレイアウト {#mobile-fixed-layout-for-toolbar}
 
-このレイアウトを選択すると、デスクトップとモバイルデバイスの代替レイアウトが表示されます。
+このレイアウトを選択すると、デスクトップデバイスとモバイルデバイスで異なるレイアウトが表示されます。
 
-デスクトップレイアウトでは、特定のラベルを使用してアクションボタンを追加できます。 このレイアウトで設定できるツールバーは 1 つだけです。 このレイアウトで複数のツールバーが設定されている場合、モバイルデバイスでは重複があり、1 つのツールバーのみが表示されます。 例えば、ツールバーをフォームの下部や上部に配置したり、パネルの前後に配置したりできます。
+デスクトップレイアウトでは、特定のラベルを使用してアクションボタンを追加できます。このレイアウトで設定できるツールバーは 1 つのみです。このレイアウトでツールバーを 1 つ以上設定した場合、モバイルデバイス上でツールバーが重なり、表示されるのはそのうち 1 つのみです。例えば、ツールバーを表示できるのはフォームの下部か上部、またはフォームのパネルの前か後のどれか 1 つに限られます。
 
-モバイルレイアウトの場合、アイコンを使用してアクションボタンを追加できます。
+モバイルレイアウトでは、アイコンを使用してアクションボタンを追加できます。
 
 ![ツールバーをモバイルに最適化したレイアウト](assets/toolbar_layout_mobile_fixed.png)
 

@@ -1,11 +1,12 @@
 ---
 title: コンテンツのページプロパティの編集
-description: Adobe Experience Managerでページに必要なプロパティを定義します。
+description: Adobe Experience Manager でページに必要なプロパティを定義します。
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1855'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -255,9 +256,9 @@ ht-degree: 96%
 
 次の方法でページプロパティを定義できます。
 
-* **サイト**&#x200B;コンソールから：
+* **Sites** コンソールからの場合：
 
-   * [ページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page) （プロパティのサブセット）
+   * [ページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)（プロパティのサブセット）
 
    * 「**プロパティ**」をクリックまたはタップします
 
@@ -352,7 +353,7 @@ ht-degree: 96%
    * 共通の値を持つ共通のプロパティ
 
       * 表示モードで表示されるのは、共通の値を持つプロパティのみです。
-      * フィールドが複数値（タグなど）の場合、値は *すべて* は一般的です。 一部の値のみが共通の場合は、それらの値は編集時に限り表示されます。
+      * フィールドが複数値（タグなど）の場合、*すべて*&#x200B;の値が共通の場合に限り、値が表示されます。一部の値のみが共通の場合は、それらの値は編集時に限り表示されます。
 
   一般的な値を含むプロパティがない場合は、メッセージが表示されます。
 

@@ -3,7 +3,8 @@ title: 開発（汎用）
 description: 統合フレームワークには、API を備えた統合レイヤーが含まれており、e コマース機能用の AEM コンポーネントを作成できます。
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '1856'
 ht-degree: 99%

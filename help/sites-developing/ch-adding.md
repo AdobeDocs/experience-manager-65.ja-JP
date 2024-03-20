@@ -2,10 +2,11 @@
 title: ページへの ContextHub の追加とストアへのアクセス
 description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します。
 exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 95%
+source-wordcount: '902'
+ht-degree: 100%
 
 ---
 
@@ -34,7 +35,7 @@ ContextHub ツールバーをプレビューモードで表示するかどうか
 * [JSONPStore](contexthub-api.md#contexthub-store-persistedjsonpstore)
 * [PersistedJSONPStore](contexthub-api.md#contexthub-store-persistedstore)
 
-すべてのストアタイプは、[`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) クラスの拡張です。ストアタイプの作成について詳しくは、 [カスタムストアの作成](ch-extend.md#creating-custom-store-candidates). ストアタイプのサンプルについては、[ContextHub ストア候補のサンプル](ch-samplestores.md)を参照してください。
+すべてのストアタイプは、[`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) クラスの拡張です。ストアタイプの作成については、[カスタムストアの作成](ch-extend.md#creating-custom-store-candidates)を参照してください。ストアタイプのサンプルについては、[ContextHub ストア候補のサンプル](ch-samplestores.md)を参照してください。
 
 ### 永続モード {#persistence-modes}
 
@@ -139,11 +140,11 @@ ContextHub のセグメントは、`/conf/<site>/settings/wcm/segments` ノー�
 
 >[!WARNING]
 >
->インストールされたセグメントは、プロジェクト用に独自の専用設定を構築するのに役立つリファレンス設定として提供されます。 直接使用しないでください。
+>インストールされたセグメントは、プロジェクト用に独自の専用設定を作成するのに役立つ参照設定として提供されます。直接使用しないでください。
 
 ## ContextHub のデバッグ {#debugging-contexthub}
 
-ログの生成を含め、ContextHub をデバッグする場合のオプションはいくつかあります。 詳しくは、「[ContextHub の設定](ch-configuring.md#logging-debug-messages-for-contexthub)」を参照してください。
+ログの生成を含め、ContextHub をデバッグするためにはいくつかのオプションがあります。詳しくは、[ContextHub の設定](ch-configuring.md#logging-debug-messages-for-contexthub)を参照してください。
 
 ## ContextHub フレームワークの概要の確認 {#see-an-overview-of-the-contexthub-framework}
 

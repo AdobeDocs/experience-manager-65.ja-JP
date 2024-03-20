@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 3e978c3e-12f2-4dc6-801d-8ab4c5df6700
-source-git-commit: 5bdf42d1ce7b2126bfb2670049deec4b6eaedba2
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '656'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -135,7 +136,7 @@ Correspondence Managementhas では 210 種類の特殊文字に初期状態か�
    <td>
     <ol>
      <li>必須プロパティを使用して、「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に子ノードを追加します。 </li>
-     <li>新しく作成した子ノードに「sling:orderBefore (String)」プロパティを追加します。 </li>
+     <li>新しく作成された子ノードに「sling:orderBefore (String)」プロパティを追加します。 </li>
      <li>新たに追加した特殊文字の前に、ノード名を値として追加します。 </li>
      <li>「すべて保存」をクリックします。 </li>
      <li>変更を表示するには、テキストエディター\通信作成 UI を更新します。<br /> </li>

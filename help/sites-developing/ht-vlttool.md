@@ -6,18 +6,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2687'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
 # VLT ツールの使用方法 {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault ツール（VLT）は、Jackrabbit/AEM インスタンスのコンテンツをファイルシステムにマップするためのツールで、[Apache Foundation](https://www.apache.org/) によって開発されました。VLT ツールは、ソース管理システムクライアント (Subversion(SVN) クライアントなど ) と同様の機能を備えており、通常のチェックイン、チェックアウトおよび管理操作、およびプロジェクトコンテンツを柔軟に表現するための設定オプションを提供します。
+Jackrabbit FileVault ツール（VLT）は、Jackrabbit/AEM インスタンスのコンテンツをファイルシステムにマップするためのツールで、[Apache Foundation](https://www.apache.org/) によって開発されました。VLT ツールの機能は、Subversion（SVN）クライアントなどのソース管理システムクライアントに似ており、通常のチェックイン、チェックアウト、管理操作を行うことができるほか、プロジェクトのコンテンツを柔軟に表現する設定オプションも用意されています。
 
-VLT ツールは、コマンドラインから実行します。 このドキュメントでは、ツールの使用方法 ( 使い始める方法、ヘルプを表示する方法、およびすべての [コマンド](#vlt-commands) および利用可能 [options](#vlt-global-options).
+VLT ツールはコマンドラインから実行します。このドキュメントでは、ツールの使い方（導入方法、ヘルプの表示方法、すべての[コマンド](#vlt-commands)と使用可能な[オプション](#vlt-global-options)のリストを含む）について説明します。
 
 ## 概念およびアーキテクチャ {#concepts-and-architecture}
 
@@ -127,11 +128,11 @@ filevault とリポジトリを同期する必要があります。次の手順�
 
    >[!NOTE]
    >
-   >資格情報は、初回のチェックアウト時に 1 回だけ指定する必要があります。 その後、内のホームディレクトリに保存されます。 `.vault/auth.xml`.
+   >資格情報は、最初のチェックアウト時に 1 回だけ指定する必要があります。これで、`.vault/auth.xml` 内のホームディレクトリに情報が格納されます。
 
-### 同期が正しくおこなわれたかどうかのテスト {#testing-whether-the-synchronization-worked}
+### 同期が正常に実行されたかどうかのテスト {#testing-whether-the-synchronization-worked}
 
-リポジトリをチェックアウトし、同期した後は、すべてが正しく機能することを確認するテストが必要です。 これを簡単におこなうには、 **.jsp** ファイルを編集し、変更を確定した後に変更が反映されるかどうかを確認します。
+リポジトリのチェックアウトと同期が完了したら、すべてが適切に機能しているかどうかをテストする必要があります。このテスト行う簡単な方法は、**.jsp** ファイルを編集して、変更のコミット後にその変更が反映されているかどうかを確認することです。
 
 同期をテストするには：
 
@@ -211,7 +212,7 @@ Options:
 
 ## VLT で実行される一般的なタスク {#common-tasks-performed-in-vlt}
 
-次に、VLT で実行される一般的なタスクを示します。 各コマンドの詳細については、個々の [コマンド](#vlt-commands).
+VLT で実行される一般的なタスクの一部を次に示します。各コマンドについて詳しくは、個々の[コマンド](#vlt-commands)を参照してください。
 
 ### サブツリーのチェックアウト {#checking-out-a-subtree}
 
@@ -313,7 +314,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | コマンド | 短縮コマンド | 説明 |
 | `export` |  | コントロールファイルを使用せずに JCR リポジトリ（vault ファイルシステム）からローカルファイルシステムにエクスポートします。 |
 | `import` |  | ローカルファイルシステムを JCR リポジトリ（vault ファイルシステム）にインポートします。 |
-| `checkout` | `co` | Vault ファイルシステムをチェックアウトします。最初の JCR リポジトリをローカルファイルシステムにチェックアウトする場合にこのコマンドを使用します（注意：まず、subversion でリポジトリをチェックアウトします。） |
+| `checkout` | `co` | Vault ファイルシステムをチェックアウトします。最初の JCR リポジトリをローカルファイルシステムにチェックアウトする場合にこのコマンドを使用します（メモ：最初に subversion でリポジトリをチェックアウトします）。 |
 | `analyze` |  | パッケージを分析します。 |
 | `status` | `st` | 作業用コピーファイルとディレクトリのステータスを出力します。 |
 | `update` | `up` | リポジトリから作業用コピーに変更を読み込みます。 |
@@ -329,11 +330,11 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | `diff` | `di` | 2 つのパスの差分を表示します。 |
 | `console` |  | インタラクティブコンソールを実行します。 |
 | `rcp` |  | ノードツリーをリモートリポジトリ間でコピーします。 |
-| `sync` |  | Vault 同期サービスを制御できます。 |
+| `sync` |  | vault 同期サービスを制御できるようにします。 |
 
 ### エクスポート {#export}
 
-&lt;uri> にマウントされた Vault ファイルシステムを &lt;local-path> のローカルファイルシステムに書き出します。オプション &lt;jcr-path> サブツリーのみを書き出すように指定できます。
+&lt;uri> にマウントされた Vault ファイルシステムを &lt;local-path> のローカルファイルシステムに書き出します。サブツリーのみを書き出すには、オプションの &lt;jcr-path> を指定できます。
 
 #### 構文 {#syntax}
 
@@ -440,7 +441,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | ホットフィックスリンク（名前、ID）の printf 形式。例： `[CQ520_HF_%s|%s]` |
+| `-l (--linkFormat) <format>` | ホットフィックスのリンクの printf の形式（名前、ID）。例：`[CQ520_HF_%s|%s]` |
 | `-v (--verbose)` | 詳細 Output |
 | `-q (--quiet)` | 最小限に抑えた出力 |
 | `<localPaths> [<localPaths> ...]` | ローカルパス |
@@ -742,7 +743,7 @@ vlt rcp http://localhost:4502/crx/-/jcr:root/content  https://admin:admin@localh
 
 ### sync {#sync}
 
-Vault 同期サービスを制御できます。 引数を指定しない場合、このコマンドは現在の作業ディレクトリの同期の管理を試行します。vlt チェックアウト内で実行する場合、それぞれのフィルターとホストを使用して同期を設定します。 vlt チェックアウト以外で実行すると、ディレクトリが空の場合にのみ、現在のフォルダが同期用に登録されます。
+vault 同期サービスを制御できるようにします。引数を指定しない場合、このコマンドは現在の作業ディレクトリの同期の管理を試行します。vlt チェックアウト内で実行される場合は、それぞれのフィルターとホストを使用して同期を設定します。vlt チェックアウト外で実行される場合は、現在のフォルダーを同期用に登録します（ディレクトリが空の場合のみ）。
 
 #### 構文 {#syntax-18}
 
@@ -781,7 +782,7 @@ vault 同期サービスは、リポジトリのコンテンツをローカル�
 
 >[!NOTE]
 >
->Vault 同期サービスは開発ツールであり、実稼働システムで使用することは控えるべきです。また、サービスはローカルファイルシステムとのみ同期でき、リモート開発には使用できません。
+>Vault 同期サービスは開発ツールであり、実稼働システムで使用することは控えるべきです。また、このサービスはローカルファイルシステムとのみ同期でき、リモート開発には使用できません。
 
 ### vlt を使用したサービスのインストール {#installing-the-service-using-vlt}
 
@@ -888,7 +889,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
    >[!NOTE]
    >
-   >フィルターを使用して、適切なパスのみをチェックアウトできます。 詳しくは、 [フィルターを適用したチェックアウトの実行](#performing-a-filtered-checkout) 」の節を参照してください。
+   >フィルターを使用して、適切なパスだけをチェックアウトできます。詳しくは、[フィルターが適用されたチェックアウトの実行](#performing-a-filtered-checkout)の節を参照してください。
 
 1. 作業用コピーのルートフォルダーに移動します。
 
@@ -944,4 +945,4 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->VLT 同期機能は、単純なファイルとフォルダのみをサポートしますが、Vault でシリアル化された特殊なファイル（.content.xml、dialog.xml など）を検出し、それらを無視します。 したがって、デフォルトの vlt チェックアウトで Vault 同期を使用できます。
+>VLT 同期機能でサポートされるのは単純なファイルとフォルダーのみです。vault でシリアル化された特殊なファイル（.content.xml、dialog.xml など）は検出されても無視されます。そのため、デフォルトの vlt チェックアウトで vault 同期を使用できます。

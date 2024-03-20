@@ -1,15 +1,16 @@
 ---
-title: リッチテキストエディターを使用したコンテンツのオーサリング
-description: リッチテキストエディターを使用したAdobe Experience Manager 6.5 でのコンテンツのオーサリング
+title: リッチテキストエディターを使用したコンテンツの作成
+description: リッチテキストエディターを使用した Adobe Experience Manager 6.5 でのコンテンツの作成
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '264'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# リッチテキストエディターを使用したコンテンツのオーサリング {#use-rich-text-editor-to-author-content}
+# リッチテキストエディターを使用したコンテンツの作成 {#use-rich-text-editor-to-author-content}
 
 リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。以下を含む、様々なコンポーネントの基礎を形成します。
 
@@ -19,11 +20,11 @@ ht-degree: 81%
 
 ## インプレース編集 {#in-place-editing}
 
-テキストベースのコンポーネントを 1 回クリックして選択すると、 [コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) 他のコンポーネントと同様です。
+シングルクリックでテキストベースのコンポーネントを選択すると、他のコンポーネントと同様に、[コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-もう一度タップまたはクリックするか、最初にコンポーネントをゆっくりダブルクリックして選択すると、独自のツールバーを持つインプレース編集が開きます。 ここで、コンテンツの編集や、基本的な書式変更ができます。
+もう一度タップまたはクリックするか、最初にコンポーネントをゆっくりダブルクリックして選択すると、インプレース編集が開始され、独自のツールバーが表示されます。ここで、コンテンツの編集や、基本的な書式変更ができます。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 

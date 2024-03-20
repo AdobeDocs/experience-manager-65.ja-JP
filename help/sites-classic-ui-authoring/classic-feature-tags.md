@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: 4b6c273c-560e-4330-b886-a02825d5aaa1
-source-git-commit: 27e5c7fea4e90873bf80f976e179b5af0088f550
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '708'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 94%
 
 タグを使用すると、web サイト内のコンテンツを素早く簡単に分類できます。タグをキーワードやラベルとしてページ、アセット、その他のコンテンツに添付して、コンテンツや関連コンテンツを検索できます。
 
-* 詳しくは、 [タグの管理](/help/sites-administering/tags.md) タグの作成と管理、およびタグが適用されるコンテンツについて説明します。
+* タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](/help/sites-administering/tags.md)を参照してください。
 * タグ付けのフレームワークと、カスタムアプリケーションにタグの追加と拡張を行う方法について詳しくは、[開発者向けタグ付け](/help/sites-developing/tags.md)を参照してください。
 
 ## タグを使用する 10 の理由 {#ten-reasons-to-use-tagging}
@@ -51,7 +52,7 @@ ht-degree: 94%
 
 * 個々のタグをアクティベートします。
 
-  ページと同様、新しく作成されたタグは、パブリッシュ環境で使用可能になる前にアクティベートする必要があります。
+  ページと同様、新しく作成されたタグはパブリッシュ環境で使用可能になる前にアクティブ化する必要があります。
 
 >[!NOTE]
 >

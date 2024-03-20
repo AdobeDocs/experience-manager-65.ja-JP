@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/validating_ddx_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Developer
 exl-id: 069e5b10-ab93-4492-a70d-6a0d462105a6
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +27,7 @@ Assembler Service API（web サービス）を使用して DDX ドキュメン�
 
    >[!NOTE]
    >
-   >localhost をFormsサーバーの IP アドレスに置き換えます。
+   >localhost を Forms サーバーの IP アドレスに置き換えます。
 
 1. PDF Assembler クライアントを作成します。
 

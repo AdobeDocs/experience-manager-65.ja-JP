@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: c5a4e6f6-f331-41e9-a0a9-51a30df6e2cd
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1056'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +37,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 * 保存のために 2 回
 * ヘルプのために 1 回
 * 検証エラーのたびに 1 回
-* フォームレンディションの場合は 1、デフォルトのパネル訪問の場合は 1、デフォルトの最初のフィールド訪問の場合は 1
+* フォームレンディションのために 1 回 + デフォルトのパネル訪問のために 1 回 + デフォルトの初回フィールド訪問のために 1 回
 * フォーム放棄のために 2 回
 
 >[!NOTE]

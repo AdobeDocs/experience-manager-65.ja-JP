@@ -7,10 +7,11 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2340'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -196,7 +197,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
    * CRXDE Lite を使用して、ノード `/etc/designs/geometrixx/jcr:content/contentpage/par` の適切なコンポーネントに、値 `<path-to-component>`（`/apps/geometrixx/components/myComponent` など）を追加します。
    * [段落システムへの新しいコンポーネントの追加](#adding-a-new-component-to-the-paragraph-system-design-mode)の手順を実行します。
 
-1. AEM WCM で、Web サイトのページを開き、作成したタイプの段落を挿入して、コンポーネントが正しく動作していることを確認します。
+1. AEM WCM で、web サイトのページを開き、作成した新しいタイプの段落を挿入してコンポーネントが正常に動作することを確認します。
 
 >[!NOTE]
 >
@@ -206,7 +207,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 コンポーネントを開発したら、段落システムに追加します。この操作により、ページの編集時に、作成者がコンポーネントを選択して使用できるようになります。
 
-1. 段落システムを使用するオーサリング環境内のページにアクセスします。例： `<contentPath>/Test.html`.
+1. 段落システムを使用するオーサリング環境でページにアクセスします（例：`<contentPath>/Test.html`）。
 1. 次のどちらかの方法でデザインモードに切り替えます。
 
    * 以下の例のように、URL の最後に `?wcmmode=design` を追加し、再度アクセスします。

@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3478'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +30,7 @@ ht-degree: 74%
 次の 2 つの XML データソースから、 フォームの自動埋め込み行うことができます。
 
 * XDP データソース。XFA 構文に準拠する XML です ( または、Acrobat を使用して作成されたフォームに事前入力する XFDF データ )。
-* フォームのフィールド名に一致する名前と値のペアを含む任意の XML データソース（この節の例では、任意の XML データソースを使用します）。
+* フォームのフィールド名に一致する名前と値のペアを含む任意の XML データソース（このセクションの例では、任意の XML データソースを使用します）。
 
 事前入力するフォームフィールドごとに、XML 要素が存在する必要があります。XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
 
@@ -37,7 +38,7 @@ ht-degree: 74%
 
 例えば、サンプルの確認フォームなどのフォームを事前入力することができます。（[インタラクティブ PDF Forms のレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)の「確認フォーム」参照してください。）
 
-サンプルの確認フォームを事前入力するには、フォーム内の 3 個のフィールドに一致する 3 個の XML 要素を含む XML データソースを作成する必要があります。このフォームには、 `FirstName`、`LastName`、`Amount` の 3 個のフィールドが含まれています。最初の手順では、フォームデザインのフィールドに一致する XML 要素を含む XML データソースを作成します。 次のステップでは、次の XML コードに示すように、XML 要素にデータ値を割り当てます。
+サンプルの確認フォームを事前入力するには、フォーム内の 3 個のフィールドに一致する 3 個の XML 要素を含む XML データソースを作成する必要があります。このフォームには、 `FirstName`、`LastName`、`Amount` の 3 個のフィールドが含まれています。最初のステップでは、フォームデザイン内のフィールドと一致する XML 要素を含む XML データソースを作成します。次のステップでは、次の XML コードに示すように、XML 要素にデータ値を割り当てます。
 
 ```xml
      <Untitled>
@@ -172,9 +173,9 @@ Web ベースのアプリケーション（オンラインストアなど）を�
 * 品目の数量
 * 単価
 
-データサブグループの親 XML 要素の名前は、フォームデザイン内のサブフォームの名前と一致する必要があります。 例えば、前の図では、データサブグループの親 XML 要素の名前が次のようになっています。 `detail`. これは、発注書フォームの基になるフォームデザインのサブフォームの名前に対応します。 データサブグループの親 XML 要素の名前とサブフォームが一致しない場合、サーバー側のフォームは事前入力されません。
+データサブグループの親 XML 要素の名前は、フォームデザイン内のサブフォームの名前と一致する必要があります。例えば、前の図では、データサブグループの親 XML 要素の名前が `detail` になっています。これは、発注書フォームの基になるフォームデザインにあるサブフォームの名前に対応します。データサブグループの親 XML 要素の名前とサブフォームが一致しない場合、サーバー側のフォームは事前入力されません。
 
-各データサブグループには、サブフォーム内のフィールド名に一致する XML 要素が含まれている必要があります。The `detail` フォームデザインのサブフォームには、次のフィールドが含まれます。
+各データサブグループには、サブフォーム内のフィールド名に一致する XML 要素が含まれている必要があります。フォームデザインにある `detail` サブフォームには、次のフィールドが含まれます。
 
 * txtPartNum
 * txtDescription
@@ -208,7 +209,7 @@ Web ベースのアプリケーション（オンラインストアなど）を�
 
 **メモリ内 XML データソースの作成**
 
-`org.w3c.dom` クラスを使用して、メモリ内の XML データソースを作成し、編集可能なレイアウトでフォームを事前入力できます。フォームに準拠する XML データソースにデータを配置します。 編集可能なレイアウトを含むフォームと XML データソースとの関係について詳しくは、[データのサブグループについて](#understanding-data-subgroups)を参照してください。
+`org.w3c.dom` クラスを使用して、メモリ内の XML データソースを作成し、編集可能なレイアウトでフォームを事前入力できます。フォームに準拠する XML データソースにデータを配置します。編集可能なレイアウトを含むフォームと XML データソースとの関係について詳しくは、[データのサブグループについて](#understanding-data-subgroups)を参照してください。
 
  **XML データソースを変換**
 
@@ -216,7 +217,7 @@ Web ベースのアプリケーション（オンラインストアなど）を�
 
 >[!NOTE]
 >
->Formsサービスの WSDL を使用してフォームを事前入力する場合は、 `org.w3c.dom.Document` オブジェクトを `BLOB` オブジェクト。
+>Forms サービスの WSDL を使用してフォームを事前入力する場合は、`org.w3c.dom.Document` オブジェクトを `BLOB` オブジェクトに変換する必要があります。
 
 **事前入力されたフォームをレンダリング**
 
@@ -240,32 +241,32 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-forms-client.jar などのクライアント JAR ファイルを含めます。 これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+   クライアント JAR ファイル（adobe-forms-client.jar など）を Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 1. メモリ内 XML データソースの作成
 
    * `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java の `DocumentBuilderFactory` オブジェクトを作成します。
    * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。
    * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
-   * を呼び出して、XML データソースのルート要素を作成します。 `org.w3c.dom.Document` オブジェクトの `createElement` メソッド。 これにより、ルート要素を表す `Element` オブジェクトが作成されます。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `Document` オブジェクトの `appendChild` メソッドを使用し、ルート要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースのルート要素を作成します。これにより、ルート要素を表す `Element` オブジェクトが作成されます。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`Document` オブジェクトの `appendChild` メソッドを呼び出してルート要素オブジェクトを引数として渡し、ルート要素をドキュメントに追加します。次のコード行に、このアプリケーションロジックを示します。
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
 
-   * を呼び出して、XML データソースのヘッダー要素を作成します。 `Document` オブジェクトの `createElement` メソッド。 要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `root` オブジェクトの `appendChild` メソッドを使用し、ヘッダー要素オブジェクトを引数として渡します。 ヘッダー要素に追加される XML 要素は、フォームの静的な部分に対応します。次のコード行は、このアプリケーションロジックを示しています。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースのヘッダー要素を作成します。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`root` オブジェクトの `appendChild` メソッドを呼び出してヘッダー要素オブジェクトを引数として渡し、ヘッダー要素をルート要素に追加します。ヘッダー要素に追加される XML 要素は、フォームの静的な部分に対応します。次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element header = (Element)document.createElement("header");  root.appendChild(header);`
 
-   * を呼び出して、ヘッダー要素に属する子要素を作成します。 `Document` オブジェクトの `createElement` メソッドを使用して、要素の名前を表す string 値を渡します。 戻り値を `Element` にキャストします。次に、子要素の値を設定するには、 `appendChild` メソッドを使用して、 `Document` オブジェクトの `createTextNode` メソッドを引数として使用します。 子要素の値として表示される文字列値を指定します。 最後に、ヘッダー要素の `appendChild` メソッドを使用し、子要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して要素名を表す文字列値を渡し、ヘッダー要素に属する子要素を作成します。戻り値を `Element` にキャストします。次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。子要素の値として表示される文字列値を指定します。最後に、ヘッダー要素の `appendChild` メソッドを呼び出して子要素をヘッダー要素に追加し、子要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
    * フォームの静的部分に表示される各フィールドに対して最後のサブ手順を繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドがセクション A に表示されます（[データのサブグループについて](#understanding-data-subgroups)を参照）。
-   * を呼び出して、XML データソースの詳細要素を作成します。 `Document` オブジェクトの `createElement` メソッド。 要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `root` オブジェクトの `appendChild` メソッドを使用し、detail 要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。次のコード行は、このアプリケーションロジックを示しています。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
 
-   * 詳細要素に属する子要素を作成するには、 `Document` オブジェクトの `createElement` メソッドを使用して、要素の名前を表す string 値を渡します。 戻り値を `Element` にキャストします。次に、子要素の値を設定するには、 `appendChild` メソッドを使用して、 `Document` オブジェクトの `createTextNode` メソッドを引数として使用します。 子要素の値として表示される文字列値を指定します。 最後に、詳細要素の `appendChild` メソッドを使用し、子要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `Document` オブジェクトの `createElement` メソッドを使用して詳細要素に属する子要素を作成し、要素の名前を表す文字列値を渡します。戻り値を `Element` にキャストします。次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。子要素の値として表示される文字列値を指定します。最後に、詳細要素の `appendChild` メソッドを呼び出して子要素を詳細要素に追加し、子要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element txtPartNum = (Element)document.createElement("txtPartNum");  txtPartNum.appendChild(document.createTextNode("00010-100"));  detail.appendChild(txtPartNum);`
 
@@ -279,7 +280,7 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
    * コンストラクターを使用して、`ByteArrayOutputStream` オブジェクトを作成します。
    * コンストラクターを使用して手順 1 で作成した `org.w3c.dom.Document` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
    * コンストラクターを使用して `ByteArrayOutputStream` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
-   * Java の設定 `ByteArrayOutputStream` を呼び出すことによって、オブジェクトを `javax.xml.transform.Transformer` オブジェクトの `transform` メソッドおよび `javax.xml.transform.dom.DOMSource` そして `javax.xml.transform.stream.StreamResult` オブジェクト。
+   * Java `ByteArrayOutputStream` オブジェクトを設定するには、`javax.xml.transform.Transformer` オブジェクトの `transform` メソッドを呼び出して、`javax.xml.transform.dom.DOMSource` オブジェクト及び `javax.xml.transform.stream.StreamResult` オブジェクトを渡します。
    * バイト配列を作成して、`ByteArrayOutputStream` オブジェクトのサイズをバイト配列に割り当てます。
    * `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出して、バイト配列に入力します。
    * コンストラクターを使用してバイト配列を渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
@@ -297,10 +298,10 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
    `renderPDFForm` メソッドは、 `FormsResult` クライアントの web ブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクトを返します。
 
    * フォームデータストリームをクライアントの web ブラウザーに送信するために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * の作成 `com.adobe.idp.Document` を呼び出すことによって、オブジェクトを `FormsResult` オブジェクトの `getOutputContent` メソッド。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことにより、`com.adobe.idp.Document` オブジェクトを作成します。
    * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`java.io.InputStream` オブジェクトを作成します。
-   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
-   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
+   * `InputStream` オブジェクトの `read` メソッドを呼び出して、引数としてバイト配列を渡すことで、バイト配列を作成し、フォームデータストリームを入力します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
@@ -324,24 +325,24 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
    * `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java の `DocumentBuilderFactory` オブジェクトを作成します。
    * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。
    * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
-   * を呼び出して、XML データソースのルート要素を作成します。 `org.w3c.dom.Document` オブジェクトの `createElement` メソッド。 これにより、ルート要素を表す `Element` オブジェクトが作成されます。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `Document` オブジェクトの `appendChild` メソッドを使用し、ルート要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースのルート要素を作成します。これにより、ルート要素を表す `Element` オブジェクトが作成されます。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`Document` オブジェクトの `appendChild` メソッドを呼び出してルート要素をドキュメントに追加し、ルート要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
 
-   * を呼び出して、XML データソースのヘッダー要素を作成します。 `Document` オブジェクトの `createElement` メソッド。 要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `root` オブジェクトの `appendChild` メソッドを使用し、ヘッダー要素オブジェクトを引数として渡します。 ヘッダー要素に追加される XML 要素は、フォームの静的な部分に対応します。次のコード行は、このアプリケーションロジックを示しています。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースのヘッダー要素を作成します。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`root` オブジェクトの `appendChild` メソッドを呼び出してヘッダー要素オブジェクトを引数として渡し、ヘッダー要素をルート要素に追加します。ヘッダー要素に追加される XML 要素は、フォームの静的な部分に対応します。次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element header = (Element)document.createElement("header");  root.appendChild(header);`
 
-   * を呼び出して、ヘッダー要素に属する子要素を作成します。 `Document` オブジェクトの `createElement` メソッドを使用して、要素の名前を表す string 値を渡します。 戻り値を `Element` にキャストします。次に、子要素の値を設定するには、 `appendChild` メソッドを使用して、 `Document` オブジェクトの `createTextNode` メソッドを引数として使用します。 子要素の値として表示される文字列値を指定します。 最後に、ヘッダー要素の `appendChild` メソッドを使用し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して要素名を表す文字列値を渡し、ヘッダー要素に属する子要素を作成します。戻り値を `Element` にキャストします。次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。子要素の値として表示される文字列値を指定します。最後に、ヘッダー要素の `appendChild` メソッドを呼び出して子要素をヘッダー要素に追加し、子要素オブジェクトを引数として渡します。次のコード行に、このアプリケーションロジックを示します。
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
    * フォームの静的部分に表示される各フィールドに対して最後のサブステップを繰り返し、残りのすべての要素をヘッダー要素に追加します。（XML データソース図では、これらのフィールドが A のセクションに表示されます。詳しくは、[データのサブグループについて](#understanding-data-subgroups)を参照してください。）
-   * を呼び出して、XML データソースの詳細要素を作成します。 `Document` オブジェクトの `createElement` メソッド。 要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、 `root` オブジェクトの `appendChild` メソッドを使用し、detail 要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。次のコード行に、このアプリケーションロジックを示します。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。要素名を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。次のコード行に、このアプリケーションロジックを示します。
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
 
-   * 詳細要素に属する子要素を作成するには、 `Document` オブジェクトの `createElement` メソッドを使用して、要素の名前を表す string 値を渡します。 戻り値を `Element` にキャストします。次に、子要素の値を設定するには、 `appendChild` メソッドを使用して、 `Document` オブジェクトの `createTextNode` メソッドを引数として使用します。 子要素の値として表示される文字列値を指定します。 最後に、詳細要素の `appendChild` メソッドを使用し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document` オブジェクトの `createElement` メソッドを使用して詳細要素に属する子要素を作成し、要素の名前を表す文字列値を渡します。戻り値を `Element` にキャストします。次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。子要素の値として表示される文字列値を指定します。最後に、詳細要素の `appendChild` メソッドを呼び出して子要素を詳細要素に追加し、子要素オブジェクトを引数として渡します。次のコード行に、このアプリケーションロジックを示します。
 
      ` Element txtPartNum = (Element)document.createElement("txtPartNum");  txtPartNum.appendChild(document.createTextNode("00010-100"));  detail.appendChild(txtPartNum);`
 
@@ -355,7 +356,7 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
    * コンストラクターを使用して、`ByteArrayOutputStream` オブジェクトを作成します。
    * コンストラクターを使用して手順 1 で作成した `org.w3c.dom.Document` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
    * コンストラクターを使用して `ByteArrayOutputStream` オブジェクトを渡すことによって、`javax.xml.transform.dom.DOMSource` オブジェクトを作成します。
-   * Java の設定 `ByteArrayOutputStream` を呼び出すことによって、オブジェクトを `javax.xml.transform.Transformer` オブジェクトの `transform` メソッドおよび `javax.xml.transform.dom.DOMSource` そして `javax.xml.transform.stream.StreamResult` オブジェクト。
+   * Java `ByteArrayOutputStream` オブジェクトを設定するには、`javax.xml.transform.Transformer` オブジェクトの `transform` メソッドを呼び出して、`javax.xml.transform.dom.DOMSource` オブジェクト及び `javax.xml.transform.stream.StreamResult` オブジェクトを渡します。
    * バイト配列を作成して、`ByteArrayOutputStream` オブジェクトのサイズをバイト配列に割り当てます。
    * `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出して、バイト配列に入力します。
    * コンストラクターを使用して `BLOB` オブジェクトを作成し、`setBinaryData` メソッドを呼び出して、バイト配列を渡します。
@@ -376,13 +377,13 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
 
    `renderPDFForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
-   * の作成 `FormResult` オブジェクトを作成するには、 `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバー。
-   * の作成 `BLOB` を呼び出してフォームデータを含むオブジェクト `FormsResult` オブジェクトの `getOutputContent` メソッド。
+   *  `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して `FormResult` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
    * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
-   * を設定します。 `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `BLOB` オブジェクト。
-   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
-   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッド。 このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
-   * を呼び出す `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `setContentType` メソッドを呼び出してコンテンツタイプを設定し、`BLOB` オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、クライアントの web ブラウザーにフォームデータストリームを書き込むために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出し、バイト配列を作成して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
    >[!NOTE]
    >

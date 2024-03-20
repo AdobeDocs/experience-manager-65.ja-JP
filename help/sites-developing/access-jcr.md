@@ -1,37 +1,38 @@
 ---
 title: AEM JCR へのプログラムからのアクセス方法
-description: Adobe Experience Cloudの一部であるAEMリポジトリ内のノードおよびプロパティをプログラムで変更できます
+description: Adobe Experience Cloud の構成要素の AEM リポジトリ内にあるノードおよびプロパティをプログラムで変更できます
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
-source-git-commit: ff9d054d0b08f5f98f5edb63975a0dbc8370d42f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 33%
+ht-degree: 67%
 
 ---
 
 # AEM JCR へのプログラムからのアクセス方法{#how-to-programmatically-access-the-aem-jcr}
 
-Adobe Experience Cloudの一部であるAdobe CQリポジトリ内のノードおよびプロパティをプログラムで変更できます。 CQ リポジトリにアクセスするには、Java™ Content Repository (JCR) API を使用します。 Java™ JCR API を使用して、Adobe CQリポジトリ内のコンテンツを作成、置換、更新および削除 (CRUD) できます。 Java™ JCR API について詳しくは、 [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+Adobe Experience の構成要素の Adobe CQ リポジトリ内にあるノードおよびプロパティをプログラムで変更できます。CQ リポジトリにアクセスするには、Java™ Content Repository（JCR）API を使用します。Java™ JCR API を使用すれば、Adobe CQ リポジトリ内にあるコンテンツに対して、作成、置換、更新および削除（CRUD）ができます。Java™ JCR API について詳しくは、[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html) を参照してください。
 
 >[!NOTE]
 >
->この開発記事では、外部 Java™アプリケーションからAdobe CQ JCR を変更します。 これに対し、JCR API を使用して、OSGi バンドル内から JCR を変更できます。 詳しくは、 [Java™コンテンツリポジトリへの CQ データの保持](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja).
+>この開発向けの記事では、外部 Java™ アプリケーションから Adobe CQ JCR を変更します。これに対して、OSGi バンドル内から JCR API を使用して JCR を変更することもできます。詳しくは、[Java™ コンテンツリポジトリへの CQ データの永続化](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
-JCR API を使用するには、 `jackrabbit-standalone-2.4.0.jar` ファイルを Java™アプリケーションのクラスパスに保存します。 この JAR ファイルは、Java™ JCR API Web ページ ( [https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html).
+>JCR API を使用するには、Java™ アプリケーションのクラスパスに `jackrabbit-standalone-2.4.0.jar` ファイルを追加します。この JAR ファイルは Java™ JCR API web ページ（[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html)）から取得できます。
 
 >[!NOTE]
 >
-JCR Query API を使用してAdobe CQ JCR に対してクエリを実行する方法については、 [JCR API を使用したAdobe Experience Managerデータのクエリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=ja).
+>JCR Query API を使用して Adobe CQ JCR へのクエリーを実行する方法については、[JCR API を使用した Adobe Experience Manager データのクエリー](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=ja)を参照してください。
 
 ## リポジトリインスタンスの作成 {#create-a-repository-instance}
 
-リポジトリに接続して接続を確立するには様々な方法がありますが、この開発向け記事では、`org.apache.jackrabbit.commons.JcrUtils` クラスに属する静的メソッドを使用します。このメソッドの名前は `getRepository` です。このメソッドは、Adobe CQ サーバーの URL を表す文字列パラメーターを受け取ります。例：`http://localhost:4503/crx/server`。
+リポジトリに接続して接続を確立するには様々な方法がありますが、この開発向け記事では、`org.apache.jackrabbit.commons.JcrUtils` クラスに属する静的メソッドを使用します。このメソッドの名前は `getRepository` です。このメソッドは、Adobe CQ サーバーの URL を表す文字列パラメーターを受け取ります。例えば、`http://localhost:4503/crx/server` のように指定します。
 
 The `getRepository` メソッドは、 `Repository` インスタンスを作成します。
 
@@ -46,7 +47,7 @@ The `Repository` インスタンスは CRX リポジトリを表します。 次
 
 次の項目を作成します。 `SimpleCredentials` オブジェクトを作成するには、コンストラクターを使用し、次の文字列値を渡します。
 
-* ユーザー名。
+* ユーザー名
 * 対応するパスワード
 
 2 番目のパラメーターを渡す場合は、String オブジェクトの `toCharArray` メソッド。 次のコードは、 `login` を返すメソッド `javax.jcr.Sessioninstance`.
@@ -58,7 +59,7 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## ノードインスタンスの作成 {#create-a-node-instance}
 
-の使用 `Session` インスタンスを作成して `javax.jcr.Node` インスタンス。 A `Node` インスタンスを使用すると、ノード操作を実行できます。 例えば、ノードを作成できます。 ルートノードを表すノードを作成するには、 `Session` インスタンスの `getRootNode` メソッドを使用します。
+の使用 `Session` インスタンスを作成して `javax.jcr.Node` インスタンス。 A `Node` インスタンスを使用すると、ノード操作を実行できます。 例えば、ノードを作成できます。ルートノードを表すノードを作成するには、 `Session` インスタンスの `getRootNode` メソッドを使用します。
 
 ```java
 //Create a Node

@@ -2,10 +2,11 @@
 title: プロジェクト
 description: プロジェクトを使用すると、リソースを 1 つのエンティティにグループ化でき、共通の共有環境でプロジェクトを簡単に管理できます。
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1360'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -34,7 +35,7 @@ ht-degree: 97%
 
 ![プロジェクトコンソール](assets/screen-shot_2019-03-05at125110.png)
 
-プロジェクトコンソールは、AEMの他のコンソールと似ており、個々のプロジェクトに対していくつかのアクションを実行し、プロジェクトの表示を調整できます。
+プロジェクトコンソールは、AEM の他のコンソールと同様に、個々のプロジェクトに対して様々なアクションを実行したり、プロジェクトの表示を調整したりできます。
 
 ### モードを切り替え {#modes}
 

@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '846'
 ht-degree: 100%
@@ -22,7 +23,7 @@ Correspondence Management には以下の設定プロパティがあります。
 <table>
  <tbody>
   <tr>
-   <th><p><strong>プロパティ</strong></p> </th>
+   <th><p><strong>Property</strong></p> </th>
    <th><p><strong>説明</strong></p> </th>
    <th><p><strong>デフォルト</strong></p> </th>
    <th><p><strong>指定できる値</strong></p> </th>

@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Asset Management
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2088'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 95%
 このドキュメントでは次の内容について説明します。
 
 * カスタマイズされたアセットエディターページを作成する理由
-* アセットエディターページ（メタデータの表示と編集、およびアセットに対するアクションの実行を可能にする WCM ページ）の作成とカスタマイズの方法です。
+* アセットエディターページ（メタデータの表示と編集、およびアセットに対するアクションの実行に使用する WCM ページ）の作成とカスタマイズの方法
 * 複数のアセットを同時に編集する方法
 
 <!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
@@ -205,7 +206,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 アセットエディターページを作成するには：
 
 1. 「**[!UICONTROL Web サイト]**」タブで、アセットエディターページを作成する場所に移動し、「**新規**」をクリックします。
-1. 選択 **Geometrixxアセットエディター** をクリックします。 **作成**. 新しいページが作成され、ページが **Web サイト** タブをクリックします。
+1. 「**Geometrixx アセットエディター**」を選択し、「**作成**」をクリックします。新しいページが作成され、ページが「**Web サイト**」タブに表示されます。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
@@ -213,7 +214,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![assetshare5](assets/assetshare5.png)
 
-アセットエディターページをカスタマイズするには、サイドキックの要素を使用します。 次の場所からアクセスするアセットエディターページ： **Geometrixxプレスセンター** は、このテンプレートに基づくページのカスタマイズバージョンです。
+アセットエディターページをカスタマイズするには、サイドキックの要素を使用します。**Geometrixx Press Center** からアクセスするアセットエディターページは、このテンプレートに基づいたページのカスタマイズバージョンです。
 
 ![assetshare6](assets/assetshare6.png)
 
@@ -423,7 +424,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
    「**OK**」をクリックして、変更内容をフォームに書き込みます。**Tags** フィールドの横にあるチェックボックスが自動的にオンになります。
 
-1. 「説明」フィールドを編集します。 例えば、次のように設定します。
+1. 「Description」フィールドを編集します。例えば、以下のように設定します。
 
    `This is a common description`
 

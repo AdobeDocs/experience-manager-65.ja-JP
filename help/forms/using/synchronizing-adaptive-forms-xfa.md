@@ -1,15 +1,16 @@
 ---
 title: アダプティブフォームと XFA フォームテンプレートとの同期
-description: フォームを XFA/XDP ファイルと同期する方法について説明します。 XFA/XDP ファイル内の対応するフィールドに対する変更と同期されたフォームのフィールドを再利用します。
+description: フォームと XFA／XDP ファイルとの同期方法について説明します。XFA／XDP ファイル内の対応するフィールドに加えられた変更と同期されたフォームのフィールドを再利用します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1228'
-ht-degree: 91%
+ht-degree: 94%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 91%
 
 ## はじめに {#introduction}
 
-XFA フォームテンプレート（`*.XDP`ファイル）を基にアダプティブフォームを作成することができます。この方法では既存の XFA フォームが再利用でき、投資効率が得られます。XFA フォームテンプレートを使用したアダプティブフォームの作成方法については、「[テンプレートに基づくアダプティブフォームの作成](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
+XFA フォームテンプレート（`*.XDP`ファイル）を基にアダプティブフォームを作成できます。この方法では既存の XFA フォームが再利用でき、投資効率が得られます。XFA フォームテンプレートを使用したアダプティブフォームの作成方法については、「[テンプレートに基づくアダプティブフォームの作成](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
 
 アダプティブフォームで XDP ファイルのフィールドを再利用できます。このフィールドは、バインドされたフィールドと呼ばれます。バインドされたフィールドのプロパティ（スクリプト、ラベル、表示形式など）は、XDP ファイルからコピーされます。これらのプロパティには、値をオーバーライドできるものもあります。
 

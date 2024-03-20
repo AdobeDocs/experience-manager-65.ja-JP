@@ -2,7 +2,8 @@
 title: AEM 6.5 管理ユーザーガイド
 description: AEM プロジェクトの管理方法を理解し、主要リソースと AEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 02dd950111a45908f0a65deb9e5c28b4b119269f
+solution: Experience Manager, Experience Manager 6.5
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 72%
@@ -17,7 +18,7 @@ ht-degree: 72%
 
 このガイドの主な記事は次のとおりです。
 
-* [プロジェクトの管理 ベストプラクティスチェックリスト](/help/managing/best-practices.md)
+* [プロジェクトの管理 - ベストプラクティスチェックリスト](/help/managing/best-practices.md)
 * [ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)
 * [SEO と URL 管理のベストプラクティス](/help/managing/seo-and-url-management.md)
 * [AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)

@@ -1,15 +1,16 @@
 ---
 title: ランディングページと Adobe Analytics の統合
-description: ランディングページをAdobe Analyticsと統合する方法を説明します。
+description: ランディングページと Adobe Analytics を統合する方法について説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 56%
 AEM は、次に示すコールトゥアクション（CTA）コンポーネントを使用することにより、ランディングページのソリューションを [Adobe Analytics](https://www.omniture.com/jp/products/analytics/sitecatalyst) と統合しました。
 
 1. クリックスルーコンポーネント
-1. グラフィカルリンクコンポーネント
+1. グラフィックリンクコンポーネント
 
 これらのコンポーネントによって、Adobe Analytics の変数（トラフィック変数、コンバージョン変数）を使用してマッピングできる特定の属性、および Adobe Analytics に情報を送信するための成功イベントが公開されます。
 
@@ -32,12 +33,12 @@ AEM で、サイドキックに表示される&#x200B;**コールトゥアクシ
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
-### ランディングページコンポーネントのAdobe Analyticsへのマッピング {#mapping-landing-page-components-to-adobe-analytics}
+### Adobe Analytics へのランディングページコンポーネントのマッピング {#mapping-landing-page-components-to-adobe-analytics}
 
-ランディングページコンポーネントをAdobe Analyticsにマッピングするには：
+ランディングページコンポーネントを Adobe Analytics にマッピングするには：
 
-1. Adobe Analytics設定を作成してフレームワークを作成したら、ドロップダウンメニューから適切なレポートスイートを選択します。 その結果、Adobe Analytics変数が取得され、コンテンツファインダーに表示されます。
-1. 必要に応じて、Call to Action(CTA) コンポーネントをサイドキックからページの中央にあるマッピング領域にドラッグ&amp;ドロップします。
+1. Adobe Analytics 設定を作成し、フレームワークを作成したら、ドロップダウンメニューから適切なレポートスイートを選択します。この結果、Adobe Analytics の変数が取得され、コンテンツファインダーに表示されます。
+1. コールトゥアクション（CTA）コンポーネントを、サイドキックからページ中央のマッピング領域の適切な場所にドラッグ＆ドロップします。
 
 <table>
  <tbody>
@@ -85,7 +86,7 @@ AEM で、サイドキックに表示される&#x200B;**コールトゥアクシ
 </table>
 
 1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。これで、フレームワークを使用できるようになります。
-1. これで、ランディングページを作成するか、既存の CTA コンポーネントを含む既存のランディングページを開いて、 **Cloud Service** タブ **ページのプロパティ** サイドキック（タッチ操作向け UI）で、「 」を選択します。 **プロパティを開く** をクリックします。 **Cloud Service**) をクリックし、ランディングページで使用するフレームワークを設定します。 ドロップダウンリストからフレームワークを選択します。
+1. ランディングページを作成するか、既存の CTA コンポーネントを含む既存のランディングページを開き、サイドキックで「**ページプロパティ**」の「**Cloud Services**」タブをクリックし（タッチ操作向け UI では、「**プロパティを開く**」を選択して「**Cloud Services**」をクリックし）、ランディングページで使用するフレームワークを設定します。ドロップダウンリストからフレームワークを選択します。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 

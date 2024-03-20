@@ -2,7 +2,9 @@
 title: Edge 配信サービスの使用
 description: Edge 配信サービスの使用
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Assets
+feature: Edge Delivery Services
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 92%

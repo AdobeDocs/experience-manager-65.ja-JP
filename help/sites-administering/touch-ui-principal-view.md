@@ -7,9 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
-workflow-type: ht
-source-wordcount: '764'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '759'
 ht-degree: 100%
 
 ---

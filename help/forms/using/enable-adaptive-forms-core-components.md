@@ -8,10 +8,11 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 80%
+ht-degree: 88%
 
 ---
 
@@ -26,9 +27,9 @@ ht-degree: 80%
 
 アダプティブフォームコアコンポーネントを有効にすると、AEM 6.5 Forms 環境から、[コアコンポーネントベースのアダプティブフォーム](create-an-adaptive-form-core-components.md)および[ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp)の作成、公開、配信を開始できます。
 
-AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有効にするには、 [AEM Archetype 41 以降](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) すべてのオーサーインスタンスとパブリッシュインスタンス上の（フォームオプションが有効な）プロジェクトをベースにする。
+AEM 6.5 Forms 環境でアダプティブフォームコアコンポーネントを有効にするには、すべてのオーサーインスタンスとパブリッシュインスタンスで、[AEM アーキタイプ 41 以降](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)をベースにしたプロジェクトを（フォームオプションを有効にして）設定およびデプロイします。
 
-この記事では、AEM 6.5 Forms環境上のAEM Archetype 41 以降ベースのプロジェクトを設定してデプロイし、アダプティブFormsコアコンポーネントを有効にする詳細な手順を説明します。 以下のリストを参照して、 **AEM 6.5** Formsコアコンポーネントを有効にする互換性のあるバージョン：
+この記事では、AEM 6.5 Forms 環境上で AEM アーキタイプ 41 以降ベースのプロジェクトを設定してデプロイし、アダプティブフォームコアコンポーネントを有効にする詳細な手順を説明します。Forms コアコンポーネントを有効にするための **AEM 6.5** と互換性があるバージョンについては、以下のリストを参照してください。
 
 ## 前提条件 {#prerequisites}
 

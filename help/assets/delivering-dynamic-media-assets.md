@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media アセットの配信
-description: ビデオや画像などのDynamic Mediaアセットを Web ページに配信する方法を説明します。
+title: Dynamic Media アセットを配信
+description: ビデオ、画像などの Dynamic Media アセットを web ページに配信する方法について説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -9,10 +9,11 @@ docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '323'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 

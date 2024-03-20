@@ -3,7 +3,8 @@ title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: b9a5b6f8f990a9dd0fcf77ea3972ad0c6f401831
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 99%

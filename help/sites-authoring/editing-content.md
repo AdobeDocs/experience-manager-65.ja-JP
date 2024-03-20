@@ -7,10 +7,11 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3015'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -102,7 +103,7 @@ ht-degree: 98%
 
 通知には、ページに対して実行されているワークフローが一覧表示されます。ユーザーが現在のワークフローステップに関係している場合は、[ワークフローのステータスに影響する](/help/sites-authoring/workflows-participating.md)オプションや、ワークフローの詳細を取得するオプションを使用できます。例えば、次のようなものがあります。
 
-* **完了**  — を開きます。 **作業項目を完了** ダイアログボックス
+* **完了** - **作業項目を完了**&#x200B;ダイアログボックスが開きます
 
 * **委任** - **作業項目を完了**&#x200B;ダイアログボックスが開きます
 
@@ -368,7 +369,7 @@ ht-degree: 98%
 
 段落コンポーネントを移動するには：
 
-1. 移動する段落を、選択して保持するか、クリックして保持するかのどちらかで選択します。
+1. 選択＆ホールドまたはクリック＆ホールドによって移動する段落を選択します。
 1. 段落を新しい場所にドラッグします。段落を配置できる場所が示されます。目的の場所にドロップします。
 
    ![段落コンポーネントの移動](assets/screen_shot_2018-03-22at121821.png)
@@ -387,7 +388,7 @@ ht-degree: 98%
 
    ![フォームの編集モード](assets/screen_shot_2018-03-22at133756.png)
 
-   次をクリック： **レイアウト** アクションを使用して、コンポーネントのレイアウトを調整できます。
+   **レイアウト**&#x200B;アクションをクリックすると、コンポーネントのレイアウトを調整できます。
 
    ![コンポーネントツールバー](do-not-localize/chlimage_1-21.png)
 

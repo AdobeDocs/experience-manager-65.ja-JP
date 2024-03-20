@@ -1,46 +1,47 @@
 ---
 title: 開発ツール
-description: JCR、Apache Sling、またはAdobe Experience Managerアプリケーションを開発するために、いくつかのツールセットを使用できます。
+description: JCR、Apache Sling または Adobe Experience Manager のアプリケーションを開発するために、いくつかのツールセットが用意されています。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
 # 開発ツール{#development-tools}
 
-JCR、Apache Sling、またはAdobe Experience Manager(AEM) アプリケーションを開発するには、次のツールセットを使用できます。
+JCR、Apache Sling または Adobe Experience Manager（AEM）のアプリケーションを開発するために、以下のツールセットが用意されています。
 
-* [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) と WebDAV で構成されたツールセット。CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Liteを使用すると、SVN とのログ記録と統合時に、ファイル（.jspや.java など）、フォルダ、テンプレート、コンポーネント、ダイアログ、ノード、プロパティ、バンドルを作成および編集できます。
+* [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) と WebDAV で構成されたツールセット。CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティ、バンドルを作成および編集することができ、さらに SVN によるロギングや統合が可能です。
 
-  CRX/AEMサーバーに直接アクセスできない場合、標準コンポーネントと Java™バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完、構文のハイライトが必要ない場合に、CRXDE Liteをお勧めします。
+  CRXDE Lite は、CRX／AEM サーバーに直接アクセスできない場合、すぐに使用可能なコンポーネントと Java™ バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完および構文のハイライト表示を必要としない場合にお勧めします。
 
-* 次のセットで構成される 1 つのセット：
-   * 統合開発環境。 例： [Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md).
-   * ビルドツール。 例： [Apache Maven](/help/sites-developing/ht-projects-maven.md).
-   * FileVault は、リポジトリをファイルシステム（バージョン管理システム）にマッピングするためにAdobeが開発しました。 例えば、Subversion と入力します。
-   * バグトラッカーシステム。 例えば、Jira。
-   * 中央依存管理システム。 例えば、Apache Archiva などです。
-   * ビルドオートメーションシステム。 例えば、Apache Continuum などです。
+* 以下で構成されたツールセット：
+   * 統合開発環境。例：[Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md)。
+   * ビルドツール。例：[Apache Maven](/help/sites-developing/ht-projects-maven.md)。
+   * リポジトリをファイルシステム、バージョン管理システムにマッピングするために開発された FileVault。例：Subversion。
+   * バグ追跡システム。例：JIRA。
+   * 依存関係中央管理システム。例：Apache Archiva。
+   * ビルド自動化システム。例：Apache Continuum。
 
-  このセットアップにより、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境およびプロセスに完全に統合できます。 前述のすべての開発ツールでファイルを操作できるので、異なる要素間のリンクは、FileVault を介したリポジトリのファイルシステム表現です。
+  この設定で、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境とプロセスに完全に統合できます。リポジトリのファイルシステムは FileVault によって様々な要素間のリンクで表わされ、前述のすべての開発ツールでファイルを操作できます。
 
-## 統合開発環境の拡張 {#extensions-for-integrated-development-environments}
+## 統合開発環境の拡張機能 {#extensions-for-integrated-development-environments}
 
-Adobeは、次の拡張機能をリリースしました。
+アドビは以下の拡張機能をリリースしました。
 
 * [AEM Eclipse 拡張](/help/sites-developing/aem-eclipse.md)
 * [AEM Brackets Extension](/help/sites-developing/aem-brackets.md)
 
 ### その他のツール {#other-tools}
 
-AEMには、開発を容易にする他のツールが付属しています。
+AEM には、開発に役立つその他のツールが付属しています。
 
 * [ダイアログエディター](/help/sites-developing/dialog-editor.md)
 * [トランスレーターを使用した辞書の管理](/help/sites-developing/i18n-translator.md)

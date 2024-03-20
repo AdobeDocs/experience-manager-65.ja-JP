@@ -6,7 +6,8 @@ content-type: reference
 topic-tags: author, correspondence-management
 feature: Adaptive Forms, Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
-source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 100%
@@ -46,10 +47,10 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->デスクトップデバイスでの複数選択：
+デスクトップデバイスでの複数選択：
 >
->* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
->* macOS：Command キーを押しながら、目的のコンポーネントをクリックします。
+* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
+* macOS：Command キーを押しながら、目的のコンポーネントをクリックします。
 >
 
 ## テーマエディター  {#themeeditor}
@@ -64,7 +65,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
+「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 

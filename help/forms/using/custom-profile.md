@@ -7,10 +7,11 @@ topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 feature: HTML5 Forms
 exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '656'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +72,7 @@ footer.jsp モジュールは空です。これにより、ユーザーインタ
 カスタムプロファイルの作成後、このプロファイルにレンダラーの情報を追加します。新しいプロファイルのリクエストを受け取る際に、CRX はレンダリングする JSP ページの /apps フォルダーの存在を確認します。JSP ページを /apps フォルダーに作成します。
 
 1. 左のペインで、`/apps` フォルダーに移動します。
-1. を右クリックします。 `/apps` フォルダーを選択し、名前を持つフォルダーを作成します。 **hrform**.
+1. `/apps` フォルダーを右クリックして選択し、「**hrform**」という名前のフォルダーを作成します。
 1. **hrform** フォルダー内で、「**demo**」という名前のフォルダーを作成します。
 1. 「**すべて保存**」ボタンをクリックします。
 1. `/libs/xfaforms/profile/html.jsp` に移動して、**html.jsp** のノードをコピーします。

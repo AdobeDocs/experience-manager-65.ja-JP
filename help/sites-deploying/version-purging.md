@@ -8,9 +8,10 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
-source-git-commit: 4e2ee7da5424ac6677eaa2392de7803e7543d13c
-workflow-type: ht
-source-wordcount: '717'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '726'
 ht-degree: 100%
 
 ---

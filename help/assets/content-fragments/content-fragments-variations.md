@@ -4,10 +4,11 @@ description: フラグメントのコンテンツを作成し、目的に応じ�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2309'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +76,7 @@ ht-degree: 98%
 
 ### 全画面表示エディター {#full-screen-editor}
 
-複数行テキストフィールドの編集時には、全画面表示エディターを開くことができます。実際のテキスト内をクリックし、次のアクションアイコンを選択します。
+複数行テキストフィールドの編集時には、全画面表示エディターを開くことができます。実際のテキスト内でクリックしてから、次のアクションアイコンを選択します。
 
 ![全画面表示エディターアイコン](assets/cfm-variations-03.png)
 
@@ -108,7 +109,7 @@ ht-degree: 98%
 
 * [リッチテキスト](#rich-text)
 * [プレーンテキスト](#plain-text)
-* [Markdown](#markdown)
+* [マークダウン](#markdown)
 
 全画面表示エディターでの作業時に形式を選択できます。
 
@@ -208,7 +209,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 全画面表示エディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。
 
-例：
+次に例を示します。
 
 ![統計](assets/cfm-variations-04.png)
 
@@ -234,14 +235,14 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
-英語版は標準で提供されています。
+>英語版は標準で提供されています。
 >
-他の言語は、パッケージ共有から言語モデルパッケージとして提供されています。
+>他の言語は、パッケージ共有から言語モデルパッケージとして提供されています。
 >
-* [フランス語（fr）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
-* [ドイツ語（de）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-* [イタリア語（it）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-* [スペイン語（es）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [フランス語（fr）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [ドイツ語（de）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [イタリア語（it）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [スペイン語（es）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 1. 「**プライマリ**」または必要なバリエーションを選択します。
@@ -310,7 +311,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
   >[!NOTE]
   >
-  1 つのテキストに複数の注釈が適用されている場合は、ドロップダウンセレクターが表示されます。
+  >1 つのテキストに複数の注釈が適用されている場合は、ドロップダウンセレクターが表示されます。
 
 * 注釈が適用されたテキスト全体を削除すると、注釈も削除されます。
 
@@ -328,13 +329,13 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
-参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
+>参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
 >
-ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+>ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
 
 >[!NOTE]
 >
-[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
+>[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. 画像を追加したい位置にカーソルを置きます。
 1. **アセットを挿入** アイコンを使用して、検索ダイアログを開きます。
@@ -352,10 +353,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    >[!CAUTION]
    >
-   以下にアセットとして追加した後に形式を変更した場合：
+   >以下にアセットとして追加した後に形式を変更した場合：
    >
-   * **プレーンテキスト**：アセットがフラグメントから失われます。
-   * **マークダウン**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとまた表示されます。
+   >* **プレーンテキスト**：アセットがフラグメントから失われます。
+   >* **マークダウン**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとまた表示されます。
 
 ### フラグメントへのコンテンツフラグメントの挿入 {#inserting-content-fragment-into-your-fragment}
 
@@ -365,17 +366,17 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!NOTE]
 >
-このオプションは、「**複数行テキスト**」が「**フラグメント参照を許可**」に設定されている場合に使用できます。
+>このオプションは、「**複数行テキスト**」が「**フラグメント参照を許可**」に設定されている場合に使用できます。
 
 >[!CAUTION]
 >
-参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
+>参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
 >
-ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+>ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
 
 >[!NOTE]
 >
-[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
+>[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. フラグメントを追加する位置にカーソルを置きます。
 1. **コンテンツフラグメントを挿入** アイコンを使用して、検索ダイアログを開きます。
@@ -393,10 +394,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    >[!CAUTION]
    >
-   書式を変更する場合、別のフラグメントへの参照を追加した後、次に設定します。
+   >書式を変更する場合、別のフラグメントへの参照を追加した後、次に設定します。
    >
-   * **プレーンテキスト**：参照がフラグメントから失われます。
-   * **マークダウン**：参照は残ります。
+   >* **プレーンテキスト**：参照がフラグメントから失われます。
+   >* **マークダウン**：参照は残ります。
 
 ## バリエーションの管理 {#managing-variations}
 
@@ -414,11 +415,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    >[!NOTE]
    >
-   バリエーションの作成時にコピーされるのは、常に&#x200B;**マスター**&#x200B;であり、現在開いているバリエーションではありません。
+   >バリエーションの作成時にコピーされるのは、常に&#x200B;**マスター**&#x200B;であり、現在開いているバリエーションではありません。
 
    >[!NOTE]
    >
-   バリエーションを作成すると、**マスター**&#x200B;バリエーションに現在割り当てられているすべての&#x200B;**タグ**&#x200B;が、新しいバリエーションにコピーされます。
+   >バリエーションを作成すると、**マスター**&#x200B;バリエーションに現在割り当てられているすべての&#x200B;**タグ**&#x200B;が、新しいバリエーションにコピーされます。
 
 ### バリエーションの編集 {#editing-a-variation}
 
@@ -443,7 +444,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!NOTE]
 >
-これはバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
+>これはバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
 
 ### バリエーションの削除 {#deleting-a-variation}
 
@@ -457,7 +458,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!NOTE]
 >
-**プライマリ**&#x200B;は削除できません。
+>**プライマリ**&#x200B;は削除できません。
 
 ### プライマリとの同期 {#synchronizing-with-master}
 
@@ -467,13 +468,13 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
-同期を使用できるのは、変更内容を&#x200B;***プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
+>同期を使用できるのは、変更内容を&#x200B;***プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
 >
-バリエーションの現在の要素のみが同期されます。
+>バリエーションの現在の要素のみが同期されます。
 >
-同期は、**複数行テキスト**&#x200B;データタイプでのみ機能します。
+>同期は、**複数行テキスト**&#x200B;データタイプでのみ機能します。
 >
-*バリエーションから&#x200B;**プライマリ***へ変更内容を転送することはできません。
+>*バリエーションから&#x200B;**プライマリ***へ変更内容を転送することはできません。
 
 <!-- needs new screenshot for synchronize effect -->
 

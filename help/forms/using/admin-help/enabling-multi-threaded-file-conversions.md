@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: PDF Generator
 exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ PDF Generator は、デフォルトでは一度に 1 つの OpenOffice、Microso
 
 >[!NOTE]
 >
-マルチスレッドファイル変換は、Microsoft® Excel、Microsoft® Visio、Microsoft® Project、Microsoft® Publisher ではサポートされていません。
+>マルチスレッドファイル変換は、Microsoft® Excel、Microsoft® Visio、Microsoft® Project、Microsoft® Publisher ではサポートされていません。
 
 OpenOffice または PDFMaker の各インスタンスは、個別のユーザーアカウントを使用して起動されます。追加する各ユーザーアカウントは、Forms サーバーコンピューター上での管理者権限を持つ有効なユーザーである必要があります。クラスター環境では、同じユーザーセットが、クラスターのすべてのノードで有効である必要があります。
 
@@ -67,7 +68,7 @@ Windows Server 2008 で OpenOffice、Microsoft® Word または Microsoft® Powe
 
    >[!NOTE]
    >
-   必ずシステムユーザーと PDFG ユーザーの役割を「user1」と「user2」に割り当ててください。PDFG の役割をユーザーに割り当てるには、[ユーザーアカウントを追加](enabling-multi-threaded-file-conversions.md#add-a-user-account)を参照してください。
+   >必ずシステムユーザーと PDFG ユーザーの役割を「user1」と「user2」に割り当ててください。PDFG の役割をユーザーに割り当てるには、[ユーザーアカウントを追加](enabling-multi-threaded-file-conversions.md#add-a-user-account)を参照してください。
 
 1. また、/etc/sudoers ファイルで次の行を見つけて、行の先頭にシャープ記号（#）を追加してコメントアウトします。
 
@@ -82,13 +83,13 @@ Windows Server 2008 で OpenOffice、Microsoft® Word または Microsoft® Powe
 
    `xhost +local:user1@`
 
-   詳しくは、 xhost コマンドのドキュメントを参照してください。
+   詳しくは、xhost コマンドのドキュメントを参照してください。
 
 1. サーバーを再起動します。
 
 >[!NOTE]
 >
-OpenOffice は、すべての PDFG ユーザーがアクセスできるディレクトリの場所にインストールする必要があります。これを検証するには、PDFG ユーザーとしてログインし、問題なく OpenOffice を起動できるかどうかを確認します。
+>OpenOffice は、すべての PDFG ユーザーがアクセスできるディレクトリの場所にインストールする必要があります。これを検証するには、PDFG ユーザーとしてログインし、問題なく OpenOffice を起動できるかどうかを確認します。
 
 ### ユーザーアカウントを追加 {#add-a-user-account}
 
@@ -97,7 +98,7 @@ OpenOffice は、すべての PDFG ユーザーがアクセスできるディレ
 
    >[!NOTE]
    >
-   OpenOffice 用にユーザーを設定する場合、OpenOffice のインスタンス数を、この手順で指定したユーザーアカウント数よりも多くすることはできません。
+   >OpenOffice 用にユーザーを設定する場合、OpenOffice のインスタンス数を、この手順で指定したユーザーアカウント数よりも多くすることはできません。
 
 1. Forms サーバーを再起動します。
 

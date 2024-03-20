@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2331'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -234,7 +235,7 @@ DocConverter の操作をプログラム的に実行する前に、DocConverter 
 
 **PDF/A 準拠の判断に使用する PDFドキュメントを参照**
 
-PDFドキュメントがPDF/ A に準拠しているかどうかを判断するには、PDFドキュメントを参照し、DocConverter サービスに渡す必要があります。
+PDF ドキュメントが PDF/ A に準拠しているかどうかを判断するには、PDF ドキュメントを参照し、DocConverter サービスに渡す必要があります。
 
 **実行時オプションの設定**
 

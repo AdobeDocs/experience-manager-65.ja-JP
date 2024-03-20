@@ -1,15 +1,16 @@
 ---
 title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
-description: アダプティブフォームフィールド内から WSDL で記述された Web サービスを呼び出すために使用できる invokeWebServices API について説明します。
+description: アダプティブフォームフィールド内から WSDL で記述された、web サービスを呼び出す API について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 feature: Adaptive Forms, Foundation Components
 exl-id: cf037174-3153-486f-85b1-c974cd5a1ace
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '533'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 87%
 
 ## 概要 {#overview}
 
-AEM Formsを使用すると、フォーム作成者は、フォームデータモデルで設定されたサービスをアダプティブフォームフィールド内から呼び出すことで、フォームの入力操作をさらに簡素化し、強化することができます。 データモデルサービスを呼び出すには、ビジュアルエディターでルールを作成するか、[ルールエディター](/help/forms/using/rule-editor.md)のコードエディターの `guidelib.dataIntegrationUtils.executeOperation` API を使用して JavaScript を指定します。
+AEM Forms を使用すると、アダプティブフォームフィールド内からフォームデータモデルで構成されたサービスを呼び出すことで、フォーム作成者はフォームへの記入作業を簡略化および強化することができます。データモデルサービスを呼び出すには、ビジュアルエディターでルールを作成するか、[ルールエディター](/help/forms/using/rule-editor.md)のコードエディターの `guidelib.dataIntegrationUtils.executeOperation` API を使用して JavaScript を指定します。
 
 このドキュメントでは、`guidelib.dataIntegrationUtils.executeOperation` API を使用して JavaScript を記述してサービスを呼び出す方法に焦点を当てています。
 
@@ -31,7 +32,7 @@ AEM Formsを使用すると、フォーム作成者は、フォームデータ�
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-`guidelib.dataIntegrationUtils.executeOperation` API の構造は、サービス操作の詳細を指定します。構造の構文は次のとおりです。
+`guidelib.dataIntegrationUtils.executeOperation` API の構造は、サービス操作の詳細を指定します。この構造の構文は以下のとおりです。
 
 ```javascript
 var operationInfo = {
@@ -49,7 +50,7 @@ outputFieldN
 }
 ```
 
-API 構造では、サービス操作に関する次の詳細を指定します。
+API 構造は、サービス操作の以下の詳細を指定します。
 
 <table>
  <tbody>

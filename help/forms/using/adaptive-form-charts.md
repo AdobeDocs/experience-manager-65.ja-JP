@@ -4,7 +4,9 @@ description: アダプティブフォーム内のグラフを使用して、よ�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 53a6914792bb15773c8f91a2bb6295ab69b3b1bf
+exl-id: 973d5ddb-cbcc-454d-859f-144442828a1a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2005'
 ht-degree: 6%
@@ -190,5 +192,3 @@ chartType プロパティは、グラフのタイプを指定します。 指定
 1. 「完了」をクリックして、ルールを保存します。
 
 これで、ドロップダウンリストからグラフの種類を選択し、「更新」をクリックしてグラフを再描画できます。
-
-

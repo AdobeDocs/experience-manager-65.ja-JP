@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1161'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 98%
 >* このページでは、Adobe Experience Manager（AEM）オーサー環境を使用する際の基本操作の概要について説明します。**Sites** コンソールを基礎として使用します。
 >
 >* 一部の機能は、すべてのコンソールでは使用できません。また、一部のコンソールでは追加機能を使用できます。個別のコンソールや関連する機能に関する具体的な情報については、他のページで詳しく取り上げます。
->* AEM全体でキーボードショートカットを使用できます。 特に [コンソールの使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md) および [ページの編集](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+>* AEM 全体でキーボードショートカットを利用できます。特に、[コンソールの使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)時や[ページの編集](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)時に顕著です。
 >
 
 ## スタートアップスクリーン {#the-welcome-screen}

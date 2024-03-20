@@ -1,11 +1,12 @@
 ---
 title: AEM Content and Commerce リリースノート 2020
-description: Adobe Experience Manager Content and Commerce リリースノート 2020.
+description: Adobe Experience Manager Content and Commerce リリースノート 2020
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '1257'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +46,7 @@ ht-degree: 97%
 
 * 新しいカテゴリのカルーセルコンポーネントが追加され、ビジネスユーザーがこのコンポーネントを AEM コンテンツページにドラッグ＆ロップして、コンテンツページをコマースデータで充実させることができるようになりました。
 
-* CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。アドビクライアントデータレイヤーは、データを収集してデジタル分析およびレポートサーバーに送信するための標準的な手段です。詳しくは、 [Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。アドビクライアントデータレイヤーは、データを収集してデジタル分析およびレポートサーバーに送信するための標準的な手段です。詳しくは、[Adobe Client データレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を参照してください。
 
 * Adobe Commerce 管理 UI 内で設定された SEO メタデータ（タイトル、メタ説明、メタキーワードなど）を自動的に入力するように、製品の詳細ページと製品リストページが拡張されました。
 
@@ -143,7 +144,7 @@ ht-degree: 97%
 
 * カテゴリフィルタリングの方法を追加し、買い物客がカテゴリに基づいてフィルタリングできるようにしました。
 
-* ACL を直接操作するのではなく、サービスユーザーを介して /conf に確実にアクセスできるように、サービスユーザーマッピングをセキュリティ要件の一環として追加しました。設定にアクセスするには、CIFコアコンポーネントでサービスユーザーを使用する必要があります。
+* ACL を直接操作するのではなく、サービスユーザーを介して /conf に確実にアクセスできるように、サービスユーザーマッピングをセキュリティ要件の一環として追加しました。CIF コアコンポーネントは、設定にアクセスする際に、サービスユーザーを使用する必要があります。
 
 ### 改善点 {#what-is-improved-june}
 

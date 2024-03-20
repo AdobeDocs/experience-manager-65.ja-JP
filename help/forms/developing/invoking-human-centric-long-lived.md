@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: c9ebad8b-b631-492d-99a3-094e892b2ddb
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3674'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +53,7 @@ Workbench で作成された人間中心の長期間有効なプロセスを、�
  </LoanApp>
 ```
 
-プロセスに渡される XML データは、プロセスで使用されるフォームのフィールドと一致する必要があります。 そうでなければ、データはフォーム内に表示されません。`FirstAppSolution/PreLoanProcess`プロセスを呼び出すすべてのアプリケーション は、この XML データソースを渡す必要があります。*人間中心の長期間有効なプロセスの呼び出し*&#x200B;で作成されたアプリケーションは、ユーザーが Web クライアントに入力した値から、XML データソースを動的に作成します。
+プロセスに渡される XML データは、プロセスで使用されるフォーム内のフィールドと一致する必要があります。そうでなければ、データはフォーム内に表示されません。`FirstAppSolution/PreLoanProcess`プロセスを呼び出すすべてのアプリケーション は、この XML データソースを渡す必要があります。*人間中心の長期間有効なプロセスの呼び出し*&#x200B;で作成されたアプリケーションは、ユーザーが Web クライアントに入力した値から、XML データソースを動的に作成します。
 
 クライアントアプリケーションを使用して、*FirstAppSolution/PreLoanProcess*&#x200B;は必要な XML データを処理します。長期間有効なプロセスは、呼び出し識別子の値を戻り値として返します。以下の図に、*FirstAppSolution/PreLoanProcess の長期間有効なプロセスを呼び出すクライアントアプリケーションを示します。クライアントアプリケーションは XML データを送信し、呼び出し識別子の値を表す文字列値を取得します。
 
@@ -514,7 +515,7 @@ Microsoft .NET C# ASP.NET Web アプリケーションを作成します。次�
 
 ### FirstAppSolution/PreLoanProcess を呼び出す ASP ページを作成する {#create-an-asp-page-that-invokes-firstappsolution-preloanprocess}
 
-ASP.NET プロジェクト内に、ローン申請者に HTML ページを表示する web フォーム（ASPX ファイル）を追加します。Web フォームは、`System.Web.UI.Page` から派生したクラスに基づいています。を呼び出す C#アプリケーションロジック `FirstAppSolution/PreLoanProcess` が `Button1_Click` メソッド（このボタンは、「アプリケーションを送信」ボタンを表します）。
+ASP.NET プロジェクト内に、ローン申請者に HTML ページを表示する web フォーム（ASPX ファイル）を追加します。Web フォームは、`System.Web.UI.Page` から派生したクラスに基づいています。`FirstAppSolution/PreLoanProcess` を呼び出す C# アプリケーションロジックは `Button1_Click` メソッドにあります（このボタンは、「アプリケーションの送信」ボタンを表します）。
 
 次のイラストは、ASP.NET アプリケーションを示しています
 
@@ -555,7 +556,7 @@ ASP.NET プロジェクト内に、ローン申請者に HTML ページを表示
  </tbody>
 </table>
 
-ASP.NET アプリケーションの一部であるアプリケーションロジックは、XML データソースを動的に作成し、`FirstAppSolution/PreLoanProcess` プロセスに渡します。申請者が HTML ページに入力した値は、XML データソース内で指定する必要があります。これらのデータ値は、フォームが Workspace で表示される際に、フォームに結合されます。のクラス `System.Xml` 名前空間は、XML データソースの作成に使用されます。
+ASP.NET アプリケーションの一部であるアプリケーションロジックは、XML データソースを動的に作成し、`FirstAppSolution/PreLoanProcess` プロセスに渡します。申請者が HTML ページに入力した値は、XML データソース内で指定する必要があります。これらのデータ値は、フォームが Workspace で表示される際に、フォームに結合されます。`System.Xml` 名前空間にあるクラスは、XML データソースの作成に使用されます。
 
 ASP.NET アプリケーションから XML データを必要とするプロセスを呼び出す場合、XML データタイプを使用できます。つまり、`System.Xml.XmlDocument` インスタンスをプロセスに渡すことはできません。プロセスに渡すこの XML インスタンスの完全修飾名は `InvokePreLoanProcess.PreLoanProcess.XML` です。`System.Xml.XmlDocument` インスタンスを `InvokePreLoanProcess.PreLoanProcess.XML` に変換します。このタスクは、次のコードを使用して実行できます。
 
@@ -811,7 +812,7 @@ ASP.NET アプリケーションから XML データを必要とするプロセ�
 
 >[!NOTE]
 >
->getJobDescription ユーザー定義メソッドの値は、Job Manager サービスから返される値に対応しています。
+>getJobDescription ユーザー定義メソッド内の値は、ジョブマネージャーサービスが返す値に対応しています。
 
 ### ASP.NET アプリケーションを実行します。 {#run-the-asp-net-application}
 

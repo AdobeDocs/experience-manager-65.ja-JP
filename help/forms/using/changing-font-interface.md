@@ -1,35 +1,36 @@
 ---
 title: インターフェイスのフォントの変更
-description: ユーザインターフェイス上のフォントを選択的に変更する方法。
+description: ユーザーインターフェイス上でフォントを選択して変更する方法。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '272'
-ht-degree: 47%
+ht-degree: 100%
 
 ---
 
 # インターフェイスのフォントの変更{#changing-the-font-on-the-interface}
 
-AEM Forms Workspace に表示されるフォントを変更できます。 ユーザーインターフェイスの特定のセクションで使用されるフォントは、スタイルシートの対応するセクションで定義されます。 ユーザーインターフェイス上のフォントを選択的に変更できます。
+AEM Forms Workspace に表示されているフォントを変更することができます。ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。フォントは選択的にユーザーインタフェイス上で変更することができます。
 
 [AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従います。要件に応じて、CSS、HTML、またはその両方をカスタマイズするための手順に従います。
 
 1. 既存のスタイルのフォントファミリを変更または追加します。
-1. フォント要素のフォントファミリインラインを変更またはHTMLします。
-1. スタイルを追加し、それをHTML要素に使用します。
+1. HTML 要素でフォントファミリインラインを変更または追加します。
+1. スタイルを追加して HTML 要素で使用します。
 
 例えば、トップナビゲーションバーのアンカーテキストのフォントを「Courier New」に変更するには、次の手順に従います。
 
 1. `https://'[server]:[port]'/lc/crx/de/index.jsp` にアクセスして CRXDE Lite にログインします。
 1. 次のいずれかの操作を行います。
 
-   1. 既存のスタイルのフォントファミリを変更するには、/apps/ws/css にある newStyle.css ファイルに次の内容を追加します。
+   1. 既存のスタイルでフォントファミリーを変更するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
       ```css
       #topnav a {
@@ -50,7 +51,7 @@ AEM Forms Workspace に表示されるフォントを変更できます。 ユ�
 
       編集のため /apps/ws/js/registry.js ファイルを開き、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html` を `text!/lc/apps/ws/js/runtime/templates/appnavigation.html` に置き換えます。
 
-   1. フォントファミリを定義するスタイルを追加するには、 /apps/ws/css にある newStyle.css ファイルに次の内容を追加します。
+   1. フォントファミリを定義するスタイルを追加するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
       ```css
       .myNewFontStyle a {
@@ -58,7 +59,7 @@ AEM Forms Workspace に表示されるフォントを変更できます。 ユ�
       }
       ```
 
-      HTML要素に font-family インラインを追加するには、/apps/ws/js/runtime/templates にある appnavigation.html ファイルに以下を追加します。
+      フォントファミリインラインを HTML 要素に追加するには、/apps/ws/js/runtime/templates にある appnavigation.html ファイルに以下を追加します。
 
       ```jsp
       <div id="topnav" class="myNewFontStyle">
@@ -71,7 +72,7 @@ AEM Forms Workspace に表示されるフォントを変更できます。 ユ�
       </div>
       ```
 
-1. ワークスペースを再起動し、変更を表示するためにブラウザーのキャッシュをクリアします。
+1. Workspace を再起動して変更が表示されるようにブラウザーのキャッシュをクリアします。
 
 ![change_font_before](assets/change_font_before.png)
 

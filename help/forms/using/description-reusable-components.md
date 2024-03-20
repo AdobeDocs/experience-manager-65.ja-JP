@@ -1,15 +1,16 @@
 ---
 title: 再利用可能なコンポーネントの説明
-description: AEM Forms Workspace コンポーネントを Web アプリケーションに統合するのに役立つ、再利用可能なコンポーネントとファイル名および依存関係の完全なリストです。
+description: AEM Forms Workspace コンポーネントを web アプリケーション内に統合するために役立つ、再利用可能なコンポーネントの完全リスト（ファイル名と依存関係）。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1231'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +56,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td>
     <ul>
      <li><p>filterSelected - tasklist モデル</p></li>
-     <li><p>削除 — tasklist モデル</p></li>
+     <li><p>削除 - tasklist モデル</p></li>
      <li><p>updateQueue - tasklist モデル</p></li>
     </ul></td>
   </tr>
@@ -64,7 +65,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->このコンポーネントは、カスタムアプリケーションからこのコンポーネントの filterSelectedトリガーを提供すると、AEM Forms Workspace とは独立して使用できます。
+>カスタムアプリケーションからこのコンポーネントの filterSelected イベントをトリガーする場合、このコンポーネントは AEM Forms ワークスペースとは独立して使用できます。
 
 ## タスク {#task}
 
@@ -98,8 +99,8 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
    <td>
     <ul>
-     <li><p>submitComplete — タスクモデル</p></li>
-     <li><p>却下 — タスクモデル</p></li>
+     <li><p>submitComplete - タスクモデル</p></li>
+     <li><p>却下 - タスクモデル</p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -107,7 +108,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->Workspace は、TaskList モデルの fetchTasks 関数を呼び出して、このコンポーネントの Task モデルを作成します。
+>Workspace は、TaskList モデルの fetchTask 関数を呼び出して、このコンポーネントのタスクモデルを作成します。
 
 ## FilterList {#filterlist}
 
@@ -137,8 +138,8 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
    <td>
     <ul>
-     <li><p>取得済み — tasklist モデル </p></li>
-     <li><p>削除 — tasklist モデル </p></li>
+     <li><p>取得済み - tasklist モデル </p></li>
+     <li><p>削除 - tasklist モデル </p></li>
      <li><p>updateQueue - tasklist モデル </p></li>
      <li><p>refreshedQueue - tasklist モデル </p></li>
      <li><p>filterSelected - tasklist モデル</p></li>
@@ -167,15 +168,15 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>JS の依存関係</p> </td>
    <td>
     <ul>
-     <li><p>フィールド：キュー： { name, qid, isDefault, type}</p> </li>
-     <li><p>フィールド： query: string</p> </li>
-     <li><p>フィールド： parentView: filterlist ビュー</p> </li>
-     <li><p>フィールド： parentModel: tasklist モデル</p> </li>
+     <li><p>フィールド：キュー：{ name, qid, isDefault, type}</p> </li>
+     <li><p>フィールド：クエリ：文字列</p> </li>
+     <li><p>フィールド：parentView：filterlist ビュー</p> </li>
+     <li><p>フィールド：parentModel：tasklist モデル</p> </li>
      <li><p>フィールド：ユーティリティ</p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント</p> </td>
+   <td><p>リッスンされているイベント</p> </td>
    <td><p>該当なし</p> </td>
   </tr>
  </tbody>
@@ -209,8 +210,8 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
    <td>
     <ul>
-     <li><p>取得済み — tasklist モデル </p></li>
-     <li><p>削除 — tasklist モデル </p></li>
+     <li><p>取得済み - tasklist モデル </p></li>
+     <li><p>削除 - tasklist モデル </p></li>
      <li><p>updateQueue - tasklist モデル </p></li>
      <li><p>teamQueuesFetched - tasklist モデル </p></li>
     </ul></td>
@@ -243,15 +244,15 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td>
     <ul>
      <li><p>拡張：フィルタービュー</p> </li>
-     <li><p>フィールド：queue :{ name, qid, isDefault, type }</p> </li>
+     <li><p>フィールド：キュー：{ name, qid, isDefault, type }</p> </li>
      <li><p>フィールド：クエリ：文字列</p> </li>
-     <li><p>フィールド： parentView : filterlist ビュー</p> </li>
-     <li><p>フィールド： parentModel : tasklist モデル</p> </li>
+     <li><p>フィールド：parentView：filterlist ビュー</p> </li>
+     <li><p>フィールド：parentModel：tasklist モデル</p> </li>
      <li><p>フィールド：ユーティリティ</p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント</p> </td>
+   <td><p>リッスンされているイベント</p> </td>
    <td><p>該当なし</p> </td>
   </tr>
  </tbody>
@@ -259,7 +260,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->TeamFilter は、TaskList コンポーネントから選択されたタスクを示すイベントを取得します。 これらのコンポーネントはモデルクラスを共有しますが、他の依存関係はありません。
+>TeamFilter は、TaskList コンポーネントから選択されているタスクを示すイベントを取得します。これらのコンポーネントはモデルクラスを共有しますが、依存関係はありません。
 
 ## TaskDetails {#taskdetails}
 
@@ -279,7 +280,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>コンポーネントが必要</p> </td>
-   <td><p>Utility クラスのほとんど</p> </td>
+   <td><p>ほとんどのユーティリティクラス</p> </td>
   </tr>
   <tr>
    <td><p>JS の依存関係</p> </td>
@@ -287,8 +288,8 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
     <ul>
      <li><p>processinstancehistory.html</p> </li>
      <li><p>formrendering ユーティリティ</p> </li>
-     <li><p>メモユーティリティ</p> </li>
-     <li><p>添付ファイルユーティリティ</p> </li>
+     <li><p>ノートユーティリティ</p> </li>
+     <li><p>添付ユーティリティ</p> </li>
      <li><p>taskactions ユーティリティ</p> </li>
      <li><p>履歴ユーティリティ</p> </li>
     </ul> </td>
@@ -297,23 +298,23 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td>
    <td>
     <ul>
-     <li><p>転送済み — タスクモデル</p> </li>
-     <li><p>共有済み — タスクモデル</p> </li>
-     <li><p>問い合わせ済み — タスクモデル</p> </li>
-     <li><p>却下済み — タスクモデル</p> </li>
-     <li><p>破棄済み — タスクモデル</p> </li>
-     <li><p>ロック解除済み — タスクモデル</p> </li>
-     <li><p>ロック済み — タスクモデル</p> </li>
-     <li><p>要求済み — タスクモデル</p> </li>
+     <li><p>転送済み - タスクモデル</p> </li>
+     <li><p>共有済み - タスクモデル</p> </li>
+     <li><p>問い合わせ済み - タスクモデル</p> </li>
+     <li><p>拒否済み - タスクモデル</p> </li>
+     <li><p>中止済み - タスクモデル</p> </li>
+     <li><p>ロック解除済み - タスクモデル</p> </li>
+     <li><p>ロック済み - タスクモデル</p> </li>
+     <li><p>要求済み - タスクモデル</p> </li>
      <li><p>change:taskselected - tasklist モデル</p> </li>
-     <li><p>change:formUrl — タスクモデル</p> </li>
-     <li>attachmentURLFetched — タスクモデル</li>
+     <li><p>change:formUrl - タスクモデル</p> </li>
+     <li>attachmentURLFetched - タスクモデル</li>
     </ul>
     <ul>
-     <li>newAttachment — タスクモデル</li>
-     <li><p>taskHistoryFetched — タスクモデル</p> </li>
-     <li>prepareForSubmitComplete — タスクモデル</li>
-     <li><p>submitComplete — タスクモデル</p> </li>
+     <li>newAttachment - タスクモデル</li>
+     <li><p>taskHistoryFetched - タスクモデル</p> </li>
+     <li>prepareForSubmitComplete - タスクモデル</li>
+     <li><p>submitComplete - タスクモデル</p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -333,7 +334,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>テンプレート</p></td>
-   <td><p>startprocess.html （ルートフォルダ内）</p></td>
+   <td><p>startprocess.html（ルートフォルダー内）</p></td>
   </tr>
   <tr>
    <td><p>コンポーネントが必要</p></td>
@@ -352,7 +353,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td>
     <ul>
      <li><p>allStartpointsFetched - categorylist モデル </p></li>
-     <li><p>追加 — categorylist モデル </p></li>
+     <li><p>追加 - categorylist モデル </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -360,7 +361,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->このコンポーネントは、StartPointList、StartPoint、Task など、他の一部のコンポーネントのモデルクラスを使用します。 この依存関係に加えて、CategoryList は独立して使用できます。
+>このコンポーネントは、StartPointList、StartPoint、Task など、他の一部のコンポーネントのモデルクラスを使用します。この依存関係以外に、CategoryList を独立して使用することもできます。
 
 ## カテゴリ {#category}
 
@@ -394,8 +395,8 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
    <td>
     <ul>
-     <li><p>変更済み — カテゴリモデル </p></li>
-     <li><p>childrenFetched — カテゴリモデル </p></li>
+     <li><p>変更済み - カテゴリモデル </p></li>
+     <li><p>childrenFetched - カテゴリモデル </p></li>
      <li><p>category:selected - categorylist モデル </p></li>
     </ul></td>
   </tr>
@@ -416,7 +417,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>テンプレート</p></td>
-   <td><p>startprocess.html （ルートフォルダ内）</p></td>
+   <td><p>startprocess.html（ルートフォルダー内）</p></td>
   </tr>
   <tr>
    <td><p>コンポーネントが必要</p></td>
@@ -451,7 +452,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。CategoryList は、どのカテゴリのスタートポイントが表示されるかに関する情報にアクセスします。 StartPointList を独立して使用するには、CategoryList からイベントトリガーをシミュレートします。
+>StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。CategoryList は、どのカテゴリの開始ポイントが表示されるかについての情報にアクセスします。StartPointList を独立して使用するには、CategoryList からイベントトリガーをシミュレートします。
 
 ## StartPoint {#startpoint}
 
@@ -479,7 +480,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
-   <td><p>変更 — 始点モデル </p></td>
+   <td><p>変更 - startpoint モデル </p></td>
   </tr>
  </tbody>
 </table>
@@ -504,7 +505,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>コンポーネントが必要</p> </td>
    <td>
     <ul>
-     <li><p>Utility クラスのほとんど</p> </li>
+     <li><p>ほとんどのユーティリティクラス</p> </li>
      <li><p>UserSearch</p> </li>
     </ul> </td>
   </tr>
@@ -516,8 +517,8 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
      <li><p>favoritecategoryfactory モデル</p> </li>
      <li><p>allcategoryfactory モデル</p> </li>
      <li><p>formrendering ユーティリティ</p> </li>
-     <li><p>メモユーティリティ</p> </li>
-     <li><p>添付ファイルユーティリティ</p> </li>
+     <li><p>ノートユーティリティ</p> </li>
+     <li><p>添付ユーティリティ</p> </li>
      <li><p>taskactions ユーティリティ</p> </li>
     </ul> </td>
   </tr>
@@ -526,17 +527,17 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td>
     <ul>
      <li><p>category:selected - categorylist モデル</p> </li>
-     <li><p>change:involkedTask - startpointlist モデル</p> </li>
-     <li><p>change:formUrl — タスクモデル</p> </li>
+     <li><p>change:invokedTask - startpointlist モデル</p> </li>
+     <li><p>change:formUrl - タスクモデル</p> </li>
      <li><p>startpoint:selected - startpointlist モデル</p> </li>
-     <li><p>転送済み — タスクモデル</p> </li>
-     <li><p>破棄済み — タスクモデル</p> </li>
-     <li><p>ロック解除済み — タスクモデル</p> </li>
-     <li><p>ロック済み — タスクモデル</p> </li>
-     <li>attachmentURLFetched — タスクモデル</li>
-     <li>newAttachment — タスクモデル</li>
-     <li>prepareForSubmitComplete — タスクモデル </li>
-     <li><p>submitComplete — タスクモデル</p> </li>
+     <li><p>転送済み - タスクモデル</p> </li>
+     <li><p>中止済み - タスクモデル</p> </li>
+     <li><p>ロック解除済み - タスクモデル</p> </li>
+     <li><p>ロック済み - タスクモデル</p> </li>
+     <li>attachmentURLFetched - タスクモデル</li>
+     <li>newAttachment - タスクモデル</li>
+     <li>prepareForSubmitComplete - タスクモデル </li>
+     <li><p>submitComplete - タスクモデル</p> </li>
      <li><p>allStartpointsFetched - categorylist モデル</p> </li>
     </ul> </td>
   </tr>
@@ -545,7 +546,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->StartProcess コンポーネントと StartPointList コンポーネントは、モデルクラスを共有します。 このコンポーネントは、StartPointList からスタートポイントを選択すると関連します。
+>StartProcess コンポーネントと StartPointList コンポーネントは、モデルクラスを共有します。このコンポーネントは、StartPointList から startpoint を選択すると関連が生じます。
 
 ## ProcessNameList {#processnamelist}
 
@@ -561,7 +562,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>テンプレート</p></td>
-   <td><p>tracking.html （ルートフォルダー内）</p></td>
+   <td><p>tracking.html（ルートフォルダー内）</p></td>
   </tr>
   <tr>
    <td><p>コンポーネントが必要</p></td>
@@ -575,9 +576,9 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
    <td>
     <ul>
-     <li><p>追加 — processnamelist モデル </p></li>
+     <li><p>追加 - processnamelist モデル </p></li>
      <li><p>fetched:processnames - processnamelist モデル </p></li>
-     <li><p>変更 — processnamelist モデル </p></li>
+     <li><p>変更 - processnamelist モデル </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -585,7 +586,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ProcessNameList は他のコンポーネントに依存しません。 ただし、内部的には ProcessInstanceList モデルクラスに依存し、他のコンポーネントに依存します。 したがって、ProcessNameList は、ProcessInstanceList、ProcessInstance、TaskList、Teamtask、Task など、多くのモデルクラスを使用します。 これらの依存関係に加えて、ProcessNameList は独立して使用できます。
+>ProcessNameList は、他のコンポーネントに依存しません。ただし、他のコンポーネントに依存する ProcessInstanceList モデルクラスに内部的に依存します。したがって、ProcessNameList は、ProcessInstanceList、ProcessInstance、TaskList、Teamtask、Task など、多くのモデルクラスを使用します。これらの依存関係に加えて、ProcessNameList を独立して使用することもできます。
 
 ## ProcessName {#processname}
 
@@ -597,7 +598,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>表示</p></td>
-   <td><p>processname （processnamelist.js 内）</p></td>
+   <td><p>processname（processnamelist.js 内）</p></td>
   </tr>
   <tr>
    <td><p>テンプレート</p></td>
@@ -613,7 +614,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
-   <td><p>変更 — processname モデル </p></td>
+   <td><p>変更 - processname モデル </p></td>
   </tr>
  </tbody>
 </table>
@@ -632,7 +633,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>テンプレート</p></td>
-   <td><p>tracking.html （ルートフォルダー内）</p></td>
+   <td><p>tracking.html（ルートフォルダー内）</p></td>
   </tr>
   <tr>
    <td><p>コンポーネントが必要</p></td>
@@ -655,7 +656,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ProcessInstanceList は、インスタンスを取得および表示するプロセス名を示す ProcessNameList からのイベントを受け取ります。 ProcessInstanceList を独立して使用するには、別々にイベントトリガーをシミュレートします。
+>ProcessInstanceList は、インスタンスを取得し表示するために、プロセス名を示す ProcessNameList からのイベントを期待します。ProcessInstanceList を独立して使用するには、イベントトリガーを個別にシミュレートします。
 
 ## ProcessInstance {#processinstance}
 
@@ -667,7 +668,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>表示</p></td>
-   <td><p>processnamelist.js 内の processname</p></td>
+   <td><p>processnamelist.js 内部の processname</p></td>
   </tr>
   <tr>
    <td><p>テンプレート</p></td>
@@ -683,7 +684,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>リスンされているイベント（イベント名 – トリガー）</p></td>
-   <td><p>変更 — processinstance モデル </p></td>
+   <td><p>変更 - processinstance モデル </p></td>
   </tr>
  </tbody>
 </table>
@@ -730,7 +731,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ProcessInstanceHistory は、どのプロセスインスタンスの履歴を表示するかを示す ProcessInstanceList からのイベントを受け取ります。 この依存関係の他に、コンポーネントは独立して使用できます。
+>ProcessInstanceHistory は、どのプロセスインスタンスの履歴を表示するかどうかを示す ProcessInstanceList からのイベントを期待します。この依存関係に加えて、コンポーネントを独立して使用することもできます。
 
 ## OutofOffice {#outofoffice}
 
@@ -754,7 +755,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>JS の依存関係</p> </td>
-   <td><p>ユーザー検索ビュー</p> </td>
+   <td><p>usersearch ビュー</p> </td>
   </tr>
   <tr>
    <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td>
@@ -771,7 +772,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->OutofOffice は単独で使用できます。
+>OutofOffice は単独で使用可能です。
 
 ## ShareQueue {#sharequeue}
 
@@ -795,7 +796,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>JS の依存関係</p> </td>
-   <td><p>ユーザー検索ビュー</p> </td>
+   <td><p>usersearch ビュー</p> </td>
   </tr>
   <tr>
    <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td>
@@ -815,7 +816,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ShareQueue は単独で使用できます。
+>ShareQueue は独立して使用可能です。
 
 ## UISettings {#uisettings}
 
@@ -854,7 +855,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->UISettings は独立して使用できます。
+>UISettings は独立して使用可能です。
 
 ## AppNavigation {#appnavigation}
 
@@ -881,7 +882,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
    <td><p>該当なし</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント</p></td>
+   <td><p>リッスンされているイベント</p></td>
    <td><p>該当なし</p></td>
   </tr>
  </tbody>
@@ -889,7 +890,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->AppNavigation は独立して使用できます。
+>AppNavigation は独立して使用可能です。
 
 ## UserInfo {#userinfo}
 
@@ -929,7 +930,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->UserInfo は独立して使用できます。
+>UserInfo は独立して使用可能です。
 
 ## WSError {#wserror}
 
@@ -1042,7 +1043,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
   </tr>
   <tr>
    <td><p>テンプレート</p> </td>
-   <td><p>tracking.html （ルートフォルダー内）</p> </td>
+   <td><p>tracking.html（ルートフォルダー内）</p> </td>
   </tr>
   <tr>
    <td><p>コンポーネントが必要</p> </td>

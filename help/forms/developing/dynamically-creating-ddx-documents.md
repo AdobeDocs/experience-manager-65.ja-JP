@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: b3c19c82-e26f-4dc8-b846-6aec705cee08
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2153'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -145,7 +146,7 @@ Assembler サービス API（Java）を使用して、DDX ドキュメントを�
    * コンストラクタを使用して `javax.xml.transform.dom.DOMSource` オブジェクトを作成します。DDX ドキュメントを表す `org.w3c.dom.Document` オブジェクトを渡します。
    * `javax.xml.transform.dom.DOMSource` オブジェクトを作成するには、コンストラクタを使用して、`ByteArrayOutputStream` オブジェクトを渡します。
    * `javax.xml.transform.Transformer` オブジェクトの `transform` メソッドを呼び出して、Java `ByteArrayOutputStream` オブジェクトを入力します。`javax.xml.transform.dom.DOMSource` オブジェクトと `javax.xml.transform.stream.StreamResult` オブジェクトを渡します。
-   * バイト配列を作成し、 `ByteArrayOutputStream` オブジェクトをバイト配列に割り当てます。
+   * バイト配列を作成して、`ByteArrayOutputStream` オブジェクトのサイズをバイト配列に割り当てます。
    * `ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出して、バイト配列に入力します。
    * コンストラクターを使用して、バイト配列を渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
 
@@ -234,7 +235,7 @@ Assembler サービス API（web サービス）を使用して、DDX ドキュ�
 
    * コンストラクターを使用して `System.IO.MemoryStream` オブジェクトを作成します。
    * DDX ドキュメントを表す `XmlElement` オブジェクトを使った DDX ドキュメントで、`MemoryStream` オブジェクトを入力します。`XmlElement` オブジェクトの `Save` メソッドを呼び出し、`MemoryStream` オブジェクトを渡します。
-   * バイト配列を作成し、 `MemoryStream` オブジェクト。 次のコードは、このアプリケーションロジックを示しています。
+   * バイト配列を作成し、`MemoryStream` オブジェクトにあるデータを入力します。次のコードは、このアプリケーションロジックを示しています。
 
      ` int bufLen = Convert.ToInt32(stream.Length);  byte[] byteArray = new byte[bufLen];  stream.Position = 0;  int count = stream.Read(byteArray, 0, bufLen);`
 

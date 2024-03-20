@@ -1,11 +1,12 @@
 ---
 title: IMS を使用した Adobe Target との統合
-description: IMS を使用したAEMとAdobe Targetの統合について説明します。
+description: IMS を使用した AEM と Adobe Target の統合について説明します。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1533'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -156,7 +157,7 @@ Adobe Developer Console - プロジェクトから、すべての統合プロジ
 * API
    * 例：Adobe Target
 
-これらの一部については、IMS に基づいて AEM で Adobe Target の統合を完了する必要があります。
+これらの一部は、IMS に基づいて AEM で Adobe Target の統合を完了する必要があります。
 
 ## AEM での IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 

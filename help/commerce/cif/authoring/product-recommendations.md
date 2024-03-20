@@ -10,8 +10,9 @@ feature: Commerce Integration Framework
 kt: 9649
 thumbnail: 340130.jpg
 exl-id: 50f437ae-10de-48f9-8abf-a1b37f7fda62
-source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
-workflow-type: ht
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%
 

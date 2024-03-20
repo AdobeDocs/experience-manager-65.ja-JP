@@ -1,6 +1,6 @@
 ---
 title: AEM 6.4 の RDBMS サポート
-description: AEM 6.4 でのリレーショナルデータベースの永続性のサポートと、使用可能な設定オプションについて説明します。
+description: AEM 6.4 でのリレーショナルデータベース永続性のサポートおよび使用可能な設定オプションについて説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,10 +8,11 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '592'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -19,19 +20,19 @@ ht-degree: 63%
 
 ## 概要 {#overview}
 
-AEMでのリレーショナルデータベース永続性のサポートは、Document Microkernel を使用して実装されます。 Document Microkernel は、MongoDB 永続性の実装にも使用される基盤です。
+AEM でのリレーショナルデータベース永続性のサポートは、Document Microkernel を使用して実装されています。Document Microkernel は、MongoDB 永続性の実装にも使用されている基盤です。
 
-これは、Mongo Java API をベースとする Java API で構成されます。 BlobStore API の実装も提供されます。 デフォルトでは、BLOB はデータベースに保存されます。
+これは、Mongo Java API に基づいた Java API で構成されています。BlobStore API の実装も提供されています。デフォルトで、Blob はデータベース内に保存されます。
 
-実装の詳細について詳しくは、 [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) および [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) ドキュメント。
+実装詳細について詳しくは、[RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) および [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) のドキュメントを参照してください。
 
 >[!NOTE]
 >
->のサポート **PostgreSQL 9.4** また、はデモ目的でのみ提供されます。 実稼動環境では使用できません。
+>**PostgreSQL 9.4** もサポートされていますが、デモ目的に限られます。実稼動環境では使用できません。
 
-## サポートされるデータベース {#supported-databases}
+## サポートされているデータベース {#supported-databases}
 
-AEMでのリレーショナル・データベースのサポート・レベルの詳細は、 [技術要件ページ](/help/sites-deploying/technical-requirements.md).
+AEM でのリレーショナルデータベースのサポートレベルについて詳しくは、[技術要件のページ](/help/sites-deploying/technical-requirements.md)を参照してください。
 
 ## 設定手順 {#configuration-steps}
 
@@ -39,9 +40,9 @@ AEMでのリレーショナル・データベースのサポート・レベル�
 
 このサービスが動作するためには、AEM でデータソースを設定する必要があります。この設定は、`org.apache.sling.datasource.DataSourceFactory.config` ファイルを通して行われます。ローカル設定内の OSGi バンドルとは別に、対応するデータベースの JDBC ドライバを指定する必要があります。
 
-JDBC ドライバー用の OSGi バンドルの作成手順については、次を参照してください。 [ドキュメント](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle) を Apache Sling Web サイトにコピーします。
+JDBC ドライバ用の OSGi バンドルの作成手順については、Apache Sling web サイトのこちらの[ドキュメント](https://sling.apache.org/documentation/bundles/datasource-providers.html#convert-driver-jars-to-bundle)を参照してください。
 
-バンドルを配置したら、次の手順に従って RDB 永続性を使用してAEMを設定します。
+バンドルを配置したら、以下の手順に従って RDB 永続性を備えた AEM を設定します。
 
 1. データベースのデーモンが起動しており、AEM で使用するためのアクティブなデータベースがあることを確認します。
 1. AEM 6.3 jar をインストールディレクトリにコピーします。
@@ -92,9 +93,9 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `password:` データベースのパスワード。
 
-### URL 文字列形式 {#url-string-formats}
+### URL 文字列の形式 {#url-string-formats}
 
-データソースの設定では、使用する必要のあるデータベースタイプに応じて、異なる URL 文字列形式が使用されます。 AEMが現在サポートしているデータベースの形式の一覧を次に示します。
+データソース設定では、使用する必要のあるデータベースタイプに応じて、異なる URL 文字列の形式を使用します。以下に、AEM で現在サポートされているデータベース向けの形式を一覧で示します。
 
 * `jdbc:postgresql:databasename`（PostgreSQL の場合）
 * `jdbc:db2://localhost:port/databasename`（DB2 用の場合）
@@ -104,6 +105,6 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 ## 既知の制限事項 {#known-limitations}
 
-単一のデータベースを持つ複数のAEMインスタンスの同時使用は RDBMS の永続性でサポートされますが、同時インストールはサポートされません。
+単一データベースでの複数の AEM インスタンスの同時使用は RDBMS の永続性によってサポートされていますが、同時インストールはサポートされていません。
 
 この制限を回避するには、まず 1 つのメンバーでインストールを実行し、最初のインストールが完了した後で、他のメンバーを追加します。

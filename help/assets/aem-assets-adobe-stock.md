@@ -6,10 +6,11 @@ feature: Search, Adobe Stock
 role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2446'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -166,7 +167,7 @@ Adobe 開発者コンソールで、プロジェクトと API を組織レベル
 
 1. デフォルトの **[!UICONTROL Adobe Stock]** 製品プロファイルを選択し、「**[!UICONTROL 設定済み API を保存]**」をクリックします。
 
-1. API が設定されると、API の概要ページにリダイレクトされます。左側のナビゲーションから、 **[!UICONTROL 資格情報]**&#x200B;をクリックし、 **[!UICONTROL サービスアカウント (JWT)]** オプション。 ここで資格情報を表示し、JWT トークンの生成、資格情報の詳細のコピー、クライアントの秘密鍵の取得などのアクションを実行できます。
+1. API が設定されると、API の概要ページにリダイレクトされます。左側のナビゲーションで「**[!UICONTROL 資格情報]**」の下の「**[!UICONTROL サービスアカウント（JWT）]**」オプションをクリックします。ここで資格情報を表示し、JWT トークンの生成、資格情報の詳細のコピー、クライアントの秘密鍵の取得などのアクションを実行できます。
 
 1. 「**[!UICONTROL クライアント資格情報]**」タブから、**[!UICONTROL クライアント ID]** をコピーします。
 
@@ -323,7 +324,7 @@ IMS アカウントを設定するには：
 
 この機能を使用すると、[!DNL Experience Manager Assets] で [!DNL Adobe Stock] アセットを操作できます。[!DNL Experience Manager] のユーザーインターフェイス内から [!DNL Adobe Stock] アセットを検索し、必要なアセットのライセンスを取得できます。
 
-[!DNL Experience Manager] 内で [!DNL Adobe Stock] アセットのライセンスを取得すると、そのアセットを通常のアセットと同様に使用および管理できます。In [!DNL Experience Manager]を使用すると、アセットの検索とプレビュー、アセットのコピーと公開、でのアセットの共有が可能になります。 [!DNL Brand Portal]；を使用してアセットにアクセスし、使用する [!DNL Experience Manager] デスクトップアプリケーションなど。
+[!DNL Experience Manager] 内で [!DNL Adobe Stock] アセットのライセンスを取得すると、そのアセットを通常のアセットと同様に使用および管理できます。ユーザーは [!DNL Experience Manager] 内でアセットの検索およびプレビュー、アセットのコピーおよび公開、[!DNL Brand Portal] でのアセットの共有、[!DNL Experience Manager] Desktop App 経由でのアセットのアクセスおよび使用を行うことができます。
 
 ![[!DNL Adobe Experience Manager] Workspace から [!DNL Adobe Stock] アセットを検索して結果を絞り込む](assets/adobe-stock-search-results-workspace.png)
 
@@ -377,7 +378,7 @@ IMS アカウントを設定するには：
 
 * **ユーザーのライセンスを制限する機能が正しく機能しない**：ストック構成に対する `read` 権限を持つすべてのユーザーは、[!DNL Adobe Stock] アセットを検索してライセンスを取得できます。
 
-* **管理者以外のユーザーは、[!DNL Adobe Stock] クラウド設定を手動でアクティベートする必要がある**：**[!UICONTROL ユーザー環境設定]**&#x200B;ウィンドウで、**[!UICONTROL Stock 設定]**&#x200B;に [!DNL Adobe Stock] クラウド設定は有効になっていますが、管理者以外のユーザーには機能しません。ユーザーは、 **[!UICONTROL 確定]** ボタンをクリックして、Stock 設定を有効にします。 この手順がない場合、システムは **[!UICONTROL Assets]** にアクセスする際にエラーメッセージを反映します。
+* **管理者以外のユーザーは、[!DNL Adobe Stock] クラウド設定を手動でアクティベートする必要がある**：**[!UICONTROL ユーザー環境設定]**&#x200B;ウィンドウで、**[!UICONTROL Stock 設定]**&#x200B;に [!DNL Adobe Stock] クラウド設定は有効になっていますが、管理者以外のユーザーには機能しません。ユーザーは、「**[!UICONTROL 同意する]**」ボタンをクリックして、Stock 設定をアクティベートする必要があります。この手順がない場合、システムは **[!UICONTROL Assets]** にアクセスする際にエラーメッセージを反映します。
 
 * **編集画像の警告が表示されない**：画像のライセンスを取得する場合、ユーザーは画像が「編集のみ使用」かどうか確認できません。管理者は誤用を防ぐために、Admin Console から編集用アセットへのアクセスをオフにできます。
 

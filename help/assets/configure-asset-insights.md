@@ -5,7 +5,8 @@ contentOwner: AG
 role: Architect, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 91%

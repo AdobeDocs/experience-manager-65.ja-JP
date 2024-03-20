@@ -5,10 +5,12 @@ contentOwner: Adobe
 feature: Asset Management,Metadata,Search
 role: User
 hide: true
-source-git-commit: 27eb8a53a198efd2cb059a2884b3b5ed60730806
+exl-id: c84ce84a-1e52-48fd-a16c-38c7769df9af
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +18,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->The [アセットセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en) が呼び出された [アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html) 以前のバージョンの [!DNL Experience Manager].
+>[アセットセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=ja)は、以前のバージョンの [!DNL Experience Manager] では[アセットピッカー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)と呼ばれていました。
 
 アセットセレクターを使用すると、[!DNL Adobe Experience Manager] アセットでアセットを参照、検索およびフィルターすることができます。アセットセレクターを使用して選択したアセットのメタデータを取得できます。アセットセレクターインターフェイスをカスタマイズするには、サポートされているリクエストパラメーターを使用して開始します。これらのパラメーターは、特定のシナリオのアセットセレクターのコンテキストを設定します。
 
@@ -34,7 +36,7 @@ ht-degree: 94%
 
 | 名前 | 値 | 例 | 目的 |
 |---|---|---|---|
-| リソースサフィックス（B） | URL のリソースサフィックスとしてのフォルダーパス：`http://localhost:4502/aem/`<br>`assetpicker.html/<folder_path>` | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えば、フォルダー `/content/dam/we-retail/en/activities` を選択した場合、URL は次のような形式になります。`http://localhost:4502/aem/assetpicker.html`<br>`/content/dam/we-retail/en/activities?assettype=images` | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
+| リソースサフィックス（B） | URL のリソースサフィックスとしてのフォルダーパス：`http://localhost:4502/aem/`<br>`assetpicker.html/<folder_path>` | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えば、フォルダー `/content/dam/we-retail/en/activities` が選択されている場合、URL は次のような形式になります。`http://localhost:4502/aem/assetpicker.html`<br>`/content/dam/we-retail/en/activities?assettype=images` | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
 | mode | single、multiple | `http://localhost:4502/aem/assetpicker.html`<br>`?mode=multiple` <br> `http://localhost:4502/aem/assetpicker.html`<br>`?mode=single` | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
 | dialog | true、false | `http://localhost:4502/aem/assetpicker.html`<br>`?dialog=true` | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
 | root | `<folder_path>` | `http://localhost:4502/aem/`<br>`assetpicker.html?assettype=images`<br>`&root=/content/dam/we-retail/en/activities` | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。この場合、アセットセレクターを使用して、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |
@@ -57,8 +59,8 @@ ht-degree: 94%
 
    ![chlimage_1-443](assets/chlimage_1-443.png)
 
-1. クリック **[!UICONTROL 選択]** をクリックします。
+1. ツールバーの「**[!UICONTROL 選択]**」をクリックします。
 
 >[!MORELIKETHIS]
 >
->* [AEM as a Cloud Serviceのマイクロフロントエンドアセットセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=en)
+>* [AEM as a Cloud Service のマイクロフロントエンドアセットセレクター](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-selector.html?lang=ja)

@@ -5,10 +5,11 @@ contentOwner: AG
 feature: Asset Management
 role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
-source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +67,7 @@ AEM [!DNL Assets] は、[!DNL Experience Manager] プラットフォームに含
 
 * **タグ付け**：[!DNL Assets]タグ付けや分類を行うことができます。[アセットの整理](/help/assets/organize-assets.md)を参照してください。
 
-* **レンディション**：特定のアセットをバイナリで表現したものです。[!DNL Assets] には必ず、アップロードされたファイルの一次表現が含まれます。カスタマイズされたワークフローステップやアセットのアップロード時などに、作成された追加の表現を任意の数個持つことができます。 レンディションには、様々なサイズや解像度のものがあります。また、透かしが追加されていたり、その他の変更された特徴を持つものもあります。
+* **レンディション**：特定のアセットをバイナリで表現したものです。[!DNL Assets] には必ず、アップロードされたファイルの一次表現が含まれます。アセットは、例えば、カスタマイズされたワークフロー手順や、アセットのアップロード時などに作成される追加の表現をいくつでも持つことができます。レンディションには、様々なサイズや解像度のものがあります。また、透かしが追加されていたり、その他の変更された特徴を持つものもあります。
 
 * **バージョン**：バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。これにより、以前のバージョンにアセットを復元できます。[ [!DNL Assets]](manage-assets.md#asset-versioning) のバージョン管理を参照してください。
 

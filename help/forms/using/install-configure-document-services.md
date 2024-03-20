@@ -4,10 +4,11 @@ description: AEM Forms ドキュメントサービスをインストールして
 topic-tags: installing
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5633'
-ht-degree: 95%
+ht-degree: 99%
 
 ---
 
@@ -369,11 +370,11 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms ドキュメントサービスおよびその他の AEM Forms 機能が含まれています。次の手順を実行してパッケージをインストールします。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
+1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」を選択します。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに適したパッケージ名を選択し、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
+1. お使いのオペレーティングシステムに適した Forms アドオンパッケージの名前を選択し、「**[!UICONTROL EULA 利用条件に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」を選択します。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して「**[!UICONTROL インストール]**」をクリックします。
 
@@ -495,7 +496,7 @@ Trust Store 管理を使用すると、電子署名の検証および証明書�
 
 1. AEM Forms インスタンスに管理者としてログインします。
 1. **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Trust Store]** に移動します。
-1. 「**[!UICONTROL Trust Store を作成]**」をクリックします。パスワードを設定し、「 」を選択します。 **[!UICONTROL 保存]**.
+1. 「**[!UICONTROL Trust Store を作成]**」をクリックします。パスワードを設定して「**[!UICONTROL 保存]**」を選択します。
 
 ### Reader 拡張機能および暗号化サービス用の証明書を設定します。 {#set-up-certificates-for-reader-extension-and-encryption-service}
 
@@ -561,12 +562,12 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
  </tbody>
 </table>
 
-### （Windows のみ）Microsoft® Project のレジストリエントリを構成する {#configure-registry-entry-for-microsoft-project}
+### （Windows のみ）Microsoft® Project のレジストリエントリを設定 {#configure-registry-entry-for-microsoft-project}
 
-コンピューターにAEM FormsアドオンとMicrosoft® Project をインストールしたら、64 ビットの場所にあるMicrosoft® Project のエントリを登録します。 これにより、プロジェクトから PDFG 変換テストの実行を容易におこなえます。 レジストリエントリのプロセスの概要を次に示します。
+AEM Forms アドオンと Microsoft® Project をマシンにインストールしたら、64 ビットの場所に Microsoft® Project のエントリを登録します。これにより、プロジェクトから PDFG への変換テストの実行が簡単になります。レジストリエントリのプロセスの概要を示す手順は次のとおりです。
 
-1. Microsoft® Windows レジストリエディター (regedit) を開き、レジストリエディターを開くには、スタート/ファイル名を指定して実行に移動し、「 regedit 」と入力して、「OK」をクリックします。
-1. に移動します。 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp`をクリックし、新しい **バイナリ値** レジストリと名前を変更してから、 **プロジェクト**.
+1. Microsoft® Windows レジストリエディター（regedit）を開きます。レジストリエディターを開くには、スタート／ファイル名を指定して実行に移動し、「regedit」と入力して、「OK」をクリックします。
+1. `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp` に移動し、新しい&#x200B;**バイナリ値**&#x200B;レジストリを作成して、名前を&#x200B;**プロジェクト**&#x200B;に変更します。
 1. 作成したバイナリレジストリのデータ値を 01 に変更し、「OK」をクリックします。
 1. レジストリエントリを閉じます。
 
@@ -802,25 +803,25 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 *プライマリコンバーターからのエラーメッセージ：
 ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
-この問題を解決するには、[Word ファイルまたは Excel ファイルを Windows Server 上で PDF に変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)を参照してください。
+この問題を解決するには、[Windows Server 上で Word ファイルまたは Excel ファイルを PDF に変換できない](/help/forms/using/disable-uac-for-pdfgconfiguration.md)を参照してください。
 
 +++
 
-+++ Windows Server 2019 で Excel ファイルをPDFに変換できません
++++ Windows Server 2019 上で Excel ファイルを PDF に変換できない
 
-Microsoft Excel 2019 をMicrosoft Windows Server 2019 上のPDFに変換する場合は、次の点を確認する必要があります。
+Microsoft® Excel 2019 を Microsoft® Windows Server 2019 上で PDFに変換する場合は、次の点を確認する必要があります。
 
-* PDF Generatorサービスを使用している間、Windows コンピューターはAEMサーバー（Windows RDP セッション）とのアクティブなリモート接続を持つ必要があります。
-* デフォルトのプリンターはAdobe PDFに設定する必要があります。
+* PDF Generator サービスを使用する際は、Windows コンピューターで AEM サーバーとのリモート接続（Windows RDP セッション）をアクティブにしないようにします。
+* デフォルトのプリンターは Adobe PDF に設定する必要があります。
 
   >[!NOTE]
   >* Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
 
 +++
 
-+++ XPS ファイルをPDFに変換できません
++++ XPS ファイルを PDF に変換できない
 
-問題を解決するには、 [Windows で機能固有のレジストリキーを作成する](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
+問題を解決するには、[Windows で機能固有のレジストリキーを作成します](https://helpx.adobe.com/jp/acrobat/kb/unable-convert-xps-to-pdfs.html)。
 
 +++
 

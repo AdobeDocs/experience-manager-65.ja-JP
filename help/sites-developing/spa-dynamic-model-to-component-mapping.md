@@ -1,25 +1,26 @@
 ---
 title: SPA の動的モデルとコンポーネントのマッピング
-description: Adobe Experience Manager用 JavaScript SPA SDK で動的モデルとコンポーネントのマッピングがどのようにおこなわれるかを説明します。
+description: Adobe Experience Manager 用 JavaScript SPA SDK で動的モデルとコンポーネントとのマッピングがどのように行われるかを説明します。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
 # SPA の動的モデルとコンポーネントのマッピング{#dynamic-model-to-component-mapping-for-spas}
 
-このドキュメントでは、Adobe Experience Manager用 JavaScript SPA SDK(AEM) で動的モデルとコンポーネントのマッピングがどのようにおこなわれるかを説明します。
+このドキュメントでは、Adobe Experience Manager（AEM）用 JavaScript SPA SDK で動的モデルとコンポーネントのマッピングがどのように行われるかを説明します。
 
 >[!NOTE]
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
 
 ## ComponentMapping モジュール {#componentmapping-module}
 
@@ -27,7 +28,7 @@ ht-degree: 71%
 
 モデル内の各項目には、AEM リソースタイプを表示する `:type` フィールドが含まれます。フロントエンドコンポーネントは、マウントされると、基になるライブラリから受け取ったモデルのフラグメントを使用して自分自身をレンダリングできます。
 
-詳しくは、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) モデル解析と、モデルへのフロントエンドコンポーネントアクセスの詳細については、を参照してください。
+モデル解析とモデルへのフロントエンドコンポーネントアクセスについて詳しくは、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)を参照してください。
 
 npm パッケージも参照してください。[https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
@@ -38,7 +39,7 @@ AEM 用 JavaScript SPA SDK を使用する単一ページアプリケーショ�
 1. フロントエンドコンポーネントは、自らを[コンポーネントマッピングストア](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module)に登録します。
 1. [モデルプロバイダー](/help/sites-developing/spa-blueprint.md#the-model-provider)でモデルが提供されると、[コンテナ](/help/sites-developing/spa-blueprint.md#container)はそのモデルコンテンツ（`:items`）を反復します。
 
-1. ページがある場合、その子 ( `:children`) 最初に、 [コンポーネントマッピング](/help/sites-developing/spa-blueprint.md#componentmapping) 次に、インスタンス化します。
+1. ページがある場合、そのページの子（`:children`）は、最初に[コンポーネントマッピング](/help/sites-developing/spa-blueprint.md#componentmapping)からコンポーネントクラスを取得してから、取得したクラスをインスタンス化します。
 
 ## アプリの初期化 {#app-initialization}
 

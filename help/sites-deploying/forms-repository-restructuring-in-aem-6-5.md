@@ -6,10 +6,11 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: d555422e-dc97-4d45-9525-4299d22315e2
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 40%
+source-wordcount: '519'
+ht-degree: 42%
 
 ---
 
@@ -93,7 +94,7 @@ ht-degree: 40%
 | **以前の場所** | `/etc/cloudservices/echosign` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
-| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
+| **再構築の手引き** | The [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 ### reCAPTCHA クラウドサービス設定 {#recaptcha-cloud-service-configurations}
@@ -101,7 +102,7 @@ ht-degree: 40%
 | **以前の場所** | `/etc/cloudservices/recaptcha` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
-| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
+| **再構築の手引き** | The [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 ### Typekit クラウドサービス設定 {#typekit-cloud-service-configurations}
@@ -109,7 +110,7 @@ ht-degree: 40%
 | **以前の場所** | `/etc/cloudservices/typekit` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
-| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
+| **再構築の手引き** | The [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 ### その他 {#misc-1}
@@ -117,11 +118,11 @@ ht-degree: 40%
 | **以前の場所** | `/etc/cloudservices/fdm` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
-| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
+| **再構築の手引き** | The [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/designs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp` |
-| **再構築の手引き** | /etc テンプレートへの参照を更新して、その参照を `/libs` 対応する |
+| **再構築の手引き** | /etc テンプレートへの参照を更新して、その参照を指定します。 `/libs` 対応する。 |
 | **備考** | 該当なし |

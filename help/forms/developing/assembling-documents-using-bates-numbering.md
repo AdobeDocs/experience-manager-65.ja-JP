@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1910'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 99%
 
 通し番号を使用すると、個別ページの ID を含む PDF ドキュメントをアセンブリすることができます。*通し番号*&#x200B;は、関連するドキュメントのバッチに一意の ID を適用する方法です。ドキュメント内の各ページ（またはドキュメントのセット）に、ページを一意に識別する通し番号が割り当てられます。例えば、原材料情報を含む、1 つの組立部品の製造に関する生産ドキュメントに、1 つの識別子が割り当てられます。ベイツ番号の数値は連続した増分値で、オプションでプレフィックスやサフィックスが付きます。プレフィックス + 数値 + サフィックスは&#x200B;*通し番号パターン*&#x200B;と言われます。
 
-次の図は、ドキュメントのPDFに一意の ID が含まれるヘッダードキュメントを示しています。
+次のイラストは、ドキュメントのヘッダーに一意の ID を含む PDF ドキュメントを示しています。
 
 ![au_au_batesnumber](assets/au_au_batesnumber.png)
 
@@ -82,7 +83,7 @@ ht-degree: 99%
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **PDF Assembler クライアントの作成**
 

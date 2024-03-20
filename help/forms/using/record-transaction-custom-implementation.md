@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 feature: Transaction Reports
 exl-id: b0c4f72a-e65f-453a-af66-5d9f98a9d6df
-source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 76%

@@ -2,10 +2,11 @@
 title: ページエクスポーター
 description: Adobe Experience Manager（AEM）のページエクスポーターの使用方法を説明します。
 exl-id: 15d08758-cf75-43c0-9818-98a579d64183
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '997'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -148,7 +149,7 @@ design ノードを使用して、エクスポートされるページに使用�
    * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
 * `generic`
-汎用ノードは、clientlibs などのリソースのコピーに使用されます。 `.js` または `.css` ファイルを zip ファイルに保存します。 次のような特徴があります。
+汎用ノードは、clientlibs の `.js` ファイルや `.css` ファイルのようなリソースを zip ファイルにコピーする際に使用します。次のような特徴があります。
 
    * オプション。
    * `/etc/contentsync/templates/<mysite>` の下にある。
@@ -156,7 +157,7 @@ design ノードを使用して、エクスポートされるページに使用�
    * ノードタイプは `nt:unstructured`。
    * `type` プロパティと `type` に関連したプロパティを持ちます。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
-  例えば、次の設定ノードは、 `mysite.clientlibs.js` ファイルを zip ファイルに保存します。
+  例えば、次の設定ノードは `mysite.clientlibs.js` ファイルを zip ファイルにコピーします。
 
   ```xml
   "mysite.clientlibs.js": {

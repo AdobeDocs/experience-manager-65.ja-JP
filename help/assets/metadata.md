@@ -7,10 +7,11 @@ feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2359'
-ht-degree: 99%
+source-wordcount: '2332'
+ht-degree: 100%
 
 ---
 
@@ -41,7 +42,7 @@ ht-degree: 99%
 
 * [!DNL Experience Manager Assets] では、[!UICONTROL プロパティ]ページでアセットのメタデータを手動で追加または編集することができます。
 
-* 以下を使用できます。 [メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles) 機能 [!DNL Experience Manager Assets] ：アセットが DAM にアップロードされたときに、メタデータを自動的に追加します。
+* [!DNL Experience Manager Assets] の[メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles)機能を利用して、アセットが DAM にアップロードされた際に、メタデータを自動的に追加します。
 
 ## [!DNL Experience Manager Assets] でのメタデータの追加または編集 {#add-edit-metadata}
 

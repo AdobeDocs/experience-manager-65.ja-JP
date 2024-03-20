@@ -1,15 +1,16 @@
 ---
 title: AEM 6 での LDAP の設定
-description: AEMで LDAP サービスを使用して設定する方法を説明します。
+description: AEM で LDAP サービスを使用および設定する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1609'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -27,7 +28,7 @@ LDAP サーバーからアカウントが削除されると、検証が許可さ
 
 AEM 6 における LDAP のサポートには新しい実装が含まれており、以前のバージョンとは異なるタイプの設定が必要です。
 
-すべての LDAP 設定を OSGi 設定として使用できるようになりました。 これらは、Web 管理コンソールから次の場所で設定できます。
+すべての LDAP 設定を OSGi 設定として使用できるようになりました。これらは、以下の web 管理コンソールを使用して設定できます。
 `https://serveraddress:4502/system/console/configMgr`
 
 LDAP と AEM を連携するには、次の 3 つの OSGi 設定を作成する必要があります。

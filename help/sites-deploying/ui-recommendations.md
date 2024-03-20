@@ -1,26 +1,27 @@
 ---
 title: 顧客向けのユーザーインターフェイスのレコメンデーション
-description: 従来のユーザーインターフェイスとタッチ操作向けのユーザーインターフェイスに関連する推奨事項のリストです。
+description: クラシックユーザーインターフェイスおよびタッチ操作向けユーザーインターフェイスに関連する推奨事項のリスト。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 30%
+ht-degree: 100%
 
 ---
 
 # 顧客向けのユーザーインターフェイスのレコメンデーション{#user-interface-recommendations-for-customers}
 
-Adobe Experience Managerには、統合Experience CloudUI（タッチ操作対応 UI とも呼ばれます）とクラシック UI の 2 つの UI が用意されています。
+Adobe Experience Manager には、統合された Experience Cloud UI（タッチ操作対応 UI とも呼ばれます）とクラシック UI の 2 つの UI が付属しています。
 
-このドキュメントは、お客様が状況に応じて使用する UI を選択できるようにガイドすることを目的としています。
+このドキュメントでは、状況に応じて顧客がどの UI の使用を選択する必要があるかについて説明します。
 
-目標条件：
+関連用語：
 
 * **UI（または標準の UI）** 5.6.0 でテクノロジープレビューとして導入され、以降のリリースで拡張された最新のユーザーインターフェイス。以前はタッチ操作向け UI またはタッチ UI と呼ばれていた Adobe Experience Cloud の統一されたユーザー体験を基盤としています。
 
@@ -40,63 +41,63 @@ Adobe Experience Managerには、統合Experience CloudUI（タッチ操作対�
 
 ## 一般 {#general}
 
-過去数年の間に、Adobeは、すべてのAdobe Experience Cloudソリューションを統合ユーザーインターフェイスで更新しました。 Experience Cloud・ソリューションをまたいだユーザーは、アプリケーションの使用と運用に関する共通のパターンに基づいて、一貫した経験を得ることができます。 各リリースでは、Adobeは、様々なソリューションをまたいで作業しているお客様からのフィードバックに基づいて、ユーザーインターフェイスを絞り込んでいます。
+過去数年にわたり、アドビではすべての Adobe Experience Cloud ソリューションを統一されたユーザーインターフェイスに更新してきました。Experience Cloud ソリューションのユーザーには、アプリケーションの使用および操作方法について共通のパターンを持つ一貫性のある体験が提供されます。すべてのリリースで、様々なソリューションを使用している顧客からのフィードバックに基づいて、アドビはユーザーインターフェイスを改善しています。
 
-2008 年に導入され、バージョン 5.0 ～ 5.6.1 を実行しているお客様が使用する、Adobe Experience Manager（旧称 CQ5）の元のユーザーインターフェイスは、AEM 6.5 に存在します。これにより、お客様は 6.5 に更新でき、同じユーザーインターフェイスを使用し続けながら、新しい機能を備えた更新済みプラットフォームのメリットを享受できます。
+2008 年に導入され、Adobe Experience Manager（旧称 CQ5）のバージョン 5.0～5.6.1 で使用されていた元のユーザーインターフェイスも、引き続き AEM 6.5 に残されています。そのため、6.5 にアップデートしても、従来と同じユーザーインターフェイスを使用して、新機能を備えたアップデートされたプラットフォームを利用することができます。
 
-Adobeでは、2018/19で新しい UI への切り替えを計画することをお勧めします。 これは、6.5 へのアップデート中に実行することも、アップデート後の別のプロジェクトで実行することもできます。この場合、カスタマイズとコンポーネントダイアログに対する必要な調整が含まれます。
+お客様には、2018 年または 2019 年に新しい UI への切り替えを予定することをお勧めしています。この切り替えは、6.5 にアップデートするときに（またはアップデート後に個別のプロジェクトで）行うことができます。その際に、カスタマイズとコンポーネントダイアログの調整が必要になります。
 
-クラシック UI はAEM 6.4 で非推奨となり、Adobeはクラシック UI のそれ以上の機能強化を予定していません。 クラシック UI は廃止中は引き続き完全にサポートされます。
+クラシック UI は AEM 6.4 で廃止されました。アドビは今後クラシック UI を拡張する予定はありません。クラシック UI は廃止中は引き続き完全にサポートされます。
 
 ### ルールとレコメンデーション {#rules-and-recommendations}
 
-Adobe Experience Manager 6.5 の製品管理からの推奨事項を次に示します。
+Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以下のリストに示します。
 
 <table>
  <tbody>
   <tr>
-   <th>私のプロジェクト…</th>
+   <th>マイプロジェクト</th>
    <th>レコメンデーション</th>
   </tr>
   <tr>
-   <td>Adobe Experience Managerを使い始めたばかりです。</td>
-   <td>デフォルトの UI を使用します。</td>
+   <td>Adobe Experience Manager を使い始めようとしている。</td>
+   <td>デフォルトの UI を使用する。</td>
   </tr>
   <tr>
-   <td><p>しばらくAEMを使用しています。</p> <p>標準搭載の製品 UI を使用し、サイト用のカスタムコンポーネントを開発しました。<br /> </p> </td>
+   <td><p>AEM をしばらくの間使用している。</p> <p>製品の UI をそのまま使用していて、Sites のカスタムコンポーネントを開発している。<br /> </p> </td>
    <td>
     <ol>
-     <li>6.5 に更新しました。</li>
-     <li>サイト管理やアセットなどにデフォルトの UI を使用します。 等。<br /> </li>
-     <li>「ページを編集」アクションを設定して、クラシック UI のページエディターを開きます。 詳しくは、 <a href="#selecting-your-ui">UI の選択</a>.</li>
-    </ol> <p>次に、第 2 段階で、次のようになります。</p>
+     <li>6.5 へのアップデート</li>
+     <li>サイト管理、アセットなどには、デフォルトの UI を使用します。等。<br /> </li>
+     <li>クラシック UI のページエディターを表示するよう「ページを編集」アクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
+    </ol> <p>次に第 2 段階として、</p>
     <ol>
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。 Adobeは、 <a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a> をクリックして、コンポーネントを更新します。</li>
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。アドビでは、コンポーネントの更新に <a href="/help/sites-developing/modernization-tools.md">AEM 最新化ツール</a>を使用することをお勧めします。</li>
     </ol> </td>
   </tr>
   <tr>
    <td>統合により、ClientContext を使用するサイトを構築したことがある。<br /> </td>
    <td>
     <ol>
-     <li>6.5 に更新しました。</li>
-     <li>サイト管理やアセットなどにデフォルトの UI を使用します。 等。</li>
-     <li>「ページを編集」アクションを設定して、クラシック UI のページエディターを開きます。 詳しくは、 <a href="#selecting-your-ui">UI の選択</a>.</li>
-    </ol> <p>次に、第 2 段階で、次のようになります。</p>
+     <li>6.5 へのアップデート</li>
+     <li>サイト管理、アセットなどには、デフォルトの UI を使用します。等。</li>
+     <li>クラシック UI のページエディターを表示するよう「ページを編集」アクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
+    </ol> <p>次に第 2 段階として、</p>
     <ol>
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。 Adobeは、 <a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a> をクリックして、コンポーネントを更新します。</li>
-     <li>ContextHub を設定し (ClientContextの代わり )、ContextHub を使用するようにページテンプレートを更新します。 ContextHub には、カスタムモードストアを読み込むことができる互換性ClientContextがあります。</li>
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。アドビでは、コンポーネントの更新に <a href="/help/sites-developing/modernization-tools.md">AEM 最新化ツール</a>を使用することをお勧めします。</li>
+     <li>ContextHub（ClientContext の後継）を設定し、ContextHub を使用するようページテンプレートを更新します。Context Hub には、カスタム ClientContext ストアの読み込みを許可する互換モードが用意されています。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td><p>CQ/AEMを長年使用しています。</p> <p>製品 UI（Site Admin など）を拡張し、広範な編集ダイアログを使用してコンポーネントを構築済み。</p> </td>
-   <td><p>6.5 に更新し、すべてのユーザーのページオーサリングのデフォルトとしてクラシック UI を設定します。 詳しくは、 <a href="#selecting-your-ui">UI の選択</a>.</p> <p>次に、プロジェクトを開始してカスタマイズを適用し、Coral 3 形式のコンポーネントダイアログを最適化します。 詳しくは、 <a href="#resources-to-help">役立つリソース</a>.<br /> </p> </td>
+   <td><p>CQ／AEM を長年使用している。</p> <p>製品 UI（サイト管理者など）を拡張し、詳細な編集ダイアログでコンポーネントを構築したことがある。</p> </td>
+   <td><p>6.5 にアップデートし、すべてのユーザーに対するページオーサリングのデフォルトとしてクラシック UI を設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</p> <p>次に、プロジェクトを開始してカスタマイズを適用し、コンポーネントダイアログを Coral 3 形式で最適化します。<a href="#resources-to-help">役に立つリソース</a>を参照してください。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
 ### FAQ {#faq}
 
-ナレッジベースの記事を参照してください。 [タッチ操作対応 UI オーサリングに関する FAQ](https://helpx.adobe.com/jp/experience-manager/kb/index/touchui_faq.html)（クラシック UI の廃止予定に関する情報など）
+詳しくは、ナレッジベースの記事 [Touch UI Authoring FAQ](https://helpx.adobe.com/jp/experience-manager/kb/index/touchui_faq.html) を参照してください。クラシック UI の廃止予定に関する情報も提供しています。
 
 ### UI の選択 {#selecting-your-ui}
 
@@ -104,19 +105,19 @@ Adobe Experience Manager 6.5 の製品管理からの推奨事項を次に示し
 
 ### タッチ操作対応 UI のステータス {#touch-enabled-ui-status}
 
-AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは、 [新機能](/help/release-notes/release-notes.md#what-s-new) 」を参照してください。
+AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは、リリースノートの[新機能](/help/release-notes/release-notes.md#what-s-new)を参照してください。
 
 全体的な概要については、[タッチ操作対応 UI 機能のステータス](/help/release-notes/touch-ui-features-status.md)ページを参照してください。
 
-### 役立つリソース {#resources-to-help}
+### 役に立つリソース {#resources-to-help}
 
-基本操作の背景情報は次のとおりです。
+基本処理の背景情報については、以下を参照してください。
 
 * [ページのオーサリング](/help/sites-authoring/page-authoring.md).
 
-開発に関する詳細な情報は、次のとおりです。
+開発情報について詳しくは、以下を参照してください。
 
-* [タッチ操作対応 UI のアーキテクチャ](/help/sites-developing/touch-ui-concepts.md).
+* [タッチ操作対応 UI のアーキテクチャ](/help/sites-developing/touch-ui-concepts.md)。
 * [AEM 最新化ツール](/help/sites-developing/modernization-tools.md)を使用して、コンポーネントの編集ダイアログを、クラシック UI からタッチ操作対応 UI に変換します。
 
 * [タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)

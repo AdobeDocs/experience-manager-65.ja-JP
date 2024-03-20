@@ -1,16 +1,17 @@
 ---
 title: SPA およびサーバーサイドレンダリング
-description: Adobe Experience ManagerでのSPAとサーバーサイドレンダリングについて説明します。
+description: Adobe Experience Manager での SPA とサーバーサイドレンダリングについて説明します。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1659'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -18,11 +19,11 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
 
 >[!NOTE]
 >
->このドキュメントで説明するように、SPAのサーバーサイドレンダリング機能を使用するには、Adobe Experience Manager(AEM)6.5.1.0 以降が必要です。
+>このドキュメントで説明する SPA サーバー側のレンダリング機能を使用するには、Adobe Experience Manager（AEM）6.5.1.0 以降が必要です。
 
 ## 概要 {#overview}
 
@@ -41,7 +42,7 @@ SSR を実装することを決定する際には、長期的なメンテナン�
 * **SEO：**&#x200B;トラフィックをもたらす検索エンジンにより、サイトのインデックスを適切に作成するために SSR が実際に必要ですか。メインの検索エンジンクローラーが JS を評価するようになったことに注意してください。
 * **ページ速度：** SSR によって実際の環境の速度が大幅に上がり、全体的なユーザーエクスペリエンスが向上しますか。
 
-この 2 つの質問のうち少なくとも 1 つに対して明確に「はい」と答えた場合にのみ、プロジェクトで SSR を実装するようお勧めします。次の節では、Adobe I/O Runtime を使用してこれをおこなう方法について説明します。
+この 2 つの質問のうち少なくとも 1 つに対して明確に「はい」と答えた場合にのみ、プロジェクトで SSR を実装するようお勧めします。次の節では、Adobe I/O Runtime を使用してこれを行う方法について説明します。
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
@@ -49,8 +50,8 @@ SSR を実装することを決定する際には、長期的なメンテナン�
 
 Adobe I/O Runtime について詳しくは、以下を参照してください。
 
-* [https://developer.adobe.com/runtime/](https://developer.adobe.com/runtime/)  — サービスの概要
-* [https://developer.adobe.com/runtime/docs/](https://developer.adobe.com/runtime/docs/)  — プラットフォームに関する詳細なドキュメント
+* [https://developer.adobe.com/runtime/](https://developer.adobe.com/runtime/) - サービスの概要
+* [https://developer.adobe.com/runtime/docs/](https://developer.adobe.com/runtime/docs/) - プラットフォームに関する詳細なドキュメント
 
 次の節では、2 つの異なるモデルで、SPA に SSR を実装する際に Adobe I/O Runtime を使用する方法について詳しく説明します。
 
@@ -65,7 +66,7 @@ Adobe I/O Runtime について詳しくは、以下を参照してください�
 
 ## リモートレンダラーの設定 {#remote-renderer-configuration}
 
-AEM は、リモートレンダリングされたコンテンツをどこで取得できるかを把握している必要があります。次に関係なく [SSR に実装するモデル](#adobe-i-o-runtime)を使用する場合は、このリモートレンダリングサービスへのアクセス方法をAEMに指定する必要があります。
+AEM は、リモートレンダリングされたコンテンツをどこで取得できるかを把握する必要があります。[SSR にどのモデルを実装するかに関係なく](#adobe-i-o-runtime)、AEM にこのリモートレンダリングサービスへのアクセス方法を指定する必要があります。
 
 これは、**RemoteContentRenderer - Configuration Factory OSGi サービス**&#x200B;を介しておこなわれます。`http://<host>:<port>/system/console/configMgr` の Web コンソール設定コンソールで、文字列「RemoteContentRenderer」を検索します。
 
@@ -120,11 +121,11 @@ SSR を使用する場合、AEM にある SPA の[コンポーネントインタ
    <th><strong>デメリット</strong></th>
   </tr>
   <tr>
-   <th><strong>AEMを使って</strong><br /> </th>
+   <th><strong>AEM を使って</strong><br /> </th>
    <td>
     <ul>
-     <li>AEM は必要に応じてライブラリの挿入を管理する</li>
-     <li>AEMでのみリソースを管理<br /> </li>
+     <li>AEM の必要に応じたライブラリ挿入の管理</li>
+     <li>AEM のリソースの管理<br /> </li>
     </ul> </td>
    <td>
     <ul>
@@ -139,7 +140,7 @@ SSR を使用する場合、AEM にある SPA の[コンポーネントインタ
     </ul> </td>
    <td>
     <ul>
-     <li>CSS や JavaScript などのアプリケーションで必要な Clientlib リソースは、AEMデベロッパーが、 <code><a href="/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet">allowProxy</a></code> プロパティ<br /> </li>
+     <li>CSS や JavaScript などのアプリケーションに必要な Clientlib リソースは、AEM 開発者が <code><a href="/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet">allowProxy</a></code> プロパティ<br />を使用して利用できるようにする必要があります </li>
      <li>リソースは AEM と Adobe I/O Runtime の間で同期する必要がある<br /> </li>
      <li>SPA のオーサリングを可能にするには、Adobe I/O Runtime のプロキシサーバーが必要になる場合がある</li>
     </ul> </td>
@@ -149,15 +150,15 @@ SSR を使用する場合、AEM にある SPA の[コンポーネントインタ
 
 ## SSR の計画 {#planning-for-ssr}
 
-アプリケーションの一部のみがサーバーサイドでレンダリングされる必要があります。 一般的な例として、ページの初回読み込み時に一画面に表示されるコンテンツが、サーバーサイドでレンダリングされます。既にレンダリングされたコンテンツをクライアントに配信することで時間を節約できます。ユーザーが SPA とやり取りすると、追加のコンテンツがクライアントによってレンダリングされます。
+サーバーサイドでレンダリングする必要があるのはアプリケーションの一部のみです。一般的な例として、ページの初回読み込み時に一画面に表示されるコンテンツが、サーバーサイドでレンダリングされます。既にレンダリングされたコンテンツをクライアントに配信することで時間を節約できます。ユーザーが SPA とやり取りすると、追加のコンテンツがクライアントによってレンダリングされます。
 
 SPA にサーバーサイドレンダリングの実装を検討する場合は、アプリのどの部分について必要かを確認してください。
 
 ## SSR を使用した SPA の開発 {#developing-an-spa-using-ssr}
 
-SPA コンポーネントは、クライアント（ブラウザー内）またはサーバーサイドでレンダリングできます。サーバーサイドでレンダリングすると、ウィンドウのサイズや位置などのブラウザーのプロパティは存在しません。したがって、SPAのコンポーネントは、レンダリングされる場所を前提としない、同型のものである必要があります。
+SPA コンポーネントは、クライアント（ブラウザー内）またはサーバーサイドでレンダリングできます。サーバーサイドでレンダリングすると、ウィンドウのサイズや位置などのブラウザーのプロパティは存在しません。したがって、SPA のコンポーネントは、レンダリングされる場所を前提としない、同型のものである必要があります。
 
-SSR を使用するには、サーバーサイドレンダリングを担当するAEMとAdobe I/O Runtimeにコードをデプロイします。 ほとんどのコードは同じですが、サーバー固有のタスクは異なります。
+SSR を使用するには、AEM と、サーバーサイドレンダリングを行う Adobe I/O Runtime にコードをデプロイします。ほとんどのコードは同じですが、サーバー固有のタスクは異なります。
 
 ## AEM の SPA 向け SSR {#ssr-for-spas-in-aem}
 
@@ -168,7 +169,7 @@ AEM が標準で Angular および React SPA フレームワークをサポー�
 * React：[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 * Angular：[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/angular-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/angular-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
-単純な例については、 [We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal). アプリケーションサーバー側全体をレンダリングします。これは実際の例ではありませんが、SSR の実装に必要な事項を示しています。
+単純な例について詳しくは、[We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)を参照してください。アプリケーションサーバー側全体をレンダリングします。これは実際の例ではありませんが、SSR の実装に必要な事項を示しています。
 
 >[!CAUTION]
 >
@@ -190,7 +191,7 @@ Adobe I/O Runtime は、AEM にSPA 用の SSR を実装する場合に推奨さ�
 
 >[!NOTE]
 >
->SSR を Node.js 経由で実装する必要がある場合は、AEM環境（オーサー、パブリッシュ、ステージなど）ごとに個別の Node.js インスタンスを使用することをAdobeにお勧めします。
+>SSR を Node.js 経由で実装する必要がある場合、アドビでは AEM 環境（オーサー、パブリッシュ、ステージなど）ごとに個別の Node.js インスタンスを使用することをお勧めします。
 
 ## リモートコンテンツレンダラー {#remote-content-renderer}
 
@@ -206,7 +207,7 @@ AEM で SSR を SPA と使用するために必要な[リモートコンテン�
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
-`RemoteContentRendererRequestHandlerServlet` を使用して、要求の設定をプログラムで作成できます。`DefaultRemoteContentRendererRequestHandlerImpl`では、デフォルトのリクエストハンドラーの実装が提供されています。複数の OSGi 設定を作成して、コンテンツ構造内の場所をリモートエンドポイントにマッピングできます。
+`RemoteContentRendererRequestHandlerServlet` は、リクエストの設定をプログラムで行うのに使用できます。`DefaultRemoteContentRendererRequestHandlerImpl` では、デフォルトのリクエストハンドラーの実装が提供されており、コンテンツ構造内の場所をリモートエンドポイントにマップするために、複数の OSGi 設定を作成できます。
 
 カスタム要求ハンドラーを追加するには、`RemoteContentRendererRequestHandler` インターフェイスを実装します。`Constants.SERVICE_RANKING` コンポーネントプロパティは、100（`DefaultRemoteContentRendererRequestHandlerImpl` のランク）より大きい整数に設定してください。
 
@@ -225,7 +226,7 @@ public class CustomRemoteContentRendererRequestHandlerImpl implements RemoteCont
 
 ### リモートコンテンツレンダラーの使用 {#usage}
 
-サーブレットがページにインジェクト可能なコンテンツを取得して返すには、以下をおこないます。
+サーブレットがページにインジェクト可能なコンテンツを取得して返すには、次の操作を実行します。
 
 1. リモートサーバーがアクセス可能であることを確認します。
 1. AEM コンポーネントの HTL テンプレートに次のスニペットのいずれかを追加します。

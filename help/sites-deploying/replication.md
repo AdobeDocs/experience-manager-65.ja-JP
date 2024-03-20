@@ -8,10 +8,11 @@ topic-tags: configuring
 docset: aem65
 feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3363'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -105,13 +106,14 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 * [デフォルトエージェント](#replication-author-to-publish)
 オーサー環境からパブリッシュ環境へのレプリケーションに使用します。
 
-* Dispatcher フラッシュ Dispatcher キャッシュの管理に使用されます。 詳しくは、 [オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) および [パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance) を参照してください。
+* Dispatcher フラッシュ
+Dispatcher キャッシュの管理に使用します。詳しくは、[オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)および[パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance)を参照してください。
 
 * [リバースレプリケーション](#reverse-replication-publish-to-author)
 パブリッシュ環境からオーサー環境へのレプリケーションに使用します。リバースレプリケーションは、フォーラム、ブログ、コメントなどのコミュニティ機能には使用されません。アウトボックスが有効化されていないので、事実上、この機能は無効になっています。リバースレプリケーションを使用するには、カスタム設定が必要になります。
 
 * 静的エージェント
-これは、「ノードの静的な表現をファイルシステムに格納するエージェント」です。例えば、デフォルト設定では、コンテンツページと DAM アセットは、 `/tmp`(HTMLまたは適切なアセット形式 ) 設定については、`Settings` タブと `Rules` タブを参照してください。これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
+これは、「ノードの静的な表現をファイルシステムに格納するエージェント」です。例えば、デフォルト設定では、コンテンツページと DAM アセットが HTML または適切なアセット形式として、`/tmp` に格納されます。設定については、`Settings` タブと `Rules` タブを参照してください。これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
 
 ## レプリケーションエージェント - 設定パラメーター {#replication-agents-configuration-parameters}
 
@@ -307,7 +309,7 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 
 * **プロトコルのバージョン**
 
-  プロトコルのバージョン。 例： `1.0` （HTTP/1.0 用）
+  プロトコルのバージョンです。例えば、HTTP/1.0 の場合は `1.0` です。
 
 #### トリガー {#triggers}
 
@@ -351,7 +353,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 >[!NOTE]
 >
->Dispatcher がオーサーインスタンスまたはパブリッシュインスタンスの HTTP 要求を処理する場合、レプリケーションエージェントからの HTTP 要求には PATH ヘッダーを含める必要があります。以下の手順に加えて、PATH ヘッダーをクライアントヘッダーの Dispatcher リストに追加する必要があります。 詳しくは、 [/clientheaders （クライアントヘッダー）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders).
+>Dispatcher がオーサーインスタンスまたはパブリッシュインスタンスの HTTP リクエストを処理する場合は、レプリケーションエージェントからの HTTP リクエストに PATH ヘッダーが含まれている必要があります。次の手順に加えて、クライアントヘッダーの Dispatcher のリストに PATH ヘッダーを追加する必要があります。[/clientheaders（クライアントヘッダー）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#specifying-the-http-headers-to-pass-through-clientheaders)を参照してください。
 >
 
 1. AEM の「**ツール**」タブにアクセスします。
@@ -519,7 +521,7 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
 
 1. AEM の「**ツール**」タブにアクセスします。
 1. 「**レプリケーション**」をクリックします。
-1. 適切な環境のエージェントへのリンク（左または右のウィンドウ）をダブルクリックします。 例： **作成者のエージェント**.
+1. 適切な環境のエージェントへのリンクをダブルクリックします（左右いずれかのパネル）。（「**作成者のエージェント**」など。）
 
    結果のウィンドウが開き、オーサー環境のすべてのレプリケーションエージェントの概要が、それぞれのターゲットとステータスを含めて表示されます。
 

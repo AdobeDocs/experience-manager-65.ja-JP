@@ -1,15 +1,16 @@
 ---
 title: 処理に時間のかかるクエリのトラブルシューティング
-description: Adobe Experience Managerで低速なクエリをトラブルシューティングする方法を説明します。
+description: Adobe Experience Manager での処理に時間のかかるクエリのトラブルシューティング方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
@@ -317,7 +318,7 @@ AEM では、以下のクエリ言語をサポートしています。
 ## 既存のインデックスのチューニング {#existing-index-tuning}
 
 1. 最適なクエリがプロパティインデックスに解決される場合、プロパティインデックスでは最小限のチューニングのみが可能なので、他にすることはありません。
-1. できることがある場合、クエリは Lucene プロパティインデックスに解決される必要があります。解決できるインデックスがない場合は、インデックスの作成に進みます。
+1. できることがある場合、クエリは Lucene プロパティインデックスに解決される必要があります。解決できるインデックスがない場合は、「インデックスの作成」に進んでください。
 1. 必要に応じて、クエリを XPath または JCR-SQL2 に変換します。
 
    * **Query Builder クエリ**

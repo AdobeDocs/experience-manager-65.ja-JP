@@ -1,15 +1,16 @@
 ---
 title: アセットの操作
-description: オーサー環境とツールのセクションでは、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assetsでは、他のアセット操作方法を使用できます。
+description: オーサー環境とツールのセクションでは、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: daf5c934-8a98-4891-94a1-029056d87931
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 

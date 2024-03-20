@@ -1,13 +1,14 @@
 ---
 title: ワークフローステップのリファレンス
-description: Adobe Experience Managerのワークフローについては、この手順のリファレンスを参照してください。
+description: Adobe Experience Manager のワークフローについては、このステップのリファレンスを参照してください。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
-source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3227'
 ht-degree: 99%

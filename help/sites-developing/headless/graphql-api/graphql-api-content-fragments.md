@@ -3,7 +3,9 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+solution: Experience Manager, Experience Manager Sites
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4796'
 ht-degree: 96%
@@ -254,7 +256,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | 1 行のテキスト | `String`、`[String]` | 作成者名、場所名などの単純な文字列に使用します。 |
 | 複数行のテキスト | `String` |  記事の本文などのテキストを出力するために使用します |
 | Number |  `Float`、`[Float]` | 浮動小数点数と整数を表示するために使用します |
-| Boolean |  `Boolean` |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
+| ブーリアン |  `Boolean` |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
 | 日時 | `Calendar` |  日時を ISO 8086 形式で表示するために使用します。選択したタイプに応じて、AEM GraphQL で使用できるフレーバーは、`onlyDate`、`onlyTime`、`dateTime` の 3 つです。 |
 | 定義済みリスト |  `String` |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  `[String]` |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |

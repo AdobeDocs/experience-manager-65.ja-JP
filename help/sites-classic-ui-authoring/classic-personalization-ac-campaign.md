@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: a4717cb8-b70c-4150-b816-35e9b871e792
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1185'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 91%
 
 AEM でメールコンテンツを作成して、Adobe Campaign のメールで処理することができます。これを実行するには、次の手順に従う必要があります。
 
-1. AEMでAdobe Campaign固有のテンプレートからニュースレターを作成します。
+1. AEM で、Adobe Campaign 固有のテンプレートからニュースレターを作成します。
 1. すべての機能にアクセスするには、コンテンツを編集する前に [Adobe Campaign サービス](#selectingtheadobecampaigncloudservice)を選択します。
 1. コンテンツを編集します。
 1. コンテンツを検証します。
@@ -52,7 +53,7 @@ Adobe Campaign のコンテンツを AEM 内で作成する場合は、すべて
 
    >[!NOTE]
    >
-   >[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md#weretail)。サンプルGeometrixxコンテンツをパッケージ共有からダウンロードします。
+   >[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md#weretail)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -81,7 +82,7 @@ Adobe Campaign と統合するには、Adobe Campaign Cloud Service をページ
 
    >[!NOTE]
    >
-   >必ず「 **OK** または **適用** クラウドサービスを追加した後。 そうすると、「**Adobe Campaign**」タブが正しく機能するようになります。
+   >クラウドサービスを追加した後、必ず「**OK**」または「**適用**」をクリックしてください。そうすると、「**Adobe Campaign**」タブが正しく機能するようになります。
 
 1. デフォルトの&#x200B;**メール**&#x200B;テンプレート以外の、（Adobe Campaign の）特定のメール配信テンプレートを適用したい場合は、「**ページのプロパティ**」を再度選択します。「**Adobe Campaign**」タブで、関連する Adobe Campaign インスタンス内でのメール配信テンプレートの内部名を入力します。
 
@@ -111,8 +112,8 @@ Adobe Campaign と統合するには、Adobe Campaign Cloud Service をページ
 
 コンテンツを編集する際に、以下を挿入できます。
 
-* Adobe Campaign コンテキストフィールド。これらは、受信者のデータ（名、姓またはターゲットディメンションの任意のデータなど）に応じてテキスト内に適応させるために挿入できるフィールドです。
-* Adobe Campaign パーソナライゼーションブロック。これらは、ブランドロゴやミラーページへのリンクなど、受信者のデータとは関係のない定義済みコンテンツのブロックです。
+* Adobe Campaign コンテキストフィールド。これらは、受信者のデータ（姓名、ターゲットディメンションのデータなど）に応じて変化する値をテキスト内に挿入するためのフィールドです。
+* Adobe Campaign パーソナライゼーションブロック。ブランドのロゴやミラーページへのリンクなど、受信者のデータに関係なく表示される、事前定義されたコンテンツのブロックです。
 
 Campaign コンポーネントについて詳しくは、[Adobe Campaign コンポーネント](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)を参照してください。
 
@@ -143,7 +144,7 @@ Campaign コンポーネントについて詳しくは、[Adobe Campaign コン�
 
 ### ニュースレターのプレビュー {#previewing-a-newsletter}
 
-ニュースレターの外観とパーソナライゼーションのプレビューをプレビューできます。
+ニュースレターがどのように表示されるかをプレビューでき、パーソナライゼーションをプレビューできます。
 
 1. プレビューするニュースレターを開き、プレビュー（虫眼鏡）アイコンをクリックすると、サイドキックが小さく折りたたまれます。
 1. メールクライアントのアイコンをクリックすると、各メールクライアントでニュースレターがどのように表示されるかを確認できます。

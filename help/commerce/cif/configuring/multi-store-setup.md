@@ -7,10 +7,11 @@ activity: setup
 audience: administrator
 feature: Commerce Integration Framework
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -36,11 +37,11 @@ AEM サイトと AEM CIF コアコンポーネントを専用のストア表示�
 
 3. 次の手順に従って、CIF Cloud Service 設定の子設定を作成します。
 
-   * AEMで、ツール/一般/に移動します。 [設定ブラウザー](/help/sites-administering/configurations.md#using-configuration-browser)
+   * AEM で、ツール／一般／[設定ブラウザー](/help/sites-administering/configurations.md#using-configuration-browser)に移動します。
    * 作成したベース設定を選択します。
    * 上記のポイント 2 で説明した手順を使用して、設定を作成します。
 
-   この新しい設定は、ベース設定の子設定として作成されます。ツール/一般/設定ブラウザーに移動して、設定を作成できるようになりました。
+   この新しい設定は、ベース設定の子設定として作成されます。ツール／一般／設定ブラウザーに移動して、設定を作成できます。
 
    >[!TIP]
    >
@@ -49,7 +50,7 @@ AEM サイトと AEM CIF コアコンポーネントを専用のストア表示�
 4. AEM サイトに子設定を割り当てます。
 
    * AEM Sites コンソールに移動します。
-   * サイト構造の地域または言語ルート（例：/content/venia/us）に移動します。 _または_ Venia サンプルページの場合は/content/venia/us/en
+   * サイト構造の地域または言語のルート（Venia サンプルページの場合は /content/venia/us _または_ /content/venia/us/en）に移動します。
    * ページを選択し、ページのプロパティを開きます。
    * 「詳細」タブを選択します。
    * `Configuration` セクションで、手順で作成した設定を選択します。

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2080'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -52,8 +53,8 @@ AEM ワークフローモデルでは、次のことができます。
 変数を作成するには、次の手順を実行します。
 
 1. AEM インスタンスで、![ツール](/help/forms/using/assets/hammer.png)／ワークフロー／モデルに移動します。
-1. 選択 **[!UICONTROL 作成]** ワークフローモデルのタイトルと名前（オプション）を指定します。 モデルを選択し、「 」を選択します。 **[!UICONTROL 編集]**.
-1. ワークフローモデルのサイドキックで使用可能な変数アイコンを選択し、「 」を選択します。 **[!UICONTROL 変数を追加]**.
+1. 「**[!UICONTROL 作成]**」を選択し、ワークフローモデルのタイトルとオプション名を指定します。モデルを選択し、「**[!UICONTROL 編集]**」を選択します。
+1. ワークフローモデルのサイドキックにある使用可能な変数アイコンを選択し、「**[!UICONTROL 変数を追加]**」を選択します。
 
    ![変数を追加](assets/variables_add_variable_new.png)
 
@@ -65,7 +66,7 @@ AEM ワークフローモデルでは、次のことができます。
    * フォームデータモデル - フォームデータモデルのパスを指定します。
    * ArrayList - コレクションのサブタイプを指定します。
 
-1. 変数の説明を任意で指定し、「 」を選択します。 ![done_icon](assets/done_icon.png) をクリックして変更を保存します。 変数は、左側のペインで使用可能なリストに表示されます。
+1. 変数の説明（オプション）を指定し、![done_icon](assets/done_icon.png) を選択して変更を保存します。変数は、左側のペインで使用可能なリストに表示されます。
 
 変数を作成する場合、次のプラクティスをお勧めします。
 
@@ -99,10 +100,10 @@ AEM ワークフローモデルでは、次のことができます。
 変数間のマッピングを追加するには、次の手順を実行します。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「ステップ」アイコンを選択します。
-1. 次をドラッグ&amp;ドロップ： **変数を設定** ワークフローエディターにステップを移動し、ステップを選択して「 」を選択します。 ![configure_icon](assets/configure_icon.png) （設定）を参照してください。
+1. 「**変数を設定**」ステップをワークフローエディターにドラッグ＆ドロップし、ステップを選択して ![configure_icon](assets/configure_icon.png)（設定）を選択します。
 1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
-1. より多くの変数をマップして、意味のある式を作成します。選択 ![done_icon](assets/done_icon.png) をクリックして変更を保存します。
+1. より多くの変数をマップして、意味のある式を作成します。![done_icon](assets/done_icon.png) を選択して、変更を保存します。
 
 ### 例 1：XML 変数をクエリして、文字列変数の値を設定 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -171,7 +172,7 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
-同様に、外部スクリプトパスを選択するか、ルーティング式の ECMA スクリプトを指定して、アクティブな分岐を評価します。選択 **[!UICONTROL ブランチ名を変更]** をクリックして、ブランチの別の名前を指定します。
+同様に、外部スクリプトパスを選択するか、ルーティング式の ECMA スクリプトを指定して、アクティブな分岐を評価します。「**[!UICONTROL 分岐名の変更]**」を選択して、分岐に別名を指定します。
 
 その他の例については、[ワークフローモデルの作成](../../forms/using/aem-forms-workflow.md#create-a-workflow-model)を参照してください。
 
@@ -283,9 +284,9 @@ Forms Workflow を使用して処理されるデータには、個人を特定�
 
 ## 変数の編集 {#edit-a-variable}
 
-1. ワークフローを編集ページで、ワークフローモデルのサイドキックにある変数アイコンを選択します。 左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
-1. を選択します。 ![編集](assets/edit.png) （編集）編集する変数名の横にあるアイコン。
-1. 変数情報を編集し、「 」を選択します。 ![done_icon](assets/done_icon.png) をクリックして変更を保存します。 変数の「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドは編集できません。
+1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンを選択します。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
+1. 編集する変数名の横にある「![編集](assets/edit.png)」アイコンを選択します。
+1. 変数情報を編集し、![done_icon](assets/done_icon.png) を選択して変更を保存します。変数の「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドは編集できません。
 
 ## 変数の削除 {#delete-a-variable}
 
@@ -293,10 +294,10 @@ Forms Workflow を使用して処理されるデータには、個人を特定�
 
 以下の手順を実行し、変数を削除します。
 
-1. ワークフローを編集ページで、ワークフローモデルのサイドキックにある変数アイコンを選択します。 左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
-1. 削除する変数名の横にある削除アイコンを選択します。
-1. 選択 ![done_icon](assets/done_icon.png) をクリックして、変数を確定および削除します。
+1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンを選択します。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
+1. 削除する変数名の横にある「削除」アイコンを選択します。
+1. ![done_icon](assets/done_icon.png) を選択して、変数を確認して削除します。
 
 ## 参照 {#references}
 
-AEM Forms Workflow ステップでの変数の使用例について詳しくは、 [AEMワークフロー内の変数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/variables-aem-workflow/introduction.html?lang=ja).
+AEM Forms Workflow ステップで変数を使用するその他の例については、[AEM ワークフローの変数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/variables-aem-workflow/introduction.html?lang=ja)を参照してください。

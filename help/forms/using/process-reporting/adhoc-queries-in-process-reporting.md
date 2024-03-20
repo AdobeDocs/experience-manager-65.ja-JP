@@ -6,10 +6,11 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -93,7 +94,7 @@ ht-degree: 98%
 クエリを作成した後、**フィルターを作成**&#x200B;パネルの右上隅のオプションを使用します。
 
 * **キャンセル**：変更をキャンセルし、**マイフィルター**&#x200B;パネルに戻ります。
-* **実行**：現在のクエリを実行して、結果を確認または検証します。この場合、クエリを実行する前にクエリを保存する必要はありません。結果を確認し、必要に応じて変更し、出力が完了したらクエリを保存できます。
+* **実行**：現在のクエリを実行して、結果を確認または検証します。この場合、クエリを実行する前にクエリを保存する必要はありません。結果を確認し、必要に応じて変更して、出力に満足したらクエリを保存できます。
 * **保存**：フィルターを保存します。その後、フィルターを&#x200B;**マイフィルター**&#x200B;パネルで表示して実行できます。
 
 ### マイフィルターパネルのオプション {#options-in-my-filters-panel}

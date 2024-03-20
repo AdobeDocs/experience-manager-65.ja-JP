@@ -1,16 +1,17 @@
 ---
 title: モバイル web
-description: AEMは、モバイルデバイス用のサイトを開発し、コンテンツをモバイルアプリケーションに統合するためのツールを提供します。
+description: AEM には、モバイルデバイス用のサイトを開発したり、コンテンツをモバイルアプリケーションに統合したりするための複数のツールがあります。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile
 exl-id: 309d256b-c67c-4df9-8851-b1ee3faa55ed
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
@@ -18,15 +19,15 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-AEMには、モバイルデバイス用のサイトを開発したり、コンテンツをモバイルアプリケーションに統合したりするためのツールがいくつか用意されています。
+AEM には、モバイルデバイス用のサイトを開発したり、コンテンツをモバイルアプリケーションに統合したりするための複数のツールがあります。
 
-このページは、 [作成者向けモバイルページ](/help/sites-authoring/mobile.md).
+このページは、[モバイルページのオーサリング](/help/sites-authoring/mobile.md)に関するページと併せてお読みください。
 
-## モバイル用 Web サイトの開発 {#developing-web-sites-for-mobile}
+## モバイル用 web サイトの開発 {#developing-web-sites-for-mobile}
 
-モバイルデバイスを使用して表示するように最適化されたページテンプレートおよびコンポーネントを開発します。 複数の画面サイズに調整されるレスポンシブレイアウトを使用するページを開発するか、特定の画面サイズに最適化されたページを開発します。 AEM が提供するデバイスエミュレーターを使用するか、WYSIWYG オーサリングとプレビュー用の独自のエミュレーターを作成します。
+モバイルデバイスでの表示用に最適化されたページテンプレートとコンポーネントを開発します。複数の画面サイズに対応したレスポンシブレイアウトを使用するページを開発します。または、特定の画面サイズ用に最適化されたページを開発します。AEM が提供するデバイスエミュレーターを使用するか、WYSIWYG オーサリングとプレビュー用の独自のエミュレーターを作成します。
 
 * [デバイスグループフィルターの作成](/help/sites-developing/groupfilters.md)
 * [Web ページのレスポンシブデザイン](/help/sites-developing/responsive.md)
@@ -35,4 +36,4 @@ AEMには、モバイルデバイス用のサイトを開発したり、コン�
 
 ## モバイルアプリの開発 {#developing-mobile-apps}
 
-アプリケーションインターフェイスとしてAEMページを使用するモバイルアプリケーションを開発します。 AEMは PhoneGap と統合されているので、AEMページを使用して簡単にアプリを作成できます。 コンテンツ同期を使用すると、アプリとのバンドル用に、バージョン管理されたページのアーカイブを作成できます。 コンテンツ同期の詳細については、 [ここ](/help/mobile/phonegap-contentsync.md).
+AEM ページをアプリケーションインターフェイスとして使用するモバイルアプリを開発します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。コンテンツ同期を使用すると、アプリにバンドルするページのバージョン管理されたアーカイブを作成できます。コンテンツ同期について詳しくは、[こちら](/help/mobile/phonegap-contentsync.md)をクリックしてください。

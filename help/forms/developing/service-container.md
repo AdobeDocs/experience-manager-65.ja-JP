@@ -1,16 +1,17 @@
 ---
 title: サービスコンテナ
-description: サービスコンテナ内のAEM Formsサービス
+description: サービスコンテナ内の AEM Forms サービス
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding, development-tools
 role: Developer
 exl-id: 6abf2401-5a87-4f72-9028-74580df5b9de
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 93%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-サービスコンテナ内のAEM Formsサービス（Encryption サービス、長期間有効なプロセス、短時間有効なプロセスなどの標準サービスを含む）は、EJB プロバイダーなどの様々なプロバイダーを使用して呼び出すことができます。 EJB プロバイダーを使用すると、RMI/IIOP 経由で AEM Forms サービスを呼び出すことができます。Web サービスプロバイダーは、SOAP/HTTP や SOAP/JMS などの標準規格を使用して、web サービス（WSDL Generation）としてサービスを公開します。
+サービスコンテナに配置された AEM Forms サービス（暗号化サービス、長期間有効なプロセス、短時間有効なプロセスなどの標準サービスを含む）は、EJB プロバイダーなどの様々なプロバイダーを使用して呼び出すことができます。EJB プロバイダーを使用すると、RMI/IIOP 経由で AEM Forms サービスを呼び出すことができます。Web サービスプロバイダーは、SOAP/HTTP や SOAP/JMS などの標準規格を使用して、web サービス（WSDL Generation）としてサービスを公開します。
 
 次の表に、AEM Forms サービスをプログラムで呼び出す様々な方法を示します。
 
@@ -58,7 +59,7 @@ ht-degree: 93%
 サービスコンテナには次の機能が用意されています。
 
 * 異なるメソッドを使用して AEM Forms サービスを呼び出すことを許可します。サービスを設定するには、エンドポイントを設定して、すべてのメソッド（Remoting、Java API、web サービスおよび REST）で呼び出せるようにします。（[プログラムによるエンドポイントの管理](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints)を参照）。
-* メッセージを呼び出しリクエストと呼ばれる正規化された形式に変換します。呼び出し要求は、クライアントアプリケーション（または他のサービス）からサービスコンテナ内のサービスに送信されます。 呼び出しリクエストには、呼び出すサービスの名前や、操作の実行に必要なデータ値などの情報が含まれます。多くのサービスでは、操作を実行するためにドキュメントが必要です。したがって、呼び出しリクエストには通常、PDF データ、XDP データ、XML データなどのドキュメントが含まれます。
+* メッセージを呼び出しリクエストと呼ばれる正規化された形式に変換します。呼び出しリクエストは、クライアントアプリケーション（または他のサービス）から、サービスコンテナ内のサービスに送信されます。呼び出しリクエストには、呼び出すサービスの名前や、操作の実行に必要なデータ値などの情報が含まれます。多くのサービスでは、操作を実行するためにドキュメントが必要です。したがって、呼び出しリクエストには通常、PDF データ、XDP データ、XML データなどのドキュメントが含まれます。
 * 呼び出しリクエストを適切なサービスにルーティングします（呼び出すサービスの名前は呼び出しリクエストの一部です）。
 * 呼び出し元が、指定されたサービス操作を呼び出す権限を持っているかどうかを判断するなどのタスクを実行します。呼び出しリクエストには、有効な AEM Forms のユーザー名とパスワードが含まれている必要があります。
 

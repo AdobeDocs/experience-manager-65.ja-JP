@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media アセットの管理について
-description: アップロード後に、ビデオや画像などのDynamic Mediaアセットを操作する方法について説明します。 アセットのプレビューやダウンロード、公開を行うことができます。
+description: アップロード後に、ビデオや画像などの Dynamic Media アセットを操作する方法について説明します。アセットのプレビューやダウンロード、公開を行うことができます。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -8,10 +8,11 @@ content-type: reference
 feature: Asset Management
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 

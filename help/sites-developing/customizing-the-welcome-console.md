@@ -1,15 +1,16 @@
 ---
 title: ようこそコンソールのカスタマイズ（クラシック UI）
-description: ようこそコンソールには、AEM内の様々なコンソールおよび機能へのリンクのリストが表示されます
+description: ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '449'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -17,28 +18,28 @@ ht-degree: 57%
 
 >[!CAUTION]
 >
->このページでは、クラシック UI について説明します。
+>このページでは、従来の UI が使用されています。
 >
->詳しくは、 [コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md) を参照してください。
+>標準のタッチ操作対応 UI について詳しくは、[コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md)を参照してください。
 
 ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます。
 
 ![cq_welcomescreen](assets/cq_welcomescreen.png)
 
-表示されるリンクを設定できます。 これは、特定のユーザーやグループに対して定義できます。 実行されるアクションは、ターゲットのタイプ（ターゲットが属するコンソールのセクションと相関関係がある）によって異なります。
+表示されるリンクを設定できます。設定は、特定のユーザーまたはグループ向けに定義できます。実行されるアクションは、ターゲットタイプによって異なります（アクションが表示されるコンソールのセクションと相関関係があります）。
 
-* [メインコンソール](#links-in-main-console-left-pane)  — メインコンソール（左側のペイン）内のリンク
-* [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane)  — サイドバー（右側のパネル）のリンク
+* [メインコンソール](#links-in-main-console-left-pane) - メインコンソール（左パネル）のリンク
+* [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane) - サイドバー（右パネル）のリンク
 
-## メインコンソールのリンク（左側のウィンドウ） {#links-in-main-console-left-pane}
+## メインコンソール（左パネル）のリンク {#links-in-main-console-left-pane}
 
-AEMのメインコンソールが表示されます。
+AEM のメインコンソールが一覧表示されます。
 
 ![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 
 ### メインコンソールのリンクを表示するかどうかの設定 {#configuring-whether-main-console-links-are-visible}
 
-ノードレベルの権限によって、リンクを表示できるかどうかが決まります。 次のノードが対象となります。
+ノードレベルでの権限によって、リンクを表示するかどうかが決定されます。次のノードが対象となります。
 
 * **Web サイト:** `/libs/wcm/core/content/siteadmin`
 
@@ -62,9 +63,9 @@ AEMのメインコンソールが表示されます。
 
   `/libs/wcm/core/content/misc`
 
-詳しくは、 [セキュリティセクション](/help/sites-administering/security.md) を参照してください。
+目的の権限の設定方法について詳しくは、[セキュリティの節](/help/sites-administering/security.md)を参照してください。
 
-### サイドバーのリンク（右側のウィンドウ） {#links-in-sidebar-right-pane}
+### サイドバー（右パネル）のリンク {#links-in-sidebar-right-pane}
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
@@ -155,9 +156,9 @@ AEMのメインコンソールが表示されます。
  </tbody>
 </table>
 
-#### サイドバーリンクを表示するかどうかの設定 {#configuring-whether-sidebar-links-are-visible}
+#### サイドバーのリンクを表示するかどうかの設定 {#configuring-whether-sidebar-links-are-visible}
 
-リンクを表すノードへの読み取りアクセス権を削除することで、特定のユーザーやグループからリンクを非表示にすることができます。
+リンクを表すノードへの読み取りアクセス権を削除することで、特定のユーザーまたはグループからリンクを非表示にできます。
 
 * リソース - 次の場所へのアクセス権を削除します。
 
@@ -181,9 +182,9 @@ AEMのメインコンソールが表示されます。
 
   `/libs/cq/core/content/welcome/features/packages`
 
-詳しくは、 [セキュリティセクション](/help/sites-administering/security.md) を参照してください。
+目的の権限の設定方法について詳しくは、[セキュリティの節](/help/sites-administering/security.md)を参照してください。
 
-### リンク選択のメカニズム {#link-selection-mechanism}
+### リンク選択の仕組み {#link-selection-mechanism}
 
 `/libs/cq/core/components/welcome/welcome.jsp` では、次のプロパティを持つノードに対してクエリを実行する [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html) を使用します。
 

@@ -4,7 +4,8 @@ description: AEM ヘッドレスソリューションの実装時にコンテン
 feature: Content Fragments
 role: User
 exl-id: c58a3cfd-6348-4a2e-996a-5fdb96415adb
-source-git-commit: 50d29c967a675db92e077916fb4adef6d2d98a1a
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 100%

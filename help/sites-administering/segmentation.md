@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1745'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -17,12 +18,12 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->この節では、ContextHub を使用したセグメント化の設定について説明します。ClientContext 機能を使用している場合は、 [ClientContext のセグメント化の設定](/help/sites-administering/campaign-segmentation.md).
+>この節では、ContextHub を使用したセグメント化の設定について説明します。ClientContext 機能を使用する場合は、[ClientContext のセグメント化の設定](/help/sites-administering/campaign-segmentation.md)に関するドキュメントを参照してください。
 >
 
 キャンペーンを作成する場合、セグメント化を考えることが重要になります。セグメント化の仕組みと主な用語について詳しくは、[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照してください。
 
-サイト訪問者に関して既に収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
+サイト訪問者についてこれまでに収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
 
 このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、web サイトの「[パーソナライズ機能](/help/sites-authoring/personalization.md)」セクションで管理されます。ここで定義した[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加でき、専用のコンテンツを適用できる訪問者セグメントを指定できます。
 
@@ -30,13 +31,13 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 ## セグメントへのアクセス {#accessing-segments}
 
-The [オーディエンス](/help/sites-authoring/managing-audiences.md) コンソールは、ContextHub または ClientContext のセグメントとAdobe Targetアカウントのオーディエンスを管理するために使用します。 このドキュメントでは、ContextHub のセグメントの管理について取り上げます。の場合 [ClientContext セグメント](/help/sites-administering/campaign-segmentation.md) およびAdobe Targetセグメントについては、関連するドキュメントを参照してください。
+[オーディエンス](/help/sites-authoring/managing-audiences.md)コンソールは、ContextHub または ClientContext のセグメントを管理したり、Adobe Target アカウントのオーディエンスを管理したりする目的で使用します。このドキュメントでは、ContextHub のセグメントの管理について取り上げます。[ClientContext セグメント](/help/sites-administering/campaign-segmentation.md)および Adobe Target セグメントについては、それぞれ関連するドキュメントを参照してください。
 
 セグメントにアクセスするには、設定を選択する必要があります。 グローバルナビゲーションで、**ナビゲーション／パーソナライズ機能／オーディエンス**&#x200B;を選択します。利用可能な設定が表示されます。
 
 ![オーディエンス - 設定](assets/segmentation-access-confs.png)
 
-設定を選択して、WKND サイトなどのセグメントを表示します。
+設定を選択して、セグメントを表示します（例： WKND サイト）。
 
 ![オーディエンス - セグメント](assets/segmentation-access-segments.png)
 
@@ -48,11 +49,11 @@ The [オーディエンス](/help/sites-authoring/managing-audiences.md) コン�
 
 コンポーネントブラウザーを使用すると、**AND** および **OR** コンテナを追加してセグメントロジックを定義してから、別のコンポーネントを追加してプロパティや値を比較できます。また、スクリプトやその他のセグメントを参照して選択条件を定義する（[新しいセグメントの作成](#creating-a-new-segment)を参照）ことによって、セグメントの選択シナリオを正確に定義できます。
 
-ステートメント全体が true と評価されると、セグメントは解決されます。複数の適用可能なセグメントがある場合、 **ブースト** factor も使用されます。 [ブースト係数](/help/sites-administering/campaign-segmentation.md#boost-factor)について詳しくは、「[新しいセグメントの作成](#creating-a-new-segment)」を参照してください。
+ステートメント全体が true と評価されると、セグメントは解決されます。複数の適用可能なセグメントがある場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数](/help/sites-administering/campaign-segmentation.md#boost-factor)について詳しくは、「[新しいセグメントの作成](#creating-a-new-segment)」を参照してください。
 
 >[!CAUTION]
 >
->セグメントエディターは、循環参照をチェックしません。例えば、セグメント A が別のセグメント B を参照し、そのセグメント B がセグメント A を参照しているとします。セグメントに循環参照が含まれていないことを確認します。
+>セグメントエディターは、循環参照をチェックしません。例えば、セグメント A が別のセグメント B を参照していて、そのセグメント B がセグメント A を参照している場合などです。このため、セグメントに循環参照が存在しないことを確認してください。
 
 ### コンテナ {#containers}
 
@@ -78,7 +79,7 @@ The [オーディエンス](/help/sites-authoring/managing-audiences.md) コン�
 <table>
  <tbody>
   <tr>
-   <td>プロパティ — 値<br /> </td>
+   <td>プロパティ - 値<br /> </td>
    <td>ストアのプロパティと定義済みの値を比較<br /> </td>
   </tr>
   <tr>
@@ -87,7 +88,7 @@ The [オーディエンス](/help/sites-authoring/managing-audiences.md) コン�
   </tr>
   <tr>
    <td>プロパティ - セグメントの参照</td>
-   <td>ストアのプロパティと参照先の別のセグメントを比較<br /> </td>
+   <td>ストアのプロパティと別の参照セグメントを比較<br /> </td>
   </tr>
   <tr>
    <td>プロパティ - スクリプトの参照</td>
@@ -133,11 +134,11 @@ The [オーディエンス](/help/sites-authoring/managing-audiences.md) コン�
 
 1. [セグメントにアクセス](/help/sites-administering/segmentation.md#accessing-segments)した後、セグメントを作成する[フォルダーに移動](#organizing-segments)します。
 
-1. 「作成」ボタンをクリックし、「 **ContextHub セグメントを作成**.
+1. 「作成」ボタンをクリックし、「**ContextHub セグメントを作成**」を選択します。
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
-1. Adobe Analytics の **新しい ContextHub セグメント**、セグメントのタイトルと必要に応じてブースト値を入力し、「 **作成**.
+1. 「**新しい ContextHub セグメント**」で、セグメントのタイトルと必要に応じてブースト値を入力し、「**作成**」をクリックします。
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
@@ -147,7 +148,7 @@ The [オーディエンス](/help/sites-authoring/managing-audiences.md) コン�
    * 最大値：`1000000`
 
 1. 比較または参照をセグメントエディターにドラッグすると、デフォルトの AND コンテナに表示されます。
-1. 新しい参照またはセグメントの「設定」オプションをダブルクリックして、特定のパラメーターを編集します。 この例では、サンノゼの人物をテストしています。
+1. 新しい参照またはセグメントの設定オプションをダブルクリックして、特定のパラメーターを編集します。この例では、サンノゼの人物をテストしています。
 
    ![screen_shot_2012-02-02at103135am](assets/screen_shot_2012-02-02at103135ama.png)
 
@@ -160,7 +161,7 @@ The [オーディエンス](/help/sites-authoring/managing-audiences.md) コン�
 
 AND および OR コンテナコンポーネントを使用すると、AEM で複雑なセグメントを作成できます。これを行う際に、次の基本事項に留意してください。
 
-* 定義の最上位レベルは常に、最初に作成された AND コンテナです。 これは変更できませんが、他のセグメント定義には影響しません。
+* 定義の最上位レベルは必ず、最初に作成された AND コンテナになります。これは変更できませんが、他のセグメント定義には影響しません。
 * コンテナのネストが意味のあるものになっていることを確認してください。コンテナは、ブール式の括弧として見ることができます。
 
 次の例では、プライムエイジグループに属すると見なされる訪問者を選択しています。
@@ -233,7 +234,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ### 新しいフォルダーの作成 {#create-folder}
 
-1. 後 [セグメントへのアクセス](#accessing-segments)をクリックし、 **作成** ボタンと選択 **フォルダー**.
+1. [セグメントへのアクセス](#accessing-segments)後、「**作成**」ボタンをクリックし、「**フォルダー**」を選択します。
 
    ![フォルダーの追加](assets/contexthub-create-segment.png)
 
@@ -251,18 +252,18 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 1. フォルダーがセグメントのリストに表示されます。
    * 列の並べ替え方法によって、リスト内の新しいフォルダーの表示場所が異なります。
-   * 列見出しをクリックして、並べ替えを調整できます。
+   * 列見出しをクリックすると、並べ替えを調整できます。
      ![新規フォルダー](assets/contexthub-folder.png)
 
 ### 既存のフォルダーの変更 {#modify-folders}
 
-1. 後 [セグメントへのアクセス](#accessing-segments)をクリックし、変更するフォルダーをクリックして選択します。
+1. [セグメントへのアクセス](#accessing-segments)後、変更するフォルダーをクリックして選択します。
 
    ![フォルダーの選択](assets/contexthub-select-folder.png)
 
-1. クリック **名前を変更** 」をクリックして、フォルダーの名前を変更します。
+1. ツールバーの「**名前を変更**」をクリックして、フォルダーの名前を変更します。
 
-1. 新しい **フォルダーのタイトル** をクリックします。 **保存**.
+1. 新しい「**フォルダーのタイトル**」を指定し、「**保存**」をクリックします。
 
    ![フォルダー名の変更](assets/contexthub-rename-folder.png)
 
@@ -272,25 +273,25 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ### フォルダーの削除
 
-1. 後 [セグメントへのアクセス](#accessing-segments)をクリックし、変更するフォルダーをクリックして選択します。
+1. [セグメントへのアクセス](#accessing-segments)後、変更するフォルダーをクリックして選択します。
 
    ![フォルダーの選択](assets/contexthub-select-folder.png)
 
-1. クリック **削除** （フォルダーを削除する場合）をクリックします。
+1. ツールバーで「**削除**」をクリックし、フォルダーを削除します。
 
 1. 削除対象として選択したフォルダーのリストがダイアログに表示されます。
 
    ![削除の確認](assets/contexthub-confirm-segment-delete.png)
 
-   * クリック **削除** をクリックして確定します。
-   * クリック **キャンセル** を中止します。
+   * 「**削除**」をクリックして確認します。
+   * 「**キャンセル**」をクリックして中止します。
 
 1. 選択したフォルダーのいずれかにサブフォルダーまたはセグメントが含まれている場合は、それらの削除も確認する必要があります。
 
    ![子の削除の確認](assets/contexthub-confirm-segment-child-delete.png)
 
-   * クリック **削除を強制** をクリックして確定します。
-   * クリック **キャンセル** を中止します。
+   * 「**削除を強制**」をクリックして確定します。
+   * 「**キャンセル**」をクリックして中止します。
 
 >[!NOTE]
 >
@@ -319,7 +320,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 このようなテストは、ターゲットコンテンツや関連する&#x200B;**アクティビティ**&#x200B;および&#x200B;**エクスペリエンス**&#x200B;と組み合わせて、コンテンツページでも実行できます。
 
-前述のプライムエイジグループセグメントの例を使用してアクティビティおよびエクスペリエンスを設定した場合は、そのアクティビティを使用してセグメントを簡単にテストできます。アクティビティの設定について詳しくは、 [ターゲットコンテンツのオーサリングに関するドキュメント](/help/sites-authoring/content-targeting-touch.md).
+前述のプライムエイジグループセグメントの例を使用してアクティビティおよびエクスペリエンスを設定した場合は、そのアクティビティを使用してセグメントを簡単にテストできます。アクティビティの設定について詳しくは、[ターゲットコンテンツのオーサリングに関するドキュメント](/help/sites-authoring/content-targeting-touch.md)を参照してください。
 
 1. ターゲットコンテンツを設定したページの編集モードでは、ターゲットとなるコンテンツが矢印アイコンによって示されます。
 

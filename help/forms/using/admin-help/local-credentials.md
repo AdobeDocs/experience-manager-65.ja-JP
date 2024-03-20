@@ -1,15 +1,16 @@
 ---
 title: ローカル資格情報の管理
-description: Trust Store 管理を使用してローカル秘密鍵証明書を管理する方法を説明します。 AEM forms は、標準の PKCS12 形式の RSA 秘密鍵証明書と DSA 秘密鍵証明書をサポートします。
+description: Trust Store 管理を使用してローカル秘密鍵証明書を管理する方法を説明します。AEM Forms は、標準の PKCS12 形式の RSA 秘密鍵証明書および DSA 秘密鍵証明書をサポートします。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
-source-git-commit: 6caf3ef4a00275f0f73be52b6a9ccba77d277f1a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 

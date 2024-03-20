@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1531'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -168,7 +169,7 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
    >[!NOTE]
    >
-   >レポートの取得操作がタイムアウトし、指定された秒数に達するまで、最大 10 秒かかる場合があります。
+   >レポート取得操作がタイムアウトになるまでの時間は、最大で、指定されている秒数に 10 秒を加算した時間になります。
 
 1. パブリッシュインスタンスで手順 1 から 3 を繰り返し、Analytics を設定します。
 
@@ -185,4 +186,4 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
    **A.** 「Analytics を有効にする」ボタン **B.** 選択したフォーム
 
-   フォーム分析レポートの表示について詳しくは、「[AEM Forms 分析レポートの表示と理解](../../forms/using/view-understand-aem-forms-analytics-reports.md)」を参照してください。
+   フォーム分析レポートの表示について詳しくは、[AEM Forms 分析レポートの表示と理解](../../forms/using/view-understand-aem-forms-analytics-reports.md)を参照してください。

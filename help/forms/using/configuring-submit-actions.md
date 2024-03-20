@@ -6,7 +6,8 @@ topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2593'
 ht-degree: 96%
@@ -167,7 +168,7 @@ REST エンドポイント送信アクションの設定
 
 正しく設定したら、[Microsoft® Power Automateフローの呼び出し](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)送信アクションを使用して、Power Automate フローにデータを送信します。
 
-## Microsoft® SharePointリストに送信{#submit-to-sharedrive}
+## Microsoft® SharePoint リストに送信{#submit-to-sharedrive}
 
 >[!NOTE]
 >
@@ -192,7 +193,7 @@ AEM Forms を Microsoft® Sharepoint リストに接続するには、次の手�
 1. 「**[!UICONTROL タイトル]**」、「**[!UICONTROL クライアント ID]**」、「**[!UICONTROL クライアント秘密鍵]**」および「**[!UICONTROL OAuth URL]**」を指定します。OAuth URL のクライアント ID、クライアントの秘密鍵、テナント ID を取得する方法について詳しくは、[Microsoft® のドキュメント](https://learn.microsoft.com/ja-jp/graph/auth-register-app-v2)を参照してください。
    * アプリの `Client ID` と `Client Secret` は Microsoft® Azure Portal から取得できます。
    * Microsoft® Azure Portal で、リダイレクト URI を `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html` として追加します。`[author-instance]` をオーサーインスタンスの URL に置き換えます。
-   * API 権限の追加 `offline_access` および `Sites.Manage.All` （内） **Microsoft® Graph** タブを使用して、読み取り/書き込み権限を設定します。 追加 `AllSites.Manage` の権限 **SharePoint** タブをクリックして、SharePointデータをリモートで操作します。
+   * API 権限の追加 `offline_access` および `Sites.Manage.All` （内） **Microsoft® Graph** タブを使用して、読み取り/書き込み権限を設定します。 SharePoint データをリモートで操作するには、「**Sharepoint**」タブに `AllSites.Manage` 権限を追加します。
    * OAuth URL `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize` を使用します。`<tenant-id>` を Microsoft® Azure Portal のアプリの `tenant-id` に置き換えます。
 
      >[!NOTE]
@@ -207,10 +208,10 @@ AEM Forms を Microsoft® Sharepoint リストに接続するには、次の手�
 
 作成した SharePoint リスト設定をアダプティブフォーム内で使用すると、データや生成済みのレコードのドキュメントを SharePoint リストに保存できます。アダプティブフォームで SharePoint リストストレージ設定を使用するには、次の手順を実行します。
 
-1. [Microsoft を使用してフォームデータモデルを作成する](/help/forms/using/create-form-data-model.md)
-1. [データを取得して送信するためのフォームデータモデルの設定](/help/forms/using/work-with-form-data-model.md#configure-services)
-1. [アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md).
-1. [フォームデータモデルを使用した送信アクションの設定](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
+1. [Microsoft を使用してフォームデータモデルを作成します](/help/forms/using/create-form-data-model.md)
+1. [データを取得して送信するためのフォームデータモデルを設定します](/help/forms/using/work-with-form-data-model.md#configure-services)
+1. [アダプティブフォームを作成します](/help/forms/using/create-adaptive-form.md)
+1. [フォームデータモデルを使用して送信アクションを設定します](/help/forms/using/configuring-submit-actions.md#submit-using-form-data-model-submit)
 
 フォームを送信すると、データは指定した Microsoft® Sharepoint リストストレージに保存されます。
 

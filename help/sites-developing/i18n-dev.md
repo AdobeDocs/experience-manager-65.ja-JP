@@ -1,15 +1,16 @@
 ---
 title: UI 文字列の国際化
-description: Java&trade;および JavaScript API を使用して、文字列を国際化できます
+description: Java&trade；および JavaScript API を使用して文字列を国際化できます
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 exl-id: bc5b1cb7-a011-42fe-8759-3c7ee3068aad
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 34%
+source-wordcount: '1091'
+ht-degree: 36%
 
 ---
 
@@ -26,7 +27,7 @@ Java™および JavaScript API を使用すると、次のタイプのリソー
 
 ## Java™および JSP コードでの文字列の国際化 {#internationalizing-strings-in-java-and-jsp-code}
 
-この `com.day.cq.i18n` Java™パッケージを使用すると、ローカライズされた文字列を UI に表示できます。 この `I18n` クラスは `get` Adobe Experience Manager(AEM) 辞書からローカライズされた文字列を取得するメソッド。 `get` メソッドの必須パラメーターは、英語の文字列リテラルのみです。UI のデフォルト言語は英語です。 次に、`Search` という単語をローカライズする例を示します。
+The `com.day.cq.i18n` Java™パッケージを使用すると、ローカライズされた文字列を UI に表示できます。 The `I18n` クラスは、 `get` Adobe Experience Manager(AEM) 辞書からローカライズされた文字列を取得するメソッド。 `get` メソッドの必須パラメーターは、英語の文字列リテラルのみです。UI のデフォルト言語は英語です。 次に、`Search` という単語をローカライズする例を示します。
 
 `i18n.get("Search");`
 
@@ -72,7 +73,7 @@ I18n i18n = new I18n(resourceBundle);
 
 * 値は文字列リテラルである必要があります。`String` タイプの変数は使用できません。
 * 文字列リテラルは 1 行で表す必要があります。
-* 文字列では大文字と小文字が区別されます。
+* この文字列では大文字と小文字が区別されます。
 
 ```xml
 i18n.get("Enter a search keyword");
@@ -82,7 +83,7 @@ i18n.get("Enter a search keyword");
 
 辞書内で重複する文字列を識別できるようにするために、国際化される文字列の[翻訳のヒント](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings)を指定します。翻訳のヒントを指定するには、`get` メソッドの 2 つ目のオプションパラメーターを使用します。翻訳のヒントは、辞書の項目のコメントプロパティと正確に一致させる必要があります。
 
-例えば、辞書には文字列が含まれています `Request` 2 回動詞として、そして名詞として。 次のコードでは、`get` メソッドの引数として翻訳のヒントが記述されています。
+例えば、辞書には文字列が含まれています。 `Request` 2.動詞として 1 回、名詞として 1 回。 次のコードでは、`get` メソッドの引数として翻訳のヒントが記述されています。
 
 ```java
 i18n.get("Request","A noun, as in a request for a web page");
@@ -90,7 +91,7 @@ i18n.get("Request","A noun, as in a request for a web page");
 
 #### ローカライズされた文に変数を含める {#including-variables-in-localized-sentences}
 
-ローカライズされた文字列に変数を含めて、文にコンテキスト上の意味を作成します。 例えば、Web アプリケーションにログインした後、ホームページに「Welcome back Administrator.受信トレイに 2 通のメッセージがあります。」 ページコンテキストによって、ユーザー名とメッセージ数が決まります。
+ローカライズされる文字列に変数を追加し、センテンスに文脈に応じた意味を持たせます。例えば、Web アプリケーションにログインした後、ホームページに「Welcome back Administrator.受信トレイに 2 通のメッセージがあります。」 ページのコンテキストに応じて、ユーザー名とメッセージ数が決定されます。
 
 [辞書で](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings)の場合、変数は括弧で囲まれたインデックスとして文字列内に表されます。 変数の値は `get` メソッドの引数として指定します。引数は翻訳のヒントの後に配置され、インデックスは引数の順序に対応します。
 
@@ -102,7 +103,7 @@ i18n.get("Welcome back {0}. You have {1} messages.", "user name, number of messa
 
 #### 静的 get メソッドの使用 {#using-the-static-get-method}
 
-この `I18N` クラスは静的を定義します `get` メソッドは、いくつかの文字列をローカライズする必要がある場合に役立ちます。 この静的メソッドには、ユーザーの使用言語を特定する方法に応じて、オブジェクトの `get` メソッドのパラメーターに加え、`SlingHttpRequest` オブジェクトまたは使用する `ResourceBundle` が必要です。
+The `I18N` クラスは静的を定義します `get` メソッドは、いくつかの文字列をローカライズする必要がある場合に役立ちます。 この静的メソッドには、ユーザーの使用言語を特定する方法に応じて、オブジェクトの `get` メソッドのパラメーターに加え、`SlingHttpRequest` オブジェクトまたは使用する `ResourceBundle` が必要です。
 
 * ユーザーの言語の環境設定を使用する場合：SlingHttpRequest を第 1 パラメーターとして指定します。
 
@@ -115,7 +116,7 @@ i18n.get("Welcome back {0}. You have {1} messages.", "user name, number of messa
 
 JavaScript API を使用すると、クライアント上の文字列をローカライズできます。 例： [Java™および JSP](#internationalizing-strings-in-java-and-jsp-code) コードを使用すると、JavaScript API を使用して、ローカライズする文字列を識別し、ローカリゼーションのヒントを提供し、ローカライズされた文字列に変数を含めることができます。
 
-この `granite.utils` [クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md) は JavaScript API を提供します。 この API を使用するには、ページにこのクライアントライブラリフォルダーを含めます。ローカリゼーション関数は、`Granite.I18n` 名前空間を使用します。
+The `granite.utils` [クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md) は JavaScript API を提供します。 この API を使用するには、ページにこのクライアントライブラリフォルダーを含めます。ローカリゼーション関数は、`Granite.I18n` 名前空間を使用します。
 
 ローカライズされた文字列を表示する前に、 `Granite.I18n.setLocale` 関数に置き換えます。 この関数には、引数としてロケールの言語コードが必要です。
 
@@ -138,7 +139,7 @@ Granite.I18n.get("string to localize", [variables], "localization hint");
 
 関数のパラメーターは、Java™ I18n.get メソッドとは異なります。
 
-* 1 つ目のパラメータは、ローカライズする文字列リテラルです。
+* 1 つ目のパラメーターは、ローカライズする文字列リテラルです。
 * 2 番目のパラメーターは、文字列リテラルに挿入する値の配列です。
 * 3 番目のパラメーターは、ローカライゼーションのヒントです。
 
@@ -180,7 +181,7 @@ UI のすべての文字列が国際化されているかどうかをテスト�
 
 ユーザーの言語を設定するには、ユーザーアカウントの環境設定ノードの language プロパティを設定します。
 
-ユーザーの環境設定ノードには、次のようなパスが含まれます。
+ユーザーの環境設定ノードには、次のようなパスが割り当てられます。
 
 `/home/users/<letter>/<hash>/preferences`
 

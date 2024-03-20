@@ -7,16 +7,17 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '746'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 # 実行モード{#run-modes}
 
-実行モードを使用すると、オーサーまたはパブリッシュ、テスト、開発、イントラネットなど、特定の目的に合わせてAEMインスタンスを調整できます。
+実行モードを使用すると、オーサーまたはパブリッシュ、テスト、開発、イントラネットなど、特定の目的に合わせて AEM インスタンスを調整できます。
 
 以下の操作を実行できます。
 
@@ -69,11 +70,11 @@ ht-degree: 90%
 
 ## samplecontent と nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
 
-これらのモードを使用すると、サンプルコンテンツの使用を制御できます。サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージ、設定などを含めることができます。
+これらのモードを使用すると、サンプルコンテンツの使用を制御できます。サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージや設定などを含めることができます。
 
-* The `samplecontent` 実行モードでは、このコンテンツがインストールされます（デフォルトのモード）。
+* `samplecontent` 実行モードでは、サンプルコンテンツがインストールされます（デフォルトモード）。
 
-* The `nosamplecontent` モードでは、サンプルコンテンツはインストールされません。
+* `nosamplecontent` モードでは、サンプルコンテンツはインストールされません。
 
 nosamplecontent 実行モードは、実稼動インストール用に設計されています。
 
@@ -149,7 +150,7 @@ java -jar cq-56-p4545.jar -r dev
 
 起動スクリプトのシステムプロパティを使用して実行モードを指定できます。
 
-* 例えば、次の例を使用して、インスタンスを実稼動パブリッシュインスタンスとして米国で起動します。
+* 例えば、US にある実稼動のパブリッシュインスタンスとしてインスタンスを起動するには、以下を使用します。
 
   `-Dsling.run.modes=publish,prod,us`
 

@@ -7,10 +7,11 @@ topic-tags: operations
 content-type: reference
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1275'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +42,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
         レイアウトコンテナをページの標準とし、この中でユーザーがレイアウトコンテナをさらに追加できるようにすることができます。例えば、列を制御する場合などです。
 
 * **[レイアウトモード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-レイアウトコンテナをページに配置したら、 **レイアウト** モード：レスポンシブグリッド内にコンテンツを配置します。
+レイアウトコンテナをページに配置したら、**レイアウト**&#x200B;モードを使用して、レスポンシブグリッド内にコンテンツを配置できます。
 
 * [**エミュレーター**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 これにより、コンポーネントのサイズをインタラクティブに変更することで、デバイスやウィンドウのサイズに従ってレイアウトを並べ替えるレスポンシブ web サイトを作成および編集できます。その後、ユーザーはエミュレーターを使用してコンテンツがどのようにレンダリングされるかを確認できます。
@@ -59,7 +60,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 >[!NOTE]
 >
->標準のインストールでは、レスポンシブレイアウトは [We.Retail 参照サイト](/help/sites-developing/we-retail.md)に対して設定されています。[レイアウトコンテナコンポーネントをアクティブにする](#enable-the-layout-container-component-for-page) （他のページ用）
+>標準のインストールでは、レスポンシブレイアウトは [We.Retail 参照サイト](/help/sites-developing/we-retail.md)に対して設定されています。他のページの[レイアウトコンテナコンポーネントをアクティベート](#enable-the-layout-container-component-for-page)します。
 
 ## レスポンシブエミュレーターの設定 {#configuring-the-responsive-emulator}
 
@@ -235,7 +236,7 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
 
 レスポンシブコンテナ内に保持されるコンポーネントは、レスポンシブグリッドのサイズに従って（それぞれの HTML DOM 要素と共に）サイズ変更されます。したがって、このような状況では、（含まれている）固定幅の DOM 要素の定義を回避（または更新）することをお勧めします。
 
-例：
+次に例を示します。
 
 * 前：
 
@@ -257,7 +258,7 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
 
 レスポンシブグリッドに含まれているアダプティブ画像のコンテンツを適切にサイズ変更および更新するには、`REFRESH_PAGE` リスナーに設定されている `afterEdit` を、含まれているすべてのコンポーネントの `EditConfig` ファイルに追加する必要があります。
 
-例：
+次に例を示します。
 
 `<cq:listeners jcr:primaryType="cq:EditListenersConfig" afteredit="REFRESH_PAGE" />`
 
@@ -265,7 +266,7 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
 
 >[!CAUTION]
 >
->カスタムスタイルシートの clientlib がオーサー環境およびパブリッシュ環境で正しく機能するには、ヘッダーの一部として読み込む必要があります。
+>カスタムスタイルシートの clientlibs を作成時と公開時に適切に機能させるには、これをヘッダーの一部として読み込む必要があります。
 
 ## ページ用のレイアウトコンテナコンポーネントの有効化 {#enable-the-layout-container-component-for-page}
 

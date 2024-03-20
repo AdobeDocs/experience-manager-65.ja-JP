@@ -6,10 +6,11 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms, Forms Designer
 exl-id: 466b7e85-a2f8-4e1e-8afc-1566b0ccb84c
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +31,7 @@ ht-degree: 91%
 1. [!UICONTROL フォームのプロパティ]ダイアログで、![プラス](assets/plus.png)（プラスアイコン）をクリックしてカスタムプロパティを追加します。
 
 1. プロパティの名前として **_pagezerocontent** を指定します。
-1. 新しい Page Zero メッセージを、リッチテキスト形式で値として追加します。以下に例を示します。
+1. 新しい Page Zero メッセージを、リッチテキスト形式で値として追加します。次に例を示します。
 
 
    `<body xmlns="https://www.w3.org/1999/xhtml" xmlns:xfa="https://www.xfa.org/schema/xfa-data/1.0/"><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </code></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">You are seeing this message maybe because you are using a non Adobe PDF Viewer or an Old version of Adobe Reader. You can upgrade to the latest version of Adobe Reader for Windows, Mac, or Linux by visiting <span style="xfa-spacerun:yes"> </code>https://www.adobe.com/go/reader_download.</p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in"><span style="xfa-spacerun:yes"> </code></p><p style="font-family:'Times';font-size:12pt;letter-spacing:0in">For more assistance with Adobe Reader visit <span style="xfa-spacerun:yes"> </code>https://www.adobe.com/go/acrreader.</p></body>`
@@ -43,4 +44,4 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->作成したカスタムプロパティは、フォームを再度開いたときに、フォームのプロパティダイアログに正しく表示されない場合があります。 その場合でも、動作には問題ありません。フォームには、更新後の Page Zero メッセージが表示されます。
+>フォームを再度開いたときに、作成したカスタムプロパティがフォームプロパティダイアログに正しく表示されない場合があります。その場合でも、動作には問題ありません。フォームには、更新後の Page Zero メッセージが表示されます。

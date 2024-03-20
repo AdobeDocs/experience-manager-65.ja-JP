@@ -1,6 +1,6 @@
 ---
 title: Brand Portal へのフォルダーの公開
-description: フォルダーをBrand Portalに公開および非公開にする方法を説明します。
+description: Brand Portal へのフォルダーの公開および非公開の方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: brand-portal
@@ -9,10 +9,11 @@ docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 92a156f0-ce2a-4c83-bd57-0c29efbf784f
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +44,7 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
    1. **アクション**&#x200B;から「**Brand Portalに公開**」を選択し、**スケジュール**&#x200B;から「**今すぐ**」を選択し、「**次へ**」をクリックします。
    1. 「**範囲**」の選択を確認し、「**Brand Portal に公開**」をクリックします。
 
-   フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portalインターフェイスにログインして、公開済みのフォルダーを確認します。
+   フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
 
    **フォルダーを後で公開**
 
@@ -62,9 +63,9 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 ## Brand Portal へのフォルダーの非公開 {#unpublish-folders-from-brand-portal}
 
-AEMオーサーインスタンスから非公開にすることで、Brand Portalに公開されているアセットフォルダーを削除できます。 元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
+AEM オーサーインスタンスから公開を取り消すことで、Brand Portal に公開されているアセットフォルダーを削除できます。元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
 
-すばやくBrand Portalからフォルダーを非公開にするか、後でフォルダーをスケジュールするかのオプションがあります。 Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
+Brand Portal へのフォルダーの公開をすぐに取り消すことも、取り消しのスケジュールを未来の日時で設定することもできます。Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
 
 1. AEM オーサーインスタンス内の AEM Assets インターフェイスで、公開を取り消すフォルダーを選択します。
 
@@ -72,9 +73,9 @@ AEMオーサーインスタンスから非公開にすることで、Brand Porta
 
 1. ツールバーで「**公開を管理**」をクリックします。
 
-1. **今すぐBrand Portalから非公開にする**
+1. **Brand Portal への公開を今すぐ取り消し**
 
-   目的のフォルダーをBrand Portalからすばやく非公開にするには、次の手順を実行します。
+   Brand Portal へのフォルダーの公開をすぐに取り消すには、次のようにします。
 
    1. ツールバーで「**公開を管理**」を選択します。
    1. **アクション**&#x200B;から「**Brand Portal への公開を取り消し**」を選択し、**スケジュール**&#x200B;から「**今すぐ**」を選択し、「**次へ**」をクリックします。

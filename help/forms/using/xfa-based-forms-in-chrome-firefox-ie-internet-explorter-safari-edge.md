@@ -3,7 +3,8 @@ title: Google Chrome、Firefox、Microsoft&reg; Edge、Microsoft&reg; Internet E
 description: Google Chrome、Firefox、Microsoft&reg; Edge、Microsoft&reg; Internet Explorer、または Apple Safari で XFA ベースの PDF フォームを開けない
 feature: Adaptive Forms
 exl-id: fdd15315-e0d6-4d80-acb4-2e0ecec716c4
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 100%

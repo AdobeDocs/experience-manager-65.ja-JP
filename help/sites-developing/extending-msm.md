@@ -7,10 +7,11 @@ topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 1ad4d5370356f160398b3c19080dc4494e12cba7
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2444'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 96%
 ここでは、マルチサイトマネージャーの機能を拡張する方法について説明します。
 
 * MSM Java API の主な構成要素について説明します。
-* ロールアウト設定で使用できる同期アクションを作成します。
+* ロールアウト設定で使用できる、同期アクションを作成します。
 * デフォルトの言語コードと国コードを変更します。
 
 <!-- * Remove the "Chapters" step in the Create Site wizard. -->
@@ -107,7 +108,7 @@ ht-degree: 96%
 
 * `LiveAction` クラスには次のメソッドが含まれます。
 
-   * `getName`：アクションの名前を戻します。 この名前は、アクションを参照するために使用されます（例えば、ロールアウト設定）。
+   * `getName`：アクションの名前を返します。この名前は、（例えば、ロールアウト設定で）アクションの参照に使用されます。
    * `execute`：アクションのタスクを実行します。
 
 * `LiveActionFactory` クラスには次のメンバーが含まれます。
@@ -149,7 +150,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 * リセット値は、ロールアウトのリセットモードを示します。
 
-これらのオブジェクトから、 `LiveCopy`. `Resource` オブジェクトを使用して、`ResourceResolver`、`Session`、`Node` の各オブジェクトも取得できます。これらのオブジェクトは、リポジトリコンテンツの操作に役立ちます。
+これらのオブジェクトから、`LiveCopy` に関するすべての情報を取得できます。`Resource` オブジェクトを使用して、`ResourceResolver`、`Session`、`Node` の各オブジェクトも取得できます。これらのオブジェクトは、リポジトリコンテンツの操作に役立ちます。
 
 以下のコードの先頭行で、source はソースページの `Resource` オブジェクトです。
 
@@ -200,7 +201,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. この下に、次のプロパティを持つノードを&#x200B;**作成**&#x200B;します。
 
-   * **名前**：ロールアウト設定のノード名です。md#installed-synchronization-actions) の例を次に示します。 `contentCopy` または `workflow`.
+   * **名前**：ロールアウト設定のノード名です。md#installed-synchronization-actions)、例えば、`contentCopy` または `workflow` です。
    * **タイプ**：`cq:RolloutConfig`
 
 1. このノードに次のプロパティを追加します。
@@ -234,7 +235,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. 次のノードプロパティを持つノードを&#x200B;**作成** ：
 
    * **名前**：同期アクションのノード名。
-名前は **アクション名** 下のテーブルで [同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)例： `contentCopy` または `workflow`.
+名前は、[同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下の表の&#x200B;**アクション名**&#x200B;と同じである必要があります（`contentCopy` または `workflow` など）。
    * **タイプ**：`cq:LiveSyncAction`
 
 1. 必要な数の同期アクションノードを追加して設定します。アクションノードの順序を、実行する順序と一致するように並べ替えます。最上位のアクションノードが最初に実行されます。
@@ -619,7 +620,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 * 言語タイトル
 * 国名
-* 言語のデフォルトの国 ( `en`, `de`（その他）
+* （`en`、`de` などのコードの）言語に対するデフォルトの国
 
 言語のリストは、`/libs/wcm/core/resources/languages` ノードの下に格納されます。各子ノードは、言語または言語-国を表します。
 

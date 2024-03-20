@@ -1,34 +1,35 @@
 ---
 title: AEM Forms Workspace のアーキテクチャ
-description: LiveCycleAEM Forms Workspace の概念情報とアーキテクチャの概要です。
+description: LiveCycle AEM Forms workspace の概要と概念情報です。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: c6f216d4-781c-4356-b9f0-3324903a28e7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # AEM Forms Workspace のアーキテクチャ {#aem-forms-workspace-architecture}
 
-AEM Forms workspace は、CRX™でホストされる Web アプリケーションです。 ワークスペースをブラウザーで開くと、CRX リソースにアクセスし、アプリケーションがブラウザーでHTMLページとしてレンダリングされます。
+AEM Forms Workspace は、CRX™ にホスティングされている web アプリケーションです。Workspace がサポートされているブラウザーで開かれると、CRX リソースがアクセスされ、アプリケーションがブラウザー内で HTML ページとしてレンダリングされます。
 
-アプリケーションは、REST エンドポイント上のAEM Formsサーバーにアクセスし、次の操作を実行します。
+アプリケーションは REST エンドポイント上にある AEM Forms サーバーにアクセスして、次のことを行います。
 
-* ユーザータスク、プロセスの開始点、プロセス履歴、およびユーザー情報を取得します
+* ユーザーのタスク、プロセススタートポイント、プロセス履歴、およびユーザー情報の取得
 * タスクに対するアクションの実行
-* データベースのクエリタスク
+* データベースでのクエリタスク
 * ユーザーの環境設定の更新など
 
-AEM Formsサーバーは、JDBC を介してAEM Formsデータベースにアクセスします。 データベースには、タスク、プロセス、そのインスタンス、ユーザー、および関連情報が保持されます。
+AEM Forms サーバーは、JDBC を通して AEM Forms データベースにアクセスします。データベースは、タスク、プロセスとそのインスタンス、ユーザー、および関連情報を維持します。
 
-AEM Forms Workspace は、モジュール形式の JavaScript™ コンポーネントで組み立てられており、これらのコンポーネントは他の Web アプリケーションで個々にカスタマイズしたり再利用することができます。コンポーネントは、Web アプリケーションに構造を提供する JavaScript ライブラリである BackBone に基づいています。 コンポーネントと BackBone の相互作用を説明する詳細な記事は次のとおりです。 [ここ](/help/forms/using/backbone-interaction.md). CRX フォルダー構造内のコンポーネントの構成については、で説明します。 [この](/help/forms/using/folder-structure.md) 記事。
+AEM Forms Workspace は、モジュール形式の JavaScript™ コンポーネントで組み立てられており、これらのコンポーネントは他の Web アプリケーションで個々にカスタマイズしたり再利用することができます。コンポーネントは web アプリケーションに構造を提供する JavaScript ライブラリである BackBone に基づいています。コンポーネントと BackBone とのインタラクションを説明する記事について詳しくは、[こちら](/help/forms/using/backbone-interaction.md)を参照してください。CRX フォルダー構造のコンポーネントの組織については、[この記事](/help/forms/using/folder-structure.md)で説明しています。
 
-AEM Forms Workspace 用に配信されたパッケージ：
+AEM Forms Workspace のために配信されるパッケージを以下に示しています。
 
 * `adobe-lc-workspace-pkg-<version>.zip`：これは CRX パッケージです。すなわち、Package Manager を使用して CRX 内にデプロイできます。
 * `adobe-lc-workspace-<version>-src.zip`：デプロイパッケージ（Ship、Debug、および Dev パッケージ）を作成するための AEM Forms Workspace とスクリプトの完全なコードを含むアーカイブです。

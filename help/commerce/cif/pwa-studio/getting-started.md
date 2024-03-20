@@ -4,9 +4,10 @@ description: PWA Studio で、ヘッドレスの AEM Content and Commerce プロ
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '722'
 ht-degree: 100%
 
 ---

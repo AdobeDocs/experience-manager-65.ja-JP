@@ -1,15 +1,16 @@
 ---
 title: ソフトウェアのアーキテクチャ
-description: Adobe Experience Manager用のソフトウェアを設計するためのベストプラクティスをいくつか学びます。
+description: Adobe Experience Manager 用のソフトウェアの設計に関するベストプラクティスについて説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 

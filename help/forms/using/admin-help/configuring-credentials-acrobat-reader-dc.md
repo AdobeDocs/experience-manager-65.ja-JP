@@ -6,9 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e8015d59-7587-46dc-a672-e0f1108102ad
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
-workflow-type: ht
-source-wordcount: '556'
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '546'
 ht-degree: 100%
 
 ---
@@ -43,7 +44,7 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
    >
    >エイリアス名は、表示用に自動的に大文字に変換されます。エイリアス名をプロセスで参照する際、大文字と小文字は区別されません。
 
-1. 「ファイルを選択」をクリックして証明書を探し、証明書のパスワードを入力して「OK」をクリックします。
+1. 「ファイルを選択」をクリックして資格情報を探し、資格情報のパスワードを入力して「OK」をクリックします。
 
    「ファイル形式が正しくないか、パスワードが正しくないため、証明書を読み込めませんでした」というエラーメッセージが表示される場合は、パスワードが有効であることを確認してください。
 

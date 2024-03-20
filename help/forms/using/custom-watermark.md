@@ -1,16 +1,17 @@
 ---
 title: レター PDF プレビューのカスタム透かし
-description: レター透かしプレビューでカスタム透かしを作成するPDFを説明します。
+description: レター PDF プレビューのカスタム透かしの作成方法について説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 7d90fade-1ca4-41d8-bbf9-45490465784a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '336'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -18,9 +19,9 @@ ht-degree: 68%
 
 ## 概要 {#overview}
 
-通信を作成 UI では、エージェントユーザーは、電子メールや印刷などの後処理に送信される最終形状の通信をプレビューします。
+通信作成 UI を使用するエージェントユーザーは、メールや印刷などを後処理に送信する最終的形態で表示します。
 
-このデータの不正使用を防ぐために、組織はプレビューPDFに透かしを付けることができます。 デフォルトの透かしは「プレビュー」で、PDF 全体に表示されます。
+PDF データの不正使用を防ぐため、プレビューの PDF に透かしを付けることができます。デフォルトの透かしは「プレビュー」で、PDF 全体に表示されます。
 
 PDF のプレビューで透かしを表示するには、https://&#39;[server]:[port]&#39;/system/console/configMgr にある「**[!UICONTROL Correspondence Management の設定]**」で「プレビュー中に&#x200B;**[!UICONTROL 透かしを適用する]**」オプションを選択します。
 
@@ -28,7 +29,7 @@ PDF のプレビューで透かしを表示するには、https://&#39;[server]:
 
 透かしのテキストと外観をカスタマイズするには、次の手順を実行します。
 
-## 通信を作成 UI でのPDFプレビューで透かしをカスタマイズする {#customizewatermark-}
+## 通信作成 UI で PDF プレビュー内の透かしをカスタマイズする {#customizewatermark-}
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
 1. apps フォルダーで **[!UICONTROL previewwatermark]** という名前のフォルダーを作成します。パスや構造は libs フォルダー内の previewwatermark フォルダーと同様です。
@@ -81,6 +82,6 @@ PDF のプレビューで透かしを表示するには、https://&#39;[server]:
 
    >[!NOTE]
    >
-   >ddx ファイルでは、結果とソースへの参照を output.pdf および input.pdf に変更しないでください。 ddx ファイルの名前も変更しないでください。
+   >ddx ファイルでは、結果と入力への参照は output.pdf および input.pdf のままになります。ddx ファイルの名前も変更しません。
 
 1. 「**すべて保存**」をクリックします。

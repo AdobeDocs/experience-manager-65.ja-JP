@@ -7,10 +7,11 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +25,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ## 検索の基本 {#search-basics}
 
-検索パネルにアクセスするには、 **検索** タブを使用して、該当するコンソールの左側のペインの上部に表示されます。
+検索パネルにアクセスするには、該当するコンソールの左側のパネルの上部にある「**検索**」タブをクリックします。
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
 

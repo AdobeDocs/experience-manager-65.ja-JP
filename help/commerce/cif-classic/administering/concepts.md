@@ -1,12 +1,13 @@
 ---
 title: 概念
-description: e コマースとAdobe Experience Managerの一般的な概念について説明します。
+description: e コマースと Adobe Experience Manager の一般的な概念について説明します。
 contentOwner: Guillaume Carlino
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '4439'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -486,7 +487,7 @@ AEM e コマースの実装では、パフォーマンステストを考慮す�
 
 プロキシページでは、実際の商品コンテンツをまったく含まない 2 ノード構造（`cq:Page` と `jcr:content`）を使用しています。コンテンツは、要求時に商品データとテンプレートページを参照することで生成されます。
 
-ただし、トレードオフがあります。AEM内で製品情報をカスタマイズすることはできません。（サイト用に定義された）標準テンプレートが使用されます。
+ただし、トレードオフがあります。AEM 内の製品情報をカスタマイズすることはできません。（サイト用に定義された）標準テンプレートが使用されます。
 
 >[!NOTE]
 >
@@ -574,7 +575,7 @@ AEM では、プロモーションは[キャンペーン管理](/help/sites-auth
 
 >[!NOTE]
 >
->[hybris プロモーション](https://www.hybris.com/modules/promotion)および [hybris 割引券](https://www.hybris.com/ja/modules/voucher)は、買い物かごに影響を及ぼし、価格に関連するすべてのものを対象とします。プロモーション固有のマーケティングコンテンツ（バナーなど）。 hybris プロモーションに含まれません。
+>[hybris プロモーション](https://www.hybris.com/modules/promotion)および [hybris 割引券](https://www.hybris.com/ja/modules/voucher)は、買い物かごに影響を及ぼし、価格に関連するすべてのものを対象とします。プロモーション固有のマーケティングコンテンツ（バナーなど）は、hybris プロモーションに含まれません。
 
 ## パーソナライズ機能 {#personalization}
 

@@ -1,15 +1,16 @@
 ---
-title: Sites Classic オーサリングのビデオ
+title: Sites クラシックオーサリングのビデオ
 description: Assets では、ビデオアセットを統合管理できます。ビデオを直接 Assets にアップロードして Dynamic Media Classic に対する自動エンコーディングを行ったり、Assets から直接 Dynamic Media Classic ビデオにアクセスしてページオーサリングを行ったりできます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1662'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -155,7 +156,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
-   | プロパティ | 説明 |
+   | Property | 説明 |
    |---|---|
    | Dynamic Media Classic クラウド設定 | エンコーディングプリセットで使用するクラウド設定です。 |
    | Dynamic Media Classic エンコーディングプリセット | このビデオプロファイルをマッピングするエンコーディングプリセットです。 |
@@ -165,7 +166,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 
 #### デザインを設定 {#configuring-design}
 
-基盤ビデオコンポーネントは、ビデオソースリストの作成に使用するビデオプロファイルについて把握している必要があります。 ビデオコンポーネントデザインダイアログを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定します。
+基盤ビデオコンポーネントは、ビデオソースリストを作成するためにどのようなビデオプロファイルを使用するのか知っている必要があります。ビデオコンポーネントのデザインダイアログを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定します。
 
 >[!NOTE]
 >
@@ -173,7 +174,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 
 >[!NOTE]
 >
->デザインを変更した場合、公開時にデザインをアクティベートする必要があります。
+>デザインを変更するには、デザインのアクティベーションを行って、公開時に変更を有効にする必要があります。
 
 1. 基盤ビデオコンポーネントのデザインダイアログを開き、「**[!UICONTROL プロファイル]**」タブに変更します。その後、標準のプロファイルを削除し、Dynamic Media Classic ビデオの新しいプロファイルを追加します。デザインダイアログのプロファイルリストの順序で、レンダリング時のビデオソース要素の順序も定義します。
 1. HTML5 をサポートしていないブラウザーの場合は、ビデオコンポーネントで Flash フォールバックを設定できます。ビデオコンポーネントのデザインダイアログボックスを開き、「**[!UICONTROL Flash]**」タブに変更します。Flash Player 設定を指定して、Flash Player のフォールバックプロファイルを割り当てます。

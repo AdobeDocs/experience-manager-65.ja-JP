@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: b833c28b-76c6-42a2-b690-3e81ddf91bc2
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 >[!NOTE]
 >
->診断情報を返すには、デバッグモードを有効にする必要があります。有効にしない場合は、診断ページが空白になります。 デバッグモードを有効にする方法について詳しくは、[このドキュメント](ch-configuring.md#debugging-contexthub)を参照してください。
+>診断情報が返されるようにするために、デバッグモードを有効にする必要があります。そうしないと、診断ページが空白になります。デバッグモードを有効にする方法について詳しくは、[このドキュメント](ch-configuring.md#debugging-contexthub)を参照してください。
 
 >[!NOTE]
 >
@@ -49,7 +50,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 ## Clientlibs {#clientlibs}
 
-Clientlibs セクションには、ContextHub によって読み込まれたすべてのクライアントライブラリフォルダーが一覧表示されます。 クライアントライブラリは次のように分類されます。
+Clientlibs セクションには、ContextHub によって読み込まれたすべてのクライアントライブラリフォルダーが一覧表示されます。クライアントライブラリは、次のように分類されます。
 
 * **kernel.js：** ContextHub フレームワーク、セグメントエンジン、ストアタイプを実装するクライアントライブラリ。
 * **ui.js：** ContextHub UI および UI モジュールタイプを実装するクライアントライブラリ。
@@ -61,8 +62,8 @@ URL セクションには、次の ContextHub 機能へのリンクが含まれ�
 
 * **設定エディター**：ストア、UI モードおよび UI モジュールを設定できる [ContextHub 設定ページ](ch-configuring.md)を開きます。
 
-* **ContextHub モジュールの設定：** /etc/cloudsettings/default/contexthub.config.kernel.js ファイルを開きます。このファイルには、ContextHub ストア設定の JavaScript オブジェクト表現が格納されています。
-* **ContextHub UI の設定：** /etc/cloudsettings/default/contexthub.config.ui.js ファイルを開きます。このファイルには、ContextHub UI モード設定の JavaScript オブジェクト表現が格納されています。
+* **ContextHub モジュールの設定：**/etc/cloudsettings/default/contexthub.config.kernel.js ファイルを開きます。このファイルには、ContextHub ストア設定の JavaScript オブジェクト表現が格納されています。
+* **ContextHub UI の設定：**/etc/cloudsettings/default/contexthub.config.ui.js ファイルを開きます。このファイルには、ContextHub UI モード設定の JavaScript オブジェクト表現が格納されています。
 * **kernel.js：**/etc/cloudsettings/default/contexthub.kernel.js ファイルを開きます。このファイルには、ContextHub フレームワークおよびセグメントエンジン、ストアタイプを実装するクライアントライブラリのソースコードが格納されています。
 * **ui.js：**/etc/cloudsettings/default/contexthub.ui.js ファイルを開きます。このファイルには、ContextHub UI および UI モジュールタイプを実装するクライアントライブラリのソースコードが格納されています。
 * **style.css：**/etc/cloudsettings/default/contexthub.styles.css ファイルを開きます。このファイルには、ContextHub UI および UI モジュールの CSS スタイルが格納されています。

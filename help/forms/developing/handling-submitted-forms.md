@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2894'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -172,7 +173,7 @@ Forms サービスに送信された Forms には、添付ファイルが含ま�
 
 >[!NOTE]
 >
->添付ファイルを取得するには、フォームがPDFデータとして送信される必要があります。 フォームが XML データとして送信された場合、添付ファイルは送信されません。
+>添付ファイルを取得するために、フォームは PDF データとして送信される必要があります。フォームが XML データとして送信された場合、添付ファイルは送信されません。
 
 **送信されたデータの処理**
 

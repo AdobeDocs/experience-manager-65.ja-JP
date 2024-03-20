@@ -4,10 +4,12 @@ description: プロキシは、プロキシワーカーを使用してジョブ�
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Assets
+feature: Proxy Workers
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '824'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +17,7 @@ ht-degree: 97%
 
 [!DNL Adobe Experience Manager Assets] では、特定のタスクの処理を配信するためにプロキシが使用されます。
 
-プロキシは、ジョブの処理と結果の作成を担うプロセッサーとしてプロキシワーカーを使用する、特定の（場合によっては個別の）Experience Manager インスタンスです。プロキシワーカーは、幅広いタスクに使用できます。次の項目が存在する場合、 [!DNL Assets] プロキシこれは、Assets 内でレンダリングするアセットを読み込むために使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、 Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Adobe InDesign]
+プロキシは、ジョブの処理と結果の作成を担うプロセッサーとしてプロキシワーカーを使用する、特定の（場合によっては個別の）Experience Manager インスタンスです。プロキシワーカーは、幅広いタスクに使用できます。[!DNL Assets] プロキシの場合、これを使用して、Assets 内にレンダリングするアセットを読み込むことができます。例えば、[IDS プロキシワーカー](indesign.md)は、 Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Adobe InDesign]
 
 プロキシが個別の [!DNL Experience Manager] インスタンスである場合は、[!DNL Experience Manager] オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、[!DNL Assets] は同じ JVM 内（プロキシによって外部化）でアセット処理タスクを実行し、[!DNL Experience Manager] オーサリングインスタンスへの負荷を軽減させます。
 
@@ -164,7 +166,7 @@ API の使用例を以下に示します。
 
    例として、IDS プロキシワーカーの `IDSJob.IDS_EXTENDSCRIPT_JOB` を参照してください。
 
-1. 外部手順を使用してイベントをトリガーし、それが終了するまで待機します。これは、ID をポーリングすることによって実行されます。新しい機能を実装するための独自の手順を開発します。
+1. 外部手順を使用してイベントをトリガーし、それが終了するまで待機します。これは、ID をポーリングすることによって実行されます。新しい機能を実装する独自の手順を開発します。
 
    `WorkflowExternalProcess` を実装してから、JobService API およびジョブトピックを使用してジョブイベントを準備し、JobService（OSGi サービス）にディスパッチします。
 

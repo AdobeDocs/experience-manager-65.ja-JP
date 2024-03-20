@@ -8,10 +8,11 @@ content-type: reference
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: 518207a0d8a95ef17b0972855a58f124fb215c85
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '932'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -41,7 +42,7 @@ e コマースエクスペリエンスでは、デフォルトのクイックビ
     </tr>
     <tr>
     <td>インタラクティブ画像</td>
-    <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">画像バナーへのホットスポットの追加</a>。</td>
+    <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">画像バナーにホットスポットを追加します</a>。</td>
     </tr>
     <tr>
     <td>インタラクティブビデオ</td>
@@ -49,7 +50,7 @@ e コマースエクスペリエンスでは、デフォルトのクイックビ
     </tr>
     <tr>
     <td>カルーセルバナー</td>
-    <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">バナーへのホットスポットまたは画像マップの追加</a>。<br /> </td>
+    <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">バナーにホットスポットまたは画像マップを追加します</a>。<br /> </td>
     </tr>
     </tbody>
    </table>
@@ -77,7 +78,7 @@ e コマースエクスペリエンスでは、デフォルトのクイックビ
     </tbody>
    </table>
 
-1. 使用しているビューアは、クイックビューの使用方法を理解している必要があります。
+1. 使用しているビューアがクイックビューの使用方法を認識できる必要があります。
 
    ビューアは `QuickViewActive` というハンドラーを使用します。
 
@@ -108,7 +109,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
    * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
    * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
 
-1. を設定します。 `quickViewActivate` ハンドラー
+1. 次に `quickViewActivate` ハンドラーを設定します。
 
    `quickViewActivate` ハンドラーはビューアのクイックビューを制御します。このハンドラーには、クイックビューで使用する変数のリストと関数呼び出しが含まれています。埋め込みコードは、クイックビューに設定された SKU 変数と `loadQuickView` 関数呼び出しのサンプルにマッピングを提供します。
 
@@ -127,7 +128,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
     var <i>variable3</i>= inData.<i>quickviewVariable3</i>
    ```
 
-   **関数呼び出し**&#x200B;ハンドラーには、クイックビューを機能させるために関数呼び出しも必要です。この関数は、ホストページからアクセスできることが前提となります。埋め込みコードは、サンプル関数呼び出しを提供します。
+   **関数呼び出し**&#x200B;ハンドラーには、クイックビューを機能させるために関数呼び出しも必要です。この関数は、ホストページからアクセスできることが前提となります。埋め込みコードには、サンプル関数呼び出しが含まれています。
 
    `loadQuickView(sku)`
 
@@ -141,7 +142,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
 
 1. 以下の操作を実行してください。
 
-   * 埋め込みコードの setHandlers セクションのコメントを解除します。
+   * 埋め込みコードの「setHandlers」セクションのコメントを解除します。
    * クイックビューに含まれている追加変数をマッピングします。
 
       * 変数を追加する場合は、`loadQuickView(sku,*var1*,*var2*)` 呼び出しを更新します。
@@ -186,7 +187,7 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
    </div>
    ```
 
-1. ポップアップで SKU の値を更新できるように関数を追加します。手順 5 で作成した簡単な関数を次のように置き換えて、を次のように設定します。
+1. ポップアップで SKU の値を更新できるように関数を追加します。手順 5 で作成した簡単な関数を次のように置き換えて、ポップアップを表示させます。
 
    ```xml
    <script type="text/javascript">
@@ -230,9 +231,9 @@ Web ページで、インタラクティブ画像用に次の埋め込みコー�
    上記のコードでは、次の処理を実行しました。
 
    * カスタムポップアップを特定しました。
-   * DOM から削除しました。
-   * ビューアコンテナを特定しました。
-   * ビューアコンテナにポップアップを添付しました。
+   * DOM からの削除
+   * ビューアコンテナーの指定
+   * ビューアコンテナーへのポップアップのアタッチ
 
 1. setHandlers コード全体は次に似たものになります（インタラクティブビデオビューアを使用しています）。
 

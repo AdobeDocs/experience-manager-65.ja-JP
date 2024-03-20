@@ -1,46 +1,47 @@
 ---
 title: ワークフロープロセスのリファレンス
-description: Adobe Experience Managerのワークフローについては、このプロセスリファレンスを参照してください。
+description: Adobe Experience Manager のワークフローについては、このプロセスのリファレンスを参照してください。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: a9de8ec6-6948-4643-89c3-62d9b1f6293a
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 47%
+source-wordcount: '1073'
+ht-degree: 100%
 
 ---
 
 # ワークフロープロセスのリファレンス{#workflow-process-reference}
 
-AEMには、ワークフローモデルの作成に使用できる複数のプロセスステップが用意されています。 カスタムプロセスステップは、組み込みステップでカバーされていないタスクにも追加できます ( [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)) をクリックします。
+AEM には、ワークフローモデルの作成に使用できるプロセスステップがいくつか用意されています。組み込みステップに含まれていないタスクについては、カスタムのプロセスステップを追加することができます（[ワークフローモデルの作成](/help/sites-developing/workflows-models.md)を参照）。
 
-## プロセスの特性 {#process-characteristics}
+## プロセスの特徴 {#process-characteristics}
 
-プロセスステップごとに、次の特性について説明します。
+プロセスステップごとに特徴を説明します。
 
-### Java™クラスまたは ECMA パス {#java-class-or-ecma-path}
+### Java™ クラスまたは ECMA パス {#java-class-or-ecma-path}
 
-プロセスステップは、Java™クラスまたは ECMAScript によって定義されます。
+プロセスステップは、Java™ クラスまたは ECMAScript によって定義されます。
 
-* Java™クラスプロセスの場合は、完全修飾クラス名が提供されます。
-* ECMAScript プロセスの場合、スクリプトへのパスが提供されます。
+* Java™ クラスのプロセスの場合は、完全修飾クラス名を指定します。
+* ECMAScript プロセスの場合は、スクリプトへのパスを指定します。
 
 ### ペイロード {#payload}
 
-ペイロードは、ワークフローインスタンスが機能するエンティティです。 ペイロードは、ワークフローインスタンスが開始されるコンテキストによって暗黙的に選択されます。
+ペイロードは、ワークフローインスタンスの処理対象となるエンティティです。ペイロードは、ワークフローインスタンスが開始されるコンテキストによって暗黙的に選択されます。
 
 例えば、ワークフローが AEM ページ「*P*」に適用された場合は、ワークフローが進むたびに「*P*」が手順から手順に引き渡され、各手順で必要に応じて「*P*」に対して何らかの処理がおこなわれます。
 
-最も一般的なケースでは、ペイロードはリポジトリ内の JCR ノード (AEM Page や Asset など ) です。 JCR ノードのペイロードは、JCR パスまたは JCR 識別子（UUID）のいずれかの文字列として渡されます。ペイロードは、JCR プロパティ（JCR パスとして渡される）、URL、バイナリオブジェクト、汎用 Java™オブジェクトのいずれかである場合があります。 ペイロードに対して動作するプロセスの個々の手順は、通常、特定のタイプのペイロードを想定しているか、ペイロードタイプに応じて異なる動作をします。次の各プロセスでは、想定するペイロードタイプ（存在する場合）を記述しています。
+最も多いのは、ペイロードがリポジトリ内の JCR ノード（例えば AEM ページまたはアセット）である場合です。JCR ノードのペイロードは、JCR パスまたは JCR 識別子（UUID）のいずれかの文字列として渡されます。ペイロードは、JCR プロパティ（JCR パスとして渡されます）、URL、バイナリオブジェクト、汎用 Java™ オブジェクトのいずれかである場合もあります。ペイロードに対して動作するプロセスの個々の手順は、通常、特定のタイプのペイロードを想定しているか、ペイロードタイプに応じて異なる動作をします。次の各プロセスでは、想定するペイロードタイプ（存在する場合）を記述しています。
 
 ### 引数 {#arguments}
 
-一部のワークフロープロセスは、ワークフローステップの設定時に管理者が指定した引数を受け取ります。
+一部のワークフロープロセスは引数を受け取ります。引数は、ワークフローステップを設定するときに管理者が指定します。
 
-引数は、単一の文字列として **プロセスの引数** プロパティを **プロパティ** ワークフローエディターのパネル。 次の各プロセスでは、引数文字列の形式を単純な EBNF 文法で記述しています。例えば、次の例では、引数文字列が 1 つ以上のコンマ区切りのペアで構成され、各ペアは名前（文字列）と値（ダブルコロンで区切られる）で構成されます。
+引数は、ワークフローエディターの&#x200B;**プロパティ**&#x200B;パネルの「**プロセスの引数**」プロパティに単一文字列として入力します。次の各プロセスでは、引数文字列の形式を単純な EBNF 文法で記述しています。例えば、次の例では、引数の文字列が 1 つまたは複数のコンマ区切りのペアで構成されています。各ペアは、2 つのコロンで区切られた名前（文字列）と値で構成されます。
 
 ```
     args := name '::' value [',' name '::' value]*
@@ -51,7 +52,7 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 ### タイムアウト {#timeout}
 
-このタイムアウト期間が過ぎると、ワークフローステップは動作しなくなります。 一部のワークフロープロセスはタイムアウトを考慮しますが、それ以外のプロセスはタイムアウトを適用せず、無視します。
+このタイムアウト期間が経過すると、ワークフローステップは動作しなくなります。タイムアウトを適用するワークフロープロセスもありますが、タイムアウトを適用せず、無視するワークフロープロセスもあります。
 
 ### 権限 {#permissions}
 
@@ -65,23 +66,23 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 この権限セットが `WorkflowProcess` の実装に十分でない場合は、必要な権限を持つセッションを使用する必要があります。
 
-この方法として、必要最小限の権限のサブセットで必要に応じて作成したサービスユーザーを使用することをお勧めします。
+これを行うには、必要な（ただし最小限の）権限のサブセットを持つように作成されたサービスユーザーを使用する方法が推奨されます。
 
 >[!CAUTION]
 >
->AEM 6.2 より前のバージョンからアップグレードする場合は、実装を更新する必要が生じる場合があります。
+>AEM 6.2 より前のバージョンからアップグレードする場合は、実装の更新が必要になる場合があります。
 >
->以前のバージョンでは、管理セッションは `WorkflowProcess` 実装を作成したら、特定の ACL を定義する必要なく、リポジトリへの完全なアクセス権を持つことができます。
+>以前のバージョンでは、管理者セッションが `WorkflowProcess` 実装に渡されたので、特定の ACL を定義しなくてもリポジトリへのフルアクセスが可能でした。
 >
->権限は、上記のように定義されました ([権限](#permissions)) をクリックします。 は、実装を更新するための推奨される方法です。
+>現在、権限は上述のように定義されています（[権限](#permissions)を参照）。実装を更新するために推奨される方法も同様です。
 >
->コードの変更が実行できない場合は、短期的なソリューションを後方互換性の確保にも使用できます。
+>コード変更が不可能な場合には、後方互換性の維持を目的として短期的なソリューションを使用することもできます。
 >
 >* Web コンソール（`/system/console/configMgr`/）を使用して、**Adobe Granite ワークフロー設定サービス**&#x200B;を探します
 >
 >* **ワークフロープロセスのレガシーモード**&#x200B;を有効にします
 >
->これにより、 `WorkflowProcess` を実装し、リポジトリ全体に再び無制限にアクセスできるようにします。
+>これにより、管理者セッションを `WorkflowProcess` 実装に渡すという古い動作に戻り、再びリポジトリ全体に無制限にアクセスできるようになります。
 
 ## ワークフロー制御プロセス {#workflow-control-processes}
 
@@ -91,7 +92,7 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 `AbsoluteTimeAutoAdvancer`（絶対時刻自動アドバンサー）プロセスは、**AutoAdvancer** と同じように動作します。ただし、指定された長さの時間が経過した後ではなく、指定された日時にタイムアウトする点が異なります。
 
-* **Java™クラス**: `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
+* **Java™ クラス**：`com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
 * **ペイロード**：なし.
 * **引数**：なし.
 * **タイムアウト**：設定された日時に達すると、プロセスはタイムアウトします。
@@ -100,7 +101,7 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 `AutoAdvancer` プロセスは、ワークフローを次の手順に自動的に進めます。次に生じる可能性のある手順が複数ある場合（例えば OR 分岐がある場合）、このプロセスは、*デフォルトのルート*&#x200B;が指定されているときはそのルートに沿ってワークフローを進め、指定されていないときはワークフローを進めません。
 
-* **Java™クラス**: `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
+* **Java™ クラス**：`com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
 
 * **ペイロード**：なし.
 * **引数**：なし.
@@ -108,11 +109,11 @@ AEMには、ワークフローモデルの作成に使用できる複数のプ�
 
 ### ProcessAssembler（プロセスアセンブラー） {#processassembler-process-assembler}
 
-The `ProcessAssembler` プロセスは、1 つのワークフローステップで複数のサブプロセスを連続して実行します。 次の手順で `ProcessAssembler`ワークフローでこのタイプの 1 つのステップを作成し、その引数を設定して、実行するサブプロセスの名前と引数を示します。
+`ProcessAssembler` プロセスは、ワークフローの単一の手順内で複数のサブプロセスを順番に実行します。`ProcessAssembler` を使用するには、ワークフロー内にこのタイプの手順を 1 つ作成し、実行するサブプロセスの名前と引数を示す引数を設定します。
 
-* **Java™クラス**: `com.day.cq.workflow.impl.process.ProcessAssembler`
+* **Java™ クラス**：`com.day.cq.workflow.impl.process.ProcessAssembler`
 
-* **ペイロード**:DAM アセット、AEMページ、ペイロードがない（サブプロセスの要件による）。
+* **ペイロード**：DAM アセット、AEM ページ、ペイロードなしのいずれか（サブプロセスの要件に応じて異なります）。
 * **引数**：
 
 ```
@@ -126,13 +127,13 @@ The `ProcessAssembler` プロセスは、1 つのワークフローステップ�
         listitem := /* A string */
 ```
 
-* **タイムアウト**：尊重されます。
+* **タイムアウト**：適用されます。
 
 次は例です。
 
 * アセットからメタデータを抽出します。
 * 指定した 3 つのサイズの 3 つのサムネールを作成します。
-* JPEGが元々GIFーまたは PNG ではない場合 ( この場合はJPEGが作成されない )、アセットからアセット画像を作成します。
+* アセットが元々 GIF でも PNG でもない場合（この場合は JPEG が作成されない）、アセットから JPEG 画像を作成します。
 * アセットの最終更新日を設定します。
 
 ```shell
@@ -154,7 +155,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ### delete {#delete}
 
-指定されたパスの項目が削除されます。
+指定されたパスにある項目が削除されます。
 
 * **ECMAScript パス**：`/libs/workflow/scripts/delete.ecma`
 
@@ -164,7 +165,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ### noop {#noop}
 
-これは null プロセスです。 処理は実行しませんが、デバッグメッセージをログに記録します。
+これはヌルプロセスです。処理は実行しませんが、デバッグメッセージをログに記録します。
 
 * **ECMAScript パス**：`/libs/workflow/scripts/noop.ecma`
 
@@ -182,9 +183,9 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 * **引数**：なし
 * **タイムアウト**：無視されます。
 
-### サンプル {#sample}
+### sample {#sample}
 
-これは、サンプルの ECMAScript プロセスです。
+これは ECMAScript プロセスのサンプルです。
 
 * **ECMAScript パス**：`/libs/workflow/scripts/sample.ecma`
 
@@ -196,13 +197,13 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ワークフローのペイロードをロックします。
 
-* **Java™クラス：** `com.day.cq.workflow.impl.process.LockProcess`
+* **Java™ クラス**：`com.day.cq.workflow.impl.process.LockProcess`
 
 * **ペイロード：** JCR_PATH と JCR_UUID
-* **引数：** なし
-* **タイムアウト：** 無視
+* **引数**：なし
+* **タイムアウト**：無視されます。
 
-この手順は、次の場合には無効です。
+次の状況下では、この手順は無効です。
 
 * ペイロードが既にロックされている
 * ペイロードノードに jcr:content 子ノードが含まれていない
@@ -211,26 +212,26 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ワークフローのペイロードをロック解除します。
 
-* **Java™クラス：** `com.day.cq.workflow.impl.process.UnlockProcess`
+* **Java™ クラス：** `com.day.cq.workflow.impl.process.UnlockProcess`
 
 * **ペイロード：** JCR_PATH と JCR_UUID
-* **引数：** なし
-* **タイムアウト：** 無視
+* **引数**：なし
+* **タイムアウト**：無視されます。
 
-この手順は、次の場合には無効です。
+次の状況下では、この手順は無効です。
 
 * ペイロードが既にロック解除されている
 * ペイロードノードに jcr:content 子ノードが含まれていない
 
-## プロセスのバージョン管理 {#versioning-processes}
+## バージョン管理プロセス {#versioning-processes}
 
-次のプロセスは、バージョン関連のタスクを実行します。
+以下のプロセスは、バージョン関連のタスクを実行します。
 
 ### CreateVersionProcess {#createversionprocess}
 
-ワークフローペイロード (AEMページまたは DAM アセット ) のバージョンを作成します。
+ワークフローペイロード（AEM ページまたは DAM アセット）のバージョンを作成します。
 
-* **Java™クラス**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
+* **Java™ クラス**：`com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
 * **ペイロード**：ページまたは DAM アセットを参照する JCR パスまたは UUID。
 * **引数**：なし

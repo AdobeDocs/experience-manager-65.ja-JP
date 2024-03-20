@@ -8,9 +8,10 @@ content-type: reference
 role: User, Admin
 feature: CDN Cache
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
-source-git-commit: b61157b0e9afa49ef72150ae0c1703a959d154be
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1372'
 ht-degree: 100%
 
 ---
@@ -50,7 +51,6 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
    >CDN 無効化テンプレートは、最大 2500 文字までのテキストを保存できます。
 
 1. **[!UICONTROL CDN 無効化テンプレート]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」を選択し、「**[!UICONTROL OK]**」を選択します。<br>
-
    *パート 2 / 2：CDN 無効化オプションの設定*
    <br>
 

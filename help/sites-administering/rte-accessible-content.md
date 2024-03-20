@@ -3,10 +3,11 @@ title: アクセシブルな web ページとサイトを作成するための�
 description: アクセシブルな web ページとサイトを作成するためのリッチテキストエディターの設定
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 95%
+source-wordcount: '930'
+ht-degree: 100%
 
 ---
 
@@ -48,7 +49,7 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 意味的ブロックの新しい書式を選択可能にするには、次の手順を実行します。
 
 1. 使用している RTE によって、[設定場所](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)を特定し、移動します。
-1. [段落選択フィールドの有効化](/help/sites-administering/rich-text-editor.md)；次で [プラグインのアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
+1. [プラグインをアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)することにより、[段落選択フィールドを有効](/help/sites-administering/rich-text-editor.md)にします。
 1. [段落選択フィールドで使用可能にする書式を指定](/help/sites-administering/rich-text-editor.md)します。
 1. これにより、コンテンツ作成者は、指定した段落書式を RTE の選択フィールドから選択できます。アクセス方法は次のとおりです。
 
@@ -59,7 +60,7 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-コンテンツ作成者が、RTE を使用して作成された HTML ソースコードを調査および調整することが必要になる場合があります。例えば、WCAG 2.0 を確実に準拠するため、RTE 内で作成されたコンテンツの一部で追加のマークアップが必要となることがあります。これを行うには、RTE の[ソースの編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションを使用します。[`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
+場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。例えば、RTE 内で作成されるコンテンツの一部が WCAG 2.0 に準拠するためには、追加のマークアップが必要になる場合があります。これを行うには、RTE の[ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションが使用できます。[`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
 
 >[!CAUTION]
 >
@@ -73,7 +74,7 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テーブルのプロパティダイアログへのキャプションの追加 {#example-adding-the-caption-to-the-table-properties-dialog}
 
-`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。注意： `itemId` は、次のように設定する必要があります `caption` （つまり、DOM 属性の名前）内のコンテンツを自動的に処理します。
+`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。`itemId` は、コンテンツを自動的に処理するために、`caption`（つまり、DOM 属性の名前）に設定する必要がある点に注意してください。
 
 **テーブル**&#x200B;で、DOM 要素に属性を明示的に設定したり削除したりします。値は、`config` オブジェクトのダイアログによって渡されます。DOM 属性は、ブラウザーの実装に伴う一般的な落とし穴を回避するために、対応する `CQ.form.rte.Common` メソッド（`com` は `CQ.form.rte.Common` のショートカット）を使用して、設定／削除する必要があります。
 
@@ -83,7 +84,7 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テキストで強調を使用する際のアクセシブルな HTML の作成 {#create-accessible-html-for-text}
 
-RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として `uiSettings` および `rtePlugins` ノードがダイアログに表示されます。
+RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として、ダイアログの `uiSettings` ノードおよび `rtePlugins` ノードに追加します。
 
 ```HTML
 <htmlRules jcr:primaryType="nt:unstructured">

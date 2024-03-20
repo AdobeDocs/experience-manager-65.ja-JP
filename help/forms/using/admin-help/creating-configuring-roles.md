@@ -6,10 +6,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2483'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -197,7 +198,7 @@ User Management データベースには、次のデフォルトの役割が含�
 
 **コア設定管理：**&#x200B;管理コンソールのコアシステム設定ページで設定を管理します
 
-**CREATE_VERSION_PERM:** サービスのバージョンの作成
+**CREATE_VERSION_PERM：**&#x200B;バージョンのサービスを作成します
 
 **資格情報変更：** Trust Store の署名証明書を変更します
 
@@ -287,7 +288,7 @@ User Management データベースには、次のデフォルトの役割が含�
 
 **Rights Management ポリシーセットコーディネーター追加：**&#x200B;ポリシーセットのコーディネーター権限を追加、削除、変更します
 
-**Rights Managementポリシーセットポリシーの作成：** ポリシーセットのポリシーを作成する
+**Rights Management ポリシーセットのポリシー作成：**&#x200B;ポリシーセットのポリシーを作成します
 
 **Rights Management ポリシーセットポリシー削除：**&#x200B;ポリシーセットからポリシーを削除します
 

@@ -1,16 +1,17 @@
 ---
 title: Adobe Experience Manager のトラブルシューティング
-description: Adobe Experience Managerで発生する可能性のあるいくつかの問題のトラブルシューティングについて説明します。
+description: Adobe Experience Manager で発生する可能性のあるいくつかのイシューのトラブルシューティングについて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 93%
+ht-degree: 99%
 
 ---
 
@@ -106,9 +107,9 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 * システムの速度が低下します。
 * 多数の CacheManager を確認できます（ログファイル内の resizeAll エントリ）。次の数値（size=&lt;x>）はキャッシュ数を示しており、各セッションが複数のキャッシュを開きます。
-* システムのメモリが不足することがある（重大度に応じて数時間後、数日後、数週間後に発生）。
+* システムのメモリが不足することがあります（重大度に応じて数時間後、数日後、数週間後に発生）。
 
-閉じられていないセッションを分析し、セッションを閉じていないコードを調べるには、ナレッジベースの記事を参照してください [閉じられていないセッションの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUnclosedSessions.html).
+閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUnclosedSessions.html)を参照してください。
 
 ### Adobe Experience Manager web コンソールの使用 {#using-the-adobe-experience-manager-web-console}
 

@@ -1,26 +1,27 @@
 ---
 title: 翻訳機能の強化
-description: AEM翻訳管理機能の段階的な機能強化と絞り込み。
+description: AEM 翻訳管理機能に対する増分的機能強化と調整。
 topic-tags: site-features
 content-type: reference
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '669'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
 # 翻訳の機能強化{#translation-enhancements}
 
-このページでは、AEM翻訳管理機能の段階的な機能強化と絞り込みについて説明します。
+ここでは、AEM 翻訳管理機能に対する増分的機能強化と調整について説明します。
 
 ## 翻訳プロジェクトの自動化 {#translation-project-automation}
 
 翻訳開始の自動促進や削除、翻訳プロジェクトの反復実行のスケジュール化など、翻訳プロジェクトの生産性を向上させるためのオプションが追加されました。
 
-1. 翻訳プロジェクトで、 **翻訳の概要** タイル。
+1. 翻訳プロジェクトで、「**翻訳の概要**」タイルの下部にある省略記号をクリックします。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -40,7 +41,7 @@ ht-degree: 73%
 
 翻訳プロジェクトで複数のターゲット言語を設定して、作成される翻訳プロジェクトの総数を減らすことができます。
 
-1. 翻訳プロジェクトで、 **翻訳の概要** タイル。
+1. 翻訳プロジェクトで、「**翻訳の概要**」タイルの下部にあるドットをクリックします。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
@@ -85,13 +86,13 @@ AEM は、設定済みの TMS の翻訳メモリ内の既存の文字列の翻�
 
 ## 複数のレベルの言語コピー {#language-copies-on-multiple-levels}
 
-言語ルートは、ノード（例えば、地域）の下にグループ化できるようになりましたが、言語コピーのルートとして認識されます。
+言語ルートは、言語コピーのルートを認識できる状態で、ノード（地域など）の下にグループ化できるようになりました。
 
 ![screen_shot_2018-04-23at144012](assets/screen_shot_2018-04-23at144012.jpg)
 
 >[!CAUTION]
 >
->1 レベルのみ許可されます。例えば、次の場合は、「es」ページで言語コピーを解決できません。
+>1 レベルのみ許可されます。例えば、次の場合、「es」ページを言語コピーとして解釈できません。
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
@@ -100,21 +101,21 @@ AEM は、設定済みの TMS の翻訳メモリ内の既存の文字列の翻�
 
 >[!NOTE]
 >
->言語ルートには、言語の ISO コードだけでなく、任意のページ名を含めることができます。 AEMは常に最初にパスと名前を確認しますが、ページ名が言語を識別しない場合は、AEMはページの cq:language プロパティで言語識別を確認します。
+>言語ルートは、言語の ISO コードだけでなく、任意のページ名を持つことができます。AEM は常に最初にパスと名前を確認しますが、ページ名で言語が識別されない場合は、ページの cq:language プロパティを確認して言語を識別します。
 
 ## 翻訳ステータスのレポート {#translation-status-reporting}
 
-ページが翻訳済みか、翻訳中か、またはまだ翻訳されていないかを示すプロパティをサイトリスト表示で選択できるようになりました。 プロパティを表示するには：
+ページが翻訳済みである、翻訳中である、またはまだ翻訳されていないことを示すプロパティが、Sites のリストビューで選択できるようになりました。プロパティを表示するには：
 
 1. Sites で、**リスト表示**&#x200B;に切り替えます。
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. クリック **設定を表示**.
+1. 「**設定を表示**」をクリックします。
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. チェック **翻訳済み** 下のチェックボックス **翻訳** をクリックします。 **更新**.
+1. 「**翻訳**」の下の「**翻訳済み**」チェックボックスをオンにして、「**更新**」をクリックします。
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 

@@ -10,10 +10,11 @@ role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1393'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -208,12 +209,12 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 ビューアで問題が発生している場合、次のトラブルシューティングガイドに従ってください。
 
-### 問題：ビューアプリセットが公開されない {#viewers-not-published}
+### 問題：ビューアプリセットが公開されていない {#viewers-not-published}
 
 **デバッグの方法**
 
 1. サンプルマネージャー診断ページ `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html` に移動します。
-1. 計算された値を確認します。正しく動作すると、次のように表示されます。 `_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets`.
+1. 計算された値を確認します。正しく動作すると、次のように表示されます。`_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets`。
 
    >[!NOTE]
    >
@@ -242,7 +243,7 @@ CRXDE Lite で以下を行います。
    * `"is/content"`
    * `dam:scene7Folder`
    * `<asset-name>`
-例： `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+例：`https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
 
 **解決策**
 

@@ -3,10 +3,12 @@ title: AEM での GraphQL の使用方法の学習 - サンプルのコンテン
 description: AEM で GraphQL を使用し、サンプルコンテンツとクエリで、コンテンツをヘッドレスに配信する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+solution: Experience Manager, Experience Manager Sites
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1588'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -355,7 +357,7 @@ query {
 }
 ```
 
-### サンプルクエリ — 区切り文字としてタグ付けされたすべての都市の名前 {#sample-names-all-cities-tagged-city-breaks}
+### サンプルクエリ - 市区町村の区切り文字としてタグ付けされた、すべての都市の名前 {#sample-names-all-cities-tagged-city-breaks}
 
 次の場合：
 
@@ -1245,7 +1247,7 @@ query {
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
    * 特定のパス内にある、次のすべてのコンテンツ形式：
       * HTML
-      * Markdown
+      * マークダウン
       * プレーンテキスト
       * JSON
 

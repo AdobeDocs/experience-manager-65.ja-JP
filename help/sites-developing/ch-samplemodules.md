@@ -1,15 +1,16 @@
 ---
 title: ContextHub UI モジュールタイプのサンプル
-description: ContextHub には、ソリューションで使用できるいくつかのサンプル UI モジュールが用意されています.
+description: ContextHub には、ソリューションで利用できる UI モジュールのサンプルが用意されています。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 87%
+source-wordcount: '1171'
+ht-degree: 100%
 
 ---
 
@@ -55,7 +56,7 @@ JSON 形式の JavaScript オブジェクトを使用して、contexthub.base UI
    * タイトル：この項目に対して表示するテキスト
    * 画像：（オプション）左側に表示する画像への URL
    * アイコン：（オプション）左側に表示する CUI アイコンクラスで、画像が指定されている場合は無視されます
-   * 選択済み：（オプション）この項目を選択された状態で表示するかどうかを指定する Boolean 値（true=selected）。デフォルトでは、選択した項目は太字フォントで表示されます。 その他の外観を設定するには、`listType` プロパティを使用します（以下を参照）。
+   * 選択済み：（オプション）この項目を選択された状態で表示するかどうかを指定する Boolean 値（true=selected）。デフォルトでは、選択した項目が太字フォントで表示されます。その他の外観を設定するには、`listType` プロパティを使用します（以下を参照）。
 
 * **listType：**&#x200B;ポップオーバーリスト項目に使用するスタイル。次のいずれかの値を使用します。
 
@@ -84,11 +85,11 @@ JSON 形式の JavaScript オブジェクトを使用して、contexthub.base UI
 
 ## contexthub.browserinfo UI モジュールタイプ {#contexthub-browserinfo-ui-module-type}
 
-contexthub.browserinfo UI モジュールは、クライアント Web ブラウザーとオペレーティングシステムに関する情報を表示します。 情報は、[contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) ストア候補をベースとする surferinfo ストアから取得されます。
+contexthub.browserinfo UI モジュールは、クライアント web ブラウザーとオペレーティングシステムに関する情報を表示します。情報は、[contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) ストア候補をベースとする surferinfo ストアから取得されます。
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
-この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。 この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
+この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
 
 ### 設定 {#configuration-1}
 
@@ -130,7 +131,7 @@ contexthub.datetime UI モジュールのインスタンスには、詳細設定
 
 ## contexthub.location UI モジュールタイプ {#contexthub-location-ui-module-type}
 
-contexthub.location UI モジュールは、クライアントの緯度と経度を表示します。 このモジュールは、クリックして現在の位置を変更できる Google マップを表示するポップオーバーを提供します。このモジュールは、[contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) ストア候補をベースとする、geolocation という名前の ContextHub ストアから情報を取得します。
+contexthub.location UI モジュールは、クライアントの緯度と経度を表示します。このモジュールは、クリックして現在の位置を変更できる Google マップを表示するポップオーバーを提供します。このモジュールは、[contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) ストア候補をベースとする、geolocation という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
@@ -173,7 +174,7 @@ contexthub.location UI モジュールのインスタンスには、詳細設定
 
 ## contexthub.screen-orientation UI モジュールタイプ {#contexthub-screen-orientation-ui-module-type}
 
-contexthub.screen-orientation UI モジュールは、クライアントの現在の画面の向きを表示します。 デフォルトでは無効になっていますが、このモジュールは向きを選択できるポップオーバーを提供します。このモジュールは、[granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) ストア候補をベースとする、emulators という名前の ContextHub ストアから情報を取得します。
+contexthub.screen-orientation UI モジュールは、クライアントの現在の画面の向きを表示します。デフォルトでは無効になっていますが、このモジュールは向きを選択できるポップオーバーを提供します。このモジュールは、[granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) ストア候補をベースとする、emulators という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
@@ -181,7 +182,7 @@ contexthub.screen-orientation UI モジュールは、クライアントの現�
 
 ### 設定 {#configuration-5}
 
-contexthub.screen-orientation UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。The `clickable` プロパティは次のとおりです。 `false` デフォルトでは。 デフォルトの設定を上書きして `clickable` を `true` に設定した場合、このモジュールをクリックするとポップアップが表示され、向きを選択できます。
+contexthub.screen-orientation UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。`clickable` プロパティは、デフォルトで `false` です。デフォルトの設定を上書きして `clickable` を `true` に設定した場合、このモジュールをクリックするとポップアップが表示され、向きを選択できます。
 
 ```xml
 {
@@ -197,7 +198,7 @@ contexthub.screen-orientation UI モジュールのインスタンスには、�
 
 ## contexthub.tagcloud UI モジュールタイプ {#contexthub-tagcloud-ui-module-type}
 
-contexthub.tagcloud UI モジュールは、タグに関する情報を表示します。 UI モジュールのツールバーにはタグの数が表示されます。ポップアップには、タグクラウドと新しいタグを追加するためのテキストボックスが表示されます。この UI モジュールは、 [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) ストア候補。
+contexthub.tagcloud UI モジュールは、タグに関する情報を表示します。UI モジュールのツールバーにはタグの数が表示されます。ポップアップには、タグクラウドと新しいタグを追加するためのテキストボックスが表示されます。この UI モジュールは、[contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) ストア候補をベースとする、tagcloud という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
@@ -205,7 +206,7 @@ contexthub.tagcloud UI モジュールは、タグに関する情報を表示し
 
 ### 設定 {#configuration-6}
 
-contexthub.tagcloud UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+contexthub.tagcloud UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {
@@ -221,7 +222,7 @@ contexthub.tagcloud UI モジュールのインスタンスには、詳細設定
 
 ## granite.profile UI モジュールタイプ {#granite-profile-ui-module-type}
 
-granite.profile ContextHub UI モジュールは、現在のユーザーの表示名を表示します。 ポップアップにはユーザーのログイン名が表示され、表示名の値を変更できます。この UI モジュールは、[granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア候補をベースとする、profile という名前の ContextHub ストアから情報を取得します。
+granite.profile ContextHub UI モジュールは、現在のユーザーの表示名を表示します。ポップアップにはユーザーのログイン名が表示され、表示名の値を変更できます。この UI モジュールは、[granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア候補をベースとする、profile という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
@@ -229,7 +230,7 @@ granite.profile ContextHub UI モジュールは、現在のユーザーの表�
 
 ### 設定 {#configuration-7}
 
-grantie.profile UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+contexthub.profile UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {

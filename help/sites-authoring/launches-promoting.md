@@ -8,10 +8,11 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '772'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -60,7 +61,7 @@ ht-degree: 94%
 
    * **ローンチ**&#x200B;コンソール:
 
-      1. ローンチを選択します（サムネールをクリック）。
+      1. ローンチを選択します（サムネールをクリックします）。
       1. 「**昇格**」を選択します。
 
 1. 最初の手順では、以下を指定できます。
@@ -87,7 +88,7 @@ ht-degree: 94%
 1. 「**次へ**」を選択して、続行します。
 1. 昇格させるページを確認できます。これは、選択したページの範囲によって変わります。
 
-   ![昇格するページを確認します](assets/chlimage_1-102.png)
+   ![昇格させるページを確認](assets/chlimage_1-102.png)
 
 1. 「**昇格**」を選択します。
 
@@ -141,7 +142,7 @@ ht-degree: 94%
 
 1. 変更が昇格され、「**ローンチ**」コンソールに反映されます。
 
-   ![ローンチコンソール](assets/chlimage_1-107.png)
+   ![コンソールを起動](assets/chlimage_1-107.png)
 
 ## AEM ワークフローを使用した昇格済みページの処理 {#processing-promoted-pages-using-aem-workflow}
 

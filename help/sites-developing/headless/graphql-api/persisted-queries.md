@@ -1,11 +1,14 @@
 ---
 title: 永続的な GraphQL クエリ
-description: Adobe Experience ManagerでGraphQLクエリを保持してパフォーマンスを最適化する方法を説明します。 クライアントアプリケーションで HTTP GET メソッドを使用して永続クエリをリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュできるので、最終的にクライアントアプリケーションのパフォーマンスが向上します。
+description: Adobe Experience Manager で GraphQL クエリを永続化してパフォーマンスを最適化する方法を説明します。クライアントアプリケーションで HTTP GET メソッドを使用して永続クエリをリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュできるので、最終的にクライアントアプリケーションのパフォーマンスが向上します。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+feature: Content Fragments,GraphQL API
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1401'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -396,12 +399,12 @@ URL は次の部分に分解できます。
 パッケージを作成するには：
 
 1. **ツール**／**デプロイメント**／**パッケージ**&#x200B;に移動します。
-1. をタップしてパッケージを作成 **パッケージを作成**. パッケージを定義するダイアログボックスが開きます。
+1. 「**パッケージを作成**」をタップして新しいパッケージを作成します。これにより、パッケージを定義するためのダイアログボックスが開きます。
 1. パッケージ定義ダイアログの「**一般**」で、「wknd-persistent-queries」などの&#x200B;**名前**&#x200B;を入力します。
 1. 「1.0」のようなバージョン番号を入力します。
-1. 「**フィルター**」で、新しい&#x200B;**フィルター**&#x200B;を追加します。パスファインダーを使用して、設定の下にある `persistentQueries` フォルダーを選択します。例えば、 `wknd` フルパスの設定： `/conf/wknd/settings/graphql/persistentQueries`.
-1. 選択 **保存** 新しいパッケージ定義を保存し、ダイアログを閉じます。
-1. を選択します。 **ビルド** 」ボタンをクリックします。
+1. 「**フィルター**」で、新しい&#x200B;**フィルター**&#x200B;を追加します。パスファインダーを使用して、設定の下にある `persistentQueries` フォルダーを選択します。例えば、`wknd` 設定の場合、フルパスは `/conf/wknd/settings/graphql/persistentQueries` になります。
+1. 「**保存**」を選択して新しいパッケージ定義を保存し、ダイアログを閉じます。
+1. 新しく作成されたパッケージ定義で「**ビルド**」ボタンを選択します。
 
 パッケージが構築されたら、次の操作を実行できます。
 

@@ -1,14 +1,15 @@
 ---
 title: SAP Commerce Cloud を使用した e コマースのデプロイ
-description: Adobe Experience Manager e コマースを SAPCommerce Cloudと共にデプロイする方法を説明します。
+description: Adobe Experience Manager eCommerce と SAP Commerce Cloud のデプロイ方法を説明します。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '712'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +46,7 @@ e コマース統合フレームワークの Hybris 拡張が更新されて、[
 >
 >* バージョン 18.11 以降をサポートしています。
 >* [Hybris 5 サーバー](https://www.sap.com/japan/products/crm.html)を実行するには Java™ 7 が必要です。
-* hybris のアドオンである [Telco Accelerator](https://www.sap.com/japan/products/crm.html) は、AEM 拡張機能ではサポートされていません。
+>* hybris のアドオンである [Telco Accelerator](https://www.sap.com/japan/products/crm.html) は、AEM 拡張機能ではサポートされていません。
 >
 
 ### hybris を使用した e コマースに必要なパッケージ {#packages-needed-for-ecommerce-with-hybris}
@@ -91,11 +92,11 @@ e コマース機能をインストールするには、次が必要です。
 
 >[!CAUTION]
 >
-hybris サーバーを使用するには、hybris ライセンスが別途必要です。
+>hybris サーバーを使用するには、hybris ライセンスが別途必要です。
 
 >[!NOTE]
 >
-開発者は、[API のドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)をダウンロードすることもできます。
+>開発者は、[API のドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)をダウンロードすることもできます。
 
 ### hybris サーバーのダウンロードと構築 {#download-and-build-your-hybris-server}
 
@@ -103,17 +104,17 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
 >[!CAUTION]
 >
-5.5.1 より前の hybris バージョンはサポートされていません。
+>5.5.1 より前の hybris バージョンはサポートされていません。
 
 >[!NOTE]
 >
-この手順を完了するには、システムに [Groovy](https://groovy-lang.org/) がインストールされている必要があります。
+>この手順を完了するには、システムに [Groovy](https://groovy-lang.org/) がインストールされている必要があります。
 
 1. hybris ダウンロードサイトから、**hybris Commerce Suite** のディストリビューションファイルをダウンロードします。
 
    >[!CAUTION]
    >
-   これにアクセスするには（hybris からの）アカウントが必要です。
+   >これにアクセスするには（hybris からの）アカウントが必要です。
 
 1. 配布ファイルを（&lt;hybris-root-directory>と呼ばれる）必要な場所に解凍します。
 1. コマンドラインから、次の操作を実行します。
@@ -127,11 +128,11 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    >[!NOTE]
    >
-   実行時：
+   >実行時：
    >
-   `ant clean all`
+   >`ant clean all`
    >
-   必要に応じて、`Return` キーを押します。
+   >必要に応じて、`Return` キーを押します。
 
 1. 以下のファイルを、解凍した hybris ディストリビューションのルートフォルダーにダウンロードします。
 
@@ -144,7 +145,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    >[!NOTE]
    >
-   hybris 5.6.0 以降の場合は、次の setup.groovy を使用してください。
+   >hybris 5.6.0 以降の場合は、次の setup.groovy を使用してください。
 
    5.6.0 以降
 
@@ -165,7 +166,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    >[!NOTE]
    >
-   システムによっては、これらのいくつかの手順が完了するまで数分かかる場合があります。
+   >システムによっては、これらのいくつかの手順が完了するまで数分かかる場合があります。
 
 1. ブラウザーで次の URL にアクセスし、**hybris 管理コンソール**&#x200B;を表示します。
 
@@ -177,7 +178,7 @@ hybris サーバーを使用するには、hybris ライセンスが別途必要
 
    >[!NOTE]
    >
-   お使いのシステムによっては、この処理が完了するまでに数分かかる場合があります。
+   >お使いのシステムによっては、この処理が完了するまでに数分かかる場合があります。
 
 ### Geometrixx Outdoors ストアを設定 {#setup-the-geometrixx-outdoors-store}
 

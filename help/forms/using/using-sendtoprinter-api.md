@@ -1,14 +1,16 @@
 ---
 title: sendToPrinter API の使用
-description: sendToPrinter サービスを使用して、ドキュメントをプリンターに送信します。
+description: sendToPrinter サービスを使用して、プリンターにドキュメントを送信します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 feature: Document Services
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+exl-id: 585d4053-1056-4d2b-a9df-9516775afe50
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '364'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +18,7 @@ ht-degree: 58%
 
 ## 概要 {#overview}
 
-AEM Formsでは、 SendToPrinter サービスを使用して、ドキュメントをプリンターに送信できます。 SendToPrinter サービスは、次の印刷アクセスメカニズムをサポートしています。
+AEM Forms では、SendToPrinter サービスを使用することで、プリンターにドキュメントを送信できます。SendToPrinter サービスは、次の印刷アクセスメカニズムをサポートしています。
 
 * **直接アクセス型プリンター** `: A printer that is installed on the same computer is called a direct accessible printer, and the computer is named printer host. This type of printer can be a local printer that is connected to the computer directly.`
 
@@ -30,36 +32,36 @@ AEM Formsでは、 SendToPrinter サービスを使用して、ドキュメン�
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**：Output サービスは、Common Internet File System（CIFS）印刷プロトコルをサポートしています。
 
-## SendToPrinter Service の使用 {#using-sendtoprinter-service}
+## SendToPrinter サービスの使用 {#using-sendtoprinter-service}
 
-次の表にリストを示します。
+以下の表に、次の項目を表示します。
 
-* 様々なプロトコルで使用する printerName または printServer に関する情報です。
-* プリンタサーバー URI とプリンタ名の様々な組み合わせに対してプリンタが返す値または例外
+* さまざまなプロトコルで使用する printerName または printServer に関する情報。
+* プリンターサーバー URI とプリンター名の様々な組み合わせに対して、プリンターが返す値または例外
 
-| プロトコル（アクセスメカニズム） | プリントサーバー URI (PrinterSpec.printServer) | プリンタ名 (PrinterSpec.printerName) | 結果 |
+| プロトコル（アクセスメカニズム） | プリントサーバー URI（PrinterSpec.printServer） | プリンター名（PrinterSpec.printerName） | 結果 |
 |--- |--- |--- |--- |
 | SharedPrinter | 任意 | 空白 | 例外：必須の引数 sPrinterName を空にすることはできません。 |
-| SharedPrinter | 任意 | 無効 | プリンタが見つからないことを示す例外が発生しました。 |
-| SharedPrinter | 任意 | 有効 | 印刷ジョブが正常に完了しました。 |
+| SharedPrinter | 任意 | 無効 | プリンターが見つからないという内容の例外がスローされます。 |
+| SharedPrinter | 任意 | 有効 | 印刷ジョブが正常に作成されます。 |
 | LPD | 空白 | 任意 | 必須の引数 sPrintServerUri を空にすることはできないことを示す例外。 |
 | LPD | 無効 | 空白 | 必須の引数 sPrinterName を空にすることはできないという例外があります。 |
 | LPD | 無効 | 空ではない | sPrintServerUri が見つからないという例外があります。 |
-| LPD | 有効 | 無効 | プリンタが見つからないことを示す例外。 |
-| LPD | 有効 | 有効 | 正常な印刷ジョブです。 |
+| LPD | 有効 | 無効 | プリンターが見つからないという内容の例外がスローされます。 |
+| LPD | 有効 | 有効 | 印刷ジョブが正常に作成されます。 |
 | CUPS | 空白 | 任意 | 必須の引数 sPrintServerUri を空にすることはできないことを示す例外。 |
-| CUPS | 無効 | 任意 | プリンタが見つからないことを示す例外。 |
-| CUPS | 有効 | 任意 | 印刷ジョブが正常に完了しました。 |
+| CUPS | 無効 | 任意 | プリンターが見つからないという内容の例外がスローされます。 |
+| CUPS | 有効 | 任意 | 印刷ジョブが正常に作成されます。 |
 | DirectIP | 空白 | 任意 | 必須の引数 sPrintServerUri を空にすることはできないことを示す例外。 |
-| DirectIP | 無効 | 任意 | プリンタが見つからないことを示す例外。 |
-| DirectIP | 有効 | 任意 | 印刷ジョブが正常に完了しました。 |
-| CIFS | 有効 | 空白 | 印刷ジョブが正常に完了しました。 |
-| CIFS | 無効 | 任意 | CIFを使用した印刷中に不明なエラーが発生しました。 |
+| DirectIP | 無効 | 任意 | プリンターが見つからないという内容の例外がスローされます。 |
+| DirectIP | 有効 | 任意 | 印刷ジョブが正常に作成されます。 |
+| CIFS | 有効 | 空白 | 印刷ジョブが正常に作成されます。 |
+| CIFS | 無効 | 任意 | CIFS を使用した印刷中に不明なエラーがスローされます。 |
 | CIFS | 空白 | 任意 | 必須の引数 sPrintServerUri を空にすることはできないことを示す例外。 |
 
 ## 認証サポート {#authentication-support}
 
-認証は、CIF印刷でのみサポートされます。 認証するには、PrinterSpec にユーザー名、パスワード、ドメインを入力します。次の手順を実行することで、AEM Granite CyprtoSupport Service を使用してパスワードを暗号化することができます。
+認証は、CIFS 印刷に対してのみサポートされます。認証するには、PrinterSpec にユーザー名、パスワード、ドメインを入力します。次の手順を実行することで、AEM Granite CyprtoSupport Service を使用してパスワードを暗号化することができます。
 
 1. https://&lt;server>:&lt;port>/system/console へ移動します。
 

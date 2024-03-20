@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '556'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ AEM Forms Workspace ユーザーインターフェイスを任意の言語にロ
 
 >[!NOTE]
 >
->AEM Forms Workspace のログイン画面の言語を変更するには、 [ログイン画面の作成](../../forms/using/creating-new-login-screen.md).
+>AEM Forms Workspace のログイン画面の言語を変更するには、[ログイン画面の作成](../../forms/using/creating-new-login-screen.md)を参照してください。
 
 ## テキストのローカライズ {#localizing-text}
 

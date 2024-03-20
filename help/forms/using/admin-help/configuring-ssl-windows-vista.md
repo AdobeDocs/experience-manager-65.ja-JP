@@ -1,25 +1,26 @@
 ---
 title: Windows Vista での SSL の設定
-description: Windows Vista で SSL を設定する方法を説明します。 を使用して Java Keytool を実行し、認証用の RSA キーを含む SSL 証明書を生成します。
+description: Windows Vista での SSL の設定方法について説明します。Java keytool を使用して実行し、認証用の RSA 鍵を含む SSL 証明書を生成します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 36c4300d-7a44-41f4-b294-06f32bb01686
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
 # Windows Vista での SSL の設定 {#configuring-ssl-on-windows-vista}
 
-Windows Vista™で SSL を設定するには、認証用に RSA キーを持つ SSL 証明書が必要です。 Java keytool を使用して証明書を作成できます。
+Windows Vista™ で SSL を設定するには、認証用の RSA 鍵が設定された SSL 証明書が必要になります。Java keytool を使用して、証明書を作成できます。
 
 >[!NOTE]
 >
->Windows Vista は、DSA キーでは機能しません。
+>Windows Vista は DSA 鍵には対応していません。
 
 証明書とキーストアの作成に必要なすべての情報を含む 1 つのコマンドを使用して、keytool を実行できます。
 

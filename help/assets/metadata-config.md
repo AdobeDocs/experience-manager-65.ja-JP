@@ -6,10 +6,11 @@ role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '2000'
-ht-degree: 99%
+source-wordcount: '1978'
+ht-degree: 100%
 
 ---
 
@@ -56,11 +57,11 @@ ht-degree: 99%
 ### メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータプロファイル]**&#x200B;に移動し、「**[!UICONTROL 作成]**」をクリックします。
-1. プロファイルのタイトルを入力します（例： ）。 `Sample Metadata`をクリックし、 **[!UICONTROL 作成]**. メタデータプロファイルの「[!UICONTROL フォームを編集]」が表示されます。
+1. プロファイルのタイトル（例：`Sample Metadata`）を入力して、「**[!UICONTROL 作成]**」をクリックします。メタデータプロファイルの「[!UICONTROL フォームを編集]」が表示されます。
 
    ![メタデータフォームの編集](assets/metadata-edit-form.png)
 
-1. コンポーネントをクリックして、「**[!UICONTROL 設定]**」タブでプロパティを設定します。例えば、**[!UICONTROL 説明]**&#x200B;コンポーネントをクリックして、そのプロパティを編集します。
+1. コンポーネントをクリックし、「**[!UICONTROL 設定]**」タブでプロパティを設定します。例えば、「**[!UICONTROL 説明]**」コンポーネントをクリックして、そのプロパティを編集します。
 
    ![メタデータプロファイルでのコンポーネントの設定](assets/metadata-profile-component-setting.png)
 

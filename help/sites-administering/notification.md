@@ -1,15 +1,16 @@
 ---
 title: メール通知の設定
-description: Adobe Experience Managerで電子メール通知を設定する方法を説明します。
+description: Adobe Experience Manager でのメール通知の設定方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2037'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -18,9 +19,9 @@ ht-degree: 89%
 
 AEM は、次のユーザーに対してメール通知を送信します。
 
-* 変更やレプリケーションなどのページイベントを購読済みである。 The [通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) このようなイベントを購読する方法については、を参照してください。
+* 変更やレプリケーションなど、ページイベントを購読したことがある。「[通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)」セクションでは、このようなイベントを購読する方法について説明します。
 
-* フォーラムイベントを購読したことがある
+* フォーラムイベントを購読したことがある。
 * ワークフローで手順を実行する必要がある。[参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
 
 前提条件：
@@ -230,7 +231,7 @@ subject=<text_1>
 
 * `${payload.type}`、ペイロードのタイプ
 * `${payload.path}`、ペイロードのパス
-* `${host.prefix}`、ホストプレフィックス。例： `http://localhost:4502`
+* `${host.prefix}`、ホストのプレフィックス（例：`http://localhost:4502`）
 
 ### 新しい言語用のメールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
@@ -258,7 +259,7 @@ AEM Assets のコレクションが共有されている場合も共有されて
 
 ## OAuth の設定 {#setting-up-oauth}
 
-AEMは、組織が安全な電子メール要件に準拠できるように、OAuth2 を統合メーラーサービスに対してサポートしています。
+AEM は、組織が安全なメール要件に準拠できるように、Oauth2 の統合メーラーサービスをサポートしています。
 
 以下に示すように、複数のメールプロバイダーに対して OAuth を設定できます。
 
@@ -275,7 +276,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
    * `https://mail.google.com/`
    * `https://www.googleapis.com//auth/gmail.send`
 1. 範囲を追加したら、左側のメニューで&#x200B;**資格情報**&#x200B;に戻り、 **資格情報を作成**／**OAuth クライアント ID**／**デスクトップアプリ**&#x200B;に移動します。
-1. 新しいウィンドウが開き、クライアント ID とクライアントの秘密鍵が表示されます。
+1. 新しいウィンドウが開き、クライアント ID とクライアント秘密鍵が表示されます。
 1. これらの資格情報を保存します。
 
 **AEM 側の設定**
@@ -287,7 +288,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 まず、メールサービスを設定します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます
-1. を探して、「 **Day CQ Mail Service**
+1. **Day CQ Mail Service** を探して、クリックします。
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.gmail.com`
    * SMTP サーバーポート：`25` または `587`（要件に応じて）
@@ -297,7 +298,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 次に、以下の手順に従って、SMTP OAuth プロバイダーを設定します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます
-1. を探して、「 **CQ Mailer SMTP OAuth2 Provider**
+1. **CQ Mailer SMTP OAuth2 Provider** を探して、クリックします。
 1. 必要な情報を以下のとおり入力します。
    * 認証 URL：`https://accounts.google.com/o/oauth2/auth`
    * トークン URL：`https://accounts.google.com/o/oauth2/token`
@@ -341,7 +342,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 
    ![Microsoft Outlook を設定する際の新しい登録ボタン](assets/oauth-outlook1.png)
 
-1. 必要に応じて情報を入力し、「 **登録**
+1. 必要に応じて情報を入力し、「**登録**」をクリックします。
 1. 新しく作成されたアプリに移動し、**API 権限**&#x200B;を選択します。
 1. **権限を追加**／**グラフ権限**／**委任権限**&#x200B;に移動します。
 1. アプリに対して以下の権限を選択し、「**権限を追加**」をクリックします。
@@ -354,10 +355,10 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 公開インスタンスごとに上記の手順を繰り返します。
 1. 要件に応じて設定を指定します
-1. 次へ、に移動します。 **証明書と秘密鍵**&#x200B;をクリックし、 **新しいクライアント秘密鍵** 画面の手順に従って、秘密鍵を作成します。 このシークレットは後で使用するため、必ずメモしてください
+1. 次に、**証明書とシークレット**&#x200B;に移動し、「**新しいクライアントシークレット**」をクリックし、画面上の手順に従ってシークレットを作成します。このシークレットは後で使用するため、必ずメモしてください
 1. 左側のウィンドウで「**概要**」を押し、後で使用するために、「**アプリケーション（クライアント）ID**」および「**ディレクトリ（テナント）ID**」の値をコピーします。
 
-まとめるには、AEM側で Mailer サービスの OAuth2 を設定するために、次の情報が必要です。
+まとめると、以下の情報を使用して、AEM 側の Mailer サービスの Oauth2 を設定する必要があります。
 
 * 認証 URLはテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * トークン URL はテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
@@ -370,7 +371,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 次に、OAuth2 の設定を AEM と統合します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` をブラウジングすることで、ローカルインスタンスの web コンソールに移動します。
-1. を探してクリックします。 **Day CQ Mail Service**
+1. **Day CQ Mail Service** を探してクリックします。
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.office365.com`
    * SMTP ユーザー：メールフォーマットのユーザ名
@@ -378,7 +379,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
    * SMTP サーバーポート：要件に応じて `25` または `587`
    * 「**SMPT は StarTLS を使用**」と「**SMTP には StarTLS が必要**」のチェックボックスをオンにします。
    * **OAuth フロー** をチェックし、「**保存**」をクリックします。
-1. を探して、「 **CQ Mailer SMTP OAuth2 Provider**
+1. **CQ Mailer SMTP OAuth2 Provider** を探して、クリックします。
 1. 必要な情報を以下のとおり入力します。
    * 「認証 URL」、「トークン URL」、「更新トークン URL」を、[この手順の最後](#microsoft-outlook)に説明した方法で作成し、入力します。
    * クライアント ID とクライアント秘密鍵：これらのフィールドに、前述のように取得した値を設定します。
@@ -394,7 +395,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 
 設定が完了すると、設定は次のようになります。
 
-![完了した CQ メーラー SMTP OAuth2 設定](assets/oauth-outlook-smptconfig.png)
+![完了した CQ Mailer SMTP OAuth2 の設定](assets/oauth-outlook-smptconfig.png)
 
 次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
 

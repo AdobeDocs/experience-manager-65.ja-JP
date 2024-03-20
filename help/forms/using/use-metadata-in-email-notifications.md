@@ -1,25 +1,26 @@
 ---
 title: メール通知におけるメタデータの使用
-description: メタデータを使用して、フォームワークフローの電子メール通知に情報を入力する
+description: メタデータを使用した Forms Workflow メール通知での情報の作成
 topic-tags: publish
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '871'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 # メール通知におけるメタデータの使用 {#use-metadata-in-an-email-notification}
 
-タスクの割り当て手順を使用して、タスクを作成し、ユーザーまたはグループに割り当てることができます。 タスクがユーザーまたはグループに割り当てられると、定義されたユーザーまたは定義されたグループの各メンバーに電子メール通知が送信されます。 典型的な [電子メール通知](../../forms/using/use-custom-email-template-assign-task-step.md) 割り当てられたタスクのリンクとタスクに関連する情報が含まれます。
+ユーザーまたはグループにタスクを作成して割り当てるには、タスクの割り当て手順を使用します。ユーザーまたはグループにタスクが割り当てられると、指定されたユーザーまたは指定されたグループのメンバーに、メール通知が送信されます。一般的な[メール通知](../../forms/using/use-custom-email-template-assign-task-step.md)には、割り当てられたタスクのリンクと、タスクに関連する情報が含まれています。
 
-電子メールテンプレートでメタデータを使用すると、電子メール通知に情報を動的に入力できます。 例えば、次の電子メール通知のタイトル、説明、期限、優先度、ワークフローおよび最終日の値は、実行時（電子メール通知が生成される際）に動的に選択されます。
+メールテンプレートのメタデータを使用して、メール通知の情報を動的に入力できます。例えば、以下のメール通知のタイトル、説明、期限、優先度、最終日の値は、実行時（メール通知が生成されるとき）に動的に選択されます。
 
 ![デフォルトのメールテンプレート](assets/default_email_template_metadata_new.png)
 
-メタデータはキーと値のペアとして保存されます。 電子メールテンプレートでキーを指定し、キーを実行時（電子メール通知が生成される際）の値に置き換えることができます。 例えば、以下のコードサンプルでは、「$」となっています。 {workitem_title} &quot;はキーです。 これは、実行時には「Loan-Request」の値で置き換えられます。
+メタデータは、キーと値のペアで保存されます。メールテンプレートでキーを指定すると、そのキーが実行される際（メール通知が生成されるとき）、値に置き換えられます。例えば、下記のコードサンプルでは、「$ {workitem_title}」がキーになります。これは、実行時には「Loan-Request」の値で置き換えられます。
 
 ```html
 subject=Task Assigned - ${workitem_title}
@@ -92,9 +93,9 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 電子メール通知でのシステム生成メタデータの使用 {#using-system-generated-metadata-in-an-email-notification}
+## メール通知におけるシステム生成メタデータの使用 {#using-system-generated-metadata-in-an-email-notification}
 
-AEM Formsアプリケーションには、いくつかのメタデータ変数（キーと値のペア）が標準で用意されています。 これらの変数は、E メールテンプレートで使用できます。 変数の値は、関連する Forms アプリケーションに基づきます。 次の表に、すぐに使用できるすべてのメタデータ変数を示します。
+AEM Forms アプリケーションには、すぐに使えるメタデータ変数（キーと値のペア）がいくつか用意されています。これらの変数をメールテンプレートに使用することができます。変数の値は、関連する Forms アプリケーションに基づいています。次の表では、すぐに使える全メタデータ変数のリストを示します。
 
 <table>
  <tbody> 
@@ -116,19 +117,19 @@ AEM Formsアプリケーションには、いくつかのメタデータ変数�
   </tr> 
   <tr> 
    <td>workitem_priority</td> 
-   <td>関連する Forms アプリケーションに対して指定された優先度。</td> 
+   <td>関連する Forms アプリケーションに指定されている優先度。</td> 
   </tr> 
   <tr> 
    <td>workitem_due_date</td> 
-   <td>関連する Forms アプリケーションに対して実行する最終日。</td> 
+   <td>関連する Forms アプリケーションで作業した最終日。</td> 
   </tr> 
   <tr> 
    <td>workitem_workflow</td> 
-   <td>Forms アプリケーションに関連付けられているワークフローの名前。</td> 
+   <td>Forms アプリケーションに関連するワークフローの名前。</td> 
   </tr> 
   <tr> 
    <td>workitem_assign_timestamp</td> 
-   <td>ワークフロー項目が現在の担当者に割り当てられた日時。</td> 
+   <td>ワークフローアイテムが現在の担当者に割り当てられた日時。</td> 
   </tr> 
   <tr> 
    <td>workitem_assignee</td> 
@@ -136,30 +137,30 @@ AEM Formsアプリケーションには、いくつかのメタデータ変数�
   </tr> 
   <tr> 
    <td>host_prefix</td> 
-   <td>オーサーサーバーの URL。 例えば、https://10.41.42.66:4502<br /> です。 </td> 
+   <td>オーサーサーバーの URL。例えば、https://10.41.42.66:4502<br /> です。 </td> 
   </tr> 
   <tr> 
    <td>publish_prefix</td> 
-   <td>パブリッシュサーバーの URL。 例えば、https://10.41.42.66:4503 です。</td> 
+   <td>パブリッシュサーバーの URL。例えば、https://10.41.42.66:4503 です。</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 電子メール通知でのカスタムメタデータの使用 {#using-custom-metadata-in-an-email-notification}
+## メール通知におけるカスタムメタデータの使用 {#using-custom-metadata-in-an-email-notification}
 
-また、電子メール通知にカスタムメタデータを使用することもできます。 カスタムメタデータには、システム生成メタデータに加えて、情報も含まれます。 例えば、データベースから取得したポリシーの詳細などです。 ECMAScript バンドルまたは OSGi バンドルを使用して、カスタムデータを crx-repository に追加することができます。
+メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScript バンドルまたは OSGi バンドルを使用して、カスタムデータを crx-repository に追加することができます。
 
 ### ECMAScript を使用したカスタムメタデータの追加  {#use-ecmascript-to-add-custom-metadata}
 
-[ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。 クライアントサイドのスクリプティングやサーバーアプリケーションに使用されます。 次の手順を実行して、ECMAScript を使用してメールテンプレートにカスタムメタデータを追加します。
+[ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。クライアントサイドのスクリプティングやサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScript を使用してメールテンプレートにカスタムメタデータを追加します。
 
-1. 管理アカウントで CRX DE にログインします。 URL は https://&#39;[server]:[port]&#39;/crx/de/index.jsp です。
+1. 管理者アカウントを使用して CRX DE にログインします。URL は https://&#39;[server]:[port]&#39;/crx/de/index.jsp です。
 
-1. /apps/fd/dashboard/scripts/metadataScripts に移動します。 拡張子に.ecma を持つファイルを作成します。 例えば、usermetadata.ecma と入力します。
+1. /apps/fd/dashboard/scripts/metadataScripts に移動します。拡張子が .ecma のファイルを作成します。例えば、usermetadata.ecma です。
 
-   上記のパスが存在しない場合は、作成します。
+   上記のパスが存在しない場合は作成します。
 
-1. キーと値のペアでカスタムメタデータを生成するロジックを持つ.ecma ファイルにコードを追加します。 例えば、次の ECMAScript コードは保険証券のカスタムメタデータを生成します。
+1. キーと値のペアにカスタムメタデータを生成するロジックを持つコードを .ecma ファイルに追加します。例えば、次の ECMAScript コードは、保険ポリシーにカスタムメタデータを生成します。
 
    ```javascript
    function getUserMetaData()  {
@@ -173,38 +174,38 @@ AEM Formsアプリケーションには、いくつかのメタデータ変数�
    }
    ```
 
-1. 「すべて保存」をクリックします。これで、AEMワークフローモデルでスクリプトを選択できるようになりました。
+1. 「すべて保存」をクリックします。これで、AEM ワークフローモデルでスクリプトを選択できるようになりました。
 
    ![assigntask-metadata](assets/assigntask-metadata.png)
 
-1. （オプション）スクリプトのタイトルを指定します。
+1. （オプション）スクリプトのタイトルの指定：
 
-   タイトルを指定しない場合、「カスタムメタデータ」フィールドに ECMAScript ファイルの完全パスが表示されます。 次の手順で、スクリプトに有意のタイトルを指定します。
+   タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。次の手順で、スクリプトに有意のタイトルを指定します。
 
    1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]** ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
-   1. 「 mix:title 」と入力して Mixin を編集ダイアログでクリックします。 **+**.
+   1. Mixin を編集ダイアログに mix:title と入力して、「**+**」をクリックします。
    1. プロパティに次の値を入力します。
 
       | 名前 | jcr:title |
       |---|---|
       | 型 | String |
-      | 値 | スクリプトのタイトルを指定します。 例えば、ポリシーホルダーのカスタムメタデータです。 指定した値がタスクの割り当て手順に表示されます。 |
+      | 値 | スクリプトのタイトルを指定します。例えば、ポリシーホルダーのカスタムメタデータとします。指定した値がタスクの割り当て手順に表示されます。 |
 
 ### OSGi バンドルと Java インターフェイスを使用したカスタムメタデータの追加 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
-WorkitemUserMetadataService Java インターフェイスを使用して、電子メールテンプレートのカスタムメタデータを追加できます。 WorkitemUserMetadataService Java インターフェイスを使用する OSGi バンドルを作成し、AEM Formsサーバーにデプロイできます。 これにより、タスクの割り当て手順でメタデータを選択できるようになります。
+WorkitemUserMetadataService Java インターフェイスを使用して、メールテンプレートにカスタムメタデータを追加することができます。WorkitemUserMetadataService Java インターフェイスを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、タスクの割り当て手順でメタデータを選択できるようになります。
 
-Java インターフェイスで OSGi バンドルを作成するには、を追加します。 [AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar および [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) OSGi バンドルプロジェクトへの外部依存関係としてのファイル。 任意の Java IDE を使用して、OSGi バンドルを作成できます。 次の手順は、Eclipse を使用して OSGi バンドルを作成する手順を示しています。
+Java インターフェイスを使用して OSGi バンドルを作成するには、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar ファイルと [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルを、外部の依存関係として OSGi バンドルプロジェクトに追加します。任意の Java IDE を使用して、OSGi バンドルを作成できます。 次の手順は、Eclipse を使用して OSGi バンドルを作成する手順を示しています。
 
 1. Eclipse IDE を開きます。 ファイル／新規プロジェクトに移動します。
 
 1. ウィザードを選択画面で、Maven プロジェクトを選択し、「次へ」をクリックします。
 
-1. 新しい Maven プロジェクトで、デフォルトをそのままにして、「次へ」をクリックします。 アーキタイプを選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。 プロジェクトのグループ ID、アーティファクト ID、バージョン、パッケージを指定し、「完了」をクリックします。 プロジェクト構造が作成されます。
+1. 新しい Maven プロジェクトではデフォルトを保持し、「次へ」をクリックします。アーキタイプを選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。プロジェクトにグループ ID、アーティファクト ID、バージョン、パッケージを指定して、「完了」をクリックします。プロジェクト構造が作成されます。
 
 1. 編集用に pom.xml ファイルを開き、ファイルのすべてのコンテンツを以下に置き換えます。
 
-1. WorkitemUserMetadataService Java インターフェイスを使用して、電子メールテンプレートのカスタムメタデータを追加するソースコードを追加します。 サンプルコードを以下に示します。
+1. WorkitemUserMetadataService Java インターフェイスを使用するソースコードを追加して、メールテンプレートにカスタムメタデータを追加します。以下にサンプルコードを示します。
 
    ```java
    package com.aem.impl;
@@ -244,6 +245,6 @@ Java インターフェイスで OSGi バンドルを作成するには、を追
 
    `mvn clean install`
 
-1. バンドルをAEM Formsサーバーにアップロードします。 AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
+1. バンドルを AEM Forms サーバーにアップロードします。AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
 
 バンドルをインポートすると、タスクの割り当て手順でメタデータを選択して、メールテンプレートで使用できるようになります。

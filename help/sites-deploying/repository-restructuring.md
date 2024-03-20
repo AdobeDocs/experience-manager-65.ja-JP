@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 2572aa8d-2a3a-4e5b-ae5f-07e1017ea0f4
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '547'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 93%
 
 ## はじめに {#introduction}
 
-AEM 6.4 以前は、カスタムコードは JCR の予測できない領域（つまりアップグレード時に変更対象になりうる領域）にデプロイされていました。そのため、正式な AEM リリースでカスタムコード、設定、コンテンツなどが上書きされることがよくありました。また、お客様の変更によって、AEMの製品コードやコンテンツが上書きされ、製品の機能が損なわれることがあります。
+AEM 6.4 以前は、カスタムコードは JCR の予測できない領域（つまりアップグレード時に変更対象になりうる領域）にデプロイされていました。そのため、正式な AEM リリースでカスタムコード、設定、コンテンツなどが上書きされることがよくありました。逆に、カスタムのコードや設定やコンテンツが AEM の製品コードやコンテンツを上書きしてしまい、製品の機能が損なわれることもありました。
 
 AEM 製品コードとカスタムコードの階層を明確に記述すれば、このような競合を回避できます。
 
@@ -36,7 +37,7 @@ AEM 6.5 にアップグレードすると、/etc の下にあるコンテンツ�
 
 ### 再構築の手引き {#restructuring-guidance}
 
-AEM 6.5 へのアップグレードを計画する際は、作業量を評価するために、次のソリューションごとのページを参照する必要があります。
+AEM 6.5 へのアップグレードを計画している場合は、作業量を評価するために以下のソリューションごとのページを参照してください。
 
 * [すべての AEM ソリューションに共通のリポジトリ再構築](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md)
 * [AEM Sites のリポジトリ再構築](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md)

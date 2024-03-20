@@ -10,10 +10,11 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6508'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -120,7 +121,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。
      >[!IMPORTANT]
      >
-     Experience Manager の 1 つのインスタンスでサポートされる、Cloud Services の Dynamic Media 設定は 1 つだけです。複数の設定を追加しないでください。1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
+     >Experience Manager の 1 つのインスタンスでサポートされる、Cloud Services の Dynamic Media 設定は 1 つだけです。複数の設定を追加しないでください。1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
 
      <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -151,9 +152,9 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
    >[!NOTE]
    >
-   Dynamic Media - Scene7 モードではバージョン管理はサポートされていません。また、遅延アクティベーションは、「Dynamic Media 設定を編集」ページの&#x200B;**[!UICONTROL アセットを公開]**&#x200B;が&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
+   >Dynamic Media - Scene7 モードではバージョン管理はサポートされていません。また、遅延アクティベーションは、「Dynamic Media 設定を編集」ページの&#x200B;**[!UICONTROL アセットを公開]**&#x200B;が&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
    >
-   アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
+   >アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 1. 公開前に Dynamic Media コンテンツを安全にプレビューするには、Experience Manager オーサーはトークンベースの検証を使用しているので、Experience Manager オーサーで Dynamic Media コンテンツをデフォルトでプレビューできます。IP を許可リストに登録することで、ユーザーはコンテンツを安全にプレビューできるようになります。このアクションを Experience Manager で設定するには、[Image Server 用 Dynamic Media 公開設定 -「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab)を参照してください。
@@ -254,7 +255,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
   >[!NOTE]
   >
-  大きなアセットのアップロード機能は、Blob ストレージ設定の Azure SAS ではサポートされていないので、アクセスキーと秘密鍵を使用して Azure Blob ストレージを設定します。
+  >大きなアセットのアップロード機能は、Blob ストレージ設定の Azure SAS ではサポートされていないので、アクセスキーと秘密鍵を使用して Azure Blob ストレージを設定します。
 
 * Oak の[直接バイナリアクセスのダウンロード](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)を有効にします（Oak の&#x200B;*直接バイナリアクセスのアップロード*&#x200B;は必須ではありません）。
 
@@ -275,7 +276,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
    * 上記のパスをコピーしてツールバーの下の CRXDE Lite パスフィールドに貼り付け、`Enter` を押します。
 
-1. 左側のレールで、右クリックします。 `fileupload`を選択し、ポップアップメニューから「 **[!UICONTROL ノードをオーバーレイ]**.
+1. 左側のパネルで、`fileupload` を右クリックし、ポップアップメニューから「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 
    ![「ノードをオーバーレイ」オプション](/help/assets/assets-dm/uploadassets15gb_a.png)
 
@@ -360,7 +361,7 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 
 >[!NOTE]
 >
-デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]** 」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。[表示する画像プリセット数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセット数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
+>デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]** 」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。[表示する画像プリセット数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセット数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
 
 #### サポートされている形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
 
@@ -387,7 +388,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
    * 「**[!UICONTROL 有効]**」フィールドをダブルクリックします。デフォルトでは、すべてのアセットの MIME タイプが有効になって（**[!UICONTROL true]** に設定されて）います。これは、処理に関してアセットが Dynamic Media に同期されることを意味します。このアセットの MIME タイプを処理から除外する場合、この設定を **[!UICONTROL false]** に変更します。
 
-   * ダブル選択 **[!UICONTROL jobParam]** をクリックして、関連するテキストフィールドを開きます。 特定の MIME タイプに使用可能な、許可されている処理パラメーター値のリストについては、[サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types)を参照してください。
+   * **[!UICONTROL jobParam]** をダブルクリックして、関連するテキストフィールドを開きます。特定の MIME タイプに使用可能な、許可されている処理パラメーター値のリストについては、[サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types)を参照してください。
 
 1. 次のいずれかの操作を行います。
 
@@ -441,7 +442,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. MIME タイプを使用 `image_vnd.dwg` 選択された状態 ( **[!UICONTROL プロパティ]** タブ、 **[!UICONTROL 有効]** 行、 **[!UICONTROL 値]** 列見出し、値をダブル選択して **[!UICONTROL 値]** 」ドロップダウンリストから選択できます。
+1. MIME タイプ `image_vnd.dwg` を選択したまま、「**[!UICONTROL プロパティ]**」タブの「**[!UICONTROL 有効]**」行で、「**[!UICONTROL 値]**」列見出しの値をダブルクリックして、「**[!UICONTROL 値]**」ドロップダウンリストを開きます。
 1. フィールドに `false` と入力します（または、ドロップダウンリストから「**[!UICONTROL false]**」を選択します）。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
@@ -479,7 +480,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
    >[!NOTE]
    >
-   非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの一番下に表示されます。
+   >非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの一番下に表示されます。
 
 1. 必要に応じて各要素を展開し、使用する命名規則を入力します。
 1. 必要に応じて、次の操作を行います。
@@ -601,7 +602,7 @@ spin-01-01
 
    >[!NOTE]
    >
-   行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
+   >行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
 
 1. 命名規則と作成オプションの設定では、アセットの命名規則で定義したベース名にサフィックスとプレフィックスを指定します。
 
@@ -657,7 +658,7 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
    >[!NOTE]
    >
-   OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
+   >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
@@ -681,7 +682,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 
    >[!NOTE]
    >
-   OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
+   >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
@@ -729,7 +730,7 @@ Dynamic Media を画像、ビデオまたはその両方に使用する場合は
 
 >[!NOTE]
 >
-フィルターは、MIME タイプに適用されます。パスを指定することはできません。
+>フィルターは、MIME タイプに適用されます。パスを指定することはできません。
 
 #### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
 

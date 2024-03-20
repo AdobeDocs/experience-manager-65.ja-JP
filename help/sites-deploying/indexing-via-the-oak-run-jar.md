@@ -5,9 +5,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: dcec8c1b-13cc-486c-b1a4-62e6eb3184ad
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
-source-wordcount: '916'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '923'
 ht-degree: 100%
 
 ---

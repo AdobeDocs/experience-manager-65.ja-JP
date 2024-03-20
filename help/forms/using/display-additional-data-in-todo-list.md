@@ -1,38 +1,39 @@
 ---
-title: To Do リストでの追加データの表示
-description: AEM FormsLiveCycleの TODO リストの表示をカスタマイズして、デフォルト以外の詳細情報を表示する方法。
+title: TODO リストでの追加データの表示
+description: LiveCycle AEM Forms Workspace の TODO リストの表示をカスタマイズして、デフォルト以外の情報を表示する方法。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
-# To Do リストでの追加データの表示{#displaying-additional-data-in-todo-list}
+# TODO リストでの追加データの表示{#displaying-additional-data-in-todo-list}
 
-デフォルトでは、AEM Forms Workspace の TODO リストにタスクの表示名と説明が表示されます。 ただし、作成日や期限日など、他の情報を追加することもできます。 また、アイコンを追加して、表示のスタイルを変更することもできます。
+デフォルトで、AEM Forms Workspace TODO リストにタスクの表示名および説明が表示されます。しかしながら、作成日や締切日などのその他の情報を追加することができます。また、アイコンを追加したり、表示のスタイルを変更することもできます。
 
 ![デフォルト設定を表示する HTML Workspace の「TODO」タブ](assets/html-todo-list.png)
 
-この記事では、TODO リストの各タスクに表示する情報を追加する手順について詳しく説明します。
+この記事では、TODO リストの各タスクに情報を追加する手順について説明します。
 
 ## 追加できる情報 {#what-can-be-added}
 
-サーバーによって送信された `task.json` にある情報を追加することができます。この情報は、プレーンテキストとして追加することも、スタイルを使用して情報を書式設定することもできます。
+サーバーによって送信された `task.json` にある情報を追加することができます。情報は、平文テキストとして追加することも、スタイルを使用して情報をフォーマットすることもできます。
 
-JSON オブジェクトの説明について詳しくは、 [この](/help/forms/using/html-workspace-json-object-description.md) 記事。
+JSON オブジェクトの説明についての詳細は、[この](/help/forms/using/html-workspace-json-object-description.md)記事を参照してください。
 
-## タスクに関する情報の表示 {#displaying-information-on-a-task}
+## タスクでの情報の表示 {#displaying-information-on-a-task}
 
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. タスクに追加の情報を表示するには、対応するキーと値のペアを `translation.json` のタスクブロック内に追加する必要があります。
 
-   例えば、 `/apps/ws/locales/en-US/translation.json` 英語の場合：
+   例えば、`/apps/ws/locales/en-US/translation.json`（英語）に変更します。
 
    ```json
    "task" : {
@@ -106,9 +107,9 @@ JSON オブジェクトの説明について詳しくは、 [この](/help/forms
 
    >[!NOTE]
    >
-   >対応するキーと値のペアを、サポートされるすべての言語に追加します。
+   >対応するキーと値のペアをすべてのサポートされている言語に追加します。
 
-1. 例えば、次のように、タスクブロック内に情報を追加します。
+1. 例えば、次のようにしてタスクブロック内に情報を追加します。
 
    ```json
    "stepname" : {
@@ -117,11 +118,11 @@ JSON オブジェクトの説明について詳しくは、 [この](/help/forms
    }
    ```
 
-## 新しいプロパティに対する CSS の定義 {#defining-css-for-the-new-property}
+## 新規プロパティでの CSS の定義 {#defining-css-for-the-new-property}
 
-1. タスクに追加された情報（プロパティ）にスタイルを適用できます。 これを行うには、`/apps/ws/css/newStyle.css` に追加された新規プロパティにスタイル情報を追加する必要があります。
+1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これを行うには、`/apps/ws/css/newStyle.css` に追加された新規プロパティにスタイル情報を追加する必要があります。
 
-   例えば、次を追加します。
+   例えば、以下を追加します。
 
    ```css
    .task .taskProperties .stepname{
@@ -131,9 +132,9 @@ JSON オブジェクトの説明について詳しくは、 [この](/help/forms
    }
    ```
 
-## エントリテンプレートへのHTMLの追加 {#adding-entry-in-the-html-template}
+## HTML テンプレートへのエントリの追加 {#adding-entry-in-the-html-template}
 
-最後に、タスクに追加する各プロパティの開発パッケージにエントリを含める必要があります。 作成するには、 AEM Forms Workspace コードの構築を参照してください。
+最後に、タスクに追加する各プロパティの開発パッケージにエントリを含める必要があります。作成する方法については、「AEM Forms Workspace コードの構築」を参照してください。
 
 1. `task.html` をコピーします：
 

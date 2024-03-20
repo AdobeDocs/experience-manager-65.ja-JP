@@ -2,10 +2,11 @@
 title: 非同期ジョブ
 description: Adobe Experience Manager では、リソースを集中的に消費する一部のタスクを非同期的に処理することでパフォーマンスを最適化します。
 exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '791'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +22,7 @@ Adobe Experience Manager では、パフォーマンスを悪化させないた�
 * しきい値制限セットを超えるアセットのリモート Experience Manager デプロイメントからの取得
 * ライブコピーのロールアウト
 
-非同期ジョブのステータスは、 **[!UICONTROL 非同期ジョブステータス]** ダッシュボード： **グローバルナビゲーション** > **ツール** > **運用** > **ジョブ**.
+非同期ジョブのステータスは、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ダッシュボード（**グローバルナビゲーション**／**ツール**／**操作**／**ジョブ**）で確認できます。
 
 >[!NOTE]
 >
@@ -55,7 +56,7 @@ AEM が操作を非同期で処理する場合は常に、[インボックス](/
 
    ![stop_icon](assets/async-stop-icon.png)
 
-1. 説明やログなど、その他の詳細を表示するには、操作を選択し、 **[!UICONTROL 開く]** をクリックします。
+1. 説明やログなど、その他の詳細を表示するには、操作を選択し、ツールバーの「**[!UICONTROL 開く]**」をクリックします。
 
    ![open_icon](assets/async-open-icon.png)
 
@@ -88,7 +89,7 @@ AEM は、毎日午前 1 時にパージジョブを実行して、1 日以上�
 
 ## 非同期処理を設定 {#configuring-asynchronous-processing}
 
-AEMが特定の操作を非同期的に処理するためのアセット、ページまたは参照の数のしきい値を設定し、ジョブの処理時に関する電子メール通知を切り替えることができます。
+AEM で特定の操作を非同期で処理するように、アセット、ページまたは参照のしきい値を設定し、ジョブの処理時のメール通知を切り替えることができます。
 
 ### 非同期アセット削除操作を設定 {#configuring-synchronous-delete-operations}
 

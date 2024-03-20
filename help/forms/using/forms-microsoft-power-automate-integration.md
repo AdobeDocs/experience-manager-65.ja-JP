@@ -3,13 +3,14 @@ title: アダプティブフォームのデータを Microsoft&reg; Power Automa
 description: アダプティブフォームのデータを Microsoft&reg; Power Automate に接続して送信する手順についてのガイドです。
 keywords: アダプティブフォーム Microsoft Power Automate、アダプティブフォームのデータを Microsoft Power Automate に送信
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 27eb8a53a198efd2cb059a2884b3b5ed60730806
+exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 100%
 
 ---
-
 
 # アダプティブフォームのデータを Microsoft® Power Automate に接続して送信 {#connect-adaptive-form-with-power-automate}
 
@@ -78,7 +79,7 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
 ### Microsoft® Power Automate Dataverse クラウド設定の作成 {#microsoft-power-automate-dataverse-cloud-configuration}
 
 1. AEM Forms のオーサーインスタンスで、**[!UICONTROL ツール]** ![ハンマー](assets/hammer.png)／**[!UICONTROL 一般]**／**[!UICONTROL 設定ブラウザー]**&#x200B;に移動します。
-1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで「**[!UICONTROL 作成]**」を選択します。
+1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで「**[!UICONTROL 作成]**」を設定します。
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定の&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、「**[!UICONTROL クラウド設定]**」を有効にして「**[!UICONTROL 作成]**」を選択します。これにより、Cloud Services 用の設定コンテナが作成されます。フォルダー名にスペースが含まれていないことを確認します。
 1. **[!UICONTROL ツール]**![ハンマー](assets/hammer.png)／**[!UICONTROL クラウドサービス]**／**[!UICONTROL Microsoft® Power Automate Dataverse]** に移動し、前の手順で作成した設定コンテナを開きます。
 
@@ -86,7 +87,7 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
    >
    >アダプティブフォームを作成する際に、**[!UICONTROL 設定コンテナ]**&#x200B;フィールドにコンテナ名を指定します。
 
-1. 設定ページで「**[!UICONTROL 作成]**」を選択して、AEM Forms 内に [!DNL Microsoft®® Power Automate Flow Service] の設定を作成します。
+1. 設定ページで「**[!UICONTROL 作成]**」をタップして、AEM Forms 内に [!DNL Microsoft®® Power Automate Flow Service] の設定を作成します。
 1. **[!UICONTROL Microsoft® Power Automate の Dataverse Service の設定]**&#x200B;ページで、**[!UICONTROL クライアント ID]**（アプリケーション ID とも呼ばれます）、**[!UICONTROL クライアントシークレット]**、**[!UICONTROL OAuth URL]** および **[!UICONTROL Dynamics 環境 URL]** を指定します。前のセクションで作成した [Microsoft® Azure Active Directory アプリケーション](#ms-power-automate-application)のクライアント ID、クライアントシークレット、OAuth URL およびDynamics 環境 URL を使用します。Microsoft® Azure Active Directory アプリケーション UI の「エンドポイント」オプションを使用して OAuth URL を検索する
 
    ![Microsoft Power Automate アプリケーション UI の「エンドポイント」オプションを使用した OAuth URL の検索](assets/endpoints.png)
@@ -107,7 +108,7 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
 ### Microsoft® Power Automate Dataverse と Microsoft® Power Automate フローサービスのクラウド設定の両方を公開する {#publish-microsoft-power-automate-dataverse-cloud-configuration}
 
 1. **[!UICONTROL ツール]**![ハンマー](assets/hammer.png)／**[!UICONTROL Cloud Services]**／**[!UICONTROL Microsoft® Power Automate Dataverse]** に移動し、前述の [Microsoft® Power Automate Dataverse クラウド設定を作成](#microsoft-power-automate-dataverse-cloud-configuration)の節で作成した設定コンテナを開きます。
-1. `dataverse` 設定を選択し、「**[!UICONTROL 公開]**」をクリックします。
+1. `dataverse` 設定を選択し、「**[!UICONTROL 公開]**」を選択します。
 1. 公開ページで「**[!UICONTROL すべての設定]**」を選択し、「**[!UICONTROL 公開]**」を選択します。Power Automate Dataverse と Power Automate フローサービスのクラウド設定の両方を公開します。
 
 これで、AEM Forms オーサーインスタンスが Microsoft® Power Automate に接続されました。アダプティブフォームのデータを Power Automate フローに送信できるようになりました。
@@ -117,7 +118,7 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
 [AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続](#connect-forms-server-with-power-automate)した後、次の操作を実行して、フォーム送信時に、キャプチャしたデータを Microsoft® フローに送信するようアダプティブフォームを設定します。
 
 1. オーサーインスタンスにログインし、アダプティブフォームを選択して、「**[!UICONTROL プロパティ]**」をクリックします。
-1. 設定コンテナで、「[Microsoft® Power Automate Dataverse クラウド設定を作成](#microsoft-power-automate-dataverse-cloud-configuration)」セクションで作成したコンテナを参照して選択し、「**[!UICONTROL 保存して閉じる]**」をクリックします。
+1. 設定コンテナで、[Microsoft® Power Automate Dataverse クラウド設定を作成](#microsoft-power-automate-dataverse-cloud-configuration)セクションで作成したコンテナを参照して選択し、「**[!UICONTROL 保存して閉じる]**」を選択します。
 1. 編集用にアダプティブフォームを開き、アダプティブフォームのコンテナプロパティの「**[!UICONTROL 送信]**」セクションに移動します。
 1. プロパティコンテナで、「**[!UICONTROL 送信アクション]**」 に対して「**[!UICONTROL Power Automate フローの呼び出し]**」オプションを選択します。 使用可能な Power Automate フローのリストが「**[!UICONTROL Power Automate フロー]**」オプションの下で利用可能になります。必要なフローを選択すると、送信時にアダプティブフォームデータが送信されます。
 
@@ -192,4 +193,3 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
 * [アダプティブフォームを作成](create-an-adaptive-form-core-components.md)
 * [送信アクションを設定](configuring-submit-actions.md)
 * [Microsoft® Power Automate 用 Adobe Experience Manager Connector](https://learn.microsoft.com/en-us/connectors/adobeexperiencemanag/)
-

@@ -7,9 +7,10 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: fd8bb7d3d9040e0a7a6b2f65751445f41aeab73e
-workflow-type: ht
-source-wordcount: '1132'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '1138'
 ht-degree: 100%
 
 ---
@@ -26,7 +27,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >
 >**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
->* **コンテンツフラグメント**&#x200B;は、主にテキストと関連する画像からなる編集コンテンツです。これらは、デザインやレイアウトを含まない純粋なコンテンツです。
+>* **コンテンツフラグメント**&#x200B;はエディトリアルコンテンツで、主にテキストや関連する画像です。これらは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、web ページのフラグメントです。
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
@@ -115,7 +116,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
   >[!NOTE]
   >
-  >使用できるエレメントは、使用するテンプレートによって異なります。
+  >使用できる要素は、使用するテンプレートによって異なります。
 
 * **バリエーション**
 

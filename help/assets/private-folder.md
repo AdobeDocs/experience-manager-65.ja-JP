@@ -6,10 +6,11 @@ role: User
 feature: Collaboration
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 95%
+source-wordcount: '590'
+ht-degree: 100%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 95%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-[!DNL Adobe Experience Manager Assets] のユーザーインターフェイスに、自分だけが使用できるプライベートフォルダーを作成できます。このプライベートフォルダーを他のユーザーと共有して、他のユーザーに様々な権限を割り当てることができます。ユーザーは、割り当てた特権のレベルに応じて、フォルダー内のアセットの表示やアセットの編集など、フォルダーに対する様々なタスクを実行できます。
+[!DNL Adobe Experience Manager Assets] のユーザーインターフェイスに、自分だけが使用できるプライベートフォルダーを作成できます。このプライベートフォルダーを他のユーザーと共有して、他のユーザーに様々な権限を割り当てることができます。割り当てられる権限のレベルに応じて、ユーザーはフォルダーに対する様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
 
 >[!NOTE]
 >
@@ -36,7 +37,7 @@ ht-degree: 95%
 
 1. **[!UICONTROL フォルダーを作成]**&#x200B;ダイアログで、フォルダーのタイトルと名前（オプション）を入力して、「**[!UICONTROL プライベート]**」を選択します。
 
-1. **[!UICONTROL 作成]**&#x200B;をクリックすると、プライベートフォルダーが作成されます。
+1. 「**[!UICONTROL 作成]**」をクリックします。プライベートフォルダーが作成されます。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 

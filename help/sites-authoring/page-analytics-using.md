@@ -8,10 +8,11 @@ topic-tags: site-features
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -35,10 +36,10 @@ ht-degree: 85%
 >
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
-1. を開きます。 **Sites** コンソール。例： [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. ツールバーの右端（右上隅）で、アイコンをクリックして、 **リスト表示** ( 表示されるアイコンは、 [現在のビュー](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)) をクリックします。
+1. **Sites** コンソールを開きます（例：[http://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)）。
+1. ツールバーの右端（右上隅）で、アイコンをクリックして、「**リスト表示**」（表示されるアイコンは、[現在の表示](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)によって異なる）を選択します。
 
-1. ツールバーの右端（右上隅）で、アイコンをクリックし、「 **設定を表示**. The **列の構成** ダイアログが開きます。 必要な変更を加えて、「**更新**」で確定します。
+1. もう一度、ツールバーの右端（右上隅）でアイコンをクリックして、「**表示設定**」を選択します。**列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
 
    ![spad-02](assets/spad-02.png)
 
@@ -50,7 +51,7 @@ Sites コンソールに表示される分析データのレポート期間を�
 * 過去 90 日間のデータ
 * 今年のデータ
 
-現在のレポート期間が Sites コンソールのツールバー（上部のツールバーの右側）に表示されます。「 」ドロップダウンを使用して、必要なレポート期間を選択します。
+現在のレポート期間が Sites コンソールのツールバー（上部のツールバーの右側）に表示されます。ドロップダウンを使用して、必要なレポート期間を選択します。
 
 ![aa-05](assets/aa-05.png)
 

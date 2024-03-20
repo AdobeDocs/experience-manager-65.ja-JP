@@ -5,10 +5,11 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '986'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -136,7 +137,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    1. `https://'[server]:[port]'/aem/start.html` にアクセスして、管理者の資格情報を使用してログインします。
    1. **[!UICONTROL ツール／ワークフロー／インスタンス]**&#x200B;の順に移動します。
-   1. ユーザーに関連するワークフローインスタンスを選択し、「 」を選択します **[!UICONTROL 終了]** ：実行中のインスタンスを終了します。
+   1. ユーザーに関連付けられているワークフローインスタンスを選択し、「**[!UICONTROL 終了]**」を選択して実行中のインスタンスを終了します。
 
       ワークフローインスタンスの操作方法について詳しくは、[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)を参照してください。
 

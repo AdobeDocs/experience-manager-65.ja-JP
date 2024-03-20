@@ -6,10 +6,11 @@ topic-tags: develop
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 4ecdcb2659b26043f95ba1dc3e907c33f65b8834
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2781'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -188,7 +189,7 @@ ht-degree: 98%
 
 ### 必須 {#required}
 
-コンポーネントを必須にするには、コンポーネントの&#x200B;**編集**&#x200B;ダイアログで、**タイトルとテキスト／必須**&#x200B;オプションを選択します。また、 **必須メッセージ** （オプション）も同様です。
+コンポーネントを必須にするには、コンポーネントの&#x200B;**編集**&#x200B;ダイアログで、**タイトルとテキスト／必須**&#x200B;オプションを選択します。適切な&#x200B;**必須メッセージ**（オプション）も追加できます。
 
 ### 検証パターン {#validation-patterns}
 
@@ -206,7 +207,7 @@ ht-degree: 98%
 
 ### GuideBridge - API とイベント {#guidebridge-apis-and-events}
 
-GuideBridge は、ブラウザーのメモリモデル内のアダプティブフォームとやり取りする際に使用できる API のコレクションです。 Guide Bridge API、クラスメソッド、公開されたイベントについて詳しくは、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/)を参照してください。
+GuideBridge は、ブラウザーのメモリーモデルでアダプティブフォームとやり取りするのに使用できる API のコレクションです。Guide Bridge API、クラスメソッド、公開されたイベントについて詳しくは、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/)を参照してください。
 
 >[!NOTE]
 >
@@ -275,7 +276,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 作成したノードの「プロパティ」タブを開きます。例えば、`textboxpatterns` の「プロパティ」タブを開きます。このノードに `guideComponentType` プロパティを追加して、その値を *fd/af/components/formatter/guideTextBox* に設定します。
 
 1. このプロパティの値は、パターンを定義するフィールドに応じて変わります。数値フィールドの場合、`guideComponentType` プロパティの値は、*fd/af/components/formatter/guideNumericBox* です。日付選択フィールドの値は、*fd/af/components/formatter/guideDatepicker* す。
-1. `textboxpatterns` ノードにプロパティを割り当てることで、カスタムパターンを追加できます。プロパティに名前 ( 例： `pattern1`) をクリックし、追加するパターンの値をに設定します。 例えば、値が Fax=text{99-999-9999999} のプロパティ `pattern1` を追加します。パターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
+1. `textboxpatterns` ノードにプロパティを割り当てることで、カスタムパターンを追加できます。名前の付いたプロパティ（例えば、`pattern1`）を追加して、追加するパターンにその値を設定します。例えば、値が Fax=text{99-999-9999999} のプロパティ `pattern1` を追加します。パターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
 
    ![CrxDe でのフィールドのカスタムパターンの作成](assets/creating-custom-patterns.png)
 

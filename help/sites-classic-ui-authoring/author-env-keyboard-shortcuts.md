@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: 8cc9200e-981d-468f-b2bd-cd44e9a02bb5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '114'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +39,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td>コンソール</td>
    <td><strong><code>Shift-Double-Click</code></strong><br /> （必要なページで実行）</td>
-   <td>ページを新しいウィンドウで開きます。<br /> <strong>注意：</strong> これは、 <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">ユーザープロパティ</a> が単一ウィンドウに設定されている。複数ウィンドウの場合は、これが既定の動作です。</td>
+   <td>ページを新しいウィンドウで開きます。<br /> <strong>メモ：</strong>これは、「<a href="/help/sites-classic-ui-authoring/author-env-user-props.md">ユーザープロパティ</a>」が「単一ウィンドウ」に設定されている場合に動作します。「複数ウィンドウ」に設定されている場合は、これがデフォルトの動作となります。</td>
   </tr>
  </tbody>
 </table>

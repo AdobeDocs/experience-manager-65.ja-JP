@@ -3,9 +3,10 @@ title: 複数のインプレースエディター用に RTE を設定します�
 description: リッチテキストエディターを設定して、Adobe Experience Manager で複数のインプレースエディターを作成します。
 contentOwner: AG
 exl-id: 03030317-8b7d-408a-bdfd-619824d7260c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '437'
 ht-degree: 100%
 
 ---
@@ -119,4 +120,3 @@ Adobe Experience Manager のリッチテキストエディターは、複数の�
 >[!MORELIKETHIS]
 >
 >* [Experience Manager でリッチテキストエディターを設定します](/help/sites-administering/rich-text-editor.md)。
-

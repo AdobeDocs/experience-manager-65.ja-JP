@@ -6,10 +6,11 @@ feature: Collaboration, Collections
 role: User
 exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: ht
-source-wordcount: '807'
-ht-degree: 100%
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '791'
+ht-degree: 89%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 100%
 1. [!DNL Assets] ユーザーインターフェイスで、レビュータスクを作成するフォルダーを選択します。
 1. ツールバーの「**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png)」をクリックすると、**[!UICONTROL レビュータスク]**&#x200B;のページが表示されます。ツールバーにオプションが表示されていない場合は、「**[!UICONTROL その他]**」をクリックしてオプションを選択します。
 
-1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
+1. （オプション） **[!UICONTROL プロジェクト]** 「 」リストで、レビュータスクを関連付けるプロジェクトを選択します。 デフォルトでは、 **[!UICONTROL なし]** 」オプションが選択されている。 どのプロジェクトもレビュータスクに関連付けたくない場合は、この選択を保持します。
 
    >[!NOTE]
    >
@@ -81,7 +82,7 @@ ht-degree: 100%
 1. コレクションページで、レビュータスクを作成するコレクションを選択します。
 1. ツールバーの「**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png)」をクリックすると、**[!UICONTROL レビュータスク]**&#x200B;のページが表示されます。ツールバーにオプションが表示されていない場合は、「**[!UICONTROL その他]**」をクリックしてオプションを選択します。
 
-1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
+1. （オプション） **[!UICONTROL プロジェクト]** 「 」リストで、レビュータスクを関連付けるプロジェクトを選択します。 デフォルトでは、 **[!UICONTROL なし]** 」オプションが選択されている。 どのプロジェクトもレビュータスクに関連付けたくない場合は、この選択を保持します。
 
    >[!NOTE]
    >

@@ -1,15 +1,16 @@
 ---
 title: ページプロパティのビューのカスタマイズ
-description: 各ページには、必要に応じて編集できる一連のプロパティがあります
+description: どのページにも、必要に応じて編集できる一連のプロパティがあります。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -23,18 +24,18 @@ ht-degree: 71%
 
 各ページプロパティのデフォルト状態は次のとおりです。
 
-* 作成ビューで非表示 ( 例： **ページを作成** ウィザード )
+* 作成ビューでは非表示（例：**ページを作成**&#x200B;ウィザード）
 
-* 編集ビューで使用できます ( 例： **プロパティを表示**)
+* 編集ビューでは表示（例：**プロパティを表示**）
 
-変更が必要な場合は、フィールドを具体的に設定する必要があります。 これは、次の適切なノードプロパティを使用しておこないます。
+変更が必要な場合は、フィールドを明確に設定する必要があります。それには適切なノードプロパティを使用します。
 
-* 作成ビューで使用できるページプロパティ ( 例： **ページを作成** ウィザード ):
+* 作成ビューで利用できるページプロパティ（例：**ページを作成**&#x200B;ウィザード）
 
    * 名前：`cq:showOnCreate`
    * 型：`Boolean`
 
-* 編集ビューで使用できるページプロパティ ( 例： **表示**/**編集**) **プロパティ** オプション ):
+* 編集ビューで利用できるページプロパティ（例：**表示**／**編集**／**プロパティ**&#x200B;オプション）
 
    * 名前：`cq:hideOnEdit`
    * 型：`Boolean`
@@ -51,7 +52,7 @@ ht-degree: 71%
 
 ## ページプロパティの設定 {#configuring-your-page-properties}
 
-また、ページコンポーネントのダイアログを設定し、適切なノードプロパティを適用することで、使用可能なフィールドを設定できます。
+また、ページコンポーネントのダイアログを設定し、適切なノードプロパティを適用することによって、使用可能なフィールドを設定できます。
 
 例えば、デフォルトでは、[**ページを作成**&#x200B;ウィザード](/help/sites-authoring/managing-pages.md#creating-a-new-page)には「**その他のタイトルと説明**」の下にグループ化されたフィールドが表示されます。これらのフィールドを非表示にするには、次のように設定します。
 
@@ -68,14 +69,14 @@ ht-degree: 71%
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
    >
-   ただし、`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
+   >ただし、`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
    >
-   `/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
+   >`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
    >
-   設定およびその他の変更に推奨される方法は次のとおりです。
+   >設定およびその他の変更に推奨される方法は次のとおりです。
    >
-   1. 必要な項目（内に存在）を再作成します。 `/libs`) （下） `/apps`
-   1. `/apps` 内で変更作業をおこないます。
+   >1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
+   >1. `/apps` 内で必要な変更を加えます
 
 1. `basic` の `path` プロパティに、基本タブのオーバーライドを指すように設定します（次の手順も参照してください）。次に例を示します。
 
@@ -99,7 +100,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
-ライブコピーで使用するページプロパティを設定する場合は、 [ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) を参照してください。
+>ライブコピーと一緒に使用するページプロパティを設定する場合、詳しくは、[ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui)を参照してください。
 
 ## ページプロパティの設定例 {#sample-configuration-of-page-properties}
 

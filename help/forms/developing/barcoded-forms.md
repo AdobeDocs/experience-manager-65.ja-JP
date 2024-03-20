@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1911'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ Barcoded Forms サービスについて詳しくは、[AEM Forms のサービス
 
 ## バーコードフォームデータのデコード {#decoding-barcoded-form-data}
 
-Barcoded Forms API を使用して、バーコードを含む PDF フォームまたは画像からデータをデコードできます。フォームデータのデコードとは、バーコード内のデータを抽出することを意味します。 データを PDF フォーム（または画像）からデコードする前に、フォームにはデータが入力されている必要があります。
+Barcoded Forms API を使用して、バーコードを含む PDF フォームまたは画像からデータをデコードできます。フォームデータのデコードとは、バーコード内のデータを抽出することを意味します。データを PDF フォーム（または画像）からデコードする前に、フォームにはデータが入力されている必要があります。
 
 >[!NOTE]
 >
@@ -56,9 +57,9 @@ Barcoded Forms API を使用して、バーコードを含む PDF フォーム�
 * adobe-barcodedforms-client.jar
 * adobe-utilities.jar（AEM Forms を JBoss にデプロイする場合に必要）
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
-* xercesImpl.jar ( &lt;install directory=&quot;&quot;>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty)
+* xercesImpl.jar（&lt;install directory=&quot;&quot;>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty）
 
-AEM Formsが、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **Barcoded Forms Client API オブジェクトの作成**
 
@@ -66,7 +67,7 @@ AEM Formsが、JBOSS 以外のサポート対象の J2EE アプリケーショ�
 
 **バーコードデータを含む PDF フォームの取得**
 
-ユーザーPDFが入力されたバーコードを含むバーコードフォームを取得します。
+ユーザーデータが入力されたバーコードを含む PDF フォームを取得します。
 
 **データを PDF フォームからデコード**
 
@@ -124,7 +125,7 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
 1. データを PDF フォームからデコード
 
-   を呼び出してフォームデータをデコードする `BarcodedFormsServiceClient` オブジェクトの `decode` メソッドを使用して、次の値を渡します。
+   `BarcodedFormsServiceClient` オブジェクトの `decode` メソッドを呼び出し、次の値を渡すことにより、フォームデータをデコードします。
 
    * PDF フォームを含む `com.adobe.idp.Document` オブジェクト。
    * PDF417 バーコードをデコードするかどうかを指定する `java.lang.Boolean` オブジェクト。
@@ -141,9 +142,9 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
 1. データを XML データソースに変換する
 
-   デコードされたデータを、 `BarcodedFormsServiceClient` オブジェクトの `extractToXML` メソッドを使用して、次の値を渡します。
+   `BarcodedFormsServiceClient` オブジェクトの `extractToXML` メソッドを呼び出し、次の値を渡すことにより、デコードされたデータを XDP または XFDF データに変換します。
 
-   * The `org.w3c.dom.Document` デコードされたデータを含むオブジェクト ( `decode` メソッドの戻り値 )。
+   * デコードされたデータを含む `org.w3c.dom.Document` オブジェクト（`decode` メソッドの戻り値を使用していることを確認してください）。
    * 行の区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。`Delimiter.Carriage_Return` を指定することをお勧めします。
    * フィールド区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。例えば、`Delimiter.Tab` を指定します。
    * バーコードデータを XDP または XFDF XML データに変換するかどうかを指定する `com.adobe.livecycle.barcodedforms.XMLFormat` 定義済みリスト値。例えば、データを XDP データに変換するには `XMLFormat.XDP` を指定します。
@@ -156,9 +157,9 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
 
 1. デコードされたデータを処理
 
-   * 次の項目を反復 `java.util.List` 各 `org.w3c.dom.Document` オブジェクトを指定します。
+   * `java.util.List` オブジェクトを反復処理して、リストにある各 `org.w3c.dom.Document` オブジェクトを取得します。
    * リストの各要素に対して、 `org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します（`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換するアプリケーションロジックは、「Java API を使用したバーコード化されたフォームデータのデコード」の例で示しています）。
-   * を呼び出して、XML データを XML ファイルとして保存します。 `com.adobe.idp.Document` オブジェクトの `copyToFile`、および XML ファイルを表す File オブジェクトを渡す
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` を呼び出し、XML ファイルを表す File オブジェクトを渡すことにより、XML データを XML ファイルとして保存します。
 
 **関連トピック**
 
@@ -191,7 +192,7 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 
 1. データを PDF フォームからデコード
 
-   を呼び出してフォームデータをデコードする `BarcodedFormsServiceService` オブジェクトの `decode` メソッドを使用して、次の値を渡します。
+   `BarcodedFormsServiceService` オブジェクトの `decode` メソッドを呼び出し、次の値を渡すことにより、フォームデータをデコードします。
 
    * PDF フォームを含む `BLOB` オブジェクト。
    * PDF417 バーコードをデコードするかどうかを指定する `Boolean` オブジェクト。
@@ -208,9 +209,9 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 
 1. データを XML データソースに変換する
 
-   デコードされたデータを、 `BarcodedFormsServiceService` オブジェクトの `extractToXML` メソッドを使用して、次の値を渡します。
+   `BarcodedFormsServiceService` オブジェクトの `extractToXML` メソッドを呼び出し、次の値を渡して、デコードされたデータを XDP データまたは XFDF データに変換します。
 
-   * デコードされたデータを含む string 値 ( `decode` メソッドの戻り値 )。
+   * デコードされたデータを含む文字列値（`decode` メソッドの戻り値を使用していることを確認します）
    * 行の区切りを指定する `Delimiter` 定義済みリスト値。`Delimiter.Carriage_Return` を指定することをお勧めします。
    * フィールド区切りを指定する `Delimiter` 定義済みリスト値。例えば、`Delimiter.Tab` を指定します。
    * バーコードデータを XDP または XFDF XML データに変換するかどうかを指定する `XMLFormat` 定義済みリスト値。例えば、データを XDP データに変換するには `XMLFormat.XDP` を指定します。

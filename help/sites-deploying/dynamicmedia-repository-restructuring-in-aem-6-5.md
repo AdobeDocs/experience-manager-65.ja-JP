@@ -1,15 +1,16 @@
 ---
 title: Adobe Experience Manager 6.5 における Dynamic Media リポジトリの再構築
-description: Dynamic MediaのExperience Manager6.5 で、新しいリポジトリ構造に移行するために必要な変更を加える方法を説明します。
+description: Experience Manager 6.5 の Dynamic Media の新しいリポジトリ構造に移行するために、必要な変更を行う方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 91%
+source-wordcount: '383'
+ht-degree: 100%
 
 ---
 
@@ -91,7 +92,7 @@ ht-degree: 91%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>以下の移行スクリプトを実行して、最新のモデルに合わせることができます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.jso</em></p> </td>
+   <td><p>以下の移行スクリプトを実行して、最新モデルに合わせることができます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.jso</em></p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>

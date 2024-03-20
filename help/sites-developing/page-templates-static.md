@@ -7,7 +7,8 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
-source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 43%
@@ -145,7 +146,7 @@ AEMには、すぐに使用できる様々なデフォルトテンプレート�
 | **タイトル** | **コンポーネント** | **場所** | **目的** |
 |---|---|---|---|
 | ホームページ | homepage | geometrixx | Geometrixxのホームページテンプレート。 |
-| コンテンツのページ | contentpage | geometrixx | Geometrixxコンテンツページテンプレート。 |
+| コンテンツページ | contentpage | geometrixx | Geometrixxコンテンツページテンプレート。 |
 
 #### デフォルトのテンプレートの表示 {#displaying-default-templates}
 

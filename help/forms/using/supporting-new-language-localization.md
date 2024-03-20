@@ -8,10 +8,11 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 90%
+ht-degree: 92%
 
 ---
 
@@ -39,7 +40,7 @@ ht-degree: 90%
 * 指定した順序で次のパラメーターを確認します。
 
    * リクエストパラメーター `afAcceptLang`
-ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡して、ロケールを強制的に指定します。例えば、次の URL では、日本語ロケールでのフォームのレンダリングが強制されます。
+ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡して、ロケールを強制的に指定します。例えば、次の URL はフォームを日本語ロケールで強制的にレンダリングします。
      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * ユーザー向けに設定されるブラウザーのロケールです。これは、`Accept-Language` ヘッダーを使用したリクエストで指定されます。

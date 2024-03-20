@@ -1,28 +1,29 @@
 ---
 title: コードの落とし穴
-description: AEM向け開発時に避ける必要がある一般的なコーディングの落とし穴
+description: AEM の開発時に避けるべき一般的なコードの落とし穴
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: c448c5d5-def8-4c1a-8db4-41eb49d0cd20
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '89'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # コードの落とし穴{#code-pitfalls}
 
-## Java コードでの Sling バインディングの回避 {#avoid-sling-bindings-in-java-code}
+## Java コードで Sling Binding を使用しない {#avoid-sling-bindings-in-java-code}
 
-Sling バインディングは、90%のケースでサービスにアクセスするのに適していない方法です。 代わりに、 *@Reference* または *@Inject* 注釈。
+Sling Binding はほとんどの場合、サービスにアクセスする方法として適切ではありません。代わりに、*@Reference* または *@Inject* 注釈を使用してください。
 
 ## Java コードで Thread.interrupt を使用しない {#avoid-thread-interrupt-in-java-code}
 
-*Thread.interrupt* は、呼び出しが間違った時点で Lucene ファイルや永続キャッシュファイルを含むファイルを閉じる可能性があるので、危険です。
+*Thread.interrupt* を不適切なタイミングで呼び出すと、Lucene ファイルや永続キャッシュファイルなどのファイルが閉じられる可能性があるので危険です。
 
-## Java 同期と ReadWriteLocks を混在させない {#avoid-mixing-java-synchronization-with-readwritelocks}
+## Java 同期を ReadWriteLock と共に使用しない {#avoid-mixing-java-synchronization-with-readwritelocks}
 
-競合状態に陥り、コードが最終的にデッドロックに陥る可能性があります。
+競合状態が発生し、最終的にコードのデッドロックが発生することがあります。

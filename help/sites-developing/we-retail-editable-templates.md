@@ -1,15 +1,16 @@
 ---
 title: We.Retail の編集可能テンプレートの使用
-description: We.Retail を使用して、Adobe Experience Managerで編集可能なテンプレートを試す方法を説明します。
+description: Adobe Experience Manager で We.Retail を使用して、編集可能なテンプレートを試す方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '467'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -25,11 +26,11 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
-1. モードセレクターはデザインモードを提供しなくなりました。 We.Retail のページは、すべて編集可能テンプレートに基づいています。編集可能テンプレートのデザインを変更するには、テンプレートエディターで編集する必要があります。
+1. モードセレクターではデザインモードを提供しなくなりました。We.Retail のページは、すべて編集可能テンプレートに基づいています。編集可能テンプレートのデザインを変更するには、テンプレートエディターで編集する必要があります。
 1. **ページ情報**&#x200B;メニューから「**テンプレートを編集**」を選択します。
 1. 現在編集しているのはヒーローページテンプレートです。
 
-   ページの構造モードを使用して、テンプレートの構造を変更できます。これには、例えば、レイアウトコンテナで使用できるコンポーネントが含まれます。
+   ページの構造モードを使用して、テンプレートの構造を変更できます。例えば、レイアウトコンテナで使用できるコンポーネントが含まれます。
 
    ![chlimage_1-138](assets/chlimage_1-138.png)
 
@@ -41,7 +42,7 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
 1. レイアウトコンテナのデザインダイアログで、次の操作を実行できます。
 
-   * 既存のポリシーを選択するか、コンテナ用のポリシーを作成します
+   * コンテナに既存のポリシーを選択するか、ポリシーを作成する
    * コンテナで使用できるコンポーネントを選択する
    * アセットをコンテナにドラッグしたときに配置されるデフォルトのコンポーネントを定義する
 
@@ -51,7 +52,7 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
    次の操作が可能です。
 
-   * 既存のポリシーを選択するか、コンテナ用のポリシーを作成します
+   * コンテナに既存のポリシーを選択するか、ポリシーを作成する
    * ページ作成者がこのコンポーネントの使用時に利用できる、以下のような機能を定義する
 
       * 許可される貼り付け元
@@ -69,6 +70,6 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
 ## 詳細情報 {#more-information}
 
-詳しくは、オーサリングドキュメントを参照してください [ページテンプレートの作成](/help/sites-authoring/templates.md) または開発者ドキュメントのページ [テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md) を参照してください。
+詳しくは、オーサリングドキュメントの[ページテンプレートの作成](/help/sites-authoring/templates.md)、編集可能テンプレートの技術的な詳細については、開発者用ドキュメントページの[テンプレート - 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
 
 また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。コアコンポーネントの機能の概要については、オーサリングドキュメントの[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を参照してください。技術的な概要については、開発者用ドキュメントの[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。

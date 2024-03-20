@@ -7,10 +7,11 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1484'
-ht-degree: 92%
+ht-degree: 99%
 
 ---
 
@@ -127,7 +128,7 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
    >
    >レポートスイート ID を選択すると、左側のコンテンツファインダーに Adobe Analytics 変数（SiteCatalyst 変数）が設定されます。
 
-1. レポートスイートに情報を送信するサーバーインスタンスを選択するには、 **実行モード** （レポートスイート ID の横にある）」ドロップダウンリストを使用して、製品内で利用できます。
+1. レポートスイートに情報を送信させるサーバーインスタンスを選択するには、（レポートスイート ID の横にある）「**実行モード**」ドロップダウンを使用します。
 
    ![aa-framework-01](assets/aa-framework-01.png)
 
@@ -173,7 +174,7 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 1. コンソールから直接、またはページエディターから&#x200B;**[ページのプロパティ](/help/sites-authoring/editing-page-properties.md)**&#x200B;を開きます。
 1. 「クラウドサービス」タブを開きます。
 
-1. 以下を使用します。 **設定を追加** ドロップダウンで選択 **Adobe Analytics** を選択します。 継承が設定されている場合、セレクターが使用可能になる前に無効にします。
+1. **設定を追加**&#x200B;ドロップダウンを使用して、利用可能なオプションから **Adobe Analytics** を選択します。継承が設定されている場合、セレクターが使用可能になる前に無効にします。
 
 1. **Adobe Analytics** のドロップダウンセレクターが、使用可能なオプションに追加されます。必要なフレームワーク設定を選択します。
 
@@ -191,16 +192,19 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 ### 読み込み間隔の設定 {#configuring-the-import-interval}
 
-適切な **AdobeAEM Analytics Report Sling Importer** サービス：
+次のように **Adobe AEM Analytics Report Sling Importer** サービスの適切なインスタンスを設定します。
 
-* **取得の試行**：キューに格納されたレポートを取得しようとした回数。
+* **取得の試行**：
+キューに格納されたレポートを取得しようとした回数。
 デフォルトは、`6` です。
 
-* **取得遅延**：キューに格納されたレポートを取得しようとするまでのミリ秒数。
-デフォルトは`10000` です。ミリ秒単位なので、10 秒に相当します。
+* **取得の遅延**：
+キューに格納されたレポートを取得しようとする間隔のミリ秒数。
+デフォルトは、`10000` です。ミリ秒単位なので、10 秒に相当します。
 
-* **取得頻度**: A `cron` 式を使用して、Analytics レポートを取得する頻度を指定します。
-デフォルトはです。 `0 0 0/12 * * ?`これは、1 時間ごとの 12 個の取得に相当します。
+* **取得の頻度**：
+Analytics レポートを取得する頻度を決定する `cron` 式。
+デフォルトは、`0 0 0/12 * * ?` です。これは、1 時間ごとの 12 個の取得に相当します。
 
 この OSGi サービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の osgiConfig ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)（サービス PID は `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）を使用して設定できます。
 

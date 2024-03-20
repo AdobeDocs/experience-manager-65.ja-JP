@@ -1,6 +1,6 @@
 ---
 title: コードのアップグレードとカスタマイズ
-description: AEMでのコードのアップグレードとカスタマイズについて詳しく説明します。
+description: AEM でのコードのアップグレードとカスタマイズについて説明します。
 contentOwner: sarchiz
 topic-tags: upgrading
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,10 +9,11 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2138'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 

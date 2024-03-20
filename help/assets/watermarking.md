@@ -6,10 +6,11 @@ role: User, Admin
 feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +46,7 @@ ht-degree: 93%
    *図：[!DNL Assets]において「透かしを追加」ステップの引数を指定*
 
 1. 透かしステップを追加した **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを保存します。
-1. [!DNL Assets] ユーザーインターフェイスから、サンプルアセットをアップロードします。透かしは、フォントサイズ、色などと共に、上記の手順で設定した位置に表示されます。
+1. [!DNL Assets] ユーザーインターフェイスから、サンプルアセットをアップロードします。透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
 
 プログラムで、あるいは動的情報を使用して PDF ドキュメントに透かしを付ける場合は、 [Experience Manager ドキュメントサービス](/help/forms/using/overview-aem-document-services.md)の使用を検討してください。
 

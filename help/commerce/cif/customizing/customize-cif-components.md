@@ -11,10 +11,11 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 9677c3f08c139518e38d576d6008343fcc07e810
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '2302'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -225,7 +226,7 @@ Sling モデルは Java™ として実装され、生成されたプロジェ�
    private ProductTeaser productTeaser;
    ```
 
-   上書きまたは変更されないすべてのメソッドに対して、 `ProductTeaser` はを返します。 例：
+   上書きまたは変更されていないすべてのメソッドに対して、`ProductTeaser` が返す値を返すことができます。例：
 
    ```java
    @Override
@@ -352,7 +353,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
        componentGroup="Venia - Commerce"/>
    ```
 
-   このプロジェクト内の製品ティーザーコンポーネントに使用するコンポーネント定義を、上記に示します。`sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"` プロパティに注目してください。これは、[プロキシコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=ja#create-proxy-components)の作成例です。AEM CIFコアコンポーネントからすべての製品ティーザー HTL スクリプトをコピー&amp;ペーストする代わりに、 `sling:resourceSuperType` を追加して、すべての機能を継承します。
+   このプロジェクト内の製品ティーザーコンポーネントに使用するコンポーネント定義を、上記に示します。`sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"` プロパティに注目してください。これは、[プロキシコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=ja#create-proxy-components)の作成例です。AEM CIF コアコンポーネントからすべての製品ティーザー HTL スクリプトをコピー＆ペーストする代わりに、`sling:resourceSuperType` を使用してすべての機能を継承できます。
 
 1. `productteaser.html` ファイルを開きます。これは、[CIF 製品ティーザー](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)からの `productteaser.html` ファイルのコピーです。
 
@@ -490,7 +491,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 ## ボーナスチャレンジ {#bonus-challenge}
 
-製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。次の場所にあるコンポーネントダイアログを更新します。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
+製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。`ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml` にあるコンポーネントダイアログを更新します。
 
 ![新しいバッジの実装の課題](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 

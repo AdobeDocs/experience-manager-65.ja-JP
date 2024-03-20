@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2754'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -27,8 +28,8 @@ Form Data Integration サービスを使用すると、データを PDF フォ�
 
 フォームデータは、PDF フォームのタイプに応じて、次のいずれかの形式で存在します。
 
-* XFDF ファイル。Acrobatフォームデータ形式の XML バージョンです。
-* XDP ファイル。フォームフィールドの定義を含む XML ファイルです。 また、フォームフィールドデータと埋め込まれたPDFファイルを含めることもできます。 Designer で生成された XDP ファイルは、埋め込み base-64 エンコード PDF ドキュメントを使用する場合にのみ利用できます。
+* XFDF ファイル。Acrobat フォームデータ形式の XML バージョンです。
+* XDP ファイル。フォームフィールド定義を含む XML ファイルです。フォームフィールドデータと埋め込まれた PDF ファイルが含まれる場合もあります。Designer で生成された XDP ファイルは、埋め込み base-64 エンコード PDF ドキュメントを使用する場合にのみ利用できます。
 
 次のタスクは、Form Data Integration サービスを使用して実行できます。
 
@@ -47,7 +48,7 @@ Designer で作成したフォームにデータを読み込むには、有効�
 
 ![ie_ie_loanformdata](assets/ie_ie_loanformdata.png)
 
-データ値をこのフォームに読み込むには、フォームに対応する有効な XDP XML データソースが必要です。 任意の XML データソースを使用して、Form Data Integration サービスを使用してデータをフォームに読み込むことはできません。任意の XML データソースと XDP XML データソースの違いは、XDP データソースが XML フォームアーキテクチャ（XFA）に準拠している点です。次の XML は、住宅ローン申し込みフォームのサンプルに対応する XML データソースを表しています。
+データ値をこのフォームに読み込むには、フォームに対応する有効な XDP XML データソースが必要です。任意の XML データソースを使用して、Form Data Integration サービスを使用してデータをフォームに読み込むことはできません。任意の XML データソースと XDP XML データソースの違いは、XDP データソースが XML フォームアーキテクチャ（XFA）に準拠している点です。次の XML は、住宅ローン申し込みフォームのサンプルに対応する XML データソースを表しています。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8" ?>
@@ -119,7 +120,7 @@ Designer で作成したフォームにデータを読み込むには、有効�
 
 **XML データソースの参照**
 
-フォームデータを読み込むには、有効なデータソースを参照する必要があります。 Designer で作成した XFA XML フォームにデータを読み込むには、XDP XML データソースを使用する必要があります。Acrobat フォームを参照する場合は、XFDF データソースを使用する必要があります。データのインポート先のフィールドごとに、値を指定する必要があります。XML データソース内の要素がフォーム内のフィールドに対応していない場合、その要素は無視されます。
+フォームデータを読み込むには、有効なデータソースを参照する必要があります。Designer で作成した XFA XML フォームにデータを読み込むには、XDP XML データソースを使用する必要があります。Acrobat フォームを参照する場合は、XFDF データソースを使用する必要があります。データのインポート先のフィールドごとに、値を指定する必要があります。XML データソース内の要素がフォーム内のフィールドに対応していない場合、その要素は無視されます。
 
 **データを PDF フォームに読み込み**
 
@@ -173,7 +174,7 @@ PDF フォームと有効な XML データソースを参照した後、デー�
    * PDF フォームが格納された `com.adobe.idp.Document` オブジェクト。
    * フォームデータが格納された `com.adobe.idp.Document` オブジェクト。
 
-   The `importData` メソッドは、 `com.adobe.idp.Document` XML データソースのPDFを含むデータフォームを保存するオブジェクト。
+   `importData` メソッドは、XML データソースにあるデータを含む PDF フォームを格納する `com.adobe.idp.Document` オブジェクトを返します。
 
 1. PDF フォームを PDF ファイルとして保存します。
 
@@ -238,7 +239,7 @@ PDF フォームと有効な XML データソースを参照した後、デー�
    * PDF フォームを格納する `BLOB` オブジェクト。
    * フォームデータが格納された `BLOB` オブジェクト。
 
-   The `importData` メソッドは、 `BLOB` XML データソースのPDFを含むデータフォームを保存するオブジェクト。
+   `importData` メソッドは、XML データソースにあるデータを含む PDF フォームを格納する `BLOB` オブジェクトを返します。
 
 1. PDF フォームを PDF ファイルとして保存します。
 

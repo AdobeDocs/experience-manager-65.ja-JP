@@ -1,6 +1,6 @@
 ---
 title: FormsService にドキュメントを渡す
-description: フォームデザインを含む com.adobe.idp.Document オブジェクトを Forms サービスに渡します。Formsサービスは、フォームデザインを com.adobe.idp.Document オブジェクトにレンダリングします。
+description: フォームデザインを含む com.adobe.idp.Document オブジェクトを Forms サービスに渡します。Forms サービスは、com.adobe.idp.Document オブジェクトにあるフォームデザインをレンダリングします。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 29c7ebda-407a-464b-a9db-054163f5b737
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1677'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 98%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-AEM Forms サービスは、ユーザーから情報を収集するために、インタラクティブ PDF Forms をクライアントデバイス（通常は web ブラウザー）にレンダリングします。インタラクティブ PDF フォームは、通常 XDP ファイルとして保存され、Designer で作成されるフォームデザインに基づいています。AEM Forms では、フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Forms サービスに渡すことができます。次に、Formsサービスがフォームデザインを `com.adobe.idp.Document` オブジェクト。
+AEM Forms サービスは、ユーザーから情報を収集するために、インタラクティブ PDF Forms をクライアントデバイス（通常は web ブラウザー）にレンダリングします。インタラクティブ PDF フォームは、通常 XDP ファイルとして保存され、Designer で作成されるフォームデザインに基づいています。AEM Forms では、フォームデザインを含む `com.adobe.idp.Document` オブジェクトを Forms サービスに渡すことができます。次に、Forms サービスは、`com.adobe.idp.Document` オブジェクトにあるフォームデザインをレンダリングします。
 
 `com.adobe.idp.Document` オブジェクトを Forms サービスに渡す利点は、他のサービス操作が `com.adobe.idp.Document` インスタンスを返すことです。つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得し、レンダリングできます。例えば、（次の図に示すように）XDP ファイルが `/Company Home/Form Designs` という名前のコンテンツサービス（非推奨）ノードに格納されているとします。
 

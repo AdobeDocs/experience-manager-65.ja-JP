@@ -2,10 +2,11 @@
 title: 装飾タグ
 description: Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。AEM では、含まれているコンポーネントをラップする装飾タグを制御する明確でシンプルなロジックを開発者向けに提供しています。
 exl-id: d049ebf1-7fa6-4d2c-86f9-b18e107092ea
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '879'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -42,7 +43,7 @@ AEM では、含まれているコンポーネントをラップする装飾タ�
 
    * **`cq:tagName {String}`：**&#x200B;これは、デフォルトの DIV 要素の代わりにコンポーネントをラッピングするために使用されるカスタム HTML タグを指定するために使用できます。
    * **`class {String}`：**&#x200B;これは、ラッパーに追加する css クラス名を指定するために使用できます。
-   * 他のプロパティ名は、指定された値と同じ String 値を持つHTML属性として追加されます。
+   * 他のプロパティ名は、指定されたものと同じ文字列値を持つ HTML 属性として追加されます。
 
 ## スクリプトの制御 {#script-controls}
 

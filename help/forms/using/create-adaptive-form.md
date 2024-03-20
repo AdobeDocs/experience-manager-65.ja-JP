@@ -3,10 +3,11 @@ title: 'チュートリアル：アダプティブフォームの作成'
 description: アダプティブフォームの作成、レイアウトおよびプレビューについて説明します。また、送信アクションを設定する方法についても説明します。
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1314'
-ht-degree: 85%
+ht-degree: 98%
 
 ---
 
@@ -35,14 +36,14 @@ ht-degree: 85%
 ## 手順 1：アダプティブフォームを作成する {#step-create-the-adaptive-form}
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。デフォルトの URL は、[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) です。
-1. 「**[!UICONTROL 作成]**」を選択して、「**[!UICONTROL アダプティブフォーム]**」をクリックします。テンプレートを選択するためのオプションが表示されます。を選択します。 **[!UICONTROL 空白]** テンプレートを選択して選択します。 **[!UICONTROL 次へ]**.
+1. 「**[!UICONTROL 作成]**」を選択して、「**[!UICONTROL アダプティブフォーム]**」を選択します。テンプレートを選択するためのオプションが表示されます。**[!UICONTROL 空白]**&#x200B;テンプレートを選択して、「**[!UICONTROL 次へ]**」を選択します。
 
 1. 「**[!UICONTROL プロパティを追加]**」オプションが表示されます。「**[!UICONTROL タイトル]**」フィールドと「**[!UICONTROL 名前]**」フィールドは入力必須です。
 
    * **タイトル：** `Add new or update shipping address` を「**[!UICONTROL タイトル]**」フィールドに指定します。「タイトル」フィールドに入力した値が、フォームの表示名になります。タイトルを指定すると、AEM [!DNL Forms] ユーザーインターフェイス内のフォームを特定しやすくなります。
    * **名前：**`shipping-address-add-update-form` を「**[!UICONTROL 名前]**」フィールドに指定します。「名前」フィールドでは、フォームの名前を指定します。指定された名前のノードがリポジトリーに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用できます。無効な入力は、すべてハイフンに置き換えられます。
 
-1. 「**[!UICONTROL 作成]**」を選択します。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。選択 **[!UICONTROL 開く]** をクリックして、新しく作成されたフォームを新しいタブで開きます。 フォームが編集用に開きます。新しく作成されたフォームを必要に応じてカスタマイズするためのサイドバーも表示されます。
+1. 「**[!UICONTROL 作成]**」を選択します。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。「**[!UICONTROL 開く]**」を選択し、新しく作成されたフォームを新しいタブで開きます。フォームが編集用に開きます。新しく作成されたフォームを必要に応じてカスタマイズするためのサイドバーも表示されます。
 
    アダプティブフォームのオーサリングインターフェイスと使用可能なコンポーネントについて詳しくは、[アダプティブフォームのオーサリングの概要](/help/forms/using/creating-adaptive-form.md)を参照してください。
 
@@ -52,10 +53,10 @@ ht-degree: 85%
 
 AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示するための様々なコンポーネントが用意されています。ヘッダーコンポーネントおよびフッターコンポーネントを使用すると、フォームのルックアンドフィールを統一できます。ヘッダーには通常、会社のロゴ、フォームのタイトル、概要が含まれます。フッターには通常、著作権に関する情報と他のページへのリンクを指定します。
 
-1. 選択 ![toggle-side-panel](assets/toggle-side-panel.png) > ![treeexpandall](assets/treeexpandall.png). コンポーネントブラウザーが表示されます。コンポーネントブラウザーから&#x200B;**[!UICONTROL ヘッダー]**&#x200B;コンポーネントをアダプティブフォームにドラッグ＆ドロップします。
-1. 選択 **[!UICONTROL ロゴ]**. ツールバーが表示されます。選択 ![aem_6_3_edit](assets/aem_6_3_edit.png) ツールバーで、「 **We.Retail**&#x200B;をクリックし、次を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. ![toggle-side-panel](assets/toggle-side-panel.png)／![treeexpandall](assets/treeexpandall.png) を選択します。コンポーネントブラウザーが表示されます。コンポーネントブラウザーから&#x200B;**[!UICONTROL ヘッダー]**&#x200B;コンポーネントをアダプティブフォームにドラッグ＆ドロップします。
+1. **[!UICONTROL ロゴ]**&#x200B;を選択します。ツールバーが表示されます。ツールバーの ![aem_6_3_edit](assets/aem_6_3_edit.png) で **We.Retail** を選択し、![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) を選択します。
 
-1. 「画像」を選択します。 ツールバーが表示されます。選択 ![cmppr](assets/cmppr.png). 画面の左側にプロパティブラウザーが表示されます。「**[!UICONTROL 参照]**」をタップして、ロゴ画像をアップロードします。選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). 画像がヘッダーに表示されます。
+1. 画像を選択します。ツールバーが表示されます。![cmppr](assets/cmppr.png) を選択します。画面の左側にプロパティブラウザーが表示されます。「**[!UICONTROL 参照]**」をタップして、ロゴ画像をアップロードします。![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) を選択します。画像がヘッダーに表示されます。
 
    この記事に使用するロゴがない場合は、「ファイルを取得」を選択して、そのロゴをダウンロードできます。
 
@@ -69,7 +70,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
 
 コンポーネントは、アダプティブフォームを構成するための構築ブロックです。AEM [!DNL Forms] には、情報を取得しアダプティブフォームで表示するための様々なコンポーネントが用意されています。![treeexpandall](assets/treeexpandall.png) からフォームにコンポーネントをドラッグすることができます。使用可能なコンポーネントと対応する機能については、[アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md)を参照してください。
 
-1. **[!UICONTROL 数値ボックスコンポーネント]**&#x200B;をアダプティブフォームにドラッグします。フッターコンポーネントの前にドロップします。コンポーネントのプロパティを開き、 **[!UICONTROL タイトル]** の **`Customer ID`**，変更 **[!UICONTROL エレメント名]** から **`customer_ID`**、を有効にします。 **[!UICONTROL 必須フィールド]** オプション、有効 **[!UICONTROL HTML5 番号入力タイプを使用]** オプションを選択し、 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. **[!UICONTROL 数値ボックスコンポーネント]**&#x200B;をアダプティブフォームにドラッグします。フッターコンポーネントの前にドロップします。コンポーネントのプロパティを表示し、コンポーネントの&#x200B;**[!UICONTROL タイトル]**&#x200B;を **`Customer ID`**、**[!UICONTROL 要素名]**&#x200B;を **`customer_ID`** にそれぞれ変更し、「**[!UICONTROL 必須フィールド]**」オプションと「**[!UICONTROL HTML5 の数値入力タイプを使用]**」オプションを有効にして「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 1. 3 つのテキストボックスコンポーネントをアダプティブフォームにドラッグします。これらをフッターコンポーネントの前に配置します。これらのテキストボックスに対して、次のプロパティを設定します。：
 
    <table> 
@@ -107,7 +108,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
     </tbody> 
    </table>
 
-1. **[!UICONTROL 数値ボックス]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、次の表に示す値を設定し、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. **[!UICONTROL 数値ボックス]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、以下のテーブルに示す値を設定して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    | プロパティ | 値 |
    |---|---|
@@ -117,7 +118,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
    | 必須フィールド | Enabled |
    | 表示パターンのタイプ | パターンなし |
 
-1. **[!UICONTROL メール]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、次の表に示す値を設定して、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. **[!UICONTROL メール]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、以下のテーブルに示す値を設定して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    | プロパティ | 値 |
    |---|---|
@@ -125,7 +126,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
    | 要素名 | customer_Email |
    | 必須フィールド | Enabled |
 
-1. **[!UICONTROL 添付ファイル]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、次の表に示す値を設定して、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. **[!UICONTROL 添付ファイル]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、以下のテーブルに示す値を設定して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    <table> 
     <tbody> 
@@ -148,7 +149,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
     </tbody> 
    </table>
 
-1. **[!UICONTROL 送信ボタン]**&#x200B;コンポーネントをアダプティブフォームにドラッグします。フッターコンポーネントの前にドロップします。コンポーネントのプロパティを開き、「要素名」を「 」に変更します。 `address_addition_update_submit`を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). これでフォームのレイアウトが設定され、フォームが以下のように表示されます。
+1. **[!UICONTROL 送信ボタン]**&#x200B;コンポーネントをアダプティブフォームにドラッグします。フッターコンポーネントの前にドロップします。コンポーネントのプロパティを開き、「要素名」を `address_addition_update_submit` に変更して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。これでフォームのレイアウトが設定され、フォームが以下のように表示されます。
 
    ![adaptive-form-with-all-the-components](assets/adaptive-form-with-all-the-components.png)
 
@@ -161,8 +162,8 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
 1. メールサーバーを設定します。詳しくは、「[メール通知の設定](/help/sites-administering/notification.md)」を参照してください。
 
 
-1. 選択 **[!UICONTROL フォームコンテナ]** をクリックし、「 ![cmppr](assets/cmppr.png). 画面左側にプロパティブラウザーが表示されます。 
-1. **[!UICONTROL 送信]**／**[!UICONTROL 送信アクション]**&#x200B;に移動します。「**[!UICONTROL メールを送信]**」を選択します。次の値を指定し、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. コンテンツブラウザーで「**[!UICONTROL フォームコンテナ]**」を選択してから「![cmppr](assets/cmppr.png)」を選択します。画面左側にプロパティブラウザーが表示されます。 
+1. **[!UICONTROL 送信]**／**[!UICONTROL 送信アクション]**&#x200B;に移動します。「**[!UICONTROL メールを送信]**」を選択します。次の値を指定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    | プロパティ | 値 |
    |--- |--- |
@@ -180,8 +181,8 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
 
 アダプティブフォームには、様々なデバイス向けにフォームのエクスペリエンスをエミュレートするオプションも用意されています。例えば、iPhone、iPad、デスクトップパソコンなどのデバイスについて、エミュレーションを行うことができます。「**[!UICONTROL プレビュー]**」と「**[!UICONTROL エミュレーター]** ![ルーラー](assets/ruler.png)」の両オプションをそれぞれ組み合わせることにより、画面サイズの異なるデバイスのフォームをプレビュー表示することができます。
 
-1. を選択します。 **[!UICONTROL プレビュー]** 」オプションを使用して、フォームエディターの右側に表示されます。 フォームがプレビューモードで表示されます。このチュートリアルに記載されている値を使用してフォームを作成した場合、フォームのプレビュー URL は [http://localhost:4502/content/dam/formsanddocuments/shipping-address-add-update-form/jcr:content?wcmmode=disabled](http://localhost:4502/content/dam/formsanddocuments/shipping-address-addition-updation-form/jcr:content?wcmmode=disabled) になります。
+1. フォームエディター右側の「**[!UICONTROL プレビュー]**」オプションを選択します。フォームがプレビューモードで表示されます。このチュートリアルに記載されている値を使用してフォームを作成した場合、フォームのプレビュー URL は [http://localhost:4502/content/dam/formsanddocuments/shipping-address-add-update-form/jcr:content?wcmmode=disabled](http://localhost:4502/content/dam/formsanddocuments/shipping-address-addition-updation-form/jcr:content?wcmmode=disabled) になります。
 1. 「![ルーラー](assets/ruler.png)」を使用して、各種のデバイスでフォームがどのように表示されるかを確認します。
-1. フォームのフィールドに入力し、「 」を選択します。 **[!UICONTROL 送信]**. フォームが送信され、デフォルトで「**ありがとうございます**」ページにリダイレクトされます。また、カスタムの「Thank You」ページを指定することもできます。詳しくは、「[リダイレクトページの設定](/help/forms/using/configuring-redirect-page.md)」を参照してください。
+1. フォームのフィールドに入力して「**[!UICONTROL 送信]**」を選択します。フォームが送信され、デフォルトで「**ありがとうございます**」ページにリダイレクトされます。また、カスタムの「Thank You」ページを指定することもできます。詳しくは、「[リダイレクトページの設定](/help/forms/using/configuring-redirect-page.md)」を参照してください。
 
 これで、住所を追加するためのアダプティブフォームの準備が完了しました。このチュートリアルに記載されている名前を指定し、AEM Forms サーバーで稼働するマシン上に作成されたフォームにアクセスする場合は、対応するフォームが [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html) に用意されています。

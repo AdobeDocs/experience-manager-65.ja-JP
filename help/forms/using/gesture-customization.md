@@ -1,15 +1,16 @@
 ---
 title: ジェスチャーのカスタマイズ
-description: AEM Formsアプリでジェスチャーをカスタマイズする方法を説明します。 ジェスチャーをカスタマイズして、アプリケーションとの個別の対話方法を提供できます。
+description: AEM Forms アプリのジェスチャーのカスタマイズ方法について説明します。ジェスチャーをカスタマイズして、アプリケーションを操作するための独自の方法を提供できます。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -47,13 +48,13 @@ AEM Forms アプリケーションでは、左スワイプで新しいタスク�
 
 1. 検索
 
-   * &quot;select .taskContentArea&quot; : &quot;onTaskClick&quot;,
+   * &quot;select .taskContentArea&quot; : &quot;onTaskClick&quot;、
 
-     &quot;select .taskOpenArea&quot; : &quot;onTaskClick&quot;,
+     &quot;select .taskOpenArea&quot; : &quot;onTaskClick&quot;、
 
-     &quot;select .task-content&quot; : &quot;onTaskClick&quot;,
+     &quot;select .task-content&quot; : &quot;onTaskClick&quot;、
 
-     &quot;select .last_empty_div&quot; : &quot;onTaskClick&quot;,
+     &quot;select .last_empty_div&quot; : &quot;onTaskClick&quot;、
 
    これを
 

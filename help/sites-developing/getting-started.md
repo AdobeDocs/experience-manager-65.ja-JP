@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: introduction
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +32,7 @@ WKND 開発者向けチュートリアルは[こちら](https://experienceleague
 
 ## 中心概念 {#core-concepts}
 
-このチュートリアルの実装では、AEM の数多くの強力な機能を利用しています。サイトの実装には以下が使用されます。
+このチュートリアルの実装では、AEM の数多くの強力な機能を利用しています。サイトの実装には次が使用されます。
 
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 * [Sling Model](https://sling.apache.org/documentation/bundles/models.html)
@@ -39,7 +40,7 @@ WKND 開発者向けチュートリアルは[こちら](https://experienceleague
 * [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
 
-上記の概念の詳細について説明する前に、チュートリアルを進めてください。
+まずチュートリアルを完了させてから、上記の概念の詳細に進みます。
 
 ## 次の手順 {#next-steps}
 

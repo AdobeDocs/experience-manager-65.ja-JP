@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 96%
 次の手順を使用して、モバイルページをオーサリングします。
 
 1. グローバルナビゲーションから&#x200B;**サイト**&#x200B;コンソールを開きます。
-1. ページを開く **We.Retail** > **米国** > **英語**.
+1. **We.Retail**／**アメリカ合衆国**／**英語**&#x200B;のページを開きます。
 
 1. **プレビュー**&#x200B;モードに切り替えます。
 1. ページ上部のデバイスアイコンをクリックして、目的のエミュレーターに切り替えます。

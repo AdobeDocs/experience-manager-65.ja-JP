@@ -6,7 +6,8 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: b325fc82-01e3-4122-8a86-ed605b135b01
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 100%

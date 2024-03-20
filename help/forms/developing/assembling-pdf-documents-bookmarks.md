@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2519'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -117,7 +118,7 @@ ht-degree: 98%
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **PDF Assembler クライアントの作成**
 
@@ -148,7 +149,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **PDF ドキュメントとブックマーク XML ドキュメントを Map コレクションに追加する**
 
-ブックマークを追加するPDF文書とブックマーク XML 文書の両方を Map コレクションに追加します。 したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
+ブックマークを追加する PDF ドキュメントと、ブックマーク XML ドキュメントの両方を Map コレクションに追加すします。したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
 
 **実行時オプションの設定**
 
@@ -160,7 +161,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **ブックマークを含む PDF ドキュメントの保存**
 
-返されたマップオブジェクトから結果を抽出し、対応するPDF文書を保存します。 （[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)にある「結果の抽出」を参照してください）。
+返された Map オブジェクトから結果を抽出し、対応する PDF ドキュメントを保存します。（[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)にある「結果の抽出」を参照してください）。
 
 **関連項目**
 

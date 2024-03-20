@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 96%
@@ -147,7 +148,7 @@ AEM Forms は Target と統合されているため、アダプティブフォ�
 * フォームフィールドに標準的または一般的な用語を使用すること。
 * ユーザーが間違いやすいところには、例示やヘルプなどでフィールドおよび入力必須箇所に説明を加えること。
 * フォーム送信時のエラーを防止するために、ユーザーの入力を入力時に検証すること。
-* デスクトップおよびモバイルデバイス用のレイアウトを最適化する。
+* デスクトップならびにモバイルデバイス用にレイアウトを最適化します。
 * 既知のユーザーの情報を自動入力すること。
 
 **A/B テスト**

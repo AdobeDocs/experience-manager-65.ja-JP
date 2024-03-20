@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: bb6a5913-0871-47c7-8641-936e98920ec0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -21,12 +22,12 @@ ht-degree: 69%
 
 クラシック UI にはさらに厳しい制約があります。
 
-* 次のいずれかの場合に、明示的なノード名でアセット名を検証します。
+* アセット名が有効と判断されるのは、明示的なノード名が次のいずれかの場合です。
 
-   * ノード名に変換するために、アセットのタイトルが指定されます。
-   * 明示的なノード名が提供されている。
+   * ノード名に変換されるようにアセットタイトルが指定されている。
+   * 明示的なノード名が指定されている。
 
-* 有効な文字（クラシック UI でアセットを作成した場合、実際には次の文字のみが有効です）:
+* 有効な文字（アセットがクラシック UI で作成されるとき次の文字のみが有効です）：
 
    * a～z
    * A～Z

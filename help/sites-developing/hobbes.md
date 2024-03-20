@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: components, testing
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '759'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +46,7 @@ AEM 内で自動化されたテストを使用する場合は、次の用語を�
 
 テストコンソールを開くと、登録されているテストスイートが表示されます。テストパネルには、テストスイートとそのテストケースのリストが表示されます。
 
-からツールコンソールに移動します。 **グローバルナビゲーション/ツール/操作/テスト**.
+ツールコンソールに移動するには、**グローバルナビゲーション／ツール／操作／テスト**&#x200B;の順に移動します。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -89,7 +90,7 @@ AEM 内で自動化されたテストを使用する場合は、次の用語を�
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. テストパネルで、 **すべてのテストを実行** ボタンまたは **テストを実行** ボタンをクリックします。
+1. テストパネルで、実行するテストスイートのタイトルの下にある「**Run all tests**」ボタンまたは「**Run tests**」ボタンをクリックします。
 
    ![円内の右向きのポインターで示される、「テストをすべて実行」ボタンと「テストを実行」ボタンの画像。](do-not-localize/chlimage_1-5.png)
 

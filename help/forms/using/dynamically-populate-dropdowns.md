@@ -1,15 +1,16 @@
 ---
 title: ドロップダウンリストの動的な自動入力
-description: あるロジックに基づいてドロップダウンリストを動的に埋め込む手順
+description: あるロジックに基づいてドロップダウンリストを動的に自動入力する手順
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -146,8 +147,8 @@ ht-degree: 86%
 
    ![ドロップダウンノードの作成](assets/dropdown-node.png)
 
-1. コンテンツノードをパッケージ化し、特定の場所（例：/apps/myfolder/demo/install/）に.jar ファイルを埋め込みます。 同じファイルをサーバーにデプロイします。
-1. アダプティブフォームを作成し、国と州の 2 つのドロップダウンリストを追加します。 国リストには、国の名前を含めることができます。 州リストは、最初のリストで選択した国の州名を動的に入力できます。
+1. コンテンツノードをパッケージ化し、その .jar ファイルを特定の場所（例えば /apps/myfolder/demo/install/）に埋め込みます。同じファイルをサーバーにデプロイします。
+1. アダプティブフォームを作成し、2 つのドロップダウンリスト（国と州）をそれに追加します。国リストには、国の名前を含めることができます。 州リストは、最初のリストで選択した国の州名を動的に入力できます。
 
    国リストに表示する国の名前を追加します。 州リストに、国リスト内の国の名前に基づいて入力するスクリプトを追加します。
 

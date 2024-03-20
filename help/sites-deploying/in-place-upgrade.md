@@ -1,13 +1,14 @@
 ---
 title: インプレースアップグレードの実行
-description: AEM 6.5 のインプレースアップグレードの実行方法を説明します。
+description: AEM 6.5 のインプレースアップグレードの実行方法について説明します。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 83%
+ht-degree: 99%
 
 ---
 
@@ -45,7 +46,7 @@ ht-degree: 83%
 
 AEM 6.3 からアップグレードする場合、この移行は必要ありません。アドビでは 6.3 以前のバージョン向けに、リポジトリを AEM 6.3 で使用される新しいバージョンの Oak Segment Tar に移行するためのツールを提供しています。このツールはクイックスタートパッケージの一部として提供され、TarMK を使用するすべてのアップグレードに必須です。MongoMK を使用している環境のアップグレードには、リポジトリの移行は必要ありません。新しい Segment Tar 形式のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions) を参照してください。
 
-実際の移行は、標準のAEM quickstart jar ファイルを使用して実行され、新しい `-x crx2oak` オプション：crx2oak ツールを実行してアップグレードを簡略化し、より堅牢にします。
+実際の移行は、標準の AEM クイックスタート jar ファイルを使用して行います。この jar ファイルは、新しい `-x crx2oak` オプションを指定して実行します。このオプションによって crx2oak ツールが実行され、アップグレードがより容易で堅牢になります。
 
 >[!NOTE]
 >
@@ -113,7 +114,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 **次のシナリオでは、追加のスイッチが必要となる場合もあります。**
 
-* Java メモリマッピングが正しく処理されない Windows システムでアップグレードを実行する場合は、 `--disable-mmap` パラメータをコマンドに追加します。
+* Java メモリマップが正しく処理されない Windows システムでアップグレードを実行する場合は、`--disable-mmap` パラメーターをコマンドに追加します。
 
 crx2oak ツールの使用手順について詳しくは、[CRX2Oak 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。crx2oak ヘルパー JAR は、必要に応じて手動でアップグレードできます。その場合は、クイックスタートを解凍した後に、手動で新しいバージョンに置き換えます。AEM インストールフォルダー内の場所は `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar` です。最新バージョンの CRX2Oak 移行ツールは、アドビリポジトリ（[https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)）からダウンロードできます。
 
@@ -127,11 +128,11 @@ AEM 6.3 インストールでは新しく `FileDataStore` がデフォルトに�
 
 ## 移行に関する問題のトラブルシューティング {#troubleshooting-migration-issues}
 
-6.3 からアップグレードする場合は、この節をスキップしてください。提供された crx2oak プロファイルは、ほとんどの顧客のニーズを満たす必要がありますが、追加のパラメーターが必要な場合があります。 移行中にエラーが発生する場合は、お使いの環境に、追加の設定オプションの指定が必要な事項が存在する可能性があります。その場合は、次のエラーが発生することがあります。
+6.3 からアップグレードする場合、この節の説明はスキップします。提供されている crx2oak プロファイルはほとんどの顧客のニーズに適合しますが、追加のパラメーターが必要になる場合もあります。移行中にエラーが発生する場合は、お使いの環境に、追加の設定オプションの指定が必要な事項が存在する可能性があります。その場合は、次のエラーが発生することがあります。
 
 **外部データストアが指定されていないので、チェックポイントはコピーされません。 これにより、最初の起動時にリポジトリ全体のインデックスが再作成されます。--skip-checkpoints を使用して移行を強制するか、https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration で詳細を確認してください。**
 
-何らかの理由で、移行プロセスがデータストア内のバイナリにアクセスする必要がありますが、データストアを見つけることができません。データストアの設定を指定するには、次のフラグを `<<ADDITIONAL_FLAGS>>` 移行コマンドの一部：
+何らかの理由で、移行プロセスがデータストア内のバイナリにアクセスする必要がありますが、データストアを見つけることができません。データストア設定を指定するには、移行コマンドの `<<ADDITIONAL_FLAGS>>` 部分に以下のフラグを挿入します。
 
 **S3 データストアの場合：**
 
@@ -161,13 +162,13 @@ AEM 6.3 インストールでは新しく `FileDataStore` がデフォルトに�
 
 ### 適切なアップグレード開始コマンドの確認 {#determining-the-correct-upgrade-start-command}
 
-アップグレードを実行するには、jar ファイルを使用して AEM を起動し、インスタンスを起動することが重要です。6.5 へのアップグレードについては、 [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) アップグレードコマンドで選択できます。
+アップグレードを実行するには、jar ファイルを使用して AEM を起動し、インスタンスを起動することが重要です。6.5 にアップグレードする場合は、アップグレードコマンドで選択できる[遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)のその他のコンテンツ再構築および移行オプションを検討します。
 
 >[!IMPORTANT]
 >
->oracleJava 11（または通常は 8 より新しいバージョンの Java）を実行している場合は、AEMの起動時に、追加のスイッチをコマンドラインに追加する必要があります。 詳しくは、 [Java 11 に関する考慮事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)を参照してください。
+>Oracle Java 11（または一般にバージョン 8 より新しい Java）を実行している場合は、AEM の起動時にコマンドラインにさらにスイッチを追加する必要があります。詳しくは、 [Java 11 に関する考慮事項](/help/sites-deploying/custom-standalone-install.md#java-considerations)を参照してください。
 
-起動スクリプトから AEM を起動した場合、アップグレードは開始されません。ほとんどのお客様は、起動スクリプトを使用してAEMを起動し、この起動スクリプトをカスタマイズして、メモリ設定やセキュリティ証明書などの環境設定用のスイッチを含めています。 そのため、次の手順に従って、適切なアップグレードコマンドを確認することをお勧めします。
+起動スクリプトから AEM を起動した場合、アップグレードは開始されません。ほとんどの顧客は、起動スクリプトを使用して AEM を起動します。また、起動スクリプトをカスタマイズし、メモリ設定やセキュリティ証明書など、環境設定に関するスイッチを含めています。そのため、次の手順に従って、適切なアップグレードコマンドを確認することをお勧めします。
 
 1. 実行中の AEM インスタンスで、コマンドラインから次のコマンドを実行します。
 

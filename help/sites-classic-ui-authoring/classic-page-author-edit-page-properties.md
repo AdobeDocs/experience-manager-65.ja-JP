@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 100%
@@ -15,7 +16,7 @@ ht-degree: 100%
 
 # ページプロパティの編集 {#editing-page-properties}
 
-ページに必要なプロパティを定義できます。これらは、ページの特性に応じて異なる場合があります。例えば、ライブコピーに接続されているページもあれば、接続されておらずライブコピー情報が必要に応じて利用可能になるページもあるといったことです。
+ページに必要なプロパティを定義できます。これらは、ページの特性に応じて異なる場合があります。例えば、ライブコピーに接続されているページもあれば、そうでないページもあり、ライブコピー情報は適宜使用できるようになります。
 
 ## ページプロパティ {#page-properties}
 

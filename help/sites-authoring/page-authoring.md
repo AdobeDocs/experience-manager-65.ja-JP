@@ -1,11 +1,12 @@
 ---
 title: AEM でのコンテンツページのオーサリング
-description: Adobe Experience Manager 6.5 でコンテンツページをオーサリングする際に必要なタスク。
+description: Adobe Experience Manager 6.5 でのコンテンツページのオーサリングに関連するタスクです。
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '317'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -38,10 +39,10 @@ ht-degree: 76%
 編集可能なページの左側に表示されるスライド機能付きブラウザーです。このブラウザーから、コンポーネントをページにドラッグして編集できます。
 
 * **[アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**
-編集可能なページの左側では、スライドするブラウザーを開くことができます。ここから、アセットをページにドラッグして、例えば、アセットの配置や他のページへのリンクの作成を行うことができます。
+編集可能なページの左側に表示されるスライド機能付きブラウザーです。このブラウザーから、アセットをページにドラッグして、例えばアセットを配置したり、他のページへのリンクを作成したりすることができます。
 
 * **コンポーネントツールバー**
-1 回のダブルクリックでもゆっくりのダブルクリックでも、適切なツールバーが表示されます（シングルはインプレース編集ツールバー、スローはフルツールバー）。
+シングルクリックまたはゆっくりダブルクリックすると、状況に応じたツールバーが表示されます（シングルクリックの場合はインプレース編集ツールバー、ゆっくりダブルクリックした場合は完全なツールバー）。
 
 * **[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)**
 レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。

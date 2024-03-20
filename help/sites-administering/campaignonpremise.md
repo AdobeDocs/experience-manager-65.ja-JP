@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1552'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +27,7 @@ AEM を Adobe Campaign Classic（ACC）と統合すると、メール配信、�
 
 ## 統合手順 {#integration-steps}
 
-AEMと Campaign の統合には、両方のソリューションでいくつかの手順が必要です。
+AEM と Campaign の統合には、両方のソリューションでいくつかの手順を実行する必要があります。
 
 1. [AEM 統合パッケージの Campaign へのインストール](#install-package)
 1. [Campaign での AEM のオペレーターの作成](#create-operator)
@@ -41,12 +42,12 @@ AEMと Campaign の統合には、両方のソリューションでいくつか�
 
 * Adobe Campaign Classic への管理者アクセス
    * 統合を実行するには、設定済みのデータベースを含む、動作中の Adobe Campaign Classic インスタンスが必要です。
-   * Adobe Campaign Classicの設定方法と設定方法に関する追加の詳細が必要な場合は、 [Adobe Campaign Classicのドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja) 特に、『インストールと設定』ガイド。
+   * Adobe Campaign Classic のセットアップおよび設定方法に関する詳細が必要な場合は、[Adobe Campaign Classic ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)、特にインストールおよび設定ガイドを参照してください。
 * AEM への管理者アクセス
 
 ## Campaign への AEM 統合パッケージのインストール {#install-package}
 
-The **AEM統合** Adobe Campaignのパッケージには、AEMへの接続に必要ないくつかの標準設定が含まれています。
+Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接続に必要な標準設定がいくつか含まれています。
 
 1. 管理者は、クライアントコンソールを使用して Adobe Campaign インスタンスにログインします。
 
@@ -70,11 +71,11 @@ The **AEM統合** Adobe Campaignのパッケージには、AEMへの接続に必
 
 ## Campaign への AEM オペレーターの作成 {#create-operator}
 
-統合パッケージによって、AEM が Adobe Campaign への接続に使用する `aemserver` オペレーターが自動的に作成されます。このオペレーターのセキュリティゾーンを定義し、そのパスワードを設定します。
+統合パッケージによって、AEM が Adobe Campaign への接続に使用する `aemserver` 演算子が自動的に作成されます。この演算子のセキュリティゾーンを定義し、パスワードを設定します。
 
 1. クライアントコンソールを使用して、Adobe Campaign に管理者としてログインします。
 
-1. 選択 **ツール** > **エクスプローラ** をクリックします。
+1. メニューバーから&#x200B;**ツール**／**エクスプローラー**&#x200B;を選択します。
 
 1. エクスプローラーで、**管理**／**アクセス管理**／**オペレーター**&#x200B;ノードに移動します。
 
@@ -112,7 +113,7 @@ The **AEM統合** Adobe Campaignのパッケージには、AEMへの接続に必
    >
    >デフォルトでは、オペレーターのセキュリティゾーンは設定されていません。AEM を Adobe Campaign に接続するには、前の手順で説明したようにゾーンを選択する必要があります。
    >
-   >セキュリティの問題を回避するために、AEM 専用のセキュリティゾーンを作成することを強くお勧めします。このトピックについて詳しくは、 [Adobe Campaign Classicドキュメント。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html?lang=ja)
+   >セキュリティの問題を回避するために、AEM 専用のセキュリティゾーンを作成することを強くお勧めします。このトピックについて詳しくは、[Adobe Campaign Classicドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html?lang=ja)を参照してください。
 
 1. Campaign クライアントで、`aemserver` オペレーターに戻り、「**一般**」タブを選択します。
 
@@ -124,7 +125,7 @@ The **AEM統合** Adobe Campaignのパッケージには、AEMへの接続に必
 
 ## AEM で Campaign 統合を設定 {#campaign-integration}
 
-AEM uses [キャンペーンで既に設定済みのオペレーター](#create-operator) Campaign と通信するには
+AEM は、Campaign と通信するために「[Campaign で設定済みの演算子](#create-operator)」を使用します
 
 1. AEM オーサリングインスタンスに管理者としてログインします。
 
@@ -150,7 +151,7 @@ AEM が Adobe Campaign と通信できるようになりました。
 
 >[!NOTE]
 >
->Adobe Campaign サーバーがインターネット経由で到達可能であることを確認してください。AEMはプライベートネットワークにアクセスできません。
+>Adobe Campaign サーバーがインターネット経由で到達可能であることを確認してください。AEM はプライベートネットワークにアクセスできません。
 
 ## AEM パブリッシュインスタンスへのレプリケーションを設定 {#replication}
 
@@ -162,7 +163,7 @@ AEM オーサーインスタンスからパブリッシュインスタンスへ�
 
 1. AEM オーサリングインスタンスに管理者としてログインします。
 
-1. グローバルナビゲーションサイドレールで、「 」を選択します。 **ツール** > **導入** > **レプリケーション** > **作成者のエージェント**&#x200B;を選択し、次に **デフォルトエージェント（パブリッシュ）**.
+1. グローバルナビゲーションサイドパネルで、**ツール**／**デプロイメント**／**レプリケーション**／**オーサーのエージェント**&#x200B;を選択し、「**デフォルトエージェント (パブリッシュ)**」をクリックします。
 
    ![レプリケーションエージェントの設定](assets/acc-replication-config.png)
 
@@ -172,7 +173,7 @@ AEM オーサーインスタンスからパブリッシュインスタンスへ�
 
    ![「トランスポート」タブ](assets/acc-transport-tab.png)
 
-1. クリック **OK** をクリックして、エージェント設定の変更を保存します。
+1. 「**OK**」をクリックして、エージェント設定の変更内容を保存します。
 
 AEM パブリッシュインスタンスへのレプリケーションを設定したので、キャンペーン受信者がコンテンツにアクセスできるようになりました。
 
@@ -188,7 +189,7 @@ AEM パブリッシュインスタンスへのレプリケーションを設定�
 
 1. AEM オーサリングインスタンスに管理者としてログインします。
 1. グローバルナビゲーションサイドパネルで、**ツール**／**運用**／**Web コンソール**／**OSGi 設定**&#x200B;を選択し、**Day CQ Link Externalizer**&#x200B;を検索します。
-1. デフォルトでは、「**ドメイン**」フィールドの最新エントリは、公開インスタンスを対象としています。 デフォルトの URL から URL を変更 `http://localhost:4503` 公開されているパブリッシュインスタンスに追加します。
+1. デフォルトでは、「**ドメイン**」フィールドの最新エントリは、公開インスタンスを対象としています。 URL をデフォルトの `http://localhost:4503` から、公開されているパブリッシュインスタンスに変更します。
 
    ![Externalizer の設定](assets/acc-externalizer-config.png)
 
@@ -205,7 +206,7 @@ Externalizer が設定され、Adobe Campaign がコンテンツにアクセス�
 Campaign が AEM と通信するには、AEM で `campaign-remote` ユーザーのパスワードを設定する必要があります。
 
 1. AEM に管理者としてログインします。
-1. メインナビゲーションコンソールで、 **ツール** をクリックします。
+1. メインナビゲーションコンソールで、左側のパネルにある「**ツール**」をクリックします。
 1. 次に、**セキュリティ**／**ユーザー**&#x200B;をクリックして、ユーザー管理コンソールを開きます。
 1. `campaign-remote` ユーザーを見つけます。
 1. `campaign-remote` ユーザーを選択し、「**プロパティ**」をクリックしてユーザーを編集します。
@@ -220,7 +221,7 @@ Campaign が AEM と通信するには、AEM で `campaign-remote` ユーザー�
 
 1. クライアントコンソールを使用して、Adobe Campaign に管理者としてログインします。
 
-1. 選択 **ツール** > **エクスプローラ** をクリックします。
+1. メニューバーから&#x200B;**ツール**／**エクスプローラー**&#x200B;を選択します。
 
 1. エクスプローラーで、**管理**／**プラットフォーム**／**外部アカウント**&#x200B;ノードに移動します。
 

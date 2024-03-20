@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1247'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 93%
 
 Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します.次の両方に対して差分メカニズムを提供します。
 
-* **[オーバーレイ](/help/sites-developing/overlays.md)** を使用するリソースの [設定済みの検索パス](/help/sites-developing/overlays.md#configuring-the-search-paths).
+* [設定済み検索パス](/help/sites-developing/overlays.md#configuring-the-search-paths)を使用するリソースの&#x200B;**[オーバーレイ](/help/sites-developing/overlays.md)**。
 
 * リソースタイプ階層を（**プロパティを通じて）使用するタッチ操作対応 UI のコンポーネントダイアログ（**）の`cq:dialog`オーバーライド`sling:resourceSuperType`。
 
@@ -33,7 +34,7 @@ Sling Resource Merger を使用すると、リソースやプロパティのオ�
 >
 >Sling Resource Merger および関連する手法は、[Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) に対してのみ使用できます。これはつまり、標準のタッチ操作対応 UI でのみ使用できるという意味です。特に、この方法で定義された特定のオーバーライドは、コンポーネントのタッチ操作対応ダイアログに対してのみ適用できます。
 >
->その他の領域（タッチ操作対応コンポーネントやクラシック UI のその他の側面を含む）のオーバーレイ/オーバーライドでは、適切なノードと構造を元の場所からカスタマイズの定義先にコピーします。
+>その他の領域（タッチ操作対応コンポーネントやクラシック UI の他の側面を含む）のオーバーレイ／オーバーライドでは、適切なノードと構造を元の場所からカスタマイズの定義先にコピーします。
 
 ### AEM の目的 {#goals-for-aem}
 
@@ -58,9 +59,9 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（内に存在）を再作成します。 `/libs`) （下） `/apps`
+>1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
 >
->1. `/apps` 内で変更作業を行います。
+>1. `/apps` 内で必要な変更を加えます
 >
 
 ### プロパティ {#properties}
@@ -202,7 +203,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
 * **ノードの子の非表示（そのノードのプロパティは維持）**
 
-  ノード、そのプロパティおよびその子が `/libs` に定義されていて、ノードとそのプロパティは、 `/apps` オーバーレイ/オーバーライドしますが、一部またはすべての子ノードが `/apps` overlay/override を選択します。
+  ノード、そのプロパティおよびその子が `/libs` に定義されていて、ノードとそのプロパティは `/apps` オーバーレイ／オーバーライドで必要であるものの、一部またはすべての子ノードは `/apps` オーバーレイ／オーバーライドでは不要です。
 
    1. `/apps` 以下に、対応するノードを作成します。
    1. `sling:hideChildren` プロパティを作成します。
@@ -256,7 +257,7 @@ Sling Resource Merger には 2 つのカスタムリソースプロバイダー�
 
 ### 使用例 {#example-of-usage}
 
-以下に、いくつかの例を示します。
+以下のページで、一部の例が紹介されています。
 
 * オーバーレイ：
 

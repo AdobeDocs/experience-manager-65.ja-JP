@@ -6,10 +6,11 @@ topic-tags: introduction
 docset: aem65
 feature: Adaptive Forms
 exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +39,7 @@ ht-degree: 90%
 
 1. AEM [!DNL Forms] オーサーインスタンスにログインし、AEM [!DNL Forms] UI で shipping-address-add-update-form アダプティブフォームを探します。
    `https://localhost:4502/aem/forms.html/content/dam/formsanddocuments`
-1. shipping-address-add-update-form アダプティブフォームを選択し、「 」を選択します。 **[!UICONTROL 公開]**. アダプティブフォームに関連するアセットを含むダイアログが表示されます。選択 **[!UICONTROL 公開]**. アダプティブフォームが公開され、成功ダイアログが表示されます。
+1. shipping-address-add-update-form アダプティブフォームを選択し、「**[!UICONTROL 公開]**」を選択します。アダプティブフォームに関連するアセットを含むダイアログが表示されます。「**[!UICONTROL 公開]**」を選択します。アダプティブフォームが公開され、成功ダイアログが表示されます。
 1. パブリッシュインスタンスでフォームを開きます。エンドユーザーがフォームに入力して送信できるようになります。
    `https://localhost:4503/content/forms/af/shipping-address-add-update-form.html`
 
@@ -54,11 +55,11 @@ AEM [!DNL Forms] には AEM [!DNL Forms] コンテナという名前のコンポ
 
    We.Retail サイトは AEM に付属しています。We.Retail サイトをインストールしていない場合は、[We.Retail 参照実装](https://helpx.adobe.com/jp/experience-manager/6-3/help/sites-developing/we-retail.html)を参照してサイトをインストールします。
 
-1. 選択 ![プロパティ](assets/properties.png) ページ情報を選択し、 **[!UICONTROL テンプレートを編集]** 」オプションが追加されました。 ブラウザーの新しいタブでページのテンプレートが表示されます。
-1. 内でを選択します。 **[!UICONTROL レイアウトコンテナ]** ボックスとを選択します。 ![フィード管理](assets/feedmanagement.png). Adobe Analytics の **[!UICONTROL 許可されたコンポーネント]** タブ、展開 **[!UICONTROL 一般]** アコーディオンで、 **[!UICONTROL AEM Form]** オプションを選択し、 ![save_icon](assets/save_icon.svg). AEM [!DNL Forms] コンテナコンポーネントはそのページに対して有効になっています。
+1. ![プロパティ](assets/properties.png)ページ情報を選択し、新しく作成した We.Retail サイトのページで「**[!UICONTROL テンプレートを編集]**」オプションを選択します。ブラウザーの新しいタブでページのテンプレートが表示されます。
+1. 「**[!UICONTROL レイアウトコンテナ]**」ボックス内を選択してから、![feedmanagement](assets/feedmanagement.png) を選択します。「**[!UICONTROL 許可されたコンポーネント]**」タブで、「**[!UICONTROL 一般]**」アコーディオンを展開し、「**[!UICONTROL AEM Form]**」オプションを選択して ![save_icon](assets/save_icon.svg) を選択します。AEM [!DNL Forms] コンテナコンポーネントはそのページに対して有効になっています。
 
-1. 手順 1 で開いた AEM [!DNL Sites] ページを含むブラウザータブを開きます。  を選択します。 **[!UICONTROL ここにコンポーネントをドラッグ]** ボックスとを選択します。 **+.** Adobe Analytics の **[!UICONTROL 新規コンポーネントを挿入]** ボックス、選択 **[!UICONTROL AEM Form]**. この「**[!UICONTROL AEM Forms コンテナ]**」コンポーネントがページに追加されます。
-1. を選択します。 **[!UICONTROL AEM Formsコンテナ]** コンポーネントと選択 ![configure-icon](assets/configure-icon.svg). AEM [!DNL Forms] コンテナのプロパティを含むダイアログボックス が表示されます。**[!UICONTROL アセットパス]**&#x200B;フィールドで「 shipping-address-add-update-form 」アダプティブフォームを参照して選択してください。選択 ![save_icon](assets/save_icon.svg). アダプティブフォームがページに埋め込まれました。
+1. 手順 1 で開いた AEM [!DNL Sites] ページを含むブラウザータブを開きます。  「**[!UICONTROL コンポーネントをここにドラッグ]**」ボックスを選択して、**+ を選択します。**「**[!UICONTROL 新しいコンポーネントを挿入]**」ボックス内で、「**[!UICONTROL AEM Form]**」を選択します。この「**[!UICONTROL AEM Forms コンテナ]**」コンポーネントがページに追加されます。
+1. **[!UICONTROL AEM Forms コンテナ]**&#x200B;コンポーネントを選択し、![configure-icon](assets/configure-icon.svg) を選択します。AEM [!DNL Forms] コンテナのプロパティを含むダイアログボックス が表示されます。**[!UICONTROL アセットパス]**&#x200B;フィールドで「 shipping-address-add-update-form 」アダプティブフォームを参照して選択してください。![save_icon](assets/save_icon.svg) を選択します。アダプティブフォームがページに埋め込まれました。
 1. アダプティブフォームと [!DNL Sites] ページの両方を公開します。次の点について考慮してください。
 
    * 初めて AEM [!DNL Sites] ページを公開する場合で、かつ、フォームが埋め込まれている場合は、[!DNL Sites] ページに加えて、埋め込まれたフォームも公開してください。

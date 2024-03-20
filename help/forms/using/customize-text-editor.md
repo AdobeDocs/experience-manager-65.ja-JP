@@ -1,16 +1,17 @@
 ---
 title: テキストエディターのカスタマイズ
-description: Adobe Experience Manager Forms環境でテキストエディターをカスタマイズする方法を説明します。
+description: Adobe Experience Manager Forms 環境でテキストエディターをカスタマイズする方法について説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
-source-git-commit: 000c22028259eb05a61625d43526a2e8314a1d60
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 69%
+source-wordcount: '597'
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 69%
 
 ## 概要 {#overview}
 
-アセットを管理 UI と通信を作成 UI で、テキストエディターをカスタマイズして、フォントとフォントサイズを追加できます。 英語フォントだけでなく、日本語フォントなど英語以外のフォントも使用できます。
+アセットを管理 UI と通信を作成 UI でテキストエディターをカスタマイズし、フォントおよびフォントサイズを追加できます。英語フォントだけでなく、日本語フォントなど英語以外のフォントも使用できます。
 
 フォント設定で、以下を変更してカスタマイズすることができます。
 
@@ -157,14 +158,14 @@ tbxeditor-config.xml ファイルを編集してフォントをカスタマイ�
       </editorConfig>
       ```
 
-   1. ファイルに必要な変更を加え、フォント設定で以下を変更できるようにします。
+   1. 必要となる変更をファイルに加え、次のフォント設定を変更します。
 
       * フォントファミリーとサイズの追加または削除
       * 高さ、文字間隔などのプロパティ
       * フォントファミリーとサイズ、高さ、文字間隔および日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには、XML ファイルで次のエントリを作成する必要があります。 `<font>Sazanami Mincho Medium</font>`. また、このフォントをクライアントマシンにインストールし、フォントのカスタマイズにアクセスして操作する必要があります。 詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには、XML ファイルで次の入力を行う必要があります。`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
 
       また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 
@@ -172,7 +173,7 @@ tbxeditor-config.xml ファイルを編集してフォントをカスタマイ�
 
 ## クライアントコンピューターへのカスタムフォントの追加 {#addcustomfonts}
 
-Correspondence Management テキストエディターでフォントにアクセスする場合は、Correspondence Management にアクセスするために使用するクライアントマシンにそのフォントが存在している必要があります。 テキストエディターでカスタムフォントを使用するには、まずクライアントマシンに同じフォントをインストールする必要があります。
+Correspondence Management テキストエディターに格納されたフォントにアクセスする際、Correspondence Management へアクセスするクライアントマシンにそのフォントが存在する必要があります。テキストエディターでカスタムフォントを使用するには、まずクライアントマシンに同じフォントをインストールする必要があります。
 
 フォントのインストールについて詳しくは、次を参照してください。
 
@@ -181,7 +182,7 @@ Correspondence Management テキストエディターでフォントにアクセ
 
 ## カスタマイズしたフォントへのアクセス {#access-font-customizations}
 
-次の設定を行います。 `tbxeditor-config.xml` ファイルを CRX に保存し、AEM Formsにアクセスするために使用するクライアントマシンに必要なフォントをインストールした場合、変更がテキストエディターに表示されます。
+CRX の `tbxeditor-config.xml` ファイルのフォントに変更を加え、さらに AEM Forms へのアクセスに使用するクライアントマシンに必要なフォントをインストールすると、テキストエディターに変更が反映されます。
 
 例えば、[CRX の tbxeditor-config.xml ファイルを編集してフォントをカスタマイズする](#customizefonts)手順で Sazanami Mincho Medium フォントを追加した場合、テキストエディターの UI で以下のように表示されます。
 
@@ -189,4 +190,4 @@ Correspondence Management テキストエディターでフォントにアクセ
 
 >[!NOTE]
 >
->日本語でテキストを表示するには、まず日本語の文字でテキストを入力する必要があります。 カスタムの日本語フォントを適用すると、テキストは特定の形式のみで表示されます。カスタムの日本語フォントを適用しても英語やその他の言語の文字が日本語の文字に変更されることはありません。
+>テキストを日本語で表示するには、まず日本語の文字でテキストを入力する必要があります。カスタムの日本語フォントを適用すると、テキストは特定の形式のみで表示されます。カスタムの日本語フォントを適用しても英語やその他の言語の文字が日本語の文字に変更されることはありません。

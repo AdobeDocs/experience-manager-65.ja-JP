@@ -8,10 +8,11 @@ content-type: reference
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Configuration
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1284'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -177,7 +178,7 @@ Dynamic Media では静的アセットの配信をサポートしています。
 
    | 使用しているビデオ配信プロトコル | 使用するプロトコルセレクター |
    |---|---|
-   | HTTP <br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービス URL 値で https を http に変更してください。 | `public/` |
+   | HTTP <br> HTTP（非セキュアなビデオ配信）を使用している場合、前の手順でコピーしたビデオサービスの URL の値で https を http に変更してください。 | `public/` |
    | HTTPS | `public-ssl/` |
 
 1. Dynamic Media で処理される Experience Manager のビデオアセットのフルパスをコピーします。コピーしたビデオアセットパスは後の手順で必要になります。

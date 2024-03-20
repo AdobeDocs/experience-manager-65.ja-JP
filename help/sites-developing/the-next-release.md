@@ -1,27 +1,28 @@
 ---
 title: 次期リリース
-description: 後続のリリースはほぼ常に予想され、現在の実装の最終段階で開始することもできます。
+description: 次期リリースがほぼ常に予定され、現行の実装の最終段階に開始されることもあります
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 exl-id: d38b77ae-93be-4258-8827-6178097395d5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
 # 次期リリース{#the-next-release}
 
-プロジェクトの実装がプロセスの終わりになることはほとんどありません。 その後のリリースは（ほぼ）常に予想され、現在の実装の最終段階で開始することもできます。
+1 つのプロジェクトを実装しただけでプロセスが終了することはほとんどありません。次期リリースが（ほぼ）常に予定され、現行の実装の最終段階に開始されることもあります。
 
-いずれの場合でも、次のリリースの計画を立てると、次の方法で作業を進めると便利です。
+いずれにしても、次期リリースを次のように計画することは有効です。
 
 * テストケースを注意深く文書化して保存し、参照したり、できれば再利用したりできるようにします。
 * 次期リリースの回帰テストとして使用できるテストの開発。
-* テストプロセスの経験を通じて得た情報を照合する。
+* テストプロセスの経験によって自身または顧客が得た情報を照合します。
 
   これは、次期リリースの要件の作成に役立つ場合があります。例えば、テスト中に製品の顧客経験が増加したとします。
 

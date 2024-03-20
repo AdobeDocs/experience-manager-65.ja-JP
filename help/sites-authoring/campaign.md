@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: d7e4d424-0ca7-449f-95fb-c4fe19dd195d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2770'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 93%
 
 AEM でメールコンテンツを作成して、Adobe Campaign のメールで処理することができます。これを実行するには、次の手順に従う必要があります。
 
-1. AEMでAdobe Campaign固有のテンプレートからニュースレターを作成します。
+1. AEM で、Adobe Campaign 固有のテンプレートからニュースレターを作成します。
 1. すべての機能にアクセスするには、コンテンツを編集する前に [Adobe Campaign サービス](#selecting-the-adobe-campaign-cloud-service-and-template)を選択します。
 1. コンテンツを編集します。
 1. コンテンツを検証します。
@@ -55,7 +56,7 @@ Adobe Campaign のコンテンツを AEM 内で作成する場合は、すべて
 
    >[!NOTE]
    >
-   >[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。サンプルGeometrixxコンテンツをパッケージ共有からダウンロードします。
+   >[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
 
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
@@ -102,7 +103,7 @@ Cloud Service は、「**サイト**」タブから選択することも、メ�
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. 「**クラウドサービス**」を選択し、「**+**」をクリックして設定を追加します。表示される任意の設定を選択します（どれでもかまいません）。次をクリック： **+** 別の設定を追加し、「 」を選択します。 **Adobe Campaign**.
+1. 「**クラウドサービス**」を選択し、「**+**」をクリックして設定を追加します。表示される任意の設定を選択します（どれでもかまいません）。「**+**」記号をクリックして、別の設定を追加してから、「**Adobe Campaign**」を選択します。
 
    >[!NOTE]
    >
@@ -125,7 +126,7 @@ Cloud Service は、「**サイト**」タブから選択することも、メ�
 
    >[!NOTE]
    >
-   >エディター内のプロパティのパーソナライゼーションフィールドが灰色表示になっている場合は、設定を再確認してください。
+   >エディター内でプロパティのパーソナライゼーションフィールドがグレー表示になっている場合は、設定を見直します。
 
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
@@ -145,8 +146,8 @@ Cloud Service は、「**サイト**」タブから選択することも、メ�
 
 コンテンツを編集する際に、以下を挿入できます。
 
-* Adobe Campaign コンテキストフィールド。これらは、受信者のデータ（名、姓またはターゲットディメンションの任意のデータなど）に応じてテキスト内に挿入できるフィールドです。
-* Adobe Campaign パーソナライゼーションブロック。これらは、ブランドロゴやミラーページへのリンクなど、受信者のデータとは関係のない定義済みコンテンツのブロックです。
+* Adobe Campaign コンテキストフィールド。受信者のデータ（名、姓、ターゲットディメンションのデータなど）に応じて変化する値をテキスト内に挿入するフィールドです。
+* Adobe Campaign パーソナライゼーションブロック。ブランドのロゴやミラーページへのリンクなど、受信者のデータに関係なく表示される、事前定義されたコンテンツのブロックです。
 
 Campaign コンポーネントについて詳しくは、[Adobe Campaign コンポーネント](/help/sites-authoring/adobe-campaign-components.md)を参照してください。
 
@@ -179,7 +180,7 @@ Campaign コンポーネントについて詳しくは、[Adobe Campaign コン�
    >* パーソナライゼーション要素を追加または非表示にするには、[パーソナライゼーションフィールドおよびブロックの管理](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks)を参照してください。
    >* **重要**：シードテーブルのフィールドはすべて、受信者テーブル（または対応する連絡先テーブル）にも存在する必要があります。
 
-1. テキストを入力して挿入します。Adobe Campaign コンポーネントをクリックして選択し、コンテキストフィールドまたはパーソナライゼーションブロックを挿入します。終了したら、チェックマークを選択します。
+1. テキストを入力して挿入します。Adobe Campaign コンポーネントをクリックして選択し、コンテキストフィールドまたはパーソナライゼーションブロックを挿入します。完了したら、チェックマークを選択します。
 
    ![chlimage_1-27](assets/chlimage_1-27a.png)
 
@@ -187,7 +188,7 @@ Campaign コンポーネントについて詳しくは、[Adobe Campaign コン�
 
 ### ニュースレターのプレビュー {#previewing-a-newsletter}
 
-ニュースレターの外観とパーソナライゼーションのプレビューをプレビューできます。
+ニュースレターがどのように表示されるかをプレビューでき、パーソナライゼーションをプレビューできます。
 
 1. ニュースレターを開いた状態で、AEM の右上隅の「**プレビュー**」をクリックします。ユーザーが受信したときにニュースレターがどのように見えるかが表示されます。
 
@@ -201,7 +202,7 @@ Campaign コンポーネントについて詳しくは、[Adobe Campaign コン�
 
    ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-1. 現在選択しているペルソナに関連付けられた、Adobe Campaign のシードデータを表示できます。これをおこなうには、ContextHub バーでAdobe Campaignモジュールをクリックします。 ダイアログボックスが開き、現在のプロファイルのシードデータがすべて表示されます。再度別のペルソナに切り替えると、データが変化します。
+1. 現在選択しているペルソナに関連付けられた、Adobe Campaign のシードデータを表示できます。表示するには、ContextHub バーの Adobe Campaign モジュールをクリックします。ダイアログボックスが開き、現在のプロファイルのシードデータがすべて表示されます。再度別のペルソナに切り替えると、データが変化します。
 
    ![chlimage_1-30](assets/chlimage_1-30a.png)
 
@@ -257,7 +258,7 @@ Adobe Campaign Standard では、以下を使用して AEM で作成されたコ
 
 AEM で作成されたページと Adobe Campaign のメールをリンクするには：
 
-1. AEM固有の E メールテンプレートに基づいて E メールを作成します。 詳しくは、[Adobe Campaign Standard でのメールの作成](https://helpx.adobe.com/jp/campaign/standard/channels/using/creating-an-email.html)を参照してください。
+1. AEM 固有のメールテンプレートをベースにメールを作成します。詳しくは、[Adobe Campaign Standard でのメールの作成](https://helpx.adobe.com/jp/campaign/standard/channels/using/creating-an-email.html)を参照してください。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -351,13 +352,13 @@ AEM で作成されたコンテンツと Adobe Campaign の配信を同期する
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
-1. 配信の他のパラメーター（ターゲットなど）を指定します
-1. 必要に応じて、Adobe Campaign で配信承認プロセスを開始します。Adobe Campaignで設定された承認（予算、ターゲットなど）に加えて、AEMでのコンテンツの承認が必要です。 Adobe Campaign でのコンテンツの承認は、コンテンツが AEM で既に承認されている場合にのみ可能です。
+1. 配信のその他のパラメーター（ターゲットなど）を指定します。
+1. 必要に応じて、Adobe Campaign で配信承認プロセスを開始します。Adobe Campaign で設定された承認（予算、ターゲットなど）に加え、AEM でのコンテンツの承認が必要です。Adobe Campaign でのコンテンツの承認は、コンテンツが AEM で既に承認されている場合にのみ可能です。
 1. 配信を実行します。配信の分析時に、最新バージョンの AEM コンテンツが復元されます。
 
    >[!NOTE]
    >
-   * 配信とコンテンツが同期されると、Adobe Campaign の配信コンテンツは読み取り専用になります。E メールの件名と内容は変更できなくなりました。
+   * 配信とコンテンツが同期されると、Adobe Campaign の配信コンテンツは読み取り専用になります。コンテンツだけでなく、メールの件名も変更できなくなります。
    * Adobe Campaign の配信にリンクされている間に AEM でコンテンツが更新されると、配信の分析時に配信内のコンテンツが自動的に更新されます。「**今すぐコンテンツを更新**」ボタンを使用して、同期を手動で実行することもできます。
    * 「**同期解除**」ボタンを使用して、配信と AEM コンテンツの同期をキャンセルできます。これは、コンテンツが既に配信と同期されている場合にのみ表示されます。別のコンテンツを配信と同期するには、新しいリンクを確立する前に、現在のコンテンツの同期をキャンセルする必要があります。
    * 同期が解除された場合は、ローカルコンテンツが保持され、Adobe Campaign で編集できるようになります。コンテンツを変更した後に再同期すると、すべての変更が失われます。

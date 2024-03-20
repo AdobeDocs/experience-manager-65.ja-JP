@@ -2,10 +2,11 @@
 title: コンテンツページの公開
 description: Adobe Experience Manager 6.5 でコンテンツページを公開する方法を説明します。
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1673'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -60,7 +61,7 @@ ht-degree: 89%
    * 公開する参照がない場合、ページが直接公開されます。
    * 公開が必要な参照がページに含まれている場合は、それらのリストが&#x200B;**公開**&#x200B;ウィザードに表示され、ウィザードで次のいずれかを実行できます。
 
-      * ページと一緒に公開するアセットまたはタグを指定し、 **公開** をクリックしてプロセスを完了します。
+      * ページと一緒に公開するアセットやタグなどを指定し、「**公開**」を使用してプロセスを完了します。
 
       * 「**キャンセル**」を使用してアクションを中止します。
 
@@ -76,11 +77,11 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->エディターからの公開は、浅い公開です。つまり、選択したページ（複数可）のみが公開され、子ページは公開されません。
+>エディターからの公開は、浅い公開です。つまり、選択したページだけが公開され、子ページは公開されません。
 
 >[!NOTE]
 >
->アクセスしたページ [エイリアス](/help/sites-authoring/editing-page-properties.md#advanced) エディターで公開できない。 エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールからの公開 {#publishing-from-the-console}
 
@@ -95,7 +96,7 @@ ht-degree: 89%
 
 クイック公開でページを公開するには、次の手順に従います。
 
-1. サイトコンソールで 1 つ以上のページを選択し、 **クイック公開** 」ボタンをクリックします。
+1. Sites コンソールで 1 つ以上のページを選択し、「**クイック公開**」ボタンをクリックします。
 
    ![pp-02](assets/pp-02.png)
 
@@ -111,11 +112,11 @@ ht-degree: 89%
 
 #### 公開を管理 {#manage-publication}
 
-**公開を管理** には、クイック公開よりも多くのオプションが用意されており、子ページの追加、参照のカスタマイズ、適用可能なワークフローの開始や、後日公開するオプションの提供が可能です。
+**公開を管理**&#x200B;には、クイック公開よりも多くのオプションがあります。子ページの追加、参照のカスタマイズ、該当するワークフローの開始を可能にし、後日公開するオプションを提供します。
 
 公開を管理を使用してページを公開または非公開にするには、次の手順を実行します。
 
-1. サイトコンソールで 1 つ以上のページを選択し、 **公開を管理** 」ボタンをクリックします。
+1. Sites コンソールで 1 つまたは複数のページを選択し、「**公開を管理**」ボタンをクリックします。
 
    ![pp-02-1](assets/pp-02-1.png)
 
@@ -182,7 +183,7 @@ ht-degree: 89%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、 [このページの前のメモ](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 公開権限および [ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md) および [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 」を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、公開権限に関する[このページの前述の注意事項](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションが提供されます。
 
@@ -209,13 +210,13 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->アクセスしたページ [エイリアス](/help/sites-authoring/editing-page-properties.md#advanced) エディターで非公開にすることはできません。 エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは、非公開にできません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールから非公開にする {#unpublishing-from-the-console}
 
 [「公開を管理」オプションを使用して公開する](/help/sites-authoring/publishing-pages.md#manage-publication)場合と同様に、「公開を管理」オプションを使用して非公開にできます。
 
-1. サイトコンソールで 1 つ以上のページを選択し、 **公開を管理** 」ボタンをクリックします。
+1. Sites コンソールで 1 つまたは複数のページを選択し、「**公開を管理**」ボタンをクリックします。
 1. **公開を管理**&#x200B;ウィザードが起動します。最初の手順の&#x200B;**オプション**&#x200B;で、デフォルトオプションの&#x200B;**公開**&#x200B;の代わりに&#x200B;**非公開**&#x200B;を選択します。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -25,8 +26,8 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >
 >デスクトップデバイスでの複数選択：
 >
->* Windows: Ctrl キーを押しながら必要なコンポーネントをクリックします。
->* Mac:Cmd キーを押しながら必要なコンポーネントをクリックします。
+>* Windows：Ctrl キーを押しながら必要なコンポーネントをクリックします。
+>* Mac：Cmd キーを押しながら必要なコンポーネントをクリックします。
 >
 
 ## キーボードショートカットの編集 {#editing-keyboard-shortcuts}
@@ -66,12 +67,12 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>選択した段落を切り取ります。<strong><br />注：</strong>カットされた段落は、新しい位置に貼り付けられるまでは非表示になります。</td>
+   <td>選択した段落をカットします。<strong><br />メモ：</strong>カットされた段落は、新しい位置に貼り付けられるまでは非表示になります。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-V</code></strong></td>
-   <td>クリップボードから段落を貼り付けます。</td>
+   <td>クリップボードから段落をペーストします。</td>
   </tr>
   <tr>
    <td> </td>
@@ -91,7 +92,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>デフォルト（ブラウザー）のコンテキストメニューを強制的に表示します。<br /> <strong>注意：</strong> AEMのコンテキストメニューは、クラシック UI でのみ表示されます。</td>
+   <td>デフォルト（ブラウザー）のコンテキストメニューを強制表示します。<br /><strong>メモ：</strong>AEM のコンテキストメニューはクラシック UI にのみ表示されます。</td>
   </tr>
   <tr>
    <td> </td>
@@ -101,7 +102,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td>リッチテキストエディター<br /> </td>
    <td><strong><code>Ctrl-B</code></strong><br /> </td>
-   <td>Bold</td>
+   <td>太字</td>
   </tr>
   <tr>
    <td> </td>

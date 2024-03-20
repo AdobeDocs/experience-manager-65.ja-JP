@@ -7,9 +7,10 @@ role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
-source-git-commit: 56632bd6ce9fc90f0bc61f903f84f7ea8bbcd12d
-workflow-type: ht
-source-wordcount: '3288'
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '3284'
 ht-degree: 100%
 
 ---

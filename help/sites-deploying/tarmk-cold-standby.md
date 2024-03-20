@@ -8,10 +8,11 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
-source-wordcount: '2671'
-ht-degree: 100%
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '2666'
+ht-degree: 98%
 
 ---
 
@@ -315,7 +316,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
    ```
 
 1. 新しいプライマリをロードバランサーに追加します。
-1. 新しいスタンバイインスタンスを作成して起動します。詳しくは、前述の [AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)を参照してください。
+1. 新しいスタンバイインスタンスを作成し、起動します。 詳しくは、上記の手順 ( [AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
 
 ## コールドスタンバイのセットアップへのホットフィックスの適用 {#applying-hotfixes-to-a-cold-standby-setup}
 
@@ -334,7 +335,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 
 ## モニタリング {#monitoring}
 
-この機能は、JMX または MBeans を使用して情報を公開します。これにより、[JMX コンソール](/help/sites-administering/jmx-console.md)を使用して、スタンバイとマスターの現在の状態を検査することができます。この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
+この機能は、JMX または MBean を使用して情報を公開します。 これにより、を使用して、スタンバイとマスターの現在の状態を検査できます。 [JMX コンソール](/help/sites-administering/jmx-console.md). この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
 
 **スタンバイ**
 

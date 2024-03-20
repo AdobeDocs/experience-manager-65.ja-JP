@@ -1,16 +1,17 @@
 ---
 title: Identity Management
-description: AEMでの ID 管理の内部機能について説明します。
+description: AEM での Identity Management の仕組みについて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1249'
-ht-degree: 83%
+ht-degree: 99%
 
 ---
 
@@ -58,11 +59,11 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 例えば、ユーザーは次の Geometrixx ページを使用して新しいプロファイルをリクエストできます。
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
-![登録フォームのサンプル](assets/registerform.png)
+![サンプルの登録フォーム](assets/registerform.png)
 
-要求を送信すると、プロファイルページが開きます。ユーザーはこのページに個人の詳細情報を指定できます。
+リクエストを送信すると、プロファイルページが開きます。ユーザーはこのページに個人の詳細情報を指定できます。
 
-![サンプルプロファイルページ](assets/profilepage.png)
+![サンプルのプロファイルページ](assets/profilepage.png)
 
 新しいアカウントは[ユーザーコンソール](/help/sites-administering/security.md)にも表示されます。
 
@@ -72,11 +73,11 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 これにより、訪問者には標準のフィールド（「**ユーザー名**」および「**パスワード**」）と「**ログイン**」ボタンが表示され、資格情報を入力するとログインプロセスがアクティベートされます。
 
-例えば、ユーザーは、 **ログイン** 」オプションを使用します (Geometrixxを使用します )。
+例えば、ユーザーは Geometrixx ツールバーの「**ログイン**」オプションを使用して、ログインするか、新しいアカウントを作成できます。使用するページを次に示します。
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
-![ログインページの例](assets/login.png)
+![サンプルのログインページ](assets/login.png)
 
 ## ログアウト {#logging-out}
 
@@ -90,22 +91,22 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-プロファイルの詳細を確認するには、 **マイプロファイル** をクリックします。例えば、 `admin` アカウント：
+プロファイルの詳細を確認するには、ページの右上隅にある「**マイプロファイル**」をクリックします。例えば、`admin` アカウントを使用する場合のプロファイルは次のとおりです。
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
-オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
+[ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（オーサー環境で、十分な権限がある場合）。
 
-1. ページを開きます。例えば、次のようなGeometrixxページを開きます。
+1. ページを開きます（例：Geometrixx ページ）。
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
-1. 右上隅にある「**マイプロファイル**」をクリックします。管理者など、現在のアカウントのプロファイルが表示されます。
+1. 右上隅にある「**マイプロファイル**」をクリックします。現在のアカウント（例：管理者）のプロファイルを確認できます。
 1. **Ctrl + Alt + C** キーを押して ClientContext を開きます。
 1. ClientContext の左上隅にある「**ClientContext にプロファイルを読み込み**」ボタンをクリックします。
 
-   ![「プロファイルを読み込み」アイコン](do-not-localize/loadprofile.png)
+   ![プロファイルを読み込みアイコン](do-not-localize/loadprofile.png)
 
-1. ダイアログウィンドウのドロップダウンリストから別のプロファイルを選択します。例： **Alison Parker**.
+1. ダイアログウィンドウのドロップダウンリストから別のプロファイルを選択します。例えば、**Alison Parker** のプロファイルを選択します。
 1. 「**OK**」をクリックします。
 1. もう一度「**マイプロファイル**」をクリックします。Alison の詳細を使用してフォームが更新されます。
 
@@ -115,10 +116,10 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## プロファイル定義へのフィールドの追加 {#adding-fields-to-the-profile-definition}
 
-プロファイル定義にフィールドを追加できます。 例えば、「お気に入りの色」フィールドをGeometrixxプロファイルに追加するには、次のようにします。
+プロファイル定義にフィールドを追加できます。例えば、Geometrixx プロファイルに「Favorite Color」（好きな色）フィールドを追加します。
 
 1. Web サイトコンソールから Geometrixx Outdoors Site／英語／ユーザー／マイプロファイルに移動します。
-1. 次をダブルクリックします。 **マイプロファイル** ページを開いて編集します。
+1. **マイプロファイル**&#x200B;ページをダブルクリックして編集用に開きます。
 1. サイドキックの「**コンポーネント**」タブで、「**フォーム**」セクションを展開します。
 1. サイドキックからフォーム（「**会社情報**」フィールドの直下）に&#x200B;**ドロップダウンリスト**&#x200B;をドラッグします。
 1. **ドロップダウンリスト**&#x200B;コンポーネントをダブルクリックして設定用のダイアログを開き、次の情報を入力します。
@@ -133,15 +134,15 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    次回プロファイルを確認する際に、好きな色を選択できます。
 
-   ![Alison Parker のお気に入りのカラーサンプルフィールド](assets/aparkerfavcolour.png)
+   ![Alison Parker の好きな色サンプルフィールド](assets/aparkerfavcolour.png)
 
-   このフィールドは、関連するユーザーアカウントの **profile** セクションに保存されます。
+   このフィールドは、関連するユーザーアカウントの「**プロファイル**」セクションに保存されます。
 
    ![CRXDE での Alison Parker のデータ](assets/aparkercrxdelite.png)
 
 ## プロファイルの状態 {#profile-states}
 
-ユーザー（またはユーザーのプロファイル）が *特定の状態* またはそうではありません。
+いくつかのユースケースでは、ユーザー（正確にはユーザーのプロファイル）が「*特定の状態*」にあるかどうかを把握する必要があります。
 
 そのためには、次に示す方法で、ユーザープロファイルに適切なプロパティを定義する必要があります。
 
@@ -159,7 +160,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
   状態に関連するアクションを管理します。
 
-複数の状態を定義できます。例えば、Geometrixxには次の状態が含まれます。
+複数の状態を定義できます。例えば、Geometrixx では次の定義を行うことができます。
 
 * ニュースレターまたはコメントスレッドの通知を購読／購読解除
 * 友人とのつながりを追加／削除
@@ -185,7 +186,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 プロファイルは `/home/users/geometrixx` にあります。
 
-![CRXDE で見たプロファイル](assets/chlimage_1-138.png)
+![CRXDE に表示されるプロファイル](assets/chlimage_1-138.png)
 
 標準インストール（オーサーまたはパブリッシュ）では、すべてのユーザーの全プロファイル情報に対する読み取りアクセス権限が全員に付与されています。全員は「*既存のすべてのユーザーとグループが自動的に含まれる組み込みのグループであり、メンバーのリストは編集できません*。」
 

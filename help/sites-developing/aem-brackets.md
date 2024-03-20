@@ -1,15 +1,16 @@
 ---
 title: AEM Brackets 拡張
-description: Brackets 用Adobe Experience Manager拡張機能の使用方法について説明します。
+description: Adobe Experience Manager extension for Brackets を使用する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 49%
+ht-degree: 92%
 
 ---
 
@@ -17,57 +18,57 @@ ht-degree: 49%
 
 ## 概要 {#overview}
 
-AEM Brackets Extension は、AEMのコンポーネントやクライアントライブラリを編集するためのスムーズなワークフローを提供し、 [Brackets](https://brackets.io/) コードエディター。コードエディター内からPhotoshopのファイルおよびレイヤーにアクセスできます。 拡張機能によって提供される簡単な同期（Maven や File Vault は不要）により、開発者の効率が向上し、AEMに関する知識が限られたフロントエンド開発者もプロジェクトに参加できます。 この拡張機能は、[HTML Template Language（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)のサポートも提供しており、複雑な JSP を使用しない、より手軽でセキュアなコンポーネント開発を可能にします。
+AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを使用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。この拡張機能は、[HTML Template Language（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)のサポートも提供しており、複雑な JSP を使用しない、より手軽でセキュアなコンポーネント開発を可能にします。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
 ### 機能 {#features}
 
-AEM Brackets Extension の主な機能は次のとおりです。
+AEM Brackets Extension の主な機能には次があります。
 
 * 変更されたファイルの AEM 開発インスタンスへの自動同期。
 * ファイルおよびフォルダーの手動双方向同期。
 * プロジェクトのコンテンツパッケージ全体の同期。
 * 式および `data-sly-*` ブロックステートメントの HTL コードコンプリート。
 
-さらに、Brackets には、AEMフォントエンド開発者向けの便利な機能が多数用意されています。
+さらに、Brackets には AEM フロントエンド開発者にとって役に立つ機能が数多く付属しています。
 
-* Photoshopファイルでは、レイヤー、測定値、色、フォント、テキストなど、PSDファイルから情報を抽出する機能がサポートされています。
-* 抽出した情報をコード内で簡単に再利用するために、PSDからのコードヒント。
+* レイヤー、測定値、カラー、フォント、テキストなどの情報を PSD ファイルから抽出するための Photoshop ファイルサポート。
+* 抽出されたこれらの情報をコード内で再利用しやすくするための PSD からのコードヒント。
 * LESS および SCSS などの CSS プリプロセッサーサポート。
-* さらに具体的なニーズをカバーする数百の追加の拡張機能。
+* より具体的なニーズに対応する何百もの追加の拡張機能。
 
 ## インストール {#installation}
 
 ### Brackets {#brackets}
 
-AEM Brackets Extension は、Brackets バージョン 1.0 以降をサポートしています。
+AEM Brackets Extension は、Brackets バージョン 1.0 以上をサポートしています。
 
 最新バージョンの Brackets を [brackets.io](https://brackets.io/) からダウンロードしてください。
 
-### 拡張機能 {#the-extension}
+### AEM Brackets Extension {#the-extension}
 
-拡張機能をインストールするには、次の手順を実行します。
+この拡張をインストールするには、次の手順を実行します。
 
-1. Brackets を開きます。 メニュー内 **ファイル**&#x200B;を選択します。 **EXTENSION MANAGER...**
-1. 入力 **AEM** 検索バーで **AEM Brackets Extension**.
+1. Brackets を開きます。**ファイル**&#x200B;メニューで、「**Extension Manager**」を選択します。
+1. 検索バーに「**AEM**」と入力し、**AEM Brackets Extension** を探します。
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
 
 1. 「**インストール**」をクリックします。
-1. インストールが完了したら、ダイアログとExtension Managerを閉じます。
+1. インストールが完了したら、ダイアログと Extension Manager を閉じます。
 
 ## はじめに {#getting-started}
 
-### Content-Package プロジェクト {#the-content-package-project}
+### コンテンツパッケージプロジェクト {#the-content-package-project}
 
-拡張機能がインストールされたら、Brackets を使用してファイルシステムから content-package フォルダーを開き、AEMコンポーネントの開発を開始できます。
+拡張をインストールしたら、Brackets を使用してファイルシステムのコンテンツパッケージフォルダーを開き、AEM コンポーネントの開発を始めることができます。
 
-プロジェクトには、少なくとも次の要素を含める必要があります。
+プロジェクトには、少なくとも次のものが必要です。
 
-1. a `jcr_root` フォルダー ( 例： `myproject/jcr_root`)
+1. `jcr_root`フォルダー（例：`myproject/jcr_root`）
 
-1. a `filter.xml` ファイル ( 例： `myproject/META-INF/vault/filter.xml`)；の構造の詳細を表示します。 `filter.xml` ファイルを参照 [Workspace フィルターの定義](https://jackrabbit.apache.org/filevault/filter.html).
+1. `filter.xml` ファイル（例：`myproject/META-INF/vault/filter.xml`）。`filter.xml` ファイルの構造について詳しくは、[ワークスペースフィルターの定義](https://jackrabbit.apache.org/filevault/filter.html)を参照してください。
 
 Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_root` フォルダーまたは親プロジェクトフォルダーを選択します。
 
@@ -79,16 +80,16 @@ Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_ro
 
 ### プロジェクト設定 {#project-settings}
 
-コンテンツをAEM開発インスタンスと同期するには、プロジェクト設定を定義する必要があります。 プロジェクト設定の定義は、**AEM** メニューに移動し、「**プロジェクト設定**」を選択しておこないます。
+コンテンツを AEM 開発インスタンスに、または AEM 開発インスタンスから同期するには、プロジェクト設定を定義する必要があります。プロジェクト設定の定義は、**AEM** メニューに移動し、「**プロジェクト設定**」を選択しておこないます。
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
 プロジェクト設定では、次の項目を定義できます。
 
-1. サーバー URL( 例： `http://localhost:4502`)
+1. サーバー URL（例：`http://localhost:4502`）
 1. 有効な HTTPS 証明書を持たないサーバーを許容するかどうか（必要な場合はオフにしておきます）
-1. コンテンツの同期に使用するユーザー名（例： ） `admin`)
-1. ユーザーのパスワード ( 例： `admin`)
+1. コンテンツの同期に使用するユーザー名（例：`admin`）
+1. ユーザーのパスワード（例：`admin`）
 
 ## コンテンツの同期 {#synchronizing-content}
 
@@ -96,7 +97,7 @@ AEM Brackets Extension は、`filter.xml` で定義されているフィルタ�
 
 ### 変更されたファイルの自動同期 {#automated-synchronization-of-changed-files}
 
-これにより、変更が Brackets からAEMインスタンスにのみ同期されますが、逆の方法は決して同期されません。
+これは、変更内容を Brackets から AEM インスタンスへという方向にのみ同期するもので、逆方向には同期しません。
 
 ### 手動双方向同期 {#manual-bidirectional-synchronization}
 
@@ -116,14 +117,14 @@ Adobe Analytics の **AEM** メニュー、 **コンテンツパッケージを�
 
 ### 同期ステータス {#synchronization-status}
 
-AEM Brackets Extension には、Brackets ウィンドウの右側にあるツールバーに、最後の同期のステータスを示す通知アイコンが表示されます。
+AEM Brackets 拡張機能によって、Brackets ウィンドウの右側のツールバーに、最新の同期ステータスを示す通知アイコンが追加されます。
 
-* 緑 — すべてのファイルが正常に同期されました
-* 青 — 同期操作が進行中です
-* 黄 — 一部のファイルが同期されませんでした
-* 赤 — どのファイルも同期されませんでした
+* 緑 - すべてのファイルが正常に同期されました
+* 青 - 同期が進行中です
+* 黄 - 一部のファイルが同期されませんでした
+* 赤 - ファイルがすべて同期されませんでした
 
-通知アイコンをクリックすると、同期済みの各ファイルのすべてのステータスの一覧を示す [ 同期ステータスレポート ] ダイアログボックスが開きます。
+通知アイコンをクリックすると、同期された各ファイルのステータスすべてを一覧表示する同期ステータスレポートダイアログボックスが開きます。
 
 ![chlimage_1-58](assets/chlimage_1-58a.png)
 
@@ -140,7 +141,7 @@ AEM Brackets Extension によって、HTL 属性および式の作成を容易�
 ### 属性のオートコンプリート {#attribute-auto-completion}
 
 1. HTML 属性に「`sly`」と入力します。この属性は、「`data-sly-`」にオートコンプリートされます。
-1. ドロップダウンリストで HTL 属性を選択します。
+1. ドロップダウンリストでこの HTL 属性を選択します。
 
 ### 式のオートコンプリート {#expression-auto-completion}
 

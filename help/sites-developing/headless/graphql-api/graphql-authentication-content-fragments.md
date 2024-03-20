@@ -1,22 +1,24 @@
 ---
-title: リモートAdobe Experience Manager GraphQLクエリのコンテンツフラグメントに対する認証
-description: ヘッドレスコンテンツ配信を保護するためにリモートAdobe Experience Manager GraphQLクエリに必要な認証を理解します。
+title: リモートAdobe Experience Manager GraphQLでのコンテンツフラグメントに対するクエリの認証
+description: ヘッドレスコンテンツ配信を保護するために、Adobe Experience Manager GraphQL のリモートクエリに必要な認証について説明します。
 feature: Content Fragments,GraphQL API
 exl-id: 167f3318-7bc7-48fc-aaa9-73da43433f2f
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+solution: Experience Manager, Experience Manager Sites
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '110'
-ht-degree: 0%
+ht-degree: 42%
 
 ---
 
-# リモートAdobe Experience Manager GraphQLクエリのコンテンツフラグメントに対する認証 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
+# リモートAdobe Experience Manager GraphQLでのコンテンツフラグメントに対するクエリの認証 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-主な用途 [コンテンツフラグメント配信用Adobe Experience Manager (AEM)GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) は、サードパーティのアプリケーションまたはサービスからのリモートクエリを受け入れます。 これらのリモートクエリでヘッドレスコンテンツ配信を保護するには、認証済み API アクセスが必要になる場合があります。
+主な使用例 [コンテンツフラグメント配信用のAdobe Experience Manager (AEM)GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) は、サードパーティのアプリケーションまたはサービスからのリモートクエリを受け入れます。 ヘッドレスコンテンツ配信を保護するために、これらのリモートクエリには、認証済み API アクセスが必要な場合があります。
 
 >[!NOTE]
 >
->テストおよび開発の場合は、 [GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface).
+>テストおよび開発の場合は、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)を使用して AEM GraphQL API に直接アクセスすることもできます。
 
 認証の場合、サードパーティのサービスは、AEMアカウントのユーザー名とパスワードを使用して認証する必要があります。
 

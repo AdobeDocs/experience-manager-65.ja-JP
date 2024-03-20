@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +26,7 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 >
 >[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用される ContextHub 設定のサンプルを含むパス（`/libs/settings/cloudsettings/legacy`）は、独自の設定を作成する際の参考としてご利用ください。
 >
->プロジェクト内でを独自の ContextHub 設定として使用しないでください。
+>独自の ContextHub 設定としてプロジェクトで使用しないでください。
 
 ## 永続性 {#persistence}
 
@@ -36,7 +37,7 @@ ContextHub ストアは、コンテキストデータをクライアント上に
 * ContextHub には、いくつかの[ストアタイプのサンプル](/help/sites-developing/ch-samplestores.md)が用意されています。
 * AEM コンソールを使用して[ストアを作成](ch-configuring.md#creating-a-contexthub-store)します。
 * デベロッパーは、[カスタムストアタイプを作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)できます。
-* 開発者が実行できる操作 [ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) JavaScript を使用します。
+* 開発者は、JavaScript を使用して[ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores)できます。
 
 ## セグメント化 {#segmentation}
 
@@ -44,7 +45,7 @@ ContextHub には、セグメントの管理や、現在のコンテキストで
 
 ## プレゼンテーション {#presentation}
 
-マーケターと作成者は、[ContextHub ツールバー](/help/sites-authoring/ch-previewing.md)を使用してストアデータを表示および操作し、ページのオーサリング時にユーザーエクスペリエンスをシミュレートできます。ツールバーは、ContextHub ストアへのアクセスを提供する UI モジュールのグループで構成されます。
+マーケターと作成者は、[ContextHub ツールバー](/help/sites-authoring/ch-previewing.md)を使用してストアデータを表示および操作し、ページのオーサリング時にユーザーエクスペリエンスをシミュレートできます。このツールバーは、ContextHub ストアへのアクセスを提供する UI モジュールのグループで構成されています。
 
 各 ContextHub UI モジュールは、事前定義されたモジュールタイプのインスタンスです。
 

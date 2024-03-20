@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2122'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,8 @@ ht-degree: 99%
 
 また、コンテンツをターゲット化するときに、A4T Analytics クラウド設定を変更して、Adobe Analytics をレポートソースとして使用するように Adobe Target を設定できます。
 
-クラウド設定とフレームワークの場所を特定するには、**ツール**／**デプロイメントt**／**クラウド**&#x200B;の **クラウドサービス**&#x200B;に移動します。([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))Adobe Targetの下で、 **設定を表示**.
+クラウド設定とフレームワークの場所を特定するには、**ツール**／**デプロイメントt**／**クラウド**&#x200B;の **クラウドサービス**&#x200B;に移動します。（[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）
+Adobe Target の下で、「**設定を表示**」をクリックします。
 
 ### プロビジョニングされた Target 設定のプロパティ {#provisioned-target-configuration-properties}
 
@@ -239,8 +241,8 @@ AEM で Target フレームワークを作成した後、web ページをフレ�
 1. **Sites** コンソールで、設定するサイトに移動します。
 1. [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)または[選択モード](/help/sites-authoring/basic-handling.md)を使用して、「**プロパティを表示**」を選択します。
 1. 「**クラウドサービス**」タブを選択します。
-1. クリック **編集**.
-1. クリック **設定を追加** under **Cloud Service設定** を選択し、 **Adobe Target**.
+1. 「**編集**」をクリックします。
+1. 「**クラウドサービス設定**」で「**設定を追加**」をクリックして、「**Adobe Target**」を選択します。
 
    ![設定を追加](assets/chlimage_1-165.png)
 

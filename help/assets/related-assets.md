@@ -5,10 +5,11 @@ contentOwner: AG
 role: User
 feature: Collaboration,Asset Management
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '640'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -74,7 +75,7 @@ ht-degree: 96%
 
 *図：翻訳に含める関連アセットのソースアセット。*
 
-1. 次の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。 [翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project). 例えば、この場合は、アセットをフランス語に翻訳します。
+1. [翻訳プロジェクトを作成](translation-projects.md#create-a-new-translation-project)の手順に従って、ソースフォルダー内のアセットをターゲット言語に翻訳します。例えば、この場合は、アセットをフランス語に翻訳します。
 
 1. [!UICONTROL プロジェクト]ページから、翻訳フォルダーを開きます。
 

@@ -2,10 +2,11 @@
 title: AEMにおけるヘッドフルとヘッドレス
 description: AEM プロジェクトはヘッドフルモデルでもヘッドレスモデルで実装できますが、二者択一ではありません。AEM は、1 つのプロジェクトで両方のモデルのメリットを活用できる柔軟性を備えています。
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1023'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,7 @@ AEM には、コンテンツの作成と配信を 1 つのプラットフォー�
 
 ![AEM 実装モデル](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
-ヘッドフルモデルまたはフルスタックモデルでは、コンテンツはAEMリポジトリで管理され、Java、HTL などに基づくAEMコンポーネントを使用して、ユーザーエクスペリエンス用にコンテンツをレンダリングします。 このモデルでは、コンテンツの作成、スタイル設定、表示、配信がすべて AEM で行われます。
+ヘッドフルモデルまたはフルスタックモデルでは、コンテンツは AEM リポジトリで管理され、Java、HTL などに基づく AEM コンポーネントを使用して、ユーザーエクスペリエンス用にコンテンツをレンダリングします。このモデルでは、コンテンツの作成、スタイル設定、表示、配信がすべて AEM で行われます。
 
 ヘッドレスモデルでは、コンテンツは AEM リポジトリで管理されますが、REST や GraphQL などの API を使用して別のシステムに配信されて、ユーザーエクスペリエンス用にレンダリングされます。このモデルでは、コンテンツは AEM で作成されますが、コンテンツのスタイル設定、表示、配信はすべて別のプラットフォームで行われます。
 
@@ -43,7 +44,7 @@ AEM がヘッドレスで配信するコンテンツの宛先は、多くの場�
 
 >[!NOTE]
 >
->もちろん、Web ショップ SPA を完全機能の AEM SPA として再実装することもできます（[AEM SPA Editor フレームワークを使用](/help/sites-developing/spa-walkthrough.md) 既にAEMがあり、Web ショップまたは他のSPAを作成する場合は、これが推奨される方法ですが、このドキュメントの範囲外です。
+>もちろん、Web ショップ SPA を完全機能の AEM SPA として再実装することもできます（[AEM SPA Editor フレームワークを使用](/help/sites-developing/spa-walkthrough.md)既に AEM があり、web ショップまたは他の SPA を作成する場合はこの方法をお勧めしますが、このドキュメントの範囲には含まれません。
 
 ## SPA 統合レベル {#integration-levels}
 

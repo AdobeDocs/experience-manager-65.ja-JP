@@ -1,56 +1,57 @@
 ---
 title: カスタム検索フォームのアップグレード
-description: この記事では、カスタム検索フォームが機能するためにアップグレード後に必要となる調整について詳しく説明します。
+description: この記事では、カスタム検索フォームを機能させるために、アップグレード後に必要となる調整について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1797'
-ht-degree: 30%
+ht-degree: 100%
 
 ---
 
 # カスタム検索フォームのアップグレード {#upgrading-custom-search-forms}
 
-AEM 6.2 では、カスタマイズされた検索Formsがリポジトリに格納される場所が変更されました。 アップグレード時に、6.1 の場所から次の場所に移動されます。
+AEM 6.2 では、カスタマイズされた検索フォームのリポジトリ内の保存場所が変更されました。アップグレードすると、次 6.1 の場所から移動します：
 
 * /apps/cq/gui/content/facets
 
-を次の場所の下の新しい場所に追加します。
+から次の新しい場所に移動されます。
 
 * /conf/global/settings/cq/search/facets
 
-このため、フォームを引き続き機能させるには、アップグレード後に手動での調整が必要です。
+このため、フォームを引き続き機能させるには、アップグレード後に手動での変更が必要になります。
 
-これは、新しい Search Formsと、カスタマイズされたデフォルトのFormsに当てはまります。
+新しい検索フォームとカスタマイズされたデフォルトのフォームの両方について変更が必要です。
 
 詳しくは、[検索ファセット](/help/assets/search-facets.md)に関するドキュメントを参照してください。
 
 ## resourceType プロパティの変更 {#changing-the-resourcetype-property}
 
-特に指定のない限り、アップグレード後に実行する必要がある変更の大部分では、設定済みのカスタム検索フォームの `sling:resourceType` プロパティを変更する必要があります。これは、プロパティがレンダリングスクリプトの正しい場所を指すようにするために必要です。
+特に指定のない限り、アップグレード後に実行する必要がある変更の大部分では、設定済みのカスタム検索フォームの `sling:resourceType` プロパティを変更する必要があります。この変更は、プロパティがレンダリングスクリプトの正しい場所を指すようにするうえで必要です。
 
-プロパティは、次の手順で変更できます。
+このプロパティを変更するには、次の手順を実行します。
 
 1. `https://server:port/crx/de/index.jsp` に移動して CRXDE Lite を開きます
-1. 調整が必要なノードの場所を参照します ( [カスタム検索Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms) 下
-1.  ノードをクリックします。右側のプロパティウィンドウで、「 」をクリックし、 **sling:resourceType** プロパティ。
-1. 最後に、 **すべて保存** 」ボタンをクリックします。
+1. 以下の[カスタム検索フォーム](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms)のリストに指定されているとおり、変更の必要があるノードの場所を参照します。
+1.  ノードをクリックします。右側のプロパティパネルで、**sling:resourceType** プロパティをクリックして変更します。
+1. 最後に、「**すべて保存**」ボタンをクリックして、変更を保存します。
 
-## カスタム検索のリストForms {#list-of-custom-search-forms}
+## カスタム検索フォームのリスト {#list-of-custom-search-forms}
 
-以下に、すべてのカスタム検索Formsと、アップグレード後に必要な変更のリストを示します。 これらは、 `/conf/global/settings/cq/search/facets/sites/items` の名前を指しています。
+すべてのカスタム検索フォームと、アップグレード後に必要な変更点のリストを以下に示します。これらは、 `/conf/global/settings/cq/search/facets/sites/items` の名前を指しています。
 
-### ノード名が「fulltext」のフルテキスト述語 {#fulltext-predicate-with-node-name-fulltext}
+### 「fulltext」というノード名を持つフルテキストの述語 {#fulltext-predicate-with-node-name-fulltext}
 
 <table>
  <tbody>
   <tr>
-   <td>6.1 のデフォルトの検索フォームのノード</td>
+   <td>6.1 のデフォルト検索フォームのノード</td>
    <td>fulltext</td>
   </tr>
   <tr>
@@ -64,16 +65,16 @@ AEM 6.2 では、カスタマイズされた検索Formsがリポジトリに格�
  </tbody>
 </table>
 
-AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部でした。 6.2 では、フルテキストフィールドがオムニサーチに置き換えられました。 この述語はプログラムによってスキップされ、削除できます。
+AEM 6.1 では、標準のフルテキストの述語は検索フォームの一部でした。6.2 では、フルテキストフィールドが OmniSearch で置き換えられました。この述語はプログラムによってスキップされ、削除可能です。
 
 **アクション：** ノードを完全に削除します。
 
-### その他のフルテキスト述語 {#other-fulltext-predicates}
+### その他のフルテキストの述語 {#other-fulltext-predicates}
 
 <table>
  <tbody>
   <tr>
-   <td>6.1 のデフォルトの検索元のノード</td>
+   <td>6.1 のデフォルト検索フォームのノード</td>
    <td>n/a</td>
   </tr>
   <tr>
@@ -94,7 +95,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 <table>
  <tbody>
   <tr>
-   <td>6.1 のデフォルトの検索フォームのノード<br /> <br /> </td>
+   <td>6.1 のデフォルト検索フォームのノード<br /> <br /> </td>
    <td>path</td>
   </tr>
   <tr>
@@ -150,7 +151,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
  </tbody>
 </table>
 
-ページステータスは、2 つのオプションプロパティの述語に置き換えられました。1 つは公開用、もう 1 つはライブコピーステータス用です。
+ページステータスは、2 つのオプションプロパティの述語で置き換えられました。1 つは公開の述語で、もう 1 つはライブコピーステータスの述語です。
 
 **アクション：**
 
@@ -165,7 +166,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
    * コピー先：`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
-* `analyticspredicate` ノードの `listOrder` プロパティが「**8**」に設定されていることを確認します。これは、競合を避けるために必要です。
+* `analyticspredicate` ノードの `listOrder` プロパティが「**8**」に設定されていることを確認します。この設定は、競合を避けるために必要です。
 
 ### 日付範囲の述語 {#date-range-predicates}
 
@@ -207,7 +208,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
  </tbody>
 </table>
 
-**アクション：** 調整するものがありません。
+**アクション：**&#x200B;何も変更しません。
 
 ### Analytics の述語 {#analytics-predicate}
 
@@ -253,7 +254,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 >[!NOTE]
 >
->注意： 6.1 とは異なり、範囲の述語では検索バーにタグが表示されなくなりました。
+>メモ：6.1 とは異なり、範囲の述語は検索バーにタグをレンダリングしなくなりました。
 
 ### オプションプロパティの述語 {#options-property-predicate}
 
@@ -344,7 +345,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 <table>
  <tbody>
   <tr>
-   <td>6.1 のデフォルトの検索フォームのノード<br /> <br /> </td>
+   <td>6.1 のデフォルト検索フォームのノード<br /> <br /> </td>
    <td>n/a</td>
   </tr>
   <tr>
@@ -364,20 +365,20 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 以下のノードは `/conf/global/settings/dam/search/facets/assets/items` の名前を指しています。
 
-### ノード名が「fulltext」のフルテキスト述語 {#fulltext-predicate-with-node-name-fulltext-1}
+### 「fulltext」というノード名を持つフルテキストの述語 {#fulltext-predicate-with-node-name-fulltext-1}
 
-| 6.1 のデフォルトの検索フォームのノード | fulltext |
+| 6.1 のデフォルト検索フォームのノード | fulltext |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/fulltextpredicate |
 | 6.2 のリソースタイプ | n/a |
 
-6.1 では、標準のフルテキストの述語が検索フォームの一部でした。 6.2 では、フルテキストフィールドがオムニサーチに置き換えられました。 この述語はプログラムによってスキップされ、削除できます。
+6.1 では、標準のフルテキストの述語は検索フォームの一部でした。6.2 では、フルテキストフィールドが OmniSearch で置き換えられました。この述語はプログラムによってスキップされ、削除可能です。
 
-**アクション：** 上記のノードを削除します。
+**アクション：**&#x200B;上述のノードを削除します。
 
 ### パスブラウザーの述語 {#path-browser-predicates-1}
 
-| 6.1 のデフォルトの検索フォームのノード | pathbrowser |
+| 6.1 のデフォルト検索フォームのノード | pathbrowser |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
@@ -386,7 +387,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### MIME タイプの述語 {#mime-type-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | mimetype |
+| 6.1 のデフォルト検索フォームのノード | mimetype |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
@@ -395,7 +396,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### ファイルサイズの述語 {#file-size-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | filesize |
+| 6.1 のデフォルト検索フォームのノード | filesize |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/filesizepredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/sliderangepredicate |
@@ -404,7 +405,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### 最終変更アセットの述語 {#asset-last-modified-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | assetlastmodifiedpredicate |
+| 6.1 のデフォルト検索フォームのノード | assetlastmodifiedpredicate |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/assetlastmodifiedpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/assetlastmodifiedpredicate |
@@ -413,7 +414,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### 公開の述語 {#publish-predicate}
 
-| 6.1 のデフォルトの検索フォームのノード | publish |
+| 6.1 のデフォルト検索フォームのノード | publish |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/publishpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/publishpredicate |
@@ -426,9 +427,9 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 * ブール値 `true` の `singleSelect` プロパティを追加します。
 
-### ステータス述語 {#status-predicates}
+### ステータスの述語 {#status-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | status |
+| 6.1 のデフォルト検索フォームのノード | status |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
@@ -437,25 +438,25 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### 有効期限ステータスの述語 {#expiry-status-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | expirystatus |
+| 6.1 のデフォルト検索フォームのノード | expirystatus |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 
 **アクション：** `resourceType` プロパティを変更します（上記の 6.2 の場所のように「**/coral**」を付加します）。
 
-### メタデータの有効性の述語 {#metadata-validity-predicates}
+### メタデータの妥当性の述語 {#metadata-validity-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | metadatavalidity |
+| 6.1 のデフォルト検索フォームのノード | metadatavalidity |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
 **アクション：** `resourceType` プロパティを調整します（上記の 6.2 の場所のように「**/coral**」を付加します）。
 
-### 評価述語 {#rating-predicates}
+### 評価の述語 {#rating-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | 評価 |
+| 6.1 のデフォルト検索フォームのノード | 評価 |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/ratingpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/sliderangepredicate |
@@ -464,7 +465,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### 向きの述語 {#orientation-predicate}
 
-| 6.1 のデフォルトの検索フォームのノード | 向き |
+| 6.1 のデフォルト検索フォームのノード | 向き |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/tagsfilterpredicate |
 | 6.2 のリソースタイプ | cq/gui/components/coral/common/admin/customsearch/searchpredicates/tagspredicate |
@@ -481,7 +482,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### スタイルの述語 {#style-predicate}
 
-| 6.1 のデフォルトの検索フォームのノード | スタイル |
+| 6.1 のデフォルト検索フォームのノード | style |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/tagsfilterpredicate |
 | 6.2 のリソースタイプ | cq/gui/components/coral/common/admin/customsearch/searchpredicates/tagspredicate |
@@ -498,7 +499,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### ビデオ形式の述語 {#video-format-predicates}
 
-| 6.1 のデフォルトの検索フォームのノード | videoFormat |
+| 6.1 のデフォルト検索フォームのノード | videoFormat |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
@@ -507,7 +508,7 @@ AEM 6.1 では、標準のフルテキスト述語が検索フォームの一部
 
 ### メインアセットの述語 {#mainasset-predicate}
 
-| 6.1 のデフォルトの検索フォームのノード | mainasset |
+| 6.1 のデフォルト検索フォームのノード | mainasset |
 |---|---|
 | 6.1 のリソースタイプ | granite/ui/components/foundation/form/hidden |
 | 6.2 のリソースタイプ | granite/ui/components/coral/foundation/form/hidden |

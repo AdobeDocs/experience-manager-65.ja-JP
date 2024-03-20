@@ -1,16 +1,17 @@
 ---
 title: デフォルトの SSL/TLS
-description: AEM 6.5 のデフォルトの機能で SSL を使用する方法を説明します。
+description: AEM 6.5 でデフォルトの SSL を使用する方法について説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +21,7 @@ AEM のセキュリティを継続的に向上させる取り組みの中で、A
 
 ## デフォルトの SSL/TLS の有効化 {#enabling-ssl-tls-by-default}
 
-AEM ホーム画面から該当するインボックスメッセージをクリックすることで、デフォルトの SSL/TLS の設定を開始できます。インボックスを表示するには、画面の右上隅にあるベルのアイコンを押します。次に、「 **すべて表示**. すべてのアラートのリストが順序付けられてリスト表示で表示されます。
+AEM ホーム画面から該当するインボックスメッセージをクリックすることで、デフォルトの SSL/TLS の設定を開始できます。インボックスを表示するには、画面の右上隅にあるベルのアイコンを押します。次に、「**すべて表示**」をクリックします。すべてのアラートのリストが順序付けられてリスト表示で表示されます。
 
 リストで、**HTTPS を設定**&#x200B;アラートを選択して開きます。
 
@@ -159,7 +160,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 >[!NOTE]
 >
->自己署名証明書の使用は、サンプル目的でのみ可能です。 実稼動環境では使用しないでください。
+>自己署名証明書の使用はサンプル目的のみです。実稼動では使用しないでください。
 
 1. まず、秘密鍵を作成します。
 
@@ -198,7 +199,7 @@ cURL ツールを使用して SSL/TLS 設定を自動化することもできま
 
 *https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
-設定ウィザードで様々な設定を変更する際に使用できるパラメーターを次に示します。
+以下は、設定ウィザードの様々な設定を変更するために使用できるパラメーターです。
 
 * `-F "keystorePassword=password"` - キーストアのパスワード。
 
@@ -219,7 +220,7 @@ cURL ツールを使用して SSL/TLS 設定を自動化することもできま
 >
 >SSL/TLS 設定を自動化するための cURL は、DER および CRT ファイルが存在するフォルダーから実行すると最も速く実行されます。または、`privatekeyFile` および certificateFile 引数でフルパスを指定できます。
 >
->また、更新を実行するには認証が必要なので、cURL コマンドを `-u user:passeword` パラメーター。
+>また、更新の実行には認証が必要なため、cURL コマンドに `-u user:passeword` パラメーターを付加します。
 >
 >正しい cURL POST コマンドは、次のようになります。
 
@@ -233,7 +234,7 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-コマンドを実行したら、すべての証明書がキーストアに送信されたことを確認します。次を確認します。 **キーストア** 次のエントリ：
+コマンドを実行したら、すべての証明書がキーストアに送信されたことを確認します。以下から、**キーストア**からのエントリーをチェックしてください。
 [http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### TLS 1.3 接続の有効化 {#enabling-tls-connection}

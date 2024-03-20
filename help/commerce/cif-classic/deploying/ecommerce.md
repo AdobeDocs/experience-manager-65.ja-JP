@@ -3,7 +3,8 @@ title: eコマースの概要
 description: AEM の汎用 e コマースは、標準インストールの一部として使用でき、e コマースフレームワークの全機能を提供します。
 feature: Commerce Integration Framework
 exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
-source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 92%

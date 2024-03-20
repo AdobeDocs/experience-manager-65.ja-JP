@@ -1,15 +1,16 @@
 ---
 title: We.Retail 参照実装
-description: We.Retail は、AEMを使用したオンラインプレゼンスの設定で推奨される方法を示す、参照実装のテクノロジープレビューです
+description: We.Retail は参照実装の技術プレビューであり、AEM を使用したオンラインプレゼンスを設定する際に推奨される方法を示しています
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: 4b5b3ac41034bd4cc0f359b35cac0515b76ca64e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
@@ -17,35 +18,35 @@ ht-degree: 35%
 
 ## 概要 {#introduction}
 
-We.Retail は、Adobe Experience Managerでオンラインプレゼンスを設定する推奨方法を示す参照実装およびサンプルコンテンツです。
+We.Retail は、Adobe Experience Manager を使用したオンラインプレゼンスの設定で推奨される方法を示す参照実装兼サンプルコンテンツです。
 
-We.Retail では、HTL、レスポンシブレイアウト、編集可能なテンプレート、コアコンポーネントなど、最新のAdobe Experience Manager(AEM) テクノロジーが使用されます。
+We.Retail では、HTL、レスポンシブレイアウト、編集可能テンプレート、コアコンポーネントなどの最新の Adobe Experience Manager（AEM）テクノロジーが使用されています。
 
-これは小売業界を示していますが、サイトの設定方法は任意の業種に適用でき、商品カタログと買い物かごの機能のみが小売に固有です。
+これは小売業界について示していますが、サイトの設定方法は任意の業界に適用でき、商品カタログおよび買い物かご機能のみが小売特有です。
 
 ## 機能 {#features}
 
-AEMの標準的な参照実装として、We.Retail はAEMの最も強力な機能の一部を示します。
+We.Retail は、AEM の標準的な参照実装として、AEM の最も強力な機能のいくつかを示します。
 
-| **機能** | **説明** | **興味が？** |
+| **機能** | **説明** | **興味がある場合** |
 |---|---|---|
-| [グローバル化されたサイト構造](/help/sites-administering/tc-bp.md) | We.Retail には、国固有のサイトにライブコピーされる言語マスターが含まれます。 | [やってみて！](/help/sites-developing/we-retail-globalized-site-structure.md) |
-| [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) | すべてのページには、画面やデバイスのサイズに動的に適応するレスポンシブレイアウトが備わっています。 | [やってみて！](/help/sites-developing/we-retail-responsive-layout.md) |
-| [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md) | すべてのページは編集可能なテンプレートに基づいているので、開発者以外のユーザーがテンプレートを調整およびカスタマイズできます。 | [やってみて！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | すべてのコンポーネントは HTL に基づいています |  |
-| [e コマース機能](/help/commerce/cif-classic/developing/ecommerce.md) | 商品カタログを機能させる |  |
-| [コミュニティサイト](/help/communities/overview.md) | 訪問者によるコミュニティディスカッションへの参加、ブログの読み取りなどの許可 |  |
-| [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) | すべてのコンポーネントは新しいコアコンポーネントに基づいており、より使いやすく、ユーザーがすぐに使用できる形で設定可能です | [やってみて！](/help/sites-developing/we-retail-core-components.md) |
-| [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md) | 「 We.Retail エクスペリエンス」の節では、コンテンツフラグメントを使用してコンテンツを再利用する方法を示します。 | [試してみる](/help/sites-developing/we-retail-content-fragments.md) |
+| [グローバル化されたサイト構造](/help/sites-administering/tc-bp.md) | We.Retail には、国固有の web サイトにライブコピーできる言語メインが含まれています。 | [試してみる](/help/sites-developing/we-retail-globalized-site-structure.md) |
+| [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) | すべてのページには、画面やデバイスのサイズに動的に適応するレスポンシブレイアウトが採用されています。 | [試してみる](/help/sites-developing/we-retail-responsive-layout.md) |
+| [編集可能テンプレート](/help/sites-developing/page-templates-editable.md) | すべてのページが編集可能テンプレートに基づいており、開発者以外のユーザーがテンプレートを変更したり、カスタマイズしたりできます。 | [試してみる](/help/sites-developing/we-retail-editable-templates.md) |
+| [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | すべてのコンポーネントが HTL に基づいています。 |  |
+| [e コマース機能](/help/commerce/cif-classic/developing/ecommerce.md) | 製品カタログを特徴としています。 |  |
+| [コミュニティサイト](/help/communities/overview.md) | 訪問者がコミュニティでのディスカッションに参加したりブログを読んだりできるようにします。 |  |
+| [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早く行えます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
+| [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md) | We.Retail エクスペリエンスのセクションは、コンテンツフラグメントによってコンテンツを再利用する方法を示します。 | [試してみる](/help/sites-developing/we-retail-content-fragments.md) |
 | [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) | エクスペリエンスフラグメントは、ページ内で参照できるコンテンツおよびレイアウトを含む 1 つ以上のコンポーネントのグループです。 | [試してみる](/help/sites-developing/we-retail-experience-fragments.md) |
 
 ## はじめに {#getting-started}
 
-We.Retail は、AEMサンプルコンテンツとして配信されます。 使用するには、単純に [通常どおりにAEMを起動します](/help/sites-deploying/deploy.md#getting-started)を設定する場合は、サンプルコンテンツが無効になっていないことを確認します。
+We.Retail は AEM のサンプルコンテンツとして提供されています。使用するには、[通常どおりに AEM を起動する](/help/sites-deploying/deploy.md#getting-started)だけです。このとき、サンプルコンテンツが無効になっていないことを確認してください。
 
 >[!CAUTION]
 >
->実稼動インスタンスに We.Retail をインストールしないでください。 実稼動インスタンスは、で開始する必要があります `nosamplecontent` [実行モード](/help/sites-deploying/configure-runmodes.md).
+>We.Retail は、実稼動インスタンスにインストールしないでください。実稼動インスタンスは、`nosamplecontent` [実行モード](/help/sites-deploying/configure-runmodes.md)で開始する必要があります。
 
 >[!CAUTION]
 >
@@ -57,23 +58,23 @@ We.Retail は AEM リリースと共に配布されますが、リリース後�
 
 ### 最初の手順 {#first-steps}
 
-1. AEMが開始（または We.Retail がインストール）されると、サイト **We.Retail** は、 [サイトコンソール](/help/sites-authoring/basic-handling.md#global-navigation).
-1. 例えば、次のページを開くと、 [付録](#appendix) 以下：
+1. AEM が起動したら、**We.Retail** サイトは[サイトコンソール](/help/sites-authoring/basic-handling.md#global-navigation)で利用できるようになります（We.Retail がインストールされている場合）。
+1. 例えば、次のページを開くことができ、そのページは後述の[付録](#appendix)のように表示されます。
 
    `https://<server name>:<port number>/editor.html/content/we-retail/language-masters/en.html`
 
 ## We.Retail および Geometrixx {#we-retail-geometrixx}
 
-Geometrixxとその多くの転身は、AEMの以前のバージョンでサンプルコンテンツとして機能していました。 バージョン 6.3 以降、 We.Retail はAEMで提供されるサンプルコンテンツであり、新しい標準的な参照実装として機能します。
+以前のバージョンの AEM では、サンプルコンテンツとして Geometrixx とその多くの実例が提供されてきました。バージョン 6.3 以降では、We.Retail が AEM で提供されるサンプルコンテンツになり、新しい標準の参照実装となります。
 
-We.Retail は、技術的により堅牢で、最新のAEMテクノロジーを活用して、より柔軟で拡張性を高めると同時に、製品の最新の機能も示します。
+We.Retail には、最新の AEM テクノロジーが搭載されています。製品の最新機能を見ると、技術的な堅牢性や、柔軟性、スケーラビリティの向上が明らかです。
 
 ### 機能の比較 {#feature-comparison}
 
-次の表は、We.Retail でGeometrixxと比較して使用できる主な機能の概要を示しています。
+次の表では、We.Retail で利用できる主な機能の概要を Geometrixx と比較して示します。
 
-* **利用可能** は、機能の例がサンプルコンテンツに含まれていることを意味します。
-* **利用不可** は、機能の例がサンプルコンテンツでは使用できないことを意味しますが、機能自体が使用できないとは限りません。
+* **使用可能**&#x200B;は、サンプルコンテンツに機能の例が含まれていることを意味します。
+* **使用不可**&#x200B;は、サンプルコンテンツに機能の例が含まれていないことを意味します。ただし、機能自体を使用できないという意味ではありません。
 
 | **機能** | **We.Retail** | **Geometrixx** |
 |---|---|---|
@@ -87,18 +88,18 @@ We.Retail は、技術的により堅牢で、最新のAEMテクノロジーを�
 | Screens | 使用可 | 使用不可 |
 | モバイル | 使用不可 | 使用可 |
 | 原稿 | 使用不可 | 使用可 |
-| カルーセルビューア、ダウンロード、グラフコンポーネント | 使用不可 | 使用可 |
+| カルーセルビューア、ダウンロード、グラフのコンポーネント | 使用不可 | 使用可 |
 | 列の制御 | レイアウトコンテナに置き換えられる | 使用可 |
 | Forms | 使用不可 | 使用可 |
 | Campaign | メールのサンプルはない | 使用可 |
 
 >[!NOTE]
 >
->このリストは完成を目指していますが、すべてを網羅したものとは考えないでください。
+>このリストは、完全を期していますが、あらゆる機能を網羅しているわけではありません。
 
 ## コントリビューション {#contribute}
 
-We.Retail はオープンソースプロジェクトとしてリリースされ、最新バージョンのソースコードを GitHub からダウンロードできます。
+We.Retail はオープンソースプロジェクトとしてリリースされています。最新バージョンのソースコードは GitHub からダウンロードできます。
 
 GitHub のコード
 
@@ -109,7 +110,7 @@ GitHub のコード
 
 最新のリリースは、インストール可能なパッケージとして[直接ダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/tag/we.retail.reactor-4.0.0)することもできます。
 
-問題が発生した場合は、 [GitHub の問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+問題が発生した場合は、[GitHub の Issues](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues) に記入します。
 
 自由にフォークするか、[プルリクエスト](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls)によって貢献してください。
 

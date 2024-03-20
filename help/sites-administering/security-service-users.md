@@ -7,7 +7,8 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 86%
@@ -43,7 +44,7 @@ ht-degree: 86%
 
 * **コンテンツ構造を調整する**
 
-   * アクセス制御が使用可能なリクエストセッションと一致する他の場所に移動します。
+   * コンテンツを他の場所（使用可能なリクエストセッションとアクセス制御が一致する場所など）に移動します。
    * コンテンツの精度を変更します。
 
 * **コードのリファクタリングを行って適切なサービスになるようにする**

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -21,4 +22,4 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Scaffolding がありますが、 [mode](/help/sites-authoring/author-environment-tools.md#page-modes) 使用可能な場合は、基礎のメンテナンスと作成、および基礎からの新しいページの作成は、クラシック UI で行います。 詳しくは、クラシック UI オーサリングドキュメントの[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)を参照してください。
+>基礎[モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用できますが、基礎のメンテナンスおよび作成は、基礎からの新しいページの作成と同様に、クラシック UI で行ないます。詳しくは、クラシック UI オーサリングドキュメントの[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)を参照してください。

@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1319'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +32,7 @@ ht-degree: 93%
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-レプリケーションを実行しているユーザーアカウントを特定します。 信頼された作成者証明書をパブリッシュインスタンスにインストールする場合、証明書はこのユーザーアカウントに関連付けられます。
+レプリケーションを実行するユーザーアカウント決定します。パブリッシュインスタンスに信頼できるオーサー証明書をインストールすると、その証明書がこのユーザーアカウントに関連付けられます。
 
 ## MSSL の資格情報の取得または作成 {#obtaining-or-creating-credentials-for-mssl}
 
@@ -206,7 +207,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 
 ## パブリッシュでの HTTP サービスの設定 {#configure-the-http-service-on-publish}
 
-Granite キーストアへのアクセス時に HTTPS を使用するように、パブリッシュインスタンス上で Apache Felix Jetty Based HTTP Service のプロパティを設定します。 サービスの PID は、 `org.apache.felix.http`.
+パブリッシュインスタンスで Apache Felix Jetty ベースの HTTP サービスのプロパティを設定して、パブリッシュインスタンスが Granite キーストアにアクセスする際に HTTPS を使用するようにします。サービスの PID は `org.apache.felix.http` です。
 
 次の表は、Web コンソールを使用する場合に設定する必要のある OSGi のプロパティを示しています。
 

@@ -8,10 +8,11 @@ content-type: reference
 docset: aem65
 feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '500'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -34,7 +35,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->パターン検出は、ローカル開発インスタンスを含むあらゆる開発で実行できます。ただし、次の操作を行います。
+>パターン検出は、ローカル開発インスタンスを含むあらゆる開発で実行できます。ただし、次の目的で使用します。
 >
 >* 検出率を上げる
 >* ビジネスにとって重大なインスタンスの減速を避ける
@@ -220,4 +221,4 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->パターン検出は、アップグレードに関する警告を正確に予測しようとします。 ただし、シナリオによっては誤検知が発生する可能性があります。
+>パターン検出はアップグレードに関する警告を正確に予測しようとします。ただし、シナリオによっては誤検知が発生する可能性があります。

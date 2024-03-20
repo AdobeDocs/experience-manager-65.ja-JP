@@ -7,10 +7,11 @@ topic-tags: platform
 content-type: reference
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3186'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -262,8 +263,8 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
   <tr>
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/templates</code></td>
    <td>テンプレート作成者<br /> </td>
-   <td>読み取り、書き込み、複製</td>
-   <td>サイト固有のテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者 <code>/conf</code> space</td>
+   <td>読み込み、書き込み、レプリケート</td>
+   <td>サイト固有の <code>/conf</code> スペースでテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者</td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -279,7 +280,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/policies</code></td>
    <td><code>Template Author</code></td>
    <td>読み込み、書き込み、レプリケート</td>
-   <td>サイト固有のテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者 <code>/conf</code> space</td>
+   <td>サイト固有の <code>/conf</code> スペースでテンプレートを作成、読み取り、更新、削除、複製するテンプレート作成者</td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -415,7 +416,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
 * 編集可能テンプレートのタイプ
 * 編集可能テンプレート
 
-編集可能テンプレートを作成する際、値はテンプレートタイプから個々のテンプレートにコピーされます。 値がタイプで設定されていない場合は、テンプレートで設定できます。テンプレートの作成後に、タイプからテンプレートに継承されることはありません。
+編集可能テンプレートを作成すると、この値がテンプレートタイプから個々のテンプレートにコピーされます。値がタイプで設定されていない場合は、テンプレートで設定できます。テンプレートの作成後に、タイプからテンプレートに継承されることはありません。
 
 >[!CAUTION]
 >
@@ -447,7 +448,7 @@ GitHub のコード
 
 ## テンプレート定義 {#template-definitions}
 
-編集可能テンプレートの定義は、[ユーザー定義フォルダー](/help/sites-developing/page-templates-editable.md#template-folders)（推奨）または `global` フォルダーに格納されます。例：
+編集可能テンプレートの定義は、[ユーザー定義フォルダー](/help/sites-developing/page-templates-editable.md#template-folders)（推奨）または `global` フォルダーに格納されます。次に例を示します。
 
 * `/conf/<my-folder>/settings/wcm/templates`
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/templates`
@@ -591,7 +592,7 @@ GitHub のコード
    * [サブブランチの該当するページまたはルートページの&#x200B;**ページプロパティ**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;で、許可されたテンプレートのパスを定義します。
    * プロパティを設定します。
      `cq:allowedTemplates`
-次の日： `jcr:content` 必要なブランチのノードに設定します。
+必要なブランチの `jcr:content` ノードに設定します。
 
    例えば、次の値を使用します。
 

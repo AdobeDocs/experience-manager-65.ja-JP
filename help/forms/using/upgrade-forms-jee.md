@@ -7,16 +7,17 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # JEE 上の AEM 6.5 Forms へのアップグレード {#upgrade-to-aem-forms-jee}
 
-JEE 上のAEM 6.5.18.0 Formsには、完全インストーラーとパッチインストーラーの 2 種類のインストーラーが用意されています。
+JEE 上の AEM 6.5.18.0 Forms には、完全なインストーラーとパッチインストーラーの 2 種類のインストーラーが用意されています。
 
 **フルインストーラー**：[JEE 上の AEM 6.5.18.0 フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を使用して新しい AEM Forms インスタンスを設定したり、JEE 上の AEM 6.5.x.x Forms から JEE 上の AEM 6.5.18.0 Forms へのアップグレードを実行したりできます。
 

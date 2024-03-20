@@ -7,10 +7,11 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: HTML5 Forms
 exl-id: 4c84cfd1-50a4-416f-b4a5-7f2f4c7f10af
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '366'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ HTML5 フォームは HTML5 機能の使用によりレンダリングされ、�
 
 1. **カスタムスタイルを追加するプロファイルを選択**
 
-   **https://&lt;server>:&lt;port>/crx/de** の URL で CRX DE インターフェイスにアクセスし、プロファイルを作成するか、既存のプロファイルを選択します。プロファイルの作成方法については、 [プロファイルの作成](/help/forms/using/custom-profile.md)
+   **https://&lt;server>:&lt;port>/crx/de** の URL で CRX DE インターフェイスにアクセスし、プロファイルを作成するか、既存のプロファイルを選択します。プロファイルの作成方法について詳しくは、[プロファイルの作成](/help/forms/using/custom-profile.md)を参照してください。
 
 1. **HTML5 フォームのスタイル設定用の CSS スタイルシートを作成**
 
@@ -36,7 +37,7 @@ HTML5 フォームは HTML5 機能の使用によりレンダリングされ、�
 
    1. フォルダーを右クリックして、メニューから&#x200B;**作成**／**ファイルを作成**&#x200B;を選択します。
 
-   1. ファイルを作成ダイアログで、スタイルシートの名前を入力します。拡張子.css を必ず使用してください（例： stylesheet.css）。
+   1. ファイルを作成ダイアログで、スタイルシートの名前を入力します。拡張子 .css を必ず使用してください（例：stylesheet.css）。
    1. ナビゲーションペインから、作成した CSS ファイルを開きます。
    1. スタイル設定するコンポーネントの CSS クラスを定義し、それらのクラスにスタイルを追加します。
 

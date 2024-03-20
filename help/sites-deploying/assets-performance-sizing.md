@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 exl-id: fbe15e1b-830b-4752-bd02-0d239a90bc68
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
-source-wordcount: '1215'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '1213'
 ht-degree: 100%
 
 ---

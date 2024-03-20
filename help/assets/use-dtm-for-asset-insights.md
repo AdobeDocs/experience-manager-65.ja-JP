@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: 5e56441d2dc9b280547c91def8d971e7b1dfcfe3
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '631'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +52,7 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
    >
    >* `AppMeasurement.js` が削除されました。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
    >* `assetAnalytics.dispatcher.init()` の呼び出しは削除されました。この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
-   >* アセットインサイトページトラッカーがホストされている場所 (Experience Manager、CDN など ) に応じて、スクリプトソースのオリジンを変更する必要がある場合があります。
+   >* Assets Insights ページトラッカーがホストされる場所（例えば、Experience Manager や CDN など）によっては、スクリプトソースのオリジンを変更する必要があります。
    >* Experience Manager でホストされるページトラッカーの場合、ソースがディスパッチャーインスタンスのホスト名を使用してパブリッシュインスタンスを指す必要があります。
 
 1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。ツールを作成する際に、「**[!UICONTROL 設定方法]**」を「**[!UICONTROL 自動]**」に設定できます。

@@ -1,13 +1,14 @@
 ---
 title: 最適化された GraphQL フィルタリング用コンテンツフラグメントの更新
-description: ヘッドレスコンテンツ配信のために、Adobe Experience Manager で最適化された GraphQL フィルタリング用にコンテンツフラグメントを更新する方法について説明します。
-source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
+description: ヘッドレスコンテンツ配信のためにAdobe Experience Managerで最適化されたGraphQLフィルタリング用にコンテンツフラグメントを更新する方法について説明します。
+exl-id: d78ec052-c091-49ca-9f36-a3d24eb9edd5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 42%
+source-wordcount: '255'
+ht-degree: 37%
 
 ---
-
 
 # 最適化された GraphQL フィルタリング用コンテンツフラグメントの更新 {#updating-content-fragments-for-optimized-graphql-filtering}
 
@@ -25,11 +26,11 @@ AEMの 6.5.17.0リリース以降が存在することを確認します。
 
 この手順を実行するには、次の手順に従います。
 
-1. [OSGi 設定の指定](/help/sites-deploying/configuring-osgi.md) の **コンテンツフラグメント移行ジョブ設定**:
+1. [OSGi 設定の指定](/help/sites-deploying/configuring-osgi.md) （の） **コンテンツフラグメント移行ジョブ設定**:
 
    ![OSGi コンテンツフラグメント移行ジョブ設定](assets/cfm-graphql-update-01.png "OSGi コンテンツフラグメント移行ジョブ設定")
 
-1. ダイアログで、次の 2 つのパラメータを設定します。
+1. ダイアログで、次の 2 つのパラメーターを設定します。
 
    * **ContentFragmentMigration:Enabled** : `1`
    * **ContentFragmentMigration:Enforce** : `1`

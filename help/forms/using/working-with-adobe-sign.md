@@ -8,10 +8,11 @@ feature: Adaptive Forms, Foundation Components, Acrobat Sign
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3875'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -77,7 +78,7 @@ ht-degree: 92%
 署名が有効なアダプティブフォームを作成するには、以下の手順を実行します。
 
 1. **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL Forms]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
-1. 選択 **[!UICONTROL 作成]** を選択し、 **[!UICONTROL アダプティブフォーム]**. テンプレートのリストが表示されます。テンプレートを選択し、「 」を選択します。 **[!UICONTROL 次へ]**.
+1. 「**[!UICONTROL 作成]**」を選択して、「**[!UICONTROL アダプティブフォーム]**」を選択します。テンプレートのリストが表示されます。テンプレートを選択して、「**[!UICONTROL 次へ]**」を選択します。
 1. 「**[!UICONTROL 基本]**」タブで次の操作を行います。
 
    1. アダプティブフォームの&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定します。
@@ -94,14 +95,14 @@ ht-degree: 92%
 
    * 「**[!UICONTROL レコードのドキュメントを生成]**」オプションを選択します。「レコードのドキュメント」オプションが有効なアダプティブフォームを使用すると、署名用に送信されたドキュメントにアダプティブフォームのすべてのフィールドが表示されます。
 
-1. 選択 **[!UICONTROL を作成します。]** 署名が有効なアダプティブフォームが作成され、このアダプティブフォームを使用して [!DNL Adobe Sign] フィールドを追加できます。
+1. 「**[!UICONTROL 作成」を選択します。]** 署名が有効なアダプティブフォームが作成され、このアダプティブフォームを使用して [!DNL Adobe Sign] フィールドを追加できます。
 
 #### アダプティブフォームを [!DNL Adobe Sign] 用に編集する {#editafsign}
 
 既存のアダプティブフォームで [!DNL Adobe Sign] を使用するには、次の手順を実行します。
 
 1. **[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL Forms]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
-1. アダプティブフォームを選択し、「 」を選択します。 **[!UICONTROL プロパティ]**.
+1. アダプティブフォームを選択し、「**[!UICONTROL プロパティ]**」を選択します。
 1. 「**[!UICONTROL 基本]**」タブで、[!DNL Adobe Sign] を AEM [!DNL Forms] で設定するときに作成した[設定コンテナ](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms)を選択します。
 1. 「**[!UICONTROL フォームモデル]**」タブで、次のいずれかのオプションを選択します。
 
@@ -109,7 +110,7 @@ ht-degree: 92%
 
    * 「**[!UICONTROL レコードのドキュメントを生成]**」オプションを選択します。「レコードのドキュメント」オプションが有効なアダプティブフォームを使用すると、署名用に送信されたドキュメントにアダプティブフォームのすべてのフィールドが表示されます。
 
-1. 選択 **[!UICONTROL 保存して閉じる]**. アダプティブフォームは [!DNL Adobe Sign] に対して有効になっています。
+1. 「**[!UICONTROL 保存して閉じる]**」を選択します。アダプティブフォームは [!DNL Adobe Sign] に対して有効になっています。
 
 ### Adobe Sign のフィールドをアダプティブフォームに追加する {#addadobesignfieldstoanadaptiveform}
 
@@ -130,15 +131,15 @@ ht-degree: 92%
    >
    >
 
-1. を選択します。 **[!UICONTROL Adobe Sign Block]** コンポーネントを選択し、 **編集** ![aem_6_3_edit](assets/aem_6_3_edit.png) アイコン。 フィールドを追加するためのオプションと、フィールドの外観を設定するためのオプションが表示されます。
+1. **[!UICONTROL Adobe Sign ブロック]**&#x200B;コンポーネントを選択し、**編集** ![aem_6_3_edit](assets/aem_6_3_edit.png) アイコンを選択します。フィールドを追加するためのオプションと、フィールドの外観を設定するためのオプションが表示されます。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
    **A.** [!DNL Adobe Sign] フィールドを選択して追加。**B.** [!DNL Adobe Sign] ブロックを展開して全画面表示。
 
-1. を選択します。 **[!UICONTROL Adobe Sign] フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) アイコン。 [!DNL Adobe Sign] フィールドの選択オプションと追加オプションが表示されます。
+1. **[!UICONTROL Adobe Sign] フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) アイコンを選択します。[!DNL Adobe Sign] フィールドの選択オプションと追加オプションが表示されます。
 
-   を展開します。 **[!UICONTROL タイプ]** 次を選択するためのドロップダウンフィールド： [!DNL Adobe Sign] フィールドで「完了」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 選択したフィールドを追加するアイコン [!DNL Adobe Sign] ブロック。 「**[!UICONTROL タイプ]**」ドロップダウンフィールドには、「署名」タイプ、「署名者の情報」タイプ、「データフィールド」タイプが表示されます。[!DNL Adobe Sign] が AEM に統合されている場合、[!DNL Forms] は「[!UICONTROL タイプ]」ドロップダウンボックスに表示されているフィールドのみサポートします。[!DNL Adobe Sign] フィールドについて詳しくは、 [Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/using/field-types.html) を参照してください。
+   **[!UICONTROL タイプ]**&#x200B;ドロップダウンフィールドを展開して [!DNL Adobe Sign] フィールドを選択し、完了 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択して、選択したフィールドを [!DNL Adobe Sign] ブロックに追加します。「**[!UICONTROL タイプ]**」ドロップダウンフィールドには、「署名」タイプ、「署名者の情報」タイプ、「データフィールド」タイプが表示されます。[!DNL Adobe Sign] が AEM に統合されている場合、[!DNL Forms] は「[!UICONTROL タイプ]」ドロップダウンボックスに表示されているフィールドのみサポートします。[!DNL Adobe Sign] フィールドについて詳しくは、 [Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/using/field-types.html) を参照してください。
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
@@ -153,7 +154,7 @@ ht-degree: 92%
 
 初期状態の [!DNL Adobe Sign] は、アダプティブフォームに対して有効になっていません。Adobe Sign を有効にするには、以下の手順を実行します。
 
-1. コンテンツブラウザーで、「 」を選択します。 **[!UICONTROL フォームコンテナ]**&#x200B;をクリックし、 **[!UICONTROL 設定]** ![設定](assets/configure.png) アイコン。 この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
+1. コンテンツブラウザーで「**[!UICONTROL フォームコンテナ]**」を選択し、**[!UICONTROL 設定]** ![configure](assets/configure.png) アイコンを選択します。この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
 1. このプロパティブラウザーで「**[!UICONTROL 電子サイン]**」アコーディオンを展開し、「**[!UICONTROL Adobe Sign を有効にする]**」オプションを選択します。この操作により、アダプティブフォームに対して [!DNL Adobe Sign] が有効になります。
 
 ### [!DNL Adobe Sign] Cloud Service と署名順序を選択する {#selectadobesigncloudserviceforanadaptiveform}
@@ -166,7 +167,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
 ![クラウドサービス](assets/cloud-service.png)
 
-1. コンテンツブラウザーで、「 」を選択します。 **[!UICONTROL フォームコンテナ]**&#x200B;をクリックし、 **[!UICONTROL 設定]** ![設定](assets/configure.png) アイコン。 この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
+1. コンテンツブラウザーで「**[!UICONTROL フォームコンテナ]**」を選択し、**[!UICONTROL 設定]** ![configure](assets/configure.png) アイコンを選択します。この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
 1. このプロパティブラウザーで「**[!UICONTROL 電子サイン]**」アコーディオンを展開し、「**[!UICONTROL Adobe Sign を有効にする]**」オプションを選択します。この操作により、アダプティブフォームに対して [!DNL Adobe Sign] が有効になります。
 1. 既に設定されている [!DNL Adobe Sign] Cloud Services のリストから、任意のクラウドサービスを選択します。
 
@@ -180,25 +181,25 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
    同時に署名する場合は、複数の署名者がフォームを同時に署名することができます。
 
-1. [アダプティブフォームに署名者を追加する](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) をクリックし、「完了」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンをクリックして変更を保存します。
+1. [アダプティブフォームに署名者を追加](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform)し、完了 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択して変更内容を保存します。
 
 
 ### アダプティブフォームに署名者を追加する {#addsignerstoanadaptiveform}
 
 1 つのアダプティブフォームに対して、署名者を 1 人だけ設定することも、複数の署名者を設定することもできます。署名者を追加する際に、その署名者の認証の詳細を設定することもできます。また、フォームの入力者と署名者を同じユーザーにするかどうかを選択することもできます。署名者に関する様々な詳細情報の追加と指定を行うには、次の手順を実行します。
 
-1. コンテンツブラウザーで、「 」を選択します。 **[!UICONTROL フォームコンテナ]**&#x200B;をクリックし、 **[!UICONTROL 設定]** ![設定](assets/configure.png) アイコン。 この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
+1. コンテンツブラウザーで「**[!UICONTROL フォームコンテナ]**」を選択し、**[!UICONTROL 設定]** ![configure](assets/configure.png) アイコンを選択します。この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。
 1. このプロパティブラウザーで「**[!UICONTROL 電子サイン]**」アコーディオンを展開し、「**[!UICONTROL Adobe Sign を有効にする]**」オプションを選択します。この操作により、アダプティブフォームに対して [!DNL Adobe Sign] が有効になります。
-1. 選択 **[!UICONTROL 署名者を追加]** under **[!UICONTROL 署名者の設定]**. アダプティブフォームに署名者が追加されます。1 つのアダプティブフォームに対して複数の [!DNL Adobe Sign] 署名者を追加できます。
+1. 「**[!UICONTROL 署名者設定]**」で「**[!UICONTROL 署名者を追加]**」を選択します。アダプティブフォームに署名者が追加されます。1 つのアダプティブフォームに対して複数の [!DNL Adobe Sign] 署名者を追加できます。
    ![phone-details](assets/phone-details.png)
 
 1. 「**編集** ![aem_6_3_edit](assets/aem_6_3_edit.png)」アイコンをクリックして、署名者に関する以下の情報を指定します。
 
    * **[!UICONTROL タイトル]：**&#x200B;署名者を一意に識別するためのタイトルを指定します。
 
-   * **[!UICONTROL 署名者とフォームの記入者は同じですか？]:** 選択 **はい**&#x200B;フォームの入力者と最初の署名者が同じ人物の場合は、 このオプションを「**いいえ**」に設定した場合は、アダプティブフォームの署名ステップコンポーネントは使用しないでください。フォームに署名ステップコンポーネントが含まれている場合は、このフィールドの値が自動的に「はい」に設定されます。
+   * **[!UICONTROL 署名者とフォーム記入者は同一ですか？]：** フォームの入力者と最初の署名者が同じである場合は「**はい**」を選択します。このオプションを「**いいえ**」に設定した場合は、アダプティブフォームの署名ステップコンポーネントは使用しないでください。フォームに署名ステップコンポーネントが含まれている場合は、このフィールドの値が自動的に「はい」に設定されます。
 
-   * **[!UICONTROL 署名者のメールアドレス]：**&#x200B;署名者のメールアドレスを指定します。署名者は、ここで指定したメールアドレスで、署名する必要があるドキュメントやフォームを受信します。フォームフィールドで指定されたメールアドレスを使用するか、ログインユーザーの AEM ユーザープロファイルで指定されたメールアドレスを使用するか、メールアドレスを手動で入力することができます。このステップは、必ず実行する必要があります。最初の署名者または唯一の署名者（署名者が 1 人の場合）の電子メールアドレスが、 [!DNL Adobe Sign] AEM cloud services の設定に使用するアカウント。
+   * **[!UICONTROL 署名者のメールアドレス]：**&#x200B;署名者のメールアドレスを指定します。署名者は、ここで指定したメールアドレスで、署名する必要があるドキュメントやフォームを受信します。フォームフィールドで指定されたメールアドレスを使用するか、ログインユーザーの AEM ユーザープロファイルで指定されたメールアドレスを使用するか、メールアドレスを手動で入力することができます。このステップは、必ず実行する必要があります。最初の署名者または唯一の署名者（署名者が 1 人の場合）のメールアドレスが、AEM Cloud Service の設定に使用された [!DNL Adobe Sign] アカウントと一致していないことを確認します。
 
    * **[!UICONTROL 署名者の認証方法]：**&#x200B;署名するフォームを開く前にユーザーを認証する方法を指定します。電話認証、ナレッジベース認証、ソーシャル ID に基づく認証のいずれかを選択することができます。Adobe Acrobat Sign Solutions for Government で使用できるのは、電話認証とナレッジベース認証のみです。
 
@@ -214,7 +215,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
    上の画像には、Personal-Information と Office-details という 2 つのサンプルの [!DNL Adobe Sign] ブロックが表示されています。
 
-   「完了」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコン。 署名者が追加され、設定が完了します。
+   完了 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択します。署名者が追加され、設定が完了します。
 
 ### アダプティブフォームに対して送信アクションを選択する {#selectsubmitactionforanadaptiveform}
 
@@ -240,15 +241,15 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
    ![署名ブロック](assets/sign-block-new.png)
 
-1. を選択します。 **[!UICONTROL Adobe Sign Block]** コンポーネントを選択し、 **編集** ![aem_6_3_edit](assets/aem_6_3_edit.png) アイコン。 フィールドを追加するためのオプションと、フィールドの外観を設定するためのオプションが表示されます。
+1. **[!UICONTROL Adobe Sign ブロック]**&#x200B;コンポーネントを選択し、**編集** ![aem_6_3_edit](assets/aem_6_3_edit.png) アイコンを選択します。フィールドを追加するためのオプションと、フィールドの外観を設定するためのオプションが表示されます。
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
    **A.** [!DNL Adobe Sign] フィールドを選択して追加。**B.** [!DNL Adobe Sign] ブロックを展開して全画面表示。
 
-1. を選択します。 **[!UICONTROL Adobe Sign Field]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) アイコン。 [!DNL Adobe Sign] フィールドの選択オプションと追加オプションが表示されます。
+1. **[!UICONTROL Adobe Sign フィールド]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png) アイコンを選択します。[!DNL Adobe Sign] フィールドの選択オプションと追加オプションが表示されます。
 
-   を展開します。 **[!UICONTROL タイプ]** 選択するドロップダウンフィールド **[!UICONTROL 電子署名]** をクリックし、 **完了** 選択したフィールドを追加するアイコン [!DNL Adobe Sign] ブロック。
+   **[!UICONTROL タイプ]**&#x200B;ドロップダウンフィールドを展開して「**[!UICONTROL デジタル署名]**」を選択し、「**完了**」アイコンを選択して、選択したフィールドを [!DNL Adobe Sign] ブロックに追加します。
 
    ![電子署名](assets/digital_signatures_new.png)
 
@@ -283,7 +284,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 署名ステップコンポーネントを設定するには、以下の手順を実行します。
 
 1. **[!UICONTROL 署名ステップ]**&#x200B;コンポーネントを、コンポーネントブラウザーからフォームにドラッグ＆ドロップします。
-1. 新しく追加された署名ステップコンポーネントを選択し、 **設定** ![設定](assets/configure.png) アイコン。 この操作により、署名ステップのプロパティを表示するプロパティブラウザーが開きます。以下のプロパティを設定します。
+1. 新しく追加された署名ステップコンポーネントを選択し、**設定** ![configure](assets/configure.png) アイコンを選択します。この操作により、署名ステップのプロパティを表示するプロパティブラウザーが開きます。以下のプロパティを設定します。
 
    * **[!UICONTROL 名前]**：コンポーネントの名前を指定します。
 
@@ -297,7 +298,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
    * **[!UICONTROL CSS クラス]**：コンポーネントの CSS クラスを指定します。
 
-   「完了」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンをクリックして変更を保存します。
+   完了 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択して、変更を保存します。
 
    ![署名ステップ](assets/signature_step_new.png)
 
@@ -350,7 +351,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 * [!DNL Adobe Sign]Cloud Service の設定に使用する[!DNL Adobe Sign]サーバー上の API アプリケーションに、必要な権限があることを確認します。
 * 複数の[!DNL Adobe Sign]Cloud Services を使用している場合は、すべてのサービスの&#x200B;**[!UICONTROL OAuth URL]**&#x200B;を同じ&#x200B;**[!UICONTROL Adobe Sign シャード]**&#x200B;に指定します。
 
-* [!DNL Adobe Sign]アカウントと、最初の署名者と単一の署名者を設定するには、別々のメールアドレスを使用します。最初の署名者の電子メールアドレスまたは唯一の署名者（署名者が 1 人の場合）は、 [!DNL Adobe Sign] AEM cloud services の設定に使用するアカウント。
+* [!DNL Adobe Sign]アカウントと、最初の署名者と単一の署名者を設定するには、別々のメールアドレスを使用します。最初の署名者または唯一の署名者（署名者が 1 人の場合）のメールアドレスを、AEM Cloud Services の設定に使用された [!DNL Adobe Sign] アカウントと同一にすることはできません。
 
 ### [!DNL Adobe Sign] により有効化されたアダプティブフォーム用の AEM [!DNL Forms] ワークフローが開始しない {#adobe-sign-aem-form-workflow-failures}
 

@@ -1,13 +1,14 @@
 ---
 title: Adobe Developer Console での JWT 資格情報の非推奨（廃止予定）
 description: AEM の Adobe Developer Console での JWT 資格情報の非推奨（廃止予定）の影響について説明します。
-source-git-commit: 72974d27fecbd9c242f66e203b02463c22b93108
+exl-id: f19a92de-ba6a-4f6d-9e12-60ad1bad2e74
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 80%
 
 ---
-
 
 # Adobe Developer Console での JWT 資格情報の非推奨（廃止予定） {#jwt-credentials-deprecation-in-adobe-developer-console}
 

@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '661'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,7 @@ ht-degree: 90%
 次の手順を使用して、ページの分析とレコメンデーションを表示します。
 
 1. 分析するページに移動します。
-1. ツールバーで、 **Analytics とRecommendations**.
+1. ツールバーで、「**分析と推奨表示**」をクリックします。
 
    >[!NOTE]
    >
@@ -48,7 +49,7 @@ ht-degree: 90%
 
 コンテンツインサイトページのレポート期間を変更するには、次の手順を実行します。
 
-1. ページの上部に期間が表示されない場合は、期間を切り替えアイコンをクリックします。
+1. ページの上部にタイムフレームが表示されない場合は、タイムフレームを切り替えアイコンをクリックします。
 
    ![タイムフレームを切り替え](do-not-localize/chlimage_1-22.png)
 
@@ -70,7 +71,7 @@ ht-degree: 90%
 
    ![chlimage_1-128](assets/chlimage_1-128.png)
 
-1. 目的の精度をクリックします。 選択すると、レポートが自動的に更新され、精度が反映されます。
+1. 目的の精度をクリックします。選択すると、レポートが自動的に更新され、精度が反映されます。
 
 ### SEO レコメンデーションのタスクの割り当て {#assigning-tasks-for-seo-recommendations}
 
@@ -86,7 +87,7 @@ SEO のレコメンデーションのステータスは、タスクが作成さ�
 
 次の手順を使用して、SEO のレコメンデーションのタスクを作成します。
 
-1. SEO レコメンデーションの情報アイコンをクリックします。
+1. SEO の推奨の情報アイコンをクリックします。
 
    ![情報アイコン](do-not-localize/chlimage_1-23.png)
 
@@ -105,4 +106,4 @@ SEO のレコメンデーションのステータスは、タスクが作成さ�
 
    **注意 :**&#x200B;作成されるタスクには、SEO のレコメンデーションが適用されるページへのパスも含まれます。
 
-1. 「完了」をクリックして、「作成されたタスク」メッセージを閉じます。
+1. 「完了」をクリックして、「タスクを作成しました」のメッセージを閉じます。

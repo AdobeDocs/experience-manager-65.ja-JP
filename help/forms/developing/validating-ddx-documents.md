@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1507'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +53,7 @@ DDX ドキュメントを検証するには、次のタスクを実行します�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
 
 **Assembler クライアントの PDF を作成**
 
@@ -152,7 +153,7 @@ Assembler Service API（web サービス）を使用して DDX ドキュメン�
 
    >[!NOTE]
    >
-   >localhost をFormsサーバーの IP アドレスに置き換えます。
+   >localhost を Forms サーバーの IP アドレスに置き換えます。
 
 1. PDF Assembler クライアントを作成します。
 

@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 84%
+source-wordcount: '269'
+ht-degree: 100%
 
 ---
 
@@ -28,11 +29,11 @@ ht-degree: 84%
    * アセットページの&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックします。
 
 1. 画像マップを挿入するには、 ツールバーの&#x200B;**[!UICONTROL 起動マップ]** ![画像マップ](assets/do-not-localize/image-map-icon.png) をクリックします。
-1. 画像マップの形状を選択します。 選択したシェイプのホットスポットが画像上に配置されます。
+1. 画像マップのシェイプを選択します。選択したシェイプのホットスポットが画像上に置かれます。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. ホットスポットをクリックし、URL と代替テキストを入力します。次から： **[!UICONTROL Target]** リストで、同じタブ、新しいタブ、iFrame など、画像マップを表示する場所を指定します。 例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
+1. ホットスポットをクリックし、URL と代替テキストを入力します。「**[!UICONTROL ターゲット]**」リストから、画像マップを表示する場所（例：同じタブ、新しいタブ、iFrame など）を指定します。例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 

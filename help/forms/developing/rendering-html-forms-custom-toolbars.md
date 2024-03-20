@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 0b992b1c-3878-447a-bccc-7034aa3e98bc
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2328'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +26,7 @@ Forms サービスを使用すると、HTML フォームでレンダリングさ
 
 >[!NOTE]
 >
->この URI の場所は、adobe-forms-core.jar ファイル（ adobe-forms-dsc.jar ファイル内）にあります。 adobe-forms-dsc.jar ファイルはC:\Adobe\Adobe_Experience_Manager_forms\フォルダーにあります (C:\はインストールディレクトリです )。 Win RAR などのファイル抽出ツールを使用して、adobe を開くことができます。
+>この URI の場所は、adobe-forms-core.jar ファイル（adobe-forms-dsc.jar ファイル内）にあります。adobe-forms-dsc.jar ファイルは、C:\Adobe\Adobe_Experience_Manager_forms\ フォルダーにあります（C:\ はインストールディレクトリです）。Win RAR などのファイル抽出ツールを使用して、adobe を開くことができます。
 
 この場所から fscmenu.xml をコピーして、必要に応じて変更し、カスタムの URI の場所に配置できます。次に、Forms Service API を使用して、指定された場所の fscmenu.xml ファイルを Forms サービスが使用するように、ランタイムオプションを設定します。これらのアクションにより、Forms サービスはカスタムツールバーを持つ HTML フォームをレンダリングします。
 
@@ -52,7 +53,7 @@ fscCSS は、特定のノードに関連付けられているスタイルシー�
 >
 >これらのファイルの参照方法を混在させることはお勧めしません。つまり、すべての URI は、`FSToolBarURI` キーワードまたは絶対位置のいずれかを使用して、参照する必要があります。
 
-JS ファイルと CSS ファイルを取得するには、adobe-forms-&lt;appserver>.ear ファイルを開きます。このファイル内で、adobe-forms-res.war を開きます。これらのファイルはすべて WAR ファイルに含まれています。 adobe-forms-&lt;appserver>.ear ファイルは、AEM forms のインストールフォルダーにあります (C:\はインストールディレクトリです )。 adobe-forms-&lt;appserver>.ear は、WinRAR などのファイル展開ツールを使用して開くことができます。
+JS ファイルと CSS ファイルを取得するには、adobe-forms-&lt;appserver>.ear ファイルを開きます。このファイル内で、adobe-forms-res.war を開きます。これらのファイルはすべて WAR ファイル内にあります。adobe-forms-&lt;appserver>.ear ファイルは、AEM Forms のインストールフォルダー内にあります（C:\ はインストールディレクトリです）。adobe-forms-&lt;appserver>.ear は、WinRAR などのファイル展開ツールを使用して開くことができます。
 
 次の XML 構文は、サンプルの fscmenu.xml ファイルを示しています。
 

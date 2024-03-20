@@ -10,10 +10,11 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c30630f0cd561256414a2883d29c9ee4be470ce1
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '11187'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +41,7 @@ ht-degree: 96%
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
 
-   * 独自のビデオエンコーディングプロファイルを作成します。 または、次のように定義済み _アダプティブビデオエンコーディング_ Dynamic Mediaに付属するプロファイル。
+   * 独自のビデオエンコーディングプロファイルを作成します。または、ダイナミックメディアに付属する、事前定義済みの「_アダプティブビデオエンコーディング_」プロファイルを使用します。
 
       * [ビデオエンコーディングプロファイルを作成します](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
       * 詳しくは、[ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)を参照してください。
@@ -149,7 +150,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 
 アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)を参照してください。
 
-Dynamic Mediaは、MP4 H.264 ビデオのモバイルビデオ再生をサポートしています。 <!-- LINK IS 404 WITH NO SUITABLE REPLACEMENT You can find BlackBerry&reg; devices that support this video format at the following: [Supported video formats on BlackBerry&reg;](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482). -->
+Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。<!-- LINK IS 404 WITH NO SUITABLE REPLACEMENT You can find BlackBerry&reg; devices that support this video format at the following: [Supported video formats on BlackBerry&reg;](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482). -->
 
 このビデオ形式をサポートする Windows デバイスについては、[Windows Phone 8 でサポートされているメディアコーデック](https://learn.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs)のページで確認できます。
 
@@ -509,7 +510,7 @@ DASH（Digital Adaptive Streaming over HTTP）は、ビデオストリーミン�
 
 **ビデオレポートを表示するには：**
 
-1. Experience Managerの左上隅でExperience Managerロゴを選択し、左側のレールで「 」を選択します。 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL Assets]** > **[!UICONTROL ビデオレポート]**.
+1. Experience Manager の左上隅にある Experience Manager ロゴを選択し、左パネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL ビデオレポート]**&#x200B;を選択します。
 1. ビデオレポートページで、次のいずれかの操作を行います。
 
    * 右上隅付近にある&#x200B;**ビデオレポートを更新**&#x200B;アイコンを選択します。「更新」を使用するのは、レポートの終了日が今日の日付である場合のみです。これにより、前回のレポート実行以降に発生したビデオトラッキングを確認できます。
@@ -739,7 +740,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 >デフォルトのオーディオの再生は、次のブラウザーで設定されている内容によっても異なります。
 >
 >* Chrome - ビデオに設定されているデフォルトのオーディオが再生されます。
-* Safari - Safari でデフォルト言語が設定されている場合、オーディオは設定されたデフォルト言語で再生されます（ビデオのマニフェストで使用できる場合）。それ以外の場合は、ビデオのプロパティの一部として設定されたデフォルトのオーディオが再生されます。
+>* Safari - Safari でデフォルト言語が設定されている場合、オーディオは設定されたデフォルト言語で再生されます（ビデオのマニフェストで使用できる場合）。それ以外の場合は、ビデオのプロパティの一部として設定されたデフォルトのオーディオが再生されます。
 
 **複数のオーディオトラックがあるビデオのデフォルトオーディオを設定するには：**
 
@@ -766,7 +767,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 
 >[!NOTE]
 >
-Experience Manager のデフォルトの「プレビュー」タブには、複数のサブタイトルとオーディオトラックは表示されません。これは、これらのトラックが Dynamic Media に関連付けられており、Dynamic Media ビューアーのプレビューでのみ表示できるからです。
+>Experience Manager のデフォルトの「プレビュー」タブには、複数のサブタイトルとオーディオトラックは表示されません。これは、これらのトラックが Dynamic Media に関連付けられており、Dynamic Media ビューアーのプレビューでのみ表示できるからです。
 
 **複数のサブタイトルとオーディオトラックを持つビデオをプレビューするには：**
 
@@ -845,7 +846,7 @@ Experience Manager のデフォルトの「プレビュー」タブには、複�
 
 >[!IMPORTANT]
 >
-アドビでは、ダイナミックメディアアカウントで[マルチサブタイトルおよびマルチオーディオトラック機能を有効化](#enable-dash)することをお勧めします。そうすることで、最新の Dynamic Media バックエンドアーキテクチャと、キャプション、サブタイトル、オーディオトラックをビデオに追加するための簡素化されたワークフローを利用できるようになります。
+>アドビでは、ダイナミックメディアアカウントで[マルチサブタイトルおよびマルチオーディオトラック機能を有効化](#enable-dash)することをお勧めします。そうすることで、最新の Dynamic Media バックエンドアーキテクチャと、キャプション、サブタイトル、オーディオトラックをビデオに追加するための簡素化されたワークフローを利用できるようになります。
 
 1 つのビデオまたはアダプティブビデオセットにクローズドキャプションを追加すると、ビデオの配信先をグローバルマーケットまで拡大できます。クローズドキャプションを追加すると、音声をダビングする必要も、異なる言語ごとにネイティブスピーカーの音声を使って再録音する必要もなくなります。ビデオは、録画された言語で再生されます。様々な言語を使う人々が音声を理解できるように、外国語の字幕が表示されます。
 
@@ -853,7 +854,7 @@ Experience Manager のデフォルトの「プレビュー」タブには、複�
 
 >[!NOTE]
 >
-使用するビデオプレーヤーがキャプションの表示に対応する必要があります。
+>使用するビデオプレーヤーがキャプションの表示に対応する必要があります。
 
 [Dynamic Media のアクセシビリティ](/help/assets/accessibility-dm.md)も参照してください。
 
@@ -869,7 +870,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
    [WebVTT：Web Video Text Tracks 形式（英語）](https://w3c.github.io/webvtt/)を参照してください。
 
-   Dynamic Mediaの外部で WebVTT キャプション/サブタイトルファイルを作成する際に使用できる、無料およびプレミアムのツールとサービスの両方を提供する Web サイトが多数あります。 <!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
+   Dynamic Media 以外で WebVTT キャプションやサブタイトルのファイルの作成に使用できる、無料と有料のツールやサービスを提供している web サイトが多数あります。<!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
    <!--[WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -877,11 +878,11 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
    In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video. -->
 
-   サイトの画面に表示される指示に従って、WebVTT ファイルを作成し、保存します。 完了したら、キャプションファイルの内容をコピーしてプレーンテキストエディターに貼り付け、`.vtt` のファイル拡張子で保存します。
+   サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。完了したら、キャプションファイルの内容をコピーしてプレーンテキストエディターに貼り付け、`.vtt` のファイル拡張子で保存します。
 
    >[!NOTE]
    >
-   複数言語のビデオサブタイトルを用意してグローバル対応する場合、WebVTT 標準の規定により、サポート対象の言語ごとに個別の .vtt ファイルを作成して呼び出す必要があります。
+   >複数言語のビデオサブタイトルを用意してグローバル対応する場合、WebVTT 標準の規定により、サポート対象の言語ごとに個別の .vtt ファイルを作成して呼び出す必要があります。
 
    一般に、キャプションの VTT ファイルにはビデオファイルと同じ名前を付け、名前の末尾に言語ロケール（-EN、-FR、-DE、-JA など）を追加します。そうしておくと、既存の web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 
@@ -894,7 +895,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
 1. 次のいずれかの操作を行います。
 
-   * ポップアップビデオビューアエクスペリエンスの場合は、 **[!UICONTROL URL]**. URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
+   * ポップアップビデオビューアエクスペリエンスの場合、「**[!UICONTROL URL]**」を選択します。URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
 
      `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
@@ -912,7 +913,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
 >[!NOTE]
 >
-ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーをサポートしているとは限りません。
+>ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーをサポートしているとは限りません。
 
 必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアを作成する方法については、Adobe HTML5 Viewer SDK API ドキュメントで `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber` クラスの説明の「Customizing Behavior Using Modifiers」節を参照してください。[HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) ドキュメントを参照してください。
 
@@ -964,8 +965,8 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
        <td>
        <ol>
        <li>アップロードしたチャプターファイルを関連付ける、<i>公開済み</i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
-       <li>ドロップダウンメニューから、 <strong>ビューア</strong>.</li>
-       <li>左側のレールで、ビデオビューアプリセット名をクリックします。 ビデオのプレビューが別のページで開きます。</li>
+       <li>ドロップダウンメニューで「<strong>ビューア</strong>」をクリックします。</li>
+       <li>左パネルで、ビデオビューアプリセット名をクリックします。ビデオのプレビューが別のページで開きます。</li>
        <li>左側のレールの下部にある「<strong>URL</strong>」をクリックします。</li>
        <li>URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。</li>
        <li>ビデオのコピー済み URL を次の構文で追加すると、チャプターファイルのコピー済み URL に関連付けることができます。<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
@@ -976,8 +977,8 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
        <td>
        <ol>
        <li>アップロードしたチャプターファイルを関連付ける、<i>公開済み</i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
-       <li>ドロップダウンメニューから、 <strong>ビューア</strong>.</li>
-       <li>左側のレールで、ビデオビューアプリセット名をクリックします。 ビデオのプレビューが別のページで開きます。</li>
+       <li>ドロップダウンメニューで「<strong>ビューア</strong>」をクリックします。</li>
+       <li>左パネルで、ビデオビューアプリセット名をクリックします。ビデオのプレビューが別のページで開きます。</li>
        <li>左側のレールの下部にある「<strong>埋め込み</strong>」をクリックします。</li>
        <li>埋め込みコードダイアログボックスで、コード全体を選択してクリップボードにコピーし、そのコードを単純なテキストエディターに貼り付けます。</li>
        <li>ビデオの埋め込みコードを次の構文で追加して、チャプターファイルのコピー済み URL に関連付けることができます。<br /> <br /> <code>videoViewer.setParam("navigation","&lt;<i>full_copied_URL_path_to_chapter_file</i>.vtt&gt;"</code></li>
@@ -1054,14 +1055,14 @@ Dynamic Media で生成されたサムネイルを使用する代わりに、ビ
 
 1. ビデオサムネールを追加する、アップロード済みビデオアセットに移動します。
 1. リスト表示またはカード表示のアセット選択モードで、ビデオアセットを選択します。
-1. ツールバーで、 **[!UICONTROL プロパティを表示]** アイコン（「i」が付いた円）
-1. ビデオの [プロパティ] ページで、[**[!UICONTROL サムネールを変更]**] を選択します。
-1. サムネールを変更ページのツールバーで、を選択します。 **[!UICONTROL フレームを選択]**.
+1. ツールバーで、「**[!UICONTROL プロパティを表示]**」アイコン（中に「i」がある円）を選択します。
+1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」を選択します。
+1. サムネールの変更ページのツールバーで、「**[!UICONTROL フレームを選択]**」を選択します。
 
    デフォルトの時間間隔またはカスタマイズした時間間隔に基づき、Dynamic Media によって一連のサムネール画像がビデオから生成されます。
 
 1. 生成されたサムネイル画像をプレビューし、ビデオに追加する画像を選択します。
-1. 選択 **[!UICONTROL 変更を保存]**.
+1. 「**[!UICONTROL 変更を保存]**」を選択します。
 
    ビデオのサムネイル画像が更新され、選択したサムネールが使用されます。後でサムネール画像を変更する場合は、「**[!UICONTROL サムネールを変更]**」ページに戻って新しいサムネイルを選択します。
 
@@ -1077,21 +1078,21 @@ Dynamic Media で生成されたサムネイルを使用する代わりに、ビ
 
 **ビデオサムネールが生成されるデフォルトの時間間隔を設定するには：**
 
-1. 「Experience Manager」で、「 **[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
+1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** を選択します。
 
 1. CRXDE Lite ページの左側にあるディレクトリパネルで、`o etc/dam/imageserver/configuration/jcr:content/settings.` に移動します。
 
-   ディレクトリパネルが表示されない場合は、「ホーム」タブの左側にある「>>」アイコンを選択します。
+   このディレクトリパネルが表示されない場合は、「ホーム」タブの左側にある >> アイコンを選択します。
 
-1. 右下のパネルの「プロパティ」タブで、をダブル選択します。 `thumbnailtime`.
+1. 右下のパネルにある「プロパティ」タブで、「`thumbnailtime`」をダブルクリックします。
 1. **[!UICONTROL thumbnailtime を編集]**&#x200B;ダイアログボックスで、テキストフィールドに間隔値を割合で入力します。
 
-   * 1 つ以上の間隔値フィールドを追加する場合は、プラス記号 (+) アイコンを選択します。 このアイコンは、ダイアログボックスの下部までスクロールしないと表示されない場合があります。
-   * リストから間隔値を削除する場合は、間隔値フィールドの右側にあるマイナス記号 (-) アイコンを選択します。
-   * 間隔の値を並べ替えるには、上向き矢印アイコンと下向き矢印アイコンを選択します。
+   * 1 つ以上の間隔値フィールドを追加するには、プラス記号（+）アイコンを選択します。このアイコンは、ダイアログボックスの下部までスクロールしないと表示されない場合があります。
+   * リストから間隔値フィールドを削除するには、そのフィールドの右側にあるマイナス記号（-）アイコンを選択します。
+   * 間隔値の順序を変更するには、上向き矢印アイコンと下向き矢印アイコンを選択します。
 
-1. 選択 **[!UICONTROL OK]** 「プロパティ」タブに戻ります。
-1. CRXDE Liteページの左上隅付近で、「 **[!UICONTROL すべて保存]**&#x200B;をクリックし、左上隅のホームに戻るアイコンを選択して、Experience Managerに戻ります。
+1. 「**[!UICONTROL OK]**」を選択して、「プロパティ」タブに戻ります。
+1. CRXDE Lite ページの左上隅にある「**[!UICONTROL すべて保存]**」を選択した後、左上隅の「ホームに戻る」アイコンを選択して Experience Manager に戻ります。
 
    詳しくは、[ビデオサムネールの追加](#adding-a-video-thumbnail)を参照してください。
 
@@ -1103,11 +1104,11 @@ Dynamic Media で生成されたサムネイルを使用する代わりに、ビ
 
 1. カスタムビデオサムネールを追加するアップロード済みビデオアセットに移動します。
 1. リスト表示またはカード表示のアセット選択モードで、ビデオアセットを選択します。
-1. ツールバーで、 **[!UICONTROL プロパティを表示]** アイコン（「i」が付いた円）
-1. ビデオの [プロパティ] ページで、[**[!UICONTROL サムネールを変更]**] を選択します。
-1. サムネールを変更ページのツールバーで、を選択します。 **[!UICONTROL 新しいサムネールをアップロード]**.
-1. 使用するサムネール画像に移動して選択し、「 」を選択します。 **[!UICONTROL 開く]** をクリックして、画像のExperience Managerへのアップロードを開始します。 アップロード後は、必ず画像を公開してください。
-1. 画像のアップロードと公開が完了したら、サムネールを変更ページで、「 」を選択します。 **[!UICONTROL 変更を保存]**.
+1. ツールバーで、「**[!UICONTROL プロパティを表示]**」アイコン（中に「i」がある円）を選択します。
+1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」を選択します。
+1. サムネールの変更ページのツールバーで、「**[!UICONTROL 新しいサムネールをアップロード]**」を選択します。
+1. 使用するサムネール画像に移動してその画像を選択し、「**[!UICONTROL 開く]**」を選択して Experience Manager への画像のアップロードを開始します。アップロード後は、必ず画像を公開してください。
+1. 画像のアップロードと公開が完了したら、サムネールの変更ページで「**[!UICONTROL 変更を保存]**」を選択します。
 
    カスタムサムネールがビデオに追加されます。
 

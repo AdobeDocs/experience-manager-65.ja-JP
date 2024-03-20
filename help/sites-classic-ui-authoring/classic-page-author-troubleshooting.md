@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '429'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->管理者権限を持ち AEM の問題をトラブルシューティングするユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に記載されたトラブルシューティング方法を使用できます。十分な権限がない場合は、AEMのトラブルシューティングに関して、システム管理者に問い合わせてください。
+>管理者権限を持ち AEM の問題をトラブルシューティングするユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に記載されたトラブルシューティング方法を使用できます。十分な権限がない場合は、AEM のトラブルシューティングに関してシステム管理者にお問い合わせください。
 
 ## 公開されたサイト上に古いバージョンのページがまだある {#old-page-version-still-on-published-site}
 

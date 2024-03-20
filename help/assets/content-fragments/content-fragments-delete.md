@@ -4,16 +4,17 @@ description: AEM でコンテンツフラグメント削除ポリシーを定義
 feature: Content Fragments
 role: User
 exl-id: 6212457e-a171-4c33-8d19-54c26516e981
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 100%
+source-wordcount: '510'
+ht-degree: 86%
 
 ---
 
 # コンテンツフラグメント - 削除に関する考慮事項 {#content-fragments-delete-considerations}
 
-AEM でコンテンツフラグメント削除ポリシーを定義する前に、以下の重要な考慮事項を確認してください。コンテンツフラグメントはヘッドレスコンテンツを配信する強力なツールです。削除する際は、影響を慎重に考慮する必要があります。
+AEM でコンテンツフラグメント削除ポリシーを定義する前に、以下の重要な考慮事項を確認してください。コンテンツフラグメントはヘッドレスコンテンツを配信する強力なツールです。削除する際は、影響を考慮して慎重に行う必要があります。
 
 ## 権限 - 削除または削除禁止 {#permissions-delete-or-not-delete}
 
@@ -35,11 +36,11 @@ AEM でコンテンツフラグメント削除ポリシーを定義する前に�
 
 >[!NOTE]
 >
->ユーザーに[削除](/help/sites-administering/security.md#actions)権限がない場合、コンテンツフラグメントエディターは&#x200B;*読み取り専用*&#x200B;モードで動作します。
+>ユーザーが [削除](/help/sites-administering/security.md#actions) 権限を持つ場合、コンテンツフラグメントエディターは *読み取り専用* モード。
 
 >[!NOTE]
 >
->[AEM でのユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md)も参照してください。
+>関連トピック [AEMでユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md).
 
 ## エディター機能のみに必要な権限 {#permissions-required-for-editor-functionality-only}
 
@@ -49,9 +50,9 @@ AEM でコンテンツフラグメント削除ポリシーを定義する前に�
 
 >[!NOTE]
 >
->コンテンツフラグメントの編集または更新に必要な削除権限は、[ユーザー管理やグループ管理で割り当てられた](/help/sites-administering/security.md#managing-permissions)削除権限に含まれています。
+>コンテンツフラグメントの編集または更新に必要な削除権限は、削除権限に含まれます [ユーザー管理やグループ管理を通じて割り当てられる](/help/sites-administering/security.md#managing-permissions).
 
-フラグメントの編集または更新に必要な権限は、コンテンツフラグメントを含んでいるノードまたは適切な親ノード（`/content/dam` 下の任意のレベル）のどちらかに適用する必要があります。このような親ノードに割り当てられた権限は、そのブランチ内のすべてのノードに適用されます。
+フラグメントの編集または更新に必要な権限は、コンテンツフラグメントを含んでいるノードまたは適切な親ノード（`/content/dam` 下の任意のレベル）のどちらかに適用する必要があります。このような親ノードに割り当てられると、権限はそのブランチ内のすべてのノードに適用されます。
 
 例えば、すべてのコンテンツフラグメントが格納される次のようなフォルダーです。
 

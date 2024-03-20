@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1558'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -84,9 +85,9 @@ JBoss® サーバーに加えて、アプリケーションサーバーのサー
 
 AEM では、オーディエンスを作成し、A/B テストに使用できます。AEM 内で作成したオーディエンスは、AEM Forms で使用できます。AEM 内でオーディエンスを作成するには、以下のように行います。
 
-1. オーサリングインスタンスで、「 」を選択します。 **Adobe Experience Manager** > **パーソナライズ** > **オーディエンス**.
+1. オーサーインスタンスで、**Adobe Experience Manager**／**パーソナライズ機能**／**オーディエンス**&#x200B;を選択します。
 
-1. オーディエンスページで、「 **オーディエンスを作成/ Target オーディエンスを作成**.
+1. オーディエンスページで、**オーディエンスを作成／ターゲットオーディエンスを作成**&#x200B;を選択します。
 1. Adobe Target 設定ダイアログで、ターゲット設定を選択し、「**OK**」をクリックします。
 1. 新しいオーディエンスを作成ページで、ルールを作成します。ルールを使用すると、オーディエンスを分類できます。例えば、オペレーティングシステムに基づいてオーディエンスを分類する場合などです。オーディエンス A は Windows から、オーディエンス B は Linux® から来ています。
 
@@ -98,7 +99,7 @@ AEM では、オーディエンスを作成し、A/B テストに使用できま
 
 以下のように、フォームに対して A/B テストを設定する際に、オーディエンスを選択できます。
 
-## アダプティブフォームの A/B テストの作成 {#create-a-b-test}
+## アダプティブフォームの A/B テストを作成 {#create-a-b-test}
 
 1. https://&lt;*hostname*>:&lt;*port*>/aem/forms.html/content/dam/formsanddocuments の「**フォームとドキュメント**」へ進みます。
 

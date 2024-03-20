@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '530'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +45,7 @@ Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベス
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td>
    <td><a href="/help/assets/organize-assets.md">ファイル管理のベストプラクティス</a></td>
-   <td>ほとんどの処理プロファイルはフォルダーベースです。ビデオ、メタデータ、画像処理は常にフォルダーに適用されます。 このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td>
+   <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーを基準としています。このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td>
   </tr>
   <tr>
    <td>Scene7 と AEM の統合</td>

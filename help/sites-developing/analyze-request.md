@@ -1,15 +1,16 @@
 ---
 title: リクエスト分析スクリプト
-description: リクエスト分析スクリプトは、access.log ファイルの分析を容易にし、後で処理するための読み取り可能なレポートを生成するように作成されます。
+description: このリクエスト分析スクリプトは、access.log ファイルの分析を簡易化し、後の処理で役立つようにわかりやすいレポートを生成します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 exl-id: e14a9cda-890f-46b7-9433-1b52eb91eae3
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 

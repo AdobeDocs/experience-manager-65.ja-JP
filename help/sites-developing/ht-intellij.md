@@ -1,15 +1,16 @@
 ---
 title: IntelliJ IDEA を使用して AEM プロジェクトを開発する方法
-description: IntelliJ IDEA を使用してAdobe Experience Managerプロジェクトを開発する方法を説明します。
+description: IntelliJ IDEA を使用してAdobe Experience Manager プロジェクトを開発する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '640'
-ht-degree: 88%
+ht-degree: 97%
 
 ---
 
@@ -56,7 +57,7 @@ IntelliJ IDEA では JSP との連携もサポートされます。サポート�
 1. 次の手順を使用して、IntelliJ IDEA で&#x200B;**読み込み**&#x200B;ダイアログを開きます。
 
    * プロジェクトを開いていない場合は、ようこそ画面の「**プロジェクトを読み込む**」を選択します。
-   * 選択 **ファイル/プロジェクトを読み込み** メインメニューから
+   * メインメニューから&#x200B;**ファイル／プロジェクトを読み込む**&#x200B;を選択します。
 
 1. 読み込みダイアログで、プロジェクトの POM ファイルを選択します。
 
@@ -84,7 +85,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 
 デバッグ用の JSP を検索する場所を IntelliJ IDEA で認識する必要があります。IDEA では `content-package-maven-plugin` 設定を解釈できないので、これを手動で設定する必要があります。
 
-1. に移動します。 **ファイル/プロジェクト構造**
+1. **ファイル／プロジェクト構造**&#x200B;に移動します。
 1. 「**コンテンツ**」モジュールを選択します。
 1. モジュールのリストの上にある「**+**」をクリックして、「**Web**」を選択します。
 1. Web リソースディレクトリとして、以下のスクリーンショットに示すように、プロジェクトの `content/src/main/content/jcr_root subdirectory` を選択します。
@@ -102,7 +103,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 
 #### デバッグプロファイルの設定 {#configure-a-debug-profile}
 
-1. に移動します。 **実行/設定を編集**
+1. **実行／設定を編集**&#x200B;に移動します。
 1. 「**+**」をクリックして「**JSR45 Remote**」を選択します。
 1. 設定ダイアログで、「**アプリケーションサーバー**」の横にある「**設定**」を選択して、Generic サーバーを設定します。
 1. デバッグの開始時にブラウザーを開く場合は、開始ページを適切な URL に設定します。
@@ -116,7 +117,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 
 必要な最後の手順は、IntelliJ IDEA が推奨する JVM オプションを指定して AEM を起動することです。
 
-AEM jar ファイルを直接起動し、次のコマンドラインなどを使用して、これらのオプションを追加します。
+AEM jar ファイルを直接起動して、これらのオプションを追加します。例えば、次のコマンドラインを使用します。
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 
@@ -139,7 +140,7 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 これで、AEM における JSP のデバッグ用の設定はすべて完了です。
 
-1. 選択 **実行/デバッグ/デバッグプロファイル**
+1. **実行／デバッグ／デバッグプロファイル**&#x200B;を選択します。
 1. コンポーネントのコードにブレークポイントを設定します。
 1. ブラウザーでページにアクセスします。
 

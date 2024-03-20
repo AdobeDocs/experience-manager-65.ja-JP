@@ -2,7 +2,8 @@
 title: AEM 6.5 管理ユーザーガイド
 description: AEM 6.5 の管理について説明します。これらのガイドでは、サイトの機能、デプロイメント操作、セキュリティ機能、パーソナライゼーション、統合などについて説明します。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 92%

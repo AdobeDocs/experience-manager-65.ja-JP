@@ -9,10 +9,11 @@ feature: Dynamic Media Classic
 role: User, Admin
 mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2851'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -174,7 +175,7 @@ Dynamic Media Classic の&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネ�
 
 **[!UICONTROL 画像プリセット]** - ドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-**[!UICONTROL 出力形式]**  — 画像の出力形式（例：jpeg）を選択します。 選択する出力形式によっては、追加の設定オプションがあります。[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
+**[!UICONTROL 出力形式]** - 画像の出力形式（例：jpeg）を選択します。選択する出力形式によっては、追加の設定オプションがあります。[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
 
 **[!UICONTROL シャープニング]** - 画像にシャープニングを適用する方法を選択します。シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
@@ -273,7 +274,7 @@ Dynamic Media Classic のコンテンツブラウザーを使用すると、Dyna
 
 ### タッチ操作向け UI でのコンテンツを参照 {#browsing-content-in-the-touch-optimized-ui}
 
-コンテンツブラウザーには、タッチ操作向け UI またはクラシック UI でアクセスできます。 現在、タッチ操作向けには次の制限があります。
+タッチ操作向け UI またはクラシック UI を使用してコンテンツブラウザーにアクセスできます。現時点では、タッチ操作向け UI には次の制限事項があります。
 
 * Dynamic Media Classic の FXG および Flash のアセットはサポートされていません。
 
@@ -291,8 +292,8 @@ Dynamic Media Classic のコンテンツブラウザーを使用すると、Dyna
 
 ![chlimage_1-241](assets/chlimage_1-241.png)
 
-* アダプティブビデオセットおよびテンプレートの場合、サムネールのサイズ情報は生成されません。
-* アダプティブビデオセットの場合、サムネールの解像度は生成されません。
+* アダプティブビデオセットとテンプレートの場合は、サムネール用のサイズ情報が生成されません。
+* アダプティブビデオセットの場合は、サムネール用の解像度が生成されません。
 
 ### コンテンツブラウザーでの Dynamic Media Classic アセットの検索 {#searching-for-scene-assets-with-the-content-browser}
 
@@ -331,7 +332,7 @@ Dynamic Media Classic でのアセットの検索は、Experience Manager Assets
 >* クラシック UI では、**Flash** と **FXG** も検索できます。タッチ操作向け UI では、これらのタイプのフィルタリングはサポートされていません。
 >
 >* ビデオを検索するときは、単一のレンディションが検索されています。結果には、元のレンディション（&amp;ast;.mp4 のみ）と、エンコードされたレンディションが返されます。
->* アダプティブビデオセットを検索する場合は、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
+* アダプティブビデオセットを検索する場合は、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
 >
 
 **[!UICONTROL 公開ステータス]** - 公開ステータス（**[!UICONTROL 非公開]**&#x200B;または&#x200B;**[!UICONTROL 公開済み]**）に基づいてアセットをフィルタリングできます。**[!UICONTROL 公開ステータス]**&#x200B;を選択しない場合、Experience Manager ではデフォルトですべての公開ステータスが検索されます。

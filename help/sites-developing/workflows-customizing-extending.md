@@ -1,15 +1,16 @@
 ---
 title: ワークフロー機能の拡張
-description: Adobe Experience Managerのワークフロー機能を拡張する方法を説明します。
+description: Adobe Experience Manager のワークフロー機能の拡張方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3499'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +34,7 @@ ht-degree: 95%
 * コンポーネントのプロパティを設定する編集ダイアログ
 * ランタイムに実行されるサービスまたはスクリプト
 
-例： [すべてのコンポーネント](/help/sites-developing/components.md)の場合、ワークフローステップコンポーネントは、 `sling:resourceSuperType` プロパティ。 次の図は、すべてのワークフローステップコンポーネントの基礎を形成する `cq:component` ノードの階層を示しています。この図には、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;コンポーネントも含まれています。これらのコンポーネントは、カスタムステップコンポーネント作成の最も一般的で基本的な出発点になります。
+[すべてのコンポーネント](/help/sites-developing/components.md)と同様、ワークフローステップコンポーネントは、`sling:resourceSuperType` プロパティに指定されたコンポーネントから継承します。次の図は、すべてのワークフローステップコンポーネントの基礎を形成する `cq:component` ノードの階層を示しています。この図には、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;コンポーネントも含まれています。これらのコンポーネントは、カスタムステップコンポーネント作成の最も一般的で基本的な出発点になります。
 
 ![aem_wf_componentinherit](assets/aem_wf_componentinherit.png)
 
@@ -45,7 +46,7 @@ ht-degree: 95%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（内に存在）を再作成します。 `/libs` under `/apps`
+>1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
 >2. `/apps` 内で必要な変更を加えます
 
 `/libs/cq/workflow/components/model/step` コンポーネントは、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;の各コンポーネントの最も近い共通の上位です。これらのコンポーネントはすべて、次の項目を継承します。
@@ -463,7 +464,7 @@ public class MyProcess implements WorkflowProcess {
 
 ### ECMAScript の使用 {#using-ecmascript}
 
-スクリプト開発者は、ECMA スクリプトを使用してプロセスステップを実装できます。スクリプトは JCR リポジトリにあり、そこから実行されます。
+スクリプト開発者は、ECMA スクリプトを使用してプロセスステップを実装できます。スクリプトは JCR リポジトリに配置され、そこから実行されます。
 
 スクリプトの処理にすぐに使用でき、ワークフロー Java API のオブジェクトへのアクセスを提供する変数を以下の表に示します。
 
@@ -524,7 +525,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 スクリプトを使用するには：
 
-1. スクリプト ( 例えば、CRXDE Lite) を作成し、以下のリポジトリに保存します。 `//apps/workflow/scripts/`
+1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の `//apps/workflow/scripts/` の下に保存します。
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content`ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -615,7 +616,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 **参加者ステップ**&#x200B;で生成れた作業項目の割り当て先となるユーザーを選択する ECMA スクリプトを作成できます。スクリプトには、`getParticipant`という関数を含める必要があります。この関数は引数が不要で、ユーザーまたはグループの ID を格納した`String`を返します。
 
-スクリプトは JCR リポジトリにあり、そこから実行されます。
+スクリプトは JCR リポジトリに配置され、そこから実行されます。
 
 以下の表に、スクリプト内のワークフロー Java オブジェクトに即座にアクセスできる変数を示します。
 
@@ -641,7 +642,7 @@ function getParticipant() {
 }
 ```
 
-1. スクリプト ( 例えば、CRXDE Lite) を作成し、以下のリポジトリに保存します。 `//apps/workflow/scripts`
+1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の `//apps/workflow/scripts` の下に保存します。
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content`ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -799,7 +800,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    >
    >このステップは、クラシック UI モデルエディターには適用されません。
 
-1. 次に、コピーした手順を/apps フォルダーに次のように配置します。
+1. 次の例のように、コピーしたステップを /apps フォルダーに配置します。
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
@@ -821,7 +822,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
      既存のステップから継承する必要があります。
 
-     この例では、を基本手順 ( `cq/workflow/components/model/step`を使用できますが、 `participant`, `process`など。
+     この例では、`cq/workflow/components/model/step` の基本ステップから継承していますが、`participant` や `process` などの他のスーパータイプも使用できます。
 
    * `jcr:title`
 
@@ -1038,4 +1039,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
 >
->  内の設定を編集しない `/libs`を使用する場合は、単に例として使用します。 既存のステップを使用する場合は、次の場所にコピーします。 `/apps` そして、そこで編集します。
+>  `/libs` 内の設定は例として参考にするだけで、編集しないでください。既存のステップを使用する場合は、`/apps` にコピーし、そこで編集を加えます。

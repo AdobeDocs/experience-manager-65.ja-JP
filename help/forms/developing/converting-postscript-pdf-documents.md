@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: 744df8b2-0c61-410f-89e9-20b8adddbf45
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1315'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -58,7 +59,7 @@ Distiller® サービスは、PostScript®、Encapsulated PostScript（EPS）お
 
 **変換するファイルの取得**
 
-変換するファイルを取得します。 例えば、PS ファイルを PDF ドキュメントに変換するには、PS ファイルを取得する必要があります。
+変換するファイルを取得します。例えば、PS ファイルを PDF ドキュメントに変換するには、PS ファイルを取得する必要があります。
 
 **PDF 作成操作の呼び出し**
 

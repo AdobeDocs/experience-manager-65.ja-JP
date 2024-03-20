@@ -5,10 +5,11 @@ contentOwner: AG
 role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1739'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 91%
 
 ## 前提条件 {#prerequisites}
 
-この方法に従って実際に手順を実行する前に、[Assets パフォーマンスチューニングに関するヒント](performance-tuning-guidelines.md)のガイダンスを確認して実践してください。最大同時ジョブ数の設定など、多くの手順では、負荷時のサーバーの安定性とパフォーマンスが大幅に向上します。 システムにアセットが読み込まれた後になると、その他の手順（ファイルデータストアの設定など）を実行するのがより困難になります。
+この方法に従って実際に手順を実行する前に、[Assets パフォーマンスチューニングに関するヒント](performance-tuning-guidelines.md)のガイダンスを確認して実践してください。ここで紹介する手順の多くは、同時に実行可能なジョブの最大数の設定など、負荷時のサーバーの安定性とパフォーマンスを大幅に改善します。システムにアセットが読み込まれた後になると、その他の手順（ファイルデータストアの設定など）を実行するのがより困難になります。
 
 >[!NOTE]
 >
@@ -47,7 +48,7 @@ ht-degree: 91%
 
 ### ワークフローの無効化 {#disabling-workflows}
 
-移行を開始する前に、[!UICONTROL DAM アセットの更新]ワークフローのランチャーを無効化します。すべてのアセットをシステムに取り込んでから、ワークフローをバッチで実行することをお勧めします。 移行が実行されるときに既にライブである場合は、これらのアクティビティを営業時間外に実行するようにスケジュールを設定できます。
+移行を開始する前に、[!UICONTROL DAM アセットの更新]ワークフローのランチャーを無効化します。すべてのアセットを取り込んでからワークフローをバッチで実行する方法が最適です。移行が実行されるときに既にライブである場合は、これらのアクティビティを営業時間外に実行するようにスケジュールを設定できます。
 
 ### タグの読み込み {#loading-tags}
 
@@ -55,13 +56,13 @@ ht-degree: 91%
 
 ### アセットの取り込み {#ingesting-assets}
 
-アセットをシステムに取り込む際に重要なのは、パフォーマンスと安定性です。大量のデータをシステムに読み込むので、必要な時間を最小限に抑え、システムの過負荷を防ぐために、システムのパフォーマンスを確保する必要があります。これは、特に、実稼動環境にあるシステムで発生する可能性があります。
+アセットをシステムに取り込む際に重要なのは、パフォーマンスと安定性です。システムに大量のデータを読み込むので、特に既に実稼動環境にあるシステムでは、システムがパフォーマンスを可能な限り発揮できるようにして処理に必要な時間を短縮する一方で、システムのオーバーロードによりシステムがクラッシュしないように注意する必要があります。
 
 システムにアセットを読み込むには、HTTP を使用したプッシュベースのアプローチと、JCR の API を使用したプルベースのアプローチがあります。
 
 #### HTTP 経由で送信 {#pushing-through-http}
 
-AdobeのManaged Servicesチームは、Glutton と呼ばれるツールを使用して、顧客環境にデータを読み込みます。 Glutton は小さな Java アプリケーションであり、[!DNL Experience Manager] のデプロイメントでディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
+アドビの Managed Services チームは Glutton というツールを使用して、お客様の環境にデータを読み込みます。Glutton は小さな Java アプリケーションであり、[!DNL Experience Manager] のデプロイメントでディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
 
 HTTPS を通じたプッシュのアプローチには、主に次の 2 つの欠点があります。
 
@@ -82,14 +83,14 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 ニーズに合わせてワークフローを設定したら、次の 2 つの方法のいずれかで実行できます。
 
-1. 最も簡単な方法は次のとおりです。 [ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html). このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。バッチサイズを設定するオプションも用意されています。
+1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。バッチサイズを設定するオプションも用意されています。
 1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、[!DNL Experience Manager] ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### アセットのアクティベート {#activating-assets}
 
-パブリッシュ層のあるデプロイメントでは、アセットをパブリッシュファームにアクティベートする必要があります。Adobeでは、複数のパブリッシュインスタンスを実行することをお勧めしますが、すべてのアセットを 1 つのパブリッシュインスタンスにレプリケートしてから、そのインスタンスをクローンする方が最も効率的です。 多数のアセットをアクティベートするときは、ツリーのアクティベートを実行した後に、干渉する必要が生じる場合があります。理由は、アクティベートをトリガーするときに、Sling のジョブやイベントキューに項目が追加されるからです。このキューのサイズがだいたい 40,000 項目を超えると、処理速度が劇的に低下します。このキューのサイズが 100,000 項目を超えると、システムの安定性に影響を及ぼします。
+パブリッシュ層のあるデプロイメントでは、アセットをパブリッシュファームにアクティベートする必要があります。アドビは 1 つ以上のパブリッシュインスタンスを実行することを推奨していますが、すべてのアセットを 1 つのパブリッシュインスタンスにレプリケートして、そのインスタンスをクローンする方法が最も効率的です。多数のアセットをアクティベートするときは、ツリーのアクティベートを実行した後に、介入が必要になる場合があります。理由は、アクティベートをトリガーするときに、Sling のジョブやイベントキューに項目が追加されるからです。このキューのサイズがだいたい 40,000 項目を超えると、処理速度が劇的に低下します。このキューのサイズが 100,000 項目を超えると、システムの安定性に影響を及ぼします。
 
-この問題を回避するには、[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) を使用してアセットのレプリケートを管理します。これは Sling キューを使用することなく動作し、オーバーヘッドを減らすほか、ワークロードをスロットルしてサーバーのオーバーロードを防ぎます。FAM を使用してレプリケーションを管理する例は、機能のドキュメントページに示されています。
+この問題を回避するには、[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) を使用してアセットのレプリケートを管理します。これは Sling キューを使用することなく動作し、オーバーヘッドを減らすほか、ワークロードをスロットルしてサーバーのオーバーロードを防ぎます。レプリケーションの管理に FAM を使用する例は、この機能のドキュメントページに記載しています。
 
 アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。[!DNL Experience Manager] インフラストラクチャにオープンソースツール [Grabbit](https://github.com/TWCable/grabbit) を使用する方法もあります。vlt よりも高いパフォーマンスを発揮すると言われています。
 

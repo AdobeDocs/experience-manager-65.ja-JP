@@ -1,6 +1,6 @@
 ---
 title: Oak クエリとインデックス作成
-description: Adobe Experience Manager(AEM)6.5 でインデックスを設定する方法を説明します。
+description: Adobe Experience Manager（AEM）6.5 でのインデックスの設定方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,10 +8,11 @@ topic-tags: deploying
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3034'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -429,7 +430,7 @@ AEM は、リモート Solr サーバーインスタンスと連動するよう�
 
 #### Solr の推奨設定 {#recommended-configuration-for-solr}
 
-以下に、この記事で説明する 3 つの Solr デプロイメントすべてで使用できる基本設定の例を示します。AEMに既に存在する専用プロパティインデックスに対応します。他のアプリケーションでは使用しないでください。
+以下に、この記事で説明する 3 つの Solr デプロイメントすべてで使用できる基本設定の例を示します。AEM に既に存在する専用プロパティインデックスに対応しているため、他のアプリケーションでは使用しないでください。
 
 この設定を適切に使用するには、アーカイブのコンテンツを直接 Solr ホームディレクトリに配置する必要があります。複数のノードから成るデプロイメントの場合は、各ノードの root フォルダー直下に配置してください。
 
@@ -486,7 +487,7 @@ ACS 共通パッケージでは、プロパティインデックスの作成に�
 
 1. ブラウザーで `https://serveraddress:port/system/console/slinglog` を指定します。
 1. コンソールの下部にある「**Add new Logger**」ボタンをクリックします。
-1. 新しく作成された行に、上記のカテゴリを追加します。 以下を使用すると、 **+** sign を使用して、1 つのロガーに複数のカテゴリを追加します。
+1. 新しく作成された行で、前述のカテゴリを追加します。「**+**」記号を使用して、1 つのロガーに複数のカテゴリを追加できます。
 1. **ログレベル**&#x200B;ドロップダウンリストから「**デバッグ**」を選択します。
 1. 出力ファイルを `logs/queryDebug.log` に設定します。この設定によって、すべてのデバッグイベントが 1 つのログファイルに関連付けられます。
 1. クエリを実行するか、デバッグ対象のクエリを使用しているページをレンダリングします。
@@ -532,4 +533,4 @@ ACS 共通パッケージでは、プロパティインデックスの作成に�
 問題のトラブルシューティングのために、次のようなその他の情報を収集できます。
 
 1. インスタンスが実行されている Oak のバージョン。この情報を確認するには、CRXDE を開き、ようこそページの右下隅にあるバージョンを参照するか、`org.apache.jackrabbit.oak-core` バンドルのバージョンをチェックします。
-1. 問題のあるクエリの QueryBuilder Debugger 出力。 デバッガーには、次の場所からアクセスできます。 `https://serveraddress:port/libs/cq/search/content/querydebug.html`
+1. 問題が発生しているクエリの QueryBuilder デバッガーの出力。デバッガーには、`https://serveraddress:port/libs/cq/search/content/querydebug.html` からアクセスできます。

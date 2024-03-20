@@ -1,15 +1,16 @@
 ---
 title: Target オファー
-description: Adobe Experience Managerで Target オファーを作成し、Adobe Targetで使用します。
+description: Adobe Target で使用する Target オファーを Adobe Experience Manager で作成します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 

@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 role: Developer
 exl-id: 7f1f49e6-028c-47b6-a24d-a83bed40242e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1783'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -668,7 +669,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### remoting.mxml ファイルの作成 {#creating-the-remoting-mxml-file}
 
-次のコードは、`MyApplication/EncryptDocument` プロセスを呼び出す remoting.mxml ファイルを表します。ドキュメントがプロセスに渡されるので、セキュアなドキュメントをAEM Formsに渡すアプリケーションロジックは、このファイルに含まれます。 （[リモート処理を使用したプロセスを呼び出すためのセキュアなドキュメントの受け渡し](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照。）
+次のコードは、`MyApplication/EncryptDocument` プロセスを呼び出す remoting.mxml ファイルを表します。ドキュメントがプロセスに渡されるので、セキュアなドキュメントを AEM Forms に渡すためのアプリケーションロジックは、このファイルに配置されます。（[リモート処理を使用したプロセスを呼び出すためのセキュアなドキュメントの受け渡し](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照。）
 
 ```xml
  <?xml version="1.0" encoding="utf-8"?>

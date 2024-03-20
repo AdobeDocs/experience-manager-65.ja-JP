@@ -1,21 +1,22 @@
 ---
 title: LDAP バインドパスワードの設定
-description: 設定ファイルを別のシステムに読み込む前に、bind password フィールドを設定する方法を説明します。
+description: 設定ファイルを別のシステムに読み込む前に、バインドパスワードフィールドを設定する方法について説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: c72794f5-8767-409e-a1df-91a8fdc54d18
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
 # LDAP バインドパスワードの設定{#configure-the-ldap-bind-password}
 
-セキュリティ上の問題を回避するために、書き出された設定ファイル (config.xml) の bind password フィールドは設定されていません。 設定ファイルを別のシステムに読み込む前に、このパスワードを設定しておく必要があります。 このパスワードは、データベースに保存されている既存のパスワードよりも優先されます。 null パスワードは、null 以外の既存のパスワード値を上書きしません。
+セキュリティ上の問題を防ぐため、書き出された設定ファイル（config.xml）のバインドパスワードフィールドは設定されていません。設定ファイルを別のシステムに読み込む前に、このパスワードを設定してください。このパスワードは、データベースに格納されている既存のパスワードを上書きします。パスワードが null の場合は、既存の null 以外のパスワード値は上書きされません。
 
 1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. ファイルに現在の設定をエクスポートするには、「エクスポート」をクリックして別の場所に設定ファイルを保存します。

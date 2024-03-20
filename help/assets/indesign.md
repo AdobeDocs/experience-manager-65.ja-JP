@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 84%
+source-wordcount: '1555'
+ht-degree: 100%
 
 ---
 
@@ -40,9 +41,9 @@ ht-degree: 84%
    * INDD ファイルを取得します。
    * 次の [!DNL InDesign Server] コマンドを実行します。
 
-      * 構造、テキストおよびメディアファイルが抽出されます。
-      * PDFとJPGのレンディションが生成される。
-      * HTMLと IDML レンディションが生成されます。
+      * 構造、テキストおよびすべてのメディアファイルが抽出されます。
+      * PDF と JPG のレンダリングが生成されます。
+      * HTML と IDML のレンダリングが生成されます。
 
    * 生成されたファイルを [!DNL Experience Manager Assets] に送り返します。
 
@@ -52,7 +53,7 @@ ht-degree: 84%
 
    >[!CAUTION]
    >
-   >[!DNL InDesign Server] をインストールしていない場合や設定していない場合でも、INDD ファイルを [!DNL Experience Manager] にアップロードすることができます。ただし、生成されるレンディションは PNG とJPEGに制限されます。 HTML、.idml、ページのレンディションを生成することはできません。
+   >[!DNL InDesign Server] をインストールしていない場合や設定していない場合でも、INDD ファイルを [!DNL Experience Manager] にアップロードすることができます。ただし、生成されるレンディションは、PNG と JPEG に限定されます。HTML、.idml またはページのレンダリングを生成することはできません。
 
 1. 抽出およびレンダリング生成後：
 
@@ -65,7 +66,7 @@ ht-degree: 84%
 プロキシを設定した後で、[!DNL Experience Manager Assets] で使用するために [!DNL InDesign Server] を統合するには 、次の手順を実行する必要があります。
 
 1. [InDesign Server をインストールします](#installing-the-indesign-server)。
-1. 必要に応じて、 [Experience Manager Assets Workflow の設定](#configuring-the-aem-assets-workflow).
+1. 必要に応じて、[Experience Manager アセットのワークフローを設定](#configuring-the-aem-assets-workflow)します。
 これは、デフォルト値がインスタンスに適さない場合にのみ必要です。
 1. [InDesign Server のプロキシワーカー](#configuring-the-proxy-worker-for-indesign-server)を設定します。
 
@@ -75,17 +76,17 @@ ht-degree: 84%
 
 1. [!DNL InDesign Server] をダウンロードしてインストールします。
 
-1. 必要に応じて、 [!DNL InDesign Server] インスタンス。
+1. 必要に応じて、[!DNL InDesign Server] インスタンスの設定をカスタマイズできます。
 
 1. コマンドラインから、サーバーを起動します。
 
    `<*ids-installation-dir*>/InDesignServer.com -port 8080`
 
-   これにより、SOAP プラグインでポート 8080 をリッスンしてサーバーが起動します。 すべてのログメッセージと出力は、コマンドウィンドウに直接書き込まれます。
+   これにより、SOAP プラグインがポート 8080 でリッスンする状態でサーバーが起動します。すべてのログメッセージと出力がコマンドウィンドウに直接書き込まれます。
 
    >[!NOTE]
    >
-   >出力メッセージをファイルに保存する場合は、Windows の場合などに、リダイレクトを使用します。
+   >ファイルに出力メッセージを保存してリダイレクトを使用する場合は、例えば Windows の場合は次のように実行します。
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### [!DNL Experience Manager Assets] ワークフローの設定 {#configuring-the-aem-assets-workflow}
@@ -127,7 +128,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 #### ページ抽出 {#page-extraction}
 
-抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーは、レンディション ( 現在のHTMLまたは IDML) からデータを抽出するために使用されます。 このデータは、その後、PageBuilder を使用してページを作成するために使用されます。
+抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーが、レンダリング（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
 
 カスタマイズするには、**[!UICONTROL ページ抽出]**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
@@ -140,7 +141,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 * **ページタイトル**：生成されるページに割り当てるタイトルを指定します。
 
-* **ページルートのパス**：生成されるページのルート位置のパス。 空白のままにした場合、アセットのレンディションを保持しているノードが使用されます。
+* **ページルートのパス**：生成されるページのルート位置を示すパス。空白にした場合、アセットのレンダリングを保持しているノードが使用されます。
 
 * **ページテンプレート**：ページの生成時に使用するテンプレート。
 
@@ -150,13 +151,13 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 >[!NOTE]
 >
->ワーカーはプロキシインスタンス上に存在します。
+>ワーカーは、プロキシインスタンス上にあります。
 
-1. ツールコンソールで、を展開します。 **[!UICONTROL Cloud Service設定]** が左側のウィンドウに表示されます。 次に、を展開します。 **[!UICONTROL クラウドプロキシ設定]**.
+1. ツールコンソールの左側のパネルで、「**[!UICONTROL クラウドサービス設定]**」を展開します。次に、「**[!UICONTROL クラウドプロキシ設定]**」を展開します。
 
 1. 「**[!UICONTROL IDS ワーカー]**」をダブルクリックし、開いて設定します。
 
-1. クリック **[!UICONTROL 編集]** 設定ダイアログを開き、必要な設定を定義するには、次の手順を実行します。
+1. 「**[!UICONTROL 編集]**」をクリックして設定ダイアログを開き、必要な設定を定義します。
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
@@ -182,11 +183,11 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 IDS の並列ジョブ処理を有効にすることができます。[!DNL InDesign Server] が処理できる並列ジョブの最大数（`x`）を決定します。
 
 * 単一のマルチプロセッサーマシンでは、[!DNL InDesign Server] が処理できる並列ジョブの最大数（`x`）は、IDS を実行するプロセッサー数から 1 を減算した数です。
-* 複数のマシンで IDS を実行する場合は、使用可能なプロセッサの総数（つまりすべてのマシン）をカウントし、マシンの総数を減算する必要があります。
+* 複数のマシンで IDS を実行する場合は、すべてのマシンで使用可能なプロセッサーの総数を把握して、そこからマシン総数を減算する必要があります。
 
-並列 IDS ジョブ数を設定するには：
+IDS 並列ジョブ数を設定するには、次の手順を実行します。
 
-1. を開きます。 **[!UICONTROL 設定]** Felix コンソールの「 」タブ。次に例を示します。 `https://[aem_server]:[port]/system/console/configMgr`.
+1. Felix Console の「**[!UICONTROL 設定]**」タブを開きます。次に URL の例を挙げます：`https://[aem_server]:[port]/system/console/configMgr`。
 
 1. `Apache Sling Job Queue Configuration` で IDS 処理キューを選択します。
 
@@ -233,7 +234,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 1. `/etc/cloudservices/proxy.html` にアクセスします。
 1. ダイアログで、新しいユーザー名とパスワードを指定します。
-1. 資格情報を保存します。
+1. この資格情報を保存します。
 
 >[!MORELIKETHIS]
 >

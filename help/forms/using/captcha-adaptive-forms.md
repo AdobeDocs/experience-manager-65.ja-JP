@@ -7,10 +7,11 @@ topic-tags: adaptive_forms, author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1832'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -51,28 +52,28 @@ AEM Forms のユーザーは、Google が提供する reCAPTCHA サービスを�
 
    1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
-      1. 設定ブラウザーで、 **[!UICONTROL global]** フォルダーと選択 **[!UICONTROL プロパティ]**.
+      1. 設定ブラウザーで、**[!UICONTROL global]** フォルダーを選択して「**[!UICONTROL プロパティ]**」を選択します。
       1. 設定プロパティダイアログで、「**[!UICONTROL クラウド設定]**」を有効にします。
-      1. 選択 **[!UICONTROL 保存して閉じる]** 設定を保存し、ダイアログを終了します。
+      1. 「**[!UICONTROL 保存して閉じる]**」を選択して設定内容を保存し、ダイアログを閉じます。
 
-   1. 設定ブラウザーで、「 」を選択します。 **[!UICONTROL 作成]**.
+   1. 設定ブラウザーで「**[!UICONTROL 作成]**」を選択します。
    1. 設定を作成ダイアログでフォルダーのタイトルを指定し、「**[!UICONTROL クラウド設定]**」を有効にします。
-   1. 選択 **[!UICONTROL 作成]** をクラウドサービス設定に対して有効なフォルダーを作成します。
+   1. 「**[!UICONTROL 作成]**」を選択します。これで、クラウドサービス設定が有効になったフォルダーが作成されました。
 1. reCAPTCHA Enterprise のクラウドサービスを設定します。
 
    1. Experience Manager オーサーインスタンスで、![tools-1](assets/tools-1.png)／**[!UICONTROL クラウドサービス]**&#x200B;に移動します。
-   1. 選択 **[!UICONTROL reCAPTCHA]**. 設定ページが表示されます。前の手順で作成した設定コンテナを選択し、「 」を選択します。 **[!UICONTROL 作成]**.
+   1. 「**[!UICONTROL reCAPTCHA]**」を選択します。設定ページが表示されます。前の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」を選択します。
    1. reCAPTCHA Enterprise としてバージョンを選択し、名前、reCAPTCHA Enterprise サービスのプロジェクト ID、サイトキーおよび API キー（手順 2 および 3 で取得）を指定します。
    1. キーのタイプを選択します。キーのタイプは、Google Cloud プロジェクトで設定したサイトキー（**チェックボックスサイトキー**&#x200B;または&#x200B;**スコアベースのサイトキー**&#x200B;など）と同じにする必要があります。
-   1. 0 ～ 1 の範囲でしきい値スコアを指定します ([クリックしてスコアの詳細を知る](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment?hl=ja#interpret_scores)) をクリックします。 スコアがしきい値以上になると、人間のインタラクションを識別し、それ以外の場合はボットのインタラクションとみなされます。
+   1. 0～1 の範囲でしきい値スコアを指定します（[クリックしてスコアの詳細を見る](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment?hl=ja#interpret_scores)）。スコアがしきい値以上になると、人間のインタラクションを識別し、それ以外の場合はボットのインタラクションとみなされます。
 
       > メモ：
       >
       > * フォーム作成者は、フォームの送信を中断しないために適切な範囲でスコアを指定できます。
 
-   1. 選択 **[!UICONTROL 作成]** クラウドサービス設定を作成します。
+   1. 「**[!UICONTROL 作成]**」を選択して、クラウドサービス設定を作成します。
 
-   1. コンポーネントを編集ダイアログで、名前、プロジェクト ID、サイトキー、API キー（手順 2 および 3 で取得）を指定し、キータイプを選択して、しきい値スコアを入力します。選択 **[!UICONTROL 設定を保存]** 次に、「 **[!UICONTROL OK]** をクリックして設定を完了します。
+   1. コンポーネントを編集ダイアログで、名前、プロジェクト ID、サイトキー、API キー（手順 2 および 3 で取得）を指定し、キータイプを選択して、しきい値スコアを入力します。「**[!UICONTROL 設定を保存]**」を選択してから、「**[!UICONTROL OK]**」を選択して設定を完了します。
 
 reCAPTCHA Enterprise サービスを有効にすると、アダプティブフォームで使用できるようになります。[アダプティブフォームでの CAPTCHA の使用](#using-reCAPTCHA)を参照してください。
 
@@ -86,21 +87,21 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
    1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
-      1. 設定ブラウザーで、 **[!UICONTROL global]** フォルダーと選択 **[!UICONTROL プロパティ]**.
+      1. 設定ブラウザーで、**[!UICONTROL global]** フォルダーを選択して「**[!UICONTROL プロパティ]**」を選択します。
 
       1. 設定プロパティダイアログで、「**[!UICONTROL クラウド設定]**」を有効にします。
-      1. 選択 **[!UICONTROL 保存して閉じる]** 設定を保存し、ダイアログを終了します。
+      1. 「**[!UICONTROL 保存して閉じる]**」を選択して設定内容を保存し、ダイアログを閉じます。
 
-   1. 設定ブラウザーで、「 」を選択します。 **[!UICONTROL 作成]**.
+   1. 設定ブラウザーで「**[!UICONTROL 作成]**」を選択します。
    1. 設定を作成ダイアログでフォルダーのタイトルを指定し、「**[!UICONTROL クラウド設定]**」を有効にします。
-   1. 選択 **[!UICONTROL 作成]** をクラウドサービス設定に対して有効なフォルダーを作成します。
+   1. 「**[!UICONTROL 作成]**」を選択します。これで、クラウドサービス設定が有効になったフォルダーが作成されました。
 
 1. reCAPTCHA v2 用にクラウドサービスを設定します。
 
    1. AEM オーサーインスタンスで、![tools-1](assets/tools-1.png)／**クラウドサービス**&#x200B;に移動します。
-   1. 選択 **[!UICONTROL reCAPTCHA]**. 設定ページが表示されます。前の手順で作成した設定コンテナを選択し、「 」を選択します。 **[!UICONTROL 作成]**.
-   1. reCAPTCHA v2 のバージョンを選択し、reCAPTCHA サービスの名前、サイトキー、秘密鍵を指定します（手順 1 で取得）。次に、を選択します。 **[!UICONTROL 作成]** クラウドサービス設定を作成します。
-   1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。選択 **[!UICONTROL 設定を保存]** 次に、「 **OK** をクリックして設定を完了します。
+   1. 「**[!UICONTROL reCAPTCHA]**」を選択します。設定ページが表示されます。前の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」を選択します。
+   1. バージョンとして reCAPTCHA v2 を選択し、名前を指定します。reCAPTCHA サービスのサイトキーと秘密鍵（手順 1 で取得）を入力し、「**[!UICONTROL 作成]**」を選択してクラウドサービス設定を作成します。
+   1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。「**[!UICONTROL 設定を保存]**」を選択してから、「**OK**」を選択して設定を完了します。
 
    reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。詳細情報は、[アダプティブフォームでの CAPTCHA の使用](#using-captcha)を参照してください。
 
@@ -127,7 +128,7 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
    >
    >Captcha には時間制限があり、約 1 分で有効期限が切れます。そのため、アダプティブフォームに「送信」ボタンを配置する直前に Captcha コンポーネントを配置することをお勧めします。
 
-1. 追加した Captcha コンポーネントを選択し、「 」を選択します。 ![cmppr](assets/cmppr.png) をクリックして、そのプロパティを編集します。
+1. 追加した Captcha コンポーネントを選択し、「![cmppr](assets/cmppr.png)」を選択してそのプロパティを編集します。
 1. CAPTCHA ウィジェットのタイトルを指定します。デフォルト値は **Captcha** です。タイトルを表示しない場合は、「**タイトルを非表示にする**」を選択します。
 1. [Google が提供する reCAPTCHA サービス](#google-reCAPTCHA)の説明に従って設定した場合は、**Captcha サービス**&#x200B;ドロップダウンから「**reCAPTCHA**」を選択して reCAPTCHA サービスを有効にします。
 1. 設定ドロップダウンから設定を選択します。
@@ -211,7 +212,7 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 
    **選択した設定のバージョンが reCAPTCHA v2 の場合**：
-   1. reCAPTCHA ウィジェットのサイズを、「**[!UICONTROL 標準]**」または「**[!UICONTROL コンパクト]**」から選択します。また、 **[!UICONTROL 非表示]** 疑わしいアクティビティがある場合にのみ CAPTCHA チャレンジを表示するオプション。 以下に表示されている **reCAPTCHA による保護**&#x200B;バッジが保護されたフォームに表示されます。
+   1. reCAPTCHA ウィジェットのサイズを、「**[!UICONTROL 標準]**」または「**[!UICONTROL コンパクト]**」から選択します。また、「**[!UICONTROL 非表示]**」オプションを使用して、疑わしいアクティビティの場合にのみ CAPTCHA チャレンジを表示できます。以下に表示されている **reCAPTCHA による保護**&#x200B;バッジが保護されたフォームに表示されます。
 
       ![reCAPTCHA バッジによって保護された Google](/help/forms/using/assets/google-recaptcha-v2.png)
 
@@ -226,13 +227,13 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 ### ルールに基づいた CAPTCHA コンポーネントの表示／非表示 {#show-hide-captcha}
 
-アダプティブフォームのコンポーネントに適用するルールに基づいて、CAPTCHA コンポーネントの表示／非表示を切り替えることができます。コンポーネントを選択し、「 」を選択します。 ![ルールを編集](assets/edit-rules-icon.svg)をクリックし、次を選択します。 **[!UICONTROL 作成]** をクリックして、ルールを作成します。 ルールの作成について詳しくは、「[ルールエディター](rule-editor.md)」を参照してください。
+アダプティブフォームのコンポーネントに適用するルールに基づいて、CAPTCHA コンポーネントの表示／非表示を切り替えることができます。コンポーネントを選択して、「![ルールを編集](assets/edit-rules-icon.svg)」を選択し、「**[!UICONTROL 作成]**」を選択してルールを作成します。ルールの作成について詳しくは、「[ルールエディター](rule-editor.md)」を参照してください。
 
 例えば、CAPTCHA コンポーネントは、フォームの「通貨の値」フィールドの値が 25000 を超える場合にのみ、アダプティブフォームに表示する必要があります。
 
-を選択します。 **[!UICONTROL 通貨値]** フィールドに値を入力し、次のルールを作成します。
+フォームの「**[!UICONTROL 通貨の値]**」フィールドを選択して、以下のルールを作成します。
 
-![ルールの表示／非表示](assets/rules-show-hide-captcha.png)
+![ルールを表示／非表示](assets/rules-show-hide-captcha.png)
 
 >[!NOTE]
 >
@@ -246,17 +247,17 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 アダプティブフォームの送信時に CAPTCHA を自動的に検証するには、以下の手順を実行します。
 
-1. CAPTCHA コンポーネントを選択し、「 」を選択します。 ![cmppr](assets/configure-icon.svg) をクリックして、コンポーネントのプロパティを表示します。
+1. CAPTCHA コンポーネントを選択し、![cmppr](assets/configure-icon.svg) を選択して、コンポーネントのプロパティを表示します。
 1. 「**[!UICONTROL CAPTCHA を検証]**」セクションで、「**[!UICONTROL フォーム送信時に CAPTCHA を検証]**」を選択します。
-1. 選択 ![完了](assets/save_icon.svg) をクリックして、コンポーネントのプロパティを保存します。
+1. 「![完了](assets/save_icon.svg)」を選択して、コンポーネントプロパティを保存します。
 
 #### ユーザーの操作と条件に対する CAPTCHA の検証 {#validate-captcha-user-action}
 
 条件とユーザー操作に基づいて CAPTCHA を検証するには、以下の手順を実行します。
 
-1. CAPTCHA コンポーネントを選択し、「 」を選択します。 ![cmppr](assets/configure-icon.svg) をクリックして、コンポーネントのプロパティを表示します。
+1. Captcha コンポーネントを選択し、「![cmppr](assets/configure-icon.svg)」を選択してコンポーネントプロパティを表示します。
 1. 「**[!UICONTROL CAPTCHA を検証]**」セクションの、「**[!UICONTROL ユーザーアクションで CAPTCHA を検証する]**」を選択します。
-1. 選択 ![完了](assets/save_icon.svg) をクリックして、コンポーネントのプロパティを保存します。
+1. 「![完了](assets/save_icon.svg)」を選択して、コンポーネントプロパティを保存します。
 
    >[!NOTE]
    >
@@ -287,7 +288,7 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
 
 1. `ValidateCAPTCHA` API を含むスクリプトをカスタム送信アクションに追加します。カスタム送信アクションについて詳しくは、「[アダプティブフォーム用のカスタム送信アクションの作成](custom-submit-action-form.md)」を参照してください。
 1. アダプティブフォームの&#x200B;**[!UICONTROL 送信]**&#x200B;プロパティの「**[!UICONTROL 送信アクション]**」ドロップダウンリストから、カスタム送信アクションの名前を選択します。
-1. 選択 **[!UICONTROL 送信]**. CAPTCHA は、カスタム送信アクションの `ValidateCAPTCHA` API で定義された条件に基づいて検証されます。
+1. 「**[!UICONTROL 送信]**」を選択します。CAPTCHA は、カスタム送信アクションの `ValidateCAPTCHA` API で定義された条件に基づいて検証されます。
 
 **オプション 2：フォームを送信する前に、[!DNL Experience Manager Forms] ValidateCAPTCHA API を使用してユーザーアクションに対する CAPTCHA の検証を行う**
 

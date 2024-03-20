@@ -1,33 +1,34 @@
 ---
 title: 実稼動準備モードでの AEM の実行
-description: 実稼動準備モードでAEMを実行する方法を説明します。
+description: 実稼動準備モードで AEM を実行する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: 3c342014-f8ec-4404-afe5-514bdb651aae
-source-git-commit: e54c1d422f2bf676e8a7b0f50a101e495c869c96
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 44%
+source-wordcount: '384'
+ht-degree: 100%
 
 ---
 
 # 実稼動準備モードでの AEM の実行{#running-aem-in-production-ready-mode}
 
-AEM 6.1 では、Adobeで新しい `"nosamplecontent"` 実稼働環境でのデプロイメント用にAEMインスタンスを準備するために必要な手順の自動化を目的とした実行モード。
+AEM 6.1 では、アドビは実稼動環境においてデプロイメント用の AEM インスタンスの準備に必要な手順の自動化を目的とした、新しい `"nosamplecontent"` 実行モードを導入します。
 
-新しい実行モードでは、セキュリティチェックリストに記載されているセキュリティのベストプラクティスに従ってインスタンスが自動的に設定されるだけでなく、プロセス内のサンプルのGeometrixxアプリケーションと設定もすべて削除されます。
+この新しい実行モードは、セキュリティチェックリストに記載されるセキュリティのベストプラクティスに従うようにインスタンスを自動的に設定するだけでなく、サンプルの Geometrixx アプリケーションと設定をプロセスですべて削除します。
 
 >[!NOTE]
 >
->実際的な理由により、AEM実稼動準備モードでは、インスタンスの保護に必要なほとんどのタスクのみをカバーするので、 [セキュリティチェックリスト](/help/sites-administering/security-checklist.md) 実稼動環境での運用を開始する前に、以下を実行してください。
+>実用的な理由から、AEM の実稼動準備モードは、インスタンスの保護に必要な多くのタスクにのみ対応しているので、実稼動環境で運用を開始する前に[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を確認しておくことを強くお勧めします。
 >
 >また、AEM を実稼動準備モードを実行すると CRXDE Lite へのアクセスが無効になります。デバッグのためにアクセスする必要がある場合は、[AEM での CRXDE Lite の有効化](/help/sites-administering/enabling-crxde-lite.md)を参照してください。
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-実稼動準備モードでAEMを実行するには、 `nosamplecontent` 経由 `-r` 実行モードを既存の起動引数に切り替えます。
+実稼動準備モードで AEM を実行するには、`-r` 実行モードスイッチ経由で `nosamplecontent` を既存の起動引数に追加する必要があります。
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -41,14 +42,14 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 ## 実稼動準備モードの変更点 {#changes-part-of-the-production-ready-mode}
 
-具体的には、AEMを実稼動準備モードで実行する際に、次の設定変更が実行されます。
+具体的には、AEM を実稼動準備モードで実行すると、次の設定が変更されます。
 
-1. 実稼動準備モードでは、**CRXDE サポートバンドル**（`com.adobe.granite.crxde-support`）がデフォルトで無効になります。パブリック Maven リポジトリから、いつでもAdobeにインストールできます。 AEM 6.1 ではバージョン 3.0.0 が必要です。
+1. 実稼動準備モードでは、**CRXDE サポートバンドル**（`com.adobe.granite.crxde-support`）がデフォルトで無効になります。このバンドルは、アドビの Maven 公開リポジトリからいつでもインストールできます。AEM 6.1 には、バージョンは 3.0.0 が必要です。
 
 1. **Apache Sling Simple WebDAV Access To Repositories**（`org.apache.sling.jcr.webdav`）バンドルは&#x200B;**オーサー**&#x200B;インスタンスでのみ使用できます。
 
-1. 新しく作成したユーザーは、最初のログイン時にパスワードを変更する必要があります。 これは、管理者ユーザーには適用されません。
-1. **デバッグ情報を生成** は **Apache Sling JavaScript Handler**.
+1. 新しく作成されたユーザーは、初回ログイン時にパスワードを変更する必要があります。これは、管理者ユーザーには適用されません。
+1. **Apache Java Script Handler** では、**デバッグ情報を生成**&#x200B;が無効になります。
 
 1. **Apache Sling JSP Script Handler** では、「**Mapped Content**」と「**Generate Debug Info**」が無効になります。
 
@@ -66,7 +67,7 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 | **設定** | **作成者** | **公開** |
 |---|---|---|
 | TXT レンディション | 無効 | 無効 |
-| HTMLレンディション | 無効 | 無効 |
+| HTML レンディション | 無効 | 無効 |
 | JSON レンディション | enabled | enabled |
 | XML レンディション | 無効 | 無効 |
 | json.maximumresults | 1000 | 100 |

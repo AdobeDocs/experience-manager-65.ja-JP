@@ -1,19 +1,20 @@
 ---
 title: デフォルトコンポーネント
-description: Adobe Experience Managerには、すぐに使用できる様々なコンポーネントが付属しており、Web サイト作成者は包括的な機能を使用できます。
+description: Adobe Experience Manager には、すぐに使用できる様々なコンポーネントが付随しており、web サイト作成者に包括的な機能を提供します。
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 78%
+source-wordcount: '420'
+ht-degree: 100%
 
 ---
 
 # コンポーネント{#components}
 
-Adobe Experience Manager(AEM) には、すぐに使用できる様々なコンポーネントが付属しており、Web サイト作成者は包括的な機能を使用できます。 これらの機能は、[ページの編集](/help/sites-authoring/editing-content.md)時に使用でき、フィルタリングのために主な機能領域（コンポーネントグループと呼ばれます）でグループ化されています。
+Adobe Experience Manager（AEM）には、すぐに使用できる様々なコンポーネントが付随しており、web サイト作成者に包括的な機能を提供します。これらの機能は、[ページの編集](/help/sites-authoring/editing-content.md)時に使用でき、フィルタリングのために主な機能領域（コンポーネントグループと呼ばれます）でグループ化されています。
 
-コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時に使用できます。フィルタリングを容易にするために、コンポーネントは主な機能領域（つまりコンポーネントグループ）でグループ化されます。
+コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時に使用できます。フィルタリングを容易にするために、コンポーネントは主要な機能領域（コンポーネントグループ）でグループ化されています。
 
 >[!NOTE]
 >
@@ -32,23 +33,24 @@ Adobe Experience Manager(AEM) には、すぐに使用できる様々なコン�
 
 * [コンテンツの編集 - 全画面表示モード](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-ページへのコンポーネントの追加について詳しくは、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。コンポーネントは、コンポーネントグループと呼ばれる様々なカテゴリーに従って並べ替えられます。このようなコンポーネントグループの例を次に示します。
+ページへのコンポーネントの追加について詳しくは、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
+コンポーネントは、コンポーネントグループと呼ばれる様々なカテゴリーに従って並べ替えられます。このようなコンポーネントグループの例を次に示します。
 
 * **We.Retail**：[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用するためにプロキシ設定されたコアコンポーネントが含まれています。
 
 * **We.Retail コマース**：買い物かごや商品グリッドなどのコマースコンポーネントが含まれています。
 
-* **一般**：レイアウトコンテナとエクスペリエンスフラグメントを含めます
+* **一般**：レイアウトコンテナやエクスペリエンスフラグメントが含まれています。
 
 ## 全コンポーネントの概要 {#overview-of-all-components}
 
-The [コンポーネントコンソール](/help/sites-authoring/default-components-console.md) では、コンポーネントグループと、AEMインストール環境で提供されるコンポーネントの概要を説明します。 個々のコンポーネントとその使用方法に関する主な情報を確認できます。
+[コンポーネントコンソール](/help/sites-authoring/default-components-console.md)では、インストールした AEM から提供されるコンポーネントグループとコンポーネントの概要を確認できます。個々のコンポーネントとその使用方法に関する主な情報を確認できます。
 
 ## コンポーネント - 主な領域 {#components-major-areas}
 
 次のページには、コンポーネントに関する重要な追加情報へのリンクが記載されています。
 
-* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)  — コアコンポーネントは柔軟で機能豊富なオーサリング機能を提供します。ページを作成するために不可欠なコンテンツタイプが用意されています。
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
 
 * [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。このコンポーネントの多くは[コミュニティサイト](/help/communities/overview.md)の作成時に追加されます。
 

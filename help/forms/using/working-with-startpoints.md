@@ -1,15 +1,16 @@
 ---
 title: スタートポイントの使用
-description: Workbench で定義されたモバイルデバイスからAdobe Experience Manager Formsプロセスを操作する手順です。
+description: Workbench で定義されたモバイルデバイスから Adobe Experience Manager Forms プロセスを操作する手順。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 docset: aem65
 exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '235'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
@@ -19,18 +20,18 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->この概念を参照する場合、開始点、開始プロセス、フォームという用語は同じ意味で使用されます。
+>この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
 
-Adobe Experience Manager(AEM)Formsアプリからプロセスを開始するには、タイプのスタートポイントが必要です **Workspace** を設定します。 また、 **[!UICONTROL Mobile Workspace に表示]** オプションを使用します。
+Adobe Experience Manager（AEM）Forms アプリケーションからプロセスを開始するには、プロセスで&#x200B;**ワークスペース**&#x200B;タイプのスタートポイントが必要です。また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Workbench で定義されたプロセスを開始するには**
 
-1. AEM Formsアプリで使用可能な Startpoint を表示するには、に移動します。 [ホーム画面](../../forms/using/home-screen.md).
+1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](../../forms/using/home-screen.md)に移動してください。
 1. デフォルトでは、**[!UICONTROL ホーム]**&#x200B;画面に「**[!UICONTROL すべてのフォーム]**」リストが表示されます。
 
-   スタートポイントはフォームに関連付けられています。リスト内でスタートポイント関連フォームを選択して開きます。
+   スタートポイントはフォームに関連付けられています。リストでスタートポイントに関連付けられているフォームを選択して開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 
@@ -38,10 +39,10 @@ Adobe Experience Manager(AEM)Formsアプリからプロセスを開始するに�
 
    「[添付ファイル](../../forms/using/add-attachments.md)」ボタンを使用して、このタスクに注釈を追加できます。
 
-1. フォームに入力した後、 **[!UICONTROL 送信]** 」ボタンをクリックします。
+1. フォームを入力したら、「**[!UICONTROL 送信]**」ボタンを選択します。
 
-アプリがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
+アプリケーションがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
 
-アプリがオンラインの場合、タスクはAEM Formsサーバーと同期され、プロセスで指定されたユーザーに割り当てられます。
+アプリケーションがオンラインの場合、タスクは AEM Forms サーバーと同期され、プロセスで指定されたユーザーに割り当てられます。
 
-タスクリスト内のタスクを操作するには、 [タスクを開く](/help/forms/using/open-task.md).
+タスクリスト内のタスクを実行するには、[タスクを開く](/help/forms/using/open-task.md)を参照してください。

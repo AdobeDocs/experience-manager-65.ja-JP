@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 82%
+ht-degree: 93%
 
 ---
 
@@ -25,13 +26,13 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 | 場所 | ショートカット | 説明 |
 |---|---|---|
-| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | 切り替え **プレビュー** および現在選択されている [mode](/help/sites-authoring/author-environment-tools.md#page-modes)</a> ( 例： **編集**, **レイアウト**&#x200B;など ) |
+| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | **プレビュー**&#x200B;と現在選択されている[モード](/help/sites-authoring/author-environment-tools.md#page-modes)</a>（**編集**&#x200B;や&#x200B;**レイアウト**&#x200B;など）を切り替える |
 | **編集**&#x200B;モード | `Ctrl-z` | [最後におこなった変更操作を取り消す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [最後におこなった変更操作をやり直す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 複数の段落を選択する |
 |  | `Ctrl-c` | 選択した段落をコピー |
 |  | `Ctrl-x` | 選択した段落を切り取ります（切り取った段落は、貼り付けられるまで UI に表示されなくなります）。 |
-|  | `Ctrl-v` | 以前に切り取ったまたはコピーした段落を貼り付け |
+|  | `Ctrl-v` | 以前にカットまたはコピーした段落をペースト |
 |  | `Ctrl-Backspace` | 選択した段落を削除 |
 | **編集**&#x200B;モード - リッチテキストエディター | `Ctrl-b` | 太字 |
 |  | `Ctrl-I` | 斜体 |
@@ -39,7 +40,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m` ショートカットは使用できなくなります。ショートカットをもう一度使用できるようにするには、エディターバーの上部をクリックするか、「編集」モードに戻る必要があります。
+>ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m` ショートカットは使用できなくなります。ショートカットをもう一度使用できるようにするには、エディターバーの上部をクリックするか、編集モードに戻る必要があります。
 
 [コンソール](/help/sites-authoring/keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 

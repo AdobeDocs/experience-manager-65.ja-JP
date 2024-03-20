@@ -7,10 +7,11 @@ topic-tags: mobile-web
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5293'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -175,7 +176,7 @@ responsive-1200px.css
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-でデバイスのプレビューを有効にするには **[!UICONTROL Sidekick]**&#x200B;を設定する場合は、ページと **[!UICONTROL MobileEmulatorProvider]** サービス。 別のページ設定で、「 **[!UICONTROL デバイス]** リスト。
+**[!UICONTROL サイドキック]**&#x200B;でデバイスのプレビューを有効にするには、ページと **[!UICONTROL MobileEmulatorProvider]** サービスを設定する必要があります。別のページ設定で、「**[!UICONTROL デバイス]**」リストに表示されるデバイスのリストを制御します。
 
 ### 「デバイス」リストの追加 {#adding-the-devices-list}
 
@@ -661,7 +662,7 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet クラ�
 
 ## 可変グリッドの開発 {#developing-a-fluid-grid}
 
-AEMを使用すると、流体グリッドを効率的かつ効果的に実装できます。 このページでは、可変グリッドまたは既存のグリッド実装 ( [Bootstrap](https://github.com/topics/twitter-bootstrap?l=css)) をAEMアプリケーションに追加します。
+AEM を使用すると、可変グリッドを効率的かつ効果的に実装できます。ここでは、新しく作成した可変グリッドや既存のグリッドの実装（[Bootstrap](https://github.com/topics/twitter-bootstrap?l=css) など）を AEM アプリケーションに統合する方法について説明します。
 
 可変グリッドについて詳しくない場合は、このページの下部にある[可変グリッドの概要](/help/sites-developing/responsive.md#developing-a-fluid-grid)セクションを参照してください。この説明では、可変グリッドの概要と設計に関するガイダンスが示されています。
 
@@ -927,20 +928,20 @@ CSS には、次の構造を使用する一連のメディアクエリが含ま�
 
 ページの要素クラスと CSS スタイルを開発するための出発点として、次のアルゴリズムを使用します。
 
-1. すべての行を含む div 要素のクラス名を定義します（例： ）。 `content.`
+1. すべての行を含む div 要素のクラス名を定義します（例：`content.`）。
 1. 行を表す div 要素用の CSS クラスを定義します（例：`row-fluid`）。
 1. コンテンツブロック要素のクラス名を定義します。列の範囲という観点で、それぞれの幅に対して 1 つのクラスが必要です。たとえば、3 列にまたがる `div` 要素には `span3` クラスを使用し、4 列にまたがる場合は `span4` クラスを使用します。グリッドにある列と同じ数のクラスを定義します。
 
 1. ターゲットとする表示域サイズごとに、対応するメディアクエリを CSS ファイルに追加します。各メディアクエリに次の項目を追加します。
 
-   * のセレクター `content` クラス。例： `.content{}`.
-   * 各 span クラスのセレクター（例： ） `.span3{ }`.
-   * のセレクター `row-fluid` クラス。例： `.row-fluid{ }`
-   * row-fluid クラス内にある span クラスのセレクター（例： ） `.row-fluid span3 { }`.
+   * `content` クラス用のセレクター（例：`.content{}`）。
+   * 各 span クラス用のセレクター（例：`.span3{ }`）。
+   * `row-fluid` クラス用のセレクター（例：`.row-fluid{ }`）。
+   * row-fluid クラス内にある span クラス用のセレクター（例：`.row-fluid span3 { }`）。
 
 1. 各セレクターに幅のスタイルを追加します。
 
-   1. 幅の設定 `content` ページの絶対サイズのセレクター（例： ） `width:480px`.
+   1. `content` セレクターの幅を、ページの絶対サイズに設定します（例：`width:480px`）。
    1. すべての row-fluid セレクターの幅を 100％に設定します。
    1. すべての span セレクターの幅を、コンテンツブロックの幅の絶対値に設定します。単純なグリッドでは、同じ幅の均等に分布した列 `(absolute width of page)/(number of columns)` が使用されます。
    1. `.row-fluid .span` セレクターの幅を、全体の幅のパーセンテージとして設定します。この幅を計算するには、数式 `(absolute span width)/(absolute page width)*100` を使用します。

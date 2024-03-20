@@ -1,14 +1,15 @@
 ---
 title: タスクのタブのカスタマイズ
-description: LiveCycleAEM Forms Workspace でタスクのタブ名をカスタマイズする方法。
+description: LiveCycle AEM Forms Workspace でタスクのタブ名をカスタマイズする方法について説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: 8412cfec-bcab-40b7-9e5b-fcc211d43c0b
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 

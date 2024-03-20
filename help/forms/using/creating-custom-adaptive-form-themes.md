@@ -5,10 +5,11 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '790'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -59,7 +60,7 @@ ht-degree: 90%
 
    * `less` フォルダー：`less` 変数と CSS スタイルの管理に使用される `less mixins` を定義する `less` 変数ファイルが含まれています。
 
-     このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインを使ったスタイルを定義する `less` ファイル、変数で構成されています。そしてこれら全て `less` その後、ファイルは styles.less にインポートされます。
+     このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインを使ったスタイルを定義する `less` ファイル、変数で構成されています。そして、これらすべての `less` ファイルは、styles.less にインポートされます。
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
 
@@ -70,11 +71,11 @@ ht-degree: 90%
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
-   アダプティブフォームは、次のファイルで定義されているサードパーティ変数も提供しています：
+   アダプティブフォームは、次のファイルで定義されているサードパーティ変数も提供しています。
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
-   以下を使用すると、 `less` アダプティブフォームで提供される変数は、これらの変数を上書きするか、新しい変数を作成することができます。 `less` 変数。
+   アダプティブフォームで提供される `less` 変数を使用するか、これらの変数を上書きするか、新しく `less` 変数を作成することができます。
 
    >[!NOTE]
    >
@@ -131,11 +132,11 @@ ht-degree: 90%
    }
    ```
 
-   **Styles.less ファイル：** このファイルを使用して、 `less` クライアントライブラリで使用する必要があるファイル（変数、mixin、スタイル）。
+   **styles.less ファイル：**&#x200B;このファイルを使用して、クライアントライブラリで必ず使うすべての `less` ファイル（変数、ミックスイン、スタイル）を含めます。
 
    次の `styles.less` ファイルのサンプルでは、インポートステートメントは任意の順序で配置することができます。
 
-   次をインポートするステートメント `.less` ファイルは必須です。
+   次の `.less` ファイルをインポートするためのステートメントは必須です。
 
    * `globalvariables.less`
    * `layoutvariables.less`

@@ -5,10 +5,11 @@ topic-tags: installing
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: d195ac80ee59439bab5b1219a2c1f16e93e3d22b
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1624'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 93%
 
 ## はじめに {#introduction}
 
-企業は、複数のフォーム、バックエンドシステム、その他のデータソースからデータを収集して処理します。データの処理には、レビューと承認の手順、繰り返しのタスク、データのアーカイブが含まれます。例えば、フォームをレビューし、PDF ドキュメントに変換する場合などです。手動でおこなうと、繰り返しタスクに多くの時間と多数のリソースがかかる場合があります。
+企業は、複数のフォーム、バックエンドシステム、その他のデータソースからデータを収集して処理します。データの処理には、レビューと承認の手順、繰り返しのタスク、データのアーカイブが含まれます。例えば、フォームをレビューし、PDF ドキュメントに変換する場合などです。手動で行うと、繰り返しタスクに多くの時間と多数のリソースが必要になる場合があります。
 
 [OSGi 上の Forms ベースのワークフロー](../../forms/using/aem-forms-workflow.md) を使用して、アダプティブフォームベースのワークフローを迅速に構築することができます。これらのワークフローは、レビューと承認のワークフロー、ビジネスプロセスのワークフロー、その他の繰り返しタスクの自動化に役立ちます。これらのワークフローは、ドキュメントの処理 (PDF ドキュメントの作成、アセンブリ、配布、アーカイブ、ドキュメントへのアクセスを制限するための電子署名の追加、バーコードフォームのデコードなど ) や、フォームとドキュメントと併せた Adobe Sign 署名ワークフローの使用にも役立ちます。
 
@@ -99,11 +100,11 @@ Forms ベースのワークフローを OSGi 上でのインストールと設�
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、OSGi 上の Forms ベースのワークフローとその他の機能が含まれます。次の手順を実行してアドオンパッケージをインストールします。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
+1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」を選択します。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに適したパッケージ名を選択し、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
+1. お使いのオペレーティングシステムに適した Forms アドオンパッケージの名前を選択し、「**[!UICONTROL EULA 利用条件に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」を選択します。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して「**[!UICONTROL インストール]**」をクリックします。
 
@@ -154,7 +155,7 @@ AEM Forms には、必須の設定とオプションの設定がいくつかあ�
 
 #### Dispatcher の設定 {#configure-dispatcher}
 
-Dispatcher は、AEMのキャッシュおよびロードバランシングツールです。 AEM Dispatcher は、AEMサーバーを攻撃から保護するのにも役立ちます。 エンタープライズクラスの Web サーバーと組み合わせて Dispatcher を使用することで、AEMインスタンスのセキュリティを強化できます。 [ディスパッチャー](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Forms の次の設定を実行してください。
+Dispatcher は、キャッシングとロードバランシングを行うための AEM ツールです。AEM Dispatcher を使用すると、AEM サーバーを攻撃から保護するのにも役立ちます。エンタープライズクラスの Web サーバーと共に Dispatcher を使用すると、AEM インスタンスのセキュリティを高められます。[ディスパッチャー](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Forms の次の設定を実行してください。
 
 1. AEM Forms のアクセスの設定：
 

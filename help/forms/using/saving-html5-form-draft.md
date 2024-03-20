@@ -7,20 +7,21 @@ topic-tags: hTML5_forms
 discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
 feature: HTML5 Forms
 exl-id: a9879445-d626-4279-8a95-a9009294b483
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '299'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
 # HTML5 フォームのドラフトでの保存 {#saving-an-html-form-as-a-draft}
 
-HTML5 のフォームをドラフトとして保存し、後でフォームへの記入を再開できます。 Forms Portal を使用すると、すべてのユーザーが Adobe Portal フォームを保存および復元することができます。5. 「ドラフトとして保存」機能を有効にするには、プロファイルのノードに次の設定を追加します。
+HTML5 フォームをドラフトとして保存し、後でフォームへの記入を再開できます。フォームポータルを使用すると、すべてのユーザーが HTML5 フォームを保存および復元できます。「ドラフトとして保存」機能を有効にするには、プロファイルのノードに次の設定を追加します。
 
 ## 「ドラフトとして保存」機能を許可するためのカスタムプロファイル {#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Forms では初期状態で「**ドラフトとして保存**」プロファイルを使用できます。「ドラフトとして保存」プロファイルを使用してフォームをレンダリングすると、HTML5 フォームのドラフト機能を有効にすることができます。 フォームのHTMLレンダリングプロファイルを [Forms Manager](/help/forms/using/introduction-managing-forms.md).
+AEM Forms では初期状態で「**ドラフトとして保存**」プロファイルを使用できます。「ドラフトとして保存」プロファイルを持つフォームをレンダリングすると、HTML5 フォームのドラフト機能を有効にすることができます。[Forms Manager](/help/forms/using/introduction-managing-forms.md) で、フォームに対する HTML レンダリングプロファイルを指定できます。
 
 既存の[カスタムプロファイル](/help/forms/using/custom-profile.md)に対して「ドラフトとして保存」機能を有効にするには、カスタムプロファイルのノードに次のプロパティを追加します。
 
@@ -36,20 +37,20 @@ AEM Forms では初期状態で「**ドラフトとして保存**」プロファ
    <td>mfAllowFPDraft</td>
    <td>文字列</td>
    <td>true</td>
-   <td><p>ドラフトとして保存機能を有効にする</p> <p>を設定します。</p> </td>
+   <td><p>このプロファイルの「ドラフトとして保存」機能を</p> <p>有効にします。</p> </td>
   </tr>
   <tr>
    <td>mfAllowAttachments</td>
    <td>文字列</td>
    <td>true</td>
-   <td><p>添付ファイルのアップロードを許可</p> <p>をこのプロファイルに置き換えます。</p> </td>
+   <td><p>このプロファイルと一緒に添付ファイル</p> <p>をアップロードすることを許可します。</p> </td>
   </tr>
  </tbody>
 </table>
 
 ## ドラフトの保存と一覧表示 {#drafts-storage-and-listing}
 
-フォームに対して「ドラフトとして保存」機能を有効にした後、フォームを保存すると、そのフォームは [ドラフトと送信コンポーネント](/help/forms/using/draft-submission-component.md). ドラフトと送信コンポーネントで、保存されたフォームを取得して入力を開始できます。
+フォームの「ドラフトとして保存」機能を有効にしてからフォームを保存すると、[ドラフトと送信コンポーネント](/help/forms/using/draft-submission-component.md)に一覧表示されます。ドラフトと送信コンポーネントから保存しておいたフォームを取得して入力を開始できます。
 
 ドラフトと送信コンポーネントのフォームの一覧表示を有効にするには、プロファイルのノードに次のプロパティを追加します。
 

@@ -9,10 +9,11 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: fc2f26a69c208947c14e8c6036825bb217901481
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '2338'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -69,7 +70,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 ブランド固有のスタイルは、これらのクライアントライブラリで管理される CSS を追加および上書きして、AEM CIF コアコンポーネントに適用できます。クライアントライブラリが構造化されてページに含まれる方法を理解することが重要です。
 
-The [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja) は専用です [webpack](https://webpack.js.org/) プロジェクト：プロジェクトのすべてのフロントエンドアセットを管理します。 これにより、フロントエンド開発者は、[TypeScript](https://www.typescriptlang.org/)、[Sass](https://sass-lang.com/) など、様々な言語やテクノロジーを使用できます。
+[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja) は、プロジェクトのすべてのフロントエンドアセットを管理するための専用の [webpack](https://webpack.js.org/) プロジェクトです。これにより、フロントエンド開発者は、[TypeScript](https://www.typescriptlang.org/)、[Sass](https://sass-lang.com/) など、様々な言語やテクノロジーを使用できます。
 
 `ui.frontend` モジュールは Maven モジュールでもあり、NPM モジュールの [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) を使用して、より大きなプロジェクトに統合されています。ビルド時に、`aem-clientlib-generator` はコンパイル済みの CSS ファイルおよび JavaScript ファイルを `ui.apps` モジュールのクライアントライブラリにコピーします。
 
@@ -261,7 +262,7 @@ The [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-cor
 
    ![テンプレートの編集](../assets/style-cif-component/edit-template.png)
 
-   これにより、 **ランディングページ** template を使用します。 **ホーム** ページがに基づいている。
+   すると、**ホーム**&#x200B;ページの基になる&#x200B;**ランディングページ**&#x200B;テンプレートが開きます。
 
    >[!NOTE]
    >
@@ -280,7 +281,7 @@ The [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-cor
    * `venia.dependencies` - `venia.site` が依存するベンダーライブラリを提供します。
    * `venia.site` - `ui.frontend` モジュールが生成する `clientlib-site` のカテゴリです。
 
-   他のテンプレートも同じポリシー、**コンテンツページ**、**ランディングページ**&#x200B;などを使用しています。 同じポリシーを再利用することで、同じクライアントライブラリをすべてのページに確実に含めることができます。
+   他のテンプレートも同じポリシー、**コンテンツページ**、**ランディングページ**&#x200B;などを使用しています。 同じポリシーを再利用すると、同じクライアントライブラリをすべてのページに確実に含めることができます。
 
    テンプレートポリシーとページポリシーを使用してクライアントライブラリの組み込みを管理する利点は、テンプレートごとにポリシーを変更できることです。例えば、同じ AEM インスタンス内で 2 つの異なるブランドを管理しているとします。各ブランドには独自のスタイルまたは&#x200B;*テーマ*&#x200B;がありますが、基本ライブラリとコードは同じです。別の例として、特定のページにのみ表示したい大きなクライアントライブラリがある場合、そのテンプレートにのみ固有のページポリシーを作成できます。
 

@@ -6,7 +6,8 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 50f0c963-8007-4e2a-aa73-d99b97d9a1aa
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 100%

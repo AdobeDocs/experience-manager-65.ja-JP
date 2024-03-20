@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '647'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -111,7 +112,7 @@ ht-degree: 90%
 
 1. **スコープ**&#x200B;ステップで、以下のものを選択できます。
 
-   * **コンテンツを追加** 開く [パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser) 追加のリソースを選択します。ブラウザーで、 **選択** をクリックして、コンテンツをワークフローインスタンスに追加します。
+   * 「**コンテンツを追加**」で[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)を開き、追加リソースを選択します。ブラウザーでは、「**選択**」をクリックして、コンテンツをワークフローインスタンスに追加します。
 
    * 追加のアクションを表示するための既存のリソース
 
@@ -135,6 +136,6 @@ ht-degree: 90%
 
 ## ページエディターからのワークフローの開始 {#starting-a-workflow-from-the-page-editor}
 
-ページの編集時に、ツールバーから「**ページ情報**」を選択できます。ドロップダウンメニューには、「**ワークフローで開始**」オプションがあります。これにより、必要なワークフローと必要に応じてタイトルを指定できるダイアログボックスが開きます。
+ページの編集時に、ツールバーから「**ページ情報**」を選択できます。ドロップダウンメニューには、「**ワークフローで開始**」オプションがあります。これによりダイアログボックスが開き、必要なワークフローと、必要な場合はタイトルも指定できます。
 
 ![wf-54](assets/wf-54.png)

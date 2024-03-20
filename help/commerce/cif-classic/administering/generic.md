@@ -6,10 +6,11 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '2907'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -194,7 +195,7 @@ Adobe Experience Manager（AEM）の汎用ソリューションは、（外部�
 
    ![参照を開いた状態の製品コンソール](/help/sites-administering/assets/chlimage_1-88.png)
 
-1. 参照タイプ（「製品ページ」など）をクリックして、リストを展開します。
+1. 参照タイプ（製品ページなど）をクリックして、リストを展開します。
 1. 特定の参照を選択すると、次のオプションを表示できます。
 
    * 製品ページに移動
@@ -264,7 +265,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 これで、2 つのアセットが製品コンポーネントに保存されました。製品ページにどちらを表示するかを設定できます。これはカテゴリシステムで機能します。最初に、個々のアセットにカテゴリを追加する必要があります。
 
 1. 「**製品データを表示**」を選択します。
-1. を入力します。 **アセットカテゴリ** アセットの下に、例えば `cat1` および `cat2`.
+1. アセットの下の「**アセットカテゴリ**」に入力します（例：`cat1` および `cat2`）。
 
    >[!NOTE]
    >
@@ -463,7 +464,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
    ![カタログを作成ウィザード](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. 必要なカタログのブループリントに移動します。
-1. を選択します。 **選択** ボタンをクリックし、必要なカタログブループリントをクリックします。
+1. 「**選択**」ボタンを選択し、必要なカタログのブループリントをクリックします。
 1. 「**次へ**」を選択します。
 
    ![カタログのプロパティウィザード](/help/sites-administering/assets/chlimage_1-100.png)
@@ -475,7 +476,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 1. 「**完了**」ボタンを選択すると、サイトのコンソールに戻り、カタログを表示できます。
 
-   タップ/クリック **カタログを開く** 「 」ボタンをクリックすると、カタログが開きます ( 例： `http://localhost:4502/editor.html/content/test-catalog.html`) をクリックします。
+   「**カタログを開く**」ボタンをタップまたはクリックすると、カタログ（例：`http://localhost:4502/editor.html/content/test-catalog.html`）が開きます。
 
 #### カタログの生成 - クラシック UI {#generating-a-catalog-classic-ui}
 
@@ -524,7 +525,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
    ![ロールアウト](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
-1. ウィザードで、必要に応じてロールアウトを設定し、 **ロールアウトの変更**.
+1. ウィザードで、必要に応じてロールアウトを設定してから、「**ロールアウトの変更**」をクリックします。
 1. ダイアログボックスが開きます。処理が終了したら、「**完了**」を選択します。
 
 #### カタログのロールアウト - クラシック UI {#rolling-out-a-catalog-classic-ui}
@@ -549,7 +550,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
    ![ブループリントを読み込みアイコン](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
-1. ウィザードで、必要に応じて「ソース」を選択し、「 **次へ**.
+1. ウィザードで、必要に応じて「ソース」を選択し、「**次へ**」をクリックします。
 
    ![ブループリントウィザード](/help/sites-administering/assets/chlimage_1-102.png)
 

@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '3547'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -371,7 +372,7 @@ WebP をデフォルトで提供する状態に戻す場合は、同様にサポ
 
 ## 合成画像でデバイスピクセル比（dpr）機能が期待どおりに動作しないのはなぜですか？ {#composite-images}
 
-合成画像に含まれるレイヤーが多すぎると、位置修飾子の使用中に dpr 機能に影響が及ぶ場合があります。この問題は既知で、スマートイメージングの今後のリリースで修正する必要があります。 他のスマートイメージング機能が期待どおりに動作しない場合は、サポートケースを作成して問題を報告することができます。
+合成画像に含まれるレイヤーが多すぎると、位置修飾子の使用中に dpr 機能に影響が及ぶ場合があります。この問題は既知で、スマートイメージングの今後のリリースで修正される予定です。他のスマートイメージング機能が期待どおりに動作しない場合は、サポートケースを作成して問題を報告することができます。
 
 ## スマートイメージングで PNG が依然として可逆 WebP／AVIF に変換されるのはなぜですか？ {#convert-to-lossless}
 

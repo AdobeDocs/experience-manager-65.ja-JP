@@ -1,6 +1,6 @@
 ---
 title: Brand Portal へのコレクションの公開
-description: コレクションをBrand Portalに公開および非公開にする方法を説明します。
+description: Brand Portal へのコレクションの公開および非公開の方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: brand-portal
@@ -9,16 +9,17 @@ docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 8f426012-d9ec-418e-8ab6-78e4aeff7538
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
 # Brand Portal へのコレクションの公開 {#publish-collections-to-brand-portal}
 
-Adobe Experience Manager(AEM)Assets 管理者は、組織のAEM Assets Brand Portalインスタンスにコレクションを公開できます。 ただし、最初に AEM Assets を Brand Portal と統合する必要があります。詳しくは [AEM Assets と Brand Portal の連携の設定](/help/assets/configure-aem-assets-with-brand-portal.md)を参照してください。
+Adobe Experience Manager（AEM）Assets の管理者は、組織の AEM Assets Brand Portal のインスタンスにコレクションを公開できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。詳しくは [AEM Assets と Brand Portal の連携の設定](/help/assets/configure-aem-assets-with-brand-portal.md)を参照してください。
 
 その後、AEM Assets でオリジナルのコレクションに変更を加えても、そのコレクションを再び公開しない限り変更内容は Brand Portal に反映されません。このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
@@ -26,7 +27,7 @@ Adobe Experience Manager(AEM)Assets 管理者は、組織のAEM Assets Brand Por
 >
 >コンテンツフラグメントは Brand Portal に公開できません。したがって、AEM オーサー上でコンテンツフラグメントを選択している場合は、「**Brand Portal に公開**」アクションを使用できません。
 >
->コンテンツフラグメントを含むコレクションをAEMオーサーからBrand Portalに公開した場合、コンテンツフラグメントを除くフォルダー内のすべてのコンテンツがBrand Portalインターフェイスにレプリケートされます。
+>コンテンツフラグメントを含むコレクションを AEM オーサーインスタンスから Brand Portal へ公開した場合は、そのフォルダー内のコンテンツフラグメントを除く全コンテンツが Brand Portal インターフェイスにレプリケートされます。
 
 ## Brand Portal へのコレクションの公開 {#publish-a-collection-to-brand-portal}
 

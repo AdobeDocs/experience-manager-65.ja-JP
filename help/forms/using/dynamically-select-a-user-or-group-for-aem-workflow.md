@@ -4,10 +4,11 @@ description: 実行時に AEM Forms Workflow のユーザーまたはグルー�
 content-type: troubleshooting
 topic-tags: publish
 exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '873'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -69,11 +70,11 @@ var path = workflowData.getPayload().toString();
 }
 ```
 
-以下のサンプル ECMAScript は、Adobe Signの手順の担当者を動的に選択します。 次のスクリプトを使用する前に、スクリプトで指定されているユーザー情報（電子メールアドレスと電話番号）が正しいことを確認してください。 スクリプトで説明されているユーザー情報が正しくない場合、関連するプロセスが失敗する可能性があります。
+次のサンプル ECMAScript では、Adobe Sign 手順に担当者を動的に選択します。次のスクリプトを使用する前に、スクリプトで指定されているユーザー情報（電子メールアドレスと電話番号）が正しいことを確認してください。 スクリプトで説明されているユーザー情報が正しくない場合、関連するプロセスが失敗する可能性があります。
 
 >[!NOTE]
 >
->Adobe Sign用の ECMAScript を使用する場合、スクリプトは/apps/fd/workflow/scripts/adobesign/の crx-repository に存在し、ユーザーのリストを返すために getAdobeSignRecipients という名前の関数を持っている必要があります。
+>Adobe Sign で ECMAScript を使用する場合、スクリプトは crx-repository で、/apps/fd/workflow/scripts/adobesign/ にある必要があります。また、ユーザーのリストを返す getAdobeSignRecipients という名前の関数が含まれている必要があります。
 
 ```javascript
 function getAdobeSignRecipients() {
@@ -112,7 +113,7 @@ function getAdobeSignRecipients() {
 
 ## ユーザーまたはグループを動的に選択するための Java インターフェイスの使用 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-以下を使用すると、 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Adobe Signおよびタスクの割り当て手順でユーザーまたはグループを動的に選択する Java インターフェイス。 [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェイスを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイできます。これにより、AEM Workflow のタスクの割り当てコンポーネントとAdobe Signコンポーネントで、このオプションを選択できるようになります。
+[RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェイスを使用すると、Adobe Sign 手順やタスクの割り当て手順でユーザーまたはグループを動的に選択できます。[RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェイスを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイできます。これにより、AEM ワークフローのタスクの割り当ておよび Adobe Sign コンポーネントで、オプションを選択できるようになります。
 
 以下のコードサンプルをコンパイルするには、[AEM Forms Client SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) jar および [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルが必要です。これらの jar ファイルを外部の依存関係として OSGi バンドルプロジェクトに追加します。 任意の Java IDE を使用して、OSGi バンドルを作成できます。 次の手順は、Eclipse を使用して OSGi バンドルを作成する手順を示しています。
 
@@ -226,7 +227,7 @@ function getAdobeSignRecipients() {
 
    `mvn clean install`
 
-1. バンドルをAEM Formsサーバーにアップロードします。 AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
+1. バンドルを AEM Forms サーバーにアップロードします。AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
 
 バンドルをインポートすると、Adobe Sign 手順やタスクの割り当て手順で、ユーザーまたはグループを動的に選択する Java インターフェイスを選択できるようになります。
 

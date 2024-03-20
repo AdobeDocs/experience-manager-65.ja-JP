@@ -1,15 +1,16 @@
 ---
 title: Analytics 用のサーバーサイドのページネーミングの実装
-description: Adobe Analyticsは、s.pageName プロパティを使用して、ページを一意に識別し、ページ用に収集されたデータを関連付けます
+description: Adobe Analytics は、s.pageName プロパティを使用してページを一意に識別し、そのページのために収集されたデータを関連付けます
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +22,7 @@ Adobe Analytics は、`s.pageName` プロパティを使用してページを一
 
 * ページコンポーネントを、`s.pageName` プロパティにマップする CQ 変数を含むようにデザインする（[カスタムコンポーネント用の Adobe Analytics トラッキング機能の実装](/help/sites-developing/extending-analytics-components.md)を参照）。
 
-Analytics レポートデータをサイトコンソールとコンテンツインサイトに公開するには、各ページの `s.pageName` プロパティの値が必要です。Sites コンソールとコンテンツインサイトに `s.pageName` プロパティの値を指定するために実装した `AnalyticsPageNameProvider` インターフェイスを、AEM Analytics の Java API で定義します。お使いの `AnaltyicsPageNameProvider` サービスは、追跡のためにクライアント上で JavaScript を使用して動的に設定できるので、レポート目的でサーバー上の pageName プロパティを解決します。
+Analytics レポートデータをサイトコンソールとコンテンツインサイトに公開するには、各ページの `s.pageName` プロパティの値が必要です。Sites コンソールとコンテンツインサイトに `s.pageName` プロパティの値を指定するために実装した `AnalyticsPageNameProvider` インターフェイスを、AEM Analytics の Java API で定義します。`AnaltyicsPageNameProvider` サービスは、レポート生成のためにサーバー上の pageName プロパティを解決します。このプロパティは、追跡のためにクライアント上で JavaScript を使用して動的に設定できるからです。
 
 ## デフォルトの Analytics ページ名プロバイダーサービス {#the-default-analytics-page-name-provider-service}
 
@@ -39,7 +40,7 @@ Analytics レポートデータをサイトコンソールとコンテンツイ�
 
 * `pagedata.navTitle`：このサービスは `page.getNavigationTitle()` を使用します
 
-The `page` オブジェクトが [`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/jp/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) ページの Java オブジェクト。
+`page` オブジェクトは、そのページの [`com.day.cq.wcm.api.Page`](https://helpx.adobe.com/jp/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Java オブジェクトです。
 
 CQ 変数をフレームワークの `s.pageName` プロパティにマッピングしない場合、`s.pageName` の値はページのパスから生成されます。例えば、`/content/geometrixx/en` というパスを持つページでは、`s.pageName` に値 `content:geometrixx:en` を使用します。
 
@@ -47,18 +48,18 @@ CQ 変数をフレームワークの `s.pageName` プロパティにマッピン
 >
 >DefaultPageNameProvider サービスは、サービスランキングとして 100 を使用します。
 
-## Analytics レポートでの継続性の維持 {#maintaining-continuity-in-analytics-reporting}
+## Analytics レポートにおける連続性の維持 {#maintaining-continuity-in-analytics-reporting}
 
-ページの分析データの完全な履歴を保持するには、ページに使用される s.pageName プロパティの値が変更されない必要があります。 ただし、基盤ページコンポーネントで定義される分析プロパティは簡単に変更できます。 例えば、ページを移動すると、 `pagedata.path` とは、レポート履歴の継続性を壊します。
+ページの分析データに関するすべての履歴を維持するには、一度も変更されたことがないページに使用される s.pageName プロパティの値が必要です。ただし、基盤ページコンポーネントが定義する分析プロパティは簡単に変更できます。例えば、ページを移動すると `pagedata.path` の値が変更され、レポート履歴の連続性が途切れて、次のようなことが起こります。
 
-* 以前のパスで収集されたデータは、ページに関連付けられなくなります。
-* 別のページが、別のページが 1 回使用したパスを使用している場合、そのパスのデータは異なるページに継承されます。
+* 前のパスで収集されたデータは、このページと関連付けられなくなります。
+* 以前に他のページが使用していたパスを別のページが使用する場合は、後から使用するほうのページがそのパスのデータを継承します。
 
 レポートの連続性を保証するには、`s.pageName` の値に以下の性質を持たせる必要があります。
 
-* 一意。
-* 安定しています。
-* 人間が読み取り可能。
+* 一意性。
+* 安定性。
+* 人間にとっての可読性。
 
 例えば、カスタムページコンポーネントに、作成者がページの一意の ID を指定するために使用するページプロパティ（`s.pageProperties` プロパティの値として使用されるもの）を含めることができます。
 
@@ -72,9 +73,9 @@ CQ 変数をフレームワークの `s.pageName` プロパティにマッピン
 
 ### Analytics ページ名プロバイダーサービスの実装 {#implementing-an-analytics-page-name-provider-service}
 
-`com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` インターフェイスを OSGi サービスとして実装し、`s.pageName` プロパティの値を取得するロジックをカスタマイズします。サイトページ分析およびコンテンツインサイトでは、このサービスを使用して Analytics からレポートデータを取得します。
+`com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` インターフェイスを OSGi サービスとして実装し、`s.pageName` プロパティの値を取得するロジックをカスタマイズします。サイトページ分析およびコンテンツインサイトでこのサービスを使用して、Analytics からレポートデータを取得します。
 
-AnalyticsPageNameProvider インターフェイスは、実装が必要な次の 2 つのメソッドを定義します。
+AnalyticsPageNameProvider インターフェイスで定義されている次の 2 つのメソッドを実装する必要があります。
 
 * `getPageName`：`s.pageName` プロパティとして使用する値を表す `String` 値を返します。
 
@@ -87,9 +88,9 @@ AnalyticsPageNameProvider インターフェイスは、実装が必要な次の
 * ページの `Resource` オブジェクト。
 * ページの `ResourceResolver` オブジェクト。
 
-このクラスは、ページ名のセッターも提供します。
+このクラスは、ページ名の setter も提供します。
 
-### AnalyticsPageNameProvider の実装例 {#example-analyticspagenameprovider-implementation}
+### サンプル AnalyticsPageNameProvider 実装 {#example-analyticspagenameprovider-implementation}
 
 以下に示すサンプル `AnalyticsPageNameProvider` 実装は、以下のようなカスタムページコンポーネントをサポートしています。
 
@@ -118,7 +119,7 @@ public String getPageName(AnalyticsPageNameContext context) {
     }
 ```
 
-次に示す getResource メソッドの実装は、ページの Resource オブジェクトを返します。
+以下に示す getResource メソッドの実装は、ページの Resource オブジェクトを返します。
 
 ```java
      public Resource getResource(AnalyticsPageNameContext context) {
@@ -150,7 +151,7 @@ public String getPageName(AnalyticsPageNameContext context) {
     }
 ```
 
-次のコードは、サービスを設定する SCR 注釈を含む、クラス全体を表しています。 サービスのランキングは 200 で、デフォルトのサービスを上書きします。
+以下のコードは、サービスを設定する SCR アノテーションを含む、クラス全体を表します。デフォルトのサービスをオーバーライドするサービスランキングは 200 です。
 
 ```java
 /*************************************************************************

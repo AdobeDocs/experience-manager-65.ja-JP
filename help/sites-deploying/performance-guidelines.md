@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2939'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -266,7 +267,7 @@ ht-degree: 97%
 * **新しいバージョンへのアップグレード**：新しいバージョンにアップグレードする場合は、実行中の環境と比較してパフォーマンスの違いを理解することが重要です。例えば、AEM 6.1 から 6.2 へ、または AEM 6.0 CRX2 から 6.2 OAK にアップグレードする場合などです。
 * **応答時間が遅い**：選択したノードストアアーキテクチャが要件を満たしていない場合は、他のトポロジオプションと比較してパフォーマンスの違いを理解することが重要です。例えば、MongoMK の代わりに TarMK をデプロイしたり、Amazon S3 または Microsoft® Azure データストアの代わりにファイルデータストアを使用したりする場合です。
 * **オーサーの追加**：推奨 TarMK トポロジがパフォーマンス要件を満たさず、オーサーノードのサイズ拡張が使用可能な最大容量に達した場合は、パフォーマンスの違いを理解する必要があります。その際、3 つ以上のオーサーノードで MongoMK を使用する場合と比較します。例えば、TarMK の代わりに MongoMK をデプロイする場合などです。
-* **コンテンツの追加**：推奨されるデータストアアーキテクチャが要件を満たしていない場合は、他のデータストアオプションと比較してパフォーマンスの違いを理解することが重要です。 例えば、ファイルデータストアの代わりに Amazon S3 または Microsoft® Azure データストアを使用する場合などです。
+* **コンテンツの追加**：推奨データストアアーキテクチャが要件を満たさない場合は、他のデータストアオプションと比較してパフォーマンスの違いを理解することが重要です。例えば、ファイルデータストアの代わりに Amazon S3 または Microsoft® Azure データストアを使用する場合などです。
 
 ## はじめに {#introduction}
 
@@ -427,7 +428,7 @@ TarMK の使用時に優れたパフォーマンスを実現するには、次�
 
 ### TarMK 設定ガイドライン {#tarmk-settings-guideline}
 
-パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
+パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)。
 
 <table>
  <tbody>
@@ -537,7 +538,7 @@ MongoMK の使用時に優れたパフォーマンスを実現するには、次
 
 ### MongoMK 設定ガイドライン {#mongomk-settings-guidelines}
 
-パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)。
+パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)。
 
 <table>
  <tbody>

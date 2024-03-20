@@ -1,15 +1,16 @@
 ---
 title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
-description: アダプティブフォームとレコードのドキュメントをローカライズするには、AEM翻訳ワークフローを使用する方法を説明します。
+description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
 content-type: reference
 topic-tags: develop
 noindex: true
 feature: Adaptive Forms, Foundation Components
 exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '802'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -17,15 +18,15 @@ ht-degree: 76%
 
 <span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
-フォームのローカライズにより、様々な地域の幅広い対象者に向けてフォームを提供できるようになります。Adobe Experience Manager翻訳ワークフローは、アダプティブフォームとそのレコードのドキュメントをローカライズする場合に役立ちます。 以下を使用できます。 **機械翻訳** または **人工翻訳者** アダプティブフォームをローカライズするには
+フォームのローカライズにより、様々な地域の幅広い対象者に向けてフォームを提供できるようになります。アダプティブフォームおよびレコードのドキュメントをローカライズするには、Adobe Experience Manager 翻訳ワークフローが役立ちます。アダプティブフォームのローカライズには、**機械翻訳**&#x200B;または&#x200B;**人間による翻訳**&#x200B;を使用できます。
 
-この記事では、アダプティブフォームとレコードのドキュメントでAEM翻訳ワークフローを使用するプロセスについて説明します。
+この記事では、アダプティブフォームおよびレコードのドキュメントで AEM 翻訳ワークフローを使用する手順について説明します。
 
-## 機械翻訳を使用したアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
+## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
-機械翻訳サービスは、アダプティブフォームおよびレコードのドキュメント内のコンテンツを直ちに翻訳します。 AEM Forms では、機械翻訳に Microsoft Translator の体験版を使用することが事前に定義されています。アダプティブフォームとレコードのドキュメントの機械翻訳を有効にするには、次の手順を実行します。
+機械翻訳サービスを使用すると、アダプティブフォームおよびレコードのドキュメントを即座に翻訳することができます。AEM Forms では、機械翻訳に Microsoft Translator の体験版を使用することが事前に定義されています。アダプティブフォームおよびレコードのドキュメントの機械翻訳を有効にするには、次の手順を実行します。
 
-1. AEM Forms UI で、フォームを選択し、 **辞書を追加** オプション。
+1. AEM Forms UI 上でフォームを選択し、「**辞書を追加**」オプションを選択します。
 1. **辞書を翻訳プロジェクトに追加** 画面で、「**新しい翻訳プロジェクトを作成**」または「**既存の翻訳プロジェクトを追加**」オプションを選択します。
 1. 「**プロジェクトタイトル**」フィールドでタイトルを指定します。例：`Government Reference Site - German locale.`
 1. 「**ターゲット言語**」フィールドでロケールを指定し（例えば `German(de)` と入力します）、「**完了**」をクリックします。複数のロケールを指定できます。フォームは、**ターゲット言語**&#x200B;フィールドに指定されたすべてのロケールに翻訳されます。
@@ -48,14 +49,14 @@ ht-degree: 76%
 
 [レコードのドキュメントの設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
 
-1. [レコードのドキュメントのブランディング情報をカスタマイズ](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) ブラウザーのロケールが、機械言語を使用してアダプティブフォームをローカライズしたのと同じ言語に設定されていることを確認してください。 ブラウザーのロケールは、レコードのドキュメント内のブランディング情報をローカライズするのに役立ちます。
-1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」を選択します。 レコードのドキュメントの PDF が生成され、ブラウザーの新しいタブに表示されます。
+1. [レコードのドキュメントのブランディング情報をカスタマイズ](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)し、ブラウザーのロケールを、機械語を使用してアダプティブフォームをローカライズした言語と同じ言語に設定します。ブラウザーのロケールは、レコードのドキュメントにあるブランディング情報のローカライズに役立ちます。
+1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」を選択します。レコードのドキュメントの PDF が生成され、ブラウザーの新しいタブに表示されます。
 
 ## 人間による翻訳を使用した、アダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
 人間による翻訳を使用すると、コンテンツは翻訳プロバイダーに送信され、専門の翻訳者によって翻訳が行われます。完了すると、翻訳コンテンツが返され、AEM に読み込まれます。翻訳プロバイダーが AEM と統合されると、AEM と翻訳プロバイダーとの間でコンテンツが自動的に送信されます。
 
-翻訳では、XLIFF 形式のファイルを含む辞書が専門の翻訳者と共有されます。この辞書には、ロケールごとに個別の XLIFF ファイルが含まれます。各 XLIFF ファイルには、エンドユーザーに表示されるテキストと、対応するローカライズされたテキストのプレースホルダーが含まれます。
+翻訳では、XLIFF 形式のファイルを含む辞書が専門の翻訳者と共有されます。この辞書には、ロケールごとに個別の XLIFF ファイルが含まれます。各 XLIFF には、エンドユーザーに表示されるテキストと、対応するローカライズ済みのテキストのプレースホルダ―が含まれます。
 
 人間による翻訳を使用してフォームとレコードのドキュメントをローカライズするには、次の手順を実行します。
 

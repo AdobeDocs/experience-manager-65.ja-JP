@@ -5,7 +5,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 feature: Forms Designer
-source-git-commit: 744cfcee691ea71f33cd56509f65d4f640d4c6e3
+exl-id: f962844a-f191-4505-bfc9-85c94d8faa46
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%

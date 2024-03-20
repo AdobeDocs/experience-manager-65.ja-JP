@@ -7,14 +7,15 @@ topic-tags: introduction
 content-type: reference
 docset: aem65
 exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
-source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 58%
 
 ---
 
-# インボックス {#your-inbox}
+# インボックス{#your-inbox}
 
 AEMの様々な領域から通知を受け取ることができます。例えば、作業項目に関する通知や、ページのコンテンツに対して実行する必要のあるアクションを表すタスクなどです。
 

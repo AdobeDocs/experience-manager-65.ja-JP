@@ -1,21 +1,22 @@
 ---
-title: ドメイン情報をプリフェッチするためのAEM forms の設定
-description: 深くネストされたグループが原因で応答時間が遅くなった場合や、多くのグループのメンバーである場合は、AEM forms を設定してドメイン情報をプリフェッチします。
+title: ドメイン情報をプリフェッチするための AEM Forms の設定
+description: グループのネストが深いことによって応答時間が遅くなる場合や、多くのグループのメンバーである場合、ドメイン情報をプリフェッチするように AEM Forms を設定します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: cf5283a5-dbfb-460d-a8bd-11cd15ab8640
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 39%
+ht-degree: 100%
 
 ---
 
-# ドメイン情報をプリフェッチするためのAEM forms の設定 {#configure-aem-forms-to-prefetchdomain-information}
+# ドメイン情報をプリフェッチするための AEM Forms の設定 {#configure-aem-forms-to-prefetchdomain-information}
 
-多数のグループに属している場合（例：500 以上）や、グループが深くネストされている場合（例：30 レベル）は、応答時間が長くなる場合があります。 この問題が発生した場合は、特定のドメインから情報をプリフェッチするようにAEM forms を設定できます。
+ユーザーが多数のグループに属している場合（例：500 以上）や、グループのネストが深い場合（例：30 レベル）、応答時間が遅くなる可能性があります。この問題が発生している場合は、特定のドメインから情報をプリフェッチするように AEM Forms を設定できます。
 
 1. 管理コンソールで、**[!UICONTROL 設定／User Management／設定／既存の設定ファイルのインポートとエクスポート]**&#x200B;をクリックします。
 1. ファイルに現在の設定をエクスポートするには、「**[!UICONTROL エクスポート]**」をクリックして別の場所に設定ファイルを保存します。
@@ -36,7 +37,7 @@ ht-degree: 39%
     <node name="APSAuditService">
    ```
 
-   この例では、プリフェッチ用に複数のドメインが設定されています。 ドメイン名は「/」で区切られます。 このことは、上の例において *Domain_Name1*、*Domain_Name2* および *Domain_Name3* として示されています。
+   この例では、複数のドメインがプリフェッチ用に設定されています。ドメイン名は「/」によって区切られます。このことは、上の例において *Domain_Name1*、*Domain_Name2* および *Domain_Name3* として示されています。
 
 1. 更新したファイルをインポートするには、User Management で、「**[!UICONTROL 設定ファイルのインポートとエクスポート]**」をクリックします。
 1. 「**[!UICONTROL 参照]**」をクリックしてファイルを探し、「インポート」をクリックして「**[!UICONTROL OK]**」をクリックします。

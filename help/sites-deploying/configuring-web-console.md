@@ -1,14 +1,15 @@
 ---
 title: AEM の web コンソール
-description: Adobe Experience Manager(AEM) で Web コンソールを使用する方法を説明します。
+description: Adobe Experience Manager（AEM）で web コンソールを使用する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
-source-git-commit: c7c32130a3257c14c98b52f9db31d80587d7993a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '704'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 

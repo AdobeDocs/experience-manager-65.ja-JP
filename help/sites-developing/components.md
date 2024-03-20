@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '570'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -22,21 +23,21 @@ ht-degree: 73%
 * 特定の機能を実現し、Web サイトにコンテンツを提供するためのモジュールユニットです。
 * 再利用可能です。
 * リポジトリーの 1 つのフォルダー内の自己完結型ユニットとして開発されます。
-* 非表示の設定ファイルはありません。
+* 非表示の設定ファイルを持ちません。
 * 他のコンポーネントを含めることができます。
-* 任意のAEMシステム内で任意の場所で実行できます。 また、特定のコンポーネントでの実行に制限することもできます。
+* AEM システム内であれば、どの場所でも実行できます。特定のコンポーネントにおいてのみ実行できるようにすることもできます。
 * 標準化されたユーザーインターフェイスがあります。
 * 設定可能な編集動作があります。
 * Granite UI コンポーネントに基づくサブ要素を使用して構築されたダイアログボックスを使用します。
 * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)（推奨）または JSP を使用して作成できます。
 * デフォルトの機能を拡張するカスタマイズされたコンポーネントを作成するために開発できます。
 
-コンポーネントはモジュラーなので、次のことが可能です。
+コンポーネントはモジュールなので、次のことができます。
 
 * ローカルインスタンス上で新しいコンポーネントを開発します。
 * テスト環境にデプロイします。
 * ライブオーサリング環境にデプロイし、そこで、作成者や管理者のコンテンツの追加および設定を許可します。
-* ライブパブリッシュ環境にデプロイします。Web サイトへの訪問者用にコンテンツをレンダリングするために使用します。コミュニティなどの特定のコンポーネントは、ユーザーからの入力も受け付けます。
+* ライブパブリッシュ環境にデプロイします。Web サイトへの訪問者用にコンテンツをレンダリングするために使用します。また、特定のコンポーネント（コミュニティ用など）がユーザーからの入力を受け入れます。
 
 各 AEM コンポーネント：
 
@@ -44,21 +45,21 @@ ht-degree: 73%
 * 特定の機能を完全に実現するスクリプトのコレクションです。
 * *単独で*（AEM 内またはポータル内で）機能できます。
 
-## AEM内の標準コンポーネント {#out-of-the-box-components-within-aem}
+## AEM 内の既成のコンポーネント {#out-of-the-box-components-within-aem}
 
-AEMには様々な [すぐに使用できるコンポーネント](/help/sites-authoring/default-components.md) は、次のような包括的な機能を提供します。
+AEM には、次のような包括的な機能を提供する、様々な[標準コンポーネント](/help/sites-authoring/default-components.md)が付属しています。
 
 * 段落システム ( `parsys`)
 * ページ（`responsivegrid` - タッチ操作対応 UI のみ）
 * テキスト
-* 画像と付属のテキスト
+* 画像（説明テキスト付き）
 * ツールバー
 
-提供されるコンポーネントと、内でのその使用方法 [サンプル We.Retail Web サイト](/help/sites-developing/we-retail.md) ここでは、コンポーネントを実装および使用する方法を示します。 コンポーネントは、すべてのソースコードと共に提供されており、そのまま使用することも、コンポーネントを変更または拡張する出発点として使用することもできます。
+提供される[サンプル We.Retail Web サイト](/help/sites-developing/we-retail.md)内で提供されるコンポーネントおよびそれらの使用方法は、コンポーネントの実装および使用方法の例です。コンポーネントは、すべてのソースコードと共に提供されており、そのまま使用することも、コンポーネントを変更または拡張する出発点として使用することもできます。
 
-### コアコンポーネントと基盤コンポーネント {#core-components-and-foundation-components}
+### コアコンポーネントおよび基盤コンポーネント {#core-components-and-foundation-components}
 
-次の 2 つのAdobe提供AEMコンポーネントセットを使用できます。
+アドビが提供する AEM コンポーネントには 2 つのセットがあります。
 
 * [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)
@@ -75,9 +76,9 @@ AEMには様々な [すぐに使用できるコンポーネント](/help/sites-a
 
 ### 利用可能なコンポーネントの表示 {#viewing-available-components}
 
-AEMインスタンスで使用可能なすべてのコンポーネントの概要については、 [コンポーネントコンソール](/help/sites-authoring/default-components-console.md).
+AEM インスタンスで利用可能なすべてのコンポーネントの概要を確認するには、[コンポーネントコンソール](/help/sites-authoring/default-components-console.md)を使用します。
 
-または、CRXDE Liteを使用して、リポジトリで使用可能なすべてのコンポーネントのリストを取得することもできます。
+または、CRXDE Lite を使用して、リポジトリで利用可能なすべてのコンポーネントのリストを取得することもできます。
 
 1. **[!UICONTROL CRXDE Lite]** で、ツールバーから「**[!UICONTROL ツール]**」を選択し、「**[!UICONTROL クエリ]**」を選択して、「**[!UICONTROL クエリ]**」タブを開きます。
 

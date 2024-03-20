@@ -1,11 +1,12 @@
 ---
 title: AEM Commerce Integration Framework（CIF）アドオンへの移行
-description: 古いバージョンからAEMCommerce integration framework(CIF) アドオンに移行する方法。
+description: 旧バージョンから AEM Commerce Integration Framework（CIF）アドオンに移行する方法。
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 

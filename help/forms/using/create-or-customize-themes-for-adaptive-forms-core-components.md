@@ -8,10 +8,11 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
-source-git-commit: 4a8155f754d1f71354717f5eb22511baab110916
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1921'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -284,7 +285,7 @@ The selected theme is applied to the Adaptive Form.
 アダプティブフォームにテーマを適用するには、次の手順を実行します。
 
 1. AEM オーサーインスタンスにログインします。
-1. Experience Manager のログインページに資格情報を入力します。選択 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**.
+1. Experience Manager のログインページに資格情報を入力します。**Adobe Experience Manager**／**Forms**／**フォームとドキュメント**&#x200B;を選択します。
 1. **作成**／**アダプティブフォーム**&#x200B;の順にクリックします。
 1. アダプティブフォームコアコンポーネントテンプレートを選択し、「**次へ**」をクリックします。**プロパティを追加**&#x200B;が表示されます。
 1. アダプティブフォームの&#x200B;**名前**&#x200B;を指定します。

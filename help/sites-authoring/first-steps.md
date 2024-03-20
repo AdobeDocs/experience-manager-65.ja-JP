@@ -7,10 +7,11 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +38,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-編集する前に、次の操作を行う必要があります。 [ページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page).
+編集前に、[ページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)する必要があります。
 
 ### ページを開く {#opening-a-page}
 
@@ -45,7 +46,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### ページの編集 {#editing-a-page}
 
-インスタンスに既存のページが存在するか、または自分で新しいページを作成したかに関わらず、 [ページの編集](/help/sites-authoring/editing-content.md) 基準：
+インスタンスに既存のページがあるか、新しいページを自分で作成した場合は、次の方法で[ページを編集](/help/sites-authoring/editing-content.md)できます。
 
 * [コンポーネント（段落）の挿入](/help/sites-authoring/editing-content.md#inserting-a-component)
 * コンポーネントの[編集／設定／コピー／切り取り／削除／貼り付け](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)

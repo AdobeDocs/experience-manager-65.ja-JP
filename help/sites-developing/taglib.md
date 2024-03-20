@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2452'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +36,7 @@ global では、[Sling ライブラリ](/help/sites-developing/taglib.md#sling-t
 
 ### &lt;ui:includeClientLib> {#ui-includeclientlib}
 
-`<ui:includeClientLib>` タグは、AEM html クライアントライブラリをインクルードします。js、css または theme の各ライブラリを指定できます。js や css など、異なるタイプの複数のインクルージョンの場合、このタグを jsp で複数回使用する必要があります。 このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
+`<ui:includeClientLib>` タグは、AEM html クライアントライブラリをインクルードします。js、css または theme の各ライブラリを指定できます。異なるタイプ（JS や CSS など）の複数のインクルードがある場合は、このタグを JSP で複数回使用する必要があります。このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
 
 このタグの属性を以下に示します。
 
@@ -117,7 +118,7 @@ AEM コンポーネントの jsp スクリプトを開発する場合は、ス�
 
 **tagName** - 空でない出力を囲む要素の名前。デフォルト値は DIV です。
 
-**プレースホルダー** - 編集モードで null または空のテキストに使用するデフォルト値です。デフォルトのチェックは、オプションの書式設定とエスケープの後に実行されます。つまり、そのまま出力に書き込まれます。 デフォルト値は以下のとおりです。
+**プレースホルダー** - 編集モードで null または空のテキストに使用するデフォルト値です。オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。デフォルト値は以下のとおりです。
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
@@ -256,7 +257,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 >
 >`<cq:includeClientLib>` は AEM 5.6 以降で廃止されました。代わりに [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) を使用してください。
 
-`<cq:includeClientLib>` タグは、AEM html クライアントライブラリをインクルードします。JS、CSS または Theme の各ライブラリを指定できます。js や css など、異なるタイプの複数のインクルージョンの場合、このタグを jsp で複数回使用する必要があります。 このタグは、`com.day.cq.widget.HtmlLibraryManager` サービスインターフェイスを囲む便利なラッパーです。
+`<cq:includeClientLib>` タグは、AEM html クライアントライブラリをインクルードします。JS、CSS または Theme の各ライブラリを指定できます。異なるタイプ（JS や CSS など）の複数のインクルードがある場合は、このタグを JSP で複数回使用する必要があります。このタグは、`com.day.cq.widget.HtmlLibraryManager` サービスインターフェイスを囲む便利なラッパーです。
 
 このタグの属性を以下に示します。
 
@@ -545,7 +546,7 @@ Sling タグライブラリには、Sling の便利な機能が含まれてい�
 
 >[!NOTE]
 >
->`<sling:include>` タグに含まれるリソースとスクリプトの解像度は、通常の sling URL の解像度と同じです。デフォルトでは、現在のリクエストのセレクターや拡張子などが、含まれているスクリプトにも使用されます。これらは、タグ属性（例： ）を使用して変更できます。 `replaceSelectors="foo.bar"` を使用すると、セレクターを上書きできます。
+>`<sling:include>` タグに含まれるリソースとスクリプトの解像度は、通常の sling URL の解像度と同じです。デフォルトでは、現在のリクエストのセレクターや拡張子などが、含まれているスクリプトにも使用されます。これらは、タグ属性を使用して変更できます。例えば、`replaceSelectors="foo.bar"` を使用するとセレクターを上書きできます。
 
 例：
 

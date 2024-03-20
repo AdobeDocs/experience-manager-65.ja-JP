@@ -6,8 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: d6745baa-44da-45dd-b5d5-a9b218e7e8cf
-source-git-commit: 474a726058b141985f52a0faec6161a34be1e9dc
-workflow-type: ht
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 100%
 

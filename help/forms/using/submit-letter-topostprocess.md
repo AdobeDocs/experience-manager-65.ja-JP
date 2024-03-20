@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
-source-git-commit: 6dbec0f41396c2b41d5324c4ecf6f1f33b1d0780
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 68%
 
 ## 後処理 {#post-processing}
 
-エージェントは、レターとインタラクティブ通信に対して後処理ワークフローを関連付け、実行できます。 実行する後処理は、レターテンプレートのプロパティビューで選択できます。 最終レターを電子メールで送信、印刷、FAX、またはアーカイブする後処理を設定できます。
+エージェントはレターおよびインタラクティブ通信上で後処理のワークフローを関連付けて実行できます。実行する後処理は、レターテンプレートのプロパティビューで選択できます。最終レターをメールで送信したり、印刷したり、ファックスしたり、あるいはアーカイブしたりするための後処理を設定できます。
 
 ![後処理](assets/ppoverview.png)
 
@@ -52,7 +53,7 @@ ht-degree: 68%
 
    例えば、レターのプロパティページのドロップダウンに、処理の名前が Forms Workflow -> ValidCCPostProcess/SaveXML として表示されている場合は、サービス名を `ValidCCPostProcess/SaveXML` として追加します。
 
-1. 後処理にAEM Forms on JEE ワークフローを使用するには、必要なパラメーターと出力を設定します。 パラメーターのデフォルト値を以下に示します。
+1. JEE 上の AEM Forms Workflow を使用して後処理を行うには、必要なパラメーターと出力を設定します。パラメーターのデフォルト値を以下に示します。
 
    Adobe Experience Manager web コンソール設定ページの「**[!UICONTROL Correspondence Management の設定]**」に移動して、以下のパラメーターを設定します。
 
@@ -62,13 +63,13 @@ ht-degree: 68%
    1. **inAttachmentDocs（添付ドキュメントパラメーター）：** リスト入力パラメーター。この入力には、すべての添付ファイルが入力として含まれます。
    1. **redirectURL（リダイレクト URL 出力）：** リダイレクト先の URL を示す出力タイプ。
 
-   フォームワークフローには、PDFドキュメントパラメーターまたは XML データパラメーターのどちらかが、入力として指定された名前と同じ名前を持つ必要があります **[!UICONTROL Correspondence Management 設定]**. これは、後処理ドロップダウンにプロセスがリスト表示されるために必要です。
+   フォームワークフローでは、「**[!UICONTROL Correspondence Management の設定]**」で指定した名前を使用して、PDF ドキュメントパラメーターまたは XML データパラメーターのいずれかを入力値として指定する必要があります。これは、後処理ドロップダウンにリスト表示する処理に対しては必須です。
 
 ## パブリッシュインスタンスでの設定 {#settings-on-the-publish-instance}
 
 1. `https://localhost:publishport/aem/forms` にログインします。
-1. に移動します。 **[!UICONTROL レター]** をクリックして、パブリッシュインスタンスで使用可能な発行済みレターを表示します。
-1. AEM DS の設定を行います。 詳しくは、 [AEM DS 設定の指定](../../forms/using/configuring-the-processing-server-url.md).
+1. 「**[!UICONTROL レター]**」に移動して、パブリッシュインスタンスで使用可能な公開済みレターを表示します。
+1. AEM DS の設定を行います。詳しくは、[AEM DS の設定](../../forms/using/configuring-the-processing-server-url.md)を参照してください。
 
 >[!NOTE]
 >
@@ -76,7 +77,7 @@ ht-degree: 68%
 
 ## レターインスタンスの取得 {#letter-instances-retrieval}
 
-保存されたレターインスタンスは、LetterInstanceService で定義された次の API を使用して、レターインスタンスの取得やレターインスタンスの削除など、さらに操作できます。
+保存されたレターインスタンスに対しては、LetterInstanceService 内で定義されている次の API を使用して、レターインスタンスの取得やレターインスタンスの削除といった作業を実行できます。
 
 <table>
  <tbody>
@@ -108,24 +109,24 @@ ht-degree: 68%
  </tbody>
 </table>
 
-## 後処理とレターの関連付け {#associating-a-post-process-with-a-letter}
+## 後処置をレターに関連付け {#associating-a-post-process-with-a-letter}
 
 CCR ユーザーインターフェイスで、次の手順を実行して後処理をレターに関連付けます。
 
-1. レターの上にマウスポインターを置いて、「 **プロパティを表示**.
+1. レターの上にマウスカーソルを置き、「**プロパティを表示**」を選択します。
 1. 「**編集**」を選択します。
-1. 基本プロパティで、後処理ドロップダウンを使用して、レターに関連付ける後処理を選択します。 AEM関連の後処理とForms関連の後処理の両方がドロップダウンに表示されます。
+1. 基本のプロパティで、後処理ドロップダウンを使って、レターに関連付ける後処理を選択します。AEM および Forms 関連の両方の後処理がドロップダウンに表示されます。
 1. 「**保存**」を選択します。
 1. 「後処理」でのレターの設定が完了したら、レターを発行します。必要な場合は、パブリッシュインスタンスの AEM DS 設定サービスで、処理 URL を指定します。これにより、後処理が処理インスタンス上で実行されるようになります。
 
-## ドラフトレターインスタンスを再読み込み  {#reloaddraft}
+## ドラフトレターインスタンスを再読み込み {#reloaddraft}
 
-ドラフトレターインスタンスは、次の URL を使用してユーザーインターフェイスで再読み込みできます。
+ドラフトレターインスタンスは、次の URL を使ってユーザーインターフェイス内で再読み込みできます。
 
 `https://<server>:<port>/aem/forms/`
 
 `createcorrespondence.html?/random=$&cmLetterInstanceId=$<LetterInstanceId>`
 
-LetterInstaceID：送信されたレターインスタンスの一意の ID。
+LetterInstaceID：送信済みレターインスタンスの一意の ID。
 
-ドラフトレターの保存について詳しくは、 [ドラフトの保存とレターインスタンスの送信](../../forms/using/create-correspondence.md#savingdrafts).
+ドラフトレターの保存について詳しくは、[ドラフトの保存とレターインスタンスの送信](../../forms/using/create-correspondence.md#savingdrafts)を参照してください。

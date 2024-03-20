@@ -5,10 +5,11 @@ contentOwner: AG
 role: Admin
 feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 69%
+source-wordcount: '470'
+ht-degree: 100%
 
 ---
 
@@ -26,19 +27,19 @@ ht-degree: 69%
 
 最適なパフォーマンスを得るには、RAW および DNG ファイル用の [!DNL Adobe Camera Raw] ライブラリを使用することをお勧めします。
 
-[!DNL Adobe Camera Raw] ライブラリは、入力として CMYK カラープロファイルをサポートしています。 ただし、出力はRGBのカラースペースで生成され、出力をJPEG形式でのみサポートします。 サムネール内のソースファイルのカラースペース（CMYK など）は保持されません。
+[!DNL Adobe Camera Raw] ライブラリは、入力として CMYK カラープロファイルをサポートしています。 ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
 
 詳しくは、[Camera Raw サポート](/help/assets/camera-raw.md)を参照してください。
 
 ## Adobe PDF Rasterizer ライブラリ {#adobe-pdf-rasterizer-library}
 
-最適な結果を得るには、Adobeは、次のファイルに対してAdobe PDF Rasterizer ライブラリを使用することをお勧めします。
+最適な結果を得るために、次のファイルで Adobe PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* 大量のコンテンツを集中的に消費するPDFファイル
-* 標準で生成されていないサムネールを含む AI ファイル
-* SPOT(PMS) カラーの AI ファイルの場合
+* サイズが大きくコンテンツが多い PDF ファイル
+* 追加設定なしでは生成されないサムネールを含む AI ファイル
+* SPOT（PMS）カラーの AI ファイルの場合
 
-PDFRasterizer を使用して生成されたサムネールとプレビューの画質は、既製のラスター出力に比べて向上します。 Adobe PDF Rasterizer ライブラリは、カラースペース変換をサポートしていません。ソース PDF ファイルのカラースペースに関わらず、Adobe PDF Rasterizer は RGB 出力のみを生成します。
+PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDF Rasterizer ライブラリは、カラースペース変換をサポートしていません。ソース PDF ファイルのカラースペースに関わらず、Adobe PDF Rasterizer は RGB 出力のみを生成します。
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
@@ -52,26 +53,26 @@ IDML や HTML など [!DNL Adobe InDesign] 固有のレンディションを抽�
 
 ## ImageMagick ライブラリ {#imagemagick-library}
 
-Adobeでは、次のシナリオで ImageMagick ライブラリの使用をお勧めします。
+次のシナリオについては、ImageMagick ライブラリの使用をお勧めします。
 
-* EPSファイルのサムネールレンディションを生成する場合。
+* EPS ファイルのサムネールのレンディションを生成します。
 * イメージプロファイル情報を保持するとき.
 * 透明性を保持するとき.
 * PSD および PSB ファイルを処理するとき.
 
-[!DNL Experience Manager] で [!DNL ImageMagick] ライブラリを設定する方法について詳しくは、[ImageMagick の使用](/help/assets/media-handlers.md#an-example-using-imagemagick)を参照してください。最適な使用方法については、 [ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md).
+[!DNL Experience Manager] で [!DNL ImageMagick] ライブラリを設定する方法について詳しくは、[ImageMagick の使用](/help/assets/media-handlers.md#an-example-using-imagemagick)を参照してください。最適な使用方法については、[ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md)を参照してください。
 
 ## 画像トランスコーディングライブラリ {#image-transcoding-library}
 
 アドビの画像トランスコーディングライブラリは、画像のエンコーディング、トランスコーディング、リサンプリング、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
 
-画像トランスコーディングライブラリは、次の MIME タイプをサポートします。
+画像トランスコーディングライブラリは、以下の MIME タイプをサポートします。
 
-* JPG/JPEG
+* JPG／JPEG
 * PNG（8 ビットおよび 16 ビット）
 * GIF
 * BMP
-* TIFF/圧縮TIFF（32 ビット Tiff と PTiff 以外）。
+* TIFF／圧縮 TIFF（32 ビット TIFF、PTIFF 以外）。
 * ICO
 * ICN
 

@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Transaction Reports
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 95%

@@ -7,10 +7,11 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '650'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -20,13 +21,13 @@ AEM では、以下の設定が可能です。
 
 * 中央のログサービスのグローバルパラメーター
 * リクエストデータのログ（リクエスト情報用の特殊なログ設定）
-* 個々のサービスに固有の設定（個々のログファイルやログメッセージの形式など）
+* 個々のサービスに特有の設定（個々のログファイルおよびログメッセージの書式など）
 
 これらはすべて、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)です。
 
 >[!NOTE]
 >
->AEMにログインする際の原則は、Sling 原則に基づいています。 詳しくは [Sling の Logging](https://sling.apache.org/site/logging.html) を参照してください。
+>AEM でのログ作成は、Sling の原則に基づいています。詳しくは [Sling でのログ作成](https://sling.apache.org/site/logging.html)を参照してください。
 
 ## グローバルログ {#global-logging}
 
@@ -131,13 +132,13 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
 次の手順で、独自のロガーとライターのペアを定義できます。
 
-1. ファクトリ設定のインスタンスを作成する [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md).
+1. ファクトリ設定の [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md) のインスタンスを作成します。
 
    1. ログファイルを指定します。
    1. ロガーを指定します。
    1. 必要に応じてその他のパラメーターを設定します。
 
-1. ファクトリ設定のインスタンスを作成する [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md).
+1. ファクトリ設定の [Apache Sling Logging Writer Configuration](/help/sites-deploying/osgi-configuration-settings.md) のインスタンスを作成します。
 
    1. ログファイルを指定します。ロガーに指定したものと同じファイルを指定する必要があります。
    1. 必要に応じてその他のパラメーターを設定します。

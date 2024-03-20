@@ -1,21 +1,22 @@
 ---
 title: AEM での CRXDE Lite の有効化
-description: Adobe Experience ManagerでCRXDE Liteを有効にする方法を説明します。
+description: Adobe Experience Manager で CRXDE Lite を有効にする方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: 1807919078996b1cf1cbd1f2d90c3b14cb660e2c
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 62%
+source-wordcount: '256'
+ht-degree: 100%
 
 ---
 
 # AEM での CRXDE Lite の有効化 {#enabling-crxde-lite-in-aem}
 
-AEMのインストールを可能な限り安全にするために、セキュリティチェックリストでは、 [WebDAV の無効化](/help/sites-administering/security-checklist.md#disable-webdav) 実稼動環境で使用できます。
+AEM のインストールを可能な限り保護するために、セキュリティチェックリストでは実稼動環境で [WebDAV を無効化](/help/sites-administering/security-checklist.md#disable-webdav)することをお勧めしています。
 
 ただし、CRXDE Lite が正しく機能するには `org.apache.sling.jcr.davex` バンドルに依存するので、WebDAV を無効にすると CRXDE Lite も無効になります。
 
@@ -25,7 +26,7 @@ AEMのインストールを可能な限り安全にするために、セキュ�
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
 ```
 
-この推奨事項は、攻撃対象をできるだけ減らすことを目的としていますが、CRXDE Lite管理者は、コンテンツを参照したり、実稼動インスタンスで問題をデバッグしたりするために、システムへのアクセスが必要になる場合があります。
+この推奨事項は攻撃対象領域を可能な限り減らすことを目的としていますが、システム管理者はコンテンツの参照や実稼動インスタンスの問題をデバッグするために CRXDE Lite にアクセスする必要がある場合があります。
 
 [OSGi 設定](#enabling-crxde-lite-osgi)または [cURL コマンド](#enabling-crxde-lite-curl)のいずれかを使用して、CRXDE Lite を有効にできます。
 
@@ -44,7 +45,7 @@ AEMのインストールを可能な限り安全にするために、セキュ�
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
 
-1. 横のレンチアイコンをクリックして、設定オプションを表示します。
+1. その設定オプションを確認するには、その横にあるレンチのアイコンをクリックします。
 
    ![chlimage_1-80](assets/chlimage_1-80a.png)
 
@@ -57,7 +58,7 @@ AEMのインストールを可能な限り安全にするために、セキュ�
 
 ## cURL での CRXDE Lite の有効化 {#enabling-crxde-lite-curl}
 
-次のコマンドを実行して、cURL 経由でCRXDE Liteを有効にすることもできます。
+CRXDE Lite は、次のコマンドを実行して、cURL を使用して有効にすることもできます。
 
 ```shell
 curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet

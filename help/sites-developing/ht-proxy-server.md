@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '943'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -215,7 +216,7 @@ S-7-#000017 -> [Connection: Keep-Alive ]
 
 **失われたリクエストの検索**
 
-複雑なサーバー設定（ファイアウォールや Dispatcher を使用している場合など）でリクエストが失われた場合、プロキシサーバーを使用して、リクエストが失われた場所を特定できます。 ファイアウォールがある場合は、次の手順を実行します。
+複雑なサーバー設定でリクエストが失われた場合（例えば、ファイアウォールとディスパッチャーを使用する場合）は、プロキシサーバーを使用して、リクエストがどこで失われたかを特定できます。ファイアウォールがある場合は、次の手順を実行します。
 
 * ファイアウォールの前にプロキシを起動します。
 * ファイアウォールの後にもう 1 つのプロキシを起動します。

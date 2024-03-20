@@ -1,16 +1,17 @@
 ---
 title: Adobe Analytics との統合
-description: Adobe Experience Manager(AEM) とAdobe Analyticsを統合する方法について説明します。
+description: Adobe Experience Manager（AEM）と Adobe Analytics を統合する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
-source-git-commit: 74f1520414fda3ebdab906be68927bafbc3d0fb7
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 100%
 
 ---
 

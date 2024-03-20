@@ -7,10 +7,11 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1829'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -77,7 +78,7 @@ ht-degree: 91%
 
    ![screen_shot_2012-02-15at115605am](assets/screen_shot_2012-02-15at115605am.png)
 
-1. サイドキックと&#x200B;**新規コンポーネントを挿入**&#x200B;ツールバーの両方に、使用可能なコンポーネント（段落タイプ）のリストが表示されます。これらは、様々なセクション（「一般」、「列」など）に分割でき、必要に応じて展開できます。
+1. サイドキックと&#x200B;**新規コンポーネントを挿入**&#x200B;ツールバーの両方に、使用可能なコンポーネント（段落タイプ）のリストが表示されます。これらの段落タイプは様々なセクション（「一般」、「列」など）に分類され、必要に応じて展開できます。
 
    表示されるオプションは、実稼働環境によって異なります。コンポーネントについて詳しくは、[デフォルトコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-default-components.md)を参照してください。
 
@@ -85,7 +86,7 @@ ht-degree: 91%
 
 ### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
 
-[コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。これにより、アセットを含む適切なタイプのコンポーネントが自動的に作成されます。
+[コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、アセットを含んだ適切なタイプのコンポーネントが自動的に作成されます。
 
 これは次のアセットタイプに有効です（一部はページや段落システムに依存します）。
 
@@ -108,7 +109,7 @@ ht-degree: 91%
 
    選択したアセットを格納した、アセットタイプに適したコンポーネントが必要な場所に作成されます。
 
-1. [編集](#editmovecopypastedelete) 必要に応じて、コンポーネントを選択します。
+1. 必要に応じて、コンポーネントを[編集](#editmovecopypastedelete)します。
 
 ## コンポーネント（コンテンツとプロパティ）の編集 {#editing-a-component-content-and-properties}
 
@@ -175,13 +176,13 @@ ht-degree: 91%
 * [マルチサイト管理](/help/sites-administering/msm.md)。[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用されます。
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
-* 特定のコンポーネント (Geometrixx内の継承された段落システムなど )。
+* 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
 
 継承はキャンセル（その後再度有効化）できます。コンポーネントによって、次の場所から操作できます。
 
 1. **ライブコピー**
 
-   コンポーネントがライブコピーまたはローンチの一部である場合は、南京錠アイコンで示されます。 南京錠アイコンをクリックすると、継承をキャンセルできます。
+   コンポーネントがライブコピーまたはローンチに含まれる場合は、南京錠アイコンで示されます。この南京錠アイコンをクリックして継承をキャンセルできます。
 
    * 南京錠アイコンは、コンポーネントの選択時に、次のように表示されます。
 
@@ -225,7 +226,7 @@ ht-degree: 91%
 
 ## ページのロック {#locking-a-page}
 
-AEMでは、他のユーザーがコンテンツを変更できないように、ページをロックできます。 これは、1 つの特定のページに多数の編集を加える場合や、短時間ページを凍結する必要がある場合に便利です。
+AEM では、他のユーザーによるコンテンツの変更を防ぐためにページをロックできます。ページのロックは、1 つの特定のページで大量の編集作業を行う場合や、短期間ページを凍結する必要がある場合に便利です。
 
 >[!CAUTION]
 >
@@ -239,7 +240,7 @@ AEMでは、他のユーザーがコンテンツを変更できないように�
 
    ![screen_shot_2012-02-08at15750pm](assets/screen_shot_2012-02-08at15750pm.png)
 
-   ページが他のユーザーにロックされていることを示すメッセージが表示されます。 さらに、 **Web サイト** コンソールで、AEM WCM はページをロック済みとして表示し、ページをロックしたユーザーを示します。
+   他のユーザーに対してページがロックされているというメッセージが表示されます。さらに、**Web サイト**&#x200B;コンソール右側のパネルに、AEM WCM はページをロック済みとして表示し、ページをロックしたユーザーが示されます。
 
    ![screen_shot_2012-02-08at20657pm](assets/screen_shot_2012-02-08at20657pm.png)
 

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 100%
+source-wordcount: '1635'
+ht-degree: 98%
 
 ---
 
@@ -62,10 +63,9 @@ Adobe Experience Manager を WCM として使用している場合は、Dynamic 
 >
 >[!UICONTROL ダイナミックメディア]コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 >
->* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトでは無効になっています。
+>* [Dynamic Media を有効](/help/assets/config-dynamic.md)にしました。Dynamic Media はデフォルトでは無効になっています。
 >* 画像は Pyramid TIFF ファイルです。ダイナミックメディアを有効にする前に読み込まれた画像には、Pyramid TIFF ファイルはありません。
 >
-
 
 #### 画像を操作する場合 {#when-working-with-images}
 
@@ -123,7 +123,7 @@ Web ページにダイナミックビデオを追加するには、**[!UICONTROL
 
 >[!NOTE]
 >
->デフォルトでは、Dynamic Media ビデオコンポーネントはアダプティブです。ビデオコンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
+>デフォルトでは、Dynamic Media のビデオコンポーネントはアダプティブです。ビデオコンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
 **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
@@ -135,7 +135,7 @@ Web ページにダイナミックビデオを追加するには、**[!UICONTROL
 
 #### セキュアなビデオ配信 {#how-to-delivery-secure-video}
 
-Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを選択できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆に言うと、web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。通常、このデフォルトの動作で問題ないので、特に設定を変更する必要はありません。ただし、このデフォルトの動作を上書きすることはできます。`VideoPlayer.ssl=on` を、URL パスの末尾か、埋め込みコードスニペットにある他のビューア設定パラメーターのリストに追加します。どちらのアクションでもセキュアな動画配信を強制できます。
+Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを選択できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。 Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。 逆に言うと、web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。通常、このデフォルトの動作で問題ないので、特に設定を変更する必要はありません。ただし、このデフォルトの動作を上書きすることはできます。`VideoPlayer.ssl=on` を、URL パスの末尾か、埋め込みコードスニペットにある他のビューア設定パラメーターのリストに追加します。どちらのアクションでもセキュアな動画配信を強制できます。
 
 セキュアなビデオ配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html?lang=ja)」を参照してください。ビデオビューアのほか、混在メディアビューアおよびインタラクティブビデオビューアでも、セキュアなビデオ配信を使用できます。
 
@@ -157,8 +157,8 @@ Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/c
 
 コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の&#x200B;**[!UICONTROL 買い物かごに追加]**&#x200B;設定を編集できます。
 
-**[!UICONTROL 製品アセットを表示]** - デフォルトでは、この値が選択されています。製品アセットには、コマースモジュールで定義された製品の画像が表示されます。製品アセットを表示しない場合はチェックマークをオフにします。
+**[!UICONTROL 製品アセットを表示]** - デフォルトでは、この値が選択されています。製品アセットには、コマースモジュールで定義された製品の画像が表示されます。製品アセットを表示しない場合は、チェックマークをオフにします。
 
-**[!UICONTROL 製品価格を表示]** - デフォルトでは、この値が選択されています。製品価格には、コマースモジュールで定義されたアイテムの価格が表示されます。製品価格を表示しない場合はチェックマークをオフにします。
+**[!UICONTROL 製品価格を表示]** - デフォルトでは、この値が選択されています。製品価格には、コマースモジュールで定義されたアイテムの価格が表示されます。製品価格を表示しない場合は、チェックマークをオフにします。
 
-**[!UICONTROL 製品フォームを表示]** - デフォルトでは、この値は選択されていません。製品フォームには、サイズや色など製品のバリエーションが含まれます。製品のバリエーションを表示しない場合はチェックマークをオフにします。
+**[!UICONTROL 製品フォームを表示]** - デフォルトでは、この値は選択されていません。製品フォームには、サイズや色など製品のバリエーションが含まれます。製品のバリエーションを表示しない場合は、チェックマークをオフにします。

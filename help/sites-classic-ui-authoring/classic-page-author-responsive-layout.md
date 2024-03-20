@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 exl-id: ccdce571-8b1c-4aca-a8c6-a909ec9b0516
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -17,4 +18,4 @@ ht-degree: 81%
 
 >[!CAUTION]
 >
->レイアウトコンテナコンポーネントはクラシック UI で使用できますが、完全な機能はタッチ操作対応 UI でのみ使用でき、サポートされています。詳しくは、 [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) 詳しくは、標準のオーサリングドキュメントを参照してください。
+>レイアウトコンテナコンポーネントはクラシック UI で使用できますが、完全な機能はタッチ操作対応 UI でのみ使用でき、サポートされています。詳しくは、標準のオーサリングドキュメントの[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)を参照してください。

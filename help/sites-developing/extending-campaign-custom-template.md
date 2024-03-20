@@ -1,15 +1,16 @@
 ---
 title: Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成
-description: Adobe Campaign Form コンポーネントを使用するカスタムページテンプレートの作成
+description: Adobe Campaign フォームコンポーネントを使用するカスタムページテンプレートの作成
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: de5c634a-c0d7-4e69-b941-d2fbfe83117d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '238'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
@@ -19,11 +20,11 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->[メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。サンプルGeometrixxコンテンツをパッケージ共有からダウンロードします。
+>[メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
 
-Adobe Campaignフォームコンポーネントを使用してカスタムAEMページテンプレートを作成するには、必ず以下の点を確認してください。
+Adobe Campaign フォームコンポーネントを使用してカスタム AEM ページテンプレートを作成するには、以下が必要な条件となります。
 
-1. **正しい resourceSuperType**
+1. **適切な resourceSuperType**
 
    ページコンポーネントを `mcm/campaign/components/profile` から継承していることを確認してください。
 
@@ -43,9 +44,9 @@ Adobe Campaignフォームコンポーネントを使用してカスタムAEMペ
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
-1. **head.jsp (/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp)**
+1. **head.jsp（/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp）**
 
-   In **head.jsp**&#x200B;を見ると、次の行が **clientcontext-config** そして **cloudservice-hook**:
+   **head.jsp** には、**clientcontext-config** と **cloudservice-hook** を使用する以下の行があります。
 
    ```
    <cq:include path="config" resourceType="cq/personalization/components/clientcontext_optimized/config"/>
@@ -53,7 +54,7 @@ Adobe Campaignフォームコンポーネントを使用してカスタムAEMペ
    <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
    ```
 
-1. **body.jsp (/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp)**
+1. **body.jsp（/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp）**
 
    **body.jsp** では、クラウドサービスがページ下部に読み込まれます。
 
@@ -61,9 +62,9 @@ Adobe Campaignフォームコンポーネントを使用してカスタムAEMペ
    <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
    ```
 
-1. **キャンペーンページのプロパティ**
+1. **Campaign のページプロパティ**
 
-   Adobe Campaignテンプレートを選択できるように、ページプロパティは **Campaign** タブ：
+   Adobe Campaign テンプレートを選択できるようにするには、「**Campaign**」タブを使用して、ページプロパティを拡張します。
 
    `/apps/geometrixx-outdoors/components/page_campaign_profile/dialog/items/tabs/items/campaign`
 
@@ -73,8 +74,8 @@ Adobe Campaignフォームコンポーネントを使用してカスタムAEMペ
 
    テンプレート（`/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`）には、次のデフォルト値があります。
 
-   | **acMapping** | mapRecipient(Adobe Campaign 6.1 の場合 )、プロファイル (Adobe Campaign Standardの場合 ) |
+   | **acMapping** | mapRecipient（Adobe Campaign 6.1 の場合）、profile（Adobe Campaign Standard の場合） |
    |---|---|
-   | **acTemplateId** | メール |
+   | **acTemplateId** | mail |
 
    ![chlimage_1-204](assets/chlimage_1-204.png)

@@ -1,22 +1,23 @@
 ---
 title: プロセスインスタンスのリストのカスタマイズ
-description: AEM Forms Workspace のプロセスインスタンスに表示されるプロパティをカスタマイズする方法。
+description: AEM Forms Workspace のプロセスインスタンスで表示されるプロパティをカスタマイズする方法。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: b27ffe92-8491-43a0-bf42-613eb39a606e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 51%
+ht-degree: 100%
 
 ---
 
 # プロセスインスタンスのリストのカスタマイズ {#customizing-the-listing-of-process-instances}
 
-プロセスインスタンスのリストが、AEM Forms Workspace の「追跡」タブに表示されます。
+プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
 
-プロセスインスタンスリストで、各プロセスインスタンスに対して、AEM Forms workspace にそのインスタンスのいくつかのプロパティが表示されます。 次のプロパティを各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスのコンポーネントモデルに属性として格納されていて、表示やテンプレートで使用できます。
+プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティを各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスのコンポーネントモデルに属性として格納されていて、表示やテンプレートで使用できます。
 
 <table>
  <tbody>
@@ -29,7 +30,7 @@ ht-degree: 51%
    <td>プロセスインスタンスの説明。</td>
   </tr>
   <tr>
-   <td>イニシエーター</td>
+   <td>initiator</td>
    <td>プロセスインスタンスのイニシエーターの名前。</td>
   </tr>
   <tr>
@@ -46,7 +47,7 @@ ht-degree: 51%
   </tr>
   <tr>
    <td>processInstanceStatus</td>
-   <td>0 =開始済み<br /> 1 =実行中<br /> 2 =完了<br /> 3 =完了中<br /> 4 =終了<br /> 5 =終了中<br /> 6 =中断<br /> 7 =休止中<br /> 8 =休止解除中</td>
+   <td>0 = 起動済み<br /> 1 = 実行中<br /> 2 = 完了<br /> 3 = 完了中<br /> 4 = 終了<br /> 5 = 終了中<br /> 6 = 休止<br /> 7 = 休止中<br /> 8 = 休止解除中</td>
   </tr>
   <tr>
    <td>processName</td>
@@ -58,7 +59,7 @@ ht-degree: 51%
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>プロセス変数のオブジェクトの配列。 各プロセス変数オブジェクトには、 <strong>名前</strong> （プロセス変数の名前） <strong>値</strong> （プロセス変数の値）、<strong> type</strong> （プロセス変数の型）。</td>
+   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトは、<strong>名前</strong>（プロセス変数の名前）、<strong>値</strong>（プロセス変数の値）、および<strong>タイプ</strong>（プロセス変数のタイプ）を含みます。</td>
   </tr>
  </tbody>
 </table>

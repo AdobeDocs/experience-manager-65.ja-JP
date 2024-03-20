@@ -7,10 +7,11 @@ topic-tags: Security
 content-type: reference
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '951'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -19,13 +20,13 @@ ht-degree: 84%
 
 Granite は JCR API 仕様の CRX リポジトリ実装を組み込んでいるので、独自のユーザーおよびグループ管理を備えています。
 
-これらのアカウントは、 [AEMアカウント](/help/sites-administering/security.md) また、Granite 管理でおこなったアカウントの変更は、アカウントが [AEM Users コンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) ( 例： `http://localhost:4502/useradmin`) をクリックします。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
+これらのアカウントは [AEM アカウント](/help/sites-administering/security.md)の基礎であり、Granite の管理を使用して行ったアカウントの変更は、[AEM ユーザーコンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)（例：`http://localhost:4502/useradmin`）からそのアカウントへのアクセスがあった場合に反映されます。AEM ユーザーコンソールでは、権限やその以外の AEM 独自の事項を管理することもできます。
 
 Granite ユーザー管理コンソールとグループ管理コンソールは、どちらもタッチ操作向け UI の&#x200B;**[ツール](/help/sites-administering/tools-consoles.md)**&#x200B;コンソールから利用できます。
 
 ![ツールコンソール](assets/chlimage_1-72a.png)
 
-次のいずれかを選択する **ユーザー** または **グループ** ツールコンソールから適切なコンソールが開きます。 クリックボックスを使用してツールバーのアクションを実行するか、または&#x200B;**名前**&#x200B;の下のリンクからアカウントの詳細を開いてアクションを実行できます。
+ツールコンソールから「**ユーザー**」または「**グループ**」を選択すると、適切なコンソールが開きます。クリックボックスを使用してツールバーのアクションを実行するか、または&#x200B;**名前**&#x200B;の下のリンクからアカウントの詳細を開いてアクションを実行できます。
 
 * [ユーザー管理](#user-administration)
 
@@ -53,11 +54,11 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. 次の&#x200B;**ユーザーを追加**&#x200B;アイコンを使用します。
 
-   ![ユーザーを追加アイコン](do-not-localize/chlimage_1-1.png)
+   ![「ユーザーを追加」アイコン](do-not-localize/chlimage_1-1.png)
 
-1. The **ユーザーを作成** フォームを開く：
+1. **ユーザーを作成**&#x200B;フォームが開きます。
 
-   ![ユーザー詳細フォーム](assets/chlimage_1-75a.png)
+   ![ユーザーの詳細フォーム](assets/chlimage_1-75a.png)
 
    ここで、アカウントのユーザー詳細を入力できます（ほとんどは標準的で説明不要です）。
 
@@ -131,9 +132,9 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
    ![アカウント設定ダイアログ](assets/chlimage_1-76a.png)
 
-1. The **パスワードを変更** ダイアログが開きます。 新しいパスワードと現在のパスワードを入力および再入力します。「**OK**」を使用して変更を確定します。
+1. **パスワードを変更**&#x200B;ダイアログが開きます。新しいパスワードと現在のパスワードを入力および再入力します。「**OK**」を使用して変更を確定します。
 
-   ![パスワードの変更ダイアログ](assets/chlimage_1-77a.png)
+   ![パスワードを変更ダイアログ](assets/chlimage_1-77a.png)
 
    パスワードが変更されたことを確認するメッセージが表示されます。
 
@@ -172,9 +173,9 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
    ![新しいグループを追加](do-not-localize/chlimage_1-4.png)
 
-1. The **グループを作成** フォームを開く：
+1. **グループを作成**&#x200B;フォームが開きます。
 
-   ![グループ詳細フォーム](assets/chlimage_1-79a.png)
+   ![グループの詳細フォーム](assets/chlimage_1-79a.png)
 
    ここで、グループの詳細を入力できます。
 
@@ -184,7 +185,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
    * **名前**
 
-     グループの名前。グループコンソールに表示されます。
+     グループの名前です。グループコンソールに表示されます。
 
    * **説明**
 
@@ -218,7 +219,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. **グループ設定を編集**&#x200B;フォームが開きます。
 
-   グループ ID は元の ID と同じですが、先頭にはが付きます。 `Copy of`. この ID はスペースを含めることができないので、編集します。 その他の詳細はすべて元の詳細と同じです。
+   グループ ID は元の ID と変わりませんが、先頭に「`Copy of`」が付きます。この ID にスペースを含めることはできないので、編集します。その他の詳細は元の情報とすべて同じです。
 
    [新規グループの追加](#adding-a-new-group)の場合と同様に、詳細を編集して保存できます。
 

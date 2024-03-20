@@ -1,28 +1,29 @@
 ---
 title: ユーザーアバターの表示
-description: AEM Forms Workspace をカスタマイズしてログインしているユーザーの画像を表示する方法。
+description: AEM Forms Workspace をカスタマイズして、ログインユーザーの画像を表示する方法。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: ee0708b0-b630-4a2b-84b6-3c0b92dd7777
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 42%
+ht-degree: 100%
 
 ---
 
 # ユーザーアバターの表示 {#displaying-the-user-avatar}
 
-ログインしているユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。 また、組織階層の直属のレポートのアバターは、マネージャビューに表示されます。 AEM Forms Workspace を設定して LDAP サーバーなどのデータベースからユーザー画像を選択できます。
+ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspace を設定して LDAP サーバーなどのデータベースからユーザー画像を選択できます。
 
 >[!NOTE]
 >
 >サポートされているユーザー画像の縦横比は 1：1 です。
 
 1. 次の手順に記載されている詳細説明を使用して DSC を作成してください。詳細については、[AEM Forms のプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)ガイドの「AEM Forms のコンポーネントの開発」トピックを参照してください。
-1. DSC で、getCurrentUserImageUrl および getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Formsユーザーの画像 URL を取得します。 Java™コードスニペットのサンプルを以下に示します。
+1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。Java™ コードスニペットのサンプルを以下に示します。
 
    ```java
    public class DemoUserImageURLProviderService {
@@ -37,9 +38,9 @@ ht-degree: 42%
    }
    ```
 
-1. component.xml ファイルを作成します。 spec-id が以下のコードスニペットのようになっていることを確認します。
+1. component.xml ファイルを作成します。spec-id が以下に表示されているコードスニペットと同じであることを確認します。
 
-   次のコードスニペットはサンプルです。 具体的な要件に合わせてカスタマイズします。
+   以下にサンプルのコードスニペットを示します。特定の要件に合うようにカスタマイズします。
 
    ```java
    <component xmlns="https://adobe.com/idp/dsc/component/document">
@@ -79,5 +80,5 @@ ht-degree: 42%
    </component>
    ```
 
-1. Workbench を通じて DSC をデプロイします。 再起動 `ProcessManagementClientSessionService` サービス。
+1. Workbench を介して DSC をデプロイします。再起動 `ProcessManagementClientSessionService` サービス。
 1. ブラウザーを更新するか、ユーザーでログアウトまたはログインをし直す必要があります。

@@ -1,15 +1,16 @@
 ---
 title: ビデオコンポーネントの設定
-description: Adobe Experience Managerのビデオコンポーネントを使用して、事前定義済みの標準提供ビデオアセットをページに配置する方法について説明します。
+description: Adobe Experience Manager のビデオコンポーネントを使用して、事前定義された標準提供ビデオアセットをページに配置する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 62%
+ht-degree: 83%
 
 ---
 
@@ -29,7 +30,7 @@ The [ビデオコンポーネント](/help/sites-authoring/default-components-fo
 
 ## ビデオプロファイルの設定 {#configure-video-profiles}
 
-HTML5 要素を使用するには、ビデオプロファイルを定義します。 ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用し、「**[!UICONTROL プロファイル]**」タブを選択します。
+HTML 5 要素を使用するには、ビデオプロファイルを定義します。ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用し、「**[!UICONTROL プロファイル]**」タブを選択します。
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
@@ -46,18 +47,18 @@ FFmpeg を **Windows** にインストールするには、次の手順を実行
 1. システム環境変数 `PATH` を *ご利用の ffmpeg- の場所*`\bin`に設定します。
 1. AEM を再起動します。
 
-FFmpeg をにインストールするには、以下を実行します。 **macOS X**&#x200B;を使用する場合は、次の手順に従います。
+FFmpeg を **macOS X** にインストールするには、次の手順に従います。
 
 1. [developer.apple.com/xcode](https://developer.apple.com/xcode/) で入手可能な Xcode をインストールします。
-1. [XQuartz](https://www.xquartz.org) で入手可能な [X11](https://support.apple.com/en-us/100724) をインストールします。
+1. [XQuartz](https://www.xquartz.org) で入手可能な [X11](https://support.apple.com/ja-jp/100724) をインストールします。
 1. [www.macports.org](https://www.macports.org/) で入手可能な MacPorts をインストールします。
-1. コンソールで、を実行します。 `sudo port install ffmpeg` コマンドを入力し、画面上の指示に従って操作します。 `FFmpeg` 実行ファイルのパスが `PATH` システム変数に追加されていることを確認します。
+1. コンソールで `sudo port install ffmpeg` コマンドを実行し、画面上の指示に従って操作します。`FFmpeg` 実行ファイルのパスが `PATH` システム変数に追加されていることを確認します。
 
-FFmpeg をにインストールするには、以下を実行します。 **macOS X 10.6**&#x200B;では、次の手順に従います。
+FFmpeg を **macOS X 10.6** にインストールするには、事前にコンパイルされたバージョンを使用して、次の手順に従います。
 
 1. コンパイル済みバージョンをダウンロードします。
 1. `/usr/local` ディレクトリにアーカイブを解凍します。
-1. コンソールで、を実行します。 `sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg`. 必要に応じてパスを変更します。
+1. コンソールで、`sudo ln -s /usr/local/Cellar/ffmpeg/0.6/bin/ffmpeg /usr/bin/ffmpeg` を実行します。パスを適宜変更します。
 
 **AEM を設定**&#x200B;するには、次の手順に従います。
 
@@ -75,9 +76,9 @@ FFmpeg をにインストールするには、以下を実行します。 **macO
 
    >[!NOTE]
    >
-   >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイして編集します。 このようなリソースは、SlingResourceMerger を介して解決されません。
+   >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイおよび編集してください。そのようなリソースは SlingResourceMerger 経由で解決されません。
 
-4. いずれかのプロパティを変更した場合、 **[!UICONTROL すべて保存]**.
+4. いずれかのプロパティを変更した場合は、「**[!UICONTROL すべて保存]**」をクリックします。
 
 >[!NOTE]
 >

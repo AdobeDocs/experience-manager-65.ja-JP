@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: 61a5875f-ad09-4971-a886-b0d88e0c9967
-source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 75%
+source-wordcount: '546'
+ht-degree: 73%
 
 ---
 
@@ -45,10 +46,10 @@ ht-degree: 75%
 
 **行動特性** - Web サイト上の訪問者の行動に関連する特性です。有効なタイプには以下が含まれます。
 
-* アクセスしたページや購入した製品など、Web サイト内の関心対象。。
-* 参照元 Web サイトへの関心。使用された検索用語やクリックされた広告を含めます。
+* 訪問したページや購入した製品など、Web サイト内の関心。
+* 使用した検索語句やクリックした広告など、参照元の Web サイトに対する関心。
 * 他のサイトへの関心。Spyjax などのツールを使用して特定されます。
-* 訪問者の忠誠度訪問の期間、訪問の頻度。
+* 訪問者の忠誠度（訪問の期間、訪問の頻度）。
 
 **人口統計学的特性** - 収集される人口統計学的データには次のものがあります。
 

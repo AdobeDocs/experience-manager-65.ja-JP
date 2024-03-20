@@ -1,14 +1,15 @@
 ---
 title: AEM と SAP Commerce Cloud の使用
-description: Adobe Experience Managerと SAPCommerce Cloudの使用方法を説明します。
+description: Adobe Experience Manager と SAP Commerce Cloud の使用方法について説明します。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: 3400df1ecd545aa0fb0e3fcdcc24f629ce4c99ba
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '1574'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 

@@ -1,20 +1,21 @@
 ---
 title: AEM Forms アプリケーションのトラブルシューティング
-description: AEM Formsアプリの一般的な問題と、そのトラブルシューティング方法について説明します。
+description: AEM Forms アプリケーションの一般的な問題と、そのトラブルシューティングについて説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: caec5fc3-db52-4bf5-8eb2-17e5189ab819
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '675'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 # AEM Forms アプリケーションのトラブルシューティング {#troubleshoot-aem-forms-app}
 
-この記事では、AEM Formsアプリの構築中に表示される可能性のあるエラーメッセージと、それらを解決する手順について説明します。
+この記事では、AEM Forms アプリケーションの構築中に表示される可能性のあるエラーメッセージと、その解決方法について説明します。
 
 この記事のセクションは次のとおりです。
 
@@ -27,7 +28,7 @@ ht-degree: 72%
 
 ## iOS ユーザーの添付ファイルが失われる {#attachment-loss-for-ios-users}
 
-OSGi 上のAEM Formsと同期するように設定されたiOS用AEM Formsアプリは、フィールドレベルの添付ファイルのみをサポートします。 すべての添付ファイルに一意の名前を付ける必要があります。 複数の添付ファイルに同じ名前が付いている場合、1 つの添付ファイルのみが保持され、同じ名前が付いている他のすべての添付ファイルは失われます。iOS デバイスのユーザーがデータを損失するのを回避するには、次の手順を実行します。
+OSGi 上の AEM Forms と同期するように設定された iOS 用の AEM Forms アプリケーションは、フィールドレベルの添付ファイルのみをサポートします。すべての添付ファイルには一意の名前が付いている必要があります。複数の添付ファイルに同じ名前が付いている場合、1 つの添付ファイルのみが保持され、同じ名前が付いている他のすべての添付ファイルは失われます。iOS デバイスのユーザーがデータを損失するのを回避するには、次の手順を実行します。
 
 1. 接続したサーバーで、**Adobe Experience Manager／ツール／操作／web コンソール**&#x200B;に移動します。
 1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 web チャネルの設定]**」を検索してクリックします。
@@ -46,7 +47,7 @@ OSGi 上のAEM Formsと同期するように設定されたiOS用AEM Formsアプ
    URL：`https://<server>:<port>/lc/crx/de/index.jsp`
 
 1. CRXDE のルートパスにある「アクセス制御」の「アクセス制御リスト」で、**+** をクリックします。
-1. Adobe Analytics の **新しいエントリの追加** ダイアログで、「プリンシパル」フィールドのグループ検索ボタンをクリックします。
+1. **新しいエントリを追加**&#x200B;ダイアログで、「プリンシパル」フィールドのグループ検索ボタンをクリックします。
 1. プリンシパルを選択ダイアログの「名前」フィールドで、`PERM_WORKSPACE_USER` と入力し、「**検索**」をクリックします。
 1. プリンシパルを選択ダイアログで `PERM_WORKSPACE_USER` グループを選択し、「**OK**」をクリックします。
 1. 新しいエントリを追加ダイアログの「プリンシパル」フィールドで、`PERM_WORKSPACE_USER` グループが選択された状態になります。
@@ -57,7 +58,7 @@ OSGi 上のAEM Formsと同期するように設定されたiOS用AEM Formsアプ
 
 ## キャッシュされていない HTML5 フォームを AEM Forms アプリケーションに読み込むことができない {#html-forms-not-cached-fail-to-load-in-aem-forms-app}
 
-AEM Formsアプリが古いバージョンのAEM Formsサーバーに接続されている場合、キャッシュされていないHTML5 forms をAEM Formsアプリに読み込めません。
+AEM Forms アプリケーションが古いバージョンの AEM Forms サーバーに接続している場合、キャッシュされていない HTML5 フォームを AEM Forms アプリケーションに読み込むことができません。
 
 問題を解決するには、以下の手順を実行します。
 
@@ -72,15 +73,15 @@ AEM Formsアプリが古いバージョンのAEM Formsサーバーに接続さ�
 
 ## AEM Forms が Windows で同期されない {#aem-forms-do-not-sync-on-windows}
 
-Windows 版AEM Formsアプリでは、フォームのパスまたはそのリソースのいずれかに 256 文字以上が含まれている場合、フォームは接続されたサーバーと同期されません。
+Windows の AEM Forms アプリケーションでは、フォームまたはそのリソースのいずれかへのパスが 256 文字以上の場合、フォームは接続されたサーバーと同期しません。
 
-文字数を 256 文字未満に減らすには、フォームとそのリソースのパスを変更します。
+フォームとそのリソースへのパスを変更して、文字数を 256 文字よりも少なくしてください。
 
 ## Gradle のサポートされていないバージョン {#unsupported-version-of-gradle}
 
 **エラーメッセージ：** The project is using an unsupported version of Gradle.（プロジェクトは Gradle のサポート対象でないバージョンを使用しています。）
 
-Android Studio でAEM Formsアプリを作成すると、エラーメッセージが表示されます。 この問題は、システムでサポートされている Gradle のサポートされていないバージョンが原因で発生します。
+Android Studio で AEM Forms アプリケーションを構築すると、エラーメッセージが表示されます。この問題は、システムでサポートされる Gradle のサポート対象でないバージョンが原因で発生します。
 
 **解決策：**「**Fix Gradle wrapper and re-import project**」（Gradle のラッパーを修正してプロジェクトを再度インポート）をクリックして問題を解決します。
 

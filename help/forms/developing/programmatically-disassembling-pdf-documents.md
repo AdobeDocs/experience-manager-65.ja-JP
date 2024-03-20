@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 role: Developer
 exl-id: c5e712e0-5c3f-48cd-91cf-fd347222a6b2
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1749'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +23,7 @@ Assembler サービスに PDF ドキュメントを渡すことで、ドキュ�
 
 ![pd_pd_pdfsfrombookmarks](assets/pd_pd_pdfsfrombookmarks.png)
 
-PDF・ドキュメントを分解するには、 `PDFsFromBookmarks` 要素が DDX ドキュメント内にある。 `PDFsFromBookmarks` 要素は結果の要素であり、`DDX` 要素の子要素のみとすることができます。複数のドキュメントが生成される可能性があるため、`result` 属性はありません。
+PDF ドキュメントをディスアセンブリするには、`PDFsFromBookmarks` 要素が DDX ドキュメント内にある必要があります。`PDFsFromBookmarks` 要素は結果の要素であり、`DDX` 要素の子要素のみとすることができます。複数のドキュメントが生成される可能性があるため、`result` 属性はありません。
 
 `PDFsFromBookmarks` 要素を使用すると、ソースドキュメントのレベル 1 のブックマークごとに 1 つのドキュメントが生成されます。
 
@@ -77,7 +78,7 @@ PDF ドキュメントを分割するには、以下のタスクを実行しま�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
 
 **PDF Assembler クライアントを作成する**
 

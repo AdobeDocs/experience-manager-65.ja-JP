@@ -1,15 +1,16 @@
 ---
 title: Sling チートシート
-description: 次の参照図を使用して、Adobe Experience Managerの基礎的なテクノロジーである Apache Sling について学びます。
+description: 次の参照図を使用して、Adobe Experience Manager の基礎的なテクノロジーである Apache Sling について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: ea97ac1f-84d1-4707-892d-b2249ee1cab5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '40'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 

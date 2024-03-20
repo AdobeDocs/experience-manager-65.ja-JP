@@ -1,31 +1,32 @@
 ---
-title: デザインとデザイナー
-description: Web サイト用のデザインを作成する方法と、AEMで Designer を使用してデザインを作成する方法について説明します。
+title: デザインと Designer
+description: Web サイト用のデザインを作成する方法と、AEM で Designer を使用してデザインを作成する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: c81c5910-b6c9-41bd-8840-a6782792701f
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '358'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
-# デザインとデザイナー{#designs-and-the-designer}
+# デザインと Designer{#designs-and-the-designer}
 
 >[!CAUTION]
 >
->この記事では、クラシック UI を使用して web サイトを作成する方法について説明します。Adobeでは、Web サイトに最新のAEMテクノロジーを使用することをお勧めします（記事で詳しく説明）。 [AEM Sitesの開発の手引き](/help/sites-developing/getting-started.md).
+>この記事では、クラシック UI を使用して web サイトを作成する方法について説明します。アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、web サイトに最新の AEM テクノロジーを利用することをお勧めします。
 
 Designer は、AEM の[クラシック UI](/help/release-notes/touch-ui-features-status.md) を使用した web サイトのデザインを作成するために使用します。
 
 >[!NOTE]
 >
->Web アクセシビリティについて詳しくは、 [AEMと Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md).
+>Web アクセシビリティについて詳しくは、[AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)を参照してください。
 
-## デザイナーの使用 {#using-the-designer}
+## Designer の使用 {#using-the-designer}
 
 デザインは、「**ツール**」タブの **designs** セクションで定義できます。
 
@@ -39,11 +40,11 @@ Designer は、AEM の[クラシック UI](/help/release-notes/touch-ui-features
 
 >[!NOTE]
 >
->デザインモードでページに対して行われた変更はすべて、サイトのデザインノードの下に保持され、同じデザインを持つすべてのページに自動的に適用されます。
+>デザインモードのページ上で行われたすべての変更は、サイトのデザインノードの下に保持され、同じデザインを持つすべてのページに自動的に適用されます。
 
 ## 必要なもの {#what-you-will-need}
 
-デザインを実現するには、次が必要です。
+デザインを実現するには、以下が必要です。
 
 **CSS** - カスケーディングスタイルシート（CSS）は、ページの特定の領域の書式を定義します。
 **画像** - 背景、ボタンなどの機能に使用するすべての画像。

@@ -7,7 +7,8 @@ topic-tags: components
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '4843'
 ht-degree: 99%
@@ -1037,7 +1038,7 @@ AEM 内のコンポーネントは、次の 3 つの異なる階層の影響を�
 
 >[!NOTE]
 >
->クラシック UI の場合、ハンドラーで使用できるパラメーターについては、[`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) および [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) ウィジェットのドキュメントに記載されている「`before<action>` イベントおよび `after<action>` イベント」のセクションを参照してください。
+>クラシック UI の場合、ハンドラーで使用できるパラメーターについては、[`CQ.wcm.EditBar`](ttps://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) および [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) ウィジェットのドキュメントに記載されている「`before<action>` イベントおよび `after<action>` イベント」のセクションを参照してください。
 
 次の設定では、コンポーネントを削除、編集、挿入または移動した後にページが更新されます。
 

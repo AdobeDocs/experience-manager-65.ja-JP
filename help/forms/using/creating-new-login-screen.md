@@ -1,15 +1,16 @@
 ---
 title: ログイン画面の作成
-description: AEM Forms Workspace やForms Manager など、LiveCycleモジュールのログインページを変更する方法。
+description: AEM Forms Workspace または Forms Manager を例にした、LiveCycle モジュールのログインページの変更方法。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
-source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '444'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 

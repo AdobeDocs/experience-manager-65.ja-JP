@@ -5,10 +5,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1297'
-ht-degree: 89%
+ht-degree: 98%
 
 ---
 
@@ -27,7 +28,7 @@ ht-degree: 89%
 スタイルシステムでは、テンプレート作成者とコンテンツ作成者の両方の要件に対応する統一ソリューションを提供します。
 
 * テンプレート作成者は、コンポーネントのコンテンツポリシーでスタイルクラスを定義できます。
-* その後、コンテンツ作成者は、ページ上のコンポーネントの編集時にドロップダウンからこれらのクラスを選択して、対応するスタイルを適用できます。
+* その後、コンテンツ作成者は、ページ上のコンポーネントの編集時にドロップダウンリストからこれらのクラスを選択し、対応するスタイルを適用できます。
 
 スタイルクラスがコンポーネントの装飾ラッパー要素に挿入されるので、コンポーネント開発者は、CSS ルールを提供する以外にスタイルの処理に関与する必要がなくなります。
 
@@ -76,7 +77,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 
    ![作成者にとってのスタイルシステム](assets/style-system-author.png)
 
-1. 次をクリック： **スタイル** ボタンをクリックします。 **リスト** component ：スタイルメニューを開き、コンポーネントの外観を変更します。
+1. **リスト**&#x200B;コンポーネントのツールバーで「**スタイル**」ボタンをクリックしてスタイルメニューを開き、コンポーネントの外観を変更します。
 
    ![スタイルの選択](assets/style-system-author2.png)
 
@@ -86,7 +87,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 
 ### テンプレート作成者として {#as-a-template-author}
 
-1. WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）の編集時に、**ページ情報／テンプレートの編集**&#x200B;でページのテンプレートを編集します。
+1. WKND の英語版マスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）の編集時に、**ページ情報／テンプレートの編集**&#x200B;でページのテンプレートを編集します。
 
    ![テンプレートを編集](assets/style-system-edit-template.png)
 
@@ -107,7 +108,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 
 >[!CAUTION]
 >
->コンポーネントポリシーのスタイルプロパティとして設定されている CSS クラス（および必要な JavaScript）は、 [クライアントライブラリ](/help/sites-developing/clientlibs.md) を有効にします。
+>コンポーネントポリシーのスタイルプロパティとして設定されている CSS クラスと、必要な JavaScript を動作可能にするには、[クライアントライブラリ](/help/sites-developing/clientlibs.md)としてデプロイする必要があります。
 
 ## セットアップ {#setup}
 
@@ -122,7 +123,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
-コンポーネントが設定されると、AEMが編集可能なすべてのコンポーネントを自動的にラップする装飾要素に対して、ページ作成者が設定したスタイルがAEMによって自動的に挿入されます。 この処理を実行するために、コンポーネント自体で他の操作をおこなう必要はありません。
+コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが AEM により自動的に挿入されます。この処理を実行するために、コンポーネント自体で他の操作をおこなう必要はありません。
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 
@@ -154,6 +155,6 @@ AEM バージョン 6.5.3.0 で、編集ダイアログのオプションとし�
 >1. 最後に、コンポーネントの `cq:htmlTag` または `cq:tagName` がフォールバック値と見なされます。
 >
 
-スタイル名を定義するこの機能は、レイアウトコンテナやコンテンツフラグメントコンポーネントなどの非常に一般的なコンポーネントに、意味を追加で提供する場合に役立ちます。
+スタイル名を定義するこの機能は、レイアウトコンテナやコンテンツフラグメントコンポーネントなどの一般的なコンポーネントに意味を追加できます。
 
 例えば、レイアウトコンテナに `<main>`、`<aside>`、`<nav>` などのセマンティクスを指定できます。

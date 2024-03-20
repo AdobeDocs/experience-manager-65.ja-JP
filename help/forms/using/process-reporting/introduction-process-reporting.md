@@ -6,10 +6,11 @@ topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +48,7 @@ ht-degree: 93%
 
 フィルターを使用して、データの特定の表示を取得します。
 
-ID、期間、開始日と終了日、プロセスイニシエーターなどで、プロセスやタスクを検索できます。
+ID、期間、開始日と終了日、プロセス開始者などで、プロセスまたはタスクを検索できます。
 
 複数のフィルターを組み合わせて、特定のレポートを作成できます。
 

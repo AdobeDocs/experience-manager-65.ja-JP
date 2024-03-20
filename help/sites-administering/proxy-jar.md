@@ -1,16 +1,17 @@
 ---
 title: プロキシサーバーツール（proxy.jar）
-description: Adobe Experience Managerのプロキシサーバーツール (proxy.jar) について説明します。
+description: Adobe Experience Manager のプロキシサーバーツール（proxy.jar）について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1174'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -82,7 +83,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **失われたリクエストの検索**
 
-複雑なサーバー設定（ファイアウォールや Dispatcher を使用している場合など）でリクエストが失われた場合、プロキシサーバーを使用して、リクエストが失われた場所を特定できます。 ファイアウォールがある場合は、次の手順を実行します。
+複雑なサーバー設定でリクエストが失われた場合（例えば、ファイアウォールとディスパッチャーを使用する場合）は、プロキシサーバーを使用して、リクエストがどこで失われたかを特定できます。ファイアウォールがある場合は、次の手順を実行します。
 
 1. ファイアウォールの前にプロキシを起動します。
 1. ファイアウォールの後にもう 1 つのプロキシを起動します。

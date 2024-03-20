@@ -8,10 +8,11 @@ content-type: reference
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2959'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -274,7 +275,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 **DoS を防ぐための Sling の設定**
 
-Sling は&#x200B;*コンテンツ中心型*&#x200B;です。(HTTP) 要求が JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、処理はコンテンツに焦点を当てます。
+Sling は&#x200B;*コンテンツ中心型*&#x200B;です。（HTTP）リクエストがそれぞれ JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、コンテンツに焦点を当てた処理が行われます。
 
 * 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
 * 次に、レンダラーまたはスクリプトが、リクエストの特定の部分（セレクターや拡張子など）と共にリソースプロパティから配置されます。
@@ -389,7 +390,7 @@ AEM 6.1 以降、`AuthorizableNodeName` インターフェイスの新しい実�
 
 ### 匿名権限堅牢化パッケージ {#anonymous-permission-hardening-package}
 
-デフォルトでは、AEM は、`jcr:createdBy` や `jcr:lastModifiedBy` などのシステムメタデータをノードプロパティとして、リポジトリ内の通常のコンテンツの隣に保存します。設定とアクセス制御の設定に応じて、場合によっては、これによって、例えば、生の JSON または XML としてレンダリングされる場合などに、個人識別情報 (PII) が公開される可能性があります。
+デフォルトでは、AEM は、`jcr:createdBy` や `jcr:lastModifiedBy` などのシステムメタデータをノードプロパティとして、リポジトリ内の通常のコンテンツの隣に保存します。設定とアクセス制御の設定に応じて、場合によっては、このようなノードが生の JSON または XML としてレンダリングされるなど、個人を特定できる情報（PII）の漏洩につながる可能性があります。
 
 すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。権限の最小化の原則に従って、これらのプロパティへのアクセスを制限する必要があります。
 

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '332'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -26,15 +27,15 @@ ht-degree: 73%
 
 1. 静的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページヘッダーで、「 」を選択します。 ![キャンバスドロップダウン](assets/canvas-drop-down.png) > **デザイン** をクリックして、デザインモードでページを開きます。
-   1. 任意のコンポーネント（青い境界線付き）を選択し、「 」を選択します。 ![フィールドレベル](assets/field-level.png) 現在のコンポーネントを含む段落システムを選択します。
-   1. 段落システムで、 ![settings_icon](assets/settings_icon.png) をクリックして、段落システムの編集ダイアログを開きます。
+   1. ページのヘッダーで、![canvas-drop-down](assets/canvas-drop-down.png)／**Design** を選択すると、デザインモードでページが表示されます。
+   1. 任意の（青色の境界線の付いている）コンポーネントを選択してから ![field-level](assets/field-level.png) を選択し、現在のコンポーネントが含まれている段落システムを選択します。
+   1. 段落システムで ![settings_icon](assets/settings_icon.png) を選択して段落システムの編集ダイアログを開きます。
    1. **[!UICONTROL 許可されたコンポーネント]**&#x200B;のリストから、**[!UICONTROL Document Services]** コンポーネントと **[!UICONTROL Document Services Predicates]** コンポーネントのチェックボックスをオンにします。「**[!UICONTROL OK]**」を選択します。
 
 1. 動的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページヘッダーで、「 」を選択します。 ![プロパティ](assets/properties.png) > **テンプレートを編集** をクリックして、ページのテンプレートを開きます。
-   1. 選択 **レイアウトコンテナ** を選択し、 ![FeedManagement](/help/forms/using/assets/feedmanagement.png). Adobe Analytics の **許可されたコンポーネント** タブ、有効 **Document Services と Document Services の述語** オプション、および選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. ページのヘッダーで、![プロパティ](assets/properties.png)／**テンプレートの編集**&#x200B;を選択してページのテンプレートを開きます。
+   1. 「**レイアウトコンテナ**」を選択し、「![FeedManagement](/help/forms/using/assets/feedmanagement.png)」を選択します。「**許可されたコンポーネント**」タブで「**Document Services」オプションと「Document Service Predicates**」オプションを有効にして「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
 >[!NOTE]
 >

@@ -6,22 +6,23 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
 exl-id: 3354d650-532a-488b-8d8b-b6e1fc30c30f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
 # Screens のコンテンツ管理{#content-management-for-screens}
 
-A ***コンテンツマネージャー*** AEM Screensは、マーケティングと密接に連携し、キャンペーン、オーディエンス、および望ましい焦点を把握しているクリエイティブプロフェッショナルです。 コンテンツマネージャーは、様々なチャネルを開発し、時間指定チャネルエクスペリエンスにシーケンスを割り当てることで、エンドユーザーエクスペリエンスの作成と統合を担当します。
+AEM Screens の&#x200B;***コンテンツマネージャー***&#x200B;は、マーケティングと密接に連携し、キャンペーン、オーディエンスおよび望ましいフォーカスを把握しているクリエイティブプロフェッショナルです。コンテンツマネージャーは、多様なチャネルを作成し、シーケンスをタイムチャネルエクスペリエンスに割り当てることで、エンドユーザーエクスペリエンスの作成と編成に対する責任を負います。
 
 Screens のコンテンツマネージャーは、場所およびスケジュールをデザインし、チャネルの整合性を維持し、分析およびレポートを実行してビデオプロファイルを維持します。
 
-AEM Screensコンテンツマネージャーは、次のタスクを担当します。
+AEM Screens コンテンツマネージャーは、次のタスクを行います。
 
-* デザインの場所
-* デザインスケジュール
+* 場所のデザイン
+* スケジュールのデザイン
 * チャネルの整合性の維持
 * ビデオプロファイル

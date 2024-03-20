@@ -7,9 +7,10 @@ activity: use
 audience: marketer
 feature: Commerce Integration Framework
 exl-id: 09e986c4-16b9-4ef5-a0b3-8d65b17a7f2c
-source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '91'
 ht-degree: 100%
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Manager インスタンスの監視と保守
-description: Adobe Experience Managerインスタンスの監視および保守方法の詳細
+description: Adobe Experience Manager インスタンスの監視と保守方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
@@ -8,10 +8,11 @@ content-type: reference
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 783824ece92c12476505d695b961d782d7d70cb9
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5792'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -124,7 +125,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
    ![バージョンのパージ設定](assets/version-purge-configuration.png)
 
    * **パスをパージ**
-パージするコンテンツの開始パスを設定します。例： `/content/wknd`.
+パージするコンテンツの開始パスを設定します。例：`/content/wknd`。
 
      >[!CAUTION]
      >
@@ -236,13 +237,13 @@ AEM WCM とリポジトリに対するすべてのアクセス要求が、ここ
 このログは、[!DNL Dynamic Media] が有効になっている場合にのみ使用されます。s7access ログには、`/is/image` および `/is/content` 経由で [!DNL Dynamic Media] に対して実行された各リクエストが記録されます。
 
    * `stderr.log`
-起動時に生成される様々な深刻度レベルのエラーメッセージを保持します。デフォルトでは、ログレベルはに設定されています。 `Warning` ( `WARN`)
+起動時に生成される様々な深刻度レベルのエラーメッセージを保持します。デフォルトでは、ログレベルは `Warning`（`WARN`）に設定されています。
 
    * `stdout.log`
 起動時のイベントを示すログメッセージを保持します。
 
    * `upgrade.log`
-から実行されるすべてのアップグレード操作のログを提供します。 `com.day.compat.codeupgrade` および `com.adobe.cq.upgradesexecutor` パッケージ。
+`com.day.compat.codeupgrade` パッケージおよび `com.adobe.cq.upgradesexecutor` パッケージから実行されるすべてのアップグレード操作のログを提供します。
 
 * `<cq-installation-dir>/crx-quickstart/repository/segmentstore`
 
@@ -481,7 +482,7 @@ Felix コンソールでは、`../system/console/slinglog` の Sling ログサ�
 
 #### Web コンソールの OSGi 監査記録 {#osgi-audit-records-from-the-web-console}
 
-また、OSGi イベントは監査レコードを生成し、 **設定ステータス** タブ/ **ログファイル** AEM Web コンソールのタブ：
+OSGi イベントで生成される監査記録は、AEM web コンソールの&#x200B;**設定ステータス**&#x200B;タブ／**ログファイル**&#x200B;タブから確認できます。
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -601,7 +602,7 @@ Felix コンソールでは、`../system/console/slinglog` の Sling ログサ�
   <tr>
    <td>truss/strace</td>
    <td>ページの読み込み</td>
-   <td><p>システムコールとシグナルを追跡する Unix/Linux コマンド。 ログレベルをに上げます。 <code>INFO</code>.</p> <p>リクエストごとのページ読み込み数と、読み込んだページを分析します。</p> </td>
+   <td><p>システムの呼び出しおよびシグナルをトレースする Unix／Linux コマンド。ログレベルを <code>INFO</code> に上げます。</p> <p>リクエストごとのページ読み込み数と、読み込んだページを分析します。</p> </td>
   </tr>
   <tr>
    <td>スレッドダンプ</td>
@@ -1094,12 +1095,12 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 >[!NOTE]
 >
-詳しくは、以下の記事も参照してください。
+>詳しくは、以下の記事も参照してください。
 >
-* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
-* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
-* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)
-* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+>* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
+>* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+>* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)
+>* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
 ### 100％の CPU 使用率 {#cpu-at}
@@ -1192,6 +1193,6 @@ JConsole の場合は以下のとおりです。
 
 >[!NOTE]
 >
-Oracle の VM に関する情報は、次の場所でも確認できます。
+>Oracle の VM に関する情報は、次の場所でも確認できます。
 >
-[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
+>[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)

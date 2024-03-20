@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: a71d20e6-0321-4afb-95fe-6de8b7b37245
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -68,7 +69,7 @@ AEM Analytics では、web サイトでのユーザーインタラクション�
 
 * `events`：文字列、または文字列の配列（イベントが複数の場合）。
 
-* `values` 追跡するすべての値が含まれます
+* `values`：追跡するすべての値を格納します。
 * `collect`：オプションで、イベントおよびデータオブジェクトを格納する配列を返します。
 * `options`：オプションであり、HTML 要素 `obj` および ` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)` などのリンク追跡オプションが含まれます。
 

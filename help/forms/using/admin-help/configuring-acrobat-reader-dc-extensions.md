@@ -6,7 +6,8 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 0f8e1e46-4fc5-43f6-abb1-19a3f20e1f1d
-source-git-commit: 5af420c8e95fed88a8516cce27b8bbc7d3974e75
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 100%

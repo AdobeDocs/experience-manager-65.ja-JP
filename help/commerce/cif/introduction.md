@@ -3,10 +3,11 @@ title: 概要
 description: AEM Content and Commerce の使用と管理の方法を理解します。統合に関する役立つ記事や、AEM ストアフロントの使用を開始する方法も用意されています。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
-source-git-commit: fcf7f56fe04cffb077bb40d11429b0c425876489
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +44,7 @@ Adobe Experience Manager の Content and Commerce を使用すると、ブラン
 
 ## 2013 年以降の CIF による顧客サポートの成功
 
-200 社を超える顧客とのコラボレーションを通じて、CIF は、コンテンツおよびコマースプロジェクトを成功に導くための構成要素としての地位を確立しました。これにより、現在および将来にわたって IT とビジネスに価値がもたらされます。最近の顧客プロジェクトでは、CIFは「優れたアクセラレーターと非常に多くの価値を持つ膨大な時間節約」と説明しています。
+200 社を超える顧客とのコラボレーションを通じて、CIF は、コンテンツおよびコマースプロジェクトを成功に導くための構成要素としての地位を確立しました。これにより、現在および将来にわたって IT とビジネスに価値がもたらされます。最近の顧客プロジェクトでは、CIF を「プロセスの促進と時間の節約に大きく貢献し多大な価値をもたらすもの」と説明しています。
 
 ## CIF の利点 {#cif-benefits}
 

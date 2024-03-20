@@ -1,25 +1,26 @@
 ---
 title: ContextHub の拡張
-description: 提供される ContextHub ストアやモジュールがソリューションの要件を満たさない場合は、新しいタイプの ContextHub ストアやモジュールを定義する
+description: 提供されている ContextHub ストアやモジュールのタイプがソリューションの要件を満たさない場合は、新しいタイプを定義できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 41898fa7-a369-4c63-8ccb-69eb3fa146a1
-source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 59%
+ht-degree: 75%
 
 ---
 
 # ContextHub の拡張{#extending-contexthub}
 
-提供される ContextHub ストアやモジュールがソリューションの要件を満たさない場合は、新しいタイプの ContextHub ストアやモジュールを定義します。
+提供されている ContextHub ストアやモジュールのタイプがソリューションの要件を満たさない場合は、新しいタイプを定義できます。
 
 ## カスタムストア候補の作成 {#creating-custom-store-candidates}
 
-ContextHub ストアは、登録されたストア候補から作成されます。 カスタムストアを作成するには、ストア候補を作成して登録します。
+ContextHub ストアは、登録済みのストア候補から作成します。カスタムストアを作成するには、ストア候補を作成して登録します。
 
 ストア候補を作成して登録するコードを含む JavaScript ファイルは、 [クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md#creating-client-library-folders). フォルダーのカテゴリは、次のパターンに一致しなければなりません。
 
@@ -38,7 +39,7 @@ contexthub.store.[storeType]
 * [`ContextHub.Store.JSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
 * [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 
-各ベースストアは、 [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) ストア。
+各ベースストアは、[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) ストアを拡張したものです。
 
 次の例では、`ContextHub.Store.PersistedStore` ストア候補の最もシンプルな拡張を作成しています。
 
@@ -62,11 +63,11 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-通常、1 つの候補のみが必要で、優先度をに設定できます。 `0`. しかし、興味があれば、 [より高度な登録](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) :JavaScript 条件 (`applies`) および候補の優先度。
+通常、1 つの候補のみが必要で、優先度をに設定できます。 `0`. しかし、興味があれば、 [より高度な登録](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) :JavaScript 条件 (`applies`) および候補の優先度です。
 
 ## ContextHub UI モジュールタイプの作成 {#creating-contexthub-ui-module-types}
 
-[ContextHub に付属してインストールされる](/help/sites-developing/ch-samplemodules.md) UI モジュールタイプが要件を満たさない場合は、カスタム UI モジュールタイプを作成できます。UI モジュールタイプを作成するには、 `ContextHub.UI.BaseModuleRenderer` クラスとその後の登録 `ContextHub.UI`.
+[ContextHub に付属してインストールされる](/help/sites-developing/ch-samplemodules.md) UI モジュールタイプが要件を満たさない場合は、カスタム UI モジュールタイプを作成できます。UI モジュールタイプを作成するには、`ContextHub.UI.BaseModuleRenderer` クラスを拡張して `ContextHub.UI` に登録し、UI モジュールレンダラーを作成します。
 
 UI モジュールレンダラーを作成するには、UI モジュールをレンダリングするロジックを格納する `Class` オブジェクトを作成します。少なくとも、このクラスは次のアクションを実行する必要があります。
 
@@ -74,9 +75,9 @@ UI モジュールレンダラーを作成するには、UI モジュールを�
 
 * デフォルトの設定を指定します。`defaultConfig` プロパティを作成します。このプロパティは、[`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI モジュール用に定義されているプロパティと、必要なその他すべてのプロパティを含むオブジェクトです。
 
-のソース `ContextHub.UI.BaseModuleRenderer` は/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。 レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定します。 管理者がこのレンダラーに基づいて UI モジュールを作成する場合は、この名前を指定します。
+のソース `ContextHub.UI.BaseModuleRenderer` は/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。 レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定します。 管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
 
-レンダラークラスを作成し、自己実行する匿名関数に登録します。 次の例は、contexthub.browserinfo UI モジュールのソースコードをベースとしています。 この UI モジュールは、`ContextHub.UI.BaseModuleRenderer` クラスのシンプルな拡張です。
+自己実行匿名関数でレンダラークラスを作成して、登録します。次の例は、contexthub.browserinfo UI モジュールのソースコードをベースとしています。 この UI モジュールは、`ContextHub.UI.BaseModuleRenderer` クラスのシンプルな拡張です。
 
 ```xml
 ;(function() {

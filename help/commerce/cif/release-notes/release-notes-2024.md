@@ -1,10 +1,12 @@
 ---
 title: AEM Content and Commerce リリースノート 2024
-description: Adobe Experience Manager Content and Commerce リリースノート 2024.
-source-git-commit: 99e0ed11ece7291ca093080843c5215339871def
+description: Adobe Experience Manager Content and Commerce リリースノート 2024
+exl-id: 372e6a46-72bb-4db4-ad01-534ca723ae58
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 75%
+ht-degree: 84%
 
 ---
 

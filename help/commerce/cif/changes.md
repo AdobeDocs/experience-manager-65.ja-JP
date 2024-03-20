@@ -2,10 +2,11 @@
 title: コマース統合フレームワーク（CIF）アドオンの主な変更点
 description: 以前のバージョンと比較した、コマース統合フレームワーク（CIF）アドオンの主な変更点です。
 exl-id: 41dee21a-9ae2-4067-a32a-2d4633323fc4
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager,Commerce
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -57,4 +58,4 @@ AEM は、製品やカテゴリに割り当てられた AEM カタログテン�
 
 >[!NOTE]
 >
->AEM Managed Service またはAEM On-Premise でのCIFの使用方法に関する追加ドキュメントについては、 [Commerce integration framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
+>AEM Managed Service または AEM オンプレミスで CIF を使用する方法に関する追加ドキュメントについて詳しくは、[コマース統合フレームワーク](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)を参照してください。

@@ -1,15 +1,16 @@
 ---
 title: 手書き署名を使用したフォームへの電子署名の適用
-description: 手書き署名を使用してAEM Adaptive Formsに署名する方法を説明します。 手書き署名と署名のステップを使用して、フォームに署名を描画できます。
+description: 手書き署名を使用を使用して AEM アダプティブフォームに署名する方法について説明します。手書き署名や署名ステップを使用すると、フォームに署名することができます。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 70%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/signing-forms-using-scribble.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/signing-forms-using-scribble.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
 
@@ -35,9 +36,9 @@ ht-degree: 70%
 * **C：** **位置情報**&#x200B;アイコンをクリックして、署名とともに位置情報を追加します。
 * **D：** **キーボード**&#x200B;アイコンをクリックして、キャンバスに名前を入力します。
 
-「完了」を選択したら、![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 手書き署名ウィンドウのアイコンを使用すると、署名を編集できません。 署名を編集する場合は、現在の署名を無視して、上記のペイントブラシ／キーボードオプションを使用して再署名する必要があります。
+手書き署名ウィンドウで「完了」![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択すると、署名を編集できなくなります。署名を編集する場合は、現在の署名を無視して、上記のペイントブラシ／キーボードオプションを使用して再署名する必要があります。
 
-次の項目を選択できます。 **設定** ![設定](assets/configure.png) アイコンをクリックして、手書き署名キャンバスの縦横比を設定します。
+**設定** ![configure](assets/configure.png) アイコンを選択して、手書き署名キャンバスのアスペクト比を設定できます。
 * 手書き署名キャンバスのアスペクト比が 1 未満の場合、位置情報は手書き署名キャンバスの下部に追加されます。
 
 * 手書き署名キャンバスのアスペクト比が 1 を超える場合、位置情報は手書き署名キャンバスの右側に追加されます。
@@ -54,7 +55,7 @@ ht-degree: 70%
 
 1. レコードのドキュメントオプションが有効になっているか、フォームテンプレートに基づくアダプティブフォームを作成します。詳しい手順については、「[アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)」を参照してください。
 1. **手書き署名**&#x200B;コンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ＆ドロップします。
-1. を選択します。 **設定** ![設定](assets/configure.png) アイコン。 この操作により、手書き署名コンポーネントのプロパティを表示するプロパティブラウザーが開きます。手書き署名コンポーネントのプロパティを設定します。
+1. **設定** ![configure](assets/configure.png) アイコンを選択します。この操作により、手書き署名コンポーネントのプロパティを表示するプロパティブラウザーが開きます。手書き署名コンポーネントのプロパティを設定します。
 1. 署名ステップコンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ＆ドロップします。
 
    >[!NOTE]
@@ -62,34 +63,34 @@ ht-degree: 70%
    >署名ステップコンポーネントは、フォームの幅いっぱいに表示されます。そのため、署名ステップコンポーネントが含まれているセクションに他のコンポーネントを配置しないようにすることをお勧めします。
    >
 
-1. コンテンツブラウザーで、「 」を選択します。 **フォームコンテナ**&#x200B;をクリックし、 **設定** ![設定](/help/forms/using/assets/configure.png) アイコン。 この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。に移動します。 **アダプティブフォームコンテナ** > **電子署名** を選択し、選択を解除します。 **Adobe Signを有効にする** オプション。 「完了」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンをクリックして変更を保存します。
+1. コンテンツブラウザーで「**フォームコンテナ**」を選択し、**設定** ![configure](/help/forms/using/assets/configure.png) アイコンを選択します。この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。**アダプティブフォームコンテナ**／**電子サイン**&#x200B;に移動して、「**Adobe Sign を有効にする**」オプションを選択解除します。完了 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択して、変更を保存します。
 
    >[!NOTE]
    >
    >署名ステップコンポーネントをアダプティブフォームに追加すると、「Adobe Sign を有効にする」オプションが自動的に選択されます。
    >
 
-1. を選択します。 **設定** ![設定](assets/configure.png) アイコン。 この操作により、署名ステップのプロパティを表示するプロパティブラウザーが開きます。以下のプロパティを設定します。
+1. **設定** ![configure](assets/configure.png) アイコンを選択します。この操作により、署名ステップのプロパティを表示するプロパティブラウザーが開きます。以下のプロパティを設定します。
 
    * **要素名**：コンポーネントの名前を指定します。
 
-   * **タイトル：** コンポーネントの一意のタイトルを指定します。
-   * **テンプレートメッセージ：** 署名メッセージの読み込み中に表示するPDFを指定します。 Adobe Signサービスでは、署名PDFの準備と読み込みに時間がかかります。
+   * **タイトル：**&#x200B;コンポーネントの一意のタイトルを指定します。
+   * **テンプレートメッセージ：**&#x200B;署名 PDF の読み込み中に表示するメッセージを指定します。Adobe Sign サービスによる署名 PDF の準備と読み込みには、ある程度の時間がかかります。
    * **署名サービス：**「**手書き署名**」オプションを選択します。
 
-   * **CSS クラス**：クライアントライブラリの CSS クラスを指定します（存在する場合）。用途 [テーマ](../../forms/using/themes.md) および [インラインスタイル](../../forms/using/inline-style-adaptive-forms.md) を使用します。
+   * **CSS クラス**：クライアントライブラリの CSS クラスを指定します（存在する場合）。CSS クラスの代わりに[テーマ](../../forms/using/themes.md)や[インラインスタイル](../../forms/using/inline-style-adaptive-forms.md)を使用します。
 
-   「完了」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンをクリックして変更を保存します。 署名が正常に設定されます。
+   完了 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンを選択して、変更を保存します。署名が正常に設定されます。
 
-   これで、フォームに入力する際に、アダプティブフォームのPDF版が表示され、PDFドキュメントに署名するためのオプションが提供されます。 詳しくは、「[手書き署名を使用したアダプティブフォームの署名](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature)」を参照してください。
+   これで、フォームを記入する際に、PDF バージョンのアダプティブフォームが表示され、PDF ドキュメントの署名オプションが提供されます。詳しくは、「[手書き署名を使用したアダプティブフォームの署名](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature)」を参照してください。
 
-## 手書き署名を使用してアダプティブフォームに署名する {#sign-an-adaptive-form-using-scribble-signature}
+## 手書き署名を使用したアダプティブフォームの署名 {#sign-an-adaptive-form-using-scribble-signature}
 
-1. アダプティブフォームに入力して署名ステップページに到達すると、署名画面が表示されます。
+1. フォームへの記入を完了して署名ステップページに到達すると、署名画面が表示されます。
 
    ![手書き署名ダイアログ](/help/forms/using/assets/esignscribblesign.jpg)
 
-1. クリック **[!UICONTROL 署名]**. 手書き署名ダイアログが表示されます。 フォームに署名し、完了（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）アイコンをクリックして、変更内容を保存します。
+1. 「**[!UICONTROL 署名]**」をクリックします。手書き署名ダイアログが表示されます。フォームに署名し、完了（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）アイコンをクリックして、変更内容を保存します。
 
    ![手書き署名ダイアログ](/help/forms/using/assets/scribblewidget.png)
 

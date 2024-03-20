@@ -7,9 +7,10 @@ content-type: reference
 docset: aem65
 exl-id: 5808b8f9-9b37-4970-b5c1-4d33404d3a8b
 feature: Security
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
-workflow-type: ht
-source-wordcount: '3101'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '3073'
 ht-degree: 100%
 
 ---
@@ -168,12 +169,12 @@ CRX のアクセス権限は次のように評価されます。
 
 ### ベストプラクティス {#best-practices}
 
-いくつかの推奨事項とベストプラクティスを次の表に示します。
+いくつかのレコメンデーションとベストプラクティスを次の表に示します。
 
 <table>
  <tbody>
   <tr>
-   <td>推奨...</td>
+   <td>レコメンデーション...</td>
    <td>理由...</td>
   </tr>
   <tr>

@@ -7,10 +7,11 @@ topic-tags: integration, best-practices
 content-type: reference
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1073'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +34,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
 >
 >すべてのキャンペーンコンテンツは、`master` タイプのページ `cq/personalization/components/ambitpage` の下に作成してください。
 >
->例えば、計画されているキャンペーンの構造が
+>例えば、予定されているキャンペーン構造が次のような場合
 >
 >`/content/campaigns/teasers/en/campaign-promotion-global`
 >

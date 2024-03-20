@@ -5,10 +5,11 @@ contentOwner: gtalwar
 topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
@@ -23,12 +24,12 @@ ht-degree: 59%
 
 ## 主な機能 {#key-capabilities}
 
-インタラクティブ通信の主な機能は次のとおりです。
+以下に、インタラクティブ通信の主要な機能を示します。
 
-- すぐに使用できるフォームデータモデルとの統合により、バックエンドデータベースや MS® Dynamics などの他の CRM システムへのアクセスを簡単かつ合理化できます。
-- 印刷チャネルと Web チャネル用の統合オーサリングインターフェイス。印刷チャネルから Web チャネルを自動生成できます。
-- 印刷や Web で、分かりやすい視覚的な形式で情報を表示するグラフ
-- ドキュメントフラグメントは、ルールエディターとフォームデータモデルをサポートしています
+- すぐに使用できる、フォームデータモデルとの統合機能が付属しています。この機能により、バックエンドのデータベースと、MS® Dynamics などの CRM システムに簡単にアクセスすることができます。
+- 印刷チャネルと web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから web チャネルを自動的に生成することができます。
+- 印刷チャネルと web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
+- ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
 - エージェント UI で、インタラクティブ通信の印刷プレビューと web プレビューを表示できます。
 - ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
 
@@ -45,19 +46,19 @@ ht-degree: 59%
 1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。プリントチャンネルから web チャンネルを生成することもできます。
 
 1. 必要に応じて[ドラッグ＆ドロップ方式のインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)を使用して、ドキュメントフラグメント、画像、コンポーネントを、インタラクティブ通信のプリントチャンネルと web チャンネルに追加します。
-1. 挿入されるコンポーネントのプロパティを設定します。次に例を示します。
+1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
 
    1. [画像](/help/forms/using/create-interactive-communication.md#step2)
    1. [テーブル](/help/forms/using/create-interactive-communication.md#tables)（レイアウトフラグメントを含む）
    1. [グラフ](/help/forms/using/chart-component-interactive-communications.md)
    1. [ドキュメントフラグメント](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
-1. 印刷チャネルと Web チャネルをプレビューし、必要に応じてインタラクティブ通信を編集します。
-1. エージェントはエージェント UI を使用して [インタラクティブ通信の準備](/help/forms/using/prepare-send-interactive-communication.md) 受信者/後処理に送信するために使用します。
+1. 印刷チャネルと web チャネルのプレビューを表示し、必要に応じてインタラクティブ通信を編集します。
+1. エージェントはエージェント UI を使用して、インタラクティブ通信を受信者または後処理に送信するための[準備](/help/forms/using/prepare-send-interactive-communication.md)を行います。
 
 ### 構築ブロック {#buildingblocks}
 
-インタラクティブ通信の作成に必要な構築ブロックを次に示します。
+インタラクティブ通信を作成するために必要な構築ブロックを以下に示します。
 
 - [フォームデータモデル](/help/forms/using/data-integration.md)
 - [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
@@ -88,32 +89,32 @@ ht-degree: 59%
   </tr>
   <tr>
    <td>ローカリゼーション</td>
-   <td>フォームデータモデルではサポートされていません</td>
-   <td>データディクショナリでサポートされています</td>
+   <td>フォームデータモデルではサポートされていない</td>
+   <td>データディクショナリでサポートされている</td>
   </tr>
   <tr>
    <td>ルールエディター</td>
    <td>
     <ul>
-     <li>インライン条件を作成するためのテキストおよび条件サポートのルールエディター</li>
-     <li>インタラクティブ通信エディターは、Web チャネルのコンポーネントに対するルールの適用をサポートしています</li>
+     <li>テキストと条件でルールエディターを使用して、インライン条件を作成できる</li>
+     <li>インタラクティブ通信エディターで、web チャネルのコンポーネントにルールを適用できる</li>
     </ul> </td>
-   <td>条件式を作成するための UI がありません</td>
+   <td>条件式を作成するための UI はない</td>
   </tr>
   <tr>
    <td>オーサリング</td>
-   <td>印刷チャネルと Web チャネルを構築するためのドラッグ&amp;ドロップインターフェイス</td>
+   <td>ドラッグ＆ドロップ方式のインターフェイスを使用して、印刷チャネルと web チャネルを作成できる</td>
    <td>ドラッグ＆ドロップ機能はない </td>
   </tr>
   <tr>
    <td>グラフ</td>
-   <td>印刷チャネルと Web チャネルでサポートされるグラフ</td>
+   <td>印刷チャネルと web チャネルでグラフがサポートされている</td>
    <td>サポート対象外</td>
   </tr>
   <tr>
    <td>テーマ</td>
-   <td>テーマを使用して Web チャネルのスタイルを設定する</td>
-   <td>テーマをサポートしていません</td>
+   <td>テーマを使用して web チャネルのスタイルを設定できる</td>
+   <td>テーマはサポートされていない</td>
   </tr>
    <tr>
    <td>ドラフト</td>
@@ -141,7 +142,7 @@ ht-degree: 59%
    <td>サポート対象</td>
   </tr>
   <tr>
-   <td>エージェントの署名</td>
+   <td>エージェント署名</td>
    <td>サポート対象外</td>
    <td>サポート対象</td>
   </tr>

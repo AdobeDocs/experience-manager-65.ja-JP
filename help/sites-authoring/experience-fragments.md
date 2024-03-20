@@ -1,11 +1,12 @@
 ---
 title: エクスペリエンスフラグメント
-description: Adobe Experience Manager Sitesオーサリングのエクスペリエンスフラグメント。
+description: Adobe Experience Manager Sites オーサリングでのエクスペリエンスフラグメント
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: f60795363b977fa74361fb7faa8ba1138c0c4ebf
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1468'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -57,7 +58,7 @@ ht-degree: 94%
 * 異なるバリエーションやレンディションを持つエクスペリエンスがある場合。
 
    * チャネル固有またはコンテキスト固有のバリエーション
-   * グループに適したエクスペリエンス（チャネル間でエクスペリエンスが異なるキャンペーンなど）
+   * グループに対応したエクスペリエンス（チャネル間でエクスペリエンスが異なるキャンペーンなど）
 
 * オムニチャネルコマースを使用する場合。
 
@@ -236,7 +237,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    ![xf-06](assets/xf-06.png)
 
-1. 次で確認： **完了** （チェックマークアイコン）、新しいバリエーションがパネルに表示されます。
+1. 「**完了**（チェックマークアイコン）」で確定すると、新しいバリエーションがパネルに表示されます。
 
    ![xf-07](assets/xf-07.png)
 
@@ -283,7 +284,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    ![xf-11](assets/xf-11.png)
 
-1. The **構築ブロック** が「 」タブに表示され、段落システムで選択できます。
+1. **構築ブロック**&#x200B;がタブに表示され、段落システムで選択できます。
 
    ![xf-12](assets/xf-12.png)
 
@@ -350,7 +351,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
    * **ソーシャルメディアのステータス**
 
-      * ソーシャルメディアのバリエーションの詳細。
+      * ソーシャルメディアバリエーションの詳細。
 
 ## プレーン HTML レンディション {#the-plain-html-rendition}
 

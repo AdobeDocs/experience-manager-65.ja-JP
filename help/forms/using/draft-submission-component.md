@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '744'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -28,11 +29,11 @@ ht-degree: 95%
 次の手順に従って、ドラフトと送信コンポーネントを追加して設定します。
 
 1. コンポーネントブラウザーのドキュメントサービスカテゴリにある&#x200B;**ドラフトと送信**&#x200B;コンポーネントを、ページにドラッグ＆ドロップします。
-1. コンポーネントを選択し、「 」を選択します。 ![settings_icon](assets/settings_icon.png) をクリックして、コンポーネントの編集ダイアログを開きます。
+1. コンポーネントを選択し、![settings_icon](assets/settings_icon.png) を選択してコンポーネントの編集画面を開きます。
 
    ![ドラフトと送信コンポーネント](assets/drafts-submissions-edit.png)
 
-1. 編集ダイアログで、次の詳細を指定し、「 」を選択します。 **完了** をクリックして設定を保存します。
+1. 編集ダイアログで、次の内容を指定し、「**完了**」を選択して設定を保存します。
 
 <table>
  <tbody>

@@ -1,16 +1,17 @@
 ---
 title: エミュレーター
-description: AEMを使用すると、作成者は、エンドユーザーがページを表示する環境をシミュレートするエミュレーターでページを表示できます
+description: AEM では、作成者がエミュレーターでページを表示できます。エミュレーターは、エンドユーザーがページを表示する環境をシミュレートします。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
@@ -18,13 +19,13 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager(AEM) を使用すると、作成者はエミュレーターでページを表示できます。エミュレーターは、モバイルデバイスや電子メールクライアントなどで、エンドユーザーがページを表示する環境をシミュレートします。
+Adobe Experience Manager（AEM）では、作成者がエミュレーターでページを表示できます。エミュレーターは、モバイルデバイスやメールクライアントなどでエンドユーザーがページを表示する環境をシミュレートします。
 
 AEM エミュレーターフレームワークの機能を次に示します。
 
-* シミュレートされたユーザーインターフェイス (UI) 内でコンテンツをオーサリングできます。例えば、モバイルデバイスや電子メールクライアント（ニュースレターの作成に使用）などです。
+* シミュレートされたユーザーインターフェイス（UI）（例：ニュースレターの作成に使用するモバイルデバイスやメールクライアント）内でコンテンツのオーサリング機能を提供します。
 * シミュレートされた UI に従ってページコンテンツを変更します。
 * カスタムエミュレーターを作成できます。
 
@@ -32,15 +33,15 @@ AEM エミュレーターフレームワークの機能を次に示します。
 >
 >この機能は、クラシック UI でのみサポートされます。
 
-## エミュレーターの特性 {#emulators-characteristics}
+## エミュレーターの特徴 {#emulators-characteristics}
 
-エミュレーター：
+エミュレーターの特徴は次のとおりです。
 
 * ExtJS に基づいています。
-* ページ DOM 上で動作します。
-* その外観は CSS を使用して制御されます。
-* プラグインをサポートします（例えば、モバイルデバイスのローテーションプラグイン）。
-* 作成者でのみ有効です。
+* ページの DOM で動作します。
+* 外観は CSS によって制御されます。
+* プラグイン（例：モバイルデバイスの回転プラグイン）をサポートします。
+* オーサーインスタンスでのみアクティブになります。
 * 基本コンポーネントは `/libs/wcm/emulator/components/base` にあります。
 
 ### エミュレーターによるコンテンツの変換方法 {#how-the-emulator-transforms-the-content}
@@ -97,13 +98,13 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 >[!NOTE]
 >
->上の例と同様に、プロジェクトHTMLは、本文コンテンツを 1 つの div 内にラップすることをお勧めします。 本文コンテンツに複数のタグが含まれている場合、予期しない結果が生じる可能性があります。
+>前述の例と同様に、単一の div 内の本文コンテンツをプロジェクトの HTML でラップすることをお勧めします。本文コンテンツに複数のタグが含まれる場合は、予測できない結果が生じる可能性があります。
 
 ### モバイルエミュレーター {#mobile-emulators}
 
-既存のモバイルエミュレーターは次のとおりです。
+既存のモバイルエミュレーターの特徴は次のとおりです。
 
-* /libs/wcm/mobile/components/emulators の下にあります。
+* /libs/wcm/mobile/components/emulators にあります。
 * 次の場所にある JSON サーブレットを通じて使用できます。
 
   http://localhost:4502/bin/wcm/mobile/emulators.json
@@ -115,9 +116,9 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
   `deviceGroup.drawHead(pageContext);`
 
-* メソッド `DeviceGroup.drawHead(pageContext)` エミュレーターの init コンポーネント、つまり、 `init.html.jsp` エミュレーターコンポーネントの エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
+* メソッド `DeviceGroup.drawHead(pageContext)` には、エミュレーターの init コンポーネントを含まれ、エミュレーターコンポーネントの `init.html.jsp` を呼び出します。エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
 
-* モバイルベースエミュレーターの init スクリプトは、JavaScript を使用して次のように定義します。
+* モバイルベースエミュレーターの init スクリプトは JavaScript を使用して次の定義を行います。
 
    * ページ用に定義されるすべてのエミュレーターの設定（emulatorConfigs）
    * 次のメソッドを使用してエミュレーターの機能をページに統合するエミュレーターマネージャー。
@@ -130,7 +131,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 #### カスタムモバイルエミュレーターの作成 {#creating-a-custom-mobile-emulator}
 
-カスタムモバイルエミュレーターを作成するには：
+カスタムモバイルエミュレーターを作成するには、次の手順に従います。
 
 1. `/apps/myapp/components/emulators` の下に、コンポーネント `myemulator`（ノードタイプ：`cq:Component`）を作成します。
 
@@ -140,7 +141,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
    例として、ノード `/libs/wcm/mobile/components/emulators/iPhone/css` を参照できます。
 
-1. 必要に応じて、JS クライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、name = js、node type = cq:ClientLibrary を定義します。
+1. 必要に応じて、JS クライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、名前 = js、ノードタイプ = cq:ClientLibrary にします。
 
    例として、ノード `/libs/wcm/mobile/components/emulators/base/js` を参照できます。
 

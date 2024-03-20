@@ -7,7 +7,8 @@ topic-tags: configuring, Security
 content-type: reference
 feature: Configuring
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
-source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '723'
 ht-degree: 43%
@@ -37,7 +38,7 @@ SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuth
 
 AEMインスタンスに対して SSO を設定するには、 [SSO 認証ハンドラー](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+1. AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項について詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
    例えば、NTLM セットの場合は、次のようになります。
 
@@ -80,19 +81,20 @@ AEMインスタンスに対して SSO を設定するには、 [SSO 認証ハン
 >
 >また、 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) Microsoft® Internet Information Server(IIS) を使用する場合は、次の場所で追加の設定が必要になります。
 >
-* `disp_iis.ini`
-* IIS
+>* `disp_iis.ini`
+>* IIS
 >
-In `disp_iis.ini` set: ( [Microsoft® Internet Information Server での Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) （詳細は）
+>`disp_iis.ini` で次のように設定します。
+>( [Microsoft® Internet Information Server での Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) （詳細は）
 >
-* `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
-* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
+>* `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
+>* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
 >
-IIS では、次のように設定します。
+>IIS では、次のように設定します。
 >
-* **匿名アクセス**&#x200B;を無効にする
+>* **匿名アクセス**&#x200B;を無効にする
 >
-* 有効 **統合 Windows 認証**
+>* 有効 **統合 Windows 認証**
 >
 
 コンテンツツリーの任意のセクションに適用されている認証ハンドラーを確認するには、 **Authenticator** Felix コンソールのオプション。次に例を示します。
@@ -151,7 +153,7 @@ Transfer-Encoding: chunked
 
 >[!NOTE]
 >
-ブラウザーでリクエストパラメーターを使用すると、一部のHTMLのみが表示されます（CSS は表示されません）。 これは、リクエストパラメーターがない状態でHTMLからのすべてのリクエストがおこなわれるからです。
+>ブラウザーでリクエストパラメーターを使用すると、一部のHTMLのみが表示されます（CSS は表示されません）。 これは、リクエストパラメーターがない状態でHTMLからのすべてのリクエストがおこなわれるからです。
 
 ## AEMログアウトリンクの削除 {#removing-aem-sign-out-links}
 

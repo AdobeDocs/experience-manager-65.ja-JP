@@ -6,9 +6,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS, SG_AEMFORMS
 exl-id: 9c570827-86e2-47d5-b8ae-66c0767bff2e
-source-git-commit: 10227bcfcfd5a9b0f126fee74dce6ec7842f5e95
-workflow-type: ht
-source-wordcount: '293'
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '295'
 ht-degree: 100%
 
 ---

@@ -1,20 +1,21 @@
 ---
 title: API を使用した Web ページ上のフォームの一覧表示
-description: プログラムは、Forms Manager に対してクエリを実行し、フィルターが適用されたフォームのリストを取得して、独自の Web ページに表示します。
+description: プログラムから Forms Manager にクエリを 実行し、フィルターが適用されたフォームを取得して、自分の Web ページに表示します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: cfca6656-d2db-476d-a734-7a1d1e44894e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
 # API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
 
-AEM Formsは、Web 開発者が検索条件を満たす一連のフォームに対してクエリを実行し、取得する際に使用できる、REST ベースの検索 API を提供します。 API を使用して、様々なフィルターに基づいてフォームを検索できます。 応答オブジェクトには、フォームの属性、プロパティおよびフォームのレンダリングエンドポイントが含まれます。
+AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
 REST API を使用してフォームを検索するには、以下に説明するクエリパラメーターを使用して、`https://'[server]:[port]'/libs/fd/fm/content/manage.json` にあるサーバーに GET リクエストを送信します。
 
@@ -28,17 +29,17 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>呼び出す関数を指定します。 フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例： <code class="code">
+   <td><p>呼び出す関数を指定します。フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例： <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
        entityBuilder.add("func", "searchForms");</code></p> <p><strong>メモ：</strong><em>このパラメーターは必須です。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
-   <td><p>フォームを検索するアプリケーションパスを指定します。 デフォルトでは、 appPath 属性は、ルートノードレベルで使用可能なすべてのアプリケーションを検索します。<br /> </p> <p>1 つの検索クエリで複数のアプリケーションパスを指定できます。 複数のパスは、パイプ（|）文字を使用して区切ります。 </p> </td>
+   <td><p>フォームを検索するアプリケーションパスを指定します。デフォルトでは、appPath 属性はルートノードレベルで使用可能なすべてのアプリケーションを検索します。<br /> </p> <p>1 つの検索クエリで複数のアプリケーションパスを指定できます。複数のパスは、パイプ（|）文字を使用して区切ります。 </p> </td>
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>アセットと共に取得するプロパティを指定します。 アスタリスク (*) を使用すると、すべてのプロパティを一度に取得できます。 複数のプロパティを指定するには、パイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>メモ</strong>： </p>
+   <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定するには、パイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>メモ</strong>： </p>
     <ul>
      <li><em>プロパティ（ID、パス、名前など）は、常に取得されます。 </em></li>
      <li><em>すべてのアセットには、異なるプロパティのセットがあります。formUrl、pdfUrl、guideUrl などのプロパティは、cutPoints 属性に依存しません。これらのプロパティは、アセットタイプに依存し、それに応じて取得されます。 </em></li>
@@ -46,11 +47,11 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>relation<br /> </td>
-   <td>検索結果と共に取得する関連アセットを指定します。 関連アセットを取得するには、次のいずれかのオプションを選択できます。
+   <td>検索結果と共に取得する関連アセットを指定します。以下のオプションからいずれか 1 つを選択して、関連アセットを取得できます。
     <ul>
      <li><strong>NO_RELATION</strong>：関連アセットを取得しません。</li>
-     <li><strong>即時</strong>：検索結果に直接関連するアセットを取得します。</li>
-     <li><strong>すべて</strong>：直接的および間接的に関連するアセットを取得します。</li>
+     <li><strong>IMMEDIATE</strong>：検索結果に直接関連するアセットを取得します。</li>
+     <li><strong>ALL</strong>：直接関連するアセットと間接的に関連するアセットを取得します。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -58,7 +59,7 @@ REST API を使用してフォームを検索するには、以下に説明す�
    <td>取得するフォームの最大数を指定します。</td>
   </tr>
   <tr>
-   <td>オフセット</td>
+   <td>offset</td>
    <td>開始からスキップするフォームの数を指定します。</td>
   </tr>
   <tr>
@@ -67,42 +68,42 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>statements</td>
-   <td><p>文のリストを指定します。 クエリは、JSON 形式で指定されたステートメントのリストに対して実行されます。 </p> <p>例：</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>文のリストを指定します。クエリは、JSON 形式で指定した文のリストに対して実行されます。 </p> <p>例：</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>上記の例では、次のようにします。 </p>
     <ul>
-     <li><strong>名前</strong>：検索するプロパティの名前を指定します。</li>
-     <li><strong>値</strong>：検索するプロパティの値を指定します。</li>
-     <li><strong>演算子</strong>：検索時に適用する演算子を指定します。 次の演算子がサポートされています。
+     <li><strong>name</strong>：検索するプロパティの名前を指定します。</li>
+     <li><strong>value</strong>：検索するプロパティの値を指定します。</li>
+     <li><strong>operator</strong>：検索時に適用する演算子を指定します。次の演算子がサポートされています。
       <ul>
        <li>EQ - 次と等しい </li>
-       <li>NEQ — 次と等しくない</li>
-       <li>GT — 次の値より大きい</li>
-       <li>LT — 次の値より小さい</li>
-       <li>GTEQ — 次よりも大きいか等しい</li>
-       <li>LTEQ — 次の値以下</li>
-       <li>CONTAINS - B が A の一部である場合、A は B を含む</li>
-       <li>FULLTEXT — 全文検索</li>
+       <li>NEQ - 次と等しくない</li>
+       <li>GT - 次より大きい</li>
+       <li>LT - 次より小さい</li>
+       <li>GTEQ - 次よりも大きいか等しい</li>
+       <li>LTEQ - 次よりも小さいか等しい</li>
+       <li>CONTAINS - B が A の一部である場合、A に B が含まれる</li>
+       <li>FULLTEXT - フルテキスト検索</li>
        <li>STARTSWITH - B が A の最初の部分である場合、A は B で始まる</li>
        <li>ENDSWITH - B が A の最後の部分である場合、A は B で終わる</li>
-       <li>LIKE - LIKE 演算子を実装します。</li>
-       <li>AND — 複数の文を組み合わせる</li>
+       <li>LIKE - LIKE 演算子を実装する</li>
+       <li>AND - 複数の文を組み合わせる</li>
       </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ、LTEQ 演算子は、LONG、DOUBLE、DATE などの線形型のプロパティに適用されます。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>orderings<br /> </td>
-   <td><p>検索結果の順序条件を指定します。 条件は JSON 形式で定義されます。 複数のフィールドで検索結果を並べ替えることができます。 結果は、クエリでのフィールドの表示順に並べ替えられます。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えられたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、クエリに表示されるフィールドの順序でソートされます。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えられたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>名前</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
-     <li><strong>条件</strong>：結果の順序を指定します。 順序属性には次の値を使用できます。
+     <li><strong>name</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
+     <li><strong>criteria</strong>：結果の順序を指定します。順序属性には次の値を使用できます。
       <ul>
        <li>ASC - ASC を使用すると、結果を昇順に並べ替えます。<br /> </li>
        <li>DES - DES を使用すると、結果を降順に並べ替えます。</li>
@@ -111,16 +112,16 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>バイナリコンテンツを取得するかどうかを指定します。 <code>includeXdp</code> 属性は、タイプ <code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code> のアセットに適用されます。</td>
+   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code> 属性は、タイプ <code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code> のアセットに適用されます。</td>
   </tr>
   <tr>
    <td>assetType</td>
-   <td>すべての公開済みアセットから取得するアセットタイプを指定します。 複数のアセットタイプを指定するには、パイプ (|) 演算子を使用します。 有効なアセットタイプは、FORM、PDFFORM、PRINTFORM、RESOURCE、GUIDE です。</td>
+   <td>公開されたすべてのアセットから取得するアセットのタイプを指定します。複数のアセットタイプを指定するには、パイプ（|）演算子を使用します。有効なアセットタイプは FORM、PDFFORM、PRINTFORM、RESOURCE、GUIDE です。</td>
   </tr>
  </tbody>
 </table>
 
-## リクエストのサンプル {#sample-request}
+## サンプルリクエスト {#sample-request}
 
 ```json
 func : searchForms
@@ -140,7 +141,7 @@ statements: [{"name":"name","value":"*Claim.xdp","operator":"CONTAINS"},
 orderings:[{"name" :"lastModifiedDate":"order":"ASC"}]
 ```
 
-## レスポンスのサンプル {#sample-response}
+## サンプル応答 {#sample-response}
 
 ```json
 [

@@ -1,21 +1,22 @@
 ---
 title: クラシック UI へのアクセスの有効化
-description: Adobe Experience Managerでクラシック UI へのアクセスを有効にする方法を説明します。
+description: Adobe Experience Manager でクラシック UI へのアクセスを有効にする方法について説明します。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '89'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
 # クラシック UI へのアクセスの有効化{#enabling-access-to-classic-ui}
 
-AEMの多くの領域でクラシック UI と同等に達し、実際にはそれを超えるタッチ操作対応機能を使用すると、タッチ操作対応インターフェイスを介したクラシックインターフェイスへのアクセスがデフォルトで無効になりました。 次のページでは、必要に応じて、このアクセスを再度有効にする方法について説明します。
+タッチ操作対応機能はクラシック UI と同等の機能を実現しており、実際には AEM の多くの部分でクラシック UI を上回っているので、現在、タッチ操作対応インターフェイスからクラシックインターフェイスへのアクセスは、デフォルトで無効になっています。次のページでは、必要に応じて、このアクセスを再有効化する方法について説明します。
 
 * [編集者](/help/sites-administering/enable-classic-ui-editor.md)
 * [管理コンソール](/help/sites-administering/enable-classic-ui-admin.md)

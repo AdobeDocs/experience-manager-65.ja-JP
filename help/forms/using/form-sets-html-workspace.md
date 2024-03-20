@@ -1,24 +1,25 @@
 ---
 title: AEM Forms Workspace のフォームセットの使用
-description: フォームセットは、HTML5 のフォームの集まりで、エンドユーザーには 1 つのフォームのセットとして表示されます。 AEM Forms Workspace でフォームセットを使用する方法を説明します。
+description: フォームセットは HTML5 フォームのコレクションであり、エンドユーザーには 1 つのフォームセットとして提供されます。AEM Forms Workspace のフォームセットの使用方法について説明します。
 contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 docset: aem65
 exl-id: 76a8f93f-eb8a-4e68-8626-efa6dc67668f
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '344'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
 # AEM Forms Workspace のフォームセットの使用{#working-with-formsets-in-aem-forms-workspace}
 
-フォームセットは、HTML5 のフォームの集まりで、エンドユーザーには 1 つのフォームのセットとして表示されます。 エンドユーザーがフォームセットの入力を開始すると、フォームが別のフォームにシームレスに切り替わります。 その後、フォームのセットを 1 回のクリックで送信できます。 フォームセットおよびその設定方法について詳しくは、[AEM Forms のフォームセット](../../forms/using/formset-in-aem-forms.md)を参照してください。
+フォームセットは HTML5 フォームのコレクションであり、エンドユーザーには 1 つのフォームセットとして提供されます。エンドユーザーがフォームセットへの入力を開始すると、フォームセットは入力された内容をシームレスに別のフォームに移行します。フォームセットは 1 回クリックすれば送信できます。フォームセットおよびその設定方法について詳しくは、[AEM Forms のフォームセット](../../forms/using/formset-in-aem-forms.md)を参照してください。
 
-AEM Forms workspace はフォームセットをサポートしています。 フォームセットを使用すると、1 つのサービスまたはプロセスに関連する複数のフォームをグループ化して、ビジネスプロセスを自動化し、エンドユーザーに表示できます。 このシナリオでは、ユーザーはセット全体を 1 つとして入力でき、個々のフォームやプロセスをファイル化、送信、追跡する必要はありません。
+AEM Forms Workspace はフォームセットをサポートします。フォームセットでは、サービスやプロセスに関連する複数のフォームをグループ化し、ビジネス上のプロセスを自動化すると共にエンドユーザーに表示します。このシナリオでは、ユーザーはセット全体を 1 つとして記入し、個々のフォームやプロセスをファイル、送信、追跡する必要はありません。
 
 ## AEM Forms Workspace アプリケーションにおけるフォームセットのスタートポイントへの割り当て {#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}
 

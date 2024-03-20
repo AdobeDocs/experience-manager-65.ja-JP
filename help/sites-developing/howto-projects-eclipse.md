@@ -1,21 +1,22 @@
 ---
 title: Eclipse を使用して AEM プロジェクトを開発する方法
-description: このガイドでは、AEMベースのプロジェクトを開発するために Eclipse を使用する方法について説明します
+description: このガイドでは、Eclipse を使用して AEM ベースのプロジェクトを開発する方法について説明します
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '434'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
 # Eclipse を使用して AEM プロジェクトを開発する方法{#how-to-develop-aem-projects-using-eclipse}
 
-このガイドでは、AEMベースのプロジェクトを開発するために Eclipse を使用する方法について説明します。
+このガイドでは、Eclipse を使用して AEM ベースのプロジェクトを開発する方法について説明します。
 
 >[!NOTE]
 >
@@ -23,24 +24,24 @@ ht-degree: 52%
 
 ## 概要 {#overview}
 
-Eclipse でのAEM開発を開始するには、次の手順が必要です。
+Eclipse で AEM の開発を開始するには、次の手順を実行する必要があります。
 
-それぞれについては、このハウツーの残りの部分で詳しく説明します。
+各手順の詳細については、このトピックで後述します。
 
-* Eclipse 4.3(Kepler) のインストール
+* Eclipse 4.3（Kepler）のインストール
 * Maven に基づく AEM プロジェクトの設定
 * Maven POM での Eclipse 用の JSP サポートの準備
-* Maven プロジェクトを Eclipse に読み込む
+* Eclipse への Maven プロジェクトの読み込み
 
 >[!NOTE]
 >
->このガイドは、Eclipse 4.3(Kepler) とAEM 5.6.1 をベースとしています。
+>このガイドは Eclipse 4.3（Kepler）と AEM 5.6.1 を基に作成されています。
 
 ## Eclipse のインストール {#install-eclipse}
 
 [Eclipse のダウンロードページ](https://www.eclipse.org/downloads/) から「Eclipse IDE for Java EE Developers」をダウンロードします。
 
-次の手順に従って Eclipse をインストールします。 [インストール手順](https://wiki.eclipse.org/Eclipse/Installation).
+[インストール手順](https://wiki.eclipse.org/Eclipse/Installation)に従って Eclipse をインストールします。
 
 ## Maven に基づく AEM プロジェクトの設定 {#set-up-your-aem-project-based-on-maven}
 
@@ -48,17 +49,17 @@ Eclipse でのAEM開発を開始するには、次の手順が必要です。
 
 ## Eclipse 用の JSP サポートの準備 {#prepare-jsp-support-for-eclipse}
 
-Eclipse は、例えば、JSP での作業でのサポートも提供します。
+Eclipse では、JSP との連携もサポートされます。サポートされる項目の例を次に示します。
 
 * タグライブラリのオートコンプリート
-* Eclipse によって定義されたオブジェクトの認識 &lt;cq:defineobjects /> および &lt;sling:defineobjects />
+* &lt;cq:defineObjects /> と &lt;sling:defineObjects /> で定義されたオブジェクトの Eclipse での認識
 
-これが機能するための手順は次のとおりです。
+サポートを有効にするには、次の手順を実行します。
 
 1. [Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)の [JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)に記載されている説明に従います。
-1. 以下を &lt;build /> 」セクションを使用して、コンテンツモジュールの POM にアクセスできます。
+1. コンテンツモジュールの POM 内の &lt;build /> セクションに次の項目を追加します。
 
-   Eclipse の Maven サポートプラグインである m2e は maven-jspc-plugin をサポートしていません。この設定は、m2e に対し、プラグインと、一時的なコンパイル結果をクリーンアップする関連タスクを無視するように指示します。
+   Eclipse の Maven サポートプラグインである m2e は maven-jspc-plugin をサポートしていません。この設定は、プラグインおよび一時的なコンパイルの結果のクリーンアップの関連タスクを無視するように m2e に通知します。
 
    このことは問題ではありません。[JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)で説明されているように、この設定における maven-jspc-plugin は、作成プロセスの一環として JSP コンパイルの検証にのみ使用されます。Eclipse は JSP における問題を既にレポート済みであり、レポート用にこの Maven プラグインを使用することはありません。
 
@@ -112,10 +113,10 @@ Eclipse は、例えば、JSP での作業でのサポートも提供します�
    </build>
    ```
 
-### Maven プロジェクトを Eclipse に読み込む {#import-the-maven-project-into-eclipse}
+### Eclipse への Maven プロジェクトの読み込み {#import-the-maven-project-into-eclipse}
 
-1. Eclipse で、ファイル/読み込みを選択します。
-1. 読み込みダイアログで、 Maven /既存の Maven プロジェクトを選択し、「次へ」をクリックします。
+1. Eclipse で、ファイル／インポートを選択します。
+1. インポートダイアログで、Maven／既存の Maven プロジェクトを選択し、「次へ」をクリックします。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
@@ -129,4 +130,4 @@ Eclipse は、例えば、JSP での作業でのサポートも提供します�
 
    >[!NOTE]
    >
-   >次を含める場合： `/libs/foundation/global.jsp` または内の他の JSP `/libs`を使用する場合は、Eclipse がインクルージョンを解決できるように、プロジェクトにコピーする必要があります。 同時に、Maven によってコンテンツパッケージにバンドルされていないことを確認する必要があります。これをおこなう方法については、[Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
+   >`/libs/foundation/global.jsp`、または `/libs` 内の他の JSP を含める場合は、これらをプロジェクトにコピーして、Eclipse が包含を解決できるようにする必要があります。同時に、Maven によってコンテンツパッケージにバンドルされていないことを確認する必要があります。これをおこなう方法については、[Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)で説明されています。

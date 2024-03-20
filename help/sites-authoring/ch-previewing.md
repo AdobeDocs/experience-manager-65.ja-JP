@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 84%
 
 このツールバーは、1 つ以上の UI モジュールを含む一連の UI モードで構成されます。
 
-* UI モードは、ツールバーの左側に表示されるアイコンです。アイコンをクリックすると、そのアイコンに含まれる UI モジュールがツールバーに表示されます。
+* UI モードは、ツールバーの左側に表示されるアイコンです。アイコンをクリックすると、そのモードに含まれる UI モジュールがツールバーに表示されます。
 * UI モジュールは、1 つ以上の ContextHub ストアのデータを表示します。また、一部の UI モジュールでは、ストアデータを操作することもできます。
 
 ContextHub によって、いくつかの UI モードと UI モジュールがインストールされます。管理者が、異なる UI モードと UI モジュールを表示するように [ContextHub を設定](/help/sites-developing/ch-configuring.md)している場合があります。
@@ -62,6 +63,6 @@ UI モジュールは、1 つ以上の ContextHub ストアのデータをツー
 
 ### 全画面表示モード {#fullscreen-mode}
 
-ポップアップオーバーレイには、クリックしてポップアップコンテンツを展開し、ブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
+ポップアップオーバーレイには、クリックするとポップアップコンテンツを拡張してブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
 
 ![全画面](do-not-localize/chlimage_1-18.png)

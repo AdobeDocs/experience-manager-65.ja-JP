@@ -1,16 +1,17 @@
 ---
 title: Silverpop Engage との統合
-description: Adobe Experience Managerを Silverpop Engage と統合する方法を説明します。
+description: Adobe Experience Manager と Silverpop Engage を統合する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 6c4b8aaa-bda0-4066-a3fc-d91a5ab1621c
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '593'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +39,7 @@ Silverpop 設定は、**クラウドサービス**、**ツール**、**API エ�
 
 Cloud Services で Silverpop 設定の作成するには：
 
-1. AEMで、 **ツール** > **導入** > **Cloud Service**. （または `https://<hostname>:<port>/etc/cloudservices.html` に直接アクセスします。）
+1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をクリックします（または `https://<hostname>:<port>/etc/cloudservices.html` に直接アクセスします。）
 1. サードパーティのサービスで、「**Silverpop Engage**」、「**設定**」の順にクリックします。Silverpop 設定ウィンドウが開きます。
 
    >[!NOTE]
@@ -57,7 +58,7 @@ Cloud Services で Silverpop 設定の作成するには：
 
 ツールで Silverpop 設定を作成するには：
 
-1. AEMで、 **ツール** > **導入** > **Cloud Service**. または、`https://<hostname>:<port>/misadmin#/etc` にアクセスして直接移動します。
+1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をクリックします。または、`https://<hostname>:<port>/misadmin#/etc` にアクセスして直接移動します。
 1. **ツール**／**クラウドサービス設定**／**Silverpop Engage** を選択します。
 1. 「**新規**」をクリックします。
 

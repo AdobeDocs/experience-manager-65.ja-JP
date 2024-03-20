@@ -2,10 +2,12 @@
 title: Edge Delivery の概要
 description: Edge Delivery の概要
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
-source-git-commit: d2c0dea636280c28e1d5a76d1c5375f21b6eb111
+solution: Experience Manager, Experience Manager Assets
+feature: Edge Delivery Services
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '834'
-ht-degree: 89%
+ht-degree: 95%
 
 ---
 
@@ -29,7 +31,7 @@ Edge Delivery は、web サイト上のコンテンツの非常に柔軟なオ�
 
 例えば、Microsoft Word や Google Docs のコンテンツを直接使用できます。つまり、これらのソースのドキュメントを web サイト上のページにすることができます。さらに、見出し、リスト、画像、フォント要素などはすべて、当初のソースから web サイトに転送できます。新しいコンテンツは、再作成プロセスなしで即座に追加されます。
 
-Edge 配信では GitHub を使用するので、顧客は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、GoogleドキュメントまたはMicrosoft Word にコンテンツを書き込み、GitHub で CSS と JavaScript を使用してサイトの機能を開発できます。 準備が整ったら、Sidekick ブラウザー拡張機能を使用して、コンテンツの更新をプレビューおよび公開できます。
+Edge 配信では GitHub を使用するので、顧客は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、コンテンツを Google Docs または Microsoft Word で作成し、サイトの機能を GitHub の CSS と JavaScript で開発することができます。準備が整ったら、Sidekick ブラウザー拡張機能を使用して、コンテンツの更新をプレビューおよび公開できます。
 
 参考情報：
 
@@ -45,7 +47,7 @@ Edge Delivery は Adobe Experience Manager の構成要素なので、Edge Deliv
 
 ## Edge Delivery へのアクセス {#getting-access}
 
-Edge Delivery Servicesの使用を簡単に開始できます。 [はじめに - 開発者向けチュートリアル](https://www.hlx.live/developer/tutorial)に従って、作業に取りかかります。
+Edge 配信サービスの使用を開始するのは簡単です。[はじめに - 開発者向けチュートリアル](https://www.hlx.live/developer/tutorial)に従って、作業に取りかかります。
 
 ## アドビからのヘルプの入手 {#adobe-gethelp}
 
@@ -72,7 +74,7 @@ Edge Delivery Servicesの使用を簡単に開始できます。 [はじめに -
 Admin Console を使用してサポートチケットを記録する手順は次のとおりです。
 
 1. チケットのタイトルに「**Edge 配信**」を追加します。
-2. 説明に次の詳細を入力します。
+2. 説明には、次の詳細を入力します。
 
    * ライブ web サイトの URL。例：[www.mydomain.com]
    * オリジン web サイトの URL（.hlx URL）。

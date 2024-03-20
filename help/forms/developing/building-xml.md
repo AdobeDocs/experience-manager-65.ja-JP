@@ -2,16 +2,17 @@
 title: JEE Workbench 上の AEM Forms で Execute Script サービスを使用して XML データを作成する方法を教えてください。
 description: JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
 # JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成 {#using-execute-script-service-forms-jee-workbench}
 
-例えば、JEE 上のAEM Forms Process Management ワークフローには、XML 情報がプロセス内で構築され、JEE Workspace のFlexアプリケーションに送信され、システム設定に使用されたり、フォームとの間で情報を渡したりする XML が多く含まれています。 JEE 上の AEM Forms 開発者による XML の管理が必要となるインスタンスは多くありますが、そのうちの多くで、XML を JEE プロセス上の AEM Forms で管理する必要があります。
+JEE プロセス管理ワークフロー上の AEM Forms に関連している XML は数多くあります。例えば、XML 情報をプロセス内で構築したり、JEE ワークスペース上の AEM Forms の Flex アプリケーションに送信したり、システム設定に使用したりできますし、フォームとの間で情報を渡す場合に使用することができます。JEE 上の AEM Forms 開発者による XML の管理が必要となるインスタンスは多くありますが、そのうちの多くで、XML を JEE プロセス上の AEM Forms で管理する必要があります。
 
 単純な XML 設定を扱う場合、`Set Value` サービスを使用することができます。これは JEE サービス上のデフォルトの AEM Forms です。プロセスデータモデルの 1 つ以上のデータ項目の値を設定します。単純な条件ロジックである「もし～なら～である」という形式のシナリオの場合、このサービスが適している可能性があります。
 
@@ -25,7 +26,7 @@ JEE Workbench の AEM Forms で使用可能な JEE サービス上の標準の A
 
 アプリケーションやプロセス全体の作成は、このチュートリアルの対象外ですが、この手順のために、「DemoApplication02」という名前のアプリケーションを作成しました。アプリケーションが既に作成されている場合は、このアプリケーションでプロセスを作成して executeScript サービスを呼び出す必要があります。`Execute Script` サービスが含まれるアプリケーションにプロセスを追加するには、以下の手順に従います。
 
-1. アプリケーションを右クリックし、「 」を選択します。 **[!UICONTROL 新規]**. **[!UICONTROL 新規]**&#x200B;スライドアウトメニューで「**[!UICONTROL プロセス]**」を選択します。プロセスに名前を付け、必要に応じて説明を追加し、このプロセスを表すアイコンを選択してください。このチュートリアル用に、プロセスを作成し、`executeScriptDemoProcess`という名前を付けました。
+1. アプリケーションを右クリックし、「**[!UICONTROL 新規]**」を選択します。**[!UICONTROL 新規]**&#x200B;スライドアウトメニューで「**[!UICONTROL プロセス]**」を選択します。プロセスに名前を付け、必要に応じて説明を追加し、このプロセスを表すアイコンを選択してください。このチュートリアル用に、プロセスを作成し、`executeScriptDemoProcess`という名前を付けました。
 1. スタートポイントを定義するか、後でスタートポイントを追加するよう指定してください。
 1. これでプロセスが作成され、 [!UICONTROL プロセスデザイン]ウィンドウで自動的に開きます。プロセスデザインウィンドウの上部にあるアクティビティピッカーアイコンをクリックし、新しいアクティビティをスイムレーンにドラッグします。この時点で、[!UICONTROL アクティビティを定義ウィンドウ]が表示されます（下図を参照）。
    ![アクティビティを定義](assets/define-activity.jpg)
@@ -105,7 +106,7 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 **反復ループを使用した XML へのノードの追加**
 
-ノードは、プロセス内の既存の XML 変数にも追加できます。変数 node は、作成された XML オブジェクトを含みます。
+ノードは、プロセス内の既存の XML 変数にも追加できます。変数ノードには、作成した XML オブジェクトが含まれます。
 
 ```xml
 Document document = patExecContext.getProcessDataValue("/process_data/node");

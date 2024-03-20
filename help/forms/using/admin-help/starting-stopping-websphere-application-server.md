@@ -1,21 +1,22 @@
 ---
 title: WebSphere Application Server の起動と停止
-description: 一部の手順では、AEM forms 製品をデプロイする WebSphere のインスタンスを停止または開始する必要があります。 このドキュメントでは、WebSphere Application Server を起動および停止する方法について説明します。
+description: 一部の手順では、AEM Forms 製品をデプロイする WebSphere のインスタンスを停止または起動する必要があります。このドキュメントでは、WebSphere Application Server の起動および停止方法について説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1a4e8f20-0644-4c96-9f52-f7a59521eac9
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
 # WebSphere Application Server の起動と停止 {#starting-and-stopping-websphere-application-server}
 
-一部の手順では、AEM forms 製品をデプロイする WebSphere のインスタンスを停止または開始する必要があります。 アプリケーションサーバーが起動しているかどうかがわからない場合は、まず WebSphere Application Server のステータスを表示できます。
+一部の手順では、AEM Forms 製品をデプロイする WebSphere のインスタンスを停止または起動する必要があります。アプリケーションサーバーが起動しているかどうかわからない場合は、まず WebSphere Application Server のステータスを表示します。
 
 ## WebSphere Application Server のステータスの表示 {#view-the-status-of-websphere-application-server}
 

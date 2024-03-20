@@ -1,21 +1,22 @@
 ---
 title: AEM Forms ワークフローへのログイン
-description: AEM Forms Workflow の問題をデバッグし、AEM Formsワークフローのデバッグログを有効にしてログを表示する方法について説明します。
+description: AEM Forms Workflow の問題をデバッグし、AEM Forms Workflow のデバッグログを有効にしてログを表示する方法について説明します。
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '292'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
 # AEM Forms ワークフローへのログイン{#logging-in-aem-forms-workflows}
 
-Forms Workflow手順では、ワークフローに関する問題をデバッグするための詳細なログが便利に提供されます。 ログを表示するには AEM Formsワークフローのデバッグログを有効にします。
+Forms Workflow の手順では、ワークフローに関する問題をデバッグするのに便利な詳細なログを提供しています。ログを表示するには AEM Formsワークフローのデバッグログを有効にします。
 
 デフォルトでは、すべてのログ情報は */crx-repository/logs/* ディレクトリに保存されている **error.log** ファイルにあります。
 
@@ -66,7 +67,7 @@ Forms ワークフローのデバッグログには、次の内容が含まれ�
 
 ログを使用して次の内容を評価します。
 
-* 正しいAdobe Sign設定を使用しています。
+* 正しい Adobe Sign 設定を使用していること。
 * 契約を正常に作成したら Adobe Sign サービスが終了すること。
 * 「ドキュメントに署名」手順が成功メッセージとともに終了すること。
 
@@ -74,19 +75,19 @@ Forms ワークフローのデバッグログには、次の内容が含まれ�
 
 ## AEM Forms ワークフローのデバッグログの有効化 {#enable-debug-logging-for-aem-forms-workflows}
 
-AEM Formsワークフローのデバッグログを有効にするには、次の操作を行います。
+AEM Forms Workflow のデバッグログを有効にするには、次の手順を実行します。
 
 1. AEM web コンソール設定マネージャーに移動します。
 
    https://&#39;[server]:[port]&#39;/system/console/configMgr
 
 1. **[!UICONTROL Sling]**／**[!UICONTROL ログのサポート]**&#x200B;を選択します。
-1. 選択 **[!UICONTROL 新しいロガーを追加します。]**
+1. 「**[!UICONTROL 新規ロガーを追加]**」を選択します。
 1. **[!UICONTROL デバッグ]**&#x200B;を&#x200B;**[!UICONTROL ログレベル]**&#x200B;として選択します。
 1. ログファイルの場所を指定します。ログファイルのデフォルトの場所は *logs\error.log* です。
 1. **[!UICONTROL ロガー]**&#x200B;列でパッケージの名前を **com.adobe.granite.workflow.core** として指定します。
 
-   これらの手順を実行すると、**com.adobe.granite.workflow.core** パッケージのデバッグログを格納できるようになります。選択 **[!UICONTROL +]** 次のパッケージ名をリストに追加します。
+   これらの手順を実行すると、**com.adobe.granite.workflow.core** パッケージのデバッグログを格納できるようになります。**[!UICONTROL +]** を選択して次のパッケージ名をリストに追加します。
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

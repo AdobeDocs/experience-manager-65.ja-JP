@@ -1,44 +1,45 @@
 ---
 title: CSRF 対策フレームワーク
-description: このフレームワークでは、トークンを使用して、クライアントの要求が正当なものであることを保証します
+description: このフレームワークでは、トークンを利用して、クライアントのリクエストが正当なものであることを保証します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: 941e5d7574d31622f50e50e717c21cd2eba2e602
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 24%
+source-wordcount: '235'
+ht-degree: 100%
 
 ---
 
 # CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
-Apache Sling Referrer Filter に加えて、Adobeは、この種の攻撃から保護する新しい CSRF 保護フレームワークも提供します。
+アドビでは、Apache Sling リファラーフィルター以外にも、この種の攻撃を防ぐための新しい CSRF 対策フレームワークを用意しています。
 
-このフレームワークでは、トークンを使用して、クライアントの要求が正当なものであることを保証します。 トークンは、フォームがクライアントに送信されるときに生成され、フォームがサーバーに送り返されるときに検証されます。
+このフレームワークでは、トークンを利用して、クライアントのリクエストが正当なものであることを保証します。トークンは、フォームがクライアントに送信されるときに生成され、フォームがサーバーに返されるときに検証されます。
 
 >[!NOTE]
 >
->匿名ユーザーのパブリッシュインスタンスにはトークンがありません。
+>パブリッシュインスタンスでは、匿名ユーザーのトークンはありません。
 
 ## 要件 {#requirements}
 
 ### 依存関係 {#dependencies}
 
-に依存する任意のコンポーネント `granite.jquery` 依存関係は、CSRF 保護フレームワークから自動的にメリットを得ることができます。 そうでない場合は、任意のコンポーネントに対して、依存関係を宣言する必要があります。 `granite.csrf.standalone` このフレームワークを使用する前に、
+`granite.jquery` の依存関係を使用するコンポーネントは、CSRF 対策フレームワークのメリットを自動的に活用できます。いずれかのコンポーネントがこのメリットを活用できない場合は、フレームワークを使用する前に `granite.csrf.standalone` に対して依存関係を宣言する必要があります。
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-トークンを使用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケートする必要があります。 詳しくは、[HMAC キーのレプリケーション](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key)を参照してください。
+トークンを利用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケートする必要があります。詳しくは、[HMAC キーのレプリケーション](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key)を参照してください。
 
 >[!NOTE]
 >
->必ず必要な [Dispatcher 設定の変更](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html) CSRF 保護フレームワークを使用する場合。
+>CSRF 対策フレームワークを使用するには、必要な[Dispatcher 設定の変更](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html)を行ってください。
 
 >[!NOTE]
 >
->Web アプリケーションでマニフェストキャッシュを使用する場合は、必ず「**&amp;ast;**」をマニフェストに追加して、トークンが CSRF トークン生成呼び出しをオフラインで受け取らないようにします。 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
+>Web アプリケーションでマニフェストキャッシュを使用する場合、トークンがオフラインで CSRF トークンの生成を呼び出さないように、「**&amp;ast;**」をマニフェストに追加してください。詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
 >
->CSRF 攻撃とその対策について詳しくは、[クロスサイトリクエストフォージェリに関する OWASP のページ](https://owasp.org/www-community/attacks/csrf)を参照してください。
+CSRF 攻撃とその対策について詳しくは、[クロスサイトリクエストフォージェリに関する OWASP のページ](https://owasp.org/www-community/attacks/csrf)を参照してください。

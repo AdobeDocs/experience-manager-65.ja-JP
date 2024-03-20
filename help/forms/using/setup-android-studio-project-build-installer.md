@@ -1,31 +1,32 @@
 ---
-title: Android&trade; studio プロジェクトを設定し、Android&trade；アプリを構築します。
-description: Android&trade; Studio プロジェクトを設定し、Adobe Experience Manager (AEM) Formsアプリ用のインストーラーを構築する手順
+title: Android&trade; Studio プロジェクトの設定と Android&trade; アプリケーションの作成
+description: Android&trade; Studio プロジェクトの設定手順と Adobe Experience Manager（AEM）Forms アプリケーションのインストーラーの作成手順
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: forms-app
 exl-id: 47d6af00-34d8-4e5d-8117-86fc1b6f58cb
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
-# Android™ Studio プロジェクトを設定し、Android™アプリを構築します。 {#set-up-the-android-studio-project-and-build-the-android-app}
+# Android™ Studio プロジェクトの設定と Android™ アプリケーションの作成 {#set-up-the-android-studio-project-and-build-the-android-app}
 
-ここでは、バージョン 6.3.1.1 移行の AEM Forms アプリケーションを作成する手順について説明します。AEM Forms App 6.3 のソースコードからアプリを構築する場合は、 [Eclipse プロジェクトの設定と Android™アプリの構築](/help/forms/using/setup-eclipse-project-build-installer.md).
+ここでは、バージョン 6.3.1.1 移行の AEM Forms アプリケーションを作成する手順について説明します。AEM Forms App 6.3 のソースコードを使用してアプリケーションを作成する手順については、[Eclipse プロジェクトの設定と Android™ アプリケーションの作成](/help/forms/using/setup-eclipse-project-build-installer.md)を参照してください。
 
-AEM Formsは、AEM Formsアプリの完全なソースコードを提供します。 このソースには、カスタムの AEM Forms アプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ `adobe-lc-mobileworkspace-src-<version>.zip` は、ソフトウェア配布の `adobe-aemfd-forms-app-src-pkg-<version>.zip` パッケージの一部です。
+AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムの AEM Forms アプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ `adobe-lc-mobileworkspace-src-<version>.zip` は、ソフトウェア配布の `adobe-aemfd-forms-app-src-pkg-<version>.zip` パッケージの一部です。
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行してください。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
-1. 選択 **[!UICONTROL Adobe Experience Manager]** は、ヘッダーメニューで使用できます。
+1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」を選択します。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに適したパッケージ名を選択し、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をクリックし、次を選択します。 **[!UICONTROL ダウンロード]**.
+1. お使いのオペレーティングシステムに適した Forms アドオンパッケージの名前を選択し、「**[!UICONTROL EULA 利用条件に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」を選択します。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して、**[!UICONTROL インストール]**&#x200B;をクリックします。
 
@@ -39,33 +40,33 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
 
 ## 標準的な AEM Forms アプリケーションの構築 {#set-up-the-xcode-project}
 
-1. 次の手順を実行して、Android™ Studio でプロジェクトを設定し、署名 ID を指定します。
+1. Android™ Studio でプロジェクトを設定し、署名 ID を指定するには、次の手順に従います。
 
-   Android™ Studio がインストールおよび設定されているマシンにログインします。
+   設定済みの Android™ Studio がインストールされているマシンにログインします。
 
 1. ダウンロードした `adobe-lc-mobileworkspace-src-<version>.zip` アーカイブを次の場所にコピーします。
 
-   **Macユーザー向け**: `[User_Home]/Projects`
+   **Mac ユーザーの場合**：`[User_Home]/Projects`
 
-   **Windows®ユーザーの場合**：`%HOMEPATH%\Projects`
+   **Windows® ユーザーの場合**：`%HOMEPATH%\Projects`
 
    >[!NOTE]
    >
-   >Windows®の場合は、Android™プロジェクトをシステムドライブに保持することをお勧めします。
+   >Windows® の場合は、Android™ プロジェクトをシステムドライブに保存することをお勧めします。
 
 1. アーカイブを次のディレクトリに展開します。
 
-   **Macユーザー向け**: `[User_Home]/Projects/[your-project]`
+   **Mac ユーザーの場合**：`[User_Home]/Projects/[your-project]`
 
-   **Windows®ユーザーの場合**：`%HOMEPATH%\Projects\[your-project]`
+   **Windows® ユーザーの場合**：`%HOMEPATH%\Projects\[your-project]`
 
    >[!NOTE]
    >
-   プロジェクトを Android™ Studio に読み込む前に、抽出した Android プロジェクトをシステムドライブに保持することをお勧めします。
+   >抽出した Android プロジェクトを Android™ Studio に読み込む前に、そのプロジェクトをシステムドライブに保存することをお勧めします。
 
 1. Android™ Studio を起動します。
 
-   **Macユーザー向け**：を更新します。 `local.properties` ファイルが `[User_Home]/Projects/[your-project]/android` フォルダーとポイント `sdk.dir` 変数を `SDK` の場所を指定します。
+   **Mac ユーザーの場合**：`[User_Home]/Projects/[your-project]/android` フォルダー内の `local.properties` ファイルを更新用に開き、デスクトップ上の `SDK` の場所を指すように `sdk.dir` 変数を編集します。
 
    **Windows® ユーザーの場合**：`%HOMEPATH%\Projects\[your-project]\android` フォルダー内の `local.properties` ファイルを更新用に開き、デスクトップ上の `SDK` の場所を指すように `sdk.dir` 変数を編集します。
 
@@ -82,7 +83,7 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
 
    **Windows® ユーザーの場合：** %HOMEPATH%¥Projects¥MobileWorkspace¥src¥android
 
-1. プロジェクトが読み込まれると、Android™プラグイン Gradle を更新するためのオプションがポップアップ表示されます。 必要に応じて、適切なボタンをクリックします。
+1. プロジェクトの読み込みが完了すると、ポップアップが表示されます。このポップアップには、Android™ プラグインの Gradle を更新するためのオプションが表示されます。要件に応じて、適切なボタンをクリックします。
 
    ![dontremindmeagainforthisproject](assets/dontremindmeagainforthisproject.png)
 
@@ -98,8 +99,8 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
 
 ### Android™ Debug Bridge を使用する {#andriod-debug-bridge}
 
-Android™デバイスにアプリケーションをインストールするには、 [Android™ Debug Bridge](https://developer.android.com/tools/adb) 次のコマンドを使用します。
+[Android™ Debug Bridge](https://developer.android.com/tools/adb) で以下のコマンドを使用して、アプリケーションを Android™ デバイスにインストールすることができます。
 
-**Macユーザー向け**: `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+**Mac ユーザーの場合**：`adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
-**Windows®ユーザーの場合**：`adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+**Windows® ユーザーの場合**：`adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`

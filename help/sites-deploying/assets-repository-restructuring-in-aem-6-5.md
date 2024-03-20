@@ -6,9 +6,10 @@ content-type: reference
 topic-tags: repo_restructuring
 feature: Upgrading
 exl-id: 28ddd23c-5907-4356-af56-ebc7589a2b5d
-source-git-commit: b66ec42c35b5b60804015d340b8194bbd6ef3e28
-workflow-type: ht
-source-wordcount: '1041'
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+workflow-type: tm+mt
+source-wordcount: '1047'
 ht-degree: 100%
 
 ---

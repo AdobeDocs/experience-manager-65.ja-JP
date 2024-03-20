@@ -6,16 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '404'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 # カスタムクラウドサービスの作成{#creating-a-custom-cloud-service}
 
-デフォルトの Cloud Services を、カスタムクラウドサービスタイプで拡張することができます。これにより、カスタムマークアップを構造的な方法でページに挿入できます。これは主に、Google Analytics、Chartbeat など、サードパーティの分析プロバイダーに使用されます。 Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
+デフォルトの Cloud Services を、カスタムクラウドサービスタイプで拡張することができます。これにより、カスタムマークアップを構造的な方法でページに挿入できます。この手法は主に、Google Analytics や Chartbeat などのサードパーティの分析プロバイダーで使用されます。Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
 
 >[!NOTE]
 >
@@ -41,7 +42,7 @@ ht-degree: 93%
    * **名前**：templates
    * **タイプ**：`sling:Folder`
 
-1. 右クリック `/apps/acs/analytics/components`. 「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
+1. 「`/apps/acs/analytics/components`」を右クリックします。「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
 
    * **ラベル**： `googleanalyticspage`
    * **タイトル**：`Google Analytics Page`
@@ -208,6 +209,6 @@ ht-degree: 93%
 
    「**Google Analytics 設定**」を選択し、「**作成**」をクリックします。
 
-1. を入力します。 **アカウント ID**&#x200B;例： `AA-11111111-1`. 「**OK**」をクリックします。
+1. **アカウント ID**（例：`AA-11111111-1`）を入力します。「**OK**」をクリックします。
 1. ページに移動し、「**クラウドサービス**」タブで、新たに作成された設定をページプロパティに追加します。
 1. このページにカスタムマークアップが追加されます。

@@ -8,10 +8,11 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: 886edbf0e98f5cdee176aaa0a7dffcf18b1a7cc2
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 81%
+ht-degree: 88%
 
 ---
 
@@ -53,14 +54,14 @@ Dynamic Media では、次の web ブラウザーとオペレーティングシ�
 * Safari 8 と iOS 8.4
 * Safari 8 と OS X 10.10 Yosemite
 
-## Secure Socket Layer 2.0 および 3.0 と Transport Layer Security 1.0 および 1.1 のサポートの終了 {#tls}
+## Secure Socket Layer 2.0 および 3.0 と Transport Layer Security 1.0 および 1.1 のサポート終了 {#tls}
 
 <!-- CQDOC-19433 (original ticket)
 and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
 
 2024年4月30日（PT）に、Adobe Dynamic Media は以下のサポートを終了します。
 
-* SSL (Secure Socket Layer) 2.0
+* SSL（Secure Socket Layer）2.0
 * SSL 3.0
 * TLS（Transport Layer Security）1.0 および 1.1
 * TLS 1.2 での以下の脆弱な暗号：

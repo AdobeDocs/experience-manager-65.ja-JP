@@ -3,13 +3,14 @@ title: "[!DNL Assets] HTTP API."
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 role: Developer
-feature: APIs,Assets HTTP API,Developer Tools
+feature: Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1775'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +30,7 @@ API にアクセスするには、次の手順を実行します。
 1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
 1. `https://[hostname]:[server]/api/assets.json` への [!DNL Assets] サービスリンクをクリックします。
 
-API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションで、PDFファイルなどでは使用できない場合があります。 詳細な分析やアクションを行う場合は、応答コードを利用します。
+API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションを行う場合は、応答コードを利用します。
 
 [!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、[!DNL Assets] Web インターフェイスでも HTTP API でも使用できません。[!UICONTROL オンタイム]が未来の場合、または[!UICONTROL オフタイム]が過去の場合、API は 404 エラーメッセージを返します。
 
@@ -124,7 +125,7 @@ Experience Manager では、アセットに次の要素が含まれています�
 
 **応答**：返されるエンティティのクラスはアセットまたはフォルダーです。含まれるエンティティのプロパティは、各エンティティの完全なプロパティセットのサブセットです。エンティティのすべての表現を取得するために、クライアントはリンクで参照される URL のコンテンツを `self` の `rel` で取得する必要があります。
 
-## フォルダーの作成 {#create-a-folder}
+## フォルダーを作成する {#create-a-folder}
 
 指定されたパスに新しい `sling`:`OrderedFolder` を作成します。ノード名の代わりに「`*`」が指定されている場合、サーブレットパラメーター名がノード名として使用されます。リクエストデータとして受け入れられるのは、新しいフォルダーの Siren 表現か、`application/www-form-urlencoded` または `multipart`/`form`-`data` としてエンコードされた名前と値のペアのセットで、HTML フォームから直接フォルダーを作成するのに役立ちます。さらに、フォルダーのプロパティを URL クエリパラメーターとして指定できます。
 
@@ -211,7 +212,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 ## アセットレンディションの作成 {#create-an-asset-rendition}
 
-アセットのアセットレンディションの作成 リクエストパラメーター名が指定されない場合、ファイル名がレンディション名として使用されます。
+アセットのアセットレンディションを作成します。リクエストパラメーター名が指定されない場合、ファイル名がレンディション名として使用されます。
 
 **パラメーター**：パラメーターは `name`（レンディションの名前）と `file`（ファイル参照）です。
 

@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '364'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +60,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
 
-JEE 上のAEM 6.5.18.0 Formsには、次の 2 種類のインストーラーが用意されています。 [完全インストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) および [パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja).
+AEM 6.5.18.0 Forms on JEE には、[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)と[パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の 2 種類のインストーラーが用意されています。
 
 **完全なインストーラー**：完全なインストーラーを使用すると、新しい AEM Forms インスタンスを設定したり、AEM 6.5.x.x Forms on JEE から AEM 6.5.18.0 Forms on JEE へのアップグレードを実行したりすることができます。
 
@@ -69,7 +70,7 @@ JEE 上のAEM 6.5.18.0 Formsには、次の 2 種類のインストーラーが�
 
 ![完全なインストーラーとパッチインストーラー](/help/forms/using/assets/full-and-patch-installer.png)
 
-詳しくは、 [AEM 6.5 Forms Service Pack のインストール手順](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja) JEE 環境用の最新の Service Pack をインストールする記事です。
+JEE 環境の最新のサービスパックをインストールするには、[AEM 6.5 Forms サービスパックのインストール手順](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)の記事を参照してください。
 
 <!--
 [Work in Progress]

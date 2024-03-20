@@ -7,10 +7,11 @@ topic-tags: page-authoring
 content-type: reference
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 81%
 >
 >ブラウザーのダウンロード機能（およびデフォルトのダウンロード先）が使用されます。
 
-**CSV 書き出しを作成**&#x200B;ウィザードでは、以下を選択できます。
+**CSV の書き出しファイルを作成**&#x200B;ウィザードでは、次の要素を選択できます。
 
 * 書き出すプロパティ
    * メタデータ
@@ -51,13 +52,13 @@ ht-degree: 81%
 
 ![etc-01](assets/etc-01.png)
 
-作成 **CSV レポート** オプションは、 **Sites** コンソール（リスト表示）：これは、 **作成** ドロップダウンメニュー：
+「**CSV レポート**&#x200B;の作成」オプションは、**Sites** コンソールをリストビューで参照するときに使用できる、**作成**&#x200B;ドロップダウンメニューのオプションです。
 
 ![etc-02](assets/etc-02.png)
 
 CSV の書き出しファイルを作成するには、次の手順を実行します。
 
-1. を開きます。 **Sites** コンソールで、必要に応じて必要な場所に移動します。
+1. **Sites** コンソールを開き、必要に応じて必要な場所まで移動します。
 1. ツールバーの「**作成**」をクリックし、「**CSV レポート**」を選択してウィザードを開きます。
 
    ![etc-03](assets/etc-03.png)

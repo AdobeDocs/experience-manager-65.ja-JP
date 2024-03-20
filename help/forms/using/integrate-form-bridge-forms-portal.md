@@ -7,10 +7,11 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: HTML5 Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +21,7 @@ FormBridge は、フォームの操作を可能にする HTML5 forms ブリッ�
 
 FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定し、フォームを送信できます。例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
 
-既存のHTMLアプリケーションは、FormBridge API を使用してフォームを操作し、HTMLページに埋め込むことができます。 次の手順で、Form Bridge API を使用してフィールドの値を設定できます。
+既存の HTML アプリケーションは、FormBridge API を使用してフォームを操作し、HTML ページに埋め込むことができます。次の手順で、Form Bridge API を使用してフィールドの値を設定できます。
 
 ## HTML5 フォームと web ページの統合 {#integrating-html-forms-to-a-web-page}
 
@@ -30,7 +31,7 @@ FormBridge API を使用して、HTML ページからフォームフィールド
    1. 管理者の資格情報でログインします。
    1. プロファイルを作成するか、既存のプロファイルを選択します。
 
-      プロファイルの作成方法について詳しくは、 [プロファイルの作成](/help/forms/using/custom-profile.md).
+      プロファイルの作成方法について詳しくは、[プロファイルの作成](/help/forms/using/custom-profile.md)を参照してください。
 
 1. **HTML プロファイルを変更**
 

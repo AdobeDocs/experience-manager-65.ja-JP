@@ -4,10 +4,11 @@ description: カスタムテーマの作成、個別コンポーネントのス�
 topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: a361c194c238f0f2c999abfd77ca85e7697cb7bf
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2038'
-ht-degree: 73%
+ht-degree: 88%
 
 ---
 
@@ -53,7 +54,7 @@ ht-degree: 73%
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
 1. **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;のプロパティを開きます。プロパティブラウザーで、**[!UICONTROL 基本]**／**[!UICONTROL アダプティブフォームのテーマ]**&#x200B;に移動します。すべての初期設定済みテーマとカスタムテーマが、「**[!UICONTROL アダプティブフォームのテーマ]**」フィールドに表示されます。デフォルトではキャンバステーマが適用されます。
-1. 「**[!UICONTROL アダプティブフォームのテーマ]**」フィールドでテーマを選択します（**調査のテーマ**&#x200B;など）。選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 選択したテーマを適用できます。
+1. 「**[!UICONTROL アダプティブフォームのテーマ]**」フィールドでテーマを選択します（**調査のテーマ**&#x200B;など）。![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) を選択すると、選択したテーマを適用できます。
 
    ![デフォルトのテーマを使用したアダプティブフォーム](assets/default-adaptive-form.png)
 
@@ -75,17 +76,17 @@ ht-degree: 73%
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. でロゴイメージを選択 [!UICONTROL ヘッダー] コンポーネントと選択 ![cmppr](assets/cmppr.png) **[!UICONTROL プロパティ]**. Adobe Analytics の [!UICONTROL 画像] プロパティの上にマウスポインターを置き、「X」を選択して既存のロゴイメージを削除します。
-   1. 選択 **[!UICONTROL アップロード]**、logo.png を選択し、「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) をクリックして変更を保存します。 この画像は「[事前準備](/help/forms/using/style-your-adaptive-form.md#before-you-start)」セクションでダウンロードした画像です。
-   1. ヘッダーテキストを選択します。 `We.Retail`をクリックし、次を選択します。 ![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL 編集]**. ヘッダーテキストを `we retail` に変更します。太字書式を `we retail` の `we` にのみ適用します。
+   1. [!UICONTROL ヘッダー]コンポーネントでロゴの画像を選択し、「![cmppr](assets/cmppr.png) **[!UICONTROL プロパティ]**」をタップします。[!UICONTROL 画像]のプロパティで X を選択し、既存のロゴの画像を削除します。
+   1. 「**[!UICONTROL アップロード]**」を選択して、logo.png を選択し、![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) を選択して変更を保存します。この画像は[事前準備](/help/forms/using/style-your-adaptive-form.md#before-you-start)の節でダウンロードした画像です。
+   1. ヘッダーテキスト `We.Retail` を選択してから、「![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL 編集]**」を選択します。ヘッダーテキストを `we retail` に変更します。太字書式を `we retail` の `we` にのみ適用します。
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
 1. タイトルを削除してプレースホルダーテキストを追加します。
 
-   1. 「顧客 ID 」フィールドを選択し、「 」を選択します。 ![cmppr](assets/cmppr.png) プロパティ。
+   1. 「顧客 ID」フィールドを選択し、「![cmppr](assets/cmppr.png) プロパティ」を選択します。
    1. 「**[!UICONTROL タイトル]**」フィールドの内容を「**[!UICONTROL プレースホルダーテキスト]**」フィールドにコピーします。
-   1. コンテンツを削除する **[!UICONTROL タイトル]** 「 」フィールドで「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. 「**[!UICONTROL タイトル]**」フィールドのコンテンツを削除して、![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) を選択します。
    1. フォーム内のすべてのテキストボックス、数値ボックス、メールフィールドで、上記の 3 つの手順を繰り返します。
 
       ![updated-adaptive-form](assets/updated-adaptive-form.png)
@@ -101,16 +102,16 @@ ht-degree: 73%
 ### テーマの作成 {#create-a-theme}
 
 1. AEM オーサーインスタンスにログインして、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL Forms]**／**[!UICONTROL テーマ]**&#x200B;に移動します。デフォルトの URL は [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes) です。 
-1. 選択 **[!UICONTROL 作成]** を選択し、 **[!UICONTROL テーマ]**. テーマの作成が必要なフィールドを含む「[!UICONTROL テーマを作成]」ページが表示されます。「**[!UICONTROL タイトル]**」フィールドと「**[!UICONTROL 名前]**」フィールドは入力必須です。
+1. 「**[!UICONTROL 作成]**」を選択し、「**[!UICONTROL テーマ]**」を選択します。テーマの作成が必要なフィールドを含む「[!UICONTROL テーマを作成]」ページが表示されます。「**[!UICONTROL タイトル]**」フィールドと「**[!UICONTROL 名前]**」フィールドは入力必須です。
 
    * **タイトル：**&#x200B;テーマのタイトルを指定します。（**グローバルテーマ**&#x200B;など）。タイトルはテーマのリストから目的のテーマを見つけるのに役立ちます
    * **名前：**&#x200B;テーマの名前を指定します。（**グローバルテーマなど）。**&#x200B;指定された名前のノードがリポジトリーに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用できます。無効な入力は、すべてハイフンに置き換えられます。
 
-1. 「**[!UICONTROL 作成]**」を選択します。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。選択 **[!UICONTROL 開く]** をクリックして、新しく作成したテーマを新しいタブで開きます。 テーマエディターでテーマが開きます。テーマエディターでは、スタイル設定に AEM に付属している標準提供のアダプティブフォームを使用します。[!DNL Forms]
+1. 「**[!UICONTROL 作成]**」を選択します。テーマが作成され、フォームを編集用に開くためのダイアログが表示されます。「**[!UICONTROL 開く]**」を選択し、新規作成されたテーマを新しいタブで開きます。テーマエディターでテーマが開きます。テーマエディターでは、スタイル設定に AEM に付属している標準提供のアダプティブフォームを使用します。[!DNL Forms]
 
    テーマエディター UI の使用について詳しくは、[テーマエディターについて](/help/forms/using/themes.md#aboutthethemeeditor)を参照してください。
 
-1. 選択 **[!UICONTROL テーマオプション]** ![theme-options](assets/theme-options.png) > **[!UICONTROL 設定]**. Adobe Analytics の **[!UICONTROL フォームをプレビュー]** フィールドで、 **shipping-address-add-update-form** アダプティブフォーム、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)を選択します。 **[!UICONTROL 保存]**. テーマエディターで、デフォルトのアダプティブフォームではなく独自のアダプティブフォームを使用できるようになります。選択 **[!UICONTROL キャンセル]** をクリックして、テーマエディターに戻ります。
+1. **[!UICONTROL テーマオプション]** ![theme-options](assets/theme-options.png)／**[!UICONTROL 設定]**&#x200B;を選択します。「**[!UICONTROL フォームのプレビュー]**」フィールドで **shipping-address-add-update-form** アダプティブフォームを選択し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」、「**[!UICONTROL 保存]**」の順に選択します。テーマエディターで、デフォルトのアダプティブフォームではなく独自のアダプティブフォームを使用できるようになります。テーマエディターに戻るには、「**[!UICONTROL キャンセル]**」を選択します。
 
    ![カスタムテーマ](assets/custom-theme.png)
 
@@ -124,9 +125,9 @@ ht-degree: 73%
 
 アダプティブフォームでは、ヘッダーとフッターを使用して一貫性のある外観を独自に作成できます。通常、ヘッダーには組織のロゴと名前が含まれ、フッターには著作権情報が含まれます。これらは組織の複数のフォーム間で統一されます。shipping-address-add-update-form アダプティブフォームのヘッダーとフッターのスタイルを設定するには、次の手順を実行します。
 
-1. セレクターパネルで&#x200B;**[!UICONTROL ヘッダー]**／**[!UICONTROL テキスト]**&#x200B;オプションに移動します。セレクターパネルはテーマエディターの左側にあります。パネルが表示されない場合は、「 ![toggle-side-panel](assets/toggle-side-panel.png) サイドパネルを切り替えます。
+1. セレクターパネルで&#x200B;**[!UICONTROL ヘッダー]**／**[!UICONTROL テキスト]**&#x200B;オプションに移動します。セレクターパネルはテーマエディターの左側にあります。パネルが表示されない場合は、「![サイドパネルを切り替え](assets/toggle-side-panel.png)」を選択します。
 
-1. 次のプロパティを **[!UICONTROL テキスト]** アコーディオンと選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 「**[!UICONTROL テキスト]**」アコーディオンで以下のプロパティを設定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    | プロパティ | 値 |
    |---|---|
@@ -134,10 +135,10 @@ ht-degree: 73%
    | フォントカラー | FFFFFF |
    | フォントサイズ | 54 px |
 
-1. を選択します。 [!UICONTROL ヘッダー] ウィジェットと選択 **[!UICONTROL ヘッダー]**. ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。を展開します。 **[!UICONTROL Dimensionと位置]** アコーディオン、 **[!UICONTROL 高さ]** から `120px`をクリックし、次を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. [!UICONTROL ヘッダー]ウィジェットを選択し、「**[!UICONTROL ヘッダー]**」を選択します。ヘッダーウィジェットのスタイルを設定するオプションが左側に表示されます。「**[!UICONTROL 寸法と位置]**」アコーディオンを展開し、「**[!UICONTROL 高さ]** 」を `120px` に設定して、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 1. ヘッダーウィジェットの「**[!UICONTROL 背景]**」アコーディオンを展開し、「**[!UICONTROL 背景色]**」を「`F6921E.`」に設定します。
 
-   カーソルを合わせる **[!UICONTROL 画像とグラデーション]** > **[!UICONTROL +追加]**&#x200B;を選択します。 **[!UICONTROL 画像]**. 次のプロパティを設定し、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   **[!UICONTROL 画像とグラデーション]**／**[!UICONTROL + 追加]**&#x200B;にポインタを合わせ、「**[!UICONTROL 画像]**」を選択します。以下のプロパティを設定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    | プロパティ | 値 |
    |---|---|
@@ -145,7 +146,7 @@ ht-degree: 73%
    | 位置 | 右下 |
    | タイリング | 繰り返しなし |
 
-1. テーマエディターで、ヘッダーのロゴを選択し、「 」をクリックします。 **[!UICONTROL ヘッダーロゴ]**. 「Dimensionと位置」アコーディオンを展開し、次のプロパティを設定して、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. テーマエディターで、ヘッダーのロゴを選択し、「**[!UICONTROL ヘッダーロゴ]**」を選択します。「寸法と位置」アコーディオンを展開し、次のプロパティを設定して、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    <table> 
     <tbody> 
@@ -160,7 +161,7 @@ ht-degree: 73%
         <li>上：1.5 rem</li> 
         <li>下：-35 px</li> 
         <li>左：1rem<strong><br /> </strong></li> 
-       </ul> <p><strong>ヒント：</strong> を選択します。 <img src="assets/link.png"> リンクアイコンを使用して、各フィールドに異なる値を指定します。<br /> </p> </td> 
+       </ul> <p><strong>ヒント</strong>：フィールドごとに異なる値を設定するには、<img src="assets/link.png"> リンクアイコンを選択します。<br /> </p> </td> 
      </tr> 
      <tr> 
       <td>高さ</td> 
@@ -169,13 +170,13 @@ ht-degree: 73%
     </tbody> 
    </table>
 
-1. フッターウィジェットを選択し、「 」を選択します。 **[!UICONTROL フッター]**. を展開します。 **[!UICONTROL 背景]** アコーディオン、 **[!UICONTROL 背景色]** から `F6921E`をクリックし、次を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. フッターウィジェットを選択し、「**[!UICONTROL フッター]**」を選択します。**[!UICONTROL 背景]**&#x200B;アコーディオンを展開し、「**[!UICONTROL 背景色]**」を `F6921E` に設定して、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
 ### データ取得コンポーネントのスタイル設定とアダプティブフォームの背景の適用 {#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
 アダプティブフォームでは複数のコンポーネントを使用してデータを取得できます。例えば、テキストボックスや数値ボックスなどです。すべてのデータ取得コンポーネントに同じスタイルを設定することも、コンポーネントごとに異なるスタイルを設定することもできます。このチュートリアルでは、数値ボックス（顧客 ID、郵便番号）とテキストボックス（顧客 ID、名前、発送先住所、状態、メール）に同じスタイルを適用します。データ取得コンポーネントのスタイルを設定するには、次の手順を実行します。
 
-1. を選択します。 **[!UICONTROL 顧客 ID]** フィールドに値を入力し、 **[!UICONTROL フィールドウィジェット]** オプション。 次のプロパティを設定し、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 「**[!UICONTROL 顧客 ID]**」フィールドを選択し、「**[!UICONTROL フィールドウィジェット]**」オプションを選択します。次のプロパティを設定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    <table> 
     <tbody> 
@@ -231,7 +232,7 @@ ht-degree: 73%
     </tbody> 
     </table>
 
-1. 上の空の領域を選択 **[!UICONTROL 顧客 ID]** 「 」フィールドで「 」を選択します。 **[!UICONTROL レスポンシブパネルコンテナ]**. **[!UICONTROL 背景]**／**[!UICONTROL 背景色]**&#x200B;を F1F2F2 に設定します。選択 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 「**[!UICONTROL 顧客 ID]**」フィールドの上部で空白領域を選択し、「**[!UICONTROL レスポンシブパネルコンテナ]**」を選択します。**[!UICONTROL 背景]**／**[!UICONTROL 背景色]**&#x200B;を F1F2F2 に設定します。「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    ![レスポンシブパネルコンテナ](do-not-localize/responsive-panel-container.png)
 
@@ -239,7 +240,7 @@ ht-degree: 73%
 
 カスタムテーマを使用すると、アダプティブフォームのすべてのボタンに同じスタイルを適用することも、特定のボタンに[インラインスタイル設定](/help/forms/using/inline-style-adaptive-forms.md)を適用することもできます。ボタンのスタイルを設定するには、次の手順を実行します。
 
-1. を選択します。 **[!UICONTROL 送信]** ボタンをクリックし、 **[!UICONTROL ボタン]** オプション。 次のプロパティを設定し、「 」を選択します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+1. 「**[!UICONTROL 送信]**」ボタンを選択し、「**[!UICONTROL ボタン]**」オプションを選択します。次のプロパティを設定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」を選択します。
 
    <table> 
     <tbody> 
@@ -300,14 +301,14 @@ ht-degree: 73%
 
    ![style-option](assets/style-option.png)
 
-1. を選択します。 **[!UICONTROL 添付]** ボタンをクリックし、 ![aem_6_3_edit](assets/aem_6_3_edit.png)アイコン。 「**[!UICONTROL 寸法と位置]**」アコーディオンで以下のプロパティを設定します。
+1. 「**[!UICONTROL 添付]**」ボタンを選択し、![aem_6_3_edit](assets/aem_6_3_edit.png) アイコンを選択します。「**[!UICONTROL 寸法と位置]**」アコーディオンで以下のプロパティを設定します。
 
    | プロパティ | 値 |
    |---|---|
    | 浮動小数点数 | 左 |
    | 幅 | 10% |
 
-1. を選択します。 **[!UICONTROL 政府が承認した住所の配達確認]** オプションを選択し、 ![aem_6_3_edit](assets/aem_6_3_edit.png)アイコン。 次のプロパティを設定します。
+1. 「**[!UICONTROL 政府が承認した住所の証明]**」オプションを選択し、![aem_6_3_edit](assets/aem_6_3_edit.png) アイコンを選択します。次のプロパティを設定します。
 
    <table> 
     <tbody> 
@@ -397,7 +398,7 @@ ht-degree: 73%
     </tbody> 
    </table>
 
-1. を選択します。 **[!UICONTROL 送信]** ボタンをクリックし、 ![aem_6_3_edit](assets/aem_6_3_edit.png) アイコン。 次のプロパティを設定します。
+1. 「**[!UICONTROL 送信]**」ボタンを選択し、![aem_6_3_edit](assets/aem_6_3_edit.png) アイコンを選択します。次のプロパティを設定します。
 
    <table> 
     <tbody> 
@@ -478,7 +479,7 @@ ht-degree: 73%
 10. に移動します。 `/apps/[fontslibrary]/[customlibrary(clientlibrary)]` css フォルダーを作成します。
 11. 作成した CSS フォルダーに移動し、ファイルを作成します。 例えば、次のようなファイルを作成します。 `fonts.css` 埋め込みコードと URL を貼り付けます。
    ![フォルダー構造](/help/forms/using/assets/fonts-add-in-crxde.png)
-12. 変更を保存します。
+12. 変更内容を保存します。
 
 >[!NOTE]
 >

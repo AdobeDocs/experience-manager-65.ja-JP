@@ -2,10 +2,11 @@
 title: AEM 6.5 Sites 向けヘッドレス開発
 description: コンテンツモデル、コンテンツフラグメント、GraphQL API など、AEM 6.5 の強力なヘッドレス機能が連携する仕組みと、エクスペリエンスを一元管理して複数のチャネルで提供する方法を学びます。
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '507'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +49,7 @@ AEM 6.5 は、次の 3 つの強力なサービスを提供することで、ヘ
 
 ## AEM ヘッドレスを使用した最初の手順 {#first-steps}
 
-AEMヘッドレス機能を使い始めるために利用できるリソースはいくつかあります。 ユースケースはそれぞれ異なりますが、いずれも AEM ヘッドレス機能の概要を明確に説明ｓしています。
+AEM のヘッドレス機能を使い始めるためのリソースがいくつか用意されています。ユースケースはそれぞれ異なりますが、いずれも AEM ヘッドレス機能の概要を明確に説明ｓしています。
 
 | リソース | 説明 | タイプ | 対象読者 | 予測時刻 |
 |---|---|---|---|---|

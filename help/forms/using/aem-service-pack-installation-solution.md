@@ -2,7 +2,8 @@
 title: 最新の 6.5.15.0 サービスパックがインストールされると、CRX/bundle と開始ページサービスが利用できないというエラーが表示される
 description: 最新の 6.5.15.0 サービスパックがインストールされると、CRX/bundle と開始ページサービスが利用できないというエラーが表示される
 exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 93%

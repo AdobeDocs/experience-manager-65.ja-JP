@@ -7,10 +7,11 @@ content-type: reference
 topic-tags: spa
 docset: aem65
 exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 55%
+ht-degree: 86%
 
 ---
 
@@ -20,11 +21,11 @@ Adobe Experience Platform Launch は、Analytics、Target および Audience Man
 
 >[!NOTE]
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
 
 ## チュートリアル {#tutorial}
 
-SPAとAdobe Experience Platform Launchの統合方法については、 [このナレッジベース記事とチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=ja):Launch の設定手順を説明し、Angularまたは React で作成したにExperience Cloudを実装します。
+SPA と Adobe Experience Platform Launch の統合方法を理解するには、[このナレッジベースの記事とチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=ja)を参照してください。この記事では Launch の設定と、Angular または React で構築した Experience Cloud の実装について説明します。
 
 >[!NOTE]
 >

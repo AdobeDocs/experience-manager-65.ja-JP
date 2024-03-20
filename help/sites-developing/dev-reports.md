@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 0f898fd81d2952b01eac7e6b8aa9970868009b15
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5177'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -314,7 +315,7 @@ N:charting
 
    * `active`
 
-     複数の設定を定義できるので、これを使用してどれが現在アクティブなものかを定義できます。これらはノードの配列によって定義されます ( これらのノードには必須の命名規則はありませんが、標準レポートでは通常、 `0`, `1`... `x`) に分類され、それぞれが次のプロパティを持ちます。
+     複数の設定を定義できるので、これを使用してどれが現在アクティブなものかを定義できます。これらはノードの配列によって定義されます（これらのノードには強制的な命名規則はありませんが、標準レポートでは通常、`0`、`1`..`x` が使用されます）。各ノードには次のプロパティが含まれます。
 
       * `id`
 
@@ -324,7 +325,7 @@ N:charting
 
   レポートでの使用が可能なチャートタイプを定義します。使用する `definitions` が、`active` の設定で指定されます。
 
-  定義は、ノードの配列を使用して指定します（同じ名前を付けることが多い）。 `0`, `1`... `x`) に分類され、それぞれに次のプロパティがあります。
+  この定義はノードの配列（通常は `0`、`1`..`x` と命名）を使用して指定され、各ノードには次のプロパティが含まれています。
 
    * `id`
 
@@ -741,7 +742,7 @@ N:data
 
   必要に応じて、集計ごとに個別の定義を指定できます。
 
-  集計値の明示的な前処理を指定するには、前処理定義がそれぞれの `aggregated` 子ノード（`apply/aggregated`、`applyAfter/aggregated`）に存在している必要があります。個別の集計に対する明示的な前処理が必要な場合、前処理の定義は、それぞれの集計の名前を持つ子ノードに対して行われます ( 例えば、 `apply/aggregated/min/max` または他の集計 )。
+  集計値の明示的な前処理を指定するには、前処理定義がそれぞれの `aggregated` 子ノード（`apply/aggregated`、`applyAfter/aggregated`）に存在している必要があります。個別の集計に対する明示的な前処理が必要な場合、前処理定義は、例えば `apply/aggregated/min/max` や他の集計などの、それぞれの集計の名前を持つ子ノードに配置します。
 
 以下のいずれかを指定して、前処理中に使用できます。
 
@@ -1013,7 +1014,7 @@ N:cq:editConfig [cq:EditConfig]
 
 個々の汎用コンポーネントに合わせてカスタマイズできる（標準）ダイアログボックスを使用します。このダイアログボックスでは、レポートユーザーがレポートページの汎用列の列プロパティを定義できます（メニューオプション「**列プロパティ**」を使用）。
 
-例えば、 **汎用** 列 **ユーザーレポート**. `/libs/cq/reporting/components/userreport/genericcol` を参照してください。
+**ユーザーレポート**&#x200B;の&#x200B;**汎用**&#x200B;列は、その一例です。詳しくは、`/libs/cq/reporting/components/userreport/genericcol` を参照してください。
 
 列を汎用にするには：
 

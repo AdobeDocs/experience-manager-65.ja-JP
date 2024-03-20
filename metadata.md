@@ -4,11 +4,11 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/experience-manager-65.ja-JP
 solution: Experience Manager, Experience Manager 6.5
 feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
-version: 6.5
 type: Documentation
+version: 6.5
 index: y
 recommendations: noDisplay
-source-git-commit: 51c5338b9e01ce52db2df88ec05f0e735f678ca3
+source-git-commit: e5013bbba695d2b5258ed515a27bf5b36d098c1d
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 97%

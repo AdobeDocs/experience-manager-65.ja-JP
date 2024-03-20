@@ -1,16 +1,17 @@
 ---
 title: Salesforce との統合
-description: Adobe Experience Manager (AEM) と Salesforce の統合について説明します。
+description: Adobe Experience Manager（AEM）と Salesforce の統合について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1530'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -107,7 +108,7 @@ AEM ユーザーを Salesforce リードとして書き出すには、次の手�
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
-1. リードとして作成するAEMユーザーを **ペイロード** このワークフロー用（ホーム/ユーザー）。 **givenName**、**familyName** などの情報を格納しているユーザーのプロファイルノードを選択してください。これらの情報は、Salesforce リードの **FirstName** フィールドと **LastName** フィールドにマッピングされます。
+1. リードとして作成する AEM ユーザーを、このワークフロー（ホーム／ユーザー）の「**ペイロード**」として選択します。**givenName**、**familyName** などの情報を格納しているユーザーのプロファイルノードを選択してください。これらの情報は、Salesforce リードの **FirstName** フィールドと **LastName** フィールドにマッピングされます。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 

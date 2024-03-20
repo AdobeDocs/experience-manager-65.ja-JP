@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: 3f9ed24e-c54b-4bd4-9212-eabc67bb540e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1227'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +60,7 @@ Adobe Campaign 固有のフォームを作成する前に、AEM アプリケー�
 
    >[!NOTE]
    >
-   >テンプレートが使用できない場合は、 [テンプレートを使用可能にする](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate) 」セクションに入力します。
+   >テンプレートが使用可能になっていない場合は、[テンプレートを使用可能にする](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate)のセクションを参照してください。
 
 1. 「**作成**」をクリックしてフォームを作成します。
 
@@ -79,7 +80,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
 1. 編集するフォームに移動します。
 1. ツールボックスで&#x200B;**ページ**／**ページプロパティ...**&#x200B;を選択し、ポップアップウィンドウの「**クラウドサービス**」タブに移動します。
-1. 「 」をクリックしてAdobe Campaignサービスを追加する **サービスを追加**&#x200B;を選択し、サービスのドロップダウンリストで、Adobe Campaignインスタンスに対応する設定を選択します。 この設定は、インスタンスとの接続を設定すると実行されます。詳しくは、[Adobe Campaign への AEM の接続](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign)を参照してください。
+1. 「**サービスを追加**」をクリックし、サービスのドロップダウンリストで Adobe Campaign インスタンスに対応する設定を選択して、Adobe Campaign サービスを追加します。この設定は、インスタンスとの接続を設定すると実行されます。詳しくは、[Adobe Campaign への AEM の接続](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign)を参照してください。
 
    >[!NOTE]
    >
@@ -105,7 +106,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
    >
    >**要素名**&#x200B;は、フォームフィールドごとに異なっている必要があります。必要に応じて変更してください。
    >
-   >各フォームには、 **暗号化されたプライマリキー** Adobe Campaignデータベースで受信者を正しく管理するためのコンポーネント。
+   >Adobe Campaign データベース内で受信者を正しく管理するために、フォームごとに 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;コンポーネントを含める必要があります。
 
 1. ツールボックスで&#x200B;**ページ**／**ページをアクティベート**&#x200B;を選択して、ページをアクティベートします。ページがサイト上でアクティベートされます。AEM パブリケーションインスタンスに移動すると、ページを表示できます。フォームの検証が完了すると、Adobe Campaign データベース内のデータが更新されます。
 

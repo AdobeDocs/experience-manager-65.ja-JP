@@ -3,13 +3,14 @@ title: AEM SDK を再起動する方法は？
 description: AEM SDK を再起動するためのベストプラクティス
 role: Admin, Developer, User
 feature: Adaptive Forms
-source-git-commit: 5a8c0ce8c5c764bb7eeeb645527dbde6ccace497
+exl-id: f5d69d04-b842-4329-b1b3-57b88266d13d
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 1%
 
 ---
-
 
 # AEM SDK の再起動
 

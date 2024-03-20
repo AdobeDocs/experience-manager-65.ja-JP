@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '802'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -55,7 +56,7 @@ Adobe Campaign Classic で次のエラーメッセージを探します。
 
 Adobe Campaign Classic で、ポート番号の末尾がスラッシュ（`/`）で終わらないようにします。
 
-![Adobe Campaign Classic — ポート番号の後にスラッシュを付けないでください。](assets/chlimage_1-149.png)
+![Adobe Campaign Classic - ポート番号の末尾がスラッシュで終わらないようにする](assets/chlimage_1-149.png)
 
 ## setlocale について警告が表示される場合 {#if-you-get-a-warning-about-your-setlocale}
 

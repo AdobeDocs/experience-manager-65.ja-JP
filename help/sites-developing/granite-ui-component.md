@@ -1,53 +1,54 @@
 ---
 title: 新しい Granite UI フィールドコンポーネントの作成
-description: Granite UI は、フィールドと呼ばれる、フォームで使用するように設計された様々なコンポーネントを提供します
+description: Granite UI には、フィールドと呼ばれ、フォームで使用するようにデザインされた幅広いコンポーネントが用意されています。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: e4820330-2ee6-4eca-83fd-462aa0b83647
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 26%
+source-wordcount: '498'
+ht-degree: 100%
 
 ---
 
 # 新しい Granite UI フィールドコンポーネントの作成{#creating-a-new-granite-ui-field-component}
 
-Granite UI には、フォームで使用するようにデザインされた幅広いコンポーネントが用意されています。これらを Granite の UI 用語では「フィールド」と呼びます&#x200B;*。*&#x200B;標準の Granite フォームコンポーネントは、次の場所で使用できます。
+Granite UI には、フォームで使用するようにデザインされた幅広いコンポーネントが用意されています。これらを Granite の UI 用語では「フィールド」と呼びます&#x200B;*。*&#x200B;標準の Granite フォームコンポーネントは、次の場所にあります。
 
 `/libs/granite/ui/components/foundation/form/*`
 
 >[!NOTE]
 >
->これらの Granite UI フォームフィールドは、 [コンポーネントダイアログ](/help/sites-developing/developing-components.md).
+>これらの Granite UI フォームフィールドが特に注目されるのは、これらが[コンポーネントダイアログ](/help/sites-developing/developing-components.md)で使用されるからです。
 
 >[!NOTE]
 >
->フィールドについて詳しくは、 [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
+>フィールドについて詳しくは、[Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)を参照してください。
 
-Granite UI Foundation フレームワークを使用して、Granite コンポーネントを開発または拡張します。 これには次の 2 つの要素があります。
+Granite コンポーネントを開発または拡張するには、Granite UI の基盤フレームワークを使用します。このフレームワークには次の 2 つの要素があります。
 
-* サーバー側：
+* サーバーサイド：
 
    * 基盤コンポーネントのコレクション
 
-      * 基盤 — モジュラー型、合成可能、レイヤブル、再利用可能
+      * 基盤 - モジュール式、組み立て可能、階層化可能、再利用可能
       * コンポーネント - Sling コンポーネント
 
    * アプリケーション開発を支援するヘルパー
 
-* クライアント側：
+* クライアントサイド：
 
-   * ハイパーメディア駆動型のユーザーインターフェイスを通じて一般的なインタラクションパターンを実現するための語彙 (HTML言語の拡張 ) を提供する clientlibs のコレクション。
+   * ハイパーメディア駆動型ユーザーインターフェイスを使用して、一般的なインタラクションパターンを実現するための語彙（HTML 言語の拡張）を提供するクライアントライブラリのコレクション
 
-一般的な Granite UI コンポーネントである `field` は、以下の 2 つのファイルで構成されています。
+一般的な Granite UI コンポーネントである `field` は、次の 2 つのファイルで構成されます。
 
-* `init.jsp`：ラベル付けや説明などの汎用処理を処理し、フィールドのレンダリング時に必要なフォーム値を提供します。
-* `render.jsp`：フィールドの実際のレンダリングが実行される場所です。カスタムフィールドに対して上書きする必要があります。は、に含まれます。 `init.jsp`.
+* `init.jsp`：ラベル付けや説明などの一般的な処理を扱い、フィールドをレンダリングする際に必要なフォーム値を提供します。
+* `render.jsp`：ここで、フィールドの実際のレンダリングが実行され、カスタムフィールドの場合は上書きされる必要があります。`init.jsp` に含まれます。
 
-詳しくは、 [Granite UI ドキュメント — フィールド](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) 」を参照してください。
+詳しくは、[Granite UI ドキュメント - フィールド](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)を参照してください。
 
 詳しくは、例えば、以下を参照してください。
 
@@ -59,23 +60,23 @@ Granite UI Foundation フレームワークを使用して、Granite コンポ�
 
 >[!NOTE]
 >
->このメカニズムは JSP を使用するので、i18n と XSS は標準では提供されません。 つまり、文字列を国際化してエスケープする必要があります。 次のディレクトリには、標準インスタンスの汎用フィールドが含まれています。これらを参照として使用できます。
+>このメカニズムは JSP を使用しているので、i18n および XSS は標準では提供されません。つまり、文字列を国際化してエスケープする必要があります。次のディレクトリには、標準インスタンスの一般的なフィールドが含まれます。これらをリファレンスとして使用できます。
 >
 >`/libs/granite/ui/components/foundation/form` ディレクトリ
 
 ## コンポーネント用のサーバーサイドスクリプトの作成 {#creating-the-server-side-script-for-the-component}
 
-カスタマイズしたフィールドは、`render.jsp` スクリプトのみを上書きする必要があります。このスクリプトは、コンポーネントのマークアップを提供します。JSP （つまり、レンダリングスクリプト）はマークアップのラッパーと見なすことができます。
+カスタマイズしたフィールドは、`render.jsp` スクリプトのみを上書きする必要があります。このスクリプトは、コンポーネントのマークアップを提供します。この JSP（レンダリングスクリプト）は、マークアップのラッパーと見なすことができます。
 
-1. を使用するコンポーネントを作成する `sling:resourceSuperType` 継承元のプロパティ：
+1. `sling:resourceSuperType` プロパティを使用して、次から継承するコンポーネントを作成します。
 
    `/libs/granite/ui/components/foundation/form/field`
 
-1. 以下のスクリプトを上書きします。
+1. 次のスクリプトを上書きします。
 
    `render.jsp`
 
-   このスクリプトでは、ハイパーメディアマークアップ（つまり、ハイパーメディアアフォーダンスを含む、エンリッチメントされたマークアップ）を生成し、生成された要素の操作方法をクライアントが把握できるようにします。 これは、Granite UI のサーバー側のコーディングスタイルに従う必要があります。
+   このスクリプトでは、ハイパーメディアマークアップ（ハイパーメディアアフォーダンスを含む、拡張されたマークアップ）を生成し、生成された要素の操作方法をクライアントが把握できるようにします。Granite UI のサーバーサイドのコーディングスタイルに従います。
 
    カスタマイズする際に守る必要のある唯一の&#x200B;*決まりごと*&#x200B;は、以下を使用して、リクエストからフォーム値（`init.jsp` で初期化）を読み取ることです。
 
@@ -85,15 +86,15 @@ Granite UI Foundation フレームワークを使用して、Granite コンポ�
    vm.get("value, String.class");
    ```
 
-   詳しくは、標準の Granite UI フィールドの実装を参照してください。例： `/libs/granite/ui/components/foundation/form/textfield`.
+   詳しくは、デフォルトの Granite UI フィールドの実装（例：`/libs/granite/ui/components/foundation/form/textfield`）を参照してください。
 
    >[!NOTE]
    >
-   >現時点では、JSP が推奨されるスクリプティングメソッドです。HTL では、あるコンポーネントから別のコンポーネントに情報を渡すことは（フォームやフィールドのコンテキストで頻繁に行われます）容易には実現できません。
+   >現時点では、HTL ではコンポーネント間の情報の受け渡し（フォーム／フィールドのコンテキストでは頻繁に行われます）を簡単には実現できないので、スクリプティングメソッドとして JSP が推奨されます。
 
-## コンポーネントのクライアントライブラリの作成 {#creating-the-client-library-for-the-component}
+## コンポーネント用のクライアントライブラリの作成 {#creating-the-client-library-for-the-component}
 
-特定のクライアント側の動作をコンポーネントに追加するには：
+特定のクライアントサイドの動作をコンポーネントに追加するには、次の手順に従います。
 
 1. カテゴリ `cq.authoring.dialog` のクライアントライブラリを作成します。
 1. カテゴリ `cq.authoring.dialog` のクライアントライブラリを作成し、その内部に `JS`／`CSS` を定義します。
@@ -102,4 +103,4 @@ Granite UI Foundation フレームワークを使用して、Granite コンポ�
 
    >[!NOTE]
    >
-   >現時点では、Granite UI には、JS 動作を直接追加するために使用できる、標準のリスナーやフックは用意されていません。 そのため、コンポーネントに JS 動作を追加するには、JS フックをカスタムクラスに実装し、マークアップの生成中にコンポーネントに割り当てる必要があります。
+   >現時点では、Granite UI には、JS 動作を追加するために直接使用できる標準のリスナーやフックはありません。したがって、JS 動作をコンポーネントに追加するには、JS フックをカスタムクラスに実装して、マークアップの生成時にコンポーネントに割り当てる必要があります。

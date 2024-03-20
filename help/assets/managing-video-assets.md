@@ -6,10 +6,11 @@ role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
-source-git-commit: 0d30d42e606f1abcf20869c40ca87a78d496e2e7
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '5466'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -136,7 +137,7 @@ Google Cloud を設定するには：
 
 1. 次のいずれかの操作を行います。
 
-   * プロジェクトのダッシュボードの「はじめに」カードで、 **[!UICONTROL API の確認と有効化]**.
+   * プロジェクトのダッシュボードの「スタートガイド」のカードで、「**[!UICONTROL API を確認して有効化]**」を選択します。
    * プロジェクトのダッシュボードの「API」カードで「**[!UICONTROL API の概要に移動]**」を選択します。
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
@@ -157,7 +158,7 @@ Google Cloud を設定するには：
 
    * 「**[!UICONTROL API を呼び出す場所]**」ドロップダウンリストから、「**[!UICONTROL web サーバー（node.js、Tomcat など）]**」を選択します。
 
-   * 「**[!UICONTROL アクセスするデータの種類]**」ドロップダウンリストから、「**[!UICONTROL ユーザーデータ]**」を選択します。
+   * **[!UICONTROL アクセスするデータの種類は何ですか？]**」ドロップダウンリストから、「**[!UICONTROL ユーザーデータ]**」を選択します。
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
@@ -233,7 +234,7 @@ Experience Manager で、YouTube にビデオを公開するには、1 つ以上
 
 ### YouTube への公開のレプリケーションエージェントを有効にする {#enabling-the-youtube-publish-replication-agent}
 
-YouTube公開レプリケーションエージェントを有効にした後、Google Cloud アカウントへの接続をテストする場合は、 **[!UICONTROL 接続をテスト]**. ブラウザータブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらの一覧がテストの一部として表示されます。
+YouTube への公開のレプリケーションエージェントを有効化した後、Google Cloud アカウントへの接続をテストする場合は、「**[!UICONTROL 接続をテスト]**」を選択します。ブラウザータブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらの一覧がテストの一部として表示されます。
 
 1. Experience Manager の左上隅にある Experience Manager ロゴをクリックし、左側のレールで&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL デプロイメント]**／**[!UICONTROL レプリケーション]**／**[!UICONTROL 作成者のエージェント]**&#x200B;をクリックします。
 1. 作成者のエージェントページで、「**[!UICONTROL YouTube の公開]**」をクリックします。
@@ -253,7 +254,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 #### Experience Manager 6.4 以降での YouTube のセットアップ {#setting-up-youtube-in-aem-and-later}
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
-1. 左上隅のExperience Managerロゴを選択し、左側のレールで「 」を選択します。 **[!UICONTROL ツール]**（ハンマーのアイコン） > **[!UICONTROL Cloud Service]** > **[!UICONTROL YouTube Publishing Configuration]**.
+1. 左上隅にある Experience Manager ロゴを選択し、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL Cloud Services]**／**[!UICONTROL YouTube 公開設定]**&#x200B;を選択します。
 1. 「**[!UICONTROL グローバル]**」を選択します。
 
 1. グローバルページの右上隅にある「**[!UICONTROL 作成]**」を選択します。
@@ -287,8 +288,8 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    次に、タグを公開用にセットアップします。
 
 1. **[!UICONTROL 公開用タグの設定]** - クラウドサービス／YouTube ページで、鉛筆アイコンを選択して、使用するタグのリストを編集します。
-1. ドロップダウンリストアイコン（上下逆のキャレット）を選択して、使用可能なタグのリストをExperience Managerで表示できます。
-1. 1 つ以上のタグを選択して追加できます。
+1. ドロップダウンリストアイコン（上下逆のキャレット）を選択すると、Experience Manager で利用可能なタグのリストを表示できます。
+1. 1 つ以上のタグを選択して追加します。
 
    追加したタグを削除するには、そのタグを選択して、**[!UICONTROL X]** を選択します。
 
@@ -300,7 +301,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
 
-1. 左上隅のExperience Managerロゴを選択し、左側のレールで「 」を選択します。 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL 導入]** > **[!UICONTROL Cloud Service]**.
+1. 左上隅にある Experience Manager ロゴを選択して、左のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL デプロイメント]**／**[!UICONTROL クラウドサービス]**&#x200B;を選択します。
 1. 「サードパーティのサービス」ヘッダーの下の「YouTube」で、「**[!UICONTROL 今すぐ設定]**」を選択します。
 1. 設定を作成ダイアログボックスで、タイトル（必須）と名前（オプション）をそれぞれのフィールドに入力します。
 1. 「**[!UICONTROL 作成]**」を選択します。
@@ -332,8 +333,8 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    次に、タグを公開用にセットアップします。
 
 1. **[!UICONTROL 公開用タグの設定]** - クラウドサービス／YouTube ページで、鉛筆アイコンを選択して、使用するタグのリストを編集します。
-1. ドロップダウンリストアイコン（上下逆のキャレット）を選択して、使用可能なタグのリストをExperience Managerで表示できます。
-1. 1 つ以上のタグを選択して追加できます。
+1. ドロップダウンリストアイコン（上下逆のキャレット）を選択すると、Experience Manager で利用可能なタグのリストを表示できます。
+1. 1 つ以上のタグを選択して追加します。
 
    追加したタグを削除するには、そのタグを選択して、**X** を選択します。
 
@@ -349,7 +350,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 アップロードしたビデオのデフォルト YouTube プロパティの設定を自動化するには：
 
-1. 左上隅で、Experience Managerロゴを選択し、左側のレールで、 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL Assets]** > **[!UICONTROL メタデータスキーマ]**.
+1. 左上隅にある Experience Manager ロゴを選択し、左のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;をクリックします。
 1. 「**[!UICONTROL デフォルト値]**」をクリックします（「デフォルト値」の左側にある選択ボックスにチェックマークを追加しないでください）。
 1. **[!UICONTROL デフォルト値]**&#x200B;ページで、「**[!UICONTROL ビデオ]**」の左側にあるボックスをオンにし、「**[!UICONTROL 編集]**」を選択します。
 1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブを選択します。
@@ -368,7 +369,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    * **[!UICONTROL 選択肢]**&#x200B;で、使用するデフォルト値を選択してコピーします。選択肢は 2 つが 1 組になっています。1 組の下のフィールドは、コピーするデフォルト値（公開、非公開またはプライベート）です。コピーした値を、開いているテキストエディターに貼り付けます。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
 
 1. メタデータスキーマエディターページの右上隅にある「**[!UICONTROL キャンセル]**」をクリックします。
-1. Experience Managerの左上隅で、Experience Managerロゴを選択し、左側のレールで、 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL Assets]** > **[!UICONTROL メタデータプロファイル]**.
+1. Experience Manager の左上隅にある Experience Manager ロゴを選択し、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL メタデータプロファイル]**&#x200B;を選択します。
 
 1. メタデータプロファイルページの右上隅にある「**[!UICONTROL 作成]**」をクリックします。
 1. メタデータプロファイルを追加ダイアログボックスの「**[!UICONTROL プロファイルのタイトル]**」テキストフィールドに、「`YouTube Video`」と入力した後、「**[!UICONTROL 作成]**」をクリックします。
@@ -482,7 +483,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 1. YouTube チャネルで非公開にするビデオアセットの場所に移動します。
 1. アセット選択モードで、1 つまたは複数の公開済みビデオアセットを選択します。
-1. ツールバーで「**[!UICONTROL 公開を管理]**」をクリックします。3 つのドットのアイコン (..) ツールバーにあるので、**[!UICONTROL パブリケーションの管理]**&#x200B;が開きます。
+1. ツールバーで「**[!UICONTROL 公開を管理]**」をクリックします。3 点ドット（...）アイコンを選択します。ツールバーに、**[!UICONTROL パブリケーションの管理]**&#x200B;が開きます。
 1. 公開を管理ページで、「**[!UICONTROL 非公開]**」を選択します。
 1. ページの右上隅にある「**[!UICONTROL 次へ]**」を選択します。
 1. ページの右上隅にある「**[!UICONTROL 非公開]**」を選択します。
@@ -503,11 +504,11 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   この列は、デフォルトでは表示されません。列を有効にするには、「 **[!UICONTROL 設定を表示]** 「ビュー」ドロップダウンメニューから、「 **[!UICONTROL 処理ステータス]** 列とクリック **[!UICONTROL 更新]**.
+   この列は、デフォルトでは表示されません。この列を有効にするには、ビュードロップダウンメニューから「**[!UICONTROL 設定を表示]**」を選択し、「**[!UICONTROL 処理ステータス]**」列を追加して、「**[!UICONTROL 更新]**」をクリックします。
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. アセット詳細の進行状況を表示します。アセットをクリックしたら、ドロップダウンメニューを開いて、「 」を選択します。 **[!UICONTROL タイムライン]**. タイムラインを、エンコーディングや YouTube への公開などのワークフローアクティビティに絞り込むには、「**[!UICONTROL ワークフロー]**」を選択します。
+1. アセット詳細の進行状況を表示します。アセットをクリックしたら、ドロップダウンメニューを開き、「**[!UICONTROL タイムライン]**」を選択します。タイムラインを、エンコーディングや YouTube への公開などのワークフローアクティビティに絞り込むには、「**[!UICONTROL ワークフロー]**」を選択します。
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -577,18 +578,18 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 * YouTube への公開ジョブの場合、次の手順に従います。
 
-1. 「Experience Manager」で、「 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**.
-1. ワークフローモデルページで、「 」を選択します。 **[!UICONTROL YouTubeに公開]**&#x200B;を選択し、「 **[!UICONTROL 編集]** をクリックします。
-1. YouTubeに公開ワークフローページの右上隅にある「 」を選択します。 **[!UICONTROL 編集]**.
-1. YouTubeアップロードコンポーネントにマウスポインターを置いてから、1 回選択するとインラインツールバーが表示されます。
+1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;を選択します。
+1. ワークフローモデルページで「**[!UICONTROL YouTube に公開]**」を選択し、ツールバーで「**[!UICONTROL 編集]**」を選択します。
+1. 「YouTube に公開」ワークフローページの右上隅付近にある「**[!UICONTROL 編集]**」を選択します。
+1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回選択してインラインツールバーを表示します。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. インラインツールバーで、設定アイコン（レンチ）を選択します。 「**[!UICONTROL 引数]**」タブをクリックします。
+1. インラインツールバーで、設定アイコン（レンチ）を選択します。「**[!UICONTROL 引数]**」タブをクリックします。
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
-1. YouTubeアップロードプロセス — ステップのプロパティダイアログボックスで、 **[!UICONTROL 引数]** タブをクリックします。
+1. YouTube のアップロードプロセス - ステップのプロパティダイアログボックスで、「**[!UICONTROL 引数]**」タブを選択します。
 
    ![6_5_publishtoyoutubeworkflow-arguments-tab](assets/6_5_publishtoyoutubeworkflow-arguments-tab.png)
 
@@ -604,8 +605,8 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >
    >これらのメールは YouTube に固有で、かつ一般的なワークフローメール通知です。結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つのメール通知セットを受け取ることができます。
 
-1. 作業が完了したら、ダイアログボックスの右上隅付近にある **[!UICONTROL 完了]** アイコン（チェックマーク）をクリックします。
-1. YouTubeに公開ワークフローページの右上隅付近にある、「 」を選択します。 **[!UICONTROL 同期]**.
+1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;**[!UICONTROL 完了]**&#x200B;アイコン（チェックマーク）を選択します。
+1. YouTube に公開ワークフローページで、右上隅にある「**[!UICONTROL 同期]**」を選択します。
 
 ## ビデオアセットに注釈を付ける {#annotate-video-assets}
 

@@ -1,14 +1,15 @@
 ---
 title: HTML5 フォームの Form Bridge API
-description: 外部アプリケーションは、FormBridge API を使用して XFA Mobile Form に接続します。 API は親ウィンドウで FormBridgeInitialized イベントを発行します。
+description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。API は親ウィンドウで FormBridgeInitialized イベントを送出します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 84%
+source-wordcount: '938'
+ht-degree: 100%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 84%
 
 各種 Form Bridge API を使用すると、XFA ベースの HTML5 フォームとお使いのアプリケーション間の通信チャネルを開くことができます。これらの Form Bridge API では接続作成用の&#x200B;**接続** API を使用できます。
 
-**接続** API はハンドラーを引数として受け入れます。XFA ベースの接続 5 フォームと Form Bridge 間の接続が正常にHTMLされると、ハンドルが呼び出されます。
+**接続** API はハンドラーを引数として受け入れます。XFA ベースの HTML5 フォームと Form Bridge 間の接続が正常に作成されると、ハンドルが呼び出されます。
 
 次のサンプルコードを使用して接続を作成できます。
 
@@ -39,7 +40,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **getBridgeVersion()**
 
-スクリプトライブラリのバージョン番号を返します
+スクリプティングライブラリのバージョン番号を返す
 
 * **入力**：なし
 * **出力**：スクリプティングライブラリのバージョン番号
@@ -69,15 +70,15 @@ window.addEventListener("FormBridgeInitialized",
    * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数。この関数には、XML を含むオブジェクトが *データ* プロパティ。
-      * **context**：のコンテキスト (this) の対象となるオブジェクト *成功* 関数が設定されている
+      * **success**：サクセスハンドラー関数。この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
+      * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
       * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数検証関数にはエラー文字列の配列が渡されます。
       * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定は、デフォルトの設定よりも優先されます。 サポートされる設定は、config セクションで指定します。
+**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされる設定は config セクションで指定します。
 
 * **必要情報:**
 
@@ -144,7 +145,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **入力**：なし
 * **出力**：なし
-* **エラー**：フォーム状態が初期化されていない場合に例外をスローします
+* **エラー**：フォーム状態が初期化されていない場合、例外をスローします
 
 **getFormState()**：フォームステートを表す JSON を返します
 
@@ -153,7 +154,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **エラー**：なし
 
-**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後に成功またはエラーハンドラーが呼び出されます
+**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
 
 * **必要情報:**
 
@@ -171,7 +172,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **入力：**&#x200B;フォーカスを設定するフィールドの SOM 式
 * **出力：**&#x200B;なし
-* **エラー：** SOM 式が正しくない場合は例外をスローする
+* **エラー：** SOM 式が間違っている場合、例外をスローします
 
 **setFieldValue (som, value)**：提供された SOM 式のフィールドの値を設定します
 
@@ -181,7 +182,7 @@ window.addEventListener("FormBridgeInitialized",
    * **value：** **SOM** 配列で提供された SOM 式に対応する値が含まれている配列。値のデータタイプが fieldType と同じでない場合、値は変更されません。
 
 * **出力：**&#x200B;なし
-* **エラー：** SOM 式が正しくない場合は例外をスローする
+* **エラー：** SOM 式が間違っている場合、例外をスローします
 
 **getFieldValue (som)**：提供された SOM 式のフィールドの値を返します
 

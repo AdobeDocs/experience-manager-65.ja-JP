@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 970e0a97d531d4cbae76119960972e54ef65dda0
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 92%
+ht-degree: 99%
 
 ---
 
@@ -68,7 +69,7 @@ JCR ブーリアンプロパティに一致します。受け入れられる値�
 #### プロパティ {#properties}
 
 * **boolproperty**
-プロパティへの相対パス（例： ）。 `myFeatureEnabled` または `jcr:content/myFeatureEnabled`.
+プロパティへの相対パス（`myFeatureEnabled`、`jcr:content/myFeatureEnabled` など）。
 
 * **value**
 プロパティのチェックで見る値（「`true`」または「`false`」）。
@@ -120,11 +121,11 @@ JCR 日付プロパティを日時の間隔と照合します。ISO8601 形式�
 
 * **property**
 
-  の相対パス `DATE` プロパティ。例： `jcr:lastModified`.
+  `DATE` プロパティの相対パス（例：`jcr:lastModified`）
 
 * **lowerBound**
 
-  プロパティを確認する日付の下限（例： ） `2014-10-01`.
+  プロパティをチェックする日付の下限（例：`2014-10-01`）。
 
 * **lowerOperation**
 
@@ -132,7 +133,7 @@ JCR 日付プロパティを日時の間隔と照合します。ISO8601 形式�
 
 * **upperBound**
 
-  プロパティを確認する上限（例： ） `2014-10-01T12:15:00`.
+  プロパティをチェックする日付の上限（例：`2014-10-01T12:15:00`）。
 
 * **upperOperation**
 
@@ -247,7 +248,7 @@ group.2_group.type=dam:Asset
 
 * **language**
 
-  ISO 言語コード（例： ）。`de`&quot;
+  ISO 言語コード（例：「`de`」）
 
 ### mainasset {#mainasset}
 
@@ -313,7 +314,7 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **orderby**
 
-  先頭に@が付く JCR プロパティ名（例： ） `@jcr:lastModified` または `@jcr:content/jcr:title`またはクエリ内の別の述語（例： ） `2_property`：並べ替える基準となる。
+  並べ替えの基準となる、先頭が @ の JCR プロパティ名（`@jcr:lastModified`、`@jcr:content/jcr:title` など）またはクエリ内の別の述語（`2_property` など）。
 
 * **並べ替え**
 
@@ -357,7 +358,7 @@ JCR プロパティとその値に一致します。
 
 * **property**
 
-  プロパティへの相対パス（例： ）。 `jcr:title`.
+  プロパティへの相対パス（`jcr:title` など）。
 
 * **value**
 
@@ -445,7 +446,7 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 ルート述語グループ。グループのすべての機能をサポートし、グローバルクエリパラメーターを設定できます。
 
-「root」という名前は、クエリでは絶対に使用されず、暗黙的に使用されます。
+「root」という名前は暗黙的で、クエリでは使用されません。
 
 #### プロパティ {#properties-18}
 
@@ -459,7 +460,7 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **p.guessTotal**
 
-  推奨：コストがかかる可能性のある完全な結果合計の計算を避けます。最大数を示す数値（例：1000、大まかなサイズと小さい結果に対する正確な数値に関する十分なフィードバックをユーザーに提供する数値）または「 `true`」をクリックして、必要最小限の値までカウントします。 `p.offset` + `p.limit`.
+  推奨：負荷が大きくなる場合があるので、結果の合計をすべて計算することは避けるようにしてください。合計をカウントする最大数（1000 など、大まかなサイズに関する十分なフィードバックが得られ、結果が比較的少数の場合は正確な数値がわかる数値）を指定するか、「`true`」のような形式で必要最小限の `p.offset` + `p.limit` までをカウントするようにします。
 
 * **p.excerpt**
 
@@ -521,7 +522,7 @@ JCR XPath の `rep:similar()` を使用した類似性検索。
 
 * **tag**
 
-  検索するタグタイトルのパス（例：「Asset Properties : Orientation / Landscape」）。
+  検索するタグタイトルのパス（「Asset Properties : Orientation / Landscape」など）。
 
 * **N_value**
 
@@ -541,7 +542,7 @@ JCR XPath の `rep:similar()` を使用した類似性検索。
 
 * **tagid**
 
-  タグ ID（例： ） `properties:orientation/landscape`&quot;.
+  検索するタグ ID（例：「`properties:orientation/landscape`」）
 
 * **N_value**
 
@@ -585,4 +586,4 @@ JCR XPath の `rep:similar()` を使用した類似性検索。
 
 * **type**
 
-  検索するノードタイプまたは mixin 名。例： `cq:Page`.
+  検索するノードタイプまたはミックスイン名（例：`cq:Page`）。

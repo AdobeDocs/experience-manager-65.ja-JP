@@ -6,10 +6,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1515'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +38,7 @@ GDS の場所をバックアップする頻度は、AEM Forms の使用方法と
 
 ## データベース、GDS、AEM リポジトリ、およびコンテンツストレージのルートディレクトリをバックアップ {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
-AEM Formsは、セーフバックアップ（スナップショット）モードか、ローリングバックアップ（継続的な対象）モードのどちらかに設定します。 AEM Forms を設定していずれかのバックアップモードを開始する前に、以下のことを確認してください。
+AEM Forms は、セーフバックアップ（スナップショット）モードまたはローリングバックアップ（継続的カバレッジ）モードのいずれかにします。AEM Forms を設定していずれかのバックアップモードを開始する前に、以下のことを確認してください。
 
 * システムのバージョンを確認し、最後のシステムイメージ完全バックアップ後に適用されたパッチやアップデートを記録します。
 * ローリングモードまたはスナップショットモードのバックアップのいずれかを使用している場合、データベースのログが正しく設定されており、データベースのホットバックアップが実行可能であることを確認してください（[AEM Forms データベース](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)を参照）。
@@ -137,7 +138,7 @@ AEM Formsは、セーフバックアップ（スナップショット）モー�
 
    >[!NOTE]
    >
-   >JAVA_HOME ディレクトリを、アプリケーション・サーバーの適切な章 ( [AEM Formsのインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)*.*
+   >JAVA_HOME ディレクトリは、ご利用のアプリケーションサーバーに該当する章（[AEM Forms のインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)*）に記載されているとおりに設定する必要があります。*
 
 1. 次のコマンドを 1 行で実行します。
 

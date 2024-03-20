@@ -4,10 +4,11 @@ description: We.Gov と We.Finance のデモパッケージを使用した AEM F
 contentOwner: anujkapo
 docset: aem65
 exl-id: 288d5459-bc69-4328-b6c9-4b4960bf4977
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2478'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -97,7 +98,7 @@ We.Gov デモパッケージには、次の架空ユーザーが組み込まれ�
 
 ## フォームの自動変換（Camila） {#automated-forms-conversion}
 
-**この節**：Camila による CX リードには、紙ベースのプロセスの一部として使用された既存の PDF ベースのフォームがあります。Camila は最新化の取り組みの一環として、このPDFフォームを使用して最新のアダプティブFormsを自動的に作成したいと考えています。
+**この節**：Camila による CX リードには、紙ベースのプロセスの一部として使用された既存の PDF ベースのフォームがあります。最新化の取り組みの一環として、Camila はこの PDF フォームを使用して、最新のアダプティブフォームを自動的に作成したいと考えています。
 
 ### フォームの自動変換 - We.Gov（Camila） {#automated-forms-conversion-wegov}
 

@@ -7,10 +7,11 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1306'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -81,7 +82,7 @@ java -jar oak-run.jar index <nodestore path> --fds-path=<datastore path> --index
 java -jar oak-run.jar tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --index-dir ./indexing-result/index-dumps/<oak-index-name>/data populate
 ```
 
-ここで、 `oak-index-name` はフルテキストインデックスの名前です（例：「lucene」）。
+ここで、`oak-index-name` はフルテキストインデックスの名前です（例：「lucene」）。
 
 **3. 上記の手順で除外したバイナリに対して、tika ライブラリを使用してテキスト抽出プロセスを実行します**
 
@@ -101,7 +102,7 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 
 アップグレードの前に、Lucene インデックスをオフラインで作成します。MongoMK を使用する場合、MongoMk ノードの 1 つで直接実行することをお勧めします。これにより、ネットワークのオーバーヘッドが回避されます。
 
-インデックスをオフラインで作成するには、次の手順に従います。
+インデックスをオフラインで作成するには、以下の手順に従います。
 
 **1. ターゲット AEM バージョンの Oak Lucene インデックス定義を生成します。**
 
@@ -160,7 +161,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 `--doc-traversal-mode` パラメーターの使用方法は、リポジトリコンテンツをローカルフラットファイルにスプールすることにより、再インデックス時間を大幅に改善するので、MongoMK のインストールで便利です。ただし、リポジトリの 2 倍のサイズのディスク空き容量が必要です。
 
-MongoMK がある場合、この手順が MongoDB インスタンスに近いインスタンスで実行されると、このプロセスを高速化できます。 同じマシン上で実行すると、ネットワークのオーバーヘッドを回避できます。
+MongoMK の場合、MongoDB インスタンスに近いインスタンスでこの手順を実行すると、このプロセスを高速化できます。同じマシン上で実行すると、ネットワークのオーバーヘッドを回避できます。
 
 技術的な詳細については、[インデックス作成用の oak-run ドキュメント](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)を参照してください。
 

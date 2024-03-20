@@ -1,16 +1,17 @@
 ---
 title: メールマーケティング
-description: メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEMでは、既存のAEMコンテンツからニュースレターを作成し、ニュースレター専用の新しいコンテンツを追加できます。
+description: メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成でき、ニュースレター特有の新しいコンテンツを追加できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 92%
+source-wordcount: '1767'
+ht-degree: 100%
 
 ---
 
@@ -20,9 +21,9 @@ ht-degree: 92%
 >[!NOTE]
 >
 >アドビでは、AEM SMTP サービスが送信したメールの開封／バウンス（配信不能）をトラッキングする機能をさらに強化する計画はありません。
->使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
+>[Adobe Campaign や AEM との統合](/help/sites-administering/campaign.md)を利用することをお勧めします。
 
-メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEMでは、既存のAEMコンテンツからニュースレターを作成し、ニュースレター専用の新しいコンテンツを追加できます。
+メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成でき、ニュースレター特有の新しいコンテンツを追加できます。
 
 作成した後は、即時または（ワークフローを使用して）スケジュールした時間に、特定のユーザーグループへとニュースレターを送信できます。さらに、ユーザーは自分が選択した形式でニュースレターの購読を申し込むことができます。
 
@@ -63,7 +64,7 @@ ht-degree: 92%
 
 1. 「**作成**」をクリックします。
 
-1. 新しいダイアログボックスが直ちに開きます。 ここで、ニュースレターのプロパティを入力できます。
+1. すぐに新しいダイアログボックスが開きます。ここで、ニュースレターのプロパティを入力できます。
 
    「**デフォルトの受信者リスト**」は、ニュースレターのタッチポイントを構成するので、必須のフィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
 
@@ -107,7 +108,7 @@ ht-degree: 92%
    >
    >変数を使用してニュースレターをパーソナライズします。Geometrixx のニュースレターでは、変数はテキストコンポーネントで使用できます。変数の値は、ユーザープロファイルの情報から継承されます。
 
-   ![ニュースレターのコンテンツの編集](assets/mcm_newsletter_content.png)
+   ![ニュースレターコンテンツの編集](assets/mcm_newsletter_content.png)
 
 1. 変数を挿入するには、リストの変数を選択し、「**挿入**」をクリックします。変数は「プロファイル」から設定されます。
 
@@ -158,18 +159,18 @@ ht-degree: 92%
 
 1. 上部のバーにあるメールクライアントをクリックし、そのクライアントでニュースレターがどのように表示されるかを確認します。
 
-   ![E メールクライアントの切り替え](assets/chlimage_1-119.png)
+   ![メールクライアントの切り替え](assets/chlimage_1-119.png)
 
 1. 確認するその他のメールクライアントについて、この手順を繰り返します。
 
-   ![E メールクライアントの変更](assets/chlimage_1-120.png)
+   ![メールクライアントの変更](assets/chlimage_1-120.png)
 
 ## ニュースレター設定のカスタマイズ {#customizing-newsletter-settings}
 
 ニュースレターを送信できるのは権限のあるユーザーのみですが、次の点をカスタマイズする必要があります。
 
 * 件名の行。ユーザーがメールを開きたくなり、ニュースレターがスパムとマークされないようにします。
-* 送信元アドレス。例： `noreply@geometrixx.com`を使用して、指定したアドレスから電子メールを受け取ることができます。
+* 送信者アドレス（`noreply@geometrixx.com`）。指定したアドレスからユーザーがメールを受信できるようにします。
 
 ニュースレター設定をカスタマイズするには：
 
@@ -184,7 +185,7 @@ ht-degree: 92%
 
 1. 必要に応じてメールの&#x200B;**件名**&#x200B;を変更します。
 
-1. を選択します。 **デフォルトの受信者リスト** 」をドロップダウンリストから選択します。
+1. 「**デフォルトの受信者リスト**」をドロップダウンリストから選択します。
 
 1. 「**OK**」をクリックします。
 
@@ -219,7 +220,7 @@ ht-degree: 92%
 >[!NOTE]
 >
 >アドビでは、AEM SMTP サービスが送信したメールの開封やバウンス（配信不能）をトラッキングする機能をさらに強化する計画はありません。
->使用をお勧めします。 [Adobe CampaignとAEMとの統合](/help/sites-administering/campaign.md).
+>[Adobe Campaign や AEM との統合](/help/sites-administering/campaign.md)を利用することをお勧めします。
 
 ニュースレターまたはリストからニュースレターを送信できます。両方の手順について説明します。
 
@@ -254,7 +255,7 @@ ht-degree: 92%
 
 1. 設定が完了しました。「**送信**」をクリックして、実際にニュースレターを送信します。
 
-   ![ニュースレターが確認を送信しました](assets/mcm_newslettersendconfirm.png)
+   ![送信されたニュースレターの確認](assets/mcm_newslettersendconfirm.png)
 
    >[!NOTE]
    >
@@ -274,7 +275,7 @@ ht-degree: 92%
 
 1. **ツール**&#x200B;メニューの「**ニュースレターを送信**」を選択します。**ニュースレターを送信**&#x200B;ウィンドウが開きます。
 
-   ![Newletter コンソール](assets/mcm_newslettersendfromlist.png)
+   ![ニュースレターコンソール](assets/mcm_newslettersendfromlist.png)
 
 1. 「**ニュースレター**」フィールドで、送信するニュースレターを選択し、「**次へ**」をクリックします。
 
@@ -282,7 +283,7 @@ ht-degree: 92%
 
 1. 設定が完了しました。「**送信**」をクリックして、選択したニュースレターを指定したリードのリストに送信します。
 
-   ![確認を送信](assets/mcm_newslettersenddialog_confirmation.png)
+   ![送信の確認](assets/mcm_newslettersenddialog_confirmation.png)
 
    ニュースレターは選択した受信者に送信されます。
 

@@ -5,10 +5,11 @@ contentOwner: AG
 role: Developer, Admin
 feature: Developer Tools,Renditions
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: e6e0ad29bc5b3a644f74427d8d60233c9e26aa03
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 75%
+source-wordcount: '694'
+ht-degree: 100%
 
 ---
 
@@ -22,13 +23,13 @@ ht-degree: 75%
 * デフォルトで生成されないサムネールを含む AI ファイルおよび PDFファイル。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
-PDFRasterizer を使用して生成されたサムネールとプレビューは、標準の出力に比べて画質が優れているので、デバイス間で一貫した表示エクスペリエンスを提供します。 Adobe PDF Rasterizer ライブラリは、カラースペースの変換をサポートしていません。 ソースファイルのカラースペースに関係なく、常にRGBに出力されます。
+PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、標準の出力に比べて高品質です。そのため、デバイス全体で一貫した視聴エクスペリエンスを実現します。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
 1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip) から PDF Rasterizer パッケージを [!DNL Adobe Experience Manager] のデプロイメントにインストールします。
 
    >[!NOTE]
    >
-   >PDFRasterizer ライブラリは、Windows と Linux®でのみ使用できます。
+   >PDF Rasterizer ライブラリは、Windows と Linux® のみで使用できます。
 
 1. [!DNL Assets] ワークフローコンソール（`https://[aem_server]:[port]/workflow`）にアクセスします。[!UICONTROL DAM アセットの更新]ワークフローを開きます。
 
@@ -51,15 +52,15 @@ PDFRasterizer を使用して生成されたサムネールとプレビューは
 
    * MIME タイプ： `application/pdf` または `application/postscript`
    * コマンド: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * サムネールのサイズを追加：319:319、140:100、48:48。 必要に応じて、カスタムのサムネール設定を追加します。
+   * 追加するサムネールのサイズ：319:319、140:100、48:48。必要に応じて、サムネールのカスタム設定を追加します。
 
-   コマンドライン引数 `PDFRasterizer` コマンドには、次のものを含めることができます。
+   `PDFRasterizer` コマンドのコマンドライン引数には、次を含めることができます。
 
-   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグより高品質な画像を作成します。 ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像のサイズが大きくなります。
+   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ高い画質の画像を作成します。ただし、このパラメーターを含めると、コマンドの実行速度が遅くなり、画像サイズも増大します。
 
-   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。ページのサイズが異なる場合、各ページは異なるサイズで拡大/縮小される可能性があります。 デフォルトは実際のページサイズです。
+   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
 
-   * `-t`：出力画像のタイプ有効なタイプは、JPEG、PNG、GIF、BMP です。 デフォルト値は JPEG です。
+   * `-t`：出力画像のタイプ有効なタイプは JPEG、PNG、GIF および BMP です。デフォルト値は JPEG です。
 
    * `-i`：入力 PDF のパス必須パラメーターです。
 
@@ -83,13 +84,13 @@ PDFRasterizer を使用して生成されたサムネールとプレビューは
    * コマンド: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * 追加するサムネールのサイズ：`319:319`、`140:100`、`48:48`必要に応じて、サムネールのカスタム設定を追加します。
 
-   コマンドライン引数 `PDFRasterizer` コマンドには、次のものを含めることができます。
+   `PDFRasterizer` コマンドのコマンドライン引数には、次を含めることができます。
 
-   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグより高品質な画像を作成します。 ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像のサイズが大きくなります。
+   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ高い画質の画像を作成します。ただし、このパラメーターを含めると、コマンドの実行速度が遅くなり、画像サイズも増大します。
 
-   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。ページのサイズが異なる場合、各ページは異なるサイズで拡大/縮小される可能性があります。 デフォルトは実際のページサイズです。
+   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
 
-   * `-t`：出力画像のタイプ有効なタイプは、JPEG、PNG、GIF、BMP です。 デフォルト値は JPEG です。
+   * `-t`：出力画像のタイプ有効なタイプは JPEG、PNG、GIF および BMP です。デフォルト値は JPEG です。
 
    * `-i`：入力 PDF のパス必須パラメーターです。
 

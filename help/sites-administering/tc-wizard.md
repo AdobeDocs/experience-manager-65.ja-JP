@@ -1,12 +1,13 @@
 ---
 title: 言語コピーウィザード
-description: Experience Manager での言語コピーウィザードの使用についてAdobeします。
+description: Adobe Exeprience Manager での言語コピーウィザードの使用について説明します。
 feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -16,11 +17,11 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->サイトの言語コピーを作成するには、ユーザーが projects-administrators グループのメンバーである必要があります。
+>サイトの言語コピーを作成するには、ユーザーはプロジェクト管理者グループのメンバーである必要があります。
 
 このウィザードにアクセスするには、次の手順を実行します。
 
-1. 「サイト」で、ページを選択し、「作成」をクリックします。
+1. Sites で、ページを選択して「作成」をクリックします。
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 

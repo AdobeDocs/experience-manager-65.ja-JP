@@ -1,15 +1,16 @@
 ---
 title: We.Retail のコンテンツフラグメントの使用
-description: We.Retail を使用して、Adobe Experience Managerのコンテンツフラグメントを試す方法を説明します。
+description: We.Retail による Adobe Experience Manager のコンテンツフラグメントの使用方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: b703f356f9475eeeafb1d5408c650d9c6971a804
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 

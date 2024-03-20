@@ -1,15 +1,16 @@
 ---
 title: We.Retail のグローバル化されたサイト構造の使用
-description: We.Retail を使用して、Adobe Experience Managerでグローバル化されたサイト構造を試す方法を説明します。
+description: We.Retail を使用して、Adobe Experience Manager でグローバル化されたサイト構造を試す方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +20,7 @@ We.Retail は、グローバル化されたサイト構造を使用して構築�
 
 ## 試してみる {#trying-it-out}
 
-1. 次の場所からサイトコンソールを開きます。 **グローバルナビゲーション/サイト**.
+1. **グローバルナビゲーション／Sites** から Sites コンソールを開きます。
 1. 列表示に切り替えて（まだアクティブでない場合）、We.Retail を選択します。サンプルの国の構造には、言語メインに加えてスイス、アメリカ、フランスなどが含まれています。
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
@@ -46,7 +47,7 @@ We.Retail は、グローバル化されたサイト構造を使用して構築�
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 各言語の翻訳用にプロジェクトが作成されます。それらをの下に表示します。 **ナビゲーション/プロジェクト**.
+1. 各言語の翻訳用にプロジェクトが作成されます。作成されたプロジェクトは、**ナビゲーション／プロジェクト**&#x200B;に表示されます。
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -68,4 +69,4 @@ We.Retail は、グローバル化されたサイト構造を使用して構築�
 
 ## 詳細情報 {#further-information}
 
-詳しくは、オーサリングドキュメントを参照してください。 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md) 」を参照してください。
+技術的な詳細について詳しくは、オーサリングドキュメントの[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。

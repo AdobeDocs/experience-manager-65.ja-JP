@@ -1,6 +1,6 @@
 ---
 title: デバイスグループフィルターの作成
-description: デバイスグループフィルターを作成して、一連のデバイス機能要件を定義する
+description: デバイスグループフィルターを作成して、一連のデバイスの機能の要件を定義する
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: mobile-web
@@ -8,10 +8,11 @@ content-type: reference
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
-source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '756'
-ht-degree: 39%
+ht-degree: 89%
 
 ---
 
@@ -19,19 +20,19 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-デバイスグループフィルターを作成して、一連のデバイス機能要件を定義します。 必要なデバイス機能のグループをターゲットにするために必要な数のフィルターを作成します。
+デバイスグループフィルターを作成して、一連のデバイスの機能の要件を定義します。デバイスの機能の必要なグループをターゲットとして指定するには、必要な数のフィルターを作成します。
 
-組み合わせを使用して機能のグループを定義できるようにフィルターをデザインします。 通常、異なるデバイスグループの機能が重複します。 したがって、複数のデバイスグループ定義で一部のフィルターを使用する場合があります。
+フィルターを設計して、それらの組み合わせを使用して機能のグループを定義できるようにします。通常、異なるデバイスグループの機能は重複します。そのため、一部のフィルターを複数のデバイスグループ定義と共に使用できます。
 
-作成したフィルターは、 [グループ設定。](/help/sites-developing/mobile.md#creating-a-device-group)
+作成したフィルターは[グループ設定](/help/sites-developing/mobile.md#creating-a-device-group)で使用できます。
 
 ## Filter Java™クラス {#the-filter-java-class}
 
-デバイスグループフィルターは、 [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイス。 デプロイすると、実装クラスは、デバイスグループの設定で使用できるフィルターサービスを提供します。
+デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事で説明するソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。 したがって、Java™クラスの例では、 `@Component`および `@Service` 注釈。 クラスは次の構造を持ちます。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、Java™クラスの例では、 `@Component`および `@Service` 注釈。 このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -71,7 +72,7 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 
 ### フィルターの名前と説明の指定 {#providing-the-filter-name-and-description}
 
-`getTitle` メソッドと `getDescription` メソッドは、それぞれフィルター名と説明を返します。次のコードは、最も簡単な実装を示しています。
+`getTitle` メソッドと `getDescription` メソッドは、それぞれフィルター名と説明を返します。次のコードは、最も単純な実装を示しています。
 
 ```java
 public String getDescription() {
@@ -83,15 +84,15 @@ public String getTitle() {
 }
 ```
 
-言語を 1 つにするオーサリング環境では、名前と説明のテキストをハードコーディングすれば十分です。 複数言語で使用する場合は、文字列を外部化すること、またはソースコードを再コンパイルせずに文字列を変更できるようにすることを検討します。
+一言語のオーサリング環境の場合、名前と説明のテキストをハードコードするだけで十分です。複数言語を使用する場合や、ソースコードを再コンパイルせずに文字列の変更を有効にする場合は、文字列を外部化することを検討してください。
 
 ### フィルター条件に対する評価 {#evaluating-against-filter-criteria}
 
-The `matches` 関数の戻り値 `true` （デバイスの機能がすべてのフィルター条件を満たす場合）。 デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
+デバイスの機能がすべてのフィルター条件を満たす場合、`matches` 関数は `true` を返します。デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
 
 * DeviceGroup オブジェクト
 * ユーザーエージェントの名前
-* デバイス機能を格納する Map オブジェクト。 Map キーは WURFL™の機能名で、値は WURFL™データベースの対応する値です。
+* デバイスの機能を格納する Map オブジェクト。Map のキーは WURFL™ の機能名であり、値は WURFL™ データベースの対応する値です。
 
 [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスの静的なフィールドには WURFL™ の機能名のサブセットが含まれます。デバイスの機能の Map から値を取得する場合は、これらのフィールドの定数をキーとして使用します。
 
@@ -106,11 +107,11 @@ cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML
 
 >[!NOTE]
 >
->AEMにデプロイされる WURFL™データベースに、フィルター条件として使用する機能が含まれていることを確認します。 ( 詳しくは、 [デバイス検出](/help/sites-developing/mobile.md#server-side-device-detection).)
+>AEM にデプロイされる WURFL™ データベースには、フィルター条件として使用する機能が含まれます。（[デバイスの検出](/help/sites-developing/mobile.md#server-side-device-detection)を参照。）
 
-### 画面サイズのフィルターの例 {#example-filter-for-screen-size}
+### 画面サイズ用のサンプルフィルター {#example-filter-for-screen-size}
 
-次に示す DeviceGroupFilter の実装例では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。 このフィルターは、タッチデバイスグループに精度を追加するためのものです。 アプリケーション UI のボタンのサイズは、物理的な画面のサイズに関係なく同じにする必要があります。 他の項目（テキストなど）のサイズは変わる場合があります。 フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
+以下に示すサンプルの DeviceGroupFilter 実装では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。このフィルターは、タッチデバイスグループに精度を追加します。アプリケーション UI のボタンのサイズは、画面の物理サイズに関係なく同じにしてください。他の項目（テキストなど）のサイズは変更できます。フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
 
 このフィルターは、`physical_screen_height` と `physical_screen_width` の WURFL™ プロパティ名に対してサイズ基準を適用します。
 

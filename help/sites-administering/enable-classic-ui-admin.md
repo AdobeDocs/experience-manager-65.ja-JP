@@ -1,29 +1,30 @@
 ---
 title: 管理コンソール
-description: Adobe Experience Managerで使用できるAdmin Consoleの使用方法を説明します。
+description: Adobe Experience Manager で使用可能な Admin Console の使用方法について説明します。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: f7b24617dec77c6907798b1615debdc2329c9d80
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
 
-# 管理コンソール{#admin-consoles}
+# Admin Console{#admin-consoles}
 
-デフォルトでは、管理コンソールを介してクラシック UI に切り替える機能は無効になっています。 したがって、特定のコンソールアイコンにマウスを合わせると表示されるポップアップアイコン（クラシック UI にアクセスできる）は表示されなくなりました。
+Admin Console からクラシック UI に切り替える機能は、デフォルトで無効になっています。そのため、特定のコンソールアイコンにマウスを移動したときに表示され、クラシック UI にアクセスするためのポップアップアイコンは表示されなくなりました。
 
-各コンソールのクラシック UI バージョンは `/libs/cq/core/content/nav` にあり、個別に再有効化できます。それぞれのクラシック UI を有効にすれば、コンソールアイコンの上にマウスを移動したときに、「**クラシック UI**」オプションが再度ポップアップするようになります。
+`/libs/cq/core/content/nav` にクラシック UI バージョンがあるすべてのコンソールは個別に再有効化することができ、コンソールアイコンの上にマウスを移動すると、「**クラシック UI**」オプションが再びポップアップ表示されます。
 
-この例では、サイトコンソールのクラシック UI を再度有効にします。
+以下の例では、Sites コンソールのクラシック UI を再有効化しています。
 
-1. CRXDE Liteを使用して、クラシック UI を再度有効にするAdmin Consoleに対応するノードを探します。 目的のノードは次の場所にあります。
+1. CRXDE Lite を使用して、クラシック UI を再有効化する Admin Console に対応するノードを見つけます。目的のノードは次の場所にあります。
 
    `/libs/cq/core/content/nav`
 
@@ -31,7 +32,7 @@ ht-degree: 49%
 
    [`https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
-1. クラシック UI を再有効化するコンソールのノードを選択します。この例では、サイトコンソールのクラシック UI を再度有効にします。
+1. クラシック UI を再有効化するコンソールのノードを選択します。以下の例では、Sites コンソールのクラシック UI を再有効化しています。
 
    `/libs/cq/core/content/nav/sites`
 
@@ -45,7 +46,7 @@ ht-degree: 49%
 
    `enableDesktopOnly = {Boolean}true`
 
-1. The **クラシック UI** オプションは、Admin Consoleのポップオーバーオプションとして再び使用できます。
+1. 「**クラシック UI**」オプションが、Admin Console に再びポップアップされるようになります。
 
    ![クラシック UI ポップオーバーオプション](assets/syui-01-2019-02-27-15-16-55.png)
 

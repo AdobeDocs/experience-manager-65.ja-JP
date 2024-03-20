@@ -1,6 +1,6 @@
 ---
 title: アップグレード前のメンテナンスタスク
-description: AEMで推奨されるアップグレード前のタスクについて説明します。
+description: AEM に推奨されるアップグレード前のタスクについて説明します。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,10 +8,11 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '2014'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +57,7 @@ jar ファイルから AEM を起動すると、`crx-quickstart/conf` の下に 
 
 `WorkflowPurgeTask` タスクと `com.day.cq.audit.impl.AuditLogMaintenanceTask` タスクには個別の OSGi 設定が必要であり、この設定がない場合は機能しません。アップグレード前のタスクの実行中にこれらのタスクが失敗した場合、最も考えられる原因は、タスクに設定がないことです。したがって、これらのタスクに OSGi 設定を追加するか、タスクを実行しない場合はアップグレード前の最適化タスクリストから完全に削除してください。ワークフローのパージタスクの設定に関するドキュメントは[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)で、監査ログのメンテナンスタスクの設定に関するドキュメントは [AEM 6 の監査ログのメンテナンス](/help/sites-administering/operations-audit-log.md)で参照できます。
 
-CQ 5.6 でのワークフローおよび監査ログのパージとAEM 6.0 での監査ログのパージについては、 [ワークフローと監査ノードのパージ](https://helpx.adobe.com/jp/experience-manager/kb/howtopurgewf.html).
+CQ 5.6 でのワークフローと監査ログのパージ、AEM 6.0 での監査ログのパージについては、[ワークフローと監査ノードのパージ](https://helpx.adobe.com/jp/experience-manager/kb/howtopurgewf.html)を参照してください。
 
 ## アップグレード前のタスクのインストール、設定および実行 {#install-configure-run-pre-upgrade-tasks}
 

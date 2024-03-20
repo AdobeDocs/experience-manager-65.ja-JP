@@ -8,10 +8,11 @@ topic-tags: hTML5_forms
 docset: aem65
 feature: HTML5 Forms
 exl-id: ed8349a1-f761-483f-9186-bf435899df7d
-source-git-commit: 524475c8f9dbd02bae30ecd558a376505fbe0aed
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1976'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -170,7 +171,7 @@ Sling パッケージには、プロファイルとプロファイルレンダ�
 
 #### プロファイルレンダラー {#profile-renderers}
 
-プロファイルノードには、**xfaforms/profile** の値を持つ **sling:resourceSuperType** プロパティがあります。このプロパティは、内部的に、 **/libs/xfaforms/profile** フォルダー。 これらのスクリプトは JSP ページであり、HTML フォームと必要な JS/CSS アーティファクトをまとめるコンテナです。このページには、次への参照が含まれます。
+プロファイルノードには、**xfaforms/profile** の値を持つ **sling:resourceSuperType** プロパティがあります。このプロパティは転送リクエストを、**/libs/xfaforms/profile** フォルダーにあるプロファイルノードの Sling スクリプトに内部的に送信します。これらのスクリプトは JSP ページであり、HTML フォームと必要な JS/CSS アーティファクトをまとめるコンテナです。このページには、次への参照が含まれます。
 
 * **xfaforms.I18N.&lt;locale>**：このライブラリには、ローカライズされたデータが含まれています。
 * **xfaforms.profile**：このライブラリには、XFA スクリプティングとレイアウトエンジンの実装が含まれています。

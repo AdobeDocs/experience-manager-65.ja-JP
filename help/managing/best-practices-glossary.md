@@ -7,7 +7,8 @@ topic-tags: managing-checklist
 content-type: reference
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 80e85ed78a26d784f4aa8e36c7de413cf9c03fa2
+solution: Experience Manager, Experience Manager 6.5
+source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
 workflow-type: tm+mt
 source-wordcount: '6926'
 ht-degree: 99%
@@ -102,7 +103,7 @@ ht-degree: 99%
 
 ### 適切なトレーニングを受けたスタッフ {#appropriately-trained-staff}
 
-チームが適切なトレーニングを受けたスタッフで構成されていることを確認します。プロジェクトチームの場合は、次のすべてをおこなうことをお勧めします。
+チームが適切なトレーニングを受けたスタッフで構成されていることを確認します。プロジェクトチームの場合、次のすべての条件を満たしていることが推奨されます。
 
 * 少なくとも 1 人の AEM 認定リード開発者
 * 少なくとも 1 人の AEM 認定アーキテクト
@@ -291,7 +292,7 @@ ht-degree: 99%
 
 ### 現在のコンテンツの構造と形式 {#current-content-structure-and-format}
 
-現在のコンテンツのアーキテクチャと形式に関するドキュメントです。これは、将来のコンテンツアーキテクチャの生成に使用されます。 また、移行の概念にも使用されます。
+現在のコンテンツのアーキテクチャと形式に関するドキュメントです。これは、今後のコンテンツアーキテクチャの生成に使用されます。また、移行の概念にも使用されます。
 
 ### 顧客のバックアップと復元のポリシー {#customer-backup-and-restore-policy}
 
@@ -555,7 +556,7 @@ AEM と高レベルのソリューション設計の両方に関する実行可�
 
 ### 過去のパフォーマンスと過去のパフォーマンス KPI {#historical-performance-and-historical-performance-kpis}
 
-レガシーシステムからパフォーマンス統計とパフォーマンス KPI を収集し、文書化します。 これらは後に、基準点として使用されるか、または新しいソリューションのベンチマーク用に使用されます。
+パフォーマンス統計およびパフォーマンス KPI をレガシーシステムから収集して、文書化します。これらは後に、基準点として使用されるか、または新しいソリューションのベンチマーク用に使用されます。
 
 ### キーとなる最も重要なソリューションや機能を特定 {#identify-critical-key-solutions-functionalities}
 
@@ -668,7 +669,7 @@ URL 処理の概念を実装します。
 
 ### 使用する開発ツールのリスト {#list-of-development-tools-to-be-used}
 
-実装で使用されるツールの概要です。ツールには次のものが含まれます。
+実装で使用する、次のようなツールの概要を示します。
 
 * ドキュメントツール
 * 問題追跡ツール

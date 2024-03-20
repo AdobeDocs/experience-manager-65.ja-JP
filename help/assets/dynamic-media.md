@@ -8,10 +8,11 @@ content-type: reference
 role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Collaboration,Asset Management
-source-git-commit: 04050f31742c926b45235595f6318929d3767bd8
+solution: Experience Manager, Experience Manager Assets
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +28,7 @@ Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタ�
 
 ## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Mediaを使用すると、アセットを公開する前に管理できます。 一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
+Dynamic Media を使用すると、アセットを公開する前に管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
 
 Dynamic Media 限定の機能は次のとおりです。
 
@@ -80,7 +81,7 @@ Dynamic Media 対応のアセットには `pyramid.tiffs` が含まれます。
 
 ### アセットのビューの変化 {#asset-views-change}
 
-Dynamic Mediaを有効にした場合、 `+` および `-` ボタン。 クリックして特定の領域にズームインすることもできます。 「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像を全画面表示にすることができます。 Dynamic Media enabled は次のようになります。
+Dynamic Media を有効にした場合、`+` および `-` ボタンをクリックして、ズームインおよびズームアウトできます。クリックして、特定のエリアにズームインすることもできます。「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像を全画面表示にすることができます。Dynamic Media を有効にした場合の画面は次のようになります。
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 

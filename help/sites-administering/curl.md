@@ -1,60 +1,61 @@
 ---
 title: AEM での cURL の使用
-description: 一般的なAdobe Experience Managerタスクで cURL を使用する方法を説明します。
+description: 一般的な Adobe Experience Manager タスクに cURL を使用する方法について説明します。
 contentOwner: Silviu Raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
 # AEM での cURL の使用{#using-curl-with-aem}
 
-管理者は、多くの場合、あらゆるシステム内で一般的なタスクを自動化またはシンプル化する必要があります。 例えば、AEMでは、ユーザーの管理、パッケージのインストール、OSGi バンドルの管理は、一般的におこなう必要があるタスクです。
+管理者は、多くの場合、システムの一般的なタスクを自動化またはシンプル化する必要があります。例えば、AEM では、ユーザーの管理、パッケージのインストールおよび OSGi バンドルの管理は、一般に行う必要のあるタスクです。
 
-AEM が構築されている Sling フレームワークの RESTful 特性により、ほとんどのタスクは URL 呼び出しで実行できます。cURL は、このような URL 呼び出しの実行に使用でき、AEM管理者に役立つツールになります。
+AEM が構築されている Sling フレームワークの RESTful 特性により、ほとんどのタスクは URL 呼び出しで実行できます。cURL は、そのような URL 呼び出しの実行に使用でき、AEM 管理者にとって便利なツールです。
 
 ## cURL とは {#what-is-curl}
 
-cURL は、URL 操作を実行するために使用されるオープンソースのコマンドラインツールです。 HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP および RTSP など、様々なインターネットプロトコルをサポートします。
+cURL は、URL 操作を実行するために使用される、オープンソールのコマンドラインツールです。HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP および RTSP など、様々なインターネットプロトコルをサポートします。
 
-cURL は、URL 構文を使用してデータを取得または送信するための、よく確立され、広く使用されているツールで、元々は 1997 年にリリースされていました。 cURL という名前は、元々は「URL を参照」を意味していました。
+cURL は、URL 構文を使用してデータを取得または送信するための、広く使用される安定したツールで、最初にリリースされたのは 1997 年です。cURL という名前の由来は、「URL を参照（see URL）」です。
 
-AEMが構築される Sling フレームワークの RESTful な性質により、ほとんどのタスクを URL 呼び出しに短縮できます。この呼び出しは、cURL を使用して実行できます。 [コンテンツ操作タスク](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) ページのアクティベート、ワークフローの開始、および [運用タスク](/help/sites-administering/curl.md#common-operational-aem-curl-commands) パッケージの管理やユーザーの管理など、cURL を使用して自動化できます。 また、 [独自の cURL を作成する](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) AEMのほとんどのタスク用のコマンド
+AEM が構築されている Sling フレームワークの RESTful 特性により、ほとんどのタスクを URL 呼び出しに集約し、cURL で実行することができます。ページのアクティベートおよびワークフローの開始などの[コンテンツ操作タスク](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands)や、パッケージ管理およびユーザー管理などの[運用タスク](/help/sites-administering/curl.md#common-operational-aem-curl-commands)は、cURL を使用して自動化できます。さらに、AEM のほとんどのタスクについて、[独自の cURL コマンドを作成](/help/sites-administering/curl.md#building-a-curl-ready-aem-command)できます。
 
 >[!NOTE]
 >
->cURL を使用して実行されるAEMコマンドは、AEMのユーザーと同様に許可される必要があります。 cURL を使用してAEMコマンドを実行する場合、すべての ACL とアクセス権が尊重されます。
+>cURL を使用して実行された AEM コマンドは、AEM の任意のユーザーと同様に承認される必要があります。cURL を使用して AEM コマンドを実行する場合、すべての ACL およびアクセス権が適用されます。
 
-## cURL のダウンロード中 {#downloading-curl}
+## cURL のダウンロード {#downloading-curl}
 
-cURL は、macOSおよび一部の Linux ディストリビューションの標準部分です。 ただし、ほとんどのオペレーティングシステムで使用できます。 最新のダウンロードは、[https://curl.haxx.se/download.html](https://curl.haxx.se/download.html) にあります。
+cURL は、macOS および一部の Linux ディストリビューションに標準で備わっています。実質的にほぼすべてのオペレーティングシステムで使用できます。最新のダウンロードは、[https://curl.haxx.se/download.html](https://curl.haxx.se/download.html) にあります。
 
 cURL のソースリポジトリは、GitHub にもあります。
 
-## cURL 対応AEMコマンドの構築 {#building-a-curl-ready-aem-command}
+## cURL 対応 AEM コマンドの作成 {#building-a-curl-ready-aem-command}
 
-cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認、JMX コマンドのトリガー、レプリケーションエージェントの作成など、AEMのほとんどの操作に対して構築できます。
+cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認、JMX コマンドのトリガー、レプリケーションエージェントの作成など、AEM のほとんどの操作を対象に作成できます。
 
-特定の操作に必要な正確なコマンドを見つけるには、ブラウザーの開発者ツールを使用して、AEMコマンドの実行時にサーバーに対するPOST呼び出しをキャプチャする必要があります。
+特定の操作に必要な最適なコマンドを見つけるには、ブラウザーの開発者ツールを使用して、AEM コマンドを実行する際に、サーバーに対する POST 呼び出しをキャプチャする必要があります。
 
-次の手順では、例として Chrome ブラウザー内で新しいページを作成する方法を説明します。
+次の手順では、例として、Chrome ブラウザー内で新しいページを作成してこの操作を実行する方法について説明します。
 
-1. AEM内で呼び出すアクションを準備します。 この例では、**ページを作成**&#x200B;ウィザードの最後まで進みましたが、まだ「**作成**」はクリックしていません。
+1. AEM 内で呼び出すアクションを準備します。この例では、**ページを作成**&#x200B;ウィザードの最後まで進みましたが、まだ「**作成**」はクリックしていません。
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
-1. 開発者ツールを起動し、「 **ネットワーク** タブをクリックします。 次をクリック： **ログを保持** オプションを使用して、コンソールをクリアします。
+1. 開発者ツールを開始して、「**ネットワーク**」タブを選択します。コンソールをクリアする前に、「**ログを保持**」オプションをクリックします。
 
    ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-1. クリック **作成** （内） **ページを作成** ウィザードを使用して実際にワークフローを作成します。
-1. 結果のアクションを右クリックし、「POST」アクションを選択します。 **コピー** > **cURL としてコピー**.
+1. **ページを作成**&#x200B;ウィザードの「**作成**」をクリックして、実際にワークフローを作成します。
+1. 結果として表示される POST アクションを右クリックして、**コピー**／**cURL としてコピー**&#x200B;を選択します。
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
@@ -66,15 +67,15 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-## 一般的な Operational AEM cURL コマンド {#common-operational-aem-curl-commands}
+## 一般的な操作の AEM cURL コマンド {#common-operational-aem-curl-commands}
 
-一般的な管理タスクと運用タスクに対するAEM cURL コマンドのリストを次に示します。
+次に、一般的な管理および操作タスクの AEM cURL コマンドのリストを示します。
 
 >[!NOTE]
 >
->次の例では、AEM が `localhost` のポート `4502` で実行され、ユーザー `admin`（パスワード `admin`）を使用していると仮定します。追加のコマンドプレースホルダは山括弧で囲んで設定します。
+>次の例では、AEM が `localhost` のポート `4502` で実行され、ユーザー `admin`（パスワード `admin`）を使用していると仮定します。追加のコマンドのプレースホルダーは、山括弧で囲まれています。
 
-### パッケージ管理 {#package-management}
+### パッケージを管理 {#package-management}
 
 #### インストールされているすべてのパッケージを一覧表示
 
@@ -82,37 +83,37 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 curl -u <user>:<password> http://<host>:<port>/crx/packmgr/service.jsp?cmd=ls
 ```
 
-#### パッケージの作成 {#create-a-package}
+#### パッケージを作成 {#create-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=create -d packageName=<name> -d groupName=<name>
 ```
 
-#### パッケージのプレビュー {#preview-a-package}
+#### パッケージをプレビュー {#preview-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=preview
 ```
 
-#### パッケージコンテンツをリスト {#list-package-content}
+#### パッケージコンテンツを一覧表示 {#list-package-content}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
 ```
 
-#### パッケージのビルド {#build-a-package}
+#### パッケージをビルド {#build-a-package}
 
 ```shell
 curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=build
 ```
 
-#### パッケージの再ラップ {#rewrap-a-package}
+#### パッケージを再度含める {#rewrap-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
 ```
 
-#### パッケージ名の変更 {#rename-a-package}
+#### パッケージの名前変更 {#rename-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
@@ -168,13 +169,13 @@ curl -u <user>:<password> -FcreateUser= -FauthorizableId=hashim -Frep:password=h
 curl -u <user>:<password> -FcreateGroup=group1 -FauthorizableId=testGroup1 http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### 既存のユーザーにプロパティを追加する {#add-a-property-to-an-existing-user}
+#### 既存のユーザーへのプロパティの追加 {#add-a-property-to-an-existing-user}
 
 ```shell
 curl -u <user>:<password> -Fprofile/age=25 http://localhost:4502/home/users/h/hashim.rw.html
 ```
 
-#### プロファイルを持つユーザーの作成 {#create-a-user-with-a-profile}
+#### プロファイルを使用したユーザーの作成 {#create-a-user-with-a-profile}
 
 ```shell
 curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=hashimkhan -Frep:password=hashimkhan -Fprofile/gender=male http://localhost:4502/libs/granite/security/post/authorizables
@@ -186,7 +187,7 @@ curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=hashimkhan -Fre
 curl -u <user>:<password> -FcreateUser=testuser -FauthorizableId=testuser -Frep:password=abc123 -Fmembership=contributor http://localhost:4502/libs/granite/security/post/authorizables
 ```
 
-#### グループにユーザーを追加する {#add-a-user-to-a-group}
+#### グループへのユーザーの追加 {#add-a-user-to-a-group}
 
 ```shell
 curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
@@ -198,7 +199,7 @@ curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/grou
 curl -u <user>:<password> -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
-#### ユーザーのグループメンバーシップを設定する {#set-a-user-s-group-membership}
+#### ユーザーのグループのメンバーシップの設定 {#set-a-user-s-group-membership}
 
 ```shell
 curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
@@ -295,7 +296,7 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 ### セキュリティ {#security}
 
-#### CRX DE Lite の有効化と無効化 {#enabling-and-disabling-crx-de-lite}
+#### CRX DE Lite の有効化および無効化 {#enabling-and-disabling-crx-de-lite}
 
 詳しくは、[AEM で CRXDE Lite を有効にする](/help/sites-administering/enabling-crxde-lite.md)を参照してください。
 
@@ -313,15 +314,15 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 詳しくは、[シングルサインオン](/help/sites-deploying/single-sign-on.md)を参照してください。
 
-## 一般的なコンテンツ操作AEM cURL コマンド {#common-content-manipulation-aem-curl-commands}
+## 一般的なコンテンツ操作の AEM cURL コマンド {#common-content-manipulation-aem-curl-commands}
 
-コンテンツ操作用のAEM cURL コマンドのリストを次に示します。
+次に、コンテンツ操作の AEM cURL コマンドのリストを示します。
 
 >[!NOTE]
 >
->次の例では、AEM が `localhost` のポート `4502` で実行され、ユーザー `admin`（パスワード `admin`）を使用していると仮定します。追加のコマンドプレースホルダは山括弧で囲んで設定します。
+>次の例では、AEM が `localhost` のポート `4502` で実行され、ユーザー `admin`（パスワード `admin`）を使用していると仮定します。追加のコマンドのプレースホルダーは、山括弧で囲まれています。
 
-### ページ管理 {#page-management}
+### ページを管理 {#page-management}
 
 #### ページのアクティベーション {#page-activation}
 
@@ -329,7 +330,7 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="activate" http://localhost:4502/bin/replicate.json
 ```
 
-#### ページの非アクティブ化 {#page-deactivation}
+#### ページのアクティベーション解除 {#page-deactivation}
 
 ```shell
 curl -u <user>:<password> -X POST -F path="/content/path/to/page" -F cmd="deactivate" http://localhost:4502/bin/replicate.json
@@ -347,7 +348,7 @@ curl -u <user>:<password> -F cmd=activate -F ignoredeactivated=true -F onlymodif
 curl -u <user>:<password> -X POST -F cmd="lockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
 ```
 
-#### ページのロックを解除 {#unlock-page}
+#### ページをロック解除 {#unlock-page}
 
 ```shell
 curl -u <user>:<password> -X POST -F cmd="unlockPage" -F path="/content/path/to/page" -F "_charset_"="utf-8" http://localhost:4502/bin/wcmcommand
@@ -365,37 +366,37 @@ curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination
 
 ### Sling コンテンツ {#sling-content}
 
-#### フォルダーの作成 {#create-a-folder}
+#### フォルダーを作成 {#create-a-folder}
 
 ```shell
 curl -u <user>:<password> -F jcr:primaryType=sling:Folder http://localhost:4502/etc/test
 ```
 
-#### ノードの削除 {#delete-a-node}
+#### ノードを削除 {#delete-a-node}
 
 ```shell
 curl -u <user>:<password> -F :operation=delete http://localhost:4502/etc/test/test.properties
 ```
 
-#### ノードの移動 {#move-a-node}
+#### ノードを移動 {#move-a-node}
 
 ```shell
 curl -u <user>:<password> -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
-#### ノードのコピー {#copy-a-node}
+#### ノードをコピー {#copy-a-node}
 
 ```shell
 curl -u <user>:<password> -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
-#### Sling PostServlet を使用したファイルのアップロード {#upload-files-using-sling-postservlet}
+#### Sling PostServlet の使用によるファイルのアップロード {#upload-files-using-sling-postservlet}
 
 ```shell
 curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 ```
 
-#### Sling PostServlet を使用したファイルのアップロードとノード名の指定 {#upload-files-using-sling-postservlet-and-specifying-node-name}
+#### Sling PostServlet の使用およびノード名の指定によるファイルのアップロード {#upload-files-using-sling-postservlet-and-specifying-node-name}
 
 ```shell
 curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
@@ -407,6 +408,6 @@ curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhos
 curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
 ```
 
-### アセット操作 {#asset-manipulation}
+### アセットを操作 {#asset-manipulation}
 
 詳しくは、[Assets HTTP API](/help/assets/mac-api-assets.md) を参照してください。

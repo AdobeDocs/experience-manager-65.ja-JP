@@ -1,6 +1,6 @@
 ---
 title: AEM 6.5 のカスタムユーザグループマッピング
-description: Adobe Experience Managerでのカスタムユーザーグループマッピングの仕組みを説明します。
+description: Adobe Experience Manager でカスタムユーザーグループマッピングがどのように機能するかを説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -8,10 +8,11 @@ content-type: reference
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '469'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 

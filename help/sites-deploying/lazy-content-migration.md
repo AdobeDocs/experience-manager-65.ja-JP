@@ -8,7 +8,8 @@ topic-tags: upgrading
 docset: aem65
 feature: Upgrading
 exl-id: 946c7c2a-806b-4461-a38b-9c2e5ef1e958
-source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 27%

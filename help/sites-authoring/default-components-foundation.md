@@ -2,10 +2,11 @@
 title: 基盤コンポーネント
 description: Adobe Experience Manager 6.5 の基盤コンポーネントについて説明します。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '6873'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 98%
 
 基盤コンポーネントは、標準の web ページ用のコンテンツを作成するためのものです。AEM の標準のインストールでそのまま使用できるコンポーネントのサブセットとなります。
 
-一部のコンポーネントは、コンポーネントブラウザーから直ちに使用できます。 その他の様々な機能は、 [デザインモード](/help/sites-authoring/default-components-designmode.md) （ページが静的テンプレートに基づいている場合）または [テンプレートの編集](/help/sites-authoring/templates.md) （ページが編集可能なテンプレートに基づいている場合）
+一部のコンポーネントは、コンポーネントブラウザーからすぐに使用できます。他の様々なコンポーネントも、[デザインモード](/help/sites-authoring/default-components-designmode.md)（静的テンプレートに基づいたページの場合）または[テンプレートの編集](/help/sites-authoring/templates.md)（編集可能テンプレートに基づいたページの場合）を使用して利用できます。
 
 基盤コンポーネントの使用はサポートされていますが、基盤コンポーネントはほぼ廃止され、より拡張性と柔軟性の高いコアコンポーネントに置き換わりました。
 
@@ -201,12 +202,12 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 
       * **詳細検索のオプション**
 
-         * **Querybuilder 述語の表記法**
-検索クエリは、 Querybuilder 述語の表記を使用して入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれるすべてのページがカルーセルに表示されます。
+         * **QueryBuilder 述語の表記**
+「QueryBuilder 述語の表記」を使用して検索クエリを入力できます。例えば、「fulltext=Marketing」と入力すると、コンテンツに「Marketing」が含まれる、すべてのページがカルーセルに表示されます。
 クエリー式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
 
    * **並べ替え順**
-選択 `jcr:title`, `jcr:created`, `cq:lastModified`または `cq:template` をドロップダウンメニューから選択します。
+ドロップダウンメニューから、「`jcr:title`」、「`jcr:created`」、「`cq:lastModified`」または「`cq:template`」を選択します。
 
    * **制限**
 オプション。カルーセルで使用する項目の最大数です。
@@ -351,7 +352,7 @@ Flash コンポーネントを使用すると、Flash ムービーを読み込�
 
    * **ウィンドウモード**
 
-     ウィンドウの表示方法 ( 不透明、透明、別個の（実線）ウィンドウなど )。
+     不透明、透明、枠付きウィンドウなど、ウィンドウの表示方法。
 
    * **背景色**
 

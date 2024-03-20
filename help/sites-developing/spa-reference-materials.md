@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 exl-id: 3d66e861-aaf4-4227-b31a-3545bb3561d0
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '112'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +22,7 @@ AEM SPA エディター SDK フレームワーク用の NPM モジュールに�
 
 >[!NOTE]
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
@@ -30,7 +31,7 @@ AEM SPA エディター SDK フレームワーク用の NPM モジュールに�
 
 ## オープンソース GitHub リポジトリー {#github-repositories}
 
-GitHub 上のSPAライブラリのオープンソースリポジトリーを次に示します。
+GitHub での SPA ライブラリのオープンソースリポジトリーは次のとおりです。
 
 * [コンポーネントのマッピング](https://github.com/adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://github.com/adobe/aem-spa-page-model-manager)

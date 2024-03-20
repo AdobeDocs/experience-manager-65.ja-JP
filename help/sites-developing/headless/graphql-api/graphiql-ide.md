@@ -2,10 +2,13 @@
 title: AEM での GraphiQL IDE の使用
 description: Adobe Experience Manager で GraphiQL IDE を使用する方法について説明します。
 exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
-source-git-commit: 10b370fd8f855f71c6d7d791c272137bb5e04d97
+solution: Experience Manager, Experience Manager Sites
+feature: Content Fragments,GraphQL API
+role: Developer
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '783'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -22,12 +25,12 @@ ht-degree: 98%
 >[!NOTE]
 >GraphiQL IDE を使用する前に、[設定ブラウザー](/help/assets/content-fragments/content-fragments-configuration-browser.md)で[エンドポイントを設定](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)しておく必要があります。
 
-**GraphiQL** ツールを使用すると、次のことが可能になるので、GraphQL クエリーをテストおよびデバッグできます。
+**GraphiQL** ツールを使用すると次のことが可能になるので、GraphQL クエリをテストおよびデバッグできます。
 
 * クエリに使用する Sites 設定に適した&#x200B;**エンドポイント**&#x200B;を選択する
 * 新しいクエリを直接入力する
 * **[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)**&#x200B;を作成してアクセスする
-* クエリーを実行して結果をすぐに確認する
+* クエリを実行して結果をすぐに確認する
 * **クエリ変数**&#x200B;を管理する
 * **永続クエリ**&#x200B;を保存して管理する
 * **永続クエリ**&#x200B;を公開または非公開にする（`dev-publish` との間など）
@@ -36,7 +39,7 @@ ht-degree: 98%
 
 クエリエディターには、次のいずれかの方法でアクセスできます。
 
-* **ツール** > **一般** > **GraphQL Query Editor**
+* **ツール**／**一般**／**GraphQL クエリエディター**
 * 直接アクセス（例：`http://localhost:4502/aem/graphiql.html`）
 
 ![GraphiQL インターフェイス](assets/cfm-graphiql-interface.png "GraphiQL インターフェイス")
@@ -82,16 +85,16 @@ ht-degree: 98%
 
 どちらの場合も、エディターパネルに表示されるクエリは、次のいずれかの場合に実行されるクエリです。
 
-* をクリックします。 **クエリを実行** アイコン
+* 「**クエリを実行**」アイコンをクリックする
 * キーボードショートカット `Control-Enter` を使用する
 
 ## クエリ変数 {#query-variables}
 
 <!-- more details needed here? -->
 
-GraphiQL IDE では、[クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)を管理することもできます。
+また、GraphiQL IDE では、[クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)を管理することもできます。
 
-例：
+次に例を示します。
 
 ![GraphQL 変数](assets/cfm-graphqlapi-03.png "GraphQL 変数")
 
@@ -140,7 +143,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## URL をコピーしてクエリに直接アクセスする {#copy-url}
 
-「**URL をコピー**」オプションを使用すると、永続クエリに直接アクセスするのに使用する URL をコピーしてクエリをシミュレートし、結果を確認することができます。これは、ブラウザーでアクセスするなどしてテストに使用できます。
+「**URL をコピー**」オプションを使用すると、永続クエリに直接アクセスできる URL をコピーしてクエリをシミュレートし、結果を確認することができます。これは、ブラウザーでアクセスするなどしてテストに使用できます。
 
 <!--
   >[!NOTE]
@@ -150,7 +153,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
   >The target environment might need adjusting, depending on your requirements.
 -->
 
-例：
+次に例を示します。
 
 `http://localhost:4502/graphql/execute.json/global/article-list-01`
 

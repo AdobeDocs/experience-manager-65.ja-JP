@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
+solution: Experience Manager, Experience Manager Sites
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1257'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -58,7 +59,7 @@ Adobe Experience Manager（AEM）には、オーサーインスタンスのペ�
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
->1. `/apps` 内で変更作業をおこないます。
+>1. `/apps` 内で必要な変更を加えます
 
 ## 新しいレイヤー（モード）の追加 {#add-new-layer-mode}
 
@@ -66,7 +67,7 @@ Adobe Experience Manager（AEM）には、オーサーインスタンスのペ�
 
 ### レイヤーの例：ライブコピーステータス {#layer-example-live-copy-status}
 
-標準 AEM インスタンスは、MSM レイヤーを提供します。これは、[マルチサイト管理](/help/sites-administering/msm.md)に関連するデータにアクセスし、レイヤーでハイライトします。
+標準の AEM インスタンスは MSM レイヤーを提供します。これは、[マルチサイト管理](/help/sites-administering/msm.md)に関連するデータにアクセスし、レイヤーでハイライトします。
 
 実行中に確認するには、任意の [We.Retail 言語コピー](/help/sites-developing/we-retail-globalized-site-structure.md)ページ（または他のライブコピーページ）を編集して、**ライブコピーステータス**&#x200B;モードを選択します。
 
@@ -181,7 +182,7 @@ GitHub のコード
 
    >[!CAUTION]
    >
-   >AEM では、切り抜き比率は `ratio` プロパティで設定し、**高さ／幅**&#x200B;として定義します。これは従来の定義である「幅／高さ」とは異なり、レガシー互換性のための設定です。`name` プロパティを明確に定義していれば、UI に表示されるので、オーサリングユーザーは違いを認識しません。
+   >AEM では、切り抜き比率は `ratio` プロパティで設定し、**高さ／幅**&#x200B;として定義します。これは従来の定義である「幅/高さ」とは異なり、レガシー互換性のための設定です。`name` プロパティを明確に定義していれば、UI に表示されるので、オーサリングユーザーは違いを認識しません。
 
 #### 新しいインプレースエディターの作成 {#creating-a-new-in-place-editor}
 
@@ -220,7 +221,7 @@ GitHub のコード
 
 ## 新しいページアクションの追加 {#add-a-new-page-action}
 
-新しいページアクションをページツールバーに追加するには、次のようにします。 **サイトに戻る** （コンソール）アクションを使用します。
+**サイトに戻る**（コンソール）アクションなどの新しいページアクションを、ページツールバーに追加します。
 
 ### コードサンプル {#code-sample-3}
 

@@ -4,10 +4,12 @@ description: アダプティブフォームを設定して、イベントまた�
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms, Foundation Components
-source-git-commit: d85fc98d9a31bc4014aef4311ba0f838c7ef619a
+exl-id: ff9bf466-228d-40e6-9389-15c1f2ed1d2e
+solution: Experience Manager, Experience Manager Forms
+source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +28,7 @@ ht-degree: 94%
 
 アダプティブフォームの場合、自動保存オプションは最初は有効にはなっていません。自動保存オプションは、アダプティブフォームのプロパティの「**自動保存**」セクションで有効にすることができます。「**自動保存**」セクションには、その以外の設定オプションがいくつか用意されています。次の手順を実行して、アダプティブフォームの自動実行オプションを有効にし設定します。
 
-1. プロパティの自動保存セクションにアクセスするには、コンポーネントを選択し、「 ![フィールドレベル](assets/field-level.png) > **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;を選択し、 ![cmppr](assets/cmppr.png).
+1. プロパティの「自動保存」セクションにアクセスするには、コンポーネントを選択して、![フィールドレベル](assets/field-level.png)／**[!UICONTROL アダプティブフォームコンテナ]**&#x200B;を選択して、「![cmppr](assets/cmppr.png)」を選択します。
 1. 「**[!UICONTROL 自動保存]**」セクションで、自動保存オプションを&#x200B;**[!UICONTROL 有効]**&#x200B;にします。
 1. **[!UICONTROL アダプティブフォームイベント]**&#x200B;ボックスで、1 または TRUE を指定して、フォームがブラウザーに読み込まれたときに自動保存を開始します。トリガーされて true を返したときにフォームのコンテンツの保存を開始する条件式をイベントに指定することもできます。
 1. トリガーを指定します。設定に従い、自動保存がトリガーされます。以下のオプションがあります。
@@ -82,6 +84,6 @@ ht-degree: 94%
 
 1. アダプティブフォームを作成者モードで開きます。
 
-1. 編集モードで、コンポーネントを選択し、「 」を選択します。 ![フィールドレベル](assets/field-level.png) > **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;を選択し、 ![cmppr](assets/cmppr.png).
+1. 編集モードでコンポーネントを選択し、![field-level](assets/field-level.png)／**[!UICONTROL アダプティブフォームコンテナ]**／![cmppr](assets/cmppr.png) を選択します。
 1. プロパティで「**[!UICONTROL 基本]**」セクションを開きます。**[!UICONTROL クライアントライブラリのカテゴリ]**&#x200B;ボックスで、クライアントライブラリフォルダーの作成時に定義したカテゴリプロパティの値を入力します。
 1. 「自動保存」セクションを開きます。**[!UICONTROL このイベント後に自動保存]**&#x200B;ボックスで、クライアントライブラリで既に定義されているカスタムイベントを指定します。「**[!UICONTROL OK]**」をクリックします。
