@@ -7,10 +7,10 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 20fb57a51e47562a290e3608a2fe080a39774998
 workflow-type: tm+mt
 source-wordcount: '2781'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 アダプティブフォームは、ダイナミックなスクリプト機能によってエンドユーザーのフォームへの入力作業を最適化および簡素化します。式を記述することで、ダイナミックなフィールドやパネルの表示／非表示などの様々な動作を追加できます。また、レポートを作成する計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。動的動作は、ユーザー入力や事前入力データに基づいています。
 
-アダプティブフォームの式言語は JavaScript です。すべての式は、有効な JavaScript™ の式で、アダプティブフォームのスクリプトモデル API を使用しています。これらの式は、特定のタイプの値を返します。アダプティブフォームのクラス、イベント、オブジェクトおよびパブリック API の完全なリストについては、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)を参照してください。
+アダプティブフォームの式言語は JavaScript です。すべての式は、有効な JavaScript™ の式で、アダプティブフォームのスクリプトモデル API を使用しています。これらの式は、特定のタイプの値を返します。アダプティブフォームのクラス、イベント、オブジェクト、パブリック API の完全なリストについては、 [アダプティブフォームの JavaScript ライブラリ API リファレンス。](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)
 
 ## 式を記述するためのベストプラクティス {#best-practices-for-writing-expressions}
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 * 繰り返しパネルを作成するには、パネルダイアログで設定を開いて、最大カウントの値を 1 より上に設定します。
 * 繰り返しパネル設定の最小カウントの値は、1 またはそれ以上に設定できますが、最大値を超えることはできません。
 * 式が繰り返しパネルのフィールドを参照する場合、その式のフィールド名は、一番近い繰り返し要素に解決されます。
-* アダプティブフォームには、合計、カウント、最小値、最大値、フィルターなど、繰り返し可能なパネルの計算を簡素化するためのいくつかの特別な機能があります。機能の完全なリストについては、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/af.html)を参照してください。
+* アダプティブフォームには、合計、カウント、最小値、最大値、フィルターなど、繰り返し可能なパネルの計算を簡素化するためのいくつかの特別な機能があります。機能の完全なリストについては、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)を参照してください。
 * 以下に、繰り返しパネルのインスタンスを操作するための API を示します。
 
    * パネルインスタンスを追加する場合：`panel1.instanceManager.addInstance()`
@@ -80,7 +80,7 @@ ht-degree: 100%
 
 ### クリック式 {#click-expression}
 
-クリック式は、ボタンのクリックイベント時に実行されるアクションを処理します。すぐに使用できる GuideBridge は、送信、検証など、クリック式と共に使用される様々な機能を実行するための API を提供します。API の完全なリストについては、「[GuideBridge API](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html)」を参照してください。
+クリック式は、ボタンのクリックイベント時に実行されるアクションを処理します。すぐに使用できる GuideBridge は、送信、検証など、クリック式と共に使用される様々な機能を実行するための API を提供します。API の完全なリストについては、 [GuideBridge APIs.](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)
 
 **適用先**：ボタンフィールド
 
@@ -207,7 +207,7 @@ ht-degree: 100%
 
 ### GuideBridge - API とイベント {#guidebridge-apis-and-events}
 
-GuideBridge は、ブラウザーのメモリーモデルでアダプティブフォームとやり取りするのに使用できる API のコレクションです。Guide Bridge API、クラスメソッド、公開されたイベントについて詳しくは、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/)を参照してください。
+GuideBridge は、ブラウザーのメモリーモデルでアダプティブフォームとやり取りするのに使用できる API のコレクションです。Guide Bridge API、クラスメソッド、公開されたイベントについて詳しくは、 [アダプティブフォームの JavaScript ライブラリ API リファレンス。](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)
 
 >[!NOTE]
 >
@@ -253,7 +253,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 #### GuideBridge イベント {#guidebridge-events}
 
-また、GuideBridge は、ホスティングページ上の外部スクリプト用に特定のイベントを提供します。外部スクリプトは、これらのイベントをリッスンして様々な操作を実行できます。例えば、フォームのユーザー名が変更される場合は、ページのヘッダーに表示される名前も常に変更されます。これらのイベントについて詳しくは、[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html)を参照してください。
+また、GuideBridge は、ホスティングページ上の外部スクリプト用に特定のイベントを提供します。外部スクリプトは、これらのイベントをリッスンして様々な操作を実行できます。例えば、フォームのユーザー名が変更される場合は、ページのヘッダーに表示される名前も常に変更されます。このようなイベントについて詳しくは、 [アダプティブフォームの JavaScript ライブラリ API リファレンス。](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)
 
 以下のコードを使用してハンドラーを登録します。
 
