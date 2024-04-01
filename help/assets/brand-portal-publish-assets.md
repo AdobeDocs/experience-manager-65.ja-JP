@@ -11,10 +11,10 @@ role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: cbf8a5ac22049b3372a8282b9c061d7abeacc5dc
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 100%
+source-wordcount: '415'
+ht-degree: 93%
 
 ---
 
@@ -78,3 +78,15 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 次に、Brand Portal にログインして、公開したアセットが Brand Portal インターフェイスで使用できるかどうかを確認します。
 
 ![bp_landingpage](assets/bp_landingpage.png)
+
+## Brand Portalに公開されたファイルまたはフォルダーを表示 {#view-published-file-folder}
+
+1. Brand Portal インターフェイスにログインして、公開されたアセットを確認します（スケジュールを設定した日時に応じて異なります）。
+
+   ![bp_landingpage](assets/bp_landingpage.png)
+
+1. リスト表示に切り替え ![リスト表示](assets/list-view.svg) をクリックして、アセットの現在の公開ステータスを確認します。
+
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+
+![生成されたレポートのステータス](assets/report-status.JPG)
