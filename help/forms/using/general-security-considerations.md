@@ -9,9 +9,9 @@ role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1030'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -222,7 +222,7 @@ JBoss® Application Server は、デフォルトの HTTP ポートとして 8080
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が発生する場合があります。
 
 ## JEE 上の AEM Forms のセキュリティに関する考慮事項 {#aem-forms-on-jee-security-considerations}
 

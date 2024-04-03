@@ -5,7 +5,7 @@ contentOwner: carlino
 exl-id: 3a483b9d-627a-41d3-8ac1-66f9c5e89ad5
 solution: Experience Manager, Experience Manager Sites
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '304'
 ht-degree: 100%
 

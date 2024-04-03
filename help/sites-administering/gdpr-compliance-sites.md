@@ -8,9 +8,9 @@ topic-tags: best-practices
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '824'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細は、GDPR、CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
 データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。
 

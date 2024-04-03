@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新�
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 7f150219bce3036c0e330b7349e679fdf19797d1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3688'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -46,13 +46,13 @@ ht-degree: 65%
 
 ### [!DNL Forms]
 
-* **JEE 上のAEM Formsでのトランザクションレポート**:JEE 上のAEM Formsでトランザクションレポート機能が導入され、コンバージョン、レンディション、送信などのドキュメントトランザクションを包括的に記録できるようになりました。 この機能強化により、効率が向上し、記録の管理が容易になります。 この機能はデフォルトで無効になっています。 Admin UI から有効にできます。
-* **ECDSA サポートによるセキュリティの強化**:AEM Formsでは、JEE スタックと OSGi スタックの両方で、楕円曲線デジタル署名アルゴリズム (ECDSA) の堅牢なサポートを提供するようになりました。 セキュリティを強化して、署名ドキュメントの署名、認証、およびPDFの検証を行えるようになりました。 次の EC 曲線アルゴリズムがサポートされます。
-   * ECDSA 楕円曲線 P256 と SHA256 ダイジェストアルゴリズム
-   * ECDSA 楕円曲線 P384 と SHA384 ダイジェストアルゴリズム
-   * ECDSA 楕円曲線 P512 と SHA512 ダイジェストアルゴリズム
-* **Windows 11 とのシームレスな互換性 (Forms Designer 版 )**:AEM Forms Designer で Windows 11 がサポートされ、インストールと操作がスムーズになりました。 Forms Designer の再インストールや互換性の問題を気にすることなく、自信を持って Windows 11 にアップグレードできます。ワークフローが中断されないようにします。
-* **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**:AEM Forms Designer には、「Caption」と呼ばれるカスタムアクセシビリティロールが含まれ、ユーザーがパーソナライズされたキャプション要素を使用して XDP を作成できるようになりました。 この機能は、カスタムキャプションをドキュメントデザインに組み込むことでアクセシビリティを向上させ、インクルーシビティとユーザーエクスペリエンスを向上させます。
+* **JEE 上の AEM Forms でのトランザクションレポート**：JEE 上の AEM Forms にトランザクションレポート機能が導入され、コンバージョン、レンディション、送信などのドキュメントトランザクションを包括的に記録できるようになりました。この機能強化により、効率が向上し、より適切な記録管理が簡単になります。機能はデフォルトでは無効になっています。管理 UI から有効にできます。
+* **ECDSA サポートによるセキュリティの強化**：AEM Forms では、JEE スタックと OSGi スタックの両方で楕円曲線デジタル署名アルゴリズム（ECDSA）の堅牢なサポートを提供するようになりました。ユーザーは、セキュリティを強化して PDF ドキュメントの署名、認証および検証を行うことができるようになりました。サポートされる EC 曲線アルゴリズムには、次が含まれます。
+   * SHA256 ダイジェストアルゴリズムを使用した ECDSA 楕円曲線 P256
+   * SHA384 ダイジェストアルゴリズムを使用した ECDSA 楕円曲線 P384
+   * SHA512 ダイジェストアルゴリズムを使用した ECDSA 楕円曲線 P512
+* **Forms Designer 用の Windows 11 とのシームレスな互換性**：AEM Forms Designer で Windows 11 をサポートするようになり、スムーズなインストールと操作が保証されます。ユーザーは、Forms Designer を再インストールする手間や互換性の問題を心配することなく、自信を持って Windows 11 にアップグレードでき、中断のないワークフローが保証されます。
+* **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**：AEM Forms Designer には「キャプション」と呼ばれるカスタムアクセシビリティの役割が含まれており、ユーザーはパーソナライズされたキャプション要素を含む XDP を作成できます。この機能は、ユーザーがカスタムキャプションをドキュメントデザインに統合させることでアクセシビリティを強化し、包括性とユーザーエクスペリエンスを向上できます。
 
 <!-- ### [!DNL Forms]
 
@@ -153,36 +153,36 @@ ht-degree: 65%
 
 #### [!DNL Adaptive Forms]
 
-* ユーザーがAEM FormsをAEM公開済み URL のメーリングプラットフォームに統合しようとしても、AEM Formsは `method=post` ページのレンダリング中に発生する問題を修正しました。 この問題は、 `POST` は、URL を使用した送信アクションに設定されます。 これにより、メーリングプラットフォームがこれをフォームとして認識しなくなります。 （FORMS-12614）
-* ユーザーがAEM Form Service Pack 6.5.18.0で表示パターンを持つ日付フィールドを選択すると、ユーザーはキーボードを使用して現在の日付を選択できません。 （FORMS-12736）
-* AEM Forms Service Pack 6.5.17.0および Service Pack 6.5.18.0では、ユーザーがカレンダーウィジェットで月を切り替えると、日付選択コンポーネントに追加の行が表示されます。 （FORMS-11869）
-* ユーザーがiOSデバイスの添付ファイルコンポーネントで「写真を撮る」を使用して画像をクリックすると、すべての画像が同じ名前でフォルダーに追加されます。 （FORMS-12224）
-* ラジオボタングループ内の既存のオプションを更新すると、誤った翻訳値が公開されます。 （FORMS-12575）
-* ユーザーが Android™デバイスのアダプティブフォームに文字を追加した場合、Android™デバイスでは、フォーカスアウト時にテキストフィールドに定義された最大文字数を超える文字を入力できます。 ただし、ユーザーが入力タイプ「HTML5」を選択した場合に機能します。 （FORMS-12748）
-* 一致するラベル Arial® labeledby と Arial®ラベルがあるので、スクリーンリーダーはこれら 2 つを区別できません。 この問題を解決するには、フォームフィールドのラベル「aria-labelledby」が「aria-describedby」に置き換えられます。 （FORMS-12436）
-* 作成者が「アダプティブForms — 埋め込み (v2)」コンポーネントを使用してアダプティブフォームをサイトページに埋め込み、埋め込みフォームに CAPTCHA コンポーネントを含める場合（CAPTCHA サービス/reCAPTCHA-v2）、ユーザーが「view as」を使用してサイトページを表示しようとすると、サイトページが表示されない発行済み」というメッセージがオーサーインスタンスに表示されます。 次のエラーは、と表示されます (FORMS-11859)。
+* ユーザーが AEM 公開済み URL を使用して AEM Forms をメールプラットフォームに統合しようとすると、AEM Forms はページのレンダリング中に `method=post` を追加しません。この問題は、送信アクションで URL を使用して `POST` が設定されている場合でも発生します。これにより、メールプラットフォームがフォームとして認識できなくなります。（FORMS-12614）
+* ユーザーが AEM Forms サービスパック 6.5.18.0 で表示パターンを持つ日付フィールドを選択すると、キーボードを使用して現在の日付を選択できません。（FORMS-12736）
+* AEM Forms サービスパック 6.5.17.0 およびサービスパック 6.5.18.0 では、ユーザーがカレンダーウィジェットで月を切り替えると、日付選択コンポーネントに追加の行が表示されます。（FORMS-11869）
+* ユーザーが iOS デバイスの添付ファイルコンポーネントの「写真を撮る」を使用して画像をクリックすると、すべての画像が同じ名前のフォルダーに追加されます。（FORMS-12224）
+* ユーザーがラジオボタングループの既存のオプションを更新すると、誤った翻訳値が公開されます。（FORMS-12575）
+* ユーザーが Android™ デバイスのアダプティブフォームに文字を追加する際、Android™ デバイスでフォーカスアウトすると、定義済みの最大文字数を超える文字をテキストフィールドに入力できます。ただし、ユーザーが HTML5 入力タイプを選択した場合には機能します。（FORMS-12748）
+* ラベルの Aria® labelledby と Aria® label が一致しているので、スクリーンリーダーはこれら 2 つを区別できません。この問題を解決するには、フォームフィールドのラベルの「aria-labelledby」を「aria-descriptionby」に置き換えます。（FORMS-12436）
+* 作成者が「アダプティブフォーム - 埋め込み（v2）」コンポーネントを使用してサイトページにアダプティブフォームを埋め込み、その埋め込みフォームに CAPTCHA コンポーネントが含まれる場合（CAPTCHA サービス／reCAPTCHA、設定／reCAPTCHA-v2）、ユーザーがオーサーインスタンスで「公開済みとして表示」を使用してサイトページを表示しようとしても、サイトページはレンダリングされません。次のエラーが（FORMS-11859）として表示されます。
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
-* ユーザーが日付選択コンポーネントを使用して日付を選択しようとすると、値は更新されず、NULL が表示されます。 （FORMS-12742、FORMS-12736）
+* ユーザーが日付選択コンポーネントを使用して日付を選択しようとすると、値は更新されず、NULL と表示されます。（FORMS-12742、FORMS-12736）
 
-* ユーザーがAEM Form Service Pack 6.5.19.0にアップグレードした場合、既存の辞書に新しい言語を更新した後、「guideContainer」行と統合されて、フォームにロケールを追加できません。 （FORMS-12947）
+* ユーザーが AEM Form サービスパック 6.5.19.0 にアップグレードすると、新しい言語を既存の辞書に更新した後、フォームにロケールを追加する「guideContainer」行と結合されません。（FORMS-12947）
 
-* AEM Forms Service Pack 6.5.19.0では、Java™ 11 上で呼び出された Webservice 操作が次のエラーで失敗します (FORMS-12329)。
+* AEM Forms サービスパック 6.5.19.0 では、Java™ 11 で呼び出された web サービス操作が次のエラーで失敗します（FORMS-12329）。
   `java.lang.NoClassDefFoundError message:sun/misc/BASE64Decoder`
 
-* ユーザーがAEM Forms Service Pack 6.5.18.0で「EmailService」の「receive」操作を呼び出すと、例外がスローされます (FORMS-12050)。
+* ユーザーが AEM Forms サービスパック 6.5.18.0 で「EmailService」の「受信」操作を呼び出すと、例外がスローされます（FORMS-12050）。
   `java.util.ServiceConfigurationError: javax.mail.Provider: Provider com.sun.mail.imap.IMAPProvider not a subtype`
 
-* AEM Forms Service Pack 6.5.18.0で FIPS モードが有効になっている場合、デフォルトの DOM でのユーザーの作成に失敗し、次のエラーが表示されます (FORMS-11857)。
+* AEM Forms サービスパック 6.5.18.0 で FIPS モードが有効になっている場合、デフォルト DOM でのユーザーの作成は次のエラーで失敗します（FORMS-11857）。
   `com.adobe.idp.cx.a: error seeding random number generator`
 
-* ユーザーがパスの下の ADMINUI でフォントを選択したとき `Home>Services>PDF Generator>Adobe PDF Settings`の場合、選択されません。 また、標準またはパーソナライズされたプロファイルでは、使用可能なフォントのリストボックスは空です。 したがって、 **常に埋め込む** または **埋め込まない**. ユーザーは、PDF Generatorを使用してPDFのフォントを設定できません。 ログには、関連するエラーメッセージは表示されません。 （FORMS-12095）
+* ユーザーがパス `Home>Services>PDF Generator>Adobe PDF Settings` の下にある ADMINUI でフォントを選択しても、そのフォントは選択されません。さらに、標準プロファイルまたはパーソナライズされたプロファイルでは、使用可能なフォントのリストボックスは空です。そのため、「**常に埋め込むフォント**」または「**常に埋め込まないフォント**」のサブリストをパーソナライズできません。ユーザーは、PDF Generator を使用して PDF のフォントを設定できません。ログには、関連するエラーメッセージは表示されません。（FORMS-12095）
 
-* AEM Forms Service Pack 6.5.18.0では、ユーザーはセキュリティ設定を作成できず、エラーやサーバーログは表示されませんが、画面にポップアップエラーメッセージが表示されます。 （FORMS-12212）
+* AEM Forms サービスパック 6.5.18.0 では、ユーザーはセキュリティ設定を作成できず、エラーやサーバーログは表示されませんが、ポップアップエラーメッセージが画面に表示されます。（FORMS-12212）
 
-* AEM Forms Service Pack 6.5.18.0のユーザーが JEE 上のアダプティブフォームを送信した場合、アダプティブフォーム内の添付ファイルは JEE プロセスに送信されず、このプロセスによってアプリケーションが失敗します。 （FORMS-12232、FORMS-12228）
+* AEM Forms サービスパック 6.5.18.0 のユーザーが JEE ワークフローでアダプティブフォームを送信すると、アダプティブフォームの添付ファイルが JEE プロセスに送信されず、アプリケーションのエラーが発生します。（FORMS-12232、FORMS-12228）
 
-* ユーザーがPDFをPDF/A-2b またはPDF/A-3B に変換すると、変換に失敗し、エラーが次のように表示されます。(FORMS-12790)
+* ユーザーが PDF を PDF/A-2b または PDF/A-3B に変換すると、変換に失敗し、次のエラーが表示されます。（FORMS-12790）
 
   ```
   OCCD contains Order key that does not reference all layers.
@@ -197,29 +197,29 @@ ht-degree: 65%
   -> PDF/A entry missing.
   ```
 
-* AEM Forms 6.5.18.0では、アダプティブフォームが発行されると、変更が加えられていない場合でも、ポリシーを含むすべての依存関係が再発行されます。 （FORMS-10454）
+* AEM Forms 6.5.18.0 では、アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 
-* JBoss®自動セットアップを使用したAEM Forms 6.5.19.1での Configuration Manager の実行中に「Microsoft SharePoint」を選択すると、LiveCycleJBoss® EAR のインストールに失敗し、次のエラーが表示されます。(FORMS-12463)
+* JBoss® 自動設定を使用して AEM Forms 6.5.19.1 で設定マネージャーを実行中にユーザーが「Microsoft SharePoint」を選択すると、LiveCycle JBoss® EAR のインストールが失敗し、次のエラーが表示されます。（FORMS-12463）
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
-* ユーザーがAEM Forms Service Pack 6.5.19.0でフォームデータモデルを使用してドキュメントフラグメントを作成すると、サイドパネルに変数名が未定義で表示されますが、変数名はフォームパネルにドロップされたとき、またはクリックされたときに表示されます。 （FORMS-13238）
+* ユーザーが AEM Forms サービスパック 6.5.19.0 のフォームデータモデルを使用してドキュメントフラグメントを作成すると、変数名はサイドパネルでは未定義のように表示されますが、フォームパネルにドロップするかクリックすると変数名が表示されます。（FORMS-13238）
 
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
 
 
-* ユーザーがAEM Forms Service Pack 6.5.18.0にアップグレードした場合、例外処理が見つからず、タグ付きPDFオプションを有効にした状態で出力サービスを通じて渡された XDP が失敗します。 （LC-3921757）
+* ユーザーが AEM Forms サービスパック 6.5.18.0 にアップグレードすると、例外処理が欠落しているので、タグ付き PDF オプションが有効になっている出力サービスを通過した XDP が失敗します。（LC-3921757）
 
-* ユーザーがAEM Forms Designer を使用してPDFを生成すると、見出しレベルは、グラフィック要素（長方形ボックスなど）と共にアクセシビリティツリーにタグ付けされます。 （LC-3921687）
+* ユーザーが AEM Forms Designer を使用して PDF を生成すると、見出しレベルがグラフィック要素（長方形ボックスなど）と共にアクセシビリティツリー内でタグ付けされます。（LC-3921687）
 
-* Workbench を介してインストールされたAEM Forms Designer では、バージョン情報が `Control Panel/Programs/Programs and Features`. （LC-3921976）
+* Workbench 経由でインストールされた AEM Forms Designer では、`Control Panel/Programs/Programs and Features` にバージョン情報が明示されていません。（LC-3921976）
 
 <!--* When a user creates an XDP on AEM Forms Designer, the user is not able to add the custom Caption Tag. (LC-3921246)-->
 
-* ユーザーがAEM Forms Designer で XDP を作成した場合、PDF出力時に、Button Form タグが親段落タグ (p-tag) 内にネストされない。 （LC-3921719）
+* ユーザーが AEM Forms Designer で XDP を作成する場合、PDF 出力では、Button Form タグが親段落タグ（p タグ）にネストされません。（LC-3921719）
 
-* ユーザーがAEM Forms Designer で XDP を作成するとき、ユーザーがフォームタグを移動すると、PDF時の出力時に、背景オブジェクトもタグ付けされます。 （LC-3921687）
+* ユーザーが AEM Forms Designer で XDP を作成する際、PDF 出力でユーザーがフォームタグ間を移動すると、背景オブジェクトにもタグが付けられます。（LC-3921687）
 
 ### 基盤 {#foundation-6520}
 
@@ -465,12 +465,12 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6520}
 
-* 事前入力サービスは、インタラクティブ通信で null ポインタ例外が発生して失敗します。 （CQDOC-21355）
-* アダプティブFormsでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。 カスタム関数で ECMAScript バージョン 6 以降（&#39;let&#39;、&#39;const&#39;、矢印関数など）が使用されている場合、ルールエディタが正しく開かない可能性があります。
-* Correspondence Management レターを作成できません。 ユーザーがレターを作成すると、「Object Object」という説明のエラーが表示され、レターは作成されません。 レイアウトのサムネールも、レター作成画面に読み込めません。 次をインストールできます： [最新のAEM 6.5 Form Service Pack 20(6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をクリックして問題を解決します。 （FORMS-13496）
-* インタラクティブ通信サービスはPDFドキュメントを作成しますが、フォームフィールドにユーザーのデータが自動的に入力されることはありません。 事前入力サービスが期待どおりに動作していません。 次をインストールできます： [最新のAEM 6.5 Form Service Pack 20(6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をクリックして問題を解決します。 （FORMS-13413、FORMS-13493）
-* Review and Correct(RnC) エディターの読み込みにautomated forms conversionしない。 次をインストールできます： [最新のAEM 6.5 Form Service Pack 20(6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をクリックして問題を解決します。 （FORMS-13491）
-* AEM 6.5 Forms Service Pack 18(6.5.18.0) またはAEM 6.5 Forms Service Pack 19(6.5.19.0) からAEM 6.5 Forms Service Pack 20(6.5.20.0) に更新すると、JSP コンパイルエラーが発生します。 アダプティブフォームを開いたり作成したりすることはできず、ページエディター、AEM Forms UI、AEMワークフローエディターなどの他のAEMインターフェイスでエラーが発生しています。 次をインストールできます： [最新のAEM 6.5 Form Service Pack 20(6.5.20.0)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をクリックして問題を解決します。 （FORMS-13492）
+* インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）
+* アダプティブフォームでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。カスタム関数で ECMAScript バージョン 6 以降（「let」、「const」、アロー関数など）が使用されている場合、ルールエディターが正しく開かない可能性があります。
+* Correspondence Management レターを作成できません。ユーザーがレターを作成すると、「Object Object」という説明のエラーが表示され、レターが作成されません。レイアウトのサムネールもレター作成画面に読み込めません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすると、問題を解決できます。（FORMS-13496）
+* インタラクティブ通信サービスは PDF ドキュメントを作成しますが、フォームフィールドにユーザーのデータが自動的に入力されません。事前入力サービスが期待どおりに動作しません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすると、問題を解決できます。（FORMS-13413、FORMS-13493）
+* 自動フォーム変換サービスのレビューと修正（RnC）エディターの読み込みに失敗します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすると、問題を解決できます。（FORMS-13491）
+* AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から AEM 6.5 Forms サービスパック 20（6.5.20.0）に更新すると、JSP コンパイルエラーが発生します。アダプティブフォームを開いたり作成したりすることができず、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他の AEM インターフェイスでエラーが発生します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすると、問題を解決できます。（FORMS-13492）
 
 <!--Customers can install the  latest AEM 6.5 Forms Service Pack to resolve the aforementioned issues.  Here are the direct links for the supported operating systems:
 * [AEM 6.5 Forms Service Pack 20 for Apple macOS](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)

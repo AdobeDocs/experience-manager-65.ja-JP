@@ -6,9 +6,9 @@ exl-id: 6b17472b-9226-4319-b305-4dba862d21af
 hide: true
 hidefromtoc: true
 source-git-commit: 947f45e043c2ce1b683212f70157d1e9a08e1941
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '562'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
    * **Windows**
-インストーラーをコピーしたハードディスク上のインストールメディアまたはフォルダーの適切なディレクトリに移動し、 aemforms65_cfp_install.exe ファイルをダブルクリックします。
+インストールメディアまたはハードディスク上にあるインストーラーのコピー先フォルダー内の適切なディレクトリに移動して、aemforms65_cfp_install.exe ファイルをダブルクリックします。
 
       * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
@@ -55,7 +55,7 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. **[Windows のみ]：**&#x200B;次の手順を実行します。
    * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
-   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。実行前 **Configuration Manager** using **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 *`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリを開き、 **ConfigurationManager.lax** および **ConfigurationManager_IPV6.lax** 最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) および [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイル、検索、置換 **axis-1.4.1.1.jar** 次を使用 **axis-1.4.1.2.jar** を 2 つのファイルに追加します。
+   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行する前に、*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、**ConfigurationManager.lax** と **ConfigurationManager_IPV6.lax** を最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルと [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルに置き換えて、これら 2 つのファイル内で **axis-1.4.1.1.jar** を検索し、**axis-1.4.1.2.jar** に置き換えます。
 
    >[!NOTE]
    >
@@ -86,7 +86,7 @@ SAML 認証を設定済みで、大きな IDP メタデータに関する問題�
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が発生する場合があります。
 
 ## 影響を受けるモジュール {#impacted-modules}
 

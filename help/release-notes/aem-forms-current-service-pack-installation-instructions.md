@@ -1,11 +1,11 @@
 ---
 title: AEM Forms の AEM Forms パッチのインストール手順
-description: OSGi および JEE 環境用のAEM Forms Service Pack のインストール手順
+description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
 source-git-commit: fbdeaeca3fa05181682f94e8f71bd9bb6605762a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1752'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 81%
 |---|---|
 | バージョン | 6.5.20.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2024 年 2 月 30 日 |
+| 日付 | 2024年2月29日（PT） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -26,14 +26,14 @@ ht-degree: 81%
 
 ## Experience Manager Forms 6.5 に含まれる内容
 
-Adobe Experience Manager（AEM）Forms サービスパックには、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善など、新機能およびアップグレードされた機能が含まれています。最新の機能と改善を提供するために、AEM Forms リリースのサービスパックを定期的に用意しています。テクノロジースタックに応じて、環境に service pack をダウンロードしてインストールするには、次のいずれかのパスを選択します。
+Adobe Experience Manager（AEM）Forms サービスパックには、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善など、新機能およびアップグレードされた機能が含まれています。最新の機能と改善を提供するために、AEM Forms リリースのサービスパックを定期的に用意しています。テクノロジースタックに応じて次のいずれかのパスを選択し、お使いの環境にサービスパックをダウンロードしてインストールします。
 
 * [JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール](#download-and-install-for-jee-service-pack)
 * [OSGi 環境の AEM Forms へのサービスパックのダウンロードおよびインストール](#download-and-install-for-osgi-service-pack)
 
 >[!NOTE]
 >
-> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE 完全インストーラーです。完全なインストーラーは新しいプラットフォームをサポートするのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、2019 年 4 月 8 日にリリースされたAEM 6.5 Formsインストーラーや 2023 年 3 月 33 日にリリースされたAEM 6.5 Adobeインストーラーではなく、2023 年 8 月 31 日にリリースされたAEM 6.5.18.0 Formsを使用することをお勧めします 2. 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE 完全インストーラーです。完全なインストーラーは新しいプラットフォームをサポートするのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。新規インストールを実行する場合や、JEE 環境上の AEM 6.5 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12.0 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、JEE 上の AEM 6.5.18.0 Forms の完全なインストーラー（2023年8月31日（PT）にリリース）を使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 > * [AEM 6.5 クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォームなどの AEM Forms 機能は、探索と評価のみを目的としています。実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
 
 <!--
@@ -52,7 +52,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 <!--
 ![JEE Installation](/help/forms/using/assets/jeeinstallation.png) -->
 
-+++1。既存の環境のバックアップを作成
++++1.既存の環境のバックアップの作成
 
 1. [CRX リポジトリ、データベーススキーマ、GDS（グローバルドキュメントストレージ）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html?lang=ja)をバックアップします。
 1. &lt;*AEM_forms_root*>/deploy フォルダーをバックアップします。
@@ -63,7 +63,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++2. 必要なソフトウェアをダウンロード
++++2.必要なソフトウェアのダウンロード
 
 * [AEM Forms on JEE サービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 * [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
@@ -72,17 +72,17 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++3。Microsoft Visual C++再配布可能パッケージのインストール
++++3。Microsoft Visual C++ 再頒布可能パッケージのインストール
 
-* をダウンロードしてインストールする [Visual Studio 2015、2017、2019、2022 用の 64 ビット版のMicrosoft Visual C++再頒布可能パッケージ](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) AEM 6.5 Formsがインストールされているコンピューター上。
+* AEM 6.5 Forms がインストールされているコンピューターに、[Visual Studio 2015、2017、2019、2022 用の 64 ビット版の Microsoft Visual C++ 再頒布可能パッケージ](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)をダウンロードしてインストールします。
 
 >[!NOTE]
 >
-> 以前のバージョンがインストールされている場合でも、再頒布可能パッケージを必ずインストールして、最新バージョンが確実に利用できるようにしてください。
+> 最新バージョンの可用性を保証するには、前のバージョンがインストールされている場合でも、再頒布可能パッケージをインストールします。
 
 +++
 
-+++4。AEM Forms on JEE サービスパックのインストール
++++4.AEM Forms on JEE サービスパックのインストール
 
 1. アプリケーションサーバーを停止します。
 1. **AEM Forms on JEE サービスパックのインストーラーアーカイブ**&#x200B;をハードドライブに抽出します。
@@ -94,7 +94,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-適切なディレクトリに移動し、シェルからを選択して、と入力します。 `./aem65_cfp_install.bin`.
+適切なディレクトリに移動し、シェルから `./aem65_cfp_install.bin` と入力します。
 
       * （Linux®）`Linux/Disk1/InstData/NoVM`
 
@@ -109,7 +109,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
    * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
-   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。実行前 **Configuration Manager** using **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 *`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリを開き、 **ConfigurationManager.lax** および **ConfigurationManager_IPV6.lax** 最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) および [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイル、検索、置換 **axis-1.4.1.1.jar** 次を使用 **axis-1.4.1.2.jar** を 2 つのファイルに追加します。
+   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行する前に、*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、**ConfigurationManager.lax** と **ConfigurationManager_IPV6.lax** を最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルと [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルに置き換えて、これら 2 つのファイル内で **axis-1.4.1.1.jar** を検索し、**axis-1.4.1.2.jar** に置き換えます。
 
      >[!NOTE]
      >
@@ -130,11 +130,11 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 >[!NOTE]
 >
 >* JEE 上に AEM Forms サービスパックをインストールした後、appserver を再起動する前に、`crx-repository\install` フォルダーから Forms アドオンパッケージを削除する必要があります。[ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)から、最新の Forms アドオンパッケージをダウンロードします。
->* 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+>* 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が発生する場合があります。
 
 +++
 
-+++5。サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール
++++5.サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール
 
 >[!NOTE]
 >
@@ -156,7 +156,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++6。AEM サービスパックをインストールします。
++++6. AEM サービスパックをインストールします。
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
@@ -201,7 +201,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 <!-- ![OSGi Installation Steps](/help/forms/using/assets/osgiinstallation.png)
 -->
 
-+++1。既存の環境のバックアップを作成
++++1.既存の環境のバックアップの作成
 
 1. [CRX リポジトリとデータベーススキーマ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html?lang=ja)をバックアップします。
 
@@ -211,25 +211,25 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++2. 必要なソフトウェアをダウンロード
++++2.必要なソフトウェアのダウンロード
 
 * [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 
 +++
 
-+++ 3. Microsoft Visual C++再頒布可能パッケージをインストールする
++++ 3. Microsoft Visual C++ 再頒布可能パッケージのインストール
 
-* をダウンロードしてインストールする [Visual Studio 2015、2017、2019、2022 用の 64 ビット版のMicrosoft Visual C++再頒布可能パッケージ](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) AEM 6.5 Formsがインストールされているコンピューター上。
+* AEM 6.5 Forms がインストールされているコンピューターに、[Visual Studio 2015、2017、2019、2022 用の 64 ビット版の Microsoft Visual C++ 再頒布可能パッケージ](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)をダウンロードしてインストールします。
 
 >[!NOTE]
 >
 >
-> 以前のバージョンがインストールされている場合でも、再頒布可能パッケージを必ずインストールして、最新バージョンが確実に利用できるようにしてください。
+> 最新バージョンの可用性を保証するには、前のバージョンがインストールされている場合でも、再頒布可能パッケージをインストールします。
 
 +++
 
-+++4。AEM サービスパックをインストールします。
++++4.AEM サービスパックをインストールします。
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
@@ -260,7 +260,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++5。Adobe Experience Manager Forms(AEM) アドオンパッケージのインストール
++++5.Adobe Experience Manager Forms（AEM）アドオンパッケージのインストール
 
 1. [!DNL Experience Manager] サービスパックがインストールされていることを確認してください。
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。

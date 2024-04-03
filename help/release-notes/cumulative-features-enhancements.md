@@ -1,54 +1,54 @@
 ---
-title: Adobe Experience Manager 6.5 リリースの累積主な機能および機能強化。
-description: 以前の 8 つのサービスパックリリースからAdobe Experience Manager 6.5 でおこなわれた主な機能と機能強化の累積リストです。
+title: Adobe Experience Manager 6.5 リリースの累積的な主な機能および機能強化。
+description: 以前の 8 つのサービスパックリリースから Adobe Experience Manager 6.5 に加えられた主な機能および機能強化の累積リストです。
 content-type: reference
 docset: aem65
 feature: Release Information
 role: User, Admin
-source-git-commit: 0aa929021aa724e4ec18d49fea26f8c0b0538bdc
-workflow-type: tm+mt
+exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
+source-git-commit: 1379981711214172868c58dabeddad5459f14e0c
+workflow-type: ht
 source-wordcount: '2334'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
-
 # 累積的な主な機能および機能強化
 
-以前の 8 つのサービスパックリリース向けの、Adobe Experience Manager 6.5 の主な機能および機能強化の累積リストです。
+以前の 8 つのサービスパックリリースに対する Adobe Experience Manager 6.5 の主な機能および機能強化の累積リストです。
 
-関連トピック [Adobe Experience Manager 6.5 最新の Service Pack リリースノート](/help/release-notes/release-notes.md).
+詳しくは、[Adobe Experience Manager 6.5 の最新のサービスパックリリースノート](/help/release-notes/release-notes.md)も参照してください。
 
-## AEM 6.5、Service Pack 18—2023 年 12 月 7 日
+## AEM 6.5 サービスパック 18 - 2023年12月7日（PT）
 
 * Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。（Sites-13448、Sites-13433）
-* AEMでサーバー側の並べ替えがサポートされ、リスト表示でのプロジェクトのナビゲーションをより迅速におこなえるようになりました。 プロジェクトノードは、インターフェイスに表示される前に、ユーザが選択した列に基づいて並べ替えられます。
+* AEM では、リスト表示でのプロジェクトのナビゲーションを迅速化するために、サーバーサイドの並べ替えをサポートするようになりました。プロジェクトノードは、インターフェイスに表示される前に、ユーザーが選択した列に基づいて並べ替えられます。
 
 ### [!DNL Forms]
 
-* **新しいアダプティブフォームコアコンポーネント**：フォームのスケーラビリティを高めるために、縦並びのタブ、「利用条件」および「チェックボックス」が追加されました。
-   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：コアコンポーネントに基づくアダプティブFormsで、チェックボックスコンポーネントを含めることができるようになりました。 ユーザーは、特定のオプションの選択または選択解除を行い、バイナリ選択をおこなうことができます。 これは通常、小さなボックスとして表示され、クリックまたはタップすると、2 つの状態（チェック済みとオフ）を切り替えることができます。 このチェックボックスは、はい/いいえ、真/偽の選択肢を提示するために使用される一般的なフォーム要素です。
+* **新しいアダプティブフォームコアコンポーネント**：垂直タブ、利用条件、チェックボックスが追加され、フォームのスケーラビリティが向上します。
+   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
 
-   * **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**：コアコンポーネントに基づくアダプティブFormsで、利用条件コンポーネントを含めることができるようになりました。 Formsの作成者は、フォーム内に特定のセクションを導入し、サービス、製品、プラットフォームの使用に関連する利用条件、または法的契約をユーザーに提示できます。 このコンポーネントは、フォームを送信することで、同意するルール、規制、義務をユーザーに通知するように設計されています。
+   * **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームに利用条件コンポーネントを含めることができるようになりました。これにより、フォーム作成者は、サービス、製品、プラットフォームの使用に関連する利用条件または法的合意をユーザーに提示するフォーム内に特定のセクションを導入できます。このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
 
      ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
 
-   * **[垂直タブコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：コアコンポーネントに基づくアダプティブFormsで、フォームコンテンツをタブの縦並びのリストに整理でき、構造化されたナビゲーション可能なレイアウトが提供されるようになりました。 フォーム内で縦置きのタブを使用すると、ナビゲーションが簡単になり、フォームコンテンツの構成が改善され、特にフォームに複数のセクションや複雑な情報が含まれる場合に、ユーザーの操作性が向上します。
+   * **[垂直タブコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームでは、フォームのコンテンツをタブの垂直リストに整理し、構造化されたナビゲートしやすいレイアウトを提供できるようになりました。フォームで垂直タブを使用すると、特にフォームに複数のセクションや複雑な情報が含まれている場合、ナビゲーションが簡素化され、フォームコンテンツの整理が改善され、全体的なユーザーエクスペリエンスが向上します。
 
-* **[64 ビット版のAEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64 ビット版のAEM Forms Designer では、パフォーマンス、拡張性、メモリ管理の機能が強化され、フォーム作成エクスペリエンスが強化されます。 64 ビットアーキテクチャを使用すると、より大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率を確保できます。 フォームデザインの機能を向上させ、この最先端リリースでAEM Forms Designer の将来を受け入れます。
+* **[64 ビット版の AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**：64 ビット版の AEM Forms Designer では、パフォーマンス、スケーラビリティ、メモリ管理が強化され、フォーム作成エクスペリエンスを支援します。64 ビットアーキテクチャを使用すると、さらに大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率が保証されます。この最先端のリリースでフォームデザイン機能を強化し、AEM Forms Designer の未来を体現します。
 
-* **[Microsoft® SharePointリストとのアダプティブFormsの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**:AEM Formsは、すぐに使用できる統合機能を備えており、フォームデータをSharePointリストに直接送信して、SharePointのリスト機能を使用できます。 Microsoft® SharePointリストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームをSharePointリストに接続することができます。
+* **[アダプティブフォームと Microsoft® SharePoint リストの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**：AEM Forms では、フォームデータを SharePoint リストに直接送信する標準の統合を提供し、SharePoint のリスト機能を使用できます。Microsoft® SharePoint リストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームを SharePoint リストに接続できます。
 
-* **[アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定をサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターで、アダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
+* **[アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定のサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
 
-* **64 ビット XMLFM**:XMLFM の 64 ビット版では、パフォーマンス、拡張性、メモリ管理の改善が導入されています。 これは、サーバー側にデプロイされる最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットは、32 ビット対応のメモリリソースに比べて大きなメモリリソースにアクセスする独自の機能を備えており、より大きなレンダリングワークロードをシームレスに処理できます。 このマイルストーンは、パフォーマンスの飛躍を表すだけでなく、AEM Forms Server 内のネイティブサービスフレームワークに対する主な機能強化も導入します。 このアップデートでは、AEM Forms Server が 64 ビットのネイティブサービスをシームレスにサポートするようになっています。
+* **64 ビット XMLFM**：64 ビット反復の XMLFM により、パフォーマンス、スケーラビリティ、洗練されたメモリ管理が導入されます。これは、サーバーサイドにデプロイされた最初の 64 ビットネイティブサービスです。XMLFM 64 ビットでは、32 ビット版と比較してより大きなメモリリソースにアクセスする固有の機能を利用することで、より大きなレンダリングワークロードをシームレスに処理できます。このマイルストーンは、パフォーマンスの飛躍的な向上を示すだけでなく、AEM Forms サーバー内のネイティブサービスフレームワークに重要な機能強化も導入します。このアップデートにより、AEM Forms サーバーでは 64 ビットのネイティブサービスをシームレスにサポートできます。
 
-## AEM 6.5、Service Pack 18—2023 年 8 月 24 日
+## AEM 6.5 サービスパック 18 - 2023年8月24日（PT）
 
 * Assets、Dynamic Media - [Dynamic Media のビデオに対するマルチサブタイトルとマルチオーディオトラックのサポート](/help/assets/video.md#about-msma) - プライマリビデオに複数のサブタイトルと複数のオーディオトラックを簡単に追加できるようになりました。この機能により、グローバルなオーディエンスがビデオにアクセスできるようになります。1 つの公開済みプライマリビデオを複数の言語でグローバルオーディエンスに向けてカスタマイズし、様々な地理的地域のアクセシビリティガイドラインに従うことができます。また、作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルとオーディオトラックを管理することもできます。
-* アセット — 検索結果から、アセットが含まれるフォルダーの場所に移動して、様々なアセット管理タスクを実行できるようになりました。
-* コンテンツフラグメントの Sites Polaris ピッカーは、パフォーマンスを向上させました。
-* サイトのページエディター/画像コンポーネントユーザーがリモートアセットCloud Serviceーからアセットを参照できるようになりました。
+* Assets - 検索結果から、アセットが含まれるフォルダーの場所に移動でき、様々なアセット管理タスクを実行できるようになります。
+* コンテンツフラグメントの Sites Polaris ピッカーのパフォーマンスが向上しました。
+* Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。
 * システム内に多数のプロジェクトが存在する可能性があるリスト表示でプロジェクトをすばやく見つけるために、アドビではサーバーサイドでの並べ替えをサポートするようになりました。プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。
 * AEM 6.5.18.0 は、MongoDB 5.0～6.0 をサポートします。
 
@@ -76,7 +76,7 @@ ht-degree: 59%
 
 AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE 完全インストーラーを使用することをお勧めします。新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
 
-## AEM 6.5、Service Pack 17—2023 年 5 月 26 日
+## AEM 6.5 サービスパック 17 - 2023年5月25日（PT）
 
 * **検索エクスペリエンスの強化** - 検索結果に表示されるアセットに対して、次の操作を素早く実行できるようになりました。
    * ワークフローの作成
@@ -99,7 +99,7 @@ AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールし�
 * **データ交換用に Experience Manager Forms と Salesforce の統合が有効化**：OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Forms と Salesforce アプリケーションの統合を設定します。この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーが関与しないシームレスな通信が可能になります。
 * **ワークフローエンジンの最適化と機能強化**：ワークフローインスタンスの数を最小限に抑えて、ワークフローエンジンのパフォーマンスを向上させます。`COMPLETED` および `RUNNING` ステータス値に加えて、ワークフローは 3 つの新しいステータス値、`ABORTED`、`SUSPENDED` および `FAILED` もサポートします。
 
-## AEM 6.5、Service Pack 16—2023 年 2 月 24 日
+## AEM 6.5 サービスパック 16 - 2023年2月23日（PT）
 
 CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic Media ビデオ配信で、アダプティブビットレートストリーミングをサポートする新しいプロトコル DASH（HTTP での動的アダプティブストリーミング）が開始しました。
 
@@ -113,44 +113,44 @@ CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic
 
 * [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
 
-* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。[WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。[WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=ja)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
 
-* OSGi 上のReader拡張サービスに、Adobe Acrobat ReaderでのデータのインポートまたはエクスポートをおこなうPDFに対する使用権限のインポートとエクスポートを可能にする個別のオプションが追加されました。
+* OSGi の Reader Extension サービスには、Adobe Acrobat Reader でデータを読み込みまたは書き出しするために、PDF の読み込みおよび書き出しの使用権限を有効化する個別のオプションが追加されました。
 
-## AEM 6.5、Service Pack 15—2022 年 11 月 24 日
+## AEM 6.5 サービスパック 15 - 2022年11月24日（PT）
 
 ### [!DNL Forms]
 
-* AEM Forms Designer が [スペイン語のロケール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja).
-* これで、 [Microsoft® Office 365 メールサーバープロトコル（SMTP および IMAP）で認証するための OAuth2](/help/forms/using/oauth2-support-for-mail-service.md).
-* 次の設定が可能です。 [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=ja#enabling-server-side-validation-br) プロパティを true に設定すると、サーバー側のレコードのドキュメントから除外する非表示フィールドが識別されます。
-* AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ (x86) の 32 ビット版が必要です。
+* AEM Forms Designer が[スペイン語ロケール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で利用できるようになりました。
+* [Microsoft® Office 365 メールサーバープロトコル（SMTP および IMAP）での認証に、OAuth2](/help/forms/using/oauth2-support-for-mail-service.md) を使用できるようになりました。
+* [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=ja#enabling-server-side-validation-br)プロパティを true に設定すると、サーバーサイドのレコードのドキュメントから除外する非表示フィールドを識別できます。
+* AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ（x86）の 32 ビットバージョンが必要です。
 
-## AEM 6.5、Service Pack 14—2022 年 8 月 26 日
+## AEM 6.5 サービスパック 14 - 2022年8月25日（PT）
 
 バグの修正のみ。
 
-## AEM 6.5、Service Pack 13—2022 年 5 月 27 日
+## AEM 6.5 サービスパック 13 - 2022年5月26日（PT）
 
-* アダプティブフォームで非表示の CAPTCHA を使用：不明なアクティビティがある場合にのみ、非表示の CAPTCHA を使用して CAPTCHA チャレンジを表示できるようになりました。 疑わしいアクティビティが検出されない場合、CAPTCHA チャレンジは表示されません。これにより、チェックボックス要件を使わずに人間がフォームを完成させたかどうかを評価し、カスタマイズ作業を軽減し、エンドユーザーエクスペリエンスを向上させることができます。
+* アダプティブフォーム内で非表示の CAPTCHA を使用する：非表示の CAPTCHA を使用して、疑わしいアクティビティの場合にのみ CAPTCHA チャレンジを表示できるようになりました。疑わしいアクティビティが検出されない場合、CAPTCHA チャレンジは表示されません。これにより、チェックボックス要件を使わずに人間がフォームを完成させたかどうかを評価し、カスタマイズ作業を軽減し、エンドユーザーエクスペリエンスを向上させることができます。
 
-* REST エンドポイント用のフォームデータモデル後処理での応答ヘッダーの取得のサポートが追加されました。
+* REST エンドポイント用のフォームデータモデル POST プロセッサーで応答ヘッダーを取得するサポートが追加されました。
 
-* これで、アダプティブフォームの翻訳ファイルを生成する際に、生成される XLIFF ファイルと、対応するアダプティブフォーム内のコンポーネントのシーケンスが同じテキストのシーケンスになります。
+* 現在、アダプティブフォームの翻訳ファイルを生成する際に、生成された XLIFF ファイルと同じ一連のテキストが、対応するアダプティブフォームのコンポーネントのシーケンスと同一になります。
 
-* アダプティブフォームをローカライズして、ベース言語のテキストにわずかな変更を加えると、他のすべての言語において翻訳が完全に失われます。この問題は、 [!DNL Experience Manager] 6.5.13.0.
+* アダプティブフォームをローカライズして、ベース言語のテキストにわずかな変更を加えると、他のすべての言語において翻訳が完全に失われます。この問題は、[!DNL Experience Manager] 6.5.13.0 で修正されました。
 
 * Forms のアクセシビリティの強化：
 
    * テーブルのヘッダーと本文を継続エンティティと接続エンティティとして認識するためのスクリーンリーダーのサポートが追加されました。スクリーンリーダーでテーブルを適切に移動するのに役立ちます。 （NPR-37139）
-   * ダイアログが開くまでHTMLワークスペース内を移動しないようにするスクリーンリーダーのサポートを追加しました。
+   * ダイアログが開くまで HTML ワークスペースの移動を停止する、スクリーンリーダーのサポートが追加されました。
 
-## AEM 6.5、Service Pack 12—2022 年 2 月 24 日
+## AEM 6.5 サービスパック 12 - 2022年2月24日（PT）
 
 * リモート DAM と Sites デプロイメント間の接続を設定すると、リモート DAM 上のアセットが Sites デプロイメントで使用できるようになります。これで、リモート DAM アセットまたはフォルダーに対して 更新、削除、名前変更、および移動操作を実行できます。更新は、Sites デプロイメントで自動的に（少し遅れて）利用できます。
 * ブループリント設定を必要とせずに、ライブコピーソースを複数のライブコピーにプッシュロールアウトできるようになりました。
 * ユーザーが同じパス上で誤って複数の非同期操作をトリガーするのを防ぐために、進行中の非同期操作のステータスがユーザーインターフェイスに表示されるようになりました。
-* IMS ベースの認証のサポートは、Analytics 2.0 API で提供されます。
+* IMS ベースの認証のサポートは、Analytics 2.0 API に対して提供されます。
 * JSON オファータイプのエクスペリエンスフラグメントの API サポート。
-* IMS のオファーを削除（エクスペリエンスフラグメント API）用にオファーリクエストが提供されるようになりました。
+* IMS の削除オファー（エクスペリエンスフラグメント API）に対してオファーリクエストが提供されるようになりました。
 * 組み込みリポジトリ（Apache Jackrabbit Oak）は、引き続き 1.22.9 にあります。
