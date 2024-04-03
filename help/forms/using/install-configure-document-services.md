@@ -6,9 +6,9 @@ role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5633'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -815,7 +815,7 @@ Microsoft® Excel 2019 を Microsoft® Windows Server 2019 上で PDFに変換�
 * デフォルトのプリンターは Adobe PDF に設定する必要があります。
 
   >[!NOTE]
-  >* Apple macOSおよび Ubuntu OS の場合、前述の設定を行う必要はありません。
+  >* Apple macOS および Ubuntu OS の場合、前述の設定を行う必要はありません。
 
 +++
 
