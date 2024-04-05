@@ -5,7 +5,7 @@ exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
 source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -180,7 +180,7 @@ Assets can have multiple renditions. These are typically exposed as child entiti
 
 ## Assets HTTP API とコンテンツフラグメント {#assets-http-api-content-fragments}
 
-コンテンツフラグメントはヘッドレス配信に使用される、特別なタイプのアセットです。これらは、テキスト、数値、日付などの構造化されたデータにアクセスするために使用されます。
+コンテンツフラグメントはヘッドレス配信に使用される、特別なタイプのアセットです。テキスト、数値、日付などの構造化データにアクセスするために使用されます。
 
 <!--
 As there are several differences to *standard* assets (such as images or audio), some additional rules apply to handling them.

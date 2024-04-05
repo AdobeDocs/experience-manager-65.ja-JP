@@ -5,7 +5,7 @@ exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '4484'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -187,7 +187,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * [参照](/help/sites-authoring/author-environment-tools.md#references)パネルには、選択したページを参照する内部リンクを一覧表示する新しいセクションがあります。これは、ページをオフラインにしたり削除したりすることが想定される場合に、オフラインにする前に調整する必要があるページを確認するのに便利です。
 * [リスト表示](/help/sites-authoring/basic-handling.md#list-view)には、ページがワークフローに含まれている場合にステータスを表示する新しいワークフロー列があります。
-* Adobe Analytics の [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)を使用する場合、ページにサムネールを割り当てる際に、既存のアセットを参照できるようになりました（「サムネール」タブ）。
+* [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)で、ページにサムネールを割り当てるときに既存のアセットを参照できるようになりました（「サムネール」タブ）。
 
 #### ページエディター {#page-editor}
 
@@ -218,7 +218,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### マルチサイト管理（MSM） {#multi-site-management-msm}
 
-* PushOnModify を使用するロールアウト設定の場合、ページ移動操作の処理を改善し、状態の不整合を回避します。
+* PushOnModify を使用するロールアウト設定について、矛盾した状態を避けるためにページ移動操作の処理を改善しました。
 * ライブコピー構造内にページを作成すると、デフォルトでスタンドアロンページが作成されます。
 * JS SDK を使用している単一ページアプリで MSM 機能を使用できます（SPA エディターとも呼ばれます）。
 
@@ -308,7 +308,7 @@ AEM 6.5 以降の Communities では、様々なコミュニティサイトや�
 AEM 6.5 Communities のイネーブルメント機能は、Shareable Content Object Reference Model[（SCORM）2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジンに対応しています。
 
 * イネーブルメントコンポーネントでのキーボードナビゲーションのサポート
-* AEM Communitiesのイネーブルメントコンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、キーボードナビゲーションをサポートし、アクセシビリティを向上させます。
+* AEM Communities のイネーブルメントコンポーネント（カタログやコース再生、割り当て、ファイルライブラリなど）では、アクセシビリティを向上させるためにキーボードナビゲーションをサポートしています。
 
 ##### その他の機能強化 {#other-enhancements}
 
@@ -507,7 +507,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 >[!NOTE]
 >
->Oracle は Oracle Java™ SE 製品の長期サポート（LTS）モデルに移行しました。Java™ 9 と 10 は非 LTS リリースで、Oracle別。 詳しくは、 [OracleJava™ SE サポート・ロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html). アドビでは、AEM を実稼働環境で実行するためにのみ、Java™ の LTS リリース版をサポートしています。AEM 6.5 で使用するバージョンとしては、Java™ 11 をお勧めします。
+>Oracle は Oracle Java™ SE 製品の長期サポート（LTS）モデルに移行しました。Java™ 9 および 10 は Oracle による非 LTS でのリリースです。[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照してください。アドビでは、AEM を実稼働環境で実行するためにのみ、Java™ の LTS リリース版をサポートしています。AEM 6.5 で使用するバージョンとしては、Java™ 11 をお勧めします。
 
 ## 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 

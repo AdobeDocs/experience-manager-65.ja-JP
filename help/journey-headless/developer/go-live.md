@@ -5,7 +5,7 @@ exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
 source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
 workflow-type: tm+mt
 source-wordcount: '1803'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -100,7 +100,7 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 <!-- Start of CDN Review -->
 
-次に、以下に説明するベストプラクティスに従って、AEMヘッドレスアプリケーションを起動できるように準備します。
+以下に示すベストプラクティスに従って、AEM ヘッドレスアプリケーションのローンチの準備を行います。
 
 ### ローンチ前にヘッドレスアプリケーションのセキュリティを確保 {#secure-and-scale-before-launch}
 

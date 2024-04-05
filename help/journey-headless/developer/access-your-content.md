@@ -5,7 +5,7 @@ exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
 workflow-type: tm+mt
 source-wordcount: '1301'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -242,10 +242,10 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 コンテンツに関するクエリを開始する前に、次の操作が必要です。
 
 * エンドポイントの有効化
-   * ツール/Assets/GraphQLを使用します。
+   * ツール／アセット／GraphQL の使用
    * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
-* GraphiQL へのアクセス（必要に応じて）
+* GraphiQL へのアクセス（必要な場合）
    * [AEM GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### サンプル構造 {#sample-structure}
@@ -269,7 +269,7 @@ AEM GraphQL API をクエリで実際に使用するにあたって、次のよ�
 
 ### クエリのテスト場所 {#where-to-test-your-queries}
 
-クエリは、 [GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)例：
+クエリは、次の例のように、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)で入力できます。
 
 * `http://localhost:4502/aem/graphiql.html`
 

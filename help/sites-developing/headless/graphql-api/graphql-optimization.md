@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Sites
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
 source-wordcount: '1949'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -82,7 +82,7 @@ GraphQL クエリとその JSON 応答は、CDN を使用する場合、`GET` �
 
 以下を参照してください。
 
-* [AEM での CDN の使用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
+* [AEM での CDN の使用](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#using-dispatcher-with-a-cdn)
 
 #### HTTP キャッシュ制御ヘッダーを設定する {#set-http-cache-control-headers}
 
