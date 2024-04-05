@@ -1,26 +1,26 @@
 ---
 title: ページ分析データの表示
-description: ページ分析データを使用して、ページコンテンツの効果性を測定します。
+description: ページ分析データを使用して、ページコンテンツの効果を測定します。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 docset: aem65
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '91'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
 
 # ページ分析データの表示 {#seeing-page-analytics-data}
 
-ページ分析データを使用して、ページコンテンツの効果性を測定します。
+ページ分析データを使用して、ページコンテンツの効果を測定します。
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
-ページ分析データがサイトコンソールに表示されます。 サイトがリスト形式で表示される場合、次の列がデフォルトで使用可能です。
+ページ分析データは、Sites コンソールに表示されます。Sites がリスト形式で表示されている場合、デフォルトで次の列が表示されます。
 
 * ページ表示
 * ユニーク訪問者

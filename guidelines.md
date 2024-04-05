@@ -1,8 +1,8 @@
 ---
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '729'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 # Adobe Experience Manager ドキュメントの投稿に関するガイドライン
@@ -79,7 +79,7 @@ Microsoft のスタイルガイド『[The Microsoft® Manual of Style](https://l
 
 スクリーンショットは慎重に、かつ、テキストによる説明が不十分な場合にのみ使用します。
 
-スクリーンショットには、マーカーやその他の注釈（赤枠、矢印、テキストなど）を使用しないでください。 こうすれば、スクリーンショットをドキュメントのローカライズ版で再利用または複製しやすくなります。
+マーカーやその他の注釈（赤枠、矢印、テキストなど）をスクリーンショットで使用しないでください。こうすれば、スクリーンショットをドキュメントのローカライズ版で再利用または複製しやすくなります。
 
 ### バージョン固有の参照
 
@@ -89,4 +89,4 @@ Microsoft のスタイルガイド『[The Microsoft® Manual of Style](https://l
 
 ドキュメントでの初出時には必ず、本製品をフルネームである **Adobe Experience Manager** と記載します。その後は **AEM** と記載してもかまいません。
 
-Day、Day Software、CQ、CRX は使用しないでください。ただし、クラス名やAEMの履歴を参照する場合など、避けられない場合を除きます。
+Day、Day Software、CQ、CRX は使用しないでください。ただし、クラス名や AEM の履歴を参照する場合など、避けられない場合を除きます。

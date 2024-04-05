@@ -2,7 +2,7 @@
 title: Google Chrome、Firefox、Microsoft&reg; Edge、Microsoft&reg; Internet Explorer、または Apple Safari で XFA ベースの PDF フォームを開けない
 feature: Adaptive Forms
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '321'
 ht-degree: 100%
 

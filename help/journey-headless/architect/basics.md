@@ -3,9 +3,9 @@ title: コンテンツモデリングの基本について
 description: コンテンツフラグメントを使用したヘッドレス CMS のコンテンツモデリングの基本について説明します。
 exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '896'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -127,7 +127,7 @@ AEM では、コンテンツをモデル化するために次のデータタイ�
 * Person（ユーザー）
 * 授賞歴
 
-非常に簡単に見えますが、会社には CEO と従業員の両方がいます....これらはすべて人物で、それぞれが Person として定義されます。
+とても簡単に見えますが、Company には CEO も Employees（従業員）もいます。これらはすべて人物で、それぞれが Person として定義されます。
 
 また、Person は Award（1 つまたは複数）を持っている可能性があります。
 

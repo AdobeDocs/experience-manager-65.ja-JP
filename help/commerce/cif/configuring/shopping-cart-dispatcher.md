@@ -1,10 +1,10 @@
 ---
 title: 買い物かごおよび Dispatcher の設定
-description: 買い物かごとAdobe Experience Manager Dispatcher の設定について説明します。
+description: 買い物かごおよび Adobe Experience Manager Dispatcher の設定について説明します。
 source-git-commit: eaffc71c23c18d26ec5cbb2bbb7524790c4826fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 

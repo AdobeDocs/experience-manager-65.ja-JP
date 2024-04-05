@@ -3,7 +3,7 @@ title: JEE WebLogic Server での EAR デプロイメントの失敗
 description: JEE WebLogic Server での EAR デプロイメントの失敗を解決する手順
 exl-id: b87a9eee-ee56-4dca-b4a3-a42c91db0b4f
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
 ht-degree: 100%
 

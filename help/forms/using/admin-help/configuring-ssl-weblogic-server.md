@@ -6,9 +6,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1052'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ WebLogic Server に SSL を設定するには、認証用の SSL 秘密鍵証明
 
 ## WebLogic Server で使用する SSL 秘密鍵証明書の作成 {#creating-an-ssl-credential-for-use-on-weblogic-server}
 
-keytool コマンドは通常、Java jre/bin ディレクトリにあり、次の表に示すオプションとオプションの値を含める必要があります。
+keytool コマンドは通常 Java の jre/bin ディレクトリにあります。このコマンドでは、次の表に示す複数のオプションとオプション値を指定する必要があります。
 
 <table>
  <thead>

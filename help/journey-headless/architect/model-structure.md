@@ -3,9 +3,9 @@ title: AEM でのコンテンツフラグメントモデルの作成について
 description: コンテンツフラグメントモデルを使用したヘッドレス CMS のコンテンツモデリングの概念と仕組みについて説明します。
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
 source-git-commit: 38f0496d9340fbcf383a2d39dba8efcbdcd20c6f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '690'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## コンテンツフラグメントモデルの作成 {#creating-content-fragment-models}
 
-コンテンツフラグメントモデルを作成し、構造を定義します。これは、ツール/アセット/コンテンツフラグメントモデルでおこなえます。
+コンテンツフラグメントモデルを作成し、構造を定義します。これは、ツール／アセット／コンテンツフラグメントモデルで実行できます。
 
 ![ツールのコンテンツフラグメントモデル](assets/cfm-tools.png)
 
@@ -67,7 +67,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ![データプロパティ](/help/assets/content-fragments/assets/cfm-models-05.png)
 
-フィールドは必要なだけ追加できます。次に例を示します。
+フィールドは必要なだけ追加できます。例：
 
 ![コンテンツフラグメントモデル](/help/assets/content-fragments/assets/cfm-models-07.png)
 
