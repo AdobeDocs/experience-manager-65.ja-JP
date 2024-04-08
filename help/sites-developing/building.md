@@ -8,10 +8,10 @@ content-type: reference
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
 workflow-type: tm+mt
-source-wordcount: '849'
-ht-degree: 100%
+source-wordcount: '868'
+ht-degree: 95%
 
 ---
 
@@ -199,4 +199,4 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 
 >[!CAUTION]
 >
->サービスパックをインストールすると、/content/cq:tags ノードの languages プロパティがデフォルトにリセットされます。したがって、インストール前にプロパティから追加しておく必要があります。
+>公式アップデートパッケージ（サービスパック、セキュリティサービスパック、拡張機能パック、累積機能パック、パッチなど）を使用してタグ付け関連の標準コンテンツをインストールすると、 `/content/cq:tags` ノードをデフォルトに設定します。 したがって、インストール前にプロパティから追加しておく必要があります。

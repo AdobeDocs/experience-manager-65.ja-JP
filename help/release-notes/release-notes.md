@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 7f150219bce3036c0e330b7349e679fdf19797d1
-workflow-type: ht
-source-wordcount: '3688'
-ht-degree: 100%
+source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
+workflow-type: tm+mt
+source-wordcount: '3735'
+ht-degree: 99%
 
 ---
 
@@ -460,8 +460,9 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
-* AEM 6.5.15 以降、```org.apache.servicemix.bundles.rhino``` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。strict モード（```use strict;```）を使用するスクリプトでは、変数を正しく宣言する必要があります。宣言しない場合、変数は実行されず、代わりにランタイムエラーが発生します。
+* AEM 6.5.15 以降、```org.apache.servicemix.bundles.rhino``` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。strict モード（```use strict;```）を使用するスクリプトでは、変数を正しく宣言する必要があります。宣言しない場合、スクリプトは実行されず、代わりにランタイムエラーが発生します。
 
+* 公式アップデートパッケージ（サービスパック、セキュリティサービスパック、拡張機能パック、累積機能パック、パッチなど）を使用してタグ付け関連の標準コンテンツをインストールすると、 `/content/cq:tags` ノードをデフォルトに設定します。 したがって、インストール前にプロパティから追加しておく必要があります。
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6520}
 
