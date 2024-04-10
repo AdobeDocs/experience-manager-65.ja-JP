@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Deploying
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 98%
@@ -176,7 +178,7 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
    * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します（「概要」を参照）。
    * web.xml ファイルを再圧縮
 
-* AEM war ファイルをアプリケーションとしてデプロイします（他の設定では、デフォルト設定を使用します）。
+* AEM war ファイルをアプリケーションとしてデプロイします（その他の設定はデフォルト設定を使用します）。
 * インストールには時間がかかる場合があります。
 * 上記の概要で説明した方法で、インストールが完了したことを確認します（error.log を追跡するなど）。
 * コンテキストルートは、WebLogic `/console` の web アプリケーションの「設定」タブで変更できます。

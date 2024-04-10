@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Managerでユーザー管理操作を監査する方法
-description: Adobe Experience Managerでユーザー管理操作を監査する方法について説明します。
+title: Adobe Experience Managerでの User Management の操作を監査する方法
+description: Adobe Experience Managerでの User Management 操作を監査する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -9,30 +9,31 @@ docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 13%
 
 ---
 
-# Adobe Experience Manager(AEM) でユーザー管理操作を監査する方法 {#how-to-audit-user-management-operations-in-aem}
+# Adobe Experience Manager（AEM）での User Management の操作を監査する方法 {#how-to-audit-user-management-operations-in-aem}
 
 ## はじめに {#introduction}
 
-AEMでは、権限の変更をログに記録して、後で監査できるようにする機能が導入されました。
+AEMには、後で監査できるように権限の変更をログに記録する機能が導入されています。
 
-この機能強化により、ユーザーの権限とグループ割り当てに対する CRUD（作成、読み取り、更新、削除）アクションを監査できます。 具体的には、次の情報が記録されます。
+この機能強化により、ユーザーの権限およびグループ割り当てに対する CRUD （作成、読み取り、更新、削除）アクションを監査できます。 具体的には、次の情報がログに記録されます。
 
-* 新しく作成されたユーザー
+* 新しいユーザーが作成されました
 * グループに追加されているユーザー
 * 既存のユーザーまたはグループの権限の変更
 
-デフォルトでは、エントリは `error.log` ファイル。 監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。これをおこなう方法について詳しくは、次の段落を参照してください。
+デフォルトでは、エントリは次の場所に書き込まれます `error.log` ファイル。 監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。この方法について詳しくは、以下の段落を参照してください。
 
-## 出力を別のログファイルにリダイレクトする {#redirecting-the-output-to-a-separate-log-file}
+## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
 
-ログ出力を別のログファイルにリダイレクトするには、 **Apache Sling Logging Logger** 設定。 次を使用します。 `useraudit.log` を、以下の例の別のファイルの名前として使用します。
+ログ出力を別のログファイルにリダイレクトするには、以下を作成します。 **Apache Sling Logging Logger** 設定。 使ってみましょう `useraudit.log` を個別のファイルの名前にします（以下の例では）。
 
 1. Web コンソールに移動します（*https://serveraddress:serverport/system/console/configMgr*）。
 1. を検索 **Apache Sling Logging Logger Configuration**. 次に、エントリの右側にある「+」を押して、ファクトリ設定を作成します。
@@ -43,7 +44,7 @@ AEMでは、権限の変更をログに記録して、後で監査できるよ�
    * **メッセージパターン：**&#x200B;レベルのデフォルト
    * **ロガー：** com.adobe.granite.security.user.internal.audit、com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   両方のロガーを **ロガー** 「 」フィールドに、最初のロガーの名前を入力し、次に「+」ボタンを押して 2 番目のロガーの名前を入力し、別のフィールドを作成する必要があります。
+   両方のロガーを「」に入力する手順は、次のとおりです。 **ロガー** フィールドに、最初のロガーの名前を入力し、「+」ボタンを押して別のフィールドを作成し、2 番目のロガーの名前を入力する必要があります。
 
 ## 出力例 {#example-output}
 
@@ -81,7 +82,7 @@ AEMでは、権限の変更をログに記録して、後で監査できるよ�
 
 ## クラシック UI {#classic-ui}
 
-クラシック UI では、ユーザーの追加と削除に関する監査ログに記録される CRUD 操作に関する情報は、影響を受けるユーザーの ID と、変更が発生した日時に限られます。
+クラシック UI では、ユーザーの追加と削除に関して監査ログに記録される CRUD 操作の情報は、影響を受けるユーザーの ID と、変更が発生したタイミングに限定されます。
 
 次に例を示します。
 

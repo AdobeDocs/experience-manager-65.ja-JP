@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: Security
 exl-id: 1c3d0d48-5c31-42a8-8698-922d7c2127e9
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Security
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 100%

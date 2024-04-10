@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Administering
+role: Admin
+source-git-commit: 315171dca4501718a34fd33f937334f7e7958963
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 99%
@@ -148,7 +150,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * ユーザーに対する表示およびアクセスが可能
 * 各プロパティに 2 つの状態を定義する
-* では、定義された 2 つの状態を切り替えることができます
+* 定義された 2 つの状態を切り替えることができます
 
 この定義を行うには、次の項目を使用します。
 

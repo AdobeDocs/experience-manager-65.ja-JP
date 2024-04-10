@@ -9,7 +9,8 @@ docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '2433'
 ht-degree: 99%
@@ -142,7 +143,7 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
    * **プリンシパル**：*ユーザー同期用に作成されたユーザーを検索*
    * **タイプ**：`Allow`
    * **権限**：`jcr:all`
-   * **制限事項** `rep:glob`: `*/activities/*`
+   * **制限** `rep:glob`: `*/activities/*`
    * 「**OK**」を選択します
 
 * 「**すべて保存**」を選択します

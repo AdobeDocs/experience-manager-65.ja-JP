@@ -4,7 +4,9 @@ description: Adobe Experience Manager リッチテキストエディターのプ
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Configuring
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '4391'
 ht-degree: 99%
@@ -328,7 +330,7 @@ RTE で作成したテキストは、ブロックタグ（デフォルトでは 
 
 >[!NOTE]
 >
->ブロックタグ ( 例： &lt;hr> タグを段落に割り当てることはできません。paraformat プラグインの有効なユースケースではありません。
+>ブロックタグの場合（例：） &lt;hr> タグです。段落に割り当てることはできません。paraformat プラグインの有効なユースケースではありません。
 
 段落書式プラグインを初めて有効にした場合、デフォルトの段落書式は使用できません。ポップアップリストは空です。段落書式を作成者が使用できるようにするには、次の操作を実行します。
 

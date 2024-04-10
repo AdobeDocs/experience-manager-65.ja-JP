@@ -7,7 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: security
 exl-id: 3c3db1c8-5b22-45dd-aeaf-5cf830a9486b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Security
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 100%

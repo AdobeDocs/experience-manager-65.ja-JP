@@ -5,10 +5,11 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-feature: Configuring
+feature: Administering
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '5753'
 ht-degree: 99%
@@ -491,7 +492,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><strong><code>SegmentNotFoundException</code> インスタンスが <code>error.log</code> に記録される理由と復旧方法を教えてください。</strong></td>
    <td><p><code>SegmentNotFoundException</code> は、TarMK がアクセスを試みたストレージユニット（セグメント）が見つからなかったときに、TarMK によってログに記録されます。この問題を引き起こす可能性のあるシナリオは次の 3 つです。</p>
     <ol>
-     <li>アプリケーションが、推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。このケースは一時的であり、データの破損にはつながりません。 復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。このためには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
+     <li>アプリケーションが、推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。このケースは一時的なもので、データの破損にはつながりません。 復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。このためには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
      <li>ディスク上のデータの破損を招いた外部イベント。これは、ディスク障害、ディスク容量不足、または必要なデータファイルの誤った変更などになります。この場合は、インスタンスをオフラインにし、oak-run チェックを使用して修復する必要があります。oak-run チェックの実行方法について詳しくは、次の <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメント</a> を参照してください。</li>
      <li>他のすべての状況では、<a href="https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support" target="_blank">アドビカスタマーケア</a>に連絡して対処します。</li>
     </ol> </td>
@@ -553,7 +554,7 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
     <td>該当なし</td>
     <td>TarMK GC #2：5 回のサイクル後、32.902 分（1974140 ms）でコンパクションに失敗しました。</td>
-    <td>このメッセージは、回復不能なエラーが発生したとは限らず、一部の試行の後にコンパクションが終了したという意味です。 また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
+    <td>このメッセージは、復旧不可能なエラーがあったのではなく、一部の試行の後にコンパクションが終了されたことのみを意味します。 また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
     <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> およびオンラインでのリビジョンクリーンアップの実行の節の最後の質問を参照してください。</a></td>
   </td>
   </tr>

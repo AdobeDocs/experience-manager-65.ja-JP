@@ -8,7 +8,8 @@ content-type: reference
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '2093'
 ht-degree: 99%
@@ -189,7 +190,7 @@ AEM ドキュメントサービスおよび AEM ドキュメントセキュリ�
 
 [オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。](/help/sites-deploying/offloading.md)オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。特殊化した処理により、使用可能なサーバーリソースの使用を最大限に活用できます。
 
-トポロジは、オフロードに参加している疎結合Experience Managerクラスタです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに関与するExperience Managerクラスターが緩やかに結合したものです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
 
 トポロジのメンバーシップを表示または変更する方法について詳しくは、「[トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies)」セクションを参照してください。
 

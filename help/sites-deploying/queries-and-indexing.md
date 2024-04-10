@@ -9,7 +9,8 @@ legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '3034'
 ht-degree: 99%
@@ -223,7 +224,7 @@ Lucene プロパティインデックスを作成するには、**fulltextEnable
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-上記のクエリの Lucene プロパティインデックスを定義するには、以下の定義を追加します。それには、以下の下にノードを作成します。 **`oak:index`:**
+上記クエリのための Lucene プロパティインデックスを定義するには、の下にノードを作成して、次の定義を追加します。 **`oak:index`:**
 
 * **名前：** `LucenePropertyIndex`
 * **タイプ：** `oak:QueryIndexDefinition`
