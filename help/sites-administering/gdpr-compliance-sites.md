@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: best-practices
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Compliance
+role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: ht
 source-wordcount: '824'
 ht-degree: 100%
