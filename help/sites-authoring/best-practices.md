@@ -7,7 +7,9 @@ topic-tags: introduction
 content-type: reference
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 100%

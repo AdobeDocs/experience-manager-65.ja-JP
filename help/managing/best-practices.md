@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Compliance
+role: Admin,Architect,Data Architect,Developer,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '3214'
 ht-degree: 100%

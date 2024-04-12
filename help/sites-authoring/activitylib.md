@@ -8,7 +8,9 @@ topic-tags: personalization
 docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Personalization
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1937'
 ht-degree: 100%

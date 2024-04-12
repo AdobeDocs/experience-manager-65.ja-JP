@@ -6,7 +6,9 @@ content-type: reference
 topic-tags: site-features
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 98%
@@ -123,7 +125,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
-コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが AEM により自動的に挿入されます。この処理を実行するために、コンポーネント自体で他の操作をおこなう必要はありません。
+コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが AEM により自動的に挿入されます。この他にコンポーネント自体で行う必要があることはありません。
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 

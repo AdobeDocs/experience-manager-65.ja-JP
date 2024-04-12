@@ -7,7 +7,9 @@ topic-tags: page-authoring
 content-type: reference
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 97%
@@ -42,7 +44,7 @@ Web サイトのページにコンテンツを追加する場合、多くは、�
 
 >[!NOTE]
 >
->忘れないでください [コメント](/help/sites-authoring/basic-handling.md#timeline) は、ページにフィードバックを提供するためにも使用できます。
+>それを忘れないでください [コメント](/help/sites-authoring/basic-handling.md#timeline) は、ページでフィードバックを提供する場合にも使用できます。
 
 >[!NOTE]
 >

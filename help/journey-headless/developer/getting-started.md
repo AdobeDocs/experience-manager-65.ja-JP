@@ -2,7 +2,10 @@
 title: AEM ヘッドレスの概要
 description: ここでは、AEM ヘッドレスデベロッパージャーニーのこの部分では、AEM ヘッドレスの前提条件について説明します。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2999'
 ht-degree: 99%
@@ -258,7 +261,7 @@ AEM を使用した[一般的なヘッドレス実装](#level-1)の場合、デ�
 多くの場合、エクスペリエンスのセクションが異なれば、コンテンツのアップデート頻度は異なります。CDN とキャッシュ設定を微調整するには、これを理解することが重要です。これは、コンテンツを表現するモデルを[コンテンツアーキテクト](#content-architects)が設計する際の重要な入力でもあります。次の点を考慮してください。
 
 * 一部のタイプのコンテンツは、一定の期間が過ぎると期限切れになりますか？
-* ユーザー固有の要素があり、したがってキャッシュできない要素はありますか？
+* ユーザー固有の要素があり、そのためキャッシュできない要素はありますか？
 
 ## 次の手順 {#what-is-next}
 

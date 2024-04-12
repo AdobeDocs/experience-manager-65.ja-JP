@@ -7,7 +7,9 @@ topic-tags: projects
 content-type: reference
 exl-id: c4eff50e-0d55-4a61-98fd-cc42138656cb
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 99%
@@ -146,7 +148,7 @@ AEM で製品情報が利用できない場合は、**撮影した製品写真�
 このセクションでは、製品情報管理とクリエイティブプロジェクトを統合する方法について説明します。
 
 1. 製品撮影プロジェクトに移動して、**ワークフロー**&#x200B;カードの&#x200B;**作業の追加**&#x200B;アイコンをクリックします。
-1. **製品写真撮影（Commerce 統合）**&#x200B;ワークフローカードを選択して、**製品写真撮影（Commerce 統合）**&#x200B;ワークフローを開始します。製品情報が以下にない場合 `/etc/commerce`を選択し、 **撮影した製品写真** ワークフローと開始 **撮影した製品写真** ワークフロー。
+1. **製品写真撮影（Commerce 統合）**&#x200B;ワークフローカードを選択して、**製品写真撮影（Commerce 統合）**&#x200B;ワークフローを開始します。製品情報がの下で利用できない場合 `/etc/commerce`を選択し、 **撮影した製品写真** のワークフローと開始 **撮影した製品写真** ワークフロー。
 
    ![ワークフローウィザード](assets/chlimage_1-140a.png)
 

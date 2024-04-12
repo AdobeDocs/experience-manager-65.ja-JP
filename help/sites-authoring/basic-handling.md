@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2964'
 ht-degree: 99%
@@ -53,7 +55,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 「**次へ**」をクリックして、概要の次のページに進みます。「**閉じる**」をクリックするか、概要ダイアログボックスの外側をクリックして閉じます。
 
-すべてのスライドを表示するか「 」オプションをオンにしない限り、概要は、次回コンソールにアクセスすると再開します。 **次回から表示しない**.
+すべてのスライドを表示するか、オプションをオンにしない限り、次回コンソールにアクセスした際に概要が再開されます **次回から表示しない**.
 
 ## グローバルナビゲーション {#global-navigation}
 

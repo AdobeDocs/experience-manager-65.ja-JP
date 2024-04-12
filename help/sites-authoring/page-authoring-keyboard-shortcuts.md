@@ -7,7 +7,9 @@ topic-tags: page-authoring
 content-type: reference
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 93%
@@ -31,7 +33,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 |  | `Ctrl-y` | [最後におこなった変更操作をやり直す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 複数の段落を選択する |
 |  | `Ctrl-c` | 選択した段落をコピー |
-|  | `Ctrl-x` | 選択した段落を切り取ります（切り取った段落は、貼り付けられるまで UI に表示されなくなります）。 |
+|  | `Ctrl-x` | 選択した段落を切り取る（切り取った段落は、貼り付けるまで UI に表示されません） |
 |  | `Ctrl-v` | 以前にカットまたはコピーした段落をペースト |
 |  | `Ctrl-Backspace` | 選択した段落を削除 |
 | **編集**&#x200B;モード - リッチテキストエディター | `Ctrl-b` | 太字 |

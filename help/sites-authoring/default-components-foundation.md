@@ -3,7 +3,9 @@ title: 基盤コンポーネント
 description: Adobe Experience Manager 6.5 の基盤コンポーネントについて説明します。
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '6873'
 ht-degree: 99%
@@ -179,7 +181,7 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
 
    * **次を使用してリストを作成**
 ページリストを作成する方法はいくつかあります。子ページ、固定リスト、検索または詳細検索です（いずれも以下で説明します）。
-どの方法を選択した場合でも、リストに含めるページにはそれぞれ、ページに関連付けられている画像が既に存在する必要があります。カルーセルに表示されるのはこの画像です。指定のページのページプロパティにそのページの画像がない場合は、開始する前にそのページに画像を関連付ける必要があります。表示しない場合、カルーセルにはほとんど空白のページが表示されます。 詳しくは、[ページプロパティの編集](/help/sites-authoring/editing-page-properties.md)を参照してください。
+どの方法を選択した場合でも、リストに含めるページにはそれぞれ、ページに関連付けられている画像が既に存在する必要があります。カルーセルに表示されるのはこの画像です。指定のページのページプロパティにそのページの画像がない場合は、開始する前にそのページに画像を関連付ける必要があります。そうしない場合、カルーセルに表示されるページはほとんど空白になります。 詳しくは、[ページプロパティの編集](/help/sites-authoring/editing-page-properties.md)を参照してください。
 選択した項目に応じて、新しいパネルが表示されます。
 
       * **子ページのオプション**

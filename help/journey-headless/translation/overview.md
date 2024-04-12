@@ -2,7 +2,10 @@
 title: AEM ヘッドレス翻訳ジャーニー
 description: AEM の強力な翻訳ツールを使用してヘッドレスコンテンツを翻訳する方法を順を追って説明するガイド付きジャーニーは、ここから始めてください。
 exl-id: 1a9d4c88-b676-4168-a9ef-7d218b39129f
-source-git-commit: 487136be68e04fd74affe43790587b37d4c3d3ef
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,Language Copy
+role: Admin, Architect,Data Architect,Developer,User,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 100%

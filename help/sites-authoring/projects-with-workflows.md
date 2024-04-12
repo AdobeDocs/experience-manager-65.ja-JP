@@ -7,7 +7,9 @@ topic-tags: projects
 content-type: reference
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Workflow
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 100%

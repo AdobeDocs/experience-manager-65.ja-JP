@@ -8,7 +8,8 @@ content-type: reference
 feature: Multi Site Manager
 exl-id: e145e79a-c363-4a33-b9f9-99502ed20563
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 99%
@@ -95,7 +96,7 @@ AEM には次の機能があります。
 
    * `ResourceNameRolloutConflictHandler`
 
-* を実装する可能性 [カスタマイズされたハンドラー](#customized-handlers).
+* を実装できる可能性 [カスタマイズされたハンドラー](#customized-handlers).
 * 個別のハンドラーの優先度を設定するためのサービスランキングメカニズム。最もランキングの高いサービスが使用されます。
 
 ### デフォルトの競合ハンドラー {#default-conflict-handler}

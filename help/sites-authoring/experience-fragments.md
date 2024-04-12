@@ -3,7 +3,9 @@ title: エクスペリエンスフラグメント
 description: Adobe Experience Manager Sites オーサリングでのエクスペリエンスフラグメント
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 5d37e4ec23bbbd838f4787622648aad7e1c1905b
+feature: Authoring,Experience Fragments
+role: User
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 96%
@@ -32,7 +34,7 @@ ht-degree: 96%
 * 作成者がページの一部（エクスペリエンスフラグメント）を再利用する場合は、そのフラグメントをコピーして貼り付ける必要があります。これらのエクスペリエンスのコピー／貼り付けの作成と管理には時間がかかり、ユーザーエラーが発生しがちです。
 エクスペリエンスフラグメントは、コピー／貼り付けを不要にします。
 * ヘッドレス CMS のユースケースをサポートする場合。作成者は AEM をオーサリングにのみ使用し、顧客への配信には使用しないようにします。サードパーティシステム／タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
-* を使用 [マルチサイト管理 (MSM)](/help/sites-administering/msm.md)を使用します。エクスペリエンスフラグメントはページの一部です。 これは、個々のフラグメントとその中に存在するフォルダーの両方に当てはまります。
+* （を使用） [マルチサイト管理（MSM）](/help/sites-administering/msm.md); エクスペリエンスフラグメントとして、はページの一部です。 これは、個々のフラグメントと、それらが存在するフォルダーの両方に適用されます。
 
 >[!NOTE]
 >

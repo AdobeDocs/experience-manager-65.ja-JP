@@ -7,7 +7,9 @@ topic-tags: personalization
 content-type: reference
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Personalization
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 99%
@@ -45,7 +47,7 @@ ht-degree: 99%
 
 #### 明示的 {#explicit}
 
-* カスタマイズ：ユーザーが選択したコンテンツソースから選択します。
+* カスタマイズ：ユーザーが様々なコンテンツソースから選択します。
 
 #### 暗黙的 {#implicit}
 

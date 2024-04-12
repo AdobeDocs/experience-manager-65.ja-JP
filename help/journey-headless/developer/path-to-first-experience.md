@@ -2,7 +2,10 @@
 title: AEM ヘッドレス機能を使用した初めてのエクスペリエンスへの道筋
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、計画に関する考慮事項なども含め、AEM で初めてのヘッドレスエクスペリエンスを実装するための手順を示し、できるだけスムーズに作業を進めるためのベストプラクティスについても説明します。
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 100%

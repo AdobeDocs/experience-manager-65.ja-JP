@@ -5,7 +5,8 @@ contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 99%
@@ -81,7 +82,7 @@ Sites プロパティは、ページのコンテンツの翻訳を実行する�
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
   </tr>
   <tr>
@@ -129,7 +130,7 @@ Sites プロパティは、ページのコンテンツの翻訳を実行する�
 
 Communities のプロパティは、ユーザー生成コンテンツの翻訳を実行する方法を制御します。ユーザー生成コンテンツの翻訳には、常に機械翻訳を使用します。詳しくは、[ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
 
-| Property | 説明 |
+| プロパティ | 説明 |
 |---|---|
 | 翻訳プロバイダー | 翻訳を実行する翻訳プロバイダーを選択します。クラウド設定の作成対象となるプロバイダーがリストに表示されます。 |
 | コンテンツのカテゴリ | 翻訳するコンテンツを示すカテゴリです。カテゴリは、コンテンツを翻訳する際の用語や言葉遣いの選択を左右します。 |
@@ -142,7 +143,7 @@ Assets プロパティは、アセットを設定する方法を制御します�
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
   </tr>
   <tr>

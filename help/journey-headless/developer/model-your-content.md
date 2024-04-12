@@ -2,7 +2,10 @@
 title: コンテンツをモデル化する方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、コンテンツフラグメントモデルとコンテンツフラグメントとともにコンテンツモデリングを使用して、AEM ヘッドレス配信用のコンテンツをモデル化する方法について説明します。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 99%
@@ -45,7 +48,7 @@ ht-degree: 99%
 
 *外の世界は大きくて邪悪だ（It&#39;s a big, bad world out there)*。
 
-この歌詞が本当かどうかはわかりませんが、確かに圧倒的だ ***複雑*** 世界はあそこにいる。 データモデリングは、ある目的に必要な特定の情報を使用して、その非常に小さな部分を、単純化された表現で定義するために使用されます。
+この歌詞が本当かどうかはわかりませんが、それは確かに圧倒的です ***複雑性*** 世の中だ。 データモデリングは、ある目的に必要な特定の情報を使用して、その非常に小さな部分を、単純化された表現で定義するために使用されます。
 
 >[!NOTE]
 >

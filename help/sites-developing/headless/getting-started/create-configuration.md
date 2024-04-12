@@ -3,7 +3,9 @@ title: ヘッドレス設定の作成に関するクイックスタートガイ�
 description: AEM 6.5 でヘッドレス機能を使い始めるための最初の手順として、設定を作成します。
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin,Architect,Data Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 100%

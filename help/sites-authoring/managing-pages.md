@@ -3,7 +3,9 @@ title: AEM を使用したページの作成と整理
 description: Adobe Experience Manager を使用したページの作成と管理方法について説明します。
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '2417'
 ht-degree: 100%
@@ -217,7 +219,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
    >[!NOTE]
    >
-   >詳しくは、[ページ命名規則](#page-naming-conventions)を参照してください。
+   > [ページ命名規則](#page-naming-conventions)を参照してください。
 
    ページの作成に必要となる最小限の情報は、「**タイトル**」です。
 
@@ -301,7 +303,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 >
 >ページは、ページの基となるテンプレートが許可されている場所にのみ移動できます。詳しくは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)を参照してください。
 
-ページの移動手順と名前の変更手順は基本的に同じで、同じウィザードで処理されます。このウィザードでは、次の操作を行うことができます。
+ページの移動手順と名前の変更手順は基本的に同じで、同じウィザードで処理されます。このウィザードでは、次の操作を実行できます。
 
 * ページを移動せずにページの名前を変更します。
 * ページを名前変更せずに移動する。

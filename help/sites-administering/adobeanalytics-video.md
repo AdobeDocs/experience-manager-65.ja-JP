@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Integration
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '1754'
 ht-degree: 99%
@@ -118,7 +120,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>表示されたセグメントに関する情報が含まれます。例： <code>2:O:4-8</code> </td>
+   <td>表示されているセグメントに関する情報（例： <code>2:O:4-8</code> </td>
   </tr>
  </tbody>
 </table>

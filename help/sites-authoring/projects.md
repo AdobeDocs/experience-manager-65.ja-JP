@@ -3,7 +3,9 @@ title: プロジェクト
 description: プロジェクトを使用すると、リソースを 1 つのエンティティにグループ化でき、共通の共有環境でプロジェクトを簡単に管理できます。
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Projects
+role: User,Admin,Architect,Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 99%
@@ -23,7 +25,7 @@ ht-degree: 99%
 
 ## アクセス要件 {#access-requirements}
 
-標準のAEM機能をプロジェクトするので、追加の設定は必要ありません。
+プロジェクトは標準のAEM機能なので、追加の設定は必要ありません。
 
 ただし、プロジェクト内のユーザーがプロジェクトを使用中（プロジェクトの作成、タスクやワークフローの作成、チームの表示と管理など）に、他のユーザーやグループを表示するには、`/home/users` および `/home/groups` に対する読み取りアクセス権が必要です。
 

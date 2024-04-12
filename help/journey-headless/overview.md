@@ -2,10 +2,13 @@
 title: AEM ヘッドレスジャーニー
 description: Adobe Experience Manager をヘッドレス CMS として使用する方法を説明するドキュメントジャーニーのコレクションです。
 exl-id: 369f79ab-c8ae-4d49-9b0b-e3a2e423b40f
-source-git-commit: 719dd7b30c8ce3f02fe46c632b1589fcc74a1759
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Developing,Content Fragments
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '457'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +38,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 
 個々のジャーニーは特定のペルソナまたはオーディエンス向けに定義されていますが、対象読者がやり取りする追加のペルソナも定義されています。
 
-ジャーニー内の情報は複数のペルソナに役立つ場合がありますが、ジャーニーのターゲットは特定のペルソナで、一部の情報は特定の役割で余分なものになる場合があります。
+ジャーニーの情報は、複数のペルソナにとって役に立ちますが、ジャーニーのターゲットは特定のペルソナであり、場合によっては、特定の役割には必要ない情報も一部含まれています。
 
 ## ヘッドレスジャーニー {#headless-journeys}
 

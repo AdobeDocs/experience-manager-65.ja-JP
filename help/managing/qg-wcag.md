@@ -3,7 +3,9 @@ title: WCAG 2.1 クイックガイド
 description: Web コンテンツアクセシビリティガイドライン（WCAG）バージョン 2.1 クイックガイド
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
 solution: Experience Manager, Experience Manager 6.5
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Compliance
+role: Developer,Leader,Architect,Data Architect,User
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1734'
 ht-degree: 100%

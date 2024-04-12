@@ -2,8 +2,11 @@
 title: CMS ヘッドレス開発について
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレステクノロジーと、それを使用する理由について説明します。
 exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
-source-git-commit: bd86d647fdc203015bc70a0f57d5b94b4c634bf9
-workflow-type: ht
+solution: Experience Manager, Experience Manager Sites
+feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
+role: Admin, Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 100%
 
@@ -76,7 +79,7 @@ ht-degree: 100%
 
 ## 技術基盤 {#technology}
 
-ヘッドレスアプローチを使用すると、将来のデジタルエクスペリエンスの要求に簡単かつ迅速に適応できるテクノロジースタックを構築できます。
+ヘッドレスアプローチを使用すると、将来のデジタルエクスペリエンスの要求に簡単かつ迅速に対応できるテクノロジースタックを構築できます。
 
 以前の CMS 向けの API は主に REST ベースでした。Representational State Transfer（REST）は、ステートレス方式でリソースをテキストとして提供します。これにより、リソースを読み取り、事前に定義された一連の操作で変更できます。REST は、コンテンツのステートレス表現を確保することで、Web 上のサービス間で大きな相互運用性を確保できます。
 
@@ -112,7 +115,7 @@ ht-degree: 100%
 
 このジャーニーでは、ヘッドレスのみのコンテンツ配信モデルに焦点を当てます。しかし、この基本的な知識を学べば、両方のモデルを活用する方法をさらに詳しく学ぶことができます。
 
-## 次のステップ {#what-is-next}
+## 次の手順 {#what-is-next}
 
 AEM ヘッドレスジャーニーを開始していただきありがとうございます。ドキュメントを読んだので、次を理解しているはずです。
 
@@ -128,4 +131,4 @@ AEM ヘッドレスジャーニーを開始していただきありがとうご�
 
 * [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
 * [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
-* [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法を確認し、適切なオプションを選択することができます。
+* [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法を確認し、最適なものを選択します。

@@ -7,7 +7,9 @@ topic-tags: managing-checklist
 content-type: reference
 exl-id: 16851d65-df55-471a-8848-c73c28db8ac0
 solution: Experience Manager, Experience Manager 6.5
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Compliance
+role: Admin,Architect,Data Architect,Developer,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 100%

@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: best-practices
 exl-id: e17ff611-122a-4d17-97af-071d0234dd16
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Experience Fragments,Developing
+role: Developer
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 100%

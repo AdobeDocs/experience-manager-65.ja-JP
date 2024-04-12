@@ -5,7 +5,8 @@ contentOwner: Guillaume Carlino
 feature: Language Copy
 exl-id: 6ccfe612-8cfd-4ca2-ad01-8e4af36d44fa
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 100%

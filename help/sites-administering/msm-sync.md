@@ -9,7 +9,8 @@ docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '2672'
 ht-degree: 98%
@@ -61,7 +62,7 @@ ht-degree: 98%
   </tr>
   <tr>
    <td>標準ロールアウト設定</td>
-   <td>ロールアウトトリガーでロールアウトプロセスを開始し、アクション（コンテンツの作成、更新、削除、子ノードの並べ替え）を実行する標準ロールアウト設定。</td>
+   <td>ロールアウト設定でロールアウトプロセスを開始でき、アクション（コンテンツの作成、更新、削除や子ノードの整理）を実行できる標準のロールアウトトリガーです。</td>
    <td>ロールアウト時</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> productUpdate<br /> orderChildren</td>
   </tr>
@@ -109,7 +110,7 @@ ht-degree: 98%
   </tr>
   <tr>
    <td>DPS パブリケーションのロールアウト設定</td>
-   <td>DPS パブリケーションのロールアウト設定。最初のロールアウトで FolioProducer バインディングプロパティを除外しながら、ロールアウトトリガーでロールアウトプロセスを開始できます。</td>
+   <td>DPS 公開ロールアウト設定：ロールアウトトリガー時にロールアウトプロセスを開始できますが、初期ロールアウト時に FolioProducer バインディングプロパティを除外できます</td>
    <td>ロールアウト時</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> orderChildren<br /> dpsMetadataFilter</td>
   </tr>

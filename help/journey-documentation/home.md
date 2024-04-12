@@ -2,8 +2,10 @@
 title: AEM ドキュメントのジャーニー
 description: ドキュメントジャーニーでは、ビジネス目標を解決するために、ベストプラクティスに従って複雑で種々異なる機能を組み合わせることで、AEM ドキュメントにストーリー構造を提供します。AEM の初心者を念頭に置いて設計されたジャーニーでは、A から Z の目標を達成するための概念と機能を紹介しています。
 exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
-source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: ht
+solution: Experience Manager, Experience Manager Sites
+role: Admin, Architect,Data Architect,Developer,User,Leader
+source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 100%
 
