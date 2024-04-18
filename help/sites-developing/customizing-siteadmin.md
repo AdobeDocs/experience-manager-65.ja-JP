@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 2b9b4857-821c-4f2f-9ed9-78a1c9f5ac67
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 100%

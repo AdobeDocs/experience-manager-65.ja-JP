@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,Personalization
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2791'
 ht-degree: 93%
@@ -35,9 +37,9 @@ ht-degree: 93%
 ...
 ```
 
-この方法はAEMで機能しますが、ページとその構成コンポーネントが複雑になった場合に問題が発生する可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的なHTML出力に含まれる可能性があります。 この問題を回避し、を使用してクライアント側ライブラリを論理的に整理できるようにするには、次の手順を実行しますAEM **クライアントサイドライブラリフォルダー**.
+このアプローチはAEMで機能しますが、ページとその構成要素が複雑になると問題が生じる可能性があります。このような場合、最終的なHTML出力に同じ JS ライブラリの複数のコピーが含まれる可能性があります。 この問題を回避し、AEMで使用されるクライアントサイドライブラリの論理的編成を可能にする方法 **クライアントサイドライブラリフォルダー**.
 
-クライアント側ライブラリフォルダーは、タイプが `cq:ClientLibraryFolder`. の定義 [CND 表記](https://jackrabbit.apache.org/node-type-notation.html) 次に該当
+クライアントサイドライブラリフォルダーは、タイプのリポジトリノードです `cq:ClientLibraryFolder`. での定義 [CND 表記](https://jackrabbit.apache.org/node-type-notation.html) 等しい
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder
@@ -109,7 +111,7 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 クライアントライブラリフォルダーには次の項目が含まれます。
 
-* 結合する JS または CSS ソースファイル。
+* 結合する JS ソースファイルや CSS ソースファイル。
 * 画像ファイルなど、CSS スタイルをサポートするリソース。
 
   **メモ：**&#x200B;サブフォルダーを使用してソースファイルを整理できます。
@@ -123,7 +125,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 ### /lib でのライブラリの上書き {#overriding-libraries-in-lib}
 
-以下にあるクライアントライブラリフォルダー `/apps` 同じ名前のフォルダーよりも、 `/libs`. 例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
+の下にあるクライアントライブラリフォルダー `/apps` 似た名前のフォルダーよりも優先されます `/libs`. 例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
 
 ### クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用 {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
@@ -135,7 +137,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 >[!NOTE]
 >
->コードをコンテンツと設定からより詳細に分離するには、以下の場所にクライアントライブラリを配置することをお勧めします。 `/apps` を介して公開します。 `/etc.clientlibs` を使用して、 `allowProxy` プロパティ。
+>コードをコンテンツおよび設定から適切に分離するには、以下にクライアントライブラリを配置することをお勧めします `/apps` 次を介して公開します `/etc.clientlibs` を使用する `allowProxy` プロパティ。
 
 `/apps` にあるクライアントライブラリにアクセスできるようにするために、プロキシサーブレットが使用されます。ACL は依然としてクライアントライブラリフォルダーで適用されますが、サーブレットを使用すると、`/etc.clientlibs/` プロパティが `allowProxy` に設定されている場合、`true` を介してコンテンツを読み取ることができます。
 
@@ -163,7 +165,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 1. Web ブラウザーで CRXDE Lite を開きます（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）。
 1. クライアントライブラリフォルダーの配置先のフォルダーを選択して、**作成／ノードを作成**&#x200B;をクリックします。
-1. ライブラリファイルの名前を入力し、[ タイプ ] リストでを選択します。 `cq:ClientLibraryFolder`. 「**OK**」をクリックし、「**すべて保存**」をクリックします。
+1. ライブラリ ファイルの名前を入力し、[ タイプ ] リストで `cq:ClientLibraryFolder`. 「**OK**」をクリックし、「**すべて保存**」をクリックします。
 1. ライブラリが所属するカテゴリ（1 つまたは複数）を指定するには、`cq:ClientLibraryFolder` ノードを選択し、次のプロパティを追加して、「**すべて保存**」をクリックします。
 
    * 名前：categories
@@ -198,7 +200,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 ### 依存関係へのリンク {#linking-to-dependencies}
 
-クライアントライブラリフォルダーのコードが他のライブラリを参照する場合、他のライブラリを依存関係として識別します。JSP では、 `ui:includeClientLib` クライアントライブラリフォルダーを参照するタグによって、HTMLコードに生成されたライブラリファイルへのリンクと依存関係が含まれます。
+クライアントライブラリフォルダーのコードが他のライブラリを参照する場合、他のライブラリを依存関係として識別します。JSP では、 `ui:includeClientLib` クライアントライブラリフォルダーを参照するタグを指定すると、HTMLコードに、生成されたライブラリファイルおよび依存関係へのリンクが含まれます。
 
 依存関係は別の `cq:ClientLibraryFolder` でなければなりません。依存関係を識別するには、次の属性を持つプロパティを `cq:ClientLibraryFolder` ノードに追加します。
 
@@ -244,7 +246,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 このような場合、必要なすべてのクライアントライブラリコードを 1 つのファイルに組み合わせて、ページ読み込み時のリクエストの行き来の数を減らすと便利です。これを行うには、`cq:ClientLibraryFolder` ノードの embed プロパティを使用して、必要なライブラリをアプリ固有のクライアントライブラリに `embed` します。
 
-AEMには、次のクライアントライブラリカテゴリが含まれています。特定のサイトの機能に必要なもののみを埋め込む必要があります。 しかし、 **ここに記載されている順序を維持する必要があります**:
+AEMには、次のクライアントライブラリカテゴリが含まれます。特定のサイトを機能させるために必要なもののみを埋め込んでください。 ただし、 **このリストの順序は保持する必要があります**:
 
 1. `browsermap.standard`
 1. `browsermap`

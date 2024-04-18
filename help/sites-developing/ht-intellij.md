@@ -7,7 +7,9 @@ topic-tags: development-tools
 content-type: reference
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,Developer Tools
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 97%
@@ -107,7 +109,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 1. 「**+**」をクリックして「**JSR45 Remote**」を選択します。
 1. 設定ダイアログで、「**アプリケーションサーバー**」の横にある「**設定**」を選択して、Generic サーバーを設定します。
 1. デバッグの開始時にブラウザーを開く場合は、開始ページを適切な URL に設定します。
-1. すべてを削除 **起動前** vlt 自動同期を使用する場合はタスク、使用しない場合は適切な Maven タスクを設定します。
+1. すべて削除 **ローンチ前** vlt autosync を使用する場合はタスク、使用しない場合は適切な Maven タスクを設定します。
 1. **スタートアップ／接続**&#x200B;パネルで、必要に応じてポートを調整します。
 1. IntelliJ IDEA が処理するコマンドライン引数をコピーします。
 

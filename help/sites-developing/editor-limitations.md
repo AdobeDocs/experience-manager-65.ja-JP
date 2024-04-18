@@ -1,13 +1,15 @@
 ---
 title: 編集者の制限事項
-description: タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
+description: タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe 内に閉じ込められたコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 59%
@@ -16,7 +18,7 @@ ht-degree: 59%
 
 # 編集者の制限事項{#editor-limitations}
 
-タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
+タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe 内に閉じ込められたコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
 
 ## 機能の制限事項 {#functional-limitations}
 
@@ -30,7 +32,7 @@ ht-degree: 59%
 
 ### 構造ページ {#structure-pages}
 
-ページに名前を付けることはできません `structure`. という名前のページ `structure` は、ページエディターで編集できません。
+ページに名前を付けることはできません `structure`. 名前の付いたページ `structure` ページエディターでは編集できません。
 
 ## CSS の制限 {#css-limitations}
 
@@ -40,15 +42,15 @@ ht-degree: 59%
 
 絶対配置された要素により、そのオーバーレイの位置に問題が生じる可能性があります。
 
-* この場合、エディターはまったく同じ寸法のオーバーレイを作成するので、絶対位置にある要素の寸法が正しいことを確認してください。
+* この場合、エディターは完全に同じ寸法のオーバーレイを作成するので、絶対配置された要素の寸法が正しいことを確認してください。
 
 ### vh 単位 {#vh-units}
 
-`vh` iframe の高さはAdobe Experience Manager(AEM) によって自動的に調整される必要があるので、単位はサポートされません。
+`vh` iframe の高さはAdobe Experience Manager（AEM）によって自動調整されるので、単位はサポートされません。
 
 ### 固定の背景画像 {#fixed-background-images}
 
-固定の背景画像は iframe 内に埋め込まれるので、スクロール時に固定されて表示されない場合があります。
+固定の背景画像は、iframe 内に埋め込まれているので、スクロール時に固定として表示されない場合があります。
 
 * ヘッダーバーのアクションで「**公開済みとしてページを表示**」を選択すると、ページが正しく表示されます。
 
@@ -56,7 +58,7 @@ ht-degree: 59%
 
 ページの body 要素では、100 ％の高さはサポートされていません。
 
-* 次のように body 要素を「拡張」することで、全画面の body を実装できます。
+* 次のように、body 要素を「拡張」することで、フルスクリーン body を実装するための回避策があります。
 
 ```xml
 body {

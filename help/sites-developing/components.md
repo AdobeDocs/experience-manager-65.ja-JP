@@ -7,7 +7,9 @@ topic-tags: components
 content-type: reference
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 100%
@@ -20,7 +22,7 @@ ht-degree: 100%
 
 ## コンポーネントとは {#what-exactly-is-a-component}
 
-* 特定の機能を実現し、Web サイトにコンテンツを提供するためのモジュールユニットです。
+* 特定の機能を実現し、web サイトにコンテンツを提供するためのモジュールユニットです。
 * 再利用可能です。
 * リポジトリーの 1 つのフォルダー内の自己完結型ユニットとして開発されます。
 * 非表示の設定ファイルを持ちません。

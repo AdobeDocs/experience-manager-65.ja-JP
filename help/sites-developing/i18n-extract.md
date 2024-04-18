@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: components
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 100%

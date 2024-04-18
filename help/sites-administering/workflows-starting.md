@@ -7,7 +7,9 @@ topic-tags: operations
 content-type: reference
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Operations
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 100%

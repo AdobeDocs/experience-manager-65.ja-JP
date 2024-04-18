@@ -3,7 +3,9 @@ title: Adobe Experience Manager 内での外部 SPA の編集
 description: このドキュメントでは、スタンドアロン SPA を Adobe Experience Manager instance インスタンスにアップロードし、編集可能なコンテンツのセクションを追加し、オーサリングを有効にする推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,SPA Editor
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 100%

@@ -7,7 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '5177'
 ht-degree: 99%
@@ -115,7 +117,7 @@ AEM に用意されている標準レポートの特徴：
 
      これにより、検索対象とするリポジトリのサブツリーを指定します。
 
-     パフォーマンスへの影響を減らすため、クエリの対象をなるべくリポジトリの特定のサブツリーに制限することをお勧めします。ルートパスは、 [レポートテンプレート](#report-template) または、 [設定（編集）ダイアログボックス](#configuration-dialog).
+     パフォーマンスへの影響を減らすため、クエリの対象をなるべくリポジトリの特定のサブツリーに制限することをお勧めします。このルートパスは、 [レポートテンプレート](#report-template) または、でユーザーが設定 [設定（編集）ダイアログボックス](#configuration-dialog).
 
    * [1 つまたは複数の条件](#query-definition)。
 
@@ -123,7 +125,7 @@ AEM に用意されている標準レポートの特徴：
 
 **重要な点は、クエリの結果セットに返されるノードを 1 つ使用して、レポートの行が 1 つ生成される（ノードと行は 1 対 1 の関係にある）ことです。**
 
-開発者は、レポートに対して定義したクエリによって、そのレポートに適切なノードセットが返されることを確認する必要があります。ただし、ノード自体に必要な情報をすべて保持する必要はありません。親ノードや子ノードから取得することもできます。 例えば、[ユーザーレポート](/help/sites-administering/reporting.md#user-report)で使用するクエリでは、ノードタイプ（この場合は `rep:user`）に基づいてノードを選択します。ただし、このレポートのほとんどの列は、これらのノードから直接データを取り出すのではなく、子ノードの `profile` からデータを取り出します。
+開発者は、レポートに対して定義したクエリによって、そのレポートに適切なノードセットが返されることを確認する必要があります。ただし、ノード自体が必要な情報をすべて保持する必要はありません。親ノードや子ノードから導き出すこともできます。 例えば、[ユーザーレポート](/help/sites-administering/reporting.md#user-report)で使用するクエリでは、ノードタイプ（この場合は `rep:user`）に基づいてノードを選択します。ただし、このレポートのほとんどの列は、これらのノードから直接データを取り出すのではなく、子ノードの `profile` からデータを取り出します。
 
 ### 処理キュー {#processing-queue}
 

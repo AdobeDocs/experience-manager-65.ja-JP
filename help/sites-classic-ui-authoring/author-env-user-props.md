@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 87%
@@ -22,7 +24,7 @@ Adobe Experience Manager（AEM）では、アカウントとオーサー環境�
 [アカウント設定](#account-settings)と[ユーザーの環境設定](#user-preferences)を使用して、次のオプションと環境設定を定義できます。
 
 * **ツールバーの編集**
-グローバル編集ツールバーが必要かどうかを選択します。このツールバーはブラウザーウィンドウの上部に表示され、 **コピー**, **カット**, **貼り付け**, **削除** そのページの段落コンポーネントで使用するボタン：
+グローバル編集ツールバーが必要かどうかを選択します。このツールバーはブラウザーウィンドウの上部に表示され、 **コピー**, **カット**, **ペースト**, **削除** そのページの段落コンポーネントで使用するためのボタンを以下に示します。
 
    * 必要な場合に表示（デフォルト）
    * 常に表示

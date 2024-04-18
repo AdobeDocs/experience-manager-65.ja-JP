@@ -7,7 +7,9 @@ topic-tags: integration
 content-type: reference
 exl-id: ee5e8ebb-773f-4aa6-9c3e-2cc3bf4a3bbd
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Integration
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 100%

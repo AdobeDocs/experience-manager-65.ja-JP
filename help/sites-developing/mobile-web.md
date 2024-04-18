@@ -8,7 +8,9 @@ content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/mobile
 exl-id: 309d256b-c67c-4df9-8851-b1ee3faa55ed
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 100%

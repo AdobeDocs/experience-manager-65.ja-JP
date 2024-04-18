@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3227'
 ht-degree: 99%
@@ -64,7 +66,7 @@ ht-degree: 99%
 
 * **メールでユーザーに通知する**
 
-   * ワークフローがステップに到達したら、参加者に電子メールを送信して通知します。
+   * ワークフローがステップに到達したら、参加者にメールを送信して通知します。
    * 有効にすると、プロパティ&#x200B;**ユーザー／グループ**&#x200B;で定義されたユーザーに対して、またはグループが定義されている場合、グループの各メンバーに対して、メールが送信されます。
 
 * **ユーザー／グループ**

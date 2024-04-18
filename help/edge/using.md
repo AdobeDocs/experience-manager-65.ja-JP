@@ -4,7 +4,8 @@ description: Edge 配信サービスの使用
 exl-id: 6c9178b0-c8f3-4fc7-8614-8e71ffc2f0b8
 solution: Experience Manager, Experience Manager Assets
 feature: Edge Delivery Services
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 92%
@@ -22,7 +23,7 @@ Edge 配信を使用すると、オーサリングが簡単、迅速、柔軟に
 * ドキュメントベースのオーサリング（Microsoft Word や Google Docs など）について詳しくは、[こちらのリンクを参照してください。](https://www.hlx.live/docs/authoring)。
 * ページエディター／ユニバーサルエディター - アドビ営業担当者にお問い合わせください。
 
-ドキュメントベースのオーサリングがある場合は、Microsoft Word やGoogle Docs など、様々なソースを使用できます。 これらのソースからのドキュメントは、web サイト上のページになります。見出し、リスト、画像、フォント要素、ビデオはすべて、初期ソースから web サイトに転送できます。SEO 用にメタデータを追加したり、ブロックを使用して構造化コンテンツを操作したり、機能を追加したりできます。
+ドキュメントベースのオーサリングがある場合は、Microsoft Word やGoogle ドキュメントなど様々なソースを使用できます。 これらのソースからのドキュメントは、web サイト上のページになります。見出し、リスト、画像、フォント要素、ビデオはすべて、初期ソースから web サイトに転送できます。SEO 用にメタデータを追加したり、ブロックを使用して構造化コンテンツを操作したり、機能を追加したりできます。
 
 ## 公開 {#publishing-edge}
 
@@ -30,7 +31,7 @@ Edge 配信を使用すると、コンテンツソースに関係なく、コン
 
 ## Edge 配信サービスおよび GitHub {#github-edge}
 
-Edge 配信では GitHub を使用するので、顧客は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、Google Docs または Microsoft Word にコンテンツを書き込み、GitHub で CSS と JavaScript を使用してサイトの機能を開発できます。コンテンツのプレビューから実稼動環境まで、ブランチごとに web サイトが自動的に作成されます。GitHub リポジトリに配置したすべてのリソースは、ビルドプロセスなしで web サイト上で使用できます。
+エッジ配信では GitHub を使用しているので、お客様は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、Google Docs または Microsoft Word にコンテンツを書き込み、GitHub で CSS と JavaScript を使用してサイトの機能を開発できます。コンテンツのプレビューから実稼動環境まで、ブランチごとに web サイトが自動的に作成されます。GitHub リポジトリに配置したすべてのリソースは、ビルドプロセスなしで web サイト上で使用できます。
 
 ## Sidekick の使用 {#using-sidekick}
 
@@ -59,4 +60,4 @@ AEM Assets Sidekick プラグインを設定した後、[Google Docs または M
 * Edge 配信の開始方法について詳しくは、Edge 配信ドキュメントの[ビルド](https://www.hlx.live/docs/#build)の節を参照してください。
 * Edge 配信を使用してコンテンツをオーサリングおよび公開する方法について詳しくは、[セクションの公開](https://www.hlx.live/docs/authoring)を参照してください。
 * サイドキック拡張機能の使用方法について詳しくは、[サイドキックの使用](https://www.hlx.live/docs/sidekick)のページを参照してください。
-* AEMオーサリングの場合は、 [オーサリングの概念ページ](/help/sites-authoring/author.md))
+* AEM オーサリングについては、を参照してください [オーサリングの概念ページ](/help/sites-authoring/author.md)）

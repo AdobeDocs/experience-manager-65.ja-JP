@@ -7,7 +7,9 @@ topic-tags: testing
 content-type: reference
 exl-id: d38b77ae-93be-4258-8827-6178097395d5
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 100%

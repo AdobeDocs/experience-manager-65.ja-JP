@@ -4,7 +4,9 @@ description: アクセシブルな web ページとサイトを作成するた�
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Administering
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 100%

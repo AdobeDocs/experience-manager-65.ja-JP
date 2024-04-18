@@ -7,7 +7,9 @@ topic-tags: operations
 content-type: reference
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Administering
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 83%
@@ -16,7 +18,7 @@ ht-degree: 83%
 
 # ビデオコンポーネントの設定 {#configure-the-video-component}
 
-The [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) では、事前に定義された標準搭載のビデオアセットをページに配置できます。
+この [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) 定義済みですぐに使用できるビデオアセットをページに配置できます。
 
 適切なトランスコードを行うために、管理者が FFmpeg を個別にインストールします。詳しくは、[FFmpeg のインストールと AEM の設定](#install-ffmpeg)を参照してください。HTML5 要素と共に使用する場合、管理者は[ビデオプロファイルの設定](#configure-video-profiles)も実施してください。
 
@@ -82,4 +84,4 @@ FFmpeg を **macOS X 10.6** にインストールするには、事前にコン�
 
 >[!NOTE]
 >
->標準搭載のデフォルトのワークフローモデルに対する変更は、AEMインスタンスをアップグレードしても保持されません。 アドビでは、変更したワークフローモデルを編集する前にコピーすることをお勧めします。例えば、標準搭載のをコピーするには、 [!UICONTROL DAM アセットの更新] モデルを編集してから、 [!UICONTROL DAM アセットの更新] モデルを使用して、アップグレード前に存在したビデオプロファイル名を選択します。 次に、 `/apps` ノードを使用して、AEMが標準モデルに対するカスタムの変更を取得できるようにします。
+>AEM インスタンスをアップグレードしても、標準のワークフローモデルに対する変更は保持されません。 アドビでは、変更したワークフローモデルを編集する前にコピーすることをお勧めします。例えば、標準のをコピーします [!UICONTROL DAM アセットの更新] で FFmpeg トランスコーディング手順を編集する前のモデル [!UICONTROL DAM アセットの更新] アップグレード前に存在していたビデオプロファイル名を選択するモデル。 次に、をオーバーレイできます `/apps` ノードを使用して、AEMが標準モデルのカスタム変更を取得できるようにします。

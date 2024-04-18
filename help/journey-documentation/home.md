@@ -4,7 +4,8 @@ description: ドキュメントジャーニーでは、ビジネス目標を解�
 exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
 solution: Experience Manager, Experience Manager Sites
 role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+feature: Administering
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 100%

@@ -7,7 +7,9 @@ topic-tags: spa
 content-type: reference
 exl-id: 59ada14e-3cb1-4f2c-b866-a2bb130db3fc
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,SPA Editor
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 100%

@@ -7,7 +7,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Integration
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 100%

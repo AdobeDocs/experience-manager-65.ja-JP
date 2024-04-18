@@ -8,7 +8,9 @@ topic-tags: components, testing
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '759'
 ht-degree: 100%

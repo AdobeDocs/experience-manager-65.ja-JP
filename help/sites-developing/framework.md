@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 docset: aem65
-feature: Tagging
+feature: Developing,Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 95%
@@ -39,7 +40,7 @@ ht-degree: 95%
 
 タグの宣言は、リポジトリにおける `cq:Tag` タイプのノードにキャプチャされます。
 
-タグは、単純な単語にすることができます ( 例： `sky`) または階層的な分類（例： ）を表します。 `fruit/apple`（両方の汎用を意味する） `fruit` そしてより具体的に `apple`) をクリックします。
+タグは単純な単語にすることができます（例：） `sky`）または階層的分類を表します（例：） `fruit/apple`（両方の汎用を意味） `fruit` より具体的には `apple`）に設定します。
 
 タグは一意のタグ ID によって識別されます。
 
@@ -77,7 +78,7 @@ AEM の基本パスは `/content/cq:tags` であり、ルートノードのタ�
 
 ### タグの名前空間 {#tag-namespace}
 
-名前空間を使用するとグループ化を行うことができます。最も一般的な使用例は、サイトごと（公開、内部、ポータルなど）または大規模なアプリケーションごと（WCM、Assets、Communities など）の名前空間です。 ただし、名前空間は他の様々なニーズにも使用できます。名前空間は、ユーザーインターフェイスで使用され、現在のコンテンツに適用できるタグのサブセット（つまり、特定の名前空間のタグ）のみを表示します。
+名前空間を使用するとグループ化を行うことができます。最も典型的なユースケースは、サイトごと（例：公開、社内、ポータル）や大規模なアプリケーションごと（例：WCM、アセット、コミュニティ）の名前空間です。 ただし、名前空間は他の様々なニーズにも使用できます。名前空間は、現在のコンテンツに適用されるタグのサブセット（つまり、特定の名前空間のタグ）のみを表示するためにユーザーインターフェイスで使用されます。
 
 タグの名前空間は、分類サブツリーの最初のレベルです。これは、[分類のルートノード](#taxonomy-root-node)の直下のノードです。名前空間は `cq:Tag` タイプのノードで、その親は `cq:Tag` ノードタイプではありません。
 

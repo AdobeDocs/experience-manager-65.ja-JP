@@ -1,13 +1,15 @@
 ---
 title: カスタムノードタイプ
-description: Adobe Experience Manager(AEM) は Sling に基づいており、JCR リポジトリを使用し、両方から提供されるノードタイプを使用しますが、AEMは様々なカスタムノードタイプも提供します
+description: Adobe Experience Manager（AEM）は、Sling に基づいており、両方で提供されるノードタイプの JCR リポジトリを使用しますが、AEMでは様々なカスタムノードタイプも提供します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 76%
@@ -16,12 +18,12 @@ ht-degree: 76%
 
 # カスタムノードタイプ{#custom-node-types}
 
-Adobe Experience Manager(AEM) は Sling をベースとし、JCR リポジトリを使用するので、次の両方で提供されるノードタイプを使用できます。
+Adobe Experience Manager（AEM）は Sling ベースであり JCR リポジトリを使用しているので、これらが提供する次のようなノードタイプを利用できます。
 
 * [JCR ノードタイプ](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling ノードタイプ](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-AEMでは、これらのノードタイプに加えて、様々なカスタムノードタイプを提供しています。
+これらのノードタイプに加えて、AEMでは様々なカスタムノードタイプが提供されています。
 
 ## 監査 {#audit}
 
@@ -146,7 +148,7 @@ AEMでは、これらのノードタイプに加えて、様々なカスタム�
 
 **説明**
 
-ノードを疑似ページとしてマークする mixin タイプを定義します。 つまり、ページおよび WCM 編集のサポートに合わせて変更できるということです。
+ノードを疑似ページとしてマークする mixin タイプを定義します。 つまり、ページや WCM の編集をサポートするように適応させることができます。
 
 **定義**
 
@@ -161,9 +163,9 @@ AEMでは、これらのノードタイプに加えて、様々なカスタム�
 * `@prop jcr:title` - ページのタイトル。
 * `@prop jcr:description` - このページの説明。
 * `@prop cq:template` - ページの作成に使用されるテンプレートへのパス。
-* `@prop cq:allowedTemplates`  — 許可されたテンプレートへのパスを決定するために使用される正規表現のリスト。
-* `@prop pageTitle`  — に表示されるタイトル `<title>` タグを使用します。
-* `@prop navTitle`  — ナビゲーションで使用されるタイトル。
+* `@prop cq:allowedTemplates`  – 許可されたテンプレートへのパスを定義するために使用する正規表現のリスト。
+* `@prop pageTitle`  – に表示されるタイトル `<title>` タグ。
+* `@prop navTitle` - ナビゲーション内で使用されるタイトル。
 * `@prop hideInNav` - ナビゲーション内でこのページを非表示にするかを指定します。
 * `@prop onTime` - このページが有効になる時刻。
 * `@prop offTime` - このページが無効になる時刻。
@@ -203,8 +205,8 @@ CQ テンプレートを定義します。
       * `+ name1`
          * `- cq:path`
             * `- cq:workflowName`
-* `@prop allowedParents`  — 親テンプレートとして許可されるテンプレートへのパスを決定する正規表現パターン。
-* `@prop allowedChildren`  — 子テンプレートとして許可されるテンプレートへのパスを決定する正規表現パターン。
+* `@prop allowedParents`  – 親テンプレートとして許可されるテンプレートへのパスを定義するための正規表現パターン。
+* `@prop allowedChildren`  – 子テンプレートとして許可されるテンプレートへのパスを定義するための正規表現パターン。
 * `@prop ranking` - ページ作成ダイアログでのテンプレートリスト内の位置。
 
 **定義**
@@ -233,15 +235,15 @@ CQ コンポーネントを定義します。
 * `@prop dialogPath` - プライマリダイアログのパス（dialog の代替）。
 * `@node design_dialog` - デザインダイアログ。
 * `@prop cq:cellName` - デザインセルの名前。
-* `@prop cq:isContainer`  — コンテナコンポーネントであるかどうかを示します。 パス名の代わりに子コンポーネントのセル名を強制的に使用します。 例えば、`parsys` は、コンテナコンポーネントです。この値が定義されていない場合、チェックは `cq:childEditConfig` の存在に基づいて行われます。
+* `@prop cq:isContainer` - コンテナコンポーネントであるかどうかを示します。 パス名の代わりに子コンポーネントのセル名を強制的に使用します。 例えば、`parsys` は、コンテナコンポーネントです。この値が定義されていない場合、チェックは `cq:childEditConfig` の存在に基づいて行われます。
 * `@prop cq:noDecoration` - true の場合、このコンポーネントをインクルードする際に装飾用の `div` タグは描画されません。
 * `@node cq:editConfig` - 編集バーのパラメーターを定義する設定。
 * `@node cq:childEditConfig` - 子コンポーネントによって継承される編集設定。
 * `@node cq:htmlTag` - コンポーネントがインクルードされる際に「周囲の」`div` タグに追加される追加タグ属性を定義します。
 * `@node icon.png` - 特有のアイコンを保持するファイル。
 * `@node thumbnail.png` - 特有のサムネール画像を保持するファイル。
-* `@prop allowedParents`  — 親コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
-* `@prop allowedChildren`  — 子コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
+* `@prop allowedParents`  – 親コンポーネントとして許可されるコンポーネントのパスを定義するための正規表現パターン。
+* `@prop allowedChildren`  – 子コンポーネントとして許可されるコンポーネントのパスを定義するための正規表現パターン。
 * `@node virtual` - コンポーネントのドラッグ＆ドロップに使用される仮想コンポーネントを反映するサブノードが含まれます。
 * `@prop componentGroup` - コンポーネントグループの名前。コンポーネントのドラッグ＆ドロップで使用されます。
 * `@node cq:infoProviders` - サブノードが含まれます。各サブノードには、`PageInfoProvider` を参照するプロパティ `className` があります。
@@ -315,9 +317,9 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 **説明**
 
-1 つのコンポーネントのドロップターゲットを設定します。 このノードの名前は、ドラッグ&amp;ドロップの ID として使用されます。
+コンポーネントの 1 つのドロップターゲットを設定します。 このノードの名前は、ドラッグ&amp;ドロップの ID として使用されます。
 
-* `@prop accept`  — このドロップターゲットで受け入れられる MIME タイプのリスト。例： `["image/*"]`
+* `@prop accept`  – このドロップターゲットによって受け入れられる MIME タイプのリスト。例： `["image/*"]`
 * `@prop groups` - ソースを受け入れるドラッグ＆ドロップグループのリスト。
 * `@prop propertyName` - 参照を格納するために使用されるプロパティの名前。
 
@@ -333,7 +335,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 **説明**
 
-仮想 CQ コンポーネントを定義します。 現在は、新しいコンポーネントのドラッグ&amp;ドロップウィザードでのみ使用されています。
+仮想 CQ コンポーネントを定義します。 現在、新しいコンポーネントのドラッグ&amp;ドロップウィザードでのみ使用されています。
 
 * `@prop jcr:title` - このコンポーネントのタイトル。
 * `@prop jcr:description` - このコンポーネントの説明。
@@ -341,8 +343,8 @@ CQ コンポーネントを mixin タイプとして定義します。
 * `@node cq:childEditConfig` - 子コンポーネントによって継承される編集設定。
 * `@node icon.png` - 特有のアイコンを保持するファイル。
 * `@node thumbnail.png` - 特有のサムネール画像を保持するファイル。
-* `@prop allowedParents`  — 親コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
-* `@prop allowedChildren`  — 子コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
+* `@prop allowedParents`  – 親コンポーネントとして許可されるコンポーネントのパスを定義するための正規表現パターン。
+* `@prop allowedChildren`  – 子コンポーネントとして許可されるコンポーネントのパスを定義するための正規表現パターン。
 * `@prop componentGroup` - コンポーネントのドラッグ＆ドロップ用のコンポーネントグループの名前。
 
 **定義**
@@ -362,7 +364,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 **説明**
 
-編集イベントで実行する（クライアント側の）リスナーを定義します。 値は、有効なクライアント側リスナー関数を参照するか、事前定義されたショートカットを含む必要があります。
+編集イベントで実行される（クライアントサイド）リスナーを定義します。 値には、有効なクライアントサイドのリスナー関数を参照するか、事前に定義されたショートカットを含める必要があります。
 
 * `REFRESH_PAGE`
 * `REFRESH_SELF`
@@ -441,11 +443,11 @@ DAM アセットを表すサムネール。
 
 ## 配信ページ {#delivery-page}
 
-### cq:Cq4PageAttributes {#cq-cq-pageattributes}
+### cq:Cq4PageAttribute {#cq-cq-pageattributes}
 
 **説明**
 
-ノードタイプ `cq:attributes` は、ContentBusバージョンタグ用です。 このノードには一連のプロパティのみが含まれます。そのうち、3 つは事前に定義された「created」、「csd」および「timestamp」です。
+ノードタイプ `cq:attributes` は、ContentBusバージョンタグ用です。 このノードには一連のプロパティのみが含まれ、そのうち 3 つのプロパティが「created」、「csd」および「timestamp」として事前定義されています。
 
 * `@prop created (long) mandatory copy` - バージョン情報の作成時のタイムスタンプ。通常は、以前のバージョンのチェックイン時またはページ作成時。
 * `@prop csd (string) mandatory copy` - csd 標準属性。ページノードの cq:csd プロパティのコピー。
@@ -486,7 +488,7 @@ DAM アセットを表すサムネール。
 
 ポールの設定。
 
-* `@prop source (String) mandatory`  — データソース URI。 必須で、空にはできません。
+* `@prop source (String) mandatory` - データソース URI。 必須。空白にはできません。
 * `@prop target (String)` - データソースから取得されたデータが保存されるターゲットの場所。オプションで、デフォルトは cq:PollConfig ノードです。
 * `@prop interval (Long)` - データソースから新しいデータまたは更新されたデータをポーリングする間隔（秒）。オプションで、デフォルトは 30 分（1800 秒）です。
 * [Adobe Experience Manager の Custom Data Importer Service の作成](https://helpx.adobe.com/jp/experience-manager/using/polling.html)
@@ -579,9 +581,9 @@ LiveSync mixin を定義します。ノードがプライマリソース（制�
 
 **説明**
 
-LiveSyncCancelled mixin を定義します。親の 1 つにより LiveRelationship に関与する可能性のあるライブコピー（制御）ノードの LiveSync 動作をキャンセルします。
+LiveSyncCancelled mixin を定義します。親の 1 つが原因で LiveRelationship に関与している可能性のあるライブコピー（被制御側）ノードの LiveSync 動作をキャンセルします。
 
-* `@prop cq:isCancelledForChildren` - LiveSync をキャンセルするかどうかを定義します。子に対しても同様です。
+* `@prop cq:isCancelledForChildren` - LiveSync がキャンセルされるかどうかを定義します（子に対しても）。
 
 **定義**
 
@@ -815,7 +817,7 @@ AEM 5.4 ではリストの最後に以下を追加：
 
 **説明**
 
-ユーザーが変更できる `cq:userContent` サブノードを追加します。各ユーザーには独自の `cq:userContent/<userid>` サブノード（通常は mixin を持つ） `cq:UserTaggable`.
+ユーザーが変更できる `cq:userContent` サブノードを追加します。各ユーザーは、独自のを持っています `cq:userContent/<userid>` サブノード（通常、mixin を持つ） `cq:UserTaggable`.
 
 **定義**
 
@@ -1063,7 +1065,7 @@ Wiki のプロパティ
 
 **説明**
 
-ワークフロー設定を自動割り当て 設定は、次の構造に従います。
+ワークフロー設定を自動で割り当てます。 設定は、次の構造に従います。
 * `workflows`
    * `+ name1`
       * `- cq:path`

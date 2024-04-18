@@ -7,7 +7,9 @@ topic-tags: platform
 content-type: reference
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,Tagging
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2452'
 ht-degree: 100%

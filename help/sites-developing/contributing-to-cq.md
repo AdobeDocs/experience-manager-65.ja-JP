@@ -7,7 +7,9 @@ topic-tags: introduction
 content-type: reference
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '2635'
 ht-degree: 98%
@@ -92,11 +94,11 @@ Apache Sling のリクエスト解決に関しては、コンテンツリポジ�
 
 ### 信頼できる設計 {#design-for-reliability}
 
-単一の DOM 要素に関する問題がページ全体をレンダリングしないように、（例えば）フェイルソフトな方法で機能のデザインとコード化を図っています。 つまり、致命的とするべきことは致命的とし、その他はすべて存続可能にして、製品を「寛容に」するということです。
+（例えば）単一の DOM 要素に問題があってもページ全体がレンダリングされないように、フェイルソフト方式で機能のデザインとコード化を行うよう努めています。 つまり、致命的とするべきことは致命的とし、その他はすべて存続可能にして、製品を「寛容に」するということです。
 
 ### 異常は新たな正常 {#abnormal-is-the-new-normal}
 
-シャットダウンフックに依存しないでください。起動時にクリーンアップを行ってください。 異常終了は正常終了です。
+シャットダウンフックに依存せず、起動時に必ずクリーンアップします。 異常終了は正常な終了です。
 
 `shutdown == kill -9 == power outage`
 

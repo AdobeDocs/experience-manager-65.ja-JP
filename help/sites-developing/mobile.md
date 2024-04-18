@@ -9,7 +9,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3722'
 ht-degree: 97%
@@ -125,7 +127,7 @@ ht-degree: 97%
 
 #### モバイルコンポーネントの作成 {#creating-a-mobile-component}
 
-AEMモバイルフレームワークを使用すると、要求を発行するデバイスに対して機密性の高いコンポーネントを開発できます。 以下のコードサンプルは、コンポーネント jsp でAEMモバイル API を使用する方法と、特に以下の方法を示しています。
+AEM モバイルフレームワークを使用すると、リクエストを発行するデバイスを感知するコンポーネントを開発できます。 次のコードサンプルは、コンポーネント jsp でAEM モバイル API を使用する方法、特に次の方法を示します。
 
 * リクエストからデバイスを取得します。
   `Device device = slingRequest.adaptTo(Device.class);`
@@ -381,7 +383,7 @@ AEM は `BrowserMap` に基づくデバイスのクライアントサイド検�
 
 ### デバイスグループ専用の URL の定義 {#defining-a-device-group-specific-url}
 
-代替リンクを使用しない場合は、それぞれにグローバル URL を設定できます `DeviceGroup`. `browsermap.standard` クライアントライブラリを組み込み、デバイスグループを再定義する独自のクライアントライブラリを作成することをお勧めします。
+代替リンクを使用しない場合は、それぞれのグローバル URL を設定できます `DeviceGroup`. `browsermap.standard` クライアントライブラリを組み込み、デバイスグループを再定義する独自のクライアントライブラリを作成することをお勧めします。
 
 BrowserMap は、カスタマイズされたクライアントライブラリから同名のデバイスグループを作成して `BrowserMap` オブジェクトに追加することで、デバイスグループ定義を上書きできるように設計されます。
 
@@ -499,7 +501,7 @@ BrowserMap は、カスタマイズされたクライアントライブラリか
 
 ### 特定のページからの BrowserMap の除外 {#excluding-browsermap-from-certain-pages}
 
-クライアント検出が不要な一部のページから BrowserMap ライブラリを除外する場合は、request 属性を追加できます。
+クライアント検出を必要としない一部のページから BrowserMap ライブラリを除外する場合は、リクエスト属性を追加できます。
 
 ```xml
 <%

@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: site-features
 exl-id: 4b6c273c-560e-4330-b886-a02825d5aaa1
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 100%

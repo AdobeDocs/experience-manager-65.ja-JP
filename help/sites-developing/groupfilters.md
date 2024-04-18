@@ -9,7 +9,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 89%
@@ -28,11 +30,11 @@ ht-degree: 89%
 
 作成したフィルターは[グループ設定](/help/sites-developing/mobile.md#creating-a-device-group)で使用できます。
 
-## Filter Java™クラス {#the-filter-java-class}
+## フィルター Java™ クラス {#the-filter-java-class}
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、Java™クラスの例では、 `@Component`および `@Service` 注釈。 このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。そのため、サンプルの Java™ クラスでは以下を使用します。 `@Component`および `@Service` 注釈。 このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -162,7 +164,7 @@ public class ScreenSizeLarge implements DeviceGroupFilter {
 }
 ```
 
-getTitle メソッドが返す String 値は、デバイスグループプロパティのドロップダウンリストに表示されます。
+getTitle メソッドが返す文字列値は、デバイスグループプロパティのドロップダウンリストに表示されます。
 
 ![filteraddtogroup](assets/filteraddtogroup.png)
 
@@ -176,7 +178,7 @@ getTitle メソッドと getDescription メソッドが返す文字列値は、�
 
 **プラグイン：**
 
-* Apache Maven Compiler Plugin:Java™クラスをソースコードからコンパイルします。
+* Apache Maven コンパイラープラグイン：ソースコードから Java™ クラスをコンパイルします。
 * Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。
 * Apache Felix Maven SCR Plugin：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
 
@@ -190,7 +192,7 @@ DeviceGroup インターフェイスと DeviceGroupFilter インターフェイ�
 
 この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。このバージョンが環境にデプロイされているバンドルのバージョンであることを確認するには、アドビの web コンソール（[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)）を使用してください。
 
-**POM:** （POM で異なる groupId と version を使用している場合）
+**POM:** （POM で別の groupId と version が使用されています。）
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"

@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 docset: aem65
-feature: Context Hub
+feature: Context Hub,Developing,Personalization
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2969'
 ht-degree: 100%

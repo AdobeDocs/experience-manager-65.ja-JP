@@ -7,7 +7,9 @@ topic-tags: development-tools
 content-type: reference
 exl-id: e255145e-9e86-41ea-b048-ff46fdbff205
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,Developer Tools
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 100%

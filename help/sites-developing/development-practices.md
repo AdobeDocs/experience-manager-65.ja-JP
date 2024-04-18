@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: best-practices
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 94%
@@ -65,4 +67,4 @@ Jackalope や Prosper などのカスタムフレームワークを使用する�
 
 ### YAGNI 機能を導入しない {#avoid-implementing-yagni-features}
 
-YAGNI(You Are Not Not Need It) 機能は、今は必要ないにもかかわらず、将来何かが必要になると期待するときに実装されるものです。 理想は、今すぐ機能する最も単純なものを導入し、継続的にリファクタリングを行って、システムのアーキテクチャが要件に応じて長期間で進化していくようにすることです。このようにすると、重要なことに集中することができ、コードの膨張や機能クリープを防ぐことができます。
+YAGNI （You Are Not Gonna Need It）機能は、今は必要なくても将来は必要になると思われる場合に導入するものです。 理想は、今すぐ機能する最も単純なものを導入し、継続的にリファクタリングを行って、システムのアーキテクチャが要件に応じて長期間で進化していくようにすることです。このようにすると、重要なことに集中することができ、コードの膨張や機能クリープを防ぐことができます。

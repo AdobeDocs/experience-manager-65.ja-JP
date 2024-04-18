@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: best-practices
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 94%
@@ -36,7 +38,7 @@ AEM で処理に時間のかかるクエリは、主に以下の 3 つに分類�
 
 各結果候補を調査する動作をトラバースと呼びます。
 
-各潜在的な結果を検査する必要があるので、実際の結果セットを決定するコストは、潜在的な結果の数に比例して増加します。
+それぞれの結果候補を調査する必要があるため、実際の結果セットを決定するためのコストは、結果候補の数に比例して増加します。
 
 クエリの制限を追加し、インデックスを調整すると、結果を迅速に取得できるように最適化された形式でインデックスデータを格納できます。また、結果候補セットを順次調査する必要性が低減するかなくなります。
 
@@ -120,9 +122,9 @@ cq:tags インデックスルールを追加した後
 
 同様に、`cq:tags` プロパティのインデックスルールを追加しない場合は、`cq:tags` に対する制限を持つフルテキストクエリであっても、インデックスからの結果ではフルテキスト一致がすべて返されるので、パフォーマンスは低下します。その後、cq:tags の制限がフィルタリングされます。
 
-インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリで返されないようにしてください。これは、コンテンツ構造を改善し、クエリに関連するパス制限を提供することで実行できます。
+インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリで返されないようにしてください。これは、より良いコンテンツ構造を実現し、クエリに関連するパス制限を提供することで行うことができます。
 
-`org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex` の DEBUG ログを有効にすると、Lucene インデックスが多数の結果を返して小さなサブセットをクエリ結果として返しているかどうかを識別するのに便利です。これにより、インデックスから読み込まれているドキュメントの数を確認できます。結果の数と読み込まれたドキュメントの数を比較すると、結果は不釣り合いにならないはずです。 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
+`org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex` の DEBUG ログを有効にすると、Lucene インデックスが多数の結果を返して小さなサブセットをクエリ結果として返しているかどうかを識別するのに便利です。これにより、インデックスから読み込まれているドキュメントの数を確認できます。読み込まれるドキュメントの数に対する最終結果の数は、不釣り合いではありません。 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
 #### デプロイメント後 {#post-deployment-1}
 
@@ -177,7 +179,7 @@ AEM では、以下のクエリ言語をサポートしています。
 * JCR-SQL2
 * XPath
 
-次の例では、AEM開発者が使用する最も一般的なクエリ言語なので Query Builder を使用しますが、同じ原則が JCR-SQL2 および XPath にも当てはまります。
+次の例では、AEM開発者が使用する最も一般的なクエリ言語であるため Query Builder を使用していますが、JCR-SQL2 と XPath にも同じ原則が適用されます。
 
 1. クエリが既存の Lucene プロパティインデックスに解決されるように、ノードタイプの制限を追加します。
 
@@ -469,5 +471,5 @@ AEM のコンテンツアーキテクチャは柔軟です。そのため、コ�
 
 * **_AEM Chrome プラグイン_** <!-- For whatever reason, the URL to this extension was causing too many redirects when doing the request so it was removed entirely to get rid of the error; users can easily look up the extension in Google instead. DO NOT ADD THE URL AGAIN!-->
 
-   * The _AEM Chrome プラグイン_ は、実行クエリとそのクエリプランを含む、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開する、Google Chrome Web ブラウザー拡張機能です。
-   * をインストールして有効にする必要があります。 [Sling Log Tracer 1.0.2+](https://sling.apache.org/downloads.cgi) (AEM)
+   * この _AEM Chrome プラグイン_ は、Google Chrome web ブラウザー拡張機能で、実行クエリとそのクエリプランなど、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開します。
+   * をインストールして有効にする必要があります [Sling ログトレーサー 1.0.2 以降](https://sling.apache.org/downloads.cgi) （AEM上）。

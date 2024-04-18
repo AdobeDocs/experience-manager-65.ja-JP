@@ -7,7 +7,9 @@ topic-tags: introduction
 content-type: reference
 exl-id: 8cc9200e-981d-468f-b2bd-cd44e9a02bb5
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 100%
@@ -16,7 +18,7 @@ ht-degree: 100%
 
 # コンソールのキーボードショートカット{#keyboard-shortcuts-for-consoles}
 
-AEM 全体で様々なキーボードショートカットを利用できます。コンソールの使用時に適用されるものや、[ページ編集](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)に適用されるものなどがあります。
+AEM 全体で様々なキーボードショートカットを利用できます。コンソール使用に適用されるものや、[ページ編集](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)に適用されるものなどがあります。
 
 >[!NOTE]
 >

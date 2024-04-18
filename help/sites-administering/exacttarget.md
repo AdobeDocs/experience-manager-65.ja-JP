@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 4183fe78-5055-4b77-8a54-55666e86a04e
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Integration
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 72%
@@ -17,7 +19,7 @@ ht-degree: 72%
 
 # ExactTarget との統合{#integrating-with-exacttarget}
 
-Adobe Experience Manager(AEM) と ExactTarget の統合により、ExactTarget を使用してAEMで作成した電子メールを管理および送信できます。 また、AEMページ上のAEMフォームを使用して、ExactTarget のリード管理機能を使用することもできます。
+Adobe Experience Manager（AEM）と Exact Target の統合により、AEMで作成したメールを Exact Target 経由で管理および送信できます。 また、AEM ページのAEM forms を介して Exact Target のリード管理機能を使用することもできます。
 
 この統合によって次の機能を使用できるようになります。
 
@@ -30,7 +32,7 @@ ExactTarget の設定後に、ニュースレターやメールを ExactTarget �
 
 ExactTarget 設定は、クラウドサービスまたはツールを使用して追加できます。 この節では、両方の手順について説明します。
 
-### クラウドサービスを使用した ExactTarget の設定 {#configuring-exacttarget-via-cloudservices}
+### Cloudservices を使用した ExactTarget の設定 {#configuring-exacttarget-via-cloudservices}
 
 クラウドサービスで ExactTarget 設定を作成するには、次の操作を実行します。
 
@@ -43,8 +45,8 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. ユーザー名、パスワードを入力し、API エンドポイント（例： ）を選択します。 **https://webservice.exacttarget.com/Service.asmx**) をクリックします。
-1. 「**ExactTarget に接続」をクリックします。** 正常に接続すると、成功ダイアログが表示されます。 box クリック **OK** をクリックしてウィンドウを閉じます。
+1. ユーザー名、パスワードを入力し、API エンドポイント（例：）を選択します。 **https://webservice.exacttarget.com/Service.asmx**）に設定します。
+1. 「**ExactTarget に接続」をクリックします。** 接続に成功したら、成功ダイアログが表示されます。 ボックス クリック **OK** をクリックしてウィンドウを閉じます。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -75,5 +77,5 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 複数の設定を追加するには：
 
-1. ようこそページで「**クラウドサービス**」をクリックし、「**ExactTarget**」をクリックします。クリック **設定を表示** 1 つ以上の ExactTarget 設定が使用可能な場合に表示されます。 利用可能なすべての設定が一覧表示されます。
-1. 「利用可能な設定」の横にある「**+**」記号をクリックします。**設定を作成**&#x200B;ウィンドウが開きます。上記の設定手順に従って、設定を作成します。
+1. ようこそページで「**クラウドサービス**」をクリックし、「**ExactTarget**」をクリックします。クリック **設定を表示** このポップアップは、1 つ以上の ExactTarget 設定がある場合に表示されます。 利用可能なすべての設定が一覧表示されます。
+1. 「利用可能な設定」の横にある「**+**」記号をクリックします。**設定を作成**&#x200B;ウィンドウが開きます。前述の設定手順に従って、設定を作成します。

@@ -5,13 +5,14 @@ contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-feature: Tagging
+feature: Developing,Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: f22f51b4d65abf4cf1f6e04952f873eca5119727
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -199,4 +200,4 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 
 >[!CAUTION]
 >
->公式アップデートパッケージ（サービスパック、セキュリティサービスパック、拡張機能パック、累積機能パック、パッチなど）を使用してタグ付け関連の標準コンテンツをインストールすると、 `/content/cq:tags` ノードをデフォルトに設定します。 したがって、インストール前にプロパティから追加しておく必要があります。
+>公式の更新パッケージ（サービスパック、セキュリティサービスパック、拡張機能パック、累積機能パック、パッチなどを含む）を通じてタグ付け関連の標準コンテンツをインストールすると、`/content/cq:tags` ノードの言語プロパティがデフォルトにリセットされます。 したがって、インストール前にプロパティから追加しておく必要があります。

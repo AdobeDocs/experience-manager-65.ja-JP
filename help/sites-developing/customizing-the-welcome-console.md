@@ -7,7 +7,9 @@ topic-tags: extending-aem
 content-type: reference
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 100%

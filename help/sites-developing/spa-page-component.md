@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,SPA Editor
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 97%
@@ -36,7 +38,7 @@ SPA のページコンポーネントは、JSP ファイルまたは HTL のフ�
 * テンプレートが編集可能な場合は、クライアントライブラリカテゴリをページポリシーに追加します。
 * ページコンポーネントの `customfooterlibs.html` を使用したクライアントライブラリカテゴリを追加します。
 
-必ず `cq.authoring.pagemodel.messaging` カテゴリをページエディターのコンテキストに追加します。
+の包含を制限することを忘れないでください `cq.authoring.pagemodel.messaging` ページエディターのコンテキストに対するカテゴリ。
 
 ## 通信データタイプ {#communication-data-type}
 

@@ -7,7 +7,9 @@ topic-tags: page-authoring
 content-type: reference
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring
+role: User
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 100%

@@ -7,7 +7,9 @@ topic-tags: components
 content-type: reference
 exl-id: 65f5d5e1-ac11-4a3c-8a51-ce06a741c264
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 80%
@@ -20,7 +22,7 @@ ht-degree: 80%
 
 ## 概要 {#overview}
 
-多数のオプションが用意されているダイアログボックスは複雑になり、使用できるオプションのごく一部しか使用できない場合があります。 これにより、ユーザーが圧倒されるようなユーザーインターフェイスのエクスペリエンスになってしまう可能性があります。
+ダイアログボックスは複雑になり、ユーザーにとって多数のオプションが存在する場合があります。ユーザーが使用できるオプションは、自由に使用できるオプションのごく一部に過ぎません。 これにより、ユーザーが圧倒されるようなユーザーインターフェイスのエクスペリエンスになってしまう可能性があります。
 
 管理者、デベロッパー、スーパーユーザーは、非表示の条件を使用することで、一連のルールに基づいてリソースを非表示にできます。この機能を使用すると、作成者がコンテンツを編集する際に表示されるリソースを決定できます。
 
@@ -46,7 +48,7 @@ ${cqDesign.myProperty == true}
 ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 != 1 || header.myHeader}
 ```
 
-非表示の式を定義する際は、次の点に注意してください。
+非表示式を定義する際は、次の点に注意してください。
 
 * 式を有効にするには、プロパティの検索範囲を表します（例：`cqDesign.myProperty`）。
 * 値は読み取り専用です。
@@ -56,7 +58,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)）で確認できます。例えば、 [リストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=ja).
 
-[テンプレートエディターを使用](/help/sites-authoring/templates.md)した場合、テンプレート作成者は、ページ作成者が利用できるリストコンポーネントのオプションをデザインダイアログで定義できます。リストを静的リスト、子ページのリスト、タグ付きページのリストなどにするかどうかなどのオプションを有効または無効にできます。
+[テンプレートエディターを使用](/help/sites-authoring/templates.md)した場合、テンプレート作成者は、ページ作成者が利用できるリストコンポーネントのオプションをデザインダイアログで定義できます。リストを静的リストにするかどうか、子ページのリスト、タグ付きページのリストなどのオプションは、有効または無効にできます。
 
 テンプレート作成者が子ページオプションを無効にすると、デザインプロパティが設定され、非表示の条件がそのプロパティに対して評価されます。その結果、このオプションはページ作成者には表示されません。
 

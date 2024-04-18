@@ -5,10 +5,11 @@ contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-feature: Context Hub
+feature: Context Hub,Developing,Personalization
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '3106'
 ht-degree: 100%

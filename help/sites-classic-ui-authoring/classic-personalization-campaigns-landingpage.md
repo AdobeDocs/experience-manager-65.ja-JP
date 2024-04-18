@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 0f1014a7-b0ba-4455-b3a4-5023bcd4c5a1
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Personalization
+role: User
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '3360'
 ht-degree: 99%
@@ -453,7 +455,7 @@ zip ファイルをダウンロードすると、特定のランディングペ�
 
 ランディングページの削除は、通常の AEM ページの削除と似ています。
 
-唯一の例外は、デスクトップのランディングページを削除すると、対応するモバイルのランディングページも削除されます（存在する場合）が、逆の場合は削除されないことです。
+唯一の例外は、デスクトップランディングページを削除すると、対応するモバイルランディングページ（存在する場合）も削除されますが、逆の場合は削除されないということです。
 
 ### ランディングページの公開 {#publishing-a-landing-page}
 

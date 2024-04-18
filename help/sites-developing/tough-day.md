@@ -5,7 +5,9 @@ topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1825'
 ht-degree: 97%
@@ -16,7 +18,7 @@ ht-degree: 97%
 
 ## タフデイ 2 について {#what-is-tough-day}
 
-「Tough Day 2」は、AEMインスタンスの制限に応じてテストできるアプリケーションです。 デフォルトのテストスイートを使用して出荷時の設定のまま実行することも、テストのニーズに合わせて設定することもできます。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=ja)を参照してください。
+「Tough Day 2」は、AEM インスタンスの制限をストレステストできるアプリケーションです。 デフォルトのテストスイートを使用して出荷時の設定のまま実行することも、テストのニーズに合わせて設定することもできます。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=ja)を参照してください。
 
 >[!CAUTION]
 >
@@ -131,7 +133,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 | `--port=<Val>` | ホストのポート。 | 4502 |  |
 | `--user=<Val>` | インスタンスのユーザー名。 | admin |  |
 | `--password=<Val>` | 指定されたユーザーのパスワード。 | admin |  |
-| `--duration=<Val>` | テストの期間。で表すことができます。 **s**&#x200B;秒 **m**&#x200B;分 **h**&#x200B;我々の **d** ays. | 1d |  |
+| `--duration=<Val>` | テストの期間。次の単位で表すことができます **秒** econds、 **m**&#x200B;分、 **時間**&#x200B;私たちの、および **日**&#x200B;日 | 1d |  |
 | `--timeout=<Val>` | テストが中断され、失敗としてマークされるまでのテストの実行時間。秒単位で表現できます。 | 180 |  |
 | `--suite=<Val>` | 値は、事前定義済みのテストスイートの 1 つまたはリスト（コンマ区切り）にすることができます。 | toughday |  |
 | `--configfile=<Val>` | ターゲットの yaml 設定ファイル。 |  |  |

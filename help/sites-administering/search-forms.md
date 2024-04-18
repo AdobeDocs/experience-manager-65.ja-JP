@@ -7,7 +7,9 @@ topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Administering
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 100%
@@ -130,7 +132,7 @@ ht-degree: 100%
    <td>
     <ul>
      <li>フィールドラベル</li>
-     <li>プレースホルダー</li>
+     <li>Placeholder</li>
      <li>プロパティ名*</li>
      <li>プロパティの深さ</li>
      <li>説明</li>
@@ -152,7 +154,7 @@ ht-degree: 100%
    <td>
     <ul>
      <li>フィールドラベル</li>
-     <li>プレースホルダー</li>
+     <li>Placeholder</li>
      <li>プロパティ名*</li>
      <li>範囲テキスト（開始）*</li>
      <li>範囲テキスト（終了）*</li>
@@ -191,7 +193,7 @@ ht-degree: 100%
     </ul> </td>
   </tr>
   <tr>
-   <td>オプション </td>
+   <td>Options </td>
    <td><p>オプションは、ユーザーが作成したコンテンツノードです。</p> <p>詳しくは、<a href="#addinganoptionspredicate">オプションの述語の追加</a>を参照してください。</p> </td>
    <td>
     <ul>
@@ -320,7 +322,7 @@ ht-degree: 100%
    <td>タグに基づいて検索します。</td>
    <td>
     <ul>
-     <li>プレースホルダー</li>
+     <li>Placeholder</li>
      <li>プロパティ名*</li>
      <li>説明</li>
     </ul> </td>
@@ -513,7 +515,7 @@ ht-degree: 100%
 
    * **プロパティ名**
 
-     ターゲットノードで検索するノードプロパティを指定します。例：
+     ターゲットノードで検索するノードプロパティを指定します。次に例を示します。
 
      `jcr:content/cq:template`
 

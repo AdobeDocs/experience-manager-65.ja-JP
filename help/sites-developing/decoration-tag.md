@@ -3,7 +3,9 @@ title: 装飾タグ
 description: Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。AEM では、含まれているコンポーネントをラップする装飾タグを制御する明確でシンプルなロジックを開発者向けに提供しています。
 exl-id: d049ebf1-7fa6-4d2c-86f9-b18e107092ea
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 96%
@@ -97,7 +99,7 @@ HTL での開発について詳しくは、[HTL ドキュメント](https://expe
 
 #### 使用例 1：コードの再利用のためのコンポーネントを含める {#use-case-include-a-component-for-code-reuse}
 
-最も一般的な使用例は、コードの再利用のためにコンポーネントが他のコンポーネントを含む場合です。この場合、含まれるコンポーネントは、独自のツールバーおよびダイアログで編集できる必要はないので、ラッパーは不要で、コンポーネントの `cq:htmlTag` は無視されます。 これはデフォルトの動作と見なすことができます。
+最も一般的な使用例は、コードの再利用のためにコンポーネントが他のコンポーネントを含む場合です。その場合、含まれるコンポーネントは、独自のツールバーとダイアログで編集することは望ましくないので、ラッパーは必要なく、コンポーネントのです `cq:htmlTag` は無視されます。 これはデフォルトの動作と見なすことができます。
 
 `one.html: <sly data-sly-resource="child"></sly>`
 

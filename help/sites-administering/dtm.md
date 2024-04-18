@@ -7,7 +7,9 @@ topic-tags: integration
 content-type: reference
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Integration
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '2146'
 ht-degree: 90%
@@ -18,13 +20,13 @@ ht-degree: 90%
 
 [Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html?lang=ja) と AEM を統合すると、Dynamic Tag Management Web プロパティを使用して AEM Sites を追跡できます。マーケターは、Dynamic Tag Management を使用して、データ収集のためのタグを管理し、複数のデジタルマーケティングシステムにデータを配信できます。例えば、Dynamic Tag Management を使用して、AEM web サイトの使用状況データを収集し、そのデータを Adobe Analytics または Adobe Target に配信して分析します。
 
-統合する前に、Dynamic Tag Managementを作成します [web プロパティ](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Web_Properties) AEMサイトのドメインを追跡するためのものです。 AEM が Dynamic Tag Management ライブラリにアクセスできるように、web プロパティの[ホスティングオプション](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Hosting__Embed_Tab)を設定する必要があります。
+統合する前に、Dynamic Tag Managementを作成します [web プロパティ](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Web_Properties) これは、AEM サイトのドメインを追跡します。 AEM が Dynamic Tag Management ライブラリにアクセスできるように、web プロパティの[ホスティングオプション](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Hosting__Embed_Tab)を設定する必要があります。
 
 統合を設定した後は、Dynamic Tag Management デプロイメントツールおよびルールを変更しても、AEM の Dynamic Tag Management 設定を変更する必要はありません。変更内容は AEM で自動的に有効になります。
 
 >[!NOTE]
 >
->カスタムプロキシ設定で DTM を使用している場合は、AEMの一部の機能で 3.x API を使用し、他の一部の機能では 4.x API を使用するので、両方の HTTP クライアントプロキシ設定を指定します。
+>カスタムプロキシ設定で DTM を使用している場合、AEMの一部の機能で 3.x API と 4.x API が使用されているので、両方の HTTP クライアントプロキシ設定を行います。
 >
 >* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
@@ -38,8 +40,8 @@ ht-degree: 90%
 
 AEM は、クラウドまたは AEM でホストされている Dynamic Tag Management をサポートします。
 
-* クラウドでホストされる： Dynamic Tag Management JavaScript ライブラリはクラウドに保存され、AEMページはそれらを直接参照します。
-* AEMでホストされる： Dynamic Tag Managementは JavaScript ライブラリを生成します。 AEM はワークフローモデルを使用してライブラリを取得し、インストールします。
+* クラウドホスト型：ダイナミック Tag Management JavaScript ライブラリはクラウドに保存され、AEM ページでそれらを直接参照します。
+* AEMでホスト：Dynamic Tag Managementは JavaScript ライブラリを生成します。 AEM はワークフローモデルを使用してライブラリを取得し、インストールします。
 
 実装で使用するホスティングのタイプによって、実行する設定タスクおよび実装タスクの一部が決定されます。ホスティングオプションについて詳しくは、Dynamic Tag Management ヘルプの[ホスティング - 「埋め込み」タブ](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Hosting__Embed_Tab)を参照してください。
 
@@ -55,7 +57,7 @@ AEM オーサーインスタンスで Dynamic Tag Management のステージン�
 
 AEM が Dynamic Tag Management ライブラリをホストしている場合は、Dynamic Tag Management デプロイメントフックサービスを使用して、ライブラリの更新を AEM に自動的にプッシュできます。Dynamic Tag Management web プロパティのプロパティが編集されるなど、ライブラリに変更が加えられると、ライブラリの更新がプッシュされます。
 
-デプロイメントフックを使用するには、Dynamic Tag Managementが、ライブラリをホストするAEMインスタンスに接続できる必要があります。 Dynamic Tag Management サーバーが [AEM にアクセスできるようにしてください](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service)。
+デプロイメントフックを使用するには、Dynamic Tag ManagementがライブラリをホストするAEM インスタンスに接続できる必要があります。 Dynamic Tag Management サーバーが [AEM にアクセスできるようにしてください](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service)。
 
 AEM がファイアウォールの背後にある場合など、環境によっては AEM に到達できないことがあります。そのような場合には、AEM のポーリングインポーターオプションを使用して、ライブラリを定期的に取得できます。cron ジョブ式でライブラリダウンロードのスケジュールを決定します。
 
@@ -84,14 +86,14 @@ AEM インスタンスが Dynamic Tag Management で認証され、web プロパ
 
 >[!NOTE]
 >
->DTM Web プロパティに Adobe Analytics ツールが含まれていて、[コンテンツインサイト](/help/sites-authoring/content-insights.md)も使用している場合は、ページに 2 つの Adobe Analytics トラッキングコードを含めないようにしてください。を [Adobe Analytics Cloud設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)「トラッキングコードを含めない」オプションを選択します。
+>DTM Web プロパティに Adobe Analytics ツールが含まれていて、[コンテンツインサイト](/help/sites-authoring/content-insights.md)も使用している場合は、ページに 2 つの Adobe Analytics トラッキングコードを含めないようにしてください。あなたの [Adobe Analytics Cloud設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-connection-to-adobe-analytics)を選択し、「トラッキングコードを含めない」オプションを選択します。
 
 ### 一般設定 {#general-settings}
 
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
   </tr>
   <tr>
@@ -108,7 +110,7 @@ AEM インスタンスが Dynamic Tag Management で認証され、web プロパ
   </tr>
   <tr>
    <td>作成者に対して実稼動用のコードを含める</td>
-   <td><p>このオプションを選択すると、AEMオーサーインスタンスとパブリッシュインスタンスで、実稼動版の Dynamic Tag Managementライブラリが使用されます。 </p> <p>このオプションが選択されていない場合は、オーサーインスタンスにはステージング設定が適用され、パブリッシュインスタンスには実稼動設定が適用されます。</p> </td>
+   <td><p>このオプションを選択すると、AEMのオーサーインスタンスとパブリッシュインスタンスで Dynamic Tag Management ライブラリの実稼動版が使用されます。 </p> <p>このオプションが選択されていない場合は、オーサーインスタンスにはステージング設定が適用され、パブリッシュインスタンスには実稼動設定が適用されます。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -128,7 +130,7 @@ Dynamic Tag Management ライブラリを AEM にホスティングしている�
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
   </tr>
   <tr>
@@ -145,15 +147,15 @@ Dynamic Tag Management ライブラリを AEM にホスティングしている�
   </tr>
   <tr>
    <td>ドメインのヒント</td>
-   <td><p>（オプション）Dynamic Tag Management ライブラリをホスティングしている AEM サーバーのドメイン。値を指定して、 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer サービス</a>.</p> <p>Dynamic Tag Management に接続すると、AEM はこの値を使用して、Dynamic Tag Management web プロパティのライブラリダウンロードプロパティのステージング HTTP パスまたは実稼動 HTTP パスを設定します。</p> </td>
+   <td><p>（オプション）Dynamic Tag Management ライブラリをホスティングしている AEM サーバーのドメイン。に設定されたデフォルトドメインを上書きできるように値を指定します <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer サービス</a>.</p> <p>Dynamic Tag Management に接続すると、AEM はこの値を使用して、Dynamic Tag Management web プロパティのライブラリダウンロードプロパティのステージング HTTP パスまたは実稼動 HTTP パスを設定します。</p> </td>
   </tr>
   <tr>
    <td>ドメインのヒントを保護</td>
-   <td><p>（オプション）HTTPS 経由で Dynamic Tag Management ライブラリをホスティングしている AEM サーバーのドメイン。値を指定して、 <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer サービス</a>.</p> <p>Dynamic Tag Management に接続すると、AEM はこの値を使用して、Dynamic Tag Management web プロパティのライブラリダウンロードプロパティのステージング HTTP パスまたは実稼動 HTTP パスを設定します。</p> </td>
+   <td><p>（オプション）HTTPS 経由で Dynamic Tag Management ライブラリをホスティングしている AEM サーバーのドメイン。に設定されたデフォルトドメインを上書きできるように値を指定します <a href="/help/sites-developing/externalizer.md">Day CQ Link Externalizer サービス</a>.</p> <p>Dynamic Tag Management に接続すると、AEM はこの値を使用して、Dynamic Tag Management web プロパティのライブラリダウンロードプロパティのステージング HTTP パスまたは実稼動 HTTP パスを設定します。</p> </td>
   </tr>
   <tr>
    <td>共有暗号鍵</td>
-   <td><p>（オプション）ダウンロードの解読に使用する共有暗号鍵。この値は、Dynamic Tag Management のライブラリダウンロードページの「共有暗号鍵」フィールドから取得します。</p> <p><strong>注意：</strong> AEMがダウンロードしたライブラリを復号化できるよう、AEMがインストールされているコンピューターに OpenSSL ライブラリをインストールしておく必要があります。</p> </td>
+   <td><p>（オプション）ダウンロードの解読に使用する共有暗号鍵。この値は、Dynamic Tag Management のライブラリダウンロードページの「共有暗号鍵」フィールドから取得します。</p> <p><strong>注意：</strong> AEMがインストールされているコンピューターに OpenSSL ライブラリをインストールし、ダウンロードしたライブラリをAEMで復号化できるようにする必要があります。</p> </td>
   </tr>
   <tr>
    <td>ポーリングインポーターを有効にする</td>
@@ -175,7 +177,7 @@ Dynamic Tag Configuration がクラウドホスト型の場合は、Dynamic Tag 
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
   </tr>
   <tr>
@@ -198,7 +200,7 @@ Dynamic Tag Configuration がクラウドホスト型の場合は、Dynamic Tag 
 以下の手順では、タッチ操作向け UI を使用して、Dynamic Tag Management との統合を設定します。
 
 1. パネルで、ツール／操作／クラウド／クラウドサービスをクリックします。
-1. Dynamic Tag Management領域に、設定を追加するための次のリンクの 1 つが表示されます。
+1. 動的Tag Management領域に、設定を追加するために次のいずれかのリンクが表示されます。
 
    * 初めて設定を追加する場合は「今すぐ設定」をクリックします。
    * ひとつ以上の設定が作成されている場合は、「設定を表示」をクリックし、「利用可能な設定」の横の「+」リンクをクリックします。

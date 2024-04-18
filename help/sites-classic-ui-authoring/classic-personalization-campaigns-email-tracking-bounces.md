@@ -7,7 +7,9 @@ topic-tags: personalization
 content-type: reference
 exl-id: 6cda0a68-0df9-44e7-ae4f-9951411af6dd
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Authoring,Personalization
+role: User
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 100%

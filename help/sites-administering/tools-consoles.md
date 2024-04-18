@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Administering
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 99%
@@ -284,7 +286,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td> </td>
-   <td>Dynamic Media Configuration<br /> </td>
+   <td>Dynamic Media設定<br /> </td>
   </tr>
   <tr>
    <td> </td>

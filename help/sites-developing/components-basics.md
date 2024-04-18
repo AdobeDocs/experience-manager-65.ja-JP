@@ -8,7 +8,9 @@ content-type: reference
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '4843'
 ht-degree: 99%
@@ -603,7 +605,7 @@ AEM 内のコンポーネントは、次の 3 つの異なる階層の影響を�
 
 ### コンポーネントプレースホルダー {#component-placeholders}
 
-コンポーネントは、コンテンツがない場合でも必ず、作成者に表示される一部の HTML をレンダリングする必要があります。そうしないと、エディターのインターフェイスから視覚的に消えてしまい、技術的には存在しても、ページやエディターには表示されなくなります。このような場合、作成者は空のコンポーネントを選択して操作することはできません。
+コンポーネントは、コンテンツがない場合でも必ず、作成者に表示される一部の HTML をレンダリングする必要があります。そうしないと、エディターのインターフェイスから視覚的に消えてしまい、技術的には存在しても、ページやエディターには表示されなくなります。この場合、作成者は空のコンポーネントを選択して操作することはできません。
 
 このため、ページがページエディターでレンダリングされる（WCM モードが `edit` または `preview` の場合）際に、コンポーネントは、表示された出力をレンダリングしない限り、プレースホルダーをレンダリングする必要があります。
 プレースホルダーの一般的な HTML マークアップは次のとおりです。
@@ -1028,7 +1030,7 @@ AEM 内のコンポーネントは、次の 3 つの異なる階層の影響を�
 >  * `aftermove`
 >  * `aftercopy`
 
-イベントハンドラーを実装するときは、カスタム実装を組み込むことができます。例えば、 `project.customerAction` は静的メソッドです。
+イベントハンドラーを実装するときは、カスタム実装を組み込むことができます。例： `project.customerAction` は静的メソッドです。
 
 `afteredit = "project.customerAction"`
 

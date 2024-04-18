@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: best-practices
 exl-id: 85ca35e5-6e2b-447a-9711-b12601beacdd
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing
+role: Developer
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 96%
@@ -38,7 +40,7 @@ AEM のコードベースでは、次のような規則が使用されます。
 * Java™ 実装は、その API の下の impl パッケージに配置します。
 
 
-これらの規則は必ずしもお客様の実装に適用されるわけではありませんが、コードを保守できる状態に維持できるように、規則を定義し、それに従うことが重要です。
+これらの規則は必ずしもお客様の実装に適用されるわけではありませんが、コードの保守を可能にするために、規則を定義し、順守することが重要です。
 
 名前を見れば、その目的が明らかになるようにすることが理想的です。名前が明確さに欠けるかどうかを判断するための一般的なコードテストは、変数やメソッドの目的を説明するコメントの有無です。
 

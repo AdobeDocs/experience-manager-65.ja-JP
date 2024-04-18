@@ -7,7 +7,9 @@ content-type: reference
 topic-tags: platform
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,Search,Query Builder
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2313'
 ht-degree: 99%
@@ -574,7 +576,7 @@ JCR XPath の `rep:similar()` を使用した類似性検索。
 
 * **all**
 
-  （ブール値）タグの全文、つまり、すべてのタイトル、説明などを検索します。 「l」よりも優先される `ang`&quot;.
+  （ブール値）タグのフルテキスト全体（すべてのタイトル、説明など）を検索します。 「l」より優先されます。 `ang`」と入力します。
 
 ### type {#type}
 

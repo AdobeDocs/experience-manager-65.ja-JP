@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Administering
+role: Admin
+source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3442'
 ht-degree: 99%
@@ -564,7 +566,7 @@ HTML が参照する画像がパッケージ内に存在しない、などの警
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
-ランディングページがキャンペーンの下に作成されるとします。 `We.Retail` ランディングページの名前は、 **myBlankLandingPage** Zip ファイルが保存されていた場所は次のようになります。
+キャンペーンの下にランディングページが作成されたとします `We.Retail` また、ランディングページの名前はです **myBlankLandingPage** zip ファイルが格納される場所は次のとおりです。
 
 `/etc/designs/default/canvas/content/campaigns/geometrixx/myBlankLandingPage`
 

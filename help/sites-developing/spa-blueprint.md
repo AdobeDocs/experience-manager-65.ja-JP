@@ -7,7 +7,9 @@ content-type: reference
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Developing,SPA Editor
+role: Developer
+source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2043'
 ht-degree: 100%
