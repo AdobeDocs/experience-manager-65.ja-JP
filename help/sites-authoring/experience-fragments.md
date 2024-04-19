@@ -5,10 +5,10 @@ exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Experience Fragments
 role: User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: fde290e30335b0785d12ea9b5ab6081b1401d230
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 96%
+source-wordcount: '1504'
+ht-degree: 95%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 96%
 エクスペリエンスフラグメントは、
 
 * エクスペリエンス（ページ）の一部です。
-* 複数のページで使用できます。
+* （編集可能なテンプレートに基づいた）複数のページで使用できます。
 * 構造とコンポーネントを定義するためのテンプレート（編集のみ可能）に基づいています。
 * このテンプレートは、エクスペリエンスフラグメントの&#x200B;*ルートページ*&#x200B;の作成に使用されます。
 * 段落システム内に、レイアウトを含む 1 つ以上のコンポーネントで構成されています。
@@ -252,6 +252,10 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 これで、ページをオーサリングする際に、エクスペリエンスフラグメントを使用できるようになりました。
 
 1. 編集するページを開きます。
+
+   >[!NOTE]
+   >
+   >ページは、編集可能なテンプレートに基づいている必要があります。
 
    例：[https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
