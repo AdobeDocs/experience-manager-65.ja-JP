@@ -10,14 +10,14 @@ exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: fde290e30335b0785d12ea9b5ab6081b1401d230
+source-git-commit: e1acbef9b75af865ca07c41f318d21166227aa33
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 99%
 
 ---
 
-# エクスペリエンスフラグメント{#experience-fragments}
+# エクスペリエンスフラグメント {#experience-fragments}
 
 ## 基本知識 {#the-basics}
 
