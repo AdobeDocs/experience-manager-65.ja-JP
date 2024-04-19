@@ -8,10 +8,10 @@ topic-tags: operations
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '2754'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -390,10 +390,10 @@ PDF フォームからデータを書き出すには、Designer または Acroba
 
    * コンストラクターを呼び出し、XML ファイルの場所を表す文字列値を渡すことで `System.IO.FileStream` オブジェクトを作成します。
    * `exportData` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得して、バイト配列に入力します。
-   * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことによって、バイト配列の内容を XML ファイルに書き込みます。
+   * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことにより、`System.IO.BinaryWriter` オブジェクトを作成します。
+   * を呼び出して、バイト配列の内容を XML ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクト `Write` メソッドを呼び出し、バイト配列を渡します。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](importing-exporting-data.md#summary-of-steps)
 

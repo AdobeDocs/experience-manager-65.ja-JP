@@ -5,16 +5,16 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 95%
+source-wordcount: '548'
+ht-degree: 92%
 
 ---
 
 # コンテンツフラグメントへのアクセスとヘッドレス配信クイック開始ガイド {#accessing-delivering-content-fragments}
 
-AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
+AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用GraphQL API を管理する方法について説明します。
 
 ## GraphQL API と Assets REST API とは {#what-are-the-apis}
 
@@ -28,7 +28,7 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 
 ## GraphQL を使用したコンテンツフラグメントの配信方法 {#how-to-deliver-a-content-fragment}
 
-情報アーキテクトは、チャネルエンドポイントがコンテンツを配信するためのクエリを設計します。これらのクエリは、モデルごとのエンドポイントごとに 1 回だけ考慮する必要があります。 この「はじめる前に」ガイドの目的上、作成する必要があるのは 1 つだけです。
+情報アーキテクトは、チャネルエンドポイントがコンテンツを配信するためのクエリを設計します。これらのクエリは、エンドポイントごとに、モデルごとに 1 回だけ考慮します。 この入門ガイドでは、1 つのみを作成します。
 
 1. AEM にログインし、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)にアクセスします。
    * 例：`http://<host>:<port>/aem/graphiql.html`

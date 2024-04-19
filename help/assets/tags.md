@@ -11,9 +11,9 @@ feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6664'
+source-wordcount: '6663'
 ht-degree: 99%
 
 ---
@@ -66,7 +66,7 @@ Experience Platform タグでは、*データ要素*&#x200B;と&#x200B;*ルー�
 
 Experience Platform タグのデータ要素は、名前の付いたプロパティです。このプロパティの値は、静的に定義されるか、web ページの状態や Dynamic Media ビューアのデータに基づいて動的に計算されます。
 
-データ要素の定義で使用できるオプションは、Experience Platform タグプロパティにインストールされている拡張機能によって異なります。「コア」拡張機能はプレインストールされており、どのような設定でもすぐに使用できます。この「コア」拡張機能を使用して、cookie、JavaScript コード、クエリ文字列、その他多くのソースから取得した値を持つデータ要素を定義できます。
+データ要素の定義で使用できるオプションは、Experience Platform タグプロパティにインストールされている拡張機能によって異なります。「コア」拡張機能はプレインストールされており、どのような設定でもすぐに使用できます。この「コア」拡張機能を使用すると、cookie、JavaScript コード、クエリ文字列、その他多くのソースから取得した値を持つデータ要素を定義できます。
 
 Adobe Analytics でトラッキングを行う場合は、[拡張機能のインストールとセットアップ](#installing-and-setup-of-extensions)で説明されているように、他にいくつか拡張機能をインストールする必要があります。Dynamic Media ビューア拡張機能には、Dynamic Viewer イベントの引数である値のデータ要素を定義する機能が追加されています。例えば、ビューアのタイプや、読み込み時にビューアから報告されるアセット名、エンドユーザーがズームしたときに報告されるズームレベルなどを参照できます。
 

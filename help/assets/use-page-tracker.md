@@ -6,10 +6,10 @@ role: Architect, Admin
 feature: Asset Reports
 exl-id: 14d02015-df00-4566-a098-de76eaf42605
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ページトラッカーは、サードパーティの web サイトコードに組み込む JavaScript コードです。このコードを使用して、Adobe Analytics がそれらの web サイトでの [!DNL Adobe Experience Manager Assets] の使用状況データを取得できます。
 
-アセット固有のイベント（クリックなど）を取得するには、サードパーティの web サイトコードに埋め込みコードも含めます。
+アセット固有のクリックなどのイベントを取得するには、サードパーティの web サイトコードに埋め込みコードも含めます。
 
 次のサンプルコードは、ページトラッカーコードと埋め込みコードの両方を含む web ページです。
 

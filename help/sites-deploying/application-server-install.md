@@ -9,10 +9,10 @@ exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 98%
+source-wordcount: '1166'
+ht-degree: 91%
 
 ---
 
@@ -237,16 +237,16 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 * **AEM web アプリケーションのデプロイ**
 
    * AEM war ファイルをダウンロードします。
-   * 必要に応じて、web.xml で設定します（上記の概要を参照）。
+   * 必要に応じて、web.xml で設定します（上記の「概要」を参照）。
 
-      * WEB-INF/web.xml ファイルを解凍
-      * sling.run.modes パラメーターを publish に変更
-      * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定
-      * web.xml ファイルを再圧縮
+      * WEB-INF/web.xml ファイルを解凍します。
+      * sling.run.modes パラメーターを publish に変更します。
+      * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します。
+      * web.xml ファイルを再圧縮します。
 
-   * AEM war ファイルは、ROOT web アプリケーションとしてデプロイする場合は ROOT.war に名前を変更し、aemauthor をコンテキストルートとする場合は aemauthor.war などに名前を変更します。
-   * ファイルを Tomcat の webapps フォルダーにコピーします。
-   * AEM がインストールされるまで待ちます。
+   * AEM war ファイルをルート Web アプリケーションとしてデプロイする場合は、名前を ROOT.war に変更します。 aemauthor をコンテキストルートにする場合は、aemauthor.war に名前を変更します。
+   * Tomcat の webapps フォルダーにコピーします。
+   * AEMがインストールされるまで待ちます。
 
 ## トラブルシューティング {#troubleshooting}
 

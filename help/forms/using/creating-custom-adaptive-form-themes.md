@@ -6,10 +6,10 @@ topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '790'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
@@ -64,9 +64,9 @@ ht-degree: 97%
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
 
-   **LESS 変数ファイル**：CSS スタイルの定義で使用される変数を定義またはオーバーライドするファイルです。
+   **LESS 変数ファイル**：これらは、CSS スタイルの定義で使用される変数を定義または上書きするファイルです。
 
-   アダプティブフォームには、次のコードで定義された標準の変数が用意されています `.less` ファイル：
+   アダプティブフォームには、以下で定義される標準変数が用意されています `.less` ファイル：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
@@ -108,7 +108,7 @@ ht-degree: 97%
 
    **LESS ミックスインファイル：**&#x200B;変数を引数として受け入れる関数を定義することができます。これらの関数の出力が、結果のスタイルになります。CSS スタイルの繰り返しを避けるために、これらのミックスインを異なるスタイルで使用します。
 
-   アダプティブフォームは、次の場所で定義された標準の mixin を提供します。
+   アダプティブフォームには、次のファイルで定義された標準の Mixin が用意されています。
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
 

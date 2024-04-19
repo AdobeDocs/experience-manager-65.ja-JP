@@ -10,10 +10,10 @@ exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '1521'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -173,7 +173,7 @@ ht-degree: 100%
 
 ### 参加者ステップでの前のステップの実行 {#performing-step-back-on-a-participant-step}
 
-ある手順または一連の手順を繰り返す必要がある場合は、前の手順に戻ることができます。これにより、ワークフロー内の前の手順を選択し、再処理することができます。指定した手順にワークフローが戻り、そこから続行します。
+ある手順または一連の手順を繰り返す必要がある場合は、前の手順に戻ることができます。これにより、ワークフローで前に行われたステップを再処理のために選択できます。 指定した手順にワークフローが戻り、そこから続行します。
 
 このアクションでは、以下を指定できます。
 

@@ -10,10 +10,10 @@ exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '3442'
-ht-degree: 99%
+source-wordcount: '3441'
+ht-degree: 94%
 
 ---
 
@@ -249,7 +249,7 @@ id や class などの属性が body タグに適用されている場合（例�
 サポートされるプロパティ
 
 * ラベル（太字、斜体、下線のオプション）
-* Target URL（サードパーティおよび AEM の URL をサポート）
+* Target URL （サードパーティおよびAEM URL をサポート）
 * ページレンダリングオプション（同じウィンドウ、新しいウィンドウなど）
 
 読み込まれた zip ファイルにクリックスルーコンポーネントを含めるための HTML タグ。ここで、href はターゲット URL に、「製品の詳細を表示」はラベルにマッピングされます。
@@ -282,7 +282,7 @@ id や class などの属性が body タグに適用されている場合（例�
 
 * 画像の切り抜き、回転
 * ホバーテキスト、説明、サイズ（ピクセル）
-* Target URL（サードパーティおよび AEM の URL をサポート）
+* Target URL （サードパーティおよびAEM URL をサポート）
 * ページレンダリングオプション（同じウィンドウ、新しいウィンドウなど）
 
 読み込まれた zip ファイルにグラフィックリンクコンポーネントを含めるための HTML タグ。ここでは、href がターゲット URL にマッピングされ、img src はレンダリング画像で、「title」はホバーテキストとして取得されます。
@@ -368,11 +368,11 @@ HTML タグを使用して、読み込まれた zip ファイルにグラフィ�
 
 ### ParSys {#parsys}
 
-AEM parsys コンポーネントは、他の AEM コンポーネントを含むことができるコンテナコンポーネントです。読み込んだ HTML に parsys コンポーネントを追加することができます。これにより、ランディングページが読み込まれた後も、ユーザーはこのページに対して編集可能な AEM コンポーネントの追加や削除を行うことができます。
+AEM Parsys コンポーネントは、他のAEM コンポーネントを格納できるコンテナコンポーネントです。 インポートされたHTMLに Parsys コンポーネントを追加できます。 これにより、ランディングページが読み込まれた後も、ユーザーはこのページに対して編集可能な AEM コンポーネントの追加や削除を行うことができます。
 
 段落システムでは、ユーザーがサイドキックを使用してコンポーネントを追加することができます。
 
-parsys コンポーネント（`foundation/components/parsys`）をデザインパッケージ内の HTML に挿入するための HTML マークアップを次に示します。
+Parsys コンポーネントを挿入するためのマークアップのHTML（ `foundation/components/parsys`）、デザインパッケージ内のHTMLで以下を行います。
 
 ```xml
 <div data-cq-component="parsys">
@@ -383,9 +383,9 @@ parsys コンポーネント（`foundation/components/parsys`）をデザイン�
 
 上記のマークアップを HTML に含めると、次の操作が行われます。
 
-* デザインパッケージの読み込み後に作成されたランディングページに、AEM parsys コンポーネント（foundation/components/parsys）を挿入します。
-* サイドキックをデフォルトコンポーネントで初期化します。新しいコンポーネントをランディングページに追加するには、コンポーネントをサイドキックから parsys コンポーネントにドラッグします。
-* 2 つのタイトルコンポーネントも parsys に含まれます。
+* デザインパッケージの読み込み後に作成されたランディングページにAEM Parsys コンポーネント（foundation/components/parsys）を挿入します。
+* サイドキックをデフォルトコンポーネントで初期化します。サイドキックから Parsys コンポーネントにコンポーネントをドラッグすることで、新しいコンポーネントをランディングページに追加できます。
+* 2 つのタイトルコンポーネントも Parsys の一部です。
 
 ### ターゲット {#target}
 
@@ -441,7 +441,7 @@ HTML タグに設定されている lang 属性セットは、デザインイン
 
 ### テンプレートのオーバーレイ {#overlaying-template}
 
-空白のランディングページテンプレートをオーバーレイするには、`/apps/<appName>/designimporter/templates/<templateName>` でオーバーレイを作成します。
+空白のランディングページテンプレートをオーバーレイするには、次の場所にランディングページテンプレートを作成します。 `/apps/<appName>/designimporter/templates/<templateName>`
 
 AEM のテンプレートを作成する手順については、[こちら](/help/sites-developing/templates.md)を参照してください。
 
@@ -543,7 +543,7 @@ OSGi コンソールから設定可能なプロパティを公開するコンポ
 
 ### ランディングページに関連するコンポーネントによるサイドキックの初期化 {#initialization-of-sidekick-with-landing-page-relevant-components}
 
-デザインパッケージに parsys コンポーネントのマークアップが含まれる場合、読み込み後、ランディングページに関連するコンポーネントがサイドキックに表示され始めます。新しいコンポーネントを、ランディングページ内の parsys コンポーネントにドラッグ＆ドロップすることができます。また、デザインモードに切り換えて、新しいコンポーネントをサイドキックに追加することもできます。
+デザインパッケージに Parsys コンポーネントマークアップが含まれている場合、読み込み後、サイドキックにランディングページ関連コンポーネントの表示が開始されます。 新しいコンポーネントをランディングページ内の Parsys コンポーネントにドラッグ&amp;ドロップできます。 また、デザインモードに切り換えて、新しいコンポーネントをサイドキックに追加することもできます。
 
 ### 読み込み時に表示されるエラーメッセージ {#error-messages-displayed-during-import}
 

@@ -10,10 +10,10 @@ exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '569'
-ht-degree: 58%
+ht-degree: 55%
 
 ---
 
@@ -106,8 +106,8 @@ ht-degree: 58%
 
 AEM インボックスで通知を受け取ることを選択した場合は、インボックスが通知でいっぱいになります。 次のことができます [通知の表示](#viewing-your-notifications)を選択してから、次に対して必要な通知を選択します。
 
-* 「**承認**」をクリックして承認します。**読み取り**&#x200B;列の値は **true** に設定します。
+* をクリックして承認 **承認**：の値 **Read** 列の設定： **true**.
 
-* 「**削除**」をクリックして削除します。
+* クリックして削除 **削除**.
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)

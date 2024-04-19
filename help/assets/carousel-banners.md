@@ -10,10 +10,10 @@ feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4680'
-ht-degree: 100%
+source-wordcount: '4677'
+ht-degree: 94%
 
 ---
 
@@ -39,11 +39,11 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 ## カルーセルバナーの作成方法の視聴 {#watch-how-carousel-banners-are-created}
 
-[カルーセルバナーの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)に関するガイド（10 分 33 秒）を視聴します。また、カルーセルバナーのプレビュー、編集および配信方法についても説明します。
+ウォークスルーを実行する [カルーセルバナーの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10 分 33 秒）。 また、カルーセルバナーのプレビュー、編集および配信方法についても説明します。
 
 >[!NOTE]
 >
->管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
+>管理者以外のユーザーはに追加する必要があります **[!UICONTROL `dam-users`]** カルーセルバナーを作成または編集できるグループ。 の作成や編集で問題が発生した場合、にユーザーを追加できるシステム管理者に確認してください **[!UICONTROL `dam-users`]** グループ。
 
 ## クイックスタート：カルーセルバナー {#quick-start-carousel-banners}
 
@@ -72,7 +72,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
    カルーセルセットでは、ユーザーはバナー画像を切り替え、ホットスポットまたは画像マップを選択して関連するコンテンツにアクセスします。
 
-   Assets でカルーセルセットを作成するには、「**[!UICONTROL 作成]**」を選択し、「**[!UICONTROL カルーセルセット]**」を選択します。アセットをスライドに追加し、「**[!UICONTROL 保存]**」を選択します。エディター内で、カルーセルの外観と動作を直接編集することもできます。
+   Assets でカルーセルセットを作成するには、「**[!UICONTROL 作成]**」を選択し、「**[!UICONTROL カルーセルセット]**」を選択します。各スライドにアセットを追加し、以下を選択します **[!UICONTROL 保存]**. エディター内で、カルーセルの外観と動作を直接編集することもできます。
 
 1. [画像バナーへのホットスポットまたは画像マップの追加](#adding-hotspots-or-image-maps-to-an-image-banner).
 
@@ -98,7 +98,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 まず、既存のクイックビュー実装で使用されている動的変数を識別します。こうすることで、Experience Manager Assets でのカルーセルセット作成プロセスでホットスポットまたは画像マップのデータを適切に入力できます。
 
-Experience Manager Assets 内のバナー画像にホットスポットまたは画像マップを追加する際に、各ホットスポットまたは画像マップに SKU とオプションの追加変数を割り当てます。これらの変数は、後でホットスポットまたは画像マップとクイックビューコンテンツを対応付けるために使用されます。
+Experience Manager Assetsのバナー画像にホットスポットまたは画像マップを追加する場合は、各ホットスポットまたは画像マップに SKU とオプションの追加変数を割り当てます。 これらの変数は、後でホットスポットまたは画像マップとクイックビューコンテンツを対応付けるために使用されます。
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
 
 単純なケースでは、クイックビュー URL 内で変化する唯一の部分が製品 SKU となります。その場合、SKU の値が、ホットスポットまたは画像マップをバナー画像に追加するために必要になる唯一のデータです。
 
-一方、複雑なケースでは、クイックビュー URL に SKU 以外の様々な要素が含まれます（カテゴリ ID、カラーコード、サイズコードなど）。その場合、各要素は、カルーセルバナー機能のホットスポットまたは画像マップのデータ定義内の個別の変数になります。
+一方、複雑なケースでは、クイックビュー URL に SKU 以外で異なる様々な要素が含まれます（カテゴリ ID、カラーコード、サイズコードなど）。 その場合、各要素は、カルーセルバナー機能のホットスポットまたは画像マップのデータ定義内の個別の変数になります。
 
 次のクイックビュー URL の例と、その結果となるホットスポットまたは画像マップの変数について見てみましょう。
 
@@ -186,7 +186,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
 
 >[!NOTE]
 >
->管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
+>管理者以外のユーザーはに追加する必要があります **[!UICONTROL `dam-users`]** カルーセルバナーを作成または編集できるグループ。 の作成や編集で問題が発生した場合、にユーザーを追加できるシステム管理者に確認してください **[!UICONTROL `dam-users`]** グループ。
 
 **カルーセルセットを作成するには：**
 
@@ -336,7 +336,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
 
 >[!NOTE]
 >
->管理者以外のユーザーは、カルーセルバナーを作成または編集できるように、**[!UICONTROL dam-users]** グループに追加される必要があります。作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
+>管理者以外のユーザーはに追加する必要があります **[!UICONTROL `dam-users`]** カルーセルバナーを作成または編集できるグループ。 作成や編集で問題が発生した場合、**[!UICONTROL dam-users]** グループにユーザーを追加できるシステム管理者に確認してください。
 
 カルーセルセットには、次のような様々な編集タスクを実行できます。
 
@@ -354,7 +354,7 @@ Experience Manager Assets 内のバナー画像にホットスポットまたは
    * カルーセルセットアセットの上にマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）を選択します。
    * カルーセルセットアセットにカーソルを合わせ、「**[!UICONTROL 選択]**」（チェックマークアイコン）を選択してから、ツールバーから&#x200B;**[!UICONTROL 編集]**&#x200B;を選択してください。
 
-   * カルーセルセットアセットを選択し、ページの左上隅にある「**[!UICONTROL 編集]**」（鉛筆アイコン）を選択します。
+   * カルーセルセットアセットを選択し、ページの左上隅にあるを選択します **[!UICONTROL 編集]** （鉛筆アイコン）。
 
 1. カルーセルセットを編集するには、次のいずれかの操作を行います。
 

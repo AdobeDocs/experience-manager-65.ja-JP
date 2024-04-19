@@ -8,10 +8,10 @@ content-type: reference
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '2317'
-ht-degree: 99%
+source-wordcount: '2318'
+ht-degree: 98%
 
 ---
 
@@ -51,7 +51,7 @@ JobManager でジョブが作成されると、オフロードフレームワー
 
 ## トポロジの管理 {#administering-topologies}
 
-トポロジは、オフロードに参加している疎結合Experience Managerクラスタです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに関与するExperience Managerクラスターが緩やかに結合したものです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
 
 各 Experience Manager インスタンスによって、以下のオフロード関連サービスが実行されます。
 
@@ -234,7 +234,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 >[!CAUTION]
 >
->自動的に生成されるレプリケーションエージェントには既知の問題があるので、新しいレプリケーションエージェントを手動で作成する必要があります。
+>自動生成されたレプリケーションエージェントには既知の問題があるので、新しいレプリケーションエージェントを手動で作成する必要があります。
 
 オフロードのためにインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。以下の図に、作成者からワーカーインスタンスへのオフロードに必要なエージェントを示します。オーサーの Sling ID は 1、ワーカーインスタンスの Sling ID は 2 です。
 

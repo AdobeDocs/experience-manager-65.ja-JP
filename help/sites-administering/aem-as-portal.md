@@ -10,9 +10,9 @@ exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '6074'
+source-wordcount: '6073'
 ht-degree: 99%
 
 ---
@@ -140,7 +140,7 @@ AEM コンテンツポートレットでは、ポータル内に AEM コンテ�
 
 #### OSGi eb コンソール {#osgi-web-console}
 
-ポータルサーバーがホスト localhost、ポート 8080 で実行され、AEM ポートレット Web アプリケーションが Web アプリケーションコンテキスト *cqportlet* にマウントされていると想定すると、Web コンソールの URL は `https://localhost:8080/cqportlet/cqbridge/system/console` になります。デフォルトのユーザー名とパスワードは **admin** です。
+ポータルサーバーがホスト localhost、ポート 8080 で実行され、AEM ポートレット Web アプリケーションが Web アプリケーションコンテキストにマウントされていると仮定します *cqportlet*、Web コンソールの URL はです。 `https://localhost:8080/cqportlet/cqbridge/system/console`. デフォルトのユーザー名とパスワードは **admin** です。
 
 「**設定**」タブを開き、「**Portal Directory CQ Server Configuration**」を選択します。ここでオーサーインスタンスおよびパブリッシュインスタンスのベース URL を指定します。この手順については、[ポートレットの設定](#configuring-the-portlet)で説明します。
 

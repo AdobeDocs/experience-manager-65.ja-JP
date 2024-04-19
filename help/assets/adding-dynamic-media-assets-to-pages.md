@@ -10,9 +10,9 @@ role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '3219'
+source-wordcount: '3218'
 ht-degree: 100%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。コンポーネントを追加するには、レイアウトモードに入り、Dynamic Media コンポーネントを有効にします。次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらであるかが検出され、それに応じて利用可能なオプションが変わります。
 
-Adobe Experience Manager を WCM として使用している場合は、Dynamic Media アセットを直接ページに追加します。サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)をおこないます。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトに最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
+Adobe Experience Manager を WCM として使用している場合は、Dynamic Media アセットを直接ページに追加します。サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)を行います。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトに最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
 
 >[!NOTE]
 >

@@ -9,10 +9,10 @@ exl-id: e17ff611-122a-4d17-97af-071d0234dd16
 solution: Experience Manager, Experience Manager Sites
 feature: Experience Fragments,Developing
 role: Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 100%
+source-wordcount: '241'
+ht-degree: 93%
 
 ---
 
@@ -24,7 +24,7 @@ We.Retail のコンテンツフラグメントの使用
 
 作成者は、コンテンツをコピーして貼り付けなくても、ページの一部（エクスペリエンスのフラグメント）を再利用できます。
 
-これは、オーサリングにのみ AEM を使用して、顧客への配信には使用しない、ヘッドレスコンテンツ管理システム（CMS）のユースケースをサポートしています。サードパーティシステム／タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
+これは、オーサリングにのみ AEM を使用して、顧客への配信には使用しない、ヘッドレスコンテンツ管理システム（CMS）のユースケースをサポートしています。サードパーティシステム/タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
 
 >[!NOTE]
 >

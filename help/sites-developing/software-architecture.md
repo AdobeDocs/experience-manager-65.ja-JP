@@ -9,10 +9,10 @@ exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 90%
+source-wordcount: '612'
+ht-degree: 84%
 
 ---
 
@@ -50,7 +50,7 @@ SOLID は、従うべき 5 つのアーキテクチャ原則を表す頭字語�
 
 ### 堅牢性の原則に準拠する {#follow-the-robustness-principle}
 
-堅牢性原則では、送信するものに関しては厳密に、受信するものに関しては寛容になることと規定しています。つまり、サードパーティにメッセージを送信する際には、仕様に完全に準拠する必要があります。ただし、サードパーティからメッセージを受け取る際には、メッセージの意味が明確である限り、不適合なメッセージも受け入れる必要があります。
+堅牢性原則では、送信するものに関しては厳密に、受信するものに関しては寛容になることと規定しています。つまり、サードパーティにメッセージを送信する場合は、仕様に完全に準拠する必要があります。 ただし、サードパーティからメッセージを受け取った場合は、メッセージの意味が明確である限り、準拠していないメッセージを受け入れる必要があります。
 
 ### 独自のモジュールにスパイクを実装する {#implement-spikes-in-their-own-modules}
 

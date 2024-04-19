@@ -9,7 +9,7 @@ exl-id: 7ccd67a7-9945-48c1-9986-f4eaf0f2b961
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '26'
 ht-degree: 100%
@@ -50,7 +50,7 @@ There are three ways to implement Livefyre into a custom AEM component or other 
 
 **Method 2: SDK Implementation**
 
-* **What:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) is the core library that powers Apps and Auth on a site. It defines the global *window.Livefyre* object and a single public method, *Livefyre.require*, which can be used to load other Livefyre JavaScript libraries that help with embedding Livefyre Apps and integrating with third party User Auth platforms.
+* **What:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) is the core library that powers Apps and Auth on a site. It defines the global *window.Livefyre* object and a single public method, *Livefyre.require*, which can be used to load other Livefyre JavaScript libraries that help with embedding Livefyre Apps and integrating with third-party User Auth platforms.
 
 * **How**: [Use the Livefyre JavaScript SDK's streamhub-wallpackage](https://experienceleague.adobe.com/docs/livefyre/implementation/app-integrations/c-media-wall-integration.html)
 
@@ -69,7 +69,7 @@ Make sure you follow [Twitter](https://developer.twitter.com/en/developer-terms/
 For Media Wall Integrations requiring authentication, see:
 
 * [Customize Single Sign on Integration](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) for AEM Identity Management
-* [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third party authentication platforms
+* [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third-party authentication platforms
 
 ### Use Case Overview {#use-case-overview}
 
@@ -91,7 +91,7 @@ For training videos on streaming UGC, see [Create Automatic Content Streams and 
 
 For creating customized experiences and data visualizations, Livefyre Apps can be created from scratch by consuming Livefyre and social data using the [Bootstrap and Stream API](https://experienceleague.adobe.com/docs/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
 
-For Livefyre Apps requiring authentication, see [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third party authentication platforms.
+For Livefyre Apps requiring authentication, see [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third-party authentication platforms.
 
 * [PGA Tour Media Wall](https://www.pgatour.com/social-hub.html)
 * [TimeOut](https://www.timeout.com/london/restaurants/forest-bar-kitchen#tab_panel_3)
@@ -115,7 +115,7 @@ There are three ways to implement Livefyre Comments App into a custom AEM compon
 
 **Method 2: SDK Implementation**
 
-* **What:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) is the core library that powers Apps and Auth on a site. It defines the global *window.Livefyre* object and a single public method, *Livefyre.require*, which can be used to load other Livefyre JavaScript libraries that help with embedding Livefyre Apps and integrating with third party User Auth platforms.
+* **What:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) is the core library that powers Apps and Auth on a site. It defines the global *window.Livefyre* object and a single public method, *Livefyre.require*, which can be used to load other Livefyre JavaScript libraries that help with embedding Livefyre Apps and integrating with third-party User Auth platforms.
 
 * **How:**
 
@@ -133,7 +133,7 @@ For advanced customizations using the SDK, see [StreamHub SDKs](https://github.c
 ### Comments App Authentication Integration {#comments-app-authentication-integration}
 
 * [Customize Single Sign on Integration](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) for AEM Identity Management
-* [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third party authentication platforms
+* [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third-party authentication platforms
 
 ### Customer Examples {#customer-examples-1}
 
@@ -175,7 +175,7 @@ There are two ways to implement Livefyre Reviews App into a custom AEM component
 
 **Method 1: SDK Implementation**
 
-* **What:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) is the core library that powers Apps and Auth on a site. It defines the global *window.Livefyre* object and a single public method, *Livefyre.require*, which can be used to load other Livefyre JavaScript libraries that help with embedding Livefyre Apps and integrating with third party User Auth platforms.
+* **What:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) is the core library that powers Apps and Auth on a site. It defines the global *window.Livefyre* object and a single public method, *Livefyre.require*, which can be used to load other Livefyre JavaScript libraries that help with embedding Livefyre Apps and integrating with third-party User Auth platforms.
 
 * **How:**
 
@@ -195,7 +195,7 @@ Additional Ratings and Reviews APIs can be found [here](https://api.livefyre.com
 ### Comments App Authentication Integration {#comments-app-authentication-integration-1}
 
 * [Customize Single Sign on Integration](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) for AEM Identity Management
-* [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third party authentication platforms
+* [Identity Integration](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) for third-party authentication platforms
 
 ### Customer Examples {#customer-examples-2}
 

@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1831'
 ht-degree: 99%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 99%
 監視フォルダーを設定する前に、以下を確認します。
 
 * 監視フォルダーは AEM Forms の高度な機能です。使用するには、AEM Forms アドオンパッケージが必要です。適切な AEM Forms アドオンパッケージがインストールおよび設定されている必要があります。
-* 共有ストレージまたはローカルストレージに監視フォルダーを作成できます。監視フォルダーを実行するように設定されている AEM Forms ユーザーは、監視フォルダーの読み取り権限と書き込み権限を持っている必要があります。
+* 監視フォルダーは共有ストレージまたはローカルストレージに作成できます。 監視フォルダーを実行するように設定されている AEM Forms ユーザーは、監視フォルダーの読み取り権限と書き込み権限を持っている必要があります。
 * サービス、ワークフロー、またはスクリプトを使用して、監視フォルダーの操作を自動化できます。対象のサービス、ワークフロー、またはスクリプトが作成されていて、実行可能な状態にある必要があります。サービス、ワークフロー、スクリプトについて詳しくは、「[さまざまなファイル処理方法](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files)」を参照してください。
 * 監視フォルダーの各種プロパティについて詳しくは、[監視フォルダーのプロパティ](watched-folder-in-aem-forms.md#watchedfolderproperties)を参照してください。
 
@@ -49,7 +49,7 @@ ht-degree: 99%
 
    >[!NOTE]
    >
-   >「**次を使用してファイルを処理**」フィールドで「**サービス**」を選択した場合、「サービス名（inputProcessorType）」フィールドの値は括弧で囲む必要があります。例えば、(foo=bar) のように指定します。
+   >「**次を使用してファイルを処理**」フィールドで「**サービス**」を選択した場合、「サービス名（inputProcessorType）」フィールドの値は括弧で囲む必要があります。例えば、（foo=bar）と指定します。
 
    ```java
    @Component(metatype = true, immediate = true, label = "WF Test Service", description = "WF Test Service")

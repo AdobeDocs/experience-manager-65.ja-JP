@@ -6,9 +6,9 @@ exl-id: e1616385-0855-4f70-b787-b01701929bbc
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '221'
 ht-degree: 100%
 
 ---

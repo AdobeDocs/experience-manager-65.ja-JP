@@ -1,6 +1,6 @@
 ---
 title: Forms を HTML としてレンダリング
-description: Forms サービスを使用し、web ブラウザーからの HTTP リクエストに応じてフォームを HTML としてレンダリングします。Java API および Web Service API を使用し、フォームを HTML としてレンダリングできます。
+description: Forms サービスを使用し、web ブラウザーからの HTTP リクエストに応じてフォームを HTML としてレンダリングします。Java&trade; API および web サービス API を使用して、フォームをHTMLとしてレンダリングできます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -9,10 +9,10 @@ topic-tags: operations
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '4104'
-ht-degree: 99%
+source-wordcount: '4099'
+ht-degree: 96%
 
 ---
 
@@ -64,17 +64,17 @@ Forms サービスは、web ブラウザーからの HTTP リクエストに応�
 >
 >HTML フォーム上の HTML のデジタル署名ボタンの外観をカスタマイズする場合は、fscdigsig.css ファイル（adobe-forms-ds.ear/adobe-forms-ds.war ファイル内）で次のプロパティを変更する必要があります。
 
-**.fsc-ds-ssb**：このスタイルシートは、空白の記号フィールドの場合に適用されます。
+**`.fsc-ds-ssb`**：このスタイルシートは、空白の記号フィールドがある場合に適用されます。
 
-**.fsc-ds-ssv**：このスタイルシートは、「有効な記号」フィールドの場合に適用されます。
+**`.fsc-ds-ssv`**：このスタイルシートは、「有効な記号」フィールドがある場合に適用されます。
 
-**.fsc-ds-ssc**：このスタイルシートは、有効な記号フィールドでデータが変更された場合に適用されます。
+**`.fsc-ds-ssc`**：このスタイルシートは、有効な記号フィールドがあるものの、データが変更された場合に適用されます。
 
-**.fsc-ds-ssi**：このスタイルシートは、無効な記号フィールドの場合に適用されます。
+**`.fsc-ds-ssi`**：このスタイルシートは、無効な記号フィールドがある場合に適用されます。
 
-**.fsc-ds-popup-bg**：このスタイルシートプロパティは使用されていません。
+**`.fsc-ds-popup-bg`**：このスタイルシートプロパティは使用されていません。
 
-**.fsc-ds-popup-btn**：このスタイルシートプロパティは使用されていません。
+**。`fsc-ds-popup-btn`**：このスタイルシートプロパティは使用されていません。
 
 ## スクリプトの実行 {#running-scripts}
 
@@ -100,7 +100,7 @@ form:ready イベントにあるフォームスクリプトは、フォームの
 
 フォームサーバーがドロップダウンリストを含む XDP をレンダリングすると、ドロップダウンリストの作成に加えて、2 つの非表示のテキストフィールドも作成されます。これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。そのため、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。毎回それほど多くのデータを送信したくない場合は、それを無効にするカスタムスクリプトを作成できます。 例：ドロップダウンリストの名前は `drpOrderedByStateProv` で、サブフォームヘッダーの下にラップされます。HTML 入力要素の名前は `header[0].drpOrderedByStateProv[0]` になります。ドロップダウンのデータを格納して送信する非表示フィールドの名前には、`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]` という名前が付けられます。
 
-データを投稿しない場合は、次の方法でこれらの入力要素を無効にできます。 `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
+データをポストしない場合は、次の方法でこれらの入力要素を無効にできます。 `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
 ```java
 header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]

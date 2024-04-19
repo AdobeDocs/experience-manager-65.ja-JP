@@ -9,10 +9,10 @@ exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '1615'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -282,7 +282,7 @@ Adobe Analytics フレームワークを設定して、アドホックなリン�
 
 >[!NOTE]
 >
->XSS Antisamy 設定がパス **/libs/sling/xss.config.xml** の下の Sling にあるので、アドホックリンクが機能するには次のルールを追加する必要があります。
+>XSS Antisamy 設定がパスの下の Sling にあります。 **/libs/sling/xss.config.xml** また、リンクが機能するように、次のルールをアドホックに追加する必要があります。
 
 #### タグルール拡張機能のアンカー {#anchor-tag-rule-extension}
 

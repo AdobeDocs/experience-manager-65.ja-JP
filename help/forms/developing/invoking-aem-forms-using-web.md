@@ -8,7 +8,7 @@ topic-tags: coding
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '9814'
 ht-degree: 99%
@@ -813,11 +813,11 @@ Web サービスを使用して AEM Forms サービスを呼び出す Microsoft 
 1. `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列値を渡します。
 1. `invoke` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列にデータを入力します。
 1. コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-1. `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容を PDF ファイルに書き込みます。
+1. `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
 >[!NOTE]
 >
->ほとんどの AEM Forms サービス操作は、MTOM のクイックスタートを備えています。これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
+>ほとんどのAEM Forms サービス操作には、MTOM のクイックスタートが用意されています。 これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
 
 **関連トピック**
 
@@ -1519,7 +1519,7 @@ AEM Forms の複雑なデータタイプ（`PrincipalReference` など）の一�
 * `Roles`
 * `BLOB`
 
-この問題を回避するには、データタイプを完全に適合させることをお勧めします。 例えば、サービス参照を使用して Forms サービスと Signature サービスの両方を参照する .NET アプリケーションについて考えます。両方のサービス参照には、`BLOB` クラスが含まれています。次の手順で `BLOB` インスタンス、完全修飾 `BLOB` オブジェクトを宣言する際に使用します。 この方法を次のコード例に示します。このコード例について詳しくは、[インタラクティブ Forms のデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)を参照してください。
+この問題を回避するには、データタイプを完全に修飾することをお勧めします。 例えば、サービス参照を使用して Forms サービスと Signature サービスの両方を参照する .NET アプリケーションについて考えます。両方のサービス参照には、`BLOB` クラスが含まれています。を使用するには `BLOB` インスタンス、完全修飾 `BLOB` を宣言する場合は object を使用します。 この方法を次のコード例に示します。このコード例について詳しくは、[インタラクティブ Forms のデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)を参照してください。
 
 次の C# コードの例では、Forms サービスでレンダリングされるインタラクティブフォームに署名しています。このクライアントアプリケーションには 2 つのサービス参照があります。Forms サービスに関連付けられた `BLOB` インスタンスは、`SignInteractiveForm.ServiceReference2` 名前空間に属しています。同じように、Signature サービスに関連付けられた `BLOB` インスタンスは、`SignInteractiveForm.ServiceReference1` 名前空間に属しています。署名済みのインタラクティブフォームは、*LoanXFASigned.pdf* という名前の PDF ファイルとして保存されます。
 
@@ -1600,7 +1600,7 @@ AEM Forms の複雑なデータタイプ（`PrincipalReference` など）の一�
                     SignInteractiveForm.ServiceReference2.BLOB formData = new SignInteractiveForm.ServiceReference2.BLOB();
                     SignInteractiveForm.ServiceReference2.BLOB pdfForm = new SignInteractiveForm.ServiceReference2.BLOB();
  
-                    //Specify a XML form data
+                    //Specify an XML form data
                     string path = "C:\\Adobe\Loan.xml";
                     FileStream fs = new FileStream(path, FileMode.Open);
  
@@ -1611,7 +1611,7 @@ AEM Forms の複雑なデータタイプ（`PrincipalReference` など）の一�
                     fs.Read(ByteArray, 0, len);
                     formData.MTOM = ByteArray;
  
-                    //Specify a XML form data
+                    //Specify an XML form data
                     string path2 = "C:\\Adobe\LoanSigXFA.pdf";
                     FileStream fs2 = new FileStream(path2, FileMode.Open);
  
