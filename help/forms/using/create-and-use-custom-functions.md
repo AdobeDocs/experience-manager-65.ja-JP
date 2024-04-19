@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
-source-git-commit: 91ab786cd7e0dd75b9ad15058a125605245ec5bb
+source-git-commit: a5b48f1f4072f3e10273ec90d6f505815fe584a3
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 50%
@@ -27,7 +27,6 @@ AEM Forms 6.5 では、ルールエディターを使用した複雑なビジネ
 
 カスタム関数は、入力したデータの操作や処理を容易にし、指定された要件を満たすことで、フォームの機能を拡張します。 定義済みの条件に基づいてフォームの動作を動的に変更することもできます。
 アダプティブFormsでは、内でカスタム関数を使用できます [アダプティブフォームのルールエディター](/help/forms/using/rule-editor.md) フォームフィールドに特定の検証ルールを作成する場合
-
 ユーザーがメールアドレスを入力するカスタム関数の使用を理解します。入力したメールアドレスが特定の形式に従っていることを確認します（「@」記号とドメイン名が含まれます）。 カスタム関数「ValidateEmail」を作成します。この関数は、メールアドレスを入力として受け取り、有効な場合は true を、それ以外の場合は false を返します。
 
 ```javascript
