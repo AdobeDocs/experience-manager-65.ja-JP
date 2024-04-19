@@ -7,18 +7,18 @@ geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 603edbd2-c012-4d25-99bf-c4f3dc147308
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 100%
+source-wordcount: '110'
+ht-degree: 40%
 
 ---
 
 # PDF ファイルの使用権限の確認 {#review-the-usage-rights-of-a-pdf-file}
 
-PDF ファイルを Acrobat Reader DC Extensions web アプリケーションにアップロードするときに表示される情報で、Reader 用の拡張および使用権限の適用が行われているかどうかと、その有効期限を確認できます。
+PDFファイルをAcrobat Reader DC Extensions web アプリケーションにアップロードすると、この情報を表示して、拡張Readerかどうか、適用されている使用権限、有効期限を確認できます。
 
-1. `http://[localhost]:[port]/ReaderExtensions`（*[[port]]* はアプリケーションサーバーのポート番号です）で、Acrobat Reader DC エクステンション Web アプリケーションにログインします。
+1. Acrobat Reader DC Extensions web アプリケーション（）にログインします。 `http://[localhost]:[port]/ReaderExtensions` （ここで、 *[ポート]* は、アプリケーションサーバーのポート番号です）。
 1. 「参照」をクリックして、PDF ファイルをアップロードし、「情報」をクリックします。ファイル名の下に情報が表示されます。
 
    ファイルの使用権限の変更について詳しくは、Acrobat Reader DC Extensions のヘルプを参照してください。

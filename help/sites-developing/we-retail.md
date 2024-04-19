@@ -9,7 +9,7 @@ exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 100%
@@ -35,10 +35,10 @@ We.Retail は、AEM の標準的な参照実装として、AEM の最も強力�
 | [グローバル化されたサイト構造](/help/sites-administering/tc-bp.md) | We.Retail には、国固有の web サイトにライブコピーできる言語メインが含まれています。 | [試してみる](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) | すべてのページには、画面やデバイスのサイズに動的に適応するレスポンシブレイアウトが採用されています。 | [試してみる](/help/sites-developing/we-retail-responsive-layout.md) |
 | [編集可能テンプレート](/help/sites-developing/page-templates-editable.md) | すべてのページが編集可能テンプレートに基づいており、開発者以外のユーザーがテンプレートを変更したり、カスタマイズしたりできます。 | [試してみる](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | すべてのコンポーネントが HTL に基づいています。 |  |
+| [HTML テンプレート言語](https://experienceleague.adobe.com/ja/docs/experience-manager-htl/content/overview) | すべてのコンポーネントが HTL に基づいています。 |  |
 | [e コマース機能](/help/commerce/cif-classic/developing/ecommerce.md) | 製品カタログを特徴としています。 |  |
 | [コミュニティサイト](/help/communities/overview.md) | 訪問者がコミュニティでのディスカッションに参加したりブログを読んだりできるようにします。 |  |
-| [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早く行えます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
+| [コアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/introduction) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早く行えます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
 | [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md) | We.Retail エクスペリエンスのセクションは、コンテンツフラグメントによってコンテンツを再利用する方法を示します。 | [試してみる](/help/sites-developing/we-retail-content-fragments.md) |
 | [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) | エクスペリエンスフラグメントは、ページ内で参照できるコンテンツおよびレイアウトを含む 1 つ以上のコンポーネントのグループです。 | [試してみる](/help/sites-developing/we-retail-experience-fragments.md) |
 
