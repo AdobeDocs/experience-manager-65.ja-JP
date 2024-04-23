@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '823'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ AEM Sites は、GDPR コンプライアンスに関する義務をお客様が�
 
 サイト上で訪問者の認証に使用されるユーザーアカウント、およびパブリッシュサーバー上の UGC コンテンツについては、[プラットフォームの GDPR ドキュメント](/help/managing/data-protection-and-privacy.md)を参照してください。
 
-AEM Sites コンポーネントはデフォルトでは、訪問者から入力されたフォームデータをパブリッシュサーバーに保存しません。サードパーティのシステムまたは Adobe Campaign にデータを転送してさらに処理を行うことをお勧めします。
+デフォルトの AEM Sites コンポーネントは、訪問者から入力されたフォームデータをパブリッシュサーバーに保存しません。サードパーティのシステムまたは Adobe Campaign にデータを転送してさらに処理を行うことをお勧めします。
 
 ## オプトイン／オプトアウト {#opt-in-opt-out}
 

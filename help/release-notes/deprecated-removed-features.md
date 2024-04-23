@@ -3,9 +3,9 @@ title: Adobe Experience Manager 6.5 リリースで廃止および削除され�
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1715'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 99%
 | Dynamic Tag Manager（DTM） | DTM との統合は廃止されました。 | Adobe Experience Platform Launch をタグマネージャーとして使用するように切り替えます。 |   |
 | Adobe Target | AEM 6.5 では、[!DNL Adobe I/O] ベースの Adobe Target Standard API（Rest API）を使用して AEM が Adobe Target サービスに接続できるようになり、Target Classic API（XML）方式は廃止されました。 | [新しい API を使用](/help/sites-administering/target.md)するように統合機能を再設定してください。 |  |
 | Adobe Target | `mbox.js` を使用した AEM と Adobe Target の統合は廃止されました。 | `at.js` 1.x の使用に切り替えてください。 |  |
-| Commerce | [CIF REST](https://github.com/adobe/commerce-cif-api) は、AEM とコマースエンジン間の統合を可能にするマイクロサービスのセットとして 2018年に提供されています。アドビでは、2018 年半ばに Adobe Commerce（旧 Magento）を買収した後、2 つの理由でアプローチを変更することを決定しました。Commerce には独自の Commerce API（REST および GraphQL）のセットがあり、2 組の API を維持することはお勧めできません。市場の動向から、お客様はデータをクエリするよりも効率的な GraphQL へと移行しつつあることがわかっています。2019年、アドビは、Commerce の GraphQL API を情報源として使用した新しい Commerce 統合フレームワークをリリースしました。アドビでは今後、CIF REST に投資する予定はありません。代替ソリューションを使用することをお勧めします。 | AEM と Commerce 統合の場合は、[AEM CIF アーキタイプ](https://github.com/adobe/aem-cif-project-archetype)および [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)に切り替えます。[コマース統合フレームワークを使用](/help/commerce/cif/integrating/magento.md)した、AEM と Adobe Commerce の統合を参照してください。新しいアプローチとのサードパーティ（Commerce以外）統合のサポートは、Adobeのロードマップに記載されています。 |  |
+| Commerce | [CIF REST](https://github.com/adobe/commerce-cif-api) は、AEM とコマースエンジン間の統合を可能にするマイクロサービスのセットとして 2018年に提供されています。アドビでは、2018 年半ばに Adobe Commerce（旧 Magento）を買収した後、2 つの理由でアプローチを変更することを決定しました。Commerce には独自の Commerce API（REST および GraphQL）のセットがあり、2 組の API を維持することはお勧めできません。市場の動向から、お客様はデータをクエリするよりも効率的な GraphQL へと移行しつつあることがわかっています。2019年、アドビは、Commerce の GraphQL API を情報源として使用した新しい Commerce 統合フレームワークをリリースしました。アドビでは今後、CIF REST に投資する予定はありません。代替ソリューションを使用することをお勧めします。 | AEM と Commerce 統合の場合は、[AEM CIF アーキタイプ](https://github.com/adobe/aem-cif-project-archetype)および [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)に切り替えます。[コマース統合フレームワークを使用](/help/commerce/cif/integrating/magento.md)した、AEM と Adobe Commerce の統合を参照してください。新しいアプローチとサードパーティ（Commerce 以外）の統合のサポートは、アドビのロードマップに記載されています。 |  |
 | コンポーネント（AEM Sites） | アドビでは、`/libs/foundation/components` に格納されている基盤コンポーネントのほとんどについて、今後機能強化する予定はありません。コンポーネントフォルダーの `cq:deprecated` および `cq:deprecatedReason` プロパティを参照してください。AEM 6.5 には基盤コンポーネントが含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。さらに、基盤コンポーネントは、非推奨（廃止予定）になってもサポートされます。 | アドビは、将来のプロジェクトではコアコンポーネントを使用することをお勧めします。既存のサイトは現状のままでもかまいませんし、コアコンポーネントを使用するように [AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools) でサイトをリファクタリングすることもできます。 |  |
 | コンポーネント（AEM Sites） | デザインインポーターコンポーネント `/libs/wcm/designimporter/components` は、6.5 以降、廃止となりました。アドビでは、このデザインインポーター実装を今後機能強化する予定はありません。 | 今後のリリースで使用事例の代替実装を提供する予定です。 |  |
 | 基盤 | Granite オフロードフレームワーク。 アドビでは、アセット処理を外部化するために CQ 5.6.1 に導入されたオフロードフレームワークの機能を今後強化する予定はありません。 | アドビでは、クラウドネイティブな次世代オフロードフレームワークの構築に取り組んでいます。 |  |
