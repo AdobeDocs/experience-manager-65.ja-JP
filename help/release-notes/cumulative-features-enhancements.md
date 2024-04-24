@@ -4,9 +4,10 @@ description: 以前の 8 つのサービスパックリリースから Adobe Exp
 content-type: reference
 docset: aem65
 feature: Release Information
-role: User, Admin
+role: User,Admin,Architect,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
-source-git-commit: 1379981711214172868c58dabeddad5459f14e0c
+solution: Experience Manager
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: ht
 source-wordcount: '2334'
 ht-degree: 100%

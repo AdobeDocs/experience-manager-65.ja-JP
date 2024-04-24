@@ -2,9 +2,12 @@
 title: タッチ操作対応 UI 機能のステータス
 description: ' [!DNL Adobe Experience Manager] タッチ操作対応 UI に固有のリリースノート。'
 exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+solution: Experience Manager
+feature: Release Information
+role: User,Admin,Architect,Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: ht
-source-wordcount: '1067'
+source-wordcount: '1076'
 ht-degree: 100%
 
 ---
@@ -19,7 +22,7 @@ AEM には、バージョン 6.0 から、[!DNL Adobe Experience Cloud] やア�
 
 次のリストは、AEM 6.5 で実装されている機能のステータスを示しています。
 
-AEM 6.5 にアップグレードする場合の推奨事項については、[顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)を参照してください。
+AEM 6.5 にアップグレードする場合のレコメンデーションについては、[顧客向けのユーザーインターフェイスのレコメンデーション](/help/sites-deploying/ui-recommendations.md)を参照してください。
 
 >[!NOTE]
 >
