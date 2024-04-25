@@ -6,7 +6,9 @@ content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
 solution: Experience Manager,Commerce
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 96%

@@ -5,7 +5,8 @@ index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
 solution: Experience Manager Sites,Experience Manager Assets
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 99%

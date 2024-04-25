@@ -1,15 +1,18 @@
 ---
 title: コンテンツの公開／非公開
-description: 記事、バナー、コレクションに対するコンテンツ管理の操作について理解したら、このページでコンテンツの公開方法について説明します。 また、コンテンツを非公開にすることもできます。
+description: 記事、バナー、コレクションのコンテンツ管理アクションについて理解したら、このページでコンテンツの公開方法を確認します。 また、コンテンツを非公開にすることもできます。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
-source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 4%
+source-wordcount: '271'
+ht-degree: 11%
 
 ---
 
@@ -17,29 +20,29 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-記事、バナー、コレクションに対するコンテンツ管理の操作に慣れたら、コンテンツを公開できます。 また、コンテンツを非公開にすることもできます。
+記事、バナー、コレクションのコンテンツ管理アクションについて理解したら、コンテンツを公開できます。 また、コンテンツを非公開にすることもできます。
 
 >[!NOTE]
 >
->AEM Mobileアプリのデザインに関する考慮事項について詳しくは、 [AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) 」をオンラインヘルプに追加しました。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、 [AEM Mobile アプリの設計に関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) オンライン ヘルプで表示します。
 
 ## コンテンツの公開/非公開 {#publishing-unpublishing-the-content}
 
-これは「AEM パブリッシュ」とは異なります。 コンテンツを AEM パブリッシュサーバーインスタンスにプッシュして、公開された状態で表示できるようにしていません。 ここでは、選択したコンテンツをライブ Mobile On-Demand アプリ内で公開する必要があることを Mobile On-Demand に通知します。
+これは、「AEM パブリッシュ」とは異なります。 コンテンツを公開するために、AEM パブリッシュサーバーインスタンスにコンテンツをプッシュしているわけではありません。 ここでは、選択したコンテンツをライブの Mobile On-Demand アプリ内で公開する必要があることを Mobile On-Demand に通知しています。
 
 >[!NOTE]
 >
->コンテンツを公開する前に、Mobile On-Demand にアップロードする必要があります。
+>コンテンツを公開する前に、モバイルオンデマンドにアップロードする必要があります。
 
-記事を公開/非公開にする一般的なワークフロー：
+記事を公開/非公開にするための一般的なワークフローです。
 
-1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
+1. モバイルから、カタログのモバイルオンデマンドアプリを選択します。
 1. 記事を選択します。
 1. 必要に応じて、リスト表示から記事を追加します。
 1. アクションバーの「公開」を選択します。 しばらくすると、記事が公開されます。
-1. 上記と同じ手順を使用して、記事を非公開にします。
+1. 上記と同じ手順を使用して、公開記事を非公開にします。
 
 <!-- FAIL >>[!NOTE]
 >
@@ -49,9 +52,9 @@ ht-degree: 4%
 
 ### 次の手順 {#the-next-steps}
 
-コンテンツの作成と公開について学習したら、次を参照してください。
+コンテンツの作成と公開について理解したら、以下を参照してください。
 
-* [AEM Mobile On-demand Services向けAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
+* [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)
 
-また、オーサリングに関するトピックの詳細については、 [AEM Mobile On-demand Servicesアプリ用AEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md).
+オーサリングのトピックの詳細については、を参照してください [AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md).

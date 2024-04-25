@@ -4,7 +4,9 @@ description: 統合フレームワークには、API を備えた統合レイヤ
 contentOwner: Guillaume Carlino
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '1856'
 ht-degree: 99%
@@ -472,7 +474,7 @@ e コマースプロジェクトには、次の場所にデフォルトの検索
 
    * ClientContext `SegmentMgr` がセグメントを解決し、ClientContext `CartMgr` がプロモーションを解決します。少なくとも 1 つの解決されたセグメントを対象とする各プロモーションがトリガーされます。
 
-      * 発生したプロモーションは、買い物かごを再計算するAJAX呼び出しを通じてサーバーに送り返されます。
+      * 実行されたプロモーションは、AJAX呼び出しを介してサーバーに返され、買い物かごを再計算します。
       * トリガーされたプロモーション（および追加された割引券）は、ClientContext パネルにも表示されます。
 
 割引券の買い物かごへの追加または買い物かごからの削除は、`CommerceSession` API を使用して実行されます。

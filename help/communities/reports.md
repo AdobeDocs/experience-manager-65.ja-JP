@@ -1,6 +1,6 @@
 ---
 title: レポートコンソール
-description: Adobe Experience Managerオーサー環境から様々な方法でアクセスできる様々なレポートの使用方法を説明します。
+description: Adobe Experience Manager オーサー環境から複数の方法でアクセスできる様々なレポートの使用方法について説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,10 +8,12 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 00b6f2f03470aca7f87717818d0dfcd17ac16bed
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 10%
+source-wordcount: '411'
+ht-degree: 7%
 
 ---
 
@@ -19,47 +21,47 @@ ht-degree: 10%
 
 ## 概要 {#overview}
 
-AEM Communitiesの場合、オーサー環境から様々な方法でアクセスできるレポートがあります。
+AEM Communitiesの場合、オーサー環境からいくつかの方法でアクセスできる様々なレポートがあります。
 
-一般に、様々なレポートは次のようになります。
+一般的に、様々なレポートは次のとおりです。
 
-* [表示レポート](#views-report)
+* [ビューレポート](#views-report)
 
-  コミュニティサイトのコミュニティメンバーおよびサイト訪問者によるコンテンツのビュー数のグラフを表示します。
+  任意のコミュニティサイトについて、コミュニティメンバーおよびサイト訪問者ごとにコンテンツのビューのグラフを提供します。
 
 * [投稿レポート](#posts-report)
 
-  コミュニティメンバーがコミュニティサイトに投稿した様々なタイプの投稿のグラフを表示します。
+  コミュニティメンバーがコミュニティサイトに投稿した様々なタイプのグラフを提供します。
 
-表形式のレポートは、後で処理するために.csv 形式で書き出すことができます。
+表形式のレポートは、.csv 形式で書き出し、後続の処理で使用できます。
 
 ## レポートコンソール {#reporting-consoles}
 
 ### コミュニティサイトのレポート {#reports-for-community-sites}
 
-* グローバルナビゲーションから： **[!UICONTROL ナビゲーション]** > **[!UICONTROL Communities]** >  **[!UICONTROL レポート]**
+* グローバルナビゲーションから： **[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** >  **[!UICONTROL 報告書]**
 
-* 次の中から選択：
+* 次の中から選択します。
 
    * **[!UICONTROL 割り当てレポート]**
 
-      * 選択したコミュニティサイト、ユーザーまたはグループ、および割り当てに関するレポートを生成します。
+      * 選択したコミュニティ サイト、ユーザーまたはグループ、および割り当てに関するレポートを生成します。
 
    * **[!UICONTROL 投稿レポート]**
 
-      * 選択したコミュニティサイト、コンテンツタイプ、期間に関するレポートを生成します。
+      * 選択したコミュニティ サイト、コンテンツ タイプ、および期間に関するレポートを生成します。
 
-   * **[!UICONTROL 表示レポート]**
+   * **[!UICONTROL ビューレポート]**
 
-      * 選択したコミュニティサイト、コンテンツタイプ、期間に関するレポートを生成します。
+      * 選択したコミュニティ サイト、コンテンツ タイプ、および期間に関するレポートを生成します。
 
-![レポート](assets/reports1.png)
+![報告書](assets/reports1.png)
 
 ## 表示レポート {#views-report}
 
-表示コンソールを使用すると、特定の期間、コミュニティ機能によってページビューでレポートを生成できます。
+ビューコンソールを使用すると、特定の期間、コミュニティ機能ごとにページビューに関するレポートを生成できます。
 
-![ビューレポート](assets/view-report.png)
+![view-report](assets/view-report.png)
 
 レポートの条件を選択します。
 
@@ -69,7 +71,7 @@ AEM Communitiesの場合、オーサー環境から様々な方法でアクセ�
 
 * **[!UICONTROL コンテンツタイプ]**
 
-  [ すべてのコンテンツ ] を選択するか、サイトに存在する機能の 1 つを選択します。
+  すべてのコンテンツを選択するか、サイトに存在する機能の 1 つを選択できます。
 
 * **[!UICONTROL 時間枠]**
 
@@ -80,13 +82,13 @@ AEM Communitiesの場合、オーサー環境から様々な方法でアクセ�
    * 過去 90 日間
    * 昨年
 
-選択 **[!UICONTROL 生成]** をクリックして、レポートを作成します。
+を選択 **[!UICONTROL Generate]** をクリックしてレポートを作成します。
 
 ![generate-views](assets/generate-views.png)
 
 ## 投稿レポート {#posts-report}
 
-投稿コンソールを使用すると、特定の期間のコミュニティ機能への投稿数に関するレポートを生成できます。
+投稿コンソールを使用すると、特定の期間におけるコミュニティ機能への投稿数に関するレポートを生成できます。
 
 ![posts-report](assets/posts-report.png)
 
@@ -98,7 +100,7 @@ AEM Communitiesの場合、オーサー環境から様々な方法でアクセ�
 
 * **[!UICONTROL コンテンツタイプ]**
 
-  [ すべてのコンテンツ ] を選択するか、サイトに存在する機能の 1 つを選択します。
+  すべてのコンテンツを選択するか、サイトに存在する機能の 1 つを選択できます。
 
 * **[!UICONTROL 時間枠]**
 
@@ -109,18 +111,18 @@ AEM Communitiesの場合、オーサー環境から様々な方法でアクセ�
    * 過去 90 日間
    * 昨年
 
-選択 **[!UICONTROL 生成]** をクリックして、レポートを作成します。
+を選択 **[!UICONTROL Generate]** をクリックしてレポートを作成します。
 
 ![generate-report](assets/generate-posts-report.png)
 
 ## トラブルシューティング {#troubleshooting}
 
-### コミュニティサイトが一覧に表示されていません {#no-community-sites-listed}
+### コミュニティサイトがリストされていません {#no-community-sites-listed}
 
-コミュニティサイトが表示されない場合は、Adobe Analyticsがサイトに対して有効になっていることを確認します。 割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造内にあることを確認します。
+コミュニティサイトがリストされていない場合は、サイトに対してAdobe Analyticsが有効になっていることを確認します。 割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造にあることを確認します。
 
-### AEMオーサーインスタンスにレポートが表示されない {#reports-do-not-show-in-aem-author-instance}
+### レポートがAEM オーサーインスタンスに表示されない {#reports-do-not-show-in-aem-author-instance}
 
-AEMオーサーインスタンスにレポートが表示されない場合は、パブリッシュインスタンス上の URL マッピングなどのカスタマイズを確認します。 URL マッピングがコミュニティサイトのAEMパブリッシュインスタンスでのみ行われる場合は、AEMオーサーインスタンスで同じ設定が行われていることを確認してください ( **サイトトレンドレポートソーシャルコンポーネントファクトリ** 設定。
+AEM オーサーインスタンスにレポートが表示されない場合は、パブリッシュインスタンスでの URL マッピングなど、カスタマイズの有無を確認します。 URL マッピングが Communities サイトのAEM パブリッシュインスタンスでのみ行われている場合は、でAEM オーサーインスタンスにも同じことが設定されていることを確認してください。 **サイトトレンドレポート ソーシャルコンポーネントファクトリ** 設定。
 
-![AEM Author での URL マッピング](assets/sitetrend.png)
+![AEM オーサーの URL マッピング](assets/sitetrend.png)

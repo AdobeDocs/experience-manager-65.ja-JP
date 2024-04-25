@@ -1,13 +1,15 @@
 ---
 title: コンテキスト内モデレート
-description: 管理者と信頼できるコミュニティメンバーがAdobe Experience Manager Communities でモデレーターアクションを実行する方法を説明します。
+description: 管理者と信頼されたコミュニティメンバーがAdobe Experience Manager Communities でモデレーターアクションを実行する方法について説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%
@@ -16,113 +18,113 @@ ht-degree: 0%
 
 # コンテキスト内モデレート {#in-context-moderation}
 
-AEM Communitiesの場合、管理者や信頼できるコミュニティメンバーは、コミュニティコンテンツが投稿された公開済みページで直接モデレートを実行できます。
+AEM Communitiesの場合、コミュニティコンテンツが投稿された公開済みページで、管理者や信頼されたコミュニティメンバーが直接モデレートを行うことができます。
 
-を使用する場合、 [モデレートコンソール](moderation.md)コンテンツに対して表示される情報には、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできるように、公開済みページへのリンクが含まれます。
+を使用する場合 [モデレートコンソール](moderation.md)を選択すると、コンテンツに対して表示される情報には、コンテキスト内でモデレートを行う際に使用できる追加のモデレートアクションにアクセスできるようにするための、公開済みページへのリンクが含まれます。
 
 ## モデレートアクション {#moderation-actions}
 
-モデレートの概要にアクセスして、 [モデレートアクション](moderate-ugc.md#moderation-actions).
+の説明については、モデレートの概要を参照してください。 [モデレートアクション](moderate-ugc.md#moderation-actions).
 
 ## モデレート UI {#moderation-ui}
 
-パブリッシュインスタンスのモデレーターに表示される UI は、ユーザー生成コンテンツ (UGC) の投稿と管理を行うためのダイアログ内に含まれています。 UI の要素は、サイト訪問者のステータス ( 訪問者が
+パブリッシュインスタンスでモデレーターに表示される UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内に格納されています。 UI の要素は、サイト訪問者のステータスによって決定されます。つまり、次のいずれかになります。
 
 1. コンテンツを投稿したメンバー。
-1. 信頼できるメンバーモデレーターです。
+1. 信頼できるメンバーモデレーター。
 1. 管理者。
-1. サインインしていますが、管理者、モデレーター、コンテンツの作成者ではありません。
-1. サインインしていません。
+1. ログインしたが、コンテンツの管理者、モデレーター、作成者ではない。
+1. ログインしていません。
 
 ## 例 {#example}
 
-の使用 [Geometrixxエンゲージ](http://localhost:4503/content/sites/engage/en.html) 次の場合に作成されたサイト [AEM Communitiesの概要](getting-started.md)を使用すると、フォーラムにスレッドを設定して、パブリッシュ環境で様々なモデレートアクティビティを体験することができます。 以下を参照してください。
+使用， [Geometrixxエンゲージ](http://localhost:4503/content/sites/engage/en.html) 作成日時 [AEM Communitiesの概要](getting-started.md)を使用すると、パブリッシュ環境の様々なモデレーションアクティビティを体験できるフォーラムにスレッドを設定できます。 以下を参照してください。
 
-Aaron McDonald (`aaron.mcdonald@mailinator.com`) は、サイトの作成時に community-engage-moderators グループに追加することで、信頼できるコミュニティメンバーとして識別されました。
+Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時に community-engage-moderators グループに追加したことにより、信頼できるコミュニティメンバーとして識別されました。
 
-Rebekah Larsen (`rebekah.larsen@trashymail.com`) は、 [メンバーコンソール](members.md).
+レベッカ・ラルセン （`rebekah.larsen@trashymail.com`）は、 [メンバーコンソール](members.md).
 
-コミュニティユーザーグループについて詳しくは、 [ユーザーとユーザーグループの管理](users.md).
+コミュニティユーザーグループについて詳しくは、次を参照してください： [ユーザーとユーザーグループの管理](users.md).
 
-### フォーラム投稿の作成 {#create-the-forum-posts}
+### フォーラムの投稿の作成 {#create-the-forum-posts}
 
-* Rebekah Larsen(rebekah.larsen@trashymail.com) としてログインします。
+* Rebekah Larsen としてログインします（rebekah.larsen@trashymail.com）。
 
    * フォーラムを選択
    * 新しい投稿を選択
    * 件名を入力
 
-     ハミングバードフィーダーでネクターを変更するタイミング
+     ハミング鳥フィーダーで蜜を変える場合
 
-   * 本文のテキストを入力
+   * 本文を入力
 
-     毎年ハチドリの餌をつるしている時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ もっと早く変更しなければなりませんか？
+     毎年ハチドリのフィーダーをハングアップする時はあまり成功していませんでした。 1 日か 2 日か来たそうだそうだそうだそうだそうだそうだそうだそうだそうだね。 週に 1 回は変えるの長すぎるの？ もっと早く変更しなければいけませんか。
 
    * 投稿を選択
-   * ログアウトを選択
+   * 「ログアウト」を選択します
 
-* Aaron McDonald(aaron.mcdonald@mailinator.com) としてログインします。
-
-   * フォーラムを選択
-   * Hummingbird のトピックで、「詳細を表示」を選択します。
-   * 返信を投稿のコメントを入力
-
-     私は週に 1 回私のを変更し、5 月から 10 月までそれらを得る。
-
-   * 返信を選択
-   * ログアウトを選択
-
-* Andrew Schaeffer(andrew.schaeffer@trashymail.com) としてログインします。
+* Aaron McDonald （aaron.mcdonald@mailinator.com）としてログインする
 
    * フォーラムを選択
-   * Hummingbird のトピックで、「詳細を表示」を選択します。
-   * 返信を投稿のコメントを入力
+   * 「Hummingbird」トピックについては、「詳細を表示」を選択します
+   * Post Reply のコメントを入力します
 
-     私は蜜と飼料を販売しています — https://my.viral.url/にアクセスしてください。
+     私は週に 1 回私のものを変え、私は 5 月から 10 月まで彼らを得ます。
 
    * 返信を選択
-   * ログアウトを選択
+   * 「ログアウト」を選択します
 
-### 匿名のサイト訪問者 (#5) {#anonymous-site-visitor}
+* Andrew Schaeffer （andrew.schaeffer@trashymail.com）としてログインします。
 
-以下は、サインインしていないサイト訪問者が閲覧したフォーラムのビューです (5)。
+   * フォーラムを選択
+   * 「Hummingbird」トピックについては、「詳細を表示」を選択します
+   * Post Reply のコメントを入力します
 
-匿名のサイト訪問者はフォーラムのみを表示できますが、コンテンツを投稿したり、モデレート操作を実行したりすることはできません。
+     私は蜜とフィーダーを売っています – visit https://my.viral.url/
 
-![community-forum-visitor](assets/community-forum-visitor.png)
+   * 返信を選択
+   * 「ログアウト」を選択します
 
-### 新規メンバー (#4) {#new-member}
+### 匿名サイト訪問者（#5） {#anonymous-site-visitor}
 
-オーサー環境で、管理者としてログインし、Boyd Larsen(boyd.larsen@dodgit.com) を community-engage-members グループの新しいメンバーとして追加します。その際、 [メンバーコンソール](members.md)、次にログアウトします。
+以下は、ログインしていないサイト訪問者が閲覧したフォーラムのビューです（5）。
 
-公開時に、Boyd Larsen としてログインし、を選択してスレッドにアクセスします。 `Forum`を、 `Read more` 蜂雀の巣箱のために
+匿名サイト訪問者はフォーラムの閲覧のみが可能ですが、コンテンツの投稿やモデレーションアクションは行えません。
+
+![community-forum-visit](assets/community-forum-visitor.png)
+
+### 新規メンバー（#4） {#new-member}
+
+オーサー環境で管理者としてログインし、Boyd Larsen （boyd.larsen@dodgit.com）を community-engage-members グループの新しいメンバーとして追加するには、 [メンバーコンソール](members.md)ログアウトします。
+
+公開時に Boyd Larsen としてログインし、を選択してスレッドにアクセスします。 `Forum`、次に `Read more` ハチドリのポストのために。
 
 注意：
 
-* Boyd はフォーラムに参加していません。
-* Boyd は何も削除できません。
-* Boyd はサインインし、返信またはフラグコンテンツを実行できます。
+* ボイドはフォーラムに参加していません。
+* ボイドは何も削除できません。
+* ボイドはログインし、コンテンツに返信したりフラグを立てたりできます。
 
-Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツにフラグを設定します。
+Boid に Andrew が投稿した内容を示すフラグを選択してもらいます。
 
 ログアウト
 
 ![community-forum-member](assets/community-forum-member.png)
 
-### 管理者 (#3) {#administrator}
+### 管理者（#3） {#administrator}
 
-管理者 (admin) としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細を表示」を選択します。
+管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿で「詳細を読む」を選択します。
 
 注意：
 
-* 管理者は、フラグ設定、削除、編集、拒否、切り取り、閉じる、ピン、機能を実行できます。
-* 管理者は「管理」を選択してモデレートコンソールにアクセスできます。
+* 管理者は、フラグの設定、削除、編集、拒否、切り取り、閉じる、ピン留め、機能を実行できます。
+* 管理者は、「管理」を選択してモデレートコンソールにアクセスできます。
 
-![community-admin-forum](assets/community-admin-forum.png)
+![コミュニティ管理者フォーラム](assets/community-admin-forum.png)
 
-管理メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から。
+「管理」メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から変更します。
 
-管理者の場合、GeometrixxEngage コミュニティサイトからのコンテンツだけでなく、モデレート可能なコンテンツもすべて表示されます。
+管理者には、Geometrixxエンゲージメントコミュニティサイトのコンテンツだけでなく、すべてのモデレート可能なコンテンツが表示されることに注意してください。
 
 検索フィルターは、開く/閉じるを切り替えるサイドパネルです。
 
@@ -130,37 +132,37 @@ Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツに�
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### コミュニティモデレーター (#2) {#community-moderator}
+### コミュニティ モデレーター（#2） {#community-moderator}
 
-Aaron McDonald (`aaron.mcdonal@mailinator.com`) をクリックし、コミュニティモデレーターを選択して、「フォーラム」を選択し、Hummingbird の投稿の「詳細を表示」を選択してスレッドにアクセスします。
+Aaron McDonald としてログインする（`aaron.mcdonal@mailinator.com`）を選択し、「フォーラム」を選択してスレッドにアクセスします。ハチドリの投稿の「詳細を読む」を選択します。
 
 注意：
 
-* Aaron は、自分の投稿の返信、削除、編集または拒否を実行できます。
-* Aaron では、他のコンテンツにフラグ/許可、返信、削除、編集、拒否を設定することもできます。
-* Aaron は、フォーラムトピックを「切り取り」して、そのトピックをモデレート対象の別のフォーラムに移動できます。
-* Aaron は、「管理」を選択してモデレートコンソールにアクセスできます。
+* Aaron は自分の投稿を返信、削除、編集または拒否できます。
+* Aaron は、フラグ設定/許可、返信、削除、編集、その他のコンテンツの拒否も行うことができます。
+* Aaron は、フォーラムのトピックを切り取って、モデレートする別のフォーラムに移動できます。
+* Aaron は「管理」を選択してモデレートコンソールにアクセスできます。
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-管理メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から。
+「管理」メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から変更します。
 
-コミュニティモデレーターの場合、GeometrixxEngage コミュニティサイトからのモデレート可能なコンテンツのみが表示されます。
+コミュニティモデレーターの場合、Geometrixxエンゲージメント コミュニティサイトのモデレート可能なコンテンツのみが表示されます。
 
-コミュニティモデレーターには、管理者と同じオプション（画像は検索サイドバーを閉じた状態で表示）がありますが、他のAEMコンソールにはアクセスできません。
+コミュニティモデレーターは管理者と同じオプションを持ちますが（画像は検索サイドバーを閉じるに切り替えられています）、他のAEM コンソールにはアクセスできません。
 
 ログアウトします。
 
-![moderator-access](assets/moderator-access.png)
+![モデレータのアクセス](assets/moderator-access.png)
 
-### コンテンツ作成者 (#1) {#content-author}
+### コンテンツ作成者（#1） {#content-author}
 
-Rebekah Larsen (`rebekah.larsen@mailinator.com`) をクリックし、スレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「詳細を表示」を選択します。
+Rebekah Larsen としてログインする（`rebekah.larsen@mailinator.com`）を選択してスレッドにアクセスします。ハチドリの投稿の「詳細情報」を選択します。
 
 注意：
 
-* Rebekah は、自分の投稿を削除または編集できます。
-* Rebekah は、他のコンテンツに返信したり、他のコンテンツにフラグを設定したりすることもできます。
-* Rebekah はモデレートコンソールにアクセスできません。
+* Rebekah は自分の投稿を削除または編集できます。
+* Rebekah は、他のコンテンツに返信したり、フラグを立てたりすることもできます。
+* Rebekah はモデレーションコンソールにアクセスできません。
 
 ![community-forum-author](assets/community-forum-author.png)

@@ -1,14 +1,17 @@
 ---
 title: コミュニティでの Maven の使用
-description: コミュニティで使用するAdobe Experience Manager Uber API jar の詳細。
+description: Communities で使用するAdobe Experience Manager Uber API jar について説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '118'
 ht-degree: 7%
 
 ---
@@ -17,21 +20,21 @@ ht-degree: 7%
 
 ## 概要 {#overview}
 
-Adobe Experience Manager (AEM) Communities ドキュメントのこの節には、次の項に加えて記載されています。
+Adobe Experience Manager（AEM） Communities のドキュメントのこの節は、次の機能に追加されています。
 
-* [Apache Maven を使用したAEMプロジェクトの構築](../../help/sites-developing/ht-projects-maven.md).
+* [Apache Maven を使用したAEM プロジェクトの構築](../../help/sites-developing/ht-projects-maven.md).
 
-個々のアーティファクトに代わる「uber」アーティファクトは 1 つだけです。
+個々のアーティファクトを置き換える「uber」アーティファクトは 1 つだけです。
 
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
 >[!NOTE]
 >
->AEM 6.4 以降では、Communities API は明示的にリリースされていません。 すべての Communities API が Uber jar 自体に含まれるようになりました。
+>AEM 6.4 以降、Communities API は明示的にはリリースされません。 すべての Communities API が Uber jar 自体に含まれるようになりました。
 >
->最新の Communities リリースに最新の情報を常に提供します。
+>最新の Communities リリースに関する最新情報を入手してください。
 >
->詳しくは、 [最新リリース](deploy-communities.md#latest-releases) 」セクションで、最新バージョンを識別できます。
+>を参照してください。 [最新リリース](deploy-communities.md#latest-releases) 最新のバージョンを識別できるセクションです。
 
 ## Maven 依存関係の例 {#maven-dependency-example}
 
@@ -46,7 +49,7 @@ Adobe Experience Manager (AEM) Communities ドキュメントのこの節には�
 
 >[!NOTE]
 >
->詳しくは、 [AEM Uber jar リポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) ここで、最新の Uber jar アーティファクトを識別できます。
+>を参照してください。 [AEM Uber jar リポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 最新の Uber jar アーティファクトを特定できます。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

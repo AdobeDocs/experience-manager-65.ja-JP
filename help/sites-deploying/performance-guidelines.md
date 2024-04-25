@@ -8,7 +8,8 @@ topic-tags: configuring
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 98%
@@ -348,10 +349,10 @@ AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を�
 
 **DON&#39;T**
 
-* できる場合は、JCR API を直接使用しないでください。
-* /libs を変更せず、オーバーレイを使用します。
+* 可能な場合は、JCR API を直接使用しない
+* /libs を変更せずに、オーバーレイを使用する
 * 可能な限りクエリを使用しない
-* Java™コードで OSGi サービスを取得する際には Sling バインディングを使用せず、次のように使用します。
+* Java™ コードで OSGi サービスを取得する場合は、Sling Binding を使用せずに以下を使用してください。
 
    * DS コンポーネントの @Reference
    * Sling Model の @Inject

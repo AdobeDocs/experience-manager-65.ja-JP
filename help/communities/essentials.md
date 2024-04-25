@@ -6,20 +6,23 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 26%
+source-wordcount: '208'
+ht-degree: 24%
 
 ---
 
 # コンポーネントおよび機能の基本事項  {#component-function-and-feature-essentials}
 
-Adobe Experience Manager(AEM)Communities の機能を使用するには、サイトの訪問者がメンバーになり、 [コミュニティサイト](overview.md#communitiessites) コンテンツを投稿できるようになります。 このように [コミュニティサイトテンプレート](sites.md)（コミュニティサイトの場所） [作成済み](sites-console.md)は、ログイン機能とユーザープロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
+Adobe Experience Manager（AEM） Communities の機能を使用するには、サイト訪問者がメンバーになり、 [コミュニティサイト](overview.md#communitiessites) コンテンツを投稿する前に。 したがって、 [コミュニティサイトテンプレート](sites.md)、コミュニティサイトがある [作成日](sites-console.md)には、ログイン機能とユーザープロファイル、メッセージング、検索、モデレート、翻訳が含まれるように設計されています。
 
-コミュニティサイトでは、 [コミュニティグループ機能](functions.md#groups-function) 選択したコミュニティサイトテンプレートに含まれています。
+コミュニティサイトは、次の場合、コミュニティグループを作成するメンバーをサポートします [コミュニティグループ機能](functions.md#groups-function) 選択したコミュニティサイトテンプレートに含まれます。
 
-コミュニティのコンポーネント、機能、機能に関する重要な情報へのリンクを次に示します。
+次に、Communities のコンポーネント、機能、機能に関する基本情報へのリンクを示します。
 
 ## 基本コンポーネント {#base-components}
 
@@ -30,12 +33,12 @@ Adobe Experience Manager(AEM)Communities の機能を使用するには、サイ
    * [「いいね!」の設定](essentials-liking.md)
    * [レーティング](rating-basics.md)
    * [投票](essentials-voting.md)
-   * *投票（利用不可）*
+   * *ポーリング （使用できなくなりました）*
 
-## 関数を持つコンポーネント {#components-with-functions}
+## 関数を含むコンポーネント {#components-with-functions}
 
 * [アクティビティストリーム](essentials-activities.md)
-* [ブログ](blog-developer-basics.md) ( `Journal`)
+* [ブログ](blog-developer-basics.md) （ `Journal`）
 
 * [Calendar](calendar-basics-for-developers.md)
 * [おすすめコンテンツ](essentials-featured.md)
@@ -44,7 +47,7 @@ Adobe Experience Manager(AEM)Communities の機能を使用するには、サイ
 * [グループ](essentials-groups.md)
 * [アイディエーション](ideation.md)
 * [リーダーボード](leaderboard.md)
-* [質問と答え](qna-essentials.md) `(QnA)`
+* [質問と回答](qna-essentials.md) `(QnA)`
 
 ## 機能 {#features}
 
@@ -54,26 +57,26 @@ Adobe Experience Manager(AEM)Communities の機能を使用するには、サイ
 * [コンポーネントのサイドローディング](sideloading.md)
 * [メッセージ](essentials-messaging.md)
 * [リッチテキストエディター](rte.md)
-* [スコアとバッジ](configure-scoring.md)
+* [スコアおよびバッジ](configure-scoring.md)
 * [検索](search-implementation.md)
 * [ソーシャルグラフ](essentials-socialgraph.md)
-* [ストレージリソースプロバイダ](srp-and-ugc.md) `(SRP)`
+* [記憶域リソース プロバイダー](srp-and-ugc.md) `(SRP)`
 
 * [タグ付け](tag.md)
 
 ## Javadocs {#javadocs}
 
-この [オンライン javadoc](../../help/sites-developing/reference-materials.md) AEM 6.3 リリースで使用可能な API を反映しています。
-コミュニティ API は、 `com.adobe.cq.social.*` パッケージ。
+この [オンライン javadocs](../../help/sites-developing/reference-materials.md) AEM 6.3 リリースで使用可能な API を反映します。
+Communities の API は次の場所にあります `com.adobe.cq.social.*` パッケージ。
 
-各 [機能パック](deploy-communities.md#latestfeaturepack)の場合、javadoc jar が使用可能になります。 詳しくは、 [コミュニティでの Maven の使用](maven.md#javadocs).
+それぞれに対して [機能パック](deploy-communities.md#latestfeaturepack)を選択すると、javadoc jar が使用可能になります。 詳しくは、次を参照してください [コミュニティでの Maven の使用](maven.md#javadocs).
 
 ## 追加情報 {#additional-information}
 
-* [ソーシャルコンポーネントフレームワーク (SCF)](scf.md)
+* [ソーシャルコンポーネントフレームワーク（SCF）](scf.md)
 
-   * [クライアント側のカスタマイズ](client-customize.md)
-   * [サーバー側のカスタマイズ](server-customize.md)
+   * [クライアントサイドのカスタマイズ](client-customize.md)
+   * [サーバーサイドのカスタマイズ](server-customize.md)
    * [ストレージリソースプロバイダーの概要](srp.md)
 
 * [コーディングのガイドライン](code-guide.md)

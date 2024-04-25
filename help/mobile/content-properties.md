@@ -6,10 +6,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 23%
+ht-degree: 29%
 
 ---
 
@@ -17,11 +20,11 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-記事、バナー、コレクションは、AEMでは cq:Pages として表されます。
+記事、バナーおよびコレクションは、AEMでは cq:Pages として表されます。
 
-これらは、任意の cq:Page で見つかる共通のプロパティに加えて、Adobe Experience Manager(AEM)Mobile On-Demand サービスのメタデータおよび統合サポートプロパティを表す他のいくつかの共通のプロパティを共有します。
+これらは、Adobe Experience Manager（AEM） Mobile On-Demand Services のメタデータと統合に関するサポートプロパティを表す、以下に示すいくつかのプロパティに加えて、cq:Page で見つかるのと同じ共通プロパティを共有します。
 
 次の表に、コンテンツのプロパティとノードを示します。
 
@@ -29,12 +32,12 @@ ht-degree: 23%
 
 | **プロパティ名** | **タイプ** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | 文字列 |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
+| dps-id | 文字列 |  | AEM Mobileによって割り当てられ、AEM Mobileにアップロードされた後、またはAEM Mobileから読み込まれた後にAEMによって保存されます |
 | dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
-| dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（aem-id の完全な内部にも含まれる） |
-| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/インポート日 |
-| dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最後のアップロード日 |
-| dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロード要求を実行した id ユーザー |
+| dps-version | 文字列 |  | AEM Mobile エンティティのバージョン （完全な aemm-id 内にも含まれる） |
+| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最終同期/ インポート日 |
+| dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最終アップロード日 |
+| dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロードリクエストを実行した id ユーザー |
 
 ## コアメタデータのプロパティ {#core-metadata-properties}
 
@@ -58,7 +61,7 @@ ht-degree: 23%
 | dps-authorURL | 文字列 |  |
 | dps-hideFromBrowsePage | ブーリアン |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
-| **Social** |  |  |
+| **ソーシャル** |  |  |
 | dps-socialShareURL | 文字列 |  |
 | dps-articleText | 文字列 |  |
 | dps-url | 文字列 |  |
@@ -67,7 +70,7 @@ ht-degree: 23%
 
 | **プロパティ名** | **タイプ** | **デフォルト値または期待値** |
 |---|---|---|
-| dps-tapAction |  | 次の TapAction {webLink} |
+| dps-tapAction |  | TapAction from {webLink} |
 | dps-tapActionUrl |  |  |
 
 ### コレクション {#collections}
@@ -95,7 +98,7 @@ ht-degree: 23%
 
 | ノード名 | タイプ | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
-| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
+| ソーシャル共有イメージ |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### バナー {#banners-1}
 

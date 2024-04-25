@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
 solution: Experience Manager, Experience Manager Assets
 feature: Video
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 100%

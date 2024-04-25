@@ -1,14 +1,17 @@
 ---
 title: レンダリングと配信
-description: Sling Default Servlets を使用してAdobe Experience Managerコンテンツをレンダリングし、JSON や他の形式をレンダリングする方法を説明します。
+description: Sling のデフォルトサーブレットを使用してAdobe Experience Manager コンテンツをレンダリングし、JSON およびその他の形式をレンダリングする方法を説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
+solution: Experience Manager
+feature: Mobile
+role: Developer
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '574'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
@@ -16,15 +19,15 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager(AEM) コンテンツは、 [Sling のデフォルトサーブレット](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) レンダリングする [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) およびその他の形式
+Adobe Experience Manager（AEM）コンテンツは、次の方法で簡単にレンダリングできます [Sling のデフォルトサーブレット](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) レンダーするには [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) およびその他の形式。
 
-そのまま使用できるこれらのレンダリングは、通常、リポジトリーを参照し、コンテンツをそのまま返します。
+これらの標準レンダリングは、通常、リポジトリをウォークして、コンテンツをそのまま返します。
 
-AEMは、Sling を介して、レンダリングされたスキーマとコンテンツを完全に制御するカスタム Sling レンダラーの開発とデプロイもサポートしています。
+AEMは、Sling を介して、カスタム sling レンダラーの開発とデプロイをサポートし、レンダリングされたスキーマとコンテンツを完全に制御できます。
 
-Content Services Default Renderers は、標準の Sling Defaults と Custom Development の間のギャップを埋め、開発を行わずにレンダリングされたコンテンツの多くの側面をカスタマイズし、制御できます。
+Content Services のデフォルトレンダラーは、標準の Sling のデフォルトとカスタム開発の間のギャップを埋め、開発なしでレンダリングされたコンテンツの多くの側面をカスタマイズおよび制御できるようにします。
 
 次の図に、コンテンツサービスのレンダリングを示します。
 
@@ -32,21 +35,21 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 ## JSON のリクエスト {#requesting-json}
 
-用途 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** JSON をリクエストする場合。]
+使用方法 **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** JSON をリクエストします。]
 
 <table>
  <tbody>
   <tr>
-   <td>リソース</td>
+   <td>RESOURCE</td>
    <td>/content/entities の下のエンティティリソース<br /> または <br /> /content の下のコンテンツリソース</td>
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG の下にある書き出し設定<br /> <br /> 省略した場合、デフォルトの書き出し設定が適用されます </p> </td>
+   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG にあるエクスポート設定<br /> <br /> 省略すると、デフォルトのエクスポート設定が適用されます </p> </td>
   </tr>
   <tr>
    <td>DEPTH-INT</td>
-   <td><strong>オプション</strong><br /> <br /> Sling レンダリングで使用される子のレンダリングの深さ再帰</td>
+   <td><strong>オプション</strong><br /> <br /> sling レンダリングで使用される子のレンダリングのデプス再帰</td>
   </tr>
  </tbody>
 </table>
@@ -55,9 +58,9 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 書き出し設定を作成して、JSON レンダリングをカスタマイズできます。
 
-設定ノードは、以下に作成できます。 */apps/mobileapps/caas/exportConfigs に置き換えます。*
+以下に設定ノードを作成できます */apps/mobileapps/caas/exportConfigs.*
 
-| ノード名 | 設定の名前（レンダリングセレクター用） |
+| ノード名 | 設定の名前（セレクターをレンダリングする場合） |
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
@@ -68,7 +71,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
   <tr>
    <td><strong>名前</strong></td>
    <td><strong>型</strong></td>
-   <td><strong>デフォルト（設定されていない場合）</strong></td>
+   <td><strong>デフォルト （設定されていない場合）</strong></td>
    <td><strong>値</strong></td>
    <td><strong>説明</strong></td>
   </tr>
@@ -77,63 +80,63 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
    <td>String[]</td>
    <td>すべてを含める</td>
    <td>sling:resourceType</td>
-   <td>JSON 書き出しから sling:resourceType が指定されたノードの詳細を除外</td>
+   <td>json エクスポートから指定された sling:resourceType を持つノードの詳細を除外</td>
   </tr>
   <tr>
-   <td>excludeComponents</td>
+   <td>excludeComponent</td>
    <td>String[]</td>
-   <td>何も除外しない</td>
+   <td>除外なし</td>
    <td>sling:resourceType</td>
-   <td>JSON 書き出しから指定された sling:resourceType を持つノードの詳細のみを含めます</td>
+   <td>json エクスポートから指定された sling:resourceType を持つノードの詳細のみを含める</td>
   </tr>
   <tr>
-   <td>excludePropertyPrefixes</td>
+   <td>excludePropertyPrefix</td>
    <td>String[]</td>
-   <td>何も除外しない</td>
-   <td>プロパティのプレフィックス</td>
-   <td>指定したプレフィックスで始まるプロパティを JSON 書き出しから除外する</td>
+   <td>除外なし</td>
+   <td>プロパティ接頭辞</td>
+   <td>指定したプレフィックスで始まるプロパティを JSON 書き出しから除外します</td>
   </tr>
   <tr>
    <td>excludeProperties</td>
    <td>String[]</td>
-   <td>何も除外しない</td>
+   <td>除外なし</td>
    <td>プロパティ名</td>
-   <td>JSON 書き出しから指定したプロパティを除外</td>
+   <td>指定したプロパティを JSON エクスポートから除外</td>
   </tr>
   <tr>
    <td>includeProperties</td>
    <td>String[]</td>
    <td>すべてを含める</td>
    <td>プロパティ名</td>
-   <td><p>if excludePropertyPrefixes セット<br /> 除外されるプレフィックスと一致するにもかかわらず、指定されたプロパティも含まれます。</p> <p>else （無視されたプロパティを除外）は、これらのプロパティのみを含めます</p> </td>
+   <td><p>excludePropertyPrefix が設定されている場合<br /> これには、除外するプレフィックスに一致しても指定されたプロパティが含まれます。</p> <p>それ以外の場合（除外プロパティは無視）、これらのプロパティのみを含めます</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
    <td>String[]</td>
    <td>すべてを含める</td>
-   <td>子名</td>
-   <td>JSON 書き出しから指定した子を除外</td>
+   <td>子の名前</td>
+   <td>指定した子を JSON エクスポートから除外</td>
   </tr>
   <tr>
-   <td>excludeChildren</td>
+   <td>excludeChild</td>
    <td>String[]<br /> <br /> </td>
-   <td>何も除外しない</td>
-   <td>子名</td>
-   <td>JSON 書き出しから指定された子のみを含め、他の子を除外</td>
+   <td>除外なし</td>
+   <td>子の名前</td>
+   <td>json エクスポートから指定した子のみを含め、その他を除外</td>
   </tr>
   <tr>
    <td>renameProperties</td>
    <td>String[]<br /> <br /> </td>
-   <td>何も変更しない</td>
+   <td>何も名前変更しない</td>
    <td>&lt;actual_property_name&gt;,&lt;replacement_property_name&gt;</td>
-   <td>置換を使用してプロパティを名前変更</td>
+   <td>置換を使用したプロパティ名の変更</td>
   </tr>
  </tbody>
 </table>
 
-### リソースタイプの書き出しの上書き {#resource-type-export-overrides}
+### リソースタイプ書き出しの上書き {#resource-type-export-overrides}
 
-の下に設定ノードを作成します。 */apps/mobileapps/caas/exportConfigs に置き換えます。*
+の下に設定ノードを作成します */apps/mobileapps/caas/exportConfigs.*
 
 | name | resourceTypeOverrides |
 |---|---|
@@ -146,7 +149,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
   <tr>
    <td><strong>名前</strong></td>
    <td><strong>型</strong></td>
-   <td><strong>デフォルト（設定されていない場合）</strong></td>
+   <td><strong>デフォルト （設定されていない場合）</strong></td>
    <td><strong>値</strong></td>
    <td><strong>説明</strong></td>
   </tr>
@@ -155,7 +158,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
    <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>次の Sling リソースタイプの場合は、デフォルトの CaaS JSON 書き出しを返さないでください。<br /> リソースをとしてレンダリングして、顧客の JSON 書き出しを返す。<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
+   <td>次の sling リソースタイプの場合、デフォルトの CaaS json 書き出しを返しません。<br /> リソースをとしてレンダリングして、顧客の JSON 書き出しを返します。<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -164,12 +167,12 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
 
 コンテンツサービスには、次の 2 つの書き出し設定が含まれます。
 
-* デフォルト（設定が指定されていません）
-* ページ（サイトページをレンダリングする）
+* デフォルト （設定が指定されていません）
+* ページ（サイトページをレンダリングする場合）
 
 #### デフォルトの書き出し設定 {#default-export-configuration}
 
-要求された URI で設定が指定されている場合は、Content Services のデフォルトの書き出し設定が適用されます。
+要求された URI に設定が指定されている場合、Content Services のデフォルトの書き出し設定が適用されます。
 
 &lt;resource>.caas[.&lt;depth-int>].json
 
@@ -184,19 +187,19 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
    <td> </td>
   </tr>
   <tr>
-   <td>excludePropertyPrefixes</td>
+   <td>excludePropertyPrefix</td>
    <td>jcr:,sling:,cq:,oak:,pge-</td>
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags,tags<br /> cq:lastModified,lastModified</td>
+   <td>jcr:text、text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags、tags<br /> cq:lastModified、lastModified</td>
   </tr>
   <tr>
    <td>includeComponents</td>
    <td> </td>
   </tr>
   <tr>
-   <td>excludeComponents</td>
+   <td>excludeComponent</td>
    <td> </td>
   </tr>
   <tr>
@@ -204,7 +207,7 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
    <td> </td>
   </tr>
   <tr>
-   <td>excludeChildren</td>
+   <td>excludeChild</td>
    <td> </td>
   </tr>
   <tr>
@@ -214,15 +217,15 @@ Content Services Default Renderers は、標準の Sling Defaults と Custom Dev
  </tbody>
 </table>
 
-#### ページ書き出し設定 {#page-export-configuration}
+#### ページエクスポート設定 {#page-export-configuration}
 
-この設定は、デフォルトを拡張して、子ノードの下にグループ化の子を含めます。
+この設定は、デフォルトを拡張して、子ノードの下に子のグループを含めます。
 
 &lt;site_page>.caas.page[.&lt;depth-int>].json
 
 ### その他のリソース {#additional-resources}
 
-コンテンツサービスのその他のトピックについては、以下のリソースを参照してください。
+コンテンツサービスのその他のトピックについて詳しくは、次のリソースを参照してください。
 
 * [モデルの開発](/help/mobile/administer-mobile-apps.md)
 * [コンテンツサービスのオーサリング](/help/mobile/develop-content-as-a-service.md)

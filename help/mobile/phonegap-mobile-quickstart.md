@@ -1,15 +1,18 @@
 ---
 title: モバイルクイックスタート
-description: このページでは、AEM Verify アプリについて説明します。 AEM Verify アプリを使用すると、iOSや Android のモバイルデバイスでAEMモバイルアプリケーションをすばやく簡単に実行できます。
+description: AEM Verify アプリについては、このページを参照してください。 AEM Verify アプリを使用すると、iOSまたは Android モバイルデバイスでAEM モバイルアプリケーションをすばやく簡単に実行できます。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 exl-id: a7cfe77b-c073-4bed-b81a-503fb4445c96
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 7%
+ht-degree: 31%
 
 ---
 
@@ -17,10 +20,10 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-## AEM Verify App {#aem-verify-app}
+## AEM アプリの検証 {#aem-verify-app}
 
 >[!CAUTION]
 >
->AEM Verify App は非推奨になりました。 アプリがApple AppStore および Android PlayStore から削除されました。
+>AEM Verify アプリは非推奨（廃止予定）となりました。 アプリがApple AppStore および Android PlayStore から削除されました。

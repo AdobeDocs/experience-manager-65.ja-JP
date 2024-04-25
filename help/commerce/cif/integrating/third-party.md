@@ -4,7 +4,9 @@ description: 大規模企業では、ストアフロントを強化するため�
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 96%
@@ -13,7 +15,7 @@ ht-degree: 96%
 
 # コマース統合フレームワークを使用した AEM とサードパーティコマースの統合 {#aem-third-party}
 
-Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを通じて接続されます。
+Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを介して接続されます。
 
 ## アーキテクチャ {#architecture}
 

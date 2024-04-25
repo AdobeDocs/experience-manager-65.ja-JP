@@ -4,7 +4,10 @@ description: SCF での作業を容易にする Handlebars ヘルパーメソッ
 topic-tags: developing
 content-type: reference
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: db0e9d6105484b37e2e21e49bf0f95cef9da2a62
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1445'
 ht-degree: 4%
@@ -13,13 +16,13 @@ ht-degree: 4%
 
 # SCF Handlebars ヘルパー {#scf-handlebars-helpers}
 
-| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ⇒](server-customize.md)** |
+| **[⇐機能の基本事項](essentials.md)** | **[サーバーサイドのカスタマイズ ⇒](server-customize.md)** |
 |---|---|
-|   | **[クライアント側のカスタマイズ⇒](client-customize.md)** |
+|   | **[クライアントサイドのカスタマイズ ⇒](client-customize.md)** |
 
-Handlebars ヘルパー（ヘルパー）は、SCF コンポーネントの操作を容易にするために Handlebars スクリプトから呼び出すメソッドです。
+Handlebars ヘルパー（ヘルパー）は、SCF コンポーネントの操作を容易にするために Handlebars スクリプトから呼び出すことができるメソッドです。
 
-この実装には、クライアント側とサーバー側の定義が含まれます。 開発者がカスタムヘルパーを作成することもできます。
+この実装には、クライアントサイドとサーバーサイドの定義が含まれています。 また、開発者がカスタムヘルパーを作成することもできます。
 
 AEM Communitiesで提供されるカスタム SCF ヘルパーは、 [クライアントライブラリ](../../help/sites-developing/clientlibs.md):
 
@@ -27,15 +30,15 @@ AEM Communitiesで提供されるカスタム SCF ヘルパーは、 [クライ�
 
 >[!NOTE]
 >
->必ず [最新のコミュニティ機能パック](deploy-communities.md#latestfeaturepack).
+>をインストールしてください [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack).
 
 ## 短縮 {#abbreviate}
 
-maxWords および maxLength プロパティに準拠した省略文字列を返すヘルパーです。
+maxWords および maxLength プロパティに準拠した、略語の文字列を返すヘルパー。
 
-省略する文字列は、コンテキストとして提供されます。 コンテキストを指定しない場合、空の文字列が返されます。
+短縮する文字列はコンテキストとして提供されます。 コンテキストが指定されていない場合は、空の文字列が返されます。
 
-最初に、コンテキストが maxLength にトリミングされ、次に、コンテキストが単語に切り離され、maxWords に縮小されます。
+最初に、コンテキストが maxLength までトリミングされ、次にコンテキストが単語に分割されて maxWords に縮小されます。
 
 safeString が true に設定されている場合、返される文字列は SafeString です。
 
@@ -43,19 +46,19 @@ safeString が true に設定されている場合、返される文字列は Sa
 
 * **context**：文字列
 
-  （オプション）デフォルトは空の文字列です。
+  （オプション）デフォルトは空の文字列です
 
 * **maxLength**：数値
 
-  （オプション）デフォルトはコンテキストの長さです。
+  （オプション）デフォルトは、コンテキストの長さです。
 
-* **maxWords**：数値
+* **maxWord**：数値
 
-  （オプション）デフォルトは、トリミングされた文字列内の単語数です。
+  （オプション）デフォルトは、トリミングされた文字列の単語数です。
 
-* **safeString**：ブール値
+* **safeString**: ブール値
 
-  （オプション）true の場合、Handlebars.SafeString() を返します。 デフォルトは false です。
+  （オプション） true の場合、Handlebars.SafeString （）を返します。 デフォルトは false です。
 
 ### 例 {#examples}
 
@@ -85,7 +88,7 @@ Then abbreviate would return
 
 ## Content-loadmore {#content-loadmore}
 
-div の下に 2 つのスパンを追加するヘルパーです。1 つは全文用、もう 1 つは短い文字用で、もう 1 つは 2 つのビューを切り替える機能です。
+div の下に 2 つのスパンを追加するヘルパー。1 つはフルテキスト用、もう 1 つは less テキスト用で、2 つのビューを切り替える機能があります。
 
 ### パラメーター {#parameters-1}
 
@@ -95,19 +98,19 @@ div の下に 2 つのスパンを追加するヘルパーです。1 つは全�
 
 * **numChars**：数値
 
-  （オプション）全文を表示しない場合に表示する文字数。 初期設定は 100 です。
+  （任意）フルテキストを表示しない場合に表示する文字数。 初期設定は 100 です。
 
 * **moreText**：文字列
 
-  （オプション）表示するテキストが増えたことを示す、表示するテキストです。 デフォルトは&quot;more&quot;です。
+  （オプション）表示するテキストが他にもあることを示す、表示するテキスト。 デフォルトは「その他」です。
 
 * **ellipsesText**：文字列
 
-  （オプション）非表示のテキストがあることを示す、表示するテキストです。 初期設定は「。..」です。
+  （任意）非表示のテキストがあることを示すために表示するテキストです。 デフォルトは「。..」です。
 
-* **safeString**：ブール値
+* **safeString**: ブール値
 
-  （オプション）結果を返す前に Handlebars.SafeString() を適用するかどうかを示すブール値。 デフォルトは false です。
+  （任意）結果を返す前に Handlebars.SafeString （）を適用するかどうかを示すブール値。 デフォルトは false です。
 
 ### 例 {#example}
 
@@ -125,17 +128,17 @@ Then content-loadmore would return
 
 ## DateUtil {#dateutil}
 
-書式設定された日付文字列を返すヘルパーです。
+書式設定された日付文字列を返すヘルパー。
 
 ### パラメーター {#parameters-2}
 
 * **context**：数値
 
-  （オプション）1970 年 1 月 1 日（エポック）からのミリ秒のオフセット値。 初期設定は現在の日付です。
+  （任意） 1970 年 1 月 1 日（エポック）からオフセットされたミリ秒値。 デフォルトは現在の日付です。
 
 * **形式**：文字列
 
-  （オプション）適用する日付フォーマット。 デフォルトは&quot;`YYYY-MM-DDTHH:mm:ss.sssZ`」と表示され、結果は「`2015-03-18T18:17:13-07:00`&quot;
+  （任意）適用する日付形式。 デフォルトは`YYYY-MM-DDTHH:mm:ss.sssZ`」に設定すると、結果は「」と表示されます`2015-03-18T18:17:13-07:00`“
 
 ### 例 {#examples-1}
 
@@ -151,9 +154,9 @@ Then content-loadmore would return
 // returns "03-18-2015"
 ```
 
-## 次と等しい {#equals}
+## 次に等しい {#equals}
 
-等価条件に応じてコンテンツを返すためのヘルパーです。
+等値条件に応じてコンテンツを返すヘルパー。
 
 ### パラメーター {#parameters-3}
 
@@ -177,17 +180,17 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-の現在の値をテストするブロックヘルパー [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) を、文字列区切りのモードのリストに対して呼び出します。
+現在の値をテストするブロックヘルパー [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) モードの文字列区切りリストに対して実行します。
 
 ### パラメーター {#parameters-4}
 
 * **context**：文字列
 
-  （オプション）翻訳する文字列です。 デフォルトを指定しない場合は必須です。
+  （オプション）翻訳する文字列。 デフォルト値が指定されていない場合は必須です。
 
-* **mode**：文字列
+* **モード**：文字列
 
-  （オプション） [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) をテストします。
+  （オプション）のコンマ区切りリスト [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) 設定されている場合にテストします。
 
 ### 例 {#example-2}
 
@@ -203,17 +206,17 @@ Then content-loadmore would return
 
 このヘルパーは、Handlebars ヘルパー「i18n」を上書きします。
 
-関連トピック [JavaScript コードの文字列の国際化](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code).
+関連トピック [JavaScript コードでの文字列の国際化](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code).
 
 ### パラメーター {#parameters-5}
 
 * **context**：文字列
 
-  （オプション）翻訳する文字列です。 デフォルトを指定しない場合は必須です。
+  （オプション）翻訳する文字列。 デフォルト値が指定されていない場合は必須です。
 
-* **デフォルト**：文字列
+* **default**：文字列
 
-  （オプション）翻訳するデフォルトの文字列です。 コンテキストを指定しない場合は必須です。
+  （任意）翻訳するデフォルトの文字列。 コンテキストが指定されていない場合は必須です。
 
 * **コメント**：文字列
 
@@ -228,39 +231,39 @@ Then content-loadmore would return
 
 ## 包含 {#include}
 
-コンポーネントをテンプレート内の既存のリソース以外として含めるためのヘルパーです。
+コンポーネントを存在しないリソースとしてテンプレートに含めるためのヘルパー。
 
-このメソッドを使用すると、リソースを JCR ノードとして追加した場合よりも簡単に、プログラムによって容易にカスタマイズできます。 詳しくは、 [コミュニティコンポーネントを追加または含める](scf.md#add-or-include-a-communities-component).
+このメソッドを使用すると、JCR ノードとして追加されたリソースの場合よりも、プログラムによるリソースのカスタマイズが容易になります。 参照： [コミュニティコンポーネントを追加または含める](scf.md#add-or-include-a-communities-component).
 
-含めることができるコミュニティコンポーネントは、一部のみです。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
+組み込むことができる Communities コンポーネントは一部のみです。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
-このヘルパーは、サーバー側にのみ適用され、次のような機能を提供します。 [cq:include](../../help/sites-developing/taglib.md) （JSP スクリプト用）
+このヘルパーは、サーバーサイドでのみ使用でき、に類似した機能を提供します [cq:include](../../help/sites-developing/taglib.md) （JSP スクリプト用）。
 
 ### パラメーター {#parameters-6}
 
-* **context**：文字列またはオブジェクト。
+* **context**：文字列またはオブジェクト
 
   （相対パスを指定しない場合はオプション）
 
-  用途 `this` 現在のコンテキストを渡す。
+  使用方法 `this` 現在のコンテキストを渡します。
 
-  用途 `this.id` 資源を得る `id` リクエストされた resourceType をレンダリングするために使用します。
+  使用方法 `this.id` でリソースを取得します `id` リクエストされた resourceType のレンダリング用。
 
 * **resourceType**：文字列
 
-  （オプション）リソースタイプのデフォルトは、コンテキストからのリソースタイプです。
+  （オプション）リソースタイプのデフォルトは、コンテキストのリソースタイプです。
 
-* **テンプレート**：文字列
+* **template**：文字列
 
-  コンポーネントスクリプトのパス。
+  コンポーネントスクリプトへのパス。
 
 * **パス**：文字列
 
-  （必須）リソースへのパス。 path が相対パスの場合は、コンテキストを指定する必要があります。そうでない場合は、空の文字列が返されます。
+  （必須） リソースへのパス。 パスが相対パスの場合は、コンテキストを指定する必要があります。指定しない場合は、空の文字列が返されます。
 
-* **authoringDisabled**：ブール値
+* **authoringDisabled**: ブール値
 
-  （オプション）デフォルトは false です。 内部でのみ使用します。
+  （オプション）デフォルトは false です。 内部のみで使用します。
 
 ### 例 {#example-4}
 
@@ -268,31 +271,31 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-次の場所に新しいコメントコンポーネントが含まれます： `this.id` + /comments を追加します。
+に新しいコメントコンポーネントが含まれます `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-AEM HTML クライアントライブラリを含むヘルパーです。js、css、theme の各ライブラリを指定できます。 js や css など、異なるタイプの複数のインクルージョンの場合、このタグは Handlebars スクリプトで複数回使用する必要があります。
+AEM html クライアントライブラリ（js、css または theme の各ライブラリ）を含むヘルパー。 異なるタイプ（例：js と css）の複数のインクルードがある場合は、Handlebars スクリプトでこのタグを複数回使用する必要があります。
 
-このヘルパーは、サーバー側にのみ適用され、次のような機能を提供します。 [ui:includeClientLib](../../help/sites-developing/taglib.md) （JSP スクリプト用）
+このヘルパーは、サーバーサイドでのみ使用でき、に類似した機能を提供します [ui:includeClientLib](../../help/sites-developing/taglib.md) （JSP スクリプト用）。
 
 ### パラメーター {#parameters-7}
 
 * **カテゴリ**：文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての JavaScript ライブラリと CSS ライブラリを含めます。 テーマ名はリクエストから抽出されます。
+  （オプション）クライアントライブラリのカテゴリのコンマ区切りのリスト。 指定されたカテゴリのすべての JavaScript ライブラリと CSS ライブラリを含めます。 テーマ名はリクエストから抽出されます。
 
 * **テーマ**：文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定したカテゴリのすべてのテーマ関連ライブラリ（CSS と JS の両方）を含めます。 テーマ名はリクエストから抽出されます。
+  （オプション）クライアントライブラリのカテゴリのコンマ区切りのリスト。 指定されたカテゴリに対して、すべてのテーマ関連ライブラリ（CSS と JS の両方）を含めます。 テーマ名はリクエストから抽出されます。
 
 * **js**：文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての JavaScript ライブラリを含めます。
+  （オプション）クライアントライブラリのカテゴリのコンマ区切りのリスト。 指定されたカテゴリのすべての JavaScript ライブラリが含まれます。
 
 * **css**：文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての CSS ライブラリを含めます。
+  （オプション）クライアントライブラリのカテゴリのコンマ区切りのリスト。 指定されたカテゴリのすべての CSS ライブラリが含まれます。
 
 ### 例 {#examples-2}
 
@@ -334,9 +337,9 @@ AEM HTML クライアントライブラリを含むヘルパーです。js、css
     <link href="/etc/clientlibs/social/hbs/comments.css" rel="stylesheet" type="text/css">
 ```
 
-## Pretty-time {#pretty-time}
+## プリティタイム {#pretty-time}
 
-カットオフポイントに経過した時間を表示するヘルパーです。その後、通常の日付形式が表示されます。
+カットオフポイントまでの時間を表示するヘルパー。この時間を超えると、通常の日付形式が表示されます。
 
 次に例を示します。
 
@@ -347,9 +350,9 @@ AEM HTML クライアントライブラリを含むヘルパーです。js、css
 
 * **context**：数値
 
-  「今」と比較する過去の時間。 時間は、1970 年 1 月 1 日（エポック）からのミリ秒の値オフセットで表されます。
+  過去の時間を「現在」と比較します。 時間は、1970 年 1 月 1 日（エポック）からオフセットされたミリ秒単位の値で表されます。
 
-* **daysCutofof**：数値
+* **daysCutoff**：数値
 
   実際の日付に切り替えるまでの日数。 初期設定は 60 です。
 
@@ -371,13 +374,13 @@ Depending on how long in the past, may return
 
 ## Xss-html {#xss-html}
 
-XSS に対する保護に役立つ、HTML要素コンテンツのソース文字列をエンコードするヘルパーです。
+XSS から保護するために、HTML要素コンテンツのソース文字列をエンコードするヘルパー。
 
-注意：このヘルパーはバリデーターではなく、属性値の書き込みには使用されません。
+メモ：このヘルパーはバリデーターではないため、属性値の書き込みに使用しないでください。
 
 ### パラメーター {#parameters-9}
 
-* **context**：オブジェクト
+* **context**: オブジェクト
 
   エンコードするHTML。
 
@@ -389,13 +392,13 @@ XSS に対する保護に役立つ、HTML要素コンテンツのソース文字
 
 ## Xss-htmlAttr {#xss-htmlattr}
 
-XSS に対する保護に役立つ、HTML属性値に書き込むためのソース文字列をエンコードするヘルパーです。
+XSS を防ぐために、HTML属性値に書き込むためのソース文字列をエンコードするヘルパー。
 
-注意：このヘルパーはバリデーターではなく、アクションにつながる属性（href、src、イベントハンドラー）を記述する際に使用することはできません。
+メモ：このヘルパーはバリデーターではないため、アクションにつながる属性（href、src、イベントハンドラー）の記述には使用しないでください。
 
 ### パラメーター {#parameters-10}
 
-* **context**：オブジェクト
+* **context**: オブジェクト
 
   エンコードするHTML。
 
@@ -407,13 +410,13 @@ XSS に対する保護に役立つ、HTML属性値に書き込むためのソー
 
 ## Xss-jsString {#xss-jsstring}
 
-XSS に対する保護に役立つ、JavaScript の文字列コンテンツに書き込むためのソース文字列をエンコードするヘルパーです。
+XSS から保護するために、JavaScript 文字列コンテンツへの書き込み用のソース文字列をエンコードするヘルパー。
 
-注意：このヘルパーは、バリデーターではなく、任意の JavaScript に書き込むために使用することはできません。
+メモ：このヘルパーはバリデーターではないため、任意の JavaScript への書き込みに使用しないでください。
 
 ### パラメーター {#parameters-11}
 
-* **context**：オブジェクト
+* **context**: オブジェクト
 
   エンコードするHTML。
 
@@ -425,13 +428,13 @@ var input = {{xss-jsString topic-title}}
 
 ## Xss-validHref {#xss-validhref}
 
-XSS に対する保護に役立つ、HTMLhref または srce 属性値として書き込むための URL の不要部分を削除するヘルパーです。
+XSS から保護するために、HTML href または srce 属性値として書き込む URL の非表示情報をすべて削除するヘルパー。
 
-注意：このヘルパーは、空の文字列を返す場合があります。
+メモ：このヘルパーは、空の文字列を返す場合があります。
 
 ### パラメーター {#parameters-12}
 
-* **context**：オブジェクト
+* **context**: オブジェクト
 
   不要部分を削除する URL。
 
@@ -443,26 +446,26 @@ XSS に対する保護に役立つ、HTMLhref または srce 属性値として�
 
 ## Handlebars.js の基本概要 {#handlebars-js-basic-overview}
 
-* Handlebars ヘルパー呼び出しは、単純な識別子 ( *名前* （ヘルパーの）の後に、0 個以上のスペースで区切られたパラメーターが続きます。
-* パラメーターには、単純な文字列、数値、ブール値、JSON オブジェクトを指定でき、最後のパラメーターとしてキーと値のペア（ハッシュ引数）のオプションのシーケンスを指定できます。
-* ハッシュ引数のキーは、単純な識別子である必要があります。
-* ハッシュ引数の値は、単純な識別子、パス、または文字列の Handlebars 式です。
-* 現在のコンテキスト `this`は、常に Handlebars ヘルパーで使用できます。
-* コンテキストは、文字列、数値、ブール値、JSON データオブジェクトのいずれかです。
-* 現在のコンテキスト内にネストされたオブジェクトを、次のようなコンテキストとして渡すことができます。 `this.url` または `this.id` （単純なヘルパーとブロックヘルパーの次の例を参照）。
+* Handlebars ヘルパー呼び出しは、単純な識別子（ *名前* （ヘルパー）。その後に 0 個以上のスペース区切りパラメーターが続きます。
+* パラメーターは、単純な文字列、数値、ブール値、JSON オブジェクトのほか、オプションでキーと値のペアのシーケンス（ハッシュ引数）を最後のパラメーターとすることができます。
+* ハッシュ引数のキーは、単純な識別子にする必要があります。
+* ハッシュ引数の値は Handlebars 式（単純な識別子、パス、文字列）です。
+* カレント コンテキスト、 `this`、は、Handlebars ヘルパーで常に使用できます。
+* コンテキストには、文字列、数値、ブール値、JSON データオブジェクトを使用できます。
+* 現在のコンテキスト内にネストされたオブジェクトをコンテキストとして渡すことができます。例えば、次のようなものがあります `this.url` または `this.id` （以下のシンプルヘルパーとブロックヘルパーの例を参照してください）。
 
-* ブロックヘルパーは、テンプレート内の任意の場所から呼び出すことができる関数です。 毎回、異なるコンテキストで、0 回以上テンプレートのブロックを呼び出すことができます。 次の間のコンテキストを含みます。 `{{#*name*}}` および `{{/*name*}}`.
+* ブロックヘルパーは、テンプレートのどこからでも呼び出すことができる関数です。 テンプレートのブロックを、異なるコンテキストで 0 回以上呼び出すことができます。 間のコンテキストが含まれます `{{#*name*}}` および `{{/*name*}}`.
 
-* Handlebars は、「options」という名前のヘルパーに対して最終的なパラメータを提供します。 特別なオブジェクト「options」が次を含みます
+* Handlebars は、「options」という名前のヘルパーに最終的なパラメーターを提供します。 特殊オブジェクト「options」には次が含まれます
 
-   * オプションのプライベートデータ (options.data)
-   * 呼び出しからのオプションのキーと値のプロパティ (options.hash)
-   * 自身を呼び出す機能 (options.fn())
-   * 逆関数を呼び出す機能 (options.inverse())
+   * オプションの非公開データ（options.data）
+   * 呼び出しのオプションのキー値プロパティ（options.hash）
+   * 自身を呼び出す機能（options.fn （））
+   * 自身の逆を呼び出す機能（options.inverse （））
 
-* ヘルパーから返されるHTMLー文字列のコンテンツは、SafeString にすることをお勧めします。
+* ヘルパーから返されるHTML文字列コンテンツは、SafeString にすることをお勧めします。
 
-### Handlebars.js ドキュメントの単純なヘルパーの例を次に示します。 {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.js ドキュメントのシンプルなヘルパーの例： {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -482,13 +485,13 @@ var template = Handlebars.compile(source);
 template(context);
 ```
 
-レンダリング：
+次をレンダリングします。
 
 &lt;ul>
-&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>投稿！&lt;/a>&lt;/li>
+&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>ポスト！&lt;/a>&lt;/li>
 &lt;/ul>
 
-### Handlebars.js ドキュメントのブロックヘルパーの例を次に示します。 {#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.js ドキュメントのブロックヘルパーの例： {#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
@@ -508,19 +511,19 @@ var template = Handlebars.compile(source);
 template(data);
 ```
 
-レンダリング：
+次をレンダリングします。
 &lt;ul>
 &lt;li>&lt;a href=&quot;/people/1&quot;>Alan&lt;/a>&lt;/li>
-&lt;li>&lt;a href=&quot;/people/2&quot;>イェフダ&lt;/a>&lt;/li>
+&lt;li>&lt;a href=&quot;/people/2&quot;>エフダ&lt;/a>&lt;/li>
 &lt;/ul>
 
 ## カスタム SCF ヘルパー {#custom-scf-helpers}
 
-カスタムヘルパーは、特にデータを渡す際に、サーバー側とクライアント側に実装する必要があります。 SCF の場合、ページが要求されたときにサーバーが特定のコンポーネントのHTMLを生成するので、ほとんどのテンプレートはサーバー側でコンパイルおよびレンダリングされます。
+カスタムヘルパーは、サーバーサイドとクライアントサイドで実装する必要があります（特に、データを渡す場合）。 SCF では、ページが要求されると、サーバーが特定のコンポーネントのHTMLを生成するので、ほとんどのテンプレートがサーバーサイドでコンパイルおよびレンダリングされます。
 
-### サーバー側カスタムヘルパー {#server-side-custom-helpers}
+### サーバーサイドのカスタムヘルパー {#server-side-custom-helpers}
 
-サーバー側でカスタム SCF ヘルパーを実装して登録するには、Java™インターフェイスを実装するだけです [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)、作成する [OSGi サービス](../../help/sites-developing/the-basics.md#osgi) OSGi バンドルの一部としてインストールします。
+サーバー側でカスタム SCF ヘルパーを実装して登録するには、Java™ インターフェイスを実装するだけです [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)、を作成 [OSGi サービス](../../help/sites-developing/the-basics.md#osgi) OSGi バンドルの一部としてインストールします。
 
 次に例を示します。
 
@@ -562,13 +565,13 @@ public class FooTextHelper implements TemplateHelper<String>{
 
 >[!NOTE]
 >
->サーバー側用に作成されたヘルパーも、クライアント側用に作成する必要があります。
+>サーバーサイド用に作成したヘルパーは、クライアントサイドにも作成する必要があります。
 >
->コンポーネントは、ログインしたユーザーのクライアント側で再レンダリングされ、クライアント側ヘルパーが見つからない場合は、コンポーネントが消えます。
+>このコンポーネントは、ログインしたユーザーに対してクライアントサイドで再レンダリングされます。クライアントサイドのヘルパーが見つからない場合、このコンポーネントは表示されなくなります。
 
-### クライアント側カスタムヘルパー {#client-side-custom-helpers}
+### クライアントサイドのカスタムヘルパー {#client-side-custom-helpers}
 
-クライアント側ヘルパーは、呼び出しによって登録される Handlebars スクリプトです `Handlebars.registerHelper()`.
+クライアントサイドヘルパーは、の呼び出しで登録された Handlebars スクリプトです `Handlebars.registerHelper()`.
 次に例を示します。
 
 ### custom-helpers.js {#custom-helpers-js}
@@ -586,15 +589,15 @@ function(Handlebars, SCF, $CQ) {
 })(Handlebars, SCF, $CQ);
 ```
 
-カスタムのクライアント側ヘルパーは、カスタムのクライアントライブラリに追加する必要があります。
-clientlib は以下を実行する必要があります。
+カスタムクライアントサイドヘルパーは、カスタムクライアントライブラリに追加する必要があります。
+クライアントライブラリには次の条件があります。
 
-* 依存関係を含める `cq.social.scf`.
-* Handlebars が読み込まれた後に読み込みます。
-* Be [含む](clientlibs.md).
+* ～への依存を含める `cq.social.scf`.
+* Handlebars の読み込み後に読み込みます。
+* 可能 [included](clientlibs.md).
 
-注意： SCF ヘルパーは、 `/etc/clientlibs/social/commons/scf/helpers.js`.
+注記：SCF ヘルパーは以下で定義します。 `/etc/clientlibs/social/commons/scf/helpers.js`.
 
-| **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ⇒](server-customize.md)** |
+| **[⇐機能の基本事項](essentials.md)** | **[サーバーサイドのカスタマイズ ⇒](server-customize.md)** |
 |---|---|
-|   | **[クライアント側のカスタマイズ⇒](client-customize.md)** |
+|   | **[クライアントサイドのカスタマイズ ⇒](client-customize.md)** |

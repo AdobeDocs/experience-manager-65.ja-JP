@@ -3,7 +3,9 @@ title: AEM CIF Classic
 description: Adobe Experience Manager CIF Classic に関するセルフヘルプリソースおよびドキュメントリンク。
 exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%

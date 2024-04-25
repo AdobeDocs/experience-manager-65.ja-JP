@@ -3,7 +3,9 @@ title: AEM Content and Commerce リリースノート 2024
 description: Adobe Experience Manager Content and Commerce リリースノート 2024
 exl-id: 372e6a46-72bb-4db4-ad01-534ca723ae58
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 84%
@@ -30,4 +32,4 @@ ht-degree: 84%
 
 ### バグ修正 {#bug-fixes-january}
 
-* 製品コレクションコンポーネントの買い物かごへの追加ボタンとウィッシュリストへの追加ボタンを修正しました。
+* 製品収集コンポーネントの「買い物かごに追加」ボタンと「ウィッシュリストに追加」ボタンを修正しました

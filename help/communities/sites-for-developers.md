@@ -1,14 +1,17 @@
 ---
 title: コミュニティサイトの基本事項
-description: コミュニティサイトの書き出しと削除、およびカスタムサイトテンプレートの作成
+description: コミュニティサイトの書き出しと削除およびカスタムサイトテンプレートの作成
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '488'
 ht-degree: 3%
 
 ---
@@ -17,14 +20,14 @@ ht-degree: 3%
 
 ## カスタムサイトテンプレート {#custom-site-template}
 
-カスタムサイトテンプレートは、コミュニティサイトの各言語コピーに対して個別に指定できます。
+カスタムサイトテンプレートは、コミュニティサイトの言語コピーごとに個別に指定できます。
 
 この作業を行うには、以下の手順を実行します。
 
 * カスタムテンプレートを作成します。
-* 既定のサイトテンプレートパスをオーバーレイします。
+* デフォルトのサイトテンプレートパスをオーバーレイします。
 * オーバーレイパスにカスタムテンプレートを追加します。
-* カスタムテンプレートを指定するには、 `page-template` プロパティを `configuration` ノード。
+* を追加して、カスタムテンプレートを指定します。 `page-template` プロパティを `configuration` ノード。
 
 **デフォルトのテンプレート**:
 
@@ -34,9 +37,9 @@ ht-degree: 3%
 
 `/apps/social/console/components/hbs/sitepage/template-name.hbs`
 
-**プロパティ**:page-template
+**プロパティ**: ページテンプレート
 
-**タイプ**:文字列
+**タイプ**：文字列
 
 **値**: `template-name` （拡張子なし）
 
@@ -48,84 +51,84 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->オーバーレイされたパス内のすべてのノードは、タイプのみである必要があります `Folder`.
+>オーバーレイパス内のすべてのノードは、型である必要があります `Folder`.
 
 >[!CAUTION]
 >
->カスタムテンプレートに *sitepage.hbs*&#x200B;に設定すると、すべてのコミュニティサイトがカスタマイズされます。
+>カスタムテンプレートに名前が付けられている場合 *sitepage.hbs*&#x200B;を選択すると、すべてのコミュニティサイトがカスタマイズされます。
 
 ### カスタムサイトテンプレートの例 {#custom-site-template-example}
 
-例えば、 `vertical-sitepage.hbs` は、バナーの下に水平方向ではなく、ページの左側から垂直方向にメニューリンクを配置するサイトテンプレートです。
+例えば、 `vertical-sitepage.hbs` は、ページの左側に、バナーの下に水平方向ではなく垂直方向にメニューリンクを配置するサイトテンプレートです。
 
-[ダウンロード](assets/vertical-sitepage.hbs)
-オーバーレイフォルダーにカスタムサイトテンプレートを配置します。
+[ファイルを入手](assets/vertical-sitepage.hbs)
+カスタムサイトテンプレートをオーバーレイフォルダーに配置します。
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
-カスタムテンプレートを指定するには、 `page-template` プロパティを設定ノードに設定します。
+を追加してカスタムテンプレートを識別 `page-template` 設定ノードのプロパティ：
 
 `/content/sites/sample/en/configuration`
 
 ![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
-必ず **すべて保存** すべてのAdobe Experience Manager(AEM) インスタンスにカスタムコードをレプリケートします（コミュニティサイトコンテンツをコンソールから公開する際に、カスタムコードは含まれません）。
+必ずしてください **すべて保存** すべてのAdobe Experience Manager（AEM）インスタンスにカスタムコードを複製します（コミュニティサイトのコンテンツがコンソールから公開される場合、カスタムコードは含まれません）。
 
-カスタムコードをレプリケートする場合の推奨方法は、次のとおりです。 [パッケージの作成](../../help/sites-administering/package-manager.md#creating-a-new-package) すべてのインスタンスにデプロイします。
+カスタムコードをレプリケートする場合は、次の方法をお勧めします。 [パッケージを作成](../../help/sites-administering/package-manager.md#creating-a-new-package) すべてのインスタンスにデプロイします。
 
-## コミュニティサイトを書き出す {#exporting-a-community-site}
+## コミュニティサイトのエクスポート {#exporting-a-community-site}
 
-コミュニティサイトを作成したら、そのサイトをパッケージマネージャーに保存されたAEMパッケージとして書き出し、ダウンロードおよびアップロードできます。
+コミュニティサイトを作成したら、パッケージマネージャーに格納され、ダウンロードとアップロードに使用できるAEM パッケージとしてサイトをエクスポートできます。
 
-これは、 [コミュニティサイトコンソール](sites-console.md#exporting-the-site).
+これは、次から利用できます [コミュニティサイトコンソール](sites-console.md#exporting-the-site).
 
-UGC とカスタムコードはコミュニティサイトパッケージに含まれていません。
+UGC とカスタムコードは、コミュニティサイトパッケージには含まれていません。
 
-UGC を書き出すには、 [AEM Communities UGC 移行ツール](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration):GitHub で利用可能なオープンソース移行ツールです。
+UGC を書き出すには、 [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration):GitHub で利用可能なオープンソース移行ツールです。
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities 6.3 Service Pack 1 以降、次の場所からコミュニティサイトにカーソルを合わせると、「サイトを削除」アイコンが表示されます。 **[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]** コンソール。 開発時にコミュニティサイトを削除して新規に開始したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次の項目が削除されます。
+現在のAEM Communities 6.3 Service Pack 1 では、コミュニティサイトの上にカーソルを置くと、「サイトを削除」アイコンが表示されます。 **[!UICONTROL コミュニティ]** > **[!UICONTROL Sites]** コンソール。 開発時にコミュニティサイトを削除して新しく開始する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次の項目が削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
 * [データベースレコード](#database-records)
 
-### コミュニティの一意のサイト ID {#community-unique-site-id}
+### コミュニティユニークサイト ID {#community-unique-site-id}
 
-CRXDE を使用して、コミュニティサイトに関連付けられた一意のサイト ID を識別するには、次の手順を実行します。
+CRXDE を使用して、コミュニティサイトに関連付けられている一意のサイト ID を識別するには：
 
-* サイトの言語ルート（例： ）に移動します。 `/content/sites/*<site name>*/en/rep:policy`.
+* 次のようなサイトの言語ルートに移動します `/content/sites/*<site name>*/en/rep:policy`.
 
-* 次を検索： `allow<#>` ノード `rep:principalName` この形式で `rep:principalName = *community-enable-nrh9h-members*`.
+* の検索 `allow<#>` を持つノード `rep:principalName` 次の形式で `rep:principalName = *community-enable-nrh9h-members*`.
 
-* サイト ID は、 `rep:principalName`
+* サイト ID は、の 3 番目のコンポーネントです。 `rep:principalName`
 
   例えば、 `rep:principalName = community-enable-nrh9h-members`
 
-   * **サイト名** = *有効*
+   * **サイト名** = *enable*
    * **サイト ID** = *nrh9h*
-   * **一意のサイト ID** = *enable-nrh9h*
+   * **ユニークサイト ID** = *enable-nrh9h*
 
-### ユーザー生成コンテンツ {#user-generated-content}
+### ユーザー作成コンテンツ {#user-generated-content}
 
 GitHub から communities-srp-tools プロジェクトを取得します。
 
 * [https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
-SRP からすべての UGC を削除するサーブレットが含まれます。
+これには、任意の SRP からすべての UGC を削除するサーブレットが含まれています。
 
-すべての UGC は、次のように、特定のサイトで削除できます。
+すべての UGC は、例えば、次のような特定のサイトに対して削除することができます。
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-これにより、ユーザー生成コンテンツ（パブリッシュ時に入力）が削除されるだけでなく、オーサリングコンテンツ（オーサー時に入力）は削除されません。 したがって [シャドウノード](srp.md#shadownodes) は影響を受けません。
+これにより、ユーザー作成コンテンツ（公開時に入力）のみが削除され、作成したコンテンツ（作成者に入力）は削除されません。 したがって、 [シャドウ ノード](srp.md#shadownodes) 影響を受けません。
 
 ### コミュニティユーザーグループ {#community-user-groups}
 
-すべてのオーサーインスタンスとパブリッシュインスタンスで、 [セキュリティコンソール](../../help/sites-administering/security.md)、を検索して削除する [ユーザーグループ](users.md) 次のようになります。
+すべてのオーサーインスタンスとパブリッシュインスタンスで、次から [セキュリティコンソール](../../help/sites-administering/security.md)を見つけて、削除します。 [ユーザーグループ](users.md) 次のとおりです。
 
-* プレフィックス `community`
+* プレフィックスが「」の場合 `community`
 * 続いて [一意のサイト id](#community-unique-site-id)
 
-例：`community-engage-x0e11-members`
+例えば、`community-engage-x0e11-members` のように指定します。

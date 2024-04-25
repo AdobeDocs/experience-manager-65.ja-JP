@@ -1,59 +1,62 @@
 ---
 title: プリフライトによるプレビュー
-description: アクセス権のあるすべてのプロジェクトを表示できるように Mobile On-Demand Preflight アプリを使用する方法を説明します。
+description: アクセス権のあるすべてのプロジェクトを表示できるように、モバイルオンデマンドのプリフライトアプリを使用する方法を説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 7%
+ht-degree: 14%
 
 ---
 
 # プリフライトによるプレビュー {#previewing-with-preflight}
 
-このページでは、プリフライトアプリによるプレビューについて説明します。
+ここでは、Preflight アプリを使用したプレビューについて説明します。
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-アプリケーション全体に対して、以下のアクションが実行されます。
+アプリケーション全体で次のアクションが実行されます。
 
-Mobile On-Demand プリフライトアプリを使用すると、アクセス権のあるすべてのプロジェクトを表示できます。 プロジェクトを選択すると、ページや記事の参照を含むアプリのコンテンツをプレビューして、様々なデバイスでのアプリの外観やパフォーマンスを把握できます。
+Mobile On-Demand Preflight アプリを使用すると、アクセス権のあるすべてのプロジェクトを表示できます。 プロジェクトを選択すると、ページや記事の参照など、アプリのコンテンツをプレビューし、様々なデバイスでのアプリの外観やパフォーマンスを把握できます。
 
 >[!NOTE]
 >
->プリフライトアプリは、本質的には PhoneGap Enterprise ビューアに似ています。
+>Preflight アプリは、本質的に PhoneGap エンタープライズビューアに似ています。
 
 ## プリフライトによるプレビュー {#previewing-with-preflight-1}
 
-1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
-1. 省略記号 (...) **記事を管理** （またはバナー/コレクション）タイル。
-1. 選択 **プリフライト** をクリックします。
-1. クリック **プリフライトを有効化** をクリックします。
-1. これで、Mobile On-Demand プリフライトアプリでアプリをプレビューする準備が整いました。
+1. モバイルから、カタログのモバイルオンデマンドアプリを選択します。
+1. から省略記号（...）をクリックします **記事の管理** （バナー/コレクション）タイル。
+1. を選択 **Preflight** アクションバーから。
+1. クリック **プリフライトを有効化** ダイアログから変更します。
+1. これで、モバイル オンデマンド プレフライト アプリでアプリをプレビューする準備が整いました。
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight アプリは、コンテンツとページのプレビューに使用します。 プリフライトアプリについて詳しくは、 [ここ](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
+>AEM Preflight アプリは、コンテンツのプレビューとページの参照に使用されます。 Preflight アプリについて詳しくは、をクリックしてください。 [こちら](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
 >
 
-### 先に進む {#getting-ahead}
+### 前に進む {#getting-ahead}
 
-コンテンツのオーサリングについて詳しくは、 AEM Mobileアプリケーションでコンテンツを作成および管理するための次のリソースを参照してください。
+コンテンツのオーサリングに関する詳細が必要な場合は、次のリソースを参照して、AEM Mobile アプリケーションでコンテンツを作成および管理します。
 
 * [AEM Mobile アプリケーションのダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
 ## その他のリソース {#additional-resources}
 
-AEM Mobile On-demand Services App の作成に関する他の 2 つの役割と責務について詳しくは、次のリソースを参照してください。
+AEM Mobile On-demand Services アプリケーションを作成するための他の 2 つの役割と責務について詳しくは、次の資料を参照してください。
 
-* [AEM Mobile On-demand Services向けAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand Servicesアプリ用のAEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
+* [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
+* [AEM Mobile On-demand Services アプリケーション用AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)

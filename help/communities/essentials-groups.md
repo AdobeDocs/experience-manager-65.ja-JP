@@ -1,40 +1,43 @@
 ---
 title: コミュニティグループの基本事項
-description: 権限を持つユーザーがコミュニティグループ機能を使用して、コミュニティサイト内にサブコミュニティを動的に作成する方法を説明します。
+description: 承認済みユーザーがコミュニティグループ機能を使用して、コミュニティサイト内にサブコミュニティを動的に作成する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '404'
 ht-degree: 4%
 
 ---
 
 # コミュニティグループの基本事項  {#community-group-essentials}
 
-コミュニティグループ機能を使用すると、パブリッシュ環境およびオーサー環境から許可されたユーザーがコミュニティサイト内でサブコミュニティを動的に作成できます。
+コミュニティグループ機能は、権限のあるユーザーがパブリッシュ環境とオーサー環境からサブコミュニティをコミュニティサイト内に動的に作成する機能です。
 
-コミュニティの時点 [機能パック 1](deploy-communities.md#latestfeaturepack)の場合は、グループを他のグループ内にネストできます。
+コミュニティの場合 [機能パック 1](deploy-communities.md#latestfeaturepack)グループを他のグループ内にネストすることができます。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアントサイドの基本事項 {#essentials-for-client-side}
 
-### コミュニティグループメンバーリスト {#community-groups-member-list}
+### コミュニティグループのメンバーリスト {#community-groups-member-list}
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/group/components/hbs/communitygroupmemberlist</td>
+   <td>ソーシャル/グループ/コンポーネント/hbs/communitygroupmemberlist</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>テンプレート</strong></td>
+   <td> <strong>templates</strong></td>
    <td> /libs/social/group/components/hbs/communitygroupmemberlist/communitygroupmemberlist.hbs<br /> </td>
   </tr>
   <tr>
@@ -43,7 +46,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>詳しくは、 <a href="creating-groups.md">コミュニティグループ</a></td>
+   <td>参照： <a href="creating-groups.md">コミュニティグループ</a></td>
   </tr>
  </tbody>
 </table>
@@ -54,14 +57,14 @@ ht-degree: 4%
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/group/components/hbs/communitygroups</td>
+   <td>ソーシャル/グループ/コンポーネント/hbs/コミュニティ グループ</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
-   <td> <strong>テンプレート</strong></td>
+   <td> <strong>templates</strong></td>
    <td> /libs/social/group/components/hbs/communitygroups/communitygroups.hbs<br /> </td>
   </tr>
   <tr>
@@ -71,39 +74,39 @@ ht-degree: 4%
  </tbody>
 </table>
 
-* [クライアント側のカスタマイズ](client-customize.md)
+* [クライアントサイドのカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバーサイドの初期設定 {#essentials-for-server-side}
 
 * [コミュニティグループ API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
 * [コミュニティグループエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
-* [サーバー側のカスタマイズ](server-customize.md)
+* [サーバーサイドのカスタマイズ](server-customize.md)
 
-### グループ機能 {#groups-function}
+### Groups 関数 {#groups-function}
 
-を含むコミュニティサイト構造 [Groups 関数 [Groups かんすう ]](functions.md#groups-function) 新しい `community groups` パブリッシュ環境およびオーサー環境から。 作成したコミュニティグループには、 `community groups member list` グループのメンバーをリストするコンポーネント。
+を含むコミュニティサイト構造 [Groups 関数](functions.md#groups-function) 新しいの作成をサポート `community groups` パブリッシュ環境とオーサー環境から。 作成されたコミュニティグループには、が含まれます `community groups member list` グループのメンバーをリストするコンポーネント。
 
-1 つ以上 [コミュニティグループテンプレート](tools-groups.md)コミュニティグループページのデザインを提供する「 」は、グループ機能用に設定できます。 これは、関数が [コミュニティサイトテンプレート](sites.md) またはコミュニティグループテンプレート内にネストされている
+1 つ以上 [コミュニティグループテンプレート](tools-groups.md)コミュニティグループページのデザインを提供する「」を、グループ機能用に設定できます。 これは、関数がに追加されるときに当てはまります。 [コミュニティサイトテンプレート](sites.md) または、コミュニティグループテンプレート内にネストされます。
 
-複数のコミュニティグループテンプレートを組み込むことで、選択肢が得られます。 つまり、コミュニティサイト用のコミュニティグループを作成する際に、承認済みユーザーに提示するデザインの選択です。 詳しくは、 [コミュニティグループ](creating-groups.md) 作成者向け
+複数のコミュニティグループテンプレートを含めると、選択することになります。 つまり、コミュニティサイトのコミュニティグループを作成する際に、権限のあるユーザーに提示されるデザインの選択です。 の節を参照してください。 [コミュニティグループ](creating-groups.md) （作成者向け）。
 
 ### ネストされたグループ {#nested-groups}
 
-コミュニティの時点 [FP1](deploy-communities.md#latestfeaturepack)を使用すると、グループ機能をグループテンプレート内に組み込むことができ、ネストされたグループ（サブコミュニティ）に対して使用できます。
+コミュニティの場合 [FP1](deploy-communities.md#latestfeaturepack)の場合、Groups 関数をグループテンプレートに含めることができるので、ネストされたグループ（サブコミュニティ）が可能になります。
 
-コミュニティサイトまたはグループテンプレートにグループ機能が含まれている場合、次の操作が可能です。
+コミュニティサイトまたはグループテンプレートにグループ機能が含まれている場合は、次の操作を行うことができます。
 
-* オーサー環境にサブコミュニティを作成します。
+* オーサー環境でサブコミュニティを作成します。
 
-* グループを許可するように設定されている場合は、パブリッシュ環境でグループを作成します。
+* パブリッシュ環境にグループを作成します（許可するように設定されている場合）。
 
-オーサー環境でグループを作成する場合は、まずコミュニティサイトを公開し、次にグループを公開する必要があります。 コミュニティサイトを公開すると、ACL が設定されているサブコミュニティのメンバーグループを作成せずに、グループのページが公開されます。 したがって、制限付き（シークレット）グループは、グループが明示的に公開されるまで表示される場合があります。
+オーサー環境でグループを作成する場合、まずコミュニティサイトを公開してから、グループを公開する必要があります。 コミュニティサイトを公開すると、ACL が設定されたサブコミュニティのメンバーグループは作成されずに、グループのページが公開されます。 したがって、制限された（秘密鍵）グループは、そのグループが明示的に公開されるまで表示される場合があります。
 
 ## リンクと関連情報 {#links-and-related-information}
 
 * [ユーザーとユーザーグループの管理](users.md)
 * [コミュニティグループコンソール](groups.md)
-* [グループ機能](functions.md#groups-function)
+* [Groups 関数](functions.md#groups-function)
 * [グループテンプレート](tools-groups.md)

@@ -1,15 +1,18 @@
 ---
 title: リファラーフィルターの「空の値を許可」への設定
-description: リファラーフィルターについて説明します。 Adobe Experience Manager(AEM)Mobile Application Viewer でオーサーインスタンス上のアプリを表示できるようにするには、HTMLリファラーフィルターを「allow empty」に設定する必要があります。
+description: リファラーフィルターの詳細。 Adobe Experience Manager（AEM）モバイルアプリケーションビューアがオーサーインスタンス上のアプリを表示できるようにするには、HTMLリファラーフィルターを「allow empty」に設定する必要があります。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 exl-id: 2f02f541-92db-469b-bf23-ec64d2e282ff
-source-git-commit: 6799f1d371734b69c547f3c0c68e1e633aa63229
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 10%
+ht-degree: 21%
 
 ---
 
@@ -17,12 +20,12 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-Adobe Experience Manager(AEM)Mobile Application Viewer でオーサーインスタンス上のアプリを表示できるようにするには、HTMLリファラーフィルターを「allow empty」に設定する必要があります。
+Adobe Experience Manager（AEM）モバイルアプリケーションビューアがオーサーインスタンス上のアプリを表示できるようにするには、HTMLリファラーフィルターを「allow empty」に設定する必要があります。
 
-開発状態とステージング状態のアプリケーションをアプリケーションビューアを使用して確認する場合は、リファラーフィルタのデフォルト設定を変更する必要はありません。
+アプリケーションビューアを使用して開発状態とステージング状態のアプリケーションを確認しない場合は、リファラーフィルターのデフォルト設定を変更する必要はありません。
 
-実行中のAEMオーサーインスタンス内で、次の場所に移動します。 [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) 「Apache Sling Referrer Filter」を検索します。 リファラーフィルターをクリックして編集し、「空の値を許可」チェックボックスをオンにします（下図を参照）。 次に、「保存」ボタンを押し、ブラウザーページを閉じます。
+AEMの実行中のオーサーインスタンス内で、次の場所に移動します。 [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) Apache Sling Referrer Filter を探します。 クリックしてリファラーフィルターを編集し、「空を許可」チェックボックスをオンにします（下図を参照）。 次に「保存」ボタンをクリックして、ブラウザーページを閉じます。
 
-![リファラーフィルター設定](assets/chlimage_1-106.png)
+![リファラーフィルターの設定](assets/chlimage_1-106.png)

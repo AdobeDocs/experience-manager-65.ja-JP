@@ -1,15 +1,18 @@
 ---
 title: おすすめコンテンツ機能
-description: おすすめコンテンツ機能を使用すると、サインインしたサイト訪問者がコンテンツを強調表示できます
+description: おすすめコンテンツ機能を使用すると、ログインしたサイト訪問者がコンテンツをハイライト表示できます
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 76b76e0e-531b-4f80-be70-68532ef81a7f
-source-git-commit: ab3d016c7c9c622be361596137b150d8719630bd
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 7%
+source-wordcount: '339'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +20,7 @@ ht-degree: 7%
 
 ## はじめに {#introduction}
 
-おすすめコンテンツ機能を使用すると、パブリッシュ環境でサインインしたサイト訪問者（コミュニティメンバー）が次のコンテンツをハイライト表示できる領域が提供されます。
+おすすめコンテンツ機能には、パブリッシュ環境でログインしたサイト訪問者（コミュニティメンバー）がコンテンツをハイライト表示する領域が用意されています。
 
 * [ブログ](blog-feature.md)
 * [カレンダー](calendar.md)
@@ -25,32 +28,32 @@ ht-degree: 7%
 * [アイデア](ideation-feature.md)
 * [Q&amp;A](working-with-qna.md)
 
-コンテンツにおすすめとしてフラグが設定されると、このコンポーネント内に一覧表示されます。このコンポーネントは、コミュニティメンバーの注意を引きやすい特定のランディングページや領域に配置できます。
+おすすめコンテンツとしてフラグ付けされると、そのコンテンツはこのコンポーネント内にリストされます。特定のランディングページや、コミュニティメンバーが注目しやすい領域に配置できます。
 
-コンテンツを特集する機能は、コンポーネントごとに許可または禁止できます。
+コンテンツを機能させる機能は、コンポーネントごとに許可または禁止される場合があります。
 
 ドキュメントのこの節では、以下について説明します。
 
-* コミュニティサイトにおすすめコンテンツを追加する。
+* コミュニティサイトへのおすすめコンテンツの追加。
 * の設定 `Featured Content` コンポーネント。
 
 ## ページへのおすすめコンテンツの追加 {#adding-featured-content-to-a-page}
 
-を追加するには、以下を実行します。 `Featured Content` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して
+を追加します `Featured Content` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます
 
 * `Communities / Featured Content`
 
-ページ上の特集コンテンツが表示される場所にドラッグします。
+おすすめコンテンツが表示されるページの場所にドラッグします。
 
-必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
+詳細については、 [Communities コンポーネントの基本](basics.md).
 
-次の場合に [必要なクライアント側ライブラリ](essentials-featured.md#essentials-for-client-side) が含まれる場合、この方法で `Featured Content` コンポーネントが表示されます。
+いつ [必要なクライアントサイドライブラリ](essentials-featured.md#essentials-for-client-side) が含まれる場合、このようにして `Featured Content` コンポーネントが表示されます。
 
 ![featuredcontent](assets/featuredcontent.png)
 
 ## おすすめコンテンツの設定 {#configuring-featured-content}
 
-配置した `Featured Content` コンポーネントを使用して、 `Configure` 編集ダイアログを開くアイコン。
+配置されたを選択します。 `Featured Content` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
 
 ![configure-new](assets/configure-new.png)
 
@@ -58,38 +61,38 @@ ht-degree: 7%
 
 ### 「設定」タブ {#settings-tab}
 
-の下 **[!UICONTROL 設定]** 「 」タブで、機能するコンテンツを指定します。
+の下 **[!UICONTROL 設定]** タブで、機能するコンテンツを特定します。
 
 * **[!UICONTROL 表示名]**
 
-  おすすめコンテンツのリストのタイトル。 例： `Featured Questions` または `Featured Ideas`. デフォルトはです。 `Featured Content` 空のままの場合は。
+  おすすめコンテンツのリストのタイトル。 例えば、`Featured Questions` や `Featured Ideas` です。 デフォルトは `Featured Content` 空のままにした場合。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
 
-  *（必須）* 取り上げるコンテンツを含むページを参照します（そのページのコンポーネントは、「おすすめコンテンツを許可」に設定する必要があります）。 例：`/content/sites/engage/en/forum`
+  *（必須）* おすすめコンテンツを含むページを参照します（そのページのコンポーネントは、おすすめコンテンツを許可するように設定されている必要があります）。 例えば、`/content/sites/engage/en/forum` のように指定します。
 
-* **[!UICONTROL 最大表示数]**
+* **[!UICONTROL 表示の制限]**
 
   表示するおすすめコンテンツの最大数。 デフォルトは 5 です。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
-コンテンツにおすすめコンテンツのフラグを設定する機能には、モデレーター権限が必要です。
+おすすめコンテンツとしてコンテンツにフラグを付けるには、モデレーター権限が必要です。
 
-モデレーターが投稿されたコンテンツを表示すると、コンテキスト内のモデレートフラグにアクセスできます。このフラグには、新しい `Feature` フラグ。
+モデレーターが投稿されたコンテンツを表示すると、新しいを含むコンテキスト内モデレートフラグにアクセスできます `Feature` フラグ。
 
-![site-visitor-experience](assets/site-visitor-experience.png)
+![サイト訪問者エクスペリエンス](assets/site-visitor-experience.png)
 
-機能としてフラグ付けされた後、モデレートフラグは `Unfeature`.
+機能としてフラグが設定されると、モデレートフラグはになります `Unfeature`.
 
-次を含むページ： `Featured Content` コンポーネントにこの投稿が含まれるようになりました。
+を含むページ `Featured Content` コンポーネントに、この投稿が含まれるようになりました。
 
 ![site-visitor-experience1](assets/site-visitor-experience1.png)
 
-The `Read More` 実際の投稿へのリンク。
+この `Read More` 実際の投稿へのリンク。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [おすすめコンテンツ](essentials-featured.md) 開発者向けのページ
+詳しくは、 [おすすめコンテンツ](essentials-featured.md) 開発者向けのページです。
 
-コンテンツをおすすめとしてフラグ設定する方法については、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
+おすすめコンテンツのフラグ設定については、を参照してください。 [ユーザー作成コンテンツのモデレート](moderate-ugc.md).

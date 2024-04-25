@@ -1,15 +1,18 @@
 ---
 title: デバイス機能へのアクセス
-description: このページでは、デバイス機能にアクセスするAdobe Experience Manager(AEM) コンポーネントの構築について説明します。 AEM PhoneGap Kitchen Sink GitHub リポジトリは、いくつかのコア Cordova API の使用を説明する機能的なAEMアプリを開発者に提供します。
+description: デバイスの機能にアクセスするAdobe Experience Manager（AEM）コンポーネントの構築について説明します。 AEM PhoneGap Kitchen シンク GitHub リポジトリは、いくつかのコア Cordova API の使用方法を説明する機能的なAEM アプリを開発者に提供します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 385f7924-e8ab-4dcb-83f0-7b81bead3dda
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 6%
+source-wordcount: '171'
+ht-degree: 18%
 
 ---
 
@@ -17,18 +20,18 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-## デバイス機能にアクセスするAdobe Experience Manager(AEM) コンポーネントの構築 {#building-aem-components-that-access-device-features}
+## デバイス機能にアクセスするAdobe Experience Manager（AEM）コンポーネントの構築 {#building-aem-components-that-access-device-features}
 
-この [AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub リポジトリは、いくつかのコア Cordova API の使用方法を説明する機能AEMアプリを開発者に提供します。 PhoneGap CLI を使用してiOSまたは Android™で実行すると、アプリは次のページに開き、次の例で示す各デバイス API へのリンクを含みます。
+この [AEM PhoneGap キッチン シンク](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub リポジトリは、複数のコア Cordova API の使用方法を説明する機能的なAEM アプリを開発者に提供します。 PhoneGap CLI を使用してiOSまたは Android™ で実行すると、アプリが次のページに開き、アプリで示される各デバイス API へのリンクが含まれます。
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-これらの各デバイス API コンポーネントのソースコードは、 [GitHub で入手可能](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
+これらの各デバイス API コンポーネントのソースコードは次のとおりです [github で入手可能](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
 
-各 API の使用方法について詳しくは、 Cordova プラグインのドキュメント (`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`) をクリックします。
+各 API の使用方法について詳しくは、Cordova プラグインのドキュメント （`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`）に設定します。
 
 ## 次の手順 {#the-next-steps}
 
-詳しくは、 [Mobile Analytics を使用したAdobeのパフォーマンスの追跡](/help/mobile/phonegap-intro-to-app-analytics.md).
+参照： [Adobeモバイル分析を使用したアプリパフォーマンスの追跡](/help/mobile/phonegap-intro-to-app-analytics.md).

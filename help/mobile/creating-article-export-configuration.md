@@ -1,15 +1,18 @@
 ---
 title: 記事のエクスポート設定の作成
-description: このページでは、Adobe Experience Manager(AEM) からAEM Mobileにアップロードするコンテンツを書き出す方法について説明します。
+description: このページでは、Adobe Experience Manager（AEM）からコンテンツを書き出し、AEM Mobileにアップロードする方法を説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 exl-id: 5295f383-3b46-4456-9177-65de68e39a85
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '292'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
@@ -17,44 +20,44 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
 >[!CAUTION]
 >
 >**前提条件**:
 >
->共有リソースの作成と変更について詳しくは、 [コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md) を参照してください。
+>共有リソースの作成と変更については、を参照してください。 [コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md) を参照して、基本概念を理解します。
 
-AEM Mobileのユーザーは、コンテンツ同期を使用して、ライブコンテンツをモバイルアプリで使用する静的コンテンツに書き出します。この書き出しは、AEM Mobileから Mobile On-Demand Services にコンテンツがアップロードされたときに発生します。
+AEM Mobile ユーザーはコンテンツ同期を使用して、モバイルアプリで使用するためにライブコンテンツを静的コンテンツに書き出します。この書き出しは、コンテンツがAEM Mobileから Mobile On-Demand Services にアップロードされる際に行われます。
 
-プロパティ ***dps-exportTemplate*** 上記の表で、アプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
+プロパティ ***dps-exportTemplate*** 上記の表で説明されている、はアプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
 
-次のリソースでは、Adobe Experience Manager(AEM) からコンテンツを書き出してAEM Mobileにアップロードする方法について説明します。
+以下のリソースでは、AEM MobileにアップロードするためにAdobe Experience Manager（AEM）からコンテンツを書き出す方法について説明します。
 
-記事には、書き出しとアップロードが必要なコンテンツが含まれています。 このコンテンツの一部は、記事間で共有できます。
+記事には、書き出しとアップロードが必要なコンテンツがあります。 このコンテンツの一部は、記事間で共有できます。
 
-用途 [コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md) コンテンツをまとめて ***共有リソース*** パッケージ。
+使用方法 [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) コンテンツを 1 つにまとめて作成するには ***共有リソース*** パッケージ。
 
-次の場所に ContentSync 設定が見つかりました： **&lt;dps-exporttemplate>/dps-article>** は、デバイス上のプロパティの静的レンダリングに必要なすべてのコンテンツと記事を書き出すように設定する必要があります。
+ContentSync 設定はにあります。 **&lt;dps-exporttemplate>/dps-article>** は、デバイスでのプロパティの静的レンダリングに必要な記事のすべてのコンテンツを書き出すように設定する必要があります。
 
 >[!CAUTION]
 >
->以下の手順を実行して、以下の場合に限り、サンプルの共有リソースを表示できます。
+>以下の手順を実行してサンプルの共有リソースを表示できるのは、次のような場合のみです。
 >
->* サンプルコンテンツをインストール済み
->* 実行中のAEMインスタンス
->* カスタムコンテキストが設定されていないか、別のポートがありません
+>* サンプルコンテンツがインストールされました
+>* 実行中のAEM インスタンス
+>* カスタム コンテキストが構成されていないか、別のポートがありません
 >
 
 サンプルの共有リソースを表示するには、以下の手順を参照してください。
 
-1. AEMサーバーのCRXDE Liteを開きます。
-1. このパスを参照 [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)、サンプルの共有リソースを表示します。
+1. AEM サーバーでCRXDE Liteを開きます。
+1. このパスを参照 [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)共有リソースのサンプルを表示します。
 
-   共有リソースの作成に必要なすべてのプロパティを次の図に示すように表示できます。
+   次の図に示すように、共有リソースの作成に必要なすべてのプロパティを表示できます。
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
 >[!NOTE]
 >
->記事のコンテンツが変更された場合は、AEM Mobile On-demand Servicesに記事をアップロードまたは書き出す必要があります。
+>アーティクルは、アーティクルのコンテンツが変更されたときに、AEM Mobile On-demand Servicesにアップロードまたはエクスポートしてください。

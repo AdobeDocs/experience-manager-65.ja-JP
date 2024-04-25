@@ -1,9 +1,12 @@
 ---
 title: Adobe Experience Manager Mobile - GDPR 対応
-description: Adobe Experience Managerが GDPR への準拠義務を支援する準備ができている方法を説明します。
+description: Adobe Experience Managerが GDPR コンプライアンス義務を支援する準備ができている方法について説明します。
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 1%
@@ -14,69 +17,69 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細は、GDPR や CCPA など、すべてのデータ保護およびプライバシー規制に適用されます。
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
 ## AEM Mobile GDPR のサポート {#aem-mobile-gdpr-support}
 
-AEM Mobileは、お客様が GDPR に準拠するための義務を果たすのを支援する準備が整っています。 AEM Mobileには個人データは保存されません。 プロビジョニングされている場合は、Adobe IDを使用して Experience MobileAdobeにログオンできます。
+AEM Mobileは、お客様の GDPR コンプライアンス義務を支援する準備が整っています。 AEM Mobileには個人データは保存されません。 プロビジョニングされている場合は、Adobe IDを使用して Experience Mobile のAdobeにログオンできます。
 
 <!-- [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html) -->
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobeのデジタル出版製品 (AEM Mobileに先立つ ) は、Adobeの GDPR 対応に関する取り組みをサポートしています。 詳しくは、 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja). 以下に、GDPR 要求を開始するためのAdobeとの連携方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートに関する詳細を示します。
+Adobeのデジタルパブリッシング製品（AEM Mobileに先行）は、Adobeの GDPR 対応イニシアチブをサポートします。 参照： [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja). 以下では、Adobeと連携して GDPR リクエストを開始する方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートについて詳しく説明します。
 
-AEM Mobileと古いDigital Publishing Suite製品を混同しないように、次の場所でDigital Publishing Suite製品にログインできます。
+AEM Mobileを古いDigital Publishing Suiteと混同しないために、次の場所からDigital Publishing Suite製品にログインできます。
 
 [https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
-### GDPR 要求の開始 {#initiating-a-gdpr-request}
+### GDPR リクエストの開始 {#initiating-a-gdpr-request}
 
-Adobeの GDPR リクエストを開始できるよう、カスタマーケアにお問い合わせください。Digital Publishing Suite
+Digital Publishing Suiteに対する GDPR リクエストを開始するには、Adobeカスタマーケアにお問い合わせください。
 
-顧客データを検索するには、次の ID が必要です。 受け取ったサブセットは、他の ID がこのユーザーに適用されなかったことを意味します。
+顧客データを見つけるには、次の ID が必要です。 受信したサブセットは、他の ID がこのユーザーに適用されなかったことを意味します。
 
 必須：
 
-* 顧客の契約 ID : *dpsc-contractId*
+* 顧客の契約 ID: *dpsc-contractId*
 
 次のうち少なくとも 1 つを指定します。
 
-* エンドユーザーが指定した OAuth ID（顧客の直接権利付与システムで使用される ID）: *dpsc-directEntitlementId*
-* Windows アプリのユーザーの場合、エンドユーザーのApp Store ID は次のようになります。 *dpsc-windowsAppStoreId*
-* エンドユーザーが DPS アプリの操作に使用した電子メールアドレス： *電子メール*
+* エンドユーザーの顧客が指定した OAuth ID （顧客の直接使用権限システムで使用される ID）: *dpsc-directEntitlementId*
+* Windows アプリユーザーの場合、エンドユーザーのApp Store ID は次のようになります。 *dpsc-windowsAppStoreId*
+* DPS アプリとやり取りするためにエンドユーザーが使用するメールアドレス： *電子メール*
 
-### よくある質問 (FAQ) {#frequently-asked-questions-faq}
+### よくある質問（FAQ） {#frequently-asked-questions-faq}
 
-**Adobeリクエストを開始する際に、App Storeでの購入を削除しているDELETEはありますか？**
+**AdobeはDELETEリクエストの開始時にApp Storeの購入を削除していますか？**
 
-Adobeは、アプリストアでの購入（購読など）に関する情報を削除しますが、購入はアプリストアで記録されたままです。 アプリ（エンドユーザー）が App Store にログインすると、それらのレシートが再度取得され、Adobeに送信されます。 その後、これらは新規購入と見なされ、アプリによって復元され、再度アクセスできます。
+Adobeは、アプリストアでの購入（サブスクリプションなど）に関する情報を削除しますが、購入はアプリストアに記録されたままになります。 アプリ（エンドユーザー）がアプリストアにログインすると、それらのレシートは再び取得され、Adobeに送信されます。 その後、それらは新しい購入と見なされ、再びアクセスでアプリによって復元されます。
 
-**Adobeリクエストを開始する際に、顧客提供の権利を削除するDELETEはありますか？**
+**Adobeは、DELETEリクエストを行う際に、お客様が提供する使用権限を削除していますか？**
 
-Adobeは、顧客の追加の直接使用権限の許可を持つ情報を削除します。 アプリ（エンドユーザー）が、顧客が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスが追加の使用権限を再度取得します。
+Adobeは、顧客の追加の直接使用権の許容量に関する情報を削除します。 アプリ（エンドユーザー）が、お客様が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスは追加の使用権限を再度取得します。
 
-**エンドユーザーに対して期待される操作**
+**エンドユーザーには何が期待されますか？**
 
-アプリに権限を割り当てる際のキーは、ビューアソフトウェアの一部としてデバイス上に存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールした場合、既存の購入（App Store ユーザーに関連付けられている）および直接の使用権限（顧客の OAuth ユーザーに関連付けられている）が引き続き復元されることを認識する必要があります。
+アプリに使用権限を割り当てるキーはビューアソフトウェアの一部としてデバイスに存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールする場合でも、既存の購入（アプリストアユーザーに関連付けられる）および直接の使用権限の許可（顧客の OAuth ユーザーに関連付けられる）は引き続き復元されることに注意する必要があります。
 
-**デバイス上のユーザー間でアプリを共有するとどうなりますか？**
+**デバイス上のユーザー間でアプリが共有されるとどうなりますか？**
 
-Adobeは、特定のユーザーに直接関連付けられる最小限の情報を持ちます。 この変数は、ランダムに作成された UUID を使用してデータを関連付けます。この UUID は、アプリのデータに保持され、アプリが開始するリクエストごとに渡されます。 つまり、同じデバイスでアプリを共有するエンドユーザーは同じ UUID を使用し、すべてのデータは、GDPR 要求をおこなう人の所有と見なされます。 アクセス要求と削除要求の両方で、DPSC は、アプリを共有する人を 1 人の人物と見なします。
+Adobeには、特定のユーザーに直接関連付けられる最小限の情報があります。 アプリのデータに保持され、アプリが開始するすべてのリクエストで渡される、ランダムに作成された UUID を使用してデータを関連付けます。 つまり、同じデバイスでアプリを共有するエンドユーザーが同じ UUID を使用し、すべてのデータが GDPR リクエストを行ったユーザーによって所有されていると見なされます。 DPSC では、アクセスリクエストと削除リクエストの両方に対して、アプリを共有するユーザーが 1 人のユーザーと見なされます。
 
-**Analytics で追跡される個人データは何ですか？**
+**Analytics ではどのような個人データが追跡されますか？**
 
-なし. 追跡されているデータがありますが、アプリレベル（個人レベルではありません）です。 これには、起動、クラッシュ、閉じる、アクティビティ、購入、Folio オーバーレイなどのイベントが含まれます。 地理的な場所、名前、デバイス ID、IP アドレスは追跡されません。
+なし. 追跡中のデータがありますが、それはアプリレベル（個人ではない）にあります。 これには、ローンチ、クラッシュ、クローズ、アクティビティ、購入、フォリオのオーバーレイなどのイベントが含まれます。 地理的な場所、名前、デバイス ID または IP アドレスは追跡されません。
 
-**エンドユーザーが情報を入力しましたが、何も見つかりませんでした。 なぜ？**
+**エンド ユーザーは情報を提供しましたが、何も見つかりませんでした。 なぜいけないの。**
 
-Digital Publishing Suite製品の進化に伴い、サービスの実装が変更され、より多くのデータが不明化されました。 ユーザーが指定したデータを使用してデータが見つからなかった場合、そのユーザーのデータをそのユーザーに追跡できないことを意味します。
+Digital Publishing Suite製品の進化に伴い、サービスの実装が変わり、より多くのデータが不明化されました。 ユーザーから提供されたデータを使用してデータが見つからない場合、ユーザーのデータをそのユーザーに遡って追跡することはできません。
 
 ### 例 {#example}
 
-Adobeカスタマーケアに問い合わせて、GDPR リクエストを開始できます。
+GDPR リクエストを開始するには、Adobeカスタマーケアにお問い合わせください。
 
-次に、Digital Publishing SuiteGDPR 要求の入力と結果の出力の例を示します。
+Digital Publishing Suiteの GDPR リクエストの入力と結果の出力の例を次に示します。
 
 #### 入力： {#inputs}
 

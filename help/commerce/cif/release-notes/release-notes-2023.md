@@ -3,7 +3,9 @@ title: AEM Content and Commerce リリースノート 2023
 description: Adobe Experience Manager Content and Commerce リリースノート 2023
 exl-id: 00349400-6860-4e3c-ba56-fa12afc5db1d
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 71%
@@ -22,7 +24,7 @@ ht-degree: 71%
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
-## リリース日： 2023 年 12 月
+## リリース日：2023 年 12 月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
@@ -30,8 +32,8 @@ ht-degree: 71%
 
 ### バグ修正 {#bug-fixes-december}
 
-* ページ v3 リソースタイプに登録された製品およびカテゴリのリダイレクトサーブレット
-* CIF AEP Extension のライブ検索イベントを修正しました。
+* Page v3 リソースタイプに登録された製品およびカテゴリのリダイレクトサーブレット
+* CIF AEP 拡張機能のライブ検索イベントを修正しました
 
 ## リリース日：2023年11月
 
@@ -42,7 +44,7 @@ ht-degree: 71%
 
 ### バグ修正 {#bug-fixes-november}
 
-* CIF設定コンソールでの 40 を超える設定の表示
+* CIF設定コンソールに 40 を超える設定を表示
 
 ## リリース日：2023年7月
 
@@ -52,4 +54,4 @@ ht-degree: 71%
 
 ### 新機能 {#what-is-new-july}
 
-* の製品フィルターフック `ProductList` コンポーネント
+* での製品フィルターフック `ProductList` component

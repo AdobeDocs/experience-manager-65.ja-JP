@@ -1,15 +1,18 @@
 ---
 title: 既製のアプリハンドラー
-description: このページでは、AEMを使用したAdobe PhoneGap Enterprise 向けの標準ハンドラーについて説明します。
+description: ここでは、AEMを使用したAdobe PhoneGap Enterprise の標準提供ハンドラーについて説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: e2ddf5d1-0f5b-4f3b-9666-0f388915730e
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1408'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -17,53 +20,53 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
 コンテンツ同期ハンドラーの開発については、次のガイドラインを参照してください。
 
-* ハンドラーはを実装する必要があります *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接またはを実行するクラスの拡張）
-* ハンドラーは拡張できます *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
-* ハンドラーは、ContentSync キャッシュを更新した場合にのみ true を報告する必要があります。 true と誤ってレポートされると、AEMで更新を作成できます。
-* ハンドラーは、コンテンツが実際に変更された場合にのみキャッシュを更新する必要があります。 ホワイトが不要な場合はキャッシュに書き込まず、不要な更新の作成を避けます。
+* ハンドラーによる実装 *com.day.cq.contentsync.handler.ContentUpdateHandler* （直接または拡張するクラス）
+* ハンドラーによる拡張 *com.adobe.cq.mobile.platform.impl.contentsync.handler.AbstractSlingResourceUpdateHandler*
+* ハンドラーは、ContentSync キャッシュが更新された場合にのみ true をレポートする必要があります。 誤って true とレポートすると、AEMは更新を作成できます。
+* ハンドラーは、コンテンツが実際に変更された場合にのみ、キャッシュを更新する必要があります。 白が不要な場合はキャッシュに書き込まず、不要な更新の作成を避けてください。
 
-## 標準提供のハンドラー {#out-of-the-box-handlers}
+## 標準のハンドラー {#out-of-the-box-handlers}
 
-次のリストの既製のアプリハンドラーを示します。
+以下に、すぐに使用できるアプリハンドラーの一覧を示します。
 
-**mobileapppages** アプリのページをレンダリングします。
+**mobileapppages** アプリページをレンダリングします。
 
-* ***type - String*** - mobileapppages
-* ***path - String***  — ページへのパス
-* ***extension - String***  — リクエストで使用する拡張子。 ページの場合、これはほとんど常にです。 *html*&#x200B;ですが、その他の方法はまだ可能です。
+* ***タイプ – 文字列*** - mobileapppages
+* ***path – 文字列*** - ページへのパス
+* ***extension – 文字列*** - リクエストで使用する必要がある拡張機能。 ページの場合、これはほとんど常に当てはまります *html*&#x200B;しかし、他の方法も可能です。
 
-* ***selector - String***  — オプションのセレクター（ドット区切り）。 一般的な例は次のとおりです。 *タッチ* モバイルバージョンのページをレンダリングする場合。
+* ***selector – 文字列*** - ドットで区切られたオプションのセレクター。 一般的な例を以下に示します *接触* （ページのモバイルバージョンのレンダリング用）。
 
-* ***deep - Boolean***  — 子ページも含める必要があるかどうかを指定する、オプションのブール型プロパティ。 デフォルト値は *true.*
+* ***deep - ブール値***  – 子ページを含めるかどうかを決定するオプションのブール値プロパティ。 デフォルト値はです *はい。*
 
-* ***includeImages — ブール値***  — 画像を含める必要があるかどうかを指定する、オプションのブール型プロパティ。 デフォルト値は *true*.
+* ***includeImages - ブール値***  – 画像を含めるかどうかを指定するオプションのブール値プロパティ。 デフォルト値はです *true*.
 
-   * デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントのみが含めると見なされます。
+   * デフォルトでは、リソースタイプが foundation/components/image の画像コンポーネントのみが組み込み対象と見なされます。
 
-* ***includeVideos - Boolean***  — ビデオを含める必要があるかどうかを指定する、オプションのブール型プロパティ。 デフォルト値は *true*.
+* ***includeVideos - ブール値*** - ビデオを含めるかどうかを決定するオプションのブール値プロパティ。 デフォルト値はです *true*.
 
-* ***includeModifiedPagesOnly — ブール値*** - false または省略した場合は、すべてのページをレンダリングし、レンダリングで更新を確認します。 true の場合、lastModified ページの変更に基づいて異なります。
-* ***+ rewrite （ノード）***
-  ***- relativeParentPath - String***  — 他のすべての相対パスを書き込むパス。
+* ***includeModifiedPagesOnly - ブール値*** - false または省略した場合、すべてのページがレンダリングされ、レンダリングで更新が確認されます。 true の場合、ページ lastModified に対する変更に基づいて異なります。
+* ***+書き換え（ノード）***
+  ***- relativeParentPath – 文字列***  – 他のすべてのパスの書き込み先となる相対パス。
 
 >[!NOTE]
 >
->このハンドラーの影響を受ける画像およびビデオコンポーネントのリソースタイプは、 *com.adobe.cq.mobile.platform.impl.contentsync.handler*.*MobilePagesUpdateHandler OSGi サービス*.
+>このハンドラーの影響を受ける画像コンポーネントとビデオコンポーネントのリソースタイプは、 *com.adobe.cq.mobile.platform.impl.contentsync.handler*.*MobilePagesUpdateHandler OSGi サービス*.
 
 **mobilepageassets** アプリページのアセットを収集します。
 
-**mobilecontentlisting** ContentSync zip のコンテンツをリストします。 これは、デバイス上のクライアント側 js がAEMアプリに必要な最初のファイルコピーを実行するために使用します。
+**mobilecontentlisting** ContentSync zip のコンテンツをリストします。 これは、AEM アプリに必要な初期ファイルコピーを行うために、デバイス上のクライアントサイド js で使用されます。
 
-このハンドラーは、AEM Apps の ContentSync 設定に追加する必要があります。
+このハンドラーはすべてのAEM アプリのコンテンツ同期設定に追加する必要があります。
 
-* ***type - String - mobilecontentlisting***
-* ***パス*** - String — 空のままにします。有効なハンドラーとして表示するには存在する必要がありますが、パスは現在の ContentSync キャッシュと推測されます。 この値は無視されます。
-* ***targetRootDirectory* -**String — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***注文 — 長い* -**コンテンツ同期でこのハンドラーを実行する順序です。 この数は、100 など他のすべてのハンドラーよりも大きく設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
+* ***タイプ – 文字列 – mobilecontentlisting***
+* ***パス***  – 文字列 – 空を保持します。有効なハンドラーとして見なされるには存在する必要がありますが、パスは現在の ContentSync キャッシュと推論されます。 この値は無視されます。
+* ***target ルート ディレクトリ* -**String – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
+* ***順序 – 長い* -**ContentSync がこのハンドラーを実行するようにします。 この数は、100 などのその他すべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
 
 ```xml
 {
@@ -83,18 +86,18 @@ ht-degree: 1%
 }
 ```
 
-**mobilecontentpackageslisting** 特定のアプリ内のAEMコンテンツパッケージと、更新リクエストをおこなう serverURL をリストします。 これは、デバイス上のクライアント側 js を使用して、コンテンツの更新をリクエストします
+**mobilecontentpackageslisting** 指定されたアプリのAEM コンテンツパッケージと、更新リクエストを行う serverURL をリストします。 コンテンツの更新をリクエストするために、デバイス上のクライアントサイド js に使用されます
 
-ハンドラーは、AEM App Shell ContentSync 設定（pge-type=app-instance のノード）で使用する必要があります
+ハンドラーは、AEM アプリシェルのコンテンツ同期設定（page-type=app-instance のノード）で使用する必要があります
 
-* ***type - String - mobilecontentpackageslisting***
-* ***パス&#x200B;**-**文字列***  — アプリシェルのパス（pge-type=app-instance のノード）。
-* ***targetRootDirectory - String***  — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***注文 — 長い* -**コンテンツ同期でこのハンドラーを実行する順序です。 この数は、100 など他のすべてのハンドラーよりも大きく設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
+* ***タイプ – 文字列 – mobilecontentpackageslisting***
+* ***パス&#x200B;**-**文字列*** - アプリシェルへのパス（page-type=app-instance を持つノード）。
+* ***targetRootDirectory – 文字列***  – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
+* ***順序 – 長い* -**ContentSync がこのハンドラーを実行する順序。 この数は、100 などのその他すべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
 
 >[!NOTE]
 >
->次のコードブロックは正確な実装ではないので、参照例として使用してください。
+>次のコードブロックは正確な実装ではないので、参考にして使用してください。
 
 ```xml
 {
@@ -118,95 +121,95 @@ ht-degree: 1%
 }
 ```
 
-**widgetconfig** コマンドセンターで行われた編集を提供された config.xml と結合する、更新された config.xml を含めます。 このハンドラーが含まれていない場合、管理インターフェイスを介して変更されたアプリの詳細はキャッシュに含まれません。
+**widgetconfig** コマンドセンターで行われた編集を提供された config.xml に結合する、更新された config.xml が含まれています。 このハンドラーが含まれていない場合、管理インターフェイスを介して変更されるアプリの詳細はキャッシュに含まれません。
 
-このハンドラーは、AEM App Shell ContentSync 設定（pge-type=のノード）で使用する必要があります[app-instance]) をクリックします。
+このハンドラーは、AEM アプリシェルのコンテンツ同期設定（page-type=を持つノード）で使用する必要があります[app-instance]）に設定します。
 
-* ***type - String* - **widgetconfig
-* ***パス&#x200B;**-**文字列***  — 任意のアプリシェルの子ノード（pge-type=のノード）へのパス[app-instance]) をクリックします。
-* ***targetRootDirectory - String***  — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***targetIconDirectory - String***  — アプリのアイコンを配置するディレクトリ。
+* ***タイプ – 文字列* - **widgetconfig
+* ***パス&#x200B;**-**文字列***  – 任意のアプリシェル子ノードのパス（page-type=を持つノード）[app-instance]）に設定します。
+* ***targetRootDirectory – 文字列***  – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
+* ***targetIconDirectory – 文字列*** - アプリのアイコンを配置するディレクトリ
 
-**mobileADBMobileConfigJSON** AMS クラウドサービスが設定されている場合は、 ADBMobileConfig.JSON ファイルを含めます。
+**mobileADBMobileConfigJSON** AMS クラウドサービスが設定されている場合は、ADBMobileConfig.JSON ファイルを含めます。
 
-これは、解析サポート用に AMS プラグインを設定するためにコンパイル時に使用されます。
+これは、分析サポート用の AMS プラグインを設定する際にコンパイル時に使用されます。
 
-ハンドラーは、AEM App Shell ContentSync 設定（pge-type=app-instance のノード）で使用する必要があります
+ハンドラーは、AEM アプリシェルのコンテンツ同期設定（page-type=app-instance のノード）で使用する必要があります
 
-* ***type - String*** - mobileADBMobileConfigJSON
-* ***path - String***  — アプリシェルへのパス（pge-type=app-instance のノードまたは/libs/mobileapps/core/components/instance を拡張する RT）
-* ***targetRootDirectory - String***  — このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
+* ***タイプ – 文字列*** - mobileADBMobileConfigJSON
+* ***path – 文字列*** - アプリシェルへのパス（page-type=app-instance または/libs/mobileapps/core/components/instance を拡張する RT を持つノード）
+* ***targetRootDirectory – 文字列***  – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス
 
-**notificationsconfig** デバイスで必要な通知設定を抽出します。 プロパティは、アプリに関連付けられた各プッシュサービスクラウドサービス設定から抽出されます。
+**notificationsconfig** デバイスで必要な通知設定を抽出します。 プロパティは、アプリに関連付けられたそれぞれのプッシュサービスクラウドサービス設定から抽出されます。
 
-クラウドサービスの jcr:content ノード内のAEM以外のプロパティが抽出され、 **pge-notifications-config.json** アプリコンテンツの www ルートに含める JSON ファイル。
+Cloud Service の jcr:content ノードのAEM以外のプロパティが抽出され、に追加されます。 **pge-notifications-config.json** アプリコンテンツの www ルートに含める JSON ファイル。
 
-AEMプロパティは、「cq」、「sling」または「jcr」という名前空間が付けられたプロパティです。 content-sync config ノードの「excludeProperties」プロパティを使用して、他のプロパティを除外できます。
+AEMのプロパティは、「cq」、「sling」または「jcr」で名前がスペースで区切られたプロパティです。 その他のプロパティは、content-sync config ノードの「excludeProperties」プロパティを使用して除外できます。
 
-* ***type - String*** - notificationsconfig
-* ***excludeProperties - String[]***  — 除外するプロパティ
+* ***タイプ – 文字列*** - notificationsconfig
+* ***excludeProperties – 文字列[]***  – 除外するプロパティ
 
-**contentsyncconfigcontent** 既存のコンテンツ同期設定からコンテンツを収集します。
+**contentsyncconfigcontent** 既存の ContentSync 設定からコンテンツを収集します。
 
-* ***type - String*** - contentsyncconfigcontent
-* ***path - String***  — 次のいずれかへのパス：
+* ***タイプ – 文字列*** - contentsyncconfigcontent
+* ***path – 文字列***  – 次のいずれかのパス。
 
-   * 別のコンテンツ同期設定
-   * をコンテンツパッケージに追加します（phonegap-exportTemplate プロパティを使用して ContentSync 設定を検索します）。
-   * をモバイルリソースに追加します（app-content のはそのリソースの下に見つかります。これらのコンテンツパッケージに pge-includeInBuild プロパティが true の場合、phonegap-exportTemplate を使用して ContentSync 設定が見つかります）。
+   * 別の ContentSync 設定
+   * コンテンツパッケージに追加します（ContentSync 設定を検索するには、phonegap-exportTemplate プロパティを使用します）。
+   * モバイル リソースに対する応答（app-content はそのリソースの下にあり、これらのコンテンツパッケージに pge-includeInBuild プロパティが true の場合は、phonegap-exportTemplate を使用して ContentSync 設定が検索されます）
 
-* ***autoCreateFirstUpdateBeforeImport — ブール値*** - true の場合、初期値を作成 **更新** が存在しない場合は、インポート前の target 設定で
+* ***autoCreateFirstUpdateBeforeImport - ブール値*** - true の場合、最初のを作成 **更新** 一度インポートする前のターゲット設定（まだ存在しない場合）
 
-* ***autoFillBeforeImport — ブール値*** - true の場合は、読み込む前にターゲット設定を更新または入力します
-* ***configSuffix - String*** - app-content の「phonegap-exportTemplate」プロパティで示されるパスに追加する文字列。 これは、異なる書き出しテンプレートを区別するために使用できます。 例えば、このプロパティを **&quot;-dev&quot;** 示す *&quot;/../../../appconfig-dev&quot;* 使用する必要がある ( *&quot;/../../../appconfig&quot;*) をクリックします。
+* ***autoFillBeforeImport - ブール値*** - true の場合、読み込む前にターゲット設定を更新/入力します
+* ***configSuffix – 文字列*** - app-content の「phonegap-exportTemplate」プロパティで示されるパスに追加する文字列。 これは、様々なエクスポートテンプレートを区別するために使用できます。 例えば、このプロパティはに設定できます。 **&quot;-dev&quot;** ということを示すために *&quot;/../../../appconfig-dev&quot;* 使用する必要がある（と対照的に） *「/../../../appconfig」*）に設定します。
 
-**app-assets** アプリインスタンスに関連付けられているすべてのアセットが含まれます。 このハンドラーには、指定されたパスの下に見つかったアセットと、アプリインスタンスの appAssetPath プロパティで参照されているアセットが含まれます。
+**app-assets** アプリインスタンスに関連付けられているすべてのアセットが含まれます。 このハンドラーには、指定されたパスで見つかったアセットと、アプリインスタンスの appAssetPath プロパティが参照するアセットが含まれます。
 
-* ***type - String*** - app-assets
+* ***タイプ – 文字列*** - app-assets
 
-* ***パス&#x200B;**-**文字列***  — アプリアセットが保存されるアプリインスタンス下の場所へのパス
+* ***パス&#x200B;**-**文字列*** - アプリアセットが保存されているアプリインスタンスの下の場所へのパス
 
-**mobileappoffers** ターゲットコンテンツをレンダリングするための、パーソナライゼーションの使用例に新しいコンテンツ同期ハンドラーが導入されました。 「mobileappoffers」ハンドラーは、コンテンツ作成者が作成した関連するターゲットオファーをレンダリングする方法を認識しています。 mobileappoffers ハンドラーは抽象ページ更新ハンドラーを拡張したので、多くのプロパティは類似しています。 mobileappoffers ハンドラーの詳細には、次のプロパティがあります。
+**mobileapffers** パーソナライゼーションのユースケースに、ターゲット設定されたコンテンツをレンダリングするための新しいコンテンツ同期ハンドラーが導入されました。 「mobileappoffers」ハンドラーは、コンテンツ作成者によって作成された、関連するターゲットオファーのレンダリング方法を認識しています。 mobileappoffers ハンドラーは抽象ページ更新ハンドラーを拡張するので、プロパティの多くは似ています。 mobileappoffers ハンドラーの詳細には、以下のプロパティがあります。
 
-mobileappsoffers ハンドラーは mobileappspages ハンドラーを拡張し、次のプロパティを追加します。
+mobileappsoffers ハンドラーは mobileappspages ハンドラーを実行し、次のプロパティを追加します。
 
-* ***locationRoot - String***  — モバイルアプリケーションの場所を指定します
-* ***includePageTypes - String***  — デフォルトで cq/personalization/components/teaserpage および cq/personalization/components/offerproxy をサポートします。
-* ***selector - String*** - tandt に設定する必要があります。
-* ***path - String*** — キャンペーンのブランドへのパス
+* ***locationRoot – 文字列*** - モバイルアプリケーションの場所を指定します
+* ***includePageTypes – 文字列*** - デフォルトでは、cq/personalization/components/teaserpage と cq/personalization/components/offerproxy がサポートされています
+* ***selector – 文字列*** - tandt に設定する必要があります
+* ***path – 文字列***- キャンペーンのブランドへのパス
 
-**mobileappconfig** mobileappconfig コンテンツ同期ハンドラーを使用すると、MobileAppsConfig.json に JSON データを挿入できます。 プロバイダークラスを登録するには、開発者の MobileAppsInfoProvider クラスをプロバイダーのリストに追加します。 ハンドラーは、MobileAppsInfoProviders のリストを反復し、プロバイダーが結果の JSON ファイルにデータを挿入できるようにします。 このハンドラーがサポートするプロパティのリストは次のとおりです。
+**mobileappconfig** mobileappconfig コンテンツ同期ハンドラーは、MobileAppsConfig.json に JSON データを挿入する方法を提供します。 プロバイダークラスを登録するには、開発者はプロバイダーのリストで MobileAppsInfoProvider クラスを追加します。 このハンドラーは、MobileAppsInfoProviders のリストを繰り返し処理し、結果の json ファイルにプロバイダーがデータを挿入できるようにします。 このハンドラーがサポートするプロパティのリストを以下に示します。
 
-* ***パス&#x200B;**-**文字列*** - pge-type=app-instance を持つアプリインスタンスノードへのパス、または/libs/mobileapps/core/components/instance を拡張する RT へのパス
-* ***providers - String*** `[]`  — 完全修飾された MobileAppsInfoProviders のリスト
-* ***targetRootDirectory - String*** - MobileAppsConfig.json ファイルの書き込み先ディレクトリ。
-* **fileName - String** - JSON の書き込み先のファイル名（オプション）。デフォルトは MobileAppsConfig.json です。
+* ***パス&#x200B;**-**文字列*** - page-type=app-instance または/libs/mobileapps/core/components/instance を拡張する RT を持つアプリインスタンスノードへのパス
+* ***providers – 文字列*** `[]`  – 完全修飾 MobileAppsInfoProviders のリスト
+* ***targetRootDirectory – 文字列*** - MobileAppsConfig.json ファイルの書き込み先のディレクトリ。
+* **fileName – 文字列** - JSON を書き込むファイルのオプション名。デフォルトは MobileAppsConfig.json です。
 
-複数の mobileappconfig ハンドラーを設定し、それぞれに一意のプロバイダーセットを設定して、異なる JSON ファイルに書き込むことができます。
+複数の mobileappconfig ハンドラーを、異なる JSON ファイルに書き込む一意のプロバイダーセットで設定することができます。
 
 ### コンテンツ同期ハンドラーのテスト {#testing-content-sync-handlers}
 
-**整合性チェックの手順** キャッシュをクリア
+**整合性チェックの手順** キャッシュのクリア
 
 * キャッシュのクリア
-* ハンドラーを実行（キャッシュを更新）
+* ハンドラーを実行します（キャッシュが更新されます）
 * ハンドラーを再度実行します（キャッシュは更新しないでください）
 
-**デバッグの手順**
+**デバッグ手順**
 
-* 設定を実行
-* 設定を書き出すか、デバイスでレビューします
-* レンダリングが失敗した場合は、見つからないかを確認します。 *styles/assets/libs* または、 *styles/assets/libs*
+* 設定を実行します
+* 設定をエクスポートするか、デバイスでレビュー
+* レンダリングに失敗した場合は、見つからないかどうかを確認します *スタイル/アセット/ライブラリ* または、への不正なパスをチェックします。 *スタイル/アセット/ライブラリ*
 
-**ログ** パッケージの OSGI ロガー設定を使用した ContentSync デバッグログの有効化 `com.day.cq.contentsync` これにより、実行されたハンドラーを追跡し、ハンドラーがキャッシュを更新し、キャッシュの更新をレポートしたかどうかを追跡できます。
+**ログ** パッケージの OSGI ロガー設定を使用した ContentSync デバッグログを有効にします `com.day.cq.contentsync` これにより、実行されたハンドラーと、ハンドラーがキャッシュを更新したかどうか、およびキャッシュの更新をレポートしたかどうかを追跡できます。
 
 ## その他のリソース {#additional-resources}
 
-管理者および開発者の役割と責務について詳しくは、以下のリソースを参照してください。
+管理者と開発者の役割と責任については、以下のリソースを参照してください。
 
 * [AEMを使用したAdobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)
 * [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
 
 >[!NOTE]
 >
->AEM Mobileアプリの開発を開始するには、 [ここ](/help/mobile/getting-started-aem-mobile.md).
+>AEM Mobile アプリケーションの開発を開始するには、次をクリックします [こちら](/help/mobile/getting-started-aem-mobile.md).

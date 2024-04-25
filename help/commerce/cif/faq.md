@@ -3,7 +3,9 @@ title: Commerce Integration Framework を使用した AEM と Commerce の統合
 description: Commerce Integration Framework を使用した AEM と Commerce の統合に関する FAQ
 exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 100%

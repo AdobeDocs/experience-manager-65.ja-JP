@@ -9,7 +9,8 @@ docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '5792'
 ht-degree: 99%
@@ -204,7 +205,7 @@ AEM WCM は詳細なログを記録します。クイックスタートを解凍
 
 ログファイルのローテーションとは、定期的に新しいファイルを作成してファイルサイズの拡大を制限するプロセスのことです。AEM では、`error.log` というログファイルが、次の指定されたルールに従って 1 日 1 回ローテーションされます。
 
-* The `error.log` ファイル名をパターンに従って変更 `{original_filename}.yyyy-MM-dd`. 例えば、2010年7月11日に、現在のログファイルの名前が `error.log-2010-07-10` に変更され、新しい `error.log` が作成されます。
+* この `error.log` ファイルはパターンに従って名前が変更されます `{original_filename}.yyyy-MM-dd`. 例えば、2010年7月11日に、現在のログファイルの名前が `error.log-2010-07-10` に変更され、新しい `error.log` が作成されます。
 
 * 以前のログファイルは削除されないので、古いログファイルを定期的にクリーンアップして、ディスクの使用量を制限する必要があります。
 

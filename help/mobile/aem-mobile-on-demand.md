@@ -1,14 +1,17 @@
 ---
 title: AEM Mobile On-Demand
-description: このページでは、AEM(Adobe Experience Manager) を使用した On-Demand Services アプリの開発の出発点として説明します。 このページでは、アプリの開発者に関連するトピックについて説明します。
+description: AEM（Adobe Experience Manager）で On-Demand Services アプリを開発するための出発点として、このページに従ってください。 ここでは、アプリの開発者に関連するトピックについて説明します。
 contentOwner: JYOTIKA SYAL
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 exl-id: a2134afd-4c0e-4a93-ac58-013b98fd9a09
-source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
+solution: Experience Manager
+feature: Mobile
+role: User
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '308'
-ht-degree: 5%
+ht-degree: 12%
 
 ---
 
@@ -16,35 +19,35 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
->AEMをコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>AEMをコンテンツ管理ソースとして使用していない場合は、を参照してください [AEM Mobile On-demand Services ヘルプ](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
->AEM Mobileを操作し、この入門ガイドの手順に従う前に、 [AEM](/help/sites-deploying/deploy.md).
+>AEM Mobileを使用してこの入門ガイドの手順に従う前に、ユーザーは以下について理解しておく必要があります [AEM](/help/sites-deploying/deploy.md).
 >
->AEM Mobile On-demand Servicesの環境を設定するには、 [AEM Mobile Application Dashboard または Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>AEM Mobile On-demand Services用に環境を設定するには、以下を参照してください [AEM Mobile Application Dashboard またはコントロール・センター](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An **AEM developer** を有効にするために、カスタム web テンプレートおよびコンポーネントを拡張および作成します。 *AEM Author* 美しく魅力的なモバイルエクスペリエンスを作成します。 これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけでなく、デバイスとAEMサーバー（任意のリモートサーバー）の両方とオムニチャネルサービスエンドポイントとの通信も可能です。 AEMの組み込みコンテンツエディターは、 *AEM Authors* ：アプリ内で、他のAdobe Marketing Cloudとの統合を含む、豊富で関連性の高いエクスペリエンスを作成します。
+An **AEM開発者** を拡張し、カスタム web テンプレートおよびコンポーネントを作成して、 *AEM オーサー* 美しく魅力的なモバイルエクスペリエンスを作成する。 これらのテンプレートとコンポーネントは、モバイルアプリ用に最適化されるだけでなく、デバイスとAEM サーバー（任意のリモートサーバー）の両方に通信して、オムニチャネルサービスのエンドポイントに提供されます。 AEMの組み込みコンテンツエディターの利用者 *AEM オーサー* Adobe Marketing Cloudの他の部分との統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成できます。
 
-AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを実行します。
+AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを担当します。
 
 * [アプリのテンプレートとコンポーネント](/help/mobile/app-templates-and-components1.md)
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
-* [コンテンツプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
+* [コンテンツのプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
 
-詳しくは、 [AEM Mobile Content Services の開発](/help/mobile/developing-content-services.md) を参照してください。
+参照： [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md) （コンテンツサービスの開発のために使用）。
 
 >[!NOTE]
 >
->An *AEM developer&#39;s* の役割は、テンプレートとコンポーネントの開発で始まったり終わったりしません。 An *AEM developer* では、標準の参照実装サンプルを単に拡張するのではなく、まったく新しいアプリを作成できます。
+>An *AEM開発者* 役割の出発点や終了点は、テンプレートやコンポーネントの開発ではありません。 An *AEM開発者* 標準提供のリファレンス実装サンプルを単に拡張するのではなく、まったく新しいアプリを作成できます。
 
 ## その他のリソース {#additional-resources}
 
-管理者および作成者の役割と責任について詳しくは、以下のリソースを参照してください。
+管理者と作成者の役割と責任については、以下のリソースを参照してください。
 
-* [AEM Mobile On-demand Servicesアプリ用のAEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
+* [AEM Mobile On-demand Services アプリケーション用AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
 * [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)

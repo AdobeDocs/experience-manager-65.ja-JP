@@ -8,7 +8,9 @@ topic-tags: deploying
 docset: aem65
 exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Deploying
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 49%
@@ -19,9 +21,9 @@ ht-degree: 49%
 
 ## はじめに {#introduction}
 
-Adobe Experience Manager(AEM) とのやり取りに関するAdobeの統計を送信することで、Adobe Experience Cloudの向上に役立ちます。 この情報には、会社のサイト訪問者に関するデータは含まれず、Adobeがユーザーエクスペリエンスを提供、サポート、改善するのに役立つ目的でのみ使用されます。
+Adobe Experience Manager（AEM）とのやり取りの方法に関するAdobe統計情報を送信することで、Adobe Experience Cloudの改善に役立てることができます。 この情報は、会社のサイト訪問者に関するデータを含まず、Adobeがユーザーエクスペリエンスを提供、サポート、向上させるために使用されるだけです。
 
-タッチ UI または Web コンソールを使用して、使用状況の統計の収集をオプトインできます。
+タッチ UI または web コンソールを使用して、使用状況の統計の収集をオプトインできます。
 
 >[!NOTE]
 >
@@ -31,13 +33,13 @@ Adobe Experience Manager(AEM) とのやり取りに関するAdobeの統計を送
 
 >[!NOTE]
 >
->いつでも、 [Web コンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) AEMオプトイン画面でオプトインオプションを選択しない場合もあります。
+>オプトアウトは、 [Web コンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) または、AEM オプトイン画面でオプトインオプションを選択しないことで解決できます。
 
 ## タッチ UI を使用したオプトイン {#opt-in-by-using-the-touch-ui}
 
-AEMを初めて起動する場合は、次のようにタッチ UI を使用してオプトインできます。
+AEMを初めて起動する際に、次のようにタッチ UI を使用してオプトインできます。
 
-1. AEMナビゲーション画面で、 **インボックス** （ベル）アイコンをクリックします。
+1. AEM ナビゲーション画面で、 **受信トレイ** （ベル）アイコン。
 
    ![usage_statisticsnavigationscreen](assets/usage_statisticsnavigationscreen.png)
 
@@ -49,11 +51,11 @@ AEMを初めて起動する場合は、次のようにタッチ UI を使用し�
 
    ![usage_statisticsopt-inscreen](assets/usage_statisticsopt-inscreen.png)
 
-1. 「**完了**&quot;.
+1. クリック &quot;**完了**」と入力します。
 
 ## Web コンソールを使用したオプトイン {#opt-in-by-using-the-web-console}
 
-次のように、Web コンソールを使用してオプトイン（またはオプトアウト）できます。
+次のように、web コンソールを使用してオプトイン（またはオプトアウト）できます。
 
 1. AEM ナビゲーション画面で、**ツール**／**操作** の順にクリックします。
 

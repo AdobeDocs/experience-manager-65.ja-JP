@@ -1,6 +1,6 @@
 ---
 title: 高度なスコアとバッジ
-description: 高度なスコアを設定して、メンバーをエキスパートとして識別するバッジの授与を許可する方法を説明します。
+description: メンバーをエキスパートとして識別するためのバッジを付与できるように、高度なスコアリングを設定する方法を説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -8,7 +8,9 @@ content-type: reference
 docset: aem65
 role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: 7f35fdee9dbca9dfd3992b56579d6d06633f8dec
+solution: Experience Manager
+feature: Communities
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
@@ -19,26 +21,26 @@ ht-degree: 2%
 
 ## 概要 {#overview}
 
-高度なスコアでは、メンバーをエキスパートとして識別するためのバッジを授与できます。 高度なスコアリングでは、数量に基づいてポイントを割り当てます *および* メンバーが作成したコンテンツの品質。一方、基本スコアでは、作成したコンテンツの量に基づいてポイントを割り当てます。
+高度なスコアリングでは、メンバーをエキスパートとして識別するためのバッジを付与できます。 アドバンススコアリングでは、数量に基づいてポイントが割り当てられます *および* メンバーが作成したコンテンツの品質。基本スコアリングでは、作成されたコンテンツの数量に基づいてポイントが割り当てられます。
 
-この違いは、スコアの計算に使用されるスコアリングエンジンによるものです。 基本スコアエンジンは、単純な計算を適用します。 高度なスコアエンジンは、トピックの自然言語処理 (NLP) を通じて推測される、価値のある関連コンテンツに貢献するアクティブなメンバーに対して報酬を与えるアダプティブなアルゴリズムです。
+この違いは、スコアの計算に使用されるスコアリングエンジンが原因です。 基本スコアリングエンジンでは、単純な数学が適用されます。 高度なスコアリングエンジンは、トピックの自然言語処理（NLP）を通じて推定される、価値のある関連コンテンツを投稿したアクティブなメンバーを報酬とするアダプティブアルゴリズムです。
 
-コンテンツの関連性に加えて、スコアリングアルゴリズムは、投票や回答の割合などのメンバーアクティビティを考慮します。 基本的なスコアリングには定量的なものも含まれますが、高度なスコアリングではアルゴリズム的に使用されます。
+コンテンツの関連性に加えて、スコアリングアルゴリズムは、投票および回答率などのメンバーアクティビティを考慮します。 基本スコアリングではこれらが定量的に含まれますが、高度なスコアリングではアルゴリズム的に使用されます。
 
-したがって、高度なスコアエンジンでは、分析を意味のあるものにするのに十分なデータが必要です。 作成されたコンテンツのボリュームと品質にアルゴリズムが継続的に調整されるので、エキスパートになるための達成度のしきい値は、常に再評価されます。 また、 *減衰* メンバーの古い投稿の エキスパートメンバーが、事前に決定した時点で、エキスパートの地位を得た問題への参加を停止した場合 ( [スコアエンジンの設定](#configurable-scoring-engine)) エキスパートとしての地位を失う可能性があります。
+したがって、高度なスコアリングエンジンでは、分析を有意義なものにするために十分なデータが必要です。 作成されるコンテンツの量と品質に合わせてアルゴリズムが継続的に調整されるので、エキスパートになるための達成基準は常に再評価されます。 という概念もあります。 *減衰* メンバーの古い役職の。 エキスパートメンバーが、事前に決定した時点で、エキスパートのステータスを獲得した案件への参加を中止した場合（ [スコアリングエンジン設定](#configurable-scoring-engine)）を使用すると、エキスパートとしての地位を失う可能性があります。
 
-高度なスコアの設定は、基本的なスコアとほぼ同じです。
+詳細スコアリングの設定は、基本スコアリングとほぼ同じです：
 
-* 基本的なスコアと高度なスコアおよびバッジルールは次のとおりです。 [コンテンツに適用済み](/help/communities/implementing-scoring.md#apply-rules-to-content) 同じ方法で
+* 基本および高度なスコアとバッジルールは次のとおりです [コンテンツに適用](/help/communities/implementing-scoring.md#apply-rules-to-content) 同じように。
 
-   * 基本スコアと高度なスコアおよびバッジルールを同じコンテンツに適用できます。
+   * 基本および高度なスコアおよびバッジルールを同じコンテンツに適用できます。
 
 * [コンポーネントのバッジの有効化](/help/communities/implementing-scoring.md#enable-badges-for-component) は汎用です。
 
-スコアルールとバッジルールの設定に違いは次のとおりです。
+スコアルールとバッジルールの設定の違いは次のとおりです。
 
-* 設定可能な高度なスコアエンジン
-* 高度なスコアルール：
+* 設定可能な高度なスコアリングエンジン
+* 高度なスコアリング・ルール：
 
    * `scoringType` を `advanced` に設定
    * が必要 `stopwords`
@@ -46,116 +48,116 @@ ht-degree: 2%
 * 高度なバッジルール：
 
    * `badgingType` を `advanced` に設定
-   * `badgingLevels` に設定 **賞に対する専門家レベルの数**
-   * が必要 `badgingPaths` しきい値の代わりにバッジの配列配列のマッピングがバッジを指します。
+   * `badgingLevels` をに設定 **評価するエキスパートレベルの数**
+   * が必要 `badgingPaths` しきい値の代わりにバッジの配列バッジへの配列マッピングポイント。
 
 >[!NOTE]
 >
->高度なスコアおよびバッジ機能を使用するには、 [エキスパート特定パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq610%2Fsocial%2Ffeaturepack%2Fcq-social-expert-identification-pkg).
+>高度なスコアおよびバッジ機能を使用するには、 [Expert Identification パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq610%2Fsocial%2Ffeaturepack%2Fcq-social-expert-identification-pkg).
 
-## 設定可能なスコアエンジン {#configurable-scoring-engine}
+## 設定可能なスコアリングエンジン {#configurable-scoring-engine}
 
-高度なスコアエンジンは、高度なスコアアルゴリズムに影響を与えるパラメーターを持つ OSGi 設定を提供します。
+高度なスコアリングエンジンでは、高度なスコアリングアルゴリズムに影響を与えるパラメーターを含む OSGi 設定が提供されます。
 
 ![advanced-scoring-engine](assets/advanced-scoring-engine.png)
 
-* **スコア付けの重み付け**
+* **スコアリング・ウェイト**
 
-  トピックの場合、スコアの計算時に最も優先度が高い動詞を指定します。 1 つ以上のトピックを入力できますが、次に限定されます **1 つの話題に対する 1 つの動詞**. 詳しくは、 [トピックと動詞](/help/communities/implementing-scoring.md#topics-and-verbs).
-次の形式で入力 `topic,verb` コンマはエスケープされます。 例：
+  トピックの場合、スコアを計算する際に最も高い優先度を付与する動詞を指定します。 1 つ以上のトピックを入力できますが、次の項目に制限されます **トピックごとに 1 つの動詞**. 参照： [トピックと動詞](/help/communities/implementing-scoring.md#topics-and-verbs).
+入力者 `topic,verb` コンマをエスケープしました。 次に例を示します。
   `/social/forum/hbs/social/forum\,ADD`
-デフォルトでは、Q&amp;A とフォーラムコンポーネントの ADD 動詞が設定されています。
+デフォルトでは、QnA およびフォーラムコンポーネント用の ADD 動詞に設定されています。
 
 * **スコアリング範囲**
 
-  高度なスコアの範囲は、この値（最大スコア）と 0（可能な限り低いスコア）で定義されます。
+  高度なスコアの範囲は、この値（最大スコア）と 0 （可能な限り低いスコア）で定義されます。
 
-  デフォルト値は 100 なので、スコアリング範囲は 0 ～ 100 です。
+  デフォルト値は 100 なので、スコアリング範囲は 0～100 です。
 
-* **エンティティのディケイ時間間隔**
+* **エンティティの減衰時間間隔**
 
-  このパラメーターは、すべてのエンティティのスコアが低下するまでの時間数を表します。 これは、コミュニティサイトのスコアに古いコンテンツを含めなくなるために必要です。
+  このパラメーターは、すべてのエンティティスコアが表示されるまでの時間数を表します。 これは、コミュニティサイトのスコアに古いコンテンツを含めないために必要になりました。
 
-  デフォルト値は216000時間（24 年以内）です。
+  デフォルト値は 216000 時間（最大 24 年）です。
 
-* **スコア付け成長率**
-この値は、0 スコアの範囲のスコアを指定します。この値を超えると、成長が遅くなり、エキスパートの数が制限されます。
+* **スコアリングの成長率**
+これは、0 のスコアリング範囲のスコアを指定します。この範囲を超えると、成長が遅くなり、エキスパートの数が制限されます。
 
   デフォルト値は 50 です。
 
 ## 高度なスコアルール {#advanced-scoring-rules}
 
-基本スコアでは、バッジの獲得に必要な数がわかっています。
+基本スコアリングでは、バッジを獲得するために必要な数がわかっています。
 
-高度なスコアリングでは、必要な量は、システム内の品質データの量に基づいて、常に調整されます。 スコアは、ベルカーブと同様の方法で継続的に計算されます。
+高度なスコアリングでは、必要な量は、システム内の品質データの量に基づいて常に調整されます。 スコアは、ベルカーブと同様の方法で継続的に計算されます。
 
-メンバーがアクティブでなくなったトピックに関するエキスパートバッジを獲得した場合、時間の経過と共に減衰が原因でバッジが失われる可能性があります。
+アクティブでなくなったトピックに関してエキスパートバッジを獲得したメンバーは、時間の経過と共に崩壊によってバッジを失う可能性があります。
 
 ### scoringType {#scoringtype}
 
-スコア付けルールは、スコア付けサブルールのセットで、それぞれが `scoringType`.
+スコアルールは、一連のスコアルールです。各サブルールでは、 `scoringType`.
 
-高度なスコアエンジンを呼び出すには、 `scoringType`は次のように設定する必要があります。 `advanced`.
+高度なスコアリングエンジンを呼び出すには、次の手順を実行します `scoringType`をに設定してください。 `advanced`.
 
-詳しくは、 [スコアサブルール](/help/communities/implementing-scoring.md#scoring-sub-rules).
+参照： [スコアリングサブルール](/help/communities/implementing-scoring.md#scoring-sub-rules).
 
 ![advanced-scoring-type](assets/advanced-scoring-type.png)
 
 ### ストップワード {#stopwords}
 
-高度なスコアリングパッケージでは、stopwords ファイルを含む設定フォルダーがインストールされます。
+高度なスコアリングパッケージでは、ストップワードファイルを含む設定フォルダーがインストールされます。
 
 * `/libs/settings/community/scoring/configuration/stopwords`
 
-高度なスコアアルゴリズムは、ストップワードファイルに含まれる単語のリストを使用して、コンテンツの処理中に無視される一般的な英語の単語を識別します。
+高度なスコアリングアルゴリズムでは、ストップワードファイルに含まれる単語のリストを使用して、コンテンツ処理中に無視される一般的な英単語が識別されます。
 
-このファイルが変更される可能性はありません。
+このファイルが変更されるとは限りません。
 
-ストップワードファイルがない場合、高度なスコアエンジンによってエラーが発生します。
+ストップワードファイルがない場合、詳細スコアリングエンジンでエラーが発生します。
 
 ## 高度なバッジルール {#advanced-badging-rules}
 
-高度なバッジルールのプロパティは、 [基本的なバッジルールのプロパティ](/help/communities/implementing-scoring.md#badging-rules).
+詳細なバッジルールのプロパティは、のプロパティとは異なります [基本のバッジルールプロパティ](/help/communities/implementing-scoring.md#badging-rules).
 
-ポイントをバッジ画像に関連付ける代わりに、許可されるエキスパートの数と、授与するバッジの画像を特定するだけで済みます。
+ポイントをバッジ画像に関連付けるのではなく、許可されるエキスパートの数と付与するバッジ画像を特定するだけで済みます。
 
 ![advanced-badging-rules](assets/advanced-badging-rules.png)
 
 <table>
  <tbody>
   <tr>
-   <th>プロパティ</th>
+   <th>Property</th>
    <th>タイプ</th>
    <th>値の説明</th>
   </tr>
   <tr>
    <td>badgingPath</td>
    <td>String[]</td>
-   <td><em>（必須）</em> badgingLevels の数までのバッジ画像の複数値文字列。 バッジ画像のパスを並べ替える必要があるので、最初の画像は最も高いエキスパートに与えられます。 badgingLevels で指定した数より少ないバッジがある場合、配列の最後のバッジが残りの配列を補完します。 エントリの例：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
+   <td><em>（必須）</em> バッジレベル数が上限のバッジ画像の複数値文字列。 バッジ画像のパスは、最初のパスが最高のエキスパートに授与されるように並べ替える必要があります。 バッジ数が badgingLevels で示される数よりも少ない場合は、配列の最後のバッジが配列の残りの部分を補完します。 エントリの例：<br /> <code>/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png</code></td>
   </tr>
   <tr>
-   <td>badgingLevels</td>
+   <td>バッジのレベル</td>
    <td>Long</td>
-   <td><em>（オプション）</em> 与える専門知識のレベルを指定します。 例えば、 <code>expert </code>および <code>almost expert</code> （バッジが 2 つ）の場合、値は 2 に設定する必要があります。 badgingLevel は、badgingPath プロパティにリストされるエキスパート関連のバッジ画像の数に対応している必要があります。 初期設定は 1 です。</td>
+   <td><em>（オプション）</em> 与えられる専門知識のレベルを指定します。 例えば、に <code>expert </code>および <code>almost expert</code> （2 つのバッジ）が表示されたら、値を 2 に設定する必要があります。 バッジレベルは、badgingPath プロパティにリストされているエキスパート関連のバッジ画像の数と対応する必要があります。 初期設定は 1 です。</td>
   </tr>
   <tr>
    <td>badgingType</td>
    <td>文字列</td>
-   <td><em>（必須）</em> スコアリングエンジンを「基本」または「詳細」として識別します。 "advanced"に設定し、それ以外の場合、デフォルトは"basic"です。</td>
+   <td><em>（必須）</em> スコアリングエンジンを「基本」または「詳細」として識別します。 「詳細」に設定します。設定しない場合、デフォルトは「基本」になります。</td>
   </tr>
   <tr>
    <td>scoringRules</td>
    <td>String[]</td>
-   <td><em>（オプション）</em> リストされた 1 つ以上のスコアルールで識別されるスコアイベントにバッジルールを制限する複数値の文字列。<br /> エントリの例：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> デフォルトでは、制限はありません。</td>
+   <td><em>（オプション）</em> リストされた 1 つ以上のスコアルールによって識別されるスコアリングイベントにバッジルールを制限するための複数値文字列。<br /> エントリの例：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> デフォルトは制限なしです。</td>
   </tr>
  </tbody>
 </table>
 
 ## 含まれるルールとバッジ {#included-rules-and-badge}
 
-### 含まれるバッジ {#included-badge}
+### Included Badge {#included-badge}
 
-このベータリリースには、報酬ベースのエキスパートバッジが 1 つ含まれます。
+このベータ版リリースには、報酬ベースのエキスパートバッジが 1 つ含まれています。
 
 * `expert`
 
@@ -163,20 +165,20 @@ ht-degree: 2%
 
 ![エキスパートバッジ](assets/included-badge.png)
 
-エキスパートバッジをアクティビティへの報酬として表示するには、次の点を確認します。
+エキスパートバッジをアクティビティの報酬として表示するには、次の点を確認してください。
 
-* `Badges` は、フォーラムや Q&amp;A コンポーネントなどの機能に対して有効になっています。
+* `Badges` フォーラムや QnA コンポーネントなど、その機能で有効になっている。
 
-* 高度なスコアルールとバッジルールは、コンポーネントが配置されているページ（または上位ページ）に適用されます
+* 高度なスコアおよびバッジルールは、コンポーネントが配置されているページ（または上位）に適用されます
 
-以下の基本情報を参照してください。
+次の基本情報を参照してください。
 
-* [コンポーネントに対するバッジの有効化](/help/communities/implementing-scoring.md#enableforcomponent)
+* [コンポーネントのバッジの有効化](/help/communities/implementing-scoring.md#enableforcomponent)
 * [ルールの適用](/help/communities/implementing-scoring.md#applytopage)
 
-### 含まれるスコアルールとサブルール {#included-scoring-rules-and-sub-rules}
+### スコアルールとサブルールを含む {#included-scoring-rules-and-sub-rules}
 
-ベータリリースには、 [フォーラム機能](/help/communities/functions.md#forum-function) （フォーラム機能のフォーラムおよびコメントコンポーネントごとに 1 つずつ）:
+ベータ版リリースには、の 2 つの高度なスコアルールが含まれています [フォーラム機能](/help/communities/functions.md#forum-function) （フォーラム機能のフォーラム コンポーネントとコメント コンポーネントごとに 1 つずつ）。
 
 1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
@@ -198,15 +200,15 @@ ht-degree: 2%
 
 **メモ：**
 
-* 両方 `rules` および `sub-rules` ノードはタイプです `cq:Page`.
-* `subRules` は String 型の属性です`[]` 規則に従って `jcr:content` ノード。
-* `sub-rules` は、様々なスコアリングルール間で共有できます。
-* `rules` 全員に対する読み取り権限を持つリポジトリの場所に存在する必要があります。
+* 両方 `rules` および `sub-rules` ノードのタイプはです `cq:Page`.
+* `subRules` は、文字列型の属性です`[]` 規則に従って `jcr:content` ノード。
+* `sub-rules` 様々なスコアルールで共有できます。
+* `rules` は、すべてのユーザーに対して読み取り権限を持つリポジトリの場所にある必要があります。
 * ルール名は、場所に関係なく一意である必要があります。
 
 ### 含まれるバッジルール {#included-badging-rules}
 
-このリリースには、 [高度なフォーラムおよびコメントのスコアリングルール](#included-scoring-rules-and-sub-rules).
+リリースには、に対応する 2 つの高度なバッジルールが含まれています [高度なフォーラムとコメントのスコアルール](#included-scoring-rules-and-sub-rules).
 
 * `/libs/settings/community/badging/rules/adv-comments-badging`
 * `/libs/settings/community/badging/rules/adv-forums-badging`
@@ -214,5 +216,5 @@ ht-degree: 2%
 **メモ：**
 
 * `rules` ノードのタイプは cq:Page です。
-* `rules` 全員に対する読み取り権限を持つリポジトリの場所に存在する必要があります。
+* `rules` は、すべてのユーザーに対して読み取り権限を持つリポジトリの場所にある必要があります。
 * ルール名は、場所に関係なく一意である必要があります。

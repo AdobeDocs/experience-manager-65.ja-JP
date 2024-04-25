@@ -1,15 +1,18 @@
 ---
 title: AEM PhoneGap の起動
-description: starterkit を使用して、Adobe Experience Manager Mobile開発の基本を学ぶ方法を学びます。
+description: Starterkit を使用して、Adobe Experience Manager Mobile開発の基本を実行する方法を説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
-source-git-commit: 06a6d4e0ba2aeaefcfb238233dd98e8bbd6731da
+solution: Experience Manager
+feature: Mobile
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 3%
+source-wordcount: '397'
+ht-degree: 8%
 
 ---
 
@@ -17,43 +20,43 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
+>単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-デベロッパーにとって、まず github のAdobe Experience Manager Mobile Starterkit を確認することが最適です
+開発者向けに、まずは github のAdobe Experience Manager Mobile Starterkit を参照することをお勧めします
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
-スターターキットを使用すると、AEM Mobile開発の基本を順を追って簡単に進むことができます。 まず、プロジェクトの作成とガバナンス、必要なツールのインストール、Maven アーキタイプの定義、構築、デプロイ、独自のエクスペリエンスの作成をおこないます。
+Starterkit を使用すると、AEM Mobileの開発の基本を簡単に説明できるので、作業を素早く進めることができます。 まず、プロジェクトの作成とガバナンスから始め、必要なツールをインストールし、Maven アーキタイプを定義します。次に、ビルド、デプロイしてから、独自のエクスペリエンスを作成します。
 
-開発者は、この例を PhoneGap を使用してAEM Mobileアプリケーションを試す出発点として使用できます。 スターターキットとリファレンスアプリケーションを実行すると、リッチなモバイルアプリケーションを作成するための基本を明確に理解できます。
+開発者は、PhoneGap を使用してAEM Mobile アプリケーションを試す際の出発点として、この例を使用できます。 Starterkit と参照アプリケーションを実行することで、豊富なモバイルアプリケーションを作成するための基本を明確に理解できます。
 
-* 以下を使用します。 [AEM PhoneGap スターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) :AEM Mobileカタログに適したアプリを作成します。
-* A [参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 既存のアプリをAEM Mobileに移行する場合も、新規に開始する場合も、AEM Mobileの新機能の多くを示す完全なソースが作成されています。
-* すべてのサンプルは github にあります。 [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) Maven でプロジェクトをブートストラップする機能を含めます。
-* ほとんどの会議交渉では [Kitchen Sink のチュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)は GitHub でも入手でき、Apache Cordova のネイティブ拡張機能の使用に重点を置いています。
+* の使用 [AEM PhoneGap スターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) AEM Mobileカタログに適したアプリを作成する。
+* A [参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 既存のアプリをAEM Mobileに移行する場合でも、新しく開始する場合でも、AEM Mobileの新機能の多くを示す完全なソースが作成されました。
+* すべてのサンプルは、次の github で入手できます。 [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) また、Maven を使用したプロジェクトのブートストラップも含まれます。
+* ほとんどの電話会議では、 [キッチン シンク チュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)は GitHub にもあり、Apache Cordova ネイティブ拡張機能の使用に重点を置いています。
 
 >[!NOTE]
 >
->スターターキットに慣れる機会があれば、Adobe Experience Managerについて学ぶことが重要です *コンポーネントとテンプレート。*
+>スターターキットに慣れる機会が得られたら、Adobe Experience Managerについて学ぶことが重要です *コンポーネントとテンプレート。*
 
 ## テンプレートとコンポーネント {#templates-and-components}
 
-AEM *テンプレート* および *コンポーネント* 事業部門の所有者がカスタムエクスペリエンスを作成できるようにします。 との両方のテンプレート *コンポーネント* は、標準で用意されている場合も、開発者が既存のコンポーネントを拡張する場合も、緑のフィールド（詳細）を作成する場合も、ユーザーがカスタムで開発する場合もあります。 *テンプレート* および *コンポーネント* は、AEM作成者がドラッグ&amp;ドロップして魅力的で関連性の高いエクスペリエンスを作成できる要素です。
+AEM *テンプレート* および *Components* 事業部門の所有者がカスタムエクスペリエンスを作成できるようにします。 両方*テンプレート*および *Components* は、すぐに使用できますが、既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成して、開発者がカスタムで開発することもできます。 *テンプレート* および *Components* AEM オーサーはをドラッグ&amp;ドロップして、魅力的で関連性の高いエクスペリエンスを作成できます。
 
 1. [コンポーネントの作成](/help/sites-developing/components.md)
 1. [テンプレートの作成](/help/sites-developing/templates.md)
 
-上記の 2 つの手順について明確に理解したら、次の手順に進みます。
+上記の 2 つの手順をよく理解したら、次の場所に移動します。
 
-1. [AEM Mobileアプリの構造](/help/mobile/phonegap-structure-an-app.md)
-1. [AEM Mobileアプリの詳細な構造](/help/mobile/phonegap-apps-arch.md)
-1. [既存のアプリでAEM Mobileを使用できますか？](/help/mobile/phonegap-adding-content-to-imported-app.md)
+1. [AEM Mobile アプリケーションの構造](/help/mobile/phonegap-structure-an-app.md)
+1. [AEM Mobile アプリの詳細な構造](/help/mobile/phonegap-apps-arch.md)
+1. [既存のアプリは、AEM Mobileに対応していますか？](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
 ## 次の手順 {#the-next-steps}
 
-1. [AEM Mobileアプリのエクスペリエンスを開始する](/help/mobile/starting-aem-phonegap-app.md)
-1. [アプリのコンテンツを管理](/help/mobile/phonegap-manage-app-content.md)
-1. [アプリケーションのビルド](/help/mobile/building-app-mobile-phonegap.md)
-1. [アプリのモバイル分析を使用してAdobeのパフォーマンスを追跡する](/help/mobile/phonegap-intro-to-app-analytics.md)
-1. [Adobe Targetでパーソナライズされたアプリエクスペリエンスを配信](/help/mobile/phonegap-aem-mobile-content-personalization.md)
-1. [ユーザーに重要なメッセージを送信する](/help/mobile/phonegap-push-notifications.md)
+1. [AEM Mobile アプリのエクスペリエンスを開始](/help/mobile/starting-aem-phonegap-app.md)
+1. [アプリのコンテンツの管理](/help/mobile/phonegap-manage-app-content.md)
+1. [アプリケーションの構築](/help/mobile/building-app-mobile-phonegap.md)
+1. [Adobeモバイル分析を使用してアプリのパフォーマンスを追跡する](/help/mobile/phonegap-intro-to-app-analytics.md)
+1. [Adobe Targetでパーソナライズされたアプリエクスペリエンスを提供する](/help/mobile/phonegap-aem-mobile-content-personalization.md)
+1. [ユーザーへの重要なメッセージの送信](/help/mobile/phonegap-push-notifications.md)

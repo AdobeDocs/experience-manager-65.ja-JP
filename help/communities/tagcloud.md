@@ -1,12 +1,15 @@
 ---
 title: Social タグクラウドの使用
-description: サインインしたコミュニティメンバーがトレンドトピックをすばやく識別し、タグ付きコンテンツを見つけられるようにするページに、Social タグクラウドコンポーネントを追加する方法を説明します。
+description: ログインしたコミュニティメンバーがトレンドのトピックをすばやく識別し、タグ付けされたコンテンツを見つけることができるようにするページにソーシャルタグクラウドコンポーネントを追加する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 56af5362-78de-4308-8958-63a45e8573cc
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 6%
@@ -17,106 +20,106 @@ ht-degree: 6%
 
 ## はじめに {#introduction}
 
-The `Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーが適用したタグをハイライトします。 これは、トレンドトピックを識別し、サイト訪問者がタグ付きコンテンツをすばやく見つけられるようにする手段です。
+この `Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーによって適用されたタグをハイライト表示します。 これは、トレンドのトピックを識別し、サイト訪問者がタグ付きコンテンツをすばやく見つけられるようにするための手段です。
 
-現在のトレンドを識別する別の方法として、 [アクティビティのトレンド](trends.md).
+現在のトレンドを特定するもう一つの方法は、次をご覧ください。 [アクティビティのトレンド](trends.md).
 
-このページでは、 `Social Tag Cloud` コンポーネントダイアログの設定およびユーザーエクスペリエンスについて説明します。
+このページは、 `Social Tag Cloud` コンポーネントダイアログの設定と、ユーザーエクスペリエンスについての説明です。
 
-開発者向けの詳しい情報については、 [タグの基本事項](tag.md).
+開発者向けの詳細については、を参照してください。 [タグの基本事項](tag.md).
 
-詳しくは、 [タグの管理](../../help/sites-administering/tags.md) タグの作成と管理、およびタグが適用されるコンテンツについて説明します。
+タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](../../help/sites-administering/tags.md)を参照してください。
 
-## Social タグクラウドの追加 {#adding-a-social-tag-cloud}
+## ソーシャルタグクラウドの追加 {#adding-a-social-tag-cloud}
 
-を追加するには、以下を実行します。 `Social Tag Cloud` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して `Communities / Social Tag Cloud` をクリックし、ページ上のタグクラウドが表示される場所にドラッグします。
+を追加します `Social Tag Cloud` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます `Communities / Social Tag Cloud` タグクラウドが表示されるページの場所にドラッグします。
 
-必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
+詳細については、 [Communities コンポーネントの基本](basics.md).
 
-次の場合に [必要なクライアント側ライブラリ](tag.md#essentials-for-client-side) が含まれる場合、この方法で `Social Tag Cloud` コンポーネントが表示されます。
+いつ [必要なクライアントサイドライブラリ](tag.md#essentials-for-client-side) が含まれる場合、このようにして `Social Tag Cloud` コンポーネントが表示されます。
 
 ![social-tag](assets/social-tag.png)
 
 ## Social タグクラウドの設定 {#configuring-social-tag-cloud}
 
-配置した `Social Tag Cloud` コンポーネントを使用して、 `Configure` 編集ダイアログを開くアイコン。
+配置されたを選択します。 `Social Tag Cloud` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
 
 ![設定](assets/configure-new.png)
 
-の下 **[!UICONTROL Social タグクラウド]** タブで、表示するタグを指定し、タグがアクティブなリンクの場合は、検索結果のページの場所を指定します。
+の下 **[!UICONTROL Social タグクラウド]** タブで、表示するタグを指定します。タグがアクティブなリンクの場合は、検索結果を表示するページの場所を指定します。
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
-* **[!UICONTROL 表示する Social タグ]**
-表示する UGC タグを指定します。 プルダウンオプションは次のとおりです。
+* **[!UICONTROL 表示するソーシャルタグ]**
+表示する UGC タグを特定します。 プルダウンオプションは次のとおりです。
 
    * `From page and child pages`
    * `All tags`
 
-  デフォルトはです。 `From page and child pages`（「page」はを指します） **ページ** を設定します。
+  デフォルトはです `From page and child pages`（「ページ」はを指します） **ページ** を以下に設定します。
 
 * **[!UICONTROL Page]**
 
-  （そうでない場合は必須） `All tags)` ページの UGC へのパス。 空白の場合、初期設定は現在のページです。
+  （必要ない場合） `All tags)` ページの UGC へのパス。 空白のままにした場合、デフォルトは現在のページです。
 
 * **[!UICONTROL タグにリンクがありません]**
 
-  オンにすると、タグはプレーンテキストとしてタグクラウドに表示されます。 オフにすると、タグは、そのタグが適用されるすべてのコンテンツを検索するアクティブなリンクとして表示されます。 デフォルトはオフで、に必要な **[!UICONTROL 検索結果のパス]** を設定します。
+  オンにすると、タグはタグクラウドにプレーンテキストとして表示されます。 オフにすると、タグは、そのタグが適用されるすべてのコンテンツを検索するアクティブなリンクとして表示されます。 デフォルトではオフで、次が必要です **[!UICONTROL 検索結果のパス]** を設定します。
 
 * **[!UICONTROL 検索結果のパス]**
 
-  ページのパス。 `Search Result` コンポーネントが配置され、 **ページ** 設定。
+  が含まれているページへのパス `Search Result` コンポーネントが配置され、 **ページ** の設定値。
 
-## Social タグクラウドの表示を変更 {#change-display-of-social-tag-cloud}
+## ソーシャル タグ クラウドの表示を変更する {#change-display-of-social-tag-cloud}
 
-表示を編集するには **Social タグクラウド**，と入力します。 [デザインモード](../../help/sites-authoring/default-components-designmode.md) をクリックし、配置した `Social Tag Cloud` 追加のタブを含むダイアログを開くコンポーネント。
+の表示を編集するには **Social タグクラウド**、と入力します [デザインモード](../../help/sites-authoring/default-components-designmode.md) 配置されたをダブルクリックします。 `Social Tag Cloud` コンポーネント：追加のタブを持つダイアログを開きます。
 
-の使用 **[!UICONTROL Social タグクラウド（デザイン）]** タブで、タグの表示方法を指定します。 タグは、単純なタグ、デフォルト名前空間の単一の単語、階層的な分類のいずれかになります。
+使用， **[!UICONTROL Social タグクラウド（デザイン）]** タブで、タグの表示方法を指定します。 タグには、単純なタグ、デフォルトの名前空間に含まれる 1 つの単語、階層的な分類などがあります。
 
 ![social-tag-cloud-design](assets/social-tag-cloud-design.png)
 
-* **[!UICONTROL タイトルの完全なパスを表示]**
+* **[!UICONTROL フルタイトルパスを表示]**
 
-  オンにすると、適用された各タグの親タグと名前空間のタイトルが表示されます。
+  オンにした場合、適用された各タグの親タグと名前空間のタイトルが表示されます。
 
   次に例を示します。
 
-   * チェック済み: `Geometrixx Media: Gadgets / Cars`
-   * 未チェック: `Cars`
+   * 確認済み： `Geometrixx Media: Gadgets / Cars`
+   * オフ： `Cars`
 
-  単純なタグには違いはありません。
+  単純なタグに違いはありません。
 
-  初期設定はオフです。
+  デフォルトではオフになっています。
 
 * **[!UICONTROL リーフタグのみを表示]**
 
   オンにすると、他のタグを含まない、適用されたタグのみが表示されます。
 
-  例えば、次のタグ ID が指定されます。
+  例えば、次のタグ ID の場合：
 
   `Geometrixx Media: Gadgets / Cars`
 
   次の 3 つのタグを適用できます。
 
-  `Geometrixx Media (the namespace)`, `Gadgets`, および `Cars`
+  `Geometrixx Media (the namespace)`、`Gadgets` および `Cars`
 
-   * オン：のみ `Cars` が表示されます（適用されている場合）。
-   * オフ： `Geometrixx Media`, `Gadgets`、および `Cars` が表示されます（適用されている場合）。
+   * オン：のみ `Cars` 適用されている場合は表示されます。
+   * オフ： `Geometrixx Media`, `Gadgets`、および `Cars` 適用されている場合は表示されます。
 
   単純なタグはリーフタグです。
 
-  初期設定はオフです。
+  デフォルトではオフになっています。
 
-* **[!UICONTROL リンクテンプレート]**
+* **[!UICONTROL テンプレートをリンク]**
 
-  コンポーネント編集ダイアログでリンクを有効にした場合、タグクラウドにリンクを表示するために使用される、デフォルト以外のテンプレートです。
+  コンポーネントの編集ダイアログでリンクを有効にした場合に、タグクラウドにリンクを表示するために使用されるテンプレート（デフォルト以外）。
 
-* **[!UICONTROL すべてのタグに同じサイズ]**
+* **[!UICONTROL すべてのタグで同じサイズ]**
 
-  オンにすると、タグクラウド内のすべての単語に同じスタイルが設定されます。 オフにすると、単語のスタイルは使用方法に応じて異なります。 初期設定はオフです。
+  オンにすると、タグクラウド内のすべての単語のスタイルが同じになります。 オフにすると、単語のスタイルは使用法に応じて異なります。 デフォルトではオフになっています。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [タグの基本事項](tag.md) 開発者向けのページ
+詳しくは、 [タグの基本事項](tag.md) 開発者向けのページです。
 
-詳しくは、 [ユーザー生成コンテンツのタグ付け](tag-ugc.md) (UGC) を参照してください。
+参照： [ユーザー生成コンテンツのタグ付け](tag-ugc.md) タグの作成と管理については、（UGC）を参照してください。

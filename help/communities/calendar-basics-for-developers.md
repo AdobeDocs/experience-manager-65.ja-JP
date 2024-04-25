@@ -1,12 +1,15 @@
 ---
 title: カレンダーの基本事項
-description: カレンダー機能の使用方法については、Experience Managerコミュニティで説明します。 カレンダーは、権限を持つメンバーのユーザーグループの識別をサポートします。
+description: Experience Managerコミュニティでカレンダー機能を使用する方法を説明します。 カレンダーでは、権限を持つメンバーユーザーグループの識別がサポートされています。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 4%
@@ -15,26 +18,26 @@ ht-degree: 4%
 
 # カレンダーの基本事項 {#calendar-essentials}
 
-このページでは、カレンダー機能の使用に関する重要な情報を提供します。
+このページでは、カレンダー機能の操作に関する重要な情報を提供します。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアントサイドの基本事項 {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/calendar/components/hbs/calendar</td>
+   <td>ソーシャル/カレンダー/コンポーネント/hbs/カレンダー</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>includable</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.calendar</td>
   </tr>
   <tr>
-   <td> <strong>テンプレート</strong></td>
+   <td> <strong>templates</strong></td>
    <td>/libs/social/calendar/components/hbs/calendar/calendar.hbs</td>
    <td> </td>
   </tr>
@@ -44,34 +47,34 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>参照 <a href="calendar.md">カレンダーの使用</a></td>
+   <td>参照： <a href="calendar.md">カレンダーの使用</a></td>
   </tr>
  </tbody>
 </table>
 
-* [クライアント側のカスタマイズ](client-customize.md)
+* [クライアントサイドのカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバーサイドの初期設定 {#essentials-for-server-side}
 
 * [カレンダー API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
 * [カレンダーエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
 
-* [サーバー側のカスタマイズ](server-customize.md)
+* [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### カレンダー機能 {#calendar-function}
 
-を含むコミュニティサイト構造 [カレンダー関数](functions.md#calendar-function) には、 `calendar` コンポーネントが設定されました。 カレンダー関数は、 [権限を持つメンバーユーザーグループ](users.md#privileged-members-group).
+を含むコミュニティサイト構造 [カレンダー関数](functions.md#calendar-function) 持つ `calendar` コンポーネントが設定されました。 Calendar 関数は、タグの識別をサポートしています。 [特権メンバーユーザーグループ](users.md#privileged-members-group).
 
-### カレンダー投稿 (UGC) へのアクセス {#accessing-calendar-posts-ugc}
+### カレンダー投稿へのアクセス（UGC） {#accessing-calendar-posts-ugc}
 
-AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場合は、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムで UGC にアクセスできます。
+AEM 6.1 Communities 現在、の使用 [共通店舗](working-with-srp.md) （UGC の場合、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます）。
 
-**リポジトリ内の UGC の場所と形式は、警告なしで変更される場合があります**.
+**リポジトリ内の UGC の場所と形式は、警告なしに変更される場合があります**.
 
 以下を参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
-* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします
+* [ストレージリソースプロバイダーの概要](srp.md)  – 概要とリポジトリの使用状況の概要
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例
+* [SRP による UGC へのアクセス](accessing-ugc-with-srp.md) - コーディングのガイドライン
+* [SocialUtils のリファクタリング](socialutils.md)  – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

@@ -1,55 +1,58 @@
 ---
 title: 評価の使用
-description: サインインしたコミュニティメンバーがコンテンツを評価して意見を表明できるページに評価コンポーネントを追加する方法を説明します。
+description: ログインしたコミュニティメンバーがコンテンツを評価して意見を表明できるページに評価コンポーネントを追加する方法を説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 exl-id: 7534ad5d-b408-4b09-bd3d-da7ab009d55b
-source-git-commit: 62d4a8b3af5031ccc539d78f7d06a8cd1fec7af1
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # 評価の使用 {#using-ratings}
 
-The `Rating` コンポーネントは、スタンドアロンで、または他のコミュニティ機能と共に使用されます。 このコンポーネントを使用すると、サインインしたコミュニティメンバーは、コンテンツを評価して意見を表明できます。
+この `Rating` コンポーネントは、スタンドアロンで使用するか、他の Communities 機能と共に使用します。 このコンポーネントを使用すると、ログインしたコミュニティメンバーが、コンテンツを評価して意見を表明できます。
 
 ## ページへの評価の追加 {#adding-a-rating-to-a-page}
 
-を追加するには、以下を実行します。 `Rating` コンポーネントをオーサリングモードでページに追加する場合は、 `Communities / Rating` をクリックし、ページ上の適切な位置（メンバーが評価する機能を基準とした位置など）にドラッグします。
+を追加します `Rating` オーサーモードのページへのコンポーネントの移動 `Communities / Rating` そして、メンバーが評価するフィーチャーに対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
+詳細については、 [Communities コンポーネントの基本](basics.md).
 
-次の場合に [必要なクライアント側ライブラリ](rating-basics.md#essentials-for-client-side) が含まれる場合、この方法で `Rating` コンポーネントが表示されます。
+いつ [必要なクライアントサイドライブラリ](rating-basics.md#essentials-for-client-side) が含まれる場合、このようにして `Rating` コンポーネントが表示されます。
 
-![評価](assets/rating.png)
+![格付け](assets/rating.png)
 
 ## 評価の設定 {#configuring-rating}
 
-配置した `Rating` コンポーネントを使用して、 `Configure` 編集ダイアログを開くアイコン。
+配置されたを選択します。 `Rating` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
 
 ![configure-new](assets/configure-new.png)
 
-の下 **[!UICONTROL テキストとラベル]** 」タブで、評価の内部識別子を指定します。
+の下 **[!UICONTROL テキストとラベル]** タブで、評価の内部識別子を指定します。
 
 ![tallyname](assets/tallyname.png)
 
 **[!UICONTROL 集計名]**
-(*必須*) `Rating` このインスタンスを一意に識別する リポジトリの有効なノード名を指定する必要があります。
+（*必須*）の簡単な名前 `Rating` このインスタンスを一意に識別します。 リポジトリの有効なノード名である必要があります。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
 ### メンバー {#members}
 
-メンバーごとに 1 つの評価のみが許可されます。 会員は、いつでも評価を変更することができます。
+メンバーごとに 1 つの評価のみが許可されます。 会員は、いつでも格付けを変更することができる。
 
 ### 匿名 {#anonymous}
 
-匿名での評価の投稿はサポートされていません。 サイト訪問者が参加するには、登録（メンバーになる）してサインインする必要があります。
+評価の匿名の投稿はサポートされていません。 サイト訪問者が参加するには、登録（メンバーになる）とログインが必要です。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [評価の基本事項](rating-basics.md) 開発者向けのページ
+詳しくは、 [評価の基本事項](rating-basics.md) 開発者向けのページです。

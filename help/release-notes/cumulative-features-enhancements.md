@@ -8,7 +8,7 @@ role: User,Admin,Architect,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
 solution: Experience Manager
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2334'
 ht-degree: 100%
 

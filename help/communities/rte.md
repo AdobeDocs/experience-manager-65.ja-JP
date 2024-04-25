@@ -6,10 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 exl-id: 821e32f4-da8d-4bbb-936a-0844b8a24cdd
-source-git-commit: f03d0ab9d0f491441378e16e1590d33651f064b5
+solution: Experience Manager
+feature: Communities
+role: Admin
+source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 6%
+source-wordcount: '237'
+ht-degree: 7%
 
 ---
 
@@ -17,19 +20,19 @@ ht-degree: 6%
 
 ## 概要 {#overview}
 
-リッチテキストエディター (RTE) を使用すると、マークアップを含むテキストを入力できます。
+リッチテキストエディター（RTE）を使用すると、マークアップでテキストを入力できます。
 
-コミュニティコンポーネントの場合は、 [オーサー環境のリッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)パブリッシュ環境で入力されたテキストに影響します。
+コミュニティ コンポーネントの場合は、に類似しています。 [オーサー環境でのリッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)は、パブリッシュ環境に入力されるテキストに影響します。
 
 ![rich-text-editor](assets/rich-text-editor.png)
 
 ## リッチテキストエディターの有効化 {#enabling-rich-text-editor}
 
-ユーザー生成コンテンツ (UGC) を許可するコミュニティコンポーネントを有効にして、RTE を許可できます。 コンポーネントがページに追加されたか、 [関数](functions.md)の場合、RTE はデフォルトで有効になっている場合と無効になっている場合があります。
+ユーザー生成コンテンツ（UGC）を許可する Communities コンポーネントを有効にして、RTE を許可できます。 コンポーネントがページに追加されたか、内に含まれているか [関数](functions.md)、RTE はデフォルトで有効になっている場合とされていない場合があります。
 
-有効になっていない場合は、「 [オーサー編集モード](sites-console.md#authoring-site-content)をクリックし、編集するコンポーネントを選択して、 `Rich Text Editor` チェックボックス。
+有効になっていない場合は、 [オーサー編集モード](sites-console.md#authoring-site-content)で、編集するコンポーネントを選択し、 `Rich Text Editor` チェックボックス。
 
-RTE は、次のコミュニティコンポーネントで使用できます。
+RTE は、次の Communities コンポーネントで使用できます。
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -42,23 +45,23 @@ RTE は、次のコミュニティコンポーネントで使用できます。
 
 ## カスタマイズ {#customization}
 
-実装がに基づいているので、リッチテキストエディターのカスタマイズが可能です。 [CKEditor](https://ckeditor.com/).
+実装は以下に基づいているので、リッチテキストエディターのカスタマイズが可能です [CKEditor](https://ckeditor.com/).
 
-コミュニティコンポーネントの現在の設定は、 `cq.social.  scf   clientlib`リポジトリ ( ) で、
+Communities コンポーネントの現在の設定は、 `cq.social.  scf   clientlib`、のリポジトリにあります。
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
-cq.social.scf clientlib は変更しないでください。将来のアップグレードで編集が上書きされる可能性があるからです。
+今後のアップグレードでは編集内容が上書きされる可能性があるので、cq.social.scf clientlib の変更はお勧めしません。
 
 ### カスタマイズの例：インラインリンク {#example-customization-inline-links}
 
-セキュリティ上の問題により、ハイパーリンクオプションは、デフォルトでメンバーに表示されるリッチテキストアイコンのセットに含まれません。 UGC で href が許可されている場合、悪戯の能力は大きくなります。
+セキュリティ上の問題があるため、既定でメンバーに表示されるリッチ テキスト アイコンのセットには、ハイパーリンク オプションは含まれません。 UGC で hrefs が許可されている場合、いたずらの能力は広範囲です。
 
-ツールバーにハイパーリンクオプションを追加するには、次の手順に従います。
+ツールバーにハイパーリンクオプションを追加するには：
 
-* ツールバーの名前を `links`&quot;
+* 「」という名前のツールバーを追加 `links`“
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* 選択 **[!UICONTROL すべて保存]**
+* を選択 **[!UICONTROL すべて保存]**
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 

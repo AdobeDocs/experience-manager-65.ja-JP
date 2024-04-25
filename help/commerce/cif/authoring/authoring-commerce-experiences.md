@@ -3,7 +3,9 @@ title: コマースエクスペリエンスのオーサリング
 description: CIF アドオンは、コマース固有の機能を使用して Adobe Experience Manager オーサリングを拡張します。
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 solution: Experience Manager,Commerce
-source-git-commit: 1751bfb32386685e3a159939113b9667b5e17f0e
+feature: Commerce Integration Framework
+role: Admin, Developer
+source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 100%
