@@ -10,7 +10,7 @@ role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 100%
@@ -205,7 +205,7 @@ Adobe 開発者コンソールで、プロジェクトと API を Brand Portal �
 
 Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which is required in setting up the IMS Account configurations.
 
-1. Login to Adobe I/O Console with system administrator privileges on the IMS organization of the Brand Portal tenant.
+1. Login to Adobe Developer Console with system administrator privileges on the IMS organization of the Brand Portal tenant.
 
    Default URL: [https://console.adobe.io/](https://console.adobe.io/) 
 
