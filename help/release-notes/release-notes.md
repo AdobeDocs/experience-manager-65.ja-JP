@@ -7,9 +7,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 source-git-commit: 685d8016400570170dc02dc2be77651aea6e028c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3783'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 94%
 
 このリリースの主な機能と機能強化は次のとおりです。
 
-* Dynamic Media では、Apple iOS／iPadOS の可逆 HEIC 画像形式をサポートするようになりました。 Dynamic Media 画像サービングおよびレンダリング API の[fmt](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt)を参照してください。
+* Dynamic Media では、Apple iOS／iPadOS の可逆 HEIC 画像形式をサポートするようになりました。 Dynamic Media 画像サービングおよびレンダリング API の[fmt](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt)を参照してください。
 * マルチサイトマネージャー（MSM）では、エクスペリエンスフラグメントをライブコピーに効率的に一括ロールアウトするために、フォルダーやサブフォルダーを含むエクスペリエンスフラグメント構造をサポートするようになりました。
 
 ### [!DNL Forms]
@@ -144,7 +144,7 @@ ht-degree: 94%
 
 #### [!DNL Dynamic Media]{#assets-dm-6520}
 
-* 2024年5月1日（PT）を以て、Adobe Dynamic Media は以下のサポートを終了します。
+* 2024年5月1日（PT）以降、Adobe Dynamic Media は次のサポートを終了します。
 
    * SSL（Secure Socket Layer）2.0
    * SSL 3.0
@@ -165,7 +165,7 @@ ht-degree: 94%
       * TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
       * TLS_RSA_WITH_SDES_EDE_CBC_SHA
 
-  [Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
+  詳しくは、[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 * アセットを AEM にアップロードすると、`Update_asset` ワークフローがトリガーされます。 ただし、ワークフローが完了することはありません。 ワークフローは、製品のアップロード手順までのみ完了します。 次の手順は Scene7 のバッチアップロードですが、そのプロセスは AEM に取り込まれていません。 （ASSETS-30443）
 * Dynamic Media コンポーネントで Dynamic Media 以外のビデオを適切に処理するための、より優れた方法が必要です。 この問題により、`dynamicmedia_sly.js` のインスタンス化中に例外が発生していました。 （ASSETS-31301）
 * プレビューは、すべてのアセット、アダプティブビデオセットおよびビデオで機能します。 ただし、`.m3u8` ファイルの場合は 403 エラーがスローされます（ちなみに、パブリックリンク経由でも機能します）。 （ASSETS-31882）
@@ -184,7 +184,7 @@ ht-degree: 94%
 * ユーザーがラジオボタングループの既存のオプションを更新すると、誤った翻訳値が公開されます。 （FORMS-12575）
 * ユーザーが Android™ デバイスのアダプティブフォームに文字を追加する際、Android™ デバイスでフォーカスアウトすると、定義済みの最大文字数を超える文字をテキストフィールドに入力できます。 ただし、ユーザーが HTML5 入力タイプを選択した場合には機能します。 （FORMS-12748）
 * ラベルの Aria® labelledby と Aria® label が一致しているので、スクリーンリーダーはこれら 2 つを区別できません。この問題を解決するには、フォームフィールドのラベルの「aria-labelledby」を「aria-descriptionby」に置き換えます。（FORMS-12436）
-* 作成者は、「アダプティブForms – 埋め込み（v2）」コンポーネントを使用して、Sites ページにアダプティブフォームを埋め込みます。 埋め込まれたフォームにその上に CAPTCHA コンポーネント（CAPTCHA サービス/reCAPTCHA、設定/reCAPTCHA-v2）が含まれている場合、サイトページがレンダリングされません。 この問題は、ユーザーがオーサーインスタンスで「公開済みとして表示」を使用してサイトページを表示しようとした場合に発生します。 次のエラーが（FORMS-11859）として表示されます。
+* 作成者は、「アダプティブフォーム - 埋め込み（v2）」コンポーネントを使用して、Sites ページにアダプティブフォームを埋め込みます。埋め込みフォームに CAPTCHA コンポーネントが含まれている場合（CAPTCHA サービス／reCAPTCHA、設定／reCAPTCHA-v2）、サイトページはレンダリングされません。これは、ユーザーがオーサーインスタンスで「公開済みとして表示」を使用してサイトページを表示しようとすると発生します。次のエラーが（FORMS-11859）として表示されます。
   `Failed to construct 'URL': Invalid base URL at Object.renderRecaptcha`
 
 * ユーザーが日付選択コンポーネントを使用して日付を選択しようとすると、値は更新されず、NULL と表示されます。（FORMS-12742、FORMS-12736）
@@ -223,11 +223,11 @@ ht-degree: 94%
 
 * AEM Forms 6.5.18.0 では、アダプティブフォームを公開すると、変更していない場合でも、ポリシーを含むすべての依存関係が再公開されます。（FORMS-10454）
 
-* JBoss® Turnkey セットアップを使用してAEM Forms 6.5.19.1 で Configuration Manager を実行中に「Microsoft® SharePoint」をクリックすると、LiveCycle JBoss® EAR のインストールが失敗し、次のエラーが表示されます。（FORMS-12463）
+* JBoss® 自動設定を使用して AEM Forms 6.5.19.1 で設定マネージャーを実行中にユーザーが「Microsoft® SharePoint」を選択すると、LiveCycle JBoss® EAR のインストールが失敗し、次のエラーが表示されます。（FORMS-12463）
 
   ` Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEE0031: Unable to process modules in application.xml for EAR ["/C:/AEM/jboss/bin/content/ adobe-livecycle-jboss.ear "], module file adobe-connectorformssharepoint-config-ejb.jar not found.`
 
-* AEM Forms サービスパック 6.5.19.0 のフォームデータモデルを使用してドキュメントフラグメントを作成すると、サイドパネルに変数名が未定義で表示されます。 ただし、変数名は、フォームパネルにドロップされたり、クリックされたりすると表示されます。 （FORMS-13238）
+* ユーザーが AEM Forms サービスパック 6.5.19.0 のフォームデータモデルを使用してドキュメントフラグメントを作成すると、変数名はサイドパネルでは未定義と表示されます。ただし、フォームパネルにドロップするかクリックすると変数名が表示されます。（FORMS-13238）
 
 
 #### [!DNL Forms Designer] {#forms-designer-6520}
@@ -492,10 +492,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）
 * アダプティブフォームでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。カスタム関数で ECMAScript バージョン 6 以降（「let」、「const」、アロー関数など）が使用されている場合、ルールエディターが正しく開かない可能性があります。
-* Correspondence Management レターを作成できません。ユーザーがレターを作成すると、エラーと説明「」`Object Object`」が表示されますが、レターは作成されません。 レイアウトのサムネールもレター作成画面に読み込めません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13496）
-* インタラクティブ通信サービスは PDF ドキュメントを作成しますが、フォームフィールドにユーザーのデータが自動的に入力されません。事前入力サービスが期待どおりに動作しません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13413、FORMS-13493）
-* 自動フォーム変換サービスのレビューと修正（RnC）エディターの読み込みに失敗します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13491）
-* AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から AEM 6.5 Forms サービスパック 20（6.5.20.0）に更新すると、JSP コンパイルエラーが発生します。アダプティブフォームを開いたり作成したりできず、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他のAEM インターフェイスでエラーが発生します。 [最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13492）
+* Correspondence Management レターを作成できません。ユーザーがレターを作成すると、「`Object Object`」という説明のエラーが表示され、レターが作成されません。レイアウトのサムネールもレター作成画面に読み込めません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13496）
+* インタラクティブ通信サービスは PDF ドキュメントを作成しますが、フォームフィールドにユーザーのデータが自動的に入力されません。事前入力サービスが期待どおりに動作しません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13413、FORMS-13493）
+* 自動フォーム変換サービスのレビューと修正（RnC）エディターの読み込みに失敗します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13491）
+* AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から AEM 6.5 Forms サービスパック 20（6.5.20.0）に更新すると、JSP コンパイルエラーが発生します。アダプティブフォームを開いたり作成したりすることができず、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他の AEM インターフェイスでエラーが発生します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13492）
 
 <!--Customers can install the  latest AEM 6.5 Forms Service Pack to resolve the aforementioned issues.  Here are the direct links for the supported operating systems:
 * [AEM 6.5 Forms Service Pack 20 for Apple macOS](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/ADOBE-AEMFD-OSX-PKG-6.0.1192.zip)
@@ -538,10 +538,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 以下の web サイトはお客様のみが参照できます。アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com からの製品ダウンロード](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/customer-one/using/home)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/en/docs/experience-manager-65)
+>* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-65)
 >* [アドビ製品アップデートの優先通知に登録する](https://www.adobe.com/subscription/priority-product-update.html)
