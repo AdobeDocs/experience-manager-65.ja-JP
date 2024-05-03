@@ -6,10 +6,10 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 685d8016400570170dc02dc2be77651aea6e028c
-workflow-type: ht
-source-wordcount: '3783'
-ht-degree: 100%
+source-git-commit: 4f4d5494d4e630e6f16f8a8e6a6a609925a91457
+workflow-type: tm+mt
+source-wordcount: '3828'
+ht-degree: 98%
 
 ---
 
@@ -244,6 +244,12 @@ ht-degree: 100%
 * ユーザーが AEM Forms Designer で XDP を作成する場合、PDF 出力では、Button Form タグが親段落タグ（p タグ）にネストされません。（LC-3921719）
 
 * ユーザーが AEM Forms Designer で XDP を作成する際、PDF 出力でユーザーがフォームタグ間を移動すると、背景オブジェクトにもタグが付けられます。（LC-3921687）
+
+#### [!DNL Document Services] {#forms-document-services-6520}
+
+* （JEE 上のAEM Formsのみ）PDF Generatorサービスが、サーバーで使用可能なフォントを列挙できません。 その結果、PDFG 管理 UI のAdobe PDF設定ページのフォント選択パネルには何も表示されず、選択したフォントの埋め込み（解除）を効果的に防ぐことができます。 （FORMS-12095）
+
+
 
 ### 基盤 {#foundation-6520}
 
