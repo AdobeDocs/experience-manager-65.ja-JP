@@ -8,10 +8,11 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '6086'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -21,10 +22,10 @@ ht-degree: 99%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/themes.html) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/themes) |
 | AEM 6.5 | この記事 |
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 テーマを作成して適用することにより、アダプティブフォームやインタラクティブ通信のスタイルを設定して視覚的に表現することができます。テーマには、コンポーネントとパネルのスタイルを設定するための詳細情報が含まれています。スタイルには、背景色、状態色、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。テーマは、独立して管理されます。アダプティブフォームやインタラクティブ通信が参照されることはありません。
 
@@ -178,7 +179,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
      <li>このテーマに対応する clientlib が保存される、「/etc」内のユーザー定義のリポジトリのパスです。</li>
      <li>デフォルト値 - 「/etc/clientlibs/fd/themes」 + テーマのアセットの相対パス。</li>
      <li>場所が存在しない場合、フォルダー階層は自動生成されます。</li>
-     <li>この値が変更されると、clientlib ノード構造は、入力された新しい場所に移動します。<br /> <em><strong>注意：</strong> デフォルトの clientlib の場所を変更した場合は、CRXDE リポジトリ内で、 <code>crx:replicate</code>, <code>rep:write</code>, <code>rep:glob:*</code>, <code>rep:itemNames::</code> <code>js.txt</code>, <code>jcr:read</code> から <code>forms-users</code> および <code>crx:replicate</code>, <code>jcr:read</code> から <code>fd-service</code> 新しい場所に置き換えます。 また、<code>forms-user</code></em> の <code>deny jcr:addChildNodes</code> を追加して別の ACL を添付します</li>
+     <li>この値が変更されると、clientlib ノード構造は、入力された新しい場所に移動します。<br /><em><strong>メモ：</strong>デフォルトの clientlib の場所を変更する場合は、CRXDE リポジトリで <code>crx:replicate</code>、<code>rep:write</code>、<code>rep:glob:*</code>、<code>rep:itemNames::</code> <code>js.txt</code>、<code>jcr:read</code> を <code>forms-users</code> に、<code>crx:replicate</code>、<code>jcr:read</code> を新しい場所の <code>fd-service</code>に割り当てます。また、<code>forms-user</code></em> の <code>deny jcr:addChildNodes</code> を追加して別の ACL を添付します</li>
     </ul> </td>
   </tr>
   <tr>

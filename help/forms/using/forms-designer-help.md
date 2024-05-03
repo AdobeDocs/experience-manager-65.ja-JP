@@ -7,7 +7,8 @@ topic-tags: publish
 feature: Forms Designer
 exl-id: f962844a-f191-4505-bfc9-85c94d8faa46
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%

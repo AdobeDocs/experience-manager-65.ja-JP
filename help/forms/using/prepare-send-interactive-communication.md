@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2010'
 ht-degree: 100%

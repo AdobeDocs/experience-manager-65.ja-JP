@@ -5,10 +5,11 @@ topic-tags: introduction
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2038'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -443,7 +444,7 @@ ht-degree: 88%
 アダプティブフォームは各種フォントを使用してデザインできます。アダプティブフォームのデザインに使用するフォントが、アダプティブフォームを表示するデバイスに存在しない場合があります。Web フォントサービスを使用すると、必要なフォントを目的のデバイスで使用できます。
 
 [!DNL Adobe Fonts] は web フォントサービスです。アダプティブフォームでこのサービスを設定、使用できます。[!DNL Adobe Fonts] をアダプティブフォームで使用するには：
-1. 次を参照： [Adobeフォントのライブラリ](https://fonts.adobe.com/) フォームのスタイルを設定するフォントを選択します。
+1. [Adobe フォントのライブラリ](https://fonts.adobe.com/)を参照し、フォームをスタイル設定するフォントを選択します。
 <!--
 >[!NOTE]
 >
@@ -453,7 +454,7 @@ ht-degree: 88%
 >
 > タグやフィルターを追加して、フォントのリストを絞り込むことができます。
 
-1. &lt;/> ボタンをクリックして、目的のフォントが見つかった場合に備えて、Web プロジェクトにファミリを追加します。
+1. 「&lt;/>」ボタンをクリックして、目的のフォントが見つかった場合に備えて、web プロジェクトにファミリを追加します。
 
    ![select-font-from-font-libary](assets/select-font-from-font-library.png)
 
@@ -461,31 +462,31 @@ ht-degree: 88%
 
    >[!NOTE]
    >
-   > フォントを Web プロジェクトに追加できるのは、「&lt;/>」ボタンが使用可能な場合のみです。
+   > フォントを web プロジェクトに追加できるのは、「&lt;/>」ボタンが使用可能な場合のみです。
 
 2. Web プロジェクトに名前を付けます。
 3. チェックボックスをオンにして、含めるフォントの太さとスタイルを選択します。
 
    ![フォントライブラリの追加](assets/add-a-font-window.png)
 
-4. 選択 **クリック** をクリックして、プロジェクトを作成します。
+4. 「**クリック**」を選択して、プロジェクトを作成します。
 5. 画面から埋め込みコードと URL をコピーします。
    ![埋め込みコードと URL](assets/font-add-url.png)
 
-6. クリック **完了** をクリックして、web プロジェクトウィンドウを閉じます。
-7. AEMインスタンスにログインし、URL に移動します。 `http://server:port/crx/de/index.jsp#`
-8. CRXDE でフォルダー構造を作成します（例： ）。 `/apps/[fontslibrary]/[customlibrary(clientlibrary)]`.
-9. 新しく作成された `clientlibs` フォルダーを作成し、 `allowProxy` および `categories` プロパティ。
-10. に移動します。 `/apps/[fontslibrary]/[customlibrary(clientlibrary)]` css フォルダーを作成します。
-11. 作成した CSS フォルダーに移動し、ファイルを作成します。 例えば、次のようなファイルを作成します。 `fonts.css` 埋め込みコードと URL を貼り付けます。
+6. 「**完了**」をクリックし、web プロジェクト ウィンドウを閉じます。
+7. AEM インスタンスにログインし、URL `http://server:port/crx/de/index.jsp#` に移動します。
+8. CRXDE でフォルダー構造（`/apps/[fontslibrary]/[customlibrary(clientlibrary)]` など）を作成します。
+9. 新しく作成した `clientlibs` フォルダーに移動し、`allowProxy` プロパティと `categories` プロパティを追加します。
+10. `/apps/[fontslibrary]/[customlibrary(clientlibrary)]` に移動して、css フォルダーを作成します。
+11. 作成した CSS フォルダーに移動し、ファイルを作成します。例えば、ファイルを `fonts.css` として作成し、埋め込みコードを URL と共に貼り付けます。
    ![フォルダー構造](/help/forms/using/assets/fonts-add-in-crxde.png)
-12. 変更内容を保存します。
+12. 変更を保存します。
 
 >[!NOTE]
 >
-> アダプティブフォームで追加されたカスタムフォントを使用するには、クライアントライブラリ名を **[!UICONTROL クライアントライブラリカテゴリ]** clientlib フォルダーの categories オプションで指定された名前に従っています。
+> アダプティブフォームで追加したカスタムフォントを使用するには、**[!UICONTROL クライアントライブラリカテゴリ]**&#x200B;内のクライアントライブラリ名が、clientlib フォルダーのカテゴリオプションで指定された名前と一致していることを確認します。
 
-付属のフォントは、次のカスタムフォントクライアントライブラリを通じてアダプティブフォームからアクセスできるようになりました。
+含まれるフォントは、次のカスタムフォントクライアントライブラリを通じてアダプティブフォームにアクセスできるようになりました。
 
 
 <!--

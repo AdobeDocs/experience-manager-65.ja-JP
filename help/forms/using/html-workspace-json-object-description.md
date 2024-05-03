@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2144'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -331,7 +332,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>availableCommands.otherCommands<br /> </td>
    <td>T</td>
-   <td>ロック、ロック解除、放棄、返却、要求などのコマンドが使用可能になっています。<br /> </td>
+   <td>ロック、ロック解除、中断、返信、要求などの利用可能なコマンドが含まれます。<br /> </td>
   </tr>
   <tr>
    <td>processInstanceInfo<br /> </td>

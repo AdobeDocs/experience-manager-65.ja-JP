@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 exl-id: b97175fd-cc3d-457a-af11-1f8c83192eb7
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 100%

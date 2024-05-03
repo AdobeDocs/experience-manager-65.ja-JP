@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: e1519477-b5a8-4947-8597-26b945a3b819
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1762'
 ht-degree: 100%
@@ -20,7 +21,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 セーフバックアップモードの有効化について詳しくは、[セーフバックアップモードの有効化と無効化](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md#enabling-and-disabling-safe-backup-mode)を参照してください。
 

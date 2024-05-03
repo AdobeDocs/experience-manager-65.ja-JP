@@ -6,13 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 docset: aem65
 feature: Adaptive Forms
-role: Admin
+role: Admin,User
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 96%
 
 ロケール情報が存在しない場合、アダプティブフォームはフォームの元の言語で配信されます。元の言語は、アダプティブフォームの開発時に使用する言語です。
 
-リクエストされたロケールのクライアントライブラリが存在しない場合、ロケールに含まれる言語コードのクライアントライブラリが存在するか確認します。例えば、要求されたロケールが `en_ZA` （南アフリカ英語）と `en_ZA` が存在しない場合、アダプティブフォームは次の目的でクライアントライブラリを使用します： `en` （英語）言語（存在する場合）。 ただし、どちらも存在しない場合、アダプティブフォームでは`en`ロケールの辞書が使用されます。
+リクエストされたロケールのクライアントライブラリが存在しない場合、ロケールに含まれる言語コードのクライアントライブラリが存在するか確認します。例えば、リクエストされたロケールが `en_ZA`（南アフリカ英語）で、`en_ZA` 用のクライアントライブラリが存在しない場合、アダプティブフォームは、`en`（英語）言語のクライアントライブラリがあればそれを使用します。ただし、どちらも存在しない場合、アダプティブフォームでは`en`ロケールの辞書が使用されます。
 
 ## サポートされていないロケールにローカリゼーションのサポートを追加する {#add-localization-support-for-non-supported-locales}
 
@@ -128,7 +128,7 @@ LogMessages.js
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 ## スペイン語サポートを追加する場合のサンプルライブラリ {#sample-libraries-for-adding-support-for-spanish}
 

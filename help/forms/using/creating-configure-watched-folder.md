@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 99%
@@ -49,7 +50,7 @@ ht-degree: 99%
 
    >[!NOTE]
    >
-   >「**次を使用してファイルを処理**」フィールドで「**サービス**」を選択した場合、「サービス名（inputProcessorType）」フィールドの値は括弧で囲む必要があります。例えば、（foo=bar）と指定します。
+   >「**次を使用してファイルを処理**」フィールドで「**サービス**」を選択した場合、「サービス名（inputProcessorType）」フィールドの値は括弧で囲む必要があります。例えば、（foo=bar）のように指定します。
 
    ```java
    @Component(metatype = true, immediate = true, label = "WF Test Service", description = "WF Test Service")

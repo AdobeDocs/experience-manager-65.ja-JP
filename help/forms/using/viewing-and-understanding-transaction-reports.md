@@ -7,14 +7,15 @@ docset: aem65
 feature: Transaction Reports
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '881'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# OSGi 上のAEM Formsのトランザクションレポートの表示と理解{#viewing-and-understanding-transaction-reports}
+# OSGi 上の AEM Forms のトランザクションレポートの表示と理解{#viewing-and-understanding-transaction-reports}
 
 トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を取得および追跡できます。これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。詳しくは、 [AEM Formsトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)を参照してください。
 
@@ -89,6 +90,6 @@ AEM Forms には、次の要約レポートに示すように、設定した日�
 
 ## 関連記事 {#related-articles}
 
-* [OSGi 上のAEM Formsのトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)
-* [OSGi 上のAEM Formsのトランザクションレポート請求可能な API](../../forms/using/transaction-reports-billable-apis.md)
-* [OSGi でのAEM Formsのカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)
+* [OSGi 上の AEM Forms のトランザクションレポート請求可能 API](../../forms/using/transaction-reports-billable-apis.md)
+* [OSGi 上の AEM Forms のカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)

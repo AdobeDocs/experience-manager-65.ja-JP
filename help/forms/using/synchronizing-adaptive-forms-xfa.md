@@ -7,10 +7,11 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: fed67c23-a9b7-403e-9199-dfd527d5f209
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1226'
-ht-degree: 89%
+ht-degree: 92%
 
 ---
 
@@ -115,7 +116,7 @@ XDP ファイルからアダプティブフォームにコピーされたプロ�
 
 ### XDP ファイルから削除されたフィールド {#deleted-fields-in-xdp-file}
 
-アダプティブフォームに以前コピーされたフィールドが XDP ファイルから削除されている場合には、XDP ファイルにフィールドが存在しないというエラーメッセージが作成者モード内で表示されます。 その場合は、アダプティブフォームから手動でそのフィールドを削除するか、コンポーネントダイアログで `bindRef` プロパティを消去します。
+アダプティブフォームに以前コピーされたフィールドが XDP ファイルから削除されている場合には、XDP ファイルにフィールドが存在しないというエラーメッセージがオーサリングモード内で表示されます。その場合は、アダプティブフォームから手動でそのフィールドを削除するか、コンポーネントダイアログで `bindRef` プロパティを消去します。
 
 次の手順では、この記事で使われている例の中のアセットに対してこの方法を使用する流れを説明します。
 

@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: cdb7ff54-7891-45b1-a921-10b01ef5188d
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 100%

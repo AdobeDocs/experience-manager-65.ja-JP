@@ -7,14 +7,15 @@ topic-tags: forms-manager
 feature: Transaction Reports
 exl-id: b0c4f72a-e65f-453a-af66-5d9f98a9d6df
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '222'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
-# OSGi でのAEM Formsのカスタム実装のトランザクションの記録 {#record-a-transaction-for-custom-implementations}
+# OSGi 上の AEM Forms のカスタム実装のトランザクションの記録 {#record-a-transaction-for-custom-implementations}
 
 トランザクションとして自動的に計上されないアクションを記録するには、TransactionRecorder API を使用します
 
@@ -90,6 +91,6 @@ $.ajax({
 
 ## 関連記事 {#related-articles}
 
-* [OSGi 上のAEM Formsのトランザクションレポートの概要](/help/forms/using/transaction-reports-overview.md)
-* [OSGi 上のAEM Formsのトランザクションレポートの表示と理解](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-* [OSGi 上のAEM Formsのトランザクションレポート請求可能な API](/help/forms/using/transaction-reports-billable-apis.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの概要](/help/forms/using/transaction-reports-overview.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの表示と理解](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+* [OSGi 上の AEM Forms のトランザクションレポート請求可能 API](/help/forms/using/transaction-reports-billable-apis.md)

@@ -8,7 +8,8 @@ docset: aem65
 feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2621'
 ht-degree: 100%

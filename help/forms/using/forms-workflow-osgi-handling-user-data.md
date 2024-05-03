@@ -3,10 +3,10 @@ title: OSGi 上の Forms 中心のワークフロー | ユーザーデータの�
 description: OSGi 上の Forms 中心のワークフロー | ユーザーデータの処理
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-role: Admin
+role: Admin,User
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 100%

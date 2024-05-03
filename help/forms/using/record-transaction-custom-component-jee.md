@@ -3,10 +3,11 @@ title: JEE 上のAEM Formsのカスタムコンポーネント API のトラン�
 description: TransactionRecorder API を使用してカスタムコンポーネントのトランザクションを記録する方法について説明します。
 feature: Transaction Reports
 exl-id: 33e1868a-2a7f-4785-8571-95651e661e21
-source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -40,4 +41,4 @@ API に対して複数のトランザクションを取得する必要がある�
 ## 関連記事
 
 * [JEE 上のAEM Formsのトランザクションレポートの有効化と表示](/help/forms/using/transaction-report-overview-jee.md)
-* [JEE 上のAEM Formsの課金対象 API のリスト](/help/forms/using/transaction-reports-billable-apis-jee.md)
+* [JEE 版 AEM Forms の課金対象 API のリスト](/help/forms/using/transaction-reports-billable-apis-jee.md)

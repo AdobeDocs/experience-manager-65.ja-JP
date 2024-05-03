@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '7192'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -150,7 +151,7 @@ Windows でアプリケーションサーバーがサービスとして実行さ
 
 この設定は、複数のファイルが存在するフォルダーが入力の場合に便利です。フォルダーの内容を、監視フォルダーの取得対象となる名前のフォルダーにコピーすることができます。これにより、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得することを回避できます。
 
-  次のように、除外するファイルパターンを指定できます。
+次のように、除外するファイルパターンを指定できます。
 
 * 特定のファイル拡張子を持つファイル例： &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf
 * data.&amp;ast;次の名前のファイルとフォルダを除外します： *data1*、*data2* など。
@@ -240,8 +241,8 @@ Windows でアプリケーションサーバーがサービスとして実行さ
 
 管理者は、サービスを呼び出すことができるファイルのタイプを指定できます。監視フォルダーごとに複数のファイルパターンを作成できます。ファイルパターンは、次のファイルプロパティのいずれかになります。
 
-* 特定のファイル名拡張子を持つファイル。 例： &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf
-* 特定の名前を持つファイル。 例えば、data.&amp;ast;
+* 特定の拡張子をファイル名に持つファイル。例えば、*.dat、*.xml、*.pdf
+* 特定の名前を含むファイル。例えば、data。&amp;ast;
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
    * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;

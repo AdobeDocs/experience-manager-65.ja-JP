@@ -7,10 +7,11 @@ topic-tags: correspondence-management
 feature: Correspondence Management
 exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '591'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +35,7 @@ Correspondence Management は、LetterInstanceService サービスを通じて�
 
 >[!NOTE]
 >
->LetterInstanceService は OSGI サービスで、Java™で@Referenceを使用してインスタンスを取得できます
+>LetterInstanceService は OSGI サービスであり、そのインスタンスは Java™ クラスの @Reference を使用して、
 >または JSP の sling.getService(LetterInstanceService.クラス）を使用して取得できます。
 
 ### getAllLetterInstances の使用 {#using-nbsp-getallletterinstances}

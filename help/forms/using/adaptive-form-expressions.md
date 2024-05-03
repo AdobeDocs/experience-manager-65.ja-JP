@@ -7,10 +7,11 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 20fb57a51e47562a290e3608a2fe080a39774998
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2781'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 97%
 
 アダプティブフォームは、ダイナミックなスクリプト機能によってエンドユーザーのフォームへの入力作業を最適化および簡素化します。式を記述することで、ダイナミックなフィールドやパネルの表示／非表示などの様々な動作を追加できます。また、レポートを作成する計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。動的動作は、ユーザー入力や事前入力データに基づいています。
 
-アダプティブフォームの式言語は JavaScript です。すべての式は、有効な JavaScript™ の式で、アダプティブフォームのスクリプトモデル API を使用しています。これらの式は、特定のタイプの値を返します。アダプティブフォームのクラス、イベント、オブジェクト、パブリック API の完全なリストについては、 [アダプティブフォームの JavaScript ライブラリ API リファレンス。](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)
+アダプティブフォームの式言語は JavaScript です。すべての式は、有効な JavaScript™ の式で、アダプティブフォームのスクリプトモデル API を使用しています。これらの式は、特定のタイプの値を返します。アダプティブフォームのクラス、イベント、オブジェクトおよびパブリック API の完全なリストについては、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)を参照してください。
 
 ## 式を記述するためのベストプラクティス {#best-practices-for-writing-expressions}
 
@@ -80,7 +81,7 @@ ht-degree: 97%
 
 ### クリック式 {#click-expression}
 
-クリック式は、ボタンのクリックイベント時に実行されるアクションを処理します。すぐに使用できる GuideBridge は、送信、検証など、クリック式と共に使用される様々な機能を実行するための API を提供します。API の完全なリストについては、 [GuideBridge APIs.](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)
+クリック式は、ボタンのクリックイベント時に実行されるアクションを処理します。すぐに使用できる GuideBridge は、送信、検証など、クリック式と共に使用される様々な機能を実行するための API を提供します。API の完全なリストについては、[GuideBridge API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html) を参照してください。
 
 **適用先**：ボタンフィールド
 
@@ -207,7 +208,7 @@ ht-degree: 97%
 
 ### GuideBridge - API とイベント {#guidebridge-apis-and-events}
 
-GuideBridge は、ブラウザーのメモリーモデルでアダプティブフォームとやり取りするのに使用できる API のコレクションです。Guide Bridge API、クラスメソッド、公開されたイベントについて詳しくは、 [アダプティブフォームの JavaScript ライブラリ API リファレンス。](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)
+GuideBridge は、ブラウザーのメモリーモデルでアダプティブフォームとやり取りするのに使用できる API のコレクションです。Guide Bridge API、クラスメソッド、公開されたイベントについて詳しくは、[アダプティブフォーム用 JavaScript ライブラリ API リファレンス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)を参照してください。
 
 >[!NOTE]
 >
@@ -253,7 +254,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 #### GuideBridge イベント {#guidebridge-events}
 
-また、GuideBridge は、ホスティングページ上の外部スクリプト用に特定のイベントを提供します。外部スクリプトは、これらのイベントをリッスンして様々な操作を実行できます。例えば、フォームのユーザー名が変更される場合は、ページのヘッダーに表示される名前も常に変更されます。このようなイベントについて詳しくは、 [アダプティブフォームの JavaScript ライブラリ API リファレンス。](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)
+また、GuideBridge は、ホスティングページ上の外部スクリプト用に特定のイベントを提供します。外部スクリプトは、これらのイベントをリッスンして様々な操作を実行できます。例えば、フォームのユーザー名が変更される場合は、ページのヘッダーに表示される名前も常に変更されます。これらのイベントについて詳しくは、[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html)を参照してください。
 
 以下のコードを使用してハンドラーを登録します。
 

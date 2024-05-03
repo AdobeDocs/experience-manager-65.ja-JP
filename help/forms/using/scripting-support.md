@@ -8,7 +8,8 @@ topic-tags: hTML5_forms
 feature: HTML5 Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '3916'
 ht-degree: 100%
@@ -87,7 +88,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
    <th>例外</th>
   </tr>
@@ -169,7 +170,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <th><strong><span>Property</span></strong></th>
+   <th><strong><span>プロパティ</span></strong></th>
    <th><strong><span>説明<br /> </span></strong></th>
    <th><strong><span>例外</span></strong></th>
   </tr>
@@ -354,7 +355,7 @@ ht-degree: 100%
 
 ## InstanceManager {#instancemanager}
 
-| Property | 説明 |
+| プロパティ | 説明 |
 |---|---|
 | `name` | スクリプト式でこの要素を識別するために使用される識別子。 |
 | `occur` | 含まれるコンテナで許可されるインスタンス数の制限を説明します。 |
@@ -369,7 +370,7 @@ ht-degree: 100%
 
 ## list {#list}
 
-| Property | 説明 |
+| プロパティ | 説明 |
 |---|---|
 | `length` | リスト内にある要素数。 |
 | `item` | コレクションのゼロベースのインデックスです。 |
@@ -379,7 +380,7 @@ ht-degree: 100%
 
 ## node {#node}
 
-| Property | 説明 | 例外 |
+| プロパティ | 説明 | 例外 |
 |---|---|---|
 | createNode | 有効なクラス名に基づいて新しいノードを作成します。 | なし |
 | `isContainer` | このオブジェクトがコンテナオブジェクトかどうかを指定します。 | なし |
@@ -393,7 +394,7 @@ ht-degree: 100%
 
 ## model {#model}
 
-| Property | 説明 | 例外 |
+| プロパティ | 説明 | 例外 |
 |---|---|---|
 | 該当なし | 該当なし | 該当なし |
 
@@ -402,7 +403,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
    <th>例外</th>
   </tr>
@@ -486,7 +487,7 @@ ht-degree: 100%
 
 ### submit {#submit}
 
-| Property | 説明 |
+| プロパティ | 説明 |
 |---|---|
 | target | データの送信先の URL。この属性を省略すると、XFA 処理アプリケーションは、config オブジェクト内の製品固有の情報へのアクセスなど、製品固有の手法を使用して URI を取得します。 |
 
@@ -495,7 +496,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <th>説明</th>
    <th>例外</th>
   </tr>
@@ -543,7 +544,7 @@ ht-degree: 100%
 
 ## subformset {#subformset}
 
-| Property | 説明 | 例外 |
+| プロパティ | 説明 | 例外 |
 |---|---|---|
 | instanceManager | instanceManager オブジェクトは、フォームモデルオブジェクトのインスタンスの作成、削除、および移動を管理します。 | なし |
 
@@ -564,7 +565,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property </strong></td>
+   <td><strong>プロパティ </strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -585,7 +586,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -606,7 +607,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -627,7 +628,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -644,7 +645,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -665,7 +666,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -686,7 +687,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -707,7 +708,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td>Property</td>
+   <td>プロパティ</td>
    <td>説明</td>
    <td>例外</td>
   </tr>
@@ -744,7 +745,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -765,7 +766,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -782,7 +783,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property<br /> </strong></td>
+   <td><strong>プロパティ<br /> </strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -805,7 +806,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -839,7 +840,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -856,7 +857,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -873,7 +874,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -890,7 +891,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>
@@ -1002,7 +1003,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property<strong></strong></strong></td>
+   <td><strong>プロパティ<strong></strong></strong></td>
    <td><strong>説明<strong></strong></strong></td>
    <td><strong>例外<strong></strong></strong></td>
   </tr>
@@ -1019,7 +1020,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property<strong></strong></strong></td>
+   <td><strong>プロパティ<strong></strong></strong></td>
    <td><strong>説明<strong></strong></strong></td>
    <td><strong>例外<strong></strong></strong></td>
   </tr>
@@ -1036,7 +1037,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>説明</strong></td>
    <td><strong>例外</strong></td>
   </tr>

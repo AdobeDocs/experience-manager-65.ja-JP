@@ -3,10 +3,10 @@ title: Workbench のインストール
 description: AEM Forms Workbench をインストール、アンインストール、設定、管理またはデプロイする方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-role: Admin
+role: Admin, User, Developer
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 100%

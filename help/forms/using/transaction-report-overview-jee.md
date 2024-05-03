@@ -3,10 +3,11 @@ title: JEE 上のAEM Formsのトランザクションレポートの概要
 description: 送信されたフォーム、レンダリングされたフォーム、別の形式に変換されたドキュメントなどすべての数を保持します。
 feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
-source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '529'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -156,5 +157,5 @@ The transaction count is reverse replicated from publish instances to author or 
 
 ## 関連記事 {#related-articles}
 
-* [JEE 上のAEM Formsの課金対象 API のリスト](../../forms/using/transaction-reports-billable-apis-jee.md)
+* [JEE 版 AEM Forms の課金対象 API のリスト](../../forms/using/transaction-reports-billable-apis-jee.md)
 * [JEE 上のAEM Formsのカスタムコンポーネント API のトランザクションの記録](/help/forms/using/record-transaction-custom-component-jee.md)

@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: e0a261a2-518b-4984-a5b5-24f0b9222e24
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +30,7 @@ AEM Forms Workspace の上部にあるナビゲーションバーを更新する
 
    >[!NOTE]
    >
-   >詳しくは、 [WebDAV アクセス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   >詳しくは、[WebDAV アクセス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=ja)を参照してください。
 
 1. 次のスタイルを追加して、/apps/ws/css/newStyle.css の新しい背景画像を参照します。
 

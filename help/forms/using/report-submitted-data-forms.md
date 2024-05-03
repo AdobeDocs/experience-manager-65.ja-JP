@@ -7,10 +7,11 @@ topic-tags: publish, developer-reference
 feature: Forms Portal
 exl-id: a685889e-5d24-471c-926d-dbb096792bc8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '539'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +29,7 @@ AEM Forms はフォームポータル経由で送信されたフォームデー�
 
 ### URL パラメーター {#url-parameters}
 
-この API には、追加のパラメーターは必要ありません。
+この API にはその他のパラメーターは必要ありません。
 
 ### 応答 {#response}
 

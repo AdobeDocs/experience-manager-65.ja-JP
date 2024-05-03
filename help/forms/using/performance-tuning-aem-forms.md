@@ -5,10 +5,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 docset: aem65
-role: Admin
+role: Admin,User
 exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 100%
@@ -169,5 +169,5 @@ Apache は HTTP プロトコルを使用して CRX と通信できます。こ�
 >
 >* GDS と一時ディレクトリで異なる場所を使用している場合は、AdminUI`https://'[server]:[port]'/adminui` を開いて&#x200B;**ホーム／設定／コアシステム設定／コア設定**&#x200B;に移動し、現在使用している場所を確認してください。
 >
->* 上記のディレクトリを除外しても AEM Forms サーバーのパフォーマンスが改善されない場合は、Java™ 実行可能ファイル（java.exe）も除外してください。
+* 上記のディレクトリを除外しても AEM Forms サーバーのパフォーマンスが改善されない場合は、Java™ 実行可能ファイル（java.exe）も除外してください。
 >

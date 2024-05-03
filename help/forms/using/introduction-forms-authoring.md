@@ -8,10 +8,11 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 935b734c-6fb1-45e8-8515-e98c8b85286c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '3142'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -36,8 +37,8 @@ XFA ベースまたは XDP フォームに投資している場合、これは�
 * **XML スキーマ定義（XSD）または JSON スキーマの使用**
 XML スキーマおよび JSON スキーマは、組織内のバックエンドシステムによってデータが作成または使用される構造を表します。アダプティブフォームにスキーマを関連付け、そのスキーマの要素を使用することにより、アダプティブフォームに動的コンテンツを追加することができます。スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブで使用することができます。
 
-* **なしを使用するか、フォームモデルなしを使用するか**
-このオプションで作成されたアダプティブフォームは、フォームモデルを使用しません。 このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。
+* **フォームモデルを使用せずに作成**
+このオプションで作成されたアダプティブフォームは、フォームモデルを使用しません。このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。
 
 アダプティブフォームの作成について詳しくは、[アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)を参照してください。
 

@@ -8,7 +8,8 @@ discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 feature: HTML5 Forms
 exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 100%

@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '904'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -77,7 +78,7 @@ keytool を使用すると、キーストアの作成に必要なすべての情
    `keytool -import -alias "AEMForms Cert" -file`*AEMForms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
 1. パスワードとして`changeit`を入力します。Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
-1. 次を求められた場合： `Trust this certificate? [no]`, type `yes`. 「証明書がキーストアに追加されました」という確認メッセージが表示されます。
+1. `Trust this certificate? [no]` の入力を求められた場合、`yes` と入力します。「証明書がキーストアに追加されました」という確認メッセージが表示されます。
 1. Workbench から SSL 経由で接続している場合は、Workbench コンピューターに証明書をインストールします。
 1. テキストエディターで、次のファイルを開いて編集します。
 

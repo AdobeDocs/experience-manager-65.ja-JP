@@ -9,7 +9,8 @@ docset: aem65
 feature: HTML5 Forms
 exl-id: 76bd1e2d-9e65-452c-8cef-123d28886a62
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 100%

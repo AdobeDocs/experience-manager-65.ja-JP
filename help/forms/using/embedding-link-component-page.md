@@ -7,7 +7,8 @@ topic-tags: publish
 docset: aem65
 exl-id: eb45adf2-d0f3-4de6-92ac-fb146953e989
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 100%

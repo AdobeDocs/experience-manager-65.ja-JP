@@ -7,14 +7,15 @@ docset: aem65
 feature: Transaction Reports
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
-# OSGi 上のAEM Formsのトランザクションレポート {#transaction-reports-overview}
+# OSGi 上の AEM Forms のトランザクションレポート {#transaction-reports-overview}
 
 <!--## Introduction {#introduction}
 
@@ -34,7 +35,7 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 トランザクションは、指定した期間（フラッシュバッファ時間 + リバースレプリケーション時間）、バッファに残ります。デフォルトでは、トランザクション数がトランザクションレポートに反映されるまで、約 90 秒かかります。
 
-PDF フォームの送信、エージェント UI によるインタラクティブ通信のプレビュー、非標準のフォーム送信方法の使用などのアクションは、トランザクションとしては考慮されません。AEM Forms は、このようなトランザクションを記録する API を提供します。カスタム実装から API を呼び出して、トランザクションを記録します。
+PDF フォームの送信、エージェント UI によるインタラクティブ通信のプレビュー、非標準のフォーム送信方法の使用などのアクションは、トランザクションとしては考慮されません。 AEM Forms は、このようなトランザクションを記録する API を提供します。 カスタム実装から API を呼び出して、トランザクションを記録します。
 
 ## サポートされるトポロジ {#supported-topology}
 
@@ -58,6 +59,6 @@ PDF フォームの送信、エージェント UI によるインタラクティ
 
 ## 関連記事 {#related-articles}
 
-* [OSGi 上のAEM Formsのトランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [OSGi 上のAEM Formsのトランザクションレポート請求可能な API](../../forms/using/transaction-reports-billable-apis.md)
-* [OSGi でのAEM Formsのカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [OSGi 上の AEM Forms のトランザクションレポート請求可能 API](../../forms/using/transaction-reports-billable-apis.md)
+* [OSGi 上の AEM Forms のカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)

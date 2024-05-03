@@ -6,14 +6,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
 docset: aem65
-role: Admin
+role: Admin, User, Developer
 feature: Forms Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
-> AEM 6.5 Forms Service Pack 19(6.5.19.0) では、64 ビットバージョンの Designer が導入されました。
+> 64 ビット版の Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）で導入されました。
 
 
 
@@ -50,7 +50,7 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
 
    >[!NOTE]
    > 
-   >* 32 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 20（6.5.20.0）リリースで廃止される予定です。Adobeでは、64 ビット版のFormsデザイナーにアップグレードすることをお勧めします。
+   >* 32 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 20（6.5.20.0）リリースで廃止される予定です。アドビでは、64 ビット版の Forms Designer にアップグレードすることをお勧めします。
    >* 64 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）以降のリリースでのみ使用できます。
    >* Adobe Experience Manager 6.5 Forms サービスパック 15（6.5.15.0）以降の Forms Designer バージョンには、サービスパックバージョンも含まれています。例えば、サービスパック 15 の場合、バージョン番号は 6.5.15.20221112.1.0 です。この例では、6.5.15 がサービスパックのバージョンです。
 

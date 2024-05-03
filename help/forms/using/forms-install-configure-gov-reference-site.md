@@ -5,7 +5,8 @@ contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '4534'
 ht-degree: 99%
@@ -156,8 +157,8 @@ ht-degree: 99%
 
 1. 任意の SMTP サーバーに接続するようにサービスを設定します。
 
-   1. **SMTP サーバーホスト名**：例：（smtp.gmail.com）
-   1. **サーバーポート**：例：SSL を使用した gmail の場合は（465）
+   1. **SMTP サーバーのホスト名**：例（smtp.gmail.com）
+   1. **サーバーポート**：SSL を使用した gmail の例 - 465
    1. **SMTP ユーザー：** demo@ &lt;companyname> .com
    1. **「差出人」のアドレス**：aemformsdemo@adobe.com
 
@@ -247,7 +248,7 @@ ht-degree: 99%
 
       1. クライアント ID - アプリケーション ID とも呼ばれます
       1. クライアントの秘密鍵
-      1. OAuth URL  - 例えば、[https://login.microsoftonline.com/common/oauth2/authorize](https://login.microsoftonline.com/common/oauth2/authorize)
+      1. OAuth URL - 例えば、[https://login.microsoftonline.com/common/oauth2/authorize](https://login.microsoftonline.com/common/oauth2/authorize)
       1. リフレッシュトークン URL - 例えば、[https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. アクセストークン URL - 例えば、[https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. 認証範囲 - **openid**

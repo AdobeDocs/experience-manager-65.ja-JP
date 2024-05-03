@@ -7,7 +7,8 @@ topic-tags: Configuration
 docset: aem65
 exl-id: d080932f-d5fb-482d-9329-62da5df10362
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 100%

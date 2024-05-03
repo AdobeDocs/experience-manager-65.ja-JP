@@ -8,10 +8,11 @@ docset: aem65
 feature: Correspondence Management
 exl-id: f044ed75-bb72-4be1-aef6-2fb3b2a2697b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 96%
 
 Correspondence Management では、レター内にエージェント署名を描画するために画像を使用することができます。エージェント署名画像を設定すると、レターの作成時に、送信側エージェントの署名としてエージェント署名画像がレターにレンダリングされます。
 
-agentSignatureImage DDE は、エージェントの署名画像を表す計算済み DDE です。 算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。新しい SystemContext システムデータディクショナリにより、Correspondence Management で作成されたレターは、現在のシステムコンテキストの情報にアクセスできるようになります。システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
+agentSignatureImage DDE は算出された DDE であり、エージェントの署名画像を表します。算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。新しい SystemContext システムデータディクショナリにより、Correspondence Management で作成されたレターは、現在のシステムコンテキストの情報にアクセスできるようになります。システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
 
 画像は、cmuserroot フォルダーの下に追加することができます。[Correspondence Management 設定プロパティ](/help/forms/using/cm-configuration-properties.md)では、CM ユーザールートプロパティを使用することで、エージェント署名画像の参照先からフォルダーを変更することができます。
 
@@ -69,7 +70,7 @@ agentFolder DDE の値は、Correspondence Management 設定プロパティに�
 
       ![jcr:content property](assets/3_jcrcontentntresource.png)
 
-      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルの選択」ボタンがエントリに表示されます。「**ファイルを選択**」をクリックし、ロゴとして使用する画像ファイルを選択します。画像ファイルの拡張子は必要ありません。
+      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルの選択」ボタンがエントリに表示されます。「**ファイルを選択**」をクリックし、ロゴとして使用する画像ファイルを選択します。画像ファイルには、拡張子を付ける必要はありません。
 
       ![JCR データ](assets/5_jcrdata.png)
 

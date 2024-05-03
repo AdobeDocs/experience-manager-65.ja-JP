@@ -7,7 +7,8 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 100%

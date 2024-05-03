@@ -7,10 +7,11 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2593'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -172,16 +173,16 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-Microsoft® SharePointリストへの送信機能は、AEM 6.5 Forms Service Pack 19(6.5.19.0) で導入されました。
+「Microsoft® SharePoint リストに送信」機能が AEM 6.5 Forms サービスパック 19（6.5.19.0）で導入されました。
 
-The **[!UICONTROL SharePointに送信]** 送信アクションは、アダプティブフォームをMicrosoft® SharePointストレージに接続します。 フォームデータファイル、添付ファイルまたはレコードのドキュメントを、接続された Microsoft® SharePoint ストレージに送信できます。
+「**[!UICONTROL SharePoint に送信]**」送信アクションは、アダプティブフォームと Microsoft® SharePoint ストレージを接続します。フォームデータファイル、添付ファイルまたはレコードのドキュメントを、接続された Microsoft® SharePoint ストレージに送信できます。
 
 ### アダプティブフォームを Microsoft® SharePoint リストに接続 {#connect-af-sharepoint-list}
 
-アダプティブフォームをMicrosoft® SharePointリストに接続するには：
+アダプティブフォームを Microsoft® SharePoint リストに接続するには：
 
 1. [SharePoint リスト設定を作成](#create-sharepoint-list-configuration)：AEM Forms を Microsoft® Sharepoint リストストレージに接続します。
-1. [以下を使用します。 **フォームデータモデルを使用して送信** アダプティブフォームでの送信アクション](#use-submit-using-fdm)：アダプティブフォームのデータを設定済みのMicrosoft® SharePointに送信します。
+1. [アダプティブフォームで&#x200B;**フォームデータモデルを使用して送信**&#x200B;送信アクションを使用](#use-submit-using-fdm)：アダプティブフォームデータを設定済みの Microsoft® SharePoint に送信します。
 
 #### SharePoint リスト設定を作成 {#create-sharepoint-list-configuration}
 
@@ -236,7 +237,7 @@ Microsoft® SharePointリストでは、次の列タイプはサポートされ�
 
 ### サーバー側で検証されるもの  {#what-to-validate-on-server-br}
 
-サーバーで再実行される、アダプティブフォームのすべての既製のフィールド検証は、次のとおりです。
+アダプティブフォームの標準のフィールド検証のうち、サーバーで再実行されるものは次のとおりです。
 
 * 必須
 * 検証パターン形式文字列

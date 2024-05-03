@@ -1,28 +1,29 @@
 ---
-title: Microsoft®(Forms JEE OAuth) の OAuth2 ベースの認証を設定します。Office 365 メールサーバープロトコル
-description: Microsoft®(Forms JEE OAuth) の OAuth2 ベースの認証を設定します。Office 365 メールサーバープロトコル
+title: Microsoft&reg; Office 365 メールサーバープロトコルの OAuth2 ベース認証（Forms JEE OAuth）を設定
+description: Microsoft&reg; Office 365 メールサーバープロトコルの OAuth2 ベース認証（Forms JEE OAuth）を設定
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '986'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
-# AEM FormsとMicrosoft® Office 365 メールサーバープロトコルの統合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
+# AEM Forms と Microsoft® Office 365 メールサーバープロトコルの統合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
 組織が安全なメールの要件に準拠できるように、AEM Forms では、Microsoft® Office 365 メールサーバープロトコルとの統合のために OAuth 2.0 をサポートしています。Azure Active Directory（Azure AD）OAuth 2.0 認証サービスを使用して、IMAP、POP、SMTP などの様々なプロトコルと接続し、Office 365 ユーザーのメールデータにアクセスできます。OAuth 2.0 サービスを介して認証するように Microsoft® Office 365 メールサーバープロトコルを設定する手順を以下に示します。
 
 1. [https://portal.azure.com/](https://portal.azure.com/) にログインし、検索バーで **Azure Active Directory** を検索して、結果をクリックします。
 または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
-1. クリック **追加** > **アプリの登録** > **新規登録**.
+1. **追加**／**アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
    ![アプリの登録](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
 1. 必要に応じて情報を入力し、「**登録**」をクリックします。
    ![サポートされているアカウント](/help/forms/using/assets/azure_suuportedaccountype.png)
-上記の場合、 **任意の組織ディレクトリ（任意の Azure AD ディレクトリ — マルチテナント）および個人用のMicrosoft®アカウント（Skype、Xbox など）のアカウント** 」オプションが選択されている。
+上記の場合、「**任意の組織ディレクトリ（任意の Azure AD ディレクトリ - マルチテナント）内のアカウントおよび個人用の Microsoft® アカウント（Skype、Xbox など）**」オプションが選択されています。
 
    >[!NOTE]
    >
@@ -34,7 +35,7 @@ ht-degree: 84%
 
    ![秘密鍵](/help/forms/using/assets/azure_secretkey.png)
 
-1. 権限を追加するには、新しく作成されたアプリに移動し、を選択します。 **API 権限** > **権限を追加** > **Microsoft® Graph** > **委任された権限**.
+1. 権限を追加するには、新しく作成したアプリに移動し、**API 権限**／**権限を追加**／**Microsoft® Graph**／**デリゲートされた権限**&#x200B;を選択します。
 1. アプリの以下の権限のチェックボックスをオンにして、「**権限を追加**」をクリックします。
 
    * `IMAP.AccessUser.All`
@@ -82,7 +83,7 @@ ht-degree: 84%
 
    ![権限の許可](/help/forms/using/assets/azure_permission.png)
 
-1. 権限を許可すると、次のように新しい URL にリダイレクトされます。 `https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]`
+1. 権限を許可すると、`https://login.microsoftonline.com/common/oauth2/nativeclient?code=<code>&session_state=[session_id]` のような新しい URL にリダイレクトされます。
 
 1. 上記 URL の `<code>` の値を上記 URL の `0.ASY...` から `&session_state` にコピーします。
 
@@ -135,7 +136,7 @@ ht-degree: 84%
 
    >[!NOTE]
    >
-   >必要に応じて、Auth 2.0 認証設定を、Workbench の特定のプロセスに対する基本認証に変更できます。 これをおこなうには、 **OAuth 2.0 認証** の下の値が「False」 **グローバル設定を使用** （内） **接続設定** タブをクリックします。
+   >必要に応じて、Workbench で特定のプロセスの Auth 2.0 認証設定を基本認証に変更できます。それには、「**接続設定**」タブの「**グローバル設定を使用**」で「**OAuth 2.0 認証**」の値を「False」に設定します。
 
 ## OAuth タスク通知を有効にする手順は次のとおりです。 {#enable_oauth_task}
 
@@ -149,7 +150,7 @@ ht-degree: 84%
 
    >[!NOTE]
    >
-   > タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service)します。
+   > タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=ja#create-an-email-endpoint-for-the-complete-task-service)します。
 
 ## メールのエンドポイントを設定する手順は次のとおりです。 {#configure_email_endpoint}
 
@@ -163,7 +164,7 @@ ht-degree: 84%
 
    >[!NOTE]
    >
-   > メールエンドポイントの設定に関する詳細は、[メールエンドポイントの設定](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html)をクリックします。
+   > メールエンドポイントの設定に関する詳細は、[メールエンドポイントの設定](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=ja)をクリックします。
 
 ## トラブルシューティング {#troubleshooting}
 

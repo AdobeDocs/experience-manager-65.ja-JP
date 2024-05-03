@@ -7,10 +7,11 @@ docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2073'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -192,7 +193,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
 >[!NOTE]
 >
-フォームデータモデルがサポートする [OData バージョン 4](https://www.odata.org/documentation/).
+フォームデータモデルは [OData バージョン 4](https://www.odata.org/documentation/) をサポートします。
 オンライン環境またはオンプレミス環境で Microsoft Dynamics 365 を設定する詳しい手順については、[Microsoft Dynamics OData 設定](/help/forms/using/ms-dynamics-odata-configuration.md)を参照してください。
 
 1. **[!UICONTROL ツール／Cloud Services／データソース]**&#x200B;に移動します。クラウド設定の作成対象となるフォルダーを選択します。

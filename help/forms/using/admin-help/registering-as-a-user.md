@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 100%

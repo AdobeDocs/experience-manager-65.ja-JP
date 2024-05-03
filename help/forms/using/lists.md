@@ -7,10 +7,11 @@ docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '6905'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -208,7 +209,7 @@ Correspondence Management Solution は、動的データ項目（可変データ
 
 ## リスト {#list}
 
-リストは、テキストや（その他の）リスト、条件、画像を含む、ドキュメントフラグメントのグループです。 リスト要素の順序は、固定または編集可能にすることができます。レターを作成する際は、リスト要素の一部またはすべてを使用して、再利用可能な要素のパターンを複製することができます。リストは基本的に、他のターゲット内でネスト可能なターゲットとして動作します。
+リストは、テキスト、（その他の）リスト、条件、画像などのドキュメントフラグメントのグループです。リスト要素の順序は、固定または編集可能にすることができます。レターを作成する際は、リスト要素の一部またはすべてを使用して、再利用可能な要素のパターンを複製することができます。リストは基本的に、他のターゲット内でネスト可能なターゲットとして動作します。
 
 ### リストの実装 {#implementing-lists}
 

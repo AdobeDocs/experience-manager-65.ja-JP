@@ -7,10 +7,11 @@ topic-tags: forms-workspace
 docset: aem65
 exl-id: 15b9ae98-059f-4bf7-bfdd-9cfeb8eb30a4
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +43,7 @@ HTML Workspace は、モバイルフォームに使用できるコントロー�
 
 1. アダプティブフォームを送信するには、Mobile Forms と同じように、「**送信**」ボタンを使うか、またはルートアクションを使用します。アダプティブフォームでは、Submit タイプのボタンは非表示になっています。
 
-1. **アダプティブフォームのグローバルツールバーの表示**：プロセスデザイナーでグローバル/トップレベルのツールバーが非表示になっている場合は、ツールバーとボタンがアダプティブフォームに表示されません。
+1. **アダプティブフォームのグローバルツールバーの表示**：プロセスデザイナーがグローバル／トップレベルツールバーを非表示にしている場合、ツールバーとボタンはアダプティブフォームに表示されません。
 
 1. **Workspace でのアダプティブフォームのナビゲーションコントロール**：HTML Workspace のアダプティブフォームでは、「保存」、「送信」、「ルートアクション」のボタンに加え、次へ／前へボタンも使用できます。HTML Workspace でアダプティブフォームのパネルをナビゲートするには、次へ／前へボタンをクリックします。「次へ」／「前へ」ボタンは、アダプティブフォームのモバイル表示のナビゲーションコントロールのような、精密なナビゲーションを提供します。
 

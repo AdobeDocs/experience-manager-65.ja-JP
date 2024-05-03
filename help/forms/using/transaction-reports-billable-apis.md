@@ -7,14 +7,15 @@ docset: aem65
 feature: Transaction Reports
 exl-id: e92f1b59-79ef-40fa-af9a-7380cd701a75
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d3822f4dee1b0d571aa06142f4a4f6e27874cf53
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1739'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# OSGi 上のAEM Formsのトランザクションレポート請求可能な API {#transaction-reports-billable-apis}
+# OSGi 上の AEM Forms のトランザクションレポート請求可能 API {#transaction-reports-billable-apis}
 
 AEM Forms には、フォームの送信、ドキュメントの処理、ドキュメントのレンダリングをおこなうための API がいくつか用意されています。一部の API はトランザクションとして計上され、それ以外は自由に使用できます。このドキュメントでは、トランザクションレポートでトランザクションとして計上されるすべての API のリストを示します。課金対象の API が使用される一般的なシナリオを次に示します。
 
@@ -502,6 +503,6 @@ PDF フォームの送信、エージェント UI を使用したインタラク
 
 ## 関連記事 {#related-articles}
 
-* [OSGi 上のAEM Formsのトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)
-* [OSGi 上のAEM Formsのトランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [OSGi でのAEM Formsのカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [OSGi 上の AEM Forms のカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)

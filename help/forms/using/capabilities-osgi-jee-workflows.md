@@ -4,7 +4,8 @@ description: OSGi 上の Forms ベース AEM ワークフローおよび AEM For
 contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 100%

@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -138,7 +139,7 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
      | allowExplicitSharing | allowExplicitSharing | ブール値 |
 
 
-   * AEMパッケージを使用してインデックスをデプロイします。 [AEM アーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=ja)プロジェクトを使用して、デプロイ可能な AEM パッケージを作成できます。以下のサンプルコードを使用して、AEM アーキタイププロジェクトにインデックスを追加します。
+   * AEM パッケージを使用して、インデックスをデプロイします。[AEM アーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=ja)プロジェクトを使用して、デプロイ可能な AEM パッケージを作成できます。以下のサンプルコードを使用して、AEM アーキタイププロジェクトにインデックスを追加します。
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()

@@ -4,10 +4,10 @@ description: 非公開の開発環境では必要ですが、AEM Forms on JEE �
 content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
-role: Admin
+role: Admin,User
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 100%

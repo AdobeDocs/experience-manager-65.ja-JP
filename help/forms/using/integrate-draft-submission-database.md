@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -295,7 +296,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    ALTER TABLE `additionalmetadatatable` CHANGE `value` `value` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `key` `key` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
    ```
 
-データおよびメタデータをデータベースに保存しながら、ドラフトと送信をリスト表示する際に使用できるサンプル実装が設定されました。次に、サンプルでデータサービスとメタデータサービスがどのように設定されているかを見てみましょう。
+データおよびメタデータをデータベースに保存しながら、ドラフトと送信をリスト表示する際に使用できるサンプル実装が設定されました。サンプルにおいて、データサービスとメタデータサービスがどのように設定されているかを説明します。
 
 ## mysql-connector-java-5.1.39-bin.jar ファイルをインストールする {#install-mysql-connector-java-bin-jar-file}
 
@@ -313,7 +314,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
 
@@ -398,7 +399,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    >[!NOTE]
    >
-   >このスクリプトは、標準の添付ウィジェットコンポーネント用です。 標準の添付ファイルウィジェットをカスタマイズした場合は、上記のスクリプトを変更して、それぞれの変更を取り込みます。
+   >スクリプトは、標準の添付ウィジェットコンポーネントです。カスタマイズした標準の添付ウィジェットがある場合は、上記のスクリプトを変更してそれぞれの変更を組み込みます。
 
 1. 次のプロパティを手順 2 で作成したフォルダーに追加し、「**[!UICONTROL すべて保存]**」をクリックします。
 

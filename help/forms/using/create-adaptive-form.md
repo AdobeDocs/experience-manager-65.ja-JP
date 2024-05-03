@@ -4,10 +4,11 @@ description: アダプティブフォームの作成、レイアウトおよび�
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1314'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -58,7 +59,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
 
 1. 画像を選択します。ツールバーが表示されます。![cmppr](assets/cmppr.png) を選択します。画面の左側にプロパティブラウザーが表示されます。「**[!UICONTROL 参照]**」をタップして、ロゴ画像をアップロードします。![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) を選択します。画像がヘッダーに表示されます。
 
-   この記事に使用するロゴがない場合は、「ファイルを取得」を選択して、そのロゴをダウンロードできます。
+   ファイルがない場合は、「ファイルを入手」を選択して、この記事で使用されているロゴをダウンロードできます。
 
 [ファイルを入手](assets/logo.png)
 

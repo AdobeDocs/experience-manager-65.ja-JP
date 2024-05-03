@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: ca2cfe35-b602-4ef8-b4e3-af846105d4de
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 23%

@@ -6,7 +6,8 @@ topic-tags: author
 feature: Adaptive Forms, Foundation Components
 exl-id: ff9bf466-228d-40e6-9389-15c1f2ed1d2e
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 100%

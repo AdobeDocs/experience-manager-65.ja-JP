@@ -5,10 +5,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 docset: aem65
-role: Admin
+role: Admin,User
 exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 100%

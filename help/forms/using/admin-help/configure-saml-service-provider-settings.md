@@ -1,16 +1,17 @@
 ---
 title: SAML サービスプロバイダーの設定
-description: SAML サービスプロバイダーの設定を指定し、指定したサードパーティの ID プロバイダー (IDP) を介したAEM forms へのログインと認証をユーザーに許可することができます。
+description: 指定したサードパーティの ID プロバイダー（IDP）経由で、ユーザーが AEM Forms にログインして認証できるように、SAML サービスプロバイダー設定を指定できます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +28,7 @@ SAML について詳しくは、[Security Assertion Markup Language（SAML）V2.
 
    * Trust Manager を使用して、「Trust Store の種類」として選択した「ドキュメント署名証明書」付きの PKCS #12 形式の証明書を読み込みます。（[ローカル資格情報の管理](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)を参照）。
    * 「サービスプロバイダーの資格情報キーのエイリアス」リストから、Trust Store の資格情報に割り当てたエイリアスを選択します。
-   * 「書き出し」をクリックして、URL コンテンツをファイルに保存し、そのファイルを IDP に読み込むことができます。
+   * 「書き出し」をクリックすると、URL コンテンツをファイルに保存し、そのファイルを IDP に読み込めます。
 
 1. （オプション）「サービスプロバイダーの名前 ID ポリシー」リストから、SAML アサーションでユーザーを識別するときに IDP で使用する名前の形式を選択します。選択肢は、「未指定」、「メール」および「Windows ドメイン修飾名」です。
 
@@ -40,7 +41,7 @@ SAML について詳しくは、[Security Assertion Markup Language（SAML）V2.
    * サードパーティの SAML ID プロバイダーのログインページへのリンク。このページでは、エンタープライズドメインに属しているユーザーが認証できます。
    * AEM Forms のログインページへのリンク。このページでは、ローカルドメインに属しているユーザーが認証できます。
 
-   このオプションを選択しない場合、ユーザーはサードパーティの SAML ID プロバイダーのログインページに直接移動し、エンタープライズドメインに属するユーザーが認証できます。
+   このオプションが選択されていない場合、サードパーティの SAML ID プロバイダーのログインページに直接リンクされ、エンタープライズドメインに属しているユーザーが認証できます。
 
 1. （オプション）「アーティファクトバインディングを有効にする」を選択して、アーティファクトバインディングのサポートを有効にします。デフォルトでは、SAML と共に POST バインディングが使用されます。ただし、アーティファクトバインディングを設定した場合は、このオプションを選択します。このオプションを選択すると、実際のユーザーアサーションはブラウザーリクエストを通じては渡されません。代わりに、アサーションへのポインターが渡され、バックエンド web サービス呼び出しを使用してアサーションが取得されます。
 1. （オプション）「リダイレクトバインディングを有効にする」を選択して、リダイレクトを使用する SAML バインディングをサポートします。
@@ -54,7 +55,7 @@ SAML について詳しくは、[Security Assertion Markup Language（SAML）V2.
 
      `saml.sp.use.relaystate=true`
 
-   * 次のカスタムプロパティを追加して、カスタム Java™ Server Pages (JSP) の URL を設定できます。この URL は、ID プロバイダーの登録済みリストをレンダリングするために使用されます。 カスタム Web アプリケーションをデプロイしていない場合は、デフォルトの User Management ページを使用してリストがレンダリングされます。
+   * 次のカスタムプロパティを追加して、カスタム Java™ Server Pages（JSP）の URL を設定します。これは ID プロバイダーの登録リストをレンダリングするのに使用されます。カスタム web アプリケーションをデプロイしなかった場合、デフォルトの User Management ページを使用してリストをレンダリングします。
 
    `saml.sp.discovery.url=/custom/custom.jsp`
 

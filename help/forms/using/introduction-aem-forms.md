@@ -8,7 +8,8 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 100%
@@ -36,7 +37,7 @@ AEM Forms は、アダプティブフォームだけでなく、XFA フォーム
 
 >[!NOTE]
 >
->[AEM 6.5 クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォーム機能は、探索と評価のみを目的として設計されています。アダプティブフォームの機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
+>[AEM 6.5 クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォーム機能は、探索と評価のみを目的として設計されています。 アダプティブフォームの機能には適切なライセンスが必要なので、実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
 
 ![AEM Forms の機能](do-not-localize/4th-draft.gif)
 

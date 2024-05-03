@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 55bf5196-22c6-4286-8c92-ff44d81dde49
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 100%
@@ -27,7 +28,7 @@ AEM Forms モジュール（例えば、Forms、Rights Management、Output）が
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 1. 管理コンソールで、**サービス**／**アプリケーションおよびサービス**／**サービスの管理**&#x200B;をクリックしてください。
 1. サービスの管理ページで、停止または開始するサービスの隣のチェックボックスをオンにして、「停止」または「開始」をクリックします。

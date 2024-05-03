@@ -7,7 +7,8 @@ topic-tags: integrations
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 100%

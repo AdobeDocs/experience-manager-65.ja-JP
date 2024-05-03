@@ -8,10 +8,11 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '4256'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +34,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
-> アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドをカスタマイズするサポートが、AEM 6.5 Forms サービスパック 19 （6.5.19.0）で導入されました。
+> アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドをカスタマイズするサポートが、AEM 6.5 Forms サービスパック 19（6.5.19.0）で導入されました。
 
 
 >[!NOTE]
@@ -283,7 +284,7 @@ ht-degree: 97%
 
 1. 「フォームモデル」タブの「レコードのドキュメントのテンプレート設定」セクションで、次のいずれかのオプションを選択します。
 
-   **なし** フォーム用のレコードのドキュメントを設定しない場合は、このオプションを選択します。
+   **なし**：フォームにレコードのドキュメントを設定しない場合は、このオプションを選択します。
 
    **フォームテンプレートをレコードのドキュメントとして関連付ける**&#x200B;レコードのドキュメント用のテンプレートとして使用する XDP ファイルがある場合は、このオプションを選択します。このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。適切なファイルを選択します。
 
@@ -452,7 +453,7 @@ AEM Forms は、アダプティブフォーム内の該当するパネルとそ�
 
 >[!NOTE]
 >
-> 1 つのアダプティブフォームフラグメントのレコードのドキュメントに対して、複数のマスターページを適用することはできません。
+> アダプティブフォームフラグメントのレコードのドキュメントに複数のメインページを適用することはできません。
 
 ## レコードのドキュメントで作業する場合の主な注意点 {#key-considerations-when-working-with-document-of-record}
 
@@ -508,10 +509,10 @@ XCI ファイルは、ドキュメントの様々なプロパティを設定す�
   
 -->
 
-### ローカルのForms開発環境でのカスタム XCI ファイルの使用
+### ローカルの Forms 開発環境でのカスタム XCI ファイルの使用
 
-1. XCI ファイルをアップロード環境にローカル開発します。
-1. 開く <!--Cloud Service SDK--> 設定マネージャー。 <!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+1. XCI ファイルをローカル開発環境にアップロードします。
+1. <!--Cloud Service SDK--> Configuration Manager を開きます。<!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
 1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネル]**」の設定を検索して開きます。
 1. XCI ファイルのパスを指定し、「**[!UICONTROL 保存]**」をクリックします。
 

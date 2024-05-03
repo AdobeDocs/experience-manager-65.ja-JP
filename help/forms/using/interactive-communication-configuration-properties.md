@@ -9,7 +9,8 @@ docset: aem65
 feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 100%
@@ -38,7 +39,7 @@ ht-degree: 100%
 <table>
  <tbody> 
   <tr> 
-   <td>Property</td> 
+   <td>プロパティ</td> 
    <td>説明</td> 
    <td>デフォルト</td> 
    <td>指定できる値</td> 
@@ -84,7 +85,7 @@ ht-degree: 100%
 <table>
  <tbody> 
   <tr> 
-   <td>Property</td> 
+   <td>プロパティ</td> 
    <td>説明</td> 
    <td>デフォルト</td> 
    <td>指定できる値</td> 
@@ -114,7 +115,7 @@ ht-degree: 100%
 
 **Adobe Experience Manager web コンソール設定**&#x200B;ページの「**アダプティブフォームおよびインタラクティブ通信 web チャネルの設定**」を選択して、アダプティブフォームおよびインタラクティブ通信 web チャネルの設定プロパティを表示します。次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
 
-| Property | 説明 | デフォルト | 指定できる値 |
+| プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
 | プレースホルダーを表示 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に含まれているフィールドのプレースホルダー表示を有効にします。 | 選択 | 適用なし |
 | 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 数値 |
@@ -127,7 +128,7 @@ ht-degree: 100%
 <table>
  <tbody> 
   <tr> 
-   <td>Property</td> 
+   <td>プロパティ</td> 
    <td>説明</td> 
    <td>デフォルト</td> 
    <td>指定できる値</td> 

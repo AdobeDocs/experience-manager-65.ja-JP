@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1118'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -113,7 +114,7 @@ GDS が元の場所以外の場所に復元された場合は、LCSetGDS スク�
 
 >[!NOTE]
 >
->データベースへのドキュメントの保存を有効にしていた場合は、GDS の場所を変更する必要はありません。
+>データベースへのドキュメントの保存を有効にしてある場合は、GDS の場所を変更する必要はありません。
 
 >[!NOTE]
 >

@@ -7,10 +7,11 @@ docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '3842'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -465,7 +466,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 * リーフレベルでは、複合要素とコレクション要素を使用できません。リーフレベルでは、プリミティブ（文字列、日付、数値、ブーリアン）要素のみが許可されます。この検証では、子 DDE なしの複合要素やコレクション要素が存在しないことが確認されます。
 * データディクショナリを作成するために XSD ファイルをアップロードする際、データディクショナリエディターは、データディクショナリを作成するための最上位要素（複数存在する場合）を要求します。
 * データディクショナリに必要なパラメーターは、この名前だけです。
-* 親 DDE（複合）には、同じ名前の 2 つの子を指定できません
+* 親 DDE（複合）には、同じ名前の 2 つの子を指定できません。
 * DDE が必須のパラメーターでない場合にのみ、DDE が計算済みとしてマークされていることを確認します。必須の要素の計算はできず、計算済みの要素を必須にすることもできません。また、コレクション要素と複合要素は計算済み要素にはできません。
 * DDE が計算済みではない場合のみ、DDE が必須としてマークされていることを確認します。また、コレクションのタイプ（コレクション要素の唯一の子）を示す「collectionElement」ではないことを確認します。
 * データディクショナリまたは DDE の extendedProperties では、空のキーや重複するキーは許可されません。

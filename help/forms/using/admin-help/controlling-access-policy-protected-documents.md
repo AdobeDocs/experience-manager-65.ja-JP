@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Document Security
 exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2167'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -95,7 +96,7 @@ ht-degree: 98%
 
 * ドキュメントがオンラインで閉じている場合は、ポリシーで保護された任意のドキュメントを受信者が次回オンラインで開いたときに、Document Security との同期が行われて変更が反映されます。
 * ドキュメントがオンラインで開いている場合は、受信者がドキュメントを閉じると変更が反映されます。
-* ドキュメントがオフラインの場合、つまり、ノート PC など、インターネットに接続していない状態で使用されている場合、受信者が次回 Document Security と同期する際に変更が反映されます。
+* ドキュメントがオフラインの場合（インターネットに接続せずにノート PC などで使用している場合）は、次に受信者が Document Security と同期したときに変更が反映されます。
 
 **ポリシーで保護されたドキュメントへのアクセス権限の失効**
 

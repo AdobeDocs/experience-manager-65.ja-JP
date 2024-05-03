@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 exl-id: cfca6656-d2db-476d-a734-7a1d1e44894e
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 100%

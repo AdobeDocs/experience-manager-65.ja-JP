@@ -7,7 +7,8 @@ discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 feature: Adaptive Forms, Foundation Components
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 100%

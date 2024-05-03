@@ -5,13 +5,13 @@ contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
 noindex: true
-role: Admin
+role: Admin,User
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '468'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -42,6 +42,6 @@ AEM デスクトップアプリケーションは、Microsoft® Windowsでは We
 
    >[!NOTE]
    >
-   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+   > SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
    接続に成功すると、アプリケーションは `content/dam` と `content/dam/formsanddocuments` のフォルダーを作成します。上記のフォルダーとローカルフォルダーとの間でファイルを移動するだけでなく、アプリを使用して、自動的に作成されたフォルダー間でコンテンツを移動することができます。

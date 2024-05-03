@@ -3,10 +3,11 @@ title: 最新の 6.5.15.0 サービスパックがインストールされると
 description: 最新の 6.5.15.0 サービスパックがインストールされると、CRX/bundle と開始ページサービスが利用できないというエラーが表示される
 exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '276'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +25,7 @@ AEM 6.5.15.0 サービスパックをインストールした後、CRX/bundle �
 このソリューションは次の場合に適用されます。
 * JBoss EAP 7.4.0 で実行されているサーバーを除くすべての JEE サーバー上の AEM Forms
 
-## ソリューション {#solution}
+## 解決策 {#solution}
 
 >[!NOTE]
 >
@@ -39,7 +40,7 @@ AEM 6.5.15.0 サービスパックをインストールした後、CRX/bundle �
 
    >[!NOTE]
    >
-   >例えば、 `bundle.info` under `bundle52` 次を含まない `org.apache.felix.http.bridge` バンドル、 `org.apache.felix.http.bridge`. 次に、[aem-forms root]\crx-repository\launchpad\felix\bundle[x] に移動し、次の手順をこの場所で実行します。
+   >`bundle52` の下の `bundle.info` に `org.apache.felix.http.bridge` バンドルが含まれていない場合は、`org.apache.felix.http.bridge` の横にある角括弧内のバンドル番号を確認してください。次に、[aem-forms root]\crx-repository\launchpad\felix\bundle[x] に移動し、次の手順をこの場所で実行します。
 
 1. 次のURLに移動：`[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`。
 1. `bundle.jar` を検索し、`bundle.jar` の名前を `bundle.jar.bak` に変更します。

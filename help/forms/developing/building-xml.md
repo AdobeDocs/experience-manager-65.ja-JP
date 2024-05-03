@@ -3,10 +3,11 @@ title: JEE Workbench 上の AEM Forms で Execute Script サービスを使用�
 description: JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +17,7 @@ JEE プロセス管理ワークフロー上の AEM Forms に関連している X
 
 単純な XML 設定を扱う場合、`Set Value` サービスを使用することができます。これは JEE サービス上のデフォルトの AEM Forms です。プロセスデータモデルの 1 つ以上のデータ項目の値を設定します。単純な条件ロジックである「もし～なら～である」という形式のシナリオの場合、このサービスが適している可能性があります。
 
-ただし、より複雑な状況では、Set Value サービスの方が効果的ではありません。 このような場合、Java のようなプログラミング言語で提供されるコマンドなど、より堅牢な一連のプログラミングコマンドが必要となります。Set Value サービス内の単純なテキストから XML ドキュメントを作成するよりも、Java を使用して複雑な XML を作成する方がより簡単でより明確でしょう。さらに、条件付きプログラミングは Set Value サービスよりも Java で追加する方が簡単です。
+しかし、より複雑な状況では、Set Value サービスはそれほど効果的ではありません。このような場合、Java のようなプログラミング言語で提供されるコマンドなど、より堅牢な一連のプログラミングコマンドが必要となります。Set Value サービス内の単純なテキストから XML ドキュメントを作成するよりも、Java を使用して複雑な XML を作成する方がより簡単でより明確でしょう。さらに、条件付きプログラミングは Set Value サービスよりも Java で追加する方が簡単です。
 
 ## プロセスでの Execute Script サービスの使用 {#using-execute-script-service-in-process}
 

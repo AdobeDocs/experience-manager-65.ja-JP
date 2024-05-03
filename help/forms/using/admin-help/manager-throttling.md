@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 100%
@@ -43,7 +44,7 @@ AEM Forms 管理者は、ヘルスモニターを使用してワークマネー�
 <table>
  <thead>
   <tr>
-   <th><p>Property</p></th>
+   <th><p>プロパティ</p></th>
    <th><p>説明</p></th>
   </tr>
  </thead>

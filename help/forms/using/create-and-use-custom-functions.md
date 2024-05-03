@@ -6,7 +6,8 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
-source-git-commit: a5b48f1f4072f3e10273ec90d6f505815fe584a3
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 50%

@@ -8,7 +8,8 @@ docset: aem65
 feature: Correspondence Management
 exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 100%

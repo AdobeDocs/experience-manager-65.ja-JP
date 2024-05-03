@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '955'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 97%
 
 ## CSRF 攻撃の仕組み {#how-csrf-attacks-work}
 
-クロスサイトリクエストフォージェリ (CSRF) とは、有効なユーザーのブラウザーが、iFrame を介して悪意のあるリクエストを送信するために使用される、Web サイトの脆弱性です。 ブラウザーは Cookie をドメインベースで送信するので、ユーザーがアプリケーションにログインしている場合、ユーザーのデータが侵害される可能性があります。
+クロスサイトリクエストフォージェリー（CSRF）とは、有効なユーザーのブラウザーが悪質なリクエストの送信（iFrame 経由で）に利用される、web サイトの脆弱性のことです。ブラウザーは Cookie をドメインベースで送信するので、ユーザーがアプリケーションにログインしている場合、ユーザーのデータが侵害される可能性があります。
 
 例えば、ブラウザーで管理コンソールにログインしている場合を想定します。リンクを含むメールメッセージを受信したとします。リンクをクリックすると、ブラウザーで新しいタブが開きます。開いたページには、認証済みの AEM Forms セッションの Cookie を使用して Forms サーバーに悪質なリクエストを行う非表示の iFrame が含まれています。User Management は有効な Cookie を受け取るので、そのリクエストを渡してしまいます。
 

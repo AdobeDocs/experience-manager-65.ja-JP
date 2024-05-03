@@ -7,7 +7,8 @@ geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 100%

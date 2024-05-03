@@ -3,7 +3,8 @@ title: JEE クラスターサーバーに適用可能な破損した CRX リポ�
 description: 破損している CRX リポジトリを復元する方法について説明します。
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 100%

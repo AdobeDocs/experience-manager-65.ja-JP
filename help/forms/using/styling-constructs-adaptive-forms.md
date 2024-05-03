@@ -7,10 +7,11 @@ docset: aem65
 feature: Adaptive Forms, Foundation Components
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '2352'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -202,7 +203,7 @@ Web ページのテーマは、ブートストラップに基づき、以下の 
   </tr>
   <tr>
    <td><p><code>widgets-bg-color</code></p> </td>
-   <td>ウィジェットの背景色（チェックボックスとラジオボタンに対しては機能しません）</td>
+   <td>ウィジェットの背景色（チェックボックスとラジオボタンには適用されません）</td>
   </tr>
   <tr>
    <td><p><code>widgets-border-color</code></p> </td>

@@ -7,10 +7,11 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+role: User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -120,7 +121,7 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 ## ユーザーのジャストインタイムプロビジョニング {#just-in-time-provisioning-of-users}
 
-ジャストインタイムプロビジョニングは、ユーザーが認証プロバイダーを介して正常に認証された後、User Management データベースにユーザーを自動的に作成します。 この新しいユーザーには、関連するロールとグループも動的に割り当てられます。エンタープライズドメインおよびハイブリッドドメインに対して、ジャストインタイムプロビジョニングを有効にできます。
+ユーザーが認証プロバイダーに認証されると、ジャストインタイムプロビジョニングによってユーザー管理データベースにユーザーが自動的に作成されます。この新しいユーザーには、関連するロールとグループも動的に割り当てられます。エンタープライズドメインおよびハイブリッドドメインに対して、ジャストインタイムプロビジョニングを有効にできます。
 
 以下では、従来の認証が AEM Forms で機能する手順を説明します。
 

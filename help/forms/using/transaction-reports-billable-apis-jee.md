@@ -1,9 +1,11 @@
 ---
-title: JEE 上のAEM Formsのトランザクションレポート請求可能な API。
+title: トランザクションレポート JEE 上のAEM Formsの課金対象 API。
 description: JEE 上のAEM Formsのトランザクションとして計上されるすべての API のリスト。
 topic-tags: forms-manager
 feature: Transaction Reports
-source-git-commit: d0db00de6b767a12a9492bbbcec49a8c5d25ff27
+exl-id: dbb22369-c0a2-4cf6-b01b-096b4de13a14
+role: Admin, User, Developer
+source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 54%
@@ -12,13 +14,13 @@ ht-degree: 54%
 
 # JEE 上のAEM Formsのトランザクションレポート請求可能 API {#transaction-reports-billable-apis}
 
-JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリングを行うための複数の API を提供します。 一部の API はトランザクションとして計上され、それ以外は自由に使用できます。このドキュメントは、トランザクションとして計上されるすべての API のリストを提供します。 課金対象の API が使用される一般的なシナリオを次に示します。
+JEE 上のAEM Formsには、ドキュメントを送信、処理、レンダリングするための API がいくつか用意されています。 一部の API はトランザクションとして計上され、それ以外は自由に使用できます。このドキュメントでは、トランザクションとして計上されるすべての API のリストを示します。 課金対象の API が使用される一般的なシナリオを次に示します。
 
 * ある形式から別の形式へのドキュメントの変換
 * ダイナミック PDF ドキュメントの統合
 * インタラクティブ PDF ドキュメントと別の PDF ドキュメントの結合
 
-請求 API は、ページ数、ドキュメントまたはフォームの長さ、レンダリングされたドキュメントの最終的な形式を考慮しません。
+請求 API は、ページ数、ドキュメントまたはフォームの長さ、レンダリング済みドキュメントの最終的な形式を考慮しません。
 <!--
 
 * **Forms Submitted:** When data is submitted from any type of form created with AEM Forms and the data is submitted to any data storage repository or database is considered form submission. For example, submitting an HTML5 Form, PDF Forms are accounted as forms submitted. Each form in a form set is considered a submission. For example, if a form set has 5 forms, when the form set is submitted, transaction reporting service counts it as 5 submissions.
@@ -27,7 +29,7 @@ JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリン�
 
 -->
 
-以下は、JEE で課金される API のリストです。 次のリストを検索 [OSGi 上のAEM Forms向けの課金対象 API](/help/forms/using/transaction-reports-billable-apis.md).
+以下は、JEE で課金対象となる API のリストです。 リストを検索 [osgi 上のAEM Formsの課金対象 API](/help/forms/using/transaction-reports-billable-apis.md).
 
 ## 課金対象のドキュメントサービス API {#billable-document-services-apis}
 
@@ -42,48 +44,48 @@ JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリン�
   </tr>
    <tr>
    <td><a>CreatePDF</a></td>
-   <td>Adobe PDFを、サポートされるファイルタイプに作成します。</td>
-   <td>コンバージョン<br /> </td>
+   <td>サポートされているファイルタイプにAdobe PDFを作成します。</td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>CreatePDF3</a></td>
-   <td>Adobe PDFを、サポートされるファイルタイプに作成します。 </td>
-   <td>コンバージョン<br /> </td>
+   <td>サポートされているファイルタイプにAdobe PDFを作成します。 </td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a> HtmlToPDF</a></td>
    <td>HTMLファイルをAdobe PDFに変換します。 </td>
-   <td>コンバージョン<br /> </td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF</a></td>
-   <td>PDFをサポートされているファイルタイプに書き出します。 </td>
-   <td>コンバージョン<br /> </td>
+   <td>サポートされているファイルタイプにPDFを書き出します。 </td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF2</a></td>
-   <td><p>PDFをサポートされているファイルタイプに書き出します。</p> </td>
-   <td>コンバージョン<br /> </td>
+   <td><p>サポートされているファイルタイプにPDFを書き出します。</p> </td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF3</a></td>
-   <td>PDFをサポートされているファイルタイプに書き出します。</td>
-   <td>コンバージョン<br /> </td>
+   <td>サポートされているファイルタイプにPDFを書き出します。</td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>HtmlFileToPDF</a></td>
    <td>HTMLファイルをPDFに変換します。</td>
-   <td>コンバージョン<br /> </td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>HtmlToPDF2</a></td>
    <td>HTMLファイルをPDFに変換します。</td>
-   <td>コンバージョン<br /> </td>
+   <td>変換<br /> </td>
   </tr>
   <tr>
    <td><a>OptimizePDF</a></td>
    <td>品質に影響を与えることなく不要なメタデータを削除することによって、ファイルサイズを縮小できるように PDF を最適化します。</td>
-   <td>コンバージョン<br /> </td>
+   <td>変換<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -98,8 +100,8 @@ JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリン�
    <td>トランザクションレポートカテゴリ</td>
   </tr>
   <tr>
-   <td><a>署名/証明</a><br /> </td>
-   <td>この API を使用すると、ドキュメントを保護できます。API を使用して、署名ドキュメントに署名し、PDFを認証できます。</td>
+   <td><a>署名/認証</a><br /> </td>
+   <td>この API を使用すると、ドキュメントを保護できます。API を使用して、PDFドキュメントに署名し、認証することができます。</td>
    <td>コンバージョン</td>
   </tr>
  </tbody>
@@ -241,8 +243,8 @@ JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリン�
    <td>ドキュメントの変換</td>
   </tr>
   <tr>
-   <td><a>toSWF</a></td>
-   <td>オプション仕様で指定されたPDFを使用して、フラットSWFファイルをオプション形式に変換します。</td>
+   <td><a>toSwf</a></td>
+   <td>オプション仕様で指定されたオプションを使用して、フラットPDFファイルをSWFフォーマットに変換します。</td>
    <td>ドキュメントの変換</td>
   </tr>
  </tbody>
@@ -303,14 +305,14 @@ JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリン�
 </table>
 
 次の操作を 1 つ以上実行すると、呼び出し API の使用がトランザクションとしてカウントされます。
-1. 非 PDF 形式から PDF 形式への変換。例えば、XDP 形式からPDF形式への変換。<!-- catering to both interactive and non-interactive forms of communication, and the conversion from Word to PDF.-->
+1. 非 PDF 形式から PDF 形式への変換。例えば、XDP 形式からPDF形式への変換などです。<!-- catering to both interactive and non-interactive forms of communication, and the conversion from Word to PDF.-->
 1. PDF 形式から PDF/A 形式への変換。
 1. PDF 形式から非 PDF 形式への変換。例としては、PDF 形式から画像形式への変換、または PDF 形式からテキスト形式への変換があります。
 
 >[!NOTE]
 >
->* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。したがって、 `invoke API` は、なし、単一または複数のトランザクションとして計上できます。 カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
->* 以下のようなPDFサービスを使用して作成された単一のアセンブルドキュメント `invoke` および `invokeDDX`は、なし、単一または複数のトランザクションとして計上できます。 カウントされるトランザクションの数は、指定された <!--DDX--> コード。
+>* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。では、 `invoke API` なし、単一または複数のトランザクションとして計上できます。 カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
+>* 次のような Assembler サービスを使用して生成された 1 つのPDFドキュメント `invoke` および `invokeDDX`、は、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。 カウントされるトランザクションの数は、指定されたによって異なります <!--DDX--> コード。
 
 <!--
 ### PDF Utility Service  {#pdf-utility-service}
@@ -396,43 +398,43 @@ JEE 上のAEM Formsは、ドキュメントの送信、処理、レンダリン�
   </tr>
   <tr>
    <td>exportData</td>
-   <td>フォームを送信します。</td>
+   <td>フォームを送信します</td>
    <td>送信済みフォーム</td>
   </tr>
   <tr>
    <td>exportData2</td>
-   <td>フォームを送信します。</td>
+   <td>フォームを送信します</td>
    <td>送信済みフォーム</td>
   </tr>
   <tr>
    <td>renderForm</td>
-   <td>フォームを送信します。</td>
-   <td>Forms Rendered</td>
+   <td>フォームを送信します</td>
+   <td>レンダリング済みForms</td>
   </tr>
   <tr>
    <td>renderHTMLForm</td>
-   <td>フォームを送信します。</td>
-   <td>Forms Rendered</td>
+   <td>フォームを送信します</td>
+   <td>レンダリング済みForms</td>
   </tr>
   <tr>
    <td>renderHTMLForm2</td>
-   <td>フォームを送信します。</td>
-   <td>Forms Rendered</td>
+   <td>フォームを送信します</td>
+   <td>レンダリング済みForms</td>
   </tr>
   <tr>
    <td>renderPDFForm</td>
-   <td>フォームを送信します。</td>
-   <td>Forms Rendered</td>
+   <td>フォームを送信します</td>
+   <td>レンダリング済みForms</td>
   </tr>
   <tr>
    <td>renderPDFForm2</td>
-   <td>フォームを送信します。</td>
-   <td>Forms Rendered</td>
+   <td>フォームを送信します</td>
+   <td>レンダリング済みForms</td>
   </tr>
   <tr>
    <td>renderPDFFormWithUsageRights</td>
-   <td>フォームを送信します。</td>
-   <td>Forms Rendered</td>
+   <td>フォームを送信します</td>
+   <td>レンダリング済みForms</td>
   </tr>
  </tbody>
 </table>
