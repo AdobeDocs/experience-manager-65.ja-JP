@@ -4,12 +4,11 @@ description: ' [!DNL Experience Manager Forms] を使用したアダプティブ
 role: User, Developer
 level: Beginner
 feature: Adaptive Forms, Foundation Components
-exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 100%
+source-wordcount: '1984'
+ht-degree: 97%
 
 ---
 
@@ -210,3 +209,18 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
    >自動保存オプションが匿名ユーザーに対して機能するには、すべてのユーザーにフォームのプレビュー、確認および署名を許可するように Forms 共通設定サービスが設定されていることを確認します。
    >
    >このサービスを設定するには、`https://'[server]:[port]'system/console/configMgr` にある Adobe Experience Manager の web コンソール設定に移動し、**[!UICONTROL Forms 共通設定サービス]** を「**[!UICONTROL 許可]**」フィールドで「**[!UICONTROL すべてのユーザー]**」オプションを選択するように編集し、設定を保存します。
+
+
+## AEM アダプティブフォームの名前を変更する方法 {#rename-an-AEM-Adaptive-Form}
+
+アダプティブフォームの名前を変更するには、次の手順を実行します。
+
+1. AEM Forms ユーザーインターフェイスでアダプティブフォームを選択します。
+1. 「」をクリック **プロパティ** 上部レールにあります。
+
+   ![プロパティ](/help/forms/using/assets/rename-form-properties.png)
+
+1. 内のフォームの名前を **タイトル** 次の画像に示すように、「」タブをクリックします。
+1. 「**保存して閉じる**」をクリックします。
+
+   ![AEM アダプティブフォームの名前変更](/help/forms/using/assets/rename-form-title.png)

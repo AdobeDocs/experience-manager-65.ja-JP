@@ -8,12 +8,11 @@ topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms, Core Components
-exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
 workflow-type: tm+mt
-source-wordcount: '1733'
-ht-degree: 99%
+source-wordcount: '1794'
+ht-degree: 96%
 
 ---
 
@@ -90,7 +89,7 @@ ht-degree: 99%
 
 ## アダプティブフォームの送信アクションを設定 {#configure-submit-action-for-form}
 
-送信アクションを使用すると、アダプティブフォームを通じて取り込んだデータの送信先を選択できます。 送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックするとトリガーされます。アダプティブフォームには、すぐに使用できる送信アクションがいくつか含まれています。デフォルトの送信アクションを拡張して、独自のカスタム送信アクションを作成することもできます。フォームの送信アクションを設定するには、次の手順を実行します。
+送信アクションを使用すると、アダプティブフォーム経由で取り込んだデータの送信先を選択できます。送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックするとトリガーされます。アダプティブフォームには、すぐに使用できる送信アクションがいくつか含まれています。デフォルトの送信アクションを拡張して、独自のカスタム送信アクションを作成することもできます。フォームの送信アクションを設定するには、次の手順を実行します。
 
 1. コンテンツブラウザーを開き、アダプティブフォームの&#x200B;**[!UICONTROL ガイドコンテナ]**&#x200B;コンポーネントを選択します。
 1. ガイドコンテナプロパティ ![ガイドプロパティ](/help/forms/using/assets/configure-icon.svg) アイコンをクリックします。アダプティブフォームコンテナダイアログボックスが開きます。
@@ -166,6 +165,21 @@ ht-degree: 99%
    ![レンチアイコンをクリックしてアダプティブフォームコンテナダイアログボックスを開き、リダイレクトページまたはお礼のメッセージを設定](/help/forms/using/assets/adaptive-forms-container-prefill-service.png)
 1. フォームデータモデルを選択. 「**[!UICONTROL 基本]**」タブを開きます。事前入力サービスで、「**[!UICONTROL フォームデータモデルの事前入力サービス]**」を選択します。
 1. 「**[!UICONTROL 完了]**」をクリックします。これで、アダプティブフォームがフォームデータモデルの事前入力を使用するように設定されました。[ルールエディター](rule-editor.md)を使用して、フォームのフィールドに事前入力するルールを作成できるようになりました。
+
+## AEM アダプティブフォームの名前を変更する方法{#rename-an-AEM-Adaptive-Form}
+
+アダプティブフォームの名前を変更するには、次の手順を実行します。
+
+1. AEM Forms ユーザーインターフェイスでアダプティブフォームを選択します。
+1. 「」をクリック **プロパティ** 上部レールにあります。
+
+   ![プロパティ](/help/forms/using/assets/rename-form-properties.png)
+
+1. 内のフォームの名前を **タイトル** 次の画像に示すように、「」タブをクリックします。
+1. 「**保存して閉じる**」をクリックします。
+
+   ![AEM アダプティブフォームの名前変更](/help/forms/using/assets/rename-form-title.png)
+
 
 <!--
 ## Edit Form Model properties of an Adaptive Form {#edit-form-model}
