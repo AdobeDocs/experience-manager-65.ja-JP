@@ -5,10 +5,10 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: d6435255835d91729519f7822b9677608b6b9f1e
+source-git-commit: 14b52e7763c4d83a4dcce593f155cb1bb8f56b97
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 66%
+source-wordcount: '2356'
+ht-degree: 54%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 66%
 
 ## [!DNL Experience Manager] 6.5.21.0 の内容 {#what-is-included-in-aem-6521}
 
-[!DNL Experience Manager] 6.5.21.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。 [!DNL Experience Manager] 6.5 で[このサービスパックをインストール](#install)します。
+[!DNL Experience Manager] 6.5.21.0 には、2019 年 4 月の 6.5 リリースの公開当初にリリースされた新機能、お客様からリクエストされた主な機能強化、バグ修正およびパフォーマンス、安定性、セキュリティの向上が含まれています。 [このサービスパックをインストール](#install) 日付： [!DNL Experience Manager] 6.5
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -56,7 +56,7 @@ ht-degree: 66%
 
 #### アクセシビリティ {#sites-accessibility-6521}
 
-* この **[!UICONTROL 保存済みの検索]** ラベルは永続的ではありません。 プレースホルダーは、テキストフィールドの唯一の表示ラベルとして使用されています。（SITES-3050）
+* この **[!UICONTROL 保存済みの検索]** ラベルは永続的ではありません。 このプレースホルダーは、テキストフィールドの唯一の表示ラベルとして使用されています。 （SITES-3050）
 
 #### 管理ユーザーインターフェイス{#sites-adminui-6521}
 
@@ -69,12 +69,12 @@ ht-degree: 66%
 #### [!DNL Content Fragments]{#sites-contentfragments-6521}
 
 * フォーム要素のダブルインクルージョンを修正しました。 （SITES-21109）ブロッカー
-* コンテンツフラグメントの作成時に「閉じる」ボタンが応答しなくなり、ページ全体がフリーズし、コンテンツフラグメントを閉じるにはページを更新する必要が生じることがあります。 バージョン作成の問題に関しては、ユーザーが変更を加えていない場合でも、RTE またはテキストフィールドを操作するだけで、新しいバージョンのコンテンツフラグメントが作成されます。 （SITES-21187）重要
+* コンテンツフラグメントの作成時に「閉じる」ボタンが応答しなくなり、ページ全体がフリーズし、コンテンツフラグメントを閉じるにはページを更新する必要が生じることがあります。 バージョン作成の問題については、コンテンツフラグメントの新しいバージョンが作成されます。 この問題は、ユーザーが変更を行っていない場合でも、RTE やテキストフィールドを操作するだけで発生します。 （SITES-21187）重要
 
 
 #### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6521}
 
-* Adobe Experience Managerを 6.5.19.0 から 6.5.20.0 にアップグレードする際のパス `/libs/cq/graphql/sites/graphiql` が削除されました。 （SITES-20098）重要
+* Adobe Experience Managerを 6.5.19.0 から 6.5.20.0 にアップグレードする際のパス `/libs/cq/graphql/sites/graphiql` が削除されました。 （SITES-20098）重大
 
 
 
@@ -110,11 +110,11 @@ ht-degree: 66%
 
 #### ローンチ{#sites-launches-6521}
 
-* この `sourceRootResource` CRXDE Lite内のローンチ設定で指定されている、存在しなくなったコンテンツを指している場合、ローンチを削除しようとすると誤動作が発生します。 ページが削除されている場合やパスが異なる場合でも、ローンチを削除できます。 （SITES-20750）
+* この `sourceRootResource` CRXDE Lite内のローンチ設定で指定されている、存在しなくなったコンテンツを指している場合、ローンチを削除しようとすると誤動作が発生します。 ローンチの削除（ページが削除されている場合やパスが異なる場合でも） （SITES-20750）
 
 #### MSM - ライブコピー{#sites-msm-live-copies-6521}
 
-* ページコンポーネントをオーバーレイして、ページプロパティにタブを追加しました。 その 1 つはページ設定で、エクスペリエンスフラグメント URL を追加するプロパティを持っています。 エクスペリエンスフラグメントのページプロパティで設定されたリンクが、そのページ用に作成された言語コピーで変更されることはありません。 設定されたリンクは、言語コピーの URL と共に変更されます。 （SITES-19580）重要
+* ページプロパティでタブを追加するために、ページコンポーネントをオーバーレイしました。 その 1 つはページ設定で、エクスペリエンスフラグメント URL を追加するプロパティを持っています。 エクスペリエンスフラグメントのページプロパティで設定されたリンクが、そのページ用に作成された言語コピーで変更されることはありません。 設定されたリンクは、言語コピーの URL と共に変更されます。 （SITES-19580）重要
 
 #### ページエディター{#sites-pageeditor-6521}
 
@@ -163,24 +163,36 @@ ht-degree: 66%
 
 ### 基盤 {#foundation-6521}
 
-
-
 #### Apache Felix {#felix-6521}
 
 * AEM 6.5 サービスパック 19 （SP19）のアップグレード問題で、SP19 のインストール後、Apache Felix への未認証のリクエストに対してアプリケーションサーバーの context-root パスが欠落します。 Apache Felix Web Management Console 4.9.8 を更新します。 （NPR-41933）
 
 * U
 
+#### Campaign{#campaign-6521}
+
+* AEM 6.5 サービスパック 15 では、重要なエントリを含んだ継続的なエラーログが生成されています。 次の問題が報告されました。
+
+   * パスにリソースがありません。404 INFO エラー `/libs/granite/ui/content/shell/start.html`
+   * が原因でキャッチされなかった SlingException のエラーログエントリ `NullPointerException` 時刻 `CampaignsDataSourceServlet.java:147`
+
+  エラーログは、頻繁で大量のエラーエントリで埋められないようにして、リソースの不足や例外に関連する問題が発生することなく、AEM インスタンスが機能するようにします。 （CQ-4357064）
+
 #### Communities {#communities-6521}
 
-* T
+* U
 
 #### コンテンツの配布{#foundation-content-distribution-6521}
 
 * T
 
+#### Granite{#granite-6521}
+
+* **削除** または **変更** 権限を選択するには次の条件を満たす必要があります **参照** 設定ブラウザーでの権限。 （GRANITE-51002）
+
 #### 統合{#integrations-6521}
 
+* について `cq-target-integration`:Google Guava のテスト以外の使用を削除する必要があります。 （CQ-4357101）
 * サービスアカウント（JSON web トークンまたは JWT）資格情報を OAuth2 サーバー間資格情報（サービスプリンシパルとも呼ばれます）に置き換えます。（NPR-41994）重要
 * IMS （Identity Management System）設定でオーディエンスリクエストの作成が失敗します。 （NPR-41888）重要
 * 顧客がペイロードページを表示しようとすると、URL の形式が正しくないため、コンテンツが正しく表示されず、404 エラーが表示されます。 このエラーは、URL のクエリパラメーターの前に疑問符の記号がないことが原因です。 この問題を解決するには、ペイロードページを正しく表示するために、疑問符の記号を手動で挿入する必要があります。 （NPR-41957）
@@ -190,6 +202,7 @@ ht-degree: 66%
 #### ローカライゼーション{#localization-6521}
 
 * テンプレートエディターで、テキスト文字列 *`No video available.`* はローカライズされていません。 （SITES-13190）
+* ユーザーをアクティブ化または非アクティブ化した後の文字列が、でローカライズされていない **ツール** > **セキュリティ** > **ユーザー** > *any_user_name* > **Activate** > **OK**&#x200B;を選択し、 *any_user_name* > **非アクティブ化** > **OK**. （NPR-41737）
 
 #### プラットフォーム{#foundation-platform-6521}
 
@@ -201,12 +214,17 @@ ht-degree: 66%
 
 #### 翻訳{#foundation-translation-6521}
 
+* AEM 6.5.19 の標準の翻訳ステータスがローンチの期待どおりに更新されない問題。 翻訳済みファイルをAEM ローンチに関連付けられた翻訳ジョブに読み込むと、ステータスが「」に変わることが予想されていました。 `Approved`. 代わりに、ステータスがに変更されます。 `Ready for Review`（想定されている動作ではありません）。 （NPR-41756）重要
 * 複数の設定を作成して翻訳Cloud Serviceの設定に移動すると、すべての要素が UI に表示されるわけではありません。 最初の 40 個の要素/フォルダーのみが表示され、遅延読み込みがトリガーされますが、コンテンツはそれ以上追加されません。 （NPR-41829）
+* 日本語の場合、タッチユーザーインターフェイスの権限ページに文字化けが発生します。 （NPR-41794）
 
 #### ユーザーインターフェイス{#foundation-ui-6521}
 
+* ツール / セキュリティ / ユーザーで &lt;user_name> > プロファイル、内 **ユーザー設定の編集** ダイアログ ボックスで [ キャンセル ] をクリックしても、ダイアログ ボックスは終了しません。 （NPR-41793）重要
 * Granite `pathfield` コンポーネント `/libs/granite/ui/components/coral/foundation/form/pathfield` を有効にできない **[!UICONTROL を選択]** ボタンをクリックしてアセットを選択します。 パスフィールドがポップアップ表示され、ユーザーがアセットのチェックボックス **[!UICONTROL を選択]** ボタンが有効になっていません。グレーから青に変わりません。 （NPR-41970）
 * AEM内のコンテンツフラグメントモデル（CFM）参照フィールドに問題がある。 CFM 参照フィールドは必須として設定されていますが、ユーザーは「保存」をクリックして、特定のシナリオで CFM 以外の値を含むコンテンツを保存できます。 「保存」ボタンはグレー表示（使用不可）になっているはずです。 （NPR-41894）
+* を使用する標準の Coral ユーザーインターフェイスダイアログボックス `successresponse` アクションは、アクションの後に成功応答をトリガーにする必要があります。 ただし、AEM 6.5 サービスパック 19 では、再読み込みアクションは呼び出されず、メッセージは表示されません。 （NPR-41797）
+* AEM 6.5 サービスパック 18 でAEM通知のリンクが機能しない。 Service Pack 18 にアップグレードすると、「通知」ボタンでメッセージを選択する際にAEM通知リンクが機能しません。 （NPR-41792）
 
 #### WCM{#wcm-6521}
 
@@ -214,14 +232,14 @@ ht-degree: 66%
 
 #### ワークフロー{#foundation-workflow-6521}
 
-* T
+* AEM 6.5.18 では、パージ中にユーザーメタデータキャッシュから削除する際にエラーが繰り返し発生していました。 （NPR-41762）
 
 ## [!DNL Experience Manager] 6.5.21.0 のインストール{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
 * [!DNL Experience Manager] 6.5.21.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
-* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip)からダウンロードできます。
+* サービスパックは、Adobeからダウンロードできます。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip).
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.21.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
@@ -230,13 +248,13 @@ ht-degree: 66%
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
-### [!DNL Experience Manager] 6.5 へのサービスパックのインストール{#install-service-pack}
+### サービスパックのインストール [!DNL Experience Manager] 6.5{#install-service-pack}
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. Service Sack のダウンロード元 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.20.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -246,7 +264,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
+>サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。 Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
 
 **自動インストール**
 
@@ -271,7 +289,7 @@ ht-degree: 66%
 
 ### [!DNL Experience Manager] Forms へのサービスパックのインストール{#install-aem-forms-add-on-package}
 
-AEM Forms にサービスパックをインストールする手順については、[AEM Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)を参照してください。
+Experience Manager Formsへのサービスパックのインストール手順については、を参照してください。 [Experience Manager Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 >[!NOTE]
 >
@@ -394,7 +412,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
   "refresh": true
   ```
 
-* [!DNL Experience Manager] インスタンスを 6.5.0～6.5.4 から Java™ 11 の最新のサービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
+* をアップグレードする場合 [!DNL Experience Manager] インスタンスが 6.5.0～6.5.4 から Java™ 11 の最新のサービスパックに変換された場合は、次のようになります `RRD4JReporter` の例外 `error.log` ファイル。 例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 
