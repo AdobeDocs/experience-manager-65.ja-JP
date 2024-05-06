@@ -5,10 +5,10 @@ feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 47aac4b19bfbd29395fb09f3c27c981e7aa908f6
 workflow-type: tm+mt
-source-wordcount: '4796'
-ht-degree: 96%
+source-wordcount: '4984'
+ht-degree: 100%
 
 ---
 
@@ -197,7 +197,8 @@ GraphQL の仕様には、特定のインスタンス上のデータをクエリ
 
    * そのうちの 3 つ（`author`、`main`、`referencearticle`）は、ユーザーが管理しています。
 
-   * その他のフィールドは AEM によって自動的に追加されたもので、特定のコンテンツフラグメントに関する情報を提供する便利な手段となっています。この例では、( [ヘルパーフィールド](#helper-fields)) `_path`, `_metadata`, `_variations`.
+   * その他のフィールドは AEM によって自動的に追加されたもので、特定のコンテンツフラグメントに関する情報を提供する便利な手段となっています。この例では、
+（[ヘルパーフィールド](#helper-fields)）`_path`、`_metadata`、`_variations`。
 
 1. ユーザーが Article モデルに基づいてコンテンツフラグメントを作成すると、GraphQL を使用してそれをクエリできます。例については、（[GraphQL で使用するコンテンツフラグメント構造のサンプル](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)に基づいた）[サンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries)を参照してください。
 
@@ -530,13 +531,13 @@ GraphQL クエリでフィルタリングを使用して、特定のデータを
 }
 ```
 
-オプションの変数を使用してGraphQLクエリを実行する場合、特定の値が **not** オプションの変数に指定した場合、変数はフィルター評価で無視されます。 つまり、クエリ結果にはすべての値 ( `null` およびでない `null`（フィルター変数に関連するプロパティ）。
+オプション変数を使用して GraphQL クエリを実行する際、オプション変数に特定の値が指定されて&#x200B;**いない**&#x200B;場合、その変数はフィルター評価で無視されます。つまり、クエリ結果には、フィルター変数に関連するプロパティのすべての値（`null` と `null` 以外の両方）が含まれます。
 
 >[!NOTE]
 >
->次の場合、 `null` 値は *明示的に* このような変数に指定した場合、フィルターは `null` 対応するプロパティの値。
+>そのような変数に `null` 値が&#x200B;*明示的に*&#x200B;指定されている場合、フィルターは、対応するプロパティの `null` 値のみを照合します。
 
-例えば、以下のクエリでは、プロパティの値が指定されていません。 `lastName`:
+例えば、以下のクエリでは、`lastName` プロパティの値が指定されていません。
 
 ```graphql
 query getAuthorsFilteredByLastName($authorLastName: String) {
@@ -551,7 +552,7 @@ query getAuthorsFilteredByLastName($authorLastName: String) {
 }
 ```
 
-すべての作成者が返されます。
+次のように、すべての作成者が返されます。
 
 ```graphql
 {
@@ -754,7 +755,7 @@ query {
 
 ### 永続クエリのキャッシュの有効化 {#enable-caching-persisted-queries}
 
-永続化されたクエリのキャッシュを有効にするには、次の Dispatcher 設定ファイルの更新が必要です。
+永続クエリのキャッシュを有効にするには、Dispatcher 設定ファイルを次のように更新する必要があります。
 
 * `<conf.d/rewrites/base_rewrite.rules>`
 
@@ -766,9 +767,9 @@ query {
 
   >[!NOTE]
   >
-  >Dispatcher がサフィックスを追加する `.json` をすべての永続化されたクエリ URL に追加し、結果をキャッシュできるようにします。
+  >Dispatcher がすべての永続クエリ URL にサフィックス `.json` を追加して、結果をキャッシュできるようにします。
   >
-  >これは、クエリが、キャッシュ可能なドキュメントに対する Dispatcher の要件に確実に従うようにするためです。 詳しくは、 [Dispatcher はどのようにドキュメントを返しますか？](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html?lang=ja#how-does-the-dispatcher-return-documents%3F)
+  >これは、キャッシュ可能なドキュメントに対する Dispatcher の要件にクエリが確実に従うようにするためです。詳しくは、[Dispatcher がドキュメントを返す方法](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html?lang=ja#how-does-the-dispatcher-return-documents%3F)を参照してください。
 
 * `<conf.dispatcher.d/filters/ams_publish_filters.any>`
 
@@ -1047,6 +1048,39 @@ CORS 設定に加えて、サードパーティホストからのアクセスを
 >（**有効**&#x200B;になっているコンテンツフラグメントモデルから派生した）すべての GraphQL [スキーマ](#schema-generation)は、GraphQL エンドポイントを通じて読み取り可能です。
 >
 >この機能は、このように機密データが漏洩する可能性があるため、機密データを使用できないようにする必要があることを意味します。例えば、モデル定義のフィールド名として存在する情報が含まれます。
+
+## 制限事項 {#limitations}
+
+潜在的な問題から保護するために、クエリにはデフォルトの制限が課されています。
+
+* クエリには 100 万（1024 * 1024）文字を超える文字を含めることはできません
+* クエリには、15,000 個を超えるトークンを含めることはできません
+* クエリには、200,000 個を超える空白トークンを含めることはできません
+
+また、次の事項にも注意する必要があります。
+
+* GraphQL クエリに 2 つ（またはそれ以上）のモデルで同じ名前のフィールドが含まれており、次の条件が満たされる場合、フィールド競合エラーが返されます。
+
+   * したがって
+
+      * 2 つ（またはそれ以上のモデル）が可能な参照として使用されます（コンテンツフラグメント参照で許可された&#x200B;**モデルタイプ**&#x200B;として定義されている場合）。
+
+     また
+
+      * これら 2 つのモデルには共通の名前を持つフィールドがあります。つまり、両方のモデルに同じ名前が存在します。
+
+     また
+
+      * これらのフィールドは異なるデータタイプです。
+
+   * 次に例を示します。
+
+      * 異なるモデルを持つ 2 つ（またはそれ以上）のフラグメント（`M1`、`M2` など）が、別のフラグメントからの参照（コンテンツ参照またはフラグメント参照）として使用される場合。例：`Fragment1` `MultiField/List`
+      * 異なるモデルを持つこれら 2 つのフラグメント（`M1`、`M2`）には、同じ名前のフィールドがありますが、タイプが異なります。
+次に例を示します。
+         * `M1.Title` は `Text`
+         * `M2.Title` は `Text/MultiField`
+      * GraphQL クエリに `Title` フィールドが含まれる場合、フィールド競合エラーが発生します。
 
 ## 認証 {#authentication}
 
