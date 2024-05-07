@@ -8,9 +8,9 @@ exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1559'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 96%
 
 ## オンボーディング  {#onboarding}
 
-スマートコンテンツサービスは、 [!DNL Experience Manager]. 購入後、にリンクが記載された電子メールが組織の管理者に送信されます。 [!DNL Adobe I/O].
+スマートコンテンツサービスは、[!DNL Experience Manager] のアドオンとして購入できます。購入後、[!DNL Adobe I/O] へのリンクを記載したメールが組織の管理者に送信されます。
 
 管理者は、そのリンクにアクセスしてスマートコンテンツサービスを [!DNL Experience Manager] と統合することができます。このサービスを [!DNL Experience Manager Assets] と統合するには、[スマートタグの設定](config-smart-tagging.md)を参照してください。
 
@@ -183,7 +183,7 @@ ht-degree: 96%
 1. 検索ボックスで、タグをキーワードとして使用して、アセットを検索します。
 1. 検索に関係のない画像を特定するため、検索結果を確認します。
 1. 画像を選択し、ツールバーの **[!UICONTROL タグを管理]** アイコンをクリックします。
-1. **[!UICONTROL タグを管理]**&#x200B;ページで、タグを確認します。特定のタグに基づいて画像が検索されないようにするには、タグを選択し、 **[!UICONTROL 削除]** をクリックします。 または、タグの横に表示される `x` 記号をクリックします。
+1. **[!UICONTROL タグを管理]**&#x200B;ページで、タグを確認します。特定のタグに基づいて画像が検索されないようにするには、タグを選択し、ツールバーの「**[!UICONTROL 削除]**」をクリックします。または、タグの横に表示される `x` 記号をクリックします。
 1. オプションで、タグに高いランクを割り当てるには、タグを選択し、ツールバーの「**[!UICONTROL 昇格]**」をクリックします。昇格したタグは、「**[!UICONTROL タグ]**」セクションに移動されます。
 1. 「**[!UICONTROL 保存]**」「**[!UICONTROL OK]**」の順にクリックします。
 1. 画像の&#x200B;**[!UICONTROL プロパティ]**&#x200B;ページに移動します。昇格したタグに高い関連性が割り当てられていること、その結果として検索結果の上位に表示されることを確認します。

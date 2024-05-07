@@ -8,9 +8,9 @@ exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1155'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -117,7 +117,7 @@ ht-degree: 99%
 1. [!UICONTROL アセットレポート]ページのレポート生成ステータスは、レポートジョブの現在の状態（「[!UICONTROL 成功]」、「[!UICONTROL 失敗]」、「[!UICONTROL 待機中]」、「[!UICONTROL スケジュール済み]」など）に基づきます。通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。または、レポートを選択し、ツールバーの「**[!UICONTROL 表示]**」をクリックします。
 
    <!--![A generated report](assets/report_page.png)-->
-   [レポートのステータス](assets/report-status.JPG)
+   [レポートステータス](assets/report-status.JPG)
 
    ツールバーの「**[!UICONTROL ダウンロード]**」をクリックすると、レポートを CSV 形式でダウンロードできます。
 
@@ -160,7 +160,7 @@ ht-degree: 99%
 1. `https://[aem_server]:[port]/system/console/configMgr` で Web コンソール（設定マネージャー）にアクセスします。
 1. 「**[!UICONTROL DAM Report Purge Service]**」設定を開きます。
 1. `scheduler.expression.name` フィールドでパージサービスの頻度（時間間隔）を指定します。レポートの経過日数および数量のしきい値を設定することもできます。
-1. 変更内容を保存します。
+1. 変更を保存します。
 
 ## トラブルシューティング情報、ヒント、制限事項 {#best-practices-and-limitations}
 

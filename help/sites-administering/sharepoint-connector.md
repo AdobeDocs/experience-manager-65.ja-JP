@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
 source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1482'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -204,7 +204,7 @@ Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン
 1. OSGI／Configuration をクリックします。
 1. 「Day JCR Connector for Microsoft Sharepoint」を探します。
 1. 「設定値を編集」をクリックします。
-1. 「Sharepoint Connection Factory」の値を「com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory」に設定します。
+1. 「Sharepoint Connection Factory」の値として「com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory」を設定します。
 1. 「**保存**」をクリックします。
 
 **基本認証の設定（Windows）**
@@ -219,7 +219,7 @@ Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン
 
 コネクターから SharePoint コンテンツにアクセスできるのは、AEM と SharePoint の両方で認証されたユーザーのみです。
 
-認証にコネクタ拡張機能を使用して、カスタム認証モジュールを作成することもできます。例えば、AEMユーザーによるアクセスを特定のSharePointユーザーにマッピングします。 SharePoint ユーザーに対応する AEM ユーザーを作成して（ユーザー名とパスワードが一致する必要があります）、コネクタインスタンスにマッピングされた SharePoint コンテンツを確認できるようにします。
+認証用のコネクタ拡張を使用してカスタム認証モジュールを作成することもできます。このモジュールを使用すると、例えば、AEM ユーザーによるアクセスを特定の SharePoint ユーザーにマッピングできます。SharePoint ユーザーに対応する AEM ユーザーを作成して（ユーザー名とパスワードが一致する必要があります）、コネクタインスタンスにマッピングされた SharePoint コンテンツを確認できるようにします。
 
 AEM でユーザーを作成するには、以下の手順に従います。
 

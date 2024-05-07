@@ -7,7 +7,7 @@ feature: Developer Tools
 exl-id: 0271c528-23b0-4a3a-b5e8-5baf6cdeecc7
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '250'
 ht-degree: 100%
 

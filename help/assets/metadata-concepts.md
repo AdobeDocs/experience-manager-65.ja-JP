@@ -7,9 +7,9 @@ feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2665'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 

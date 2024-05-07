@@ -7,17 +7,17 @@ feature: Developer Tools,Renditions
 exl-id: 7652663a-11ba-4a78-9a9f-221d514fe992
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '247'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 # Lightbox {#lightbox}
 
-Lightbox は、アセットに容易にアクセスするための特別なタイプのコレクションです。Lightbox にすばやくアクセスして、アセットを追加または削除できます。 Lightbox は、個人用の画像ギャラリーとして使用することができます。
+Lightbox は、アセットに容易にアクセスするための特別なタイプのコレクションです。Lightbox にすぐにアクセスして、アセットを追加または削除できます。Lightbox は、個人用の画像ギャラリーとして使用することができます。
 
-[!DNL Adobe Experience Manager Assets] のユーザーである場合は、アプリケーションに最初にログインしたときに Lightbox が自動的に作成されます。ログイン専用です。 他のユーザーは Lightbox にアクセスできません。
+[!DNL Adobe Experience Manager Assets] のユーザーである場合は、アプリケーションに最初にログインしたときに Lightbox が自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
 
 ## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
 
@@ -32,7 +32,7 @@ Lightbox は、アセットに容易にアクセスするための特別なタ�
 
    >[!NOTE]
    >
-   >Lightbox はコレクションに似ていますが、通常コレクションで実行するすべてのアクションを実行することはできません。 例えば、Lightbox の設定を削除、共有、表示することはできません。 また、他のコレクションに追加することはできません。 ただし、Lightbox 内のアセットを編集することはできます。
+   >Lightbox はコレクションに似ていますが、コレクションに対して通常実行するすべてのアクションを実行できるわけではありません。例えば、Lightbox の設定を削除、共有または表示することはできません。また、Lightbox を他のコレクションに追加することはできません。ただし、Lightbox 内のアセットを編集することはできます。
 
 ## Lightbox からのアセットの削除 {#removing-assets-from-lightbox}
 

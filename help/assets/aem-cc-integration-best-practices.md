@@ -9,9 +9,9 @@ exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3173'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -118,7 +118,7 @@ ht-degree: 99%
 * Adobe Stock 内のアセットが [!DNL Experience Manager] に保存されると、それらは通常の [!DNL Assets] になり、バイナリが [!DNL Experience Manager] リポジトリに保存されます。[!DNL Adobe Stock] に関係する一部のメタデータが [!DNL Experience Manager] 内のアセットに保存されます。その他の点では、取り込みプロセスは他のあらゆるファイルの場合と同様です。例えば、スマートタグがアクティブな場合、保存時にこれらのアセットにタグが追加されます。
 * [!DNL Experience Manager] に保存されたアセットはコピーであり、[!DNL Adobe Stock] へのリンクではありません。
 
-**[!DNL Adobe Stock] から [!DNL Experience Manager] に保存されたアセットを[!DNL Creative Cloud]** で操作します。この統合は [!DNL Adobe Asset Link] とは独立していますが、[!DNL Adobe Asset Link] は [!DNL Stock] からそのように保存されたこれらのアセットを認識し、[!DNL Photoshop]、[!DNL Illustrator] または [!DNL InDesign] の [!DNL Adobe Asset Link] 拡張 UI でこれらのアセットに追加のメタデータと [!DNL Adobe Stock] ロゴを表示するようにします。ファイルはに保存すると通常のアセットになるので、参照や開くなどに使用できます。 [!DNL Experience Manager].
+**[!DNL Adobe Stock] から [!DNL Experience Manager] に保存されたアセットを[!DNL Creative Cloud]** で操作します。この統合は [!DNL Adobe Asset Link] とは独立していますが、[!DNL Adobe Asset Link] は [!DNL Stock] からそのように保存されたこれらのアセットを認識し、[!DNL Photoshop]、[!DNL Illustrator] または [!DNL InDesign] の [!DNL Adobe Asset Link] 拡張 UI でこれらのアセットに追加のメタデータと [!DNL Adobe Stock] ロゴを表示するようにします。ファイルは [!DNL Experience Manager] に保存されると標準のアセットとなるため、閲覧したり開いたりすることができます。
 [!DNL Adobe Asset Link] 拡張機能が存在する [!DNL Creative Cloud] アプリケーションで作業するクリエイティブ ユーザーは、[!DNL Adobe Stock] から [!DNL Experience Manager] へすでにライセンスを供与されているアセットにアクセスできるだけでなく、[!DNL Creative Cloud] ライブラリ パネルで [!DNL Adobe Stock] アセットの検索、プレビュー、ライセンスを供与できます。
 [!DNL Adobe Stock] からライセンスを取得して [!DNL Experience Manager] に保存した [!DNL Assets] は、[!DNL Experience Manager Assets] デプロイメントにアクセスする幅広いチームで利用できるようになります。一方、[!DNL Creative Cloud] ライブラリパネルを介して [!DNL Adobe Stock] からアセットのライセンスを取得したクリエイターは、デフォルトでは自分たちの [!DNL Creative Cloud] アカウントでのみ利用できるようになっています。
 
@@ -216,7 +216,7 @@ Adobe Asset Link は、この使用例を適切にサポートしています。
 
 次のアップロード機能を利用できます。
 
-* 大きなフォルダーや階層フォルダーをまとめてアップロードするには、[フォルダーアップロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem?lang=ja)機能を提供する [!DNL Experience Manager] デスクトップアプリケーションを使用します。フォルダーの階層構造もアップロードできます。[!DNL Assets] はバックグラウンドでアップロードされるため、web ブラウザーのセッションに拘束されません。
+* 大きなフォルダーや階層フォルダーをまとめてアップロードするには、[フォルダーアップロード](https://experienceleague.adobe.com/ja/docs/experience-manager-desktop-app/using/using#upload-and-add-new-assets-to-aem)機能を提供する [!DNL Experience Manager] デスクトップアプリケーションを使用します。フォルダーの階層構造もアップロードできます。[!DNL Assets] はバックグラウンドでアップロードされるため、web ブラウザーのセッションに拘束されません。
 * 1 つのフォルダーからいくつかのファイルをアップロードするには、ファイルを直接 web インターフェイスにドラッグするか、[!DNL Assets] web インターフェイスの「作成」オプションを使用します。
 * ビジネス要件に応じて、カスタムアップローダーを使用することもできます。
 

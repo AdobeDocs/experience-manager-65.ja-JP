@@ -9,7 +9,7 @@ role: Developer
 exl-id: 8974c468-ff2b-431d-96fb-e987698619bc
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ Convert PDF サービス API では、次のクイックスタートを使用で
 
 [クイックスタート（SOAP モード）：Java を使用して PDF ドキュメントを JPEG ファイルに変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

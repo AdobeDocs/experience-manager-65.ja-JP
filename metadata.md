@@ -9,9 +9,9 @@ version: 6.5
 index: y
 recommendations: noDisplay
 source-git-commit: e5013bbba695d2b5258ed515a27bf5b36d098c1d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '131'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ metadata.md ファイルには、リポジトリ内にあるユーザーガイ�
 |--- |--- |
 | solution-title | 記事ヘッダーでリンクとして使用します。 |
 | solution-hub-url | 学習とサポートのハブページを開きます。 |
-| solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。未実装。 |
+| solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。まだ実装されていません。 |
 | getting-started-url | 「はじめに」のページへのリンク。 |
 | tutorials-url | ビデオチュートリアルへのリンク。 |
 | mini-toc-levels | 右側のレールに表示される見出しレベルの数を決定します。デフォルト値は 2 です。 |

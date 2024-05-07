@@ -1,6 +1,6 @@
 ---
-title: Java&trade; API クイックスタートの概要
-description: AEM Forms Java&trade を使用してAEM Formsの操作を実行する方法を説明します。厳密に型指定された API は SOAP 接続で有効になっています。
+title: Java™ API クイックスタートの概要
+description: SOAP 接続が有効になっている AEM Forms Java™ の厳密に型指定された API を使用して AEM Forms の操作を実行する方法について説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,9 +9,9 @@ role: Developer
 exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '532'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 88%
 
 Adobe AEM Forms API クイックスタートは、AEM Forms サービスとやり取りするプログラムの開発に向けた取り組みを加速するのに役立ちます。*クイックスタート*&#x200B;は、独自のプロジェクトにコピーして貼り付け、出発点として使用できる完全なプログラムです。クイックスタートを実行して、動作を確認し、独自のニーズに合わせて変更できます。
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
-Java™厳密に型指定された API クイックスタートでは、Java™アプリケーションの実行に必要な JAR ファイルのリストが提供されます。 ほとんどの Java™ クイックスタートは、`main` 内で実行されるコンソールアプリケーションです。ただし、Forms Java™で強く型指定された API Quick Start は、Web アプリケーション内で実行される Java™サーブレットとして実装されています。
+Java™ の厳密に型指定された API クイックスタートには、Java™ アプリケーションの実行に必要な JAR ファイルのリストが表示されます。ほとんどの Java™ クイックスタートは、`main` 内で実行されるコンソールアプリケーションです。ただし、Forms Java™ の厳密に型指定された API クイックスタートは、web アプリケーション内で実行する Java™ サーブレットとして実装されます。
 
 JAR ファイルのリストは、クイックスタートの先頭にあるコメントセクションにあります。例えば、次のコメントは Output クイックスタートにあり、各 Java™ クイックスタートにある一般的な JAR ファイルリストです。
 

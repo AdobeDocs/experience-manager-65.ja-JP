@@ -11,7 +11,7 @@ exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1551'
 ht-degree: 100%
 

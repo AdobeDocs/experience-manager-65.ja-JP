@@ -10,9 +10,9 @@ feature: Adaptive Forms, Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '968'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -106,11 +106,11 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 1. 最新バージョンの Forms コアコンポーネントを含めるようにプロジェクトを更新します。
 
    1. [AEM Archetype Project Folder]/pom.xml を編集用に開きます。
-   1. のバージョンを設定 `core.forms.components.version` および `core.forms.components.af.version` から [最新のFormsコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) のバージョンと両方がと同じバージョンであることを確認します。 **Forms Core Components** 表に記載されている、およびセットバージョンの `core.wcm.components.version` 以下で指定されたように [WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html).
+   1. `core.forms.components.version` と `core.forms.components.af.version` のバージョンを [Forms コアコンポーネントの最新](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=ja#aem-as-form-version-history)バージョンに設定します。両者が、表に記載されている **Forms コアコンポーネント**&#x200B;と同じバージョンであることを確認し、[WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html?lang=ja)で指定されているように `core.wcm.components.version` のバージョンを設定します。
 
       >[!WARNING]
       >
-      >* バージョン 45 でアーキタイププロジェクトを作成する場合、 `[AEM Archetype Project Folder]/pom.xml` 最初は、フォームコアコンポーネントのバージョンを 1.1.28 に設定します。アーキタイププロジェクトを構築またはデプロイする前に、フォームコアコンポーネントのバージョンを 1.1.26 に更新します。最新バージョンは、 [AEM 6.5 Formsバージョン履歴](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history).
+      >* バージョン 45 を使用してアーキタイププロジェクトを作成する場合、`[AEM Archetype Project Folder]/pom.xml` では最初、フォームコアコンポーネントのバージョンを 1.1.28 に設定します。アーキタイププロジェクトを作成またはデプロイする前に、フォームコアコンポーネントのバージョンを 1.1.26 に更新します。最新バージョンは、[AEM 6.5 Forms バージョン履歴](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=ja#aem-as-form-version-history)で確認できます。
 
       >[!NOTE]
       >
@@ -165,5 +165,5 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
 
 * [コアコンポーネントベースのアダプティブフォームを作成](/help/forms/using/create-an-adaptive-form-core-components.md)
 * [AEM Sites ページまたはエクスペリエンスフラグメントにアダプティブフォームを作成または追加](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [コアコンポーネントベースのアダプティブフォームのテーマを作成](create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [コアコンポーネントベースアダプティブフォームのテーマの作成](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [コアコンポーネントベースのアダプティブフォームのテンプレートを作成](template-editor.md)

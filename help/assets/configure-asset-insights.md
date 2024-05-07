@@ -7,9 +7,9 @@ feature: Asset Insights,Asset Reports
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 91%
    ![chlimage_1-72](assets/chlimage_1-210.png)
 
 1. 「**[!UICONTROL インサイト設定]**」カードをクリックします。
-1. ウィザードで、データセンターを選択し、組織名、ユーザー名、共有暗号鍵などの資格情報を指定します。
+1. ウィザードでデータセンターを選択し、組織名、ユーザー名、共有暗号鍵などの資格情報を指定します。
 
    ![Experience Manager で Adobe Analytics をアセットインサイト用に設定](assets/insights_config2.png)
 

@@ -11,7 +11,7 @@ mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2851'
 ht-degree: 100%
 
@@ -332,7 +332,7 @@ Dynamic Media Classic でのアセットの検索は、Experience Manager Assets
 >* クラシック UI では、**Flash** と **FXG** も検索できます。タッチ操作向け UI では、これらのタイプのフィルタリングはサポートされていません。
 >
 >* ビデオを検索するときは、単一のレンディションが検索されています。結果には、元のレンディション（&amp;ast;.mp4 のみ）と、エンコードされたレンディションが返されます。
->* アダプティブビデオセットを検索する場合は、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
+* アダプティブビデオセットを検索する場合は、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
 >
 
 **[!UICONTROL 公開ステータス]** - 公開ステータス（**[!UICONTROL 非公開]**&#x200B;または&#x200B;**[!UICONTROL 公開済み]**）に基づいてアセットをフィルタリングできます。**[!UICONTROL 公開ステータス]**&#x200B;を選択しない場合、Experience Manager ではデフォルトですべての公開ステータスが検索されます。

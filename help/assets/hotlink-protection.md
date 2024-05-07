@@ -10,7 +10,7 @@ exl-id: 698e8bdb-9b31-49ab-8560-26b05109bb23
 feature: Configuration
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '196'
 ht-degree: 100%
 

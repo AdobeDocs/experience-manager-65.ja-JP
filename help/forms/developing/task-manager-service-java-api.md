@@ -9,7 +9,7 @@ role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '524'
 ht-degree: 100%
 
@@ -33,7 +33,7 @@ Task Manager サービスでは、以下のクイックスタートが使用で�
 
 [クイックスタート（SOAP モード）：Java API を使用して、タスク情報を取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

@@ -9,7 +9,7 @@ role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '423'
 ht-degree: 100%
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 [クイックスタート（SOAP モード）：Java API を使用したジョブのステータスの取得](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

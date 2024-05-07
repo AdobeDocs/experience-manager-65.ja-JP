@@ -10,9 +10,9 @@ role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '347'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 88%
 | **スピンセット** - 2D セットあたりの最大行数／列数 | 1 セットあたり 12～18 個の画像 | 1000 |
 | **PDF** - 抽出対象となる PDF の最大ページ数 |  | 100（すべての PDF 用） |
 
-‡ベストプラクティスは、重複するアセットをセットに含めないことです。 1 つのアセットに対する重複は 20 個までに制限されます。 そのアセットに別の重複を追加した場合は、そのセット内で、リクエストがエラーを表示するか、重複を無視します。
+‡ ベストプラクティスは、重複するアセットをセットに含めないことです。1 つのアセットに対する重複は 20 個までに制限されます。そのアセットに別の重複を追加した場合は、そのセット内で、リクエストがエラーを表示するか、重複を無視します。
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
 ## Dynamic Media でサポートしていない web ブラウザーとオペレーティングシステムの組み合わせ {#unsupported-browser-os}

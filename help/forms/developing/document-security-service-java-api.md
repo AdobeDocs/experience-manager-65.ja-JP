@@ -9,7 +9,7 @@ role: Developer
 exl-id: 76d855cf-ebfa-487a-b1c8-755e7e45dd73
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1071'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ Java API Quick Start(SOAP) は、次のRights Managementサービスで使用で
 
 [クイックスタート（SOAP モード）：Java API を使用した Word ドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

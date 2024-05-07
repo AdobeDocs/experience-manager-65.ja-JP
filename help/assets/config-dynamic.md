@@ -13,9 +13,9 @@ exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7738'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 99%
 
 >[!IMPORTANT]
 >
->Secure Socket Layer 2.0 および 3.0 と Transport Layer Security 1.0 および 1.1 のサポートの終了。
+>Secure Socket Layer 2.0 および 3.0 と Transport Layer Security 1.0 および 1.1 のサポートを終了します。
 >2024年4月30日（PT）を以て、Adobe Dynamic Media は以下のサポートを終了します。
 >
 >* SSL（Secure Socket Layer）2.0
@@ -45,7 +45,7 @@ ht-degree: 99%
 > `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
 > `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
 >
-> 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
+> [Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 
 <!-- FOR ABOVE - CQDOC-19433 (original ticket)
 and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
@@ -917,7 +917,7 @@ Dynamic Media 画像サーバーを設定するには：
 | `jpegquality` | `80` | デフォルトの JPEG エンコード属性。JPEG 返信画像のデフォルト属性を指定します。<br>整数とフラグ（コンマ区切り）。1 つ目の値は 1 ～ 100 の範囲で、画質を定義します。2 つ目の値は、通常動作の場合は 0 を指定し、JPEG エンコーダーで採用されている RGB 色度ダウンサンプリングを無効にするには 1 を指定します。<br>画像サービス API の [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html?lang=ja#image-serving-api) も参照してください。 |
 | `maxpix` | `2000,2000` | 返信画像のサイズ制限.クライアントに返される返信画像の最大の幅と高さ。<br>返信画像の幅または高さが attribute::MaxPix よりも大きくなるリクエストに対しては、サーバーからエラーが返ります。<br>画像サービス API の [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=ja#image-serving-api) も参照してください。 |
 | `resmode` | `SHARP2` | デフォルトの再サンプリングモード.画像データの拡大縮小に使用するデフォルトの再サンプリングおよび補間属性を指定します。<br>`resMode=` をリクエスト内で指定していない場合に使用されます。<br>指定できる値は、`BILIN`、`BICUB`、または `SHARP2` です。<br>列挙値。補間モードが`bilin`の場合は 2、`bicub`の場合は 3、`sharp2`の場合は 4 に設定します。`sharp2` を使用すると効果的です。<br>画像サービス API の [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=ja#image-serving-api) も参照してください。 |
-| `resolution` | `72` | デフォルトのオブジェクト解像度。特定のカタログレコードに有効な catalog::Resolution 値が含まれていない場合のデフォルトのオブジェクト解像度を指定します。<br>0 より大きい実数。通常は ppi（インチあたりピクセル数）で表しますが、ppm（メートルあたりピクセル数）などの他の単位の場合もあります。<br>画像サービス API の[解像度](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#?lang=ja#image-serving-api)も参照してください。 |
+| `resolution` | `72` | デフォルトのオブジェクト解像度。特定のカタログレコードに有効な catalog::Resolution 値が含まれていない場合のデフォルトのオブジェクト解像度を指定します。<br>0 より大きい実数。通常は ppi（インチあたりピクセル数）で表しますが、ppm（メートルあたりピクセル数）などの他の単位の場合もあります。<br>画像サービス API の[解像度](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution#image-serving-api)も参照してください。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | これらの値は、ビデオ再生時間のスナップショットを表し、[encoding.com](https://www.encoding.com/) に渡されます。詳しくは、[ビデオサムネールについて](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)を参照してください。 |
 
 ## Dynamic Media カラーマネジメントの設定 {#configuring-dynamic-media-color-management}

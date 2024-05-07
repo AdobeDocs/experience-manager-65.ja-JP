@@ -9,7 +9,7 @@ role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '639'
 ht-degree: 100%
 
@@ -39,7 +39,7 @@ Document Management サービス（非推奨）では、次のクイックスタ
 
 [クイックスタート（SOAP モード）：Java API を使用した Content Services 権限の設定](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

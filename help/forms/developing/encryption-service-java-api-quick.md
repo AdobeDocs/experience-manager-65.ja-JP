@@ -9,7 +9,7 @@ role: Developer
 exl-id: e8b2aa43-ac27-410d-a809-56bfd1c2fcb1
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '465'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 
 [クイックスタート（SOAP モード）：Java を使用した暗号化タイプの決定](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

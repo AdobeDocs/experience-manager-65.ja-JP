@@ -9,7 +9,7 @@ role: Developer
 exl-id: c5bf9184-a837-4033-9962-7b3052498e75
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '189'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ Distiller® サービスで Java™ API クイックスタート（SOAP）を使
 
 [クイックスタート（SOAP モード）：Java を使用した PostScript ファイルの PDF ドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

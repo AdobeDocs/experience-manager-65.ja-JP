@@ -9,7 +9,7 @@ role: Developer
 exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '493'
 ht-degree: 100%
 
@@ -33,7 +33,7 @@ User Manager API で Java API クイックスタート（SOAP）を使用でき�
 
 [クイックスタート（SOAP モード）：Java API を使用した環境設定ノードのプログラム管理](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

@@ -7,7 +7,7 @@ feature: Collaboration,Asset Management
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '640'
 ht-degree: 100%
 

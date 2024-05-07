@@ -8,9 +8,9 @@ feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2728'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -128,7 +128,7 @@ accessKey=<snip>
 
 ### 一時的なワークフロー {#transient-workflows}
 
-可能な限り、「[!UICONTROL DAM アセットの更新]」ワークフローを「一時的」に設定します。この設定により、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。この場合、ワークフローは通常の追跡およびアーカイブプロセスを通過する必要がないからです。
+可能な限り、「[!UICONTROL DAM アセットの更新]」ワークフローを「一時的」に設定します。この設定では、ワークフローが通常のトラッキングやアーカイブ処理を通過する必要がないため、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
 
 1. `https://[aem_server]:[port]/miscadmin` の [!DNL Experience Manager] のデプロイメント内の `/miscadmin` に移動します。
 

@@ -9,9 +9,9 @@ role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '16917'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -596,9 +596,9 @@ PDF ドキュメントの署名や認証に nCipher nShield HSM 資格情報を�
 
 この設定値を cknfastrc ファイルに追加すると、J2EE アプリケーションサーバーを再起動しなくても、新しい資格情報を使用できます。
 
-    >[！注意 ]
-    >
-    > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+    ／［メモ］
+    ／
+    ／SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。別の方法（Java プロセスの停止など）を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 **署名は信頼されていません**
 

@@ -7,9 +7,9 @@ exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
 solution: Experience Manager, Workfront
 source-git-commit: 5ccac0aadce3971e66da052d393cbd33b61e94f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '428'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -47,10 +47,10 @@ ht-degree: 92%
 
 1. [!UICONTROL パッケージマネージャー]を使ってパッケージをインストールします。パッケージのインストール方法については、[パッケージマネージャーのドキュメント](/help/sites-administering/package-manager.md)を参照してください。
 1. [!DNL Experience Manager] ユーザーグループに `wf-workfront-users` を作成し、`jcr:all` 権限を `/content/dam` に割り当てます。
-1. の標準提供のインデックス定義にカスタムプロパティを追加します。 **`ntFolderDamLucene(/oak:index/ntFolderDamLucene)`**. 次の手順を実行します。
-   * を追加します。 **`nt:unstructured`** プロパティ名 **`wfReferenceNumber`** 移動先：
+1. **`ntFolderDamLucene(/oak:index/ntFolderDamLucene)`** の標準提供のインデックス定義にカスタムプロパティを追加します。次の手順を実行します。
+   * **`wfReferenceNumber`** という名前の **`nt:unstructured`** プロパティを次に追加します。
      `/oak:index/ntFolderDamLucene/indexRules/nt:folder/properties/wfReferenceNumber`。
-   * インデックスの再作成 `index /oak:index/ntFolderDamLucene` 再インデックスフラグを `true`.
+   * インデックス再作成フラグを `true` に反転させることで、`index /oak:index/ntFolderDamLucene` のインデックスを再作成します。
 
 システムユーザー `workfront-tools` が自動的に作成され、必須の権限が自動的に管理されます。このコネクタを使用するすべての [!DNL Workfront] ユーザーが、このグループの一部として自動的に追加されます。
 

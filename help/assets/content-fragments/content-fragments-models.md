@@ -6,9 +6,9 @@ role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2310'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -87,7 +87,7 @@ AEM のコンテンツフラグメントモデルは、[コンテンツフラグ
 
 1. **フィールドを削除するには**
 
-   必須フィールドを選択し、ごみ箱アイコンをクリックします。 このアクションの確認が求められます。
+   必須フィールドを選択し、ごみ箱アイコンをクリックします。このアクションの確認が求められます。
 
    ![削除](assets/cfm-models-06.png)
 
@@ -234,7 +234,8 @@ AEM では次のものの繰り返しを防止できます。
 * コンテンツ参照：
 これにより、現在のフラグメントへの参照を追加できなくなります。この結果、空のフラグメント参照選択ダイアログが表示される場合があります。
 >
-* GraphQLでのフラグメント参照相互に参照される複数のコンテンツフラグメントを返すディープクエリを作成した場合、最初に出現するときに null が返されます。
+* GraphQL のフラグメント参照
+相互に参照される複数のコンテンツフラグメントを返すディープクエリを作成する場合、最初に null が返されます。
 
 ### コンテンツ参照 {#content-reference}
 

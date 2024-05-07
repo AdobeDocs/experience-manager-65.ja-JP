@@ -13,9 +13,9 @@ role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3792'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -136,7 +136,7 @@ PDF または AI ワークフローのラスタライズの引数
    <td>生成されたプレビューレンディションの最大の高さ（ピクセル単位）。<br /> </td>
   </tr>
   <tr>
-   <td>解像度</td>
+   <td>解決策</td>
    <td>72</td>
    <td>最初のページをラスタライズする解像度（ppi（インチあたりピクセル数）単位）</td>
   </tr>
@@ -196,7 +196,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 **[!UICONTROL Dynamic Media プロセスの画像アセット]**&#x200B;のステップでは、サムネールは Image Server で生成されます。この設定は、**[!UICONTROL サムネールを処理]**&#x200B;のステップで適用される設定とは独立した設定です。**[!UICONTROL サムネールを処理]**&#x200B;のステップで行うサムネールの生成は、サムネール生成で最も遅く、最もメモリを使う方法です。
 
-サムネールのサイズ設定は次の形式で定義します。 **`width:height:center`**&#x200B;例： `80:80:false`. 幅と高さによって、サムネールのピクセル単位のサイズが決まります。中央の値は、false または true で、サムネール画像が設定で指定されたのとまったく同じサイズであることを示します。画像が指定よりも小さいサイズに変更された場合は、サムネール内で中央揃えされます。
+サムネールのサイズは **`width:height:center`** の形式で定義されます（例：`80:80:false`）。幅と高さによって、サムネールのピクセル単位のサイズが決まります。中央の値は、false または true で、サムネール画像が設定で指定されたのとまったく同じサイズであることを示します。画像が指定よりも小さいサイズに変更された場合は、サムネール内で中央揃えされます。
 
 >[!NOTE]
 >

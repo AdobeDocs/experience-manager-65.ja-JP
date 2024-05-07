@@ -1,6 +1,6 @@
 ---
 title: 360/VR ビデオ
-description: Dynamic Mediaで 360 と Virtual Reality(VR) ビデオを操作し、使用する方法を説明します。
+description: Dynamic Media で 360 度ビデオとバーチャルリアリティ（VR）ビデオを操作する方法について説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -11,9 +11,9 @@ role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: beef1f49b7563d824357043f4ed78fdaf70015cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1145'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 97%
 
 360 度ビデオでは、すべての方向のビューが同時に記録されます。このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を使用します。
 
-Dynamic Media - Scene7モードには、360 ビデオアセット配信のネイティブサポートが含まれています。 デフォルトでは、表示や再生のために追加の設定は必要ありません。360 ビデオは、.mp4、.mkv、.mov などの標準のビデオ拡張子を使用して配信します。最も一般的なコーデックは H.264 です。
+Dynamic Media - Scene7 モードには、360 度ビデオアセット配信のネイティブサポートが含まれています。デフォルトでは、表示や再生のために追加の設定は必要ありません。360 ビデオは、.mp4、.mkv、.mov などの標準のビデオ拡張子を使用して配信します。最も一般的なコーデックは H.264 です。
 
 この節では、360/VR ビデオビューアを操作して、部屋、物件、場所、風景、医療処置などの没入感のある視聴体験のために、エクイレクタングラー形式のビデオをレンダリングする方法について説明します。
 

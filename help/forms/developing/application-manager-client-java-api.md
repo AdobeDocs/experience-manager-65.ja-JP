@@ -9,7 +9,7 @@ role: Developer
 exl-id: 659eb9b0-93a0-4bae-8836-d4bc9c3a8c77
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '429'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ Application Manager Client では、次の Java™ API クイックスタート�
 
 [クイックスタート（SOAP モード）：Java を使用した AEM Forms アプリケーションアーカイブの削除](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

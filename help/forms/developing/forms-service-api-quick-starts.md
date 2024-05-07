@@ -9,7 +9,7 @@ role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1529'
 ht-degree: 100%
 
@@ -51,7 +51,7 @@ Forms サービスでは、次のクイックスタートを利用できます�
 
 [クイックスタート（SOAP モード）：Java を使用した、Forms サービスへのドキュメントの受け渡し](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
-Forms サービス API を使用するアプリケーションロジックは、Java™ サーブレットとして実装されます。AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+Forms サービス API を使用するアプリケーションロジックは、Java™ サーブレットとして実装されます。AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

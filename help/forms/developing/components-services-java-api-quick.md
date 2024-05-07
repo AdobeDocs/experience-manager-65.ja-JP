@@ -9,7 +9,7 @@ role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '428'
 ht-degree: 100%
 
@@ -33,11 +33,11 @@ Java™ API クイックスタート（SOAP）は、コンポーネントとサ�
 [クイックスタート（SOAP モード）：Java を使用したコンポーネントの削除](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->Web サービスを使用してコンポーネントやサービスをプログラムで操作することはできません。
+>Web サービスを使用して、コンポーネントやサービスをプログラムで操作できません。
 
 >[!NOTE]
 >

@@ -9,9 +9,9 @@ exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3595'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -240,7 +240,7 @@ ht-degree: 99%
 
    >[!NOTE]
    >
-   >値があらかじめ手動で定義されているドロップダウンメニューは、ルールと一緒に使用できます。JSON パスが設定されたドロップダウンメニューは、事前に定義された値を使用して条件を適用するルールと共に使用することはできません。 値が実行時に JSON から読み込まれる場合は、事前定義されたルールを適用することはできません。
+   >値があらかじめ手動で定義されているドロップダウンメニューは、ルールと一緒に使用できます。設定済みの JSON パスを含むドロップダウンメニューは、事前定義された値を使用して条件を適用するルールでは使用できません。値が実行時に JSON から読み込まれる場合は、事前定義されたルールを適用することはできません。
 
 1. 「**[!UICONTROL 視認性]**」の下で、「**[!UICONTROL 表示可、新しいルールに基づく]**」オプションを選択します。
 

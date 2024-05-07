@@ -9,7 +9,7 @@ role: Developer
 exl-id: e861d848-b0b7-4ae9-a56d-c0957ec95730
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '457'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ PDF ユーティリティサービスでは、次のクイックスタートが�
 
 [クイックスタート（SOAP モード）：PDF ドキュメントの非表示情報をすべて削除](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

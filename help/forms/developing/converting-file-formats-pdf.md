@@ -9,9 +9,9 @@ role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7848'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -683,7 +683,7 @@ PDF の生成サービスでスクリプト XML ファイルをサポートす�
 システムまたはネイティブアプリケーションが、現在実行中のスクリプト XML ファイルで処理されないダイアログボックスを表示すると、PDF 生成サービスはダイアログ XML ファイルをこの順序で検索し、一致するものが見つかると停止します。
 
 * appmon。`[appname]`。追加。`[locale]`.xml
-* appmon。`[appname]`。`[locale]`.xml （このファイルは変更しないでください）。
+* appmon。`[appname]``[locale]`.xml （このファイルは変更しないでください）。
 * appmon.global。`[locale]`.xml （このファイルは変更しないでください）。
 
 Generate PDF サービスは、ダイアログボックスに一致するものを見つけると、ダイアログボックスに指定されたキーストロークまたはその他のアクションを送信して、それを閉じます。ダイアログボックスの指示で中止メッセージが指定されている場合、Generate PDF サービスは現在実行中のジョブを終了し、エラーメッセージを生成します。このような中止メッセージは、スクリプト XML 文法の `abortMessage` 要素で指定されます。
@@ -914,7 +914,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK サーバーを再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK サーバーを再起動すると、AEM開発環境で不整合が生じる場合があります。
+> SDK サーバーを再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK サーバーを再起動すると、AEM 開発環境で不整合が発生する場合があります。
 
 **Windows XP 環境でのシステム変数の作成**
 

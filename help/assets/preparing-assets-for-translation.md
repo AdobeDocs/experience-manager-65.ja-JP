@@ -7,9 +7,9 @@ feature: Projects
 exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '442'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 87%
 
 各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。例えば、*/content/dam/it* はイタリア語の言語コピー用のイタリア語言語ルートです。ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーでは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
-最初にアセットを追加した言語コピーが主言語です。 プライマリ言語は、他の言語に翻訳されるソースです。 サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
+最初にアセットを追加した言語コピーがプライマリ言語です。プライマリ言語は、他の言語に翻訳されるソースです。サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
 
 ```shell
 /content
@@ -37,7 +37,7 @@ ht-degree: 87%
 
 翻訳するアセットを準備するには、次の手順を実行します。
 
-1. プライマリ言語の言語ルートを作成します。 例えば、サンプルフォルダー階層の英語言語コピーの言語ルートは `/content/dam/en` です。[言語ルートの作成](preparing-assets-for-translation.md#creating-a-language-root)に記載の情報に従って言語ルートが正しく設定されていることを確認してください。
+1. プライマリ言語の言語ルートを作成します。例えば、サンプルフォルダー階層の英語言語コピーの言語ルートは `/content/dam/en` です。[言語ルートの作成](preparing-assets-for-translation.md#creating-a-language-root)に記載の情報に従って言語ルートが正しく設定されていることを確認してください。
 
 1. プライマリ言語にアセットを追加します。
 1. 言語コピーが必要な各ターゲット言語の言語ルートを作成します。
@@ -62,7 +62,7 @@ ht-degree: 87%
 
 [!DNL Experience Manager] インターフェイスには&#x200B;**[!UICONTROL 参照]**&#x200B;パネルがあります。このパネルには、[!DNL Assets] 内で作成した言語ルートのリストが表示されます。
 
-1. Adobe Analytics の [!DNL Assets] コンソールで、言語コピーを作成する主言語を選択します。
+1. [!DNL Assets] コンソールで、言語コピーを作成するプライマリ言語を選択します。
 1. 左側のパネルから、「**[!UICONTROL 参照]**」オプションを選択して[!UICONTROL 参照]ペインを開きます。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)

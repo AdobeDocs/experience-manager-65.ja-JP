@@ -7,9 +7,9 @@ exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 hide: true
 solution: Experience Manager, Workfront
 source-git-commit: 5ccac0aadce3971e66da052d393cbd33b61e94f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1174'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 99%
 
 [!DNL Assets] と [!DNL Workfront] の間の様々なタイプの統合を通じて利用できる機能の詳細は、以下のとおりです。
 
-| 機能 | 説明 | [!DNL Workfront] および [!DNL Assets Essentials] *コネクタなし（標準）* | [!DNL Workfront for Experience Manager enhanced connector]：*コネクタが必要* | Workfrontと [!DNL Experience Manager as a Cloud Service] *コネクタなし（標準）* |
+| 機能 | 説明 | [!DNL Workfront] と [!DNL Assets Essentials]：*コネクタが不要（標準）* | [!DNL Workfront for Experience Manager enhanced connector]：*コネクタが必要* | Workfront と [!DNL Experience Manager as a Cloud Service]：*コネクタが不要（標準）* |
 |----|----|----|-----|-----|
 | デプロイメント方法 | どの [!DNL Assets] の提供に適切か。 | Assets Essentials | Adobe Managed Services、オンプレミス | Cloud Service |
 | **一般** |

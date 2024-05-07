@@ -9,9 +9,9 @@ role: Developer
 exl-id: 34069505-a6cf-4540-932b-604f81823178
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '868'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ AEM Forms JEE Signature サービスでは、次の Java API クイックスタ�
 
 [クイックスタート（SOAP モード）：Java API を使用したドキュメントのタイムスタンプの適用](#quick-start-soap-mode-apply-document-timestamp-using-the-java-api)
 
-AEM Forms JEE の操作は、AEM Formsで厳密に型指定された API を使用して実行できます。接続モードは SOAP に設定する必要があります。
+AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは SOAP に設定する必要があります。
 
 >[!NOTE]
 >

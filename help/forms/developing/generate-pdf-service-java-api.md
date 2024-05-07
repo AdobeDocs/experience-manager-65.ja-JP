@@ -9,7 +9,7 @@ role: Developer
 exl-id: b856a93b-91fa-47a5-9e46-6a537218fd4e
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '322'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ Java API クイックスタート（SOAP）は Generate PDF サービスで使�
 
 [クイックスタート（SOAP モード）：Java API（SOAP モード）を使用して PDF ドキュメントを RTF ファイルに変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

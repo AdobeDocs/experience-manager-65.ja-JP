@@ -8,9 +8,9 @@ exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1026'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 98%
 
 1. ユーザーが元のアセットをダウンロードできるようにするには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。ユーザーが共有アセットのレンディションのみをダウンロードできるようにするには、「**[!UICONTROL ファイルのレンディションのダウンロードを許可]**」を選択します。
 
-1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールによってユーザーと共有されることを確認するメッセージが表示されます。
+1. 「**[!UICONTROL 共有]**」をクリックします。メールでリンクをユーザーと共有することを確認するメッセージが表示されます。
 
 1. 共有アセットを表示するには、ユーザーが受け取ったメールのリンクをクリックまたはタップします。アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。プレビューを閉じるには、「**[!UICONTROL 戻る]**」をクリックします。フォルダーを共有したら、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
 
@@ -102,7 +102,7 @@ ht-degree: 98%
 
    ![chlimage_1-264](assets/chlimage_1-549.png)
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 
 ## ベストプラクティスとトラブルシューティング {#best-practices-and-troubleshooting}
 

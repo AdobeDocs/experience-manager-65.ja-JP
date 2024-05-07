@@ -8,9 +8,9 @@ exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '798'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 
    ![step_properties](assets/step_properties.png)
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 1. 新しい属性で [!DNL Dynamic Media] 画像のピラミッド TIFF レンディションを再生成するには、「**[!UICONTROL Dynamic Media プロセスの画像アセット]**」手順を「[!UICONTROL DAM メタデータ書き戻し]」ワークフローに追加します。
 
    PTIFF レンディションは、Dynamic Media Hybrid 実装でのみ、ローカルで作成および格納されます。
@@ -88,7 +88,7 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 
 1. Configuration Manager を開くには、`https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 1. 「**[!UICONTROL Adobe CQ DAM XmpFilter]**」設定を開きます。
-1. フィルターを適用する場合は、「許可リスト」 **[!UICONTROL XMPプロ許可リストに加えるパティに適用]**&#x200B;をクリックし、 **[!UICONTROL XMPのフィルタリングに使用できる XML 名]** ボックス。
+1. 許可リストを使用したフィルタリングを適用するには、「**[!UICONTROL Apply Allowlist to XMP Properties]**」を選択し、読み込むプロパティを「**[!UICONTROL Allowed XML Names for XMP filtering]**」ボックスで指定します。
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 

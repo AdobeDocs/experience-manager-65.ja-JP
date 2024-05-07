@@ -9,7 +9,7 @@ role: Developer
 exl-id: aeab003d-ba64-4760-9c56-44638501e9ff
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2484'
 ht-degree: 100%
 
