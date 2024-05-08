@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '5868'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -201,7 +201,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td><p>監視キューの長さは、すべてのイベントリスナーとバックグラウンドオブザーバーを繰り返し処理し、それらの <code>queueSize </code> を <code>maxQueueSize</code> と比較します。</p>
     <ul>
      <li><code>queueSize</code> 値が <code>maxQueueSize</code> 値を超えた場合（つまり、イベントがドロップされた場合）、重要ステータスを返します。</li>
-     <li>次の場合、警告ステータスを返します <code>queueSize</code> 値はを超えています <code>maxQueueSize * WARN_THRESHOLD</code> （デフォルト値は 0.75）。 </li>
+     <li><code>queueSize</code> 値が <code>maxQueueSize * WARN_THRESHOLD</code> を超えた場合は、警告を返します（デフォルト値は 0.75）。 </li>
     </ul> <p>各キューの最大長は個別の設定（Oak と AEM）から取得され、このヘルスチェックからは設定できません。このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
@@ -225,12 +225,12 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>非同期インデックス</td>
    <td><p>非同期インデックスのチェック：</p>
     <ul>
-     <li>1 つ以上のインデックス作成レーンが失敗した場合に、重要ステータスを返します</li>
+     <li>1 つ以上のインデックス作成レーンが失敗した場合に、重大ステータスを返します</li>
      <li>すべてのインデックス作成レーンについて <code>lastIndexedTime</code> をチェックし、次のことを行います。
       <ul>
-       <li>2 時間以上前である場合は、重要ステータスを返します </li>
-       <li>2 時間～ 45 分前の場合は、警告ステータスを返します。 </li>
-       <li>45 分前でない場合は、OK ステータスを返します。 </li>
+       <li>2 時間以上前である場合は、重大ステータスを返します </li>
+       <li>2 時間～45 分前の場合は、警告ステータスを返します </li>
+       <li>45 分前以内の場合は、OK ステータスを返します </li>
       </ul> </li>
      <li>いずれの条件も満たさない場合は、OK ステータスを返します</li>
     </ul> <p>重要ステータスと警告ステータスの両方のしきい値を設定できます。このヘルスチェックの Mbean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a> です。</p> <p><strong>注意：</strong>このヘルスチェックは、AEM 6.4 で使用でき、AEM 6.3.0.1 に移植されています。</p> </td>
@@ -265,16 +265,16 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
       Sling ジョブは、JobManager でのキューに登録されたジョブ数をチェックし、<code>maxNumQueueJobs</code> しきい値と比較します。
     </div>
     <ul>
-     <li>が次の値より大きい場合、重要ステータスを返します <code>maxNumQueueJobs</code> 待機中</li>
-     <li>1 時間を超えて長時間実行されているアクティブジョブがある場合は、重要ステータスを返します</li>
-     <li>キュー内にジョブがあり、最後に完了したジョブの時間が 1 時間を超えている場合は、重要ステータスを返します</li>
+     <li>キューに <code>maxNumQueueJobs</code> より多くある場合、重大ステータスを返します</li>
+     <li>1 時間を超えて長時間実行されているアクティブなジョブがある場合は、重大ステータスを返します</li>
+     <li>キューに登録されたジョブがあり、最後に完了したジョブの時間が 1 時間を超えている場合は、重大ステータスを返します</li>
     </ul> <p>設定できるのは、キューに登録されたジョブのパラメーターの最大数のみで、デフォルト値は 1000 です。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingJobs%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=slingJobs,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>リクエストパフォーマンス</td>
    <td><p>このチェックは、<code>granite.request.metrics.timer</code> <a href="http://localhost:4502/system/console/slingmetrics" target="_blank">Sling 指標</a>を確認します。</p>
     <ul>
-     <li>75 パーセンタイルの値が重要ステータスのしきい値（デフォルト値は 500 ミリ秒）を超えている場合は、重要ステータスを返します</li>
+     <li>75 パーセンタイルの値が重大ステータスのしきい値（デフォルト値は 500 ミリ秒）を超えている場合は、重大ステータスを返します</li>
      <li>75 パーセンタイルの値が警告ステータスのしきい値（デフォルト値は 200 ミリ秒）を超えている場合は、警告ステータスを返します</li>
     </ul> <p>このヘルスチェックの MBean は、<em> </em><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DrequestsStatus%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck</a> です。</p> </td>
   </tr>
@@ -287,7 +287,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td><p>ディスク容量チェックは、<code>FileStoreStats</code> MBean を確認し、ノードストアのサイズおよびノードストアパーティション上の使用可能なディスク容量を取得します。</p>
     <ul>
      <li>リポジトリサイズに対する使用可能なディスク容量の割合が警告ステータスのしきい値（デフォルト値は 10）未満の場合は、警告ステータスを返します</li>
-     <li>リポジトリサイズに対する使用可能なディスク容量の割合が重要ステータスのしきい値（デフォルト値は 2）未満の場合は、重要ステータスを返します</li>
+     <li>リポジトリサイズに対する使用可能なディスク容量の割合が重大ステータスのしきい値（デフォルト値は 2）未満の場合は、重大ステータスを返します</li>
     </ul> <p>どちらのしきい値も設定可能です。このチェックは、セグメントストアを含むインスタンスに対してのみ機能します。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DDiskSpaceHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=DiskSpaceHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
@@ -310,15 +310,15 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>コードキャッシュのチェック</td>
    <td><p>Java™ 7 に存在する CodeCache バグをトリガーできるいくつかの JVM 条件を検証するヘルスチェックです。</p>
     <ul>
-     <li>コードキャッシュのフラッシュが有効な Java™ 7 でインスタンスが実行されている場合、警告ステータスを返します</li>
-     <li>java™ 7 でインスタンスが実行されていて、予約済みコードキャッシュのサイズが最小しきい値よりも少ない（デフォルト値は 90MB）場合、警告ステータスを返します</li>
+     <li>コードキャッシュのフラッシュが有効な Java™ 7 でインスタンスが実行されている場合は、警告ステータスを返します</li>
+     <li>Java™ 7 でインスタンスが実行されていて、予約済みコードキャッシュのサイズが最小しきい値（デフォルト値は 90 MB）よりも小さい場合は、警告ステータスを返します</li>
     </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。このバグについて詳しくは、<a href="https://bugs.java.com/bugdatabase/">こちらのページで Bug ID 8012547 を検索してください</a>。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>リソース検索パスエラー</td>
    <td><p>パス <code>/apps/foundation/components/primary</code> にリソースがあるかどうかをチェックします。</p>
     <ul>
-     <li>は、以下に子ノードがある場合、警告ステータスを返します <code>/apps/foundation/components/primary</code></li>
+     <li>次の下に子ノードがある場合は、警告ステータスを返します <code>/apps/foundation/components/primary</code></li>
     </ul> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DresourceSearchPathErrorHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=resourceSearchPathErrorHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
  </tbody>

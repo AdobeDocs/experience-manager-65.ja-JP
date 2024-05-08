@@ -1,6 +1,6 @@
 ---
 title: 集計した使用状況の統計の収集をオプトインする方法
-description: 集計した使用状況の統計をオプトインする方法を説明します。
+description: 集計した使用状況の統計をオプトインする方法について説明します。
 contentOwner: raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 49%
 
 ## はじめに {#introduction}
 
-Adobe Experience Manager（AEM）とのやり取りの方法に関するAdobe統計情報を送信することで、Adobe Experience Cloudの改善に役立てることができます。 この情報は、会社のサイト訪問者に関するデータを含まず、Adobeがユーザーエクスペリエンスを提供、サポート、向上させるために使用されるだけです。
+Adobe Experience Manager（AEM）とのやり取りに関する Adobe 統計を送信することで、Adobe Experience Cloud の改善に役立てることができます。この情報には会社のサイト訪問者に関するデータは含まれておらず、アドビがユーザーエクスペリエンスを提供、サポート、改善するためにのみ使用されます。
 
-タッチ UI または web コンソールを使用して、使用状況の統計の収集をオプトインできます。
+使用状況の統計の収集をオプトインするには、タッチ UI または web コンソールを使用します。
 
 >[!NOTE]
 >
@@ -33,13 +33,13 @@ Adobe Experience Manager（AEM）とのやり取りの方法に関するAdobe統
 
 >[!NOTE]
 >
->オプトアウトは、 [Web コンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) または、AEM オプトイン画面でオプトインオプションを選択しないことで解決できます。
+>[Web コンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)を使用するか、AEM オプトイン画面でオプトインオプションを選択しないことで、いつでもオプトアウトできます。
 
 ## タッチ UI を使用したオプトイン {#opt-in-by-using-the-touch-ui}
 
-AEMを初めて起動する際に、次のようにタッチ UI を使用してオプトインできます。
+AEM を初めて起動する場合は、次のようにタッチ UI を使用してオプトインできます。
 
-1. AEM ナビゲーション画面で、 **受信トレイ** （ベル）アイコン。
+1. AEM ナビゲーション画面で、**インボックス**（ベル）アイコンをクリックします。
 
    ![usage_statisticsnavigationscreen](assets/usage_statisticsnavigationscreen.png)
 
@@ -51,11 +51,11 @@ AEMを初めて起動する際に、次のようにタッチ UI を使用して�
 
    ![usage_statisticsopt-inscreen](assets/usage_statisticsopt-inscreen.png)
 
-1. クリック &quot;**完了**」と入力します。
+1. 「**完了**」をクリックします。
 
 ## Web コンソールを使用したオプトイン {#opt-in-by-using-the-web-console}
 
-次のように、web コンソールを使用してオプトイン（またはオプトアウト）できます。
+次のように web コンソールを使用してオプトイン（またはオプトアウト）できます。
 
 1. AEM ナビゲーション画面で、**ツール**／**操作** の順にクリックします。
 

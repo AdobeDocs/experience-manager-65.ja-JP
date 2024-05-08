@@ -1,6 +1,6 @@
 ---
 title: ExactTarget との統合
-description: Adobe Experience Managerを ExactTarget と統合する方法を説明します。
+description: Adobe Experience Manager と ExactTarget を統合する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
@@ -13,13 +13,13 @@ role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 # ExactTarget との統合{#integrating-with-exacttarget}
 
-Adobe Experience Manager（AEM）と Exact Target の統合により、AEMで作成したメールを Exact Target 経由で管理および送信できます。 また、AEM ページのAEM forms を介して Exact Target のリード管理機能を使用することもできます。
+Adobe Experience Manager（AEM）と Exact Target の統合によって、AEM で作成されたメールを管理し、Exact Target 経由で送信することができます。また、AEM ページの AEM フォームを使用して、Exact Target のリード管理機能を使用できます。
 
 この統合によって次の機能を使用できるようになります。
 
@@ -30,9 +30,9 @@ ExactTarget の設定後に、ニュースレターやメールを ExactTarget �
 
 ## ExactTarget 設定の作成 {#creating-an-exacttarget-configuration}
 
-ExactTarget 設定は、クラウドサービスまたはツールを使用して追加できます。 この節では、両方の手順について説明します。
+ExactTarget 設定は、クラウドサービスまたはツールを使用して追加できます。この節では、両方の手順について説明します。
 
-### Cloudservices を使用した ExactTarget の設定 {#configuring-exacttarget-via-cloudservices}
+### クラウドサービスを使用した ExactTarget の設定 {#configuring-exacttarget-via-cloudservices}
 
 クラウドサービスで ExactTarget 設定を作成するには、次の操作を実行します。
 
@@ -45,8 +45,8 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. ユーザー名、パスワードを入力し、API エンドポイント（例：）を選択します。 **https://webservice.exacttarget.com/Service.asmx**）に設定します。
-1. 「**ExactTarget に接続」をクリックします。** 接続に成功したら、成功ダイアログが表示されます。 ボックス クリック **OK** をクリックしてウィンドウを閉じます。
+1. ユーザー名とパスワードを入力し、API エンドポイント（例：**https://webservice.exacttarget.com/Service.asmx**）を選択します。
+1. 「**ExactTarget に接続」をクリックします。** 接続に成功したら、成功ダイアログボックスが表示されます。「**OK**」をクリックして、ウィンドウを閉じます。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -77,5 +77,5 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 複数の設定を追加するには：
 
-1. ようこそページで「**クラウドサービス**」をクリックし、「**ExactTarget**」をクリックします。クリック **設定を表示** このポップアップは、1 つ以上の ExactTarget 設定がある場合に表示されます。 利用可能なすべての設定が一覧表示されます。
+1. ようこそページで「**クラウドサービス**」をクリックし、「**ExactTarget**」をクリックします。「**設定を表示**」をクリックします。このボタンは、利用可能な ExactTarget 設定が 1 つ以上ある場合に表示されます。利用可能なすべての設定が一覧表示されます。
 1. 「利用可能な設定」の横にある「**+**」記号をクリックします。**設定を作成**&#x200B;ウィンドウが開きます。前述の設定手順に従って、設定を作成します。

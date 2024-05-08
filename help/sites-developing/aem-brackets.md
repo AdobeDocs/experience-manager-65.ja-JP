@@ -12,7 +12,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -72,11 +72,11 @@ AEM Brackets Extension は、Brackets バージョン 1.0 以上をサポート�
 
 1. `filter.xml` ファイル（例：`myproject/META-INF/vault/filter.xml`）。`filter.xml` ファイルの構造について詳しくは、[ワークスペースフィルターの定義](https://jackrabbit.apache.org/filevault/filter.html)を参照してください。
 
-Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_root` フォルダーまたは親プロジェクトフォルダーを選択します。
+Brackets の&#x200B;**ファイル**&#x200B;メニューで「**フォルダーを開く**」を選択し、`jcr_root` フォルダーまたは親プロジェクトフォルダーをクリックします。
 
 >[!NOTE]
 >
->コンテンツパッケージを含むプロジェクトを所有していない場合は、次を試すことができます [HTL TodoMVC の例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). GitHub で、「**Download ZIP**」をクリックし、ファイルをローカルに抽出し、上記の説明に従って Brackets で `jcr_root` フォルダーを開きます。次に、以下の手順に従って&#x200B;**プロジェクト設定**&#x200B;を行い、最後に「コンテンツパッケージ全体の同期」セクションの下部の説明に従って「**Export Content Package**」を実行して、パッケージ全体を AEM 開発インスタンスにアップロードします。
+>コンテンツパッケージを伴うプロジェクトを所有していない場合は、[HTL TodoMVC の例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)を使用できます。GitHub で、「**Download ZIP**」をクリックし、ファイルをローカルに抽出し、上記の説明に従って Brackets で `jcr_root` フォルダーを開きます。次に、以下の手順に従って&#x200B;**プロジェクト設定**&#x200B;を行い、最後に「コンテンツパッケージ全体の同期」セクションの下部の説明に従って「**Export Content Package**」を実行して、パッケージ全体を AEM 開発インスタンスにアップロードします。
 >
 >これらの手順が完了したら、AEM 開発インスタンス上の URL `/content/todo.html` にアクセスし、Brackets でコード変更を開始できるようになり、web ブラウザーを更新することで変更内容がただちに AEM サーバーに同期されることを確認できます。
 
@@ -86,10 +86,10 @@ Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_ro
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
-プロジェクト設定を使用すると、次の項目を定義できます。
+プロジェクト設定では、以下のものを定義できます。
 
 1. サーバー URL（例：`http://localhost:4502`）
-1. 有効な HTTPS 証明書がないサーバーを許容するかどうか（必要ない場合はオフのままにしてください）
+1. 有効な HTTPS 証明書を持たないサーバーを許容するかどうか（必要ない場合はオフのままにする）
 1. コンテンツの同期に使用するユーザー名（例：`admin`）
 1. ユーザーのパスワード（例：`admin`）
 
@@ -113,7 +113,7 @@ Project Explorer で、任意のファイルまたはフォルダーを右クリ
 
 ### コンテンツパッケージ全体の同期 {#full-content-package-synchronization}
 
-が含まれる **AEM** メニュー、 **コンテンツパッケージをエクスポート** または **コンテンツパッケージをインポート** オプションを使用すると、プロジェクト全体をサーバーと同期できます。
+**AEM** メニューで、「**コンテンツパッケージを書き出し**」または「**コンテンツパッケージを読み込み**」オプションを使用すると、プロジェクト全体をサーバーと同期できます。
 
 ![chlimage_1-57](assets/chlimage_1-57a.png)
 

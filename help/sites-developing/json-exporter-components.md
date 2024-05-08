@@ -12,7 +12,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '471'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -31,11 +31,11 @@ JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bund
 
 ## コンポーネントに Sling Model を定義する {#define-a-sling-model-for-the-component}
 
-まず、コンポーネントに Sling Model を定義する必要があります。
+まず、コンポーネントに Sling モデルを定義する必要があります。
 
 >[!NOTE]
 >
->Sling モデルの使用例については、を参照してください。 [AEMでの Sling Model Exporter の開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja).
+>Sling モデルの使用例について詳しくは、[AEM での Sling モデルエクスポーターの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)を参照してください。
 
 Sling Model の実装クラスに次のような注釈を付ける必要があります。
 
@@ -51,7 +51,7 @@ Sling Model の実装クラスに次のような注釈を付ける必要があ�
 
 >[!NOTE]
 >
->Jackson 注釈は、Sling モデルクラスレベルでは指定されず、モデルインターフェイスレベルで指定されます。 これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
+>Jackson 注釈は Sling モデルクラスレベルではなく、モデルインターフェイスレベルで指定されます。これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
 
 >[!NOTE]
 >
@@ -69,15 +69,15 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 ## Sling Model インターフェイスに注釈を付ける {#annotate-the-sling-model-interface}
 
-JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに以下を実装する必要があります。 `ComponentExporter` インターフェイス（または `ContainerExporter`（コンテナコンポーネントがある場合）。
+JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに `ComponentExporter` インターフェイス（またはコンテナコンポーネントの場合は `ContainerExporter`）を実装する必要があります。
 
-対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
+対応する Sling モデルインターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
-シリアル化されるメソッドを定義するためには、モデルインターフェイスに適切に注釈を付ける必要があります。デフォルトでは、ゲッターの通常の命名規則に従うすべてのメソッドはシリアル化され、JSON プロパティ名がゲッター名から自然に派生します。 これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
+シリアル化されるメソッドを定義するためには、モデルインターフェイスに適切に注釈を付ける必要があります。デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名から派生されます。これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 
 ## 例 {#example}
 
-コアコンポーネントは、リリース以降に JSON の書き出しをサポートしています [コアコンポーネントの 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) およびは参照として使用できます。
+コアコンポーネントは、[リリース 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) 以降、JSON 書き出しをサポートしており、参照として使用できます。
 
 例えば、画像コアコンポーネントの Sling Model 実装とその注釈されたインターフェイスを参照してください。
 
@@ -90,7 +90,7 @@ GitHub のコード
 
 ## 関連ドキュメント {#related-documentation}
 
-詳しくは、以下を参照してください。
+詳しくは、次を参照してください。
 
 * [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/jp/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 

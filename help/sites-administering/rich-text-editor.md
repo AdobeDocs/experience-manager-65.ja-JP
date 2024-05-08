@@ -9,7 +9,7 @@ role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '2887'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -261,7 +261,7 @@ RTE フローで使用可能なオプションに関するユーザーインタ�
 * RTE のユーザーインターフェイス設定が削除されたか、どの項目も有効にしていない場合、コンテンツポリシーではその設定ができません。
 * 作成者は、ユーザーインターフェイス設定およびコンテンツポリシーによって使用可能となっている機能にのみアクセスできます。
 
-例については、[テキストコアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html#the-text-component-and-the-rich-text-editor)を参照してください。
+例については、[テキストコアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=ja#the-text-component-and-the-rich-text-editor)を参照してください。
 
 ## ツールバーアイコンとコマンドのマッピングのカスタマイズ {#iconstoolbar}
 
@@ -321,7 +321,7 @@ RTE ツールバーに表示される Coral アイコンと使用可能なコマ
 
 >[!NOTE]
 >
->CoralUI 2 RTE は、プラグインダイアログのハンドルバーテンプレートを使用します。そのため、CoralUI 2 RTE clientlib は、ハンドルバー clientlib に対して依存関係があります。CoralUI 3 RTE は、ハンドルバーテンプレートを使用せず、関連する依存関係もありません。 カスタムプラグインがハンドルバーテンプレートを使用する場合、web ページにハンドルバー clientlib を含めます。
+>CoralUI 2 RTE は、プラグインダイアログのハンドルバーテンプレートを使用します。そのため、CoralUI 2 RTE clientlib は、ハンドルバー clientlib に対して依存関係があります。CoralUI 3 RTE は、ハンドルバーテンプレートを使用しないので、関連する依存関係はありません。カスタムプラグインがハンドルバーテンプレートを使用する場合、web ページにハンドルバー clientlib を含めます。
 
 ## その他の情報 {#further-information}
 

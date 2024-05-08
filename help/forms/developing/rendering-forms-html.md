@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Forms
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '4099'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -98,9 +98,9 @@ form:ready イベントにあるフォームスクリプトは、フォームの
 
 フォームを送信する前に、呼び出すコールバック関数を定義します。ここで、関数の名前は `_user_onsubmit` です。この関数は例外をスローしないと想定されます。例外がスローされても無視されます。JavaScript 関数は HTML の HEAD セクションに配置することをお勧めしますが、`xfasubset.js` を含むスクリプトタグが終わる前であれば任意の場所で宣言できます。
 
-フォームサーバーがドロップダウンリストを含む XDP をレンダリングすると、ドロップダウンリストの作成に加えて、2 つの非表示のテキストフィールドも作成されます。これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。そのため、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。毎回それほど多くのデータを送信したくない場合は、それを無効にするカスタムスクリプトを作成できます。 例：ドロップダウンリストの名前は `drpOrderedByStateProv` で、サブフォームヘッダーの下にラップされます。HTML 入力要素の名前は `header[0].drpOrderedByStateProv[0]` になります。ドロップダウンのデータを格納して送信する非表示フィールドの名前には、`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]` という名前が付けられます。
+フォームサーバーがドロップダウンリストを含む XDP をレンダリングすると、ドロップダウンリストの作成に加えて、2 つの非表示のテキストフィールドも作成されます。これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。そのため、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。毎回それほど多くのデータを送信しない場合は、それを無効にするカスタムスクリプトを作成できます。例：ドロップダウンリストの名前は `drpOrderedByStateProv` で、サブフォームヘッダーの下にラップされます。HTML 入力要素の名前は `header[0].drpOrderedByStateProv[0]` になります。ドロップダウンのデータを格納して送信する非表示フィールドの名前には、`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]` という名前が付けられます。
 
-データをポストしない場合は、次の方法でこれらの入力要素を無効にできます。 `var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
+データをポストしない場合は、次の方法でこれらの入力要素を無効にできます。`var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
 ```java
 header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]

@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '629'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 95%
  </tbody>
 </table>
 
-つまり、UI の一部をクラシック UI からタッチ UI に移行するということは、 *ExtJS ウィジェット* から *Sling コンポーネント*. これを容易にするために、タッチ UI は、Granite UI フレームワークに基づいています。このフレームワークは、既に UI 用の Sling コンポーネント（Granite UI コンポーネントと呼ばれます）を提供しています。
+つまり、UI の一部をクラシック UI からタッチ UI に移行するということは、*ExtJS ウィジェット*&#x200B;を *Sling コンポーネント*&#x200B;に移行することを意味します。これを容易にするために、タッチ UI は、Granite UI フレームワークに基づいています。このフレームワークは、既に UI 用の Sling コンポーネント（Granite UI コンポーネントと呼ばれます）を提供しています。
 
 開始する前に、ステータスと関連するレコメンデーションを確認してください。
 
@@ -150,7 +150,7 @@ AEM の開発について詳しくは、以下のリソースのコレクショ�
 * [ユーザーガイドの作成](/help/sites-developing/getting-started.md)
 * [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites のチュートリアルとビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)
-* [AEM Sites の開発の手引き - WKND チュートリアル ](/help/sites-developing/getting-started.md)
+* [AEM Sites の開発の手引き - WKND チュートリアル](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=ja)
 * [AEM 最新化ツール](https://opensource.adobe.com/aem-modernize-tools/)
 

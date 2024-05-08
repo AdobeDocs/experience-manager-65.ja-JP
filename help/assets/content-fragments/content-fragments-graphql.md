@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Assets
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '669'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 Gra
 
 ヘッドレスコンテンツ管理システム（CMS）とは次のことを意味します。
 
-* “*ヘッドレスコンテンツ管理システム（ヘッドレス CMS）は、コンテンツリポジトリとしてゼロから構築されたバックエンドのみのコンテンツ管理システム（CMS）で、API を介してコンテンツにアクセスし、任意のデバイスで表示できます。*
+* 「*ヘッドレスコンテンツ管理システム（ヘッドレス CMS）は、API 経由でコンテンツにアクセスし、あらゆるデバイスで表示できるようにするコンテンツリポジトリとしてゼロから作成された、バックエンド専用のコンテンツ管理システム（CMS）です。*
 
   [ウィキペディア](https://en.wikipedia.org/wiki/Headless_content_management_system)を参照してください。
 

@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '1737'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 86%
 
 これまで、AEM で管理セッションやリソースリゾルバーを取得する主な方法は、Sling に用意されている `SlingRepository.loginAdministrative()` および `ResourceResolverFactory.getAdministrativeResourceResolver()` メソッドを使用することでした。
 
-ただし、これらのメソッドはどちらも [最小権限の原則](https://ja.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E6%A8%A9%E9%99%90%E3%81%AE%E5%8E%9F%E5%89%87). これにより、開発者がコンテンツの構造や対応するアクセス制御レベル（ACL）を早期に適切に計画しないことがよくあります。 そのため、このようなサービスに脆弱性があると、コード自体を動作させるのに管理者権限が不要であっても、`admin` ユーザーへの権限のエスカレーションが発生することがよくあります。
+ただし、これらの方法はいずれも [権限の最小化の原則](https://ja.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E6%A8%A9%E9%99%90%E3%81%AE%E5%8E%9F%E5%89%87)に基づいて設計されたものではありません。そのため、開発者がコンテンツに適した構造と対応するアクセス制御レベル（ACL）の計画を早い段階で立てない状況に陥りやすくなります。そのため、このようなサービスに脆弱性があると、コード自体を動作させるのに管理者権限が不要であっても、`admin` ユーザーへの権限のエスカレーションが発生することがよくあります。
 
 ## 管理セッションの廃止方法 {#how-to-phase-out-admin-sessions}
 
 ### 優先度 0：機能がアクティブであるか、必要であるか、放置されているかの確認 {#priority-is-the-feature-active-needed-derelict}
 
-管理セッションが使用されていなかったり、機能が完全に無効化されている場合があります。実装に問題がある場合は、機能を削除するか、合わせるようにします [NOP コード](https://ja.wikipedia.org/wiki/NOP).
+管理セッションが使用されていなかったり、機能が完全に無効化されている場合があります。実装環境がこれに当てはまる場合は、機能を完全に削除するか、[NOP コード](https://ja.wikipedia.org/wiki/NOP)で対応します。
 
 ### 優先度 1：リクエストセッションの使用 {#priority-use-the-request-session}
 
@@ -59,7 +59,7 @@ ht-degree: 86%
    * アクセス制御の管理は自然な形で行う必要があります。
    * アクセス制御はアプリケーションではなくリポジトリによって適用する必要があります。
 
-* **ノードタイプの使用**
+* **ノードタイプを使用**
 
    * 設定可能なプロパティセットを制限します。
 
@@ -82,7 +82,7 @@ ht-degree: 86%
 
 ## サービスユーザーとマッピング {#service-users-and-mappings}
 
-上記が失敗した場合、Sling 7 はサービスユーザーマッピングサービスを提供します。このサービスを使用して、バンドルとユーザーのマッピングおよび対応する 2 つの API メソッドを設定できます。
+上記が失敗した場合、Sling 7 では、Service User Mapping サービスが提供されます。このサービスでは、バンドルからユーザーへのマッピングおよび次の 2 つの対応する API メソッドを設定できます。
 
 * [`SlingRepository.loginService()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)
 * [`ResourceResolverFactory.getServiceResourceResolver()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)
@@ -101,7 +101,7 @@ ht-degree: 86%
 
 ### admin-session を service-user に置き換える {#replacing-the-admin-session-with-a-service-user}
 
-サービスユーザーとは、パスワードが設定されておらず、特定のタスクを実行するために必要な最小限の権限を持つ JCR ユーザーのことです。パスワードが設定されていない場合は、サービスユーザーでログインできません。
+サービスユーザーとは、パスワードが設定されておらず、特定のタスクを実行するために必要な最小限の権限を持つ JCR ユーザーのことです。パスワードが設定されていないということは、サービスユーザーとしてログインできないということです。
 
 管理セッションを無効にする方法の 1 つは、管理セッションをサービスユーザーセッションに置き換えることです。必要に応じて、複数のサブサービスユーザーに置き換えることもできます。
 
@@ -118,7 +118,7 @@ ht-degree: 86%
 
 ## サービスユーザーの作成 {#creating-a-new-service-user}
 
-AEM サービスユーザーのリストに自分のユースケースに適用可能なユーザーがなく、対応する RTC の問題が承認されたことを確認したら、新しいユーザーをデフォルトコンテンツに追加します。
+ユースケースに適したユーザーが AEM サービスユーザーのリストに存在せず、対応する RTC の発行が承認されていることを確認したら、デフォルトコンテンツに新しいユーザーを追加します。
 
 推奨されるアプローチは、リポジトリエクスプローラー（*https://&lt;server>:&lt;port>/crx/explorer/index.jsp*）を使用するサービスユーザーを作成することです。
 
@@ -138,7 +138,7 @@ AEM サービスユーザーのリストに自分のユースケースに適用�
 
    >[!NOTE]
    >
-   >サービスユーザーには mixin タイプが関連付けられていません。これは、システムユーザーのアクセス制御ポリシーがないことを意味します。
+   >サービスユーザーには mixin タイプが関連付けられていません。これは、システムユーザーに対するアクセス制御ポリシーが存在しないことを意味します。
 
 対応する .content.xml をバンドルのコンテンツに追加する際には、`rep:authorizableId` を設定し、プライマリタイプを `rep:SystemUser` にしてください。次のようになります。
 
@@ -159,7 +159,7 @@ AEM サービスユーザーのリストに自分のユースケースに適用�
 1. このフォルダーに、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を定義した org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;ファクトリ設定の一意の名前>.xml という名前のファイルを作成します。例：
 
 1. バンドルの `src/main/resources` フォルダーの下に `SLING-INF/content` フォルダーを作成します。
-1. このフォルダーに、ファイルを作成します `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）。
+1. このフォルダーに、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を定義した `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` というファイルを作成します。
 
    説明のために、`org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml` というファイルを取り上げます。
 
@@ -192,16 +192,16 @@ AEM サービスユーザーのリストに自分のユースケースに適用�
 
    * Web コンソール（*https://serverhost:serveraddress/system/console/configMgr*）にアクセスします。
    * **Apache Sling Service User Mapper Service Amendment** を探します。
-   * リンクをクリックすると、設定が適切に行われているかどうかを確認できます。
+   * リンクをクリックすると、設定が適切に行われていることを確認できます。
 
 ## サービスでの共有セッションの処理 {#dealing-with-shared-sessions-in-services}
 
 `loginAdministrative()` を呼び出すと、多くの場合、共有セッションも表示されます。これらのセッションはサービスのアクティベート時に取得され、サービスが停止された場合にのみログアウトされます。これは一般的な動作ですが、次の 2 つの問題を伴います。
 
-* **セキュリティ：**&#x200B;このような管理セッションは、共有セッションにバインドされているリソースや他のオブジェクトをキャッシュして返すために使用されます。後から呼び出しスタックで、これらのオブジェクトは、昇格された権限を持つセッションまたはリソースリゾルバーに適応させることができます。 多くの場合、呼び出し元が操作している管理セッションであることは明らかではありません。
+* **セキュリティ：**&#x200B;このような管理セッションは、共有セッションにバインドされているリソースや他のオブジェクトをキャッシュして返すために使用されます。後ほど、呼び出しスタックで、これらのオブジェクトを高い権限を持つセッションやリソースリゾルバーに適応させることができます。多くの場合、それらが動作しているのが管理者セッションであることが呼び出し元にとって明確ではありません。
 * **パフォーマンス：** Oak では、共有セッションはパフォーマンスの問題を引き起こす可能性があるので、共有セッションの使用はお勧めしません。
 
-このセキュリティリスクに対する最も明白な解決策は、`loginAdministrative()` の呼び出しを `loginService()` に置き換え、権限が制限されたユーザーを対象とすることです。ただし、パフォーマンスが低下する可能性があっても、影響はありません。 これを軽減するには、要求されたすべての情報をセッションと関連付けられていないオブジェクトにラップすることが考えられます。次に、オンデマンドでセッションを作成（または破棄）します。
+このセキュリティリスクに対する最も明白な解決策は、`loginAdministrative()` の呼び出しを `loginService()` に置き換え、権限が制限されたユーザーを対象とすることです。ただし、この方法は潜在的なパフォーマンスの低下には影響しません。これを軽減するには、要求されたすべての情報をセッションと関連付けられていないオブジェクトにラップすることが考えられます。次に、オンデマンドでセッションを作成（または破棄）します。
 
 推奨されるアプローチは、サービスの API のリファクタリングを行って、呼び出し元がセッションの作成と破棄を制御できるようにすることです。
 

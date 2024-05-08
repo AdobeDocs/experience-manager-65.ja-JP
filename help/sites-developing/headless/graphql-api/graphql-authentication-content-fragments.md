@@ -8,19 +8,19 @@ role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '110'
-ht-degree: 42%
+ht-degree: 100%
 
 ---
 
 # コンテンツフラグメントに対するリモート Adobe Experience Manager GraphQL クエリの認証 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-の主なユースケース [コンテンツフラグメント配信用のAdobe Experience Manager（AEM）GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) は、サードパーティのアプリケーションやサービスからリモートクエリを受け入れるためです。 ヘッドレスコンテンツ配信を保護するために、これらのリモートクエリには、認証済み API アクセスが必要な場合があります。
+[コンテンツフラグメント配信用の Adobe Experience Manager（AEM）GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) の主なユースケースは、サードパーティ製のアプリケーションやサービスからリモートクエリを受け入れることです。ヘッドレスコンテンツ配信を保護するために、これらのリモートクエリには、認証済み API アクセスが必要な場合があります。
 
 >[!NOTE]
 >
 >テストおよび開発の場合は、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)を使用して AEM GraphQL API に直接アクセスすることもできます。
 
-認証の場合、サードパーティのサービスでは、AEM アカウントのユーザー名とパスワードを使用して認証する必要があります。
+認証を行う場合、サードパーティ製のサービスでは、AEM アカウントのユーザー名とパスワードが必要になります。
 
 <!-- 6.5.10.0 - does this content/page need to be migrated? -->
 

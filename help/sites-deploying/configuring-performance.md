@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '6470'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -494,7 +494,7 @@ Dispatcher には、web サイトで活用するとパフォーマンスが最�
 >
 >通常、多くのキャッシュ戦略は適切な URL の選択を含んでおり、この追加データには依存しないことです。
 >
->Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュすることもできます。[HTTP 応答ヘッダーのキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)を参照してください。
+>Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュすることもできます。[HTTP 応答ヘッダーのキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache)を参照してください。
 >
 
 ### Dispatcher のキャッシュ率の計算 {#calculating-the-dispatcher-cache-ratio}
@@ -511,7 +511,7 @@ Dispatcher には、web サイトで活用するとパフォーマンスが最�
 
 例えば、リクエスト総数が 129,491 であり、パブリッシュインスタンスによって処理されたリクエスト数が 58,959 である場合、キャッシュ率は **(129,491 - 58,959)/129,491 = 54.5％**&#x200B;です。
 
-パブリッシャーと Dispatcher が 1 対 1 のペアでない場合、正確な測定値を得るには、すべての Dispatcher とパブリッシャーからのリクエストを加算します。 詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)も参照してください。
+パブリッシャーと Dispatcher が 1 対 1 のペアでない場合、正確な測定値を得るには、すべての Dispatcher とパブリッシャーからのリクエストを加算します。詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)も参照してください。
 
 >[!NOTE]
 >
@@ -530,7 +530,7 @@ Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュ�
 
 #### URL パラメーターの使用回避 {#avoid-url-parameters}
 
-可能な限り、キャッシュするページの URL パラメーターは使用しないでください。例えば、ピクチャーギャラリーがある場合、次の URL はキャッシュされません（Dispatcher が [適切に設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)されている場合を除く）。
+可能な限り、キャッシュするページの URL パラメーターは使用しないでください。例えば、ピクチャーギャラリーがある場合、次の URL はキャッシュされません（Dispatcher が [適切に設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache)されている場合を除く）。
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -620,7 +620,7 @@ www.myCompany.com/news/main.large.html
 
 #### スティッキー接続 {#sticky-connections}
 
-[スティッキー接続](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)を使用すると、1 人のユーザー用のドキュメントがすべて同じサーバーで作成されるようになります。ユーザーがそのフォルダーを離れて後から戻ってきた場合も、この接続は維持されます。Web サイトのスティッキー接続に必要なすべてのドキュメントを保持するには、フォルダーを 1 つ定義します。他のドキュメントを中に含めないようにしてください。このシナリオでは、パーソナライズされたページとセッションデータを使用する場合に、ロードバランシングに影響が生じます。
+[スティッキー接続](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#the-benefits-of-load-balancing)を使用すると、1 人のユーザー用のドキュメントがすべて同じサーバーで作成されるようになります。ユーザーがそのフォルダーを離れて後から戻ってきた場合も、この接続は維持されます。Web サイトのスティッキー接続に必要なすべてのドキュメントを保持するには、フォルダーを 1 つ定義します。他のドキュメントを中に含めないようにしてください。このシナリオでは、パーソナライズされたページとセッションデータを使用する場合に、ロードバランシングに影響が生じます。
 
 #### MIME タイプ {#mime-types}
 

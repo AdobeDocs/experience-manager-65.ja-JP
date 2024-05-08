@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '2939'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -350,7 +350,7 @@ AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を�
 **DON&#39;T**
 
 * 可能な場合は、JCR API を直接使用しない
-* /libs を変更せずに、オーバーレイを使用する
+* /libs は変更せずに、オーバーレイを使用する
 * 可能な限りクエリを使用しない
 * Java™ コードで OSGi サービスを取得する場合は、Sling Binding を使用せずに以下を使用してください。
 

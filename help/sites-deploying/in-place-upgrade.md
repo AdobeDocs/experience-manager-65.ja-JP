@@ -9,7 +9,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -131,7 +131,7 @@ AEM 6.3 インストールでは新しく `FileDataStore` がデフォルトに�
 
 6.3 からアップグレードする場合、この節の説明はスキップします。提供されている crx2oak プロファイルはほとんどの顧客のニーズに適合しますが、追加のパラメーターが必要になる場合もあります。移行中にエラーが発生する場合は、お使いの環境に、追加の設定オプションの指定が必要な事項が存在する可能性があります。その場合は、次のエラーが発生することがあります。
 
-**外部データストアが指定されていないので、チェックポイントはコピーされません。 これにより、最初の起動時にリポジトリ全体のインデックスが再作成されます。--skip-checkpoints を使用して移行を強制するか、https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration で詳細を確認してください。**
+**外部データストアが指定されていないため、チェックポイントはコピーされません。これにより、最初の起動時にリポジトリ全体のインデックスが再作成されます。--skip-checkpoints を使用して移行を強制するか、https://jackrabbit.apache.org/oak/docs/migration.html#Checkpoints_migration で詳細を確認してください。**
 
 何らかの理由で、移行プロセスがデータストア内のバイナリにアクセスする必要がありますが、データストアを見つけることができません。データストア設定を指定するには、移行コマンドの `<<ADDITIONAL_FLAGS>>` 部分に以下のフラグを挿入します。
 

@@ -14,7 +14,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3246'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -195,7 +195,7 @@ newComponent (cq:Component)
 >
 >次を参照してください。
 >
->* [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッション。
+>* [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッション。
 >* 「[コードサンプル - ダイアログフィールドのカスタマイズ方法](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)」で説明されている関連サンプルコード。
 >
 
@@ -461,9 +461,9 @@ GitHub のコード
    * タッチ操作向け UI で使用されるダイアログを作成します。ただし、タッチ操作対応 UI 用のダイアログが定義されていないときは、互換性のために、タッチ操作対応 UI でクラシック UI ダイアログの定義を使用できます。
    * [AEM 最新化ツール](/help/sites-developing/modernization-tools.md)を使用すると、既存のコンポーネントを拡張するのに役立ちます。
    * [ExtJS を Granite UI コンポーネントへマッピング](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)では、ExtJS の xtype とノードタイプを、同等の Granite UI リソースタイプにマッピングする便利な概要について説明しています。
-   * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
+   * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションを参照してください。
    * vtypes から [Granite UI 検証](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
-   * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
+   * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションを参照してください。
 
 ### cq:listener コードの移行 {#migrating-cq-listener-code}
 

@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '1484'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Analytics アカウントには次の要件があります。
 
 ### Adobe Analytics データセンターを使用するように AEM を設定 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html)では、Adobe Analytics レポートスイートに関連付けられたデータを収集、処理および格納します。Adobe Analytics レポートスイートをホストしているデータセンターを使用するように、AEM を設定します。データセンターに関しては、契約に記載されています。この情報については、組織の管理者にお問い合わせください。
+Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=ja)では、Adobe Analytics レポートスイートに関連付けられたデータを収集、処理および格納します。Adobe Analytics レポートスイートをホストしているデータセンターを使用するように、AEM を設定します。データセンターに関しては、契約に記載されています。この情報については、組織の管理者にお問い合わせください。
 
 必要に応じて、`https://api.omniture.com/` を使用して正しいデータセンターにルーティングします。
 

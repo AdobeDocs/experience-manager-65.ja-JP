@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '1696'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 99%
 
 #### 明示的 {#explicit}
 
-* カスタマイズ：ユーザーが様々なコンテンツソースから選択します。
+* カスタマイズ：様々なコンテンツソースからユーザーが選択します。
 
 #### 暗黙的 {#implicit}
 

@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ SPA のページコンポーネントは、JSP ファイルまたは HTL のフ�
 * テンプレートが編集可能な場合は、クライアントライブラリカテゴリをページポリシーに追加します。
 * ページコンポーネントの `customfooterlibs.html` を使用したクライアントライブラリカテゴリを追加します。
 
-の包含を制限することを忘れないでください `cq.authoring.pagemodel.messaging` ページエディターのコンテキストに対するカテゴリ。
+`cq.authoring.pagemodel.messaging` カテゴリの組み込みをページエディターのコンテキストに制限することを忘れないでください。
 
 ## 通信データタイプ {#communication-data-type}
 

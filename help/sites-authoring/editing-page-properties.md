@@ -8,7 +8,7 @@ role: User,Admin,Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1855'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -190,7 +190,7 @@ ht-degree: 99%
 
 * **ソーシャルメディア共有**
 
-  ページで使用可能な共有オプションを定義します。使用可能なオプションを[コアコンポーネントの共有](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html)に公開します。
+  ページで使用可能な共有オプションを定義します。使用可能なオプションを[コアコンポーネントの共有](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html?lang=ja)に公開します。
 
    * **Facebook に対してユーザー共有を有効にする**
    * **Pinterest に対してユーザー共有を有効にする**

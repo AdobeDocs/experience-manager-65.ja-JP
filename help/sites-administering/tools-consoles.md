@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -286,7 +286,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td> </td>
-   <td>Dynamic Media設定<br /> </td>
+   <td>Dynamic Media 設定<br /> </td>
   </tr>
   <tr>
    <td> </td>

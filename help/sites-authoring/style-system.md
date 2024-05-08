@@ -11,7 +11,7 @@ role: User,Admin,Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '1297'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -125,7 +125,7 @@ AEM では、実際には最後の 3 つの手順のみが実行されます。�
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
-コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが AEM により自動的に挿入されます。この他にコンポーネント自体で行う必要があることはありません。
+コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが AEM により自動的に挿入されます。これを実現させるには、コンポーネント自体で他に何も行う必要はありません。
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 

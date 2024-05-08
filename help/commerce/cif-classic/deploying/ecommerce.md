@@ -8,7 +8,7 @@ role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEM の汎用 e コマースは、標準インストールの一部として使�
 | スケーラビリティ | - 数億個までの製品をサポート可能（ユースケースによって異なる） <br> - Dispatcher でのキャッシュ | - ボリューム制限なし <br>- Dispatcher または CDN でのキャッシュ |
 | 標準化されたデータモデル | 不可 | 可、Adobe Commerce GraphQL スキーマ |
 | 入手方法 | 可：<br> - SAP Commerce Cloud（AEM 6.4 と Hybris 5（デフォルト）をサポートし、Hybris 4 との互換性を維持するように更新された拡張機能）<br>- Salesforce Commerce Cloud（AEM 6.4 をサポートする オープンソースコネクタ） | GitHub を通じてオープンソースで使用可能。<br> Adobe Commerce（2.3.2（デフォルト）をサポート、2.3.1 と互換性あり） |
-| 用途 | 限定的なユースケース：小規模なシナリオの場合は、必要に応じて静的カタログを読み込みます | 大部分のユースケースで推奨されるソリューション |
+| 用途 | 限定的なユースケース：小規模なシナリオでは、必要に応じて静的カタログを読み込みます | 大部分のユースケースで推奨されるソリューション |
 
 
 ## 他の実装のデプロイ {#deploying-other-implementations}

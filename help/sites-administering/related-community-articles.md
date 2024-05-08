@@ -1,6 +1,6 @@
 ---
 title: 関連するコミュニティ記事
-description: Adobe Experience ManagerとのExperience Cloud統合に関してコミュニティで生成された記事のリストを確認します。
+description: Experience Cloud と Adobe Experience Manager の統合に関する、コミュニティで作成された記事のリストを示します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
@@ -12,16 +12,16 @@ role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '79'
-ht-degree: 44%
+ht-degree: 100%
 
 ---
 
 # 関連するコミュニティ記事{#related-community-articles}
 
-Adobe Experience Manager（AEM）コミュニティは、AEMとのExperience Cloud統合に関する一連の記事を生成しています。
+Adobe Experience Manager（AEM）コミュニティで、Experience Cloud と AEM の統合に関連する一連の記事が作成されました。
 
 公開されている内容のリストを次に示します。
 
 * [Adobe Experience Manager Web ページでのアクティベーションルールの使用](https://helpx.adobe.com/jp/experience-manager/using/dtm.html)
 * [DTM を使用した AEM と Adobe Analytics および Target の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)
-* [ニュースレターを作成するためのAdobe Experience ManagerとAdobe Campaign Standardの統合](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html)
+* [Adobe Experience Manager と Adobe Campaign Standard を統合してニュースレターを作成する](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html)

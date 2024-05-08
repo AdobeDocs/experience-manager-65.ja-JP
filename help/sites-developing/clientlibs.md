@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2791'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ ht-degree: 93%
 ...
 ```
 
-このアプローチはAEMで機能しますが、ページとその構成要素が複雑になると問題が生じる可能性があります。このような場合、最終的なHTML出力に同じ JS ライブラリの複数のコピーが含まれる可能性があります。 この問題を回避し、AEMで使用されるクライアントサイドライブラリの論理的編成を可能にする方法 **クライアントサイドライブラリフォルダー**.
+この方法は AEM で機能しますが、ページやそれに含まれるコンポーネントが複雑になると、問題につながる可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的な HTML 出力に含まれる危険性があります。これを回避してクライアントサイドライブラリを論理的に整理するために、AEM では&#x200B;**クライアントサイドライブラリフォルダー**&#x200B;を使用します。
 
-クライアントサイドライブラリフォルダーは、タイプのリポジトリノードです `cq:ClientLibraryFolder`. での定義 [CND 表記](https://jackrabbit.apache.org/node-type-notation.html) 等しい
+クライアントサイドライブラリフォルダーは、`cq:ClientLibraryFolder` タイプのリポジトリノードです。その [CND 表記](https://jackrabbit.apache.org/node-type-notation.html)での定義は次のとおりです。
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder
@@ -111,7 +111,7 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 クライアントライブラリフォルダーには次の項目が含まれます。
 
-* 結合する JS ソースファイルや CSS ソースファイル。
+* 統合対象の JS／CSS ソースファイル（いずれかまたは両方）。
 * 画像ファイルなど、CSS スタイルをサポートするリソース。
 
   **メモ：**&#x200B;サブフォルダーを使用してソースファイルを整理できます。
@@ -125,7 +125,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 ### /lib でのライブラリの上書き {#overriding-libraries-in-lib}
 
-の下にあるクライアントライブラリフォルダー `/apps` 似た名前のフォルダーよりも優先されます `/libs`. 例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
+`/apps` にあるクライアントライブラリフォルダーは、`/libs` にある同じ名前のフォルダーよりも優先されます。例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
 
 ### クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用 {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
@@ -137,7 +137,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 >[!NOTE]
 >
->コードをコンテンツおよび設定から適切に分離するには、以下にクライアントライブラリを配置することをお勧めします `/apps` 次を介して公開します `/etc.clientlibs` を使用する `allowProxy` プロパティ。
+>コードをコンテンツおよび設定から適切に分離するには、`/apps` の下にクライアントライブラリを配置し、`allowProxy` プロパティを使用して `/etc.clientlibs` を介して公開することをお勧めします。
 
 `/apps` にあるクライアントライブラリにアクセスできるようにするために、プロキシサーブレットが使用されます。ACL は依然としてクライアントライブラリフォルダーで適用されますが、サーブレットを使用すると、`/etc.clientlibs/` プロパティが `allowProxy` に設定されている場合、`true` を介してコンテンツを読み取ることができます。
 
@@ -165,7 +165,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 1. Web ブラウザーで CRXDE Lite を開きます（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）。
 1. クライアントライブラリフォルダーの配置先のフォルダーを選択して、**作成／ノードを作成**&#x200B;をクリックします。
-1. ライブラリ ファイルの名前を入力し、[ タイプ ] リストで `cq:ClientLibraryFolder`. 「**OK**」をクリックし、「**すべて保存**」をクリックします。
+1. ライブラリファイルの名前を入力し、タイプリストで「`cq:ClientLibraryFolder`」を選択します。「**OK**」をクリックし、「**すべて保存**」をクリックします。
 1. ライブラリが所属するカテゴリ（1 つまたは複数）を指定するには、`cq:ClientLibraryFolder` ノードを選択し、次のプロパティを追加して、「**すべて保存**」をクリックします。
 
    * 名前：categories
@@ -200,7 +200,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 ### 依存関係へのリンク {#linking-to-dependencies}
 
-クライアントライブラリフォルダーのコードが他のライブラリを参照する場合、他のライブラリを依存関係として識別します。JSP では、 `ui:includeClientLib` クライアントライブラリフォルダーを参照するタグを指定すると、HTMLコードに、生成されたライブラリファイルおよび依存関係へのリンクが含まれます。
+クライアントライブラリフォルダーのコードが他のライブラリを参照する場合、他のライブラリを依存関係として識別します。JSP では、クライアントライブラリフォルダーを参照する `ui:includeClientLib` タグにより、生成されたライブラリファイルと依存関係へのリンクが HTML コードに組み込まれます。
 
 依存関係は別の `cq:ClientLibraryFolder` でなければなりません。依存関係を識別するには、次の属性を持つプロパティを `cq:ClientLibraryFolder` ノードに追加します。
 
@@ -246,7 +246,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 このような場合、必要なすべてのクライアントライブラリコードを 1 つのファイルに組み合わせて、ページ読み込み時のリクエストの行き来の数を減らすと便利です。これを行うには、`cq:ClientLibraryFolder` ノードの embed プロパティを使用して、必要なライブラリをアプリ固有のクライアントライブラリに `embed` します。
 
-AEMには、次のクライアントライブラリカテゴリが含まれます。特定のサイトを機能させるために必要なもののみを埋め込んでください。 ただし、 **このリストの順序は保持する必要があります**:
+次のクライアントライブラリカテゴリが AEM に含まれています。特定のサイトを機能させるのに必要なもののみを埋め込む必要があります。ただし、**このリストの順序は保持する必要があります**。
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -393,7 +393,7 @@ GCC オプションについて詳しくは、[GCC ドキュメント](https://d
 
 YUI は、AEM のデフォルトの縮小ツールとして設定されています。これを GCC に変更するには、次の手順に従います。
 
-1. Apache Felix Config Manager（[https://localhost:4502/system/console/configMgrr](https://localhost:4502/system/console/configMgr)）に移動します。
+1. Apache Felix Config Manager（[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)）に移動します。
 1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;を検索して編集します。
 1. 「**Minify**」オプションを有効にします（まだ有効でない場合）。
 1. **JS Processor Default Configs** の値を `min:gcc` に設定します。

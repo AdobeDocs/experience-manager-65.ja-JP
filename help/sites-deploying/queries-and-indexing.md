@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '3034'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -88,7 +88,7 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 
    この例では、`jcr:uuid` プロパティに対してインデックスを作成します。このプロパティの役割は、関連付けられたノードの Universally Unique Identifier（UUID）を公開することです。
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 
 プロパティインデックスでは次の設定オプションを使用できます。
 
@@ -124,7 +124,7 @@ AEM 6 では、Apache Lucene に基づいたフルテキストインデクサー
    * **タイプ：** `lucene` （String タイプ）
    * **async：** `async`（String タイプ）
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 
 Lucene インデックスでは次の設定オプションを使用できます。
 
@@ -224,7 +224,7 @@ Lucene プロパティインデックスを作成するには、**fulltextEnable
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-上記クエリのための Lucene プロパティインデックスを定義するには、の下にノードを作成して、次の定義を追加します。 **`oak:index`:**
+上記のクエリ用に Lucene プロパティインデックスを定義するには、**`oak:index`:** の下に新しいノードを作成して、次の定義を追加します。
 
 * **名前：** `LucenePropertyIndex`
 * **タイプ：** `oak:QueryIndexDefinition`
@@ -427,7 +427,7 @@ AEM は、リモート Solr サーバーインスタンスと連動するよう�
    * **async：** async（文字列型）
    * **reindex：** true（ブール値型）
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 
 #### Solr の推奨設定 {#recommended-configuration-for-solr}
 

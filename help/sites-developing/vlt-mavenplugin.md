@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 99%
 >
 >詳しくは、以下を参照してください。
 >
->* AEM アプリケーションのデプロイ方法については、AEM as a Cloud Service ドキュメントの [Adobe Content Package Maven プラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools)の記事を参照してください。
+>* AEM アプリケーションのデプロイ方法については、AEM as a Cloud Service ドキュメントの [Adobe Content Package Maven プラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=ja#developer-tools)の記事を参照してください。
 >* 最新の AEM プロジェクトを構造化する方法については、AEM as a Cloud Service ドキュメントの [AEM プロジェクト構造](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=ja)の記事を参照してください。
 >* アーキタイプを使用して新しい AEM プロジェクトを開始する方法については、[AEM プロジェクトのアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)のドキュメントを参照してください。
 >

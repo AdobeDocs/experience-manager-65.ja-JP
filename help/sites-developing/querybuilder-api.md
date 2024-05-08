@@ -14,7 +14,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ REST API は、JSON で送信される応答を使用して、HTTP 経由で同�
 
 >[!NOTE]
 >
->QueryBuilder API は、JCR API を使用して構築されます。また、OSGi バンドル内から JCR API を使用して、Adobe Experience Manager JCR でクエリを実行することもできます。詳しくは、[JCR API を使用した Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html) を参照してください。
+>QueryBuilder API は、JCR API を使用して構築されます。また、OSGi バンドル内から JCR API を使用して、Adobe Experience Manager JCR でクエリを実行することもできます。詳しくは、[JCR API を使用した Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=ja) を参照してください。
 
 ## Gem セッション {#gem-session}
 

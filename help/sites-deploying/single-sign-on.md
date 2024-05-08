@@ -1,6 +1,6 @@
 ---
 title: シングルサインオン
-description: Adobe Experience Manager（AEM）のインスタンスにシングルサインオン（SSO）を設定する方法を説明します。
+description: Adobe Experience Manager（AEM）のインスタンスにシングルサインオン（SSO）を設定する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '723'
-ht-degree: 43%
+ht-degree: 100%
 
 ---
 
@@ -23,31 +23,31 @@ ht-degree: 43%
 SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`）は、信頼された認証が提供する認証結果を処理します。SSO 認証ハンドラーは、次の順序で特別な属性の値として SSO 識別子（SSID）を検索します。
 
 1. リクエストヘッダー
-1. の Cookie
+1. Cookie
 1. リクエストパラメーター
 
-値が見つかると、検索が終了し、この値が使用されます。
+値が見つかると検索が終了し、この値が使用されます。
 
-次の 2 つのサービスを設定して、SSID を格納する属性の名前を認識します。
+この SSID を格納する属性の名前を認識できるように次の 2 つのサービスを設定します。
 
 * ログインモジュール。
 * SSO 認証サービス。
 
-両方のサービスに同じ属性名を指定します。 属性は `Repository.login` に提供される `SimpleCredentials` が含められます。属性の値は無関係で無視されます。単に存在していることが重要で検証されます。
+両方のサービスに同じ属性名を指定します。属性は `Repository.login` に提供される `SimpleCredentials` が含められます。属性の値は無関係で無視されます。単に存在していることが重要で検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
-AEM インスタンス用に SSO を設定するには、次を設定します [SSO 認証ハンドラー](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+AEM インスタンスの SSO を設定するには、[SSO 認証ハンドラー](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler)を設定します。
 
 1. AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項について詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-   例えば、NTLM セットの場合は次のようになります。
+   例えば、NTLM の場合は次のように設定します。
 
    * **パス：**&#x200B;必要に応じて設定します（`/` など）。
    * **ヘッダー名**：`LOGON_USER`
    * **ID 形式**：`^<DOMAIN>\\(.+)$`
 
-     ここで、 `<*DOMAIN*>` は、独自のドメイン名に置き換えられます。
+     ここで、`<*DOMAIN*>` は、独自のドメインの名前に置き換えられます。
 
    CoSign の場合：
 
@@ -65,28 +65,28 @@ AEM インスタンス用に SSO を設定するには、次を設定します [
 
 >[!CAUTION]
 >
->SSO が設定されている場合は、ユーザーがAEMに直接アクセスできないことを確認します。
+>SSO を設定した場合は、ユーザーが直接 AEM にアクセスできないことを確認します。
 >
->SSO システムのエージェントを実行する Web サーバーを経由する必要があるため、AEMによって信頼されるユーザーを導くヘッダー、Cookie、パラメーターをユーザーが直接送信することはできません。外部から送信すると、エージェントによってそうした情報がフィルタリングされます。
+>SSO システムのエージェントを実行する web サーバー経由でアクセスするようにユーザーに要求することで、ユーザーが AEM に信頼されるように導くヘッダー、Cookie またはパラメーターを直接送信できなくなります。そのような情報が外部から送信された場合には、エージェントがフィルタリングするからです。
 >
->Web サーバーを経由せずにAEM インスタンスに直接アクセスできるユーザーは、名前がわかっている場合、ヘッダー、cookie、またはパラメーターを送信することで、任意のユーザーとして動作できます。
+>Web サーバーを経由せずに AEM インスタンスに直接アクセスできるユーザーは、別の既知のユーザーのヘッダー、Cookie またはパラメーターを送信することで、そのユーザーとして行動できます。
 >
->また、ヘッダー、Cookie、リクエストパラメーター名についても、SSO 設定に必要な名前のみを設定するようにしてください。
+>また、ヘッダー、Cookie、リクエストパラメーター名のうち、SSO 設定に必要なものだけを設定します。
 >
 
 >[!NOTE]
 >
->シングルサインオンは、次でよく使用されます [LDAP](/help/sites-administering/ldap-config.md).
+>シングルサインオンは、多くの場合、[LDAP](/help/sites-administering/ldap-config.md) で使用されます。
 
 >[!NOTE]
 >
->を使用している場合 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) Microsoft® Internet Information Server （IIS）を使用する場合は、次の場所で追加の設定を行う必要があります。
+>Microsoft® Internet Information Server（IIS）と共に [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) も使用している場合は、次に追加の設定を行う必要があります。
 >
 >* `disp_iis.ini`
 >* IIS
 >
 >`disp_iis.ini` で次のように設定します。
->（を参照） [Microsoft® Internet Information Server を使用した Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) （詳細については）
+>（詳しくは、[Dispatcher を Microsoft® Internet Information Server と共にインストールする方法に関するページ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja#microsoft-internet-information-server)を参照してください）
 >
 >* `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
@@ -95,10 +95,10 @@ AEM インスタンス用に SSO を設定するには、次を設定します [
 >
 >* **匿名アクセス**&#x200B;を無効にする
 >
->* enable **統合 Windows 認証**
+>* **統合 Windows 認証**&#x200B;を有効にします
 >
 
-コンテンツツリーの任意のセクションに適用されている認証ハンドラーを確認するには、 **Authenticator** Felix コンソールのオプション。例：
+Felix コンソールの「**Authenticator**」オプションを使用すると、コンテンツツリーのすべてのセクションに適用される認証ハンドラーを確認できます。次に例を示します。
 
 `http://localhost:4502/system/console/slingauth`
 
@@ -154,20 +154,20 @@ Transfer-Encoding: chunked
 
 >[!NOTE]
 >
->ブラウザーでリクエストパラメーターを使用すると、HTMLの一部のみが表示され、CSS は表示されません。 これは、HTMLからのすべてのリクエストがリクエストパラメーターなしで行われるからです。
+>ブラウザーでリクエストパラメーターを使用すると、HTML の一部のみが表示されます（CSS は表示されません）。これは、HTML からのリクエストはすべてリクエストパラメーターなしで行われるからです。
 
-## AEM サインアウトリンクの削除 {#removing-aem-sign-out-links}
+## AEM ログアウトリンクの削除 {#removing-aem-sign-out-links}
 
-SSO を使用する場合、ログインとログアウトは外部で処理されるので、AEM独自のサインアウトリンクは適用されなくなり、削除する必要があります。
+SSO を使用する場合、ログインとログアウトは外部で処理されるので、AEM 独自のログアウトリンクは使用できなくなり、削除する必要があります。
 
-ようこそ画面のサインアウトリンクは、次の手順を使用して削除できます。
+ようこそ画面のログアウトリンクは、次の手順で削除できます。
 
 1. `/libs/cq/core/components/welcome/welcome.jsp` を `/apps/cq/core/components/welcome/welcome.jsp` にオーバーレイします
 1. jsp の以下の部分を削除します。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
-右上隅にあるユーザーの個人メニューのサインアウトリンクを削除するには、次の手順に従います。
+右上隅にあるユーザーの個人メニューのログアウトリンクを削除するには、次の手順に従います。
 
 1. `/libs/cq/ui/widgets/source/widgets/UserInfo.js` を `/apps/cq/ui/widgets/source/widgets/UserInfo.js` にオーバーレイします
 

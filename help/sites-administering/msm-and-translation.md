@@ -1,6 +1,6 @@
 ---
-title: マルチサイトマネージャと翻訳
-description: プロジェクトをまたいでコンテンツを再利用し、Adobe Experience Managerで多言語 Web サイトを管理する方法について説明します。
+title: マルチサイトマネージャーと翻訳
+description: プロジェクトをまたいでコンテンツを再利用し、Adobe Experience Manager で多言語 web サイトを管理する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
@@ -12,11 +12,11 @@ role: Admin
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# マルチサイトマネージャと翻訳 {#msm-and-translation}
+# マルチサイトマネージャーと翻訳 {#msm-and-translation}
 
 Web サイトとページを管理するための以下の管理ツールが用意されています。
 

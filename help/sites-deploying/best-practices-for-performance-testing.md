@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '1790'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 99%
 
 **タッチ UI の開発者モード**
 
-AEM 6 のタッチ操作対応 UI の新機能の 1 つに、開発者モードがあります。作成者が編集モードとプレビューモードを切り替えるのと同様に、開発者はオーサー UI でデベロッパーモードに切り替えることができます。これにより、ページ上の各コンポーネントのレンダリング時間を確認し、エラーのスタックトレースを確認できます。デベロッパーモードについて詳しくは、[CQ Gems のプレゼンテーション](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)を参照してください。
+AEM 6 のタッチ操作対応 UI の新機能の 1 つに、開発者モードがあります。作成者が編集モードとプレビューモードを切り替えるのと同様に、開発者はオーサー UI でデベロッパーモードに切り替えることができます。これにより、ページ上の各コンポーネントのレンダリング時間を確認し、エラーのスタックトレースを確認できます。デベロッパーモードについて詳しくは、[CQ Gems のプレゼンテーション](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=ja)を参照してください。
 
 **rlog.jar を使用したリクエストログの解読**
 

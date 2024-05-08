@@ -1,6 +1,6 @@
 ---
-title: AEM Content and Commerce リリースノート 2023
-description: Adobe Experience Manager Content and Commerce リリースノート 2023
+title: AEM Content and Commerce リリースノート 2023年
+description: Adobe Experience Manager Content and Commerce リリースノート 2023年。
 exl-id: 00349400-6860-4e3c-ba56-fa12afc5db1d
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
@@ -8,7 +8,7 @@ role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 71%
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
-## リリース日：2023 年 12 月
+## リリース日：2023年12月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
@@ -32,19 +32,19 @@ ht-degree: 71%
 
 ### バグ修正 {#bug-fixes-december}
 
-* Page v3 リソースタイプに登録された製品およびカテゴリのリダイレクトサーブレット
-* CIF AEP 拡張機能のライブ検索イベントを修正しました
+* ページ v3 リソースタイプに登録されている製品およびカテゴリのリダイレクトサーブレット
+* CIF AEP 拡張機能のライブ検索イベントを修正
 
 ## リリース日：2023年11月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| CIF アドオン | 2023.11.23.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2023.11.23.00.zip) |
+| CIF アドオン | 2023.11.23.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2023.11.23.00.zip) |
 | CIF Venia 参照サイト | 2023.11.08 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2023.11.08) |
 
 ### バグ修正 {#bug-fixes-november}
 
-* CIF設定コンソールに 40 を超える設定を表示
+* CIF 設定コンソールでの 40 件を超える設定の表示
 
 ## リリース日：2023年7月
 
@@ -54,4 +54,4 @@ ht-degree: 71%
 
 ### 新機能 {#what-is-new-july}
 
-* での製品フィルターフック `ProductList` component
+* `ProductList` コンポーネントの製品フィルターフック

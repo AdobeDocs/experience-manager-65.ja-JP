@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '1754'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -120,7 +120,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
   </tr>
   <tr>
    <td>eventdata.a.media.segment </td>
-   <td>表示されているセグメントに関する情報（例： <code>2:O:4-8</code> </td>
+   <td>表示されているセグメントに関する情報（<code>2:O:4-8</code> など）が含まれます。 </td>
   </tr>
  </tbody>
 </table>

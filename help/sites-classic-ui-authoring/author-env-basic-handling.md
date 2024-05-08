@@ -154,7 +154,7 @@ ht-degree: 100%
 <table>
  <tbody>
   <tr>
-   <td><strong>列</strong></td>
+   <td><strong>列グラフ</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>

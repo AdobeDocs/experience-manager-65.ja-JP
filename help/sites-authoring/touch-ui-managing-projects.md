@@ -12,7 +12,7 @@ role: User,Admin,Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 98%
 
 ## アクセス要件 {#access-requirements}
 
-プロジェクトは標準のAEM機能なので、追加の設定は必要ありません。
+プロジェクトは標準の AEM 機能なので、追加の設定は必要ありません。
 
 ただし、プロジェクト内のユーザーがプロジェクトを使用中（プロジェクトの作成、タスクやワークフローの作成、チームの表示と管理など）に、他のユーザーやグループを表示するには、`/home/users` および `/home/groups` に対する読み取りアクセス権が必要です。
 

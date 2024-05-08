@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '507'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -86,7 +86,7 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 >[!NOTE]
 >
->正規表現の定義方法について説明したリソースは多数用意されています。 例： [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
+>正規表現の定義方法について説明したリソースが多数あります。例えば、[https://www.regular-expressions.info/](https://www.regular-expressions.info/) です。
 
 ### AEM でのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
 

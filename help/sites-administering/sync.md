@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '2433'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -143,7 +143,7 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
    * **プリンシパル**：*ユーザー同期用に作成されたユーザーを検索*
    * **タイプ**：`Allow`
    * **権限**：`jcr:all`
-   * **制限** `rep:glob`: `*/activities/*`
+   * **制限**`rep:glob`：`*/activities/*`
    * 「**OK**」を選択します
 
 * 「**すべて保存**」を選択します

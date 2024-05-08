@@ -12,7 +12,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '421'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 97%
 David&#39;s Model は何年も前に David Nuescheler によって作成されたものですが、その考え方は今でも通用します。David&#39;s Model の主な考えは以下のとおりです。
 
 * データが第一、構造は二の次（おそらくですが）。
-* コンテンツ階層は手動で設定し、成り行き任せにしない。
+* コンテンツ階層を推進し、成り行き任せにしない。
 * ワークスペース は `clone()`、`merge()`、`update()` のためのもの。
 * 同じ名前の兄弟に注意する。
 * 参照は害が多いと考えられる。

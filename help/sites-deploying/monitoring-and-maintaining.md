@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '5792'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -205,7 +205,7 @@ AEM WCM は詳細なログを記録します。クイックスタートを解凍
 
 ログファイルのローテーションとは、定期的に新しいファイルを作成してファイルサイズの拡大を制限するプロセスのことです。AEM では、`error.log` というログファイルが、次の指定されたルールに従って 1 日 1 回ローテーションされます。
 
-* この `error.log` ファイルはパターンに従って名前が変更されます `{original_filename}.yyyy-MM-dd`. 例えば、2010年7月11日に、現在のログファイルの名前が `error.log-2010-07-10` に変更され、新しい `error.log` が作成されます。
+* `error.log` ファイルは、`{original_filename}.yyyy-MM-dd` というパターンに従って名前が変更されます。例えば、2010年7月11日に、現在のログファイルの名前が `error.log-2010-07-10` に変更され、新しい `error.log` が作成されます。
 
 * 以前のログファイルは削除されないので、古いログファイルを定期的にクリーンアップして、ディスクの使用量を制限する必要があります。
 
@@ -544,7 +544,7 @@ OSGi イベントで生成される監査記録は、AEM web コンソールの&
 
 以下のリストは、よく発生するパフォーマンス上の問題と、それらの検出方法および対策についての提案を示したものです。
 
-| 領域 | 症状 | 処理能力を増やすには | ボリュームを減らすには |
+| 領域グラフ | 症状 | 処理能力を増やすには | ボリュームを減らすには |
 |---|---|---|---|
 | クライアント | クライアントの CPU 使用率が高い。 | よりパフォーマンスの高いクライアント CPU をインストールする。 | （HTML）レイアウトを簡素化する。 |
 |   | サーバーの CPU 使用率が低い。 | より高速なブラウザーにアップグレードする。 | クライアントサイドキャッシュを改善する。 |
@@ -1098,9 +1098,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >
 >詳しくは、以下の記事も参照してください。
 >
->* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
+>* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
 >* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
->* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)
+>* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
 >* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
@@ -1143,7 +1143,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
 * ナレッジベース
 
-   * [開いているファイルが多すぎる](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html)
+   * [開いているファイルが多すぎる](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=ja)
    * [ジャーナルの消費ディスク領域が大きすぎる](https://helpx.adobe.com/jp/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
 ### 通常のパフォーマンス低下 {#regular-performance-degradation}

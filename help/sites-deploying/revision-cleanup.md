@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '5753'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 99%
 
 AEM 6.3 以降では、この機能のオンラインバージョンである「オンラインでのリビジョンクリーンアップ」が導入されました。オフラインのリビジョンクリーンアップでは AEM インスタンスをシャットダウンする必要があるのに対し、オンラインのリビジョンクリーンアップでは AEM インスタンスがオンラインの間に実行できます。オンラインのリビジョンクリーンアップはデフォルトでオンになっており、リビジョンのクリーンアップを実行する方法として推奨されます。
 
-**メモ**：オンラインでのリビジョンクリーンアップの概要および使用方法について詳しくは、[ビデオを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html)。
+**メモ**：オンラインでのリビジョンクリーンアップの概要および使用方法について詳しくは、[ビデオを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=ja)。
 
 リビジョンクリーンアップのプロセスは、**見積もり**、**コンパクション**、**クリーンアップ**&#x200B;の 3 つのフェーズで構成されます。見積もりフェーズでは、収集されるガベージの量に基づいて、次のフェーズ（コンパクション）を実行するかどうかが判断されます。コンパクションフェーズでは、未使用のコンテンツを除いて、セグメントと tar ファイルが書き換えられます。その後のクリーンアップフェーズでは、ガベージも含めて、古いセグメントが削除されます。通常、オフラインモードではより多くのスペースを再利用できます。これは、オンラインモードでは、追加のセグメントを収集しないようにする AEM の作業セットを考慮する必要があるからです。
 
@@ -492,7 +492,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><strong><code>SegmentNotFoundException</code> インスタンスが <code>error.log</code> に記録される理由と復旧方法を教えてください。</strong></td>
    <td><p><code>SegmentNotFoundException</code> は、TarMK がアクセスを試みたストレージユニット（セグメント）が見つからなかったときに、TarMK によってログに記録されます。この問題を引き起こす可能性のあるシナリオは次の 3 つです。</p>
     <ol>
-     <li>アプリケーションが、推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。このケースは一時的なもので、データの破損にはつながりません。 復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。このためには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
+     <li>アプリケーションが、推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。このケースは一時的なもので、データの破損にはつながりません。復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。このためには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
      <li>ディスク上のデータの破損を招いた外部イベント。これは、ディスク障害、ディスク容量不足、または必要なデータファイルの誤った変更などになります。この場合は、インスタンスをオフラインにし、oak-run チェックを使用して修復する必要があります。oak-run チェックの実行方法について詳しくは、次の <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメント</a> を参照してください。</li>
      <li>他のすべての状況では、<a href="https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support" target="_blank">アドビカスタマーケア</a>に連絡して対処します。</li>
     </ol> </td>
@@ -527,7 +527,7 @@ TarMK GC: no base state available, running full compaction instead
     <td>見積もり</td>
     <td>TarMK GC #2：コンパクションが一時停止されたので、見積もりはスキップされました。</td>
     <td>設定によってシステムでコンパクションが無効になっている場合は、見積もりフェーズがスキップされます。</td>
-    <td>オンラインでのリビジョンクリーンアップの有効化.</td>
+    <td>オンラインでのリビジョンクリーンアップの有効化。</td>
   </td>
   </tr>
   <tr>
@@ -554,7 +554,7 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
     <td>該当なし</td>
     <td>TarMK GC #2：5 回のサイクル後、32.902 分（1974140 ms）でコンパクションに失敗しました。</td>
-    <td>このメッセージは、復旧不可能なエラーがあったのではなく、一部の試行の後にコンパクションが終了されたことのみを意味します。 また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
+    <td>このメッセージは、復旧不可能なエラーがあったことを意味するものではなく、何度か試行された後にコンパクションが終了されたことを意味します。また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
     <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> およびオンラインでのリビジョンクリーンアップの実行の節の最後の質問を参照してください。</a></td>
   </td>
   </tr>

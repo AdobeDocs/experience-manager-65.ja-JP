@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -31,6 +31,6 @@ SPA と Adobe Experience Platform Launch の統合方法を理解するには、
 
 >[!NOTE]
 >
->参照される KB は、Adobe Experience Manager SPA Editor を使用しないSPAとAdobe Experience Platform Launchを統合できるように作成されました。 また、これらの方法を使用すると、Adobe Experience Platform Launch の統合が、SPA エディターを使用するように構築された SPA と共存できます。
+>Adobe Experience Manager SPA エディターを使用していない SPA と Adobe Experience Platform Launch の統合を有効にする方法については、この KB を参照してください。また、これらの方法を使用すると、Adobe Experience Platform Launch の統合が、SPA エディターを使用するように構築された SPA と共存できます。
 >
 >JavaScript SPA ライブラリと共に Redux を使用する方法については、まだ完全には確認されていません。Redux のサポートは、SPA エディターの今後のリリースで提供される予定です。

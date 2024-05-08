@@ -12,7 +12,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience の構成要素の Adobe CQ リポジトリ内にあるノー�
 
 リポジトリに接続して接続を確立するには様々な方法がありますが、この開発向け記事では、`org.apache.jackrabbit.commons.JcrUtils` クラスに属する静的メソッドを使用します。このメソッドの名前は `getRepository` です。このメソッドは、Adobe CQ サーバーの URL を表す文字列パラメーターを受け取ります。例えば、`http://localhost:4503/crx/server` のように指定します。
 
-この `getRepository` メソッドはを返します。 `Repository` インスタンス（次のコード例に示されます）。
+次のコード例に示すように、`getRepository` メソッドは `Repository` インスタンスを返します。
 
 ```java
 //Create a connection to the AEM JCR repository running on local host
@@ -45,14 +45,14 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 ## Session インスタンスの作成 {#create-a-session-instance}
 
-この `Repository` インスタンスは CRX リポジトリを表します。 を使用します `Repository` インスタンス：リポジトリとのセッションを確立します。 セッションを作成するには、を呼び出します `Repository` インスタンスの `login` メソッドを使用してを渡す `javax.jcr.SimpleCredentials` オブジェクト。 この `login` メソッドはを返します。 `javax.jcr.Session` インスタンス。
+`Repository` インスタンスは CRX リポジトリを表します。`Repository` インスタンスを使用して、このリポジトリとのセッションを確立します。セッションを作成するには、`Repository` インスタンスの `login` メソッドを呼び出して `javax.jcr.SimpleCredentials` オブジェクトを渡します。`login` メソッドは、`javax.jcr.Session` インスタンスを返します。
 
-を作成します `SimpleCredentials` オブジェクトのコンストラクターを使用して、以下の文字列値を渡します。
+`SimpleCredentials` オブジェクトを作成するには、コンストラクターを使用して、次の文字列値を渡します。
 
 * ユーザー名
 * 対応するパスワード
 
-2 番目のパラメーターを渡す場合、String オブジェクトのを呼び出します `toCharArray` メソッド。 次のコードは、 `login` を返すメソッド `javax.jcr.Sessioninstance`.
+2 番目のパラメーターを渡す場合は、文字列オブジェクトの `toCharArray` メソッドを呼び出します。次のコードは、`javax.jcr.Sessioninstance` を返す `login` メソッドの呼び出し方法を示します。
 
 ```java
 //Create a Session instance
@@ -61,14 +61,14 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## ノードインスタンスの作成 {#create-a-node-instance}
 
-を使用 `Session` 作成するインスタンス `javax.jcr.Node` インスタンス。 A `Node` インスタンスを使用すると、ノード操作を実行できます。 例えば、ノードを作成できます。ルートノードを表すノードを作成するには、 `Session` インスタンスの `getRootNode` メソッド（次のコード行で示されます）。
+`Session` インスタンスを使用して `javax.jcr.Node` インスタンスを作成します。`Node` インスタンスを使用すると、ノード操作を実行できます。例えば、ノードを作成できます。ルートノードを表すノードを作成するには、次のコード行のように、`Session` インスタンスの `getRootNode` メソッドを呼び出します。
 
 ```java
 //Create a Node
 Node root = session.getRootNode();
 ```
 
-を作成したら、 `Node` インスタンスを使用すると、別のノードを作成してそのノードに値を追加するなどのタスクを実行できます。 例えば、以下のコードでは、2 つのノードを作成し、2 番目のノードに値を追加します。
+`Node` インスタンスを作成すると、別のノードを作成してそのノードに値を追加するなどのタスクを実行できます。例えば、以下のコードでは、2 つのノードを作成し、2 番目のノードに値を追加します。
 
 ```java
 // Store content
@@ -78,7 +78,7 @@ day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suit
 
 ## ノードの値の取得 {#retrieve-node-values}
 
-ノードとその値を取得するには、 `Node` インスタンスの `getNode` をメソッドして、ノードの完全修飾パスを表す文字列値を渡します。 前のコードの例で作成したノードの構造について考えてみましょう。以下のコードに示すように、「day」ノードを取得するには、「adobe/day」を指定します。
+ノードとその値を取得するには、`Node` インスタンスの `getNode` メソッドを呼び出して、ノードの完全修飾パスを表す文字列値を渡します。前のコードの例で作成したノードの構造について考えてみましょう。以下のコードに示すように、「day」ノードを取得するには、「adobe/day」を指定します。
 
 ```java
 // Retrieve content
@@ -89,7 +89,7 @@ System.out.println(node.getProperty("message").getString());
 
 ## Adobe CQ リポジトリ内でのノードの作成 {#create-nodes-in-the-adobe-cq-repository}
 
-次の Java™ コードの例は、Adobe CQに接続する Java™ クラスを表し、を作成します `Session` をインスタンス化し、新しいノードを追加します。 ノードにデータ値が割り当てられ、ノードの値とそのパスがコンソールに書き出されます。セッションが完了したら、必ずログアウトしてください。
+次の Java™ コードの例は、Adobe CQ に接続し、`Session` インスタンスを作成して、新しいノードを追加する Java™ クラスを表しています。ノードにデータ値が割り当てられ、ノードの値とそのパスがコンソールに書き出されます。セッションが完了したら、必ずログアウトしてください。
 
 ```java
 /*

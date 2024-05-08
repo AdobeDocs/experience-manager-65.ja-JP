@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 99%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-詳しくは、[JVM からのスレッドダンプの取得方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)を参照してください。
+詳しくは、[JVM からのスレッドダンプの取得方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)を参照してください。
 
 ### 閉じられていない JCR セッションの確認 {#checking-for-unclosed-jcr-sessions}
 

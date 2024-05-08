@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3186'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 99%
 >[!NOTE]
 >
 >次のチュートリアルは、新しいプロジェクトで編集可能なページテンプレートを設定する場合にも役立つ場合があります。
->[AEM Sites の概要（パート 2）- ベースページとテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html)
+>[AEM Sites の概要（パート 2）- ベースページとテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=ja)
 
 ## 新しいテンプレートの作成 {#creating-a-new-template}
 

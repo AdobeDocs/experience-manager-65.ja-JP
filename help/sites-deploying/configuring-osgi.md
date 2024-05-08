@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '1954'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -174,7 +174,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 >[!NOTE]
 >
->[特定のインスタンスのためだけにリポジトリベースの設定を定義する方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html)も参照してください。
+>[特定のインスタンスのためだけにリポジトリベースの設定を定義する方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=ja)も参照してください。
 
 ### リポジトリへの新しい設定の追加 {#adding-a-new-configuration-to-the-repository}
 
@@ -249,7 +249,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
    * タイプ：適宜。
    * 値：必要に応じて。
 
-   プロパティを作成する必要があるのは、設定するパラメーターのみです。その他は、AEMで設定されているデフォルト値を引き続き使用します。
+   プロパティを作成する必要があるのは、設定対象のパラメーターのみです。その他のプロパティは AEM で設定されているデフォルト値を引き続き使用します。
 
 1. すべての変更を保存します。
 

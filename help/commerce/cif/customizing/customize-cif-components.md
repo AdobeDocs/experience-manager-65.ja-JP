@@ -16,13 +16,13 @@ role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '2302'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Manager CIF コアコンポーネントをカスタマイズ {#customize-cif-components}
 
-[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、[製品ティーザー](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)コンポーネントをさらに拡張して、Adobe Commerce のカスタム属性を表示します。また、Adobe Experience Manager（AEM）とAdobe Commerce間のGraphQL統合、およびCIF コアコンポーネントによって提供される拡張フックについても説明します。
+[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、[製品ティーザー](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)コンポーネントをさらに拡張して、Adobe Commerce のカスタム属性を表示します。また、Adobe Experience Manager（AEM）と Adobe Commerce 間の GraphQL 統合および CIF コアコンポーネントによって提供される拡張フックについても説明します。
 
 >[!TIP]
 >
@@ -42,7 +42,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
 ## Venia プロジェクトのクローン {#clone-venia-project}
 
-のクローンを作成しました [Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia) 次に、デフォルトスタイルを上書きします。
+[Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)のクローンを作成して、デフォルトのスタイルを上書きします。
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
 ## Adobe Commerce でのカスタム属性の追加 {#add-custom-attribute}
 
-AEM に表示された製品と製品データは Adobe Commerce に格納されます。次に、属性を追加します **エコフレンドリー** Adobe Commerce UI を使用して設定された製品属性の一部として。
+AEM に表示された製品と製品データは Adobe Commerce に格納されます。次に、Adobe Commerce UI を使用して設定する製品属性の一部として、**エコフレンドリー**&#x200B;の属性を追加します。
 
 >[!TIP]
 >
@@ -141,7 +141,7 @@ AEM に表示された製品と製品データは Adobe Commerce に格納され
 
 AEM コードに着手する前に、GraphQL IDE を使用して [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) を調べてみると役に立ちます。AEM との Adobe Commerce 統合は、主に一連の GraphQL クエリを介して実行されます。GraphQL クエリを理解し変更することは、CIF コアコンポーネントを拡張するのに重要なことの 1 つです。
 
-次に、GraphQL IDE を使用して、`eco_friendly` 属性が製品属性セットに追加されたことを確認します。このチュートリアルのスクリーンショットは、Google Chrome 拡張機能を使用しています _Altair GraphQL クライアント_.
+次に、GraphQL IDE を使用して、`eco_friendly` 属性が製品属性セットに追加されたことを確認します。このチュートリアルのスクリーンショットは、Google Chrome 拡張機能である _Altair GraphQL クライアント_&#x200B;を使用しています。
 
 1. GraphQL IDE を開き、IDE または拡張機能の URL バーに URL `http://<server>/graphql` を入力します。
 2. 次の[製品クエリ](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html)を追加します。ここで、`YOUR_SKU` は、前の演習で使用した製品の **SKU** です。
@@ -180,7 +180,7 @@ AEM コードに着手する前に、GraphQL IDE を使用して [Adobe Commerce
 
    ![GraphQL の応答例](../assets/customize-cif-components/sample-graphql-query.png)
 
-「**はい**」の値は整数「**1**」です。これは、Java™ でGraphQL クエリを記述する場合に役立ちます。
+「**はい**」の値は整数「**1**」です。これは、GraphQL クエリを Java™ で記述する場合に役立ちます。
 
 >[!TIP]
 >
@@ -188,7 +188,7 @@ AEM コードに着手する前に、GraphQL IDE を使用して [Adobe Commerce
 
 ## 製品ティーザーの Sling モデルのアップデート {#updating-sling-model-product-teaser}
 
-次に、Sling モデルを実装して、製品ティーザーのビジネスロジックを拡張します。[Sling モデル](https://sling.apache.org/documentation/bundles/models.html) は、コンポーネントに必要なビジネスロジックを実装する、注釈主導の「POJO」（Plain Old Java™ Objects）です。 Sling モデルは、コンポーネントの一部として HTL スクリプトと組み合わせて使用されます。に従う [sling モデルの委任パターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) これにより、既存の製品ティーザーモデルの一部を拡張することができます。
+次に、Sling モデルを実装して、製品ティーザーのビジネスロジックを拡張します。[Sling モデル](https://sling.apache.org/documentation/bundles/models.html)は、コンポーネントで必要なビジネスロジックを実装する注釈駆動型の「POJO」（Plain Old Java™ Objects）です。Sling モデルは、コンポーネントの一部として HTL スクリプトと組み合わせて使用されます。既存の製品ティーザーモデルの一部を拡張できるように、[Sling モデルのデリゲーションパターン](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)に従います。
 
 Sling モデルは Java™ として実装され、生成されたプロジェクトの&#x200B;**コア**&#x200B;モジュールにあります。
 
@@ -200,9 +200,9 @@ Sling モデルは Java™ として実装され、生成されたプロジェ�
 
    `MyProductTeaser.java` は、CIF [ProductTeaser](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) インターフェイスを拡張する Java™ インターフェイスです。
 
-   製品が「新規」と見なされた場合にバッジを表示するための新しい `isShowBadge()` メソッドが既に追加されています。
+   製品が「新規」と見なされた場合にバッジを表示する `isShowBadge()` と名付けられた新しいメソッドが既に追加されています。
 
-1. メソッドを追加 `isEcoFriendly()` インターフェイスに対して：
+1. `isEcoFriendly()` メソッドをインターフェイスに追加します。
 
    ```java
    @ProviderType
@@ -293,7 +293,7 @@ Sling モデルは Java™ として実装され、生成されたプロジェ�
    >
    >`createdAt()` メソッドは、[製品インターフェイス](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java)の一部として実装されています。一般的なスキーマ属性のほとんどは実装されているので、真のカスタム属性に対してのみ `addCustomSimpleField` を使用します。
 
-1. Java™ コードのデバッグに役立つように、ロガーを追加します。
+1. ロガーを追加して、Java™ コードをデバッグできるようにします。
 
    ```java
    import org.slf4j.Logger;
@@ -328,7 +328,7 @@ Sling モデルは Java™ として実装され、生成されたプロジェ�
 
    上記のメソッドでは、`productRetriever` が製品の取得に使用され、`getAsInteger()` メソッドが `eco_friendly` 属性の値の取得に使用されています。先ほど実行した GraphQL クエリに基づいて、`eco_friendly` 属性が「**はい**」に設定された場合の期待値は、実際には整数「**1**」であることがわかります。
 
-   Sling モデルが更新されたので、コンポーネントマークアップを更新して、次のインジケーターを表示します **エコフレンドリー** は Sling モデルに基づいています。
+   Sling モデルが更新されたので、Sling モデルに基づいて&#x200B;**エコフレンドリー**&#x200B;という指標を表示するには、コンポーネントマークアップを更新します。
 
 ## 製品ティーザーのマークアップのカスタマイズ {#customize-markup-product-teaser}
 
@@ -338,7 +338,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 >[!NOTE]
 >
->この製品ティーザーやCIF ページコンポーネントなど、CIFの製品およびカテゴリピッカーを使用してコンポーネントをカスタマイズする場合は、必要なを含めてください `cif.shell.picker` コンポーネントダイアログの clientlib 詳しくは、[CIF 製品とカテゴリピッカーの使用](use-cif-pickers.md)を参照してください。
+>この製品ティーザーや CIF ページコンポーネントなど、CIF 製品およびカテゴリピッカーを使用してコンポーネントをカスタマイズする場合は、必ずコンポーネントダイアログに必要な `cif.shell.picker` clientlib を含めます。詳しくは、[CIF 製品とカテゴリピッカーの使用](use-cif-pickers.md)を参照してください。
 
 1. IDE で、`ui.apps` モジュールに移動して展開し、フォルダー階層を `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` まで展開し、`.content.xml` ファイルを検査します。
 
@@ -371,7 +371,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    `MyProductTeaser` の Sling モデルが使用され、 `product` 変数に割り当てられていることに注意してください。
 
-1. 編集 `productteaser.html` そのため、を呼び出します `isEcoFriendly` 前の演習で実装したメソッド：
+1. 前の演習で実装した `isEcoFriendly` メソッドを呼び出せるように `productteaser.html` を編集します。
 
    ```html
    ...

@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '500'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -212,7 +212,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 ## 検出範囲 {#scope}
 
-現在、パターン検出では以下を確認できます。
+現在、パターン検出では、以下の内容を確認できます。
 
 * OSGi バンドルの書き出しと読み込みの不一致
 * Sling リソースタイプとスーパータイプ（検索パスコンテンツオーバーレイを含む）の過剰使用

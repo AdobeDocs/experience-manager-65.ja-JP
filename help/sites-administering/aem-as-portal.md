@@ -615,7 +615,7 @@ Portal Director Locale Handler には、ロケール情報をチェックする�
 | **名前** | **説明** | **デフォルトの動作** |
 |---|---|---|
 | Authenticator | AEM に認証情報を提供します。 | オーサーとパブリッシュの両方に対して、設定可能なテクニカルユーザーを使用します。または、SSO を使用できます。 |
-| HTMLRewriter | リンクと画像を書き換え | AEM リンクをポータルリンクに書き換えます。UrlMapper と TextMapper を使用して拡張できます。 |
+| HTMLRewriter | リンクと画像を書き換えます。 | AEM リンクをポータルリンクに書き換えます。UrlMapper と TextMapper を使用して拡張できます。 |
 | HttpClientService | すべての HTTP 接続を処理します。 | 標準実装です。 |
 | LocaleHandler | ロケール情報を処理します。 | ロケールに従ってコンテンツへのリンクを書き換えます。 |
 | LocaleDetector | ユーザーのロケールを検出します。 | ポータルで指定されたロケールを使用します。 |

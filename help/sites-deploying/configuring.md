@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '2093'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -190,7 +190,7 @@ AEM ドキュメントサービスおよび AEM ドキュメントセキュリ�
 
 [オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。](/help/sites-deploying/offloading.md)オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。特殊化した処理により、使用可能なサーバーリソースの使用を最大限に活用できます。
 
-トポロジは、オフロードに関与するExperience Managerクラスターが緩やかに結合したものです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに使用される疎結合の Experience Manager クラスターです。クラスターは 1 つ以上の Experience Manager サーバーインスタンスで構成されます（単一のインスタンスがクラスターと見なされます）。
 
 トポロジのメンバーシップを表示または変更する方法について詳しくは、「[トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies)」セクションを参照してください。
 

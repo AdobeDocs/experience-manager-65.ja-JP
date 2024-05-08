@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 315171dca4501718a34fd33f937334f7e7958963
 workflow-type: tm+mt
 source-wordcount: '1249'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -150,7 +150,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * ユーザーに対する表示およびアクセスが可能
 * 各プロパティに 2 つの状態を定義する
-* 定義された 2 つの状態を切り替えることができます
+* 定義した 2 つの状態の切り替えが可能
 
 この定義を行うには、次の項目を使用します。
 

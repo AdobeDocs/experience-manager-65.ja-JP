@@ -9,13 +9,13 @@ role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # コマース統合フレームワークを使用した AEM とサードパーティコマースの統合 {#aem-third-party}
 
-Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを介して接続されます。
+Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを介して接続できます。
 
 ## アーキテクチャ {#architecture}
 

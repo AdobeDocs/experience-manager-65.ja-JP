@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '3227'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 99%
 
 * **メールでユーザーに通知する**
 
-   * ワークフローがステップに到達したら、参加者にメールを送信して通知します。
+   * ワークフローがステップに到達した際に、メールを送信して参加者に通知します。
    * 有効にすると、プロパティ&#x200B;**ユーザー／グループ**&#x200B;で定義されたユーザーに対して、またはグループが定義されている場合、グループの各メンバーに対して、メールが送信されます。
 
 * **ユーザー／グループ**
@@ -186,7 +186,7 @@ function check(){
 
 >[!NOTE]
 >
->詳しくは、[OR 分岐ステップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)を参照してください。
+>詳しくは、[OR 分岐ステップ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=ja#use-a-variable)を参照してください。
 
 ![OR 分割を使用したブランチ](assets/variables_orsplit_new.png)
 

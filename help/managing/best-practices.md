@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの管理 ― ベストプラクティスチェックリスト
+title: プロジェクトの管理 - ベストプラクティスチェックリスト
 description: Adobe Experience Manager（AEM）実装プロジェクトの管理には、計画と理解が必要です。プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、ステータスを全体的に監視します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -631,4 +631,4 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * 関連ドキュメント
 
-   * Adobe Experience Cloud - [Adobe Experience Cloud の計画](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)
+   * Adobe Experience Cloud - [Adobe Experience Cloud の計画](https://experienceleague.adobe.com/ja/docs/core-services/interface/services/core-services)

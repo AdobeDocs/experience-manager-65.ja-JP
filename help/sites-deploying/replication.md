@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '3363'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -108,7 +108,7 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 オーサー環境からパブリッシュ環境へのレプリケーションに使用します。
 
 * Dispatcher フラッシュ
-Dispatcher キャッシュの管理に使用します。詳しくは、[オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)および[パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance)を参照してください。
+Dispatcher キャッシュの管理に使用します。詳しくは、[オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-the-authoring-environment)および[パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance)を参照してください。
 
 * [リバースレプリケーション](#reverse-replication-publish-to-author)
 パブリッシュ環境からオーサー環境へのレプリケーションに使用します。リバースレプリケーションは、フォーラム、ブログ、コメントなどのコミュニティ機能には使用されません。アウトボックスが有効化されていないので、事実上、この機能は無効になっています。リバースレプリケーションを使用するには、カスタム設定が必要になります。

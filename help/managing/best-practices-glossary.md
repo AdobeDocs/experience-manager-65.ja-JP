@@ -13,7 +13,7 @@ role: Admin,Architect,Data Architect,Developer,Leader
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '6926'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1132,11 +1132,11 @@ AEM プラットフォーム上での通常の開発範囲外と見なされる�
 
 ### AEM 管理者トレーニングに選ばれたスタッフ {#staff-selected-for-aem-administrator-training}
 
-ソリューションを管理するためのトレーニングを必要とする社内スタッフ。
+ソリューションを管理するトレーニングが必要な内部スタッフです。
 
 ### 作成者およびエンドユーザーのトレーニングに選ばれたスタッフ {#staff-selected-for-author-and-end-user-training}
 
-ソリューションを作成できるようトレーニングを必要とする社内スタッフ
+ソリューションでオーサリングを行えるようにするトレーニングが必要な内部スタッフです。
 
 ### 利害関係者 {#stakeholders}
 

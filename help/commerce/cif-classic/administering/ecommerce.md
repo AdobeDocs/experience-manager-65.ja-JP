@@ -11,7 +11,7 @@ role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
 source-wordcount: '762'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 96%
  </tbody>
 </table>
 
-e コマースでは、商品情報管理（PIM）と連携して、オンラインストアでの商品販売に焦点を当てた web サイトの以下のアクティビティを扱います。
+e コマースは、商品情報管理（PIM）と連動して、オンラインストアでの商品の販売に焦点を合わせた web サイトの以下のアクティビティを扱います。
 
 * 商品の作成、ライフタイム、陳腐化
 * 価格管理

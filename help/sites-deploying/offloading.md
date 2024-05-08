@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '2318'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -52,7 +52,7 @@ JobManager でジョブが作成されると、オフロードフレームワー
 
 ## トポロジの管理 {#administering-topologies}
 
-トポロジは、オフロードに関与するExperience Managerクラスターが緩やかに結合したものです。 クラスターは、1 つ以上の Experience Manager サーバーインスタンスで構成されます（1 つのインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに使用される疎結合の Experience Manager クラスターです。クラスターは 1 つ以上の Experience Manager サーバーインスタンスで構成されます（単一のインスタンスがクラスターと見なされます）。
 
 各 Experience Manager インスタンスによって、以下のオフロード関連サービスが実行されます。
 

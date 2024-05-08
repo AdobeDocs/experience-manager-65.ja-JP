@@ -12,7 +12,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -576,7 +576,7 @@ JCR XPath の `rep:similar()` を使用した類似性検索。
 
 * **all**
 
-  （ブール値）タグのフルテキスト全体（すべてのタイトル、説明など）を検索します。 「l」より優先されます。 `ang`」と入力します。
+  （ブーリアン）タグのフルテキスト全体、つまりすべてのタイトルや説明などを検索します。（「l `ang`」より優先されます）。
 
 ### type {#type}
 

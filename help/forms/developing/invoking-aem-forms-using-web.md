@@ -1519,7 +1519,7 @@ AEM Forms の複雑なデータタイプ（`PrincipalReference` など）の一�
 * `Roles`
 * `BLOB`
 
-この問題を回避するには、データタイプを完全に修飾することをお勧めします。 例えば、サービス参照を使用して Forms サービスと Signature サービスの両方を参照する .NET アプリケーションについて考えます。両方のサービス参照には、`BLOB` クラスが含まれています。を使用するには `BLOB` インスタンス、完全修飾 `BLOB` を宣言する場合は object を使用します。 この方法を次のコード例に示します。このコード例について詳しくは、[インタラクティブ Forms のデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)を参照してください。
+この問題を回避するには、データタイプを完全に修飾することをお勧めします。例えば、サービス参照を使用して Forms サービスと Signature サービスの両方を参照する .NET アプリケーションについて考えます。両方のサービス参照には、`BLOB` クラスが含まれています。`BLOB` インスタンスを使用するには、`BLOB` オブジェクトを宣言時に完全修飾します。この方法を次のコード例に示します。このコード例について詳しくは、[インタラクティブ Forms のデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)を参照してください。
 
 次の C# コードの例では、Forms サービスでレンダリングされるインタラクティブフォームに署名しています。このクライアントアプリケーションには 2 つのサービス参照があります。Forms サービスに関連付けられた `BLOB` インスタンスは、`SignInteractiveForm.ServiceReference2` 名前空間に属しています。同じように、Signature サービスに関連付けられた `BLOB` インスタンスは、`SignInteractiveForm.ServiceReference1` 名前空間に属しています。署名済みのインタラクティブフォームは、*LoanXFASigned.pdf* という名前の PDF ファイルとして保存されます。
 

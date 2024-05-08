@@ -13,7 +13,7 @@ role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '3441'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -566,7 +566,7 @@ HTML が参照する画像がパッケージ内に存在しない、などの警
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
-キャンペーンの下にランディングページが作成されたとします `We.Retail` また、ランディングページの名前はです **myBlankLandingPage** zip ファイルが格納される場所は次のとおりです。
+ランディングページが `We.Retail` キャンペーンに作成され、このランディングページの名前が **myBlankLandingPage** である場合、zip ファイルが格納される場所は次のとおりです。
 
 `/etc/designs/default/canvas/content/campaigns/geometrixx/myBlankLandingPage`
 

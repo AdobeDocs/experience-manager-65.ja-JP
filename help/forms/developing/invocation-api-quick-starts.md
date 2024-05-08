@@ -106,7 +106,7 @@ ht-degree: 98%
  </tbody>
 </table>
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >

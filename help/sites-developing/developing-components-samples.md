@@ -13,7 +13,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +47,7 @@ GitHub のコード
 
 >[!NOTE]
 >
->このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションに関連しています。
+>このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションに関連しています。
 
 ## 関連リソース {#related-resources}
 

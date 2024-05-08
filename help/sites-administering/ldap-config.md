@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '1609'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ LDAP と AEM を連携するには、次の 3 つの OSGi 設定を作成する�
 
 >[!NOTE]
 >
->External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html)をご覧ください。
+>External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=ja)をご覧ください。
 >
 >Apache DS を使用した Experience Manager の設定例については、[Apache Directory Service を使用するための Adobe Experience Manager 6.5 の設定](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)を参照してください。
 
@@ -280,12 +280,12 @@ LDAP ID プロバイダーと外部ログインモジュールの両方に対し
 
 * ログレベル：デバッグ
 * ログファイル：logs/ldap.log
-* メッセージ パターン：{0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* メッセージパターン： {0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * ロガー：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * ログレベル：デバッグ
 * ログファイル：logs/external.log
-* メッセージ パターン：{0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* メッセージパターン： {0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## グループへの関連付けに関する注意事項 {#a-word-on-group-affiliation}

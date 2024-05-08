@@ -1,6 +1,6 @@
 ---
 title: 最適化された GraphQL フィルタリング用コンテンツフラグメントの更新
-description: ヘッドレスコンテンツ配信のために、Adobe Experience Managerで最適化されたGraphQL フィルタリング用にコンテンツフラグメントを更新する方法について説明します。
+description: ヘッドレスコンテンツ配信に最適化された Adobe Experience Manager の GraphQL フィルタリング用にコンテンツフラグメントを更新する方法について説明します。
 exl-id: d78ec052-c091-49ca-9f36-a3d24eb9edd5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
@@ -8,7 +8,7 @@ role: Admin,Architect,Data Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -18,35 +18,35 @@ GraphQL フィルターのパフォーマンスを最適化するには、コン
 
 >[!NOTE]
 >
->コンテンツフラグメントを更新した後、[GraphQL クエリの最適化](/help/sites-developing/headless/graphql-api/graphql-optimization.md)についてのレコメンデーションに従うことができます。
+>コンテンツフラグメントを更新した後、[GraphQL クエリの最適化](/help/sites-developing/headless/graphql-api/graphql-optimization.md)についての推奨事項に従うことができます。
 
 ## 前提条件 {#prerequisites}
 
-6.5.17.0 リリース以降のAEMがあることを確認します。
+AEM のリリース 6.5.17.0 以上がインストールされていることを確認します。
 
 ## コンテンツフラグメントの更新 {#updating-content-fragments}
 
-この手順を実行するには、以下の手順を実行します。
+この手続きを実行するには、次の手順に従います。
 
-1. [OSGi 設定の指定](/help/sites-deploying/configuring-osgi.md) の場合 **コンテンツフラグメント移行ジョブの設定**:
+1. **コンテンツフラグメント移行ジョブ設定** の [OSGi 設定を指定します](/help/sites-deploying/configuring-osgi.md)。
 
-   ![OSGi コンテンツフラグメント移行ジョブの設定](assets/cfm-graphql-update-01.png "OSGi コンテンツフラグメント移行ジョブの設定")
+   ![OSGi コンテンツフラグメント移行ジョブ設定](assets/cfm-graphql-update-01.png "OSGi コンテンツフラグメント移行ジョブ設定")
 
 1. ダイアログで、これら 2 つのパラメーターを次のように設定します。
 
-   * **ContentFragmentMigration：有効** : `1`
-   * **ContentFragmentMigration：強制** : `1`
+   * **ContentFragmentMigration:Enabled**：`1`
+   * **ContentFragmentMigration:Enforce**：`1`
 
-1. **保存** 仕様 – 更新手順が開始します。
+1. 指定した値を&#x200B;**保存**&#x200B;します。更新手続きが開始されます。
 
-1. 手順が完了するまで待ちます。 この手順は、プロパティが `cfGlobalVersion` 次に表示 `/content/dam` およびがに設定されています。 `1`.
+1. 手続きが完了するまで待ちます。プロパティ `cfGlobalVersion` が `/content/dam` に表示され `1` に設定されたら、手続きは完了です。
 
-1. OSGi 設定に戻って手順を非アクティブ化します。
+1. OSGi 設定に戻って、手続きのアクティベートを解除します。
 
-   のダイアログで **コンテンツフラグメント移行ジョブの設定** これら 2 つのパラメーターを次のように設定します。
+   **コンテンツフラグメント移行ジョブ設定**&#x200B;のダイアログで、これら 2 つのパラメータを次のように設定します。
 
-   * **ContentFragmentMigration：有効** : `0`
-   * **ContentFragmentMigration：強制** : `0`
+   * **ContentFragmentMigration:Enabled**：`0`
+   * **ContentFragmentMigration:Enforce**：`0`
 
 ## 制限事項 {#limitations}
 

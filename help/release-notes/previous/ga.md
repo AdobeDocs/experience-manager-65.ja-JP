@@ -445,7 +445,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 * スタンドアロンのクイックスタート： `cq-quickstart-6.5.0.jar`。
 * アプリケーションサーバーのクイックスタート：`cq-quickstart-6.5.0.war`。
-* 様々な web サーバーとプラットフォーム向けの Dispatcher 4.3.2 以降。[ダウンロードリンク](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja-JP)を参照してください。
+* 様々な web サーバーとプラットフォーム向けの Dispatcher 4.3.2 以降。[ダウンロードリンク](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja)を参照してください。
 * Eclipse IDE 用プラグイン（[詳細およびダウンロード](/help/sites-developing/aem-eclipse.md)）
 
 * Brackets コードエディターの拡張機能（[詳細およびダウンロード](/help/sites-developing/aem-brackets.md)）

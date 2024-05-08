@@ -1,6 +1,6 @@
 ---
-title: Edge Delivery の概要
-description: Edge Delivery の概要
+title: Edge Delivery Services の概要
+description: Edge Delivery Services の概要
 exl-id: 8d2b2d6c-ae11-4829-842e-b186f5491713
 solution: Experience Manager, Experience Manager Assets
 feature: Edge Delivery Services
@@ -8,15 +8,15 @@ role: User
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '834'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# Edge Delivery の概要 {#getstart-edge}
+# Edge Delivery Services の概要 {#getstart-edge}
 
 Edge Delivery により、AEM はエンゲージメントとコンバージョンを促進する優れたエクスペリエンスを提供します。そのために AEM では、迅速に作成および開発できるインパクトの強いエクスペリエンスを提供します。これは、作成者がサイトをすばやく更新および公開できて、新しいサイトが迅速にローンチされる迅速な開発環境を可能にする、構成可能なサービスセットです。したがって、Edge Delivery を使用すると、コンバージョンを向上させ、コストを削減し、コンテンツベロシティを最大限に高めることができます。
 
-エッジ配信を使用すると、次のことができます。
+Edge Delivery を使用すると、次のことができます。
 
 * 申し分ない Lighthouse スコアの高速サイトを作成し、実ユーザーモニタリング（RUM）を通じてサイトのパフォーマンスを継続的に監視します。
 * コンテンツソースを分離することでオーサリング効率を向上させます。標準では、AEM オーサリングとドキュメントベースのオーサリングの両方を使用できます。したがって、同じ web サイト上で複数のコンテンツソースを操作できます。
@@ -32,7 +32,7 @@ Edge Delivery は、web サイト上のコンテンツの非常に柔軟なオ�
 
 例えば、Microsoft Word や Google Docs のコンテンツを直接使用できます。つまり、これらのソースのドキュメントを web サイト上のページにすることができます。さらに、見出し、リスト、画像、フォント要素などはすべて、当初のソースから web サイトに転送できます。新しいコンテンツは、再作成プロセスなしで即座に追加されます。
 
-エッジ配信では GitHub を使用しているので、お客様は GitHub リポジトリから直接コードを管理およびデプロイできます。 例えば、コンテンツを Google Docs または Microsoft Word で作成し、サイトの機能を GitHub の CSS と JavaScript で開発することができます。準備が整ったら、Sidekick ブラウザー拡張機能を使用して、コンテンツの更新をプレビューおよび公開できます。
+Edge Delivery では GitHub を利用しているので、ユーザーは自分の GitHub リポジトリから直接コードを管理およびデプロイできます。例えば、コンテンツを Google Docs または Microsoft Word で作成し、サイトの機能を GitHub の CSS と JavaScript で開発することができます。準備が整ったら、Sidekick ブラウザー拡張機能を使用して、コンテンツの更新をプレビューおよび公開できます。
 
 参考情報：
 
@@ -52,7 +52,7 @@ Edge 配信サービスの使用を開始するのは簡単です。[はじめ�
 
 ## アドビからのヘルプの入手 {#adobe-gethelp}
 
-プロビジョニングされた製品コラボレーションチャネル（アクセスについて詳しくは以下を参照）を介してアドビ製品チームと連携し、製品の使用方法やベストプラクティスに関する質問に回答できます。製品コラボレーションチャネルを介した会話に関連するサービスレベル条件（SLT）はありません。 製品の問題が追加の調査とトラブルシューティングを必要とし、応答 SLT を満たす必要がある場合は、次の[サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)に従ってサポートチケットを送信できます。
+プロビジョニングされた製品コラボレーションチャネル（アクセスについて詳しくは以下を参照）を介してアドビ製品チームと連携し、製品の使用方法やベストプラクティスに関する質問に回答できます。製品コラボレーションチャネルを介したコミュニケーションに関連するサービスレベル用語（SLT）は存在しません。製品の問題が追加の調査とトラブルシューティングを必要とし、応答 SLT を満たす必要がある場合は、次の[サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)に従ってサポートチケットを送信できます。
 
 アドビには、Edge 配信サービスに役立つ 3 つのチャネルが用意されています。
 

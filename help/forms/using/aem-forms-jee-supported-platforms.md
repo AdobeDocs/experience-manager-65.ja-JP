@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
 source-wordcount: '4010'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -42,7 +42,7 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 #### 完全なインストーラー
 
-- **フルインストーラーのアップグレードサポート**：完全なインストーラーは、AEM サービスパックの 6 回目のリリースごとにリリースされます。 例えば、6.5.12.0 および 6.5.18.0 SP リリースでは完全なインストーラーがリリースされました。AEM Forms では、最新の 2 つの完全なインストーラーからのみ直接アップグレードできます。例えば、AEM Forms では、最新の 2 つの完全なインストーラー（6.5.12.0 と 6.5.6.0）からのみバージョン 6.5.18.0 への直接アップグレードを簡単に行うことができます。以前のアップグレードからアップグレードする必要がある場合は、マルチホップアップグレードを使用して、最初にサポートされている完全なインストーラーリリースに移行した後、最新のリリースに移行できます。
+- **完全なインストーラーのアップグレードサポート**：完全なインストーラーは、6 回の AEM サービスパックリリースごとにリリースされます。例えば、6.5.12.0 および 6.5.18.0 SP リリースでは完全なインストーラーがリリースされました。AEM Forms では、最新の 2 つの完全なインストーラーからのみ直接アップグレードできます。例えば、AEM Forms では、最新の 2 つの完全なインストーラー（6.5.12.0 と 6.5.6.0）からのみバージョン 6.5.18.0 への直接アップグレードを簡単に行うことができます。以前のアップグレードからアップグレードする必要がある場合は、マルチホップアップグレードを使用して、最初にサポートされている完全なインストーラーリリースに移行した後、最新のリリースに移行できます。
 
 - **非推奨と削除**：プラットフォームのサポートは、完全なインストーラーリリースごとに更新されます。完全なインストーラーリリース中にプラットフォーム一覧で非推奨としてマークされたソフトウェアは、後続の完全なインストーラーリリースでサポートされるプラットフォーム一覧から削除され、ソフトウェアのサポートが終了することが示されます。
 
@@ -355,14 +355,14 @@ AEM Forms on JEE サーバーの設定でプラットフォームを選択する
 
 1. AEM Forms on JEE では、MySQL を搭載した IBM® WebSphere® をサポートしていません。
 1. AEM Forms on JEE では、SUSE® Linux® Enterprise Server 12 上での JBoss をサポートしていません。SUSE® Linux® Enterprise Server 12 上では、IBM® WebSphere® のみがサポートされています。
-1. AEM Forms on JEE は、Oracle Java® SE 以外の JBoss™ を使用する JDK をサポートしていません。
-1. AEM Forms on JEE は、IBM® JDK 以外、IBM® WebSphere® を使用する JDK をサポートしていません。
+1. AEM Forms on JEE では、Oracle Java™ SE 以外の JBoss® を使用する JDK をサポートしていません。
+1. AEM Forms on JEE では、IBM® JDK 以外の IBM® WebSphere® を使用する JDK をサポートしていません。
 1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
 1. AEM Forms on JEE では CentOS 上の WebSphere® Application Server をサポートしていません。
 1. AEM Forms on JEE では、JBoss® ロールベースのアクセス制御（RBAC）をサポートしていません。
 1. AEM Forms on JEE では、アプリケーションサーバー JBoss EAP 7.4 用の Oracle Java™ SE 11（64 ビット版）SDK のみをサポートしています。
 1. 1.8.0_281 より後の JDK バージョンは、WebLogic サーバーではサポートされていません。（FORMS-8498）
-1. JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールでは、JDK 11.0.19 以前のバージョンのみがサポートされています。
+1. JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。
 
 <!-- 
 1. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312) 
@@ -376,7 +376,7 @@ AEM Forms on JEE サーバーの設定でプラットフォームを選択する
 - AEM Forms on JEE では、サードパーティベンダーが提供するサポートに基づいて、プラットフォームをサポートします。組み合わせによっては、サードパーティベンダーが許可しない場合があります。例えば、多くのベンダーが、自社のアプリケーションサーバーを Oracle で使用することを認めていません。そのため、AEM Forms on JEE でもこれらの組み合わせをサポートしていません。対応のソフトウェアバージョンを確実に選択するには、サードパーティベンダーのサポート一覧も確認してください。
 - AEM Forms on JEE では TarMK コールドスタンバイをサポートしていません。
 - AEM Forms on JEE では垂直クラスタリングをサポートしていません。
-- JEE 上のAEM Formsでは、クラスター環境での MySQL データベースをサポートしていません。
+- AEM Forms on JEE では、クラスター環境での MySQL データベースをサポートしていません。
 - 削除または更新されたプラットフォームの一覧は、[AEM 6.5 Forms 新機能の概要](../../forms/using/whats-new.md)のドキュメントを参照してください。
 
 ### LDAP サーバー（オプション） {#ldap-servers-optional}
@@ -493,7 +493,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >- PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
 >- PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
 >- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
->- ボリューム ライセンスのインストールで指定の期間内に KMS ホストを検出できないなど、何らかの理由でMicrosoft® Office のインストールが非アクティブ化またはライセンス解除されると、インストールの再ライセンス化と再アクティブ化が行われるまで変換が失敗する可能性があります。
+>- ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールが再ライセンスされて再アクティブ化されるまで変換は失敗する場合があります。
 
 <!-- Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
 >- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.-->
@@ -578,9 +578,9 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 - JEE サーバー上の AEM Forms に対する TCP/IPv4 または TCP/IPv6 ネットワーク接続
 - Workbench を Windows にインストールするには、管理者権限が必要です。管理者以外のアカウントを使用してインストールする場合は、適切なアカウントの資格情報が求められます。
 
-### デザイナー {#designer}
+### Designer {#designer}
 
-- Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10、Windows® 11
+- Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10 または Windows® 11
 - 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
 - 1 GB の RAM（32 ビット OS の場合）または 2 GB の RAM（64 ビット OS の場合）
 - 16 GB のディスク空き容量（32 ビット OS の場合）または 20 GB のディスク空き容量（64 ビット OS の場合）
@@ -834,7 +834,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 -->
 
-### リリース 6.5.19.1 （2023 年 12 月 15 日（PT））
+### リリース 6.5.19.1（2023年12月15日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |

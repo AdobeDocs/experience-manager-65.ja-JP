@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
 source-wordcount: '4520'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -143,7 +143,7 @@ AEM 6.0 ～ 6.2 では、AEM 起動スクリプトの JVM パラメーターを�
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-AEM 6.3 では、あらかじめ設定された上記 2 つのパラメーターは、すぐに使用でき、OSGi QueryEngineSettings で保持することができます。
+AEM 6.3 では、この 2 つのパラメーターは標準で事前に設定されており、OSGi QueryEngineSettings で保持できます。
 
 詳しくは、[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)を参照してください。
 
@@ -406,7 +406,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 ### バイナリのテキスト事前抽出 {#text-pre-extraction-of-binaries}
 
-テキストの事前抽出は、バイナリから分離されたプロセスを介してデータストアから直接テキストを抽出して処理し、抽出されたテキストを後続の Oak インデックスの再/インデックスに直接公開するプロセスです。
+テキスト事前抽出は、分離されたプロセスのデータストアから直接バイナリのテキストを抽出して処理し、抽出されたテキストを後続の Oak インデックスの再インデックス／インデックス作成に直接公開するプロセスです。
 
 * Oak のテキスト事前抽出は、`/oak:index/damAssetLucene` など、デプロイされた Oak インデックスによるフルテキスト検索に適した抽出可能なテキストを含む大量のファイル（バイナリ）があるリポジトリで、Lucene インデックスのインデックス再作成／インデックス作成を実行する場合に推奨されます。このようなファイルの例としては、PDF、Word Doc、PPT、TXT などがあります。
 * テキスト事前抽出は、Lucene インデックスのインデックス再作成／インデックス作成の場合にのみ利点があります。Oak プロパティインデックスの場合、プロパティインデックスはバイナリからテキストを抽出しないので、利点がありません。

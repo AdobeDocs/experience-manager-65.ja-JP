@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -79,7 +79,7 @@ AEM 内のタグには以下のような機能があります。
 
 名前空間を作成するには、「**`Create Namespace`**」アイコンを選択します。
 
-名前空間はそれ自体がタグであり、サブタグを含めることはできません。 ただし、分類の作成を続行するには、[サブタグを作成](#creating-tags)します。リーフタグかコンテナタグのいずれかにすることができます。
+名前空間はそれ自体がタグです。サブタグは含まれません。ただし、分類の作成を続行するには、[サブタグを作成](#creating-tags)します。リーフタグかコンテナタグのいずれかにすることができます。
 
 ![chlimage_1-183](assets/chlimage_1-183a.png) ![creating_tags_andnamespaces](assets/creating_tags_andnamespacesa.png)
 

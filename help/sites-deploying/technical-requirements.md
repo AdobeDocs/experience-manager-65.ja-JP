@@ -9,7 +9,7 @@ role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
 source-wordcount: '3652'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -137,10 +137,10 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 1. MongoDB Sharding は AEM ではサポートしていません。
 1. MongoDB Storage Engine WiredTiger のみがサポートされています。
 1. AEM Forms のアップグレードのお客様に対してサポートされます。新規インストールの場合はサポートされていません。
-1. AEM Formsのみに適用：
+1. AEM Forms にのみ適用可能：
    * Oracle Database 12c のサポートを削除し、Oracle Database 19c のサポートを追加しました。
    * Microsoft® SQL Server 2016 のサポートを削除し、Microsoft® SQL Server 2019 のサポートを追加しました。
-1. AEM Formsではサポートされていません。
+1. AEM Forms ではサポートされていません。
 
 >[!NOTE]
 >
@@ -205,7 +205,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. 5 倍。 x と 6。 x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x、5.x および 6.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
 1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
 1. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
@@ -247,7 +247,7 @@ Adobe Managed Services の外部で Azure または AWS に AEM をデプロイ�
 
 ### Dispatcher プラットフォーム（web サーバー） {#dispatcher-platforms-web-servers}
 
-Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンの Dispatcher をダウンロード](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja-JP)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
+Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンの Dispatcher をダウンロード](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
 Dispatcher バージョン 4.3.2 での使用では、次の web サーバーがサポートされています。
 
@@ -525,7 +525,7 @@ Windows x86 の場合：
 
 ### AEM Forms Designer の要件 {#requirements-for-aem-forms-designer}
 
-* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10、Windows® 11
+* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10 または Windows® 11
 * 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
 * 1 GB の RAM（32 ビット OS の場合）または 2 GB の RAM（64 ビット OS の場合）
 * 16 GB のディスク空き容量（32 ビット OS の場合）または 20 GB のディスク空き容量（64 ビット OS の場合）

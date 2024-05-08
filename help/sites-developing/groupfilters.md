@@ -14,7 +14,7 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '756'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -30,11 +30,11 @@ ht-degree: 89%
 
 作成したフィルターは[グループ設定](/help/sites-developing/mobile.md#creating-a-device-group)で使用できます。
 
-## フィルター Java™ クラス {#the-filter-java-class}
+## フィルターの Java™ クラス {#the-filter-java-class}
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。そのため、サンプルの Java™ クラスでは以下を使用します。 `@Component`および `@Service` 注釈。 このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。そのため、サンプルの Java™ クラスでは `@Component` と `@Service` の注釈を使用します。このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -66,7 +66,7 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 }
 ```
 
-次のメソッドのコードを指定します。
+次のメソッドのコードを作成します。
 
 * `getDescription`：フィルターの説明を返します。この説明は、デバイスグループ設定ダイアログに表示されます。
 * `getTitle`：フィルターの名前を返します。この名前は、デバイスグループ用のフィルターを選択した場合に表示されます。
@@ -164,7 +164,7 @@ public class ScreenSizeLarge implements DeviceGroupFilter {
 }
 ```
 
-getTitle メソッドが返す文字列値は、デバイスグループプロパティのドロップダウンリストに表示されます。
+getTitle メソッドが返す文字列値は、デバイスグループのプロパティのドロップダウンリストに表示されます。
 
 ![filteraddtogroup](assets/filteraddtogroup.png)
 
@@ -174,11 +174,11 @@ getTitle メソッドと getDescription メソッドが返す文字列値は、�
 
 ### Maven POM ファイル {#the-maven-pom-file}
 
-次の POM コードは、Maven を使用してアプリケーションを構築する場合に役立ちます。 POM は、必要な複数のプラグインおよび依存関係を参照します。
+Maven を使用してアプリケーションをビルドする場合は、次の POM コードが役に立ちます。POM は、必要な複数のプラグインおよび依存関係を参照します。
 
 **プラグイン：**
 
-* Apache Maven コンパイラープラグイン：ソースコードから Java™ クラスをコンパイルします。
+* Apache Maven Compiler Plugin：ソースコードから Java™ クラスをコンパイルします。
 * Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。
 * Apache Felix Maven SCR Plugin：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
 
@@ -192,7 +192,7 @@ DeviceGroup インターフェイスと DeviceGroupFilter インターフェイ�
 
 この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。このバージョンが環境にデプロイされているバンドルのバージョンであることを確認するには、アドビの web コンソール（[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)）を使用してください。
 
-**POM:** （POM で別の groupId と version が使用されています。）
+**POM**：（ユーザーの POM では別の groupId と version が使用されます）。
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"
@@ -257,4 +257,4 @@ DeviceGroup インターフェイスと DeviceGroupFilter インターフェイ�
 </project>
 ```
 
-アドビの公開リポジトリを使用するには、[Content Package Maven Plugin の入手](/help/sites-developing/vlt-mavenplugin.md)の節で指定されているプロファイルを Maven 設定ファイルに追加してください。
+アドビの公開リポジトリを使用するには、[Content Package Maven Plugin の入手](/help/sites-developing/vlt-mavenplugin.md)の節で指定されるプロファイルを Maven 設定ファイルに追加します。

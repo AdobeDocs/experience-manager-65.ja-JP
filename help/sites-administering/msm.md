@@ -12,7 +12,7 @@ role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
 source-wordcount: '2665'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -154,7 +154,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
 
 >[!NOTE]
 >
->MSM は、との両方のページで使用できます。 [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) これらのフラグメントはエクスペリエンス（ページ）の一部なので、
+>MSM はページと[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)の両方で使用できます。これらのフラグメントがエクスペリエンス（ページ）の一部だからです。
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
   </tr>
   <tr>
    <td><strong>ブループリント設定</strong></td>
-   <td>ソースパスを指定する事前定義済みの設定。</td>
+   <td>ソースパスを指定する定義済みの設定。</td>
    <td>ブループリント設定でブループリントページが参照されていると、ロールアウトコマンドを使用できます。</td>
   </tr>
   <tr>

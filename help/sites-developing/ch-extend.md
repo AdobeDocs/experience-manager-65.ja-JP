@@ -12,7 +12,7 @@ role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 75%
 
 ContextHub ストアは、登録済みのストア候補から作成します。カスタムストアを作成するには、ストア候補を作成して登録します。
 
-ストア候補を作成および登録するコードを含む JavaScript ファイルは、 [クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md#creating-client-library-folders). フォルダーのカテゴリは、次のパターンに一致しなければなりません。
+ストア候補を作成して登録するコードを含んだ JavaScript ファイルは、[クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md#creating-client-library-folders)に含める必要があります。フォルダーのカテゴリは、次のパターンに一致しなければなりません。
 
 ```xml
 contexthub.store.[storeType]
@@ -43,14 +43,14 @@ contexthub.store.[storeType]
 
 各ベースストアは、[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) ストアを拡張したものです。
 
-次の例では、`ContextHub.Store.PersistedStore` ストア候補の最もシンプルな拡張を作成しています。
+次の例では、`ContextHub.Store.PersistedStore` ストア候補の最もシンプルな拡張を作成します。
 
 ```
 myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-現実的には、カスタムストア候補は、追加の関数を定義したり、ストアの初期設定を上書きしたりします。 いくつかの[サンプルストア候補](/help/sites-developing/ch-samplestores.md)が、`/libs/granite/contexthub/components/stores` の下にあるリポジトリにインストールされています。これらのサンプルから学習するには、CRXDE Liteを使用して JavaScript ファイルを開きます。
+実際には、カスタムストア候補は追加の関数を定義するか、ストアの初期設定を上書きします。いくつかの[サンプルストア候補](/help/sites-developing/ch-samplestores.md)が、`/libs/granite/contexthub/components/stores` の下にあるリポジトリにインストールされます。これらのサンプルを参考にするには、CRXDE Lite を使用して JavaScript ファイルを開きます。
 
 ### ContextHub ストア候補の登録 {#registering-a-contexthub-store-candidate}
 
@@ -65,7 +65,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-通常、必要な候補は 1 つだけで、優先度はに設定できます。 `0`. しかし、興味があれば、次のことを学ぶことができます [より高度な登録、](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) これにより、JavaScript の条件（`applies`）に設定し、優先度の候補を使用します。
+通常は、1 つの候補のみが必要で、優先度を `0` に設定できます。しかし、興味があれば、[より高度な登録](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies)について学ぶことができます。この登録では、JavaScript 条件（`applies`）と候補の優先度に基づいて少数のストア実装の 1 つを選択できます。
 
 ## ContextHub UI モジュールタイプの作成 {#creating-contexthub-ui-module-types}
 
@@ -77,9 +77,9 @@ UI モジュールレンダラーを作成するには、UI モジュールを�
 
 * デフォルトの設定を指定します。`defaultConfig` プロパティを作成します。このプロパティは、[`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI モジュール用に定義されているプロパティと、必要なその他すべてのプロパティを含むオブジェクトです。
 
-ソース： `ContextHub.UI.BaseModuleRenderer` は、/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。 レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定します。 管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
+`ContextHub.UI.BaseModuleRenderer` のソースは、/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。レンダラーを登録するには、`ContextHub.UI` クラスの [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) メソッドを使用します。モジュールタイプの名前を指定します。管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
 
-自己実行匿名関数でレンダラークラスを作成して、登録します。次の例は、contexthub.browserinfo UI モジュールのソースコードに基づいています。 この UI モジュールは、`ContextHub.UI.BaseModuleRenderer` クラスのシンプルな拡張です。
+自己実行匿名関数でレンダラークラスを作成して、登録します。次の例は、contexthub.browserinfo UI モジュールのソースコードをベースにしています。この UI モジュールは、`ContextHub.UI.BaseModuleRenderer` クラスのシンプルな拡張です。
 
 ```xml
 ;(function() {
@@ -106,7 +106,7 @@ UI モジュールレンダラーを作成するには、UI モジュールを�
 }());
 ```
 
-レンダラーを作成および登録するコードを含む JavaScript ファイルは、に含める必要があります [クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md#creating-client-library-folders). フォルダーのカテゴリは、次のパターンに一致しなければなりません。
+レンダラーを作成して登録するコードを含んだ JavaScript ファイルは、[クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md#creating-client-library-folders)に含める必要があります。フォルダーのカテゴリは、次のパターンに一致しなければなりません。
 
 ```xml
 contexthub.module.[moduleType]

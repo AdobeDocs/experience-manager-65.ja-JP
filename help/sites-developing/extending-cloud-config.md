@@ -12,26 +12,26 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # クラウドサービス設定{#cloud-service-configurations}
 
-設定は、サービス設定を保存するためのロジックと構造を提供するように設計されています。
+設定は、サービス設定を保存するためのロジックと構造を提供するようにデザインされています。
 
 既存のインスタンスを拡張して、独自の設定を作成できます。
 
 ## 概念  {#concepts}
 
-設定の開発に使用される原則は、次の概念に基づいています。
+設定の作成に用いられる原則は、以下の概念に基づいています。
 
-* サービス/アダプタは、構成を取得するために使用されます。
-* 設定（プロパティや段落など）は、親から継承されます。
-* Analytics ノードからパス別に参照されます。
-* 容易に拡張可能。
+* サービスやアダプターを使用して、設定を取得する。
+* 設定（プロパティや段落など）は、親から継承される。
+* パスによって、分析ノードから参照される。
+* 簡単に拡張できる。
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) など、より複雑な設定に対応できる柔軟性がある。
-* 依存関係のサポート（例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには、 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定）。
+* 依存関係のサポート（例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定）。
 
 ## 構造 {#structure}
 
@@ -39,15 +39,15 @@ ht-degree: 31%
 
 `/etc/cloudservices`。
 
-設定のタイプごとに、テンプレートとコンポーネントが用意されています。 これにより、カスタマイズした後に大部分のニーズを満たすことができる設定テンプレートを使用できます。
+設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
-新しいサービスの設定を指定するには、次の手順を実行します。
+新しいサービス用の設定を行うには、以下の操作を実行します。
 
-* にサービスページを作成します。
+* 次の場所にサービスページを作成します。
 
   `/etc/cloudservices`
 
-* この下で：
+* この下に次のコンポーネントを作成します。
 
    * 設定テンプレート
    * 設定コンポーネント
@@ -66,11 +66,11 @@ ht-degree: 31%
 
 ### テンプレート {#template}
 
-テンプレートによって基本テンプレートが拡張されます。
+テンプレートは、次のベーステンプレートを拡張します。
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-および定義 `resourceType` はカスタムコンポーネントを指しています。
+そして、カスタムコンポーネントを指す `resourceType` を定義します。
 
 ```xml
 /libs/cq/analytics/templates/sitecatalyst
@@ -93,7 +93,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンポーネント {#components}
 
-コンポーネントは、次のように基本コンポーネントを拡張する必要があります。
+コンポーネントは、次のベースコンポーネントを拡張します。
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -136,22 +136,22 @@ propertyname
 
 ### API {#api}
 
-API に関するリファレンスドキュメントについては、次を参照してください。 [com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
+API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html) を参照してください。
 
 ### AEM の統合 {#aem-integration}
 
 使用可能なサービスが、（`foundation/components/page` または `wcm/mobile/components/page` から継承されたいずれかのページの）**ページのプロパティ**&#x200B;ダイアログの「**クラウドサービス**」タブに一覧表示されます。
 
-このタブには次の機能もあります。
+このタブでは以下についても表示されます。
 
 * サービスを有効にできる場所へのリンク
-* パスフィールドから設定（サービスのサブノード）を選択
+* パスフィールドから設定（サービスのサブノード）を選択する
 
 #### パスワードの暗号化 {#password-encryption}
 
-サービスのユーザー資格情報を保存する場合、すべてのパスワードを暗号化する必要があります。
+サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-これを行うには、非表示のフォームフィールドを追加します。 このフィールドには、注釈が必要です。 `@Encrypted` プロパティ名。つまり、 `password` フィールド名は次のように記述されます。
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
 
 `password@Encrypted`
 
@@ -175,7 +175,7 @@ API に関するリファレンスドキュメントについては、次を参�
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>ページに自動的に含まれるコンポーネントへの参照パス。<br /> これは、追加機能や JS の包含に使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Adobe AnalyticsおよびAdobe Targetの場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td>
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br /> 追加機能および JS インクルージョンに使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Adobe Analytics および Adobe Target の場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td>
   </tr>
   <tr>
    <td>description</td>
@@ -187,11 +187,11 @@ API に関するリファレンスドキュメントについては、次を参�
   </tr>
   <tr>
    <td>ranking</td>
-   <td>Listings で使用するサービスランキング。</td>
+   <td>一覧表示に使用するサービスランキング。</td>
   </tr>
   <tr>
-   <td>selectableChild</td>
-   <td>ページプロパティダイアログに設定を表示するためのフィルター。</td>
+   <td>selectableChildren</td>
+   <td>ページのプロパティダイアログに設定を表示するためのフィルター。</td>
   </tr>
   <tr>
    <td>serviceUrl</td>
@@ -207,16 +207,16 @@ API に関するリファレンスドキュメントについては、次を参�
   </tr>
   <tr>
    <td>visible</td>
-   <td>ページプロパティダイアログでの表示。デフォルトで表示（オプション）</td>
+   <td>ページのプロパティダイアログでの表示／非表示。デフォルトでは表示（オプション）。</td>
   </tr>
  </tbody>
 </table>
 
 ### ユースケース {#use-cases}
 
-これらのサービスはデフォルトで提供されます。
+デフォルトでは、以下のサービスが提供されます。
 
-* [トラッカースニペット](/help/sites-administering/external-providers.md) （Google、WebTrends など）
+* [トラッカースニペット](/help/sites-administering/external-providers.md)（Google、WebTrends など）
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 <!-- Search&Promote is end of life as of September 1, 2022 * [Search&Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote) -->

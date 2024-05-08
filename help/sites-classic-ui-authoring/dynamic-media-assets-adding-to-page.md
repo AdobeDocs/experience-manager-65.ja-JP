@@ -12,7 +12,7 @@ role: User
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -137,7 +137,7 @@ Web ページにダイナミックビデオを追加するには、**[!UICONTROL
 
 #### セキュアなビデオ配信 {#how-to-delivery-secure-video}
 
-Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを選択できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み web ページのプロトコルから自動的に継承されます。 Web ページを HTTPS で読み込むと、ビデオも HTTPS で配信されます。 逆に言うと、web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。通常、このデフォルトの動作で問題ないので、特に設定を変更する必要はありません。ただし、このデフォルトの動作を上書きすることはできます。`VideoPlayer.ssl=on` を、URL パスの末尾か、埋め込みコードスニペットにある他のビューア設定パラメーターのリストに追加します。どちらのアクションでもセキュアな動画配信を強制できます。
+Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを選択できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆に言うと、web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。通常、このデフォルトの動作で問題ないので、特に設定を変更する必要はありません。ただし、このデフォルトの動作を上書きすることはできます。`VideoPlayer.ssl=on` を、URL パスの末尾か、埋め込みコードスニペットにある他のビューア設定パラメーターのリストに追加します。どちらのアクションでもセキュアな動画配信を強制できます。
 
 セキュアなビデオ配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html?lang=ja)」を参照してください。ビデオビューアのほか、混在メディアビューアおよびインタラクティブビデオビューアでも、セキュアなビデオ配信を使用できます。
 

@@ -1,6 +1,6 @@
 ---
 title: コードサンプル
-description: Adobeのコンサルティングサービスチームが、一連のAdobe Experience Manager コードサンプルを生成しました。
+description: アドビのコンサルティングサービスチームが、一連の Adobe Experience Manager コードサンプルを生成しました。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -12,19 +12,19 @@ role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
 source-wordcount: '140'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
 # コードサンプル{#code-samples}
 
-Adobeコンサルティングサービスチームが、一連のAdobe Experience Manager（AEM）コードサンプルを生成しました。 これらのサンプルは、AEM開発者がAEMの主要な構成要素を理解するのに役立つ、コメントの多いコード部分です。 サンプルは、[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/) から利用できます。
+アドビのコンサルティングサービスチームが、一連の Adobe Experience Manager（AEM）コードサンプルを生成しました。これらのサンプルは、AEM 開発者が AEM の主要な構成要素を理解するのに役立つ、適切なコメントが付けられたコードです。サンプルは、[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/) から利用できます。
 
-AEMを初めて使用する開発者向けに設計されたマルチパートチュートリアルです。プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、コンポーネント開発などの基本的なトピックが含まれています。 [AEM Sitesの概要 – WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
+[AEM Sites の基本を学ぶ - WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)は、AEM を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアントライブラリおよびコンポーネント開発などの、基本的なトピックについて説明しています。
 
-Maven テンプレートを使用して、独自の機能を開発するための出発点としてAEM プロジェクトを作成できます [こちら](https://github.com/adobe/aem-project-archetype).
+AEM プロジェクトを作成する際に独自の機能を開発するための出発点として使用できる Maven テンプレートが[こちら](https://github.com/adobe/aem-project-archetype)から入手できます。
 
-標準のタッチ操作対応 UI コードサンプルを使用できます [こちら](/help/sites-developing/developing-components.md).
+標準のタッチ操作対応 UI コードサンプルが[こちら](/help/sites-developing/developing-components.md)から入手できます。
 
 >[!NOTE]
 >
