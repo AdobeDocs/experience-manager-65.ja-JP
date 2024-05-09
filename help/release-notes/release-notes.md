@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 566230aa14f24c2401d1e77965b542825eeb7fc9
+source-git-commit: c165755c19ac64fdd253bff9163f48ddf4732623
 workflow-type: tm+mt
-source-wordcount: '3908'
-ht-degree: 94%
+source-wordcount: '4046'
+ht-degree: 91%
 
 ---
 
@@ -530,6 +530,11 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 1. Stop the application server.
 
 -->
+* チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームの場合、チェックボックスの後の要素に対してはスクリプトが実行されません。 （FORMS-14244）
+* 編集/表示パターンが適用されたフィールドについてポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。 （FORMS-13620）
+* バックエンドで DOR （レコードのドキュメント）サービスを使用しようとすると、フォーム送信が失敗します。 次のエラーメッセージが表示されます。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」 （FORMS-13798）
+* アダプティブフォームがAdobe Experience Manager パブリッシュインスタンスからAdobe Experience Manager ワークフローに送信されると、ワークフローで添付ファイルが保存されません。 （FORMS-14209）
+* AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。 （FORMS-13791）
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
