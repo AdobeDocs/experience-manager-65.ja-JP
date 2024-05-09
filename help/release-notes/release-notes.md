@@ -5,10 +5,11 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 2e5754022fb40409500bb57b3b7576bf8ec9a605
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 566230aa14f24c2401d1e77965b542825eeb7fc9
 workflow-type: tm+mt
-source-wordcount: '3770'
-ht-degree: 97%
+source-wordcount: '3908'
+ht-degree: 94%
 
 ---
 
@@ -489,6 +490,11 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6520}
 
+* チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームの場合、チェックボックスの後の要素に対してはスクリプトが実行されません。 （FORMS-14244）
+* 編集/表示パターンが適用されたフィールドについてポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。 （FORMS-13620）
+* バックエンドで DOR （レコードのドキュメント）サービスを使用しようとすると、フォーム送信が失敗します。 次のエラーメッセージが表示されます。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」 （FORMS-13798）
+* アダプティブフォームがAdobe Experience Manager パブリッシュインスタンスからAdobe Experience Manager ワークフローに送信されると、ワークフローで添付ファイルが保存されません。 （FORMS-14209）
+* AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。 （FORMS-13791）
 * インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）
 * アダプティブフォームでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。カスタム関数で ECMAScript バージョン 6 以降（「let」、「const」、アロー関数など）が使用されている場合、ルールエディターが正しく開かない可能性があります。
 * Correspondence Management レターを作成できません。ユーザーがレターを作成すると、「`Object Object`」という説明のエラーが表示され、レターが作成されません。レイアウトのサムネールもレター作成画面に読み込めません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13496）
