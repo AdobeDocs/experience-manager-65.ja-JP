@@ -3,12 +3,11 @@ title: ドキュメントサービスのインストールと設定
 description: AEM Forms ドキュメントサービスをインストールして、PDF ドキュメントを作成、アセンブル、配布、アーカイブし、デジタル署名を追加してドキュメントへのアクセスを制限し、Barcoded Forms をデコードしましょう。
 topic-tags: installing
 role: Admin, User, Developer
-exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
 workflow-type: tm+mt
-source-wordcount: '5633'
-ht-degree: 100%
+source-wordcount: '5703'
+ht-degree: 98%
 
 ---
 
@@ -298,6 +297,10 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 1. Microsoft® Windows のグループポリシーエディターを開きます。グループポリシーエディターを開くには、「**[!UICONTROL スタート]**」をクリックしてスタートの検索ボックスに **gpedit.msc** と入力し、「**[!UICONTROL グループポリシーエディター]**」をクリックします。
 1. **[!UICONTROL ローカルコンピューターポリシー]**／**[!UICONTROL コンピューターの設定]**／**[!UICONTROL Windows の設定]**／**[!UICONTROL セキュリティの設定]**／**[!UICONTROL ローカルポリシー]**／**[!UICONTROL ユーザー権限の割り当て]**&#x200B;の順に移動し、**[!UICONTROL プロセスレベルトークンの置き換え]**&#x200B;ポリシーを編集し、管理者グループを含めます。
 1. 「プロセスレベルトークンの置き換え」エントリにユーザーを追加します。
+
+>[!NOTE]
+>
+> AEM サーバーが LSA 下でサービスとして動作している場合、この権限をユーザーに明示的に割り当てる必要はありません。つまり、VM 上で PDFG に必要な以外のアプリケーション/コンポーネントがインストールされていない場合、他のアカウントに **プロセスレベルトークンの置き換え権限** ローカル サービス アカウントとネットワーク サービス アカウントだけが権利を持つ必要があります。
 
 ### （Windows のみ）管理者以外のユーザーに対する PDF Generator サービスの有効化 {#enable-the-pdf-generator-service-for-non-administrators}
 
