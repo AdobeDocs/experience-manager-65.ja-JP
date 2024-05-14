@@ -4,13 +4,13 @@ description: AEM Forms ドキュメントサービスをインストールして
 topic-tags: installing
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
+exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
+source-git-commit: 0a1a0d8e3a2794bda247e7b07a2ef9d9fcac7c13
 workflow-type: tm+mt
-source-wordcount: '5703'
-ht-degree: 98%
+source-wordcount: '5660'
+ht-degree: 99%
 
 ---
-
 
 # ドキュメントサービスのインストールと設定 {#installing-and-configuring-document-services}
 
@@ -300,7 +300,7 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 
 >[!NOTE]
 >
-> AEM サーバーが LSA 下でサービスとして動作している場合、この権限をユーザーに明示的に割り当てる必要はありません。つまり、VM 上で PDFG に必要な以外のアプリケーション/コンポーネントがインストールされていない場合、他のアカウントに **プロセスレベルトークンの置き換え権限** ローカル サービス アカウントとネットワーク サービス アカウントだけが権利を持つ必要があります。
+> 前述のとおり、AEM サーバーが LocalSystem アカウント（LSA）の下でサービスとして動作している場合は、この権限をユーザーに明示的に割り当てる必要はありません。
 
 ### （Windows のみ）管理者以外のユーザーに対する PDF Generator サービスの有効化 {#enable-the-pdf-generator-service-for-non-administrators}
 
