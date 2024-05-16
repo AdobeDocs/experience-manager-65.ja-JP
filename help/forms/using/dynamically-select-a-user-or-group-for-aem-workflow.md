@@ -7,9 +7,9 @@ exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '873'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ ECMAScript はスクリプト言語です。 クライアントサイドのス�
    * （タスクの割り当て手順のパス）`/apps/fd/dashboard/scripts/participantChooser`
    * （署名手順のパス）`/apps/fd/workflow/scripts/adobesign`
 
-1. ユーザーを動的に選択するロジックを持つ ECMAScript を.ecma ファイルに追加します。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. ユーザーを動的に選択するロジックを持つ ECMAScript を.ecma ファイルに追加します。「**[!UICONTROL すべて保存]**」をクリックします。
 
    サンプルスクリプトについて詳しくは、「[ユーザーまたはグループを動的に選択するためのサンプル ECMAScripts](/help/forms/using/dynamically-select-a-user-or-group-for-aem-workflow.md#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group)」を参照してください。
 

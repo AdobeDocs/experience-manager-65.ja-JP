@@ -11,7 +11,7 @@ feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5868'
 ht-degree: 100%
 

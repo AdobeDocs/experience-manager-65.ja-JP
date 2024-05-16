@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1166'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -237,16 +237,16 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 * **AEM web アプリケーションのデプロイ**
 
    * AEM war ファイルをダウンロードします。
-   * 必要に応じて、web.xml で設定します（上記の「概要」を参照）。
+   * 必要に応じて、web.xml で設定を行います（上記の概要を参照）。
 
-      * WEB-INF/web.xml ファイルを解凍します。
+      * WEB-INF/web.xml ファイルを展開します。
       * sling.run.modes パラメーターを publish に変更します。
       * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します。
       * web.xml ファイルを再圧縮します。
 
-   * AEM war ファイルをルート Web アプリケーションとしてデプロイする場合は、名前を ROOT.war に変更します。 aemauthor をコンテキストルートにする場合は、aemauthor.war に名前を変更します。
-   * Tomcat の webapps フォルダーにコピーします。
-   * AEMがインストールされるまで待ちます。
+   * AEM war ファイルをルート web アプリケーションとしてデプロイする場合は、名前を ROOT.war に変更します。aemauthor をコンテキストルートとして使用する場合は、名前を aemauthor.war に変更します。
+   * ファイルを Tomcat の webapps フォルダーにコピーします。
+   * AEM がインストールされるまで待ちます。
 
 ## トラブルシューティング {#troubleshooting}
 

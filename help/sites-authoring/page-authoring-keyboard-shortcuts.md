@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '220'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->[コンソールのショートカットがアクティベート解除](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)されているかどうかにかかわらず、エディターのキーボードショートカットは、常にアクティブです。
+[コンソールのショートカットがアクティベート解除](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)されているかどうかにかかわらず、エディターのキーボードショートカットは、常にアクティブです。
 
 ## OS 特有の修飾子キー {#os-specific-modifier-keys}
 

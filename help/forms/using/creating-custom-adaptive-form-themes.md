@@ -8,9 +8,9 @@ exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '790'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 97%
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
 
-   **LESS 変数ファイル**：これらは、CSS スタイルの定義で使用される変数を定義または上書きするファイルです。
+   **LESS 変数ファイル**：CSS スタイルの定義で使用される変数を定義またはオーバーライドするファイルです。
 
    アダプティブフォームは、次の `.less` ファイルで定義されている標準変数を提供します。
 

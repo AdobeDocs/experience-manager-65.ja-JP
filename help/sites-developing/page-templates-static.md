@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1601'
 ht-degree: 100%
 
@@ -303,17 +303,17 @@ AEM のページテンプレートは、ページの作成に使用されるモ�
    >**/apps/&lt;web サイト>/templates/&lt;テンプレート名>** ノードに対する変更は、テンプレートインスタンスに影響します（選択リストの場合と同様）。
    >
    >
-   >**/apps/&lt;web サイト>/components/&lt;コンポーネント名>** ノードに対する変更は、テンプレート使用時に作成されるコンテンツページに影響します。
+   **/apps/&lt;web サイト>/components/&lt;コンポーネント名>** ノードに対する変更は、テンプレート使用時に作成されるコンテンツページに影響します。
 
    これで、新しいテンプレートを使用して web サイト内にページを作成できます。
 
 >[!NOTE]
 >
->エディタークライアントライブラリは、コンテンツページに `cq.shared` 名前空間が存在することを前提としています。名前空間が存在しない場合は、JavaScript エラー「`Uncaught TypeError: Cannot read property 'shared' of undefined`」が発生します。
+エディタークライアントライブラリは、コンテンツページに `cq.shared` 名前空間が存在することを前提としています。名前空間が存在しない場合は、JavaScript エラー「`Uncaught TypeError: Cannot read property 'shared' of undefined`」が発生します。
 >
->すべてのサンプルコンテンツページには `cq.shared` が含まれているので、それらをベースとするコンテンツには自動的に `cq.shared` が含められます。ただし、サンプルコンテンツをベースとせず、ゼロから独自のコンテンツページを作成する場合は、`cq.shared` 名前空間を含める必要があります。
+すべてのサンプルコンテンツページには `cq.shared` が含まれているので、それらをベースとするコンテンツには自動的に `cq.shared` が含められます。ただし、サンプルコンテンツをベースとせず、ゼロから独自のコンテンツページを作成する場合は、`cq.shared` 名前空間を含める必要があります。
 >
->詳しくは、[クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
+詳しくは、[クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
 
 ## 既存のテンプレートを使用可能にする {#making-an-existing-template-available}
 

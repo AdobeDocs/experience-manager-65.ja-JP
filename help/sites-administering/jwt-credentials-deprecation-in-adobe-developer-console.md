@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 source-git-commit: 36c95ea717a0abcb0b6ef9b0796a94d7b0f66329
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '456'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 75%
 
 この記事では、AEM 6.5 のお客様が非推奨（廃止予定）にどのように対処する必要があるかについて、追加のコンテキストを提供します。
 
-現時点での主な留意点は、AEM の機能で新しい OAuth サーバー間資格情報がまだサポートされていないことです。近日中にサポートを予定しています。最新のサービスパック 20 以前（サービスパック 21 以降には自動的に含まれます）を実行している場合は、AEM 6.5 用のインストールする特別な互換性パッケージを通じて、2024 年 5 月中旬までにサポートを開始します。 お客様には JWT 資格情報を移行する手順が記載されたメールが届いているかもしれませんが、AEM で新しい OAuth サーバー間資格情報タイプがサポートされるまで、資格情報の移行を保留してください。
+現時点での主な留意点は、AEM の機能で新しい OAuth サーバー間資格情報がまだサポートされていないことです。最新のサービスパック 20 以前（サービスパック 21 以降には自動的に含まれます）を実行している場合、サポートは、まもなく（2024年5 月中旬までに）AEM 6.5 にインストールする特別な互換性パッケージを通じて提供される予定です。お客様には JWT 資格情報を移行する手順が記載されたメールが届いているかもしれませんが、AEM で新しい OAuth サーバー間資格情報タイプがサポートされるまで、資格情報の移行を保留してください。
 
-以下では、AEMが 5 月中旬にサービスアカウント（JWT）資格情報をサポートした後で、お客様がサービスアカウント（JWT）資格情報を OAuth サーバー間資格情報に置き換える必要がある（または置き換えてはならない場合がある）シナリオを示します。 今後、資格情報を置き換える方法については、[こちら](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview)を参照してください。
+以下の節では、AEM で 5月中旬にサポートされた後、お客様がサービスアカウント（JWT）資格情報を OAuth サーバー間資格情報に置き換える必要がある（場合によっては置き換えてはいけない）シナリオを示します。今後、資格情報を置き換える方法については、[こちら](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview)を参照してください。
 
 ## AEM と他のアドビソリューションの統合 {#integrating-aem-with-other-adobe-solutions}
 
-**アクション**:AEMでサポートされる 2024 年 5 月中旬以降まで、移行を待ちます。
+**アクション**：AEM でサポートが開始する 2024年5月中旬以降まで移行を待ちます。
 
 **関連する AEM バージョン**：Adobe Managed Services（サービスパック 20 以前）。
 
@@ -36,11 +36,11 @@ AEM のお客様は、AEM オーサー UI を使用すると、他のすべて�
 
 ![AEM と他のソリューションの統合](/help/sites-administering/assets/jwt-deprecation.png)
 
-例えば、Adobe Target との統合を設定する手順については、[こちら](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/integration-target-ims)を参照してください。[AEM での IMS 設定の完了](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/integration-target-ims#completing-the-ims-configuration-in-aem)の節に記載されている API キーは、5月下旬に AEM でこれらの資格情報がサポートされ次第、OAuth サーバー間資格情報タイプに移行する必要があります。これらの手順は、5 月中旬に改訂される予定で、新しい OAuth サーバー間資格情報の適用に役立つ予定です。
+例えば、Adobe Target との統合を設定する手順については、[こちら](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/sites/administering/integration/integration-target-ims)を参照してください。[AEM での IMS 設定の完了](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/sites/administering/integration/integration-target-ims#completing-the-ims-configuration-in-aem)の節に記載されている API キーは、5月下旬に AEM でこれらの資格情報がサポートされ次第、OAuth サーバー間資格情報タイプに移行する必要があります。これらの手順は、新しい OAuth サーバー間資格情報を適用できるように、5月中旬に改訂される予定です。
 
 ## Cloud Manager API {#cloud-manager-apis}
 
-**アクション**:AEMでサポートされる 2024 年 5 月中旬以降まで、移行を待ちます。
+**アクション**：AEM でサポートが開始する 2024年5月中旬以降まで移行するのを待ちます。
 
 **関連する AEM バージョン**：Adobe Managed Services（サービスパック 20 以前）。
 

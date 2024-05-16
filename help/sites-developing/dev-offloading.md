@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '394'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ Apache Sling Discovery 機能では、JobManager ジョブとそれを使用す�
 
 ## オフロードのためのジョブの作成 {#creating-jobs-for-offloading}
 
-JobManager.addJob メソッドを呼び出すクライアントを作成して、自動的に選択された JobConsumer が実行するジョブを作成します。 以下の情報を入力してジョブを作成します。
+JobManager.addJob メソッドを呼び出すクライアントを作成して、自動的に選択された JobConsumer が実行するジョブを作成します。以下の情報を入力してジョブを作成します。
 
 * トピック：ジョブトピック。
 * 名前：（オプション）

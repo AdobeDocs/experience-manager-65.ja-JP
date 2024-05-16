@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3524'
 ht-degree: 100%
 
@@ -194,7 +194,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
   `www.mydomain.com/es/home.html`
 
 * この場合、URL を次のように表示した方が効果的です。
-  `www.mydomain.com/es/casa.html`。
+  `www.mydomain.com/es/casa.html`
 
 ページ名をローカライズする際の課題は、AEM プラットフォームで利用できるローカライズツールの多くが、コンテンツの同期を保つためにロケール間でページ名を一致させる必要があることです。
 
@@ -256,7 +256,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
    Web コンソール（localhost:4502/system/console/configMgr など）を使用して、Sling Resource Resolver を設定できます。
 
    * **Apache Sling Resource Resolver Factory**
-     `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`。
+     `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`
 
    URL を短縮するために必要なマッピングを正規表現として構築した後、ビルドに含まれている OsgiConfignode の `config.publish` でこれらの設定を定義することをお勧めします。
 

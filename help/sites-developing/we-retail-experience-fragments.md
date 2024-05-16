@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Experience Fragments,Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ We.Retail のコンテンツフラグメントの使用
 
 作成者は、コンテンツをコピーして貼り付けなくても、ページの一部（エクスペリエンスのフラグメント）を再利用できます。
 
-これは、オーサリングにのみ AEM を使用して、顧客への配信には使用しない、ヘッドレスコンテンツ管理システム（CMS）のユースケースをサポートしています。サードパーティシステム/タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
+これは、オーサリングにのみ AEM を使用して、顧客への配信には使用しない、ヘッドレスコンテンツ管理システム（CMS）のユースケースをサポートしています。サードパーティシステム／タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
 
 >[!NOTE]
 >

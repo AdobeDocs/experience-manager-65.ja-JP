@@ -10,9 +10,9 @@ exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4256'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -466,7 +466,7 @@ AEM Forms は、アダプティブフォーム内の該当するパネルとそ�
 
 ## カスタム XCI ファイルの使用
 
-XCI ファイルは、ドキュメントの様々なプロパティを設定する場合に役立ちます。<!-- Forms as a Cloud Service has a master XCI file.--> カスタム XCI ファイルを使用して、既存の XCI ファイルで指定された 1 つ以上のデフォルトのプロパティを上書きできます。 例えば、ドキュメントにフォントを埋め込むか、すべてのドキュメントに対してタグ付きプロパティを有効にするかを選択できます。XCI オプションを次の表に示します。
+XCI ファイルは、ドキュメントの様々なプロパティを設定する場合に役立ちます。<!-- Forms as a Cloud Service has a master XCI file.-->カスタム XCI ファイルを使用して、既存の XCI ファイルで指定された 1 つ以上のデフォルトのプロパティを上書きできます。例えば、ドキュメントにフォントを埋め込むか、すべてのドキュメントに対してタグ付きプロパティを有効にするかを選択できます。XCI オプションを次の表に示します。
 
 | XCI オプション | 説明 |
 |--- |--- |

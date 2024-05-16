@@ -6,15 +6,15 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Experience Fragments
 role: User
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1505'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 # エクスペリエンスフラグメント{#experience-fragments}
 
-Adobe Experience Manager（AEM）では、エクスペリエンスフラグメントは、ページ内で参照できるコンテンツおよびレイアウトを含む 1 つ以上のコンポーネントのグループです。 任意のコンポーネントを含めることができます。
+Adobe Experience Manager（AEM）では、エクスペリエンスフラグメントは、ページ内で参照できるコンテンツとレイアウトを含む 1 つまたは複数のコンポーネントからなるグループです。任意のコンポーネントを含めることができます。
 
 エクスペリエンスフラグメントは、
 

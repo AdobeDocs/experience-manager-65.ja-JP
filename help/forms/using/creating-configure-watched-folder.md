@@ -8,9 +8,9 @@ exl-id: b15d8d3b-5e47-4c33-95fe-440fcf96be83
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1831'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 99%
 監視フォルダーを設定する前に、以下を確認します。
 
 * 監視フォルダーは AEM Forms の高度な機能です。使用するには、AEM Forms アドオンパッケージが必要です。適切な AEM Forms アドオンパッケージがインストールおよび設定されている必要があります。
-* 監視フォルダーは共有ストレージまたはローカルストレージに作成できます。 監視フォルダーを実行するように設定されている AEM Forms ユーザーは、監視フォルダーの読み取り権限と書き込み権限を持っている必要があります。
+* 共有ストレージまたはローカルストレージに監視フォルダーを作成できます。監視フォルダーを実行するように設定されている AEM Forms ユーザーは、監視フォルダーの読み取り権限と書き込み権限を持っている必要があります。
 * サービス、ワークフロー、またはスクリプトを使用して、監視フォルダーの操作を自動化できます。対象のサービス、ワークフロー、またはスクリプトが作成されていて、実行可能な状態にある必要があります。サービス、ワークフロー、スクリプトについて詳しくは、「[さまざまなファイル処理方法](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files)」を参照してください。
 * 監視フォルダーの各種プロパティについて詳しくは、[監視フォルダーのプロパティ](watched-folder-in-aem-forms.md#watchedfolderproperties)を参照してください。
 

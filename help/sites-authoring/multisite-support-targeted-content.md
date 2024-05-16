@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Multi Site Manager
 role: User,Admin,Architect,Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2838'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -210,7 +210,7 @@ AEM でこれを実現するには、次の操作を行います。
 
 ## 領域へのサイトのリンク {#linking-sites-to-an-area}
 
-領域をページまたはサイトにリンクできます。領域は、サブページ上のマッピングによってオーバーレイされない限り、すべてのサブページに継承されます。 ただし、一般的にはサイトレベルでリンクします。
+領域をページまたはサイトにリンクできます。サブページ上へのマッピングによってサブページがオーバーレイされない限り、領域はすべてのサブページに継承されます。ただし、一般的にはサイトレベルでリンクします。
 
 リンクすると、選択したエリアからのアクティビティ、エクスペリエンス、オファーのみが使用可能になります。そのため、独立して管理されているコンテンツを誤って使用するおそれがなくなります。他に領域が設定されていない場合は、各ブランドのメイン領域が使用されます。
 

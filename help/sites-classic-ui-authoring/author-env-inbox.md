@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '569'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -106,8 +106,8 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 
 AEM インボックスで通知を受信することを選択した場合は、インボックスが通知でいっぱいになります。[通知を表示](#viewing-your-notifications)して、以下を行うのに必要な通知を選択します。
 
-* をクリックして承認 **承認**：の値 **Read** 列の設定： **true**.
+* 「**承認**」をクリックして承認します。**読み取り**&#x200B;列の値は **true** に設定します。
 
-* クリックして削除 **削除**.
+* 「**削除**」をクリックして削除します。
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)

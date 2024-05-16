@@ -7,9 +7,9 @@ exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4534'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -505,7 +505,7 @@ Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定を�
 
 アドビメイン内で統合を作成するためにシステム管理者に連絡しない場合は、ご自身に作成する能力があることを確認してください。
 
-1. に移動します。 [Adobe Developer コンソール](https://developer.adobe.com/console/).
+1. [Adobe Developer Console](https://developer.adobe.com/console/) に移動します。
 
 1. 統合を作成をクリックします。
 

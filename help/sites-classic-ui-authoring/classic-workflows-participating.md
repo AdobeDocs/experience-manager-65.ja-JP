@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '541'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 97%
 
 * **戻す**
 
-  あるステップまたは一連のステップを繰り返す必要がある場合は、前のステップに戻すことができます。これにより、ワークフローで前に行われたステップを再処理のために選択できます。 指定したステップにワークフローが戻り、そこから続行されます。
+  あるステップまたは一連のステップを繰り返す必要がある場合は、前のステップに戻すことができます。これにより、ワークフロー内の前の手順を選択し、再処理することができます。指定したステップにワークフローが戻り、そこから続行されます。
 
 ## ワークフローへの参加  {#participating-in-a-workflow}
 

@@ -11,7 +11,7 @@ exl-id: 2025182f-195b-40d0-aee7-67669f55b964
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '655'
 ht-degree: 100%
 
@@ -72,7 +72,7 @@ HTML5 フォームはタッチデバイスでの使用が増加しており、�
 
 >[!NOTE]
 >
->iPad では、デフォルトで、位置情報の埋め込みは必須です。
+iPad では、デフォルトで、位置情報の埋め込みは必須です。
 
 iPad では、位置情報アイコンはデフォルトで表示されず、位置情報は「**OK**」をクリックすると自動的に埋め込まれます。
 

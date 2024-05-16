@@ -11,9 +11,9 @@ role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4132'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 97%
 
 まず、既存のクイックビュー実装で使用されている動的変数を識別します。こうすることで、ホットスポットデータを入力してインタラクティブ画像を作成できます。
 
-Experience Manager Assetsのバナー画像にホットスポットを追加する場合は、各ホットスポットに SKU （Stock Keeping Unit）とオプションの追加変数を割り当てる必要があります。 そのようなホットスポットの変数は、後でホットスポットとクイックビューコンテンツを対応付けるために使用されます。
+Experience Manager Assets でバナー画像にホットスポットを追加する場合は、各ホットスポットに SKU（Stock Keeping Unit：在庫管理の最小単位）と任意の追加変数を割り当てる必要があります。そのようなホットスポットの変数は、後でホットスポットとクイックビューコンテンツを対応付けるために使用されます。
 
 重要なのは、ホットスポットデータに関連付けられる変数の数とタイプを正しく識別することです。バナー画像に追加するそれぞれのホットスポットに、既存のバックエンドシステム内で製品を一意に識別するための十分な情報がある必要があります。
 
@@ -110,7 +110,7 @@ Experience Manager Assetsのバナー画像にホットスポットを追加す�
 
 最も単純なケースでは、クイックビュー URL 内で変化する唯一の部分が製品 SKU となります。その場合、SKU の値は、ホットスポットをバナー画像に追加するために必要になる唯一のデータです。
 
-一方、複雑なケースでは、クイックビュー URL に SKU 以外で異なる様々な要素が含まれます（カテゴリ ID、カラーコード、サイズコードなど）。 その場合、各要素は Experience Manager Assets のショッパブルインタラクティブ画像機能において、ホットスポットデータ定義内の個別の変数になります。
+一方、複雑なケースでは、クイックビューの URL に SKU 以外の様々な要素が含まれます（カテゴリ ID、カラーコード、サイズコードなど）。その場合、各要素は Experience Manager Assets のショッパブルインタラクティブ画像機能において、ホットスポットデータ定義内の個別の変数になります。
 
 次のクイックビュー URL と、その結果のホットスポット変数の例を考えてみます。
 
@@ -276,7 +276,7 @@ Experience Manager Assets に含まれる、デフォルトの標準提供イン
 
    * 「**[!UICONTROL クイックビュー]**」を選択します。
 
-      * Experience Manager Sites または AEM eCommerce のユーザーである場合は、製品ピッカーアイコン（虫眼鏡）を選択して、製品を選択ページを開きます。使用する製品を選択してから、を選択します **[!UICONTROL を選択]** をクリックします。をクリックすると、ホットスポット管理ページに戻ることができます。
+      * Experience Manager Sites または AEM eCommerce のユーザーである場合は、製品ピッカーアイコン（虫眼鏡）を選択して、製品を選択ページを開きます。使用する製品を選択し、ページの右上隅にある「**[!UICONTROL 選択]**」をクリックして、ホットスポット管理ページに戻ります。
       * Experience Manager Sites または e コマースのユーザー&#x200B;*ではない*&#x200B;場合は次のようにします。
 
          * [ホットスポットの変数の識別](#optional-identifying-hotspot-variables)を参照してください。これらの変数を定義する必要があります。
@@ -367,9 +367,9 @@ Experience Manager Sites の顧客である場合は、インタラクティブ�
 
 レスポンシブ環境用のショッパブルインタラクティブ画像に「crop（切り抜き）」を適用するには、パスにインタラクティブ画像設定属性 `ZoomView.iscommand` を含めます。コンポーネント `ZoomView` が呼び出され、`iscommand` は適用する「切り抜き」画像提供コマンドです。
 
-[ZoomView.iscommand](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand) 設定属性を参照してください。
+[ZoomView.iscommand](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand) 設定属性を参照してください。
 
-[crop](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop) 画像サービングコマンドを参照してください。
+[crop](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop) 画像サービングコマンドを参照してください。
 
 これで、インタラクティブ画像を web サイト上の既存のクイックビューに統合できるようになりました。
 

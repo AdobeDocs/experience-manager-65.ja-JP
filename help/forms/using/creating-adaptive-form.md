@@ -1,14 +1,15 @@
 ---
 title: アダプティブフォームの作成方法
-description: ' [!DNL Experience Manager Forms] を使用したアダプティブフォームの作成方法を説明します。アダプティブフォームとは、情報の処理と収集を効率化するレスポンシブな HTML5 フォームです。フォームデータモデル、XFA フォームテンプレート、および XML スキーマまたは JSON スキーマに基づいてアダプティブフォームを作成する方法について詳しく掘り下げます。 '
+description: ' [!DNL Experience Manager Forms] を使用したアダプティブフォームの作成方法を説明します。アダプティブフォームとは、情報の処理と収集を効率化するレスポンシブな HTML5 フォームです。フォームデータモデル、XFA フォームテンプレート、および XML スキーマまたは JSON スキーマに基づいてアダプティブフォームを作成する方法について詳しく掘り下げます。'
 role: User, Developer
 level: Beginner
 feature: Adaptive Forms, Foundation Components
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d2be8d93c64ca18352a0e811605c526a8dae488f
-workflow-type: tm+mt
+exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
+source-git-commit: 676316d45213630c1c030b5eb4b3edff64e889a8
+workflow-type: ht
 source-wordcount: '1984'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -216,11 +217,11 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 アダプティブフォームの名前を変更するには、次の手順を実行します。
 
 1. AEM Forms ユーザーインターフェイスでアダプティブフォームを選択します。
-1. 「」をクリック **プロパティ** 上部レールにあります。
+1. 上部パネルにある「**プロパティ**」をクリックします。
 
    ![プロパティ](/help/forms/using/assets/rename-form-properties.png)
 
-1. 内のフォームの名前を **タイトル** 次の画像に示すように、「」タブをクリックします。
+1. 下の画像に示すように、「**タイトル**」タブでフォームの名前を変更します。
 1. 「**保存して閉じる**」をクリックします。
 
-   ![AEM アダプティブフォームの名前変更](/help/forms/using/assets/rename-form-title.png)
+   ![AEM アダプティブフォームの名前を変更](/help/forms/using/assets/rename-form-title.png)

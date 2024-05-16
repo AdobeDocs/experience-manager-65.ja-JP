@@ -11,9 +11,9 @@ exl-id: 7f9c77c6-447a-407f-ae58-6735176dc99c
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '659'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -94,7 +94,7 @@ HTML5 フォームは、日付、テキストおよび数値記号の表示値�
 
 >[!NOTE]
 >
-> デザインに従い、HTML 5 Formsの「日付」フィールドは、次をサポートしていません `MM-YYYY` 編集形式のパターン。 ただし、表示形式ではパターンがサポートされます。
+> デザイン上、HTML5 フォームの日付フィールドは編集形式の `MM-YYYY` パターンをサポートしていません。ただし、表示形式ではこのパターンがサポートされます。
 
 ## 数値のパターン形式文字列 {#numeric-picture-clause}
 

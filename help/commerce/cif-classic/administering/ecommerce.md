@@ -9,9 +9,9 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '762'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -150,7 +150,7 @@ AEM e コマースの主な機能は次のとおりです。
 
    * AEM 検索
    * e コマースシステムの検索
-   * サードパーティ検索
+   * サードパーティの検索
    * またはこれらの組み合わせ
 
   ![検索の例](/help/sites-administering/assets/chlimage_1-131.png)

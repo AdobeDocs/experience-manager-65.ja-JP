@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 93%
 
 実行方法を示すファイル内のコメントを参照します。
 
-CQ の分析 `access.log` 様々な情報の推定と、での Markdown 出力の生成 `stdout`.
+CQ `access.log` を分析して様々な情報を推測し、MarkDown 出力を `stdout` で生成します。
 
 ## 使用方法 {#usage}
 

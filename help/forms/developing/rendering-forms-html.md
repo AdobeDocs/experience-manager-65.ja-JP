@@ -1,6 +1,6 @@
 ---
 title: Forms を HTML としてレンダリング
-description: Forms サービスを使用し、web ブラウザーからの HTTP リクエストに応じてフォームを HTML としてレンダリングします。Java&trade; API および web サービス API を使用して、フォームをHTMLとしてレンダリングできます。
+description: Forms サービスを使用し、web ブラウザーからの HTTP リクエストに応じてフォームを HTML としてレンダリングします。Java™ API および Web Service API を使用し、フォームを HTML としてレンダリングできます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -10,9 +10,9 @@ role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4099'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -66,15 +66,15 @@ Forms サービスは、web ブラウザーからの HTTP リクエストに応�
 
 **`.fsc-ds-ssb`**：このスタイルシートは、空白の記号フィールドがある場合に適用されます。
 
-**`.fsc-ds-ssv`**：このスタイルシートは、「有効な記号」フィールドがある場合に適用されます。
+**`.fsc-ds-ssv`**：このスタイルシートは、有効な記号フィールドがある場合に適用されます。
 
-**`.fsc-ds-ssc`**：このスタイルシートは、有効な記号フィールドがあるものの、データが変更された場合に適用されます。
+**`.fsc-ds-ssc`**：このスタイルシートは、有効な記号フィールドでデータが変更された場合に適用されます。
 
 **`.fsc-ds-ssi`**：このスタイルシートは、無効な記号フィールドがある場合に適用されます。
 
 **`.fsc-ds-popup-bg`**：このスタイルシートプロパティは使用されていません。
 
-**。`fsc-ds-popup-btn`**：このスタイルシートプロパティは使用されていません。
+**.`fsc-ds-popup-btn`**：このスタイルシートプロパティは使用されていません。
 
 ## スクリプトの実行 {#running-scripts}
 

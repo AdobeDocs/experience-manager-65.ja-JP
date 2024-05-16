@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Architect,Data Architect,Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '295'
 ht-degree: 100%
 
@@ -32,7 +32,7 @@ AEM のヘッドレスなコンテンツ管理に関しては、AEM 内でコン
 
 1. AEM にログインし、メインメニューで&#x200B;**ツール／一般／設定ブラウザー**&#x200B;を選択します。
 1. 設定の&#x200B;**タイトル**&#x200B;を入力します。
-   * 名前は、タイトルにもとづいて自動的に生成され、[AEM の命名規則に従って調整されます。](/help/sites-developing/naming-conventions.md)といったアドバイスを耳にしたことがある方もいるでしょう。これは、リポジトリ内のノード名になります。
+   * 名前は、タイトルにもとづいて自動的に生成され、[AEM の命名規則に従って調整されます。](/help/sites-developing/naming-conventions.md)これは、リポジトリ内のノード名になります。
 1. 次のオプションを確認します。
    * **コンテンツフラグメントモデル**
    * **GraphQL の永続的なクエリ**

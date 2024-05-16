@@ -10,15 +10,15 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '403'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # カスタムクラウドサービスの作成{#creating-a-custom-cloud-service}
 
-デフォルトの Cloud Services を、カスタムクラウドサービスタイプで拡張することができます。これにより、カスタムマークアップを構造的な方法でページに挿入できます。これは主にサードパーティの分析プロバイダー（Google Analytics、Chartbeat など）で使用されます。 Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
+デフォルトの Cloud Services を、カスタムクラウドサービスタイプで拡張することができます。これにより、カスタムマークアップを構造的な方法でページに挿入できます。この手法は主に、Google Analytics や Chartbeat などのサードパーティの分析プロバイダーで使用されます。Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
 
 >[!NOTE]
 >

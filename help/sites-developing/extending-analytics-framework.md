@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1610'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -210,7 +210,7 @@ if (s.usePlugins) s.doPlugins(s)
 
 1. 「OK」が有効になるまで「次へ」を繰り返しクリックしてから、「OK」をクリックします。
 
-   sitecatalyst コンポーネントには、自動的に作成された sitecatalyst.jsp ファイルが含まれます。
+   SiteCatalyst コンポーネントには、自動的に作成された sitecatalyst.jsp ファイルが含まれます。
 
 1. sitecatalyst.jsp ファイルを右クリックして、「削除」をクリックします。
 

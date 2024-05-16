@@ -9,9 +9,9 @@ role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '9814'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -817,7 +817,7 @@ Web サービスを使用して AEM Forms サービスを呼び出す Microsoft 
 
 >[!NOTE]
 >
->ほとんどのAEM Forms サービス操作には、MTOM のクイックスタートが用意されています。 これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
+>ほとんどの AEM Forms サービス操作には、MTOM のクイックスタートがあります。これらのクイックスタートは、サービスの対応するクイックスタートセクションに表示されます。例えば、Output のクイックスタートのセクションを見るには、[Output サービス API クイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)を参照してください。
 
 **関連トピック**
 

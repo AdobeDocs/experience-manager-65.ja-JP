@@ -10,9 +10,9 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1603'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -127,7 +127,7 @@ CSV ファイルをアップロードしてユーザーをまとめて登録す�
 >
 >ユーザー同期ツールでは、[ここ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)に説明されている手順を使用して、Adobe I/O クライアント UMAPI として登録する必要があります。
 >
->Adobe Developer コンソールのドキュメントを参照してください [こちら](https://developer.adobe.com/developer-console/docs/guides/).
+>Adobe Developer Console のドキュメントについては、[こちら](https://developer.adobe.com/developer-console/docs/guides/)を参照してください。
 >
 >
 >ユーザー同期ツールで使用する [!DNL User Management] API については、[この場所](https://adobe-apiplatform.github.io/umapi-documentation/en/)を参照してください。

@@ -9,7 +9,7 @@ exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7164'
 ht-degree: 100%
 
@@ -102,8 +102,8 @@ ht-degree: 100%
    * 次のような名前および拡張子が混在する式に一致するファイル。
 
       * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
-      * &#42;。[dD][Aa]&#39;port&#39;
-      * &#42;。[Xx][Mm][Ll]
+      * &#42;[dD][Aa]&#39;port&#39;
+      * &#42;[Xx][Mm][Ll]
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
 
@@ -116,8 +116,8 @@ ht-degree: 100%
 
    * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
 
-      * &#42;。[dD][Aa]&#39;port&#39;
-      * &#42;。[Xx][Mm][Ll]
+      * &#42;[dD][Aa]&#39;port&#39;
+      * &#42;[Xx][Mm][Ll]
 
 ファイルパターンについて詳しくは、[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)を参照してください。
 
@@ -567,8 +567,8 @@ log.info("Exiting workflow script!")
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
    * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
-   * &#42;。[dD][Aa]&#39;port&#39;
-   * &#42;。[Xx][Mm][Ll]
+   * &#42;[dD][Aa]&#39;port&#39;
+   * &#42;[Xx][Mm][Ll]
 
 * 管理者は、結果を保存する出力フォルダーのファイルパターンを定義できます。出力フォルダー（結果、保存、失敗）には、次のファイルパターンのいずれでも指定できます。
 * %Y = 年（4 桁表記）

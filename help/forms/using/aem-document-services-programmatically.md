@@ -9,9 +9,9 @@ exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6346'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -4465,7 +4465,7 @@ PDF Generator サービスは、ネイティブファイル形式を PDF に変�
 
 GeneratePDFService は、様々なファイル形式（.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（非推奨）、.jpg、.bmp、.tif、.png、.html など）を PDF に変換する API を提供します。また、PDF を様々なファイル形式に書き出したり、最適化したりするための API も提供します。このサービスは、以下の API をサポートしています。
 
-* **createPDF**：対応するファイルタイプを PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用PDF生成アプリケーションタイプを API にプラグインすることもできます。
+* **createPDF**：対応するファイルタイプを PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
 * **exportPDF**：PDF ドキュメントを対応するファイルタイプに変換します。このメソッドは PDF を入力として受け入れ、PDF の内容を特定のファイルタイプで読み込みます（または書き出します）。PDF ドキュメントは、次の形式でエクスポートすることができます。Encapsulated PostScript（eps）、HTML 3.2（htm、html）、CSS 1.0 を使用した HTML 4.01（htm、html）、JPEG（jpg、jpeg、jpe）、JPEG2000（jpf、jpx、jp2、j2k、j2c、jpc）、Microsoft Word 文書（doc、 docx） Microsoft Excel ブック（xlsx）、Microsoft PowerPoint プレゼンテーション（pptx）、PNG（png）、PostScript（ps）、リッチテキスト形式（rtf）、テキスト（Accessible）（txt）、テキスト（Plain）（txt）、TIFF（tif、tiff）、XML 1.0（xml）、PDF/A-1a（sRGB）、PDF/A-1b、PDF/A-2a（sRGB）、PDF/A-2b（sRGB）、PDF/A-3a（sRGB）、PDF/A-3b（sRGB）。PDF の出力用として[カスタムの Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を指定することもできます。
 
 * **optimizePDF**：PDF ドキュメントを最適化し、PDF ドキュメントを別のタイプに変換します。このメソッドは、PDF ドキュメントを入力ファイルとして受け入れます。
@@ -4513,7 +4513,7 @@ GeneratePDFService は、様々なファイル形式（.doc、.docx、.ppt、.pp
 
 #### createPDF {#createpdf}
 
-createPDF API は対応するファイルタイプを PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などの様々なファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用PDF生成アプリケーションタイプを API にプラグインすることもできます。
+createPDF API は対応するファイルタイプを PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などの様々なファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
 
 変換の際は、一部のパラメーターのみが必須となります。入力ドキュメントは必須のパラメーターです。後から、出力 PDF ドキュメントにセキュリティ権限、PDF 出力設定およびメタデータ情報を適用することもできます。
 

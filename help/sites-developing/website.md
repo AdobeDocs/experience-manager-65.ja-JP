@@ -1,6 +1,6 @@
 ---
-title: 充実した機能を持つ Web サイト（JSP）の作成
-description: このチュートリアルでは、Adobe Experience Manager（AEM）でフル機能の web サイトを作成する方法について説明します。
+title: 完全な機能を備えた web サイトの作成（JSP）
+description: このチュートリアルでは、Adobe Experience Manager（AEM）で完全な機能を備えた web サイトを作成する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -11,13 +11,13 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4919'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# 充実した機能を持つ Web サイト（JSP）の作成{#create-a-fully-featured-website-jsp}
+# 完全な機能を備えた web サイトの作成（JSP）{#create-a-fully-featured-website-jsp}
 
 >[!NOTE]
 >

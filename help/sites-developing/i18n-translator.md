@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2318'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -196,7 +196,7 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
 ### 翻訳された文字列の編集 {#editing-translated-strings}
 
-英語の文字列を辞書に追加した後、その文字列の翻訳を追加できます。以下の手順でも可能です [辞書の書き出し](/help/sites-developing/i18n-translator.md#exporting-a-dictionary) サードパーティで翻訳する場合。
+英語の文字列を辞書に追加した後、その文字列の翻訳を追加できます。サードパーティに翻訳を依頼するために[辞書を書き出す](/help/sites-developing/i18n-translator.md#exporting-a-dictionary)こともできます。
 
 1. [プロジェクト専用の辞書](#creating-a-dictionary)を選択します（翻訳を保持するリポジトリ内のパスがその辞書で指定される場合）。例えば、次のように&#x200B;**辞書**&#x200B;を選択します。
 
@@ -226,7 +226,7 @@ AEM には、コンポーネント UI で使用される様々な翻訳テキス
 
 ## サードパーティのトランスレーターの使用 {#using-third-party-translators}
 
-サードパーティの翻訳サービスの使用をサポートするために、翻訳ツールを使用して辞書を書き出しおよび読み込むことができます。
+サードパーティの翻訳サービスの使用をサポートするために、翻訳ツールで辞書を書き出したり、読み込んだりできます。
 
 ### 辞書の書き出し {#exporting-a-dictionary}
 
