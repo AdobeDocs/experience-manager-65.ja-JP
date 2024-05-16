@@ -10,8 +10,8 @@ exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
-workflow-type: ht
+source-git-commit: 9b766fe6e253782be3bc47849b4857216274ae20
+workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 100%
 
@@ -183,13 +183,13 @@ it for any subsequent updating of the private key or certificate.</dd>
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
    ```
 
-秘密鍵を DER 形式に変換します。SSL ウィザードでは鍵は DER 形式である必要があるので、このようにします。
+1. 秘密鍵を DER 形式に変換します。SSL ウィザードでは鍵は DER 形式である必要があるので、このようにします。
 
-```shell
-openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
-```
+   ```shell
+   openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
+   ```
 
-最後に、このページで最初に説明したグラフィカルな SSL/TLS ウィザードの手順 2 で、**localhostprivate.der** を秘密鍵としてアップロードし、**localhost.crt** を SSL/TLS 証明書としてアップロードします。
+1. 最後に、このページで最初に説明したグラフィカルな SSL/TLS ウィザードの手順 2 で、**localhostprivate.der** を秘密鍵としてアップロードし、**localhost.crt** を SSL/TLS 証明書としてアップロードします。
 
 ### cURL での SSL/TLS 設定の更新 {#updating-the-ssl-tls-configuration-via-curl}
 
