@@ -48,7 +48,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
-[コンソールのショートカットがアクティベート解除](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)されているかどうかにかかわらず、エディターのキーボードショートカットは、常にアクティブです。
+>[コンソールのショートカットがアクティベート解除](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)されているかどうかにかかわらず、エディターのキーボードショートカットは、常にアクティブです。
 
 ## OS 特有の修飾子キー {#os-specific-modifier-keys}
 
