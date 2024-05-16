@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 5e2799505bc6d69cd5898445a9300ad162ef74fd
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 100%
+source-wordcount: '518'
+ht-degree: 86%
 
 ---
 
@@ -28,6 +28,26 @@ ht-degree: 100%
     <td><strong>日付</strong></td>
     <td><strong>ホットフィックスのダウンロードリンク（AEM ソフトウェア配布リンク）</strong></td>
     <td><strong>修正された問題</strong></td>
+  </tr>
+  <tr>
+    <td>2024年5月16日（PT）</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-win-pkg-6.0.1192-010.zip">Microsoft Windows 用 AEM サービスパック 6.5.20.0 のホットフィックス</a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-linux-pkg-6.0.1192-010.zip">Linux 用AEM サービスパック 6.5.20.0 のホットフィックス </a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/adobe-aemfd-osx-pkg-6.0.1192-010.zip">Apple macOSのAEM サービスパック 6.5.20.0 のホットフィックス</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li>チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームでは、このようなチェックボックスの後の要素に対してスクリプトは実行されません。この問題のホットフィックスが入手可能です。（FORMS-14244） </li>
+     <li> 編集／表示パターンを持つフィールドのポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。この問題のホットフィックスが入手可能です。（FORMS-13620） </li>
+     <li>バックエンドで DOR（レコードのドキュメント）サービスを使用しようとすると、フォームの送信が失敗します。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」というエラーメッセージが表示されます。（FORMS-13798） </li>
+     <li>アダプティブフォームがAdobe Experience Manager パブリッシュインスタンスからAdobe Experience Manager ワークフローに送信されると、ワークフローで添付ファイルが保存されません。  （FORMS-14209） </li>
+     <li> AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。  （FORMS-13791） </li>
+     <li>インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）</li>
+    </ul>
+    </td>    
   </tr>
   <tr>
     <td>2024年1月29日（PT）</td>

@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: c165755c19ac64fdd253bff9163f48ddf4732623
-workflow-type: ht
-source-wordcount: '4046'
-ht-degree: 100%
+source-git-commit: 5e2799505bc6d69cd5898445a9300ad162ef74fd
+workflow-type: tm+mt
+source-wordcount: '3994'
+ht-degree: 97%
 
 ---
 
@@ -490,12 +490,12 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6520}
 
-* チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームでは、このようなチェックボックスの後の要素に対してスクリプトは実行されません。（FORMS-14244）
-* 編集／表示パターンを持つフィールドのポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。（FORMS-13620）
-* バックエンドで DOR（レコードのドキュメント）サービスを使用しようとすると、フォームの送信が失敗します。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」というエラーメッセージが表示されます。（FORMS-13798）
-* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
-* AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用の AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。（FORMS-13791）
-* インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）
+* チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームでは、このようなチェックボックスの後の要素に対してスクリプトは実行されません。この問題のホットフィックスが入手可能です。ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md) （FORMS-14244）
+* 編集／表示パターンを持つフィールドのポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。この問題のホットフィックスが入手可能です。ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md) （FORMS-13620）
+* バックエンドで DOR（レコードのドキュメント）サービスを使用しようとすると、フォームの送信が失敗します。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」というエラーメッセージが表示されます。ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md) （FORMS-13798）
+* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md)  （FORMS-14209）
+* AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用の AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md)  （FORMS-13791）
+* インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md) （CQDOC-21355）
 * アダプティブフォームでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。カスタム関数で ECMAScript バージョン 6 以降（「let」、「const」、アロー関数など）が使用されている場合、ルールエディターが正しく開かない可能性があります。
 * Correspondence Management レターを作成できません。ユーザーがレターを作成すると、「`Object Object`」という説明のエラーが表示され、レターが作成されません。レイアウトのサムネールもレター作成画面に読み込めません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13496）
 * インタラクティブ通信サービスは PDF ドキュメントを作成しますが、フォームフィールドにユーザーのデータが自動的に入力されません。事前入力サービスが期待どおりに動作しません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13413、FORMS-13493）
@@ -530,11 +530,6 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 1. Stop the application server.
 
 -->
-* チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームでは、このようなチェックボックスの後の要素に対してスクリプトは実行されません。（FORMS-14244）
-* 編集／表示パターンを持つフィールドのポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。（FORMS-13620）
-* バックエンドで DOR（レコードのドキュメント）サービスを使用しようとすると、フォームの送信が失敗します。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」というエラーメッセージが表示されます。（FORMS-13798）
-* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
-* AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用の AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。（FORMS-13791）
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
