@@ -9,9 +9,9 @@ exl-id: b0c4f72a-e65f-453a-af66-5d9f98a9d6df
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: acb023caf0a7e64fea9cf5d9198d672ee14c8d88
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 99%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/using-communications/record-transaction-custom-implementation) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/using-communications/record-transaction-custom-implementation) |
 | AEM 6.5 | この記事 |
 
 トランザクションとして自動的に計上されないアクションを記録するには、TransactionRecorder API を使用します

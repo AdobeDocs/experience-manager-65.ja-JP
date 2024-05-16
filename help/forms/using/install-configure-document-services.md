@@ -6,9 +6,9 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 source-git-commit: 0a1a0d8e3a2794bda247e7b07a2ef9d9fcac7c13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5660'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -300,7 +300,7 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 
 >[!NOTE]
 >
-> 前述のとおり、AEM サーバーが LocalSystem アカウント（LSA）の下でサービスとして動作している場合は、この権限をユーザーに明示的に割り当てる必要はありません。
+> 前述のとおり、AEM サーバーが LocalSystem アカウント（LSA）でサービスとして実行している場合は、この権限をユーザーに明示的に割り当てる必要はありません。
 
 ### （Windows のみ）管理者以外のユーザーに対する PDF Generator サービスの有効化 {#enable-the-pdf-generator-service-for-non-administrators}
 

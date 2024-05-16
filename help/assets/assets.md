@@ -7,7 +7,7 @@ role: Leader, Architect, User
 exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 347828d5bf3da01685f19fb43609505b24126c63
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '901'
 ht-degree: 100%
 

@@ -9,9 +9,9 @@ exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: 55421ab730382eb9aa603f898182865649f66349
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1573'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -68,7 +68,7 @@ Content Services（非推奨）を使用している場合は、ドメインの�
 
 ### メールドメインに基づく動的グループの自動作成 {#automatically-create-dynamic-groups-based-on-email-domains}
 
-1. 設定/User Management/設定/システム属性の詳細設定をクリックしてください。
+1. 設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「動的グループの自動作成」で、チェックボックスを選択します。
 1. User Manager で新しいメールドメインをチェックするタイミングを指定します。動的グループの作成はドメイン同期が完了している場合にのみ論理的に正しくなるので、このタイミングはドメイン同期後にする必要があります。
 
