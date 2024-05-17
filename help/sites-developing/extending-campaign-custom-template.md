@@ -9,20 +9,27 @@ exl-id: de5c634a-c0d7-4e69-b941-d2fbfe83117d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
-workflow-type: ht
-source-wordcount: '238'
-ht-degree: 100%
+source-git-commit: ad8f849384e58511de97611d1b26c4fc96022062
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 87%
 
 ---
 
 # Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-このページでは、Geometrixx-outdoors テンプレート（`/apps/geometrixx-outdoors/components/page_campaign_profile`）の実装方法を確認することによって、[Adobe Campaign フォーム](/help/sites-authoring/adobe-campaign-components.md)コンポーネントを使用するカスタムページテンプレートの作成方法を説明し、独自のカスタムテンプレート作成時に必要になる可能性がある重要な情報を示します。
+このページでは、を使用するカスタムページテンプレートの作成方法を説明します [Adobe Campaign フォーム](/help/sites-authoring/adobe-campaign-components.md) Geometrixxアウトドアテンプレート（`/apps/geometrixx-outdoors/components/page_campaign_profile`）が実装されており、独自のカスタムテンプレートを作成する際に必要になる可能性のある重要な情報を示しています。
 
 >[!NOTE]
 >
 >[メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
+
+>[!CAUTION]
+>
+>AEM メールコンポーネントは非推奨となりました。 コンテンツとスタイルを結合するメールの性質上、AEM で標準で提供されるメールコンポーネントは、プロジェクトで必要なすべてのコンポーネントにカスタムスタイルを実装する必要があるので、顧客による再利用の機会は限られています。
+>
+>メールコンポーネントはプロジェクトレベルで実装できます。その方法は、非推奨の AEM メールコンポーネントを見ればわかります。ただし、これらの非推奨コンポーネントはプロジェクトで使用しないでください。
+
 
 Adobe Campaign フォームコンポーネントを使用してカスタム AEM ページテンプレートを作成するには、以下が必要な条件となります。
 
