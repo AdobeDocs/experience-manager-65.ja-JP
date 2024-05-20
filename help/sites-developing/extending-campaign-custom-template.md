@@ -10,15 +10,15 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: ad8f849384e58511de97611d1b26c4fc96022062
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '313'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-このページでは、を使用するカスタムページテンプレートの作成方法を説明します [Adobe Campaign フォーム](/help/sites-authoring/adobe-campaign-components.md) Geometrixxアウトドアテンプレート（`/apps/geometrixx-outdoors/components/page_campaign_profile`）が実装されており、独自のカスタムテンプレートを作成する際に必要になる可能性のある重要な情報を示しています。
+このページでは、Geometrixx-outdoors テンプレート（`/apps/geometrixx-outdoors/components/page_campaign_profile`）の実装方法を確認することによって、[Adobe Campaign フォーム](/help/sites-authoring/adobe-campaign-components.md)コンポーネントを使用するカスタムページテンプレートの作成方法を説明し、独自のカスタムテンプレート作成時に必要になる可能性がある重要な情報を示します。
 
 >[!NOTE]
 >
