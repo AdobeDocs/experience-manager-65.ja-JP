@@ -10,38 +10,14 @@ exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
-workflow-type: ht
-source-wordcount: '1513'
-ht-degree: 100%
+source-git-commit: dcb55b3b185fe5dccf52377a12556e33d818e410
+workflow-type: tm+mt
+source-wordcount: '1438'
+ht-degree: 99%
 
 ---
 
-# Adobe Target へのエクスペリエンスフラグメントの書き出し {#exporting-experience-fragments-to-adobe-target}
-
->[!CAUTION]
->
->このページの一部の機能には、AEM 6.5.3.0 以降のアプリケーションが必要です。
->
->6.5.3.0:
->
->* **Externalizer ドメイン**を選択できるようになりました。
->  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
->
->6.5.2.0：
->
->* エクスペリエンスフラグメントは、次のいずれかに書き出すことができます。
->
->   * デフォルトのワークスペース。
->   * クラウド設定で指定された名前付きワークスペース。
->   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
->
->* AEM は [IMS を使用した Adobe Target と統合](/help/sites-administering/integration-target-ims.md)する必要があります。
->
->AEM 6.5.0.0 および 6.5.1.0：
->
->* AEM エクスペリエンスフラグメントは、Adobe Target のデフォルトのワークスペースに書き出されます。
->* AEM は、 [Adobe Target との統合](/help/sites-administering/target.md)の手順に従って Adobe Target と統合する必要があります。
+# Adobe Target へのエクスペリエンスフラグメントの書き出し{#exporting-experience-fragments-to-adobe-target}
 
 Adobe Target（Target）向けに Adobe Experience Manager（AEM）で作成された[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を書き出すことができます。書き出したエクスペリエンスフラグメントは、Target アクティビティのオファーとして使用し、幅広くエクスペリエンスをテストおよびパーソナライズできます。
 
@@ -51,7 +27,13 @@ Adobe Target（Target）向けに Adobe Experience Manager（AEM）で作成さ�
 * JSON：ヘッドレスコンテンツ配信のサポート
 * HTML と JSON
 
-AEM エクスペリエンスフラグメントは、Adobe Target のデフォルトワークスペースまたは Adobe Target のユーザー定義ワークスペースに書き出すことができます。これは、Adobe Developer Console を使用して行います。その場合、AEM は [IMS を使用した Adobe Target と統合](/help/sites-administering/integration-target-ims.md)する必要があります。
+AEM エクスペリエンスフラグメントは、Adobe Target のデフォルトワークスペースまたは Adobe Target のユーザー定義ワークスペースに書き出すことができます。これは、Adobe Developer Console を使用して行います。その場合、AEM は [IMS を使用した Adobe Target と統合](/help/sites-administering/setting-up-ims-integrations-for-aem.md)する必要があります。
+
+>[!NOTE]
+>
+>[IMS 統合が S2S OAuth で設定されるようになりました](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
+>
+>以前は [JWT 資格情報を使用して設定が行われていましたが、この設定は現在 Adobe Developer Console で廃止予定](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)です。
 
 >[!NOTE]
 >
@@ -71,14 +53,17 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
 ## 前提条件 {#prerequisites}
 
->[!CAUTION]
->
->このページの一部の機能には、AEM 6.5.3.0 のアプリケーションが必要です。
-
 様々なアクションが必要です。
 
-1. [IMS を使用して AEM と Adobe Target を統合する](/help/sites-administering/integration-target-ims.md)必要があります。
-2. エクスペリエンスフラグメントは AEM オーサーインスタンスから書き出されます。このため、オーサーインスタンスで [AEM Link Externalizer を設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)し、エクスペリエンスフラグメント内の参照が web 配信用に外部化されるようにします。
+1. [IMS を使用して AEM と Adobe Target を統合する](/help/sites-administering/setting-up-ims-integrations-for-aem.md)必要があります。
+
+   >[!NOTE]
+   >
+   >[IMS 統合が S2S OAut で設定されました。](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+   >
+   >以前は [JWT 資格情報を使用して設定が行われていましたが、この設定は現在 Adobe Developer Console で廃止予定](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)です。
+
+1. エクスペリエンスフラグメントは AEM オーサーインスタンスから書き出されます。このため、オーサーインスタンスで [AEM Link Externalizer を設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)し、エクスペリエンスフラグメント内の参照が web 配信用に外部化されるようにします。
 
    >[!NOTE]
    >

@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 9bacc16657c83329ff7b02dc8b233908e9deb2e1
-workflow-type: ht
-source-wordcount: '7406'
-ht-degree: 100%
+source-git-commit: b274d150ccffb93858de6a3a8f7e05441776d0fb
+workflow-type: tm+mt
+source-wordcount: '7400'
+ht-degree: 99%
 
 ---
 
@@ -74,6 +74,7 @@ ht-degree: 100%
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
    + [同じサイト cookie サポート](/help/sites-administering/same-site-cookie-support.md)
    + [Adobe Developer Console での JWT 資格情報の廃止](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
+   + [AEM用の IMS 統合のセットアップ](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Sites {#sites}
    + オーサリング {#authoring}
       + AEM オーサリングの基本的なタスク、ツールおよび概念 {#essentials}
@@ -226,7 +227,6 @@ ht-degree: 100%
          + [Adobe Analytics のリンクトラッキングの設定](/help/sites-administering/adobeanalytics-link.md)
          + [コンポーネントデータと Adobe Analytics プロパティとのマッピング](/help/sites-administering/adobeanalytics-mapping.md)
          + [Adobe Analytics のビデオトラッキングの設定](/help/sites-administering/adobeanalytics-video.md)
-         + [IMS を使用した Adobe Analytics との統合](/help/sites-administering/integration-analytics-ims.md)
          + [コンテンツの HTTP/2 配信の FAQ](/help/sites-administering/scene7-http2faq.md)
          + [Adobe Campaign 統合に関するトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)
          + [SharePoint Connector のライセンス、著作権情報および免責事項](/help/sites-administering/sharepoint-connector-licenses.md)
@@ -250,7 +250,6 @@ ht-degree: 100%
          + [Adobe Marketing Cloud との統合](/help/sites-administering/marketing-cloud.md)
          + [手動での Adobe Target との統合の設定](/help/sites-administering/target-configuring.md)
          + [Adobe Target との統合の前提条件](/help/sites-administering/target-requirements.md)
-         + [IMS を使用した Adobe Target との統合](/help/sites-administering/integration-target-ims.md)
          + [Adobe Classifications](/help/sites-administering/adobeanalytics-classifications.md)
          + [ソリューション統合](/help/sites-administering/integration.md)
          + [Adobe Target へのエクスペリエンスフラグメントの書き出し](/help/sites-administering/experience-fragments-target.md)
