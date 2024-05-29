@@ -1,22 +1,22 @@
 ---
-title: AEM用の IMS 統合のセットアップ
-description: AEM用に IMS 統合を設定する方法を説明します
+title: AEM の IMS 統合の設定
+description: AEM の IMS 統合の設定方法について説明します
 source-git-commit: bca98907b79f12572879273ece41ec8d82fed1b8
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 79%
+ht-degree: 92%
 
 ---
 
 
-# AEM用の IMS 統合のセットアップ {#setting-up-ims-integrations-for-aem}
+# AEM の IMS 統合の設定 {#setting-up-ims-integrations-for-aem}
 
 
 >[!NOTE]
 >
->アドビのお客様は、[Adobe Developer Console](https://developer.adobe.com/console) を使用すると、様々な API へのアクセスを可能にする資格情報を生成できます。お客様は、OAuth サーバー間からシングルページアプリまで、様々な資格情報タイプから選択できます。これらの資格情報タイプの 1 つであるサービスアカウント（JWT）資格情報は、サービスパック 20 の OAuth サーバー間資格情報に置き換わるために非推奨になりました。 この変更は、ダウンロード可能なホットフィックスを使用して、サービスパック 11 からサービスパック 20 まで、古いサービスパックに移植することができます [こちら](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
+>アドビのお客様は、[Adobe Developer Console](https://developer.adobe.com/console) を使用すると、様々な API へのアクセスを可能にする資格情報を生成できます。お客様は、OAuth サーバー間からシングルページアプリまで、様々な資格情報タイプから選択できます。これらの資格情報タイプの 1 つであるサービスアカウント（JWT）資格情報は、サービスパック 20 では OAuth サーバー間資格情報に代わって非推奨（廃止予定）になりました。この変更は、ダウンロード可能なホットフィックスを使用して、サービスパック 11 からサービスパック 20 まで、古いサービスパックに移植することができます [こちら](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
 
-Adobe Experience Manager（AEM）は、他の多くのAdobeソリューションと統合できます。 例えば、Adobe Target、Adobe Analytics などです。
+Adobe Experience Manager（AEM）は、他の多くのアドビソリューションと統合できます。例えば、Adobe Target、Adobe Analytics などです。
 
 統合では、S2S OAuth で設定された IMS 統合を使用します。
 
