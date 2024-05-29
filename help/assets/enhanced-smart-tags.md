@@ -7,10 +7,10 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
-source-wordcount: '1559'
-ht-degree: 100%
+source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
+workflow-type: tm+mt
+source-wordcount: '1575'
+ht-degree: 99%
 
 ---
 
@@ -194,3 +194,9 @@ ht-degree: 100%
 * スマートコンテンツサービスの使用は、タグ付き画像年間最大 200 万個に制限されています。処理およびタグ付けされた複製画像は、それぞれタグ付き画像としてカウントされます。
 * タイムラインからタグ付けワークフローを実行する場合、一度に最大 15 個のアセットにタグを適用できます。
 * スマートタグは、PNG および JPG の画像形式に対してのみ機能します。したがって、これらの 2 つの形式で作成されたレンディションを持つ、サポートされるアセットには、スマートタグが付けられます。
+
+>[!MORELIKETHIS]
+>
+>* [概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
+>* [スマートタグの設定](config-smart-tagging.md)
+>* [スマートタグに関するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=ja)

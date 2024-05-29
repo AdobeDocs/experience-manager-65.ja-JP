@@ -6,10 +6,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
-source-wordcount: '2227'
-ht-degree: 100%
+source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
+workflow-type: tm+mt
+source-wordcount: '2415'
+ht-degree: 92%
 
 ---
 
@@ -135,6 +135,13 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 ### スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
+>[!CAUTION]
+>
+>以前は、JWT 資格情報を使用して作成された設定は、Adobe Developer コンソールで廃止される可能性がありました。 2024 年 6 月 3 日（PT）以降は、新しい JWT 認証情報を作成できません。 このような設定は作成または更新できなくなりますが、OAuth 設定に移行することはできます。
+> 参照： [AEM用の IMS 統合のセットアップ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+>参照： [オンプレミスユーザーの OAuth を設定する手順](#config-oauth-onprem)
+> 参照： [OAuth 認証情報のスマートタグのトラブルシューティング](#config-smart-tagging.md)
+
 統合を設定するには、Adobe 開発者コンソール統合から、[!UICONTROL テクニカルアカウント ID]、[!UICONTROL 組織 ID]、[!UICONTROL クライアント秘密鍵]、および[!UICONTROL クライアント ID] の各フィールドの値を使用します。スマートタグのクラウド設定を作成すると、[!DNL Experience Manager] デプロイメントからの API 要求を認証できるようになります。
 
 1. [!DNL Experience Manager] で、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 従来のクラウドサービス]**&#x200B;に移動して、[!UICONTROL クラウドサービス]コンソールを開きます。
@@ -151,6 +158,37 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
    | [!UICONTROL テクニカルアカウント ID] | [!UICONTROL テクニカルアカウント ID] |
    | [!UICONTROL 組織 ID] | [!UICONTROL 組織 ID] |
    | [!UICONTROL クライアントの秘密鍵] | [!UICONTROL クライアント秘密鍵] |
+
+### オンプレミスユーザーの OAuth の設定 {#config-oauth-onprem}
+
+#### 前提条件 {#prereqs-config-oauth-onprem}
+
+認証範囲は、次の前提条件を含む OAuth 文字列です。
+
+* で新しい OAuth 統合を作成します。 [Developer Console](https://developer.adobe.com/console/user/servicesandapis) 使用 `ClientID`, `ClientSecretID`、および `OrgID`.
+* 次のファイルをこのパスに追加します `/apps/system/config in crx/de`:
+   * `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
+   * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
+
+#### オンプレミスユーザーの OAuth の設定 {#steps-config-oauth-onprem}
+
+1. で以下のプロパティを追加または更新します `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
+
+   * `auth.token.provider.authorization.grants="client_credentials"`
+   * `auth.token.provider.orgId="<OrgID>"`
+   * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
+   * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
+     `auth.token.validator.type="adobe-ims-similaritysearch"`
+   * を更新 `auth.token.provider.client.id` を新しい OAuth 設定のクライアント ID に置き換えます。
+   * 更新 `auth.access.token.request` 対象： `"https://ims-na1.adobelogin.com/ims/token/v3"`
+2. ファイル名をに変更 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
+3. で以下の手順を実行します `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
+   * 新しい OAuth 統合から、プロパティ auth.ims.client.secret をクライアント秘密鍵で更新します。
+   * ファイル名をに変更 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
+4. コンテンツリポジトリ開発コンソール（例：CRXDE）で、すべての変更を保存します。
+5. に移動します。 `/system/console/configMgr` および以下の OSGi 設定を `.<randomnumber>` 対象： `-<randomnumber>`.
+6. の古い設定を削除します `"Access Token provider name: adobe-ims-similaritysearch"` 。対象： `/system/console/configMgr`.
+7. コンソールを再起動します。
 
 ### 設定の検証 {#validate-the-configuration}
 
@@ -299,5 +337,6 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 >[!MORELIKETHIS]
 >
->* [スマートタグの概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
+>* [OAuth 認証情報のスマートタグのトラブルシューティング](#config-smart-tagging.md)
+>* [概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
 >* [スマートタグに関するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=ja)
