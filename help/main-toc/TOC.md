@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: b274d150ccffb93858de6a3a8f7e05441776d0fb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7400'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 99%
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
    + [同じサイト cookie サポート](/help/sites-administering/same-site-cookie-support.md)
    + [Adobe Developer Console での JWT 資格情報の廃止](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
-   + [AEM用の IMS 統合のセットアップ](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
+   + [AEM の IMS 統合の設定](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Sites {#sites}
    + オーサリング {#authoring}
       + AEM オーサリングの基本的なタスク、ツールおよび概念 {#essentials}

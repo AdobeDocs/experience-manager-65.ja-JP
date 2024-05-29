@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: dcb55b3b185fe5dccf52377a12556e33d818e410
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1438'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
    >[!NOTE]
    >
-   >[IMS 統合が S2S OAut で設定されました。](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+   >[IMS 統合が S2S OAuth で設定されるようになりました](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
    >
    >以前は [JWT 資格情報を使用して設定が行われていましたが、この設定は現在 Adobe Developer Console で廃止予定](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)です。
 
