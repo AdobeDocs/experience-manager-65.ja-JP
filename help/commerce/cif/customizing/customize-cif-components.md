@@ -5,7 +5,7 @@ exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 54f2b7fda39f97c4f8a1d28ac51b7b998bf8e4a1
+source-git-commit: ddd411a5dde57cf66cbcb458578b0aa32139b649
 workflow-type: tm+mt
 source-wordcount: '2302'
 ht-degree: 100%
@@ -50,7 +50,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallSinglePackage -Pclassic,cloud
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
 1. 必要な OSGi 設定を追加して、AEM インスタンスを Adobe Commerce インスタンスに接続したり、新しく作成したプロジェクトに設定を追加したりできるようにします。
@@ -392,7 +392,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallSinglePackage -Pclassic,cloud
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
 1. 新しいブラウザーウィンドウを開いて AEM に移動し、**OSGi コンソール**／**ステータス**／**Sling モデル**：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels) に移動します。
@@ -471,7 +471,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallSinglePackage -Pclassic,cloud
+   $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
 1. **Venia ホームページ**（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）を更新します。製品ティーザーが追加されています。
