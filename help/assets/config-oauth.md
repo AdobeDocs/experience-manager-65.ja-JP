@@ -4,10 +4,10 @@ description: スマートコンテンツサービスを使用して、 [!DNL Ado
 role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 109a608db0724050f6e505394da9138855ba992e
+source-git-commit: d8d821a64b39b312168733126de8929c04016ff1
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 52%
+source-wordcount: '1034'
+ht-degree: 50%
 
 ---
 
@@ -41,7 +41,9 @@ OAuth 設定には、次の前提条件が必要です。
    * `com.**adobe**.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
    * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
 
-### オンプレミスユーザーの OAuth の設定 {#steps-config-oauth-onprem}
+### 既存の AMS およびオンプレミス ユーザー用の OAuth 設定 {#steps-config-oauth-onprem}
+
+次の手順は、システム管理者が実行できます。 AMS のお客様は、Adobe担当者に連絡するか、次の手順に従ってサポートチケットを送信できます [サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support).
 
 1. で以下のプロパティを追加または更新します `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
 
@@ -52,14 +54,17 @@ OAuth 設定には、次の前提条件が必要です。
      `auth.token.validator.type="adobe-ims-similaritysearch"`
    * を更新 `auth.token.provider.client.id` を新しい OAuth 設定のクライアント ID に置き換えます。
    * 更新 `auth.access.token.request` 対象： `"https://ims-na1.adobelogin.com/ims/token/v3"`
-2. ファイル名をに変更 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
-3. で以下の手順を実行します `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
+1. ファイル名をに変更 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
+1. で以下の手順を実行します `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
    * 新しい OAuth 統合から、プロパティ auth.ims.client.secret をクライアント秘密鍵で更新します。
    * ファイル名をに変更 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
-4. コンテンツリポジトリ開発コンソール（例：CRXDE）で、すべての変更を保存します。
-5. に移動します。 `/system/console/configMgr` および以下の OSGi 設定を `.<randomnumber>` 対象： `-<randomnumber>`.
-6. の古い OSGi 設定を削除します `"Access Token provider name: adobe-ims-similaritysearch"` 。対象： `/system/console/configMgr`.
-7. コンソールを再起動します。
+1. コンテンツリポジトリ開発コンソール（例：CRXDE）で、すべての変更を保存します。
+<!--
+1. Navigate to `/system/console/configMgr` and replace the OSGi configuration from `.<randomnumber>` to `-<randomnumber>`.
+1. Delete the old OSGi configuration for `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
+-->
+1. 対象： `System/console/configMgr`、の古い設定を削除します `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` およびアクセストークンのプロバイダー名 `adobe-ims-similaritysearch`.
+1. コンソールを再起動します。
 
 ## 設定の検証 {#validate-the-configuration}
 
