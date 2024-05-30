@@ -7,10 +7,10 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
+source-git-commit: 5aff321eb52c97e076c225b67c35e9c6d3371154
 workflow-type: tm+mt
-source-wordcount: '1575'
-ht-degree: 99%
+source-wordcount: '1581'
+ht-degree: 98%
 
 ---
 
@@ -199,4 +199,5 @@ ht-degree: 99%
 >
 >* [概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
 >* [スマートタグの設定](config-smart-tagging.md)
+>* [OAuth 認証情報のスマートタグのトラブルシューティング](config-oauth.md)
 >* [スマートタグに関するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=ja)
