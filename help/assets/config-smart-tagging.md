@@ -6,7 +6,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 45452acf73adc76aacebff9aa0dd42565abbd358
+source-git-commit: 17a8dc53d77dfbc3dc3a4dc2f2176eaba3e1cb7c
 workflow-type: tm+mt
 source-wordcount: '2415'
 ht-degree: 92%
@@ -337,6 +337,6 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 >[!MORELIKETHIS]
 >
->* [OAuth 認証情報のスマートタグのトラブルシューティング](#config-smart-tagging.md)
 >* [概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
+>* [OAuth 認証情報のスマートタグのトラブルシューティング](config-smart-tagging.md)
 >* [スマートタグに関するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=ja)

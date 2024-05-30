@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: b274d150ccffb93858de6a3a8f7e05441776d0fb
-workflow-type: ht
-source-wordcount: '7400'
-ht-degree: 100%
+source-git-commit: 671d35086981b5967c28b399050aef0e070ecddf
+workflow-type: tm+mt
+source-wordcount: '7406'
+ht-degree: 99%
 
 ---
 
@@ -351,6 +351,7 @@ ht-degree: 100%
       + [3D アセットのプレビュー](/help/assets/previewing-3d-assets.md)
       + [フォルダーのアセットとコレクションのレビュー](/help/assets/bulk-approval.md)
       + [拡張スマートタグ](/help/assets/enhanced-smart-tags.md)
+      + [OAuth 認証情報のスマートタグのトラブルシューティング](/help/assets/config-oauth.md)
       + [タイムラインのアクティビティストリーム](/help/assets/activity-stream.md)
       + [アセットの処理](/help/assets/assets-workflow.md)
       + [画像マップを追加](/help/assets/image-maps.md)
