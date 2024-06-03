@@ -8,9 +8,9 @@ docset: aem65
 role: Admin,User
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
-source-wordcount: '2509'
+source-git-commit: 0e2c9c911ae824c55d958180a84f23079bae8263
+workflow-type: tm+mt
+source-wordcount: '2508'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ AEM Forms ユーザーインターフェイスを介した書き出しと読み�
 
 フォームとドキュメントアセットをアップロードするには、以下の手順を実行します。
 
->[!VIDEO](https://vimeo.com/)
+<!--[!VIDEO](https://vimeo.com/)-->
 
 1. AEM Forms インスタンスにログインします。
 1. Experience Manager ![adobeexperiencemanager](assets/adobeexperiencemanager.png) アイコン／ナビゲーション ![コンパス](assets/compass.png) アイコン／フォーム／フォームとドキュメントを選択します。
