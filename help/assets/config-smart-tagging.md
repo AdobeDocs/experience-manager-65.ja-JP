@@ -172,7 +172,7 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 #### オンプレミスユーザーの OAuth の設定 {#steps-config-oauth-onprem}
 
-1.  `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`で以下のプロパティを追加または更新します。
+1. `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`で以下のプロパティを追加または更新します。
 
    * `auth.token.provider.authorization.grants="client_credentials"`
    * `auth.token.provider.orgId="<OrgID>"`
