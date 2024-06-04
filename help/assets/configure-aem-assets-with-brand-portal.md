@@ -10,10 +10,10 @@ role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
-workflow-type: ht
-source-wordcount: '2068'
-ht-degree: 100%
+source-git-commit: ba60ff06097b7f88ad64dda8ad1575bb88743588
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 88%
 
 ---
 
@@ -33,9 +33,11 @@ AEM Assets と Brand Portal の連携は、Adobe 開発者コンソールを通�
 >
 >Adobe 開発者コンソールを使用した AEM Assets と Brand Portal の連携の設定は、AEM 6.5.4.0 以降でサポートされています。
 >
->これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシックインターフェイスで設定されていました。このゲートウェイは、JSON Web トークン（JWT）交換を使用して認証用の IMS トークンを取得します。
+<!--
+>Earlier, Brand Portal was configured via legacy OAuth Gateway, which uses the JSON Web Token (JWT) exchange to obtain an IMS Access token for authorization. 
 >
->旧来の OAuth を使用した設定は、2020年4月6日（PT）以降はサポートされなくなり、Adobe 開発者コンソールを使用した設定に変更されました。
+>Configuration via legacy OAuth Gateway is no longer supported from April 6, 2020, and is changed to Adobe Developer Console.
+-->
 
 >[!TIP]
 >
@@ -84,15 +86,25 @@ AEM をダウンロードしたら、[デプロイとメンテナンス](https:/
 
 ## 設定の作成 {#configure-new-integration-65}
 
+>[!NOTE]
+>
+>2024 年 6 月以降は、新しい JWT 資格情報を作成できません。 今後は、OAuth 認証情報のみが作成されます。 OAuth 設定の作成の詳細を参照してください。
+
 Brand Portal と連携する AEM Assets の設定には、AEM Assets オーサーインスタンスと Adobe 開発者コンソールの両方の設定が必要です。
 
-1. AEM Assets クラウドインスタンスで、IMS アカウントを作成し、公開証明書（公開鍵）を生成します。
 1. Adobe 開発者コンソールで、Brand Portal テナント（組織）用のプロジェクトを作成します。
-1. そのプロジェクトで、公開鍵で API を設定して、サービスアカウント（JWT）接続を作成します。
-1. サービスアカウント資格情報と JWT ペイロード情報を取得します。
-1. AEM Assets で、サービスアカウント資格情報と JWT ペイロードを使用して IMS アカウントを設定します。
-1. AEM Assets で、IMS アカウントと Brand Portal エンドポイント（組織 URL）を使用して Brand Portal Cloud Service を設定します。
-1. AEM Assets から Brand Portal にアセットを公開して、設定をテストします。
+1. Experience Manager Assets で、IMS アカウントと Brand Portal エンドポイント（組織 URL）を使用して Brand Portal クラウドサービスを設定します。
+1. Experience Manager Assets から Brand Portal にアセットを公開して、設定をテストします。
+
+<!--
+1. In AEM Assets, create an IMS account and generate a public certificate (public key).
+1. In Adobe Developer Console, create a project for your Brand Portal tenant (organization).
+1. Under the project, configure an API using the public key to create a service account (JWT) connection.
+1. Get the service account credentials and JWT payload information.
+1. In AEM Assets, configure the IMS account using the service account credentials and JWT payload.
+1. In AEM Assets, configure the Brand Portal cloud service using the IMS account and Brand Portal endpoint (organization URL).
+1. Test your configuration by publishing an asset from AEM Assets to Brand Portal.
+-->
 
 >[!NOTE]
 >
@@ -100,105 +112,125 @@ Brand Portal と連携する AEM Assets の設定には、AEM Assets オーサ�
 
 AEM Assets と Brand Portal を初めて設定する場合は、以下の手順を上記の順序で実行します。
 
-1. [公開証明書の取得](#public-certificate)
-1. [サービスアカウント（JWT）接続の作成](#createnewintegration)
-1. [IMS アカウントの設定](#create-ims-account-configuration)
-1. [Cloud Service の設定](#configure-the-cloud-service)
-1. [設定のテスト](#test-integration)
+### 設定の作成 {#create-new-configuration}
 
-### IMS 設定の作成 {#create-ims-configuration}
+指定した順序で次の手順を実行して、Brand Portal で Experience Manager Assets を設定します。
 
-IMS 設定では、AEM Assets オーサーインスタンスと Brand Portal テナントの連携を認証します。
+1. [Adobe Developer コンソールで OAuth 資格情報を設定します。](#config-oauth)
+1. [OAuth を使用した新しいAdobe IMS統合の作成](#create-ims-account-configuration)
+1. [Cloud Service の設定](#configure-cloud-service)
 
-IMS 設定には、次の 2 つの手順が含まれます。
+#### Adobe Developer コンソールで OAuth 資格情報を設定します。 {#config-oauth}
 
-* [公開証明書の取得](#public-certificate)
-* [IMS アカウントの設定](#create-ims-account-configuration)
+[Adobe Developer コンソールで OAuth 資格情報を設定します。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)  「Brand Portal API」を選択します。
 
-### 公開証明書の取得 {#public-certificate}
+#### OAuth を使用した新しいAdobe IMS統合の作成 {#create-ims-account-configuration}
 
-公開鍵（証明書）は、Adobe 開発者コンソールでプロファイルを認証します。
+[OAuth を使用した新しいAdobe IMS統合の作成](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) ドロップダウンから「Brand Portal」を選択します。
 
-1. AEM Assets オーサーインスタンスにログインします。デフォルトの URL は `http://localhost:4502/aem/start.html` です。
+#### Cloud Service の設定 {#configure-cloud-service}
 
-1. **ツール**![ツール](assets/do-not-localize/tools.png)パネルで、**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。
+<!--
+1. [Obtain a public certificate](#public-certificate)
+1. [Create service account (JWT) connection](#createnewintegration) 
+1. [Configure an IMS account](#create-ims-account-configuration)
+1. [Configure cloud service](#configure-cloud-service)
+1. [Test configuration](#test-integration)
+-->
+<!--
+### Create IMS configuration {#create-ims-configuration}
 
-1. Adobe IMS 設定ページで、「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL Adobe IMS 技術アカウント設定]**&#x200B;ページにリダイレクトされます。デフォルトでは、「**証明書**」タブが開きます。
+The IMS configuration authenticates your AEM Assets Author instance with the Brand Portal tenant. 
 
-1. 「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで「**[!UICONTROL Adobe Brand Portal]**」を選択します。
+IMS configuration includes two steps:
 
-1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスをオンにして、公開鍵の **エイリアス** を指定します。エイリアスは公開鍵の名前として機能します。
+* [Obtain a public certificate](#public-certificate) 
+* [Configure an IMS account](#create-ims-account-configuration)
 
-1. 「**[!UICONTROL 証明書を作成]**」をクリックします。「**[!UICONTROL OK]**」をクリックして公開証明書を生成します。
+### Obtain public certificate {#public-certificate}
 
-   ![証明書を作成](assets/ims-config2.png)
+The public key (certificate) authenticates your profile on Adobe Developer Console.
 
-1. **[!UICONTROL 公開鍵をダウンロード]**&#x200B;アイコンをクリックして、公開鍵（.crt）ファイルをローカルマシンに保存します。
+1. Log in to your AEM Assets Author instance. The default URL is `http://localhost:4502/aem/start.html`.
 
-   この公開鍵を後で使用して、Brand Portal テナントの API を設定し、Adobe 開発者コンソールでサービスアカウント資格情報を生成します。
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
-   ![証明書をダウンロード](assets/ims-config3.png)
+1. In the Adobe IMS Configurations page, click **[!UICONTROL Create]**. It redirects to the **[!UICONTROL Adobe IMS Technical Account Configuration]** page. By default, the **Certificate** tab opens.
 
-1. 「**[!UICONTROL 次へ]**」をクリックします。
+1. Select **[!UICONTROL Adobe Brand Portal]** in the **[!UICONTROL Cloud Solution]** dropdown list.  
 
-   「**アカウント**」タブで、Adobe IMS アカウントが作成されます。このアカウントには、Adobe 開発者コンソールで生成されたサービスアカウント資格情報が必要です。このページは開いたままにしておきます。
+1. Select the **[!UICONTROL Create new certificate]** check box and specify an **alias** for the public key. The alias serves as the name of the public key. 
 
-   新しいタブを開き、[Adobe 開発者コンソールでサービスアカウント（JWT）接続を作成](#createnewintegration)して、IMS アカウントを設定するための資格情報と JWT ペイロードを取得します。
+1. Click **[!UICONTROL Create certificate]**. Then, click **[!UICONTROL OK]** to generate the public key.
 
-### サービスアカウント（JWT）接続を作成 {#createnewintegration}
+   ![Create Certificate](assets/ims-config2.png)
 
-Adobe 開発者コンソールで、プロジェクトと API を Brand Portal テナント（組織）レベルで設定します。API を設定すると、サービスアカウント（JWT）接続が作成されます。API を設定するには、キーペア（秘密鍵と公開鍵）を生成する方法と、公開鍵をアップロードする方法の 2 とおりがあります。AEM Assets と Brand Portal の統合を設定するには、AEM Assets で公開鍵（証明書）を生成し、その公開鍵をアップロードして Adobe 開発者コンソールで資格情報を作成する必要があります。これらの資格情報は、AEM Assets で IMS アカウントを設定するために必要です。IMS アカウントを設定したら、AEM Assets に Brand Portal Cloud Service を設定できます。
+1. Click the **[!UICONTROL Download Public Key]** icon and save the public key (.crt) file on your machine. 
 
-サービスアカウント資格情報と JWT ペイロードを作成するには、以下の手順を実行します。
+   The public key is used later to configure the API for your Brand Portal tenant and generate service account credentials in Adobe Developer Console.
 
-1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトの URL は [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui) です。
+   ![Download Certificate](assets/ims-config3.png)
+
+1. Click **[!UICONTROL Next]**. 
+
+   In the **Account** tab, an Adobe IMS account is created which requires the service account credentials that are generated in Adobe Developer Console. Keep this page open for now.
+
+   Open a new tab and [create a service account (JWT) connection in Adobe Developer Console](#createnewintegration) so you can get the credentials and JWT payload for configuring the IMS account. 
+
+### Create the service account (JWT) connection {#createnewintegration}
+
+In Adobe Developer Console, projects and APIs are configured at the Brand Portal tenant (organization) level. Configuring an API creates a service account (JWT) connection. There are two methods to configure the API, by generating a key pair (private and public keys) or by uploading a public key. To configure AEM Assets with Brand Portal, you must generate a public key (certificate) in AEM Assets and create credentials in Adobe Developer Console by uploading the public key. These credentials are required to configure the IMS account in AEM Assets. Once the IMS account is configured, you can configure the Brand Portal cloud service in AEM Assets.
+
+To create the service account credentials and JWT payload, do the following:
+
+1. Log in to Adobe Developer Console with system administrator privileges on the IMS organization (Brand Portal tenant). The default URL is [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui).
 
 
    >[!NOTE]
    >
-   >右上隅のドロップダウン（組織）リストから正しい IMS 組織（Brand Portal テナント）が選択されていることを確認します。
+   >Ensure that you have selected the correct IMS organization (Brand Portal tenant) from the drop-down (organization) list in the upper-right corner.
 
-1. 「**[!UICONTROL 新規プロジェクトを作成]**」をクリックします。システムで生成された名前を持つ空のプロジェクトが組織に対して作成されます。
+1. Click **[!UICONTROL Create new project]**. A blank project with a system-generated name is created for your organization. 
 
-   「**[!UICONTROL プロジェクトを編集]**」をクリックして、「**[!UICONTROL プロジェクトタイトル]**」と「**[!UICONTROL 説明]**」を更新し、「**[!UICONTROL 保存]**」をクリックします。
+   Click **[!UICONTROL Edit project]** so you can update the **[!UICONTROL Project Title]** and **[!UICONTROL Description]**, and click **[!UICONTROL Save]**.
+   
+1. In the **[!UICONTROL Project overview]** tab, click **[!UICONTROL Add API]**.
 
-1. 「**[!UICONTROL プロジェクトの概要]**」タブで、「**[!UICONTROL API を追加]**」をクリックします。
+1. In the **[!UICONTROL Add an API window]**, select **[!UICONTROL AEM Brand Portal]** and click **[!UICONTROL Next]**. 
 
-1. **[!UICONTROL API を追加]**&#x200B;ウィンドウで、「**[!UICONTROL AEM Brand Portal]**」を選択し、「**[!UICONTROL 次へ]**」をクリックします。
+   Ensure that you have access to the AEM Brand Portal service.
 
-   AEM Brand Portal サービスにアクセスできることを確認します。
+1. In the **[!UICONTROL Configure API]** window, click **[!UICONTROL Upload your public key]**. Then, click **[!UICONTROL Select a File]** and upload the public key (.crt file) that you have downloaded in the [obtain public certificate](#public-certificate) section. 
 
-1. **[!UICONTROL API を設定]**&#x200B;ウィンドウで、「**[!UICONTROL 公開鍵をアップロード]**」をクリックします。次に、「**[!UICONTROL ファイルを選択]**」をクリックし、[公開証明書の取得](#public-certificate)のセクションでダウンロードした公開鍵（.crt ファイル）をアップロードします。
+   Click **[!UICONTROL Next]**.
 
-   「**[!UICONTROL 次へ]**」をクリックします。
+   ![Upload Public Key](assets/service-account3.png)
 
-   ![「公開鍵をアップロード」](assets/service-account3.png)
+1. Verify the public key and click **[!UICONTROL Next]**.
 
-1. 公開鍵を確認し、「**[!UICONTROL 次へ]**」をクリックします。
-
-1. デフォルトの製品プロファイルとして「**[!UICONTROL Assets Brand Portal]**」を選択し、「**[!UICONTROL 設定済み API を保存]**」をクリックします。
-
-   <!-- 
+1. Select **[!UICONTROL Assets Brand Portal]** as the default product profile and click **[!UICONTROL Save configured API]**. 
+-->
+<!-- 
    In Brand Portal, a default profile is created for each organization. The Product Profiles are created in admin console for assigning users to groups (based on the roles and permissions). For configuration with Brand Portal, the OAuth token is created at organization level. Therefore, you must configure the default Product Profile for your organization. 
    -->
+<!--
+   ![Select Product Profile](assets/service-account4.png)
 
-   ![製品プロファイルを選択](assets/service-account4.png)
-
-1. API が設定されると、API の概要ページにリダイレクトされます。「**[!UICONTROL 資格情報]**」の下の左側のナビゲーションで「**[!UICONTROL サービスアカウント（JWT）]**」オプションをクリックします。
+1. Once the API is configured, you are redirected to the API overview page. From the left navigation under **[!UICONTROL Credentials]**, click the **[!UICONTROL Service Account (JWT)]** option.
 
    >[!NOTE]
    >
-   >資格情報を表示し、JWT トークンの生成、資格情報の詳細のコピー、クライアントの秘密鍵の取得などのアクションを実行できます。
+   >You can view the credentials and perform actions such as generate JWT tokens, copy credential details, and retrieve client secret.
 
-1. 「**[!UICONTROL クライアント資格情報]**」タブから、**[!UICONTROL クライアント ID]** をコピーします。
+1. From the **[!UICONTROL Client Credentials]** tab, copy the **[!UICONTROL client ID]**. 
 
-   「**[!UICONTROL クライアント秘密鍵を取得]**」をクリックし、**[!UICONTROL クライアントの秘密鍵]**&#x200B;をコピーします。
+   Click **[!UICONTROL Retrieve Client Secret]** and copy the **[!UICONTROL client secret]**.
 
-   ![サービスアカウント資格情報](assets/service-account5.png)
+   ![Service Account Credentials](assets/service-account5.png)
 
-1. 「**[!UICONTROL JWT を生成]**」タブに移動し、**[!UICONTROL JWT ペイロード]**&#x200B;情報をコピーします。
+1. Navigate to the **[!UICONTROL Generate JWT]** tab and copy the **[!UICONTROL JWT Payload]** information. 
 
-これで、クライアント ID（API キー）、クライアントの秘密鍵、JWT ペイロードを使用して、AEM Assets に [IMS アカウントを設定](#create-ims-account-configuration)できるようになりました。
+You can now use the client ID (API key), client secret, and JWT payload to [configure the IMS account](#create-ims-account-configuration) in AEM Assets.
 
 <!--
 ### Create Adobe I/O integration {#createnewintegration}
@@ -243,43 +275,42 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    The API Key, Client Secret key, and JWT payload information that is used to create IMS account configuration.
 -->
+<!--
+### Configure the IMS account {#create-ims-account-configuration}
 
-### IMS アカウントの設定 {#create-ims-account-configuration}
+Ensure that you have already performed the following steps:
 
-次の手順を既に実行したことを確認します。
+* [Obtain a public certificate](#public-certificate)
+* [Create service account (JWT) connection](#createnewintegration)
 
-* [公開証明書の取得](#public-certificate)
-* [サービスアカウント（JWT）接続の作成](#createnewintegration)
+To configure the IMS account: 
 
-IMS アカウントを設定するには：
+1. Open the IMS Configuration and navigate to the **[!UICONTROL Account]** tab. You kept the page open while [obtaining the public certificate](#public-certificate).
 
-1. IMS 設定を開き、「**[!UICONTROL アカウント]**」タブに移動します。[公開証明書の取得](#public-certificate)中も、ページは開いたままになっています。
+1. Specify a **[!UICONTROL Title]** for the IMS account.
 
-1. IMS アカウントの&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定します。
+   In the **[!UICONTROL Authorization Server]** field, specify the URL: [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/).  
 
-   「**[!UICONTROL 認証サーバー]**」フィールドに、URL を [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) と指定します。
+   Specify client ID in the **[!UICONTROL API key]** field, **[!UICONTROL Client Secret]**, and **[!UICONTROL Payload]** (JWT payload) that you have copied while [creating the service account (JWT) connection](#createnewintegration).
 
-   **[!UICONTROL API キー]**&#x200B;にクライアント ID を指定し、[サービスアカウント（JWT）接続の作成](#createnewintegration)時にコピーした&#x200B;**[!UICONTROL クライアントの秘密鍵]**&#x200B;と&#x200B;**[!UICONTROL ペイロード]**（JWT ペイロード）を貼り付けます。
+   Click **[!UICONTROL Create]**.
 
-   「**[!UICONTROL 作成]**」をクリックします。
+   The IMS account is configured. 
 
-   IMS アカウントが設定されます。
+   ![IMS Account configuration](assets/create-new-integration6.png)
+   
+1. Select the IMS account configuration and click **[!UICONTROL Check Health]**.
 
-   ![IMS アカウントの設定](assets/create-new-integration6.png)
+   Click **[!UICONTROL Check]** in the dialog box. On successful configuration, a message appears that the *Token is retrieved successfully*.
 
-1. その IMS アカウント設定を選択し、「**[!UICONTROL 正常性をチェック]**」をクリックします。
-
-   ダイアログボックスの「**[!UICONTROL チェック]**」をクリックします。正常に設定されると、*トークンが正常に取得されました*&#x200B;というメッセージが表示されます。
-
-   ![正常な設定の確認ダイアログ](assets/create-new-integration5.png)
+   ![Healthy Configuration confirmation dialog](assets/create-new-integration5.png)
 
 >[!CAUTION]
 >
->IMS 設定は 1 つだけにする必要があります。
+>You must have only one IMS configuration.
 >
->IMS 設定がヘルスチェックに合格していることを確認します。設定がヘルスチェックに合格しない場合は無効です。削除して、別の有効な設定を作成します。
-
-### Brand Portal Cloud Service の設定 {#configure-the-cloud-service}
+>Ensure that the IMS configuration passes the health check. If the configuration does not pass the health check, it is invalid. Delete it and create another valid configuration.
+-->
 
 1. AEM Assets オーサーインスタンスにログインします。
 
@@ -299,120 +330,110 @@ IMS アカウントを設定するには：
 
    これで、AEM Assets オーサーインスタンスと Brand Portal テナントの連携が設定されました。
 
-### 設定のテストと検証 {#test-integration}
+<!--
 
-1. AEM Assets クラウドインスタンスにログインします。
+### Test and validate the configuration {#test-integration}
 
-1. **ツール**&#x200B;の![ツール](assets/do-not-localize/tools.png)パネルで、**[!UICONTROL デプロイメント]**／**[!UICONTROL レプリケーション]**&#x200B;に移動します。
+1. Log in to your AEM Assets cloud instance.
 
-   ![ツールパネル](assets/test-integration1.png)
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
-1. レプリケーションページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
+   ![The Tools panel](assets/test-integration1.png)
 
-   ![レプリケーションページ](assets/test-integration2.png)
+1. In the Replication page, click **[!UICONTROL Agents on Author]**.
 
-   Brand Portal テナントのために作成された 4 つのレプリケーションエージェントを表示できます。
+   ![Replication page](assets/test-integration2.png)
 
-   Brand Portal テナントのレプリケーションエージェントを探し、レプリケーションエージェントの URL をクリックします。
+   You can see the four replication agents created for your Brand Portal tenant. 
 
-   ![アセットのレプリケーション設定](assets/test-integration3.png)
+   Locate the replication agents of your Brand Portal tenant and click the replication agent URL. 
+
+   ![Assets replication configuration](assets/test-integration3.png)
 
    >[!NOTE]
    >
-   >レプリケーションエージェントは並行して動作し、ジョブを均等に分配するので、公開の速度が元の速度の 4 倍に向上します。Cloud Service を設定した後、レプリケーションエージェントを有効にするために追加の設定は必要ありません。レプリケーションエージェントはデフォルトでアクティベートされ、複数のアセットを並行して公開できるようになります。
+   >The replication agents work in parallel and share the job distribution equally, so that it increases the publishing speed by four times the original speed. After the cloud service is configured, additional configuration is not required to enable the replication agents that are activated by default to enable parallel publishing of multiple assets.
 
-1. AEM Assets と Brand Portal の間の接続を確認するには、**[!UICONTROL 接続をテスト]**&#x200B;アイコンをクリックします。
+1. To verify the connection between AEM Assets and Brand Portal, click the **[!UICONTROL Test Connection]** icon.
 
-   ![アセットのレプリケーション設定の検証](assets/test-integration4.png)
+   ![Verifying the assets replication settings](assets/test-integration4.png)
 
-   *テストパッケージが正常に配信された*&#x200B;ことを示すメッセージが表示されます。
+   A message appears that your *test package is successfully delivered*.
 
-   ![テストの確認出力](assets/test-integration5.png)
+   ![Test confirmation output](assets/test-integration5.png)
 
-1. 4 つのレプリケーションエージェントすべてでテスト結果を確認します。
+1. Verify the test results on all four replication agents.
 
 
    >[!NOTE]
    >
-   >どのレプリケーションエージェントも無効にしないでください。一部のアセットのレプリケーション（キューで実行中）が失敗する可能性があります。
+   >Avoid disabling any of the replication agents, as it can cause the replication of the assets (running-in-queue) to fail.
    >
-   >タイムアウトエラーを避けるために、4 つのレプリケーションエージェントすべてが設定されていることを確認します。[Brand Portal への並列公開における問題のトラブルシューティング](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=ja#connection-timeout)を参照してください。
+   >Ensure that all the four replication agents are configured to avoid timeout error. See [troubleshoot issues in parallel publishing to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
    >
-   >自動生成された設定は変更しないでください。
+   >Do not modify any autogenerated settings.
 
-次の操作が可能になっています。
+You can now:
 
-* [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
-* [Brand Portal から AEM Assets への公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=ja) - Brand Portal でのアセットのソーシング
-* [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
-* [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
-* [Brand Portal へのプリセット、スキーマ、ファセットの公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html?lang=ja)
-* [Brand Portal へのタグの公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html?lang=ja)
+* [Publish assets from AEM Assets to Brand Portal](../assets/brand-portal-publish-assets.md)
+* [Publish assets from Brand Portal to AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Asset Sourcing in Brand Portal 
+* [Publish folders from AEM Assets to Brand Portal](../assets/brand-portal-publish-folder.md)
+* [Publish collections from AEM Assets to Brand Portal](../assets/brand-portal-publish-collection.md) 
+* [Publish presets, schemas, and facets to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Publish tags to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
-詳しくは、[Brand Portal のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=ja)を参照してください。
+See the [Brand Portal documentation](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) for more information.
 
-
-## 設定のアップグレード {#upgrade-integration-65}
-
-既存の設定を Adobe Developer Console にアップグレードするには、次の手順を、指定された順序で実行します。
-
-1. [実行中のジョブの検証](#verify-jobs)
-1. [既存の設定を削除](#delete-existing-configuration)
-1. [設定の作成](#configure-new-integration-65)
-
-### 実行中のジョブの検証 {#verify-jobs}
-
-編集する前に、AEM Assets オーサーインスタンスで公開ジョブが実行されていないことを確認してください。そのため、4 つのレプリケーションエージェントすべてでアクティブジョブのステータスを確認し、キューがアイドル状態であることを確認できます。
-
-1. AEM Assets オーサーインスタンスにログインします。
-
-1. **ツール**&#x200B;の![ツール](assets/do-not-localize/tools.png)パネルで、**[!UICONTROL デプロイメント]**／**[!UICONTROL デプロイメントレプリケーション]**&#x200B;に移動します。
-
-1. レプリケーションページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
-
-   ![アセットのレプリケーションエージェント](assets/test-integration2.png)
-
-1. Brand Portal テナントのレプリケーションエージェントを見つけます。
-
-   すべてのレプリケーションエージェントに対して&#x200B;**キューが待機中**&#x200B;で、アクティブな公開ジョブがないことを確認します。
-
-   ![レプリケーションキューの設定](assets/test-integration3.png)
-
-### 既存の設定を削除 {#delete-existing-configuration}
-
-既存の設定を削除する際は、次のチェックリストを実行する必要があります。
-
-* 4 つのレプリケーションエージェントをすべて削除
-* Brand Portal Cloud Service の削除
-* MAC ユーザーを削除
-
-1. AEM Assets オーサーインスタンスにログインし、管理者として CRX Lite を開きます。デフォルトの URL は `http://localhost:4502/crx/de/index.jsp` です。
-
-1. `/etc/replications/agents.author` に移動して、Brand Portal テナントの 4 つのレプリケーションエージェントをすべて削除します。
-
-   ![CRXDE のレプリケーションエージェント](assets/delete-replication-agent.png)
-
-1. `/etc/cloudservices/mediaportal` に移動して、Brand Portal クラウドサービス設定を削除します。
-
-   ![CRXDE でのレプリケーションエージェントの詳細](assets/delete-cloud-service.png)
-
-1. `/home/users/mac` に移動して、Brand Portal テナントの **Mac ユーザー**&#x200B;を削除します。
-
-   ![CRXDE でのレプリケーションエージェントのさらなる詳細](assets/delete-mac-user.png)
-
-
-AEM 6.5 オーサーインスタンスの Adobe 開発者コンソールを使用して、[設定を作成](#configure-new-integration-65)できます。
-
-
-
+-->
 <!--
-   Comment Type: draft
+## Upgrade configuration {#upgrade-integration-65}
 
-   <li> </li>
-   -->
+To upgrade your existing configurations to Adobe Developer Console, do the following steps, in the listed sequence : 
 
-<!--
-   Comment Type: draft
+1. [Verify running jobs](#verify-jobs)
+1. [Delete existing configurations](#delete-existing-configuration)
+1. [Create configuration](#configure-new-integration-65)
 
-   <li>Step text</li>
-   -->
+### Verify running jobs {#verify-jobs}
+
+Ensure that no publishing job is running on your AEM Assets Author instance before you make any edits. For that, you can verify the status of active jobs on all the four replication agents and ensure that the queues are idle.  
+
+1. Log in to your AEM Assets Author instance.
+
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Deployment Replication]**.
+
+1. In the Replication page, click **[!UICONTROL Agents on Author]**.
+
+   ![Replication agents for assets](assets/test-integration2.png)
+
+1. Locate the replication agents of your Brand Portal tenant. 
+   
+   Ensure that the **Queue is Idle** for all the replication agents, and no publishing job is active. 
+
+   ![Replication queue settings](assets/test-integration3.png)
+
+### Delete existing configurations {#delete-existing-configuration}
+
+Run the following checklist while deleting the existing configurations:
+
+* Delete all four replication agents
+* Delete Brand Portal cloud service
+* Delete Mac user 
+
+1. Log in to your AEM Assets Author instance and open CRX Lite as an administrator. The default URL is `http://localhost:4502/crx/de/index.jsp`.
+
+1. Navigate to `/etc/replications/agents.author` and delete all the four replication agents of your Brand Portal tenant.
+
+   ![Replication agent in CRXDE](assets/delete-replication-agent.png)
+
+1. Navigate to `/etc/cloudservices/mediaportal` and delete the Brand Portal cloud service configuration.
+
+   ![Detail of replication agent in CRXDE](assets/delete-cloud-service.png)
+
+1. Navigate to `/home/users/mac` and delete the **Mac user** of your Brand Portal tenant.
+
+   ![More detail of replication agent in CRXDE](assets/delete-mac-user.png)
+
+
+You can now [create a configuration](#configure-new-integration-65) by way of the Adobe Developer Console on your AEM 6.5 Author instance. 
+-->
