@@ -10,10 +10,10 @@ role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: ba60ff06097b7f88ad64dda8ad1575bb88743588
+source-git-commit: 2a6cf0e85aace1516818ce87bc35b1b35f3da6e8
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 88%
+source-wordcount: '672'
+ht-degree: 86%
 
 ---
 
@@ -45,11 +45,12 @@ AEM Assets と Brand Portal の連携は、Adobe 開発者コンソールを通�
 >
 >Adobeでは、既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシーの OAuth Gateway 設定で問題が発生した場合は、既存の設定を削除し、Adobe Developer Console を使用して設定を作成します。
 
-このヘルプでは、次の 2 つのユースケースについて説明します。
+<!--
+This help describes the following two use-cases:
 
-* [新しい設定](#configure-new-integration-65)：新しい Brand Portal ユーザーが、Brand Portal を使用して AEM Assets オーサーインスタンスを設定する場合は、Adobe Developer Console で設定を作成できます。
-* [設定のアップグレード](#upgrade-integration-65)：レガシーの OAuth ゲートウェイを使用して設定を行っている既存の Brand Portal ユーザーの場合は、Adobe Developer Console で既存の設定を削除し、新しい設定を作成します。
-
+* [New configuration](#configure-new-integration-65): If you are a new Brand Portal user and want to configure your AEM Assets Author instance with Brand Portal, you can create a configuration by way of the Adobe Developer Console. 
+* [Upgrade configuration](#upgrade-integration-65): If you are an existing Brand Portal user having configuration on legacy OAuth Gateway, delete the existing configuration and create a configuration by way of Adobe Developer Console.
+-->
 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
 * Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理
@@ -112,7 +113,7 @@ Brand Portal と連携する AEM Assets の設定には、AEM Assets オーサ�
 
 AEM Assets と Brand Portal を初めて設定する場合は、以下の手順を上記の順序で実行します。
 
-### 設定の作成 {#create-new-configuration}
+### 新しい設定の作成 {#create-new-configuration}
 
 指定した順序で次の手順を実行して、Brand Portal で Experience Manager Assets を設定します。
 
