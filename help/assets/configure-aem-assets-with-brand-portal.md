@@ -11,9 +11,9 @@ exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 2a6cf0e85aace1516818ce87bc35b1b35f3da6e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '672'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -53,9 +53,9 @@ This help describes the following two use-cases:
 -->
 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
-* Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理
+* Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理。
 
-* Linux® オペレーティングシステムと Microsoft® Windows オペレーティングシステムの使用
+* Linux® オペレーティングシステムと Microsoft® Windows オペレーティングシステムの使用 。
 
 ## 前提条件 {#prerequisites}
 
