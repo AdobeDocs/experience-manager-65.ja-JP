@@ -8,8 +8,8 @@ docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: ht
+source-git-commit: c49bff425ccbd00480e5b17fa50ca8f25df80d2f
+workflow-type: tm+mt
 source-wordcount: '4010'
 ht-degree: 100%
 
@@ -545,6 +545,26 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 - [JEE デプロイメント上でのシングルサーバー AEM Forms の導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_65_jp)
 - [クラスター化された AEM Forms on JEE の導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65_jp)
 
+### Adobe Acrobat と Adobe Reader {#adobe-acrobat-and-adobe-reader}
+
+<table>
+ <tbody>
+  <tr>
+   <th><p><strong>Acrobat および Adobe Reader（Base）</strong></p> </th>
+   <th><p><strong>サポートされているパッチ定義</strong></p> </th>
+  </tr>
+  <tr>
+   <td>Acrobat 2020（クラシックトラック）</td>
+   <td>バージョン 20.004.30006 以降<br /> </td>
+  </tr>
+
+</tbody>
+</table>
+
+>[!NOTE]
+>
+>Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html) を参照してください。
+
 ## JEE 上の AEM Forms でサポートされているクライアント {#supported-clients-for-aem-forms-on-jee}
 
 ### ワークベンチ {#workbench}
@@ -591,26 +611,6 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 - Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC
 - Designer をインストールするための管理者権限。
 - Microsoft® Visual C++ 2019（VC 14.28 以降）32 ビットランタイム
-
-### Adobe Acrobat と Adobe Reader {#adobe-acrobat-and-adobe-reader}
-
-<table>
- <tbody>
-  <tr>
-   <th><p><strong>Acrobat および Adobe Reader（Base）</strong></p> </th>
-   <th><p><strong>サポートされているパッチ定義</strong></p> </th>
-  </tr>
-  <tr>
-   <td>Acrobat 2020（クラシックトラック）</td>
-   <td>バージョン 20.004.30006 以降<br /> </td>
-  </tr>
-
-</tbody>
-</table>
-
->[!NOTE]
->
->Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html) を参照してください。
 
 ### ブラウザー {#browsers}
 
