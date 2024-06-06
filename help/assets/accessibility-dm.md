@@ -8,9 +8,9 @@ feature: Accessibility
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
-source-wordcount: '585'
+source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
+workflow-type: tm+mt
+source-wordcount: '583'
 ht-degree: 100%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 100%
 
 Dynamic Media では、字幕を使用したビデオおよびアダプティブビデオセットの配信がサポートされています。キャプションは、ビデオコンテンツの上に表示する必要があります。
 
-詳しくは、 [Dynamic Media のビデオ — ビデオへの字幕やサブタイトルの追加](/help/assets/video.md#adding-captions-to-video)を参照してください。
+[Dynamic Media のビデオ - ビデオへのクローズドキャプションの追加](/help/assets/video.md#adding-captions-to-video)を参照してください。
 
 >[!MORELIKETHIS]
 >
