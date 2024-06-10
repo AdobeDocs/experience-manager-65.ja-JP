@@ -12,9 +12,9 @@ role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: aeb243421ed2212625e85c3d5b76322e4c33f1d2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '11201'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -449,7 +449,7 @@ DASH（Digital Adaptive Streaming over HTTP）は、ビデオストリーミン�
 >
 >Dynamic Media アカウントで複数のキャプションおよびオーディオトラックのサポートを有効化する&#x200B;*前*&#x200B;にアップロードしたビデオは、[再処理する必要があります](/help/assets/processing-profiles.md#reprocessing-assets)。このビデオ再処理の手順は、複数のキャプションとオーディオトラック機能を使用できるようにするために必要です。再処理後も、ビデオ URL は引き続き通常通り動作し、再生することができます。
 
-**Dynamic Media アカウントで DASH、複数キャプション、複数のオーディオトラックのサポートを有効にするには：**
+**Dynamic Media アカウントで DASH、複数のキャプションおよび複数のオーディオトラックのサポートを有効にするには次の手順に従います。**
 
 <!-- 1. **Configure Dynamic Media for DASH** - In Dynamic Media on Experience Manager 6.5, navigate to [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 
@@ -468,7 +468,7 @@ DASH（Digital Adaptive Streaming over HTTP）は、ビデオストリーミン�
 
    * 主要連絡先の氏名、メールアドレス、電話番号。
    * Dynamic Media アカウントの名前。
-   * Experience Manager 6.5 で、Dynamic Media アカウントで DASH、複数キャプション、複数のオーディオトラックのサポートを有効にするように指定します。
+   * Experience Manager 6.5 の Dynamic Media アカウントで DASH、複数のキャプションおよび複数のオーディオトラックのサポートを有効にするように指定します。
 
 1. アドビカスタマーサポートでは、リクエストが送信された順序に基づいて、お客様の待機リストに追加します。
 1. リクエストを処理する準備が整った時点で、カスタマーサポートから連絡を差し上げ、有効化するための調整と日取り設定を行います。
@@ -651,7 +651,7 @@ Dynamic Media で複数のキャプションおよびオーディオトラック
      | ファイル名 | デフォルトのファイル名は、元のファイル名から派生します。ファイル名はアップロード時にのみ変更でき、後で変更することはできません。ファイル名の文字数の要件は、AEM Assets と同じです。<br>追加のキャプションファイルとオーディオトラックファイルに同じファイル名を使用することはできません。 |
      | 言語 | キャプションの言語を選択します。 |
      | タイプ | 使用するキャプションのタイプを選択します。<br>**キャプション** - ダイアログを翻訳または文字起こししたビデオと共に表示されるキャプションテキスト。<br>**キャプション** – キャプションテキストには、会話の翻訳または文字起こしとともに、背景雑音、スピーカーの区別、その他の関連情報も含まれているので、聴覚障害のあるユーザーにとってコンテンツがよりアクセスしやすくなります。 |
-     | ラベル | メディアプレーヤーの&#x200B;**[!UICONTROL オーディオまたはキャプションを選択]**&#x200B;ポップアップリストのキャプションの名前に表示されるテキスト。ラベルは、キャプショントラックに対応する、顧客に表示されるものです。 例えば、`English (CC)` のように指定します。 |
+     | ラベル | メディアプレーヤーの&#x200B;**[!UICONTROL オーディオまたはキャプションを選択]**&#x200B;ポップアップリストのキャプションの名前に表示されるテキスト。ラベルは、ユーザーに表示される内容であり、キャプショントラックに対応します。例えば、`English (CC)` のように指定します。 |
 
      必要に応じて、後でキャプションメタデータを変更または編集できます。ビデオが公開されると、これらの詳細が公開されたビデオの公開 URL に反映されます。
 
@@ -676,7 +676,7 @@ Dynamic Media で複数のキャプションおよびオーディオトラック
    >インスタンスのキャッシュ設定に基づき、メタデータ処理がプレビューおよび公開済み URL に反映されるまでに数分かかる場合があります。
 
 1. （オプション）前の手順で「**[!UICONTROL 保存]**」を選択する代わりに「**[!UICONTROL 保存して閉じる]**」を選択した場合でも、アップロードしたファイルの処理ステータスを表示できます。詳しくは、[アップロードされたキャプションファイルとオーディオトラックファイルのライフサイクルステータスを表示する](#lifecycle-status-video)を参照してください。
-1. （オプション）公開する前にビデオをプレビューして、キャプションとオーディオが期待どおりに動作することを確認します。参照： [複数のキャプショントラックとオーディオトラックを持つビデオのプレビュー](#preview-video-audio-subtitle)
+1. （オプション）公開する前にビデオをプレビューして、キャプションとオーディオが期待どおりに動作することを確認します。詳しくは、[複数のキャプションとオーディオトラックがあるビデオのプレビュー](#preview-video-audio-subtitle)を参照してください。
 1. ビデオを公開します。詳しくは、[アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
 #### 既に公開されているビデオへのキャプションとオーディオトラックのファイルの追加について
@@ -757,9 +757,9 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 1. 右上隅で「 **[!UICONTROL 保存して閉じる]**」を選択します。
 1. ビデオを公開します。詳しくは、[アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
-### 複数のキャプショントラックとオーディオトラックを持つビデオのプレビュー{#preview-video-audio-subtitle}
+### 複数のキャプションとオーディオトラックがあるビデオのプレビュー{#preview-video-audio-subtitle}
 
-キャプションファイルとオーディオトラックファイルをビデオにアップロードして処理した後、Dynamic Media ビデオビューア（または必要に応じて他の種類のビューア）を使用して、すべての異なるトラックをプレビューできます。 プレビューを使用すると、ビデオが顧客にどのように見え、どのように聞こえるかを確認し、期待どおりに動作していることを確認できます。
+キャプションファイルとオーディオトラックファイルをビデオにアップロードして処理した後、Dynamic Media ビデオビューアー（または必要に応じて他のビューアータイプ）を使用して、様々なトラックをプレビューできます。プレビューを使用すると、ビデオが顧客にどのように見え、どのように聞こえるかを確認し、期待どおりに動作していることを確認できます。
 
 ビデオに満足したら、次のいずれかの方法を使用して[公開](publishing-dynamicmedia-assets.md)できます。
 
@@ -781,7 +781,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 
    ![ビューアードロップダウンリストからのビデオビューアーの選択。](assets-dm/msma-dmviewerselected.png)
 
-1. 右下隅付近のボリュームアイコンの左側にある吹き出しアイコンを選択し、聞きたい、見たい、またはその両方を行いたいオーディオまたはキャプションを選択します。必要に応じて、「キャプション」で次の項目を選択できます **[!UICONTROL オフ]** に設定します（キャプションを表示しません）。
+1. 右下隅付近のボリュームアイコンの左側にある吹き出しアイコンを選択し、聞きたい、見たい、またはその両方を行いたいオーディオまたはキャプションを選択します。必要に応じて、「キャプション」で「**[!UICONTROL オフ]**」を選択すると、キャプションを非表示にすることができます。
 
    ![ビデオビューアーのオーディオとキャプションのポップアップリスト。](assets-dm/msma-selectaudiosubtitle.png)*ビデオ再生用のオーディオとキャプションを選択するユーザーのシミュレーション。*
 
@@ -862,7 +862,7 @@ Dynamic Media では、キャプションファイルを JSON（JavaScript Objec
 
 URL で JSON 機能を使用する方法について詳しくは、*Dynamic Media 画像サービングおよびレンダリング API ヘルプ*&#x200B;の[静的コンテンツ（画像以外）の提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api)を参照してください。
 
-**ビデオにクローズドキャプションを追加するには：**
+**ビデオにクローズドキャプションを追加する**&#x200B;には次の手順に従います。
 
 1. サードパーティのアプリケーションまたはサービスを使用して、ビデオのキャプションファイルを作成します。
 
@@ -870,7 +870,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
    [WebVTT：Web Video Text Tracks 形式（英語）](https://w3c.github.io/webvtt/)を参照してください。
 
-   Dynamic Media以外で WebVTT キャプション/キャプションファイルの作成に使用できる、無料と有料のツールやサービスを提供する web サイトは多数あります。 <!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
+   Dynamic Media 以外で WebVTT キャプション／キャプションファイルの作成に使用できる、無料と有料のツールやサービスを提供している web サイトが多数あります。<!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
    <!--[WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -878,11 +878,11 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
    In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video. -->
 
-   サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。完了したら、キャプションファイルの内容をコピーしてプレーンテキストエディターに貼り付け、`.vtt` のファイル拡張子で保存します。
+   サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。完了したら、キャプションファイルの内容をコピーしてプレーンテキストエディターに貼り付け、`.vtt` のファイル名の拡張子で保存します。
 
    >[!NOTE]
    >
-   >複数言語のビデオキャプションを用意してグローバル対応する場合、WebVTT 標準では、サポート対象の言語ごとに個別の .vtt ファイルを作成して呼び出す必要があります。
+   >複数言語のビデオキャプションを用意してグローバル対応する場合、WebVTT 標準では、サポート対象の言語ごとに個別の .vtt ファイルと呼び出しを作成する必要があります。
 
    一般に、キャプションの VTT ファイルにはビデオファイルと同じ名前を付け、名前の末尾に言語ロケール（-EN、-FR、-DE、-JA など）を追加します。そうしておくと、既存の web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 

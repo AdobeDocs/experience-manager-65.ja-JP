@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4919'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -477,7 +477,7 @@ topnav を contentpage コンポーネントに含めるには、次の操作を
 
 #### サブタイトル付きのページの強化 {#enhancing-pages-with-subtitles}
 
-ページコンポーネントで、ページのキャプションの提供に使用できるプロパティを定義します。 ページコンテンツに関する情報を提供するキャプションを追加します。
+ページコンポーネントでは、ページのキャプションを指定できるプロパティを定義します。ページコンテンツに関する情報を提供するキャプションを追加します。
 
 1. ブラウザーで、**製品**&#x200B;ページを開きます。
 1. サイドキックの「**ページ**」タブで、「**ページのプロパティ**」をクリックします。
