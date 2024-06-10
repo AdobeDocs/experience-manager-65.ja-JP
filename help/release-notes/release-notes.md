@@ -5,10 +5,11 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 6bf2d6409a15be02a247fab84caa743e8542da13
-workflow-type: ht
-source-wordcount: '3032'
-ht-degree: 100%
+exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
+source-git-commit: 4035bfae6a525292ca71b182ebed2ac9839426b8
+workflow-type: tm+mt
+source-wordcount: '3050'
+ht-degree: 99%
 
 ---
 
@@ -219,6 +220,12 @@ ht-degree: 100%
 
 * テンプレートエディターでは、テキスト文字列 *`No video available.`* はローカライズされていません。（SITES-13190）
 * ユーザーをアクティベートまたはディアクティベートした後の文字列は、**ツール**／**セキュリティ**／**ユーザー**／*any_user_name*／**アクティベート**／**OK** ではローカライズされておらず、*any_user_name*／**ディアクティベート**／**OK** を選択します。（NPR-41737）
+
+#### Oak {#foundation-oak-6521}
+
+* パフォーマンス回帰修正：類似条件に対する範囲クエリを避けます。 （OAK-9481）
+
+* 新しい Oak バージョンは 1.22.20 です。
 
 #### プラットフォーム{#foundation-platform-6521}
 
@@ -484,4 +491,3 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-65)
 >* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/subscription/priority-product-update.html)
-
