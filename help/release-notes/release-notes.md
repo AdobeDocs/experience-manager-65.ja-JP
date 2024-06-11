@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 004cf5b30fa3bd108a45a8b6322f2ee3d3085ee5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3050'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -223,7 +223,7 @@ ht-degree: 99%
 
 #### Oak {#foundation-oak-6521}
 
-* パフォーマンス回帰修正：類似条件に対する範囲クエリを避けます。 （OAK-9481）
+* パフォーマンス回帰修正 - 類似条件に対する範囲クエリを回避します。（OAK-9481）
 * 新しい Oak バージョンは 1.22.20 です。
 
 #### プラットフォーム{#foundation-platform-6521}
