@@ -1,18 +1,17 @@
 ---
 title: アダプティブフォームにおけるレコードのドキュメントの生成
-description: ここでは、アダプティブフォーム向けのレコードのドキュメント（DoR）のテンプレートを生成する方法について説明します。
+description: アダプティブフォーム用のレコードのドキュメント（DoR）を生成する方法について説明します。
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 feature: Adaptive Forms, Foundation Components
-exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
-source-wordcount: '4256'
-ht-degree: 100%
+source-git-commit: f8013aeedb79f900158df2291f7f641353bb4c05
+workflow-type: tm+mt
+source-wordcount: '4308'
+ht-degree: 95%
 
 ---
 
@@ -315,47 +314,52 @@ ht-degree: 100%
 1. ![dortab](/help/forms/using/assets/dortab.png) を選択します。「レコードのドキュメント」タブが表示されます。
 1. レコードのドキュメントをレンダリングするために、デフォルトテンプレートまたはカスタムテンプレートのいずれかを選択します。デフォルトテンプレートを選択すると、レコードのドキュメントのサムネイルがテンプレートドロップダウンの下に表示されます。
 
-   ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
+   ![brandingtemplate](/help/forms/using/assets/brandingtemplateupdate.png)
 
    カスタムのテンプレートを選択する場合は、AEM Forms サーバーで XDP を参照して選択します。AEM Forms サーバーにないテンプレートを使用する場合は、最初に XDP を AEM Forms サーバーにアップロードする必要があります。
 
-1. デフォルトのテンプレートとカスタムのテンプレートのどちらを選択するかに応じて、以下のプロパティの一部または全てが「レコードのドキュメント」タブに表示されます。これらを正しく設定します。
+### マスターページのプロパティ（#master-page-properties）
 
-   * **ロゴ画像**：アダプティブフォームのロゴ画像を使用するか、DAM から選択するか、コンピューターからアップロードすることができます。
-   * **フォームタイトル**
-   * **ヘッダーテキスト**
-   * **免責事項ラベル**
-   * **免責事項**
-   * **免責事項テキスト**
-   * **アクセントの色**：ヘッダーテキストおよび区切り線の色は、レコードのドキュメントの PDF でレンダリングされます
-   * **フォントファミリー**：レコードのドキュメント PDF にあるテキストフォントファミリー
-   * **チェックボックスおよびラジオボタンのコンポーネントには、選択した値のみを表示**
-   * **複数選択されている値のセパレーター**
-   * **データモデルにバインドされていないフォームオブジェクトを含める**
-   * **レコードのドキュメントから非表示フィールドを除外**
-   * **パネルの説明を非表示**
+デフォルトのテンプレートとカスタムのテンプレートのどちらを選択するかに応じて、次のマスターページプロパティの一部または全部が、「レコードのドキュメント」タブに表示されます（上図を参照）。 これらを正しく設定します。
 
-   選択したカスタム XDP テンプレートに複数のマスターページが含まれている場合、これらのページのプロパティは「**[!UICONTROL レコードのドキュメント]**」タブの「**[!UICONTROL コンテンツ]**」セクションに表示されます。
+* **ロゴ画像**：アダプティブフォームのロゴ画像を使用するか、DAM から選択するか、コンピューターからアップロードすることができます。
+* **フォームタイトル**
+* **ヘッダーテキスト**
+* **免責事項ラベル**
+* **免責事項**
+* **免責事項テキスト**
 
-   ![マスターページのプロパティ](assets/master-page-properties.png)
+  <!--
+    * **Accent Color**: The color in which header text and separator lines are rendered in the document or record PDF
+    * **Font Family**: Font family of the text in the document of record PDF
+    * **For Check Box and Radio Button components, show only the selected values**
+    * **Separator for multiple selected value(s)**
+    * **Include form objects that are not bound to data model**
+    * **Exclude hidden fields from the document of record**
+    * **Hide description of panels**
+    -->
 
-   マスターページのプロパティには、ロゴ画像、ヘッダーテキスト、フォームタイトル、免責事項ラベル、免責事項テキストが含まれます。アダプティブフォームまたは XDP テンプレートのプロパティは、レコードのドキュメントに適用できます。AEM Forms は、デフォルトでテンプレートのプロパティをレコードのドキュメントに適用します。マスターページのプロパティにカスタム値を定義することもできます。レコードのドキュメントに複数のマスターページを適用する方法については、[レコードのドキュメントに複数のマスターページを適用する](#apply-multiple-master-pages-dor)を参照してください。
+  選択したカスタム XDP テンプレートに複数のマスターページが含まれている場合、これらのページのプロパティは「**[!UICONTROL レコードのドキュメント]**」タブの「**[!UICONTROL コンテンツ]**」セクションに表示されます。
 
-   >[!NOTE]
-   >
-   >バージョン 6.3 より前の Designer で作成されたアダプティブフォームテンプレートを使用している場合、アクセントの色およびフォントファミリーのプロパティを適用するには、ルートサブフォームの下にあるアダプティブフォームテンプレートに以下が存在することを確認してください。
+  ![マスターページのプロパティ](assets/master-page-properties.png)
 
-   ```xml
-   <proto>
-   <font typeface="Arial"/>
-   <fill>
-   <color value="4,166,203"/>
-   </fill>
-   <edge>
-   <color value="4,166,203"/>
-   </edge>
-   </proto>
-   ```
+  マスターページのプロパティには、ロゴ画像、ヘッダーテキスト、フォームタイトル、免責事項ラベル、免責事項テキストが含まれます。アダプティブフォームまたは XDP テンプレートのプロパティは、レコードのドキュメントに適用できます。AEM Forms は、デフォルトでテンプレートのプロパティをレコードのドキュメントに適用します。マスターページのプロパティにカスタム値を定義することもできます。レコードのドキュメントに複数のマスターページを適用する方法については、[レコードのドキュメントに複数のマスターページを適用する](#apply-multiple-master-pages-dor)を参照してください。
+
+  >[!NOTE]
+  >
+  >バージョン 6.3 より前の Designer で作成されたアダプティブフォームテンプレートを使用している場合、アクセントの色およびフォントファミリーのプロパティを適用するには、ルートサブフォームの下にあるアダプティブフォームテンプレートに以下が存在することを確認してください。
+
+  ```xml
+  <proto>
+  <font typeface="Arial"/>
+  <fill>
+  <color value="4,166,203"/>
+  </fill>
+  <edge>
+  <color value="4,166,203"/>
+  </edge>
+  </proto>
+  ```
 
 1. ブランディングの変更内容を保存するには、「完了」を選択します。
 
@@ -413,8 +417,23 @@ ht-degree: 100%
 
 **フォームレベルの設定**
 
-* **バインドされていないフィールドをレコードのドキュメントに含める：**&#x200B;このプロパティを設定すると、スキーマベースのアダプティブフォームのバインドされていないフィールドが、レコードのドキュメントに追加されます。デフォルトでは true になっています。
-* **非表示の場合に DoR からフィールドを除外：**&#x200B;フォーム送信時に[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外するようにプロパティを設定します。[サーバーで再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)を有効にすると、サーバーは非表示のフィールドを再計算してから、[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外します。
+* **[!UICONTROL 基本]**
+   * **テンプレート：** テンプレートは、「デフォルト」または「カスタム」から選択できます。
+     ![代替テキスト](image.png)
+   * **アクセントの色：** のテンプレートのカラーをあらかじめ定義することができます [!UICONTROL レコードのドキュメント].
+   * **フォントファミリー：** のフォントタイプを選択 [!UICONTROL レコードのドキュメント] テキスト。
+   * **バインドされていないフィールドを DoR に含める：** このプロパティを設定すると、でスキーマベースのアダプティブフォームからバインドされていないフィールドが含まれます [!UICONTROL レコードのドキュメント]. デフォルトでは true になっています。
+   * **非表示の場合に DoR からフィールドを除外：**&#x200B;フォーム送信時に[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外するようにプロパティを設定します。有効にする場合 [サーバーで再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)を指定すると、サーバーは非表示のフィールドを再計算してから、 [!UICONTROL レコードのドキュメント]
+* **[!UICONTROL フォームフィールドのプロパティ]**
+   * オプションにチェックマークを付けた場合 **チェックボックスおよびラジオボタンのコンポーネントには、選択した値のみを表示します**&#x200B;を選択すると、選択された値のみを含む DoR 出力が生成されます。
+   * 選択した複数の値に対してセパレーターを選択することも、他のセパレータータイプを選択することもできます。
+   * オプションの位置揃え
+      * 垂直方向
+      * 水平方向
+      * アダプティブフォームと同じ
+     >[!NOTE]
+     > 垂直方向と水平方向の位置揃えは、ラジオボタンとチェックボックスにのみ適用されます
+* **[!UICONTROL マスターページのプロパティ]** 詳しくは、ここをクリックしてください [マスターページのプロパティ](#master-page-properties-master-page-properties)
 
 ## レコードのドキュメントに対する改ページの適用 {#apply-page-breaks-in-dor}
 

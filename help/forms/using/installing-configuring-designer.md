@@ -10,10 +10,10 @@ role: Admin, User, Developer
 feature: Forms Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
-source-wordcount: '595'
-ht-degree: 100%
+source-git-commit: 09eae6e3550e9e8505c042e23d6569971841d441
+workflow-type: tm+mt
+source-wordcount: '767'
+ht-degree: 78%
 
 ---
 
@@ -37,9 +37,10 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 64 ビット版の Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）で導入されました。
+>* 64 ビット版の Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）で導入されました。
+>* Designer の 32 ビットバージョンは、のリリース以降に非推奨（廃止予定）となりました。 [AEM Forms サービスパック 21 （6.5.21.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases).
 
-
+Forms Designer のインストールについて詳しくは、以下を参照してください。 [よくある質問](#fandq).
 
 ## AEM Forms Designer のインストール {#install-designer}
 
@@ -104,3 +105,18 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
 1. ダウンロードしたインストーラーファイルをダブルクリックして、最新バージョンの AEM Forms Designer をインストールします。
 
 +++
+
+## よくある質問 {#fandq}
+
+* **ユーザーは 64 ビット版に直接アップグレードできますか？**
+   * はい、64 ビットデザイナーに直接アップグレードできます。 アップグレードするには、をインストールします [SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) designer の完全なインストーラーをインストールし、その後の designer パッチリリースを適用します。
+
+* **ユーザーは 32 ビットと 64 ビットの両方をシステムにインストールしたままにできますか？**
+   * いいえ、32 ビットと 64 ビットのインストールは同じマシンでは動作しません。 ユーザーは、32 ビットデザイナーまたは 64 ビットデザイナーを持つことができます。
+
+* **ユーザーが 64 ビットデザイナーと 32 ビットデザイナーのどちらであるかを確認する方法**
+   * Forms Designer のバージョンを確認する方法は 2 つあります。
+
+      1. Designer を開き、「ヘルプ」に移動し、「About designer」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、末尾に 64 ビットが書き込まれていることがわかります。
+         `6.5.21.20240522.1.161 | 64 bit`
+      1. Designer を開き、左上に、製品名の 64 ビット情報を含むブランディングアイコンが表示されます。

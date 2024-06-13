@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 004cf5b30fa3bd108a45a8b6322f2ee3d3085ee5
+source-git-commit: 371d325287c9d3d11d154c3121f001dad3f3b986
 workflow-type: tm+mt
-source-wordcount: '3050'
-ht-degree: 100%
+source-wordcount: '3842'
+ht-degree: 69%
 
 ---
 
@@ -44,6 +44,16 @@ ht-degree: 100%
 このリリースの主な機能と機能強化は次のとおりです。
 
 * 既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。（NPR-41994）
+
+* AEM Formsのルールエディターの機能強化：
+   * を使用したネスト条件の実装のサポート `When-then-else` 機能。
+   * パネルやフォーム（フィールドを含む）の検証またはリセット。
+   * カスタム関数内の let 関数や arrow 関数などの最新の JavaScript 機能のサポート（ES10 サポート）。
+* PDFのアクセシビリティのための AutoTag API: OSGi 上のAEM Formsでは、新しい AutoTag API をサポートし、タグ、段落、リストを追加して、アクセシビリティ標準のPDFを強化するようになりました。 これにより、支援テクノロジーを使用しているユーザーがPDFにアクセスしやすくなります。
+* 16 ビット PNG のサポート：PDF Generatorの ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換がサポートされるようになりました。
+* XDP 内の個々のテキストブロックにアーティファクトを適用：Forms Designer に導入された新機能を使用すると、XDP ファイル内の個々のテキストブロックを設定し、結果のPDFでアーティファクトとして扱われる要素（ヘッダーやフッターなど）を制御して、支援テクノロジーからアクセスできるようになります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。 Forms Output サービスは、PDFの生成時にこれらの設定を適用し、適切なPDF/UA タグ付けを行います。
+* AEM Forms Designer の認定対象 `GB18030:2022` 標準。 この認定により、Forms Designer は、すべての編集可能なフィールドとダイアログに漢字を入力できる中国語の Unicode 文字セットをサポートするようになりました。
+
 
 ### [!DNL Assets]
 
@@ -121,7 +131,11 @@ ht-degree: 100%
 
 <!-- #### Launches{#sites-launches-6521} -->
 
+
+<!-- ### [!DNL Forms]-->
+
 <!-- DELETED MAY 22, 2024 FROM TOTAL RELEASE CANDIDATE ISSUES * The `sourceRootResource` configured in the Launch configuration within CRXDE Lite points to content that no longer exists, leading to a malfunction when attempts are made to delete launches. Delete launches even if the page is deleted or if the path is not the same. (SITES-20750) -->
+
 
 #### MSM - ライブコピー{#sites-msm-live-copies-6521}
 
@@ -166,7 +180,54 @@ ht-degree: 100%
 
 ### [!DNL Forms]{#forms-6521}
 
-[!DNL Experience Manager] Forms の修正は、[!DNL Experience Manager] サービスパックリリース予定日の 1 週間後に、別のアドオンパッケージとして提供されます。この場合、AEM 6.5.21.0 Forms アドオンパッケージリリースは、2024年6月13日木曜日（PT）に予定されています。Forms の修正および機能強化のリストは、リリース後にこの節に追加されます。
+#### [!DNL Adaptive Forms] {#forms-6520}
+
+* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
+* ユーザーが OSGi でAEM Forms Service Pack 15 （6.5.15.0）の「PDFに印刷」ボタンをクリックすると、クライアント側の検証が失敗し、Developer Tools コンソールウィンドウに表示されるエラーメッセージで明確に示されます。 （FORMS-14029）
+* ユーザーがAEM 6.5 Forms サービスパック 17 （6.5.17.0）またはAEM 6.5 Forms サービスパック 18 （6.5.18.0）またはAEM 6.5 Forms サービスパック 19 （6.5.19.0）でフォームを送信すると、「ありがとうございます」メッセージの翻訳が正しく機能しません。 メッセージは辞書で正しく翻訳されていますが。 （FORMS-13846）
+* ユーザーが日付選択コンポーネントを含むフォームをプレビューすると、日付選択フィールドが他のフォームフィールドと誤って表示されます。 （FORMS-13763）
+* 環境AEM Forms サービスパック 19 （6.5.19.0）を使用しているユーザーが API を呼び出して数値を書式設定すると、書式設定された数値が各ロケールと一致せず、通貨記号が正しく表示されません。 この問題は、ロケールパラメーターが「de_DE」または「en_US」に設定されていても解決しません。 （FORMS-13759）
+* 環境AEM Forms サービスパック 19 （6.5.19.0）を使用しているユーザーが Img2Pdf PDFG サービスを使用して 16 ビット PNG をPDFに変換すると、失敗し、「Acrobat Image Conversion を使用」サービスを使用できません。 （FORMS-13754）
+* AEM Forms サービスパック 19 （6.5.19.1）で、AEM Forms JEE の管理 web インターフェイス（adminui）の「サービス/PDF Generator/Adobe PDF設定」セクションで既存の JobOptions ファイルをアップロードすると、アップロードが失敗し、次のエラーメッセージが表示されます（FORMS-13597）。
+  `"An error has occurred while processing your request. Please use the breadcrumb links to navigate to another page."`
+* AEM Forms サービスパック 15 （6.5.15.0）からAEM Forms サービスパック（6.5.17.0）またはAEM Forms サービスパック（6.5.19.0）に移行すると、FD キーが重複し、フォームが正しく翻訳されません。 （FORMS-13461）
+* ユーザーが AMS のデプロイメントトポロジでサポートされているオーサーの前に Dispatcher を配置すると、タスクの割り当て送信がハングまたは失敗します。 （FORMS-8010）
+* アクセシビリティ関連の修正：
+   * 「formsanddocuments」ページのアイコンに、ANDI 標準に従ってアクセスできるようになりました。 （FORMS-13094）
+   * ユーザーはキーボードからツールバーにアクセスして、編集ページのコンテンツを保存または編集できます。ツールバーは、ANDI 標準に従って強化されます。 （FORMS-13102）
+   * 「必須または必須」フォームフィールドは、ANDI 標準に従ってアクセスできます。 （FORMS-13097）
+
+* ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。 （FORMS-13594）
+* Internet Explorer 互換モードのMicrosoft Edge で、日付入力フィールドコンポーネントが正しく機能しない。 （FORMS-13170）
+* の修正時に、添付ファイル付きの停止したメール通知を送信できませんでした [additional-steps-to-use-email-with-attachments](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) サーバーで実行されます。 （FORMS-14227）
+* サービスパック 18 （6.5.18.0）のAEM Forms Workspace で、アップロードされたドキュメントにコメントすると、ドキュメントファイルが破損します。 （FORMS-13735）
+* AEM Forms サービスパック 18 （6.5.18.0）、AEM Forms サービスパック 19 （6.5.19.0）またはAEM Forms サービスパック 20 （6.5.20.0）では、編集インターフェイスのサイドパネルの「アセット」タブを切り替えてアダプティブフォームを検索しようとすると、検索が失敗します。 （FORMS-14117）
+* ユーザーがドイツ語で作成して英語に翻訳されたフォームを編集すると、「プレビュー」モードと「編集」モードで表示される言語が一致しません。 これにより、ラジオボタンとチェックボックスのコンポーネントが「編集」モードでは英語で表示され、「プレビュー」モードでは正しくドイツ語で表示されます。 （FORMS-13910）
+* プロセスパージプロセスツールがエラーで失敗する `NoClassDefFoundError: org/omg/CORBA/UserException`. （FORMS-13751）
+* ユーザーが埋め込みコンテナを使用して、外部またはAEM Sitesでアダプティブフォーム（AF）を web ページ内に埋め込もうとすると、アダプティブフォームガイドコンテナは、埋め込まれたフォームに role=&quot;main&quot;を持つ ARIA LABEL を設定します。 ARIA のガイドラインでは、ページごとに 1 つの role=&quot;main&quot;のみを使用する必要があります。 したがって、ユーザーがページのメインコンテンツに別の role=&quot;main&quot;を追加すると、そのコンテンツはアクセシビリティの問題としてフラグ付けされます。 （FORMS-13538）
+* AEM Forms サービスパック 19 （6.5.19.0）で、アダプティブフォームでドロップダウンを使用する場合、プレースホルダーテキストを含むドロップダウンは、id=&quot;emptyValue&quot;の値を保持します。 そのため、フォームに複数のドロップダウンコンポーネントがある場合、それぞれが id=&quot;emptyValue&quot;となり、ARIA ガイドラインに従って正しくありません。 （FORMS-13370）。
+* XML を使用してデータが送信された後、ユーザーがインタラクティブ通信をリロードすると、生成されたPDFでテキストブロック間に空白が発生します。 （FORMS-13481）
+* ConfigurationManager の実行中に「DSC デプロイメント手順の準備」画面の IPH が見つかりません。 （FORMS-10699）
+* ユーザーが新しい辞書を追加して、既存の辞書を含むフォームを翻訳すると、古い翻訳は無効になります。 次の問題が発生します。（FORMS-13576）
+   * 一部のフィールドで、翻訳済みデータの入力に失敗します。
+   * データが辞書に正常に保存されていても、一部のフィールドが新しい言語に翻訳されません。
+
+#### [!DNL Forms Designer] {#forms-desgner-6520}
+
+* AEM Forms Service Pack 19 （6.5.19.0）環境で、AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。 （LC-3921978）
+* ユーザーが Linux 環境でアダプティブフォームをレンダリングする場合、フィールドコンポーネント間に余分なスペースが発生します。 （LC-3921957）
+* ユーザーが Output サービスを使用して XTG ファイルを PostScript 形式に変換すると、次のエラーで失敗します。           `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)`. （LC-3921720）
+
+  この問題を解決するには：データに Zero Width Space （0x200b）のような特殊文字が含まれているかどうかを確認します。 ある場合は、タグを追加してフラグを使用します。 `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` に示すように、XCI ファイルで以下を行います。 [custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) ファイル。
+
+* Linux 環境でAEM Forms Service Pack 18 （6.5.18.0）を使用する場合、AMD プロセッサーを使用する AVX /AVX2 命令をサポートしていない CPU で XMLFM がクラッシュします。 （LC-3921718）
+* ユーザーがForms Output サービスを使用して XDP からPDFを作成すると、XDP の「個々のテキストブロック」に「設定」を設定して「アーティファクト」を制御することができません。 （LC-3921954）
+
+<!--
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.21.0 Forms add-on package release is scheduled for Thursday, June 13, 2024. A list of Forms fixes and enhancements is added to this section post the release.
+
+-->
+
 
 <!-- #### [!DNL Adaptive Forms]
 
@@ -181,12 +242,12 @@ ht-degree: 100%
 
 #### Apache Felix {#foundation-apachefelix-6521}
 
+
 * AEM 6.5 サービスパック 19（SP19）のアップグレード問題では、SP19 のインストール後、Apache Felix への未認証のリクエストに対してアプリケーションサーバーの context-root パスが消えます。Apache Felix Web Management Console 4.9.8 に更新します。（NPR-41933）
 
 #### Campaign{#foundation-campaign-6521}
 
 * AEM 6.5 サービスパック 15 では、重要なエントリを含んだ継続的なエラーログが生成されています。次の問題が報告されました。
-
    * パス `/libs/granite/ui/content/shell/start.html` にリソースがないことによる 404 INFO エラー
    * `CampaignsDataSourceServlet.java:147` での `NullPointerException` が原因でキャッチされなかった SlingException のエラーログエントリ
 
@@ -199,6 +260,7 @@ ht-degree: 100%
 <!-- #### Communities {#foundation-communities-6521}
 
 * U -->
+
 
 <!-- #### Content distribution{#foundation-content-distribution-6521}
 
@@ -457,19 +519,24 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * SITES-17934 - コンテンツフラグメント - 大きなフラグメントツリーに対する DoS 保護が原因でプレビューに失敗する。詳しくは、[GraphQL Query Executor のデフォルト設定オプションに関するナレッジベース記事](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23945)を参照してください。
 
+<!--
+
+### Known issues for AEM Forms {#known-issues-aem-forms-6521}
+-->
+
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6521}
 
-* チェックボックスにスクリプトが埋め込まれた XDP に基づくアダプティブフォームでは、このようなチェックボックスの後の要素に対してスクリプトは実行されません。（FORMS-14244）
-* Correspondence Management レターを作成できません。ユーザーがレターを作成すると、「`Object Object`」という説明のエラーが表示され、レターが作成されません。レイアウトのサムネールもレター作成画面に読み込めません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13496）
-* インタラクティブ通信サービスでは PDF ドキュメントが作成されますが、フォームフィールドにはユーザーのデータが自動的に入力されません。事前入力サービスが期待どおりに動作しません。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13413、FORMS-13493）
-* 自動フォーム変換サービスのレビューと修正（RnC）エディターの読み込みに失敗します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13491）
-* AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から AEM 6.5 Forms サービスパック 20（6.5.20.0）に更新すると、JSP コンパイルエラーが発生します。アダプティブフォームを開いたり作成したりすることができず、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他の AEM インターフェイスでエラーが発生します。[最新の AEM 6.5 Form サービスパック 20（6.5.20.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をインストールすると、問題を解決できます。（FORMS-13492）
-* 編集／表示パターンを持つフィールドのポップアップウィジェットで月をトラバースすると、日付選択ウィジェットの行が切り捨てられます。（FORMS-13620）
-* バックエンドで DOR（レコードのドキュメント）サービスを使用しようとすると、フォームの送信が失敗します。「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」というエラーメッセージが表示されます。（FORMS-13798）
-* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
-* AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用の AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。（FORMS-13791）
-* インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）
-* アダプティブフォームでは、ECMAScript バージョン 5 以前でカスタム関数を使用できます。カスタム関数で ECMAScript バージョン 6 以降（`let`、`const`、アロー関数など）が使用されている場合、ルールエディターが正しく開かない可能性があります。
+
+* AEM Forms JEE サービスパック 21 （6.5.21.0）のインストール後、Geode JAR の重複エントリが見つかった場合 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の下 `<AEM_Forms_Installation>/lib/caching/lib` フォルダー（FORMS-14926）。
+
+  問題を解決するには、以下の手順を実行します。
+
+   1. ロケーターとサーバーが実行中の場合は、指定した順序で停止します。
+   1. 管理者モードでパッチインストーラーを実行して、パッチを再インストールします（重要）。
+   1. を持つ Geode jar のみを確認します `version 1.15.1.2` 存在する。
+
+  >[!NOTE]
+  > を持つ Geode jar のみ場合、アクションは必要ありません `version 1.15.1.2` 存在する。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 

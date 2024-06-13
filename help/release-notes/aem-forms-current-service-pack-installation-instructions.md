@@ -1,14 +1,13 @@
 ---
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
-exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+role: User, Admin, Architect, Developer
+source-git-commit: c3fd2b1198c7c856d6d68e9b9cfc711c941e657c
 workflow-type: tm+mt
-source-wordcount: '1752'
-ht-degree: 100%
+source-wordcount: '1734'
+ht-degree: 98%
 
 ---
 
@@ -18,9 +17,9 @@ ht-degree: 100%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.20.0 |
+| バージョン | 6.5.21.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2024年2月29日（PT） |
+| 日付 | 2024 年 5 月 29 日（Pt） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -69,9 +68,12 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 +++2.必要なソフトウェアのダウンロード
 
 * [AEM Forms on JEE サービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
+
+* [フラグメントサーブレット](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
+
 * [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
-* [フラグメントサーブレット](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
+
 
 +++
 
@@ -137,12 +139,11 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++5.サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール
++++5.サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）をインストールします（**必須インストール**）
 
 >[!NOTE]
 >
-> * **AEM サービスパック 6.5.15.0** からアップグレードする場合、**サーブレットフラグメント**&#x200B;のインストールは必須ではありません。バージョン **AEM サービスパック 6.5.14.0** 以前の場合は、サーブレットフラグメントをインストールする必要があります。
-> * **JBoss® EAP 7.4.0** で実行されているものを除き、すべてのアプリケーションサーバーの&#x200B;**サーブレットフラグメント**&#x200B;をインストールする必要があります。
+> * **AEM サービスパック 6.5.15.0** からアップグレードする場合、**サーブレットフラグメント**&#x200B;のインストールは必須ではありません。バージョン用 **AEM サービスパック 6.5.14.0** それ以前の場合は、 **のインストールが必須** サーブレットフラグメント。
 
 
 サーブレットフラグメントのダウンロードとインストール
