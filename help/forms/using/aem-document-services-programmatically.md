@@ -1,6 +1,6 @@
 ---
 title: AEM Document Services をプログラムとして使用する
-description: Document Services API を使用して、デジタル署名、暗号化、タグ付け、PDFドキュメントの生成を行う方法を説明します。
+description: Document Service API を使用して、電子署名、暗号化、タグ、PDF ドキュメントを生成する方法について説明します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
@@ -8,9 +8,9 @@ feature: Document Services
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: 341ad5a1f8c0e0cde95c97871da889c17868ef9b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6409'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -5062,11 +5062,11 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
 
 <!-- Document utilities with synchronous APIs help you <!--convert documents from PDF to XDP file format, Clone a PDF, Retrieve PDF properties (Redact), Multiclone PDF, Sanitise PDF for retrieving uninteneded hidden information, and tag PDF documents with lists and paragraphs. Details of each APIs are given below: -->
 
-#### PDFドキュメントの自動タグ付け {#auto-tag-api}
+#### PDF ドキュメントの自動タグ付け {#auto-tag-api}
 
-自動タグPDFAPI は、タグを追加することで、PDFドキュメントにアクセスしやすくするのに役立ちます。テキストブロック（段落）と箇条書きのタグ付けを 1 つのオペレーターでサポートします。
+PDF API の自動タグ付けは、PDF ドキュメントにタグを追加してアクセスしやすくします。1 つの演算子でテキストブロック（段落）と箇条書きリストのタグ付けをサポートします。
 
-![自動タグ付きPDFドキュメント](assets/auto-tag-api.png)
+![自動タグ付き PDF ドキュメント](assets/auto-tag-api.png)
 
 **構文**：`tag(Document inDoc)`
 
@@ -5085,7 +5085,7 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
  </tbody>
 </table>
 
-次の Java コードは、PDFドキュメントにリストと段落でタグを付けます。
+次の Java コードは、PDF ドキュメントにリストと段落のタグを付けます。
 
 ```java
 /*************************************************************************

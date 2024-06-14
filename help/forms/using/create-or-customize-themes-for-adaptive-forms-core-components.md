@@ -10,9 +10,9 @@ feature: Adaptive Forms, Core Components
 exl-id: 9f9b35a3-0479-4179-9fad-994a482c96b6
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: aa8f8ea6ec3787cd1de76a72fe05f0993c2d6b22
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1939'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ AEM 6.5 環境は、コアコンポーネントベースのアダプティブフ
 * [FSI テーマ](https://github.com/adobe/aem-forms-theme-fsi)
 * [ヘルスケアテーマ](https://github.com/adobe/aem-forms-theme-healthcare)
 * [公開テーマ](https://github.com/adobe/aem-forms-theme-public)
-* [製造テーマ](https://github.com/adobe/aem-forms-theme-manufacturing)
+* [製造業テーマ](https://github.com/adobe/aem-forms-theme-manufacturing)
 
 ## テーマの構造について {#understanding-structure-of-theme}
 
@@ -62,7 +62,7 @@ AEM Forms 6.5 は、コアコンポーネントベースのアダプティブフ
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
 * [イーゼルテーマ](https://github.com/adobe/aem-forms-theme-easel)
 * [公開テーマ](https://github.com/adobe/aem-forms-theme-public)
-* [製造テーマ](https://github.com/adobe/aem-forms-theme-manufacturing)
+* [製造業テーマ](https://github.com/adobe/aem-forms-theme-manufacturing)
 
 [これらのテーマをカスタマイズしてテーマを作成](#customize-a-theme-core-components)することができます。
 
