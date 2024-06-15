@@ -10,10 +10,10 @@ role: Admin, User, Developer
 feature: Forms Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 09eae6e3550e9e8505c042e23d6569971841d441
-workflow-type: ht
-source-wordcount: '767'
-ht-degree: 100%
+source-git-commit: 6ef7e07f0b83b76981240533122aee8c3ee298c7
+workflow-type: tm+mt
+source-wordcount: '787'
+ht-degree: 89%
 
 ---
 
@@ -108,8 +108,11 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
 
 ## よくある質問 {#fandq}
 
-* **ユーザーは 64 ビットに直接アップグレードできますか？**
-   * はい、ユーザーは 64 ビットデザイナーに直接アップグレードできます。アップグレードするには、[SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) デザイナーのフルインストーラーをインストールし、その上に後続のデザイナーパッチリリースを適用します。
+* **ユーザーは 64-bit designer を直接アップグレードまたはインストールできますか？**
+   * はい、64 ビットデザイナーを直接アップグレードまたはインストールできます。 アップグレードするには、[SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) デザイナーのフルインストーラーをインストールし、その上に後続のデザイナーパッチリリースを適用します。
+
+     >[!NOTE]
+     > 64-bit Designer にアップグレードする前に、32-bit Designer が存在する場合は、まずアンインストールします。
 
 * **ユーザーは 32 ビットと 64 ビットの両方をシステムにインストールしたままにすることができますか？**
    * いいえ、32 ビットと 64 ビットのインストールは同じマシンでは動作しません。ユーザーは 32 ビットデザイナーまたは 64 ビットデザイナーのいずれかを使用できます。
@@ -117,6 +120,6 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
 * **ユーザーが 64 ビットデザイナーを使用しているか、32 ビットデザイナーを使用しているかを確認するにはどうすればよいですか？**
    * Forms Designer のバージョンを確認するには、次の 2 つの方法があります。
 
-      1. Designer を開き、「ヘルプ」に移動し、「Designer について」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、最後に 64 ビットと記載されていることがわかります。
+      1. Designer を開き、「ヘルプ」に移動し、「About designer」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、バージョンの最後に 64 ビットが書き込まれていることがわかります。
          `6.5.21.20240522.1.161 | 64 bit`
-      1. Designer を開くと、左上に、製品名と 64 ビット情報を含むブランディングアイコンが表示されます。
+      1. Designer を開き、左上に、製品名と 64 ビット情報を含むブランディングアイコンが表示されます。

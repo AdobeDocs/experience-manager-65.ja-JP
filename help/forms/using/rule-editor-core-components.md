@@ -4,20 +4,19 @@ description: アダプティブFormsのルールエディターを使用する�
 feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
-source-git-commit: 7e9b4cc233d4040faf61241b3cbe52d26bfdba1e
+source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
 workflow-type: tm+mt
-source-wordcount: '5599'
+source-wordcount: '5588'
 ht-degree: 81%
 
 ---
 
 # アダプティブフォームのコアコンポーネントへのルールの追加 {#adaptive-forms-rule-editor}
 
-<span class="preview"> この記事には、一部のプレリリース機能に関するコンテンツが含まれています。 これらのプレリリース機能には、 [プレリリースチャネル](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes#forms). プレリリースプログラムの機能は次のとおりです。
+この記事では、アダプティブ Forms コアコンポーネントの最新のルールエディター機能を紹介します。これらの機能には、以下が含まれます。
 * ネストされた条件を When-then-else 機能で実装する機能のサポート
 * パネルやフォーム（フィールドを含む）の検証またはリセット
 * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
-</span>
 
 ルールエディター機能を使用すると、フォームのビジネスユーザーや開発者がアダプティブフォームオブジェクトにルールを簡単に記述できます。 これらのルールは、事前に設定された条件、ユーザー入力、フォーム上のユーザーアクションに基づいて、フォームオブジェクト上でトリガーを実行するアクションを定義します。 これにより、フォームへの入力を正確かつ迅速に行うことができます。
 

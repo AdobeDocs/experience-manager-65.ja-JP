@@ -4,22 +4,21 @@ description: AEM Formsは、ルールエディター内で独自の関数を作�
 keywords: ルールエディターでカスタム関数を使用して、カスタム関数の追加、カスタム関数の使用、カスタム関数の作成をおこないます。
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: e7ad5c0149e428265598c806421131fe74fad350
+source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
 workflow-type: tm+mt
-source-wordcount: '3394'
+source-wordcount: '3385'
 ht-degree: 5%
 
 ---
 
 # アダプティブ Forms コアコンポーネントのカスタム関数
 
-<span class="preview"> この記事には、早期導入プログラムの機能に関するコンテンツが含まれています。 これらのプレリリース機能には、 [プレリリースチャネル](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes#forms). プレリリースプログラムの機能は次のとおりです。
-<!-- * Optional parameter support in Custom Functions-->
+この記事では、次のような最新の機能を備えた、最新のアダプティブフォームのコアコンポーネントを使用してカスタム関数を作成する方法について説明します。
 * カスタム関数のキャッシュ機能
 * グローバル スコープ オブジェクトとフィールド オブジェクトは、カスタム関数をサポートしています。
 * let 関数や arrow 関数などの最新の JavaScript 機能のサポート（ES10 のサポート）
 
-必ずを設定してください [最新のフォームバージョン](https://github.com/adobe/aem-core-forms-components/tree/release/650) AEM Forms コアコンポーネント環境で、カスタム関数のプレリリース機能を使用する。 </span>
+必ずを設定してください [最新のフォームバージョン](https://github.com/adobe/aem-core-forms-components/tree/release/650) AEM Forms コアコンポーネント環境で、カスタム関数の最新の機能を使用する。 </span>
 
 
 | バージョン | 記事リンク |

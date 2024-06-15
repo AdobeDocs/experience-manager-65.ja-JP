@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 1ba2782fcc81e5090dced4eed83a3a4911676f09
+source-git-commit: e3219d57e069e546b177015e675666a8b927fb49
 workflow-type: tm+mt
-source-wordcount: '3819'
+source-wordcount: '3825'
 ht-degree: 68%
 
 ---
@@ -199,7 +199,7 @@ ht-degree: 68%
 
 * ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。 （FORMS-13594）
 * Internet Explorer 互換モードのMicrosoft Edge で、日付入力フィールドコンポーネントが正しく機能しない。 （FORMS-13170）
-* の修正時に、添付ファイル付きの停止したメール通知を送信できませんでした [additional-steps-to-use-email-with-attachments](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) サーバーで実行されます。 （FORMS-14227）
+* の修正時に、添付ファイル付きの停止したメール通知を送信できませんでした [添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) サーバーで実行されます。 （FORMS-14227）
 * サービスパック 18 （6.5.18.0）のAEM Forms Workspace で、アップロードされたドキュメントにコメントすると、ドキュメントファイルが破損します。 （FORMS-13735）
 * AEM Forms サービスパック 18 （6.5.18.0）、サービスパック 19 （6.5.19.0）またはサービスパック 20 （6.5.20.0）では、サイドパネルからアダプティブフォームを検索しようとすると、検索が失敗します。 （FORMS-14117）
 * ユーザーがドイツ語で作成して英語に翻訳されたフォームを編集すると、「プレビュー」モードと「編集」モードで表示される言語が一致しません。 これにより、ラジオボタンとチェックボックスのコンポーネントが「編集」モードでは英語で表示され、「プレビュー」モードでは正しくドイツ語で表示されます。 （FORMS-13910）
@@ -212,7 +212,7 @@ ht-degree: 68%
    * 一部のフィールドで、翻訳済みデータの入力に失敗します。
    * データが辞書に正常に保存されていても、一部のフィールドが新しい言語に翻訳されません。
 
-#### [!DNL Forms Designer] {#forms-desgner-6520}
+#### [!DNL Forms Designer] {#forms-desgner-6521}
 
 * AEM Forms Service Pack 19 （6.5.19.0）環境で、AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。 （LC-3921978）
 * ユーザーが Linux® 環境でアダプティブフォームをレンダリングすると、フィールドコンポーネント間に余分なスペースが発生します。 （LC-3921957）
