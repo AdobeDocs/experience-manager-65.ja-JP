@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User, Admin, Architect, Developer
 source-git-commit: c3fd2b1198c7c856d6d68e9b9cfc711c941e657c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1734'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 |---|---|
 | バージョン | 6.5.21.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2024 年 5 月 29 日（Pt） |
+| 日付 | 2024年5月29日（PT） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -139,11 +139,11 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++5.サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）をインストールします（**必須インストール**）
++++5.サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール（**必須インストール**）
 
 >[!NOTE]
 >
-> * **AEM サービスパック 6.5.15.0** からアップグレードする場合、**サーブレットフラグメント**&#x200B;のインストールは必須ではありません。バージョン用 **AEM サービスパック 6.5.14.0** それ以前の場合は、 **のインストールが必須** サーブレットフラグメント。
+> * **AEM サービスパック 6.5.15.0** からアップグレードする場合、**サーブレットフラグメント**&#x200B;のインストールは必須ではありません。バージョン **AEM サービスパック 6.5.14.0** 以前の場合は、サーブレットフラグメントを&#x200B;**インストールすることが必須**&#x200B;です。
 
 
 サーブレットフラグメントのダウンロードとインストール
