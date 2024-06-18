@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: e3219d57e069e546b177015e675666a8b927fb49
+source-git-commit: 84e56b9e9552903fa210cd680a64c268d5e15626
 workflow-type: tm+mt
-source-wordcount: '3825'
-ht-degree: 68%
+source-wordcount: '3823'
+ht-degree: 78%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 68%
 | バージョン | 6.5.21.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | タイプ | サービスパックのリリース |
 | 日付 | 2024年6月6日木曜日（PT）<!-- UPDATE FOR EACH NEW RELEASE --> |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## [!DNL Experience Manager] 6.5.21.0 の内容 {#what-is-included-in-aem-6521}
 
@@ -45,14 +45,14 @@ ht-degree: 68%
 
 * 既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。（NPR-41994）
 
-* AEM Formsのルールエディターの機能強化：
-   * を使用したネスト条件の実装のサポート `When-then-else` 機能。
+* AEM Forms のルールエディターの機能強化
+   * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
    * パネルやフォーム（フィールドを含む）を検証またはリセットする。
-   * カスタム関数内の let 関数や arrow 関数などの最新の JavaScript 機能のサポート（ES10 サポート）。
-* PDFのアクセシビリティのための AutoTag API: OSGi 上のAEM Formsでは、新しい AutoTag API をサポートし、タグ、段落、リストを追加して、アクセシビリティ標準のPDFを強化するようになりました。 これにより、支援テクノロジーを使用しているユーザーがPDFにアクセスしやすくなります。
-* 16 ビット PNG のサポート：PDF Generatorの ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換がサポートされるようになりました。
-* XDP 内の個々のテキストブロックへのアーティファクトの適用：Forms Designer で、XDP ファイル内の個々のテキストブロックに対する設定を指定できるようになりました。 この機能を使用すると、結果として生成されるPDFでアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセス可能になります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。 Forms Output サービスは、PDFの生成時にこれらの設定を適用し、適切なPDF/UA タグ付けを行います。
-* AEM Forms Designer の認定対象 `GB18030:2022` 標準。 この認定により、Forms Designer で中国語の Unicode 文字セットがサポートされるようになりました。このセットを使用すると、編集可能なすべてのフィールドとダイアログボックスに中国語を入力できます。
+   * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
+* PDFのアクセシビリティのための AutoTag API: OSGi 上のAEM Formsでは、新しい AutoTag API をサポートし、タグ、段落、リストを追加して、アクセシビリティ標準のPDFを強化するようになりました。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
+* 16 ビット PNG のサポート：PDF Generator の ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
+* XDP 内の個々のテキストブロックへのアーティファクトの適用：Forms Designer で、XDP ファイル内の個々のテキストブロックに対する設定を指定できるようになりました。 この機能を使用すると、結果として生成されるPDFでアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセス可能になります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDFの生成時にこれらの設定を適用し、適切なPDF/UA タグ付けを行います。
+* AEM Forms Designer は `GB18030:2022` 標準で認定されています。この認定により、Forms Designer で中国語の Unicode 文字セットがサポートされるようになりました。このセットを使用すると、編集可能なすべてのフィールドとダイアログボックスに中国語を入力できます。
 
 
 ### [!DNL Assets]
@@ -185,9 +185,9 @@ ht-degree: 68%
 * アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
 * ユーザーがクリックしたとき **PDFに印刷** osgi のAEM Forms サービスパック 15 （6.5.15.0）では、クライアントサイドの検証が失敗し、Developer Tools コンソールウィンドウに表示されるエラーメッセージで明らかになります。 （FORMS-14029）
 * AEM 6.5 Forms サービスパック 17 （6.5.17.0）またはサービスパック 18 （6.5.18.0）、サービスパック 19 （6.5.19.0）でフォームを送信すると、「ありがとうございます」メッセージの翻訳が正しく機能しません。 ただし、メッセージは辞書で正しく翻訳されています。 （FORMS-13846）
-* ユーザーが日付選択コンポーネントを含むフォームをプレビューすると、日付選択フィールドが他のフォームフィールドと誤って表示されます。 （FORMS-13763）
+* ユーザーが日付選択コンポーネントを含むフォームをプレビューすると、日付選択フィールドが他のフォームフィールドと合わなくなります。（FORMS-13763）
 * 環境AEM Forms サービスパック 19 （6.5.19.0）でユーザーが API を呼び出して数値を書式設定すると、書式設定された数値が各ロケールに合わせて表示されません。 その結果、通貨記号が正しく表示されません。 この問題は、「de_DE」または「en_US」に設定されたロケールパラメーターに関係なく解決しません。 （FORMS-13759）
-* 環境AEM Forms サービスパック 19 （6.5.19.0）を使用しているユーザーが Img2Pdf PDFG サービスを使用して 16 ビット PNG をPDFに変換すると、失敗し、「Acrobat Image Conversion を使用」サービスを使用できません。 （FORMS-13754）
+* AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが Img2Pdf PDFG サービスを使用して 16 ビット PNG を PDF に変換すると、変換が失敗し、「Use Acrobat Image conversion」サービスを使用できなくなります。（FORMS-13754）
 * AEM Forms サービスパック 19 （6.5.19.1）で、AEM Forms JEE の adminui の「サービス/PDF Generator/Adobe PDF設定」セクションに指定されている既存の JobOptions ファイルをアップロードすると、アップロードが失敗します。 また、次のエラーメッセージも表示されます（FORMS-13597）。
   `"An error has occurred while processing your request. Please use the breadcrumb links to navigate to another page."`
 * AEM Forms サービスパック 15 （6.5.15.0）からAEM Forms サービスパック（6.5.17.0）またはAEM Forms サービスパック（6.5.19.0）に移行すると、FD キーが重複し、フォームが正しく変換されません。 （FORMS-13461）
@@ -197,28 +197,29 @@ ht-degree: 68%
    * ユーザーは、キーボードを使用してツールバーにアクセスし、編集ページのコンテンツを保存または編集できます。ツールバーは、ANDI 標準に従って強化されます。 （FORMS-13102）
    * 「必須または必須」フォームフィールドは、ANDI 標準に従ってアクセスできます。 （FORMS-13097）
 
-* ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。 （FORMS-13594）
-* Internet Explorer 互換モードのMicrosoft Edge で、日付入力フィールドコンポーネントが正しく機能しない。 （FORMS-13170）
-* の修正時に、添付ファイル付きの停止したメール通知を送信できませんでした [添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) サーバーで実行されます。 （FORMS-14227）
-* サービスパック 18 （6.5.18.0）のAEM Forms Workspace で、アップロードされたドキュメントにコメントすると、ドキュメントファイルが破損します。 （FORMS-13735）
+* ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。（FORMS-13594）
+* Internet Explorer 互換モードの Microsoft Edge では、日付入力フィールドコンポーネントが正しく機能しません。（FORMS-13170）
+* の修正時に、添付ファイル付きの停止したメール通知を送信できませんでした [添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) サーバーで実行されます。 （FORMS-14227）
+* サービスパック 18（6.5.18.0）の AEM Forms Workspace では、アップロードされたドキュメントにユーザーがコメントすると、ドキュメントファイルが破損します。（FORMS-13735）
 * AEM Forms サービスパック 18 （6.5.18.0）、サービスパック 19 （6.5.19.0）またはサービスパック 20 （6.5.20.0）では、サイドパネルからアダプティブフォームを検索しようとすると、検索が失敗します。 （FORMS-14117）
-* ユーザーがドイツ語で作成して英語に翻訳されたフォームを編集すると、「プレビュー」モードと「編集」モードで表示される言語が一致しません。 これにより、ラジオボタンとチェックボックスのコンポーネントが「編集」モードでは英語で表示され、「プレビュー」モードでは正しくドイツ語で表示されます。 （FORMS-13910）
-* プロセスパージプロセスツールがエラーで失敗する `NoClassDefFoundError: org/omg/CORBA/UserException`. （FORMS-13751）
+* ユーザーがドイツ語で作成され、英語に翻訳されたフォームを編集する際に、「プレビュー」モードと「編集」モード間で言語表示に一貫性がなくなります。これにより、ラジオボタンおよびチェックボックスコンポーネントは、「編集」モードでは英語で表示され、「プレビュー」モードではドイツ語で正しく表示されます。（FORMS-13910）
+* プロセス削除プロセスツールがエラー `NoClassDefFoundError: org/omg/CORBA/UserException` で失敗します。（FORMS-13751）
 * ユーザーが埋め込みコンテナを使用して、外部またはAEM Sitesで、web ページ内にアダプティブフォーム（AF）を埋め込もうとすると、アダプティブフォームガイドコンテナで ARIA ラベルが使用されます。 ラベルには、埋め込みフォームの role=&quot;main&quot;が含まれます。 ARIA のガイドラインでは、ページごとに 1 つの role=&quot;main&quot;のみを使用する必要があります。 したがって、ユーザーがページのメインコンテンツに別の role=&quot;main&quot;を追加すると、そのコンテンツはアクセシビリティの問題としてフラグ付けされます。 （FORMS-13538）
 * AEM Forms サービスパック 19 （6.5.19.0）でアダプティブフォームでドロップダウンを使用する場合、プレースホルダーテキストを含むドロップダウンは、の値を保持します。 `id="emptyValue"`. つまり、フォームに複数のドロップダウンコンポーネントがある場合、それぞれが以下を持ちます `id="emptyValue"` ARIA のガイドラインに従ってそれは正しくありません。 （FORMS-13370）。
-* XML を使用してデータが送信された後、ユーザーがインタラクティブ通信をリロードすると、生成されたPDFでテキストブロック間に空白が発生します。 （FORMS-13481）
+* ユーザーがデータを XML 経由で送信した後にインタラクティブなコミュニケーションを再読み込みする際に、生成した PDF のテキストブロック間に空白スペースが発生します。（FORMS-13481）
 * ConfigurationManager の実行中に「DSC デプロイメント手順の準備」画面の IPH が見つかりません。 （FORMS-10699）
-* ユーザーが新しい辞書を追加して、既存の辞書を含むフォームを翻訳すると、古い翻訳は無効になります。 次の問題が発生します。（FORMS-13576）
+* ユーザーが既存の辞書を使用してフォームを翻訳するために新しい辞書を追加する際に、古い翻訳は無効になります。次の問題が発生します。（FORMS-13576）
    * 一部のフィールドで、翻訳済みデータの入力に失敗します。
-   * データが辞書に正常に保存されていても、一部のフィールドが新しい言語に翻訳されません。
+   * データが辞書に正常に保存されていても、一部のフィールドは新しい言語に翻訳されません。
 
 #### [!DNL Forms Designer] {#forms-desgner-6521}
 
-* AEM Forms Service Pack 19 （6.5.19.0）環境で、AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。 （LC-3921978）
+* ユーザーが AEM Forms サービスパック 19（6.5.19.0）環境で AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。（LC-3921978）
 * ユーザーが Linux® 環境でアダプティブフォームをレンダリングすると、フィールドコンポーネント間に余分なスペースが発生します。 （LC-3921957）
-* ユーザーが Output サービスを使用して XTG ファイルを PostScript 形式に変換すると、次のエラーで失敗します。           `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)`. （LC-3921720）
+* ユーザーが Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)` が発生して失敗します。（LC-3921720）
 
-  この問題を解決するには：データに Zero Width Space （0x200b）のような特殊文字が含まれているかどうかを確認します。 ある場合は、タグを追加してフラグを使用します。 `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` に示すように、XCI ファイルで以下を行います。 [custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) ファイル。
+  問題を解決するには：
+データにゼロ幅スペース（0x200b）などの特殊文字が含まれているかどうかを確認します。はいの場合は、[custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) ファイルで指定されているように、XCI ファイルにタグ `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` を追加してフラグを使用します。
 
 * Linux® 環境でAEM Forms サービスパック 18 （6.5.18.0）を使用すると、AMD® プロセッサーを使用した AVX/AVX2 命令をサポートしていない CPU で XMLFM がクラッシュします。 （LC-3921718）
 * ユーザーがForms Output サービスを使用して XDP からPDFを作成すると、XDP の「個々のテキストブロック」に「設定」を設定して「アーティファクト」を制御することができません。 （LC-3921954）
@@ -326,7 +327,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
 * [!DNL Experience Manager] 6.5.21.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
-* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からダウンロードできます。
+* サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.21.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
@@ -341,7 +342,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -527,16 +528,15 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6521}
 
 
-* AEM Forms JEE サービスパック 21 （6.5.21.0）のインストール後、Geode jar の重複したエントリが見つかった場合 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の下 `<AEM_Forms_Installation>/lib/caching/lib` フォルダー（FORMS-14926）。
+* AEM Forms JEE サービスパック 21 （6.5.21.0）のインストール後、Geode jar の重複したエントリが見つかった場合 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の下 `<AEM_Forms_Installation>/lib/caching/lib` フォルダー（FORMS-14926）に移動し、次の手順を実行して問題を解決します。
 
-  問題を解決するには、以下の手順を実行します。
+   1. ロケーターが実行中の場合は、停止します。
+   1. AEM サーバーを停止します。
+   1. に移動します `<AEM_Forms_Installation>/lib/caching/lib`.
+   1. を除くすべての Geode パッチファイルを削除します。 `geode-*-1.15.1.2.jar`. `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
+   1. コマンドプロンプトを管理者モードで開きます。
+   1. を使用して Geode パッチをインストールします。 `geode-*-1.15.1.2.jar` ファイル。
 
-   1. ロケーターとサーバーが実行中の場合は、指定した順序で停止します。
-   1. 管理者モードでパッチインストーラーを実行して、パッチを再インストールします（重要）。
-   1. を持つ Geode jar のみを確認します `version 1.15.1.2` 存在する。
-
-  >[!NOTE]
-  > を持つ Geode jar のみ場合、アクションは必要ありません `version 1.15.1.2` 存在する。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
