@@ -6,9 +6,9 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 source-git-commit: 7b0f8222408d43a298fa2036020963721cfbd1f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5660'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -78,8 +78,8 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 
 >[!NOTE]
 >
->* Microsoft® Windows では、PDF Generatorは、WebKit、Acrobat WebCapture および WebToPDF の各PDFルートをサポートし、変換ファイルをHTMLドキュメントに変換します。
->* UNIX ベースのオペレーティングシステムでは、PDF Generatorは、WebKit および WebToPDF のHTMLルートをサポートし、変換ファイルをPDFドキュメントに変換します。
+>* Microsoft® Windows では、PDF Generator は、WebKit、Acrobat WebCapture および WebToPDF の変換ルートをサポートし、HTML ファイルを PDF ドキュメントに変換します。
+>* UNIX ベースのオペレーティングシステムでは、PDF Generator は、WebKit および WebToPDF の変換ルートをサポートし、HTML ファイルを PDF ドキュメントに変換します。
 >
 
 ### UNIX ベースのオペレーティングシステムの追加要件 {#extrarequirements}
@@ -168,7 +168,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **（PDF Generatorのみ）** PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換するため、WebKit および WebToPDF ルートをサポートしています。 WebToPDF ルートの変換を有効にするには、以下に示す 64 ビットライブラリをインストールします。 通常、これらのライブラリは既にインストールされています。不足しているライブラリがあれば、手動でインストールします。
+* **（PDF Generator のみ）** PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および WebToPDF の各ルートをサポートしています。WebToPDF ルートの変換を有効にするには、下記の 64 ビットライブラリをインストールします。通常、これらのライブラリは既にインストールされています。不足しているライブラリがあれば、手動でインストールします。
 
    * linux-gate.so.1
    * libz.so.1
@@ -336,7 +336,7 @@ Windows Server で PDF Generator サービスを使用してドキュメント�
 
 ### （Windows のみ）HTML から PDF への変換の設定 {#configure-html-to-pdf-conversion}
 
-PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換するための WebKit、WebCapture および WebToPDF の各ルートまたはメソッドを提供します。 Windows で WebKit および Acrobat WebCapture ルートの変換を有効にするには、Unicode フォントを %windir%\fonts ディレクトリにコピーします。
+PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit、WebCapture および WebToPDF の各ルートまたはメソッドを提供しています。Windows で WebKit および Acrobat WebCapture ルートの変換を有効にするには、Unicode フォントを %windir%\fonts ディレクトリにコピーします。
 
 >[!NOTE]
 >
@@ -344,7 +344,7 @@ PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換
 
 ### （UNIX ベースのプラットフォームのみ）HTML から PDF への変換用の追加設定  {#extra-configurations-for-html-to-pdf-conversion}
 
-UNIX ベースのプラットフォームでは、PDF Generatorサービスは、WebKit および WebToPDF ルートをサポートし、HTMLファイルをPDFドキュメントに変換します。 HTML から PDF への変換を有効にするには、目的の変換ルートに合わせて、以下の設定を行います。
+UNIX ベースのプラットフォーム上で PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および WebToPDF の各ルートをサポートしています。HTML から PDF への変換を有効にするには、目的の変換ルートに合わせて、以下の設定を行います。
 
 ### （UNIX ベースのプラットフォームのみ）Unicode フォントのサポートの有効化（WebKit のみ） {#enable-support-for-unicode-fonts-webkit-only}
 
@@ -485,7 +485,7 @@ Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使�
 
 ### （Windows のみ）HTML から PDF への変換のためのプライマリルートの設定 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換する複数のルート（Webkit、Acrobat WebCapture （Windows のみ）および WebToPDF）を提供します。 Adobeでは、動的コンテンツを処理する機能を持ち、32 ビットライブラリに依存せず、追加フォントを必要としないので、WebToPDF ルートを使用することをお勧めします。 また、WebToPDF ルートで変換を実行するために sudo または root アクセス権が必要になることもありません。
+PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換する複数のルート（Webkit、Acrobat WebCapture（Windows のみ）および WebToPDF）を提供します。アドビでは、WebToPDF ルートを使用することを推奨しています。動的コンテンツを処理する機能を持ち、32 ビットライブラリに依存せず、追加フォントを必要としないからです。また、WebToPDF ルートでは、変換を実行するための sudo または root アクセスは必要ありません。
 
 HTML から PDF への変換のデフォルトのプライマリルートは WebKit です。変換ルートを変更するには：
 
@@ -583,7 +583,7 @@ AEM Forms アドオンと Microsoft® Project をマシンにインストール�
 
 1. `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/` に移動します。
 
-1. 次のコマンドを実行して、WebToPDF がHTMLからPDFへの変換に必要とするすべてのライブラリを一覧表示します。
+1. 次のコマンドを実行して、WebToPDF が HTML から PDF への変換に必要とするすべてのライブラリを一覧表示します。
 
    `ldd phantomjs`
 
@@ -691,7 +691,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 * フォントディレクトリが PDF Generator の設定 UI に追加されていることを確認します。
 
-**Linux および Solaris （WebToPDF 変換ルート）**
+**Linux および Solaris（WebToPDF 変換ルート）**
 
 * Webkit ベースの HTMLToPDF 変換に 32 ビットライブラリ（libicudata.so.42）が使用可能であり、64 ビット（libicudata.so.42）が WebToPDF ベースの HTMLToPDF 変換に使用可能であることを確認します。
 
