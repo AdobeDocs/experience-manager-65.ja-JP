@@ -7,10 +7,10 @@ feature: Adaptive Forms, Foundation Components, Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
-source-wordcount: '5504'
-ht-degree: 100%
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
+workflow-type: tm+mt
+source-wordcount: '5538'
+ht-degree: 99%
 
 ---
 
@@ -63,6 +63,7 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
 AEM プロジェクトのセットアップを完了したら、アダプティブフォームのテンプレートおよびコンポーネントを作成してカスタマイズするための計画を策定します。
 
 * アダプティブフォームテンプレートとは、アダプティブフォームの構造およびヘッダーとフッターの情報を定義する特別な AEM ページです。テンプレートのアダプティブフォーム用レイアウト、スタイル、基本構造は事前に設定されています。AEM Forms には、アダプティブフォームの作成にすぐに使用できるテンプレートおよびコンポーネントが用意されています。ただし、必要に応じてカスタムのテンプレートやコンポーネントを作成できます。アダプティブフォームで今後必要となる追加のテンプレートやコンポーネントの要件を収集しておくことをお勧めします。詳しくは、[アダプティブフォームおよびコンポーネントのカスタマイズ](/help/forms/using/adaptive-forms-best-practices.md#customize-components)を参照してください。
+* CRX パッケージマネージャーのユーザーインターフェイスではなくフォームマネージャーユーザーインターフェイスを使用して、フォームパッケージをアップロードすることをお勧めします。CRX パッケージマネージャーを使用してパッケージをアップロードすると、異常が発生する場合があるからです。
 * AEM Forms では、次のフォームモデルに基づいてアダプティブフォームを作成できます。フォームモデルは、フォームと AEM システム間のデータ交換のためのインターフェイスとして機能し、アダプティブフォーム内外のデータフローの XML ベースの構造を提供します。また、フォームモデルはスキーマおよび XFA 制約の形式で、アダプティブフォームにルールや制約を課します。
 
    * **なし**：このオプションを使用して作成されたアダプティブフォームは、フォームモデルを使用しません。このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。

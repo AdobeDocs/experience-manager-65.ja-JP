@@ -10,10 +10,10 @@ feature: HTML5 Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
+workflow-type: tm+mt
 source-wordcount: '2007'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -172,8 +172,7 @@ ht-degree: 100%
 
    回答：HTML5 のフォームは、フローティングフィールドの表示パターンをサポートしていません。
 
-1. HTML5 フォームの「日付」フィールドの形式は何ですか？
-
+1. HTML 5 Formsの「日付」フィールドの形式は何ですか？
 回答：「日付」フィールドでは、ISO 形式（YYYY-MM-DD）が使用されます。他の形式で日付を指定した場合、フィールドからタブアウトするまで、日付フィールドは書式設定を受け付けません。
 
 ### スクリプティング {#scripting}

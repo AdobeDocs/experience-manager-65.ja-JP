@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 84e56b9e9552903fa210cd680a64c268d5e15626
+source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
-source-wordcount: '3823'
-ht-degree: 78%
+source-wordcount: '3907'
+ht-degree: 75%
 
 ---
 
@@ -41,18 +41,22 @@ ht-degree: 78%
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
+### [!DNL Forms]
+
 このリリースの主な機能と機能強化は次のとおりです。
 
-* 既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。（NPR-41994）
-
-* AEM Forms のルールエディターの機能強化
+* **Oauth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わって、サーバー間認証の新しい使いやすい資格情報が追加されました。 （NPR-41994）
+* **AEM Formsにおけるルールエディターの機能強化**:
    * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
    * パネルやフォーム（フィールドを含む）を検証またはリセットする。
    * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
-* PDFのアクセシビリティのための AutoTag API: OSGi 上のAEM Formsでは、新しい AutoTag API をサポートし、タグ、段落、リストを追加して、アクセシビリティ標準のPDFを強化するようになりました。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
-* 16 ビット PNG のサポート：PDF Generator の ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
-* XDP 内の個々のテキストブロックへのアーティファクトの適用：Forms Designer で、XDP ファイル内の個々のテキストブロックに対する設定を指定できるようになりました。 この機能を使用すると、結果として生成されるPDFでアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセス可能になります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDFの生成時にこれらの設定を適用し、適切なPDF/UA タグ付けを行います。
-* AEM Forms Designer は `GB18030:2022` 標準で認定されています。この認定により、Forms Designer で中国語の Unicode 文字セットがサポートされるようになりました。このセットを使用すると、編集可能なすべてのフィールドとダイアログボックスに中国語を入力できます。
+* **PDFのアクセシビリティのための AutoTag API**:OSGi のAEM Formsでは、新しい AutoTag API をサポートするようになり、タグ、段落、リストを追加して、アクセシビリティ標準規格のPDFを強化します。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
+* **16 ビット PNG のサポート**:PDF Generatorの ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換がサポートされるようになりました。
+* **XDP 内の個々のテキストブロックへのアーティファクトの適用**:Forms Designer で、XDP ファイル内の個々のテキストブロックの設定を指定できるようになりました。 この機能を使用すると、結果として生成されるPDFでアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセス可能になります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDFの生成時にこれらの設定を適用し、適切なPDF/UA タグ付けを行います。
+* **AEM Forms Designer の認定対象 `GB18030:2022` 標準**：を使用します `GB18030:2022` 認定制度では、Forms Designer で中国語の Unicode 文字セットがサポートされるようになりました。このセットを使用すると、編集可能なすべてのフィールドとダイアログボックスに中国語を入力できます。
+* **JEE サーバーでの WebToPDF ルートのサポート**:PDF Generatorサービスでは、Webkit および WebCapture （Windows のみ）ルートに加え、HTMLファイルを JEE 上のPDFドキュメントに変換するための WebToPDF ルートをサポートするようになりました。 WebToPDF ルートは OSGi で既に使用できますが、JEE でも含めるように拡張されました。 JEE プラットフォームと OSGi プラットフォームの両方で、PDF Generatorサービスは、異なるオペレーティングシステム間で次のルートをサポートしています。
+   * **Windows**:Webkit、WebCapture、WebToPDF
+   * **Linux**:Webkit、WebToPDF
 
 
 ### [!DNL Assets]
