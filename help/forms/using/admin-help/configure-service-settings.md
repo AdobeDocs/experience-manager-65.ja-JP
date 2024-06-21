@@ -7,11 +7,12 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
-source-wordcount: '10702'
-ht-degree: 100%
+source-git-commit: 1e978cbece1401a18137ef98a3a9bf6cd666e48f
+workflow-type: tm+mt
+source-wordcount: '10828'
+ht-degree: 98%
 
 ---
 
@@ -225,7 +226,7 @@ Encryption サービス（`EncryptionService`）は、ドキュメントの暗�
 >
 >接続が SSL（LDAPS を使用）で保護されている場合は、単純な認証（ユーザー名とパスワード）のみを使用します。
 
-**Compatibility Mode：**
+<!-- **Compatibility Mode:**-->
 
 ## FTP サービスの設定 {#ftp-service-settings}
 
@@ -253,7 +254,11 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 **File type Settings：** 変換ジョブに適用するために事前設定されたファイルタイプ設定（この設定が API 起動パラメーターの一部として指定されていない場合に使用する）の名前です。ファイルタイプの設定は、管理コンソールで、サービス／PDF Generator／ファイルタイプごとの設定をクリックして指定します。
 
-**Use Acrobat WebCapture（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、HTML から PDF への変換すべてに Acrobat X Pro を適用します。これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
+**Web キャプチャを使用（Windows のみ）:** この設定が true の場合、Generate Conversion サービスは、HTMLからPDFへのPDFすべてにAcrobatを適用します。 これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
+
+**HTMLからPDFへのプライマリ変換のための変換コンバータ：** PDF生成サービスは、HTMLファイルをPDFドキュメントに変換する複数のルート（Webkit、WebCapture （Windows のみ）および WebToPDF）を提供します。 この設定を使用すると、HTMLをPDFに変換するプライマリコンバーターを選択できます。 デフォルトでは、WebToPDF が選択されています。
+
+**HTMLからPDFへの変換のためのフォールバックコンバーター：** プライマリ コンバータが失敗した場合にHTMLからPDFへの変換を行うためのコンバータを指定してください。 デフォルトでは、WebCapture （Windows のみ）が選択されています。
 
 **Use Acrobat Image Conversion（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、画像から PDF への変換すべてに Acrobat X Pro を適用します。この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
 
@@ -268,21 +273,23 @@ Characters In User Name（Windows のみ）：**&#x200B;ユーザー名に文字
 
 **OCR Pool Size：** PDF Generator が OCR に使用する PaperCaptureService のプールサイズです。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。この設定は Windows システムでのみ有効です。
 
+**ImageToPDF のTIFF変換用のメモリ内の最大ページ数：** この設定は、PDFへの変換中にTIFFにフラッシュされる前にメモリに残すことができるディスクイメージの最大ページ数を決定します。 この設定のデフォルト値は 500 で、追加のメモリが ImageToPDF コンバータープロセスに割り当てられている場合に増やすことができます。
+
 **Fallback Font Family For HTML To PDF Conversions：** 元の HTML で使用されているフォントが AEM Forms サーバーで使用できない場合に PDF ドキュメントで使用されるフォントファミリーの名前です。使用できないフォントを使用する HTML ページを変換する場合は、フォントファミリーを指定します。例えば、地域言語で作成したページでは、使用できないフォントを使用できます。
 
 **Retry Logic for Native Conversions：** 最初の変換に失敗した場合、PDF 生成の再試行が次のように制御されます。
 
-**再試行しない**
+* **再試行しない**
 
-最初の変換が失敗した場合は、PDF の変換を再試行しないでください。
+  最初の変換が失敗した場合は、PDF の変換を再試行しないでください。
 
-**再試行**
+* **再試行**
 
-タイムアウトのしきい値に達したかどうかに関係なく、PDF の変換を再試行します。最初の試行のデフォルトのタイムアウト時間は 270 秒です。
+  タイムアウトのしきい値に達したかどうかに関係なく、PDF の変換を再試行します。最初の試行のデフォルトのタイムアウト時間は 270 秒です。
 
-**時間がある場合には再試行**
+* **時間がある場合には再試行**
 
-最初の変換に費やした時間が指定したタイムアウト時間より短かった場合は、PDF 変換を再試行します。例えば、タイムアウト時間が 270 秒で、最初の試行に 200 秒を費やした場合、PDF Generator は変換を再試行します。最初の試行に 270 秒を費やした場合、変換は再試行されません。
+  最初の変換に費やした時間が指定したタイムアウト時間より短かった場合は、PDF 変換を再試行します。例えば、タイムアウト時間が 270 秒で、最初の試行に 200 秒を費やした場合、PDF Generator は変換を再試行します。最初の試行に 270 秒を費やした場合、変換は再試行されません。
 
 ## Guides ES4 Utilities サービス設定 {#guides-es4-utilities-service-settings}
 
