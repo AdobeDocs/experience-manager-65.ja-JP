@@ -9,9 +9,9 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: 1e978cbece1401a18137ef98a3a9bf6cd666e48f
+source-git-commit: f1a18575e8b8f925f8adbe18e189f3916b5e353d
 workflow-type: tm+mt
-source-wordcount: '10828'
+source-wordcount: '10824'
 ht-degree: 98%
 
 ---
@@ -260,9 +260,9 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 **HTMLからPDFへの変換のためのフォールバックコンバーター：** プライマリ コンバータが失敗した場合にHTMLからPDFへの変換を行うためのコンバータを指定してください。 デフォルトでは、WebCapture （Windows のみ）が選択されています。
 
-**Use Acrobat Image Conversion（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、画像から PDF への変換すべてに Acrobat X Pro を適用します。この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
+**Acrobat画像変換を使用（Windows のみ）:** この設定が true の場合、Generate PDFサービスは、画像からPDFへの変換すべてにAcrobatを使用します。 この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
 
-**Enable Acrobat-based AutoCAD Conversions（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、DWG から PDF への変換すべてに Acrobat X Pro を適用します。この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
+**Acrobat ベースの AutoCAD 変換を有効にする（Windows のみ）:** この設定が true の場合、PDF生成サービスは、DWG からPDFへの変換すべてにAcrobatを使用します。 この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
 
 **Regular Expressions For Finding Out Prohibited Special
 Characters In User Name（Windows のみ）：**&#x200B;ユーザー名に文字が含まれている場合に、PDF の書き出しや最適化の操作を妨げる文字を指定します。
