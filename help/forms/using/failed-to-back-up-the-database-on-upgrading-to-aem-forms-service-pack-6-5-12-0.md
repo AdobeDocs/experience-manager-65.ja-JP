@@ -3,9 +3,10 @@ title: MySQL 用に 6.5.12.0 にアップグレードする際にデータベー
 description: ユーザーが Experience Manager 6.5.12.0 にアップグレードして「MySQL をアップグレード」をクリックすると、Configuration Manager が以前の Experience Manager Forms データベースをバックアップできません。
 exl-id: 1af000fa-439b-4ffd-8b5a-3ba45f0c524c
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Troubleshooting
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 100%
 

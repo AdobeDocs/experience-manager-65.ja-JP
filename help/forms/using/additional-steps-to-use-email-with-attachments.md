@@ -3,9 +3,10 @@ title: 添付ファイル付きのメールを受信するための追加手順
 description: JEE 上の AEM Forms プラットフォームで添付ファイルを含む電子メールを取得できない場合のエラーの修正方法を説明します。
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Troubleshooting
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 

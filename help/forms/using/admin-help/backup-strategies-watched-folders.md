@@ -7,9 +7,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 0d36160a-29fa-4cc4-a0ff-fc681d3e040e
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
+workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 100%
 

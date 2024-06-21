@@ -8,8 +8,9 @@ topic-tags: development-tools, coding
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+feature: Adaptive Forms
+source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
+workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 100%
 

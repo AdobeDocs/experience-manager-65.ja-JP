@@ -7,9 +7,10 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
+workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 100%
 

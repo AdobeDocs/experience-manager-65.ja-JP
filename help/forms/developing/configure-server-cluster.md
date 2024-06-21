@@ -3,9 +3,10 @@ title: JEE 上のAEM Forms サーバークラスターの設定とトラブル�
 description: Adobe Experience Manager（AEM）Forms on JEE サーバークラスターの設定方法とトラブルシューティング方法について説明します。
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '3945'
 ht-degree: 100%
 

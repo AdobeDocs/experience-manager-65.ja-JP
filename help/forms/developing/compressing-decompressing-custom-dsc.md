@@ -3,9 +3,10 @@ title: JEE 上の AEM Forms のカスタム DSC を使用したファイルの�
 description: JEE 上の AEM Forms のカスタム DSC を使用してファイルを圧縮および解凍する方法を説明します
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 100%
 

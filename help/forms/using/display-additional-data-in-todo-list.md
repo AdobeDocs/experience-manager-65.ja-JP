@@ -7,9 +7,10 @@ topic-tags: forms-workspace
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
+workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 100%
 

@@ -3,9 +3,10 @@ title: OAuth 2.0 クライアント資格情報フローを使用した Salesfor
 description: OAuth 2.0 クライアント資格情報フローを使用した Salesforce と AEM Forms の統合手順
 exl-id: 4c356aa6-ebd4-40b9-89e3-bc4519e4a7c5
 solution: Experience Manager, Experience Manager Forms
+feature: Form Data Model
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
+workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 100%
 

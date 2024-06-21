@@ -5,8 +5,9 @@ topic-tags: Security
 role: Admin,User
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+feature: Security, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '1434'
 ht-degree: 100%
 

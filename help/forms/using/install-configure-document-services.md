@@ -3,10 +3,11 @@ title: ドキュメントサービスのインストールと設定
 description: AEM Forms ドキュメントサービスをインストールして、PDF ドキュメントを作成、アセンブル、配布、アーカイブし、デジタル署名を追加してドキュメントへのアクセスを制限し、Barcoded Forms をデコードしましょう。
 topic-tags: installing
 role: Admin, User, Developer
-solution: Experience Manager, Experience Manager Forms
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 7b0f8222408d43a298fa2036020963721cfbd1f9
-workflow-type: ht
+solution: Experience Manager, Experience Manager Forms
+feature: Interactive Communication
+source-git-commit: cf3247e437af7447fd6a6121c6a4e2ef750d06b7
+workflow-type: tm+mt
 source-wordcount: '5660'
 ht-degree: 100%
 

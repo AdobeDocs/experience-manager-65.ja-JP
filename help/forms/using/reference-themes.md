@@ -6,9 +6,10 @@ topic-tags: develop
 docset: aem65
 exl-id: f6c24894-c322-4c44-b001-8978954d6e53
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
+workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 100%
 

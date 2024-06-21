@@ -6,9 +6,10 @@ topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Foundation Components, Workflow
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '7640'
 ht-degree: 100%
 

@@ -5,8 +5,9 @@ contentOwner: khsingh
 role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+feature: Interactive Communication
+source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
+workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 100%
 

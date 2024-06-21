@@ -7,9 +7,10 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 8eb4f691-a66b-498e-8114-307221f63718
 solution: Experience Manager, Experience Manager Forms
+feature: Document Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 100%
 
@@ -88,7 +89,7 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    * サーバークラスター - `[appserver root]`¥domain¥configuration¥domain_&lt;dbname>.xml
 
-1. &#x200B;
+1. 
    * **シングルサーバーの場合、** lc_&lt;dbaname/tunkey>.xml ファイルの &lt;security-realms> セクションに次のテキストを追加します。
 
    ```xml

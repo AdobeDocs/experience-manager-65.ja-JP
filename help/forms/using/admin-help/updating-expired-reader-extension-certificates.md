@@ -3,9 +3,10 @@ title: Reader 拡張証明書の有効期限とその影響
 description: Reader 拡張証明書の有効期限とその影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 100%
 

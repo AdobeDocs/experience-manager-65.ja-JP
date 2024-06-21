@@ -7,8 +7,9 @@ docset: aem65
 role: Admin
 exl-id: bd58099c-08cd-4056-afb6-a5935454429a
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+feature: Adaptive Forms, Troubleshooting
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 100%
 
@@ -30,7 +31,7 @@ AEM Forms 6.5 サービスパック 19 をインストールした後、Output �
 
    >[!NOTE]
    >
-   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 別の方法（Java プロセスの停止など）を使用してAEM SDK を再起動すると、AEM開発環境で不整合が生じる場合があります。
+   > SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 
 >[!NOTE]

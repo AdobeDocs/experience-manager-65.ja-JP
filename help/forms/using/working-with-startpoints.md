@@ -7,13 +7,15 @@ topic-tags: forms-app
 docset: aem65
 exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: dd8748cee7a4b3ba91795a51928bd8590c47ef27
+workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 100%
 
 ---
+
 
 # スタートポイントの使用{#working-with-startpoints}
 
