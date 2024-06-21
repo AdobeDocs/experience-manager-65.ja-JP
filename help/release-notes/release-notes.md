@@ -9,7 +9,7 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
 workflow-type: tm+mt
 source-wordcount: '3907'
-ht-degree: 75%
+ht-degree: 93%
 
 ---
 
@@ -48,11 +48,11 @@ ht-degree: 75%
 * **Oauth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わって、サーバー間認証の新しい使いやすい資格情報が追加されました。 （NPR-41994）
 * **AEM Formsにおけるルールエディターの機能強化**:
    * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
-   * パネルやフォーム（フィールドを含む）を検証またはリセットする。
+   * パネルやフォーム（フィールドを含む）の検証またはリセット。
    * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
 * **PDFのアクセシビリティのための AutoTag API**:OSGi のAEM Formsでは、新しい AutoTag API をサポートするようになり、タグ、段落、リストを追加して、アクセシビリティ標準規格のPDFを強化します。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
 * **16 ビット PNG のサポート**:PDF Generatorの ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換がサポートされるようになりました。
-* **XDP 内の個々のテキストブロックへのアーティファクトの適用**:Forms Designer で、XDP ファイル内の個々のテキストブロックの設定を指定できるようになりました。 この機能を使用すると、結果として生成されるPDFでアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセス可能になります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDFの生成時にこれらの設定を適用し、適切なPDF/UA タグ付けを行います。
+* **XDP 内の個々のテキストブロックへのアーティファクトの適用**:Forms Designer で、XDP ファイル内の個々のテキストブロックの設定を指定できるようになりました。 この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
 * **AEM Forms Designer の認定対象 `GB18030:2022` 標準**：を使用します `GB18030:2022` 認定制度では、Forms Designer で中国語の Unicode 文字セットがサポートされるようになりました。このセットを使用すると、編集可能なすべてのフィールドとダイアログボックスに中国語を入力できます。
 * **JEE サーバーでの WebToPDF ルートのサポート**:PDF Generatorサービスでは、Webkit および WebCapture （Windows のみ）ルートに加え、HTMLファイルを JEE 上のPDFドキュメントに変換するための WebToPDF ルートをサポートするようになりました。 WebToPDF ルートは OSGi で既に使用できますが、JEE でも含めるように拡張されました。 JEE プラットフォームと OSGi プラットフォームの両方で、PDF Generatorサービスは、異なるオペレーティングシステム間で次のルートをサポートしています。
    * **Windows**:Webkit、WebCapture、WebToPDF
@@ -187,31 +187,31 @@ ht-degree: 75%
 #### [!DNL Adaptive Forms] {#forms-6520}
 
 * アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
-* ユーザーがクリックしたとき **PDFに印刷** osgi のAEM Forms サービスパック 15 （6.5.15.0）では、クライアントサイドの検証が失敗し、Developer Tools コンソールウィンドウに表示されるエラーメッセージで明らかになります。 （FORMS-14029）
-* AEM 6.5 Forms サービスパック 17 （6.5.17.0）またはサービスパック 18 （6.5.18.0）、サービスパック 19 （6.5.19.0）でフォームを送信すると、「ありがとうございます」メッセージの翻訳が正しく機能しません。 ただし、メッセージは辞書で正しく翻訳されています。 （FORMS-13846）
+* ユーザーが OSGi 上の AEM Forms サービスパック 15（6.5.15.0）で「**PDF に印刷**」をクリックすると、クライアントサイドの検証が失敗します。これは、開発者ツールコンソールウィンドウに表示されるエラーメッセージで明確に示されます。（FORMS-14029）
+* ユーザーが AEM 6.5 Forms サービスパック 17（6.5.17.0）、サービスパック 18（6.5.18.0）、サービスパック 19（6.5.19.0）でフォームを送信すると、「ありがとうございます」メッセージの翻訳が正しく機能しません。ただし、メッセージは辞書で正しく翻訳されます。（FORMS-13846）
 * ユーザーが日付選択コンポーネントを含むフォームをプレビューすると、日付選択フィールドが他のフォームフィールドと合わなくなります。（FORMS-13763）
-* 環境AEM Forms サービスパック 19 （6.5.19.0）でユーザーが API を呼び出して数値を書式設定すると、書式設定された数値が各ロケールに合わせて表示されません。 その結果、通貨記号が正しく表示されません。 この問題は、「de_DE」または「en_US」に設定されたロケールパラメーターに関係なく解決しません。 （FORMS-13759）
+* AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが API を呼び出して数値を書式設定すると、書式設定された数値はそれぞれのロケールに一致しません。その結果、通貨記号が正しく表示されません。この問題は、ロケールパラメーターを「de_DE」または「en_US」に設定しているかどうかに関係なく解決しません。（FORMS-13759）
 * AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが Img2Pdf PDFG サービスを使用して 16 ビット PNG を PDF に変換すると、変換が失敗し、「Use Acrobat Image conversion」サービスを使用できなくなります。（FORMS-13754）
-* AEM Forms サービスパック 19 （6.5.19.1）で、AEM Forms JEE の adminui の「サービス/PDF Generator/Adobe PDF設定」セクションに指定されている既存の JobOptions ファイルをアップロードすると、アップロードが失敗します。 また、次のエラーメッセージも表示されます（FORMS-13597）。
+* AEM Forms サービスパック 19（6.5.19.1）では、ユーザーが AEM Forms JEE（adminui）のサービス／PDF Generator／Adobe PDF 設定セクションで既存の JobOptions ファイルをアップロードすると、アップロードが失敗します。また、次のエラーメッセージも表示されます（FORMS-13597）。
   `"An error has occurred while processing your request. Please use the breadcrumb links to navigate to another page."`
-* AEM Forms サービスパック 15 （6.5.15.0）からAEM Forms サービスパック（6.5.17.0）またはAEM Forms サービスパック（6.5.19.0）に移行すると、FD キーが重複し、フォームが正しく変換されません。 （FORMS-13461）
-* ユーザーが AMS のデプロイメントトポロジでサポートされているオーサーの前に Dispatcher を配置すると、タスクの割り当て送信がハングするか失敗します。 （FORMS-8010）
+* ユーザーが AEM Forms サービスパック 15（6.5.15.0）から AEM Forms サービスパック（6.5.17.0）または AEM Forms サービスパック（6.5.19.0）に移行すると、FD キーが重複し、フォームが正しく翻訳されません。（FORMS-13461）
+* ユーザーが AMS のデプロイメントトポロジでサポートされている作成者の前に Dispatcher を配置すると、タスクを割り当ての送信がハングまたは失敗します。（FORMS-8010）
 * アクセシビリティ関連の修正：
-   * 「formsanddocuments」ページのアイコンに、ANDI 標準に従ってアクセスできるようになりました。 （FORMS-13094）
-   * ユーザーは、キーボードを使用してツールバーにアクセスし、編集ページのコンテンツを保存または編集できます。ツールバーは、ANDI 標準に従って強化されます。 （FORMS-13102）
-   * 「必須または必須」フォームフィールドは、ANDI 標準に従ってアクセスできます。 （FORMS-13097）
+   * ANDI 標準に従って、「formsanddocuments」ページのアイコンにアクセスできるようになりました。（FORMS-13094）
+   * ユーザーはキーボード経由でツールバーにアクセスし、編集ページのコンテンツを保存または編集できます。ツールバーは、ANDI 標準に従って強化されます。（FORMS-13102）
+   * 「必要または必須」フォームフィールドには、ANDI 標準に従ってアクセスできます。（FORMS-13097）
 
 * ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。（FORMS-13594）
 * Internet Explorer 互換モードの Microsoft Edge では、日付入力フィールドコンポーネントが正しく機能しません。（FORMS-13170）
-* の修正時に、添付ファイル付きの停止したメール通知を送信できませんでした [添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) サーバーで実行されます。 （FORMS-14227）
+* サーバー上で[添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments)の修正を実行する際に、添付ファイル付きのメール通知が停止して送信できません。（FORMS-14227）
 * サービスパック 18（6.5.18.0）の AEM Forms Workspace では、アップロードされたドキュメントにユーザーがコメントすると、ドキュメントファイルが破損します。（FORMS-13735）
-* AEM Forms サービスパック 18 （6.5.18.0）、サービスパック 19 （6.5.19.0）またはサービスパック 20 （6.5.20.0）では、サイドパネルからアダプティブフォームを検索しようとすると、検索が失敗します。 （FORMS-14117）
+* AEM Forms サービスパック 18（6.5.18.0）、AEM Forms サービスパック 19（6.5.19.0）、AEM Forms サービスパック 20（6.5.20.0）では、サイドパネルからアダプティブフォームを検索しようとする際に、検索に失敗します。（FORMS-14117）
 * ユーザーがドイツ語で作成され、英語に翻訳されたフォームを編集する際に、「プレビュー」モードと「編集」モード間で言語表示に一貫性がなくなります。これにより、ラジオボタンおよびチェックボックスコンポーネントは、「編集」モードでは英語で表示され、「プレビュー」モードではドイツ語で正しく表示されます。（FORMS-13910）
 * プロセス削除プロセスツールがエラー `NoClassDefFoundError: org/omg/CORBA/UserException` で失敗します。（FORMS-13751）
-* ユーザーが埋め込みコンテナを使用して、外部またはAEM Sitesで、web ページ内にアダプティブフォーム（AF）を埋め込もうとすると、アダプティブフォームガイドコンテナで ARIA ラベルが使用されます。 ラベルには、埋め込みフォームの role=&quot;main&quot;が含まれます。 ARIA のガイドラインでは、ページごとに 1 つの role=&quot;main&quot;のみを使用する必要があります。 したがって、ユーザーがページのメインコンテンツに別の role=&quot;main&quot;を追加すると、そのコンテンツはアクセシビリティの問題としてフラグ付けされます。 （FORMS-13538）
-* AEM Forms サービスパック 19 （6.5.19.0）でアダプティブフォームでドロップダウンを使用する場合、プレースホルダーテキストを含むドロップダウンは、の値を保持します。 `id="emptyValue"`. つまり、フォームに複数のドロップダウンコンポーネントがある場合、それぞれが以下を持ちます `id="emptyValue"` ARIA のガイドラインに従ってそれは正しくありません。 （FORMS-13370）。
+* ユーザーが埋め込みコンテナを使用して、外部または AEM Sites 上の web ページ内にアダプティブフォーム（AF）を埋め込もうとすると、アダプティブフォームガイドコンテナによって、ARIA LABEL が導入されます。ラベルには、埋め込まれたフォームに対して role=“main” が含まれます。ARIA ガイドラインに従って、ページごとに 1 つの role=“main” のみを使用する必要があります。したがって、ユーザーがページのメインコンテンツに別の role=“main” を追加すると、アクセシビリティの問題としてフラグが付けられます。（FORMS-13538）
+* AEM Forms サービスパック 19（6.5.19.0）では、アダプティブフォームでドロップダウンを使用すると、プレースホルダーテキストを含むドロップダウンで `id="emptyValue"` の値が保持されます。そのため、フォームに複数のドロップダウンコンポーネントがある場合、それぞれの `id="emptyValue"` は ARIA ガイドラインに従って正しくありません。（FORMS-13370）。
 * ユーザーがデータを XML 経由で送信した後にインタラクティブなコミュニケーションを再読み込みする際に、生成した PDF のテキストブロック間に空白スペースが発生します。（FORMS-13481）
-* ConfigurationManager の実行中に「DSC デプロイメント手順の準備」画面の IPH が見つかりません。 （FORMS-10699）
+* ConfigurationManager の実行中に、「DSC デプロイメントの準備手順」画面の IPH が見つかりません。（FORMS-10699）
 * ユーザーが既存の辞書を使用してフォームを翻訳するために新しい辞書を追加する際に、古い翻訳は無効になります。次の問題が発生します。（FORMS-13576）
    * 一部のフィールドで、翻訳済みデータの入力に失敗します。
    * データが辞書に正常に保存されていても、一部のフィールドは新しい言語に翻訳されません。
@@ -219,14 +219,14 @@ ht-degree: 75%
 #### [!DNL Forms Designer] {#forms-desgner-6521}
 
 * ユーザーが AEM Forms サービスパック 19（6.5.19.0）環境で AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。（LC-3921978）
-* ユーザーが Linux® 環境でアダプティブフォームをレンダリングすると、フィールドコンポーネント間に余分なスペースが発生します。 （LC-3921957）
+* ユーザーが Linux® 環境でアダプティブフォームをレンダリングする際に、フィールドコンポーネント間に余分なスペースが発生します。（LC-3921957）
 * ユーザーが Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)` が発生して失敗します。（LC-3921720）
 
   問題を解決するには：
 データにゼロ幅スペース（0x200b）などの特殊文字が含まれているかどうかを確認します。はいの場合は、[custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) ファイルで指定されているように、XCI ファイルにタグ `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` を追加してフラグを使用します。
 
-* Linux® 環境でAEM Forms サービスパック 18 （6.5.18.0）を使用すると、AMD® プロセッサーを使用した AVX/AVX2 命令をサポートしていない CPU で XMLFM がクラッシュします。 （LC-3921718）
-* ユーザーがForms Output サービスを使用して XDP からPDFを作成すると、XDP の「個々のテキストブロック」に「設定」を設定して「アーティファクト」を制御することができません。 （LC-3921954）
+* Linux® 環境で AEM Forms サービスパック 18（6.5.18.0）を使用する際に、AMD® プロセッサーを搭載した AVX／AVX2 命令をサポートしていない CPU では、XMLFM がクラッシュします。（LC-3921718）
+* ユーザーが Forms Output サービスを使用して XDP から PDF を作成する際、ユーザーは XDP 内の「個々のテキストブロック」の「設定」を設定して「アーティファクト」の内容を制御することができません。（LC-3921954）
 
 <!--
 Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.21.0 Forms add-on package release is scheduled for Thursday, June 13, 2024. A list of Forms fixes and enhancements is added to this section post the release.
@@ -290,7 +290,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### Oak {#foundation-oak-6521}
 
-* パフォーマンス回帰修正：類似条件で範囲クエリを使用しないでください。 （OAK-9481）
+* パフォーマンス回帰修正 - 類似条件に対する範囲クエリを回避します。（OAK-9481）
 * 新しい Oak バージョンは 1.22.20 です。
 
 #### プラットフォーム{#foundation-platform-6521}
@@ -305,8 +305,8 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### 翻訳{#foundation-translation-6521}
 
-* AEM 6.5.19 の標準の翻訳ステータスがローンチ用に想定通りに更新されない問題。翻訳済みファイルをAEM ローンチに関連付けられた翻訳ジョブに読み込むと、ステータスは次のようになっていました。 `Approved`. 代わりに、ステータスはになります `Ready for Review`（想定されている動作ではありません）。 （NPR-41756）
-* 複数の設定を作成して翻訳クラウドサービス設定に移動すると、一部の要素が UI に表示されません。最初の 40 個の要素/フォルダーのみが表示されます。遅延読み込みがトリガーされますが、コンテンツはそれ以上追加されません。 （NPR-41829）
+* AEM 6.5.19 の標準の翻訳ステータスがローンチ用に想定通りに更新されない問題。翻訳されたファイルを AEM ローンチに関連付けられた翻訳ジョブに読み込むと、ステータスが `Approved` になるはずでした。代わりに、ステータスが `Ready for Review` になりました（想定されている動作ではありません）。（NPR-41756）
+* 複数の設定を作成して翻訳クラウドサービス設定に移動すると、一部の要素が UI に表示されません。最初の 40 個の要素／フォルダーのみが表示され、遅延読み込みがトリガーされますが、コンテンツはそれ以上追加されません。（NPR-41829）
 * 日本語の場合、タッチユーザーインターフェイスの権限ページで文字化けが発生します。（NPR-41794）
 * AEM 6.5.14 および 6.5.9 では、変換の絵文字を送信しません。（CQ-4357000）
 
@@ -510,9 +510,9 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
    * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`：にメンテナンスウィンドウがありません `granite/operations/maintenance`.
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
    * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler` ：にメンテナンスウィンドウがありません `granite/operations/maintenance`.
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
    * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
