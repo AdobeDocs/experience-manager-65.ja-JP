@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 4637779a38e05b3a88adc644c52e574155cba4b5
+source-git-commit: 2513ae7e193bdae3387210b07661b9c7a22b0156
 workflow-type: tm+mt
-source-wordcount: '3907'
-ht-degree: 93%
+source-wordcount: '4006'
+ht-degree: 91%
 
 ---
 
@@ -541,6 +541,12 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. コマンドプロンプトを管理者モードで開きます。
    1. を使用して Geode パッチをインストールします。 `geode-*-1.15.1.2.jar` ファイル。
 
+* 保存された XML データを含んだドラフトレターをプレビューしようとすると、スタックする `Loading` 一部の特定のレターの状態。 （FORMS-14521）
+問題を解決するには、次の手順に従います。
+   1. をダウンロード [ホットフィックス](https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Fccm-ccr-content-10.0.206.zip&amp;data=05%7C02%7Cruchitas%40adobe.com%7C6fb8db1c81c84470d7ff08dc911c1e41%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638544797146701276%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=MhuthPPLjZcWuQsRAtSiwEZ2MljeNrpLumlWo6iolFI%3D&amp;reserved=0) ソフトウェア配布ポータルから
+   1. 経由でパッケージ（.zip）をアップロードしインストールする [CRX パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=ja#accessing).
+
+* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、 `PaperCapture` サービスが、PDFに対して OCR （Optical Character Recognition）処理を実行できない。 このサービスでは、PDFやログファイルの形式で出力を生成しません。 この問題を解決するには、を参照してください [トラブルシューティング](/help/forms/using/papercapture-service-resolution.md) 記事。 （CQDOC-21680）
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
