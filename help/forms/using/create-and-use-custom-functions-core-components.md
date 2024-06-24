@@ -4,7 +4,9 @@ description: AEM Formsは、ルールエディター内で独自の関数を作�
 keywords: ルールエディターでカスタム関数を使用して、カスタム関数の追加、カスタム関数の使用、カスタム関数の作成をおこないます。
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
+roles: Admin, Developer
+exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
+source-git-commit: 6c902ca08b7689e428facdc4150f443dad089bff
 workflow-type: tm+mt
 source-wordcount: '3385'
 ht-degree: 5%
@@ -14,6 +16,7 @@ ht-degree: 5%
 # アダプティブ Forms コアコンポーネントのカスタム関数
 
 この記事では、次のような最新の機能を備えた、最新のアダプティブフォームのコアコンポーネントを使用してカスタム関数を作成する方法について説明します。
+
 * カスタム関数のキャッシュ機能
 * グローバル スコープ オブジェクトとフィールド オブジェクトは、カスタム関数をサポートしています。
 * let 関数や arrow 関数などの最新の JavaScript 機能のサポート（ES10 のサポート）
@@ -1003,5 +1006,3 @@ In case, the custom submit action fails to perform as expected in existing AEM p
    * クラスメソッド
    * デフォルトのパラメーター
    * REST パラメーター
-
-
