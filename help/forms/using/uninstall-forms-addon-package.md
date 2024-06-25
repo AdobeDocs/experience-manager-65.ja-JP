@@ -6,9 +6,9 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 975f1f580404ea1f2940aec5981f5668dced4b95
+source-git-commit: 2755e414ea23ebc1472e9c08d832eca93f28311b
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 # AEM インスタンスからAEM Forms アドオンパッケージをアンインストールする
 
-この記事では、AEM Forms SDK インスタンスからAEM Forms アドオンパッケージを適切にアンインストールするために必要な手順の概要を説明します。 次の手順に従って、Forms アドオンパッケージを確実に削除し、AEM環境の潜在的な問題を防ぎます。
+この記事では、AEM Forms SDK インスタンスからAEM Forms アドオンパッケージを適切にアンインストールするために必要な手順の概要を説明します。 次の手順に従って、Forms アドオンパッケージを確実に削除し、AEM環境で発生する可能性のある問題を防ぎます。
 
 ## 前提条件
 
-データの損失を避けるために、フォームとデータのバックアップを必ず作成してください。
+データの損失を避けるために、必ずバックアップを取ります。
 
 ## AEM Forms アドオンパッケージをアンインストールするには
 
