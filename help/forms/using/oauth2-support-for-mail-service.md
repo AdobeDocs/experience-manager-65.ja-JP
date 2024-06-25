@@ -1,12 +1,12 @@
 ---
-title: Microsoft&reg; Office 365 メールサーバープロトコルの OAuth2 ベース認証（Forms JEE OAuth）を設定
-description: Microsoft&reg; Office 365 メールサーバープロトコルの OAuth2 ベース認証（Forms JEE OAuth）を設定
+title: Microsoft® Office 365 メールサーバープロトコルの OAuth2 ベース認証（Forms JEE OAuth）を設定
+description: Microsoft® Office 365 メールサーバープロトコルの OAuth2 ベース認証（Forms JEE OAuth）を設定
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '986'
 ht-degree: 100%
 

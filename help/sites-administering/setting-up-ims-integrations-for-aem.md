@@ -5,9 +5,9 @@ feature: Security
 role: Admin
 exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
 source-git-commit: c2d996586d2ec7299e856a97ae1b744245c730bb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '433'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobeのお客様は、 [Adobe Developer コンソール](https://developer.adobe.com/console) 様々な API へのアクセスを可能にする認証情報を生成します。 お客様は、OAuth サーバー間からシングルページアプリまで、様々な資格情報タイプから選択できます。資格情報タイプのサービスアカウント（JWT）は非推奨（廃止予定）になり、サービスパック 20 の OAuth サーバー間資格情報に置き換わりました。 この変更は、[こちら](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)からダウンロードできるホットフィックスを使用して、サービスパック 11 からサービスパック 20 までの古いサービスパックに移植できます。
+>アドビのお客様は、[Adobe Developer Console](https://developer.adobe.com/console) を使用すると、様々な API へのアクセスを可能にする資格情報を生成できます。お客様は、OAuth サーバー間からシングルページアプリまで、様々な資格情報タイプから選択できます。資格情報タイプのサービスアカウント（JWT）は、サービスパック 20 では OAuth サーバー間資格情報に代わって非推奨（廃止予定）になりました。この変更は、[こちら](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)からダウンロードできるホットフィックスを使用して、サービスパック 11 からサービスパック 20 までの古いサービスパックに移植できます。
 
 Adobe Experience Manager（AEM）は、他の多くのアドビソリューションと統合できます。例えば、Adobe Target、Adobe Analytics などです。
 
 統合では、S2S OAuth で設定された IMS 統合を使用します。
 
-* 作成が完了したら、以下を行います。
+* まず、以下を作成します。
 
    * [Developer Console の資格情報](#credentials-in-the-developer-console)
 
@@ -40,9 +40,9 @@ Adobe Experience Manager（AEM）は、他の多くのアドビソリューシ�
 
 ## Developer Console の資格情報 {#credentials-in-the-developer-console}
 
-最初の手順として、Adobe Developer コンソールで OAuth 資格情報を設定する必要があります。
+最初の手順として、Adobe Developer Console で OAuth 資格情報を設定する必要があります。
 
-この設定方法について詳しくは、要件に応じて、Developer Console ドキュメントを参照してください。
+この設定を行う方法について詳しくは、要件に応じて、Developer Console のドキュメントを参照してください。
 
 * 概要：
 
@@ -90,7 +90,7 @@ JWT 資格情報に基づいて既存の Adobe IMS 統合を移行するには�
 
    ![JWT 資格情報の選択](assets/ims-migrate-jwt-select-configuration.png)
 
-1. 設定が読み取り専用で開きます。
+1. 設定は読み取り専用として開きます。
 
    ![設定プロパティ - 読み取り専用](assets/ims-migrate-jwt-properties-read-only.png)
 
@@ -98,9 +98,9 @@ JWT 資格情報に基づいて既存の Adobe IMS 統合を移行するには�
 
    ![認証タイプの選択](assets/ims-migrate-jwt-authentication-type.png)
 
-1. 使用可能なプロパティが更新されます。 Developer Console の詳細を使用して、次の手順を実行します。
+1. 使用可能なプロパティが更新されます。Developer Console の詳細を使用して、次の手順を実行します。
 
    ![OAuth の詳細の入力](assets/ims-migrate-jwt-complete-oauth-details.png)
 
 1. 「**保存して閉じる**」を使用して更新内容を保持します。
-コンソールに戻ると、 **JWT 資格情報（非推奨）** 警告は消えました。
+コンソールに戻ると、**JWT 資格情報（非推奨）**&#x200B;の警告が消えます。
