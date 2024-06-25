@@ -9,7 +9,7 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 8f5b6aee8a48690f1ac2706f25d45e7e9424e219
 workflow-type: tm+mt
 source-wordcount: '3999'
-ht-degree: 91%
+ht-degree: 97%
 
 ---
 
@@ -45,18 +45,18 @@ ht-degree: 91%
 
 このリリースの主な機能と機能強化は次のとおりです。
 
-* **Oauth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わって、サーバー間認証の新しい使いやすい資格情報が追加されました。 （NPR-41994）
-* **AEM Formsにおけるルールエディターの機能強化**:
+* **OAuth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。（NPR-41994）
+* **AEM Forms のルールエディターの機能強化**：
    * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
    * パネルやフォーム（フィールドを含む）の検証またはリセット。
    * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
-* **PDFのアクセシビリティのための AutoTag API**:OSGi のAEM Formsでは、新しい AutoTag API をサポートするようになり、タグ、段落、リストを追加して、アクセシビリティ標準規格のPDFを強化します。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
-* **16 ビット PNG のサポート**:PDF Generatorの ImageToPdf サービスで、16 ビットの色深度を持つ PNG の変換がサポートされるようになりました。
-* **XDP 内の個々のテキストブロックへのアーティファクトの適用**:Forms Designer で、XDP ファイル内の個々のテキストブロックの設定を指定できるようになりました。 この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
-* **AEM Forms Designer の認定対象 `GB18030:2022` 標準**：を使用します `GB18030:2022` 認定制度では、Forms Designer で中国語の Unicode 文字セットがサポートされるようになりました。このセットを使用すると、編集可能なすべてのフィールドとダイアログボックスに中国語を入力できます。
-* **JEE サーバーでの WebToPDF ルートのサポート**:PDF Generatorサービスでは、Webkit および WebCapture （Windows のみ）ルートに加え、HTMLファイルを JEE 上のPDFドキュメントに変換するための WebToPDF ルートをサポートするようになりました。 WebToPDF ルートは OSGi で既に使用できますが、JEE でも含めるように拡張されました。 JEE プラットフォームと OSGi プラットフォームの両方で、PDF Generatorサービスは、異なるオペレーティングシステム間で次のルートをサポートしています。
-   * **Windows**:Webkit、WebCapture、WebToPDF
-   * **Linux**:Webkit、WebToPDF
+* **PDF アクセシビリティに対する AutoTag API**：OSGi 上の AEM Forms では、タグ（段落、リスト）を追加して、アクセシビリティ標準の PDF を強化する新しい AutoTag API をサポートするようになりました。これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
+* **16 ビット PNG のサポート**：PDF Generator の ImageToPDF サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
+* **XDP 内の個々のテキストブロックにアーティファクトを適用**：Forms Designer では、XDP ファイル内の個々のテキストブロックを設定できるようになりました。この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
+* **AEM Forms Designer は `GB18030:2022` 標準で認定されています**：`GB18030:2022` 認定により、Forms Designer では、中国語の Unicode 文字セットをサポートし、すべての編集可能なフィールドとダイアログボックスに漢字を入力できるようになりました。
+* **JEE サーバーでの WebToPDF ルートのサポート**：PDF Generator サービスでは、Webkit および WebCapture（Windows のみ）ルートに加え、HTML ファイルを JEE 上の PDF ドキュメントに変換する WebToPDF ルートをサポートするようになりました。WebToPDF ルートは OSGi で既に使用できますが、JEE にも含めるように拡張されました。JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
+   * **Windows**：Webkit、WebCapture、WebToPDF
+   * **Linux**：Webkit、WebToPDF
 
 
 ### [!DNL Assets]
@@ -532,14 +532,14 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6521}
 
 
-* AEM Forms JEE サービスパック 21 （6.5.21.0）のインストール後、Geode jar の重複したエントリが見つかった場合 `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の下 `<AEM_Forms_Installation>/lib/caching/lib` フォルダー（FORMS-14926）に移動し、次の手順を実行して問題を解決します。
+* AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
 
-   1. ロケーターが実行中の場合は、停止します。
+   1. ロケーターが実行中の場合は、ロケーターを停止します。
    1. AEM サーバーを停止します。
-   1. に移動します `<AEM_Forms_Installation>/lib/caching/lib`.
-   1. を除くすべての Geode パッチファイルを削除します。 `geode-*-1.15.1.2.jar`. `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
-   1. コマンドプロンプトを管理者モードで開きます。
-   1. を使用して Geode パッチをインストールします。 `geode-*-1.15.1.2.jar` ファイル。
+   1. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
+   1. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。`version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
+   1. 管理者モードでコマンドプロンプトを開きます。
+   1. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
 * 保存された XML データを含んだドラフトレターをプレビューしようとすると、スタックする `Loading` 一部の特定のレターの状態。 ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 記事。 （FORMS-14521）
 
