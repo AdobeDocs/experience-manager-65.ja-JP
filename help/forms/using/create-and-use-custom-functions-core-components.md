@@ -4,9 +4,9 @@ description: AEM Formsは、ルールエディター内で独自の関数を作�
 keywords: ルールエディターでカスタム関数を使用して、カスタム関数の追加、カスタム関数の使用、カスタム関数の作成をおこないます。
 content-type: reference
 feature: Adaptive Forms, Core Components
-roles: Admin, Developer
+role: Admin, User, Developer
 exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
-source-git-commit: 6c902ca08b7689e428facdc4150f443dad089bff
+source-git-commit: 7f1283898cbeebdedb7bdea6f0a8d9db567617ee
 workflow-type: tm+mt
 source-wordcount: '3385'
 ht-degree: 5%
