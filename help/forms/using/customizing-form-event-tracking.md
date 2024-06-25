@@ -7,7 +7,8 @@ topic-tags: customization
 exl-id: d0280a15-5d0d-49cf-bce9-ad1c40530eae
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
+feature: Adaptive Forms,Foundation Components
+source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 100%

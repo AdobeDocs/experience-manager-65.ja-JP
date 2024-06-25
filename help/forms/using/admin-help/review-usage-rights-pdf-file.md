@@ -8,7 +8,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 603edbd2-c012-4d25-99bf-c4f3dc147308
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
+feature: Adaptive Forms,Document Services,Reader Extensions
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 100%

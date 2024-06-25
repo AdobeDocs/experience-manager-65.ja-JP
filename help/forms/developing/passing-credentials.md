@@ -3,9 +3,9 @@ title: WS-Security ヘッダーを使用した資格情報の受け渡し
 description: WS-security ヘッダーを使用して認証情報を渡す方法を学ぶ
 exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Document Security
+feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 100%

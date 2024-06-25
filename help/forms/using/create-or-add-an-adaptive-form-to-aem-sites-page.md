@@ -2,12 +2,12 @@
 title: AEM Sites ページへのアダプティブフォームの作成または追加
 description: アダプティブフォームを容易に作成したり、シームレスに AEM Sites ページに追加したりする方法を学びます。動的でカスタマイズ可能なフォームを web サイトに統合し、デジタルエクスペリエンスを最適化して最大限の効果を得るための手順とベストプラクティスについて説明します。
 Keywords: AEM Forms in sites, AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 100%
 
@@ -133,7 +133,7 @@ AEM ページエディターでアダプティブフォームコンテナを使�
 
 +++
 
-## アダプティブフォームを作成 {#create-an-adaptive-form-in-sites-editor-or-experience-fragment}
+## アダプティブフォームを作成します {#create-an-adaptive-form-in-sites-editor-or-experience-fragment}
 
 要件やデザインの環境設定に合わせて、AEM Sites ページまたはエクスペリエンスフラグメント内で直接新しいフォームを最初から作成できます。単一用途のフォームの場合は、AEM Sites ページへの直接オーサリングをお勧めします。一方、エクスペリエンスフラグメントは、web サイトの複数のページで再利用する必要があるフォームに最適です。
 

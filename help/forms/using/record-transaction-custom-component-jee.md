@@ -4,7 +4,8 @@ description: TransactionRecorder API を使用してカスタムコンポーネ�
 feature: Transaction Reports
 exl-id: 33e1868a-2a7f-4785-8571-95651e661e21
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+solution: "Experience Manager, Experience Manager Forms"
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 5%

@@ -7,8 +7,8 @@ docset: aem65
 role: Admin, User, Developer
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, OSGI
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+feature: Adaptive Forms,AEM Forms on OSGi
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1882'
 ht-degree: 100%

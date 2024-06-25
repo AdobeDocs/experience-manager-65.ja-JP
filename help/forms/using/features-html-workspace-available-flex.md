@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 exl-id: 4235e0ce-f1c4-432e-b486-2d72c390f320
 solution: Experience Manager, Experience Manager Forms
-feature: HTML5 Forms, Adaptive Forms
+feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%

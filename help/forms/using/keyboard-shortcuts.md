@@ -4,12 +4,12 @@ description: この記事では、Windows オペレーティングシステム�
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 100%
 
@@ -48,10 +48,10 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->デスクトップデバイスでの複数選択：
+デスクトップデバイスでの複数選択：
 >
->* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
->* macOS：Command キーを押しながら、目的のコンポーネントをクリックします。
+* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
+* macOS：Command キーを押しながら、目的のコンポーネントをクリックします。
 >
 
 ## テーマエディター  {#themeeditor}
@@ -66,7 +66,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
+「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 

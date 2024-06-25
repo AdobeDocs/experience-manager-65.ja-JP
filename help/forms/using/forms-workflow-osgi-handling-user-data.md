@@ -6,8 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin,User
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, OSGI
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+feature: Adaptive Forms,AEM Forms on OSGi
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 100%

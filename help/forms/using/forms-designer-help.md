@@ -4,12 +4,12 @@ description: Forms Designer は、フォームの送信に関する支援を提�
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-feature: Forms Designer
+feature: Forms Designer,Designer
 exl-id: f962844a-f191-4505-bfc9-85c94d8faa46
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%
 

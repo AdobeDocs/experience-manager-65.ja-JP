@@ -5,9 +5,9 @@ topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1417'
 ht-degree: 100%

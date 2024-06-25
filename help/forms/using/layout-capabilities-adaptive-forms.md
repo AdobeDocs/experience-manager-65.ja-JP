@@ -3,14 +3,14 @@ title: アダプティブフォームのレイアウトの機能
 description: 各種デバイスごとのアダプティブフォームのレイアウトと外観はレイアウト設定で管理できます。各種レイアウトとレイアウトの適用方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
-`/libs/fd/af/layouts`
+`/libs/fd/af/layouts`。
 
 >[!NOTE]
 >

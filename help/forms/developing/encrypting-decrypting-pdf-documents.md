@@ -8,7 +8,8 @@ topic-tags: operations
 role: Developer
 exl-id: d3cbca7f-9277-4d61-b198-abf4bb008f15
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 29cc7281e34487881ff9334f4cf00f3d013de11b
+feature: Adaptive Forms,Document Services,APIs & Integrations
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '8133'
 ht-degree: 100%

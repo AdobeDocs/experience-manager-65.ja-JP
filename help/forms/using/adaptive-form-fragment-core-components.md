@@ -3,12 +3,12 @@ title: アダプティブフォームフラグメントとは
 description: アダプティブフォームでは、任意のアダプティブフォームで使用できるパネルやフィールドのグループなどのフォームセグメントを作成できます。また、既存のパネルをフラグメントとして保存することもできます。
 topic-tags: author
 keywords: アダプティブフォームフラグメントを追加、アダプティブフォームフラグメント、フォームフラグメントを作成、アダプティブフォームにフラグメントを追加、フラグメントを管理
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 exl-id: 4a1ba259-8eb5-408f-8ee7-4868f98cca03
 solution: Experience Manager, Experience Manager Forms
 role: Admin, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 100%
 
@@ -39,7 +39,7 @@ ht-degree: 100%
 アダプティブフォームフラグメントは、最初から作成することも、既存のアダプティブフォーム内のパネルをフラグメントとして保存することもできます。フォームフラグメントを作成するには、次の手順を行います。
 
 1. AEM Forms オーサーインスタンス（https://[*hostname*]:[*port*]/aem/forms.html）にログインします。
-1. **作成／アダプティブフォームフラグメント**&#x200B;をクリックします。
+1. **作成／アダプティブフォームセグメント**&#x200B;をクリックします。
 1. フラグメントのタイトル、名前、説明、タグを指定します。フラグメントには一意の名前を指定してください。同じ名前を持つ別のフラグメントが存在する場合、フラグメントの作成は失敗します。
 1. フォームテンプレートを選択します。コアコンポーネントベースのアダプティブフォーム、または基盤コンポーネントベースのアダプティブフォーム用のフォームフラグメントを作成できます。
    * コアコンポーネントベースのフォームフォームフラグメントを作成するには、コアコンポーネントベースのテンプレートを選択します。

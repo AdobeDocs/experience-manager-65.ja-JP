@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 exl-id: 2ac37dc5-d88d-4f98-8576-cd2ca6f0ea3a
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 100%

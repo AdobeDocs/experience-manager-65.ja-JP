@@ -3,9 +3,9 @@ title: 特定のバージョンの Oracle JDK で Experience Manager Forms が�
 description: 特定のバージョンの Oracle JDK で Experience Manager Forms が使用できません
 exl-id: 6a8a7cb7-77d6-4bfc-82f3-82d0fddfc10a
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Troubleshooting
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 100%

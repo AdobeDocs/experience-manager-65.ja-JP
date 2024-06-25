@@ -8,8 +8,8 @@ docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms
-source-git-commit: cf3247e437af7447fd6a6121c6a4e2ef750d06b7
+feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '4010'
 ht-degree: 100%

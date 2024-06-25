@@ -6,9 +6,9 @@ topic-tags: author
 docset: aem65
 exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 100%

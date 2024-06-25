@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Workbench
+feature: Adaptive Forms,Workbench
 role: User, Developer
-source-git-commit: f1a18575e8b8f925f8adbe18e189f3916b5e353d
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '10824'
 ht-degree: 98%

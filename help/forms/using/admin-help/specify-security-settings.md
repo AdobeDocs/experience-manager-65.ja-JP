@@ -7,9 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1f544485-5a01-4a4a-ab0f-dcee67e1a38b
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms,  Security
+feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 100%

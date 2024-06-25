@@ -6,9 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
-solution: Experience Manager, Experience Manager Forms
+solution: "Experience Manager, Experience Manager Forms"
 role: User, Developer
-source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
+feature: Adaptive Forms,Foundation Components
+source-git-commit: 5723e9990969dff1b508062d69a68f68a20eb576
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 100%

@@ -7,11 +7,11 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
-source-git-commit: 676316d45213630c1c030b5eb4b3edff64e889a8
-workflow-type: ht
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 100%
 
@@ -123,7 +123,7 @@ ht-degree: 100%
 
 ## アダプティブフォームのスキーマまたはフォームデータモデルを設定 {#configure-schema-or-data-model-for-form}
 
-フォームデータモデルを使用してフォームをデータソースに接続し、ユーザーのアクションに基づいてデータを送受信することができます。また、フォームを JSON スキーマに接続して、送信されたデータを事前定義済みの形式で受信することもできます。必要に応じて、フォームを JSON スキーマまたはフォームデータモデルに接続します。
+フォームデータモデルを使用してフォームをデータソースに接続し、ユーザーのアクションに基づいてデータを送受信することができます。また、フォームを JSON スキーマに接続して、送信されたデータを事前定義済みの形式で受信することもできます。 必要に応じて、フォームを JSON スキーマまたはフォームデータモデルに接続します。
 
 * [JSON スキーマを作成して環境にアップロード](/help/forms/using/adaptive-form-json-schema-form-model.md)
 * [フォームデータモデルを作成](/help/forms/using/create-form-data-models.md)

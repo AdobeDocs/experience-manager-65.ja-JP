@@ -5,7 +5,8 @@ topic-tags: forms-manager
 feature: Transaction Reports
 exl-id: 6e5e29ef-eb90-4573-8745-1966a238bc03
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+solution: "Experience Manager, Experience Manager Forms"
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 25%

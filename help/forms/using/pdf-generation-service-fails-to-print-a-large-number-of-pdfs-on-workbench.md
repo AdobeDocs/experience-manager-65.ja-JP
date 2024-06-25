@@ -3,9 +3,9 @@ title: PDF 生成で多数の PDF を WorkBench で印刷できない
 description: お客様が WorkBench を通じて実装されたサービスを使用して多数の PDF を生成すると、印刷サービスは失敗します。
 exl-id: f3746b8e-4c38-447a-b5bf-d11fc77556f7
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Troubleshooting
+feature: Adaptive Forms,Document Services
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 100%

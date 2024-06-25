@@ -7,9 +7,9 @@ topic-tags: publish
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Workflow
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '2080'
 ht-degree: 100%
