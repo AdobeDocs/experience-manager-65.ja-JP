@@ -1198,7 +1198,7 @@ ht-degree: 99%
       + [MySQL 用に 6.5.12.0 にアップグレードする際にデータベースをバックアップできない問題](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [WorkBench で多数の PDF を PDF 生成で印刷できない](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
       + [AEM SDK を適切に再起動する方法](/help/forms/using/restart-aem-sdk.md)
-      + [PaperCapture サービスがPDFで OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
+      + [PaperCapture サービスが PDF に対して OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
       + [AEM Forms アドオンパッケージのアンインストール](/help/forms/using/uninstall-forms-addon-package.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
