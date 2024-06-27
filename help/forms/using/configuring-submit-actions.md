@@ -77,7 +77,7 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-フィールドを REST URL 内のパラメーターとして渡すには、すべてのフィールドが異なる要素名を持っている必要があります。これは、異なるパネルに置かれているフィールドにも適用されます。
+>フィールドを REST URL 内のパラメーターとして渡すには、すべてのフィールドが異なる要素名を持っている必要があります。これは、異なるパネルに置かれているフィールドにも適用されます。
 
 ### 送信されたデータをリソースまたは外部の REST エンドポイントに投稿 {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
@@ -108,7 +108,7 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-フォームデータをメールに含める場合、すべてのフォームフィールドは、異なるパネルに配置されている場合でも、異なる要素名を持つ必要があります。
+>フォームデータをメールに含める場合、すべてのフォームフィールドは、異なるパネルに配置されている場合でも、異なる要素名を持つ必要があります。
 
 ## メールで PDF を送信 {#send-pdf-via-email}
 
@@ -116,7 +116,7 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-この送信アクションは、レコードのドキュメントテンプレートを持つ XFA ベースのアダプティブフォームと XSD ベースのアダプティブフォームに使用できます。
+>この送信アクションは、レコードのドキュメントテンプレートを持つ XFA ベースのアダプティブフォームと XSD ベースのアダプティブフォームに使用できます。
 
 ## Forms ワークフローを起動 {#invoke-a-forms-workflow}
 
@@ -150,7 +150,7 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-変数は、ワークフローモデルが外部データストレージ用にマークされているかどうかに関係なく使用できます。
+>変数は、ワークフローモデルが外部データストレージ用にマークされているかどうかに関係なく使用できます。
 
 * **添付ファイル**：「**[!UICONTROL 添付ファイルのパス]**」オプションを使用して、アダプティブフォームにアップロードされた添付ファイルの保存先となるフォルダー名を指定できます。フォルダーがペイロードを基準に作成されます。ワークフローが外部データストレージ用にマークされている場合は、「変数」オプションを使用し、ワークフローモデルで使用可能な変数のリストから変数を選択します。
 
@@ -173,7 +173,7 @@ REST エンドポイント送信アクションの設定
 
 >[!NOTE]
 >
-「Microsoft® SharePoint リストに送信」機能が AEM 6.5 Forms サービスパック 19（6.5.19.0）で導入されました。
+>「Microsoft® SharePoint リストに送信」機能が AEM 6.5 Forms サービスパック 19（6.5.19.0）で導入されました。
 
 「**[!UICONTROL SharePoint に送信]**」送信アクションは、アダプティブフォームと Microsoft® SharePoint ストレージを接続します。フォームデータファイル、添付ファイルまたはレコードのドキュメントを、接続された Microsoft® SharePoint ストレージに送信できます。
 
@@ -199,7 +199,7 @@ AEM Forms を Microsoft® Sharepoint リストに接続するには、次の手�
 
      >[!NOTE]
      >
-     **クライアント秘密鍵**&#x200B;フィールドは、Azure Active Directory アプリケーションの設定に応じて、必須またはオプションになります。アプリケーションでクライアント秘密鍵を使用するように設定されている場合は、クライアントの秘密鍵を指定する必要があります。
+     >**クライアント秘密鍵**&#x200B;フィールドは、Azure Active Directory アプリケーションの設定に応じて、必須またはオプションになります。アプリケーションでクライアント秘密鍵を使用するように設定されている場合は、クライアントの秘密鍵を指定する必要があります。
 
 1. 「**[!UICONTROL 接続]**」をクリックします。接続に成功した場合、`Connection Successful` のメッセージが表示されます。
 1. 選択 **[!UICONTROL SharePoint Site]** および **[!UICONTROL SharePoint List]** 」をドロップダウンリストから選択します。
@@ -218,16 +218,16 @@ AEM Forms を Microsoft® Sharepoint リストに接続するには、次の手�
 
 >[!NOTE]
 >
-Microsoft® SharePointリストでは、次の列タイプはサポートされていません。
-* 画像列
-* メタデータ列
-* ユーザー列
-* 外部データ列
+>Microsoft® SharePointリストでは、次の列タイプはサポートされていません。
+>* 画像列
+>* メタデータ列
+>* ユーザー列
+>* 外部データ列
 
 
 >[!NOTE]
 >
-設定の値をセットするには、[AEM SDK を使用して OSGi 設定を生成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#generating-osgi-configurations-using-the-aem-sdk-quickstart)し、Cloud Service インスタンスに[設定をデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=ja#deployment-process)します。
+>設定の値をセットするには、[AEM SDK を使用して OSGi 設定を生成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=ja#generating-osgi-configurations-using-the-aem-sdk-quickstart)し、Cloud Service インスタンスに[設定をデプロイ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=ja#deployment-process)します。
 
 ## アダプティブフォームにおけるサーバー側の再検証 {#server-side-revalidation-in-adaptive-form}
 
@@ -255,7 +255,7 @@ Microsoft® SharePointリストでは、次の列タイプはサポートされ�
 
 >[!NOTE]
 >
-サーバーサイド検証により、フォームモデルが検証されます。検証のために別個のクライアントライブラリを作成し、1 つのクライアントライブラリに HTML のスタイルや DOM 操作を混在させないことをお勧めします。
+>サーバーサイド検証により、フォームモデルが検証されます。検証のために別個のクライアントライブラリを作成し、1 つのクライアントライブラリに HTML のスタイルや DOM 操作を混在させないことをお勧めします。
 
 ### 検証式でのカスタム関数のサポート {#supporting-custom-functions-in-validation-expressions-br}
 
