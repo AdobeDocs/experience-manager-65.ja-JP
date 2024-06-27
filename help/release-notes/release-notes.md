@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 8f5b6aee8a48690f1ac2706f25d45e7e9424e219
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3999'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -541,9 +541,9 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. 管理者モードでコマンドプロンプトを開きます。
    1. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
-* 保存された XML データを含んだドラフトレターをプレビューしようとすると、スタックする `Loading` 一部の特定のレターの状態。 ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 記事。 （FORMS-14521）
+* ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（FORMS-14521）
 
-* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、 `PaperCapture` サービスが、PDFに対して OCR （Optical Character Recognition）処理を実行できない。 このサービスでは、PDFやログファイルの形式で出力を生成しません。 ホットフィックスをダウンロードしてインストールするには、を参照してください。 [Adobe Experience Manager Formsのホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) 記事。 （CQDOC-21680）
+* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。このサービスでは、PDF やログファイルの形式で出力を生成しません。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（CQDOC-21680）
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
