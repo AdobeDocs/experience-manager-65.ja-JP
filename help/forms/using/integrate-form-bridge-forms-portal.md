@@ -10,7 +10,7 @@ exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '393'
 ht-degree: 100%
 
@@ -80,10 +80,10 @@ FormBridge API を使用して、HTML ページからフォームフィールド
    >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
    >
    >
-   >ページは 2 つのコンテナ、**left** と **right** にスタイル設定されます。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
+   ページは 2 つのコンテナ、**left** と **right** にスタイル設定されます。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
    >
    >
-   >次のスクリーンショットは、フォームがブラウザーでどのように表示されるかを示します。
+   次のスクリーンショットは、フォームがブラウザーでどのように表示されるかを示します。
 
    ![ポータル](assets/portal.jpg)
 

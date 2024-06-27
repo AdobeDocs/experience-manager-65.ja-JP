@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4534'
 ht-degree: 100%
 
@@ -311,15 +311,15 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >サービスをテストしたら、**キャンセル**&#x200B;をクリックし、不本意の変更がフォームデータモデルに反映されないようにします。
+   サービスをテストしたら、**キャンセル**&#x200B;をクリックし、不本意の変更がフォームデータモデルに反映されないようにします。
 
    >[!NOTE]
    >
-   >データソースが FDM に正常にバインドされるには、AEM サーバーの再起動が必要であることが報告されています。
+   データソースが FDM に正常にバインドされるには、AEM サーバーの再起動が必要であることが報告されています。
 
    >[!NOTE]
    >
-   >SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+   SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 #### フォームデータモデル（Derby）のテスト {#test-fdm-derby}
 
@@ -424,7 +424,7 @@ Adobe Analytics アカウントのユーザー資格情報を検索するには�
 
 >[!NOTE]
 >
->`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
+`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
 
 1. *https://&lt;aemserver>:&lt;port>/sites.html/content* に移動します。 
 1. 「AEM Forms We.Gov サイト」を選択して、サイトのページを表示します。
@@ -453,7 +453,7 @@ Adobe Analytics アカウントのユーザー資格情報を検索するには�
 
 >[!NOTE]
 >
->`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
+`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
 
 1. 次に移動します。
 
@@ -500,7 +500,7 @@ Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定を�
 
 >[!NOTE]
 >
->この節で作成された証明書は、Adobe I/Oで統合サービスを作成するために使用されます。統合サービスで作成すると、Adobe I/O からのその情報を使用して設定を完了することができます。
+この節で作成された証明書は、Adobe I/Oで統合サービスを作成するために使用されます。統合サービスで作成すると、Adobe I/O からのその情報を使用して設定を完了することができます。
 
 #### Adobe I/O での統合の作成 {#create-integration-adobeio}
 
@@ -799,7 +799,7 @@ AEM Forms で **Forms**／**テーマ**／**リファレンステーマ**／**Ul
 
    >[!NOTE]
    >
-   >ユーザーが Configuration Manager ページ内でサービスを有効にしているのと同じ理由で、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
+   ユーザーが Configuration Manager ページ内でサービスを有効にしているのと同じ理由で、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
 
    ![we gov forms パッケージ](assets/aftia-configuration-options.jpg)
 

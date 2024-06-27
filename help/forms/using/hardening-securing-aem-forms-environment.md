@@ -7,7 +7,7 @@ exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1434'
 ht-degree: 100%
 

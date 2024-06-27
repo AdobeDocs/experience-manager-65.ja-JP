@@ -11,7 +11,7 @@ exl-id: 7d6fd230-e477-4286-9fb3-18a3474e3e48
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2105'
 ht-degree: 100%
 

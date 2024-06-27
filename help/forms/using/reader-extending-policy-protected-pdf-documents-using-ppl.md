@@ -10,7 +10,7 @@ exl-id: fe5d83e8-5e36-4146-a20a-dab2213055e2
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '783'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
  </tbody>
 </table>
 
-### ポリシーで保護された PDF ドキュメントに適用された使用権限を取得します。  {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
+### ポリシーで保護された PDF ドキュメントに適用された使用権限を取得します。 {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
 `getDocumentUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントの Reader 拡張機能の使用権限を取得できます。使用権限に関する情報を取得することで、ポリシーで保護された PDF ドキュメントで有効にされている Reader 拡張機能の機能を知ることができます。
 

@@ -10,7 +10,7 @@ exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7848'
 ht-degree: 100%
 
@@ -684,7 +684,7 @@ PDF の生成サービスでスクリプト XML ファイルをサポートす�
 システムまたはネイティブアプリケーションが、現在実行中のスクリプト XML ファイルで処理されないダイアログボックスを表示すると、PDF 生成サービスはダイアログ XML ファイルをこの順序で検索し、一致するものが見つかると停止します。
 
 * appmon。`[appname]`。追加。`[locale]`.xml
-* appmon。`[appname]`。`[locale]`.xml （このファイルは変更しないでください）。
+* appmon。`[appname]``[locale]`.xml （このファイルは変更しないでください）。
 * appmon.global。`[locale]`.xml （このファイルは変更しないでください）。
 
 Generate PDF サービスは、ダイアログボックスに一致するものを見つけると、ダイアログボックスに指定されたキーストロークまたはその他のアクションを送信して、それを閉じます。ダイアログボックスの指示で中止メッセージが指定されている場合、Generate PDF サービスは現在実行中のジョブを終了し、エラーメッセージを生成します。このような中止メッセージは、スクリプト XML 文法の `abortMessage` 要素で指定されます。

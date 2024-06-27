@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Workbench
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '10824'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -254,15 +254,15 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 **File type Settings：** 変換ジョブに適用するために事前設定されたファイルタイプ設定（この設定が API 起動パラメーターの一部として指定されていない場合に使用する）の名前です。ファイルタイプの設定は、管理コンソールで、サービス／PDF Generator／ファイルタイプごとの設定をクリックして指定します。
 
-**Web キャプチャを使用（Windows のみ）:** この設定が true の場合、Generate Conversion サービスは、HTMLからPDFへのPDFすべてにAcrobatを適用します。 これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
+**Use WebCapture（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、HTML から PDF への変換すべてに Acrobat を適用します。これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
 
-**HTMLからPDFへのプライマリ変換のための変換コンバータ：** PDF生成サービスは、HTMLファイルをPDFドキュメントに変換する複数のルート（Webkit、WebCapture （Windows のみ）および WebToPDF）を提供します。 この設定を使用すると、HTMLをPDFに変換するプライマリコンバーターを選択できます。 デフォルトでは、WebToPDF が選択されています。
+**HTML から PDF への変換用のプライマリコンバーター：** PDF 生成サービスは、HTML ファイルを PDF ドキュメントに変換する複数のルート（Webkit、WebCapture（Windows のみ）および WebToPDF）を提供します。この設定により、ユーザーは HTML を PDF に変換するためのプライマリコンバーターを選択できます。デフォルトでは、WebToPDF が選択されています。
 
-**HTMLからPDFへの変換のためのフォールバックコンバーター：** プライマリ コンバータが失敗した場合にHTMLからPDFへの変換を行うためのコンバータを指定してください。 デフォルトでは、WebCapture （Windows のみ）が選択されています。
+**HTML から PDF への変換用のフォールバックコンバーター：**&#x200B;プライマリコンバーターが失敗した場合に HTML から PDF への変換を行うためのコンバーターを指定します。デフォルトでは、WebCapture（Windows のみ）が選択されています。
 
-**Acrobat画像変換を使用（Windows のみ）:** この設定が true の場合、Generate PDFサービスは、画像からPDFへの変換すべてにAcrobatを使用します。 この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
+**Use Acrobat Image Conversion（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、画像から PDF への変換すべてに Acrobat を適用します。この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
 
-**Acrobat ベースの AutoCAD 変換を有効にする（Windows のみ）:** この設定が true の場合、PDF生成サービスは、DWG からPDFへの変換すべてにAcrobatを使用します。 この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
+**Enable Acrobat-based AutoCAD Conversions（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、DWG から PDF への変換すべてに Acrobat を使用します。この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
 
 **Regular Expressions For Finding Out Prohibited Special
 Characters In User Name（Windows のみ）：**&#x200B;ユーザー名に文字が含まれている場合に、PDF の書き出しや最適化の操作を妨げる文字を指定します。
@@ -273,7 +273,7 @@ Characters In User Name（Windows のみ）：**&#x200B;ユーザー名に文字
 
 **OCR Pool Size：** PDF Generator が OCR に使用する PaperCaptureService のプールサイズです。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。この設定は Windows システムでのみ有効です。
 
-**ImageToPDF のTIFF変換用のメモリ内の最大ページ数：** この設定は、PDFへの変換中にTIFFにフラッシュされる前にメモリに残すことができるディスクイメージの最大ページ数を決定します。 この設定のデフォルト値は 500 で、追加のメモリが ImageToPDF コンバータープロセスに割り当てられている場合に増やすことができます。
+**ImageToPDF の TIFF 変換用のメモリ内の最大ページ数：** この設定は、PDF への変換中にディスクにフラッシュされる前にメモリ内に残ることができる TIFF 画像の最大ページ数を決定します。この設定のデフォルト値は 500 で、ImageToPDF コンバータープロセスに追加のメモリが割り当てられている場合は、値を増やすことができます。
 
 **Fallback Font Family For HTML To PDF Conversions：** 元の HTML で使用されているフォントが AEM Forms サーバーで使用できない場合に PDF ドキュメントで使用されるフォントファミリーの名前です。使用できないフォントを使用する HTML ページを変換する場合は、フォントファミリーを指定します。例えば、地域言語で作成したページでは、使用できないフォントを使用できます。
 
