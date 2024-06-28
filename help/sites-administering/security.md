@@ -11,9 +11,9 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 84979bbb49d47ec47c898a6747f64048b577c365
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5409'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -96,7 +96,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
   <tr>
    <td>contributor</td>
    <td>グループ</td>
-   <td><p>ユーザーがコンテンツを書き込むための基本権限（基本機能に必要な権限のみ）。</p> <p>/content ツリー自体へのアクセスに対する権限が割り当てられることはありません。 これらは、個々のグループまたはユーザーに特別に割り当てる必要があります。</p> </td>
+   <td><p>ユーザーがコンテンツを書き込むための基本的な権限（基本機能に必要な権限のみ）。</p> <p>/content ツリー自体へのアクセス権は割り当てません。これらは、個々のグループまたはユーザーに対して特に割り当てる必要があります。</p> </td>
    <td> </td>
   </tr>
   <tr>
