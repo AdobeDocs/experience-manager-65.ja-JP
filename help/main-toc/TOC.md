@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: 721837590521aeaa82ab8a960098eba87c0ffb43
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7456'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -881,8 +881,8 @@ ht-degree: 99%
       + [アクセシビリティのベストプラクティス]{#accessibility-best-practices}
          + [はじめに](/help/forms/using/introduction-accessibility-forms-designer.md)
          + [フォーム作成のベストプラクティス](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
-         + [フォームのアクセシビリティのテスト方法](/help/forms/using/techniques-for-testing-form-accessibility.md)
-         + [ガイドラインとベストプラクティスのマッピング](/help/forms/using/mapping-between-guidelines-and-best-practices.md)
+         + [フォームのアクセシビリティをテストするためのテクニック](/help/forms/using/techniques-for-testing-form-accessibility.md)
+         + [ガイドラインとベストプラクティス間のマッピング](/help/forms/using/mapping-between-guidelines-and-best-practices.md)
          + [役に立つリンク](/help/forms/using/useful-links-accessibility-forms-designer.md)
    + AEM Forms のカスタマイズ {#customize-aem-forms}
       + [アダプティブフォームおよび HTML5 フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)
