@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 8f5b6aee8a48690f1ac2706f25d45e7e9424e219
-workflow-type: ht
-source-wordcount: '3999'
-ht-degree: 100%
+source-git-commit: b24a1b225b2d798db26be1533e2e74bf08fdaa5d
+workflow-type: tm+mt
+source-wordcount: '4070'
+ht-degree: 98%
 
 ---
 
@@ -544,6 +544,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（FORMS-14521）
 
 * AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。このサービスでは、PDF やログファイルの形式で出力を生成しません。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（CQDOC-21680）
+
+* AEM 6.5 Forms サービスパック 18 （6.5.18.0）またはAEM 6.5 Forms サービスパック 19 （6.5.19.0）をAEM 6.5 Forms サービスパック 20 （6.5.20.0）またはAEM 6.5 Forms サービスパック 21 （6.5.21.0）に更新すると、JSP コンパイルエラーが発生して、アダプティブフォームを開いたり作成したりできなくなり、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他のAEM インターフェイスでもエラーがが発生します。 （FORMS-15256）
+
+
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 

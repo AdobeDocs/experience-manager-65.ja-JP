@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 2266f67d834341715b7300ff366f93d960110dac
-workflow-type: ht
-source-wordcount: '1734'
-ht-degree: 100%
+source-git-commit: f2f6f7efe67efdfc88863593844cc172a4815622
+workflow-type: tm+mt
+source-wordcount: '1697'
+ht-degree: 99%
 
 ---
 
@@ -140,12 +140,9 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 +++
 
-+++5.サーブレットフラグメント（AEM サービスパック 6.5.14.0 以前）のインストール（**必須インストール**）
++++5.インストールされていない場合は、サーブレットフラグメントをインストールします（**必須の手順**）
 
->[!NOTE]
->
-> * **AEM サービスパック 6.5.15.0** からアップグレードする場合、**サーブレットフラグメント**&#x200B;のインストールは必須ではありません。バージョン **AEM サービスパック 6.5.14.0** 以前の場合は、サーブレットフラグメントを&#x200B;**インストールすることが必須**&#x200B;です。
-
+<!-- >[!NOTE] > > * If you are upgrading from **AEM Service Pack 6.5.15.0**, the installation of the **servlet fragment** is not required. For versions **AEM Service Pack 6.5.14.0** or earlier, it is **mandatory to install** the servlet fragment. -->
 
 サーブレットフラグメントのダウンロードとインストール
 
