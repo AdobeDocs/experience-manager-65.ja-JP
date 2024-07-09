@@ -9,7 +9,7 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 4883ed159b945093b8530e6ec2c2217d4f3c2409
 workflow-type: tm+mt
 source-wordcount: '4099'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 97%
 
 ## [!DNL Experience Manager] 6.5.21.0 の内容 {#what-is-included-in-aem-6521}
 
-[!DNL Experience Manager] 6.5.21.0 には、新機能、お客様からリクエストされた主な機能強化、バグ修正が含まれています。また、2019年4月の 6.5 の公開当初以降にリリースされたパフォーマンス、安定性、セキュリティの改善も含まれています。[このサービスパックを [!DNL Experience Manager] 6.5 にインストールします](#install)。
+[!DNL Experience Manager] 6.5.21.0 には、新機能、お客様からリクエストされた主な機能強化、バグ修正が含まれています。 また、2019年4月の 6.5 の公開当初以降にリリースされたパフォーマンス、安定性、セキュリティの改善も含まれています。 [このサービスパックを [!DNL Experience Manager] 6.5 にインストールします](#install)。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -45,16 +45,16 @@ ht-degree: 97%
 
 このリリースの主な機能と機能強化は次のとおりです。
 
-* **OAuth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。（NPR-41994）
+* **OAuth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。 （NPR-41994）
 * **AEM Forms のルールエディターの機能強化**：
    * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
    * パネルやフォーム（フィールドを含む）の検証またはリセット。
    * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
-* **PDF アクセシビリティに対する AutoTag API**：OSGi 上の AEM Forms では、タグ（段落、リスト）を追加して、アクセシビリティ標準の PDF を強化する新しい AutoTag API をサポートするようになりました。これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
+* **PDF アクセシビリティに対する AutoTag API**：OSGi 上の AEM Forms では、タグ（段落、リスト）を追加して、アクセシビリティ標準の PDF を強化する新しい AutoTag API をサポートするようになりました。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
 * **16 ビット PNG のサポート**：PDF Generator の ImageToPDF サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
-* **XDP 内の個々のテキストブロックにアーティファクトを適用**：Forms Designer では、XDP ファイル内の個々のテキストブロックを設定できるようになりました。この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
+* **XDP 内の個々のテキストブロックにアーティファクトを適用**：Forms Designer では、XDP ファイル内の個々のテキストブロックを設定できるようになりました。 この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。 Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
 * **AEM Forms Designer は `GB18030:2022` 標準で認定されています**：`GB18030:2022` 認定により、Forms Designer では、中国語の Unicode 文字セットをサポートし、すべての編集可能なフィールドとダイアログボックスに漢字を入力できるようになりました。
-* **JEE サーバーでの WebToPDF ルートのサポート**：PDF Generator サービスでは、Webkit および WebCapture（Windows のみ）ルートに加え、HTML ファイルを JEE 上の PDF ドキュメントに変換する WebToPDF ルートをサポートするようになりました。WebToPDF ルートは OSGi で既に使用できますが、JEE にも含めるように拡張されました。JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
+* **JEE サーバーでの WebToPDF ルートのサポート**：PDF Generator サービスでは、Webkit および WebCapture（Windows のみ）ルートに加え、HTML ファイルを JEE 上の PDF ドキュメントに変換する WebToPDF ルートをサポートするようになりました。 WebToPDF ルートは OSGi で既に使用できますが、JEE にも含めるように拡張されました。 JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
    * **Windows**：Webkit、WebCapture、WebToPDF
    * **Linux**：Webkit、WebToPDF
 
@@ -65,14 +65,14 @@ ht-degree: 97%
 
 このリリースで提供される機能強化は、次のリストのとおりです。
 
-* IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。（ASSETS-34918）
+* IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。 （ASSETS-34918）
 
 #### アクセシビリティの修正
 
 このリリースに含まれるアクセシビリティの修正は、次のリストのとおりです。
 
-* アセットの処理ステータスが「失敗」または「メタデータ失敗」の場合、キャプションとオーディオトラックの UI は適切に機能しません。（ASSETS-37281）
-* アセットメタデータを保存して編集しようとすると、言語名が表示されません。（ASSETS-37281）
+* アセットの処理ステータスが「失敗」または「メタデータ失敗」の場合、キャプションとオーディオトラックの UI は適切に機能しません。 （ASSETS-37281）
+* アセットメタデータを保存して編集しようとすると、言語名が表示されません。 （ASSETS-37281）
 
 <!-- ### [!DNL Forms]
 * A -->
@@ -85,11 +85,11 @@ ht-degree: 97%
 
 #### アクセシビリティ {#sites-accessibility-6521}
 
-* **[!UICONTROL 保存検索]**&#x200B;ラベルは永続的ではありません。プレースホルダーは、テキストフィールドの唯一の表示ラベルとして使用されています。（SITES-3050）
+* **[!UICONTROL 保存検索]**&#x200B;ラベルは永続的ではありません。 プレースホルダーは、テキストフィールドの唯一の表示ラベルとして使用されています。 （SITES-3050）
 
 #### 管理者ユーザーインターフェイス{#sites-adminui-6521}
 
-* **[!UICONTROL Sites]**／**[!UICONTROL コアコンポーネント]**／**[!UICONTROL プロパティ]**／**[!UICONTROL 権限]**&#x200B;タブ／**[!UICONTROL 有効な権限]**&#x200B;をクリックしても、**有効な権限**&#x200B;ダイアログボックスが開きません。（SITES-17378）
+* **[!UICONTROL Sites]**／**[!UICONTROL コアコンポーネント]**／**[!UICONTROL プロパティ]**／**[!UICONTROL 権限]**&#x200B;タブ／**[!UICONTROL 有効な権限]**&#x200B;をクリックしても、**有効な権限**&#x200B;ダイアログボックスが開きません。 （SITES-17378）
 
 <!-- #### Classic UI{#sites-classicui-6521} 
 
@@ -97,12 +97,12 @@ ht-degree: 97%
 
 #### [!DNL Content Fragments]{#sites-contentfragments-6521}
 
-* フォーム要素が重複して含まれていたのを修正しました。（SITES-21109）
-* コンテンツフラグメントの作成時に「閉じる」ボタンが応答しなくなり、ページ全体がフリーズし、コンテンツフラグメントを閉じるにはページを更新しなければならなくなることがあります。バージョン作成の問題については、システムでコンテンツフラグメントの新しいバージョンを作成しています。この問題は、ユーザーが変更を行っていない場合でも、RTE やテキストフィールドを操作するだけで発生します。（SITES-21187）
+* フォーム要素が重複して含まれていたのを修正しました。 （SITES-21109）
+* コンテンツフラグメントの作成時に「閉じる」ボタンが応答しなくなり、ページ全体がフリーズし、コンテンツフラグメントを閉じるにはページを更新しなければならなくなることがあります。 バージョン作成の問題については、システムでコンテンツフラグメントの新しいバージョンを作成しています。 この問題は、ユーザーが変更を行っていない場合でも、RTE やテキストフィールドを操作するだけで発生します。 （SITES-21187）
 
 #### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6521}
 
-* Adobe Experience Manager を 6.5.19.0 から 6.5.20.0 にアップグレードする際のパス `/libs/cq/graphql/sites/graphiql` が削除されました。（SITES-20098）
+* Adobe Experience Manager を 6.5.19.0 から 6.5.20.0 にアップグレードする際のパス `/libs/cq/graphql/sites/graphiql` が削除されました。 （SITES-20098）
 
 <!-- #### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-6521}
 
@@ -126,8 +126,8 @@ ht-degree: 97%
 
 #### エクスペリエンスフラグメント{#sites-experiencefragments-6521}
 
-* `masters/language` から `country/language` へのエクスペリエンスフラグメントのロールアウトでは、相互参照は更新されません。（SITES-21172）
-* 新しいエクスペリエンスフラグメントの作成時には、`cq:allowedTemplates` で指定されたテンプレートだけではなく、テンプレートレベルで `allowedPaths` が設定されたテンプレートもオプションとして表示されます。（SITES-20855）
+* `masters/language` から `country/language` へのエクスペリエンスフラグメントのロールアウトでは、相互参照は更新されません。 （SITES-21172）
+* 新しいエクスペリエンスフラグメントの作成時には、`cq:allowedTemplates` で指定されたテンプレートだけではなく、テンプレートレベルで `allowedPaths` が設定されたテンプレートもオプションとして表示されます。 （SITES-20855）
 
 <!-- #### Foundation Components (Legacy){#sites-foundation-components-legacy-6521}
 
@@ -143,25 +143,25 @@ ht-degree: 97%
 
 #### MSM - ライブコピー{#sites-msm-live-copies-6521}
 
-* ページコンポーネントをオーバーレイして、ページプロパティでタブを追加します。そのうち 1 つはページ設定で、エクスペリエンスフラグメント URL を追加するプロパティを備えています。エクスペリエンスフラグメントのページプロパティで設定されたリンクが、そのページ用に作成された言語コピーに対して変更されることはありません。設定されたリンクは、言語コピーの URL と共に変更されます。（SITES-19580）
+* ページコンポーネントをオーバーレイして、ページプロパティでタブを追加します。 そのうち 1 つはページ設定で、エクスペリエンスフラグメント URL を追加するプロパティを備えています。 エクスペリエンスフラグメントのページプロパティで設定されたリンクが、そのページ用に作成された言語コピーに対して変更されることはありません。 設定されたリンクは、言語コピーの URL と共に変更されます。 （SITES-19580）
 
 #### ページエディター{#sites-pageeditor-6521}
 
-* 編集モードでは、WCAG（Web Content Accessibility Guidelines）のカラーコントラスト標準に準拠していない、グレーの背景を例外的に適用しています。（SITES-20060）
+* 編集モードでは、WCAG（Web Content Accessibility Guidelines）のカラーコントラスト標準に準拠していない、グレーの背景を例外的に適用しています。 （SITES-20060）
 
 ### [!DNL Assets]{#assets-6521}
 
-* アセットが Brand Portal に公開される場合、公開ステータスの一貫性は失われたままになります。（ASSETS-36807）
-* API 呼び出しを使用してインスタンスからアセットを削除しても、アセットは削除されません。（ASSETS-35131）
-* メタデータを読み込もうとすると、英語以外の言語の文字の挿入が `question mark (?)` に置き換えられます。（ASSETS-35091）
-* データタイプ文字列で `dc:title` プロパティを使用すると、サービスパック 6.5.19 のインストール後にアセットコンテンツツリーが適切に機能しません。（ASSETS-34684）
-* アセット名に特殊文字がある場合、エラーが表示されます。（ASSETS-33248）
+* アセットが Brand Portal に公開される場合、公開ステータスの一貫性は失われたままになります。 （ASSETS-36807）
+* API 呼び出しを使用してインスタンスからアセットを削除しても、アセットは削除されません。 （ASSETS-35131）
+* メタデータを読み込もうとすると、英語以外の言語の文字の挿入が `question mark (?)` に置き換えられます。  （ASSETS-35091）
+* データタイプ文字列で `dc:title` プロパティを使用すると、サービスパック 6.5.19 のインストール後にアセットコンテンツツリーが適切に機能しません。 （ASSETS-34684）
+* アセット名に特殊文字がある場合、エラーが表示されます。 （ASSETS-33248）
 
 #### [!DNL Dynamic Media]{#assets-dm-6521}
 
-* AEM 6.5.18 で、ホットスポットを編集する際に、アセットに追加したすべてのホットスポットが表示されません。ただし、公開済みアセットでは、すべてのホットスポットが機能しますが、必要になっても後で編集できません。（ASSETS-33609）
-* アップロードされた最新の EPS ファイルは、再処理後にサムネールを生成しません。（ASSETS-32617）
-* ツール／アセット／Dynamic Media 公開設定／リクエスト属性タブで、`Width(px)` と `Height(px)` の入力がスペイン語、イタリア語、ポルトガル語で異なって表示されます。これらの場所では、相互に連携していません。（ASSETS-31896）
+* AEM 6.5.18 で、ホットスポットを編集する際に、アセットに追加したすべてのホットスポットが表示されません。 ただし、公開済みアセットでは、すべてのホットスポットが機能しますが、必要になっても後で編集できません。 （ASSETS-33609）
+* アップロードされた最新の EPS ファイルは、再処理後にサムネールを生成しません。 （ASSETS-32617）
+* ツール／アセット／Dynamic Media 公開設定／リクエスト属性タブで、`Width(px)` と `Height(px)` の入力がスペイン語、イタリア語、ポルトガル語で異なって表示されます。 これらの場所では、相互に連携していません。 （ASSETS-31896）
 * 2024年5月1日（PT）以降、Adobe Dynamic Media は次のサポートを終了しました。
    * SSL（Secure Socket Layer）2.0
    * SSL 3.0
@@ -186,47 +186,47 @@ ht-degree: 97%
 
 #### [!DNL Adaptive Forms] {#forms-6520}
 
-* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209）
-* ユーザーが OSGi 上の AEM Forms サービスパック 15（6.5.15.0）で「**PDF に印刷**」をクリックすると、クライアントサイドの検証が失敗します。これは、開発者ツールコンソールウィンドウに表示されるエラーメッセージで明確に示されます。（FORMS-14029）
-* ユーザーが AEM 6.5 Forms サービスパック 17（6.5.17.0）、サービスパック 18（6.5.18.0）、サービスパック 19（6.5.19.0）でフォームを送信すると、「ありがとうございます」メッセージの翻訳が正しく機能しません。ただし、メッセージは辞書で正しく翻訳されます。（FORMS-13846）
-* ユーザーが日付選択コンポーネントを含むフォームをプレビューすると、日付選択フィールドが他のフォームフィールドと合わなくなります。（FORMS-13763）
-* AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが API を呼び出して数値を書式設定すると、書式設定された数値はそれぞれのロケールに一致しません。その結果、通貨記号が正しく表示されません。この問題は、ロケールパラメーターを「de_DE」または「en_US」に設定しているかどうかに関係なく解決しません。（FORMS-13759）
-* AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが Img2Pdf PDFG サービスを使用して 16 ビット PNG を PDF に変換すると、変換が失敗し、「Use Acrobat Image conversion」サービスを使用できなくなります。（FORMS-13754）
-* AEM Forms サービスパック 19（6.5.19.1）では、ユーザーが AEM Forms JEE（adminui）のサービス／PDF Generator／Adobe PDF 設定セクションで既存の JobOptions ファイルをアップロードすると、アップロードが失敗します。また、次のエラーメッセージも表示されます（FORMS-13597）。
+* アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。 （FORMS-14209）
+* ユーザーが OSGi 上の AEM Forms サービスパック 15（6.5.15.0）で&#x200B;**PDF に印刷**&#x200B;をクリックすると、クライアントサイドの検証が失敗します。これは、開発者ツールコンソールウィンドウに表示されるエラーメッセージで明確に示されます。 （FORMS-14029）
+* ユーザーが AEM 6.5 Forms サービスパック 17（6.5.17.0）、サービスパック 18（6.5.18.0）、サービスパック 19（6.5.19.0）でフォームを送信すると、「ありがとうございます」メッセージの翻訳が正しく機能しません。 ただし、メッセージは辞書で正しく翻訳されます。 （FORMS-13846）
+* ユーザーが日付選択コンポーネントを含むフォームをプレビューすると、日付選択フィールドが他のフォームフィールドと合わなくなります。 （FORMS-13763）
+* AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが API を呼び出して数値を書式設定すると、書式設定された数値はそれぞれのロケールに一致しません。 その結果、通貨記号が正しく表示されません。 この問題は、ロケールパラメーターを「de_DE」または「en_US」に設定しているかどうかに関係なく解決しません。 （FORMS-13759）
+* AEM Forms サービスパック 19（6.5.19.0）環境のユーザーが Img2Pdf PDFG サービスを使用して 16 ビット PNG を PDF に変換すると、変換が失敗し、「Use Acrobat Image conversion」サービスを使用できなくなります。 （FORMS-13754）
+* AEM Forms サービスパック 19（6.5.19.1）では、ユーザーが AEM Forms JEE（adminui）のサービス／PDF Generator／Adobe PDF 設定セクションで既存の JobOptions ファイルをアップロードすると、アップロードが失敗します。 また、次のエラーメッセージも表示されます（FORMS-13597）。
   `"An error has occurred while processing your request. Please use the breadcrumb links to navigate to another page."`
-* ユーザーが AEM Forms サービスパック 15（6.5.15.0）から AEM Forms サービスパック（6.5.17.0）または AEM Forms サービスパック（6.5.19.0）に移行すると、FD キーが重複し、フォームが正しく翻訳されません。（FORMS-13461）
-* ユーザーが AMS のデプロイメントトポロジでサポートされている作成者の前に Dispatcher を配置すると、タスクを割り当ての送信がハングまたは失敗します。（FORMS-8010）
+* ユーザーが AEM Forms サービスパック 15（6.5.15.0）から AEM Forms サービスパック（6.5.17.0）または AEM Forms サービスパック（6.5.19.0）に移行すると、FD キーが重複し、フォームが正しく翻訳されません。 （FORMS-13461）
+* ユーザーが AMS のデプロイメントトポロジでサポートされている作成者の前に Dispatcher を配置すると、タスクを割り当ての送信がハングまたは失敗します。 （FORMS-8010）
 * アクセシビリティ関連の修正：
-   * ANDI 標準に従って、「formsanddocuments」ページのアイコンにアクセスできるようになりました。（FORMS-13094）
-   * ユーザーはキーボード経由でツールバーにアクセスし、編集ページのコンテンツを保存または編集できます。ツールバーは、ANDI 標準に従って強化されます。（FORMS-13102）
-   * 「必要または必須」フォームフィールドには、ANDI 標準に従ってアクセスできます。（FORMS-13097）
+   * ANDI 標準に従って、「formsanddocuments」ページのアイコンにアクセスできるようになりました。 （FORMS-13094）
+   * ユーザーはキーボード経由でツールバーにアクセスし、編集ページのコンテンツを保存または編集できます。ツールバーは、ANDI 標準に従って強化されます。 （FORMS-13102）
+   * 「必要または必須」フォームフィールドには、ANDI 標準に従ってアクセスできます。 （FORMS-13097）
 
-* ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。（FORMS-13594）
-* Internet Explorer 互換モードの Microsoft Edge では、日付入力フィールドコンポーネントが正しく機能しません。（FORMS-13170）
-* サーバー上で[添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments)の修正を実行する際に、添付ファイル付きのメール通知が停止して送信できません。（FORMS-14227）
-* サービスパック 18（6.5.18.0）の AEM Forms Workspace では、アップロードされたドキュメントにユーザーがコメントすると、ドキュメントファイルが破損します。（FORMS-13735）
-* AEM Forms サービスパック 18（6.5.18.0）、AEM Forms サービスパック 19（6.5.19.0）、AEM Forms サービスパック 20（6.5.20.0）では、サイドパネルからアダプティブフォームを検索しようとする際に、検索に失敗します。（FORMS-14117）
-* ユーザーがドイツ語で作成され、英語に翻訳されたフォームを編集する際に、「プレビュー」モードと「編集」モード間で言語表示に一貫性がなくなります。これにより、ラジオボタンおよびチェックボックスコンポーネントは、「編集」モードでは英語で表示され、「プレビュー」モードではドイツ語で正しく表示されます。（FORMS-13910）
-* プロセス削除プロセスツールがエラー `NoClassDefFoundError: org/omg/CORBA/UserException` で失敗します。（FORMS-13751）
-* ユーザーが埋め込みコンテナを使用して、外部または AEM Sites 上の web ページ内にアダプティブフォーム（AF）を埋め込もうとすると、アダプティブフォームガイドコンテナによって、ARIA LABEL が導入されます。ラベルには、埋め込まれたフォームに対して role=“main” が含まれます。ARIA ガイドラインに従って、ページごとに 1 つの role=“main” のみを使用する必要があります。したがって、ユーザーがページのメインコンテンツに別の role=“main” を追加すると、アクセシビリティの問題としてフラグが付けられます。（FORMS-13538）
-* AEM Forms サービスパック 19（6.5.19.0）では、アダプティブフォームでドロップダウンを使用すると、プレースホルダーテキストを含むドロップダウンで `id="emptyValue"` の値が保持されます。そのため、フォームに複数のドロップダウンコンポーネントがある場合、それぞれの `id="emptyValue"` は ARIA ガイドラインに従って正しくありません。（FORMS-13370）。
-* ユーザーがデータを XML 経由で送信した後にインタラクティブなコミュニケーションを再読み込みする際に、生成した PDF のテキストブロック間に空白スペースが発生します。（FORMS-13481）
-* ConfigurationManager の実行中に、「DSC デプロイメントの準備手順」画面の IPH が見つかりません。（FORMS-10699）
-* ユーザーが既存の辞書を使用してフォームを翻訳するために新しい辞書を追加する際に、古い翻訳は無効になります。次の問題が発生します。（FORMS-13576）
+* ユーザーがページの読み込み時にフォームを表示しようとすると、レンダリングに失敗します。 （FORMS-13594）
+* Internet Explorer 互換モードの Microsoft Edge では、日付入力フィールドコンポーネントが正しく機能しません。 （FORMS-13170）
+* サーバー上で[添付ファイル付きのメールを使用するための追加手順](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments)の修正を実行する際に、添付ファイル付きのメール通知が停止して送信できません。 （FORMS-14227）
+* サービスパック 18（6.5.18.0）の AEM Forms Workspace では、アップロードされたドキュメントにユーザーがコメントすると、ドキュメントファイルが破損します。 （FORMS-13735）
+* AEM Forms サービスパック 18（6.5.18.0）、AEM Forms サービスパック 19（6.5.19.0）、AEM Forms サービスパック 20（6.5.20.0）では、サイドパネルからアダプティブフォームを検索しようとする際に、検索に失敗します。 （FORMS-14117）
+* ユーザーがドイツ語で作成され、英語に翻訳されたフォームを編集する際に、「プレビュー」モードと「編集」モード間で言語表示に一貫性がなくなります。 これにより、ラジオボタンおよびチェックボックスコンポーネントは、「編集」モードでは英語で表示され、「プレビュー」モードではドイツ語で正しく表示されます。 （FORMS-13910）
+* プロセス削除プロセスツールがエラー `NoClassDefFoundError: org/omg/CORBA/UserException` で失敗します。 （FORMS-13751）
+* ユーザーが埋め込みコンテナを使用して、外部または AEM Sites 上の web ページ内にアダプティブフォーム（AF）を埋め込もうとすると、アダプティブフォームガイドコンテナによって、ARIA LABEL が導入されます。 ラベルには、埋め込まれたフォームに対して role=“main” が含まれます。 ARIA ガイドラインに従って、ページごとに 1 つの role=“main” のみを使用する必要があります。 したがって、ユーザーがページのメインコンテンツに別の role=“main” を追加すると、アクセシビリティの問題としてフラグが付けられます。 （FORMS-13538）
+* AEM Forms サービスパック 19（6.5.19.0）では、アダプティブフォームでドロップダウンを使用すると、プレースホルダーテキストを含むドロップダウンで `id="emptyValue"` の値が保持されます。 そのため、フォームに複数のドロップダウンコンポーネントがある場合、それぞれの `id="emptyValue"` は ARIA ガイドラインに従って正しくありません。 （FORMS-13370）。
+* ユーザーがデータを XML 経由で送信した後にインタラクティブなコミュニケーションを再読み込みする際に、生成した PDF のテキストブロック間に空白スペースが発生します。 （FORMS-13481）
+* ConfigurationManager の実行中に、「DSC デプロイメントの準備手順」画面の IPH が見つかりません。 （FORMS-10699）
+* ユーザーが既存の辞書を使用してフォームを翻訳するために新しい辞書を追加する際に、古い翻訳は無効になります。 次の問題が発生します。（FORMS-13576）
    * 一部のフィールドで、翻訳済みデータの入力に失敗します。
    * データが辞書に正常に保存されていても、一部のフィールドは新しい言語に翻訳されません。
 
 #### [!DNL Forms Designer] {#forms-desgner-6521}
 
-* ユーザーが AEM Forms サービスパック 19（6.5.19.0）環境で AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。（LC-3921978）
-* ユーザーが Linux® 環境でアダプティブフォームをレンダリングする際に、フィールドコンポーネント間に余分なスペースが発生します。（LC-3921957）
-* ユーザーが Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)` が発生して失敗します。（LC-3921720）
+* ユーザーが AEM Forms サービスパック 19（6.5.19.0）環境で AEM Forms Designer を使用して既存のフォームに新しいテーブルを追加すると、クラッシュします。 （LC-3921978）
+* ユーザーが Linux® 環境でアダプティブフォームをレンダリングする際に、フィールドコンポーネント間に余分なスペースが発生します。 （LC-3921957）
+* ユーザーが Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `(AEM_OUT_001_003:Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE)` が発生して失敗します。 （LC-3921720）
 
   問題を解決するには：
-データにゼロ幅スペース（0x200b）などの特殊文字が含まれているかどうかを確認します。はいの場合は、[custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) ファイルで指定されているように、XCI ファイルにタグ `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` を追加してフラグを使用します。
+データにゼロ幅スペース（0x200b）などの特殊文字が含まれているかどうかを確認します。 はいの場合は、[custom_xfa.xci](/help/forms/using/assets/custom_xfa.xci) ファイルで指定されているように、XCI ファイルにタグ `<behaviorOverride>patch-LC3921720:1</behaviorOverride>` を追加してフラグを使用します。
 
-* Linux® 環境で AEM Forms サービスパック 18（6.5.18.0）を使用する際に、AMD® プロセッサーを搭載した AVX／AVX2 命令をサポートしていない CPU では、XMLFM がクラッシュします。（LC-3921718）
-* ユーザーが Forms Output サービスを使用して XDP から PDF を作成する際、ユーザーは XDP 内の「個々のテキストブロック」の「設定」を設定して「アーティファクト」の内容を制御することができません。（LC-3921954）
+* Linux® 環境で AEM Forms サービスパック 18（6.5.18.0）を使用する際に、AMD® プロセッサーを搭載した AVX／AVX2 命令をサポートしていない CPU では、XMLFM がクラッシュします。 （LC-3921718）
+* ユーザーが Forms Output サービスを使用して XDP から PDF を作成する際、ユーザーは XDP 内の「個々のテキストブロック」の「設定」を設定して「アーティファクト」の内容を制御することができません。 （LC-3921954）
 
 <!--
 Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.21.0 Forms add-on package release is scheduled for Thursday, June 13, 2024. A list of Forms fixes and enhancements is added to this section post the release.
@@ -248,19 +248,19 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 #### Apache Felix {#foundation-apachefelix-6521}
 
 
-* AEM 6.5 サービスパック 19（SP19）のアップグレード問題では、SP19 のインストール後、Apache Felix への未認証のリクエストに対してアプリケーションサーバーの context-root パスが消えます。Apache Felix Web Management Console 4.9.8 に更新します。（NPR-41933）
+* AEM 6.5 サービスパック 19（SP19）のアップグレード問題では、SP19 のインストール後、Apache Felix への未認証のリクエストに対してアプリケーションサーバーの context-root パスが消えます。 Apache Felix Web Management Console 4.9.8 に更新します。 （NPR-41933）
 
 #### Campaign{#foundation-campaign-6521}
 
-* AEM 6.5 サービスパック 15 では、重要なエントリを含んだ継続的なエラーログが生成されています。次の問題が報告されました。
+* AEM 6.5 サービスパック 15 では、重要なエントリを含んだ継続的なエラーログが生成されています。 次の問題が報告されました。
    * パス `/libs/granite/ui/content/shell/start.html` にリソースがないことによる 404 INFO エラー
    * `CampaignsDataSourceServlet.java:147` での `NullPointerException` が原因でキャッチされなかった SlingException のエラーログエントリ
 
-  エラーログは、頻繁かつ大量のエラーエントリでいっぱいにならないようにし、リソース不足や例外に関連する問題を発生させずに、AEM インスタンスが機能するようにします。（CQ-4357064）
+  エラーログは、頻繁かつ大量のエラーエントリでいっぱいにならないようにし、リソース不足や例外に関連する問題を発生させずに、AEM インスタンスが機能するようにします。 （CQ-4357064）
 
 #### クラウドサービス{#foundation-cloudservices-6521}
 
-* AEM Cloud Service から Google Guava を削除します。（CQ-4356436）
+* AEM Cloud Service から Google Guava を削除します。 （CQ-4356436）
 
 <!-- #### Communities {#foundation-communities-6521}
 
@@ -273,30 +273,30 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### Granite{#foundation-granite-6521}
 
-* 設定ブラウザーで&#x200B;**参照**&#x200B;権限がなければ、「**削除**」または「**変更**」を選択することはできません。（GRANITE-51002）
+* 設定ブラウザーで&#x200B;**参照**&#x200B;権限がなければ、**削除**&#x200B;または&#x200B;**変更**&#x200B;を選択することはできません。 （GRANITE-51002）
 
 #### 統合{#foundation-integrations-6521}
 
-* `cq-target-integration` については、Google Guava のテスト以外の使用を削除する必要があります。（CQ-4357101）
-* サービスアカウント（JSON web トークン、または JWT）資格情報を OAuth2 サーバー間資格情報（サービスプリンシパルとも呼ばれる）に置き換えます。（NPR-41994）
-* IMS（Identity Management System）設定でオーディエンスリクエストの作成に失敗します。（NPR-41888）
-* 顧客がペイロードページを表示しようとすると、URL の形式が正しくないことが原因でコンテンツが正しく表示されず、404 エラーが表示されます。URL 内のクエリパラメーターの前に疑問符記号が欠落している場合、エラーが発生していました。この問題でペイロードページを正しく表示するには、顧客が疑問符記号を挿入する必要があります。（NPR-41957）
-* [通知の通り、2022年9月](https://experienceleague.adobe.com/ja/docs/discontinued/using/search-promote)に提供を終了した、AEM 6.5 から Adobe Search&amp;Promote のコードと依存関係を削除します。（NPR-41855）
+* `cq-target-integration` については、Google Guava のテスト以外の使用を削除する必要があります。 （CQ-4357101）
+* サービスアカウント（JSON web トークン、または JWT）資格情報を OAuth2 サーバー間資格情報（サービスプリンシパルとも呼ばれる）に置き換えます。 （NPR-41994）
+* IMS（Identity Management System）設定でオーディエンスリクエストの作成に失敗します。 （NPR-41888）
+* 顧客がペイロードページを表示しようとすると、URL の形式が正しくないことが原因でコンテンツが正しく表示されず、404 エラーが表示されます。 URL 内のクエリパラメーターの前に疑問符記号が欠落している場合、エラーが発生していました。 この問題でペイロードページを正しく表示するには、顧客が疑問符記号を挿入する必要があります。 （NPR-41957）
+* [通知の通り、2022年9月](https://experienceleague.adobe.com/ja/docs/discontinued/using/search-promote)に提供を終了した、AEM 6.5 から Adobe Search&amp;Promote のコードと依存関係を削除します。 （NPR-41855）
 
 #### ローカライゼーション{#foundation-localization-6521}
 
-* テンプレートエディターでは、テキスト文字列 *`No video available.`* はローカライズされていません。（SITES-13190）
-* ユーザーをアクティベートまたはディアクティベートした後の文字列は、**ツール**／**セキュリティ**／**ユーザー**／*any_user_name*／**アクティベート**／**OK** ではローカライズされておらず、*any_user_name*／**ディアクティベート**／**OK** を選択します。（NPR-41737）
+* テンプレートエディターでは、テキスト文字列 *`No video available.`* はローカライズされていません。 （SITES-13190）
+* ユーザーをアクティベートまたはディアクティベートした後の文字列は、**ツール**／**セキュリティ**／**ユーザー**／*any_user_name*／**アクティベート**／**OK** ではローカライズされておらず、*any_user_name*／**ディアクティベート**／**OK** を選択します。 （NPR-41737）
 
 #### Oak {#foundation-oak-6521}
 
-* パフォーマンス回帰修正 - 類似条件に対する範囲クエリを回避します。（OAK-9481）
+* パフォーマンス回帰修正 - 類似条件に対する範囲クエリを回避します。 （OAK-9481）
 * 新しい Oak バージョンは 1.22.20 です。
 
 #### プラットフォーム{#foundation-platform-6521}
 
-* `com.day.cq.mailer.impl.DefaultMailService` に対して `Unclosed resource resolver` エラーが発生しています。`MessageGatewayService` クラスは標準で、リソースリゾルバーなしで使用されていました。このクラスを使用してメールを送信するフォーム送信ボタンのあるページで問題が発生しました。（NPR-41853）
-* **Adobe Experience Manager** ダイアログボックスでは、著作権の年度は 2023 のままになります。（CQ-4356349）
+* `com.day.cq.mailer.impl.DefaultMailService` に対して `Unclosed resource resolver` エラーが発生しています。 `MessageGatewayService` クラスは標準で、リソースリゾルバーなしで使用されていました。 このクラスを使用してメールを送信するフォーム送信ボタンのあるページで問題が発生しました。 （NPR-41853）
+* **Adobe Experience Manager** ダイアログボックスでは、著作権の年度は 2023 のままになります。 （CQ-4356349）
 
 
 <!-- #### Sling{#foundation-sling-6521}
@@ -305,18 +305,18 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### 翻訳{#foundation-translation-6521}
 
-* AEM 6.5.19 の標準の翻訳ステータスがローンチ用に想定通りに更新されない問題。翻訳されたファイルを AEM ローンチに関連付けられた翻訳ジョブに読み込むと、ステータスが `Approved` になるはずでした。代わりに、ステータスが `Ready for Review` になりました（想定されている動作ではありません）。（NPR-41756）
-* 複数の設定を作成して翻訳クラウドサービス設定に移動すると、一部の要素が UI に表示されません。最初の 40 個の要素／フォルダーのみが表示され、遅延読み込みがトリガーされますが、コンテンツはそれ以上追加されません。（NPR-41829）
-* 日本語の場合、タッチユーザーインターフェイスの権限ページで文字化けが発生します。（NPR-41794）
-* AEM 6.5.14 および 6.5.9 では、変換の絵文字を送信しません。（CQ-4357000）
+* AEM 6.5.19 の標準の翻訳ステータスがローンチ用に想定通りに更新されない問題。 翻訳されたファイルを AEM ローンチに関連付けられた翻訳ジョブに読み込むと、ステータスが `Approved` になるはずでした。 代わりに、ステータスが `Ready for Review` になりました（想定されている動作ではありません）。 （NPR-41756）
+* 複数の設定を作成して翻訳クラウドサービス設定に移動すると、一部の要素が UI に表示されません。 最初の 40 個の要素／フォルダーのみが表示され、遅延読み込みがトリガーされますが、コンテンツはそれ以上追加されません。 （NPR-41829）
+* 日本語の場合、タッチユーザーインターフェイスの権限ページで文字化けが発生します。 （NPR-41794）
+* AEM 6.5.14 および 6.5.9 では、変換の絵文字を送信しません。 （CQ-4357000）
 
 #### ユーザーインターフェイス{#foundation-ui-6521}
 
-* **ユーザー設定を編集**&#x200B;ダイアログボックス内のツール／セキュリティ／ユーザー／&lt;user_name>／プロファイルで、ダイアログボックス内で「キャンセル」をクリックできません。（NPR-41793）
-* アセットが選択されている場合、`/libs/granite/ui/components/coral/foundation/form/pathfield` での Granite `pathfield` コンポーネントで「**[!UICONTROL 選択]**」ボタンを有効にできません。パスフィールドがポップアップ表示され、ユーザーがアセットのチェックボックスを選択しても、「**[!UICONTROL 選択]**」ボタンが有効になりません（グレーからブルーに変化しません）。（NPR-41970）
-* AEM 内のコンテンツフラグメントモデル（CFM）参照フィールドに問題があります。CFM 参照フィールドは必須として設定されていますが、システムによってユーザーは「保存」をクリックし、特定のシナリオで CFM 以外の値を含むコンテンツを保存できます。「保存」ボタンはグレー表示（使用不可）になります。（NPR-41894）
-* `successresponse` アクションを使用する標準の Coral ユーザーインターフェイスダイアログボックスは、アクションの後に成功応答をトリガーにする必要があります。ただし、AEM 6.5 サービスパック 19 では、リロードアクションは呼び出されず、メッセージが表示されません。（NPR-41797）
-* AEM 6.5 サービスパック 18 で AEM 通知のリンクが機能しません。サービスパック 18 にアップグレードすると、「通知」ボタンでメッセージを選択する際に AEM 通知リンクが機能しません。（NPR-41792）
+* **ユーザー設定を編集**&#x200B;ダイアログボックス内のツール／セキュリティ／ユーザー／&lt;user_name>／プロファイルで、ダイアログボックス内で「キャンセル」をクリックできません。 （NPR-41793）
+* アセットが選択されている場合、`/libs/granite/ui/components/coral/foundation/form/pathfield` での Granite `pathfield` コンポーネントで&#x200B;**[!UICONTROL 選択]**&#x200B;ボタンを有効にできません。 パスフィールドがポップアップ表示され、ユーザーがアセットのチェックボックスを選択しても、**[!UICONTROL 選択]**&#x200B;ボタンが有効になりません（グレーからブルーに変化しません）。 （NPR-41970）
+* AEM 内のコンテンツフラグメントモデル（CFM）参照フィールドに問題があります。 CFM 参照フィールドは必須として設定されていますが、システムによってユーザーは「保存」をクリックし、特定のシナリオで CFM 以外の値を含むコンテンツを保存できます。 「保存」ボタンはグレー表示（使用不可）になります。 （NPR-41894）
+* `successresponse` アクションを使用する標準の Coral ユーザーインターフェイスダイアログボックスは、アクションの後に成功応答をトリガーにする必要があります。 ただし、AEM 6.5 サービスパック 19 では、リロードアクションは呼び出されず、メッセージが表示されません。 （NPR-41797）
+* AEM 6.5 サービスパック 18 で AEM 通知のリンクが機能しません。 サービスパック 18 にアップグレードすると、「通知」ボタンでメッセージを選択する際に AEM 通知リンクが機能しません。 （NPR-41792）
 
 <!-- #### WCM{#foundation-wcm-6521}
 
@@ -324,60 +324,60 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### ワークフロー{#foundation-workflow-6521}
 
-* AEM 6.5.18 では、パージ中にユーザーメタデータキャッシュから削除する際にエラーが繰り返し発生していました。（NPR-41762）
+* AEM 6.5.18 では、パージ中にユーザーメタデータキャッシュから削除する際にエラーが繰り返し発生していました。 （NPR-41762）
 
 ## [!DNL Experience Manager] 6.5.21.0 のインストール{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.21.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.21.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。 <!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.21.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> アドビでは、[!DNL Experience Manager] 6.5.21.0 パッケージを削除またはアンインストールすることを推奨しません。したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。<!-- UPDATE FOR EACH NEW RELEASE -->
+> アドビでは、[!DNL Experience Manager] 6.5.21.0 パッケージを削除またはアンインストールすることを推奨しません。 したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。 <!-- UPDATE FOR EACH NEW RELEASE -->
 <!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
 ### [!DNL Experience Manager] 6.5 へのサービスパックのインストール{#install-service-pack}
 
-1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
+1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。 インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.21.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
+1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
-1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
+1. パッケージを選択して、**[!UICONTROL インストール]**&#x200B;を選択します。
 
-1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。[Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
+1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。 [Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
 
 >[!NOTE]
 >
->サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。アドビでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
+>サービスパックのインストール中に、パッケージマネージャー UI のダイアログが終了することがあります。 アドビでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。 アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。 この問題は、通常 [!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
 
 **自動インストール**
 
 [!DNL Experience Manager] 6.5.21.0 のインストール方法は 2 つあります。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-* サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。パッケージが自動的にインストールされます。
-* [パッケージマネージャーの HTTP API](/help/sites-administering/package-manager.md#package-share) を使用します。ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
+* サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。 パッケージが自動的にインストールされます。
+* [パッケージマネージャーの HTTP API](/help/sites-administering/package-manager.md#package-share) を使用します。 ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
 >[!NOTE]
 >
->Experience Manager 6.5.21.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.21.0 では、Bootstrap のインストールをサポートしていません。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **インストールの検証**
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.21.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.21.0)` が表示されます。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
 
-1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.20 以降です（web コンソールを使用：`/system/console/bundles`）。<!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.20 以降です（web コンソールを使用：`/system/console/bundles`）。 <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
 ### [!DNL Experience Manager] Forms へのサービスパックのインストール{#install-aem-forms-add-on-package}
 
@@ -401,7 +401,7 @@ GraphQL を使用しているお客様は、[Experience Manager コンテンツ�
 
 ### UberJar{#uber-jar}
 
-[!DNL Experience Manager] 6.5.21.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.21/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.21.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.21/)で入手できます。 <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -416,7 +416,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 >[!NOTE]
 >
->UberJar およびその他の関連アーティファクトは、Adobe のパブリック Maven リポジトリー （`repo.adobe.com`） ではなく、Maven Central リポジトリーで入手できます。メインの UberJar ファイルの名前は、「`uber-jar-<version>.jar`」に変更されます。そのため `classifier` が存在せず、`apis` が値として `dependency` タグに使用されます。
+>UberJar およびその他の関連アーティファクトは、Adobe のパブリック Maven リポジトリー （`repo.adobe.com`） ではなく、Maven Central リポジトリーで入手できます。 メインの UberJar ファイルの名前は、`uber-jar-<version>.jar`に変更されます。 そのため `classifier` が存在せず、`apis` が値として `dependency` タグに使用されます。
 
 
 ## 廃止される機能および削除された機能{#removed-deprecated-features}
@@ -474,7 +474,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
-* GraphQL クエリでは、`fragments` インデックスの代わりに `damAssetLucene` インデックスを使用する場合があります。このアクションは結果的に、GraphQL クエリが失敗するか、実行に非常に長い時間がかかる可能性があります。
+* GraphQL クエリでは、`fragments` インデックスの代わりに `damAssetLucene` インデックスを使用する場合があります。 このアクションは結果的に、GraphQL クエリが失敗するか、実行に非常に長い時間がかかる可能性があります。
 
   問題を修正するには、`damAssetLucene` では、`/indexRules/dam:Asset/properties` に次の 2 つのプロパティを含むように設定する必要があります。
 
@@ -494,7 +494,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
   これらの手順を行うと、GraphQL クエリの実行が高速化されます。
 
-* コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、コンテンツフラグメント参照が取得される際に問題が発生します。バックグラウンドクエリが失敗します。つまり、この機能が動作しなくなります。
+* コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、コンテンツフラグメント参照が取得される際に問題が発生します。 バックグラウンドクエリが失敗します。 つまり、この機能が動作しなくなります。
 正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。
 
   ```xml
@@ -504,25 +504,25 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
   "refresh": true
   ```
 
-* [!DNL Experience Manager] インスタンスを 6.5.0 ～ 6.5.4 から Java™ 11 の最新サービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
+* [!DNL Experience Manager] インスタンスを 6.5.0 ～ 6.5.4 から Java™ 11 の最新サービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。 例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。 <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
-* ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
+* ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。 ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 
 * [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
-   * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
+   * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
    * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
    * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
-* AEM 6.5.15 以降、```org.apache.servicemix.bundles.rhino``` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。strict モード（```use strict;```）を使用するスクリプトでは、正しい変数を宣言する必要があります。そうしないと、実行されず、ランタイムエラーがスローされます。
+* AEM 6.5.15 以降、```org.apache.servicemix.bundles.rhino``` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。 strict モード（```use strict;```）を使用するスクリプトでは、正しい変数を宣言する必要があります。 そうしないと、実行されず、ランタイムエラーがスローされます。
 
-* 公式アップデートパッケージを通じてタグ付け関連の標準コンテンツをインストールすると、`/content/cq:tags` ノードの言語プロパティがデフォルトにリセットされます。このアクションは、サービスパック、セキュリティサービスパック、拡張機能パック、累積機能パック、パッチなどに当てはまります。したがって、インストール前にプロパティから追加しておく必要があります。
+* 公式アップデートパッケージを通じてタグ付け関連の標準コンテンツをインストールすると、`/content/cq:tags` ノードの言語プロパティがデフォルトにリセットされます。 このアクションは、サービスパック、セキュリティサービスパック、拡張機能パック、累積機能パック、パッチなどに当てはまります。 したがって、インストール前にプロパティから追加しておく必要があります。
 
 ### AEM Sites の既知の問題 {#known-issues-aem-sites-6521}
 
-* SITES-17934 - コンテンツフラグメント - 大きなフラグメントツリーに対する DoS 保護が原因でプレビューに失敗する。詳しくは、[GraphQL Query Executor のデフォルト設定オプションに関するナレッジベース記事](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23945)を参照してください。
+* SITES-17934 - コンテンツフラグメント - 大きなフラグメントツリーに対する DoS 保護が原因でプレビューに失敗する。 詳しくは、[GraphQL Query Executor のデフォルト設定オプションに関するナレッジベース記事](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23945)を参照してください。
 
 <!--
 
@@ -537,15 +537,15 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. ロケーターが実行中の場合は、ロケーターを停止します。
    1. AEM サーバーを停止します。
    1. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
-   1. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。`version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
+   1. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
    1. 管理者モードでコマンドプロンプトを開きます。
    1. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
-* ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（FORMS-14521）
+* ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （FORMS-14521）
 
-* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。このサービスでは、PDF やログファイルの形式で出力を生成しません。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（CQDOC-21680）
+* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。 このサービスでは、PDF やログファイルの形式で出力を生成しません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （CQDOC-21680）
 
-* AEM 6.5 Forms サービスパック 18 （6.5.18.0）またはAEM 6.5 Forms サービスパック 19 （6.5.19.0）をAEM 6.5 Forms サービスパック 20 （6.5.20.0）またはAEM 6.5 Forms サービスパック 21 （6.5.21.0）に更新すると、JSP コンパイルエラーが発生して、アダプティブフォームを開いたり作成したりできなくなり、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他のAEM インターフェイスでもエラーがが発生します。 （FORMS-15256）
+* ユーザーが AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から、AEM 6.5 Forms サービスパック 20（6.5.20.0）または AEM 6.5 Forms サービスパック 21（6.5.21.0）にアップデートすると、JSP コンパイルエラーが発生し、アダプティブフォームを開いたり作成したりすることができなくなります。これにより、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他の AEM インターフェイスでもエラーが発生します。 （FORMS-15256）
 
   このような問題が発生した場合は、次の手順を実行して解決します。
    1. ディレクトリに移動します `/libs/fd/aemforms/install/` を CRXDE で実行します。
@@ -561,7 +561,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ## 制限付き Web サイト{#restricted-sites}
 
-以下の web サイトはお客様のみが参照できます。アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
+以下の web サイトはお客様のみが参照できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com からの製品ダウンロード](https://licensing.adobe.com/)
 * [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/customer-one/using/home)。
