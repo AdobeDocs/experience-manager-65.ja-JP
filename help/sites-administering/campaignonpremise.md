@@ -9,10 +9,10 @@ exl-id: a7281ca0-461f-4762-a631-6bb539596200
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
-workflow-type: ht
-source-wordcount: '1552'
-ht-degree: 100%
+source-git-commit: 6fb844ea428c15adab71503dde6138e46eabf0a3
+workflow-type: tm+mt
+source-wordcount: '1564'
+ht-degree: 99%
 
 ---
 
@@ -89,6 +89,10 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
 1. 適切なセキュリティゾーンを選択し、必要に応じて信頼済み IP マスクを定義します。
 
+   >[!CAUTION]
+   >
+   >構成するセキュリティ ゾーンは次のとおりです **プライベート会社ネットワーク （VPN+LAN）**.
+
 1. 「**保存**」をクリックします。
 
 1. Adobe Campaign クライアントからログアウトします。
@@ -101,7 +105,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
    * `allowHTTP="true"`
    * `sessionTokenOnly="true"`
-   * `allowUserPassword="true"`
+   * `allowUserPassword="true"`。
 
 1. ファイルを保存します。
 
@@ -201,7 +205,7 @@ Externalizer が設定され、Adobe Campaign がコンテンツにアクセス�
 
 >[!NOTE]
 >
->パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
+パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
 
 ## AEM での campaign-remote ユーザーを設定 {#configure-user}
 
