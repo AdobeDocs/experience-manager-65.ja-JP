@@ -9,7 +9,7 @@ exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
 workflow-type: tm+mt
 source-wordcount: '4332'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -547,8 +547,8 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * ユーザーが AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から、AEM 6.5 Forms サービスパック 20（6.5.20.0）または AEM 6.5 Forms サービスパック 21（6.5.21.0）にアップデートすると、JSP コンパイルエラーが発生し、アダプティブフォームを開いたり作成したりすることができなくなります。これにより、ページエディター、AEM Forms UI、AEM ワークフローエディターなどの他の AEM インターフェイスでもエラーが発生します。 （FORMS-15256）
 
   このような問題が発生した場合は、次の手順を実行して解決します。
-   1. ディレクトリに移動します `/libs/fd/aemforms/install/` を CRXDE で実行します。
-   1. という名前のバンドルを削除します `com.adobe.granite.ui.commons-5.10.26.jar`.
+   1. CRXDE のディレクトリ `/libs/fd/aemforms/install/` に移動します。
+   1. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    1. AEM サーバーを再起動します。
 
 * JEE サーバー上でAEM Forms サービスパック 20 （6.5.20.0）に更新し、出力サービスを使用してPDFを生成すると、PDFがレンダリングされてアクセシビリティの問題が発生します。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922112）
