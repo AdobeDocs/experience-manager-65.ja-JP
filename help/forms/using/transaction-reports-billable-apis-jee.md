@@ -30,7 +30,7 @@ JEE 上のAEM Formsには、ドキュメントを送信、処理、レンダリ�
 
 -->
 
-以下は、JEE で課金対象となる API のリストです。 リストを検索 [osgi 上のAEM Formsの課金対象 API](/help/forms/using/transaction-reports-billable-apis.md).
+以下は、JEE で課金対象となる API のリストです。 [OSGi でのAEM Formsの課金対象 API](/help/forms/using/transaction-reports-billable-apis.md) のリストを確認します。
 
 ## 課金対象のドキュメントサービス API {#billable-document-services-apis}
 
@@ -46,47 +46,47 @@ JEE 上のAEM Formsには、ドキュメントを送信、処理、レンダリ�
    <tr>
    <td><a>CreatePDF</a></td>
    <td>サポートされているファイルタイプにAdobe PDFを作成します。</td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
    <td><a>CreatePDF3</a></td>
    <td>サポートされているファイルタイプにAdobe PDFを作成します。 </td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
    <td><a> HtmlToPDF</a></td>
    <td>HTMLファイルをAdobe PDFに変換します。 </td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF</a></td>
    <td>サポートされているファイルタイプにPDFを書き出します。 </td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
-   <td><a>ExportPDF2</a></td>
+   <td><a>EXPORTPDF2</a></td>
    <td><p>サポートされているファイルタイプにPDFを書き出します。</p> </td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
-   <td><a>ExportPDF3</a></td>
+   <td><a>EXPORTPDF3</a></td>
    <td>サポートされているファイルタイプにPDFを書き出します。</td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
    <td><a>HtmlFileToPDF</a></td>
    <td>HTMLファイルをPDFに変換します。</td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
    <td><a>HtmlToPDF2</a></td>
    <td>HTMLファイルをPDFに変換します。</td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
   <tr>
    <td><a>OptimizePDF</a></td>
    <td>品質に影響を与えることなく不要なメタデータを削除することによって、ファイルサイズを縮小できるように PDF を最適化します。</td>
-   <td>変換<br /> </td>
+   <td>コンバージョン <br /> </td>
   </tr>
  </tbody>
 </table>
@@ -101,7 +101,7 @@ JEE 上のAEM Formsには、ドキュメントを送信、処理、レンダリ�
    <td>トランザクションレポートカテゴリ</td>
   </tr>
   <tr>
-   <td><a>署名/認証</a><br /> </td>
+   <td><a> 署名/認証 </a><br /> </td>
    <td>この API を使用すると、ドキュメントを保護できます。API を使用して、PDFドキュメントに署名し、認証することができます。</td>
    <td>コンバージョン</td>
   </tr>
@@ -306,14 +306,14 @@ JEE 上のAEM Formsには、ドキュメントを送信、処理、レンダリ�
 </table>
 
 次の操作を 1 つ以上実行すると、呼び出し API の使用がトランザクションとしてカウントされます。
-1. 非 PDF 形式から PDF 形式への変換。例えば、XDP 形式からPDF形式への変換などです。<!-- catering to both interactive and non-interactive forms of communication, and the conversion from Word to PDF.-->
+1. 非 PDF 形式から PDF 形式への変換。例えば、XDP 形式からPDF形式への変換です。<!-- catering to both interactive and non-interactive forms of communication, and the conversion from Word to PDF.-->
 1. PDF 形式から PDF/A 形式への変換。
 1. PDF 形式から非 PDF 形式への変換。例としては、PDF 形式から画像形式への変換、または PDF 形式からテキスト形式への変換があります。
 
 >[!NOTE]
 >
->* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。では、 `invoke API` なし、単一または複数のトランザクションとして計上できます。 カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
->* 次のような Assembler サービスを使用して生成された 1 つのPDFドキュメント `invoke` および `invokeDDX`、は、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。 カウントされるトランザクションの数は、指定されたによって異なります <!--DDX--> コード。
+>* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。したがって、`invoke API` は、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。 カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
+>* `invoke` や `invokeDDX` などの Assembler サービスを使用して生成された単一PDFドキュメントは、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。 カウントされるトランザクションの数は、指定された <!--DDX--> コードによって異なります。
 
 <!--
 ### PDF Utility Service  {#pdf-utility-service}

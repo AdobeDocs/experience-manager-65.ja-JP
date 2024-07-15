@@ -20,11 +20,11 @@ ht-degree: 2%
 
 検索機能は、フォーラムなどのその他の様々な機能と連携して、コンテンツを検索できるようにします。
 
-ユーザー生成コンテンツ（UGC）と呼ばれる、コミュニティメンバーが入力した投稿を検索する機能を追加する場合、次の 2 つのコンポーネントがあります。 [検索](#search) および [検索結果](#search-results).
+ユーザー生成コンテンツ（UGC）と呼ばれる、コミュニティメンバーが入力した投稿を検索する機能を追加する場合、[ 検索 ](#search) と [ 検索結果 ](#search-results) の 2 つのコンポーネントがあります。
 
-を含むページ `Search Results` コンポーネントは、検索と結果の表示の両方をサポートしています。
+`Search Results` コンポーネントを含むページは、検索と結果の表示の両方をサポートしています。
 
-を含むページ `Search` コンポーネントは、検索を開始するための場所を提供し、検索結果がに表示されます。 `Search Results` ページ。
+`Search` コンポーネントを含むページには、検索を開始するための場所が用意されており、検索結果が `Search Results` のページに表示されます。
 
 検索機能は、サイト訪問者やメンバーがコンテンツを表示できるようにする他の機能と併用できます。
 
@@ -32,21 +32,21 @@ ht-degree: 2%
 
 ### ページに検索を追加 {#add-search-to-a-page}
 
-を追加します `Search` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます `Communities / Search` ページ上にドラッグして配置します。 使用 `Search` には 2 番目のページが必要です `Search Results.`
+オーサーモードで `Search` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して `Communities / Search` のコンポーネントを探し、ページ上にドラッグして配置します。 `Search` を使用するには、`Search Results.` に 2 ページ目が必要です
 
-詳細については、 [Communities コンポーネントの基本](basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
 
-必要なクライアントサイドライブラリが `cq.social.hbs.search`が含まれます。このようにして、 `Search` コンポーネントが表示されます。
+必要なクライアントサイドライブラリ `cq.social.hbs.search` が含まれている場合、`Search` コンポーネントはこの方法で表示されます。
 
 ![add-search](assets/add-search.png)
 
 ### 追加した検索を設定する {#configure-the-added-search}
 
-配置されたを選択します。 `Search` にアクセスして選択するコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置した `Search` コンポーネントを選択してアクセスし、「`Configure`」アイコンを選択すると、編集ダイアログが開きます。
 
-![設定](assets/configure-new.png)
+![ 設定 ](assets/configure-new.png)
 
-の下 **[!UICONTROL 検索設定]** タブで、訪問者がクエリを入力した際のパスの検索方法を指定します。
+「**[!UICONTROL 検索設定]**」タブで、訪問者がクエリを入力した際に検索するパスを指定します。
 
 ![search-settings](assets/search-settings.png)
 
@@ -56,33 +56,33 @@ ht-degree: 2%
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
 * **[!UICONTROL 結果ページ]**
-結果は、ブラウザーを使用してを含むページを選択することで指定された、別のページに表示されます。 `Search Results` コンポーネント。
+結果は、`Search Results` コンポーネントを含むページをブラウザーで選択することにより指定された、別のページに表示されます。
 
 ## 検索結果 {#search-results}
 
 ### ページへの検索結果の追加 {#add-search-results-to-a-page}
 
-を追加します `Search Results` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます
+オーサーモードで `Search Results` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して以下を見つけます
 
 * `Communities / Search Results`
 
 ページ上にドラッグして配置します。 検索コンポーネントとは異なり、結果は同じページに表示されるので、2 番目のページは必要ありません。
 
-Web サイト内の他の場所で検索を使用する場合、この 1 ページには `Search Results` は、のように設定できます。 `Result Page` の一部またはすべてのインスタンス用 `Search`.
+Web サイト内の他の場所で検索を使用する場合、`Search Results` を含むこの 1 ページは、`Search` の任意またはすべてのインスタンスの `Result Page` として設定できます。
 
-詳細については、 [Communities コンポーネントの基本](basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
 
-必要なクライアントサイドライブラリが `cq.social.hbs.search`が含まれます。このようにして、 `Search Result` コンポーネントが表示されます。
+必要なクライアントサイドライブラリ `cq.social.hbs.search` が含まれている場合、`Search Result` のコンポーネントは次のように表示されます。
 
 ![search-result](assets/search-result1.png)
 
 ### 追加した検索結果の設定 {#configure-the-added-search-result}
 
-配置されたを選択します。 `Search Results` にアクセスして選択するコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置した `Search Results` コンポーネントを選択してアクセスし、「`Configure`」アイコンを選択すると、編集ダイアログが開きます。
 
-![設定](assets/configure-new.png)
+![ 設定 ](assets/configure-new.png)
 
-の下 **[!UICONTROL 検索結果設定]** タブを使用すると、訪問者がクエリを入力した際に検索に含めるパスを指定できます。
+「**[!UICONTROL 検索結果設定]**」タブでは、訪問者がクエリを入力したときに検索に含めるパスを指定できます。
 
 ![search-result-settings](assets/search-result-settings.png)
 
@@ -96,4 +96,4 @@ Web サイト内の他の場所で検索を使用する場合、この 1 ペー�
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [検索の基本事項](search-implementation.md) 開発者向けのページです。
+詳しくは、開発者向けの [ 検索の基本事項 ](search-implementation.md) ページを参照してください。

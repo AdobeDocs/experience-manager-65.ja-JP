@@ -27,7 +27,7 @@ AEM Mobileは、お客様の GDPR コンプライアンス義務を支援する�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobeのデジタルパブリッシング製品（AEM Mobileに先行）は、Adobeの GDPR 対応イニシアチブをサポートします。 参照： [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja). 以下では、Adobeと連携して GDPR リクエストを開始する方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートについて詳しく説明します。
+Adobeのデジタルパブリッシング製品（AEM Mobileに先行）は、Adobeの GDPR 対応イニシアチブをサポートします。 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja) を参照してください。 以下では、Adobeと連携して GDPR リクエストを開始する方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートについて詳しく説明します。
 
 AEM Mobileを古いDigital Publishing Suiteと混同しないために、次の場所からDigital Publishing Suite製品にログインできます。
 
@@ -41,25 +41,25 @@ Digital Publishing Suiteに対する GDPR リクエストを開始するには�
 
 必須：
 
-* 顧客の契約 ID: *dpsc-contractId*
+* 顧客の契約 ID:*dpsc-contractId*
 
 次のうち少なくとも 1 つを指定します。
 
-* エンドユーザーの顧客が指定した OAuth ID （顧客の直接使用権限システムで使用される ID）: *dpsc-directEntitlementId*
-* Windows アプリユーザーの場合、エンドユーザーのApp Store ID は次のようになります。 *dpsc-windowsAppStoreId*
-* DPS アプリとやり取りするためにエンドユーザーが使用するメールアドレス： *電子メール*
+* エンドユーザーの顧客が指定した OAuth ID （顧客の直接使用権限システムで使用される ID）:*dpsc-directEntitlementId*
+* Windows アプリユーザーの場合、エンドユーザーのApp Store ID:*dpsc-windowsAppStoreId*
+* DPS アプリとやり取りするためにエンドユーザーが使用するメールアドレス：*email*
 
 ### よくある質問（FAQ） {#frequently-asked-questions-faq}
 
-**AdobeはDELETEリクエストの開始時にApp Storeの購入を削除していますか？**
+**Adobeは、DELETEリクエストの開始時にApp Storeの購入を削除しますか？**
 
 Adobeは、アプリストアでの購入（サブスクリプションなど）に関する情報を削除しますが、購入はアプリストアに記録されたままになります。 アプリ（エンドユーザー）がアプリストアにログインすると、それらのレシートは再び取得され、Adobeに送信されます。 その後、それらは新しい購入と見なされ、再びアクセスでアプリによって復元されます。
 
-**Adobeは、DELETEリクエストを行う際に、お客様が提供する使用権限を削除していますか？**
+**Adobeは、DELETEリクエストを行う際に、お客様が指定した使用権限を削除していますか？**
 
 Adobeは、顧客の追加の直接使用権の許容量に関する情報を削除します。 アプリ（エンドユーザー）が、お客様が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスは追加の使用権限を再度取得します。
 
-**エンドユーザーには何が期待されますか？**
+**エンドユーザーに期待される機能**
 
 アプリに使用権限を割り当てるキーはビューアソフトウェアの一部としてデバイスに存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールする場合でも、既存の購入（アプリストアユーザーに関連付けられる）および直接の使用権限の許可（顧客の OAuth ユーザーに関連付けられる）は引き続き復元されることに注意する必要があります。
 
@@ -71,7 +71,7 @@ Adobeには、特定のユーザーに直接関連付けられる最小限の情
 
 なし. 追跡中のデータがありますが、それはアプリレベル（個人ではない）にあります。 これには、ローンチ、クラッシュ、クローズ、アクティビティ、購入、フォリオのオーバーレイなどのイベントが含まれます。 地理的な場所、名前、デバイス ID または IP アドレスは追跡されません。
 
-**エンド ユーザーは情報を提供しましたが、何も見つかりませんでした。 なぜいけないの。**
+**エンドユーザーが情報を提供しましたが、何も見つかりませんでした。 なぜいけないの？**
 
 Digital Publishing Suite製品の進化に伴い、サービスの実装が変わり、より多くのデータが不明化されました。 ユーザーから提供されたデータを使用してデータが見つからない場合、ユーザーのデータをそのユーザーに遡って追跡することはできません。
 

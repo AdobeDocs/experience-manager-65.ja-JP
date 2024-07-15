@@ -10,7 +10,7 @@ exl-id: 6d165b0d-e3e7-4115-8f2a-827679754b3b
 feature: Selectors
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 100%
 

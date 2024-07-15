@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Document Security
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 100%
 
@@ -89,7 +89,7 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    * サーバークラスター - `[appserver root]`¥domain¥configuration¥domain_&lt;dbname>.xml
 
-1. &#x200B;
+1. 
    * **シングルサーバーの場合、** lc_&lt;dbaname/tunkey>.xml ファイルの &lt;security-realms> セクションに次のテキストを追加します。
 
    ```xml

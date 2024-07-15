@@ -25,19 +25,19 @@ AEM Communities 6.1 以降、ユーザー作成コンテンツ（UGC）は、ス
 
 以前のリリースとは異なり、AEM インスタンス間で UGC のリバースレプリケーション/フォワードレプリケーションを行うことはできません。 代わりに、SRP により、JSRP を除くすべてのオーサーインスタンスとパブリッシュインスタンスから、作成、読み取り、更新、削除（CRUD）操作のために UGC に直接アクセスできるようになります。
 
-以下は以下のとおりです [各 SRP オプションの特性](#characteristics-of-srp-options)。これは、適切な SRP を選択する際の決定プロセスにとって重要な情報です。 [基盤となるデプロイメント](/help/communities/topologies.md).
+適切な SRP を選択する際の決定プロセスと [ 基盤となるデプロイメント ](#characteristics-of-srp-options) にとって重要な情報である、[ 各 SRP オプションの特徴 ](/help/communities/topologies.md) を次に示します。
 
-UGC への SRP の使用について詳しくは、 [ストレージリソースプロバイダーの概要](/help/communities/srp.md).
+UGC への SRP の使用について詳しくは、[ ストレージリソースプロバイダーの概要 ](/help/communities/srp.md) を参照してください。
 
 >[!NOTE]
 >
->SRP は、コミュニティコンテンツにのみ適用されます。 サイトコンテンツの保存場所（[ノードストア](/help/sites-deploying/data-store-config.md)）に設定し、AEM インスタンス間でのユーザー登録、ユーザープロファイルおよびユーザーグループの安全な処理に影響を与えません [ユーザーデータの管理](#managing-user-data)）に設定します。
+>SRP は、コミュニティコンテンツにのみ適用されます。 サイトコンテンツの保存場所（[ ノードストア ](/help/sites-deploying/data-store-config.md)）や、AEM インスタンス間でのユーザー登録、ユーザープロファイル、ユーザーグループのセキュリティ保護の取り扱いには影響しません（[ ユーザーデータの管理 ](#managing-user-data) も参照）。
 
 >[!CAUTION]
 >
->AEM 6.1 以降、 [UGC はレプリケートされない](#ugc-never-replicated).
+>AEM 6.1 以降、[UGC はレプリケートされません ](#ugc-never-replicated)。
 >
->デプロイメントに共通ストアが含まれていない場合（デフォルトなど） [JSRP](/help/communities/topologies.md#jsrp) トポロジ、UGC は、入力されたAEM パブリッシュインスタンスまたはオーサーインスタンスでのみ表示されます。 トポロジにパブリッシュクラスターが含まれている場合にのみ、UGC はどのパブリッシュインスタンスにも表示されます。
+>デフォルトの [JSRP](/help/communities/topologies.md#jsrp) トポロジなど、デプロイメントに共通ストアが含まれていない場合、UGC は、入力されたAEM パブリッシュインスタンスまたはオーサーインスタンスでのみ表示されます。 トポロジにパブリッシュクラスターが含まれている場合にのみ、UGC はどのパブリッシュインスタンスにも表示されます。
 
 ## SRP オプションの特徴 {#characteristics-of-srp-options}
 
@@ -105,7 +105,7 @@ JSRP:
 
 ## SRP の設定 {#configuring-srp}
 
-基になるデプロイメントに基づいて、デフォルトのストレージオプションを指定するには、を使用します。 [ストレージ設定コンソール](/help/communities/srp-config.md).
+基になるデプロイメントに基づいて、デフォルトのストレージオプションを指定するには、[ ストレージ設定コンソール ](/help/communities/srp-config.md) を使用します。
 
 各オプションの設定について詳しくは、以下を参照してください。
 
@@ -130,12 +130,12 @@ AEM Communities 6.1 以降、上述のように、UGC の共有ストレージ�
 
 ### ユーザーデータの管理 {#managing-user-data}
 
-CommunitIes にとっても次のような利点があります [*ユーザー*, *ユーザーグループ*、および *ユーザープロファイル*](/help/communities/users.md). ユーザー関連のデータは、パブリッシュ環境で作成および更新されたときに、トポロジがの場合に他のパブリッシュインスタンスで使用できるようにする必要があります [パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
+また、CommunitIes の関心事は、[*ユーザー*、*ユーザーグループ*、および *ユーザープロファイル*](/help/communities/users.md) です。 ユーザー関連のデータは、パブリッシュ環境で作成および更新されたときに、トポロジが [ パブリッシュファーム ](/help/sites-deploying/recommended-deploys.md#tarmk-farm) であるとき、他のパブリッシュインスタンスで使用できるようにする必要があります。
 
-AEM Communities 6.1 では、ユーザー関連のデータはレプリケーションの代わりに Sling 配布を使用して同期されます。 詳しくは、を参照してください。 [ユーザーの同期](/help/communities/sync.md).
+AEM Communities 6.1 では、ユーザー関連のデータはレプリケーションの代わりに Sling 配布を使用して同期されます。 詳しくは、[ ユーザーの同期 ](/help/communities/sync.md) を参照してください。
 
 ### AEM Communities 6.5 へのアップグレード {#upgrading-to-aem-communities}
 
 AEM 6.5 Communities にアップグレードする際に、既存の UGC を保持する必要がある場合は、AEM 5.6.1 またはAEM 6.0 コミュニティでAdobeのオンデマンドストレージまたは UGC のオンプレミスストレージのどちらが使用されているかに応じて、手順を実行する必要があります。
 
-詳しくは、次を参照してください： [AEM Communities 6.5 へのアップグレード](/help/communities/upgrade.md).
+詳しくは、[AEM Communities 6.5 へのアップグレード ](/help/communities/upgrade.md) を参照してください。

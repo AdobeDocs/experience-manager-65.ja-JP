@@ -7,7 +7,7 @@ feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 100%
 

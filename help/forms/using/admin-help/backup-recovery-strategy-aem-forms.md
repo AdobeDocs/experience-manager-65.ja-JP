@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 100%
 
@@ -93,7 +93,7 @@ AEM Forms を異なる環境に回復する場合、次のような変更点が�
 
 >[!NOTE]
 > 
-> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 ### AEM Forms のホスト名または IP アドレスの変更 {#changing-the-aem-forms-hostname-or-ip-address}
 

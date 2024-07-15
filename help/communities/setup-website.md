@@ -32,7 +32,7 @@ Web サイトを設定するために、以下の手順では、次の場所に�
 
   ダウンロード可能な web ページは、ここに格納されます。
 
-このチュートリアルのコードは、アプリケーション、デザインおよびコンテンツでメインフォルダー名が同じであることに依存しています。 Web サイトに他の名前を選択した場合は、常に `an-scf-sandbox` 選択した名前で。
+このチュートリアルのコードは、アプリケーション、デザインおよびコンテンツでメインフォルダー名が同じであることに依存しています。 Web サイトに他の名前を選択した場合は、常に `an-scf-sandbox` を選択した名前に置き換えます。
 
 >[!NOTE]
 >
@@ -51,30 +51,30 @@ Web サイトを設定するために、以下の手順では、次の場所に�
 
 /apps ディレクトリは保護されており、/content ディレクトリや/etc/designs ディレクトリのように公開アクセスはできません。
 
-1. 作成 `/apps/an-scf-sandbox` フォルダー。
+1. フォルダー `/apps/an-scf-sandbox` 作成します。
 
-   使用 **[!UICONTROL CRXDE Lite]**&#x200B;エクスプローラーパネル内
+   エクスプローラーウィンドウで **[!UICONTROL CRXDE Lite]** を使用する
 
-   1. 「」を選択します `/apps` フォルダー。
-   1. 右クリック **[!UICONTROL 作成]**...または、 **[!UICONTROL 作成…]** メニュー。
-   1. を選択 **[!UICONTROL フォルダーの作成…]**.
-   1. が含まれる **[!UICONTROL フォルダーを作成]** ダイアログ、を入力 `an-scf-sandbox`.
+   1. `/apps` フォルダーを選択します。
+   1. 「**[!UICONTROL 作成]**」を右クリックするか、「**[!UICONTROL 作成]**」メニューをプルダウンします。
+   1. 「**[!UICONTROL フォルダーを作成…]**」を選択します。
+   1. **[!UICONTROL フォルダーを作成]** ダイアログで、`an-scf-sandbox` と入力します。
    1. 「**[!UICONTROL OK]**」をクリックします。
 
-1. 作成 **[!UICONTROL components]** サブフォルダー。
+1. **[!UICONTROL components]** サブフォルダーを作成します。
 
-   1. 「」を選択します `/apps/an-scf-sandbox` フォルダー。
-   1. クリック **[!UICONTROL 作成/フォルダーを作成]**.
-   1. が含まれる **[!UICONTROL フォルダーを作成]** ダイアログ、を入力 **[!UICONTROL components]**.
+   1. `/apps/an-scf-sandbox` フォルダーを選択します。
+   1. **[!UICONTROL 作成/フォルダーを作成]** をクリックします。
+   1. **[!UICONTROL フォルダーを作成]** ダイアログで、**[!UICONTROL components]** と入力します。
    1. 「**[!UICONTROL OK]**」をクリックします。
 
-1. 作成 **[!UICONTROL templates]** サブフォルダー。
+1. **[!UICONTROL templates]** サブフォルダーを作成します。
 
-   1. 「」を選択します `/apps/an-scf-sandbox` フォルダー。
-   1. クリック **[!UICONTROL 作成/フォルダーを作成]**.
-   1. が含まれる **[!UICONTROL フォルダーを作成]** ダイアログ、を入力 **[!UICONTROL templates]**.
+   1. `/apps/an-scf-sandbox` フォルダーを選択します。
+   1. **[!UICONTROL 作成/フォルダーを作成]** をクリックします。
+   1. **[!UICONTROL フォルダーを作成]** ダイアログで、**[!UICONTROL templates]** と入力します。
    1. 「**[!UICONTROL OK]**」をクリックします。
-   1. 再選択 `/apps/an-scf-sandbox`.
+   1. `/apps/an-scf-sandbox` を再選択します。
    1. 「**[!UICONTROL すべて保存]**」を選択します。
 
    他の編集プロセスと同様に、頻繁に保存する必要があります。 データ入力で問題が発生した場合は、ログインがタイムアウトしたか、以前の編集内容を保存する必要がある可能性があります。
@@ -87,17 +87,17 @@ Web サイトを設定するために、以下の手順では、次の場所に�
 
 /etc/designs ディレクトリには、ダウンロードする画像、スクリプト、スタイルシートと、ページコンテンツが含まれています。
 
-1. クラシック UI の Designer ツールを使用するには、を参照してください。 [https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin).
+1. クラシック UI でDesigner ツールを使用するには、[https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin) を参照します。
 
-   注意：タイプのノードを作成するためにCRXDE Liteを使用する場合 `cq:Page`の場合、アクセス制御とレプリケーションはページのデフォルト設定には設定されません。
+   注意：CRXDE Liteを使用して `cq:Page` 型のノードを作成する場合、アクセス制御およびレプリケーションはページのデフォルト設定に設定されません。
 
-1. エクスプローラーペインで、 **[!UICONTROL デザイン]** フォルダーを選択し、 **[!UICONTROL 新規]** > **[!UICONTROL 新しいページ]**.
+1. エクスプローラーウィンドウで、**[!UICONTROL Designs]** フォルダーを選択して **[!UICONTROL 新規]**/**[!UICONTROL 新しいページ]** をクリックします。
 
    Enter:
 
-   * タイトル： **[!UICONTROL SCF サンドボックス]**
-   * 名前： **[!UICONTROL an-scf-sandbox]**
-   * を選択 **[!UICONTROL ページテンプレートのデザイン]**
+   * タイトル：**[!UICONTROL SCF サンドボックス]**
+   * 名前：**[!UICONTROL an-scf-sandbox]**
+   * **[!UICONTROL デザインページテンプレート]**」を選択します。
 
    「**[!UICONTROL 作成]**」をクリックします。
 
@@ -115,4 +115,4 @@ Web サイトを設定するために、以下の手順では、次の場所に�
 
 リポジトリ内の/content ディレクトリは、web サイトコンテンツが存在する場所です。 /content の下のパスは、ブラウザーリクエストの URL のパスで構成されます。
 
-*後* この [ページテンプレート](initial-app.md#createthepagetemplate) は初期アプリケーションの一部として作成され、初期ページコンテンツはテンプレートに基づいて作成でき…す。 [**⇒**](initial-app.md)
+*後* 初期アプリケーションの一部として [ ページテンプレート ](initial-app.md#createthepagetemplate) を作成した後、テンプレートに基づいて初期ページコンテンツを作成できる… [**⇒**](initial-app.md)

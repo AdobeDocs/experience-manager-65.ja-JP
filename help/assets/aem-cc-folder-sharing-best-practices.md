@@ -6,7 +6,7 @@ role: User, Admin
 feature: Collaboration
 exl-id: 130cec6d-1cdd-4304-94bb-65e6bb573e55
 source-git-commit: 49688c1e64038ff5fde617e52e1c14878e3191e5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 100%
 

@@ -6,7 +6,7 @@ feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
 source-git-commit: ddd411a5dde57cf66cbcb458578b0aa32139b649
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2302'
 ht-degree: 100%
 

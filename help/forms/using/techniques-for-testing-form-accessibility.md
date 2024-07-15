@@ -1,5 +1,5 @@
 ---
-title: フォームのアクセシビリティのテスト方法
+title: フォームのアクセシビリティをテストするためのテクニック
 description: Forms Designer でフォームのアクセシビリティをテストする方法を学びます。
 feature: Adaptive Forms, Forms Designer
 solution: Experience Manager, Experience Manager Forms
@@ -9,11 +9,11 @@ hidefromtoc: true
 source-git-commit: 6b86212a2b3a86b2205714c802dc1581d30e7441
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# フォームのアクセシビリティのテスト方法
+# フォームのアクセシビリティをテストするためのテクニック
 
 様々なユーザーがフォームに確実にアクセスできるようにするには、様々な支援テクノロジーを使用してフォームをテストする必要があります。 この節で説明する方法を使用すると、フォームを簡単かつ安価にテストできます。
 フォームは、キーボードのみを使用して入力できます。 必ずフォーム全体に入力し、すべてのフィールドとボタンをテストしてください。 フォームに入力する際に、次の質問に対する回答に基づいて、改善が必要かどうかを判断します。

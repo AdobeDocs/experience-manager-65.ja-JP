@@ -21,20 +21,20 @@ ht-degree: 3%
 
 ## スクリプトの変更 {#modify-the-script}
 
-この `comment.hbs` スクリプトは、各コメントの全体的なHTMLを作成します。
+`comment.hbs` スクリプトは、各コメントの全体的なHTMLを作成します。
 
 投稿された各コメントの横にアバターを表示しないようにするには：
 
-1. コピー `comment.hbs`から `libs`対象： `apps`
+1. `comment.hbs` を `libs` から `apps` にコピー
 
    1. `/libs/social/commons/components/hbs/comments/comment/comment.hbs` を選択します。
-   1. を選択 **[!UICONTROL コピー]**
+   1. 「**[!UICONTROL コピー]**」を選択します
    1. `/apps/social/commons/components/hbs/comments/comment` を選択します。
-   1. を選択 **[!UICONTROL ペースト]**
+   1. 「**[!UICONTROL 貼り付け]**」を選択します
 
-1. オーバーレイされたを開きます `comment.hbs`
+1. オーバーレイされた `comment.hbs` を開く
 
-   * ノードをダブルクリック `comment.hbs` 。対象： `/apps/social/commons/components/hbs/comments/comment folder`
+   * `/apps/social/commons/components/hbs/comments/comment folder` のノード `comment.hbs` をダブルクリックします
 
 1. 次の行を見つけ、それらを削除またはコメントアウトします。
 
@@ -43,7 +43,7 @@ ht-degree: 3%
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-行を削除するか、で囲みます `<!--` および `-->` コメントアウトします。 また、「xxx」という文字は、アバターがどこにあるかを示す視覚的なインジケーターとして追加されています。
+行を削除するか、行を `<!--` で囲んで `-->` をコメントアウトします。 また、「xxx」という文字は、アバターがどこにあるかを示す視覚的なインジケーターとして追加されています。
 
 ```xml
    xxx
@@ -58,11 +58,11 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->より堅牢なレプリケーション形式は、パッケージマネージャーでパッケージを作成することです。 [アクティベート](/help/sites-administering/package-manager.md#replicating-packages) それ。 パッケージは、書き出しとアーカイブが可能です。
+>レプリケーションのより堅牢な形式は、パッケージマネージャーでパッケージを作成し、[ アクティブ化 ](/help/sites-administering/package-manager.md#replicating-packages) することです。 パッケージは、書き出しとアーカイブが可能です。
 
-グローバルナビゲーションから、を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL デプロイメント]** > **[!UICONTROL 複製]** をクリックして、 **[!UICONTROL ツリーのアクティベート]**.
+グローバルナビゲーションから **[!UICONTROL ツール]**/**[!UICONTROL デプロイメント]**/**[!UICONTROL レプリケーション]** を選択し、「**[!UICONTROL ツリーをアクティベート]**」をクリックします。
 
-開始パスに、と入力します `/apps/social/commons` を選択して、 **[!UICONTROL Activate]**.
+「開始パス」に「`/apps/social/commons`」と入力して、「**[!UICONTROL アクティベート]**」を選択します。
 
 ![verify-content-template](assets/verify-content-template.png)
 
@@ -70,6 +70,6 @@ ht-degree: 3%
 
 パブリッシュインスタンスに管理者としてログオンします（例：https://localhost:4503/crx/deの場合）。管理者/管理者としてログオンすると、オーバーレイされたコンポーネントがあることを確認できます。
 
-ログオフし、次のユーザーとしてログオンする `aaron.mcdonald@mailinator.com/password` ページを更新すると、投稿されたコメントにアバターが表示されないことがわかります。 代わりに、単純な「xxx」が表示されます。
+ログオフしてから `aaron.mcdonald@mailinator.com/password` としてログオンし、ページを更新すると、投稿されたコメントにアバターが表示されないことがわかります。 代わりに、単純な「xxx」が表示されます。
 
 ![create-template-component](assets/create-template-component.png)

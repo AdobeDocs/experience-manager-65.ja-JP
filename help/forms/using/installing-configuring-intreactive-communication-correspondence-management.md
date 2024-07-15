@@ -8,7 +8,7 @@ exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Correspondence Management
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1383'
 ht-degree: 100%
 
@@ -103,7 +103,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    >[!NOTE]
    >
-   > SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 1. 手順 1 から 7 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 

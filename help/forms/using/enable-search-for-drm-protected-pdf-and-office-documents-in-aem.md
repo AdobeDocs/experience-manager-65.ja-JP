@@ -10,7 +10,7 @@ exl-id: 91cbd1f1-d53d-455b-8d2c-6918b521db81
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 100%
 
@@ -65,7 +65,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
    >[!NOTE]
    >
-   > SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 ## サンプルポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
 

@@ -25,7 +25,7 @@ ht-degree: 5%
 
 Hybrid PhoneGap または Cordova アプリをAEMに読み込んだということですね。 オーサリング可能なコンテンツをアプリに追加する場合があります。 このタスクを実行するには、AEM アプリの構造に関する一般的な知識が必要です。 AEMのアプリは通常、2 つの部分に分かれています。 「シェル」と「コンテンツ」。 「シェル」は、PhoneGap 設定ファイル、アプリフレームワーク、ナビゲーションコントロールなど、アプリの静的部分で構成されます。 インポートしたアーカイブの内容は、シェルの一部として保存されます。 このドキュメントのコンテキストでは、シェルは、アプリ開発者が作成したハイブリッド PhoneGap アプリの、AEMが作成していないすべてのコンテンツです。
 
-コンテンツとは、AEM Developer によって構築されたAEMで作成される、コンポーネント、テンプレートおよび作成されたページを指します。 コンテンツは、開発者向けコンテンツまたは作成したコンテンツとして分類されます。 コンポーネント、デザインおよびページテンプレートは、開発者によって作成されるので、開発コンテンツと見なされます。 オーサーコンテンツは、コンポーネントとテンプレートを使用して作成されたページです。 これらのページは通常、デザイナーまたはマーケターが作成します。
+コンテンツとは、AEM Developer によって構築されたAEMで作成される、コンポーネント、テンプレートおよび作成されたページを指します。 コンテンツは、開発者向けコンテンツまたは作成したコンテンツとして分類されます。 コンポーネント、デザインおよびページテンプレートは、開発者によって作成されるので、開発コンテンツと見なされます。 オーサーコンテンツは、コンポーネントとテンプレートを使用して作成されたページです。 これらのページは通常、Designerまたはマーケターが作成します。
 
 作成したAEM ページをハイブリッドアプリに追加するには、アプリ開発者とAEM開発者の間で調整する必要があります。 作成済みコンテンツを追加するアプリ内の任意の場所で、アプリ開発者は、Experience Managerーでオーバーレイできる構造でこれらのページを整理する必要があります。 アプリ開発者は、Experience Managerが作成したコンテンツが追加されるパスをExperience Manager開発者に提供できる必要があります。 次に、ハイブリッドアプリでプレースホルダーページを提供します。このページは、Experience Manager開発者がページコンテンツをオーサリングした後で置き換えられます。
 
@@ -33,7 +33,7 @@ Hybrid PhoneGap または Cordova アプリをAEMに読み込んだというこ�
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-この例では、アプリケーションのようこそページを作成します。 ソースの確認 [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75). アプリ開発者は、ようこそページを定義し、アプリによってレンダリングされるページのテンプレートを提供しています。 このページでは、アプリ開発者とAEM開発者が調整する必要があります。 ハイブリッド参照アプリのようこそページテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。 AEM開発者はAEM リポジトリで同じパスを使用してようこそページを作成するので、このパスは重要です。
+この例では、アプリケーションのようこそページを作成します。 ソース [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75) を確認します。 アプリ開発者は、ようこそページを定義し、アプリによってレンダリングされるページのテンプレートを提供しています。 このページでは、アプリ開発者とAEM開発者が調整する必要があります。 ハイブリッド参照アプリのようこそページテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。 AEM開発者はAEM リポジトリで同じパスを使用してようこそページを作成するので、このパスは重要です。
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -41,7 +41,7 @@ Hybrid PhoneGap または Cordova アプリをAEMに読み込んだというこ�
 
 ![chlimage_1-78](assets/chlimage_1-78.png)
 
-アプリダッシュボードから「ソースをダウンロード」すると、これらのコンテンツ同期スクリプトが実行されて、ハイブリッドアプリのアーカイブが作成されます。
+アプリダッシュボードから「Sourceをダウンロード」すると、これらのコンテンツ同期スクリプトが実行されて、ハイブリッドアプリのアーカイブが作成されます。
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 

@@ -7,7 +7,7 @@ exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
 solution: Experience Manager, Workfront
 source-git-commit: 5ccac0aadce3971e66da052d393cbd33b61e94f7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%
 

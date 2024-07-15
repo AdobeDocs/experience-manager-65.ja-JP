@@ -4,29 +4,30 @@ description: スマートコンテンツサービスを使用して、 [!DNL Ado
 role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: d8d821a64b39b312168733126de8929c04016ff1
+exl-id: 9caee314-697b-4a7b-b991-10352da17f2c
+source-git-commit: 3f11bba91cfb699dc216cf312eaf93fd9bbfe121
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 50%
+ht-degree: 58%
 
 ---
 
-# OAuth 認証情報のスマートタグのトラブルシューティング {#oauth-config}
+# OAuth 資格情報のスマートタグのトラブルシューティング {#oauth-config}
 
-の同意を採用するには、オープンな認証設定が必要です。 [!DNL Adobe Experience Manager] 安全な方法でスマートコンテンツサービスとやり取りするためのアプリケーション。
+安全な方法でスマートコンテンツサービスとやり取りするには、[!DNL Adobe Experience Manager] アプリケーションに対する同意を採用するために、オープン承認設定が必要です。
 
 >[!NOTE]
 >
-> 2024 年 6 月以降は、新しい JWT 資格情報を作成できません。 今後は、OAuth サーバー間資格情報のみが作成されます。
+> 2024年6月以降は、新しい JWT 資格情報を作成できません。今後は、OAuth サーバー間資格情報のみが作成されます。
 > JWT 統合は、既存の AMS およびオンプレミスのユーザーに対してのみ、2025 年 1 月まで引き続き機能します。
 
 ## 新しい AMS ユーザー用の OAuth 設定 {#oauth-config-existing-ams-users}
 
-こちらを参照してください [スマートコンテンツサービスの設定](#integrate-adobe-io) 新規ユーザー用の OAuth サービスの設定の場合。 完了したら、次の手順に従います [手順](#prereqs-config-oauth-onprem).
+新しいユーザーの OAuth サービスの設定については、[ スマートコンテンツサービスの設定 ](#integrate-adobe-io) を参照してください。 完了したら、次の [ 手順 ](#prereqs-config-oauth-onprem) に従います。
 
 >[!NOTE]
 >
->必要に応じて、次の手順でサポートチケットを送信できます [サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support).
+>必要に応じて、[ サポートプロセス ](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support) に従って、サポートチケットを送信できます。
 
 ## 既存の AMS ユーザーの OAuth 設定 {#oauth-config-new-ams-users}
 
@@ -36,34 +37,34 @@ ht-degree: 50%
 
 OAuth 設定には、次の前提条件が必要です。
 
-* で新しい OAuth 統合を作成します。 [Developer Console](https://developer.adobe.com/console/user/servicesandapis). の使用 `ClientID`, `ClientSecret`, `OrgID`、および以下の手順のその他のプロパティ：
-* 次のファイルがこのパスにあります `/apps/system/config in crx/de`:
+* [Developer Console](https://developer.adobe.com/console/user/servicesandapis) で新しい OAuth 統合を作成します。 `ClientID`、`ClientSecret`、`OrgID` およびその他のプロパティを次の手順で使用します。
+* このパス `/apps/system/config in crx/de` ーには、次のファイルがあります。
    * `com.**adobe**.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
    * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
 
 ### 既存の AMS およびオンプレミス ユーザー用の OAuth 設定 {#steps-config-oauth-onprem}
 
-次の手順は、システム管理者が実行できます。 AMS のお客様は、Adobe担当者に連絡するか、次の手順に従ってサポートチケットを送信できます [サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support).
+次の手順は、システム管理者が実行できます。 AMS のお客様は、[ サポートプロセス ](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support) に従って、Adobe担当者に連絡するか、サポートチケットを送信できます。
 
-1. で以下のプロパティを追加または更新します `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
+1. `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`で以下のプロパティを追加または更新します。
 
    * `auth.token.provider.authorization.grants="client_credentials"`
    * `auth.token.provider.orgId="<OrgID>"`
    * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
    * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
      `auth.token.validator.type="adobe-ims-similaritysearch"`
-   * を更新 `auth.token.provider.client.id` を新しい OAuth 設定のクライアント ID に置き換えます。
-   * 更新 `auth.access.token.request` 対象： `"https://ims-na1.adobelogin.com/ims/token/v3"`
-1. ファイル名をに変更 `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config`.
-1. で以下の手順を実行します `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`:
-   * 新しい OAuth 統合から、プロパティ auth.ims.client.secret をクライアント秘密鍵で更新します。
-   * ファイル名をに変更 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config`
+   * 新しい OAuth 設定のクライアント ID を使用して `auth.token.provider.client.id` を更新します。
+   * `auth.access.token.request` を `"https://ims-na1.adobelogin.com/ims/token/v3"` に更新します。
+1. ファイルの名前を `com.adobe.granite.auth.oauth.accesstoken.provider-<randomnumber>.config` に変更します。
+1. `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config` で以下の手順を実行します。
+   * 新しい OAuth 統合からのクライアント秘密鍵を使用して、プロパティ auth.ims.client.secret を更新します。
+   * ファイルの名前を `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl-<randomnumber>.config` に変更します。
 1. コンテンツリポジトリ開発コンソール（例：CRXDE）で、すべての変更を保存します。
 <!--
 1. Navigate to `/system/console/configMgr` and replace the OSGi configuration from `.<randomnumber>` to `-<randomnumber>`.
 1. Delete the old OSGi configuration for `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
 -->
-1. 対象： `System/console/configMgr`、の古い設定を削除します `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` およびアクセストークンのプロバイダー名 `adobe-ims-similaritysearch`.
+1. `System/console/configMgr` で、`com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` およびアクセストークンプロバイダー名 `adobe-ims-similaritysearch` の古い設定を削除します。
 1. コンソールを再起動します。
 
 ## 設定の検証 {#validate-the-configuration}
@@ -82,13 +83,13 @@ OAuth 設定には、次の前提条件が必要です。
 
 ## と Adobe 開発者コンソールの統合 {#integrate-adobe-io}
 
-新しいユーザーとしてAdobe Developer コンソールと統合すると、 [!DNL Experience Manager] サーバーは、リクエストをスマートコンテンツサービスに転送する前に、Adobe Developer コンソールゲートウェイを使用してサービス資格情報を認証します。 統合するには、組織の管理者権限と、組織で購入して有効化されたスマートコンテンツサービスライセンスを持つAdobe ID アカウントが必要です。
+新しいユーザーとしてAdobe Developer Consoleと統合する場合、[!DNL Experience Manager] サーバーはリクエストをスマートコンテンツサービスに転送する前に、Adobe Developer Console ゲートウェイを使用してサービス資格情報を認証します。 統合するには、組織の管理者権限と、組織で購入して有効化されたスマートコンテンツサービスライセンスを持つAdobe ID アカウントが必要です。
 
 スマートコンテンツサービスを設定するには、次のトップレベルの手順に従います。
 
-1. 公開鍵を生成するには、次の手順に従います。 [スマートコンテンツサービスの作成](#obtain-public-certificate) での設定 [!DNL Experience Manager]. [公開証明書のダウンロード](#obtain-public-certificate) （OAuth 統合用）。
+1. 公開鍵を生成するには、[!DNL Experience Manager] で [ スマートコンテンツサービスを作成 ](#obtain-public-certificate) 設定を行います。 OAuth 統合用の [ 公開証明書をダウンロード ](#obtain-public-certificate) します。
 
-1. *[既存のユーザーには適用されません]* [Adobe Developer コンソールでの統合の作成](#create-adobe-i-o-integration).
+1. *[既存のユーザーの場合は適用されません]*[Adobe Developer Consoleで統合を作成 ](#create-adobe-i-o-integration)。
 
 1. Adobe Developer Console の API キーおよびその他の資格情報を使用して、[デプロイメントを設定します](#configure-smart-content-service)。
 
@@ -96,7 +97,7 @@ OAuth 設定には、次の前提条件が必要です。
 
 ## スマートコンテンツサービス設定を作成して公開証明書をダウンロード {#download-public-certificate}
 
-公開証明書により、Adobe Developer コンソールでプロファイルを認証できます。
+公開証明書により、Adobe Developer Consoleでプロファイルを認証できます。
 
 1. [!DNL Experience Manager] ユーザーインターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL Cloud Services]**／**[!UICONTROL 従来の Cloud Services]** にアクセスします。
 
@@ -125,9 +126,9 @@ OAuth 設定には、次の前提条件が必要です。
 
    >[!NOTE]
    >
-   >として提供された URL [!UICONTROL サービス URL] はブラウザーからアクセスできず、404 エラーが発生します。 設定は、[!UICONTROL サービス URL] パラメーターの同じ値で正常に動作します。サービスの全体的なステータスとメンテナンススケジュールについては、[https://status.adobe.com](https://status.adobe.com) を参照してください。
+   >[!UICONTROL  サービス URL] として提供された URL は、ブラウザーからアクセスできず、404 エラーが発生します。 設定は、[!UICONTROL サービス URL] パラメーターの同じ値で正常に動作します。サービスの全体的なステータスとメンテナンススケジュールについては、[https://status.adobe.com](https://status.adobe.com) を参照してください。
 
-1. クリック **[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**&#x200B;公開証明書ファイルをダウンロードします `AEM-SmartTags.crt`. さらに、この証明書をAdobe開発者コンソールにアップロードする必要もなくなりました。
+1. **[!UICONTROL OAuth 統合用の公開証明書をダウンロード]** をクリックし、公開証明書ファイルをダウンロードします `AEM-SmartTags.crt`。 さらに、この証明書をAdobe開発者コンソールにアップロードする必要もなくなりました。
 
    ![スマートタグ付けサービス用に作成された設定の表現](assets/smart-tags-download-public-cert1.png)
 
@@ -137,17 +138,17 @@ OAuth 設定には、次の前提条件が必要です。
 
 スマートコンテンツサービス API を使用するには、Adobe 開発者コンソールで統合を作成して、[!UICONTROL API キー]（Adobe 開発者コンソール統合の[!UICONTROL クライアント ID] フィールドで生成）、[!UICONTROL テクニカルアカウント ID]、[!UICONTROL 組織 ID]、および[!UICONTROL クライアント秘密鍵]を、[!DNL Experience Manager] のクラウド設定の [!UICONTROL Assets スマートタグサービス設定]用に取得します。
 
-1. アクセス [https://developer.adobe.com/console/](https://developer.adobe.com/console/) ブラウザーで。 適切なアカウントを選択し、関連付けられた組織の役割がシステム管理者であることを確認します。
+1. ブラウザーで [https://developer.adobe.com/console/](https://developer.adobe.com/console/) にアクセスします。 適切なアカウントを選択し、関連付けられた組織の役割がシステム管理者であることを確認します。
 
 1. 任意の名前でプロジェクトを作成します。「**[!UICONTROL API を追加]**」をクリックします。
 
 1. **[!UICONTROL API を追加]**&#x200B;ページで、「**[!UICONTROL Experience Cloud]**」を選択し、「**[!UICONTROL スマートコンテンツ]**」を選択します。「**[!UICONTROL 次へ]**」をクリックします。
 
-1. を選択します。 **[!UICONTROL OAuth サーバー間]** 認証方法。
+1. **[!UICONTROL OAuth サーバー間]** 認証方法を選択します。
 
-1. を追加/変更 **[!UICONTROL 資格情報名]** 必要に応じて、 「**[!UICONTROL 次へ]**」をクリックします。
+1. 必要に応じて **[!UICONTROL 資格情報名]** を追加または変更します。 「**[!UICONTROL 次へ]**」をクリックします。
 
-1. 製品プロファイルの選択 **[!UICONTROL スマートコンテンツサービス]**. クリック **[!UICONTROL 設定済み API を保存]**. OAuth API は、今後の使用のために接続された資格情報の下に追加されます。 をコピーできます [!UICONTROL API キー（クライアント ID）] または [!UICONTROL アクセストークンの生成] そこから。
+1. 製品プロファイル **[!UICONTROL スマートコンテンツサービス]** を選択します。 **[!UICONTROL 設定済み API を保存]** をクリックします。 OAuth API は、今後の使用のために接続された資格情報の下に追加されます。 [!UICONTROL API キー（クライアント ID） ] または [!UICONTROL  アクセストークンを生成 ] をコピーできます。
 <!--
 1. On the **[!UICONTROL Select product profiles]** page, select **[!UICONTROL Smart Content Services]**. Click **[!UICONTROL Save configured API]**.
 
@@ -159,8 +160,8 @@ OAuth 設定には、次の前提条件が必要です。
    *Figure: Details of integration in Adobe Developer Console*
 -->
 
-![oauth 設定](assets/oauth-config.png)
-*図：Adobe Developer コンソールで設定された OAuth サーバー間*
+![oauth 設定 ](assets/oauth-config.png)
+*図：Adobe Developer Consoleで設定された OAuth サーバー間*
 
 ## スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
@@ -183,6 +184,6 @@ OAuth 設定には、次の前提条件が必要です。
 
 >[!MORELIKETHIS]
 >
->* [概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
->* [スマートタグの設定](config-smart-tagging.md)
+>* [スマートタグの概要とトレーニング方法](enhanced-smart-tags.md)
+>* [スマートタグ付けの設定](config-smart-tagging.md)
 >* [スマートタグに関するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=ja)

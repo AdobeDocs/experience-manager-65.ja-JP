@@ -22,15 +22,15 @@ Tally は、メンバーが特定の製品やサービスをどのように評�
 
 抽象的な集計クラスを拡張することで、カスタムの集計コンポーネントを作成できます。
 
-[お気に入り](essentials-liking.md) は、肯定的な意見を表現する単純な形式の集計の実装です。
+[ 好き ](essentials-liking.md) は、肯定的な意見を表現するための単純な形式の集計の実装です。
 
-[投票](essentials-voting.md) は、肯定的または否定的な意見を表現する単純な形式の集計の実装です。
+[ 投票 ](essentials-voting.md) は、肯定的または否定的な意見を表現する単純な形の集計の実装です。
 
-[評価](rating-basics.md) は、正から負の意見の範囲を表現するために星系を使用する計数の実装です。
+[ レーティング ](rating-basics.md) とは、星評価を用いてポジティブからネガティブまで幅広い意見を表現する集計の実装です。
 
 AEM 6.1 以降、ポーリングコンポーネントは使用できなくなりました。
 
-[レビュー](reviews-basics.md) は、のハイブリッドである SCF コンポーネントです [コメント](essentials-comments.md) および [格付け](rating-basics.md).
+[ レビュー ](reviews-basics.md) は、[ コメント ](essentials-comments.md) と [ 評価 ](rating-basics.md) のハイブリッドである SCF コンポーネントです。
 
 ## クライアントサイドの基本事項 {#essentials-for-client-side}
 
@@ -38,24 +38,24 @@ AEM 6.1 以降、ポーリングコンポーネントは使用できなくなり
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [集計 API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [ 集計 API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [集計エンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [ 集計エンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### 投稿済みテーブルへのアクセス（UGC） {#accessing-posted-tallies-ugc}
 
 UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
-参照： [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
+[ ユーザー生成コンテンツのモデレート ](moderate-ugc.md) を参照してください。
 
-AEM 6.1 Communities 現在、の使用 [共通店舗](working-with-srp.md) （UGC の場合、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます）。
+AEM 6.1 Communities の時点では、UGC の [ 共通ストア ](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
 
-**リポジトリ内の UGC の場所と形式は、警告なしに変更される場合があります**.
+**リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
 
 以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md)  – 概要とリポジトリ使用状況の概要。
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRP による UGC へのアクセス](accessing-ugc-with-srp.md) - コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md)  – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする。
+* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

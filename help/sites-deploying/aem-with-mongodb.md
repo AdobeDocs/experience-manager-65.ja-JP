@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 source-git-commit: a8203a6bccff821dd6ca3f63c196829379aabe55
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6192'
 ht-degree: 100%
 

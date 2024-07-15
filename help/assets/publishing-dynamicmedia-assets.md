@@ -10,7 +10,7 @@ exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publishing
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 100%
 

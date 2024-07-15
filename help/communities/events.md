@@ -22,13 +22,13 @@ ht-degree: 8%
 
 メンバーが Communities の機能を操作すると、通知やゲーミフィケーション（スコアおよびバッジ）などの非同期リスナーをトリガーにできる OSGi イベントが送信されます。
 
-コンポーネント [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) インスタンスは、イベントを次のように記録 `actions` ～に起こる `topic`. SocialEvent には、 `verb` アクションに関連付けられます。 次のものがあります *n-1* ～間の関係 `actions` および `verbs`.
+コンポーネントの [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) インスタンスは、イベントを `topic` ージに発生した `actions` として記録します。 SocialEvent には、アクションに関連付けられた `verb` を返すメソッドが含まれています。 `actions` と `verbs` の間には *n-1* 関係があります。
 
-このリリースで提供される Communities コンポーネントについて、次の表で説明します `verbs` それぞれに定義済み `topic` 使用可能です。
+このリリースで提供される Communities コンポーネントについて、使用可能な各 `topic` に定義されている `verbs` を次の表に示します。
 
 ## トピックと動詞 {#topics-and-verbs}
 
-[カレンダーコンポーネント](calendar-basics-for-developers.md)
+[ カレンダーコンポーネント ](calendar-basics-for-developers.md)
 SocialEvent `topic`= com/adobe/cq/social/calendar
 
 | **動詞** | **説明** |
@@ -38,7 +38,7 @@ SocialEvent `topic`= com/adobe/cq/social/calendar
 | 更新 | メンバーのカレンダーイベントまたはコメントが編集されたとき |
 | 削除 | メンバーのカレンダーイベントまたはコメントが削除されました |
 
-[コメントコンポーネント](essentials-comments.md)
+[ コメントコンポーネント ](essentials-comments.md)
 SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **動詞** | **説明** |
@@ -48,7 +48,7 @@ SocialEvent `topic`= com/adobe/cq/social/comment
 | 更新 | メンバーのコメントが編集されました |
 | 削除 | メンバーのコメントが削除されました |
 
-[ファイルライブラリコンポーネント](essentials-file-library.md)
+[ ファイルライブラリコンポーネント ](essentials-file-library.md)
 SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **動詞** | **説明** |
@@ -58,7 +58,7 @@ SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 | 更新 | メンバーがフォルダーまたはファイルを更新する |
 | 削除 | メンバーがフォルダーまたはファイルを削除します |
 
-[フォーラムコンポーネント](essentials-forum.md)
+[ フォーラムコンポーネント ](essentials-forum.md)
 SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **動詞** | **説明** |
@@ -68,7 +68,7 @@ SocialEvent `topic`= com/adobe/cq/social/forum
 | 更新 | メンバーのフォーラムトピックまたは返信が編集された |
 | 削除 | メンバーのフォーラムトピックまたは返信が削除されました |
 
-[ジャーナルコンポーネント](blog-developer-basics.md)
+[ ジャーナルコンポーネント ](blog-developer-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **説明** |
@@ -78,7 +78,7 @@ SocialEvent `topic`= com/adobe/cq/social/journal
 | 更新 | メンバーのブログ記事またはコメントが編集されました |
 | 削除 | メンバーのブログ記事またはコメントが削除されました |
 
-[QnA コンポーネント](qna-essentials.md)
+[QnA コンポーネント ](qna-essentials.md)
 SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **説明** |
@@ -90,7 +90,7 @@ SocialEvent `topic` = com/adobe/cq/social/qna
 | 選択解除 | メンバーの回答は選択解除されています。 |
 | 削除 | メンバーの QnA 質問または回答が削除されました |
 
-[レビューコンポーネント](reviews-basics.md)
+[ レビューコンポーネント ](reviews-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/review
 
 | **動詞** | **説明** |
@@ -99,7 +99,7 @@ SocialEvent `topic`= com/adobe/cq/social/review
 | 更新 | メンバーのレビューが編集されました |
 | 削除 | メンバーのレビューが削除されました |
 
-[評価コンポーネント](rating-basics.md)
+[ 評価コンポーネント ](rating-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **動詞** | **説明** |
@@ -107,7 +107,7 @@ SocialEvent `topic`= com/adobe/cq/social/tally
 | 評価を追加 | メンバーのコンテンツが評価されました |
 | 評価を削除 | メンバーのコンテンツが評価されていません |
 
-[投票コンポーネント](essentials-voting.md)
+[ 議決権行使書面 ](essentials-voting.md)
 SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **動詞** | **説明** |
@@ -129,9 +129,9 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
-カスタムコンポーネントの場合、 [SocialEvent 抽象クラス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) コンポーネントのイベントを次のように記録するには、を拡張する必要があります `actions`～に起こる `topic`.
+カスタムコンポーネントの場合、[SocialEvent 抽象クラス ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) を拡張して、コンポーネントのイベントを `actions``topic` に発生するものとして記録する必要があります。
 
-カスタムイベントは、メソッドを上書きします `getVerb()` 適切なように `verb`は、それぞれの `action`. この `verb` アクションに対して返されるものには、一般的に使用されるもの（例えば `POST`）またはコンポーネントに特化したもの（例： `ADD RATING`）に設定します。 次のものがあります *n-1* ～間の関係 `actions`および `verbs`.
+カスタムイベントはメソッド `getVerb()` を上書きし、各 `action` ージに対して適切な `verb` が返されるようにします。 アクションに対して返される `verb` は、一般的に使用されるもの（`POST` など）や、コンポーネント専用のもの（`ADD RATING` など）にすることができます。 `actions` と `verbs` の間には *n-1* 関係があります。
 
 >[!NOTE]
 >
@@ -246,7 +246,7 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 
 ### EventListener の疑似コード {#pseudo-code-for-eventlistener}
 
-が必要 [最新の機能パック](deploy-communities.md#latestfeaturepack).
+[ 最新機能パック ](deploy-communities.md#latestfeaturepack) が必要です。
 
 ```java
 package my.company.comments;

@@ -10,7 +10,7 @@ feature: CDN Cache
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1372'
 ht-degree: 100%
 

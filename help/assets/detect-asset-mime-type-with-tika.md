@@ -7,7 +7,7 @@ feature: Metadata,Developer Tools,Asset Management
 exl-id: a312466d-8d84-4c94-af85-1549afc61aed
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 100%
 

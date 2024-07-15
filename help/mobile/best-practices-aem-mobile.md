@@ -30,24 +30,24 @@ AEM Mobile On-demand Services アプリの構築は、Cordova （または Phone
 >
 >プラグインについて詳しくは、次のリソースを参照してください。
 >
->* [AEM Mobileでの Cordova プラグインの使用](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [AEM Mobile固有の Cordova 対応プラグインの使用](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>* [AEM Mobileでの Cordova プラグインの使用 ](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
+>* [AEM Mobile固有の Cordova 対応プラグインの使用 ](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
 >
 
 * プラグイン機能を使用するテンプレートは、プラグインブリッジが存在することなく、ブラウザーで引き続きオーサリングできるように記述する必要があります。
 
-   * 例えば、必ずを待ってください。 *deviceready* プラグインの API にアクセスする前にが機能します。
+   * 例えば、プラグインの API にアクセスする前に、必ず *deviceready* 関数を待ってください。
 
 ## AEM開発者向けガイドライン {#guidelines-for-aem-developers}
 
 次のガイドラインは、モバイルアプリのテンプレートとコンポーネントを作成するサイトの有能なAEM開発者に役立ちます。
 
-**再利用と拡張性を促進するためのAEM サイトテンプレートの構造化**
+**再利用と拡張性を促進するためのAEM Sites テンプレートの構造化**
 
 * 単一のモノリシックなスクリプトファイルよりも複数のコンポーネントスクリプトファイルを優先します
 
-   * 次のような、いくつかの空の拡張ポイントが提供されています *customheaderlibs.html* および *customfooterlibs.html*&#x200B;を使用すると、開発者はできるだけ少ないコアコードを複製しながらページテンプレートを変更できます
-   * テンプレートは、Sling を使用して拡張およびカスタマイズできます。 *sling:resourceSuperType* 仕組み
+   * *customheaderlibs.html* や *customfooterlibs.html* など、いくつかの空の拡張ポイントが提供されており、開発者はできるだけ少ないコアコードを複製しながらページテンプレートを変更できます
+   * テンプレートは、Sling の *sling:resourceSuperType* メカニズムを使用して拡張およびカスタマイズできます
 
 * テンプレート言語として JSP よりも Sightly/HTL を優先します
 
@@ -61,27 +61,27 @@ AEM Mobile On-demand Services アプリの構築は、Cordova （または Phone
 
 >[!NOTE]
 >
->詳しくは、レンダリングをブロックする外部スクリプトを参照してください [こちら](https://developers.google.com/speed/docs/insights/BlockingJS).
+>レンダリングをブロックする外部スクリプトについて詳しくは、[ こちら ](https://developers.google.com/speed/docs/insights/BlockingJS) を参照してください。
 
-**Web 固有のものよりアプリ固有のクライアントサイド JS および CSS ライブラリを優先します**
+**web 固有のものよりアプリ固有のクライアントサイド JS および CSS ライブラリを優先します**
 
 * jQuery Mobile のようなライブラリでオーバーヘッドを回避して、幅広いデバイスとブラウザーを処理できるようにします
-* アプリの web ビューでテンプレートを実行すると、アプリがサポートするプラットフォームとバージョンを制御でき、JavaScript のサポートが提供されるという知識が得られます。 例えば、jQuery Mobile より Ionic （CSS のみ）を優先し、Bootstrapより Onsen UI を優先します。
+* アプリの web ビューでテンプレートが実行されている場合、アプリがサポートするプラットフォームとバージョンを制御でき、JavaScriptがサポートする知識を利用できます。 例えば、jQuery Mobile より Ionic （CSS のみ）を優先し、Bootstrapより Onsen UI を優先します。
 
 >[!NOTE]
 >
->jQuery モバイルについて詳しくは、以下をクリックしてください [こちら](https://jquerymobile.com/browser-support/1.4/).
+>jQuery モバイルについて詳しくは、[ こちら ](https://jquerymobile.com/browser-support/1.4/) をクリックしてください。
 
 **フルスタックよりマイクロライブラリを優先**
 
 * コンテンツをデバイスに送信するのにかかる時間は、記事が依存するライブラリごとに短縮されます。 この速度低下は、新しい web ビューを使用してすべての記事をレンダリングする場合に悪化するため、各ライブラリを最初から再度初期化する必要があります
 * 記事がSPA（シングルページアプリ）としてビルドされていない場合は、Angularのようなフルスタックライブラリを含める必要はありません
-* ページに必要なインタラクティブ機能の追加に役立つ、より小さい単一目的のライブラリを選択します。例えば、次のようなものです [Fastclick](https://github.com/ftlabs/fastclick) または [Velocity.js](https://velocityjs.org)
+* [Fastclick](https://github.com/ftlabs/fastclick) や [Velocity.js など、ページで必要なインタラクティビティを追加するのに役立つ、より小さい単目的ライブラリをお勧め ](https://velocityjs.org) ます。
 
-**記事ペイロードのサイズを最小化**
+**記事ペイロードのサイズを最小限に抑える**
 
 * 妥当な解像度で、サポートする最大のビューポートを効果的にカバーできる最小限のアセットを使用します
-* ～のようなツールを使う *ImageOptim* 画像で、余分なメタデータを削除できる
+* 画像に *ImageOptim* などのツールを使用して、余分なメタデータを削除します
 
 ## 前に進む {#getting-ahead}
 

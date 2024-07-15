@@ -32,7 +32,7 @@ ht-degree: 10%
    <td>social/commons/components/hbs/featuredcontent</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>includable</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong> 含む </strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ ht-degree: 10%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>参照： <a href="featured.md">おすすめコンテンツ</a></td>
+   <td><a href="featured.md"> おすすめコンテンツ </a> を参照してください。</td>
   </tr>
  </tbody>
 </table>
@@ -58,4 +58,4 @@ ht-degree: 10%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-を含むコミュニティサイト構造 [おすすめコンテンツ機能](functions.md#featured-content-function)、設定済みのを含む `featured content` コンポーネント。
+[ おすすめコンテンツ機能 ](functions.md#featured-content-function) を含むコミュニティサイト構造には、設定済みの `featured content` コンポーネントが含まれています。

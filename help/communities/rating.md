@@ -18,30 +18,30 @@ ht-degree: 3%
 
 # 評価の使用 {#using-ratings}
 
-この `Rating` コンポーネントは、スタンドアロンで使用するか、他の Communities 機能と共に使用します。 このコンポーネントを使用すると、ログインしたコミュニティメンバーが、コンテンツを評価して意見を表明できます。
+`Rating` コンポーネントは、スタンドアロンで使用するか、他の Communities 機能と共に使用します。 このコンポーネントを使用すると、ログインしたコミュニティメンバーが、コンテンツを評価して意見を表明できます。
 
 ## ページへの評価の追加 {#adding-a-rating-to-a-page}
 
-を追加します `Rating` オーサーモードのページへのコンポーネントの移動 `Communities / Rating` そして、メンバーが評価するフィーチャーに対する相対的な位置など、ページ上の場所にドラッグします。
+オーサーモードで `Rating` コンポーネントをページに追加するには、コンポーネントを `Communities / Rating` に配置して、メンバーが評価するフィーチャーに対する相対的な位置など、ページ上の場所にドラッグします。
 
-詳細については、 [Communities コンポーネントの基本](basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
 
-いつ [必要なクライアントサイドライブラリ](rating-basics.md#essentials-for-client-side) が含まれる場合、このようにして `Rating` コンポーネントが表示されます。
+[ 必須のクライアントサイドライブラリ ](rating-basics.md#essentials-for-client-side) が含まれると、`Rating` コンポーネントはこのように表示されます。
 
-![格付け](assets/rating.png)
+![ レーティング ](assets/rating.png)
 
 ## 評価の設定 {#configuring-rating}
 
-配置されたを選択します。 `Rating` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置された `Rating` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
 ![configure-new](assets/configure-new.png)
 
-の下 **[!UICONTROL テキストとラベル]** タブで、評価の内部識別子を指定します。
+**[!UICONTROL テキストとラベル]** タブで、評価の内部識別子を指定します。
 
 ![tallyname](assets/tallyname.png)
 
 **[!UICONTROL 集計名]**
-（*必須*）の簡単な名前 `Rating` このインスタンスを一意に識別します。 リポジトリの有効なノード名である必要があります。
+（*必須*）このインスタンスを一意に識別する `Rating` のシンプルな名前。 リポジトリの有効なノード名である必要があります。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
@@ -55,4 +55,4 @@ ht-degree: 3%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [評価の基本事項](rating-basics.md) 開発者向けのページです。
+詳しくは、開発者向けの [ 評価の基本事項 ](rating-basics.md) ページを参照してください。

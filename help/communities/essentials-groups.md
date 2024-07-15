@@ -20,7 +20,7 @@ ht-degree: 4%
 
 コミュニティグループ機能は、権限のあるユーザーがパブリッシュ環境とオーサー環境からサブコミュニティをコミュニティサイト内に動的に作成する機能です。
 
-コミュニティの場合 [機能パック 1](deploy-communities.md#latestfeaturepack)グループを他のグループ内にネストすることができます。
+Communities [ 機能パック 1](deploy-communities.md#latestfeaturepack) の時点で、グループを他のグループ内にネストすることができます。
 
 ## クライアントサイドの基本事項 {#essentials-for-client-side}
 
@@ -46,7 +46,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>参照： <a href="creating-groups.md">コミュニティグループ</a></td>
+   <td><a href="creating-groups.md"> コミュニティグループ </a> を参照</td>
   </tr>
  </tbody>
 </table>
@@ -78,23 +78,23 @@ ht-degree: 4%
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [コミュニティグループ API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [ コミュニティグループ API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
-* [コミュニティグループエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
+* [ コミュニティグループエンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### Groups 関数 {#groups-function}
 
-を含むコミュニティサイト構造 [Groups 関数](functions.md#groups-function) 新しいの作成をサポート `community groups` パブリッシュ環境とオーサー環境から。 作成されたコミュニティグループには、が含まれます `community groups member list` グループのメンバーをリストするコンポーネント。
+[Groups 関数 ](functions.md#groups-function) を含むコミュニティサイト構造は、パブリッシュ環境とオーサー環境からの新しい `community groups` の作成をサポートしています。 作成されたコミュニティグループには、グループのメンバーをリストする `community groups member list` コンポーネントが含まれています。
 
-1 つ以上 [コミュニティグループテンプレート](tools-groups.md)コミュニティグループページのデザインを提供する「」を、グループ機能用に設定できます。 これは、関数がに追加されるときに当てはまります。 [コミュニティサイトテンプレート](sites.md) または、コミュニティグループテンプレート内にネストされます。
+コミュニティグループページのデザインを提供する 1 つ以上の [ コミュニティグループテンプレート ](tools-groups.md) をグループ機能用に設定できます。 これは、関数が [ コミュニティサイトテンプレート ](sites.md) に追加されている場合や、コミュニティグループテンプレート内にネストされている場合に当てはまります。
 
-複数のコミュニティグループテンプレートを含めると、選択することになります。 つまり、コミュニティサイトのコミュニティグループを作成する際に、権限のあるユーザーに提示されるデザインの選択です。 の節を参照してください。 [コミュニティグループ](creating-groups.md) （作成者向け）。
+複数のコミュニティグループテンプレートを含めると、選択することになります。 つまり、コミュニティサイトのコミュニティグループを作成する際に、権限のあるユーザーに提示されるデザインの選択です。 作成者については、[ コミュニティグループ ](creating-groups.md) の節を参照してください。
 
 ### ネストされたグループ {#nested-groups}
 
-コミュニティの場合 [FP1](deploy-communities.md#latestfeaturepack)の場合、Groups 関数をグループテンプレートに含めることができるので、ネストされたグループ（サブコミュニティ）が可能になります。
+コミュニティ [FP1](deploy-communities.md#latestfeaturepack) の時点で、Groups 関数をグループテンプレートに含めることができるので、ネストされたグループ（サブコミュニティ）が可能になります。
 
 コミュニティサイトまたはグループテンプレートにグループ機能が含まれている場合は、次の操作を行うことができます。
 

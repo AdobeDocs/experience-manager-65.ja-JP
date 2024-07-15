@@ -11,7 +11,7 @@ exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 100%
 
@@ -47,7 +47,7 @@ AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、AEM Form
 
    >[!NOTE]
    >
-   > SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
    詳しくは、[移行ユーティリティ](../../forms/using/migration-utility.md)を参照してください。
 

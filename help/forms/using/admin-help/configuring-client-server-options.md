@@ -10,7 +10,7 @@ exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '10266'
 ht-degree: 100%
 
@@ -967,7 +967,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc`
+* `https://[host]:'port'/edc`。
 
 次の config.xml への変更は、すべての外部リンクを Right Management ユーザーインターフェイスから無効化します。
 

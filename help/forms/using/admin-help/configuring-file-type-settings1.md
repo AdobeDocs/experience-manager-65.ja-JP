@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 source-git-commit: 9d497413d0ca72f22712581cf7eda1413eb8d643
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6163'
 ht-degree: 100%
 

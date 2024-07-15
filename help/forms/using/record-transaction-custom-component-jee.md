@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # JEE 上のAEM Formsのカスタムコンポーネント API のトランザクションの記録 {#record-a-transaction-for-custom-components}
 
-カスタムコンポーネントで課金対象の API を使用する場合は、コンポーネントのトランザクションレポートを有効にできます。 トランザクションレポートを有効にするには、 `component.xml` コンポーネントのファイルであり、トランザクションレポートを有効にする必要がある操作の下で以下に示すタグを追加します。
+カスタムコンポーネントで課金対象の API を使用する場合は、コンポーネントのトランザクションレポートを有効にできます。 トランザクションレポートを有効にするには、コンポーネントの `component.xml` ファイルを変更し、トランザクションレポートを有効にする必要がある操作の下に以下のタグを追加します。
 
 **タグ**: `<transaction-operation-type>CONVERT</transaction-operation-type> // Supported values are SUBMIT, CONVERT, RENDER.`
 
@@ -24,16 +24,16 @@ ht-degree: 5%
 
 API に対して複数のトランザクションを取得する必要がある場合（トランザクション数が入力数によって異なるバッチ API など）、API レベルでトランザクション数を処理します。
 
-**変動トランザクション数を記録する手順は、次のとおりです。**
+**変更されたトランザクション数を記録するには、次の手順に従います。**
 
-1. クラスをインポート `"com.adobe.idp.dsc.InvocationContextStack"` コード内。 クラスは、 `adobe-livecycle-client.jar` sdk ファイル。 SDK ファイルは、次の場所から入手できます。 `<AEM_Forms_JEE_Install>\sdk\client-libs\common`
+1. コード内のクラス `"com.adobe.idp.dsc.InvocationContextStack"` をインポートします。 クラスは、`adobe-livecycle-client.jar` sdk ファイルの一部です。 SDK ファイルは `<AEM_Forms_JEE_Install>\sdk\client-libs\common` で入手できます。
 
    >[!NOTE]
    > 既にバンドルされている場合は、クライアントプロジェクトで上記で共有されたクライアントファイルを新しいファイルで更新します。
 
 1. 様々なトランザクションをログに記録する必要がある API:
-   1. ロジックを追加して、トランザクション数を次のような整数変数に格納できます。 `transaction_count`.
-   1. 操作に成功したら、次を追加します `InvocationContextStack.recordTransactionCount(transaction_count)`.
+   1. トランザクション数を `transaction_count` などの整数変数に格納できるロジックを追加します。
+   1. 操作に成功したら、`InvocationContextStack.recordTransactionCount(transaction_count)` を追加します。
 
 <!--For example, you can set count for your custom component by importing class `"com.adobe.idp.dsc.InvocationContextStack"` in the code available at `adobe-livecycle-client.jar`  and determine the transaction count basis API input/result and add (In this case we add count is equal to 3):
 `InvocationContextStack.recordTransactionCount(<count>).` to 

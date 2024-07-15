@@ -10,7 +10,7 @@ exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 100%
 
@@ -43,6 +43,6 @@ AEM デスクトップアプリケーションは、Microsoft® Windowsでは We
 
    >[!NOTE]
    >
-   > SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+   > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
    接続に成功すると、アプリケーションは `content/dam` と `content/dam/formsanddocuments` のフォルダーを作成します。上記のフォルダーとローカルフォルダーとの間でファイルを移動するだけでなく、アプリを使用して、自動的に作成されたフォルダー間でコンテンツを移動することができます。

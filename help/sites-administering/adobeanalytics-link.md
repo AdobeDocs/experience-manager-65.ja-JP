@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 100%
 
@@ -339,7 +339,7 @@ Adobe Analytics フレームワークを設定して、アドホックなリン�
 
 1. （任意）リンククリックのあるイベントを追跡するには、「**Adobe Analytics 変数を含める**」フィールドに Adobe Analytics イベント名を追加します。複数のイベント名をコンマで区切ります。例：
 
-   `event1, event22`
+   `event1, event22`。
 
 1. （任意）リンククリックのある変数データを追跡するには、「**Adobe Analytics 変数を含める**」フィールドに Adobe Analytics 変数を追加します。次のいずれかの形式を使用します。
 

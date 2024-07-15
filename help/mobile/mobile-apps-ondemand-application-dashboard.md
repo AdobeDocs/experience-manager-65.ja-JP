@@ -38,7 +38,7 @@ ht-degree: 11%
 
 ## アプリを管理タイル {#the-manage-app-tile}
 
-この **アプリの管理** タイルには、使用可能なアプリケーション情報が表示されます。
+**アプリを管理** タイルに利用可能なアプリケーション情報が表示されます。
 
 * タイトル
 * 説明
@@ -50,7 +50,7 @@ ht-degree: 11%
 
 ## 接続を管理タイル {#the-manage-connection-tile}
 
-この **接続を管理** タイルにAEM Mobile On-demand Servicesの接続情報が表示されます。
+**接続を管理** タイルには、AEM Mobile On-demand Servicesの接続情報が表示されます。
 
 * クラウド設定名
 * プロジェクト名と ID
@@ -60,7 +60,7 @@ ht-degree: 11%
 >
 >右上の歯車をクリックして、Mobile On-Demand Cloud 設定をセットアップします。
 >
->参照： [Mobile On-Demand Services の設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
+>詳しくは、[Mobile On-Demand Services の設定 ](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -76,60 +76,60 @@ ht-degree: 11%
 
 ### バナーの管理タイル {#the-manage-banners-tile}
 
-この **バナーの管理** タイルでは、バナーのコンテンツを管理できます。 バナーには、次の情報が表示されます。
+**バナーの管理** タイルでは、バナーのコンテンツを管理できます。 バナーには、次の情報が表示されます。
 
 * 画像
 * **タイトル**：バナーの名前
-* **変更**:AEMでの最終変更日
-* **UPLOADED**：前回AEMからアップロードされたもの
-* **公開済み**：前回に公開されたリクエストフォーム AEM
-* **ソース**: ソース （AEM ローカルまたはモバイル オンデマンドからリモート）
+* **変更済み**：最終変更日：AEM
+* **アップロード済み**：前回AEMからアップロード済み
+* **公開済み**：前回公開されたリクエストフォーム AEM
+* **SOURCE**: ソース （AEM ローカルまたはモバイル オンデマンドからのリモート）
 
-次の画像は、 **バナーの管理** AEM Mobile アプリケーションダッシュボードのタイル：
+次の画像は、AEM Mobile アプリケーションダッシュボードの **バナーを管理** タイルを示しています。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 >[!NOTE]
 >
->参照： **[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)** バナーの作成、削除または更新。
+>バナーの作成、削除、更新については、**[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)** を参照してください。
 
 ### 記事を管理タイル {#the-manage-articles-tile}
 
-この **記事の管理** タイルでは、記事のコンテンツを管理できます。 記事に関して次の情報が表示されます。
+**記事を管理** タイルでは、記事のコンテンツを管理できます。 記事に関して次の情報が表示されます。
 
 * 画像
 * **タイトル**：記事の名前
-* **変更**:AEMでの最終変更日
-* **UPLOADED**：前回AEMからアップロードされたもの
-* **公開済み**：前回に公開されたリクエストフォーム AEM
-* **ソース**: ソース （AEM ローカルまたはモバイル On-Demand からリモート）
+* **変更済み**：最終変更日：AEM
+* **アップロード済み**：前回AEMからアップロード済み
+* **公開済み**：前回公開されたリクエストフォーム AEM
+* **SOURCE**: ソース （AEM ローカルまたはモバイル オンデマンドからのリモート）
 
-次の画像は、 **記事の管理** AEM Mobile アプリケーションダッシュボードのタイル：
+次の画像は、AEM Mobile アプリケーションダッシュボードの **記事を管理** タイルを示しています。
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 >[!NOTE]
 >
->参照： [**記事の管理**](/help/mobile/mobile-on-demand-managing-articles.md) 記事の作成、削除または更新
+>記事の作成、削除、更新については、[**記事の管理**](/help/mobile/mobile-on-demand-managing-articles.md) を参照してください。
 
 ### コレクションを管理タイル {#the-manage-collections-tile}
 
-この **コレクションの管理** タイルでは、コレクションのコンテンツを管理できます。 コレクションに関する次の情報が表示されます。
+**コレクションを管理** タイルでは、コレクションのコンテンツを管理できます。 コレクションに関する次の情報が表示されます。
 
 * 画像
 * **タイトル**：コレクションの名前
-* **変更**:AEMでの最終変更日
-* **UPLOADED**：前回AEMからアップロードされたもの
-* **公開済み**：前回に公開されたリクエストフォーム AEM
-* **ソース**: ソース （AEM ローカルまたはモバイル On-Demand からリモート）
+* **変更済み**：最終変更日：AEM
+* **アップロード済み**：前回AEMからアップロード済み
+* **公開済み**：前回公開されたリクエストフォーム AEM
+* **SOURCE**: ソース （AEM ローカルまたはモバイル オンデマンドからのリモート）
 
-次の画像は、 **コレクションの管理** AEM Mobile アプリケーションダッシュボードのタイル：
+次の画像は、AEM Mobile アプリケーションダッシュボードの **コレクションを管理** タイルを示しています。
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
 >[!NOTE]
 >
->参照： **[コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)** コレクションを作成、削除または更新するため。
+>コレクションの作成、削除、更新については、**[コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)** を参照してください。
 
 ### 次の手順 {#the-next-steps}
 

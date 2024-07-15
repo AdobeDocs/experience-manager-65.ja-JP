@@ -26,19 +26,19 @@ ht-degree: 10%
 >
 >**前提条件**:
 >
->共有リソースの作成と変更については、を参照してください。 [コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md) を参照して、基本概念を理解します。
+>共有リソースの作成と変更について学ぶ前に、[ コンテンツ同期 ](/help/mobile/mobile-ondemand-contentsync.md) を参照して、基本的な概念を理解してください。
 
 AEM Mobile ユーザーはコンテンツ同期を使用して、モバイルアプリで使用するためにライブコンテンツを静的コンテンツに書き出します。この書き出しは、コンテンツがAEM Mobileから Mobile On-Demand Services にアップロードされる際に行われます。
 
-プロパティ ***dps-exportTemplate*** 上記の表で説明されている、はアプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
+上記の表で説明したプロパティ ***dps-exportTemplate*** は、アプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
 
 以下のリソースでは、AEM MobileにアップロードするためにAdobe Experience Manager（AEM）からコンテンツを書き出す方法について説明します。
 
 記事には、書き出しとアップロードが必要なコンテンツがあります。 このコンテンツの一部は、記事間で共有できます。
 
-使用方法 [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) コンテンツを 1 つにまとめて作成するには ***共有リソース*** パッケージ。
+[ContentSync](/help/mobile/mobile-ondemand-contentsync.md) を使用してコンテンツを収集し、***共有リソース*** パッケージを作成します。
 
-ContentSync 設定はにあります。 **&lt;dps-exporttemplate>/dps-article>** は、デバイスでのプロパティの静的レンダリングに必要な記事のすべてのコンテンツを書き出すように設定する必要があります。
+**&lt;dps-exportTemplate>/dps-article>** にある ContentSync 設定は、デバイスでのプロパティの静的レンダリングに必要な記事をすべてのコンテンツにエクスポートするように設定する必要があります。
 
 >[!CAUTION]
 >
@@ -52,7 +52,7 @@ ContentSync 設定はにあります。 **&lt;dps-exporttemplate>/dps-article>**
 サンプルの共有リソースを表示するには、以下の手順を参照してください。
 
 1. AEM サーバーでCRXDE Liteを開きます。
-1. このパスを参照 [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article)共有リソースのサンプルを表示します。
+1. このパス [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article) を参照して、サンプルの共有リソースを表示します。
 
    次の図に示すように、共有リソースの作成に必要なすべてのプロパティを表示できます。
 

@@ -22,17 +22,18 @@ ht-degree: 0%
 
 ## 既知の問題 {#known-issues}
 
-### Dispatcher の再取得に失敗します {#dispatcher-refetch-fails}
+### Dispatcherの再取得に失敗しました {#dispatcher-refetch-fails}
 
-Dispatcher 4.1.5 を新しいバージョンの Jetty で使用している場合、再取得すると、リクエストがタイムアウトするまで待った後、「リモートサーバーから応答を受信できません」という結果になる場合があります。
+Dispatcher 4.1.5 を新しいバージョンの Jetty で使用している場合、再取得すると、リクエストがタイムアウトするのを待った後、「リモートサーバーから応答を受信できません」という結果になる場合があります。
 
 Dispatcher 4.1.6 以降を使用すると、この問題が解決されます。
 
-### CQ 5.4 からアップグレード後にフォーラム投稿にアクセスできない {#cannot-access-forum-post-after-upgrading-from-cq}
+### CQ 5.4 からアップグレード後にフォーラムPostにアクセスできない {#cannot-access-forum-post-after-upgrading-from-cq}
 
 フォーラムが CQ 5.4 で作成され、トピックが投稿された後、サイトがAEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページに次のエラーが発生する可能性があります。
 
-無効なパターン文字「a」です。に対するリクエストを処理できません `/content/demoforums/forum-test.html` このサーバーのログには次の内容が含まれます。
+パターン文字「a」が無効です
+このサーバーの `/content/demoforums/forum-test.html` に対する要求を提供できません。ログには次の内容が含まれています：
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -45,12 +46,12 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 したがって、RelativeTimeFormat （） API を使用するコードは、次のように変更する必要があります。
 
-* 開始： `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
-* 終了： `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
+* 追加元：`final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
+* 宛先：`final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-エラーは、オーサーとパブリッシュで異なります。 オーサー環境では、通知なしに失敗し、フォーラムのトピックは表示されません。 公開時には、ページ上でエラーがスローされます。
+エラーは、オーサーとPublishで異なります。 オーサー環境では、通知なしに失敗し、フォーラムのトピックは表示されません。 Publishでは、ページでエラーがスローされます。
 
-を参照してください。 [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API について詳しくは、こちらを参照してください。
+詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
 ## よくある懸念 {#common-concerns}
 
@@ -58,9 +59,9 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 起動中（最初の起動以外はその後すべて）に、次の警告がログに表示される場合があります。
 
-* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` はに置き換えられました `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は `com.adobe.cq.social.handlebars.I18nHelper@15bac645` に置き換えられました
 
-この警告は、次の理由から無視しても問題ありません `jknack.handlebars.Handlebars`、使用者 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)には、独自の i18n ヘルパーユーティリティが付属しています。 起動時に、AEM固有の名前に置き換えられます [i18n ヘルパー](handlebars-helpers.md#i-n). この警告は、既存のヘルパーの上書きを確認するために、サードパーティライブラリによって生成されます。
+[SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される `jknack.handlebars.Handlebars` は、独自の i18n ヘルパーユーティリティが付属しているため、この警告は無視しても問題ありません。 起動時には、AEM固有の [i18n ヘルパー ](handlebars-helpers.md#i-n) に置き換えられます。 この警告は、既存のヘルパーの上書きを確認するために、サードパーティライブラリによって生成されます。
 
 ### ログの警告：OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

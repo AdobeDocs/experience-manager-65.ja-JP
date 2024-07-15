@@ -19,9 +19,9 @@ ht-degree: 5%
 
 * カスタム関数のキャッシュ機能
 * グローバル スコープ オブジェクトとフィールド オブジェクトは、カスタム関数をサポートしています。
-* let 関数や arrow 関数などの最新の JavaScript 機能のサポート（ES10 のサポート）
+* レット関数や矢印関数などの最新のJavaScript機能のサポート（ES10 のサポート）
 
-必ずを設定してください [最新のフォームバージョン](https://github.com/adobe/aem-core-forms-components/tree/release/650) AEM Forms コアコンポーネント環境で、カスタム関数の最新の機能を使用する。 </span>
+カスタム関数の最新機能を使用するには、AEM Forms コアコンポーネント環境で [ 最新のフォームバージョン ](https://github.com/adobe/aem-core-forms-components/tree/release/650) を設定してください。</span>
 
 
 | バージョン | 記事リンク |
@@ -31,7 +31,7 @@ ht-degree: 5%
 
 ## はじめに
 
-AEM Forms 6.5 には、ルールエディターを使用して複雑なビジネスルールを定義できる JavaScript 関数が含まれています。 AEM Formsは様々な標準のカスタム関数を提供していますが、多くの場合、複数のフォームで使用するために独自のカスタム関数を定義する必要があります。 これらのカスタム関数は、入力されたデータを特定の要件に合わせて操作および処理できるようにすることで、フォームの機能を強化します。 さらに、定義済みの条件に基づいてフォームの動作を動的に変更できます。
+AEM Forms 6.5 には、ルールエディターを使用して複雑なビジネスルールを定義できるJavaScript関数が含まれています。 AEM Formsは様々な標準のカスタム関数を提供していますが、多くの場合、複数のフォームで使用するために独自のカスタム関数を定義する必要があります。 これらのカスタム関数は、入力されたデータを特定の要件に合わせて操作および処理できるようにすることで、フォームの機能を強化します。 さらに、定義済みの条件に基づいてフォームの動作を動的に変更できます。
 
 ### カスタム関数の使用 {#uses-of-custom-function}
 
@@ -41,18 +41,18 @@ AEM Forms 6.5 には、ルールエディターを使用して複雑なビジネ
 * **データの管理**：カスタム関数は、フォームフィールドに入力されたデータを管理および処理します。
 * **データの処理**：カスタム関数は、フォームフィールドに入力されたデータの処理に役立ちます。
 * **データの検証**：カスタム関数を使用すると、フォームの入力に対してカスタムチェックを実行し、指定したエラーメッセージを提供できます。
-* **動的動作**：カスタム関数を使用すると、特定の条件に基づいてフォームの動的な動作を制御できます。 例えば、フィールドの表示/非表示、フィールド値の変更、フォームロジックの調整を動的に行うことができます。
+* **動的な動作**：カスタム関数を使用すると、特定の条件に基づいてフォームの動的な動作を制御できます。 例えば、フィールドの表示/非表示、フィールド値の変更、フォームロジックの調整を動的に行うことができます。
 * **統合**：カスタム関数を使用して外部の API やサービスと統合できます。 外部ソースからのデータの取得、外部 Rest エンドポイントへのデータの送信、外部イベントに基づくカスタムアクションの実行に役立ちます。
 
-カスタム関数は基本的に、JavaScript ファイルに追加されるクライアントライブラリです。 カスタム関数を作成すると、ルールエディターで使用できるようになり、アダプティブフォーム内のユーザーが選択できるようになります。 カスタム関数は、ルールエディターの JavaScript アノテーションによって識別されます。
+カスタム関数は基本的に、JavaScript ファイルに追加されるクライアントライブラリです。 カスタム関数を作成すると、ルールエディターで使用できるようになり、アダプティブフォーム内のユーザーが選択できるようになります。 カスタム関数は、ルールエディターのJavaScript アノテーションによって識別されます。
 
-### カスタム関数でサポートされる JavaScript 注釈 {#js-annotations}
+### カスタム関数でサポートされるJavaScript注釈 {#js-annotations}
 
-**JavaScript 注釈は、JavaScript コードのメタデータを提供します**. これには、特定の記号で始まるコメントが含まれます。例： `/**` および `@`. 注釈は、コード内の関数、変数、その他の要素に関する重要な情報を提供します。 アダプティブフォームは、カスタム関数に対して次の JavaScript 注釈をサポートしています。
+**JavaScript注釈は、JavaScript コード** のメタデータを提供します。 `/**` や `@` など、特定の記号で始まるコメントが含まれます。 注釈は、コード内の関数、変数、その他の要素に関する重要な情報を提供します。 アダプティブフォームは、カスタム関数に対して次のJavaScript注釈をサポートしています。
 
 #### 名前
 
-この **名前** は、アダプティブフォームのルールエディターでカスタム関数を識別するために使用されます。 カスタム関数の名前には、次の構文を使用します。
+**Name** は、アダプティブフォームのルールエディターでカスタム関数を識別するために使用します。 カスタム関数の名前には、次の構文を使用します。
 
 * `@name [functionName] <Function Name>`
 * `@function [functionName] <Function Name>`
@@ -61,11 +61,11 @@ AEM Forms 6.5 には、ルールエディターを使用して複雑なビジネ
 >[!NOTE]
 >`[functionName]` は、関数の名前です。 スペースは使用できません。
 >`<Function Name>` は、アダプティブFormsのルールエディターにある関数の表示名です。
->関数名が関数自体の名前と同じ場合は、を省略できます `[functionName]` 構文から変更します。
+>関数名が関数自体の名前と同じ場合は、構文から `[functionName]` を省略できます。
 
 #### パラメーター
 
-この **パラメーター** は、カスタム関数で使用される引数のリストです。 1 つの関数は、複数のパラメーターをサポートできます。 次の構文を使用して、カスタム関数でパラメーターを定義します。
+**パラメーター** は、カスタム関数で使用される引数のリストです。 1 つの関数は、複数のパラメーターをサポートできます。 次の構文を使用して、カスタム関数でパラメーターを定義します。
 
 * `@param {type} name <Parameter Description>`
 * `@argument` `{type} name <Parameter Description>`
@@ -77,17 +77,17 @@ AEM Forms 6.5 には、ルールエディターを使用して複雑なビジネ
    * 数値：1 つの数値を表します。
    * ブール値：単一のブール値（true または false）を表します。
    * string[]：文字列値の配列を表します。
-   * 数値[]：数値の配列を表します。
-   * ブール型[]：ブール値の配列を表します。
+   * 数値 []：数値の配列を表します。
+   * boolean[]: ブール値の配列を表します。
    * 日付：単一の日付値を表します。
-   * 日付[]：日付値の配列を表します。
+   * date[]：日付値の配列を表します。
    * 配列：様々なタイプの値を含む汎用の配列を表します。
    * オブジェクト：値を直接渡す代わりに、カスタム関数に渡されるフォームオブジェクトを表します。
-   * scope: globals オブジェクトを表します。このオブジェクトには、フォームインスタンス、ターゲットフィールドインスタンス、カスタム関数内でフォームの変更を実行するためのメソッドなどの読み取り専用変数が含まれています。 これは JavaScript 注釈の最後のパラメーターとして宣言され、アダプティブフォームのルールエディターには表示されません。 scope パラメーターは、フォームまたはコンポーネントのオブジェクトにアクセスして、フォームの処理に必要なルールまたはイベントをトリガーします。 Globals オブジェクトの詳細と使用方法については、を参照してください。 [ここをクリック](/help/forms/using/create-and-use-custom-functions-core-components.md#field-and-global-scope-objects-in-custom-functions-support-field-and-global-objects)
+   * scope: globals オブジェクトを表します。このオブジェクトには、フォームインスタンス、ターゲットフィールドインスタンス、カスタム関数内でフォームの変更を実行するためのメソッドなどの読み取り専用変数が含まれています。 これはJavaScript注釈の最後のパラメーターとして宣言され、アダプティブフォームのルールエディターには表示されません。 scope パラメーターは、フォームまたはコンポーネントのオブジェクトにアクセスして、フォームの処理に必要なルールまたはイベントをトリガーします。 Globals オブジェクトとその使用方法の詳細については、[ ここをクリック ](/help/forms/using/create-and-use-custom-functions-core-components.md#field-and-global-scope-objects-in-custom-functions-support-field-and-global-objects) してください。
 
-パラメータータイプはです **大文字と小文字を区別しない** パラメーター名にはおよびスペースは使用できません。
+パラメータータイプは **大文字と小文字は区別されません** で、パラメーター名にはスペースを使用できません。
 
-`<Parameter Description>` パラメーターの目的に関する詳細が含まれます。 複数の単語を含めることができます。
+パラメ `<Parameter Description>` ターの目的に関する詳細が含まれています。 複数の単語を含めることができます。
 
 <!--
 
@@ -158,10 +158,10 @@ To learn more about how to define optional parameters in JSDocs, [click here](ht
 * 数値：1 つの数値を表します。
 * ブール値：単一のブール値（true または false）を表します。
 * string[]：文字列値の配列を表します。
-* 数値[]：数値の配列を表します。
-* ブール型[]：ブール値の配列を表します。
+* 数値 []：数値の配列を表します。
+* boolean[]: ブール値の配列を表します。
 * 日付：単一の日付値を表します。
-* 日付[]：日付値の配列を表します。
+* date[]：日付値の配列を表します。
 * 配列：様々なタイプの値を含む汎用の配列を表します。
 * object：値を直接表すのではなく、フォームオブジェクトを表します。
 
@@ -169,7 +169,7 @@ To learn more about how to define optional parameters in JSDocs, [click here](ht
 
 #### 非公開
 
-プライベートとして宣言されたカスタム関数は、アダプティブフォームのルールエディターのカスタム関数のリストには表示されません。 デフォルトでは、カスタム関数はパブリックです。 カスタム関数をプライベートとして宣言する構文を以下に示します。 `@private`.
+プライベートとして宣言されたカスタム関数は、アダプティブフォームのルールエディターのカスタム関数のリストには表示されません。 デフォルトでは、カスタム関数はパブリックです。 カスタム関数をプライベートとして宣言する構文は `@private` です。
 
 <!--
 #### Member
@@ -287,10 +287,10 @@ var c = {
         }
 ```
 
-ユーザーがカスタム関数に JavaScript 注釈を追加しない場合は、ルールエディターの関数名で表示されます。 ただし、カスタム関数を読みやすくするために、JavaScript 注釈を含めることをお勧めします。
+ユーザーがカスタム関数にJavaScript アノテーションを追加しない場合は、関数名によってルールエディターに表示されます。 ただし、カスタム関数を読みやすくするために、JavaScript アノテーションを含めることをお勧めします。
 
 
-### 必須の JavaScript 注釈またはコメントを含む矢印関数
+### 必須のJavaScript注釈またはコメントを含む矢印関数
 
 矢印関数の構文を使用して、カスタム関数を作成できます。
 
@@ -312,9 +312,9 @@ var c = {
     
 ```
 
-ユーザーがカスタム関数に JavaScript 注釈を追加しない場合、カスタム関数はアダプティブフォームのルールエディターに表示されません。
+ユーザーがカスタム関数にJavaScript注釈を追加しない場合、カスタム関数はアダプティブフォームのルールエディターに表示されません。
 
-### 必須の JavaScript 注釈またはコメントを含む関数式
+### 必須のJavaScript注釈またはコメントを含む関数式
 
 アダプティブフォームのルールエディターにカスタム関数をリストするには、次の形式でカスタム関数を作成します。
 
@@ -332,31 +332,31 @@ var c = {
         }
 ```
 
-ユーザーがカスタム関数に JavaScript 注釈を追加しない場合、カスタム関数はアダプティブフォームのルールエディターに表示されません。
+ユーザーがカスタム関数にJavaScript注釈を追加しない場合、カスタム関数はアダプティブフォームのルールエディターに表示されません。
 
 ### カスタム関数を作成するための前提条件
 
 アダプティブFormsへのカスタム機能の追加を開始する前に、お使いのマシンに次のソフトウェアがインストールされていることを確認してください。
 
-* **プレーンテキストエディター（IDE）**：任意のプレーンテキストエディターを使用できますが、Microsoft Visual Studio Code などの統合開発環境（IDE）は、編集を容易にする高度な機能を提供します。
+* **プレーンテキストエディター（IDE）**：任意のプレーンテキストエディターも使用できますが、Microsoft Visual Studio Code などの統合開発環境（IDE）は、編集を容易にする高度な機能を提供します。
 
-* **Git:** このバージョン管理システムは、コード変更を管理するために必要である。 インストールされていない場合は、https://git-scm.comからダウンロードします。
+* **Git:** このバージョン管理システムは、コードの変更を管理するために必要です。 インストールされていない場合は、https://git-scm.comからダウンロードします。
 
 
 ## カスタム関数の作成 {#create-custom-function}
 
 カスタム関数の作成手順は次のとおりです。
-1. [AEM プロジェクトアーキタイプを使用してクライアントサイドライブラリを作成し、カスタム関数を追加します。](#create-client-library-archetype)
+1. [AEM プロジェクトアーキタイプを使用してクライアントサイドライブラリを作成し、カスタム関数を追加する ](#create-client-library-archetype)
 または
-   [CRXDE によるカスタム関数の作成](#create-add-custom-function)
+   [CRXDE によるカスタム関数の作成 ](#create-add-custom-function)
 1. [アダプティブフォームへのクライアントライブラリの追加](#add-client-library)
 1. [アダプティブフォームでのカスタム関数の使用](#use-custom-functions)
 
 
 ### AEM プロジェクトアーキタイプを使用したクライアントライブラリの作成{#create-client-library-archetype}
 
-作成したプロジェクトにクライアントライブラリを追加することで、カスタム関数を追加できます [AEM プロジェクトアーキタイプの使用](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started).
-既存のプロジェクトがある場合 <!--and have already the project structure as shown in the image below,--> 直接追加できます [カスタム関数](#create-add-custom-function) ローカルプロジェクトに追加します。
+[AEM プロジェクトアーキタイプを使用 ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started) して作成したプロジェクトにクライアントライブラリを追加することで、カスタム関数を追加できます。
+既存のプロジェクトがある場合 <!--and have already the project structure as shown in the image below,-->、ローカルプロジェクトに [ カスタム関数 ](#create-add-custom-function) を直接追加できます。
 
 <!--![custom fuction folder structure](assets/custom-library-folder-structure.png)-->
 
@@ -364,17 +364,17 @@ var c = {
 
 **クライアントライブラリフォルダーの追加**
 
-に新しいクライアントライブラリフォルダーを追加するには [AEM プロジェクトディレクトリ]は、次の手順に従います。
+[AEM プロジェクトディレクトリ ] に新しいクライアントライブラリフォルダーを追加するには、次の手順に従います。
 
-1. を開きます [AEM プロジェクトディレクトリ] エディターで。
+1. エディターで [AEM プロジェクトディレクトリ ] を開きます。
 
-   ![カスタム関数のフォルダー構造](assets/custom-library-folder-structure.png)
+   ![ カスタム関数のフォルダー構造 ](assets/custom-library-folder-structure.png)
 
-1. を見つける `ui.apps`.
-1. 新規フォルダーを追加します。 例えば、というフォルダーを追加します。 `experience-league`.
-1. に移動します。 `/experience-league/` フォルダーを作成して、 `ClientLibraryFolder`. 例えば、という名前のクライアントライブラリフォルダーを作成します `customclientlibs`.
+1. `ui.apps` を見つけます。
+1. 新規フォルダーを追加します。 例えば、`experience-league` というフォルダーを追加します。
+1. フォルダー `/experience-league/` 移動し、`ClientLibraryFolder` を追加します。 例えば、`customclientlibs` という名前のクライアントライブラリフォルダーを作成します。
 
-   場所： `[AEM project directory]/ui.apps/src/main/content/jcr_root/apps/`
+   場所：`[AEM project directory]/ui.apps/src/main/content/jcr_root/apps/`
 
 **クライアントライブラリフォルダーへのファイルとフォルダーの追加**
 
@@ -386,7 +386,7 @@ var c = {
 
 `Location is: [AEMaaCS project directory]/ui.apps/src/main/content/jcr_root/apps/experience-league/customclientlibs/`
 
-1. が含まれる `.content.xml` 次のコード行を追加します。
+1. `.content.xml` で次のコード行を追加します。
 
    ```javascript
    <?xml version="1.0" encoding="UTF-8"?>
@@ -397,16 +397,16 @@ var c = {
 
    >[!NOTE]
    >
-   > には任意の名前を付けることができます `client library folder` および `categories` プロパティ。
+   > `client library folder` および `categories` プロパティには、任意の名前を付けることができます。
 
-1. が含まれる `js.txt` 次のコード行を追加します。
+1. `js.txt` で次のコード行を追加します。
 
    ```javascript
          #base=js
        function.js
    ```
 
-1. が含まれる `js` フォルダーに、javascript ファイルをとして追加します `function.js` これには、カスタム関数が含まれます。
+1. `js` フォルダーに、Javascript ファイルをとして追加します。これには、カスタム関数が含まれ `function.js` います。
 
    ```javascript
    /**
@@ -433,9 +433,9 @@ var c = {
 
 1. ファイルを保存します。
 
-![カスタム関数のフォルダー構造](assets/custom-function-added-files.png)
+![ カスタム関数のフォルダー構造 ](assets/custom-function-added-files.png)
 
-**新しいフォルダーを filter.xml に含める**:
+**新規フォルダーを filter.xml に含めます**:
 
 1. [AEMaaCS プロジェクトディレクトリ]内の `/ui.apps/src/main/content/META-INF/vault/filter.xml` ファイルに移動します。
 
@@ -444,9 +444,9 @@ var c = {
    `<filter root="/apps/experience-league" />`
 1. ファイルを保存します。
 
-   ![カスタム関数フィルター xml](assets/custom-function-filterxml.png)
+   ![ カスタム関数フィルター xml](assets/custom-function-filterxml.png)
 
-1. 次の手順に従って、新しく作成したクライアントライブラリフォルダーをAEM環境にビルドします。 [「作成方法」セクション](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype#how-to-build).
+1. [ ビルド方法セクション ](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype#how-to-build) で説明されている手順に従って、新しく作成したクライアントライブラリフォルダーをAEM環境にビルドします。
 
 ## CRXDE を通じたカスタム関数の作成とデプロイ{#create-add-custom-function}
 
@@ -470,7 +470,7 @@ var c = {
 1. 変更を保存します。
 
 1. `clientlibs` フォルダーの下に `js` というフォルダーを作成します。
-1. という JavaScript ファイルを作成します。 `functions.js` の下 `js` フォルダー。
+1. `js` フォルダーの下に `functions.js` というJavaScript ファイルを作成します。
 1. `clientlibs` フォルダーの下に `js.txt` というファイルを作成します。
 1. 変更を保存します。
 作成したフォルダー構造は次のようになります。
@@ -511,7 +511,7 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
 
 1. `js.txt` ファイルを保存します。
 
-次を参照してください。 [カスタム関数](/help/forms/using/assets/customfunction.zip) フォルダー。 このフォルダーをダウンロードしてAEM インスタンスにインストールします。
+次の [ カスタム関数 ](/help/forms/using/assets/customfunction.zip) フォルダーを参照できます。 このフォルダーをダウンロードしてAEM インスタンスにインストールします。
 
 これで、クライアントライブラリを追加して、アダプティブフォームでカスタム関数を使用できるようになりました。
 
@@ -519,10 +519,10 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
 
 クライアントライブラリをAEM Forms環境にデプロイしたら、アダプティブフォームでその機能を使用します。 アダプティブフォームにクライアントライブラリを追加するには、次の手順に従います
 
-1. フォームを編集モードで開きます。 フォームを編集モードで開くには、フォームを選択し、以下を選択します。 **[!UICONTROL 編集]**.
+1. フォームを編集モードで開きます。 フォームを編集モードで開くには、フォームを選択し、「**[!UICONTROL 編集]**」を選択します。
 1. コンテンツブラウザーを開き、アダプティブフォームの&#x200B;**[!UICONTROL ガイドコンテナ]**&#x200B;コンポーネントを選択します。
 1. ガイドコンテナのプロパティアイコンをクリックします。 アダプティブフォームコンテナダイアログボックスが開きます。
-1. を開きます **[!UICONTROL 基本]** タブをクリックして、の名前を選択 **[!UICONTROL クライアントライブラリカテゴリ]** ドロップダウンリストから（この場合は、 `customfunctionscategory`）に設定します。
+1. 「**[!UICONTROL 基本]**」タブを開き、ドロップダウンリストから **[!UICONTROL クライアントライブラリカテゴリ]** の名前を選択します（この場合は「`customfunctionscategory`」を選択します）。
 
    ![カスタム関数をクライアントライブラリを追加する](/help/forms/using//assets/custom-function-category-name-core-component.png)
 
@@ -532,12 +532,12 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
 
 ![カスタム関数をクライアントライブラリを追加する](/help/forms/using//assets/calculateage-customfunction.png)
 
-次に、 [AEM Forms 6.5 のルールエディターの呼び出しサービス](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)
+次に、AEM Forms 6.5 で [ ルールエディターの呼び出しサービスを使用してカスタム関数を設定および使用する方法を説明し ](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke) す。
 
 ## アダプティブフォームでのカスタム関数の使用 {#use-custom-functions}
 
-アダプティブフォームでは、以下を使用できます [ルールエディター内のカスタム関数](/help/forms/using/rule-editor-core-components.md).
-次のコードを JavaScript ファイル（`Function.js` ファイル）を選択し、生年月日（YYYY-MM-DD）に基づいて年齢を計算します。 カスタム関数を次のように作成 `calculateAge()` 生年月日を入力として、年齢を返します。
+アダプティブフォームでは、[ ルールエディター内のカスタム関数 ](/help/forms/using/rule-editor-core-components.md) を使用できます。
+JavaScriptのファイル（`Function.js` ファイル）に次のコードを追加して、生年月日（YYYY-MM-DD）に基づいて年齢を計算しましょう。 生年月日を入力として取得し、年齢を返すカスタム関数を `calculateAge()` として作成します。
 
 ```javascript
     /**
@@ -562,23 +562,23 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
     }
 ```
 
-上記の例では、ユーザーが誕生日を（YYYY-MM-DD）形式で入力した場合、カスタム関数は次のようになります `calculateAge` を呼び出し、年齢を返します。
+上記の例では、ユーザーが誕生日を（YYYY-MM-DD）形式で入力すると、カスタム関数 `calculateAge` が呼び出され、年齢が返されます。
 
-![ルールエディターでの年齢カスタム関数の計算](/help/forms/using/assets/custom-function-calculate-age.png)
+![ ルールエディターでの年齢のカスタム関数の計算 ](/help/forms/using/assets/custom-function-calculate-age.png)
 
 フォームをプレビューして、ルールエディターを介してカスタム関数がどのように実装されているかを確認します。
 
-![ルールエディターフォームのプレビューでの年齢のカスタム関数の計算](/help/forms/using/assets/custom-function-age-calculate-form.png)
+![ ルールエディターフォームプレビューでの Calculate Age カスタム関数 ](/help/forms/using/assets/custom-function-age-calculate-form.png)
 
 >[!NOTE]
 >
-> 次を参照してください。 [カスタム関数](/help/forms/using/assets/customfunctions.zip) フォルダー。 次を使用して、このフォルダーをダウンロードし、AEM インスタンスにインストールします [パッケージマネージャー](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager).
+> 次の [ カスタム関数 ](/help/forms/using/assets/customfunctions.zip) フォルダーを参照できます。 [ パッケージマネージャー ](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager) を使用して、このフォルダーをダウンロードし、AEM インスタンスにインストールします。
 
 ### カスタム関数での非同期関数のサポート {#support-of-async-functions}
 
 非同期カスタム関数がルールエディターリストに表示されない。 ただし、同期関数式を使用して作成されたカスタム関数内で、非同期関数を呼び出すことができます。
 
-![Sync および async カスタム関数](/help/forms/using/assets/workflow-for-sync-async-custom-fumction.png)
+![Sync および async カスタム関数 ](/help/forms/using/assets/workflow-for-sync-async-custom-fumction.png)
 
 >[!NOTE]
 >
@@ -609,15 +609,15 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
 }
 ```
 
-上記の例では、asyncFunction 関数は `asynchronous function`. 非同期操作を実行するには、 `GET` リクエスト先 `https://petstore.swagger.io/v2/store/inventory`. 次を使用して応答を待ちます `await`は、次を使用して応答本文を JSON として解析します `response.json()`データを返します。 この `callAsyncFunction` 関数は、を呼び出す同期カスタム関数です `asyncFunction` 関数を実行し、応答データをコンソールに表示します。 ただし、 `callAsyncFunction` 関数は同期で、非同期の asyncFunction 関数を呼び出し、その結果を `then` および `catch` ステートメント。
+上記の例では、asyncFunction 関数は `asynchronous function` です。 `https://petstore.swagger.io/v2/store/inventory` に対して `GET` リクエストを実行することで、非同期操作を実行します。 `await` を使用して応答を待ち、`response.json()` を使用して応答本文を JSON として解析し、データを返します。 `callAsyncFunction` 関数は、`asyncFunction` 関数を呼び出してコンソールに応答データを表示する同期カスタム関数です。 `callAsyncFunction` 関数は同期していますが、非同期の asyncFunction 関数を呼び出し、`then` 文と `catch` 文で結果を処理します。
 
 動作を確認するには、ボタンを追加し、ボタンクリック時に非同期関数を呼び出すボタンのルールを作成します。
 
-![async 関数のルールを作成中](/help/forms/using/assets/rule-for-async-funct.png)
+![async 関数のルールを作成しています ](/help/forms/using/assets/rule-for-async-funct.png)
 
-ユーザーがをクリックしたときの動作を示すには、以下のコンソールウィンドウの図を参照してください `Fetch` ボタン、カスタム関数 `callAsyncFunction` を呼び出し、非同期関数を呼び出す `asyncFunction`. コンソールウィンドウをInspectして、ボタンがクリックされたときの応答を確認します。
+ユーザーが「`Fetch`」ボタンをクリックすると、カスタム関数 `callAsyncFunction` が呼び出され、非同期関数 `asyncFunction` が呼び出されることを示すには、以下のコンソールウィンドウの図を参照してください。 コンソールウィンドウをInspectして、ボタンがクリックされたときの応答を確認します。
 
-![コンソールウィンドウ](/help/forms/using/assets/async-custom-funct-console.png)
+![ コンソールウィンドウ ](/help/forms/using/assets/async-custom-funct-console.png)
 
 カスタム関数の機能について説明します。
 
@@ -631,7 +631,7 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
 
 >[!NOTE]
 >
-> この `param {scope} globals` が最後のパラメーターである必要があり、アダプティブフォームのルールエディターに表示されません。
+> `param {scope} globals` は最後のパラメーターである必要があり、アダプティブフォームのルールエディターには表示されません。
 
 <!-- Let us look at the following code snippet:
 
@@ -655,13 +655,13 @@ JavaScript ファイルに次のコードを追加して、生年月日（YYYY-M
 
 In the above code snippet, a custom function named `updateDateTime` takes parameters such as a field object and a global object. The field represents the textbox object where the formatted date and time value is displayed within the form. -->
 
-カスタム関数でフィールドおよびグローバルオブジェクトを使用する方法を、 `Contact Us` 異なるユースケースを使用したフォーム
+カスタム関数でフィールドおよびグローバルオブジェクトを使用する方法を、様々な使用例を使用する `Contact Us` フォームを利用して説明します。
 
-![お問い合わせフォーム](/help/forms/using/assets/contact-us-form.png)
+![ お問い合わせフォーム ](/help/forms/using/assets/contact-us-form.png)
 
-#### **ユースケース**：を使用したパネルの表示 `SetProperty` ルール
+#### **ユースケース**:`SetProperty` ルールを使用したパネルの表示
 
-の説明に従って、カスタム関数に次のコードを追加します。 [create-custom-function](#create-custom-function) セクションで、フォームフィールドをに設定します `Required`.
+[create-custom-function](#create-custom-function) の節で説明したように、カスタム関数に次のコードを追加して、フォームフィールドを `Required` として設定します。
 
 ```javascript
     
@@ -684,26 +684,26 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 >[!NOTE]
 >
-> * にある使用可能なプロパティを使用して、フィールドのプロパティを設定できます。 `[form-path]/jcr:content/guideContainer.model.json`.
-> * を使用してフォームに加えた変更 `setProperty` globals オブジェクトのメソッドは、本質的に非同期であり、カスタム関数の実行中には反映されません。
+> * `[form-path]/jcr:content/guideContainer.model.json` にある使用可能なプロパティを使用して、フィールドのプロパティを設定できます。
+> * Globals オブジェクトの `setProperty` メソッドを使用してフォームに加えられた変更は、本質的に非同期であり、カスタム関数の実行中には反映されません。
 
-この例では、 `personaldetails` パネルは、ボタンをクリックすると発生します。 パネルでエラーが検出されなかった場合、別のパネルでは、 `feedback` ボタンをクリックするとパネルが表示されます。
+この例では、ボタンをクリックすると `personaldetails` パネルの検証が行われます。 パネルでエラーが検出されない場合は、ボタンをクリックすると、`feedback` のパネルが表示されます。
 
-のルールを作成しましょう `Next` ボタン。検証します。 `personaldetails` パネル化し、 `feedback`  ユーザーがクリックすると表示されるパネル `Next` ボタン。
+`Next` ボタンのルールを作成してみましょう。このルールは、`personaldetails` パネルを検証し、ユーザーが `Next` ボタンをクリックすると `feedback` パネルが表示されるようにします。
 
 ![プロパティを設定](/help/forms/using/assets/custom-function-set-property.png)
 
-次の図を参照して、各コンポーネントの配置場所を確認してください `personaldetails` パネルは、 `Next` ボタン。 内のすべてのフィールドに適用する場合 `personaldetails` が検証され、 `feedback` パネルが表示されます。
+「`Next`」ボタンをクリックしたときに `personaldetails` パネルが検証される場所を示すには、以下の図を参照してください。 `personaldetails` ージ内のすべてのフィールドが検証されると、`feedback` のパネルが表示されます。
 
-![プロパティのフォームプレビューを設定](/help/forms/using/assets/set-property-form-preview.png)
+![ プロパティを設定フォームのプレビュー ](/help/forms/using/assets/set-property-form-preview.png)
 
-のフィールドにエラーがある場合 `personaldetails` パネルの場合、 `Next` ボタン、および `feedback` パネルは非表示のままになります。
+`personaldetails` パネルのフィールドにエラーがある場合、エラーは「`Next`」ボタンをクリックするとフィールドレベルに表示され、`feedback` パネルは非表示のままになります。
 
-![プロパティのフォームプレビューを設定](/help/forms/using/assets/set-property-panel.png)
+![ プロパティを設定フォームのプレビュー ](/help/forms/using/assets/set-property-panel.png)
 
 #### **ユースケース**：フィールドを検証します。
 
-の説明に従って、カスタム関数に次のコードを追加します。 [create-custom-function](#create-custom-function) セクションに移動し、フィールドを検証します。
+[create-custom-function](#create-custom-function) の節で説明したように、カスタム関数に次のコードを追加して、フィールドを検証します。
 
 ```javascript
     /**
@@ -722,27 +722,27 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 >[!NOTE]
 >
-> で引数が渡されない場合、 `validate()` 関数を使用すると、フォームを検証します。
+> `validate()` 関数で引数が渡されない場合は、フォームが検証されます。
 
-この例では、カスタムの検証パターンが `contact` フィールド。 ユーザーは、で始まる電話番号を入力する必要があります `10` 続いて `8` 数字。 ユーザーがから始まらない電話番号を入力した場合 `10` 含まれる数が多い、または含まれない `8` 数字、ボタンをクリックすると検証エラーメッセージが表示されます。
+この例では、「`contact`」フィールドにカスタムの検証パターンが適用されます。 ユーザーは、`10` で始まり、その後 `8` 桁が続く電話番号を入力する必要があります。 ユーザーが `10` で始まらない電話番号や、`8` 桁以下の電話番号を入力した場合、ボタンをクリックすると検証エラーメッセージが表示されます。
 
-![メールアドレスの検証パターン](/help/forms/using/assets/custom-function-validation-pattern.png)
+![ メールアドレスの検証パターン ](/help/forms/using/assets/custom-function-validation-pattern.png)
 
-次に、のルールを作成します `Next` を検証するボタン `contact` ボタンクリックのフィールド。
+次の手順では、ボタンクリック時に `contact` フィールドを検証する `Next` ボタンのルールを作成します。
 
-![検証パターン](/help/forms/using/assets/custom-function-validate.png)
+![ 検証パターン ](/help/forms/using/assets/custom-function-validate.png)
 
-次の図を参照して、ユーザーがで始まらない電話番号を入力した場合を示してください `10`すると、エラーメッセージがフィールドレベルに表示されます。
+次の図を参照して、ユーザーが `10` で始まらない電話番号を入力した場合、フィールドレベルにエラーメッセージが表示されることを示してください。
 
-![メールアドレスの検証パターン](/help/forms/using/assets/custom-function-validate-error-message.png)
+![ メールアドレスの検証パターン ](/help/forms/using/assets/custom-function-validate-error-message.png)
 
-ユーザーが有効な電話番号と、そのすべてのフィールドをに入力した場合 `personaldetails` パネルが検証され、 `feedback` パネルが画面に表示されます。
+ユーザーが有効な電話番号を入力し、`personaldetails` ントロールパネル内のすべてのフィールドが検証されると、`feedback` ントロールパネルが画面に表示されます。
 
-![メールアドレスの検証パターン](/help/forms/using/assets/validate-form-preview-form.png)
+![ メールアドレスの検証パターン ](/help/forms/using/assets/validate-form-preview-form.png)
 
-#### **ユースケース**: パネルをリセット
+#### **ユースケース**：パネルのリセット
 
-の説明に従って、カスタム関数に次のコードを追加します。 [create-custom-function](#create-custom-function) セクションで、パネルをリセットします。
+[create-custom-function](#create-custom-function) の節で説明したように、カスタム関数に次のコードを追加して、パネルをリセットします。
 
 ```javascript
     /**
@@ -762,26 +762,26 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 >[!NOTE]
 >
-> で引数が渡されない場合、 `reset()` 関数を使用すると、フォームを検証します。
+> `reset()` 関数で引数が渡されない場合は、フォームが検証されます。
 
-この例では、 `personaldetails` をクリックするとパネルがリセットされる `Clear` ボタン。 次に、のルールを作成します `Clear` ボタンをクリックしたときにパネルをリセットするボタン。
+この例では、「`Clear`」ボタンをクリックすると、`personaldetails` パネルがリセットされます。 次の手順では、ボタンクリック時にパネルをリセットする `Clear` ボタンのルールを作成します。
 
-![「消去」ボタン](/help/forms/using/assets/custom-function-reset-field.png)
+![ 消去ボタン ](/help/forms/using/assets/custom-function-reset-field.png)
 
-ユーザーがをクリックした場合に表示される方法については、次の図を参照してください `clear` ボタン、 `personaldetails` パネルのリセット：
+ユーザーが「`clear`」ボタンをクリックすると、`personaldetails` パネルがリセットされることを示す次の図を参照してください。
 
-![フォームをリセット](assets/custom-function-reset-form.png)
+![ リセットフォーム ](assets/custom-function-reset-form.png)
 
-#### **ユースケース**：フィールドレベルでカスタムメッセージを表示し、フィールドを無効としてマークします
+#### **ユースケース**：フィールドレベルでカスタムメッセージを表示し、フィールドを無効としてマークする
 
-を使用できます `markFieldAsInvalid()` フィールドを無効として定義し、フィールドレベルでカスタムエラーメッセージを設定する関数。 この `fieldIdentifier` 値は `fieldId`、または `field qualifiedName`、または `field dataRef`. という名前のオブジェクトの値 `option` 次になることができます `{useId: true}`, `{useQualifiedName: true}`、または `{useDataRef: true}`.
+`markFieldAsInvalid()` 関数を使用して、フィールドを無効として定義し、フィールドレベルでカスタムのエラーメッセージを設定できます。 `fieldIdentifier` の値は、`fieldId`、`field qualifiedName`、`field dataRef` のいずれかです。 `option` という名前のオブジェクトの値は、`{useId: true}`、`{useQualifiedName: true}`、`{useDataRef: true}` のいずれかです。
 フィールドを無効としてマークし、カスタムメッセージを設定するために使用される構文は次のとおりです。
 
 * `globals.functions.markFieldAsInvalid(field.$id,"[custom message]",{useId: true});`
 * `globals.functions.markFieldAsInvalid(field.$qualifiedName, "[custom message]", {useQualifiedName: true});`
 * `globals.functions.markFieldAsInvalid(field.$dataRef, "[custom message]", {useDataRef: true});`
 
-の説明に従って、カスタム関数に次のコードを追加します。 [create-custom-function](#create-custom-function) フィールドレベルでカスタムメッセージを有効にする場合は、「」をクリックします。
+[create-custom-function](#create-custom-function) の節で説明したように、カスタム関数に次のコードを追加して、フィールドレベルでカスタムメッセージを有効にします。
 
 ```javascript
     /**
@@ -801,28 +801,28 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 この例では、ユーザーがコメント テキストボックスに 15 文字未満で入力すると、カスタムメッセージがフィールドレベルに表示されます。
 
-次に、のルールを作成します `comments` フィールド :
+次に、`comments` フィールドのルールを作成します。
 
-![フィールドを無効としてマーク](/help/forms/using/assets/custom-function-invalid-field.png)
+![ フィールドを無効としてマーク ](/help/forms/using/assets/custom-function-invalid-field.png)
 
-で負のフィードバックを入力したことを表示するには、以下のデモを参照してください。 `comments` フィールドトリガー フィールドレベルでのカスタムメッセージの表示を設定します。
+`comments` のフィールドに負のフィードバックを入力すると、フィールドレベルでのカスタムメッセージの表示がトリガーされることを示す、以下のデモを参照してください。
 
-![フィールドを無効なプレビューフォームとしてマーク](/help/forms/using/assets/custom-function-invalidfield-form.png)
+![ フィールドを無効なプレビューフォームとしてマーク ](/help/forms/using/assets/custom-function-invalidfield-form.png)
 
 ユーザーがコメントテキストボックスに 15 文字を超える文字を入力すると、フィールドが検証され、フォームが送信されます。
 
-![フィールドを有効なプレビューフォームとしてマーク](/help/forms/using/assets/custom-function-validfield-form.png)
+![ フィールドを有効なプレビューフォームとしてマーク ](/help/forms/using/assets/custom-function-validfield-form.png)
 
 
 #### **ユースケース**：変更されたデータのサーバーへの送信
 
 次のコード行：
-`globals.functions.submitForm(globals.functions.exportData(), false);` を使用して、操作後にフォームデータを送信します。
+`globals.functions.submitForm(globals.functions.exportData(), false);` は、操作後にフォームデータを送信するために使用されます。
 * 最初の引数は、送信するデータです。
-* 2 番目の引数は、送信前にフォームを検証するかどうかを表します。 このプロパティは `optional` およびをに設定しました `true` デフォルトでは。
-* 3 番目の引数は `contentType` 送信の（デフォルト値を使用する場合もオプション） `multipart/form-data`. その他の値は以下のとおりです。 `application/json` および `application/x-www-form-urlencoded`.
+* 2 番目の引数は、送信前にフォームを検証するかどうかを表します。 このプロパティは `optional` であり、デフォルトでは `true` として設定されます。
+* 3 番目の引数は送信 `contentType` です。デフォルト値を `multipart/form-data` にした場合もオプションとなります。 その他の値は、`application/json` と `application/x-www-form-urlencoded` です。
 
-の説明に従って、カスタム関数に次のコードを追加します。 [create-custom-function](#create-custom-function) セクションで、サーバーで操作されたデータを送信するには：
+[create-custom-function](#create-custom-function) の節で説明したように、カスタム関数に次のコードを追加して、操作されたデータをサーバーで送信します。
 
 ```javascript
     /**
@@ -843,19 +843,19 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
     }
 ```
 
-この例では、ユーザーがを離れた場合、 `comments` テキストボックスが空、 `NA` は、フォームの送信時にサーバーに送信されます。
+この例では、ユーザーが `comments` テキストボックスを空のままにした場合、`NA` ータはフォームの送信時にサーバーに送信されます。
 
-次に、のルールを作成します `Submit` データを送信するボタン：
+次に、データを送信する「`Submit`」ボタンのルールを作成します。
 
-![データを送信](/help/forms/using/assets/custom-function-submit-data.png)
+![ データの送信 ](/help/forms/using/assets/custom-function-submit-data.png)
 
-の図を参照してください `console window` 以下に、ユーザーがを離れたかどうかを示します `comments` テキストボックスが空の場合、値は `NA` 次のサーバーで送信される：
+ユーザーが `comments` テキストボックスを空のままにした場合、`NA` の値がサーバーで送信されることを示すには、以下の `console window` の図を参照してください。
 
-![コンソールウィンドウでのデータの送信](/help/forms/using/assets/custom-function-submit-data-form.png)
+![ コンソールウィンドウでのデータの送信 ](/help/forms/using/assets/custom-function-submit-data-form.png)
 
 また、コンソールウィンドウを調べて、サーバーに送信されたデータを表示することもできます。
 
-![コンソールウィンドウでのInspect データ](/help/forms/using/assets/custom-function-submit-data-console-data.png)
+![ コンソール ウィンドウのInspect データ ](/help/forms/using/assets/custom-function-submit-data-console-data.png)
 
 <!--
 
@@ -972,32 +972,32 @@ In case, the custom submit action fails to perform as expected in existing AEM p
 
 ## カスタム関数のキャッシュサポート
 
-アダプティブFormsは、カスタム関数のキャッシュを実装して、ルールエディターでカスタム関数のリストを取得する際の応答時間を短縮します。 メッセージ： `Fetched following custom functions list from cache` 次に表示： `error.log` ファイル。
+アダプティブFormsは、カスタム関数のキャッシュを実装して、ルールエディターでカスタム関数のリストを取得する際の応答時間を短縮します。 `error.log` ファイルに `Fetched following custom functions list from cache` のようなメッセージが表示されます。
 
-![キャッシュをサポートするカスタム関数](/help/forms/using/assets/custom-function-cache-error.png)
+![ キャッシュをサポートするカスタム関数 ](/help/forms/using/assets/custom-function-cache-error.png)
 
 カスタム関数が変更されると、キャッシュが無効化され、解析されます。
 
 ## トラブルシューティング {#troubleshooting}
 
-* ユーザーは、以下を確実にする必要があります [コアコンポーネントと仕様のバージョンが最新バージョンに設定されています](https://github.com/adobe/aem-core-forms-components/tree/release/650). ただし、既存のAEM プロジェクトおよびフォームの場合は、さらに次の手順に従う必要があります。
+* ユーザーは、[ コアコンポーネントと仕様のバージョンが最新バージョンに設定されていることを確認する必要があります ](https://github.com/adobe/aem-core-forms-components/tree/release/650)。 ただし、既存のAEM プロジェクトおよびフォームの場合は、さらに次の手順に従う必要があります。
 
-   * AEM プロジェクトの場合、のインスタンスをすべて置き換える必要があります `submitForm('custom:submitSuccess', 'custom:submitError')` （を使用） `submitForm()` プロジェクトをデプロイします。
+   * AEM プロジェクトの場合、`submitForm('custom:submitSuccess', 'custom:submitError')` のすべてのインスタンスを `submitForm()` に置き換え、プロジェクトをデプロイする必要があります。
 
-   * 既存のフォームで、カスタム送信ハンドラーが正しく機能しない場合は、を開いて保存する必要があります。 `submitForm` に関するルール **Submit** ルールエディターを使用してボタンをクリックします。 既存のルールを置き換えます。 `submitForm('custom:submitSuccess', 'custom:submitError')` （を使用） `submitForm()` フォームで。
+   * 既存のフォームで、カスタム送信ハンドラーが正しく機能しない場合は、ユーザーがルールエディターを使用して **送信** ボタンで `submitForm` ルールを開いて保存する必要があります。 この操作を実行すると、既存のルールが `submitForm('custom:submitSuccess', 'custom:submitError')` からフォーム内の `submitForm()` に置き換えられます。
 
 
-* カスタム関数のコードを含んだ JavaScript ファイルにエラーがある場合、カスタム関数はアダプティブフォームのルールエディターに表示されません。 カスタム関数のリストを確認するには、に移動します。 `error.log` エラーのファイル。 エラーが発生すると、カスタム関数のリストは空で表示されます。
+* カスタム関数のコードを含んだJavaScript ファイルにエラーがある場合、カスタム関数はアダプティブフォームのルールエディターに表示されません。 カスタム関数のリストを確認するには、エラーの `error.log` ファイルに移動します。 エラーが発生すると、カスタム関数のリストは空で表示されます。
 
-  ![エラーログファイル](/help/forms/using/assets/custom-function-list-error-file.png)
+  ![ エラーログファイル ](/help/forms/using/assets/custom-function-list-error-file.png)
 
-  エラーがない場合、カスタム関数が取得され、に表示されます。 `error.log` ファイル。 メッセージ： `Fetched following custom functions list` 次に表示： `error.log` ファイル：
+  エラーがない場合、カスタム関数が取得され、`error.log` ファイルに表示されます。 `error.log` ファイルに `Fetched following custom functions list` のようなメッセージが表示されます。
 
-  ![適切なカスタム関数を持つエラーログファイル](/help/forms/using/assets/custom-function-list-fetched-in-error.png)
+  ![ 適切なカスタム関数を持つエラーログファイル ](/help/forms/using/assets/custom-function-list-fetched-in-error.png)
 
 ## 考慮事項
 
-* この `parameter type` および `return type` サポートしない `None`.
+* `parameter type` と `return type` は `None` をサポートしていません。
 
 * カスタム関数リストでサポートされていない関数は次のとおりです。
    * ジェネレーター関数

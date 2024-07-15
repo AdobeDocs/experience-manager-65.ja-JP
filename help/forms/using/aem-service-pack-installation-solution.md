@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,AEM Forms on JEE,AEM Forms on OSGi
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 100%
 

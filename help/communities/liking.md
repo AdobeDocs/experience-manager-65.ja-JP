@@ -18,29 +18,29 @@ ht-degree: 3%
 
 # 「いいね!」設定の使用 {#using-liking}
 
-この `Liking` コンポーネントは、フォーラム内のコメントなど、ユーザーが特定のコンテンツについて意見を表明できるようにする便利なツールです。 （を使用） `Liking` コンポーネントを使用して、メンバーは肯定的な意見を示すハートアイコンを選択します。
+`Liking` コンポーネントは、フォーラム内のコメントなど、特定のコンテンツに関する意見をユーザーが表現できるようにする便利なツールです。 `Liking` コンポーネントを使用して、メンバーは肯定的な意見を示すハートアイコンを選択します。
 
 ## ページへのリンクの追加 {#adding-liking-to-a-page}
 
-を追加します `Liking` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます
+オーサーモードで `Liking` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して以下を見つけます
 
 * `Communities / Liking`
 
 そして、ユーザーが好きなように、ページ上の場所（機能に対する相対的な位置など）にドラッグします。
 
-詳細については、 [Communities コンポーネントの基本](basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
 
-いつ [必要なクライアントサイドライブラリ](essentials-liking.md#essentials-for-client-side) が含まれる場合、このようにして `Liking` コンポーネントが表示されます。
+[ 必須のクライアントサイドライブラリ ](essentials-liking.md#essentials-for-client-side) が含まれると、`Liking` コンポーネントはこのように表示されます。
 
 ![liking-component](assets/liking-component.png)
 
 ## Liking の設定 {#configuring-liking}
 
-配置されたを選択します。 `Liking` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置された `Liking` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
 ![configure-new](assets/configure-new.png)
 
-の下 **[!UICONTROL テキストとラベル]** 「いいね」の記録に使用するプロパティを指定します。
+**[!UICONTROL テキストとラベル]** タブの下で、いいね！の記録に使用するプロパティを指定します。
 
 ![configure-liking](assets/configure-liking.png)
 
@@ -50,11 +50,11 @@ ht-degree: 3%
 
 * **[!UICONTROL 否定応答ラベル]**
 
-  （*必須*）負の応答のプロパティ名。
+  （*必須*）否定応答のプロパティ名。
 
 * **[!UICONTROL 集計名]**
 
-  （*必須*）投票コンポーネントのこのインスタンスの識別可能な内部プロパティ名。
+  （*必須*）投票コンポーネントのこのインスタンスの、識別可能な内部プロパティ名。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
@@ -68,4 +68,4 @@ ht-degree: 3%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [Liking Essentials](essentials-liking.md) 開発者向けのページです。
+詳しくは、開発者向けの [Liking Essentials](essentials-liking.md) ページを参照してください。

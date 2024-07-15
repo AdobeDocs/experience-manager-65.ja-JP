@@ -19,12 +19,12 @@ ht-degree: 1%
 
 # 公開したサイトを使ってみる {#experience-the-published-site}
 
-## 公開時に新しいサイトを参照 {#browse-to-new-site-on-publish}
+## Publishの新しいサイトを参照 {#browse-to-new-site-on-publish}
 
 新しく作成された Communities サイトが公開されたら、公開サーバーで、サイトの作成時に表示される URL を参照します。次に例を示します。
 
 * オーサー URL = https://localhost:4502/content/sites/engage/en.html
-* 公開 URL = https://localhost:4503/content/sites/engage/en.html
+* PUBLISH URL = https://localhost:4503/content/sites/engage/en.html
 
 オーサー環境とパブリッシュ環境で、どのメンバーがログインするかについての混乱を最小限にするために、インスタンスごとに異なるブラウザーを使用することをお勧めします。
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 ### JCR での匿名アクセスの防止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限では、jcr コンテンツおよび json を通じて、コミュニティサイトのコンテンツが匿名訪問者に公開されます **匿名アクセスを許可** は、サイトのコンテンツに対して無効になっています。 ただし、回避策として Sling の制限を使用して、この動作を制御できます。
+既知の制限では、サイトのコンテンツでは **匿名アクセスを許可** が無効になっていますが、jcr コンテンツおよび json を通じてコミュニティサイトのコンテンツが匿名訪問者に公開されます。 ただし、回避策として Sling の制限を使用して、この動作を制御できます。
 
 jcr コンテンツと json を通じて匿名ユーザーがアクセスするコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
@@ -61,41 +61,41 @@ jcr コンテンツと json を通じて匿名ユーザーがアクセスする�
    >
    >ローカライズされたサイトに移動しないでください。
 
-1. に移動 **ページプロパティ**.
+1. **ページプロパティ** に移動します。
 
    ![page-properties](assets/page-properties.png)
 
 1. 「**詳細**」タブに移動します。
 
-1. Enable （有効） **認証要件**.
+1. **認証要件** を有効にします。
 
-   ![site-authentication](assets/site-authentication.png)
+   ![ サイト認証 ](assets/site-authentication.png)
 
-1. ログインページのパスを追加します。 例： **/content/......./GetStart**.
+1. ログインページのパスを追加します。 例：**/content/......./GetStarted**.
 1. ページを公開します。
 
 ## 信頼できるコミュニティ メンバー {#trusted-community-member}
 
-このエクスペリエンスでは、次のことを前提としています [アーロン・マクドナルド](/help/communities/tutorials.md#demo-users) さんはの役割を割り当てられました [コミュニティマネージャーとモデレーター](/help/communities/create-site.md#roles). そうでない場合は、オーサー環境に戻って次の操作を行います。 [サイト設定の変更](/help/communities/sites-console.md#modifying-site-properties) コミュニティマネージャーとモデレーターの両方に Aaron McDonald を選択します。
+このエクスペリエンスでは、[Aaron McDonald](/help/communities/tutorials.md#demo-users) が [ コミュニティマネージャーとモデレーター ](/help/communities/create-site.md#roles) の役割に割り当てられていることを前提としています。 ない場合は、オーサー環境に戻って [ サイト設定を変更 ](/help/communities/sites-console.md#modifying-site-properties)、コミュニティマネージャーとモデレーターの両方として Aaron McDonald を選択します。
 
-右上隅のを選択します。 `Log in`さらに、ユーザー名（aaron.mcdonald@mailinator.com）とパスワード（password）で署名します。 twitterまたはFacebookの資格情報でログインできることに注意してください。
+右上隅の「`Log in`」を選択し、ユーザー名（aaron.mcdonald@mailinator.com）とパスワード（password）で署名します。 twitterまたはFacebookの資格情報でログインできることに注意してください。
 
 ![ログイン](assets/login.png)
 
 コミュニティの登録メンバーとしてログインしたら、次のメニュー項目を確認して、コミュニティサイトをクリックして参照します。
 
-* **Profile** オプションを使用すると、プロファイルを表示および編集できます。
-* [メッセージ](/help/communities/configure-messaging.md) オプションを選択すると、「ダイレクトメッセージ」セクションに移動し、次の操作を実行できます。
+* 「**プロファイル**」オプションを使用すると、プロファイルを表示および編集できます。
+* 「[ メッセージ ](/help/communities/configure-messaging.md)」オプションを選択すると、ダイレクトメッセージのセクションに移動し、次の操作を実行できます。
 
    1. 受信（インボックス）、送信（送信済み項目）、削除（ごみ箱）したダイレクトメッセージを表示します。
    1. 新しいダイレクトメッセージを作成して、個人やグループに送信できるようにします。
 
-* [通知](/help/communities/notifications.md) オプションを選択すると、「通知」セクションに移動し、興味のあるイベントを表示したり、通知設定を編集したりできます。
-* [管理](/help/communities/published-site.md#moderationlink) モデレート権限がある場合は、AEM Communities モデレートページに移動します。
+* [ 通知 ](/help/communities/notifications.md) オプションを選択すると、「通知」セクションに移動し、興味のあるイベントを表示したり、通知設定を編集したりできます。
+* [ 管理 ](/help/communities/published-site.md#moderationlink) モデレート権限がある場合は、AEM Communities モデレートページに移動します。
 
 ![adminscreen](assets/adminscreen.png)
 
-選択した参照サイトテンプレートには最初にカレンダー関数、次にアクティビティストリーム関数、フォーラム関数などが含まれているので、カレンダーページがホームページであることに注意してください。 この構造は、 [サイトテンプレート](/help/communities/sites.md#edit-site-template) コンソールを使用するか、オーサー環境でサイトプロパティを変更する場合は、次の操作を行います。
+選択した参照サイトテンプレートには最初にカレンダー関数、次にアクティビティストリーム関数、フォーラム関数などが含まれているので、カレンダーページがホームページであることに注意してください。 この構造は、[ サイトテンプレート ](/help/communities/sites.md#edit-site-template) コンソールから表示されるか、オーサー環境でサイトプロパティを変更する際に表示されます。
 
 ![sitetemplate](assets/sitetemplate.png)
 
@@ -103,8 +103,8 @@ jcr コンテンツと json を通じて匿名ユーザーがアクセスする�
 >
 >Communities のコンポーネントと機能について詳しくは、以下を参照してください。
 >
->* [Communities コンポーネント](/help/communities/author-communities.md) （作成者の場合）
->* [コンポーネント、機能、機能の基本事項](/help/communities/essentials.md) （開発者向け）
+>* [Communities コンポーネント ](/help/communities/author-communities.md) （作成者向け）
+>* [ コンポーネント、機能、機能の基本事項 ](/help/communities/essentials.md) （開発者向け）
 
 ### フォーラムリンク {#forum-link}
 
@@ -122,51 +122,51 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 
 これは、パブリッシュ環境でグループを作成する例です。
 
-グループはオーサー環境で作成し、オーサー環境のコミュニティサイト内で管理することもできます（[コミュニティグループコンソール](/help/communities/groups.md)）に設定します。 の経験 [オーサー環境でのグループの作成](/help/communities/nested-groups.md) このチュートリアルの次はです。
+グループはオーサー環境で作成し、オーサー環境のコミュニティサイト内で管理することもできます（[ コミュニティグループコンソール ](/help/communities/groups.md)）。 [ オーサー環境でグループを作成する ](/help/communities/nested-groups.md) のエクスペリエンスについては、このチュートリアルの次のステップで説明します。
 
 ![grouplink](assets/grouplink.png)
 
 参照グループを作成します。
 
-1. を選択 **新規グループ**
+1. **新規グループ** を選択します
 1. **「設定」タブ**
 
-   * グループ名： `Sports`
-   * 説明： `A parent group for various sporting groups`.
-   * グループ URL 名： `sports`
-   * を選択 `Open Group` （参加による任意のコミュニティメンバーの参加を許可）
+   * グループ名：`Sports`
+   * 説明：`A parent group for various sporting groups`。
+   * グループ URL 名：`sports`
+   * `Open Group` を選択してください（コミュニティ メンバーの参加を許可します）
 
 1. **「テンプレート」タブ**
 
-   * を選択 `Reference Group` （ネストされたグループを許可する groups 関数が含まれます）
+   * `Reference Group` を選択します（ネストされたグループを許可する groups 関数が構造に含まれます）。
 
-1. を選択 **グループを作成**
+1. 「**グループを作成**」を選択します。
 
    ![creategroup](assets/creategroup.png)
 
-新しいグループの作成後、 **新しいスポーツグループを選択します** （ネストされた） 2 つのグループをグループ内に作成します。 サイト構造はグループ機能から開始できないので、スポーツ グループを開いた後で、グループ リンクを選択する必要があります。
+新しいグループを作成したら **新しいスポーツグループを選択**、その中に（ネストされた） 2 つのグループを作成します。 サイト構造はグループ機能から開始できないので、スポーツ グループを開いた後で、グループ リンクを選択する必要があります。
 
 ![grouplink1](assets/grouplink1.png)
 
-で始まる 2 番目のリンクセット `Blog`は、現在選択されているグループ、 `Sports` グループ。 スポーツを選ぶ&#39; `Groups` リンク、スポーツグループ内に 2 つのグループをネストすることが可能です。
+2 つ目のリンクセット（「`Blog`」で始まる）は、現在選択されているグループである「`Sports`」グループに属しています。 スポーツの `Groups` リンクを選択すると、スポーツグループ内に 2 つのグループをネストすることができます。
 
-例として、2 つを追加します `new groups`.
+例として、2 つの `new groups` を追加します。
 
-* という名前のもの `Baseball`
+* `Baseball` という名前
 
-   * として設定したままにする `Open Group` （必須メンバーシップ）。
-   * 「テンプレート」タブで、次を選択します。 `Conversational Group`.
+   * `Open Group` として設定したままにします（必須メンバーシップ）。
+   * 「テンプレート」タブで、「`Conversational Group`」を選択します。
 
-* という名前のもの `Gymnastics`
+* `Gymnastics` という名前
 
-   * 設定をに変更します。 `Member Only Group` （会員制限）
-   * 「テンプレート」タブで、次を選択します。 `Conversational Group`.
+   * 設定を `Member Only Group` （制限付きメンバーシップ）に変更します。
+   * 「テンプレート」タブで、「`Conversational Group`」を選択します。
 
-**注意**:
+**通知**:
 
 * 両方のグループが表示される前に、ページを更新する必要がある場合があります。
-* このテンプレート *ではない* groups 関数を含めると、グループをさらにネストすることはできません。
-* オーサー環境では、 [グループコンソール](/help/communities/groups.md) 3 つ目の選択肢として、 `Public Group` （任意メンバーシップ）。
+* このテンプレートには groups 関数が含まれて *ないので* グループをさらにネストすることはできません。
+* オーサー環境では、[ グループコンソール ](/help/communities/groups.md)3 つ目の選択肢として `Public Group` （オプションのメンバーシップ）が用意されています。
 
 両方のグループを作成したら、野球グループ、開いているグループを選択し、そのリンクに注目してください。
 
@@ -176,18 +176,18 @@ Aaron はグループ管理者なので、「グループ」リンクを選択�
 
 ![grouplink2](assets/grouplink2.png)
 
-オーサー環境で – 管理者権限で、に移動します。 [コミュニティグループコンソール](/help/communities/members.md) に Weston McCall を追加します。 `Community Engage Gymnastics <uid> Members` グループ。
+作成者の場合 – 管理者権限で [Communities グループコンソールに移動し ](/help/communities/members.md)Weston McCall を `Community Engage Gymnastics <uid> Members` グループに追加します。
 
 公開を続け、Aaron McDonald としてログアウトし、スポーツグループのグループを匿名サイト訪問者として表示します。
 
 * ホームページから
-* を選択 `Groups` リンク
-* を選択 `Sports` リンク
-* スポーツを選択&#39; `Groups` リンク
+* リンク `Groups` 選択
+* リンク `Sports` 選択
+* スポーツの `Groups` リンクを選択する
 
 野球グループのみが表示されます。
 
-Weston McCall （weston.mccall@dodgit.com/パスワード）としてログインし、同じ場所に移動します。 Weston が以下を実行できることに注意してください `Join` オープン `Baseball` とのグループ化 `enter or Leave` 私人 `Gymnastics` グループ。
+Weston McCall （weston.mccall@dodgit.com/パスワード）としてログインし、同じ場所に移動します。 Weston は、open `Baseball` グループと、private `Gymnastics` グループのどちらか `enter or Leave` も `Join` 定できます。
 
 ![grouplink3](assets/grouplink3.png)
 
@@ -195,13 +195,13 @@ Weston McCall （weston.mccall@dodgit.com/パスワード）としてログイ�
 
 「Web ページ」リンクを選択して、サイトに含まれている基本 Web ページを表示します。 オーサー環境でこのページにコンテンツを追加するには、標準のAEM オーサリングツールを使用できます。
 
-例えば、 **作成者** インスタンスで、を開きます `engage` フォルダーの場所 [コミュニティサイトコンソール](/help/communities/sites-console.md)を選択し、 **Open Site** アイコンをクリックして、オーサー編集モードに入ります。 次に、プレビューモードを選択して、 `Web Page` リンクをクリックし、「編集モード」を選択して、タイトルおよびテキスト コンポーネントを追加します。 最後に、ページのみ、またはサイト全体を再公開します。
+例えば、**オーサー** インスタンスに移動し、[Communities サイトコンソール ](/help/communities/sites-console.md) で `engage` フォルダーを開き、「**サイトを開く**」アイコンを選択してオーサー編集モードに入ります。 次に、プレビューモードを選択して `Web Page` リンクを選択し、編集モードを選択してタイトルおよびテキスト コンポーネントを追加します。 最後に、ページのみ、またはサイト全体を再公開します。
 
 ![webpagelink](assets/webpagelink.png)
 
 ### モデレートリンク {#moderationlink}
 
-コミュニティメンバーがモデレート権限を持っている場合は、「モデレート」リンクが表示されます。 リンクを選択すると、投稿されたコミュニティコンテンツが表示され、次の操作を実行できます [モデレート](/help/communities/moderate-ugc.md) ～と同様の方法で [モデレートコンソール](/help/communities/moderation.md) オーサー環境で実行します。
+コミュニティメンバーがモデレート権限を持っている場合は、「モデレート」リンクが表示されます。 リンクを選択すると、投稿されたコミュニティコンテンツが表示され、オーサー環境の [ モデレートコンソール ](/help/communities/moderate-ugc.md) と同様の方法でリンクを [ モデレート ](/help/communities/moderation.md) できます。
 
 ブラウザーの「戻る」ボタンを使用して、公開されたサイトに戻ります。 ほとんどのコンソールは、パブリッシュ環境のグローバルナビゲーションからアクセスできません。
 
@@ -214,15 +214,15 @@ Weston McCall （weston.mccall@dodgit.com/パスワード）としてログイ�
 * `Log In` を選択します。
 * `Sign up for a new account` を選択します。
 
-![登録](assets/registration.png)
+![ 登録 ](assets/registration.png)
 
-![登録](assets/signup.png)
+![ 登録 ](assets/signup.png)
 
 デフォルトでは、メールアドレスはログイン ID です。 これをオフにすると、訪問者は自分のログイン ID （ユーザー名）を入力できるようになります。 ユーザー名は、パブリッシュ環境で一意である必要があります。
 
-ユーザーの名前、メールおよびパスワードを指定した後、を選択します。 `Sign Up` ユーザーを作成し、署名できるようにします。
+ユーザーの名前、メールおよびパスワードを指定した後、`Sign Up` を選択すると、ユーザーが作成され、署名できるようになります。
 
-ログイン後、最初に表示されるページは次のとおりです `Profile` パーソナライズ可能なページ。
+ログイン後、最初に表示されるページは `Profile` ページです。このページをパーソナライズできます。
 
 ![profile](assets/profile.png)
 

@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3545'
 ht-degree: 100%
 
@@ -395,7 +395,7 @@ Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager �
 >* クラシック UI では、**Flash** と **FXG** も検索できます。タッチ操作向け UI では、これら 2 つの語句のフィルタリングはサポートされていません。
 >
 >* ビデオを検索するときは、単一のレンディションが検索されています。結果には、元のレンディション（&#42;.mp4 のみ）と、エンコードされたレンディションが返されます。
->* アダプティブビデオセットの検索では、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
+* アダプティブビデオセットの検索では、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
 >
 
 **公開ステータス** - 公開ステータス（非公開または公開済み）に基づいてアセットをフィルタリングできます。公開ステータスを選択しない場合、Experience Manager ではデフォルトですべての公開ステータスが検索されます。

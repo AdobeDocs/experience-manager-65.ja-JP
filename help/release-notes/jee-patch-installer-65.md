@@ -49,16 +49,16 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
    これにより、インストール手順を示すインストールウィザードが起動します。
 
-1. 最初のパネルで「**[!UICONTROL 次へ]**」をクリックします。
+1. 最初のパネルで&#x200B;**[!UICONTROL 次へ]**&#x200B;をクリックします。
 1. **インストールフォルダーを選択**&#x200B;画面で、表示されるデフォルトの場所が既存のインストール場所であることを確認するか、または「**[!UICONTROL 参照]**」をクリックして AEM Forms がインストールされている別のフォルダーを選択してから、「**[!UICONTROL 次へ]**」をクリックします。
 1. Quick Fix パッチの概要の情報を読み、「**[!UICONTROL 次へ]**」をクリックします。
-1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
-1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
+1. プリインストールの概要情報を読み、**[!UICONTROL インストール]**&#x200B;をクリックします。
+1. インストールが完了したら、**[!UICONTROL 次へ]**&#x200B;をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 
 1. **[Windows のみ]：**&#x200B;次の手順を実行します。
    * 「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。`[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
-   * または、「**Configuration Manager を起動**」オプションの選択を解除し、「**[!UICONTROL 完了]**」をクリックします。**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行する前に、*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、**ConfigurationManager.lax** と **ConfigurationManager_IPV6.lax** を最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルと [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルに置き換えて、これら 2 つのファイル内で **axis-1.4.1.1.jar** を検索し、**axis-1.4.1.2.jar** に置き換えます。
+   * または、**Configuration Manager を起動**&#x200B;オプションの選択を解除し、**[!UICONTROL 完了]**&#x200B;をクリックします。 **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行する前に、*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、**ConfigurationManager.lax** と **ConfigurationManager_IPV6.lax** を最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルと [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルに置き換えて、これら 2 つのファイル内で **axis-1.4.1.1.jar** を検索し、**axis-1.4.1.2.jar** に置き換えます。
 
    >[!NOTE]
    >

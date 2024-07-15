@@ -11,7 +11,7 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 84979bbb49d47ec47c898a6747f64048b577c365
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5409'
 ht-degree: 100%
 

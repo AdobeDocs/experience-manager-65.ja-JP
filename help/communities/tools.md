@@ -21,18 +21,18 @@ ht-degree: 3%
 
 Communities ツール コンソールにアクセスするには、オーサーインスタンスにログインします。
 
-* グローバルナビゲーションから： **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**.
+* グローバルナビゲーションから：**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**。
 
-  ![コミュニティ](assets/communities-home.png)
+  ![communities](assets/communities-home.png)
 
-* [サイトテンプレート](sites.md) - サイトテンプレートの作成と管理のコンソール。
+* [ サイトテンプレート ](sites.md) - サイトテンプレートの作成と管理のコンソール。
 
-* [グループテンプレート](tools-groups.md) - グループテンプレートの作成と管理のためのコンソール。
+* [ グループテンプレート ](tools-groups.md) - グループテンプレートの作成および管理のためのコンソール。
 
-* [コミュニティ機能](functions.md) - コミュニティ機能の作成と管理のためのコンソール。
+* [ コミュニティ機能 ](functions.md) - コミュニティ機能の作成と管理のためのコンソール。
 
-* [ストレージ設定](srp-config.md)  – の設定と選択のためのコンソール [デフォルト SRP](working-with-srp.md).
+* [ ストレージ設定 ](srp-config.md) - [ デフォルト SRP](working-with-srp.md) を設定および選択するためのコンソール。
 
-* [コンポーネントガイド](components-guide.md) - SCF コンポーネントの動作の仕組みと、その設定またはカスタマイズ方法を実験できるインタラクティブサイトを開きます。
+* [ コンポーネントガイド ](components-guide.md) - SCF コンポーネントの動作の仕組みと、その設定またはカスタマイズ方法を実験できるインタラクティブサイトを開きます。
 
-* [バッジ](badges.md) - カスタムバッジを追加してで使用できるコンソール [スコアおよびバッジルール](implementing-scoring.md)
+* [ バッジ ](badges.md) - カスタムバッジを [ スコアおよびバッジルールで使用するために追加できるコンソール ](implementing-scoring.md)

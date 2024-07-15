@@ -10,7 +10,7 @@ solution: "Experience Manager, Experience Manager Forms"
 role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 5723e9990969dff1b508062d69a68f68a20eb576
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 100%
 
@@ -49,7 +49,7 @@ CustomToolbarLayoutDemo.zip
 
 1. カスタムツールバーレイアウトを保持するフォルダーを作成します。例：
 
-   `/apps/customlayout/toolbar`
+   `/apps/customlayout/toolbar`。
 
    カスタムレイアウトを作成するには、次のフォルダーに用意されている既成のツールバーレイアウトの 1 つを使用（およびカスタマイズ）できます。
 

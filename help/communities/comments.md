@@ -25,8 +25,8 @@ ht-degree: 2%
 
 このドキュメントでは、次の内容について説明します。
 
-* 追加中 `Comments` をページに追加します。
-* の設定 `Comments` コンポーネント。
+* ページへの `Comments` の追加。
+* `Comments` コンポーネントの設定。
 
 >[!NOTE]
 >
@@ -34,25 +34,25 @@ ht-degree: 2%
 
 ### ページへのコメントの追加 {#adding-comments-to-a-page}
 
-を追加します `Comments` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます
+オーサーモードで `Comments` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して以下を見つけます
 
 * `Communities / Comments`
 
 そして、ユーザーがコメントできる機能に対する相対的な位置や、ページの下部などの、ページ上の場所にドラッグします。
 
-詳細については、 [Communities コンポーネントの基本](/help/communities/basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
 
-いつ [必要なクライアントサイドライブラリ](/help/communities/essentials-comments.md#essentials-for-client-side) が含まれる場合、このようにして `Comments` コンポーネントが表示されます。
+[ 必須のクライアントサイドライブラリ ](/help/communities/essentials-comments.md#essentials-for-client-side) が含まれると、`Comments` コンポーネントはこのように表示されます。
 
 ![comments-component](assets/comments-component.png)
 
 >[!NOTE]
 >
->1 つのみ `Comments` コンポーネントはページ上に存在する場合があります。 Communities のいくつかの機能には、ブログ、カレンダー、フォーラム、QnA、レビューなど、既にコメントが含まれています。
+>1 つのページに存在できる `Comments` コンポーネントは 1 つだけです。 Communities のいくつかの機能には、ブログ、カレンダー、フォーラム、QnA、レビューなど、既にコメントが含まれています。
 
 ### コメントの設定 {#configuring-comments}
 
-配置されたを選択します。 `Comments` にアクセスして選択するコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置した `Comments` コンポーネントを選択してアクセスし、「`Configure`」アイコンを選択すると、編集ダイアログが開きます。
 
 ![設定アイコン](assets/configure.png)
 
@@ -60,13 +60,13 @@ ht-degree: 2%
 
 #### 「コメント」タブ {#comments-tab}
 
-の下 **コメント** タブで、訪問者によるコメントの入力方法を指定します。
+「**コメント**」タブで、訪問者がコメントを入力する方法を指定します。
 
 * **返信を許可**
 
   オンにすると、メンバーは既存のコメントに返信できます。 デフォルトでは選択されていません。
 
-* **ページあたりのコメント数**
+* **1 ページあたりのコメント数**
 
   1 ページに表示されるコメントの数と表示される返信の数を制限します。 初期設定は 10 です。
 
@@ -74,7 +74,7 @@ ht-degree: 2%
 
   オンにすると、ファイルをアップロードするオプションがテキスト入力ボックスに表示されます。 デフォルトでは選択されていません。
 
-* **最大ファイル サイズ**
+* **最大ファイルサイズ**
 
   「ファイルのアップロードを許可」がオンの場合にのみ関連します。 この値は、アップロードされるファイルサイズを制限します。 デフォルトの制限は 10 MB です。
 
@@ -90,11 +90,11 @@ ht-degree: 2%
 
   オンにすると、コメントがマークアップ付きで入力されます。 デフォルトでは選択されていません。
 
-* **投票を許可**
+* **投票の許可**
 
   オンにした場合、投票の上下のオプションがテキスト入力ボックスに表示されます。 デフォルトでは選択されていません。
 
-* **フォローを許可**
+* **次の操作を許可**
 
   オンにすると、メンバーがコメントをフォローできるようになります。 デフォルトでは選択されていません。
 
@@ -104,9 +104,9 @@ ht-degree: 2%
 
 #### ユーザーモデレートタブ {#user-moderation-tab}
 
-の下 **ユーザーのモデレート** タブで、投稿されたコメントの管理方法を指定します。 詳しくは、を参照してください [ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md).
+「**ユーザーモデレート**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
 
-* **事前モデレート**
+* **プレモデレート**
 
   オンにした場合、コメントが公開サイトに表示される前に承認する必要があります。 デフォルトでは選択されていません。
 
@@ -118,7 +118,7 @@ ht-degree: 2%
 
   オンにした場合、モデレーターがコメントを拒否できます。 デフォルトでは選択されていません。
 
-* **コメントを閉じる/再オープン**
+* **コメントを閉じる/再度開く**
 
   オンにした場合、モデレーターがコメントを閉じて再度開くことを許可します。 デフォルトでは選択されていません。
 
@@ -126,7 +126,7 @@ ht-degree: 2%
 
   オンにすると、メンバーはコメントに不適切なフラグを付けることができます。 デフォルトでは選択されていません。
 
-* **フラグの理由リスト**
+* **フラグ理由リスト**
 
   オンにした場合、メンバーがドロップダウンリストからコメントに不適切なフラグを付けた理由を選択できます。 デフォルトでは選択されていません。
 
@@ -140,45 +140,45 @@ ht-degree: 2%
 
 * **フラグの上限**
 
-  パブリック ビューで非表示にされる前にコメントにフラグを付ける必要がある回数を入力します。 この数は、以上である必要があります **モデレートしきい値**. デフォルトは 5 です。
+  パブリック ビューで非表示にされる前にコメントにフラグを付ける必要がある回数を入力します。 この数は、**モデレートしきい値** 以上である必要があります。 デフォルトは 5 です。
 
 #### 「設定を並べ替え」タブ {#sort-settings-tab}
 
-の下 **並べ替え設定** タブで、投稿されたコメントが表示されるときの並べ替え方法を指定します。
+「**並べ替え設定**」タブで、投稿されたコメントが表示されるときの並べ替え方法を指定します。
 
 * **並べ替えフィールド**
 
-  プルダウンして次のいずれかを選択 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`、または `Most Liked`.
+  プルダウンして、`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed` または `Most Liked` のいずれかを選択します。
 
 * **並べ替え順序**
 
-  プルダウンして次のいずれかを選択 `Ascending` または `Descending`.
+  プルダウンして、`Ascending` または `Descending` のいずれかを選択します。
 
 ### カスタムコメントタイプへの変更 {#changing-to-a-custom-comment-type}
 
 コメントリソースタイプを変更すると、コメントシステムはデフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されたインスタンスを生成します。
 
-カスタムリソースタイプがわかったら、次のように入力します [デザインモード](/help/sites-authoring/default-components-designmode.md) 配置されたをダブルクリックします。 `Comments` コンポーネント：追加のタブを持つダイアログを開きます。
+カスタムリソースタイプが分かったら、[ デザインモード ](/help/sites-authoring/default-components-designmode.md) と入力し、配置した `Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
 
-の下 **リソースタイプ** タブで、の新しいインスタンスのカスタム resourceType を指定します。 `Comments or Voting` コンポーネント：
+「**リソースタイプ**」タブで、`Comments or Voting` のコンポーネントの新しいインスタンスのカスタム resourceType を指定します。
 
-![リソースタイプ](assets/resource-type.png)
+![ リソースタイプ ](assets/resource-type.png)
 
 * **コメントリソースタイプ**
 
-  拡張されたの resourceType に移動します `comment` /apps 内のコンポーネント（単一のコメント）。 例えば、`/apps/social/commons/components/hbs/comments/comment` のように指定します。
+  /apps 内の拡張 `comment` コンポーネントの resourceType （単一のコメント）に移動します。 例えば、`/apps/social/commons/components/hbs/comments/comment` のように指定します。
 
   このリソースは、訪問者がコメントを投稿する際に作成された UGC の resourceType を識別します。
 
-* **投票リソースタイプ**
+* **投票リソースの種類**
 
-  拡張されたの resourceType に移動します `voting` /apps 内のコンポーネント。 例えば、`/apps/social/components/hbs/voting` のように指定します。
+  /apps で拡張 `voting` コンポーネントの resourceType に移動します。 例えば、`/apps/social/components/hbs/voting` のように指定します。
 
   このリソースは、訪問者が投票を投稿する際に作成された UGC のリソースタイプを識別します。
 
-* **コメントシステムのリソースタイプ**
+* **コメントシステムリソースタイプ**
 
-  拡張されたの resourceType に移動します `comments`コンポーネント（コメントシステム）:/apps ページテンプレート以外は空白のままにします [動的に含める](/help/communities/scf.md#add-or-include-a-communities-component) ページにリソースとして追加されるのではなく、基になるスクリプトのコメントシステム（コメントノード）。 詳しくは、 [`{{include}}` helper](/help/communities/handlebars-helpers.md#include).
+  /apps 内の拡張 `comments` コンポーネント（コメントシステム）の resourceType に移動します。 ページテンプレートが、リソース（コメントノード ](/help/communities/scf.md#add-or-include-a-communities-component) としてページに追加されるのではなく、基になるスクリプトにコメントシステムを [ 動的に含める）場合を除き、空白のままにします。 詳しくは、[`{{include}}` helper](/help/communities/handlebars-helpers.md#include) を参照してください。
 
 ### サイト訪問者エクスペリエンス {#site-visitor-experience}
 
@@ -190,7 +190,7 @@ ht-degree: 2%
 
 サイト訪問者がログインすると、設定に応じて次の処理が行われます
 
-* 新しいコメントを投稿
+* 新しいコメントをPost
 * 自分のコメントを編集
 * 自分のコメントを削除
 * 他のユーザーのコメントにフラグを付ける
@@ -201,8 +201,8 @@ ht-degree: 2%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、 [コメントの基本事項](/help/communities/essentials-comments.md) 開発者向けのページです。
+詳しくは、開発者向けの [ コメントの初期設定 ](/help/communities/essentials-comments.md) ページを参照してください。
 
-投稿されたコメントのモデレートについては、次を参照してください [ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md).
+投稿されたコメントのモデレートについては、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
 
-投稿されたコメントの翻訳については、を参照してください [ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md).
+投稿されたコメントの翻訳については、[ ユーザー生成コンテンツの翻訳 ](/help/communities/translate-ugc.md) を参照してください。

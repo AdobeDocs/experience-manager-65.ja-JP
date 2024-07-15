@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4919'
 ht-degree: 100%
 

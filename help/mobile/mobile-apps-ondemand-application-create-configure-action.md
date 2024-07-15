@@ -32,18 +32,18 @@ ht-degree: 11%
 >
 >ダッシュボードは、アプリのコンテンツ、メタデータおよびAEM Mobile On-Demand 接続ステータスの概要を示す一連の便利なタイルです。
 >
->参照： [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
+>詳しくは、[AEM Mobile アプリケーションダッシュボード ](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
 **オンデマンドアプリを作成するには：**
 
-1. を選択 **モバイル** サイドパネルから。
-1. を選択 **アプリ** ナビゲーションから。
-1. クリック **作成** を選択して、 **アプリ** ドロップダウンから。
-1. モバイルアプリテンプレートを選択し、 **次**.
-1. 次のようなアプリプロパティを入力します **タイトル**, **名前**, **説明**.
+1. サイドパネルから **モバイル** を選択します。
+1. ナビゲーションから **アプリ** を選択します。
+1. **作成** をクリックし、ドロップダウンから **アプリ** を選択します。
+1. モバイルアプリテンプレートを選択して、「**次へ**」をクリックします。
+1. **タイトル**、**名前**、**説明** などのアプリのプロパティを入力します。
 1. 「**次へ**」をクリックします。
-1. 既知の場合は、クラウド設定の詳細を入力し、既知の場合は **作成**.
-1. クリック **完了** をクリックして、カタログに新しいAEM Mobile アプリを表示します。
+1. 既知の場合は、クラウド設定の詳細を入力し、既知の場合は **作成** をクリックします。
+1. 「**完了**」をクリックして、新しいAEM Mobile アプリをカタログに表示します。
 
 ![chlimage_1](assets/chlimage_1.gif)
 
@@ -60,17 +60,17 @@ ht-degree: 11%
 
 この機能を使用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートがインストールされたアプリ）が必要です。
 
-### 次のステップ {#the-next-step}
+### 次の手順 {#the-next-step}
 
 アプリケーションダッシュボードからオンデマンドアプリを作成したら、次にアプリをクラウド設定に関連付けます。
 
-参照： [クラウド設定へのアプリの関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
+詳しくは [ クラウド設定へのアプリの関連付け ](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
 
 ### 前に進む {#getting-ahead}
 
-オンデマンドアプリケーションの作成と、そのアプリケーションのクラウド設定への関連付けについて詳しくは、以下を参照してください [コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+オンデマンドアプリケーションの作成と、そのアプリケーションのクラウド設定への関連付けについて詳しくは、[ コンテンツ管理のアクション ](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md) を参照してください。
 
-**コンテンツ管理アクション** 以下のコンテンツの作成と管理が含まれます。
+**コンテンツ管理アクション** には、次のコンテンツの作成と管理が含まれます。
 
 * [記事の管理](/help/mobile/mobile-on-demand-managing-articles.md)
 * [バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)

@@ -6,7 +6,7 @@ exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 100%
 

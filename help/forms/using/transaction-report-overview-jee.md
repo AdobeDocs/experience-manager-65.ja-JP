@@ -26,15 +26,15 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 デフォルトでは、トランザクションの記録は無効になっています。 トランザクションレポートを有効にするには、次の手順を実行します。
 
-1. に移動します。 `/adminui` JEE 上のAEM Formsで、例： `http://10.14.18.10:8080/adminui`.
-1. ユーザーとしてログイン **管理者**.
-1. に移動 **設定** > **コアシステム設定** > **設定**.
-1. チェックボックスをクリック **トランザクションレポートの有効化** および **保存** 設定。
+1. JEE 上のAEM Formsの `/adminui` （例：`http://10.14.18.10:8080/adminui`）に移動します。
+1. **管理者** としてログインします。
+1. **設定**/**コアシステム設定**/**設定** に移動します。
+1. チェックボックスをクリックして **トランザクションレポートを有効** し **保存** 設定します。
 
    ![sample-transaction-report-jee](assets/enable-transaction-jee.png)
 
 1. サーバーを再起動します。
-1. サーバー上の変更とは別に、クライアント側では、 `adobe-livecycle-client.jar` ファイルをプロジェクトに保存します（同じを使用している場合）。
+1. サーバー上での変更の他に、クライアント側でも、プロジェクトで `adobe-livecycle-client.jar` ファイルを更新する必要があります（同じファイルを使用している場合）。
 
 <!--
 * You can [enable transaction recording](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) from AEM Web Console. view transaction reports on author, processing, or publish instances. View transaction reports on author or processing instances for an aggregated sum of all transactions. View transaction reports on the publish instances for a count of all transactions that take place only on that publish instance from where the report is run.
@@ -44,23 +44,23 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 ## トランザクションレポートの表示 {#view-transaction-report}
 
-トランザクションレポートを有効にすると、 [ダッシュボード経由のトランザクションレポート](#transaction-report-dashboard) および詳細 [ログファイルを介したトランザクションレポート](#transaction-report-logfile). 以下に、両方の説明を示します。
+トランザクションレポートを有効にすると、[ ダッシュボードを使用したトランザクションレポート ](#transaction-report-dashboard) および詳細な [ ログファイルを使用したトランザクションレポート ](#transaction-report-logfile) から、トランザクション数に関する情報にアクセスできるようになります。 以下に、両方の説明を示します。
 
 ### ダッシュボードを介したトランザクションレポート {#transaction-report-dashboard}
 
 ダッシュボードを使用したトランザクションレポートでは、トランザクションタイプごとにトランザクション数の合計数が表示されます。 例えば、画像に示すように、レンダリング、変換および送信されたフォームの合計数に関する情報を取得します。 トランザクションレポートを取得するには：
 
-1. に移動します。 `/adminui` JEE 上のAEM Formsの例： `http://10.13.15.08:8080/adminui`.
-1. ユーザーとしてログイン **管理者**.
+1. JEE 上のAEM Formsの `/adminui` （例：`http://10.13.15.08:8080/adminui`）に移動します。
+1. **管理者** としてログインします。
 1. [ ヘルスモニタ ] をクリックします。
-1. に移動します。 **トランザクションレポーター** タブ、クリック **合計トランザクションの計算**&#x200B;円グラフが、送信、レンダリング、変換されたPDF formsの数を表していることがわかります。
+1. 「**Transaction Reporter**」タブに移動し、「**Calculate Total Transactions**」をクリックします。これで、円グラフが送信、レンダリング、変換されたPDF formsの数を表していることがわかります。
 
 ![sample-transaction-report-jee](assets/transaction-piechart.png)
 
 
 ### ログファイルを介したトランザクションレポート {#transaction-report-logfile}
 
-ログファイルを介したトランザクションレポートには、各トランザクションに関する詳細情報が提供されます。 トランザクションログにアクセスするには、サーバー起動に対するコンテキストパスに従います。 トランザクションは別のログファイルに記録されます `transaction_log.log` デフォルトでは。 この **ファイルパス** は、サーバー開始コンテキストを基準とした相対パスです。 各種サーバーのデフォルトパスを以下に示します。
+ログファイルを介したトランザクションレポートには、各トランザクションに関する詳細情報が提供されます。 トランザクションログにアクセスするには、サーバー起動に対するコンテキストパスに従います。 トランザクションは、デフォルトでは別のログファイル `transaction_log.log` に取り込まれます。 **ファイルパス** は、サーバー開始コンテキストを基準とした相対パスです。 各種サーバーのデフォルトパスを以下に示します。
 
 ```
 For Jboss Turnkey:
@@ -97,16 +97,16 @@ TransactionRecord
 }
 ```
 
-* **サービス**：サービスの名前。
-* **操作**：操作名。
+* **service**: サービスの名前。
+* **operation**：操作名。
 * **internalService**：内部呼び出しがある場合は呼び出し先の名前、それ以外の場合はサービス名と同じ。
-* **internalOperations**：内部呼び出しがある呼び出し先の名前。それ以外の場合は、操作名と同じです。
+* **internalOperation**：内部呼び出しがある呼び出し先の名前。それ以外の場合は、操作名と同じです。
 * **transactionOperationType**：トランザクションのタイプ（送信、レンダリング、変換）。
 * **transactionCount**：トランザクションの合計数。
 * **elapsedTime**：呼び出しの開始から応答の受信までの時間。
-* **transactionDate**：サービスが呼び出された日時を示すタイムスタンプ。
+* **transactionDate**: サービスがいつ呼び出されたかを示すタイムスタンプ。
 
-**トランザクションログのサンプル**:
+**サンプル トランザクション ログ**:
 
 ```
 [2024-02-14 14:23:25] [INFO] TransactionRecord
@@ -128,9 +128,9 @@ TransactionRecord
 
 トランザクションの記録頻度は、正常に送信、レンダリング、変換された各フォームに対するサーバー上の更新操作によって決まります。
 
-* 対象： **dashboard**。トランザクション数は定期的に更新されます。デフォルトは 1 分に設定されています。 頻度を更新するには、でシステムプロパティを設定します。 `"com.adobe.idp.dsc.transaction.recordFrequency"`. 例えば、JBoss® の JEE 用AEM Formsでは、次を追加します `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` 。対象： `JAVA_OPTS` をクリックして、更新頻度を 5 分に設定します。
+* **ダッシュボード** では、トランザクション数は定期的に更新されます。デフォルトは 1 分に設定されています。 頻度を更新するには、`"com.adobe.idp.dsc.transaction.recordFrequency"` でシステムプロパティを設定します。 例えば、JBoss® 上の JEE のAEM Formsでは、`JAVA_OPTS` に `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` を追加して、更新頻度を 5 分に設定します。
 
-* 対象： **トランザクションログ**&#x200B;の場合、フォームが正常に送信、レンダリングまたは変換されると、各トランザクションの更新が即座に行われます。
+* **トランザクションログ** では、フォームが正常に送信、レンダリング、変換されると、各トランザクションの更新が即座に行われます。
 
 <!-- A transaction remains in the buffer for a specified period (Flush Buffer time + Reverse replication time). By default, it takes approximately 90 seconds for the transaction count to reflect in the transaction report.
 

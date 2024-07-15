@@ -12,7 +12,7 @@ role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6663'
 ht-degree: 100%
 

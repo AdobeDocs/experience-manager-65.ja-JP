@@ -26,7 +26,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、 [AEM Mobile アプリの設計に関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) オンライン ヘルプで表示します。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) を参照してください。
 
 >[!CAUTION]
 >
@@ -36,20 +36,20 @@ ht-degree: 12%
 
 通常、記事などのコンテンツは、すべての作成者やアプリで同じルックアンドフィールを持つ必要があります。 したがって、スクリプト、CSS、フォントをすべてのユーザーが利用できるようにする必要があります。 この操作により、このような共有リソースが Mobile On-Demand に送信され、必要に応じて消費できます。
 
-アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。 アプリをクラウド設定に関連付ける手順について詳しくは、 [こちら](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md).
+アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。 アプリをクラウド設定に関連付ける手順について詳しくは、[ こちら ](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md) をクリックしてください。
 
 >[!NOTE]
 >
->共有リソースは、ContentSync を使用して、すべての異なるリソースを収集します。 参照： [ContentSync を使用したモバイル](/help/mobile/mobile-ondemand-contentsync.md) を参照してください。
+>共有リソースは、ContentSync を使用して、すべての異なるリソースを収集します。 詳しくは、[ コンテンツ同期を使用したモバイル ](/help/mobile/mobile-ondemand-contentsync.md) を参照してください。
 
 記事用の共有リソースをアップロードするには、次の手順に従います。
 
-1. 記事を次から選択 **記事の管理** タイル。
-1. クリック **共有リソースのアップロード** で共有HTMLリソースをアップロードします。
+1. **記事を管理** タイルから記事を選択します。
+1. **共有リソースをアップロード** をクリックして、共有HTMLリソースをアップロードします。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
-### 次のステップ {#the-next-step}
+### 次の手順 {#the-next-step}
 
 コンテンツの作成と公開について理解したら、次を参照してください。
 

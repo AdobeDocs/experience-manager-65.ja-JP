@@ -20,21 +20,21 @@ ht-degree: 3%
 
 AEM 6.1 Communities の場合、サンプルページを作成する最も簡単な方法は、Page 関数だけで構成されるシンプルなコミュニティサイトを作成することです。
 
-これには parsys コンポーネントが含まれるので、次のことができます [オーサリング用コンポーネントを有効にする](basics.md#accessing-communities-components).
+これには parsys コンポーネントが含まれるので、このコンポーネントを [ オーサリング用に有効にする ](basics.md#accessing-communities-components) ことができます。
 
-サンプルコンポーネントを使用した探索のもう 1 つのオプションは、 [コミュニティコンポーネントガイド](components-guide.md).
+サンプルコンポーネントを使用した探索のもう 1 つのオプションは、[ コミュニティコンポーネントガイド ](components-guide.md) に記載されている機能を使用することです。
 
 ## コミュニティサイトの作成 {#create-a-community-site}
 
-これは、で説明しているサイトの作成に似ています。 [AEM Communitiesの概要](getting-started.md).
+これは、[AEM Communitiesの基本を学ぶ ](getting-started.md) で説明されているサイトの作成に似ています。
 
-主な違いは、このチュートリアルでは以下のみを含んだコミュニティサイトテンプレートを作成する点です [ページ関数](functions.md#page-function) 簡単なコミュニティサイトを作成します。 他の機能（すべてのコミュニティサイトに不可欠な有線機能を除く）は含まれません。
+主な違いは、このチュートリアルでは、単純なコミュニティサイトを作成するための [ ページ関数 ](functions.md#page-function) のみを含むコミュニティサイトテンプレートを作成する点です。 他の機能（すべてのコミュニティサイトに不可欠な有線機能を除く）は含まれません。
 
 ### 新しいサイトテンプレートの作成 {#create-new-site-template}
 
-開始するには、シンプルなを作成します [コミュニティサイトテンプレート](sites.md).
+開始するには、シンプルな [ コミュニティサイトテンプレート ](sites.md) を作成します。
 
-オーサーインスタンスのグローバルナビゲーションで、次の項目を選択します **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL サイトテンプレート]**.
+オーサーインスタンスのグローバルナビゲーションで、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL サイトテンプレート]** を選択します。
 
 ![create-site-template](assets/create-site-template1.png)
 
@@ -42,14 +42,14 @@ AEM 6.1 Communities の場合、サンプルページを作成する最も簡単
 * 基本情報
 
    * `Name`：単一ページテンプレート
-   * `Description`：単一のページ関数で構成されるテンプレート。
+   * `Description`：単一の Page 関数で構成されるテンプレート。
    * `Enabled` を選択します。
 
 ![site-template-editor](assets/site-template-editor.png)
 
 * 構造
 
-   * ドラッグ `Page` テンプレートビルダーに対する関数
+   * `Page` 関数をテンプレートビルダーにドラッグ
    * 「構成機能の詳細」で、次のように入力します
 
       * `Title`：単一ページ
@@ -57,30 +57,30 @@ AEM 6.1 Communities の場合、サンプルページを作成する最も簡単
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 
-* を選択 **`Save`** 設定の
-* を選択 **`Save`** サイトテンプレート用
+* 設定する **`Save`** を選択します
+* サイトテンプレートの **`Save`** を選択
 
 ### 新しいコミュニティサイトを作成 {#create-new-community-site}
 
 次に、シンプルなサイトテンプレートに基づいてコミュニティサイトを作成します。
 
-サイトテンプレートを作成したら、グローバルナビゲーションから「」を選択します。 **[!UICONTROL コミュニティ / サイト]**.
+サイトテンプレートを作成したら、グローバルナビゲーションから **[!UICONTROL Communities/サイト]** を選択します。
 
 ![create-community-site](assets/create-community-site1.png)
 
-* を選択 **`Create`** アイコン
+* アイコン **`Create`** 選択
 
 * ステップ `1 - Site Template`
 
    * `Title`：シンプルなコミュニティサイト
-   * `Description`：実験のための単一のページで構成されるコミュニティサイト。
+   * `Description`：実験のための単一ページで構成されるコミュニティサイト。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`：サンプル
+   * `Name`: サンプル
 
       * url = http://localhost:4502/content/sites/sample
 
-      * `Template`：を選択 `Single Page Template`
+      * `Template`: `Single Page Template` を選択
 
      ![create-community-site-template](assets/create-community-site-template.png)
 
@@ -98,11 +98,11 @@ AEM 6.1 Communities の場合、サンプルページを作成する最も簡単
 
   ![create-community-site](assets/create-community-site.png)
 
-## サイトの公開 {#publish-the-site}
+## サイトのPublish {#publish-the-site}
 
 ![publish-site](assets/publish-site.png)
 
-から [コミュニティサイトコンソール](sites-console.md)を選択します。デフォルトでは、「公開」アイコンでhttp://localhost:4503にサイトを公開します。
+[ コミュニティサイトコンソール ](sites-console.md) から、公開アイコンを選択して、サイトを公開します（デフォルトではhttp://localhost:4503）。
 
 ## オーサー環境で編集モードでサイトを開きます {#open-the-site-on-author-in-edit-mode}
 
@@ -110,12 +110,12 @@ AEM 6.1 Communities の場合、サンプルページを作成する最も簡単
 
 「サイトを開く」アイコンを選択して、編集モードでサイトを表示します。
 
-URL はです [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
+URL は [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html) です
 
 ![author-site](assets/author-site.png)
 
 シンプルなホームページでは、コミュニティの機能やテンプレートをあらかじめ組み込んでいるものを確認したり、コミュニティコンポーネントを追加したり設定したりすることができます。
 
-## 公開時にサイトを表示 {#view-site-on-publish}
+## Publishでサイトを表示 {#view-site-on-publish}
 
-ページを公開した後、 [パブリッシュインスタンス](http://localhost:4503/content/sites/sample/en.html) 匿名サイト訪問者、ログインメンバー、管理者などの機能を試すことができます。 オーサー環境に表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。
+ページを公開したら、[ パブリッシュインスタンス ](http://localhost:4503/content/sites/sample/en.html) 上のページを開いて、匿名サイト訪問者、ログインメンバー、管理者などの機能を試します。 オーサー環境に表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。

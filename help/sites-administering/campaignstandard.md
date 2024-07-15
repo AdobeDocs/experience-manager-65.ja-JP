@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 100%
 
@@ -202,7 +202,7 @@ Externalizer が設定され、Adobe Campaign がコンテンツにアクセス�
 
 >[!NOTE]
 >
->パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
+パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
 
 ## AEM での campaign-remote ユーザーを設定 {#campaign-remote-user}
 

@@ -7,7 +7,7 @@ content-type: reference
 topic-tags: site-features
 docset: aem65
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 100%
 

@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 100%
 
@@ -115,7 +115,7 @@ JSONP ストアは他のストアと同じですが、別のドメインから�
 
 >[!NOTE]
 >
->訪問したページに表示される DAM アセットに設定されているタグはカウントされません。
+訪問したページに表示される DAM アセットに設定されているタグはカウントされません。
 
 **Technographics ストア**：このコンポーネントは、インストール環境によって異なります。
 
@@ -127,7 +127,7 @@ JSONP ストアは他のストアと同じですが、別のドメインから�
 
 >[!NOTE]
 >
->ページデータは、ClientContext のデフォルトのコンポーネントではなくなりました。必要に応じて、ClientContext を編集し、**汎用ストアのプロパティ**&#x200B;コンポーネントを追加して、**ストア**&#x200B;を `pagedata` として定義するように設定することにより、ページデータを追加できます。
+ページデータは、ClientContext のデフォルトのコンポーネントではなくなりました。必要に応じて、ClientContext を編集し、**汎用ストアのプロパティ**&#x200B;コンポーネントを追加して、**ストア**&#x200B;を `pagedata` として定義するように設定することにより、ページデータを追加できます。
 
 ## クライアントコンテキストプロファイルの変更 {#changing-the-client-context-profile}
 

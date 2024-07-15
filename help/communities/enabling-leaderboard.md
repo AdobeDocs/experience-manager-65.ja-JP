@@ -21,32 +21,32 @@ ht-degree: 3%
 
 ## はじめに {#introduction}
 
-この `Leaderboard` コンポーネントは、獲得したポイント（基本スコアリング）または専門知識（高度なスコアリング）に従ってメンバーをランキングすることで、メンバーがコミュニティ内でどのように相互作用しているかを把握するのに役立ちます。
+`Leaderboard` コンポーネントは、獲得したポイント（基本スコアリング）または専門知識（高度なスコアリング）に従ってメンバーをランキングすることで、メンバーがコミュニティ内でどのように相互作用しているかを把握するのに役立ちます。
 
-ページにリーダーボードコンポーネントを含める前に、を設定する必要があります [コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md).
+リーダーボードコンポーネントをページに含める前に、[ コミュニティのスコアとバッジ ](/help/communities/implementing-scoring.md) を設定する必要があります。
 
 ドキュメントのこの節では、以下について説明します。
 
-* の追加 `Leaderboard` コンポーネントからへ [コミュニティサイト](/help/communities/overview.md#community-sites).
-* の設定 `Leaderboard` コンポーネント。
+* `Leaderboard` コンポーネントを [ コミュニティサイト ](/help/communities/overview.md#community-sites) に追加します。
+* `Leaderboard` コンポーネントの設定。
 
 ### ページへのリーダーボードの追加 {#adding-a-leaderboard-to-a-page}
 
-を追加します `Leaderboard` オーサーモードのページへのコンポーネントの移動
+オーサーモードで `Leaderboard` コンポーネントをページに追加するには、コンポーネントを見つけます
 
 * `Communities / Leaderboard`
 
 そして、ページ上の場所にドラッグします。
 
-詳細については、 [Communities コンポーネントの基本](/help/communities/basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
 
 コミュニティサイトのページに初めて配置すると、コンポーネントは次のように表示されます。
 
-![leaderboard](assets/leaderboard.png)
+![ リーダーボード ](assets/leaderboard.png)
 
 ### リーダーボードの設定 {#configuring-leaderboard}
 
-配置されたを選択します。 `Leaderboard` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置された `Leaderboard` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
 ![configure-new](assets/configure-new.png)
 
@@ -54,12 +54,12 @@ ht-degree: 3%
 
 #### 「設定」タブ {#settings-tab}
 
-の下 **[!UICONTROL 設定]** タブで、メンバーに関連する表示される情報を指定します。
+「**[!UICONTROL 設定]**」タブで、メンバーに関連する表示される情報を指定します。
 
 * **表示名**
 
   バッジおよびスコアの表示に選択したルールを反映した、ボードに表示するわかりやすい名前。
-デフォルトは `Leaderboard` 何も入力されていない場合。
+何も入力しない場合、デフォルトは `Leaderboard` です。
 
 * **バッジ**
 
@@ -78,7 +78,7 @@ ht-degree: 3%
 
 #### 「ルール」タブ {#rules-tab}
 
-の下 **ルール** タブ、コミュニティサイト、およびそのスコアとバッジルール
+「**ルール**」タブの下のコミュニティサイトと、そのスコアおよびバッジルール
 
 * **ルールの場所**
 
@@ -92,7 +92,7 @@ ht-degree: 3%
 
   （必須）表示するバッジを生成する特定のルール。
 
-* **表示の制限**
+* **表示制限**
 
   ページごとに表示するメンバーの数。 初期設定は 10 です。
 
@@ -118,7 +118,7 @@ ht-degree: 3%
    * バッジルール = `/libs/settings/community/badging/rules//reference-badging`
    * 表示制限= `10`
 
-![参加者リーダーボード](assets/participants-leaderboard.png)
+![ 参加者リーダーボード ](assets/participants-leaderboard.png)
 
 ### 例：エキスパートリーダーボード {#example-experts-leaderboard}
 
@@ -141,10 +141,10 @@ ht-degree: 3%
    * バッジルール = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 表示制限= `10`
 
-![エキスパートリーダーボード](assets/experts-leaderboard.png)
+![experts-leaderboard](assets/experts-leaderboard.png)
 
 ### 追加情報 {#additional-information}
 
-詳しくは、 [リーダーボードの基本事項](/help/communities/leaderboard.md) 開発者向けのページです。
+詳しくは、開発者向けの [ リーダーボードの初期設定 ](/help/communities/leaderboard.md) ページを参照してください。
 
-ルールを作成する手順は、次のとおりです [コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md) 管理者向けのページです。
+ルールの作成手順については、管理者向けの [ コミュニティのスコアとバッジ ](/help/communities/implementing-scoring.md) ページを参照してください。

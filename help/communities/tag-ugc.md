@@ -38,11 +38,11 @@ ht-degree: 9%
 
 ## タグの管理 {#administering-tags}
 
-参照： [タグの管理](../../help/sites-administering/tags.md#tagging-console) タグ名前空間および分類の作成および管理の場合。
+タグ名前空間と分類の作成と管理については、[ タグの管理 ](../../help/sites-administering/tags.md#tagging-console) を参照してください。
 
-参照： [タグの基本事項](tag.md) 開発者向け情報
+開発者向け情報については、[ タグの基本事項 ](tag.md) を参照してください。
 
-参照： [Social タグクラウドの使用](tagcloud.md) 適用されたタグを使用して投稿された UGC を簡単に検索できるように、ページにソーシャルタグクラウドコンポーネントを追加するため。
+適用されたタグを使用して投稿済み UGC を簡単に検索できるようにソーシャルタグクラウドコンポーネントをページに追加する方法については、[ ソーシャルタグクラウドの使用 ](tagcloud.md) を参照してください。
 
 ### タグの権限 {#tag-permissions}
 
@@ -50,8 +50,8 @@ ht-degree: 9%
 
 タグはパブリッシュ環境の UGC に適用されるので、コミュニティメンバーが適用するタグを選択できるようにするには、読み取り権限を有効にする必要があります。
 
-参照： [タグの権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions).
+[ タグ権限の設定 ](../../help/sites-administering/tags.md#setting-tag-permissions) を参照してください。
 
-管理者が読み取り権限を適用した場合に CRXDE で表示される方法を以下に示します `/etc/tag/discussions` グループ用 `Community Engage Members`.
+管理者がグループ `Community Engage Members` の `/etc/tag/discussions` に読み取り権限を適用した場合、CRXDE での表示は次のようになります。
 
 ![tag-permissions](assets/tag-permissions.png)

@@ -22,7 +22,7 @@ ht-degree: 7%
 
 Adobe Experience Manager（AEM） Communities のドキュメントのこの節は、次の機能に追加されています。
 
-* [Apache Maven を使用したAEM プロジェクトの構築](../../help/sites-developing/ht-projects-maven.md).
+* [Apache Maven を使用したAEM プロジェクトの構築 ](../../help/sites-developing/ht-projects-maven.md)。
 
 個々のアーティファクトを置き換える「uber」アーティファクトは 1 つだけです。
 
@@ -34,7 +34,7 @@ Adobe Experience Manager（AEM） Communities のドキュメントのこの節�
 >
 >最新の Communities リリースに関する最新情報を入手してください。
 >
->を参照してください。 [最新リリース](deploy-communities.md#latest-releases) 最新のバージョンを識別できるセクションです。
+>最新のバージョンを特定できる [ 最新リリース ](deploy-communities.md#latest-releases) の節を参照してください。
 
 ## Maven 依存関係の例 {#maven-dependency-example}
 
@@ -49,7 +49,7 @@ Adobe Experience Manager（AEM） Communities のドキュメントのこの節�
 
 >[!NOTE]
 >
->を参照してください。 [AEM Uber jar リポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) 最新の Uber jar アーティファクトを特定できます。
+>最新の Uber Jar アーティファクトを特定できる ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)[AEM Uber Jar リポジトリを参照してください。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

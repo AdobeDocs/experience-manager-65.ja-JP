@@ -29,9 +29,9 @@ ht-degree: 3%
 
 ## HBS スクリプトの変更 {#modify-the-hbs-scripts}
 
-使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用：
 
-* 開く [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs) を開きます。
 
    * コメント投稿のアバターを含むタグをコメントアウトします（21 行目まで）。
 
@@ -41,7 +41,7 @@ ht-degree: 3%
         -->
      ```
 
-* 開く [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs) を開きます。
 
    * 次のコメントエントリのアバターを含むタグをコメントアウトします（44 行目まで）。
 
@@ -51,7 +51,7 @@ ht-degree: 3%
         -->
      ```
 
-* を選択 **すべて保存**
+* 「**すべて保存**」を選択します。
 
 ### カスタムアプリをレプリケート {#replicate-custom-app}
 
@@ -61,15 +61,15 @@ ht-degree: 3%
 
 * メインメニューから
 
-   * を選択 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL 複製]**.
-   * を選択 **[!UICONTROL ツリーのアクティベート]**.
-   * を設定 `Start Path` 対象： `/apps/custom`.
-   * 選択を解除 **[!UICONTROL 変更済みのみ]**.
-   * を選択 **[!UICONTROL Activate]** ボタン。
+   * **[!UICONTROL ツール]**/**[!UICONTROL オペレーション]**/**[!UICONTROL レプリケーション]** を選択します。
+   * 「**[!UICONTROL ツリーをアクティベート]**」を選択します。
+   * `Start Path` を `/apps/custom` に設定します。
+   * 「**[!UICONTROL 変更済みのみ]**」の選択を解除します。
+   * 「**[!UICONTROL アクティベート]**」ボタンを選択します。
 
 ### 公開されたサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
-[エクスペリエンスの継続](/help/communities/extend-sample-page.md#publish-sample-page) 同じユーザーとしてログインしているパブリッシュインスタンスで、パブリッシュ環境のページを更新して、変更を表示し、アバターを削除できるようになりました。
+[ エクスペリエンスを継続 ](/help/communities/extend-sample-page.md#publish-sample-page) し、同じユーザーとしてログインしているパブリッシュインスタンスで、パブリッシュ環境のページを更新して、変更を表示し、アバターを削除できるようになりました。
 
 ![view-modified-content](assets/view-modified-content.png)
 
@@ -77,4 +77,4 @@ ht-degree: 3%
 
 このチュートリアルで作成したカスタムコメントアプリケーションのパッケージを添付しました。
 
-[ファイルを入手](assets/sample-comment-extension-6-1-fp3.zip)
+[ファイルの取得](assets/sample-comment-extension-6-1-fp3.zip)

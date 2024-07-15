@@ -12,7 +12,7 @@ exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: cbf8a5ac22049b3372a8282b9c061d7abeacc5dc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 100%
 

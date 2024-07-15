@@ -11,7 +11,7 @@ exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Asset Management,Renditions
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 100%
 

@@ -1,6 +1,6 @@
 ---
 title: モバイルクイックスタート
-description: AEM Verify アプリについては、このページを参照してください。 AEM Verify アプリを使用すると、iOSまたは Android モバイルデバイスでAEM モバイルアプリケーションをすばやく簡単に実行できます。
+description: AEM Verify アプリについては、このページを参照してください。 AEM Verify アプリを使用すると、iOSまたはAndroidのモバイルデバイスでAEM モバイルアプリケーションをすばやく簡単に実行できます。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -26,4 +26,4 @@ ht-degree: 31%
 
 >[!CAUTION]
 >
->AEM Verify アプリは非推奨（廃止予定）となりました。 アプリがApple AppStore および Android PlayStore から削除されました。
+>AEM Verify アプリは非推奨（廃止予定）となりました。 アプリがApple AppStore およびAndroid PlayStore から削除されました。

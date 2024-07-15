@@ -1,6 +1,6 @@
 ---
 title: Java&trade; パッケージ名の命名規則
-description: Java&trade; パッケージ名の命名規則とハイフンの使用について説明します。
+description: Java&trade; パッケージ名での命名規則とハイフンの使用について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -24,8 +24,8 @@ Java™ クラスの場所を作成する場合、パッケージ名は、リポ
 
 AEMの開発では、リポジトリ項目の名前にハイフンを使用することが推奨されますが、ハイフンは Java™ パッケージ名では無効です。
 
-基盤の CRX プラットフォームでは、実際のアンダースコアを区別できる必要があります `_ `およびハイフン `-`. したがって、JCR では、ハイフンを Unicode 値（u002d）に置き換え、アンダースコアでエスケープする必要があります `_`.
+基になるCRX プラットフォームでは、実際のアンダースコア `_ ` とハイフン `-` を区別できる必要があります。 したがって、JCR では、ハイフンを Unicode 値（u002d）に置き換え、アンダースコア `_` でエスケープする必要があります。
 
-例えば、リポジトリーパスがの場合 **/apps/my-example/component/info/Info.java**&#x200B;の場合、パッケージ名はにします `java package apps.my_002dexample.component.info;`
+例えば、リポジトリーパスが **/apps/my-example/component/info/Info.java** の場合、パッケージ名は `java package apps.my_002dexample.component.info;` にする必要があります
 
-アンダースコアも同様に、次のようにエスケープする必要があります。 `_` になり `_005f`.
+アンダースコアも同様にエスケープする必要があるので、`_` が `_005f` になります。

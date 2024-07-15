@@ -11,7 +11,7 @@ feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: ee596672-b0b5-42e9-a139-72f90287bf3b
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 100%
 

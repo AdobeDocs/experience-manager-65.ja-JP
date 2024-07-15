@@ -26,11 +26,11 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、 [AEM Mobile アプリの設計に関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) オンライン ヘルプで表示します。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
 
 ## コンテンツの公開/非公開 {#publishing-unpublishing-the-content}
 
-これは、「AEM パブリッシュ」とは異なります。 コンテンツを公開するために、AEM パブリッシュサーバーインスタンスにコンテンツをプッシュしているわけではありません。 ここでは、選択したコンテンツをライブの Mobile On-Demand アプリ内で公開する必要があることを Mobile On-Demand に通知しています。
+これは、「AEM Publish」とは異なります。 コンテンツを公開するために、AEM Publish サーバーインスタンスにコンテンツをプッシュしているわけではありません。 ここでは、選択したコンテンツをライブの Mobile On-Demand アプリ内で公開する必要があることを Mobile On-Demand に通知しています。
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ ht-degree: 11%
 1. モバイルから、カタログのモバイルオンデマンドアプリを選択します。
 1. 記事を選択します。
 1. 必要に応じて、リスト表示から記事を追加します。
-1. アクションバーの「公開」を選択します。 しばらくすると、記事が公開されます。
+1. アクションバーから「Publish」を選択します。 しばらくすると、記事が公開されます。
 1. 上記と同じ手順を使用して、公開記事を非公開にします。
 
 <!-- FAIL >>[!NOTE]
@@ -57,4 +57,4 @@ ht-degree: 11%
 * [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)
 
-オーサリングのトピックの詳細については、を参照してください [AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md).
+オーサリングに関するトピックについて詳しくは、「[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング ](/help/mobile/mobile-apps-ondemand.md)」を参照してください。

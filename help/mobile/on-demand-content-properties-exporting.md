@@ -22,13 +22,13 @@ ht-degree: 15%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-アプリは次のように表されます *cq:Pages* をAEMで行います。
+アプリは、AEMでは *cq:Pages* として表されます。
 
-共通のプロパティは次のとおりです *cq:Page* 統合をサポートするプロパティを表す以下のプロパティに加えて、
+これらは、以下に示す統合サポートプロパティを表す他のプロパティに加えて、任意の *cq:Page* で見つかるのと同じ共通プロパティを共有します。
 
 ## アプリのプロパティ {#app-properties}
 
-次の表に示します **アプリのプロパティとノード**.
+次の表に、**アプリのプロパティとノード** を示します。
 
 <table>
  <tbody>
@@ -45,7 +45,7 @@ ht-degree: 15%
   <tr>
    <td>dps-exportTemplate</td>
    <td>String:Path</td>
-   <td><p>アプリの書き出し設定のパス。 エクスポート設定は、2 つの子 ContentSync エクスポート設定テンプレートを含むフォルダーです。</p> <p><i>dps-article</i>：記事のコンテンツをエクスポートするための ContentSync エクスポート設定</p> <p><i>dps-HTMLResources</i>：アプリ/記事の共有リソースをエクスポートするための ContentSync エクスポート設定</p> </td>
+   <td><p>アプリの書き出し設定のパス。 エクスポート設定は、2 つの子 ContentSync エクスポート設定テンプレートを含むフォルダーです。</p> <p><i>dps-article</i>：記事のコンテンツをエクスポートする ContentSync エクスポート設定</p> <p><i>dps-HTMLResources</i>：アプリ/記事の共有リソースを書き出すための ContentSync 書き出し設定</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
@@ -80,12 +80,12 @@ ht-degree: 15%
   <tr>
    <td>sling:resourceType</td>
    <td>String:Path</td>
-   <td><p>または拡張される cq:Component へのパス <i>mobileapps/core/components/instance です。</i></p> <p>これにより、アプリカタログにプレゼンスとレンダリングが提供されます。</p> </td>
+   <td><p><i>mobileapps/core/components/instance.</i> である、または拡張する cq:Component のパス</p> <p>これにより、アプリカタログにプレゼンスとレンダリングが提供されます。</p> </td>
   </tr>
  </tbody>
 </table>
 
-次を使用できます ***コンテンツのプロパティ*** コンテンツを作成します。 記事および共有リソースの作成と書き出しについては、次のリソースを参照してください。
+***コンテンツのプロパティ*** を使用してコンテンツを作成できます。 記事および共有リソースの作成と書き出しについては、次のリソースを参照してください。
 
 * [コンテンツのプロパティ](/help/mobile/content-properties.md)
 * [記事のエクスポート設定の作成](/help/mobile/creating-article-export-configuration.md)

@@ -11,7 +11,7 @@ role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2274'
 ht-degree: 100%
 
@@ -44,7 +44,7 @@ ht-degree: 100%
 
 ‡ ベストプラクティスは、重複するアセットをセットに含めないことです。1 つのアセットに対する重複は 20 個までに制限されます。そのアセットに別の重複を追加した場合は、そのセット内で、リクエストがエラーを表示するか、重複を無視します。
 
-[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
+詳しくは、[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 
 ## クイックスタート：画像セット {#quick-start-image-sets}
 

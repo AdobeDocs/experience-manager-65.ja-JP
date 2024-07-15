@@ -35,25 +35,25 @@ ht-degree: 5%
 ドキュメントのこの節では、以下について説明します。
 
 * コミュニティサイトへのおすすめコンテンツの追加。
-* の設定 `Featured Content` コンポーネント。
+* `Featured Content` コンポーネントの設定。
 
 ## ページへのおすすめコンテンツの追加 {#adding-featured-content-to-a-page}
 
-を追加します `Featured Content` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます
+オーサーモードで `Featured Content` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して以下を見つけます
 
 * `Communities / Featured Content`
 
 おすすめコンテンツが表示されるページの場所にドラッグします。
 
-詳細については、 [Communities コンポーネントの基本](basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
 
-いつ [必要なクライアントサイドライブラリ](essentials-featured.md#essentials-for-client-side) が含まれる場合、このようにして `Featured Content` コンポーネントが表示されます。
+[ 必須のクライアントサイドライブラリ ](essentials-featured.md#essentials-for-client-side) が含まれると、`Featured Content` のコンポーネントは次のように表示されます。
 
 ![featuredcontent](assets/featuredcontent.png)
 
 ## おすすめコンテンツの設定 {#configuring-featured-content}
 
-配置されたを選択します。 `Featured Content` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置された `Featured Content` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
 ![configure-new](assets/configure-new.png)
 
@@ -61,17 +61,17 @@ ht-degree: 5%
 
 ### 「設定」タブ {#settings-tab}
 
-の下 **[!UICONTROL 設定]** タブで、機能するコンテンツを特定します。
+「**[!UICONTROL 設定]**」タブで、機能させるコンテンツを指定します。
 
 * **[!UICONTROL 表示名]**
 
-  おすすめコンテンツのリストのタイトル。 例えば、`Featured Questions` や `Featured Ideas` です。 デフォルトは `Featured Content` 空のままにした場合。
+  おすすめコンテンツのリストのタイトル。 例えば、`Featured Questions` や `Featured Ideas` です。 空のままにした場合、デフォルトは `Featured Content` です。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
 
   *（必須）* おすすめコンテンツを含むページを参照します（そのページのコンポーネントは、おすすめコンテンツを許可するように設定されている必要があります）。 例えば、`/content/sites/engage/en/forum` のように指定します。
 
-* **[!UICONTROL 表示の制限]**
+* **[!UICONTROL 表示制限]**
 
   表示するおすすめコンテンツの最大数。 デフォルトは 5 です。
 
@@ -79,20 +79,20 @@ ht-degree: 5%
 
 おすすめコンテンツとしてコンテンツにフラグを付けるには、モデレーター権限が必要です。
 
-モデレーターが投稿されたコンテンツを表示すると、新しいを含むコンテキスト内モデレートフラグにアクセスできます `Feature` フラグ。
+モデレーターが投稿されたコンテンツを表示すると、新しい `Feature` フラグを含むコンテキスト内モデレートフラグにアクセスできます。
 
-![サイト訪問者エクスペリエンス](assets/site-visitor-experience.png)
+![site-visitor-experience](assets/site-visitor-experience.png)
 
-機能としてフラグが設定されると、モデレートフラグはになります `Unfeature`.
+機能としてフラグが設定されると、モデレーションフラグは `Unfeature` になります。
 
-を含むページ `Featured Content` コンポーネントに、この投稿が含まれるようになりました。
+`Featured Content` コンポーネントを含むページに、この投稿が含まれるようになりました。
 
 ![site-visitor-experience1](assets/site-visitor-experience1.png)
 
-この `Read More` 実際の投稿へのリンク。
+`Read More` は、実際の投稿にリンクしています。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、 [おすすめコンテンツ](essentials-featured.md) 開発者向けのページです。
+詳しくは、開発者向けの [ おすすめコンテンツ ](essentials-featured.md) ページをご覧ください。
 
-おすすめコンテンツのフラグ設定については、を参照してください。 [ユーザー作成コンテンツのモデレート](moderate-ugc.md).
+特集としてコンテンツにフラグを設定するには、[ ユーザー生成コンテンツのモデレート ](moderate-ugc.md) を参照してください。

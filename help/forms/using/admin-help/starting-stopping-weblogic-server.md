@@ -6,7 +6,7 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 100%
 

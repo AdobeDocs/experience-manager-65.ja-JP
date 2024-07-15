@@ -7,7 +7,7 @@ feature: Collections
 exl-id: f95560c9-f1b9-4e86-94a7-70347d268d8f
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 100%
 

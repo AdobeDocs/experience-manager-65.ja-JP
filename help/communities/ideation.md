@@ -29,12 +29,12 @@ ht-degree: 7%
    <td>social/ideation/components/hbs/ideation</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>includable</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong> 含む </strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
-   <td>cq.social.hbs.voting<br /> cq.social.hbs.liking<br /> cq.social.hbs.ideation</td>
+   <td>cq.social.hbs.voting<br />cq.social.hbs.liking<br />cq.social.hbs.ideation</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -46,7 +46,7 @@ ht-degree: 7%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>参照： <a href="ideation-feature.md">アイディエーション機能</a></td>
+   <td><a href="ideation-feature.md"> アイディエーション機能 </a> を参照してください。</td>
   </tr>
  </tbody>
 </table>
@@ -55,4 +55,4 @@ ht-degree: 7%
 
 ### アイディエーション機能 {#ideation-function}
 
-を含むコミュニティサイト構造 [Ideation 関数](functions.md#ideation-function)、設定済みのを含む `ideation` コンポーネント。
+[Ideation 関数 ](functions.md#ideation-function) を含むコミュニティサイト構造には、設定済みの `ideation` コンポーネントが含まれています。

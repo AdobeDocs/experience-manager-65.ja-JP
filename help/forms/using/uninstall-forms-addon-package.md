@@ -1,6 +1,6 @@
 ---
-title: この記事では、CRX Package Manager を使用してForms アドオンパッケージをアンインストールする手順について説明します。
-description: CRX パッケージマネージャーを使用してForms アドオンパッケージをアンインストールする手順を説明します。
+title: ここでは、CRX パッケージマネージャーを使用してForms アドオンパッケージをアンインストールする手順を説明します。
+description: CRX パッケージマネージャーを使用してForms アドオンパッケージをアンインストールする手順について説明します。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
@@ -27,32 +27,32 @@ ht-degree: 1%
 AEM Forms アドオンパッケージをアンインストールするには、次の手順を実行します。
 
 1. **AEM Forms アドオンパッケージをアンインストールします。**
-   1. に移動します。 `http://[host]:[port]/crx/de/index.jsp`.
-   1. を探してアンインストールします。 `AEM Forms add-on package`.
+   1. `http://[host]:[port]/crx/de/index.jsp` に移動します。
+   1. `AEM Forms add-on package` を探してアンインストールします。
 
-   ![パッケージをアンインストール](/help/forms/using/assets/uninstall-aem-forms-package.png)
+   ![ パッケージをアンインストール ](/help/forms/using/assets/uninstall-aem-forms-package.png)
 
-1. **CRXDE からネイティブフォルダーを削除します。**
-   1. に移動します。 `http://[host]:[port]/crx/de/index.jsp`.
-   1. に移動 `/libs/fd/native/install` と削除 `native` crxde のフォルダー。
+1. **CRXDE からネイティブフォルダーを削除します：**
+   1. `http://[host]:[port]/crx/de/index.jsp` に移動します。
+   1. `/libs/fd/native/install` に移動して、CRXDE でフォルダー `native` 削除します。
 
-      ![CRX/de からネイティブノードを削除](/help/forms/using/assets/native-install-folder-crxde.png)
+      ![CRX/de からネイティブノードを削除 ](/help/forms/using/assets/native-install-folder-crxde.png)
    1. 変更を保存します。
 
 1. **AEM Forms SDK を停止します。**
    1. 「Ctrl + C」コマンドを使用して、AEM Forms SDK インスタンスを停止します。
 
-1. **岩盤を確認し、crx-quickstart フォルダーにフォルダーをインストールします。**
-   1. に移動します。 `..author\crx-quickstart` AEM Forms SDK インスタンスのフォルダー。
-   1. という名前のフォルダーの検索 `bedrock` および `install`.
-見つかった場合は、必ず次から削除します `crx-quickstart` AEM Forms SDK インスタンスのフォルダー。
+1. **岩盤を確認し、crx-quickstart フォルダーにフォルダーをインストールする**
+   1. AEM Forms SDK インスタンス `..author\crx-quickstart` フォルダーに移動します。
+   1. `bedrock` および `install` という名前のフォルダーを検索します。
+見つかった場合は、AEM Forms SDK インスタンスの `crx-quickstart` フォルダーから削除されていることを確認します。
 
    >[!NOTE]
    >
-   > この `bedrock` AEM Forms SDK インスタンスを再起動すると、フォルダーが自動的に再作成されます。
+   > AEM Forms SDK インスタンスを再起動すると、`bedrock` フォルダーが自動的に再作成されます。
 
 1. **AEM インスタンスを再起動します。**
-   1. 前のすべての手順が完了したら、 [AEM Forms SDK インスタンスを再起動します](/help/forms/using/restart-aem-sdk.md).
+   1. ここまでのすべての手順が完了したら、[AEM Forms SDK インスタンスを再起動 ](/help/forms/using/restart-aem-sdk.md) します。
 
 
 

@@ -7,7 +7,7 @@ exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 100%
 
@@ -40,9 +40,9 @@ ht-degree: 100%
 
 以下に示すヘッダースタイルとロゴの画像をローカルマシンにダウンロードします。`shipping-address-add-update-form` アダプティブフォームのヘッダーは、ヘッダースタイルとロゴの画像を使用します。ヘッダースタイルの画像はヘッダーの右側に表示されます。
 
-[ファイルを入手](assets/header-style.png)
+[ファイルの取得](assets/header-style.png)
 
-[ファイルを入手](assets/logo-1.png)
+[ファイルの取得](assets/logo-1.png)
 
 ## 手順 1：アダプティブフォームへのテーマの適用 {#step-apply-a-theme-to-your-adaptive-form}
 

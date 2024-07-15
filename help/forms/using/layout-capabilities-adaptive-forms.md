@@ -10,7 +10,7 @@ exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
-`/libs/fd/af/layouts`
+`/libs/fd/af/layouts`。
 
 >[!NOTE]
 >

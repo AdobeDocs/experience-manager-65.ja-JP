@@ -22,7 +22,7 @@ ht-degree: 15%
 
 Adobe Experience Manager（AEM） Communities を使用すると、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能を簡単に作成およびカスタマイズできます。 これらの機能により、ユーザー生成コンテンツ（UGC）がパブリッシュ環境に入力されます。
 
-の基盤 [コミュニティサイト](overview.md#communitiessites) が [ソーシャルコンポーネントフレームワーク](scf.md) （SCF）。 コミュニティサイトの作成は、 [コミュニティサイトテンプレート](sites-console.md) 構成する [コミュニティ機能](functions.md).
+[ コミュニティサイト ](overview.md#communitiessites) の基盤となるのは、[ ソーシャルコンポーネントフレームワーク ](scf.md) （SCF）です。 コミュニティサイトの作成は、[ コミュニティ機能 ](functions.md) で構成された ](sites-console.md) コミュニティサイトテンプレート [ を選択することから始まります。
 
 概要とはじめにのチュートリアルについては、次を参照してください。
 
@@ -31,26 +31,26 @@ Adobe Experience Manager（AEM） Communities を使用すると、フォーラ�
 
 >[!NOTE]
 > 
->を最新の状態に保つことを強くお勧めします [最新リリース](deploy-communities.md#latest-releases).
+>[ 最新リリース ](deploy-communities.md#latest-releases) を常に最新の状態にしておくことを強くお勧めします。
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-* [コミュニティコンテンツストレージ](working-with-srp.md):UGC 共通ストアで使用可能なソーシャルリソースプロバイダー（SRP）の選択肢について説明します
-* [Communities 用の推奨されるトポロジ](topologies.md)：ユースケースと SRP の選択に基づいたトポロジについて説明します
+* [ コミュニティコンテンツストレージ ](working-with-srp.md):UGC 共通ストアで使用可能なソーシャルリソースプロバイダー（SRP）の選択肢について説明します
+* [Communities 向けの推奨トポロジ ](topologies.md)：ユースケースと SRP の選択に基づくトポロジについて説明します
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [ソーシャルコンポーネントフレームワーク](scf.md)：フレームワークと API の概要
-* [SCF Handlebars ヘルパー](handlebars-helpers.md)：デフォルトのヘルパーとカスタムヘルパーの作成方法。
-* [クライアントサイドのカスタマイズ](client-customize.md)：ブラウザーで実行されるコードのカスタマイズ。
-* [サーバーサイドのカスタマイズ](server-customize.md)：サーバー上で実行されるコードのカスタマイズ。
-* [ストレージリソースプロバイダー（SRP）](srp.md)：コミュニティコンテンツストレージの概要。
-* [コーディングのガイドライン](code-guide.md)：ガイドライン、ヒントとテクニック。
-* [コミュニティコンポーネントガイド](components-guide.md)：インタラクティブ開発ツール。
+* [ ソーシャルコンポーネントフレームワーク ](scf.md)：フレームワークと API の概要
+* [SCF Handlebars ヘルパー ](handlebars-helpers.md)：デフォルトのヘルパーとカスタムヘルパーの記述方法。
+* [ クライアントサイドのカスタマイズ ](client-customize.md)：ブラウザーで実行されるコードをカスタマイズする。
+* [ サーバーサイドのカスタマイズ ](server-customize.md)：サーバー上で実行されるコードをカスタマイズする。
+* [ ストレージリソースプロバイダー（SRP） ](srp.md)：コミュニティコンテンツストレージの概要。
+* [ コーディングガイドライン ](code-guide.md)：ガイドライン、ヒントとテクニック。
+* [ コミュニティコンポーネントガイド ](components-guide.md)：インタラクティブ開発ツール。
 
 ## コンポーネント、機能、機能の基本事項 {#component-function-and-feature-essentials}
 
-AEM Communitiesのコンポーネント、関数および機能は、次の構成要素を提供します [コミュニティサイト](sites-console.md).
+AEM Communitiesのコンポーネント、機能および機能は、[ コミュニティサイト ](sites-console.md) の構築ブロックを提供します。
 
 * [コンポーネントおよび機能の基本事項](essentials.md)
 * [コミュニティコンポーネントの clientlib](clientlibs.md)
@@ -65,7 +65,7 @@ AEM Communitiesのコンポーネント、関数および機能は、次の構�
 
 ## コミュニティグループ {#community-groups}
 
-[コミュニティグループ](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内にサブコミュニティを形成できるようにする概念です。 コミュニティグループは、パブリッシュ環境またはオーサー環境で作成する場合があります。
+[ コミュニティグループ ](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内にサブコミュニティを形成できるようにするという概念です。 コミュニティグループは、パブリッシュ環境またはオーサー環境で作成する場合があります。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [Groups 関数](functions.md#groups-function)
@@ -75,8 +75,8 @@ AEM Communitiesのコンポーネント、関数および機能は、次の構�
 
 ## データの管理 {#managing-data}
 
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP API ユーティリティメソッドと例
-* [タグの基本事項](tag.md) - コミュニティメンバーが UGC やカタログ化されたイネーブルメントリソースにタグを付ける機能
+* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP API ユーティリティメソッドと例
+* [ タグの基本事項 ](tag.md) - コミュニティメンバーが UGC やカタログ化されたイネーブルメントリソースにタグを付ける機能
 
 ## チュートリアル {#tutorials}
 
@@ -91,8 +91,8 @@ AEM Communitiesのコンポーネント、関数および機能は、次の構�
 
 ## 関連する Communities ドキュメント {#related-communities-documentation}
 
-* 訪問 [Communities のデプロイ](deploy-communities.md) 推奨されるデプロイメントと Dispatcher 設定について説明します。
+* 推奨されるデプロイメントとDispatcher設定について詳しくは、[Communities のデプロイ ](deploy-communities.md) を参照してください。
 
-* 訪問 [コミュニティサイトの管理](administer-landing.md) コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定について説明します。
+* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージングの設定については、[ コミュニティサイトの管理 ](administer-landing.md) を参照してください。
 
-* 訪問 [Communities コンポーネントのオーサリング](author-communities.md) でオーサリングし Communities コンポーネントを設定する方法について説明します。
+* Communities コンポーネントを使用して作成および設定する方法については、[Communities コンポーネントのオーサリング ](author-communities.md) を参照してください。

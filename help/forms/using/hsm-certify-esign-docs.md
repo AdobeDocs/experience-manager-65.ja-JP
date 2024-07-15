@@ -10,7 +10,7 @@ exl-id: 62adca19-8ed0-48b3-b7eb-9dbc3d8f96c6
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 100%
 
@@ -56,7 +56,7 @@ Adobe Experience Manager Forms は、HSM または eToken に保存された資�
 
 >[!NOTE]
 >
-> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 <!--
 

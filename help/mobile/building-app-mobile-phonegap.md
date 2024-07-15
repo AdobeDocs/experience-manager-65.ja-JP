@@ -24,9 +24,9 @@ ht-degree: 3%
 
 テスト用またはアプリストアへの公開用にデバイスまたはシミュレーターにインストールするアプリケーションを作成します。 PhoneGap コマンドラインインターフェイスを使用してローカルで、またはPhoneGap Buildを使用してクラウドでアプリケーションを構築できます。
 
-GitHub から入手可能なコードを使用してモバイルアプリケーションを構築する方法を説明する完全なステップバイステップの記事が利用可能です [こちら](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
+GitHub から入手できるコードを使用してモバイルアプリケーションを構築する方法を説明する詳細な手順の記事は、[ こちら ](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html) から入手できます。
 
-## パブリッシュインスタンスへのアプリケーションの移動 {#moving-the-application-to-the-publish-instance}
+## アプリケーションのPublish インスタンスへの移動 {#moving-the-application-to-the-publish-instance}
 
 モバイルアプリケーションのインストール済みインスタンスにコンテンツの更新を提供したり、公開済みコンテンツを使用してアプリケーションを構築したりできるように、アプリケーションファイルをパブリッシュインスタンスに移動します。 アプリケーションは、リポジトリ内の次の 2 つのノードブランチで構成されます。
 
@@ -37,16 +37,16 @@ GitHub から入手可能なコードを使用してモバイルアプリケー�
 >
 >アプリケーションファイルをパブリッシュインスタンスに移動しない場合、コンテンツ作成者はコンテンツ同期のキャッシュを更新できません。
 
-にファイルを移動するだけで済みます `/content/phonegap/content/<application name>` パブリッシュインスタンスに対するブランチ。 内のファイル `/content/phonegap/apps/<application name>` 作成者がページをアクティベートすると、ブランチが移動します。
+`/content/phonegap/content/<application name>` ブランチのファイルをパブリッシュインスタンスに移動するだけです。 `/content/phonegap/apps/<application name>` ブランチ内のファイルは、作成者がページをアクティベートすると移動されます。
 
 AEMには、一括コンテンツをパブリッシュインスタンスに移動するための 2 つの方法が用意されています。
 
-* [[ ツリーをアクティブ化 ] コマンドを使用する](/help/sites-authoring/publishing-pages.md) レプリケーションコンソールで、
-* [パッケージを作成](/help/sites-administering/package-manager.md) コンテンツを含み、パッケージをレプリケートする。
+* レプリケーションコンソールで [ 「ツリーをアクティベート」コマンドを使用 ](/help/sites-authoring/publishing-pages.md) します。
+* コンテンツを含む [ パッケージを作成 ](/help/sites-administering/package-manager.md) し、パッケージをレプリケートします。
 
 例えば、phonegapapp という名前のモバイルアプリケーションが作成されます。 次のノードをパブリッシュインスタンスに移動する必要があります：/content/phonegap/content/phonegapapp。
 
-**ヒント：** オーサーインスタンスからパブリッシュインスタンスにパッケージを移動するには、パッケージに対して「レプリケート」コマンドを使用します。
+**ヒント：** パッケージをオーサーインスタンスからパブリッシュインスタンスに移動するには、パッケージに対して「レプリケート」コマンドを使用します。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -58,14 +58,14 @@ PhoneGap Command-Line Interface （CLI）を使用して、コンピュータ上
 
 PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クライアントユーティリティをインストールする必要があります。 次の手順を実行するには、インターネット接続が必要です。
 
-1. ダウンロードとインストール [Node.js](https://nodejs.org/ja).
+1. [Node.js](https://nodejs.org/ja) をダウンロードしてインストールします。
 1. ターミナルまたはコマンドプロンプトを開き、次のノードコマンドを入力して PhoneGap ユーティリティをインストールします。
 
    ```shell
    npm install -g phonegap
    ```
 
-   UNIX® または Linux® システムでは、コマンドの先頭にを付ける必要がある場合があります。 `sudo`.
+   UNIX® または Linux® システムでは、コマンドの前に `sudo` を付ける必要がある場合があります。
 
    端末には、一連の HTTP GETコマンドの結果が表示されます。 インストールに成功すると、次の例のように、ターミナルにライブラリのインストール先が表示されます。
 
@@ -86,8 +86,8 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
 
 1. （オプション）ターゲットとするモバイルプラットフォームの SDK を取得します。
 
-   * iOS プラットフォーム用のアプリを作成するには、の最新バージョンをインストールします。 [Xcode](https://developer.apple.com/xcode/).
-   * Android™ アプリを作成するには、以下をインストールします。 [Android™ SDK](https://developer.android.com/).
+   * iOS プラットフォーム用のアプリを作成するには、最新バージョンの [Xcode](https://developer.apple.com/xcode/) をインストールします。
+   * Android™ アプリを作成するには、[Android™ SDK](https://developer.android.com/) をインストールします。
 
 ### コンテンツ ZIP ファイルのダウンロード {#downloading-the-content-zip-file}
 
@@ -96,22 +96,22 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
 1. モバイルアプリケーションページで、アプリケーションを選択します。
 1. （オプション）完全インストール用のアプリケーションを構築するには、ツールバーの [ キャッシュのクリア ] アイコンをクリックします。
 
-   ![壊れたリンク記号で示されるキャッシュ アイコンをクリアします。](do-not-localize/chlimage_1.png)
+   ![ 壊れたリンク記号で示されるキャッシュ アイコンをクリアします。](do-not-localize/chlimage_1.png)
 
    >[!NOTE]
    >
    >キャッシュには、インストールされたアプリケーションのコンテンツのアップデートが保持されます。 キャッシュをクリアすると、キャッシュされた更新がすべて無効になります。
 
-1. ツールバーで、「CLI アセットをダウンロード」アイコンをクリックします。
+1. ツールバーの「CLI Assetsをダウンロード」アイコンをクリックします。
 
-   ![タブレットシンボルが重なることで示される CLI アセットのアイコンをダウンロードします。](do-not-localize/chlimage_1-1.png)
+   ![CLI Assetsのアイコンをダウンロードします。このアイコンは、タブレットのアイコンが重なっていることを示しています ](do-not-localize/chlimage_1-1.png)。
 
 1. ZIP ファイルを保存したら、成功ダイアログで「閉じる」をクリックします。
 1. ZIP ファイルの内容を解凍します。
 
 ### PhoneGap CLI を使用したビルド {#using-the-phonegap-cli-to-build}
 
-PhoneGap CLI を使用してアプリケーションをコンパイルし、インストールします。 PhoneGap CLI の使用方法については、PhoneGap Command-line Interface （`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`）を参照してください。
+PhoneGap CLI を使用してアプリケーションをコンパイルし、インストールします。 PhoneGap CLI の使用方法については、PhoneGap Command-line Interface （`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`）のマニュアルを参照してください。
 
 1. ターミナルまたはコマンドプロンプトを開き、現在のディレクトリをダウンロードしたアプリケーションの ZIP ファイルに変更します。 例えば、次のように指定すると、ディレクトリが ng-app-cli.1392137825303.zip ファイルに変更されます。
 
@@ -119,7 +119,7 @@ PhoneGap CLI を使用してアプリケーションをコンパイルし、イ�
    cd ~/Downloads/ng-app-cli.1392137825303
    ```
 
-1. ターゲットとするプラットフォームの phonegap コマンドを入力します。 例えば、次のコマンドは Android™ 用のアプリをビルドします。
+1. ターゲットとするプラットフォームの phonegap コマンドを入力します。 例えば、次のコマンドは、Android用のアプリをビルドし™ す。
 
    ```shell
    phonegap build android
@@ -133,7 +133,7 @@ PhoneGap クラウドサービスを使用してアプリを作成します。 �
 
 PhoneGap Build設定を作成して、AEM内からPhoneGap Buildサービスを使用できるようにします。 モバイルアプリケーションの構築に使用するPhoneGap Buildアカウントのユーザー名とパスワードを指定します。
 
-1. ツール ページを開きます。 （[http://localhost:4502/tools.html](http://localhost:4502/tools.html)）に設定します。
+1. ツール ページを開きます。 （[http://localhost:4502/tools.html](http://localhost:4502/tools.html)）。
 1. CQ Operations 領域で、「Cloud Service」をクリックします。
 1. PhoneGap Buildの「今すぐ設定」リンクをクリックします。
 
@@ -149,7 +149,7 @@ PhoneGap Build設定を作成して、AEM内からPhoneGap Buildサービスを�
 1. モバイルアプリケーションページで、モバイルアプリケーションを開きます。 （[http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap)）
 1. （オプション）完全インストール用のアプリケーションを構築するには、アプリケーションを選択して「キャッシュの消去」アイコンをクリックします。
 
-   ![壊れたリンク記号で示されるキャッシュ アイコンをクリアします。](do-not-localize/chlimage_1-2.png)
+   ![ 壊れたリンク記号で示されるキャッシュ アイコンをクリアします。](do-not-localize/chlimage_1-2.png)
 
    >[!NOTE]
    >
@@ -157,13 +157,13 @@ PhoneGap Build設定を作成して、AEM内からPhoneGap Buildサービスを�
 
 1. スプラッシュページを選択し、「リモートを構築」アイコンをクリックします。
 
-   ![2 つの丸歯車で示されるリモートアイコンを作成します。](do-not-localize/chlimage_1-3.png)
+   ![2 つの丸歯車で示されるリモートアイコンを作成します ](do-not-localize/chlimage_1-3.png)。
 
-   **注意：** AEM ベータ版のベータ版では、ビルドが正常に完了してもインボックス通知は作成されません。
+   **注意：** AEM BetaのBeta バージョンでは、ビルドが正常に完了してもインボックス通知は作成されません。
 
-1. 成功ダイアログボックスで、「PhoneGap Build」をクリックしてAdobe PhoneGap Buildページ（）を開きます `https://build.phonegap.com/apps`. アプリが表示されるのを待っている場合は、でPhoneGap Buildステータスを確認できます。 `https://status.build.phonegap.com/`.
+1. 成功ダイアログボックスで、「PhoneGap Build」をクリックしてAdobe PhoneGap Buildページ（`https://build.phonegap.com/apps`）を開きます。 アプリが表示されるのを待っている場合は、`https://status.build.phonegap.com/` でPhoneGap Buildステータスを確認できます。
 
-   ビルドのインストールについて詳しくは、 [PhoneGap Buildドキュメント](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
+   ビルドのインストールについて詳しくは、[PhoneGap Buildのドキュメント ](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build) を参照してください。
 
    >[!NOTE]
    >
@@ -171,4 +171,4 @@ PhoneGap Build設定を作成して、AEM内からPhoneGap Buildサービスを�
 
 ### 次の手順 {#the-next-steps}
 
-構築プロセスの次のステップでは、次のステップについて学習します [アプリの構造](/help/mobile/phonegap-structure-an-app.md).
+構築プロセスの次のステップは、[ アプリの構造 ](/help/mobile/phonegap-structure-an-app.md) について学ぶことです。

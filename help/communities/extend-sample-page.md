@@ -25,21 +25,21 @@ ht-degree: 2%
 
 デフォルトコメントのスタイルと機能に必要なクライアントライブラリは、拡張コメントにも必要です。
 
-この [コミュニティコンポーネントガイド](/help/communities/components-guide.md) は、必要なクライアントライブラリを識別します。 コンポーネントガイドを参照し、コメントコンポーネントを確認します。次に例を示します。
+[ コミュニティコンポーネントガイド ](/help/communities/components-guide.md) は、必要なクライアントライブラリを示しています。 コンポーネントガイドを参照し、コメントコンポーネントを確認します。次に例を示します。
 
 [https://localhost:4502/content/community-components/en/comments.html](https://localhost:4502/content/community-components/en/comments.html)
 
-コメントがレンダリングされて正しく機能するには、3 つのクライアントライブラリが必要であることに注意してください。 これらは、拡張コメントが参照される場所に含める必要があり、 [拡張コメントのクライアントライブラリ](/help/communities/extend-create-components.md#create-a-client-library-folder) （ `apps.custom.comments`）に設定します。
+コメントがレンダリングされて正しく機能するには、3 つのクライアントライブラリが必要であることに注意してください。 これらは、拡張コメントが参照される場所と [ 拡張コメント」クライアントライブラリ ](/help/communities/extend-create-components.md#create-a-client-library-folder) （`apps.custom.comments`）に含める必要があります。
 
 ![comments-component1](assets/comments-component1.png)
 
 ### ページへのカスタムコメントの追加 {#add-custom-comments-to-a-page}
 
-コメントシステムはページごとに 1 つだけなので、簡単にサンプルページを作成できます。詳しくは、を参照してください [サンプルページの作成](/help/communities/create-sample-page.md) チュートリアル。
+コメントシステムはページごとに 1 つだけなので、簡単な [ サンプルページの作成 ](/help/communities/create-sample-page.md) チュートリアルで説明しているように、サンプルページを作成する方が簡単です。
 
-作成したら、デザインモードに切り替えて、カスタムコンポーネントグループを使用して、以下を許可できます。 `Alt Comments` ページに追加するコンポーネント。
+作成したら、デザインモードに入り、カスタムコンポーネントグループを使用して、`Alt Comments` コンポーネントをページに追加できます。
 
-コメントが表示されて正しく機能するには、コメント用のクライアントライブラリをページの clientlibslist に追加する必要があります（ [コミュニティコンポーネントの clientlib](/help/communities/clientlibs.md)）に設定します。
+コメントが表示されて正しく機能するには、コメント用のクライアントライブラリをページの clientlibslist に追加する必要があります（[ コミュニティコンポーネントのクライアントライブラリ ](/help/communities/clientlibs.md) を参照）。
 
 #### サンプルページのコメント Clientlib {#comments-clientlibs-on-sample-page}
 
@@ -51,21 +51,21 @@ ht-degree: 2%
 
 #### 作成者：サンプルページコメントノード {#author-sample-page-comments-node}
 
-CRXDE で resourceType を確認するには、次の場所にあるサンプルページのコメントノードのプロパティを表示します `/content/sites/sample/en/jcr:content/content/primary/comments`.
+`/content/sites/sample/en/jcr:content/content/primary/comments` のサンプルページのコメントノードのプロパティを表示すると、CRXDE で resourceType を確認できます。
 
 ![verify-comment-crxde](assets/verify-comment-crxde.png)
 
-#### サンプルページを公開 {#publish-sample-page}
+#### Publishのサンプルページ {#publish-sample-page}
 
-カスタムコンポーネントをページに追加した後、 [ページを公開します](/help/communities/sites-console.md#publishing-the-site).
+カスタムコンポーネントをページに追加した後、ページを（再） [ 公開 ](/help/communities/sites-console.md#publishing-the-site) する必要もあります。
 
-#### 公開：サンプルページに対する代替コメント {#publish-alt-comment-on-sample-page}
+#### Publish：サンプルページに対する代替コメント {#publish-alt-comment-on-sample-page}
 
-カスタムアプリケーションとサンプルページの両方を公開した後、コメントを入力できます。 ログイン時に、次のいずれかを使用 [デモユーザー](/help/communities/tutorials.md#demo-users) または、管理者は、コメントを投稿できます。
+カスタムアプリケーションとサンプルページの両方を公開した後、コメントを入力できます。 [ デモユーザー ](/help/communities/tutorials.md#demo-users) または管理者でログインすると、コメントを投稿できます。
 
 aaron.mcdonald@mailinator.comがコメントを投稿しています。
 
-![公開 – 代替 – コメント](assets/publish-alt-comment.png)
+![publish-alt-comment](assets/publish-alt-comment.png)
 
 ![publish-alt-comment1](assets/publish-alt-comment1.png)
 

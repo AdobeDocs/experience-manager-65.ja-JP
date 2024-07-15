@@ -23,14 +23,14 @@ ht-degree: 2%
 
 コミュニティコンテンツは、ユーザー生成コンテンツ（UGC）とも呼ばれ、メンバー（サイト訪問者にログイン）が次のコミュニティコンポーネントのいずれかとのインタラクションを通じて、公開済みのコミュニティサイトからコンテンツを投稿する際に作成されます。
 
-* [ブログ](/help/communities/blog-feature.md)：メンバーがブログ記事またはコメントを投稿します。
-* [カレンダー](/help/communities/calendar.md)：メンバーがカレンダーイベントやコメントを投稿します。
-* [コメント](/help/communities/comments.md)：メンバーがコメントを投稿したり、コメントに返信したりします。
+* [ ブログ ](/help/communities/blog-feature.md)：メンバーがブログの記事やコメントを投稿します。
+* [ カレンダー ](/help/communities/calendar.md)：メンバーがカレンダーイベントまたはコメントを投稿します。
+* [ コメント ](/help/communities/comments.md)：メンバーがコメントを投稿したり、コメントに返信したりします。
 
-* [フォーラム](/help/communities/forum.md)：メンバーが新しいトピックを投稿したり、トピックに返信したりします。
-* [念慮](/help/communities/ideation-feature.md)：メンバーがアイデアまたはコメントを投稿します。
+* [ フォーラム ](/help/communities/forum.md)：メンバーが新しいトピックを投稿したり、トピックに返信したりします。
+* [ アイディエーション ](/help/communities/ideation-feature.md)：メンバーがアイデアまたはコメントを投稿します。
 * [QnA](/help/communities/working-with-qna.md)：メンバーが質問を作成したり、質問に回答したりします。
-* [レビュー](/help/communities/reviews.md)：メンバーがアイテムを評価すると、コメントが投稿されます。
+* [ レビュー ](/help/communities/reviews.md)：メンバーがアイテムを評価する際にコメントを投稿します。
 
 UGC のモデレートは、肯定的な投稿を認識し、否定的な投稿（スパムや侮辱的な言葉など）を制限するのに役立ちます。 UGC は、次の複数の環境でモデレートできます。
 
@@ -38,11 +38,11 @@ UGC のモデレートは、肯定的な投稿を認識し、否定的な投稿�
 
 * [一括モデレートコンソール](moderation.md)
 
-  モデレートコンソールには、管理者および次のユーザーからアクセスできます [コミュニティモデレーター](/help/communities/users.md) パブリック環境の場合は、オーサー環境の管理者が実行します。 これは、コミュニティコンテンツがに保存されている場合に可能です。 [共通店舗](/help/communities/working-with-srp.md).
+  モデレートコンソールには、パブリック環境の管理者および [ コミュニティモデレーター ](/help/communities/users.md) と、オーサー環境の管理者がアクセスできます。 これは、コミュニティコンテンツが [ 共通ストア ](/help/communities/working-with-srp.md) に保存されている場合に可能です。
 
 * [コンテキスト内モデレート](in-context.md)
 
-  パブリッシュ環境でのモデレートは、管理者およびコミュニティモデレーターが、コンテンツが投稿されたページで直接実行できます。
+  Publishでのモデレートは、管理者およびコミュニティモデレーターが、コンテンツが投稿されたページで直接行うことができます。
 
 ## モデレートアクション {#moderation-actions}
 
@@ -50,11 +50,11 @@ UGC のモデレートは、肯定的な投稿を認識し、否定的な投稿�
 
 * `Admin`
 
-  メンバーであるユーザー [community-administrators](users.md) グループ。
+  [ コミュニティ管理者 ](users.md) グループのメンバーであるユーザー。
 
 * `Moderator`
 
-  のメンバー [コミュニティモデレーター](users.md#publishenvironmentusersandgroups) グループ （持つ [モデレーター権限](in-context.md#moderatorpermissions)）に設定します。
+  [ コミュニティモデレーター ](users.md#publishenvironmentusersandgroups) グループのメンバー（[ モデレーター権限 ](in-context.md#moderatorpermissions) 持つ）。
 
 * `Creator`
 
@@ -77,7 +77,7 @@ UGC のモデレートは、肯定的な投稿を認識し、否定的な投稿�
    <td><strong>作成者</strong></td>
    <td><strong>メンバー</strong></td>
    <td><strong>訪問者</strong></td>
-   <td><strong>イベント<br /> トリガー</strong></td>
+   <td><strong>イベント <br /> トリガー</strong></td>
    <td><strong>前モデレート</strong></td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ UGC のモデレートは、肯定的な投稿を認識し、否定的な投稿�
    <td> </td>
   </tr>
   <tr>
-   <td><strong>閉じる/<br /> 再度開く</strong></td>
+   <td><strong>Close/<br /> Reopen</strong></td>
    <td>X</td>
    <td>X</td>
    <td> </td>
@@ -155,11 +155,11 @@ UGC を削除すると、リポジトリから削除され、復元されない�
 
 切り取りアクションを選択すると、コンテンツがクリップボードにコピーされます。 複数の支柱をコピーして、グループとして新しい位置に移動できます。
 
-![cutugc](assets/cutugc.png)
+![ctugc](assets/cutugc.png)
 
 ![putbackugc](assets/putbackugc.png)
 
-別の場所では、クリップボードにコンテンツが存在する場合、貼り付けボタンが新しい投稿の横に表示され、貼り付ける投稿の数を示す番号が表示されます。 「貼り付け」ボタンには、貼り付けではなくクリップボードをクリアするオプションが含まれます。
+別の場所では、クリップボードにコンテンツが存在する場合、ニューPostの横に「貼り付け」ボタンが表示され、貼り付ける投稿の数を示す番号が表示されます。 「貼り付け」ボタンには、貼り付けではなくクリップボードをクリアするオプションが含まれます。
 
 ![pasteugc](assets/pasteugc.png)
 
@@ -195,13 +195,13 @@ UGC を削除すると、リポジトリから削除され、復元されない�
 
 ### 前モデレート {#premoderation}
 
-UGC がプレモデレートされると、投稿は、モデレートアクションによって承認されるまで、公開されたサイトに表示されません。 の作成中 [コミュニティサイト](/help/communities/sites-console.md)、ボックスをオンにする [コンテンツはプレモデレートされています](sites-console.md#moderation) サイト全体に対してプレモデレートを有効にします。 コンポーネントをページに配置すると、モデレートをサポートするコンポーネントを、編集ダイアログの設定を使用してプレモデレート用に設定できます。
+UGC がプレモデレートされると、投稿は、モデレートアクションによって承認されるまで、公開されたサイトに表示されません。 [ コミュニティサイト ](/help/communities/sites-console.md) の作成時に、「コンテンツはプレモデレートされています [ ボックスをオンにすると、サイト全体でプレモデレートが有効 ](sites-console.md#moderation) なります。 コンポーネントをページに配置すると、モデレートをサポートするコンポーネントを、編集ダイアログの設定を使用してプレモデレート用に設定できます。
 
-* [コメント](comments.md) および [レビュー](reviews.md)
-。対象： **[!UICONTROL ユーザーのモデレート]** > **[!UICONTROL 事前モデレート]**.
+* [ コメント ](comments.md) および [ レビュー ](reviews.md)
+**[!UICONTROL ユーザーモデレート]**/**[!UICONTROL プレモデレート]** で行います。
 
-* [フォーラム](/help/communities/forum.md), [念慮](/help/communities/ideation-feature.md), [QnA](/help/communities/working-with-qna.md)、および [カレンダー](/help/communities/calendar.md)
-。対象： **[!UICONTROL 設定]** > **[!UICONTROL モデレート]**.
+* [Forum](/help/communities/forum.md)、[ideation](/help/communities/ideation-feature.md)、[QnA](/help/communities/working-with-qna.md) および [calendar](/help/communities/calendar.md)
+**[!UICONTROL 設定]**/**[!UICONTROL モデレート済み]** で行います。
 
 ### スパム検出 {#spam-detection}
 
@@ -209,7 +209,7 @@ UGC がプレモデレートされると、投稿は、モデレートアクシ�
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`。
 
-ただし、デフォルトのスパムワードをカスタマイズまたは拡張するには、デフォルトのスパムワードの構造に従って、一連のワードを/apps ディレクトリに次のように作成します [オーバーレイ](/help/communities/overlay-comments.md).
+ただし、デフォルトのスパムワードをカスタマイズまたは拡張するには、[overlay](/help/communities/overlay-comments.md) を使用して、デフォルトのスパムワードの構造に従って/apps ディレクトリに一連のワードを作成します。
 
 スパムワードを含むすべてのコンテンツタイプ（ブログ、フォーラム、コメントなど）でユーザーが生成した投稿には、投稿の上に「この投稿はスパムとして分類されました」というテキストが付きます。
 
@@ -219,10 +219,10 @@ UGC がプレモデレートされると、投稿は、モデレートアクシ�
 
 スパム検出エンジンを有効にするには、次の手順に従います。
 
-1. 開く [Web コンソール](https://localhost:4502/system/console/configMgr)に移動して、次の操作を行います `/system/console/configMgr`.
+1. `/system/console/configMgr` に移動して、[Web コンソール ](https://localhost:4502/system/console/configMgr) を開きます。
 
-1. を見つける **AEM Communities自動モデレート** 設定して編集します。
-1. を追加 **[!UICONTROL SpamProcess]** エントリ。
+1. **AEM Communities自動モデレート** 設定を見つけて、編集します。
+1. **[!UICONTROL SpamProcess]** エントリを追加します。
 
 ![spamprocess](assets/spamprocess.png)
 
@@ -232,9 +232,9 @@ UGC がプレモデレートされると、投稿は、モデレートアクシ�
 
 ### 好感度 {#sentiment}
 
-センチメントは、ポジティブおよびネガティブキーワードの数に基づいて計算されます（[ウォッチワード](#configuringwatchwords)）が POST （UGC）内に存在します。
+センチメントは、投稿（UGC）に存在するポジティブおよびネガティブキーワード（[ ウォッチワード ](#configuringwatchwords)）の数に基づいて計算されます。
 
-センチメント分析は、事前設定済みの一連のルールを使用し、UGC のセンチメントを計算します。 デフォルトのルールはにあります。 `/libs/cq/workflow/components/workflow/social/sentiments/rules`.
+センチメント分析は、事前設定済みの一連のルールを使用し、UGC のセンチメントを計算します。 デフォルトのルールは `/libs/cq/workflow/components/workflow/social/sentiments/rules` です。
 
 ルールが生成する値は、1 （すべての負、正の単語なし）から 10 （すべての正、負の単語なし）です。 センチメント値が 5 の場合、中立的なセンチメントであり、デフォルトです。
 
@@ -249,52 +249,52 @@ UGC がプレモデレートされると、投稿は、モデレートアクシ�
 
 分析が完了すると、センチメントは UGC に保存されます。
 
-から [一括モデレートコンソール](/help/communities/moderation.md)センチメントがマイナス、ニュートラル、プラスのどれに基づいて、UGC をフィルタリングして表示することができます。
+[ 一括モデレートコンソール ](/help/communities/moderation.md) から、センチメントがネガティブ、ニュートラル、ポジティブのいずれに基づいて UGC をフィルタリングして表示することが可能です。
 
 #### ウォッチワード {#watchwords}
 
-AEM Communitiesはを提供します。 *ウォッチワードアナライザ* 評価するプロセスの手順として [感情](#sentiment). ウォッチワードによって提供されるセンチメント値への貢献は、投稿されたコンテンツで使用される負のウォッチワードと正のウォッチワード、および禁止されたワードの比較によるものです。
+*AEM Communitiesは、「センチメント* を評価するプロセスの一環として、[ ウォッチワードアナライザー ](#sentiment) を提供しています。 ウォッチワードによって提供されるセンチメント値への貢献は、投稿されたコンテンツで使用される負のウォッチワードと正のウォッチワード、および禁止されたワードの比較によるものです。
 
 #### センチメントとウォッチワードの設定 {#configure-sentiment-and-watchwords}
 
 ポジティブおよびネガティブウォッチワードのリストは、センチメントルールと同様にカスタマイズできます。
 
-ウォッチワードのデフォルトリストは、デフォルトと同様に、リポジトリ内のノードのプロパティとして入力することも、OSGi サービスを設定してデフォルトを上書きすることもできます `sentimentprocess.name` 単語のリストを使用します。
+ウォッチワードのデフォルトのリストは、デフォルトの場合と同様に、リポジトリ内のノードのプロパティとして入力できます。また、ワードのリストを使用して OSGi サービス `sentimentprocess.name` を設定することで、デフォルトのリストを上書きできます。
 
-この **sentimentprocess.name** また、センチメントルールのカスタムセットの場所を参照するように変更することもできます。
+**sentimentprocess.name** は、センチメントルールのカスタムセットの場所を参照するように変更することもできます。
 
 センチメントとウォッチワードを設定するには：
 
 * オーサーインスタンスに管理者としてログインします。
-* 開く [Web コンソール](https://localhost:4502/system/console/configMgr).
-* を見つける `sentimentprocess.name`.
+* [Web コンソール ](https://localhost:4502/system/console/configMgr) を開きます。
+* `sentimentprocess.name` を見つけます。
 * 設定を選択すると、編集モードで開くことができます。
 
-![感傷過程](assets/sentimentprocess.png)
+![sentimentprocess](assets/sentimentprocess.png)
 
-* **ポジティブ ウォッチワード**
+* **ポジティブ・ウォッチワード**
 
   デフォルトを上書きする肯定的なセンチメントに貢献する単語のコンマ区切りリスト。 デフォルトは空のリストです。
 
-* **負のウォッチワード**
+* **ネガティブウォッチワード**
 
   デフォルトを上書きする負のセンチメントに貢献する単語のコンマ区切りリスト。 デフォルトは空のリストです。
 
 * **ウォッチワードノードの明示的パス**
 
-  default を含むノードのリポジトリの場所 `positive` および `negative` デフォルトのウォッチワードを指定するプロパティ。 デフォルトは `/libs/settings/community/watchwords/default` です。
+  デフォルトのウォッチワードと、デフォルトのウォッ `positive` ワードを指定するプロパティ `negative` 含むノードのリポジトリの場所。 デフォルトは `/libs/settings/community/watchwords/default` です。
 
 * **センチメントルール**
 
-  ポジティブおよびネガティブウォッチワードに基づいてセンチメントを計算するためのルールのリポジトリ場所。 デフォルトは `/libs/cq/workflow/components/workflow/social/sentiments/rules` （ただし、関連するワークフローはなくなりました）。
+  ポジティブおよびネガティブウォッチワードに基づいてセンチメントを計算するためのルールのリポジトリ場所。 デフォルトは `/libs/cq/workflow/components/workflow/social/sentiments/rules` です（ただし、関与するワークフローはありません）。
 
-次に、以下の場合のデフォルトのウォッチワードのカスタムエントリの例を示します。 `Explicit Path to Watchwords Node` はに設定されています。 `/libs/settings/community/watchwords/default`.
+`Explicit Path to Watchwords Node` が `/libs/settings/community/watchwords/default` に設定されている場合の、デフォルトのウォッチワードのカスタムエントリの例を次に示します。
 
 ![crxde](assets/crxde.png)
 
 ### モデレーター権限 {#moderator-permissions}
 
-次の権限は、同じリソースに割り当てられたときに、一括して次のように呼ばれます `moderator permissions`:
+次の権限を同じリソースに割り当てた場合、総称して `moderator permissions` と呼びます。
 
 * `Read`
 * `Modify`

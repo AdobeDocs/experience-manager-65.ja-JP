@@ -21,21 +21,21 @@ ht-degree: 3%
 
 ## SRP について {#about-srp}
 
-AEM Communitiesのすべてのコンポーネントと機能は、 [ソーシャルコンポーネントフレームワーク（SCF）](/help/communities/scf.md):SocialResourceProvider API を呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
+AEM Communitiesのすべてのコンポーネントと機能は、[ ソーシャルコンポーネントフレームワーク（SCF） ](/help/communities/scf.md) に基づいて構築されています。これは、SocialResourceProvider API を呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
 
-コミュニティサイトを作成する前に、 [ストレージリソースプロバイダー（SRP）](/help/communities/working-with-srp.md) 基になるに従って実装を選択するように設定する必要があります [トポロジ](/help/communities/topologies.md). SRP 実装は、次の 3 つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、基になる [ トポロジ ](/help/communities/topologies.md) と一致する実装を選択するように ](/help/communities/working-with-srp.md) ストレージリソースプロバイダー（SRP[ を設定する必要があります。 SRP 実装は、次の 3 つのストレージオプションに基づいています。
 
-1. [ASRP](/help/communities/asrp.md) - Adobeのオンデマンドストレージ
+1. [ASRP](/help/communities/asrp.md):Adobe・オン・デマンド・ストレージ
 1. [MSRP](/help/communities/msrp.md) - MongoDB
 1. [JSRP](/help/communities/jsrp.md) - JCR
 
 ## UGC ストレージについて {#about-ugc-storage}
 
-UGC の格納について知っておくことが重要なのは、ASRP または MSRP を使用するようにサイトが設定されている場合、実際の UGC はAEMに格納されないことです [ノードストア](/help/sites-deploying/data-store-config.md) （JCR）。
+UGC の格納について知っておくべき重要な点は、ASRP または MSRP を使用するようにサイトが設定されている場合、実際の UGC はAEM [node store](/help/sites-deploying/data-store-config.md) （JCR）に格納されないことです。
 
 JCR には、有用なメタデータを提供するために UGC をシャドウイングするノードが含まれる場合がありますが、これらのノードを実際の UGC と混同しないでください。
 
-参照： [ストレージリソースプロバイダーの概要。](/help/communities/srp.md)
+[ ストレージリソースプロバイダーの概要 ](/help/communities/srp.md) を参照してください。
 
 ## ベストプラクティス {#best-practice}
 
@@ -66,14 +66,14 @@ JCR に固有のメソッドは避ける必要があります。
 
 ### 検索コレクションの使用 {#use-search-collections}
 
-SRP が異なると、異なるネイティブクエリ言語を持つことができます。 のメソッドを使用します [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) パッケージを作成して、適切なクエリ言語を実行します。
+SRP が異なると、異なるネイティブクエリ言語を持つことができます。 [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) パッケージのメソッドを使用して、適切なクエリ言語を実行します。
 
-詳しくは、を参照してください [検索の基本事項](/help/communities/search-implementation.md).
+詳しくは、[ 検索の基本事項 ](/help/communities/search-implementation.md) を参照してください。
 
 ## リソース {#resources}
 
-* [コミュニティコンテンツストレージ](/help/communities/working-with-srp.md) - UGC 共通ストアで使用可能な SRP の選択肢について説明します。
-* [ストレージリソースプロバイダーの概要](/help/communities/srp.md)  – 概要とリポジトリの使用状況の概要
-* [SRP と UGC の基本事項](/help/communities/srp-and-ugc.md) - SRP ユーティリティのメソッドと例
-* [検索の基本事項](/help/communities/search-implementation.md) - UGC 検索の基本情報
-* [SocialUtils のリファクタリング](/help/communities/socialutils.md)  – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [ コミュニティコンテンツストレージ ](/help/communities/working-with-srp.md) - UGC 共通ストアで使用可能な SRP の選択肢について説明します
+* [ ストレージリソースプロバイダーの概要 ](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
+* [SRP と UGC の基本事項 ](/help/communities/srp-and-ugc.md) - SRP ユーティリティメソッドと例
+* [ 検索の基本事項 ](/help/communities/search-implementation.md) - UGC 検索の基本情報
+* [SocialUtils リファクタリング ](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

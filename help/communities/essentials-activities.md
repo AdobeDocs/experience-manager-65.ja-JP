@@ -23,17 +23,17 @@ ht-degree: 4%
 
 フォロー機能を使用すると、コミュニティメンバーが興味のある投稿や他のコミュニティメンバーをフォローする場合に、別のアクティビティを追加できます。
 
-すべて [コミュニティサイト](/help/communities/overview.md#communitiessites) 同じ方法でメンバーアクティビティを表示するサインイン メンバーのユーザープロファイル ページを含めます。
+すべての [ コミュニティサイト ](/help/communities/overview.md#communitiessites) には、同じ方法でメンバーアクティビティを表示するサインインしたメンバーのユーザープロファイルページが含まれています。
 
 ## 概念  {#concepts}
 
-An *アクティビティストリーム* は、メンバーによって実行された最近のアクティビティのリスト、またはフォーラムのトピックやブログなど、コンテンツの単一スレッドにおける最近のアクティビティのリストです。
+*アクティビティストリーム* は、メンバーが最近実行したアクティビティのリストや、コンテンツの単一スレッド（フォーラムのトピックやブログなど）に関する最近のアクティビティのリストです。
 
 メンバーは、別の個人またはコンテンツに従って、アクティビティストリームをフォローできます。
 
-A *ニュース フィード* は、メンバーの後に続くアクティビティストリームを 1 つのストリームに結合したものです。
+*ニュースフィード* とは、メンバーの後に続くアクティビティストリームを 1 つのストリームに結合することです。
 
-A *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)* あるメンバーから別のメンバーへの次の関係をキャプチャします。
+*[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)* は、あるメンバーと別のメンバーの次の関係をキャプチャします。
 
 ## クライアントサイドの基本事項 {#essentials-for-client-side}
 
@@ -44,7 +44,7 @@ A *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)* あ�
    <td>ソーシャル/アクティビティストリーム/コンポーネント/hbs/アクティビティストリーム</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>includable</strong></a></td>
+   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong> 含む </strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
@@ -61,7 +61,7 @@ A *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)* あ�
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>参照： <a href="/help/communities/activities.md">アクティビティストリーム機能</a></td>
+   <td><a href="/help/communities/activities.md"> アクティビティストリーム機能 </a> を参照してください。</td>
   </tr>
  </tbody>
 </table>
@@ -70,12 +70,12 @@ A *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)* あ�
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
+* [ アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
-* [アクティビティストリームリスナー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
+* [ アクティビティストリームリスナー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
 
 * [サーバーサイドのカスタマイズ](/help/communities/server-customize.md)
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
-を含むコミュニティサイト構造 [アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)、設定済みのを含む `activity streams` コンポーネント。
+[ アクティビティストリーム関数 ](/help/communities/functions.md#activity-stream-function) を含むコミュニティサイト構造は、設定済みの `activity streams` コンポーネントを含む。

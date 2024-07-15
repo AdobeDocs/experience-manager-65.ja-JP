@@ -64,7 +64,7 @@ ht-degree: 97%
    + [アプリのメタデータの編集](phonegap-editmetadata.md)
    + [アプリの定義](phonegap-app-definitions.md)
    + [アプリコンテンツの作成および管理](phonegap-manage-app-content.md)
-   + [作成ウィザードを使用したAEM Mobileアプリの作成](phonegap-create-new-app.md)
+   + [作成ウィザードを使用したAEM Mobile アプリケーションの作成](phonegap-create-new-app.md)
    + [モバイルアプリケーションのオーサリング](phonegap-authoring-apps.md)
    + [アプリを管理タイル](phonegap-app-details-tile.md)
    + [AEM Mobile のコンテンツパーソナライゼーション](phonegap-aem-mobile-content-personalization.md)

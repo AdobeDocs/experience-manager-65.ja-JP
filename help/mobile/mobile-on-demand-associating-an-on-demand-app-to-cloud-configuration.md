@@ -32,11 +32,11 @@ ht-degree: 14%
 >
 >オンデマンドアプリ用のクラウド設定の設定を開始する前に、AEM Mobile On-demand ServicesのプロビジョニングとAEM Mobile Client の設定を理解しておく必要があります。
 >
->詳しくは、を参照してください [AEM Mobile On-demand Servicesのセットアップ](/help/mobile/aem-mobile-setup.md) 「管理」セクションで以下を実行します。
+>詳しくは、管理の節の [AEM Mobile On-demand Servicesの設定 ](/help/mobile/aem-mobile-setup.md) を参照してください。
 
-モバイルオンデマンドCloud Serviceを設定するには、の右上隅にある上部の歯車をクリックします **接続を管理** アプリのダッシュボードからタイル表示します。
+モバイルオンデマンドCloud Serviceを行うには、アプリのダッシュボードで **接続を管理** タイルの右上隅にある上部の歯車をクリックします。
 
-アプリダッシュボードと使用可能なタイルについて理解しておく必要があります。 参照： [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
+アプリダッシュボードと使用可能なタイルについて理解しておく必要があります。 詳しくは、[AEM Mobile アプリケーションダッシュボード ](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
 ### クラウド設定へのリンクのセットアップ {#setting-up-link-to-cloud-configuration}
 
@@ -44,26 +44,26 @@ ht-degree: 14%
 >
 >既存のオンデマンドクライアントおよびクラウド設定があることを確認します。
 >
->詳しくは、を参照してください [AEM Mobile On-demand Servicesのセットアップ](/help/mobile/aem-mobile-setup.md) 「管理」セクションで以下を実行します。
+>詳しくは、管理の節の [AEM Mobile On-demand Servicesの設定 ](/help/mobile/aem-mobile-setup.md) を参照してください。
 
 クラウド設定へのリンクをセットアップする手順は次のとおりです。
 
-1. 送信元 **モバイル**、を選択 **アプリ** 次に、カタログからモバイルオンデマンドアプリを選択します。
-1. の歯車アイコンをクリックします **接続を管理** タイル。
+1. **モバイル** から「**アプリ**」を選択し、カタログからモバイルオンデマンドアプリを選択します。
+1. **接続を管理** タイルの歯車アイコンをクリックします。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 既存の設定を入力するか、を入力して作成します。 **設定のタイトル**, **デバイス Id**、および **デバイストークン**.
+1. 既存の設定を入力するか、**設定タイトル**、**デバイス ID**、**デバイストークン** を入力して設定を作成します。
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 1 度は **デバイス Id** および **デバイストークン** 検証済みであることを確認し、リストからオンデマンド プロジェクトを選択します。
+1. **デバイス ID** と **デバイストークン** の検証が完了したら、リストからオンデマンドプロジェクトを選択します。
 
    「**送信**」をクリックします。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-   この **接続を管理** タイルにクラウド設定が表示されます。
+   **接続を管理** タイルに、クラウド設定が表示されます。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 

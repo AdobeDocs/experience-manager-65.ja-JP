@@ -7,7 +7,7 @@ exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Document Security
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 100%
 

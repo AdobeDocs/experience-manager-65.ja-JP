@@ -9,7 +9,7 @@ exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6905'
 ht-degree: 100%
 
@@ -511,9 +511,9 @@ DD には Nominee_details コレクション要素があります。このコレ
    レイアウトフラグメントの使用について詳しくは、[レイアウトフラグメント](#layoutfragments)を参照してください。
 レイアウトのデザインについて詳しくは、[Designer ヘルプ](https://help.adobe.com/ja_JP/AEMForms/6.1/DesignerHelp/)を参照してください。
 
-[ファイルを入手](assets/static.xdp.zip)
+[ファイルの取得](assets/static.xdp.zip)
 
-[ファイルを入手](assets/dynamic.xdp.zip)
+[ファイルの取得](assets/dynamic.xdp.zip)
 
 1. XDP を AEM Forms にアップロードします。
 1. 動的 XDP に基づいてレイアウトフラグメントを作成します。プロパティの「テーブル」タブに、テーブルが動的であることが表示されます（「設定対象」フィールド）。行数（1）および列数（3）は、XDP／レイアウトフラグメントから派生します。

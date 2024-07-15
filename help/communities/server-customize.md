@@ -20,7 +20,7 @@ ht-degree: 1%
 
 | **[⇐機能の基本事項](essentials.md)** | **[クライアントサイドのカスタマイズ ⇒](client-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars ヘルパー⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |
 
 ## Java™ API {#java-apis}
 
@@ -32,9 +32,9 @@ ht-degree: 1%
 
 ソーシャルコンポーネントは、AEM Communities機能のリソースを表す POJO です。 理想的には、各 SocialComponent は、リソースが正確に表されるように、クライアントにデータを提供する公開された GETter を持つ特定の resourceType を表します。 必要に応じて、サイト訪問者のセッション情報を含む、すべてのビジネスおよび表示ロジックが SocialComponent にカプセル化されます。
 
-インターフェイスは、リソースを表すために必要な GETter の基本的なセットを定義します。 重要なのは、インターフェイスがマップを規定していることです&lt;string object=&quot;&quot;> Handlebars テンプレートのレンダリングとリソースのGET JSON エンドポイントの公開に必要な getAsMap （） メソッドと String toJSONString （） メソッド。
+インターフェイスは、リソースを表すために必要な GETter の基本的なセットを定義します。 重要なのは、インターフェイスで、Handlebars テンプレートのレンダリングとリソースのGET JSON エンドポイントの公開に必要な Map&lt;String, Object> getAsMap （） メソッドと String toJSONString （） メソッドが規定されていることです。
 
-すべての SocialComponent クラスは、インターフェイスを実装する必要があります `com.adobe.cq.social.scf.SocialComponent`
+すべての SocialComponent クラスは、インターフェイス `com.adobe.cq.social.scf.SocialComponent` を実装する必要があります
 
 ### SocialCollectionComponent インターフェイス {#socialcollectioncomponent-interface}
 
@@ -50,7 +50,7 @@ SocialComponentFactory は、選択した SocialComponent のインスタンス�
 
 SocialComponentFactory は OSGi サービスであり、コンストラクターを通じて SocialComponent に渡すことができる他の OSGi サービスへのアクセス権があります。
 
-すべての SocialComponentFactory クラスは、インターフェイスを実装する必要があります `com.adobe.cq.social.scf.SocialComponentFactory`
+すべての SocialComponentFactory クラスは、インターフェイス `com.adobe.cq.social.scf.SocialComponentFactory` を実装する必要があります
 
 SocialComponentFactory.getPriority （） メソッドの実装は、getResourceType （）によって返された特定の resourceType に使用されるファクトリの最大値を返す必要があります。
 
@@ -60,33 +60,33 @@ SocialComponentFactoryManager （マネージャー）は、フレームワー�
 
 SocialComponentFactoryManager は OSGi サービスであり、コンストラクターを通じて SocialComponent に渡すことができる他の OSGi サービスへのアクセス権があります。
 
-OSGi サービスへのハンドルは、を呼び出すことによって取得されます `com.adobe.cq.social.scf.SocialComponentFactoryManager`
+OSGi サービスへのハンドルは、`com.adobe.cq.social.scf.SocialComponentFactoryManager` を呼び出すことによって取得されます
 
 ### HTTP API -POSTリクエスト {#http-api-post-requests}
 
 #### PostOperation クラス {#postoperation-class}
 
-HTTP APIPOSTエンドポイントは、を実装することで定義される PostOperation クラスです。 `SlingPostOperation` インターフェイス （パッケージ） `org.apache.sling.servlets.post`）に設定します。
+HTTP APIPOSTエンドポイントは、`SlingPostOperation` インターフェイス（パッケージ `org.apache.sling.servlets.post`）を実装することで定義される PostOperation クラスです。
 
-この `PostOperation` エンドポイント実装セット `sling.post.operation` 操作が応答する値に設定します。 :operation パラメーターが値に設定されたすべてのPOSTリクエストは、この実装クラスにデリゲートされます。
+`PostOperation` エンドポイント実装は、操作が応答する値に `sling.post.operation` を設定します。 :operation パラメーターが値に設定されたすべてのPOSTリクエストは、この実装クラスにデリゲートされます。
 
-この `PostOperation` を呼び出します `SocialOperation` 操作に必要なアクションを実行します。
+`PostOperation` は、操作に必要なアクションを実行する `SocialOperation` を呼び出します。
 
-この `PostOperation` から結果を受信します `SocialOperation` そして、適切な応答をクライアントに返します。
+`PostOperation` は、`SocialOperation` から結果を受け取り、適切な応答をクライアントに返します。
 
 #### SocialOperation クラス {#socialoperation-class}
 
-Each `SocialOperation` エンドポイントは、AbstractSocialOperation クラスを拡張し、メソッドをオーバーライドします `performOperation()`. このメソッドは、操作を完了し、 `SocialOperationResult` それ以外の場合は `OperationException`. この場合、メッセージを含む HTTP エラーステータスが使用可能であれば、通常の JSON 応答や成功 HTTP ステータスコードの代わりに返されます。
+各 `SocialOperation` エンドポイントは、AbstractSocialOperation クラスを拡張し、メソッド `performOperation()` をオーバーライドします。 このメソッドは、操作を完了して `SocialOperationResult` を返すか、`OperationException` をスローするために必要なすべてのアクションを実行します。 この場合、メッセージを含む HTTP エラーステータスが使用可能であれば、通常の JSON 応答や成功 HTTP ステータスコードの代わりに返されます。
 
-の拡張 `AbstractSocialOperation` ～の再利用を可能にする `SocialComponents` JSON 応答を送信します。
+`AbstractSocialOperation` を拡張すると、`SocialComponents` を再利用して JSON 応答を送信できます。
 
 #### SocialOperationResult クラス {#socialoperationresult-class}
 
-この `SocialOperationResult` クラスは、次の結果として返されます `SocialOperation` また、で構成されています。 `SocialComponent`、HTTP ステータスコードおよび HTTP ステータスメッセージ。
+`SocialOperationResult` クラスは、`SocialOperation` の結果として返され、`SocialComponent`、HTTP ステータスコードおよび HTTP ステータスメッセージで構成されます。
 
-この `SocialComponent` 操作の影響を受けたリソースを表します。
+`SocialComponent` は、操作の影響を受けたリソースを表します。
 
-作成操作の場合、 `SocialComponent` 次に含まれる `SocialOperationResult` は、作成されたリソースを表します。更新操作の場合は、操作によって変更されたリソースを表します。 不可 `SocialComponent` は、削除操作に対して返されます。
+作成操作の場合、`SocialOperationResult` に含まれる `SocialComponent` は作成されたリソースを表し、更新操作の場合は操作によって変更されたリソースを表します。 削除操作で `SocialComponent` は返されません。
 
 使用される成功 HTTP ステータスコードは次のとおりです。
 
@@ -96,13 +96,13 @@ Each `SocialOperation` エンドポイントは、AbstractSocialOperation クラ
 
 #### OperationException クラス {#operationexception-class}
 
-An `OperationExcepton` リクエストが無効な場合や他のエラーが発生した場合、操作の実行時にスローされる。 例えば、内部エラー、パラメーター値が正しくない、権限が正しくないなど。 An `OperationException` は、HTTP ステータスコードとエラーメッセージで構成され、 `PostOperatoin`.
+リクエストが有効でない場合や他のエラーが発生した場合、操作を実行すると `OperationExcepton` がスローされます。 例えば、内部エラー、パラメーター値が正しくない、権限が正しくないなど。 `OperationException` は、HTTP ステータスコードとエラーメッセージで構成され、`PostOperatoin` に対する応答としてクライアントに返されます。
 
 #### OperationService クラス {#operationservice-class}
 
-ソーシャルコンポーネントフレームワークでは、操作の実行を担当するビジネスロジックを内に実装しないことをお勧めします `SocialOperation` クラス。代わりに OSGi サービスにデリゲートされます。 ビジネスロジックに OSGi サービスを使用すると、 `SocialComponent`。に基づいて `SocialOperation` エンドポイント：他のコードと統合し、異なるビジネスロジックを適用する。
+ソーシャルコンポーネントフレームワークでは、操作を実行する責任があるビジネスロジックを `SocialOperation` クラス内に実装するのではなく、OSGi サービスに委任することをお勧めします。 ビジネスロジックに OSGi サービスを使用すると、`SocialOperation` エンドポイントによって動作する `SocialComponent` ールを他のコードと統合し、異なるビジネスロジックを適用できます。
 
-すべて `OperationService` classes extend `AbstractOperationService`、実行されている操作に関連付けることができる追加の拡張機能を許可します。 サービス内の各操作は、 `SocialOperation` クラス。 この `OperationExtensions` クラスは、メソッドを呼び出すことによって、操作の実行中に呼び出すことができます
+すべての `OperationService` クラスは `AbstractOperationService` を拡張するので、実行中の操作に関連付けることができる追加の拡張機能が可能になります。 サービス内の各操作は、`SocialOperation` クラスで表されます。 メソッドを呼び出すことで、操作の実行中に `OperationExtensions` クラスを呼び出すことができます
 
 * `performBeforeActions()`
 
@@ -113,18 +113,18 @@ An `OperationExcepton` リクエストが無効な場合や他のエラーが発
 
 #### OperationExtension クラス {#operationextension-class}
 
-この `OperationExtension` クラスは、操作に挿入できるカスタムコードの一部で、ビジネスニーズに合わせて操作をカスタマイズできます。 コンポーネントのコンシューマーは、コンポーネントに機能を動的かつ増分的に追加できます。 拡張機能/フックパターンを使用すると、開発者は拡張機能自体に専念でき、操作やコンポーネント全体をコピーして上書きする必要がなくなります。
+`OperationExtension` クラスは、操作に挿入できるカスタムコードの一部で、ビジネスニーズに合わせて操作をカスタマイズできます。 コンポーネントのコンシューマーは、コンポーネントに機能を動的かつ増分的に追加できます。 拡張機能/フックパターンを使用すると、開発者は拡張機能自体に専念でき、操作やコンポーネント全体をコピーして上書きする必要がなくなります。
 
 ## サンプルコード {#sample-code}
 
-サンプルコードは次で入手できます [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリ。 次のいずれかのプレフィックスが付いたプロジェクトを検索 `aem-communities` または `aem-scf`.
+サンプルコードは [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。 プレフィックスが `aem-communities` または `aem-scf` のプロジェクトを検索します。
 
 ## ベストプラクティス {#best-practices}
 
-を表示する [コーディングのガイドライン](code-guide.md) AEM Communities開発者向けの様々なコーディングガイドラインとベストプラクティスについての節です。
+AEM Communities開発者向けの様々なコーディングガイドラインとベストプラクティスについては、[ コーディングガイドライン ](code-guide.md) の節を参照してください。
 
-関連トピック [UGC 用ストレージリソースプロバイダー（SRP）](srp.md) ユーザー生成コンテンツへのアクセスについて説明します。
+ユーザー生成コンテンツへのアクセスについては、[UGC 用ストレージリソースプロバイダー（SRP） ](srp.md) も参照してください。
 
 | **[⇐機能の基本事項](essentials.md)** | **[クライアントサイドのカスタマイズ ⇒](client-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars ヘルパー⇒](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers ⇒](handlebars-helpers.md)** |

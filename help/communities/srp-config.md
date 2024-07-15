@@ -33,16 +33,16 @@ ht-degree: 4%
 
 オーサー環境で、ストレージ設定コンソールにアクセスします。
 
-* グローバルナビゲーションから、を選択します。 **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL ストレージ設定]**
+* グローバルナビゲーションから、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL ストレージ設定]** を選択します。
 
 デフォルトの JCR 以外のストレージオプションを選択するには：
 
 * オプションを選択
 * 適切に設定
 
-   * の詳細を参照 [msrp の選択](msrp.md#select-msrp)
-   * の詳細を参照 [dsrp の選択](dsrp.md#select-dsrp)
-   * の詳細を参照 [asrp の選択](asrp.md#select-asrp)
+   * [MSRP の選択 ](msrp.md#select-msrp) の詳細を参照してください。
+   * [DSRP の選択 ](dsrp.md#select-dsrp) の詳細を参照してください。
+   * 詳細については、[ASRP の選択 ](asrp.md#select-asrp) を参照してください。
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
@@ -50,10 +50,10 @@ ht-degree: 4%
 
 何も選択しない場合、デフォルトはAEM リポジトリ JCR です。
 
-JCR は *ではない* オーサー環境とパブリッシュ環境で共有される共通ストア。 コミュニティコンテンツは、そのコンテンツが作成されたオーサー環境またはパブリッシュ環境からのみ表示されます。
+JCR *オーサー環境とPublish環境で共有される共通ストア* ありません）。 コミュニティコンテンツは、そのコンテンツが作成されたオーサー環境またはPublish環境からのみ表示されます。
 
-訪問 [JCR ストア](jsrp.md) を参照してください。
+詳しくは、[JCR ストア ](jsrp.md) を参照してください。
 
 >[!NOTE]
 >
->ノードの欠落 `srpc` 未満 `/etc/socialconfig` デフォルトを示します [JCR ストア](jsrp.md).
+>`/etc/socialconfig` の下にノード `srpc` がない場合は、デフォルトの [JCR ストア ](jsrp.md) を示します。

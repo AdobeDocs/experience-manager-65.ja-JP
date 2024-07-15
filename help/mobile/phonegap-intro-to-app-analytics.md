@@ -32,20 +32,20 @@ AEM Mobile アプリはマーケティングキャンペーンに対して何を
 
 Adobeモバイルサービスを使用すると、モバイルアプリの使用状況、アプリのクラッシュ回数、デバイスの詳細など、モバイルアプリに関する多くの重要な指標をトラッキングして、ユーザーがモバイルアプリをどのように使用しているかに関するインサイトを得ることができます。
 
-Adobe Experience Manager Mobileでは、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を確認できます。 この **モバイル指標タイル** ダッシュボードのを使用すると、モバイルアプリケーションにReal-Time Analyticsが提供され、開発者、作成者および管理者はモバイルアプリの正常性を簡単に確認できます。 カバーの下で、分析の機能を強化するのは [Mobile Analytics のAdobe](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK です。 Adobeモバイル分析 SDK は、ネイティブで、または Web ビュー用 PhoneGap Bridge プラグインを通じてアプリケーションにプラグインできます。 指標が収集され、デバイスが接続されるまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services Cloud にプッシュされます。
+Adobe Experience Manager Mobileでは、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を確認できます。 ダッシュボードの **モバイル指標タイル** には、モバイルアプリケーションのReal-Time Analyticsが表示され、開発者、作成者および管理者がモバイルアプリの正常性を簡単に確認できます。 カバーの下で、分析の機能を強化するのは、[AdobeMobile Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK です。 Adobeモバイル分析 SDK は、ネイティブで、または Web ビュー用 PhoneGap Bridge プラグインを通じてアプリケーションにプラグインできます。 指標が収集され、デバイスが接続されるまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services Cloud にプッシュされます。
 
 Adobe Mobile Analytics SDK は次を提供します。
 
-1. **モバイルチャネルのデータ収集**  – すべての主要なオペレーティングシステムでモバイル web サイトやアプリの包括的なデータを収集します。
-1. **モバイルエンゲージメント分析** - モバイルアプリ、web サイトまたはビデオ内のユーザーエンゲージメントを把握します。これには、消費者がチャネルを立ち上げる頻度や、チャネルから購入するかどうかなどが含まれます。
-1. **モバイルアプリのダッシュボードとレポート** - アプリのライフサイクル指標やアプリストア指標を含んだ使用状況レポートを取得します – ユーザーのトレンド、起動数、平均セッション長、保持期間、クラッシュを確認します。
+1. **モバイルチャネルのデータ収集** – すべての主要なオペレーティングシステムでモバイル web サイトやアプリの包括的なデータを収集します。
+1. **モバイルエンゲージメント分析** - モバイルアプリ、web サイトまたはビデオ内のユーザーエンゲージメントを把握します。これには、消費者がチャネルを起動する頻度や、そのチャネルから購入するかどうかなどが含まれます。
+1. **モバイルアプリダッシュボードとレポート** - アプリのライフサイクル指標やアプリストア指標を含んだ使用状況レポートを取得します。ユーザーの傾向、起動数、平均セッション長、保持期間、クラッシュを確認します。
 1. **モバイルキャンペーン分析** - SMS、モバイル検索広告、モバイルディスプレイ広告、QR コードなど、モバイル固有のキャンペーンの効果を定量化します。
-1. **ジオロケーション分析** - アプリのユーザーが起動する場所を見つけ、GPS の場所や目標地点によってモバイルエクスペリエンスとやり取りします。
-1. **パス分析** - ユーザーがアプリ内をどのように移動して、どの画面と UI 要素がユーザーを引き付け、どの画面がユーザーを離脱させるかを決定するかを確認します。
+1. **位置情報の分析** - アプリのユーザーが起動した場所を見つけ、GPS の場所や目標地点によってモバイルエクスペリエンスとやり取りします。
+1. **パス分析** - ユーザーがアプリ内をどのように移動するかを確認し、ユーザーを引き付けている画面と UI 要素、およびユーザーが離脱する原因を特定します。
 
-この節では、その方法について説明します [AEM開発者](#developers) 次に、analytics トラッキングを使用してAEM Mobile アプリを実装する方法を説明します。
+この節では、[Analytics Developers](#developers) でAEM トラッキングを使用してAEM Mobile アプリを実装する方法について説明します。
 
-最後に [AEM管理者](#administrators) 学習内容：
+最後に、[AEM管理者は次の ](#administrators) とを学習します。
 
 * mobile Services をAdobeにするクラウドサービスの作成
 * モバイルサービス設定の作成とレポートスイートの関連付け
@@ -55,13 +55,13 @@ Adobe Mobile Analytics SDK は次を提供します。
 
 ## 開発者向け – Analytics のアプリへの統合 {#for-developers-integrate-analytics-into-your-app}
 
-**前提条件：** AEM管理者は、Adobe Mobile Services クラウド設定、 [以下で説明するように](#amscloudserviceconfig).
+**前提条件：** AEM管理者は、（以下で説明するように [Mobile Services Adobeのクラウド設定を行う必要があり ](#amscloudserviceconfig) す。
 
-開発者は、次の役割を担当します [AEM Mobile アプリへの analytics の追加](/help/mobile/phonegap-add-analytics-to-apps.md) 必要に応じて、ユーザーがモバイルアプリのコンテンツとどのように関わっているかを追跡、レポート、理解し、ローンチ、アプリ内時間、クラッシュ率などの主要なライフサイクル指標を測定します。
+デベロッパーは、必要に応じて [AEM Mobile アプリに分析を追加 ](/help/mobile/phonegap-add-analytics-to-apps.md) し、モバイルアプリのコンテンツに対するユーザーのエンゲージメントを追跡、レポートおよび理解し、ローンチ、アプリ内時間、クラッシュ率などの主要ライフサイクル指標を測定する責任があります。
 
 ## 管理者向け – Adobe Mobile Services のCloud Serviceを設定します {#for-administrators-configure-the-adobe-mobile-services-cloud-service}
 
-Adobeの Mobile Services を活用するには、AEM Adobeの Mobile Services 設定にAdobe Analytics アカウント情報をCloud Serviceする必要があります。 Apps Command Center では、 **指標の分析** クラウドサービスを作成してモバイルアプリに関連付けることができるタイルです。
+Adobeの Mobile Services を活用するには、AEM Adobeの Mobile Services 設定にAdobe Analytics アカウント情報をCloud Serviceする必要があります。 Apps コマンドセンターには「**指標を分析**」タイルがあり、クラウドサービスを作成してモバイルアプリに関連付けることができます。
 
 モバイルアプリに Cloud Service を設定するには、まず「指標を分析」タイルの歯車アイコンをクリックします。
 
@@ -75,7 +75,7 @@ AdobeMobile Service Cloud Service を作成するには、サービスに接続�
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
-「」をクリックした後&#x200B;**+**&#39; ボタン、 **Cloud Serviceを追加** ウィザードが表示されます。
+「**+**」ボタンをクリックすると、「Cloud Serviceを追加 **ウィザードが表示さ** ます。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 

@@ -24,26 +24,26 @@ AEM Communities 6.1 以降、サイト訪問者（メンバー）がパブリッ
 
 AEM プラットフォームでは、オーサー環境からパブリッシュ環境にサイトコンテンツをレプリケートするノードストアを使用し、AEM Communitiesでは、UGC のために、レプリケートされない単一の共通ストアを使用します。
 
-一般的な UGC ストアでは、 [ストレージリソースプロバイダー（SRP）](working-with-srp.md). 推奨される選択肢は次のとおりです。
+共通 UGC ストアの場合は、[ ストレージリソースプロバイダー（SRP） ](working-with-srp.md) を選択する必要があります。 推奨される選択肢は次のとおりです。
 
 * [DSRP - リレーショナルデータベースストレージリソースプロバイダー](dsrp.md)
 * [MSRP - MongoDB ストレージリソースプロバイダー](msrp.md)
 * [ASRP - Adobe ストレージリソースプロバイダー](asrp.md)
 
-もう 1 つの SRP オプション [JSRP - JCR ストレージリソースプロバイダー](jsrp.md)は、オーサー環境とパブリッシュ環境の両方のアクセスに共通の UGC ストアをサポートしていません。
+もう 1 つの SRP オプション [JSRP - JCR ストレージリソースプロバイダー ](jsrp.md) では、オーサー環境とパブリッシュ環境の両方のアクセス用に共通の UGC ストアがサポートされていません。
 
 共通のストアを必要とすると、次の推奨トポロジになります。
 
 >[!NOTE]
 >
->AEM Communitiesについては、 [UGC はレプリケートされない](working-with-srp.md#ugc-never-replicated).
+>AEM Communitiesの場合、[UGC はレプリケートされません ](working-with-srp.md#ugc-never-replicated)。
 >
->デプロイメントにが含まれていない場合 [共通店舗](working-with-srp.md)、UGC は、入力されたAEM パブリッシュインスタンスまたはオーサーインスタンスでのみ表示されます。
+>デプロイメントに [ 共通ストア ](working-with-srp.md) が含まれていない場合、UGC は、入力されたAEM パブリッシュインスタンスまたはオーサーインスタンスにのみ表示されます。
 >
 
 >[!NOTE]
 >
->AEMのプラットフォームについて詳しくは、 [推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md) および [AEM プラットフォームの概要](../../help/sites-deploying/data-store-config.md).
+>AEM Platform について詳しくは、[ 推奨されるデプロイメント ](../../help/sites-deploying/recommended-deploys.md) および [AEM Platform の概要 ](../../help/sites-deploying/data-store-config.md) を参照してください。
 
 ## 実稼動用 {#for-production}
 
@@ -51,15 +51,15 @@ UGC の共通ストアの確立は不可欠です。したがって、基盤と�
 
 2 つの例：
 
-1. UGC の予想量が多く、ローカルの MongoDB インスタンスが可能な場合は、次のような選択肢があります。 [MSRP](msrp.md).
+1. UGC の予想量が多く、ローカルの MongoDB インスタンスが可能な場合は、[MSRP](msrp.md) が選択されます。
 
-1. ページコンテンツに最適なパフォーマンスを実現するには、次の選択肢があります。 [パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) および [ASRP](asrp.md) は、比較的簡単な操作で UGC の最適なスケーリングを提供します。
+1. ページコンテンツの最適なパフォーマンスを得るために、[ パブリッシュファーム ](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) および [ASRP](asrp.md) を選択すると、比較的簡単な操作で UGC の最適なスケーリングが行われます。
 
-どちらの場合も、デプロイメントは任意の OAK マイクロカーネルに基づいている可能性があります。
+どちらの場合も、デプロイメントは任意のOAK マイクロカーネルに基づいている可能性があります。
 
-適切な共通店を選択するには、ユニークなものを慎重に検討してください [特性](working-with-srp.md#characteristics-of-srp-options) 各。
+適切な共通店舗を選択するには、それぞれのユニークな [ 特性 ](working-with-srp.md#characteristics-of-srp-options) を慎重に検討してください。
 
-Oak Microkernals について詳しくは、以下を参照してください。 [推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md).
+Oak Microkernals について詳しくは、[ 推奨されるデプロイメント ](../../help/sites-deploying/recommended-deploys.md) を参照してください。
 
 ### TarMK パブリッシュファーム {#tarmk-publish-farm}
 
@@ -86,9 +86,9 @@ Oak Microkernals について詳しくは、以下を参照してください。
 
 ## 開発用 {#for-development}
 
-実稼動以外の環境の場合、 [JSRP](jsrp.md) 1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを持つ開発環境のセットアップを簡単にします。
+実稼動以外の環境の場合、[JSRP](jsrp.md) を使用すると、1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを持つ開発環境のセットアップが簡単になります。
 
-次を選択した場合： [ASRP](asrp.md), [DSRP](dsrp.md) または [MSRP](msrp.md) 実稼動環境の場合は、Adobeのオンデマンドストレージまたは MongoDB を使用して、同様の開発環境をセットアップすることもできます。 例については、を参照してください。 [MongoDB をデモ用に設定する方法](demo-mongo.md).
+実稼動環境で [ASRP](asrp.md)、[DSRP](dsrp.md) または [MSRP](msrp.md) を選択した場合は、Adobeのオンデマンドストレージまたは MongoDB を使用して同様の開発環境をセットアップすることもできます。 例については、[ デモ用に MongoDB をセットアップする方法 ](demo-mongo.md) を参照してください。
 
 ## 参照 {#references}
 
@@ -100,13 +100,13 @@ Oak Microkernals について詳しくは、以下を参照してください。
 
   オーサー環境とパブリッシュ環境におけるユーザーとユーザーグループの役割について説明します。
 
-* UGC [共通店舗](working-with-srp.md)
+* UGC[ 共通ストア ](working-with-srp.md)
 
   サイトコンテンツとは別に、コミュニティコンテンツのストレージを表します。
 
 * [ノードストアとデータストア](../../help/sites-deploying/data-store-config.md)
 
-  基本的に、サイトコンテンツはノードストアに保存されます。 Assets の場合、バイナリデータを格納するようにデータストアを設定できます。 コミュニティの場合、SRP を選択するように共通ストアを設定する必要があります。
+  基本的に、サイトコンテンツはノードストアに保存されます。 Assetsでは、バイナリデータを格納するようにデータストアを設定できます。 コミュニティの場合、SRP を選択するように共通ストアを設定する必要があります。
 
 * [ストレージ要素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 

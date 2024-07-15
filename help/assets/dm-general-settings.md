@@ -11,7 +11,7 @@ mini-toc-levels: 4
 exl-id: 55cc7c57-87a0-4bfb-b226-36d01d36849a
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2506'
 ht-degree: 100%
 

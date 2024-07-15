@@ -1,6 +1,6 @@
 ---
 title: アプリの構造
-description: このページでは、アプリの構造を作成する方法について説明します。 このページでは、JavaScript と CSS Clientlib に関する情報と共に、テンプレートとコンポーネントを構築する方法について説明します。
+description: このページでは、アプリの構造を作成する方法について説明します。 ここでは、JavaScriptと CSS Clientlib に関する情報と共に、テンプレートとコンポーネントを構築する方法について説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -22,7 +22,7 @@ ht-degree: 3%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
 
-AEM Mobile プロジェクトには、ページ、JavaScript と CSS クライアントライブラリ、再利用可能なAEM コンポーネント、コンテンツ同期設定、PhoneGap アプリシェルコンテンツなど、様々なコンテンツタイプが含まれています。 新しいAEM Mobile アプリをベースにする [スターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) は、様々なタイプのコンテンツを推奨構造に取り込んで、長期にわたって移植性と保守性の両方を容易にするための良い方法です。
+AEM Mobile プロジェクトには、ページ、JavaScriptと CSS クライアントライブラリ、再利用可能なAEM コンポーネント、コンテンツ同期設定、PhoneGap アプリシェルコンテンツなど、様々なコンテンツタイプが含まれます。 新しいAEM Mobile アプリを [ スターターキット ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) に基づくと、あらゆる種類のコンテンツをお勧めの構造に取り込んで、長期にわたって移植性と保守性の両方を容易にすることができます。
 
 ## ページコンテンツ {#page-content}
 
@@ -34,28 +34,28 @@ AEMの慣例により、アプリの最初のページは、アプリのデフ�
 
 ## テンプレートとコンポーネント {#templates-and-components}
 
-アプリのテンプレートとコンポーネントコードは、/apps/内にある必要があります。&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>. 規則に従って、テンプレートとコンポーネントコードを/apps/に配置する必要があります。&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>. このパターンは、AEMのサイトを既に使用している開発者によく知られている必要があります。 通常、このアドレスに従います。パブリッシュインスタンスでは、デフォルトで/apps/が匿名アクセスに対してロックダウンされています。 そのため、生の JSP コードは、潜在的な攻撃者から隠されています。
+アプリのテンプレートとコンポーネントコードは、/apps/&lt;brand name>/&lt;app name> 内にある必要があります。 規則に従って、テンプレートとコンポーネントコードは/apps/&lt;brand name>/&lt;app name> に配置する必要があります。 このパターンは、AEMのサイトを既に使用している開発者によく知られている必要があります。 通常、このアドレスに従います。パブリッシュインスタンスでは、デフォルトで/apps/が匿名アクセスに対してロックダウンされています。 そのため、生の JSP コードは、潜在的な攻撃者から隠されています。
 
-アプリ固有のテンプレートは、 `allowedPaths` テンプレート自体のプロパティノードで、その値を「/content/mobileapps （/.&amp;ast;）?&#39; - テンプレートを 1 つのアプリでのみ使用できるようにする場合は、より具体的なものを使用することもできます。 この `allowedParents` および `allowedChildren` プロパティを使用すると、新しいページが作成される場所に基づいて、作成者が使用できるテンプレートを詳細に制御することもできます。
+アプリ固有のテンプレートは、テンプレート自体の `allowedPaths` プロパティノードを使用し、その値を「/content/mobileapps （/&amp;ast;）?&#39; - テンプレートを 1 つのアプリでのみ使用できるようにする場合は、より具体的なものを使用することもできます。 `allowedParents` プロパティと `allowedChildren` プロパティを使用すると、新しいページが作成される場所に基づいて、作成者が使用できるテンプレートを詳細に制御することもできます。
 
-アプリページコンポーネントを新規に作成する場合は、を設定することをお勧めします `sling:resourceSuperType` プロパティを「mobileapps/components/angular/ng-page」に設定します。 これにより、オーサリングとレンダリングの両方に対応するページが単一ページアプリとして設定され、コンポーネントの変更が必要になる可能性のある.jsp ファイルをオーバーレイできるようになります。 ng-page には UI フレームワークがまったく含まれていないので、開発者は通常、「template.jsp」（/libs/mobileapps/components/angular/ng-page/template.jspからオーバーレイ）をオーバーレイすることになります。
+angular アプリページコンポーネントを新規に作成する場合は、`sling:resourceSuperType` プロパティを「mobileapps/components/mobile/ng-page」に設定することをお勧めします。 これにより、オーサリングとレンダリングの両方に対応するページが単一ページアプリとして設定され、コンポーネントの変更が必要になる可能性のある.jsp ファイルをオーバーレイできるようになります。 ng-page には UI フレームワークがまったく含まれていないので、開発者は通常、「template.jsp」（/libs/mobileapps/components/angular/ng-page/template.jspからオーバーレイ）をオーバーレイすることになります。
 
-オーサリング可能なページコンポーネントは、AngularJS を使用する場合、同等の機能を持っています `sling:resourceSuperType` /libs/mobileapps/components/component/ng-component にあるangular。同じようにオーバーレイおよびカスタマイズできます。
+angular オーサリング可能なページコンポーネントは AngularJS を使用するものであり、/libs/mobileapps/components/authoring/ng-component に同等の `sling:resourceSuperType` コンポーネントがあります。このコンポーネントは、同じ方法でオーバーレイおよびカスタマイズできます。
 
-## JavaScript と CSS Clientlib {#javascript-and-css-clientlibs}
+## JavaScriptと CSS Clientlibs {#javascript-and-css-clientlibs}
 
 クライアントライブラリには、リポジトリー内の配置場所に関する開発者が使用できるオプションがいくつかあります。 以下のパターンがガイダンスとして提供されていますが、これは難しい要件ではありません。
 
-クライアントサイドコードが独立しており、アプリケーションの特定のコンポーネントに関連していない場合（つまり、他のアプリケーションで再利用できる場合）は、Adobeが/etc/clientlibs/に格納することをお勧めします&lt;brand name=&quot;&quot;>/&lt;lib name=&quot;&quot;>. 一方、クライアントライブラリが 1 つのアプリに固有の場合は、アプリのデザインノード（/etc/designs/phonegap/）の子としてネストできます。&lt;brand name=&quot;&quot;>/&lt;app name=&quot;&quot;>/clientlibs. この clientlib のカテゴリを他の libs と使用しないでください。代わりに、必要に応じて他の libs を埋め込みます。 このパターンに従うと、開発者は、アプリのデザイン clientlib の「embed」プロパティを更新するだけで、クライアントライブラリをアプリに追加するたびに新しいコンテンツ同期設定を追加する必要がなくなります。 例えば、/content/phonegap/geometrixx-outdoors/en/jcr:content/pge-app/app-config/clientlibs-all にあるGeometrixx clientlibs-all コンテンツ同期設定ノードを確認します。
+クライアントサイドコードが独立しており、アプリケーションの特定のコンポーネントに関連していない場合（つまり、他のアプリケーションで再利用できる場合）は、Adobeが/etc/clientlibs/&lt;brand name>/&lt;lib name> に格納することをお勧めします。 一方、clientlib が 1 つのアプリに固有の場合は、アプリのデザインノード（/etc/designs/phonegap/&lt;brand name>/&lt;app name>/clientlibs）の子としてネストできます。 この clientlib のカテゴリを他の libs と使用しないでください。代わりに、必要に応じて他の libs を埋め込みます。 このパターンに従うと、開発者は、アプリのデザイン clientlib の「embed」プロパティを更新するだけで、クライアントライブラリをアプリに追加するたびに新しいコンテンツ同期設定を追加する必要がなくなります。 例えば、/content/phonegap/geometrixx-outdoors/en/jcr:content/pge-app/app-config/clientlibs-all にあるGeometrixx clientlibs-all コンテンツ同期設定ノードを確認します。
 
 クライアントサイドのコードが特定のコンポーネントに緊密に結び付けられている場合は、そのコードを、/apps/内のコンポーネントの場所の下にネストされたクライアントライブラリに配置し、そのカテゴリをアプリの「デザイン」 clientlib に埋め込みます。
 
 ## PhoneGap 設定 {#phonegap-configuration}
 
-各AEM Mobile アプリケーションには、PhoneGap が使用する設定ファイルをホストするディレクトリが含まれています [コマンドラインインターフェイス](https://github.com/phonegap/phonegap-cli) および PhoneGap ビルド： `https://build.phonegap.com/` Web コンテンツを実行可能なアプリケーションに変換する 例えば、Geometrixxサンプルでは、このディレクトリ（/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-content）はシェルの一部として配置されています。これは、デバイス API やアプリ自体の設定を扱うプラグインなど、無線で更新できないコンテンツのみが含まれているために設計が決定されるためです。
+各AEM Mobile アプリケーションには、PhoneGap [ コマンドラインインターフェイス ](https://github.com/phonegap/phonegap-cli) および PhoneGap ビルドで使用される設定ファイルをホストし、Web コンテンツを実行可能なアプリケーションに変 `https://build.phonegap.com/` するディレクトリが含まれています。 例えば、Geometrixxサンプルでは、このディレクトリ（/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-content）はシェルの一部として配置されています。これは、デバイス API やアプリ自体の設定を扱うプラグインなど、無線で更新できないコンテンツのみが含まれているために設計が決定されるためです。
 
-このディレクトリには、 [Cordova フック](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/index.html#Hooks%20Guide) （プラグインのインストール、プラットフォーム固有の場所へのリソースファイルの配置、ビルドの一部として実行されるその他のアクションに使用できます）。 注：ビルドの一部として各プラグインをダウンロードする代わりに、Kitchen Sink アプリのパターンに従って、プラグインのソースコードを含めることができます<!-- THIS URL IS 404 (https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) --> 残りのアプリプロジェクトを使用して調整します。
+このディレクトリには、[Cordova フック ](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/index.html#Hooks%20Guide) もあり、プラグインのインストール、プラットフォーム固有の場所へのリソースファイルの配置、ビルドの一部として実行されるその他のアクションに使用できます。 注：ビルドの一部として各プラグインをダウンロードする代わりに、Kitchen Sink アプリのパターンに従い、残りのアプリプロジェクトと共に <!-- THIS URL IS 404 (https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) --> プラグインのソースコードを含めることができます。
 
 ## 次の手順 {#the-next-steps}
 
-アプリの構造については、次を参照してください [アプリコンソールを使用したアプリの作成および編集](/help/mobile/phonegap-apps-console.md).
+アプリの構造については、[App Console を使用したアプリの作成と編集 ](/help/mobile/phonegap-apps-console.md) を参照してください。

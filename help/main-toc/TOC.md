@@ -7,7 +7,7 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: 721837590521aeaa82ab8a960098eba87c0ffb43
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '7456'
 ht-degree: 100%
 
@@ -85,7 +85,7 @@ ht-degree: 100%
          + [オーサリングの概念](/help/sites-authoring/author.md)
          + [基本操作 ](/help/sites-authoring/basic-handling.md)
          + [検索](/help/sites-authoring/search.md)
-         + [アカウント環境の設定 ](/help/sites-authoring/user-properties.md)
+         + [アカウント環境の設定](/help/sites-authoring/user-properties.md)
          + [インボックス](/help/sites-authoring/inbox.md)
          + [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
          + [UI の選択 ](/help/sites-authoring/select-ui.md)
@@ -131,7 +131,7 @@ ht-degree: 100%
          + [ローンチの昇格](/help/sites-authoring/launches-promoting.md)
       + ワークフロー {#workflows}
          + [ワークフローの操作](/help/sites-authoring/workflows.md)
-         + [ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md)
+         + [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)
          + [ワークフローへの参加 ](/help/sites-authoring/workflows-participating.md)
          + [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)
       + ページパフォーマンス {#page-performance}

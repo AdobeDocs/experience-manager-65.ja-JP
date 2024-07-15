@@ -23,15 +23,15 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->AEMをコンテンツ管理ソースとして使用していない場合は、を参照してください [AEM Mobile On-demand Services ヘルプ](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>AEMをコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html) を参照してください。
 
 >[!NOTE]
 >
->AEM Mobileを使用してこの入門ガイドの手順に従う前に、ユーザーは以下について理解しておく必要があります [AEM](/help/sites-deploying/deploy.md).
+>AEM Mobileを操作してこの入門ガイドの手順に従う前に、[AEM](/help/sites-deploying/deploy.md) について理解しておく必要があります。
 >
->AEM Mobile On-demand Services用に環境を設定するには、以下を参照してください [AEM Mobile Application Dashboard またはコントロール・センター](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>AEM Mobile On-demand Services用に環境を設定するには、[AEM Mobile Application Dashboard または Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
-An **AEM開発者** を拡張し、カスタム web テンプレートおよびコンポーネントを作成して、 *AEM オーサー* 美しく魅力的なモバイルエクスペリエンスを作成する。 これらのテンプレートとコンポーネントは、モバイルアプリ用に最適化されるだけでなく、デバイスとAEM サーバー（任意のリモートサーバー）の両方に通信して、オムニチャネルサービスのエンドポイントに提供されます。 AEMの組み込みコンテンツエディターの利用者 *AEM オーサー* Adobe Marketing Cloudの他の部分との統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成できます。
+**AEM開発者** は、*AEM オーサー* が美しく魅力的なモバイルエクスペリエンスを作成できるように、カスタム web テンプレートおよびコンポーネントを拡張して作成します。 これらのテンプレートとコンポーネントは、モバイルアプリ用に最適化されるだけでなく、デバイスとAEM サーバー（任意のリモートサーバー）の両方に通信して、オムニチャネルサービスのエンドポイントに提供されます。 AEMの組み込みコンテンツエディターは、*AEM作成者* がアプリ内でリッチで関連性の高いエクスペリエンスを作成するために使用します（他のAdobe Marketing Cloudとの統合など）。
 
 AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを担当します。
 
@@ -39,11 +39,11 @@ AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
 * [コンテンツのプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
 
-参照： [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md) （コンテンツサービスの開発のために使用）。
+コンテンツサービスの開発については、[AEM Mobile コンテンツサービスの開発 ](/help/mobile/developing-content-services.md) を参照してください。
 
 >[!NOTE]
 >
->An *AEM開発者* 役割の出発点や終了点は、テンプレートやコンポーネントの開発ではありません。 An *AEM開発者* 標準提供のリファレンス実装サンプルを単に拡張するのではなく、まったく新しいアプリを作成できます。
+>*AEM開発者* の役割は、テンプレートやコンポーネントの開発から開始したり、終了したりするものではありません。 *AEM開発者* は、標準提供の参照実装サンプルを単に拡張するのではなく、まったく新しいアプリを作成できます。
 
 ## その他のリソース {#additional-resources}
 

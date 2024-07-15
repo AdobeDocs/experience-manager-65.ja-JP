@@ -30,18 +30,18 @@ Starterkit を使用すると、AEM Mobileの開発の基本を簡単に説明�
 
 開発者は、PhoneGap を使用してAEM Mobile アプリケーションを試す際の出発点として、この例を使用できます。 Starterkit と参照アプリケーションを実行することで、豊富なモバイルアプリケーションを作成するための基本を明確に理解できます。
 
-* の使用 [AEM PhoneGap スターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) AEM Mobileカタログに適したアプリを作成する。
-* A [参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 既存のアプリをAEM Mobileに移行する場合でも、新しく開始する場合でも、AEM Mobileの新機能の多くを示す完全なソースが作成されました。
-* すべてのサンプルは、次の github で入手できます。 [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) また、Maven を使用したプロジェクトのブートストラップも含まれます。
-* ほとんどの電話会議では、 [キッチン シンク チュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)は GitHub にもあり、Apache Cordova ネイティブ拡張機能の使用に重点を置いています。
+* [AEM PhoneGap スターターキット ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) を使用して、AEM Mobile カタログに適したアプリを作成します。
+* 既存のアプリをAEM Mobileに移行する場合でも、新しく開始する場合でも、AEM Mobileの新機能の多くを示す、完全なソースを持つ [ 参照アプリ ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) が作成されました。
+* すべてのサンプルは、github:[https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) にあり、Maven を使用したプロジェクトのブートストラップが含まれています。
+* ほとんどの会議トークでは、GitHub でも見つけることができる [ キッチンシンクチュートリアル ](https://github.com/blefebvre/aem-phonegap-kitchen-sink) を使用しており、Apache Cordova のネイティブ拡張機能の使用に焦点を当てています。
 
 >[!NOTE]
 >
->スターターキットに慣れる機会が得られたら、Adobe Experience Managerについて学ぶことが重要です *コンポーネントとテンプレート。*
+>starterkit を理解する機会があれば、Adobe Experience Manager *コンポーネントとテンプレート* について学ぶことが重要です。
 
 ## テンプレートとコンポーネント {#templates-and-components}
 
-AEM *テンプレート* および *Components* 事業部門の所有者がカスタムエクスペリエンスを作成できるようにします。 両方*テンプレート*および *Components* は、すぐに使用できますが、既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成して、開発者がカスタムで開発することもできます。 *テンプレート* および *Components* AEM オーサーはをドラッグ&amp;ドロップして、魅力的で関連性の高いエクスペリエンスを作成できます。
+AEM *テンプレート* および *コンポーネント* を使用すると、事業部門の所有者はカスタムエクスペリエンスを作成できます。 *テンプレート *および *コンポーネント* は両方とも標準で使用できますが、既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成して、開発者がカスタムで開発することもできます。 *テンプレート* と *コンポーネント* を使用すると、AEM オーサーはドラッグ&amp;ドロップして、魅力的で関連性の高いエクスペリエンスを作成できます。
 
 1. [コンポーネントの作成](/help/sites-developing/components.md)
 1. [テンプレートの作成](/help/sites-developing/templates.md)

@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments
 role: Developer
 source-git-commit: 2e141ab04be33fea09ed7f6608dc9dcfaf2e50f1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 100%
 

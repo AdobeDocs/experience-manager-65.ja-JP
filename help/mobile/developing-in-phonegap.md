@@ -25,7 +25,7 @@ AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単�
 
 >[!NOTE]
 >
->Adobe PhoneGapを使用してAEM Mobileを使い始める前に、環境を設定し、を使い始めていることを確認してください [AEM Mobile Application Dashboard](/help/mobile/phonegap-authoring-apps.md).
+>Adobe PhoneGapを使用してAEM Mobileを使い始める前に、お使いの環境を設定し、[AEM Mobile Application Dashboard](/help/mobile/phonegap-authoring-apps.md) を使い始めていることを確認してください。
 
 Adobe PhoneGapを使用してAEM Mobileを使い始める際に役立つリソースを次に示します。
 
@@ -35,13 +35,13 @@ Adobe PhoneGapを使用してAEM Mobileを使い始める際に役立つリソ�
 
 * [AEM Mobile コンテンツサービス：概要](/help/mobile/develop-content-as-a-service.md)
 
-   * コンテンツサービスとデータモデルを有効にするには、を参照してください。 [コンテンツサービスの管理](/help/mobile/developing-content-services.md)
-   * モデルの作成については、を参照してください。 [モデルの開発](/help/mobile/administer-mobile-apps.md)
-   * レンダリングと配信については、を参照してください。 [コンテンツサービスのレンダリングと配信](/help/mobile/rendering-and-delivery.md)
+   * コンテンツサービスとデータモデルを有効にするには、[ コンテンツサービスの管理 ](/help/mobile/developing-content-services.md) を参照してください。
+   * モデルの作成について詳しくは、[ モデルの開発 ](/help/mobile/administer-mobile-apps.md) を参照してください。
+   * レンダリングと配信については、[ コンテンツサービスのレンダリングと配信 ](/help/mobile/rendering-and-delivery.md) を参照してください
 
 >[!NOTE]
 >
->iOSまたは Android モバイルデバイスでAEM モバイルアプリケーションを実行するには、以下を参照してください。 [AEM Verify アプリを使用したモバイルクイックスタート](/help/mobile/phonegap-mobile-quickstart.md).
+>任意のiOSまたはAndroid モバイルデバイスでAEM モバイルアプリケーションを実行するには、[AEM Verify アプリを使用したモバイルクイックスタート ](/help/mobile/phonegap-mobile-quickstart.md) を参照してください。
 
 ## 前に進む {#getting-ahead}
 

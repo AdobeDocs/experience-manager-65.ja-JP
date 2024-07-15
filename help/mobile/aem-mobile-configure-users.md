@@ -34,7 +34,7 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
 1. 「app-authors」という名前のユーザーグループを作成します。
 
-   ユーザーAdmin Consoleに移動します。 [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   ユーザーAdmin Consoleに移動：[http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    ユーザーグループ コンソール内から「+」ボタンを選択してグループを作成します。
 
@@ -44,7 +44,7 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. app-authors ユーザーグループを作成したので、 [ユーザーAdmin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. app-authors ユーザーグループを作成したので、「ユーザーAdmin Console[ を使用して、個々のチームメンバーをこの新しいグループに追加でき ](http://localhost:4502/libs/granite/security/content/useradmin.md) す。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -59,7 +59,7 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
 ### AEM Mobile アプリケーション管理者グループ（app-admins グループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-admins グループのメンバーは、app-authors に含まれるものと同じ権限でアプリケーションコンテンツを作成できます **および** また、次も担当します。
+app-admins グループのメンバーは、app-authors **AND** に含まれているのと同じ権限でアプリケーションコンテンツを作成でき、さらに次の責任も負います。
 
 * アプリケーションのステージング、公開、消去、コンテンツ同期 OTA の更新
 
@@ -83,7 +83,7 @@ app-admins グループのメンバーは、app-authors に含まれるものと
    >
    >ワークフローユーザーは、PhoneGap Buildサービスを使用したリモートビルドに必要です
 
-1. に移動します。 [権限コンソール](http://localhost:4502/useradmin) クラウドサービスを管理するための権限の追加
+1. [ 権限コンソール ](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
 
    * /etc/cloudservices/mobileservices の（読み取り、変更、作成、削除、レプリケート）
 

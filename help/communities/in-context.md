@@ -20,11 +20,11 @@ ht-degree: 0%
 
 AEM Communitiesの場合、コミュニティコンテンツが投稿された公開済みページで、管理者や信頼されたコミュニティメンバーが直接モデレートを行うことができます。
 
-を使用する場合 [モデレートコンソール](moderation.md)を選択すると、コンテンツに対して表示される情報には、コンテキスト内でモデレートを行う際に使用できる追加のモデレートアクションにアクセスできるようにするための、公開済みページへのリンクが含まれます。
+[ モデレートコンソール ](moderation.md) を使用すると、コンテンツに対して表示される情報には、公開されたページへのリンクが含まれ、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできます。
 
 ## モデレートアクション {#moderation-actions}
 
-の説明については、モデレートの概要を参照してください。 [モデレートアクション](moderate-ugc.md#moderation-actions).
+[ モデレートアクション ](moderate-ugc.md#moderation-actions) の説明については、モデレートの概要を参照してください。
 
 ## モデレート UI {#moderation-ui}
 
@@ -38,20 +38,20 @@ AEM Communitiesの場合、コミュニティコンテンツが投稿された�
 
 ## 例 {#example}
 
-使用， [Geometrixxエンゲージ](http://localhost:4503/content/sites/engage/en.html) 作成日時 [AEM Communitiesの概要](getting-started.md)を使用すると、パブリッシュ環境の様々なモデレーションアクティビティを体験できるフォーラムにスレッドを設定できます。 以下を参照してください。
+[AEM Communitiesの概要 ](getting-started.md) の際に作成した [Geometrixxエンゲージメント ](http://localhost:4503/content/sites/engage/en.html) サイトを使用して、Publish環境の様々なモデレーションアクティビティを体験するためのスレッドをフォーラムに設定することが可能です。 以下を参照してください。
 
-Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時に community-engage-moderators グループに追加したことにより、信頼できるコミュニティメンバーとして識別されました。
+Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時に community-engage-moderators グループに追加したことで、信頼できるコミュニティメンバーとして識別されました。
 
-レベッカ・ラルセン （`rebekah.larsen@trashymail.com`）は、 [メンバーコンソール](members.md).
+Rebekah Larsen （`rebekah.larsen@trashymail.com`）は、[ メンバーコンソール ](members.md) を使用して、community-engage-members グループのメンバーとして追加できます。
 
-コミュニティユーザーグループについて詳しくは、次を参照してください： [ユーザーとユーザーグループの管理](users.md).
+コミュニティユーザーグループについて詳しくは、[ ユーザーとユーザーグループの管理 ](users.md) を参照してください。
 
 ### フォーラムの投稿の作成 {#create-the-forum-posts}
 
 * Rebekah Larsen としてログインします（rebekah.larsen@trashymail.com）。
 
    * フォーラムを選択
-   * 新しい投稿を選択
+   * 新しいPostを選択
    * 件名を入力
 
      ハミング鳥フィーダーで蜜を変える場合
@@ -60,14 +60,14 @@ Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時�
 
      毎年ハチドリのフィーダーをハングアップする時はあまり成功していませんでした。 1 日か 2 日か来たそうだそうだそうだそうだそうだそうだそうだそうだそうだね。 週に 1 回は変えるの長すぎるの？ もっと早く変更しなければいけませんか。
 
-   * 投稿を選択
+   * Postを選択
    * 「ログアウト」を選択します
 
 * Aaron McDonald （aaron.mcdonald@mailinator.com）としてログインする
 
    * フォーラムを選択
    * 「Hummingbird」トピックについては、「詳細を表示」を選択します
-   * Post Reply のコメントを入力します
+   * Post返信のコメントを入力
 
      私は週に 1 回私のものを変え、私は 5 月から 10 月まで彼らを得ます。
 
@@ -78,7 +78,7 @@ Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時�
 
    * フォーラムを選択
    * 「Hummingbird」トピックについては、「詳細を表示」を選択します
-   * Post Reply のコメントを入力します
+   * Post返信のコメントを入力
 
      私は蜜とフィーダーを売っています – visit https://my.viral.url/
 
@@ -91,13 +91,13 @@ Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時�
 
 匿名サイト訪問者はフォーラムの閲覧のみが可能ですが、コンテンツの投稿やモデレーションアクションは行えません。
 
-![community-forum-visit](assets/community-forum-visitor.png)
+![community-forum-visitor](assets/community-forum-visitor.png)
 
 ### 新規メンバー（#4） {#new-member}
 
-オーサー環境で管理者としてログインし、Boyd Larsen （boyd.larsen@dodgit.com）を community-engage-members グループの新しいメンバーとして追加するには、 [メンバーコンソール](members.md)ログアウトします。
+オーサー環境に管理者としてログインし、[ メンバーコンソール ](members.md) を使用して、Boyd Larsen （boyd.larsen@dodgit.com）を community-engage-members グループの新しいメンバーとして追加してから、ログアウトします。
 
-公開時に Boyd Larsen としてログインし、を選択してスレッドにアクセスします。 `Forum`、次に `Read more` ハチドリのポストのために。
+公開時に Boyd Larsen としてログインし、「`Forum`」を選択してスレッドにアクセスし、hummingbird の投稿を `Read more` します。
 
 注意：
 
@@ -120,9 +120,9 @@ Boid に Andrew が投稿した内容を示すフラグを選択してもらい�
 * 管理者は、フラグの設定、削除、編集、拒否、切り取り、閉じる、ピン留め、機能を実行できます。
 * 管理者は、「管理」を選択してモデレートコンソールにアクセスできます。
 
-![コミュニティ管理者フォーラム](assets/community-admin-forum.png)
+![community-admin-forum](assets/community-admin-forum.png)
 
-「管理」メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から変更します。
+「管理」メニュー項目を選択して、Publishから [ モデレートコンソール ](moderation.md) にアクセスできます。
 
 管理者には、Geometrixxエンゲージメントコミュニティサイトのコンテンツだけでなく、すべてのモデレート可能なコンテンツが表示されることに注意してください。
 
@@ -134,7 +134,7 @@ Boid に Andrew が投稿した内容を示すフラグを選択してもらい�
 
 ### コミュニティ モデレーター（#2） {#community-moderator}
 
-Aaron McDonald としてログインする（`aaron.mcdonal@mailinator.com`）を選択し、「フォーラム」を選択してスレッドにアクセスします。ハチドリの投稿の「詳細を読む」を選択します。
+コミュニティモデレーターの Aaron McDonald （`aaron.mcdonal@mailinator.com`）としてログインし、「フォーラム」を選択してスレッドにアクセスし、hummingbird の投稿の「詳細を読む」を選択します。
 
 注意：
 
@@ -145,7 +145,7 @@ Aaron McDonald としてログインする（`aaron.mcdonal@mailinator.com`）�
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-「管理」メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から変更します。
+「管理」メニュー項目を選択して、Publishから [ モデレートコンソール ](moderation.md) にアクセスできます。
 
 コミュニティモデレーターの場合、Geometrixxエンゲージメント コミュニティサイトのモデレート可能なコンテンツのみが表示されます。
 
@@ -153,11 +153,11 @@ Aaron McDonald としてログインする（`aaron.mcdonal@mailinator.com`）�
 
 ログアウトします。
 
-![モデレータのアクセス](assets/moderator-access.png)
+![ モデレーターによるアクセス ](assets/moderator-access.png)
 
 ### コンテンツ作成者（#1） {#content-author}
 
-Rebekah Larsen としてログインする（`rebekah.larsen@mailinator.com`）を選択してスレッドにアクセスします。ハチドリの投稿の「詳細情報」を選択します。
+スレッドを開始したコミュニティメンバーの Rebekah Larsen （`rebekah.larsen@mailinator.com`）としてログインし、「フォーラム」を選択してスレッドにアクセスし、hummingbird の投稿の「詳細を読む」を選択します。
 
 注意：
 

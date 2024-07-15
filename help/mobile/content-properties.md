@@ -30,7 +30,7 @@ ht-degree: 29%
 
 ## 共通の統合プロパティ {#common-integration-properties}
 
-| **プロパティ名** | **タイプ** | **デフォルト値または期待値** | **説明** |
+| **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** | **説明** |
 |---|---|---|---|
 | dps-id | 文字列 |  | AEM Mobileによって割り当てられ、AEM Mobileにアップロードされた後、またはAEM Mobileから読み込まれた後にAEMによって保存されます |
 | dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
@@ -55,7 +55,7 @@ ht-degree: 29%
 
 ### 記事 {#articles}
 
-| **プロパティ名** | **タイプ** | **デフォルト値または期待値** |
+| **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** |
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
@@ -68,9 +68,9 @@ ht-degree: 29%
 
 ### バナー {#banners}
 
-| **プロパティ名** | **タイプ** | **デフォルト値または期待値** |
+| **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** |
 |---|---|---|
-| dps-tapAction |  | TapAction from {webLink} |
+| dps-tapAction |  | {webLink} の TapAction |
 | dps-tapActionUrl |  |  |
 
 ### コレクション {#collections}

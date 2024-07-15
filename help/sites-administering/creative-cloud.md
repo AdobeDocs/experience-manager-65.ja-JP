@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 source-git-commit: 3bcdbfc17efe1f4c6069fd97fd6a16ec41d0579e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '57'
 ht-degree: 100%
 

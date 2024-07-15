@@ -20,9 +20,9 @@ ht-degree: 8%
 
 このページでは、リーダーボード機能の操作に関する重要な情報を提供します。
 
-ページにリーダーボードコンポーネントを含める前に、を設定する必要があります [コミュニティのスコアとバッジ](implementing-scoring.md).
+リーダーボードコンポーネントをページに含める前に、[ コミュニティのスコアとバッジ ](implementing-scoring.md) を設定する必要があります。
 
-参照： [スコアおよびバッジの基本事項](configure-scoring.md).
+詳しくは [ スコアおよびバッジの基本事項 ](configure-scoring.md) を参照してください。
 
 ## クライアントサイドの基本事項 {#essentials-for-client-side}
 
@@ -33,7 +33,7 @@ ht-degree: 8%
    <td>ソーシャル/ゲーミフィケーション/コンポーネント/hbs/リーダーボード</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>includable</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong> 含む </strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ ht-degree: 8%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>参照： <a href="enabling-leaderboard.md">リーダーボード機能</a></td>
+   <td><a href="enabling-leaderboard.md"> リーダーボード機能 </a> を参照してください。</td>
   </tr>
  </tbody>
 </table>
@@ -59,4 +59,4 @@ ht-degree: 8%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-を含むコミュニティサイト構造 [リーダーボード関数](functions.md#leaderboard-function)、設定済みのを含む `leaderboard` コンポーネント。
+[ リーダーボード関数 ](functions.md#leaderboard-function) を含むコミュニティサイト構造は、設定済みの `leaderboard` コンポーネントを含む。

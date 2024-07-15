@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 100%
 
@@ -101,7 +101,7 @@ AEM Forms プロセスデータのパージについて詳しくは、[プロセ
 
 >[!NOTE]
 >
-> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 ### ProcessDataStorage サービス {#processdatastorage-service}
 

@@ -18,7 +18,7 @@ ht-degree: 6%
 
 # サンドボックスアプリケーションの開発  {#develop-sandbox-application}
 
-この節では、テンプレートをに設定しました。 [初期適用](initial-app.md) セクションと、で確立された初期ページ [初期コンテンツ](initial-content.md) セクションでは、アプリケーションを開発することができます。 それには、Communities コンポーネントでのオーサリングを有効にする機能を含む、基盤スクリプトを使用します。 この節の最後では、完全に機能する web サイトがあります。
+この節では、テンプレートを「初期アプリケーション [」セクションで設定し、「初期コンテンツ ](initial-app.md)」セクションで設定した初期ページで設定したので、アプリケーションを開発でき ](initial-content.md) す。[ それには、Communities コンポーネントでのオーサリングを有効にする機能を含む、基盤スクリプトを使用します。 この節の最後では、完全に機能する web サイトがあります。
 
 ## 基盤ページスクリプトの使用 {#using-foundation-page-scripts}
 
@@ -26,11 +26,11 @@ ht-degree: 6%
 
 ### スーパーリソースタイプ {#super-resource-type}
 
-最初の手順では、リソースのスーパータイプのプロパティをに追加します。 `/apps/an-scf-sandbox/components/playpage` スーパータイプのスクリプトとプロパティを継承するようにノードします。
+最初の手順では、リソースのスーパータイプのプロパティを `/apps/an-scf-sandbox/components/playpage` ノードに追加して、スーパータイプのスクリプトとプロパティを継承するようにします。
 
 CRXDE Liteの使用：
 
-1. ノードを選択 `/apps/an-scf-sandbox/components/playpage`.
+1. ノード `/apps/an-scf-sandbox/components/playpage` を選択します。
 1. 「プロパティ」タブで、次の値を持つ新しいプロパティを入力します。
 
    名前：`sling:resourceSuperType`
@@ -39,14 +39,14 @@ CRXDE Liteの使用：
 
    値：`foundation/components/page`
 
-1. 緑をクリックします **[!UICONTROL +追加]** ボタン。
+1. 緑の「**[!UICONTROL +追加]**」ボタンをクリックします。
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   ![ページスクリプト](assets/page-script.png)
+   ![ ページスクリプト ](assets/page-script.png)
 
 ### head スクリプトと body スクリプト {#head-and-body-scripts}
 
-1. 対象： **CRXDE Lite** エクスプローラーペイン、次に移動します `/apps/an-scf-sandbox/components/playpage` ファイルをダブルクリックします `playpage.jsp` をクリックして、編集ウィンドウで開きます。
+1. **CRXDE Lite** エクスプローラーウィンドウで、`/apps/an-scf-sandbox/components/playpage` に移動し、ファイル `playpage.jsp` をダブルクリックして編集ウィンドウで開きます。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -65,9 +65,9 @@ CRXDE Liteの使用：
    %>
    ```
 
-1. スクリプトタグを開く/閉じるのは認識されているので、「// TODO ...」をに置き換えます。 `includes` の頭と体の部分のスクリプトの &lt;html>.
+1. スクリプトタグを開く/閉じることを考慮して、「// TODO ...」を &lt;html> の head 部分と body 部分のスクリプトの `includes` に置き換えます。
 
-   スーパータイプで `foundation/components/page`の場合、この同じフォルダーで定義されていないスクリプトは、 `/apps/foundation/components/page` フォルダー（存在する場合）、または内のスクリプトに対する他のフォルダー `/libs/foundation/components/page` フォルダー。
+   スーパータイプが `foundation/components/page` の場合、この同じフォルダーで定義されていないスクリプトは、`/apps/foundation/components/page` のフォルダー内のスクリプト（存在する場合）、または `/libs/foundation/components/page` のフォルダー内のスクリプトに解決されます。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -87,19 +87,19 @@ CRXDE Liteの使用：
    </html>
    ```
 
-1. 基盤スクリプトのオーバーレイ `head.jsp` は必須ではありませんが、基盤スクリプトです `body.jsp` が空である。
+1. 基盤スクリプト `head.jsp` をオーバーレイする必要はありませんが、基盤スクリプト `body.jsp` は空です。
 
-   オーサリング用にを設定するには、をオーバーレイします `body.jsp` をローカルスクリプトに追加し、段落システム（parsys）を本文に含めます。
+   オーサリング用にを設定するには、`body.jsp` をローカルスクリプトでオーバーレイし、本文に段落システム（parsys）を含めます。
 
    1. `/apps/an-scf-sandbox/components` に移動します。
    1. `playpage` ノードを選択します。
-   1. 右クリックして選択 `Create > Create File...`
+   1. 右クリックして「`Create > Create File...`」を選択します。
 
-      * 名前： **body.jsp**
+      * 名前：**body.jsp**
 
    1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   開く `/apps/an-scf-sandbox/components/playpage/body.jsp` 次のテキストを貼り付けます。
+   `/apps/an-scf-sandbox/components/playpage/body.jsp` を開いて、次のテキストを貼り付けます。
 
    ```xml
    <%--
@@ -119,13 +119,13 @@ CRXDE Liteの使用：
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-**編集モードでブラウザーにページを表示します。**
+**ページをブラウザーで編集モードで表示します。**
 
 * 標準 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
-見出しのみが表示されるわけではありません **コミュニティプレイ**&#x200B;ただし、ページコンテンツを編集するための UI も同様です。
+見出し **コミュニティプレイ** だけでなく、ページコンテンツを編集するための UI も表示されます。
 
-アセット/コンポーネント サイドパネルは、両方のサイドパネルが開き換えられ、サイドコンテンツとページコンテンツの両方が表示されるほどウィンドウが広い場合に表示されます。
+Assets/コンポーネントのサイドパネルは、両方のサイドパネルが開き換えられ、サイドコンテンツとページコンテンツの両方が表示されるほどウィンドウの幅が広い場合に表示されます。
 
 ![view-page](assets/view-page.png)
 
@@ -141,7 +141,7 @@ Communities コンポーネントをオーサリング用に有効にするに�
 
 * [Communities コンポーネントへのアクセス](basics.md#accessing-communities-components)
 
-このサンドボックスの目的上、次から始めます **コミュニティ** コンポーネント （チェックボックスをオンにして有効にします）:
+このサンドボックスでは、まず次の **Communities** コンポーネントを使用します（チェックボックスをオンにして有効にします）。
 
 * コメント
 * フォーラム
@@ -150,7 +150,7 @@ Communities コンポーネントをオーサリング用に有効にするに�
 * レビューの概要 (表示)
 * 投票
 
-さらに、を選択します **[!UICONTROL 一般]** コンポーネント（例：）
+さらに、次のような **[!UICONTROL 一般]** コンポーネントを選択します
 
 * 画像
 * テーブル
@@ -159,9 +159,9 @@ Communities コンポーネントをオーサリング用に有効にするに�
 
 >[!NOTE]
 >
->ページ部分に対して有効なコンポーネントは、の値としてリポジトリに格納されます。 `components` のプロパティ
+>ページ par に対して有効なコンポーネントは、の `components` プロパティの値としてリポジトリに格納されます。
 >
->ノード `/etc/designs/an-scf-sandbox/jcr:content/playpage/par`.
+>ノード `/etc/designs/an-scf-sandbox/jcr:content/playpage/par`。
 
 ## ランディングページ {#landing-page}
 
@@ -169,17 +169,17 @@ Communities コンポーネントをオーサリング用に有効にするに�
 
 この例では、ルートページは英語ページにリダイレクトするように静的に設定されています。英語ページは今後開発される可能性があり、再生ページへのリンクを含むメインランディングページになります。
 
-ブラウザー URL をルートページに変更します。 `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
+ブラウザーの URL をルートページに変更します。`http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
 * 「ページ情報」アイコンを選択します
-* を選択 **[!UICONTROL プロパティを開く]**
+* 「**[!UICONTROL プロパティを開く]**」を選択します。
 * 「詳細」タブで、次の設定を行います
 
-   * リダイレクトエントリの場合は、を参照します **[!UICONTROL Web サイト]** > **[!UICONTROL SCF サンドボックスサイト]** > **[!UICONTROL SCF サンドボックス]**
-   * クリック **[!UICONTROL OK]**
+   * リダイレクトエントリについては、**[!UICONTROL Web サイト]**/**[!UICONTROL SCF サンドボックスサイト]**/**[!UICONTROL SCF サンドボックス]** を参照します。
+   * 「**[!UICONTROL OK]**」をクリックします。
 
-* クリック **[!UICONTROL OK]**
+* 「**[!UICONTROL OK]**」をクリックします。
 
 サイトが公開されると、パブリッシュインスタンス上のルートページを参照すると、英語のページにリダイレクトされます。
 
-Communities SCF コンポーネントを使用する前の最後の手順は、クライアントライブラリフォルダー（clientlibs）....を追加することです [Clientlibs の追加](add-clientlibs.md)
+Communities SCF コンポーネントを使用する前の最後の手順は、クライアントライブラリフォルダー（clientlibs）....を追加することです [Clientlibs の追加 ](add-clientlibs.md)

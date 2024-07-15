@@ -25,11 +25,11 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
 一般的に、様々なレポートは次のとおりです。
 
-* [ビューレポート](#views-report)
+* [ ビュー数レポート ](#views-report)
 
   任意のコミュニティサイトについて、コミュニティメンバーおよびサイト訪問者ごとにコンテンツのビューのグラフを提供します。
 
-* [投稿レポート](#posts-report)
+* [ 投稿レポート ](#posts-report)
 
   コミュニティメンバーがコミュニティサイトに投稿した様々なタイプのグラフを提供します。
 
@@ -39,11 +39,11 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
 ### コミュニティサイトのレポート {#reports-for-community-sites}
 
-* グローバルナビゲーションから： **[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** >  **[!UICONTROL 報告書]**
+* グローバルナビゲーションから：**[!UICONTROL ナビゲーション]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL レポート]**
 
 * 次の中から選択します。
 
-   * **[!UICONTROL 割り当てレポート]**
+   * **[!UICONTROL 割り当て報告書]**
 
       * 選択したコミュニティ サイト、ユーザーまたはグループ、および割り当てに関するレポートを生成します。
 
@@ -51,11 +51,11 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
       * 選択したコミュニティ サイト、コンテンツ タイプ、および期間に関するレポートを生成します。
 
-   * **[!UICONTROL ビューレポート]**
+   * **[!UICONTROL ビュー数レポート]**
 
       * 選択したコミュニティ サイト、コンテンツ タイプ、および期間に関するレポートを生成します。
 
-![報告書](assets/reports1.png)
+![ 報告書 ](assets/reports1.png)
 
 ## 表示レポート {#views-report}
 
@@ -82,7 +82,7 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
    * 過去 90 日間
    * 昨年
 
-を選択 **[!UICONTROL Generate]** をクリックしてレポートを作成します。
+「**[!UICONTROL 生成]**」を選択して、レポートを作成します。
 
 ![generate-views](assets/generate-views.png)
 
@@ -111,7 +111,7 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
    * 過去 90 日間
    * 昨年
 
-を選択 **[!UICONTROL Generate]** をクリックしてレポートを作成します。
+「**[!UICONTROL 生成]**」を選択して、レポートを作成します。
 
 ![generate-report](assets/generate-posts-report.png)
 
@@ -123,6 +123,6 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
 ### レポートがAEM オーサーインスタンスに表示されない {#reports-do-not-show-in-aem-author-instance}
 
-AEM オーサーインスタンスにレポートが表示されない場合は、パブリッシュインスタンスでの URL マッピングなど、カスタマイズの有無を確認します。 URL マッピングが Communities サイトのAEM パブリッシュインスタンスでのみ行われている場合は、でAEM オーサーインスタンスにも同じことが設定されていることを確認してください。 **サイトトレンドレポート ソーシャルコンポーネントファクトリ** 設定。
+AEM オーサーインスタンスにレポートが表示されない場合は、Publish インスタンスでの URL マッピングなど、カスタマイズの有無を確認してください。 URL マッピングが Communities サイトのAEM Publish インスタンスでのみ行われている場合は、AEM オーサーインスタンスで **Site Trend Report Social Component Factory** 設定に同じことが設定されていることを確認します。
 
-![AEM オーサーの URL マッピング](assets/sitetrend.png)
+![AEM オーサーの URL マッピング ](assets/sitetrend.png)

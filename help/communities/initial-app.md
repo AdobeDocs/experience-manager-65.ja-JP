@@ -20,8 +20,8 @@ ht-degree: 14%
 
 この節では、次を作成します。
 
-* この **[template](#createthepagetemplate)** これは、サンプル web サイトのコンテンツページの作成に使用されます。
-* この **[コンポーネントとスクリプト](#create-the-template-s-rendering-component)** これは、web サイトページのレンダリングに使用されます。
+* サンプル web サイトのコンテンツページの作成に使用される **[テンプレート](#createthepagetemplate)**。
+* Web サイトのページのレンダリングに使用する **[コンポーネントとスクリプト](#create-the-template-s-rendering-component)**。
 
 ## コンテンツテンプレートの作成 {#create-the-content-template}
 
@@ -32,21 +32,21 @@ ht-degree: 14%
 1. CRXDE Liteのエクスプローラーパネルで、次の操作を行います。
 
    * `/apps/an-scf-sandbox/templates` を選択します。
-   * **[!UICONTROL 作成]** > **[!UICONTROL テンプレートを作成]**
+   * **[!UICONTROL 作成]**/**[!UICONTROL テンプレートを作成]**
 
 1. テンプレートを作成ダイアログで、次の値を入力して「**[!UICONTROL 次へ]**」をクリックします。
 
    * ラベル：`playpage`
    * タイトル：`An SCF Sandbox Play Template`
    * 説明：`An SCF Sandbox template for play pages`
-   * リソースタイプ： `an-scf-sandbox/components/playpage`
-   * ランキング : &lt;leave as=&quot;&quot; default=&quot;&quot;>
+   * リソースの種類：`an-scf-sandbox/components/playpage`
+   * ランキング：&lt; デフォルトのままにする >
 
    ラベルはノード名に使用されます。
 
-   リソースタイプがに表示されます。 `playpage`の `jcr:content` プロパティとしてのノード `sling:resourceType`. ブラウザーから要求されたときに、コンテンツをレンダリングするコンポーネント（リソース）を識別します。
+   リソースタイプは、`playpage` の `jcr:content` ノードにプロパティ `sling:resourceType` として表示されます。 ブラウザーから要求されたときに、コンテンツをレンダリングするコンポーネント（リソース）を識別します。
 
-   この場合、を使用して作成されたすべてのページ `playpage` テンプレートは、 `an-scf-sandbox/components/playpage` コンポーネント。 慣例により、コンポーネントへのパスは相対パスとなり、Sling は最初にでリソースを検索できます。 `/apps` フォルダーが見つからない場合は、フォルダー内の `/libs` フォルダー。
+   この場合、`playpage` テンプレートを使用して作成されたページはすべて `an-scf-sandbox/components/playpage` コンポーネントによってレンダリングされます。 慣例により、コンポーネントへのパスは相対パスとなり、Sling は最初に `/apps` フォルダーでリソースを検索し、見つからない場合は `/libs` フォルダーでリソースを検索できます。
 
    ![create-content-template](assets/create-content-template-1.png)
 
@@ -54,13 +54,13 @@ ht-degree: 14%
 
    「**[!UICONTROL 次へ]**」をクリックします。
 
-1. 「許可されているパス」とは、このテンプレートを使用するページのパスを指し、このテンプレートは **[!UICONTROL 新しいページ]** ダイアログ。
+1. 「許可されるパス」とは、このテンプレートを使用するページのパスを指し、例えば、このテンプレートは **[!UICONTROL 新規ページ]** ダイアログに表示されます。
 
-   パスを追加するには、「+」ボタンをクリックします `+` およびタイプ `/content(/.&ast;)?` 表示されるテキストボックス内。 コピー/貼り付けを使用する場合は、先頭または末尾にスペースがないことを確認します。
+   パスを追加するには、`+` のプラスボタンをクリックし、表示されるテキストボックスに `/content(/.&ast;)?` と入力します。 コピー/貼り付けを使用する場合は、先頭または末尾にスペースがないことを確認します。
 
-   メモ：許可されているパスプロパティの値は *正規表現*. 式に一致するパスを持つコンテンツページは、テンプレートを使用できます。 この場合、正規表現はのパスと一致します **/content** フォルダーとそのすべてのサブページ。
+   メモ：許可されているパスプロパティの値は *正規表現* です。 式に一致するパスを持つコンテンツページは、テンプレートを使用できます。 この場合、正規表現は、**/content** フォルダーとそのすべてのサブページのパスに一致します。
 
-   作成者が以下にページを作成した場合 `/content`, `playpage` 使用可能なテンプレートのリストに、「SCF サンドボックスページテンプレート」というタイトルのテンプレートが表示されます。
+   作成者が `/content` の下にページを作成すると、使用可能なテンプレートのリストに「SCF サンドボックスページテンプレート」というタイトルの `playpage` テンプレートが表示されます。
 
    テンプレートからルートページを作成した後に、プロパティを編集して正規表現にルートパスを含めると、テンプレートへのアクセスをこの web サイトに制限できます。
 
@@ -70,40 +70,40 @@ ht-degree: 14%
 
 1. 「**[!UICONTROL 次へ]**」をクリックします。
 
-   クリック **[!UICONTROL 次]** が含まれる **[!UICONTROL 許可された親]** パネル。
+   **[!UICONTROL 許可された親]** パネルの **[!UICONTROL 次へ]** をクリックします。
 
-   クリック **[!UICONTROL 次]** が含まれる **[!UICONTROL 許可された子]** パネル。
+   **[!UICONTROL 許可された子]** パネルの **[!UICONTROL 次へ]** をクリックします。
 
    「**[!UICONTROL OK]**」をクリックします。
 
-1. [OK] をクリックしてテンプレートの作成が完了したら、新しいの [ プロパティ ] タブの値の隅に表示される赤い三角形に注目してください `playpage` テンプレート。 これらの赤い三角形は、保存されていない編集を示します。
+1. [OK] をクリックしてテンプレートの作成が完了したら、新しい `playpage` テンプレートの [ プロパティ ] タブの値の隅に表示される赤い三角形に注目してください。 これらの赤い三角形は、保存されていない編集を示します。
 
-   クリック **[!UICONTROL すべて保存]** をクリックして、新しいテンプレートをリポジトリに保存します。
+   **[!UICONTROL すべて保存]** をクリックして、新しいテンプレートをリポジトリに保存します。
 
    ![verify-content-template](assets/verify-content-template.png)
 
 ### テンプレートのレンダリングコンポーネントの作成 {#create-the-template-s-rendering-component}
 
-を作成 *component* コンテンツを定義し、に基づいて作成されたページをレンダリングします。 [再生ページテンプレート](#createthepagetemplate).
+コンテンツを定義し、*playpage テンプレート* に基づいて作成されたすべてのページをレンダリングする [ コンポーネント ](#createthepagetemplate) を作成します。
 
-1. CRXDE Liteーで、右クリックします **`/apps/an-scf-sandbox/components`** をクリックして、 **[!UICONTROL 作成/ コンポーネント]**.
-1. ノードの名前（ラベル）をに設定する *playpage*、コンポーネントへのパスはです。
+1. CRXDE Liteで、**`/apps/an-scf-sandbox/components`** を右クリックして、**[!UICONTROL 作成/コンポーネント]** をクリックします。
+1. ノードの名前（ラベル）を *playpage* に設定すると、コンポーネントへのパスはになります。
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   これは、再生ページテンプレートのリソースタイプ （オプションでイニシャルを除く）に対応します **`/apps/`** パスの一部）。
+   これは、再生ページテンプレートのリソースタイプ（オプションでパスの最初の **`/apps/`** 部分を除く）に対応します。
 
    **[!UICONTROL コンポーネントを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力します。
 
-   * ラベル： **playpage**
-   * タイトル： **SCF サンドボックス再生コンポーネント**
-   * 説明： **これは、SCF サンドボックスページのコンテンツをレンダリングするコンポーネントです。**
-   * スーパータイプ： *&lt;leave blank=&quot;&quot;>*
-   * グループ： *&lt;leave blank=&quot;&quot;>*
+   * ラベル：**playpage**
+   * タイトル：**SCF サンドボックス再生コンポーネント**
+   * 説明：**これは、SCF サンドボックスページのコンテンツをレンダリングするコンポーネントです。**
+   * スーパータイプ：*&lt;leave blank>*
+   * グループ：*&lt;leave blank>*
 
    ![create-template-component](assets/create-template-component.png)
 
-1. クリック **[!UICONTROL 次]** まで **[!UICONTROL 許可された子]** ダイアログのパネルが表示されます。
+1. **[!UICONTROL 次へ]** をクリックして、ダイアログの **[!UICONTROL 許可されている子]** パネルを表示します。
 
    * 「**[!UICONTROL OK]**」をクリックします。
    * 「**[!UICONTROL すべて保存]**」をクリックします。
@@ -112,6 +112,6 @@ ht-degree: 14%
 
    >[!CAUTION]
    >
-   >再生ページコンポーネントへのパスと `sling:resourceType` playpage テンプレートのプロパティは、web サイトが正しく機能するためにはきわめて重要です。
+   >Web サイトを正しく機能させるには、再生ページコンポーネントへのパスと再生ページテンプレートの `sling:resourceType` プロパティとの対応が重要です。
 
    ![verify-template-component](assets/verify-template-component.png)

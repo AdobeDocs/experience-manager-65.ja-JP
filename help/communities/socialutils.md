@@ -22,7 +22,7 @@ ht-degree: 2%
 
 パッケージ `com.adobe.cq.social.ugcbase.SocialUtils` はAEM 6.1 で非推奨（廃止予定）となりました。
 
-次の表に、の代わりに使用するメソッドを示します。 `SocialUtils` メソッド。
+次の表に、`SocialUtils` のメソッドの代わりに使用するメソッドを示します。
 
 ## SocialResourceUtilities パッケージ  {#socialresourceutilities-package}
 
@@ -42,13 +42,13 @@ ht-degree: 2%
 | String UGCoResourcePath （String ugcPath） | メソッドの署名が変更されました |
 | String UGCoResourcePath （String ugcPath, ResourceResolver resolver） | 新規 |
 
-| のメソッド `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities |
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities のメソッド |
 |---|
 | SocialResourceProvider getSocialResourceProvider （リソース） | socialResourceProvider getConfiguredProvider （リソース）を置き換えます |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
-| のメソッド `com.adobe.cq.social.`utilities.scf.api.SCFUtilites |
+| `com.adobe.cq.social.`utilities.scf.api.SCFUtilites のメソッド |
 |---|
 | String getAvatar （UserProperties userProperties） |
 | String getAvatar （UserProperties userProperties, int size） |

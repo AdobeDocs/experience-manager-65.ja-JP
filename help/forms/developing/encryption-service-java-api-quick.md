@@ -10,7 +10,7 @@ exl-id: e8b2aa43-ac27-410d-a809-56bfd1c2fcb1
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 100%
 

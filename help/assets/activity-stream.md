@@ -7,7 +7,7 @@ role: User, Admin
 exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 100%
 

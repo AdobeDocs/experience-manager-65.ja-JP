@@ -25,17 +25,17 @@ ht-degree: 3%
 
 基本的な情報については、次を参照してください。
 
-* [クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md) 使用の詳細とデバッグツールを提供します
-* [SCF の clientlibs](/help/communities/client-customize.md#clientlibs) SCF コンポーネントをカスタマイズするときに役立つ情報を提供します
+* 使用の詳細とデバッグツールを提供する [ クライアントサイドライブラリの使用 ](/help/sites-developing/clientlibs.md)
+* [SCF の clientlibs](/help/communities/client-customize.md#clientlibs):SCF コンポーネントをカスタマイズする際に役立つ情報を提供します
 
 
 ## Clientlibs が必要な理由 {#why-clientlibs-are-required}
 
-Clientlib は、コンポーネントが適切に機能（JavaScript）し、スタイル設定（CSS）するために必要です。
+clientlib は、コンポーネントが適切に機能（JavaScript）し、スタイル設定（CSS）するために必要です。
 
-存在する場合 [コミュニティ機能](/help/communities/functions.md) 機能に必要なすべてのコンポーネントと設定（必要な clientlib を含む）がコミュニティサイトに存在する。 作成者が追加のコンポーネントを使用できるようにする場合にのみ、clientlib を追加する必要があります。
+機能に [ コミュニティ機能 ](/help/communities/functions.md) がある場合、必要なすべてのコンポーネントおよび設定（必要な clientlib を含む）がコミュニティサイトに存在します。 作成者が追加のコンポーネントを使用できるようにする場合にのみ、clientlib を追加する必要があります。
 
-必要な clientlib がない場合、 [ページへの Communities コンポーネントの追加](/help/communities/author-communities.md) その結果、JavaScript エラーが発生し、予期しない外観になる可能性があります。
+必要な clientlibs が見つからない場合、[Communities コンポーネントをページに追加する ](/help/communities/author-communities.md)、JavaScript エラーが発生し、予期しない外観が発生する場合があります。
 
 ### 例：Clientlibs を使用せずに配置したレビュー {#example-placed-reviews-without-clientlibs}
 
@@ -49,9 +49,9 @@ Clientlib は、コンポーネントが適切に機能（JavaScript）し、ス
 
 デベロッパーにとって不可欠な機能情報は、必要な clientlib を特定します。
 
-さらに、AEM インスタンスから、を参照します。 [コミュニティコンポーネントガイド](/help/communities/components-guide.md) コンポーネントに必要な clientlib カテゴリのリストへのアクセスを提供します。
+さらに、AEM インスタンスから [ コミュニティコンポーネントガイド ](/help/communities/components-guide.md) を参照すると、コンポーネントに必要な clientlib カテゴリのリストにアクセスできます。
 
-例えば、の上部 [レビューページ](https://localhost:4502/content/community-components/en/reviews.html) 次に、必要な clientlib を示します
+例えば、[ レビューページの上部に ](https://localhost:4502/content/community-components/en/reviews.html) 必須の clientlib が一覧表示されます
 
 * cq.ckeditor
 * cq.social.hbs.reviews
@@ -62,19 +62,19 @@ Clientlib は、コンポーネントが適切に機能（JavaScript）し、ス
 
 Communities コンポーネントをページに追加する場合、コンポーネントに必要な clientlib がまだ存在しない場合は追加する必要があります。
 
-使用方法 [CRXDE|Lite](#using-crxde-lite) コミュニティサイトページの既存の clientlibslist を変更する場合。
+[CRXDE|Lite](#using-crxde-lite) を使用して、コミュニティサイトページの既存の clientlibslist を変更します。
 
-を使用してコミュニティサイトのクライアントライブラリを追加するには [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用してコミュニティサイトのクライアントライブラリを追加するには：
 
-* を参照 [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de).
-* を見つけます。 `clientlibslist` コンポーネントを追加するページのノード：
+* [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de) を参照します。
+* コンポーネントを追加するページの `clientlibslist` ノードを見つけます。
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* （を使用） `clientlibslist` 選択されたノード :
+* ノード `clientlibslist` 選択した状態：
 
-   * 文字列を見つけます。[] プロパティ `scg:requiredClientLibs`.
-   * を選択 `Value` そのため、「文字列配列」ダイアログボックスにアクセスできます。
+   * String[] プロパティの `scg:requiredClientLibs` を見つけます。
+   * その `Value` を選択して、「文字列配列」ダイアログボックスにアクセスします。
 
       * 必要に応じて下にスクロールします。
       * 「+」を選択して、新しいクライアントライブラリを入力します。
@@ -89,6 +89,6 @@ Communities コンポーネントをページに追加する場合、コンポ�
 >
 >サイトがコミュニティサイトでない場合は、サイトで使用されているクライアントライブラリの存在または場所を検出する必要があります。
 
-使用， [AEM Communitiesの概要](/help/communities/getting-started.md) 例： `site-name` 等しい *従事する*、レビューコンポーネントを追加した場合の clientliblist の表示方法は次のとおりです。
+[AEM Communities使用の手引き ](/help/communities/getting-started.md) の例を使用します。`site-name` は *engage* です。レビューコンポーネントを追加する場合、clientliblist は次のように表示されます。
 
 ![review-component](assets/review-component.png)

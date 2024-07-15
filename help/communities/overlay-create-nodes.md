@@ -18,13 +18,13 @@ ht-degree: 6%
 
 # ノードの作成 {#create-nodes}
 
-必要な最小限のファイルをコピーして、コメントシステムをカスタムバージョンでオーバーレイします。 `/libs` 対象 `/apps` および内で修正する `/apps`.
+`/libs` から `/apps` に必要な最小限のファイルをコピーし、`/apps` で変更することで、コメントシステムにカスタムバージョンをオーバーレイします。
 
 >[!CAUTION]
 >
 >/libs フォルダーの内容は編集されません。/apps フォルダーの内容はそのままの状態で、再インストールやアップグレードをおこなうと、/libs フォルダーが削除または置き換えられる可能性があるからです。
 
-使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) オーサーインスタンスでは、まず/apps フォルダーに、/libs フォルダーのオーバーレイコンポーネントへのパスと同じパスを作成します。
+オーサーインスタンスで ](../../help/sites-developing/developing-with-crxde-lite.md)0}CRXDE Lite} を使用する場合は、まず/apps フォルダーに、/libs フォルダーのオーバーレイされたコンポーネントへのパスと同じパスを作成します。[
 
 複製されるパスは次のとおりです。
 
@@ -32,64 +32,64 @@ ht-degree: 6%
 
 パスのノードには、フォルダーやコンポーネントなどがあります。
 
-1. を参照 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. 作成 `/apps/social` （まだ存在しない場合）
-   * を選択 `/apps` ノード
+1. [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) を参照します
+1. `/apps/social` を作成（まだ存在しない場合）
+   * ノード `/apps` 選択
    * **[!UICONTROL 作成/フォルダー]**
-      * 名前を入力： `social`
-1. を選択 `social` ノード
-   * **[!UICONTROL 作成]** > **[!UICONTROL フォルダー]**
-      * 名前を入力： `commons`
-1. を選択 `commons` ノード
+      * 名前を入力：`social`
+1. ノード `social` 選択
+   * **[!UICONTROL 作成]**/**[!UICONTROL フォルダー]**
+      * 名前を入力：`commons`
+1. ノード `commons` 選択
    * **[!UICONTROL 作成/フォルダー]**
-      * 名前を入力： `components`
-1. を選択 `components` ノード
-   * **[!UICONTROL 作成/フォルダー]**.
-      * 名前を入力： `hbs`
-1. を選択 `hbs` ノード
-   * **[!UICONTROL 作成]** > **[!UICONTROL コンポーネントを作成]**
-      * ラベルを入力： `comments`
-      * タイトルを入力： `Comments`
-      * 説明を入力： `List of comments without showing avatars`
+      * 名前を入力：`components`
+1. ノード `components` 選択
+   * **[!UICONTROL 作成/フォルダー]** を選択します。
+      * 名前を入力：`hbs`
+1. ノード `hbs` 選択
+   * **[!UICONTROL 作成]**/**[!UICONTROL コンポーネントを作成]**
+      * ラベルを入力：`comments`
+      * タイトルを入力：`Comments`
+      * 説明を入力：`List of comments without showing avatars`
       * スーパータイプ：`social/commons/components/comments`
-      * グループを入力： `Communities`
-      * クリック **[!UICONTROL 次]** まで **[!UICONTROL OK]**
-1. を選択 `comments` ノード
+      * グループを入力：`Communities`
+      * **[!UICONTROL OK]** まで **[!UICONTROL 次へ]** をクリックします
+1. ノード `comments` 選択
 
-   * **[!UICONTROL 作成]** > **[!UICONTROL コンポーネントを作成]**
+   * **[!UICONTROL 作成]**/**[!UICONTROL コンポーネントを作成]**
 
-      * ラベルを入力： `comment`
-      * タイトルを入力： `Comment`
-      * 説明を入力： `A comment instance without avatars`
+      * ラベルを入力：`comment`
+      * タイトルを入力：`Comment`
+      * 説明を入力：`A comment instance without avatars`
       * スーパータイプ：`social/commons/components/comments/comment`
-      * グループを入力： `.hidden`
-      * クリック **[!UICONTROL 次]** まで **[!UICONTROL OK]**
-   * を選択 **[!UICONTROL すべて保存]**
-1. デフォルトを削除 `comments.jsp`
-   * ノードを選択 `/apps/social/commons/components/hbs/comments/comments.jsp`
+      * グループを入力：`.hidden`
+      * **[!UICONTROL OK]** まで **[!UICONTROL 次へ]** をクリックします
+   * 「**[!UICONTROL すべて保存]**」を選択します。
+1. デフォルトの `comments.jsp` を削除
+   * ノード `/apps/social/commons/components/hbs/comments/comments.jsp` を選択
    * 「**[!UICONTROL 削除]**」を選択します。
 1. デフォルトの comment.jsp を削除します
-   * ノードを選択 `/apps/social/commons/components/hbs/comments/comment/comment.jsp`
+   * ノード `/apps/social/commons/components/hbs/comments/comment/comment.jsp` を選択
    * 「**[!UICONTROL 削除]**」を選択します。
-   * を選択 **[!UICONTROL すべて保存]**
+   * 「**[!UICONTROL すべて保存]**」を選択します。
 
 >[!NOTE]
 >
->継承チェーンを保持するには、 `Super Type` （プロパティ `sling:resourceSuperType`）を選択します。選択したコンポーネントと同じ値に設定されます。 `Super Type` オーバーレイされるコンポーネントのうち、この場合は次のようになります。
+>継承チェーンを維持するために、オーバーレイコンポーネントの `Super Type` （プロパティ `sling:resourceSuperType`）は、オーバーレイされるコンポーネントの `Super Type` と同じ値に設定されます。この場合は、次のようになります。
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
 
-オーバーレイ独自の `Type`（プロパティ `sling:resourceType`）は、/apps に見つからないコンテンツが/libs で検索されるように、相対自己参照である必要があります。
+オーバーレイ自体の `Type` （プロパティ `sling:resourceType`）は、/apps に見つからないコンテンツが/libs で検索されるように、相対自己参照である必要があります。
 * 名前：`sling:resourceType`
 * タイプ：`String`
 * 値：`social/commons/components/hbs/comments`
 
-1. グリーンを選択 `[+] Add`
+1. 緑の `[+] Add` を選択します
    * 名前：`sling:resourceType`
    * タイプ：`String`
    * 値：`social/commons/components/hbs/comments/comment`
-1. グリーンを選択 `[+] Add`
-   * を選択 **[!UICONTROL すべて保存]**
+1. 緑の `[+] Add` を選択します
+   * 「**[!UICONTROL すべて保存]**」を選択します。
 
 ![create-nodes](assets/create-nodes.png)

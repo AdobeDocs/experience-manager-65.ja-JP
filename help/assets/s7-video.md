@@ -11,7 +11,7 @@ exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1551'
 ht-degree: 100%
 
@@ -158,7 +158,7 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 
    ![chlimage_1-367](assets/chlimage_1-367.png)
 
-   | Property | 説明 |
+   | プロパティ | 説明 |
    |---|---|
    | Scene7 クラウド設定 | エンコーディングプリセットで使用するクラウド設定です。 |
    | Scene7 エンコーディングプリセット | このビデオプロファイルをマッピングするエンコーディングプリセットです。 |

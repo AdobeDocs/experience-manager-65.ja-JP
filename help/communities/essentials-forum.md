@@ -26,15 +26,15 @@ ht-degree: 3%
  <tbody>
   <tr>
    <td> <strong>resourceTypes</strong></td>
-   <td>ソーシャル/フォーラム/コンポーネント/hbs/フォーラム<br /> ソーシャル/フォーラム/コンポーネント/hbs/トピック<br /> ソーシャル/フォーラム/コンポーネント/hbs/post</td>
+   <td>ソーシャル/フォーラム/コンポーネント/hbs/フォーラム <br /> ソーシャル/フォーラム/コンポーネント/hbs/トピック <br /> ソーシャル/フォーラム/コンポーネント/hbs/投稿</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>含める</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong> 次を含む </strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.voting<br /> cq.social.hbs.forum</td>
+   <td>cq.ckeditor<br />cq.social.hbs.voting<br />cq.social.hbs.forum</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -46,7 +46,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td>参照： <a href="forum.md">フォーラム機能</a></td>
+   <td><a href="forum.md"> フォーラム機能 </a> を参照してください</td>
   </tr>
  </tbody>
 </table>
@@ -57,26 +57,26 @@ ht-degree: 3%
 
 * [Forum API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
-* [フォーラムエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
+* [ フォーラムエンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### フォーラム機能 {#forum-function}
 
-を含むコミュニティサイト構造 [フォーラム機能](functions.md#forum-function)、設定済みのを含む `forum` コンポーネントと、モデレート、タグ付け、翻訳に影響する設定。
+[ フォーラム機能 ](functions.md#forum-function) を含むコミュニティサイト構造には、設定済みの `forum` コンポーネントと、モデレート、タグ付けおよび翻訳に影響する設定が含まれます。
 
 ### フォーラム投稿へのアクセス（UGC） {#accessing-forum-posts-ugc}
 
 UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
-参照： [ユーザー作成コンテンツのモデレート](moderate-ugc.md).
+[ ユーザー作成コンテンツのモデレート ](moderate-ugc.md) を参照してください。
 
-Adobe Experience Manager 6.1 Communities での使用 [共通店舗](working-with-srp.md) （UGC の場合、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます）。
+Adobe Experience Manager 6.1 Communities の時点では、UGC の [ 共通ストア ](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
 
-**リポジトリ内の UGC の場所と形式は、警告なしに変更される場合があります**.
+**リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
 
 以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md)  – 概要とリポジトリ使用状況の概要。
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRP による UGC へのアクセス](accessing-ugc-with-srp.md) - コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md)  – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする。
+* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

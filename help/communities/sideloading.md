@@ -32,7 +32,7 @@ SCF コンポーネントを動的に追加する手順は次のとおりです�
 
 1. [DOM にコンポーネントを追加します](#dynamically-add-component-to-dom)
 
-1. [コンポーネントをサイドロード](#sideload-by-invoking-scf) 次の 2 つの方法のいずれかを使用します。
+1. [ コンポーネントをサイドロード ](#sideload-by-invoking-scf) し、次の 2 つの方法のいずれかを使用します。
 
 * [動的インクルージョン](#dynamic-inclusion)
    * 動的に追加されたすべてのコンポーネントをブートストラップする
@@ -41,7 +41,7 @@ SCF コンポーネントを動的に追加する手順は次のとおりです�
 
 >[!NOTE]
 >
->サイドローディング [存在しないリソース](scf.md#add-or-include-a-communities-component) はサポートされていません。
+>[ 既存のリソースではない ](scf.md#add-or-include-a-communities-component) のサイドローディングはサポートされていません。
 
 ## DOM へのコンポーネントの動的な追加 {#dynamically-add-component-to-dom}
 
@@ -84,8 +84,8 @@ SCF コンポーネントを追加する場合、最も一般的に使用され�
 
 動的読み込みでは、SCF コンポーネントの読み込みを制御できます。
 
-DOM 内のすべての SCF コンポーネントをブートストラップする代わりに、この JavaScript メソッドを使用して、読み込む特定の SCF コンポーネントを指定することができます。
+DOM 内のすべての SCF コンポーネントをブートストラップする代わりに、このJavaScript メソッドを使用して、読み込む特定の SCF コンポーネントを指定することができます。
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-ここで、 `someId` は、の値です。 `data-component-id` 属性。
+ここで、`someId` は `data-component-id` 属性の値です。

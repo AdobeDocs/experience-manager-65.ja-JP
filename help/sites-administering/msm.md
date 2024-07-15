@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Multi Site Manager
 role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2665'
 ht-degree: 100%
 

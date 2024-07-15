@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Release Information
 role: Admin, User, Developer
 source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 100%
 

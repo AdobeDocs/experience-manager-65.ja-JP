@@ -4,7 +4,7 @@ description: ここでは、AEM Screens Player と AEM Screens のバージョ�
 page-status-flag: never-activated
 contentOwner: jsyal
 source-git-commit: 8b4cb4065ec14e813b49fb0d577c372790c9b21a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 100%
 
@@ -95,7 +95,7 @@ Android プレーヤーの下記ダウンロードリンクをクリックしま
 
 aem-screens-player-android-3.3.0.apk.zip
 
-[ファイルを入手](assets/aem-screens-player-android-330apk.zip)
+[ファイルの取得](assets/aem-screens-player-android-330apk.zip)
 
 <table> 
  <tbody>

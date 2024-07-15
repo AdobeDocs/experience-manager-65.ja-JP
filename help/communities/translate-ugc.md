@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # ユーザー作成コンテンツの翻訳 {#translating-user-generated-content}
 
-Adobe Experience Manager（AEM） Communities の翻訳機能は、の概念を拡張するものです。 [ページコンテンツの翻訳](../../help/sites-administering/translation.md) を使用して、コミュニティサイトに投稿されたユーザー生成コンテンツ（UGC）に送信します。 [ソーシャルコンポーネントフレームワーク（SCF）コンポーネント](scf.md).
+Adobe Experience Manager（AEM） Communities の翻訳機能は、[ ソーシャルコンポーネントフレームワーク（SCF）コンポーネント ](../../help/sites-administering/translation.md) を使用して、コミュニティサイトに投稿されたユーザー生成コンテンツ（UGC[ にページコンテンツの翻訳 ](scf.md) の概念を拡張します。
 
 UGC の翻訳により、サイト訪問者やメンバーは、言語の障壁を取り除くことで、グローバルコミュニティを体験できます。
 
@@ -32,27 +32,27 @@ UGC の翻訳により、サイト訪問者やメンバーは、言語の障壁�
 
 ## 概要 {#overview}
 
-この節では、翻訳サービスと UGC の連携について具体的に説明します。 また、AEMをに接続する方法を理解していることを前提としています。 [翻訳サービスプロバイダー](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) を設定し、web サイトにそのサービスを統合します。 [翻訳統合フレームワーク](../../help/sites-administering/tc-tic.md).
+この節では、翻訳サービスと UGC の連携について具体的に説明します。 また、AEMを [ 翻訳サービスプロバイダー ](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) に接続する方法と、[ 翻訳統合フレームワーク ](../../help/sites-administering/tc-tic.md) を設定してそのサービスを web サイトに統合する方法について理解していることを前提としています。
 
 翻訳サービスプロバイダーがサイトに関連付けられている場合、サイトの各言語コピーは、コメントなどの SCF コンポーネントを通じて投稿された UGC の独自のスレッドを維持します。
 
-翻訳サービスプロバイダーに加えて翻訳統合が設定されている場合、サイトの各言語コピーが UGC の単一のスレッドを共有することが可能になり、言語コピー間のグローバルなコミュニケーションが可能になります。 言語で分離されたディスカッションスレッドの代わりに、が設定されました [グローバル共有ストア](#global-translation-of-ugc) どの言語コピーを表示しているかに関係なく、スレッド全体を表示できます。 さらに、地域ごとのグローバル参加者の論理グループに対して、異なるグローバル共有ストアを指定することで、複数の翻訳統合設定を設定できます。
+翻訳サービスプロバイダーに加えて翻訳統合が設定されている場合、サイトの各言語コピーが UGC の単一のスレッドを共有することが可能になり、言語コピー間のグローバルなコミュニケーションが可能になります。 言語によって分離されたディスカッションスレッドの代わりに、設定された [ グローバル共有ストア ](#global-translation-of-ugc) を使用すると、どの言語コピーが表示されているかに関係なく、スレッド全体を表示できます。 さらに、地域ごとのグローバル参加者の論理グループに対して、異なるグローバル共有ストアを指定することで、複数の翻訳統合設定を設定できます。
 
 ## デフォルトの翻訳サービス {#the-default-translation-service}
 
-AEM Communitiesには、が含まれています [体験版ライセンス](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) の場合 [デフォルトの翻訳サービス](../../help/sites-administering/tc-msconf.md) 複数の言語に対して有効にします。
+AEM Communitiesには、複数の言語に対して有効な [ デフォルトの翻訳サービス [ 用の ](../../help/sites-administering/tc-msconf.md) 体験版ライセンス ](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) が含まれています。
 
-条件 [コミュニティサイトの作成](sites-console.md)：デフォルトの翻訳サービスは、次の場合に有効になります `Allow Machine Translation` は、以下からチェックされます。 [翻訳](sites-console.md#translation) サブパネル。
+[ コミュニティサイトの作成 ](sites-console.md) 時に、[ 翻訳 ](sites-console.md#translation) サブパネルから `Allow Machine Translation` がオンになると、デフォルトの翻訳サービスが有効になります。
 
 >[!CAUTION]
 >
 >デフォルトの翻訳サービスはデモ専用です。
 >
->実稼動システムには、ライセンスを取得した翻訳サービスが必要です。 ライセンスがない場合、デフォルトの翻訳サービスは次のようになります [無効](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
+>実稼動システムには、ライセンスを取得した翻訳サービスが必要です。 ライセンスがない場合、デフォルトの翻訳サービスは [ オフ ](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors) にする必要があります。
 
 ## UGC のグローバル翻訳 {#global-translation-of-ugc}
 
-Web サイトに複数のコンテンツがある場合 [言語コピー](../../help/sites-administering/tc-prep.md)デフォルトの翻訳サービスでは、あるサイトで入力された UGC が別のサイトで入力された UGC と関係がある可能性があることを認識しません。 これは、UGC が同じコンポーネント（コンポーネントを含んだページの言語コピー）によって生成される場合に当てはまります。
+Web サイトに複数の [ 言語コピー ](../../help/sites-administering/tc-prep.md) がある場合、デフォルトの翻訳サービスでは、あるサイトで入力された UGC が別のサイトで入力された UGC と関連している可能性があることを認識しません。 これは、UGC が同じコンポーネント（コンポーネントを含んだページの言語コピー）によって生成される場合に当てはまります。
 
 トピックについて話し合う人々のグループに似ています。 1 つの会話に参加する大規模なグループの全員と比較して、自分のグループ以外のグループで行われたコメントに気づかない。
 
@@ -64,7 +64,7 @@ Web サイトに複数のコンテンツがある場合 [言語コピー](../../
 >
 >グローバル翻訳前に存在していた UGC は、表示されなくなります。
 >
->UGC は [共通店舗](working-with-srp.md)は、言語固有の UGC の場所の下にありますが、グローバル翻訳の設定後に追加された新しいコンテンツは、グローバル共有ストアの場所から取得されます。
+>UGC は [ 共通ストア ](working-with-srp.md) に残りますが、言語固有の UGC の場所に配置され、グローバル翻訳の設定後に追加された新しいコンテンツはグローバル共有ストアの場所から取得されます。
 >
 >言語固有のコンテンツをグローバル共有ストアに移動または結合するための移行ツールはありません。
 
@@ -73,20 +73,20 @@ Web サイトに複数のコンテンツがある場合 [言語コピー](../../
 翻訳サービスコネクタをオーサーインスタンスの web サイトに統合する翻訳統合を作成するには、次のようにします。
 
 * 管理者としてログイン
-* から [メインメニュー](http://localhost:4502/)
+* [ メインメニュー ](http://localhost:4502/) から
 * 「**[!UICONTROL ツール]**」を選択します
-* を選択 **[!UICONTROL 運用]**
-* を選択 **[!UICONTROL Cloud]**
-* を選択 **[!UICONTROL Cloud Service]**
-* Scroll down to **[!UICONTROL 翻訳統合]**
+* 「**[!UICONTROL 操作]**」を選択します。
+* **[!UICONTROL Cloud]** を選択します。
+* **[!UICONTROL 人のCloud Serviceを選択]**
+* 下にスクロールして、「翻訳統合 **[!UICONTROL を表示します]**
 
-  ![翻訳と統合](assets/translation-integration.png)
+  ![ 翻訳の統合 ](assets/translation-integration.png)
 
-* を選択 **[!UICONTROL 設定を表示]**
+* 「**[!UICONTROL 設定を表示]**」を選択します
 
   ![show-configuration](assets/translation-integration1.png)
 
-* を選択 `[+]` アイコンの隣 **[!UICONTROL 利用可能な設定]** そのため、設定を作成できます。
+* **[!UICONTROL 利用可能 `[+]` 設定]** の横にあるアイコンを選択して、設定を作成できます。
 
 #### 設定を作成ダイアログ {#create-configuration-dialog}
 
@@ -108,28 +108,28 @@ Web サイトに複数のコンテンツがある場合 [言語コピー](../../
 
 #### 翻訳設定ダイアログ {#translation-config-dialog}
 
-![設定ダイアログ](assets/translation-integration3.png)
+![ 設定ダイアログ ](assets/translation-integration3.png)
 
-手順について詳しくは、 [翻訳統合設定の作成](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration).
+手順について詳しくは、[ 翻訳統合設定の作成 ](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration) を参照してください。
 
-* **[!UICONTROL Sites]** タブ：をデフォルトのままにすることができます。
+* **[!UICONTROL Sites]** タブ：デフォルトのままにすることができます。
 
 * **[!UICONTROL コミュニティ]** タブ：
    * **[!UICONTROL 翻訳プロバイダー]**
-ドロップダウンリストから翻訳プロバイダーを選択します。 デフォルトは `microsoft`、体験版サービス。
+ドロップダウンリストから翻訳プロバイダーを選択します。 デフォルトは `microsoft` （体験版サービス）です。
 
-   * **[!UICONTROL コンテンツカテゴリ]**
+   * **[!UICONTROL コンテンツのカテゴリ]**
 翻訳対象のコンテンツを説明するカテゴリを選択します。 デフォルトは `General.`
 
    * **[!UICONTROL ロケールを選択…]**
-（オプション） UGC を格納するロケールを選択すると、すべての言語コピーからの投稿が 1 つのグローバルな会話に表示されます。 慣例により、web サイトの[ベース言語](sites-console.md#translation)のロケールを選択してください。選択 `No Common Store` グローバル翻訳を無効にします。 デフォルトでは、グローバル翻訳は無効です。
+（オプション） UGC を格納するロケールを選択すると、すべての言語コピーからの投稿が 1 つのグローバルな会話に表示されます。 慣例により、web サイトの[ベース言語](sites-console.md#translation)のロケールを選択してください。`No Common Store` を選択すると、グローバル翻訳が無効になります。 デフォルトでは、グローバル翻訳は無効です。
 
-* **[!UICONTROL アセット]** タブ：をデフォルトのままにすることができます。
+* 「**[!UICONTROL Assets]**」タブ：をデフォルトのままにすることができます。
 * 「**[!UICONTROL OK]**」を選択します。
 
 #### アクティベーション {#activation}
 
-新しい翻訳統合クラウドサービスを、パブリッシュ環境に対してアクティベートする必要があります。 まだアクティベートされていない場合は、web サイトに関連付けると、関連付けられているページが公開されたときに、アクティベーションワークフローでこのクラウドサービス設定を公開するように求められます。
+新しい translation integration cloud service をPublish環境に対してアクティブ化する必要があります。 まだアクティベートされていない場合は、web サイトに関連付けると、関連付けられているページが公開されたときに、アクティベーションワークフローでこのクラウドサービス設定を公開するように求められます。
 
 ## 翻訳設定の管理 {#managing-translation-settings}
 

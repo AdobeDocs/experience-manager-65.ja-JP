@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## はじめに {#introduction}
 
-フォーラムやブログへの投稿など、ログインしたコミュニティメンバーのアクティビティは、の設定を通じて様々な方法でフィルタリングおよび表示されるストリームに収集されます。 `Activity Streams` コンポーネント。
+フォーラムやブログへの投稿など、ログインしたコミュニティメンバーのアクティビティは、`Activity Streams` コンポーネントの設定を通じて様々な方法でフィルタリングおよび表示されるストリームに収集されます。
 
 フォローする機能により、コミュニティメンバーが興味のある投稿をフォローしたり、他のコミュニティメンバーのアクティビティをフォローしたりする場合の、アクティビティの別のビューが追加されます。
 
@@ -32,27 +32,27 @@ ht-degree: 1%
 
 ### ページへのアクティビティストリームの追加 {#adding-activity-streams-to-a-page}
 
-を追加する場合 `Activity Streams` オーサーモードのページにコンポーネントを追加する場合は、コンポーネントブラウザーを使用して次を見つけます
+オーサーモードで `Activity Streams` コンポーネントをページに追加する場合は、コンポーネントブラウザーを使用して以下を見つけます
 
 * `Communities / Activity Streams`
 
 そして、アクティビティストリームが表示されるページの上にドラッグします。
 
-詳細については、 [Communities コンポーネントの基本](/help/communities/basics.md).
+必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
 
-いつ [必要なクライアントサイドライブラリ](/help/communities/essentials-activities.md#essentials-for-client-side) が含まれる場合、このようにして `Activity Streams` コンポーネントが表示されます。
+[ 必須のクライアントサイドライブラリ ](/help/communities/essentials-activities.md#essentials-for-client-side) が含まれると、`Activity Streams` のコンポーネントは次のように表示されます。
 
 ![activity-streams](assets/activity-component.png)
 
 ### アクティビティストリームの設定 {#configuring-activity-streams}
 
-配置されたを選択します。 `Activity Streams` にアクセスして選択できるコンポーネント `Configure` アイコンをクリックします。このアイコンをクリックすると、編集ダイアログが開きます。
+配置された `Activity Streams` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
-![設定](assets/configure-new.png)
+![ 設定 ](assets/configure-new.png)
 
-の下 **ユーザーアクティビティ** タブで、表示するアクティビティを指定します。
+「**ユーザーアクティビティ**」タブで、表示するアクティビティを指定します。
 
-![ユーザーアクティビティ](assets/user-activities.png)
+![user-activities](assets/user-activities.png)
 
 * **アクティビティの最大数**
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
   オンにした場合、アクティビティ ページにはタブが含まれ、現在のメンバーによってコミュニティ内で生成されたアクティビティに基づいてアクティビティをフィルタリングします。 デフォルトではオンになっています。
 
-* **すべてのアクティビティを表示ビュー**
+* **すべてのアクティビティビューを表示**
 
   オンにすると、アクティビティページにはタブが含まれます。このタブには、現在のメンバーがアクセス権を持つ、コミュニティ内で生成されたすべてのアクティビティが含まれます。 デフォルトではオンになっています。
 
@@ -76,15 +76,15 @@ ht-degree: 1%
 
 ### 次のビュー {#following-view}
 
-コンポーネントは、以下を有効にするように設定する必要があります。 次の機能を使用できます [ブログ](/help/communities/blog-feature.md), [フォーラム](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [カレンダー](/help/communities/calendar.md), [ファイルライブラリ](/help/communities/file-library.md)、および [コメント](/help/communities/comments.md).
+コンポーネントは、以下を有効にするように設定する必要があります。 次の機能を使用できます。[blog](/help/communities/blog-feature.md)、[forum](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[calendar](/help/communities/calendar.md)、[file library](/help/communities/file-library.md)、[comments](/help/communities/comments.md)。
 
-![following-view](assets/following-activities.png)
+![ 次のビュー ](assets/following-activities.png)
 
-この **フォロー** ボタンを使用すると、エントリをアクティビティとして追跡できます。 [通知](/help/communities/notifications.md)、または [subscriptions](/help/communities/subscriptions.md). 毎回 **フォロー** ボタンが選択されている場合、選択のオンとオフを切り替えることができます。 この `Email Subscriptions` 選択は、設定されている場合にのみ存在します。
+**フォロー** ボタンを使用すると、エントリをアクティビティ、[ 通知 ](/help/communities/notifications.md) または [ 購読 ](/help/communities/subscriptions.md) としてフォローできます。 「**フォロー**」ボタンを選択するたびに、選択のオンとオフを切り替えることができます。 `Email Subscriptions` の選択は、設定されている場合にのみ存在します。
 
-次のいずれかの方法を選択した場合、ボタンのテキストは **次の**. 便宜上、以下を選択できます。 `Unfollow All` すべてのメソッドの表示/非表示を切り替えます。
+次のメソッドのいずれかを選択すると、ボタンのテキストが **次** に変わります。 便宜上、`Unfollow All` を選択してすべてのメソッドをオフにすることができます。
 
-この **フォロー** ボタンが表示されます。
+**フォロー** ボタンが表示されます。
 
 * 別のメンバーのプロファイルを表示する場合。
 * フォーラム、QnA、ブログなどのメイン機能ページ
@@ -97,4 +97,4 @@ ht-degree: 1%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、 [アクティビティストリームの基本事項](/help/communities/essentials-activities.md) 開発者向けのページです。
+詳しくは、開発者向けの [ アクティビティストリームの初期設定 ](/help/communities/essentials-activities.md) ページを参照してください。

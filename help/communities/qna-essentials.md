@@ -29,12 +29,12 @@ ht-degree: 3%
    <td>ソーシャル/qna/components/hbs/qnaforum</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component">次を含める</a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"> 次を含む </a></td>
    <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md">clientlibs</a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.voting<br /> cq.social.hbs.qna</td>
+   <td>cq.ckeditor<br />cq.social.hbs.voting<br />cq.social.hbs.qna</td>
   </tr>
   <tr>
    <td> templates</td>
@@ -46,7 +46,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td> properties</td>
-   <td>参照： <a href="working-with-qna.md">Q&amp;A フォーラム機能</a></td>
+   <td><a href="working-with-qna.md">Q&amp;A フォーラム機能 </a> 参照</td>
   </tr>
  </tbody>
 </table>
@@ -57,26 +57,26 @@ ht-degree: 3%
 
 * [QnA API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
-* [QnA エンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
+* [QnA エンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### Q&amp;A 機能 {#qna-function}
 
-を含むコミュニティサイト構造 [QnA 関数](functions.md#qna-function) が設定されている `QnA` コンポーネントと、モデレートおよびタグ付けに影響する設定。 QnA 関数は、 [特権メンバーユーザーグループ](users.md#privileged-members-group).
+[QnA 関数 ](functions.md#qna-function) を含むコミュニティサイト構造は、設定済みの `QnA` コンポーネントと、モデレートおよびタグ付けに影響する設定を持ちます。 QnA 関数は、[ 特権メンバーユーザーグループ ](users.md#privileged-members-group) の識別をサポートします。
 
 ### QnA フォーラム投稿へのアクセス （UGC） {#accessing-qna-forum-posts-ugc}
 
 UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
-参照： [ユーザー作成コンテンツのモデレート](moderate-ugc.md).
+[ ユーザー作成コンテンツのモデレート ](moderate-ugc.md) を参照してください。
 
-AEM 6.1 Communities 現在、の使用 [共通店舗](working-with-srp.md) （UGC の場合、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます）。
+AEM 6.1 Communities の時点では、UGC の [ 共通ストア ](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
 
-**リポジトリ内の UGC の場所と形式は、警告なしに変更される場合があります**.
+**リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
 
 以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md)  – 概要とリポジトリ使用状況の概要。
-* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRP による UGC へのアクセス](accessing-ugc-with-srp.md) - コーディングのガイドライン
-* [SocialUtils のリファクタリング](socialutils.md)  – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする。
+* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

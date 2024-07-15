@@ -18,7 +18,7 @@ ht-degree: 10%
 
 # チュートリアル {#tutorials}
 
-これらは、Adobe Experience Manager（AEM） 6.1 Communities の学習や操作に役立つ例です [ソーシャルコンポーネントフレームワーク（SCF）](scf.md).
+これらは、Adobe Experience Manager（AEM） 6.1 Communities[ ソーシャルコンポーネントフレームワーク（SCF） ](scf.md) の学習や使用に役立つ例です。
 
 ## クライアントサイドのカスタマイズ {#client-side-customization}
 
@@ -34,15 +34,15 @@ ht-degree: 10%
 
 ## サーバーサイドのカスタマイズ {#server-side-customization}
 
-関連トピック [SCF サーバーサイドのカスタマイズ](server-customize.md).
+[SCF サーバーサイドのカスタマイズ ](server-customize.md) も参照してください。
 
-サンプルコードは次で入手できます [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリ :
+サンプルコードは [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。
 
-* [SCF コンポーネントサンプルのカスタマイズ](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
+* [SCF コンポーネントサンプルのカスタマイズ ](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
-* [オーバーレイ SCF コンポーネントのサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
+* [ オーバーレイ SCF コンポーネントのサンプル ](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
 
-* [SCF コンポーネントの拡張サンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
+* [SCF コンポーネントの拡張のサンプル ](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
 ## ハウツーの手順 {#how-to-instructions}
 
@@ -60,13 +60,13 @@ ht-degree: 10%
 
 ## デモユーザー {#demo-users}
 
-Geometrixxサンプルパッケージには、デモユーザーが含まれています。 多くの場合、訪問者（ログインしていない）とメンバー（ログインしている）はエクスペリエンスが異なります。 また、Geometrixxサンプルパッケージがインストールされている限り、を使用して調査する際に、これらのユーザーを使用してログイン状態をシミュレートできます。 [コミュニティコンポーネントガイド](components-guide.md).
+Geometrixxサンプルパッケージには、デモユーザーが含まれています。 多くの場合、訪問者（ログインしていない）とメンバー（ログインしている）はエクスペリエンスが異なります。 また、Geometrixxサンプルパッケージがインストールされている限り、[ コミュニティコンポーネントガイド ](components-guide.md) を使用して調査する際に、これらのユーザーを使用してログイン状態をシミュレーションできます。
 
-デモユーザーの完全なリストについては、パネルを使用して以下に移動します **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL セキュリティ/ユーザー]**. またはクラシック UI の使用 [セキュリティコンソール](http://localhost:4502/useradmin) （ユーザーとグループの管理）
+デモユーザーの完全なリストについては、パネルを使用して **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL セキュリティ/ユーザー]** に移動してください。 または、クラシック UI[ セキュリティコンソール ](http://localhost:4502/useradmin) を使用して、ユーザーとグループを管理します。
 
-If a [コミュニティサイトが作成されました](getting-started.md)にデモユーザーを割り当てることができます [コミュニティユーザーグループ](users.md).
+[ コミュニティサイトが作成されている ](getting-started.md) 場合は、デモユーザーをその [ コミュニティユーザーグループ ](users.md) に割り当てることができます。
 
-***ユーザー id* / *password***:
+***ユーザー id* / *パスワード***:
 
 * aaron.mcdonald@mailinator.com / パスワード
 * emily.andrews@mailinator.com / パスワード

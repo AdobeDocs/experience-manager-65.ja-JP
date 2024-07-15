@@ -24,28 +24,28 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、を参照してください [AEM Mobile On-demand Services ヘルプ](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html) を参照してください。
 
 >[!NOTE]
 >
 >**前提条件：**
 >
->AEM Mobile On-demand Servicesを使用してこの入門ガイドの手順に従う前に、ユーザーは以下について理解しておく必要があります [AEM](/help/sites-deploying/deploy.md).
+>AEM Mobile On-demand Servicesを操作してこの入門ガイドの手順に従う前に、[AEM](/help/sites-deploying/deploy.md) について理解しておく必要があります。
 
 ## AEM Mobile作成者 {#aem-mobile-author}
 
-An ***AEM オーサー* （または *マーケター*）**では、カスタム開発または標準のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、画像、ビデオ、テキストフラグメント（コンテンツフラグメント）など、DAM からのすべてのタイプのメディアの追加を行います。 その後、AEMの組み込みコンテンツエディターはによって使用されます *AEM オーサー* Adobe Experience Cloudの他の部分との統合など、アプリ内で充実した適切なエクスペリエンスを作成できます。
+***AEM オーサー* （または *マーケター*） **は、カスタム開発または標準搭載のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、画像、ビデオ、テキストフラグメント（コンテンツフラグメント）など、DAM からのすべてのタイプのメディアの追加を行います。 次に、*AEM オーサー* は、AEM組み込みコンテンツエディターを使用して、Adobe Experience Cloudの他の部分との統合など、アプリ内で機能豊富で関連性の高いエクスペリエンスを作成します。
 
 AEM オーサーは、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを担当します。
 
-**AEM Mobile On-demand Services アプリケーション用AEM コンテンツのオーサリング** には、次のアクションが含まれます。
+**AEM Mobile On-demand Services アプリ用のAEM コンテンツのオーサリング** には、次のアクションが必要です。
 
 * [AEM Mobile アプリケーションのダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [アプリケーションの作成および設定アクション](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [クラウド設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-詳細については、 **コンテンツサービス**&#x200B;を参照してください [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md) をクリックして開始します。
+**コンテンツサービス** について詳しくは、[ コンテンツサービスの概要 ](/help/mobile/develop-content-as-a-service.md) を参照して開始してください。
 
 >[!NOTE]
 >

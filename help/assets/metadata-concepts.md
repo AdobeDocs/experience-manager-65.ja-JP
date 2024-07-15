@@ -7,7 +7,7 @@ feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2665'
 ht-degree: 100%
 
@@ -149,7 +149,7 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 
 ### 印刷固有のメタデータ {#print-specific-metadata}
 
-* PDF および PDF/X - Adobe PDF およびサードパーティのアプリケーション。
+* PDF および PDF/X：Adobe PDF およびサードパーティのアプリケーション
 * PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.w3.org/submissions/2020/SUBM-prism-20200910/Image_Guide.pdf)。
 * XMP - [!DNL Extensible Metadata Platform]。
 * `xmpPG` - ページテキストの XMP メタデータ。
@@ -171,7 +171,7 @@ Dublin Core メタデータは、アセットをより検索しやすい形で�
 
 DCMES 以外にも、Dublin Core Metadata Initiative によって作成された他のメタデータ要素があります。詳しくは、[Dublin Core Initiative](https://dublincore.org/) を参照してください。
 
-| Property | 説明 |
+| プロパティ | 説明 |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | contributor | コンテンツに貢献する責任を負う人または会社。 |
 | coverage | アセットの対象となる地理的な場所または期間。 |

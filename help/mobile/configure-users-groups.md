@@ -39,7 +39,7 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
 1. 「app-authors」という名前のユーザーグループを作成します。
 
-   ユーザーAdmin Consoleに移動します。 [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   ユーザーAdmin Consoleに移動：[http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    ユーザーグループ コンソール内から「+」ボタンを選択してグループを作成します。
 
@@ -51,13 +51,13 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
    作成者グループに app-authors を追加
 
-1. app-authors ユーザーグループを作成したので、 [ユーザーAdmin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. app-authors ユーザーグループを作成したので、「ユーザーAdmin Console[ を使用して、個々のチームメンバーをこの新しいグループに追加でき ](http://localhost:4502/libs/granite/security/content/useradmin.md) す。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
    ユーザーグループの編集
 
-1. に移動します。 [権限コンソール](http://localhost:4502/useradmin) クラウドサービスを管理するための権限の追加
+1. [ 権限コンソール ](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
 
    * /etc/cloudservices で（読み取り）
 
@@ -67,7 +67,7 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
 ### AEM Mobile アプリケーション管理者グループ（app-admins グループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-admins グループのメンバーは、app-authors に含まれるものと同じ権限でアプリケーションコンテンツを作成できます **および** また、次も担当します。
+app-admins グループのメンバーは、app-authors **AND** に含まれているのと同じ権限でアプリケーションコンテンツを作成でき、さらに次の責任も負います。
 
 * AEMでのPhoneGap BuildおよびAdobe Mobile Services クラウドサービスの設定
 * アプリケーションのコンテンツ同期 OTA 更新のステージング、公開およびクリア
@@ -88,7 +88,7 @@ app-admins グループのメンバーは、app-authors に含まれるものと
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. に移動します。 [権限コンソール](http://localhost:4502/useradmin) クラウドサービスを管理するための権限の追加
+1. [ 権限コンソール ](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
 
    * /etc/cloudservices/mobileservices の（読み取り、変更、作成、削除、レプリケート）
    * /etc/cloudservices/phonegap-build の（読み取り、変更、作成、削除、レプリケート）
@@ -114,14 +114,14 @@ app-admins グループのメンバーは、app-authors に含まれるものと
 
 ダッシュボードタイルでは、ユーザーが持つ権限に基づいて、様々なアクションが表示される場合があります。 以下に、各タイルで使用できるアクションを示します。
 
-これらの権限に加えて、現在のアプリの設定に基づいて、アクションを表示/非表示にすることもできます。 例えば、PhoneGap クラウド設定がアプリに割り当てられていない場合、「リモートビルド」アクションを公開しても意味はありません。 これらは以下の「」の下にリストされています&#x200B;**設定条件**&#x200B;のセクション。
+これらの権限に加えて、現在のアプリの設定に基づいて、アクションを表示/非表示にすることもできます。 例えば、PhoneGap クラウド設定がアプリに割り当てられていない場合、「リモートビルド」アクションを公開しても意味はありません。 これらは、以下の「**設定条件**」セクションに一覧表示されます。
 
 ### アプリを管理タイル {#manage-app-tile}
 
 タイルには現在、権限が必要なアクションはありませんが、アプリケーションの詳細ページには次のアクションがあります。
 
-* *編集* app-author および app-admin （UIトリガー- jcr:write - /content/phonegap/上{suffix}）
-* *Download* app-author および app-admin （UIトリガー- /content/phonegap/上{suffix}）
+* app-author および app-admin 用の *編集* （UIトリガー- jcr:write - /content/phonegap/{suffix}）
+* *ダウンロード* app-author および app-admin 用（UIトリガー- /content/phonegap/{suffix}）
 
 次の画像は、アプリのダウンロードと編集のオプションを示しています。
 

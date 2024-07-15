@@ -22,7 +22,7 @@ ht-degree: 4%
 
 リレーショナルデータベースを共通ストアとして使用するようにAEM Communitiesが設定されている場合、ユーザー生成コンテンツ（UGC）には、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期やレプリケーションを行う必要はありません。
 
-関連トピック [SRP オプションの特徴](working-with-srp.md#characteristics-of-srp-options) および [推奨されるトポロジ](topologies.md).
+[SRP オプションの特性 ](working-with-srp.md#characteristics-of-srp-options) および [ 推奨されるトポロジ ](topologies.md) も参照してください。
 
 ## 要件 {#requirements}
 
@@ -31,7 +31,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->デフォルトのストレージ設定は、conf path （`/conf/global/settings/community/srpc/defaultconfiguration`）に設定します。 `etc` パス （`/etc/socialconfig/srpc/defaultconfiguration`）に設定します。 次の手順に従うことをお勧めします [移行手順](#zerodt-migration-steps) デフォルトの srp が期待どおりに動作するようにします。
+>デフォルトのストレージ設定は、パス（`/etc/socialconfig/srpc/defaultconfiguration`）ではなく conf path （`/conf/global/settings/community/srpc/defaultconfiguration`） `etc` 保存されるようになりました。 defaultsrp が期待どおりに動作するように [ 移行手順 ](#zerodt-migration-steps) に従うことをお勧めします。
 
 ## リレーショナルデータベースの設定 {#relational-database-configuration}
 
@@ -39,65 +39,65 @@ ht-degree: 4%
 
 MySQL インストールは、異なるデータベース（スキーマ）名と異なる接続（サーバー：ポート）を使用することで、同じ接続プール内のイネーブルメント機能と共通ストア（DSRP）の間で共有されます。
 
-インストールと設定の詳細については、を参照してください。 [DSRP 用の MySQL 設定](dsrp-mysql.md).
+インストールと設定について詳しくは、[DSRP 用の MySQL 設定 ](dsrp-mysql.md) を参照してください。
 
 ### Solr 設定 {#solr-configuration}
 
 Solr インストールは、異なるコレクションを使用して、ノードストア（Oak）と共通ストア（SRP）の間で共有できます。
 
-Oak コレクションと SRP コレクションの両方を集中的に使用する場合は、パフォーマンス上の理由から、2 つ目の Solr をインストールすることがあります。
+Oakと SRP の両方のコレクションを集中的に使用する場合は、パフォーマンス上の理由から、2 つ目の Solr をインストールすることがあります。
 
 実稼動環境では、SolrCloud モードはスタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
-インストールと設定の詳細については、を参照してください。 [SRP 用の Solr 設定](solr.md).
+インストールと設定について詳しくは、[SRP 用の Solr 設定 ](solr.md) を参照してください。
 
 ### DSRP を選択 {#select-dsrp}
 
-この [ストレージ設定コンソール](srp-config.md) デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
+[ ストレージ設定コンソール ](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
 
 オーサー環境で、ストレージ設定コンソールにアクセスします。
 
 * 管理者権限でログイン
-* から **メインメニュー**
+* **メインメニュー** から
 
-   * を選択 **[!UICONTROL ツール]** （左側のウィンドウから）
-   * を選択 **[!UICONTROL コミュニティ]**
-   * を選択 **[!UICONTROL ストレージ設定]**
+   * 左側のパネルから **[!UICONTROL ツール]** を選択します
+   * **[!UICONTROL Communities]** を選択します
+   * 「**[!UICONTROL ストレージ設定]**」を選択します。
 
-      * 例えば、次の場所が生成されます。 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)
+      * 例えば、結果の場所は [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) になります。
 
      >[!NOTE]
      >
-     >デフォルトのストレージ設定は、conf path （`/conf/global/settings/community/srpc/defaultconfiguration`）に設定します。 `etc` パス （`/etc/socialconfig/srpc/defaultconfiguration`）に設定します。 次の手順に従うことをお勧めします [移行手順](#zerodt-migration-steps) デフォルトの srp が期待どおりに動作するようにします。
+     >デフォルトのストレージ設定が conf path （`/conf/global/settings/community/srpc/defaultconfiguration`）に保存されるようになりました。      パス（`/etc/socialconfig/srpc/defaultconfiguration`） `etc` 代わりに使用します。 defaultsrp が期待どおりに動作するように [ 移行手順 ](#zerodt-migration-steps) に従うことをお勧めします。
 
   ![dsrp-config](assets/dsrp-config.png)
 
-* を選択 **[!UICONTROL データベースストレージリソースプロバイダー（DSRP）]**
-* **データベース設定**
+* 「**[!UICONTROL データベースストレージリソースプロバイダー（DSRP）]**」を選択します。
+* **データベース構成**
 
    * **[!UICONTROL JDBC データソース名]**
 
-     MySQL 接続に指定する名前は、で入力した名前と同じである必要があります [JDBC OSGi 設定](dsrp-mysql.md#configurejdbcconnections)
+     MySQL 接続に付ける名前は、[JDBC OSGi 設定 ](dsrp-mysql.md#configurejdbcconnections) で入力した名前と同じにする必要があります。
 
-     *default*: communities
+     *デフォルト*: communities
 
    * **[!UICONTROL データベース名]**
 
-     のスキーマに指定された名前 [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) script
+     [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) スクリプトでスキーマに指定された名前
 
-     *default*: communities
+     *デフォルト*: communities
 
 * **SolrConfiguration**
 
-   * **[飼育員](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) ホスト**
+   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) ホスト**
 
-     内部の ZooKeeper を使用して Solr を実行する場合は、この値を空白のままにします。 それ以外の場合（で実行している場合） [SolrCloud モード](solr.md#solrcloud-mode) 外部の ZooKeeper で、次のように、この値を ZooKeeper の URI に設定します *my.server.com:80*
+     内部の ZooKeeper を使用して Solr を実行する場合は、この値を空白のままにします。 それ以外の場合、外部の ZooKeeper を使用して [SolrCloud モード ](solr.md#solrcloud-mode) で実行する場合、この値を ZooKeeper の URI に設定します（*my.server.com:80など）*
 
-     *default*: *&lt;blank>*
+     *デフォルト*: *&lt;blank>*
 
    * **[!UICONTROL Solr URL]**
 
-     *default*: https://127.0.0.1:8983/solr/
+     *デフォルト*:https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr コレクション]**
 
@@ -107,13 +107,13 @@ Oak コレクションと SRP コレクションの両方を集中的に使用�
 
 ### Defaultsrp のダウンタイムなしの移行手順 {#zerodt-migration-steps}
 
-デフォルトの srp ページの確認方法 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) は期待どおりに動作します。次の手順に従います。
+defaultsrp ページ [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) が期待どおりに動作することを確認するには、次の手順に従います。
 
-1. でパスの名前を変更します `/etc/socialconfig` 対象： `/etc/socialconfig_old`システム設定が jsrp （デフォルト）にフォールバックするようにします。
-1. defaultsrp ページに移動 [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)ここでは、jsrp が設定されています。 「」をクリックします **[!UICONTROL submit]** ボタンをクリックして、新しいデフォルト設定ノードがに作成されるようにします `/conf/global/settings/community/srpc`.
-1. 作成したデフォルト設定の削除 `/conf/global/settings/community/srpc/defaultconfiguration`.
-1. 古い設定をコピーします `/etc/socialconfig_old/srpc/defaultconfiguration` 削除したノードの代わりに（`/conf/global/settings/community/srpc/defaultconfiguration`）を選択します。
-1. 旧バージョンを削除 `etc` ノード `/etc/socialconfig_old`.
+1. `/etc/socialconfig` のパスの名前を `/etc/socialconfig_old` に変更して、システム設定が jsrp （デフォルト）にフォールバックするようにします。
+1. defaultsrp ページ [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) に移動します。ここでは、jsrp が設定されています。 **[!UICONTROL 送信]** ボタンをクリックして、新しいデフォルト設定ノードが `/conf/global/settings/community/srpc` に作成されるようにします。
+1. 作成したデフォルト設定 `/conf/global/settings/community/srpc/defaultconfiguration` を削除します。
+1. 前の手順で削除したノード（`/conf/global/settings/community/srpc/defaultconfiguration`）の代わりに、古い設定 `/etc/socialconfig_old/srpc/defaultconfiguration` をコピーします。
+1. 古い `etc` ノード `/etc/socialconfig_old` を削除します。
 
 ## 設定の公開 {#publishing-the-configuration}
 
@@ -123,25 +123,25 @@ DSRP は、すべてのオーサーインスタンスとパブリッシュイン
 
 * オーサー環境で：
 
-   * メインメニューからに移動する **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL 複製]**
-   * ダブルクリック **[!UICONTROL ツリーのアクティベート]**
+   * メインメニューから **[!UICONTROL ツール]**/**[!UICONTROL オペレーション]**/**[!UICONTROL レプリケーション]** に移動します。
+   * **[!UICONTROL ツリーをアクティブにする]** をダブルクリックします
    * **開始パス**:
 
-      * を参照 `/etc/socialconfig/srpc/`
+      * `/etc/socialconfig/srpc/` を参照します
 
-   * 確保する `Only Modified` が選択されていません。
-   * を選択 **[!UICONTROL Activate]**.
+   * `Only Modified` が選択されていないことを確認します。
+   * **[!UICONTROL アクティブ化]** を選択します。
 
 ## ユーザーデータの管理 {#managing-user-data}
 
-について *ユーザー*, *ユーザープロファイル* および *ユーザーグループ*（パブリッシュ環境で入力することが多い）次を参照してください。
+パブリッシュ環境で入力されることが多い *ユーザー*、*ユーザープロファイル* および *ユーザーグループ* に関する情報は、次をご覧ください。
 
 * [ユーザー同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
 ## Solr for DSRP のインデックス再作成 {#reindexing-solr-for-dsrp}
 
-DSRP Solr のインデックスを再作成するには、次のドキュメントに従います [msrp のインデックス再作成](msrp.md#msrp-reindex-tool)ただし、DSRP のインデックスを再作成する場合は、代わりにこの URL を使用します。 **/services/social/datastore/rdb/reindex**
+DSRP Solr のインデックスを再作成するには、[MSRP のインデックス再作成 ](msrp.md#msrp-reindex-tool) のドキュメントに従います。ただし、DSRP のインデックスを再作成する場合は、代わりに次の URL を使用します。**/services/social/datastore/rdb/reindex**
 
 例えば、DSRP を再インデックス化する curl コマンドは、次のようになります。
 

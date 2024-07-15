@@ -7,7 +7,7 @@ feature: Developer Tools,Renditions
 exl-id: 7652663a-11ba-4a78-9a9f-221d514fe992
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 100%
 

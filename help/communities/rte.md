@@ -22,15 +22,15 @@ ht-degree: 7%
 
 リッチテキストエディター（RTE）を使用すると、マークアップでテキストを入力できます。
 
-コミュニティ コンポーネントの場合は、に類似しています。 [オーサー環境でのリッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)は、パブリッシュ環境に入力されるテキストに影響します。
+Communities コンポーネントの場合は、オーサー環境の [ リッチテキストエディター ](../../help/sites-authoring/rich-text-editor.md) と同様に、パブリッシュ環境で入力されるテキストに影響します。
 
 ![rich-text-editor](assets/rich-text-editor.png)
 
 ## リッチテキストエディターの有効化 {#enabling-rich-text-editor}
 
-ユーザー生成コンテンツ（UGC）を許可する Communities コンポーネントを有効にして、RTE を許可できます。 コンポーネントがページに追加されたか、内に含まれているか [関数](functions.md)、RTE はデフォルトで有効になっている場合とされていない場合があります。
+ユーザー生成コンテンツ（UGC）を許可する Communities コンポーネントを有効にして、RTE を許可できます。 コンポーネントがページに追加された場合や [function](functions.md) 内に含まれた場合、RTE はデフォルトで有効になっている場合とされていない場合があります。
 
-有効になっていない場合は、 [オーサー編集モード](sites-console.md#authoring-site-content)で、編集するコンポーネントを選択し、 `Rich Text Editor` チェックボックス。
+有効にしない場合は、[ オーサー編集モード ](sites-console.md#authoring-site-content) に入り、編集するコンポーネントを選択して、「`Rich Text Editor`」チェックボックスをオンにします。
 
 RTE は、次の Communities コンポーネントで使用できます。
 
@@ -45,9 +45,9 @@ RTE は、次の Communities コンポーネントで使用できます。
 
 ## カスタマイズ {#customization}
 
-実装は以下に基づいているので、リッチテキストエディターのカスタマイズが可能です [CKEditor](https://ckeditor.com/).
+[CKEditor](https://ckeditor.com/) に基づいた実装なので、リッチテキストエディターのカスタマイズが可能です。
 
-Communities コンポーネントの現在の設定は、 `cq.social.  scf   clientlib`、のリポジトリにあります。
+Communities コンポーネントの現在の設定は、`cq.social.  scf   clientlib` ージ、次のリポジトリにあります
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
@@ -59,9 +59,9 @@ Communities コンポーネントの現在の設定は、 `cq.social.  scf   cli
 
 ツールバーにハイパーリンクオプションを追加するには：
 
-* 「」という名前のツールバーを追加 `links`“
+* 「`links`」という名前のツールバーを追加
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* を選択 **[!UICONTROL すべて保存]**
+* 「**[!UICONTROL すべて保存]**」を選択します。
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 

@@ -11,7 +11,7 @@ exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3363'
 ht-degree: 100%
 
@@ -98,7 +98,7 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 * **デフォルトエージェント（パブリッシュ）**
 このエージェントは、デフォルトのパブリッシュインスタンスにコンテンツをレプリケーションします。
 この設定およびログの詳細には、オーサー環境のツールコンソールまたは次の URL からアクセスすることができます。あるいは以下のようにしてください。
-  `https://localhost:4502/etc/replication/agents.author/publish.html`
+  `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
 #### レプリケーションエージェント（デフォルト） {#replication-agents-out-of-the-box}
 
@@ -431,7 +431,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
    * 「**トランスポート**」タブで、次のように設定します。
 
       * 新しいパブリッシュインスタンスに必要な URI を入力します。次に例を示します。
-        `https://localhost:4504/bin/receive`
+        `https://localhost:4504/bin/receive`。
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。
@@ -474,7 +474,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
    * 「**トランスポート**」タブで、次のように設定します。
 
       * 新しいパブリッシュインスタンスに必要な URI を入力します。次に例を示します。
-        `https://localhost:80/dispatcher/invalidate.cache`
+        `https://localhost:80/dispatcher/invalidate.cache`。
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。

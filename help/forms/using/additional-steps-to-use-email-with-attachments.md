@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 
@@ -54,4 +54,4 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。

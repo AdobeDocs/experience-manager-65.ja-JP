@@ -8,7 +8,7 @@ exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 100%
 
@@ -166,7 +166,7 @@ CRXDE リポジトリのオプションでノード構造を手動で作成す�
 | 述語名 | 説明 | プロパティ |
 |---|---|---|
 | [!UICONTROL フルテキスト] | アセットノード全体でフルテキスト検索を実行する検索用述語。jcr:contains 演算子でマッピングされます。アセットノードの特定の部分に対してフルテキスト検索を実行する場合は、相対パスを指定できます。 | <ul><li>ラベル</li><li>プレースホルダー</li><li>プロパティ名</li><li>説明</li></ul> |
-| [!UICONTROL パスブラウザー] | 事前に設定したルートパスのフォルダーとサブフォルダーでアセットを検索するための検索用述語 | <ul><li>プレースホルダー</li><li>ルートパス</li><li>説明</li></ul> |
+| [!UICONTROL パスブラウザー] | 事前に設定したルートパスのフォルダーとサブフォルダーでアセットを検索するための検索用述語 | <ul><li>Placeholder</li><li>ルートパス</li><li>説明</li></ul> |
 | [!UICONTROL パス] | 場所で結果をフィルタリングするために使用します。オプションとして複数のパスを指定できます。 | <ul><li>ラベル</li><li>パス</li><li>説明</li></ul> |
 | [!UICONTROL 公開ステータス] | 公開ステータスに基づいてアセットを検索するための検索用述語 | <ul><li>ラベル</li><li>プロパティ名</li><li>説明</li></ul> |
 | [!UICONTROL 相対的な日付] | アセットの相対的な作成日に基づいてアセットを検索するための検索用述語。例えば、2 か月前、3 週間前などのようにオプションを設定できます。 | <ul><li>ラベル</li><li>プロパティ名</li><li>相対的な日付</li></ul> |
