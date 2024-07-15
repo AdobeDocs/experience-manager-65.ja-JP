@@ -10,10 +10,10 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
 workflow-type: tm+mt
-source-wordcount: '5868'
-ht-degree: 100%
+source-wordcount: '5686'
+ht-degree: 99%
 
 ---
 
@@ -330,74 +330,9 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 [OSGi 設定](/help/sites-deploying/configuring-osgi.md)の&#x200B;**クエリヘルスチェック設定**（com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics）で&#x200B;**期間**&#x200B;を設定できます。
 
-## Nagios での監視 {#monitoring-with-nagios}
+## 外部サービスを使用した監視 {#monitoring-with-external-services}
 
-ヘルスチェックダッシュボードは、Granite JMX Mbean 経由で Nagios と統合できます。以下の例では、AEM を実行しているサーバー上で使用されているメモリを表示するチェックの追加方法を説明します。
-
-1. 監視サーバーで Nagios を設定してインストールします。
-1. 次に、Nagios Remote Plugin Executor（NRPE）をインストールします。
-
-   >[!NOTE]
-   >
-   >Nagios および NRPE をシステムにインストールする方法について詳しくは、[Nagios のドキュメント](https://library.nagios.com/library/products/nagios-core/manuals//)を参照してください。
-
-1. AEM サーバーのホスト定義を追加します。これは、設定マネージャーを使用して、Nagios XI eb インターフェイス経由で実行できます。
-
-   1. ブラウザーを開いて Nagios サーバーにアクセスします。
-   1. トップメニューの「**Configure**」ボタンをクリックします。
-   1. 左側のウィンドウで、「**Advanced Configuration**」の下の「**Core Config Manager**」をクリックします。
-   1. 「**Monitoring**」セクションの下の「**Hosts**」リンクをクリックします。
-   1. ホスト定義を追加します。
-
-   ![chlimage_1-118](assets/chlimage_1-118.png)
-
-   以下は、Nagios Core を使用している場合のホスト設定ファイルの例です。
-
-   ```xml
-   define host {
-      address 192.168.0.5
-      max_check_attempts 3
-      check_period 24x7
-      check-command check-host-alive
-      contacts admin
-      notification_interval 60
-      notification_period 24x7
-   }
-   ```
-
-1. Nagios と NRPE を AEM サーバーにインストールします。
-1. [check_http_json](https://github.com/phrawzty/check_http_json) プラグインを両方のサーバーにインストールします。
-1. 両方のサーバーで、汎用の JSON チェックコマンドを定義します。
-
-   ```xml
-   define command{
-   
-       command_name    check_http_json-int
-   
-       command_line    /usr/lib/nagios/plugins/check_http_json --user "$ARG1$" --pass "$ARG2$" -u 'https://$HOSTNAME$:$ARG3$/$ARG4$' -e '$ARG5$' -w '$ARG6$' -c '$ARG7$'
-   
-   }
-   ```
-
-1. AEM サーバー上の使用メモリのためのサービスを追加します。
-
-   ```xml
-   define service {
-   
-       use generic-service
-   
-       host_name my.remote.host
-   
-       service_description AEM Author Used Memory
-   
-       check_command  check_http_json-int!<cq-user>!<cq-password>!<cq-port>!system/sling/monitoring/mbeans/java/lang/Memory.infinity.json!{noname}.mbean:attributes.HeapMemoryUsage.mbean:attributes.used.mbean:value!<warn-threshold-in-bytes>!<critical-threshold-in-bytes>
-   
-       }
-   ```
-
-1. Nagios ダッシュボードで新しく作成されたサービスを確認します。
-
-   ![chlimage_1-119](assets/chlimage_1-119.png)
+外部のテクノロジーやベンダーとの統合が可能です。 関連する詳細については、ドキュメントを参照してください。
 
 ## 診断ツール {#diagnosis-tools}
 
