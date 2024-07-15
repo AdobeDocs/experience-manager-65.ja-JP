@@ -89,7 +89,7 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    * サーバークラスター - `[appserver root]`¥domain¥configuration¥domain_&lt;dbname>.xml
 
-1. 
+1. &#x200B;
    * **シングルサーバーの場合、** lc_&lt;dbaname/tunkey>.xml ファイルの &lt;security-realms> セクションに次のテキストを追加します。
 
    ```xml

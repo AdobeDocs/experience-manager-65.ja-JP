@@ -62,7 +62,7 @@ AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms にアップグレー
 
    >[!NOTE]
    >
-   「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+   >「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 1. インストール後のアクティビティを実行します。
 
@@ -111,4 +111,4 @@ AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms にアップグレー
 
    >[!NOTE]
    >
-   AEM 6.4 Forms では crx-repository の構造が変更されています。6.3 Forms から AEM 6.5 Forms にアップグレードした場合、新規作成するカスタマイズについては、変更後のパスを使用してください。変更後のパスの一覧については、「[AEM Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)」を参照してください。
+   >AEM 6.4 Forms では crx-repository の構造が変更されています。6.3 Forms から AEM 6.5 Forms にアップグレードした場合、新規作成するカスタマイズについては、変更後のパスを使用してください。変更後のパスの一覧については、「[AEM Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)」を参照してください。
