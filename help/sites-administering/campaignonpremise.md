@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: 6fb844ea428c15adab71503dde6138e46eabf0a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1564'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -91,7 +91,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
    >[!CAUTION]
    >
-   >構成するセキュリティ ゾーンは **プライベート会社ネットワーク （VPN+LAN）** です。
+   >設定するセキュリティゾーンは、**プライベート会社ネットワーク（VPN+LAN）**&#x200B;です。
 
 1. 「**保存**」をクリックします。
 
@@ -105,7 +105,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
    * `allowHTTP="true"`
    * `sessionTokenOnly="true"`
-   * `allowUserPassword="true"`。
+   * `allowUserPassword="true"`
 
 1. ファイルを保存します。
 
