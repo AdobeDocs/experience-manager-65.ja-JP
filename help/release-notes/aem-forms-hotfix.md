@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '903'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -33,16 +33,16 @@ ht-degree: 75%
     <td>2024年7月10日（PT）</td>
      <td>
      <ul>
-     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-jboss.zip.zip">Windows 上のAEM サービスパック 6.5.21.0 のホットフィックス（JBoss JEE Server </a> 版） </li>
-      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-jboss.tar.gz">JBoss JEE Server </a> 用 Linux 上のAEM サービスパック 6.5.21.0 のホットフィックス </li>
-       <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-websphere.zip.zip">Windows 版AEM サービスパック 6.5.21.0 （Webshpere JEE サーバー </a>）のホットフィックス </li>
-        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-websphere.tar.gz">Webshpere JEE サーバー用 Linux 上のAEM サービスパック 6.5.21.0 のホットフィックス </a> </li>
-        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-weblogic.zip.zip">Windows 上のAEM サービスパック 6.5.21.0 の Weblogic JEE サーバー </a> ードのホットフィックス </li>
-        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-weblogic.tar.gz">Weblogic JEE サーバー用 Linux 上のAEM サービスパック 6.5.21.0 のホットフィックス </a> </li>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-jboss.zip.zip">JBoss JEE サーバー用の Windows 上の AEM サービスパック 6.5.21.0 のホットフィックス</a> </li>
+      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-jboss.tar.gz">JBoss JEE サーバー用の Linux 上の AEM サービスパック 6.5.21.0 のホットフィックス</a> </li>
+       <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-websphere.zip.zip">Webshpere JEE サーバー用の Windows 上の AEM サービスパック 6.5.21.0 のホットフィックス</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-websphere.tar.gz">Webshpere JEE サーバー用の Linux 上の AEM サービスパック 6.5.21.0 のホットフィックス</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-weblogic.zip.zip">Weblogic JEE サーバー用の Windows 上の AEM サービスパック 6.5.21.0 のホットフィックス</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-weblogic.tar.gz">Weblogic JEE サーバー用の Linux 上の AEM サービスパック 6.5.21.0 のホットフィックス</a> </li>
      </ul>
      </td>
     <td>
-    <ul><li>JEE サーバー上でAEM Forms サービスパック 20 （6.5.20.0）に更新し、出力サービスを使用してPDFを生成すると、PDFがレンダリングされてアクセシビリティの問題が発生します。 （LC-3922112）</li><li>AEM Forms JEE の出力サービスを使用して生成されたタグ付きPDFに、「不適切な構造の警告」と表示される。 （LC-3922038）</li><li>フォームがAEM Forms JEE で送信されると、繰り返し XML 要素のインスタンスがデータから削除されます。 （LC-3922017）</li><li>Linux 環境で（JEE 上の）アダプティブフォームをHTMLーでレンダリングすると、が正しくレンダリングされません。 （LC-3921957）</li><li>AEM Forms JEE でユーザーが Output サービスを使用して XTG ファイルをPostScript形式に変換すると、次のエラーで失敗します。AEM_OUT_001_003：予期しない例外：PAExecute エラー：XFA_RENDER_FAILURE。 （LC-3921720）</li><li>JEE サーバー上のAEM Forms サービスパック 18 （6.5.18.0）にアップグレードした後、フォームを送信すると、HTML5 またはPDF formsのレンダリングに失敗し、XMLFM がクラッシュします。 （LC-3921718）
+    <ul><li>ユーザーが JEE サーバー上で AEM Forms サービスパック 20（6.5.20.0）に更新し、Output サービスを使用して PDF を生成すると、PDF がアクセシビリティに関する問題を伴ってレンダリングされます。（LC-3922112）</li><li>AEM Forms JEE の Output サービスを使用して生成されたタグ付き PDF に「不適切な構造の警告」が表示されます。（LC-3922038）</li><li>AEM Forms JEE でフォームを送信すると、繰り返し XML 要素のインスタンスがデータから削除されます。（LC-3922017）</li><li>Linux 環境のユーザーがアダプティブフォーム（JEE 上）を HTML でレンダリングすると、正しくレンダリングされません。（LC-3921957）</li><li>ユーザーが AEM Forms JEE 上の Output サービスを使用して XTG ファイルを PostScript 形式に変換すると、エラー：AEM_OUT_001_003：予期しない例外：PAExecute 失敗：XFA_RENDER_FAILURE が発生して失敗します。（LC-3921720）</li><li>JEE サーバーで AEM Forms サービスパック 18（6.5.18.0）にアップグレードした後、ユーザーがフォームを送信すると、HTML5 または PDF フォームのレンダリングに失敗し、XMLFM がクラッシュします。（LC-3921718）
     </ul>
     </td>    
   </tr>

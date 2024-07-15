@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4332'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -54,9 +54,9 @@ ht-degree: 95%
 * **16 ビット PNG のサポート**：PDF Generator の ImageToPDF サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
 * **XDP 内の個々のテキストブロックにアーティファクトを適用**：Forms Designer では、XDP ファイル内の個々のテキストブロックを設定できるようになりました。 この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。 Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
 * **AEM Forms Designer は `GB18030:2022` 標準で認定されています**：`GB18030:2022` 認定により、Forms Designer では、中国語の Unicode 文字セットをサポートし、すべての編集可能なフィールドとダイアログボックスに漢字を入力できるようになりました。
-* [JEE Server での WebToPDF ルートのサポート ](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings)PDF Generatorサービスを使用すると、既存の Webkit および WebCapture （Windows のみ）ルートに加えて、JEE でHTMLファイルをPDFドキュメントに変換するための WebToPDF ルートがサポートされるようになりました。 WebToPDF ルートは OSGi で既に使用可能で、JEE に拡張されています。 現在、JEE プラットフォームと OSGi プラットフォームの両方で、PDF Generatorサービスは、異なるオペレーティングシステム間で次のルートをサポートしています。
+* PDF Generator サービスを使用した [JEE サーバーでの WebToPDF ルートのサポート](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings)では、既存の Webkit および WebCapture（Windows のみ）ルートに加え、HTML ファイルを JEE 上の PDF ドキュメントに変換する WebToPDF ルートをサポートするようになりました。WebToPDF ルートは OSGi で既に使用可能で、JEE に拡張されています。現在、JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
    * **Windows**：Webkit、WebCapture、WebToPDF
-   * **Linux®**:Webkit、WebToPDF
+   * **Linux®**：Webkit、WebToPDF
 
 ### [!DNL Assets]
 
@@ -551,12 +551,12 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    1. AEM サーバーを再起動します。
 
-* JEE サーバー上でAEM Forms サービスパック 20 （6.5.20.0）に更新し、出力サービスを使用してPDFを生成すると、PDFがレンダリングされてアクセシビリティの問題が発生します。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922112）
-* JEE 上の出力サービスを使用してタグ付きPDFを生成すると、「不適切な構造の警告」が表示される。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922038）
-* フォームがAEM Forms JEE で送信されると、繰り返し XML 要素のインスタンスがデータから削除されます。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922017）
-* Linux 環境で（JEE 上の）アダプティブフォームをHTMLーでレンダリングすると、が正しくレンダリングされません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921957）
-* AEM Forms JEE で Output サービスを使用して XTG ファイルをPostScript形式に変換すると、失敗して次のエラーが表示されます。`AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE` ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921720）
-* JEE サーバー上のAEM Forms サービスパック 18 （6.5.18.0）にアップグレードした後、フォームを送信すると、HTML5 またはPDF formsのレンダリングに失敗し、XMLFM がクラッシュします。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921718）
+* ユーザーが JEE サーバー上で AEM Forms サービスパック 20（6.5.20.0）に更新し、Output サービスを使用して PDF を生成すると、PDF がアクセシビリティに関する問題を伴ってレンダリングされます。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3922112）
+* ユーザーが JEE 上の Output サービスを使用してタグ付き PDF を生成すると、「不適切な構造の警告」が表示されます。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3922038）
+* AEM Forms JEE でフォームを送信すると、繰り返し XML 要素のインスタンスがデータから削除されます。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3922017）
+* Linux 環境のユーザーがアダプティブフォーム（JEE 上）を HTML でレンダリングすると、正しくレンダリングされません。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3921957）
+* ユーザーが AEM Forms JEE の Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE` が発生して失敗します。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3921720）
+* JEE サーバーで AEM Forms サービスパック 18（6.5.18.0）にアップグレードした後、ユーザーがフォームを送信すると、HTML5 または PDF フォームのレンダリングに失敗し、XMLFM がクラッシュします。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3921718）
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
