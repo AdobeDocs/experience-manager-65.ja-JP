@@ -5,10 +5,10 @@ exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: a02724597338ee2451448c6c4188fc349dd47d01
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 100%
+source-wordcount: '711'
+ht-degree: 98%
 
 ---
 
@@ -72,9 +72,9 @@ CIF 製品カタログページは、その場でレンダリングされる仮�
 
 ![RTE](/help/commerce/cif/assets/authoring/RTE.png)
 
-    >[!NOTE]
-    >
-    > カテゴリと製品の両方を選択した場合は、製品の方が使用されます。
+>[!NOTE]
+>
+>カテゴリと製品の両方が選択された場合、製品のほうを取る。
 
 これにより、ページのレンダリング時に実際のリンクに置き換えられるプレースホルダーリンクが作成されます。
 
@@ -102,6 +102,6 @@ CIF 製品カタログページは、その場でレンダリングされる仮�
 
 結果はタイプ別にグループ化されます。
 
-    >[!NOTE]
-    >
-    > オムニサーチの全文検索では、関連するコンテンツフラグメントはサポートされません。関連するコンテンツフラグメントを検索するには、SKU または UID を使用します。
+>[!NOTE]
+>
+>オムニサーチの全文検索では、関連するコンテンツフラグメントはサポートされていません。SKU または UID を使用して、関連するコンテンツフラグメントを検索します。
