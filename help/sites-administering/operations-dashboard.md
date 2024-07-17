@@ -11,9 +11,9 @@ feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5686'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -332,7 +332,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 ## 外部サービスを使用した監視 {#monitoring-with-external-services}
 
-外部のテクノロジーやベンダーとの統合が可能です。 関連する詳細については、ドキュメントを参照してください。
+外部のテクノロジーやベンダーとの統合が可能です。関連する詳細については、ドキュメントを参照してください。
 
 ## 診断ツール {#diagnosis-tools}
 

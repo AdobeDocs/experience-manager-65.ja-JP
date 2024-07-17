@@ -10,9 +10,9 @@ exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: a2d7d82e0d6729e08b464d3843a9b44bcabd154b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5696'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -385,7 +385,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>前回のオンラインでのリビジョンクリーンアップの実行に関する統計はどこで確認できますか。</strong></td>
-   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で公開されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみです。<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank"> 外部モニタリングツールを使用すると、AEMの稼動時間外もデータを監視できます </a>。</p> </td>
+   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で公開されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみです。<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank">外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます</a>。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -428,12 +428,12 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>リビジョンクリーンアップのヘルスチェックではどのような情報が表示されますか。ステータスレベルの色分けとの対応も教えてください。 </strong></td>
-   <td><p>リビジョンのクリーンアップのヘルスチェックは、<a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作ダッシュボード</a>の一部です。<br /> </p> <p>最後に実行されたオンラインでのリビジョンクリーンアップメンテナンスタスクが正常に完了した場合、ステータスは<strong>緑色</strong>になります。</p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクが 1 回キャンセルされた場合、ステータスは<strong>黄色</strong>になります。<br /> </p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクが 3 回連続でキャンセルされた場合、<strong>赤色</strong>になります。<strong>この場合、手動の操作が必要であるか</strong>、オンラインでのリビジョンクリーンアップが再び失敗する可能性が高くなります。詳細情報に関しては、以下の<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">トラブルシューティング</a>の節を参照してください。<br /> </p> <p>また、システムの再起動後に、ヘルスチェックのステータスもリセットされます。そのため、新しく再起動したインスタンスは、リビジョンクリーンアップのヘルスチェックが緑色のステータスで表示されます。  <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank"> 外部モニタリングツールを使用すると、AEMの稼動時間外もデータを監視できます </a>。</p> </td>
+   <td><p>リビジョンのクリーンアップのヘルスチェックは、<a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作ダッシュボード</a>の一部です。<br /> </p> <p>最後に実行されたオンラインでのリビジョンクリーンアップメンテナンスタスクが正常に完了した場合、ステータスは<strong>緑色</strong>になります。</p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクが 1 回キャンセルされた場合、ステータスは<strong>黄色</strong>になります。<br /> </p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクが 3 回連続でキャンセルされた場合、<strong>赤色</strong>になります。<strong>この場合、手動の操作が必要であるか</strong>、オンラインでのリビジョンクリーンアップが再び失敗する可能性が高くなります。詳細情報に関しては、以下の<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">トラブルシューティング</a>の節を参照してください。<br /> </p> <p>また、システムの再起動後に、ヘルスチェックのステータスもリセットされます。そのため、新しく再起動したインスタンスは、リビジョンクリーンアップのヘルスチェックが緑色のステータスで表示されます。<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank">外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます</a>。</p> </td>
    <td> </td>
   </tr>
   <tr>
    <td><p><strong>スタンバイインスタンスで自動クリーンアップを監視する方法を教えてください。</strong></p> </td>
-   <td><p>ステータス、進行状況および統計は、<code>SegmentRevisionGarbageCollection</code> MBean を使用して、JMX 経由で公開されます。次の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak ドキュメント</a>も参照してください。 </p> <p>MBean の参照は、<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用して取得できます。</p> <p>統計は、最後にシステムを起動した後にのみ使用できます。  <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank"> 外部モニタリングツールを使用すると、AEMの稼動時間外もデータを監視できます </a>。</p> <p>また、ログファイルを使用して、自動クリーンアップのステータス、進行状況および統計情報を確認できます。</p> </td>
+   <td><p>ステータス、進行状況および統計は、<code>SegmentRevisionGarbageCollection</code> MBean を使用して、JMX 経由で公開されます。次の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak ドキュメント</a>も参照してください。 </p> <p>MBean の参照は、<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用して取得できます。</p> <p>確認できるのは、システムが最後に起動されて以降の統計情報のみです。<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-external-services" target="_blank">外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます</a>。</p> <p>また、ログファイルを使用して、自動クリーンアップのステータス、進行状況および統計情報を確認できます。</p> </td>
    <td> </td>
   </tr>
   <tr>
