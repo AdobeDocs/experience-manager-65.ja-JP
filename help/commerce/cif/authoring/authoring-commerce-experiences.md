@@ -6,9 +6,9 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: a02724597338ee2451448c6c4188fc349dd47d01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '711'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -74,7 +74,7 @@ CIF 製品カタログページは、その場でレンダリングされる仮�
 
 >[!NOTE]
 >
->カテゴリと製品の両方が選択された場合、製品のほうを取る。
+>カテゴリと製品の両方を選択した場合は、製品の方が使用されます。
 
 これにより、ページのレンダリング時に実際のリンクに置き換えられるプレースホルダーリンクが作成されます。
 
