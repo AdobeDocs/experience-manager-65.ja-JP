@@ -9,10 +9,10 @@ feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2d6caa10e8f1cf3d0811280e31c2f40bceac20ee
 workflow-type: tm+mt
 source-wordcount: '6470'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 >
 >パフォーマンスに関する問題のトラブルシューティングと修正について詳しくは、[パフォーマンスツリー](/help/sites-deploying/performance-tree.md)も参照してください。
 >
->さらに、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)に関するナレッジベース記事を参照することもできます。
+>さらに、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)に関するナレッジベース記事を参照することもできます。
 
 Web サイトが訪問者の要求に応答するまでにどの程度の時間がかかるかは、非常に重要な問題です。応答時間は個々の要求によって異なりますが、平均的なターゲット時間の値を定義することはできます。この値が達成可能で維持可能であることが判明したら、それを使用して、web サイトのパフォーマンスを監視し、潜在的な問題が発生しつつあるときにそれを示すことができます。
 
@@ -41,7 +41,7 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 >[!NOTE]
 >
 >* パフォーマンス最適化のための設定が完了したら、[Tough Day](/help/sites-developing/tough-day.md) の手順に従って、高負荷の環境をテストしてください。
->* [パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)も参照してください。
+>* [パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)も参照してください。
 
 ## パフォーマンスの最適化方法 {#performance-optimization-methodology}
 
