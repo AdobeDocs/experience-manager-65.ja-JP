@@ -10,10 +10,10 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
-workflow-type: ht
-source-wordcount: '5686'
-ht-degree: 100%
+source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
+workflow-type: tm+mt
+source-wordcount: '5744'
+ht-degree: 99%
 
 ---
 
@@ -491,6 +491,8 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**データストアのガベージコレクション**&#x200B;タスク。
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**監査ログのメンテナンス**&#x200B;タスク。
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**バージョンのパージのメンテナンス**&#x200B;タスク。
+1. **週別メンテナンスウィンドウ** メニューの下の **プロジェクトのパージ** メンテナンスタスク。**追加** オプションを使用します。
+1. **週別メンテナンスウィンドウ** メニューの下の **アドホックタスクのパージ** メンテナンスタスク。「**追加** オプションを使用します。
 
 日別メンテナンスウィンドウのデフォルトのタイミングは、午前 2:00～午前 5:00 です。週別メンテナンスウィンドウで実行するように設定されたタスクは、毎週土曜日の午前 1:00～午前 2:00 に実行されます。
 
@@ -561,6 +563,26 @@ Lucene バイナリクリーンアップタスクには、**AEM／ツール／�
 >[!CAUTION]
 >
 >リポジトリサイズを最適化するには、バージョンのパージタスクを頻繁に実行する必要があります。トラフィック量が限られている場合は、このタスクを営業時間外にスケジュールする必要があります。
+
+### プロジェクトのパージ {#project-purge}
+
+<!--
+Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the folder `/apps/settings/granite/operations/maintenance/granite_weekly`, `granite_daily` or `granite_monthly`. See the Maintenance Window table below for additional configuration details.
+
+Enable the maintenance task by adding another node under the node above (name it `granite_ProjectPurgeTask`) with the appropriate properties. 
+-->
+
+**Adobeプロジェクトのパージ設定** （com.adobe.cq.projects.purge.Scheduler）で OSGI プロパティを設定します。
+
+### アドホックタスクのパージ {#purge-of-ad-hoc-tasks}
+
+<!--
+Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the folder `/apps/settings/granite/operations/maintenance/granite_weekly`, `granite_daily` or `granite_monthly`.
+
+See the Maintenance Window table below for additional configuration details. Enable the maintenance task by adding another node under the node above. Name it `granite_TaskPurgeTask`, with attribute `sling:resourceType` set to `granite/operations/components/maintenance/task` and attribute `granite.maintenance.name` set to `TaskPurge`. 
+-->
+
+**アドホックタスクのパージ** （`com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask`）の下で OSGI プロパティを設定します。
 
 ## カスタムメンテナンスタスク {#custom-maintenance-tasks}
 
