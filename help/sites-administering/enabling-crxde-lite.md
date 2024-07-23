@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 source-git-commit: a3587d248569982a8f9b137602ba95dd40c47012
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -60,7 +60,7 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 
 ## cURL での CRXDE Lite の有効化 {#enabling-crxde-lite-curl}
 
-次の 2 つのコマンド（両方）を実行して、cURL 経由のCRXDE Liteを有効にすることもできます。
+CRXDE Lite は、次の 2 つのコマンド（両方）を実行して、cURL を使用して有効にすることもできます。
 
 * `create-absolute-uri` を有効にする：
 
@@ -68,7 +68,7 @@ AEM のインストールを可能な限り保護するために、セキュリ�
   curl -u admin:admin 'http://localhost:4502/system/console/configMgr/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet' --data-raw 'apply=true&action=ajaxConfigManager&%24location=&dav.create-absolute-uri=true&propertylist=dav.create-absolute-uri'
   ```
 
-* `alias` を定義します。
+* `alias` を定義：
 
   ```shell
   curl -u admin:admin 'http://localhost:4502/system/console/configMgr/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet' --data-raw 'apply=true&action=ajaxConfigManager&%24location=&alias=/crx/server&propertylist=alias'
