@@ -11,9 +11,9 @@ feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5744'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -491,8 +491,8 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**データストアのガベージコレクション**&#x200B;タスク。
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**監査ログのメンテナンス**&#x200B;タスク。
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**バージョンのパージのメンテナンス**&#x200B;タスク。
-1. **週別メンテナンスウィンドウ** メニューの下の **プロジェクトのパージ** メンテナンスタスク。**追加** オプションを使用します。
-1. **週別メンテナンスウィンドウ** メニューの下の **アドホックタスクのパージ** メンテナンスタスク。「**追加** オプションを使用します。
+1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**プロジェクトのパージ**&#x200B;のメンテナンスタスク。「**追加**」オプションを使用します。
+1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**アドホックタスクのパージ**&#x200B;のメンテナンスタスク。「**追加**」オプションを使用します。
 
 日別メンテナンスウィンドウのデフォルトのタイミングは、午前 2:00～午前 5:00 です。週別メンテナンスウィンドウで実行するように設定されたタスクは、毎週土曜日の午前 1:00～午前 2:00 に実行されます。
 
@@ -572,7 +572,7 @@ Override the out-of-the-box Maintenance window configuration node under `/libs` 
 Enable the maintenance task by adding another node under the node above (name it `granite_ProjectPurgeTask`) with the appropriate properties. 
 -->
 
-**Adobeプロジェクトのパージ設定** （com.adobe.cq.projects.purge.Scheduler）で OSGI プロパティを設定します。
+**アドビプロジェクトのパージ設定**（com.adobe.cq.projects.purge.Scheduler）の下の OSGI プロパティを設定します。
 
 ### アドホックタスクのパージ {#purge-of-ad-hoc-tasks}
 
@@ -582,7 +582,7 @@ Override the out-of-the-box Maintenance window configuration node under `/libs` 
 See the Maintenance Window table below for additional configuration details. Enable the maintenance task by adding another node under the node above. Name it `granite_TaskPurgeTask`, with attribute `sling:resourceType` set to `granite/operations/components/maintenance/task` and attribute `granite.maintenance.name` set to `TaskPurge`. 
 -->
 
-**アドホックタスクのパージ** （`com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask`）の下で OSGI プロパティを設定します。
+**アドホックタスクのパージ**（`com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask`）の下の OSGI プロパティを設定します。
 
 ## カスタムメンテナンスタスク {#custom-maintenance-tasks}
 

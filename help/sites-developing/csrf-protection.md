@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 8d7c5b4962ea0dbd80cf78faa31238b2252f4a5c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '247'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -38,10 +38,10 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->CSRF 対策フレームワークを使用するには、必要なDispatcher設定の変更を行ってください。
+>CSRF 対策フレームワークを使用するには、必要な Dispatcher 設定の変更を行ってください。
 >
->* [CSRF 攻撃を防ぐためのAdobe Experience Manager Dispatcherの設定 ](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/configuring-dispatcher-to-prevent-csrf)
->* [Dispatcherの概要 ](https://experienceleague.adobe.com/ja/docs/experience-manager-dispatcher/using/dispatcher)
+>* [CSRF 攻撃を防止するための Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/ja/docs/experience-manager-dispatcher/using/configuring/configuring-dispatcher-to-prevent-csrf)
+>* [Dispatcher の概要](https://experienceleague.adobe.com/ja/docs/experience-manager-dispatcher/using/dispatcher)
 
 >[!NOTE]
 >
