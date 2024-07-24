@@ -9,10 +9,10 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 5c1eda486e31be01f614a3a7ada71563fd996656
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 100%
+source-wordcount: '837'
+ht-degree: 93%
 
 ---
 
@@ -66,9 +66,9 @@ AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用する�
 
 >[!NOTE]
 >
->Adobe CQ 5.6 より前は、ClientContext（ContextHub の旧バージョン）からサーバーにデータが送信されていましたが、そのデータはサーバーに格納されませんでした。
+>AEM（CQ） 5.6 より前のAdobeでは、ClientContext（以前のバージョンの ContextHub）はデータをサーバーに送信していましたが、保存はしませんでした。
 >
->Adobe CQ 5.5 以前はサポートが終了している（EOL）ので、このドキュメントでは説明しません。
+>Adobe AEM 6.4 以前のバージョンはサポート終了となり、このドキュメントでは扱いません。 [Adobe Experience Manager、CQ およびCRXの以前のバージョンのドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) を参照してください。
 
 ### オプトイン／オプトアウトの実装 {#implementing-opt-in-opt-out}
 
@@ -85,19 +85,19 @@ AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用する�
 
 * サイト訪問者がサイトの利用条件に同意した場合は、ContextHub のオプトアウト cookie を削除する必要があります。
 
-  ```
+  ```java
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   ```
 
 * サイト訪問者がサイトの利用条件に同意しない場合は、ContextHub オプトアウト cookie を次のように設定する必要があります。
 
-  ```
+  ```java
   ContextHub.Utils.Cookie.setItem('cq-opt-out', 1);
   ```
 
 * ContextHub がオプトアウトモードで動作しているかどうかを確認するには、ブラウザーのコンソールで次の呼び出しを行う必要があります。
 
-  ```
+  ```java
   var isOptedOut = ContextHub.isOptedOut(true) === true;
   // if isOptedOut is true, ContextHub is running in opt-out mode
   ```
@@ -183,7 +183,7 @@ ContextHub を使用した永続性をプレビューするには、次の操作
 
 例えば、localStorage に格納されているデータを表示するには、次のようにします。
 
-```
+```java
 var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.LOCAL });
 console.log(storage.getTree());
 ```
@@ -194,7 +194,7 @@ ContextHub の永続性を削除するには、以下を実行します。
 
 * 現在読み込まれているストアの永続性を削除するには、以下を実行します。
 
-  ```
+  ```java
   // to be able to fully access persistence layer, Opt-Out must be turned off
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   
@@ -207,7 +207,7 @@ ContextHub の永続性を削除するには、以下を実行します。
 
 * 特定の永続性レイヤーを削除するには、例えば、sessionStorage は次のようになります。
 
-  ```
+  ```java
   var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
   storage.setItem('/store', null);
   storage.setItem('/_', null);
