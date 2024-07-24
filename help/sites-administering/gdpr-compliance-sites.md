@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
 source-git-commit: 5c1eda486e31be01f614a3a7ada71563fd996656
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '837'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -66,9 +66,9 @@ AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用する�
 
 >[!NOTE]
 >
->AEM（CQ） 5.6 より前のAdobeでは、ClientContext（以前のバージョンの ContextHub）はデータをサーバーに送信していましたが、保存はしませんでした。
+>Adobe AEM（CQ）5.6 より前は、ClientContext（ContextHub の旧バージョン）からサーバーにデータが送信されていたものの、そのデータはサーバーに保存されませんでした。
 >
->Adobe AEM 6.4 以前のバージョンはサポート終了となり、このドキュメントでは扱いません。 [Adobe Experience Manager、CQ およびCRXの以前のバージョンのドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) を参照してください。
+>Adobe AEM 6.4 以前のバージョンはサポートが終了している（EOL）ので、このドキュメントでは説明しません。[Adobe Experience Manager、CQ、CRX の以前のバージョンのドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)を参照してください。
 
 ### オプトイン／オプトアウトの実装 {#implementing-opt-in-opt-out}
 
