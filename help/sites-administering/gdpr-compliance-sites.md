@@ -9,10 +9,10 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: 5c1eda486e31be01f614a3a7ada71563fd996656
-workflow-type: ht
+source-git-commit: 207c6bcc25eca05d128115f7235e83a6965009c5
+workflow-type: tm+mt
 source-wordcount: '837'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -66,7 +66,7 @@ AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用する�
 
 >[!NOTE]
 >
->Adobe AEM（CQ）5.6 より前は、ClientContext（ContextHub の旧バージョン）からサーバーにデータが送信されていたものの、そのデータはサーバーに保存されませんでした。
+>AEM（CQ） 5.6 より前のAdobeでは、ClientContext（以前のバージョンの ContextHub）はデータをサーバーに送信していましたが、保存はしませんでした。
 >
 >Adobe AEM 6.4 以前のバージョンはサポートが終了している（EOL）ので、このドキュメントでは説明しません。[Adobe Experience Manager、CQ、CRX の以前のバージョンのドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)を参照してください。
 
