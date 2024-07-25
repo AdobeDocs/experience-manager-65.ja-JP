@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 721837590521aeaa82ab8a960098eba87c0ffb43
+source-git-commit: d5d1c3909a135de61d777c39ba60fbb897722e8e
 workflow-type: tm+mt
-source-wordcount: '7456'
+source-wordcount: '7445'
 ht-degree: 100%
 
 ---
@@ -1260,9 +1260,6 @@ ht-degree: 100%
          + [e コマース](/help/commerce/cif-classic/developing/ecommerce.md)
          + [開発（汎用）](/help/commerce/cif-classic/developing/generic.md)
          + [SAP Commerce Cloud を使用した開発](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
-+ Edge 配信サービス {#edge-delivery-services}
-   + [Edge 配信の概要](/help/edge/overview.md)
-   + [Edge 配信の使用](/help/edge/using.md)
 + ヘッドレス {#headless}
    + [AEM ヘッドレスジャーニー](/help/journey-headless/overview.md)
    + AEM ヘッドレスデベロッパージャーニー {#developer}
