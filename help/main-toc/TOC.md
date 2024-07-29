@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: d5d1c3909a135de61d777c39ba60fbb897722e8e
-workflow-type: ht
-source-wordcount: '7445'
+source-git-commit: 7dc864a044e73e855fe08bcf8418b0349cd0d3bd
+workflow-type: tm+mt
+source-wordcount: '7443'
 ht-degree: 100%
 
 ---
@@ -230,6 +230,7 @@ ht-degree: 100%
          + [Adobe Analytics のビデオトラッキングの設定](/help/sites-administering/adobeanalytics-video.md)
          + [コンテンツの HTTP/2 配信の FAQ](/help/sites-administering/scene7-http2faq.md)
          + [Adobe Campaign 統合に関するトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)
+         + [SharePoint コネクター](/help/sites-administering/sharepoint-connector.md)
          + [SharePoint Connector のライセンス、著作権情報および免責事項](/help/sites-administering/sharepoint-connector-licenses.md)
          + [DHTML ビューアのサポート終了に関する FAQ](/help/sites-administering/dhtml-viewer-endoflifefaqs.md)
          + [Adobe Campaign Classic との統合](/help/sites-administering/campaignonpremise.md)
@@ -268,7 +269,6 @@ ht-degree: 100%
          + [タグの管理](/help/sites-administering/tags.md)
          + [ページエクスポーター](/help/sites-administering/page-exporter.md)
          + [クラシック UI のタグ付けコンソール](/help/sites-administering/classic-console.md)
-         + [Screens のコンテンツ管理](/help/sites-administering/content-management-screens.md)
          + [WebDAV アクセス](/help/sites-administering/webdav-access.md)
    + クラシック UI オーサリング {#classic-ui}
       + クラシック UI オーサリングの概要 {#introduction}
