@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
-workflow-type: ht
-source-wordcount: '4332'
-ht-degree: 100%
+source-git-commit: 447ff116c822c7ab0d5826103d6485e7d4ed13ce
+workflow-type: tm+mt
+source-wordcount: '4390'
+ht-degree: 99%
 
 ---
 
@@ -550,6 +550,8 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. CRXDE のディレクトリ `/libs/fd/aemforms/install/` に移動します。
    1. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    1. AEM サーバーを再起動します。
+
+* Forms アドオンを使用してインストールされたAEM Forms サービスパック 20 （6.5.20.0）にアップデートすると、従来の Cloud Service for Adobe Analyticsをユーザー資格情報ベースの認証で使用した設定が正しく機能せず、Analytics ルールが実行されません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（FORMS-15428）
 
 * ユーザーが JEE サーバー上で AEM Forms サービスパック 20（6.5.20.0）に更新し、Output サービスを使用して PDF を生成すると、PDF がアクセシビリティに関する問題を伴ってレンダリングされます。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3922112）
 * ユーザーが JEE 上の Output サービスを使用してタグ付き PDF を生成すると、「不適切な構造の警告」が表示されます。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。（LC-3922038）

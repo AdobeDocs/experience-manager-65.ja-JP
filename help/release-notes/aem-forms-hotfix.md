@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
-workflow-type: ht
-source-wordcount: '903'
-ht-degree: 100%
+source-git-commit: c524e4355794ab598b6b69a8ce96cdba90abaa22
+workflow-type: tm+mt
+source-wordcount: '930'
+ht-degree: 97%
 
 ---
 
@@ -92,6 +92,7 @@ ht-degree: 100%
      <li>アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。（FORMS-14209） </li>
      <li> AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用の AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。（FORMS-13791） </li>
      <li>インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。（CQDOC-21355）</li>
+     <li>従来の Cloud Service for Adobe Analyticsをユーザー資格情報ベースの認証で使用する場合、設定が正しく機能せず、Analytics ルールが実行されません。 （FORMS-15428）
     </ul>
     </td>    
   </tr>
