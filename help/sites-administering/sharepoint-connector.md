@@ -7,8 +7,10 @@ topic-tags: integration
 content-type: reference
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: f349c8fd9c370ba589d217cd3b1d0521ae5c5597
-workflow-type: tm+mt
+feature: Integration
+role: Admin
+source-git-commit: c4133584e9c2328b3a55042902c67770d78afcf7
+workflow-type: ht
 source-wordcount: '1482'
 ht-degree: 100%
 
