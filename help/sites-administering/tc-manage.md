@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Language Copy
 role: Admin
 source-git-commit: 26ac50aa27501fe6a80b38a474e9811338c4fb56
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3519'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -188,13 +188,13 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. 追加する **ルートディレクトリ** とディクショナリ（必要な場合）を選択し、「**追加**」を選択します。
+1. 追加する&#x200B;**ルートディレクトリ**&#x200B;と辞書（必要な場合）を選択し、「**追加**」を選択します。
 
-   ![i18N 辞書 ](assets/tc-manage-i18n-dictionary.png)
+   ![i18N 辞書](assets/tc-manage-i18n-dictionary.png)
 
-1. 必要に応じて、更新の特性を選択します。
+1. リクエストされた場合は、更新の特性を選択します。
 
-   ![ 翻訳 ](assets/tc-manage-translate.png)
+   ![翻訳](assets/tc-manage-translate.png)
 
 辞書が翻訳ジョブに追加されました。
 
