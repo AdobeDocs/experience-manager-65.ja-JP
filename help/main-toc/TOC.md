@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 7dc864a044e73e855fe08bcf8418b0349cd0d3bd
-workflow-type: ht
-source-wordcount: '7443'
+source-git-commit: ab8248e9d0df67bed3c2d5ad3fadce08db2e9ba0
+workflow-type: tm+mt
+source-wordcount: '7448'
 ht-degree: 100%
 
 ---
@@ -1231,6 +1231,7 @@ ht-degree: 100%
          + [SEO 用の URL の設定](/help/commerce/cif/configuring/advanced-url-configuration.md)
          + [キャッシュオプション](/help/commerce/cif/configuring/caching.md)
          + [カスタム HTTP ヘッダー](/help/commerce/cif/configuring/custom-http-headers.md)
+         + [買い物かごおよび Dispatcher の設定](/help/commerce/cif/configuring/shopping-cart-dispatcher.md)
       + 開発 {#developing}
          + [AEM を使用した開発](/help/commerce/cif/develop.md)
          + [CIF コンポーネントのスタイル設定](/help/commerce/cif/customizing/style-cif-component.md)
