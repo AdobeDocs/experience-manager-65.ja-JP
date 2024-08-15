@@ -5,10 +5,10 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '1673'
-ht-degree: 100%
+source-wordcount: '1669'
+ht-degree: 97%
 
 ---
 
@@ -32,16 +32,14 @@ ht-degree: 100%
 >
 >* **レプリケート／レプリケーション**
 >  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
->
 
->[!NOTE]
->
->特定のページを公開するために必要な特権がない場合。
->
->* ワークフローがトリガーされて、公開リクエストの適切なユーザーに通知されます。
->* この[ワークフローは、開発チームによってカスタマイズされていることがあります](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6)。
->* ワークフローがトリガーされたことを通知するメッセージが少しの間表示されます。
->
+## 不十分な特権 {#insufficient-privileges}
+
+特定のページを公開するために必要な特権がない場合。
+
+* ワークフローがトリガーされて、公開リクエストの適切なユーザーに通知されます。
+* この[ワークフローは、開発チームによってカスタマイズされていることがあります](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6)。
+* ワークフローがトリガーされたことを通知するメッセージが少しの間表示されます。
 
 ## ページの公開  {#publishing-pages-1}
 
@@ -185,7 +183,9 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、公開権限に関する[このページの前述の注意事項](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)を参照してください。
+   >**ワークフロー** ステップは、ユーザーの権限に基づいて表示されます。
+   >
+   >詳しくは、[ 不十分な権限 ](/help/sites-authoring/publishing-pages.md#insufficient-privileges)、[ ワークフローへのアクセスの管理 ](/help/sites-administering/workflows-managing.md) および [ ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) の節を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションが提供されます。
 

@@ -10,10 +10,10 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
-workflow-type: ht
-source-wordcount: '5744'
-ht-degree: 100%
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
+workflow-type: tm+mt
+source-wordcount: '5743'
+ht-degree: 99%
 
 ---
 
@@ -506,7 +506,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 ### リビジョンのクリーンアップ {#revision-clean-up}
 
-リビジョンのクリーンアップの実行についての詳細情報は、[この専門記事を参照してください](/help/sites-deploying/revision-cleanup.md)。
+詳しくは、[ リビジョンクリーンアップ ](/help/sites-deploying/revision-cleanup.md) を参照してください。
 
 ### Lucene バイナリクリーンアップ {#lucene-binaries-cleanup}
 
@@ -521,7 +521,7 @@ Lucene バイナリクリーンアップタスクには、**AEM／ツール／�
 
 ### データストアのガベージコレクション {#data-store-garbage-collection}
 
-データストアのガベージコレクションについて詳しくは、専門の[ドキュメントページ](/help/sites-administering/data-store-garbage-collection.md)を参照してください。
+データストアのガベージコレクションについて詳しくは、専門の [ データストアのガベージコレクション ](/help/sites-administering/data-store-garbage-collection.md) ドキュメントページを参照してください。
 
 ### ワークフローのパージ {#workflow-purge}
 
@@ -532,7 +532,7 @@ Lucene バイナリクリーンアップタスクには、**AEM／ツール／�
 
 >[!NOTE]
 >
->ワークフローメンテナンスについての詳細情報は、[このページ](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)を参照してください。
+>ワークフローメンテナンスについて詳しくは、[ ワークフローインスタンスの管理 ](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances) を参照してください。
 
 ### 監査ログのメンテナンス {#audit-log-maintenance}
 

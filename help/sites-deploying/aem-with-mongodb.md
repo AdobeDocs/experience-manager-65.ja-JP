@@ -10,10 +10,10 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: a8203a6bccff821dd6ca3f63c196829379aabe55
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '6192'
-ht-degree: 100%
+source-wordcount: '6216'
+ht-degree: 99%
 
 ---
 
@@ -487,7 +487,7 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 
 >[!NOTE]
 >
->Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
+>Transparent Huge Pages の詳細については、Red Hat® カスタマーポータルから次の記事を参照してください。[Red Hat Enterprise Linux 6、7 および 8 で Transparent Hugepages を使用、監視、無効化する方法 ](https://access.redhat.com/solutions/46111)。
 
 #### NUMA の無効化 {#disable-numa}
 

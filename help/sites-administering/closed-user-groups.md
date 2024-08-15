@@ -10,10 +10,10 @@ exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '6650'
-ht-degree: 100%
+source-wordcount: '6662'
+ht-degree: 99%
 
 ---
 
@@ -78,7 +78,7 @@ CUG の表現に使用される PrincipalSetPolicy の実装は、さらに次�
 
 CUG の専用アクセス制御管理とは別に、新しい承認モデルでは、CUG ポリシーの権限評価を条件付きで有効にできます。このモデルでは、CUG ポリシーをステージング環境に設定して、実稼動環境にレプリケーションされた後でのみ、有効な権限の評価を有効にすることができます。
 
-CUG ポリシーの権限評価と、デフォルトまたは追加の承認モデルとのやり取りは、Apache Jackrabbit Oak の複数の承認メカニズム用に設計されたパターンに従います。つまり、すべてのモデルがアクセス権を付与する場合にのみ、特定の権限セットが付与されます。詳しくは、[このページ](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)を参照してください。
+CUG ポリシーの権限評価と、デフォルトまたは追加の承認モデルとのやり取りは、Apache Jackrabbit Oak の複数の承認メカニズム用に設計されたパターンに従います。つまり、すべてのモデルがアクセス権を付与する場合にのみ、特定の権限セットが付与されます。詳しくは、[Jackrabbit Oak ドキュメント ](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html) を参照してください。
 
 CUG ポリシーを処理および評価するために設計された承認モデルに関連付けられる権限評価には、次の特性が適用されます。
 
@@ -129,7 +129,7 @@ CUG 機能の認証関連のパーツにより、認証を必要とするツリ�
 
 このタイプの認証要件は、特定の実行モードと、コンテンツリポジトリにあるツリーの小さいサブセットに限定されることが想定されるので、認証要件の mixin タイプとログインパスのプロパティを追跡すると、結果は条件次第となります。また、サポート対象パスを定義する対応する設定に関連付けられます（詳しくは、「設定オプション」を参照）。したがって、これらのサポート対象パスの有効範囲内で変更があった場合にのみ、OSGi 登録が更新され、それ以外の場所では、mixin タイプもログインパスプロパティも無視されます。
 
-デフォルトの AEM セットアップでは、この設定を利用できるようにするために、mixin を author 実行モードで設定し、その設定をパブリッシュインスタンスへのレプリケーション時にのみ有効にできるようになりました。Sling での認証要件の強制方法について詳しくは、[このページ](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html)を参照してください。
+デフォルトの AEM セットアップでは、この設定を利用できるようにするために、mixin を author 実行モードで設定し、その設定をパブリッシュインスタンスへのレプリケーション時にのみ有効にできるようになりました。Sling での認証要件の強制方法について詳しくは、[Sling 認証 – フレームワーク ](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html) ドキュメントを参照してください。
 
 `granite:AuthenticationRequired` mixin タイプを設定済みのサポート対象パス内に追加すると、関係するハンドラーの OSGi 登録が更新され、`sling.auth.requirements` プロパティを含む新しいエントリが追加されます。特定の認証要件にオプションの `granite:loginPath` プロパティが指定されている場合、その値は「-」プレフィックスを付けて Authenticator にも登録され、認証要件から除外されます。
 
@@ -187,7 +187,7 @@ Granite の新しい認証要件のサポートで実装される `LoginPathProv
 
 ### リポジトリでの CUG ポリシーの表現 {#cug-policy-representation-in-the-repository}
 
-新しい CUG ポリシーがリポジトリコンテンツにどのように反映されるかについては、Oak のドキュメントに記載されています。詳しくは、[このページ](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository)を参照してください。
+新しい CUG ポリシーがリポジトリコンテンツにどのように反映されるかについては、Oak のドキュメントに記載されています。詳しくは、[CUG によるアクセスの管理に関するJackrabbit Oak ドキュメント ](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository) を参照してください。
 
 ### リポジトリでの認証要件 {#authentication-requirement-in-the-repository}
 

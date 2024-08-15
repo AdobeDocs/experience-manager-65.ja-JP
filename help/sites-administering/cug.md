@@ -10,10 +10,10 @@ exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 100%
+source-wordcount: '710'
+ht-degree: 98%
 
 ---
 
@@ -93,7 +93,7 @@ CUG を単一ページまたは複数ページに適用するには：
    >
    >「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
    >
-   >詳しくは、[このページ](closed-user-groups.md#aem-livecopy)を参照してください。
+   >詳しくは、[AEM - ライブコピーのクローズドユーザーグループ ](closed-user-groups.md#aem-livecopy) を参照してください。
 
 1. **閉じられたユーザーグループを編集**&#x200B;ダイアログが開きます。ここで、CUG を検索して選択し、「**保存**」でグループの選択を確認できます。 
 

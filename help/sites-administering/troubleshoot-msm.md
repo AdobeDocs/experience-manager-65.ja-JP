@@ -5,10 +5,10 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 100%
+source-wordcount: '762'
+ht-degree: 98%
 
 ---
 
@@ -69,9 +69,9 @@ MSM とライブコピーに関するよくある質問を以下に示します�
 
 MSM 同期アクションは詳細に設定できます。ロールアウト中に変更されるプロパティまたはコンポーネントは、それらの設定のプロパティに直接依存します。
 
-このトピックの詳細については、[こちらの記事](msm-best-practices.md)を参照してください。
+このトピックについて詳しくは、[MSM のベストプラクティス ](msm-best-practices.md) を参照してください。
 
-### 作成者グループのロールアウト権限を削除する方法を教えてください。 {#remove-rollout-permissions}
+### 作成者グループのロールアウト権限を削除する方法を教えてください。  {#remove-rollout-permissions}
 
 AEM プリンシパル（ユーザーまたはグループ）の&#x200B;**ロールアウト**&#x200B;権限を設定または削除することはできません。
 

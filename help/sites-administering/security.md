@@ -10,10 +10,10 @@ exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 84979bbb49d47ec47c898a6747f64048b577c365
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '5409'
-ht-degree: 100%
+source-wordcount: '5412'
+ht-degree: 99%
 
 ---
 
@@ -610,7 +610,7 @@ AEM では、次の 3 つの方法でユーザーまたはグループをグル�
 
 >[!NOTE]
 >
->アドビでは、権限管理のための新しいタッチ UI ベースのプリンシパルビューが導入されました。使い方の詳細については、[このページ](/help/sites-administering/touch-ui-principal-view.md)を参照してください。
+>アドビでは、権限管理のための新しいタッチ UI ベースのプリンシパルビューが導入されました。使用方法について詳しくは、[ 権限管理のプリンシパルビュー ](/help/sites-administering/touch-ui-principal-view.md) を参照してください。
 
 ここでは、権限（レプリケーション権限を含む）を設定する方法について説明します。
 

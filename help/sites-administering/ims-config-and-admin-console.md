@@ -9,10 +9,10 @@ exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 100%
+source-wordcount: '1602'
+ht-degree: 95%
 
 ---
 
@@ -70,9 +70,9 @@ AEM Managed Services のお客様は、すでに組織がプロビジョニン�
 
 >[!NOTE]
 >
->IDP 設定を含む、Adobe Identity Management Basics の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)の記事を参照してください。
+>IDP 設定を含む、「Identity Management Basics」のAdobeについて詳しくは、「[ID とシングルサインオンの設定 ](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) に関する記事を参照してください。
 >
->Enterprise Administration と [!DNL Admin Console] の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html)の記事を参照してください。
+>Enterprise Administration と [!DNL Admin Console] の詳細については、[ エンタープライズおよびチーム管理者ガイドへようこそ ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html) を参照してください。
 
 ### [!DNL Admin Console] へのユーザーのオンボーディング {#onboarding-users-to-the-admin-console}
 
@@ -122,15 +122,16 @@ CSV ファイルをアップロードしてユーザーをまとめて登録す�
 
 >[!NOTE]
 >
->ユーザー同期ツールについて詳しくは、[ドキュメントページ](https://adobe-apiplatform.github.io/user-sync.py/jp/)を参照してください。
+>詳しくは、以下を参照してください。
 >
+>* [ ユーザー同期ツール - Adobeユーザー同期 ](https://adobe-apiplatform.github.io/user-sync.py/jp/)
 >
->ユーザー同期ツールでは、[ここ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)に説明されている手順を使用して、Adobe I/O クライアント UMAPI として登録する必要があります。
+>* user Sync Tool は、[API アクセスの認証 ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html) に説明されている手順を使用して、Adobe I/Oクライアント UMAPI として登録する必要があります。
 >
->Adobe Developer Console のドキュメントについては、[こちら](https://developer.adobe.com/developer-console/docs/guides/)を参照してください。
+>* [Adobe Developer Consoleのドキュメント ](https://developer.adobe.com/developer-console/docs/guides/)。
 >
+>* [User Management API ドキュメント ](https://adobe-apiplatform.github.io/umapi-documentation/en/)。
 >
->ユーザー同期ツールで使用する [!DNL User Management] API については、[この場所](https://adobe-apiplatform.github.io/umapi-documentation/en/)を参照してください。
 
 >[!NOTE]
 >

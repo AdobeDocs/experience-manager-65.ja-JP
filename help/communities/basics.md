@@ -9,7 +9,7 @@ exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 4%
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 ページコンテンツのオーサリング時に、基になるテンプレートでページのデザインの変更が許可されている場合は、サイトデザインの一部としてコンポーネントブラウザーでまだ使用できないコンポーネントを有効にすることができます。
 
-使用可能な Communities コンポーネントが [ こちら ](author-communities.md#available-communities-components) に一覧表示されます。
+[ 使用可能なコミュニティコンポーネント ](author-communities.md#available-communities-components) のリストを参照してください。
 
 >[!NOTE]
 >

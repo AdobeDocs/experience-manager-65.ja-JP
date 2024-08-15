@@ -10,10 +10,10 @@ exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3186'
-ht-degree: 100%
+source-wordcount: '3187'
+ht-degree: 99%
 
 ---
 
@@ -434,7 +434,7 @@ CRXDE または設定ブラウザーを使用してテンプレートフォル�
 
 他のテンプレートの基盤となるテンプレートを作成した場合、このテンプレートをテンプレートタイプとしてコピーできます。
 
-1. [こちらのドキュメントで説明されているように](/help/sites-authoring/templates.md#creating-a-new-template-template-author)編集可能テンプレートと同じようにテンプレートを作成します。これは、テンプレートタイプの基盤となります。
+1. 編集可能テンプレートの場合と同様にテンプレートを作成します。 [ ページテンプレートの作成 ](/help/sites-authoring/templates.md#creating-a-new-template-template-author) を参照してください。 これは、テンプレートタイプの基盤となります。
 1. CRXDE Lite を使用している場合は、新しく作成したテンプレートを `templates` ノードから[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md#template-folders)の下の `template-types` ノードにコピーします。
 1. このテンプレートを[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md#template-folders)の下の `templates` ノードから削除します。
 1. `template-types` ノードの下にあるテンプレートのコピーで、すべての `jcr:content` ノードから `cq:template` および `cq:templateType` プロパティをすべて削除します。

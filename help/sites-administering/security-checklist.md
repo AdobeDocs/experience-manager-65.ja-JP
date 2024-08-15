@@ -10,10 +10,10 @@ exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '2959'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -339,7 +339,7 @@ AEM は `FormChooserServlet` 用の標準インデックスを提供していな
 
 デフォルトのアセットダウンロードサーブレットを使用すると、認証済みユーザーは、任意の大きさの同時ダウンロードリクエストを発行してアセットの ZIP ファイルを作成することができます。大きな ZIP アーカイブを作成すると、サーバーとネットワークが過負荷になる可能性があります。この動作に起因する潜在的なサービス拒否（DoS）のリスクを軽減するために、[!DNL Experience Manager] パブリッシュインスタンスでは `AssetDownloadServlet` OSGi コンポーネントがデフォルトで無効になっています。これは、[!DNL Experience Manager] オーサーインスタンスでデフォルトで有効になっています。
 
-ダウンロード機能が必要ない場合は、オーサーデプロイメントとパブリッシュデプロイメントでこのサーブレットを無効にします。セットアップでアセットダウンロードサーブレットを有効にする必要がある場合、詳細については[この記事](/help/assets/download-assets-from-aem.md)を参照してください。また、デプロイメントでサポートできるダウンロードの最大制限を定義できます。
+ダウンロード機能が必要ない場合は、オーサーデプロイメントとパブリッシュデプロイメントでこのサーブレットを無効にします。セットアップでアセットダウンロード機能を有効にする必要がある場合、詳しくは [Adobe Experience Manage からのアセットのダウンロード ](/help/assets/download-assets-from-aem.md) を参照してください。 また、デプロイメントでサポートできるダウンロードの最大制限を定義できます。
 
 ### WebDAV の無効化 {#disable-webdav}
 
@@ -395,7 +395,7 @@ AEM 6.1 以降、`AuthorizableNodeName` インターフェイスの新しい実�
 
 すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。権限の最小化の原則に従って、これらのプロパティへのアクセスを制限する必要があります。
 
-これをサポートするため、アドビでは、お客様の構築基盤として権限堅牢化パッケージを提供しています。これは、リポジトリルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティへの匿名アクセスを制限することで機能します。このパッケージは[こちら](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip)からダウンロードでき、サポートされているすべてのバージョンの AEM にインストールできます。
+これをサポートするため、アドビでは、お客様の構築基盤として権限堅牢化パッケージを提供しています。これは、リポジトリルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティへの匿名アクセスを制限することで機能します。このパッケージは、サポートされているすべてのバージョンのAEMに [ ダウンロード ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) およびインストールできます。
 
 変更点を説明するために、パッケージをインストールする前に匿名で表示できる次のノードプロパティと、
 

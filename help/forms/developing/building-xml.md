@@ -5,10 +5,10 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 100%
+source-wordcount: '981'
+ht-degree: 98%
 
 ---
 
@@ -50,7 +50,7 @@ Execute Script サービスを含むプロセスが作成されたら、この�
 
 **Execute Script サービスのテクノロジーについて**
 
-Execute Script サービスの機能と制限事項を理解するには、サービスの技術的基盤を理解する必要があります。JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C のドキュメントオブジェクトモデル仕様の Java™ 実装です。定義については[こちら](https://dom.spec.whatwg.org/)を参照してください。DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java 実装である Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
+Execute Script サービスの機能と制限事項を理解するには、サービスの技術的基盤を理解する必要があります。JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C の [ ドキュメントオブジェクトモデル仕様 ](https://dom.spec.whatwg.org/) を Java™ で実装したものです。 DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java 実装である Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
 
 XML 変数の格納に使用される Java クラスは次のとおりです。
 
@@ -58,7 +58,7 @@ XML 変数の格納に使用される Java クラスは次のとおりです。
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl は NodeImpl のサブクラスなので、XML プロセス変数は NodeImpl の派生であると想定できます。NodeImpl のドキュメントは、[こちら](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html)で参照できます。
+DocumentImpl は NodeImpl のサブクラスなので、XML プロセス変数は NodeImpl の派生であると想定できます。詳しくは、[NodeImpl](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html) のドキュメントを参照してください。
 
 **Execute Script サービスを使用したサンプル XML の作成**
 

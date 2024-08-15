@@ -10,10 +10,10 @@ exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 100%
+source-wordcount: '729'
+ht-degree: 93%
 
 ---
 
@@ -118,8 +118,8 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >
 >次のリソースを参照してください。
 >
->* Red Hat® Linux® 上の Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
->* Linux® のチューニングのヒントについて詳しくは、こちらの[記事](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)を参照してください。
+>* Red Hat® Linux® 上の Transparent Huge Pages について詳しくは、Red Hat® カスタマーポータルの次の記事を参照してください。[Red Hat Enterprise Linux 6、7、8 で Transparent Hugepage を使用、監視、無効化する方法 ](https://access.redhat.com/solutions/46111)
+>* Linux® のチューニングのヒントについて詳しくは、[ パフォーマンスの最適化 ](/help/sites-deploying/configuring-performance.md) を参照してください。
 >
 
 ## リポジトリのメンテナンス {#maintaining-the-repository}

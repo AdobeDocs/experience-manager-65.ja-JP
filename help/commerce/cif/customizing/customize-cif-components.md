@@ -5,10 +5,10 @@ exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: ddd411a5dde57cf66cbcb458578b0aa32139b649
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2302'
-ht-degree: 100%
+source-wordcount: '2305'
+ht-degree: 98%
 
 ---
 
@@ -176,7 +176,7 @@ AEM コードに着手する前に、GraphQL IDE を使用して [Adobe Commerce
 
 >[!TIP]
 >
->Adobe Commerce GraphQL に関する詳細なドキュメントは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
+>Adobe Commerce GraphQLに関する詳細なドキュメントについては、[GraphQLの概要 ](https://devdocs.magento.com/guides/v2.4/graphql/index.html) を参照してください。
 
 ## 製品ティーザーの Sling モデルのアップデート {#updating-sling-model-product-teaser}
 
@@ -386,7 +386,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    Sling モデルメソッドを HTL で呼び出すと、メソッドの `get` および `is` 部分が削除され、最初の文字が小文字に変換されます。`isShowBadge()` は `.showBadge` となり、`isEcoFriendly` は `.ecoFriendly` となります。`.isEcoFriendly()` から返されるブール値に基づいて、`<span>Eco Friendly</span>` が表示されるかどうかを決定します。
 
-   `data-sly-test` などの HTL ブロック文の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=ja)を参照してください。
+   `data-sly-test` およびその他の HTL ブロックステートメントについて詳しくは、[HTL の仕様 ](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=ja) を参照してください。
 
 1. 変更を保存し、コマンドラインターミナルから Maven スキルを使用して、AEM にアップデートをデプロイします。
 
