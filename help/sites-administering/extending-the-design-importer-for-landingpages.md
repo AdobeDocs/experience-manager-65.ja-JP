@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3442'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -443,7 +443,7 @@ HTML タグに設定されている lang 属性セットは、デザインイン
 
 空白のランディングページテンプレートをオーバーレイするには、`/apps/<appName>/designimporter/templates/<templateName>` でオーバーレイを作成します。
 
-AEMでテンプレートを作成する手順については、[ テンプレート ](/help/sites-developing/templates.md) を参照してください。
+AEM のテンプレートを作成する手順については、[テンプレート](/help/sites-developing/templates.md)を参照してください。
 
 ### ランディングページからのコンポーネントの参照 {#referring-a-component-from-landing-page}
 

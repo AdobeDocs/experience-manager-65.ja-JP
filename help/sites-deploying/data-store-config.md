@@ -9,9 +9,9 @@ exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3461'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ Adobe Experience Manager（AEM）では、バイナリデータをコンテン�
 
 >[!CAUTION]
 >
->新しいバージョンの Oak では、OSGi 設定ファイルの命名スキームと形式が新しく採用されています。新しい命名スキームでは、設定ファイルの名前は **.config とし** 新しい形式では、値を入力する必要があります。 詳しくは [Apache Sling プロビジョニングモデルと Apache SlingStart - デフォルトの設定形式 ](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) を参照してください。
+>新しいバージョンの Oak では、OSGi 設定ファイルの命名スキームと形式が新しく採用されています。新しい命名スキームでは、設定ファイルの名前は **.config** とし、新しい形式では、値を入力する必要があります。詳しくは、[Apache Sling Provisioning Model と Apache SlingStart - デフォルト設定形式](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)を参照してください。
 >
 >古いバージョンの Oak からアップグレードする場合は必ず、`crx-quickstart/install` フォルダーのバックアップを最初に作成してください。アップグレード後、アップグレードしたインストール環境にフォルダーの内容を復元し、設定ファイルの拡張子を **.cfg** から **.config** に変更します。
 
@@ -370,7 +370,7 @@ S3 でバイナリレスレプリケーションを設定するには、次の�
 
    * S3 をデータストアとして使用する場合、前述のように `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` という名前のファイルを `<aem-install>/crx-quickstart/install` フォルダーに作成します。
 
-1. 各インスタンスのデータストア設定ファイルを変更し、同じデータストアを指すようにします。詳しくは、[ データストアの設定 ](/help/sites-deploying/data-store-config.md#data-store-configurations) を参照してください。
+1. 各インスタンスのデータストア設定ファイルを変更し、同じデータストアを指すようにします。詳しくは、[データストアの設定](/help/sites-deploying/data-store-config.md#data-store-configurations)を参照してください。
 1. インスタンスのクローンが既存のサーバーから作成された場合、リポジトリがオフラインになっている間に、最新の oak-run ツールを使用して新しいインスタンスの `clusterId` を削除する必要があります。実行する必要があるコマンドは次のとおりです。
 
    ```xml

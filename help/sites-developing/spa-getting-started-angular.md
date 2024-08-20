@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '998'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -68,7 +68,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 `"aem-clientlib-generator": "^1.4.1",`
 
-[aem-clientlib-generator は GitHub で入手できます ](https://github.com/wcm-io-frontend/aem-clientlib-generator)。
+aem-clientlib-generator について詳しくは、[GitHub](https://github.com/wcm-io-frontend/aem-clientlib-generator) を参照してください。
 
 >[!CAUTION]
 >

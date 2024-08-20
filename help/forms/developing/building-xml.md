@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '981'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ Execute Script サービスを含むプロセスが作成されたら、この�
 
 **Execute Script サービスのテクノロジーについて**
 
-Execute Script サービスの機能と制限事項を理解するには、サービスの技術的基盤を理解する必要があります。JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C の [ ドキュメントオブジェクトモデル仕様 ](https://dom.spec.whatwg.org/) を Java™ で実装したものです。 DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java 実装である Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
+Execute Script サービスの機能と制限事項を理解するには、サービスの技術的基盤を理解する必要があります。JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C の[ドキュメントオブジェクトモデル仕様](https://dom.spec.whatwg.org/)の Java™ 実装です。DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java 実装である Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
 
 XML 変数の格納に使用される Java クラスは次のとおりです。
 

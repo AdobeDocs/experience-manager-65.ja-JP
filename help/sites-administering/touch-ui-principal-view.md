@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '763'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -72,7 +72,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 >[!NOTE]
 >
->権限と説明の完全なリストについては、[ ユーザー、グループ、アクセス権限の管理 ](/help/sites-administering/user-group-ac-admin.md#access-right-management) を参照してください。
+>権限と説明の詳細なリストについては、[ユーザー、グループおよびアクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)を参照してください。
 
 ![特定のパスの権限の検索](assets/image2019-3-21_0-5-47.png) ![選択したパスの表示に従い、「dam-users」の新しいエントリを垂直列に追加します。](assets/image2019-3-21_0-6-53.png)
 

@@ -6,9 +6,9 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '958'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -78,4 +78,4 @@ CIF には、検索バーと検索結果のコンポーネントが用意され�
 
 ## 16. I/O Runtime の体験版ライセンスをリクエストする方法を教えてください。
 
-I/O Runtime を使用するための体験版ライセンスのリクエストについて詳しくは、[ アクセスの取得 ](https://developer.adobe.com/runtime/docs/guides/overview/getting_access/) を参照してください。
+I/O Runtime を使用するための体験版ライセンスのリクエストについて詳しくは、[アクセス権の取得](https://developer.adobe.com/runtime/docs/guides/overview/getting_access/)を参照してください。

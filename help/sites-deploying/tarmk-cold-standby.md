@@ -11,9 +11,9 @@ exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2673'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -409,7 +409,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 1. [前述](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)の節で説明したように、コールドスタンバイリポジトリのメンテナンスを実行します。
 1. メンテナンスプロセスが完了し、インスタンスが再起動したら、次の手順を実行します。
 
-   * [JMX コンソールを使用したデータストアのガベージコレクションの実行 ](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console) で説明しているように、プライマリで、関連する JMX Bean を介してデータストアのガベージコレクションを実行します。
+   * プライマリで、関連する JMX Bean を使用してデータストアのガベージコレクションを実行します。詳しくは、[JMX コンソールによるデータストアのガベージコレクションの実行](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)を参照してください。
    * スタンバイでは、データストアのガベージコレクションは **BlobGarbageCollection** MBean - `startBlobGC()` を使用してのみ行うことができます。**RepositoryManagement** MBean はスタンバイでは使用できません。
 
    >[!NOTE]

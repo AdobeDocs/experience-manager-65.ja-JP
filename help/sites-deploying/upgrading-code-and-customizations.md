@@ -12,9 +12,9 @@ exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2143'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-1. **パターン検出** - アップグレード計画や、「パターン検出を使用したアップグレードの複雑性の評価 [ ページで詳しく説明しているように、パターン検出を実行 ](/help/sites-deploying/pattern-detector.md) ます。 対処する必要がある領域や、AEM のターゲットバージョンで利用できない API やバンドルについての詳細を含むパターン検出レポートを取得します。パターン検出レポートには、コードで互換性のない箇所が示されます。互換性のない箇所がない場合、デプロイされているコードは既に 6.5 と互換性があります。互換性を維持するためだけの開発作業は必要なく、6.5 の機能を利用するための新規開発を行うことができます。互換性のない箇所が見つかった場合は、互換モードで実行して新規の 6.5 機能または互換性維持のための開発を先送りにすることができます。または、アップグレード後に開発作業を行って手順 2 に進むこともできます。詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)のページを参照してください。
+1. **パターン検出** - アップグレード計画や[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)で詳しく説明しているように、パターン検出を実行します。対処する必要がある領域や、AEM のターゲットバージョンで利用できない API やバンドルについての詳細を含むパターン検出レポートを取得します。パターン検出レポートには、コードで互換性のない箇所が示されます。互換性のない箇所がない場合、デプロイされているコードは既に 6.5 と互換性があります。互換性を維持するためだけの開発作業は必要なく、6.5 の機能を利用するための新規開発を行うことができます。互換性のない箇所が見つかった場合は、互換モードで実行して新規の 6.5 機能または互換性維持のための開発を先送りにすることができます。または、アップグレード後に開発作業を行って手順 2 に進むこともできます。詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)のページを参照してください。
 
 1. **6.5 のコードベースの開発** - Target バージョンのコードベース専用のブランチまたはリポジトリを作成します。アップグレード前の互換性の情報を使用して、更新するコードの領域を計画します。
 1. **6.5 Uber Jar でのコンパイル** - 6.5 Uber Jar を指すようにコードベース POM を更新し、これに対してコードをコンパイルします。
@@ -40,7 +40,7 @@ ht-degree: 92%
 
 アップグレードに進む前に、アプリケーションコードベースを AEM のターゲットバージョンに対して十分テストし、安定したものにしておく必要があります。テストで得られた見解に基づいて、様々な方法でカスタムコードを最適化できます。例えば、リポジトリの走査を回避するためのコードのリファクタリング、検索を最適化するカスタムインデックス作成、JCR での順序なしノードの使用などが含まれます。
 
-新しいAEM バージョンで動作するようにコードベースとカスタマイズをオプションでアップグレードすることに加え、6.5 では、「[AEM 6.5 における後方互換性 ](/help/sites-deploying/backward-compatibility.md)」で説明されている後方互換性機能を使用して、カスタマイズをより効率的に管理することもできます。
+コードベースのアップグレードや、新しい AEM バージョンに合わせたカスタマイズを行うオプションに加えて、6.5 では [AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)に記載された後方互換性機能を使用して、より効率的にカスタマイズを管理できます。
 
 上記の説明および下の図に示したように、最初の手順で[パターン検出](/help/sites-deploying/pattern-detector.md)を実行することで、アップグレードの全体的な複雑性を評価できます。また、互換モードで実行するか、すべての新しい AEM 6.5 の機能を使用するようにカスタマイズを更新するかを決定することもできます。詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)のページを参照してください。
 [![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
@@ -67,7 +67,7 @@ AEM Uber Jar では、すべての AEM API を単一の依存関係として Mav
 
 ### 管理リソースリゾルバーの使用の段階的廃止 {#phase-out-use-of-administrative-resource-resolver}
 
-`SlingRepository.loginAdministrative()` と `ResourceResolverFactory.getAdministrativeResourceResolver()` を介して管理セッションを使用することは、AEM 6.0 より前のコードベースでは一般的でした。これらのメソッドは過度に幅広いレベルのアクセスを提供するので、セキュリティ上の理由から廃止されました。[Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザーと、管理セッションのフェーズアウト方法について詳しくは、[Adobe Experience Manager（AEM）のサービスユーザー） ](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions) を参照してください。
+`SlingRepository.loginAdministrative()` と `ResourceResolverFactory.getAdministrativeResourceResolver()` を介して管理セッションを使用することは、AEM 6.0 より前のコードベースでは一般的でした。これらのメソッドは過度に幅広いレベルのアクセスを提供するので、セキュリティ上の理由から廃止されました。[Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザー、および管理セッションを段階的に廃止する方法について詳しくは、[Adobe Experience Manager（AEM）のサービスユーザー](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)を参照してください。
 
 ### クエリと Oak インデックス {#queries-and-oak-indexes}
 
@@ -83,7 +83,7 @@ AEM Uber Jar では、すべての AEM API を単一の依存関係として Mav
 
 ### クラシック UI オーサリング {#classic-ui-authoring}
 
-クラシック UI オーサリングは、AEM 6.5 で引き続き利用できますが、廃止される予定です。詳しくは、[ 非推奨（廃止予定）の機能と削除された機能 ](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release) を参照してください。 アプリケーションがクラシック UI オーサー環境で実行されている場合は、AEM 6.5 にアップグレードして、引き続きクラシック UI を使用することをお勧めします。タッチ UI への移行は、複数の開発サイクルを行う個別プロジェクトとして計画できます。AEM 6.5 でクラシック UI を使用するには、複数の OSGi 設定をコードベースにコミットする必要があります。設定方法について詳しくは、[ クラシック UI へのアクセスの有効化 ](/help/sites-administering/enable-classic-ui.md) を参照してください。
+クラシック UI オーサリングは、AEM 6.5 で引き続き利用できますが、廃止される予定です。詳しくは、[廃止される機能および削除された機能](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release)を参照してください。アプリケーションがクラシック UI オーサー環境で実行されている場合は、AEM 6.5 にアップグレードして、引き続きクラシック UI を使用することをお勧めします。タッチ UI への移行は、複数の開発サイクルを行う個別プロジェクトとして計画できます。AEM 6.5 でクラシック UI を使用するには、複数の OSGi 設定をコードベースにコミットする必要があります。この設定方法について詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
 ## 6.5 のリポジトリ構造との整合 {#align-repository-structure}
 
@@ -97,7 +97,7 @@ AEM のソースバージョンでの AEM オーサリング環境に対する�
 
 ### 一般的なオーバーレイ {#overlays-in-general}
 
-AEM の標準機能を拡張する場合は、/libs の下のノードやファイルを /apps の下の追加ノードでオーバーレイすることが一般的です。これらのオーバーレイは、バージョン管理で追跡し、AEM のターゲットバージョンに対してテストする必要があります。ファイル（JS、JSP、HTL）をオーバーレイする場合は、AEM のターゲットバージョンでの回帰テストを容易にするために、拡張した機能に関するコメントを残しておくことをお勧めします。一般的な情報については、[ オーバーレイ ](/help/sites-developing/overlays.md) を参照してください。 特定の AEM のオーバーレイの手順については、以下を参照してください。
+AEM の標準機能を拡張する場合は、/libs の下のノードやファイルを /apps の下の追加ノードでオーバーレイすることが一般的です。これらのオーバーレイは、バージョン管理で追跡し、AEM のターゲットバージョンに対してテストする必要があります。ファイル（JS、JSP、HTL）をオーバーレイする場合は、AEM のターゲットバージョンでの回帰テストを容易にするために、拡張した機能に関するコメントを残しておくことをお勧めします。一般的な情報については、[オーバーレイ](/help/sites-developing/overlays.md)を参照してください。特定の AEM のオーバーレイの手順については、以下を参照してください。
 
 ### カスタム検索フォームのアップグレード  {#upgrading-custom-search-forms}
 
@@ -143,11 +143,11 @@ Assets UI のカスタマイズを準備するには、次の手順を実行し�
 
 ### InDesign スクリプトのカスタマイズ {#indesign-script-customizations}
 
-Adobe では、カスタムスクリプトを `/apps/settings/dam/indesign/scripts` に配置することを推奨しています。InDesignスクリプトのカスタマイズについて詳しくは、[Adobe Experience Manager AssetsとAdobe InDesign Serverの統合 ](/help/assets/indesign.md#configuring-the-aem-assets-workflow) を参照してください。
+Adobe では、カスタムスクリプトを `/apps/settings/dam/indesign/scripts` に配置することを推奨しています。InDesign スクリプトのカスタマイズについて詳しくは、[Adobe Experience Manager Assets と Adobe InDesign Server の統合](/help/assets/indesign.md#configuring-the-aem-assets-workflow)を参照してください。
 
 ### ContextHub 設定の復元 {#recovering-contexthub-configurations}
 
-ContextHub 設定は、アップグレードの影響を受けます。既存の ContextHub 設定の復元方法については、[ContextHub の設定 ](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading) を参照してください。
+ContextHub 設定は、アップグレードの影響を受けます。既存の ContextHub 設定の復元方法については、[ContextHub の設定](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading)を参照してください。
 
 ### ワークフローのカスタマイズ {#workflow-customizations}
 
@@ -163,7 +163,7 @@ AEM 6.2 と 6.3 では、編集可能なテンプレートの構造が異なり�
 
 ### CUG 実装の変更 {#cug-implementation-changes}
 
-AEM の以前のバージョンのパフォーマンスおよびスケーラビリティの制限に対処するために、閉じられたユーザーグループの実装が大幅に変更されました。以前のバージョンの CUG は 6.3 で非推奨（廃止予定）となり、新しい実装はタッチ UI でのみサポートされています。
+AEM の以前のバージョンのパフォーマンスおよびスケーラビリティの制限に対処するために、閉じられたユーザーグループの実装が大幅に変更されました。CUG の以前のバージョンは 6.3 で廃止され、新しい実装はタッチ UI でのみサポートされます。
 
 ## 手順のテスト {#testing-procedure}
 

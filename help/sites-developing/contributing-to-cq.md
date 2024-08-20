@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2642'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -142,7 +142,7 @@ Apache Sling のリクエスト解決に関しては、コンテンツリポジ�
 
 JCR には事前定義されたノードタイプとプロパティタイプが多数含まれていますが、一般的に型指定システムは柔軟です。実際に、JCR の長所の 1 つは、構造化コンテンツも非構造化コンテンツも同じくらい簡単に格納および管理できることです。つまり、JCR には高度に構造化されたデータを含めることができますが、任意の動的データ構造もスキーマ制約なしで含めることができます。
 
-JCR の Java™ API 用 JavaDoc は、[Apache Software Foundation - JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html) から入手できます。
+JCR の Java™ API に関する JavaDoc は、[Apache Software Foundation - JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html) を参照してください。
 
 JavaDoc または JCR の仕様自体を読む前に、Adobe Experience Services によって実装された JCR の[概要](/help/sites-developing/the-basics.md#java-content-repository)にも目を通しておくことをお勧めします。
 

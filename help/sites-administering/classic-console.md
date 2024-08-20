@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->タッチ操作向け UI のタグ付けコンソールについて詳しくは、[ タグの管理 ](/help/sites-administering/tags.md#tagging-console) を参照してください。
+>タッチ操作向け UI のタグ付けコンソールについて詳しくは、[タグの管理](/help/sites-administering/tags.md#tagging-console)を参照してください。
 
 クラシック UI のタグ付けコンソールにアクセスするには：
 

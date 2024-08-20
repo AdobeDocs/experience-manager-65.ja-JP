@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1264'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -112,7 +112,7 @@ GitHub のコード
 * [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
 * 述語の名前を指定し、`pathbrowser`を使用するときにその名前を参照します。
 
-カスタム述語の作成について詳しくは、[Query Builder 用のカスタム述語エバリュエーターの実装 ](/help/sites-developing/implementing-custom-predicate-evaluator.md) を参照してください。
+カスタム述語の作成について詳しくは、[Query Builder 用のカスタム述語エバリュエーターの実装](/help/sites-developing/implementing-custom-predicate-evaluator.md)を参照してください。
 
 >[!NOTE]
 >

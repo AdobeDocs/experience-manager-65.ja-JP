@@ -10,9 +10,9 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1602'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -70,9 +70,9 @@ AEM Managed Services のお客様は、すでに組織がプロビジョニン�
 
 >[!NOTE]
 >
->IDP 設定を含む、「Identity Management Basics」のAdobeについて詳しくは、「[ID とシングルサインオンの設定 ](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html) に関する記事を参照してください。
+>IDP 設定を含め、Adobe Identity Management Basics について詳しくは、[ID とシングルサインオンの設定](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)に関する記事を参照してください。
 >
->Enterprise Administration と [!DNL Admin Console] の詳細については、[ エンタープライズおよびチーム管理者ガイドへようこそ ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html) を参照してください。
+>Enterprise Administration と [!DNL Admin Console] について詳しくは、[エンタープライズ版およびチーム版の管理者ガイドへようこそ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html)を参照してください。
 
 ### [!DNL Admin Console] へのユーザーのオンボーディング {#onboarding-users-to-the-admin-console}
 
@@ -124,13 +124,13 @@ CSV ファイルをアップロードしてユーザーをまとめて登録す�
 >
 >詳しくは、以下を参照してください。
 >
->* [ ユーザー同期ツール - Adobeユーザー同期 ](https://adobe-apiplatform.github.io/user-sync.py/jp/)
+>* [ユーザー同期ツール - Adobe ユーザー同期](https://adobe-apiplatform.github.io/user-sync.py/jp/)
 >
->* user Sync Tool は、[API アクセスの認証 ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html) に説明されている手順を使用して、Adobe I/Oクライアント UMAPI として登録する必要があります。
+>* ユーザー同期ツールでは、[API アクセスの認証](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)に説明されている手順を使用して、Adobe I/O クライアント UMAPI として登録する必要があります。
 >
->* [Adobe Developer Consoleのドキュメント ](https://developer.adobe.com/developer-console/docs/guides/)。
+>* [Adobe Developer Console のドキュメント](https://developer.adobe.com/developer-console/docs/guides/)。
 >
->* [User Management API ドキュメント ](https://adobe-apiplatform.github.io/umapi-documentation/en/)。
+>* [User Management API のドキュメント](https://adobe-apiplatform.github.io/umapi-documentation/en/)。
 >
 
 >[!NOTE]

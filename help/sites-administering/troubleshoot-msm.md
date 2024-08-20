@@ -6,9 +6,9 @@ role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
 solution: Experience Manager, Experience Manager Sites
 source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '762'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -69,7 +69,7 @@ MSM とライブコピーに関するよくある質問を以下に示します�
 
 MSM 同期アクションは詳細に設定できます。ロールアウト中に変更されるプロパティまたはコンポーネントは、それらの設定のプロパティに直接依存します。
 
-このトピックについて詳しくは、[MSM のベストプラクティス ](msm-best-practices.md) を参照してください。
+このトピックについて詳しくは、[MSM のベストプラクティス](msm-best-practices.md)を参照してください。
 
 ### 作成者グループのロールアウト権限を削除する方法を教えてください。  {#remove-rollout-permissions}
 

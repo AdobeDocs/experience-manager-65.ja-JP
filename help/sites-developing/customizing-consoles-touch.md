@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '649'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -161,4 +161,4 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 コンソールを使用する場合、一般的なユースケースは、ユーザーがリソース（例えば、ページ、コンポーネント、アセットなど）から選択する必要がある場合です。これは、例えば、作成者が項目を選択する必要があるリストの形式をとることができます。
 
-リストを適切なサイズに保ち、ユースケースにも関連するように、フィルターをカスタム述語の形式で実装できます。詳しくは、[ ページオーサリングのカスタマイズ – リソースのフィルタリング ](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources) を参照してください。
+リストを適切なサイズに保ち、ユースケースにも関連するように、フィルターをカスタム述語の形式で実装できます。詳しくは、[ページオーサリングのカスタマイズ - リソースのフィルタリング](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)を参照してください。

@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1758'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -379,7 +379,7 @@ eventdata.events.milestoneXX
 
    ![lseconds](assets/lseconds.png)
 
-   *この呼び出しは、前述のレガシーマイルストーン呼び出しと同じです。[Adobe Analyticsとの統合 ](/help/sites-administering/adobeanalytics.md) に記載の pev3 に関する情報を参照してください。*
+   *この呼び出しは、前述のレガシーマイルストーン呼び出しと同じです。pev3 について詳しくは、[Adobe Analytics との統合](/help/sites-administering/adobeanalytics.md)を参照してください。*
 
 **このチュートリアルで使用しているリファレンス：**
 

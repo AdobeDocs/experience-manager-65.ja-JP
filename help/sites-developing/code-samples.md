@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '147'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 76%
 
 [AEM Sites の基本を学ぶ - WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)は、AEM を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアントライブラリおよびコンポーネント開発などの、基本的なトピックについて説明しています。
 
-独自の機能を開発するための出発点としてAEM プロジェクトを作成するための Maven テンプレートを [GitHub - AEM プロジェクトアーキタイプ ](https://github.com/adobe/aem-project-archetype) で入手できます。
+AEM プロジェクトを作成する際に独自の機能を開発するための出発点として使用できる Maven テンプレートが[GitHub - AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)から入手できます。
 
-標準のタッチ操作対応 UI コードサンプルは、[AEM コンポーネントの開発 ](/help/sites-developing/developing-components.md) から入手できます。
+標準のタッチ操作対応 UI のコードのサンプルは[AEM コンポーネントの開発](/help/sites-developing/developing-components.md)から入手できます。
 
 >[!NOTE]
 >
->これらのコードサンプルは、学習のみを目的としたものです。AEM の本番インスタンスにデプロイしないでください。
+>これらのコードサンプルは、学習のみを目的としたものです。AEM の実稼動インスタンスにデプロイしないでください。

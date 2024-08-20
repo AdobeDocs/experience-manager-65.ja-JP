@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
 source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1897'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -182,7 +182,7 @@ curl コマンドはすぐに制御を返します。
 
 データストアの整合性チェックは、欠落しているもののまだ参照されているデータストアのバイナリを報告するものです。整合性チェックを開始するには、次の手順を実行します。
 
-1. JMX コンソールに移動します。JMX コンソールの使用方法について詳しくは、[JMX コンソールを使用したサーバーリソースの監視 ](/help/sites-administering/jmx-console.md#using-the-jmx-console) を参照してください。
+1. JMX コンソールに移動します。JMX コンソールの使用方法について詳しくは、[JMX コンソールを使用したサーバーリソースの監視](/help/sites-administering/jmx-console.md#using-the-jmx-console)を参照してください。
 1. **BlobGarbageCollection** Mbean を検索し、それをクリックします。
 1. 「`checkConsistency()`」リンクをクリックします。
 

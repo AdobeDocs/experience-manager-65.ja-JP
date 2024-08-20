@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2114'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -219,7 +219,7 @@ CRXDE Lite でダイアログを作成するには：
 
 これで、プロパティを変更したり、ノードを作成したりして、ニーズに合ったダイアログを作成できます。
 
-ダイアログエディターを使用してダイアログを編集することもできます。CRXDE Lite でダイアログノードをダブルクリックすると、エディターが表示されます。詳しくは、[ ダイアログエディター ](/help/sites-developing/dialog-editor.md) を参照してください。
+ダイアログエディターを使用してダイアログを編集することもできます。CRXDE Lite でダイアログノードをダブルクリックすると、エディターが表示されます。詳しくは、[ダイアログエディター](/help/sites-developing/dialog-editor.md)を参照してください。
 
 ## ノードの作成 {#creating-a-node}
 

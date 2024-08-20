@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4493'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -255,7 +255,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### AEM と Commerce {#aem-commerce}
 
-AEM 6.4 以降、Commerce integration frameworkの改善のリリースサイクルが早くなりました。詳しくは、[Commerce integration frameworkを使用したAEMとAdobe Commerceの統合 ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html?lang=ja) を参照してください。
+AEM 6.4 以降、コマース統合フレームワークの改善のリリースサイクルが早くなりました。詳しくは、[コマース統合フレームワークを使用した、AEM と Adobe Commerce の統合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html?lang=ja)を参照してください。
 
 #### Communities アドオン {#communities-add-on}
 

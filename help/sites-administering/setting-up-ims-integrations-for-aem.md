@@ -5,9 +5,9 @@ feature: Security
 role: Admin
 exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '432'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->アドビのお客様は、[Adobe Developer Console](https://developer.adobe.com/console) を使用すると、様々な API へのアクセスを可能にする資格情報を生成できます。お客様は、OAuth サーバー間からシングルページアプリまで、様々な資格情報タイプから選択できます。資格情報タイプのサービスアカウント（JWT）は、サービスパック 20 では OAuth サーバー間資格情報に代わって非推奨（廃止予定）になりました。この変更は、Service Pack 11 から Service Pack 20 まで、[ ダウンロード ](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip) 可能なホットフィックスを使用して、古い Service Pack に移植できます。
+>アドビのお客様は、[Adobe Developer Console](https://developer.adobe.com/console) を使用すると、様々な API へのアクセスを可能にする資格情報を生成できます。お客様は、OAuth サーバー間からシングルページアプリまで、様々な資格情報タイプから選択できます。資格情報タイプのサービスアカウント（JWT）は、サービスパック 20 では OAuth サーバー間資格情報に代わって非推奨（廃止予定）になりました。この変更は、[ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip)できるホットフィックスを使用して、サービスパック 11 からサービスパック 20 までの古いサービスパックに移植できます。
 
 Adobe Experience Manager（AEM）は、他の多くのアドビソリューションと統合できます。例えば、Adobe Target、Adobe Analytics などです。
 

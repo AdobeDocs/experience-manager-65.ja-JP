@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1669'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 97%
 >* **レプリケート／レプリケーション**
 >  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
 
-## 不十分な特権 {#insufficient-privileges}
+## 特権が不十分 {#insufficient-privileges}
 
 特定のページを公開するために必要な特権がない場合。
 
@@ -183,9 +183,9 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   >**ワークフロー** ステップは、ユーザーの権限に基づいて表示されます。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。
    >
-   >詳しくは、[ 不十分な権限 ](/help/sites-authoring/publishing-pages.md#insufficient-privileges)、[ ワークフローへのアクセスの管理 ](/help/sites-administering/workflows-managing.md) および [ ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) の節を参照してください。
+   >詳しくは、[不十分な権限](/help/sites-authoring/publishing-pages.md#insufficient-privileges)、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)の節を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションが提供されます。
 

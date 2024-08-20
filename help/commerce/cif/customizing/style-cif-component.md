@@ -12,9 +12,9 @@ exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
 solution: Experience Manager,Commerce
 role: Admin, Developer
 source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2338'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -435,7 +435,7 @@ IDE と生成されたプロジェクトに戻ります。
 
    ![Webpack Dev Server ティーザーの変更](../assets/style-cif-component/webpack-dev-server-teaser-changes.png)
 
-   ただし、変更は AEM にまだデプロイされていません。[ ソリューションファイルをここからダウンロード ](../assets/style-cif-component/_productteaser.scss) できます。
+   ただし、変更は AEM にまだデプロイされていません。[ソリューションファイルは、こちらからダウンロード](../assets/style-cif-component/_productteaser.scss)できます。
 
 1. コマンドラインターミナルから、Maven スキルを使用して AEM にアップデートをデプロイします。
 
