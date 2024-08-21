@@ -9,28 +9,32 @@ exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: c941de0b069b5bea9edb822eca0ebbb5483ae9ed
 workflow-type: tm+mt
-source-wordcount: '1520'
-ht-degree: 100%
+source-wordcount: '1704'
+ht-degree: 84%
 
 ---
 
 # AEM forms でのシングルサインオンの有効化 {#enabling-single-sign-on-in-aem-forms}
 
-AEM Forms でシングルサインオン（SSO）を有効化するには、HTTP ヘッダーと SPNEGO の 2 つの方法があります。
+AEM フォームでシングルサインオン（SSO）を有効化するには、HTTP ヘッダーと SPNEGO の 2 つの方法があります。
 
 SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
 AEM Forms で前述のいずれの方法を使用してもユーザーが認証されない場合、ユーザーはログインページにリダイレクトされます。
 
+* [HTTP ヘッダーの使用による SSO の有効化](#enable-sso-using-http-headers)
+* [SPNEGO を使用した SSO を有効化](#enable-sso-using-spnego)
+* [ユーザーとグループへの役割の割り当て](#assign-roles-to-users-groups)
+
 ## HTTP ヘッダーの使用による SSO の有効化 {#enable-sso-using-http-headers}
 
-ポータル設定ページを使用して、アプリケーションと、HTTP ヘッダーを介した ID の送信をサポートするアプリケーションとの間でシングルサインオン（SSO）を有効化できます。SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
+ポータル設定ページを使用すると、アプリケーションと、HTTP ヘッダー経由での ID の転送をサポートする任意のアプリケーションとの間で、シングルサインオン（SSO）を有効にすることができます。 SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
 また、SPNEGO を使用して SSO を有効化することもできます（[SPNEGO を使用した SSO の有効化](enabling-single-sign-on-aem.md#enable-sso-using-spnego)を参照。）
 
-1. 管理コンソールで、設定／User Management／設定／ポータル属性の設定をクリックします。
+1. 管理コンソールで、設定/User Management/設定/ポータル属性の設定をクリックしてください。
 1. 「はい」を選択して SSO を有効化します。「いいえ」を選択した場合、ページの残りの設定が使用できなくなります。
 1. 必要に応じて、ページの残りの設定を調整し、「OK」をクリックします。
 
@@ -52,6 +56,10 @@ AEM Forms で前述のいずれの方法を使用してもユーザーが認証�
 
 許可されているリファラーの設定手順については、[許可されているリファラーの設定](/help/forms/using/admin-help/preventing-csrf-attacks.md#configure-allowed-referers)を参照してください。
 
+### ユーザーとグループへの役割の割り当て
+
+をクリックして、「ユーザーとグループへの役割の割り当て [ の手順を確認し ](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#assign-roles-to-users-and-groups-assign-roles-to-users-groups) す。
+
 ## SPNEGO を使用した SSO を有効化 {#enable-sso-using-spnego}
 
 Windows 環境で LDAP サーバーに Active Directory を使用している場合は、Simple and Protected GSSAPI Negotiation Mechanism（SPNEGO）を使用してシングルサインオン（SSO）を有効化することができます。SSO が有効になっている場合、AEM Forms のユーザーログインページは必要とされず、表示されません。
@@ -60,7 +68,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 
 >[!NOTE]
 >
->JEE での AEM Forms は複数の子ドメイン環境で Kerberos／SPNEGO を使用した SSO の設定をサポートしていません。
+>JEE 上のAEM Formsでは、複数の子ドメイン環境で Kerberos/SPNEGO を使用した SSO の設定をサポートしていません。
 
 1. SSO を有効化するために使用するドメインを決定します。AEM Forms サーバーとユーザーは、同じ Windows ドメインまたは信頼されたドメインの一部である必要があります。
 1. Active Directory に、AEM Forms サーバーを表すユーザーを作成します（[ユーザーアカウントの作成](enabling-single-sign-on-aem.md#create-a-user-account)を参照）。複数のドメインで SPNEGO を使用するように設定している場合、これらの各ユーザーのパスワードが異なっていることを確認してください。パスワードが同じ場合、SPNEGO SSO は機能しません。
@@ -141,7 +149,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 ### SPNEGO クライアントブラウザー設定の設定 {#configuring-spnego-client-browser-settings}
 
-SPNEGO ベースの認証を機能させるには、ユーザーアカウントを作成しているドメインにクライアントコンピューターが含まれている必要があります。また、SPNEGO ベースの認証を許可するようにクライアントブラウザーを設定する必要があります。さらに、SPNEGO ベースの認証を必要とするサイトを、信頼できるサイトにする必要があります。
+SPNEGO ベースの認証を機能させるには、ユーザーアカウントを作成しているドメインにクライアントコンピューターが含まれている必要があります。また、SPNEGO ベースの認証を許可するようにクライアントブラウザーを設定する必要があります。また、SPNEGO ベースの認証を必要とするサイトは、信頼できるサイトである必要があります。
 
 https://lcserver:8080 などのコンピューター名を使用してサーバーにアクセスする場合、Internet Explorer での設定は不要です。入力した URL にドット（「.」）が含まれていない場合は、Internet Explorer はそのサイトをローカルなイントラネットサイトとして扱います。サイトに完全修飾名を使用している場合は、サイトを信頼できるサイトとして追加する必要があります。
 
@@ -167,3 +175,21 @@ https://lcserver:8080 などのコンピューター名を使用してサーバ�
    `lcserver.um.lc.com` - 特定のサーバーだけに SPNEGO を許可するように Firefox が設定されます。ドット（「.」）から始めないでください。
 
 1. アプリケーションにアクセスして、設定をテストします。ターゲットアプリケーションのようこそページが表示されます。
+
+をクリックして、「ユーザーとグループへの役割の割り当て [ の手順を確認し ](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#assign-roles-to-users-and-groups-assign-roles-to-users-groups) す。
+
+## ユーザーとグループへの役割の割り当て {#assign-roles-to-users-groups}
+
+1. JEE 上のAEM Forms環境にログインします。
+1. 管理コンソールで、設定/User Management/ドメインの管理をクリックします。
+1. ドメイン設定（例：LDAP）を選択し、クリックします。 ディレクトリに、作成されたすべてのユーザーとグループが表示されます。 必要に応じて、新しいユーザーまたはグループを作成できます。
+   ![ ドメイン管理ページ ](/help/forms/using/assets/domain-mgmt-page.png)
+1. [ 認証 ] をクリックします。新しいページで、LDAP などの認証プロバイダを選択します。
+1. 「Domain Management」ページに移動し、「LDAP」を選択して「**Syn Now**」をクリックし、AEMアクセス用にディレクトリを構成した認証スキームと同期させます。
+   ![LDAP の同期 ](/help/forms/using/assets/sync-ldap.png)
+1. User Management に移動し、「ユーザーとグループ」をクリックします。
+1. 次の画像に示すように、ユーザーまたはグループを名前で検索します。
+   ![ ユーザーグループを検索 ](/help/forms/using/assets/search-user-group.png)
+1. 必要に応じて、役割をユーザーまたはグループに割り当てます。
+   ![ ユーザーロールの割り当て ](/help/forms/using/assets/user-role-assign.png)
+
