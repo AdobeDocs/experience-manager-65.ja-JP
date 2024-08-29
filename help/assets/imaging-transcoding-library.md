@@ -6,10 +6,10 @@ role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 9014a7dd3c9279a4da3944c1b095fd60352fdbeb
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 100%
+source-wordcount: '977'
+ht-degree: 98%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
-画像トランスコーディングライブラリは、RHEL 7 および CentOS 7 ディストリビューションでのみ使用できます。
+画像トランスコーディングライブラリは、RHEL 8、RHEL 7 および CentOS 7 ディストリビューションでのみ使用できます。
 
 >[!NOTE]
 >
