@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
 source-git-commit: 1fa3a56d2868cad0e1b54bf3fe1b018061b4b7a8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4394'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -544,7 +544,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。 このサービスでは、PDF やログファイルの形式で出力を生成しません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （CQDOC-21680）
 
-* AEM 6.5 Forms サービスパック 18 （6.5.18.0）またはAEM 6.5 Forms サービスパック 19 （6.5.19.0）をAEM 6.5 Forms サービスパック 20 （6.5.20.0）またはAEM 6.5 Forms AEM サービスパック 21 （6.5.21.0）に更新すると、JSP コンパイルエラーが発生して、アダプティブフォームを開いたり作成したりできなくなり、ページエディター、AEM Forms UI、AEM Workflow Editor、AEM System Overview UI その。 （FORMS-15256）
+* ユーザーが AEM 6.5 Forms サービスパック 18（6.5.18.0）または AEM 6.5 Forms サービスパック 19（6.5.19.0）から、AEM 6.5 Forms サービスパック 20（6.5.20.0）または AEM 6.5 Forms サービスパック 21（6.5.21.0）にアップデートすると、JSP コンパイルエラーが発生し、アダプティブフォームを開いたり作成したりすることができなくなります。これにより、ページエディター、AEM Forms UI、AEM ワークフローエディター、AEM システム概要 UI などの他の AEM インターフェイスでもエラーが発生します。（FORMS-15256）
 
   このような問題が発生した場合は、次の手順を実行して解決します。
    1. CRXDE のディレクトリ `/libs/fd/aemforms/install/` に移動します。
