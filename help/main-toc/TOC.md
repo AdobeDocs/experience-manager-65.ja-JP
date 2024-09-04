@@ -6,8 +6,8 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: ab8248e9d0df67bed3c2d5ad3fadce08db2e9ba0
-workflow-type: ht
+source-git-commit: ca896466072225cc57d7c0c4f008294cc60f7b94
+workflow-type: tm+mt
 source-wordcount: '7448'
 ht-degree: 100%
 
@@ -620,7 +620,6 @@ ht-degree: 100%
       + [コアコンポーネントベースのアダプティブフォームを作成](/help/forms/using/create-an-adaptive-form-core-components.md)
       + [アダプティブフォームでのアダプティブフォームフラグメントの作成と使用](/help/forms/using/adaptive-form-fragment-core-components.md)
       + [コアコンポーネントベースアダプティブフォームのテーマの作成](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
-      + [アダプティブフォームでのカスタム関数の作成と使用](/help/forms/using/create-and-use-custom-functions.md)
       + [ルールエディター](/help/forms/using/rule-editor-core-components.md)
       + [アダプティブフォームコアコンポーネントでのカスタム関数の作成と使用](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [コアコンポーネントベースのアダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
@@ -677,6 +676,7 @@ ht-degree: 100%
       + [Adobe Sign の AEM Forms への統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)
       + [フォームのアセットのレビューの作成と管理](/help/forms/using/create-reviews-forms.md)
       + [AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの組み込み](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
+      + [アダプティブフォームでのカスタム関数の作成と使用](/help/forms/using/create-and-use-custom-functions.md)
       + [アダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
    + インタラクティブコミュニケーション {#interactive-communications}
       + [インタラクティブ通信オーサリング UI の概要](/help/forms/using/introduction-interactive-communication-authoring.md)
