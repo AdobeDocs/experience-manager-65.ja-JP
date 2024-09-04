@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media を操作する
-description: Dynamic Media を使用して、Web、モバイルおよびソーシャルサイトで使用するためにアセットを配信する方法を学習します。
+description: ソフトウェアを使用して、web、モバイルおよびソーシャルサイトのアセットを配信する方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
@@ -9,26 +9,26 @@ role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Collaboration,Asset Management
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d6b9dde5201198cb073293b2b8527a458836ff0b
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 100%
+source-wordcount: '416'
+ht-degree: 51%
 
 ---
 
-# Dynamic Media の操作 {#working-with-dynamic-media}
+# Dynamic Media を操作する  {#working-with-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html) は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html) は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。このソフトウェアは、一連のプライマリソースアセットを使用して、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、リッチコンテンツの複数のバリエーションをリアルタイムで生成および配信します。
 
-Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな視聴エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡素化および効率化します。
+このソフトウェアは、ズーム、360 度スピン、ビデオなどのインタラクティブな視聴エクスペリエンスを提供します。 Adobe Experience Manager デジタルアセット管理（Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
 
 <!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
 >A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
-## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
+## ソフトウェアの機能 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Media を使用すると、アセットを公開する前に管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
+ソフトウェアを使用すると、アセットを公開する前に管理できます。 一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
 
 Dynamic Media 限定の機能は次のとおりです。
 
@@ -53,23 +53,23 @@ Dynamic Media 限定の機能は次のとおりです。
 
 ## Dynamic Media が有効な場合と無効な場合の比較 {#dynamic-media-on-versus-dynamic-media-off}
 
-Dynamic Media が有効（オン）になっているかどうかは、次の特徴から判断できます。
+ソフトウェアが有効（オン）になっているかどうかは、次の特性によって判断できます。
 
 * アセットのダウンロードやプレビューで動的レンディションを使用できる。
 * 画像セット、スピンセット、混在メディアセットを使用できる。
 * PTIFF レンディションが作成されている。
 
-画像アセットを選択した場合、Dynamic Media を[有効](config-dynamic.md#enabling-dynamic-media)にしているときとアセットのビューが異なります。Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
+画像アセットを選択した場合、そのアセットのビューはソフトウェアで異なります [ 有効 ](config-dynamic.md#enabling-dynamic-media)。 オンデマンドのHTML5 ビューアを使用します。
 
 ### 動的レンディション {#dynamic-renditions}
 
-「**[!UICONTROL 動的]**」の下にある画像プリセットやビューアプリセットなどの動的レンディションは、Dynamic Media が有効な場合に使用できます。
+ソフトウェアが有効な場合、画像やビューアのプリセット（「動的 **[!UICONTROL の下]**）などの動的レンディションを使用できます。
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
 ### 画像セット、スピンセット、混在メディアセット {#image-sets-spins-sets-mixed-media-sets}
 
-画像セット、スピンセットおよび混在メディアセットは、Dynamic Media が有効な場合に使用できます。
+このソフトウェアが有効になっている場合は、画像セット、スピンセット、混在メディアセットを使用できます。
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -81,10 +81,10 @@ Dynamic Media 対応のアセットには `pyramid.tiffs` が含まれます。
 
 ### アセットのビューの変化 {#asset-views-change}
 
-Dynamic Media を有効にした場合、`+` および `-` ボタンをクリックして、ズームインおよびズームアウトできます。クリックして、特定のエリアにズームインすることもできます。「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像を全画面表示にすることができます。Dynamic Media を有効にした場合の画面は次のようになります。
+ソフトウェアを有効にした状態で、[`+`] ボタンと [`-`] ボタンをクリックすると、拡大ズームと縮小ズームができます。 クリックして、特定のエリアにズームインすることもできます。「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像を全画面表示にすることができます。ソフトウェアを有効にすると、次のようになります。
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-Dynamic Media を無効にした場合は、次のようにズームイン、ズームアウトおよび元のサイズに戻す操作が可能です。
+ソフトウェアを無効にした状態で、ズームイン/ズームアウトして元のサイズに戻すことができます。
 
 ![chlimage_1-362](assets/chlimage_1-362.png)

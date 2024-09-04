@@ -6,8 +6,8 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: ca896466072225cc57d7c0c4f008294cc60f7b94
-workflow-type: ht
+source-git-commit: caf2d5b4f03823e57c579eafdd47b52ef9357493
+workflow-type: tm+mt
 source-wordcount: '7448'
 ht-degree: 100%
 
@@ -337,7 +337,7 @@ ht-degree: 100%
          + [ページへの Dynamic Media アセットの追加](/help/sites-classic-ui-authoring/dynamic-media-assets-adding-to-page.md)
          + [Scene7 機能をページに追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
          + [ビデオ](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
-         + [Dynamic Media の操作](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
+         + [Dynamic Media を操作する ](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
          + [アセットの命名規則のテスト](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 + アセット {#assets}
    + [DAM について](/help/assets/assets.md)

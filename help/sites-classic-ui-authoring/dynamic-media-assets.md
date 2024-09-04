@@ -9,10 +9,10 @@ exl-id: b00d83ab-aeec-4199-bfe4-4f928fb49930
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: caf2d5b4f03823e57c579eafdd47b52ef9357493
 workflow-type: tm+mt
 source-wordcount: '200'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな視聴エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡素化および効率化します。
 
-クラシック UI では Dynamic Media を操作できません。タッチ操作向け UI について説明している [Dynamic Media の操作](/help/assets/dynamic-media.md)を参照してください。
+クラシック UI では Dynamic Media を操作できません。タッチ操作対応 UI について説明している [Dynamic Mediaの操作 ](/help/assets/dynamic-media.md) を参照してください。
 
 >[!NOTE]
 >
