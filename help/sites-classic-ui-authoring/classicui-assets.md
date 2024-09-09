@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: caf2d5b4f03823e57c579eafdd47b52ef9357493
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '80'
 ht-degree: 100%
 
@@ -21,5 +21,5 @@ ht-degree: 100%
 [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md)のセクションでは、ページの編集中にアセットを検索して使用するための[!UICONTROL コンテンツファインダー]の使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
 
 * [ページへの Dynamic Media Classic 機能の追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
-* [Dynamic Media を操作する ](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
+* [Dynamic Media の操作](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
 * [アセットの命名規則](/help/sites-classic-ui-authoring/asset-naming-conventions.md)

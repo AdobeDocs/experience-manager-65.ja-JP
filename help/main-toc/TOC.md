@@ -7,7 +7,7 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: caf2d5b4f03823e57c579eafdd47b52ef9357493
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7448'
 ht-degree: 100%
 
@@ -337,7 +337,7 @@ ht-degree: 100%
          + [ページへの Dynamic Media アセットの追加](/help/sites-classic-ui-authoring/dynamic-media-assets-adding-to-page.md)
          + [Scene7 機能をページに追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
          + [ビデオ](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
-         + [Dynamic Media を操作する ](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
+         + [Dynamic Media の操作](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
          + [アセットの命名規則のテスト](/help/sites-classic-ui-authoring/asset-naming-conventions.md)
 + アセット {#assets}
    + [DAM について](/help/assets/assets.md)
@@ -361,7 +361,7 @@ ht-degree: 100%
    + Dynamic Media {#dynamic}
       + [Experience League 提供の ニュースレターアーカイブ](/help/assets/dynamic-media-newsletter.md)
       + [Dynamic Media をセットアップする](/help/assets/administering-dynamic-media.md)
-      + [Dynamic Media を使用する](/help/assets/dynamic-media.md)
+      + [Dynamic Media の操作](/help/assets/dynamic-media.md)
       + [Dynamic Media - Scene7 モードの設定](/help/assets/config-dms7.md)
       + [任意 - Dynamic Media の設定 - Scene7 モード、一般設定](/help/assets/dm-general-settings.md)
       + [任意 - Dynamic Media の設定 - Scene7 モード、公開設定](/help/assets/dm-publish-settings.md)
