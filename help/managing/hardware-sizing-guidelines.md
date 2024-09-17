@@ -5,9 +5,9 @@ exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
-source-git-commit: 9eeba0532a9eddb668b8488218c0570ca2241439
+source-git-commit: 658e1f6e07fb1219ba186137eb8403bf85383723
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1351'
 ht-degree: 98%
 
 ---
@@ -89,8 +89,6 @@ ht-degree: 98%
 * コンテンツ全体の経時的増大
 
 オンライン、オフラインおよびリビジョンのクリーンアップ中は、ディスク容量が継続的に監視されます。使用可能なディスク容量が臨界値を下回った場合、プロセスはキャンセルされます。臨界値とは、リポジトリのその時点でのディスクフットプリントの 25％であり、変更はできません。ディスクのサイズは、予想されるリポジトリの増加分を含めたリポジトリサイズの 2 倍または 3 倍にすることをお勧めします。
-
-データの冗長性を確保するために、独立したディスク（RAID、例えば RAID10）の冗長配列を設定することを検討してください。
 
 ### 仮想化 {#virtualization}
 
