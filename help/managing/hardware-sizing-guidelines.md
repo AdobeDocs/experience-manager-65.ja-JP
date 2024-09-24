@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
 source-git-commit: 658e1f6e07fb1219ba186137eb8403bf85383723
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1351'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -107,17 +107,17 @@ AEM は仮想環境でも動作しますが、CPU や I/O などの要素につ�
 必要なクラスターノードの推定数は、特定の web プロジェクトの基本要件および特定のユースケースによって決まります。
 
 * フェイルセーフの観点では、すべての環境において、障害の重大度を特定し、クラスターノードのリカバリー所要時間に基づいて障害補償時間を決定する必要があります。
-* スケーラビリティの面から考えると、基本的には書き込み操作数が最も重要な要素になります。 読み取り操作のみを行うためにシステムにアクセスする場合は、操作を負荷分散することができます。詳しくは、[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) を参照してください。
+* スケーラビリティの面から考えると、基本的には書き込み操作数が最も重要です。読み取り操作のみを行うのにシステムにアクセスする場合は、操作を負荷分散することができます。詳しくは、[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) を参照してください。
 
 ### ハードウェアに関する推奨事項 {#hardware-recommendations}
 
 通常、オーサー環境では、パブリッシュ環境に推奨されているものと同じハードウェアを使用できます。一般的に、web サイトのトラフィックはオーサリングシステムでは少なくなりますが、キャッシュの効率も低下します。ただし、ここで基本的な要因となるのは、同時操作している作成者の数と、システムに対するアクションの種類です。一般に、（オーサー環境の）AEM クラスタリングは読み取り操作のスケーリングを行うのに最も効果的です。言い換えると、AEM クラスターのスケーリングは、基本的な編集操作を行う作成者にとって適切に機能します。
 
-## その他のユースケース固有の計算 {#additional-use-case-specific-calculations}
+## その他のユースケース用の計算 {#additional-use-case-specific-calculations}
 
 デフォルト web アプリケーション用の計算に加え、次のユースケースに固有の要因を考慮します。計算された値は、デフォルトの計算結果に加算されます。
 
-### Assets固有の考慮事項 {#assets-specific-considerations}
+### アセットに固有な考慮事項 {#assets-specific-considerations}
 
 デジタルアセットを大規模に処理するには、最適化されたハードウェアリソースが必要になります。最も関連する要因は、画像サイズと、処理された画像のピーク時のスループットです。
 
@@ -146,7 +146,7 @@ AEM は仮想環境でも動作しますが、CPU や I/O などの要素につ�
 
 また、同時に並行して作成者が作業していることも考慮します。AEM MSM のユースケースで予定よりも多くのリソースが消費されると、作成者はパフォーマンスの低下に気付くことになります。
 
-### AEM Communitiesのサイズ設定に関する考慮事項 {#aem-communities-sizing-considerations}
+### AEM Communities のサイジングの考慮事項 {#aem-communities-sizing-considerations}
 
 AEM Communities の機能を含む AEM Sites （コミュニティサイト）には、パブリッシュ環境のサイト訪問者（メンバー）から高レベルのインタラクションがあります。
 
