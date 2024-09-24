@@ -8,9 +8,9 @@ feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
-workflow-type: tm+mt
-source-wordcount: '6409'
+source-git-commit: 60414285277281d9b1e0c9d93ddf04bc267fd0fb
+workflow-type: ht
+source-wordcount: '6388'
 ht-degree: 100%
 
 ---
@@ -5069,24 +5069,26 @@ PDF API の自動タグ付けは、PDF ドキュメントにタグを追加し�
 
 ![自動タグ付き PDF ドキュメント](assets/auto-tag-api.png)
 
-**構文**：`tag(Document inDoc)`
+<!--
 
-**入力パラメーター**
+**Syntax**: `tag(Document inDoc)`
+
+**Input Parameters**
 
 <table>
  <tbody>
   <tr>
-   <th>パラメーター</th>
-   <th>説明</th>
+   <th>Parameters</th>
+   <th>Description</th>
   </tr>
   <tr>
    <td><code>inDoc</code><br /> </td>
-   <td>PDF を含む document オブジェクトです。<br /> </td>
+   <td>Document object containing PDF.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-次の Java コードは、PDF ドキュメントにリストと段落のタグを付けます。
+The following Java code tags the PDF document with lists and paragraphs.
 
 ```java
 /*************************************************************************
@@ -5167,4 +5169,6 @@ StructLib.AutoTagDoc(outDoc);
 }
         return outDoc;
 }
+
 ```
+-->
