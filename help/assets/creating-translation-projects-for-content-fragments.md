@@ -9,10 +9,10 @@ feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 7bf70ba18603bfd17dec391ddcd623e9085fbd04
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager（AEM）Assets は、アセットだけでなく、[コ
 
 **言語コピーを更新**
 
-ソースコンテンツフラグメントが更新または変更される場合、対応するロケール／言語固有のコンテンツフラグメントを再度翻訳する必要があります。言語コピーを更新ワークフローは、コンテンツフラグメントの追加のグループを翻訳して、特定のロケールの言語コピーに含めます。この場合、翻訳されたコンテンツフラグメント、既に翻訳済みのコンテンツフラグメントが含まれているターゲットフォルダーに追加されます。
+ソースコンテンツフラグメントが更新または変更される場合、対応するロケール／言語固有のコンテンツフラグメントを再度翻訳する必要があります。言語コピーを更新ワークフローは、コンテンツフラグメントの追加グループを翻訳し、特定のロケールの言語コピーに含めます。 この場合、翻訳されたコンテンツフラグメント、既に翻訳済みのコンテンツフラグメントが含まれているターゲットフォルダーに追加されます。
 
 ## 作成と翻訳ワークフロー {#create-and-translate-workflow}
 
