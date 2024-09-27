@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 1fa3a56d2868cad0e1b54bf3fe1b018061b4b7a8
-workflow-type: ht
-source-wordcount: '4394'
-ht-degree: 100%
+source-git-commit: f87f762068992695ffd6e24f572281653cf9f75f
+workflow-type: tm+mt
+source-wordcount: '4500'
+ht-degree: 97%
 
 ---
 
@@ -559,6 +559,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * Linux 環境のユーザーがアダプティブフォーム（JEE 上）を HTML でレンダリングすると、正しくレンダリングされません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921957）
 * ユーザーが AEM Forms JEE の Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE` が発生して失敗します。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921720）
 * JEE サーバーで AEM Forms サービスパック 18（6.5.18.0）にアップグレードした後、ユーザーがフォームを送信すると、HTML5 または PDF フォームのレンダリングに失敗し、XMLFM がクラッシュします。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921718）
+* インタラクティブ通信エージェント UI の印刷プレビューで、すべてのフィールド値に通貨記号（ドル記号$など）が一貫して表示されません。 999 までの値の場合は表示されますが、1000 以上の値の場合はがありません。 （FORMS-16557）
+* インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対して行った変更は、IC エディターには反映されません。 （FORMS-16575）
+* インタラクティブ通信エージェント UI の印刷プレビューで、一部の計算値が正しく表示されません。 （FORMS-16603）
+* 印刷プレビューでレターを表示すると、コンテンツが変更されます。 一部のスペースが消え、特定の文字が「x」に置き換えられます。 （FORMS-15681）
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
