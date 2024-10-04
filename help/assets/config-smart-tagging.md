@@ -5,16 +5,16 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 110636c0208a23e0b088e19fe47c38f28adb9bdd
+source-git-commit: fed35f2b90e2b8fd9e7240abf3b25e3650fa31c2
 workflow-type: tm+mt
 source-wordcount: '1980'
-ht-degree: 80%
+ht-degree: 79%
 
 ---
 
 # スマートタグ付けのために [!DNL Assets] を準備 {#configure-asset-tagging-using-the-smart-content-service}
 
-スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを使用します。設定が完了したら、いくつかの画像とタグを使用してサービスのトレーニングを行います。
+スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを使用します。設定が完了したら、画像とタグをいくつか使用してサービスのトレーニングを行います。
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ To configure the Smart Content Service, follow these top-level steps:
    | -------- | ---------------------------- |
    | タイトル | 設定する IMS アカウントのタイトルを追加します。 |
    | 関連付けられている Adobe IMS 設定 | ドロップダウンから「設定」を選択します。 |
-   | サービス URL | `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`といったアドバイスを耳にしたことがある方もいるでしょう。（例：`https://smartcontent.adobe.io/apac`）。Experience Manager オーサーインスタンスがホストされている地域として、`na`、`emea` または `apac` を指定することができます。 |
+   | サービス URL | `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>` に移行することで使用を置き換えることができます。（例：`https://smartcontent.adobe.io/apac`）。Experience Manager オーサーインスタンスがホストされている地域として、`na`、`emea` または `apac` を指定することができます。 |
 
    >[!NOTE]
    >
