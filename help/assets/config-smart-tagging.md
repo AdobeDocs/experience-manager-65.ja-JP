@@ -5,7 +5,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: fed35f2b90e2b8fd9e7240abf3b25e3650fa31c2
+source-git-commit: 6729a2dbd8c761eb1bba84d8efba7393ac686190
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 79%
@@ -21,7 +21,7 @@ ht-degree: 79%
 >* [!DNL Experience Manager Assets] オンプレミスの新規のお客様には、スマートコンテンツサービスをご利用いただけなくなりました。既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスをご使用いただけます。
 >* スマートコンテンツ サービスは、この機能を既に有効にしている既存の [!DNL Experience Manager Assets] Managed Services のお客様にご利用いただけます。
 >* Experience Manager Assets Managed Servicesの新規のお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定してください。
->* サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](#config-smart-tagging.md) を参照してください。
+>* サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](config-oauth.md) を参照してください。
 >* サービスパック 21 で Oauth 統合をサポートするには、[SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールする必要があります。
 >* 既存の SCS 設定の場合、このプロセスは新しい OAuth 統合の設定と同じです。 レガシー設定は自動的にクリーンアップされます。
 
