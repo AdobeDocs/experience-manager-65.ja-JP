@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader,Architect,Data Architect,User
 source-git-commit: a4ccee3e8256c098339fb5308b1b4214e67b8b74
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1744'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -20,13 +20,13 @@ Adobe Experience Manager（AEM）は、web コンテンツのアクセシビリ�
 
 >[!NOTE]
 >
->WCAG 2.1 は、2008 年に発行した以前のバージョン WCAG 2.0 を更新したものです。[WCAG 2.1 - WCAG 2.0 との比較](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0)を参照してください。
+>WCAG 2.1 は、2008 年に発行した以前のバージョン WCAG 2.0 を更新したものです。詳しくは、[WCAG 2.1 - WCAG 2.0 との比較](https://www.w3.org/TR/WCAG21/#comparison-with-wcag-2-0)を参照してください。
 
 >[!NOTE]
 >
->これらのドキュメントはガイドラインの [ 更新版 ](https://www.w3.org/TR/) を記述したので、WCAG 2.2 は 2023 年 10 月に利用可能になりました。
+>これらのドキュメントを[ガイドラインの更新されたバージョンとして記述したので、WCAG 2.2](https://www.w3.org/TR/) は 2023年10月に使用可能になりました。
 >
->[WCAG 2.1 との比較 ](https://www.w3.org/TR/WCAG/#comparison-with-wcag-2-1) および [WCAG 2.2 の新機能 ](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-2) を参照してください。
+>詳しくは、[WCAG 2.1 との比較](https://www.w3.org/TR/WCAG/#comparison-with-wcag-2-1)および [WCAG 2.2 の新機能](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-2)を参照してください。
 
 WCAG 2.1 は、障がい者が web コンテンツにアクセスして利用できるようにするための、テクノロジーから独立した一連のガイドラインおよび達成基準で構成されています。これらのガイドラインでは、web コンテンツの作成者、デザイナー、開発者を対象として、視覚障害、難聴、学習障害、加齢に伴う制限などの障害の有無に関係なく、できるだけ多くのユーザーができるだけ容易にアクセスできるリソースを作成するようにアドバイスしています。
 
