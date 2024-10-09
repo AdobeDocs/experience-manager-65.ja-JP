@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 6729a2dbd8c761eb1bba84d8efba7393ac686190
+source-git-commit: 7cc1722617b463fa5da5b965215cd91cc8ea8fb0
 workflow-type: tm+mt
-source-wordcount: '1980'
-ht-degree: 79%
+source-wordcount: '2193'
+ht-degree: 71%
 
 ---
 
@@ -31,6 +31,35 @@ ht-degree: 79%
 * [スマートコンテンツサービスのトレーニング](#training-the-smart-content-service)
 
 * 最新の[[!DNL Experience Manager] サービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールします。
+
+## AdobeManaged Servicesの OAuth をサポートするための SCS アップグレード {#scs-upgrade-oauth-managed-services}
+
+**新規ユーザー**
+
+サービスパック 21 をインストールします。 サービスパック 21 で Oauth 統合をサポートするには、[SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールする必要があります。
+
+この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
+
+**既存のユーザー**
+
+サービスパック 21 にアップグレードした場合は、Oauth 統合をサポートするために [SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールします。 既存の設定は自動的に削除されます。 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
+
+サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](config-oauth.md) を参照してください。
+
+## オンプレミスユーザーの Oauth をサポートするための SCS アップグレード {#scs-upgrade-oauth-on-premise}
+
+**新規ユーザー**
+
+[!DNL Experience Manager Assets] オンプレミスの新規ユーザーには、スマートコンテンツサービスが利用できなくなりました。
+
+**既存のユーザー**
+
+既にこの機能を有効にしている既存のオンプレミスユーザーは、引き続きスマートコンテンツサービスを使用できます。
+
+サービスパック 21 にアップグレードした場合は、Oauth 統合をサポートするために [SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールします。 既存の設定は自動的に削除されます。 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
+
+サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](config-oauth.md) を参照してください。
+
 
 ## と Adobe 開発者コンソールの統合 {#integrate-adobe-io}
 
