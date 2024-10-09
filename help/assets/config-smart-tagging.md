@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7cc1722617b463fa5da5b965215cd91cc8ea8fb0
+source-git-commit: 09f7cf283c67adcc0a14d6a3a75bfdeafc37d151
 workflow-type: tm+mt
-source-wordcount: '2193'
-ht-degree: 71%
+source-wordcount: '2061'
+ht-degree: 74%
 
 ---
 
@@ -16,14 +16,16 @@ ht-degree: 71%
 
 スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを使用します。設定が完了したら、画像とタグをいくつか使用してサービスのトレーニングを行います。
 
+<!--
 >[!NOTE]
 >
->* [!DNL Experience Manager Assets] オンプレミスの新規のお客様には、スマートコンテンツサービスをご利用いただけなくなりました。既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスをご使用いただけます。
->* スマートコンテンツ サービスは、この機能を既に有効にしている既存の [!DNL Experience Manager Assets] Managed Services のお客様にご利用いただけます。
->* Experience Manager Assets Managed Servicesの新規のお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定してください。
->* サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](config-oauth.md) を参照してください。
->* サービスパック 21 で Oauth 統合をサポートするには、[SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールする必要があります。
->* 既存の SCS 設定の場合、このプロセスは新しい OAuth 統合の設定と同じです。 レガシー設定は自動的にクリーンアップされます。
+>* Smart Content Services is no longer available to new [!DNL Experience Manager Assets] On-Premise customers. Existing On-Premise customers, who already have this capability enabled, can continue using Smart Content Services.
+>* Smart Content Services is available for existing [!DNL Experience Manager Assets] Managed Services customers, who already have this capability enabled.
+>* New Experience Manager Assets Managed Services customers can follow the instructions mentioned in this article to set up Smart Content Services.
+>* For Service Pack 20 and older, you need to perform the workaround steps for SCS to support Oauth integration. See [Troubleshooting smart tags for OAuth credentials](config-oauth.md).
+>* To support the Oauth integration on Service Pack 21, you need to install the [Hotfix for SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip). 
+>* For Existing SCS configuration, the process is the same as setting up a new OAuth integration. Any legacy configuration will be automatically cleaned up.
+-->
 
 スマートコンテンツサービスを使用する前に、次を確認します。
 
