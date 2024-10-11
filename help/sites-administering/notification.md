@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 source-git-commit: aa91b0f84929affb527c57cf92d7b4714c98ba74
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2141'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -301,9 +301,9 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 >[!WARNING]
 >
->この設定を完了した後に OSGi 設定の値 *CQ メーラー SMTP OAuth2 Provide* を変更した場合は、次の手順に従って **再認証を行う必要があります**。
+>この設定を完了した後に OSGi 設定の **CQ Mailer SMTP OAuth2 Provide** の&#x200B;*いずれか*&#x200B;の値を変更した場合は、次の手順に従って再認証を行う必要があります。
 >
->これらが実行されない場合、`/conf/global/settings/mailer/oauth` に保存されているアクセストークンは無効になり、SMTP サーバーへの OAuth2 接続が失敗します。
+>これらが実行されない場合、`/conf/global/settings/mailer/oauth` に保存されているアクセストークンが無効になり、SMTP サーバーへの OAuth2 接続が失敗します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます
 1. **CQ Mailer SMTP OAuth2 Provider** を探して、クリックします。
@@ -381,9 +381,9 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 >[!WARNING]
 >
->この設定を完了した後に OSGi 設定の値 *CQ メーラー SMTP OAuth2 Provide* を変更した場合は、次の手順に従って **再認証を行う必要があります**。
+>この設定を完了した後に OSGi 設定の **CQ Mailer SMTP OAuth2 Provide** の&#x200B;*いずれか*&#x200B;の値を変更した場合は、次の手順に従って再認証を行う必要があります。
 >
->これらが実行されない場合、`/conf/global/settings/mailer/oauth` に保存されているアクセストークンは無効になり、SMTP サーバーへの OAuth2 接続が失敗します。
+>これらが実行されない場合、`/conf/global/settings/mailer/oauth` に保存されているアクセストークンが無効になり、SMTP サーバーへの OAuth2 接続が失敗します。
 
 1. `http://serveraddress:serverport/system/console/configMgr` をブラウジングすることで、ローカルインスタンスの web コンソールに移動します。
 1. **Day CQ Mail Service** を探してクリックします。
