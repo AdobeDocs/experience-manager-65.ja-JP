@@ -8,13 +8,13 @@ solution: Experience Manager, Experience Manager Assets
 source-git-commit: 5b4153f83d725c307e23ea10c4ea151911d4d390
 workflow-type: tm+mt
 source-wordcount: '2062'
-ht-degree: 74%
+ht-degree: 99%
 
 ---
 
 # スマートタグ付けのために [!DNL Assets] を準備 {#configure-asset-tagging-using-the-smart-content-service}
 
-スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを使用します。設定が完了したら、画像とタグをいくつか使用してサービスのトレーニングを行います。
+スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを使用します。設定が完了したら、いくつかの画像とタグを使用してサービスのトレーニングを行います。
 
 <!--
 >[!NOTE]
@@ -34,33 +34,33 @@ ht-degree: 74%
 
 * 最新の[[!DNL Experience Manager] サービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールします。
 
-## AdobeManaged Servicesの OAuth をサポートするための SCS アップグレード {#scs-upgrade-oauth-managed-services}
+## Adobe Managed Services の OAuth をサポートする SCS アップグレード {#scs-upgrade-oauth-managed-services}
 
 **新規ユーザー**
 
-サービスパック 21 をインストールします。 サービスパック 21 での Oauth 統合をサポートするには、[ サービスパック 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールする必要があります。
+サービスパック 21 をインストールします。サービスパック 21 での Oauth 統合をサポートするには、[ サービスパック 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールする必要があります。
 
 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
 
 **既存のユーザー**
 
-サービスパック 21 にアップグレードした場合は、Oauth 統合をサポートするために [SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールします。 既存の設定は自動的に削除されます。 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
+サービスパック 21 にアップグレードした場合は、OAuth 統合をサポートする [SP 21 のホットフィックス](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)をインストールします。既存の設定はすべて自動的に削除されます。この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
 
-サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](config-oauth.md) を参照してください。
+サービスパック 20 以前の場合、SCS が OAuth 統合に対応する回避策を実行する必要があります。詳しくは、[OAuth 資格情報のスマートタグのトラブルシューティング](config-oauth.md)を参照してください。
 
-## オンプレミスユーザーの Oauth をサポートするための SCS アップグレード {#scs-upgrade-oauth-on-premise}
+## オンプレミスユーザーの OAuth をサポートする SCS アップグレード {#scs-upgrade-oauth-on-premise}
 
 **新規ユーザー**
 
-[!DNL Experience Manager Assets] オンプレミスの新規ユーザーには、スマートコンテンツサービスが利用できなくなりました。
+新規 [!DNL Experience Manager Assets] オンプレミスユーザーは、スマートコンテンツサービスを利用できなくなりました。
 
 **既存のユーザー**
 
 既にこの機能を有効にしている既存のオンプレミスユーザーは、引き続きスマートコンテンツサービスを使用できます。
 
-サービスパック 21 にアップグレードした場合は、Oauth 統合をサポートするために [SP 21 のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) をインストールします。 既存の設定は自動的に削除されます。 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
+サービスパック 21 にアップグレードした場合は、OAuth 統合をサポートする [SP 21 のホットフィックス](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)をインストールします。既存の設定はすべて自動的に削除されます。この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。
 
-サービスパック 20 以前の場合、OAUTH 統合をサポートするには SCS の回避策を実行する必要があります。 [OAuth 認証情報のスマートタグのトラブルシューティング ](config-oauth.md) を参照してください。
+サービスパック 20 以前の場合、SCS が OAuth 統合に対応する回避策を実行する必要があります。詳しくは、[OAuth 資格情報のスマートタグのトラブルシューティング](config-oauth.md)を参照してください。
 
 
 ## と Adobe 開発者コンソールの統合 {#integrate-adobe-io}
@@ -69,11 +69,11 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 スマートコンテンツサービスを設定するには、次のトップレベルの手順に従います。
 
-1. [Adobe Developer Console](#create-adobe-io-integration) で統合を作成します。
+1. [Adobe Developer Console](#create-adobe-io-integration) での統合の作成
 
-1. API キーやその他のAdobe Developer Consoleの資格情報を使用して ](#create-ims-account-config)[IMS テクニカルアカウント設定」を作成します。
+1. Adobe Developer Console の API キーおよびその他の資格情報を使用して、[IMS テクニカルアカウント設定](#create-ims-account-config)を作成します。
 
-1. [ スマートコンテンツサービスの設定 ](#configure-smart-content-service)。
+1. [スマートコンテンツサービスの設定](#configure-smart-content-service)
 
 1. [設定をテストします](#validate-the-configuration)。
 
@@ -91,17 +91,17 @@ To configure the Smart Content Service, follow these top-level steps:
 
    1. [Test the configuration](#validate-the-configuration).-->
 
-### Adobe 開発者コンソール統合の作成 {#create-adobe-io-integration}
+### Adobe Developer Console 統合の作成 {#create-adobe-io-integration}
 
-スマートコンテンツサービス API を使用するには、Adobe Developer Consoleで統合を作成して、[!UICONTROL API キー ] （Adobe Developer Console統合の [!UICONTROL  クライアント ID] フィールドで生成）、[!UICONTROL  組織 ID]、および [!UICONTROL  クライアント秘密鍵 ] を、[!DNL Experience Manager] のクラウド設定の [!UICONTROL Assets スマートタグサービス設定 ] 用に取得します。
+スマートコンテンツサービス API を使用するには、Adobe Developer Console で統合を作成して、[!UICONTROL API キー]（Adobe Developer Console 統合の[!UICONTROL クライアント ID] フィールドで生成）、[!UICONTROL 組織 ID] および[!UICONTROL クライアント秘密鍵]を、[!DNL Experience Manager] のクラウド設定の [!UICONTROL Assets スマートタグサービス設定]用に取得します。
 
-1. ブラウザーで [https://developer.adobe.com](https://developer.adobe.com/) にアクセスします。 適切なアカウントを選択し、関連付けられている組織の役割が system **administrator** であることを確認します。
+1. ブラウザーで [https://developer.adobe.com](https://developer.adobe.com/) にアクセスします。適切なアカウントを選択し、関連付けられた組織の役割が&#x200B;**システム管理者**&#x200B;であることを確認します。
 
 1. 任意の名前でプロジェクトを作成します。「**[!UICONTROL API を追加]**」をクリックします。
 
 1. **[!UICONTROL API を追加]**&#x200B;ページで、「**[!UICONTROL Experience Cloud]**」を選択し、「**[!UICONTROL スマートコンテンツ]**」を選択します。「**[!UICONTROL 次へ]**」をクリックします。
 
-1. **[!UICONTROL OAuth サーバー間]** を選択します。 **[!UICONTROL 次へ]** をクリックします。
+1. 「**[!UICONTROL OAuth サーバー間]**」を選択します。「**[!UICONTROL 次へ]**」をクリックします。
 この設定を行う方法について詳しくは、要件に応じて、Developer Console のドキュメントを参照してください。
 
    * 概要：
@@ -114,7 +114,7 @@ To configure the Smart Content Service, follow these top-level steps:
       * [サービスアカウント（JWT）資格情報から OAuth サーバー間資格情報への移行](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 
 
-1. **[!UICONTROL 製品プロファイルを選択]** ページで、「**[!UICONTROL スマートコンテンツサービス]**」を選択します。 「**[!UICONTROL 設定済み API を保存]**」をクリックします。
+1. **[!UICONTROL 製品プロファイルを選択]**&#x200B;ページで、「**[!UICONTROL スマートコンテンツサービス]**」を選択します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。
 
    設定に関する詳細情報がページに表示されます。このページを開いたままにしてこれらの値をコピーし、[!DNL Experience Manager] のクラウド設定の「[!UICONTROL Assets スマートタグサービス設定]」に追加して、スマートタグを設定します。
 
@@ -130,21 +130,21 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. IMS テクニカルアカウント設定ダイアログで、以下の値を使用します。
 
-   ![Adobe IMS設定ウィンドウ ](assets/adobe-ims-config.png)
+   ![Adobe IMS 設定ウィンドウ](assets/adobe-ims-config.png)
 
    | フィールド | 説明 |
    | -------- | ---------------------------- |
-   | クラウドソリューション | ドロップダウンから **[!UICONTROL スマートタグ]** を選択します。 |
+   | クラウドソリューション | ドロップダウンから「**[!UICONTROL スマートタグ]**」を選択します。 |
    | タイトル | 設定する IMS アカウントのタイトルを追加します。 |
-   | 認証サーバー | Add `https://ims-na1.adobelogin.com` |
-   | クライアント ID | [Adobe Developer コンソール ](https://developer.adobe.com/console/) から提供されます。 |
-   | クライアントの秘密鍵 | [Adobe Developer コンソール ](https://developer.adobe.com/console/) から提供されます。 |
-   | 範囲 | [Adobe Developer コンソール ](https://developer.adobe.com/console/) から提供されます。 |
-   | 組織 ID | [Adobe Developer コンソール ](https://developer.adobe.com/console/) から提供されます。 |
+   | 認証サーバー | `https://ims-na1.adobelogin.com` の追加 |
+   | クライアント ID | [Adobe Developer Console](https://developer.adobe.com/console/) から提供されます。 |
+   | クライアントの秘密鍵 | [Adobe Developer Console](https://developer.adobe.com/console/) から提供されます。 |
+   | 範囲 | [Adobe Developer Console](https://developer.adobe.com/console/) から提供されます。 |
+   | 組織 ID | [Adobe Developer Console](https://developer.adobe.com/console/) から提供されます。 |
 
-1. 作成した設定を選択し、「**[!UICONTROL ヘルスチェック]**」をクリックします。
+1. 作成した設定を選択し、「**[!UICONTROL ヘルスをチェック]**」をクリックします。
 
-1. ヘルスチェックダイアログボックスを確定し、設定が正常な状態になったら「閉じる」をクリックします。
+1. ヘルスをチェックダイアログボックスを確認し、設定が正常な状態になったら「閉じる」をクリックします。
 
 ### 新しい設定の作成 {#configure-smart-content-service}
 
@@ -159,13 +159,13 @@ To configure the Smart Content Service, follow these top-level steps:
 
 統合を設定するには、Adobe 開発者コンソール統合から、[!UICONTROL テクニカルアカウント ID]、[!UICONTROL 組織 ID]、[!UICONTROL クライアント秘密鍵]、および[!UICONTROL クライアント ID] の各フィールドの値を使用します。スマートタグのクラウド設定を作成すると、[!DNL Experience Manager] デプロイメントからの API 要求を認証できるようになります。
 
-1. [!DNL Experience Manager] で、**[!UICONTROL ツール]** /**[!UICONTROL Cloud Service]** / **[!UICONTROL スマートタグ]** に移動して [!UICONTROL  スマートタグ設定 ] を開きます。
+1. [!DNL Experience Manager] で、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL スマートタグ]**&#x200B;の順に移動して、「[!UICONTROL スマートタグ設定]」を開きます。
 
-1. **[!UICONTROL 作成]** をクリックして、新しい設定を作成します。 それ以外の場合は、「**[!UICONTROL プロパティ]**」をクリックして既存の設定を更新します。
+1. 「**[!UICONTROL 作成]**」をクリックして、新しい設定を作成します。それ以外の場合は、「**[!UICONTROL プロパティ]**」をクリックして既存の設定を更新します。
 
 1. 次のフィールドに入力します。
 
-   ![ スマートタグの設定 ](assets/smart-tags-config.png)
+   ![スマートタグの設定](assets/smart-tags-config.png)
 
    | フィールド | 説明 |
    | -------- | ---------------------------- |
@@ -193,7 +193,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. 「`com.day.cq.dam.similaritysearch.internal.impl (SCS)`」をクリックします。
 
-   ![Mbean ウィンドウ ](assets/mbean.png)
+   ![Mbean ウィンドウ](assets/mbean.png)
 
 1. 「`validateConfigs()`」をクリックします。**[!UICONTROL 設定を検証]**&#x200B;ダイアログで、「**[!UICONTROL 起動]**」をクリックします。
 
@@ -371,17 +371,17 @@ The validation results are displayed in the same dialog.
 
    ![「DAM アセットの更新」ワークフローで「サムネールを処理」ステップの後に「スマートタグアセット」ステップを追加](assets/smart-tag-in-dam-update-asset-workflow.png)
 
-1. ステップのプロパティを開いて詳細を変更します。 「**[!UICONTROL 詳細設定]**」で、「**[!UICONTROL ハンドラー処理の設定]**」オプションが選択されていることを確認します。
+1. ステップのプロパティを開いて詳細を変更します。「**[!UICONTROL 詳細設定]**」で、「**[!UICONTROL ハンドラー処理の設定]**」オプションが選択されていることを確認します。
 
    ![DAM アセットの更新ワークフローを設定して、スマートタグステップを追加する](assets/smart-tag-step-properties-workflow1.png)
 
-1. 自動タグ付けのステップに失敗してもワークフローを完了させたい場合は、「**[!UICONTROL 引数]**」タブで「**[!UICONTROL エラーを無視]**」を選択します。
+1. 自動タグ付けのステップに失敗してもワークフローを完了させる場合は、「**[!UICONTROL 引数]**」タブで「**[!UICONTROL エラーを無視]**」を選択します。
 
-   また、フォルダーでスマートタグが有効になっているかに関わらずアップロード時にアセットをタグ付けするには、「**[!UICONTROL スマートタグフラグを無視]**」を選択します。
+   さらに、フォルダーでスマートタグが有効になっているかに関わらずアップロード時にアセットをタグ付けするには、「**[!UICONTROL スマートタグフラグを無視]**」を選択します。
 
-   ![DAM アセットの更新ワークフローを設定してスマートタグステップを追加し、ハンドラー処理の設定を選択する](assets/smart-tag-step-properties-workflow2.png)
+   ![DAM アセットの更新ワークフローを設定してスマートタグステップを追加し、ハンドラー処理の設定を選択](assets/smart-tag-step-properties-workflow2.png)
 
-1. 完了 ![ 完了アイコン ](assets/do-not-localize/check-ok-done-icon.png) をクリックして、プロセスステップを閉じます。
+1. ![完了アイコン](assets/do-not-localize/check-ok-done-icon.png)をクリックして、プロセスステップを閉じます。
 
 1. 「**[!UICONTROL 同期]**」をクリックしてワークフローを保存します。
 
