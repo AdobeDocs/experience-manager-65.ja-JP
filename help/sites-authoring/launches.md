@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
 source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '831'
 ht-degree: 100%
 

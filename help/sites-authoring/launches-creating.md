@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
 source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1097'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -158,14 +158,14 @@ ht-degree: 95%
 
    「**完了**」を選択すると、**Sites** コンソールの&#x200B;**参照**&#x200B;レールに戻ります。適切なページを選択すると、新しいローンチが表示されます。
 
-### ローンチのクローン {#cloning-a-launch}
+### ローンチのクローンの作成 {#cloning-a-launch}
 
-ローンチのクローンは、[ ローンチコンソール ](/help/sites-authoring/launches.md#the-launches-console) から作成できます。
+ローンチは、[ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)からクローンを作成できます。
 
 * サムネールをタップまたはクリックして、ローンチを選択します。
 * ツールバーが表示されます。「クローン」を選択します。
    * クローンが作成され、コンソールに表示されます。
-   * **ローンチタイトル** は、クローンであることを示しています。 [ ローンチ設定 ](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration) （**プロパティ**）を編集してタイトルを更新できます。
+   * **ローンチタイトル**&#x200B;は、クローンであることを示しています。[ローンチ設定](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration)（**プロパティ**）を編集してタイトルを更新できます。
 
 ## ローンチの削除 {#deleting-a-launch}
 
