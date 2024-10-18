@@ -9,9 +9,9 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 2d6b0129d28dba954f9854c641386c4c2ad32765
+source-git-commit: 7fb3ec9654b56605321f0d12a4c1e23d2e18dab9
 workflow-type: tm+mt
-source-wordcount: '3323'
+source-wordcount: '3322'
 ht-degree: 58%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 58%
 
 スマートイメージングでは、各ユーザーに固有の閲覧特性を適用して、ユーザーのエクスペリエンス用に自動的に最適化された適切な画像を提供することで、より良いパフォーマンスとエンゲージメントをもたらします。
 
-## スマートイメージングとは  {#what-is-smart-imaging}
+## スマートイメージングについて {#what-is-smart-imaging}
 
 スマートイメージングテクノロジーは、Adobe Sensei AI 機能を適用し、既存の「画像プリセット」と連携して動作します。 クライアントのブラウザー機能に基づいて画像形式、サイズ、および画質を自動的に最適化し、画像配信のパフォーマンスを向上させます。
 
@@ -136,7 +136,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 * 以前は、元の画像と派生画像の両方がキャッシュされていて、キャッシュを無効にする 2 つの手順がありました。 最新のスマートイメージングでは、派生画像のみがキャッシュされ、1 ステップのキャッシュ無効化プロセスが可能です。
 * ルールセットでカスタムヘッダーを使用しているユーザーは、以前のバージョンのスマートイメージングとは異なってこれらのヘッダーがブロックされないので、最新のスマートイメージングのメリットが得られます。例えば、「画像応答へのカスタム接触チャネル値の追加|Dynamic Media Classic[ で推奨される「Timing Allow Header」や「X-Robot](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html) などです。
 
-## よくある質問 {#fag}
+## よくある質問
 
 +++スマートイメージングにはライセンス費用がかかりますか？
 
