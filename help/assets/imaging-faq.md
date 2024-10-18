@@ -9,10 +9,10 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 93e9f9318f71a0fd1004c49cc9b1b3d349a4c9ed
+source-git-commit: 2d6b0129d28dba954f9854c641386c4c2ad32765
 workflow-type: tm+mt
 source-wordcount: '3323'
-ht-degree: 56%
+ht-degree: 58%
 
 ---
 
@@ -138,7 +138,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 
 ## よくある質問 {#fag}
 
-+++スマートイメージングにはライセンス費用がかかりますか？{#are-there-any-licensing-costs-associated-with-smart-imaging}
++++スマートイメージングにはライセンス費用がかかりますか？
 
 いいえ。スマートイメージングは、既存のライセンスに含まれています。この規則は、Dynamic Media Classic または Experience Manager Dynamic Media（オンプレミス、AMS、および Experience Manager as a Cloud Service）に当てはまります。
 
@@ -148,7 +148,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 
 +++
 
-+++スマートイメージングはどのように機能しますか？{#how-does-smart-imaging-work}
++++スマートイメージングはどのように機能しますか？
 
 消費者が画像を要求すると、スマートイメージングはユーザーの特性を分析し、ブラウザーに基づいて適切な形式に変換します。 これらの形式変換は、視覚的忠実性を低下させない方法で行われます。スマートイメージングは、次のような方法で、ブラウザーの機能に基づいて、自動的に画像を別の形式に変換します。
 
@@ -170,7 +170,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 
 +++
 
-+++サポートされている画像形式は何ですか？{#what-image-formats-are-supported}
++++サポートされている画像形式は何ですか？
 
 スマートイメージングでは次の画像形式がサポートされています。
 
@@ -183,7 +183,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 
 +++
 
-+++スマートイメージングは、使用中の既存の画像プリセットとどのように連携しますか？{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
++++スマートイメージングは、使用中の既存の画像プリセットとどのように連携しますか？
 
 スマートイメージングは、既存の画像プリセットとシームレスに統合し、すべての画像設定を考慮します。
 
@@ -195,7 +195,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 
 <!--
 
-### Do I have to change any URLs, image presets, or deploy any new code on my site for Smart Imaging? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
+### Do I have to change any URLs, image presets, or deploy any new code on my site for Smart Imaging? 
 
 No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add code to your website to detect a user's browser. All of this functionality is handled automatically.
 
@@ -207,13 +207,13 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 <!-- OLD As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
-+++スマートイメージングは HTTPS で機能しますか？ HTTP/2 ではどうですか？ {#does-smart-imaging-working-with-https-how-about-http}
++++スマートイメージングは HTTPS で機能しますか？ HTTP/2 ではどうですか？
 
 スマートイメージングは、HTTP または HTTPS で配信された画像に対して機能します。また、HTTP/2 上でも機能します。
 
 +++
 
-+++スマートイメージングを使用するための資格を私は満たしていますか？{#am-i-eligible-to-use-smart-imaging}
++++スマートイメージングを使用するための資格を私は満たしていますか？
 
 スマートイメージングは、すべてのお客様がすぐにご利用いただけます。 その利点を活用するには、既存の URL またはプリセットに `bfc=on`、`dpr=on,dprValue`、`network=on` またはこれら 3 つのパラメーター設定をすべて追加します。
 
@@ -221,7 +221,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++アカウントでスマートイメージングを有効にするには、どうすればよいですか？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
++++アカウントでスマートイメージングを有効にするには、どうすればよいですか？
 
 スマートイメージングの使用を開始するには、既存の URL やプリセットに `bfc=on`、`dpr=on,dprValue`、`network=on` またはこれら 3 つのパラメーター設定をすべて追加します。 これらの変更を手動で行わない場合は、サポートケースを作成することで、スマートイメージングをデフォルトで有効にすることができます。
 
@@ -278,7 +278,7 @@ TTL を調整するには：
 
 +++
 
-+++アカウントでスマートイメージングが有効になるのはいつ頃ですか？{#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
++++アカウントでスマートイメージングが有効になるのはいつ頃ですか？
 
 カスタマーサポートは、待機リストに従って、リクエストを受け取った順序で処理します。
 
@@ -288,7 +288,7 @@ TTL を調整するには：
 
 +++
 
-+++スマートイメージングを使用するための切り替えに際しては、どのようなリスクがありますか？{#what-are-the-risks-with-switching-over-to-use-smart-imaging}
++++スマートイメージングを使用するための切り替えに際しては、どのようなリスクがありますか？
 
 顧客の Web ページを表示するリスクはありません。ただし、スマートイメージングにトランジションすると、CDN キャッシュがクリアされます。この操作では、Dynamic Media Classic や Dynamic Media on Experience Manager の新しい構成に移行します。
 
@@ -296,7 +296,7 @@ TTL を調整するには：
 
 +++
 
-+++スマートイメージングが想定どおりに機能しているかどうかを確認するには、どうすればよいですか？{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
++++スマートイメージングが想定どおりに機能しているかどうかを確認するには、どうすればいいですか？
 
 1. アカウントにスマートイメージングが設定されたら、ブラウザーで、Dynamic Media ClassicまたはAdobe Experience Manager - Dynamic Mediaの画像 URL を読み込みます。
 1. Chrome ブラウザーで&#x200B;**[!UICONTROL 表示]**／**[!UICONTROL デベロッパー]**／**[!UICONTROL デベロッパーツール]**&#x200B;に移動して、デベロッパーパネルを開きます。または、別のブラウザーのデベロッパーツールを使用します。
@@ -317,7 +317,7 @@ TTL を調整するには：
 
 +++
 
-+++パフォーマンスの向上を把握するにはどうすればよいですか？ スマートイメージングのメリットを知る方法はありますか？{#benefits}
++++パフォーマンスの向上を把握するにはどうすればよいですか？ スマートイメージングのメリットを知る方法はありますか？
 
 スマートイメージングのメリットはスマートイメージングヘッダーで決まります。スマートイメージングが有効な場合は、画像を要求すると、**[!UICONTROL 応答ヘッダー]**&#x200B;の見出し下に `-X-Adobe-Smart-Imaging` が表示されます（下の例のハイライト表示された部分を参照）。
 
@@ -342,13 +342,13 @@ TTL を調整するには：
 
 +++
 
-+++スマートイメージングで AVIF の最適化を無効にするにはどうすればよいですか？{#disable-avif}
++++スマートイメージングで AVIF の最適化を無効にするにはどうすればよいですか？
 
 WebP をデフォルトで提供する状態に戻す場合は、同様にサポートケースを作成します。通常どおり、画像の URL に `bfc=off` パラメーターを追加して、スマートイメージングをオフにできます。ただし、スマートイメージングの URL 修飾子で WebP または AVIF を選択することはできません。この機能は、会社アカウントレベルで維持管理されています。
 
 +++
 
-+++要求に対してスマートイメージングをオフにできますか？{#turning-off-smart-imaging}
++++要求に対してスマートイメージングをオフにできますか？
 
 はい。次のいずれかの修飾子を追加して、スマートイメージングをオフにできます。
 
@@ -358,7 +358,7 @@ WebP をデフォルトで提供する状態に戻す場合は、同様にサポ
 
 +++
 
-+++どの「チューニング」が使用できますか？ 定義できる設定やビヘイビアーはありますか？{#tuning-settings}
++++どの「チューニング」が使用できますか？ 定義できる設定やビヘイビアーはありますか？
 
 スマートイメージングには、有効または無効にできるオプションが次の 3 つあります。
 
@@ -368,7 +368,7 @@ WebP をデフォルトで提供する状態に戻す場合は、同様にサポ
 
 +++
 
-+++Chrome web ブラウザーに fmt=tif を含む URL があります。 しかし、要求が ImageServer エラーで失敗します。なぜでしょうか。{#fmt-tif}
++++Chrome web ブラウザーに fmt=tif を含む URL があります。 しかし、要求が ImageServer エラーで失敗します。なぜですか？
 
 アカウントでスマートイメージングが有効になっていない場合、このエラーは発生しません。スマートイメージングは、JPEG 形式または PNG 形式でのみ機能します。
 
@@ -380,7 +380,7 @@ WebP をデフォルトで提供する状態に戻す場合は、同様にサポ
 
 +++
 
-+++画像の URL からTIFF画像をダウンロードしたいのですが、 どうすればよいですか？{#download-tif}
++++画像の URL からTIFF画像をダウンロードしたいのですが、 どうすればよいですか？
 
 `fmt=tif` と `bfc=off` を画像の URL パスに追加します。
 
@@ -392,43 +392,43 @@ WebP をデフォルトで提供する状態に戻す場合は、同様にサポ
 
 +++
 
-+++スマートイメージングが画質設定を管理する場合、設定できる最小値と最大値はありますか？ つまり、60 以上 80 以下の品質でしょうか。{#quality-setting}
++++スマートイメージングが画質設定を管理する場合、設定できる最小値と最大値はありますか？ つまり、60 以上 80 以下といったように。
 
 現在、そのようなプロビジョニングはありません。
 
 +++
 
-+++スマートイメージングは画質（% 単位）の出力設定を自動的に調整しますか？それとも、手動で調整した設定がすべての画像に適用されますか？ 何の範囲だ？{#percent-quality}
++++スマートイメージングは画質（% 単位）の出力設定を自動的に調整しますか？それとも、手動で調整した設定がすべての画像に適用されますか？ また、それはどのような範囲内ですか？
 
 スマートイメージングでは、画質（％単位）を自動的に調整します。この品質は、Adobeが開発した機械学習アルゴリズムを使用して決定されます。 このパーセントは、範囲固有のものではありません。
 
 +++
 
-+++スマートイメージングでサポートまたは無視される画像サービングコマンドはどれですか？{#support-ignore}
++++スマートイメージングでサポートまたは無視される画像サービングコマンドはどれですか？
 
 無視されるコマンドは `fmt` と `qlt` だけです。残りのコマンドはすべてサポートされています。
 
 +++
 
-+++スマートイメージングで置き換えられるのはJPEG画像のみですか？ WebP や PNG などをリクエストした場合はどうなりますか？{#replace-request}
++++スマートイメージングで置き換えられるのはJPEG画像のみですか？ WebP や PNG などを要求した場合はどうなりますか？
 
 この機能は、JPEG と PNG でのみ機能します。
 
 +++
 
-+++WebP ではなくJPEG画像がChromeに返されることがあるのはなぜですか？{#jpeg-returned}
++++WebP ではなくJPEG画像がChromeに返されることがあるのはなぜですか？
 
 スマートイメージングは、変換が有益かどうかを判断します。変換が有益な場合にのみ、新しい画像を返します。
 
 +++
 
-+++合成画像でデバイスピクセル比（dpr）機能が期待どおりに動作しないのはなぜですか？{#composite-images}
++++合成画像でデバイスピクセル比（dpr）機能が期待どおりに動作しないのはなぜですか？
 
 合成画像に含まれるレイヤーが多すぎると、位置修飾子の使用中に dpr 機能に影響が及ぶ場合があります。この問題は既知で、スマートイメージングの今後のリリースで修正される予定です。他のスマートイメージング機能が期待どおりに動作しない場合は、サポートケースを作成して問題を報告することができます。
 
 +++
 
-+++スマートイメージングで PNG が依然として可逆 WebP/AVIF に変換されるのはなぜですか？{#convert-to-lossless}
++++スマートイメージングで PNG が依然として可逆 WebP/AVIF に変換されるのはなぜですか？
 
 PNG は可逆形式なので、以前配信されていた WebP および AVIF は可逆形式でした。その結果、予想よりも大きいサイズになりました。 スマートイメージングでは、非可逆変換をサポートするようになりました。画像リクエストで修飾子 `cache=update` を（1 回だけ）使用して、この問題を修正できます。この修飾子の使用例を次に示します。
 
@@ -438,7 +438,7 @@ PNG は可逆形式なので、以前配信されていた WebP および AVIF �
 
 +++
 
-+++スマートイメージングで PNG の可逆変換を引き続き使用するにはどうすればよいですか？{#continue-using}
++++スマートイメージングで PNG の可逆変換を引き続き使用するにはどうすればよいですか？
 
 スマートイメージングでは、画質レベルに応じた非可逆変換をサポートするようになりまし。会社の設定を使用するか、画像の URL パスに `qlt=100` を追加して、画質を 100 に設定することで、可逆変換を引き続き使用できます。
 
