@@ -5,10 +5,10 @@ exl-id: 372e6a46-72bb-4db4-ad01-534ca723ae58
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 573057b8e4c01b1c14f8c66b3da7b44e9d857760
-workflow-type: ht
-source-wordcount: '148'
-ht-degree: 100%
+source-git-commit: 1788e5f77d4c46a548710361e9e5dae3c6daab28
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 88%
 
 ---
 
@@ -34,6 +34,24 @@ ht-degree: 100%
 
 * コア CIF コンポーネントで正しく動作するように UI テストを修正しました。
 * カテゴリ URL 形式がクラウドインスタンスで期待どおりに機能しない問題を解決しました。
+
+## リリース日：2024年9月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
+| CIF コアコンポーネント | 2.14.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.14.2) |
+
+### 機能改善 {#improvements-September}
+
+* カテゴリ制限をカスタマイズ可能にします。
+
+### バグ修正 {#bug-fixes-September}
+
+* Commerce のフィールドが、Assets メタデータスキーマエディターと適切に統合されていない。
+* カルーセル製品のマルチフィールドでのドラッグ＆ドロップの問題。
+* カルーセルカテゴリのマルチフィールドでドラッグ&amp;ドロップが発生する問題
+* カテゴリおよび製品エディターページのページ情報のメニューで、クリックが機能しません。
+* 注文確認ページに注文番号が表示されない。
 
 ## リリース日：2024年1月
 
