@@ -6,9 +6,9 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 1788e5f77d4c46a548710361e9e5dae3c6daab28
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -49,8 +49,8 @@ ht-degree: 88%
 
 * Commerce のフィールドが、Assets メタデータスキーマエディターと適切に統合されていない。
 * カルーセル製品のマルチフィールドでのドラッグ＆ドロップの問題。
-* カルーセルカテゴリのマルチフィールドでドラッグ&amp;ドロップが発生する問題
-* カテゴリおよび製品エディターページのページ情報のメニューで、クリックが機能しません。
+* カルーセルカテゴリのマルチフィールドでのドラッグ＆ドロップの問題。
+* カテゴリと製品のエディターページのページ情報のメニューで、オンクリックが機能しない。
 * 注文確認ページに注文番号が表示されない。
 
 ## リリース日：2024年1月
