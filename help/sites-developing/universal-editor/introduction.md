@@ -3,9 +3,10 @@ title: ユニバーサルエディター
 description: ユニバーサルエディターの柔軟性と、AEM 6.5 を使用してヘッドレスエクスペリエンスを強化する方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: a088fcb3069fae7e63c7238710534d817a308eff
+exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
+source-git-commit: 6301f0fdba9f7a6fa8fa998759b9ebad6b4fa9a6
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1087'
 ht-degree: 4%
 
 ---
@@ -46,17 +47,17 @@ ht-degree: 4%
 
 ### AEMの更新 {#update-aem}
 
-AEM 6.5 でユニバーサルエディターを使用するには、AEMのサービスパック 21 と機能パックが必要です。
+AEM 6.5 でユニバーサルエディターを使用するには、サービスパック 21 または 22、AEMの機能パックが必要です。
 
 #### 最新のサービスパックを適用 {#latest}
 
-AEM 6.5 の Service Pack 21 以降が動作していることを確認してください。最新のサービスパックは、[ ソフトウェア配布 ](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja) からダウンロードできます。
+AEM 6.5 の Service Pack 21 または 22 以降を実行していることを確認してください。最新のサービスパックは、[ ソフトウェア配布 ](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=ja) からダウンロードできます。
 
 #### ユニバーサルエディター機能パックのインストール {#feature-pack}
 
 **AEM 6.5 用ユニバーサルエディター機能パック** ソフトウェア配布で入手可能 [ をインストールします。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
 
-既に Service Pack 23 以降を実行している場合、この手順は必要ありません。
+既にサービスパック 23 以降を実行している場合、機能パックは必要ありません。
 
 ### サービスの設定 {#configure-services}
 
