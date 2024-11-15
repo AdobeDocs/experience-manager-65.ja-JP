@@ -5,16 +5,16 @@ feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3648662306bb1e7ea27a9d74f42bfa321bf5b91f
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 100%
+source-wordcount: '257'
+ht-degree: 71%
 
 ---
 
 # 関連コンテンツ{#associated-content}
 
-AEM の関連コンテンツ機能によって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。これにより、[ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になる](/help/sites-authoring/content-fragments.md#using-associated-content)ことでヘッドレスコンテンツ配信に柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。
+関連コンテンツのAEM機能により関連性がわかり、フラグメントをコンテンツページに追加するときに、アセットを（オプションで）フラグメントと共に使用できるようになります。 これにより、[ ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になる ](/help/sites-authoring/content-fragments.md#using-associated-content) ことでヘッドレスコンテンツ配信に柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。 関連する任意のコンテンツは、コンテンツフラグメントエディターを使用して設定できます。
 
 ## 関連コンテンツの追加 {#adding-associated-content}
 
