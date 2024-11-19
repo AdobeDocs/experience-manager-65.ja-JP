@@ -1,18 +1,18 @@
 ---
-title: JEE 上のAEM Formsのトランザクションレポートの概要
-description: 送信されたフォーム、レンダリングされたフォーム、別の形式に変換されたドキュメントなどすべての数を保持します。
+title: JEE における AEM Forms のトランザクションレポートの概要
+description: 送信されたフォーム、レンダリングされたフォーム、別の形式に変換されたフォームの合計数を保持します
 feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '529'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# JEE 上のAEM Formsのトランザクションレポートの有効化と表示 {#transaction-reports-overview}
+# JEE 上の AEM Forms のトランザクションレポートの有効化と表示 {#transaction-reports-overview}
 
 <!--Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
 
@@ -22,19 +22,19 @@ ht-degree: 2%
 
 For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis-jee.md). Transaction log helps you to gain information about the number of documents submitted, rendered, and converted.-->
 
-## トランザクションレポートの有効化 {#enable-transaction-reporting}
+## トランザクションレポートを有効にする {#enable-transaction-reporting}
 
-デフォルトでは、トランザクションの記録は無効になっています。 トランザクションレポートを有効にするには、次の手順を実行します。
+デフォルトでは、トランザクションの記録は無効になっています。トランザクションレポートを有効にするには、次の手順を実行します。
 
-1. JEE 上のAEM Formsの `/adminui` （例：`http://10.14.18.10:8080/adminui`）に移動します。
-1. **管理者** としてログインします。
-1. **設定**/**コアシステム設定**/**設定** に移動します。
-1. チェックボックスをクリックして **トランザクションレポートを有効** し **保存** 設定します。
+1. JEE における AEM Forms で `/adminui`（例：`http://10.14.18.10:8080/adminui`）に移動します。
+1. **管理者**&#x200B;としてログインします。
+1. **設定**／**コアシステム設定**／**設定**&#x200B;に移動します。
+1. 「**トランザクションレポートを有効にする**」チェックボックスをクリックし、設定を&#x200B;**保存**&#x200B;します。
 
    ![sample-transaction-report-jee](assets/enable-transaction-jee.png)
 
 1. サーバーを再起動します。
-1. サーバー上での変更の他に、クライアント側でも、プロジェクトで `adobe-livecycle-client.jar` ファイルを更新する必要があります（同じファイルを使用している場合）。
+1. サーバー上での変更の他に、クライアント側でも、プロジェクトの `adobe-livecycle-client.jar` ファイルを更新する必要があります（同じファイルを使用する場合）。
 
 <!--
 * You can [enable transaction recording](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) from AEM Web Console. view transaction reports on author, processing, or publish instances. View transaction reports on author or processing instances for an aggregated sum of all transactions. View transaction reports on the publish instances for a count of all transactions that take place only on that publish instance from where the report is run.
@@ -42,25 +42,25 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 <!--Do not author content (Create adaptive forms, interactive communication, themes, and other authoring activities) and process documents (Use workflows, document services, and other processing activities) on the same AEM instance. Keep the transaction recording disabled for AEM Forms servers used to author content. Keep the transaction recording enabled for AEM Forms servers used to process documents.-->
 
-## トランザクションレポートの表示 {#view-transaction-report}
+## トランザクションレポートを表示する {#view-transaction-report}
 
-トランザクションレポートを有効にすると、[ ダッシュボードを使用したトランザクションレポート ](#transaction-report-dashboard) および詳細な [ ログファイルを使用したトランザクションレポート ](#transaction-report-logfile) から、トランザクション数に関する情報にアクセスできるようになります。 以下に、両方の説明を示します。
+トランザクションレポートを有効にすると、[ダッシュボードを使用したトランザクションレポート](#transaction-report-dashboard)と[ログファイルを使用した詳細なトランザクションレポート](#transaction-report-logfile)から、トランザクション数に関する情報にアクセスできるようになります。この両方について以下で説明します。
 
-### ダッシュボードを介したトランザクションレポート {#transaction-report-dashboard}
+### ダッシュボードを使用したトランザクションレポート {#transaction-report-dashboard}
 
-ダッシュボードを使用したトランザクションレポートでは、トランザクションタイプごとにトランザクション数の合計数が表示されます。 例えば、画像に示すように、レンダリング、変換および送信されたフォームの合計数に関する情報を取得します。 トランザクションレポートを取得するには：
+ダッシュボードを使用したトランザクションレポートでは、トランザクションタイプごとにトランザクションの合計数が表示されます。例えば、画像に示すように、レンダリングされたフォーム、変換されたフォームおよび送信されたフォームの合計数に関する情報が得られます。トランザクションレポートを取得するには：
 
-1. JEE 上のAEM Formsの `/adminui` （例：`http://10.13.15.08:8080/adminui`）に移動します。
-1. **管理者** としてログインします。
-1. [ ヘルスモニタ ] をクリックします。
-1. 「**Transaction Reporter**」タブに移動し、「**Calculate Total Transactions**」をクリックします。これで、円グラフが送信、レンダリング、変換されたPDF formsの数を表していることがわかります。
+1. JEE における AEM Forms で `/adminui`（例：`http://10.13.15.08:8080/adminui`）に移動します。
+1. **管理者**&#x200B;としてログインします。
+1. ヘルスモニターをクリックします。
+1. 「**トランザクションレポート**」タブに移動し、「**トランザクションの合計数を計算**」をクリックします。これで、送信された PDF フォーム、レンダリングされた PDF フォーム、変換された PDF フォームの数が円グラフで表されていることがわかります。
 
 ![sample-transaction-report-jee](assets/transaction-piechart.png)
 
 
-### ログファイルを介したトランザクションレポート {#transaction-report-logfile}
+### ログファイルを使用したトランザクションレポート {#transaction-report-logfile}
 
-ログファイルを介したトランザクションレポートには、各トランザクションに関する詳細情報が提供されます。 トランザクションログにアクセスするには、サーバー起動に対するコンテキストパスに従います。 トランザクションは、デフォルトでは別のログファイル `transaction_log.log` に取り込まれます。 **ファイルパス** は、サーバー開始コンテキストを基準とした相対パスです。 各種サーバーのデフォルトパスを以下に示します。
+ログファイルを使用したトランザクションレポートには、各トランザクションに関する詳細な情報が表示されます。トランザクションログにアクセスするには、サーバー起動を基準とした相対コンテキストパスに従います。トランザクションは、デフォルトでは別個のログファイル `transaction_log.log` に取得されます。**ファイルパス** は、サーバー起動コンテキストを基準とした相対パスです。各種サーバーのデフォルトパスを以下に示します。
 
 ```
 For Jboss Turnkey:
@@ -81,7 +81,7 @@ For Jboss Cluster:
 
 #### トランザクションレコード {#transaction-record-structure-jee}
 
-トランザクションログ構造では、サービス、操作、トランザクションタイプなどの様々なパラメーターを使用して、各トランザクションの記録方法を定義します。 それぞれについて、以下で詳しく説明します。 トランザクションレコードの構造は次のとおりです。
+トランザクションログ構造では、サービス、操作、トランザクションタイプなどの様々なパラメーターを使用して、各トランザクションの記録方法を定義します。それぞれの詳細について、以下で説明します。トランザクションレポートの構造は次のとおりです。
 
 ```
 TransactionRecord
@@ -97,16 +97,16 @@ TransactionRecord
 }
 ```
 
-* **service**: サービスの名前。
+* **service**：サービスの名前。
 * **operation**：操作名。
-* **internalService**：内部呼び出しがある場合は呼び出し先の名前、それ以外の場合はサービス名と同じ。
-* **internalOperation**：内部呼び出しがある呼び出し先の名前。それ以外の場合は、操作名と同じです。
+* **internalService**：内部呼び出しがある場合は呼び出し先の名前。それ以外の場合はサービス名と同じ。
+* **internalOperation**：内部呼び出しがある場合は呼び出し先の名前。それ以外の場合は操作名と同じ。
 * **transactionOperationType**：トランザクションのタイプ（送信、レンダリング、変換）。
 * **transactionCount**：トランザクションの合計数。
 * **elapsedTime**：呼び出しの開始から応答の受信までの時間。
-* **transactionDate**: サービスがいつ呼び出されたかを示すタイムスタンプ。
+* **transactionDate**：サービスがいつ呼び出されたかを示すタイムスタンプ。
 
-**サンプル トランザクション ログ**:
+**サンプルトランザクションログ**:
 
 ```
 [2024-02-14 14:23:25] [INFO] TransactionRecord
@@ -126,11 +126,11 @@ TransactionRecord
 
 <!--Transaction persistence involves updating the total transaction count for SUBMIT, CONVERT, and RENDER operations on the server periodically: -->
 
-トランザクションの記録頻度は、正常に送信、レンダリング、変換された各フォームに対するサーバー上の更新操作によって決まります。
+トランザクションの記録頻度は、正常に送信、レンダリング、変換されたフォームごとに、サーバー上の更新操作によって決まります。
 
-* **ダッシュボード** では、トランザクション数は定期的に更新されます。デフォルトは 1 分に設定されています。 頻度を更新するには、`"com.adobe.idp.dsc.transaction.recordFrequency"` でシステムプロパティを設定します。 例えば、JBoss® 上の JEE のAEM Formsでは、`JAVA_OPTS` に `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` を追加して、更新頻度を 5 分に設定します。
+* **ダッシュボード** では、トランザクション数は定期的に更新されます。デフォルトは 1 分に設定されています。頻度を更新するには、`"com.adobe.idp.dsc.transaction.recordFrequency"` でシステムプロパティを設定します。例えば、JBoss® における JEE 向け AEM Forms では、`JAVA_OPTS` に `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` を追加して、更新頻度を 5 分に設定します。
 
-* **トランザクションログ** では、フォームが正常に送信、レンダリング、変換されると、各トランザクションの更新が即座に行われます。
+* **トランザクションログ**&#x200B;では、フォームを正常に送信、レンダリング、または変換すると、各トランザクションの更新が即時に行われます。
 
 <!-- A transaction remains in the buffer for a specified period (Flush Buffer time + Reverse replication time). By default, it takes approximately 90 seconds for the transaction count to reflect in the transaction report.
 
@@ -158,5 +158,5 @@ The transaction count is reverse replicated from publish instances to author or 
 
 ## 関連記事 {#related-articles}
 
-* [JEE 版 AEM Forms の課金対象 API のリスト](../../forms/using/transaction-reports-billable-apis-jee.md)
-* [JEE 上のAEM Formsのカスタムコンポーネント API のトランザクションの記録](/help/forms/using/record-transaction-custom-component-jee.md)
+* [JEE における AEM Forms の課金対象 API のリスト](../../forms/using/transaction-reports-billable-apis-jee.md)
+* [JEE における AEM Forms のカスタムコンポーネント API のトランザクションの記録](/help/forms/using/record-transaction-custom-component-jee.md)

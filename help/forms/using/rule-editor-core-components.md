@@ -1,27 +1,27 @@
 ---
-title: ルールエディターを使用してフォームフィールドにルールを追加し、動的な動作を追加し、コアコンポーネントに基づいてアダプティブフォームに複雑なロジックを構築する方法
-description: アダプティブFormsのルールエディターを使用すると、コーディングやスクリプトを作成する必要なく、動的な動作を追加し、複雑なロジックをフォームに組み込むことができます。
+title: ルールエディターを使用して、フォームフィールドにルールを追加して動的な動作を追加したり、コアコンポーネントに基づいてアダプティブフォームに複雑なロジックを組み込む方法を教えてください。
+description: アダプティブフォームルールエディターを使用すると、コーディングやスクリプトの作成を行わなくても、フォームに動的な動作を追加したり複雑なロジックを組み込んだりできます。
 feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 107ad23b-53df-41d4-ab97-b09d189abc1b
 source-git-commit: 7b6b2adaf4dfc843aeb054c7db834cebd211f2ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5588'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォームのコアコンポーネントへのルールの追加 {#adaptive-forms-rule-editor}
+# アダプティブフォームコアコンポーネントへのルールの追加 {#adaptive-forms-rule-editor}
 
-この記事では、アダプティブ Forms コアコンポーネントの最新のルールエディター機能を紹介します。これらの機能には、以下が含まれます。
-* ネストされた条件を When-then-else 機能で実装する機能のサポート
+この記事では、アダプティブフォームコアコンポーネントの最新のルールエディター機能を紹介します。以下の機能です。
+* when-then-else 機能を使用したネストされた条件の実装のサポート
 * パネルやフォーム（フィールドを含む）の検証またはリセット
 * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
 
-ルールエディター機能を使用すると、フォームのビジネスユーザーや開発者がアダプティブフォームオブジェクトにルールを簡単に記述できます。 これらのルールは、事前に設定された条件、ユーザー入力、フォーム上のユーザーアクションに基づいて、フォームオブジェクト上でトリガーを実行するアクションを定義します。 これにより、フォームへの入力を正確かつ迅速に行うことができます。
+ルールエディター機能により、フォームのビジネスユーザーや開発者がアダプティブフォームオブジェクトにルールを容易に追加できるようになります。これらのルールは、フォームオブジェクト上でトリガーされるアクションを定義します。これらのアクションは、事前に定義された条件、ユーザーによる入力、ユーザーがフォーム上で実行した操作に基づいてトリガーされます。これにより、フォームへの入力を正確かつ迅速に行うことができます。
 
-ルールエディターでは、ルールを記述するための直感的でシンプルなユーザーインターフェイスを備えています。ルールエディターは、すべてのユーザーに対してビジュアルエディターを提供します。<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> アダプティブフォームオブジェクト上でルールを用いることにより実行されるアクションのうち、主なものは以下のとおりです。
+ルールエディターでは、ルールを記述するための直感的でシンプルなユーザーインターフェイスを備えています。ルールエディターは、すべてのユーザーに対してビジュアルエディターを提供します。<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> ルールを使用してアダプティブフォームオブジェクト上で実行する主なアクションには、例えば以下のものがあります。
 
 * オブジェクトの表示／非表示を切り替える
 * オブジェクトの有効／無効を切り替える
@@ -29,43 +29,43 @@ ht-degree: 81%
 * オブジェクトの値を検証する
 * 関数を実行することにより、オブジェクトの値を計算する
 * フォームデータモデル（FDM）サービスを呼び出して操作を実行する
-* オブジェクトのプロパティを設定する
+* オブジェクトのプロパティを設定
 
 <!-- Rule editor replaces the scripting capabilities in [!DNL Experience Manager 6.1 Forms] and earlier releases. However, your existing scripts are preserved in the new rule editor. For more information about working with existing scripts in the rule editor, see [Impact of rule editor on existing scripts](rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p). -->
 
-`forms-power-users` グループに追加されたユーザーは、スクリプトを作成し、既存のスクリプトを編集できます。 `forms-users group` のユーザーは、スクリプトを使用できますが、スクリプトの作成と編集はできません。
+`forms-power-users` グループに追加されたユーザーは、スクリプトの作成と既存のスクリプトの編集を行うことができます。`forms-users group` のユーザーは、スクリプトを使用できますが、スクリプトの作成と編集はできません。
 
 ## ルールを理解する {#understanding-a-rule}
 
 ルールとは、アクションと条件を組み合わせたものです。ルールエディターでは、アクションには、フォーム内のオブジェクトの値を非表示、表示、有効化、無効化、または計算するなどのアクティビティが含まれます。「条件」とは、フォームオブジェクトの状態、値、またはプロパティに対して確認や操作を実行し、それによって評価されるブール式を指します。「アクション」は、条件を評価して返された値（`True` または `False`）に基づいて実行されます。
 
-ルールエディターでは、事前定義された一連のルールタイプを利用できます。これらのルールタイプには、「When」、「Show」、「Hide」、「Enable」、「Disable」、「Set Value Of」、「Validate」などがあるので、ルールを記述するのに便利です。 各ルールタイプでは、ルール内の条件とアクションを定義できます。この記事では、各ルールタイプについてさらに詳細に説明します。
+ルールエディターには、「When」、「Show」、「Hide」、「Enable」、「Disable」、「Set Value Of」、「Validate」など、ルールを記述するのに便利な一連の定義済みルールタイプが用意されています。各ルールタイプでは、ルール内の条件とアクションを定義できます。この記事では、各ルールタイプについてさらに詳細に説明します。
 
 一般的なルールは、次のいずれかの構文に従います。
 
-**条件 - アクション** この構文では、条件を最初に定義し、トリガーするアクションを次に定義します。構文はプログラミング言語の `if-then statement` に匹敵します。
+**条件 - アクション** この構文では、条件を最初に定義し、トリガーするアクションを次に定義します。構文は、プログラミング言語における `if-then statement` に相当します。
 
 ルールエディターで「**When**」ルールタイプを使用することで、条件 - アクションの構文が適用されます。
 
 **アクション - 条件** この構文では、トリガーするアクションを最初に定義し、続いて評価条件を定義します。この構文の別の様式は、「アクション - 条件 - 代替アクション」型です。この中では、条件が False を返した場合にトリガーする代替アクションも定義します。
 
-ルールエディターで「Show」、「Hide」、「Enable」、「Disable」、「Set Value Of」、「Validate」の各ルールを設定すると、「`action-condition`」ルール構文が適用されます。 デフォルトでは、「Show」の代替アクションは「Hide」、「Enable」の代替アクションは「Disable」（それらの逆も同様）です。デフォルトの代替アクションは変更できません。
+ルールエディターの「Show」、「Hide」、「Enable」、「Disable」、「Set Value Of」、「Validate」の各ルールタイプでは、「`action-condition`」ルール構文が適用されます。デフォルトでは、「Show」の代替アクションは「Hide」、「Enable」の代替アクションは「Disable」（それらの逆も同様）です。デフォルトの代替アクションは変更できません。
 
 >[!NOTE]
 >
->利用可能なルールタイプ（ルールエディターで定義した条件やアクションを含む）は、ルールを作成しているフォームオブジェクトの種類によっても異なります。ルールエディターには、特定のフォームオブジェクトタイプに対して条件およびアクションステートメントを記述するための、有効なルールタイプとオプションのみが表示されます。例えば、パネルオブジェクトでは、「Validate」や「Set Value Of」は表示されません。
+>利用可能なルールタイプ（ルールエディターで定義した条件やアクションを含む）は、ルールを作成しているフォームオブジェクトの種類によっても異なります。ルールエディターには、特定のフォームオブジェクトタイプに対して条件およびアクションステートメントを記述するための、有効なルールタイプとオプションのみが表示されます。例えば、パネルオブジェクトでは、「Validate」タイプと「Set Value Of」タイプは表示されません。
 
-ルールエディターで使用可能なルールタイプの詳細については、「[ルールエディターで利用できるルールタイプ](rule-editor.md#p-available-rule-types-in-rule-editor-p)」を参照してください。
+ルールエディターで使用可能なルールタイプついて詳しくは、[ルールエディターで利用できるルールタイプ](rule-editor.md#p-available-rule-types-in-rule-editor-p)を参照してください。
 
 ### ルール構文の選択ガイドライン {#guidelines-for-choosing-a-rule-construct}
 
 どのルール構文を使用しても大部分の使用例を満たすことはできますが、ここでは特定のルールを選択するための、いくつかのガイドラインを紹介します。ルールエディターで使用可能なルールの詳細については、「[ルールエディターで利用できるルールタイプ](rule-editor.md#p-available-rule-types-in-rule-editor-p)」を参照してください。
 
-* ルールを作成する際は一般に、ルールを作成するオブジェクトのコンテキストでルールを考えることです。ユーザーがフィールド A に指定した値に基づいて、フィールド B の表示/非表示を切り替える場合を考えます。この例では、フィールド A の条件を評価し、その戻り値に基づいて、フィールド B のアクションをトリガーしています。
+* ルールを作成する際は一般に、ルールを作成するオブジェクトのコンテキストでルールを考えることです。「フィールド A」にユーザーが入力した値に応じて、「フィールド B」の表示／非表示を切り替える場合を想定します。この場合、「フィールド A」の状態を評価し、その戻り値に基づいて「フィールド B」のアクションをトリガーします。
 
-  そのため、「フィールド B」（条件を評価するオブジェクト）にルールを記述する場合、「`condition-action`」構文か `When` のルールタイプを使用します。 同様に、フィールド A でも `action-condition` 構文または `Show or Hide` ルールタイプを使用します。
+  従って、「フィールド B」（状態を評価するオブジェクト）上にルールを記述する場合は、「`condition-action`」構文または「`When`」ルールタイプを使用します。同様に、「フィールド A」についても、`action-condition` 構文か、または `Show or Hide` のルールタイプを使用します。
 
-* 時には、1 つの条件に基づいて複数のアクションを実行する必要があるかもしれません。このような場合は、`condition-action` 構文の使用を推奨します。 この構文では、一度条件を評価し、その後に複数のアクション文を指定することができます。
+* 時には、1 つの条件に基づいて複数のアクションを実行する必要がある場合があります。そのような場合は、`condition-action` 構文の使用を推奨します。この構文では、一度条件を評価し、その後に複数のアクション文を指定することができます。
 
   例えば、ユーザーが「フィールド A」に入力した値を確認する条件を設け、その戻り値に応じて「B」、「C」、「D」の各フィールドを非表示にするには、まず、「フィールド A」に対して「条件 - アクション」の構文を記述するか、あるいは「When」のルールタイプを使用し、「B」、「C」、「D」の各フィールドについて表示状態を制御するアクションを作成します。この形式を取らない場合は、「B」、「C」、「D」のフィールドごとに別々のルールを 3 つ記述し、それぞれ「フィールド A」の状態を確認させる必要が生じます。この例では、3 つのオブジェクトに「Show」・「Hide」のルールのタイプを記述するよりも、むしろ単一のオブジェクトに「When」のルールタイプを記述する方が効率的です。
 
@@ -84,10 +84,10 @@ ht-degree: 81%
 * **Starts With（次の値で始まる）**
 * **Ends With（次の値で終わる）**
 * **Contains（次を含む）**
-* **次を含まない**
+* **Does not contain（次の値を含まない）**
 * **Is Empty（空である）**
 * **Is Not Empty（空ではない）**
-* **Has Selected:** チェックボックス、ドロップダウン、ラジオボタンの特定のオプションをユーザーが選択した場合に true を返します。
+* **Has Selected（選択済み）：**&#x200B;チェックボックス、ドロップダウン、ラジオボタンの特定のオプションをユーザーが選択した場合に true を返します。
 * **Is Initialized (event)（初期化（イベント型））：**&#x200B;フォームオブジェクトがブラウザーでレンダリングされたときに true を返します。
 * **Is Changed (event)（変更（イベント型））：**&#x200B;フォームオブジェクトに入力された値または選択したオプションをユーザーが変更したときに true を返します。
 
@@ -130,19 +130,19 @@ _
 
 ![複数値表示オプション](assets/multivaluefcdisplaysoptions.png)
 
-「When」ルールを記述するときに、「Clear Value Of」アクションをトリガーできます。指定 `Clear Value Of` たオブジェクトの値をクリアします。 When ステートメントにオプションとして `Clear Value of` を使用すると、複数フィールドで複雑な条件を作成できます。 Else ステートメントを追加して、さらに条件を追加できます。
+「When」ルールを記述するときに、「Clear Value Of」アクションをトリガーできます。`Clear Value Of` アクションは、指定したオブジェクトの値をクリアします。When ステートメントに `Clear Value of` をオプションとして含めると、複数フィールドで複雑な条件を作成できます。Else ステートメントを追加して、さらに条件を追加できます。
 
-![値をクリア](assets/clearvalueof.png)
+![次の値をクリア](assets/clearvalueof.png)
 
 >[!NOTE]
 >
 > ルールタイプが単一レベルの then-else ステートメントのみをサポートする場合。
 
-#### [!UICONTROL When] に複数のフィールドを使用できる {#allowed-multiple-fields}
+#### [!UICONTROL When] で許可された複数のフィールド {#allowed-multiple-fields}
 
-**When** 条件には、ルールが適用されるフィールド以外のフィールドを追加するオプションがあります。
+**When** 条件では、ルールが適用されるフィールドとは別に他のフィールドを追加するオプションがあります。
 
-例えば、「When」のルールタイプを使用すると、様々なフォームオブジェクトの条件を評価し、アクションを実行することができます。
+例えば、「When」のルールタイプを使用すると、様々なフォームオブジェクトの条件を評価し、アクションを実行できます。
 
 `When:`
 
@@ -158,15 +158,15 @@ _
 
 _
 
-![When で複数のフィールドを許可 ](/help/forms/using/assets/allowed-multiple-field-when.png)
+![When で許可された複数のフィールド](/help/forms/using/assets/allowed-multiple-field-when.png)
 
 
 
 
-##### When 条件機能で許可された複数フィールドを使用する際の考慮事項
+##### When 条件機能で許可された複数のフィールドを使用する際の考慮事項
 
-* ルールエディターでこの機能を使用するには、[ コアコンポーネントと仕様のバージョンが最新バージョン ](https://github.com/adobe/aem-core-forms-components/tree/release/650) に設定されていることを確認します。
-* When 条件内の異なるフィールドにルールが適用されている場合、そのフィールドの 1 つのみが変更されても、ルールはトリガーします。
+* ルールエディターでこの機能を使用するには、[コアコンポーネントおよび仕様のバージョンが最新バージョン](https://github.com/adobe/aem-core-forms-components/tree/release/650)に設定されていることを確認します。
+* ルールが When 条件内の異なるフィールドに適用されている場合、これらのフィールドの 1 つのみを変更した場合でも、ルールはトリガーします。
 
 
 <!--
@@ -186,10 +186,10 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
    * value: deps
 1. Click **[!UICONTROL Done]**. -->
 
-「When」条件機能で許可されている複数のフィールドに問題が発生した場合は、次のようにトラブルシューティング手順に従います。
+When 条件機能で許可された複数のフィールドで問題が発生した場合は、次のトラブルシューティング手順に従います。
 
 1. フォームを編集モードで開きます。
-1. コンテンツブラウザーを開き、アダプティブフォームの **[!UICONTROL ガイドコンテナ]** コンポーネントを選択します。
+1. コンテンツブラウザーを開き、アダプティブフォームの&#x200B;**[!UICONTROL ガイドコンテナ]**&#x200B;コンポーネントを選択します。
 1. ガイドコンテナプロパティ ![ガイドプロパティ](/help/forms/using/assets/configure-icon.svg) アイコンをクリックします。アダプティブフォームコンテナダイアログボックスが開きます。
 1. 「完了」をクリックして、ダイアログを再度保存します。
 
@@ -201,7 +201,7 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 **[!UICONTROL Disable （無効）]**：指定したオブジェクトを無効にします。
 
-**[!UICONTROL Invoke service （サービスを起動）]**：フォームデータモデル（FDM）で設定されたサービスを起動します。「サービスを起動」オプションを選択すると、フィールドが表示されます。このフィールドをタップすると、[!DNL Experience Manager] インスタンス上のすべてのフォームデータモデル（FDM）で設定されたすべてのサービスが表示されます。フォームデータモデルサービスを選択すると、さらにフィールドが表示され、指定したサービスに対する入力パラメーターと出力パラメーターを使用して、ここでフォームオブジェクトをマップすることができます。フォームデータモデル（FDM）サービスの呼び出しについては、ルール例を参照してください。
+**[!UICONTROL Invoke service （サービスを起動）]**：フォームデータモデル（FDM）で設定されたサービスを起動します。「サービスを起動」オプションを選択すると、フィールドが表示されます。このフィールドをタップすると、[!DNL Experience Manager] インスタンス上のすべてのフォームデータモデル（FDM）で設定されたすべてのサービスが表示されます。フォームデータモデルサービスを選択すると、さらにフィールドが表示され、指定したサービスに対する入出力パラメーターを使用して、ここでフォームオブジェクトをマップすることができます。フォームデータモデル（FDM）サービスの呼び出しについて詳しくは、ルールの例を参照してください。
 
 フォームデータモデルサービスに加えて、ダイレクト WSDL URL を指定して Web サービスを起動することができます。ただし、フォームデータモデルサービスには数多くの利点があるので、この方法でサービスを起動することをお勧めします。
 
@@ -213,30 +213,30 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 **[!UICONTROL プロパティを設定]**&#x200B;のルールタイプを使用すると、条件アクションに基づいて、指定したオブジェクトのプロパティの値を設定できます。プロパティは、次のいずれかに設定できます。
 * visible（ブーリアン）
-* label.value （文字列）
-* label.visible （ブール値）
-* 説明（文字列）
+* label.value（文字列）
+* label.visible（ブーリアン）
+* description（文字列）
 * enabled（ブーリアン）
-* readOnly （ブール値）
-* 必須（ブール値）
-* screenReaderText （String）
+* readOnly（ブーリアン）
+* required（ブーリアン）
+* screenReaderText（文字列）
 * valid（ブーリアン）
 * errorMessage（文字列）
-* デフォルト（数値、文字列、日付）
-* enumNames （String[]）
+* default（数値、文字列、日付）
+* enumNames（文字列[]）
 * chartType（文字列）
 
-例えば、ボタンがクリックされたときにテキストボックスを表示するルールを定義できます。 カスタム関数、フォームオブジェクト、オブジェクトプロパティ、またはサービス出力を使用して、ルールを定義できます。
+例えば、ボタンをクリックした際に、テキストボックスを表示するルールを定義できます。ルールを定義するには、カスタム関数、フォームオブジェクト、オブジェクトプロパティ、またはサービス出力を使用できます。
 
 ![プロパティを設定](assets/set_property_rule_new.png)
 
 カスタム関数に基づいてルールを定義するには、ドロップダウンリストから「**[!UICONTROL 関数の出力]**」を選択し、「**[!UICONTROL 関数]**」タブからカスタム関数をドラッグアンドドロップします。条件アクションが満たされると、テキスト入力ボックスが表示されます。
 
-フォームオブジェクトに基づいてルールを定義するには、ドロップダウンリストから「**[!UICONTROL フォームオブジェクト]**」を選択し、「**[!UICONTROL フォームオブジェクト]**」タブからフォームオブジェクトをドラッグ＆ドロップします。条件アクションが満たされると、テキスト入力ボックスがアダプティブフォームに表示されます。
+フォームオブジェクトに基づいてルールを定義するには、ドロップダウンリストから「**[!UICONTROL フォームオブジェクト]**」を選択し、「**[!UICONTROL フォームオブジェクト]**」タブからフォームオブジェクトをドラッグ＆ドロップします。条件アクションが満たされると、アダプティブフォームにテキスト入力ボックスが表示されます。
 
-オブジェクトプロパティに基づくプロパティの設定ルールを使用すると、アダプティブフォームに含まれる別のオブジェクトプロパティに基づいて、アダプティブフォーム内でテキスト入力ボックスを表示できます。
+オブジェクトプロパティに基づく「プロパティを設定」ルールを使用すると、アダプティブフォームに含まれる別のオブジェクトプロパティに基づいて、アダプティブフォームにテキスト入力ボックスを表示することができます。
 
-次の図は、アダプティブフォーム内のテキストボックスの非表示または表示に基づいて、チェックボックスを動的に有効にする例を示しています。
+次の図は、アダプティブフォームでのテキストボックスの表示／非表示に基づいてチェックボックスを動的に有効にする例を示しています。
 
 ![オブジェクトプロパティ](assets/object_property_set_property_new.png)
 
@@ -244,24 +244,24 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 **[!UICONTROL Set Focus （フォーカスの設定）]**：指定したオブジェクトにフォーカスを設定します。
 
-**[!UICONTROL フォームを送信]** フォームを送信します。
+**[!UICONTROL フォームを送信]**：フォームを送信します。
 
-**[!UICONTROL Reset]** フォームまたは指定したオブジェクトをリセットします。
+**[!UICONTROL リセット]**：フォームまたは指定されたオブジェクトをリセットします。
 
-**[!UICONTROL Validate]** フォームまたは指定したオブジェクトを検証します。
+**[!UICONTROL 検証]**：フォームまたは指定されたオブジェクトを検証します。
 
 **[!UICONTROL Add Instance （インスタンスの追加）]**：指定した繰り返し可能なパネルまたは表の行のインスタンスを追加します。
 
 **[!UICONTROL Remove Instance （インスタンスの削除）]**：指定した繰り返し可能なパネルまたは表の行のインスタンスを削除します。
 
-**[!UICONTROL 関数出力]** 事前定義済みの関数またはカスタム関数に基づいてルールを定義します。
+**[!UICONTROL 関数の出力]**：定義済み関数またはカスタム関数に基づいてルールを定義します。
 
-**[!UICONTROL Navigate to （移動先）]** ：他の<!--Interactive Communications,-->アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、または外部 URL に移動します。<!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
+**[!UICONTROL Navigate to（移動先）]**：他の<!--Interactive Communications,-->アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、または外部 URL に移動します。<!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
-**[!UICONTROL イベントのディスパッチ]** 事前に定義された条件またはイベントに基づいて、特定のアクションまたはビヘイビアーをトリガーします。
+**[!UICONTROL イベントのディスパッチ]**：定義済みの条件またはイベントに基づいて、特定のアクションまたは動作をトリガーします。
 
 
-### [!UICONTROL Set Value of] {#set-value-of}
+### [!UICONTROL 次の値を設定] {#set-value-of}
 
 「**[!UICONTROL Set Value Of]**」のルールタイプを使用すると、指定した条件に応じてフォームオブジェクトの値を設定できます。この値には、他のオブジェクトの値や、リテラル文字列、数式や関数から算出された値、または他のオブジェクトのプロパティ値、フォームデータモデルサービスの出力値を指定することができます。同様に、関数や数式から算出された構成要素、文字列、プロパティ、または値を確認することもできます。
 
@@ -269,21 +269,21 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
 
 Set value of Object A to:
 
-（文字列 ABC）または
-（オブジェクト C のオブジェクト プロパティ X）または
-（関数からの値）または
-（数式からの値）または
-（データモデルサービスの出力値）
+（文字列 ABC）OR
+（オブジェクト C のオブジェクトプロパティ X）OR
+（関数の値）OR
+（数式の値）OR
+（データモデルサービスの出力値）;
 
 When （オプション）：
 
 (Condition 1 AND Condition 2 AND Condition 3) is TRUE;
 
-次の使用例は、`Question2` の値を `True` に設定し、`Result` の値を `correct` に設定します。
+次の例では、`Question2` の値を `True` に、`Result` の値を `correct` に設定しています。
 
 ![Set-value-web-service](assets/set-value-web-service.png)
 
-フォームデータモデルサービスを使用した Set Value ルールの例。
+フォームデータモデルサービスを使用した値の設定ルールの例
 
 ### [!UICONTROL Show（表示）] {#show}
 
@@ -408,7 +408,7 @@ To define a rule based on a form data model:
 
 ### A. コンポーネントルールの表示 {#a-component-rule-display}
 
-ルールエディターを起動したアダプティブフォームオブジェクトのタイトルと、現在選択されているルールタイプを表示します。上記の例では、ルールエディターは「質問 1」と名付けられたアダプティブフォームオブジェクトから起動されており、「When」のルールタイプが選択されています。
+ルールエディターを起動したアダプティブフォームオブジェクトのタイトルと、現在選択されているルールタイプを表示します。上記の例では、ルールエディターは「Question 1」と名付けられたアダプティブフォームオブジェクトから起動されており、「When」ルールタイプが選択されています。
 
 ### B. フォームオブジェクトと関数 {#b-form-objects-and-functions-br}
 
@@ -418,9 +418,9 @@ To define a rule based on a form data model:
 
 1 つ以上の有効なルールが適用されているフォームオブジェクトには、緑のドットが付いています。フォームオブジェクトに適用されているルールのいずれかが無効な場合、フォームオブジェクトには黄色のドットが付きます。
 
-「関数」タブには、「合計」、「最小」、「最大」、「平均」、「回数」や「フォームを検査」などの組み込み関数のセットが含まれています。これらの関数をルールに記述することで、繰り返しパネルや表の行の値を計算し、計算結果をアクションや条件文の中で使用することができます。また、カスタム関数を作成することもできます。
+「関数」タブには、「合計」、「最小」、「最大」、「平均」、「回数」や「フォームを検査」などの組み込み関数のセットが含まれています。これらの関数をルールに記述することで、繰り返しパネルや表の行の値を計算し、計算結果をアクションや条件文の中で使用することができます。また、カスタム関数も作成できます。
 
-関数のリストの一部を図に示します。
+関数のリストの一部を次の図に示します。
 
 ![関数タブ](assets/functions.png)
 
@@ -461,7 +461,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 ## ルールを記述 {#write-rules}
 
-ルールを記述するには、ビジュアルルールエディターの <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. --> を使用します
+ビジュアルルールエディター <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. --> を使用して、ルールを記述します。
 
 最初に、ビジュアルエディターを使用してルールを作成する方法を説明します。
 
@@ -496,7 +496,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
    ![Radio button values from rule editor](assets/radio-button-values.png)-->
 
-1. ルールの **[!UICONTROL 文字列を入力]** フィールドで、ドロップダウンメニューから **既婚** を選択します。
+1. ルールの「**[!UICONTROL 文字列を入力]**」フィールドで、ドロップダウンメニューから「**既婚**」を選択します。
 
    ![write-rules-visual-editor-4](assets/write-rules-visual-editor-4-cc.png)
 
@@ -511,14 +511,14 @@ Users in the forms-power-users group can access code editor. For other users, co
    ![write-rules-visual-editor-6](assets/write-rules-visual-editor-6-cc.png)
 
    次に、この条件が False の場合に実行するアクションを定義します。
-1. 「Marital Status （配偶者の有無）」を「Single （独身） ]**として選択した場合に、「**[!UICONTROL  Spouse Salary （配偶者の給与） **[!UICONTROL 」フィールドに別の条件を追加するには、「Add Else Section （その他のセクションを追加）」をクリックします]**。
+1. 「Marital Status（配偶者の有無）」として「Single（独身）」を選択した場合は、「**[!UICONTROL Else セクションを追加]**」をクリックして、「**[!UICONTROL Spouse Salary（配偶者の給与）]**」フィールドに別の条件を追加します。
 
    ![when-else](assets/when-else.png)
 
-1. Else ステートメントで、「**[!UICONTROL アクションを選択]**」ドロップダウンから **[!UICONTROL 非表示]** を選択します。
+1. Else ステートメントで、**[!UICONTROL アクションを選択]**&#x200B;ドロップダウンから「**[!UICONTROL 非表示]**」を選択します。
    ![when-else](assets/when-else-1.png)
 
-1. 「**[!UICONTROL オブジェクトをドロップするか、または次から選択]**」フィールドの「フォームオブジェクト」タブから「**[!UICONTROL Spouse Salary （配偶者の給与）]**」フィールドをドラッグ・ドロップします。目的のフォームオブジェクトから再度起動します。あるいは、「**[!UICONTROL オブジェクトをドロップするか、または次から選択]**」フィールドを選択し、ポップアップメニューから「**[!UICONTROL 配偶者の給与]**」フィールドを選択します。この中には、フォーム内のすべてのフォームオブジェクトが一覧表示されます。
+1. 「**[!UICONTROL オブジェクトをドロップするか、または次から選択]**」フィールドの「フォームオブジェクト」タブから「**[!UICONTROL Spouse Salary（配偶者の給与）]**」フィールドをドラッグ＆ドロップします。目的のフォームオブジェクトから再度起動します。あるいは、「**[!UICONTROL オブジェクトをドロップするか、または次から選択]**」フィールドを選択し、ポップアップメニューから「**[!UICONTROL 配偶者の給与]**」フィールドを選択します。この中には、フォーム内のすべてのフォームオブジェクトが一覧表示されます。
    ![when-else](assets/when-else-2.png)
 
    ルールエディターでは、ルールが次のように表示されます。
@@ -536,7 +536,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 >[!NOTE]
 >
-> また、同じ動作を実装する場合は、「Marital Status （配偶者の有無）」フィールドに「When」ルールを記述する代わりに、「Spouse Salary （配偶者の給与）」フィールドに「Show」ルールを記述することもできます。
+> または、「Marital Status（配偶者の有無）」フィールドに「When」ルールを記述する代わりに、「Spouse Salary（配偶者の給与）」フィールド上に「Show」ルールを設けて、同じ動作を実装することもできます。
 
 ![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
 
@@ -600,7 +600,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 ![write-rules-visual-editor-18](assets/write-rules-visual-editor-18-cc.png)
 
-「Spouse Salary （配偶者の給与）」フィールドの表示・非表示を切り替えるための組み合わせルールを作成し、「Else （その他）」条件を使用して「Marital Status （配偶者の有無）」が「Married （既婚）」の場合に融資適格性を計算することができます。
+「Spouse Salary（配偶者の給与）」フィールドの表示・非表示を切り替えるための別の組み合わせルールを記述することで、「Marital Status（婚姻状況）」が「Married（既婚）」の場合にも、Else 条件を使用して、融資適格性を計算することができます。
 
 ![write-rules-visual-editor-19](assets/write-rules-visual-editor-19-cc.png)
 
@@ -628,7 +628,7 @@ While writing JavaScript code in the rule editor, the following visual cues help
 
 #### ルールエディターでのカスタム関数 {#custom-functions}
 
-**関数出力** の下にリストされている *合計* のような既存の関数に加え、ルールエディターでカスタム関数を使用することもできます。 ルールエディターでは、スクリプトおよびカスタム関数のJavaScript ECMAScript 2019 構文がサポートされています。 カスタム関数の作成方法については、「アダプティブFormsのカスタム関数 [ を参照してください ](/help/forms/using/create-and-use-custom-functions-core-components.md)
+「**関数出力**」の下にリストされている「*合計*」のような既存の関数に加え、ルールエディターでカスタム関数を使用することもできます。ルールエディターでは、スクリプトおよびカスタム関数の JavaScript ECMAScript 2019 構文がサポートされています。カスタム関数の作成手順について詳しくは、[アダプティブフォームのカスタム関数](/help/forms/using/create-and-use-custom-functions-core-components.md)の記事を参照してください。
 
 <!--
 
@@ -956,7 +956,7 @@ Rule in the code editor -->
 前の例で説明した発注書フォームでは、価格が 10000 を超える商品については、ユーザーが複数個発注することを制限します。この検証を行うには、以下に示すように検証ルールを記述します。
 
 ![Example-validate](assets/example-validate.png)
-ビジュアルエディターでのルール
+ビジュアルエディターに表示されたルール
 
 <!-- The rule appears as follows in the code editor.
 
