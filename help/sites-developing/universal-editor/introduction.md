@@ -4,7 +4,7 @@ description: ユニバーサルエディターの柔軟性と、AEM 6.5 を使�
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: 6301f0fdba9f7a6fa8fa998759b9ebad6b4fa9a6
+source-git-commit: c3af0befce5534891d45c2507684a2017f9363f8
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 4%
@@ -68,7 +68,7 @@ AEM 6.5 の Service Pack 21 または 22 以降を実行していることを確
 1. Configuration Manager を開きます。
    * `http://<host>:<port>/system/console/configMgr`
 1. リストで **Configuration Granite Token Authentication Handler** を見つけて、「**Adobe値を変更**」をクリックします。
-1. ダイアログで、**login-token cookie の SameSite 属性** （`token.samesite.cookie.attr`）の値を `Partitioned` に変更します。
+1. ダイアログで、login-token cookie の **SameSite 属性** （`token.samesite.cookie.attr`）の値を `Partitioned` に変更します。
 1. 「**保存**」をクリックします。
 
 #### `SAMEORIGIN` ヘッダーの X-Frame オプションを削除します。 {#sameorigin}
@@ -128,7 +128,7 @@ AEMは、この設定に基づくページのユニバーサルエディター�
 AEMが更新および設定されたので、独自のローカル開発およびテスト用にローカルのユニバーサルエディターサービスをセットアップできます。
 
 1. Node.js のバージョン >=20 をインストールします。
-1. [ ソフトウェア配布 ](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home) から最新のユニバーサルエディターサービスをダウンロードして展開します
+1. [ ソフトウェア配布 ](https://experienceleague.adobe.com/ja/docs/experience-cloud/software-distribution/home) から最新のユニバーサルエディターサービスをダウンロードして展開します
 1. 環境変数または `.env` ファイルを使用してユニバーサルエディターサービスを設定します。
    * [ 詳しくは、AEM as a Cloud Service ユニバーサルエディターのドキュメントを参照してください。](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/local-dev#setting-up-service)
    * 内部 IP の書き換えが必要な場合は、`UES_MAPPING` オプションを使用する必要がある場合があります。
