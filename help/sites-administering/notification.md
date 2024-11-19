@@ -9,10 +9,10 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: aa91b0f84929affb527c57cf92d7b4714c98ba74
-workflow-type: ht
-source-wordcount: '2141'
-ht-degree: 100%
+source-git-commit: bbd2bc3fa2ebdca111084450941439a37f79cd73
+workflow-type: tm+mt
+source-wordcount: '2149'
+ht-degree: 98%
 
 ---
 
@@ -119,9 +119,11 @@ This is an automatically generated message. Please do not reply.
 
 ページ通知用の英語のメールテンプレートをカスタマイズするには：
 
-1. CRXDE で、次のファイルを開きます。
+1. [ ページ通知 ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template) 用のオーバーレイの作成
 
-   `/libs/settings/notification-templates/com.day.cq.wcm.core.page/en.txt`
+1. ファイルを開きます。
+
+   `en.txt`
 
 1. 必要に応じてファイルを変更します。
 1. 変更内容を保存します。
@@ -181,9 +183,11 @@ This is an automatically generated message. Please do not reply.
 
 ワークフローイベント通知用の英語のメールテンプレートをカスタマイズするには：
 
-1. CRXDE で、次のファイルを開きます。
+1. [ ワークフロー通知 ](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates) 用のオーバーレイの作成
 
-   `/libs/settings/workflow/notification/email/default/en.txt`
+1. ファイルを開きます。
+
+   `en.txt`
 
 1. 必要に応じてファイルを変更します。
 1. 変更内容を保存します。
@@ -239,11 +243,12 @@ subject=<text_1>
 
 新しい言語用のテンプレートを追加するには、次の手順に従います。
 
-1. CRXDE で、ファイル `<language-code>.txt` を以下に追加します。
+1. 必要に応じて [ オーバーレイ ](/help/sites-developing/overlays.md) を作成します。
 
-   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page`：ページ通知用
-   * `/libs/settings/workflow/notification/email/default`：ワークフロー通知用
+   * [ページ通知](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
+   * [ワークフロー通知](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
+1. ファイル `<language-code>.txt` を追加します。
 1. 言語に合わせてファイルを調整します。
 1. 変更内容を保存します。
 
