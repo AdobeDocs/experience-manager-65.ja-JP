@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 38271b27134afa2b350c6595cf0bdc335f110be3
+source-git-commit: e3b96392f656b6dcbd583c18a343b56d4371c4ef
 workflow-type: tm+mt
-source-wordcount: '5027'
-ht-degree: 96%
+source-wordcount: '4733'
+ht-degree: 97%
 
 ---
 
@@ -50,21 +50,6 @@ ht-degree: 96%
 ### [!DNL Assets]
 
 IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。 （ASSETS-34918）
-
-### [!DNL Forms]
-
-* **OAuth 認証情報のサポート**：既存のサービスアカウント（JWT）認証情報に代わる、サーバー間認証のための新しく使いやすい認証情報です。 （NPR-41994）
-* [AEM Forms のルールエディターの機能強化](/help/forms/using/rule-editor-core-components.md)：
-   * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
-   * パネルやフォーム（フィールドを含む）の検証またはリセット。
-   * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
-* [PDF アクセシビリティに対する AutoTag API](/help/forms/using/aem-document-services-programmatically.md#doc-utility-services-doc-utility-services)：OSGi 上の AEM Forms では、タグ（段落、リスト）を追加して、アクセシビリティ標準の PDF を強化する新しい AutoTag API をサポートするようになりました。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
-* **16 ビット PNG のサポート**：PDF Generator の ImageToPDF サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
-* **XDP 内の個々のテキストブロックにアーティファクトを適用**：Forms Designer では、XDP ファイル内の個々のテキストブロックを設定できるようになりました。 この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。 Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF／UA タグ付けを行います。
-* **AEM Forms Designer は `GB18030:2022` 標準で認定されています**：`GB18030:2022` 認定により、Forms Designer では、中国語の Unicode 文字セットをサポートし、すべての編集可能なフィールドとダイアログボックスに漢字を入力できるようになりました。
-* JEE サーバー上のPDF Generatorサービスは、既存の WebKit ルートおよび Windows 専用の WebCapture ルートと共に、HTMLをPDFに変換するための [WebToPDF ルートをサポート ](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings) するようになりました。 WebToPDF ルートは OSGi で既に使用可能で、JEE に拡張されています。 現在、JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
-   * **Windows**:WebKit、WebCapture、WebToPDF
-   * **Linux®**:WebKit、WebToPDF
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
