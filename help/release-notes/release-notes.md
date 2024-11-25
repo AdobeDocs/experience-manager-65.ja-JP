@@ -45,7 +45,7 @@ ht-degree: 97%
 
 ### Sites {#sites}
 
-[ ユニバーサルエディター ](/help/sites-developing/universal-editor/introduction.md) が、機能パックを適用したヘッドレスユースケースに対してAEM 6.5 で使用できるようになりました。
+[ユニバーサルエディター](/help/sites-developing/universal-editor/introduction.md)が機能パックの適用により、AEM 6.5 でヘッドレスユースケースに使用できるようになりました。
 
 ### [!DNL Assets]
 
