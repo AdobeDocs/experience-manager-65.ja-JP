@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: f3dda5271c0d3bdd9d23bc26f3b5abe50fc1b90a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7454'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
