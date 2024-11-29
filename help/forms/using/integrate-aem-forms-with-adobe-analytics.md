@@ -6,10 +6,10 @@ exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 38e3439b5b9f3b4bc56bb1618d33e570ca0603f5
 workflow-type: tm+mt
-source-wordcount: '1762'
-ht-degree: 100%
+source-wordcount: '1810'
+ht-degree: 97%
 
 ---
 
@@ -220,6 +220,11 @@ Adobe Launch 設定を作成するには、次の手順を実行します。
 1. 「**[!UICONTROL 保存して閉じる]**」を選択します。
 
 1. 設定を公開します。
+
+>[!NOTE]
+>
+> [AEM Sites ページ内にAEM Formsを埋め込む ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/embed-adaptive-form-aem-sites) 場合、アダプティブフォームの iFrame ではAdobeローンチ設定はサポートされません。 これを解決するには、Adobeローンチルールを Sites ページで直接設定するか、既存のAdobeローンチ設定をAEM Formsから Sites ページに移行します。
+
 
 ### アダプティブフォームでの [!DNL Adobe Analytics] の有効化 {#enable-analytics-adaptive-form}
 

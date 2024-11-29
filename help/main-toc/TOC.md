@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: f3dda5271c0d3bdd9d23bc26f3b5abe50fc1b90a
-workflow-type: ht
-source-wordcount: '7454'
-ht-degree: 100%
+source-git-commit: bf750ddc14ce083a949c57322e0bc45594e66311
+workflow-type: tm+mt
+source-wordcount: '7477'
+ht-degree: 99%
 
 ---
 
@@ -624,6 +624,8 @@ ht-degree: 100%
       + [ルールエディター](/help/forms/using/rule-editor-core-components.md)
       + [アダプティブフォームコアコンポーネントでのカスタム関数の作成と使用](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [コアコンポーネントベースのアダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
+      + [アダプティブフォームへのバージョン管理、コメント、注釈の追加](/help/forms/using/add-versioning-reviews-comments.md)
+      + [アダプティブフォームの比較](/help/forms/using/compare-forms-core-components.md)
    + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
       + [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md)
       + [アダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md)
@@ -631,6 +633,8 @@ ht-degree: 100%
       + [アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md)
       + [送信アクションの設定](/help/forms/using/configuring-submit-actions.md)
       + [アダプティブフォームの CAPTCHA の使用](/help/forms/using/captcha-adaptive-forms.md)
+      + [アダプティブフォームでの hCaptcha の使用](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)
+      + [アダプティブフォームでの Turnstile Captcha の使用](/help/forms/using/integrate-adaptive-forms-turnstile.md)
       + [アダプティブフォームのキーワード](/help/forms/using/adaptive-forms-keywords.md)
       + [アダプティブフォームにおける表](/help/forms/using/adaptive-forms-tables.md)
       + [アダプティブフォームにおけるグラフ](/help/forms/using/adaptive-form-charts.md)

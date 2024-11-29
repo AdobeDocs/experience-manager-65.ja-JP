@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: e3b96392f656b6dcbd583c18a343b56d4371c4ef
-workflow-type: ht
-source-wordcount: '4733'
-ht-degree: 100%
+source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
+workflow-type: tm+mt
+source-wordcount: '6070'
+ht-degree: 78%
 
 ---
 
@@ -39,7 +39,27 @@ ht-degree: 100%
 
 ## 主な機能および機能強化
 
+### Forms {#forms-sp22}
+
 このリリースの主な機能と機能強化は次のとおりです。
+
+* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) および [Cloudfare Turnstile Captcha サービス ](/help/forms/using/integrate-adaptive-forms-turnstile.md):AEM Formsは、次の Captcha サービスをサポートしています。
+   * Captcha は、チェックボックスウィジェットを使用してユーザーに挑戦することで、ボット、スパム、自動不正使用からフォームを保護します。 これにより、人間のユーザーのみが処理できるようになり、オンライントランザクションのセキュリティが強化されます。
+   * Cloudflare Turnstile は、自動ボット、悪意のある攻撃、スパム、不要な自動トラフィックからフォームを保護することを目的としたセキュリティ対策を提供します。 フォームの送信を許可する前に、人間であることを確認するためのチェックボックスがフォーム送信時に表示されます。
+
+* アダプティブフォームのバージョン管理
+   * [ アダプティブフォームの複数のバージョンを作成 ](/help/forms/using/add-versioning-reviews-comments.md)：ユーザーは既存のフォームのバリエーションを簡単に管理できるようになりました。 これにより、合理化された単一のワークフロー内で、バージョン管理をシンプルに、フォーム最適化の比較を容易に行えるようになります。
+   * [ アダプティブFormsの比較 ](/help/forms/using/compare-forms-core-components.md):2 つのフォームを簡単に比較して、違いを特定できるようになりました。 チームメンバーがリビジョンを比較し、変更を効率的に議論できるので、共同作業がスムーズになります。
+
+* [ インタラクティブ通信の Batch API](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) へのフォントの埋め込みを有効にするサポートが追加されました。インタラクティブ通信では、Batch API を使用して生成されたPDFへのAdobe Ming フォントとAdobe Myungjo フォントの埋め込みがサポートされるようになりました。 この機能強化により、PDFサブセットを使用している場合でも、生成されたドキュメントでの正確なテキストレンダリングが確保され、フォント出力での多言語コンテンツのサポートが向上します。
+
+* [PDFのアクセシビリティに関するコンテンツ API の表 ](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api):OSGi 上のAEM Formsでは、アクセシビリティ標準のPDFを向上させるために、新しい TOC タグ API をサポートするようになりました。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
+
+* [ フラグメント XDP の解決 ](/help/forms/using/assembler-service.md#resolve-references-on-crx-repository-resolve-references-on-crx-repository):OSGi 上のAEM Formsは、マスター XDP で参照され、AEM CRX リポジトリに保存されたフラグメント XDP を解決するようになりました。
+
+* [PDF/A コンプライアンスの強化 ](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents)：アクセシビリティを確保し、これらの標準への準拠を確認しながら、アーカイブ目的でPDFをPDF/A 形式（1a、2a、3a）に変換できるようになりました。
+
+* **静的PDFドキュメントのフォントの自動サイズ設定のサポート**:AEM Forms Designerでは、.xdp ファイルの自動サイズ設定機能をサポートするようになりました。 XDP のテキストフィールド、数値フィールド、パスワードフィールド、日時フィールドの自動サイズ変更を指定して、静的PDFドキュメントでこれらのフィールドの内容を切り捨てずにテキストフィールドの内容をレンダリングできるようになりました。
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -195,10 +215,57 @@ AEM 6.5.18 および 6.5.19 では、親ページを非アクティブ化する�
 
 Dynamic Media へのビデオのアップロードが失敗し、ユーザーインターフェイスにプロセス失敗エラーが表示されると、実稼動環境の問題により移行プロセスが中断されました。（ASSETS-36038）
 
+<!--
 
 ### [!DNL Forms]{#forms-6522}
 
-[!DNL Experience Manager] Forms の修正は、[!DNL Experience Manager] サービスパックリリース予定日の 1 週間後に、別のアドオンパッケージとして提供されます。この場合、AEM 6.5.22.0 Forms アドオンパッケージリリースは、2024年11月28日木曜日（PT）に予定されています。Forms の修正および機能強化のリストは、リリース後にこの節に追加されます。
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.22.0 Forms add-on package release is scheduled for Thursday, November 28, 2024. A list of Forms fixes and enhancements is added to this section post the release.
+
+-->
+
+#### Forms {#forms-bug-fixes-sp22}
+
+* AEM Formsに保存されたドラフトの添付ファイル用に生成された URL は、設定された Apache Sling Resource Resolver Factory マッピングを反映していません。 （FORMS-16949）
+* AEM Forms Service Pack 19 （6.5.19.0）でユーザーがレターをプレビューすると、スペースが見つからず、「x」という文字が一部の場所に表示されるので、コンテンツが適切に配置されません。 （FORMS-16670）
+* AEM Forms Service Pack 18 （6.5.18.0）でCIF プロトコルを使用してファイルを印刷しようとすると、次のエラーが発生して失敗します。（FORMS-16629）
+  `ALC-OUT-001-401: Unknown error while printing using CIFS on the Printer: \\\\\\\\NSMVPLUETEST01\\\\TH_Test`。
+* AEM Forms サービスパック 17 （6.5.17.0）からAEM Forms サービスパック 20 （6.5.20.0）にアップグレードすると、フォームコンテナレベルでルールエディターアイコンが表示されません。 （FORMS-16430）
+* ユーザーをAEM Forms サービスパック 17 （6.5.17.0）からAEM Forms サービスパック 21 （6.5.21.0）にアップグレードすると、変更されたアダプティブフォームの送信 URL パスが機能しなくなります。 （FORMS15894）
+* AEM Forms サービスパック 19 （6.5.19.0）では、AEM Forms 6.5 PDF/A の検証が特定のファイルでエラー `creation date and modification date mismatch with timezone` が発生して失敗する一方で、Acrobat Pro PDF/A の検証ではコンプライアンスチェックがスムーズに行われます。 （FORMS-15840）
+* OSGi 上のAEM Forms サービスパック 15 （6.5.15.0）のサイトページで「ドラフトと送信」コンポーネントを使用してフォームドラフトを削除すると、削除が失敗します。 （FORMS-15755）
+* 999 を超えるエントリを含むSharePoint リストがあり、フォームに添付ファイルが含まれている場合、フォームの送信が失敗します。 （FORMS-15057）
+* 開始日と終了日というラベルの付いた 2 つの日付選択コンポーネントを使用する場合、終了日が開始日より前であることを確認する検証ルールを追加し、カスタムスクリプト検証メッセージを設定すると、終了日が開始日より前の場合、検証はトリガーされません。 （FORMS-14757）
+* ユーザーがアダプティブフォーム内のテーブルに表示および非表示機能を使用すると、フィールドサイズが縮小します。 行を追加または削除すると、フィールドサイズが自動的に修正されます。 （FORMS-14756）
+* ユーザーがAEM Forms サービスパック 19 （6.5.19.0）でフォームを印刷すると、一部のフォームがサーバーで正しくレンダリングされず、印刷処理中にエラーが発生します。 （FORMS14734）
+* ユーザーをAEM Forms サービスパック 15 （6.5.15.0）からAEM Forms サービスパック 19 （6.5.19.0）に更新し、特定の変数が数値に設定され、カスタム表示パターンが num{$zzz,zz9.99} に設定されたフォームを使用すると、プレビューおよび Agent UI でパターンが正しくレンダリングされません。 （FORMS-14694）
+* インタラクティブ通信内で、保存されたデータ xml を使用してレターをプレビューすると、レターがAEM UI の「読み込み中」ステータスで停止します。 レターを同じ XML で再度プレビューすると、正常に機能します。 （FORMS-14521）
+* AEM Forms サービスパック 20 （6.5.20.0）を使用しているユーザーが、アダプティブフォームの「メールを送信」送信アクションボタンを使用して添付ファイル付きのメールを送信すると、添付ファイル名がインラインではなく次の行に表示されます。 （FORMS-14426）
+* 箇条書きリストがデフォルトの「ディスク」スタイルに設定されたPDFをAEM Formsで生成すると、Adobe Acrobat アクセシビリティツールのアクセシビリティチェックでPDFが失敗します。 「箇条書き」および「正方形」スタイルのリストは、アクセシビリティチェックを通過します。 （FORMS-13802、LC-3922179）
+* スタンドアロンの RHEL8 JBoss セットアップで AEMForms-6.5.0-0065 から AEMForms-6.5.0-0087 にアップグレードすると、LiveCycleサービスコンテナに接続できません。 （FORMS-15907） ・
+* JEE 上のAEM FormsのAEM Workspaceでは、以前に送信したフォームを選択して新しいフォームプロセスを開始すると、データプロセスが事前入力されたフォームは、以前に送信したデータをすべて消去し、事前入力されたデータと置き換え、以前のフォームに手動で入力されたフィールドを保持しません。 （FORMS-15376）
+* AEM Forms サービスパック 20 （6.5.20.0）で PDFG サービスを使用して Tiff ファイルをPDFに変換すると、次のエラーで失敗します。（FORMS-14879） ALC-PDG-011-028 – 入力イメージファイルをPDFに変換する際にエラーが発生しました。 com/sun/image/codec/jpeg/JPEGCodec
+* JEE 上のAEM Forms jar ファイルのアップグレード：`commons-collections:commons-collections:jar` ライブラリが含まれるようになりました。次のような様々なAEM Forms JEE ジョブでの依存関係の解決と機能を向上させます。
+   * ジョブ処理とエラー処理を改善する Assembler ジョブの機能強化。
+   * PDF Generator（PDFG）ドキュメントの生成と変換の操作をスムーズにするジョブの強化。
+   * LC-Upgrade ジョブの機能強化は、バージョン間の安定した移行を確保しながら、アップグレードプロセスを改善します。
+   * ドキュメント処理のセキュリティを確保し、権限管理機能を向上させるためのRights Managementジョブの強化。
+   * プロセス管理ジョブの機能強化により、信頼性の高いジョブ処理とシステム管理を実現します。
+
+
+#### XMLFM {#forms-xmlfm-sp22}
+
+* AEM Forms サービスパック 21 （6.5.21.0）でユーザーが XMLFM を使用してPDFに非標準のタグを追加すると、ドキュメントがPDF仕様の要件に準拠しなくなります。 （LC-3922484）
+* AEM Forms サービスパック 20 （6.5.20.0）で Output サービスを使用してPDFが発生すると、CORBA.COMM_FAILURE で失敗し、次のエラーが表示されます。`15:04:35,973 ERROR [com.adobe.formServer.PA.XMLFormAgentWrapper] (default task-14) ALCOUT-002-013: XMLFormFactory, PAexecute failure: "org.omg.CORBA.COMM_FAILURE"` アクセシビリティの役割「参照」が XDP テンプレートのサブフォームから除外されると、サービスは正常に渡されます。 ただし、この役割は 508 コンプライアンスに必要です。 （LC-3922402）
+* ユーザーが XFA フォームを AcroForm PDFに変換すると、失敗します。 （LC-3922363）
+* AEM Forms サービスパック 19 （6.5.19.0）で、ユーザーが名前のないサブフォームを使用して XDP を作成すると、名前のないサブフォームに対して FS_DATA_SOM が空のように表示されます。 （LC-3922034）
+
+#### Forms Designer {#forms-designer-sp22}
+
+* AEM Forms Designer バージョン 6.5.21.0 でフラグメントフォルダーを選択してフラグメントライブラリを開くと、クラッシュします。 （LC-3922439）
+* 32 ビット版のAEM Forms Designer バージョン 6.5.20.0 をアンインストールし、AEM Forms Designer バージョン 6.5.21.0 をインストールすると、Forms Designerを起動できません。 エラーログに、Java Runtime Environment （JRE）に必要なメモリ割り当ての不足が示される。 （LC-3922404）
+* AEM Forms Designer バージョン 6.5.20.0 をインストールすると、「マクロ」オプションがメニューに表示されず、デフォルトの「アクセシビリティチェッカー」マクロのみが表示され、実行できなくなります。 （LC-3922321）
+* AEM Forms Designer バージョン 6.5.20.0 で、XDP を作成するための新しいテンプレートの場所を追加すると、Forms Designerがクラッシュします。 （LC-3922316）
+* AEM Forms 6.5 サービスパック 15 （6.5.15.0） OSGI で、ExportData メソッドを使用して出力を生成すると、不完全で誤ったデータが生成されます。 （LC-3922340）
 
 
 <!-- #### [!DNL Adaptive Forms] {#forms-6522}
@@ -547,7 +614,16 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * インタラクティブ通信エージェント UI の印刷プレビューでは、すべてのフィールド値に通貨記号（ドル記号 $ など）が一貫して表示されません。999 までの値の場合は表示されますが、1000 以上の値の場合は表示されません。（FORMS-16557）
 * インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。（FORMS-16575）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。（FORMS-16603）
-* 印刷プレビューでレターを表示すると、コンテンツが変更されます。つまり、一部のスペースが表示されなくなり、特定の文字が「x」に置き換えられます（FORMS-15681）
+* 印刷プレビューでレターを表示すると、コンテンツが変更されます。つまり、一部のスペースが消え、特定の文字が「x」に置き換えられます。 （FORMS-15681）
+* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss で動作している JEE 上のAEM Forms サービスパック 21 （6.5.21.0）の PDFG サービスが、SLF4J ライブラリを含んだクラスローダーの競合によって失敗します。 エラーが次のように表示される（CQDOC-22178）。
+
+  ```java
+  Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
+  the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
+  @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
+  (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
+  have different Class objects for the type org/slf4j/ILoggerFactory used in the signature
+  ```
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 

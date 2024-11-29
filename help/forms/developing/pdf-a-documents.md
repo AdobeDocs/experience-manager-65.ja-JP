@@ -9,10 +9,10 @@ role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 4df88fc37b86b6ff3b3a9b788c91b61e2aa7b07f
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 100%
+source-wordcount: '2347'
+ht-degree: 99%
 
 ---
 
@@ -36,6 +36,8 @@ DocConverter サービスを使用して、PDF ドキュメントを PDF/A ド�
 PDF/A-1 仕様は、A と B という 2 つの適合レベルで構成されます。2 つの主な違いは、論理構造（アクセシビリティ）のサポートに関するもので、適合レベル B には必要ありません。いずれの適合レベルであれ、PDF/A-1 では、生成された PDF/A ドキュメントにすべてのフォントが埋め込まれます。現時点では、検証（および変換）では PDF/A-1b のみがサポートされています。
 
 PDF/A は PDFドキュメントをアーカイブするときの標準ですが、標準の PDF ドキュメントが会社の要件に適合している場合は、アーカイブに PDF/A を使用する必要はありません。PDF/A 規格の目的は、長期的なアーカイブやドキュメントの保存のニーズに対応できる PDF ファイルを構築することです。
+
+サポートされるPDF/A 準拠の規格には、PDF/A-1a、1b、2a、2b、3a、3b が含まれます。
 
 >[!NOTE]
 >
@@ -108,7 +110,7 @@ Java API を使用して、PDF ドキュメントを PDF/A ドキュメントに
 
 1. DocConvert クライアントの作成
 
-   * 接続プロパティが格納された `ServiceClientFactory` オブジェクトを作成します。
+   * 接続プロパティを含む`ServiceClientFactory`オブジェクトを作成します。
    * コンストラクターを使用し、`DocConverterServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. PDF ドキュメントを参照して PDF/A ドキュメントに変換

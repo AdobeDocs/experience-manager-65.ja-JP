@@ -8,10 +8,10 @@ feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
-source-git-commit: 60414285277281d9b1e0c9d93ddf04bc267fd0fb
+source-git-commit: 9eb74c1b95837d977b8abe9614421a0a2c0be73e
 workflow-type: tm+mt
-source-wordcount: '6388'
-ht-degree: 100%
+source-wordcount: '6448'
+ht-degree: 98%
 
 ---
 
@@ -5065,110 +5065,67 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
 
 #### PDF ドキュメントの自動タグ付け {#auto-tag-api}
 
-PDF API の自動タグ付けは、PDF ドキュメントにタグを追加してアクセスしやすくします。1 つの演算子でテキストブロック（段落）と箇条書きリストのタグ付けをサポートします。
+自動タグPDFAPI は、ドキュメントにタグを追加することでPDFのアクセシビリティを強化し、アクセシビリティ標準に準拠できるようにします。 これにより、ユーザーエクスペリエンスが向上するだけでなく、ドキュメント間の精度と一貫性も維持されます。 自動タグ API は、次の要素のタグ付けをサポートしています。
+
+* テキストブロック（段落）
+* 1 つのオペレーター内の箇条書きリスト
+* 目次（目次）
 
 ![自動タグ付き PDF ドキュメント](assets/auto-tag-api.png)
 
-<!--
+次の Java コードのサンプルを使用して、PDFファイルをタグ付きPDFドキュメントに変換する方法を示します。
 
-**Syntax**: `tag(Document inDoc)`
+**構文**：`Document tag(final Document inDoc)`
 
-**Input Parameters**
+**入力パラメーター**
 
 <table>
  <tbody>
   <tr>
-   <th>Parameters</th>
-   <th>Description</th>
+   <th>パラメーター</th>
+   <th>説明</th>
   </tr>
   <tr>
-   <td><code>inDoc</code><br /> </td>
-   <td>Document object containing PDF.<br /> </td>
+   <td><code>inDoc</code></td>
+   <td>タグ付けする入力として提供されるドキュメント。 必須のパラメーターです。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-The following Java code tags the PDF document with lists and paragraphs.
-
 ```java
-/*************************************************************************
- *
- * ADOBE CONFIDENTIAL
- * ___________________
- *
- * Copyright 2014 Adobe Systems Incorporated
- * All Rights Reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of Adobe Systems Incorporated and its suppliers,
- * if any.  The intellectual and technical concepts contained
- * herein are proprietary to Adobe Systems Incorporated and its
- * suppliers and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from Adobe Systems Incorporated.
- **************************************************************************/
-package com.adobe.fd.pdfutility.services.impl;
-import com.adobe.aem.transaction.core.ITransactionRecorder;
-import com.adobe.aemfd.docmanager.Document;
-import com.adobe.fd.jbig2.wrapper.api.JBIG2Wrapper;
-import com.adobe.fd.pdfutility.services.PDFUtilityService;
-import com.adobe.fd.pdfutility.services.client.*;
-import com.adobe.internal.pdftoolkit.core.exceptions.PDFIOException;
-import com.adobe.internal.pdftoolkit.core.exceptions.PDFInvalidDocumentException;
-import com.adobe.internal.pdftoolkit.core.exceptions.PDFSecurityException;
-import com.adobe.internal.pdftoolkit.pdf.document.*;
-import com.adobe.internal.pdftoolkit.services.pdftagging.structlib.StructLib;
-import com.adobe.internal.pdfutil.util.IOUtils;
-import com.adobe.internal.pdfutil.util.JBIG2CustomFilter;
-import com.day.cq.dam.handler.gibson.fontmanager.FontManagerService;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.felix.scr.annotations.Service;
-import org.osgi.service.component.ComponentContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import java.io.IOException;
-import java.util.List;
-
-/**
- * The following Java code example is used to tag the PDF document with lists and paragraphs.
- */
-
-public PDFDocument tag(final Document inDoc) throws PDFUtilityException {
-        if (LOGGER.isTraceEnabled()) {
-            LOGGER.trace(pdfUtilService, "tag");
+@Reference
+private PDFUtilityService pdfutilityService;
+private static final File outputFolder = new File("C:/Output/");
+void tag(File inputFile) throws Exception
+{
+    Document inDoc = null;
+    try
+    {
+        inDoc = new Document(inputFile);
+        if(inputFile.getName().trim().isEmpty()) {
+            throw new Exception("Input file name cannot be null");
+        }
+        String inputFileExtension = "";
+        int dotIndex = inputFile.getName().lastIndexOf('.');
+        if (dotIndex > 0 && dotIndex < inputFile.getName().length() - 1) {
+            inputFileExtension = inputFile.getName().substring(dotIndex + 1);
+        }
+        if(inputFileExtension.isEmpty()) {
+            throw new Exception("Input file should have an extension");
+        }
+        Document taggedDoc;
+        taggedDoc = pdfutilityService.tag(inDoc);
+        File outputFile = new File(outputFolder,"Output.pdf");
+        taggedDoc.copyToFile(outputFile);
+        taggedDoc.close();
+    } 
+    finally {
+        if (inDoc != null) {
+            inDoc.dispose();
+            inDoc = null;
+        }
+    }
 }
-        if (inDoc == null) {
-            LOGGER.info(PDFUtilityMsgSet.UTL_S00_001_MISSING_DOCUMENT);
-            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_001_MISSING_DOCUMENT, null));
-}
-PDFDocument outDoc;
-        try {
-PDFOpenOptions openOptions = PDFOpenOptions.newInstance();
-            openOptions.setFontSet(fontManagerService.getPdfFontSet());
-            outDoc = IOUtils.toPDFDocument(inDoc, openOptions);
-StructLib.AutoTagDoc(outDoc);
-            LOGGER.info("Successfully tagged the PDF document.");
-} catch (PDFSecurityException e) {
-            LOGGER.error(PDFUtilityMsgSet.UTL_S00_015_PDF_SECURITY_ERROR);
-            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_015_PDF_SECURITY_ERROR, null), e);
-} catch (PDFIOException e) {
-            LOGGER.error(PDFUtilityMsgSet.UTL_S00_011_PDF_IO_ERROR);
-            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_011_PDF_IO_ERROR, null), e);
-} catch (PDFInvalidDocumentException e) {
-            LOGGER.info(PDFUtilityMsgSet.UTL_S00_003_INVALID_PDF_DOCUMENT);
-            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_003_INVALID_PDF_DOCUMENT, null), e);
-} catch (IOException e) {
-            LOGGER.error(PDFUtilityMsgSet.UTL_S00_016_PDF_GENERAL_ERROR);
-            throw new PDFUtilityException(PDFUtilityMsgSet.getMessage(PDFUtilityMsgSet.UTL_S00_016_PDF_GENERAL_ERROR, null), e);
-} finally {
-            if (LOGGER.isTraceEnabled()) {
-                LOGGER.trace(pdfUtilService, "tag");
-}
-}
-        return outDoc;
-}
-
 ```
--->
+
+

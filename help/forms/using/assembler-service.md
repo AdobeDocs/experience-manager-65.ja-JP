@@ -9,10 +9,10 @@ feature: Document Services
 exl-id: 84c8125d-0f16-432a-9567-63b868667537
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 2eac9acd8b92582424557222b673211b29a15185
 workflow-type: tm+mt
-source-wordcount: '2118'
-ht-degree: 100%
+source-wordcount: '2159'
+ht-degree: 98%
 
 ---
 
@@ -204,6 +204,22 @@ fragment="myFragment"/>
 </DDX>
 ```
 
+#### CRX リポジトリ上の参照の解決 {#resolve-references-on-crx-repository}
+
+の crx パスを指定することで、解決するソース参照を選択的に指定できます
+xdp ソース内のフラグメント参照。 以下に示す例では、含まれているフラグメントも示します
+解決済み。
+
+```xml
+<DDX xmlns="http://ns.adobe.com/DDX/1.0/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://ns.adobe.com/DDX/1.0/ coldfusion_ddx.xsd">
+<XDP result="stitched.xdp">
+<XDP source="crx:///content/dam/formsanddocuments/test-xdp/sample.xdp" />
+</XDP>
+</DDX>
+```
+
 #### 特定の絶対参照または相対参照を解決 {#selectively-resolve-absolute-or-relative-references}
 
 次の例に示すように、ソースドキュメントの全部または一部で特定の絶対参照または相対参照を解決できます。
@@ -345,4 +361,4 @@ digitalSignatures="true"/>
 </DDX>
 ```
 
-DDX と Assembler サービスを使用して他の LiveCycle サービスを呼び出すことによって、プロセスダイアグラムが単純化され、ワークフローをカスタマイズする手間を減らすことができます。（関連トピック
+DDX と Assembler サービスを使用して他の LiveCycle サービスを呼び出すことによって、プロセスダイアグラムが単純化され、ワークフローをカスタマイズする手間を減らすことができます。（関連トピック）

@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: f2f6f7efe67efdfc88863593844cc172a4815622
+source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
 workflow-type: tm+mt
 source-wordcount: '1697'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 100%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.21.0 |
+| バージョン | 6.5.22.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2024年5月29日（PT） |
+| 日付 | 2024 年 11 月 29 日（Pt） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
