@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
+source-git-commit: 27283286bd514c6f8902297cd9229b5e92a3c60d
 workflow-type: tm+mt
-source-wordcount: '6070'
+source-wordcount: '6089'
 ht-degree: 78%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 78%
 
 * [PDF/A コンプライアンスの強化 ](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents)：アクセシビリティを確保し、これらの標準への準拠を確認しながら、アーカイブ目的でPDFをPDF/A 形式（1a、2a、3a）に変換できるようになりました。
 
-* **静的PDFドキュメントのフォントの自動サイズ設定のサポート**:AEM Forms Designerでは、.xdp ファイルの自動サイズ設定機能をサポートするようになりました。 XDP のテキストフィールド、数値フィールド、パスワードフィールド、日時フィールドの自動サイズ変更を指定して、静的PDFドキュメントでこれらのフィールドの内容を切り捨てずにテキストフィールドの内容をレンダリングできるようになりました。
+* **静的PDFドキュメントのフォントの自動サイズ設定のサポート**:AEM Forms Designer、OutputService および FormsService は、静的PDFのフォントの自動サイズ設定をサポートするようになりました。ユーザーがテキストフィールド、数値フィールド、パスワードフィールド、日時フィールドなどのフィールドについてテンプレート内でフォントサイズ 0 を指定すると、フィールド自体のサイズを変更することなく、これらのフィールド内のフォントサイズが自動調整されます。 この機能を使用するには、ユーザーがカスタム xci にフラグ `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` を渡します。
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -223,7 +223,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 -->
 
-#### Forms {#forms-bug-fixes-sp22}
+### Forms {#forms-bug-fixes-sp22}
 
 * AEM Formsに保存されたドラフトの添付ファイル用に生成された URL は、設定された Apache Sling Resource Resolver Factory マッピングを反映していません。 （FORMS-16949）
 * AEM Forms Service Pack 19 （6.5.19.0）でユーザーがレターをプレビューすると、スペースが見つからず、「x」という文字が一部の場所に表示されるので、コンテンツが適切に配置されません。 （FORMS-16670）
