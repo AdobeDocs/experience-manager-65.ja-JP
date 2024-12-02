@@ -5,8 +5,7 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 27283286bd514c6f8902297cd9229b5e92a3c60d
+source-git-commit: 36238364383c380269812641acc66e452e2362ba
 workflow-type: tm+mt
 source-wordcount: '6089'
 ht-degree: 78%
