@@ -6,9 +6,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
 source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1697'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 99%
 |---|---|
 | バージョン | 6.5.22.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2024 年 11 月 29 日（Pt） |
+| 日付 | 2024年11月29日（PT） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
