@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
 source-git-commit: 9eb74c1b95837d977b8abe9614421a0a2c0be73e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6448'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -5065,15 +5065,15 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
 
 #### PDF ドキュメントの自動タグ付け {#auto-tag-api}
 
-自動タグPDFAPI は、ドキュメントにタグを追加することでPDFのアクセシビリティを強化し、アクセシビリティ標準に準拠できるようにします。 これにより、ユーザーエクスペリエンスが向上するだけでなく、ドキュメント間の精度と一貫性も維持されます。 自動タグ API は、次の要素のタグ付けをサポートしています。
+自動タグ付け PDF API は、ドキュメントにタグを追加して PDF のアクセシビリティを強化し、アクセシビリティ標準への準拠を確保します。これにより、ユーザーエクスペリエンスが向上するだけでなく、ドキュメント全体の正確性と一貫性も維持されます。自動タグ付け API は、次の要素のタグ付けをサポートします。
 
-* テキストブロック（段落）
-* 1 つのオペレーター内の箇条書きリスト
-* 目次（目次）
+* テキストのブロック（段落）
+* 1 つのオペレーターの箇条書きリスト
+* 目次（TOC）
 
 ![自動タグ付き PDF ドキュメント](assets/auto-tag-api.png)
 
-次の Java コードのサンプルを使用して、PDFファイルをタグ付きPDFドキュメントに変換する方法を示します。
+次の Java コードサンプルは、PDF ファイルをタグ付き PDF ドキュメントに変換する方法を示します。
 
 **構文**：`Document tag(final Document inDoc)`
 
@@ -5087,7 +5087,7 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
   </tr>
   <tr>
    <td><code>inDoc</code></td>
-   <td>タグ付けする入力として提供されるドキュメント。 必須のパラメーターです。<br /> </td>
+   <td>タグ付けする入力として指定されたドキュメント。必須のパラメーターです。<br /> </td>
   </tr>
  </tbody>
 </table>

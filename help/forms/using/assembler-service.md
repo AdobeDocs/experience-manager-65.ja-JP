@@ -10,9 +10,9 @@ exl-id: 84c8125d-0f16-432a-9567-63b868667537
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: 2eac9acd8b92582424557222b673211b29a15185
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2159'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -204,11 +204,11 @@ fragment="myFragment"/>
 </DDX>
 ```
 
-#### CRX リポジトリ上の参照の解決 {#resolve-references-on-crx-repository}
+#### CRX リポジトリの参照を解決 {#resolve-references-on-crx-repository}
 
-の crx パスを指定することで、解決するソース参照を選択的に指定できます
-xdp ソース内のフラグメント参照。 以下に示す例では、含まれているフラグメントも示します
-解決済み。
+XDP ソースのフラグメント参照の crx パスを指定して、解決するソース参照を選択的に指定できます。
+以下の例では、含まれているフラグメントも解決されます。
+
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/"
