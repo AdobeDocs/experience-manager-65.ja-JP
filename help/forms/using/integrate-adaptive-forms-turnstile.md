@@ -3,22 +3,19 @@ title: AEM アダプティブフォーム 6.5 でターンスタイルを使用�
 description: Turnstile サービスでフォームのセキュリティを簡単に強化します。 ステップバイステップガイドをご用意しております。
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+exl-id: bed93ce3-89db-477a-8316-7598275e4bca
+source-git-commit: ab92f0a4c89f6c523539ccc048ea2d88b930936c
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 16%
+source-wordcount: '828'
+ht-degree: 20%
 
 ---
 
 # AEM Forms環境と Turnstile の連携 {#connect-your-forms-environment-with-turnstile-service}
 
 <!--
-
-<span class="preview"> This feature is under the Early Adopter Program. You can write to aem-forms-ea@adobe.com from your official email id to join the early adopter program and request access to the capability. </span>
-
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
 -->
-
-<span class="preview"> この機能は早期導入プログラムの対象です。 この機能を使用してアーリーアクセスプログラムに参加することに関心がある場合は、公式アドレスからaem-forms-ea@adobe.comにメールを送信して、アクセス </span> をリクエストしてください
 
 CAPTCHA（コンピュータと人間を区別する完全に自動化された公開チューリングテスト）は、人間と自動化されたプログラム／ボットを区別するために、オンライントランザクションで一般的に使用されるプログラムです。テストを行ってユーザーの反応を評価し、サイトを使用しているのが人間かボットかを判断します。テストが失敗した場合の続行を防ぎ、ボットによるスパムの投稿や悪意のある目的を防止することで、オンライントランザクションの安全性を高めます。
 
@@ -33,7 +30,9 @@ AEM Forms 6.5 は、次の CAPTCHA ソリューションをサポートしてい
 
 ## AEM Forms環境と Turnstile Captcha の統合
 
-Cloudflare の Turnstile Captcha は、自動ボット、悪意のある攻撃、スパム、不要な自動トラフィックからフォームとサイトを保護することを目的としたセキュリティ対策です。 フォームの送信を許可する前に、人間であることを確認するためのチェックボックスがフォーム送信時に表示されます。
+Cloudflare の Turnstile Captcha は、自動ボット、悪意のある攻撃、スパム、不要な自動トラフィックからフォームとサイトを保護することを目的としたセキュリティ対策です。 フォームの送信を許可する前に、フォームの送信時にユーザーが人間であることを確認するチェックボックスが表示されます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440940/)
 
 ### AEM Forms環境と Turnstile Captcha を統合するための前提条件 {#prerequisite}
 
@@ -117,4 +116,4 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
 ## 関連トピック {#see-also}
 
 * [アダプティブフォームの CAPTCHA の使用](/help/forms/using/captcha-adaptive-forms.md)
-* [アダプティブフォームでの hCaptcha の使用](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)
+* [アダプティブフォームで hCaptcha を使用する](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)
