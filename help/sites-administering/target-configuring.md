@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: d2623c78e8c779b20303865d4bb40effd1e5fe59
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2125'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -141,7 +141,7 @@ AEMで Target クラウド設定を作成するには、以下の手順を実行
    1. 設定の「**タイトル**」を入力します。
    1. 「**Adobe Target 設定**」テンプレートを選択します。
 
-      ![Adobe Targetの設定 ](assets/adobe-target-create-configuration.png)
+      ![Adobe Target 設定](assets/adobe-target-create-configuration.png)
 
 1. 「**作成**」をクリックします。
 
