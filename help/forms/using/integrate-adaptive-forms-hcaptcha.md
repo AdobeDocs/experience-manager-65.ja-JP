@@ -3,19 +3,17 @@ title: AEM 6.5 Formsでの hCaptcha&reg；の使用方法
 description: hCaptcha® サービスでフォームのセキュリティを容易に強化できます。ステップバイステップガイドをご用意しております。
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
-source-git-commit: 25dfe85048184e34cc3afb5e7b08cc0e2f054a01
+source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 27%
+source-wordcount: '864'
+ht-degree: 28%
 
 ---
 
 # AEM Forms環境と hCaptcha の接続® {#connect-your-forms-environment-with-hcaptcha-service}
 
-<!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
--->
+<span class="preview"> この機能は、機能切り替え ID `FT_FORMS-12407` に基づいています。 この機能を有効にするには、[ 機能の切り替えを有効にする ](/help/forms/using/enable-feature-toggle.md) 記事に記載されている手順に従います。</span>
+
 
 CAPTCHA（コンピュータと人間を区別する完全に自動化された公開チューリングテスト）は、人間と自動化されたプログラム／ボットを区別するために、オンライントランザクションで一般的に使用されるプログラムです。テストを行ってユーザーの反応を評価し、サイトを使用しているのが人間かボットかを判断します。テストが失敗した場合の続行を防ぎ、ボットによるスパムの投稿や悪意のある目的を防止することで、オンライントランザクションの安全性を高めます。
 
@@ -82,7 +80,7 @@ AEM Formsを hCaptcha® サービスと統合するには、次の手順を実�
    ![設定コンテナの選択](/help/forms/using/assets/captcha-properties.png)
 
 1. アダプティブフォームを選択し、**[!UICONTROL 編集]** をクリックして、フォームをエディターで開きます。
-1. コンポーネントブラウザーから **[!UICONTROL Adaptive Form hCaptcha®]** コンポーネントをアダプティブフォームにドラッグ&amp;ドロップまたは追加します。
+1. コンポーネントブラウザーから **[!UICONTROL Captcha]** コンポーネントを、アダプティブフォームにドラッグ＆ドロップします。
 1. **[!UICONTROL アダプティブフォーム hCaptcha®]** コンポーネントを選択し、プロパティ ![ プロパティアイコン ](assets/configure-icon.svg) をクリックして、プロパティダイアログを開きます。 次のプロパティを指定します。
 
    ![hCaptcha® v1](assets/config-hcaptcha-v1-img.png)

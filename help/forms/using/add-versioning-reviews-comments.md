@@ -3,20 +3,21 @@ title: AEM 6.5 アダプティブフォームにバージョン、コメント�
 description: AEM 6.5 アダプティブフォームのコアコンポーネントを使用すると、アダプティブフォームにコメント、注釈、バージョン管理を追加できます。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 50%
+source-wordcount: '593'
+ht-degree: 53%
 
 ---
 
 # アダプティブフォームのバージョン管理、レビューおよびコメント
 
 <!--
-<span class="preview"> This feature is under the Early Adopter Program. You can write to aem-forms-ea@adobe.com from your official email id to join the early adopter program and request access to the capability. </span>
+
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+
 -->
 
-<span class="preview"> この機能は早期導入プログラムの対象です。 この機能を使用してアーリーアクセスプログラムに参加することに関心がある場合は、公式アドレスからaem-forms-ea@adobe.comにメールを送信して、アクセス </span> をリクエストしてください
 
 アダプティブフォームのコアコンポーネントを使用すると、フォーム作成者はフォームにバージョン管理、コメント、注釈を追加できます。 これらの機能を使用すると、複数のバージョンの作成と管理、コメントを介した共同作業、特定のフォームセクションへのメモの追加などが可能になり、フォームの作成作業が簡略化されます。
 

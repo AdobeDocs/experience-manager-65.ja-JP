@@ -3,16 +3,18 @@ title: 2 つの異なるアダプティブフォームの比較
 description: フィールド、コンテンツ、フォームコンポーネントに基づいて、2 つの異なるフォームを比較します。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 7%
+source-wordcount: '180'
+ht-degree: 8%
 
 ---
 
 # アダプティブフォームの比較 {#compare-two-forms}
 
-<span class="preview"> この機能は早期導入プログラムの対象です。 この機能を使用してアーリーアクセスプログラムに参加することに関心がある場合は、公式アドレスからaem-forms-ea@adobe.comにメールを送信して、アクセス </span> をリクエストしてください
+<!--
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+-->
 
 アダプティブ Forms コアコンポーネントの比較機能を使用すると、フォーム作成者は、フィールド、コンテンツ、コンポーネントを分析することで 2 つのフォームの違いを特定できます。
 

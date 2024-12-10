@@ -4,18 +4,16 @@ description: Turnstile サービスでフォームのセキュリティを簡単
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: ab92f0a4c89f6c523539ccc048ea2d88b930936c
+source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 20%
+source-wordcount: '846'
+ht-degree: 21%
 
 ---
 
 # AEM Forms環境と Turnstile の連携 {#connect-your-forms-environment-with-turnstile-service}
 
-<!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
--->
+<span class="preview"> この機能は、機能切り替え ID `FT_FORMS-12407` に基づいています。 この機能を有効にするには、[ 機能の切り替えを有効にする ](/help/forms/using/enable-feature-toggle.md) 記事に記載されている手順に従います。</span>
 
 CAPTCHA（コンピュータと人間を区別する完全に自動化された公開チューリングテスト）は、人間と自動化されたプログラム／ボットを区別するために、オンライントランザクションで一般的に使用されるプログラムです。テストを行ってユーザーの反応を評価し、サイトを使用しているのが人間かボットかを判断します。テストが失敗した場合の続行を防ぎ、ボットによるスパムの投稿や悪意のある目的を防止することで、オンライントランザクションの安全性を高めます。
 
@@ -84,7 +82,7 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
    ![設定コンテナの選択](assets/captcha-properties.png)
 
 1. アダプティブフォームを選択し、**[!UICONTROL 編集]** をクリックして、アダプティブフォームをエディターで開きます。
-1. コンポーネントブラウザーから **[!UICONTROL アダプティブフォームターンスタイル]** コンポーネントを、アダプティブフォームにドラッグ&amp;ドロップまたは追加します。
+1. コンポーネントブラウザーから **[!UICONTROL Captcha]** コンポーネントを、アダプティブフォームにドラッグ＆ドロップします。
 1. **[!UICONTROL アダプティブフォームターンスタイル]** コンポーネントを選択し、プロパティ ![ プロパティアイコン ](assets/configure-icon.svg) アイコンをクリックします。 プロパティダイアログが開きます。次のプロパティを指定します。
 
    <!--![Turnstile v2](assets/turnstile-settings-v2.png)-->

@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 167d897cc5f44a2302a4ba932e238e6ba973635d
-workflow-type: ht
-source-wordcount: '6030'
-ht-degree: 100%
+source-git-commit: 26c1fe9d032729dd8d1737c922c4b2fab55f2d48
+workflow-type: tm+mt
+source-wordcount: '6085'
+ht-degree: 99%
 
 ---
 
@@ -614,8 +614,16 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * インタラクティブ通信エージェント UI の印刷プレビューでは、すべてのフィールド値に通貨記号（ドル記号 $ など）が一貫して表示されません。999 までの値の場合は表示されますが、1000 以上の値の場合は表示されません。（FORMS-16557）
 * インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。（FORMS-16575）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。（FORMS-16603）
-* 印刷プレビューでレターを表示すると、コンテンツが変更されます。つまり、一部のスペースが表示されなくなり、特定の文字が `x` に置き換えられます。（FORMS-15681）
-* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss® で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
+* 印刷プレビューでレターを表示すると、コンテンツが変更されます。つまり、一部のスペースが表示されなくなり、特定の文字が「x」に置き換えられます。（FORMS-15681）
+* AEM Forms OSGi 6.5.22 以降、Forms サービスの renderPDFForm 操作は、サーバーでクライアントのみ（runAt=client）のスクリプトを実行せず、次の表に示すように runAt=server または runAt=both とマークされているスクリプトのみが実行されます。 （FORMS-16564）
+
+  | runAt とマークされたスクリプト | サーバーで実行 |
+  |---------------------|-------------------------|
+  | server | はい |
+  | 両方 | はい |
+  | クライアント | いいえ |
+
+* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"

@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: bf750ddc14ce083a949c57322e0bc45594e66311
-workflow-type: ht
-source-wordcount: '7477'
-ht-degree: 100%
+source-git-commit: 5827cf69222962243cfebdc9c41eb73f90ac950a
+workflow-type: tm+mt
+source-wordcount: '7480'
+ht-degree: 99%
 
 ---
 
@@ -626,6 +626,7 @@ ht-degree: 100%
       + [コアコンポーネントベースのアダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
       + [アダプティブフォームへのバージョン管理、コメント、注釈の追加](/help/forms/using/add-versioning-reviews-comments.md)
       + [アダプティブフォームの比較](/help/forms/using/compare-forms-core-components.md)
+      + [機能の有効化の切り替え](/help/forms/using/enable-feature-toggle.md)
    + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
       + [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md)
       + [アダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md)
