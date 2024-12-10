@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 26c1fe9d032729dd8d1737c922c4b2fab55f2d48
+source-git-commit: 9c58545406bc539dbd0c224b3c88365d3851deb8
 workflow-type: tm+mt
 source-wordcount: '6085'
 ht-degree: 99%
@@ -250,7 +250,13 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
    * バージョン間の安定した移行を確保しながらアップグレードプロセスを改善する LC-Upgrade ジョブの機能強化。
    * ドキュメント処理のセキュリティを確保し、権限管理機能を向上させる Rights Management ジョブの機能強化。
    * より信頼性の高いジョブ処理とシステム管理を実現する Process Management ジョブの機能強化。
+* AEM Forms OSGi 6.5.22 以降、Forms サービスの renderPDFForm 操作は、サーバーでクライアントのみ（runAt=client）のスクリプトを実行せず、次の表に示すように runAt=server または runAt=both とマークされているスクリプトのみが実行されます。 （FORMS-16564）
 
+  | runAt とマークされたスクリプト | サーバーで実行 |
+  |---------------------|-------------------------|
+  | server | はい |
+  | 両方 | はい |
+  | クライアント | いいえ |
 
 #### XMLFM {#forms-xmlfm-sp22}
 
@@ -615,14 +621,6 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。（FORMS-16575）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。（FORMS-16603）
 * 印刷プレビューでレターを表示すると、コンテンツが変更されます。つまり、一部のスペースが表示されなくなり、特定の文字が「x」に置き換えられます。（FORMS-15681）
-* AEM Forms OSGi 6.5.22 以降、Forms サービスの renderPDFForm 操作は、サーバーでクライアントのみ（runAt=client）のスクリプトを実行せず、次の表に示すように runAt=server または runAt=both とマークされているスクリプトのみが実行されます。 （FORMS-16564）
-
-  | runAt とマークされたスクリプト | サーバーで実行 |
-  |---------------------|-------------------------|
-  | server | はい |
-  | 両方 | はい |
-  | クライアント | いいえ |
-
 * ユーザーが WebLogic 14c インスタンスを設定すると、JBoss で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
 
   ```java

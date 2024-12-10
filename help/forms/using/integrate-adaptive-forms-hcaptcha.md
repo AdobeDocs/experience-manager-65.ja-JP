@@ -3,9 +3,10 @@ title: AEM 6.5 Formsでの hCaptcha&reg；の使用方法
 description: hCaptcha® サービスでフォームのセキュリティを容易に強化できます。ステップバイステップガイドをご用意しております。
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
+exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
+source-git-commit: 96e6705349fc6969ab0c40c8c770c9a0d1967619
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '863'
 ht-degree: 28%
 
 ---
@@ -75,13 +76,13 @@ AEM Formsを hCaptcha® サービスと統合するには、次の手順を実�
 1. **[!UICONTROL 設定コンテナ]** で、hCaptcha® のクラウド設定を選択します。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
-   そうした Configuration Container がない場合は、[AEM Forms環境と hCaptcha® の接続 ](#connect-your-forms-environment-with-hcaptcha-service) の節を参照して、Configuration Container の作成方法を理解してください。
+   Hcaptcha 用の Configuration Container がない場合、Configuration Container の作成方法については、[AEM Forms環境と hCaptcha の接続®](#configure-hcaptcha-steps-to-configure-hcaptcha) の節を参照してください。
 
    ![設定コンテナの選択](/help/forms/using/assets/captcha-properties.png)
 
 1. アダプティブフォームを選択し、**[!UICONTROL 編集]** をクリックして、フォームをエディターで開きます。
 1. コンポーネントブラウザーから **[!UICONTROL Captcha]** コンポーネントを、アダプティブフォームにドラッグ＆ドロップします。
-1. **[!UICONTROL アダプティブフォーム hCaptcha®]** コンポーネントを選択し、プロパティ ![ プロパティアイコン ](assets/configure-icon.svg) をクリックして、プロパティダイアログを開きます。 次のプロパティを指定します。
+1. **[!UICONTROL Captcha]** コンポーネントを選択し、プロパティ ![ プロパティアイコン ](assets/configure-icon.svg) をクリックして、プロパティダイアログを開きます。 次のプロパティを指定します。
 
    ![hCaptcha® v1](assets/config-hcaptcha-v1-img.png)
 
@@ -91,13 +92,14 @@ AEM Formsを hCaptcha® サービスと統合するには、次の手順を実�
    * **[!UICONTROL 設定 ]:** hCaptcha® 用に設定したクラウド設定を選択します。
      >[!NOTE]
      >同様の目的のために、環境内に複数のクラウド設定を持つことができます。 そのため、サービスは慎重に選択してください。サービスがリストに表示されない場合は、[AEM Forms環境と hCaptcha® の接続 ](#connect-your-forms-environment-with-hcaptcha-service) を参照して、AEM Forms環境と hCaptcha® サービスを接続するCloud Serviceの作成方法を確認してください。
-   * **エラーメッセージ：** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
-   * **Captcha サイズ：** hCaptcha® チャレンジダイアログの表示サイズを選択できます。 **[!UICONTROL コンパクト]** オプションを使用すると小さいサイズを表示でき、**[!UICONTROL 標準]** を使用すると比較的大きいサイズの hCaptcha® チャレンジダイアログを表示できます。**[!UICONTROL 非表示]** を使用すると hCaptcha® を検証でき、ユーザーインターフェイスでチェックボックスウィジェットを明示的にレンダリングする必要はありません。
+
+   * **[!UICONTROL エラーメッセージ ]:** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
+   * **[!UICONTROL Captcha サイズ ]:** hCaptcha® チャレンジダイアログの表示サイズを選択できます。 **[!UICONTROL コンパクト]** オプションを使用すると小さいサイズを表示でき、**[!UICONTROL 標準]** を使用すると比較的大きいサイズの hCaptcha® チャレンジダイアログを表示できます。**[!UICONTROL 非表示]** を使用すると hCaptcha® を検証でき、ユーザーインターフェイスでチェックボックスウィジェットを明示的にレンダリングする必要はありません。
 
 1. 「**[!UICONTROL 完了]**」を選択します。
 
 
-現在は、フォームの入力者が hCaptcha® サービスによって発生する課題を正常にクリアした正当なフォームのみがフォーム送信で許可されています。 hCaptcha®
+現在は、フォームの入力者が hCaptcha® サービスによって発生する課題を正常にクリアした正当なフォームのみがフォーム送信で許可されています。
 
 **hCaptcha® は、Intuition Machines, Inc. の登録商標です。**
 

@@ -4,9 +4,9 @@ description: Turnstile サービスでフォームのセキュリティを簡単
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
+source-git-commit: 4a0e8def5bafd4d90f50bf4b34a537c51e09ce27
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '842'
 ht-degree: 21%
 
 ---
@@ -77,13 +77,13 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
 1. アダプティブフォームを選択し、**[!UICONTROL プロパティ]** をクリックします。 **[!UICONTROL 設定コンテナ]** で、Turnstile® のクラウド設定を選択します。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
-   そのような設定コンテナがない場合は、設定コンテナの作成方法について [AEM Forms環境の自動インストールへの接続 ](#connect-your-forms-environment-with-turnstile-service) の節を参照してください。
+   Captcha サービスを設定するための設定コンテナがない場合、設定コンテナの作成方法については、[ 自動スタイルの設定 ](#configure-turnstile-steps-to-configure-hcaptcha) の節を参照してください。
 
    ![設定コンテナの選択](assets/captcha-properties.png)
 
 1. アダプティブフォームを選択し、**[!UICONTROL 編集]** をクリックして、アダプティブフォームをエディターで開きます。
 1. コンポーネントブラウザーから **[!UICONTROL Captcha]** コンポーネントを、アダプティブフォームにドラッグ＆ドロップします。
-1. **[!UICONTROL アダプティブフォームターンスタイル]** コンポーネントを選択し、プロパティ ![ プロパティアイコン ](assets/configure-icon.svg) アイコンをクリックします。 プロパティダイアログが開きます。次のプロパティを指定します。
+1. **[!UICONTROL Captcha]** コンポーネントを選択し、プロパティ ![ プロパティアイコン ](assets/configure-icon.svg) アイコンをクリックします。 プロパティダイアログが開きます。次のプロパティを指定します。
 
    <!--![Turnstile v2](assets/turnstile-settings-v2.png)-->
    ![Cloudfare Turnstile v1](assets/turnstile-setting-v1.png)
@@ -95,7 +95,8 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
    * **[!UICONTROL 設定 ]:** Turnstile 用に設定したクラウド設定を選択します®。
      >[!NOTE]
      >同様の目的のために、環境内に複数のクラウド設定を持つことができます。 そのため、サービスは慎重に選択してください。サービスがリストに表示されない場合は、AEM Forms環境と Turnstile サービスを接続するCloud Serviceの作成方法について、[AEM Forms環境と Turnstile の接続 ](#connect-your-forms-environment-with-turnstile-service) を参照してください。
-   * **エラーメッセージ：** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
+
+   * **[!UICONTROL エラーメッセージ ]:** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
    * **Captcha サイズ：** hCaptcha® チャレンジダイアログの表示サイズを選択できます。 「**[!UICONTROL コンパクト]**」オプションを使用すると小さいサイズを表示し、「**[!UICONTROL 標準]**」を使用すると比較的大きいサイズの hCaptcha® チャレンジダイアログを表示します。
 
 1. 「**[!UICONTROL 完了]**」を選択します。
