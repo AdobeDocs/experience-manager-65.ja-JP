@@ -3,10 +3,11 @@ title: 2 つの異なるアダプティブフォームの比較
 description: フィールド、コンテンツ、フォームコンポーネントに基づいて、2 つの異なるフォームを比較します。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
+exl-id: bcd6e9cf-b33b-4468-8b99-0da196f65eaa
+source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 8%
+source-wordcount: '202'
+ht-degree: 7%
 
 ---
 
@@ -15,6 +16,8 @@ ht-degree: 8%
 <!--
 <span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
 -->
+
+<span class="preview"> この機能はデフォルトでは有効になっていません。 公式アドレスからaem-forms-ea@adobe.comに書き込んで、機能へのアクセスをリクエストできます。</span>
 
 アダプティブ Forms コアコンポーネントの比較機能を使用すると、フォーム作成者は、フィールド、コンテンツ、コンポーネントを分析することで 2 つのフォームの違いを特定できます。
 

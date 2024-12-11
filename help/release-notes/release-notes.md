@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 9c58545406bc539dbd0c224b3c88365d3851deb8
+source-git-commit: 64bc2ecbb2b5ef5847af4449562240a7c1ec45e9
 workflow-type: tm+mt
-source-wordcount: '6085'
-ht-degree: 99%
+source-wordcount: '6146'
+ht-degree: 98%
 
 ---
 
@@ -43,13 +43,7 @@ ht-degree: 99%
 
 このリリースの主な機能と機能強化は次のとおりです。
 
-* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) および [Cloudfare Turnstile CAPTCHA](/help/forms/using/integrate-adaptive-forms-turnstile.md) サービス：AEM Forms は、次の Captcha サービスをサポートします。
-   * hCaptcha は、チェックボックスウィジェットを使用してユーザーに入力を要求し、ボット、スパム、自動化された不正使用からフォームを保護します。これにより、人間のユーザーのみが続行でき、オンライントランザクションのセキュリティが強化されます。
-   * Cloudflare Turnstile は、自動ボット、悪意のある攻撃、スパム、不要な自動トラフィックからフォームを保護することを目的としたセキュリティ対策を提供します。フォームの送信を許可する前に、フォームの送信時にユーザーが人間であることを確認するチェックボックスが表示されます。
-
-* アダプティブフォームのバージョン管理：
-   * [アダプティブフォームの複数バージョンの作成](/help/forms/using/add-versioning-reviews-comments.md) - ユーザーは既存のフォームのバリエーションを簡単に管理できるようになりました。このプロセスにより、合理化された単一のワークフロー内で、バージョン管理をシンプルに、フォーム最適化の比較を容易に行えるようになります。
-   * [アダプティブフォームの比較](/help/forms/using/compare-forms-core-components.md)：ユーザーは 2 つのフォームを簡単に比較して、その違いを特定できるようになりました。チームメンバーがリビジョンを比較し、変更を効率的に議論できるので、共同作業がスムーズになります。
+#### AEM Formsの GA の新機能 {#ga-aem-forms-sp22}
 
 * [インタラクティブ通信の Batch API](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) でフォント埋め込みを有効にするサポートの追加 - インタラクティブ通信には、Batch API で生成された PDF に Adobe Ming および Adobe Myungjo フォントを埋め込むサポートが含まれるようになりました。この機能強化により、フォントサブセットを使用している場合でも、生成されたドキュメントで正確なテキストレンダリングが確保され、PDF 出力での多言語コンテンツのサポートが向上します。
 
@@ -60,6 +54,18 @@ ht-degree: 99%
 * [PDF/A 準拠の機能強化](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents) - ユーザーは、アクセシビリティを確保し、これらの標準への準拠を検証しながら、アーカイブ目的で PDF を PDF/A 形式（1a、2a、3a）に変換できるようになりました。
 
 * **静的 PDF ドキュメントのフォントの自動サイズ変更のサポート** - AEM Forms Designer、OutputService および FormsService は、静的 PDF のフォントの自動サイズ変更をサポートするようになりました。ユーザーがテキスト、数値、パスワード、日時の各フィールドのフォントサイズを 0 に設定すると、フィールド全体のサイズは変更されずに、これらのフィールド内のフォントサイズが自動調整されます。この機能を使用するには、ユーザーはカスタム XCI：`<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` でフラグを渡します。
+
+#### AEM FormsのBetaの新機能 {#beta-aem-forms-sp22}
+
+ベータ版機能は、最先端のイノベーションに排他的にアクセスし、開発を形作るユニークな機会を提供します。 お使いの環境でベータ版機能を有効にすることに関心がおありですか？ 興味のある機能のリストを記載したメールを、公式アドレスからaem-forms-ea@adobe.comに送信します。
+
+* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) および [Cloudfare Turnstile CAPTCHA](/help/forms/using/integrate-adaptive-forms-turnstile.md) サービス：AEM Forms は、次の Captcha サービスをサポートします。
+   * hCaptcha は、チェックボックスウィジェットを使用してユーザーに入力を要求し、ボット、スパム、自動化された不正使用からフォームを保護します。これにより、人間のユーザーのみが続行でき、オンライントランザクションのセキュリティが強化されます。
+   * Cloudflare Turnstile は、自動ボット、悪意のある攻撃、スパム、不要な自動トラフィックからフォームを保護することを目的としたセキュリティ対策を提供します。フォームの送信を許可する前に、フォームの送信時にユーザーが人間であることを確認するチェックボックスが表示されます。
+
+* アダプティブフォームのバージョン管理：
+   * [アダプティブフォームの複数バージョンの作成](/help/forms/using/add-versioning-reviews-comments.md) - ユーザーは既存のフォームのバリエーションを簡単に管理できるようになりました。このプロセスにより、合理化された単一のワークフロー内で、バージョン管理をシンプルに、フォーム最適化の比較を容易に行えるようになります。
+   * [アダプティブフォームの比較](/help/forms/using/compare-forms-core-components.md)：ユーザーは 2 つのフォームを簡単に比較して、その違いを特定できるようになりました。チームメンバーがリビジョンを比較し、変更を効率的に議論できるので、共同作業がスムーズになります。
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -621,7 +627,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。（FORMS-16575）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。（FORMS-16603）
 * 印刷プレビューでレターを表示すると、コンテンツが変更されます。つまり、一部のスペースが表示されなくなり、特定の文字が「x」に置き換えられます。（FORMS-15681）
-* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
+* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss® で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
