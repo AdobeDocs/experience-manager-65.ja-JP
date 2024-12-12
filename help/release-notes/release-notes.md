@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
 source-git-commit: 64bc2ecbb2b5ef5847af4449562240a7c1ec45e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6146'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 99%
 
 このリリースの主な機能と機能強化は次のとおりです。
 
-#### AEM Formsの GA の新機能 {#ga-aem-forms-sp22}
+#### AEM Forms の新しい GA 機能 {#ga-aem-forms-sp22}
 
 * [インタラクティブ通信の Batch API](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) でフォント埋め込みを有効にするサポートの追加 - インタラクティブ通信には、Batch API で生成された PDF に Adobe Ming および Adobe Myungjo フォントを埋め込むサポートが含まれるようになりました。 この機能強化により、フォントサブセットを使用している場合でも、生成されたドキュメントで正確なテキストレンダリングが確保され、PDF 出力での多言語コンテンツのサポートが向上します。
 
@@ -55,9 +55,9 @@ ht-degree: 99%
 
 * **静的 PDF ドキュメントのフォントの自動サイズ変更のサポート** - AEM Forms Designer、OutputService および FormsService は、静的 PDF のフォントの自動サイズ変更をサポートするようになりました。 ユーザーがテキスト、数値、パスワード、日時の各フィールドのフォントサイズを 0 に設定すると、フィールド全体のサイズは変更されずに、これらのフィールド内のフォントサイズが自動調整されます。 この機能を使用するには、ユーザーはカスタム XCI：`<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` でフラグを渡します。
 
-#### AEM FormsのBetaの新機能 {#beta-aem-forms-sp22}
+#### AEM Forms の新しいベータ版機能 {#beta-aem-forms-sp22}
 
-ベータ版機能は、最先端のイノベーションに排他的にアクセスし、開発を形作るユニークな機会を提供します。 お使いの環境でベータ版機能を有効にすることに関心がおありですか？ 興味のある機能のリストを記載したメールを、公式アドレスからaem-forms-ea@adobe.comに送信します。
+ベータ版機能は、最先端のイノベーションに排他的にアクセスし、その開発に貢献できるユニークな機会を提供します。お使いの環境でベータ版機能を有効にすることに興味がありますか？興味のある機能のリストを添えて、公式アドレスから aem-forms-ea@adobe.com にメールを送信してください。
 
 * [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) および [Cloudfare Turnstile CAPTCHA](/help/forms/using/integrate-adaptive-forms-turnstile.md) サービス：AEM Forms は、次の Captcha サービスをサポートします。
    * hCaptcha は、チェックボックスウィジェットを使用してユーザーに入力を要求し、ボット、スパム、自動化された不正使用からフォームを保護します。 これにより、人間のユーザーのみが続行でき、オンライントランザクションのセキュリティが強化されます。
