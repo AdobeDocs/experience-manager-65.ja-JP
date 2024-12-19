@@ -4,9 +4,9 @@ description: ユニバーサルエディターの柔軟性と、AEM 6.5 を使�
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: c3af0befce5534891d45c2507684a2017f9363f8
+source-git-commit: 773e398af5247a0de12143334ecfa44955ebbbcd
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1178'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 ユニバーサルエディターは、Adobe Experience Manager Sites の一部である多用途のビジュアルエディターです。作成者は、ヘッドレスエクスペリエンスに対して見たままが得られる（WYSIWYG）編集を行うことができます。
 
 * 作成者は、ユニバーサルエディターがAEM ヘッドレスコンテンツのすべてのフォームに対して同じ一貫性のあるビジュアル編集をサポートするので、ユニバーサルエディターの柔軟性の利点を活用できます。
-* ユニバーサルエディターは実装の真の分離をサポートするので、開発者はユニバーサルエディターの汎用性のメリットを受けます。 これにより、開発者は、SDK やテクノロジーに制約を課すことなく、選択したほぼすべてのフレームワークやアーキテクチャを利用できます。
+* ユニバーサルエディターは実装の真の分離をサポートするので、開発者はユニバーサルエディターの汎用性のメリットを受けます。 SDKやテクノロジに制約を課すことなく、任意のフレームワークやアーキテクチャを使用できます。
 
 詳しくは、ユニバーサルエディターの [AEM as a Cloud Service ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) を参照してください。
 
@@ -178,3 +178,11 @@ AEM as a Cloud Serviceでユニバーサルエディターを使用する場合�
 >[!TIP]
 >
 >ユニバーサルエディターの使用を開始する開発者向けの包括的なガイドについては、AEM as a Cloud Service ドキュメントの [AEM開発者向けユニバーサルエディターの概要 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview) を参照してください。この節で説明したAEM 6.5 のサポートに必要な変更に留意してください。
+
+## AEM 6.5 とAEM as a Cloud Serviceの違い {#differences}
+
+AEM 6.5 のユニバーサルエディターは、UI や多くの設定を含め、AEM as a Cloud Serviceと広く同じように機能します。 ただし、注意すべき違いがあります。
+
+* 6.5 のユニバーサルエディターでは、ヘッドレスのユースケースのみをサポートしています。
+* ユニバーサルエディターの設定は、6.5 で（現在のドキュメントで説明されているように ](#setup)[ わずかに異なります。
+* 6.5 のユニバーサルエディターは、AEM as a Cloud Serviceとは異なるアセットピッカーと異なるコンテンツフラグメントピッカーを使用します。
