@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: 23f71b34-a0cb-4664-bb8b-a60f33dc70d8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1208'
 ht-degree: 100%
 
 ---
 
 # 招待ユーザーおよびローカルユーザーのアカウントの管理 {#managing-invited-and-local-user-accounts}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 招待ユーザーとローカルユーザーの管理には招待ユーザーおよびローカルユーザーページを使用します。このページは、次の要件が満たされている場合にのみ表示されます。
 

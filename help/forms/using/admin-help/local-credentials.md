@@ -9,14 +9,18 @@ exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '533'
 ht-degree: 100%
 
 ---
 
 # ローカル資格情報の管理 {#managing-local-credentials}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 ローカル秘密鍵証明書は、Trust Store 管理でホストされる秘密鍵証明書です。*ローカル秘密鍵証明書*&#x200B;は、ユーザーの DES 秘密鍵証明書が保存される場所を特定するものです。Trust Store 管理を使用すると、既存の PFX ファイルなどを使用してローカル秘密鍵証明書の読み込みと管理を行い、ローカル秘密鍵証明書の読み込み、編集および削除を行うことができます。
 

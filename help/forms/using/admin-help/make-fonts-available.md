@@ -9,14 +9,18 @@ exl-id: e9eae896-b1e4-4caa-b466-ac8c9e7416a4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '228'
 ht-degree: 100%
 
 ---
 
 # フォントを使用可能にする {#make-fonts-available}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 フォーム内で使用されているフォントが、AEM Forms をホストする J2EE アプリケーションサーバーで使用できることを確認します。例えば、次のようなシナリオが考えられます。フォームデザイナーが、Designer で使用するフォントをフォントディレクトリに追加し、そのフォントを使用するフォームを別のコンピューターで作成します。Output サービスでそのフォントを使用するには、カスタマーフォントディレクトリにフォントを配置します。カスタマーフォントディレクトリが存在しない場合は、AEM Forms をホストする J2EE アプリケーションサーバー上にディレクトリを作成します。
 

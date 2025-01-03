@@ -9,14 +9,18 @@ feature: PDF Generator
 exl-id: b363b23a-29bb-4ea4-a8f2-5ba9fe3c7b27
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '384'
 ht-degree: 100%
 
 ---
 
 # PDF Generator 設定ファイルの読み込みおよび書き出し {#importing-and-exporting-pdf-generator-configuration-files}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 設定ファイルには、PDF、ファイルタイプおよびセキュリティの設定を含む PDF Generator の変換情報が格納されます。
 

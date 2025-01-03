@@ -9,9 +9,9 @@ exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '852'
 ht-degree: 100%
 
 ---
@@ -36,6 +36,10 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 * セキュリティプロファイル
 
 ## アプリケーションまたはアーカイブの読み込み {#import-an-application-or-archive}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／アプリケーションの管理をクリックします。
 1. 「インポート」をクリックします。

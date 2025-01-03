@@ -9,14 +9,18 @@ exl-id: b7461d5c-95d1-4da2-9d2a-f54c410a87f9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '381'
 ht-degree: 100%
 
 ---
 
 # エンドポイントの追加、有効化、変更または削除 {#adding-enabling-modifying-or-removing-endpoints}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 ## エンドポイントのサービスへの追加 {#add-an-endpoint-to-a-service}
 

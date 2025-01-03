@@ -9,14 +9,18 @@ exl-id: f4045df5-a35b-41d7-910e-971017148597
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '742'
 ht-degree: 100%
 
 ---
 
 # Connector for IBM FileNet の設定 {#configuring-connector-for-ibm-filenet}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Connector for IBM FileNet は、AEM Forms と IBM FileNet 間の通信を実現します。その他の背景情報について詳しくは、[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)にある「ECM 用コネクター」を参照してください。
 

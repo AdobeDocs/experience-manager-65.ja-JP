@@ -9,14 +9,18 @@ exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '3796'
-ht-degree: 100%
+source-wordcount: '3808'
+ht-degree: 99%
 
 ---
 
 # メールエンドポイントの設定 {#configuring-email-endpoints}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 メールエンドポイントを使用すると、1 個または複数のドキュメントをメールに添付し、指定したメールアカウントに送信することで、サービスを呼び出すことができます。メールのインボックスは添付ファイルの収集ポイントとして機能します。サービスによってインボックスが監視され、添付ファイルが処理されます。変換の結果は、エンドポイントで定義されたユーザーに転送されます。
 
@@ -32,7 +36,7 @@ ht-degree: 100%
 
 ユーザーがファイルおよび変換パス名の中で西ヨーロッパ言語の文字を使用してドキュメントを送信する場合は、必要なエンコードの種類（Latin1 [ISO-8859-1]、西ヨーロッパ言語 [Windows] または UTF-8）をサポートするメールアプリケーションを使用する必要があります。詳しくは、使用しているアプリケーションサーバー版の *AEM Forms のインストールおよびデプロイ*&#x200B;ドキュメントを参照してください。
 
-メールエンドポイントを設定する前に、メールサービスを設定します（[デフォルトのメールエンドポイントの設定](configuring-email-endpoints.md#configure-default-email-endpoint-settings)を参照）。メールサービスの設定パラメーターには、2 つの用途があります。
+メールエンドポイントを設定する前に、メールサービスを設定します（[ デフォルトのメールエンドポイント設定の指定 ](configuring-email-endpoints.md#configure-default-email-endpoint-settings) を参照）。メールサービスの設定パラメーターには、次の 2 つの目的があります。
 
 * すべてのメールエンドポイントに共通する属性を設定すること
 * すべてのメールエンドポイントで使用されるデフォルト値を指定すること

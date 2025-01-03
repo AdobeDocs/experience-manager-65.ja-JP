@@ -9,14 +9,18 @@ exl-id: c96faae0-2b0f-4334-b61c-f13b2d1ec179
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '719'
 ht-degree: 100%
 
 ---
 
 # 停止した操作および停止したブランチの使用 {#working-with-stalled-operations-and-branches}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 停止した操作ページおよび停止したブランチページには、停止したプロセスが表示されます。操作の実行中または実行後にエラーが発生した場合、または、プロセス内での意図的な停止操作によって、プロセスは停止することがあります。
 

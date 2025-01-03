@@ -9,12 +9,13 @@ exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: e9afc12af78140ae0ec12cc2ee95fc9e175f8d94
 workflow-type: tm+mt
-source-wordcount: '3229'
-ht-degree: 100%
+source-wordcount: '3241'
+ht-degree: 99%
 
 ---
+
 
 # ディレクトリの設定 {#configuring-directories}
 
@@ -25,6 +26,10 @@ ht-degree: 100%
 設定するエンタープライズドメインごとに、認証プロバイダーがユーザー情報のクエリーを実行するディレクトリを指定します。既存のエンタープライズドメインまたは追加する新しいエンタープライズドメインにディレクトリを追加できます。1 つのドメインに対して複数のディレクトリを設定できます。また、ドメインでカスタムのサービスプロバイダーインターフェイス（SPI）を同期に使用するように設定することもできます。
 
 ### ディレクトリの追加 {#add-a-directory}
+
+>[!NOTE]
+>
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 1. 管理コンソールで、設定／User Management／ドメイン管理をクリックします。
 1. 「新規エンタープライズドメイン」をクリックするか、既存のエンタープライズドメインを選択します。
@@ -121,7 +126,7 @@ ht-degree: 100%
 
 ベース DN は管理コンソールの必須設定ですが、IBM Domino Enterprise Server などの一部のディレクトリ サーバーでは空の BaseDN が必要です。空のベース DN を指定するには、config.xml ファイルを書き出し、config.xml ファイル内の設定を編集して、再度読み込みします（[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)を参照）。
 
-**検索フィルター：**（必須）ユーザーに関連付けられているレコードを検索するために使用する検索フィルターです。1 レベル検索またはサブレベル検索を実行できます。（検索フィルター構文または RFC 2254 を参照。）Microsoft AD スキーマのその他の情報については「Active Directory スキーマ」を参照してください。
+**検索フィルター：**（必須）ユーザーに関連付けられているレコードを検索するために使用する検索フィルターです。1 レベル検索またはサブレベル検索を実行できます。（検索フィルター構文または RFC 2254 を参照。） Microsoft AD スキーマのその他の情報については、「Active Directory Schema」を参照してください。
 
 **説明：**&#x200B;ユーザーについての説明のスキーマ属性
 

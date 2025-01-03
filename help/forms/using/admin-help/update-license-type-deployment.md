@@ -9,14 +9,18 @@ exl-id: 6b975aa1-9270-4098-9af5-c5cc67cb7b5d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '282'
 ht-degree: 100%
 
 ---
 
 # デプロイメントのライセンスの種類の更新 {#update-the-license-type-for-the-deployment}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 AEM Forms インストールプロセスの一環として、Configuration Manager を使用し、必要な AEM Forms モジュールの設定とデプロイを行いました。デフォルトでは、これらのモジュールに 60 日間の評価版ライセンスが設定されています。デプロイメントのライセンスタイプを変更するには、管理コンソールのライセンスを変更ページを使用します。現在デプロイされているモジュールは、ライセンスを変更ページに表示されます。
 

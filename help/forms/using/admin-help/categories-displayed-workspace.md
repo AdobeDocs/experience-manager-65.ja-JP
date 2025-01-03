@@ -9,14 +9,18 @@ exl-id: 62621fe9-f69f-4bc0-aecc-d7bcc3064516
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '494'
 ht-degree: 100%
 
 ---
 
 # Workspace に表示されるカテゴリの管理 {#managing-the-categories-displayed-in-workspace}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Workspace で、ユーザーが開始できるプロセスは、左側にあるナビゲーションパネルのカテゴリに表示されます。カテゴリは管理コンソールで設定することも、プロセスデザイナーが Workbench で設定することもできます。プロセスデザイナーがプロセスを作成する場合は、それらをカテゴリに割り当てます。
 

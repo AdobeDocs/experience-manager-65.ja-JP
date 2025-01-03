@@ -9,14 +9,18 @@ exl-id: 1fe0e7b4-6109-4f7a-8858-8237a1c5c93b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '646'
 ht-degree: 100%
 
 ---
 
 # 証明書の管理 {#managing-certificates}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Trust Store 管理を使用すると、電子署名の検証および証明書認証のために、サーバー上で信頼する証明書の読み込み、編集、削除ができます。証明書はいくつでも読み込みと書き出しを行うことができます。証明書が読み込まれたら、信頼設定および Trust Store のタイプを編集できます。Trust Store の種類を組み合わせる場合は、次のオプションを考慮してください。
 

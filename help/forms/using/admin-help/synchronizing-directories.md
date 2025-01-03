@@ -9,12 +9,13 @@ exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 0835dca60d8011ce8660f1e7fdefb2b14ccd6129
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1015'
 ht-degree: 100%
 
 ---
+
 
 # ディレクトリの同期 {#synchronizing-directories}
 
@@ -50,11 +51,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->ディレクトリから削除されたユーザーとグループは、ディレクトリ全体の同期を実行するまで、User Management データベースから削除されません。
+> * ディレクトリから削除されたユーザーとグループは、ディレクトリ全体の同期を実行するまで、User Management データベースから削除されません。
+> * ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
+
 
 1. 管理コンソールで、設定／User Management／ドメイン管理をクリックします。
-1. 「Delta の同期」の下にあるチェックボックスをオンにし、「保存」をクリックします。
-1. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページで、「タイムスタンプを変更」設定を見つけ、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
+2. 「Delta の同期」の下にあるチェックボックスをオンにし、「保存」をクリックします。
+3. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページで、「タイムスタンプを変更」設定を見つけ、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
 
 ## 同期中の詳細なログを有効化または無効化する {#enable-or-disable-detailed-logging-during-synchronization}
 

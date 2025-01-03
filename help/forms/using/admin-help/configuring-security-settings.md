@@ -9,9 +9,9 @@ feature: PDF Generator,Document Security
 exl-id: be076477-2681-4570-953d-6c44d3c30843
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1430'
 ht-degree: 100%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 100%
 セキュリティ設定ページでは、次のタスクを実行できます。
 
 ## セキュリティ設定の作成または編集 {#create-or-edit-a-security-setting}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 *セキュリティ設定*&#x200B;では、そのセキュリティ設定を使用して変換されるファイルのセキュリティとアクセス許可を制御します。
 

@@ -9,9 +9,9 @@ exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1882'
 ht-degree: 100%
 
 ---
@@ -100,6 +100,10 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 ドキュメントコンテンツがインライン化される（つまり、最大インラインサイズ未満である）場合、コンテンツはドキュメントのシリアライズペイロードの一部としてデータベースに保存されます。このため、最大インラインサイズを増やすと、データベースサイズに影響する場合があります。
 
 **最大インラインサイズの変更**
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 1. 管理コンソールで、設定／コアシステム設定／設定をクリックします。
 1. 「デフォルトのドキュメント最大インラインサイズ」ボックスに値を入力し、「OK」をクリックします。

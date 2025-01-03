@@ -9,14 +9,18 @@ exl-id: 02c28b2c-0cab-4431-9fab-fa332c96e092
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '283'
 ht-degree: 100%
 
 ---
 
-# 埋め込むフォントの指定{#specify-fonts-to-embed}
+# 埋め込むフォントを指定する{#specify-fonts-to-embed}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Output で使用されるフォームに常に埋め込むフォント、または埋め込まないフォントを指定できます。フォントを埋め込むと、フォームのファイルサイズが大きくなります。ユーザーのシステムに通常存在しない珍しいフォントを埋め込みます。インストールされるような一般的なフォントは埋め込まないでください。
 

@@ -9,9 +9,9 @@ exl-id: e8015d59-7587-46dc-a672-e0f1108102ad
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '558'
 ht-degree: 100%
 
 ---
@@ -36,6 +36,10 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
 >プログラムによって証明書を読み込んだり、削除したりすることもできます（[AEM Forms によるプログラミング](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください）。
 
 ## Acrobat Reader DC Extensions 証明書を読み込み {#import-a-acrobat-reader-dc-extensions-credential}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 「読み込み」をクリックし、「Trust Store の種類」で「Acrobat Reader DC Extensions 証明書」を選択します。

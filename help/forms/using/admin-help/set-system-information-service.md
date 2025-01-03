@@ -9,14 +9,18 @@ exl-id: 734ed463-2441-49fc-bacb-deb40851af42
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '114'
 ht-degree: 100%
 
 ---
 
 # システム情報サービスのセットアップ {#set-up-the-system-information-service}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 システム情報サービスは情報取得のために REST API を提供します。システム情報サービスを使用するには、管理コンソールから REST エンドポイントを有効にします。REST エンドポイントを有効にするには、次の手順を実行します。
 

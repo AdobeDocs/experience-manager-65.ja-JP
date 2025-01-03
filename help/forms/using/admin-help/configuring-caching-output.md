@@ -9,14 +9,18 @@ exl-id: 1015f5c9-6ab8-4656-a5c8-40f82b9938b9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1454'
 ht-degree: 100%
 
 ---
 
 # Output のキャッシュの構成  {#configuring-caching-for-output}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Output サービスは、XML フォームデータを、Designer で作成されたフォームデザインにマージして、様々な形式でドキュメント出力ストリームを作成します。
 

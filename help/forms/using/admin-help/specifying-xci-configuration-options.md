@@ -9,16 +9,20 @@ exl-id: 7cd10389-63e6-41f2-a132-92fd9e40a9b7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 100%
+source-wordcount: '161'
+ht-degree: 86%
 
 ---
 
 # XCI 設定オプションの指定 {#specifying-xci-configuration-options}
 
-Forms では、レンダリングに使用するカスタム XCI ファイルを指定できます（[Forms の場所の設定](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)を参照）。デフォルトでは、以下をはじめとする XCI ファイルで指定されている一部のオプションは Forms によって上書きされます。
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
+
+Forms では、レンダリングに使用するカスタム XCI ファイルを指定できます（[Formsの場所の設定 ](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms) を参照）。デフォルトでは、Formsは、次のような XCI ファイルで指定されたオプションの一部を上書きします。
 
 * `config/present/xdp/packets`
 * `config/present/pdf/creator`

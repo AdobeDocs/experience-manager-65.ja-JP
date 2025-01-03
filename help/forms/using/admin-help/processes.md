@@ -9,9 +9,9 @@ exl-id: 21a2317d-3542-4ccb-98db-3cedf20c89ea
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1643'
 ht-degree: 100%
 
 ---
@@ -183,6 +183,10 @@ ht-degree: 100%
 1. 操作を選択して、「再試行」をクリックします。
 
 ## 操作の使用 {#working-with-operations}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 操作の詳細ページには、プロセス内の 1 つの操作の概要と、現在のユーザー割り当てが表示されます。
 

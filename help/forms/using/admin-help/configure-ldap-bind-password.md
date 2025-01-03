@@ -9,14 +9,18 @@ exl-id: c72794f5-8767-409e-a1df-91a8fdc54d18
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '195'
 ht-degree: 100%
 
 ---
 
 # LDAP バインドパスワードの設定{#configure-the-ldap-bind-password}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 セキュリティ上の問題を防ぐため、書き出された設定ファイル（config.xml）のバインドパスワードフィールドは設定されていません。設定ファイルを別のシステムに読み込む前に、このパスワードを設定してください。このパスワードは、データベースに格納されている既存のパスワードを上書きします。パスワードが null の場合は、既存の null 以外のパスワード値は上書きされません。
 

@@ -9,19 +9,24 @@ exl-id: a8be58f1-1961-4bf5-aaad-feb4489fb389
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 98cbaaf64c0268be1afe7196a7bbbf5c93f02148
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '214'
 ht-degree: 100%
 
 ---
 
-# Connector for Microsoft SharePoint の設定 {#configuring-connector-for-microsoft-sharepoint}
+
+# Connector for Microsoft SharePoint の設定
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間の通信を実現します。その他の背景情報について詳しくは、[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)にある「ECM 用コネクター」を参照してください。
 
 1. 管理コンソールで、サービス／Connector for Microsoft SharePoint をクリックします。
-1. SharePoint Server の次の設定を指定します。
+2. SharePoint Server の次の設定を指定します。
 
    **SharePoint サーバーホスト名**：SharePoint サーバー上の eb アプリケーションのホスト名ポート番号（`[hostname]:'port'` の形式）。
 
@@ -31,7 +36,7 @@ Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間�
 
    **ドメイン名**：SharePoint サーバーがあるドメイン。
 
-1. 「保存」をクリックします。
+3. 「保存」をクリックします。
 
 ## Microsoft SharePoint Configuration サービス {#microsoft-sharepoint-configuration-service}
 

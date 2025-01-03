@@ -9,14 +9,18 @@ exl-id: 1e2b82d6-ca1f-4421-9a51-ec97fdc315d3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '162'
 ht-degree: 100%
 
 ---
 
 # ユーザー名とパスワードの資格情報の追加と削除 {#adding-and-removing-user-name-and-password-credentials}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 Trust Store の管理ページから、Forms サービスが SOAP レベルのセキュリティでリクエストを受け取る際に使用するユーザー名とパスワードの資格情報を追加および削除できます。
 

@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '933'
 ht-degree: 100%
 
 ---
 
 # Document Security Web ページの使用 {#using-the-document-security-webpages}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 ユーザーと管理者は、Document Security web ページを使用して、ポリシーの作成と管理、ポリシーで保護されたドキュメントの管理およびポリシーで保護されたドキュメントに関連するイベントの監視を行います。管理者は web ページを使用して、ポリシーセットの作成とポリシーセットコーディネーターの指定、Document Security のデフォルト値の設定、招待ユーザーの登録とアカウントの管理およびサーバー、ポリシー、ユーザー、ドキュメント関連イベントの監視と管理も行います。
 

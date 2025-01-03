@@ -9,14 +9,18 @@ exl-id: eb8c748d-51d9-4684-97c5-e982ad84ba9f
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '208'
 ht-degree: 100%
 
 ---
 
 # アカウントロックの設定 {#configure-account-locking-settings}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 ドメインを追加する場合、アカウントロックを有効にするかどうかを指定します。「アカウントロックを有効にする」オプションを選択すると、認証エラーが連続して指定の回数発生した後で、ユーザーアカウントがロックされます。指定した時間が経過した後、ユーザーは認証をもう一度試行することができます。この機能により、ユーザーが様々な秘密鍵証明書の組み合わせを使用してシステムにアクセスしようとすることを防ぎます。
 

@@ -9,9 +9,9 @@ exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2495'
 ht-degree: 100%
 
 ---
@@ -99,6 +99,10 @@ User Management データベースには、次のデフォルトの役割が含�
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
 ## 新しい役割を作成 {#create-a-role}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 1. 管理コンソールで設定／User Management／役割の管理をクリックし、「新しい役割」をクリックします。
 1. 「役割名」ボックスに役割の名前を入力し、必要に応じて役割の説明を入力して「次へ」をクリックします。

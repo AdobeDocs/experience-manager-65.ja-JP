@@ -9,9 +9,9 @@ exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '2631'
+source-wordcount: '2643'
 ht-degree: 100%
 
 ---
@@ -35,6 +35,10 @@ AEM Forms でユーザーからのメールメッセージを受信して処理�
 設計および実装するプロセスでメールが不要な場合は、メールの設定ページのオプションを設定する必要はありません。
 
 ### 送信メールの設定 {#configure-outgoing-email-settings}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 1. 管理コンソールで、サービス／Forms Workflow／サーバー設定／メールの設定をクリックします。
 1. 「送信メッセージを有効化」を選択します。

@@ -9,14 +9,18 @@ exl-id: 55bf5196-22c6-4286-8c92-ff44d81dde49
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '311'
 ht-degree: 100%
 
 ---
 
 # サービスの開始と停止 {#starting-and-stopping-services}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 AEM Forms に含まれるサービスには以下の 2 種類があります。
 
@@ -29,7 +33,7 @@ AEM Forms モジュール（例えば、Forms、Rights Management、Output）が
 
 >[!NOTE]
 >
-> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 1. 管理コンソールで、**サービス**／**アプリケーションおよびサービス**／**サービスの管理**&#x200B;をクリックしてください。
 1. サービスの管理ページで、停止または開始するサービスの隣のチェックボックスをオンにして、「停止」または「開始」をクリックします。

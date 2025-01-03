@@ -9,14 +9,18 @@ exl-id: 375376d1-60b3-49a4-8893-ba9336e6bf7b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '852'
 ht-degree: 100%
 
 ---
 
 # タスクの使用 {#working-with-tasks}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 タスクの検索ページでは、ユーザー名またはタスク ID でタスクを検索できます。検索の結果がタスクリストページに表示されます。ここからタスクの履歴にアクセスできます。1 人のユーザーに非常に多くのタスクが割り当てられている場合や、ユーザーに間違ったタスクを割り当てた場合は、タスクを再割り当てすることもできます。
 

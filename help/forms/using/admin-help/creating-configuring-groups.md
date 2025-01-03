@@ -9,14 +9,18 @@ exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1585'
 ht-degree: 100%
 
 ---
 
 # グループの作成および設定{#creating-and-configuring-groups}
+
+>[!NOTE]
+> 
+> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
 ユーザーのグループを作成すると、役割を、個々のユーザーでなく、グループに割り当てることができます。
 
