@@ -9,10 +9,10 @@ feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: d5fb67933676c9ea5fdbeafe592960403e78af79
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 100%
+source-wordcount: '529'
+ht-degree: 97%
 
 ---
 
@@ -62,15 +62,11 @@ ht-degree: 100%
 
 1. 「**ライブコピーの概要**」を選択して、現在のブループリントに関連するすべてのライブコピーの概要を表示および使用します。
 
-   >[!NOTE]
-   >
-   >詳しくは、ナレッジベースの記事[ライブコピーのステータスメッセージ - 最新／緑／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)も参照してください。
-
 1. 「**閉じる**」を使用して終了し、**Sites** コンソールに戻ります。
 
 ## ライブコピーの概要の使用 {#using-the-live-copy-overview}
 
-**ライブコピーの概要**&#x200B;を使用して、ライブコピーに対してアクションを実行することもできます。
+**ライブコピーの概要** を使用して、ライブコピーに対するアクションを実行することもできます。
 
 1. **ライブコピーの概要**&#x200B;を開きます。
 1. 必要なブループリントページまたはライブコピーページを選択します。ツールバーが更新されて、使用できるアクションが表示されます。使用できる[アクション](/help/sites-administering/msm.md#terms-used)は、[ブループリント](#actions-for-a-blueprint-page)ページまたは[ライブコピー](#actions-for-a-live-copy-page)ページのどちらを選択したかによって異なります。
