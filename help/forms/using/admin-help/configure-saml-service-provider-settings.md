@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '607'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Security Assertion Markup Language（SAML）は、エンタープライズドメ
 SAML について詳しくは、[Security Assertion Markup Language（SAML）V2.0 Technical Overview](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html) を参照してください。
 
 1. 管理コンソールで、設定／User Management／設定／SAML サービスプロバイダーの設定をクリックします。
-1. 「サービスプロバイダーのエンティティ ID」ボックスに、AEM Forms サービスプロバイダー実装の識別子として使用する一意の ID を入力します。この一意の ID は、IDP を設定するときにも指定します（例：`um.lc.com`）。また、AEM Forms にアクセスする URL を使用することもできます（例：`https://AEMformsserver`）。
+1. 「サービスプロバイダーのエンティティ ID」ボックスに、AEM Forms サービスプロバイダー実装の識別子として使用する一意の ID を入力します。また、この一意の ID は、IDP（例：`um.lc.com`）を設定するときにも指定します。AEM Forms にアクセスする URL も使用できます（例：`https://AEMformsserver`）。
 1. 「サービスプロバイダーのベース URL」ボックスに、Forms サーバーのベース URL を入力します（例：`https://AEMformsserver:8080`）。
 1. （オプション）署名済みの認証リクエストを AEM Forms から IDP に送信できるようにするには、次のタスクを実行します。
 

@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '161'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 > 
 > ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
-Forms では、レンダリングに使用するカスタム XCI ファイルを指定できます（[Formsの場所の設定 ](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms) を参照）。デフォルトでは、Formsは、次のような XCI ファイルで指定されたオプションの一部を上書きします。
+Forms では、レンダリングに使用するカスタム XCI ファイルを指定できます（[Forms の場所の設定](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)を参照）。デフォルトでは、次のような XCI ファイルで指定されている一部のオプションは、Forms によって上書きされます。
 
 * `config/present/xdp/packets`
 * `config/present/pdf/creator`

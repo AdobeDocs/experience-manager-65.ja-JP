@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1334'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -107,4 +107,4 @@ AEM Forms では、web サービスベースの IPC/RPC メカニズムを使用
 このメカニズムは、HSM プロファイルのオンライン作成やステータスチェックをサポートしていません。ただし、HSM プロファイルの作成およびステータスチェックを実行する方法には次の 2 つがあります。
 
 * 署名者の証明書を渡して、AEM Forms クライアント資格情報を作成します。[Windows 64 ビットプラットフォームでの Sum JDK を使用した AEM Forms EX の HSM サポートの設定](https://kb2.adobe.com/cps/808/cpsid_80835.html)に記載されている手順を実行します。Web サービスの場所は資格情報プロパティとして渡されます。また、証明書 DER または 証明書 SHA-1 hex を使用した HSM プロファイルのオフライン作成もサポートされています。ただし、以前のバージョンの AEM Forms から AEM Forms にアップグレードした場合は、資格情報に証明書と web サービス情報が含まれているので、クライアントに変更を加える必要があります。
-* Web サービスの場所は管理コンソールの Signatures サービスで指定します（[Signature サービスの設定 ](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings) を参照）この場合、クライアントは HSM プロファイルのエイリアスのみを Trust Store で保持します。 この方法は、以前のバージョンの AEM Forms から AEM Forms にアップグレードした場合でもクライアントに変更を加えることなく、シームレスに使用できます。証明書 SHA-1 を使用して作成した HSM プロファイルは、この方法ではサポートされていません。
+* Web サービスの場所は管理コンソールの Signatures サービスで指定します（[Signature サービスの設定](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings)を参照）。この場合、クライアントは Trust Store 内の HSM プロファイルのエイリアスのみを保持します。この方法は、以前のバージョンの AEM Forms から AEM Forms にアップグレードした場合でもクライアントに変更を加えることなく、シームレスに使用できます。証明書 SHA-1 を使用して作成した HSM プロファイルは、この方法ではサポートされていません。

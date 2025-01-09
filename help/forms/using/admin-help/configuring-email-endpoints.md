@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3808'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 99%
 
 ユーザーがファイルおよび変換パス名の中で西ヨーロッパ言語の文字を使用してドキュメントを送信する場合は、必要なエンコードの種類（Latin1 [ISO-8859-1]、西ヨーロッパ言語 [Windows] または UTF-8）をサポートするメールアプリケーションを使用する必要があります。詳しくは、使用しているアプリケーションサーバー版の *AEM Forms のインストールおよびデプロイ*&#x200B;ドキュメントを参照してください。
 
-メールエンドポイントを設定する前に、メールサービスを設定します（[ デフォルトのメールエンドポイント設定の指定 ](configuring-email-endpoints.md#configure-default-email-endpoint-settings) を参照）。メールサービスの設定パラメーターには、次の 2 つの目的があります。
+メールエンドポイントを設定する前に、メールサービスを設定します（[デフォルトのメールエンドポイントの設定](configuring-email-endpoints.md#configure-default-email-endpoint-settings)を参照）。メールサービスの設定パラメーターには、2 つの目的があります。
 
 * すべてのメールエンドポイントに共通する属性を設定すること
 * すべてのメールエンドポイントで使用されるデフォルト値を指定すること

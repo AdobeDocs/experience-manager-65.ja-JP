@@ -10,9 +10,9 @@ exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '10278'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ IPv6 を使用している場合は、コンピューター名または DNS 名�
 >
 >ベース URL は、ポリシーで保護されたファイルに埋め込まれています。クライアントアプリケーションは、ベース URL を使用してサーバーに接続します。保護されたファイルには、後から変更が加えられた場合でも、引き続きベース URL が格納されます。ベース URL を変更する場合は、接続しているすべてのクライアントに対して設定情報を更新する必要があります。
 
-**デフォルトのオフラインリース期間：**&#x200B;保護されたドキュメントをユーザーがオフラインで使用できるデフォルトの期間です。この設定により、ポリシーを作成するときに自動オフラインリース期間設定の初期値が決まります。（ポリシーの作成および編集を参照）。 リース期間が終了した後、ドキュメントを引き続き使用するには、受信者がそのドキュメントを再度同期する必要があります。
+**デフォルトのオフラインリース期間：**&#x200B;保護されたドキュメントをユーザーがオフラインで使用できるデフォルトの期間です。この設定により、ポリシーを作成するときに自動オフラインリース期間設定の初期値が決まります。（ポリシーの作成および編集を参照）。リース期間が終了した後、ドキュメントを引き続き使用するには、受信者がそのドキュメントを再び同期する必要があります。
 
 オフラインリースおよび同期の動作方法については、[Primer on configuring offline lease and synchronization](https://blogs.adobe.com/jp/security/2009/05/primer_on_configuring_offline.html) を参照してください。
 
@@ -424,7 +424,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 **クライアント証明書表示のカスタマイズ**
 
-**信頼できる証明書発行者のみを表示：** このオプションを選択すると、AEM forms で信頼するように設定されている認証情報発行者からの証明書だけが、クライアントアプリケーションによってユーザーに提示されます（「証明書と認証情報の管理」を参照）。 このオプションを選択しない場合、ユーザーのシステムにあるすべての証明書のリストが表示されます。
+**信頼できる証明書発行者のみを表示：**&#x200B;このオプションを選択すると、AEM Forms で信頼するように設定されている認証情報発行者からの証明書だけが、クライアントアプリケーションによってユーザーに提示されます（「証明書と認証情報の管理」を参照）。このオプションの選択を解除すると、ユーザーのシステム上の証明書すべてがユーザーに一覧表示されます。
 
 ## 動的な透かしの設定 {#configure-dynamic-watermarks}
 
@@ -557,7 +557,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 登録メールには、登録ページへのリンクと登録方法に関する情報が含まれています。招待ユーザーによって登録が行われると、アクティベートページへのリンクが記載されたアクティベート用のメールが Document Security から送信されます。アカウントがアクティベートされると、アクティベートを解除するか削除するまで、そのアカウントは有効のままです。
 
-組み込み登録を有効にした場合は、SMTP サーバー、登録メールの詳細、アクセス権限およびパスワードリセット用メールの情報を一度だけ指定します。組み込み登録を有効にする前に、User Management 内にローカルドメインを作成済みであること、および「Document Security ユーザーの招待」の役割を組織内の適切なユーザーとグループに割り当てていることを確認してください。（[ ローカルドメインの追加 ](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) および [ ロールの作成と設定 ](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles) を参照）。組み込み登録を使用しない場合は、AEM forms SDKを使用して独自のユーザー登録システムを作成する必要があります。 詳しくは、[AEM Forms によるプログラミング](/help/forms/developing/introducing-java-api-soap-quick.md)の「AEM Forms 向け SPI の開発」を参照してください。組み込み登録オプションを使用しない場合は、アクティベート用のメールにメッセージを設定すると共に、クライアントのログイン画面で、新しいパスワードやその他の情報について管理者に問い合わせる方法をユーザーに知らせることをお勧めします。
+組み込み登録を有効にした場合は、SMTP サーバー、登録メールの詳細、アクセス権限およびパスワードリセット用メールの情報を一度だけ指定します。組み込み登録を有効にする前に、User Management 内にローカルドメインを作成済みであること、および「Document Security ユーザーの招待」の役割を組織内の適切なユーザーとグループに割り当てていることを確認してください。（[ローカルドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)および[役割の作成および設定](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)を参照。）組み込み登録を使用しない場合は、AEM Forms SDK を使用して、独自のユーザー登録システムを作成する必要があります。詳しくは、[AEM Forms によるプログラミング](/help/forms/developing/introducing-java-api-soap-quick.md)の「AEM Forms 向け SPI の開発」を参照してください。組み込み登録オプションを使用しない場合は、アクティベート用のメールにメッセージを設定すると共に、クライアントのログイン画面で、新しいパスワードやその他の情報について管理者に問い合わせる方法をユーザーに知らせることをお勧めします。
 
 **招待ユーザー登録の有効化と設定**
 
@@ -971,7 +971,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc`。
+* `https://[host]:'port'/edc`
 
 次の config.xml への変更は、すべての外部リンクを Right Management ユーザーインターフェイスから無効化します。
 

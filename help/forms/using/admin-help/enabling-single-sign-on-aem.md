@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1716'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 >JEE での AEM Forms は複数の子ドメイン環境で Kerberos／SPNEGO を使用した SSO の設定をサポートしていません。
 
 1. SSO を有効化するために使用するドメインを決定します。AEM Forms サーバーとユーザーは、同じ Windows ドメインまたは信頼されたドメインの一部である必要があります。
-1. Active Directory に、AEM Forms サーバーを表すユーザーを作成します（[ ユーザーアカウントの作成 ](enabling-single-sign-on-aem.md#create-a-user-account) を参照）。複数のドメインを SPNEGO を使用するように設定する場合は、ユーザーごとにパスワードが異なることを確認します。 パスワードが同じ場合、SPNEGO SSO は機能しません。
+1. Active Directory に、AEM Forms サーバーを表すユーザーを作成します（[ユーザーアカウントの作成](enabling-single-sign-on-aem.md#create-a-user-account)を参照）。複数のドメインで SPNEGO を使用するように設定している場合、これらの各ユーザーのパスワードが異なっていることを確認してください。パスワードが同じ場合、SPNEGO SSO は機能しません。
 1. サービスプリンシパル名をマップします（[サービスプリンシパル名（SPN）のマッピング](enabling-single-sign-on-aem.md#map-a-service-principal-name-spn)を参照）。
 1. ドメインコントローラーを設定します（[Kerberos 整合性チェックの失敗の回避](enabling-single-sign-on-aem.md#prevent-kerberos-integrity-check-failures)を参照）。
 1. [ドメインの追加](/help/forms/using/admin-help/adding-domains.md#adding-domains)または[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)で説明されているとおりに、エンタープライズドメインを追加または編集します。エンタープライズドメインを作成または編集するときは、次のタスクを実行する必要があります。

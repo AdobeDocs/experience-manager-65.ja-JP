@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1208'
 ht-degree: 100%
 
@@ -144,4 +144,4 @@ For additional information on JGroups and Workspace, see [JGroups and AEM forms 
 >
 >デモアプリケーションの場合、デフォルトの表示名は&#x200B;**市民**&#x200B;です。作成するカスタムアプリケーションの場合、デフォルトの表示名は&#x200B;**システムコンテキストアカウント**&#x200B;です。
 >
->**client_idleTimeout：** ユーザーが非アクティブである時間が所定の時間に達すると、AEM Forms Workspace のセッションが期限切れになります。 この機能を有効にするには、グローバル設定 &lt;client_idletimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idletimeout> にエントリを追加します。値を「0」に指定すると、アイドルタイムアウトを無効にできます。 時間は秒単位で指定します。
+>**client_idleTimeout：** ユーザーが非アクティブである時間が所定の時間に達すると、AEM Forms Workspace のセッションが期限切れになります。 この機能を有効にするには、グローバル設定 &lt;client_idleTimeout>*IDLE_TIMEOUT_IN_SECONDS*&lt;/client_idleTimeout> にエントリを追加します。値を「0」に指定すると、アイドルタイムアウトを無効にできます。 時間は秒単位で指定します。

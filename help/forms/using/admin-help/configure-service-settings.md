@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Workbench
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '10836'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 99%
 
 ## Audit Workflow サービスの設定 {#audit-workflow-service-settings}
 
-Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能があります。（（Workbench ヘルプ ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp) を参照 [Forms サーバーのファイルシステムの容量を節約するために、保存されるプロセス記録データの量を制限できます。 Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
+Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能があります。（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）Forms サーバーのファイルシステム上のスペースを節約するために、保存されるプロセス記録データの量を制限できます。Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
 
 **maxNumberOfRecordingInstances：**&#x200B;格納する記録の最大数です。保存の最大数に達すると、新しい記録が作成されると、最も古い記録がファイルシステムから削除されます。このプロパティは、多くの記録を作成する際に、古い記録を自動的に削除したい場合に役立ちます。デフォルト値は 50 です。
 
@@ -299,7 +299,7 @@ Characters In User Name（Windows のみ）：**&#x200B;ユーザー名に文字
 
 ガイドを作成すると、ガイド定義などの一部のリソースがガイドに埋め込まれます。リソースは、ローカルまたは AEM Forms サーバーに保存されたアプリケーションアセットへの参照として存在する場合もあります。このガイドにはデータが含まれていません。また、送信場所と入力の値はすべての外部環境に適しているわけではありません。
 
-ほとんどの場合、Workspace または他の外部環境で使用するガイドを準備するには、デフォルトのガイドレンダリングサービスで十分です。（Workbench のサービスビューでのデフォルトのサービスは、Guides （system）/Processes/Render Guide - 1.0 です。） Guide Utilities サービス（`GuidesUtility`）を使用すると、必要に応じてガイドをレンダリングするカスタマイズプロセスを作成できます。
+ほとんどの場合、Workspace または他の外部環境で使用するガイドを準備するには、デフォルトのガイドレンダリングサービスで十分です。（Workbench のサービスビューでは、デフォルトのサービスは Guides (system)/Processes/Render Guide - 1.0 です）。Guide Utilities サービス（`GuidesUtility`）を使用すると、必要に応じてガイドをレンダリングするカスタマイズプロセスを作成できます。
 
 Guide Utilities の操作では、次のガイドレンダリングタスクをプロセスに追加できます。
 
@@ -320,7 +320,7 @@ Guide Utilities サービスのデフォルト値は、ほとんどのユース�
 
 **collateralExpiryInSeconds：**&#x200B;クライアントからのコラテラルの要求が期限切れになるまでの間隔です。初期設定は 315576000 です。
 
-**mismatchExpiryInSeconds：** eTag（エンティティタグ）が一致しない場合に、クライアントからのコラテラルの要求が期限切れになるまでの間隔です。（eTag は HTTP 応答ヘッダーです。） デフォルトは 1 です。
+**mismatchExpiryInSeconds：** eTag（エンティティタグ）が一致しない場合に、クライアントからのコラテラルの要求が期限切れになるまでの間隔です。（eTag は HTTP 応答ヘッダーです。）デフォルトは 1 です。
 
 **guideContext：** ガイド web アプリケーションのコンテキストルートです。ガイド Web アプリケーションを使用して値セットとマッチングします。デフォルトは /Guides/ です。
 
@@ -696,7 +696,7 @@ Validation Of Signatures：** このオプションを選択すると、ドキ�
 
 ## Watched Folder サービスの設定 {#watched-folder-service-settings}
 
-Watched Folder サービス（`WatchedFolder`）では、すべての監視フォルダーエンドポイントに共通する属性を設定します。また、監視フォルダーエンドポイントのデフォルト値も指定します（[ 監視フォルダーエンドポイントの設定 ](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints) を参照）外部クライアントアプリケーションによって呼び出されたり、Workbench で作成されたプロセスで使用されたりすることはありません。
+Watched Folder サービス（`WatchedFolder`）では、すべての監視フォルダーエンドポイントに共通する属性を設定します。また、監視フォルダーエンドポイントのデフォルト値も指定します（[監視フォルダーのエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)を参照）。外部のクライアントアプリケーションによって呼び出されたり、Workbench で作成したプロセスで使用されたりすることはありません。
 
 Watched Folder サービスでは、以下の設定を使用できます。
 

@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '730'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +51,7 @@ User Management は通常、ユーザー名とパスワードを使用して認�
 1. 「新しい証明書マッピング」をクリックし、「発行者向け」リストで、トラストストア管理で構成された証明書のエイリアスを選択します。
 1. 証明書の属性の 1 つをユーザーの属性にマップします。例えば、証明書の共通名をユーザーのログイン ID にマップできます。
 
-   証明書の属性の内容がユーザー管理データベースのユーザーの属性の内容と異なる場合は、Java 正規表現 (regex) を使用して 2 つの属性を照合できます。例えば、証明書の共通名が *Alex Pink （認証）* や *Alex Pink （署名）* で、User Management データベースの共通名が *Alex Pink* の場合、正規表現を使用して証明書属性の必要な部分を抽出します（この例では、*Alex Pink*。）指定する正規表現は、Java 正規表現の仕様に準拠する必要があります。
+   証明書の属性の内容がユーザー管理データベースのユーザーの属性の内容と異なる場合は、Java 正規表現 (regex) を使用して 2 つの属性を照合できます。例えば、証明書の共通名が 「*Alex Pink (Authentication)*」や「*Alex Pink (Signing)*」のような名前で、User Management データベース内の共通名が「*Alex Pink*」の場合、正規表現を使用して証明書属性の必要な部分を抽出します（この例では、*Alex Pink*）。指定する正規表現は、Java 正規表現仕様に準拠している必要があります。
 
    「カスタム順序」ボックスでグループの順序を指定することにより、式を変換できます。カスタムオーダーは、`java.util.regex.Matcher.replaceAll()` メソッドで使用します。表示される動作はそのメソッドの動作に対応しており、それに応じて入力文字列（カスタム順序）を指定する必要があります。
 

@@ -1,5 +1,5 @@
 ---
-title: 埋め込むフォントを指定する
+title: 埋め込むフォントの指定
 description: アダプティブフォームに埋め込むフォントの指定方法について説明します。Forms サービスで生成されるフォームに埋め込むフォント、または埋め込まないフォントを指定できます。
 contentOwner: admin
 content-type: reference
@@ -10,13 +10,13 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '283'
 ht-degree: 100%
 
 ---
 
-# 埋め込むフォントを指定する{#specify-fonts-to-embed}
+# 埋め込むフォントの指定{#specify-fonts-to-embed}
 
 >[!NOTE]
 > 

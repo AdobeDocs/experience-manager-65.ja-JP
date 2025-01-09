@@ -10,7 +10,7 @@ exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '896'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ PDF Generator は、デフォルトでは一度に 1 つの OpenOffice、Microso
 
 >[!NOTE]
 >
->マルチスレッドファイル変換は、Microsoft® Word 2003 および PowerPoint 2003 ではサポートされていません。マルチスレッドファイル変換を有効にするには、Microsoft Word 2007 および PowerPoint 2007 か、Microsoft Word 2010 および PowerPoint 2010 にアップグレードします。
+>マルチスレッドファイル変換は、Microsoft® Word 2003 および PowerPoint 2003 ではサポートされていません。マルチスレッドファイル変換を有効にするには、Microsoft® Word 2007 および PowerPoint 2007 か、Microsoft® Word 2010 および PowerPoint 2010 にアップグレードします。
 
 >[!NOTE]
 >

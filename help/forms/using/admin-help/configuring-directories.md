@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e9afc12af78140ae0ec12cc2ee95fc9e175f8d94
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3241'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -126,7 +126,7 @@ ht-degree: 99%
 
 ベース DN は管理コンソールの必須設定ですが、IBM Domino Enterprise Server などの一部のディレクトリ サーバーでは空の BaseDN が必要です。空のベース DN を指定するには、config.xml ファイルを書き出し、config.xml ファイル内の設定を編集して、再度読み込みします（[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)を参照）。
 
-**検索フィルター：**（必須）ユーザーに関連付けられているレコードを検索するために使用する検索フィルターです。1 レベル検索またはサブレベル検索を実行できます。（検索フィルター構文または RFC 2254 を参照。） Microsoft AD スキーマのその他の情報については、「Active Directory Schema」を参照してください。
+**検索フィルター：**（必須）ユーザーに関連付けられているレコードを検索するために使用する検索フィルターです。1 レベル検索またはサブレベル検索を実行できます。（検索フィルター構文または RFC 2254 を参照。）Microsoft AD スキーマのその他の情報については「Active Directory スキーマ」を参照してください。
 
 **説明：**&#x200B;ユーザーについての説明のスキーマ属性
 
