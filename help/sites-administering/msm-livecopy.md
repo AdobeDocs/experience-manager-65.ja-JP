@@ -6,7 +6,7 @@ exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: d5fb67933676c9ea5fdbeafe592960403e78af79
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4177'
 ht-degree: 100%
 
@@ -113,7 +113,7 @@ ht-degree: 100%
    >
    >宛先のパスをソースパスに含めることはできません。
 
-1. Enter:
+1. 次を入力 :
 
    * ページの&#x200B;**タイトル**。
    * URL で使用される&#x200B;**名前**。
@@ -190,7 +190,7 @@ ht-degree: 100%
 1. **サイト**&#x200B;コンソールで、ライブコピーページを選択してプロパティを開きます。
 1. 「**ライブコピー**」タブを選択します。
 
-   次に例を示します。
+   例：
 
    ![ライブコピーを選択](assets/chlimage_1-218.png)
 
@@ -583,7 +583,7 @@ ht-degree: 100%
    * **ブループリントと比較**（ライブコピーページを選択した場合）
    * **ライブコピーと比較**（ブループリントページを選択した場合）
 
-   次に例を示します。
+   例：
 
    ![比較](assets/chlimage_1-235.png)
 

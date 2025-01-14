@@ -10,9 +10,9 @@ exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: d5fb67933676c9ea5fdbeafe592960403e78af79
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '529'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 97%
 
 ## ライブコピーの概要の使用 {#using-the-live-copy-overview}
 
-**ライブコピーの概要** を使用して、ライブコピーに対するアクションを実行することもできます。
+**ライブコピーの概要**&#x200B;を使用して、ライブコピーに対してアクションを実行することもできます。
 
 1. **ライブコピーの概要**&#x200B;を開きます。
 1. 必要なブループリントページまたはライブコピーページを選択します。ツールバーが更新されて、使用できるアクションが表示されます。使用できる[アクション](/help/sites-administering/msm.md#terms-used)は、[ブループリント](#actions-for-a-blueprint-page)ページまたは[ライブコピー](#actions-for-a-live-copy-page)ページのどちらを選択したかによって異なります。
