@@ -9,10 +9,10 @@ feature: Configuring
 exl-id: e9ea9df4-a355-41fc-a102-01a5d7ca2629
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: eca7d67c564501225997455e91b5d3f60ee6ffc9
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 100%
+source-wordcount: '52'
+ht-degree: 98%
 
 ---
 
@@ -20,9 +20,16 @@ ht-degree: 100%
 
 次のトピックでは、AEM における特定のデプロイメントタスクの実行方法について説明します。
 
-* [ログ閲覧者の使用方法](https://helpx.adobe.com/jp/experience-manager/kb/logsviewer.html)
-* [ワークフローと監査ログをパージする方法](https://helpx.adobe.com/jp/experience-manager/kb/howtopurgewf.html)
+<!--
+* [How to Use the Log Viewer](https://helpx.adobe.com/experience-manager/kb/logsviewer.html)
+-->
+
+* [ワークフローと監査ログをパージする方法](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24590)
 
 * [パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)
+
 * [ようこそ画面から機能を削除する方法](/help/sites-developing/customizing-the-welcome-console.md)
-* [位置トラッカー機能を無効にする方法](https://helpx.adobe.com/jp/experience-manager/kb/turn-off-geolocation.html)
+
+<!--
+* [How to Turn Off the Location Tracker Feature](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
+-->
