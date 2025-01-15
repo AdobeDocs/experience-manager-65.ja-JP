@@ -8,18 +8,16 @@ exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2605'
-ht-degree: 1%
+source-wordcount: '2584'
+ht-degree: 0%
 
 ---
 
 # アプリの詳細な構造{#the-anatomy-of-an-app}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps}
 

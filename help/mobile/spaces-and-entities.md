@@ -8,18 +8,16 @@ exl-id: 44591900-b01b-4a33-9910-839564477e7d
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 7%
+source-wordcount: '1185'
+ht-degree: 6%
 
 ---
 
 # スペースとエンティティ{#spaces-and-entities}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 スペースは、コンテンツサービス REST API を通じて公開されるエンティティを保存する便利な場所です。 アプリ（または任意のチャネル）を多数のエンティティに関連付けることができるので、この機能は特に便利です。 エンティティをスペース内に強制的に配置すると、アプリの要件をグループ化するベストプラクティスが強制されます。 オプションで、AEMのアプリを少数のスペースに関連付けることができます。
 

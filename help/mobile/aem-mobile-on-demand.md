@@ -8,18 +8,16 @@ exl-id: a2134afd-4c0e-4a93-ac58-013b98fd9a09
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 12%
+source-wordcount: '287'
+ht-degree: 5%
 
 ---
 
 # AEM Mobile On-Demand {#aem-mobile-on-demand}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 >[!NOTE]
 >

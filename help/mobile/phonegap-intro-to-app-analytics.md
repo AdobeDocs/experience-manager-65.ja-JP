@@ -9,18 +9,16 @@ exl-id: 7e358660-bc2f-4d8f-8d74-6cdb6c1ea7b5
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 5%
+source-wordcount: '1033'
+ht-degree: 3%
 
 ---
 
 # Adobe Mobile Analytics によるアプリパフォーマンスのトラッキング{#track-app-performance-with-adobe-mobile-analytics}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 顧客コンバージョンとロイヤルティを高める必要があります。
 
@@ -32,9 +30,9 @@ AEM Mobile アプリはマーケティングキャンペーンに対して何を
 
 Adobeモバイルサービスを使用すると、モバイルアプリの使用状況、アプリのクラッシュ回数、デバイスの詳細など、モバイルアプリに関する多くの重要な指標をトラッキングして、ユーザーがモバイルアプリをどのように使用しているかに関するインサイトを得ることができます。
 
-Adobe Experience Manager Mobileでは、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を確認できます。 ダッシュボードの **モバイル指標タイル** には、モバイルアプリケーションのReal-Time Analyticsが表示され、開発者、作成者および管理者がモバイルアプリの正常性を簡単に確認できます。 カバーの下で、分析の機能を強化するのは、[AdobeMobile Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html) SDK です。 Adobeモバイル分析 SDK は、ネイティブで、または Web ビュー用 PhoneGap Bridge プラグインを通じてアプリケーションにプラグインできます。 指標が収集され、デバイスが接続されるまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services Cloud にプッシュされます。
+Adobe Experience Manager Mobileでは、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を確認できます。 ダッシュボードの **モバイル指標タイル** には、モバイルアプリケーションのReal-Time Analyticsが表示され、開発者、作成者および管理者がモバイルアプリの正常性を簡単に確認できます。 カバーの下で、分析の機能を強化するのは、[AdobeMobile Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html)SDKです。 Adobe Mobile Analytics SDKは、ネイティブで、または Web ビュー用 PhoneGap Bridge プラグインを通じてアプリケーションにプラグインできます。 指標が収集され、デバイスが接続されるまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services Cloud にプッシュされます。
 
-Adobe Mobile Analytics SDK は次を提供します。
+Adobeモバイル分析SDKには、次の機能があります。
 
 1. **モバイルチャネルのデータ収集** – すべての主要なオペレーティングシステムでモバイル web サイトやアプリの包括的なデータを収集します。
 1. **モバイルエンゲージメント分析** - モバイルアプリ、web サイトまたはビデオ内のユーザーエンゲージメントを把握します。これには、消費者がチャネルを起動する頻度や、そのチャネルから購入するかどうかなどが含まれます。
@@ -51,7 +49,7 @@ Adobe Mobile Analytics SDK は次を提供します。
 * モバイルサービス設定の作成とレポートスイートの関連付け
 * モバイルサービス設定のモバイルアプリへの関連付け
 * AEM Apps Command Center を使用した指標の表示
-* ams SDK 設定のモバイルアプリへの割り当て
+* ams SDK設定のモバイルアプリへの割り当て
 
 ## 開発者向け – Analytics のアプリへの統合 {#for-developers-integrate-analytics-into-your-app}
 
@@ -93,13 +91,13 @@ Mobile Services アカウントの設定が完了したら、アプリを選択�
 
 ### Mobile Services SDKAdobeファイル {#adobe-mobile-services-sdk-config-file}
 
-この時点では、モバイルアプリケーションは Cloud Service に関連付けられていますが、収集したモバイル指標をAdobe Analyticsに送り返す方法がまだモバイルアプリケーションにわかっていません。 モバイルアプリをAdobe Analyticsにワイヤアップするには、AdobeMobile Services SDK 設定ファイルをAdobe Experience Managerに追加する必要があります。
+この時点では、モバイルアプリケーションは Cloud Service に関連付けられていますが、収集したモバイル指標をAdobe Analyticsに送り返す方法がまだモバイルアプリケーションにわかっていません。 モバイルアプリをAdobe Analyticsにワイヤアップするには、Adobe Mobile Services SDK設定ファイルをAdobe Experience Managerに追加する必要があります。
 
-分析指標タイルから、矢印アイコンをクリックして、「AMS SDK 設定のダウンロード/アップロード」メニューエントリを表示します。
+「指標を分析」タイルから、矢印アイコンをクリックして、「AMS SDK設定のダウンロード/アップロード」メニューエントリを表示します。
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
 
-最初の手順は、Adobe Mobile Services から SDK 設定を取得することです。 「AMS SDK 設定をダウンロード」をクリックして、設定ファイルをダウンロードできるAdobe Mobile Services web サイトにリダイレクトします。 ADBMobileConfig.json ファイルを取得したら、「Upload AMS SDK Config」をクリックして、設定ファイルをAEMにアップロードします。
+最初の手順では、Adobe Mobile Services からSDK設定を取得します。 「AMS SDK設定をダウンロード」をクリックして、設定ファイルをダウンロードできるAdobe Mobile Services web サイトにリダイレクトします。 ADBMobileConfig.json ファイルを取得したら、「Upload AMS SDK Config」をクリックして、設定ファイルをAEMにアップロードします。
 
 ![chlimage_1-131](assets/chlimage_1-131.png)
 

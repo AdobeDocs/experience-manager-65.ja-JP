@@ -9,18 +9,16 @@ exl-id: 897a04b9-e357-4f1c-8aa0-2c2528f8556d
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 14%
+source-wordcount: '356'
+ht-degree: 9%
 
 ---
 
 # アプリのメタデータの編集 {#editing-app-metadata}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 **アプリを管理** タイルと「アプリを管理」ページは、アプリケーションのメタデータを表示および編集する手段を提供します。 アプリのメタデータは、ベンダーのストアにアプリをリリースするために必要な詳細です。 これには、共通のメタデータ、iOSのメタデータおよびスクリーンショットが含まれる場合があります。 共通のメタデータとiOSメタデータについて詳しくは、[ アプリを管理 ](/help/mobile/phonegap-app-details-tile.md) タイルを参照してください。
 

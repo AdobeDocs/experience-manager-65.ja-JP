@@ -9,10 +9,10 @@ exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 14%
+source-wordcount: '247'
+ht-degree: 7%
 
 ---
 
@@ -20,9 +20,7 @@ ht-degree: 14%
 
 ここでは、Preflight アプリを使用したプレビューについて説明します。
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 アプリケーション全体で次のアクションが実行されます。
 

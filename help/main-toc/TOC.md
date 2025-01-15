@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 2fc6225887436685f598baf4ea2c4a01534d8704
-workflow-type: ht
-source-wordcount: '7475'
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
+workflow-type: tm+mt
+source-wordcount: '7471'
 ht-degree: 100%
 
 ---
@@ -1447,7 +1447,6 @@ ht-degree: 100%
          + [RemotePage コンポーネント](/help/sites-developing/spa-remote-page.md)
          + [AEM 内での外部 SPA の編集](/help/sites-developing/spa-edit-external.md)
          + [SPA の複合コンポーネント](/help/sites-developing/spa-composite-component.md)
-         + [SPA およびサーバーサイドレンダリング](/help/sites-developing/spa-ssr.md)
          + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/components/json-exporter-components.html?lang=ja)
          + [ローンチの統合](/help/sites-developing/spa-launch.md)
          + [SPA 参照資料](/help/sites-developing/spa-reference-materials.md)

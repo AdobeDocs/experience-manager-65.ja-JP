@@ -9,18 +9,16 @@ exl-id: 0ead982d-2315-4947-b762-596aa2aa42a1
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 4%
+source-wordcount: '889'
+ht-degree: 1%
 
 ---
 
 # AEM Mobile のセットアップ{#aem-mobile-setup}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 >[!CAUTION]
 >
@@ -116,7 +114,7 @@ AEM Mobile統合が正しく機能するように、設定手順を実行しま�
 AEM Mobile アプリケーションの開発には、次の 3 つの異なるロールがあります。
 
 * 管理者
-* デベロッパー
+* 開発者
 * 作成者
 
 様々な権限（アプリの構築やコンテンツの作成および公開など）を持つロールの作成について詳しくは、AEM Mobile ヘルプの [ ユーザーロールの作成とアクセスの許可 ](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) をクリックしてください。

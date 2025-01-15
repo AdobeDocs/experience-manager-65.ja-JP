@@ -9,18 +9,16 @@ exl-id: 5a98eb3c-5c12-4a6c-8d76-eed44c7c3df5
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 12%
+source-wordcount: '346'
+ht-degree: 7%
 
 ---
 
 # AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理 {#administering-content-for-adobe-phonegap-enterprise-with-aem}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 ***AEM管理者*** は、作成ウィザードを使用してアプリを作成するか、既存のアプリを読み込むことで、新しいアプリをAEM Mobile カタログに追加する役割を担っています。 AEM Mobileの *作成ウィザード* を使用してアプリを作成するAEM管理者は、通常、Adobeの標準の参照サンプルまたは（通常は） *AEM開発者が作成したカスタムアプリテンプレートから、目的のアプリテンプレートの 1 つを選択し* す。
 

@@ -10,24 +10,22 @@ exl-id: 209c36f9-1a4b-4eea-8dde-22e0fc9718c1
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 10%
+source-wordcount: '428'
+ht-degree: 6%
 
 ---
 
 # Adobe Mobile Services Cloud Service の設定 {#configure-your-adobe-mobile-services-cloud-service}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 コマンドセンターの **モバイル指標タイル** は、モバイルアプリケーションのリアルタイム分析を提供します。
 
-[Adobeモバイル分析 ](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK は、PhoneGap プラグインを通じて使用できるようになります。 指標が収集され、デバイスに接続するまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services クラウドにプッシュされます。
+[Adobeモバイル分析 ](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html)SDKは、PhoneGap プラグインを通じて利用できるようになります。 指標が収集され、デバイスに接続するまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services クラウドにプッシュされます。
 
-Adobe Mobile Analytics SDK は次を提供します。
+Adobeモバイル分析SDKには、次の機能があります。
 
 1. **モバイルチャネルのデータ収集** – すべての主要なオペレーティングシステムでモバイル web サイトやアプリの包括的なデータを収集します。
 1. **モバイルエンゲージメント分析** - モバイルアプリ、web サイトまたはビデオ内のユーザーエンゲージメントを把握します。これには、消費者がチャネルを起動する頻度や、そのチャネルから購入するかどうかなどが含まれます。

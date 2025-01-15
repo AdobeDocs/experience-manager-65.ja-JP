@@ -9,18 +9,16 @@ exl-id: 63ceaba6-b796-4c13-a86d-f0609ec679c9
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 4%
+source-wordcount: '556'
+ht-degree: 0%
 
 ---
 
 # ベストプラクティス {#best-practices}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM Mobile On-demand Services アプリの構築は、Cordova （または PhoneGap）シェルで直接実行されるアプリの構築とは異なります。 開発者は、次の点に精通している必要があります。
 

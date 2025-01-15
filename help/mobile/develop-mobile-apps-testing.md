@@ -9,18 +9,16 @@ exl-id: e10e1904-7016-4eb0-9408-36297285f378
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 3%
+source-wordcount: '954'
+ht-degree: 1%
 
 ---
 
 # モバイルアプリのテスト{#testing-mobile-apps}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 市場に出回っている幅広いデバイスやリリースされるデバイスを考えると、アプリのテストは不可欠となっています。 これは、機能とユーザビリティがアプリストアのレビューで低く評価される可能性がある領域ですが、単一の欠陥がアプリをアンインストールする原因となる可能性があります。 テスト計画と品質保証には注意が必要です。 次のリンクでは、環境の特定、テストケースの定義、テストのタイプ、前提、お客様の関与など、一般的に取り組む必要があるトピックの多くをカバーしています。 また、テスト作業に役立つツールについても説明します。 内部ツール（[Hobbes](/help/sites-developing/hobbes.md) など）は、web ベースの UI テストに役立ちます。 [Tough Day](/help/sites-developing/tough-day.md) では、シミュレートされた負荷でインスタンスにストレスを与えることができます。 テスト環境で既に Selenium などのサードパーティツールの使用経験がある場合は、それらも使用できます。
 

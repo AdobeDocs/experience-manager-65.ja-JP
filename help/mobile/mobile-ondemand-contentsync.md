@@ -9,18 +9,16 @@ exl-id: a6e59334-09e2-4bb8-b445-1868035da556
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2971'
-ht-degree: 1%
+source-wordcount: '2950'
+ht-degree: 0%
 
 ---
 
 # モバイルとコンテンツ同期{#mobile-with-content-sync}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 コンテンツ同期を使用して、ネイティブモバイルアプリケーションで使用できるようにコンテンツをパッケージ化します。 Adobe Experience Manager（AEM）で作成されたページは、デバイスがオフラインでも、アプリコンテンツとして使用できます。 さらに、AEM ページは web 標準に基づいているので、クロスプラットフォームで機能し、任意のネイティブラッパーに埋め込むことができます。 この戦略により、開発作業が軽減され、アプリのコンテンツを簡単に更新できます。
 

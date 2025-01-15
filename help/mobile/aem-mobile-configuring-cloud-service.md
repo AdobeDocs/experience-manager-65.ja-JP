@@ -9,18 +9,16 @@ exl-id: d370d772-ef4d-4f38-826c-e90d07735822
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 4%
+source-wordcount: '1233'
+ht-degree: 2%
 
 ---
 
 # Adobe Target Cloud Service の設定 {#configuring-adobe-target-cloud-service}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 >[!NOTE]
 >
@@ -64,7 +62,7 @@ Cloud Serviceを追加ウィザードで、「Adobe Target」クラウドサー�
 
 ### クライアントコード {#client-code}
 
-AMS サービスにログインするには、[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/) にアクセスし、モバイルアプリケーションを選択して、設定をクリックします。 「SDK ターゲットオプション」フィールドを見つけ、フィールドにクライアントコードを配置して、「保存」をクリックします。
+AMS サービスにログインするには、[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/) にアクセスし、モバイルアプリケーションを選択して、設定をクリックします。 「SDK Target オプション」フィールドを見つけ、フィールドにクライアントコードを配置して、「保存」をクリックします。
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 

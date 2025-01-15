@@ -9,18 +9,16 @@ exl-id: 2f02f541-92db-469b-bf23-ec64d2e282ff
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 21%
+source-wordcount: '149'
+ht-degree: 10%
 
 ---
 
 # リファラーフィルターの「空の値を許可」への設定{#setting-your-referrer-filter-to-allow-empty}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 Adobe Experience Manager（AEM）モバイルアプリケーションビューアがオーサーインスタンス上のアプリを表示できるようにするには、HTMLリファラーフィルターを「allow empty」に設定する必要があります。
 

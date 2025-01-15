@@ -9,18 +9,16 @@ exl-id: 385f7924-e8ab-4dcb-83f0-7b81bead3dda
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 18%
+source-wordcount: '150'
+ht-degree: 7%
 
 ---
 
 # デバイス機能へのアクセス{#access-device-features}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 ## デバイス機能にアクセスするAdobe Experience Manager（AEM）コンポーネントの構築 {#building-aem-components-that-access-device-features}
 

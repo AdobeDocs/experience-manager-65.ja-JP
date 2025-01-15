@@ -8,18 +8,16 @@ exl-id: 9a97e11b-a683-490a-ab7b-158de32984ef
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 28%
+source-wordcount: '227'
+ht-degree: 21%
 
 ---
 
 # PhoneGap{#phonegap}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap を使用すると、ユーザーがコンテンツを操作できるユーティリティアプリを作成できます。 コンテンツ同期を使用すると、ページのバージョン管理されたアーカイブを作成して、アプリとバンドルできます。
 

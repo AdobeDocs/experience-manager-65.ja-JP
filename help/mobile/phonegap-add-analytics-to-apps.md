@@ -9,20 +9,18 @@ exl-id: 8d965e94-c368-481d-b000-6e22456c34db
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 4%
+source-wordcount: '883'
+ht-degree: 1%
 
 ---
 
 # モバイルアプリケーションへの Adobe Analytics の追加{#add-adobe-analytics-to-your-mobile-application}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
-モバイルアプリケーションユーザーにとって魅力的で関連性の高いエクスペリエンスを構築したいと考えていますか？ AdobeMobile Services SDK を使用してアプリケーションのライフサイクルと使用状況をモニタリングおよび測定していない場合は、何に基づいて意思決定を行っているのでしょうか？ 常連客はどこにいますか？ コンバージョンの関連性を維持し、最適化することを、どのようにして保証できますか？
+モバイルアプリケーションユーザーにとって魅力的で関連性の高いエクスペリエンスを構築したいと考えていますか？ アプリケーションのライフサイクルと使用状況の監視と測定にAdobe Mobile Services SDKを使用していない場合は、何に基づいて意思決定を行っているのでしょうか？ 常連客はどこにいますか？ コンバージョンの関連性を維持し、最適化することを、どのようにして保証できますか？
 
 ユーザーはすべてのコンテンツにアクセスしていますか？ ユーザーがアプリを放棄しているかどうか、放棄している場合はどこにいるか。 アプリに留まる頻度と、アプリを使用するために戻ってくる頻度は？ 保持率を高めるためにどのような変更を導入して測定できますか？ クラッシュ率はどうですか。アプリがユーザーに対してクラッシュしていますか。
 
@@ -50,7 +48,7 @@ Analytics アカウントを設定したら、コンテンツ同期設定を作�
 
 詳しくは、コンテンツ同期コンテンツの設定を参照してください。 設定では、ADBMobileConfig を/www ディレクトリに配置するようにコンテンツ同期に指示する必要があります。 例えば、Geometrixx Outdoorsアプリでは、コンテンツ同期の設定は、*/content/phonegap/geometrixx-outdoors/shell/jcr:content/pge-app/app-config/ams-ADBMobileConfig* にあります。 開発用の設定もあります。 ただし、Geometrixx Outdoorsがある場合は、非開発用の設定と同じになります。
 
-Mobile Application AEM Apps Dashboard から ADBMobileConfig をダウンロードする方法について詳しくは、Analytics - Mobile Services - Adobe Mobile Services SDK Config ファイルを参照してください。
+Mobile Application AEM Apps ダッシュボードから ADBMobileConfig をダウンロードする方法について詳しくは、Analytics - Mobile Services - Adobe Mobile Services SDK Config ファイルを参照してください。
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"

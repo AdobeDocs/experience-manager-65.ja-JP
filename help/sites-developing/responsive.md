@@ -10,19 +10,16 @@ exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '5293'
+source-wordcount: '5272'
 ht-degree: 100%
 
 ---
 
 # Web ページのレスポンシブデザイン{#responsive-design-for-web-pages}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークにもとづくクライアントサイドレンダリング（_React_ など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
->
+{{ue-over-mobile}}
 
 >[!NOTE]
 >

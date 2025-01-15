@@ -9,18 +9,16 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 29%
+source-wordcount: '333'
+ht-degree: 24%
 
 ---
 
 # コンテンツのプロパティとノード {#content-properties-and-nodes}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 記事、バナーおよびコレクションは、AEMでは cq:Pages として表されます。
 
@@ -59,7 +57,7 @@ ht-degree: 29%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | ブーリアン |  |
+| dps-hideFromBrowsePage | ブール値 |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
 | **ソーシャル** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -79,8 +77,8 @@ ht-degree: 29%
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
-| dps-horizontalSwipe | ブーリアン |  |
-| dps-allowDownload | ブーリアン |  |
+| dps-horizontalSwipe | ブール値 |  |
+| dps-allowDownload | ブール値 |  |
 | dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
 | dps-layout | 文字列 |  |
 

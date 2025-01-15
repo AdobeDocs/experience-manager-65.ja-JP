@@ -9,22 +9,20 @@ exl-id: fbeceb70-b199-478b-907b-253ed212ff99
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 7%
+source-wordcount: '637'
+ht-degree: 4%
 
 ---
 
 # PhoneGap CLI によるアプリの開発{#developing-apps-with-phonegap-cli}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 開発環境を設定した場合、開発者は任意の時点でアプリをデバイス上またはエミュレーター内で実行できます。
 
-次の例を実行するには、Xcode を使用してmacOS X を実行するシステム、またはAndroid™ SDK がインストールされたMac/Win/Linux システムが必要です。
+次の例を実行するには、Xcode をインストールしたmacOS X を実行するシステム、またはAndroid™ SDKをインストールしたMac/Win/Linux システムが必要です。
 
 ## 開発環境のBootstrap {#bootstrap-your-development-environment}
 

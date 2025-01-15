@@ -9,18 +9,16 @@ exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 7%
+source-wordcount: '626'
+ht-degree: 4%
 
 ---
 
 # Adobe PhoneGap Build の設定 {#configure-your-adobe-phonegap-build-cloud-service}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 アプリケーションダッシュボードの **0}PhoneGap Buildタイル } を使用すると、Adobe PhoneGap Build サービスを通じて PhoneGap モバイルアプリケーションを作成および配布できます。**
 
@@ -82,7 +80,7 @@ PhoneGap コマンドラインインターフェイス（CLI）を使用して�
 
 PhoneGap の CLI を活用するには、次の機能を含むローカル環境を設定する必要があります。
 
-1. Platform SDK （iOS、Android™、WindowsPhone など）と、
+1. Platform SDK（iOS、Android™、WindowsPhone など）および
 1. PhoneGap CLI
 
 詳しくは、`https://docs.phonegap.com/references/phonegap-cli/` を参照してください。

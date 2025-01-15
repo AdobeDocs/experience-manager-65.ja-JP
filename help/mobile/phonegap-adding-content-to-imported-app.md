@@ -10,18 +10,16 @@ exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 5%
+source-wordcount: '697'
+ht-degree: 2%
 
 ---
 
 # ハイブリッドアプリのAdobe Experience Manager Mobile対応{#is-your-hybrid-app-ready-for-aem-mobile}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 Hybrid PhoneGap または Cordova アプリをAEMに読み込んだということですね。 オーサリング可能なコンテンツをアプリに追加する場合があります。 このタスクを実行するには、AEM アプリの構造に関する一般的な知識が必要です。 AEMのアプリは通常、2 つの部分に分かれています。 「シェル」と「コンテンツ」。 「シェル」は、PhoneGap 設定ファイル、アプリフレームワーク、ナビゲーションコントロールなど、アプリの静的部分で構成されます。 インポートしたアーカイブの内容は、シェルの一部として保存されます。 このドキュメントのコンテキストでは、シェルは、アプリ開発者が作成したハイブリッド PhoneGap アプリの、AEMが作成していないすべてのコンテンツです。
 

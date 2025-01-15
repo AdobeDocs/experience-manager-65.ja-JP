@@ -5,9 +5,9 @@ exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1248'
 ht-degree: 100%
 
 ---
@@ -127,7 +127,6 @@ AEM の SPA トピックをさらに詳しく解説する[その他のリソー�
 * [SPA の概要およびガイド.](/help/sites-developing/spa-walkthrough.md) - AEM における SPA の優れた入門的解説
 * [AEM 向け SPA の開発](/help/sites-developing/spa-architecture.md) - AEM 対応 SPA の開発方法に関するガイドライン
 * [SPA エディターの概要](/help/sites-developing/spa-overview.md) - SPA エディターの仕組みの説明
-* [サーバーサイドレンダリング](/help/sites-developing/spa-ssr.md) - AEM の SPA 用 SSR の設定方法
 * [SPA リファレンスドキュメント](/help/sites-developing/spa-reference-materials.md) - JavaScript API リファレンスと、オープンソースの AEM SPA GitHub プロジェクトへのリンク
 * [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md) - コンテンツフラグメントの作成方法
 * [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) - Web サイトの出発点として、ベストプラクティスに基づいた最小限の Adobe Experience Manager（AEM）プロジェクトを作成する Maven テンプレート

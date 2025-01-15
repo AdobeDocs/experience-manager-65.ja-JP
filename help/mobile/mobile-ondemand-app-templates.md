@@ -8,18 +8,16 @@ exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 5%
+source-wordcount: '1130'
+ht-degree: 3%
 
 ---
 
 # テンプレートとコンポーネントの作成および追加 {#creating-and-adding-templates-and-components}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEM Mobile On-Demand は、完全に設定されたアプリテンプレート、記事テンプレートおよび記事コンポーネントを提供します。
 

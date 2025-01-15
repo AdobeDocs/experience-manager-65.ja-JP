@@ -9,18 +9,16 @@ exl-id: 70d7ee0d-2f6d-4f97-a6e2-b02d84a0ca42
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 2%
+source-wordcount: '2550'
+ht-degree: 1%
 
 ---
 
 # AEM Mobile のコンテンツパーソナライゼーション{#aem-mobile-content-personalization}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 >[!NOTE]
 >
@@ -82,7 +80,7 @@ Cloud Serviceを追加ウィザードで、「Adobe Target」クラウドサー�
 
 ### クライアントコード {#client-code}
 
-AMS サービスにログインするには、[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/) にアクセスし、モバイルアプリケーションを選択して、設定をクリックします。 「SDK ターゲットオプション」フィールドを見つけ、フィールドにクライアントコードを配置して、「保存」をクリックします。
+AMS サービスにログインするには、[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/) にアクセスし、モバイルアプリケーションを選択して、設定をクリックします。 「SDK Target オプション」フィールドを見つけ、フィールドにクライアントコードを配置して、「保存」をクリックします。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -276,7 +274,7 @@ head.html と body.html の例は、[AEM Mobile ハイブリッド参照アプ�
 
 特にモバイルアプリケーション用にコンテンツをレンダリングしやすくするために、AEM Mobileでは mobileapps/components/target コンポーネントを使用します。 モバイルターゲットコンポーネントは cq/personalization/components/target コンポーネントを拡張し、engine_tnt.jsp スクリプトをオーバーライドします。 engine_tnt.jsp を上書きすることで、AEM Mobileがモバイルアプリのユースケース用に生成されるHTMLを制御できます。 コンテンツ作成者のターゲットとなるすべてのコンポーネントに対し、関連する mbox が engine_tnt.jsp によって作成されます。
 
-mbox ごとに、**cq-targeting** の属性が追加され、アプリケーション開発者は使用するカスタムコードを作成して好きなように使用できます。 [AEM Mobile ハイブリッド参照アプリ ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、cq-targeting 属性を使用するAngularディレクティブの例があります。 コンテンツ置換の概念は、いつ、どのように行うかは、モバイルアプリケーション開発者が決定します。 AEM /etc/clientlibs/mobileapps/js/mobileapps.jsを介して配信される Mobile SDK があり、Adobeターゲティングサービスを呼び出す API を提供します。 その呼び出しを行うタイミングは、アプリケーションの設計に従ってアプリケーション開発者が指定します。
+mbox ごとに、**cq-targeting** の属性が追加され、アプリケーション開発者は使用するカスタムコードを作成して好きなように使用できます。 [AEM Mobile ハイブリッド参照アプリ ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、cq-targeting 属性を使用するAngularディレクティブの例があります。 コンテンツ置換の概念は、いつ、どのように行うかは、モバイルアプリケーション開発者が決定します。 AEM /etc/clientlibs/mobileapps/js/mobileapps.jsを介して配信される Mobile SDKがあり、Adobeターゲティングサービスを呼び出すための API を提供します。 その呼び出しを行うタイミングは、アプリケーションの設計に従ってアプリケーション開発者が指定します。
 
 ## 次の手順 {#what-s-next}
 

@@ -9,18 +9,16 @@ exl-id: 4c1c44fd-e685-462c-83a0-3cd2f74ab5c7
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 19%
+source-wordcount: '209'
+ht-degree: 11%
 
 ---
 
 # アプリの定義{#app-definitions}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 アプリ定義は、アプリに適したスペースやその他の設定を識別する方法です。 アプリ定義を使用すると、ユーザーはアプリを再コンパイルしなくても容量を追加できます。 アプリ定義が更新され、新しいスペースの情報が含まれるようになりました。
 

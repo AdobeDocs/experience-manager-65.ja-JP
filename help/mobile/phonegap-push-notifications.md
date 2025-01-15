@@ -9,18 +9,16 @@ exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3135'
 ht-degree: 1%
 
 ---
 
 # プッシュ通知{#push-notifications}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 Adobe Experience Manager（AEM）モバイルアプリのユーザーに対して、重要な通知を即座に通知できることが、モバイルアプリとそのマーケティングキャンペーンの価値にとって重要です。 ここでは、アプリにプッシュ通知を受信させるために実行する必要がある手順を説明します。 また、AEM Mobileから携帯電話にインストールされているアプリにプッシュを設定して送信する方法についても説明します。 また、この節では、プッシュ通知に [ ディープリンク ](#deeplinking) 機能を設定する方法についても説明します。
 

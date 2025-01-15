@@ -5,10 +5,10 @@ exl-id: 25236af4-405a-4152-8308-34d983977e9a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: ht
-source-wordcount: '2391'
-ht-degree: 100%
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
+workflow-type: tm+mt
+source-wordcount: '2387'
+ht-degree: 99%
 
 ---
 
@@ -80,7 +80,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 * `path` - 初期化時に、定義されたパスのモデルが取得され、`ModelStore` に保存されます。これは、必要に応じて初期化時に `rootModel` を取得するのに使用できます。
 * `modelClient` - モデルの取得を担当するカスタムクライアントを提供できます。
-* `model` - 通常、[SSR を使用](spa-ssr.md)する場合に入力されるパラメーターとして渡される `model` オブジェクト。
+* `model` - SSR の使用時に生成されるパラメーターとして渡される `model` オブジェクト。
 
 ### AEM 認証可能なリーフコンポーネント {#authorable-leaf-components}
 
@@ -248,7 +248,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ![text20 ノード](assets/external-spa-text20-node.png)
 
-#### 要件と制限 {#limitations}
+#### 要件と制限事項 {#limitations}
 
 仮想リーフコンポーネントを追加するには、いくつかの要件と制限があります。
 
@@ -363,7 +363,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ## フレームワークの制限 {#framework-limitations}
 
-RemotePage コンポーネントでは、実装によりアセットマニフェストが指定されることを想定しています。アセットマニフェストの例については、[GitHub の webpack-manifest-plugin](https://github.com/shellscape/webpack-manifest-plugin) を参照してください。ただし、RemotePage コンポーネントは React フレームワーク（および remote-page-next コンポーネントを介した Next.js）で動作するようにのみテストされているので、Angular など他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
+RemotePage コンポーネントでは、実装でアセットマニフェストが指定されることを想定しています。アセットマニフェストの例については、[GitHub の webpack-manifest-plugin](https://github.com/shellscape/webpack-manifest-plugin) を参照してください。ただし、RemotePage コンポーネントは React フレームワーク（および remote-page-next コンポーネントを介した Next.js）で動作するようにのみテストされているので、Angular など他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
 
 ## その他のリソース {#additional-resources}
 
@@ -375,4 +375,3 @@ AEM のコンテキストで SPA を理解するには、次の参照資料が�
 * [SPA リファレンス資料（API リファレンス）](spa-reference-materials.md)
 * [SPA 青写真と PageModelManager](spa-blueprint.md#pagemodelmanager)
 * [SPA モデルルーティング](spa-routing.md)
-* [SPA およびサーバーサイドレンダリング](spa-ssr.md)

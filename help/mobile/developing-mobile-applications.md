@@ -9,18 +9,16 @@ exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 19%
+source-wordcount: '531'
+ht-degree: 16%
 
 ---
 
 # AEM でのモバイルアプリケーションの開発 {#developing-mobile-applications-in-aem}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 AEMでは、Adobe PhoneGapおよびAdobe公開ソリューションを使用して、コンテンツに富んだアプリケーションとユーティリティベースのクロスプラットフォームモバイルアプリケーションの両方を作成および管理できます。
 

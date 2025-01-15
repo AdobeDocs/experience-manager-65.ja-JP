@@ -9,18 +9,16 @@ exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 5%
+source-wordcount: '1197'
+ht-degree: 4%
 
 ---
 
 # アプリを管理タイル{#manage-app-tile}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 アプリダッシュボードの **`Manage App`** タイルでは、アプリケーションに関する詳細を編集できます。 詳細ページを開くには、**`Manage App`** タイルの詳細リンクをクリックします。 **`Manage App`** ページ内から、PhoneGap Application Configuration （config.xml）設定を編集し、様々なアプリケーションストアに送信するためのアプリケーションを準備できます。
 

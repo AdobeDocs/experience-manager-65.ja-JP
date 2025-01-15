@@ -9,18 +9,16 @@ exl-id: 4b3acc7c-f1f7-4837-ae3a-9435d6ce1349
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 12%
+source-wordcount: '261'
+ht-degree: 5%
 
 ---
 
 # 共有リソースのアップロード {#uploading-shared-resources}
 
->[!NOTE]
->
->単一ページアプリケーションフレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)。
+{{ue-over-mobile}}
 
 コンテンツ管理アクションは、アプリケーション内のコンテンツの作成と管理に役立つ構築ブロックです。 アプリケーション内のコンテンツに対して、次のアクションが実行されます。
 
