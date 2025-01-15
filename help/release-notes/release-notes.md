@@ -7,7 +7,7 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
 source-git-commit: 64bc2ecbb2b5ef5847af4449562240a7c1ec45e9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6146'
 ht-degree: 100%
 
