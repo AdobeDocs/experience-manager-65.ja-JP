@@ -7,7 +7,7 @@ exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: d28019efcead89cb66edfa672d6b928cbb7bcc25
 workflow-type: tm+mt
 source-wordcount: '1945'
 ht-degree: 100%
@@ -256,3 +256,4 @@ AEM での SPA の編集エクスペリエンスと、SPA と SPA エディタ�
 * [AEM での SPA の概要](/help/sites-developing/spa-getting-started-react.md)では、AEM での SPA エディターで動作する基本的な SPA の構築方法を示します。
 * [SPA エディターの概要](/help/sites-developing/spa-overview.md)では、AEM と SPA 間の通信モデルをより深く分析しています。
 * [AEM 向け SPA の開発](/help/sites-developing/spa-architecture.md)では、フロントエンド開発者を AEM 向け SPA の開発に関与させる方法、および SPA と AEM アーキテクチャとのやり取りについて説明しています。
+
