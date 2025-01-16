@@ -5,16 +5,19 @@ exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 100%
 
 ---
 
+
 # RemotePage コンポーネント {#remote-page-component}
 
 外部 SPA と AEM の間でどのレベルの統合を行うかを決める際に、AEM 内で SPA を表示して編集できる必要があることは、多くの場合、明らかです。RemotePage コンポーネントは、この目的のためのカスタムページコンポーネントです。
+
+{{ue-over-spa}}
 
 ## 概要 {#overview}
 

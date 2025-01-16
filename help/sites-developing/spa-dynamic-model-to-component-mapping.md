@@ -9,20 +9,19 @@ exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '313'
 ht-degree: 100%
 
 ---
+
 
 # SPA の動的モデルとコンポーネントのマッピング{#dynamic-model-to-component-mapping-for-spas}
 
 このドキュメントでは、Adobe Experience Manager（AEM）用 JavaScript SPA SDK で動的モデルとコンポーネントのマッピングがどのように行われるかを説明します。
 
->[!NOTE]
->
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
+{{ue-over-spa}}
 
 ## ComponentMapping モジュール {#componentmapping-module}
 

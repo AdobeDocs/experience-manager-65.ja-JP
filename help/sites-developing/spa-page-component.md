@@ -10,20 +10,19 @@ exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '707'
 ht-degree: 100%
 
 ---
+
 
 # SPA ページコンポーネント{#spa-page-component}
 
 SPA では、ページコンポーネントは子コンポーネントの HTML 要素を提供せず、代わりに SPA フレームワークに委任します。このドキュメントでは、これにより SPA のページコンポーネントがどのように一意になるかを説明します。
 
->[!NOTE]
->
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
+{{ue-over-spa}}
 
 ## はじめに {#introduction}
 

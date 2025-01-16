@@ -10,12 +10,13 @@ exl-id: 552649e7-6054-4ae8-b570-5ba7230e6f19
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: ht
-source-wordcount: '1147'
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+workflow-type: tm+mt
+source-wordcount: '1127'
 ht-degree: 100%
 
 ---
+
 
 # React を使用した AEM での SPA の概要{#getting-started-with-spas-in-aem-react}
 
@@ -27,9 +28,7 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 >
 >この記事は React フレームワークに基づいています。対応する Angular フレームワークのドキュメントについては、「[Angular を使用した AEM での SPA の概要](/help/sites-developing/spa-getting-started-angular.md)」を参照してください。
 
->[!NOTE]
->
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
+{{ue-over-spa}}
 
 ## はじめに {#introduction}
 

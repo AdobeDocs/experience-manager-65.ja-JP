@@ -9,20 +9,19 @@ exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2023'
 ht-degree: 100%
 
 ---
+
 
 # SPA ブループリント{#spa-blueprint}
 
 作成者が AEM SPA エディターを使用して SPA のコンテンツを編集できるようにするには、SPA が一定の要件を満たしている必要があります。このドキュメントではそれらの要件について説明します。
 
->[!NOTE]
->
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
+{{ue-over-spa}}
 
 ## はじめに {#introduction}
 

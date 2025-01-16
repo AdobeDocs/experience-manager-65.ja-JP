@@ -10,20 +10,19 @@ exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '164'
 ht-degree: 100%
 
 ---
+
 
 # SPA と Adobe Experience Platform Launch の統合{#spa-and-adobe-experience-platform-launch-integration}
 
 Adobe Experience Platform Launch は、Analytics、Target および Audience Manager をシングルページアプリケーション（SPA）内に実装する方法として推奨されます。
 
->[!NOTE]
->
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
+{{ue-over-spa}}
 
 ## チュートリアル {#tutorial}
 

@@ -10,12 +10,13 @@ exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2018'
 ht-degree: 100%
 
 ---
+
 
 # AEM 向け SPA の開発{#developing-spas-for-aem}
 
@@ -23,9 +24,7 @@ ht-degree: 100%
 
 この記事では、フロントエンド開発者が AEM 向けの SPA を開発する際に考慮すべき重要な問題を紹介し、SPA を AEM にデプロイする際に関する AEM のアーキテクチャの概要を説明します。
 
->[!NOTE]
->
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React や Angular など）が必要なプロジェクトに推奨されるソリューションです。
+{{ue-over-spa}}
 
 ## AEM 向け SPA 開発原則 {#spa-development-principles-for-aem}
 
