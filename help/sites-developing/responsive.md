@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5272'
 ht-degree: 100%
 
@@ -440,7 +440,7 @@ adaptive-image.jsp スクリプトには div 要素とメディアクエリを�
 >
 >アダプティブレンディション用のアニメーション .gif ファイルは AEM でサポートされていません。
 
-そのため、Sling は次の形式の HTTP リクエスト URL をこのサーブレットに解決します。
+そのため、Sling は、このサーブレットで以下の形式の HTTP リクエスト URL を解決します。
 
 `*path-to-node*.img.*extension*`
 

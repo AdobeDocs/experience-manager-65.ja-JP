@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2387'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -83,7 +83,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 * `path` - 初期化時に、定義されたパスのモデルが取得され、`ModelStore` に保存されます。これは、必要に応じて初期化時に `rootModel` を取得するのに使用できます。
 * `modelClient` - モデルの取得を担当するカスタムクライアントを提供できます。
-* `model` - SSR の使用時に生成されるパラメーターとして渡される `model` オブジェクト。
+* `model` - 通常、SSR を使用する場合に入力されるパラメーターとして渡される `model` オブジェクト。
 
 ### AEM 認証可能なリーフコンポーネント {#authorable-leaf-components}
 

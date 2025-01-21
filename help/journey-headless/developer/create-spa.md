@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
 source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1248'
 ht-degree: 100%
 

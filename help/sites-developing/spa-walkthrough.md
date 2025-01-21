@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1925'
 ht-degree: 100%
 
