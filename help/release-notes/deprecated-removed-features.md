@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 source-git-commit: 191c4b02274ca7e3e9d4622b72cd585870581f47
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1747'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 98%
 
 | 領域 | 機能 | 代替手段 | バージョン（SP） |
 |--- |--- |--- |--- |
-| コマース | AEM CIF Classic は削除されました。 | [AEM CIF](/help/commerce/cif/migration.md) に移行する必要があります。 まだCIF Classic が必要な場合、互換パッケージが作成されています。[Adobeカスタマーサポートにお問い合わせください ](https://experienceleague.adobe.com/ja?support-solution=General#support)。 | 6.5.22.0 |
+| Commerce | AEM CIF Classic は削除されました。 | [AEM CIF](/help/commerce/cif/migration.md) に移行する必要があります。引き続き CIF Classic が必要な場合は、互換性パッケージが作成されています。[アドビカスタマーサポート](https://experienceleague.adobe.com/ja?support-solution=General#support)にお問い合わせください。 | 6.5.22.0 |
 | [!DNL Experience Cloud] との統合 | [!DNL Adobe I/O] 経由での設定を使用して、アセットを [!DNL Experience Cloud] と同期できます。[!DNL Adobe Experience Cloud] は、以前は [!DNL Adobe Experience Cloud] と呼ばれていました。 | 質問がある場合は、[アドビカスタマーサポートまでお問い合わせください](https://experienceleague.adobe.com/ja?support-solution=General#support)。 |  |
 | Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を使用してください。 |  |
 | 統合 | ExactTarget の統合は、デフォルトの配布（クイックスタート）から削除され、使用できなくなりました。 | 代替手段はありません。 |  |
