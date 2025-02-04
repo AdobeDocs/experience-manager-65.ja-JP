@@ -9,7 +9,7 @@ exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 8305f77e895ad383a398cf8d4effa2b64cd45677
+source-git-commit: bdbf9b73553c42865560c76eebab76e2fc397fdf
 workflow-type: ht
 source-wordcount: '1935'
 ht-degree: 100%
