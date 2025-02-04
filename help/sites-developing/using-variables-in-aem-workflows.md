@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: bdbf9b73553c42865560c76eebab76e2fc397fdf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 100%
 
