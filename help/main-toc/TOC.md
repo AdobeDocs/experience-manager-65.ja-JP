@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
-workflow-type: ht
-source-wordcount: '7471'
-ht-degree: 100%
+source-git-commit: b5a87404435758d660f136d2e236de699ecad541
+workflow-type: tm+mt
+source-wordcount: '7475'
+ht-degree: 99%
 
 ---
 
@@ -1217,6 +1217,8 @@ ht-degree: 100%
       + [JEE サーバークラスター上の AEM Forms の設定とトラブルシューティング](/help/forms/developing/configure-server-cluster.md)
       + [動的 PDF Forms でのハッシュの生成と操作](/help/forms/developing/hashing-forms.md)
       + [WS-Security ヘッダーを使用した資格情報の受け渡し](/help/forms/developing/passing-credentials.md)
+   + 用語集 {#aem-forms-glossary}
++[AEM Forms用語集 ](/help/forms/using/aem-forms-glossary.md)
 + コンテンツとコマース {#commerce}
    + [概要](/help/commerce/cif/introduction.md)
    + [AEM Content and Commerce の主な変更点](/help/commerce/cif/changes.md)
