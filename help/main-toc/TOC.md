@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: b5a87404435758d660f136d2e236de699ecad541
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7475'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1218,7 +1218,7 @@ ht-degree: 99%
       + [動的 PDF Forms でのハッシュの生成と操作](/help/forms/developing/hashing-forms.md)
       + [WS-Security ヘッダーを使用した資格情報の受け渡し](/help/forms/developing/passing-credentials.md)
    + 用語集 {#aem-forms-glossary}
-+[AEM Forms用語集 ](/help/forms/using/aem-forms-glossary.md)
++[AEM Forms 用語集](/help/forms/using/aem-forms-glossary.md)
 + コンテンツとコマース {#commerce}
    + [概要](/help/commerce/cif/introduction.md)
    + [AEM Content and Commerce の主な変更点](/help/commerce/cif/changes.md)
