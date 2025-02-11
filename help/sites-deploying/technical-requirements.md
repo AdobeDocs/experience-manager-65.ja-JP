@@ -6,9 +6,9 @@ exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 01fa8cd75c00b04578fe103d07fa52553d2b6b93
+source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
 workflow-type: tm+mt
-source-wordcount: '3656'
+source-wordcount: '3681'
 ht-degree: 99%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Manager をインストールするための最小要件
    <td>アドビはこの構成への完全なサポートと保守を提供します。この構成は、アドビの品質保証プロセスでカバーされます。</td>
   </tr>
   <tr>
-   <td><strong>R：限定サポート</strong></td>
+   <td><strong>R：制限サポート</strong></td>
    <td>お客様のプロジェクトを確実に成功させるために、アドビは特定の条件を満たす必要がある限定的なサポートプログラム内で、完全なサポートを提供します。R レベルのサポートでは、正式なお客様のリクエストとアドビの確認が必要です。詳しくは、アドビカスタマーケアにお問い合わせください。</td>
   </tr>
  </tbody>
@@ -217,7 +217,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
    >* zlib.x86-64（1.2.7-17）
    >* libxcb.x86_64（1.13-1.el7）
    >* libXau.x86_64（1.0.8-2.1.el7）
-   >* glibc-locale.x86_64 （2.17 以降）
+   >* glibc-locale.x86_64（2.17 以降）
 
 1. Microsoft® Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
 1. AEM Forms は、Microsoft® Window Server でサポートされていますが、サポートレベル R 制限はありません。
@@ -514,15 +514,16 @@ Windows x86 の場合：
 >
 >* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
->* PDF Generator では、32 ビットリテール版の Microsoft® Office Professional Plus および Windows オペレーティングシステムでの変換に必要な、その他のソフトウェアのみサポートしています。
+>* PDF Generatorは、32 ビット版のMicrosoft® Office Professional Plus および変換に必要なその他のソフトウェアのみをサポートしています。
+>* Microsoft® Office Professional Plus のインストールでは、Retail または MAK/KMS/AD ベースのボリュームライセンスを使用できます。
+>* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールが再ライセンスされて再アクティブ化されるまで変換は失敗する場合があります。
 >* PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 >* PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
->* PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。Microsoft® Visio 2016 を引き続き使用して、`.VSD` ファイルや `.VSDX` ファイルを変換できます。
->* PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。Microsoft® Project 2016 を引き続き使用して `.VSD` ファイルや `.VSDX` ファイルを変換できます。
->
+>* PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
+>* PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
 
 ### AEM Forms Designer の要件 {#requirements-for-aem-forms-designer}
 
