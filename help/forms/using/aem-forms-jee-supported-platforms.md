@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
 workflow-type: tm+mt
-source-wordcount: '4010'
-ht-degree: 100%
+source-wordcount: '4098'
+ht-degree: 98%
 
 ---
 
@@ -486,7 +486,9 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >
 >さらに、次の点に注意してください。
 >
->- PDF Generator では、32 ビットリテール版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
+>- PDF Generatorは、32 ビット版のMicrosoft® Office Professional Plus および変換に必要なその他のソフトウェアのみをサポートしています。
+>- Microsoft® Office Professional Plus のインストールでは、Retail または MAK/KMS/AD ベースのボリュームライセンスを使用できます。
+>- ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールが再ライセンスされて再アクティブ化されるまで変換は失敗する場合があります。
 >- PDF Generator は Microsoft® Office 365 をサポートしていません。
 >- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 >- OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
@@ -494,7 +496,12 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >- PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
 >- PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
 >- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
->- ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールが再ライセンスされて再アクティブ化されるまで変換は失敗する場合があります。
+
+PDF Generatorは、32 ビット版のMicrosoft® Office Professional Plus および変換に必要なその他のソフトウェアのみをサポートしています。
+
+Microsoft® Office Professional Plus のインストールでは、Retail または MAK/KMS/AD ベースのボリュームライセンスを使用できます。
+
+ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールが再ライセンスされて再アクティブ化されるまで変換は失敗する場合があります。
 
 <!-- Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
 >- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.-->
