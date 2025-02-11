@@ -6,9 +6,9 @@ feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
 exl-id: 9caee314-697b-4a7b-b991-10352da17f2c
 source-git-commit: ab9292c491cc9dfcd8f239ba279b1e0ae6d1560f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1089'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +44,7 @@ OAuth 設定には、次の前提条件が必要です。
 
 ### 既存の AMS およびオンプレミスユーザーの OAuth 設定 {#steps-config-oauth-onprem}
 
-次の手順は、システム管理者が **CRXDE** で実行できます。 AMS のお客様は、[サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)に従ってアドビ担当者に連絡するか、サポートチケットを送信できます。
+次の手順は、システム管理者が **CRXDE** で実行できます。AMS のお客様は、[サポートプロセス](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)に従ってアドビ担当者に連絡するか、サポートチケットを送信できます。
 
 1. `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`で以下のプロパティを追加または更新します。
 
@@ -59,7 +59,7 @@ OAuth 設定には、次の前提条件が必要です。
 
    >[!IMPORTANT]
    >
-   >ドット（.）を `<randomnumber>` のプレフィックスとしてハイフン（–）に置き換えます。
+   >`<randomnumber>` の接頭辞としてドット（.）をハイフン（-）に置き換えます。
 
 1. `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config` で以下の手順を実行します。
    * 新しい OAuth 統合からのクライアント秘密鍵を使用して、プロパティ auth.ims.client.secret を更新します。
@@ -69,7 +69,7 @@ OAuth 設定には、次の前提条件が必要です。
 1. Navigate to `/system/console/configMgr` and replace the OSGi configuration from `.<randomnumber>` to `-<randomnumber>`.
 1. Delete the old OSGi configuration for `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
 -->
-1. `System/console/configMgr` では、古い設定ファイルと新しい設定ファイルの両方が表示されます。 `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` およびアクセストークン プロバイダー名 `adobe-ims-similaritysearch` の古い設定を削除します。 古い設定ではなく、更新された設定のみが配置されていることを確認します。
+1. `System/console/configMgr` では、古い設定ファイルと新しい設定ファイルの両方を確認できます。`com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl` およびアクセストークンプロバイダー名 `adobe-ims-similaritysearch` の古い設定を削除します。古い設定ではなく、更新された設定のみが配置されていることを確認します。
 1. コンソールを再起動します。
 
 ## 設定の検証 {#validate-the-configuration}
@@ -88,7 +88,7 @@ OAuth 設定には、次の前提条件が必要です。
 
 >[!NOTE]
 >
->エラーが発生 `unsupported_grant_type` た場合は、Granite ホットフィックスをインストールしてみてください。 [ サービスアカウント（JWT）から OAuth サーバー間資格情報への移行 ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24660) を参照してください。
+>`unsupported_grant_type` エラーが発生した場合は、Granite ホットフィックスをインストールしてみてください。詳しくは、[サービスアカウント（JWT）から OAuth サーバー間資格情報への移行](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-24660)を参照してください。
 
 ## Adobe Developer Console との統合 {#integrate-adobe-io}
 
@@ -139,7 +139,7 @@ OAuth 設定には、次の前提条件が必要です。
    >
    >[!UICONTROL サービス URL] として提供された URL は、ブラウザーからアクセスできず、404 エラーが発生します。設定は、[!UICONTROL サービス URL] パラメーターの同じ値で正常に動作します。サービスの全体的なステータスとメンテナンススケジュールについては、[https://status.adobe.com](https://status.adobe.com) を参照してください。
 
-1. 「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックし、公開証明書ファイル `AEM-SmartTags.crt` をダウンロードします。さらに、この証明書をAdobe Developer コンソールにアップロードする必要はなくなりました。
+1. 「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックし、公開証明書ファイル `AEM-SmartTags.crt` をダウンロードします。この証明書は Adobe Developer Console にアップロードする必要がなくなりました。
 
    ![スマートタグ付けサービス用に作成された設定の表現](assets/smart-tags-download-public-cert1.png)
 
@@ -159,7 +159,7 @@ OAuth 設定には、次の前提条件が必要です。
 
 1. 必要に応じて&#x200B;**[!UICONTROL 資格情報名]**&#x200B;を追加／変更します。「**[!UICONTROL 次へ]**」をクリックします。
 
-1. 製品プロファイル「**[!UICONTROL スマートコンテンツサービス]**」を選択します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。OAuth API が接続された資格情報に追加され、今後使用できるようになります。 [!UICONTROL API キー（クライアント ID）]をコピーするか、そこから[!UICONTROL アクセストークンを生成]できます。
+1. 製品プロファイル「**[!UICONTROL スマートコンテンツサービス]**」を選択します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。OAuth API は、今後使用できるように接続された資格情報に追加されます。[!UICONTROL API キー（クライアント ID）]をコピーするか、そこから[!UICONTROL アクセストークンを生成]できます。
 <!--
 1. On the **[!UICONTROL Select product profiles]** page, select **[!UICONTROL Smart Content Services]**. Click **[!UICONTROL Save configured API]**.
 
