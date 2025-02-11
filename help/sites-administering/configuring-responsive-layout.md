@@ -10,20 +10,27 @@ exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 17c4084d9ee93e5fe6652d63438eaf34cbc83c12
 workflow-type: tm+mt
-source-wordcount: '1275'
-ht-degree: 100%
+source-wordcount: '1479'
+ht-degree: 88%
 
 ---
 
+
 # レイアウトコンテナおよびレイアウトモードの設定{#configuring-layout-container-and-layout-mode}
 
-[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)は、[レスポンシブ web デザイン](https://ja.wikipedia.org/wiki/Responsive_web_design)を実現するためのメカニズムです。レスポンシブレイアウトを使用すると、ユーザーが使用するデバイスのレイアウトとサイズに応じて web ページを作成できます。
+レイアウトコンテナおよびレイアウトモードの設定方法について学びます。
 
->[!NOTE]
+>[!TIP]
 >
->これは、アダプティブ web デザイン（主にクラシック UI 用）を使用する[モバイル web](/help/sites-developing/mobile-web.md) メカニズムと比較できます。
+>このドキュメントでは、サイト管理者および開発者向けのレスポンシブデザインの概要を説明し、AEMでの機能の実現方法を説明します。
+>
+>コンテンツ作成者がコンテンツページでレスポンシブデザイン機能を使用する方法の詳細については、ドキュメント [ コンテンツページのレスポンシブレイアウト ](/help/sites-authoring/responsive-layout.md) を参照してください。
+
+## 概要 {#overview}
+
+[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)は、[レスポンシブ web デザイン](https://en.wikipedia.org/wiki/Responsive_web_design)を実現するためのメカニズムです。レスポンシブレイアウトを使用すると、ユーザーが使用するデバイスのレイアウトとサイズに応じて web ページを作成できます。
 
 AEM は、次のメカニズムを組み合わせて使用することにより、ページのレスポンシブレイアウトを実現します。
 
@@ -33,7 +40,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
    * デフォルトの&#x200B;**レイアウトコンテナ**&#x200B;コンポーネントは以下の場所で定義します。
 
-     /libs/wcm/foundation/components/responsivegrid
+     `/libs/wcm/foundation/components/responsivegrid`
 
    * レイアウトコンテナは次のように定義できます。
 
@@ -49,10 +56,6 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 * [**エミュレーター**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 これにより、コンポーネントのサイズをインタラクティブに変更することで、デバイスやウィンドウのサイズに従ってレイアウトを並べ替えるレスポンシブ web サイトを作成および編集できます。その後、ユーザーはエミュレーターを使用してコンテンツがどのようにレンダリングされるかを確認できます。
 
->[!CAUTION]
->
->ただし、**レイアウトコンテナ**&#x200B;コンポーネントはクラシック UI で使用でき、完全な機能はタッチ操作対応 UI でのみ使用できます。
-
 これらのレスポンシブグリッドのメカニズムを使用すると、次のことができます。
 
 * ブレークポイント（デバイスのグループ化を示す）を使用して、デバイスのレイアウトに基づいて様々なコンテンツの動作を定義します。
@@ -60,9 +63,17 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 * 水平にグリッドにスナップを使用します（グリッドにコンポーネントを配置し、必要に応じてサイズ変更し、横並びまたは上下に並べて折たたみやリフローのタイミングを定義）。
 * 列の制御を実現します。
 
+>[!TIP]
+>
+>アドビはフロントエンド開発者用にレスポンシブレイアウトの [GitHub ドキュメント](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)をリファレンスとして提供しており、フロントエンド開発者は AEM の外部で AEM グリッドを使用できます（例えば、今後の AEM サイトの静的 HTML モックアップを作成する場合）。
+
 >[!NOTE]
 >
 >標準のインストールでは、レスポンシブレイアウトは [We.Retail 参照サイト](/help/sites-developing/we-retail.md)に対して設定されています。他のページの[レイアウトコンテナコンポーネントをアクティベート](#enable-the-layout-container-component-for-page)します。
+
+>[!CAUTION]
+>
+>ただし、**レイアウトコンテナ**&#x200B;コンポーネントはクラシック UI で使用でき、完全な機能はタッチ操作対応 UI でのみ使用できます。
 
 ## レスポンシブエミュレーターの設定 {#configuring-the-responsive-emulator}
 
@@ -148,7 +159,7 @@ CRXDE Lite または XML を使用して定義できます。
 
 定義の例は次のとおりです。
 
-```xml
+```html
 <cq:responsive jcr:primaryType="nt:unstructured">
   <breakpoints jcr:primaryType="nt:unstructured">
     <phone jcr:primaryType="nt:unstructured" title="{String}Phone" width="{Decimal}768"/>
@@ -186,13 +197,13 @@ CRXDE Lite または XML を使用して定義できます。
 
 * **HTL：**
 
-  ```xml
+  ```html
   <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
   ```
 
 * **JSP：**
 
-  ```
+  ```html
   <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
   ```
 
@@ -204,7 +215,7 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
 
 また、追加の設定と関数呼び出しを提供するために、[クライアントライブラリ](https://experienceleague.adobe.com/docs/?lang=ja)も作成する必要があります。次の LESS エクストラクトは、プロジェクトに追加する必要がある最小限の例です。
 
-```java
+```css
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
 
 /* maximum amount of grid cells to be provided */
@@ -311,3 +322,61 @@ AEM では、必要な CSS の一部の生成に LESS を使用するため、�
    * 現在のコンポーネントに追加できるコンポーネント：
 
       * `components="[/libs/wcm/foundation/components/responsivegrid, ...`
+
+## ネストされたレスポンシブグリッド {#nested-responsive-grids}
+
+プロジェクトのニーズをサポートするために、レスポンシブグリッドをネストする必要がある場合があります。 ただし、Adobeが推奨するベストプラクティスは、構造をできるだけフラットに保つことです。
+
+ネストされたレスポンシブグリッドの使用を避けることができない場合は、次の点を確認してください。
+
+* すべてのコンテナ（コンテナ、タブ、アコーディオンなど）にはプロパティ `layout = responsiveGrid` があります。
+* コンテナ階層にプロパティ `layout = simple` を混在させないでください。
+
+これには、ページテンプレートのすべての構造コンテナが含まれます。
+
+内側のコンテナの列番号は、外側のコンテナの列番号より大きくしないでください。 次の例では、この条件を満たしています。 デフォルト（デスクトップ）の画面では外側のコンテナの列番号は 8 ですが、内側のコンテナの列番号は 4 です。
+
+>[!BEGINTABS]
+
+>[!TAB  ノード構造の例 ]
+
+```text
+container
+  @layout = responsiveGrid
+  cq:responsive
+    default
+      @offset = 0
+      @width = 8
+  container
+  @layout = responsiveGrid
+    cq:responsive
+      default
+        @offset = 0
+        @width = 4
+    text
+      @text =" Text Column 1"
+```
+
+>[!TAB  結果のHTML] 例
+
+```html
+<div class="container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--default--0">
+  <div id="container-c9955c233c" class="cmp-container">
+    <div class="aem-Grid aem-Grid--8 aem-Grid--default--8 ">
+      <div class="container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+        <div id="container-8414e95866" class="cmp-container">
+          <div class="aem-Grid aem-Grid--4 aem-Grid--default--4 ">
+            <div class="text aem-GridColumn aem-GridColumn--default--4">
+              <div data-cmp-data-layer="..." id="text-1234567890" class="cmp-text">
+                <p>Text Column 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+>[!ENDTABS]
