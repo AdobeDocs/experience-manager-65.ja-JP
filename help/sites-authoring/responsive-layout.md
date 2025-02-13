@@ -1,6 +1,6 @@
 ---
 title: コンテンツページのレスポンシブレイアウト
-description: Adobe Experience Managerでは、レイアウトコンテナ コンポーネントを使用すると、ページのレスポンシブレイアウトを実現できます。
+description: Adobe Experience Manager では、レイアウトコンテナコンポーネントを使用することで、ページのレスポンシブレイアウトを実現できます。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
@@ -10,26 +10,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 source-git-commit: 41da3aef16e650d8dc33e96991d0a997564c9224
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1853'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 
 # レスポンシブレイアウト{#responsive-layout}
 
-Adobe Experience Managerでは、**レイアウトコンテナ** コンポーネントを使用すると、ページのレスポンシブレイアウトを実現できます。
+Adobe Experience Manager では、**レイアウトコンテナ**&#x200B;コンポーネントを使用することで、ページのレスポンシブレイアウトを実現できます。
 
 >[!TIP]
 >
 >このドキュメントでは、コンテンツ作成者が使用できるレイアウトコンテナの機能の概要について説明します。
 >
->サイト管理者および開発者を対象に、サイトのレイアウトコンテナの設定方法の詳細については、[ レイアウトコンテナおよびレイアウトモードの設定 ](/help/sites-authoring/responsive-layout.md) のドキュメントを参照してください。
+>サイト管理者および開発者向けに、サイトのレイアウトコンテナを設定する方法について詳しくは、[レイアウトコンテナおよびレイアウトモードの設定](/help/sites-authoring/responsive-layout.md)ドキュメントを参照してください。
 
 ## 概要 {#overview}
 
-**レイアウトコンテナ** コンポーネントは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。 このグリッドでは、デバイスやウィンドウのサイズと形式に応じてレイアウトを並べ替えることができます。[**レイアウト**&#x200B;モード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)と組み合わせてこのコンポーネントを使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
+**レイアウトコンテナ**&#x200B;コンポーネントは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズと形式に応じてレイアウトを並べ替えることができます。[**レイアウト**&#x200B;モード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)と組み合わせてこのコンポーネントを使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
 
 レイアウトコンテナには、次の特徴があります。
 

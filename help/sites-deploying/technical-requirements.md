@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3681'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -514,9 +514,9 @@ Windows x86 の場合：
 >
 >* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
->* PDF Generatorは、32 ビット版のMicrosoft® Office Professional Plus および変換に必要なその他のソフトウェアのみをサポートしています。
->* Microsoft® Office Professional Plus のインストールでは、Retail または MAK/KMS/AD ベースのボリュームライセンスを使用できます。
->* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールが再ライセンスされて再アクティブ化されるまで変換は失敗する場合があります。
+>* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
+>* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
+>* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
 >* PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
