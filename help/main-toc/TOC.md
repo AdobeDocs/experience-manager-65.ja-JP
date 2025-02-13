@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: b5a87404435758d660f136d2e236de699ecad541
-workflow-type: ht
-source-wordcount: '7475'
-ht-degree: 100%
+source-git-commit: 236dac79430bc974b9cc95299a566283a748476a
+workflow-type: tm+mt
+source-wordcount: '7474'
+ht-degree: 99%
 
 ---
 
@@ -542,7 +542,7 @@ ht-degree: 100%
       + [AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)
       + [AEM Forms のインストールに永続性タイプを選択する](/help/forms/using/choosing-persistence-type-for-aem-forms.md)
       + OSGi での AEM Forms のインストール {#osgi-installation}
-         + [OSGi での AEM forms でサポートされるプラットフォーム](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements.html?lang=ja)
+         + [OSGi でのAEM forms でサポートされるプラットフォーム](/help/forms/using/supported-platforms.md)
          + [ドキュメントサービスのインストールと設定](/help/forms/using/install-configure-document-services.md)
          + [データ取得機能をインストールして設定する](/help/forms/using/installing-configuring-aem-forms-osgi.md)
          + [OSGi での Forms 中心のワークフローのインストールと設定](/help/forms/using/installing-configuring-forms-centric-workflow-on-osgi.md)
