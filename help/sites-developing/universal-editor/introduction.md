@@ -4,10 +4,10 @@ description: ユニバーサルエディターの柔軟性と、AEM 6.5 を使�
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: 773e398af5247a0de12143334ecfa44955ebbbcd
+source-git-commit: bf9dc1695be7f7a10cb76160b531c9adbbfc8c34
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 4%
+source-wordcount: '1207'
+ht-degree: 20%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 4%
 ユニバーサルエディターは、AEMと連携してコンテンツをヘッドレスにオーサリングするサービスです。
 
 * ユニバーサルエディターは `https://experience.adobe.com/#/aem/editor/canvas` でホストされ、AEM 6.5 でレンダリングされたページを編集できます。
-* AEM ページは、AEM オーサーインスタンスから Dispatcher を介してユニバーサルエディターによって読み取られます。
-* Dispatcherと同じホスト上で実行されるユニバーサルエディターサービスが、変更内容をAEM オーサーインスタンスに書き戻します。
+* AEMページは、ユニバーサルエディターによって、AEM オーサーインスタンスから Dispatcher を介して読み取られます。
+* Dispatcherと同じホスト上で動作するユニバーサルエディターサービスが、変更内容をAEM オーサーインスタンスに書き戻します。
 
 ![ ユニバーサルエディターを使用したオーサーフロー ](assets/author-flow.png)
 
@@ -55,7 +55,7 @@ AEM 6.5 の Service Pack 21 または 22 以降を実行していることを確
 
 #### ユニバーサルエディター機能パックのインストール {#feature-pack}
 
-**AEM 6.5 用ユニバーサルエディター機能パック** ソフトウェア配布で入手可能 [ をインストールします。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
+**AEM 6.5 用ユニバーサルエディター機能パック** ソフトウェア配布で入手可能 [ をインストールします ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)。
 
 既にサービスパック 23 以降を実行している場合、機能パックは必要ありません。
 
@@ -67,7 +67,7 @@ AEM 6.5 の Service Pack 21 または 22 以降を実行していることを確
 
 1. Configuration Manager を開きます。
    * `http://<host>:<port>/system/console/configMgr`
-1. リストで **Configuration Granite Token Authentication Handler** を見つけて、「**Adobe値を変更**」をクリックします。
+1. リストで **Adobe Granite トークン認証ハンドラー** を見つけて、「**設定値を変更**」をクリックします。
 1. ダイアログで、login-token cookie の **SameSite 属性** （`token.samesite.cookie.attr`）の値を `Partitioned` に変更します。
 1. 「**保存**」をクリックします。
 
@@ -83,7 +83,7 @@ AEM 6.5 の Service Pack 21 または 22 以降を実行していることを確
 
 1. Configuration Manager を開きます。
    * `http://<host>:<port>/system/console/configMgr`
-1. リストで **AdobeGranite クエリパラメーター認証ハンドラー** を見つけて、**設定値を編集** をクリックしてください。
+1. リストの **Adobe Granite クエリパラメーター認証ハンドラー** を見つけて、「**設定値を編集**」をクリックします。
 1. **パス** フィールド（`path`）に、有効にする `/` を追加します。
    * 値が空の場合は、認証ハンドラーが無効になります。
 1. 「**保存**」をクリックします。
@@ -92,36 +92,43 @@ AEM 6.5 の Service Pack 21 または 22 以降を実行していることを確
 
 1. Configuration Manager を開きます。
    * `http://<host>:<port>/system/console/configMgr`
-1. リストで **ユニバーサルエディター URL サービス** を見つけて、「**設定値を編集**」をクリックします。
+1. リストで&#x200B;**ユニバーサルエディター URL サービス**&#x200B;を見つけて、「**設定値を編集**」をクリックします。
 1. ユニバーサルエディターを開くコンテンツ `sling:resourceTypes` パスまたはパスを定義します。
-   * **ユニバーサルエディターを開くマッピング** フィールドで、ユニバーサルエディターを開くパスを指定します。
-   * ユニバーサルエディターで開く **Sling:resourceTypes** フィールドに、ユニバーサルエディターによって直接開かれるリソースのリストを指定します。
+   * 「**ユニバーサルエディターを開くマッピング**」フィールドに、ユニバーサルエディターを開くパスを指定します。
+   * 「**ユニバーサルエディターで開く Sling:resourceTypes**」フィールドに、ユニバーサルエディターによって直接開かれるリソースのリストを指定します。
 1. 「**保存**」をクリックします。
+1. [externalizer 設定 ](/help/sites-developing/externalizer.md) を確認し、少なくともローカル、オーサー、パブリッシュ環境が次の例のように設定されていることを確認します。
 
-AEMは、この設定に基づくページのユニバーサルエディターを開きます。
+   ```text
+   "local $[env:AEM_EXTERNALIZER_LOCAL;default=http://localhost:4502]",
+   "author $[env:AEM_EXTERNALIZER_AUTHOR;default=http://localhost:4502]",
+   "publish $[env:AEM_EXTERNALIZER_PUBLISH;default=http://localhost:4503]"
+   ```
 
-1. AEMは `Universal Editor Opening Mapping` の下のマッピングをチェックします。コンテンツがそこに定義されたパスの下にある場合は、ユニバーサルエディターが開きます。
-1. `Universal Editor Opening Mapping` で定義されたパスにないコンテンツの場合、AEMは、コンテンツの `resourceType` が、ユニバーサルエディターで開かれる **Sling:resourceTypes で定義されたものと一致するかどうかを確認し** コンテンツがこれらの型のいずれかに一致する場合、ユニバーサルエディターは `${author}${path}.html` で開かれます。
-1. それ以外の場合は、AEMによってページエディターが開きます。
+これらの設定手順が完了すると、AEMは次の順序でページのユニバーサルエディターを開きます。
+
+1. AEM は `Universal Editor Opening Mapping` の下にあるマッピングを確認し、コンテンツがそこに定義されているパスの下にある場合は、ユニバーサルエディターが開かれます。
+1. `Universal Editor Opening Mapping` で定義されたパスの下にないコンテンツの場合、AEM はコンテンツの `resourceType` が、**ユニバーサルエディターで開かれる Sling:resourceTypes**&#x200B;で定義されたものと一致するかどうかを確認し、コンテンツがこれらのタイプのいずれかに一致する場合は、`${author}${path}.html` でユニバーサルエディターが開かれます。
+1. それ以外の場合は、AEM によってページエディターが開かれます。
 
 `Universal Editor Opening Mapping` の下でマッピングを定義するには、次の変数を使用できます。
 
 * `path`：開くリソースのコンテンツパス
-* `localhost`：スキーマを含まない `localhost` （例：`localhost:4502`）の Externalizer エントリ
-* `author`：スキーマなしのオーサー用 Externalizer エントリ（例：`localhost:4502`）
-* `publish`：スキーマを使用しないパブリッシュ用の Externalizer エントリ（例：`localhost:4503`）
-* `preview`：スキーマを使用しないプレビュー用の Externalizer エントリ（例：`localhost:4504`）
+* `localhost`：スキーマなしの `localhost` の Externalizer エントリ（例：`localhost:4502`）
+* `author`：スキーマなしのオーサーの Externalizer エントリ（例：`localhost:4502`）
+* `publish`：スキーマなしのパブリッシュの Externalizer エントリ（例：`localhost:4503`）
+* `preview`：スキーマなしのプレビューの Externalizer エントリ（例：`localhost:4504`）
 * `env`：定義された Sling 実行モードに基づく `prod`、`stage`、`dev`
-* `token`: `QueryTokenAuthenticationHandler` にクエリトークンが必要です
+* `token`：`QueryTokenAuthenticationHandler` に必要なクエリトークン
 
 マッピングの例：
 
-* AEM オーサーで `/content/foo` の下のすべてのページを開きます。
+* AEM オーサーの `/content/foo` の下にあるすべてのページを開きます。
    * `/content/foo:${author}${path}.html?login-token=${token}`
-   * これにより、`https://localhost:4502/content/foo/x.html?login-token=<token>` が開きます
+   * これにより、`https://localhost:4502/content/foo/x.html?login-token=<token>` が開きます。
 * すべての変数を情報として指定して、リモート NextJS サーバー上の `/content/bar` 下にあるすべてのページを開きます。
    * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
-   * これにより、`https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>` が開きます
+   * これにより、`https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>` が開きます。
 
 ### ユニバーサルエディターサービスの設定 {#set-up-ue}
 
@@ -159,7 +166,7 @@ AEMが更新され、ローカルのユニバーサルエディターサービ�
 
 ただし、ユニバーサルエディターを利用するには、アプリのインストルメントを行う必要があります。 これには、コンテンツを保持する方法と場所をエディターに指示するメタタグを含める必要があります。 この実装について詳しくは、[AEM as a Cloud Serviceのユニバーサルエディターのドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started#instrument-page) を参照してください。
 
-AEM as a Cloud Serviceでユニバーサルエディターを使用する場合にドキュメントに従うと、AEM 6.5 で使用する場合に次の変更が適用されます。
+AEMを使用したユニバーサルエディターのドキュメントに従う場合、AEM as a Cloud Service 6.5 で使用する際には次の変更が適用されます。
 
 * メタタグのプロトコルは、`aem` ではなく `aem65` にする必要があります。
 
