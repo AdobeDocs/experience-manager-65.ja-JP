@@ -6,10 +6,10 @@ role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 6ab943894398733d178f561430d3f391e8722195
 workflow-type: tm+mt
-source-wordcount: '3060'
-ht-degree: 100%
+source-wordcount: '3059'
+ht-degree: 98%
 
 ---
 
@@ -86,7 +86,7 @@ Experience Manager を手動で設定するには：
 
    各 `Client ID` を追加するには、`+` をクリックします。すべての ID を追加したら、「**[!UICONTROL 保存]**」をクリックします。
 
-1. 「**[!UICONTROL Adobe Granite OAuth アプリケーションとプロバイダ]**」設定で、既存の「**[!UICONTROL Adobe Granite OAuth 認証ハンドラー]**」インスタンスを検査します。`Config ID` 値が `ims` のインスタンスを見つけた場合は、この手順の指示で使用します。それ以外の場合は、`+` をクリックして設定インスタンスを作成します。次のプロパティ値を設定し、「**[!UICONTROL 保存]**」をクリックします。
+1. 「**[!UICONTROL Adobe Granite OAuth Application and Provider]**」設定で、既存の「**[!UICONTROL Adobe Granite OAuth Application and Provider]**」インスタンスを検査します。 `Config ID` 値が `ims` のインスタンスを見つけた場合は、この手順の指示で使用します。それ以外の場合は、`+` をクリックして設定インスタンスを作成します。次のプロパティ値を設定し、「**[!UICONTROL 保存]**」をクリックします。
 
    * [!UICONTROL クライアント ID]：変更しません
    * [!UICONTROL クライアントシークレット]：変更しません
@@ -122,7 +122,7 @@ Experience Manager と Creative Cloud エンタープライズ版で異なる Ad
 
 >[!NOTE]
 >
->* ビジネスプロファイルの修正は、Experience Manager 6.5.11.0で提供されています。
+>* ビジネスプロファイルの修正については、Experience Manager 6.5.11.0 を参照してください。
 >* Experience Manager と Creative Cloud エンタープライズ版で同じ Adobe IMS 組織を使用している場合、既存の設定が引き続き機能します。
 
 
@@ -131,7 +131,7 @@ Experience Manager と Creative Cloud エンタープライズ版で異なる Ad
 1. AAL 用に設定された Bearer 認証を持つ Experience Manager インスタンスの起動および実行。
 1. Experience Manager 6.5 インスタンスに、次のパッケージ（Service Pack 11）をインストールします。
 
-   [Experience Manager 6.5.11.0 のダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.11.zip)
+   [Experience Manager 6.5.11.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.11.zip) のダウンロード
 
 1. [!UICONTROL カスタマーサポート]に問い合わせ、IMS 組織の Bearer 認証用のクライアント ID と秘密鍵を取得します。
 
