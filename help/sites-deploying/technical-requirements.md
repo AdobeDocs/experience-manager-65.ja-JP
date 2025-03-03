@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 source-git-commit: 9891d7e61e62c541073c177eb88c49d685cbcb5f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3681'
 ht-degree: 100%
 
