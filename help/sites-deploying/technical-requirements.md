@@ -2,11 +2,10 @@
 title: 技術要件
 description: Adobe Experience Manager でサポートされるクライアントおよびサーバープラットフォームのリスト。
 topic-tags: platform
-exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
+source-git-commit: 9891d7e61e62c541073c177eb88c49d685cbcb5f
 workflow-type: ht
 source-wordcount: '3681'
 ht-degree: 100%
@@ -513,12 +512,12 @@ Windows x86 の場合：
 >さらに、次の点に注意してください。
 >
 >* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
->* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 >* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
 >* PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
+>* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 >* PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
