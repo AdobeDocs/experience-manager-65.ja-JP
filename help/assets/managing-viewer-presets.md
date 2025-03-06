@@ -11,10 +11,10 @@ feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
 workflow-type: tm+mt
-source-wordcount: '4422'
-ht-degree: 100%
+source-wordcount: '4397'
+ht-degree: 99%
 
 ---
 
@@ -446,7 +446,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
      CSS ファイルを読み込むと、Visual Editor は、その CSS に正しいビューアマーカーが使用されているかを確認します。例えば、ズームビューアを作成している場合、読み込むすべての CSS ルールが、親のビューア要素に定義されているズームビューアのクラス名 `.s7mixedmediaviewer` を使用して定義されている必要があります。
 
-     指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます（CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。例えば、ズームビューアの CSS マーカーについては、[ズームビューアのカスタマイズ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja)を参照してください）。ただし、Visual Editor が一部の CSS 値を理解できないこともありえます。そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
+     指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます（CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。例えば、ズームビューアの CSS マーカーについて詳しくは、[ ズームビューアのカスタマイズ ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja) を参照してください。ただし、Visual Editor が一部の CSS 値を認識できない場合があります。 そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
 
    >[!NOTE]
    >
@@ -467,10 +467,6 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
       * ブラウザーが DASH をサポートしている場合は、最初に DASH ストリーミングが使用されます。
       * ブラウザーが DASH をサポートしていない場合は、次に HLS ストリーミングが使用されます。
       * ブラウザーが DASH も HLS もサポートしていない場合は、最後にプログレッシブ再生が使用されます。
-
-   >[!NOTE]
-   >
-   >**[!UICONTROL dash]**&#x200B;オプションを表示して使用するには、まずアドビテクニカルサポートでアカウントを有効にする必要があります。詳しくは、「[アカウントでの DASH の有効化](/help/assets/video.md#enable-dash)」を参照してください。
 
 1. 「**[!UICONTROL 選択したタイプ]**」プルダウンメニューで、動作を変更するコンポーネントを選択します。
 
