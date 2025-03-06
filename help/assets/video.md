@@ -11,9 +11,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
+source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
 workflow-type: tm+mt
-source-wordcount: '10517'
+source-wordcount: '10488'
 ht-degree: 99%
 
 ---
@@ -549,8 +549,6 @@ Dynamic Media で複数のキャプションおよびオーディオトラック
 |  | 説明オーディオ |
 
 [Dynamic Media でサポートされているすべてのビデオ形式](/help/assets/assets-formats.md)とすべての Dynamic Media ビデオビューア（Dynamic Media *Video_360* ビューアを除く）は、複数のキャプションとオーディオトラックでの使用がサポートされています。
-
-複数のキャプションおよびオーディオトラック機能を Dynamic Media アカウントで使用できるようにするには、アドビカスタマーサポートが機能の切替スイッチを有効（オン）にする必要があります。
 
 ### ビデオに複数のキャプションおよびオーディオトラックを追加 {#add-msma}
 
