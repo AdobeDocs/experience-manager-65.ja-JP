@@ -34,7 +34,7 @@ ht-degree: 99%
 >
 >* 「Dynamic Media - ハイブリッドモードの設定」の [Dynamic Media クラウドサービスの設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。
 >
->Dynamic Media での現在の既知のビデオ再生の問題 *Experience Manager 6.5.9.0 のみ*:
+>Dynamic Media でのビデオ再生に関する既知の問題（*Experience Manager 6.5.9.0 のみ*）：
 >
 >* 公開済みのビデオを更新する場合は、ビデオ再度公開して配信の変更を反映する必要があります。
 >
@@ -139,7 +139,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 
 アルゴリズムの技術情報について詳しくは、[https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp](https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp) を参照してください。
 
-単一のビデオおよびアダプティブビデオセットの管理では、次の方法がサポートされています。
+単一のビデオとアダプティブビデオセットの管理では、次の機能がサポートされています。
 
 * サポートされている様々な形式でビデオをアップロードし、複数の画面で再生できるように MP4 H.264 にエンコードします。事前定義済みのアダプティブビデオセット、1 つのビデオのエンコーディングプリセットを使用するか、独自のエンコーディングをカスタマイズしてビデオの品質とサイズを制御できます。
 
@@ -833,7 +833,7 @@ URL での JSON 機能の使用について詳しくは、[静的コンテンツ
 
 1. 次のいずれかの操作を行います。
 
-   * ポップアップビデオビューアエクスペリエンスの場合は、「**[!UICONTROL URL]**」をクリックします。 URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
+   * ポップアップビデオビューアエクスペリエンスの場合、「**[!UICONTROL URL]**」をクリックします。URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
 
      `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
@@ -905,7 +905,7 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
        <li>アップロードしたチャプターファイルを関連付ける、<i>公開済み</i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li>
        <li>ドロップダウンメニューで「<strong>ビューア</strong>」をクリックします。</li>
        <li>左パネルで、ビデオビューアプリセット名をクリックします。ビデオのプレビューが別のページで開きます。</li>
-       <li>左パネルの下部にある <strong>URL</strong> をクリックします。</li>
+       <li>左パネルの下部にある「<strong>URL</strong>」をクリックします。</li>
        <li>URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。</li>
        <li>ビデオのコピー済み URL を次の構文で追加すると、チャプターファイルのコピー済み URL に関連付けることができます。<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
        </ol> </td>
