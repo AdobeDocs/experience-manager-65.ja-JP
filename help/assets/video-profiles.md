@@ -12,9 +12,9 @@ mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3730'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -297,7 +297,7 @@ Experience Manager でビデオプロファイルを作成または編集する�
    <td><code>audioBitrateCustom</code></td>
    <td>オーディオコーデックでサポートされている場合、オーディオストリームに固定ビットレートを強制的に適用するには、値を <code>true</code> に設定します。</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>／<code>false</code></p> <p>デフォルトは <code>false</code> です。</p> <p>DASH またはHLSの推奨値は <code>false</code> です。</p> <p> </p> </td>
+   <td><p><code>true</code>／<code>false</code></p> <p>デフォルトは <code>false</code> です。</p> <p>DASH または HLS の推奨値は <code>false</code> です。</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>
