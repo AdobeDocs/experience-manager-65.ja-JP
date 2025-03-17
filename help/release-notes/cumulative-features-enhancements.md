@@ -8,9 +8,9 @@ role: User,Admin,Architect,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
 solution: Experience Manager
 source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2308'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 95%
 * コンテンツフラグメントの Sites Polaris ピッカーのパフォーマンスが向上しました。
 * Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。
 * システム内に多数のプロジェクトが存在する可能性があるリスト表示でプロジェクトをすばやく見つけるために、アドビではサーバーサイドでの並べ替えをサポートするようになりました。プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。
-* AEM 6.5.18.0 は、MongoDB 5.0 ～ 6.0 をサポートしています。
+* AEM 6.5.18.0 は、MongoDB 5.0～6.0 をサポートします。
 
 ### [!DNL Forms]
 
@@ -75,7 +75,7 @@ ht-degree: 95%
    * MongoDB 6.0 <!-- it was previously MongoDB 4.4 -->
    * MySQL JDBC Connector 8
 
-JEE 上のAEM 6.5 Forms環境の最新ソフトウェアをインストールしている場合、または使用することを計画している場合、AdobeではAEM 6.5.18.0 Forms on JEE の完全インストーラーを使用することをお勧めします。 新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
+AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールしている場合や、使用することを計画している場合は、AEM 6.5.18.0 Forms on JEE の完全なインストーラーを使用することをお勧めします。新しく追加されたソフトウェアと非推奨（廃止予定）のソフトウェアの完全なリストを確認するには、AEM Forms on JEE または AEM Forms on OSGi のドキュメントを参照してください。
 
 ## AEM 6.5 サービスパック 17 - 2023年5月25日（PT）
 
@@ -86,7 +86,7 @@ JEE 上のAEM 6.5 Forms環境の最新ソフトウェアをインストールし
 
   これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 * **Dynamic Media _スナップショット_**- テスト画像や Dynamic Media の URL を試して、様々な画像修飾子の出力や、ファイルサイズ（WebP および AVIF 配信による）、ネットワーク帯域幅およびデバイスのピクセル比を最適化するスマートイメージングを確認します。詳しくは、[Dynamic Media スナップショット](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=ja)を参照してください。
-* **Dynamic Media での DASH ストリーミング** - Dynamic Media ビデオ配信でのアダプティブストリーミング用に新しいプロトコル（DASH - HTTP での動的アダプティブストリーミング）が開始されました（CMAF が有効な場合）。 すべての地域で利用可能になりました。
+* **Dynamic Media での DASH ストリーミング** - CMAF が有効な Dynamic Media ビデオ配信で、アダプティブストリーミング用の新しいプロトコル（DASH - HTTP での動的アダプティブストリーミング）が開始しました。すべての地域で利用可能です。
 * **Experience Manager Sites およびコンテンツフラグメントと Assets の次世代 Dynamic Media の統合** - Experience Manager Assets as a Cloud Service の次世代 Dynamic Media のユーザーは、これらのクラウドホストアセットを、Experience Manager Sites 6.5 のオンプレミスインスタンスまたは Managed Services インスタンスでのオーサリングと配信に使用できるようになりました。
 
 ### [!DNL Forms]
@@ -102,11 +102,11 @@ JEE 上のAEM 6.5 Forms環境の最新ソフトウェアをインストールし
 
 ## AEM 6.5 サービスパック 16 - 2023年2月23日（PT）
 
-CMAF （共通メディアアプリケーション形式）が有効化された Dynamic Media ビデオ配信で、アダプティブビットレートストリーミング用に新しいプロトコル DASH[HTTP での動的アダプティブストリーミング） ] 開始されました。
+CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic Media ビデオ配信で、アダプティブビットレートストリーミング用の新しいプロトコル DASH（HTTP での動的アダプティブストリーミング）が開始しました。
 
 * アダプティブストリーミング（DASH/HLS）により、エンドユーザーがビデオを視聴する際の操作性が向上します。
 * DASH はアダプティブビデオストリーミングの国際標準プロトコルであり、業界で広く採用されています。
-* アジア太平洋および北米で現在利用可能です。ヨーロッパ、中東、アフリカでは間もなく提供予定です。
+* 現在、アジア太平洋および北米で利用可能です。ヨーロッパ中東アフリカではまもなく提供予定です。
 
 ### [!DNL Forms]
 
