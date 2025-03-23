@@ -3,14 +3,14 @@ title: CIF 製品およびカテゴリピッカーの使用
 description: 顧客コマースコンポーネントで CIF 製品およびカテゴリピッカーを使用して、作成者やマーケターがコマース製品やカタログのデータを効率的に操作できるようにサポートする方法を説明します。
 sub-product: Commerce
 topics: Development
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 activity: develop
 audience: developer
 feature: Commerce Integration Framework
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 100%

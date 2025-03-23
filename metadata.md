@@ -5,11 +5,11 @@ git-repo: https://github.com/AdobeDocs/experience-manager-65.ja-JP
 solution: Experience Manager, Experience Manager 6.5
 feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
 type: Documentation
-version: 6.5
+version: Experience Manager 6.5
 index: y
 recommendations: noDisplay
-source-git-commit: e5013bbba695d2b5258ed515a27bf5b36d098c1d
-workflow-type: ht
+source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
+workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 100%
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 # 内部使用メタデータ
 
-metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
+metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。 任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
 
 | メタデータ | 機能 |
 |--- |--- |
