@@ -9,7 +9,7 @@ version: Experience Manager 6.5
 index: y
 recommendations: noDisplay
 source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '131'
 ht-degree: 100%
 

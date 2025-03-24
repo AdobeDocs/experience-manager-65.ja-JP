@@ -12,7 +12,7 @@ exl-id: 50f437ae-10de-48f9-8abf-a1b37f7fda62
 solution: Experience Manager,Commerce
 role: Admin, Developer
 source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '54'
 ht-degree: 100%
 
