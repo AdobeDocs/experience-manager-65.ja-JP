@@ -5,10 +5,11 @@ topic-tags: platform
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 9891d7e61e62c541073c177eb88c49d685cbcb5f
+exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
+source-git-commit: 61f658fc4390610686a308d02a8d74505252434a
 workflow-type: tm+mt
-source-wordcount: '3681'
-ht-degree: 100%
+source-wordcount: '3638'
+ht-degree: 98%
 
 ---
 
@@ -159,13 +160,14 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 >
 >詳しくは、[MongoDB for Adobe Experience Manager のページ](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)を参照してください。
 
+<!--
 >[!NOTE]
 >
->サポートされる上記のリレーショナルデータベースはサードパーティのソフトウェアであり、AEM ライセンスパッケージには含まれていません。
+>Supported relational databases as listed above are third-party software and are not included in the AEM licensing package.
 >
->サポートされているリレーショナルデータベースで AEM 6.5 を実行するには、データベースベンダーとの個別のサポート契約が必要です。アドビカスタマーケアは、リレーショナルデータベースを AEM 6.5 で利用することに関連する問題の絞り込みを支援いたします。
+>To run AEM 6.5 with a supported relational database, a separate support contract with a database vendor is required. Adobe Customer Care assists qualifying issues related to the usage of relational databases with AEM 6.5.
 >
->**現在、ほとんどのリレーショナルデータベースは、AEM 6.5 のレベル R でサポートされています。ここでは、上記のレベル R の説明に記載されているサポート基準とサポートプログラムが提供されます。**
+>**Most relational databases are currently supported within Level-R on AEM 6.5, which comes with support criteria and a support program as stated in the Level-R description above.**-->
 
 ### サーブレットエンジン / アプリケーションサーバー {#servlet-engines-application-servers}
 
@@ -450,6 +452,10 @@ Windows x86 の場合：
 
 ### AEM Forms PDF Generator の要件 {#requirements-for-aem-forms-pdf-generator}
 
+* SUSE® Linux® サーバーでPDFのコンバージョンをテストするには、次の設定があることを確認します。
+   * `/etc/profile` ファイルに移動し、`OpenOffice_PATH` 環境変数を `/opt/openoffice4` に設定して、グローバルに設定します。
+   * Linux® オペレーティングシステムに 32 ビット版の OpenOffice をインストールします
+
 ### PDF Generator のソフトウェアサポート {#software-support-for-pdf-generator}
 
 <table>
@@ -515,7 +521,7 @@ Windows x86 の場合：
 >* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
->* PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
+>* PDF Generatorは、Linux® オペレーティングシステム上の 32 ビットバージョンの OpenOffice をサポートしています。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
