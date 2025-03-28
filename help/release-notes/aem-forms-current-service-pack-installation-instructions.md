@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
-workflow-type: ht
-source-wordcount: '1697'
-ht-degree: 100%
+source-git-commit: 652878504d2225e50ea14885ec96bdd408f77ed0
+workflow-type: tm+mt
+source-wordcount: '1722'
+ht-degree: 90%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 >[!NOTE]
 >
-> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。 AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE 完全インストーラーです。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。 新規インストールを実行する場合や、JEE 環境上の AEM 6.5 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12.0 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、JEE 上の AEM 6.5.18.0 Forms の完全なインストーラー（2023年8月31日（PT）にリリース）を使用することをお勧めします。 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。 AEM 6.5 Forms サービスパック 18 （6.5.18.0）は、最新の JEE の完全なインストーラーです。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。 6.5.18.0 新規インストールを実行する場合や、JEE 版AEM 6.5 Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2019 年 4 月 8 日（PT）にリリースされたAEM 6.5 Forms インストーラーまたは 2022 年 3 月 3 日（PT）にリリースされたAEM 6.5 Forms インストーラーではなく、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.12.0 Forms版を使用することをお勧めします。 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 > * [AEM 6.5 クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォームなどの AEM Forms 機能は、探索と評価のみを目的としています。 実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
 
 <!--
@@ -115,7 +115,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
    * **Configuration Manager を起動**&#x200B;オプションの選択を解除し、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[aem-forms root]\configurationManager\bin` にある **ConfigurationManager.bat** ファイルを使用して **Configuration Manager** を実行します。
 
-   * または、**Configuration Manager を起動**&#x200B;オプションの選択を解除し、**[!UICONTROL 完了]**&#x200B;をクリックします。 **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行する前に、*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動し、**ConfigurationManager.lax** と **ConfigurationManager_IPV6.lax** を最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルと [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルに置き換えて、これら 2 つのファイル内で **axis-1.4.1.1.jar** を検索し、**axis-1.4.1.2.jar** に置き換えます。
+   * または、**Configuration Manager を起動**&#x200B;オプションの選択を解除し、**[!UICONTROL 完了]**&#x200B;をクリックします。 **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して **Configuration Manager** を実行する前に、*`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリに移動して **ConfigurationManager.lax** および **ConfigurationManager_IPV6.lax** を最新の [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイルに、[ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイルに、**axis-1.4.1.1.jar** を **axis-1.4.1.2**.jar に置ききき換します。
 
      >[!NOTE]
      >
@@ -136,7 +136,8 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 >[!NOTE]
 >
 >* JEE 上に AEM Forms サービスパックをインストールした後、appserver を再起動する前に、`crx-repository\install` フォルダーから Forms アドオンパッケージを削除する必要があります。 [ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)から、最新の Forms アドオンパッケージをダウンロードします。
->* 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が発生する場合があります。
+>* 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+>* [JEE 上のAEM Formsの Spring Framework の脆弱性を軽減するためのホットフィックス ](/help/release-notes/aem-forms-hotfix.md) をクラスター環境にデプロイする場合、ロケーターが JDK 17 を使用して起動されていることを確認することが不可欠です。
 
 +++
 
@@ -277,4 +278,4 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 * インストールが完了したら、アクティビティの監視ログ（error.log）を確認します。 ログにアクティビティが表示されなくなるまで、数分お待ちください。 AEM インスタンスを再起動します。
 
-* AEM Forms 6.5.15.0 以降のサービスパックをインストール後、**サービスを利用できないエラー**&#x200B;が発生した場合は、[サーブレットフラグメントとバンドルをインストール](/help/forms/using/aem-service-pack-installation-solution.md)してエラーを修正します。
+* AEM Forms 6.5.15.0 以降のサービスパックをインストールした後、**サービスを利用できないエラー** が発生した場合は、[ サーブレットフラグメントとバンドルをインストール ](/help/forms/using/aem-service-pack-installation-solution.md) してエラーを修正します。

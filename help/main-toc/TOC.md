@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: c878a4d21a7f6197261ac86b27fbdc76eefa589f
+source-git-commit: c0756980d0dc8ada7f6c352f68c4f41ecf15caa4
 workflow-type: tm+mt
-source-wordcount: '7471'
-ht-degree: 100%
+source-wordcount: '7480'
+ht-degree: 99%
 
 ---
 
@@ -1211,6 +1211,7 @@ ht-degree: 100%
       + [WorkBench で多数の PDF を PDF 生成で印刷できない](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
       + [AEM SDK を適切に再起動する方法](/help/forms/using/restart-aem-sdk.md)
       + [PaperCapture サービスが PDF に対して OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
+      + [JEE 上のAEM Formsの Spring Framework の脆弱性の軽減](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
       + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](/help/forms/developing/compressing-decompressing-custom-dsc.md)

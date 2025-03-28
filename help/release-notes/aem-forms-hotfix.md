@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: c524e4355794ab598b6b69a8ce96cdba90abaa22
-workflow-type: ht
-source-wordcount: '930'
-ht-degree: 100%
+source-git-commit: bc67c991d7498beafd20fa7a9f20cbd901d79045
+workflow-type: tm+mt
+source-wordcount: '1034'
+ht-degree: 94%
 
 ---
 
@@ -28,6 +28,24 @@ ht-degree: 100%
     <td><strong>日付</strong></td>
     <td><strong>ホットフィックスのダウンロードリンク（AEM ソフトウェア配布リンク）</strong></td>
     <td><strong>修正された問題</strong></td>
+  </tr>
+  <tr>
+    <td>2025 年 3 月 26 日（PT） </br> </br> この修正プログラムをインストールするには、JEE</a> 上 <a href="/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md">AEM Formsの Spring Framework の脆弱性の軽減の手順に従います。</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/jboss/adobe-aem-forms-jee-hotfix-6.5.22.0-win-jboss.tar.gz">JBoss JEE サーバー用の Windows 上の AEM サービスパック 6.5.22.0 のホットフィックス</a> </li>
+      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/jboss/adobe-aem-forms-jee-hotfix-6.5.22.0-linux-jboss.tar.gz">JBoss JEE サーバー用の Linux 上の AEM サービスパック 6.5.22.0 のホットフィックス</a> </li>
+       <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/weblogic/adobe-aem-forms-jee-hotfix-6.5.22.0-win-weblogic.tar.gz">Weblogic JEE サーバー用の Windows 上の AEM サービスパック 6.5.22.0 のホットフィックス</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/weblogic/adobe-aem-forms-jee-hotfix-6.5.22.0-linux-weblogic.tar.gz">Weblogic JEE サーバー用の Linux 上の AEM サービスパック 6.5.22.0 のホットフィックス</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/websphere/adobe-aem-forms-jee-hotfix-6.5.22.0-win-websphere.tar.gz">Windows 上のAEM サービスパック 6.5.22.0 の Websphere JEE Server </a> に対するホットフィックス </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/websphere/adobe-aem-forms-jee-hotfix-6.5.22.0-linux-websphere.tar.gz">Websphere JEE サーバー用 Linux 上のAEM サービスパック 6.5.22.0 のホットフィックス </a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li>JEE 上のAEM Formsの Spring Framework の脆弱性の軽減</li>
+    </ul>
+    </td>    
   </tr>
   <tr>
     <td>2024年7月10日（PT）</td>
