@@ -5,10 +5,10 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: ht
-source-wordcount: '981'
-ht-degree: 100%
+source-git-commit: ee990092f3174a8c29443eb451d7188c1e27fa7d
+workflow-type: tm+mt
+source-wordcount: '1043'
+ht-degree: 91%
 
 ---
 
@@ -46,7 +46,11 @@ JEE Workbench の AEM Forms で使用可能な JEE サービス上の標準の A
 
 ## Execute Script サービスを使用した XML の作成 {#create-xml-execute-script-service}
 
-Execute Script サービスを含むプロセスが作成されたら、このスクリプトを使用して XML を作成できます。上の「`Execute Script`サービスを使用したプロセスへのスクリプトの追加」の節で説明されたテキストボックスで、以下のスクリプトを記述できます。
+Execute Script サービスを含むプロセスが作成されたら、このスクリプトを使用して XML を作成できます。上の「`Execute Script` サービスを使用したプロセスへのスクリプトの追加」の節で説明されたテキストボックスで、以下のスクリプトを記述できます。
+
+>[!NOTE]
+>
+> JAVA スクリプトコードが 10 行を超える場合は、プロセスで直接書き込むのではなく、カスタム DSC （ドキュメントサービスコンポーネント）にコードを追加することをお勧めします。 カスタム DSC を使用すると、ワークフローを軽量に保つことで、メンテナンス性、再利用性、パフォーマンスが向上します。 ワークフローでこれらのコンポーネントを参照すると、実行効率が向上し、ワークフロー内の大きなコードブロックの処理に起因する潜在的な速度低下を防ぐことができます。
 
 **Execute Script サービスのテクノロジーについて**
 
