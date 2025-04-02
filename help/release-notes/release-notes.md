@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 39ad2f3eedb35e98dc2239c0b81b3792a0ddc73f
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '6158'
-ht-degree: 88%
+source-wordcount: '6161'
+ht-degree: 99%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 88%
 
 ## [!DNL Experience Manager] 6.5.22.0 の内容 {#what-is-included-in-aem-6522}
 
-[!DNL Experience Manager] 6.5.22.0 には、新機能、お客様からリクエストされた主な機能強化、バグ修正が含まれています。 また、2019年4月の 6.5 の公開当初以降にリリースされたパフォーマンス、安定性、セキュリティの改善も含まれています。 [このサービスパックを [!DNL Experience Manager] 6.5 にインストールします](#install)。
+[!DNL Experience Manager] 6.5.22.0 には、新機能、お客様からリクエストされた主な機能強化、バグ修正が含まれています。また、2019年4月の 6.5 の公開当初以降にリリースされたパフォーマンス、安定性、セキュリティの改善も含まれています。 [このサービスパックを [!DNL Experience Manager] 6.5 にインストールします](#install)。
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -109,7 +109,7 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
    * **バージョン比較の問題：**「現在のバージョンと比較」機能では、バージョン間の違いはハイライト表示されず、現在のバージョンのみが表示されました。 （SITES-23988）
 
 * コピー＆ペーストアクション中に `plaintext` に設定された `defaultPasteMode` を使用すると、リッチテキストエディター（RTE）フィールドに予期しない `<br>` タグが表示されます。 この問題により、同じコンテンツに対して異なるマークアップが生成され、お客様の翻訳メモリ内で同じテキストコンテンツが 2 回翻訳されることになります。 （SITES-23606）
-* AEM 6.5.20.0 では、**公開を管理** 機能に関する問題が発生しました。 ノードを選択し、今後の公開をスケジュールする際に、子ノードを含めようとすると、「選択した項目の子リソースを取得できませんでした」というエラーメッセージが表示される可能性があります。 この問題により、「**子を含める**」オプションの使用がブロックされ、意図したコンテンツ階層の完全な公開が妨げられていました。 （SITES-23000）
+* AEM 6.5.20.0 では、**公開を管理**&#x200B;機能で機能に関する問題が発生しました。ノードを選択し、今後の公開をスケジュールする際に、子ノードを含めようとすると、「選択した項目の子リソースを取得できませんでした」というエラーメッセージが表示される可能性があります。 この問題により、「**子を含める**」オプションの使用がブロックされ、意図したコンテンツ階層の完全な公開が妨げられていました。 （SITES-23000）
 * テンプレートがパブリッシュインスタンスに正常に複製されたにもかかわらず、テンプレートの「公開済み」タイムスタンプがオーサー環境で更新されませんでした。 予期される動作は、オーサーインスタンスのタイムスタンプが最新の公開を反映することでしたが、この更新は意図したとおりに行われませんでした。 （SITES-21585）
 * AEM オーサー環境での受信リンクの数に不一致がありました。 左側のサイドパネルには、クラシック UI と比較してリンクが少なく表示されました。 また、正当な受信リンクの一部が機能しません。 （SITES-24837）
 * AEM のタイムライン表示でページバージョンを表示すると、読み込み時間が非常に長くなることが報告されていました。 バージョンの表示には、最大 19 分かかりました。 この問題は、AEM 6.4.8 から 6.5.18 へのアップグレード以降継続しており、ワークフローの効率が大幅に低下していました。 （SITES-22468、SITES-22467）
@@ -232,24 +232,24 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 ### Forms {#forms-bug-fixes-sp22}
 
 * AEM Forms に保存されたドラフトのファイル添付用に生成された URL には、設定した Apache Sling Resource Resolver Factory マッピングが反映されません。 （FORMS-16949）
-* AEM Forms Service Pack 19 （6.5.19.0）でユーザーがレターをプレビューすると、スペースが見つからず、文字 `x` が一部の場所で表示されるので、コンテンツが適切に配置されません。 （FORMS-16670）
-* AEM Forms Service Pack 18 （6.5.18.0）でファイルを CIFS プロトコルを使用して印刷しようとすると、次のエラーで失敗します。（FORMS-16629）
+* AEM Forms サービスパック 19（6.5.19.0）のユーザーが文字をプレビューすると、スペースが欠落してように見え、一部の場所に文字 `x` が表示されるので、コンテンツが正しく整列されません。（FORMS-16670）
+* AEM Forms サービスパック 18（6.5.18.0）のユーザーが CIFS プロトコルを使用してファイルを印刷しようとすると、次のエラーが発生して失敗します。（FORMS-16629）
   `ALC-OUT-001-401: Unknown error while printing using CIFS on the Printer: \\\\\\\\NSMVPLUETEST01\\\\TH_Test`。
-* AEM Forms サービスパック 17 （6.5.17.0）からAEM Forms サービスパック 20 （6.5.20.0）にアップグレードすると、フォームコンテナレベルでルールエディターアイコンが表示されません。 （FORMS-16430）
-* ユーザーがAEM Forms サービスパック 17 （6.5.17.0）からAEM Forms サービスパック 21 （6.5.21.0）にアップグレードすると、変更されたアダプティブフォームの送信 URL パスが機能しなくなります。 （FORMS15894）
-* AEM Forms Service Pack 19 （6.5.19.0）では、AEM Forms 6.5 PDF/A の検証が特定のファイルに対してエラー `creation date and modification date mismatch with timezone` で失敗する一方で、Acrobat Pro PDF/A の検証ではコンプライアンスチェックがスムーズに行われます。 （FORMS-15840）
-* OSGi 上のAEM Forms サービスパック 15 （6.5.15.0）のサイトページで「ドラフトと送信」コンポーネントを使用してフォームドラフトを削除すると、削除が失敗します。 （FORMS-15755）
+* ユーザーが AEM Forms サービスパック 17（6.5.17.0）から AEM Forms サービスパック 20（6.5.20.0）にアップグレードすると、フォームコンテナレベルでルールエディターアイコンが表示されません。（FORMS-16430）
+* ユーザーが AEM Forms サービスパック 17（6.5.17.0）から AEM Forms サービスパック 21（6.5.21.0）にアップグレードすると、変更されたアダプティブフォーム送信 URL パスが機能しません。（FORMS15894）
+* AEM Forms サービスパック 19（6.5.19.0）では、AEM Forms 6.5 PDF/A 検証は特定のファイルに対して `creation date and modification date mismatch with timezone` というエラーで失敗しますが、Acrobat Pro PDF/A 検証では準拠性チェックに対してスムーズに実行されます。（FORMS-15840）
+* OSGi 上の AEM Forms サービスパック 15（6.5.15.0）のサイトページでユーザーが「ドラフトと送信」コンポーネントを使用してフォームのドラフトを削除すると、削除は失敗します。（FORMS-15755）
 * ユーザーの SharePoint リストに 999 を超えるエントリがあり、フォームに添付ファイルが含まれている場合、フォームの送信は失敗します。 （FORMS-15057）
 * 終了日が開始日より早くないことを確認する検証ルールが、検証メッセージのカスタムスクリプトと共に追加されます。 ただし、終了日が開始日より早い場合は検証がトリガーされません。 （FORMS-14757）
 * ユーザーがアダプティブフォームのテーブルで表示／非表示の機能を使用すると、フィールドサイズが縮小されます。 行を追加および削除すると、フィールドサイズが自動的に修正されます。 （FORMS-14756）
-* ユーザーがAEM Forms Service Pack 19 （6.5.19.0）でフォームを印刷すると、一部のフォームがサーバーで正しくレンダリングされず、印刷処理中にエラーが発生します。 （FORMS14734）
-* AEM Forms サービスパック 15 （6.5.15.0）からサービスパック 19 （6.5.19.0）にアップデートすると、問題が発生します。 `num{$zzz,zz9.99}` として設定されたカスタム表示パターンが、プレビューおよびエージェント UI で正しくレンダリングされません。 （FORMS-14694）
+* ユーザーが AEM Forms サービスパック 19（6.5.19.0）でフォームを印刷すると、一部のフォームがサーバー上で正しくレンダリングされず、印刷処理中にエラーが発生します。（FORMS14734）
+* ユーザーが AEM Forms サービスパック 15（6.5.15.0）からサービスパック 19（6.5.19.0）にアップデートすると、問題が発生します。`num{$zzz,zz9.99}` として設定されたカスタム表示パターンが、プレビューおよびエージェント UI で正しくレンダリングされません。 （FORMS-14694）
 * ユーザーが保存されたデータ XML を使用してインタラクティブなコミュニケーションでレターをプレビューすると、レターは AEM UI で「読み込み中」状態で停止します。 同じ XML を使用してレターを再度プレビューすると、正常に機能します。 （FORMS-14521）
-* AEM Forms サービスパック 20 （6.5.20.0）で、アダプティブフォームの「メールを送信」ボタンを使用して添付ファイル付きのメールを送信すると、問題が発生します。 添付ファイルの名前がインラインではなく次の行に表示されます。 （FORMS-14426）
+* AEM Forms サービスパック 20（6.5.20.0）のユーザーが、アダプティブフォームの「メールを送信」ボタンを使用して添付ファイル付きのメールを送信すると、問題が発生します。添付ファイルの名前がインラインではなく次の行に表示されます。 （FORMS-14426）
 * ユーザーが AEM Forms で箇条書きリストをデフォルトの「ディスク」スタイルに設定して PDF を生成すると、その PDF は Adobe Acrobat のアクセシビリティツールのアクセシビリティチェックに失敗します。 「箇条書き」および「四角形」スタイルのリストはアクセシビリティチェックに合格しています。 （FORMS-13802、LC-3922179）
 * ユーザーがスタンドアロン RHEL8 JBoss® 設定で AEMForms-6.5.0-0065 から AEMForms-6.5.0-0087 にアップグレードすると、LiveCycle サービスコンテナとの接続に失敗します。 （FORMS-15907）*
 * JEE 上の AEM Forms では、AEM Workspace で、以前に送信したフォームを選択して新しいフォームプロセスを開始すると、問題が発生します。 事前入力されたデータを含むフォームでは、以前に送信したすべてのデータが上書きされ、手動で入力したフィールドが削除されます。 （FORMS-15376）
-* AEM Forms サービスパック 20 （6.5.20.0）で PDFG サービスを使用して Tiff ファイルをPDFに変換すると、次のエラーで失敗します。（FORMS-14879） ALC-PDG-011-028 – 入力イメージファイルをPDFに変換する際にエラーが発生しました。 com/sun/image/codec/jpeg/JPEGCodec
+* AEM Forms サービスパック 20（6.5.20.0）で、ユーザーが PDFG サービスを使用して Tiff ファイルを PDF に変換すると、次のエラーが発生して失敗します。（FORMS-14879）ALC-PDG-011-028-エラーが入力画像ファイルの PDF への変換中に発生しました。com/sun/image/codec/jpeg/JPEGCodec
 * JEE 上の AEM Forms jar ファイルのアップグレード：`commons-collections:commons-collections:jar` ライブラリが含まれるようになり、次のような様々な AEM Forms JEE ジョブでの依存関係の解決と機能が向上しました。
    * ジョブ処理とエラー処理を改善する Assembler ジョブの機能強化。
    * ドキュメントの生成と変換の操作をよりスムーズにする PDF Generator（PDFG）ジョブの機能強化。
@@ -266,18 +266,18 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 #### XMLFM {#forms-xmlfm-sp22}
 
-* AEM Forms サービスパック 21 （6.5.21.0）で、ユーザーが XMLFM を使用して PDF に非標準のタグを追加すると、ドキュメントがPDFの仕様要件に準拠しなくなります。 （LC-3922484）
-* AEM Forms サービスパック 20 （6.5.20.0）で Output サービスを使用してPDFを生成すると、CORBA.COMM_FAILURE で失敗し、次のエラーが表示されます。`15:04:35,973 ERROR [com.adobe.formServer.PA.XMLFormAgentWrapper] (default task-14) ALCOUT-002-013: XMLFormFactory, PAexecute failure: "org.omg.CORBA.COMM_FAILURE"` アクセシビリティの役割「参照」が XDP テンプレートのサブフォームから除外されている場合、サービスは正常に渡されます。 ただし、この役割は 508 準拠に必要です。 （LC-3922402）
+* AEM Forms サービスパック 21（6.5.21.0）では、ユーザーが XMLFM を使用して PDF に非標準のタグを追加すると、ドキュメントが PDF 仕様の要件に準拠しなくなります。（LC-3922484）
+* ユーザーが AEM Forms サービスパック 20（6.5.20.0）の Output サービスを使用して PDF を生成すると、CORBA.COMM_FAILURE で失敗し、`15:04:35,973 ERROR [com.adobe.formServer.PA.XMLFormAgentWrapper] (default task-14) ALCOUT-002-013: XMLFormFactory, PAexecute failure: "org.omg.CORBA.COMM_FAILURE"` というエラーが表示されます。アクセシビリティの役割「参照」が XDP テンプレートのサブフォームから除外されている場合、サービスは正常に渡されます。 ただし、この役割は 508 準拠に必要です。 （LC-3922402）
 * ユーザーが XFA フォームを AcroForm PDF に変換すると、失敗します。 （LC-3922363）
-* AEM Forms サービスパック 19 （6.5.19.0）で、ユーザーが名前のないサブフォームで XDP を作成すると、名前のないサブフォームの場合、FS_DATA_SOM は空のように表示されます。 （LC-3922034）
+* AEM Forms サービスパック 19（6.5.19.0）では、ユーザーが名前のないサブフォームを含む XDP を作成すると、名前のないサブフォームの FS_DATA_SOM は空として表示されます。（LC-3922034）
 
 #### Forms Designer {#forms-designer-sp22}
 
-* AEM Forms Designer バージョン 6.5.21.0 でフラグメントフォルダーを選択してフラグメントライブラリを開くと、クラッシュします。 （LC-3922439）
-* 32 ビット版のAEM Forms Designerのバージョン 6.5.20.0 をアンインストールし、AEM Forms Designerのバージョン 6.5.21.0 をインストールすると、Forms Designerを起動できません。 エラーログには、Java ランタイム環境（JRE）のメモリ割り当てが不十分であることが示されます。 （LC-3922404）
-* AEM Forms Designer version 6.5.20.0 をインストールすると、「マクロ」オプションがメニューに表示されず、デフォルトの「アクセシビリティチェッカー」マクロのみが表示され、実行できなくなります。 （LC-3922321）
-* AEM Forms Designer バージョン 6.5.20.0 で XDP を作成するための新しいテンプレートの場所を追加すると、Forms Designerがクラッシュします。 （LC-3922316）
-* AEM Forms 6.5 サービスパック 15 （6.5.15.0） OSGI で、ExportData メソッドを使用して出力を生成すると、不完全で誤ったデータが生成されます。 （LC-3922340）
+* ユーザーが AEM Forms Designer バージョン 6.5.21.0 でフラグメントフォルダーを選択してフラグメントライブラリを開くと、クラッシュします。（LC-3922439）
+* ユーザーが 32 ビット版 AEM Forms Designer バージョン 6.5.20.0 をアンインストールし、AEM Forms Designer バージョン 6.5.21.0 をインストールすると、Forms Designer は起動に失敗します。エラーログには、Java ランタイム環境（JRE）のメモリ割り当てが不十分であることが示されます。 （LC-3922404）
+* ユーザーが AEM Forms Designer バージョン 6.5.20.0 をインストールした後、メニューに「マクロ」オプションが表示されず、デフォルトの「アクセシビリティチェッカー」マクロのみが表示され、実行に失敗します。（LC-3922321）
+* ユーザーが AEM Forms Designer バージョン 6.5.20.0 で XDP の作成に新しいテンプレートの場所を追加すると、Forms Designer がクラッシュします。（LC-3922316）
+* ユーザーが AEM Forms 6.5 サービスパック 15（6.5.15.0）OSGI の ExportData メソッドを使用して出力を生成すると、不完全で正しくないデータが生成されます。（LC-3922340）
 
 
 <!-- #### [!DNL Adaptive Forms] {#forms-6522}
@@ -428,7 +428,7 @@ AEM 6.5.19 から 6.5.20 にアップグレードした後、`UgcSearch` の呼�
 
 **自動インストール**
 
-[!DNL Experience Manager] 6.5.22.0.<!-- UPDATE FOR EACH NEW RELEASE --> をインストールする方法は 2 つあります。
+[!DNL Experience Manager] 6.5.22.0 のインストール方法は 2 つあります。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。 パッケージが自動的にインストールされます。
 * [パッケージマネージャーの HTTP API](/help/sites-administering/package-manager.md#package-share) を使用します。 ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
@@ -595,24 +595,25 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6522}
 
-* SLES 15 SP6 Linux® サーバーでHTMLからPDFへの変換が失敗し、次のエラーが発生した場合：`Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`。 問題を解決するには、以下の手順を実行します。
-   1. コンテナを起動し、次のコマンドを使用して `OPENSSL_CONF` 環境変数を設定します。
+* SUSE® Linux® （SLES 15 SP6 以降）サーバーでHTMLからPDFへの変換が失敗し、次のエラーが発生した場合：`Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`
+問題を解決するには、次の手順を実行します。
+   1. サーバーを起動し、次のコマンドを使用して `OPENSSL_CONF` 環境変数を設定します。
       `export OPENSSL_CONF=/etc/ssl`
-または、コンテナの開始時に環境変数を設定することもできます。
+または、サーバーの起動時に環境変数を設定することもできます。
       `-e OPENSSL_CONF=/etc/ssl`
    1. サーバーを再起動します。
-* AEM Forms JEE サービスパック 21 （6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダーに Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合は（FORMS-14926）、次の手順を実行して問題を解決します。
+* AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
 
    1. ロケーターが実行中の場合は、ロケーターを停止します。
-   2. AEM サーバーを停止します。
-   3. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
-   4. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
-   5. 管理者モードでコマンドプロンプトを開きます。
-   6. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
+   1. AEM サーバーを停止します。
+   1. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
+   1. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
+   1. 管理者モードでコマンドプロンプトを開きます。
+   1. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
 * ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （FORMS-14521）
 
-* AEM Forms サービスパック 6.5.21.0 にアップグレードした後、`PaperCapture` サービスで PDF に対して OCR （光学式文字認識）操作を実行できなくなります。 このサービスでは、PDF やログファイルの形式で出力を生成しません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （CQDOC-21680）
+* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。このサービスでは、PDF やログファイルの形式で出力を生成しません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （CQDOC-21680）
 
 * ユーザーが AEM 6.5 Forms サービスパック 18 または 19 からサービスパック 20 または 21 にアップグレードした際、JSP コンパイルエラーが発生しました。 このエラーにより、アダプティブフォームを開いたり、作成したりすることができませんでした。 また、他の AEM インターフェイスでも問題が発生しました。 これらのインターフェイスには、ページエディター、AEM Forms UI、ワークフローエディター、システム概要 UI が含まれていました。 （FORMS-15256）
 
@@ -621,19 +622,19 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
    1. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    1. AEM サーバーを再起動します。
 
-* Forms アドオンを使用してAEM Forms サービスパック 20 （6.5.20.0）にアップデートすると、資格情報ベースの認証を使用して従来のAdobe Analytics Cloud サービスに依存する設定が機能しなくなります。 この問題により、分析ルールが正しく実行されなくなりました。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （FORMS-15428）
+* Forms アドオンを使用して AEM Forms サービスパック 20（6.5.20.0）にアップデートすると、資格情報に基づく認証を使用する従来の Adobe Analytics Cloud Service に依存する設定が機能しなくなります。この問題により、分析ルールが正しく実行されなくなりました。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （FORMS-15428）
 
-* JEE サーバー上でAEM Forms サービスパック 20 （6.5.20.0）に更新し、出力サービスを使用して PDF を生成すると、PDF がレンダリングされてアクセシビリティの問題が発生します。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922112）
+* ユーザーが JEE サーバー上で AEM Forms サービスパック 20（6.5.20.0）に更新し、Output サービスを使用して PDF を生成すると、PDF がアクセシビリティに関する問題を伴ってレンダリングされます。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922112）
 * ユーザーが JEE 上の Output サービスを使用してタグ付き PDF を生成すると、「不適切な構造の警告」が表示されます。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922038）
 * AEM Forms JEE でフォームを送信すると、繰り返し XML 要素のインスタンスがデータから削除されます。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3922017）
 * Linux® 環境のユーザーがアダプティブフォーム（JEE 上）を HTML でレンダリングすると、正しくレンダリングされません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921957）
 * ユーザーが AEM Forms JEE の Output サービスを使用して XTG ファイルを PostScript 形式に変換する際に、エラー `AEM_OUT_001_003: Unexpected Exception: PAExecute Failure: XFA_RENDER_FAILURE` が発生して失敗します。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921720）
-* JEE サーバー上のAEM Forms サービスパック 18 （6.5.18.0）にアップグレードした後、フォームを送信すると、HTML5 またはPDF formsのレンダリングが失敗し、XMLFM がクラッシュします。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921718）
+* JEE サーバーで AEM Forms サービスパック 18（6.5.18.0）にアップグレードした後、ユーザーがフォームを送信すると、HTML5 または PDF フォームのレンダリングに失敗し、XMLFM がクラッシュします。ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （LC-3921718）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、すべてのフィールド値に通貨記号（ドル記号 $ など）が一貫して表示されません。 999 までの値の場合は表示されますが、1000 以上の値の場合は表示されません。 （FORMS-16557）
 * インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。 （FORMS-16575）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。 （FORMS-16603）
 * 印刷プレビューでレターを表示すると、コンテンツが変更されます。 つまり、一部のスペースが表示されなくなり、特定の文字が「x」に置き換えられます。 （FORMS-15681）
-* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss® で動作している JEE 上のAEM Forms サービスパック 21 （6.5.21.0）の PDFG サービスが、SLF4J ライブラリを含んだクラスローダーの競合が原因で失敗します。 エラーは次のように表示されます。（CQDOC-22178）：
+* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss® で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"

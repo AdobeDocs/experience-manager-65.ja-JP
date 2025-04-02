@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 8fda6635ec0e28b95209431bd12d191f36df943b
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '4197'
-ht-degree: 92%
+source-wordcount: '4216'
+ht-degree: 98%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 92%
 
 <div class="preview">
 
-Adobeでは、JEE 版AEM 6.5 Forms サービスパック 18 （6.5.18.0）を含んだ [ 完全なインストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) のほか、パッチインストーラーがリリースされました。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
-6.5.18.0 新規インストールを実行する場合や、JEE 版AEM 6.5 Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2019 年 4 月 8 日（PT）にリリースされたAEM 6.5 Forms インストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2022 年 3 月 3 日（PT）にリリースされたAEM 6.5 Forms インストーラーではなく、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5 Forms フルインストーラーを使用することをお勧めします。[
+アドビでは、JEE 版 AEM 6.5 Forms サービスパック 18（6.5.18.0）を含んだ[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のほか、パッチインストーラーをリリースしました。完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
+新規インストールを実行する場合や、JEE 環境での AEM 6.5 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、[JEE 上の AEM 6.5.18.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)（2023年8月31日（PT）にリリース）を使用することをお勧めします。
 
 </div>
 
@@ -43,7 +43,7 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 #### 完全なインストーラー
 
-- **完全なインストーラーのアップグレードサポート**：完全なインストーラーは、6 回の AEM サービスパックリリースごとにリリースされます。たとえば、6.5.12.0 および 6.5.18.0 SP リリースで完全なインストーラがリリースされました。 AEM Forms では、最新の 2 つの完全なインストーラーからのみ直接アップグレードできます。例えば、AEM Formsは、最後の 2 つの完全なインストーラー（6.5.12.0 と 6.5.6.0）からのみ、バージョン 6.5.18.0 への直接アップグレードを容易にします。 以前のアップグレードからアップグレードする必要がある場合は、マルチホップアップグレードを使用して、まずサポートされている完全なインストーラーリリースに移動してから、最新のリリースに移動できます。
+- **完全なインストーラーのアップグレードサポート**：完全なインストーラーは、6 回の AEM サービスパックリリースごとにリリースされます。例えば、6.5.12.0 および 6.5.18.0 SP リリースでは完全なインストーラーがリリースされました。AEM Forms では、最新の 2 つの完全なインストーラーからのみ直接アップグレードできます。例えば、AEM Forms では、最新の 2 つの完全なインストーラー（6.5.12.0 と 6.5.6.0）からのみバージョン 6.5.18.0 への直接アップグレードを簡単に行うことができます。以前のアップグレードからアップグレードする必要がある場合は、マルチホップアップグレードを使用して、最初にサポートされている完全なインストーラーリリースに移行した後、最新のリリースに移行できます。
 
 - **非推奨と削除**：プラットフォームのサポートは、完全なインストーラーリリースごとに更新されます。完全なインストーラーリリース中にプラットフォーム一覧で非推奨としてマークされたソフトウェアは、後続の完全なインストーラーリリースでサポートされるプラットフォーム一覧から削除され、ソフトウェアのサポートが終了することが示されます。
 
@@ -51,9 +51,9 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 - **サービスパックの対象範囲**：アドビでは、最新の 6 つのサービスパックのいずれかを使用して、AEM Forms 環境のテクニカルサポートを提供します。現在のバージョンが最新の 6 つのサービスパックよりも古い場合、最適なパフォーマンス、セキュリティ、継続的なサポートを実現するために、アドビでは最新バージョンにアップグレードすることを強くお勧めします。
 
-- **パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.19.0 のインストール中に、基になる完全なインストーラーバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
+- **パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.19.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
 
-- **パッチアップグレードのサポート**：サポートされている最新のプラットフォームにアップグレードするまで、最新のサービスパックへのアップグレードを続行できます。例えば、6.5.19.0 でサポートされているプラットフォームの組み合わせに移行する場合には、サービスパック 6.5.12.0 から 6.5.19.0 にアップグレードすることができます。
+- **パッチアップグレードのサポート**：サポートされている最新のプラットフォームにアップグレードするまで、最新のサービスパックへのアップグレードを続行できます。例えば、6.5.19.0 でサポートされているプラットフォームの組み合わせに移行する場合、サービスパック 6.5.12.0 から 6.5.19.0 へのアップグレードが可能です。
 
 ### 推奨設定 {#recommendedconfigurations}
 
@@ -317,7 +317,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
    <td><p>サービスパック、累積パッチ、重要なセキュリティアップデート</p> </td>
   </tr>
   <tr>
-   <td><p>SUSE® Linux® Enterprise Server 15 SP6 （64 ビット版）</p> </td>
+   <td><p>SUSE® Linux® Enterprise Server 15 SP6（64 ビット版） </p> </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>サービスパック、累積パッチ、重要なセキュリティアップデート</p> </td>
   </tr>
@@ -342,7 +342,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 > - zlib.x86-64（1.2.7-17）
 > - libxcb.x86_64（1.13-1.el7）
 > - libXau.x86_64（1.0.8-2.1.el7）
-> - glibc-locale.x86_64 （2.17 以降）
+> - glibc-locale.x86_64（2.17 以降）
 
 #### 仮想化環境 {#virtualized-environment}
 
@@ -370,7 +370,7 @@ AEM Forms on JEE は、物理マシンまたは仮想環境で実行できます
 AEM Forms on JEE サーバーの設定でプラットフォームを選択するときは、次の例外事項を考慮してください。
 
 1. AEM Forms on JEE では、MySQL を搭載した IBM® WebSphere® をサポートしていません。
-1. JEE 上のAEM Formsでは、SUSE® Linux® Enterprise Server 12 上の JBoss® をサポートしていません。 SUSE® Linux® Enterprise Server 12 上では、IBM® WebSphere® のみがサポートされています。
+1. AEM Forms on JEE では、SUSE® Linux® Enterprise Server 12 上での JBoss をサポートしていません。SUSE® Linux® Enterprise Server 12 上では、IBM® WebSphere® のみがサポートされています。
 1. AEM Forms on JEE では、Oracle Java™ SE 以外の JBoss® を使用する JDK をサポートしていません。
 1. AEM Forms on JEE では、IBM® JDK 以外の IBM® WebSphere® を使用する JDK をサポートしていません。
 1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
@@ -465,11 +465,11 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 - Cordova Windows 4.4.3
 
 
-### PDF Generatorの要件
+### PDF Generator の要件
 
-- SUSE® Linux® サーバーでPDFのコンバージョンをテストするには、次の設定があることを確認します。
+- SUSE® Linux® （SLES 15 SP6 以降）サーバーでPDFのコンバージョンをテストするには、次の設定があることを確認します。
    - `/etc/profile` ファイルに移動し、`OpenOffice_PATH` 環境変数を `/opt/openoffice4` に設定して、グローバルに設定します。
-   - Linux® オペレーティングシステムに 32 ビット版の OpenOffice をインストールします
+   - 32 ビットバージョンの OpenOffice をインストールします。
 
 ### PDF Generator のソフトウェアサポート {#software-support-for-pdf-generator}
 
@@ -508,11 +508,12 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >
 >さらに、次の点に注意してください。
 >
+>- PDF Generatorでコンバージョンを実行するには、[Acrobat 2020 クラシックトラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) の 32 ビット版が必要です。
 >- PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >- Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >- ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
 >- PDF Generator は Microsoft® Office 365 をサポートしていません。
->- PDF Generatorは、Linux® オペレーティングシステム上の 32 ビットバージョンの OpenOffice をサポートしています。
+>- PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版の OpenOffice をサポートしています。
 >- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 >- OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
 >- Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
@@ -866,14 +867,14 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 -->
 
 
-### リリース 6.5.22.0 （2024 年 11 月 29 日（PT））
+### リリース 6.5.22.0（2024年11月29日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
-| SUSE® Linux® Enterprise Server 15 SP6 （64 ビット版） | |  |
+| SUSE® Linux® Enterprise Server 15 SP6（64 ビット版） | |  |
 
 
-### リリース 6.5.19.1 （2023 年 12 月 15 日（PT））
+### リリース 6.5.19.1（2023年12月15日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
@@ -881,13 +882,13 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | MongoDB Enterprise 5.0 |  |  |
 |  | |  |
 
-### リリース 6.5.18.0 （2023 年 8 月 31 日（PT））
+### リリース 6.5.18.0（2023年8月31日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 | MongoDB Enterprise 4.4 | Windows Server 2016（64 ビット版） | Microsoft® Windows Server 2019（64 ビット版） |
 | Oracle WebLogic Server 14c | MongoDB Enterprise 4.0 | Microsoft® Active Directory 2016 |
-| My SQL JDBC Connector 8 | Oracle Database 12c リリース 2 （12.2.0.1.0） |  |
+| My SQL JDBC Connector 8 | Oracle Database 12c リリース 2（12.2.0.1.0） |  |
 | Active Directory 2022 | MySQL 5.7.35 |  |
 | Microsoft® Windows Server 2022（64 ビット版） | Microsoft® SQL Server 2016 |  |
 |  | JBoss® EAP 7.1.4 |  |
@@ -906,14 +907,14 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 |  | Acrobat 2017（クラシックトラック）バージョン 17.011.30078 以降 |  |
 
 
-### リリース 6.5.13.0 （2022 年 6 月 2 日（PT））
+### リリース 6.5.13.0（2022年6月2日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 |  |  | Microsoft® SharePoint 2016 |
 
 
-### リリース 6.5.12.0 （2022 年 3 月 3 日（PT））
+### リリース 6.5.12.0（2022年3月3日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
@@ -929,7 +930,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 |  | | Microsoft® SQL Server 2016 |
 |  | | Microsoft® Windows Server 2016 |
 
-### リリース 6.5.10.0 （20222 年 9 月 1 日（Pt））
+### リリース 6.5.10.0（2022年9月1日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
