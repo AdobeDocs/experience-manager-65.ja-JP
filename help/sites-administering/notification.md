@@ -9,9 +9,9 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: bbd2bc3fa2ebdca111084450941439a37f79cd73
+source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2154'
 ht-degree: 98%
 
 ---
@@ -46,7 +46,7 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 * **SMTP サーバーポート**&#x200B;は 25 以上にする必要があります。
 
 * **SMTP サーバーホスト名**&#x200B;は空白にできません。
-* **「送信元」アドレス**&#x200B;は空白にしてはなりません。
+* **[ 送信元 ] アドレス** は空白にすることはできず、デフォルト値の&quot;<noreply@day.com>&quot;を変更する必要があります。
 
 **Day CQ Mail Service** の問題をデバッグしやすくするために、サービスのログを監視できます。
 
@@ -84,7 +84,7 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 
 ## ワークフローメール通知サービスの設定 {#configuring-the-workflow-email-notification-service}
 
-ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL プレフィックスの両方がデフォルト値に設定されます。Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。その場合は、リポジトリ内の変更内容を保存することをお勧めします。
+ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL プレフィックスの両方がデフォルト値に設定されます。Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。その場合は、リポジトリ内の変更内容を保持する必要があります。
 
 デフォルト設定は、web コンソールに次のように表示されます。
 
@@ -119,9 +119,9 @@ This is an automatically generated message. Please do not reply.
 
 ページ通知用の英語のメールテンプレートをカスタマイズするには：
 
-1. [ ページ通知 ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template) 用のオーバーレイの作成
+1. [ページ通知](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)用のオーバーレイを作成します
 
-1. ファイルを開きます。
+1. 次のファイルを開きます。
 
    `en.txt`
 
@@ -183,9 +183,9 @@ This is an automatically generated message. Please do not reply.
 
 ワークフローイベント通知用の英語のメールテンプレートをカスタマイズするには：
 
-1. [ ワークフロー通知 ](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates) 用のオーバーレイの作成
+1. [ワークフロー通知](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)用のオーバーレイを作成します
 
-1. ファイルを開きます。
+1. 次のファイルを開きます。
 
    `en.txt`
 
@@ -243,7 +243,7 @@ subject=<text_1>
 
 新しい言語用のテンプレートを追加するには、次の手順に従います。
 
-1. 必要に応じて [ オーバーレイ ](/help/sites-developing/overlays.md) を作成します。
+1. 必要に応じて、[オーバーレイ](/help/sites-developing/overlays.md)を作成します。
 
    * [ページ通知](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
    * [ワークフロー通知](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
