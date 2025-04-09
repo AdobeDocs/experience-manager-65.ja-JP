@@ -9,10 +9,10 @@ exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 12b370e3041ff179cd249f3d4e6ef584c4339909
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 100%
+source-wordcount: '1061'
+ht-degree: 83%
 
 ---
 
@@ -361,6 +361,30 @@ curl -u <user>:<password> -X POST -F cmd="unlockPage" -F path="/content/path/to/
 ```shell
 curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
 ```
+
+### シャローロールアウトの実行方法 {#shallow-rollout}
+
+AEM as a Cloud Serviceを使用する場合、場合によっては、サブページを反映せずに、1 つの特定のページをロールアウトする必要があります。 正しく設定しないと、ページをロールアウトするための一般的な curl コマンドにサブページが含まれる場合があります。 この節では、curl コマンドを調整して、指定したページの浅いロールアウトを実現し、追加のサブページを除外する方法について説明します。
+
+シャローロールアウトを実行するには、次の手順に従います。
+
+1. パラメーターを `type=deep` から `type=page` に変更して、既存の curl コマンドを変更します。
+1. curl コマンドには次の構文を使用します。
+
+```shell
+curl -H "Authorization: Bearer <token>" "https://<instance-url>/bin/asynccommand" \
+   -d type=page \
+   -d operation=asyncRollout \
+   -d cmd=rollout \
+   -d path="/content/<your-path>"
+```
+
+また、次の点も確認してください。
+
+1. `<token>` を実際の認証トークンに、`<instance-url>` を特定のインスタンス URL に置き換えてください。
+1. `/content/<your-path>` を、ロールアウトする特定のページのパスに置き換えます。
+
+`type=page` を設定すると、コマンドは指定したページのみをターゲットにし、サブページは除外します。 そのため、この設定により、コンテンツのデプロイメントを正確に制御でき、意図した変更のみが環境全体に伝播されるようになります。 さらに、この調整は、個々のページを選択する際に、AEM GUI を使用してロールアウトを管理する方法にも適合します。
 
 ### ワークフロー {#workflows}
 
