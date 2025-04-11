@@ -7,9 +7,9 @@ feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3632'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -452,9 +452,9 @@ Windows x86 の場合：
 
 ### AEM Forms PDF Generator の要件 {#requirements-for-aem-forms-pdf-generator}
 
-* SUSE® Linux® （SLES 15 SP6 以降）サーバーでPDFのコンバージョンをテストするには、次の設定があることを確認します。
+* SUSE® Linux®（SLES 15 SP6 以降）サーバーで PDF 変換をテストするには、次の設定があることを確認します。
    * `/etc/profile` ファイルに移動し、`OpenOffice_PATH` 環境変数を `/opt/openoffice4` に設定して、グローバルに設定します。
-   * 32 ビットバージョンの OpenOffice をインストールします。
+   * 32 ビット版の OpenOffice をインストールします。
 
 ### PDF Generator のソフトウェアサポート {#software-support-for-pdf-generator}
 
@@ -517,7 +517,7 @@ Windows x86 の場合：
 >
 >さらに、次の点に注意してください。
 >
->* PDF Generatorでコンバージョンを実行するには、[Acrobat 2020 クラシックトラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) の 32 ビット版が必要です。
+>* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 クラシックトラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) が必要です。
 >* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。

@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 361f0a5f2d1484cf594edfda73250c5690ed7cab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1043'
 ht-degree: 100%
 

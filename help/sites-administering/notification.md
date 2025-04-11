@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2154'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 * **SMTP サーバーポート**&#x200B;は 25 以上にする必要があります。
 
 * **SMTP サーバーホスト名**&#x200B;は空白にできません。
-* **[ 送信元 ] アドレス** は空白にすることはできず、デフォルト値の&quot;<noreply@day.com>&quot;を変更する必要があります。
+* **「送信元」アドレス**&#x200B;は空白にできません。デフォルト値「<noreply@day.com>」を変更する必要があります。
 
 **Day CQ Mail Service** の問題をデバッグしやすくするために、サービスのログを監視できます。
 
@@ -84,7 +84,7 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 
 ## ワークフローメール通知サービスの設定 {#configuring-the-workflow-email-notification-service}
 
-ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL プレフィックスの両方がデフォルト値に設定されます。Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。その場合は、リポジトリ内の変更内容を保持する必要があります。
+ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL プレフィックスの両方がデフォルト値に設定されます。Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。その場合は、リポジトリ内の変更内容を保存する必要があります。
 
 デフォルト設定は、web コンソールに次のように表示されます。
 

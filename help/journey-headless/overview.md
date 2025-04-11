@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Developing,Content Fragments
 role: Admin, Developer
 source-git-commit: 050049f22d329d3af0cfc8fa4bbb12fe7f99b5fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '457'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -49,6 +49,6 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 | [ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) | ヘッドレステクノロジーとそのユーザーエクスペリエンスへの影響、AEM によるヘッドレスモデルのサポート、独自のヘッドレス開発プロジェクトを実装する方法について初めから終わりまで説明します。 | 開発者 |
 | [ヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md) | ヘッドレステクノロジー、それらをプロジェクトで使用する方法および AEM で翻訳プロジェクトを作成および更新する方法について初めから終わりまで説明します。 | 翻訳担当者 |
 | [ヘッドレスアーキテクトジャーニー](/help/journey-headless/architect/overview.md) | AEM の強力で柔軟なヘッドレス機能とその能力および初めてのヘッドレスプロジェクトでコンテンツをモデル化する方法を説明するガイド付きジャーニーは、ここから始めてください。 | アーキテクト |
-| [ヘッドレスオーサリングジャーニー](/help/journey-headless/author/overview.md) | Adobe Experience Manager as a Cloud Serviceの強力で柔軟なヘッドレス機能の概要と、プロジェクトのコンテンツを作成する方法については、ここから始めてください。 | コンテンツ作成者 |
+| [ヘッドレスオーサリングジャーニー](/help/journey-headless/author/overview.md) | Adobe Experience Manager as a Cloud Service の強力で柔軟なヘッドレス機能の紹介と、プロジェクトのコンテンツを作成する方法については、ここから始めてください。 | コンテンツ作成者 |
 
 [その他の役割に対応するジャーニーが今後公開](/help/journey-documentation/home.md#journeys)され次第、随時お知らせします。
