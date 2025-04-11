@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
 source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6161'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -595,11 +595,10 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6522}
 
-* SUSE® Linux® （SLES 15 SP6 以降）サーバーでHTMLからPDFへの変換が失敗し、次のエラーが発生した場合：`Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`
-問題を解決するには、次の手順を実行します。
+* SUSE® Linux®（SLES 15 SP6 以降）サーバーで HTML から PDF への変換が失敗し、次のエラーが表示されます。`Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`。問題を解決するには、次の手順を実行します。
    1. サーバーを起動し、次のコマンドを使用して `OPENSSL_CONF` 環境変数を設定します。
       `export OPENSSL_CONF=/etc/ssl`
-または、サーバーの起動時に環境変数を設定することもできます。
+または、次のようにサーバーの起動時に環境変数を設定することもできます。
       `-e OPENSSL_CONF=/etc/ssl`
    1. サーバーを再起動します。
 * AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
