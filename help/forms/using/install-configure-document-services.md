@@ -6,10 +6,10 @@ role: Admin, User, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: cf3247e437af7447fd6a6121c6a4e2ef750d06b7
+source-git-commit: 5dbdce2d8e558e6bf26c6713fd44d58038d38152
 workflow-type: tm+mt
-source-wordcount: '5660'
-ht-degree: 100%
+source-wordcount: '5724'
+ht-degree: 98%
 
 ---
 
@@ -232,7 +232,7 @@ Acrobat をインストールしてから、Microsoft® Word を開きます。�
   <tr>
    <td><p><strong>OpenOffice</strong></p> </td>
    <td><p>OpenOffice_PATH</p> </td>
-   <td><p>C:¥Program Files (x86)¥OpenOffice.org4</p> </td>
+   <td><p>C:\Program Files （x86）\OpenOffice 4</p> </td>
   </tr>
  </tbody>
 </table>
@@ -244,9 +244,12 @@ Acrobat をインストールしてから、Microsoft® Word を開きます。�
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
 >* Word、PowerPoint、Excel、Project などの Microsoft® Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
 >* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
->* UNIX ベースのプラットフォームで OpenOffice を使用している場合は、以下のコマンドを実行して PATH 変数を設定します。
->
->  `export OpenOffice_PATH=/opt/openoffice.org4`
+>* UNIX ベースのプラットフォームで OpenOffice を使用している場合は、以下のコマンドを実行して PATH 変数を設定します。\
+> `export OpenOffice_PATH=/opt/openoffice.org4`
+>* SUSE® Linux® （SLES 15 SP6 以降）ベースのプラットフォームでは、次の手順に従って OpenOffice をセットアップします。
+>     * `/opt/openoffice4` などのディレクトリに、入手可能な最新の 32 ビットバージョンの `OpenOffice 4.1.x` をインストールします。
+>     * `OpenOffice_PATH` 環境変数を、この場所を指すように設定します。 例：`OpenOffice_PATH=/opt/openoffice4`。
+>     * `OpenOffice_PATH` 変数がグローバルに設定されていること（`/etc/profile` やシステム固有の同等の変数を使用するなど）を確認し、ログイン時にすべてのユーザーが使用できるようにします。
 
 ### （IBM® WebSphere® のみ）IBM® SSL ソケットプロバイダーの設定 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
