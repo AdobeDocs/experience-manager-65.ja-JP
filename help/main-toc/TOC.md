@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 8009e4cf7da17afbcfae7f90009157d32ee261fa
+source-git-commit: 1b551a4f8c05c14e40db1e70147542326cb82b80
 workflow-type: tm+mt
-source-wordcount: '7494'
+source-wordcount: '7520'
 ht-degree: 95%
 
 ---
@@ -1213,6 +1213,9 @@ ht-degree: 95%
       + [PaperCapture サービスが PDF に対して OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
       + [JEE 上の AEM Forms の Spring Framework の脆弱性の軽減](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
       + [Experience Manager Formsの Log4j2 脆弱性の軽減](/help/forms/using/aem-forms-vulnerability-cve.md)
+      + [XFA ベースのPDF formsおよびポリシーで保護されたドキュメントの問題を表示](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
+      + [Firefox とChromeで XFA ベースのPDF formsを開く方法](/help/forms/using/xfa-forms-firefox-chrome.md)
+      + [BlazeDSにおける XML External Entity （XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blazeDS.md)
       + [JEE WebLogic Server での EAR デプロイメントの失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
