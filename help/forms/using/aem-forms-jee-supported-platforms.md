@@ -10,7 +10,7 @@ exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 source-git-commit: 5dbdce2d8e558e6bf26c6713fd44d58038d38152
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4177'
 ht-degree: 100%
 
