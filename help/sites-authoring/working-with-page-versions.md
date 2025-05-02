@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 source-git-commit: d2e2f330dadb7c327324e53a17e8398ef3a473a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1567'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -24,10 +24,10 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->AEM リポジトリでは、コンテンツのみがバージョン管理されます。 コード、CSS、JavaScriptなどの動的リソースは、バージョン管理されません。
+>AEM リポジトリでは、コンテンツのみがバージョン管理されます。コード、CSS、JavaScript などの動的リソースはバージョン管理されません。
 >
->* バージョンを表示する場合、コンテンツは、リポジトリの現在のコード、CSS およびJavaScriptで表示されます。
->* バージョンを復元すると、コンテンツのみが復元され、リポジトリの現在のコード、CSS およびJavaScriptが適用されます。
+>* バージョンを表示すると、リポジトリの現在のコード、CSS、JavaScript を使用してコンテンツが表示されます。
+>* バージョンを復元すると、コンテンツのみが復元され、リポジトリの現在のコード、CSS、JavaScript が適用されます。
 
 ## 新しいバージョンの作成 {#creating-a-new-version}
 
@@ -203,7 +203,7 @@ ht-degree: 95%
 
 >[!TIP]
 >
->[ タイムワープは、AEM 6.5.10.0 以降を実行している場合 ](/help/sites-authoring/launches.md) ローンチと組み合わせて使用し、未来をプレビューすることもできます。
+>AEM 6.5.10.0 以降を実行している場合、[タイムワープをローンチと組み合わせて使用して、未来をプレビューすることもできます](/help/sites-authoring/launches.md)。
 
 コンテンツの作成は、継続的な共同作業プロセスです。タイムワープの目的は、公開された web サイトを作成者が経時的に追跡することで、コンテンツの変更内容を把握することです。この機能では、ページのバージョンを使用してパブリッシュ環境の状態を判断します。
 

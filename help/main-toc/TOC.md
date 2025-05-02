@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: 1b551a4f8c05c14e40db1e70147542326cb82b80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7520'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1213,9 +1213,9 @@ ht-degree: 99%
       + [PaperCapture サービスが PDF に対して OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
       + [JEE 上の AEM Forms の Spring Framework の脆弱性の軽減](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
       + [Experience Manager Forms の Log4j2 脆弱性の緩和](/help/forms/using/aem-forms-vulnerability-cve.md)
-      + [XFA ベースのPDF formsおよびポリシーで保護されたドキュメントの問題を表示](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
-      + [Firefox とChromeで XFA ベースのPDF formsを開く方法](/help/forms/using/xfa-forms-firefox-chrome.md)
-      + [BlazeDSにおける XML External Entity （XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blazeDS.md)
+      + [XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
+      + [Firefox と Chrome で XFA ベースの PDF フォームを開く方法](/help/forms/using/xfa-forms-firefox-chrome.md)
+      + [BlazeDS での XML 外部エンティティ（XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blazeDS.md)
       + [JEE WebLogic Server での EAR デプロイメントの失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
