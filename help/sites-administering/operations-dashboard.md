@@ -659,7 +659,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 >[!NOTE]
 >
->システム概要ダッシュボードの概要については、[このビデオを参照](https://video.tv.adobe.com/v/21340)してください。
+>システム概要ダッシュボードの概要については、[このビデオを参照](https://video.tv.adobe.com/v/40394?captions=jpn)してください。
 
 ### アクセス方法 {#how-to-access}
 
