@@ -28,8 +28,8 @@ AEM Mobile On-demand Services アプリの構築は、Cordova （または Phone
 >
 >プラグインについて詳しくは、次のリソースを参照してください。
 >
->* [AEM Mobileでの Cordova プラグインの使用 ](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [AEM Mobile固有の Cordova 対応プラグインの使用 ](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>* [AEM Mobileでの Cordova プラグインの使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/cordova-api.html)
+>* [AEM Mobile固有の Cordova 対応プラグインの使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/app-runtime-api.html)
 >
 
 * プラグイン機能を使用するテンプレートは、プラグインブリッジが存在することなく、ブラウザーで引き続きオーサリングできるように記述する必要があります。

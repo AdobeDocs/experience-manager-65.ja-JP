@@ -49,7 +49,7 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
 * **Document Security SDK**：この SDK は、豊富な機能を持つクライアントです。ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。例えば、カスタムのファイル形式を保護する拡張機能を開発したり、SDK とデータ損失防止（DLP）ソリューションを統合したりすることができます。Document Security SDK を使用して開発された拡張機能、アプリケーション、およびプラグインは、指定された AEM Forms サーバーにドキュメントを送信し、ポリシーはサーバー上で適用されます。AEM Forms Document Security クライアント SDK（CSDK）で、ポータブル保護ライブラリ（PPL）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
-  Document Security SDK は Java と C++ の両方で利用することができます。Java™ SDK は、AEM Forms Document Security に付属しています。JEE 上に AEM Forms をデプロイする際に、Java SDK がインストールされます。C++ SDK を入手するには、[AEM カスタマーサポート](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)にお問い合わせください。C++ SDK は、Microsoft® Visual Studio 2013 を使用してコンパイルすることができます。SDK の機能とその使用方法については、[Document Security API のドキュメント](https://help.adobe.com/ja_JP/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)のサイトを参照してください。
+  Document Security SDK は Java と C++ の両方で利用することができます。Java™ SDK は、AEM Forms Document Security に付属しています。JEE 上に AEM Forms をデプロイする際に、Java SDK がインストールされます。C++ SDK を入手するには、[AEM カスタマーサポート](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)にお問い合わせください。C++ SDK は、Microsoft® Visual Studio 2013 を使用してコンパイルすることができます。SDK の機能とその使用方法については、[Document Security API のドキュメント](https://help.adobe.com/ja_JP/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)のサイトを参照してください。
 
 * **Adobe Acrobat**：Adobe Acrobat を使用して、Microsoft® Office、web ブラウザー、またはその他の PDF 形式の印刷に対応しているアプリケーションなど、一般的なデスクトップアプリケーションで作成された PDF ドキュメントにセキュリティポリシーを適用できます。
 
@@ -63,7 +63,7 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
   上記に加えて、PPL には Document Security SDK のすべての機能が搭載されています。ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。PPL で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されたドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
-  PPL は、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。また、OSGi 上の AEM Forms に対する OSGi バンドルとして使用することもできます。C++ PPL は、Microsoft® Visual Studio 2013 を使用してコンパイルすることができます。AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support) サポートチームに問い合わせて、PPL を入手することができます。後から、PPL ヘルプ（ライブラリに付属）を参照することで、PPL のセットアップ方法および使用方法を確認できます。
+  PPL は、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。また、OSGi 上の AEM Forms に対する OSGi バンドルとして使用することもできます。C++ PPL は、Microsoft® Visual Studio 2013 を使用してコンパイルすることができます。AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support) サポートチームに問い合わせて、PPL を入手することができます。後から、PPL ヘルプ（ライブラリに付属）を参照することで、PPL のセットアップ方法および使用方法を確認できます。
 
 ### 保護されたドキュメントの表示または編集 {#view-or-edit-protected-documents}
 

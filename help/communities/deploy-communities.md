@@ -301,7 +301,7 @@ AEM 6.3 以降では、主要なマテリアルはファイルシステムに保
 
 >[!CAUTION]
 >
->暗号鍵に基づく別のセキュリティ機能が既に設定されている場合、暗号鍵をレプリケートすると、設定が破損する可能性があります。 サポートが必要な場合は、[ カスタマーケアにお問い合わせください ](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)。
+>暗号鍵に基づく別のセキュリティ機能が既に設定されている場合、暗号鍵をレプリケートすると、設定が破損する可能性があります。 サポートが必要な場合は、[ カスタマーケアにお問い合わせください ](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)。
 
 #### リポジトリのレプリケーション {#repository-replication}
 
@@ -366,7 +366,7 @@ Apache HTTP サーバーを使用する場合は、関連するすべてのエ�
 Dispatcherを使用している場合は、以下を参照してください。
 
 * AEM [Dispatcher](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates) ドキュメント
-* [Dispatcher のインストール](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
+* [Dispatcher のインストール](https://experienceleague.adobe.com/ja/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
 * [Communities 用の Dispatcher の設定](/help/communities/dispatcher.md)
 * [既知の問題](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

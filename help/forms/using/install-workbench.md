@@ -173,7 +173,7 @@ Workbench をインストールする前に、Workbench の実行に必要なソ
 1. リリースノートを確認して「完了」をクリックします。
 1. コンピューターに以下のアイテムがインストールされました。
    * **Workbench**：スタートメニューにショートカットフォルダーを保存するよう選択した場合にこのメニューから Workbench を起動するには、すべてのプログラム／AEM Forms／Workbench を選択します。詳しくは、<a href="https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbenchの使用</a>ドキュメントを参照してください。
-   * **Designer**：Designer は Workbench 内部からアクセスできます。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer ヘルプ</a>のはじめにのトピックを参照してください。
+   * **Designer**：Designer は Workbench 内部からアクセスできます。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer ヘルプ</a>のはじめにのトピックを参照してください。
    * **AEM Forms SDK**：SDK 使用方法の詳細については、<a href="https://helpx.adobe.com/pdf/aem-forms/6-3/programming-with-aem-forms.pdf">AEM Forms によるプログラミング</a>を参照してください。
 
 ## プロセスのアップグレード {#upgrading-processes}

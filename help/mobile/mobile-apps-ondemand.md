@@ -22,7 +22,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html) を参照してください。
+>Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
 
 >[!NOTE]
 >

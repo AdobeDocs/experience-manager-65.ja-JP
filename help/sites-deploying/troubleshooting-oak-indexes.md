@@ -128,7 +128,7 @@ AEM の内部インデックス再作成プロセスは、リポジトリデー�
 1. 手順 1 に示されているすべての情報を収集した後、AEM を再起動します。
 
    * 同時負荷が高い場合（監視キューのオーバーフローなど）は、AEM を再起動すると問題が解決することがあります。
-   * 再起動しても問題が解決しない場合は、[アドビサポート](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)に問題を報告し、手順 1 で収集したすべての情報を提供してください。
+   * 再起動しても問題が解決しない場合は、[アドビサポート](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)に問題を報告し、手順 1 で収集したすべての情報を提供してください。
 
 ## 非同期のインデックス再作成の安全な中止 {#safely-aborting-asynchronous-re-indexing}
 

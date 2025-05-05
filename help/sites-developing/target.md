@@ -234,7 +234,7 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 >
 >DTM を使用していない場合は、注文確認を Adobe Target に送信します。
 
-Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（[orderConfirmPage mbox の作成](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=ja)および[注文確認 mbox - カスタムパラメーターの追加](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779?lang=ja)を参照してください）。Adobe Target は、mbox 名が `orderConfirmPage` で、以下の特定のパラメーター名を使用している場合は、mbox データを注文確認データとして認識します。
+Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（[orderConfirmPage mbox の作成](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=ja)および[注文確認 mbox - カスタムパラメーターの追加](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779?profile.language=ja&lang=ja)を参照してください）。Adobe Target は、mbox 名が `orderConfirmPage` で、以下の特定のパラメーター名を使用している場合は、mbox データを注文確認データとして認識します。
 
 * productPurchasedId：購入した製品を識別する ID のリスト。
 * orderId：注文の ID。

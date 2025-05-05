@@ -119,7 +119,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->[ トンネルサービス ](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) を使用すると、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
+>[ トンネルサービス ](https://helpx.adobe.com/jp/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) を使用すると、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
 
 ![ 新しいサイトのユーザーの役割 ](assets/site-admin-1.png)
 

@@ -23,7 +23,7 @@ ht-degree: 51%
 
 ## 前提条件 {#prerequisite-versioning}
 
-アダプティブフォームでバージョン管理機能、コメント機能、注釈機能を使用するには、AEM 6.5 Formsで [ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) が有効になっていることを確認してください。
+アダプティブフォームでバージョン管理機能、コメント機能、注釈機能を使用するには、AEM 6.5 Formsで [ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) が有効になっていることを確認してください。
 
 ## アダプティブフォームのバージョン管理 {#adaptive-form-versioning}
 

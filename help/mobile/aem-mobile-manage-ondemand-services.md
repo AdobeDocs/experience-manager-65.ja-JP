@@ -42,7 +42,7 @@ Mobile On-Demand Preflight アプリを使用すると、アクセス権のあ�
 
 >[!NOTE]
 >
->AEM Preflight アプリは、コンテンツのプレビューとページの参照に使用されます。 Preflight アプリについて詳しくは、[ こちら ](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) をクリックしてください。
+>AEM Preflight アプリは、コンテンツのプレビューとページの参照に使用されます。 Preflight アプリについて詳しくは、[ こちら ](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) をクリックしてください。
 >
 
 ### 前に進む {#getting-ahead}

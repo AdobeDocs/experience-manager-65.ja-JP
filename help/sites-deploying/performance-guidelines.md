@@ -304,7 +304,7 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 
 >[!CAUTION]
 >
->リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)にお問い合わせください。
+>リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)にお問い合わせください。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 

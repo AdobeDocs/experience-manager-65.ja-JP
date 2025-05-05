@@ -116,12 +116,12 @@ facebook アプリケーションを作成するには、[https://developers.fac
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
    * **[!UICONTROL タイトル]** （*必須*）Facebook アプリを識別する表示タイトルを入力します。 facebook アプリの *表示名* として入力したのと同じ名前を使用します。
-   * **[!UICONTROL アプリ ID/API キー]** （*必須*）Facebook アプリの ***アプリ ID*** を入力します。 これにより、ダイアログから作成された [Adobeの Granite OAuth アプリケーションおよびプロバイダー ](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが識別されます。
+   * **[!UICONTROL アプリ ID/API キー]** （*必須*）Facebook アプリの ***アプリ ID*** を入力します。 これにより、ダイアログから作成された [Adobeの Granite OAuth アプリケーションおよびプロバイダー ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが識別されます。
    * **[!UICONTROL アプリの秘密鍵]** （*必須*）Facebook アプリの ***アプリの秘密鍵*** を入力します。
    * **[!UICONTROL ユーザーを作成]** オンにすると、Facebook アカウントでログインした場合、AEM ユーザーエントリが作成され、選択したユーザーグループにメンバーとして追加されます。  デフォルトではオンになっています（強く推奨）。
    * **[!UICONTROL ユーザー ID をマスク]**：選択を解除したままにします。
    * **[!UICONTROL 範囲メール]**：ユーザーのメール ID をFacebookから取得する必要があります。
-   * **[!UICONTROL ユーザーグループに追加]** 「ユーザーグループを追加」を選択して、ユーザーを追加するコミュニティサイトに 1 つ以上の [ メンバーグループ ](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) を選択します。
+   * **[!UICONTROL ユーザーグループに追加]** 「ユーザーグループを追加」を選択して、ユーザーを追加するコミュニティサイトに 1 つ以上の [ メンバーグループ ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/users.html) を選択します。
 
    >[!NOTE]
    >
@@ -130,7 +130,7 @@ facebook アプリケーションを作成するには、[https://developers.fac
    * **[!UICONTROL 保存]** を選択します。
    * **[!UICONTROL Publish]**。
 
-その結果、[Adobeの Granite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) インスタンスが生成され、スコープ（権限）を追加しない限り、さらに変更する必要はありません。 デフォルトの範囲は、Facebookへのログインに対する標準の権限です。 範囲を追加する必要がある場合は、OSGi 設定を直接編集する必要があります。 システム/コンソールを介して直接行われた変更がある場合は、上書きを避けるために、タッチ UI からクラウドサービス設定を編集しないでください。
+その結果、[Adobeの Granite OAuth Application and Provider](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) インスタンスが生成され、スコープ（権限）を追加しない限り、さらに変更する必要はありません。 デフォルトの範囲は、Facebookへのログインに対する標準の権限です。 範囲を追加する必要がある場合は、OSGi 設定を直接編集する必要があります。 システム/コンソールを介して直接行われた変更がある場合は、上書きを避けるために、タッチ UI からクラウドサービス設定を編集しないでください。
 
 ### AEM Communities Facebook OAuth プロバイダー {#aem-communities-facebook-oauth-provider}
 
@@ -270,7 +270,7 @@ twitterアプリケーション管理の「権限」セクションで、次の�
 
    * **[!UICONTROL コンシューマーキー]**
 
-     （*必須*）Twitterアプリの **コンシューマー（API）キー** を入力します。 これにより、ダイアログから作成された [Adobeの Granite OAuth アプリケーションおよびプロバイダー ](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが識別されます。
+     （*必須*）Twitterアプリの **コンシューマー（API）キー** を入力します。 これにより、ダイアログから作成された [Adobeの Granite OAuth アプリケーションおよびプロバイダー ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが識別されます。
 
    * **[!UICONTROL 消費者の秘密鍵]**
 
@@ -286,7 +286,7 @@ twitterアプリケーション管理の「権限」セクションで、次の�
 
    * **[!UICONTROL ユーザーグループに追加]**
 
-     「ユーザーグループを追加」を選択して、ユーザーを追加するコミュニティサイトに 1 つ以上の [ メンバーグループ ](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) を選択します。
+     「ユーザーグループを追加」を選択して、ユーザーを追加するコミュニティサイトに 1 つ以上の [ メンバーグループ ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/users.html) を選択します。
 
    >[!NOTE]
    >
@@ -295,7 +295,7 @@ twitterアプリケーション管理の「権限」セクションで、次の�
 
 1. **[!UICONTROL SAVE]** と **[!UICONTROL Publish]** を選択します。
 
-その結果、[Adobeの Granite OAuth アプリケーションおよびプロバイダー ](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) インスタンスが生成されます。このインスタンスを後で修正する必要はありません。 デフォルトの範囲は、Twitterログインの標準的な権限です。
+その結果、[Adobeの Granite OAuth アプリケーションおよびプロバイダー ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) インスタンスが生成されます。このインスタンスを後で修正する必要はありません。 デフォルトの範囲は、Twitterログインの標準的な権限です。
 
 ### AEM Communities Twitter OAuth プロバイダー {#aem-communities-twitter-oauth-provider}
 
@@ -346,7 +346,7 @@ AEM Communities設定は、[Adobe Granite OAuth Application and Provider](#adobe
 
 ### AEM Communities Sites コンソール {#aem-communities-sites-console}
 
-クラウドサービスを設定したら、コミュニティサイト [ 作成 ](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation) または [ 管理 ](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties) の際に [ ユーザー管理 ](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT) 設定サブパネルを使用して、コミュニティサイトに関連するソーシャルログイン設定を有効にできます。
+クラウドサービスを設定したら、コミュニティサイト [ 作成 ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/sites-console.html#SiteCreation) または [ 管理 ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties) の際に [ ユーザー管理 ](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT) 設定サブパネルを使用して、コミュニティサイトに関連するソーシャルログイン設定を有効にできます。
 
 1. ソーシャルログイン設定を保存したサイト設定コンテキストを選択します。
 

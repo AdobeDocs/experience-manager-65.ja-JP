@@ -65,7 +65,7 @@ INDD ファイルがアップロードされると、`xmpMM:InstanceID` およ�
 ### ZIP ファイルに書き出してアセットの参照を作成 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)の手順を実行し、ワークフローを作成します。
-1. [!DNL Adobe InDesign] の[パッケージ機能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)を使用して、ドキュメントをエクスポートします。[!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。この場合、エクスポートされたフォルダーには、[!DNL InDesign] ファイル内のサブアセットを格納するための `Links` フォルダーが含まれます。この `Links` フォルダーが INDD ファイルと同じフォルダーに存在する。
+1. [!DNL Adobe InDesign] の[パッケージ機能](https://helpx.adobe.com/jp/indesign/how-to/indesign-package-files-for-handoff.html)を使用して、ドキュメントをエクスポートします。[!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。この場合、エクスポートされたフォルダーには、[!DNL InDesign] ファイル内のサブアセットを格納するための `Links` フォルダーが含まれます。この `Links` フォルダーが INDD ファイルと同じフォルダーに存在する。
 1. ZIP ファイルを作成し、このファイルを [!DNL Experience Manager] リポジトリにアップロードします。
 1. `Unarchiver` ワークフローを開始します。
 1. ワークフローが完了すると、Links フォルダー内の参照がサブアセットとして自動的に参照されます。参照されているアセットのリストを表示するには、[!DNL InDesign] アセットのアセットの詳細ページに移動して、[パネル](/help/sites-authoring/basic-handling.md#rail-selector)を閉じます。

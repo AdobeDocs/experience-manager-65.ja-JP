@@ -21,7 +21,7 @@ XFA ベースのPDF フォームまたはポリシーで保護されたドキュ
 
 * XFA ベースのPDF formsとポリシーで保護されたドキュメントには、Adobe® Acrobat® またはAdobe® Reader® のバージョン 8 以降が必要です。 最新のAdobeまたはAcrobatのダウンロードについては [&#128279;](https://www.adobe.com/downloads.html)Readerのダウンロード &rbrace; を参照してください。
 * Mozilla Firefox やGoogle Chromeなどのブラウザーには、XFA ベースのPDF formsをサポートしないPDF ビューアが組み込まれています。 これらのブラウザーで XFA ベースのPDF formsを表示するには、AcrobatまたはReaderを使用して PDF を開くように設定する必要があります。 詳しくは、Mozilla Firefox での XFA ベースのPDF formsおよびGoogle Chromeを参照してください。
-* AcrobatおよびReaderは、Microsoft® Windows® 上では、PDF を保護ビューモードで開くように設定することができます。これにより、XFA ベースのPDF formsおよびポリシーで保護されたドキュメントが開かなくなります。 Acrobat または Reader の保護ビューモードが無効になっていることを確認します。 詳しくは、[保護されたビュー（Windows のみ）](https://helpx.adobe.com/acrobat/kb/end-of-support-acrobat-x-reader-x.html)を参照してください。
+* AcrobatおよびReaderは、Microsoft® Windows® 上では、PDF を保護ビューモードで開くように設定することができます。これにより、XFA ベースのPDF formsおよびポリシーで保護されたドキュメントが開かなくなります。 Acrobat または Reader の保護ビューモードが無効になっていることを確認します。 詳しくは、[保護されたビュー（Windows のみ）](https://helpx.adobe.com/jp/acrobat/kb/end-of-support-acrobat-x-reader-x.html)を参照してください。
 * XFA ベースのPDF formsまたはポリシーで保護されたドキュメントにモバイルデバイスでアクセスする場合は、次の点を考慮してください。
 
    * ポリシーで保護されたドキュメントをモバイルデバイスで開くには、モバイル用 Adobe Reader が必要です。 詳しくは、[Adobe Reader モバイルアプリ ](https://www.adobe.com/in/acrobat/mobile/acrobat-reader.html) を参照してください。

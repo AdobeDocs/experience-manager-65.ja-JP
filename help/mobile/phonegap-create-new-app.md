@@ -34,7 +34,7 @@ AEM Mobile アプリは、ページ構造とプロパティを定義するブル
 Cloud Service を構築し、AdobeMobile Services SDK プラグインをアプリに統合するための追加の（およびオプションの） タブが存在します。
 
 * ビルド：ここで、「設定を管理」をクリックしてbuild.phonegap.com ビルドサービスをセットアップします。 次に、ドロップダウンから、新しく作成された PhoneGap ビルドクラウドサービスを選択できます。
-* Analytics:「設定を管理」をクリックして、[Adobeの Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) クラウドサービスを設定します。 次に、ドロップダウンから、新しく作成した Mobile Service を選択して、モバイルアプリに統合できます。
+* Analytics:「設定を管理」をクリックして、[Adobeの Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=ja) クラウドサービスを設定します。 次に、ドロップダウンから、新しく作成した Mobile Service を選択して、モバイルアプリに統合できます。
 
 ## アプリテンプレートの使用 {#using-app-templates}
 

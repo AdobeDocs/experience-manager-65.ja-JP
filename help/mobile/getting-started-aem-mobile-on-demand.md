@@ -22,7 +22,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html) を参照してください。
+>Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
 
 AEMには、コンテンツをモバイルアプリケーションに統合するためのいくつかのツールが用意されています。
 
@@ -32,7 +32,7 @@ AEM Preflight アプリは、公開前にアプリとコンテンツをプレビ
 
 >[!NOTE]
 >
->Preflight アプリについて詳しくは、AEM Mobile On-demand Services ヘルプの [AEM Preflight アプリの使用 ](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) を参照してください。
+>Preflight アプリについて詳しくは、AEM Mobile On-demand Services ヘルプの [AEM Preflight アプリの使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html) を参照してください。
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -104,4 +104,4 @@ AEM オーサーは、AEM Mobile On-demand Servicesを使用してアプリを�
 
 >[!NOTE]
 >
->また、AEM オーサーは、使用権限の設定、カードとレイアウトの作成、プッシュ通知の送信も担当します。 また、AEM Mobileでのコンテンツのオーサリング、記事とコレクションの管理、バナー、カード、レイアウトの作成などの方法について詳しくは、[AEM Mobile On-Demand Portal](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2) を参照してください。
+>また、AEM オーサーは、使用権限の設定、カードとレイアウトの作成、プッシュ通知の送信も担当します。 また、AEM Mobileでのコンテンツのオーサリング、記事とコレクションの管理、バナー、カード、レイアウトの作成などの方法について詳しくは、[AEM Mobile On-Demand Portal](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html#dynamicpod_reference_2) を参照してください。

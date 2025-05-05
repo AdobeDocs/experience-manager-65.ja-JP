@@ -104,7 +104,7 @@ AEM Sites内で行うのと同じ方法で、AEM Mobileでコンテンツを作�
 >
 >詳しくは [Adobe Mobile ServicesCloud Serviceの設定 ](/help/mobile/configure-adobe-mobile-cloud-service.md) を参照してください。
 
-AEM Mobileは、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) （AMS）を通じてAdobe Analyticsと統合されます。
+AEM Mobileは、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=ja) （AMS）を通じてAdobe Analyticsと統合されます。
 
 コントロールセンター **指標タイル** には、アプリケーションの AMS から取得した概要分析が表示されます。 右下の「。..」をクリックして、分析ダッシュボードにドリルダウンできます。
 

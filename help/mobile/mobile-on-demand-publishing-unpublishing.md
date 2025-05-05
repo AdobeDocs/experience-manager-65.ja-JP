@@ -24,7 +24,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
 
 ## コンテンツの公開/非公開 {#publishing-unpublishing-the-content}
 

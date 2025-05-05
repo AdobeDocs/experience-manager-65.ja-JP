@@ -618,7 +618,7 @@ PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
 PrintDocument printDocument = printChannel.render(renderOptions);
 ```
 
-他の形式で出力を生成するには、出力形式のタイプを指定します。サポートされている出力形式タイプのリストについては、[PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html) を参照してください。
+他の形式で出力を生成するには、出力形式のタイプを指定します。サポートされている出力形式タイプのリストについては、[PrintChannel API](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html) を参照してください。
 
 例えば、次のサンプルを使用して、インタラクティブ通信の出力形式として PCL を定義できます。
 

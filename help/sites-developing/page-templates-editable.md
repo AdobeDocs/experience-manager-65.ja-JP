@@ -55,7 +55,7 @@ ht-degree: 100%
 
 編集可能テンプレートの作成は、主にテンプレート作成者が、[テンプレートコンソールとテンプレートエディター](/help/sites-authoring/templates.md)を使用して行います。ここでは、そのプロセスの概要を示し、技術的なレベルでどのような処理が行われるかを説明します。
 
-AEM プロジェクトで編集可能テンプレートを使用する方法について詳しくは、「[Lazybones を使用した AEM プロジェクトの作成](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478?lang=ja)」を参照してください。
+AEM プロジェクトで編集可能テンプレートを使用する方法について詳しくは、「[Lazybones を使用した AEM プロジェクトの作成](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/create-aem-project-structure-using-lazybones/m-p/186478?profile.language=ja&lang=ja)」を参照してください。
 
 編集可能テンプレートを作成する場合は、次の操作を実行します。
 

@@ -659,6 +659,6 @@ Adobe Analyticsは、ユーザーデータへのアクセス、ユーザーデ�
 
 ## リソース {#resources}
 
-* Adobe Experience Cloud: [Analytics ヘルプおよびリファレンス ](https://experienceleague.adobe.com/docs/analytics.html)
+* Adobe Experience Cloud: [Analytics ヘルプおよびリファレンス ](https://experienceleague.adobe.com/docs/analytics.html?lang=ja)
 * AEM:[Adobe Analyticsとの統合 ](/help/sites-administering/adobeanalytics.md)
 * AEM: [Analytics と外部プロバイダー ](/help/sites-administering/external-providers.md)

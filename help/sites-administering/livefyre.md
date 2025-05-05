@@ -49,7 +49,7 @@ AEM 6.5 comes with Livefyre feature package 1.2.6 pre-installed. This package on
 
    Your Livefyre-AEM package is now installed. Before you can begin using the integration features, you must Configure AEM to use Livefyre.
 
-   For more information and release notes on feature packs, see [Feature Packs](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/home.html).
+   For more information and release notes on feature packs, see [Feature Packs](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/home.html?lang=ja).
 
 ### Configure AEM to use Livefyre: Create a Configuration Folder {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
@@ -100,7 +100,7 @@ The default authentication integration may not be perfect for every site. To bes
 1. Using CRXDE Lite, copy */libs/social/integrations/livefyre/components/authorizablecomponent/authclientlib* to */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib*.
 1. Edit and save */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib/auth.js* to implement a Livefyre Auth Delegate that meets your needs.
 
-   For more information on AEM Clientlibs, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html).
+   For more information on AEM Clientlibs, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=ja).
 
 ## Use Livefyre with AEM Sites {#use-livefyre-with-aem-sites}
 
@@ -108,7 +108,7 @@ The default authentication integration may not be perfect for every site. To bes
 
 Before adding Livefyre components to a page within Sites, you must enable Livefyre for the page by either inheriting a Livefyre cloud configuration from a parent page or by adding the configuration directly to the page. Refer to your implementation for how to include cloud services on your site.
 
-Once Livefyre is enabled for the page, containers must be configured to allow Livefyre components. See [Configuring Components in Design Mode](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/default-components-designmode.html) for instructions on how to enable different components.
+Once Livefyre is enabled for the page, containers must be configured to allow Livefyre components. See [Configuring Components in Design Mode](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/default-components-designmode.html?lang=ja) for instructions on how to enable different components.
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ Once Livefyre is enabled for the page, containers must be configured to allow Li
 
    If embedding an existing app, AEM asks you to select the App. If creating an App, the App must be populated before any content appears. The App will be created in the Livefyre site and network selected when Livefyre cloud configuration was enabled for the page.
 
-   For more information on inserting components, see [Editing Page Content](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html).
+   For more information on inserting components, see [Editing Page Content](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=ja).
 
 ### Edit a Livefyre Component for an AEM Page. {#edit-a-livefyre-component-for-an-aem-page}
 
@@ -142,7 +142,7 @@ You can import Twitter and Instagram user-generated content (UGC) from Livefyre 
 
 >[!NOTE]
 >
->Before using Assets to import UGC, you must set up Social Accounts and Rights Requests accounts in Livefyre Studio. See [Setting: Rights Requests](https://experienceleague.adobe.com/docs/livefyre/using/rights-requests/c-how-requesting-rights-works.html) for more information.
+>Before using Assets to import UGC, you must set up Social Accounts and Rights Requests accounts in Livefyre Studio. See [Setting: Rights Requests](https://experienceleague.adobe.com/docs/livefyre/using/rights-requests/c-how-requesting-rights-works.html?lang=ja) for more information.
 
 To import UGC into AEM Assets:
 

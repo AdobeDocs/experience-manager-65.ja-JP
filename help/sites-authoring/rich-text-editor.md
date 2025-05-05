@@ -16,8 +16,8 @@ ht-degree: 99%
 
 リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。以下を含む、様々なコンポーネントの基礎を形成します。
 
-* [テキスト](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
-* [テーブル](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text#table)
+* [テキスト](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/wcm-components/text)
+* [テーブル](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/wcm-components/text#table)
 
 ## インプレース編集 {#in-place-editing}
 

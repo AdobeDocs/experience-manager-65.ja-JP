@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->詳細情報またはパッチの入手については、[サポートにお問い合わせ](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)ください。
+>詳細情報またはパッチの入手については、[サポートにお問い合わせ](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)ください。
 
 ## パッチインストーラーについて {#about-the-patch-installer}
 
@@ -97,4 +97,4 @@ SAML 認証を設定済みで、大きな IDP メタデータに関する問題�
 * Document Security
 * Foundation JEE
 
-[サポートへのお問い合わせ](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)
+[サポートへのお問い合わせ](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)

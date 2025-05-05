@@ -170,7 +170,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->FTP を使用して Dynamic Media - Scene7 モードでアセットをアップロードするには、[!DNL Experience Manager] オーサーインスタンスに機能パック 18912 をインストールしてください。[アドビカスタマーサポート](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)に問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了してください。詳しくは、 [一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)を参照してください。
+>FTP を使用して Dynamic Media - Scene7 モードでアセットをアップロードするには、[!DNL Experience Manager] オーサーインスタンスに機能パック 18912 をインストールしてください。[アドビカスタマーサポート](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja#support)に問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了してください。詳しくは、 [一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)を参照してください。
 >
 >アセットのアップロードに FTP を使用する場合、[!DNL Experience Manager] で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 

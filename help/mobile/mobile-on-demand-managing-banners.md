@@ -30,9 +30,9 @@ ht-degree: 5%
 >
 >AEM Mobile アプリケーションの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
->* [ 設計上の考慮事項 ](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [ 設計上の考慮事項 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
 >
->* [ バナーの作成 ](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>* [ バナーの作成 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-banners.html)
 >
 
 ## バナーの作成 {#creating-a-banner}

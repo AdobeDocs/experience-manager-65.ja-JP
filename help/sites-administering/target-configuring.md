@@ -56,7 +56,7 @@ Adobe Target の下で、「**設定を表示**」をクリックします。
 >* 単一ページアプリケーション向けの実装オプションの改善
 >* target.js に含まれていたコンポーネントが AT.js にも含まれているので、ターゲットへの呼び出しがなくなりました。
 
-<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
+<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=ja -->
 
 ### プロビジョニングされた Target フレームワークのプロパティ {#provisioned-target-framework-properties}
 
@@ -119,7 +119,7 @@ Adobe Target の下で、「**設定を表示**」をクリックします。
 >
 >**クライアントライブラリ**&#x200B;ドロップダウンメニューでは、AT.js または mbox.js を選択できます。
 
-<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
+<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=ja -->
 
 ### Target クラウド設定の作成 {#creating-a-target-cloud-configuration}
 

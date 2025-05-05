@@ -23,7 +23,7 @@ ht-degree: 7%
 
 ## 前提条件 {#prerequisite-versioning}
 
-コアコンポーネントに基づくアダプティブフォームで比較機能を使用するには、AEM 6.5 Forms環境で [ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) が有効になっていることを確認してください。
+コアコンポーネントに基づくアダプティブフォームで比較機能を使用するには、AEM 6.5 Forms環境で [ アダプティブフォームのコアコンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) が有効になっていることを確認してください。
 
 ## 個別のアダプティブフォームの比較 {#compare-af-65}
 

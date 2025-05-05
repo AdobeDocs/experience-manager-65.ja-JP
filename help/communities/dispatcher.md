@@ -24,7 +24,7 @@ AEM Communitiesでは、[ コミュニティサイト ](overview.md#community-si
 
 特定のデプロイメントとサイトデザインに必要なものを学ぶ
 
-* [カスタマーケア](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)に問い合わせる
+* [カスタマーケア](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)に問い合わせる
 
 主な [Dispatcher ドキュメント ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) も参照してください。
 

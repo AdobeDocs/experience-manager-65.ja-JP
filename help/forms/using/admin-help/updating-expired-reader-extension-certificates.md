@@ -33,7 +33,7 @@ Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe
 
 **質問：他に質問がある場合、誰に問い合わせればよいですか？**
 
-回答：[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support)に連絡するか、またはサポートチケットを発行してください。
+回答：[アドビサポート](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&amp;lang=ja#support)に連絡するか、またはサポートチケットを発行してください。
 
 **質問：2023年1月7日（PT）より前に証明書をアップデートしない場合はどうなりますか？**
 
@@ -45,7 +45,7 @@ Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe
 
 **質問：最新の証明書を取得するにはどうすればよいですか？**
 
-回答：資格のある（有効なライセンスを持つ）Forms 顧客は、新しい証明書（「Adobe Root CA G2」に基づく証明書）を[アドビライセンス web サイト](https://licensing.adobe.com/)からダウンロードできます。アドビライセンス web サイトで証明書が見つからない場合は、[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja&amp;s#support)に連絡するか、またはサポートチケットを発行します。
+回答：資格のある（有効なライセンスを持つ）Forms 顧客は、新しい証明書（「Adobe Root CA G2」に基づく証明書）を[アドビライセンス web サイト](https://licensing.adobe.com/)からダウンロードできます。アドビライセンス web サイトで証明書が見つからない場合は、[アドビサポート](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&amp;lang=ja&amp;s#support)に連絡するか、またはサポートチケットを発行します。
 
 **質問：「Adobeルート CA」（古い認証局）から発行された証明書を使用して拡張された PDF ドキュメントは、2023年1月7日（PT）以降も引き続き機能しますか？**
 
@@ -97,7 +97,7 @@ You can choose one of the following paths to apply latest certificates:
 Updating the certificates requires using actions available on AEM Forms administrator console and Reader Extension APIs provided by AEM Forms. The document is intended for users and administrators with knowledge of using Adobe Experience Manger Forms APIs. Before you start, ensure that: 
 
 * the user has administrator rights on underlying AEM Forms environment. 
-* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/howto-projects-eclipse.html) and has access to it.
+* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/howto-projects-eclipse.html?lang=ja) and has access to it.
 * [obtain the certificates](#obtain-the-certificates).
 
 
@@ -150,7 +150,7 @@ You can also import and delete credentials programmatically. (See [Programming w
 
 Remove usage rights from existing rights-enabled PDF documents before applying usage rights with latest credentials. AEM Forms on JEE provides APIs to remove usage rights. For detailed instructions, see [Removing Usage Rights from PDF Documents](../../developing/assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
 
-To remove usage rights for AEM Forms on JEE processes developed in Workbench, see [Workbench Help](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf). 
+To remove usage rights for AEM Forms on JEE processes developed in Workbench, see [Workbench Help](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf). 
 
 #### Apply the usage rights to PDF documents 
 
@@ -189,4 +189,4 @@ Remove usage rights from existing rights-enabled PDF documents before applying u
 
 #### Apply the usage rights to PDF documents 
 
-To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html).  -->
+To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html?lang=ja).  -->
