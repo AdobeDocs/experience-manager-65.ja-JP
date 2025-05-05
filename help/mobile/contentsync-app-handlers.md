@@ -63,8 +63,8 @@ ht-degree: 1%
 
 * ***type – 文字列 – mobilecontentlisting***
 * ***path*** – 文字列 – 空のままにします。有効なハンドラーとして見なされるには存在する必要がありますが、パスは現在の ContentSync キャッシュと推論されます。 この値は無視されます。
-* ***targetRootDirectory*-**文字列 – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***order - Long* -**ContentSync がこのハンドラーを実行する順序。 この数は、100 などのその他すべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
+* ***targetRootDirectory*-**&#x200B;文字列 – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
+* ***order - Long* -**&#x200B;ContentSync がこのハンドラーを実行する順序。 この数は、100 などのその他すべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
 
 ```xml
 {
@@ -89,9 +89,9 @@ ht-degree: 1%
 ハンドラーは、AEM アプリシェルのコンテンツ同期設定（page-type=app-instance のノード）で使用する必要があります
 
 * ***type – 文字列 – mobilecontentpackageslisting***
-* ***path **-**String*** - アプリシェルへのパス（pge-type=app-instance を持つノード）。
+* ***path &#x200B;**-**String*** - アプリシェルへのパス（pge-type=app-instance を持つノード）。
 * ***targetRootDirectory – 文字列*** – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ***order - Long* -**ContentSync がこのハンドラーを実行する順序。 この数は、100 などのその他すべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
+* ***order - Long* -**&#x200B;ContentSync がこのハンドラーを実行する順序。 この数は、100 などのその他すべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後に実行する必要があります。
 
 >[!NOTE]
 >
@@ -123,8 +123,8 @@ ht-degree: 1%
 
 このハンドラーは、AEM アプリシェルの ContentSync 設定（pge-type=[app-instance] のノード）で使用する必要があります。
 
-* ***type – 文字列* - **widgetconfig
-* ***path **-**String*** - アプリシェルの子ノードのパス（pge-type=[app-instance] を持つノード）。
+* ***type – 文字列* - &#x200B;** widgetconfig
+* ***path &#x200B;**-**String*** - アプリシェルの子ノードのパス（pge-type=[app-instance] を持つノード）。
 * ***targetRootDirectory – 文字列*** – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
 * ***targetIconDirectory - String*** - アプリのアイコンを配置するディレクトリ
 
@@ -165,7 +165,7 @@ AEMのプロパティは、「cq」、「sling」または「jcr」で名前が�
 
 * ***type – 文字列*** - app-assets
 
-* ***path **-**String*** - アプリアセットが保存されているアプリインスタンスの下の場所へのパス
+* ***path &#x200B;**-**String*** - アプリアセットが保存されているアプリインスタンスの下の場所へのパス
 
 **mobileappoffers** ターゲットコンテンツをレンダリングするための新しいコンテンツ同期ハンドラーがPersonalizationのユースケースに導入されました。 「mobileappoffers」ハンドラーは、コンテンツ作成者によって作成された、関連するターゲットオファーのレンダリング方法を認識しています。 mobileappoffers ハンドラーは抽象ページ更新ハンドラーを拡張するので、プロパティの多くは似ています。 mobileappoffers ハンドラーの詳細には、以下のプロパティがあります。
 
@@ -178,7 +178,7 @@ mobileappsoffers ハンドラーは mobileappspages ハンドラーを実行し�
 
 **mobileappconfig** mobileappconfig コンテンツ同期ハンドラーは、MobileAppsConfig.json に JSON データを挿入する方法を提供します。 プロバイダークラスを登録するには、開発者はプロバイダーのリストで MobileAppsInfoProvider クラスを追加します。 このハンドラーは、MobileAppsInfoProviders のリストを繰り返し処理し、結果の json ファイルにプロバイダーがデータを挿入できるようにします。 このハンドラーがサポートするプロパティのリストを以下に示します。
 
-* ***path **-**String*** - pge-type=app-instance または/libs/mobileapps/core/components/instance を拡張する RT を持つアプリインスタンスノードへのパス
+* ***path &#x200B;**-**String*** - pge-type=app-instance または/libs/mobileapps/core/components/instance を拡張する RT を持つアプリインスタンスノードへのパス
 * ***providers – 文字列*** `[]` – 完全修飾 MobileAppsInfoProviders のリスト
 * ***targetRootDirectory – 文字列*** - MobileAppsConfig.json ファイルを書き込むディレクトリ。
 * **fileName – 文字列** - JSON を書き込むファイルのオプション名。デフォルトは MobileAppsConfig.json です。

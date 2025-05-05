@@ -258,7 +258,7 @@ Geometrixxエンゲージメントサイトの場合、ユーザーとそのス�
 
 * `/content/usergenerated/asi/jcr`
 
-+ ユーザーのプロファイルのパス。末尾には次のようなバッジフォルダーが付きます。
+&#x200B;+ ユーザーのプロファイルのパス。末尾には次のようなバッジフォルダーが付きます。
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 

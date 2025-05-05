@@ -96,7 +96,7 @@ ht-degree: 1%
 
 * **フォルダーパス**
 
-  （*必須*） **6}AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service) の** inbox.path.name **および** sentitems.path.name} に設定された値を参照しています。 [`Inbox` 用にを設定する場合は、**inbox.path.name** の値を使用して 1 つのエントリを追加します。 `Outbox` 用にを設定する場合は、**sentitems.path.name** の値を使用して 1 つのエントリを追加します。 `Trash` 用にを設定する場合、両方の値を持つ 2 つのエントリを追加します。
+  （*必須*） **6&rbrace;AEM Communities Messaging Operations Service[&#128279;](/help/communities/messaging.md#messaging-operations-service) の** inbox.path.name **および** sentitems.path.name&rbrace; に設定された値を参照しています。 `Inbox` 用にを設定する場合は、**inbox.path.name** の値を使用して 1 つのエントリを追加します。 `Outbox` 用にを設定する場合は、**sentitems.path.name** の値を使用して 1 つのエントリを追加します。 `Trash` 用にを設定する場合、両方の値を持つ 2 つのエントリを追加します。
 
 #### 「表示」タブ {#display-tab}
 

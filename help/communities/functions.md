@@ -292,7 +292,7 @@ Communities [ 機能パック 1](/help/communities/deploy-communities.md#latestf
 
 ### Q&amp;A 機能 {#qna-function}
 
-QnA 関数は、タグ付け、ファイルのアップロード、フォロー、自己編集 ](/help/communities/working-with-qna.md) 投票、モデレート用に設定された [QnA コンポーネントを含むページです。
+QnA 関数は、タグ付け、ファイルのアップロード、フォロー、自己編集 [&#128279;](/help/communities/working-with-qna.md) 投票、モデレート用に設定された QnA コンポーネントを含むページです。
 
 設定をテンプレートに追加すると、権限のあるメンバーに対する制限が許可されます。
 

@@ -212,7 +212,7 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 * **[!UICONTROL コメントシステムリソースタイプ]**
 
-  /apps 内の拡張 `comments` コンポーネント（コメントシステム）の resourceType に移動します。 ページテンプレートが、リソース（コメントノード ](scf.md#add-or-include-a-communities-component) としてページに追加されるのではなく、基になるスクリプトにコメントシステムを [ 動的に含める）場合を除き、空白のままにします。 詳しくは、[`{{include}}` helper](handlebars-helpers.md#include) を参照してください。
+  /apps 内の拡張 `comments` コンポーネント（コメントシステム）の resourceType に移動します。 ページテンプレートが、リソース（コメントノード [&#128279;](scf.md#add-or-include-a-communities-component) としてページに追加されるのではなく、基になるスクリプトにコメントシステムを  動的に含める）場合を除き、空白のままにします。 詳しくは、[`{{include}}` helper](handlebars-helpers.md#include) を参照してください。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 

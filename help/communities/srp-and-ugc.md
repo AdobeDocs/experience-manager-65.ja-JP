@@ -69,7 +69,7 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->resourceToUGCStoragePath （）が返すパスは *ACL チェックに適していません*[](srp.md#for-access-control-acls)。
+>resourceToUGCStoragePath （）が返すパスは *ACL チェックに適していません*[&#128279;](srp.md#for-access-control-acls)。
 
 ## ACL にアクセスするためのユーティリティメソッド {#utility-method-to-access-acls}
 

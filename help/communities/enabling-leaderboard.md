@@ -105,7 +105,7 @@ ht-degree: 3%
 * 「設定」タブ：
 
    * 表示名= `Participation Board`
-   *  `checked`：
+   * `checked`：
 
       * バッジ
       * バッジ名
@@ -129,7 +129,7 @@ ht-degree: 3%
 * 「設定」タブ：
 
    * 表示名= `Expertise Board`
-   *  `checked`：
+   * `checked`：
 
       * バッジ
       * アバターを使用

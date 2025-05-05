@@ -28,7 +28,7 @@ AEM Mobileのコンテンツパーソナライゼーション機能を使用す�
 
 AEMでは、作成者がこのコンテンツの作成を開始するには、まず管理者と開発者が環境を準備する必要があります。
 
-AEM MobileとAdobe Target Cloud Serviceの間の接続を確立するには ](#administrator)[AEM管理者 } が必要です。
+AEM MobileとAdobe Target Cloud Serviceの間の接続を確立するには [&#128279;](#administrator)AEM管理者 &rbrace; が必要です。
 
 一方、AEM Mobile[ 開発者 ](#developer) は、ターゲット設定されたコンテンツのオーサリングを容易にするために、既存のスクリプトを編集する必要があります。
 

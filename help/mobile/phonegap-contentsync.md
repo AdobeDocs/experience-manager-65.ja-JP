@@ -260,7 +260,7 @@ cq:ContentSyncConfig ノードに `updateuser` プロパティがない場合、
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` – すべての更新ハンドラーが実装する必要があるインターフェイス
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - Sling を使用したリソースのレンダリングを簡素化する抽象クラス
 
-クラスを OSGi コンポーネントファクトリとして登録し、バンドルの OSGi コンテナにデプロイします。 これは、JavaDoc タグまたは注釈を使用して ](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)[Maven SCR プラグインを使用して実行できます。 次の例は、JavaDoc のバージョンを示しています。
+クラスを OSGi コンポーネントファクトリとして登録し、バンドルの OSGi コンテナにデプロイします。 これは、JavaDoc タグまたは注釈を使用して [&#128279;](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)Maven SCR プラグインを使用して実行できます。 次の例は、JavaDoc のバージョンを示しています。
 
 ```java
 /*

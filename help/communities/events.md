@@ -129,7 +129,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
-カスタムコンポーネントの場合、[SocialEvent 抽象クラス ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) を拡張して、コンポーネントのイベントを `actions``topic` に発生するものとして記録する必要があります。
+カスタムコンポーネントの場合、[SocialEvent 抽象クラス ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) を拡張して、コンポーネントのイベントを `actions` `topic` に発生するものとして記録する必要があります。
 
 カスタムイベントはメソッド `getVerb()` を上書きし、各 `action` ージに対して適切な `verb` が返されるようにします。 アクションに対して返される `verb` は、一般的に使用されるもの（`POST` など）や、コンポーネント専用のもの（`ADD RATING` など）にすることができます。 `actions` と `verbs` の間には *n-1* 関係があります。
 

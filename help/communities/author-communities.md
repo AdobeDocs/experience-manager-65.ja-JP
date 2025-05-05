@@ -40,7 +40,7 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 
 >[!NOTE]
 >
->Communities コンポーネントを使用したオーサリングに必要な情報について詳しくは ](/help/communities/basics.md)Communities コンポーネントの基本 [ を参照してください。
+>Communities コンポーネントを使用したオーサリングに必要な情報について詳しくは [&#128279;](/help/communities/basics.md)Communities コンポーネントの基本  を参照してください。
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|

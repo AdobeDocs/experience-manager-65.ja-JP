@@ -49,7 +49,7 @@ Adobe Experience Manager（AEM） Communities のドキュメントのこの節�
 
 >[!NOTE]
 >
->最新の Uber Jar アーティファクトを特定できる ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)[AEM Uber Jar リポジトリを参照してください。
+>最新の Uber Jar アーティファクトを特定できる [&#128279;](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)AEM Uber Jar リポジトリを参照してください。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

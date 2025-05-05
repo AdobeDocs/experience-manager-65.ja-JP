@@ -59,8 +59,10 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
 
 1. Cloud Serviceを設定します。
    1. AEM オーサーインスタンスで、![tools-1](assets/tools-1.png)/**[!UICONTROL Cloud Service]** に移動し、「**[!UICONTROL Turnstile]**」をクリックします。
+
       ![Cloud Serviceの回転式 ](assets/turnstile-in-ui.png)
    1. 前の節で説明したように、作成または更新された設定コンテナを選択します。 「**[!UICONTROL 作成]**」をクリックします。
+
       ![ 設定ターンスタイル ](assets/config-hcaptcha.png)
    1. **[!UICONTROL ウィジェットタイプ]** を管理対象、非インタラクティブ、非表示のいずれかに指定します。
    1. **[!UICONTROL タイトル]**、**[!UICONTROL 名前]** など、その他の詳細を指定します。
@@ -74,7 +76,7 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
 
    Turnstile Captcha サービスを設定すると、アダプティブフォームで使用できるようになります。
 
-## アダプティブフォームフ {#using-turnstile-aem-6.5} ームでのターンスタイルの使用
+## アダプティブフォームフ ームでのターンスタイルの使用 {#using-turnstile-aem-6.5}
 
 1. AEM Formsを開きます。
 1. **[!UICONTROL Forms]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
@@ -92,15 +94,16 @@ AEM Formsを Turnstile サービスと統合するには、次の手順を実行
    <!--![Turnstile v2](assets/turnstile-settings-v2.png)-->
    ![Cloudfare Turnstile v1](assets/turnstile-setting-v1.png)
 
-   * **[!UICONTROL タイトル ]:** Captcha コンポーネントのタイトルを指定します。 フォームコンポーネントは、フォーム内とルールエディター内の両方で一意のタイトルを使用して簡単に識別できます。
-   * **[!UICONTROL 設定 ]:** 自動で設定するクラウド設定を選択します。
-   * **[!UICONTROL 検証メッセージ ]:** フォーム送信時またはユーザーアクション時に Captcha を検証するための検証メッセージを提供します。
-   * **[!UICONTROL Captcha サービス ]:** フォーム送信用の CAPTCHA サービスを選択します。ここでは、「Turnstile®」を選択します。
-   * **[!UICONTROL 設定 ]:** Turnstile 用に設定したクラウド設定を選択します®。
+   * **[!UICONTROL タイトル &#x200B;]:** Captcha コンポーネントのタイトルを指定します。 フォームコンポーネントは、フォーム内とルールエディター内の両方で一意のタイトルを使用して簡単に識別できます。
+   * **[!UICONTROL 設定 &#x200B;]:** 自動で設定するクラウド設定を選択します。
+   * **[!UICONTROL 検証メッセージ &#x200B;]:** フォーム送信時またはユーザーアクション時に Captcha を検証するための検証メッセージを提供します。
+   * **[!UICONTROL Captcha サービス &#x200B;]:** フォーム送信用の CAPTCHA サービスを選択します。ここでは、「Turnstile®」を選択します。
+   * **[!UICONTROL 設定 &#x200B;]:** Turnstile 用に設定したクラウド設定を選択します®。
+
      >[!NOTE]
      >同様の目的のために、環境内に複数のクラウド設定を持つことができます。 そのため、サービスは慎重に選択してください。サービスがリストに表示されない場合は、AEM Forms環境と Turnstile サービスを接続するCloud Serviceの作成方法について、[AEM Forms環境と Turnstile の接続 ](#connect-your-forms-environment-with-turnstile-service) を参照してください。
 
-   * **[!UICONTROL エラーメッセージ ]:** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
+   * **[!UICONTROL エラーメッセージ &#x200B;]:** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
    * **Captcha サイズ：** hCaptcha® チャレンジダイアログの表示サイズを選択できます。 「**[!UICONTROL コンパクト]**」オプションを使用すると小さいサイズを表示し、「**[!UICONTROL 標準]**」を使用すると比較的大きいサイズの hCaptcha® チャレンジダイアログを表示します。
 
 1. 「**[!UICONTROL 完了]**」を選択します。

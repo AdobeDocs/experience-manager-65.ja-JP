@@ -24,7 +24,7 @@ ht-degree: 5%
 
 * タグの作成と管理については、[ タグの管理 ](../../help/sites-administering/tags.md) および [ ユーザー生成コンテンツのタグ付け ](tag-ugc.md) （UGC）を参照してください。
 
-* [ タグ付けフレームワーク ](../../help/sites-developing/tags.md)、および [ カスタムアプリケーション ](../../help/sites-developing/building.md) にタグの追加と拡張を行う方法について詳しくは ](../../help/sites-developing/framework.md) 開発者のためのタグ付け [ を参照してください。
+* [ タグ付けフレームワーク ](../../help/sites-developing/tags.md)、および [ カスタムアプリケーション ](../../help/sites-developing/building.md) にタグの追加と拡張を行う方法について詳しくは [&#128279;](../../help/sites-developing/framework.md) 開発者のためのタグ付け  を参照してください。
 
 * パブリッシュ環境で UGC に適用されたタグをハイライト表示するために `social tag cloud` コンポーネントをページに追加する方法についてオーサー向けに詳しくは、[ ソーシャルタグクラウドの使用 ](tagcloud.md) を参照してください。
 

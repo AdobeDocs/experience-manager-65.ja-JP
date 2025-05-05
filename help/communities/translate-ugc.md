@@ -40,7 +40,7 @@ UGC の翻訳により、サイト訪問者やメンバーは、言語の障壁�
 
 ## デフォルトの翻訳サービス {#the-default-translation-service}
 
-AEM Communitiesには、複数の言語に対して有効な [ デフォルトの翻訳サービス [ 用の ](../../help/sites-administering/tc-msconf.md) 体験版ライセンス ](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) が含まれています。
+AEM Communitiesには、複数の言語に対して有効な [&#128279;](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) デフォルトの翻訳サービス [ 用の ](../../help/sites-administering/tc-msconf.md) 体験版ライセンス  が含まれています。
 
 [ コミュニティサイトの作成 ](sites-console.md) 時に、[ 翻訳 ](sites-console.md#translation) サブパネルから `Allow Machine Translation` がオンになると、デフォルトの翻訳サービスが有効になります。
 

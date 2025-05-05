@@ -17,13 +17,13 @@ ht-degree: 7%
 
 ## 機能の有効化の切り替え {#enable-feature-toggle-65}
 
-早期導入者または新機能の機能の切り替えは、次の手順に従って **0}AEM web コンソールを使用して設定できます。**
+早期導入者または新機能の機能の切り替えは、次の手順に従って **0&rbrace;AEM web コンソールを使用して設定できます。**
 
 1. AEM Forms インスタンスにログインします。
 2. `http://<author-instance-url>:portnumber/system/console/configMgr` に移動します。
 3. Configuration Manager で **AdobeGranite 動的切り替えプロバイダー** を検索します。
 4. アイコン ![ 鉛筆アイコン ](assets/illustratorcc_penciltool_cur_edit_2_17.png) をクリックします。
-5. 「[!UICONTROL  有効な切り替え ]」セクションで、「![ 鉛筆アイコン ](assets/aem6forms_add.png)」をクリックします。
+5. 「[!UICONTROL &#x200B; 有効な切り替え &#x200B;]」セクションで、「![ 鉛筆アイコン ](assets/aem6forms_add.png)」をクリックします。
 6. 以下の画像に示すように、機能の機能切り替え ID を追加します。
    ![ 追加と切り替え ](assets/add_toggle_number_forms.png)
 
@@ -41,7 +41,7 @@ ht-degree: 7%
 2. `http://<author-instance-url>:portnumber/system/console/configMgr` に移動します。
 3. Configuration Manager で **AdobeGranite 動的切り替えプロバイダー** を検索します。
 4. アイコン ![ 鉛筆アイコン ](assets/illustratorcc_penciltool_cur_edit_2_17.png) をクリックします。
-5. 「[!UICONTROL  無効な切り替え ]」セクションで、「![ 鉛筆アイコン ](assets/aem6forms_add.png)」をクリックします。
+5. 「[!UICONTROL &#x200B; 無効な切り替え &#x200B;]」セクションで、「![ 鉛筆アイコン ](assets/aem6forms_add.png)」をクリックします。
 6. 無効にする機能のトグル番号を追加します。
    ![ 切り替えを削除 ](assets/remove_toggle_feature_forms.png)
 7. 「保存」をクリックします。

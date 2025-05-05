@@ -178,7 +178,7 @@ ht-degree: 2%
 
 * **コメントシステムリソースタイプ**
 
-  /apps 内の拡張 `comments` コンポーネント（コメントシステム）の resourceType に移動します。 ページテンプレートが、リソース（コメントノード ](/help/communities/scf.md#add-or-include-a-communities-component) としてページに追加されるのではなく、基になるスクリプトにコメントシステムを [ 動的に含める）場合を除き、空白のままにします。 詳しくは、[`{{include}}` helper](/help/communities/handlebars-helpers.md#include) を参照してください。
+  /apps 内の拡張 `comments` コンポーネント（コメントシステム）の resourceType に移動します。 ページテンプレートが、リソース（コメントノード [&#128279;](/help/communities/scf.md#add-or-include-a-communities-component) としてページに追加されるのではなく、基になるスクリプトにコメントシステムを  動的に含める）場合を除き、空白のままにします。 詳しくは、[`{{include}}` helper](/help/communities/handlebars-helpers.md#include) を参照してください。
 
 ### サイト訪問者エクスペリエンス {#site-visitor-experience}
 

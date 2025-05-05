@@ -37,7 +37,7 @@ AEMはAdobe PhoneGap Build サービス（`https://build.phonegap.com/`）と統
 
 ## アプリの作成 {#creating-apps}
 
-デベロッパーは、[AEM PhoneGap スターターキットと ](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)2}https://github.com/adobe-marketing-cloud-apps} に掲載されている追加リソースを使用して、Cordova Web ビューを実行する参照ネイティブアプリを含む ](https://github.com/adobe-marketing-cloud-apps)PhoneGap でAEM アプリをブートストラップできます。[
+デベロッパーは、[AEM PhoneGap スターターキットと ](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)2&rbrace;https://github.com/adobe-marketing-cloud-apps&rbrace; に掲載されている追加リソースを使用して、Cordova Web ビューを実行する参照ネイティブアプリを含む [&#128279;](https://github.com/adobe-marketing-cloud-apps)PhoneGap でAEM アプリをブートストラップできます。
 
 スターターキット Git リポジトリの Readme には、スターターキットを使用するためのチュートリアルが含まれています。
 

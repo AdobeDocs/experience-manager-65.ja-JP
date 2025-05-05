@@ -86,7 +86,7 @@ AEM プラットフォームには、最新の Communities リリースをイン
 
 * [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)
 
-[ アップグレード ](upgrade.md)、[Dispatcher](dispatcher.md)、{ レプリケーション ](deploy-communities.md#replication-agents-on-author) など、Communities 固有のその他の情報については、デプロイメントページを参照し [ ください。
+[ アップグレード ](upgrade.md)、[Dispatcher](dispatcher.md)、&lbrace; レプリケーション [&#128279;](deploy-communities.md#replication-agents-on-author) など、Communities 固有のその他の情報については、デプロイメントページを参照し  ください。
 
 ## 関連する Communities ドキュメント {#related-communities-documentation}
 

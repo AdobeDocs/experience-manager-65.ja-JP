@@ -58,10 +58,12 @@ AEM Formsを hCaptcha® サービスと統合するには、次の手順を実�
 
 1. Cloud Serviceを設定します。
    1. AEM オーサーインスタンスで、![tools-1](assets/tools-1.png)/**[!UICONTROL Cloud Service]** に移動し、**[!UICONTROL hCaptcha®]** をクリックします。
+
       ![hCaptcha® の ui](assets/hcaptcha-in-ui.png)
    1. 前の節で説明したように、作成または更新された設定コンテナを選択します。 「**[!UICONTROL 作成]**」を選択します。
+
       ![ 設定 hCaptcha®](assets/config-hcaptcha.png)
-   1. **[!UICONTROL タイトル]**, <!--**[!UICONTROL Name]**--> を指定 **[!UICONTROL サイトキー]**、および hCaptcha® サービスの **[!UICONTROL 秘密鍵]**[ 前提条件で取得 ](#prerequisite)。
+   1. **[!UICONTROL タイトル]**, <!--**[!UICONTROL Name]**--> を指定 **[!UICONTROL サイトキー]**、および hCaptcha® サービスの **[!UICONTROL 秘密鍵]**&#x200B;[ 前提条件で取得 ](#prerequisite)。
    1. 「**[!UICONTROL 作成]**」をクリックします。
 
       ![AEM FormsCloud Serviceを hCaptcha と接続するための環境の設定®](assets/create-hcaptcha-config.png)
@@ -71,7 +73,7 @@ AEM Formsを hCaptcha® サービスと統合するには、次の手順を実�
 
    hCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。
 
-## アダプティブフォームフ {#using-hCaptcha-in-aem-6.5} ームでの hCaptcha® の使用
+## アダプティブフォームフ ームでの hCaptcha® の使用 {#using-hCaptcha-in-aem-6.5}
 
 1. AEM Formsを開きます。
 1. **[!UICONTROL Forms]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
@@ -89,15 +91,16 @@ AEM Formsを hCaptcha® サービスと統合するには、次の手順を実�
 
    ![hCaptcha® v1](assets/config-hcaptcha-v1-img.png)
 
-   * **[!UICONTROL タイトル ]:** Captcha コンポーネントのタイトルを指定します。
-   * **[!UICONTROL 検証メッセージ ]:** フォーム送信時またはユーザーアクション時に Captcha 検証の検証メッセージを提供します。
-   * **[!UICONTROL Captcha サービス ]:** フォーム送信用の CAPTCHA サービスを選択します。ここでは、「hCaptcha®」を選択します。
-   * **[!UICONTROL 設定 ]:** hCaptcha® 用に設定したクラウド設定を選択します。
+   * **[!UICONTROL タイトル &#x200B;]:** Captcha コンポーネントのタイトルを指定します。
+   * **[!UICONTROL 検証メッセージ &#x200B;]:** フォーム送信時またはユーザーアクション時に Captcha 検証の検証メッセージを提供します。
+   * **[!UICONTROL Captcha サービス &#x200B;]:** フォーム送信用の CAPTCHA サービスを選択します。ここでは、「hCaptcha®」を選択します。
+   * **[!UICONTROL 設定 &#x200B;]:** hCaptcha® 用に設定したクラウド設定を選択します。
+
      >[!NOTE]
      >同様の目的のために、環境内に複数のクラウド設定を持つことができます。 そのため、サービスは慎重に選択してください。サービスがリストに表示されない場合は、[AEM Forms環境と hCaptcha® の接続 ](#connect-your-forms-environment-with-hcaptcha-service) を参照して、AEM Forms環境と hCaptcha® サービスを接続するCloud Serviceの作成方法を確認してください。
 
-   * **[!UICONTROL エラーメッセージ ]:** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
-   * **[!UICONTROL Captcha サイズ ]:** hCaptcha® チャレンジダイアログの表示サイズを選択できます。 **[!UICONTROL コンパクト]** オプションを使用すると小さいサイズを表示でき、**[!UICONTROL 標準]** を使用すると比較的大きいサイズの hCaptcha® チャレンジダイアログを表示できます。**[!UICONTROL 非表示]** を使用すると hCaptcha® を検証でき、ユーザーインターフェイスでチェックボックスウィジェットを明示的にレンダリングする必要はありません。
+   * **[!UICONTROL エラーメッセージ &#x200B;]:** Captcha 送信が失敗した場合にユーザーに表示するエラーメッセージを指定します。
+   * **[!UICONTROL Captcha サイズ &#x200B;]:** hCaptcha® チャレンジダイアログの表示サイズを選択できます。 **[!UICONTROL コンパクト]** オプションを使用すると小さいサイズを表示でき、**[!UICONTROL 標準]** を使用すると比較的大きいサイズの hCaptcha® チャレンジダイアログを表示できます。**[!UICONTROL 非表示]** を使用すると hCaptcha® を検証でき、ユーザーインターフェイスでチェックボックスウィジェットを明示的にレンダリングする必要はありません。
 
 1. 「**[!UICONTROL 完了]**」を選択します。
 

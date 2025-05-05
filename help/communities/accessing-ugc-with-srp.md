@@ -23,7 +23,7 @@ ht-degree: 3%
 
 AEM Communitiesのすべてのコンポーネントと機能は、[ ソーシャルコンポーネントフレームワーク（SCF） ](/help/communities/scf.md) に基づいて構築されています。これは、SocialResourceProvider API を呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
 
-コミュニティサイトを作成する前に、基になる [ トポロジ ](/help/communities/topologies.md) と一致する実装を選択するように ](/help/communities/working-with-srp.md) ストレージリソースプロバイダー（SRP[ を設定する必要があります。 SRP 実装は、次の 3 つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、基になる [ トポロジ ](/help/communities/topologies.md) と一致する実装を選択するように [&#128279;](/help/communities/working-with-srp.md) ストレージリソースプロバイダー（SRP を設定する必要があります。 SRP 実装は、次の 3 つのストレージオプションに基づいています。
 
 1. [ASRP](/help/communities/asrp.md):Adobe・オン・デマンド・ストレージ
 1. [MSRP](/help/communities/msrp.md) - MongoDB

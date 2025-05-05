@@ -99,6 +99,7 @@ ht-degree: 1%
    * グループを作成した後に名前を変更することは容易ではないため、名前を再確認してください。
    * ベース URL は `Community Group Name` の下に表示されます。
    * 有効な URL の場合は、「.html」を付加します
+
      *例えば*`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **コミュニティグループテンプレート** メニュー

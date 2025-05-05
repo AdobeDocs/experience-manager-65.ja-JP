@@ -20,7 +20,7 @@ ht-degree: 4%
 
 {{ue-over-mobile}}
 
-アプリケーションダッシュボードの **0}PhoneGap Buildタイル } を使用すると、Adobe PhoneGap Build サービスを通じて PhoneGap モバイルアプリケーションを作成および配布できます。**
+アプリケーションダッシュボードの **0&rbrace;PhoneGap Buildタイル &rbrace; を使用すると、Adobe PhoneGap Build サービスを通じて PhoneGap モバイルアプリケーションを作成および配布できます。**
 
 **アプリを管理** タイル内で定義されたサポートされるすべてのプラットフォームは、**PhoneGap Build** タイルでリモートビルドをプッシュする際にPhoneGap Buildでビルドされます。
 

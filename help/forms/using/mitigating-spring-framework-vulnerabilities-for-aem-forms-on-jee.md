@@ -36,7 +36,7 @@ ht-degree: 2%
 |-------------------|-----------------|
 | 6.5.22.0 | 1. [ お使いの環境のホットフィックスをダウンロードします ](/help/release-notes/aem-forms-hotfix.md)。 </br>2.この修正プログラムをインストールするには、手順に従って [JEE 上のAEM フォームへのサービスパックのインストール ](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md) を行います。 |
 | 6.5.17.0 - 6.5.21.0 | [ 手動による軽減手順を適用する ](#manual-mitigation-steps)。 |
-| 6.5 - 6.5.16.0 | 1. [ 最新のサービスパックをインストールする ](/help/release-notes/release-notes.md)<br>2. 更新したバージョンに基づいて ](#version-specific-solutions) 適切なソリューションを実装 [ します。 |
+| 6.5 - 6.5.16.0 | 1. [ 最新のサービスパックをインストールする ](/help/release-notes/release-notes.md)<br>2. 更新したバージョンに基づいて [&#128279;](#version-specific-solutions) 適切なソリューションを実装  します。 |
 
 > **メモ**:AEM Formsが公式にサポートしているサービスパックは、最新の 6 つのみです。 古いバージョンを使用しているユーザーは、まず最新のサービスパックにアップグレードしてから、必要なホットフィックスをインストールする必要があります。
 
@@ -71,7 +71,7 @@ ht-degree: 2%
 - `spring-core-<version>.jar`
 - `spring-web-<version>.jar`
 
-   - **WebLogic または WebSphere の場合：**EAR のルートから次の JAR ファイルを削除します。
+   - **WebLogic または WebSphere の場合：**&#x200B;EAR のルートから次の JAR ファイルを削除します。
 - `spring-core-<version>.jar`
 - `spring-web-<version>.jar`
 

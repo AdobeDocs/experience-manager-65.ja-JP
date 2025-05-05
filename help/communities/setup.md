@@ -97,7 +97,7 @@ Adobe Analyticsとの統合はオプションです。
    * **[!UICONTROL ID]**: sirius
    * **[!UICONTROL メールアドレス]**:sirius.nilson@mailinator.com
    * **[!UICONTROL パスワード]**：password
-   * **[!UICONTROL パスワードの確認&amp;ast;]**：パスワード
+   * **[!UICONTROL パスワードの確認&ast;]**：パスワード
    * **[!UICONTROL 名]**: Sirius
    * **[!UICONTROL 姓]**: Nilson
 

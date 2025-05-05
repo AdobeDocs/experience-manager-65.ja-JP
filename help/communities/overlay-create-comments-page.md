@@ -18,7 +18,7 @@ ht-degree: 10%
 
 # コメントページの作成 {#create-comments-page}
 
-**[⇐ Overlay Comments コンポーネント ](overlay-comments.md)[Create Nodes ⇒](overlay-create-nodes.md)**
+**[⇐ Overlay Comments コンポーネント ](overlay-comments.md) [Create Nodes ⇒](overlay-create-nodes.md)**
 
 ## コメントページ {#comments-page}
 
@@ -30,4 +30,4 @@ ht-degree: 10%
 
 ![ コメント ](assets/comments.png)
 
-**[⇐ Overlay Comments コンポーネント ](overlay-comments.md)[Create Nodes ⇒](overlay-create-nodes.md)**
+**[⇐ Overlay Comments コンポーネント ](overlay-comments.md) [Create Nodes ⇒](overlay-create-nodes.md)**

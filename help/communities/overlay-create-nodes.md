@@ -24,7 +24,7 @@ ht-degree: 6%
 >
 >/libs フォルダーの内容は編集されません。/apps フォルダーの内容はそのままの状態で、再インストールやアップグレードをおこなうと、/libs フォルダーが削除または置き換えられる可能性があるからです。
 
-オーサーインスタンスで ](../../help/sites-developing/developing-with-crxde-lite.md)0}CRXDE Lite} を使用する場合は、まず/apps フォルダーに、/libs フォルダーのオーバーレイされたコンポーネントへのパスと同じパスを作成します。[
+オーサーインスタンスで [&#128279;](../../help/sites-developing/developing-with-crxde-lite.md)0&rbrace;CRXDE Lite&rbrace; を使用する場合は、まず/apps フォルダーに、/libs フォルダーのオーバーレイされたコンポーネントへのパスと同じパスを作成します。
 
 複製されるパスは次のとおりです。
 

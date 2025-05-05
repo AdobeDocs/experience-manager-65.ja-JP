@@ -84,11 +84,11 @@ ht-degree: 3%
 
 UGC とカスタムコードは、コミュニティサイトパッケージには含まれていません。
 
-UGC を書き出すには、GitHub で利用可能なオープンソースの移行ツールである {0](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration)AEM Communities UGC Migration Tool} を使用します。[
+UGC を書き出すには、GitHub で利用可能なオープンソースの移行ツールである {0[&#128279;](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration)AEM Communities UGC Migration Tool} を使用します。
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities 6.3 Service Pack 1 の時点では、（Communities ]**/**[!UICONTROL  Sites ]**コンソールでコミュニティサイトの上にマウスポインターを置くと、「サイトを削除**[!UICONTROL  アイコンが表示されます。 開発時にコミュニティサイトを削除して新しく開始する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次の項目が削除されます。
+AEM Communities 6.3 Service Pack 1 の時点では、（Communities **/**&#x200B;[!UICONTROL &#x200B; Sites &#x200B;]&#x200B;**コンソールでコミュニティサイトの上にマウスポインターを置くと、「サイトを削除** アイコンが表示されます。 開発時にコミュニティサイトを削除して新しく開始する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次の項目が削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
@@ -129,6 +129,6 @@ GitHub から communities-srp-tools プロジェクトを取得します。
 すべてのオーサーインスタンスおよびパブリッシュインスタンスで、[ セキュリティコンソール ](../../help/sites-administering/security.md) から、以下に該当する [ ユーザーグループ ](users.md) を見つけて削除します。
 
 * 先頭に `community` が付いています
-* + [ 一意のサイト ID](#community-unique-site-id)
+* &#x200B;+ [ 一意のサイト ID](#community-unique-site-id)
 
 例えば、`community-engage-x0e11-members` のように指定します。

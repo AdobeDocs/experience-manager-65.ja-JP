@@ -182,9 +182,9 @@ Communities のメール設定インスタンスにアクセスするには：
 
 * **[!UICONTROL URL]**
 
-  *（必須）* 送信メールサーバー。 例えば、`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****` のように指定します。
+  *（必須）* 送信メールサーバー。 例えば、`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=**&#x200B;**` のように指定します。
 
-* **[!UICONTROL パスにインポート]**&amp;ast;
+* **[!UICONTROL パスにインポート]**&ast;
 
   *（必須）*`/content/usergenerated/mailFolder/postEmails` に設定
 `postEmails` フォルダーに移動して、「**OK**」を選択します。

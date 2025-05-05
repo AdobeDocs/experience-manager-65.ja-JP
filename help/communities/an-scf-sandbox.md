@@ -56,7 +56,7 @@ AEM プラットフォームを初めて使用する開発者向けに役立つ�
 
 ## CRXDE Lite開発環境の使用 {#using-crxde-lite-development-environment}
 
-AEM開発者は、ほとんどの時間をオーサーインスタンスの ](../../help/sites-developing/developing-with-crxde-lite.md)0}CRXDE Lite} 開発環境に費やします。 [CRXDE Liteを使用すると、CRX リポジトリへの制限の少ないアクセスが提供されます。 クラシック UI ツールおよびタッチ操作対応 UI コンソールを使用すると、CRX リポジトリの特定の部分への構造化されたアクセスが提供されます。
+AEM開発者は、ほとんどの時間をオーサーインスタンスの [&#128279;](../../help/sites-developing/developing-with-crxde-lite.md)0&rbrace;CRXDE Lite&rbrace; 開発環境に費やします。 CRXDE Liteを使用すると、CRX リポジトリへの制限の少ないアクセスが提供されます。 クラシック UI ツールおよびタッチ操作対応 UI コンソールを使用すると、CRX リポジトリの特定の部分への構造化されたアクセスが提供されます。
 
 管理者権限でログインした後、様々な方法でCRXDE Liteにアクセスできます。
 

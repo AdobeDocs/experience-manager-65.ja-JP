@@ -474,17 +474,17 @@ facebookやTwitterのログインを使用して数十万人のユーザーが�
 1. ノード ntBaseLucene-oauth のプロパティを変更します。
 
    * **[!UICONTROL indexPath]**: `/oak:index/ntBaseLucene-oauth`
-   * **[!UICONTROL name]**: `oauthid-123****`
+   * **[!UICONTROL name]**: `oauthid-123&#x200B;**&#x200B;**`
    * **[!UICONTROL reindex]**: `true`
    * **[!UICONTROL reindexCount]**: `1`
 
 1. /oak:index/ntBaseLucene-oauth/indexRules/nt:base/properties ノードの下：
 
    * cqTags を除くすべての子ノードを削除します。
-   * cqTags から `oauthid-123****` への名前の変更
-   * ノード `oauthid-123****` のプロパティを変更する
+   * cqTags から `oauthid-123**&#x200B;**` への名前の変更
+   * ノード `oauthid-123**&#x200B;**` のプロパティを変更する
 
-      * **[!UICONTROL name]**: `oauthid-123****`
+      * **[!UICONTROL name]**: `oauthid-123&#x200B;**&#x200B;**`
 
    * 「**[!UICONTROL すべて保存]**」を選択します。
 
