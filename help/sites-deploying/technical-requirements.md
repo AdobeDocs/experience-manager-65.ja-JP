@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 5dbdce2d8e558e6bf26c6713fd44d58038d38152
-workflow-type: ht
-source-wordcount: '3593'
+source-git-commit: 6be26e991da6d53f2433991cb9e4919b46c494a8
+workflow-type: tm+mt
+source-wordcount: '3600'
 ht-degree: 100%
 
 ---
@@ -200,6 +200,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | **Linux®（Red Hat® ディストリビューションに基づく）** | A：サポート対象 `[1]` `[3]` |
 | Linux®、Debian ディストリビューションベース（Ubuntu | A：サポート対象 `[1]` `[2]` |
 | Linux®、SUSE® ディストリビューションベース | A：サポート対象 `[1]` |
+| Microsoft® Windows Server 2022 | R：制限サポート |
 | Microsoft® Windows Server 2019 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft® Windows Server 2016 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft® Windows Server 2012 R2 | Z：サポート対象外 |
@@ -207,8 +208,8 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
 1. Linux® Kernel 2.6、3. x、4. x、5.x および 6.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
-1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
-1. Adobe Managed Services でサポートされている Linux® ディストリビューション。
+2. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
+3. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
    >[!NOTE]
    >
@@ -220,9 +221,9 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
    >* libXau.x86_64（1.0.8-2.1.el7）
    >* glibc-locale.x86_64（2.17 以降）
 
-1. Microsoft® Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
-1. AEM Forms は、Microsoft® Window Server でサポートされていますが、サポートレベル R 制限はありません。
-1. AEM Forms では、Microsoft® Windows Server 2016 のサポートが削除されました。
+4. Microsoft® Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
+5. AEM Forms は、Microsoft® Window Server でサポートされていますが、サポートレベル R 制限はありません。
+6. AEM Forms では、Microsoft® Windows Server 2016 のサポートが削除されました。
 
 >[!NOTE]
 >
