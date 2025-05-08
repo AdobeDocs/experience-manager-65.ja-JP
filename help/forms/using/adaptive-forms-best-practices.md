@@ -8,15 +8,15 @@ exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: 6ec4eca0c0ad5ecfe18ffc766e6415a0f48506a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5963'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # アダプティブフォームの操作のベストプラクティス {#best-practices-for-working-with-adaptive-forms}
 
-Adobe<span class="preview">、最新の拡張可能なデータキャプチャ [ コアコンポーネント ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) を使用することをお勧めします  [ 新しいアダプティブFormsの作成 ](/help/forms/using/create-an-adaptive-form-core-components.md) 用  または [AEM Sites ページへのアダプティブFormsの追加 ](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) を参照してください。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 ## 概要 {#overview}
 
@@ -397,11 +397,11 @@ AEM プロジェクトをある環境から別の環境に移動する必要が�
 
 AEM Forms ルールエディターは、ルールを作成および管理するための視覚的なインターフェイスを備えているので、大がかりなコーディングの必要性が軽減されます。この機能は、高度なプログラミングスキルを持たないが、フォーム内のビジネスルールを定義および管理する必要があるビジネスユーザーやフォームデザイナーに特に役に立ちます。ここでは、ルールエディターで以下を行えるいくつかのユースケースについて説明します。
 
-* &#x200B;<!-- Allows you --> 大がかりなプログラミングを必要とせずにフォームのビジネスルールを定義する。
-* &#x200B;<!-- Use the Rule Editor when you need --> フォーム内に条件ロジックを実装する。これには、フォーム要素の表示／非表示の切り替え、特定の条件に基づくフィールド値の変更、フォームの動作の動的な変更などが含まれます。
-* &#x200B;<!--When you want --> フォーム送信時にデータ検証ルールを強制的に適用する。ルールエディターを使用して、検証条件を定義できます。
-* &#x200B;<!-- When you need --> フォームを外部のデータソース（FDM）またはサービスと統合する。ルールエディターを使用して、フォームの操作中にデータを取得、表示または操作するためのルールを定義できます。
-* &#x200B;<!-- If you want -->ユーザーの操作に応じた動的でインタラクティブなフォームを作成する。ルールエディターを使用すると、フォーム要素の動作をリアルタイムで制御するルールを定義できます。
+* <!-- Allows you --> 大がかりなプログラミングを必要とせずにフォームのビジネスルールを定義する。
+* <!-- Use the Rule Editor when you need --> フォーム内に条件ロジックを実装する。これには、フォーム要素の表示／非表示の切り替え、特定の条件に基づくフィールド値の変更、フォームの動作の動的な変更などが含まれます。
+* <!--When you want --> フォーム送信時にデータ検証ルールを強制的に適用する。ルールエディターを使用して、検証条件を定義できます。
+* <!-- When you need --> フォームを外部のデータソース（FDM）またはサービスと統合する。ルールエディターを使用して、フォームの操作中にデータを取得、表示または操作するためのルールを定義できます。
+* <!-- If you want -->ユーザーの操作に応じた動的でインタラクティブなフォームを作成する。ルールエディターを使用すると、フォーム要素の動作をリアルタイムで制御するルールを定義できます。
 
 ルールエディターは、AEM Forms 基盤コンポーネントとコアコンポーネントの両方で使用できます。
 
