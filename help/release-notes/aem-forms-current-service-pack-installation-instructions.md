@@ -1,14 +1,14 @@
 ---
 title: AEM Forms の AEM Forms パッチのインストール手順
-description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
+description: OSGi および JEE 環境のAEM Forms サービスパックのインストール手順
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 652878504d2225e50ea14885ec96bdd408f77ed0
-workflow-type: ht
+source-git-commit: cdd0e52c4f64080a76d67baf678a97e91ca7c711
+workflow-type: tm+mt
 source-wordcount: '1722'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 100%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.22.0 |
+| バージョン | 6.5.23.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2024年11月29日（PT） |
+| 日付 | 2025 年 5 月 29 日（Pt） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -128,7 +128,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
    * [AEM Forms for JBoss® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [AEM Forms for WebSphere® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
    * [ AEM Forms for WebLogic のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
-   * [AEM forms for JBoss® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
+   * [AEM forms for JBoss® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
    * [AEM forms for WebSphere® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [AEM Forms for WebLogic Cluster のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
