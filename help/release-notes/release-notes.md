@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 122b5f1f76bd5c338b18102aff15b84ff3fbf0c6
+source-git-commit: 5c1955fdf714cd82fcd8d6b23ae11cd59d8ab1a6
 workflow-type: tm+mt
-source-wordcount: '5208'
+source-wordcount: '5204'
 ht-degree: 41%
 
 ---
@@ -97,7 +97,7 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 #### [!DNL Content Fragments]{#sites-contentfragments-6523}
 
 * `DeleteVariationIT.testUpdateBasic` の検証テストエラーを修正しました。 サービスパックの検証の実行中に `DeleteVariationIT.testUpdateBasic` テストが失敗しなくなりました。 この修正により、JSON 処理ロジックで欠落しているテキストマッピングの問題が修正され、テストの安定性が確保され、不要なテストの中断が回避されます。 （SITES-28022）
-* AEMは、画像アセットのXMP メタデータの形式が正しくないことに起因するパフォーマンスの低下を防ぐことができるようになりました。 数値セグメントや不適格な構造など、無効または準拠していないXMP プロパティ名を含むAssetsで、処理中に繰り返し警告ログがトリガーされなくなりました。 システムは、問題のあるメタデータを除外して、アセットの取り込みと検証がエラーなく完了するようにします。 （SITES-30683） &lt;!— AEM 6.5 LTS SP1>
+* AEMは、画像アセットのXMP メタデータの形式が正しくないことに起因するパフォーマンスの低下を防ぐことができるようになりました。 数値セグメントや不適格な構造など、無効または準拠していないXMP プロパティ名を含むAssetsで、処理中に繰り返し警告ログがトリガーされなくなりました。 システムは、問題のあるメタデータを除外して、アセットの取り込みと検証がエラーなく完了するようにします。 （SITES-30683） <!-- AEM 6.5 LTS SP1 -->
 
 
 <!-- #### [!DNL Content Fragments] - Admin{#sites-admin-6523}
@@ -193,11 +193,11 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 
 ### [!DNL Assets]{#assets-6523}
 
-* ![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL [!DNL AEM]Assets &#x200B;]**&#x200B;を選択し、**[!UICONTROL &#x200B; Adobe Stockを検索 &#x200B;]**&#x200B;フォルダーに移動してストック画像を選択した後に、オンプレミス（6.5.22.0）のナビゲーションページで次の問題が発生します。
+* ![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL [!DNL AEM]Assets ]**を選択し、**[!UICONTROL  Adobe Stockを検索 ]**フォルダーに移動してストック画像を選択した後に、オンプレミス（6.5.22.0）のナビゲーションページで次の問題が発生します。
    * **[!UICONTROL ライセンスと保存]** をクリックすると空のドロップダウンが表示されるので、選択したストック画像にライセンスを取得して保存することができません。
    * ストック画像を選択するか、ストックページの URL を再入力すると、[!DNL AEM] ホームページにリダイレクトされ、Adobe Stock画像にアクセスできなくなります。 （ASSETS-48687）
 * フォルダーの名前に、[!DNL AEM] オンプレミス（6.5.22.0）ナビゲーション ページの名前に `/` が含まれる場合、フォルダーの管理中に問題が発生します。 （ASSETS-46740）
-* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL &#x200B; コレクション &#x200B;]**&#x200B;ビューから読み込まれません。 （ASSETS-46738）
+* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL  コレクション ]**ビューから読み込まれません。 （ASSETS-46738）
 * [!DNL InDesign] as `Day CQ DAM Mime Type OSGI` Service の統合の問題によって、[!DNL InDesign] ファイルが `x-indesign` ではなく `x-adobe-indesign` と誤って認識されます。 （ASSETS-45953）
 * セッショ [!DNL AEM 6.5.21] リークは、標準の **[!UICONTROL Brand Portalへのスケジュールされた公開]** ワークフローステップまで追跡されました。 （ASSETS-44104）
 * **[!UICONTROL メモリ不足（OOM）]** 画像の処理および公開時に、[!DNL AEM] でエラーが表示される。 この問題は、**[!DNL Dam Asset update]** や **[!DNL Dynamic Media: Reprocess assets]** などのワークフローの非推奨メソッドが原因でした。 （ASSETS-43343）
