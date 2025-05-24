@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 1b2ee697ddde1b9a137a5cb47f0c2a3a1a2724a3
+source-git-commit: 6766bd8a1d7569f3913fc20384796b885ed68138
 workflow-type: tm+mt
 source-wordcount: '5310'
 ht-degree: 40%
@@ -193,11 +193,11 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 
 ### [!DNL Assets]{#assets-6523}
 
-* ![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL [!DNL AEM]Assets &#x200B;]**&#x200B;を選択し、**[!UICONTROL &#x200B; Adobe Stockを検索 &#x200B;]**&#x200B;フォルダーに移動してストック画像を選択した後に、オンプレミス（6.5.22.0）のナビゲーションページで次の問題が発生します。
+* ![Assets](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL [!DNL AEM]Assets ]**を選択し、**[!UICONTROL  Adobe Stockを検索 ]**フォルダーに移動してストック画像を選択した後に、オンプレミス（6.5.22.0）のナビゲーションページで次の問題が発生します。
    * **[!UICONTROL ライセンスと保存]** をクリックすると空のドロップダウンが表示されるので、選択したストック画像にライセンスを取得して保存することができません。
    * ストック画像を選択するか、ストックページの URL を再入力すると、[!DNL AEM] ホームページにリダイレクトされ、Adobe Stock画像にアクセスできなくなります。 （ASSETS-48687）
 * フォルダーの名前に、[!DNL AEM] オンプレミス（6.5.22.0）ナビゲーション ページの名前に `/` が含まれる場合、フォルダーの管理中に問題が発生します。 （ASSETS-46740）
-* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL &#x200B; コレクション &#x200B;]**&#x200B;ビューから読み込まれません。 （ASSETS-46738）
+* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL  コレクション ]**ビューから読み込まれません。 （ASSETS-46738）
 * [!DNL InDesign] as `Day CQ DAM Mime Type OSGI` Service の統合の問題によって、[!DNL InDesign] ファイルが `x-indesign` ではなく `x-adobe-indesign` と誤って認識されます。 （ASSETS-45953）
 * セッショ [!DNL AEM 6.5.21] リークは、標準の **[!UICONTROL Brand Portalへのスケジュールされた公開]** ワークフローステップまで追跡されました。 （ASSETS-44104）
 * **[!UICONTROL メモリ不足（OOM）]** 画像の処理および公開時に、[!DNL AEM] でエラーが表示される。 この問題は、**[!DNL Dam Asset update]** や **[!DNL Dynamic Media: Reprocess assets]** などのワークフローの非推奨メソッドが原因でした。 （ASSETS-43343）
@@ -477,16 +477,16 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 * **AEM 6.5.21-6.5.23 およびAEM 6.5 LTS GA の JSP スクリプティングバンドルの問題**
 AEM 6.5.21、6.5.22、6.5.23、およびAEM 6.5 LTS GA には、既知の問題を含む `org.apache.sling.scripting.jsp:2.6.0` バンドルが付属しています。 この問題は、通常、AEM インスタンスが多数の同時リクエストを処理する際に高負荷で発生します。
 
-この問題が発生すると、`org.apache.sling.scripting.jsp:2.6.0` への参照と共に、次の例外のいずれかがエラーログに表示される場合があります。
+  この問題が発生すると、`org.apache.sling.scripting.jsp:2.6.0` への参照と共に、次の例外のいずれかがエラーログに表示される場合があります。
 
-* `java.io.IOException: classFile.delete() failed`
-* `java.io.IOException: tmpFile.renameTo(classFile) failed`
-* `java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0`
-* `java.io.FileNotFoundException`
+   * `java.io.IOException: classFile.delete() failed`
+   * `java.io.IOException: tmpFile.renameTo(classFile) failed`
+   * `java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0`
+   * `java.io.FileNotFoundException`
 
-このエラーが発生した場合は、AEM インスタンスを再起動するしかありません。
+  このエラーが発生した場合は、AEM インスタンスを再起動するしかありません。
 
-Adobeのカスタマーサポートに連絡し、このリリースノートを参照して解決してください。
+  Adobeのカスタマーサポートに連絡し、このリリースノートを参照して解決してください。
 
 * **Oak 関連**
 サービスパック 13 以降で、永続性キャッシュに影響する次のエラーログが表示されるようになりました。
