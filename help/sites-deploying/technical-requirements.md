@@ -7,9 +7,9 @@ feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: cdd0e52c4f64080a76d67baf678a97e91ca7c711
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3651'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -220,9 +220,9 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
    >* libxcb.x86_64（1.13-1.el7）
    >* libXau.x86_64（1.0.8-2.1.el7）
    >* glibc-locale.x86_64（2.17 以降）
-   >* OpenSSL 3 （OS のデフォルトの場所で必要）。
+   >* OpenSSL 3（OS のデフォルトの場所で必要）。
 
-   *OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。 非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。*
+   *OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。*
 
 1. Microsoft® Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
 1. AEM Forms は、Microsoft® Window Server でサポートされていますが、サポートレベル R 制限はありません。

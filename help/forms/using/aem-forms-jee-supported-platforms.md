@@ -10,9 +10,9 @@ exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 source-git-commit: cdd0e52c4f64080a76d67baf678a97e91ca7c711
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4370'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -169,7 +169,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
    <td><p>サポート対象</p> </td>
   </tr>
     <tr>
-   <td><p> MongoDB Enterprise 6.0 （非推奨） </p> </td>
+   <td><p> MongoDB Enterprise 6.0（廃止） </p> </td>
    <td><p>リポジトリ Microkernel</p> </td>
    <td><p>サポート対象</p> </td>
   </tr>
@@ -194,7 +194,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
    <td></td>
   </tr>
   <tr>
-   <td><p>Microsoft® SQL Server 2019 （非推奨） </p> </td>
+   <td><p>Microsoft® SQL Server 2019（廃止） </p> </td>
    <td><p>リポジトリ Microkernel</p> </td>
    <td><p>サポート対象</p> </td>
   </tr>
@@ -250,7 +250,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
   </tr>
   <tr>
    <td>Microsoft® SQL Server<br /> </td>
-   <td><p>Microsoft® SQL Server JDBC ドライバー 8.2.2 <br /> </p> <p>sqljdbc8.jar （非推奨） </p> </td>
+   <td><p>Microsoft® SQL Server JDBC ドライバー 8.2.2<br /> </p> <p>sqljdbc8.jar（廃止） </p> </td>
    <td><p>Microsoft® の web サイトからダウンロードします。</p> </td>
   </tr>
   <tr>
@@ -329,7 +329,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td><p>Red Hat® Enterprise Linux® 8 （Kernel 4.x）（64 ビット版）（非推奨）</p> </td>
+   <td><p>Red Hat® Enterprise Linux® 8（Kernel 4.x）（64 ビット版）（廃止）</p> </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリース、累積アップデート、需要なアップデート</p> </td>
   </tr>
@@ -339,7 +339,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
    <td><p>マイナーリリース、累積アップデート、需要なアップデート</p> </td>
   </tr>
   <tr>
-   <td><p>Red Hat® Enterprise Linux 9（Kernel 4.x）（64 ビット版）</p> </td>
+   <td><p>Red Hat® Enterprise Linux® 9（Kernel 4.x）（64 ビット版）</p> </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリース、累積アップデート、需要なアップデート</p> </td>
   </tr>
@@ -512,7 +512,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2019 （非推奨） </td>
+   <td>Microsoft® Office 2019（廃止） </td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
   </tr>
   <tr>
@@ -679,11 +679,11 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 - Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC
 - Designer をインストールするための管理者権限。
 - Microsoft® Visual C++ 2019（VC 14.28 以降）32 ビットランタイム
-- OpenSSL 3 （OS のデフォルトの場所で必要）。
+- OpenSSL 3（OS のデフォルトの場所で必要）。
 
 >[!NOTE]
 >
-> ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。 非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
+> ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
 
 ### ブラウザー {#browsers}
 
@@ -815,7 +815,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit) 
 - Microsoft&reg; Office 2016
@@ -898,7 +898,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
   - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
-    - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+    - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
     - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
     - Microsoft&reg; Windows Server 2016 (64-bit) 
     - Microsoft&reg; Office 2016
@@ -907,16 +907,16 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 -->
 
-### リリース 6.5.23.0 （2025 年 5 月 29 日（PT））
+### リリース 6.5.23.0（2025年5月29日（PT））
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 | MongoDB Enterprise 7.0 | | MongoDB Enterprise 6.0 |
-| MYSQL 8.4 | | MYSQL 8.0.27 |
+| MySQL 8.4 | | MySQL 8.0.27 |
 | Microsoft® SQL Server 2022 | | Microsoft® SQL Server 2019 |
 | Microsoft® SQL Server JDBC ドライバー 12.8 | | Microsoft® SQL Server JDBC ドライバー 8.2 |
 | Microsoft® Office 2021 | | Microsoft® Office 2019 |
-| Red Hat® Enterprise Linux 9（Kernel 4.x）（64 ビット版） | | Red Hat® Enterprise Linux 8（Kernel 4.x）（64 ビット版） |
+| Red Hat® Enterprise Linux® 9（Kernel 4.x）（64 ビット版） | | Red Hat® Enterprise Linux® 8（Kernel 4.x）（64 ビット版） |
 
 ### リリース 6.5.22.0（2024年11月29日（PT））
 
