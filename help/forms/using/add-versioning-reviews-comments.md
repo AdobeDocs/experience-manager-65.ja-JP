@@ -1,25 +1,29 @@
 ---
-title: AEM 6.5 アダプティブフォームにバージョン、コメント、注釈を追加する。
+title: Am AEM 6.5 アダプティブフォームにバージョン、コメント、注釈を追加する。
 description: AEM 6.5 アダプティブフォームのコアコンポーネントを使用すると、アダプティブフォームにコメント、注釈、バージョン管理を追加できます。
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: 91e6fca2-60ba-45f1-98c3-7b3fb1d762f5
-source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
+source-git-commit: 130d900a9c268362b75ffa947606c7145a1f8c9d
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 51%
+source-wordcount: '631'
+ht-degree: 50%
 
 ---
 
 # アダプティブフォームのバージョン管理、レビューおよびコメント
 
 <!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+<span class="preview"> This feature is under the early adopter program. If you're interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
 -->
 
 <span class="preview"> この機能はデフォルトでは有効になっていません。 公式アドレスからaem-forms-ea@adobe.comに書き込んで、機能へのアクセスをリクエストできます。</span>
 
 アダプティブフォームのコアコンポーネントを使用すると、フォーム作成者はフォームにバージョン管理、コメント、注釈を追加できます。 これらの機能を使用すると、複数のバージョンの作成と管理、コメントを介した共同作業、特定のフォームセクションへのメモの追加などが可能になり、フォームの作成作業が簡略化されます。
+
+アダプティブフォームのバージョン管理、コメント、注釈の機能については、このビデオを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3463265)
 
 ## 前提条件 {#prerequisite-versioning}
 
@@ -33,7 +37,7 @@ ht-degree: 51%
 
 フォームのバージョンを作成するには、次の手順に従います。
 
-1. AEM Forms環境で、**[!UICONTROL フォーム]**/**2&rbrace;Formsおよびドキュメント &rbrace; に移動し、** フォーム **を選択します。**
+1. AEM Forms環境で、**[!UICONTROL フォーム]**/]**2}Formsおよびドキュメント } に移動し、** フォーム **を選択します。**[!UICONTROL 
 1. 左パネルの選択ドロップダウンから、「**[!UICONTROL バージョン]**」を選択します。
    ![フォームの選択](assets/select-a-form.png)
 1. 左下のパネルにある **3 つのドット**&#x200B;をクリックし、「**[!UICONTROL バージョンとして保存]**」をクリックします。
@@ -75,7 +79,7 @@ ht-degree: 51%
 
 1. **[!UICONTROL 編集]**&#x200B;モードでフォームを開きます。
 
-1. 画像に示すように、右上のパネルにある&#x200B;**追加アイコン**&#x200B;をクリックします。
+1. 画像に示すように、右上のパネルにある&#x200B;**追加アイコン**をクリックします。
    ![注釈](assets/annotation.png)
 
 1. 次に、画像で示されているように左上のレールにある **追加アイコン** をクリックして、注釈を追加します。
