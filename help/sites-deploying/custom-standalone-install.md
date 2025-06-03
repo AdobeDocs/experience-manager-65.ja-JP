@@ -7,10 +7,10 @@ exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 3effd4fa686ac89421ffe74e52bf34830ddd776c
 workflow-type: tm+mt
-source-wordcount: '1629'
-ht-degree: 100%
+source-wordcount: '1614'
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,7 @@ AEM のデフォルトのポートは 4502 です。このポートが使用で�
 
 * ファイル名を変更する場合は、先頭を `cq;` にする必要があります。例えば、`cq5-publish-p4503.jar` のように指定します。
 
-* ポート番号の直前には -p を付けることをお勧めします。例えば、cq5-publish-p4503.jar または cq5-author-p6754.jar のように指定します&#x200B;*。*
+* ポート番号の直前には接頭辞として -p を付けることをお勧めします。例えば、cq5-publish-p4503.jar または cq5-author-p6754.jar のように指定します&#x200B;*。*
 
 >[!NOTE]
 >
@@ -36,8 +36,8 @@ AEM のデフォルトのポートは 4502 です。このポートが使用で�
 >
 >* ポート番号は 4 桁または 5 桁にする
 >* ダッシュの後にこれらの数字を指定する
->* ファイル名にその他の数字が含まれる場合は、ポート番号の直前に `-p` を付ける
->* ファイル名の先頭のプレフィックス「cq5」は無視される
+>* ファイル名にその他の数字が含まれる場合は、ポート番号の直前に接頭辞として `-p` を付ける
+>* ファイル名の先頭の接頭辞「cq5」は無視される
 >
 
 >[!NOTE]
@@ -85,10 +85,6 @@ Oracle Java 11（または一般にバージョン 8 より新しい Java）を�
 * 開発時に、ファイルシステムへの項目の追加が容易になります。
 * 問題が発生した場合は、web コンソールとリポジトリにアクセスできません。その際に、このディレクトリにバンドルを追加してインストールできます。
 * クイックスタートを起動する前に `crx-quickstart/install` フォルダーを作成して、そこにパッケージを追加できます。
-
->[!NOTE]
->
->例として、[サーバーの起動時に CRX パッケージを自動的にインストールする方法](https://helpx.adobe.com/jp/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html)を参照してください。
 
 ## Windows サービスとしての Adobe Experience Manager のインストールと起動 {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
@@ -163,7 +159,7 @@ Java マシンの一時フォルダーのデフォルトの場所は `/tmp` で�
 
 >[!CAUTION]
 >
->これらのオプションは、AEM 6.5（6.5.0.0）のオリジナルのリリース以降で有効です。 SP の新しいリリースでは変更が可能です。
+>これらのオプションは、AEM 6.5 （6.5.0.0）のオリジナルのリリース以降で有効です。 SP の新しいリリースでは変更が可能です。
 
 ```shell
 Loading quickstart properties: default
