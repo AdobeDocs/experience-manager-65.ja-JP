@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cdd0e52c4f64080a76d67baf678a97e91ca7c711
-workflow-type: ht
+source-git-commit: 0dca00759fc37a2bc095a5a6e74f6b1b79f9eb76
+workflow-type: tm+mt
 source-wordcount: '3651'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -119,6 +119,7 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 | ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z：実稼動環境ではサポートされていません |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft® Azure Blob Storage | バイナリ | A：サポート対象 |
+| MongoDB Enterprise 7.0 | リポジトリ | A：サポート対象 `[3, 4]` |
 | MongoDB Enterprise 6.0 | リポジトリ | A：サポート対象 `[3, 4]` |
 | MongoDB Enterprise 5.0 | リポジトリ | A：サポート対象 `[3, 4]` |
 | MongoDB Enterprise 4.4 | リポジトリ | A：サポート対象 `[2, 3, 4, 7]` |
@@ -207,7 +208,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. x、5.x および 6.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、CentOS、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x、5.x および 6.x には Red Hat® ディストリビューションの派生 OS （Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。 AEM Formsのアドオン機能は、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
 1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
 1. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
@@ -401,7 +402,7 @@ Linux® と Windows の両方に適用されるハードウェア要件は次の
 
 Linux® で Dynamic Media を使用する場合は、次の必要条件を満たす必要があります。
 
-* 最新の修正パッチが適用された RedHat® Enterprise 7 または CentOS 7 以降
+* 最新の修正パッチが適用された Red Hat® Enterprise 7 以降
 * 64 ビットオペレーティングシステム
 * スワップ無効（推奨）
 * SELinux 無効（後述の注意を参照）
