@@ -71,7 +71,7 @@ ht-degree: 34%
 
    * Red Hat® Enterprise Linux® 9 （Kernel 4.x、64 ビット） 
 
-* [ 強化されたファイル添付コンポーネント ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：セキュリティ対策として、許可されたファイルタイプのチェックを回避しようとする拡張子が変更されたファイルの送信をコンポーネントが防ぐようになりました。 このようなファイルは、有効なファイルタイプのみが受け入れられるように、送信時にブロックされます。
+* [ 強化されたファイル添付コンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：セキュリティ対策として、許可されたファイルタイプのチェックを回避しようとする拡張子が変更されたファイルの送信をコンポーネントが防ぐようになりました。 このようなファイルは、有効なファイルタイプのみが受け入れられるように、送信時にブロックされます。
 
 <!--* **Two-Factor authentication with SAML for AdminUI** 
 
