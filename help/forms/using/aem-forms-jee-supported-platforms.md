@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 0a3d1e5b71ef8cb3d1829e7215cc22a0cb376dc9
+source-git-commit: 813ddbf98b65588752ffa94e9ac4a810cff45302
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4357'
 ht-degree: 97%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 97%
 
 Adobeでは、JEE 上のAEM 6.5.23.0 Forms サービスパック 23 （6.5.23.0）を含んだ [ 完全なインストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) のほか、パッチインストーラーをリリースしました。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
+新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる [Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
 
 
 </div>
@@ -914,7 +914,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -1011,16 +1011,11 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
 
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
    - OpenOffice 4.1.2
-
-
-
-
-
 
 ### Release 6.5.23.0 (June 06, 2025)
 
@@ -1036,6 +1031,15 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | Red Hat&reg; Enterprise Linux&reg; 9 (Kernel 4.x) (64-bit) | |Red Hat&reg; Enterprise Linux&reg; 8 (Kernel 4.x) (64-bit)  |
 -->
 
+### リリース 6.5.23.0（2025年6月6日（PT））
+
+| 追加したサポート | 削除したサポート | 非推奨のサポート |
+| -------------- | --------------- | ------------------- |
+| MongoDB Enterprise 7.0 | MongoDB Enterprise 5.0 | MongoDB Enterprise 6.0 |
+| MySQL 8.4 | SUSE® Linux® Enterprise Server 12（64 ビット版） | MySQL 8.0.27 |
+| Microsoft® SQL Server 2022 | | Microsoft® SQL Server 2019 |
+| Microsoft® SQL Server JDBC ドライバー 12.8 | | Microsoft® SQL Server JDBC ドライバー 8.2 |
+| Red Hat® Enterprise Linux® 9（Kernel 4.x）（64 ビット版） | | Red Hat® Enterprise Linux® 8（Kernel 4.x）（64 ビット版） |
 
 ### リリース 6.5.22.0（2024年11月29日（PT））
 
@@ -1043,9 +1047,6 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 | SUSE® Linux® Enterprise Server 15 SP6（64 ビット版） | |  |
-
-
-
 
 ### リリース 6.5.19.1（2023年12月15日（PT））
 
