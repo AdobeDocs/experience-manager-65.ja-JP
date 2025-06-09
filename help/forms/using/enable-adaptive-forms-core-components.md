@@ -9,10 +9,10 @@ role: Admin, Developer
 feature: Adaptive Forms,Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: c75cd7a0cbd0c19fd10cc7512bbfa14fae1e4f92
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 100%
+source-wordcount: '955'
+ht-degree: 98%
 
 ---
 
@@ -35,7 +35,7 @@ AEM 6.5 Forms 環境でアダプティブフォームコアコンポーネント
 
 AEM 6.5 Forms 環境でアダプティブフォームコアコンポーネントを有効にする前に、以下の操作が必要です。
 
-* [AEM 6.5 Forms サービスパック 16（6.5.16.0）以降にアップグレードします](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)。
+* [AEM 6.5 Forms サービスパック 16 （6.5.16.0）以降へのアップグレード ](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)。
 
 * [Apache Maven](https://maven.apache.org/download.cgi) の最新リリースをインストールします。
 
@@ -59,7 +59,7 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
       -D appId="myform" ^
       -D groupId="com.myform" ^
       -D includeFormsenrollment="y" ^
-      -D aemVersion="6.5.15" 
+      -D aemVersion="6.5.23" 
    ```
 
    * Linux または Apple macOS
@@ -73,12 +73,10 @@ AEM アーキタイプ 41 [以降](https://github.com/adobe/aem-project-archetyp
       -D appId="myform" \
       -D groupId="com.myform" \
       -D includeFormsenrollment="y" \
-      -D aemVersion="6.5.15" 
+      -D aemVersion="6.5.23" 
    ```
 
    上記のコマンドを実行する際は、次の点を考慮してください。
-
-   * `aemVersion` プロパティの値は、`6.5.15.0` からそれ以外に変更しないでください。
 
    * `archetypeVersion` プロパティを `41` 以降に設定します。最新バージョンについては、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)ドキュメントの必要システム構成の節を参照してください。
 
