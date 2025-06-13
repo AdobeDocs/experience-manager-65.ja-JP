@@ -10,9 +10,9 @@ exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: ht
-source-wordcount: '267'
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+workflow-type: tm+mt
+source-wordcount: '249'
 ht-degree: 100%
 
 ---
@@ -50,15 +50,14 @@ Adobe Analytics と AEM の統合により、web ページのアクティビテ�
 次のページを参照してください。
 
 * ユーザーデータを収集するコンポーネントの開発と Adobe Analytics フレームワークのカスタマイズに関する情報については、[Adobe Analytics 統合の拡張](/help/sites-developing/extending-analytics.md)を参照してください。
-* Adobe Analytics 統合のトラブルシューティングに関する情報については、[Adobe Analytics 統合 - 問題のトラブルシューティング](https://helpx.adobe.com/jp/experience-manager/kb/sitecatalystintegrationtroubleshooting.html)に関するナレッジベースの記事を参照してください。
 
 >[!NOTE]
 >
 >Adobe Analytics をカスタムプロキシ設定で使用している場合、（例えば、Web コンソールで）**Apache HTTP Client** プロキシ設定に必要な [2 つの OSGi バンドルを設定](/help/sites-deploying/configuring-osgi.md)する必要があります。AEM の一部の機能では 3.x API を使用し、他の機能では 4.x API を使用するので、両方とも必要です。設定：
 >
 >* **Day Commons HTTP Client 3.1**（3.x API を設定）。
->  例：[https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>  >  例：[https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >
 >* **Apache HTTP コンポーネントプロキシ設定**（4.x API を設定）。
->  例：[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
+>  >  例：[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >

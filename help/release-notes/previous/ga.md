@@ -1,13 +1,13 @@
 ---
 title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
-description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
+description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています。'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
-workflow-type: ht
-source-wordcount: '4493'
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
+workflow-type: tm+mt
+source-wordcount: '4477'
 ht-degree: 100%
 
 ---
@@ -194,7 +194,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### ページエディター {#page-editor}
 
-* JS SDK を使用する React および Angular クライアント側コンポーネントで構築された単一ページアプリエクスペリエンスのコンテキスト内編集および作成が可能になりました（SPA エディターとも呼ばれます）。
+* JS SDK を使用する React および Angular クライアント側コンポーネントで構築された単一ページアプリエクスペリエンスのコンテキスト内編集および構成が可能になりました（SPA エディターとも呼ばれます）。
 * 基礎モードは、ページに基礎モードが設定されている場合にのみ表示されます。
 
 #### コンテンツフラグメントおよびエディター {#content-fragments-amp-editor}
@@ -274,7 +274,7 @@ AEM Communities では、登録ユーザーがユーザー生成コンテンツ�
 
 **グループメッセージング**
 
-コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、1 回のメール作成でダイレクトメッセージをグループに一括送信できるようになりました。[グループメッセージング](/help/communities/configure-messaging.md)を許可する には、[Messaging Operations Service](/help/communities/messaging.md#group-messaging) の両方のインスタンスを有効にします。
+コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、単一のメール構成でダイレクトメッセージをグループに一括送信できるようになりました。[グループメッセージング](/help/communities/configure-messaging.md)を許可する には、[Messaging Operations Service](/help/communities/messaging.md#group-messaging) の両方のインスタンスを有効にします。
 
 ![グループメッセージ](/help/release-notes/assets/group-messaging.png)
 
@@ -423,7 +423,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 * 送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できるトランザクションレポート
 * インタラクティブ通信の操作性の向上
 * アダプティブフォームでのクラウドベースの電子署名
-* AEM Sites の単一ページアプリケーション（SPA）へのアダプティブフォームやインタラクティブコミュニケーションの組み込み。
+* AEM Sites の単一ページアプリケーション（SPA）へのアダプティブフォームやインタラクティブコミュニケーションの埋め込み。
 * AEM ワークフローでの変数のサポート
 * インタラクティブ通信でのデータ表示パターンのサポート
 * アダプティブフォームとインタラクティブ通信テーブルの並べ替え
@@ -435,7 +435,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&amp;lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 このような優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更が行われました。
 
@@ -529,8 +529,6 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
    1. `/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true` の呼び出し。
    2. AEM 6.5 へのアップグレード。
    3. AEM 6.5 での「遅延コンテンツ移行」の実行。
-
-  [ナレッジベース](https://helpx.adobe.com/jp/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html)の記事には、この問題の詳細と回避策が記載されています。
 
 * AEM 6.5 インスタンスで JDK 11 を使用している場合、一部のパッケージをデプロイすると、一部のページが空白で表示されることがあります。次のエラーメッセージがログファイルに表示されます。
 

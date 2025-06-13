@@ -10,10 +10,10 @@ feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '5792'
-ht-degree: 100%
+source-wordcount: '5755'
+ht-degree: 99%
 
 ---
 
@@ -1101,16 +1101,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
 >* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
 >* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
->* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
-
-### 100％の CPU 使用率 {#cpu-at}
-
-システムの CPU が常に 100％で稼働している場合は、次の点を確認してください。
-
-* ナレッジベース
-
-   * [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
 ### メモリ不足 {#out-of-memory}
 
@@ -1125,7 +1116,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [AEM を起動](/help/sites-deploying/deploy.md#getting-started)するために使用される JVM 設定
 * ナレッジベース
 
-   * [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
 
 ### ディスク I/O {#disk-i-o}
 
@@ -1143,8 +1134,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
 * ナレッジベース
 
-   * [開いているファイルが多すぎる](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=ja)
-   * [ジャーナルの消費ディスク領域が大きすぎる](https://helpx.adobe.com/jp/experience-manager/kb/JournalTooMuchDiskSpace.html)
+   * [ 開いているファイルが多すぎます ] （https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html
 
 ### 通常のパフォーマンス低下 {#regular-performance-degradation}
 
@@ -1153,7 +1143,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [メモリ不足](#outofmemory)
 * ナレッジベース
 
-   * [閉じられていないセッション](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUnclosedSessions.html)
+   * [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)
 
 ### JVM の調整 {#jvm-tuning}
 

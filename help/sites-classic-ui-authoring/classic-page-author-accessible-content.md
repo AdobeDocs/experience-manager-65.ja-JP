@@ -10,10 +10,10 @@ exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '9070'
-ht-degree: 100%
+source-wordcount: '9057'
+ht-degree: 99%
 
 ---
 
@@ -314,7 +314,7 @@ AEM では、「**代替テキスト**」がデフォルトで画像に追加さ
 * [達成基準 1.2.3 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-media-equiv-audio-desc)
 * [Adobe Encore CS5](https://helpx.adobe.com/jp/premiere-pro/using/whats-new.html)
 
-### キャプション（ライブ）（1.2.4）    {#captions-live}
+### キャプション（ライブ）（1.2.4）  {#captions-live}
 
 * 達成基準 1.2.4
 * レベル AA
@@ -328,10 +328,9 @@ AEM では、「**代替テキスト**」がデフォルトで画像に追加さ
 
 上記の[キャプション（収録済み）](#captions-pre-recorded)のガイダンスに従ってください。ただし、メディアがライブなので、キャプションは可能な限り短時間で、起こっていることに応じて作成する必要があります。そのため、リアルタイムキャプションツールまたは音声テキスト変換ツールの使用を検討する必要があります。
 
-詳細な手順説明はこのドキュメントの範囲外ですが、次のリソースで役に立つ情報が提供されています。
+詳細な手順はこのドキュメントの範囲外ですが、次のリソースで役に立つ情報が提供されています。
 
 * [WebAIM：Real Time Captioning](https://webaim.org/techniques/captions/realtime)
-* [AccessIT（ワシントン大学）：Can captions be generated automatically using speech recognition?（音声認識を使用してキャプションを自動生成できるか？）](https://www.washington.edu/doit/programs/accessit?1209)
 
 #### 詳細情報 - キャプション（ライブ）（1.2.4） {#more-information-captions-live}
 
@@ -672,7 +671,7 @@ AEM では、適切な HTML 要素を使用することにより、web ページ
 
 [原則 2：操作可能 - ユーザーインターフェイスコンポーネントおよびナビゲーションは操作可能でなければならない。](https://www.w3.org/TR/WCAG20/#operable)
 
-### 一時停止、停止、非表示（2.2.2）    {#pause-stop-hide}
+### 一時停止、停止、非表示（2.2.2）  {#pause-stop-hide}
 
 * 達成基準 2.2.2
 * レベル A
@@ -743,7 +742,7 @@ AEM では、適切な HTML 要素を使用することにより、web ページ
 * [達成基準 2.3.1 について](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)
 * [達成基準 2.3.1 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#seizure)
 
-### ページタイトル（2.4.2）    {#page-titled}
+### ページタイトル（2.4.2）  {#page-titled}
 
 * 達成基準 2.4.2
 * レベル A
@@ -764,7 +763,7 @@ AEM で新しい HTML ページを作成する際には、ページタイトル�
 * [達成基準 2.4.2 について](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 * [達成基準 2.4.2 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-title)
 
-### リンクの目的（コンテキスト内）（2.4.4）    {#link-purpose-in-context}
+### リンクの目的（コンテキスト内）（2.4.4）  {#link-purpose-in-context}
 
 * 達成基準 2.4.4
 * レベル A

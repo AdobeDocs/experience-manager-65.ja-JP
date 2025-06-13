@@ -9,9 +9,9 @@ exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1182'
 ht-degree: 100%
 
 ---
@@ -153,8 +153,3 @@ AEM は単一のディレクトリにインストールされるので、アン�
 >Adobe では、AEM を削除する前にリポジトリをバックアップすることをお勧めします。&lt;cq-installation-directory> 全体を削除すると、リポジトリも削除されます。削除する前にリポジトリのデータを保管する場合は、&lt;cq-installation-directory>/crx-quickstart/repository フォルダーを他の場所に移動またはコピーしてから、その他のフォルダーを削除するようにしてください。
 
 例えば、データベースサーバーなど、AEM のインストールが外部ストレージを使用している場合、フォルダーを削除してもデータは自動的には削除されませんが、ストレージ設定が削除されるので、JCR コンテンツの復元は困難になります。
-
-### JSP ファイルが JBoss® でコンパイルされない {#jsp-files-are-not-compiled-on-jboss}
-
-JSP ファイルを JBoss® の Experience Manager にインストールまたは更新したものの、対応するサーブレットがコンパイルされない場合は、JBoss® JSP コンパイラが正しく設定されているかを確認します。詳しくは、
-[JBoss® での JSP コンパイルの問題](https://helpx.adobe.com/jp/experience-manager/kb/jsps-dont-compile-jboss.html)に関する記事を参照してください。

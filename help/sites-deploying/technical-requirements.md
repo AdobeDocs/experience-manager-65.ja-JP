@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 813ddbf98b65588752ffa94e9ac4a810cff45302
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '3651'
+source-wordcount: '3630'
 ht-degree: 98%
 
 ---
@@ -91,10 +91,10 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | **プラットフォーム** | **サポートレベル** | **リンク** |
 |---|---|---|
 | Oracle Java™ SE 17 JDK | Z：サポート対象外 `[1]` |
-| Oracle Java™ SE 11 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
+| Oracle Java™ SE 11 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24<td>) |
 | Oracle Java™ SE 10 JDK | Z：サポート対象外 `[1]` |
 | Oracle Java™ SE 9 JDK | Z：サポート対象外 `[1]` |
-| Oracle Java™ SE 8 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
+| Oracle Java™ SE 8 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=10) |
 | IBM® J9 VM - ビルド 2.9、JRE 1.8.0 | A：サポート対象 `[2]` |
 | IBM® J9 VM - ビルド 2.8、JRE 1.8.0 | A：サポート対象 `[2]` |
 | Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` | |
@@ -554,7 +554,7 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 * **オペレーティングシステム：**
 
-   * Linux®（64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。32 ビットのクライアントライブラリをインストールする手順については、[64 ビット RedHat® Linux® で XMP の抽出と書き戻しを有効にする方法](https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)を参照してください。
+   * Linux® （64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
 
    * Windows Server
    * macOS X（64 ビット）

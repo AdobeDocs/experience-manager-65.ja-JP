@@ -9,9 +9,9 @@ exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: '1767'
 ht-degree: 100%
 
 ---
@@ -73,8 +73,6 @@ ERD の意味では、宣言されているデータ構造について、最初�
 >[!CAUTION]
 >
 >コンテンツリポジトリの構造化の方法はパフォーマンスにも影響を及ぼす可能性があります。最適なパフォーマンスを確保するために、コンテンツリポジトリ内の個々のノードに接続される子ノードの数は、ルールとして 1,000 個未満にする必要があります。
->
->[CRX で処理できるデータの量](https://helpx.adobe.com/jp/experience-manager/kb/CrxLimitation.html)を参照してください。
 
 #### 例 {#example-2}
 

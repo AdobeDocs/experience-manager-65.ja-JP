@@ -9,9 +9,9 @@ exl-id: fbe15e1b-830b-4752-bd02-0d239a90bc68
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1205'
 ht-degree: 100%
 
 ---
@@ -105,7 +105,3 @@ DAM プロセスは、大量データの並行実行に優れています。ア�
 
 * 選択的なレンディション生成：アセット処理ワークフローに条件を追加することによって、必要なレンディションだけを生成します。これにより、コストがかかるレンディションが、限られたアセットに対してのみ生成されるようになります。
 * インスタンス間の共有データストア：ディスク容量が不足している場合、このデータストアを利用することで、必要なディスク容量を大幅に減らすことができますが、設定に手間がかかり、データストアの自動クリーンアップが使用できなくなります。
-
-## 参考情報 {#further-reading}
-
-* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)

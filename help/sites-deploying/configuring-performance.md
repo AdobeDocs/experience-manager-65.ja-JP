@@ -9,9 +9,9 @@ feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 2d6caa10e8f1cf3d0811280e31c2f40bceac20ee
-workflow-type: ht
-source-wordcount: '6470'
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+workflow-type: tm+mt
+source-wordcount: '6467'
 ht-degree: 100%
 
 ---
@@ -459,7 +459,6 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 負荷の生成、パフォーマンスの監視および結果の分析に役立つ様々なツールが用意されています。これらのツールの一部を次に示します。
 
 * [JMeter](https://jmeter.apache.org/)
-* [Load Runner](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 * [InfraRED](https://www.infraredsoftware.com/)
 * [Java™ Interactive Profile](https://jiprof.sourceforge.net/)
 

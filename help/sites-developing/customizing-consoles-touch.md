@@ -10,10 +10,10 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
-workflow-type: ht
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+workflow-type: tm+mt
 source-wordcount: '649'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -64,7 +64,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 >[!NOTE]
 >
->ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」を参照してください。
+>ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)」を参照してください。
 
 ## コンソールのデフォルト表示のカスタマイズ {#customizing-the-default-view-for-a-console}
 

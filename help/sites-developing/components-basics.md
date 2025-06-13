@@ -10,10 +10,10 @@ exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '4843'
-ht-degree: 100%
+source-wordcount: '4828'
+ht-degree: 99%
 
 ---
 
@@ -314,7 +314,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>設定した場合、このプロパティはセル ID として取得されます。詳しくは、ナレッジベースの記事の<a href="https://helpx.adobe.com/jp/experience-manager/kb/DesigneCellId.html">デザインのセル ID の作成方法</a>を参照してください。<br /> </td>
+   <td>設定されている場合、このプロパティはセル ID と見なされます。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>

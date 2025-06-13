@@ -9,9 +9,9 @@ exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5405'
 ht-degree: 100%
 
 ---
@@ -424,10 +424,6 @@ Dynamic Media Classic にアセットを公開せずにプッシュするには�
 1. [Dynamic Media Classic アカウントのセキュアプレビューを設定する](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=ja)。
 
 これらの手順は、Dynamic Media Classic で安全なテスト設定を作成する場合と同じです。
-
->[!NOTE]
->
->インストール環境が UNIX® 64 ビットオペレーティングシステムの場合、追加して指定する必要がある設定オプションについては、[https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) を参照してください。
 
 #### 非公開状態でのアセットのプッシュに関する既知の制限  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
