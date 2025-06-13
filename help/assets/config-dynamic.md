@@ -13,9 +13,9 @@ exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: e1a8a73e10101a380183658d64f08a7dc5933ee0
-workflow-type: ht
-source-wordcount: '7992'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -235,11 +235,11 @@ Dynamic Media を有効にするには、コマンドラインまたはクイッ
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer ログには、内部の ImageServer プロセスの動作を分析するために使用できる統計情報と分析情報があります。
    >
-   Image Server ログのファイル名の例：`ImageServer-57346-2020-07-25.log`
+   >Image Server ログのファイル名の例：`ImageServer-57346-2020-07-25.log`
    >
-   * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access ログには、`/is/image` および `/is/content` 経由で Dynamic Media に対して実行された各リクエストが記録されます。
+   >* s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access ログには、`/is/image` および `/is/content` 経由で Dynamic Media に対して実行された各リクエストが記録されます。
    >
-   これらのログは、Dynamic Media が有効の場合のみ使用されます。これらのログは、`system/console/status-Bundlelist` ページから生成される「**すべてダウンロード**」パッケージには含まれません。Dynamic Media の問題がある場合は、カスタマーサポートに連絡する際にこれらのログも添付してください。
+   >これらのログは、Dynamic Media が有効の場合のみ使用されます。これらのログは、`system/console/status-Bundlelist` ページから生成される「**すべてダウンロード**」パッケージには含まれません。Dynamic Media の問題がある場合は、カスタマーサポートに連絡する際にこれらのログも添付してください。
 
 ### Experience Manager を異なるポートやコンテキストパスにインストールした場合 {#if-you-installed-aem-to-a-different-port-or-context-path}
 
@@ -258,7 +258,7 @@ Experience Manager クイックスタート WAR デプロイメントでは、�
 
 >[!NOTE]
 >
-[Experience Manager クイックスタートのスタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、ポート番号とコンテキストパスを自動設定できるので、通常&#x200B;**セルフドメイン**&#x200B;を設定する必要はありません。ただし、すべてのネットワークインターフェイスがオフになっている場合は、**セルフドメイン**&#x200B;を設定する必要があります。
+>[Experience Manager クイックスタートのスタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、ポート番号とコンテキストパスを自動設定できるので、通常&#x200B;**セルフドメイン**&#x200B;を設定する必要はありません。ただし、すべてのネットワークインターフェイスがオフになっている場合は、**セルフドメイン**&#x200B;を設定する必要があります。
 
 ## Dynamic Media を無効にする  {#disabling-dynamic-media}
 
@@ -280,9 +280,9 @@ Dynamic Media はデフォルトでは有効になっていません。ただし
 
    >[!NOTE]
    >
-   Dynamic Media 実行モードを無効にすると、`cqdam.pyramid.tiff` レンディションを生成するワークフローステップは自動的にスキップされます。また、動的レンディションのサポートやその他の Dynamic Media 機能も無効になります。
+   >Dynamic Media 実行モードを無効にすると、`cqdam.pyramid.tiff` レンディションを生成するワークフローステップは自動的にスキップされます。また、動的レンディションのサポートやその他の Dynamic Media 機能も無効になります。
    >
-   また、Experience Manager サーバーを設定した後で Dynamic Media 実行モードを無効にすると、その実行モードの下でアップロードされたアセットがすべて無効になることにも注意してください。
+   >また、Experience Manager サーバーを設定した後で Dynamic Media 実行モードを無効にすると、その実行モードの下でアップロードされたアセットがすべて無効になることにも注意してください。
 
 ## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.5 にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
@@ -290,7 +290,7 @@ Experience Manager - Dynamic Media を 6.3 から 6.5 にアップグレード�
 
 >[!NOTE]
 >
-Experience Manager インスタンスを互換性モードで実行する場合（互換性パッケージがインストールされている場合）、これらのコマンドを実行する必要はありません。
+>Experience Manager インスタンスを互換性モードで実行する場合（互換性パッケージがインストールされている場合）、これらのコマンドを実行する必要はありません。
 
 互換パッケージの有無を問わず、すべてのアップグレードについて、次の Linux curl コマンドを実行することにより、Dynamic Media に付属しているデフォルトの標準提供ビューアプリセットをコピーできます。
 
@@ -315,13 +315,13 @@ Experience Manager インスタンスを互換性モードで実行する場合�
 
 >[!NOTE]
 >
-PTIFF 作成のデフォルトのメモリ制限は、すべてのワークフローで 3 GB です。例えば、他のワークフローを一時停止して、3 GB のメモリを必要とする 1 個の画像を処理できます。または、それぞれ 300 MB のメモリを必要とする 10 個の画像を並行して処理できます。
+>PTIFF 作成のデフォルトのメモリ制限は、すべてのワークフローで 3 GB です。例えば、他のワークフローを一時停止して、3 GB のメモリを必要とする 1 個の画像を処理できます。または、それぞれ 300 MB のメモリを必要とする 10 個の画像を並行して処理できます。
 >
-このメモリ制限は変更でき、使用可能なシステムリソースおよび処理する画像コンテンツのタイプに合わせます。大きなアセットが多数あり、システムに十分なメモリがある場合、この制限を引き上げると、画像を並行して処理することができます。
+>このメモリ制限は変更でき、使用可能なシステムリソースおよび処理する画像コンテンツのタイプに合わせます。大きなアセットが多数あり、システムに十分なメモリがある場合、この制限を引き上げると、画像を並行して処理することができます。
 >
-最大メモリ制限を超えるメモリを必要とする画像は、拒否されます。
+>最大メモリ制限を超えるメモリを必要とする画像は、拒否されます。
 >
-PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL Web コンソール]**／**[!UICONTROL Adobe CQ Scene7 PTiffManager]** に移動して、**[!UICONTROL maxMemory]** の値を変更します。
+>PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL Web コンソール]**／**[!UICONTROL Adobe CQ Scene7 PTiffManager]** に移動して、**[!UICONTROL maxMemory]** の値を変更します。
 
 ### 認証の設定 {#setting-up-authentication}
 
@@ -345,7 +345,7 @@ Dynamic Media 画像配信サービスに画像をレプリケートするには
 
    >[!NOTE]
    >
-   このパスワードは覚えておいてください。後でレプリケーションエージェントを設定する際にもう一度入力する必要があります。
+   >このパスワードは覚えておいてください。後でレプリケーションエージェントを設定する際にもう一度入力する必要があります。
 
    ![chlimage_1-508](assets/chlimage_1-508.png)
 
@@ -404,10 +404,10 @@ Replication test succeeded
 
 >[!NOTE]
 >
-次のいずれかを実行してチェックすることもできます。
+>次のいずれかを実行してチェックすることもできます。
 >
-* レプリケーションログをチェックして、アセットがレプリケートされていることを確認します。
-* 画像を公開します。画像を選択してドロップダウンメニューから&#x200B;**[!UICONTROL ビューア]**&#x200B;を選択し、ビューアプリセットを選択します。**[!UICONTROL URL]**&#x200B;を選択します。画像が表示されることを確認するには、URL パスをコピーしてブラウザーに貼り付けます。
+>* レプリケーションログをチェックして、アセットがレプリケートされていることを確認します。
+>* 画像を公開します。画像を選択してドロップダウンメニューから&#x200B;**[!UICONTROL ビューア]**&#x200B;を選択し、ビューアプリセットを選択します。**[!UICONTROL URL]**&#x200B;を選択します。画像が表示されることを確認するには、URL パスをコピーしてブラウザーに貼り付けます。
 >
 
 ### 認証のトラブルシューティング {#troubleshooting-authentication}
@@ -570,7 +570,7 @@ Dynamic Media クラウドサービスは、画像とビデオのハイブリッ
 
 >[!NOTE]
 >
-Dynamic Media クラウドサービスを設定する前に、パブリッシュインスタンスを設定しておく必要があります。Dynamic Media クラウドサービスを設定する前に、レプリケーションも設定しておく必要があります。
+>Dynamic Media クラウドサービスを設定する前に、パブリッシュインスタンスを設定しておく必要があります。Dynamic Media クラウドサービスを設定する前に、レプリケーションも設定しておく必要があります。
 
 **Dynamic Media クラウドサービスを設定するには：**
 
@@ -710,7 +710,7 @@ Experience Manager 6.4 以降のバージョンでは、このプリセットを
 
 >[!NOTE]
 >
-デフォルトの場合、アセットの詳細表示で、「**[!UICONTROL レンディション]**」を選択すると、システムは様々なレンディションを表示し、「**[!UICONTROL ビューア]**」を選択すると、様々なビューアプリセットを表示します。表示される数を増減させることができます。[表示される画像プリセットの数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示されるビューアプリセットの数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
+>デフォルトの場合、アセットの詳細表示で、「**[!UICONTROL レンディション]**」を選択すると、システムは様々なレンディションを表示し、「**[!UICONTROL ビューア]**」を選択すると、様々なビューアプリセットを表示します。表示される数を増減させることができます。[表示される画像プリセットの数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示されるビューアプリセットの数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
 
 ## レプリケーション用のアセットのフィルタリング {#filtering-assets-for-replication}
 
@@ -773,7 +773,7 @@ Dynamic Media を（1）実稼動で画像に使用している場合、*また�
 
 >[!NOTE]
 >
-フィルターは、MIME タイプに適用されます。パスを指定することはできません。
+>フィルターは、MIME タイプに適用されます。パスを指定することはできません。
 
 ### ビデオ専用デプロイメントでのアセットフィルターのセットアップ {#setting-up-asset-filters-for-video-only-deployments}
 
@@ -815,9 +815,9 @@ Dynamic Media をビデオのみに使用している場合は、次の手順に
 
 >[!NOTE]
 >
-1 人の作成者に異なるフィルターが多数ある場合は、各エージェントに異なるユーザーを割り当てる必要があります。Granite コードでは、ユーザーごとに 1 つのフィルターというモデルが適用されます。フィルターを設定するたびに、必ず異なるユーザーを使用してください。
+>1 人の作成者に異なるフィルターが多数ある場合は、各エージェントに異なるユーザーを割り当てる必要があります。Granite コードでは、ユーザーごとに 1 つのフィルターというモデルが適用されます。フィルターを設定するたびに、必ず異なるユーザーを使用してください。
 >
-1 つのサーバーで複数のフィルターを使用していますか？例えば、公開するレプリケーション用にフィルターを 1 つ使用し、s7delivery 用にもう 1 つフィルターを使用しているケースです。その場合は、`jcr:content` ノードで、これら 2 つのフィルターに異なる **userId** を割り当てる必要があります。次の画像を参照してください。
+>1 つのサーバーで複数のフィルターを使用していますか？例えば、公開するレプリケーション用にフィルターを 1 つ使用し、s7delivery 用にもう 1 つフィルターを使用しているケースです。その場合は、`jcr:content` ノードで、これら 2 つのフィルターに異なる **userId** を割り当てる必要があります。次の画像を参照してください。
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
@@ -868,7 +868,7 @@ Dynamic Media 画像サーバーの設定では、Adobe CQ Scene7 ImageServer �
 
 >[!NOTE]
 >
-Dynamic Media は、[有効にした後](#enabling-dynamic-media)、すぐに標準の機能を実行することができます。ただし、オプションで、Dynamic Media 画像サーバーを特定の仕様や要件に合うように設定することで、インストール環境を細かく調整することもできます。
+>Dynamic Media は、[有効にした後](#enabling-dynamic-media)、すぐに標準の機能を実行することができます。ただし、オプションで、Dynamic Media 画像サーバーを特定の仕様や要件に合うように設定することで、インストール環境を細かく調整することもできます。
 
 **前提条件** - Dynamic Media 画像サーバーを設定する&#x200B;*前に*、Windows® の VM に Microsoft® Visual C++ ライブラリがインストールされていることを確認します。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft® Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=26999)できます。
 
@@ -887,7 +887,7 @@ Dynamic Media 画像サーバーを設定するには：
 
    >[!NOTE]
    >
-   通常は、デフォルト値を変更する必要はありません。ただし、デフォルト値を変更する場合は、変更内容を適用するためにバンドルを再起動する必要があります。
+   >通常は、デフォルト値を変更する必要はありません。ただし、デフォルト値を変更する場合は、変更内容を適用するためにバンドルを再起動する必要があります。
 
    | プロパティ | デフォルト値 | 説明 |
    | --- | --- | --- |
@@ -904,7 +904,7 @@ Dynamic Media 画像サーバーを設定するには：
 
    >[!NOTE]
    >
-   Dynamic Media Image Server は、独自のディスクキャッシュを使用して応答をキャッシュします。Experience Manager の HTTP キャッシュと Dispatcher を使用して Dynamic Media 画像サーバーからの応答をキャッシュすることはできません。
+   >Dynamic Media Image Server は、独自のディスクキャッシュを使用して応答をキャッシュします。Experience Manager の HTTP キャッシュと Dispatcher を使用して Dynamic Media 画像サーバーからの応答をキャッシュすることはできません。
 
    | プロパティ | デフォルト値 | 説明 |
    |---|---|---|
@@ -963,7 +963,7 @@ Dynamic Media カラーマネジメントを設定して、CMYK、RGB または�
 
 >[!NOTE]
 >
-Adobe カラープロファイルの標準セットは、 [ソフトウェア配布の機能パック12445](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) をインストールしている場合にのみ使用できます。すべての機能パックおよびサービスパックは、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から入手できます。機能パック 12445 は、Adobe のカラープロファイルを提供します。
+>Adobe カラープロファイルの標準セットは、 [ソフトウェア配布の機能パック12445](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) をインストールしている場合にのみ使用できます。すべての機能パックおよびサービスパックは、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から入手できます。機能パック 12445 は、Adobe のカラープロファイルを提供します。
 
 
 ### 機能パック 12445 のインストール {#installing-feature-pack}
@@ -1065,7 +1065,7 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
 
 >[!NOTE]
 >
-プロパティ名は大文字と小文字が区別され、すべて小文字にする必要があります。
+>プロパティ名は大文字と小文字が区別され、すべて小文字にする必要があります。
 
 **カラープロファイルの表**
 
