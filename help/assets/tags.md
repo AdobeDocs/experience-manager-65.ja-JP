@@ -37,7 +37,7 @@ Experience Platform タグおよび Dynamic Media Viewers 5.13 用の *Dynamic M
 * Dynamic Media ビューアの Experience Platform タグ統合は、Experience Manager オーサーノードでは機能しません。公開されるまで、WCM ページからのトラッキングを表示することはできません。
 * Dynamic Media ビューアの Experience Platform タグ統合は、「ポップアップ」操作モードではサポートされません。このモードでは、ビューア URL は、アセットの詳細ページの「URL」ボタンを使用して取得します。
 * Experience Platform タグ統合は、（`config2=` パラメーターを介して）従来のビューアの Analytics 統合と同時に使用することはできません。
-* ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/en/docs/media-analytics/using/tracking/track-core-overview)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
+* ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/ja/docs/media-analytics/using/tracking/track-core-overview)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
 * データ要素のストレージデュレーション設定は、*Dynamic Media ビューア*&#x200B;拡張機能を使用したデータ要素ではサポートされません。ストレージデュレーションは **[!UICONTROL None]** に設定する必要があります。
 
 ### 統合の事例 {#use-cases-for-the-integration}
@@ -134,7 +134,7 @@ Experience Cloud アカウントが Adobe Analytics for Audio and Video を使�
 
 詳しくは、[拡張機能のインストールとセットアップ](#installing-and-setup-of-extensions)を参照してください。
 
-現在、ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/en/docs/media-analytics/using/tracking/track-core-overview)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
+現在、ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/ja/docs/media-analytics/using/tracking/track-core-overview)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
 
 ## Dynamic Media ビューア拡張機能の使用  {#using-the-dynamic-media-viewers-extension}
 

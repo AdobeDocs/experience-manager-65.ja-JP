@@ -46,7 +46,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 また、最初は実稼動環境に影響を与えないステージング環境でルールセットをテストしてください。通常、実稼動環境とステージング環境では異なるログイン情報が必要となります。
 
-ログイン情報については、[Adobe Dynamic Media Classic へのログイン](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)を参照してください。
+ログイン情報については、[Adobe Dynamic Media Classic へのログイン](https://experienceleague.adobe.com/ja/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)を参照してください。
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
@@ -54,7 +54,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 **XML ルールセットをデプロイするには：**
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)にサインインします。
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/ja/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app)にサインインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、アドビカスタマーサポートにお問い合わせください。
 

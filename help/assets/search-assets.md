@@ -124,7 +124,7 @@ ht-degree: 88%
 1. 「**[!UICONTROL 昇格を検索]**」ボックスで、画像検索時の強化の対象となるキーワードを指定し、「**[!UICONTROL 追加]**」をクリックします。同じ方法で複数のキーワードを指定できます。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。指定したキーワードに対して昇格したアセットが、検索結果の上位に表示されます。
 
-ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、「[ での検索](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
+ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、「[ での検索](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -213,11 +213,11 @@ ht-degree: 88%
 
 ### [!DNL Experience Manager] デスクトップアプリケーションでデジタルアセットを検索 {#desktop-app}
 
-デスクトップアプリケーションを使用することで、クリエイティブ担当者はは、ローカルデスクトップ（Windows または Mac）で [!DNL Experience Manager Assets] を容易に検索および利用できるようになります。目的のアセットを Mac Finder や Windows エクスプローラーで表示し、デスクトップアプリケーションで開き、ローカルで変更することができます。変更内容は [!DNL Experience Manager] に書き戻され、リポジトリー内に新しいバージョンが作成されます。1 つ以上のキーワード、ワイルドカード `*` および `?`、`AND` 演算子を使用した基本検索がサポートされています。デスクトップアプリケーションでの [ アセットの参照、検索、プレビュー ](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/using#browse-search-preview-assets) を参照してください。
+デスクトップアプリケーションを使用することで、クリエイティブ担当者はは、ローカルデスクトップ（Windows または Mac）で [!DNL Experience Manager Assets] を容易に検索および利用できるようになります。目的のアセットを Mac Finder や Windows エクスプローラーで表示し、デスクトップアプリケーションで開き、ローカルで変更することができます。変更内容は [!DNL Experience Manager] に書き戻され、リポジトリー内に新しいバージョンが作成されます。1 つ以上のキーワード、ワイルドカード `*` および `?`、`AND` 演算子を使用した基本検索がサポートされています。デスクトップアプリケーションでの [ アセットの参照、検索、プレビュー ](https://experienceleague.adobe.com/ja/docs/experience-manager-desktop-app/using/using#browse-search-preview-assets) を参照してください。
 
 ### [!DNL Brand Portal] でデジタルアセットを検索 {#brand-portal}
 
-マーケターや事業部門のユーザーは、Brand Portal を使用して、承認済みのデジタルアセットを、広範な社内チーム、パートナーおよび販売店と効率的かつ安全に共有します。詳しくは、[Brand Portal でのアセットの検索](https://experienceleague.adobe.com/en/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching)を参照してください。
+マーケターや事業部門のユーザーは、Brand Portal を使用して、承認済みのデジタルアセットを、広範な社内チーム、パートナーおよび販売店と効率的かつ安全に共有します。詳しくは、[Brand Portal でのアセットの検索](https://experienceleague.adobe.com/ja/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching)を参照してください。
 
 ### [!DNL Adobe Stock] 画像の検索 {#adobe-stock1}
 
@@ -365,11 +365,11 @@ ht-degree: 88%
    変更を保存します。
 
 1. `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` にアクセスして、値が `true` の `Boolean` 型の `similarityTags` プロパティを追加します。
-1. スマートタグを [!DNL Experience Manager] リポジトリのアセットに適用します。 詳しくは、 [スマートタグの設定方法](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/configuring/tagging#configuring)を参照してください。
+1. スマートタグを [!DNL Experience Manager] リポジトリのアセットに適用します。 詳しくは、 [スマートタグの設定方法](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/configuring/tagging#configuring)を参照してください。
 1. CRXDE の `/oak-index/damAssetLucene` ノードで、`reindex` プロパティを `true` に設定します。変更を保存します。
 1. （オプション）検索フォームをカスタマイズしている場合は、 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` ノードから `/conf/global/settings/dam/search/facets/assets/jcr:content/items` へコピーします。変更を保存します。
 
-関連情報については、 [Experience Manager のスマートタグについて](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/metadata/image-smart-tags)および[スマートタグの管理方法](/help/assets/enhanced-smart-tags.md)を参照してください。
+関連情報については、 [Experience Manager のスマートタグについて](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/metadata/image-smart-tags)および[スマートタグの管理方法](/help/assets/enhanced-smart-tags.md)を参照してください。
 
 >[!CAUTION]
 >
@@ -492,6 +492,6 @@ PSD ファイルや PDF ファイルなどのアセットをユーザーがア�
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 検索実装ガイド](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/developing/search-tutorial-develop)
->* [検索結果を高めるための詳細設定](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/search-and-discovery/search-boost)
+>* [[!DNL Experience Manager] 検索実装ガイド](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/sites/developing/search-tutorial-develop)
+>* [検索結果を高めるための詳細設定](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)
 

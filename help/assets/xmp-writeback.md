@@ -18,7 +18,7 @@ ht-degree: 90%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata) |
 | AEM 6.5 | この記事 |
 
 [!DNL Adobe Experience Manager Assets] の XMP の書き戻し機能では、メタデータの変更内容を元のアセットのレンディションに複製します。アセット内からアセットのメタデータを変更すると、またはアセットをアップロードすると、変更内容はまずアセット階層のメタデータノードに保存されます。
