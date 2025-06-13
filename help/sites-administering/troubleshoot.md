@@ -111,7 +111,7 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 * 多数の CacheManager を確認できます（ログファイル内の resizeAll エントリ）。次の数値（size=&lt;x>）はキャッシュ数を示しており、各セッションが複数のキャッシュを開きます。
 * システムのメモリが不足することがあります（重大度に応じて数時間後、数日後、数週間後に発生）。
 
-閉じられていないセッションの分析を開始するには、ナレッジベースの記事 [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761) を参照してください。
+閉じられていないセッションの分析を開始するには、ナレッジベースの記事 [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23761) を参照してください。
 
 ### Adobe Experience Manager web コンソールの使用 {#using-the-adobe-experience-manager-web-console}
 

@@ -1134,7 +1134,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
 * ナレッジベース
 
-   * [ 開いているファイルが多すぎます ] （https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html
+   * [ 開いているファイルが多すぎます ] （https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=ja
 
 ### 通常のパフォーマンス低下 {#regular-performance-degradation}
 
@@ -1143,7 +1143,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [メモリ不足](#outofmemory)
 * ナレッジベース
 
-   * [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)
+   * [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23761)
 
 ### JVM の調整 {#jvm-tuning}
 

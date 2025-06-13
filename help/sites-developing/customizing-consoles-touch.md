@@ -64,7 +64,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 >[!NOTE]
 >
->ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)」を参照してください。
+>ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-16935)」を参照してください。
 
 ## コンソールのデフォルト表示のカスタマイズ {#customizing-the-default-view-for-a-console}
 

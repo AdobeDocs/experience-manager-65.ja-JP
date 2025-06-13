@@ -56,7 +56,7 @@ Adobe Experience Manager（AEM）でページを編集する場合は、開発�
 >
 >詳しくは以下を参照してください。
 >
->* ヒントおよびツールの詳細については、ナレッジベースの記事「[AEM TouchUI の問題のトラブルシューティング](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)」。
+>* ヒントおよびツールの詳細については、ナレッジベースの記事「[AEM TouchUI の問題のトラブルシューティング](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-16935)」。
 >* [AEM 6.0 の開発者モード](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=ja)に関する AEM Gems セッション。
 >
 
