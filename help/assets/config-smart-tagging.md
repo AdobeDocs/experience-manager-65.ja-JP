@@ -71,7 +71,7 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 1. [Adobe Developer Console](#create-adobe-io-integration) での統合の作成
 
-1. API キーやその他のAdobe Developer Consoleの資格情報を使用して ](#create-ims-account-config)[IMS テクニカルアカウント設定を作成します。
+1. API キーやその他のAdobe Developer Consoleの資格情報を使用して [&#128279;](#create-ims-account-config)IMS テクニカルアカウント設定を作成します。
 
 1. [スマートコンテンツサービスの設定](#configure-smart-content-service)
 
@@ -95,9 +95,9 @@ To configure the Smart Content Service, follow these top-level steps:
 
 スマートコンテンツサービス API を使用するには、Adobe Developer Consoleで統合を作成して、以下を取得します。
 
-* [!UICONTROL API キー ] （Adobe Developer Console統合の [!UICONTROL  クライアント ID] フィールドで生成）、
-* [!UICONTROL  組織 ID]、
-* さらに、[!DNL Experience Manager] のクラウド設定の [!UICONTROL 2}Assets スマートタグサービス設定 ] 用の {CLIENT SECRET]。[!UICONTROL 
+* [!UICONTROL API キー &#x200B;] （Adobe Developer Console統合の [!UICONTROL &#x200B; クライアント ID] フィールドで生成）、
+* [!UICONTROL &#x200B; 組織 ID]、
+* さらに、[!DNL Experience Manager] のクラウド設定の [!UICONTROL 2&rbrace;Assets スマートタグサービス設定 &#x200B;] 用の &lbrace;CLIENT SECRET。
 
 1. ブラウザーで [https://developer.adobe.com](https://developer.adobe.com/) にアクセスします。適切なアカウントを選択し、関連付けられた組織の役割が&#x200B;**システム管理者**&#x200B;であることを確認します。
 
@@ -455,7 +455,7 @@ The validation results are displayed in the same dialog.
 
 アセットのトレーニングセット内のタグに関するスマートコンテンツサービスのトレーニングが実施されたかどうかを確認するには、レポートコンソールでトレーニングワークフローレポートを調べます。
 
-1. [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]**/**[!UICONTROL Assets]**/{ レポー **** に移動します。
+1. [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]**/**[!UICONTROL Assets]**/&lbrace; レポー **&#x200B;**&#x200B;に移動します。
 1. **[!UICONTROL アセットレポート]**&#x200B;ページで、「**[!UICONTROL 作成]**」をクリックします。
 1. 「**[!UICONTROL スマートタグトレーニング]**」レポートを選択し、ツールバーで「**[!UICONTROL 次へ]**」をクリックします。
 1. レポートのタイトルと説明を指定します。「**[!UICONTROL レポートをスケジュール]**」で、「**[!UICONTROL 今すぐ]**」オプションを選択したままにします。レポートを後で生成するようにスケジュールするには、「**[!UICONTROL 後で]**」を選択し、日時を指定します。次に、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
