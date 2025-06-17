@@ -10,8 +10,9 @@ exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
-workflow-type: ht
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 100%
 

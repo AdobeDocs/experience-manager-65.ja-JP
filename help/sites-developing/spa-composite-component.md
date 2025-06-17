@@ -5,8 +5,9 @@ exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
-workflow-type: ht
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 100%
 
@@ -43,7 +44,7 @@ AEM 内の SPA 実装に応じて、複合コンポーネントを実装する�
 * [コンポーネントは AEM プロジェクトに存在するが、必要なコンテンツが存在しない。](#content-does-not-exist)
 * [コンポーネントと必要なコンテンツが両方とも AEM プロジェクトに存在する。](#both-exist)
 
-以下の節では、カードコンポーネントを使用して各ケースを実装する例を示します。
+次の節では、カードコンポーネントを使用して各ケースを実装する例を示します。
 
 ### コンポーネントが AEM プロジェクトに存在しない。 {#component-does-not-exist}
 

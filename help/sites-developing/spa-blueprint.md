@@ -9,8 +9,9 @@ exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
-workflow-type: ht
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+workflow-type: tm+mt
 source-wordcount: '2023'
 ht-degree: 100%
 
@@ -246,9 +247,9 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 次のフラグメントは、ページコンテンツ構造の代表的な HTML 表現です。重要なポイントをいくつか示します。
 
-* レスポンシブグリッド要素には、`aem-Grid--` というプレフィックスが付いたクラス名が含まれます
-* レスポンシブ列要素には、`aem-GridColumn--` というプレフィックスが付いたクラス名が含まれます
-* 親グリッドの列でもあるレスポンシブグリッドは前述の 2 つのプレフィックスが同一の要素上に表示されないようにラップされます
+* レスポンシブグリッド要素には、`aem-Grid--` という接頭辞が付いたクラス名が含まれます
+* レスポンシブ列要素には、`aem-GridColumn--` という接頭辞が付いたクラス名が含まれます
+* 親グリッドの列でもあるレスポンシブグリッドは前述の 2 つの接頭辞が同一の要素上に表示されないようにラップされます
 * 編集可能リソースに対応する要素には、`data-cq-data-path` プロパティが含まれます。このドキュメントの [ページエディターとの契約](#contract-wtih-the-page-editor) の節を参照してください。
 
 ```
