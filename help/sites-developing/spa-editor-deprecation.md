@@ -4,13 +4,13 @@ description: SPA エディターは、アドビで引き続きサポートしま
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: ea6e46ee-4a90-4236-8d93-292a4dda4dc0
-index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
+source-git-commit: d619c969604119a8686050fdc34d77c0ffee33cf
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 91%
 
 ---
+
 
 # SPA エディターの廃止 {#spa-editor-deprecation}
 
@@ -65,7 +65,7 @@ SPA エディターに代わる最適な代替手段は、プロジェクトの�
 * **今後の校正：** AEM のロードマップでは、ビジュアルエディターとしてユニバーサルエディターが優先されています。これを採用することで、最新のイノベーションと機能強化にアクセスできます。
 * **よりシンプルな統合：**&#x200B;ユニバーサルエディターを使用するのに AEM 固有の SDK は必要ないので、テクニカルスタックのロックインが軽減されます。
 * **独自のアプリを導入：**&#x200B;ユニバーサルエディターは任意の web フレームワークやアーキテクチャをサポートしているので、複雑なリファクタリングを必要とせずに導入できます。
-* **拡張性：**&#x200B;ユニバーサルエディターは、生成 AI、Workfront などとの統合を含む強力な[拡張フレームワーク](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/extending)のメリットを受けます。
+* **拡張性：**&#x200B;ユニバーサルエディターは、生成 AI、Workfront などとの統合を含む強力な[拡張フレームワーク](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/extending)のメリットを受けます。
 
 SPA エディターからユニバーサルエディターへの直接的な移行パスはありません。これは、2 つのテクノロジーの基本的な違いによるものです。
 
