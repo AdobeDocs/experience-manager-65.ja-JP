@@ -796,6 +796,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
          adobe_prtk --tool=VolumeSerialize --generate --serial=&lt;serialnum> [--leid=&lt;LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=&lt;Absolute path to prov.xml>]
          
          ```
+
      
    * パッケージをボリュームシリアライズします（prov.xml ファイルと新しいシリアルを使用して既存のインストールを再シリアライズします）。PRTK インストールフォルダーから次のコマンドを管理者として実行し、クライアントマシンにデプロイされたパッケージをシリアライズしてアクティベートします。
 
@@ -803,8 +804,8 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
          adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
          
          ```
-     
-* 大規模インストールの場合は、[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) をクリックして、以前のバージョンの Reader と Acrobat を削除します。インストーラーをカスタマイズし、組織のすべてのマシンにデプロイします。
+
+     * 大規模インストールの場合は、[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) をクリックして、以前のバージョンの Reader と Acrobat を削除します。インストーラーをカスタマイズし、組織のすべてのマシンにデプロイします。
 
 +++
 
