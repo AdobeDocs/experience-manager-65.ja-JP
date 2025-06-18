@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 813ddbf98b65588752ffa94e9ac4a810cff45302
+source-git-commit: 117ce86870af450c43ae1f58cf500aff0fea6747
 workflow-type: tm+mt
-source-wordcount: '4357'
-ht-degree: 97%
+source-wordcount: '3867'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 97%
 
 Adobeでは、JEE 上のAEM 6.5.23.0 Forms サービスパック 23 （6.5.23.0）を含んだ [ 完全なインストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) のほか、パッチインストーラーをリリースしました。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
+新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる [Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
 
 
 </div>
@@ -46,7 +46,6 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 >[!NOTE]
 >
->- サポートされているサーバープラットフォームへの例外エラーの完全リストについては、[サポートされているサーバープラットフォームへの例外エラー](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)を参照してください。
 >- JEE 上の AEM Forms でサポートされるのは、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみです。
 
 ### アップグレードおよびサポートポリシー
@@ -55,17 +54,16 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 - **完全なインストーラーのアップグレードサポート**：完全なインストーラーは、6 回の AEM サービスパックリリースごとにリリースされます。例えば、6.5.12.0 および 6.5.18.0 SP リリースでは完全なインストーラーがリリースされました。AEM Forms では、最新の 2 つの完全なインストーラーからのみ直接アップグレードできます。例えば、AEM Forms では、最新の 2 つの完全なインストーラー（6.5.18.0 と 6.5.12.0）からのみバージョン 6.5.23.0 への直接アップグレードを簡単に行うことができます。以前のアップグレードからアップグレードする必要がある場合は、マルチホップアップグレードを使用して、最初にサポートされている完全なインストーラーリリースに移行した後、最新のリリースに移行できます。
 
-- **非推奨と削除**：プラットフォームのサポートは、完全なインストーラーリリースごとに更新されます。完全なインストーラーリリース中にプラットフォーム一覧で非推奨としてマークされたソフトウェアは、後続の完全なインストーラーリリースでサポートされるプラットフォーム一覧から削除され、ソフトウェアのサポートが終了することが示されます。
+- **非推奨**:Platform のサポートは、インストーラーの完全なリリースのたびに更新されます。 プラットフォームマトリックスで非推奨とマークされたソフトウェアは、後続のリリースやソフトウェアのサポートが終了した時点で、サポート対象のプラットフォームから削除される場合があります。
 
 #### サービスパック
 
 
 - **サービスパックの対象範囲**：アドビでは、最新の 6 つのサービスパックのいずれかを使用して、AEM Forms 環境のテクニカルサポートを提供します。現在のバージョンが最新の 6 つのサービスパックよりも古い場合、最適なパフォーマンス、セキュリティ、継続的なサポートを実現するために、アドビでは最新バージョンにアップグレードすることを強くお勧めします。
 
-- **パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.23.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
+**パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.23.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
 
-- **パッチアップグレードのサポート**：サポートされている最新のプラットフォームにアップグレードするまで、最新のサービスパックへのアップグレードを続行できます。例えば、6.5.23.0 でサポートされているプラットフォームの組み合わせに移行する場合、サービスパック 6.5.18.0 から 6.5.23.0 へのアップグレードが可能です。
-
+- **パッチアップグレードサポート**：宛先プラットフォーム（OS、JDK、アプリケーションサーバーなど）が新しいサービスパックでサポートされている限り、パッチインストーラーを使用して古いサービスパックから新しいサービスパック（例：6.5.18.0 から 6.5.23.0 へ）にアップグレードできます。
 
 ### 推奨設定 {#recommendedconfigurations}
 
@@ -186,10 +184,6 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
   <td><p>Repository Microkernel（TAR MK ファイル）</p> </td>
   <td><p>サポート対象</p> </td>
  </tr>
-  <tr>
-  <td><p>リポジトリ Microkernel</p> </td>
-  <td><p>サポート対象</p> </td>
- </tr>
    <tr>
   <td><p> MongoDB Enterprise 6.0（廃止） </p> </td>
   <td><p>リポジトリ Microkernel</p> </td>
@@ -199,11 +193,6 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
   <td><p> MongoDB Enterprise 7.0 </p> </td>
   <td><p>リポジトリ Microkernel</p> </td>
   <td><p>サポート対象</p> </td>
- </tr>
-  <tr>
-  <td>Oracle Database 19c（Standard、Real Application Clusters（RAC）および Enterprise エディション） </td>
-  <td>Microkernal リポジトリ </td>
-  <td>サポート対象</td>
  </tr>
   <tr>
   <td>Oracle Database 19c（Standard、Real Application Clusters（RAC）および Enterprise エディション） </td>
@@ -268,9 +257,14 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
   <th><p><strong>プラットフォーム</strong></p> </th>
   <th><p><strong>サポートしているパッチ定義</strong></p> </th>
  </tr>
+  <tr>
+  <td>MySQL</td>
+  <td><p>MySQL Connector/J 5.7 （非推奨）</p> </td>
+  <td><p>JEE 上の AEM Forms のインストールに付属</p> </td>
+ </tr>
  <tr>
   <td>MySQL</td>
-  <td><p>MySQL Connector/J 5.7</p> <p>mysql-connector-java-5.1.44-bin.jar（バージョン 5.1.44）</p> </td>
+  <td><p>MySQL Connector/J 8.4</p> </td>
   <td><p>JEE 上の AEM Forms のインストールに付属</p> </td>
  </tr>
  <tr>
@@ -280,7 +274,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
  </tr>
  <tr>
   <td>Microsoft® SQL Server<br /> </td>
-  <td><p>Microsoft® SQL Server JDBC ドライバー 12.8 <br /> </p> <p>sqljdbc8.jar</p> </td>
+  <td><p>Microsoft® SQL Server JDBC ドライバー 12.10.0<br /> </p> <p>sqljdbc12.10.0.jar</p> </td>
   <td><p>Microsoft® の web サイトからダウンロードします。</p> </td>
  </tr>
  <tr>
@@ -384,11 +378,6 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
   <td>A：サポート対象</td>
   <td>サービスパック、累積パッチ、重要なセキュリティアップデート</td>
  </tr>
- <tr>
-  <td>CentOS 7（64 ビット版）<sup>[6]</sup></td>
-  <td>A：サポート対象</td>
-  <td>サービスパック、累積パッチ、重要なセキュリティアップデート</td>
- </tr>
 </tbody>
 </table>
 
@@ -404,8 +393,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 > - glibc-locale.x86_64（2.17 以降）
 > - OpenSSL 3（OS のデフォルトの場所で必要）。
 
-    OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
-
+OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。 それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
 
 #### 仮想化環境 {#virtualized-environment}
 
@@ -432,41 +420,38 @@ AEM Forms on JEE は、物理マシンまたは仮想環境で実行できます
 </table>
 
 
-### 対応のサーバープラットフォームの例外事項 {#exceptions-to-supported-server-platforms}
-
-
-AEM Forms on JEE サーバーの設定でプラットフォームを選択するときは、次の例外事項を考慮してください。
-
-
-1. AEM Forms on JEE では、MySQL を搭載した IBM® WebSphere® をサポートしていません。
-1. AEM Forms on JEE では、SUSE® Linux® Enterprise Server 12 上での JBoss をサポートしていません。SUSE® Linux® Enterprise Server 12 上では、IBM® WebSphere® のみがサポートされています。
-1. AEM Forms on JEE では、Oracle Java™ SE 以外の JBoss® を使用する JDK をサポートしていません。
-1. AEM Forms on JEE では、IBM® JDK 以外の IBM® WebSphere® を使用する JDK をサポートしていません。
-1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
-1. AEM Forms on JEE では CentOS 上の WebSphere® Application Server をサポートしていません。
-1. AEM Forms on JEE では、JBoss® ロールベースのアクセス制御（RBAC）をサポートしていません。
-1. AEM Forms on JEE では、アプリケーションサーバー JBoss EAP 7.4 用の Oracle Java™ SE 11（64 ビット版）SDK のみをサポートしています。
-1. 1.8.0_281 より後の JDK バージョンは、WebLogic サーバーではサポートされていません。（FORMS-8498）
-1. JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。
-
-
 <!--
-1. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312)
--->
+### Exceptions to supported server platforms {#exceptions-to-supported-server-platforms}
 
 
-この他に、AEM Forms on JEE の導入のためにソフトウェアを選択する際には、次の項目を考慮してください。
+Consider the following exceptions while choosing a platform to set up your AEM Forms on JEE server.
 
 
-- AEM Forms on JEE では、対応ソフトウェアの指定されたメジャーおよびマイナーバージョンに加えて、アップデート、パッチ、および修正パックをサポートしています。ただし、次のメジャーバージョンまたはマイナーバージョンに対するアップデートは、特に記載がない限りサポートされていません。
-- クラスターベースのインストールは、TarMK 永続性をサポートしていません。サポートされている永続性については、[AEM Forms のインストールでの永続性タイプの選択](/help/forms/using/choosing-persistence-type-for-aem-forms.md)を参照してください。
-- AEM Forms on JEE では、弊社の[サードパーティソフトウェアサポートポリシー](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)に従い、様々なサードパーティソフトウェアをサポートしています。
-- AEM Forms on JEE では、サードパーティベンダーが提供するサポートに基づいて、プラットフォームをサポートします。組み合わせによっては、サードパーティベンダーが許可しない場合があります。例えば、多くのベンダーが、自社のアプリケーションサーバーを Oracle で使用することを認めていません。そのため、AEM Forms on JEE でもこれらの組み合わせをサポートしていません。対応のソフトウェアバージョンを確実に選択するには、サードパーティベンダーのサポート一覧も確認してください。
-- AEM Forms on JEE では TarMK コールドスタンバイをサポートしていません。
-- AEM Forms on JEE では垂直クラスタリングをサポートしていません。
-- AEM Forms on JEE では、クラスター環境での MySQL データベースをサポートしていません。
-- 削除または更新されたプラットフォームの一覧は、[AEM 6.5 Forms 新機能の概要](../../forms/using/whats-new.md)のドキュメントを参照してください。
+1. AEM Forms on JEE do not support IBM&reg; WebSphere&reg; with MySQL.
+1. AEM Forms on JEE do not support JBoss&reg; on SUSE&reg; Linux&reg; Enterprise Server 12. Only IBM&reg; WebSphere&reg; is supported on SUSE&reg; Linux&reg; Enterprise Server 12.
+1. AEM Forms on JEE do not support any JDK with JBoss&reg; other than Oracle Java&trade; SE.
+1. AEM Forms on JEE do not support any JDK with IBM&reg; WebSphere&reg; other than IBM&reg; JDK.
+1. CRX-repository supports persistence of type TarMK, MongoDB, and relational databases (RDBMK). You cannot have two different database systems between the application server and the CRX-repository. However, on an AEM Forms on JEE environment, you can use MongoMK with CRX-repository and a supported relational database with application server.
+1. AEM Forms on JEE do not support WebSphere&reg; application server on CentOS.
+1. AEM Forms on JEE do not support JBoss&reg; role-based access control (RBAC).
+1. AEM Forms on JEE support Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4 only.
+1. JDK versions higher than 1.8.0_281 are not supported for WebLogic server. (FORMS-8498)
+1. JDK 11.0.20 is not supported to install AEM Forms on JEE Installer. Only JDK 11.0.19 or earlier versions are supported to install AEM Forms on JEE Installer.
 
+2. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312)
+
+
+In addition, consider the following points while choosing software for Adobe AEM Forms on JEE deployments:
+
+
+- AEM Forms on JEE support updates, patches, and fix packs on top of the specified major and minor version of supported software. However, update to the next major or minor version is not supported unless specified.
+- Cluster-based installations do not support TarMK persistence. For information about supported persistence, see [Choosing a persistence type for an AEM Forms installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
+- AEM Forms on JEE support various third-party software as per Adobe's [Third-party software support Policy](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p).
+- AEM Forms on JEE support platforms as per the support provided by third-party vendors. Some combinations may not be allowed by third-party vendors. For example, many vendors have not certified their application servers with Oracle. As a result, AEM Forms on JEE also do not support these combinations. To ensure that you choose the supported software versions, check the support matrix for the third-party vendors as well.
+- AEM Forms on JEE do not support TarMK Cold Standby.
+- AEM Forms on JEE do not support vertical clustering.
+- AEM Forms on JEE do not support MySQL database on a clustered environment.
+- For the list of removed or updated platforms, see [AEM 6.5 Forms New Feature Summary](../../forms/using/whats-new.md) document.-->
 
 ### LDAP サーバー（オプション） {#ldap-servers-optional}
 
@@ -564,11 +549,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
   <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
  </tr>
  <tr>
-  <td>Microsoft® Office 2019（廃止） </td>
-  <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
- </tr>
- <tr>
-  <td>Microsoft® Office 2021</td>
+  <td>Microsoft® Office 2019  </td>
   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
  </tr>
  <tr>
@@ -914,7 +895,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -1011,7 +992,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
 
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
@@ -1037,8 +1018,8 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | -------------- | --------------- | ------------------- |
 | MongoDB Enterprise 7.0 | MongoDB Enterprise 5.0 | MongoDB Enterprise 6.0 |
 | MySQL 8.4 | SUSE® Linux® Enterprise Server 12（64 ビット版） | MySQL 8.0.27 |
-| Microsoft® SQL Server 2022 | | Microsoft® SQL Server 2019 |
-| Microsoft® SQL Server JDBC ドライバー 12.8 | | Microsoft® SQL Server JDBC ドライバー 8.2 |
+| Microsoft® SQL Server 2022 | Centos 7 | Microsoft® SQL Server 2019 |
+| Microsoft® SQL Server JDBC ドライバー 12.10.0 | | Microsoft® SQL Server JDBC ドライバー 8.2 |
 | Red Hat® Enterprise Linux® 9（Kernel 4.x）（64 ビット版） | | Red Hat® Enterprise Linux® 8（Kernel 4.x）（64 ビット版） |
 
 ### リリース 6.5.22.0（2024年11月29日（PT））

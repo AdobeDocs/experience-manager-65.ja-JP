@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 21d0ba51297b4e90645a9ab64d98016598c0a2be
+source-git-commit: 16a75f6308319e07bed68b668fc9c20e0ef5f5c9
 workflow-type: tm+mt
-source-wordcount: '6485'
-ht-degree: 89%
+source-wordcount: '6444'
+ht-degree: 88%
 
 ---
 
@@ -215,11 +215,11 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 
 ### [!DNL Assets]{#assets-6523}
 
-* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**&#x200B;を選択し、**[!UICONTROL &#x200B; Adobe Stock を検索&#x200B;]**&#x200B;フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
+* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**を選択し、**[!UICONTROL  Adobe Stock を検索&#x200B;]**フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
    * 「**[!UICONTROL ライセンスと保存]**」をクリックすると空のドロップダウンが表示されるため、選択したストック画像のライセンスを取得して保存することができません。
    * ストック画像を選択するか、ストックページの URL を再入力すると、[!DNL AEM] ホームページにリダイレクトされ、Adobe Stock 画像にアクセスできなくなります。（ASSETS-48687）
 * [!DNL AEM]オンプレミス（6.5.22.0）ナビゲーションページでフォルダーの名前に `/` が含まれる場合、フォルダーの管理中に問題が発生します。（ASSETS-46740）
-* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL &#x200B; コレクション&#x200B;]**&#x200B;ビューから読み込まれません。（ASSETS-46738）
+* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL  コレクション&#x200B;]**ビューから読み込まれません。（ASSETS-46738）
 * `Day CQ DAM Mime Type OSGI` Service としての [!DNL InDesign] との統合の問題によって、[!DNL InDesign] ファイルが `x-indesign` ではなく `x-adobe-indesign` と誤って認識されます。（ASSETS-45953）
 * [!DNL AEM 6.5.21] セッション リークが、標準提供の **[!UICONTROL Brand Portal へのスケジュールされた公開]**&#x200B;ワークフローステップまで追跡されます。（ASSETS-44104）
 * [!DNL AEM] で画像を処理および公開する際に、**[!UICONTROL メモリ不足（OOM）]**&#x200B;エラーが表示されます。この問題は、**[!DNL Dam Asset update]** や **[!DNL Dynamic Media: Reprocess assets]** など、ワークフローの廃止されたメソッドが原因で発生しました。（ASSETS-43343）
@@ -676,33 +676,30 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6523}
 
-* お客様が Struts 2.x から 6.x にアップグレードする場合、特にチェックボックスコンポーネントが false を返し、リスト *Integer* にバインドされている場合、より厳密なタイプのチェックはサイレントエラーの原因となります。 シリアル化の解除エラーを回避するには、この値の不一致を明示的に処理する必要があります。（FORMS-20203）
+>[!NOTE]
+>
+> 予期しないエラーが発生する可能性があるため、利用可能なホットフィックスがない問題については、Service Pack 6.5.23.0 にアップグレードしないでください。 必要なホットフィックスがリリースされた後にのみ、サービスパック 6.5.23.0 にアップグレードしてください。
 
-* SUSE® Linux®（SLES 15 SP6 以降）サーバーで HTML から PDF への変換が失敗し、次のエラーが表示されます。
-
-  ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
-その場合は、次の環境変数を設定して、サーバーを再起動します。
-  `OPENSSL_CONF=/etc/ssl`
+* Struts をAEM サービスパック 2.5.x からAEM Forms サービスパック 6.x にアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されません。 （FORMS-20203）
+* AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します（FORMS-20360）。
+  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
 
 * AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
 
    1. ロケーターが実行中の場合は、ロケーターを停止します。
-   1. AEM サーバーを停止します。
-   1. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
-   1. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
-   1. 管理者モードでコマンドプロンプトを開きます。
-   1. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
+   2. AEM サーバーを停止します。
+   3. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
+   4. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
+   5. 管理者モードでコマンドプロンプトを開きます。
+   6. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
 * ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （FORMS-14521）
-
-* AEM Forms サービスパック 6.5.21.0 へのアップグレード後、`PaperCapture` サービスが、PDF に対して OCR（光学文字認識）処理を実行できない。このサービスでは、PDF やログファイルの形式で出力を生成しません。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （CQDOC-21680）
-
 * ユーザーが AEM 6.5 Forms サービスパック 18 または 19 からサービスパック 20 または 21 にアップグレードした際、JSP コンパイルエラーが発生しました。 このエラーにより、アダプティブフォームを開いたり、作成したりすることができませんでした。 また、他の AEM インターフェイスでも問題が発生しました。 これらのインターフェイスには、ページエディター、AEM Forms UI、ワークフローエディター、システム概要 UI が含まれていました。（FORMS-15256）
 
   このような問題が発生した場合は、次の手順を実行して解決します。
    1. CRXDE のディレクトリ `/libs/fd/aemforms/install/` に移動します。
-   1. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
-   1. AEM サーバーを再起動します。
+   2. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
+   3. AEM サーバーを再起動します。
 
 * Forms アドオンを使用して AEM Forms サービスパック 20（6.5.20.0）にアップデートすると、資格情報に基づく認証を使用する従来の Adobe Analytics Cloud Service に依存する設定が機能しなくなります。この問題により、分析ルールが正しく実行されなくなりました。 ホットフィックスをダウンロードしてインストールするには、[Adobe Experience Manager Forms のホットフィックス](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms)の記事を参照してください。 （FORMS-15428）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、すべてのフィールド値に通貨記号（ドル記号 $ など）が一貫して表示されません。 999 までの値の場合は表示されますが、1000 以上の値の場合は表示されません。 （FORMS-16557）
