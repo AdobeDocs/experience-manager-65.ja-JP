@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 117ce86870af450c43ae1f58cf500aff0fea6747
+source-git-commit: 64ffbf05eb3ae6ca3f2475fc99979e420cef15ec
 workflow-type: tm+mt
-source-wordcount: '3867'
+source-wordcount: '3827'
 ht-degree: 94%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 94%
 
 Adobeでは、JEE 上のAEM 6.5.23.0 Forms サービスパック 23 （6.5.23.0）を含んだ [ 完全なインストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) のほか、パッチインストーラーをリリースしました。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
+新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる [Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
 
 
 </div>
@@ -61,9 +61,10 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 - **サービスパックの対象範囲**：アドビでは、最新の 6 つのサービスパックのいずれかを使用して、AEM Forms 環境のテクニカルサポートを提供します。現在のバージョンが最新の 6 つのサービスパックよりも古い場合、最適なパフォーマンス、セキュリティ、継続的なサポートを実現するために、アドビでは最新バージョンにアップグレードすることを強くお勧めします。
 
-**パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.23.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
+- **パッチアップデートガイドライン**：パッチインストーラーを使用して更新する際は、基になる完全なインストーラーのバージョンが、2 つ以上のリリース以前であることを確認することが重要です。 例えば、サービスパック 6.5.23.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
 
-- **パッチアップグレードサポート**：宛先プラットフォーム（OS、JDK、アプリケーションサーバーなど）が新しいサービスパックでサポートされている限り、パッチインストーラーを使用して古いサービスパックから新しいサービスパック（例：6.5.18.0 から 6.5.23.0 へ）にアップグレードできます。
+<!--
+- **Patch Upgrade Support**: You can upgrade from an older service pack to a newer one (for example, from 6.5.18.0 to 6.5.23.0) using the patch installer, as long as the destination platform (OS, JDK, application server, etc.) is supported by the newer service pack.-->
 
 ### 推奨設定 {#recommendedconfigurations}
 
@@ -895,7 +896,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -992,7 +993,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
 
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
