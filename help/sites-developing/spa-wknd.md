@@ -24,7 +24,7 @@ ht-degree: 98%
 
 WKND SPA チュートリアルでは、プロジェクトのセットアップからアプリケーションのルーティングまで、AEM で編集可能な、独自の単一ページのアプリケーションを構築する例について、エンドツーエンドで説明しています。
 
-* [AEM SPA Editor と Angular の使用の手引き](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview)
-* [AEM SPA Editor と React の使用の手引き](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/how-to/react-core-components-v2)
+* [AEM SPA Editor と Angular の使用の手引き](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview)
+* [AEM SPA Editor と React の使用の手引き](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/how-to/react-core-components-v2)
 
 AEM の SPA プロジェクトを始める前に、[AEM 対応 SPA の開発](/help/sites-developing/spa-architecture.md)のドキュメントも必ずお読みください。
