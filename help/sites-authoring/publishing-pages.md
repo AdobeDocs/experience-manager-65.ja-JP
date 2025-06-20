@@ -5,10 +5,10 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
-workflow-type: ht
-source-wordcount: '1669'
-ht-degree: 100%
+source-git-commit: 2a843cefdd881e3cab60b2ddba12a26d0a498d13
+workflow-type: tm+mt
+source-wordcount: '1701'
+ht-degree: 98%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 100%
 >公開に関する特定の用語は混同されることがあります。
 >
 >* **公開／非公開**
->  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
+>  >  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
 >
 >* **アクティブ化／非アクティブ化**
->  公開／非公開と同義です。
+>  >  公開／非公開と同義です。
 >
 >* **レプリケート／レプリケーション**
->  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
+>  >  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
 
 ## 特権が不十分 {#insufficient-privileges}
 
@@ -196,6 +196,10 @@ ht-degree: 100%
    「**公開**」または「**後で公開する**」をクリックして、公開を完了します。
 
    ![chlimage_1-4](assets/chlimage_1-4.png)
+
+>[!TIP]
+>
+>公開するコンテンツをスケジュールすると、コンテンツがレプリケートされ、公開ワークフローに従います。 既に公開済みのコンテンツを非公開にせずに一時的に非表示にする場合は、ページプロパティで [**オンタイム** と **オフタイム** を使用できることを検討してください。](/help/sites-authoring/editing-page-properties.md#on-time)
 
 ## ページを非公開にする {#unpublishing-pages}
 
