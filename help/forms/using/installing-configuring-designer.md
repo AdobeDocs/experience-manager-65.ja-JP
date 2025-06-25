@@ -40,7 +40,7 @@ ht-degree: 75%
 >[!NOTE]
 >
 >* 64 ビット版の Designer は、AEM 6.5 Forms サービスパック 19 （6.5.19.0）で導入されました。
->* 20}AEM Forms サービスパック 21 （6.5.21.0） ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) のリリース以降、32 ビットバージョンの Designer は非推奨になりました。[
+>* 20&rbrace;AEM Forms サービスパック 21 （6.5.21.0） [&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) のリリース以降、32 ビットバージョンの Designer は非推奨になりました。
 > * Forms Designer でサポートされているプラットフォームは、AEM Forms でサポートされているプラットフォームと一致します。Forms Designer でサポートされているプラットフォームについて詳しくは、[こちらをクリック](/help/forms/using/aem-forms-jee-supported-platforms.md)してください。
 
 フォームデザイナーのインストールに関して詳しくは、[よくある質問](#fandq)を参照してください。
@@ -124,6 +124,7 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
    * Forms Designer のバージョンを確認するには、次の 2 つの方法があります。
 
       1. Designer を開き、「ヘルプ」に移動し、「Designer について」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、バージョンの最後に 64 ビットと記載されていることがわかります。
+
          `6.5.21.20240522.1.161 | 64 bit`
       1. Designer を開くと、左上に、製品名と 64 ビット情報を含むブランディングアイコンが表示されます。
 
