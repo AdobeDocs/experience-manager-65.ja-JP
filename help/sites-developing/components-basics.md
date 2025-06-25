@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4828'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -314,7 +314,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>設定されている場合、このプロパティはセル ID と見なされます。<br /> </td>
+   <td>設定した場合、このプロパティはセル ID として取得されます。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>

@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1182'
 ht-degree: 100%
 
@@ -67,7 +67,7 @@ jar ファイルは汎用の ZIP 形式を使用しているので、一部の�
 
 >[!NOTE]
 >
->[メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)も参照してください。
+>[メモリの問題の分析](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-17482)も参照してください。
 
 
 CRX 自体は、少ないメモリ使用量で動作します。CRX 内で実行するアプリケーションが大きなメモリを必要とする場合や、メモリ負荷の高い操作（大規模なトランザクションなど）を要求する場合、CRX が稼動する JVM インスタンスを適切なメモリ設定で起動する必要があります。

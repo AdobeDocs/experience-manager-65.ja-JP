@@ -10,9 +10,9 @@ exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2085'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -184,7 +184,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュ、ロードバラ�
 
 ### AEM LiveCycle Connector の設定 {#configuring-aem-livecycle-connector}
 
-AEM ドキュメントサービスおよびAEM ドキュメントセキュリティのリリースにより、AEMでは、LiveCycle ドキュメントサービスを呼び出して XFA フォームをレンダリングしたり、ドキュメントをPDFに変換したり、ドキュメントをポリシー保護したりできるようになりました。
+AEM ドキュメントサービスおよび AEM ドキュメントセキュリティのリリースにより、LiveCycle ドキュメントサービスを呼び出して XFA フォームをレンダリングしたり、ドキュメントを PDF に変換したり、ドキュメントをポリシー保護したりできるようになりました。
 
 ### ジョブのオフロードとトポロジの管理 {#job-offloading-and-topology-administration}
 

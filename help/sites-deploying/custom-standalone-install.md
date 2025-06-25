@@ -8,9 +8,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 source-git-commit: 3effd4fa686ac89421ffe74e52bf34830ddd776c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1614'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -159,7 +159,7 @@ Java マシンの一時フォルダーのデフォルトの場所は `/tmp` で�
 
 >[!CAUTION]
 >
->これらのオプションは、AEM 6.5 （6.5.0.0）のオリジナルのリリース以降で有効です。 SP の新しいリリースでは変更が可能です。
+>これらのオプションは、AEM 6.5（6.5.0.0）のオリジナルのリリース以降で有効です。SP の新しいリリースでは変更が可能です。
 
 ```shell
 Loading quickstart properties: default

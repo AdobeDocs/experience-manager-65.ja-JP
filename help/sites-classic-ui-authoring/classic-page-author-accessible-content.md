@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '9057'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -328,9 +328,9 @@ AEM では、「**代替テキスト**」がデフォルトで画像に追加さ
 
 上記の[キャプション（収録済み）](#captions-pre-recorded)のガイダンスに従ってください。ただし、メディアがライブなので、キャプションは可能な限り短時間で、起こっていることに応じて作成する必要があります。そのため、リアルタイムキャプションツールまたは音声テキスト変換ツールの使用を検討する必要があります。
 
-詳細な手順はこのドキュメントの範囲外ですが、次のリソースで役に立つ情報が提供されています。
+詳細な手順説明はこのドキュメントの範囲外ですが、次のリソースで役に立つ情報が提供されています。
 
-* [WebAIM：Real Time Captioning](https://webaim.org/techniques/captions/realtime)
+* [WebAIM：リアルタイムキャプション](https://webaim.org/techniques/captions/realtime)
 
 #### 詳細情報 - キャプション（ライブ）（1.2.4） {#more-information-captions-live}
 

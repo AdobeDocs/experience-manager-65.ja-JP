@@ -11,9 +11,9 @@ exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5755'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -368,7 +368,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`。
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
    >
    >また、ログファイルが
    >
@@ -1098,8 +1098,8 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >
 >詳しくは、以下の記事も参照してください。
 >
->* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
->* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+>* [スレッドダンプ](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-17452)
+>* [メモリの問題の分析](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-17482)
 >* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
 >
 
@@ -1116,7 +1116,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [AEM を起動](/help/sites-deploying/deploy.md#getting-started)するために使用される JVM 設定
 * ナレッジベース
 
-* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+* [メモリの問題の分析](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-17482)
 
 ### ディスク I/O {#disk-i-o}
 
@@ -1134,7 +1134,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
 * ナレッジベース
 
-   * [ 開いているファイルが多すぎます ] （https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=ja
+   * [ 開いているファイルが多すぎます]（https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-17470
 
 ### 通常のパフォーマンス低下 {#regular-performance-degradation}
 
@@ -1143,7 +1143,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [メモリ不足](#outofmemory)
 * ナレッジベース
 
-   * [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23761)
+   * [閉じられていない Resource Resolver](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23761)
 
 ### JVM の調整 {#jvm-tuning}
 

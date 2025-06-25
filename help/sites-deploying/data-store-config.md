@@ -9,9 +9,9 @@ exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3461'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -445,7 +445,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * azureSas=&quot;&quot;：コネクタのバージョン 1.6.3 で、Azure Shared Access Signature（SAS）のサポートが追加されました。**SAS とストレージ資格情報の両方が設定ファイルに存在する場合は、SAS が優先されます。** SAS について詳しくは、[公式ドキュメント](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)を参照してください。「=」文字は必ず、「\=」のようにエスケープしてください。
 
 * azureBlobEndpoint=&quot;&quot;：Azure Blob エンドポイントです。例えば、https://&lt;storage-account>.blob.core.windows.net などです。
-* accessKey=&quot;&quot;：ストレージアカウント名です。Microsoft® Azure の認証資格情報について詳しくは、[公式ドキュメント](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create)を参照してください。
+* accessKey=&quot;&quot;：ストレージアカウント名です。Microsoft® Azure の認証資格情報について詳しくは、[公式ドキュメント](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-create?tabs=azure-portal)を参照してください。
 
 * secretKey=&quot;&quot;：ストレージアクセスキーです。「=」文字は必ず、「\=」のようにエスケープしてください。
 * container=&quot;&quot;：Microsoft® Azure Blob ストレージコンテナ名。コンテナは、一連の Blob をグループ化したものです。詳しくは、[公式ドキュメント](https://learn.microsoft.com/ja-jp/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN)を参照してください。

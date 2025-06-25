@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '527'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 97%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-詳しくは、[JVM からのスレッドダンプの取得方法](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)を参照してください。
+詳しくは、[JVM からのスレッドダンプの取得方法](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-17452)を参照してください。
 
 ### 閉じられていない JCR セッションの確認 {#checking-for-unclosed-jcr-sessions}
 
@@ -111,7 +111,7 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 * 多数の CacheManager を確認できます（ログファイル内の resizeAll エントリ）。次の数値（size=&lt;x>）はキャッシュ数を示しており、各セッションが複数のキャッシュを開きます。
 * システムのメモリが不足することがあります（重大度に応じて数時間後、数日後、数週間後に発生）。
 
-閉じられていないセッションの分析を開始するには、ナレッジベースの記事 [ 閉じられていないリソースリゾルバー ](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23761) を参照してください。
+閉じられていないセッションの分析を開始するには、ナレッジベースの記事である[閉じられていないリソースリゾルバー](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23761)を参照してください。
 
 ### Adobe Experience Manager web コンソールの使用 {#using-the-adobe-experience-manager-web-console}
 
