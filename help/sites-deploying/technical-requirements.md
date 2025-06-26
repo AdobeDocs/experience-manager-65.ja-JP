@@ -9,7 +9,7 @@ exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: ee6299819a027ef86a69ddbb5e56cf38e3436b6e
 workflow-type: tm+mt
 source-wordcount: '3700'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -102,7 +102,7 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
 1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
-   **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 および 21 は、[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements).** でサポートされています
+   **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 および 21 は、[AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements).** でサポートされています
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
 
@@ -213,7 +213,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. x、5.6 倍。 x および 9.x には Red Hat® ディストリビューションの派生 OS （Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。 AEM Formsのアドオン機能は、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x、5.6 倍。 x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
 2. AEM Formsは、Ubuntu 20.04 および SUSE® Linux® Enterprise Server 15 SP6 （64 ビット）でサポートされています。
 3. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
@@ -407,7 +407,7 @@ Linux® と Windows の両方に適用されるハードウェア要件は次の
 
 Linux® で Dynamic Media を使用する場合は、次の必要条件を満たす必要があります。
 
-* 最新の修正パッチが適用された Red Hat® Enterprise 7 以降
+* 最新の修正パッチが適用された RedHat® Enterprise 7 以降
 * 64 ビットオペレーティングシステム
 * スワップ無効（推奨）
 * SELinux 無効（後述の注意を参照）
@@ -559,7 +559,7 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 * **オペレーティングシステム：**
 
-   * Linux® （64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
+   * Linux®（64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
 
    * Windows Server
    * macOS X（64 ビット）

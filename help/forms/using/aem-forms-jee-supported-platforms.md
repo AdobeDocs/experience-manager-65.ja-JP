@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 2920e7fd0ce336817a445952a3213c185b224ca9
+source-git-commit: 9b28ab12422743cd7849d2761aef9916ec6710f5
 workflow-type: tm+mt
 source-wordcount: '4283'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 95%
 <div class="preview">
 
 
-Adobeでは、JEE 上のAEM 6.5.23.0 Forms サービスパック 23 （6.5.23.0）を含んだ [ 完全なインストーラー ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) のほか、パッチインストーラーをリリースしました。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
+アドビでは、JEE 版 AEM 6.5.23.0 Forms サービスパック 23（6.5.23.0）を含んだ[完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)のほか、パッチインストーラーをリリースしました。完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-新規インストールを実行する場合や、JEE 環境のAEM6.5.23.0Formsの最新ソフトウェアを使用することを計画している場合、Adobeでは、2023 年 8 月 31 日（PT）にリリースされたAEM 6.5.18 Forms AEM インストーラー [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) または 2019 年 4 月 8 日（PT）にリリースされたAEM 6.5.12 Forms インストーラーではなく、2025 年 6 月 6 日（PT）にリリースされる Forms6.5.23.0 JEE フルインストーラーを使用することをお勧めします。
+新規インストールを実行する場合や、JEE 環境での AEM 6.5.23.0 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 18 Forms インストーラー（2023年8月31日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2019年4月8日（PT）にリリース）ではなく、[ JEE 上の AEM 6.5.23.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)（2025年6月6日（PT）にリリース）を使用することをお勧めします。
 
 
 </div>
@@ -46,7 +46,7 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 >[!NOTE]
 >
->- サポートされているサーバープラットフォームへの例外エラーの完全リストについては、[サポートされているサーバープラットフォームへの例外エラー](#p-exceptions-to-supported-server-platforms-p)を参照してください。
+>- サポートされているサーバープラットフォームへの例外エラーの完全リストについては、[サポートされているサーバープラットフォームへの例外エラー](#exceptions-to-supported-server-platforms)を参照してください。
 >- JEE 上の AEM Forms でサポートされるのは、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみです。
 
 ### アップグレードおよびサポートポリシー
@@ -895,7 +895,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -992,7 +992,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
 
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
