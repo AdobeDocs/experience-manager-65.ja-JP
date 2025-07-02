@@ -11,9 +11,9 @@ feature: Forms Designer,Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 8f14518117b3aff1cdb2e033fbfe40d0a903d53f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '826'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 75%
 
 * 64 ビット版の [Visual C++ 2019 再頒布可能パッケージ（x64）](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
 * AEM Forms Designer をインストールまたはアンインストールするには、管理者権限を持っている必要があります。
-* 64 ビット AEM Forms Designerを実行しているシステムには、OpenSSL3 （特に shared library `libcrypto-3-x64.dll`）がインストールされている必要があります。\
+* 64 ビット AEM Forms Designerを実行しているシステムには、OpenSSL3 （特に共有ライブラリ `libcrypto-3-x64.dll`）がインストールされている必要があります。\
   このライブラリは、AEM Designerが正しく機能し、**SHAHash** を計算するために必要です。
 
 +++
@@ -39,8 +39,8 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->* 64 ビット版の Designer は、AEM 6.5 Forms サービスパック 19 （6.5.19.0）で導入されました。
->* 20&rbrace;AEM Forms サービスパック 21 （6.5.21.0） [&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) のリリース以降、32 ビットバージョンの Designer は非推奨になりました。
+>* 64 ビット版の Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）で導入されました。
+>* [AEM Forms サービスパック 21（6.5.21.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)のリリース以降、32 ビット版の Designer は非推奨になりました。
 > * Forms Designer でサポートされているプラットフォームは、AEM Forms でサポートされているプラットフォームと一致します。Forms Designer でサポートされているプラットフォームについて詳しくは、[こちらをクリック](/help/forms/using/aem-forms-jee-supported-platforms.md)してください。
 
 フォームデザイナーのインストールに関して詳しくは、[よくある質問](#fandq)を参照してください。
@@ -54,9 +54,9 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
 
    >[!NOTE]
    > 
-   >* 32 ビット版Forms Designerは、AEM 6.5 Forms サービスパック 20 （6.5.20.0）リリースで非推奨（廃止予定）になる予定です。 アドビでは、64 ビット版の Forms Designer にアップグレードすることをお勧めします。
-   >* 64 ビット Forms Designerは、AEM 6.5 Forms サービスパック 19 （6.5.19.0）以降のリリースでのみ使用できます。
-   >* Adobe Experience Manager 6.5 Forms サービスパック 15 （6.5.15.0）以降のForms Designer バージョンには、サービスパックのバージョンも含まれています。 例えば、サービスパック 15 の場合、バージョン番号は 6.5.15.20221112.1.0 です。この例では、6.5.15 がサービスパックのバージョンです。
+   >* 32 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 20（6.5.20.0）リリースで廃止される予定です。アドビでは、64 ビット版の Forms Designer にアップグレードすることをお勧めします。
+   >* 64 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）以降のリリースでのみ使用できます。
+   >* Adobe Experience Manager 6.5 Forms サービスパック 15（6.5.15.0）以降の Forms Designer バージョンには、サービスパックバージョンも含まれています。例えば、サービスパック 15 の場合、バージョン番号は 6.5.15.20221112.1.0 です。この例では、6.5.15 がサービスパックのバージョンです。
 
 1. setup.exe をダブルクリックして、AEM Forms Designer のインストーラーを起動します。
 1. 続行して、「パーソナライズ機能」画面で詳細とシリアル番号を入力します。
@@ -86,25 +86,25 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
 
 ## AEM Forms Designer の更新 {#update-forms-designer}
 
-AEM Forms Designer 6.5.16.0 の最新バージョンのアップデートする場合、次の 2 つのケースがあります。
+AEM Forms Designer 6.5.16.0 の最新バージョンの更新する場合、次の 2 つのケースがあります。
 
-* **ケース 1**：ユーザーが 6.5.15.0 より前のAEM Forms Designer バージョンを使用している場合。
-* **ケース 2**：ユーザーがAEM Forms Designer バージョン 6.5.15.0 持つ場合。
+* **ケース 1**：ユーザーの AEM Forms Designer バージョンが 6.5.15.0 より前の場合。
+* **ケース 2**：ユーザーの AEM Forms Designer のバージョンが 6.5.15.0 の場合。
 
-+++**ユーザーのAEM Forms Designerのバージョンが 6.5.15.0 より前の場合。**
++++**ユーザーの AEM Forms Designer のバージョンが 6.5.15.0 より前の場合。**
 
 AEM Forms Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
 
 1. **AEM Forms Designer6.5.16.0** をインストールする前に、以前のバージョンをアンインストールする必要があります。
-1. AEM フォームリリースページから [AEM Forms Designer 6.5.15.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をダウンロードしてインストールします。
-1. **AEM Forms Designer6.5.15.0** のインストールが完了したら、[AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) をダウンロードし、ダウンロードしたインストーラーファイルをダブルクリックしてインストールします。
+1. AEM Form のリリースページから [AEM Forms Designer6.5.15.0](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) をダウンロードしてインストールします。
+1. **AEM Forms Designer6.5.15.0** のインストールが完了したら、[AEM Forms Designer 6.5.16.0](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)をダウンロードし、ダウンロードしたインストーラーファイルをダブルクリックしてインストールします。
 
 +++
 
-+++**ユーザーがAEM Forms Designer版 6.5.15.0 持っている場合**
++++**ユーザーの AEM Forms Designer のバージョンが 6.5.15.0 の場合**
 
 AEM Forms Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
-1. [ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)から最新バージョンの AEM Forms Designer をダウンロードします。
+1. [ソフトウェア配布ポータル](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)から最新バージョンの AEM Forms Designer をダウンロードします。
 1. ダウンロードしたインストーラーファイルをダブルクリックして、最新バージョンの AEM Forms Designer をインストールします。
 
 +++
@@ -124,7 +124,6 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
    * Forms Designer のバージョンを確認するには、次の 2 つの方法があります。
 
       1. Designer を開き、「ヘルプ」に移動し、「Designer について」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、バージョンの最後に 64 ビットと記載されていることがわかります。
-
          `6.5.21.20240522.1.161 | 64 bit`
       1. Designer を開くと、左上に、製品名と 64 ビット情報を含むブランディングアイコンが表示されます。
 

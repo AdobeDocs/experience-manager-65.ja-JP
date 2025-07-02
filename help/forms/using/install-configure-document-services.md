@@ -7,9 +7,9 @@ exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 source-git-commit: f1fc8554b35d7d9c152023a6b9094e31c1b49807
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5806'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -184,9 +184,9 @@ Unix ベースのオペレーティングシステムを使用する場合は、
    * libc.so.6
    * ld-linux.so.2
    * libexpat.so.1
-* （PDF Generatorのみ） RHEL 8 または RHEL 9 の設定で WebKit ルートを有効にするには、32 ビット `nspr` ライブラリはデフォルトでは使用できない場合があります。存在しない場合はインストールします。
+* （PDF Generator のみ）RHEL 8 または RHEL 9 の設定で WebKit ルートを有効にするには、32 ビット `nspr` ライブラリがデフォルトでは使用できない場合があります。存在しない場合はインストールしてください。
 
-* （PDF Generatorのみ） UNIX® サーバーで WebToPDF の変換が次のエラーで失敗した場合：
+* （PDF Generator のみ）UNIX® サーバーで WebToPDF の変換が次のエラーで失敗した場合：
 
   ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
 その場合は、次の環境変数を設定して、サーバーを再起動します。
@@ -194,7 +194,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 >[!NOTE]
 >
-> WebToPDF は、インタラクティブ通信のグラフ機能でも使用されます。 したがって、上記の WebToPDF に関して説明されたすべての設定手順は、グラフ機能が正しく機能することを確認する場合に適用できます。
+> WebToPDF は、インタラクティブ通信のグラフ機能でも使用されます。したがって、上記の WebToPDF に関して説明されたすべての設定手順は、グラフ機能が正しく機能することを確認する場合に適用できます。
 
 ## プリインストール設定 {#preinstallationconfigurations}
 
@@ -796,7 +796,6 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
          adobe_prtk --tool=VolumeSerialize --generate --serial=&lt;serialnum> [--leid=&lt;LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=&lt;Absolute path to prov.xml>]
          
          ```
-
      
    * パッケージをボリュームシリアライズします（prov.xml ファイルと新しいシリアルを使用して既存のインストールを再シリアライズします）。PRTK インストールフォルダーから次のコマンドを管理者として実行し、クライアントマシンにデプロイされたパッケージをシリアライズしてアクティベートします。
 
@@ -804,8 +803,8 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
          adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
          
          ```
-
-     * 大規模インストールの場合は、[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) をクリックして、以前のバージョンの Reader と Acrobat を削除します。インストーラーをカスタマイズし、組織のすべてのマシンにデプロイします。
+     
+* 大規模インストールの場合は、[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) をクリックして、以前のバージョンの Reader と Acrobat を削除します。インストーラーをカスタマイズし、組織のすべてのマシンにデプロイします。
 
 +++
 

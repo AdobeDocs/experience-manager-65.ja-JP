@@ -10,9 +10,9 @@ exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 source-git-commit: 9b28ab12422743cd7849d2761aef9916ec6710f5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4283'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -55,14 +55,14 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 - **完全なインストーラーのアップグレードサポート**：完全なインストーラーは、6 回の AEM サービスパックリリースごとにリリースされます。例えば、6.5.12.0 および 6.5.18.0 SP リリースでは完全なインストーラーがリリースされました。AEM Forms では、最新の 2 つの完全なインストーラーからのみ直接アップグレードできます。例えば、AEM Forms では、最新の 2 つの完全なインストーラー（6.5.18.0 と 6.5.12.0）からのみバージョン 6.5.23.0 への直接アップグレードを簡単に行うことができます。以前のアップグレードからアップグレードする必要がある場合は、マルチホップアップグレードを使用して、最初にサポートされている完全なインストーラーリリースに移行した後、最新のリリースに移行できます。
 
-- **非推奨**:Platform のサポートは、インストーラーの完全なリリースのたびに更新されます。 プラットフォームマトリックスで非推奨とマークされたソフトウェアは、後続のリリースやソフトウェアのサポートが終了した時点で、サポート対象のプラットフォームから削除される場合があります。
+- **廃止**：プラットフォームのサポートは、完全なインストーラーリリースごとに更新されます。プラットフォームマトリックスで廃止とマークされたソフトウェアは、後続のリリースやソフトウェアのサポートが終了した時点で、サポート対象のプラットフォームから削除される場合があります。
 
 #### サービスパック
 
 
 - **サービスパックの対象範囲**：アドビでは、最新の 6 つのサービスパックのいずれかを使用して、AEM Forms 環境のテクニカルサポートを提供します。現在のバージョンが最新の 6 つのサービスパックよりも古い場合、最適なパフォーマンス、セキュリティ、継続的なサポートを実現するために、アドビでは最新バージョンにアップグレードすることを強くお勧めします。
 
-- **パッチアップデートガイドライン**：パッチインストーラーを使用して更新する際は、基になる完全なインストーラーのバージョンが、2 つ以上のリリース以前であることを確認することが重要です。 例えば、サービスパック 6.5.23.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
+- **パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.23.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
 
 <!--
 - **Patch Upgrade Support**: You can upgrade from an older service pack to a newer one (for example, from 6.5.18.0 to 6.5.23.0) using the patch installer, as long as the destination platform (OS, JDK, application server, etc.) is supported by the newer service pack.-->
@@ -207,7 +207,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
   <td></td>
  </tr>
  <tr>
-  <td><p>Microsoft® SQL Server 2019（廃止） </p> </td>
+  <td><p>Microsoft® SQL Server 2019（廃止予定） </p> </td>
   <td><p>リポジトリ Microkernel</p> </td>
   <td><p>サポート対象</p> </td>
  </tr>
@@ -261,13 +261,13 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
  </tr>
   <tr>
   <td>MySQL</td>
-  <td><p>MySQL Connector/J 5.7 （非推奨）</p> </td>
-  <td><p>JEE 上の AEM Forms のインストールに付属</p> </td>
+  <td><p>MySQL Connector/J 5.7（非推奨）</p> </td>
+  <td><p>JEE のインストールで AEM Forms に付属</p> </td>
  </tr>
  <tr>
   <td>MySQL</td>
   <td><p>MySQL Connector/J 8.4</p> </td>
-  <td><p>JEE 上の AEM Forms のインストールに付属</p> </td>
+  <td><p>JEE のインストールで AEM Forms に付属</p> </td>
  </tr>
  <tr>
   <td>Microsoft® SQL Server<br /> </td>
@@ -395,7 +395,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 > - glibc-locale.x86_64（2.17 以降）
 > - OpenSSL 3（OS のデフォルトの場所で必要）。
 
-OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。 それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
+OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
 
 #### 仮想化環境 {#virtualized-environment}
 
@@ -438,7 +438,7 @@ AEM Forms on JEE サーバーの設定でプラットフォームを選択する
 1. 1.8.0_281 より後の JDK バージョンは、WebLogic サーバーではサポートされていません。（FORMS-8498）
 1. JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。
 
-1. [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] と [!DNL JBoss® EAP 7.1] をサポートしていません。[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later] の自動インストールをサポートしていません。 （CQDOC-18312）
+1. [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later] の自動インストールをサポートしていません。（CQDOC-18312）
 
 
 この他に、AEM Forms on JEE の導入のためにソフトウェアを選択する際には、次の項目を考慮してください。
@@ -895,7 +895,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -992,7 +992,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
 
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
@@ -1018,7 +1018,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | -------------- | --------------- | ------------------- |
 | MongoDB Enterprise 7.0 | MongoDB Enterprise 5.0 | MongoDB Enterprise 6.0 |
 | MySQL 8.4 | SUSE® Linux® Enterprise Server 12（64 ビット版） | MySQL 8.0.27 |
-| Microsoft® SQL Server 2022 | Centos 7 | Microsoft® SQL Server 2019 |
+| Microsoft® SQL Server 2022 | CentOS 7 | Microsoft® SQL Server 2019 |
 | Microsoft® SQL Server JDBC ドライバー 12.10.0 | | Microsoft® SQL Server JDBC ドライバー 8.2 |
 | Red Hat® Enterprise Linux® 9（Kernel 4.x）（64 ビット版） | | Red Hat® Enterprise Linux® 8（Kernel 4.x）（64 ビット版） |
 

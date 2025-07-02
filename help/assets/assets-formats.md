@@ -9,9 +9,9 @@ exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1556'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -84,7 +84,7 @@ Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツ�
 
 ## サポートしている画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
-Adobe画像トランスコーディングライブラリは、エンコーディング、トランスコーディング、サンプリング変更、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
+Adobe Imaging Transcoding ライブラリは、エンコーディング、トランスコーディング、サンプリング変更、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
 
 Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートしています。
 
@@ -144,7 +144,7 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 ## サポートされるアーカイブ形式 {#supported-archive-formats}
 
-次の表に、サポートされるアーカイブ形式と、一般的な DAM ワークフローの適用性を示します。
+サポートされるアーカイブ形式と、一般的な DAM ワークフローの適用可能性を次の表に示します。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media 配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -285,7 +285,7 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 | PICT | ✓ | − | − | − | − | − |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md), [混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
 | PSD ‡ | ✓ | − | − | − | − | − |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および [スピン](/help/assets/spin-sets.md) |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [画像](/help/assets/image-sets.md)、[混在メディア](/help/assets/mixed-media-sets.md)および[スピン](/help/assets/spin-sets.md) |
 | WEBP | − | − | − | ✓ | − | − |
 
 <!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->

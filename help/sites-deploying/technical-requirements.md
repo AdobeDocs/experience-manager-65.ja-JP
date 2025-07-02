@@ -7,9 +7,9 @@ feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: ee6299819a027ef86a69ddbb5e56cf38e3436b6e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3700'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -102,7 +102,7 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
 1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
-   **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 および 21 は、[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements).** でサポートされています
+   **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 および 21 は、[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements) でサポートされています。**
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
 
@@ -132,7 +132,7 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 | Oracle Database 12c（12.1.x） | リポジトリと Forms データベース | R：制限サポート |
 | Oracle Database 19c | リポジトリと Forms データベース | R：制限サポート |
 | Microsoft® SQL Server 2016 | Forms データベース | A：サポート対象 |
-| Microsoft® SQL Server 2019（廃止） | Forms データベース | A：サポート対象 |
+| Microsoft® SQL Server 2019（廃止予定） | Forms データベース | A：サポート対象 |
 | Microsoft® SQL Server 2022 | Forms データベース | A：サポート対象 |
 | **Apache Lucene（Quickstart 組み込み）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
@@ -144,7 +144,7 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 5. AEM Forms のアップグレードのお客様に対してサポートされます。新規インストールの場合はサポートされていません。
 6. AEM Forms にのみ適用可能：
    * Oracle Database 12c のサポートを削除し、Oracle Database 19c のサポートを追加しました。
-   * Microsoft® SQL Server 2016 のサポートを終了し、Microsoft® SQL Server 2019 およびMicrosoft® SQL Server 2022 もサポートするようになりました。
+   * Microsoft® SQL Server 2016 のサポートを削除し、Microsoft® SQL Server 2019 と Microsoft® SQL Server 2022 のサポートを追加しました。
 
 >[!NOTE]
 >
@@ -207,14 +207,14 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Linux®、Debian ディストリビューションベース（Ubuntu | A：サポート対象 `[1]` `[2]` |
 | Linux®、SUSE® ディストリビューションベース | A：サポート対象 `[1]` |
 | Microsoft® Windows Server 2022 | R：制限サポート |
-| Microsoft® Windows Server 2019 `[4]` （非推奨） | R：新規契約向けの制限サポート `[5]` |
+| Microsoft® SQL Server 2019 `[4]`（廃止予定） | R：新規契約向けの制限サポート `[5]` |
 | Microsoft® Windows Server 2016 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft® Windows Server 2012 R2 | Z：サポート対象外 |
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. x、5.6 倍。 x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
-2. AEM Formsは、Ubuntu 20.04 および SUSE® Linux® Enterprise Server 15 SP6 （64 ビット）でサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x、5.x, 6.x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+2. AEM Forms は、Ubuntu 20.04 および SUSE® Linux® Enterprise Server 15 SP6（64 ビット版）でサポートされています。
 3. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
    >[!NOTE]

@@ -7,9 +7,9 @@ feature: Developing,SPA Editor
 role: Developer
 index: false
 source-git-commit: 7e4150d1b335caa6c1951cee69e14e351fa03ac6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '129'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
