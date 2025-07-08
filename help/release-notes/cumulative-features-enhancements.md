@@ -137,9 +137,9 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 ### [!DNL Forms]
 
 * **新しいアダプティブフォームコアコンポーネント**：垂直タブ、利用条件、チェックボックスが追加され、フォームのスケーラビリティが向上します。
-   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
+   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
 
-   * **[利用条件コンポーネント ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：コアコンポーネントベースのアダプティブFormsに利用条件コンポーネントが含まれるようになりました。 フォーム作成者はこのセクションを追加して、サービス、製品、またはプラットフォームの利用条件、条件、法的契約をユーザーに表示します。 このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
+   * **[利用条件コンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：コアコンポーネントベースのアダプティブFormsに利用条件コンポーネントが含まれるようになりました。 フォーム作成者はこのセクションを追加して、サービス、製品、またはプラットフォームの利用条件、条件、法的契約をユーザーに表示します。 このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
 
      ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
 
@@ -164,9 +164,9 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 
 ### [!DNL Forms]
 
-* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms)** - 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出すことができるようになりました。また、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。または、サービスから返されたエラーに対して特定のアクションを実行できます。例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
+* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms)** - 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出すことができるようになりました。また、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。または、サービスから返されたエラーに対して特定のアクションを実行できます。例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
 
-* **[Adobe Sign ワークフローステップの機能強化](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM ワークフローの Adobe Sign ワークフローステップは、次の機能強化で使用可能になります。
+* **[Adobe Sign ワークフローステップの機能強化](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM ワークフローの Adobe Sign ワークフローステップは、次の機能強化で使用可能になります。
 
    * **Adobe Sign の Government ID ベースの認証によるセキュリティの強化** - Adobe Acrobat Signの Government ID ベースの認証では、検証レイヤーが追加されました。 これにより、ユーザーは行政発行の ID（運転免許証、国民 ID、パスポート）を使用して身元を認証できます。この機能強化により、信頼できる ID ドキュメントを使用することで、署名プロセスの信頼性がさらに高まり、高度なセキュリティ、コンプライアンスおよびユーザー検証を必要とするシナリオに最適になります。
 
@@ -176,7 +176,7 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
    * **署名者以外にも契約書受信者の役割を拡大** - Adobe Acrobat Signでは、ワークフロー要件に合わせて、署名者以外にも契約書受信者の役割を拡大できます。 有効にすると、契約の各受信者の役割を個別に設定でき、署名者がデフォルトになります。
 
 
-* **[AEM Forms on JEE 完全インストーラー](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** - サービスパックには、AEM Forms on JEE 完全インストーラーが含まれており、以下を含む複数の新しいソフトウェアの組み合わせがサポートされます。
+* **[AEM Forms on JEE 完全インストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** - サービスパックには、AEM Forms on JEE 完全インストーラーが含まれており、以下を含む複数の新しいソフトウェアの組み合わせがサポートされます。
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * Oracle WebLogic 14C（Windows Server 2022）
@@ -221,9 +221,9 @@ CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic
 
 ### [!DNL Forms]
 
-* [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/overview)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
+* [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/ja/docs/experience-manager-headless-adaptive-forms/using/overview)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
 
-* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。 [WCM コアコンポーネント](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/get-started/authoring)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。 [WCM コアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/get-started/authoring)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
 
 * OSGi の Reader Extension サービスには、Adobe Acrobat Reader でデータを読み込みまたは書き出しするために、PDF の読み込みおよび書き出しの使用権限を有効化する個別のオプションが追加されました。
 
@@ -233,7 +233,7 @@ CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic
 
 * AEM Forms Designer が[スペイン語ロケール](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)で利用できるようになりました。
 * [Microsoft® Office 365 メールサーバープロトコル（SMTP および IMAP）での認証に、OAuth2](/help/forms/using/oauth2-support-for-mail-service.md) を使用できるようになりました。
-* [ サーバーで再検証 ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions#enabling-server-side-validation-br) プロパティを true に設定すると、サーバーサイドのレコードのドキュメントから除外する非表示フィールドを識別することができます。
+* [ サーバーで再検証 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions#enabling-server-side-validation-br) プロパティを true に設定すると、サーバーサイドのレコードのドキュメントから除外する非表示フィールドを識別することができます。
 * AEM Forms Designerには、32 ビット版の Visual C++ 2019 再頒布可能パッケージ（x86）が必要です。
 
 ## AEM 6.5 サービスパック 14 - 2022年8月25日（PT）
