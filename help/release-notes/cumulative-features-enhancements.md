@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
 solution: Experience Manager
-source-git-commit: 3d47b1e17a4500e5e68e1abe2e2d4ac86376f424
+source-git-commit: eef3ad559612c338de0c4232aadc4133c910aaf8
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3109'
 ht-degree: 74%
 
 ---
@@ -96,8 +96,6 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 
 ### [!DNL Forms]
 
-このリリースの主な機能と機能強化は次のとおりです。
-
 * **OAuth 資格情報のサポート**：既存のサービスアカウント（JWT）資格情報に代わる、サーバー間認証用の新しく使いやすい資格情報。 （NPR-41994）
 * [AEM Forms のルールエディターの機能強化](/help/forms/using/rule-editor-core-components.md)：
    * `When-then-else` 機能を使用したネストされた条件の実装のサポート。
@@ -137,9 +135,9 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 ### [!DNL Forms]
 
 * **新しいアダプティブフォームコアコンポーネント**：垂直タブ、利用条件、チェックボックスが追加され、フォームのスケーラビリティが向上します。
-   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
+   * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
 
-   * **[利用条件コンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：コアコンポーネントベースのアダプティブFormsに利用条件コンポーネントが含まれるようになりました。 フォーム作成者はこのセクションを追加して、サービス、製品、またはプラットフォームの利用条件、条件、法的契約をユーザーに表示します。 このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
+   * **[利用条件コンポーネント ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：コアコンポーネントベースのアダプティブFormsに利用条件コンポーネントが含まれるようになりました。 フォーム作成者はこのセクションを追加して、サービス、製品、またはプラットフォームの利用条件、条件、法的契約をユーザーに表示します。 このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
 
      ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
 
@@ -164,9 +162,9 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 
 ### [!DNL Forms]
 
-* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms)** - 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出すことができるようになりました。また、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。または、サービスから返されたエラーに対して特定のアクションを実行できます。例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
+* **[ルールエディターでのカスタムエラーハンドラーによるエラー処理の強化](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms)** - 外部サービスから返されたエラーに応じて（クライアントライブラリを使用して）カスタム関数を呼び出すことができるようになりました。また、エンドユーザーに対してカスタマイズされた応答を提供できるようになりました。または、サービスから返されたエラーに対して特定のアクションを実行できます。例えば、特定のエラーコードに対してバックエンドでカスタムワークフローを呼び出したり、サービスが停止していることを顧客に通知したりできます
 
-* **[Adobe Sign ワークフローステップの機能強化](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM ワークフローの Adobe Sign ワークフローステップは、次の機能強化で使用可能になります。
+* **[Adobe Sign ワークフローステップの機能強化](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM ワークフローの Adobe Sign ワークフローステップは、次の機能強化で使用可能になります。
 
    * **Adobe Sign の Government ID ベースの認証によるセキュリティの強化** - Adobe Acrobat Signの Government ID ベースの認証では、検証レイヤーが追加されました。 これにより、ユーザーは行政発行の ID（運転免許証、国民 ID、パスポート）を使用して身元を認証できます。この機能強化により、信頼できる ID ドキュメントを使用することで、署名プロセスの信頼性がさらに高まり、高度なセキュリティ、コンプライアンスおよびユーザー検証を必要とするシナリオに最適になります。
 
@@ -176,7 +174,7 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
    * **署名者以外にも契約書受信者の役割を拡大** - Adobe Acrobat Signでは、ワークフロー要件に合わせて、署名者以外にも契約書受信者の役割を拡大できます。 有効にすると、契約の各受信者の役割を個別に設定でき、署名者がデフォルトになります。
 
 
-* **[AEM Forms on JEE 完全インストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** - サービスパックには、AEM Forms on JEE 完全インストーラーが含まれており、以下を含む複数の新しいソフトウェアの組み合わせがサポートされます。
+* **[AEM Forms on JEE 完全インストーラー](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** - サービスパックには、AEM Forms on JEE 完全インストーラーが含まれており、以下を含む複数の新しいソフトウェアの組み合わせがサポートされます。
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * Oracle WebLogic 14C（Windows Server 2022）
@@ -195,7 +193,7 @@ AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールし�
 
   これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 
-* **Dynamic Media _スナップショット_**&#x200B;では、テスト画像または Dynamic Media の URL を使用して、画像の修飾子とスマートイメージングの最適化（WebP または AVIF 出力、帯域幅対応の圧縮、デバイスピクセル比のスケーリングなど）をプレビューできます。 その後、各設定が画質とファイルサイズにどのように影響するかを即座に比較できます。
+* **Dynamic Media _スナップショット_**では、テスト画像または Dynamic Media の URL を使用して、画像の修飾子とスマートイメージングの最適化（WebP または AVIF 出力、帯域幅対応の圧縮、デバイスピクセル比のスケーリングなど）をプレビューできます。 その後、各設定が画質とファイルサイズにどのように影響するかを即座に比較できます。
 詳しくは、[Dynamic Media スナップショット](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot)を参照してください。
 * **Dynamic Media での DASH ストリーミング** - Dynamic Media ビデオ配信でのアダプティブストリーミング用に新しいプロトコル（DASH - HTTP 経由の動的アダプティブストリーミング）が開始されました（CMAF が有効な場合）。 すべての地域で利用可能です。
 * **Experience Manager SitesおよびコンテンツフラグメントとAssets次世代 Dynamic Media の統合** - Experience Manager Sites 6.5 でクラウドホスト型アセットを使用できるようになりました。オンプレミスインスタンスまたはManaged Services インスタンスで、これらのアセットを作成して配信できます。
@@ -221,8 +219,8 @@ CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic
 
 ### [!DNL Forms]
 
-* [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/ja/docs/experience-manager-headless-adaptive-forms/using/overview)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
+* [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/overview)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
 
-* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。 [WCM コアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/get-started/authoring)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。 [WCM コアコンポーネント](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/get-started/authoring)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
 
 * OSGi の Reader Extension サービスには、Adobe Acrobat Reader でデータを読み込みまたは書き出しするために、PDF の読み込みおよび書き出しの使用権限を有効化する個別のオプションが追加されました。
