@@ -10,7 +10,7 @@ solution: Experience Manager
 source-git-commit: eef3ad559612c338de0c4232aadc4133c910aaf8
 workflow-type: tm+mt
 source-wordcount: '3109'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 74%
 詳しくは、[Adobe Experience Manager 6.5 の最新のサービスパックリリースノート](/help/release-notes/release-notes.md)も参照してください。
 
 
-## AEM 6.5 サービスパック 23 - 2025 年 5 月 22 日（Pt）
+## AEM 6.5 サービスパック 23 - 2025年5月22日（PT）
 
 ### Forms {#forms-sp23}
 
@@ -41,11 +41,11 @@ ht-degree: 74%
 
    * Microsoft® SQL Server JDBC ドライバー 12.8
 
-   * Red Hat® Enterprise Linux® 9 （Kernel 4.x、64 ビット）
+   * Red Hat® Enterprise Linux® 9（Kernel 4.x、64 ビット版）
 
 * [強化されたファイル添付コンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：セキュリティ対策として、許可されたファイルタイプのチェックを回避しようとする、拡張子が変更されたファイルの送信をコンポーネントが防ぐようになりました。有効なファイルタイプのみが受け入れられるように、このようなファイルは送信中にブロックされます。
 
-## AEM 6.5 サービスパック 22 - 2024 年 11 月 21 日（Pt）
+## AEM 6.5 サービスパック 22 - 2024年11月21日（PT）
 
 ### Sites {#sites}
 
@@ -53,7 +53,7 @@ ht-degree: 74%
 
 ### [!DNL Assets]
 
-IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。 （Assets-34918）
+IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。（Assets-34918）
 
 ### Forms {#forms-sp22}
 
@@ -81,18 +81,18 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
    * [アダプティブフォームの複数バージョンの作成](/help/forms/using/add-versioning-reviews-comments.md) - ユーザーは既存のフォームのバリエーションを簡単に管理できるようになりました。 このプロセスにより、合理化された単一のワークフロー内で、バージョン管理をシンプルに、フォーム最適化の比較を容易に行えるようになります。
    * [アダプティブフォームの比較](/help/forms/using/compare-forms-core-components.md)：ユーザーは 2 つのフォームを簡単に比較して、その違いを特定できるようになりました。 チームメンバーがリビジョンを比較し、変更を効率的に議論できるので、共同作業がスムーズになります。
 
-## AEM 6.5 サービスパック 21 - 2024 年 6 月 6 日（Pt）
+## AEM 6.5 サービスパック 21 - 2024年6月6日（PT）
 
 ### [!DNL Assets]
 
 #### 機能強化
 
-IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。 （Assets-34918）
+IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]テキストフィールドをサポートするようになりました。（Assets-34918）
 
 #### アクセシビリティ
 
-* アセットの処理ステータスが失敗またはメタデータが失敗の場合、キャプションとオーディオトラック UI が適切に機能するようになりました。 （Assets-37281）
-* アセットのメタデータを保存して編集しようとすると、言語名が表示されるようになりました。 （Assets-37281）
+* アセットの処理ステータスが「失敗」または「メタデータ失敗」の場合、キャプションとオーディオトラックの UI が適切に機能するようになりました。（Assets-37281）
+* アセットメタデータを保存して編集しようとする際に、言語名が表示されるようになりました。（Assets-37281）
 
 ### [!DNL Forms]
 
@@ -105,12 +105,12 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 * **16 ビット PNG のサポート**：PDF Generator の ImageToPDF サービスで、16 ビットの色深度を持つ PNG の変換をサポートするようになりました。
 * **XDP 内の個々のテキストブロックにアーティファクトを適用**：Forms Designer では、XDP ファイル内の個々のテキストブロックを設定できるようになりました。 この機能を使用すると、作成された PDF でアーティファクトとして扱われる要素を制御できます。 これらの要素（ヘッダーやフッターなど）は、支援テクノロジーからアクセスできるようになります。 主な機能には、テキストブロックをアーティファクトとしてマークする機能と、これらの設定を XDP メタデータに埋め込む機能があります。 Forms Output サービスは、PDF の生成時にこれらの設定を適用し、適切な PDF/UA タグ付けを行います。
 * **AEM Forms Designer は `GB18030:2022` 標準で認定されています**：`GB18030:2022` 認定により、Forms Designer では、中国語の Unicode 文字セットをサポートし、すべての編集可能なフィールドとダイアログボックスに漢字を入力できるようになりました。
-* [JEE Server での WebToPDF ルートのサポート ](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings)PDF Generator サービスを使用して、HTML ファイルを JEE 上のPDF ドキュメントに変換するための WebToPDF ルートをサポートするようになりました。 このサポートは、既存の Webkit および WebCapture （Windows のみ）ルートに追加されます。 WebToPDF ルートは OSGi で既に使用可能で、JEE に拡張されています。 現在、JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
+* PDF Generator サービスを使用した [JEE サーバーでの WebToPDF ルートのサポート](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings)により、HTML ファイルを JEE 上で PDF ドキュメントに変換する WebToPDF ルートをサポートするようになりました。このサポートは、既存の Webkit および WebCapture（Windows のみ）のルートに追加されます。WebToPDF ルートは OSGi で既に使用可能で、JEE に拡張されています。 現在、JEE と OSGi の両方のプラットフォームで、PDF Generator サービスは、様々なオペレーティングシステム間で次のルートをサポートします。
    * **Windows**：Webkit、WebCapture、WebToPDF
    * **Linux®**：Webkit、WebToPDF
 
 
-## AEM 6.5 サービスパック 20 - 2024 年 2 月 22 日（Pt）
+## AEM 6.5 サービスパック 20 - 2024年2月22日（PT）
 
 ### [!DNL Assets]
 
@@ -119,7 +119,7 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 
 ### [!DNL Forms]
 
-* **JEE 上のAEM Formsにおけるトランザクションレポート**:JEE 上のAEM Formsにトランザクションレポート機能が導入されました。 コンバージョン、レンディション、送信など、ドキュメントトランザクションの包括的な記録が可能になります。 この機能強化により、効率が向上し、より適切な記録管理が簡単になります。 機能はデフォルトでは無効になっています。 管理 UI から有効化にできます。
+* **AEM Forms on JEE におけるトランザクションレポート**：AEM Forms on JEE にトランザクションレポート機能が導入されました。コンバージョン、レンディション、送信など、ドキュメントトランザクションの包括的な記録が可能になります。この機能強化により、効率が向上し、より適切な記録管理が簡単になります。 機能はデフォルトでは無効になっています。 管理 UI から有効化にできます。
 * **ECDSA サポートによるセキュリティの強化**：AEM Forms では、JEE スタックと OSGi スタックの両方で楕円曲線デジタル署名アルゴリズム（ECDSA）の堅牢なサポートを提供するようになりました。 ユーザーは、セキュリティを強化して PDF ドキュメントの署名、認証および検証を行うことができるようになりました。 サポートされる EC 曲線アルゴリズムには、次が含まれます。
    * SHA256 ダイジェストアルゴリズムを使用した ECDSA 楕円曲線 P256
    * SHA384 ダイジェストアルゴリズムを使用した ECDSA 楕円曲線 P384
@@ -127,37 +127,37 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 * **Forms Designer 用の Windows 11 とのシームレスな互換性**：AEM Forms Designer で Windows 11 をサポートするようになり、スムーズなインストールと操作が保証されます。 ユーザーは、Forms Designer を再インストールする手間や互換性の問題を心配することなく、自信を持って Windows 11 にアップグレードでき、中断のないワークフローが保証されます。
 * **AEM Forms Designer のカスタム「キャプション」の役割によるアクセシビリティの強化**：AEM Forms Designer には「キャプション」と呼ばれるカスタムアクセシビリティの役割が含まれており、ユーザーはパーソナライズされたキャプション要素を含む XDP を作成できます。 この機能は、ユーザーがカスタムキャプションをドキュメントデザインに統合させることでアクセシビリティを強化し、包括性とユーザーエクスペリエンスを向上できます。
 
-## AEM 6.5 サービスパック 19 - 2023 年 12 月 7 日（Pt）
+## AEM 6.5 サービスパック 19 - 2023年12月7日（PT）
 
 * Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。（Sites-13448、Sites-13433）
-* AEMは、サーバーサイドの並べ替えをサポートし、リスト表示でのプロジェクトのナビゲーションを迅速化しました。 プロジェクトノードは、インターフェイスに表示される前に、ユーザーが選択した列に基づいて並べ替えられます。
+* AEM では、リスト表示でのプロジェクトのナビゲーションを迅速化するために、サーバーサイドの並べ替えをサポートするようになりました。プロジェクトノードは、インターフェイスに表示される前に、ユーザーが選択した列に基づいて並べ替えられます。
 
 ### [!DNL Forms]
 
 * **新しいアダプティブフォームコアコンポーネント**：垂直タブ、利用条件、チェックボックスが追加され、フォームのスケーラビリティが向上します。
    * **[チェックボックスコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
 
-   * **[利用条件コンポーネント ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：コアコンポーネントベースのアダプティブFormsに利用条件コンポーネントが含まれるようになりました。 フォーム作成者はこのセクションを追加して、サービス、製品、またはプラットフォームの利用条件、条件、法的契約をユーザーに表示します。 このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
+   * **[利用条件コンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions)**：コアコンポーネントベースのアダプティブフォームに利用条件コンポーネントが含まれるようになりました。フォーム作成者はこのセクションを追加して、サービス、製品、またはプラットフォームの利用規約、条件、法的契約をユーザーに表示します。このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
 
      ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
 
-   * **[垂直タブコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs)**：コアコンポーネントに基づくアダプティブフォームでは、フォームのコンテンツをタブの垂直リストに整理し、構造化されたナビゲートしやすいレイアウトを提供できるようになりました。フォーム内の垂直タブを使用すると、ナビゲーションとコンテンツの整理が簡単になり、ユーザーエクスペリエンスが向上します。 これらは、フォームに複数のセクションや複雑な情報が含まれている場合に特に役立ちます。
+   * **[垂直タブコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs)**：コアコンポーネントに基づくアダプティブフォームでは、フォームのコンテンツをタブの垂直リストに整理し、構造化されたナビゲートしやすいレイアウトを提供できるようになりました。フォーム内の垂直タブを使用すると、ナビゲーションとコンテンツの整理が簡単になり、ユーザーエクスペリエンスが向上します。これらは、フォームに複数のセクションや複雑な情報が含まれている場合に特に役立ちます。
 
 * **[64 ビット版の AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**：64 ビット版の AEM Forms Designer では、パフォーマンス、スケーラビリティ、メモリ管理が強化され、フォーム作成エクスペリエンスを支援します。64 ビットアーキテクチャを使用すると、さらに大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率が保証されます。この最先端のリリースでフォームデザイン機能を強化し、AEM Forms Designer の未来を体現します。
 
 * **[アダプティブフォームと Microsoft® SharePoint リストの接続](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)**：AEM Forms では、フォームデータを SharePoint リストに直接送信する標準の統合を提供し、SharePoint のリスト機能を使用できます。Microsoft® SharePoint リストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームを SharePoint リストに接続できます。
 
-* **[アダプティブフォームフラグメント用のレコードのドキュメントプロパティの設定のサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターで、アダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
+* **[アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定のサポート](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)**：アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドを簡単にカスタマイズできるようになりました。
 
-* **64 ビット XMLFM**：64 ビット反復の XMLFM により、パフォーマンス、スケーラビリティ、洗練されたメモリ管理が導入されます。これは、サーバーサイドにデプロイされた最初の 64 ビットネイティブサービスです。XMLFM 64 ビットでは、32 ビット版と比較してより大きなメモリリソースにアクセスする固有の機能を利用することで、より大きなレンダリングワークロードをシームレスに処理できます。このマイルストーンは、パフォーマンスの飛躍的な向上を示すだけでなく、AEM Forms サーバー内のネイティブサービスフレームワークに重要な機能強化も導入します。このアップデートにより、AEM Forms Server は 64 ビットのネイティブサービスをシームレスにサポートできるようになります。
+* **64 ビット XMLFM**：64 ビット反復の XMLFM により、パフォーマンス、スケーラビリティ、洗練されたメモリ管理が導入されます。これは、サーバーサイドにデプロイされた最初の 64 ビットネイティブサービスです。XMLFM 64 ビットでは、32 ビット版と比較してより大きなメモリリソースにアクセスする固有の機能を利用することで、より大きなレンダリングワークロードをシームレスに処理できます。このマイルストーンは、パフォーマンスの飛躍的な向上を示すだけでなく、AEM Forms サーバー内のネイティブサービスフレームワークに重要な機能強化も導入します。このアップデートにより、AEM Forms サーバーでは 64 ビットのネイティブサービスをシームレスにサポートできます。
 
 ## AEM 6.5 サービスパック 18 - 2023年8月24日（PT）
 
-* Assets、Dynamic Media - [Dynamic Media でのビデオの複数キャプションおよびオーディオトラックのサポート ](/help/assets/video.md#about-msma) – プライマリビデオに複数のサブタイトルと複数のオーディオトラックを簡単に追加できるようになりました。 この機能により、グローバルなオーディエンスがビデオにアクセスできるようになります。1 つの公開済みプライマリビデオを複数の言語でグローバルオーディエンスに向けてカスタマイズし、様々な地理的地域のアクセシビリティガイドラインに従うことができます。また、作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルとオーディオトラックを管理することもできます。
+* Assets、Dynamic Media - [Dynamic Media のビデオでの複数のキャプションとオーディオトラックのサポート](/help/assets/video.md#about-msma) - プライマリビデオに対し、複数の字幕と複数のオーディオトラックを簡単に追加できるようになりました。この機能により、グローバルなオーディエンスがビデオにアクセスできるようになります。1 つの公開済みプライマリビデオを複数の言語でグローバルオーディエンスに向けてカスタマイズし、様々な地理的地域のアクセシビリティガイドラインに従うことができます。また、作成者は、ユーザーインターフェイスの 1 つのタブからサブタイトルとオーディオトラックを管理することもできます。
 * Assets - 検索結果から、アセットが含まれるフォルダーの場所に移動でき、様々なアセット管理タスクを実行できるようになります。
 * コンテンツフラグメントの Sites Polaris ピッカーのパフォーマンスが向上しました。
 * Sites ページエディター／画像コンポーネントユーザーがリモート Assets Cloud Service からアセットを参照できるようにしました。
-* システムに多数のプロジェクトがある場合に、リスト表示ですばやくプロジェクトを見つけるために、Adobeでは、サーバーサイドの並べ替えをサポートするようになりました。 プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。
+* システム内に多数のプロジェクトがある場合にリスト表示でプロジェクトをすばやく見つけられるように、アドビではサーバーサイドでの並べ替えをサポートするようになりました。プロジェクトノードは、ユーザーインターフェイスでレンダリングする前に、ユーザーが選択した列に基づいて、バックエンドで並べ替えられます。
 * AEM 6.5.18.0 は、MongoDB 5.0～6.0 をサポートします。
 
 ### [!DNL Forms]
@@ -166,12 +166,12 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 
 * **[Adobe Sign ワークフローステップの機能強化](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/workflows/aem-forms-workflow-step-reference#sign-document-step)** - AEM ワークフローの Adobe Sign ワークフローステップは、次の機能強化で使用可能になります。
 
-   * **Adobe Sign の Government ID ベースの認証によるセキュリティの強化** - Adobe Acrobat Signの Government ID ベースの認証では、検証レイヤーが追加されました。 これにより、ユーザーは行政発行の ID（運転免許証、国民 ID、パスポート）を使用して身元を認証できます。この機能強化により、信頼できる ID ドキュメントを使用することで、署名プロセスの信頼性がさらに高まり、高度なセキュリティ、コンプライアンスおよびユーザー検証を必要とするシナリオに最適になります。
+   * **Adobe Sign の行政 ID に基づいた認証によるセキュリティの機能強** - Adobe Acrobat Sign の行政 ID に基づいた認証は、追加の検証レイヤーを提供します。これにより、ユーザーは行政発行の ID（運転免許証、国民 ID、パスポート）を使用して身元を認証できます。この機能強化により、信頼できる ID ドキュメントを使用することで、署名プロセスの信頼性がさらに高まり、高度なセキュリティ、コンプライアンスおよびユーザー検証を必要とするシナリオに最適になります。
 
-   * **Adobe Sign ドキュメントの監査記録を使用した透明性の向上** – 監査記録機能を使用すると、Adobe Sign ドキュメントのライフサイクルに関する詳細なインサイトを得ることができます。 監査記録を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を保持できるようになりました。 これらのアクションとインタラクションには、誰がドキュメントを閲覧、編集または署名したかと、各イベントのタイムスタンプが含まれます。 この機能強化は、コンプライアンスの保持、紛争の解決、デジタル契約の整合性を確保する上で重要です。
+   * **Adobe Sign ドキュメントの監査記録による透明性の機能強化** - 監査記録機能を使用すると、Adobe Sign ドキュメントのライフサイクルに関する詳細なインサイトが得られます。監査記録を使用すると、ドキュメントに関連するすべてのアクションとインタラクションの包括的な記録を保持できるようになります。これらのアクションとインタラクションには、ドキュメントを表示、編集、署名したユーザーと、各イベントのタイムスタンプが含まれます。この機能強化は、コンプライアンスの保持、紛争の解決、デジタル契約の整合性を確保する上で重要です。
 
 
-   * **署名者以外にも契約書受信者の役割を拡大** - Adobe Acrobat Signでは、ワークフロー要件に合わせて、署名者以外にも契約書受信者の役割を拡大できます。 有効にすると、契約の各受信者の役割を個別に設定でき、署名者がデフォルトになります。
+   * **契約受信者の役割を署名者以外にも拡張** - Adobe Acrobat Sign を使用すると、契約受信者の役割を署名者以外にも拡張して、ワークフロー要件にさらに適合させることができます。有効にすると、契約の各受信者の役割を個別に設定でき、署名者がデフォルトになります。
 
 
 * **[AEM Forms on JEE 完全インストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)** - サービスパックには、AEM Forms on JEE 完全インストーラーが含まれており、以下を含む複数の新しいソフトウェアの組み合わせがサポートされます。
@@ -193,27 +193,27 @@ AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールし�
 
   これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 
-* **Dynamic Media _スナップショット_**&#x200B;では、テスト画像または Dynamic Media の URL を使用して、画像の修飾子とスマートイメージングの最適化（WebP または AVIF 出力、帯域幅対応の圧縮、デバイスピクセル比のスケーリングなど）をプレビューできます。 その後、各設定が画質とファイルサイズにどのように影響するかを即座に比較できます。
+* **Dynamic Media _スナップショット_**では、テスト画像または Dynamic Media の URL を使用して、画像の修飾子とスマートイメージングの最適化（WebP または AVIF 出力、帯域幅対応の圧縮、デバイスピクセル比のスケーリングなど）をプレビューできます。その後、各設定が画質とファイルサイズにどのように影響するかを即座に比較できます。
 詳しくは、[Dynamic Media スナップショット](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot)を参照してください。
-* **Dynamic Media での DASH ストリーミング** - Dynamic Media ビデオ配信でのアダプティブストリーミング用に新しいプロトコル（DASH - HTTP 経由の動的アダプティブストリーミング）が開始されました（CMAF が有効な場合）。 すべての地域で利用可能です。
-* **Experience Manager SitesおよびコンテンツフラグメントとAssets次世代 Dynamic Media の統合** - Experience Manager Sites 6.5 でクラウドホスト型アセットを使用できるようになりました。オンプレミスインスタンスまたはManaged Services インスタンスで、これらのアセットを作成して配信できます。
+* **Dynamic Media での DASH ストリーミング** - CMAF が有効な Dynamic Media ビデオ配信で、アダプティブストリーミング用の新しいプロトコル（DASH - HTTP での動的アダプティブストリーミング）が開始されました。すべての地域で利用可能です。
+* **Experience Manager Sites およびコンテンツフラグメントと、Assets 次世代 Dynamic Media の統合** - Experience Manager Sites 6.5 でクラウドホスト型アセットを使用できるようになりました。オンプレミスインスタンスまたは Managed Services インスタンスで、これらのアセットを作成して配信できます。
 
 ### [!DNL Forms]
 
-* **[AEM ページエディター内のアダプティブForms](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)** - AEM ページエディターを使用して、複数のフォームを作成し、サイトページにすばやく追加できるようになりました。 この機能を使用すると、コンテンツ作成者は、動的な動作、検証、データ統合、レコードのドキュメントの生成、ビジネスプロセスの自動化など、アダプティブフォームコンポーネントの機能を利用して、Sites ページ内にシームレスなデータキャプチャエクスペリエンスを作成できます。以下の操作を実行できます。
-   * アダプティブフォームを作成するには、AEM Sites エディターまたはエクスペリエンスフラグメントで、フォームコンポーネントをアダプティブ Forms コンテナコンポーネントにドラッグ&amp;ドロップします。
-   * AEM Sites Editor 内でアダプティブFormsウィザードを使用すると、Sites ページに依存しないフォームを作成でき、そのようなフォームを複数のページで自由に再利用できます。
+* **[AEM ページエディター内のアダプティブフォーム](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**：AEM ページエディターを使用して、複数のフォームをすばやく作成し、Sites ページに追加できるようになりました。この機能を使用すると、コンテンツ作成者は、動的な動作、検証、データ統合、レコードのドキュメントの生成、ビジネスプロセスの自動化など、アダプティブフォームコンポーネントの機能を利用して、Sites ページ内にシームレスなデータキャプチャエクスペリエンスを作成できます。以下の操作を実行できます。
+   * フォームコンポーネントを AEM サイトエディターまたはエクスペリエンスフラグメントのアダプティブフォームコンテナコンポーネントにドラッグ＆ドロップして、アダプティブフォームを作成します。
+   * AEM サイトエディター内でアダプティブフォームウィザードを使用すると、任意の Sites ページとは独立したフォームを作成して、自由に複数のページでそのフォームを再利用できます。
    * 複数のフォームを Sites ページに追加し、ユーザーエクスペリエンスを合理化し、柔軟性を高めます。
-* **[Experience Manager Formsでの reCAPTCHA Enterprise のサポート](/help/forms/using/captcha-adaptive-forms.md)** - Experience Manager Formsで reCAPTCHA Enterprise のサポートを追加しました。 この機能は、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化します。
-* **[Experience Manager Formsを使用したAdobe Acrobat Sign for Government のサポートを追加](/help/forms/using/adobe-sign-integration-adaptive-forms.md)** - AEM FormsがAdobe Acrobat Sign for Government と統合されました（FedRAMP 準拠）。 この統合により、政府関連のアカウント（政府機関および機関）に対するアダプティブフォーム送信による電子サインに、高度なコンプライアンスとセキュリティを提供します。Adobe Acrobat Sign for Government との統合により、Adobeのパートナーや政府機関のお客様は、アダプティブFormsで電子サインを使用して、最もミッションクリティカルで機密性の高い一部の事業部門を利用できます。 このセキュリティの強化により、すべての電子サインが FedRAMP Moderate コンプライアンスに完全に準拠し、アドビの政府機関のお客様に安心感を提供します。
-* **データ交換用にExperience Manager FormsとSalesforceの統合を有効にする** - OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager FormsとSalesforce アプリケーションの統合を設定します。 この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーが関与しないシームレスな通信が可能になります。
+* **[Experience Manager Forms での reCAPTCHA Enterprise のサポート](/help/forms/using/captcha-adaptive-forms.md)** - Experience Manager Forms で reCAPTCHA Enterprise のサポートを追加しました。この機能は、既存の Google reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化します。
+* **[Adobe Acrobat Sign for Government との Experience Manager Forms のサポート](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**：AEM Forms は、Adobe Acrobat Sign for Government（FedRAMP 準拠）と統合されました。この統合により、政府関連のアカウント（政府機関および機関）に対するアダプティブフォーム送信による電子サインに、高度なコンプライアンスとセキュリティを提供します。Adobe Acrobat Sign for Government との統合により、アドビのパートナーや政府のお客様はアダプティブフォームで、最もミッションクリティカルで機密性の高い業務の一部に電子サインを使用できるようになります。このセキュリティの強化により、すべての電子サインが FedRAMP Moderate コンプライアンスに完全に準拠し、アドビの政府機関のお客様に安心感を提供します。
+* **データ交換用に Experience Manager Forms と Salesforce の統合が有効化**：OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Forms と Salesforce アプリケーションの統合を設定します。この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーが関与しないシームレスな通信が可能になります。
 * **ワークフローエンジンの最適化と機能強化**：ワークフローインスタンスの数を最小限に抑えて、ワークフローエンジンのパフォーマンスを向上させます。`COMPLETED` および `RUNNING` ステータス値に加えて、ワークフローは 3 つの新しいステータス値、`ABORTED`、`SUSPENDED` および `FAILED` もサポートします。
 
 ## AEM 6.5 サービスパック 16 - 2023年2月23日（PT）
 
 CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic Media ビデオ配信で、アダプティブビットレートストリーミング用の新しいプロトコル DASH（HTTP での動的アダプティブストリーミング）が開始しました。
 
-* アダプティブストリーミング（DASH/HLS）により、エンドユーザーがビデオを視聴する際のエクスペリエンスが向上します。
+* アダプティブストリーミング（DASH/HLS）により、ビデオを視聴する際のエンドユーザーの操作性が向上します。
 * DASH はアダプティブビデオストリーミングの国際標準プロトコルであり、業界で広く採用されています。
 * 現在、アジア太平洋および北米で利用可能です。ヨーロッパ中東アフリカではまもなく提供予定です。
 
@@ -221,6 +221,6 @@ CMAF（[共通メディアアプリケーション形式]）が有効な Dynamic
 
 * [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/ja/docs/experience-manager-headless-adaptive-forms/using/overview)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
 
-* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。 [WCM コアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/get-started/authoring)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/introduction#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、開発者は組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。[WCM コアコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/get-started/authoring)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
 
 * OSGi の Reader Extension サービスには、Adobe Acrobat Reader でデータを読み込みまたは書き出しするために、PDF の読み込みおよび書き出しの使用権限を有効化する個別のオプションが追加されました。
