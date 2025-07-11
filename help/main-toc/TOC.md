@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: 6feebde8e1a2c89599f04e10e3e2a884a6202575
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7535'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1100,7 +1100,7 @@ ht-degree: 99%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1214,7 +1214,7 @@ ht-degree: 99%
       + [PaperCapture サービスが PDF に対して OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
       + [JEE 上の AEM Forms の Spring Framework の脆弱性の軽減](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
       + [Experience Manager Forms の Log4j2 脆弱性の緩和](/help/forms/using/aem-forms-vulnerability-cve.md)
-      + [JEE 上のAEM Formsのリモートコード実行の脆弱性の軽減](/help/forms/using/aem-forms-rce-vulnerability-mitigation-troubleshooting.md)
+      + [AEM Forms on JEE でのリモートコード実行の脆弱性の軽減](/help/forms/using/aem-forms-rce-vulnerability-mitigation-troubleshooting.md)
       + [XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
       + [Firefox と Chrome で XFA ベースの PDF フォームを開く方法](/help/forms/using/xfa-forms-firefox-chrome.md)
       + [BlazeDS での XML 外部エンティティ（XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blazeDS.md)
