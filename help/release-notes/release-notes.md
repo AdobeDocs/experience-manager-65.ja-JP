@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 16a75f6308319e07bed68b668fc9c20e0ef5f5c9
-workflow-type: ht
-source-wordcount: '6444'
-ht-degree: 100%
+source-git-commit: 80482da847b86c91963dbb0d37375e370a503588
+workflow-type: tm+mt
+source-wordcount: '6643'
+ht-degree: 97%
 
 ---
 
@@ -72,6 +72,10 @@ ht-degree: 100%
    * Red Hat® Enterprise Linux® 9（Kernel 4.x、64 ビット版）
 
 * [強化されたファイル添付コンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：セキュリティ対策として、許可されたファイルタイプのチェックを回避しようとする、拡張子が変更されたファイルの送信をコンポーネントが防ぐようになりました。有効なファイルタイプのみが受け入れられるように、このようなファイルは送信中にブロックされます。
+
+* FORMS-20533:AEM Formsで、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が以前に失われました。 このサポートは [ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) を介して追加されました。このホットフィックスを [ ダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) して、最新バージョンの Struts のサポートを追加できます。
+
+* FORMS-20532:AEM Formsで、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が以前に失われました。 このサポートは [ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) を介して追加されました。このホットフィックスを [ ダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) して、最新バージョンの Struts のサポートを追加できます。
 
 <!--* **Two-Factor authentication with SAML for AdminUI** 
 
@@ -680,9 +684,9 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
 >
 > 予期しないエラーが発生する可能性があるので、ホットフィックスが提供されていない問題については、サービスパック 6.5.23.0 にアップグレードしないでください。必要なホットフィックスがリリースされた後にのみ、サービスパック 6.5.23.0 にアップグレードしてください。
 
-* Struts を AEM サービスパック 2.5.x から AEM Forms サービスパック 6.x にアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されなくなります。（FORMS-20203）
+* Struts を AEM サービスパック 2.5.x から AEM Forms サービスパック 6.x にアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されなくなります。解決の問題であるホットフィックスを [ ダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) ることができます。  （FORMS-20203）
 * AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します（FORMS-20360）。
-  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
+  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp``` 修正プログラムをダウンロードしてインストール [ できます ](/help/release-notes/aem-forms-hotfix.md) 解決の問題です。
 
 * AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
 
@@ -715,6 +719,8 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
   (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
   have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
   ```
+
+* FORMS-20478:Type 7/8 TIFF ファイルをPDFに変換しようとすると、「ALC-PDG-001-000-Image2Pdf 変換に失敗しました（com/sun/image/codec/jpeg/JPEGCodec および「ALC-PDG-016-003-PDFの後処理中に不明なエラーが発生しました）」というエラーが発生して、変換処理が失敗します。 TM ImageIO TIFFデコーダを使用して再試行が試みられますが、最終的にはジョブが完了しません。 [ ホットフィックスをダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) て、問題を修正できます。
 
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
