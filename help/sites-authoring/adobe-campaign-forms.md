@@ -9,10 +9,10 @@ exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '1281'
-ht-degree: 100%
+source-wordcount: '1280'
+ht-degree: 97%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Campaign 固有のフォームを作成する前に、AEM アプリケー�
 
 >[!NOTE]
 >
->Adobe Campaign Classic または Adobe Campaign Standard を使用する場合は、ページの **jcr:content** ノードの **acMapping** プロパティがそれぞれ **mapRecipient** または **profile** に設定されていることを確認してください。
+>Adobe Campaign ClassicまたはAdobe Campaign Standardを使用する場合は、ページの **jcr** ノードの **acMapping:content** プロパティがそれぞれ **mapRecipient** または **profile** に設定されていることを確認してください。
 >
 
 1. AEM の Sites で、ページを作成する場所に移動します。
@@ -78,7 +78,7 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
 >[!NOTE]
 >
->目的のテンプレートを使用できない場合は、[テンプレートを使用可能にする](/help/sites-authoring/adobe-campaign.md)を参照してください。
+>目的のテンプレートを使用できない場合は、[ テンプレートを使用可能にする ](/help/sites-authoring/campaign.md) を参照してください。
 
 このセクションでは、Adobe Campaign へのリンクのみを取り上げます。Adobe Experience Manager でのフォームの使用方法に関する一般的な概要について詳しくは、[編集モードのコンポーネント](/help/sites-authoring/default-components-foundation.md)を参照してください。
 

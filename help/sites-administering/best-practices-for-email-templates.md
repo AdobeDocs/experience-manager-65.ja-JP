@@ -10,10 +10,11 @@ exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+index: false
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 100%
+source-wordcount: '1072'
+ht-degree: 97%
 
 ---
 
@@ -46,7 +47,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
 
 >[!NOTE]
 >
->Adobe Campaign のメールテンプレートを作成する際には、テンプレートの **jcr:content** ノードでプロパティ **acMapping** と値 **mapRecipient** を指定する必要があります。指定しない場合、Experience Manager の&#x200B;**ページのプロパティ**&#x200B;フィールドで Adobe Campaign のテンプレートを選択できなくなります（フィールドが無効化されています）。
+>Adobe Campaignのメールテンプレートを作成する際には、テンプレートの **jcr** ノードに、値 **mapRecipient** を持つ **acMapping:content** プロパティを含める必要があります。 指定しない場合、Experience Manager の&#x200B;**ページのプロパティ**&#x200B;フィールドで Adobe Campaign のテンプレートを選択できなくなります（フィールドが無効化されています）。
 
 ## テンプレート／ページコンポーネント {#template-page-component}
 

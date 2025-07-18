@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 6feebde8e1a2c89599f04e10e3e2a884a6202575
-workflow-type: ht
-source-wordcount: '7535'
-ht-degree: 100%
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
+workflow-type: tm+mt
+source-wordcount: '7528'
+ht-degree: 99%
 
 ---
 
@@ -151,7 +151,6 @@ ht-degree: 100%
          + [オファーの作成と管理](/help/sites-authoring/offerlib.md)
          + [セグメント化について](/help/sites-authoring/segmentation-overview.md)
       + AEM と Adobe Campaign {#aem-adobe-campaign}
-         + [Adobe Campaign の使用](/help/sites-authoring/adobe-campaign.md)
          + [Adobe Campaign Classic および Adobe Campaign Standard の使用](/help/sites-authoring/campaign.md)
          + [Adobe Campaign のターゲット設定](/help/sites-authoring/target-adobe-campaign.md)
          + [AEM での Adobe Campaign フォームの作成](/help/sites-authoring/adobe-campaign-forms.md)
@@ -215,7 +214,6 @@ ht-degree: 100%
          + [パーソナライゼーション](/help/sites-administering/personalization.md)
          + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/personlization/ch-configuring.html?lang=ja)
          + [ClientContext](/help/sites-administering/client-context.md)
-         + [キャンペーン](/help/sites-administering/campaigns.md)
          + [ContextHub でのセグメント化の設定](/help/sites-administering/segmentation.md)
          + [セグメント化の設定](/help/sites-administering/campaign-segmentation.md)
          + [ランディングページ用のデザインインポーターの拡張と設定](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
@@ -236,7 +234,6 @@ ht-degree: 100%
          + [SharePoint Connector のライセンス、著作権情報および免責事項](/help/sites-administering/sharepoint-connector-licenses.md)
          + [DHTML ビューアのサポート終了に関する FAQ](/help/sites-administering/dhtml-viewer-endoflifefaqs.md)
          + [Adobe Campaign Classic との統合](/help/sites-administering/campaignonpremise.md)
-         + [関連するコミュニティ記事](/help/sites-administering/related-community-articles.md)
          + [Adobe Campaign Standard との統合](/help/sites-administering/campaignstandard.md)
          + [Flash ビューアのサポート終了に関する通知](/help/sites-administering/flash-viewers-eol.md)
          + [Adobe Dynamic Tag Management との統合](/help/sites-administering/dtm.md)
@@ -1100,7 +1097,7 @@ ht-degree: 100%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1516,7 +1513,7 @@ ht-degree: 100%
          + クラウドサービス{#extending-cloud-services}
             + [クラウドサービスの設定](/help/sites-developing/extending-cloud-config.md)
             + [カスタムクラウドサービスの作成](/help/sites-developing/extending-cloud-config-custom-cloud.md)
-         + [カスタムエクステンションの作成](/help/sites-developing/extending-campaign-extensions.md)
+         + [カスタム Adobe Campaign拡張機能](/help/sites-developing/extending-campaign-extensions.md)
          + Forms{#extending-forms}
             + [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)
             + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](/help/sites-developing/extending-campaign-custom-template.md)
