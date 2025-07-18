@@ -106,7 +106,7 @@ Web サイトの構造は、コンテンツページを保持する「*ツリー
 | タイトル | 派生した名前 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;&amp;ast;ç+ | sc---c-.html |
+| SC%&amp;&ast;ç+ | sc---c-.html |
 
 #### 名前 {#name}
 
