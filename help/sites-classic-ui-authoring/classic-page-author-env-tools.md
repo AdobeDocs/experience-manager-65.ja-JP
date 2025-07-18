@@ -10,10 +10,10 @@ exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 100%
+source-wordcount: '931'
+ht-degree: 95%
 
 ---
 
@@ -156,7 +156,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 AEM を使用すると、現在作業中のページにリンクされているページを表示できます。
 
-直接ページ参照を表示するには：
+ページ参照を表示するには：
 
 1. サイドキックで、「**ページ**」タブアイコンを選択します。
 
@@ -165,6 +165,10 @@ AEM を使用すると、現在作業中のページにリンクされている�
 1. AEM で「**参照を表示**」を選択すると、参照ウィンドウが開き、選択したページを参照するページとそのパスが表示されます。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
+
+AEMには、選択したページを直接参照するすべてのページと、間接参照が表示されます。 これは、ページを移動または削除する必要がある場合に更新されるすべてのリンクを理解するのに役立ちます。
+
+## その他のSidekick アクション {#additional-actions}
 
 状況によっては、サイドキックから次のようなアクションを追加で実行できます。
 

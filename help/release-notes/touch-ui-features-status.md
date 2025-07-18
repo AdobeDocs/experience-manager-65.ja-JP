@@ -5,10 +5,10 @@ exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 100%
+source-wordcount: '1087'
+ht-degree: 98%
 
 ---
 
@@ -76,7 +76,7 @@ AEM 6.5 にアップグレードする場合のレコメンデーションにつ
 | 言語コピーを表示 | 完全 |  |
 | 検索と置換 | 消失 | クラシック UI を使用します。 |
 | 通知インボックス（JCR イベント） | 消失 | クラシック UI を使用します。今後、別の実装に置き換えられる予定です。 |
-| 参照 | 完了 | AEM 6.5 に追加された受信ページリンクの表示。 |
+| 参照 | 完了 | AEM 6.5 に追加された受信ページリンクの表示。パフォーマンス上の理由から、ページへの直接リンクのみが表示されます。 |
 
 ## 機能ステータス：ページエディター {#feature-status-page-editor}
 
