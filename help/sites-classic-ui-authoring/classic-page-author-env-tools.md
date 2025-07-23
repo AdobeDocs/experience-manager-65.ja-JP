@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '931'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -166,9 +166,9 @@ AEM を使用すると、現在作業中のページにリンクされている�
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
-AEMには、選択したページを直接参照するすべてのページと、間接参照が表示されます。 これは、ページを移動または削除する必要がある場合に更新されるすべてのリンクを理解するのに役立ちます。
+AEM では、選択したページを直接参照するすべてのページと、間接的な参照が表示されます。これは、ページを移動または削除する必要がある場合に更新されるすべてのリンクを理解するのに役立ちます。
 
-## その他のSidekick アクション {#additional-actions}
+## その他のサイドキックアクション {#additional-actions}
 
 状況によっては、サイドキックから次のようなアクションを追加で実行できます。
 

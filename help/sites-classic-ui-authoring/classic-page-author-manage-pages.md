@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1898'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -106,7 +106,7 @@ Web サイトの構造は、コンテンツページを保持する「*ツリー
 | タイトル | 派生した名前 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;&ast;ç+ | sc---c-.html |
+| SC%&amp;&amp;ast;ç+ | sc---c-.html |
 
 #### 名前 {#name}
 
@@ -263,7 +263,7 @@ AEM には、名前変更または移動が行われるページへの内部リ�
 
    ![screen_shot_2012-02-15at121336pm](assets/screen_shot_2012-02-15at121336pm.png)
 
-   また、このページには、移動するページを直接または間接的に参照するすべてのページが一覧表示されます。 参照元のページのステータスに応じて、リンクの調整やページの再公開を行うことができます。
+   このページには、移動するページを直接または間接的に参照しているページのリストも表示されます。参照元のページのステータスに応じて、リンクの調整やページの再公開を行うことができます。
 
 1. 以下のフィールドを適宜入力します。
 
