@@ -9,7 +9,7 @@ exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
 source-git-commit: 59d667004bb41a973847e9c53333afaa188ccac1
 workflow-type: tm+mt
 source-wordcount: '6643'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -73,9 +73,9 @@ ht-degree: 96%
 
 * [強化されたファイル添付コンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：セキュリティ対策として、許可されたファイルタイプのチェックを回避しようとする、拡張子が変更されたファイルの送信をコンポーネントが防ぐようになりました。有効なファイルタイプのみが受け入れられるように、このようなファイルは送信中にブロックされます。
 
-* FORMS-20533:AEM Formsで、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が以前に失われました。 このサポートは [ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) を介して追加されました。このホットフィックスを [ ダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) して、最新バージョンの Struts のサポートを追加できます。
+* FORMS-20533：AEM Forms には、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは、[ダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)することで最新バージョンの Struts のサポートを追加できる、[ホットフィックス](/help/release-notes/aem-forms-hotfix.md)を介して追加されました。
 
-* FORMS-20532:AEM Formsで、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が以前に失われました。 このサポートは [ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) を介して追加されました。このホットフィックスを [ ダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) して、最新バージョンの Struts のサポートを追加できます。
+* FORMS-20532：AEM Forms には、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは、[ダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)することで最新バージョンの Struts のサポートを追加できる、[ホットフィックス](/help/release-notes/aem-forms-hotfix.md)を介して追加されました。
 
 <!--* **Two-Factor authentication with SAML for AdminUI** 
 
@@ -219,11 +219,11 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 
 ### [!DNL Assets]{#assets-6523}
 
-* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**&#x200B;を選択し、**[!UICONTROL &#x200B; Adobe Stock を検索&#x200B;]**&#x200B;フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
+* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**を選択し、**[!UICONTROL  Adobe Stock を検索&#x200B;]**フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
    * 「**[!UICONTROL ライセンスと保存]**」をクリックすると空のドロップダウンが表示されるため、選択したストック画像のライセンスを取得して保存することができません。
    * ストック画像を選択するか、ストックページの URL を再入力すると、[!DNL AEM] ホームページにリダイレクトされ、Adobe Stock 画像にアクセスできなくなります。（ASSETS-48687）
 * [!DNL AEM]オンプレミス（6.5.22.0）ナビゲーションページでフォルダーの名前に `/` が含まれる場合、フォルダーの管理中に問題が発生します。（ASSETS-46740）
-* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL &#x200B; コレクション&#x200B;]**&#x200B;ビューから読み込まれません。（ASSETS-46738）
+* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL  コレクション&#x200B;]**ビューから読み込まれません。（ASSETS-46738）
 * `Day CQ DAM Mime Type OSGI` Service としての [!DNL InDesign] との統合の問題によって、[!DNL InDesign] ファイルが `x-indesign` ではなく `x-adobe-indesign` と誤って認識されます。（ASSETS-45953）
 * [!DNL AEM 6.5.21] セッション リークが、標準提供の **[!UICONTROL Brand Portal へのスケジュールされた公開]**&#x200B;ワークフローステップまで追跡されます。（ASSETS-44104）
 * [!DNL AEM] で画像を処理および公開する際に、**[!UICONTROL メモリ不足（OOM）]**&#x200B;エラーが表示されます。この問題は、**[!DNL Dam Asset update]** や **[!DNL Dynamic Media: Reprocess assets]** など、ワークフローの廃止されたメソッドが原因で発生しました。（ASSETS-43343）
@@ -686,7 +686,7 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
 
 * ユーザーが Struts フレームワークをバージョン 2.5.x から 6.x にアップグレードすると、AEM Formsのポリシー UI に、透かしを追加するオプションなどのすべての設定が表示されません。 [ ホットフィックスをダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) て、問題を解決できます。 （FORMS-20203）
 * AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します（FORMS-20360）。
-  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp``` 修正プログラムをダウンロードしてインストール [ できます ](/help/release-notes/aem-forms-hotfix.md) 解決の問題です。
+  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
 
 * AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
 
@@ -720,7 +720,7 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
   have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
   ```
 
-* FORMS-20478:Type 7/8 TIFF ファイルをPDFに変換しようとすると、「ALC-PDG-001-000-Image2Pdf 変換に失敗しました（com/sun/image/codec/jpeg/JPEGCodec および「ALC-PDG-016-003-PDFの後処理中に不明なエラーが発生しました）」というエラーが発生して、変換処理が失敗します。 TM ImageIO TIFFデコーダを使用して再試行が試みられますが、最終的にはジョブが完了しません。 [ ホットフィックスをダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) て、問題を修正できます。
+* FORMS-20478：7/8 TIFF ファイルタイプを PDF に変換しようとすると、「ALC-PDG-001-000-Image2Pdf 変換に失敗しました（com/sun/image/codec/jpeg/JPEGCodec および「ALC-PDG-016-003-PDF の後処理中に不明／予期しないエラーが発生しました）」というエラーが表示され、変換処理が失敗します。システムは TM ImageIO TIFF デコーダを使用して再試行を試みますが、最終的にはジョブを完了できません。問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
 
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
