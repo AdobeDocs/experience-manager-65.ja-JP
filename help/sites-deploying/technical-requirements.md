@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: ee6299819a027ef86a69ddbb5e56cf38e3436b6e
-workflow-type: ht
-source-wordcount: '3700'
+source-git-commit: fd54e28f5d774ca7ef42f2c81a7b57e125fdb1be
+workflow-type: tm+mt
+source-wordcount: '3706'
 ht-degree: 100%
 
 ---
@@ -120,6 +120,7 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 | ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z：実稼動環境ではサポートされていません |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft® Azure Blob Storage | バイナリ | A：サポート対象 |
+| MongoDB Enterprise 8.0 | リポジトリ | A：サポート対象 `[3, 4]` |
 | MongoDB Enterprise 7.0 | リポジトリ | A：サポート対象 `[3, 4]` |
 | MongoDB Enterprise 6.0 | リポジトリ | A：サポート対象 `[3, 4]` |
 | MongoDB Enterprise 5.0 | リポジトリ | A：サポート対象 `[3, 4]` |
@@ -134,7 +135,7 @@ Adobe Experience Manager のリポジトリをデプロイするには、様々�
 | Microsoft® SQL Server 2016 | Forms データベース | A：サポート対象 |
 | Microsoft® SQL Server 2019（廃止予定） | Forms データベース | A：サポート対象 |
 | Microsoft® SQL Server 2022 | Forms データベース | A：サポート対象 |
-| **Apache Lucene（Quickstart 組み込み）** | 検索サービス | A：サポート対象 |
+| **Apache Lucene（Quickstart ビルトイン）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
 
 1. 「ファイルシステム」には、POSIX に準拠したブロックストレージが含まれます。ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスは異なり、全体的なパフォーマンスに影響を与える場合があることに注意してください。ネットワーク／リモートファイルシステムを使用してテスト AEM を読み込みます。
@@ -181,7 +182,7 @@ Adobe Experience Manager は、スタンドアロンサーバー（Quickstart JA
 
 | Platform | サポートレベル |
 |---|---|
-| **Quickstart 組み込みサーブレットエンジン（Jetty 9.4）** | A：サポート対象 |
+| **Quickstart ビルトインのサーブレットエンジン（Jetty 9.4）** | A：サポート対象 |
 | Oracle WebLogic Server 12.2（12cR2） | Z：サポート対象外 |
 | IBM® WebSphere® Application Server Continuous Delivery（LibertyProfile）（Web Profile 7.0 および IBM® JRE 1.8） | R：新規契約向けの制限サポート `[2]` |
 | IBM® WebSphere® Application Server 9.0 および IBM® JRE 1.8 | R：新規契約向けの制限サポート `[1]` `[2]` |
