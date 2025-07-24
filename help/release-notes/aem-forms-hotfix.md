@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 59d667004bb41a973847e9c53333afaa188ccac1
+source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 99%
+source-wordcount: '1340'
+ht-degree: 87%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 99%
 >
 > ホットフィックスは累積的に設計されており、以前のすべての修正が含まれます。 最新のホットフィックスをリリースに適用すると、最新の問題に対処するだけでなく、以前のすべてのバグ修正と機能強化も組み込まれます。
 
-## アダプティブフォームのホットフィックス {#hotfix-for-adaptive-forms}
+## AEM Forms のホットフィックス {#hotfix-for-aem-forms}
 
 <table>
   <tbody>
@@ -46,7 +46,16 @@ ht-degree: 99%
     </td>
     <td>
     <ul>
-    <li>AEM Forms on JEE の SP23 ホットフィックス</li>
+    <li><strong> このホットフィックスは次の問題を修正します。</strong>
+      <ul>
+        <li><strong>FORMS-20533:</strong> AEM Formsで、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは、最新バージョンの Struts のサポートを追加するためにダウンロードおよびインストールできるホットフィックスを通じて追加されました。</li>
+        <li><strong>FORMS-20532:</strong> AEM Formsで、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは、最新バージョンの Struts のサポートを追加するためにダウンロードおよびインストールできるホットフィックスを通じて追加されました。</li>
+        <li><strong>FORMS-20203:</strong>AEM Forms サービスパック 2.5.x からAEM サービスパック 6.x に Struts をアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されません。 ホットフィックスをダウンロードしてインストールすると、この問題を解決できます。</li>
+        <li><strong>FORMS-20360:</strong> AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します。<br>
+        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
+        ホットフィックスをダウンロードしてインストールすると、この問題を解決できます。</li>
+      </ul>
+    </li>
     </ul>
     </td>    
   </tr>
