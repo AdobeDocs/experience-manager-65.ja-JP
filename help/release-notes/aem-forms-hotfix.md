@@ -30,7 +30,7 @@ ht-degree: 87%
     <td><strong>修正された問題</strong></td>
   </tr>
   <tr>
-    <td>SP23 ホットフィックス – </td>
+    <td>SP23 ホットフィックス -</td>
     <td>
     <ul>
     <li><strong>Jboss にアップロードされました。</strong></li>
