@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '126'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -35,5 +35,5 @@ Adobe Campaign は、オンラインおよびオフラインのあらゆるチ�
 
 また、統合をカスタマイズする場合は、次のトピックを参照してください。
 
-* [カスタム Adobe Campaign拡張機能](/help/sites-developing/extending-campaign-extensions.md)
+* [カスタム Adobe Campaign 拡張機能](/help/sites-developing/extending-campaign-extensions.md)
 * [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)

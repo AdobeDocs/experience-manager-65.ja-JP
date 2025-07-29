@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7528'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1097,7 +1097,7 @@ ht-degree: 99%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1513,7 +1513,7 @@ ht-degree: 99%
          + クラウドサービス{#extending-cloud-services}
             + [クラウドサービスの設定](/help/sites-developing/extending-cloud-config.md)
             + [カスタムクラウドサービスの作成](/help/sites-developing/extending-cloud-config-custom-cloud.md)
-         + [カスタム Adobe Campaign拡張機能](/help/sites-developing/extending-campaign-extensions.md)
+         + [カスタム Adobe Campaign 拡張機能](/help/sites-developing/extending-campaign-extensions.md)
          + Forms{#extending-forms}
             + [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)
             + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](/help/sites-developing/extending-campaign-custom-template.md)
