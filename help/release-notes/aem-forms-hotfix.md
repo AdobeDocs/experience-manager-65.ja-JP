@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
+source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 87%
+source-wordcount: '1789'
+ht-degree: 65%
 
 ---
 
@@ -30,7 +30,67 @@ ht-degree: 87%
     <td><strong>修正された問題</strong></td>
   </tr>
   <tr>
-    <td>SP23 ホットフィックス -</td>
+    <td>
+      <strong>2025 年 8 月 5 日 </strong><br>
+      <em> 適用先：</em> AEM 6.5 Forms サービスパック 23<br>
+      <em> 設定手順：</em>
+      <a href="/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md#option-1-for-users-on-version-65230-install-latest-hotfix">
+        JEE 上のAEM Formsの XXE、設定、リモートコード実行（CVE-2025-49533）の脆弱性の軽減
+      </a>
+    </td>
+    <td>
+    <ul>
+    <li><strong>Jboss にアップロードされました。</strong></li>
+    <li>Windows- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.23.0-win-jboss.zip">JBoss JEE サーバー用 Windows のAEM サービスパック 6.5.23.0 のホットフィックス 2</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.23.0-linux-jboss.tar.gz">JBoss JEE サーバーの Linux 上のAEM サービスパック 6.5.23.0 のホットフィックス 2</a></li>
+    <li><strong>WebLogic：</strong></li>
+    <li>Windows- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.23.0-win-weblogic.zip">Weblogic JEE サーバー用 Windows のAEM サービスパック 6.5.23.0 のホットフィックス 2</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.23.0-linux-weblogic.tar.gz">Weblogic JEE サーバー用 Linux 上のAEM サービスパック 6.5.23.0 のホットフィックス 2</a></li>
+    <li><strong>WebSphere：</strong></li>
+    <li>Windows- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.23.0-win-websphere.zip">Websphere JEE サーバー用 Windows 上のAEM サービスパック 6.5.23.0 のホットフィックス 2</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.23.0-linux-websphere.zip">Websphere JEE サーバー用 Linux 上のAEM サービスパック 6.5.23.0 のホットフィックス 2</a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li>Adobe Experience Manager（AEM）Formsのリモートコード実行（RCE）の脆弱性に対処することで、セキュリティを強化しました。 この問題は、管理ユーザーインターフェイス（UI）の Struts 開発モードに関連しており、デバッグ機能を通じて任意のオブジェクトグラフナビゲーション言語（OGNL）を評価できました。 この修正により、Struts 開発モードが無効になり、適切なセキュリティフィルターが適用されて不正アクセスが防止されます。</li>
+    <li>Adobe Experience Manager（AEM）Formsの電子ドキュメントコンポーネント（EDC）モジュールの Extensible Markup Language （XML） External Entity （XXE）の脆弱性に対する保護を改善しました。 脆弱性は、XXE 保護を使用しない XML ドキュメントの不適切な処理が原因で、ローカルファイルの読み取りが発生する可能性がありました。 この修正には以下が含まれます。
+      <ul>
+        <li>SecurityCheckHandler クラスで使用される DocumentBuilderFactory が、XXE 攻撃を防ぐように設定されていることを確認します。</li>
+        <li>EDC Web サービスを更新して、XML ドキュメントを安全に処理し、ローカルファイルへの不正アクセスを防ぎます。</li>
+      </ul>
+    </li>
+    </ul>
+    </td>    
+  </tr>
+  <tr>
+    <td>
+      <strong>2025 年 8 月 5 日 </strong><br>
+      <em> 対象：</em> AEM 6.5 Forms サービスパック 18 ～ 22<br>
+      <em> 設定手順：</em>
+      <a href="/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md#option-2-for-users-on-65180---65220-manual-hotfix-installation">
+        手動での Service Pack 18～22 のホットフィックスのインストール
+      </a>
+    </td>
+    <td>
+    <ul>
+    <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-xxe-configuration-hotfix.zip">AEM 6.5 Forms サービスパック 18 のパッチ - AEM 6.5 Forms サービスパック 22 </a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li>Adobe Experience Manager（AEM）Formsのリモートコード実行（RCE）の脆弱性に対処することで、セキュリティを強化しました。 この問題は、管理ユーザーインターフェイス（UI）の Struts 開発モードに関連しており、デバッグ機能を通じて任意のオブジェクトグラフナビゲーション言語（OGNL）を評価できました。 この修正により、Struts 開発モードが無効になり、適切なセキュリティフィルターが適用されて不正アクセスが防止されます。</li>
+    <li>Adobe Experience Manager（AEM）Formsの Document Security モジュールにおける Extensible Markup Language （XML） External Entity （XXE）の脆弱性に対する保護を改善しました。 脆弱性は、XXE 保護を使用しない XML ドキュメントの不適切な処理が原因で、ローカルファイルの読み取りが発生する可能性がありました。 この修正には以下が含まれます。
+      <ul>
+        <li>SecurityCheckHandler クラスで使用される DocumentBuilderFactory が、XXE 攻撃を防ぐように設定されていることを確認します。</li>
+        <li>Document Security web サービスを更新して、XML ドキュメントを安全に処理し、ローカルファイルへの不正アクセスを防ぎます。</li>
+      </ul>
+    </li>
+    </ul>
+    </td>    
+  </tr>
+  <tr>
+    <td>2025 年 7 月 10 日（PT） – </td>
     <td>
     <ul>
     <li><strong>Jboss にアップロードされました。</strong></li>
@@ -192,7 +252,7 @@ ht-degree: 87%
   <tbody>
 </table>
 
-## ホットフィックスのダウンロードとインストール {#download-install-hotfix}
+## OSGi ホットフィックスのダウンロードとインストール {#download-install-hotfix}
 
 ホットフィックスをダウンロードしてインストールするには、次の手順を実行します。
 
@@ -200,6 +260,10 @@ ht-degree: 87%
 1. ホットフィックスアーカイブファイルを抽出して、Experience Manager パッケージ（.zip）とバンドル（.jar）ファイルを取得できるようにします。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=ja#accessing)を通じてパッケージ（.zip）をアップロードしてインストールします。
 1. 設定マネージャーのバンドル `https://server:host/system/console/bundles` を開き、バンドル（.jar）をアップロードしてインストールします。 ホットフィックスがインストールされます。
+
+## JEE パッチのインストール {#download-install-jee-patch}
+
+JEE パッチのインストール手順については、[AEM Forms JEE パッチインストーラードキュメント ](/help/release-notes/jee-patch-installer-65.md) を参照してください。
 
 
 ## ドラフトレターの問題に対するホットフィックスのダウンロードとインストール {#install-hotfix}
