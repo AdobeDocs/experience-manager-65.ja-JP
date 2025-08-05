@@ -6,16 +6,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-exl-id: c8f3e7c1-d5a2-4e2f-8b9c-1a8d7f8e2a9b
+exl-id: 9fade12f-a038-4fd6-8767-1c30966574c5
 solution: Experience Manager, Experience Manager Forms
 release-date: 2025-08-05T00:00:00Z
-source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
+source-git-commit: 8420597b7ee09b15a7f0004acc64e3625771a4d8
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 8%
 
 ---
-
 
 # JEE 上のAEM Formsの RCE （CVE-2025-49533）、Struts 開発モード設定（CVE-2025-54253）、XXE （CVE-2025-54254）および脆弱性の軽減 {#mitigating-xxe-configuration-rce-vulnerabilities-aem-forms}
 
@@ -67,22 +66,18 @@ ht-degree: 8%
 ### オプション 1:（バージョン 6.5.23.0 のユーザーの場合）最新のホットフィックスのインストール
 
 1. [6.5.23.0](/help/release-notes/aem-forms-hotfix.md) のホットフィックスをダウンロードします。
-2. 標準の [ ホットフィックス/パッチのインストール手順 ](/help/release-notes/jee-patch-installer-65.md) 従います。
-3. IBM WebSphere またはOracle WebLogic で Document Security （旧称Rights Management）を使用している場合は、AEM Forms サーバーを起動する前に、次の Java システムプロパティ（JVM 引数）を設定します。
+1. 標準の [ ホットフィックス/パッチのインストール手順 ](/help/release-notes/jee-patch-installer-65.md) 従います。
+1. IBM WebSphere またはOracle WebLogic で Document Security （旧称Rights Management）を使用している場合は、AEM Forms サーバーを起動する前に、次の Java システムプロパティ（JVM 引数）を設定します。
 
    ```
    -Dcom.adobe.forms.jee.services.allowDoctypeDeclaration=true
    ```
 
-4. アプリケーションサーバーを再起動します
-
-</details>
+1. アプリケーションサーバーを再起動します
 
 ### オプション 2:（6.5.18.0 ～ 6.5.22.0 のユーザー用）手動のホットフィックスのインストール
 
-
-<details>
-<summary><b>6.5.18.0 ～ 6.5.22.0 の手動によるホットフィックスのインストール </b></summary>
++++<b>6.5.18.0 の手動ホットフィックスのインストール - 6.5.22.0</b>
 
 **手順 1：ホットフィックスパッケージをダウンロードして抽出する**
 
@@ -125,7 +120,7 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/jboss/adminui.war` のように指定します。
 
-2. `adobe-core-jboss.ear` 内で、`lib/` フォルダーに移動し、`adobe-uisupport.jar` を次のように置き換えます。
+1. `adobe-core-jboss.ear` 内で、`lib/` フォルダーに移動し、`adobe-uisupport.jar` を次のように置き換えます。
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/adobe-uisupport.jar
@@ -133,10 +128,10 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar` のように指定します。
 
-3. 耳を救ってください。 変更が正しく保存されていることを確認します。
+1. 耳を救ってください。 変更が正しく保存されていることを確認します。
 
 
-4. `adobe-edcserver-jboss.ear` を
+1. `adobe-edcserver-jboss.ear` を
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/jboss/adobe-edcserver-jboss.ear
@@ -144,7 +139,7 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/jboss/adobe-edcserver-jboss.ear` のように指定します。
 
-5. `adobe-forms-jboss.ear` を
+1. `adobe-forms-jboss.ear` を
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/jboss/adobe-forms-jboss.ear
@@ -164,7 +159,7 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/weblogic/adminui.war` のように指定します。
 
-2. `adobe-core-weblogic.ear` 内で、`adobe-uisupport.jar` を次のように置き換えます。
+1. `adobe-core-weblogic.ear` 内で、`adobe-uisupport.jar` を次のように置き換えます。
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/adobe-uisupport.jar
@@ -172,10 +167,10 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar` のように指定します。
 
-3. 耳を救ってください。 変更が正しく保存されていることを確認します。
+1. 耳を救ってください。 変更が正しく保存されていることを確認します。
 
 
-4. `adobe-edcserver-weblogic.ear` を
+1. `adobe-edcserver-weblogic.ear` を
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/weblogic/adobe-edcserver-weblogic.ear
@@ -183,7 +178,7 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/weblogic/adobe-edcserver-weblogic.ear` のように指定します。
 
-5. `adobe-forms-weblogic.ear` を
+1. `adobe-forms-weblogic.ear` を
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/weblogic/adobe-forms-weblogic.ear
@@ -201,7 +196,7 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/websphere/adminui.war` のように指定します。
 
-2. `adobe-core-websphere.ear` 内で、`adobe-uisupport.jar` を次のように置き換えます。
+1. `adobe-core-websphere.ear` 内で、`adobe-uisupport.jar` を次のように置き換えます。
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/adobe-uisupport.jar
@@ -209,10 +204,10 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar` のように指定します。
 
-3. 耳を救ってください。 変更が正しく保存されていることを確認します。
+1. 耳を救ってください。 変更が正しく保存されていることを確認します。
 
 
-4. `adobe-edcserver-websphere.ear` を
+1. `adobe-edcserver-websphere.ear` を
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/websphere/adobe-edcserver-websphere.ear
@@ -220,7 +215,7 @@ ht-degree: 8%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/websphere/adobe-edcserver-websphere.ear` のように指定します。
 
-5. `adobe-forms-websphere.ear` を
+1. `adobe-forms-websphere.ear` を
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/websphere/adobe-forms-websphere.ear
@@ -253,12 +248,12 @@ Document Security （旧称Rights Management）を使用している場合は、
 
 - Configuration Manager を起動して更新された EAR を再デプロイし、ホットフィックスを適用します。
 
-</details>
++++
 
 ### オプション 3:（6.5.17.0 以前のユーザーの場合）アップグレードパス
 
 1. [サポートされているサービスパックバージョンへのアップグレード](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)
-2. 新しいバージョンに基づいて、上記のオプション 1 またはオプション 2 に従います
+1. 新しいバージョンに基づいて、上記のオプション 1 またはオプション 2 に従います
 
 ## 参照
 
