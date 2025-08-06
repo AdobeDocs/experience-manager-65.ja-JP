@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: fd54e28f5d774ca7ef42f2c81a7b57e125fdb1be
+source-git-commit: b5e44b78659f0cb1b8b0025be30143b98c0bf8df
 workflow-type: tm+mt
-source-wordcount: '3706'
-ht-degree: 100%
+source-wordcount: '3539'
+ht-degree: 97%
 
 ---
 
@@ -461,9 +461,7 @@ Windows x86 の場合：
 * 10.9.x 以降
 * 体験版およびデモ版のみサポート
 
-### AEM Forms PDF Generator の要件 {#requirements-for-aem-forms-pdf-generator}
-
-### PDF Generator のソフトウェアサポート {#software-support-for-pdf-generator}
+### PDF Generatorの考慮事項 {#software-support-for-pdf-generator}
 
 <table>
  <tbody>
@@ -472,70 +470,36 @@ Windows x86 の場合：
    <th><p><strong>PDF への変換でサポートされる形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic トラック</a> 最新バージョン</td>
-   <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
+   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> 最新版</td>
+   <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM</td>
   </tr>
-  <tr>
-   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic トラック</a> 最新バージョン（非推奨）</td>
-   <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Office 2019</td>
+
+<tr>
+   <td>Microsoft® Office 2021 Professional Plus、小売およびボリュームライセンス</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016 （非推奨）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
+   <td>
+    <strong>OpenOffice 4.1.15</strong>   </td>
+   <td>
+    ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX 、JP2、J2K、J2C、JPC）、HTML、HTM、RTF、TXT<br>
+
+</td>
   </tr>
-  <tr>
-   <td>WordPerfect 2020<br /> </td>
-   <td>WP、WPD</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Office Visio 2016（非推奨）<br /> </td>
-   <td>VSD、VSDX</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Publisher 2019<br /> </td>
-   <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Publisher 2016（非推奨）<br /> </td>
-   <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Project 2016（非推奨）<br /> </td>
-   <td>MPP</td>
-  </tr>
-  <tr>
-   <td>OpenOffice 4.1.10</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX 、JP2、J2K、J2C、JPC）、HTML、HTM、RTF、TXT</td>
-  </tr>
-  <tr>
-   <td>OpenOffice 4.1.2 （非推奨）</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX 、JP2、J2K、J2C、JPC）、HTML、HTM、RTF、TXT</td>
-  </tr>  
  </tbody>
 </table>
 
 >[!NOTE]
 >
->PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
->
->さらに、次の点に注意してください。
->
->* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 クラシックトラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) が必要です。
+>* PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
+>* PDF Generatorで変換を実行するには、Adobe Acrobat Pro DC （32 ビット）が必要です。
 >* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
->* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
->* PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版の OpenOffice をサポートしています。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
->* PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
->* PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
->* PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
+>* Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Formsを使用する場合にのみ、AEM Forms ライセンスの期間中にAEM Forms PDF Generatorでプログラム的にアクセスしてください。 詳しくは、デプロイメント（[ オンプレミス ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じたAEM Forms製品説明を参照してください。
+>* PDF Generator サービスでは Microsoft® Windows 11 をサポートしていません。
 
 ### AEM Forms Designer の要件 {#requirements-for-aem-forms-designer}
 
