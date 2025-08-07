@@ -7,9 +7,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
 source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6684'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -73,15 +73,15 @@ ht-degree: 94%
 
 * [強化されたファイル添付コンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment)：セキュリティ対策として、許可されたファイルタイプのチェックを回避しようとする、拡張子が変更されたファイルの送信をコンポーネントが防ぐようになりました。有効なファイルタイプのみが受け入れられるように、このようなファイルは送信中にブロックされます。
 
-* FORMS-20533、FORMS-20532:AEM Formsで、Struts バージョンが 2.5.33 から 6.x にアップグレードされました。このサポートは [ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) を介して追加されました。このホットフィックスを [ ダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) して、最新バージョンの Struts のサポートを追加できます。
+* FORMS-20533、FORMS-20532：AEM Forms には、Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。このサポートは、[ダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)することで最新バージョンの Struts のサポートを追加できる、[ホットフィックス](/help/release-notes/aem-forms-hotfix.md)を介して追加されました。
 
-* **LC-3922769**：特定のAEM Forms機能が正しく機能するために OpenSSL 3 を必要とするようになりました。 システムに OpenSSL 3 がインストールされ、ライブラリ `libcrypto.so.3` と `libssl.so.3` がインストールされている必要があります。 セキュリティアップデートは、OpenSSL 3.0.14 を含むバージョンでのみ使用でき、SafeLogic のサポートは 2025 年 2 月に終了するため、bsafe を削除し、セキュリティコンプライアンスに OpenSSL 3 を使用するようになりました。 プラットフォームの互換性と詳細な要件については、[JEE 上のAEM Formsでサポートされているプラットフォーム ](/help/forms/using/aem-forms-jee-supported-platforms.md) および [ 技術要件 ](/help/sites-deploying/technical-requirements.md) を参照してください。
+* **LC-3922769**：特定の AEM Forms 機能が正しく機能するには、OpenSSL 3 が必要になりました。 システムには、ライブラリ `libcrypto.so.3` および `libssl.so.3` と共に OpenSSL 3 がインストールされている必要があります。 セキュリティアップデートは OpenSSL 3.0.14 のバージョンでのみ使用可能で、SafeLogic のサポートは 2025年2 月に終了するので、bsafe を削除し、セキュリティコンプライアンスのために OpenSSL 3 を使用するようになりました。 プラットフォームの互換性と詳細な要件については、[AEM Forms on JEE でサポートされるプラットフォーム](/help/forms/using/aem-forms-jee-supported-platforms.md)および[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-  **OpenSSL 3 のインストールを確認するには：**
+  **OpenSSL 3 のインストールを検証するには：**
 
-   * **RHEL/CentOS/Fedora ベースのシステム**: `rpm -qa | grep   openssl3`
-   * **Ubuntu/Debian ベースのシステム**: `dpkg -l | grep openssl3`
-   * **代替検証**:`ldd /path/to/XMLForm |   grep -E 'libcrypto.so.3|libssl.so.3'` （ライブラリが LD_LIBRARY_PATH にある場合）
+   * **RHEL／CentOS／Fedora ベースのシステム**：`rpm -qa | grep   openssl3`
+   * **Ubuntu／Debian ベースのシステム**：`dpkg -l | grep openssl3`
+   * **代替検証**：`ldd /path/to/XMLForm |   grep -E 'libcrypto.so.3|libssl.so.3'`（ライブラリが LD_LIBRARY_PATH にある場合）
 
 
 
@@ -229,11 +229,11 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 
 ### [!DNL Assets]{#assets-6523}
 
-* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**&#x200B;を選択し、**[!UICONTROL &#x200B; Adobe Stock を検索&#x200B;]**&#x200B;フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
+* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**を選択し、**[!UICONTROL  Adobe Stock を検索&#x200B;]**フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
    * 「**[!UICONTROL ライセンスと保存]**」をクリックすると空のドロップダウンが表示されるため、選択したストック画像のライセンスを取得して保存することができません。
    * ストック画像を選択するか、ストックページの URL を再入力すると、[!DNL AEM] ホームページにリダイレクトされ、Adobe Stock 画像にアクセスできなくなります。（ASSETS-48687）
 * [!DNL AEM]オンプレミス（6.5.22.0）ナビゲーションページでフォルダーの名前に `/` が含まれる場合、フォルダーの管理中に問題が発生します。（ASSETS-46740）
-* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL &#x200B; コレクション&#x200B;]**&#x200B;ビューから読み込まれません。（ASSETS-46738）
+* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL  コレクション&#x200B;]**ビューから読み込まれません。（ASSETS-46738）
 * `Day CQ DAM Mime Type OSGI` Service としての [!DNL InDesign] との統合の問題によって、[!DNL InDesign] ファイルが `x-indesign` ではなく `x-adobe-indesign` と誤って認識されます。（ASSETS-45953）
 * [!DNL AEM 6.5.21] セッション リークが、標準提供の **[!UICONTROL Brand Portal へのスケジュールされた公開]**&#x200B;ワークフローステップまで追跡されます。（ASSETS-44104）
 * [!DNL AEM] で画像を処理および公開する際に、**[!UICONTROL メモリ不足（OOM）]**&#x200B;エラーが表示されます。この問題は、**[!DNL Dam Asset update]** や **[!DNL Dynamic Media: Reprocess assets]** など、ワークフローの廃止されたメソッドが原因で発生しました。（ASSETS-43343）
@@ -694,20 +694,20 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
 >
 > 予期しないエラーが発生する可能性があるので、ホットフィックスが提供されていない問題については、サービスパック 6.5.23.0 にアップグレードしないでください。必要なホットフィックスがリリースされた後にのみ、サービスパック 6.5.23.0 にアップグレードしてください。
 
-#### 利用可能なホットフィックスに関する問題 {#aem-forms-issues-with-hotfixes}
+#### 使用可能なホットフィックスに関する問題 {#aem-forms-issues-with-hotfixes}
 
-次の問題には、ダウンロードとインストールが可能なホットフィックスがあります。 [ ホットフィックスをダウンロードしてインストール ](/help/release-notes/aem-forms-hotfix.md) すると、これらの問題を解決できます。
+次の問題には、ダウンロードとインストールが可能なホットフィックスがあります。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
 
-* **FORMS-20203**: ユーザーが Struts フレームワークをバージョン 2.5.x から 6.x にアップグレードすると、AEM Formsのポリシー UI に、透かしを追加するオプションなどのすべての設定が表示されません。
+* **FORMS-20203**：Struts フレームワークをバージョン 2.5.x から 6.x にアップグレードすると、AEM Forms のポリシー UI に透かしを追加するオプションなどのすべての設定が表示されなくなります。
 
-* **FORMS-20360**: AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します：
+* **FORMS-20360**：AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します。
   ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
 
-* **FORMS-20478**：種類 7/8 のTIFF ファイルをPDFに変換しようとすると、「ALC-PDG-001-000-Image2Pdf 変換に失敗しました。原因：com/sun/image/codec/jpeg/JPEGCodec」および「ALC-PDG-016-003-PDFの後処理中に不明または予期しないエラーが発生しました」 TM ImageIO TIFFデコーダを使用して再試行が試みられますが、最終的にはジョブが完了しません。
+* **FORMS-20478**：7/8 TIFF ファイルタイプを PDF に変換しようとすると、「ALC-PDG-001-000-Image2Pdf 変換に失敗しました（com/sun/image/codec/jpeg/JPEGCodec および「ALC-PDG-016-003-PDF の後処理中に不明／予期しないエラーが発生しました）」というエラーが表示され、変換処理が失敗します。 システムは TM ImageIO TIFF デコーダを使用して再試行を試みますが、最終的にはジョブを完了できません。
 
-* **FORMS-14521**：保存された XML データを含むドラフトレターをプレビューしようとすると、一部のレターで `Loading` 状態が停止します。
+* **FORMS-14521**：ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。
 
-* AEM Formsで、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは [ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) を介して追加されました。ダウンロードしてインストールすると、最新バージョンの Struts のサポートが追加されます。
+* AEM Forms には、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、[ホットフィックス](/help/release-notes/aem-forms-hotfix.md)を介して追加されました。
 
 #### その他の既知の問題 {#aem-forms-other-known-issues}
 
@@ -731,7 +731,7 @@ AEM 6.5.21、6.5.22、6.5.23、および AEM 6.5 LTS GA には、既知の問題
 * インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。 （FORMS-16575）
 * インタラクティブ通信エージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。 （FORMS-16603）
 * 印刷プレビューでレターを表示すると、コンテンツが変更されます。 つまり、一部のスペースが表示されなくなり、特定の文字が `x` に置き換えられます。（FORMS-15681）
-* **FORMS-15428**:Forms アドオンでAEM Forms サービスパック 20 （6.5.20.0）にアップデートすると、資格情報ベースの認証を使用して従来のAdobe Analytics Cloud サービスに依存する設定が機能しなくなります。 この問題により、analytics ルールが正しく実行されませんでした。
+* **FORMS-15428**：Forms アドオンを使用して AEM Forms サービスパック 20（6.5.20.0）にアップデートすると、資格情報に基づく認証を使用する従来の Adobe Analytics Cloud Service に依存する設定が機能しなくなります。 この問題により、分析ルールが正しく実行されなくなりました。
 
 * ユーザーが WebLogic 14c インスタンスを設定すると、JBoss® で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
 
