@@ -8,7 +8,7 @@ role: User,Admin,Architect,Developer
 source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
 workflow-type: tm+mt
 source-wordcount: '1789'
-ht-degree: 65%
+ht-degree: 74%
 
 ---
 
@@ -106,14 +106,14 @@ ht-degree: 65%
     </td>
     <td>
     <ul>
-    <li><strong> このホットフィックスは次の問題を修正します。</strong>
+    <li><strong>このホットフィックスでは、次の問題が修正されます。</strong>
       <ul>
-        <li><strong>FORMS-20533:</strong> AEM Formsで、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは、最新バージョンの Struts のサポートを追加するためにダウンロードおよびインストールできるホットフィックスを通じて追加されました。</li>
-        <li><strong>FORMS-20532:</strong> AEM Formsで、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x にアップグレードされました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。このサポートは、最新バージョンの Struts のサポートを追加するためにダウンロードおよびインストールできるホットフィックスを通じて追加されました。</li>
-        <li><strong>FORMS-20203:</strong>AEM Forms サービスパック 2.5.x からAEM サービスパック 6.x に Struts をアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されません。 ホットフィックスをダウンロードしてインストールすると、この問題を解決できます。</li>
-        <li><strong>FORMS-20360:</strong> AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します。<br>
-        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
-        ホットフィックスをダウンロードしてインストールすると、この問題を解決できます。</li>
+        <li><strong>FORMS-20533：</strong>AEM Forms には、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、ホットフィックスを介して追加されました。</li>
+        <li><strong>FORMS-20532：</strong>AEM Forms には、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、ホットフィックスを介して追加されました。</li>
+        <li><strong>FORMS-20203：</strong>Struts を AEM サービスパック 2.5.x から AEM Forms サービスパック 6.x にアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されなくなります。 問題を解決するには、ホットフィックスをダウンロードしてインストールしてください。</li>
+        <li><strong>FORMS-20360：</strong>AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します。<br>
+        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
+        問題を解決するには、ホットフィックスをダウンロードしてインストールしてください。</li>
       </ul>
     </li>
     </ul>
