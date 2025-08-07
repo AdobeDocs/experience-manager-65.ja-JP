@@ -6,9 +6,9 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: b5e44b78659f0cb1b8b0025be30143b98c0bf8df
+source-git-commit: 62baf682b75823f52f968a70960aff2388d49cad
 workflow-type: tm+mt
-source-wordcount: '10051'
+source-wordcount: '10085'
 ht-degree: 53%
 
 ---
@@ -221,7 +221,7 @@ Acrobatをインストールする前に、これらの必須要件を確認し�
 * [Adobe Admin Console](https://helpx.adobe.com/in/enterprise/admin-guide.html) に精通していること
 * [AEM Forms デプロイメントアーキテクチャ ](/help/forms/using/aem-forms-architecture-deployment.md) ついて
 * Adobe Admin ConsoleとAEM Formsを実行するサーバーの両方での管理者権限。
-* Adobe [2&rbrace;Admin Console&rbrace; への ](https://helpx.adobe.com/in/enterprise/using/admin-roles.html) 管理者アクセス権 [ を持つユーザー。 ](https://adminconsole.adobe.com)通常、組織の管理者には、管理者アクセス権を持つユーザーが既に割り当てられています。 管理者の追加手順については、この [ 手順ビデオ ](https://www.youtube.com/watch?v=xO2T0I6SvsU&list=PLHRegP5ZOj7CpijZyD8pB9rIMJkvO6FnI&t=81s) をご覧ください。
+* Adobe [2}Admin Console} への ](https://helpx.adobe.com/in/enterprise/using/admin-roles.html) 管理者アクセス権 [ を持つユーザー。 ](https://adminconsole.adobe.com)通常、組織の管理者には、管理者アクセス権を持つユーザーが既に割り当てられています。 管理者の追加手順については、この [ 手順ビデオ ](https://www.youtube.com/watch?v=xO2T0I6SvsU&list=PLHRegP5ZOj7CpijZyD8pB9rIMJkvO6FnI&t=81s) をご覧ください。
 * Adobe Admin Consoleで [ デプロイメント管理者 ](https://helpx.adobe.com/in/enterprise/global-admin-console/manage-administrators.html) のロールを持つユーザーアカウント。 同じ [ 手順ビデオ ](https://www.youtube.com/watch?v=xO2T0I6SvsU&list=PLHRegP5ZOj7CpijZyD8pB9rIMJkvO6FnI&t=81s) で、デプロイメント管理者の追加方法を示します。
 * AEM Formsを実行しているマシンのローカル管理者権限
 * Windows 64 ビットオペレーティングシステム
@@ -253,6 +253,12 @@ Adobe Acrobat Pro DC for Microsoft Office のインストールのインスト�
 * **デプロイメントタイプ**:1 人のユーザーまたは複数のユーザー
 
 各タブには、特定の設定に合わせて最適化された手順が含まれており、設定の問題を回避し、適切なライセンスコンプライアンスを確保するのに役立ちます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469669)
+
+>[!NOTE]
+>
+>このビデオでは、小売ライセンス – シングルユーザー設定のインストールプロセスを示します。 他の配置シナリオ（小売 – 複数のユーザ、ボリューム ライセンス – 単一のユーザ、またはボリューム ライセンス – 複数のユーザ）については、次の対応するタブの特定の手順 9 を参照して、配置タイプに適したサーバ起動とライセンス アクティベーションを確認してください。
 
 >[!BEGINTABS]
 
@@ -320,9 +326,9 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 1. Windows Campaign コントロールパネルを開きます。
 2. **設定** に移動し、**アプリ** を開きます。
-3. インストールされているプログラムの一覧で **0&rbrace;Adobe Acrobat&rbrace; を見つけます**
+3. インストールされているプログラムの一覧で **0}Adobe Acrobat} を見つけます**
 4. **アンインストール** を選択し、画面の指示に従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
-5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [&#128279;](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
+5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
 
 ###### 手順 6:Adobe Acrobat Proをダウンロードしてインストールする
 
@@ -341,7 +347,7 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 ###### 手順 7:FRL パッケージのダウンロード
 
-1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console&rbrace; にログインします。
+1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console} にログインします。
 1. 「**パッケージ**」タブに移動します。
 1. 手順 2 で作成した FRL パッケージ（「Acrobat FRL AEM Forms」またはカスタムパッケージ名という名前）を見つけます。
 1. **ダウンロード** をクリックして、パッケージをサーバーにダウンロードします。
@@ -470,9 +476,9 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 1. Windows Campaign コントロールパネルを開きます。
 2. **設定** に移動し、**アプリ** を開きます。
-3. インストールされているプログラムの一覧で **0&rbrace;Adobe Acrobat&rbrace; を見つけます**
+3. インストールされているプログラムの一覧で **0}Adobe Acrobat} を見つけます**
 4. **アンインストール** を選択し、画面の指示に従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
-5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [&#128279;](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
+5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
 
 ###### 手順 6:Adobe Acrobat Proをダウンロードしてインストールする
 
@@ -491,7 +497,7 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 ###### 手順 7:FRL パッケージのダウンロード
 
-1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console&rbrace; にログインします。
+1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console} にログインします。
 1. 「**パッケージ**」タブに移動します。
 1. 手順 2 で作成した FRL パッケージ（「Acrobat FRL AEM Forms」またはカスタムパッケージ名という名前）を見つけます。
 1. **ダウンロード** をクリックして、パッケージをサーバーにダウンロードします。
@@ -626,9 +632,9 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 1. Windows Campaign コントロールパネルを開きます。
 2. **設定** に移動し、**アプリ** を開きます。
-3. インストールされているプログラムの一覧で **0&rbrace;Adobe Acrobat&rbrace; を見つけます**
+3. インストールされているプログラムの一覧で **0}Adobe Acrobat} を見つけます**
 4. **アンインストール** を選択し、画面の指示に従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
-5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [&#128279;](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
+5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
 
 ###### 手順 6:Adobe Acrobat Proをダウンロードしてインストールする
 
@@ -647,7 +653,7 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 ###### 手順 7:FRL パッケージのダウンロード
 
-1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console&rbrace; にログインします。
+1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console} にログインします。
 1. 「**パッケージ**」タブに移動します。
 1. 手順 2 で作成した FRL パッケージ（「Acrobat FRL AEM Forms」またはカスタムパッケージ名という名前）を見つけます。
 1. **ダウンロード** をクリックして、パッケージをサーバーにダウンロードします。
@@ -701,7 +707,7 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 すべてのプロセスを完了したら、クイックアクションテストを実行して、インストールが有効であることを確認します。
 
 1. リモートデスクトップ（RDP）を使用してサーバーにログインし、サービスを使用してAEM Forms サーバーを起動します。
-2. リモートデスクトップ（RDP）を使用してサーバーにログインし、Windows サービスを使用してAEM Forms サーバーを起動します。 サーバーが動作したら、RDP ウィンドウを閉じるだけです。 代わりに、ユーザーからログオフして適切にログアウトします。これにより、サービスがバックグラウンドで実行され続けている間、セッションが正常に終了します。
+2. サーバーが動作したら、RDP ウィンドウを閉じるだけです。 代わりに、ユーザーからログオフして適切にログアウトします。これにより、サービスがバックグラウンドで実行され続けている間、セッションが正常に終了します。
 
 ###### 手順 10:PDF Generator サービスをテストする
 
@@ -783,9 +789,9 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 1. Windows Campaign コントロールパネルを開きます。
 2. **設定** に移動し、**アプリ** を開きます。
-3. インストールされているプログラムの一覧で **0&rbrace;Adobe Acrobat&rbrace; を見つけます**
+3. インストールされているプログラムの一覧で **0}Adobe Acrobat} を見つけます**
 4. **アンインストール** を選択し、画面の指示に従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
-5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [&#128279;](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
+5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)Adobe Acrobat クリーナーツールを使用します。
 
 ###### 手順 6:Adobe Acrobat Proをダウンロードしてインストールする
 
@@ -804,7 +810,7 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 
 ###### 手順 7:FRL パッケージのダウンロード
 
-1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console&rbrace; にログインします。
+1. 手順 3 でダウンロード権限を付与した [ ユーザーアカウント ](https://adminconsole.adobe.com/) を使用して ** Adobe Admin Console} にログインします。
 1. 「**パッケージ**」タブに移動します。
 1. 手順 2 で作成した FRL パッケージ（「Acrobat FRL AEM Forms」またはカスタムパッケージ名という名前）を見つけます。
 1. **ダウンロード** をクリックして、パッケージをサーバーにダウンロードします。
