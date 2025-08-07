@@ -905,7 +905,7 @@ FRL パッケージを管理する専用のサービスアカウントを作成�
 >
 >AEM Forms PDF Generatorなどのサーバーサイドの自動処理シナリオでは、保護モードを無効にする必要があります。 この設定は、専用サーバー環境でのみ変更してください。エンドユーザーのデスクトップでは変更しないでください。
 
-詳しくは、[ 保護モードに関するAdobe ドキュメント ](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html) を参照してください。
+詳しくは、[ 保護モードに関するAdobe ドキュメント ](https://helpx.adobe.com/jp/acrobat/kb/protected-mode-troubleshooting-reader.html) を参照してください。
 
 
 
