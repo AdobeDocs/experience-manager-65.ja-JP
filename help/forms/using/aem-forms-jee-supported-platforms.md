@@ -12,7 +12,7 @@ feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 source-git-commit: 1d16a131bd185145d9ad55d88749535d7a2dd84a
 workflow-type: tm+mt
 source-wordcount: '4039'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -49,9 +49,9 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 #### サービスパック
 
-- **サービスパックの対象範囲**:Adobeは、過去 18 か月以内にリリースされたサービスパックを実行しているAEM Forms環境に対してテクニカルサポートを提供します。 現在のバージョンがこの 18 か月間の範囲外である場合、最適なパフォーマンス、セキュリティ、継続的なサポートを維持するために、Adobeは最新のサービスパックにアップグレードすることを強くお勧めします。
+- **サービスパックの対象範囲**：アドビでは、過去 18 か月以内にリリースされたサービスパックを実行している AEM Forms 環境に対してテクニカルサポートを提供します。現在のバージョンがこの 18 か月の期間外である場合、アドビでは、最適なパフォーマンス、セキュリティ、継続的なサポートを維持するために、最新のサービスパックにアップグレードすることを強くお勧めします。
 
-- **パッチインストーラーのガイドライン**：パッチインストーラーを使用して更新する場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.19.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
+- **パッチインストーラーのガイドライン**：パッチインストーラーを使用してアップデートする場合、基になる完全なインストーラーバージョンが 2 リリース以内のものであることを確認することが重要です。例えば、サービスパック 6.5.19.0 のインストール中に、基になる完全なインストーラーのバージョンが 6.5.18.0 または 6.5.12.0 であることを確認します。
 
 - **パッチアップグレードのサポート**：サポートされている最新のプラットフォームにアップグレードするまで、最新のサービスパックへのアップグレードを続行できます。例えば、6.5.19.0 でサポートされているプラットフォームの組み合わせに移行する場合、サービスパック 6.5.12.0 から 6.5.19.0 へのアップグレードが可能です。
 
@@ -454,7 +454,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 - Cordova Android™ 6.0.0
 - Cordova Windows 4.4.3
 
-### PDF Generatorの考慮事項 {#software-support-for-pdf-generator}
+### PDF Generator に関する考慮事項 {#software-support-for-pdf-generator}
 
 <table>
  <tbody>
@@ -463,12 +463,12 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
    <th><p><strong>PDF への変換でサポートされる形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> 最新版</td>
+   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> 最新バージョン</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM</td>
   </tr>
 
 <tr>
-   <td>Microsoft® Office 2021 Professional Plus、小売およびボリュームライセンス</td>
+   <td>Microsoft® Office 2021 Professional Plus、小売ライセンスおよびボリュームライセンス</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
   </tr>
   <tr>
@@ -485,13 +485,13 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >[!NOTE]
 >
 > - PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
-> - PDF Generatorで変換を実行するには、Adobe Acrobat Pro DC （32 ビット）が必要です。
+> - PDF Generator で変換を実行するには、Adobe Acrobat Pro DC（32 ビット）が必要です。
 > - PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 > - ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
 > - PDF Generator は Microsoft® Office 365 をサポートしていません。
 > - PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
 > - OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
-> - Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Formsを使用する場合にのみ、AEM Forms ライセンスの期間中にAEM Forms PDF Generatorでプログラム的にアクセスしてください。 詳しくは、デプロイメント（[ オンプレミス ](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じたAEM Forms製品説明を参照してください。
+> - Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator でのみ使用するために、AEM Forms のライセンス期間中に AEM Forms でプログラムでのみアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 > - PDF Generator サービスでは Microsoft® Windows 11 をサポートしていません。
 
 
@@ -731,7 +731,7 @@ JEE 上の AEM Forms のサードパーティ参照プラットフォームは�
 
 >[!NOTE]
 >
-> サポートされている形式やプラットフォームのバージョンに関する質問については、AEM Forms サポートにお問い合わせください。
+> サポートされている形式やプラットフォームのバージョンに関する質問について詳しくは、AEM Forms サポートにお問い合わせください。
 
 
 <!--
@@ -748,7 +748,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit) 
 - Microsoft&reg; Office 2016
@@ -831,7 +831,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
   - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
-    - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+    - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
     - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
     - Microsoft&reg; Windows Server 2016 (64-bit) 
     - Microsoft&reg; Office 2016
@@ -840,7 +840,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 -->
 
-### リリース 6.5.23.0 （2025 年 7 月）
+### リリース 6.5.23.0（2025年7月）
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
@@ -849,7 +849,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | | Microsoft Publisher 2019 |  |
 | | WordPerfect 2020 |  |
 | | Microsoft Visio 2019 |  |
-| | Microsoftプロジェクト 2019 |  |
+| | Microsoft Project 2019 |  |
 
 ### リリース 6.5.19.1（2023年12月15日（PT））
 
