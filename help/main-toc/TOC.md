@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: a3284ca1e51eb92d04e86129bc5dd24c6fc03d8a
+source-git-commit: b120160d9368546ec7cec748a3efde497c7e40e1
 workflow-type: tm+mt
 source-wordcount: '7556'
 ht-degree: 99%
@@ -1097,7 +1097,7 @@ ht-degree: 99%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1307,7 +1307,7 @@ ht-degree: 99%
       + [コンテンツの翻訳](/help/journey-headless/translation/translate-content.md)
       + [翻訳済みコンテンツの公開](/help/journey-headless/translation/publish-content.md)
    + [ドキュメントジャーニーとは](/help/journey-documentation/home.md)
-+ AEM 6.5 の AI アシスタント {#ai-assistant}
++ AEM 6.5 の AI アシスタント{#ai-assistant}
    + [AEMでの AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
    + [AEMの AI アシスタントについて](/help/ai-assistant-in-aem.md)
 + 実装 {#implementing}

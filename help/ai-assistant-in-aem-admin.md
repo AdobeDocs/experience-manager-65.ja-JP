@@ -4,7 +4,8 @@ description: Adobe Experience ManagerでAdmin Consoleを使用して AI アシ�
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 38a79bc0dd5e78a49647b123fcdd0f0bacf94f21
+exl-id: 06824b3d-f912-4922-8fb6-ee2ca04c6326
+source-git-commit: c89b0dc7c544e3b81ea05bf078f33e9ab7f40880
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 3%
@@ -48,7 +49,7 @@ AEMでの AI アシスタントの設定プロセスは、次の手順で構成�
 
 ## 1 - Adobe Admin Consoleでの新しい製品プロファイルの作成{#create-profile}
 
-1. Experience Platformのドキュメントにある [Adobe Admin Consoleで新しい製品プロファイルを作成する ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/create-profile) の詳細な手順に従います。
+1. Experience Platformのドキュメントにある [Adobe Admin Consoleで新しい製品プロファイルを作成する ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/create-profile) の詳細な手順に従います。
 
 1. 新しい製品プロファイルを作成する際に、AI アシスタントで以下の推奨値を使用できます。
 
@@ -64,7 +65,7 @@ AEMでの AI アシスタントの設定プロセスは、次の手順で構成�
 
 製品プロファイルにカスタム権限を割り当てるプロセスは、標準のAdobe Cloud Manager カスタム権限ワークフローに従います。
 
-リファレンス記事：[ 新しい製品プロファイルへのカスタム権限の割り当て ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-manager/content/requirements/custom-permissions#assign-permissions)
+リファレンス記事：[ 新しい製品プロファイルへのカスタム権限の割り当て ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/custom-permissions#assign-permissions)
 
 1. Admin Consoleで、新しく作成した製品プロファイルの名前（`AI Assistant in AEM`）をクリックします
 
@@ -193,5 +194,5 @@ Admin Consoleのバルクアップロード機能を使用できます。
 ## 関連トピック
 
 * [AEMの AI アシスタント](/help/ai-assistant-in-aem.md)
-* [Adobe Experience Platformのアクセス制御 ](https://experienceleague.adobe.com/ja/docs/experience-platform/access-control/ui/overview)
+* [Adobe Experience Platformのアクセス制御 ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)
 <!-- * [Cloud Manager Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md) -->

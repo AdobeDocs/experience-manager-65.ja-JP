@@ -4,7 +4,8 @@ description: AI アシスタントを使用して回答を見つけ、Adobe Expe
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 38a79bc0dd5e78a49647b123fcdd0f0bacf94f21
+exl-id: 3b4a484e-55b5-4924-82dd-56735f6ed46d
+source-git-commit: c89b0dc7c544e3b81ea05bf078f33e9ab7f40880
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 1%
@@ -128,7 +129,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in the AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
