@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
-workflow-type: ht
-source-wordcount: '7541'
-ht-degree: 100%
+source-git-commit: a3284ca1e51eb92d04e86129bc5dd24c6fc03d8a
+workflow-type: tm+mt
+source-wordcount: '7556'
+ht-degree: 99%
 
 ---
 
@@ -143,7 +143,7 @@ ht-degree: 100%
       + パーソナライゼーション {#personalization}
          + [パーソナライゼーション](/help/sites-authoring/personalization.md)
          + [ContextHub データを使用したページのプレビュー](/help/sites-authoring/ch-previewing.md)
-         + [ターゲットモードを使用したターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)
+         + [ターゲティングモードを使用したターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)
          + [マルチサイトでのターゲットコンテンツの操作](/help/sites-authoring/multisite-support-targeted-content.md)
          + [ターゲットコンテンツ用マルチサイト管理の構造](/help/sites-authoring/technical-multisite-targeted.md)
          + [アクティビティの管理](/help/sites-authoring/activitylib.md)
@@ -152,7 +152,7 @@ ht-degree: 100%
          + [セグメント化について](/help/sites-authoring/segmentation-overview.md)
       + AEM と Adobe Campaign {#aem-adobe-campaign}
          + [Adobe Campaign Classic および Adobe Campaign Standard の使用](/help/sites-authoring/campaign.md)
-         + [Adobe Campaign のターゲット設定](/help/sites-authoring/target-adobe-campaign.md)
+         + [Adobe Campaign のターゲティング](/help/sites-authoring/target-adobe-campaign.md)
          + [AEM での Adobe Campaign フォームの作成](/help/sites-authoring/adobe-campaign-forms.md)
          + [Adobe Campaign コンポーネント](/help/sites-authoring/adobe-campaign-components.md)
    + 管理 {#administering}
@@ -328,7 +328,7 @@ ht-degree: 100%
          + [Adobe Campaign 6.1 および Adobe Campaign Standard の使用](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md)
          + [Adobe Campaign の使用](/help/sites-classic-ui-authoring/classic-personalization-ac.md)
          + [Adobe Campaign コンポーネント](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
-         + [Adobe Campaign のターゲット設定](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
+         + [Adobe Campaign のターゲティング](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
          + [AEM での Adobe Campaign フォームの作成](/help/sites-classic-ui-authoring/classic-personalization-ac-forms.md)
       + クラシック UI での Assets のオーサリング {#assets}
          + [アセットの操作](/help/sites-classic-ui-authoring/classicui-assets.md)
@@ -1097,7 +1097,7 @@ ht-degree: 100%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1307,6 +1307,9 @@ ht-degree: 100%
       + [コンテンツの翻訳](/help/journey-headless/translation/translate-content.md)
       + [翻訳済みコンテンツの公開](/help/journey-headless/translation/publish-content.md)
    + [ドキュメントジャーニーとは](/help/journey-documentation/home.md)
++ AEM 6.5 の AI アシスタント {#ai-assistant}
+   + [AEMでの AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
+   + [AEMの AI アシスタントについて](/help/ai-assistant-in-aem.md)
 + 実装 {#implementing}
    + 開発 {#developing}
       + デベロッパー向けの概要 {#introduction}
