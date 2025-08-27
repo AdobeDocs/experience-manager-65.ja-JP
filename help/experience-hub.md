@@ -5,9 +5,9 @@ landing-page-description: すべてのAdobe機能にアクセスするための�
 solution: Experience Manager, Experience Manager 6.5
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fe1d00d1a3587cc768abeba6f995969c35203bad
+source-git-commit: b7977fcc76a3d8b4ec9e8d9e8ae8622ff13a441a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '589'
 ht-degree: 5%
 
 ---
@@ -75,7 +75,7 @@ Adobe Experience Managerの中央ハブとして機能するExperience Hub ペ�
 
 ![Experience Hubのクイックショートカット ](/help/assets/assets-experience-hub/experience-hub-quick-shortcuts-ams.png)
 
-AEM Cloud Service またはManaged Servicesの実稼動環境が存在しない場合は、選択オプションがグレー表示され選択できません。
+AEM Cloud Service またはManaged Servicesの実稼動環境が存在しない場合は、選択オプションがグレー表示されます（使用不可）。
 
 ![Experience Hub実稼動環境がありません ](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
 
