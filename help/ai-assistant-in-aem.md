@@ -1,23 +1,22 @@
 ---
-title: AEMの AI アシスタント
+title: AEM 6.5 の AI アシスタント
 description: AI アシスタントを使用して回答を見つけ、Adobe Experience Managerで使用可能なソリューションのトラブルシューティングを行います。
-solution: Experience Manager
+solution: Experience Manager, Experience Manager 6.5
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 3b4a484e-55b5-4924-82dd-56735f6ed46d
-source-git-commit: 78ba3c9a8c2636eebdeac08c54ad3d0b1d0e8249
+source-git-commit: c98a66a4b4be23145334b339a793ded1716e9889
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1296'
 ht-degree: 1%
 
 ---
 
-# AEMの AI アシスタント {#about-ai-assistant-in-aem}
+# AEM 6.5 の AI アシスタント {#about-ai-assistant-in-aem}
 
 >[!IMPORTANT]
 >
 >AEM 6.5 およびAEM 6.5 Cloud Manager/Experience Hubを使用していない LTS のお客様は、Adobe カスタマーサクセスエンジニアに連絡して、AI アシスタントへのアクセス権をリクエストする必要があります。
-
 
 AEM 6.5/AEM 6.5 LTS の AI アシスタントは、Adobe Experience Manager関連のクエリに対する回答の検索を合理化するように設計された対話型インターフェイスを提供します。 AEM製品に関する質問に即座に回答したり（*すべてのユーザーが利用できます*）、サポートチケットの自動作成を行ったり（*サポート管理者が利用できます*。
 
@@ -36,7 +35,7 @@ AEMに直接埋め込まれ、AEM Experience Hub、Cloud Managerおよびオー�
 
 次の 3 分 39 秒のビデオでは、AEMの AI アシスタントの手順を順を追って説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470356?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3470354?learn=on)
 
 ## AEMの AI アシスタントにアクセスできます{#get-access}
 
@@ -134,7 +133,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in the AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
