@@ -5,7 +5,8 @@ landing-page-description: すべてのAdobe機能にアクセスするための�
 solution: Experience Manager, Experience Manager 6.5
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b7977fcc76a3d8b4ec9e8d9e8ae8622ff13a441a
+exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
+source-git-commit: 276b7bb5462e4dd0dfbb27c94f759a89afb815cf
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 5%
