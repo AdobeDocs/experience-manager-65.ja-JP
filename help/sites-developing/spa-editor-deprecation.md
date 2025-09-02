@@ -5,9 +5,9 @@ feature: Developing
 role: Admin, Architect, Developer
 exl-id: ea6e46ee-4a90-4236-8d93-292a4dda4dc0
 source-git-commit: d619c969604119a8686050fdc34d77c0ffee33cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '910'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ SPA エディターは、アドビで引き続きサポートしますが、プ�
 
 ## 概要 {#summary}
 
-Adobeは、AEM 6.5 の [ リリース 6.5.23](/help/release-notes/release-notes.md#spa-editor) で SPA エディターを非推奨（廃止予定）としました。つまり、SDK にさらに機能強化や更新は行われません。 Adobeでは、AEMの最新のイノベーションを活用するために、新しいヘッドレスプロジェクトには [ ユニバーサルエディター ](/help/sites-developing/universal-editor/introduction.md) を使用することをお勧めします。
+アドビでは、[AEM 6.5 のリリース 6.5.23](/help/release-notes/release-notes.md#spa-editor) で SPA エディターを廃止しました。つまり、SDK に対して追加の機能強化や更新は行いません。アドビでは、AEM の最新のイノベーションの活用に、新しいヘッドレスプロジェクトに対しては[ユニバーサルエディター](/help/sites-developing/universal-editor/introduction.md)を使用することをお勧めします。
 
 ## 廃止の詳細 {#details}
 
@@ -51,7 +51,7 @@ SPA エディターに代わる最適な代替手段は、プロジェクトの�
 
 * **[ユニバーサルエディター](/help/sites-developing/universal-editor/introduction.md)**&#x200B;は、SPA エディターに代わる直接的な代替手段として最適です。
    * ユニバーサルエディターは、ビジュアルエディターでもあり、アドビの SPA エディターでのエクスペリエンスをすべて組み込んで、分離された実装向けに特別に設計しました。
-   * ユニバーサルエディターも [AEM as a Cloud Service用にリリース ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) されたため、Cloud Services に加えて、AMS とオンプレミスのユースケースをサポートしています。
+   * ユニバーサルエディターは、[AEM as a Cloud Service 用にもリリース](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)しているので、Cloud Service に加えて AMS とオンプレミスのユースケースもサポートしています。
 * **[コンテンツフラグメントエディター](/help/sites-developing/universal-editor/introduction.md)**&#x200B;は、フォームベースのエディターを使用するユーザー向けの代替手段です。
    * コンテンツフラグメントエディターは、コンテンツがページではなくコンテンツフラグメントとして構造化されている場合に最適です。
 

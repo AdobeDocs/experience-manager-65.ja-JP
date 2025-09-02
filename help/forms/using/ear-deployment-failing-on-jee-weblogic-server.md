@@ -2,13 +2,13 @@
 title: JEE WebLogic Server での EAR デプロイメントの失敗
 seo-title: EAR Deployment failing on JEE Weblogic Server
 description: JEE WebLogic Server での EAR デプロイメントの失敗を解決する手順
-source-git-commit: 05712cfcef1d9c37b7cd015133abaf6df0e351d2
-workflow-type: tm+mt
+exl-id: 109d9182-5e3f-477e-9417-abc83d5ea3bc
+source-git-commit: 04cdc51ea2059daed6573987052feb893bd5f634
+workflow-type: ht
 source-wordcount: '97'
 ht-degree: 100%
 
 ---
-
 
 # JEE WebLogic Server での EAR デプロイメントの失敗 {#ear-deployment-failing-on-jee-weblogic-server}
 

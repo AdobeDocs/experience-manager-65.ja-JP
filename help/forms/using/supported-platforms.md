@@ -1,14 +1,14 @@
 ---
-title: OSGi でのAEM Formsでサポートされるプラットフォーム
-description: OSGi でのAEM Formsでサポートされるプラットフォーム
-source-git-commit: 7416c4ca04e752c7ef179fbb50047091b98496c1
-workflow-type: tm+mt
+title: AEM Forms on OSGi でサポートされるプラットフォーム
+description: AEM Forms on OSGi でサポートされるプラットフォーム
+exl-id: 5e060b89-67d1-4b2b-8b5f-65bc0d23718d
+source-git-commit: 96272a62c74c39c38b9cf3ee40e41fe442b7c271
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM forms on OSGi でサポートされるプラットフォーム {#supported-platforms}
 
-# OSGi でのAEM forms でサポートされるプラットフォーム {#supported-platforms}
-
-OSGi でのAEM Formsのサポートプラットフォームについては、[ 技術要件 ](/help/sites-deploying/technical-requirements.md) のドキュメントを参照してください。
+AEM Forms on OSGi のサポートプラットフォームについて詳しくは、[技術要件](/help/sites-deploying/technical-requirements.md)ドキュメントを参照してください。

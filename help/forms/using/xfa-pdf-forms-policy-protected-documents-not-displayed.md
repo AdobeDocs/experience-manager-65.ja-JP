@@ -1,6 +1,6 @@
 ---
-title: XFA ベースのPDF formsおよびポリシーで保護されたドキュメントの問題を表示
-description: XFA ベースのPDF formsおよびポリシーで保護されたドキュメントの問題を表示
+title: XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題
+description: XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
@@ -8,29 +8,30 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: ebb61f2c5056a780e829e64031f8eba69a8ae25b
-workflow-type: tm+mt
+exl-id: c9beefac-14e9-466c-b5bd-44ffab1fb820
+source-git-commit: 913e249ba52f1ee262ed78167ce3b2a857e86213
+workflow-type: ht
 source-wordcount: '390'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# XFA ベースのPDF formsおよびポリシーで保護されたドキュメントの問題を表示
+# XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題
 
-XFA ベースのPDF フォームまたはポリシーで保護されたドキュメントを Adobe LiveCycle Rights Management で開くことができない場合は、次の理由を確認してください。
+Adobe LiveCycle Rights Management を使用して XFA ベースの PDF フォームまたはポリシーで保護されたドキュメントを開くことができない場合は、次の理由を確認します。
 
-* XFA ベースのPDF formsとポリシーで保護されたドキュメントには、Adobe® Acrobat® またはAdobe® Reader® のバージョン 8 以降が必要です。 最新のAdobeまたはAcrobatのダウンロードについては [&#128279;](https://www.adobe.com/downloads.html)Readerのダウンロード &rbrace; を参照してください。
-* Mozilla Firefox やGoogle Chromeなどのブラウザーには、XFA ベースのPDF formsをサポートしないPDF ビューアが組み込まれています。 これらのブラウザーで XFA ベースのPDF formsを表示するには、AcrobatまたはReaderを使用して PDF を開くように設定する必要があります。 詳しくは、Mozilla Firefox での XFA ベースのPDF formsおよびGoogle Chromeを参照してください。
-* AcrobatおよびReaderは、Microsoft® Windows® 上では、PDF を保護ビューモードで開くように設定することができます。これにより、XFA ベースのPDF formsおよびポリシーで保護されたドキュメントが開かなくなります。 Acrobat または Reader の保護ビューモードが無効になっていることを確認します。 詳しくは、[保護されたビュー（Windows のみ）](https://helpx.adobe.com/jp/acrobat/kb/end-of-support-acrobat-x-reader-x.html)を参照してください。
-* XFA ベースのPDF formsまたはポリシーで保護されたドキュメントにモバイルデバイスでアクセスする場合は、次の点を考慮してください。
+* XFA ベースの PDF フォームとポリシーで保護されたドキュメントには、Adobe® Acrobat® または Adobe® Reader® バージョン 8 以降が必要です。最新の Reader または Acrobat のダウンロードについて詳しくは、[Adobe ダウンロード](https://www.adobe.com/jp/downloads.html)を参照してください。
+* Mozilla Firefox および Google Chrome などのブラウザーには、XFA ベースの PDF フォームをサポートしていない組み込みの PDF ビューアが提供されています。これらのブラウザーで XFA ベースの PDF フォームを表示するには、Acrobat または Reader を使用して PDF を開くように設定する必要があります。詳しくは、Mozilla Firefox および Google Chrome の XFA ベースの PDF フォームを参照してください。
+* Acrobat と Reader は、Microsoft® Windows® 上では、PDF を保護ビューモードで開くように設定することができます。これにより、XFA ベースの PDF フォームとポリシーで保護されたドキュメントが開かなくなります。Acrobat または Reader の保護ビューモードが無効になっていることを確認します。 詳しくは、[保護されたビュー（Windows のみ）](https://helpx.adobe.com/jp/acrobat/kb/end-of-support-acrobat-x-reader-x.html)を参照してください。
+* モバイルデバイスで XFA ベースの PDF フォームまたはポリシーで保護されたドキュメントにアクセスする場合は、次の点を考慮します。
 
-   * ポリシーで保護されたドキュメントをモバイルデバイスで開くには、モバイル用 Adobe Reader が必要です。 詳しくは、[Adobe Reader モバイルアプリ ](https://www.adobe.com/in/acrobat/mobile/acrobat-reader.html) を参照してください。
-   * iOS、Android、Blackberry のモバイルデバイスとスマートフォンでは、XFA フォームを含む Adobe Reader プラグインがサポートされていません。 LiveCycle ES4 には、HTML5 を使用してモバイルデバイスをターゲットにするサービスがあります。これらのデバイスでフォームを使用できるようにするには、フォーム作成者がそのサービスを使用する必要があります。
-   * Windows 8 モバイルデバイスで Metro スタイルを使用している場合は、クラシック表示に切り替えるか、LiveCycle ES4 でHTML5 を利用します。
+   * ポリシーで保護されたドキュメントをモバイルデバイスで開くには、Adobe Reader モバイル版が必要です。詳しくは、[Adobe Reader モバイルアプリ](https://www.adobe.com/jp/acrobat/mobile/acrobat-reader.html)を参照してください。
+   * iOS、Android、Blackberry のモバイルデバイスおよびスマートフォンは、XFA フォームでの Adobe Reader プラグインをサポートしていません。 LiveCycle ES4 は、HTML5 を使用してモバイルデバイスをターゲットにするサービスを提供しています。フォーム作成者は、フォームをこれらのデバイスで使用できるようにするために、そのサービスを使用する必要があります。
+   * Windows 8 モバイルデバイスで Metro スタイルを使用している場合は、クラシック表示に変更するか、LiveCycle ES4 で HTML5 を活用します。
 
 >[!NOTE]
 >
->LiveCycle ES4 では、XFA ベースのフォームをHTML5 にレンダリングすることができます。これにより、iPadのようなモバイルデバイスで動作するブラウザーなど、HTML5 をサポートしているブラウザーでフォームを開くことができます。 HTML5 レンディションのフォームは、フォームデザインのレイアウトを維持し、XFA フォームテンプレートに埋め込まれたほとんどのフォームロジック（JavaScript、フォーム計算、フォーム検証など）をサポートします。 このようにして、XFA フォームに対するテクノロジー投資は、Adobe Reader プラグインを実行できないデバイスに簡単に引き継がれます。
->詳しくは、「[LiveCycle 製品ドキュメントへのアップグレード ](https://business.adobe.com/products/experience-manager/forms/aem-forms.html) を参照してください。
+>LiveCycle ES4 は、iPad のようなモバイルデバイスで動作するブラウザーなど、HTML5 をサポートしているブラウザーでフォームを開くことができるように、XFA ベースのフォームを HTML5 にレンダリングするサポートを提供しています。フォームの HTML5 レンディションは、フォームデザインのレイアウトを保持し、XFA フォームテンプレートに埋め込まれたほとんどのフォームロジック（JavaScript、フォーム計算、フォーム検証など）をサポートします。この方法により、XFA フォームに対するテクノロジー投資は、Adobe Reader プラグインの実行が不可能なデバイスに簡単に引き継がれます。
+>>詳しくは、[LiveCycle 製品へのアップグレードドキュメント](https://business.adobe.com/products/experience-manager/forms/aem-forms.html)を参照してください。
 
-[ 法律上の注意 ](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [ オンラインプライバシーポリシー ](https://www.adobe.com/jp/privacy.html)
+[法律上の注意](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [オンラインプライバシーポリシー](https://www.adobe.com/jp/privacy.html)
