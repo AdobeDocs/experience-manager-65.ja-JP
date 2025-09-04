@@ -9,10 +9,10 @@ role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f749892bf7fba9889adfc930771178154b92fa5d
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 100%
+source-wordcount: '735'
+ht-degree: 83%
 
 ---
 
@@ -41,9 +41,10 @@ HTTP/2 とその利点については、次の web サイトで簡潔に説明�
 * 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。最もパフォーマンスが向上したのは iOS デバイスでした。
 * ビューアの場合、読み込み時間のパフォーマンスが 15％向上しました。
 
-以下のデモは、HTTP/1 と HTTP/2 の読み込み時間を比較して示しています。
+<!--
+The following demonstration illustrates the difference between HTTP/1 versus HTTP/2 loading:
 
-[https://http2.akamai.com/demo](https://http2.akamai.com/demo)
+[https://http2.akamai.com/demo](https://http2.akamai.com/demo) -->
 
 ## HTTP/2 に切り替えるには {#am-i-eligible-to-switch-over-to-http}
 
@@ -61,15 +62,15 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2 への切り替えは、お客様からのリクエストが必要となり、自動的には行われません。
 
-1. HTTP/2 に切り替えるには、アドビのカスタマーサポートにリクエストしてください。詳しくは、[サポートチケットを開く](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)を参照してください。
+1. HTTP/2 に切り替えるには、アドビのカスタマーサポートにリクエストしてください。詳しくは、[サポートチケットを開く](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)を参照してください。
 
    1. サポートリクエストには、以下の情報を記入してください。
 
       1. 主要連絡先の氏名、メールアドレス、電話番号。
       1. HTTP/2 への切り替えが必要なすべてのドメイン。
       1. リッチメディアリクエストについて、セキュリティで保護された HTTPS を使用していることを確認します。
-      1. アドビ経由で CDN を利用し、直接の関係で管理していないことを確認します。
-      1. 専用ドメインを使用していることを確認します。Dynamic Media を使用している場合は、専用ドメインを使用します。
+      1. Adobe経由で CDN を使用し、直接の関係で管理していないことを確認します。
+      1. 専用ドメインを使用していることを確認します。 Dynamic Media を使用している場合は、専用ドメインを使用します。
 
    1. カスタマーサポートでは、リクエストの送信順に基づいて HTTP/2 の顧客待機リストに追加します。
    1. アドビでリクエストを処理する準備が整うと、移行についての調整や完了予定日の設定のため、カスタマーサポートから連絡が入ります。
@@ -77,11 +78,11 @@ HTTP/2 への切り替えは、お客様からのリクエストが必要とな�
 
       ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
-      Firefox および Chrome では、「HTTP/2 および SPDY インディケーター」という拡張機能があります。ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。HTTP/2 がサポートされている場合、拡張機能に青色の稲妻記号および「X-Firefox-Spdy: h2」というヘッダーで示されます。
+      Firefox およびChromeの場合は、「HTTP/2 および SPDY インジケーター」という拡張機能があります。 ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。http/2 がサポートされている場合、拡張子は i を示します。拡張機能は、青色の稲妻記号とヘッダー `X-Firefox-Spdy` : `h2` の形式で表示されます。
 
-## HTTP/2 への切り替え見込み時期  {#when-can-i-expect-to-be-transitioned-over-to-http}
+## HTTP/2 への移行はいつ行われますか？ {#when-can-i-expect-to-be-transitioned-over-to-http}
 
-リクエストは、カスタマーサポートが受信した順番に基づいて処理されます。
+リクエストはカスタマーサポートが受信した順に処理されます。
 
 >[!NOTE]
 >
@@ -97,4 +98,4 @@ HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うの�
 
 ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
-Firefox および Chrome では、「HTTP/2 および SPDY インディケーター」という拡張機能があります。ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。HTTP/2 がサポートされている場合、拡張機能で青色の稲妻記号および `X-Firefox-Spdy` : `h2` というヘッダーで示されます。
+Firefox およびChromeの場合は、「HTTP/2 および SPDY インジケーター」という拡張機能があります。 ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。http/2 がサポートされている場合、拡張機能によって示されます。 拡張機能は、青色の稲妻記号とヘッダー `X-Firefox-Spdy` : `h2` の形式で表示されます。
