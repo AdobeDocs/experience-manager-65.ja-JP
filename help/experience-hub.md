@@ -1,7 +1,7 @@
 ---
 title: Experience Hubについて
-description: Adobe Experience Hubのページについて説明します。
-landing-page-description: すべてのAdobe機能にアクセスするための一元的な出発点である、AEM Experience Hubについて説明します。
+description: Adobe Experience Hub のページについて説明します。
+landing-page-description: すべての AEM 機能にアクセスする一元的な出発点である Adobe Experience Hub について説明します。
 solution: Experience Manager, Experience Manager 6.5
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
@@ -9,7 +9,7 @@ exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
 source-git-commit: 25c154fb310902079e6cd116e29a8e7f9a88e157
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ Experience Hubは、Adobe Experience Manager内のコンテンツ、アセット
 
 再考されたAEM Experience Hub Workspace のクイックツアー（4 分 9 秒）をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3471442?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
