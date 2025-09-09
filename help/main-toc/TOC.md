@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: fe1d00d1a3587cc768abeba6f995969c35203bad
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7561'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 99%
    + [Adobe Developer Console での JWT 資格情報の廃止](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
    + [AEM の IMS 統合の設定](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Experience Hub {#experience-hub}
-   + [Experience Hubについて](/help/experience-hub.md)
+   + [Experience Hub について](/help/experience-hub.md)
 + Sites {#sites}
    + オーサリング {#authoring}
       + AEM オーサリングの基本的なタスク、ツールおよび概念 {#essentials}
@@ -864,7 +864,7 @@ ht-degree: 99%
       + [Output サービス](/help/forms/using/output-service.md)
       + [ConvertPDF サービス](/help/forms/using/using-convertpdf-service.md)
       + [Barcoded Forms サービス](/help/forms/using/using-barcoded-forms-service.md)
-      + [Assembler サービスの使用](/help/forms/using/assembler-service.md)
+      + [アセンブラーサービスの使用](/help/forms/using/assembler-service.md)
       + [ドキュメントのデジタル署名や証明に HSM を使用する](/help/forms/using/hsm-certify-esign-docs.md)
       + [AEM Document Services をプログラムとして使用する](/help/forms/using/aem-document-services-programmatically.md)
       + [sendToPrinter API の使用](/help/forms/using/using-sendtoprinter-api.md)
@@ -1099,8 +1099,8 @@ ht-degree: 99%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
-      + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アセンブラーサービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
          + JEE 上の AEM Forms でのプログラミングの概要 {#introduction-programming-aem-forms-jee}
@@ -1113,7 +1113,7 @@ ht-degree: 99%
          + Java API クイックスタート - コード例 {#java-api-quick-start-code-examples}
             + [Application Manager クライアント Java API クイックスタート（SOAP）](/help/forms/developing/application-manager-client-java-api.md)
             + [Application Manager サービス JavaAPI クイックスタート（SOAP）](/help/forms/developing/application-manager-service-java-api.md)
-            + [Assembler サービス Java API クイックスタート（SOAP）](/help/forms/developing/assembler-service-java-api-quick.md)
+            + [アセンブラーサービス Java API クイックスタート（SOAP）](/help/forms/developing/assembler-service-java-api-quick.md)
             + [Acrobat Reader DC Extensions Service Java API クイックスタート（SOAP）](/help/forms/developing/acrobat-reader-dc-extensions-service.md)
             + [Backup and Restore サービス API のクイックスタート](/help/forms/developing/backup-restore-service-api-quick.md)
             + [Barcoded Forms サービス Java API クイックスタート（SOAP）](/help/forms/developing/barcoded-forms-service-java-api.md)
@@ -1310,8 +1310,8 @@ ht-degree: 99%
       + [翻訳済みコンテンツの公開](/help/journey-headless/translation/publish-content.md)
    + [ドキュメントジャーニーとは](/help/journey-documentation/home.md)
 + AEM 6.5 の AI アシスタント{#ai-assistant}
-   + [AEMでの AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
-   + [AEMの AI アシスタントについて](/help/ai-assistant-in-aem.md)
+   + [AEM の AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
+   + [AEM の AI アシスタントについて](/help/ai-assistant-in-aem.md)
 + 実装 {#implementing}
    + 開発 {#developing}
       + デベロッパー向けの概要 {#introduction}
