@@ -62,7 +62,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2 への切り替えは、お客様からのリクエストが必要となり、自動的には行われません。
 
-1. HTTP/2 に切り替えるには、アドビのカスタマーサポートにリクエストしてください。詳しくは、[サポートチケットを開く](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)を参照してください。
+1. HTTP/2 に切り替えるには、アドビのカスタマーサポートにリクエストしてください。詳しくは、[サポートチケットを開く](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support)を参照してください。
 
    1. サポートリクエストには、以下の情報を記入してください。
 
