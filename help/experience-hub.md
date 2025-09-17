@@ -1,25 +1,26 @@
 ---
-title: Experience Hubについて
+title: Experience Hub について
 description: Adobe Experience Hub のページについて説明します。
 landing-page-description: すべての AEM 機能にアクセスする一元的な出発点である Adobe Experience Hub について説明します。
 solution: Experience Manager, Experience Manager 6.5
-feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+feature: Authoring, AI Assistant, Central Interface Components, Getting Started, Onboarding, Programs, Workflows
+feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
+role: Admin, Architect, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: 25c154fb310902079e6cd116e29a8e7f9a88e157
+source-git-commit: fa84767b13e3b13ee5115b7dc7d2032092a9063b
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
-# Experience Hubについて {#aem-experience-hub}
+# Experience Hub について {#aem-experience-hub}
 
 Experience Hubは、Adobe Experience Manager内のコンテンツ、アセット、サイトを一元的に管理するための出発点となります。 Experience Hubはパーソナライズされたエクスペリエンスを提供するように設計されており、ユーザーの役割と目標に応じてAEM エコシステムをシームレスに移動できます。 ガイドとして機能し、目的を効率的に達成するのに役立つ重要なインサイトと推奨されるアクションを提供します。明確なペルソナ駆動型のレイアウトにより、Experience Hubは重要なツールにすばやくアクセスでき、すべてのAEM機能で合理化された効果的なエクスペリエンスをサポートします。
 
 再考されたAEM Experience Hub Workspace のクイックツアー（4 分 9 秒）をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3471442?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -80,6 +81,6 @@ AEM Cloud Service またはManaged Servicesの実稼動環境が存在しない�
 
 ![Experience Hub実稼動環境がありません ](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
 
-## AEMの AI アシスタント
+## AEM の AI アシスタント
 
-[ 前提条件を完了している ](/help/ai-assistant-in-aem.md#get-access) お客様は、AEMの AI アシスタントを組織内のユーザーが利用できます。 [AEMの AI アシスタント ](/help/ai-assistant-in-aem.md) を参照してください。
+[ 前提条件を完了している ](/help/ai-assistant-in-aem.md#get-access) お客様は、AEMの AI アシスタントを組織内のユーザーが利用できます。 [AEM の AI アシスタント](/help/ai-assistant-in-aem.md)を参照してください。
