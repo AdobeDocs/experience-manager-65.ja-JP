@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: fe1d00d1a3587cc768abeba6f995969c35203bad
-workflow-type: ht
-source-wordcount: '7561'
-ht-degree: 100%
+source-git-commit: ab25ac9701bd138ceb11bb9b11539e950dde02d9
+workflow-type: tm+mt
+source-wordcount: '7562'
+ht-degree: 99%
 
 ---
 
@@ -892,7 +892,7 @@ ht-degree: 100%
          + [役に立つリンク](/help/forms/using/useful-links-accessibility-forms-designer.md)
    + AEM Forms のカスタマイズ {#customize-aem-forms}
       + [アダプティブフォームおよび HTML5 フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)
-      + [カスタムアダプティブフォームのテンプレートの作成](/help/forms/using/custom-adaptive-forms-templates.md)
+      + [カスタムアダプティブフォームテンプレートの作成](/help/forms/using/custom-adaptive-forms-templates.md)
       + [アダプティブフォームのカスタムレイアウトコンポーネントの作成](/help/forms/using/custom-layout-components-forms.md)
       + [フォームリスター項目にカスタムアクションボタンを追加](/help/forms/using/add-custom-action-form-lister.md)
       + [アダプティブフォームのエラーメッセージのレイアウトと位置のカスタマイズ](/help/forms/using/customize-layout-positioning-error-messages-adaptive-form.md)
@@ -1099,7 +1099,7 @@ ht-degree: 100%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [アセンブラーサービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1227,6 +1227,11 @@ ht-degree: 100%
       + [WS-Security ヘッダーを使用した資格情報の受け渡し](/help/forms/developing/passing-credentials.md)
    + 用語集 {#aem-forms-glossary}
 +[AEM Forms 用語集](/help/forms/using/aem-forms-glossary.md)
++ AEMの AI {#ai-in-aem}
+   + [概要](/help/ai-in-aem/overview.md)
+   + AI アシスタント {#ai-assistant}
+      + [AEM の AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
+      + [AEM の AI アシスタントについて](/help/ai-assistant-in-aem.md)
 + コンテンツとコマース {#commerce}
    + [概要](/help/commerce/cif/introduction.md)
    + [AEM Content and Commerce の主な変更点](/help/commerce/cif/changes.md)
@@ -1309,9 +1314,6 @@ ht-degree: 100%
       + [コンテンツの翻訳](/help/journey-headless/translation/translate-content.md)
       + [翻訳済みコンテンツの公開](/help/journey-headless/translation/publish-content.md)
    + [ドキュメントジャーニーとは](/help/journey-documentation/home.md)
-+ AEM 6.5 の AI アシスタント{#ai-assistant}
-   + [AEM の AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
-   + [AEM の AI アシスタントについて](/help/ai-assistant-in-aem.md)
 + 実装 {#implementing}
    + 開発 {#developing}
       + デベロッパー向けの概要 {#introduction}
