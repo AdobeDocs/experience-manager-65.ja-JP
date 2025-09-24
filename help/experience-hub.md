@@ -7,9 +7,9 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: fa84767b13e3b13ee5115b7dc7d2032092a9063b
+source-git-commit: eb0deb1cb401964c86f38cc42961d2c428d9311c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '593'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ Experience Hubは、Adobe Experience Manager内のコンテンツ、アセット
 
 再考されたAEM Experience Hub Workspace のクイックツアー（4 分 9 秒）をご覧ください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3471442?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -32,11 +32,11 @@ Available as a private beta, Experience Hub offers an optimized experience focus
    ![Adobe Experience Cloudのホームページ ](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
 1. **クイックアクセス** グループ化で、[**Experience Manager**](https://experience.adobe.com) をクリックします。
-1. 初めてアクセスするときは、「**操作を教えてください** ページで目的のオプションをクリックして、Adobeがエクスペリエンスをカスタマイズできるようにします。
+1. 初回アクセス時には、**コンテンツ作成者** プリセット（ページの右上隅付近に表示）が割り当てられます。 表示されるウィジェット、ナビゲーション項目およびコンテンツを制御します。
 
-   この環境設定はいつでも変更できます。
+   このプリセットはいつでも変更できます。
 
-   ![ 何をしたいか教えてくださいページ ](/help/assets/assets-experience-hub/experience-cloud-tellus-ams.png)
+   ![ 「コンテンツ作成者」プリセットを表示するドロップダウンリストが選択されている ](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
 
 Adobe Experience Managerページが更新され、ナビゲーションが強化され、インタラクティブウィジェットが追加されました。 以前のソリューションカードのコレクションでは、次のようなツールへのアクセスが可能でした。
 
@@ -59,7 +59,7 @@ Adobe Experience Managerページが更新され、ナビゲーションが強�
 
 ![ 実稼動環境とステージ環境 ](/help/assets/assets-experience-hub/experience-hub-prod-stage-ams.png)
 
-Adobe Experience Managerの中央ハブとして機能するExperience Hub ページには、各ユーザーロールに合わせた追加のウィジェットとアクションが拡張されています。 ページは完全にカスタマイズ可能で、画面に最適なレイアウトを選択できます。 ウィジェットをフィルタリングして、選択したウィジェットのみをメインページに表示し、パーソナライズされたエクスペリエンスを提供できます。
+Adobe Experience Managerの中央ハブとして機能するExperience Hub ページには、各ユーザーロール（プリセット）に合わせて調整された追加のウィジェットとアクションが用意されています。 ページは完全にカスタマイズ可能で、画面に最適なレイアウトを選択できます。 ウィジェットをフィルタリングして、選択したウィジェットのみをメインページに表示し、パーソナライズされたエクスペリエンスを提供できます。
 
 ![ カスタマイズされたExperience Hub](/help/assets/assets-experience-hub/experience-hub-custom-ams.png)
 
