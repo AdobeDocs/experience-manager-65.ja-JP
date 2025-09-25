@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6fd6b5182dfb51fa0563c7eb191ba0d0cc85b113
+source-git-commit: f202069d2fb8cbb942dad06974636592279fe245
 workflow-type: tm+mt
-source-wordcount: '3539'
-ht-degree: 100%
+source-wordcount: '3534'
+ht-degree: 99%
 
 ---
 
@@ -214,7 +214,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. x、5.x, 6.x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x、5.x, 6.x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Formsのアドオン機能は、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
 2. AEM Forms は、Ubuntu 20.04 および SUSE® Linux® Enterprise Server 15 SP6（64 ビット版）でサポートされています。
 3. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
