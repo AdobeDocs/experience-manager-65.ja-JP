@@ -6,8 +6,8 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: b5e44b78659f0cb1b8b0025be30143b98c0bf8df
-workflow-type: ht
+source-git-commit: 6fd6b5182dfb51fa0563c7eb191ba0d0cc85b113
+workflow-type: tm+mt
 source-wordcount: '3539'
 ht-degree: 100%
 
@@ -408,7 +408,7 @@ Linux® と Windows の両方に適用されるハードウェア要件は次の
 
 Linux® で Dynamic Media を使用する場合は、次の必要条件を満たす必要があります。
 
-* 最新の修正パッチが適用された RedHat® Enterprise 7 以降
+* 最新の修正パッチが適用された RedHat® Enterprise 8 以降
 * 64 ビットオペレーティングシステム
 * スワップ無効（推奨）
 * SELinux 無効（後述の注意を参照）
