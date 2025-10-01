@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Authoring, AI Assistant, AI Tools
 role: Admin, Architect, Developer, User
 exl-id: 3b4a484e-55b5-4924-82dd-56735f6ed46d
-source-git-commit: 4ec42cee96cbedfc70db8a5272ceff64658a22a3
+source-git-commit: 773a3e1ce6365589c968dd56a44d7adc9a4ec447
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 5%
@@ -33,9 +33,9 @@ AI アシスタントは、次のソリューションを含むAEM as a Cloud Se
 
 AEM に直接埋め込まれ、AEM Experience Hub、Cloud Manager、オーサー UI からアクセスできます。
 
-次の 3 分 39 秒のビデオでは、AEMの AI アシスタントの手順を順を追って説明します。
+次の 3 分 25 秒のビデオでは、AEMの AI アシスタントの手順を順を追って説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470356?learn=on&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## AEMの AI アシスタントにアクセスできます{#get-access}
 
@@ -128,7 +128,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
@@ -192,9 +192,9 @@ AEMの AI アシスタントでは、次のオプションを通じて、ご意�
 * **AEMの AI アシスタントからリアルタイムで情報が提供されますか？**\
   いいえ。AI Assistant は、Adobe Experience League のドキュメントからコンテンツを入手します。 コンテンツの更新が応答に反映されるまでに時間がかかる場合があります。
 * **AEMの AI アシスタントがサポートするAdobe アプリケーションは**\
-  現在、AI アシスタントは、Sites、Assets、Dynamic Media、Cloud Manager、Formsなど、AEM as a Cloud Serviceでの製品に関する知識の照会をサポートしています。
+  現在、AI アシスタントは、Sites、Assets、Dynamic Media、Cloud Manager、Formsなど、AEM as a Cloud Serviceでの製品ナレッジの問い合わせをサポートしています。
 * **AEMの AI アシスタントの機能は何ですか？**\
-  AEMの AI アシスタントは、Adobe製品の知識に関する質問に回答するように設計されています。
+  AEMの AI アシスタントは、Adobeの製品ナレッジに関連する質問に回答するように設計されています。
 * **AEMの AI アシスタントは、個人情報をトレーニングに使用しますか？**\
   いいえ。AEMの AI アシスタントは、トレーニング目的で個人情報を使用しません。 AEMの AI アシスタントで、自分自身や他の人に関する個人情報（名前や連絡先の詳細など）を共有しないでください。
 
