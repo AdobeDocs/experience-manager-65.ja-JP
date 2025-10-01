@@ -17,7 +17,7 @@ AI は、Adobe Experience Managerの不可欠な構成要素であり、ユー�
 
 ## AI アシスタント {#ai-assistant}
 
-Adobe Experience Managerの [AI アシスタント ](/help/ai-assistant-in-aem.md) は、AEM関連のクエリに対する回答の検索を合理化するように設計された対話型インターフェイスを提供します。
+Adobe Experience Managerの [AI アシスタント &#x200B;](/help/ai-assistant-in-aem.md) は、AEM関連のクエリに対する回答の検索を合理化するように設計された対話型インターフェイスを提供します。
 
 ## その他の情報 {#further-information}
 
