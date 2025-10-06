@@ -6,10 +6,10 @@ feature: Workfront Integrations and Apps
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
 solution: Experience Manager, Workfront
-source-git-commit: 5ccac0aadce3971e66da052d393cbd33b61e94f7
+source-git-commit: 633b1378d97ea0544f27822fb5801caa3ed15f8e
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 100%
+source-wordcount: '456'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-[!DNL Adobe Experience Manager] の管理者アクセス権を持つユーザーが拡張コネクタをインストールします。インストールする前に、プラットフォームのサポートとその他の[コネクタの前提条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience)を確認してください。
+[!DNL Adobe Experience Manager] の管理者アクセス権を持つユーザーが拡張コネクタをインストールします。インストールする前に、プラットフォームのサポートとその他の[コネクタの前提条件](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience)を確認してください。
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ ht-degree: 100%
 コネクタをインストールするには、次の手順に従います。
 
 1. [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)からコネクタをダウンロードします。
-1. [ファイアウォールを設定します](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html)。
+1. [ファイアウォールを設定します](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html)。
 1. Dispatcher で、`authorization`、`username` および `apikey` という名前の HTTP ヘッダーを許可します。`/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
 1. [!DNL Experience Manager] リポジトリに次のパスが存在しないことを確認します。
 
@@ -53,6 +53,10 @@ ht-degree: 100%
    * インデックス再作成フラグを `true` に反転させることで、`index /oak:index/ntFolderDamLucene` のインデックスを再作成します。
 
 システムユーザー `workfront-tools` が自動的に作成され、必須の権限が自動的に管理されます。このコネクタを使用するすべての [!DNL Workfront] ユーザーが、このグループの一部として自動的に追加されます。
+
+>[!NOTE]
+>
+> 企業のプロキシサーバーを使用する場合は、[!DNL workfront] 拡張Workfront コネクタ [!UICONTROL  で認識できるように、]Apache HTTP Components Proxy Configuration PID[!UICONTROL  に ] を含めます。 必須の PID 形式は `org.apache.http.proxyconfigurator~workfront` です。
 
 ## [!DNL Experience Manager] と [!DNL Workfront] との接続の設定 {#configure-connection}
 
