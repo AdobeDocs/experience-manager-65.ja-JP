@@ -56,7 +56,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
-> 企業のプロキシサーバーを使用する場合は、[!DNL workfront] 拡張Workfront コネクタ [!UICONTROL  で認識できるように、]Apache HTTP Components Proxy Configuration PID[!UICONTROL  に ] を含めます。 必須の PID 形式は `org.apache.http.proxyconfigurator~workfront` です。
+> 企業のプロキシサーバーを使用する場合は、[!DNL workfront] 拡張Workfront コネクタ [!UICONTROL &#x200B; で認識できるように、]Apache HTTP Components Proxy Configuration PID[!UICONTROL &#x200B; に &#x200B;] を含めます。 必須の PID 形式は `org.apache.http.proxyconfigurator~workfront` です。
 
 ## [!DNL Experience Manager] と [!DNL Workfront] との接続の設定 {#configure-connection}
 
