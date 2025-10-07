@@ -9,10 +9,10 @@ exl-id: 00473769-c447-4966-a71e-117c669e0151
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 172b8667b1ff0bd533a035b21c316e2e66721bf8
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 100%
+source-wordcount: '747'
+ht-degree: 99%
 
 ---
 
@@ -49,7 +49,7 @@ AEM Developer Tools を使用する前に、以下の手順を実行します。
 
 前述の[要件](#requirements)を満たしたら、次の手順でプラグインをインストールできます。
 
-1. **AEM Developer Tools** の web サイト（`https://eclipse.adobe.com/aem/dev-tools/`）を参照します。
+1. [AEM 開発者ツールの web サイト](https://eclipse.adobe.com/)を開きます。
 
 1. **インストール用リンク**&#x200B;をコピーします。
 
