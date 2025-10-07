@@ -7,9 +7,9 @@ user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能につ
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
 source-git-commit: ab25ac9701bd138ceb11bb9b11539e950dde02d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7562'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1099,7 +1099,7 @@ ht-degree: 99%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [アセンブラーサービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1227,7 +1227,7 @@ ht-degree: 99%
       + [WS-Security ヘッダーを使用した資格情報の受け渡し](/help/forms/developing/passing-credentials.md)
    + 用語集 {#aem-forms-glossary}
 +[AEM Forms 用語集](/help/forms/using/aem-forms-glossary.md)
-+ AEMの AI {#ai-in-aem}
++ AEM の AI {#ai-in-aem}
    + [概要](/help/ai-in-aem/overview.md)
    + AI アシスタント {#ai-assistant}
       + [AEM の AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
