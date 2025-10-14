@@ -27,7 +27,7 @@ ht-degree: 99%
 * キャプチャしたデータに対する複雑な計算を実行する
 * 事前に定義されたスケジュールでアダプティブフォームのデータをストレージシステムに保存する
 
-アダプティブフォームエディターには「**Microsoft Power Automate フローの呼び出し**」送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドフローに送信することができます。送信アクションを使用して、キャプチャしたデータを Microsoft® Power Automate に送信するには、[AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)します
+アダプティブフォームエディターには「**Microsoft Power Automate フローの呼び出し**」送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドフローに送信することができます。送信アクションを使用して、キャプチャしたデータを Microsoft® Power Automate に送信するには、[AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続] (#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)します
 
 ## 前提条件
 
