@@ -30,7 +30,7 @@ ht-degree: 6%
 >
 >ダッシュボードは、アプリのコンテンツ、メタデータおよびAEM Mobile On-Demand 接続ステータスの概要を示す一連の便利なタイルです。
 >
->詳しくは、[AEM Mobile アプリケーションダッシュボード ](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
+>詳しくは、[AEM Mobile アプリケーションダッシュボード &#x200B;](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
 **オンデマンドアプリを作成するには：**
 
@@ -62,11 +62,11 @@ ht-degree: 6%
 
 アプリケーションダッシュボードからオンデマンドアプリを作成したら、次にアプリをクラウド設定に関連付けます。
 
-詳しくは [ クラウド設定へのアプリの関連付け ](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
+詳しくは [&#x200B; クラウド設定へのアプリの関連付け &#x200B;](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
 
 ### 前に進む {#getting-ahead}
 
-オンデマンドアプリケーションの作成と、そのアプリケーションのクラウド設定への関連付けについて詳しくは、[ コンテンツ管理のアクション ](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md) を参照してください。
+オンデマンドアプリケーションの作成と、そのアプリケーションのクラウド設定への関連付けについて詳しくは、[&#x200B; コンテンツ管理のアクション &#x200B;](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md) を参照してください。
 
 **コンテンツ管理アクション** には、次のコンテンツの作成と管理が含まれます。
 

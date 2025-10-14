@@ -74,7 +74,7 @@ css.txt のコンテンツをに設定してみてください
 
 ### SCF Clientlibs の埋め込み {#embed-scf-clientlibs}
 
-`clientlibs` ノードの **プロパティ** タブで、複数値の文字列プロパティ **embed** を入力します。 これにより、必要な [SCF コンポーネントのクライアントサイドライブラリ（clientlibs） ](/help/communities/client-customize.md#clientlibs-for-scf) が組み込まれます。 このチュートリアルでは、Communities コンポーネントに必要な clientlib の多くを追加します。
+`clientlibs` ノードの **プロパティ** タブで、複数値の文字列プロパティ **embed** を入力します。 これにより、必要な [SCF コンポーネントのクライアントサイドライブラリ（clientlibs） &#x200B;](/help/communities/client-customize.md#clientlibs-for-scf) が組み込まれます。 このチュートリアルでは、Communities コンポーネントに必要な clientlib の多くを追加します。
 
 すべてのページにダウンロードされる clientlibs の利便性とサイズ/速度を考慮する必要があるので、実稼動サイトで使用する場合は、この方法が望ましい場合もあれば、そうでない場合もあります。
 
@@ -149,17 +149,17 @@ include ステートメントは、`html` スクリプトの `head` セクショ
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![ コミュニティプレイ ](assets/community-play.png)
+![&#x200B; コミュニティプレイ &#x200B;](assets/community-play.png)
 
 ### 作業内容を保存しています {#saving-your-work-so-far}
 
 この時点で、最小限のサンドボックスが存在します。 再生中にリポジトリが破損して最初からやり直したい場合は、サーバーの電源を切ることができるように、パッケージとして保存する価値があるかもしれません。 次に、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにして、この保存されたパッケージをアップロードしてインストールします。これらの最も基本的な手順を繰り返す必要はありません。
 
-このパッケージは、すぐに作業に取りかかって再生を開始できないユーザー向けの [ サンプルページの作成 ](/help/communities/create-sample-page.md) チュートリアルに存在しています。
+このパッケージは、すぐに作業に取りかかって再生を開始できないユーザー向けの [&#x200B; サンプルページの作成 &#x200B;](/help/communities/create-sample-page.md) チュートリアルに存在しています。
 
 パッケージを作成するには：
 
-* CRXDE Liteで [ パッケージアイコン ](https://localhost:4502/crx/packmgr/) をクリックします
+* CRXDE Liteで [&#x200B; パッケージアイコン &#x200B;](https://localhost:4502/crx/packmgr/) をクリックします
 * 「**パッケージを作成**」をクリックします
 
    * パッケージ名：an-scf-sandbox-minimal-pkg

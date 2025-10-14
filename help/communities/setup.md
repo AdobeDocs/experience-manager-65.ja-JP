@@ -22,7 +22,7 @@ ht-degree: 2%
 
 開発とデモンストレーションの目的では、1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを実行する必要があります。
 
-これを行うには、基本的なAdobe Experience Manager（AEM） [ はじめに ](../../help/sites-deploying/deploy.md#getting-started) の手順に従います。次のような結果になります。
+これを行うには、基本的なAdobe Experience Manager（AEM） [&#x200B; はじめに &#x200B;](../../help/sites-deploying/deploy.md#getting-started) の手順に従います。次のような結果になります。
 
 * [localhost:4502](http://localhost:4502/) のオーサー環境
 * [localhost:4503](http://localhost:4503/) のPublish環境
@@ -41,11 +41,11 @@ AEM Communitiesについては、
 
 >[!NOTE]
 >
->AEMに詳しくない場合は、[ 基本操作 ](../../help/sites-authoring/basic-handling.md) および [ ページのオーサリングのクイックガイド ](../../help/sites-authoring/qg-page-authoring.md) に関するドキュメントを参照してください。
+>AEMに詳しくない場合は、[&#x200B; 基本操作 &#x200B;](../../help/sites-authoring/basic-handling.md) および [&#x200B; ページのオーサリングのクイックガイド &#x200B;](../../help/sites-authoring/qg-page-authoring.md) に関するドキュメントを参照してください。
 
 ## 最新の Communities リリースのインストール {#install-latest-communities-release}
 
-このチュートリアルは、AEM Communities 6.2 機能パックバージョン 1.10 に基づいた [ エンゲージメントコミュニティサイト ](overview.md#engagement-community) を作成します。
+このチュートリアルは、AEM Communities 6.2 機能パックバージョン 1.10 に基づいた [&#x200B; エンゲージメントコミュニティサイト &#x200B;](overview.md#engagement-community) を作成します。
 
 最新の機能パックがインストールされていることを確認するには、次の URL にアクセスしてください。
 
@@ -53,7 +53,7 @@ AEM Communitiesについては、
 
 ## Analytics を設定 {#configure-analytics}
 
-[Adobe Analyticsがコミュニティ サイト用に構成されている場合 ](analytics.md)、コミュニティ メンバーのエクスペリエンスを向上させ、サイト管理者にフィードバックを提供するために、コミュニティ アクティビティに関する情報を利用できます。
+[Adobe Analyticsがコミュニティ サイト用に構成されている場合 &#x200B;](analytics.md)、コミュニティ メンバーのエクスペリエンスを向上させ、サイト管理者にフィードバックを提供するために、コミュニティ アクティビティに関する情報を利用できます。
 
 Adobe Analyticsとの統合はオプションです。
 
@@ -63,15 +63,15 @@ Adobe Analyticsとの統合はオプションです。
 
 メールをサイト用に適切に設定することが必要です。
 
-[ メールの設定 ](email.md) を参照してください。
+[&#x200B; メールの設定 &#x200B;](email.md) を参照してください。
 
 ## トンネル サービスを有効にする {#enable-the-tunnel-service}
 
-オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用すると、Publish環境に登録されている信頼できるコミュニティメンバーにロールを割り当てることができます。 また、トンネルサービスを使用すると、オーサー環境の [ メンバーコンソールとグループコンソール ](members.md) からコミュニティメンバーにアクセスできます。
+オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用すると、Publish環境に登録されている信頼できるコミュニティメンバーにロールを割り当てることができます。 また、トンネルサービスを使用すると、オーサー環境の [&#x200B; メンバーコンソールとグループコンソール &#x200B;](members.md) からコミュニティメンバーにアクセスできます。
 
-この規則は、Publish環境で作成されたメンバーおよびメンバーグループをオーサー環境で再作成 *ない* うにするためのものです。 詳しくは、[ ユーザーとユーザーグループの管理 ](users.md) を参照してください。
+この規則は、Publish環境で作成されたメンバーおよびメンバーグループをオーサー環境で再作成 *ない* うにするためのものです。 詳しくは、[&#x200B; ユーザーとユーザーグループの管理 &#x200B;](users.md) を参照してください。
 
-**オーサー** インスタンスでトンネルサービスを有効にする簡単な手順については、[ トンネルサービス ](deploy-communities.md#tunnel-service-on-author) を参照してください。
+**オーサー** インスタンスでトンネルサービスを有効にする簡単な手順については、[&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author) を参照してください。
 
 ## コミュニティ管理者役割 {#community-administrator-role}
 
@@ -118,18 +118,18 @@ Adobe Analyticsとの統合はオプションです。
 
 facebookとTwitterによるソーシャルログインのデモバージョンを使用する前に、次の操作が必要です。
 
-1. 修正パックまたは [ 最新の機能パック ](deploy-communities.md#latestfeaturepack) （2017 年 3 月のFacebook API の変更用）をインストールします。
-1. パブリッシュ環境で [OAuth プロバイダーを有効にします ](social-login.md#adobe-granite-oauth-authentication-handler)。
+1. 修正パックまたは [&#x200B; 最新の機能パック &#x200B;](deploy-communities.md#latestfeaturepack) （2017 年 3 月のFacebook API の変更用）をインストールします。
+1. パブリッシュ環境で [OAuth プロバイダーを有効にします &#x200B;](social-login.md#adobe-granite-oauth-authentication-handler)。
 
 実稼動サーバーの場合は、ソーシャルログインを提供するために必要なクラウドサービスを作成する必要があります。
 
-[FacebookとTwitterを使用したソーシャルログイン ](social-login.md) を参照してください。
+[FacebookとTwitterを使用したソーシャルログイン &#x200B;](social-login.md) を参照してください。
 
 ## チュートリアルタグの作成 {#create-tutorial-tags}
 
 `Tutorial` のタグ名前空間を使用してタグを作成し、engage チュートリアルに使用できるようにします。
 
-次のタグを作成するには、[ タグ付けコンソール ](../../help/sites-administering/tags.md#tagging-console) を使用します。
+次のタグを作成するには、[&#x200B; タグ付けコンソール &#x200B;](../../help/sites-administering/tags.md#tagging-console) を使用します。
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -142,8 +142,8 @@ facebookとTwitterによるソーシャルログインのデモバージョン�
 
 その後、次の手順に従います。
 
-1. [ タグの権限を設定します ](../../help/sites-administering/tags.md#setting-tag-permissions)。
-1. [ タグをPublishします ](../../help/sites-administering/tags.md#publishing-tags)。
+1. [&#x200B; タグの権限を設定します &#x200B;](../../help/sites-administering/tags.md#setting-tag-permissions)。
+1. [&#x200B; タグをPublishします &#x200B;](../../help/sites-administering/tags.md#publishing-tags)。
 
 AEM Communitiesの「はじめに」Tutorials用に作成されたタグのサンプルパッケージ
 
@@ -151,8 +151,8 @@ AEM Communitiesの「はじめに」Tutorials用に作成されたタグのサ�
 
 ## MongoDB for UGC の共通ストア {#mongodb-for-ugc-common-store}
 
-[MSRP](msrp.md) （MongoDB）を（共通ストア [ として設定して、パブリッシュ環境またはオーサー環境から、すべての UGC を柔軟にモデレートすることをお勧めしますが、これはオプションです ](working-with-srp.md)
+[MSRP](msrp.md) （MongoDB）を（共通ストア [&#x200B; として設定して、パブリッシュ環境またはオーサー環境から、すべての UGC を柔軟にモデレートすることをお勧めしますが、これはオプションです &#x200B;](working-with-srp.md)
 
-手順については、[ デモ用に MongoDB を設定する方法 ](demo-mongo.md) を参照してください。
+手順については、[&#x200B; デモ用に MongoDB を設定する方法 &#x200B;](demo-mongo.md) を参照してください。
 
-デフォルトでは、オーサーインスタンスとパブリッシュ AEM インスタンスをインストールすると、ユーザー生成コンテンツ（UGC）が [JCR Tar ストレージ ](../../help/sites-deploying/platform.md) に保存され、[JSRP](jsrp.md) を使用してアクセスできます。 JSRP は共通ストアではありません。つまり、UGC は、入力されたインスタンスでのみ表示されます。 通常、UGC はパブリッシュインスタンスに入力され、オーサー環境では表示されないので、すべてのモデレーションタスクでパブリッシュインスタンスを使用する必要があります。
+デフォルトでは、オーサーインスタンスとパブリッシュ AEM インスタンスをインストールすると、ユーザー生成コンテンツ（UGC）が [JCR Tar ストレージ &#x200B;](../../help/sites-deploying/platform.md) に保存され、[JSRP](jsrp.md) を使用してアクセスできます。 JSRP は共通ストアではありません。つまり、UGC は、入力されたインスタンスでのみ表示されます。 通常、UGC はパブリッシュインスタンスに入力され、オーサー環境では表示されないので、すべてのモデレーションタスクでパブリッシュインスタンスを使用する必要があります。

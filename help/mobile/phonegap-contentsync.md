@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->このドキュメントは [Adobe Experience Manager（AEM） Mobile の概要 ](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobile リファレンスの出発点として推奨されています。
+>このドキュメントは [Adobe Experience Manager（AEM） Mobile の概要 &#x200B;](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobile リファレンスの出発点として推奨されています。
 
 コンテンツ同期を使用して、ネイティブモバイルアプリケーションで使用できるようにコンテンツをパッケージ化します。 AEMで作成されたページは、デバイスがオフラインでも、アプリコンテンツとして使用できます。 さらに、AEM ページは web 標準に基づいているので、クロスプラットフォームで機能し、任意のネイティブラッパーに埋め込むことができます。 この戦略により、開発作業が軽減され、アプリのコンテンツを簡単に更新できます。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->コンテンツ同期ハンドラーの開発に関するガイドラインについて詳しくは、標準のアプリハンドラーを参照してください。[ コンテンツ同期ハンドラーの開発 ](/help/mobile/contentsync-app-handlers.md) を参照してください。
+>コンテンツ同期ハンドラーの開発に関するガイドラインについて詳しくは、標準のアプリハンドラーを参照してください。[&#x200B; コンテンツ同期ハンドラーの開発 &#x200B;](/help/mobile/contentsync-app-handlers.md) を参照してください。
 
 ## コンテンツ同期コンテンツの設定 {#configuring-the-content-sync-content}
 
@@ -75,9 +75,9 @@ AEMがインストールされている場合、デフォルトでは、管理�
 
 Day CQ Content Sync Manager サービスは、コンテンツ同期へのアクセスを制御します。 このサービスを設定して、デフォルトでコンテンツ同期からダウンロードできるユーザーまたはグループを指定します。
 
-[Web コンソールを使用してサービスを設定 ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) する場合は、ユーザーまたはグループの名前を Fallback Cache Authorizable プロパティの値として入力します。
+[Web コンソールを使用してサービスを設定 &#x200B;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) する場合は、ユーザーまたはグループの名前を Fallback Cache Authorizable プロパティの値として入力します。
 
-[ リポジトリで設定 ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) している場合は、サービスに関して次の情報を使用します。
+[&#x200B; リポジトリで設定 &#x200B;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) している場合は、サービスに関して次の情報を使用します。
 
 * PID:com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * プロパティ名：contentsync.fallback.authorizable
@@ -174,7 +174,7 @@ cq:ContentSyncConfig ノードに `updateuser` プロパティがない場合、
 
 * `REWRITE_RELATIVE`: ファイルシステム上のページ .html ファイルへの相対位置でパスを書き換えます。
 
-* `REWRITE_EXTERNAL`:AEM [Externalizer サービス ](/help/sites-developing/externalizer.md) を使用して、サーバー上のリソースを指すことにより、パスを書き換えます。
+* `REWRITE_EXTERNAL`:AEM [Externalizer サービス &#x200B;](/help/sites-developing/externalizer.md) を使用して、サーバー上のリソースを指すことにより、パスを書き換えます。
 
 **PathRewriterTransformerFactory** というAEM サービスを使用すると、書き換えられる特定の HTML 属性を設定できます。 このサービスは web コンソールで設定でき、`rewrite` ノードの各プロパティ（`clientlibs`、`images`、`links`）に対して設定があります。
 

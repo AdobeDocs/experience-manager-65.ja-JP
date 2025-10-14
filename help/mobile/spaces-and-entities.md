@@ -37,7 +37,7 @@ ht-degree: 6%
 >
 >「**AEM Content Services を有効にする**」をオンにしてスペースを操作し、AEM Mobile アプリケーションダッシュボードで有効にします。
 >
->詳しくは、[ コンテンツサービスの管理 ](/help/mobile/developing-content-services.md) を参照してください。
+>詳しくは、[&#x200B; コンテンツサービスの管理 &#x200B;](/help/mobile/developing-content-services.md) を参照してください。
 
 ダッシュボードでスペースを設定したら、次の手順に従ってスペースを作成します。
 
@@ -169,7 +169,7 @@ ht-degree: 6%
    >
    >**Assets モデル**、&lbrace; ページモデル **、または以前作成したエンティティタイプのモデルを選択する** とができます。
    >
-   >カスタムエンティティを作成するには、[ モデルの作成 ](/help/mobile/administer-mobile-apps.md) を参照してください。
+   >カスタムエンティティを作成するには、[&#x200B; モデルの作成 &#x200B;](/help/mobile/administer-mobile-apps.md) を参照してください。
 
 1. エンティティの **タイトル**、**名前**、**説明**、**タグ** を入力します。 「**作成**」をクリックします。
 

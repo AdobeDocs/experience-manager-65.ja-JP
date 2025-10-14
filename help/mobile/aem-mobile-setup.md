@@ -32,7 +32,7 @@ AEMを使用してAEM Mobile アプリ用のコンテンツを作成するには
 
 AEM Mobileの設定を開始するには、次の操作を行う必要があります。
 
-* **API キーのリクエスト**: On-Demand Services API にアクセスするには、API キーをリクエストする必要があります。 API キーをリクエストするには、[PDFフォーム ](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) に入力します。 入力済みのフォームをAdobe Developer サポートに送信：[wwds@adobe.com](mailto:wwds@adobe.com)
+* **API キーのリクエスト**: On-Demand Services API にアクセスするには、API キーをリクエストする必要があります。 API キーをリクエストするには、[PDFフォーム &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) に入力します。 入力済みのフォームをAdobe Developer サポートに送信：[wwds@adobe.com](mailto:wwds@adobe.com)
 
 * **デバイス ID とデバイストークンの生成**:API キーを受け取ったら、デバイス ID とデバイストークンを生成できます。 `https://aex.aemmobile.adobe.com` に移動して、次の操作を実行します。
 
@@ -46,7 +46,7 @@ AEM Mobileの設定を開始するには、次の操作を行う必要があり�
 
 >[!NOTE]
 >
->必要なAdobe IDには、AEM Mobile プロジェクトへのアクセス権を付与する必要があります。 オンラインヘルプの [AEM Mobileのアカウント管理 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
+>必要なAdobe IDには、AEM Mobile プロジェクトへのアクセス権を付与する必要があります。 オンラインヘルプの [AEM Mobileのアカウント管理 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
 
 ## AEM Mobileのプロジェクトの作成 {#creating-projects-for-aem-mobile}
 
@@ -56,7 +56,7 @@ AEM Mobileの設定を開始するには、次の操作を行う必要があり�
 
 >[!NOTE]
 >
->AEM Mobileでのプロジェクトの作成について詳しくは、[ こちら ](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html) をクリックしてください。
+>AEM Mobileでのプロジェクトの作成について詳しくは、[&#x200B; こちら &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html) をクリックしてください。
 
 ## AEM Mobile Connector の設定 {#configuring-an-aem-mobile-connector}
 
@@ -117,13 +117,13 @@ AEM Mobile アプリケーションの開発には、次の 3 つの異なるロ
 * 開発者
 * 作成者
 
-様々な権限（アプリの構築やコンテンツの作成および公開など）を持つロールの作成について詳しくは、AEM Mobile ヘルプの [ ユーザーロールの作成とアクセスの許可 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html) をクリックしてください。
+様々な権限（アプリの構築やコンテンツの作成および公開など）を持つロールの作成について詳しくは、AEM Mobile ヘルプの [&#x200B; ユーザーロールの作成とアクセスの許可 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html) をクリックしてください。
 
 >[!NOTE]
 >
 >アプリコンテンツの管理には、開発者、コンテンツ作成者および管理者の協力が必要です。 作成者がページを操作します。これは、アプリ開発者が生成したテンプレートとコンポーネントに基づいて行われます。 最後に、管理者は、更新されたアプリコンテンツを戦略的に公開します。 AEMのグループと権限を設定すると、そのグループと権限のロールが App Dashboard または Control Center で定義されます。
 >
->[AEM Mobile ダッシュボード ](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
+>[AEM Mobile ダッシュボード &#x200B;](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
 アプリケーションの構築や、コンテンツの作成および公開など、様々な権限を持つ役割の作成が完了したら、[**ユーザーおよびユーザーグループの設定**](/help/mobile/aem-mobile-configure-users.md) を参照してください。 これにより、モバイルアプリのオーサリングと管理をサポートするユーザーとグループを設定できます。
 
@@ -136,4 +136,4 @@ AEM Mobile On-demand Services アプリケーションを作成するための�
 
 >[!NOTE]
 >
->ページの参照や記事を含む、アプリのコンテンツをプレビューするには、[ プリフライトを使用したプレビュー ](/help/mobile/aem-mobile-manage-ondemand-services.md) を参照してください。
+>ページの参照や記事を含む、アプリのコンテンツをプレビューするには、[&#x200B; プリフライトを使用したプレビュー &#x200B;](/help/mobile/aem-mobile-manage-ondemand-services.md) を参照してください。

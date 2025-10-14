@@ -75,9 +75,9 @@ AEMがインストールされている場合、デフォルトでは、管理�
 
 Day CQ Content Sync Manager サービスは、コンテンツ同期へのアクセスを制御します。 このサービスを設定して、デフォルトでコンテンツ同期からダウンロードできるユーザーまたはグループを指定します。
 
-[Web コンソールを使用してサービスを設定 ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) する場合は、ユーザーまたはグループの名前を Fallback Cache Authorizable プロパティの値として入力します。
+[Web コンソールを使用してサービスを設定 &#x200B;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) する場合は、ユーザーまたはグループの名前を Fallback Cache Authorizable プロパティの値として入力します。
 
-[ リポジトリで設定 ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) している場合は、サービスに関して次の情報を使用します。
+[&#x200B; リポジトリで設定 &#x200B;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) している場合は、サービスに関して次の情報を使用します。
 
 * PID:com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * プロパティ名：contentsync.fallback.authorizable
@@ -116,7 +116,7 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 
 * **path** - パスが 1 つのファイルを指している場合、ファイルのみがコピーされます。 フォルダー（ページノードを含む）を指している場合、の下のすべてのファイルとフォルダーがコピーされます。
 
-**コンテンツ** 標準の [Sling リクエスト処理 ](/help/sites-developing/the-basics.md#sling-request-processing) を使用してコンテンツをレンダリングします。
+**コンテンツ** 標準の [Sling リクエスト処理 &#x200B;](/help/sites-developing/the-basics.md#sling-request-processing) を使用してコンテンツをレンダリングします。
 
 * **path** – 出力するリソースへのパス。
 * **extension** - リクエストで使用する必要がある拡張機能。 一般的な例は *html* や *json* ですが、他の拡張機能も使用できます。
@@ -168,7 +168,7 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 
 * `REWRITE_RELATIVE`: ファイルシステム上のページ .html ファイルへの相対位置でパスを書き換えます。
 
-* `REWRITE_EXTERNAL`:AEM [Externalizer サービス ](/help/sites-developing/externalizer.md) を使用して、サーバー上のリソースを指すことにより、パスを書き換えます。
+* `REWRITE_EXTERNAL`:AEM [Externalizer サービス &#x200B;](/help/sites-developing/externalizer.md) を使用して、サーバー上のリソースを指すことにより、パスを書き換えます。
 
 **PathRewriterTransformerFactory** というAEM サービスを使用すると、書き換えられる特定の HTML 属性を設定できます。 このサービスは web コンソールで設定でき、`rewrite` ノードの各プロパティ（`clientlibs`、`images`、`links`）に対して設定があります。
 
@@ -214,7 +214,7 @@ Day CQ Content Sync Manager サービスは、コンテンツ同期へのアク�
 
 **etc.designs.default および etc.designs.mobile** – 設定の最初の 2 つのエントリは明らかです。 複数のモバイルページを含める場合は、/etc/designs の下に関連するデザインファイルが必要です。 また、追加の処理が必要ないので、コピーするだけで十分です。
 
-**events.plist** – このエントリは少し特殊です。 概要で説明したように、アプリケーションはイベントの場所のマーカーを持つマップビューを提供する必要があります。 必要な場所情報は、PLIST 形式の別のファイルとして提供されます。 これを機能させるために、インデックスページで使用するイベントリストコンポーネントには、plist.jsp というスクリプトがあります。 このスクリプトは、コンポーネントのリソースが `.plist` 拡張機能でリクエストされたときに実行されます。 通常どおり、コンポーネントのパスはパスプロパティに指定され、タイプは [Sling リクエストの処理 ](/help/sites-developing/the-basics.md#sling-request-processing) を使用するので、content に設定されます。
+**events.plist** – このエントリは少し特殊です。 概要で説明したように、アプリケーションはイベントの場所のマーカーを持つマップビューを提供する必要があります。 必要な場所情報は、PLIST 形式の別のファイルとして提供されます。 これを機能させるために、インデックスページで使用するイベントリストコンポーネントには、plist.jsp というスクリプトがあります。 このスクリプトは、コンポーネントのリソースが `.plist` 拡張機能でリクエストされたときに実行されます。 通常どおり、コンポーネントのパスはパスプロパティに指定され、タイプは [Sling リクエストの処理 &#x200B;](/help/sites-developing/the-basics.md#sling-request-processing) を使用するので、content に設定されます。
 
 **events.touch.html** – 次に、アプリに表示される実際のページです。 パスプロパティはイベントのルートページに設定されます。 deep プロパティのデフォルト値が true なので、そのページより下のすべてのイベントページも含まれます。 ページを設定タイプとして使用して、ページ上の画像またはダウンロードコンポーネントから参照される可能性のあるすべての画像またはその他のファイルを含めます。 また、タッチセレクターを設定すると、ページのモバイルバージョンが提供されます。 機能パック内の設定には、この種のエントリがさらに含まれていますが、ここでは簡単にするために除外しています。
 

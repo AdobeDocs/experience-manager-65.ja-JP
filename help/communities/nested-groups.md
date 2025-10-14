@@ -30,7 +30,7 @@ AEM オーサーインスタンスで、グローバルナビゲーションか�
    * カード画像を選択します。
    * アイコンを選択し *い* でください。
 
-その結果、[ グループコンソール ](/help/communities/groups.md) にアクセスできます。
+その結果、[&#x200B; グループコンソール &#x200B;](/help/communities/groups.md) にアクセスできます。
 
 ![create-group](assets/create-group.png)
 
@@ -56,7 +56,7 @@ groups 関数は、グループのインスタンスが作成されるフォル�
    * **[!UICONTROL テンプレート]**：テンプレートを選択するためのドロップダウ `Reference Group`
    * 「**[!UICONTROL 次へ]**」を選択します。
 
-![ ネストされたコミュニティグループ ](assets/parent-to-nestedgroup.png)
+![&#x200B; ネストされたコミュニティグループ &#x200B;](assets/parent-to-nestedgroup.png)
 
 次の設定で他のパネルを続行します。
 
@@ -86,7 +86,7 @@ groups 関数は、グループのインスタンスが作成されるフォル�
 
 `groups` フォルダーに 2 つのグループが含まれるようになりました（ページを更新します）。
 
-![ グループのネスト ](assets/create-community-group.png)
+![&#x200B; グループのネスト &#x200B;](assets/create-community-group.png)
 
 #### Publishグループ {#publish-group}
 
@@ -96,7 +96,7 @@ groups 関数は、グループのインスタンスが作成されるフォル�
 
 グループが公開されたことを確認します。
 
-![ グループ公開済み ](assets/group-published.png)
+![&#x200B; グループ公開済み &#x200B;](assets/group-published.png)
 
 `arts` のグループには、`groups` のフォルダーも含める必要がありますが、空のフォルダーで、新しいグループを作成できるフォルダーです。 アーツ グループ フォルダに移動し、ネストされた 3 つのグループを作成します。各グループには異なるメンバーシップ設定があります。
 
@@ -119,7 +119,7 @@ groups 関数は、グループのインスタンスが作成されるフォル�
    * タイトル: `Art History`
    * 名前：`history`
    * テンプレート：`Reference Group`
-   * メンバーシップ：招待メンバーにのみ表示される秘密グループ「`Restricted Membership`」を選択します。 例えば、[ デモユーザー ](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com` を招待します。
+   * メンバーシップ：招待メンバーにのみ表示される秘密グループ「`Restricted Membership`」を選択します。 例えば、[&#x200B; デモユーザー &#x200B;](/help/communities/tutorials.md#demo-users)`emily.andrews@mailinator.com` を招待します。
 
 ネストされた 3 つのグループ（サブコミュニティ）がすべて表示されるように、ページを更新します。
 
@@ -147,11 +147,11 @@ Communities サイト コンソールからネストされたグループに移�
 
    * すべてのグループは、トップダウン方式で公開する必要があります。
 
-![ グループ公開済み ](assets/group-published.png)
+![&#x200B; グループ公開済み &#x200B;](assets/group-published.png)
 
 ## Publishでのエクスペリエンス {#experience-on-publish}
 
-次の目的で使用される [ デモユーザー ](/help/communities/tutorials.md#demo-users) などを使用して、ログイン時に様々なグループを体験できます。
+次の目的で使用される [&#x200B; デモユーザー &#x200B;](/help/communities/tutorials.md#demo-users) などを使用して、ログイン時に様々なグループを体験できます。
 
 * アート/履歴グループ メンバー：`emily.andrews@mailinator.com/password`
    * 制限付き（秘密）グループの arts/history は次のように表示されます。
@@ -164,4 +164,4 @@ Communities サイト コンソールからネストされたグループに移�
    * 制限された（開いている）グループに参加できます。
    * 制限付き（秘密）グループを表示できません。
 
-作成者のコミュニティ [ メンバーコンソールとグループコンソール ](/help/communities/members.md) にアクセスして、コミュニティグループに対応する様々なメンバーグループに他のユーザーを追加します。
+作成者のコミュニティ [&#x200B; メンバーコンソールとグループコンソール &#x200B;](/help/communities/members.md) にアクセスして、コミュニティグループに対応する様々なメンバーグループに他のユーザーを追加します。

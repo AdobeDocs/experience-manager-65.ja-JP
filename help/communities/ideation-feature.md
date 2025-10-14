@@ -41,11 +41,11 @@ ht-degree: 2%
 
 そして、アイデアが表示されるページの場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/ideation.md#essentials-for-client-side) が含まれると、`Ideation` のコンポーネントは次のように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/ideation.md#essentials-for-client-side) が含まれると、`Ideation` のコンポーネントは次のように表示されます。
 
-![ 念慮 ](assets/ideation.png)
+![&#x200B; 念慮 &#x200B;](assets/ideation.png)
 
 ### Id の設定 {#configuring-an-ideation}
 
@@ -123,11 +123,11 @@ ht-degree: 2%
 
 * **次の操作を許可**
 
-  オンにした場合は、新しい投稿についてメンバーに [ 通知 ](/help/communities/notifications.md) できる、アイデア投稿の次の機能を含めます。 デフォルトではオフになっています。
+  オンにした場合は、新しい投稿についてメンバーに [&#x200B; 通知 &#x200B;](/help/communities/notifications.md) できる、アイデア投稿の次の機能を含めます。 デフォルトではオフになっています。
 
 * **メール購読の許可**
 
-  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[ 購読 ](/help/communities/subscriptions.md)）。 `Allow Following` を確認し、[ メールを設定済み ](/help/communities/email.md) にする必要があります。 デフォルトではオフになっています。
+  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md)）。 `Allow Following` を確認し、[&#x200B; メールを設定済み &#x200B;](/help/communities/email.md) にする必要があります。 デフォルトではオフになっています。
 
 * **投票の許可**
 
@@ -135,13 +135,13 @@ ht-degree: 2%
 
 * **バッジを表示**
 
-  オンにした場合は、獲得したバッジと割り当てられた [ バッジ ](/help/communities/implementing-scoring.md) がメンバーのアイデアとともに表示されます。 デフォルトではオフになっています。
+  オンにした場合は、獲得したバッジと割り当てられた [&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md) がメンバーのアイデアとともに表示されます。 デフォルトではオフになっています。
 
 * **リストページで返信を受け取らない**
 
 * **おすすめコンテンツを許可**
 
-  オンにした場合、アイデアは [ おすすめコンテンツ ](/help/communities/featured.md) として識別できます。 デフォルトではオフになっています。
+  オンにした場合、アイデアは [&#x200B; おすすめコンテンツ &#x200B;](/help/communities/featured.md) として識別できます。 デフォルトではオフになっています。
 
 * **メンションの有効化**
 * **最大メンション数**
@@ -149,7 +149,7 @@ ht-degree: 2%
 
 #### ユーザーモデレートタブ {#user-moderation-tab}
 
-「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたアイデアとコメント（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたアイデアとコメント（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
 * **投稿を拒否**
 
@@ -237,6 +237,6 @@ ht-degree: 2%
 
 詳しくは、開発者向けの [Ideation Essentials](/help/communities/ideation.md) ページを参照してください。
 
-投稿されたトピックとコメントのモデレートについては、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+投稿されたトピックとコメントのモデレートについては、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
-投稿されたトピックおよびコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け ](/help/communities/tag-ugc.md) を参照してください。
+投稿されたトピックおよびコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け &#x200B;](/help/communities/tag-ugc.md) を参照してください。

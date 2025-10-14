@@ -69,7 +69,7 @@ ht-degree: 3%
 
 ### 公開されたサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
-[ エクスペリエンスを継続 ](/help/communities/extend-sample-page.md#publish-sample-page) し、同じユーザーとしてログインしているパブリッシュインスタンスで、パブリッシュ環境のページを更新して、変更を表示し、アバターを削除できるようになりました。
+[&#x200B; エクスペリエンスを継続 &#x200B;](/help/communities/extend-sample-page.md#publish-sample-page) し、同じユーザーとしてログインしているパブリッシュインスタンスで、パブリッシュ環境のページを更新して、変更を表示し、アバターを削除できるようになりました。
 
 ![view-modified-content](assets/view-modified-content.png)
 

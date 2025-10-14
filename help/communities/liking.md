@@ -28,9 +28,9 @@ ht-degree: 3%
 
 そして、ユーザーが好きなように、ページ上の場所（機能に対する相対的な位置など）にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](essentials-liking.md#essentials-for-client-side) が含まれると、`Liking` コンポーネントはこのように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](essentials-liking.md#essentials-for-client-side) が含まれると、`Liking` コンポーネントはこのように表示されます。
 
 ![liking-component](assets/liking-component.png)
 

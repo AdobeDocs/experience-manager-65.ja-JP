@@ -45,7 +45,7 @@ ht-degree: 6%
 
 バッジは、適切な小さい画像（高さが 26～32 ピクセルの 72 dpi）をアップロードし、名前を付けることで作成されます。 バッジの画像は、`/libs/settings/community/badging/images` のリポジトリに保存され、自動的にパブリッシュ環境にレプリケートされます。
 
-パブリッシュ環境がパブリッシャーのファームである場合は、[ ユーザー同期 ](/help/communities/sync.md) を設定する必要があります。
+パブリッシュ環境がパブリッシャーのファームである場合は、[&#x200B; ユーザー同期 &#x200B;](/help/communities/sync.md) を設定する必要があります。
 
 ![create-badge](assets/create-badge.png)
 
@@ -67,6 +67,6 @@ ht-degree: 6%
 
 ## 追加情報 {#additional-information}
 
-スコアおよびバッジルールの設定について詳しくは、[ スコアおよびバッジ ](/help/communities/implementing-scoring.md) を参照してください。
+スコアおよびバッジルールの設定について詳しくは、[&#x200B; スコアおよびバッジ &#x200B;](/help/communities/implementing-scoring.md) を参照してください。
 
-メンバーのバッジの管理については、[ メンバーコンソール ](/help/communities/members.md) を参照してください。
+メンバーのバッジの管理については、[&#x200B; メンバーコンソール &#x200B;](/help/communities/members.md) を参照してください。

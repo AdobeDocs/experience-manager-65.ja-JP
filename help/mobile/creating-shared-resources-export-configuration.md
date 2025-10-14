@@ -24,7 +24,7 @@ ht-degree: 4%
 >
 >**前提条件**:
 >
->共有リソースの作成と変更を行う前に、[ コンテンツ同期 ](/help/mobile/mobile-ondemand-contentsync.md) を参照して、基本的な概念を理解してください。
+>共有リソースの作成と変更を行う前に、[&#x200B; コンテンツ同期 &#x200B;](/help/mobile/mobile-ondemand-contentsync.md) を参照して、基本的な概念を理解してください。
 
 Adobe Experience Manager（AEM）のモバイルユーザーは、コンテンツ同期を使用して、モバイルアプリで使用するためにライブコンテンツを静的コンテンツに書き出します。この書き出しは、コンテンツがAEM Mobileから Mobile On-Demand Services にアップロードされる際に行われます。
 

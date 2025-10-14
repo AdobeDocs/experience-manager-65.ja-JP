@@ -58,4 +58,4 @@ ht-degree: 10%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-[ おすすめコンテンツ機能 ](functions.md#featured-content-function) を含むコミュニティサイト構造には、設定済みの `featured content` コンポーネントが含まれています。
+[&#x200B; おすすめコンテンツ機能 &#x200B;](functions.md#featured-content-function) を含むコミュニティサイト構造には、設定済みの `featured content` コンポーネントが含まれています。

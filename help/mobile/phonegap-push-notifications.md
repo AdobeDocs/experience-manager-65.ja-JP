@@ -20,7 +20,7 @@ ht-degree: 1%
 
 {{ue-over-mobile}}
 
-Adobe Experience Manager（AEM）モバイルアプリのユーザーに対して、重要な通知を即座に通知できることが、モバイルアプリとそのマーケティングキャンペーンの価値にとって重要です。 ここでは、アプリにプッシュ通知を受信させるために実行する必要がある手順を説明します。 また、AEM Mobileから携帯電話にインストールされているアプリにプッシュを設定して送信する方法についても説明します。 また、この節では、プッシュ通知に [ ディープリンク ](#deeplinking) 機能を設定する方法についても説明します。
+Adobe Experience Manager（AEM）モバイルアプリのユーザーに対して、重要な通知を即座に通知できることが、モバイルアプリとそのマーケティングキャンペーンの価値にとって重要です。 ここでは、アプリにプッシュ通知を受信させるために実行する必要がある手順を説明します。 また、AEM Mobileから携帯電話にインストールされているアプリにプッシュを設定して送信する方法についても説明します。 また、この節では、プッシュ通知に [&#x200B; ディープリンク &#x200B;](#deeplinking) 機能を設定する方法についても説明します。
 
 >[!NOTE]
 >
@@ -59,23 +59,23 @@ Experience Manager管理者は次の操作を行います。
 
 #### Apple Push Notification Service （APNS）の使用 {#using-the-apple-push-notification-service-apns}
 
-Appleのプッシュ通知サービスに精通するには、Appleのページ [ こちら ](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) を参照してください。
+Appleのプッシュ通知サービスに精通するには、Appleのページ [&#x200B; こちら &#x200B;](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) を参照してください。
 
-APN を使用するには、Appleから **証明書** ファイル（.cer ファイル）、プッシュ **秘密鍵** （.p12 ファイル）、**秘密鍵のパスワード** が必要です。 その方法については、[ こちら ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) を参照してください。
+APN を使用するには、Appleから **証明書** ファイル（.cer ファイル）、プッシュ **秘密鍵** （.p12 ファイル）、**秘密鍵のパスワード** が必要です。 その方法については、[&#x200B; こちら &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) を参照してください。
 
 #### Google Cloud Messaging （GCM）サービスの使用 {#using-the-google-cloud-messaging-gcm-service}
 
 >[!NOTE]
 >
->Googleは、GCM を Firebase Cloud Messaging （FCM）と呼ばれる同様のサービスに置き換えます。 FCM について詳しくは、[ こちら ](https://firebase.google.com/docs/cloud-messaging/) をクリックしてください。
+>Googleは、GCM を Firebase Cloud Messaging （FCM）と呼ばれる同様のサービスに置き換えます。 FCM について詳しくは、[&#x200B; こちら &#x200B;](https://firebase.google.com/docs/cloud-messaging/) をクリックしてください。
 
-GoogleのGoogle Cloud Messaging for Androidについて詳しくは、[ こちら ](https://developer.android.com/google/gcm/index.html) のページ™ を参照してください。
+GoogleのGoogle Cloud Messaging for Androidについて詳しくは、[&#x200B; こちら &#x200B;](https://developer.android.com/google/gcm/index.html) のページ™ を参照してください。
 
-[ 次の手順に従います ](https://developer.android.com/google/gcm/gs.html)。**Google API プロジェクトの作成**、**GCM サービスの有効化**、および **API キーの取得** を行います。 Android™ デバイスにプッシュ通知を送信するには **API キー** が必要です。 また、**プロジェクト番号** を記録します。これは、**GCM 送信者 ID** とも呼ばれることがあります。
+[&#x200B; 次の手順に従います &#x200B;](https://developer.android.com/google/gcm/gs.html)。**Google API プロジェクトの作成**、**GCM サービスの有効化**、および **API キーの取得** を行います。 Android™ デバイスにプッシュ通知を送信するには **API キー** が必要です。 また、**プロジェクト番号** を記録します。これは、**GCM 送信者 ID** とも呼ばれることがあります。
 
 以下の手順は、GCM API キーを作成する別の方法を示しています。
 
-1. Google にログインし、[Googleのデベロッパーページ ](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm) に移動します。
+1. Google にログインし、[Googleのデベロッパーページ &#x200B;](https://developers.google.com/mobile/add?platform=android&cntapi=gcm) に移動します。
 1. リストからアプリを選択します（または作成します）。
 1. Android™ パッケージ名の下に、アプリ ID （`com.adobe.cq.mobile.weretail.outdoorsapp`）を入力します。 （それでもうまくいかない場合は、「test.test」で再試行してください。）
 1. 「**サービスの選択と設定を続行**」をクリックします
@@ -102,7 +102,7 @@ AEMは、次の 3 つのサービスのいずれかをプッシュ通知に使�
 
 >[!NOTE]
 >
->*Amazon SNS に関する情報およびAWS アカウントを作成するためのリンクは、[ こちら ](https://aws.amazon.com/sns/) を参照してください。 1 年間無料でアカウントを取得できます。*
+>*Amazon SNS に関する情報およびAWS アカウントを作成するためのリンクは、[&#x200B; こちら &#x200B;](https://aws.amazon.com/sns/) を参照してください。 1 年間無料でアカウントを取得できます。*
 
 Amazon SNS を使用しない場合は、以下の手順をスキップできます。
 
@@ -254,7 +254,7 @@ XCode 8.1 では、プッシュ通知を使用する前に、プロジェクト�
 
 #### Android™ {#android}
 
-CLI を使用してアプリをAndroid™ 携帯電話にインストールするには（以下を参照：**手順 6 - アプリのビルドとデプロイ**）、まず携帯電話を「developer mode」にする必要があります。 詳しくは、[ オンデバイス開発者オプションの有効化 ](https://developer.android.com/tools/device.html#developer-device-options) を参照してください。
+CLI を使用してアプリをAndroid™ 携帯電話にインストールするには（以下を参照：**手順 6 - アプリのビルドとデプロイ**）、まず携帯電話を「developer mode」にする必要があります。 詳しくは、[&#x200B; オンデバイス開発者オプションの有効化 &#x200B;](https://developer.android.com/tools/device.html#developer-device-options) を参照してください。
 
 ### 手順 5:AEM アプリでのプッシュの設定 {#step-configure-push-on-aem-apps}
 
@@ -270,7 +270,7 @@ CLI を使用してアプリをAndroid™ 携帯電話にインストールす�
 
 ### 手順 6：アプリのビルドとデプロイ {#step-build-and-deploy-the-app}
 
-**注意：** PhoneGap アプリケーションの構築手順 [ こちら ](/help/mobile/building-app-mobile-phonegap.md) を参照してください。
+**注意：** PhoneGap アプリケーションの構築手順 [&#x200B; こちら &#x200B;](/help/mobile/building-app-mobile-phonegap.md) を参照してください。
 
 PhoneGap を使用してアプリをビルドおよびデプロイする方法は 2 つあります。
 

@@ -23,7 +23,7 @@ ht-degree: 4%
 
 フォロー機能を使用すると、コミュニティメンバーが興味のある投稿や他のコミュニティメンバーをフォローする場合に、別のアクティビティを追加できます。
 
-すべての [ コミュニティサイト ](/help/communities/overview.md#communitiessites) には、同じ方法でメンバーアクティビティを表示するサインインしたメンバーのユーザープロファイルページが含まれています。
+すべての [&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#communitiessites) には、同じ方法でメンバーアクティビティを表示するサインインしたメンバーのユーザープロファイルページが含まれています。
 
 ## 概念  {#concepts}
 
@@ -70,12 +70,12 @@ ht-degree: 4%
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [ アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
+* [&#x200B; アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
-* [ アクティビティストリームリスナー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
+* [&#x200B; アクティビティストリームリスナー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/listener/api/package-frame.html)
 
 * [サーバーサイドのカスタマイズ](/help/communities/server-customize.md)
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
-[ アクティビティストリーム関数 ](/help/communities/functions.md#activity-stream-function) を含むコミュニティサイト構造は、設定済みの `activity streams` コンポーネントを含む。
+[&#x200B; アクティビティストリーム関数 &#x200B;](/help/communities/functions.md#activity-stream-function) を含むコミュニティサイト構造は、設定済みの `activity streams` コンポーネントを含む。

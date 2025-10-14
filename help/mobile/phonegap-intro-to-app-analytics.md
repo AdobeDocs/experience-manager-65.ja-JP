@@ -43,7 +43,7 @@ Adobeモバイル分析SDKには、次の機能があります。
 
 この節では、[Analytics Developers](#developers) でAEM トラッキングを使用してAEM Mobile アプリを実装する方法について説明します。
 
-最後に、[AEM管理者は次の ](#administrators) とを学習します。
+最後に、[AEM管理者は次の &#x200B;](#administrators) とを学習します。
 
 * mobile Services をAdobeにするクラウドサービスの作成
 * モバイルサービス設定の作成とレポートスイートの関連付け
@@ -53,9 +53,9 @@ Adobeモバイル分析SDKには、次の機能があります。
 
 ## 開発者向け – Analytics のアプリへの統合 {#for-developers-integrate-analytics-into-your-app}
 
-**前提条件：** AEM管理者は、（以下で説明するように [Mobile Services Adobeのクラウド設定を行う必要があり ](#amscloudserviceconfig) す。
+**前提条件：** AEM管理者は、（以下で説明するように [Mobile Services Adobeのクラウド設定を行う必要があり &#x200B;](#amscloudserviceconfig) す。
 
-デベロッパーは、必要に応じて [AEM Mobile アプリに分析を追加 ](/help/mobile/phonegap-add-analytics-to-apps.md) し、モバイルアプリのコンテンツに対するユーザーのエンゲージメントを追跡、レポートおよび理解し、ローンチ、アプリ内時間、クラッシュ率などの主要ライフサイクル指標を測定する責任があります。
+デベロッパーは、必要に応じて [AEM Mobile アプリに分析を追加 &#x200B;](/help/mobile/phonegap-add-analytics-to-apps.md) し、モバイルアプリのコンテンツに対するユーザーのエンゲージメントを追跡、レポートおよび理解し、ローンチ、アプリ内時間、クラッシュ率などの主要ライフサイクル指標を測定する責任があります。
 
 ## 管理者向け – Adobe Mobile Services のCloud Serviceを設定します {#for-administrators-configure-the-adobe-mobile-services-cloud-service}
 

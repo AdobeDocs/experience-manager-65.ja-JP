@@ -18,9 +18,9 @@ ht-degree: 7%
 
 # ソーシャルグラフの基本事項  {#social-graph-essentials}
 
-コミュニティメンバーが [ アクティビティ ](essentials-activities.md) をフォローし、従う能力は、次の 2 つのコンポーネントを通じて確立されます。
+コミュニティメンバーが [&#x200B; アクティビティ &#x200B;](essentials-activities.md) をフォローし、従う能力は、次の 2 つのコンポーネントを通じて確立されます。
 
-`following` コンポーネントは別のリソースに関連付ける必要があり、この関連付けは、既存のコミュニティメンバーと [ コミュニティサイト ](overview.md#communitiessites) の機能に対して既に確立されています。
+`following` コンポーネントは別のリソースに関連付ける必要があり、この関連付けは、既存のコミュニティメンバーと [&#x200B; コミュニティサイト &#x200B;](overview.md#communitiessites) の機能に対して既に確立されています。
 
 `following` コンポーネントは、現在のメンバーに続くメンバーまたは現在のメンバーの後に続くメンバーをリストします。 このメンバー間の関係のソーシャルグラフは、コミュニティサイト用に作成されたユーザープロファイルに含まれます。
 
@@ -82,8 +82,8 @@ ht-degree: 7%
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [ ソーシャルグラフ API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
+* [&#x200B; ソーシャルグラフ API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
-* [ ソーシャルグラフのエンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
+* [&#x200B; ソーシャルグラフのエンドポイント &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)

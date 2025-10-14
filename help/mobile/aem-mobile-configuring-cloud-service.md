@@ -22,11 +22,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->このドキュメントは [Adobe Experience Manager（AEM） Mobile の概要 ](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobile リファレンスの出発点として推奨されています。
+>このドキュメントは [Adobe Experience Manager（AEM） Mobile の概要 &#x200B;](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobile リファレンスの出発点として推奨されています。
 
 コンテンツ作成者がモバイルアプリ用のターゲットコンテンツの生成を開始するには、いくつかの手順を実行する必要があります。ユーザーとグループに適切な権限セットを取得し、クラウドサービスを作成し、アクティビティ用のアプリケーションを設定して、最後にコンテンツを生成します。
 
-今後、[AEM Mobile ハイブリッド参照アプリケーション ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) が正常にデプロイされ、AEM Mobile Dashboard を介してアクセスできるようになることを想定しています。
+今後、[AEM Mobile ハイブリッド参照アプリケーション &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) が正常にデプロイされ、AEM Mobile Dashboard を介してアクセスできるようになることを想定しています。
 
 ## 権限 {#permissions}
 

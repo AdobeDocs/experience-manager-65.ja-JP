@@ -24,6 +24,6 @@ Adobe Experience Manager（AEM）モバイルアプリケーションビュー�
 
 アプリケーションビューアを使用して開発状態とステージング状態のアプリケーションを確認しない場合は、リファラーフィルターのデフォルト設定を変更する必要はありません。
 
-AEMの実行中のオーサーインスタンス内で、[http://localhost:4502/system/console/configMgrに移動して ](http://localhost:4502/system/console/configMgr)Apache Sling Referrer Filter」を検索します。 クリックしてリファラーフィルターを編集し、「空を許可」チェックボックスをオンにします（下図を参照）。 次に「保存」ボタンをクリックして、ブラウザーページを閉じます。
+AEMの実行中のオーサーインスタンス内で、[http://localhost:4502/system/console/configMgrに移動して &#x200B;](http://localhost:4502/system/console/configMgr)Apache Sling Referrer Filter」を検索します。 クリックしてリファラーフィルターを編集し、「空を許可」チェックボックスをオンにします（下図を参照）。 次に「保存」ボタンをクリックして、ブラウザーページを閉じます。
 
-![ リファラーフィルターの設定 ](assets/chlimage_1-106.png)
+![&#x200B; リファラーフィルターの設定 &#x200B;](assets/chlimage_1-106.png)

@@ -44,17 +44,17 @@ AEM Mobileを使用してこの入門ガイドの手順に従う前に、AEMとA
 
 ## 作成者向けクイックリンク {#quicklinks-for-authors}
 
-作成者のロールと責任については、[AEMでのAdobe PhoneGap Enterprise 向けオーサリング ](/help/mobile/phonegap.md) を参照してください。
+作成者のロールと責任については、[AEMでのAdobe PhoneGap Enterprise 向けオーサリング &#x200B;](/help/mobile/phonegap.md) を参照してください。
 
 ## 開発者向けクイックリンク {#quicklinks-for-developers}
 
-AEM Mobileと統合され、開発者がカスタマイズできるサンプルアプリケーションがあります。 [AEMを使用したAdobe PhoneGap Enterprise の開発 ](/help/mobile/developing-in-phonegap.md) をクリックします。
+AEM Mobileと統合され、開発者がカスタマイズできるサンプルアプリケーションがあります。 [AEMを使用したAdobe PhoneGap Enterprise の開発 &#x200B;](/help/mobile/developing-in-phonegap.md) をクリックします。
 
 以降の章では、アプリケーションのホワイトラベル設定、ローカリゼーション、国際化、コンテンツ同期、ターゲティング、分析などの高度な概念について説明します。
 
 ## 管理者向けクイックリンク {#quicklinks-for-administrators}
 
-モバイルアプリケーションを設定および管理するには、[AEMを使用したAdobe PhoneGap Enterprise のコンテンツの管理 ](/help/mobile/administer-phonegap.md) を参照してください。
+モバイルアプリケーションを設定および管理するには、[AEMを使用したAdobe PhoneGap Enterprise のコンテンツの管理 &#x200B;](/help/mobile/administer-phonegap.md) を参照してください。
 
 >[!NOTE]
 >

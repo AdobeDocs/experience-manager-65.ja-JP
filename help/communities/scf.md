@@ -29,7 +29,7 @@ ht-degree: 1%
 * **アクセス可能**:HTTP API は、モバイルアプリを含む任意のクライアントからの投稿をサポートしています。
 * **ポータブル**：任意のテクノロジーで作成された任意の web ページに統合または埋め込みます。
 
-インタラクティブな [ コミュニティコンポーネントガイド ](components-guide.md) を使用して、オーサーインスタンスまたはパブリッシュインスタンスを探索します。
+インタラクティブな [&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) を使用して、オーサーインスタンスまたはパブリッシュインスタンスを探索します。
 
 ## 概要 {#overview}
 
@@ -54,13 +54,13 @@ SocialComponent API は、クライアントがビューレイヤーまたは HT
 * ルックアンドフィールに関して：
    * JS テンプレートと CSS を変更します。
 * ルック、フィール、UX に関して：
-   * JS テンプレート、CSS および [JavaScriptの拡張/上書き ](client-customize.md#extending-javascript) を変更します。
+   * JS テンプレート、CSS および [JavaScriptの拡張/上書き &#x200B;](client-customize.md#extending-javascript) を変更します。
 * JS テンプレートまたはGETエンドポイントで使用可能な情報を変更するには：
    * [SocialComponent](server-customize.md#socialcomponent-interface) を拡張します
 * 操作中にカスタム処理を追加するには：
    * [OperationExtension](server-customize.md#operationextension-class) を書き込みます。
 * カスタム操作を追加するには：
-   * [Sling Post操作 ](server-customize.md#postoperation-class) を作成します。
+   * [Sling Post操作 &#x200B;](server-customize.md#postoperation-class) を作成します。
    * 必要に応じて、既存の [OperationServices](server-customize.md#operationservice-class) を使用します。
    * 必要に応じて、JavaScript コードを追加して、クライアント側から操作を呼び出します。
 
@@ -72,9 +72,9 @@ SocialComponent API は、クライアントがビューレイヤーまたは HT
 
 Java™ API は、容易に継承またはサブクラス化できる抽象クラスおよびインターフェイスを提供します。
 
-メインクラスについては、[ サーバーサイドのカスタマイズ ](server-customize.md) ページを参照してください。
+メインクラスについては、[&#x200B; サーバーサイドのカスタマイズ &#x200B;](server-customize.md) ページを参照してください。
 
-UGC の操作については、[ ストレージリソースプロバイダーの概要 ](srp.md) を参照してください。
+UGC の操作については、[&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) を参照してください。
 
 ### HTTP API {#http-api}
 
@@ -112,15 +112,15 @@ GET（読み取り）操作に加えて、コンポーネントに対して他�
 
 ### ストレージリソースプロバイダー（SRP） {#storage-resource-provider-srp}
 
-[ コミュニティコンテンツストア ](working-with-srp.md) に保存された UGC の処理について詳しくは、以下を参照してください。
+[&#x200B; コミュニティコンテンツストア &#x200B;](working-with-srp.md) に保存された UGC の処理について詳しくは、以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRP と UGC の初期設定 ](srp-and-ugc.md) - SRP API ユーティリティメソッドと例。
-* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md) - SRP API ユーティリティメソッドと例。
+* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
 
 ### サーバーサイドのカスタマイズ {#server-side-customizations}
 
-サーバーサイドでの Communities コンポーネントのビジネスロジックと動作のカスタマイズについては、[ サーバーサイドのカスタマイズ ](server-customize.md) を参照してください。
+サーバーサイドでの Communities コンポーネントのビジネスロジックと動作のカスタマイズについては、[&#x200B; サーバーサイドのカスタマイズ &#x200B;](server-customize.md) を参照してください。
 
 ## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
 
@@ -128,7 +128,7 @@ GET（読み取り）操作に加えて、コンポーネントに対して他�
 
 HBS スクリプトはシンプルで、ロジックレスで、サーバーとクライアントの両方でコンパイルされ、オーバーレイとカスタマイズが簡単です。HBS はクライアントサイドレンダリングをサポートしているので、当然クライアント UX とバインドされます。
 
-このフレームワークは、SocialComponents を開発するときに役立ついくつかの [Handlebars ヘルパー ](handlebars-helpers.md) を提供します。
+このフレームワークは、SocialComponents を開発するときに役立ついくつかの [Handlebars ヘルパー &#x200B;](handlebars-helpers.md) を提供します。
 
 サーバーで Sling がGETリクエストを解決すると、リクエストの応答に使用されるスクリプトが特定されます。 スクリプトが HBS テンプレート（.hbs）の場合、Sling はリクエストを Handlebars エンジンに委任します。 次に、Handlebars エンジンは、適切な SocialComponentFactory から SocialComponent を取得し、コンテキストを作成して、HTMLをレンダリングします。
 
@@ -144,7 +144,7 @@ Handlebars （HBS）テンプレートファイル（.hbs）は、.jsp および
 
 ほとんどの Communities コンポーネントは、Sling のアドレス可能なリソースとして *追加* する必要があります。 一部の Communities コンポーネントは、既存のリソース以外としてテンプレートに *含める* ことができます。これにより、ユーザー生成コンテンツ（UGC）を書き込む場所を動的に含めたりカスタマイズしたりできます。
 
-どちらの場合も、コンポーネントの [ 必須のクライアントライブラリ ](clientlibs.md) が存在する必要があります。
+どちらの場合も、コンポーネントの [&#x200B; 必須のクライアントライブラリ &#x200B;](clientlibs.md) が存在する必要があります。
 
 **コンポーネントを追加**
 
@@ -165,9 +165,9 @@ Adobe Experience Manager（AEM） 6.1 以降では、コンポーネントを追
 * [レビュー](reviews-basics.md)
 * [投票](essentials-voting.md)
 
-[ コミュニティコンポーネントガイド ](components-guide.md) を使用すると、含めるコンポーネントを追加から含めるに切り替えることができます。
+[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) を使用すると、含めるコンポーネントを追加から含めるに切り替えることができます。
 
-**Handlebars** テンプレート言語を使用する場合、resourceType を指定することにより、[include ヘルパー ](handlebars-helpers.md#include) を使用して既存のリソースが含まれます。
+**Handlebars** テンプレート言語を使用する場合、resourceType を指定することにより、[include ヘルパー &#x200B;](handlebars-helpers.md#include) を使用して既存のリソースが含まれます。
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
@@ -180,11 +180,11 @@ Adobe Experience Manager（AEM） 6.1 以降では、コンポーネントを追
 
 >[!NOTE]
 >
->コンポーネントをテンプレートに追加したりテンプレートに含めたりせずに、ページに動的に追加するには、[ コンポーネントのサイドローディング ](sideloading.md) を参照してください。
+>コンポーネントをテンプレートに追加したりテンプレートに含めたりせずに、ページに動的に追加するには、[&#x200B; コンポーネントのサイドローディング &#x200B;](sideloading.md) を参照してください。
 
 ### Handlebars ヘルパー {#handlebars-helpers}
 
-SCF で使用可能なカスタムヘルパーのリストと説明については、[SCF Handlebars ヘルパー ](handlebars-helpers.md) を参照してください。
+SCF で使用可能なカスタムヘルパーのリストと説明については、[SCF Handlebars ヘルパー &#x200B;](handlebars-helpers.md) を参照してください。
 
 ## クライアントサイドフレームワーク {#client-side-framework}
 
@@ -204,7 +204,7 @@ CSS クラスを定義および使用する場合は、次の規則を使用す�
 
 ### クライアントサイドのカスタマイズ {#client-side-customizations}
 
-クライアントサイドでの Communities コンポーネントの外観と動作をカスタマイズするには、以下の情報を含む [ クライアントサイドのカスタマイズ ](client-customize.md) を参照してください。
+クライアントサイドでの Communities コンポーネントの外観と動作をカスタマイズするには、以下の情報を含む [&#x200B; クライアントサイドのカスタマイズ &#x200B;](client-customize.md) を参照してください。
 
 * [オーバーレイ](client-customize.md#overlays)
 * [拡張子](client-customize.md#extensions)
@@ -215,10 +215,10 @@ CSS クラスを定義および使用する場合は、次の規則を使用す�
 
 ## 機能とコンポーネントの基本事項 {#feature-and-component-essentials}
 
-開発者にとって不可欠な情報については、[ 機能とコンポーネントの基本事項 ](essentials.md) の節で説明します。
+開発者にとって不可欠な情報については、[&#x200B; 機能とコンポーネントの基本事項 &#x200B;](essentials.md) の節で説明します。
 
-開発者向けの追加情報については、[ コーディングのガイドライン ](code-guide.md) の節を参照してください。
+開発者向けの追加情報については、[&#x200B; コーディングのガイドライン &#x200B;](code-guide.md) の節を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 
-一般的な問題と既知の問題については、[ トラブルシューティング ](troubleshooting.md) の節を参照してください。
+一般的な問題と既知の問題については、[&#x200B; トラブルシューティング &#x200B;](troubleshooting.md) の節を参照してください。

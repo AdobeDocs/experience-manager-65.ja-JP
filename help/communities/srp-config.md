@@ -40,9 +40,9 @@ ht-degree: 4%
 * オプションを選択
 * 適切に設定
 
-   * [MSRP の選択 ](msrp.md#select-msrp) の詳細を参照してください。
-   * [DSRP の選択 ](dsrp.md#select-dsrp) の詳細を参照してください。
-   * 詳細については、[ASRP の選択 ](asrp.md#select-asrp) を参照してください。
+   * [MSRP の選択 &#x200B;](msrp.md#select-msrp) の詳細を参照してください。
+   * [DSRP の選択 &#x200B;](dsrp.md#select-dsrp) の詳細を参照してください。
+   * 詳細については、[ASRP の選択 &#x200B;](asrp.md#select-asrp) を参照してください。
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
@@ -52,8 +52,8 @@ ht-degree: 4%
 
 JCR *オーサー環境とPublish環境で共有される共通ストア* ありません）。 コミュニティコンテンツは、そのコンテンツが作成されたオーサー環境またはPublish環境からのみ表示されます。
 
-詳しくは、[JCR ストア ](jsrp.md) を参照してください。
+詳しくは、[JCR ストア &#x200B;](jsrp.md) を参照してください。
 
 >[!NOTE]
 >
->`/etc/socialconfig` の下にノード `srpc` がない場合は、デフォルトの [JCR ストア ](jsrp.md) を示します。
+>`/etc/socialconfig` の下にノード `srpc` がない場合は、デフォルトの [JCR ストア &#x200B;](jsrp.md) を示します。

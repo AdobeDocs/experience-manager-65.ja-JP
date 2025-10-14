@@ -29,9 +29,9 @@ AEM Communitiesは、ユーザープロファイルを管理したり、ユー�
 
 >[!NOTE]
 >
->AEM Communities[&#128279;](/help/communities/analytics.md) サイトで Adobe Analyticsを設定した場合、取り込んだユーザーデータはAdobe Analytics サーバーに送信されます。 Adobe Analyticsは、ユーザーデータへのアクセス、書き出し、削除と、GDPR への準拠を可能にする API を提供します。 詳しくは、[ アクセスリクエストと削除リクエストの送信 ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html?lang=ja) を参照してください。
+>AEM Communities[&#128279;](/help/communities/analytics.md) サイトで Adobe Analyticsを設定した場合、取り込んだユーザーデータはAdobe Analytics サーバーに送信されます。 Adobe Analyticsは、ユーザーデータへのアクセス、書き出し、削除と、GDPR への準拠を可能にする API を提供します。 詳しくは、[&#x200B; アクセスリクエストと削除リクエストの送信 &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html?lang=ja) を参照してください。
 
-これらの API を使用するには、UserUgcManagement サービスをアクティベートして、`/services/social/ugcmanagement` エンドポイントを有効にする必要があります。 このサービスをアクティブにするには、[GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) で利用可能な [ サンプルサーブレット ](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) をインストールします。 次に、http リクエストを使用して、次のような適切なパラメーターを使用して、communities サイトのパブリッシュインスタンスのエンドポイントにアクセスします。
+これらの API を使用するには、UserUgcManagement サービスをアクティベートして、`/services/social/ugcmanagement` エンドポイントを有効にする必要があります。 このサービスをアクティブにするには、[GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) で利用可能な [&#x200B; サンプルサーブレット &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) をインストールします。 次に、http リクエストを使用して、次のような適切なパラメーターを使用して、communities サイトのパブリッシュインスタンスのエンドポイントにアクセスします。
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`といったアドバイスを耳にしたことがある方もいるでしょう。ただし、UI （ユーザーインターフェイス）を構築して、システム内のユーザープロファイルとユーザー生成コンテンツを管理することもできます。
 
@@ -61,11 +61,11 @@ AEM Communitiesは、ユーザープロファイルを管理したり、ユー�
 
 ### Adobe Analyticsからの UGC の削除 {#delete-ugc-from-adobe-analytics}
 
-API はAdobe Analyticsからユーザーデータを削除しないので、Adobe Analyticsからユーザーデータを削除するには、[GDPR 分析ワークフロー ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html?lang=ja) に従います。
+API はAdobe Analyticsからユーザーデータを削除しないので、Adobe Analyticsからユーザーデータを削除するには、[GDPR 分析ワークフロー &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html?lang=ja) に従います。
 
 AEM Communitiesで使用されるAdobe Analytics変数のマッピングについては、次の図を参照してください。
 
-![Adobe AnalyticsのAEM communities 変数マッピング ](assets/analytics-communities-mapping.png)
+![Adobe AnalyticsのAEM communities 変数マッピング &#x200B;](assets/analytics-communities-mapping.png)
 
 ## ユーザーアカウントの無効化 {#disable-a-user-account}
 

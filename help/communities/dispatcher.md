@@ -20,13 +20,13 @@ ht-degree: 9%
 
 ## AEM Communities {#aem-communities}
 
-AEM Communitiesでは、[ コミュニティサイト ](overview.md#community-sites) が適切に機能するようにDispatcherを設定する必要があります。 ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
+AEM Communitiesでは、[&#x200B; コミュニティサイト &#x200B;](overview.md#community-sites) が適切に機能するようにDispatcherを設定する必要があります。 ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
 
 特定のデプロイメントとサイトデザインに必要なものを学ぶ
 
-* [カスタマーケア](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)に問い合わせる
+* [カスタマーケア](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support)に問い合わせる
 
-主な [Dispatcher ドキュメント ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) も参照してください。
+主な [Dispatcher ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) も参照してください。
 
 ## Dispatcher のキャッシュ {#dispatcher-caching}
 
@@ -42,8 +42,8 @@ Dispatcherのキャッシュをサポートするように設定すると、Disp
 
 ### 要件 {#requirements}
 
-* Dispatcher バージョン 4.1.2 以降（最新バージョンについては、[Dispatcherのインストール ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja) を参照）
-* [ACS AEM Commons パッケージ ](https://adobe-consulting-services.github.io/acs-aem-commons/)
+* Dispatcher バージョン 4.1.2 以降（最新バージョンについては、[Dispatcherのインストール &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja) を参照）
+* [ACS AEM Commons パッケージ &#x200B;](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
    * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi 設定
@@ -52,7 +52,7 @@ Dispatcherのキャッシュをサポートするように設定すると、Disp
 
 OSGi 設定 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** は、指定したパスの下に表示されるキャッシュされたページの有効期限を設定します。
 
-* [Web コンソール ](../../help/sites-deploying/configuring-osgi.md) から。
+* [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md) から。
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
@@ -69,7 +69,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** は�
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
-`dispatcher.any` ファイルの/filter セクションについては、[ コンテンツへのアクセスの設定 – /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja) を参照してください。
+`dispatcher.any` ファイルの/filter セクションについては、[&#x200B; コンテンツへのアクセスの設定 – /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja) を参照してください。
 
 このセクションでは、Communities の機能を適切に機能させるために必要になる可能性の高いエントリについて説明します。
 
@@ -79,7 +79,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** は�
 
 関連トピック：
 
-* [Dispatcher セキュリティチェックリスト ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja)
+* [Dispatcher セキュリティチェックリスト &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja)
 
 >[!NOTE]
 >

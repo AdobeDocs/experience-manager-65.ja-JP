@@ -64,7 +64,7 @@ Mobile Application AEM Apps ダッシュボードから ADBMobileConfig をダ�
 
 PhoneGap CLI を使用してビルドする場合は、cordova ビルドフックスクリプトを使用して行うことができます。 これは、Geometrixx Outdoors アプリ（*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*）で確認できます。
 
-iOSの場合、ファイルを XCode プロジェクトの **Resources** ディレクトリ（例：「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」）にコピーする必要があります。 アプリケーションがAndroid™ を対象としている場合は、コピー先のパスは「platforms/android/assets/ADBMobileConfig.json」です。 PhoneGap CLI ビルド中のフックの使用について詳しくは、[Cordova/PhoneGap プロジェクトに必要な 3 つのフック ](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c) を参照してください。
+iOSの場合、ファイルを XCode プロジェクトの **Resources** ディレクトリ（例：「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」）にコピーする必要があります。 アプリケーションがAndroid™ を対象としている場合は、コピー先のパスは「platforms/android/assets/ADBMobileConfig.json」です。 PhoneGap CLI ビルド中のフックの使用について詳しくは、[Cordova/PhoneGap プロジェクトに必要な 3 つのフック &#x200B;](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c) を参照してください。
 
 ```xml
 ///////////////////////////

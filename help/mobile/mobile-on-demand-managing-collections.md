@@ -30,9 +30,9 @@ ht-degree: 4%
 >
 >AEM Mobile アプリケーションの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
->* [ 設計上の考慮事項 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
+>* [&#x200B; 設計上の考慮事項 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
 >
->* [ 回収の管理 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-collections.html)
+>* [&#x200B; 回収の管理 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-collections.html)
 >
 
 ## コレクションの作成 {#creating-a-collection}

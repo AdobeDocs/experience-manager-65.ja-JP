@@ -22,7 +22,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
+>Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
 
 AEMには、コンテンツをモバイルアプリケーションに統合するためのいくつかのツールが用意されています。
 
@@ -32,7 +32,7 @@ AEM Preflight アプリは、公開前にアプリとコンテンツをプレビ
 
 >[!NOTE]
 >
->Preflight アプリについて詳しくは、AEM Mobile On-demand Services ヘルプの [AEM Preflight アプリの使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html) を参照してください。
+>Preflight アプリについて詳しくは、AEM Mobile On-demand Services ヘルプの [AEM Preflight アプリの使用 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html) を参照してください。
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -52,11 +52,11 @@ AEM Mobile アプリの新しいエクスペリエンスを開始するには、
 
 >[!NOTE]
 >
->AEM Mobileを使用してこの入門ガイドの手順に従う前に、AEMについて理解しておく必要があります。 AEMの基本について説明します [ こちら ](/help/sites-deploying/deploy.md)。
+>AEM Mobileを使用してこの入門ガイドの手順に従う前に、AEMについて理解しておく必要があります。 AEMの基本について説明します [&#x200B; こちら &#x200B;](/help/sites-deploying/deploy.md)。
 
 ### AEM Mobile Application Dashboard について {#understanding-the-aem-mobile-application-dashboard}
 
-役割と責務を理解する前に、**AEM Mobile コントロールセンター** または **Application Dashboard** に関する十分な知識が必要です。 詳しくは、[ ここ ](/help/mobile/mobile-apps-ondemand-application-dashboard.md) をクリックしてください。
+役割と責務を理解する前に、**AEM Mobile コントロールセンター** または **Application Dashboard** に関する十分な知識が必要です。 詳しくは、[&#x200B; ここ &#x200B;](/help/mobile/mobile-apps-ondemand-application-dashboard.md) をクリックしてください。
 
 ### AEM 管理者 {#aem-administrator}
 
@@ -69,7 +69,7 @@ AEM管理者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 * [プリフライトによるプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)
 * [コンテンツサービスの管理](/help/mobile/developing-content-services.md)
 
-管理者の役割と責務の基本を学ぶには、[AEM Mobile On-demand Servicesを使用するためのコンテンツの管理 ](/help/mobile/aem-mobile.md) を参照してください。
+管理者の役割と責務の基本を学ぶには、[AEM Mobile On-demand Servicesを使用するためのコンテンツの管理 &#x200B;](/help/mobile/aem-mobile.md) を参照してください。
 
 ## AEM開発者 {#aem-developer}
 
@@ -82,7 +82,7 @@ AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 * [コンテンツのプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
 * [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md)
 
-開発者の役割と責務の概要については、[AEM Mobile On-demand Services用AEM コンテンツの開発 ](/help/mobile/aem-mobile-on-demand.md) を参照してください。
+開発者の役割と責務の概要については、[AEM Mobile On-demand Services用AEM コンテンツの開発 &#x200B;](/help/mobile/aem-mobile-on-demand.md) を参照してください。
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ AEM オーサーは、AEM Mobile On-demand Servicesを使用してアプリを�
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 * [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md)
 
-作成者の役割と責務の基本を学ぶには、[AEM Mobile On-demand Services アプリケーション用AEM コンテンツのオーサリング ](/help/mobile/mobile-apps-ondemand.md) を参照してください。
+作成者の役割と責務の基本を学ぶには、[AEM Mobile On-demand Services アプリケーション用AEM コンテンツのオーサリング &#x200B;](/help/mobile/mobile-apps-ondemand.md) を参照してください。
 
 >[!NOTE]
 >

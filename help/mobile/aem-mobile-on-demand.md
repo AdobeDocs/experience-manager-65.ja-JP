@@ -21,7 +21,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->AEMをコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
+>AEMをコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
 * [コンテンツのプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
 
-コンテンツサービスの開発については、[AEM Mobile コンテンツサービスの開発 ](/help/mobile/developing-content-services.md) を参照してください。
+コンテンツサービスの開発については、[AEM Mobile コンテンツサービスの開発 &#x200B;](/help/mobile/developing-content-services.md) を参照してください。
 
 >[!NOTE]
 >

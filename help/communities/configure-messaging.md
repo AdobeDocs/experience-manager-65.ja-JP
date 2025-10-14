@@ -21,13 +21,13 @@ ht-degree: 1%
 
 フォーラムやコメントで発生する公の場でのインタラクションに加えて、AEM Communitiesのメッセージング機能を使用すると、コミュニティメンバーはより個人的にやり取りできるようになります。
 
-この機能は、[ コミュニティサイト ](/help/communities/overview.md#communitiessites) の作成時に含めることができます。
+この機能は、[&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#communitiessites) の作成時に含めることができます。
 
 メッセージ機能を使用すると、次の操作を実行できます。
 
 **A** - 1 人以上のコミュニティメンバーにメッセージを送信する
 
-**B** - ダイレクトメッセージの [ 一括でのコミュニティメンバーグループへの送信 ](/help/communities/messaging.md#group-messaging)
+**B** - ダイレクトメッセージの [&#x200B; 一括でのコミュニティメンバーグループへの送信 &#x200B;](/help/communities/messaging.md#group-messaging)
 
 **C** – 添付ファイル付きメッセージの送信
 
@@ -45,8 +45,8 @@ ht-degree: 1%
 
 メッセージ機能を有効にして変更するには、以下を参照してください。
 
-* 管理者向けの [ メッセージングの設定 ](/help/communities/messaging.md)
-* 開発者向けの [ メッセージングの基本事項 ](/help/communities/essentials-messaging.md)
+* 管理者向けの [&#x200B; メッセージングの設定 &#x200B;](/help/communities/messaging.md)
+* 開発者向けの [&#x200B; メッセージングの基本事項 &#x200B;](/help/communities/essentials-messaging.md)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ### メッセージリストの設定（メッセージボックス） {#configure-message-list-message-box}
 
-メッセージ機能の **インボックス**、**送信済み項目**、および **ごみ箱** ページのメッセージリストの設定を変更するには、サイトを [ オーサー編集モード ](/help/communities/sites-console.md#authoring-site-content) で開きます。
+メッセージ機能の **インボックス**、**送信済み項目**、および **ごみ箱** ページのメッセージリストの設定を変更するには、サイトを [&#x200B; オーサー編集モード &#x200B;](/help/communities/sites-console.md#authoring-site-content) で開きます。
 
 1. `Preview` モードで、「**メッセージ**」リンクを選択して、メインメッセージページを開きます。 次に、**インボックス**、**送信済み項目** または **ごみ箱** を選択して、そのメッセージリストのコンポーネントを設定します。
 
@@ -132,7 +132,7 @@ ht-degree: 1%
 
 ### メッセージを作成の設定 {#configure-compose-message}
 
-メッセージを作成ページの設定を変更するには、サイトを [ オーサー編集モード ](/help/communities/sites-console.md#authoring-site-content) で開きます。
+メッセージを作成ページの設定を変更するには、サイトを [&#x200B; オーサー編集モード &#x200B;](/help/communities/sites-console.md#authoring-site-content) で開きます。
 
 * `Preview` モードで、「**メッセージ**」リンクを選択して、メインメッセージページを開きます。 次に、「新規メッセージ」ボタンを選択して、`Compose Message` のページを開きます。
 

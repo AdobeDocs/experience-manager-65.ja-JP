@@ -22,15 +22,15 @@ Tally は、メンバーが特定の製品やサービスをどのように評�
 
 抽象的な集計クラスを拡張することで、カスタムの集計コンポーネントを作成できます。
 
-[ 好き ](essentials-liking.md) は、肯定的な意見を表現するための単純な形式の集計の実装です。
+[&#x200B; 好き &#x200B;](essentials-liking.md) は、肯定的な意見を表現するための単純な形式の集計の実装です。
 
-[ 投票 ](essentials-voting.md) は、肯定的または否定的な意見を表現する単純な形の集計の実装です。
+[&#x200B; 投票 &#x200B;](essentials-voting.md) は、肯定的または否定的な意見を表現する単純な形の集計の実装です。
 
-[ レーティング ](rating-basics.md) とは、星評価を用いてポジティブからネガティブまで幅広い意見を表現する集計の実装です。
+[&#x200B; レーティング &#x200B;](rating-basics.md) とは、星評価を用いてポジティブからネガティブまで幅広い意見を表現する集計の実装です。
 
 AEM 6.1 以降、ポーリングコンポーネントは使用できなくなりました。
 
-[ レビュー ](reviews-basics.md) は、[ コメント ](essentials-comments.md) と [ 評価 ](rating-basics.md) のハイブリッドである SCF コンポーネントです。
+[&#x200B; レビュー &#x200B;](reviews-basics.md) は、[&#x200B; コメント &#x200B;](essentials-comments.md) と [&#x200B; 評価 &#x200B;](rating-basics.md) のハイブリッドである SCF コンポーネントです。
 
 ## クライアントサイドの基本事項 {#essentials-for-client-side}
 
@@ -38,24 +38,24 @@ AEM 6.1 以降、ポーリングコンポーネントは使用できなくなり
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [ 集計 API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [&#x200B; 集計 API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [ 集計エンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [&#x200B; 集計エンドポイント &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### 投稿済みテーブルへのアクセス（UGC） {#accessing-posted-tallies-ugc}
 
 UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
-[ ユーザー生成コンテンツのモデレート ](moderate-ugc.md) を参照してください。
+[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](moderate-ugc.md) を参照してください。
 
-AEM 6.1 Communities の時点では、UGC の [ 共通ストア ](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
+AEM 6.1 Communities の時点では、UGC の [&#x200B; 共通ストア &#x200B;](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
 
 **リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
 
 以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
-* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

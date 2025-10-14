@@ -56,25 +56,25 @@ ht-degree: 4%
 
 ## サーバーサイドの初期設定 {#essentials-for-server-side}
 
-* [ カレンダー API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
+* [&#x200B; カレンダー API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
-* [ カレンダーエンドポイント ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
+* [&#x200B; カレンダーエンドポイント &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### カレンダー機能 {#calendar-function}
 
-[ カレンダー関数 ](functions.md#calendar-function) を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[ 特権メンバーユーザーグループ ](users.md#privileged-members-group) の識別をサポートしています。
+[&#x200B; カレンダー関数 &#x200B;](functions.md#calendar-function) を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[&#x200B; 特権メンバーユーザーグループ &#x200B;](users.md#privileged-members-group) の識別をサポートしています。
 
 ### カレンダー投稿へのアクセス（UGC） {#accessing-calendar-posts-ugc}
 
-AEM 6.1 Communities の時点では、UGC の [ 共通ストア ](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
+AEM 6.1 Communities の時点では、UGC の [&#x200B; 共通ストア &#x200B;](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
 
 **リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
 
 以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要
-* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP ユーティリティメソッドと例
-* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要
+* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例
+* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

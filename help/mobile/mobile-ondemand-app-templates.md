@@ -44,7 +44,7 @@ We.Unlimited アプリは、完全に設定可能で管理しやすいAEM Mobile
 1. AEM Mobile アプリカタログ（*&lt;server-url>/aem/apps.html/content/mobileapps*）に移動します。
 1. 「**作成**」/「**アプリ**」を選択します（下図を参照）。
 
-このテンプレートを使用してアプリを作成すると、アプリに記事、バナー、コレクションを追加できます。 記事、バナー、コレクションの再訪問の作成については、[ コンテンツ管理アクション ](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md) を参照してください。
+このテンプレートを使用してアプリを作成すると、アプリに記事、バナー、コレクションを追加できます。 記事、バナー、コレクションの再訪問の作成については、[&#x200B; コンテンツ管理アクション &#x200B;](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md) を参照してください。
 
 >[!NOTE]
 >
@@ -146,11 +146,11 @@ AEM テンプレートと同様に、デフォルトのプロパティまたは�
 
 >[!NOTE]
 >
->AEMにコンポーネントを作成し、[CRXDE Liteを使用した開発 ](/help/sites-developing/developing-with-crxde-lite.md) を使用してカスタマイズできます。 既存のコンポーネントを必要に応じてカスタマイズしたら、**記事を管理** の **編集** オプションを使用して、ページに追加できます（上図を参照）。
+>AEMにコンポーネントを作成し、[CRXDE Liteを使用した開発 &#x200B;](/help/sites-developing/developing-with-crxde-lite.md) を使用してカスタマイズできます。 既存のコンポーネントを必要に応じてカスタマイズしたら、**記事を管理** の **編集** オプションを使用して、ページに追加できます（上図を参照）。
 
 >[!NOTE]
 >
->AEM Mobileの [ テンプレートおよびコンポーネント開発のベストプラクティス ](/help/mobile/best-practices-aem-mobile.md) を参照してください。
+>AEM Mobileの [&#x200B; テンプレートおよびコンポーネント開発のベストプラクティス &#x200B;](/help/mobile/best-practices-aem-mobile.md) を参照してください。
 
 ### 次の手順 {#the-next-steps}
 

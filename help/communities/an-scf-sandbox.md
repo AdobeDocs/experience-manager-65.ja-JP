@@ -18,13 +18,13 @@ ht-degree: 3%
 
 # SCF サンドボックスの作成  {#create-an-scf-sandbox}
 
-AEM 6.1 Communities の場合、サンドボックスをすばやく作成する最も簡単な方法は、コミュニティサイトを作成することです。 [AEM Communitiesの概要 ](getting-started.md) を参照してください。
+AEM 6.1 Communities の場合、サンドボックスをすばやく作成する最も簡単な方法は、コミュニティサイトを作成することです。 [AEM Communitiesの概要 &#x200B;](getting-started.md) を参照してください。
 
-開発者にとってもう 1 つの便利なツールは、[ コミュニティコンポーネントガイド ](components-guide.md) です。このガイドを使用すれば、コミュニティのコンポーネントや機能を探索し、迅速にプロトタイプを作成できます。
+開発者にとってもう 1 つの便利なツールは、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) です。このガイドを使用すれば、コミュニティのコンポーネントや機能を探索し、迅速にプロトタイプを作成できます。
 
-Web サイトの作成の演習は、Communities の機能を含むAEM web サイトの構造を理解するのに役立ちますが、[ ソーシャルコンポーネントフレームワーク（SCF） ](scf.md) の操作について調べる簡単なページも提供します。
+Web サイトの作成の演習は、Communities の機能を含むAEM web サイトの構造を理解するのに役立ちますが、[&#x200B; ソーシャルコンポーネントフレームワーク（SCF） &#x200B;](scf.md) の操作について調べる簡単なページも提供します。
 
-このチュートリアルは、主にAEMを初めて使用し、SCF コンポーネントの使用に関心のある開発者向けです。 ここでは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト化など、サイト内の構造に焦点を当てた [ 完全に機能するインターネット web サイトを作成する方法 ](../../help/sites-developing/website.md) のチュートリアルに類似した、SCF サンドボックスサイトの作成について順を追って説明します。
+このチュートリアルは、主にAEMを初めて使用し、SCF コンポーネントの使用に関心のある開発者向けです。 ここでは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト化など、サイト内の構造に焦点を当てた [&#x200B; 完全に機能するインターネット web サイトを作成する方法 &#x200B;](../../help/sites-developing/website.md) のチュートリアルに類似した、SCF サンドボックスサイトの作成について順を追って説明します。
 
 開発はオーサーインスタンスで行われますが、サイトでの実験はパブリッシュインスタンスで行うのが最適です。
 
@@ -39,20 +39,20 @@ Web サイトの作成の演習は、Communities の機能を含むAEM web サ�
 
 >[!CAUTION]
 >
->このチュートリアルでは、[Communities サイトコンソール ](sites-console.md) を使用して作成された機能を持つコミュニティサイトは作成しません。 例えば、このチュートリアルでは、ログイン、自己登録、[ ソーシャルログイン ](social-login.md)、メッセージング、プロファイルなどの設定方法については説明しません。
+>このチュートリアルでは、[Communities サイトコンソール &#x200B;](sites-console.md) を使用して作成された機能を持つコミュニティサイトは作成しません。 例えば、このチュートリアルでは、ログイン、自己登録、[&#x200B; ソーシャルログイン &#x200B;](social-login.md)、メッセージング、プロファイルなどの設定方法については説明しません。
 >
->シンプルなコミュニティサイトをお勧めする場合は、[ サンプルページを作成 ](create-sample-page.md) チュートリアルに従ってください。
+>シンプルなコミュニティサイトをお勧めする場合は、[&#x200B; サンプルページを作成 &#x200B;](create-sample-page.md) チュートリアルに従ってください。
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルでは、Communities の [ 最新リリース ](deploy-communities.md#latest-releases) を備えた 1 つのAEM オーサーインスタンスと 1 つのAEM パブリッシュインスタンスがインストールされていることを前提としています。
+このチュートリアルでは、Communities の [&#x200B; 最新リリース &#x200B;](deploy-communities.md#latest-releases) を備えた 1 つのAEM オーサーインスタンスと 1 つのAEM パブリッシュインスタンスがインストールされていることを前提としています。
 
 AEM プラットフォームを初めて使用する開発者向けに役立つリンクを以下に示します。
 
-* [ はじめに ](../../help/sites-deploying/deploy.md#getting-started):AEM インスタンスのデプロイ用。
+* [&#x200B; はじめに &#x200B;](../../help/sites-deploying/deploy.md#getting-started):AEM インスタンスのデプロイ用。
 
-   * [ 基本 ](../../help/sites-developing/the-basics.md):Web サイトや機能の開発者向け。
-   * [ 作成者がおこなう最初の手順 ](../../help/sites-authoring/first-steps.md)：ページコンテンツのオーサリング用。
+   * [&#x200B; 基本 &#x200B;](../../help/sites-developing/the-basics.md):Web サイトや機能の開発者向け。
+   * [&#x200B; 作成者がおこなう最初の手順 &#x200B;](../../help/sites-authoring/first-steps.md)：ページコンテンツのオーサリング用。
 
 ## CRXDE Lite開発環境の使用 {#using-crxde-lite-development-environment}
 
@@ -64,7 +64,7 @@ AEM開発者は、ほとんどの時間をオーサーインスタンスの [&#1
 
    ![crxde-lite](assets/tools-crxde.png)
 
-2. [ クラシック UI のようこそページ ](http://localhost:4502/welcome.html) から、下にスクロールして、右側のパネルの **[!UICONTROL CRXDE Lite]** をクリックします。
+2. [&#x200B; クラシック UI のようこそページ &#x200B;](http://localhost:4502/welcome.html) から、下にスクロールして、右側のパネルの **[!UICONTROL CRXDE Lite]** をクリックします。
 
    ![classic-ui-crxde](assets/classic-ui-crxde.png)
 
@@ -84,4 +84,4 @@ CRXDE Liteを操作するには、開発者または管理者権限でログイ�
 
 ***不明の場合は、再ログインしてください。***
 
-![ 再ログイン ](assets/relogin.png)
+![&#x200B; 再ログイン &#x200B;](assets/relogin.png)

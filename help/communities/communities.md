@@ -22,7 +22,7 @@ ht-degree: 15%
 
 Adobe Experience Manager（AEM） Communities を使用すると、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能を簡単に作成およびカスタマイズできます。 これらの機能により、ユーザー生成コンテンツ（UGC）がパブリッシュ環境に入力されます。
 
-[ コミュニティサイト ](overview.md#communitiessites) の基盤となるのは、[ ソーシャルコンポーネントフレームワーク ](scf.md) （SCF）です。 コミュニティサイトの作成は、[ コミュニティ機能 ](functions.md) で構成された [&#128279;](sites-console.md) コミュニティサイトテンプレート  を選択することから始まります。
+[&#x200B; コミュニティサイト &#x200B;](overview.md#communitiessites) の基盤となるのは、[&#x200B; ソーシャルコンポーネントフレームワーク &#x200B;](scf.md) （SCF）です。 コミュニティサイトの作成は、[&#x200B; コミュニティ機能 &#x200B;](functions.md) で構成された [&#128279;](sites-console.md) コミュニティサイトテンプレート  を選択することから始まります。
 
 概要とはじめにのチュートリアルについては、次を参照してください。
 
@@ -31,26 +31,26 @@ Adobe Experience Manager（AEM） Communities を使用すると、フォーラ�
 
 >[!NOTE]
 > 
->[ 最新リリース ](deploy-communities.md#latest-releases) を常に最新の状態にしておくことを強くお勧めします。
+>[&#x200B; 最新リリース &#x200B;](deploy-communities.md#latest-releases) を常に最新の状態にしておくことを強くお勧めします。
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-* [ コミュニティコンテンツストレージ ](working-with-srp.md):UGC 共通ストアで使用可能なソーシャルリソースプロバイダー（SRP）の選択肢について説明します
-* [Communities 向けの推奨トポロジ ](topologies.md)：ユースケースと SRP の選択に基づくトポロジについて説明します
+* [&#x200B; コミュニティコンテンツストレージ &#x200B;](working-with-srp.md):UGC 共通ストアで使用可能なソーシャルリソースプロバイダー（SRP）の選択肢について説明します
+* [Communities 向けの推奨トポロジ &#x200B;](topologies.md)：ユースケースと SRP の選択に基づくトポロジについて説明します
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [ ソーシャルコンポーネントフレームワーク ](scf.md)：フレームワークと API の概要
-* [SCF Handlebars ヘルパー ](handlebars-helpers.md)：デフォルトのヘルパーとカスタムヘルパーの記述方法。
-* [ クライアントサイドのカスタマイズ ](client-customize.md)：ブラウザーで実行されるコードをカスタマイズする。
-* [ サーバーサイドのカスタマイズ ](server-customize.md)：サーバー上で実行されるコードをカスタマイズする。
-* [ ストレージリソースプロバイダー（SRP） ](srp.md)：コミュニティコンテンツストレージの概要。
-* [ コーディングガイドライン ](code-guide.md)：ガイドライン、ヒントとテクニック。
-* [ コミュニティコンポーネントガイド ](components-guide.md)：インタラクティブ開発ツール。
+* [&#x200B; ソーシャルコンポーネントフレームワーク &#x200B;](scf.md)：フレームワークと API の概要
+* [SCF Handlebars ヘルパー &#x200B;](handlebars-helpers.md)：デフォルトのヘルパーとカスタムヘルパーの記述方法。
+* [&#x200B; クライアントサイドのカスタマイズ &#x200B;](client-customize.md)：ブラウザーで実行されるコードをカスタマイズする。
+* [&#x200B; サーバーサイドのカスタマイズ &#x200B;](server-customize.md)：サーバー上で実行されるコードをカスタマイズする。
+* [&#x200B; ストレージリソースプロバイダー（SRP） &#x200B;](srp.md)：コミュニティコンテンツストレージの概要。
+* [&#x200B; コーディングガイドライン &#x200B;](code-guide.md)：ガイドライン、ヒントとテクニック。
+* [&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)：インタラクティブ開発ツール。
 
 ## コンポーネント、機能、機能の基本事項 {#component-function-and-feature-essentials}
 
-AEM Communitiesのコンポーネント、機能および機能は、[ コミュニティサイト ](sites-console.md) の構築ブロックを提供します。
+AEM Communitiesのコンポーネント、機能および機能は、[&#x200B; コミュニティサイト &#x200B;](sites-console.md) の構築ブロックを提供します。
 
 * [コンポーネントおよび機能の基本事項](essentials.md)
 * [コミュニティコンポーネントの clientlib](clientlibs.md)
@@ -65,7 +65,7 @@ AEM Communitiesのコンポーネント、機能および機能は、[ コミュ
 
 ## コミュニティグループ {#community-groups}
 
-[ コミュニティグループ ](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内にサブコミュニティを形成できるようにするという概念です。 コミュニティグループは、パブリッシュ環境またはオーサー環境で作成する場合があります。
+[&#x200B; コミュニティグループ &#x200B;](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内にサブコミュニティを形成できるようにするという概念です。 コミュニティグループは、パブリッシュ環境またはオーサー環境で作成する場合があります。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [Groups 関数](functions.md#groups-function)
@@ -75,8 +75,8 @@ AEM Communitiesのコンポーネント、機能および機能は、[ コミュ
 
 ## データの管理 {#managing-data}
 
-* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP API ユーティリティメソッドと例
-* [ タグの基本事項 ](tag.md) - コミュニティメンバーが UGC やカタログ化されたイネーブルメントリソースにタグを付ける機能
+* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP API ユーティリティメソッドと例
+* [&#x200B; タグの基本事項 &#x200B;](tag.md) - コミュニティメンバーが UGC やカタログ化されたイネーブルメントリソースにタグを付ける機能
 
 ## チュートリアル {#tutorials}
 
@@ -91,8 +91,8 @@ AEM Communitiesのコンポーネント、機能および機能は、[ コミュ
 
 ## 関連する Communities ドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントとDispatcher設定について詳しくは、[Communities のデプロイ ](deploy-communities.md) を参照してください。
+* 推奨されるデプロイメントとDispatcher設定について詳しくは、[Communities のデプロイ &#x200B;](deploy-communities.md) を参照してください。
 
-* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージングの設定については、[ コミュニティサイトの管理 ](administer-landing.md) を参照してください。
+* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージングの設定については、[&#x200B; コミュニティサイトの管理 &#x200B;](administer-landing.md) を参照してください。
 
-* Communities コンポーネントを使用して作成および設定する方法については、[Communities コンポーネントのオーサリング ](author-communities.md) を参照してください。
+* Communities コンポーネントを使用して作成および設定する方法については、[Communities コンポーネントのオーサリング &#x200B;](author-communities.md) を参照してください。

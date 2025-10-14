@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ASRP を共通ストアとして使用するようにAEM Communitiesが設定されている場合、ユーザー生成コンテンツ（UGC）には、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期やレプリケーションの必要はありません。
 
-[SRP オプションの特性 ](/help/communities/working-with-srp.md#characteristics-of-srp-options) および [ 推奨されるトポロジ ](/help/communities/topologies.md) も参照してください。
+[SRP オプションの特性 &#x200B;](/help/communities/working-with-srp.md#characteristics-of-srp-options) および [&#x200B; 推奨されるトポロジ &#x200B;](/help/communities/topologies.md) も参照してください。
 
 ## 要件 {#requirements}
 
@@ -42,7 +42,7 @@ UGC に ASRP を使用するようにAEM Communities サイトを設定するに
 
 ### ASRP の選択 {#select-asrp}
 
-[ ストレージ設定コンソール ](/help/communities/srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](/help/communities/srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
 
 **AEM オーサーインスタンスの場合：**
 
@@ -69,23 +69,23 @@ UGC に ASRP を使用するようにAEM Communities サイトを設定するに
 
   オーサーインスタンスとパブリッシュインスタンスごとに、ストレージ設定コンソールからデータセンターへの接続をテストします。
 
-* [ リンクを外部化 ](#externalize-links) して、プロファイルデータのサイト URL がデータセンターからルーティング可能であることを確認します。
+* [&#x200B; リンクを外部化 &#x200B;](#externalize-links) して、プロファイルデータのサイト URL がデータセンターからルーティング可能であることを確認します。
 
 ### 暗号鍵をレプリケート {#replicate-the-crypto-key}
 
 コンシューマーキーと秘密鍵は暗号化されます。 キーを適切に暗号化/復号化するには、プライマリ Granite 暗号キーがすべてのAEM インスタンスで同じである必要があります。
 
-[ 暗号鍵をレプリケート ](/help/communities/deploy-communities.md#replicate-the-crypto-key) の手順に従います。
+[&#x200B; 暗号鍵をレプリケート &#x200B;](/help/communities/deploy-communities.md#replicate-the-crypto-key) の手順に従います。
 
 ### リンクを外部化 {#externalize-links}
 
-プロファイルおよびプロファイル画像の正しいリンクを使用するには、適切に [Link Externalizer を設定 ](/help/sites-developing/externalizer.md) してください。
+プロファイルおよびプロファイル画像の正しいリンクを使用するには、適切に [Link Externalizer を設定 &#x200B;](/help/sites-developing/externalizer.md) してください。
 
 ドメインを、データセンター URL （ASRP エンドポイント）からルーティング可能な URL に設定してください。
 
 ### 時刻の同期 {#time-synchronization}
 
-ASRP エンドポイントでの認証を成功させるには、ホストされているAEM Communitiesを実行しているマシンを時刻同期する必要があります（例：[Network Time Protocol （NTP） ](https://www.ntp.org/)）。
+ASRP エンドポイントでの認証を成功させるには、ホストされているAEM Communitiesを実行しているマシンを時刻同期する必要があります（例：[Network Time Protocol （NTP） &#x200B;](https://www.ntp.org/)）。
 
 ### 設定の公開 {#publishing-the-configuration}
 
@@ -107,9 +107,9 @@ AEM オーサーインスタンス上：
 >
 >公開されたコミュニティサイトで ASRP を有効にすると、[JCR](/help/communities/jsrp.md) に既に保存されている UGC は、オンプレミスストレージとクラウドストレージの間でデータが同期されないため、表示されなくなります。
 
-**`AEM Communities Extension`** は、以前AEM 6.0 social communities as a cloud service で導入されました。 AEM 6.1 Communities の場合、クラウドの設定は必要ありません。[ ストレージ設定コンソール ](/help/communities/srp-config.md) から ASRP を選択するだけです。
+**`AEM Communities Extension`** は、以前AEM 6.0 social communities as a cloud service で導入されました。 AEM 6.1 Communities の場合、クラウドの設定は必要ありません。[&#x200B; ストレージ設定コンソール &#x200B;](/help/communities/srp-config.md) から ASRP を選択するだけです。
 
-新しいストレージ構造により、ソーシャルコミュニティから Communities にアップグレードする際は、[ アップグレード ](/help/communities/upgrade.md#adobe-cloud-storage) の手順に従う必要があります。
+新しいストレージ構造により、ソーシャルコミュニティから Communities にアップグレードする際は、[&#x200B; アップグレード &#x200B;](/help/communities/upgrade.md#adobe-cloud-storage) の手順に従う必要があります。
 
 ## ユーザーデータの管理 {#managing-user-data}
 
@@ -122,13 +122,13 @@ AEM オーサーインスタンス上：
 
 ### アップグレード後に UGC が表示されなくなる {#ugc-disappears-after-upgrade}
 
-既存のAEM 6.0 ソーシャルコミュニティサイトからアップグレードする場合は、[ アップグレードの手順 ](/help/communities/upgrade.md#adobe-cloud-storage) に従ってください。従わないと、UGC が失われるようです。
+既存のAEM 6.0 ソーシャルコミュニティサイトからアップグレードする場合は、[&#x200B; アップグレードの手順 &#x200B;](/help/communities/upgrade.md#adobe-cloud-storage) に従ってください。従わないと、UGC が失われるようです。
 
 ### 認証エラー {#authentication-errors}
 
 データセンター URL に対する認証エラーを受け取り、AEM error.log に古いタイムスタンプに関するメッセージが含まれている場合は、時間同期が行われていることを確認します。
 
-[Network Time Protocol （NTP） ](https://www.ntp.org/) などのツールを使用して、すべてのAEM オーサーサーバーとパブリッシュサーバーの時刻を同期します。
+[Network Time Protocol （NTP） &#x200B;](https://www.ntp.org/) などのツールを使用して、すべてのAEM オーサーサーバーとパブリッシュサーバーの時刻を同期します。
 
 ### 検索に新しいコンテンツが表示されない {#new-content-does-not-appear-in-searches}
 

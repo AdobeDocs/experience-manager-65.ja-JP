@@ -30,11 +30,11 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 * Publish側でのブログ記事およびコメントの作成
 * リッチテキスト編集
 * インライン画像（ドラッグ&amp;ドロップをサポート）
-* 埋め込みソーシャルネットワーキングコンテンツ（[oEmbed サポート ](/help/communities/blog-developer-basics.md#allowing-rich-media)）
+* 埋め込みソーシャルネットワーキングコンテンツ（[oEmbed サポート &#x200B;](/help/communities/blog-developer-basics.md#allowing-rich-media)）
 * ドラフトモード
 * スケジュールされた公開
-* 代理人として作成（[ 特権メンバー ](/help/communities/users.md#privileged-members-group) は、別のコミュニティメンバーに代わってコンテンツを作成できます）
-* ブログ記事およびコメントの [ コンテキスト内および一括モデレート ](/help/communities/moderate-ugc.md)
+* 代理人として作成（[&#x200B; 特権メンバー &#x200B;](/help/communities/users.md#privileged-members-group) は、別のコミュニティメンバーに代わってコンテンツを作成できます）
+* ブログ記事およびコメントの [&#x200B; コンテキスト内および一括モデレート &#x200B;](/help/communities/moderate-ugc.md)
 
 ドキュメントのこの節では、以下について説明します。
 
@@ -56,9 +56,9 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 そして、ブログが表示されるページの場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/blog-developer-basics.md#essentials-for-client-side) が含まれている場合、`Blog` のコンポーネントが表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/blog-developer-basics.md#essentials-for-client-side) が含まれている場合、`Blog` のコンポーネントが表示されます。
 
 ![add-blog-component](assets/add-blog-component.png)
 
@@ -66,9 +66,9 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 配置された `Blog` コンポーネントを選択して、編集ダイアログボックスを開く `Configure` アイコンにアクセスして選択できるようにします。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
-![ ブログ設定 ](assets/blog-configure.png)
+![&#x200B; ブログ設定 &#x200B;](assets/blog-configure.png)
 
 #### 「設定」タブ {#settings-tab}
 
@@ -166,21 +166,21 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 * **次の操作を許可**
 
-  オンにした場合、メンバーが新しい投稿を [ 通知 ](/help/communities/notifications.md) できるようにするブログ記事の次の機能を含めます。 デフォルトではオフになっています。
+  オンにした場合、メンバーが新しい投稿を [&#x200B; 通知 &#x200B;](/help/communities/notifications.md) できるようにするブログ記事の次の機能を含めます。 デフォルトではオフになっています。
 
 * **メール購読の許可**
 
-  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[ 購読 ](/help/communities/subscriptions.md)）。 `Allow Following` を確認し、[ メールを設定済み ](/help/communities/email.md) にする必要があります。 デフォルトではオフになっています。
+  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md)）。 `Allow Following` を確認し、[&#x200B; メールを設定済み &#x200B;](/help/communities/email.md) にする必要があります。 デフォルトではオフになっています。
 
 * **バッジを表示**
 
-  オンにすると、獲得および割り当てられた [ バッジ ](/help/communities/implementing-scoring.md) がメンバーのブログエントリと共に表示されます。 デフォルトではオフになっています。
+  オンにすると、獲得および割り当てられた [&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md) がメンバーのブログエントリと共に表示されます。 デフォルトではオフになっています。
 
 * **リストページで返信を受け取らない**
 
 * **おすすめコンテンツを許可**
 
-  オンにした場合、アイデアは [ おすすめコンテンツ ](/help/communities/featured.md) と識別されます。 デフォルトではオフになっています。
+  オンにした場合、アイデアは [&#x200B; おすすめコンテンツ &#x200B;](/help/communities/featured.md) と識別されます。 デフォルトではオフになっています。
 
 * **メンションの有効化**
 
@@ -298,13 +298,13 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 #### モデレーターと管理者 {#moderators-and-administrators}
 
-サインインしたユーザーがモデレーターまたは管理者権限を持っている場合、ブログに投稿されたすべてのブログ記事とコメントで（コンポーネントの設定で許可された） [ モデレートタスク ](/help/communities/moderate-ugc.md) を実行できます。
+サインインしたユーザーがモデレーターまたは管理者権限を持っている場合、ブログに投稿されたすべてのブログ記事とコメントで（コンポーネントの設定で許可された） [&#x200B; モデレートタスク &#x200B;](/help/communities/moderate-ugc.md) を実行できます。
 
 ![moderator-homepage](assets/moderator-homepage.png)
 
 #### メンバー {#members}
 
-ログインしたユーザーがコミュニティメンバーまたは [ 権限のあるメンバー ](/help/communities/users.md#privileged-members-group) （設定に応じて異なる）の場合、ユーザーは `New Article` を選択して新しいブログ記事を作成および投稿できます。
+ログインしたユーザーがコミュニティメンバーまたは [&#x200B; 権限のあるメンバー &#x200B;](/help/communities/users.md#privileged-members-group) （設定に応じて異なる）の場合、ユーザーは `New Article` を選択して新しいブログ記事を作成および投稿できます。
 
 具体的には、次のような場合があります。
 
@@ -327,10 +327,10 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ ブログの初期設定 ](/help/communities/blog-developer-basics.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; ブログの初期設定 &#x200B;](/help/communities/blog-developer-basics.md) ページを参照してください。
 
-ブログエントリとコメントのモデレートについては、「[ ユーザー作成コンテンツのモデレート ](/help/communities/moderate-ugc.md)」を参照してください。
+ブログエントリとコメントのモデレートについては、「[&#x200B; ユーザー作成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md)」を参照してください。
 
-ブログエントリとコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け ](/help/communities/tag-ugc.md) を参照してください。
+ブログエントリとコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け &#x200B;](/help/communities/tag-ugc.md) を参照してください。
 
-ブログエントリとコメントの翻訳については、[ ユーザー生成コンテンツの翻訳 ](/help/communities/translate-ugc.md) を参照してください。
+ブログエントリとコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳 &#x200B;](/help/communities/translate-ugc.md) を参照してください。

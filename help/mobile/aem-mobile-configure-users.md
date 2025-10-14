@@ -42,7 +42,7 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. app-authors ユーザーグループを作成したので、「ユーザーAdmin Console[ を使用して、個々のチームメンバーをこの新しいグループに追加でき ](http://localhost:4502/libs/granite/security/content/useradmin.md) す。
+1. app-authors ユーザーグループを作成したので、「ユーザーAdmin Console[&#x200B; を使用して、個々のチームメンバーをこの新しいグループに追加でき &#x200B;](http://localhost:4502/libs/granite/security/content/useradmin.md) す。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -81,7 +81,7 @@ app-admins グループのメンバーは、app-authors **AND** に含まれて�
    >
    >ワークフローユーザーは、PhoneGap Buildサービスを使用したリモートビルドに必要です
 
-1. [ 権限コンソール ](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
+1. [&#x200B; 権限コンソール &#x200B;](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
 
    * /etc/cloudservices/mobileservices の（読み取り、変更、作成、削除、レプリケート）
 

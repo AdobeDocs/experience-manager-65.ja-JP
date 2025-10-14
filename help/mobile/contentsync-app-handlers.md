@@ -210,4 +210,4 @@ mobileappsoffers ハンドラーは mobileappspages ハンドラーを実行し�
 
 >[!NOTE]
 >
->AEM Mobile アプリの開発を開始するには、[ ここ ](/help/mobile/getting-started-aem-mobile.md) をクリックします。
+>AEM Mobile アプリの開発を開始するには、[&#x200B; ここ &#x200B;](/help/mobile/getting-started-aem-mobile.md) をクリックします。

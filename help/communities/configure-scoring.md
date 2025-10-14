@@ -27,9 +27,9 @@ AEM Communitiesのスコアとバッジ機能は、コミュニティメンバ�
 
 このページには、その他の技術的な詳細が含まれています。
 
-* 画像またはテキストとしてバッジを [ 表示 ](#displaying-badges) する方法
-* 広範な [ デバッグログ ](#debug-log-for-scoring-and-badging) を有効にする方法
-* スコアおよびバッジに関連する [UGC にアクセス ](#ugc-for-scoring-and-badging) 方法
+* 画像またはテキストとしてバッジを [&#x200B; 表示 &#x200B;](#displaying-badges) する方法
+* 広範な [&#x200B; デバッグログ &#x200B;](#debug-log-for-scoring-and-badging) を有効にする方法
+* スコアおよびバッジに関連する [UGC にアクセス &#x200B;](#ugc-for-scoring-and-badging) 方法
 
 >[!CAUTION]
 >
@@ -71,13 +71,13 @@ true の場合、`isAssigned` はバッジが役割に割り当てられたこ�
 
 false の場合、バッジ `isAssigned` 獲得したスコアに対して授与され、そのバッジは画像として表示される必要があることを示します。
 
-この動作への変更は、カスタマイズされたスクリプト（オーバーライドまたはオーバーレイ）で行う必要があります。 [ クライアントサイドのカスタマイズ ](/help/communities/client-customize.md) を参照してください。
+この動作への変更は、カスタマイズされたスクリプト（オーバーライドまたはオーバーレイ）で行う必要があります。 [&#x200B; クライアントサイドのカスタマイズ &#x200B;](/help/communities/client-customize.md) を参照してください。
 
 ## スコアリングおよびバッジのデバッグログ {#debug-log-for-scoring-and-badging}
 
 スコアリングとバッジのデバッグに役立つように、カスタムログファイルを設定できます。 機能に問題が発生した場合、このログファイルの内容がカスタマーサポートに提供されることがあります。
 
-手順について詳しくは、[ カスタムログファイルの作成 ](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file) を参照してください。
+手順について詳しくは、[&#x200B; カスタムログファイルの作成 &#x200B;](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file) を参照してください。
 
 slinglog ファイルをすばやく設定するには：
 
@@ -120,13 +120,13 @@ slinglog ファイルをすばやく設定するには：
 
 ## スコアおよびバッジ用 UGC {#ugc-for-scoring-and-badging}
 
-選択された SRP が JSRP または MSRP であり、ASRP ではない場合、スコアおよびバッジに関連する UGC を表示できます。 （これらの用語に詳しくない場合は、[ コミュニティコンテンツストレージ ](/help/communities/working-with-srp.md) および [ ストレージリソースプロバイダーの概要 ](/help/communities/srp.md) を参照してください。）
+選択された SRP が JSRP または MSRP であり、ASRP ではない場合、スコアおよびバッジに関連する UGC を表示できます。 （これらの用語に詳しくない場合は、[&#x200B; コミュニティコンテンツストレージ &#x200B;](/help/communities/working-with-srp.md) および [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](/help/communities/srp.md) を参照してください。）
 
 UGC は [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して簡単にアクセスできるので、スコアリングデータとバッジデータへのアクセスに関する説明では JSRP が使用されます。
 
 **オーサー環境における JSRP**：オーサー環境で実験を行うと、UGC がオーサー環境からのみ表示されるようになります。
 
-**パブリッシュ環境での JSRP**：同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスに対する管理者権限を持つCRXDE Liteにアクセスする必要があります。 パブリッシュインスタンスが [ 実稼動モード ](/help/sites-administering/production-ready.md) （nosamplecontent 実行モード）で実行されている場合は、[CRXDE Liteを有効にする ](/help/sites-administering/enabling-crxde-lite.md) 必要があります。
+**パブリッシュ環境での JSRP**：同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスに対する管理者権限を持つCRXDE Liteにアクセスする必要があります。 パブリッシュインスタンスが [&#x200B; 実稼動モード &#x200B;](/help/sites-administering/production-ready.md) （nosamplecontent 実行モード）で実行されている場合は、[CRXDE Liteを有効にする &#x200B;](/help/sites-administering/enabling-crxde-lite.md) 必要があります。
 
 JSRP 上の UGC のベースの場所は `/content/usergenerated/asi/jcr/` です。
 
@@ -137,7 +137,7 @@ JSRP 上の UGC のベースの場所は `/content/usergenerated/asi/jcr/` で�
 * [com.adobe.cq.social.scoring.api、6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
 * [com.adobe.cq.social.badging.api - 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
 
-インストールされた機能パックの最新の Javadocs は、開発者がAdobeリポジトリから使用できます。 [ コミュニティでの Maven の使用：Javadocs](/help/communities/maven.md#javadocs) を参照してください。
+インストールされた機能パックの最新の Javadocs は、開発者がAdobeリポジトリから使用できます。 [&#x200B; コミュニティでの Maven の使用：Javadocs](/help/communities/maven.md#javadocs) を参照してください。
 
 **リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
 
@@ -147,7 +147,7 @@ JSRP 上の UGC のベースの場所は `/content/usergenerated/asi/jcr/` で�
 
 1. AEM サイト *一意の ID を持つ* （ウィザードを使用して作成されたコミュニティサイト） :
 
-   * [ はじめる前に ](/help/communities/getting-started.md) のチュートリアルで作成したはじめる前に（engage）サイトを使用します。
+   * [&#x200B; はじめる前に &#x200B;](/help/communities/getting-started.md) のチュートリアルで作成したはじめる前に（engage）サイトを使用します。
    * フォーラムページのノードを見つけます
 
      `/content/sites/engage/en/forum/jcr:content`
@@ -177,7 +177,7 @@ JSRP 上の UGC のベースの場所は `/content/usergenerated/asi/jcr/` で�
 
 1. AEM サイト *一意の ID なし* :
 
-   * [ コミュニティコンポーネントガイド ](/help/communities/components-guide.md) の使用
+   * [&#x200B; コミュニティコンポーネントガイド &#x200B;](/help/communities/components-guide.md) の使用
    * フォーラムページのノードを見つけます
 
      `/content/community-components/en/forum/jcr:content`
@@ -213,7 +213,7 @@ JSRP 上の UGC のベースの場所は `/content/usergenerated/asi/jcr/` で�
 
    ユーザーが 2 つのブロンズバッジを獲得し、モデレーターバッジを獲得すると、フォーラムへのエントリが次のように表示されます。
 
-   ![ 調整者 ](assets/moderator.png)
+   ![&#x200B; 調整者 &#x200B;](assets/moderator.png)
 
 >[!NOTE]
 >
@@ -274,5 +274,5 @@ Geometrixxエンゲージメントサイトの場合、ユーザーとそのス�
 
 点に基づいてメンバーをソートしたリストを表示するには、次の手順に従います。
 
-* コミュニティサイトまたはグループテンプレートに含める [ リーダーボード関数 ](/help/communities/functions.md#leaderboard-function)。
-* [ リーダーボードコンポーネント ](/help/communities/enabling-leaderboard.md)：リーダーボード関数の注目のコンポーネントで、ページオーサリング用。
+* コミュニティサイトまたはグループテンプレートに含める [&#x200B; リーダーボード関数 &#x200B;](/help/communities/functions.md#leaderboard-function)。
+* [&#x200B; リーダーボードコンポーネント &#x200B;](/help/communities/enabling-leaderboard.md)：リーダーボード関数の注目のコンポーネントで、ページオーサリング用。

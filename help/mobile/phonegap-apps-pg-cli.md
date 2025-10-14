@@ -30,12 +30,12 @@ PhoneGap CLI の設定（`https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.
 
 iOSの場合：iPhone および iPad 用に開発するには、Appleの Xcode IDE が必要です。
 
-* [ こちら ](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1) から無料でダウンロードできます。
+* [&#x200B; こちら &#x200B;](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2F&rv=1) から無料でダウンロードできます。
 * PhoneGap iOS プラットフォームガイド （`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`）
 
 Android™ の場合：iPhone と iPad 用に開発するには、GoogleのAndroid™Stuido IDE が必要です。
 
-* [ こちら ](https://developer.android.com/studio) から無料でダウンロードできます。
+* [&#x200B; こちら &#x200B;](https://developer.android.com/studio) から無料でダウンロードできます。
 * PhoneGap Android™ プラットフォームガイド（`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`）
 
 ## Sourceのダウンロード {#download-the-source}
@@ -156,4 +156,4 @@ phonegap run <platform> --emulator
 
 ## 次の手順 {#the-next-steps}
 
-PhoneGap CLI を使用したアプリの開発については、「[ デバイス機能へのアクセス ](/help/mobile/phonegap-access-device-features.md)」を参照してください。
+PhoneGap CLI を使用したアプリの開発については、「[&#x200B; デバイス機能へのアクセス &#x200B;](/help/mobile/phonegap-access-device-features.md)」を参照してください。

@@ -24,13 +24,13 @@ Handlebars ヘルパー（ヘルパー）は、SCF コンポーネントの操�
 
 この実装には、クライアントサイドとサーバーサイドの定義が含まれています。 また、開発者がカスタムヘルパーを作成することもできます。
 
-AEM Communitiesで提供されるカスタム SCF ヘルパーは、[ クライアントライブラリ ](../../help/sites-developing/clientlibs.md) で定義されます。
+AEM Communitiesで提供されるカスタム SCF ヘルパーは、[&#x200B; クライアントライブラリ &#x200B;](../../help/sites-developing/clientlibs.md) で定義されます。
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
->[ 最新の Communities 機能パック ](deploy-communities.md#latestfeaturepack) をインストールしてください。
+>[&#x200B; 最新の Communities 機能パック &#x200B;](deploy-communities.md#latestfeaturepack) をインストールしてください。
 
 ## 短縮 {#abbreviate}
 
@@ -180,7 +180,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-[WCM モード ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) の現在の値を、モードの文字列区切りリストに対してテストするブロックヘルパー。
+[WCM モード &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) の現在の値を、モードの文字列区切りリストに対してテストするブロックヘルパー。
 
 ### パラメーター {#parameters-4}
 
@@ -190,7 +190,7 @@ Then content-loadmore would return
 
 * **mode**：文字列
 
-  （オプション）設定されている場合にテストする [WCM モード ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) のコンマ区切りリスト。
+  （オプション）設定されている場合にテストする [WCM モード &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) のコンマ区切りリスト。
 
 ### 例 {#example-2}
 
@@ -206,7 +206,7 @@ Then content-loadmore would return
 
 このヘルパーは、Handlebars ヘルパー「i18n」を上書きします。
 
-[JavaScript コードでの文字列の国際化 ](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code) も参照してください。
+[JavaScript コードでの文字列の国際化 &#x200B;](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code) も参照してください。
 
 ### パラメーター {#parameters-5}
 
@@ -233,7 +233,7 @@ Then content-loadmore would return
 
 コンポーネントを存在しないリソースとしてテンプレートに含めるためのヘルパー。
 
-このメソッドを使用すると、JCR ノードとして追加されたリソースの場合よりも、プログラムによるリソースのカスタマイズが容易になります。 [ コミュニティコンポーネントを追加または含める ](scf.md#add-or-include-a-communities-component) を参照してください。
+このメソッドを使用すると、JCR ノードとして追加されたリソースの場合よりも、プログラムによるリソースのカスタマイズが容易になります。 [&#x200B; コミュニティコンポーネントを追加または含める &#x200B;](scf.md#add-or-include-a-communities-component) を参照してください。
 
 組み込むことができる Communities コンポーネントは一部のみです。<!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
@@ -523,7 +523,7 @@ template(data);
 
 ### サーバーサイドのカスタムヘルパー {#server-side-custom-helpers}
 
-カスタムの SCF ヘルパーをサーバーサイドで実装して登録するには、Java™ インターフェイス [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html) を実装し、[OSGi サービス ](../../help/sites-developing/the-basics.md#osgi) として作成してから、OSGi バンドルの一部としてインストールします。
+カスタムの SCF ヘルパーをサーバーサイドで実装して登録するには、Java™ インターフェイス [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html) を実装し、[OSGi サービス &#x200B;](../../help/sites-developing/the-basics.md#osgi) として作成してから、OSGi バンドルの一部としてインストールします。
 
 次に例を示します。
 
@@ -594,7 +594,7 @@ function(Handlebars, SCF, $CQ) {
 
 * `cq.social.scf` に依存関係を含めます。
 * Handlebars の読み込み後に読み込みます。
-* [ この値を含む ](clientlibs.md)。
+* [&#x200B; この値を含む &#x200B;](clientlibs.md)。
 
 注記：SCF ヘルパーは `/etc/clientlibs/social/commons/scf/helpers.js` で定義されます。
 

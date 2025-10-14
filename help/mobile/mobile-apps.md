@@ -28,4 +28,4 @@ AEM Mobileでは、複数の方法でアプリを作成できます。 アプリ
 
 >[!NOTE]
 >
->Adobe Experience Managerを初めて使用する場合は、[AEMの基本を学ぶ ](/help/sites-deploying/deploy.md) を参照してください。
+>Adobe Experience Managerを初めて使用する場合は、[AEMの基本を学ぶ &#x200B;](/help/sites-deploying/deploy.md) を参照してください。

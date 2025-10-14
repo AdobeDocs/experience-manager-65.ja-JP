@@ -24,7 +24,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
 
 ## コンテンツの公開/非公開 {#publishing-unpublishing-the-content}
 
@@ -55,4 +55,4 @@ ht-degree: 4%
 * [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)
 
-オーサリングに関するトピックについて詳しくは、「[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング ](/help/mobile/mobile-apps-ondemand.md)」を参照してください。
+オーサリングに関するトピックについて詳しくは、「[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング &#x200B;](/help/mobile/mobile-apps-ondemand.md)」を参照してください。

@@ -34,7 +34,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) を参照してください。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) を参照してください。
 
 ## コンテンツの作成と管理 {#creating-and-managing-content}
 
@@ -48,7 +48,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->通常は、コンテンツを公開する前にプリフライトを行う必要があります。 詳しくは、[ プリフライトによるプレビュー ](/help/mobile/aem-mobile-manage-ondemand-services.md) を参照してください。
+>通常は、コンテンツを公開する前にプリフライトを行う必要があります。 詳しくは、[&#x200B; プリフライトによるプレビュー &#x200B;](/help/mobile/aem-mobile-manage-ondemand-services.md) を参照してください。
 
 ### その他のリソース {#additional-resources}
 

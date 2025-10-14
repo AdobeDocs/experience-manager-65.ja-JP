@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps}
 
-angular アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/server/ng-page コンポーネント（[ ローカルサーバーのCRXDE Liteーで開く ](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次の JSP スクリプトが含まれています。
+angular アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/server/ng-page コンポーネント（[&#x200B; ローカルサーバーのCRXDE Liteーで開く &#x200B;](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次の JSP スクリプトが含まれています。
 
 * ng-page.jsp
 * head.jsp
@@ -306,7 +306,7 @@ www/
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-このディレクトリには [CLI フック ](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/) が含まれています。 hooks ディレクトリのフォルダーには、ビルド中の正確な時点で実行される node.js スクリプトが含まれています。
+このディレクトリには [CLI フック &#x200B;](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/) が含まれています。 hooks ディレクトリのフォルダーには、ビルド中の正確な時点で実行される node.js スクリプトが含まれています。
 
 #### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 
@@ -416,4 +416,4 @@ package.json ファイルは、**完全な** コンテンツ同期のダウン�
 
 ### 次の手順 {#the-next-steps}
 
-アプリの詳細な構造については、[ 単一ページアプリケーション ](/help/mobile/phonegap-single-page-applications.md) を参照してください。
+アプリの詳細な構造については、[&#x200B; 単一ページアプリケーション &#x200B;](/help/mobile/phonegap-single-page-applications.md) を参照してください。

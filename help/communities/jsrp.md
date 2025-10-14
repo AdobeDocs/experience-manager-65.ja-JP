@@ -24,7 +24,7 @@ AEM Communitiesで JSRP をストレージオプションとして使用する�
 
 簡単にデプロイできるので、JSRP は 1 つのPublish インスタンスと 1 つのオーサーインスタンスのデモや開発環境に最適です。
 
-[SRP オプションの特性 ](working-with-srp.md#characteristics-of-srp-options) および [ 推奨されるトポロジ ](topologies.md) も参照してください。
+[SRP オプションの特性 &#x200B;](working-with-srp.md#characteristics-of-srp-options) および [&#x200B; 推奨されるトポロジ &#x200B;](topologies.md) も参照してください。
 
 ## 設定 {#configuration}
 
@@ -32,7 +32,7 @@ AEM Communitiesで JSRP をストレージオプションとして使用する�
 
 デフォルトでは、JSRP が UGC のストレージオプションです。
 
-[ ストレージ設定コンソール ](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
 
 オーサー環境で、ストレージ設定コンソールにアクセスします。
 
@@ -81,7 +81,7 @@ JSRP はデフォルトの設定ですが、パブリッシュ環境で同じ設
 
 ### Publish インスタンスに UGC が表示されない {#ugc-not-visible-on-publish-instance}
 
-1 つのPublish インスタンスの場合、またはパブリッシュクラスターがデプロイされている場合は、[UGC は JCR に表示されません ](#ugc-not-visible-in-jcr) の手順に従います。
+1 つのPublish インスタンスの場合、またはパブリッシュクラスターがデプロイされている場合は、[UGC は JCR に表示されません &#x200B;](#ugc-not-visible-in-jcr) の手順に従います。
 
 パブリッシュファームがデプロイされている場合の JSRP の特徴は、コミュニティコンテンツが、投稿先のPublish インスタンスにのみ表示されることです。
 

@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # レビューおよびレビューの概要（表示）の使用 {#using-reviews-and-reviews-summary-display}
 
-`Reviews` コンポーネントは、すぐに使用できる [ コメント ](comments.md) コンポーネントと [ 評価 ](rating.md) コンポーネントの組み合わせです。
+`Reviews` コンポーネントは、すぐに使用できる [&#x200B; コメント &#x200B;](comments.md) コンポーネントと [&#x200B; 評価 &#x200B;](rating.md) コンポーネントの組み合わせです。
 
 `Reviews Summary (Display)` コンポーネントは、サイトの他の場所に表示するために、`Reviews` コンポーネントのアクティブまたはクローズ済みのインスタンスの概要を提供します。
 
@@ -30,9 +30,9 @@ ht-degree: 2%
 
 オーサーモードで `Reviews` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して `Communities / Reviews` のコンポーネントを探し、レビューするユーザーの機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](reviews-basics.md#essentials-for-client-side) が含まれると、`Reviews` コンポーネントはこのように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](reviews-basics.md#essentials-for-client-side) が含まれると、`Reviews` コンポーネントはこのように表示されます。
 
 ![create-review](assets/create-review.png)
 
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 「**[!UICONTROL 許可されている評価]**」タブで、メンバーに表示する評価の完全なリストを指定します。 最初の評価は、`Review Summary (Display)` コンポーネントの平均評価を提供する評価なので、全体/一般評価にする必要があります。 デフォルト設定の次の 2 つの評価には、「サブレート 1」または「サブレート 2」以外の別のタイトルを付ける必要があります。
 
-![ 許可された評価 ](assets/configure-review1.png)
+![&#x200B; 許可された評価 &#x200B;](assets/configure-review1.png)
 
 * **[!UICONTROL 許可された評価]**
 
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 Web サイトでは、必須の評価にはアスタリスクが付いています。 アイテムが必須であり、マークされていない場合、メッセージがメンバーに表示され、すべての必要な評価がマークされるまで送信が拒否されます。
 
-![ 必須評価 ](assets/configure-review2.png)
+![&#x200B; 必須評価 &#x200B;](assets/configure-review2.png)
 
 * **[!UICONTROL 必要な評価]**
 
@@ -74,7 +74,7 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 「**[!UICONTROL レビュー]**」タブで、レビューの処理方法を指定します。
 
-![ レビュー ](assets/configure-review3.png)
+![&#x200B; レビュー &#x200B;](assets/configure-review3.png)
 
 * **[!UICONTROL 返信を許可]**
 
@@ -108,7 +108,7 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
   オンにした場合は、トピックの投票機能を含めます。 デフォルトではオフになっています。
 
-「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたレビューの管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツのモデレート ](moderate-ugc.md) を参照してください。
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたレビューの管理方法を指定します。 詳しくは、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](moderate-ugc.md) を参照してください。
 
 ![user-moderation](assets/configure-review4.png)
 
@@ -156,9 +156,9 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 アクティブまたはクローズ済みのレビューの概要を表示するページの上にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](reviews-basics.md#essentials-for-client-side) が含まれると、`Reviews Summary (Display)` コンポーネントはこのように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](reviews-basics.md#essentials-for-client-side) が含まれると、`Reviews Summary (Display)` コンポーネントはこのように表示されます。
 
 ![review-summary](assets/configure-review5.png)
 
@@ -170,7 +170,7 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 配置された `Reviews Summary (Display)` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 **[!UICONTROL 概要をレビュー]** タブで
 
@@ -178,7 +178,7 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 * `Review Path`
 
-  `reviews` コンポーネントの配置されたインスタンスを入力または参照して、要約できるようにします。たとえば、[Geometrixxエンゲージメントサイトの Web ページに追加された場合 ](getting-started.md) パスは次のようになります。
+  `reviews` コンポーネントの配置されたインスタンスを入力または参照して、要約できるようにします。たとえば、[Geometrixxエンゲージメントサイトの Web ページに追加された場合 &#x200B;](getting-started.md) パスは次のようになります。
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
@@ -192,11 +192,11 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 コメントリソースタイプを変更すると、コメントシステムはデフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されたインスタンスを生成します。
 
-カスタムのリソースタイプが分かっている場合は、[ デザインモード ](../../help/sites-authoring/default-components-designmode.md) と入力し、配置した `Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
+カスタムのリソースタイプが分かっている場合は、[&#x200B; デザインモード &#x200B;](../../help/sites-authoring/default-components-designmode.md) と入力し、配置した `Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
 
 「**[!UICONTROL リソースタイプ]**」タブで、`Comments or Voting` のコンポーネントの新しいインスタンスのカスタム resourceType を指定します。
 
-![ コメント投票 ](assets/configure-review7.png)
+![&#x200B; コメント投票 &#x200B;](assets/configure-review7.png)
 
 * **[!UICONTROL コメントリソースタイプ]**
 
@@ -237,8 +237,8 @@ Web サイトでは、必須の評価にはアスタリスクが付いていま�
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ 初期設定の確認 ](reviews-basics.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; 初期設定の確認 &#x200B;](reviews-basics.md) ページを参照してください。
 
-投稿されたコメントのモデレートについては、[ ユーザー生成コンテンツのモデレート ](moderate-ugc.md) を参照してください。
+投稿されたコメントのモデレートについては、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](moderate-ugc.md) を参照してください。
 
-投稿されたコメントの翻訳については、[ ユーザー生成コンテンツの翻訳 ](translate-ugc.md) を参照してください。
+投稿されたコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳 &#x200B;](translate-ugc.md) を参照してください。

@@ -18,9 +18,9 @@ ht-degree: 24%
 
 # コンポーネントおよび機能の基本事項  {#component-function-and-feature-essentials}
 
-Adobe Experience Manager（AEM） Communities の機能を使用するには、サイト訪問者がコンテンツを投稿する前に、メンバーになり、[ コミュニティサイト ](overview.md#communitiessites) にログインする必要があります。 したがって、コミュニティサイトを [ 作成 ](sites-console.md) する [ コミュニティサイトテンプレート ](sites.md) は、ログイン機能とユーザープロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
+Adobe Experience Manager（AEM） Communities の機能を使用するには、サイト訪問者がコンテンツを投稿する前に、メンバーになり、[&#x200B; コミュニティサイト &#x200B;](overview.md#communitiessites) にログインする必要があります。 したがって、コミュニティサイトを [&#x200B; 作成 &#x200B;](sites-console.md) する [&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md) は、ログイン機能とユーザープロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
 
-コミュニティ サイトは、選択したコミュニティ サイト テンプレートに [ コミュニティ グループ機能 ](functions.md#groups-function) が含まれている場合、コミュニティ グループを作成するメンバをサポートします。
+コミュニティ サイトは、選択したコミュニティ サイト テンプレートに [&#x200B; コミュニティ グループ機能 &#x200B;](functions.md#groups-function) が含まれている場合、コミュニティ グループを作成するメンバをサポートします。
 
 次に、Communities のコンポーネント、機能、機能に関する基本情報へのリンクを示します。
 
@@ -38,7 +38,7 @@ Adobe Experience Manager（AEM） Communities の機能を使用するには、�
 ## 関数を含むコンポーネント {#components-with-functions}
 
 * [アクティビティストリーム](essentials-activities.md)
-* [ ブログ ](blog-developer-basics.md) （`Journal`）
+* [&#x200B; ブログ &#x200B;](blog-developer-basics.md) （`Journal`）
 
 * [Calendar](calendar-basics-for-developers.md)
 * [おすすめコンテンツ](essentials-featured.md)
@@ -47,7 +47,7 @@ Adobe Experience Manager（AEM） Communities の機能を使用するには、�
 * [グループ](essentials-groups.md)
 * [アイディエーション](ideation.md)
 * [リーダーボード](leaderboard.md)
-* [ 質疑応答 ](qna-essentials.md)`(QnA)`
+* [&#x200B; 質疑応答 &#x200B;](qna-essentials.md)`(QnA)`
 
 ## 機能 {#features}
 
@@ -60,7 +60,7 @@ Adobe Experience Manager（AEM） Communities の機能を使用するには、�
 * [スコアおよびバッジ](configure-scoring.md)
 * [検索](search-implementation.md)
 * [ソーシャルグラフ](essentials-socialgraph.md)
-* [ ストレージリソースプロバイダー ](srp-and-ugc.md) `(SRP)`
+* [&#x200B; ストレージリソースプロバイダー &#x200B;](srp-and-ugc.md) `(SRP)`
 
 * [タグ付け](tag.md)
 
@@ -69,7 +69,7 @@ Adobe Experience Manager（AEM） Communities の機能を使用するには、�
 [online javadocs](../../help/sites-developing/reference-materials.md) は、AEM 6.3 リリースで使用可能な API を反映しています。
 Communities API は `com.adobe.cq.social.*` パッケージに含まれています。
 
-[ 機能パック ](deploy-communities.md#latestfeaturepack) ごとに、Javadoc JAR が使用可能になります。 詳しくは、[ コミュニティでの Maven の使用 ](maven.md#javadocs) を参照してください。
+[&#x200B; 機能パック &#x200B;](deploy-communities.md#latestfeaturepack) ごとに、Javadoc JAR が使用可能になります。 詳しくは、[&#x200B; コミュニティでの Maven の使用 &#x200B;](maven.md#javadocs) を参照してください。
 
 ## 追加情報 {#additional-information}
 

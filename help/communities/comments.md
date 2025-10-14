@@ -40,9 +40,9 @@ ht-degree: 2%
 
 そして、ユーザーがコメントできる機能に対する相対的な位置や、ページの下部などの、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/essentials-comments.md#essentials-for-client-side) が含まれると、`Comments` コンポーネントはこのように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/essentials-comments.md#essentials-for-client-side) が含まれると、`Comments` コンポーネントはこのように表示されます。
 
 ![comments-component](assets/comments-component.png)
 
@@ -104,7 +104,7 @@ ht-degree: 2%
 
 #### ユーザーモデレートタブ {#user-moderation-tab}
 
-「**ユーザーモデレート**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+「**ユーザーモデレート**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
 * **プレモデレート**
 
@@ -158,11 +158,11 @@ ht-degree: 2%
 
 コメントリソースタイプを変更すると、コメントシステムはデフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されたインスタンスを生成します。
 
-カスタムリソースタイプが分かったら、[ デザインモード ](/help/sites-authoring/default-components-designmode.md) と入力し、配置した `Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
+カスタムリソースタイプが分かったら、[&#x200B; デザインモード &#x200B;](/help/sites-authoring/default-components-designmode.md) と入力し、配置した `Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
 
 「**リソースタイプ**」タブで、`Comments or Voting` のコンポーネントの新しいインスタンスのカスタム resourceType を指定します。
 
-![ リソースタイプ ](assets/resource-type.png)
+![&#x200B; リソースタイプ &#x200B;](assets/resource-type.png)
 
 * **コメントリソースタイプ**
 
@@ -201,8 +201,8 @@ ht-degree: 2%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ コメントの初期設定 ](/help/communities/essentials-comments.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; コメントの初期設定 &#x200B;](/help/communities/essentials-comments.md) ページを参照してください。
 
-投稿されたコメントのモデレートについては、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+投稿されたコメントのモデレートについては、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
-投稿されたコメントの翻訳については、[ ユーザー生成コンテンツの翻訳 ](/help/communities/translate-ugc.md) を参照してください。
+投稿されたコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳 &#x200B;](/help/communities/translate-ugc.md) を参照してください。

@@ -22,13 +22,13 @@ ht-degree: 2%
 
 AEM Mobile ダッシュボードを使用すると、モバイルアプリケーションを作成、構築およびデプロイしたり、アプリケーションのメタデータを作成、削除および編集したりできます。 アプリケーションが実稼働したら、ライフサイクルや使用状況指標などのアプリケーション分析を分析して、顧客コンバージョンやブランドロイヤルティを向上させることができます。
 
-AEM Mobile アプリケーションを構築するには、[ モバイルアプリケーションの構築 ](/help/mobile/building-app-mobile-phonegap.md) ページを参照してください。
+AEM Mobile アプリケーションを構築するには、[&#x200B; モバイルアプリケーションの構築 &#x200B;](/help/mobile/building-app-mobile-phonegap.md) ページを参照してください。
 
-環境の設定と開始については、[AEM PhoneGap Enterprise を使用するためのAEMの管理 ](/help/mobile/administer-phonegap.md) を参照してください。
+環境の設定と開始については、[AEM PhoneGap Enterprise を使用するためのAEMの管理 &#x200B;](/help/mobile/administer-phonegap.md) を参照してください。
 
 ## AEM Mobile アプリカタログ {#the-aem-mobile-apps-catalog}
 
-[AEM Mobile アプリカタログ ](http://localhost:4502/aem/apps.html/content/phonegap) には、AEMで管理されるすべてのモバイルアプリが表示されます。
+[AEM Mobile アプリカタログ &#x200B;](http://localhost:4502/aem/apps.html/content/phonegap) には、AEMで管理されるすべてのモバイルアプリが表示されます。
 
 このカタログは、AEM Mobileの「ランディングページ」と考えることができます。管理者は、テンプレートに基づいて作成するか、モバイル開発者が既に開始した既存のアプリをアップロードすることで、新しいAEM Mobile アプリケーションを開始できます。
 
@@ -38,7 +38,7 @@ AEM Mobile アプリケーションを構築するには、[ モバイルアプ�
 
 1. **アプリ** を選択して、アプリカタログを開きます。
 
-![AEM Mobile アプリ カタログ ](assets/chlimage_1-135.png)
+![AEM Mobile アプリ カタログ &#x200B;](assets/chlimage_1-135.png)
 
 ## AEM Mobile アプリダッシュボード {#the-aem-mobile-app-dashboard}
 
@@ -46,13 +46,13 @@ AEM Mobile アプリケーションを構築するには、[ モバイルアプ�
 
 AEM Mobile ダッシュボードの各タイルに展開して詳細を表示または編集するには、右下隅の「。..」をクリックします。
 
-![AEM Mobile アプリケーション コマンド センター ](assets/chlimage_1-136.png)
+![AEM Mobile アプリケーション コマンド センター &#x200B;](assets/chlimage_1-136.png)
 
 ### アプリを管理タイル {#the-manage-app-tile}
 
 アプリを管理タイルには、アプリケーションのアイコン、名前、説明、サポートされているプラットフォーム、アップデートの URL とバージョン情報のオートコールが表示されます。 このタイルにドリルダウンして、PhoneGap アプリケーション設定（config.xml）を編集および管理し、配布用のさまざまなアプリケーションストアへの送信用にアプリケーションを準備できます。
 
-詳しくは、[ ここ ](/help/mobile/phonegap-app-details-tile.md) をクリックしてください。
+詳しくは、[&#x200B; ここ &#x200B;](/help/mobile/phonegap-app-details-tile.md) をクリックしてください。
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
@@ -60,7 +60,7 @@ AEM Mobile ダッシュボードの各タイルに展開して詳細を表示ま
 
 AEM Sites内で行うのと同じ方法で、AEM Mobileでコンテンツを作成、更新、削除できます。 **ページコンテンツを管理** タイルには、管理コンテンツのページ数と最終変更日が表示されます。 コンテンツをドリルインし、タイル内の各レコードをクリックしてページを作成、コピー、移動、削除、更新できます。 コンテンツが更新されたら、**コンテンツパッケージの管理** タイルを通じてコンテンツの更新を顧客にプッシュできます。
 
-![ コンテンツタイル ](assets/chlimage_1-138.png)
+![&#x200B; コンテンツタイル &#x200B;](assets/chlimage_1-138.png)
 
 ### コンテンツパッケージを管理タイル {#the-manage-content-packages-tile}
 
@@ -80,11 +80,11 @@ AEM Sites内で行うのと同じ方法で、AEM Mobileでコンテンツを作�
 
 **公開済み** 列には、最新のコンテンツ更新が公開され、顧客が使用できるようになった日時が表示されます。 コンテンツを公開するには、まずそのコンテンツをステージングしてから、このタイルにドリルしてコンテンツリリースの詳細コンソールから公開して、更新を公開する必要があります。
 
-![ アプリシェル用のコンテンツリリースタイル ](assets/chlimage_1-139.png)![ContentSync パッケージ ](do-not-localize/chlimage_1-5.png)
+![&#x200B; アプリシェル用のコンテンツリリースタイル &#x200B;](assets/chlimage_1-139.png)![ContentSync パッケージ &#x200B;](do-not-localize/chlimage_1-5.png)
 
 このアイコンは、アプリシェルのコンテンツリリースパッケージを表します
 
-![ コンテンツリリースパッケージアイコンが 2 つの正方形で示され、パッケージシンボルが重なっています。](do-not-localize/chlimage_1-6.png)
+![&#x200B; コンテンツリリースパッケージアイコンが 2 つの正方形で示され、パッケージシンボルが重なっています。](do-not-localize/chlimage_1-6.png)
 
 これらのアイコンは、アプリコンテンツのコンテンツリリースパッケージを表します
 
@@ -94,7 +94,7 @@ AEM Sites内で行うのと同じ方法で、AEM Mobileでコンテンツを作�
 
 または、PhoneGap CLI （`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`）を介してローカルに構築するデバイスソースをダウンロードすることもできます。
 
-![PhoneGap Build タイル ](assets/chlimage_1-140.png)
+![PhoneGap Build タイル &#x200B;](assets/chlimage_1-140.png)
 
 ### 指標タイル {#the-metrics-tile}
 
@@ -102,19 +102,19 @@ AEM Sites内で行うのと同じ方法で、AEM Mobileでコンテンツを作�
 >
 >指標タイルは、クラウドサービスを設定した後にのみ表示されます。
 >
->詳しくは [Adobe Mobile ServicesCloud Serviceの設定 ](/help/mobile/configure-adobe-mobile-cloud-service.md) を参照してください。
+>詳しくは [Adobe Mobile ServicesCloud Serviceの設定 &#x200B;](/help/mobile/configure-adobe-mobile-cloud-service.md) を参照してください。
 
 AEM Mobileは、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=ja) （AMS）を通じてAdobe Analyticsと統合されます。
 
 コントロールセンター **指標タイル** には、アプリケーションの AMS から取得した概要分析が表示されます。 右下の「。..」をクリックして、分析ダッシュボードにドリルダウンできます。
 
-![ 指標タイル ](assets/chlimage_1-141.png)
+![&#x200B; 指標タイル &#x200B;](assets/chlimage_1-141.png)
 
 ### エンティティコンテンツを管理タイル {#the-manage-entity-content-tile}
 
 エンティティコンテンツを管理タイルでは、アプリ定義を追加および管理できます。 アプリ定義は、アプリに適したスペース（およびその他の設定）を識別する方法です。 これにより、アプリを再コンパイルすることなく、新しいスペースを追加できます。 アプリ定義が更新され、新しいスペースの情報が含まれます。
 
-アプリ定義を作成および管理するには、[ ここ ](/help/mobile/phonegap-app-definitions.md) をクリックします。
+アプリ定義を作成および管理するには、[&#x200B; ここ &#x200B;](/help/mobile/phonegap-app-definitions.md) をクリックします。
 
 右下の「。..」をクリックして、エンティティコンテンツを管理ダッシュボードにドリルインできます。
 

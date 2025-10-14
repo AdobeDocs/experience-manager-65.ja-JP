@@ -20,9 +20,9 @@ ht-degree: 1%
 
 # コミュニティグループコンソール {#community-groups-console}
 
-コミュニティサイトの [ テンプレート構造 ](/help/communities/sites-console.md#step1) に [groups 関数 ](/help/communities/functions.md#groups-function) が含まれている場合、グループコンソールを使用してコミュニティグループを作成できます。
+コミュニティサイトの [&#x200B; テンプレート構造 &#x200B;](/help/communities/sites-console.md#step1) に [groups 関数 &#x200B;](/help/communities/functions.md#groups-function) が含まれている場合、グループコンソールを使用してコミュニティグループを作成できます。
 
-* AEM Communitiesでは、他のグループ内でのグループのネストをサポートしています。 [ 新しいグループの構造 ](/help/communities/tools-groups.md) に groups 関数が含まれている場合、グループのネストが可能です。
+* AEM Communitiesでは、他のグループ内でのグループのネストをサポートしています。 [&#x200B; 新しいグループの構造 &#x200B;](/help/communities/tools-groups.md) に groups 関数が含まれている場合、グループのネストが可能です。
 * オーサー環境の場合のみ、サイト作成ウィザードと同様のグループ作成ウィザードがあります。
 * メンバーがパブリッシュ環境でグループを作成できるかどうか（または作成できないかどうか）。コミュニティサイト構造またはコミュニティグループ構造にグループ機能を追加する際に設定できます。
 
@@ -42,9 +42,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->このグループコンソール（コミュニティサイトコンソールからのみアクセスできます）を、メンバーグループを管理するメンバー [ グループコンソール ](/help/communities/members.md) と混同しないでください。
+>このグループコンソール（コミュニティサイトコンソールからのみアクセスできます）を、メンバーグループを管理するメンバー [&#x200B; グループコンソール &#x200B;](/help/communities/members.md) と混同しないでください。
 >
->メンバーグループは、パブリッシュ環境に登録されるユーザーグループで、[ トンネルサービス ](/help/communities/deploy-communities.md#tunnel-service-on-author) を使用してオーサー環境からアクセスします。
+>メンバーグループは、パブリッシュ環境に登録されるユーザーグループで、[&#x200B; トンネルサービス &#x200B;](/help/communities/deploy-communities.md#tunnel-service-on-author) を使用してオーサー環境からアクセスします。
 
 ## グループ作成 {#group-creation}
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 * フォルダー内のコミュニティサイトのインスタンスを選択します。
 
    * コミュニティサイトの構造には、グループ機能を含める必要があります。
-   * これらのスクリーンショットは、[ 公開時のグループの作成 ](/help/communities/published-site.md) 後の、はじめにチュートリアルから得られたものです。
+   * これらのスクリーンショットは、[&#x200B; 公開時のグループの作成 &#x200B;](/help/communities/published-site.md) 後の、はじめにチュートリアルから得られたものです。
 
   ![create-group](assets/create-group.png)
 
@@ -72,7 +72,7 @@ ht-degree: 1%
 
 ### 手順 1：コミュニティグループテンプレート {#step-community-group-template}
 
-![ 多言語コミュニティグループ ](assets/multi-lingual-group.png)
+![&#x200B; 多言語コミュニティグループ &#x200B;](assets/multi-lingual-group.png)
 
 * **コミュニティグループのタイトル**
 
@@ -104,7 +104,7 @@ ht-degree: 1%
 
 * **コミュニティグループテンプレート** メニュー
 
-  ドロップダウンを使用して、使用可能な [ コミュニティグループテンプレート ](/help/communities/tools.md) を選択します。
+  ドロップダウンを使用して、使用可能な [&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools.md) を選択します。
 
 ### 手順 2：デザイン {#step-design}
 
@@ -118,11 +118,11 @@ ht-degree: 1%
 
 親サイトのテーマとは異なるテーマを選択できます。
 
-コミュニティサイトが公開されたら、[ プロパティを編集 ](#modifyinggroupproperties) し、別のテーマを選択できます。
+コミュニティサイトが公開されたら、[&#x200B; プロパティを編集 &#x200B;](#modifyinggroupproperties) し、別のテーマを選択できます。
 
 ### コミュニティグループのブランディング {#community-group-branding}
 
-![ コミュニティグループのブランディング ](assets/community-group-branding.png)
+![&#x200B; コミュニティグループのブランディング &#x200B;](assets/community-group-branding.png)
 
 コミュニティサイトのブランディングは、各ページの上部にヘッダーとして表示される画像です。 他のサイトページとは異なるグループ用のバナーを表示することができる。
 
@@ -141,7 +141,7 @@ ht-degree: 1%
 
 **モデレート**
 
-![ コミュニティグループメンバーの役割を選択 ](assets/group-admin.png)
+![&#x200B; コミュニティグループメンバーの役割を選択 &#x200B;](assets/group-admin.png)
 
 **コミュニティグループモデレーター**
 
@@ -173,7 +173,7 @@ ht-degree: 1%
 
 * **加入の制限**
 
-  選択した場合、コミュニティグループは秘密鍵グループになります。 コミュニティメンバーは、明示的に招待される必要があります。 招待されたメンバーは検索ボックスに入力されます。 メンバーは、オーサー環境の [ メンバーコンソールとグループコンソール ](/help/communities/members.md) を使用して、後で追加できます。 デフォルトは選択されていません。
+  選択した場合、コミュニティグループは秘密鍵グループになります。 コミュニティメンバーは、明示的に招待される必要があります。 招待されたメンバーは検索ボックスに入力されます。 メンバーは、オーサー環境の [&#x200B; メンバーコンソールとグループコンソール &#x200B;](/help/communities/members.md) を使用して、後で追加できます。 デフォルトは選択されていません。
 
 **サムネール**
 
@@ -197,11 +197,11 @@ ht-degree: 1%
 
 処理が完了すると、新しいサブコミュニティサイト（グループ）のカードがコミュニティサイトグループコンソールに表示されます。このコンソールから、作成者はページコンテンツを追加でき、管理者はサイトのプロパティを変更できます。
 
-![ コミュニティグループを作成 ](assets/create-community-groups.png)
+![&#x200B; コミュニティグループを作成 &#x200B;](assets/create-community-groups.png)
 
 >[!NOTE]
 >
->[ 手順 1：コミュニティグループテンプレート ](/help/communities/groups.md#step-community-group-template) で指定したように、グループはすべての言語で作成されます。使用可能な追加のコミュニティグループ言語で、各コミュニティサイトのコミュニティグループコンソールに表示されます。
+>[&#x200B; 手順 1：コミュニティグループテンプレート &#x200B;](/help/communities/groups.md#step-community-group-template) で指定したように、グループはすべての言語で作成されます。使用可能な追加のコミュニティグループ言語で、各コミュニティサイトのコミュニティグループコンソールに表示されます。
 
 ## 作成者グループコンテンツ {#author-group-content}
 
@@ -215,9 +215,9 @@ ht-degree: 1%
 
 ![edit-site](assets/edit-site.png)
 
-次のプロパティの詳細は、「グループの作成 [ の節で説明した説明と一致し ](#group-creation) す。 ネストされたグループは、パブリッシュ環境とオーサー環境のどちらで作成した場合でも変更できます。
+次のプロパティの詳細は、「グループの作成 [&#x200B; の節で説明した説明と一致し &#x200B;](#group-creation) す。 ネストされたグループは、パブリッシュ環境とオーサー環境のどちらで作成した場合でも変更できます。
 
-![ コミュニティグループ – 基本 ](assets/community-group-basic.png)
+![&#x200B; コミュニティグループ – 基本 &#x200B;](assets/community-group-basic.png)
 
 ### 基本の変更 {#modify-basic}
 
@@ -230,17 +230,17 @@ ht-degree: 1%
 
 別のコミュニティ グループ テンプレートを選択しても、テンプレートとサイトの間に接続が残っていないので、既存のコミュニティ グループ サイトには影響しません。
 
-代わりに、サブコミュニティの [ 構造 ](#modify-structure) を変更できます。
+代わりに、サブコミュニティの [&#x200B; 構造 &#x200B;](#modify-structure) を変更できます。
 
 ### 構造を修正 {#modify-structure}
 
 構造パネルを使用すると、オーサー環境またはパブリッシュ環境からサブコミュニティサイトを作成する際に選択したコミュニティグループテンプレートから最初に作成した構造を変更できます。 パネルから、次の操作を実行できます。
 
-* 追加の [ コミュニティ機能 ](/help/communities/functions.md) をサイト構造にドラッグ&amp;ドロップします。
+* 追加の [&#x200B; コミュニティ機能 &#x200B;](/help/communities/functions.md) をサイト構造にドラッグ&amp;ドロップします。
 * サイト構造内のコミュニティ機能のインスタンスで：
 
    * **`Gear icon`**
-表示タイトル、URL、[ 権限のあるメンバーグループ ](/help/communities/users.md#privilegedmembersgroups) などの設定を編集します。
+表示タイトル、URL、[&#x200B; 権限のあるメンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups) などの設定を編集します。
 
    * **`Trashcan icon`**
 サイト構造から関数を削除（削除）します。
@@ -258,7 +258,7 @@ ht-degree: 1%
 >
 >groups 関数は、サイト構造内の *最初の関数でも唯一の関数でもな**てはなりません*。
 >
->[page 関数 ](/help/communities/functions.md#page-function) など、その他の関数を最初に含めてリストする必要があります。
+>[page 関数 &#x200B;](/help/communities/functions.md#page-function) など、その他の関数を最初に含めてリストする必要があります。
 
 **例：サブコミュニティ（グループ）構造へのカレンダー関数の追加**
 
@@ -275,15 +275,15 @@ ht-degree: 1%
 
 ### 設定の変更 {#modify-settings}
 
-設定パネルを使用すると、コミュニティ [ モデレーター ](#moderation) を追加できます。
+設定パネルを使用すると、コミュニティ [&#x200B; モデレーター &#x200B;](#moderation) を追加できます。
 
 ### メンバーシップの変更 {#modify-membership}
 
-[ メンバーシップ ](#membership) パネルは情報提供のみを目的としています。 確立されたグループメンバーシップのタイプ（オプション、必須、制限付きのいずれも）は変更できません。
+[&#x200B; メンバーシップ &#x200B;](#membership) パネルは情報提供のみを目的としています。 確立されたグループメンバーシップのタイプ（オプション、必須、制限付きのいずれも）は変更できません。
 
 ### サムネールを変更 {#modify-thumbnail}
 
-[ サムネール ](#thumbnail) パネルを使用すると、Publish環境のサイト訪問者と、オーサー環境の Communities サイトのグループコンソールで、コミュニティグループを表す画像をアップロードできます。
+[&#x200B; サムネール &#x200B;](#thumbnail) パネルを使用すると、Publish環境のサイト訪問者と、オーサー環境の Communities サイトのグループコンソールで、コミュニティグループを表す画像をアップロードできます。
 
 ## Publish ザ グループ {#publish-the-group}
 
@@ -293,7 +293,7 @@ ht-degree: 1%
 
 グループが正常に公開されると、次のメッセージが表示されます。
 
-![ グループ公開済み ](assets/group-published.png)
+![&#x200B; グループ公開済み &#x200B;](assets/group-published.png)
 
 >[!CAUTION]
 >

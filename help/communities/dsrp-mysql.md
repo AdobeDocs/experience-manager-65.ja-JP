@@ -28,11 +28,11 @@ MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用でき�
 * [MySQL 用 JDBC ドライバー](deploy-communities.md#jdbc-driver-for-mysql)
 * リレーショナルデータベース：
 
-   * [MySQL サーバー ](https://dev.mysql.com/downloads/mysql/) Community Server バージョン 5.6 以降
+   * [MySQL サーバー &#x200B;](https://dev.mysql.com/downloads/mysql/) Community Server バージョン 5.6 以降
 
       * AEMと同じホスト上で実行するか、リモートで実行できる
 
-   * [MySQL ワークベンチ ](https://dev.mysql.com/downloads/tools/workbench/)
+   * [MySQL ワークベンチ &#x200B;](https://dev.mysql.com/downloads/tools/workbench/)
 
 ## MySQL のインストール {#installing-mysql}
 
@@ -99,7 +99,7 @@ MySQL Workbench を初めて起動したときに、他の目的ですでに使�
 **注**:
 
 * デフォルトのポートは `3306`
-* 選択した接続名は、[JDBC OSGi 設定でデータソース名として入力され ](#configurejdbcconnections) す。
+* 選択した接続名は、[JDBC OSGi 設定でデータソース名として入力され &#x200B;](#configurejdbcconnections) す。
 
 #### 新しい Communities 接続 {#new-communities-connection}
 
@@ -135,7 +135,7 @@ SQL スクリプトはAEM リポジトリから取得されます。
 
 次の手順に従って、データベースをインストールします。 データベースのデフォルト名は `communities` です。
 
-スクリプト内でデータベース名が変更された場合は、必ず [JDBC 設定 ](#configurejdbcconnections) 内でも変更してください。
+スクリプト内でデータベース名が変更された場合は、必ず [JDBC 設定 &#x200B;](#configurejdbcconnections) 内でも変更してください。
 
 #### 手順 1:SQL ファイルを開く {#step-open-sql-file}
 
@@ -170,7 +170,7 @@ MySQL がAEMとは異なるサーバーで実行されている場合は、JDBC 
 
 * 各オーサーおよびパブリッシュ AEM インスタンスで。
 * 管理者権限でサインインしました。
-* [Web コンソール ](../../help/sites-deploying/configuring-osgi.md) にアクセスします。
+* [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md) にアクセスします。
 
    * 例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
@@ -196,6 +196,6 @@ MySQL がAEMとは異なるサーバーで実行されている場合は、JDBC 
 
      それ以外の場合は、MySQL ユーザー名に設定されているパスワードを入力します。
 
-   * **[!UICONTROL データソース名]**: [MySQL 接続 ](#new-connection-settings) に入力された名前（例：「communities」）。
+   * **[!UICONTROL データソース名]**: [MySQL 接続 &#x200B;](#new-connection-settings) に入力された名前（例：「communities」）。
 
 * 「**[!UICONTROL 保存]**」を選択します

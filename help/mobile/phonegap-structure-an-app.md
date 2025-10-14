@@ -20,7 +20,7 @@ ht-degree: 1%
 
 {{ue-over-mobile}}
 
-AEM Mobile プロジェクトには、ページ、JavaScriptと CSS クライアントライブラリ、再利用可能なAEM コンポーネント、コンテンツ同期設定、PhoneGap アプリシェルコンテンツなど、様々なコンテンツタイプが含まれます。 新しいAEM Mobile アプリを [ スターターキット ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) に基づくと、あらゆる種類のコンテンツをお勧めの構造に取り込んで、長期にわたって移植性と保守性の両方を容易にすることができます。
+AEM Mobile プロジェクトには、ページ、JavaScriptと CSS クライアントライブラリ、再利用可能なAEM コンポーネント、コンテンツ同期設定、PhoneGap アプリシェルコンテンツなど、様々なコンテンツタイプが含まれます。 新しいAEM Mobile アプリを [&#x200B; スターターキット &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) に基づくと、あらゆる種類のコンテンツをお勧めの構造に取り込んで、長期にわたって移植性と保守性の両方を容易にすることができます。
 
 ## ページコンテンツ {#page-content}
 
@@ -50,10 +50,10 @@ angular オーサリング可能なページコンポーネントは AngularJS �
 
 ## PhoneGap 設定 {#phonegap-configuration}
 
-各AEM Mobile アプリケーションには、PhoneGap [ コマンドラインインターフェイス ](https://github.com/phonegap/phonegap-cli) および PhoneGap ビルドで使用される設定ファイルをホストし、Web コンテンツを実行可能なアプリケーションに変 `https://build.phonegap.com/` するディレクトリが含まれています。 例えば、Geometrixxサンプルでは、このディレクトリ（/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-content）はシェルの一部として配置されています。これは、デバイス API やアプリ自体の設定を扱うプラグインなど、無線で更新できないコンテンツのみが含まれているために設計が決定されるためです。
+各AEM Mobile アプリケーションには、PhoneGap [&#x200B; コマンドラインインターフェイス &#x200B;](https://github.com/phonegap/phonegap-cli) および PhoneGap ビルドで使用される設定ファイルをホストし、Web コンテンツを実行可能なアプリケーションに変 `https://build.phonegap.com/` するディレクトリが含まれています。 例えば、Geometrixxサンプルでは、このディレクトリ（/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-content）はシェルの一部として配置されています。これは、デバイス API やアプリ自体の設定を扱うプラグインなど、無線で更新できないコンテンツのみが含まれているために設計が決定されるためです。
 
-このディレクトリには、[Cordova フック ](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/index.html#Hooks%20Guide) もあり、プラグインのインストール、プラットフォーム固有の場所へのリソースファイルの配置、ビルドの一部として実行されるその他のアクションに使用できます。 注：ビルドの一部として各プラグインをダウンロードする代わりに、Kitchen Sink アプリのパターンに従い、残りのアプリプロジェクトと共に <!-- THIS URL IS 404 (https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) --> プラグインのソースコードを含めることができます。
+このディレクトリには、[Cordova フック &#x200B;](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/index.html#Hooks%20Guide) もあり、プラグインのインストール、プラットフォーム固有の場所へのリソースファイルの配置、ビルドの一部として実行されるその他のアクションに使用できます。 注：ビルドの一部として各プラグインをダウンロードする代わりに、Kitchen Sink アプリのパターンに従い、残りのアプリプロジェクトと共に <!-- THIS URL IS 404 (https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) --> プラグインのソースコードを含めることができます。
 
 ## 次の手順 {#the-next-steps}
 
-アプリの構造については、[App Console を使用したアプリの作成と編集 ](/help/mobile/phonegap-apps-console.md) を参照してください。
+アプリの構造については、[App Console を使用したアプリの作成と編集 &#x200B;](/help/mobile/phonegap-apps-console.md) を参照してください。

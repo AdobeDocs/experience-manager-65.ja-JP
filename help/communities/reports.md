@@ -25,11 +25,11 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
 一般的に、様々なレポートは次のとおりです。
 
-* [ ビュー数レポート ](#views-report)
+* [&#x200B; ビュー数レポート &#x200B;](#views-report)
 
   任意のコミュニティサイトについて、コミュニティメンバーおよびサイト訪問者ごとにコンテンツのビューのグラフを提供します。
 
-* [ 投稿レポート ](#posts-report)
+* [&#x200B; 投稿レポート &#x200B;](#posts-report)
 
   コミュニティメンバーがコミュニティサイトに投稿した様々なタイプのグラフを提供します。
 
@@ -55,7 +55,7 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
       * 選択したコミュニティ サイト、コンテンツ タイプ、および期間に関するレポートを生成します。
 
-![ 報告書 ](assets/reports1.png)
+![&#x200B; 報告書 &#x200B;](assets/reports1.png)
 
 ## 表示レポート {#views-report}
 
@@ -125,4 +125,4 @@ AEM Communitiesの場合、オーサー環境からいくつかの方法でア�
 
 AEM オーサーインスタンスにレポートが表示されない場合は、Publish インスタンスでの URL マッピングなど、カスタマイズの有無を確認してください。 URL マッピングが Communities サイトのAEM Publish インスタンスでのみ行われている場合は、AEM オーサーインスタンスで **Site Trend Report Social Component Factory** 設定に同じことが設定されていることを確認します。
 
-![AEM オーサーの URL マッピング ](assets/sitetrend.png)
+![AEM オーサーの URL マッピング &#x200B;](assets/sitetrend.png)

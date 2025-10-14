@@ -84,7 +84,7 @@ ht-degree: 14%
 
 ### テンプレートのレンダリングコンポーネントの作成 {#create-the-template-s-rendering-component}
 
-コンテンツを定義し、*playpage テンプレート* に基づいて作成されたすべてのページをレンダリングする [ コンポーネント ](#createthepagetemplate) を作成します。
+コンテンツを定義し、*playpage テンプレート* に基づいて作成されたすべてのページをレンダリングする [&#x200B; コンポーネント &#x200B;](#createthepagetemplate) を作成します。
 
 1. CRXDE Liteで、**`/apps/an-scf-sandbox/components`** を右クリックして、**[!UICONTROL 作成/コンポーネント]** をクリックします。
 1. ノードの名前（ラベル）を *playpage* に設定すると、コンポーネントへのパスはになります。

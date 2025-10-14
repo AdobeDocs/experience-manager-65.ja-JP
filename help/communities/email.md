@@ -28,20 +28,20 @@ AEM Communitiesは、次の目的でメールを使用します。
 
 >[!CAUTION]
 >
->通知および購読の電子メールは、[ プライマリ発行者 ](deploy-communities.md#primary-publisher) 上でのみ設定する必要があります。
+>通知および購読の電子メールは、[&#x200B; プライマリ発行者 &#x200B;](deploy-communities.md#primary-publisher) 上でのみ設定する必要があります。
 
 ## デフォルトのメールサービス設定 {#default-mail-service-configuration}
 
 通知と購読の両方にデフォルトのメールサービスが必要です。
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール ](../../help/sites-deploying/configuring-osgi.md) にアクセスします。
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md) にアクセスします。
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * `Day CQ Mail Service` を見つけます。
 * 編集アイコンを選択します。
 
-これは [ メール通知の設定 ](../../help/sites-administering/notification.md) のドキュメントに基づいていますが、「`"From" address`」フィールドは必須 *ではなく* 空のままにする必要がある点が異なります。
+これは [&#x200B; メール通知の設定 &#x200B;](../../help/sites-administering/notification.md) のドキュメントに基づいていますが、「`"From" address`」フィールドは必須 *ではなく* 空のままにする必要がある点が異なります。
 
 例（例として値が入力されている）:
 
@@ -75,11 +75,11 @@ AEM Communitiesは、次の目的でメールを使用します。
 
 ## AEM Communitiesのメール設定 {#aem-communities-email-configuration}
 
-[ デフォルトメールサービス ](#default-mail-service-configuration) を設定すると、リリースに含まれている `AEM Communities Email Reply Configuration` OSGi 設定の既存の 2 つのインスタンスが機能するようになります。
+[&#x200B; デフォルトメールサービス &#x200B;](#default-mail-service-configuration) を設定すると、リリースに含まれている `AEM Communities Email Reply Configuration` OSGi 設定の既存の 2 つのインスタンスが機能するようになります。
 
 メールによる返信を許可する場合は、購読のインスタンスのみを、さらに設定する必要があります。
 
-1. [ メール ](#configuration-for-notifications) インスタンス：
+1. [&#x200B; メール &#x200B;](#configuration-for-notifications) インスタンス：
 
    は、返信メールをサポートしないので、変更しないでください。
 
@@ -89,7 +89,7 @@ AEM Communitiesは、次の目的でメールを使用します。
 
 Communities のメール設定インスタンスにアクセスするには：
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール ](../../help/sites-deploying/configuring-osgi.md) にアクセスします
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md) にアクセスします
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 

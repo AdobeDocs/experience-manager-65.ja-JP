@@ -21,7 +21,7 @@ ht-degree: 26%
 
 AEM Communitiesを使用すると、企業はサイトテンプレートのライブラリから専用のブランドコミュニティエクスペリエンスを作成できます。 フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルを web サイトに統合して、プロジェクト、顧客、企業間のインタラクションを促進できます。
 
-以下は、デモや開発の目的で [ エンゲージメントコミュニティ ](/help/communities/overview.md#engagement-community) をすばやく設定するためのチュートリアルです。
+以下は、デモや開発の目的で [&#x200B; エンゲージメントコミュニティ &#x200B;](/help/communities/overview.md#engagement-community) をすばやく設定するためのチュートリアルです。
 
 * [初期セットアップ](/help/communities/setup.md)
 

@@ -22,7 +22,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
+>Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ AEM オーサーは、AEM Mobile On-demand Servicesを使用してアプリを�
 * [クラウド設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
-**コンテンツサービス** について詳しくは、[ コンテンツサービスの概要 ](/help/mobile/develop-content-as-a-service.md) を参照して開始してください。
+**コンテンツサービス** について詳しくは、[&#x200B; コンテンツサービスの概要 &#x200B;](/help/mobile/develop-content-as-a-service.md) を参照して開始してください。
 
 >[!NOTE]
 >

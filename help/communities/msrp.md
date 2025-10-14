@@ -22,7 +22,7 @@ ht-degree: 3%
 
 MSRP を共通ストアとして使用するようにAEM Communitiesが設定されている場合、ユーザー生成コンテンツ（UGC）には、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期やレプリケーションを行う必要はありません。
 
-[SRP オプションの特性 ](working-with-srp.md#characteristics-of-srp-options) および [ 推奨されるトポロジ ](topologies.md) も参照してください。
+[SRP オプションの特性 &#x200B;](working-with-srp.md#characteristics-of-srp-options) および [&#x200B; 推奨されるトポロジ &#x200B;](topologies.md) も参照してください。
 
 ## 要件 {#requirements}
 
@@ -30,7 +30,7 @@ MSRP を共通ストアとして使用するようにAEM Communitiesが設定さ
 
    * バージョン 2.6 以降
    * Mongos やシャーディングを設定する必要はありません
-   * [ レプリカ セットの使用を強くお勧めします ](#mongoreplicaset)
+   * [&#x200B; レプリカ セットの使用を強くお勧めします &#x200B;](#mongoreplicaset)
    * AEMと同じホスト上で実行するか、リモートで実行できる
 
 * [Apache Solr](https://lucene.apache.org/solr/):
@@ -40,7 +40,7 @@ MSRP を共通ストアとして使用するようにAEM Communitiesが設定さ
    * サービスは必要ありません
    * 実行モードの選択：
       * スタンドアロンモード
-      * [SolrCloud モード ](solr.md#solrcloud-mode) （実稼動環境で推奨）
+      * [SolrCloud モード &#x200B;](solr.md#solrcloud-mode) （実稼動環境で推奨）
    * 多言語検索（MLS）の選択：
       * [標準 MLS のインストール](solr.md#installing-standard-mls)
       * [高度な MLS のインストール](solr.md#installing-advanced-mls)
@@ -49,7 +49,7 @@ MSRP を共通ストアとして使用するようにAEM Communitiesが設定さ
 
 ### MSRP を選択 {#select-msrp}
 
-[ ストレージ設定コンソール ](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
 
 オーサー環境でストレージ設定コンソールにアクセスするには：
 
@@ -80,7 +80,7 @@ MSRP を共通ストアとして使用するようにAEM Communitiesが設定さ
 
    * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) ホスト**
 
-     外部の ZooKeeper を使用して [SolrCloud モード ](solr.md#solrcloud-mode) で実行する場合、この値を ZooKeeper の `HOST:PORT` （*my.server.com:2181など）に設定しま*。
+     外部の ZooKeeper を使用して [SolrCloud モード &#x200B;](solr.md#solrcloud-mode) で実行する場合、この値を ZooKeeper の `HOST:PORT` （*my.server.com:2181など）に設定しま*。
 
      ZooKeeper アンサンブルの場合、コンマ区切りの `HOST:PORT` 値を入力します（*host1:2181,host2:2181* など）。
 
@@ -100,15 +100,15 @@ Solr コレクション名。
 
 >[!NOTE]
 >
->mongoDB データベース（デフォルトは名前 `communities`）は、[ ノードストアまたはデータ（バイナリ）ストア ](../../help/sites-deploying/data-store-config.md) に使用されているデータベースの名前に設定しないでください。 [AEM 6.5 のストレージ要素 ](../../help/sites-deploying/storage-elements-in-aem-6.md) も参照してください。
+>mongoDB データベース（デフォルトは名前 `communities`）は、[&#x200B; ノードストアまたはデータ（バイナリ）ストア &#x200B;](../../help/sites-deploying/data-store-config.md) に使用されているデータベースの名前に設定しないでください。 [AEM 6.5 のストレージ要素 &#x200B;](../../help/sites-deploying/storage-elements-in-aem-6.md) も参照してください。
 
 ### MongoDB レプリカセット {#mongodb-replica-set}
 
 実稼動環境の場合は、レプリカセット（プライマリセカンダリのレプリケーションと自動フェイルオーバーを実装する MongoDB サーバーのクラスター）を設定することを強くお勧めします。
 
-レプリカセットについて詳しくは、MongoDB の [ レプリケーション ](https://docs.mongodb.org/manual/replication/) ドキュメントを参照してください。
+レプリカセットについて詳しくは、MongoDB の [&#x200B; レプリケーション &#x200B;](https://docs.mongodb.org/manual/replication/) ドキュメントを参照してください。
 
-レプリカセットを操作し、アプリケーションと MongoDB インスタンス間の接続を定義する方法については、MongoDB の [ 接続文字列 URI 形式 ](https://docs.mongodb.org/manual/reference/connection-string/) ドキュメントを参照してください。
+レプリカセットを操作し、アプリケーションと MongoDB インスタンス間の接続を定義する方法については、MongoDB の [&#x200B; 接続文字列 URI 形式 &#x200B;](https://docs.mongodb.org/manual/reference/connection-string/) ドキュメントを参照してください。
 
 #### レプリカセットに接続するための Url の例  {#example-url-for-connecting-to-a-replica-set}
 
@@ -126,20 +126,20 @@ Solr インストールは、異なるコレクションを使用して、ノー
 
 Oak コレクションと MSRP コレクションの両方が集中的に使用される場合は、パフォーマンス上の理由から、2 つ目の Solr がインストールされることがあります。
 
-実稼動環境の場合、[SolrCloud モード ](solr.md#solrcloud-mode) は、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
+実稼動環境の場合、[SolrCloud モード &#x200B;](solr.md#solrcloud-mode) は、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
-設定について詳しくは、[SRP 用の Solr 設定 ](solr.md) を参照してください。
+設定について詳しくは、[SRP 用の Solr 設定 &#x200B;](solr.md) を参照してください。
 
 ### アップグレード {#upgrading}
 
 MSRP が設定されている旧バージョンからアップグレードする場合、次の操作が必要になります。
 
-1. [AEM Communitiesへのアップグレード ](upgrade.md) を実行します。
+1. [AEM Communitiesへのアップグレード &#x200B;](upgrade.md) を実行します。
 1. 新しい Solr 設定ファイルのインストール
-   * [ 標準 MLS](solr.md#installing-standard-mls) 用
-   * [ 高度な MLS](solr.md#installing-advanced-mls) の場合
+   * [&#x200B; 標準 MLS](solr.md#installing-standard-mls) 用
+   * [&#x200B; 高度な MLS](solr.md#installing-advanced-mls) の場合
 1. MSRP の再インデックス
-[MSRP 再インデックスツール ](#msrp-reindex-tool) の節を参照してください。
+[MSRP 再インデックスツール &#x200B;](#msrp-reindex-tool) の節を参照してください。
 
 ## 設定の公開 {#publishing-the-configuration}
 
@@ -204,7 +204,7 @@ cURL -u *サインイン* -d *data* *reindex-url*
 
 >[!NOTE]
 >
->[DSRP Solr のインデックスを再作成 ](dsrp.md) する場合、URL は、**/services/social/datastore/rdb/reindex** です。
+>[DSRP Solr のインデックスを再作成 &#x200B;](dsrp.md) する場合、URL は、**/services/social/datastore/rdb/reindex** です。
 
 ### MSRP インデックス再作成の例 {#msrp-reindex-example}
 
@@ -214,7 +214,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ## MSRP のデモ方法 {#how-to-demo-msrp}
 
-デモ用または開発環境用に MSRP を設定する方法については、[ デモ用の MongoDB の設定方法 ](demo-mongo.md) を参照してください。
+デモ用または開発環境用に MSRP を設定する方法については、[&#x200B; デモ用の MongoDB の設定方法 &#x200B;](demo-mongo.md) を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -222,7 +222,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ストレージオプションの設定をチェックして、MSRP がデフォルトのプロバイダーとして設定されていることを確認します。 デフォルトでは、ストレージリソースプロバイダーは JSRP です。
 
-すべてのオーサーインスタンスおよびパブリッシュ AEMインスタンスで、[ ストレージ設定コンソール ](srp-config.md) を再度参照するか、AEM リポジトリを確認します。
+すべてのオーサーインスタンスおよびパブリッシュ AEMインスタンスで、[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md) を再度参照するか、AEM リポジトリを確認します。
 
 * JCR で、[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -235,7 +235,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 この目的のために、GitHub で利用できるオープンソースのツールがあります。
 
-* [AEM Communities UGC 移行ツール ](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
+* [AEM Communities UGC 移行ツール &#x200B;](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
 移行ツールは、以前のバージョンのAEM Social Communities から UGC を書き出して、AEM Communities 6.1 以降に読み込むようにカスタマイズできます。
 
@@ -253,7 +253,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ... 124 common frames omitted
 ```
 
-このエラーを解決するには、[ 標準 MLS のインストール ](solr.md#installing-standard-mls) の手順に従って、以下を確認してください。
+このエラーを解決するには、[&#x200B; 標準 MLS のインストール &#x200B;](solr.md#installing-standard-mls) の手順に従って、以下を確認してください。
 
 * XML 設定ファイルが正しい Solr の場所にコピーされました。
 * 新しい設定ファイルが既存の設定ファイルに置き換えられた後、Solr が再起動された。
@@ -269,4 +269,4 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ## リソース {#resources}
 
 * [MongoDB を備えた AEM](../../help/sites-deploying/aem-with-mongodb.md)
-* [MongoDB のドキュメント ](https://docs.mongodb.org/)
+* [MongoDB のドキュメント &#x200B;](https://docs.mongodb.org/)

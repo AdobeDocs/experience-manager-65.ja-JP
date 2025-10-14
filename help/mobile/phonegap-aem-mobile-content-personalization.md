@@ -22,25 +22,25 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->このドキュメントは [AEM Mobileの基本を学ぶ ](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobileの参照の推奨される出発点です。
+>このドキュメントは [AEM Mobileの基本を学ぶ &#x200B;](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobileの参照の推奨される出発点です。
 
-AEM Mobileのコンテンツパーソナライゼーション機能を使用すると、[AEM作成者 ](#author) は、[Adobe Target](https://business.adobe.com/products/target/adobe-target.html?lang=ja) を使用してモバイルアプリのコンテンツをパーソナライズできます。 これにより、モバイルアプリケーションユーザーにターゲット設定されたオファーを配信できます。 Adobe Experience Manager Mobileには、ユーザーの好みに合ったコンテンツを作成、ターゲット設定および配信する機能があります。
+AEM Mobileのコンテンツパーソナライゼーション機能を使用すると、[AEM作成者 &#x200B;](#author) は、[Adobe Target](https://business.adobe.com/products/target/adobe-target.html?lang=ja) を使用してモバイルアプリのコンテンツをパーソナライズできます。 これにより、モバイルアプリケーションユーザーにターゲット設定されたオファーを配信できます。 Adobe Experience Manager Mobileには、ユーザーの好みに合ったコンテンツを作成、ターゲット設定および配信する機能があります。
 
 AEMでは、作成者がこのコンテンツの作成を開始するには、まず管理者と開発者が環境を準備する必要があります。
 
 AEM MobileとAdobe Target Cloud Serviceの間の接続を確立するには [&#128279;](#administrator)AEM管理者 &rbrace; が必要です。
 
-一方、AEM Mobile[ 開発者 ](#developer) は、ターゲット設定されたコンテンツのオーサリングを容易にするために、既存のスクリプトを編集する必要があります。
+一方、AEM Mobile[&#x200B; 開発者 &#x200B;](#developer) は、ターゲット設定されたコンテンツのオーサリングを容易にするために、既存のスクリプトを編集する必要があります。
 
 ## 管理者向け {#for-administrators}
 
 コンテンツ作成者がモバイルアプリ用のターゲットコンテンツの生成を開始するには、いくつかの手順を実行する必要があります。ユーザーとグループに適切な権限セットを取得し、クラウドサービスを作成し、アクティビティ用のアプリケーションを設定して、最後にコンテンツを生成します。
 
-この記事では、[AEM Mobile ハイブリッドリファレンスアプリケーション ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) をターゲティング用に設定するプロセスについて説明します。
+この記事では、[AEM Mobile ハイブリッドリファレンスアプリケーション &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) をターゲティング用に設定するプロセスについて説明します。
 
 今後、AEM Mobile ハイブリッド参照アプリケーションが正常にデプロイされ、AEM Mobile Dashboard を介してアクセスできるようになることを想定しています。
 
-作成者がアプリケーション内でターゲットコンテンツを生成する前に、AEM インスタンスを [Adobe Target Cloud Serviceで設定 ](/help/mobile/aem-mobile-configuring-cloud-service.md) する必要があります。
+作成者がアプリケーション内でターゲットコンテンツを生成する前に、AEM インスタンスを [Adobe Target Cloud Serviceで設定 &#x200B;](/help/mobile/aem-mobile-configuring-cloud-service.md) する必要があります。
 
 ### 権限 {#permissions}
 
@@ -110,7 +110,7 @@ Adobe Mobile Services カードを選択し、「次へ」をクリックしま�
 
 AEM Mobile アプリ内のターゲットコンテンツのオーサリングは、AEM Sitesのオーサリングと同様の手順に従います。
 
-詳しくは、こちらを参照してください [AEMでのターゲットコンテンツのオーサリング ](/help/sites-authoring/personalization.md)
+詳しくは、こちらを参照してください [AEMでのターゲットコンテンツのオーサリング &#x200B;](/help/sites-authoring/personalization.md)
 
 ## 開発者向け {#for-developers}
 
@@ -195,7 +195,7 @@ Adobeモバイルダッシュボードを使用してコンテンツをステー
 
 ### 参照アプリケーション {#reference-application}
 
-head.html と body.html の例は、[AEM Mobile ハイブリッド参照アプリケーションで確認でき ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)2 つのスクリプト内のスクリプトブロックを配置する場所を開発者に示します。
+head.html と body.html の例は、[AEM Mobile ハイブリッド参照アプリケーションで確認でき &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)2 つのスクリプト内のスクリプトブロックを配置する場所を開発者に示します。
 
 ### コンテンツ同期ハンドラー {#content-sync-handlers}
 
@@ -268,13 +268,13 @@ head.html と body.html の例は、[AEM Mobile ハイブリッド参照アプ�
 
 >[!NOTE]
 >
->[AEM Mobile ハイブリッド参照アプリ ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、デフォルトの mobileappoffer ハンドラーの設定があります。 サンプルのパスプロパティは、キャンペーンの場所に応じるので、空です。 キャンペーン作成者がキャンペーンを作成したら、アプリ管理者は、キャンペーンを指すパスプロパティを指定して、キャンペーンをハンドラーに関連付ける必要があります。
+>[AEM Mobile ハイブリッド参照アプリ &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、デフォルトの mobileappoffer ハンドラーの設定があります。 サンプルのパスプロパティは、キャンペーンの場所に応じるので、空です。 キャンペーン作成者がキャンペーンを作成したら、アプリ管理者は、キャンペーンを指すパスプロパティを指定して、キャンペーンをハンドラーに関連付ける必要があります。
 
 ### Target コンポーネント {#target-component}
 
 特にモバイルアプリケーション用にコンテンツをレンダリングしやすくするために、AEM Mobileでは mobileapps/components/target コンポーネントを使用します。 モバイルターゲットコンポーネントは cq/personalization/components/target コンポーネントを拡張し、engine_tnt.jsp スクリプトをオーバーライドします。 engine_tnt.jsp を上書きすることで、AEM Mobileがモバイルアプリのユースケース用に生成されるHTMLを制御できます。 コンテンツ作成者のターゲットとなるすべてのコンポーネントに対し、関連する mbox が engine_tnt.jsp によって作成されます。
 
-mbox ごとに、**cq-targeting** の属性が追加され、アプリケーション開発者は使用するカスタムコードを作成して好きなように使用できます。 [AEM Mobile ハイブリッド参照アプリ ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、cq-targeting 属性を使用するAngularディレクティブの例があります。 コンテンツ置換の概念は、いつ、どのように行うかは、モバイルアプリケーション開発者が決定します。 AEM /etc/clientlibs/mobileapps/js/mobileapps.jsを介して配信される Mobile SDKがあり、Adobeターゲティングサービスを呼び出すための API を提供します。 その呼び出しを行うタイミングは、アプリケーションの設計に従ってアプリケーション開発者が指定します。
+mbox ごとに、**cq-targeting** の属性が追加され、アプリケーション開発者は使用するカスタムコードを作成して好きなように使用できます。 [AEM Mobile ハイブリッド参照アプリ &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、cq-targeting 属性を使用するAngularディレクティブの例があります。 コンテンツ置換の概念は、いつ、どのように行うかは、モバイルアプリケーション開発者が決定します。 AEM /etc/clientlibs/mobileapps/js/mobileapps.jsを介して配信される Mobile SDKがあり、Adobeターゲティングサービスを呼び出すための API を提供します。 その呼び出しを行うタイミングは、アプリケーションの設計に従ってアプリケーション開発者が指定します。
 
 ## 次の手順 {#what-s-next}
 

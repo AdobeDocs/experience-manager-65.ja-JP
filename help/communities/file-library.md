@@ -36,9 +36,9 @@ ht-degree: 3%
 
 そして、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/essentials-file-library.md#essentials-for-client-side) が含まれている場合、`File Library` のコンポーネントはその形式で表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/essentials-file-library.md#essentials-for-client-side) が含まれている場合、`File Library` のコンポーネントはその形式で表示されます。
 
 ![file-library1](assets/file-library1.png)
 
@@ -100,7 +100,7 @@ ht-degree: 3%
 
 * **次の操作を許可**
 
-  オンにした場合、メンバーが新しい投稿を [ 通知 ](/help/communities/notifications.md) できるようにするブログ記事の次の機能を含めます。 デフォルトではオフになっています。
+  オンにした場合、メンバーが新しい投稿を [&#x200B; 通知 &#x200B;](/help/communities/notifications.md) できるようにするブログ記事の次の機能を含めます。 デフォルトではオフになっています。
 
 * **メンションの有効化**
 
@@ -166,8 +166,8 @@ ht-degree: 3%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ ファイルライブラリの初期設定 ](/help/communities/essentials-file-library.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; ファイルライブラリの初期設定 &#x200B;](/help/communities/essentials-file-library.md) ページを参照してください。
 
-投稿されたトピックおよびコメントのモデレートについては、[ ユーザー作成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+投稿されたトピックおよびコメントのモデレートについては、[&#x200B; ユーザー作成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
-投稿されたトピックおよびコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け ](/help/communities/tag-ugc.md) を参照してください。
+投稿されたトピックおよびコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け &#x200B;](/help/communities/tag-ugc.md) を参照してください。

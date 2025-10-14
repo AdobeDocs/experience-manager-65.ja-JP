@@ -110,12 +110,12 @@ ht-degree: 1%
 
 デモ用に MSRP の Solr コレクションを設定するには、次の 2 つの決定を行う必要があります（詳しくは、メインドキュメントへのリンクを選択してください）。
 
-1. Solr をスタンドアロンまたは [SolrCloud モード ](msrp.md#solrcloudmode) で実行します。
-1. [ 標準 ](msrp.md#installingstandardmls) または [ 詳細 ](msrp.md#installingadvancedmls) 多言語検索（MLS）をインストールします。
+1. Solr をスタンドアロンまたは [SolrCloud モード &#x200B;](msrp.md#solrcloudmode) で実行します。
+1. [&#x200B; 標準 &#x200B;](msrp.md#installingstandardmls) または [&#x200B; 詳細 &#x200B;](msrp.md#installingadvancedmls) 多言語検索（MLS）をインストールします。
 
 ### スタンドアロン Solr {#standalone-solr}
 
-Solr の実行方法は、インストールのバージョンと方法によって異なる場合があります。 [Solr リファレンスガイド ](https://archive.apache.org/dist/lucene/solr/ref-guide/) は、信頼できるドキュメントです。
+Solr の実行方法は、インストールのバージョンと方法によって異なる場合があります。 [Solr リファレンスガイド &#x200B;](https://archive.apache.org/dist/lucene/solr/ref-guide/) は、信頼できるドキュメントです。
 
 簡単にするために、バージョン 4.10 を例として使用し、Solr をスタンドアロンモードで起動します。
 
@@ -144,19 +144,19 @@ Solr の実行方法は、インストールのバージョンと方法によっ
 
 MongoDB の起動前にAEMを実行していた場合は、AEM インスタンスを再起動する必要があります。
 
-メインのドキュメントページの手順に従います。[MSRP - MongoDB 共通ストア ](msrp.md)
+メインのドキュメントページの手順に従います。[MSRP - MongoDB 共通ストア &#x200B;](msrp.md)
 
 ## テスト {#test}
 
 MongoDB 共通ストアをテストおよび検証するには、パブリッシュインスタンスにコメントを投稿してオーサーインスタンスで表示し、MongoDB と Solr で UGC を表示します。
 
-1. パブリッシュインスタンスで、「[ コミュニティコンポーネントガイド ](http://localhost:4503/content/community-components/en/comments.html)」ページを参照し、コメント コンポーネントを選択します。
+1. パブリッシュインスタンスで、「[&#x200B; コミュニティコンポーネントガイド &#x200B;](http://localhost:4503/content/community-components/en/comments.html)」ページを参照し、コメント コンポーネントを選択します。
 1. ログインしてコメントを投稿：
 1. コメント テキスト入力ボックスにテキストを入力し、**[!UICONTROL Post]** をクリックします
 
-   ![ コメント後 ](assets/post-comment.png)
+   ![&#x200B; コメント後 &#x200B;](assets/post-comment.png)
 
-1. [ オーサーインスタンス ](http://localhost:4502/content/community-components/en/comments.html) に関するコメントを表示するだけです（管理者/管理者としてログインしている可能性があります）。
+1. [&#x200B; オーサーインスタンス &#x200B;](http://localhost:4502/content/community-components/en/comments.html) に関するコメントを表示するだけです（管理者/管理者としてログインしている可能性があります）。
 
    ![view-comment](assets/view-comment.png)
 
@@ -183,7 +183,7 @@ MongoDB 共通ストアをテストおよび検証するには、パブリッシ
 
 1. MSRP がデフォルトのプロバイダーに設定されていることを確認します。
 
-   * すべてのオーサーおよびパブリッシュ AEM インスタンスで、[ ストレージ設定コンソール ](srp-config.md) に再度アクセスするか、AEM リポジトリを確認します。
+   * すべてのオーサーおよびパブリッシュ AEM インスタンスで、[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md) に再度アクセスするか、AEM リポジトリを確認します。
 
    * JCR で [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) に [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ノードが含まれていない場合は、ストレージプロバイダーが JSRP です。
    * srpc ノードが存在し、ノード [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration) が含まれている場合、defaultconfiguration のプロパティでは、MSRP をデフォルトのプロバイダーとして定義する必要があります。

@@ -43,9 +43,9 @@ ht-degree: 2%
 
 そして、フォーラムが表示されるページの場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/essentials-forum.md#essentials-for-client-side) が含まれると、`Forum` のコンポーネントは次のように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/essentials-forum.md#essentials-for-client-side) が含まれると、`Forum` のコンポーネントは次のように表示されます。
 
 ![forum-component](assets/forum-component.png)
 
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 * **次の操作を許可**
 
-  オンにした場合、メンバーが新しい投稿を [ 通知 ](/help/communities/notifications.md) できる、フォーラム投稿の次の機能を含めます。 デフォルトではオフになっています。
+  オンにした場合、メンバーが新しい投稿を [&#x200B; 通知 &#x200B;](/help/communities/notifications.md) できる、フォーラム投稿の次の機能を含めます。 デフォルトではオフになっています。
 
 * **ピン留めを許可**
 
@@ -108,11 +108,11 @@ ht-degree: 2%
 
 * **おすすめコンテンツを許可**
 
-  オンにした場合、アイデアは [ おすすめコンテンツ ](/help/communities/featured.md) として識別できます。 デフォルトではオフになっています。
+  オンにした場合、アイデアは [&#x200B; おすすめコンテンツ &#x200B;](/help/communities/featured.md) として識別できます。 デフォルトではオフになっています。
 
 * **メール購読の許可**
 
-  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[ 購読 ](/help/communities/subscriptions.md)）。 `Allow Following` を確認し、[ メールを設定済み ](/help/communities/email.md) にする必要があります。 デフォルトではオフになっています。
+  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md)）。 `Allow Following` を確認し、[&#x200B; メールを設定済み &#x200B;](/help/communities/email.md) にする必要があります。 デフォルトではオフになっています。
 
 * **最大ファイルサイズ**
 
@@ -143,7 +143,7 @@ ht-degree: 2%
 
 * **バッジを表示**
 
-  オンにすると、獲得および割り当てられた [ バッジ ](/help/communities/implementing-scoring.md) がメンバーのブログエントリと共に表示されます。 デフォルトではオフになっています。
+  オンにすると、獲得および割り当てられた [&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md) がメンバーのブログエントリと共に表示されます。 デフォルトではオフになっています。
 
 * **権限のあるメンバーを許可**
 
@@ -175,7 +175,7 @@ ht-degree: 2%
 
 #### ユーザーモデレートタブ {#user-moderation-tab}
 
-「**ユーザーモデレート**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+「**ユーザーモデレート**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
 * **投稿を拒否**
 
@@ -249,10 +249,10 @@ ht-degree: 2%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ フォーラムの初期設定 ](/help/communities/essentials-forum.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; フォーラムの初期設定 &#x200B;](/help/communities/essentials-forum.md) ページを参照してください。
 
-投稿されたトピックおよびコメントのモデレートについては、[ ユーザー作成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+投稿されたトピックおよびコメントのモデレートについては、[&#x200B; ユーザー作成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
-投稿されたトピックおよびコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け ](/help/communities/tag-ugc.md) を参照してください。
+投稿されたトピックおよびコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け &#x200B;](/help/communities/tag-ugc.md) を参照してください。
 
-投稿されたトピックおよびコメントの翻訳については、[ ユーザー生成コンテンツの翻訳 ](/help/communities/translate-ugc.md) を参照してください。
+投稿されたトピックおよびコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳 &#x200B;](/help/communities/translate-ugc.md) を参照してください。

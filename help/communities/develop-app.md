@@ -18,7 +18,7 @@ ht-degree: 6%
 
 # サンドボックスアプリケーションの開発  {#develop-sandbox-application}
 
-この節では、テンプレートを「初期アプリケーション [」セクションで設定し、「初期コンテンツ ](initial-app.md)」セクションで設定した初期ページで設定したので、アプリケーションを開発でき [&#128279;](initial-content.md) す。 それには、Communities コンポーネントでのオーサリングを有効にする機能を含む、基盤スクリプトを使用します。 この節の最後では、完全に機能する web サイトがあります。
+この節では、テンプレートを「初期アプリケーション [」セクションで設定し、「初期コンテンツ &#x200B;](initial-app.md)」セクションで設定した初期ページで設定したので、アプリケーションを開発でき [&#128279;](initial-content.md) す。 それには、Communities コンポーネントでのオーサリングを有効にする機能を含む、基盤スクリプトを使用します。 この節の最後では、完全に機能する web サイトがあります。
 
 ## 基盤ページスクリプトの使用 {#using-foundation-page-scripts}
 
@@ -42,7 +42,7 @@ CRXDE Liteの使用：
 1. 緑の「**[!UICONTROL +追加]**」ボタンをクリックします。
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   ![ ページスクリプト ](assets/page-script.png)
+   ![&#x200B; ページスクリプト &#x200B;](assets/page-script.png)
 
 ### head スクリプトと body スクリプト {#head-and-body-scripts}
 
@@ -182,4 +182,4 @@ Communities コンポーネントをオーサリング用に有効にするに�
 
 サイトが公開されると、パブリッシュインスタンス上のルートページを参照すると、英語のページにリダイレクトされます。
 
-Communities SCF コンポーネントを使用する前の最後の手順は、クライアントライブラリフォルダー（clientlibs）....を追加することです [Clientlibs の追加 ](add-clientlibs.md)
+Communities SCF コンポーネントを使用する前の最後の手順は、クライアントライブラリフォルダー（clientlibs）....を追加することです [Clientlibs の追加 &#x200B;](add-clientlibs.md)

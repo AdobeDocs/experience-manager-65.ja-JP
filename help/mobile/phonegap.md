@@ -41,7 +41,7 @@ AEM Mobile アプリの新しいエクスペリエンスを開始するには、
 * [作成ウィザードを使用したAEM Mobile アプリケーションの作成](/help/mobile/phonegap-create-new-app.md)
 * [既存のハイブリッドアプリを読み込む](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-**コンテンツサービス** について詳しくは、[ コンテンツサービスの概要 ](/help/mobile/develop-content-as-a-service.md) を参照して開始してください。
+**コンテンツサービス** について詳しくは、[&#x200B; コンテンツサービスの概要 &#x200B;](/help/mobile/develop-content-as-a-service.md) を参照して開始してください。
 
 ## その他のリソース {#additional-resources}
 

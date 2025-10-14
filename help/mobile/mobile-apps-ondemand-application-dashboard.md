@@ -58,7 +58,7 @@ ht-degree: 8%
 >
 >右上の歯車をクリックして、Mobile On-Demand Cloud 設定をセットアップします。
 >
->詳しくは、[Mobile On-Demand Services の設定 ](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
+>詳しくは、[Mobile On-Demand Services の設定 &#x200B;](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 

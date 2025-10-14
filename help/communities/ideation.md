@@ -55,4 +55,4 @@ ht-degree: 7%
 
 ### アイディエーション機能 {#ideation-function}
 
-[Ideation 関数 ](functions.md#ideation-function) を含むコミュニティサイト構造には、設定済みの `ideation` コンポーネントが含まれています。
+[Ideation 関数 &#x200B;](functions.md#ideation-function) を含むコミュニティサイト構造には、設定済みの `ideation` コンポーネントが含まれています。

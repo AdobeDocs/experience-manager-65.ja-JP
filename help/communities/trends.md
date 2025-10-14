@@ -25,7 +25,7 @@ ht-degree: 4%
 
 このドキュメントでは、次の内容について説明します。
 
-* `Community Activity List` コンポーネントを [ コミュニティサイト ](/help/communities/overview.md#community-sites) に追加します。
+* `Community Activity List` コンポーネントを [&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#community-sites) に追加します。
 
 * `Community Activity List` コンポーネントの設定。
 
@@ -33,23 +33,23 @@ ht-degree: 4%
 
 `Community Activity List` のデータは、Adobe Analyticsがコミュニティサイトのライセンスを取得して設定されている場合にのみ使用できます。
 
-[ コミュニティ機能のための Analytics 設定 ](/help/communities/analytics.md) を参照してください。
+[&#x200B; コミュニティ機能のための Analytics 設定 &#x200B;](/help/communities/analytics.md) を参照してください。
 
 ### ページへのコミュニティアクティビティリストの追加 {#adding-a-community-activity-list-to-a-page}
 
 オーサーモードで `Community Activity List` コンポーネントをページに追加するには、コンポーネント `Communities / Community Activity List` を見つけてページ上にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
 コミュニティサイトのページに初めて配置すると、コンポーネントは次のように表示されます。
 
-![ コミュニティ アクティビティ ](assets/community-activity.png)
+![&#x200B; コミュニティ アクティビティ &#x200B;](assets/community-activity.png)
 
 ### コミュニティアクティビティリストの設定  {#configuring-community-activity-list}
 
 配置した `Community Activity List` コンポーネントを選択し、「`Configure`」アイコンを選択して「編集」ダイアログボックスを開きます。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 「**コメント**」タブで、アップロードしたファイルのコメントを表示するかどうか、および表示方法を指定します。
 

@@ -110,8 +110,8 @@ ht-degree: 4%
 
 * コピー `comments.hbs`
 
-   * [/libs/social/commons/components/hbs/comments から ](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
-   * [/apps/custom/components/comments に追加するには ](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
+   * [/libs/social/commons/components/hbs/comments から &#x200B;](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments)
+   * [/apps/custom/components/comments に追加するには &#x200B;](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments)
 
 * `comments.hbs` を次のように編集します。
 
@@ -127,7 +127,7 @@ ht-degree: 4%
 
 * コピー `comment.hbs`
 
-   * [/libs/social/commons/components/hbs/comments/comment から ](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
+   * [/libs/social/commons/components/hbs/comments/comment から &#x200B;](http://localhost:4502/crx/de/index.jsp#/libs/social/commons/components/hbs/comments/comment)
    * [/apps/custom/components/comments/comment](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment)
 
 * `comment.hbs` を次のように編集します。

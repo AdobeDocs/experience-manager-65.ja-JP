@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps-1}
 
-angular アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/server/ng-page コンポーネント（[ ローカルサーバーのCRXDE Liteーで開く ](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次の JSP スクリプトが含まれています。
+angular アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/server/ng-page コンポーネント（[&#x200B; ローカルサーバーのCRXDE Liteーで開く &#x200B;](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次の JSP スクリプトが含まれています。
 
 * ng-page.jsp
 * head.jsp
@@ -240,7 +240,7 @@ JSON データで駆動されるコンポーネント（「ng-text」など：/l
 
 ### controller.js.jsp {#controller-js-jsp-1}
 
-[AEMのページテンプレート ](/help/mobile/apps-architecture.md) に記載されているように、各コンポーネントはJavaScript フラグメントを出力して、`data` プロミスによって公開された JSON コンテンツを使用できます。 angular規則に従って、コントローラはスコープに変数を割り当てる場合にのみ使用してください。
+[AEMのページテンプレート &#x200B;](/help/mobile/apps-architecture.md) に記載されているように、各コンポーネントはJavaScript フラグメントを出力して、`data` プロミスによって公開された JSON コンテンツを使用できます。 angular規則に従って、コントローラはスコープに変数を割り当てる場合にのみ使用してください。
 
 ### angular.json.jsp {#angular-json-jsp}
 
@@ -307,7 +307,7 @@ www/
 
 ### .cordova/hooks/ {#cordova-hooks}
 
-このディレクトリには [CLI フック ](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c) が含まれています。 hooks ディレクトリのフォルダーには、ビルド中の正確なポイントで実行される node.js スクリプトが含まれています。
+このディレクトリには [CLI フック &#x200B;](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c) が含まれています。 hooks ディレクトリのフォルダーには、ビルド中の正確なポイントで実行される node.js スクリプトが含まれています。
 
 ### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 

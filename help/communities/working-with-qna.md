@@ -40,9 +40,9 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
 
 オーサーモードでページに `QnA` コンポーネントを追加するには、コンポーネントブラウザーを使用して `Communities / QnA` のコンポーネントを探し、QnA フォーラムが表示されるページの上にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/qna-essentials.md#essentials-for-client-side) が含まれると、`QnA` のコンポーネントは次のように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/qna-essentials.md#essentials-for-client-side) が含まれると、`QnA` のコンポーネントは次のように表示されます。
 
 ![qna-component](assets/qna-component.png)
 
@@ -50,7 +50,7 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
 
 配置された `QnA` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 ![qna-config](assets/qna-config.png)
 
@@ -100,7 +100,7 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
 
 * **次の操作を許可**
 
-  オンにした場合、メンバーが新しい投稿を [ 通知 ](/help/communities/notifications.md) できる、フォーラム投稿の次の機能を含めます。 デフォルトでは選択されていません。
+  オンにした場合、メンバーが新しい投稿を [&#x200B; 通知 &#x200B;](/help/communities/notifications.md) できる、フォーラム投稿の次の機能を含めます。 デフォルトでは選択されていません。
 
 * **ピン留めを許可**
 
@@ -108,7 +108,7 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
 
 * **メール購読の許可**
 
-  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[ 購読 ](/help/communities/subscriptions.md)）。 「フォローを許可」をオンにし、[ メールを設定済み ](/help/communities/email.md) にする必要があります。 デフォルトでは選択されていません。
+  オンにすると、メンバーが新しい投稿をメールで通知できるようになります（[&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md)）。 「フォローを許可」をオンにし、[&#x200B; メールを設定済み &#x200B;](/help/communities/email.md) にする必要があります。 デフォルトでは選択されていません。
 
 * **最大ファイルサイズ**
 
@@ -147,11 +147,11 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
   オンにした場合、表示される最初の回答は選択された回答です。 デフォルトでは選択されていません。
 * **バッジを表示**
 
-  オンにすると、獲得および割り当てられた [ バッジ ](/help/communities/implementing-scoring.md) がメンバーのブログエントリと共に表示されます。 デフォルトでは選択されていません。
+  オンにすると、獲得および割り当てられた [&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md) がメンバーのブログエントリと共に表示されます。 デフォルトでは選択されていません。
 
 * **おすすめコンテンツを許可**
 
-  オンにした場合、アイデアは [ おすすめコンテンツ ](/help/communities/featured.md) として識別できます。 デフォルトでは選択されていません。
+  オンにした場合、アイデアは [&#x200B; おすすめコンテンツ &#x200B;](/help/communities/featured.md) として識別できます。 デフォルトでは選択されていません。
 
 * **メンションの有効化**
 
@@ -167,7 +167,7 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
 
 #### ユーザーモデレートタブ {#user-moderation-tab}
 
-「**ユーザーのモデレート**」タブで、投稿されたトピック（質問）と回答（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+「**ユーザーのモデレート**」タブで、投稿されたトピック（質問）と回答（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
 * **回答の拒否**
 
@@ -261,6 +261,6 @@ QnA （Questions and Answers）フォーラム機能は、コミュニティメ�
 
 詳しくは、開発者向けの [QnA Essentials](/help/communities/qna-essentials.md) ページを参照してください。
 
-投稿されたトピックとコメントのモデレートについては、[ ユーザー生成コンテンツのモデレート ](/help/communities/moderate-ugc.md) を参照してください。
+投稿されたトピックとコメントのモデレートについては、[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](/help/communities/moderate-ugc.md) を参照してください。
 
-投稿されたトピックおよびコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け ](/help/communities/tag-ugc.md) を参照してください。
+投稿されたトピックおよびコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け &#x200B;](/help/communities/tag-ugc.md) を参照してください。

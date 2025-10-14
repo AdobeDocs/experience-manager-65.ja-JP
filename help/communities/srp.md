@@ -20,23 +20,23 @@ ht-degree: 1%
 
 ## はじめに {#introduction}
 
-Adobe Experience Manager（AEM） Communities 6.1 では、コミュニティコンテンツ（一般的にユーザー生成コンテンツ（UGC）と呼ばれます）は、[ ストレージリソースプロバイダー ](working-with-srp.md) （SRP）から提供される単一の共通ストアに保存されます。
+Adobe Experience Manager（AEM） Communities 6.1 では、コミュニティコンテンツ（一般的にユーザー生成コンテンツ（UGC）と呼ばれます）は、[&#x200B; ストレージリソースプロバイダー &#x200B;](working-with-srp.md) （SRP）から提供される単一の共通ストアに保存されます。
 
 SRP オプションはいくつかあり、そのすべてが、新しいAEM Communities インターフェイスである [SocialResourceProvider API](srp-and-ugc.md) （SRP API）を通じて UGC にアクセスします。この API には、作成、読み取り、更新、削除（CRUD）のすべての操作が含まれています。
 
-すべての SCF コンポーネントは SRP API を使用して実装されているため、[ 基盤となるトポロジ ](topologies.md) または UGC の場所に関する知識がなくてもコードを開発できます。
+すべての SCF コンポーネントは SRP API を使用して実装されているため、[&#x200B; 基盤となるトポロジ &#x200B;](topologies.md) または UGC の場所に関する知識がなくてもコードを開発できます。
 
 ***SocialResourceProvider API は、AEM Communitiesのライセンスをお持ちのお客様のみが利用できます。***
 
 >[!NOTE]
 >
->**カスタムコンポーネント**:AEM Communitiesのライセンスをお持ちのお客様は、SRP API を、基盤となるトポロジに関係なく UGC にアクセスするカスタムコンポーネントの開発者が使用できます。 [SRP と UGC の初期設定 ](srp-and-ugc.md) を参照してください。
+>**カスタムコンポーネント**:AEM Communitiesのライセンスをお持ちのお客様は、SRP API を、基盤となるトポロジに関係なく UGC にアクセスするカスタムコンポーネントの開発者が使用できます。 [SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md) を参照してください。
 
 関連トピック：
 
-* [SRP と UGC の基本事項 ](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
-* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
 
 ## リポジトリについて {#about-the-repository}
 
@@ -64,15 +64,15 @@ UGC を共有ストレージに保存すると、メンバーコンテンツの�
 
 >[!NOTE]
 >
->サンプルコードとその他の詳細については、[SRP と UGC の初期設定 ](srp-and-ugc.md) を参照してください。
+>サンプルコードとその他の詳細については、[SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md) を参照してください。
 >
->コーディング時のベストプラクティスについては、[SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) を参照してください。
+>コーディング時のベストプラクティスについては、[SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) を参照してください。
 
 ### ASRP {#asrp}
 
 ASRP がある場合、UGC は JCR に格納されず、Adobeがホストおよび管理するクラウドサービスに格納されます。 ASRP に保存された UGC は、CRXDE Liteで閲覧したり、JCR API を使用してアクセスしたりすることはできません。
 
-[ASRP - Adobeストレージリソースプロバイダー ](asrp.md) を参照してください。
+[ASRP - Adobeストレージリソースプロバイダー &#x200B;](asrp.md) を参照してください。
 
 開発者が UGC に直接アクセスすることはできません。
 
@@ -82,7 +82,7 @@ ASRP は、クエリにAdobeクラウドを使用します。
 
 存在する場合、MSRP、UGC は JCR には格納されず、MongoDB に格納されます。 MSRP に保存された UGC には、CRXDE Liteで表示したり、JCR API を使用してアクセスしたりすることはできません。
 
-[MSRP - MongoDB ストレージリソースプロバイダー ](msrp.md) を参照してください。
+[MSRP - MongoDB ストレージリソースプロバイダー &#x200B;](msrp.md) を参照してください。
 
 MSRP は ASRP に相当しますが、すべてのAEM サーバーインスタンスが同じ UGC にアクセスしているので、共通のツールを使用して MongoDB に保存された UGC に直接アクセスすることができます。
 
@@ -92,7 +92,7 @@ MSRP は、クエリに Solr を使用します。
 
 JSRP は、1 つのAEM インスタンス上のすべての UGC にアクセスするためのデフォルトのプロバイダーです。 これにより、MSRP や ASRP を設定しなくても、AEM Communities 6.1 をすばやく体験できます。
 
-[JSRP - JCR ストレージリソースプロバイダー ](jsrp.md) を参照してください。
+[JSRP - JCR ストレージリソースプロバイダー &#x200B;](jsrp.md) を参照してください。
 
 UGC が JCR に格納されていて、CRXDE Liteおよび JCR API でアクセスできる場合、Adobeは JCR API を使用しないことをお勧めします。 その場合、今後の変更により、カスタムコードに影響が出る可能性があります。
 
@@ -117,11 +117,11 @@ SRP API を使用すると、すべての SRP オプションは、すべての 
 
 ACL チェックでは、ユーティリティメソッドを使用して、リソースの UGC に適用される権限を確認するのに適したパスを返します。
 
-サンプルコードについては、「[SRP と UGC の初期設定 ](srp-and-ugc.md)」を参照してください。
+サンプルコードについては、「[SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md)」を参照してください。
 
 ### 既存のリソース以外（NER） {#for-non-existing-resources-ners}
 
-一部の Communities コンポーネントはスクリプト内に含まれるので、Communities の機能をサポートするには Sling アドレス可能なノードが必要です。 [ 含まれるコンポーネント ](scf.md#add-or-include-a-communities-component) は、存在しないリソース（NER）と呼ばれます。
+一部の Communities コンポーネントはスクリプト内に含まれるので、Communities の機能をサポートするには Sling アドレス可能なノードが必要です。 [&#x200B; 含まれるコンポーネント &#x200B;](scf.md#add-or-include-a-communities-component) は、存在しないリソース（NER）と呼ばれます。
 
 シャドウノードは、リポジトリ内の Sling のアドレス指定可能な場所を提供します。
 
@@ -131,7 +131,7 @@ ACL チェックでは、ユーティリティメソッドを使用して、リ�
 
 ### 保存場所 {#storage-location}
 
-[ コミュニティコンポーネントガイド ](components-guide.md) の [ コメントコンポーネント ](http://localhost:4502/content/community-components/en/comments.html) を使用した、シャドウノードの例を次に示します。
+[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) の [&#x200B; コメントコンポーネント &#x200B;](http://localhost:4502/content/community-components/en/comments.html) を使用した、シャドウノードの例を次に示します。
 
 * コンポーネントは、次の場所にあるローカルリポジトリに存在します。
 
@@ -147,7 +147,7 @@ ACL チェックでは、ユーティリティメソッドを使用して、リ�
 
 例えば、デプロイメントが TarMK パブリッシュファームを使用する [MSRP](msrp.md) であるとします。
 
-[ メンバー ](users.md) が UGC を pub1 に投稿すると（MongoDB に保存されます）、シャドーノードが pub1 の JCR に作成されます。
+[&#x200B; メンバー &#x200B;](users.md) が UGC を pub1 に投稿すると（MongoDB に保存されます）、シャドーノードが pub1 の JCR に作成されます。
 
 UGC が pub2 で初めて読み取られるときに、何も設定されていない場合、デフォルトの動作はシャドウノードを作成することです。
 

@@ -20,7 +20,7 @@ ht-degree: 2%
 
 検索機能は、フォーラムなどのその他の様々な機能と連携して、コンテンツを検索できるようにします。
 
-ユーザー生成コンテンツ（UGC）と呼ばれる、コミュニティメンバーが入力した投稿を検索する機能を追加する場合、[ 検索 ](#search) と [ 検索結果 ](#search-results) の 2 つのコンポーネントがあります。
+ユーザー生成コンテンツ（UGC）と呼ばれる、コミュニティメンバーが入力した投稿を検索する機能を追加する場合、[&#x200B; 検索 &#x200B;](#search) と [&#x200B; 検索結果 &#x200B;](#search-results) の 2 つのコンポーネントがあります。
 
 `Search Results` コンポーネントを含むページは、検索と結果の表示の両方をサポートしています。
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 オーサーモードで `Search` コンポーネントをページに追加するには、コンポーネントブラウザーを使用して `Communities / Search` のコンポーネントを探し、ページ上にドラッグして配置します。 `Search` を使用するには、`Search Results.` に 2 ページ目が必要です
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
 必要なクライアントサイドライブラリ `cq.social.hbs.search` が含まれている場合、`Search` コンポーネントはこの方法で表示されます。
 
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 配置した `Search` コンポーネントを選択してアクセスし、「`Configure`」アイコンを選択すると、編集ダイアログが開きます。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 「**[!UICONTROL 検索設定]**」タブで、訪問者がクエリを入力した際に検索するパスを指定します。
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 Web サイト内の他の場所で検索を使用する場合、`Search Results` を含むこの 1 ページは、`Search` の任意またはすべてのインスタンスの `Result Page` として設定できます。
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
 必要なクライアントサイドライブラリ `cq.social.hbs.search` が含まれている場合、`Search Result` のコンポーネントは次のように表示されます。
 
@@ -80,7 +80,7 @@ Web サイト内の他の場所で検索を使用する場合、`Search Results`
 
 配置した `Search Results` コンポーネントを選択してアクセスし、「`Configure`」アイコンを選択すると、編集ダイアログが開きます。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 「**[!UICONTROL 検索結果設定]**」タブでは、訪問者がクエリを入力したときに検索に含めるパスを指定できます。
 
@@ -96,4 +96,4 @@ Web サイト内の他の場所で検索を使用する場合、`Search Results`
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ 検索の基本事項 ](search-implementation.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; 検索の基本事項 &#x200B;](search-implementation.md) ページを参照してください。

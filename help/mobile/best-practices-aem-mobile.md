@@ -28,8 +28,8 @@ AEM Mobile On-demand Services アプリの構築は、Cordova （または Phone
 >
 >プラグインについて詳しくは、次のリソースを参照してください。
 >
->* [AEM Mobileでの Cordova プラグインの使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/cordova-api.html)
->* [AEM Mobile固有の Cordova 対応プラグインの使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/app-runtime-api.html)
+>* [AEM Mobileでの Cordova プラグインの使用 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/cordova-api.html)
+>* [AEM Mobile固有の Cordova 対応プラグインの使用 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/app-runtime-api.html)
 >
 
 * プラグイン機能を使用するテンプレートは、プラグインブリッジが存在することなく、ブラウザーで引き続きオーサリングできるように記述する必要があります。
@@ -59,7 +59,7 @@ AEM Mobile On-demand Services アプリの構築は、Cordova （または Phone
 
 >[!NOTE]
 >
->レンダリングをブロックする外部スクリプトについて詳しくは、[ こちら ](https://developers.google.com/speed/docs/insights/BlockingJS) を参照してください。
+>レンダリングをブロックする外部スクリプトについて詳しくは、[&#x200B; こちら &#x200B;](https://developers.google.com/speed/docs/insights/BlockingJS) を参照してください。
 
 **web 固有のものよりアプリ固有のクライアントサイド JS および CSS ライブラリを優先します**
 
@@ -68,13 +68,13 @@ AEM Mobile On-demand Services アプリの構築は、Cordova （または Phone
 
 >[!NOTE]
 >
->jQuery モバイルについて詳しくは、[ こちら ](https://jquerymobile.com/browser-support/1.4/) をクリックしてください。
+>jQuery モバイルについて詳しくは、[&#x200B; こちら &#x200B;](https://jquerymobile.com/browser-support/1.4/) をクリックしてください。
 
 **フルスタックよりマイクロライブラリを優先**
 
 * コンテンツをデバイスに送信するのにかかる時間は、記事が依存するライブラリごとに短縮されます。 この速度低下は、新しい web ビューを使用してすべての記事をレンダリングする場合に悪化するため、各ライブラリを最初から再度初期化する必要があります
 * 記事がSPA（シングルページアプリ）としてビルドされていない場合は、Angularのようなフルスタックライブラリを含める必要はありません
-* [Fastclick](https://github.com/ftlabs/fastclick) や [Velocity.js など、ページで必要なインタラクティビティを追加するのに役立つ、より小さい単目的ライブラリをお勧め ](https://velocityjs.org) ます。
+* [Fastclick](https://github.com/ftlabs/fastclick) や [Velocity.js など、ページで必要なインタラクティビティを追加するのに役立つ、より小さい単目的ライブラリをお勧め &#x200B;](https://velocityjs.org) ます。
 
 **記事ペイロードのサイズを最小限に抑える**
 

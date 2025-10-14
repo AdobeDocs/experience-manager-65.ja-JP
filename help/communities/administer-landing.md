@@ -31,7 +31,7 @@ ht-degree: 8%
 
 ### コミュニティサイトの作成と管理 {#communities-site-creation-and-management}
 
-* コミュニティ [ コンソール ](consoles.md)
+* コミュニティ [&#x200B; コンソール &#x200B;](consoles.md)
 
    * [Sites](sites-console.md)
 
@@ -56,23 +56,23 @@ ht-degree: 8%
 AEM Communitiesの主な機能は、ログインしたサイト訪問者（メンバー）がユーザー生成コンテンツ（UGC）を生成することです。 UGC の操作について詳しくは、次を参照してください。
 
 * [Common UGC Store](working-with-srp.md):UGC の共有ストレージ用の SRP の選択
-* [UGC のモデレート ](moderate-ugc.md)：信頼されたメンバーは、一括またはコンテキスト内で UGC をモデレートできる場合があります
-* [UGC のタグ付け ](tag-ugc.md)：メンバーがコンテンツにタグ付けできるように機能を設定できます
-* [UGC の翻訳 ](translate-ugc.md)：機能は、すべての UGC を翻訳するように設定することも、メンバーが選択した投稿を翻訳できるようにすることもできます
-* [Analytics 設定 ](analytics.md)：メンバーアクティビティに関する様々な指標についてAdobe Analyticsがレポートできるようにします
+* [UGC のモデレート &#x200B;](moderate-ugc.md)：信頼されたメンバーは、一括またはコンテキスト内で UGC をモデレートできる場合があります
+* [UGC のタグ付け &#x200B;](tag-ugc.md)：メンバーがコンテンツにタグ付けできるように機能を設定できます
+* [UGC の翻訳 &#x200B;](translate-ugc.md)：機能は、すべての UGC を翻訳するように設定することも、メンバーが選択した投稿を翻訳できるようにすることもできます
+* [Analytics 設定 &#x200B;](analytics.md)：メンバーアクティビティに関する様々な指標についてAdobe Analyticsがレポートできるようにします
 
 ### コミュニティメンバー {#community-members}
 
-* [ ユーザーとユーザーグループの管理 ](users.md)：コミュニティメンバーとメンバーグループの詳細（権限のあるメンバーを含む）。
-* [ 貢献度制限 ](limits.md)：新しいメンバーによる投稿を制限する機能。
-* [ トンネルサービス ](deploy-communities.md#tunnel-service-on-author)：オーサー環境からパブリッシュ側のメンバーおよびメンバーグループにアクセスできるようにします。
-* [ メンバーコンソールとグループコンソール ](members.md)：パブリッシュサイドのメンバーおよびメンバーグループを、オーサー環境で作成および管理できます。
-* [ ユーザー同期 ](sync.md)：複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する場合。
-* [FacebookおよびTwitterでのソーシャルログイン ](social-login.md)：サイト訪問者がFacebookまたはTwitterの資格情報を使用してコミュニティメンバーになる機能。
-* [ スコアおよびバッジ ](implementing-scoring.md)：バッジを割り当ててメンバーの役割を特定し、メンバーがコミュニティへの参加を通じてバッジを獲得する機能。
-* [ 通知 ](notifications.md)：メンバーがフォローするアクティビティの通知を受け取る機能。
-* [ 購読 ](subscriptions.md)：メンバーが外部メールを使用してコミュニティとやり取りする機能。
-* [ メッセージング ](messaging.md)：メンバーが内部メッセージを使用してコミュニティとやり取りする機能。
+* [&#x200B; ユーザーとユーザーグループの管理 &#x200B;](users.md)：コミュニティメンバーとメンバーグループの詳細（権限のあるメンバーを含む）。
+* [&#x200B; 貢献度制限 &#x200B;](limits.md)：新しいメンバーによる投稿を制限する機能。
+* [&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author)：オーサー環境からパブリッシュ側のメンバーおよびメンバーグループにアクセスできるようにします。
+* [&#x200B; メンバーコンソールとグループコンソール &#x200B;](members.md)：パブリッシュサイドのメンバーおよびメンバーグループを、オーサー環境で作成および管理できます。
+* [&#x200B; ユーザー同期 &#x200B;](sync.md)：複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する場合。
+* [FacebookおよびTwitterでのソーシャルログイン &#x200B;](social-login.md)：サイト訪問者がFacebookまたはTwitterの資格情報を使用してコミュニティメンバーになる機能。
+* [&#x200B; スコアおよびバッジ &#x200B;](implementing-scoring.md)：バッジを割り当ててメンバーの役割を特定し、メンバーがコミュニティへの参加を通じてバッジを獲得する機能。
+* [&#x200B; 通知 &#x200B;](notifications.md)：メンバーがフォローするアクティビティの通知を受け取る機能。
+* [&#x200B; 購読 &#x200B;](subscriptions.md)：メンバーが外部メールを使用してコミュニティとやり取りする機能。
+* [&#x200B; メッセージング &#x200B;](messaging.md)：メンバーが内部メッセージを使用してコミュニティとやり取りする機能。
 
 ### デプロイメント {#deployment}
 
@@ -86,12 +86,12 @@ AEM プラットフォームには、最新の Communities リリースをイン
 
 * [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)
 
-[ アップグレード ](upgrade.md)、[Dispatcher](dispatcher.md)、&lbrace; レプリケーション [&#128279;](deploy-communities.md#replication-agents-on-author) など、Communities 固有のその他の情報については、デプロイメントページを参照し  ください。
+[&#x200B; アップグレード &#x200B;](upgrade.md)、[Dispatcher](dispatcher.md)、&lbrace; レプリケーション [&#128279;](deploy-communities.md#replication-agents-on-author) など、Communities 固有のその他の情報については、デプロイメントページを参照し  ください。
 
 ## 関連する Communities ドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントについて詳しくは、[Communities のデプロイ ](deploy-communities.md) を参照してください。
+* 推奨されるデプロイメントについて詳しくは、[Communities のデプロイ &#x200B;](deploy-communities.md) を参照してください。
 
-* [ コミュニティの開発 ](communities.md) を参照して、ソーシャルコンポーネントフレームワーク（SCF）と、コミュニティのコンポーネントや機能のカスタマイズについて学ぶことができます。
+* [&#x200B; コミュニティの開発 &#x200B;](communities.md) を参照して、ソーシャルコンポーネントフレームワーク（SCF）と、コミュニティのコンポーネントや機能のカスタマイズについて学ぶことができます。
 
-* Communities コンポーネントを使用してオーサリングする方法と設定する方法については、[Communities コンポーネントのオーサリング ](author-communities.md) を参照してください。
+* Communities コンポーネントを使用してオーサリングする方法と設定する方法については、[Communities コンポーネントのオーサリング &#x200B;](author-communities.md) を参照してください。

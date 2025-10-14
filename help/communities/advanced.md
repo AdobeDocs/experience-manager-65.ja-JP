@@ -27,15 +27,15 @@ ht-degree: 2%
 
 コンテンツの関連性に加えて、スコアリングアルゴリズムは、投票および回答率などのメンバーアクティビティを考慮します。 基本スコアリングではこれらが定量的に含まれますが、高度なスコアリングではアルゴリズム的に使用されます。
 
-したがって、高度なスコアリングエンジンでは、分析を有意義なものにするために十分なデータが必要です。 作成されるコンテンツの量と品質に合わせてアルゴリズムが継続的に調整されるので、エキスパートになるための達成基準は常に再評価されます。 また、メンバーの古い投稿には *ディケイ* という概念があります。 エキスパートメンバーが、エキスパートのステータスを獲得した案件への参加を停止した場合、事前に決定された時点（[ スコアリングエンジン設定 ](#configurable-scoring-engine) を参照）で、エキスパートとしてのステータスを失う可能性があります。
+したがって、高度なスコアリングエンジンでは、分析を有意義なものにするために十分なデータが必要です。 作成されるコンテンツの量と品質に合わせてアルゴリズムが継続的に調整されるので、エキスパートになるための達成基準は常に再評価されます。 また、メンバーの古い投稿には *ディケイ* という概念があります。 エキスパートメンバーが、エキスパートのステータスを獲得した案件への参加を停止した場合、事前に決定された時点（[&#x200B; スコアリングエンジン設定 &#x200B;](#configurable-scoring-engine) を参照）で、エキスパートとしてのステータスを失う可能性があります。
 
 詳細スコアリングの設定は、基本スコアリングとほぼ同じです：
 
-* 基本ルールと高度なスコアおよびバッジルールは [ コンテンツに適用 ](/help/communities/implementing-scoring.md#apply-rules-to-content) 同じ方法で適用されます。
+* 基本ルールと高度なスコアおよびバッジルールは [&#x200B; コンテンツに適用 &#x200B;](/help/communities/implementing-scoring.md#apply-rules-to-content) 同じ方法で適用されます。
 
    * 基本および高度なスコアおよびバッジルールを同じコンテンツに適用できます。
 
-* [ コンポーネントのバッジの有効化 ](/help/communities/implementing-scoring.md#enable-badges-for-component) は汎用です。
+* [&#x200B; コンポーネントのバッジの有効化 &#x200B;](/help/communities/implementing-scoring.md#enable-badges-for-component) は汎用です。
 
 スコアルールとバッジルールの設定の違いは次のとおりです。
 
@@ -53,7 +53,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->高度なスコアおよびバッジ機能を使用するには、[ エキスパート識別パッケージ ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq610%2Fsocial%2Ffeaturepack%2Fcq-social-expert-identification-pkg) をインストールします。
+>高度なスコアおよびバッジ機能を使用するには、[&#x200B; エキスパート識別パッケージ &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq610%2Fsocial%2Ffeaturepack%2Fcq-social-expert-identification-pkg) をインストールします。
 
 ## 設定可能なスコアリングエンジン {#configurable-scoring-engine}
 
@@ -63,7 +63,7 @@ ht-degree: 2%
 
 * **スコアリング・ウェイト**
 
-  トピックの場合、スコアを計算する際に最も高い優先度を付与する動詞を指定します。 1 つ以上のトピックを入力できますが、**トピックごとに 1 つの動詞** に制限されます。 [ トピックと動詞 ](/help/communities/implementing-scoring.md#topics-and-verbs) を参照してください。
+  トピックの場合、スコアを計算する際に最も高い優先度を付与する動詞を指定します。 1 つ以上のトピックを入力できますが、**トピックごとに 1 つの動詞** に制限されます。 [&#x200B; トピックと動詞 &#x200B;](/help/communities/implementing-scoring.md#topics-and-verbs) を参照してください。
 コンマをエスケープして `topic,verb` として入力します。 次に例を示します。
   `/social/forum/hbs/social/forum\,ADD`
 デフォルトでは、QnA およびフォーラムコンポーネント用の ADD 動詞に設定されています。
@@ -99,7 +99,7 @@ ht-degree: 2%
 
 詳細スコアリングエンジンを呼び出すには、`scoringType` を `advanced` に設定する必要があります。
 
-[ スコアリング・サブ・ルール ](/help/communities/implementing-scoring.md#scoring-sub-rules) を参照してください。
+[&#x200B; スコアリング・サブ・ルール &#x200B;](/help/communities/implementing-scoring.md#scoring-sub-rules) を参照してください。
 
 ![advanced-scoring-type](assets/advanced-scoring-type.png)
 
@@ -117,7 +117,7 @@ ht-degree: 2%
 
 ## 高度なバッジルール {#advanced-badging-rules}
 
-詳細なバッジルールプロパティは、[ 基本のバッジルールプロパティ ](/help/communities/implementing-scoring.md#badging-rules) とは異なります。
+詳細なバッジルールプロパティは、[&#x200B; 基本のバッジルールプロパティ &#x200B;](/help/communities/implementing-scoring.md#badging-rules) とは異なります。
 
 ポイントをバッジ画像に関連付けるのではなく、許可されるエキスパートの数と付与するバッジ画像を特定するだけで済みます。
 
@@ -163,7 +163,7 @@ ht-degree: 2%
 
   `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![ エキスパートバッジ ](assets/included-badge.png)
+![&#x200B; エキスパートバッジ &#x200B;](assets/included-badge.png)
 
 エキスパートバッジをアクティビティの報酬として表示するには、次の点を確認してください。
 
@@ -178,7 +178,7 @@ ht-degree: 2%
 
 ### スコアルールとサブルールを含む {#included-scoring-rules-and-sub-rules}
 
-ベータ版リリースには、[ フォーラム機能 ](/help/communities/functions.md#forum-function) 用の 2 つの高度なスコアルール（フォーラム機能のフォーラムおよびコメント用コンポーネントのそれぞれに 1 つずつ）が含まれています。
+ベータ版リリースには、[&#x200B; フォーラム機能 &#x200B;](/help/communities/functions.md#forum-function) 用の 2 つの高度なスコアルール（フォーラム機能のフォーラムおよびコメント用コンポーネントのそれぞれに 1 つずつ）が含まれています。
 
 1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
@@ -208,7 +208,7 @@ ht-degree: 2%
 
 ### 含まれるバッジルール {#included-badging-rules}
 
-リリースには、[ 高度なフォーラムとコメントスコアルール ](#included-scoring-rules-and-sub-rules) に対応する 2 つの高度なバッジルールが含まれています。
+リリースには、[&#x200B; 高度なフォーラムとコメントスコアルール &#x200B;](#included-scoring-rules-and-sub-rules) に対応する 2 つの高度なバッジルールが含まれています。
 
 * `/libs/settings/community/badging/rules/adv-comments-badging`
 * `/libs/settings/community/badging/rules/adv-forums-badging`

@@ -107,4 +107,4 @@ For more information, see [https://apptestnow.com/](https://apptestnow.com/). --
 
 * テストツールではありませんが、Jenkins は、自動化されたテストのバックボーンを提供する継続的な統合フレームワークです。 機能を拡張するために、多数のサードパーティプラグインが利用できます。 例えば、SeleniumGrid プラグインは、Selenium ハブおよびノードの管理に役立つ UI を提供します。
 
-詳しくは、[https://www.jenkins.io/&rbrace; および ](https://www.jenkins.io/)2&rbrace;https://plugins.jenkins.io/[&#128279;](https://plugins.jenkins.io/) を参照してください。
+詳しくは、[https://www.jenkins.io/&rbrace; および &#x200B;](https://www.jenkins.io/)2&rbrace;https://plugins.jenkins.io/[&#128279;](https://plugins.jenkins.io/) を参照してください。

@@ -30,13 +30,13 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 
 >[!NOTE]
 >
->オーサリング環境に詳しくない場合は、[ 基本操作 ](/help/sites-authoring/basic-handling.md) および [ ページのオーサリングのクイックガイド ](/help/sites-authoring/qg-page-authoring.md) に関するドキュメントを参照してください。
+>オーサリング環境に詳しくない場合は、[&#x200B; 基本操作 &#x200B;](/help/sites-authoring/basic-handling.md) および [&#x200B; ページのオーサリングのクイックガイド &#x200B;](/help/sites-authoring/qg-page-authoring.md) に関するドキュメントを参照してください。
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
 次の表に、コンポーネントブラウザー（サイドキック）で有効にすると作成者に表示される Communities コンポーネントを示します。
 
-インタラクティブな [ コミュニティコンポーネントガイド ](/help/communities/components-guide.md) も参照してください。
+インタラクティブな [&#x200B; コミュニティコンポーネントガイド &#x200B;](/help/communities/components-guide.md) も参照してください。
 
 >[!NOTE]
 >
@@ -44,34 +44,34 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|
-| アクティビティストリーム | [ アクティビティストリーム ](/help/communities/activities.md) |
+| アクティビティストリーム | [&#x200B; アクティビティストリーム &#x200B;](/help/communities/activities.md) |
 | ブログ | [ブログ](/help/communities/blog-feature.md) |
 | ブログのサイドバー | [ブログ](/help/communities/blog-feature.md) |
-| Calendar | [ カレンダー ](/help/communities/calendar.md) |
+| Calendar | [&#x200B; カレンダー &#x200B;](/help/communities/calendar.md) |
 | コメント | [コメント](/help/communities/comments.md) |
-| コミュニティのアクティビティリスト | [ アクティビティのトレンド ](/help/communities/trends.md) |
-| コミュニティグループメンバーのリスト | [ コミュニティグループ ](/help/communities/creating-groups.md) |
-| メッセージを作成 | [ メッセージング ](/help/communities/configure-messaging.md) |
-| おすすめコンテンツ | [ おすすめコンテンツ ](/help/communities/featured.md) |
-| ファイルライブラリ | [ ファイル ライブラリ ](/help/communities/file-library.md) |
-| フォロー | [ ソーシャルグラフ ](/help/communities/socialgraph.md) |
-| フォロー | [ ソーシャルグラフ ](/help/communities/socialgraph.md) |
+| コミュニティのアクティビティリスト | [&#x200B; アクティビティのトレンド &#x200B;](/help/communities/trends.md) |
+| コミュニティグループメンバーのリスト | [&#x200B; コミュニティグループ &#x200B;](/help/communities/creating-groups.md) |
+| メッセージを作成 | [&#x200B; メッセージング &#x200B;](/help/communities/configure-messaging.md) |
+| おすすめコンテンツ | [&#x200B; おすすめコンテンツ &#x200B;](/help/communities/featured.md) |
+| ファイルライブラリ | [&#x200B; ファイル ライブラリ &#x200B;](/help/communities/file-library.md) |
+| フォロー | [&#x200B; ソーシャルグラフ &#x200B;](/help/communities/socialgraph.md) |
+| フォロー | [&#x200B; ソーシャルグラフ &#x200B;](/help/communities/socialgraph.md) |
 | フォーラム | [フォーラム](/help/communities/forum.md) |
-| アイディエーション | [ 念慮 ](/help/communities/ideation-feature.md) |
-| リーダーボード | [ スコアおよびバッジ ](/help/communities/enabling-leaderboard.md) |
-| 「いいね!」の設定 | [ 気に入る ](/help/communities/liking.md) |
-| メッセージ | [ メッセージング ](/help/communities/configure-messaging.md) |
-| メッセージリスト | [ メッセージング ](/help/communities/configure-messaging.md) |
-| Q&amp;A | [ 質疑応答 ](/help/communities/working-with-qna.md) |
+| アイディエーション | [&#x200B; 念慮 &#x200B;](/help/communities/ideation-feature.md) |
+| リーダーボード | [&#x200B; スコアおよびバッジ &#x200B;](/help/communities/enabling-leaderboard.md) |
+| 「いいね!」の設定 | [&#x200B; 気に入る &#x200B;](/help/communities/liking.md) |
+| メッセージ | [&#x200B; メッセージング &#x200B;](/help/communities/configure-messaging.md) |
+| メッセージリスト | [&#x200B; メッセージング &#x200B;](/help/communities/configure-messaging.md) |
+| Q&amp;A | [&#x200B; 質疑応答 &#x200B;](/help/communities/working-with-qna.md) |
 | クイック検索 | [検索](/help/communities/search.md) |
 | レーティング | [レーティング](/help/communities/rating.md) |
-| 関連する質問 | [ 質疑応答 ](/help/communities/working-with-qna.md) |
-| レビュー | [ レビュー ](/help/communities/reviews.md) |
-| レビューの概要 (表示) | [ レビュー ](/help/communities/reviews.md) |
+| 関連する質問 | [&#x200B; 質疑応答 &#x200B;](/help/communities/working-with-qna.md) |
+| レビュー | [&#x200B; レビュー &#x200B;](/help/communities/reviews.md) |
+| レビューの概要 (表示) | [&#x200B; レビュー &#x200B;](/help/communities/reviews.md) |
 | 検索 | [検索](/help/communities/search.md) |
 | 検索結果 | [検索](/help/communities/search.md) |
-| ソーシャルタグクラウド | [ ソーシャルタグクラウド ](/help/communities/tagcloud.md) |
-| 投票 | [ 投票 ](/help/communities/voting.md) |
+| ソーシャルタグクラウド | [&#x200B; ソーシャルタグクラウド &#x200B;](/help/communities/tagcloud.md) |
+| 投票 | [&#x200B; 投票 &#x200B;](/help/communities/voting.md) |
 
 >[!NOTE]
 >
@@ -79,8 +79,8 @@ AEM Communitiesのライセンスを取得すると、コミュニティサイ�
 
 ## 関連する Communities ドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントについて詳しくは、[Communities のデプロイ ](/help/communities/deploy-communities.md) を参照してください。
+* 推奨されるデプロイメントについて詳しくは、[Communities のデプロイ &#x200B;](/help/communities/deploy-communities.md) を参照してください。
 
-* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージングの設定については、[ コミュニティサイトの管理 ](/help/communities/administer-landing.md) を参照してください。
+* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージングの設定については、[&#x200B; コミュニティサイトの管理 &#x200B;](/help/communities/administer-landing.md) を参照してください。
 
-* [ コミュニティの開発 ](/help/communities/communities.md) を参照して、ソーシャルコンポーネントフレームワーク（SCF）と、コミュニティのコンポーネントや機能のカスタマイズについて学ぶことができます。
+* [&#x200B; コミュニティの開発 &#x200B;](/help/communities/communities.md) を参照して、ソーシャルコンポーネントフレームワーク（SCF）と、コミュニティのコンポーネントや機能のカスタマイズについて学ぶことができます。

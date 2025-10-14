@@ -22,7 +22,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobeエクスペリエンス管理（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
+>Adobeエクスペリエンス管理（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html) を参照してください。
 
 ## AEM 管理者 {#aem-administrator}
 
@@ -30,7 +30,7 @@ ht-degree: 4%
 >
 >**前提条件：**
 >
->AEM Mobileの環境の設定を開始する前に、[AEM Mobile On-demand Services Application Dashboard またはコントロールセンター ](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
+>AEM Mobileの環境の設定を開始する前に、[AEM Mobile On-demand Services Application Dashboard またはコントロールセンター &#x200B;](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
 ***AEM管理者*** は、作成ウィザードを使用してアプリを作成するか、既存のアプリを読み込むことで、AEM Mobile カタログにアプリを追加する責任があります。 AEM Mobileの *作成ウィザード* を使用してアプリを作成するAEM管理者は、通常、Adobeの標準提供の参照サンプルまたは（通常） *AEM開発者が作成したカスタムアプリテンプレートから、目的のアプリテンプレートの 1 つを選択し* す。
 
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 AEM管理者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを担当します。
 
-* [AEM Mobileの設定 ](/help/mobile/aem-mobile-setup.md) を参照してください。
+* [AEM Mobileの設定 &#x200B;](/help/mobile/aem-mobile-setup.md) を参照してください。
 
    * AEM Mobile プロビジョニング
    * AEM Mobileのプロジェクトの作成

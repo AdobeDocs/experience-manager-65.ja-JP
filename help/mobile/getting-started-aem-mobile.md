@@ -29,9 +29,9 @@ AEM Mobileは、Adobe Experience Manager マルチチャネルデジタルプラ
 AEM Mobileでは、複数の方法でアプリを作成できます。 アプリを作成する 3 つの方法は次のとおりです。
 
 * **[AEMでの On-Demand Services の使用](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[AEMを使用しない On-Demand Services の使用 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
+* **[AEMを使用しない On-Demand Services の使用 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
 * **[AEMでのAdobe PhoneGap Enterprise の使用](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]
 >
->Adobe Experience Managerを初めて使用する場合は、[AEMの基本を学ぶ ](/help/sites-deploying/deploy.md) を参照してください。
+>Adobe Experience Managerを初めて使用する場合は、[AEMの基本を学ぶ &#x200B;](/help/sites-deploying/deploy.md) を参照してください。

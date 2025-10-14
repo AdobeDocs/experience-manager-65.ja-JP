@@ -24,11 +24,11 @@ ht-degree: 3%
 
 オーサーモードで `Rating` コンポーネントをページに追加するには、コンポーネントを `Communities / Rating` に配置して、メンバーが評価するフィーチャーに対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](rating-basics.md#essentials-for-client-side) が含まれると、`Rating` コンポーネントはこのように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](rating-basics.md#essentials-for-client-side) が含まれると、`Rating` コンポーネントはこのように表示されます。
 
-![ レーティング ](assets/rating.png)
+![&#x200B; レーティング &#x200B;](assets/rating.png)
 
 ## 評価の設定 {#configuring-rating}
 
@@ -55,4 +55,4 @@ ht-degree: 3%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ 評価の基本事項 ](rating-basics.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; 評価の基本事項 &#x200B;](rating-basics.md) ページを参照してください。

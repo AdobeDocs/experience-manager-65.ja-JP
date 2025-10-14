@@ -38,9 +38,9 @@ ht-degree: 1%
 
 そして、アクティビティストリームが表示されるページの上にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](/help/communities/basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](/help/communities/basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](/help/communities/essentials-activities.md#essentials-for-client-side) が含まれると、`Activity Streams` のコンポーネントは次のように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](/help/communities/essentials-activities.md#essentials-for-client-side) が含まれると、`Activity Streams` のコンポーネントは次のように表示されます。
 
 ![activity-streams](assets/activity-component.png)
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 配置された `Activity Streams` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 「**ユーザーアクティビティ**」タブで、表示するアクティビティを指定します。
 
@@ -78,9 +78,9 @@ ht-degree: 1%
 
 コンポーネントは、以下を有効にするように設定する必要があります。 次の機能を使用できます。[blog](/help/communities/blog-feature.md)、[forum](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[calendar](/help/communities/calendar.md)、[file library](/help/communities/file-library.md)、[comments](/help/communities/comments.md)。
 
-![ 次のビュー ](assets/following-activities.png)
+![&#x200B; 次のビュー &#x200B;](assets/following-activities.png)
 
-**フォロー** ボタンを使用すると、エントリをアクティビティ、[ 通知 ](/help/communities/notifications.md) または [ 購読 ](/help/communities/subscriptions.md) としてフォローできます。 「**フォロー**」ボタンを選択するたびに、選択のオンとオフを切り替えることができます。 `Email Subscriptions` の選択は、設定されている場合にのみ存在します。
+**フォロー** ボタンを使用すると、エントリをアクティビティ、[&#x200B; 通知 &#x200B;](/help/communities/notifications.md) または [&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md) としてフォローできます。 「**フォロー**」ボタンを選択するたびに、選択のオンとオフを切り替えることができます。 `Email Subscriptions` の選択は、設定されている場合にのみ存在します。
 
 次のメソッドのいずれかを選択すると、ボタンのテキストが **次** に変わります。 便宜上、`Unfollow All` を選択してすべてのメソッドをオフにすることができます。
 
@@ -97,4 +97,4 @@ ht-degree: 1%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ アクティビティストリームの初期設定 ](/help/communities/essentials-activities.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; アクティビティストリームの初期設定 &#x200B;](/help/communities/essentials-activities.md) ページを参照してください。

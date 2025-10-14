@@ -18,7 +18,7 @@ ht-degree: 4%
 
 # 初期サンドボックスコンテンツ {#initial-sandbox-content}
 
-この節では、次のページを作成します。これらのページはすべて [ ページテンプレート ](initial-app.md#createthepagetemplate) を使用します。
+この節では、次のページを作成します。これらのページはすべて [&#x200B; ページテンプレート &#x200B;](initial-app.md#createthepagetemplate) を使用します。
 
 * メインページの英語版にリダイレクトされる SCF サンドボックスサイト。
 
@@ -26,11 +26,11 @@ ht-degree: 4%
 
    * SCF プレイ – 再生するメインページの子。
 
-このチュートリアルでは、[ 言語コピー ](../../help/sites-administering/tc-prep.md) については説明しません。 代わりに、ルートページがHTMLヘッダーを介して利用者の優先言語を検出し、その言語の適切なメインページにリダイレクトするように設計される。 慣例により、ページのノード名には 2 文字の国コードを使用します。例えば、英語は「en」、フランス語は「fr」です。
+このチュートリアルでは、[&#x200B; 言語コピー &#x200B;](../../help/sites-administering/tc-prep.md) については説明しません。 代わりに、ルートページがHTMLヘッダーを介して利用者の優先言語を検出し、その言語の適切なメインページにリダイレクトするように設計される。 慣例により、ページのノード名には 2 文字の国コードを使用します。例えば、英語は「en」、フランス語は「fr」です。
 
 ## 最初のページを作成 {#create-first-pages}
 
-[ ページテンプレート ](initial-app.md#createthepagetemplate) が用意されたので、/content ディレクトリに web サイトのルートページを設定できます。
+[&#x200B; ページテンプレート &#x200B;](initial-app.md#createthepagetemplate) が用意されたので、/content ディレクトリに web サイトのルートページを設定できます。
 
 1. 標準 UI は現在、サイトを作成するためのブループリントを提供しています。 このチュートリアルではシンプルなサイトを作成するので、クラシック UI が役立ちます。
 
@@ -38,9 +38,9 @@ ht-degree: 4%
 
    ![classic-ui](assets/classic-ui.png)
 
-   クラシック UI に切り替える機能は、[ 管理者が有効にする ](../../help/sites-administering/enable-classic-ui.md) 必要があります。
+   クラシック UI に切り替える機能は、[&#x200B; 管理者が有効にする &#x200B;](../../help/sites-administering/enable-classic-ui.md) 必要があります。
 
-1. [ クラシック UI のようこそページ ](http://localhost:4502/welcome.html) から、「**[!UICONTROL Web サイト]**」を選択します。
+1. [&#x200B; クラシック UI のようこそページ &#x200B;](http://localhost:4502/welcome.html) から、「**[!UICONTROL Web サイト]**」を選択します。
 
    ![classic-ui-website](assets/classic-ui-website.png)
 
@@ -106,4 +106,4 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->`cq:designPath` の使用はオプションで、SCF コンポーネントが JS と CSS の管理に [clientlibs](develop-app.md#includeclientlibsintemplate) を使用するので必須である [clientlibs の使用 ](client-customize.md#clientlibs-for-scf) とは無関係です。
+>`cq:designPath` の使用はオプションで、SCF コンポーネントが JS と CSS の管理に [clientlibs](develop-app.md#includeclientlibsintemplate) を使用するので必須である [clientlibs の使用 &#x200B;](client-customize.md#clientlibs-for-scf) とは無関係です。

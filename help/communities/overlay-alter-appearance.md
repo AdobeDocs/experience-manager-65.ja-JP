@@ -58,7 +58,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->レプリケーションのより堅牢な形式は、パッケージマネージャーでパッケージを作成し、[ アクティブ化 ](/help/sites-administering/package-manager.md#replicating-packages) することです。 パッケージは、書き出しとアーカイブが可能です。
+>レプリケーションのより堅牢な形式は、パッケージマネージャーでパッケージを作成し、[&#x200B; アクティブ化 &#x200B;](/help/sites-administering/package-manager.md#replicating-packages) することです。 パッケージは、書き出しとアーカイブが可能です。
 
 グローバルナビゲーションから **[!UICONTROL ツール]**/**[!UICONTROL デプロイメント]**/**[!UICONTROL レプリケーション]** を選択し、「**[!UICONTROL ツリーをアクティベート]**」をクリックします。
 

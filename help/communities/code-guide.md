@@ -28,16 +28,16 @@ AEM Communities開発者向けの様々なコーディングガイドライン�
 
 ### コード {#code}
 
-* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - UGC が JCR （JSRP）に格納されている場合にのみ機能するアプリケーションの書き込みを回避する方法。
-* [SocialUtils リファクタリング ](socialutils.md) - SocialUtils に代わる SRP のユーティリティメソッド。
-* [ 命名規則 ](naming-conventions.md) - カスタム Java クラスの命名規則。
+* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - UGC が JCR （JSRP）に格納されている場合にのみ機能するアプリケーションの書き込みを回避する方法。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtils に代わる SRP のユーティリティメソッド。
+* [&#x200B; 命名規則 &#x200B;](naming-conventions.md) - カスタム Java クラスの命名規則。
 
 ### スクリプト {#scripts}
 
-* [Communities コンポーネントのサイドローディング ](sideloading.md) - ページの読み込み後にコンポーネントを動的に追加する方法。
-* [ リッチテキストエディターの基本事項 ](rte.md) - メンバーに提供されるリッチテキスト UI をカスタマイズしてコンテンツを投稿する方法。
+* [Communities コンポーネントのサイドローディング &#x200B;](sideloading.md) - ページの読み込み後にコンポーネントを動的に追加する方法。
+* [&#x200B; リッチテキストエディターの基本事項 &#x200B;](rte.md) - メンバーに提供されるリッチテキスト UI をカスタマイズしてコンテンツを投稿する方法。
 
 ### IDE {#ide}
 
-* [ コミュニティでの Maven の使用 ](maven.md) - Communities API jar を含める方法。
-* [SocialUtils リファクタリング ](socialutils.md) - SocialUtils に代わる SRP のユーティリティメソッド。
+* [&#x200B; コミュニティでの Maven の使用 &#x200B;](maven.md) - Communities API jar を含める方法。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtils に代わる SRP のユーティリティメソッド。

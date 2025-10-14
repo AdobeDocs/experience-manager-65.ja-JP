@@ -24,9 +24,9 @@ ht-degree: 3%
 
 オーサーモードで `Voting` コンポーネントをページに追加するには、コンポーネントブラウザーを使用します。 `Communities / Voting` を見つけて、ユーザーが投票できる機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 ](basics.md) を参照してください。
+必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
 
-[ 必須のクライアントサイドライブラリ ](essentials-voting.md#essentials-for-client-side) が含まれると、`Voting` コンポーネントはこのように表示されます。
+[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](essentials-voting.md#essentials-for-client-side) が含まれると、`Voting` コンポーネントはこのように表示されます。
 
 ![voting-component](assets/voting-component.png)
 
@@ -34,11 +34,11 @@ ht-degree: 3%
 
 配置された `Voting` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
 
-![ 設定 ](assets/configure-new.png)
+![&#x200B; 設定 &#x200B;](assets/configure-new.png)
 
 「**[!UICONTROL テキストとラベル]**」タブで、投票の記録に使用するプロパティを指定します。
 
-![ 投票ラベル ](assets/voting-label.png)
+![&#x200B; 投票ラベル &#x200B;](assets/voting-label.png)
 
 * **[!UICONTROL 肯定的な応答ラベル]**
 
@@ -64,4 +64,4 @@ ht-degree: 3%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ 投票の基本事項 ](essentials-voting.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; 投票の基本事項 &#x200B;](essentials-voting.md) ページを参照してください。

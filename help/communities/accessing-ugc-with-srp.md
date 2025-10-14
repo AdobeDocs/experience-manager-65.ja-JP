@@ -21,9 +21,9 @@ ht-degree: 3%
 
 ## SRP について {#about-srp}
 
-AEM Communitiesのすべてのコンポーネントと機能は、[ ソーシャルコンポーネントフレームワーク（SCF） ](/help/communities/scf.md) に基づいて構築されています。これは、SocialResourceProvider API を呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
+AEM Communitiesのすべてのコンポーネントと機能は、[&#x200B; ソーシャルコンポーネントフレームワーク（SCF） &#x200B;](/help/communities/scf.md) に基づいて構築されています。これは、SocialResourceProvider API を呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
 
-コミュニティサイトを作成する前に、基になる [ トポロジ ](/help/communities/topologies.md) と一致する実装を選択するように [&#128279;](/help/communities/working-with-srp.md) ストレージリソースプロバイダー（SRP を設定する必要があります。 SRP 実装は、次の 3 つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、基になる [&#x200B; トポロジ &#x200B;](/help/communities/topologies.md) と一致する実装を選択するように [&#128279;](/help/communities/working-with-srp.md) ストレージリソースプロバイダー（SRP を設定する必要があります。 SRP 実装は、次の 3 つのストレージオプションに基づいています。
 
 1. [ASRP](/help/communities/asrp.md):Adobe・オン・デマンド・ストレージ
 1. [MSRP](/help/communities/msrp.md) - MongoDB
@@ -35,7 +35,7 @@ UGC の格納について知っておくべき重要な点は、ASRP または M
 
 JCR には、有用なメタデータを提供するために UGC をシャドウイングするノードが含まれる場合がありますが、これらのノードを実際の UGC と混同しないでください。
 
-[ ストレージリソースプロバイダーの概要 ](/help/communities/srp.md) を参照してください。
+[&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](/help/communities/srp.md) を参照してください。
 
 ## ベストプラクティス {#best-practice}
 
@@ -68,12 +68,12 @@ JCR に固有のメソッドは避ける必要があります。
 
 SRP が異なると、異なるネイティブクエリ言語を持つことができます。 [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) パッケージのメソッドを使用して、適切なクエリ言語を実行します。
 
-詳しくは、[ 検索の基本事項 ](/help/communities/search-implementation.md) を参照してください。
+詳しくは、[&#x200B; 検索の基本事項 &#x200B;](/help/communities/search-implementation.md) を参照してください。
 
 ## リソース {#resources}
 
-* [ コミュニティコンテンツストレージ ](/help/communities/working-with-srp.md) - UGC 共通ストアで使用可能な SRP の選択肢について説明します
-* [ ストレージリソースプロバイダーの概要 ](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
-* [SRP と UGC の基本事項 ](/help/communities/srp-and-ugc.md) - SRP ユーティリティメソッドと例
-* [ 検索の基本事項 ](/help/communities/search-implementation.md) - UGC 検索の基本情報
-* [SocialUtils リファクタリング ](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [&#x200B; コミュニティコンテンツストレージ &#x200B;](/help/communities/working-with-srp.md) - UGC 共通ストアで使用可能な SRP の選択肢について説明します
+* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
+* [SRP と UGC の基本事項 &#x200B;](/help/communities/srp-and-ugc.md) - SRP ユーティリティメソッドと例
+* [&#x200B; 検索の基本事項 &#x200B;](/help/communities/search-implementation.md) - UGC 検索の基本情報
+* [SocialUtils リファクタリング &#x200B;](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

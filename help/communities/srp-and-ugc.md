@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## はじめに {#introduction}
 
-ストレージリソースプロバイダー（SRP）とそのユーザー作成コンテンツ（UGC）との関係に詳しくない場合は、[ コミュニティコンテンツストレージ ](working-with-srp.md) および [ ストレージリソースプロバイダーの概要 ](srp.md) を参照してください。
+ストレージリソースプロバイダー（SRP）とそのユーザー作成コンテンツ（UGC）との関係に詳しくない場合は、[&#x200B; コミュニティコンテンツストレージ &#x200B;](working-with-srp.md) および [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) を参照してください。
 
 ドキュメントのこの節では、SRP と UGC に関する重要な情報を提供します。
 
@@ -36,13 +36,13 @@ SRP API は抽象クラスではなく、インターフェイスです。 カ�
 
 SRP API を使用する手段は、SocialResourceUtilities パッケージにあるような提供されているユーティリティを通じておこなわれます。
 
-AEM 6.0 以前からアップグレードする場合は、すべての SRP について UGC を移行する必要があります。ここでも、Open Source ツールを使用できます。 [AEM Communities 6.3 へのアップグレード ](upgrade.md) を参照してください。
+AEM 6.0 以前からアップグレードする場合は、すべての SRP について UGC を移行する必要があります。ここでも、Open Source ツールを使用できます。 [AEM Communities 6.3 へのアップグレード &#x200B;](upgrade.md) を参照してください。
 
 >[!NOTE]
 >
 >これまで、UGC にアクセスするためのユーティリティは、既に存在しない SocialUtils パッケージに含まれていました。
 >
->置き換えるユーティリティについては、[SocialUtils リファクタリング ](socialutils.md) を参照してください。
+>置き換えるユーティリティについては、[SocialUtils リファクタリング &#x200B;](socialutils.md) を参照してください。
 
 ## UGC にアクセスするためのユーティリティメソッド {#utility-method-to-access-ugc}
 
@@ -63,9 +63,9 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-その他の SocialUtils の置き換えについては、[SocialUtils のリファクタリング ](socialutils.md) を参照してください。
+その他の SocialUtils の置き換えについては、[SocialUtils のリファクタリング &#x200B;](socialutils.md) を参照してください。
 
-コーディングのガイドラインについては、[SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) を参照してください。
+コーディングのガイドラインについては、[SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) を参照してください。
 
 >[!CAUTION]
 >
@@ -96,7 +96,7 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->resourceToACLPath （）が返すパスは *UGC へのアクセス [ に適していません*](#utility-method-to-access-acls)。
+>resourceToACLPath （）が返すパスは *UGC へのアクセス [&#x200B; に適していません*](#utility-method-to-access-acls)。
 
 ## UGC 関連の保存場所 {#ugc-related-storage-locations}
 
@@ -106,20 +106,20 @@ JSRP または MSRP を使用して開発する場合は、次に示すストレ
 
 パブリッシュ環境でメンバーが UGC にエントリすると、AEM サイトの一部としてコンポーネントとやり取りされます。
 
-このようなコンポーネントの例として、[ コミュニティコンポーネントガイド ](http://localhost:4502/content/community-components/en/comments.html) サイトに存在する [ コメントコンポーネント ](components-guide.md) があります。 ローカルリポジトリのコメントノードへのパスは次のとおりです。
+このようなコンポーネントの例として、[&#x200B; コミュニティコンポーネントガイド &#x200B;](http://localhost:4502/content/community-components/en/comments.html) サイトに存在する [&#x200B; コメントコンポーネント &#x200B;](components-guide.md) があります。 ローカルリポジトリのコメントノードへのパスは次のとおりです。
 
 * コンポーネントのパス = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **シャドウノードの場所**
 
-UGC の作成により、必要な ACL が適用される [ シャドウノード ](srp.md#about-shadow-nodes-in-jcr) も作成されます。 ローカルリポジトリ内の対応するシャドウノードへのパスは、コンポーネントパスのシャドウノードのルートパスを先頭に追加した結果です。
+UGC の作成により、必要な ACL が適用される [&#x200B; シャドウノード &#x200B;](srp.md#about-shadow-nodes-in-jcr) も作成されます。 ローカルリポジトリ内の対応するシャドウノードへのパスは、コンポーネントパスのシャドウノードのルートパスを先頭に追加した結果です。
 
 * ルートパス = `/content/usergenerated`
 * コメント シャドウ ノード = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC の場所**
 
-UGC は、これらの場所のいずれでも作成されず、SRP API を呼び出す [ ユーティリティメソッド ](#utility-method-to-access-ugc) を使用してのみアクセスする必要があります。
+UGC は、これらの場所のいずれでも作成されず、SRP API を呼び出す [&#x200B; ユーティリティメソッド &#x200B;](#utility-method-to-access-ugc) を使用してのみアクセスする必要があります。
 
 * ルートパス = `/content/usergenerated/asi/srp-choice`
 * JSRP の UGC ノード = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
@@ -128,6 +128,6 @@ UGC は、これらの場所のいずれでも作成されず、SRP API を呼�
 
 ## 関連情報 {#related-information}
 
-* [ ストレージリソースプロバイダーの概要 ](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRP による UGC へのアクセス ](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする

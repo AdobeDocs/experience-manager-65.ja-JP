@@ -22,7 +22,7 @@ ht-degree: 4%
 
 リレーショナルデータベースを共通ストアとして使用するようにAEM Communitiesが設定されている場合、ユーザー生成コンテンツ（UGC）には、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期やレプリケーションを行う必要はありません。
 
-[SRP オプションの特性 ](working-with-srp.md#characteristics-of-srp-options) および [ 推奨されるトポロジ ](topologies.md) も参照してください。
+[SRP オプションの特性 &#x200B;](working-with-srp.md#characteristics-of-srp-options) および [&#x200B; 推奨されるトポロジ &#x200B;](topologies.md) も参照してください。
 
 ## 要件 {#requirements}
 
@@ -31,7 +31,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->デフォルトのストレージ設定は、パス（`/etc/socialconfig/srpc/defaultconfiguration`）ではなく conf path （`/conf/global/settings/community/srpc/defaultconfiguration`） `etc` 保存されるようになりました。 defaultsrp が期待どおりに動作するように [ 移行手順 ](#zerodt-migration-steps) に従うことをお勧めします。
+>デフォルトのストレージ設定は、パス（`/etc/socialconfig/srpc/defaultconfiguration`）ではなく conf path （`/conf/global/settings/community/srpc/defaultconfiguration`） `etc` 保存されるようになりました。 defaultsrp が期待どおりに動作するように [&#x200B; 移行手順 &#x200B;](#zerodt-migration-steps) に従うことをお勧めします。
 
 ## リレーショナルデータベースの設定 {#relational-database-configuration}
 
@@ -39,7 +39,7 @@ ht-degree: 4%
 
 MySQL インストールは、異なるデータベース（スキーマ）名と異なる接続（サーバー：ポート）を使用することで、同じ接続プール内のイネーブルメント機能と共通ストア（DSRP）の間で共有されます。
 
-インストールと設定について詳しくは、[DSRP 用の MySQL 設定 ](dsrp-mysql.md) を参照してください。
+インストールと設定について詳しくは、[DSRP 用の MySQL 設定 &#x200B;](dsrp-mysql.md) を参照してください。
 
 ### Solr 設定 {#solr-configuration}
 
@@ -49,11 +49,11 @@ Oakと SRP の両方のコレクションを集中的に使用する場合は、
 
 実稼動環境では、SolrCloud モードはスタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
-インストールと設定について詳しくは、[SRP 用の Solr 設定 ](solr.md) を参照してください。
+インストールと設定について詳しくは、[SRP 用の Solr 設定 &#x200B;](solr.md) を参照してください。
 
 ### DSRP を選択 {#select-dsrp}
 
-[ ストレージ設定コンソール ](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md) では、デフォルトのストレージ設定を選択でき、使用する SRP の実装を識別できます。
 
 オーサー環境で、ストレージ設定コンソールにアクセスします。
 
@@ -68,7 +68,7 @@ Oakと SRP の両方のコレクションを集中的に使用する場合は、
 
      >[!NOTE]
      >
-     >デフォルトのストレージ設定が conf path （`/conf/global/settings/community/srpc/defaultconfiguration`）に保存されるようになりました。      パス（`/etc/socialconfig/srpc/defaultconfiguration`） `etc` 代わりに使用します。 defaultsrp が期待どおりに動作するように [ 移行手順 ](#zerodt-migration-steps) に従うことをお勧めします。
+     >デフォルトのストレージ設定が conf path （`/conf/global/settings/community/srpc/defaultconfiguration`）に保存されるようになりました。      パス（`/etc/socialconfig/srpc/defaultconfiguration`） `etc` 代わりに使用します。 defaultsrp が期待どおりに動作するように [&#x200B; 移行手順 &#x200B;](#zerodt-migration-steps) に従うことをお勧めします。
 
   ![dsrp-config](assets/dsrp-config.png)
 
@@ -77,7 +77,7 @@ Oakと SRP の両方のコレクションを集中的に使用する場合は、
 
    * **[!UICONTROL JDBC データソース名]**
 
-     MySQL 接続に付ける名前は、[JDBC OSGi 設定 ](dsrp-mysql.md#configurejdbcconnections) で入力した名前と同じにする必要があります。
+     MySQL 接続に付ける名前は、[JDBC OSGi 設定 &#x200B;](dsrp-mysql.md#configurejdbcconnections) で入力した名前と同じにする必要があります。
 
      *デフォルト*: communities
 
@@ -91,7 +91,7 @@ Oakと SRP の両方のコレクションを集中的に使用する場合は、
 
    * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) ホスト**
 
-     内部の ZooKeeper を使用して Solr を実行する場合は、この値を空白のままにします。 それ以外の場合、外部の ZooKeeper を使用して [SolrCloud モード ](solr.md#solrcloud-mode) で実行する場合、この値を ZooKeeper の URI に設定します（*my.server.com:80など）*
+     内部の ZooKeeper を使用して Solr を実行する場合は、この値を空白のままにします。 それ以外の場合、外部の ZooKeeper を使用して [SolrCloud モード &#x200B;](solr.md#solrcloud-mode) で実行する場合、この値を ZooKeeper の URI に設定します（*my.server.com:80など）*
 
      *デフォルト*: *&lt;blank>*
 
@@ -141,7 +141,7 @@ DSRP は、すべてのオーサーインスタンスとパブリッシュイン
 
 ## Solr for DSRP のインデックス再作成 {#reindexing-solr-for-dsrp}
 
-DSRP Solr のインデックスを再作成するには、[MSRP のインデックス再作成 ](msrp.md#msrp-reindex-tool) のドキュメントに従います。ただし、DSRP のインデックスを再作成する場合は、代わりに次の URL を使用します。**/services/social/datastore/rdb/reindex**
+DSRP Solr のインデックスを再作成するには、[MSRP のインデックス再作成 &#x200B;](msrp.md#msrp-reindex-tool) のドキュメントに従います。ただし、DSRP のインデックスを再作成する場合は、代わりに次の URL を使用します。**/services/social/datastore/rdb/reindex**
 
 例えば、DSRP を再インデックス化する curl コマンドは、次のようになります。
 

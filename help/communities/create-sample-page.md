@@ -20,19 +20,19 @@ ht-degree: 3%
 
 AEM 6.1 Communities の場合、サンプルページを作成する最も簡単な方法は、Page 関数だけで構成されるシンプルなコミュニティサイトを作成することです。
 
-これには parsys コンポーネントが含まれるので、このコンポーネントを [ オーサリング用に有効にする ](basics.md#accessing-communities-components) ことができます。
+これには parsys コンポーネントが含まれるので、このコンポーネントを [&#x200B; オーサリング用に有効にする &#x200B;](basics.md#accessing-communities-components) ことができます。
 
-サンプルコンポーネントを使用した探索のもう 1 つのオプションは、[ コミュニティコンポーネントガイド ](components-guide.md) に記載されている機能を使用することです。
+サンプルコンポーネントを使用した探索のもう 1 つのオプションは、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) に記載されている機能を使用することです。
 
 ## コミュニティサイトの作成 {#create-a-community-site}
 
-これは、[AEM Communitiesの基本を学ぶ ](getting-started.md) で説明されているサイトの作成に似ています。
+これは、[AEM Communitiesの基本を学ぶ &#x200B;](getting-started.md) で説明されているサイトの作成に似ています。
 
-主な違いは、このチュートリアルでは、単純なコミュニティサイトを作成するための [ ページ関数 ](functions.md#page-function) のみを含むコミュニティサイトテンプレートを作成する点です。 他の機能（すべてのコミュニティサイトに不可欠な有線機能を除く）は含まれません。
+主な違いは、このチュートリアルでは、単純なコミュニティサイトを作成するための [&#x200B; ページ関数 &#x200B;](functions.md#page-function) のみを含むコミュニティサイトテンプレートを作成する点です。 他の機能（すべてのコミュニティサイトに不可欠な有線機能を除く）は含まれません。
 
 ### 新しいサイトテンプレートの作成 {#create-new-site-template}
 
-開始するには、シンプルな [ コミュニティサイトテンプレート ](sites.md) を作成します。
+開始するには、シンプルな [&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md) を作成します。
 
 オーサーインスタンスのグローバルナビゲーションで、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL サイトテンプレート]** を選択します。
 
@@ -102,7 +102,7 @@ AEM 6.1 Communities の場合、サンプルページを作成する最も簡単
 
 ![publish-site](assets/publish-site.png)
 
-[ コミュニティサイトコンソール ](sites-console.md) から、公開アイコンを選択して、サイトを公開します（デフォルトではhttp://localhost:4503）。
+[&#x200B; コミュニティサイトコンソール &#x200B;](sites-console.md) から、公開アイコンを選択して、サイトを公開します（デフォルトではhttp://localhost:4503）。
 
 ## オーサー環境で編集モードでサイトを開きます {#open-the-site-on-author-in-edit-mode}
 
@@ -118,4 +118,4 @@ URL は [http://localhost:4502/editor.html/content/sites/sample/en.html](http://
 
 ## Publishでサイトを表示 {#view-site-on-publish}
 
-ページを公開したら、[ パブリッシュインスタンス ](http://localhost:4503/content/sites/sample/en.html) 上のページを開いて、匿名サイト訪問者、ログインメンバー、管理者などの機能を試します。 オーサー環境に表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。
+ページを公開したら、[&#x200B; パブリッシュインスタンス &#x200B;](http://localhost:4503/content/sites/sample/en.html) 上のページを開いて、匿名サイト訪問者、ログインメンバー、管理者などの機能を試します。 オーサー環境に表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。

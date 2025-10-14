@@ -33,13 +33,13 @@ Adobe PhoneGapを使用してAEM Mobileを使い始める際に役立つリソ�
 
 * [AEM Mobile コンテンツサービス：概要](/help/mobile/develop-content-as-a-service.md)
 
-   * コンテンツサービスとデータモデルを有効にするには、[ コンテンツサービスの管理 ](/help/mobile/developing-content-services.md) を参照してください。
-   * モデルの作成について詳しくは、[ モデルの開発 ](/help/mobile/administer-mobile-apps.md) を参照してください。
-   * レンダリングと配信については、[ コンテンツサービスのレンダリングと配信 ](/help/mobile/rendering-and-delivery.md) を参照してください
+   * コンテンツサービスとデータモデルを有効にするには、[&#x200B; コンテンツサービスの管理 &#x200B;](/help/mobile/developing-content-services.md) を参照してください。
+   * モデルの作成について詳しくは、[&#x200B; モデルの開発 &#x200B;](/help/mobile/administer-mobile-apps.md) を参照してください。
+   * レンダリングと配信については、[&#x200B; コンテンツサービスのレンダリングと配信 &#x200B;](/help/mobile/rendering-and-delivery.md) を参照してください
 
 >[!NOTE]
 >
->任意のiOSまたはAndroid モバイルデバイスでAEM モバイルアプリケーションを実行するには、[AEM Verify アプリを使用したモバイルクイックスタート ](/help/mobile/phonegap-mobile-quickstart.md) を参照してください。
+>任意のiOSまたはAndroid モバイルデバイスでAEM モバイルアプリケーションを実行するには、[AEM Verify アプリを使用したモバイルクイックスタート &#x200B;](/help/mobile/phonegap-mobile-quickstart.md) を参照してください。
 
 ## 前に進む {#getting-ahead}
 

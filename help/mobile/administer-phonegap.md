@@ -26,7 +26,7 @@ HTML5 と PhoneGap を使用してモバイルアプリケーションを作成�
 
 AEM Apps Control Center を使用すると、モバイルアプリケーションを構築およびデプロイしたり、モバイルアプリケーションを公開する前にアプリケーションメタデータを作成および編集したり、アプリケーションストアの送信プロセスを再度参照しなくても、新鮮で関連性の高いコンテンツを共同でキュレーションして頻繁に公開したり、アプリケーションのライフサイクルと使用指標を分析して顧客コンバージョンとブランドロイヤルティを向上させることができます。
 
-AEM Mobile アプリケーションを構築するには、「開発者」の節の [ モバイルアプリケーションの構築 ](/help/mobile/building-app-mobile-phonegap.md) ページを参照してください。
+AEM Mobile アプリケーションを構築するには、「開発者」の節の [&#x200B; モバイルアプリケーションの構築 &#x200B;](/help/mobile/building-app-mobile-phonegap.md) ページを参照してください。
 
 環境を設定してコントロール・センターの使用を開始するには、次の手順に従います。
 
@@ -35,11 +35,11 @@ AEM Mobile アプリケーションを構築するには、「開発者」の節
 1. [Adobe PhoneGap Build の設定](/help/mobile/configure-phonegap-build-cloud.md)
 1. [Adobe Analytics Cloud サービスの設定](/help/mobile/configure-adobe-mobile-cloud-service.md)
 
-コンテンツサービスのコンテンツサービスについて詳しくは、[ コンテンツサービスの管理 ](/help/mobile/developing-content-services.md) を参照してください。
+コンテンツサービスのコンテンツサービスについて詳しくは、[&#x200B; コンテンツサービスの管理 &#x200B;](/help/mobile/developing-content-services.md) を参照してください。
 
 >[!NOTE]
 >
->*AEM検証* を使用すると、iOSまたはAndroid™ のモバイルデバイスで、AEM モバイルアプリケーションをすばやく簡単に実行できます。 *AEM Verify* は、お使いのデバイス上のモバイルアプリです。クイックスタートを実行しているサーバーに接続して、表示するアプリのリストを取得します。 詳細を表示するには、[ ここ ](/help/mobile/phonegap-mobile-quickstart.md) をクリックします。
+>*AEM検証* を使用すると、iOSまたはAndroid™ のモバイルデバイスで、AEM モバイルアプリケーションをすばやく簡単に実行できます。 *AEM Verify* は、お使いのデバイス上のモバイルアプリです。クイックスタートを実行しているサーバーに接続して、表示するアプリのリストを取得します。 詳細を表示するには、[&#x200B; ここ &#x200B;](/help/mobile/phonegap-mobile-quickstart.md) をクリックします。
 
 ## その他のリソース {#additional-resources}
 

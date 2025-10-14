@@ -61,7 +61,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は `com.adobe.cq.social.handlebars.I18nHelper@15bac645` に置き換えられました
 
-[SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される `jknack.handlebars.Handlebars` は、独自の i18n ヘルパーユーティリティが付属しているため、この警告は無視しても問題ありません。 起動時には、AEM固有の [i18n ヘルパー ](handlebars-helpers.md#i-n) に置き換えられます。 この警告は、既存のヘルパーの上書きを確認するために、サードパーティライブラリによって生成されます。
+[SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される `jknack.handlebars.Handlebars` は、独自の i18n ヘルパーユーティリティが付属しているため、この警告は無視しても問題ありません。 起動時には、AEM固有の [i18n ヘルパー &#x200B;](handlebars-helpers.md#i-n) に置き換えられます。 この警告は、既存のヘルパーの上書きを確認するために、サードパーティライブラリによって生成されます。
 
 ### ログの警告：OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

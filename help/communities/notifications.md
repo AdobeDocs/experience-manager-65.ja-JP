@@ -23,7 +23,7 @@ ht-degree: 1%
 
 AEM Communitiesには「通知」セクションがあり、ログインしたコミュニティメンバーが関心を持つイベントが表示されます。
 
-通知は、以下に起因する可能性があるので、[ アクティビティ ](/help/communities/essentials-activities.md) および [ 購読 ](/help/communities/subscriptions.md) に似ています。
+通知は、以下に起因する可能性があるので、[&#x200B; アクティビティ &#x200B;](/help/communities/essentials-activities.md) および [&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md) に似ています。
 
 * コンテンツを投稿するメンバー。
 * 別のメンバーのフォローを選択したメンバー。
@@ -34,8 +34,8 @@ AEM Communitiesには「通知」セクションがあり、ログインした�
 
 * 通知セクションへのリンクは、常にコミュニティサイトのヘッダーに存在します。
 
-   * アクティビティを使用するには、[ アクティビティストリーム関数 ](/help/communities/functions.md#activity-stream-function) をコミュニティサイトの構造に含める必要があります。
-   * 購読には [ メールの設定 ](/help/communities/email.md) が必要です。
+   * アクティビティを使用するには、[&#x200B; アクティビティストリーム関数 &#x200B;](/help/communities/functions.md#activity-stream-function) をコミュニティサイトの構造に含める必要があります。
+   * 購読には [&#x200B; メールの設定 &#x200B;](/help/communities/email.md) が必要です。
 
 * 通知の実装は、スケーラブルでプラグ可能なチャネルを通じて行われます。
 
@@ -55,7 +55,7 @@ Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack) で
 
 通知のメールチャネルを機能させるには、メールを設定する必要があります。
 
-メールの設定手順については、[ メールの設定 ](/help/communities/analytics.md) を参照してください。
+メールの設定手順については、[&#x200B; メールの設定 &#x200B;](/help/communities/analytics.md) を参照してください。
 
 **フォローを有効にする**
 
@@ -63,13 +63,13 @@ Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack) で
 
 **メモ**：
 
-* コミュニティ [ サイトテンプレート ](/help/communities/sites.md) および [ グループテンプレート ](/help/communities/tools-groups.md) 内で使用するコンポーネントは、既にフォローするように設定されていることがあります。
+* コミュニティ [&#x200B; サイトテンプレート &#x200B;](/help/communities/sites.md) および [&#x200B; グループテンプレート &#x200B;](/help/communities/tools-groups.md) 内で使用するコンポーネントは、既にフォローするように設定されていることがあります。
 
 * メンバープロファイルは、他のメンバーがフォローできるように既に設定されています。
 
 ## 以下からの通知 {#notifications-from-following}
 
-![ 通知 ](assets/notifications.png)
+![&#x200B; 通知 &#x200B;](assets/notifications.png)
 
 **[!UICONTROL フォロー]** ボタンは、エントリをアクティビティ、購読、通知としてフォローする手段を提供します。 「**[!UICONTROL フォロー]**」ボタンを選択するたびに、選択のオンとオフを切り替えることができます。 `Email Subscriptions` の選択は、設定されている場合にのみ存在します。
 
@@ -94,7 +94,7 @@ Web チャネルは常に有効です。
 
 ![notifications14](assets/notifications1.png)
 
-メールチャネルは、適切な [ メールの設定 ](/help/communities/email.md) に依存し、web チャネルの場合と同じ設定を提供します。
+メールチャネルは、適切な [&#x200B; メールの設定 &#x200B;](/help/communities/email.md) に依存し、web チャネルの場合と同じ設定を提供します。
 
 メールチャネルはデフォルトでオフになっています。
 
@@ -108,7 +108,7 @@ Web チャネルは常に有効です。
 
 ### Web 通知 {#web-notifications}
 
-[ ウィザードで作成されたコミュニティサイト ](/help/communities/sites-console.md) に、バナーの上にあるサイトのヘッダーバーに `Notifications` 機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成されますが、サイト作成プロセス中はメッセージを有効にする必要があります。
+[&#x200B; ウィザードで作成されたコミュニティサイト &#x200B;](/help/communities/sites-console.md) に、バナーの上にあるサイトのヘッダーバーに `Notifications` 機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成されますが、サイト作成プロセス中はメッセージを有効にする必要があります。
 
 公開済みサイトにアクセスして「`Notifications`」リンクを選択すると、メンバーに関するすべての通知が表示されます。
 
@@ -122,7 +122,7 @@ Web チャネルは常に有効です。
 
 ## メール通知のカスタマイズ {#customize-email-notifications}
 
-組織は、**/libs/settings/community/templates/email/html[ にあるテンプレートを ](/help/communities/client-customize.md#overlays) オーバーレイ** することで、メール通知をカスタマイズできます。
+組織は、**/libs/settings/community/templates/email/html[&#x200B; にあるテンプレートを &#x200B;](/help/communities/client-customize.md#overlays) オーバーレイ** することで、メール通知をカスタマイズできます。
 
 例えば、（コミュニティコンポーネントの）メンションメール通知を変更するには、**@mentions** サポートを有効にしたコンポーネントのテンプレートに動詞 **メンション** の **if** 条件を追加します。
 

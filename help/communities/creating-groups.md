@@ -21,17 +21,17 @@ ht-degree: 1%
 
 コミュニティグループ機能は、権限のあるユーザー（コミュニティメンバーと作成者）がパブリッシュ環境とオーサー環境から、コミュニティサイト内にサブコミュニティを動的に作成する機能です。
 
-この機能は、[groups 関数 ](/help/communities/functions.md#groups-function) が [community site](/help/communities/sites-console.md) 構造に存在する場合に存在します。
+この機能は、[groups 関数 &#x200B;](/help/communities/functions.md#groups-function) が [community site](/help/communities/sites-console.md) 構造に存在する場合に存在します。
 
-[ コミュニティグループテンプレート ](/help/communities/tools-groups.md) は、コミュニティグループが動的に作成される際に、コミュニティグループページのデザインを提供します。
+[&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools-groups.md) は、コミュニティグループが動的に作成される際に、コミュニティグループページのデザインを提供します。
 
 グループ機能がコミュニティサイトの構造またはコミュニティサイトテンプレートに追加されると、グループ機能に 1 つ以上のグループテンプレートが選択されます。 このグループテンプレートのリストは、コミュニティサイト内からグループを動的に作成するメンバーまたは作成者に表示されます。
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
-コミュニティグループを作成できるかどうかは、[ 参照サイトテンプレート ](/help/communities/sites.md) から作成されたような、groups 機能を含むコミュニティサイトが存在しているかどうかによって異なります。
+コミュニティグループを作成できるかどうかは、[&#x200B; 参照サイトテンプレート &#x200B;](/help/communities/sites.md) から作成されたような、groups 機能を含むコミュニティサイトが存在しているかどうかによって異なります。
 
-以下の例では、「AEM Communities使用の手引き [ チュートリアルの説明に従って、`Reference Site Template` から作成したコミュニティサイトを使用し ](/help/communities/getting-started.md) す。
+以下の例では、「AEM Communities使用の手引き [&#x200B; チュートリアルの説明に従って、`Reference Site Template` から作成したコミュニティサイトを使用し &#x200B;](/help/communities/getting-started.md) す。
 
 これは、「**グループ**」メニュー項目が選択されている場合に公開時に読み込まれるページです。
 
@@ -91,6 +91,6 @@ ht-degree: 1%
 
 ### 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [ コミュニティグループの初期設定 ](/help/communities/essentials-groups.md) ページを参照してください。
+詳しくは、開発者向けの [&#x200B; コミュニティグループの初期設定 &#x200B;](/help/communities/essentials-groups.md) ページを参照してください。
 
-コミュニティグループに関するその他の情報については、[ ユーザーとユーザーグループの管理 ](/help/communities/users.md) を参照してください。
+コミュニティグループに関するその他の情報については、[&#x200B; ユーザーとユーザーグループの管理 &#x200B;](/help/communities/users.md) を参照してください。

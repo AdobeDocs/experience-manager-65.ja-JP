@@ -54,7 +54,7 @@ Cloud Service を構築し、AdobeMobile Services SDK プラグインをアプ�
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 
-AEM開発者によって使用可能になったアプリテンプレートを選択します。 開発者向けサポートについては、[AEM Mobile アプリの構造 ](/help/mobile/phonegap-structure-an-app.md) を参照してください。
+AEM開発者によって使用可能になったアプリテンプレートを選択します。 開発者向けサポートについては、[AEM Mobile アプリの構造 &#x200B;](/help/mobile/phonegap-structure-an-app.md) を参照してください。
 
 ![chlimage_1-159](assets/chlimage_1-159.png)
 

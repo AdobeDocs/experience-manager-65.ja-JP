@@ -26,7 +26,7 @@ ht-degree: 4%
 
 リモートビルドをプッシュしてソースを `https://build.phonegap.com` またはダウンロードし、`https://docs.phonegap.com/references/phonegap-cli/` で PhoneGap CLI を使用してローカルにビルドできます。
 
-![PhoneGap Build タイル ](assets/chlimage_1-60.png)
+![PhoneGap Build タイル &#x200B;](assets/chlimage_1-60.png)
 
 ## Cloud Serviceの設定 {#configuring-the-cloud-service}
 

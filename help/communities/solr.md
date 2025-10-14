@@ -20,24 +20,24 @@ ht-degree: 3%
 
 ## AEM Platform 用の Solr {#solr-for-aem-platform}
 
-[Apache Solr](https://solr.apache.org/) インストールは、異なるコレクションを使用して、[ ノードストア ](../../help/sites-deploying/data-store-config.md) （Oak）と [ 共通ストア ](working-with-srp.md) （SRP）の間で共有される場合があります。
+[Apache Solr](https://solr.apache.org/) インストールは、異なるコレクションを使用して、[&#x200B; ノードストア &#x200B;](../../help/sites-deploying/data-store-config.md) （Oak）と [&#x200B; 共通ストア &#x200B;](working-with-srp.md) （SRP）の間で共有される場合があります。
 
 Oakと SRP の両方のコレクションを集中的に使用する場合は、パフォーマンス上の理由から、2 つ目の Solr をインストールすることがあります。
 
-実稼動環境の場合、[SolrCloud モード ](#solrcloud-mode) は、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
+実稼動環境の場合、[SolrCloud モード &#x200B;](#solrcloud-mode) は、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
 ### 要件 {#requirements}
 
 Apache Solr をダウンロードしてインストールします。
 
-* [ バージョン 7.0](https://archive.apache.org/dist/lucene/solr/7.0.0/)
+* [&#x200B; バージョン 7.0](https://archive.apache.org/dist/lucene/solr/7.0.0/)
 
 * Solr には Java™ 1.7 以降が必要です
 * サービスは必要ありません
 * 実行モードの選択：
 
    * スタンドアロンモード
-   * [SolrCloud モード ](#solrcloud-mode) （実稼動環境で推奨）
+   * [SolrCloud モード &#x200B;](#solrcloud-mode) （実稼動環境で推奨）
 
 * 多言語検索（MLS）の選択
 
@@ -190,9 +190,9 @@ Solr 5.x の標準 MLS ファイル（schema.xml、solrconfig.xml）
 
    1. 既存のファイルを上書きするには、ダウンロードした **schema.xml** と **solrconfig.xml** を *new-config-dir* にコピーします。
 
-1. [ 新しい設定をアップロード ](#upload-a-configuration-to-zookeeper) して、ZooKeeper にアクセスします。
-1. [ コレクションを作成 ](#create-a-collection) シャードの数、レプリカの数、設定名など、必要なパラメーターを指定します。
-1. コレクションの作成時に設定名が指定されなかった場合は、新しく作成したコレクションに [ リンク ](#link-a-collection-to-a-configuration-set) し、ZooKeeper にアップロードされた設定を使用します。
+1. [&#x200B; 新しい設定をアップロード &#x200B;](#upload-a-configuration-to-zookeeper) して、ZooKeeper にアクセスします。
+1. [&#x200B; コレクションを作成 &#x200B;](#create-a-collection) シャードの数、レプリカの数、設定名など、必要なパラメーターを指定します。
+1. コレクションの作成時に設定名が指定されなかった場合は、新しく作成したコレクションに [&#x200B; リンク &#x200B;](#link-a-collection-to-a-configuration-set) し、ZooKeeper にアップロードされた設定を使用します。
 
 1. MSRP の場合、新規インストールでない限り、[MSRP Reindex Tool](msrp.md#msrp-reindex-tool) を実行します。
 
@@ -254,7 +254,7 @@ SolrCloud またはスタンドアロンモードのインストールを開始�
    1. Solr5 の場合：`solr_install_dir/server/solr/configsets/sample_techproducts_configs/conf/lang/*.txt` を `new-config-dir/lang/` にコピーします
    1. 抽出した **stopwords/** フォルダーを *new-config-dir* にコピーすると、`new-config-dir/stopwords/*.txt` が発生します
 
-1. [ 新しい設定をアップロード ](#upload-a-configuration-to-zookeeper) して ZooKeeper にアクセスする
+1. [&#x200B; 新しい設定をアップロード &#x200B;](#upload-a-configuration-to-zookeeper) して ZooKeeper にアクセスする
 1. 新しい **profiles/** フォルダーをコピー…
 
    * Solr4 の場合：各ノードのリソース/フォルダーにコピーします
@@ -274,8 +274,8 @@ SolrCloud またはスタンドアロンモードのインストールを開始�
    * *solr-install-dir/contrib/analysis-extras/lib/*.jar
    * *solr-install-dir/contrib/analysis-extras/lucene-libs/*.jar
 
-1. [ コレクションを作成 ](#create-a-collection) シャードの数、レプリカの数、設定名など、必要なパラメーターを指定します。
-1. コレクションの作成時に設定名が指定されて *ない* 場合は、ZooKeeper にアップロードされた設定と共に、[ 新しく作成したコレクションをリンク ](#link-a-collection-to-a-configuration-set) します。
+1. [&#x200B; コレクションを作成 &#x200B;](#create-a-collection) シャードの数、レプリカの数、設定名など、必要なパラメーターを指定します。
+1. コレクションの作成時に設定名が指定されて *ない* 場合は、ZooKeeper にアップロードされた設定と共に、[&#x200B; 新しく作成したコレクションをリンク &#x200B;](#link-a-collection-to-a-configuration-set) します。
 
 1. MSRP の場合、新規インストールでない限り、[MSRP Reindex Tool](#msrpreindextool) を実行します。
 

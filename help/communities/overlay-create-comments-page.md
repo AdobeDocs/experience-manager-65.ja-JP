@@ -18,16 +18,16 @@ ht-degree: 10%
 
 # コメントページの作成 {#create-comments-page}
 
-**[⇐ Overlay Comments コンポーネント ](overlay-comments.md) [Create Nodes ⇒](overlay-create-nodes.md)**
+**[⇐ Overlay Comments コンポーネント &#x200B;](overlay-comments.md) [Create Nodes ⇒](overlay-create-nodes.md)**
 
 ## コメントページ {#comments-page}
 
-[ コミュニティコンポーネントガイド ](components-guide.md) を使用すると、コメントコンポーネントを簡単にオーバーレイできます。
+[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) を使用すると、コメントコンポーネントを簡単にオーバーレイできます。
 
 オーサーインスタンスでページを表示します。
 
 * [http://localhost:4502/editor.html/content/community-components/en/comments.html](http://localhost:4502/editor.html/content/community-components/en/comments.html)
 
-![ コメント ](assets/comments.png)
+![&#x200B; コメント &#x200B;](assets/comments.png)
 
-**[⇐ Overlay Comments コンポーネント ](overlay-comments.md) [Create Nodes ⇒](overlay-create-nodes.md)**
+**[⇐ Overlay Comments コンポーネント &#x200B;](overlay-comments.md) [Create Nodes ⇒](overlay-create-nodes.md)**

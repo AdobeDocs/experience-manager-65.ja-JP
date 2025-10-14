@@ -24,7 +24,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 ](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) を参照してください。
+>AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) を参照してください。
 
 >[!CAUTION]
 >
@@ -34,11 +34,11 @@ ht-degree: 5%
 
 通常、記事などのコンテンツは、すべての作成者やアプリで同じルックアンドフィールを持つ必要があります。 したがって、スクリプト、CSS、フォントをすべてのユーザーが利用できるようにする必要があります。 この操作により、このような共有リソースが Mobile On-Demand に送信され、必要に応じて消費できます。
 
-アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。 アプリをクラウド設定に関連付ける手順について詳しくは、[ こちら ](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md) をクリックしてください。
+アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。 アプリをクラウド設定に関連付ける手順について詳しくは、[&#x200B; こちら &#x200B;](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md) をクリックしてください。
 
 >[!NOTE]
 >
->共有リソースは、ContentSync を使用して、すべての異なるリソースを収集します。 詳しくは、[ コンテンツ同期を使用したモバイル ](/help/mobile/mobile-ondemand-contentsync.md) を参照してください。
+>共有リソースは、ContentSync を使用して、すべての異なるリソースを収集します。 詳しくは、[&#x200B; コンテンツ同期を使用したモバイル &#x200B;](/help/mobile/mobile-ondemand-contentsync.md) を参照してください。
 
 記事用の共有リソースをアップロードするには、次の手順に従います。
 

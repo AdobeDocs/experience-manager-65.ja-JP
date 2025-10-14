@@ -23,11 +23,11 @@ ht-degree: 0%
 
 AEM Communitiesのメッセージング機能は、ログインしたサイト訪問者（メンバー）が、サイトへのログイン時にアクセス可能なメッセージを相互に送信する機能を提供します。
 
-[ コミュニティサイトの作成 ](/help/communities/sites-console.md) 中にボックスをオンにすることで、コミュニティサイトでメッセージングが有効になります。
+[&#x200B; コミュニティサイトの作成 &#x200B;](/help/communities/sites-console.md) 中にボックスをオンにすることで、コミュニティサイトでメッセージングが有効になります。
 
 このページには、デフォルトの設定と可能な調整に関する情報が含まれています。
 
-開発者向けの追加情報については、[ メッセージングの基本事項 ](/help/communities/essentials-messaging.md) を参照してください。
+開発者向けの追加情報については、[&#x200B; メッセージングの基本事項 &#x200B;](/help/communities/essentials-messaging.md) を参照してください。
 
 ## メッセージング操作サービス {#messaging-operations-service}
 
@@ -37,7 +37,7 @@ AEM Communitiesのメッセージング機能は、ログインしたサイト�
 
 ### コミュニティメッセージング運用サービス {#community-messaging-operations-service}
 
-次に示すように、[ サイト作成ウィザード ](/help/communities/sites-console.md) で作成されたサイトには、サービスの設定が存在します。 設定は、設定の横にある鉛筆アイコンを選択して表示または編集できます。
+次に示すように、[&#x200B; サイト作成ウィザード &#x200B;](/help/communities/sites-console.md) で作成されたサイトには、サービスの設定が存在します。 設定は、設定の横にある鉛筆アイコンを選択して表示または編集できます。
 
 ![messaging-operations](assets/messaging-operations.png)
 
@@ -119,7 +119,7 @@ AEM Communitiesのメッセージング機能は、ログインしたサイト�
 
 * **サービスセレクター**
 
-  （*必須*） サービスが呼び出される絶対パス （エンドポイント） （仮想リソース）。 選択するパスのルートは、OSGi 設定 [`Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver) の *実行パス* 設定に含まれているルート（`/bin/`、`/apps/`、`/services/` など）にする必要があります。 サイトのメッセージ機能用にこの設定を選択するには、このエンドポイントを `Message List and Compose Message components` の **`Service selector`** 値として指定します（[ メッセージ機能 ](/help/communities/configure-messaging.md) を参照）。
+  （*必須*） サービスが呼び出される絶対パス （エンドポイント） （仮想リソース）。 選択するパスのルートは、OSGi 設定 [`Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver) の *実行パス* 設定に含まれているルート（`/bin/`、`/apps/`、`/services/` など）にする必要があります。 サイトのメッセージ機能用にこの設定を選択するには、このエンドポイントを `Message List and Compose Message components` の **`Service selector`** 値として指定します（[&#x200B; メッセージ機能 &#x200B;](/help/communities/configure-messaging.md) を参照）。
 
   デフォルトは、*/bin/messaging* です。
 
@@ -150,8 +150,8 @@ AEM Communitiesのメッセージング機能は、ログインしたサイト�
 
 ## トラブルシューティング {#troubleshooting}
 
-問題のトラブルシューティングを行う方法の 1 つは、[ ログ内のメッセージのデバッグ ](/help/sites-administering/troubleshooting.md) を有効にすることです。
+問題のトラブルシューティングを行う方法の 1 つは、[&#x200B; ログ内のメッセージのデバッグ &#x200B;](/help/sites-administering/troubleshooting.md) を有効にすることです。
 
-[ 個々のサービスのロガーとライター ](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services) も参照してください。
+[&#x200B; 個々のサービスのロガーとライター &#x200B;](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services) も参照してください。
 
 監視するパッケージは `com.adobe.cq.social.messaging` です。

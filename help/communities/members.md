@@ -25,7 +25,7 @@ AEM Communitiesの機能を使用するには、多くの場合、サイト訪�
 
 ### Publishのメンバー（ユーザー） {#members-users-on-publish}
 
-*パブリッシュ* 環境に登録されたメンバーやメンバーグループは、コミュニティメンバーコンソールやグループコンソールを使用して、*オーサー* 環境から作成および管理することができます。 これは、[ トンネル サービス ](deploy-communities.md#tunnel-service-on-author) が有効な場合にのみ可能です。
+*パブリッシュ* 環境に登録されたメンバーやメンバーグループは、コミュニティメンバーコンソールやグループコンソールを使用して、*オーサー* 環境から作成および管理することができます。 これは、[&#x200B; トンネル サービス &#x200B;](deploy-communities.md#tunnel-service-on-author) が有効な場合にのみ可能です。
 
 ### オーサー環境のユーザー {#users-on-author}
 
@@ -36,7 +36,7 @@ AEM Communitiesの機能を使用するには、多くの場合、サイト訪�
 
 >[!NOTE]
 >
->サンプルコンテンツがデプロイされ、有効になっている状態では、オーサー環境とパブリッシュ環境の両方で多くのサンプルユーザーが存在します。 これらのユーザーは、[nosamplecontent 実行モード ](../../help/sites-administering/production-ready.md) で実行している場合は存在しません。
+>サンプルコンテンツがデプロイされ、有効になっている状態では、オーサー環境とパブリッシュ環境の両方で多くのサンプルユーザーが存在します。 これらのユーザーは、[nosamplecontent 実行モード &#x200B;](../../help/sites-administering/production-ready.md) で実行している場合は存在しません。
 
 ## メンバーコンソール {#members-console}
 
@@ -46,24 +46,24 @@ AEM Communitiesの機能を使用するには、多くの場合、サイト訪�
 
 >[!CAUTION]
 >
->[ トンネル サービス ](deploy-communities.md#tunnel-service-on-author) が有効になっていない場合、メンバーコンソールを使用することはできません。
+>[&#x200B; トンネル サービス &#x200B;](deploy-communities.md#tunnel-service-on-author) が有効になっていない場合、メンバーコンソールを使用することはできません。
 
-![ メンバーコンソール ](assets/member-console1.png)
+![&#x200B; メンバーコンソール &#x200B;](assets/member-console1.png)
 
 ### 検索 {#search-features}
 
 `Members` ヘッダーの左側にあるサイドパネルアイコンを選択して、検索サイドパネルを開く切り替えを行います。
 
-![ サイドパネルアイコンを検索。](assets/leftpanel-icon.png)
+![&#x200B; サイドパネルアイコンを検索。](assets/leftpanel-icon.png)
 
 
-![ メンバーコンソールのフィルターオプション ](assets/member-console2.png)
+![&#x200B; メンバーコンソールのフィルターオプション &#x200B;](assets/member-console2.png)
 
 `Members` ヘッダーの左側にある検索アイコンを選択して、検索側パネルの閉じる状態を切り替えます。
 
 ### メンバーの統計 {#member-statistics}
 
-`Views`、`Posts`、`Follows`、`Likes` を表示する列は、ユーザーがAdobe Analytics [ 有効 ](sites-console.md#analytics) の 1 つ以上のコミュニティサイトのメンバーである場合に更新されます。
+`Views`、`Posts`、`Follows`、`Likes` を表示する列は、ユーザーがAdobe Analytics [&#x200B; 有効 &#x200B;](sites-console.md#analytics) の 1 つ以上のコミュニティサイトのメンバーである場合に更新されます。
 
 ### CSV を書き出し {#export-csv}
 
@@ -77,7 +77,7 @@ AEM Communitiesの機能を使用するには、多くの場合、サイト訪�
 
 「`Create Member`」を選択して、パブリッシュ環境でユーザーを作成します。
 
-![ 新規メンバーの作成ウィンドウ ](assets/create-member1.png)
+![&#x200B; 新規メンバーの作成ウィンドウ &#x200B;](assets/create-member1.png)
 
 ### 一般 – メンバーの詳細 {#general-member-details}
 
@@ -130,7 +130,7 @@ ID がメールアドレスにデフォルト設定されている場合、メ�
 
   オンにすると、メンバーがコンテンツを投稿する機能が制限されます。
 デフォルトは、貢献度制限の設定によって異なります。
-[ メンバーの貢献度の制限 ](limits.md) を参照してください。
+[&#x200B; メンバーの貢献度の制限 &#x200B;](limits.md) を参照してください。
 
 * **[!UICONTROL パスワードの変更]**
 
@@ -152,32 +152,32 @@ ID がメールアドレスにデフォルト設定されている場合、メ�
 
 `BADGES` パネルでは、バッジを手動で割り当てたり、取り消したりできます。 バッジは、割り当てられた役割に対して使用でき、通常は獲得したバッジです。
 
-[ スコアおよびバッジ ](implementing-scoring.md) も参照してください。
+[&#x200B; スコアおよびバッジ &#x200B;](implementing-scoring.md) も参照してください。
 
-![ メンバーシップ設定を編集ウィンドウ ](assets/create-member2.png)
+![&#x200B; メンバーシップ設定を編集ウィンドウ &#x200B;](assets/create-member2.png)
 
 * **[!UICONTROL バッジを追加]**
-   * 入力を開始し、[ 使用可能なバッジ ](badges.md) から選択します。 バッジを選択したら、各サイトまたはすべてのサイトを選択します。メンバーのアバターと一緒にバッジを表示する必要があります。
+   * 入力を開始し、[&#x200B; 使用可能なバッジ &#x200B;](badges.md) から選択します。 バッジを選択したら、各サイトまたはすべてのサイトを選択します。メンバーのアバターと一緒にバッジを表示する必要があります。
    * 複数のバッジやサイトを選択できます。
 * **[!UICONTROL バッジを削除]**
    * バッジの横にあるごみ箱アイコンを選択すると、バッジを削除できます。
 
 ## グループコンソール {#groups-console}
 
-オーサー環境から使用できるグループコンソールを使用すると、パブリッシュ環境に登録されているメンバーグループを作成および管理できます。 これは、特に [ 権限のあるメンバーグループ ](users.md#privilegedmembersgroups) で役立ちます。
+オーサー環境から使用できるグループコンソールを使用すると、パブリッシュ環境に登録されているメンバーグループを作成および管理できます。 これは、特に [&#x200B; 権限のあるメンバーグループ &#x200B;](users.md#privilegedmembersgroups) で役立ちます。
 
 グループコンソールにアクセスするには：
 * グローバルナビゲーションから **[!UICONTROL ナビゲーション]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL グループ]** を選択します。
 
 >[!CAUTION]
 >
->[ トンネル サービス ](deploy-communities.md#tunnel-service-on-author) が有効になっていない場合、グループ コンソールは使用できません。
+>[&#x200B; トンネル サービス &#x200B;](deploy-communities.md#tunnel-service-on-author) が有効になっていない場合、グループ コンソールは使用できません。
 
 ### 新しいグループを作成 {#create-new-group}
 
 「`Add Group`」を選択して、パブリッシュ環境でグループを作成します。
 
-![ 新規グループを作成ウィンドウ ](assets/group-console1.png)
+![&#x200B; 新規グループを作成ウィンドウ &#x200B;](assets/group-console1.png)
 
 パブリッシュ側メンバーグループを作成するための必須フィールドは以下のとおりです。
 
@@ -205,8 +205,8 @@ ID がメールアドレスにデフォルト設定されている場合、メ�
 
 ## 承認済み管理者 {#authorized-administrators}
 
-Communities メンバーコンソールでメンバーを操作する場合は、適切な権限を持つユーザーとしてログインし、[ トンネルサービス ](deploy-communities.md#tunnel-service-on-author) で使用されるレプリケーションエージェントを正しく設定する必要があります。
+Communities メンバーコンソールでメンバーを操作する場合は、適切な権限を持つユーザーとしてログインし、[&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author) で使用されるレプリケーションエージェントを正しく設定する必要があります。
 
 `admin` としてログインしていない場合、ログインしたユーザーは `administrators` ユーザーグループのメンバーである必要があります。
 
-[ 作成者のレプリケーションエージェント ](deploy-communities.md#replication-agents-on-author) も参照してください。
+[&#x200B; 作成者のレプリケーションエージェント &#x200B;](deploy-communities.md#replication-agents-on-author) も参照してください。

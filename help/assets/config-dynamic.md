@@ -1271,7 +1271,7 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
   </tr>
   <tr>
    <td>ビューアー URL をコピー</td>
-   <td><p>「URL をコピー」ダイアログボックスに、次のような URL が表示されます（URL はデモ専用です）。</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&amp;config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&amp;serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&amp;contentRoot=%2F</code></p> <p>ここで<code>PUBLISHNODE</code>は標準の Experience Manager パブリッシュノードを表し、<code>IMAGESERVICEPUBLISHNODE</code>は画像サービスの URL を表します。</p> <p><a href="/help/assets/delivering-dynamic-media-assets.md">Dynamic Media アセットの配信</a>も参照してください。</p> </td>
+   <td><p>「URL をコピー」ダイアログボックスに、次のような URL が表示されます（URL はデモ専用です）。</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&contentRoot=%2F</code></p> <p>ここで<code>PUBLISHNODE</code>は標準の Experience Manager パブリッシュノードを表し、<code>IMAGESERVICEPUBLISHNODE</code>は画像サービスの URL を表します。</p> <p><a href="/help/assets/delivering-dynamic-media-assets.md">Dynamic Media アセットの配信</a>も参照してください。</p> </td>
   </tr>
   <tr>
    <td>ビューアーの埋め込みコードをコピー</td>

@@ -23,7 +23,7 @@ ht-degree: 6%
 
 コマンドセンターの **モバイル指標タイル** は、モバイルアプリケーションのリアルタイム分析を提供します。
 
-[Adobeモバイル分析 ](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html)SDKは、PhoneGap プラグインを通じて利用できるようになります。 指標が収集され、デバイスに接続するまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services クラウドにプッシュされます。
+[Adobeモバイル分析 &#x200B;](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html)SDKは、PhoneGap プラグインを通じて利用できるようになります。 指標が収集され、デバイスに接続するまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services クラウドにプッシュされます。
 
 Adobeモバイル分析SDKには、次の機能があります。
 

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps-1}
 
-angular アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/server/ng-page コンポーネント（[ ローカルサーバーのCRXDE Liteーで開く ](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次の JSP スクリプトが含まれています。
+angular アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/server/ng-page コンポーネント（[&#x200B; ローカルサーバーのCRXDE Liteーで開く &#x200B;](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次の JSP スクリプトが含まれています。
 
 * ng-page.jsp
 * head.jsp
@@ -307,7 +307,7 @@ www/
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-このディレクトリには [CLI フック ](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/) が含まれています。 hooks ディレクトリのフォルダーには、ビルド中の正確なポイントで実行される node.js スクリプトが含まれています。
+このディレクトリには [CLI フック &#x200B;](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/) が含まれています。 hooks ディレクトリのフォルダーには、ビルド中の正確なポイントで実行される node.js スクリプトが含まれています。
 
 #### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 

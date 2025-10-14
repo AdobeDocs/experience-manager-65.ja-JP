@@ -22,7 +22,7 @@ ht-degree: 7%
 
 Adobe Experience Manager（AEM） Communities のドキュメントのこの節は、次の機能に追加されています。
 
-* [Apache Maven を使用したAEM プロジェクトの構築 ](../../help/sites-developing/ht-projects-maven.md)。
+* [Apache Maven を使用したAEM プロジェクトの構築 &#x200B;](../../help/sites-developing/ht-projects-maven.md)。
 
 個々のアーティファクトを置き換える「uber」アーティファクトは 1 つだけです。
 
@@ -34,7 +34,7 @@ Adobe Experience Manager（AEM） Communities のドキュメントのこの節�
 >
 >最新の Communities リリースに関する最新情報を入手してください。
 >
->最新のバージョンを特定できる [ 最新リリース ](deploy-communities.md#latest-releases) の節を参照してください。
+>最新のバージョンを特定できる [&#x200B; 最新リリース &#x200B;](deploy-communities.md#latest-releases) の節を参照してください。
 
 ## Maven 依存関係の例 {#maven-dependency-example}
 

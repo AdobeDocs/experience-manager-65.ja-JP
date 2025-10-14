@@ -49,13 +49,13 @@ app-author グループのメンバーは、ページ、テキスト、画像お
 
    作成者グループに app-authors を追加
 
-1. app-authors ユーザーグループを作成したので、「ユーザーAdmin Console[ を使用して、個々のチームメンバーをこの新しいグループに追加でき ](http://localhost:4502/libs/granite/security/content/useradmin.md) す。
+1. app-authors ユーザーグループを作成したので、「ユーザーAdmin Console[&#x200B; を使用して、個々のチームメンバーをこの新しいグループに追加でき &#x200B;](http://localhost:4502/libs/granite/security/content/useradmin.md) す。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
    ユーザーグループの編集
 
-1. [ 権限コンソール ](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
+1. [&#x200B; 権限コンソール &#x200B;](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
 
    * /etc/cloudservices で（読み取り）
 
@@ -86,7 +86,7 @@ app-admins グループのメンバーは、app-authors **AND** に含まれて�
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. [ 権限コンソール ](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
+1. [&#x200B; 権限コンソール &#x200B;](http://localhost:4502/useradmin) に移動し、クラウドサービスを管理するための権限を追加します
 
    * /etc/cloudservices/mobileservices の（読み取り、変更、作成、削除、レプリケート）
    * /etc/cloudservices/phonegap-build の（読み取り、変更、作成、削除、レプリケート）

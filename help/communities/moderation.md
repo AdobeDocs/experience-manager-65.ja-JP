@@ -19,15 +19,15 @@ ht-degree: 2%
 
 # モデレートコンソール {#moderation-console}
 
-AEM Communitiesでは、管理者とコミュニティモデレーター [ モデレーターとして割り当てられた信頼できるコミュニティメンバー）が、オーサー環境とPublish環境の両方から一括 ](/help/communities/moderate-ugc.md) コミュニティコンテンツのモデレート）を実行できます。
+AEM Communitiesでは、管理者とコミュニティモデレーター [&#x200B; モデレーターとして割り当てられた信頼できるコミュニティメンバー）が、オーサー環境とPublish環境の両方から一括 &#x200B;](/help/communities/moderate-ugc.md) コミュニティコンテンツのモデレート）を実行できます。
 
-管理者とコミュニティモデレーターは、Publish環境で [ コンテキスト内モデレート ](/help/communities/in-context.md) を実行することもできます。
+管理者とコミュニティモデレーターは、Publish環境で [&#x200B; コンテキスト内モデレート &#x200B;](/help/communities/in-context.md) を実行することもできます。
 
-すべての [ コミュニティサイト ](/help/communities/sites-console.md) の機能は、管理者権限でログインしたユーザーが使用できる `Administration` メニュー項目です。 `Administration` リンクをクリックすると、モデレートコンソールにアクセスできます。
+すべての [&#x200B; コミュニティサイト &#x200B;](/help/communities/sites-console.md) の機能は、管理者権限でログインしたユーザーが使用できる `Administration` メニュー項目です。 `Administration` リンクをクリックすると、モデレートコンソールにアクセスできます。
 
 管理者およびコミュニティモデレーターはモデレートコンソールから、モデレートする権限を持つすべてのユーザー生成コンテンツ（UGC）にアクセスできます。 複数のサイトのモデレートが許可されている場合は、すべてのサイトにわたる投稿を表示したり、選択したコミュニティサイトでフィルタリングしたりできます。
 
-詳しくは、[ ユーザーとユーザーグループの管理 ](/help/communities/users.md) を参照してください。
+詳しくは、[&#x200B; ユーザーとユーザーグループの管理 &#x200B;](/help/communities/users.md) を参照してください。
 
 モデレートコンソールは以下をサポートします。
 
@@ -54,7 +54,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 
 * グローバルナビゲーションから **[!UICONTROL コミュニティ]**/**[!UICONTROL モデレート]** を選択します。
 
-管理者として、または [ モデレーター権限 ](/help/communities/in-context.md#identifyingtrustedmembers) を持つメンバーとしてログインした場合にのみ、モデレートタスクを実行できます。 表示される唯一のコミュニティコンテンツは、ログインしたメンバーがモデレートを許可されているものです。
+管理者として、または [&#x200B; モデレーター権限 &#x200B;](/help/communities/in-context.md#identifyingtrustedmembers) を持つメンバーとしてログインした場合にのみ、モデレートタスクを実行できます。 表示される唯一のコミュニティコンテンツは、ログインしたメンバーがモデレートを許可されているものです。
 
 >[!NOTE]
 >
@@ -72,20 +72,20 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 
 ### 上部ナビゲーションバー {#top-navigation-bar}
 
-上部のナビゲーションバーは、すべてのコンソールで一定です。 詳しくは、「基本操作 [ を参照してください ](/help/sites-authoring/basic-handling.md)。
+上部のナビゲーションバーは、すべてのコンソールで一定です。 詳しくは、「基本操作 [&#x200B; を参照してください &#x200B;](/help/sites-authoring/basic-handling.md)。
 
 ### ツールバー {#toolbar}
 
 上部のナビゲーションバーの下にあるツールバーには、左側に次の切り替えスイッチが用意されています。
 
-* [ フィルターパネル ](/help/communities/moderation.md#filterrail)
+* [&#x200B; フィルターパネル &#x200B;](/help/communities/moderation.md#filterrail)
 コンテンツをフィルタリングするプロパティを選択できるパネルを開きます。
 
 上部のナビゲーションバーの下にあるツールバーには、左側に次の切り替えスイッチが用意されています。
 
-![ トッグレススイッチ ](assets/toggleswitch.png)
+![&#x200B; トッグレススイッチ &#x200B;](assets/toggleswitch.png)
 
-[ フィルターパネル ](/help/communities/moderation.md#filterrail)
+[&#x200B; フィルターパネル &#x200B;](/help/communities/moderation.md#filterrail)
 「検索」を選択するとパネルが開き、コンテンツをフィルタリングするプロパティを選択できます。
 
 ![filterrail](assets/filterrail.png)
@@ -100,7 +100,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 * 投稿の場所
 * 投稿時
 * 投稿への返信数
-* 投稿に関連付けられた [ センチメント ](/help/communities/moderate-ugc.md#sentiment)
+* 投稿に関連付けられた [&#x200B; センチメント &#x200B;](/help/communities/moderate-ugc.md#sentiment)
 * 承認されると、チェックマークが表示されます
 * 添付ファイルがある場合、クリップが表示されます
 
@@ -138,7 +138,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 
 テキスト検索では、表示される参照 UGC が、入力されたテキストを含む投稿に制限されます。
 
-![ テキスト検索 ](assets/text-search.png)
+![&#x200B; テキスト検索 &#x200B;](assets/text-search.png)
 
 #### サイト {#site}
 
@@ -177,7 +177,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 フィルタリング対象の追加リソースを追加するには：
 
 * オーサーインスタンスに管理者としてログインします。
-* [Web コンソール ](https://localhost:4502/system/console/configMgr) を開きます。
+* [Web コンソール &#x200B;](https://localhost:4502/system/console/configMgr) を開きます。
 * `AEM Communities Moderation Dashboard Filters` を見つけます。
 * 設定を選択すると、編集モードで開くことができます。
 * フィルターするコンポーネントの ResourceType を入力してください：
@@ -203,7 +203,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 >
 >「未回答」ステータスのみが選択されている場合、モデレーターには、回答された質問を除くすべてのコンテンツ（すべてのコンテンツタイプ）が表示されます。 これは、回答されていない質問や、フォーラムのトピック、ブログの記事、コメントなどの他のコンテンツがある場合、回答された質問の責任があるプロパティが存在しないためです。
 
-![ ステータス ](assets/statuses.png)
+![&#x200B; ステータス &#x200B;](assets/statuses.png)
 
 #### フラグ設定 {#flagging}
 
@@ -211,13 +211,13 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 
 コンテンツの一部にフラグが設定されると、そのコンテンツにフラグが設定されたままになります。その後、「**フラグ**」ボタンをもう一度選択して、そのコンテンツの一部のフラグを解除します。 重要なフラグやフォローアップなどのフラグ設定レベルはありません。
 
-![ フラグ設定 ](assets/flagging.png)
+![&#x200B; フラグ設定 &#x200B;](assets/flagging.png)
 
 #### メンバー {#members}
 
 メンバーは、表示される参照 UGC を、入力されたメンバー名によって投稿された UGC に制限します。
 
-![ 社員 ](assets/members.png)
+![&#x200B; 社員 &#x200B;](assets/members.png)
 
 #### 過去に投稿済み {#posted-in-the-last}
 
@@ -227,17 +227,17 @@ AEM Communitiesでは、管理者とコミュニティモデレーター [ モ�
 
 #### 好感度 {#sentiment}
 
-[ センチメント ](/help/communities/moderate-ugc.md#sentiment) は、表示される参照 UGC を、センチメント値がプラス、マイナス、ニュートラルの投稿に制限します。
+[&#x200B; センチメント &#x200B;](/help/communities/moderate-ugc.md#sentiment) は、表示される参照 UGC を、センチメント値がプラス、マイナス、ニュートラルの投稿に制限します。
 
-![ センチメント ](assets/sentiment.png)
+![&#x200B; センチメント &#x200B;](assets/sentiment.png)
 
 ## カスタムフィルター {#custom-filters}
 
-[ フィルターパネル ](/help/communities/moderation.md#ootbfilters) の標準フィルター以外に、メタデータに対するカスタムフィルターをモデレート UI に追加できます。 開発者は、GitHub のサンプルコードを使用して、既存のモデレート UI フィルターを拡張できます。
+[&#x200B; フィルターパネル &#x200B;](/help/communities/moderation.md#ootbfilters) の標準フィルター以外に、メタデータに対するカスタムフィルターをモデレート UI に追加できます。 開発者は、GitHub のサンプルコードを使用して、既存のモデレート UI フィルターを拡張できます。
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) にはタグフィルターが実装されており、特定のタグがユーザー生成コンテンツに適用されているかどうかに基づいて UGC リストをフィルタリングできます。 サンプルコードに従って、他の類似した UGC メタデータフィールドと同様のフィルターを作成できます。
+GitHub の [&#x200B; サンプルプロジェクト &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) にはタグフィルターが実装されており、特定のタグがユーザー生成コンテンツに適用されているかどうかに基づいて UGC リストをフィルタリングできます。 サンプルコードに従って、他の類似した UGC メタデータフィールドと同様のフィルターを作成できます。
 
 タグフィルターのサンプルをインストールするには：
 
@@ -264,7 +264,7 @@ GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing
 
 ## モデレートアクション {#moderation-actions}
 
-[ モデレートアクション ](/help/communities/moderate-ugc.md#moderation-actions) は、コンテンツ領域で選択した 1 つ以上の項目に対して、またはコンテンツの詳細を表示するときに実行できます。
+[&#x200B; モデレートアクション &#x200B;](/help/communities/moderate-ugc.md#moderation-actions) は、コンテンツ領域で選択した 1 つ以上の項目に対して、またはコンテンツの詳細を表示するときに実行できます。
 
 投稿を一括モデレートするには、コンテンツ領域で、投稿の選択（![selecticon](assets/selecticon.png)）アイコンをクリックします。これは、マウス（デスクトップ）で投稿にカーソルを合わせたり、投稿の上で指を押し続けたり（モバイル）したときに表示されます。 これにより、複数選択モードに入り、クリックするだけで一括モデレートされる後続の投稿を選択できるようになります。 ツールバーに表示されたボタンを使用して、選択した投稿に対してモデレートアクションを実行できます。 すべてのアクションで確認を求められます。
 
@@ -299,7 +299,7 @@ GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing
 * [拒否](#deny)
 * [削除](#delete)
 * [閉じる](#close)
-* 表示 [ モデレート履歴 ](#moderation-history)
+* 表示 [&#x200B; モデレート履歴 &#x200B;](#moderation-history)
 * [詳細を表示](#viewdetails)
 
 モデレートアクションアイコンの上のカード表示には、投稿のテキストが表示され、以下には以下を示すデータが表示されます。
@@ -313,7 +313,7 @@ GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing
 
 #### 返信 {#reply}
 
-![ 返信 ](assets/reply.png)
+![&#x200B; 返信 &#x200B;](assets/reply.png)
 
 1 つの投稿に対処する場合、UGC タイプが返信をサポートしていて、返信を許可するように設定されている場合、返信アイコンが表示されます。
 
@@ -325,7 +325,7 @@ GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing
 
 #### 拒否 {#deny}
 
-![ 拒否 ](assets/deny.png)
+![&#x200B; 拒否 &#x200B;](assets/deny.png)
 
 **拒否** モデレートアクションは、モデレートされたコンテンツでのみ使用でき、複数選択モードの場合を除き、モデレートされていないコンテンツには表示されません。
 
@@ -337,19 +337,19 @@ GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing
 
 #### 削除 {#delete}
 
-![ 削除 ](assets/delete.png)
+![&#x200B; 削除 &#x200B;](assets/delete.png)
 
 単一選択モードまたは一括モードでは、項目を選択して削除できます。 削除アクションを実行すると、確認ダイアログが表示されます。 削除すると、これらの項目はコンテンツ領域からすぐに消えます。 **UGC が削除されると、リポジトリから完全に削除され、後で取得することはできません**。
 
 #### 閉じる {#close}
 
-![ 閉じる ](assets/close.png)
+![&#x200B; 閉じる &#x200B;](assets/close.png)
 
 1 つの投稿で作業する場合、UGC タイプがそのリソースに対するそれ以上の投稿を防ぐ機能をサポートしている場合は、閉じるアイコンが表示されます。
 
 #### モデレート履歴 {#moderation-history}
 
-![ モデレーション ](assets/moderation.png)
+![&#x200B; モデレーション &#x200B;](assets/moderation.png)
 
 1 つの投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。 アイコンを選択すると、UGC の投稿に関して実行されたアクションの履歴を含むパネルが表示されます。
 
@@ -357,11 +357,11 @@ GitHub の [ サンプルプロジェクト ](https://github.com/Adobe-Marketing
 
 次に例を示します。
 
-![ モデレーション履歴 ](assets/moderation-history.png)
+![&#x200B; モデレーション履歴 &#x200B;](assets/moderation-history.png)
 
 #### 詳細を表示 {#view-detail}
 
-![ 表示 ](assets/view.png)
+![&#x200B; 表示 &#x200B;](assets/view.png)
 
 1 つの投稿で作業する場合、UGC を詳細モードで開くと、詳細を表示できます。
 

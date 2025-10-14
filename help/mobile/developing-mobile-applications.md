@@ -37,7 +37,7 @@ AEMはAdobe PhoneGap Build サービス（`https://build.phonegap.com/`）と統
 
 ## アプリの作成 {#creating-apps}
 
-デベロッパーは、[AEM PhoneGap スターターキットと ](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)2&rbrace;https://github.com/adobe-marketing-cloud-apps&rbrace; に掲載されている追加リソースを使用して、Cordova Web ビューを実行する参照ネイティブアプリを含む [&#128279;](https://github.com/adobe-marketing-cloud-apps)PhoneGap でAEM アプリをブートストラップできます。
+デベロッパーは、[AEM PhoneGap スターターキットと &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)2&rbrace;https://github.com/adobe-marketing-cloud-apps&rbrace; に掲載されている追加リソースを使用して、Cordova Web ビューを実行する参照ネイティブアプリを含む [&#128279;](https://github.com/adobe-marketing-cloud-apps)PhoneGap でAEM アプリをブートストラップできます。
 
 スターターキット Git リポジトリの Readme には、スターターキットを使用するためのチュートリアルが含まれています。
 
@@ -49,7 +49,7 @@ AEMはAdobe PhoneGap Build サービス（`https://build.phonegap.com/`）と統
 
 >[!NOTE]
 >
->ラボを含む追加の参照実装ソースは、GitHub[ こちら ](https://github.com/adobe-marketing-cloud-apps)、「kitchen-sink」ソース [ こちら ](https://github.com/blefebvre/aem-phonegap-kitchen-sink) にあります。
+>ラボを含む追加の参照実装ソースは、GitHub[&#x200B; こちら &#x200B;](https://github.com/adobe-marketing-cloud-apps)、「kitchen-sink」ソース [&#x200B; こちら &#x200B;](https://github.com/blefebvre/aem-phonegap-kitchen-sink) にあります。
 
 ## iOS 9 および HTTP ホスト向けの開発 {#developing-for-ios-and-http-hosts}
 
@@ -70,7 +70,7 @@ IOS開発者は、iOS 9 上で動作する Cordova アプリケーションの�
 
 >[!NOTE]
 >
->「アプリ転送セキュリティ」について詳しくは、[AppleのiOS9 プレリリースドキュメントの以下の節 ](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) およびこの [ スタックオーバーフローの説明 ](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/) を参照してください。
+>「アプリ転送セキュリティ」について詳しくは、[AppleのiOS9 プレリリースドキュメントの以下の節 &#x200B;](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) およびこの [&#x200B; スタックオーバーフローの説明 &#x200B;](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/) を参照してください。
 
 ## AEM でのモバイルアプリケーションの開発 {#developing-mobile-applications-in-aem-1}
 
