@@ -33,7 +33,7 @@ ht-degree: 100%
 
 * ビデオを一時停止する場合は、サムネールを選択し、製品のクイックビューを開きます。例えば、ビデオ内の KitchenAid のサムネール画像を選択すると、このミキサーの 360 度のスピンビューを見たり、細部を拡大表示したりすることができます。
 
-<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
+<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html?lang=ja. This now needs to call a new interactive video-->
 
 ![インタラクティブなショッパブルビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブなショッパブルビデオからのビデオフレームキャプチャ。*
 
