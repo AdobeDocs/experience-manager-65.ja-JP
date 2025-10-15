@@ -123,7 +123,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 以下にテンプレートの例を示します。
 
-package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot;true&quot; &amp;ast; @scr.service &amp;ast;/ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // 関係する部分を実装 }
+package my.own.stuff; /&ast;&ast; &ast; @scr.component inherit=&quot;true&quot; &ast; @scr.service &ast;/ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // 関係する部分を実装 }
 
 インターフェイスとクラスには以下が含まれます。
 
@@ -166,7 +166,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
 
    1. 「**[!UICONTROL OK]**」をクリックします。ダイアログウィンドウで、「**[!UICONTROL はい]**」をクリックします。
 
-1.  `pom.xml` ファイルのコードを以下のコードで書き換えます。
+1. `pom.xml` ファイルのコードを以下のコードで書き換えます。
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
