@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >このドキュメントは [AEM Mobileの基本を学ぶ &#x200B;](/help/mobile/getting-started-aem-mobile.md) ガイドの一部であり、AEM Mobileの参照の推奨される出発点です。
 
-AEM Mobileのコンテンツパーソナライゼーション機能を使用すると、[AEM作成者 &#x200B;](#author) は、[Adobe Target](https://business.adobe.com/products/target/adobe-target.html?lang=ja) を使用してモバイルアプリのコンテンツをパーソナライズできます。 これにより、モバイルアプリケーションユーザーにターゲット設定されたオファーを配信できます。 Adobe Experience Manager Mobileには、ユーザーの好みに合ったコンテンツを作成、ターゲット設定および配信する機能があります。
+AEM Mobileのコンテンツパーソナライゼーション機能を使用すると、[AEM作成者 &#x200B;](#author) は、[Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html?lang=ja) を使用してモバイルアプリのコンテンツをパーソナライズできます。 これにより、モバイルアプリケーションユーザーにターゲット設定されたオファーを配信できます。 Adobe Experience Manager Mobileには、ユーザーの好みに合ったコンテンツを作成、ターゲット設定および配信する機能があります。
 
 AEMでは、作成者がこのコンテンツの作成を開始するには、まず管理者と開発者が環境を準備する必要があります。
 

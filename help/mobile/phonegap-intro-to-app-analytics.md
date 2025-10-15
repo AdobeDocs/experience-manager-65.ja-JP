@@ -30,7 +30,7 @@ AEM Mobile アプリはマーケティングキャンペーンに対して何を
 
 Adobeモバイルサービスを使用すると、モバイルアプリの使用状況、アプリのクラッシュ回数、デバイスの詳細など、モバイルアプリに関する多くの重要な指標をトラッキングして、ユーザーがモバイルアプリをどのように使用しているかに関するインサイトを得ることができます。
 
-Adobe Experience Manager Mobileでは、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を確認できます。 ダッシュボードの **モバイル指標タイル** には、モバイルアプリケーションのReal-Time Analyticsが表示され、開発者、作成者および管理者がモバイルアプリの正常性を簡単に確認できます。 カバーの下で、分析の機能を強化するのは、[AdobeMobile Analytics](https://business.adobe.com/products/analytics/mobile-marketing.html)SDKです。 Adobe Mobile Analytics SDKは、ネイティブで、または Web ビュー用 PhoneGap Bridge プラグインを通じてアプリケーションにプラグインできます。 指標が収集され、デバイスが接続されるまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services Cloud にプッシュされます。
+Adobe Experience Manager Mobileでは、AEM Mobile アプリケーションダッシュボードから直接モバイル分析の詳細を確認できます。 ダッシュボードの **モバイル指標タイル** には、モバイルアプリケーションのReal-Time Analyticsが表示され、開発者、作成者および管理者がモバイルアプリの正常性を簡単に確認できます。 カバーの下で、分析の機能を強化するのは、[AdobeMobile Analytics](https://business.adobe.com/jp/products/analytics/mobile-marketing.html)SDKです。 Adobe Mobile Analytics SDKは、ネイティブで、または Web ビュー用 PhoneGap Bridge プラグインを通じてアプリケーションにプラグインできます。 指標が収集され、デバイスが接続されるまでデバイス上でキャッシュされます。接続された時点で、レポートと分析のためにデータがAdobe Mobile Services Cloud にプッシュされます。
 
 Adobeモバイル分析SDKには、次の機能があります。
 

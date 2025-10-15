@@ -29,7 +29,7 @@ AEM Mobileは、お客様の GDPR コンプライアンス義務を支援する�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobeのデジタルパブリッシング製品（AEM Mobileに先行）は、Adobeの GDPR 対応イニシアチブをサポートします。 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja) を参照してください。 以下では、Adobeと連携して GDPR リクエストを開始する方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートについて詳しく説明します。
+Adobeのデジタルパブリッシング製品（AEM Mobileに先行）は、Adobeの GDPR 対応イニシアチブをサポートします。 [https://business.adobe.com/jp/privacy/general-data-protection-regulation.html](https://business.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja) を参照してください。 以下では、Adobeと連携して GDPR リクエストを開始する方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートについて詳しく説明します。
 
 AEM Mobileを古いDigital Publishing Suiteと混同しないために、次の場所からDigital Publishing Suite製品にログインできます。
 

@@ -79,7 +79,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 機能パック 18912 のインストールは&#x200B;*オプション*&#x200B;です。
 
-機能パック 18912 を使用すると、FTP 経由でアセットを一括取り込みするか、Experience Manager で Dynamic Media - ハイブリッドモードまたは Dynamic Media Classic から Dynamic Media - Scene7 モードにアセットを移行できます。これは、[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html) から入手できます。
+機能パック 18912 を使用すると、FTP 経由でアセットを一括取り込みするか、Experience Manager で Dynamic Media - ハイブリッドモードまたは Dynamic Media Classic から Dynamic Media - Scene7 モードにアセットを移行できます。これは、[Adobe Professional Services](https://business.adobe.com/jp/customers/consulting-services/main.html) から入手できます。
 
 詳しくは、[一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)を参照してください。
 

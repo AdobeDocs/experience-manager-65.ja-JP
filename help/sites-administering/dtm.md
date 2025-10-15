@@ -18,7 +18,7 @@ ht-degree: 100%
 
 # Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html?lang=ja) と AEM を統合すると、Dynamic Tag Management Web プロパティを使用して AEM Sites を追跡できます。マーケターは、Dynamic Tag Management を使用して、データ収集のためのタグを管理し、複数のデジタルマーケティングシステムにデータを配信できます。例えば、Dynamic Tag Management を使用して、AEM web サイトの使用状況データを収集し、そのデータを Adobe Analytics または Adobe Target に配信して分析します。
+[Adobe Dynamic Tag Management](https://business.adobe.com/jp/products/experience-platform/adobe-experience-platform.html?lang=ja) と AEM を統合すると、Dynamic Tag Management Web プロパティを使用して AEM Sites を追跡できます。マーケターは、Dynamic Tag Management を使用して、データ収集のためのタグを管理し、複数のデジタルマーケティングシステムにデータを配信できます。例えば、Dynamic Tag Management を使用して、AEM web サイトの使用状況データを収集し、そのデータを Adobe Analytics または Adobe Target に配信して分析します。
 
 統合する前に、AEM サイトのドメインを追跡する Dynamic Tag Management [web プロパティ](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Web_Properties)を作成します。AEM が Dynamic Tag Management ライブラリにアクセスできるように、web プロパティの[ホスティングオプション](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Hosting__Embed_Tab)を設定する必要があります。
 

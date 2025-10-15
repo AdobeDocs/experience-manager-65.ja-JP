@@ -246,12 +246,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
-* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
+* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
+* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
