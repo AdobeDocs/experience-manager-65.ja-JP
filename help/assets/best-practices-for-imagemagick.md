@@ -6,10 +6,10 @@ role: Admin
 feature: Renditions,Developer Tools
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 100%
+source-wordcount: '679'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
 
 各オペレーティングシステム向けに、様々なバージョンの ImageMagick インストールファイルが用意されています。オペレーティングシステムに適したバージョンを使用してください。
 
-1. オペレーティングシステムに適した [ImageMagick インストールファイル](https://www.imagemagick.org/script/download.php)をダウンロードします。
+1. オペレーティングシステムに適した ImageMagick インストールファイル（`https://www.imagemagick.org/script/download.php website`）をダウンロードします。
 1. [!DNL Experience Manager] サーバーをホスティングしているディスクに ImageMagick をインストールするには、インストールファイルを起動します。
 
 1. path 環境変数を ImageMagick のインストールディレクトリに設定します。
@@ -82,7 +82,7 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
 
 ImageMagick を使用した画像処理に関連するセキュリティの脆弱性が複数存在します。例えば、ユーザーが送信した画像の処理には、リモートコード実行（RCE）のリスクが伴います。
 
-さらに、PHP の imagick、Ruby の rmagick と paperclip、nodejs の imagemagick など様々な画像処理プラグインが、ImageMagick ライブラリに依存しています。
+また、様々な画像処理プラグインは ImageMagick ライブラリに依存します。PHP の imagick、Ruby の magick と paperclip、nodejs の imagemagick などが含まれますが、これらに限定されません。
 
 ImageMagick または影響を受けるライブラリを使用する場合は、以下のタスクのどちらか（できれば両方）を実行して、既知の脆弱性を緩和することをお勧めします。
 

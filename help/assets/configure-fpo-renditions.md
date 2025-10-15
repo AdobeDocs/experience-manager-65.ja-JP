@@ -7,10 +7,10 @@ feature: Renditions
 exl-id: 1e4ddd73-a31c-4ddd-94eb-1dac6a4835b3
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 100%
+source-wordcount: '1062'
+ht-degree: 99%
 
 ---
 
@@ -92,7 +92,7 @@ Experience Manager では、新しいアセットがアップロードされる�
 
 1. 変更を有効にするには、「**[!UICONTROL 同期]**」をクリックします。
 
-ImageMagick のコマンドライン機能について詳しくは、[https://imagemagick.org](https://imagemagick.org) を参照してください。
+ImageMagick のコマンドライン機能について詳しくは、Web サイトを参照 `https://imagemagick.org` てください。
 
 ## Experience Manager ワークフローを使用した既存アセットのレンディションの生成 {#generate-renditions-of-existing-assets-using-aem-workflow}
 

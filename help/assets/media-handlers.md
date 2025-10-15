@@ -7,10 +7,10 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '2113'
-ht-degree: 100%
+source-wordcount: '2109'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 [!DNL Adobe Experience Manager Assets] には、アセットの処理に使用するデフォルトのワークフローとメディアハンドラーのセットが付属しています。ワークフローでは、アセットに対して実行する全般的なタスクを定義し、特定のタスクをメディアハンドラーに委任します。例えば、サムネールの生成やメタデータの抽出などです。
 
-特定の MIME タイプのアセットがアップロードされた際に自動的に実行されるように、ワークフローを設定できます。処理手順は、一連の [!DNL Assets] メディアハンドラーに基づいて定義されます。[!DNL Experience Manager] には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタム開発](#creating-a-new-media-handler)することも、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義することもできます。
+特定の MIME タイプのアセットがアップロードされた際に自動的に実行されるように、ワークフローを設定できます。処理手順は、一連の [!DNL Assets] メディアハンドラーに基づいて定義されます。[!DNL Experience Manager] には、[ビルトインのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタム開発](#creating-a-new-media-handler)することも、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義することもできます。
 
 メディアハンドラーは、アセットに対して特定のアクションを実行する [!DNL Assets] 内のサービスです。例えば、MP3 オーディオファイルを [!DNL Experience Manager] にアップロードすると、ワークフローは MP3 ハンドラーをトリガーし、MP3 ハンドラーはメタデータを抽出してサムネイルを生成します。メディアハンドラーはワークフローで使用されます。[!DNL Experience Manager] 内では、よく使用される MIME タイプがサポートされています。アセットに対して特定のタスクを実行するには、ワークフローを拡張または作成するか、メディアハンドラーを拡張または作成するか、メディアハンドラーを無効化または有効化します。
 
@@ -449,7 +449,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
 
 以下の変換を自動的に実行し、[!DNL Assets] 内に保存することができます。
 
-* [ImageMagick](https://www.imagemagick.org/script/index.php) および [Ghostscript](https://www.ghostscript.com/) を使用した EPS および AI 変換。
+* `https://www.imagemagick.org/script/index.php` および [Ghostscript](https://www.ghostscript.com/) を使用したEPSおよび AI 変換。
 * [FFmpeg](https://ffmpeg.org/) を使用した FLV ビデオのトランスコーディング。
 * [LAME](https://lame.sourceforge.io/) を使用した MP3 エンコーディング。
 * [SOX](https://sourceforge.net/projects/sox/) を使用したオーディオ処理。
@@ -476,7 +476,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
 
 [!DNL Experience Manager] サーバーをホストするディスクに [!DNL ImageMagick] をインストールします。
 
-1. [!DNL ImageMagick] のインストール：[ImageMagick のドキュメント](https://www.imagemagick.org/script/download.php)を参照してください。
+1. [!DNL ImageMagick] のインストール：Web サイト `https://www.imagemagick.org/script/download.php` 参照してください。
 1. コマンドラインで `convert` を実行できるようにツールを設定します。
 1. ツールが適切にインストールされているかどうかを確認するには、コマンド `convert -h` をコマンドラインで実行します。
 

@@ -10,9 +10,9 @@ feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '5927'
+source-wordcount: '5914'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 100%
 
 * ビデオを一時停止する場合は、サムネールを選択し、製品のクイックビューを開きます。例えば、ビデオ内の KitchenAid のサムネール画像を選択すると、このミキサーの 360 度のスピンビューを見たり、細部を拡大表示したりすることができます。
 
-<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html?lang=ja. This now needs to call a new interactive video-->
+<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
 ![インタラクティブなショッパブルビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブなショッパブルビデオからのビデオフレームキャプチャ。*
 
@@ -43,16 +43,18 @@ ht-degree: 100%
 
 ### インタラクティブビデオの作成方法を見る {#watch-how-interactive-videos-are-created}
 
-[インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)に関する説明を視聴します（7分30秒）。
+[インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&emailurl=https://s7d5.scene7.com/s7/emailFriend&serverUrl=https://s7d5.scene7.com/is/image/&config=Scene7SharedAssets/Universal_HTML5_Video_social&contenturl=https://s7d5.scene7.com/skins/&asset=S7tutorials/InteractiveVideo)に関する説明を視聴します（7分30秒）。
 このビデオガイドのブランドは Assets on Demand ですが、原則や手順は Adobe Experience Manager Assets のインタラクティブビデオにも適用されます。
 
 ### Adobe お客様ソリューションウェビナー {#adobe-customer-success-webinar}
 
 「Experience Manager Assets でのインタラクティブビデオの使用、リンク共有および YouTube での共有」ウェビナーでは、インタラクティブビデオなどの機能を使用して、コンバージョン駆動型イベントをビデオマーケティングコンテンツと連動させる方法を解説しています。
 
+<!-- NOT FOUND; FIND REPLACEMENT
 >[!NOTE]
 >
->[Experience Manager Assets でのインタラクティブビデオ、リンク共有、YouTube 共有の使用](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
+>[Using Interactive Video, Link Sharing, and YouTube sharing in Experience Manager Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/). 
+-->
 
 ## クイックスタート：インタラクティブビデオ {#quick-start-interactive-videos}
 
@@ -83,7 +85,8 @@ ht-degree: 100%
    >
    >MXF ビデオ形式は、Dynamic Media のインタラクティブビデオでの使用は、まだサポートされていません。
 
-1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます（インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。インタラクティブビデオアセットを公開して作業は完了です。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL をコピーして、Web サイトのランディングページに適用します。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます（インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。
+インタラクティブビデオアセットを公開して作業は完了です。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL をコピーして、Web サイトのランディングページに適用します。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 1. **Web サイトまたは Experience Manager の web サイトにインタラクティブビデオを追加** - Experience Manager Sites または e コマース、あるいはその両方を使用している場合、インタラクティブビデオを web ページに追加できます。インタラクティブメディアコンポーネントを Experience Manager のページにドラッグします。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website) を参照してください。サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview) を参照してください。
    [ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
@@ -120,7 +123,7 @@ ht-degree: 100%
 
 * Google Chrome で送信されるすべての HTTP リクエストを確認するには、**F12**（Windows）または **Command+Options+I**（Mac）を押して開発者ツールパネルを開き、「**ネットワーク**」タブを選択します。
 
-* Firefox では、**F12** キー（Windows）または **Command + Option + I** キー（Mac）を押して Firebug プラグインを有効にして「**`[Net]`**」タブを使用するか、組み込みの Inspector ツールとその「Network」タブを使用します。
+* Firefox では、**F12** キー（Windows）または **Command + Option + I** キー（Mac）を押して Firebug プラグインを有効にして「**`[Net]`**」タブを使用するか、ビルトインの Inspector ツールとその「Network」タブを使用します。
 
 * Internet Explorer では、**F12** キーを押してデバッガーツールを起動します。
 
