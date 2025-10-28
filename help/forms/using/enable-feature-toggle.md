@@ -5,10 +5,10 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 hidefromtoc: true
 exl-id: 08815c2b-23b3-4545-a3ab-ba47ba1c3c55
-source-git-commit: 0e80096b6b49372765b04a3bc1438b93d9cccf6e
+source-git-commit: 0915f8a65b1a9697eaca95be3ef9a786a1071fe5
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 92%
+source-wordcount: '408'
+ht-degree: 90%
 
 ---
 
@@ -28,6 +28,10 @@ AEM 6.5 設定で作業する場合、機能切替スイッチは次の点で役
 
 * デプロイメントとアップグレードの際のリスクを軽減する。
 
+## 考慮事項
+
+AEM 6.5 SP23 以降では、[com.adobe.granite.toggle.impl.dev](http://com.adobe.granite.toggle.impl.dev/) バンドルがForms アドオンと共にインストールされているので、前提条件の手順を実行する必要はありません。
+
 ## 前提条件
 
 AEM 6.5 設定で機能切替スイッチを有効にする前に、次を確認します。
@@ -37,10 +41,6 @@ AEM 6.5 設定で機能切替スイッチを有効にする前に、次を確認
 * `http://<author-instance-url>:portnumber/system/console/bundles` に移動し、**（com.adobe.granite.toggle.impl.dev-1.1.8.jar）** バンドルが存在するかどうかを確認します。 存在しない場合は、[リンクからバンドルをダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Fcom.adobe.granite.toggle.impl.dev-1.1.8.jar)します。
 
 ![機能切替スイッチ](/help/forms/using/assets/feature-toggle-1.1.8.png)
-
->[!NOTE]
->
->必要に応じて、AEM 6.5 以前のバージョンの機能の切り替えを有効にすることができます。
 
 ## 機能切替スイッチの有効化 {#enable-feature-toggle-65}
 
