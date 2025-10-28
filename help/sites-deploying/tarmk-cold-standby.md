@@ -325,7 +325,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 
 これを行うには、次に示す手順に従います。
 
-1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**bean を使用してコールドスタンバイインスタンスの同期処理を停止します。この方法について詳しくは、[監視](#monitoring)に関するセクションを参照してください。
+1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**&#x200B;bean を使用してコールドスタンバイインスタンスの同期処理を停止します。この方法について詳しくは、[監視](#monitoring)に関するセクションを参照してください。
 1. コールドスタンバイインスタンスを停止します。
 1. ホットフィックスをプライマリインスタンスにインストールします。ホットフィックスのインストール方法について詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 1. インストール後の問題に対してインスタンスをテストします。
@@ -336,7 +336,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 
 ## モニタリング {#monitoring}
 
-この機能は、JMX または MBean を使用して情報を公開します。これにより、[JMX コンソール ](/help/sites-administering/jmx-console.md) を使用して、スタンバイとプライマリの現在の状態を調べることができます。 この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
+この機能は、JMX または MBean を使用して情報を公開します。これにより、[JMX コンソール &#x200B;](/help/sites-administering/jmx-console.md) を使用して、スタンバイとプライマリの現在の状態を調べることができます。 この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
 
 **スタンバイ**
 
