@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 hidefromtoc: true
 exl-id: 08815c2b-23b3-4545-a3ab-ba47ba1c3c55
-source-git-commit: 730f8cabd6825ed289238f9000037644a8139301
+source-git-commit: e3901bbcb82b3c05d95b0d2bb8addab049dc3a4e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '409'
 ht-degree: 90%
 
 ---
@@ -30,7 +30,7 @@ AEM 6.5 設定で作業する場合、機能切替スイッチは次の点で役
 
 ## 考慮事項
 
-AEM 6.5 SP23 以降では、バンドル [com.adobe.granite.toggle.impl.dev](http://com.adobe.granite.toggle.impl.dev/) はForms アドオンと共に既にインストールされているので、インストールする必要はありません。
+AEM 6.5 SP23 以降では、バンドル [com.adobe.granite.toggle.impl.dev](http://com.adobe.granite.toggle.impl.dev/) はForms アドオン AEM サービスパックと共に既にインストールされているので、インストールする必要はありません。
 
 ## 前提条件
 
