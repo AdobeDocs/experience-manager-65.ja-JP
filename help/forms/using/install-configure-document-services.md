@@ -6,10 +6,10 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: 62baf682b75823f52f968a70960aff2388d49cad
-workflow-type: ht
-source-wordcount: '10085'
-ht-degree: 100%
+source-git-commit: c6d38c682dc45e3dcebef194b3b80510ab10f9e2
+workflow-type: tm+mt
+source-wordcount: '10086'
+ht-degree: 99%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、アーカイブや、ドキュメントへのアクセスを制限するためのデジタル署名の追加、Barcoded Forms のデコードなど、様々なドキュメントレベルの操作を実現する一連の OSGi サービスを提供します。これらのサービスは、AEM Forms のアドオンパッケージに含まれており、ドキュメントサービスと総称されます。利用可能なドキュメントサービスのリストとその主な機能は次のとおりです。
 
-* **Assembler サービス：** PDF ドキュメントや XDP ドキュメントの結合、並べ替えおよび拡張と、PDF ドキュメントに関する情報の取得を実行できます。PDF ドキュメントを PDF/A 規格に変換して検証することもできます。また、PDF フォーム、XML フォームを PDF/A-1b、PDF/A-2b および PDFA/A-3b に変換することもできます。詳しくは、[Assembler サービス](/help/forms/using/assembler-service.md)を参照してください。
+* **アセンブラーサービス：** PDF ドキュメントや XDP ドキュメントの結合、並べ替えおよび拡張と、PDF ドキュメントに関する情報の取得を実行できます。PDF ドキュメントを PDF/A 規格に変換して検証することもできます。また、PDF フォーム、XML フォームを PDF/A-1b、PDF/A-2b および PDFA/A-3b に変換することもできます。詳しくは、[アセンブラーサービス](/help/forms/using/assembler-service.md)を参照してください。
 
 * **ConvertPDF サービス：** PDF ドキュメントを PostScript ファイルまたは画像ファイル（JPEG、JPEG 2000、PNG および TIFF）に変換します。詳しくは、[ConvertPDF サービス](/help/forms/using/using-convertpdf-service.md)を参照してください。
 
@@ -53,7 +53,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 >[!NOTE]
 >
->AEM Forms では、すべての機能を 1 台のサーバーで設定して実行できますが、実稼働環境ではキャパシティプラニングと負荷分散を行い、特定の機能に専用のサーバーをセットアップする必要があります。例えば、PDF Generator サービスを使用して、1 日に数千のページと複数のアダプティブフォームをデータ取得用に変換する環境の場合、PDF Generator サービスとアダプティブフォームの機能を実行するための AEM Forms サーバーを個別にセットアップする必要があります。これにより、パフォーマンスが最適化され、各サーバーを個別にスケーリングできるようになります。
+>AEM Forms では、すべての機能を 1 台のサーバーで設定して実行できますが、本番環境ではキャパシティプラニングと負荷分散を行い、特定の機能に専用のサーバーをセットアップする必要があります。例えば、PDF Generator サービスを使用して、1 日に数千のページと複数のアダプティブフォームをデータ取得用に変換する環境の場合、PDF Generator サービスとアダプティブフォームの機能を実行するための AEM Forms サーバーを個別にセットアップする必要があります。これにより、パフォーマンスが最適化され、各サーバーを個別にスケーリングできるようになります。
 
 ## システム要件 {#system-requirements}
 
@@ -184,7 +184,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
    * libc.so.6
    * ld-linux.so.2
    * libexpat.so.1
-* （PDF Generator のみ）RHEL 8 または RHEL 9 の設定で WebKit ルートを有効にするには、32 ビット `nspr` ライブラリがデフォルトでは使用できない場合があります。存在しない場合はインストールしてください。
+* （PDF Generatorのみ） RHEL 8 または RHEL 9、SLES15 の設定で WebKit ルートを有効にするには、32 ビット `nspr` ライブラリはデフォルトでは使用できない場合があります。存在しない場合はインストールします。
 
 * （PDF Generator のみ）UNIX® サーバーで WebToPDF の変換が次のエラーで失敗した場合：
 
@@ -194,7 +194,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 >[!NOTE]
 >
-> WebToPDF は、インタラクティブ通信のグラフ機能でも使用されます。したがって、上記の WebToPDF に関して説明されたすべての設定手順は、グラフ機能が正しく機能することを確認する場合に適用できます。
+> WebToPDF は、インタラクティブなコミュニケーションのグラフ機能でも使用されます。したがって、上記の WebToPDF に関して説明されたすべての設定手順は、グラフ機能が正しく機能することを確認する場合に適用できます。
 
 ## プリインストール設定 {#preinstallationconfigurations}
 
@@ -905,7 +905,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 >
 >AEM Forms PDF Generator などのサーバーサイドの自動処理シナリオでは、保護モードを無効にする必要があります。この設定は、エンドユーザーのデスクトップではなく、専用サーバー環境でのみ変更する必要があります。
 
-詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/jp/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
+詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
 
 
 
@@ -1238,7 +1238,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
    >[!NOTE]
    >
-   >実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、Reader Extensions の古い資格情報を削除してください。
+   >本番環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、Reader Extensions の古い資格情報を削除してください。
 
 1. **[!UICONTROL ユーザー設定を編集]** ページで「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
@@ -1246,7 +1246,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
 PDF ファイルに AES 256 暗号化を使用するには、Java Cryptography Extension（JCE）Unlimited Strength Jurisdiction Policy ファイルを入手し、インストールします。jre/lib/security フォルダーの local_policy.jar ファイルと US_export_policy.jar ファイルを置き換えます。例えば、Sun JDK を使用している場合、ダウンロードしたファイルを `[JAVA_HOME]/jre/lib/security` フォルダーにコピーします。
 
-Assembler サービスは、Reader Extensions サービス、Signature サービス、Forms サービス、Output サービスに依存します。次の手順を実行し、必要なサービスが稼働していることを確認します。
+アセンブラーサービスは、Reader Extensions サービス、Signature サービス、Forms サービス、Output サービスに依存します。次の手順を実行し、必要なサービスが稼働していることを確認します。
 
 1. 管理者として URL `https://'[server]:[port]'/system/console/bundles` にログインします。
 1. 次のサービスを検索し、サービスが稼働していることを確認します。
@@ -1398,7 +1398,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++
 
-+++HTML から PDF への変換に関する問題
++++HTMLからPDFへの変換に関する問題
 
 * フォントディレクトリが PDF Generator の設定 UI に追加されていることを確認します。
 

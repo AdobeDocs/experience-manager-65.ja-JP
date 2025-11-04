@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
-workflow-type: ht
-source-wordcount: '1789'
-ht-degree: 100%
+source-git-commit: 9d5ad43703d2fb3c1d40e10578f5289510a18230
+workflow-type: tm+mt
+source-wordcount: '1989'
+ht-degree: 90%
 
 ---
 
@@ -29,6 +29,48 @@ ht-degree: 100%
     <td><strong>ホットフィックスのダウンロードリンク（AEM ソフトウェア配布リンク）</strong></td>
     <td><strong>修正された問題</strong></td>
   </tr>
+  <tr>
+    <td>
+      <strong>2025 年 10 月 14 日 </strong><br>
+      <em> 適用先：</em> AEM Forms SP23 Jboss ホットフィックス 3 （109）で ImgToPdf が失敗する <br>
+    </td>
+    <td>
+    <ul> 解決策については、[Adobe Experience Manager Forms サポート ] （https://business.adobe.com/in/support/main.html）にお問い合わせください
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li> <b> （FORMS-22029）:</b> PDF Generator（PDFG）でホットフィックス 3 を使用して SP23 にアップグレードした後に、PDF（PDFG）が画像ファイルをPDFに変換できず、予期しない後処理エラーが発生する問題に対応することで、PDFG による画像ファイル変換の信頼性が向上します。
+      <ul>
+  <tr>
+    <td>
+      <strong>2025 年 9 月 23 日 </strong><br>
+    </td>
+    <td>
+    <ul>
+    <li><strong>Jboss：</strong></li>
+    <li>Windows- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-23-0-hotfix-3/jboss/adobe-aem-forms-jee-hotfix3-6.5.23.0-win-jboss.zip">JBoss JEE サーバー用 Windows のAEM サービスパック 6.5.23.0 のホットフィックス 3</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-23-0-hotfix-3/jboss/adobe-aem-forms-jee-hotfix3-6.5.23.0-linux-jboss.tar.gz">JBoss JEE サーバーの Linux 上のAEM サービスパック 6.5.23.0 のホットフィックス 3</a></li>
+    <li><strong>WebLogic：</strong></li>
+    <li>Windows- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-23-0-hotfix-3/weblogic/adobe-aem-forms-jee-hotfix3-6.5.23.0-win-weblogic.zip">Weblogic JEE サーバー用 Windows のAEM サービスパック 6.5.23.0 のホットフィックス 3</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-23-0-hotfix-3/weblogic/adobe-aem-forms-jee-hotfix3-6.5.23.0-linux-weblogic.tar.gz">Weblogic JEE サーバー用 Linux 上のAEM サービスパック 6.5.23.0 のホットフィックス 3</a></li>
+    <li><strong>WebSphere：</strong></li>
+    <li>Windows- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-23-0-hotfix-3/websphere/adobe-aem-forms-jee-hotfix3-6.5.23.0-win-websphere.zip">Websphere JEE サーバー用 Windows のAEM サービスパック 6.5.23.0 のホットフィックス 3</a></li>
+    <li>Linux- <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-23-0-hotfix-3/websphere/adobe-aem-forms-jee-hotfix3-6.5.23.0-linux-websphere.tar.gz">Websphere JEE サーバー用 Linux 上のAEM サービスパック 6.5.23.0 のホットフィックス 3</a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <strong>このホットフィックスでは、次の問題が修正されます。</strong> 
+    <li> <b> （FORMS-21378）:</b> サーバーサイド検証（SSV）が有効で、計算済みMeta情報が空の場合に送信が失敗する問題に対処することで、フォーム送信の信頼性が向上しました。
+
+<li> <b> （FORMS-21721）:</b> 6.5.23.0 にホットフィックス 2 をデプロイした後、PS からPDFへの変換およびHTMLからPDF（WebKit）への変換が失敗する問題を改善しました。 
+    </li>
+    </ul>
+    </td>    
+  </tr>
+    </ul>
+    </td>
   <tr>
     <td>
       <strong>2025年8月5日（PT）</strong><br>
@@ -199,7 +241,7 @@ ht-degree: 100%
      <li>バックエンドで DOR（レコードのドキュメント）サービスを使用しようとすると、フォームの送信が失敗します。 「フォームリソースが正しく割り当てられていないので、送信アクションを完了できませんでした」というエラーメッセージが表示されます。 （FORMS-13798） </li>
      <li>アダプティブフォームを Adobe Experience Manager パブリッシュインスタンスから Adobe Experience Manager ワークフローに送信すると、ワークフローでは添付ファイルの保存に失敗します。  （FORMS-14209） </li>
      <li> AEM 6.5 Forms サービスパック 20 パッケージ（SP20 用の AEM Forms アドオンパッケージ）をインストールすると、AEM Sites ユーザーインターフェイス（UI）のパフォーマンスが大幅に低下します。  （FORMS-13791） </li>
-     <li>インタラクティブ通信で null ポインターの例外が発生して、事前入力サービスが失敗します。 （CQDOC-21355）</li>
+     <li>インタラクティブなコミュニケーションで null ポインターの例外が発生して、事前入力サービスが失敗します。 （CQDOC-21355）</li>
      <li>ユーザーの資格情報に基づく認証を使用する Adobe Analytics の従来のクラウドサービスを使用する設定が正しく機能しなくなり、分析ルールの実行に失敗します。 （FORMS-15428）
     </ul>
     </td>    
@@ -245,7 +287,7 @@ ht-degree: 100%
     <ul>
     <li>アダプティブフォームのガイドコンテナにリダイレクト URL が設定されると、インライン署名が機能しなくなります。 （FORMS-10493）</li>
     <li>レコードのドキュメント（DoR）テンプレートでは、ローカライズされたアダプティブフォームに対して公開に失敗します。 （FORMS-10535）</li>
-    <li>大きなインライン画像を使用したインタラクティブ通信では、編集モードで開くのに失敗します。 （FORMS-10578）</li>
+    <li>大きなインライン画像を使用したインタラクティブなコミュニケーションでは、編集モードで開くのに失敗します。 （FORMS-10578）</li>
     </ul>
     </td>    
   </tr>
