@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Developing,Content Fragments
 role: Admin, Developer
 source-git-commit: 050049f22d329d3af0cfc8fa4bbb12fe7f99b5fc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 100%
 
@@ -44,7 +44,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 
 ヘッドレスのトピックに関するドキュメントジャーニーは次のとおりです。
 
-| タイトル | 説明 | 主な対象読者 |
+| タイトル | 説明 | 主なオーディエンス |
 |---|---|---|
 | [ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) | ヘッドレステクノロジーとそのユーザーエクスペリエンスへの影響、AEM によるヘッドレスモデルのサポート、独自のヘッドレス開発プロジェクトを実装する方法について初めから終わりまで説明します。 | 開発者 |
 | [ヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md) | ヘッドレステクノロジー、それらをプロジェクトで使用する方法および AEM で翻訳プロジェクトを作成および更新する方法について初めから終わりまで説明します。 | 翻訳担当者 |
