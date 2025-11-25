@@ -4,8 +4,8 @@ description: ヘッドレスコンテンツ配信用に Adobe Experience Manager
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 100%

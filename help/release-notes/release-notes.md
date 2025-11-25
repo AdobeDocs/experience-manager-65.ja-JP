@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 650131b88e06d59e6c206e07b8512149cd360b08
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '6772'
 ht-degree: 99%
@@ -233,11 +233,11 @@ Externalizer エンドポイントがない、ユニバーサルエディター 
 
 ### [!DNL Assets]{#assets-6523}
 
-* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**&#x200B;を選択し、**[!UICONTROL &#x200B; Adobe Stock を検索&#x200B;]**&#x200B;フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
+* [!DNL AEM] オンプレミス（6.5.22.0）のナビゲーションページで、![アセット](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL アセット&#x200B;]**を選択し、**[!UICONTROL  Adobe Stock を検索&#x200B;]**フォルダーに移動してストック画像を選択すると、以下の問題が発生します。
    * 「**[!UICONTROL ライセンスと保存]**」をクリックすると空のドロップダウンが表示されるため、選択したストック画像のライセンスを取得して保存することができません。
    * ストック画像を選択するか、ストックページの URL を再入力すると、[!DNL AEM] ホームページにリダイレクトされ、Adobe Stock 画像にアクセスできなくなります。（ASSETS-48687）
 * [!DNL AEM]オンプレミス（6.5.22.0）ナビゲーションページでフォルダーの名前に `/` が含まれる場合、フォルダーの管理中に問題が発生します。（ASSETS-46740）
-* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![&#x200B; コレクション &#x200B;](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL &#x200B; コレクション&#x200B;]**&#x200B;ビューから読み込まれません。（ASSETS-46738）
+* [!DNL AEM] 6.5 では、メモリ使用量が多いため、アセットの詳細ページが ![ コレクション ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL  コレクション&#x200B;]**ビューから読み込まれません。（ASSETS-46738）
 * `Day CQ DAM Mime Type OSGI` Service としての [!DNL InDesign] との統合の問題によって、[!DNL InDesign] ファイルが `x-indesign` ではなく `x-adobe-indesign` と誤って認識されます。（ASSETS-45953）
 * [!DNL AEM 6.5.21] セッション リークが、標準提供の **[!UICONTROL Brand Portal へのスケジュールされた公開]**&#x200B;ワークフローステップまで追跡されます。（ASSETS-44104）
 * [!DNL AEM] で画像を処理および公開する際に、**[!UICONTROL メモリ不足（OOM）]**&#x200B;エラーが表示されます。この問題は、**[!DNL Dam Asset update]** や **[!DNL Dynamic Media: Reprocess assets]** など、ワークフローの廃止されたメソッドが原因で発生しました。（ASSETS-43343）
@@ -362,9 +362,9 @@ Dynamic Media - ハイブリッドデプロイメントで、`/conf/global/setti
 
 * AEM Forms 6.5.21.0で、PDFG 変換が次のエラーで失敗します。（FORMS-16851）（FORMS-14613）
 
-* AEM Forms 6.5.23.0 で、（PDFG） PS からPDFおよびHTMLからPDF（WebKit）への変換が失敗します。 この問題を解決するには、[Adobe Experience Manager Forms ホットフィックス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) からホットフィックスをダウンロードしてインストールしてください（FORMS-21721）
+* AEM Forms 6.5.23.0 で、（PDFG） PS からPDFおよびHTMLからPDF（WebKit）への変換が失敗します。 この問題を解決するには、[Adobe Experience Manager Forms ホットフィックス ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) からホットフィックスをダウンロードしてインストールしてください（FORMS-21721）
 
-* AEM Forms 6.5.23.0 で、（PDFG）画像からPDFへの変換が失敗する。 この問題を解決するには、[Adobe Experience Manager Forms ホットフィックス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) からホットフィックスをダウンロードしてインストールしてください（FORMS-22029）
+* AEM Forms 6.5.23.0 で、（PDFG）画像からPDFへの変換が失敗する。 この問題を解決するには、[Adobe Experience Manager Forms ホットフィックス ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) からホットフィックスをダウンロードしてインストールしてください（FORMS-22029）
 
 #### Forms の Captcha {#forms-captcha-6523}
 
@@ -586,7 +586,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ## 廃止される機能および削除された機能{#removed-deprecated-features}
 
-AEM 6.5 で廃止または削除されたすべての機能の詳細なリストについては、[廃止および削除された機能](/help/release-notes/deprecated-removed-features.md/)を参照してください。
+AEM 6.5 で廃止または削除されたすべての機能の詳細なリストについては、[廃止および削除された機能](/help/release-notes/deprecated-removed-features.md)を参照してください。
 
 ### SPA エディター {#spa-editor}
 

@@ -5,10 +5,10 @@ feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 100%
+source-wordcount: '1577'
+ht-degree: 99%
 
 ---
 
@@ -658,9 +658,9 @@ query {
 }
 ```
 
-### サンプルクエリ - `_path` が特定のプレフィックスで始まるすべてのアドベンチャー {#sample-wknd-all-adventures-cycling-path-filter}
+### サンプルクエリ - `_path` が特定の接頭辞で始まるすべてのアドベンチャー {#sample-wknd-all-adventures-cycling-path-filter}
 
-`_path` が特定のプレフィックス（`/content/dam/wknd/en/adventures/cycling`）で始まるすべての `adventures`。
+`_path` が特定の接頭辞（`/content/dam/wknd/en/adventures/cycling`）で始まるすべての `adventures`。
 
 **サンプルクエリ**
 
@@ -1181,7 +1181,7 @@ query {
 
 ### メタデータのサンプルクエリ {#sample-wknd-metadata}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * `adventure` タイプのすべてのコンテンツフラグメントについて
 * メタデータ
@@ -1296,7 +1296,7 @@ query {
 
 ### ネストされたコンテンツフラグメントのサンプルクエリ - 単一モデルタイプ{#sample-wknd-nested-fragment-single-model}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
    * 特定のパス内にある、参照されている（ネストされた）フラグメントのパスと作成者
@@ -1326,7 +1326,7 @@ query {
 
 #### 単一の参照モデルタイプ
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * `bookmark` タイプの複数のコンテンツフラグメントについて
    * 特定のモデルタイプ `Article` の他のフラグメントへのフラグメント参照を含むもの
@@ -1350,7 +1350,7 @@ query {
 
 #### 複数の参照モデルタイプ
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * `bookmark` タイプの複数のコンテンツフラグメントについて
    * 特定のモデルタイプ `Article` および `Adventure` の他のフラグメントへのフラグメント参照を含むもの
@@ -1467,7 +1467,7 @@ query {
 
 ### RTE インライン参照を含んだ 1 つのコンテンツフラグメントのサンプルクエリ {#sample-wknd-single-fragment-rte-inline-reference}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * 特定のパスにある `bookmark` タイプの 1 つのコンテンツフラグメントについて
    * その中の RTE インライン参照
@@ -1513,7 +1513,7 @@ query {
 
 ### 特定モデルの 1 つのコンテンツフラグメントバリエーションのサンプルクエリ {#sample-wknd-single-fragment-given-model}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
    * そのパス中の、バリエーション `variation1` に関するデータ
@@ -1539,7 +1539,7 @@ query {
 
 ### 特定モデルの複数のコンテンツフラグメントの名前付きバリエーションを取得するサンプルクエリ {#sample-wknd-variation-multiple-fragment-given-model}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * 特定のバリエーション `variation1` を持つ `article` タイプのコンテンツフラグメント
 
@@ -1564,7 +1564,7 @@ query {
 
 ### 特定モデルの複数のコンテンツフラグメントとそのバリエーションのサンプルクエリ {#sample-wknd-multiple-fragment-variations-given-model}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * `article` タイプのコンテンツフラグメントとすべてのバリエーション
 
@@ -1591,7 +1591,7 @@ query {
 
 ### 特定のタグが設定された特定モデルのコンテンツフラグメントバリエーションのサンプルクエリ{#sample-wknd-fragment-variations-given-model-specific-tag}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * タグ `WKND : Activity / Hiking` の付いた 1 つ以上のバリエーションを持つ `article` タイプのコンテンツフラグメント
 
@@ -1620,7 +1620,7 @@ query {
 
 ### 特定ロケールの複数のコンテンツフラグメントのサンプルクエリ {#sample-wknd-multiple-fragments-given-locale}
 
-このクエリでは次のものを検索します。
+このクエリでは次のものを問い合わせます。
 
 * `fr` ロケール内の `article` タイプのコンテンツフラグメント
 
@@ -1677,11 +1677,11 @@ query {
 
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
-| name（氏名） | 1 行のテキスト | |
+| 名前 | 1 行のテキスト | |
 | 名 | 1 行のテキスト | |
 | 授賞歴 | フラグメント参照（複数フィールド） | [Award](#model-award) |
 
-#### Award（賞） {#model-award}
+#### 賞 {#model-award}
 
 賞を定義するフィールドは次のとおりです。
 
@@ -1696,7 +1696,7 @@ query {
 
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
-| name（氏名） | 1 行のテキスト | |
+| 名前 | 1 行のテキスト | |
 | 国 | 1 行のテキスト | |
 | 人口 | 数値 | |
 | カテゴリ | タグ | |
@@ -1715,20 +1715,20 @@ query {
 
 #### Person（人物） {#fragment-person}
 
-| name | 名 | 授賞歴 |
+| 名前 | 名 | 授賞歴 |
 |--- |--- |--- |
 | Lincoln |  Abe | |
 | Smith | Adam |   |
 | Slade |  Cutter |  Gameblitz<br>Gamestar |
-| Marsh |  Duke |   |   |
+| Marsh |  Duke |   |
 |  Smith |  Joe |   |
 | Croft |  Lara | Gamestar |
 | Caulfield |  Max |  Gameblitz |
-|  Jobs |  Steve |   |
+| Jobs |  Steve |   |
 
 #### 賞 {#fragment-award}
 
-| ショートカット／ID | title |
+| ショートカット／ID | タイトル |
 |--- |--- |
 | GB | Gameblitz |
 |  GS | Gamestar |
@@ -1736,12 +1736,12 @@ query {
 
 #### 都市 {#fragment-city}
 
-| name | 国名 | 人口 | カテゴリ |
+| 名前 | 国 | 人口 | カテゴリ |
 |--- |--- |--- |--- |
-| Basel | Switzerland | 172258 | city:emea |
+| Basel | スイス | 172258 | 市区町村 :emea |
 | Berlin | Germany | 3669491 | city:capital<br>city:emea |
 | Bucharest | Romania | 1821000 |  city:capital<br>city:emea |
 | San Francisco |  USA |  883306 |  city:beach<br>city:na |
-| San Jose |  USA |  102635 |  city:na |
-| Stuttgart |  Germany |  634830 |  city:emea |
+| San Jose |  USA |  102635 |  市区町村 :na |
+| Stuttgart |  Germany |  634830 |  市区町村 :emea |
 |  Zurich |  Switzerland |  415367 |  city:capital<br>city:emea |

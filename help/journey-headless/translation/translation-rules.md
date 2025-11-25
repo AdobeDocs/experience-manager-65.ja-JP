@@ -4,8 +4,8 @@ description: 翻訳するコンテンツを特定するための翻訳ルール�
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 100%
@@ -88,7 +88,7 @@ AEM ヘッドレス翻訳ジャーニーの以前のドキュメント、[翻訳
 
 このような機能は、通常、ヘッドレスコンテンツのローカライズを開始する際に必要なものではありませんが、興味があれば、[その他のリソース](#additional-resources)の節を参照して詳細を確認してください。
 
-## 次の手順 {#what-is-next}
+## 次のステップ {#what-is-next}
 
 これで、ヘッドレス翻訳ジャーニーのこの手順が完了し、以下のことができるようになりました。
 

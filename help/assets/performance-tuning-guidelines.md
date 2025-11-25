@@ -3,11 +3,11 @@ title: パフォーマンスチューニング [!DNL Assets]
 description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフトウェア、ネットワークコンポーネントの変更により、ボトルネックを解消し、パフォーマンスを最適化 [!DNL Experience Manager Assets]に関する提案とガイダンス。'
 contentOwner: AG
 mini-toc-levels: 1
-role: Architect, Admin
+role: Developer, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2729'
 ht-degree: 99%
@@ -245,18 +245,18 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 [最新のサービスパック](/help/release-notes/release-notes.md)およびパフォーマンス関連のホットフィックスをインストールしてください。多くの場合、これらはシステムインデックスの更新を含みます。一部のインデックスの最適化については、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines)を参照してください。
 
-頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。クエリやインデックスについての追加のインサイトやベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md) を参照してください。
+頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。クエリやインデックスについての追加のインサイトやベストプラクティスについては、[クエリとインデックス作成に関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md) を参照してください。
 
 ### Lucene Index の設定 {#lucene-index-configurations}
 
-Oak インデックス設定を最適化して、[!DNL Experience Manager Assets] のパフォーマンスを向上できる場合があります。インデックス設定を更新して、インデックス再作成時間を短縮します。
+Oak インデックス設定を最適化して、[!DNL Experience Manager Assets] のパフォーマンスを向上できる場合があります。インデックス作成の設定を更新して、インデックス再作成時間を短縮します。
 
 1. CRXDe `/crx/de/index.jsp` を開き、管理者ユーザーとしてログインします。
 1. `/oak:index/lucene` を参照します。
 1. `/var`、`/etc/workflow/instances`、`/etc/replication` の値を持つ `String[]` プロパティ `excludedPaths` を追加します。
 1. `/oak:index/damAssetLucene` を参照します。値が `/content/dam` の `String[]` プロパティ `includedPaths` を追加します。変更を保存します。
 
-PDF ドキュメント内のテキストを検索するなど、アセットの全文検索を行う必要がない場合は、無効にします。フルテキストインデックスを無効にすると、インデックスのパフォーマンスが向上します。[!DNL Apache Lucene] テキスト抽出を無効にするには、次の手順に従います。
+PDF ドキュメント内のテキストを検索するなど、アセットの全文検索を行う必要がない場合は、無効にします。フルテキストインデックスを無効にすると、インデックス作成のパフォーマンスが向上します。[!DNL Apache Lucene] テキスト抽出を無効にするには、次の手順に従います。
 
 1. [!DNL Experience Manager] インターフェイスで、[!UICONTROL パッケージマネージャー]にアクセスします。
 1. [disable_indexingbinarytextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip) にあるパッケージをアップロードしてインストールします。

@@ -1,12 +1,12 @@
 ---
-title: "[!DNL Assets] サイジングガイド"
+title: '[!DNL Assets] サイジングガイド'
 description: ' [!DNL Adobe Experience Manager Assets] のデプロイに必要なインフラストラクチャとリソースを見積もるための効率的な指標を決定するためのベストプラクティス。'
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 100%

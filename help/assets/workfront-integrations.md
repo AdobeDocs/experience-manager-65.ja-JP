@@ -1,14 +1,14 @@
 ---
-title: ' [!DNL Adobe Workfront] との [!DNL Experience Manager Assets] 統合'
+title: '[!DNL Experience Manager Assets] と  [!DNL Adobe Workfront] の統合'
 description: ' [!DNL Assets]  と  [!DNL Workfront] の統合の概要'
-role: Admin,Leader,Architect
+role: Admin,Leader,Developer
 feature: Workfront Integrations and Apps
 exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 hide: true
 solution: Experience Manager, Workfront
-source-git-commit: 5ccac0aadce3971e66da052d393cbd33b61e94f7
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1113'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 [!DNL Adobe Workfront] は作業管理アプリケーションで、作業のライフサイクル全体を一元的に管理するのに役立ちます。[!DNL Workfront] と [!DNL Adobe Experience Manager Assets] の統合により、組織は、作業とデジタルアセット管理を本質的に関連付けることで、コンテンツベロシティを向上させ市場投入までの時間を短縮することができます。Workfront での作業を管理するコンテキスト内で、ユーザーは必要なドキュメントと画像にアクセスできます。
 
-[!DNL Workfront for Experience Manager enhanced connector] により、エンドツーエンドのワークフローでビジネスプロセスが強化され、エンドツーエンドのクライアントエクスペリエンスと一元化されたストレージをパーソナライズできます。アドビでは、標準コネクタと、これら 2 つのソリューションを統合する拡張コネクタを提供します。比較については、以下のサポートされる機能を参照し、[ [!DNL enhanced connector]の新機能を参照してください](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience)。
+[!DNL Workfront for Experience Manager enhanced connector] により、エンドツーエンドのワークフローでビジネスプロセスが強化され、エンドツーエンドのクライアントエクスペリエンスと一元化されたストレージをパーソナライズできます。アドビでは、標準コネクタと、これら 2 つのソリューションを統合する拡張コネクタを提供します。比較については、以下のサポートされる機能を参照し、[ [!DNL enhanced connector]の新機能を参照してください](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience)。
 
 [!DNL Workfront for Experience Manage enhanced connector] を使用すると、組織で次のことが可能です。
 
@@ -32,7 +32,7 @@ ht-degree: 100%
 * Experience Manager ワークフローを使用して、設定可能な条件に基づいて Workfront オブジェクトのステータスを設定してください。
 * アセットを Experience Manager パブリッシュ環境または Brand Portal に公開します。
 
-プラットフォームのサポートと[拡張コネクターの前提条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience)を参照してください。
+プラットフォームのサポートと[拡張コネクターの前提条件](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ ht-degree: 100%
 | 機能 | 説明 | [!DNL Workfront] と [!DNL Assets Essentials]：*コネクタが不要（標準）* | [!DNL Workfront for Experience Manager enhanced connector]：*コネクタが必要* | Workfront と [!DNL Experience Manager as a Cloud Service]：*コネクタが不要（標準）* |
 |----|----|----|-----|-----|
 | デプロイメント方法 | どの [!DNL Assets] の提供に適切か。 | Assets Essentials | Adobe Managed Services、オンプレミス | Cloud Service |
-| **一般** |
+| **一般** |  |  |  |  |
 | [!DNL Workfront] から [!DNL Assets] へのデジタルファイルの送信  | WF ドキュメントの最新バージョンを AEM Assets にアップロードして、ドキュメントの新しいバージョンとしてリンクさせることができます。 | ✓ | ✓ | ✓ |
 | AEM フォルダーの Workfront オブジェクトへの手動リンク | 既存の AEM フォルダーは Workfront フォルダーとしてリンクでき、その子アセットは新しい Workfront ドキュメントとしてリンクされます。 | ✓ | ✓ | ✓ |
 | [!DNL Assets] を Workfront オブジェクトにリンク | AEM 内の既存のアセットを新しい Workfront ドキュメントにリンクしたり、既存のドキュメントの新しいバージョンとしてリンクしたりできます。 | ✓ | ✓ | ✓ |
@@ -64,22 +64,22 @@ ht-degree: 100%
 | Workfront の AEM Assets からアセットのリンクを解除 | AEM の既存のリンクされたアセットのリンクを、関連する Workfront ドキュメントから解除できます。AEM 内の元のアセットは削除されません。 | ✓ | ✓ | ✓ |
 | Workfront から AEM Assets に新しくバージョン管理されたアセットを追加 | Workfront のドキュメントに新しく追加されたバージョンが追加された場合、ユーザーは新しいバージョンを AEM に送信して、既存のバージョンに置き換えることができます。 | ✓ | ✓ | ✓ |
 | 「ユーザーを AEM に誘導」をクリックしたときに Workfront でリンクされたアセット | ユーザーは、Workfront 内からリンクされたアセットをプレビューするように AEM に誘導されます。 | ✓ | ✓ | 今後提供予定 |
-| リンクされた AEM フォルダーを Workfront に自動的に作成 | プロジェクトのステータスを使用して、リンクされた AEM フォルダーを Workfront に自動的に作成します。Workfront のポートフォリオ、プログラムおよびプロジェクトに基づいて、AEM フォルダーを自動的に設定します。 | 不可 | ✓ | なし |
-| Workfront から AEM リポジトリに直接移動 | ユーザーが Workfront 内に設定された使用可能な AEM リポジトリに移動できるようになります。 | ✓ | なし | ✓ |
-| リンクされた AEM フォルダーを Workfront に作成 | 「ドキュメント」タブのオプションを使用して、リンクされた AEM フォルダーを Workfront に作成します。 | ✓ | なし | ✓ |
-| コメントの同期 | アセットのコメントを [!DNL Workfront] から [!DNL Assets] への自動的に同期 | 不可 | ✓ | なし |
-| 単一の AEM 環境に接続する複数の Workfront 環境をサポート | 複数の Workfront 環境のユーザーが単一の AEM 環境に接続できます。 | ✓ | なし | ✓ |
+| リンクされた AEM フォルダーを Workfront に自動的に作成 | プロジェクトのステータスを使用して、リンクされた AEM フォルダーを Workfront に自動的に作成します。Workfront のポートフォリオ、プログラムおよびプロジェクトに基づいて、AEM フォルダーを自動的に設定します。 | いいえ | ✓ | なし |
+| Workfront から AEM リポジトリに直接移動 | ユーザーが Workfront 内に設定された使用可能な AEM リポジトリに移動できるようになります。 | ✓ | いいえ | ✓ |
+| リンクされた AEM フォルダーを Workfront に作成 | 「ドキュメント」タブのオプションを使用して、リンクされた AEM フォルダーを Workfront に作成します。 | ✓ | いいえ | ✓ |
+| コメントの同期 | アセットのコメントを [!DNL Workfront] から [!DNL Assets] への自動的に同期 | いいえ | ✓ | なし |
+| 単一の AEM 環境に接続する複数の Workfront 環境をサポート | 複数の Workfront 環境のユーザーが単一の AEM 環境に接続できます。 | ✓ | いいえ | ✓ |
 | 単一の Workfront 環境に接続する複数の AEM 環境をサポート | 単一の Workfront 環境内のユーザーが、複数の AEM 環境間でアセットを送信またはリンクすることができます。 | ✓ | ✓ | ✓ |
-| **メタデータ** |
+| **メタデータ** |  |  |  |  |
 | Workfront のアセットメタデータの AEM Assets へのマッピング | Workfront オブジェクトおよびカスタムフォームプロパティは、AEM のアセットメタデータプロパティにマッピングできます。値は、最初のアップロード／リンク時にプッシュされます。 | ✓ | ✓ | ✓ |
-| Workfront でドキュメントのカスタムフォームを自動的に作成 | AEM ワークフローを使用して、Workfront のドキュメント、タスク、問題にカスタムフォームを添付します。 | 不可 | ✓ | なし |
-| AEM Assets と Workfront の間でメタデータを双方向に自動更新 | AEM Assets と Workfront の間でメタデータを自動的に更新します。アセットを最初に Workfront から AEM にプッシュし、双方向のメタデータ更新が適切に機能するように、Workfront アセットメタデータを AEM Assets にマッピングする必要があります。 | 不可 | ✓ | なし |
-| AEM にマッピングされたメタデータを Workfront でリアルタイム表示 | Workfront ドキュメントの詳細パネルおよびドキュメントの概要パネル内で、AEM にマッピングされた最新のメタデータを表示します。 | ✓ | なし | ✓ |
-| 更新された Workfront メタデータの AEM へのリアルタイムプッシュ | アセットや新しいバージョンのアセットを再プッシュすることなく、マッピングされた Workfront メタデータを AEM に自動的に更新します。 | ✓ | なし | ✓ |
-| Workfront メタデータ を AEM Assets フォルダーへマッピング | Workfront プロジェクトのメタデータを、リンクされた AEM フォルダーと同期します。 | 不可 | ✓ | ✓ |
-| 新しいバージョンで AEM メタデータを更新 | AEM の設定を行うことにより、Workfront のアセットのバージョンが新しくなった場合にも、メタデータに加えられた変更をプッシュするかどうかを指定できます。 | 不可 | ✓ | いいえ |
-| Workfront のカスタムフォームが変更されると AEM メタデータを自動的に更新 | AEM では、Workfront のドキュメントフォームの更新を購読することができます。その結果、Workfront ドキュメントのカスタムフォームメタデータが更新されると、マッピングされた AEM メタデータフィールドの値が編集されます。 | 不可 | ✓ | いいえ |
-| **ワークフロー（標準）** |
+| Workfront でドキュメントのカスタムフォームを自動的に作成 | AEM ワークフローを使用して、Workfront のドキュメント、タスク、問題にカスタムフォームを添付します。 | いいえ | ✓ | なし |
+| AEM Assets と Workfront の間でメタデータを双方向に自動更新 | AEM Assets と Workfront の間でメタデータを自動的に更新します。アセットを最初に Workfront から AEM にプッシュし、双方向のメタデータ更新が適切に機能するように、Workfront アセットメタデータを AEM Assets にマッピングする必要があります。 | いいえ | ✓ | なし |
+| AEM にマッピングされたメタデータを Workfront でリアルタイム表示 | Workfront ドキュメントの詳細パネルおよびドキュメントの概要パネル内で、AEM にマッピングされた最新のメタデータを表示します。 | ✓ | いいえ | ✓ |
+| 更新された Workfront メタデータの AEM へのリアルタイムプッシュ | アセットや新しいバージョンのアセットを再プッシュすることなく、マッピングされた Workfront メタデータを AEM に自動的に更新します。 | ✓ | いいえ | ✓ |
+| Workfront メタデータ を AEM Assets フォルダーへマッピング | Workfront プロジェクトのメタデータを、リンクされた AEM フォルダーと同期します。 | いいえ | ✓ | ✓ |
+| 新しいバージョンで AEM メタデータを更新 | AEM の設定を行うことにより、Workfront のアセットのバージョンが新しくなった場合にも、メタデータに加えられた変更をプッシュするかどうかを指定できます。 | いいえ | ✓ | いいえ |
+| Workfront のカスタムフォームが変更されると AEM メタデータを自動的に更新 | AEM では、Workfront のドキュメントフォームの更新を購読することができます。その結果、Workfront ドキュメントのカスタムフォームメタデータが更新されると、マッピングされた AEM メタデータフィールドの値が編集されます。 | いいえ | ✓ | いいえ |
+| **ワークフロー（標準）** |  |  |  |  |
 | リンクされたアセットに新しい配達確認バージョンを作成 | Workfront でアセットをリンクすると、配達確認を自動的に生成できます。 | 不可 | カスタム | いいえ |
-| Workfront オブジェクトのステータスを設定 | AEM ワークフローを使用して、設定可能な条件に基づく Workfront オブジェクトのステータスを設定します。 | 不可 | ✓ | 今後提供予定 |
-| AEM パブリッシュ環境または Brand Portal にアセットを公開 | リンクされたアセットを AEM パブリッシュ環境または Brand Portal に自動的に公開するオプションをWorkfront ユーザーに与えます。 | 不可 | ✓ | 今後提供予定 |
+| Workfront オブジェクトのステータスを設定 | AEM ワークフローを使用して、設定可能な条件に基づく Workfront オブジェクトのステータスを設定します。 | いいえ | ✓ | 今後提供予定 |
+| AEM パブリッシュ環境または Brand Portal にアセットを公開 | リンクされたアセットを AEM パブリッシュ環境または Brand Portal に自動的に公開するオプションをWorkfront ユーザーに与えます。 | いいえ | ✓ | 今後提供予定 |

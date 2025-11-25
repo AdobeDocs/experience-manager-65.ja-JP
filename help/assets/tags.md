@@ -8,11 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
 feature: Viewers
-role: User, Admin,Developer,Data Engineer,Data Architect
+role: User, Admin, Developer
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 75c15b0f0e4de2ea7fff339ae46b88ce8f6af83f
-workflow-type: ht
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+workflow-type: tm+mt
 source-wordcount: '6677'
 ht-degree: 100%
 
@@ -595,7 +595,7 @@ Experience Platform タグを使用したトラッキングの概要について
 
 Experience Platform タグの設定（プロパティ、拡張機能、ルール、データ要素の設定を含む）を変更するには、変更を&#x200B;*公開*&#x200B;する必要があります。Experience Platform タグでの公開は、プロパティ設定の「公開」タブから実行します。
 
-Experience Platform タグには、複数の開発環境、1 つのステージング環境、1 つの実稼動環境が存在する場合があります。Experience Manager の Experience Platform タグクラウド設定では、Experience Manager のオーサーノードはデフォルトで Experience Platform タグのステージング環境を指します。Experience Manager のパブリッシュノードは、Experience Platform タグの実稼動環境を指します。これは、デフォルトの Experience Manager 設定では、Experience Platform タグライブラリをステージング環境に公開する必要があることを意味します。これにより、ライブラリを Experience Manager オーサーで使用できるようになります。その後、実稼動環境に公開することで、Experience Manager のパブリッシュで使用できるようになります。
+Experience Platform タグには、複数の開発環境、1 つのステージング環境、1 つの本番環境が存在する場合があります。Experience Manager の Experience Platform タグクラウド設定では、Experience Manager のオーサーノードはデフォルトで Experience Platform タグのステージング環境を指します。Experience Manager のパブリッシュノードは、Experience Platform タグの本番環境を指します。これは、デフォルトの Experience Manager 設定では、Experience Platform タグライブラリをステージング環境に公開する必要があることを意味します。これにより、ライブラリを Experience Manager オーサーで使用できるようになります。その後、本番環境に公開することで、Experience Manager のパブリッシュで使用できるようになります。
 
 Experience Platform タグ環境について詳しくは、[環境](https://experienceleague.adobe.com/ja/docs/experience-platform/tags/publish/environments/environments)を参照してください。
 
@@ -645,7 +645,7 @@ Experience Platform タグ環境について詳しくは、[環境](https://expe
 
    ![image2019-7-15_15-54-37](assets/image2019-7-15_15-54-37.png)
 
-1. ステージング環境から実稼動環境（「発行済み」列）にライブラリを移動するには、同様のプロセスに従います。
+1. ステージング環境から本番環境（「発行済み」列）にライブラリを移動するには、同様のプロセスに従います。
 
    まず、ドロップダウンメニューの「**[!UICONTROL 公開の承認]**」を選択します。
 
@@ -850,7 +850,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
 現在、Experience Manager オーサーノードでは、Dynamic Media ビューアと Experience Platform タグの統合をサポートしていません。
 
-ただし、Experience Manager パブリッシュノードではサポートされています。Experience Platform タグクラウド構成のデフォルト設定を使用して、Experience Manager パブリッシュノードは Experience Platform タグの実稼働環境を使用します。そのため、テスト中は毎回、開発環境から実稼動環境に Experience Platform タグライブラリの更新をプッシュする必要があります。
+ただし、Experience Manager パブリッシュノードではサポートされています。Experience Platform タグクラウド構成のデフォルト設定を使用して、Experience Manager パブリッシュノードは Experience Platform タグの本番環境を使用します。そのため、テスト中は毎回、開発環境から本番環境に Experience Platform タグライブラリの更新をプッシュする必要があります。
 
 この制限は回避することは可能です。上記の Experience Manager パブリッシュノードの Experience Platform タグクラウド設定で、Experience Platform タグライブラリの開発用 URL またはステージング用 URL を指定します。これにより、Experience Manager のパブリッシュノードでは、開発またはステージングバージョンの Experience Platform タグライブラリが使用されます。
 

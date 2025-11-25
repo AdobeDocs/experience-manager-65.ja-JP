@@ -4,11 +4,11 @@ description: メタデータのタイプと、アセットのメタデータを�
 contentOwner: AG
 mini-toc-levels: 1
 feature: Tagging, Metadata
-role: Architect, Leader
+role: Developer, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2332'
 ht-degree: 100%
@@ -115,8 +115,8 @@ XMP の書き戻しは、[技術要件](/help/sites-deploying/technical-requirem
    | メタデータ読み込みパラメーター | 説明 |
    |:---|:---|
    | [!UICONTROL バッチサイズ] | メタデータを読み込むバッチ内のアセットの数。デフォルト値は 50 です。最大値は 100 です。 |
-   | [!UICONTROL フィールドセパレーター] | デフォルト値は `,`（コンマ）です。他の文字も指定できます。 |
-   | [!UICONTROL 複数の値の区切り文字] | メタデータ値のセパレーター。デフォルト値は `|` です。 |
+   | [!UICONTROL フィールド区切り記号] | デフォルト値は `,`（コンマ）です。他の文字も指定できます。 |
+   | [!UICONTROL 複数の値の区切り文字] | メタデータ値の区切り記号。デフォルト値は `\|` です。 |
    | [!UICONTROL ワークフローを開始] | デフォルトでは False です。`true` に設定すると、（メタデータをバイナリ XMP データに書き込む）[!UICONTROL DAM メタデータ書き戻し]ワークフローでデフォルト設定が有効になります。ワークフローを有効にすると、システムの反応が遅くなります。 |
    | [!UICONTROL アセットパス列名] | アセットが含まれている、CSV ファイルの列名を定義します。 |
 

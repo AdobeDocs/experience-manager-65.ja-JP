@@ -1,6 +1,6 @@
 ---
 title: SocialUtils のリファクタリング
-description: パッケージ com.adobe.cq.social.ugcbase.SocialUtils はAEM 6.1 で非推奨になりました
+description: パッケージ com.adobe.cq.social.ugcbase.SocialUtils は、AEM 6.1 で非推奨になりました
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,10 +9,10 @@ exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 2%
+source-wordcount: '297'
+ht-degree: 3%
 
 ---
 
@@ -26,8 +26,8 @@ ht-degree: 2%
 
 ## SocialResourceUtilities パッケージ  {#socialresourceutilities-package}
 
-| com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities のメソッド |
-|---|
+| com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities のメソッド | メモ |
+|---|---|
 | Boolean checkPermission （ResourceResolver resolver, String path, String action） |  |
 | SocialResourceProvider getSocialResourceProvider （リソース） |  |
 | SocialResourceConfiguration getStorageConfig （リソース リソース） |  |
@@ -42,8 +42,8 @@ ht-degree: 2%
 | String UGCoResourcePath （String ugcPath） | メソッドの署名が変更されました |
 | String UGCoResourcePath （String ugcPath, ResourceResolver resolver） | 新規 |
 
-| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities のメソッド |
-|---|
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities のメソッド | メモ |
+|---|---|
 | SocialResourceProvider getSocialResourceProvider （リソース） | socialResourceProvider getConfiguredProvider （リソース）を置き換えます |
 
 ## SCFUtilities パッケージ {#scfutilities-package}

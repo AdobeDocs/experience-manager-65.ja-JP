@@ -1,13 +1,13 @@
 ---
 title: 基本的なデジタルアセット管理での Media Library の使用
-description: 「[!DNL Experience Manager Assets] とアセット管理用の Media Library」
+description: '[!DNL Experience Manager Assets] とアセット管理用の Media Library。'
 contentOwner: AG
-role: Architect, Leader
+role: Developer, Leader
 feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 100%

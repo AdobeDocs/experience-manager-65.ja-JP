@@ -1,12 +1,12 @@
 ---
-title: "[!DNL Assets] プロキシ開発"
+title: '[!DNL Assets] プロキシ開発'
 description: プロキシは、プロキシワーカーを使用してジョブを処理する  [!DNL Experience Manager]  インスタンスです。 [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネントを設定する方法、カスタムプロキシワーカーを開発する方法について説明します。
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 100%

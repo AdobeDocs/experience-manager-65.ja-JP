@@ -4,8 +4,8 @@ description: AEM の強力で柔軟なヘッドレス機能とその能力およ
 exl-id: b8cdbd0f-c034-4c9f-976f-5e39b1bd33bf
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 100%
@@ -40,7 +40,7 @@ AEM では、これはコンテンツフラグメントで実現されます。�
 
 AEM を使用してヘッドレスビジネスケースを解決する方法をアドビがどのように推奨しているかを理解するには、[AEM ヘッドレスジャーニー](/help/journey-headless/overview.md)がその出発点になります。
 
-## 対象読者 {#audience}
+## オーディエンス {#audience}
 
 このジャーニーは、コンテンツ作成者のペルソナ向けに設計されています。コンテンツ作成者は、コンテンツフラグメントで実際のコンテンツを作成します。
 
@@ -62,7 +62,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 | 3 | [コンテンツフラグメントでの参照の使用について](references.md) | コンテンツフラグメントでの参照の使用方法について説明します。また、ネストされたフラグメントを使用して、ヘッドレス CMS の複数レベルの構造を作成および管理することもできます。 |
 | 4 | [コンテンツフラグメントのメタデータとタグの定義について](metadata-tagging.md) | コンテンツフラグメントのメタデータとタグの定義について説明します。 |
 
-## 次の手順 {#what-is-next}
+## 次のステップ {#what-is-next}
 
 これで、Adobe ヘッドレスジャーニーを開始する準備が整いました。ジャーニーの次のパートに進み、記事「[AEM ヘッドレスのオーサリング - 概要](introduction.md)」を読むことをお勧めします。
 
@@ -72,7 +72,7 @@ AEM を使用してヘッドレスビジネスケースを解決する方法を�
 However, Adobe wants you to succeed as you get started with your AEM Headless project, regardless of your learning style. So consider these two options.
 
 * If you prefer to continue to **learn about headless concepts and AEM's headless technologies**, you should continue your AEM headless journey as recommended by next reviewing the document [How to Model Your Content as AEM Content Models](model-your-content.md) where you learn how to model your content structure in AEM.
-* If you prefer to **learn by doing**, you can jump to the [Getting Started with AEM Headless hands-on tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) where you will jump directly into AEM Headless development by implementing a simple project to expose AEM headless content.
+* If you prefer to **learn by doing**, you can jump to the [Getting Started with AEM Headless hands-on tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) where you will jump directly into AEM Headless development by implementing a simple project to expose AEM headless content.
 -->
 
 ## その他のリソース {#additional-resources}

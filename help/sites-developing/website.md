@@ -10,10 +10,10 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '4919'
-ht-degree: 100%
+source-wordcount: '4923'
+ht-degree: 95%
 
 ---
 
@@ -67,7 +67,7 @@ AEM をインストールしたら、ようこそページで CRXDE Lite のリ�
 
 >[!NOTE]
 >
->デフォルトポートを使用してローカルにインストールされた AEM オーサーインスタンスの CRXDE Lite の URL は [https://localhost:4502/crx/de/](https://localhost:4502/crx/de/) です。
+>デフォルトポートを使用してローカルにインストールされたAEM オーサーインスタンスのCRXDE Liteの URL は [https://localhost:4502/crx/de/](https://localhost:4502/crx/de/) です。
 
 ### CRXDE Lite でプロジェクトの構造を設定します。 {#setting-up-the-project-structure-in-crxde-lite}
 
@@ -103,7 +103,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 1. mywebsite という項目がテーブルに表示されない場合は、ツリーまたはテーブルを更新します。
 
-1. https://localhost:4502 の URL への [WebDAV アクセスを使用して](/help/sites-administering/webdav-access.md)、サンプルの `static.css` ファイルと `images` フォルダーを、ダウンロードした mywebsite.zip ファイルから `/etc/designs/mywebsite` フォルダーにコピーします。
+1. [WebDAV を使用 ](/help/sites-administering/webdav-access.md)https://localhostの URL にアクセスします :4502。サンプル `static.css` ファイルと `images` フォルダーを、ダウンロードした mywebsite.zip ファイルから `/etc/designs/mywebsite` フォルダーにコピーします。
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -216,7 +216,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
 ここでは、すべて contentpage テンプレートを使用する、My Website、English、Products、Services、Customers の各ページを作成します。
 
-1. AEM のようこそページ（[https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)）で、「web サイト」をクリックします。
+1. AEMのようこそページ （[https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)）で、「Web サイト」をクリックします。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
@@ -266,7 +266,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
-1. Web ブラウザーの新しいタブまたはウィンドウで、[https://localhost:4502/content/mywebsite/jp/products.html](https://localhost:4502/content/mywebsite/en/products.html) を開いて Products ページを確認します。
+1. Web ブラウザーの新しいタブまたはウィンドウで、[https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) を開いて Products ページを確認します。
 
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
@@ -485,7 +485,7 @@ topnav を contentpage コンポーネントに含めるには、次の操作を
 1. ここまでの手順を繰り返して、「**私たちのサービス**」というサブタイトルを&#x200B;**サービス**&#x200B;ページに追加します。
 1. ここまでの手順を繰り返して、「**私たちが得た信頼**」というサブタイトルを&#x200B;**顧客**&#x200B;ページに追加します。
 
-   **ヒント：** CRXDE Lite で、/content/mywebsite/en/products/jcr:content ノードを選択し、サブタイトルのプロパティが追加されたことを確認します。
+   **ヒント：** CRXDE Liteで、/content/mywebsite/en/products/jcr:content ノードを選択して、subtitle プロパティが追加されていることを確認します。
 
 #### 画像リンクを使用して上部ナビゲーションを強化する {#enhance-top-navigation-by-using-image-links}
 
@@ -493,7 +493,7 @@ topnav コンポーネントのレンダリングスクリプトを強化して�
 
 この演習では、[Sling のリクエスト処理](/help/sites-developing/the-basics.md#sling-request-processing)を示します。topnav.jsp スクリプトを変更して、ページナビゲーションリンクに使用する画像を動的に生成するスクリプトを呼び出します。この演習では、Sling は画像ソースファイルの URL を解析し、画像のレンダリングに使用するスクリプトを決定します。
 
-例えば、製品ページへの画像リンクのソースは、https://localhost:4502/content/mywebsite/jp/products.navimage.png になります。Sling は、この URL を解析して、リソースタイプと、リソースをレンダリングするために使用するスクリプトを決定します。
+例えば、製品ページへの画像リンクのソースは、https://localhost:4502/content/mywebsite/en/products.navimage.png になります。 Sling は、この URL を解析して、リソースタイプと、リソースをレンダリングするために使用するスクリプトを決定します。
 
 1. Sling がリソースのパスを `/content/mwebysite/en/products.png.` と特定します。
 1. Sling がこのパスを `/content/mywebsite/en/products` ノードと照合します。
@@ -691,7 +691,7 @@ topnav コンポーネントのレンダリングスクリプトを強化して�
 
 1. CRXDE Lite で、Product 2 ページの説明と日付を設定します。
 
-   1. /content/mywebsite/jp/products/product2/jcr:content ノードを選択します。
+   1. /content/mywebsite/en/products/product2/jcr:content ノードを選択します。
    1. 「**プロパティ**」タブで、以下の値を入力します。
 
       * 名前：jcr:description
@@ -1176,17 +1176,17 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 
 `cq:editConfig` ノードタイプを使用すると、プロパティを編集するときに、コンポーネントの一定の動作を設定できます。
 
-この節では、cq:editConfig ノードを使用して、コンテンツファインダーから画像コンポーネントにアセットをドラッグできるようにします。
+この節では、cq:editConfig ノードを使用して、コンテンツファインダーから画像コンポーネントにアセットをドラッグできます。
 
 1. CRXDE Lite の /apps/mywebsite/components/image ノードの下に、次のようにノードを作成します。
 
-   * 名前：cq:editConfig
-   * タイプ：cq:EditConfig
+   * 名前：cq:editConfig.
+   * タイプ：cq:EditConfig.
 
 1. cq:editConfig ノードの下に、次のようにノードを作成します。
 
-   * 名前：cq:dropTargets
-   * タイプ：cq:DropTargetConfig
+   * 名前：cq:dropTargets.
+   * タイプ：cq:DropTargetConfig.
 
 1. cq:dropTargets ノードの下に、次のようにノードを作成します。
 
@@ -1197,7 +1197,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 
 | 名前 | タイプ | 値 |
 |---|---|---|
-| 同意 | 文字列 | image/gif | jpeg | png) |
+| 同意 | 文字列 | image/（gif\|jpeg\|png） |
 | グループ | 文字列 | media |
 | propertyName | 文字列 | 。/imageReference |
 

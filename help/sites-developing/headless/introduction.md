@@ -4,8 +4,8 @@ description: コンテンツモデル、コンテンツフラグメント、Grap
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 100%
@@ -53,7 +53,7 @@ AEM 6.5 は、次の 3 つの強力なサービスを提供することで、ヘ
 
 AEM のヘッドレス機能を使い始めるためのリソースがいくつか用意されています。ユースケースはそれぞれ異なりますが、いずれも AEM ヘッドレス機能の概要を明確に説明ｓしています。
 
-| リソース | 説明 | タイプ | 対象読者 | 予測時刻 |
+| リソース | 説明 | タイプ | オーディエンス | 予測時刻 |
 |---|---|---|---|---|
 | [ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) | **AEM とヘッドレステクノロジーを初めて使用するユーザー**&#x200B;の場合は、まずここから始めて、ヘッドレスの基本概念から初めてのヘッドレスプロジェクトの運用開始まで、AEM とそのヘッドレス機能の概要を包括的に理解してください。 | ガイド | **AEM とヘッドレスを初めて使用する**&#x200B;開発者 | 1 時間 |
 | [ヘッドレスをはじめる前に](/help/sites-developing/headless/getting-started/introduction.md) | **AEM の経験豊富なユーザー**&#x200B;が主な AEM ヘッドレス機能の概要を知りたい場合は、このクイックスタート概要を確認してください。 | クイックスタート | **AEM エクスペリエンス**&#x200B;の開発者、管理者 | 20 分 |

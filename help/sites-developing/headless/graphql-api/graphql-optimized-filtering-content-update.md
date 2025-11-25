@@ -4,11 +4,11 @@ description: ヘッドレスコンテンツ配信に最適化された Adobe Exp
 exl-id: d78ec052-c091-49ca-9f36-a3d24eb9edd5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 100%
+source-wordcount: '250'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,7 @@ GraphQL フィルターのパフォーマンスを最適化するには、コン
 
 ## 前提条件 {#prerequisites}
 
-AEM のリリース 6.5.17.0 以上がインストールされていることを確認します。
+AEMの 6.5.17.0 リリース以降がインストールされていることを確認します。
 
 ## コンテンツフラグメントの更新 {#updating-content-fragments}
 
@@ -34,8 +34,8 @@ AEM のリリース 6.5.17.0 以上がインストールされていることを
 
 1. ダイアログで、これら 2 つのパラメーターを次のように設定します。
 
-   * **ContentFragmentMigration:Enabled**：`1`
-   * **ContentFragmentMigration:Enforce**：`1`
+   * **ContentFragmentMigration:Enabled** : `1`
+   * **ContentFragmentMigration:Enforce** : `1`
 
 1. 指定した値を&#x200B;**保存**&#x200B;します。更新手続きが開始されます。
 
@@ -45,8 +45,8 @@ AEM のリリース 6.5.17.0 以上がインストールされていることを
 
    **コンテンツフラグメント移行ジョブ設定**&#x200B;のダイアログで、これら 2 つのパラメータを次のように設定します。
 
-   * **ContentFragmentMigration:Enabled**：`0`
-   * **ContentFragmentMigration:Enforce**：`0`
+   * **ContentFragmentMigration:Enabled** : `0`
+   * **ContentFragmentMigration:Enforce** : `0`
 
 ## 制限事項 {#limitations}
 

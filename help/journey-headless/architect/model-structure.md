@@ -4,8 +4,8 @@ description: コンテンツフラグメントモデルを使用したヘッド�
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 100%
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ## 目的 {#objective}
 
-* **対象読者**：初心者
+* **オーディエンス**：初心者
 * **目的**：コンテンツフラグメントモデルを使用したヘッドレス CMS のコンテンツモデリングの概念と仕組みについて説明します。
 
 <!-- which persona does this? -->

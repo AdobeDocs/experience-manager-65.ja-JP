@@ -4,8 +4,8 @@ description: AEM プロジェクトはヘッドフルモデルでもヘッドレ
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 100%
@@ -60,13 +60,13 @@ SPA 統合は AEM の 4 つのレベルに分かれます。
    * SPA は、AEM の [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
    * 一部のコンテンツは AEM で管理され、一部は外部システムで管理されます。
    * コンテンツは SPA でのみ表示できます。
-* **レベル 2：SPA を AEM に組み込む**
+* **レベル 2：SPA を AEM に埋め込む**
    * AEM で[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)を使用して、SPA 用のコンテンツを作成および管理します。
    * SPA は、AEM の [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
    * 一部のコンテンツは AEM で管理され、一部は外部システムで管理されます。
    * コンテンツは AEM 内でインコンテクストで表示できます。
    * 限られたコンテンツを AEM 内で編集できます。
-* **レベル 3：SPA を AEM に組み込んで完全に有効にする**
+* **レベル 3：SPA を AEM に埋め込んで完全に有効にする**
    * AEM で[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)を使用して、SPA 用のコンテンツを作成および管理します。
    * SPA は、AEM の [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
    * コンテンツは AEM 内でインコンテクストで表示できます。
@@ -82,7 +82,7 @@ SPA 統合は AEM の 4 つのレベルに分かれます。
 
 * **レベル 1：**&#x200B;コンテンツフラグメントと [AEM ヘッドレスフレームワーク](/help/sites-developing/headless/introduction.md)を使用して、AEM コンテンツを SPA に配信できます。
 * **レベル 2：**&#x200B;レベル 1 に加えて、
-   * [RemotePage コンポーネント](/help/sites-developing/spa-remote-page.md)を使用して、外部 SPA を AEM に組み込み、AEM コンテンツをインコンテクストで表示できます。
+   * [RemotePage コンポーネント](/help/sites-developing/spa-remote-page.md)を使用して、外部 SPA を AEM に埋め込み、AEM コンテンツをインコンテクストで表示できます。
    * SPA の特定のポイントで [AEM での限られた編集を可能にする](/help/sites-developing/spa-edit-external.md)こともできます。
 * **レベル 3：** レベル 2 に加えて、
    * SPA のゾーン全体で、AEM での包括的な編集を可能にすることができます。

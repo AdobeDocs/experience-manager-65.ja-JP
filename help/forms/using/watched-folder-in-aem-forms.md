@@ -9,10 +9,10 @@ exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '7164'
-ht-degree: 100%
+source-wordcount: '7136'
+ht-degree: 99%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 100%
 * **inputProcessorType（文字列）**：開始するプロセスのタイプです。ワークフロー、スクリプト、またはサービスを指定できます。これは必須プロパティです。
 * **inputProcessorId（文字列）**：inputProcessorId プロパティの動作は、inputProcessorType プロパティに指定した値に基づきます。これは必須プロパティです。以下のリストは、inputProcessorType プロパティに指定できるすべての値と、それに対応する inputProcessorType プロパティの必要条件です。
 
-   * ワークフローに関しては、実行するワークフローモデルを指定します（/etc/workflow/models/&lt;workflow_name>/jcr:content/model など）。
+   * ワークフローに関しては、実行するワークフローモデルを指定します例：/etc/workflow/models/&lt;workflow_name>/jcr:content/model
    * スクリプトに関しては、実行するスクリプトの JCR パスを指定します（/etc/fd/watchfolder/test/testScript.ecma など）。
    * サービスの場合は、OSGi サービスの特定に使用するフィルターを指定します。サービスは com.adobe.aemfd.watchfolder.service.api.ContentProcessor インターフェイスの実装として登録されます。
 
@@ -102,9 +102,9 @@ ht-degree: 100%
    * 特定の文字列をファイル名に持つファイル。例えば data&#42; を指定すると、data1、data2 などの名前を持つファイルおよびフォルダーが除外されます。
    * 次のような名前および拡張子が混在する式に一致するファイル。
 
-      * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
-      * &#42;。[dD][Aa]&#39;port&#39;
-      * &#42;。[Xx][Mm][Ll]
+      * データ `[0-9][0-9][0-9]`.`[dD][aA]`&#39;ポート&#39;
+      * &#42;。`[dD][aA]`&#39;ポート&#39;
+      * &#42;.`[Xx][Mm][Ll]`
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
 
@@ -115,10 +115,10 @@ ht-degree: 100%
 
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * データ `[0-9][0-9][0-9]`.`[dD][aA]`&#39;ポート&#39;
 
-      * &#42;。[dD][Aa]&#39;port&#39;
-      * &#42;。[Xx][Mm][Ll]
+      * &#42;。`[dD][aA]`&#39;ポート&#39;
+      * &#42;.`[Xx][Mm][Ll]`
 
 ファイルパターンについて詳しくは、[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)を参照してください。
 
@@ -277,7 +277,7 @@ public class TestContentProcessor1 implements ContentProcessor {
 
 >[!NOTE]
 >
->出力フォルダーおよびファイル名のプレフィックスは、監視フォルダー設定パラメーターに基づいて決定されます。
+>出力フォルダーおよびファイル名の接頭辞は、監視フォルダー設定パラメーターに基づいて決定されます。
 
 ```java
 var inputMap = processorContext.getInputMap();
@@ -297,7 +297,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 1. プログラムによって、またはコンソール https://&#39;[server]:[port]&#39;/crx/explorer 経由によって、システムユーザーを作成します。既存のシステムユーザーを使用することもできます。ここでは、通常のユーザーではなく、システムユーザーを使用することが重要です。
 1. カスタムの場所（ここにスクリプトが保存されます）にある、新規作成または既存のシステムユーザーに、読み取り権限を与えます。カスタムの場所は複数持つことができます。すべてのカスタムの場所に最低でも読み取り権限を付与してください。
 1. Felix 設定コンソール（/system/console/configMgr）で、監視フォルダーのサービスユーザーマッピングを検索します。このマッピングは「Mapping: adobe-aemds-core-watch-folder=...」のようになります。
-1. このマッピングをクリックします。エントリ「adobe-aemds-core-watch-folder:scripts=fd-service」で、fd-service をカスタムシステムユーザーの ID に変更します。「保存」をクリックします。
+1. このマッピングをクリックします。エントリ「adobe-aemds-core-watch-folder:scripts=fd-service」で、fd-service をカスタムシステムユーザーの ID に変更します。 「保存」をクリックします。
 
 これで、構成済みのカスタムの場所を使用してスクリプトを保存することができます。
 
@@ -355,7 +355,7 @@ processWorkflowContext() へ渡される引数は、com.adobe.aemfd.watchfolder.
 >
 >他のすべてのシナリオにおいて setResult API の呼び出し時に null コンテンツを指定すると、エラーが発生します。
 
-以下は、ワークフローステップの実装例です。この例では、ECMAscript で可変の stepCount を使用して、現在のワークフローインスタンスにおけるステップの呼び出し回数を追跡しています。出力フォルダー名は、現在のステップの呼び出し回数、元のファイル名、outPrefix パラメーターに指定したプレフィックスを組み合わせたものになっています。
+以下は、ワークフローステップの実装例です。この例では、ECMAscript で可変の stepCount を使用して、現在のワークフローインスタンスにおけるステップの呼び出し回数を追跡しています。出力フォルダー名は、現在のステップの呼び出し回数、元のファイル名、outPrefix パラメーターに指定した接頭辞を組み合わせたものになっています。
 
 ECMAScript により、ワークフローコンテキストサービスの参照が取得され、WorkflowContextProcessor インターフェイスの実装が作成されます。WorkflowContextProcessor の実装は入力ファイルを受け取り、ファイルを一時領域にコピーし、コピーされたファイルに相当するドキュメントを返します。現在のワークフローインスタンスにおいて同じステップの開始時に生成されていた直近の出力を、ブーリアン変数 purgePrevious の値に基づいて現在のステップで削除します。最後に、wfSvc.execute メソッドを呼び出して WorkflowContextProcessor 実装を実行します。出力ドキュメントのコンテンツは、監視フォルダー設定ノードで指定された物理パスの結果フォルダーに保存されます。
 
@@ -528,7 +528,7 @@ log.info("Exiting workflow script!")
 * 監視フォルダーがステージフォルダー内のファイルごとに呼び出しリクエストを正常に作成した後でサーバーがクラッシュした場合、呼び出しタイプに基づいて動作が次の 2 つに分かれます。
 
    * **同期**：監視フォルダーがサービスを同期的に呼び出すように設定されている場合、ステージフォルダー内のファイルはすべて未処理のままステージフォルダーに残ります。
-   * **非同期**：この場合、監視フォルダーは Job Manager サービスに依存します。Job Manager サービスが監視フォルダーをコールバックした場合、ステージフォルダー内のファイルは呼び出しの結果に基づいて保存フォルダーまたは失敗フォルダーに移動されます。Job Manager サービスが監視フォルダーをコールバックしない場合、ファイルは未処理のままステージフォルダーに残ります。この状況が発生するのは、Job Manager がコールバックしようとしたときに監視フォルダーが動作していない場合です。
+   * **非同期**：この場合、監視フォルダーは Job Manager サービスに依存します。Job Manager サービスが監視フォルダーをコールバックした場合、ステージフォルダー内のファイルは呼び出しの結果に基づいて保存フォルダーまたは失敗フォルダーに移動されます。Job Manager サービスが監視フォルダーをコールバックしない場合、ファイルは未処理のままステージフォルダーに残ります。この状況が発生するのは、ジョブマネージャーがコールバックしようとしたときに監視フォルダーが動作していない場合です。
 
 #### ステージフォルダーに未処理のまま残っているソースファイルの回復 {#recover-unprocessed-source-files-in-the-stage-folder}
 
@@ -567,9 +567,9 @@ log.info("Exiting workflow script!")
 * data.&#42;
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
-   * &#42;。[dD][Aa]&#39;port&#39;
-   * &#42;。[Xx][Mm][Ll]
+   * データ `[0-9][0-9][0-9]`.`[dD][aA]`&#39;ポート&#39;
+   * &#42;。`[dD][aA]`&#39;ポート&#39;
+   * &#42;.`[Xx][Mm][Ll]`
 
 * 管理者は、結果を保存する出力フォルダーのファイルパターンを定義できます。出力フォルダー（結果、保存、失敗）には、次のファイルパターンのいずれでも指定できます。
 * %Y = 年（4 桁表記）
@@ -590,7 +590,7 @@ log.info("Exiting workflow script!")
 * %F = ソースファイル名
 * %E = ソースファイル拡張子
 
-出力パラメーターのマッピングパターンが「File.separator」（つまり、パスセパレーター）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
+出力パラメーターのマッピングパターンが「File.separator」（つまり、パス区切り記号）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
 
 ## PDF Generator と監視フォルダーの連携 {#using-pdf-generator-with-a-watched-folder}
 
@@ -662,7 +662,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 1. ブラウザーウィンドウで CRXDE Lite を開きます。https://&#39;[server]:[port]&#39;/crx/de/
 
-1. /etc/fd/watchfolder/config/ フォルダーに移動して、nt:unstructured というタイプのノードを作成します。
+1. /etc/fd/watchfolder/config/ フォルダーに移動して、nt:unstructured タイプのノードを作成します。
 
    ![configure-the-watched-folder-pdf](assets/configure-the-watched-folder-pdf.png)
 
@@ -670,7 +670,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
    * folderPath（文字列型）：定義した時間間隔でスキャンするフォルダーのパスです。フォルダーが共有場所に存在し、すべてのサーバーが対象のサーバーに対するフルアクセス権を持っている必要があります。inputProcessorType（文字列型）：開始するプロセスのタイプです。このチュートリアルでは、workflow を指定します。
 
-   * inputProcessorId（文字列型）：inputProcessorId プロパティの動作は、inputProcessorType プロパティに指定した値に基づきます。この例では、inputProcessorType プロパティの値は workflow です。そのため、inputProcessorId プロパティに PDFG ワークフローのパス（/etc/workflow/models/pdfg/jcr:content/model）を指定します。
+   * inputProcessorId（文字列型）：inputProcessorId プロパティの動作は、inputProcessorType プロパティに指定した値に基づきます。この例では、inputProcessorType プロパティの値は workflow です。そのため、inputProcessorId プロパティには、PDFG ワークフローのパス /etc/workflow/models/pdfg/jcr:content/model を指定します。
 
    * outputFilePattern（文字列型）：出力ファイルのパターンです。フォルダーまたはファイルパターンを指定できます。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
 

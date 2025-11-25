@@ -2,11 +2,11 @@
 title: ネットワークに関する考慮事項と要件
 description: ' [!DNL Adobe Experience Manager Assets]  のデプロイメントを設計する際のネットワークの考慮事項について説明します。'
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 100%
@@ -93,7 +93,7 @@ Dispatcher では、100 Mbps の接続が 2 つのエンティティ（外部と
 考慮すべき項目は次の通りです。
 
 * XMP メタデータの読み／書き戻し
-* 自動アクティベートおよびレプリケート
+* 自動アクティベーションおよびレプリケーション
 * 透かし処理
 * サブアセットの取り込み／ページの抽出
 * ワークフローのオーバーラップ

@@ -6,10 +6,10 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: ab25ac9701bd138ceb11bb9b11539e950dde02d9
-workflow-type: ht
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+workflow-type: tm+mt
 source-wordcount: '7562'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -162,7 +162,7 @@ ht-degree: 100%
       + Sites の機能 {#introduction}
          + [MSM と翻訳](/help/sites-administering/msm-and-translation.md)
          + [非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)
-         + [コンテンツの再利用：マルチサイトマネージャとライブコピー](/help/sites-administering/msm.md)
+         + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](/help/sites-administering/msm.md)
          + [ライブコピーの概要コンソール](/help/sites-administering/msm-livecopy-overview.md)
          + [ライブコピーの同期の設定](/help/sites-administering/msm-sync.md)
          + [ライブコピーの作成と同期](/help/sites-administering/msm-livecopy.md)
@@ -511,7 +511,7 @@ ht-degree: 100%
    + はじめに {#getting-started}
       + [AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)
       + [アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md)
-      + [インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md)
+      + [インタラクティブなコミュニケーションの概要](/help/forms/using/interactive-communications-overview.md)
       + [フォーム管理の概要](/help/forms/using/introduction-managing-forms.md)
       + [自動フォーム変換サービスの概要](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=ja)
       + チュートリアル：最初のアダプティブフォームを作成 {#create-first-adaptive-form}
@@ -522,12 +522,12 @@ ht-degree: 100%
          + [チュートリアル：アダプティブフォームのスタイルを設定](/help/forms/using/style-your-adaptive-form.md)
          + [チュートリアル：アダプティブフォームの公開](/help/forms/using/publish-your-adaptive-form.md)
       + チュートリアル：最初のインタラクティブなコミュニケーションを作成する {#create-first-interactive-communication}
-         + [チュートリアル：最初のインタラクティブ通信を作成する](/help/forms/using/create-your-first-interactive-communication.md)
-         + [チュートリアル：インタラクティブ通信の計画](/help/forms/using/planning-interactive-communications.md)
+         + [チュートリアル：最初のインタラクティブなコミュニケーションを作成する](/help/forms/using/create-your-first-interactive-communication.md)
+         + [チュートリアル：インタラクティブなコミュニケーションの計画](/help/forms/using/planning-interactive-communications.md)
          + [チュートリアル：フォームデータモデルの作成](/help/forms/using/create-form-data-model0.md)
          + [チュートリアル：ドキュメントフラグメントの作成](/help/forms/using/create-document-fragments.md)
          + [チュートリアル：テンプレートの作成](/help/forms/using/create-templates-print-web.md)
-         + [チュートリアル：インタラクティブ通信の作成](/help/forms/using/create-interactive-communication0.md)
+         + [チュートリアル：インタラクティブなコミュニケーションの作成](/help/forms/using/create-interactive-communication0.md)
       + AEM Forms リファレンス関連項目 {#aem-forms-reference-collaterals}
          + [We.Gov および We.Finance リファレンスサイトのセットアップと設定](/help/forms/using/forms-install-configure-gov-reference-site.md)
          + [We.Gov および We.Finance リファレンスサイトのチュートリアル](/help/forms/using/forms-gov-reference-site-user-demo.md)
@@ -546,7 +546,7 @@ ht-degree: 100%
          + [ドキュメントサービスのインストールと設定](/help/forms/using/install-configure-document-services.md)
          + [データ取得機能をインストールして設定する](/help/forms/using/installing-configuring-aem-forms-osgi.md)
          + [OSGi での Forms 中心のワークフローのインストールと設定](/help/forms/using/installing-configuring-forms-centric-workflow-on-osgi.md)
-         + [インタラクティブ通信をインストールして設定する](/help/forms/using/installing-configuring-intreactive-communication-correspondence-management.md)
+         + [インタラクティブなコミュニケーションをインストールして設定する](/help/forms/using/installing-configuring-intreactive-communication-correspondence-management.md)
          + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html?lang=ja)
       + JEE 上の AEM Forms のインストール {#jee-installation}
          + [JEE 上の AEM Forms でサポートされているプラットフォーム](/help/forms/using/aem-forms-jee-supported-platforms.md)
@@ -580,11 +580,11 @@ ht-degree: 100%
       + JEE 上の AEM Forms のアップグレード {#aem-forms-jee-upgrade}
          + [AEM Forms へのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65_jp)
          + [JEE 上の Adobe Experience Manager Forms 用アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)
-      + [JEE 上の AEM 6.5 Forms へのアップグレード](/help/forms/using/upgrade-forms-jee.md)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
-      + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_jp)
+         + [JEE 上の AEM 6.5 Forms へのアップグレード](/help/forms/using/upgrade-forms-jee.md)
+         + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
+         + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
+         + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
+         + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_jp)
    + AEM Forms の管理 {#manage-administer-aem-forms}
       + [OSGi 上の AEM Forms のグループと権限](/help/forms/using/forms-groups-privileges-tasks.md)
       + [フォームを分類するための新しいフォルダーの作成](/help/forms/using/creating-new-folders-categorize-forms.md)
@@ -643,7 +643,7 @@ ht-degree: 100%
       + [リダイレクトページの設定](/help/forms/using/configuring-redirect-page.md)
       + [アクセシブルなアダプティブフォームの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
       + [繰り返し可能なセクションを使用したフォームの作成](/help/forms/using/creating-forms-repeatable-sections.md)
-      + [AEM Sites ページへのアダプティブフォームまたはインタラクティブ通信の埋め込み](/help/forms/using/embed-adaptive-form-aem-sites.md)
+      + [AEM Sites ページへのアダプティブフォームまたはインタラクティブなコミュニケーションの埋め込み](/help/forms/using/embed-adaptive-form-aem-sites.md)
       + [外部 Web ページへのアダプティブフォームの埋め込み](/help/forms/using/embed-adaptive-form-external-web-page.md)
       + [アダプティブフォームコンポーネントのインラインスタイリング](/help/forms/using/inline-style-adaptive-forms.md)
       + [複数ステップのフォームシーケンスの概要](/help/forms/using/introduction-form-sequence.md)
@@ -681,19 +681,19 @@ ht-degree: 100%
       + [アダプティブフォームと XFA フォームテンプレートとの同期](/help/forms/using/synchronizing-adaptive-forms-xfa.md)
       + [Adobe Sign の AEM Forms への統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md)
       + [フォームのアセットのレビューの作成と管理](/help/forms/using/create-reviews-forms.md)
-      + [AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの埋め込み](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
+      + [AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブなコミュニケーションの埋め込み](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
       + [アダプティブフォームでのカスタム関数の作成と使用](/help/forms/using/create-and-use-custom-functions.md)
       + [アダプティブフォームのカスタムエラーハンドラーを作成して使用](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
-   + インタラクティブ通信 {#interactive-communications}
-      + [インタラクティブ通信オーサリング UI の概要](/help/forms/using/introduction-interactive-communication-authoring.md)
-      + [インタラクティブ通信の作成](/help/forms/using/create-interactive-communication.md)
-      + [インタラクティブ通信内でグラフを使用する](/help/forms/using/chart-component-interactive-communications.md)
-      + [インタラクティブ通信内のテキスト](/help/forms/using/texts-interactive-communications.md)
-      + [インタラクティブ通信内の条件](/help/forms/using/conditions-interactive-communications.md)
-      + [エージェント UI を使用してインタラクティブ通信の準備と送信を行う](/help/forms/using/prepare-send-interactive-communication.md)
+   + インタラクティブなコミュニケーション {#interactive-communications}
+      + [インタラクティブなコミュニケーションオーサリング UI の概要](/help/forms/using/introduction-interactive-communication-authoring.md)
+      + [インタラクティブなコミュニケーションの作成](/help/forms/using/create-interactive-communication.md)
+      + [インタラクティブなコミュニケーション内でグラフを使用する](/help/forms/using/chart-component-interactive-communications.md)
+      + [インタラクティブなコミュニケーション内のテキスト](/help/forms/using/texts-interactive-communications.md)
+      + [インタラクティブなコミュニケーション内の条件](/help/forms/using/conditions-interactive-communications.md)
+      + [エージェント UI を使用してインタラクティブなコミュニケーションの準備と送信を行う](/help/forms/using/prepare-send-interactive-communication.md)
       + [印刷チャネルと Web チャネル](/help/forms/using/web-channel-print-channel.md)
-      + [インタラクティブ通信の設定プロパティ](/help/forms/using/interactive-communication-configuration-properties.md)
-      + [複数のインタラクティブ通信の生成](/help/forms/using/generate-multiple-interactive-communication-using-batch-api.md)
+      + [インタラクティブなコミュニケーションの設定プロパティ](/help/forms/using/interactive-communication-configuration-properties.md)
+      + [複数のインタラクティブなコミュニケーションの生成](/help/forms/using/generate-multiple-interactive-communication-using-batch-api.md)
       + [レイアウトモードを使用したコンポーネントのサイズ変更](/help/forms/using/resize-using-layout-mode-interactive-communication.md)
    + ワークフロー {#workflows}
       + [OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)
@@ -815,7 +815,7 @@ ht-degree: 100%
       + [通信を作成](/help/forms/using/create-correspondence.md)
       + [式ビルダーのリモート関数](/help/forms/using/expression-builder.md)
       + [エージェント署名画像の管理](/help/forms/using/manage-agent-signature-images.md)
-      + [レターとインタラクティブ通信の後処理](/help/forms/using/submit-letter-topostprocess.md)
+      + [レターとインタラクティブなコミュニケーションの後処理](/help/forms/using/submit-letter-topostprocess.md)
       + [アセット一覧表示画面へのカスタムアクションの追加](/help/forms/using/add-custom-action-asset-listing-view.md)
       + [「通信を作成」UI へのカスタムアクションまたはボタンの追加](/help/forms/using/add-action-button-in-create-correspondence-ui.md)
       + [Correspondence Management アセットへのカスタムプロパティの追加](/help/forms/using/add-custom-properties-cm-assets.md)
@@ -827,7 +827,7 @@ ht-degree: 100%
       + [Correspondence Management でカスタム特殊文字を使用する](/help/forms/using/custom-special-characters.md)
       + [レター PDF プレビューのカスタム透かし](/help/forms/using/custom-watermark.md)
       + [Correspondence Management Solution の設定](/help/forms/using/configuring-a-cm-solution.md)
-      + [インタラクティブ通信とレターのインライン条件と繰り返し構造](/help/forms/using/cm-inline-condition.md)
+      + [インタラクティブなコミュニケーションとレターのインライン条件と繰り返し構造](/help/forms/using/cm-inline-condition.md)
       + [ドキュメントフラグメント](/help/forms/using/lists.md)
       + [Correspondence Management設定プロパティ](/help/forms/using/cm-configuration-properties.md)
    + AEM Forms と Experience Cloud ソリューションとの統合 {#integrate-aem-forms-with-experience-cloud-solutions}
@@ -966,12 +966,12 @@ ht-degree: 100%
          + [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md)
       + エンドポイントの管理 {#manage-endpoints}
          + [エンドポイントの追加、有効化、変更または削除](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md)
-      + [メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
-      + [OAuth2.0 認証の設定](/help/forms/using/oauth2-support-for-mail-service.md)
-      + [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
-      + [監視フォルダーのエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
-      + [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)
-      + [エンドポイントの種類](/help/forms/using/admin-help/types-endpoints.md)
+         + [メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
+         + [OAuth2.0 認証の設定](/help/forms/using/oauth2-support-for-mail-service.md)
+         + [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
+         + [監視フォルダーのエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
+         + [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)
+         + [エンドポイントの種類](/help/forms/using/admin-help/types-endpoints.md)
       + Acrobat Reader DC Extensions の設定 {#configure-acrobat-reader-dc-extensions}
          + [Acrobat Reader DC Extensions で使用される証明書の種類](/help/forms/using/admin-help/certificate-types-used-acrobat-reader.md)
          + [PDF ドキュメントでの有効な証明書と期限切れ証明書の認識](/help/forms/using/admin-help/recognizing-valid-expired-certificates-pdf.md)
@@ -1099,15 +1099,15 @@ ht-degree: 100%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [アセンブラーサービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
-      + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
+      + [ワークベンチヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
          + JEE 上の AEM Forms でのプログラミングの概要 {#introduction-programming-aem-forms-jee}
             + [Java API クイックスタートの概要](/help/forms/developing/introducing-java-api-soap-quick.md)
             + [API を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-apis.md)
-         + [AEM Forms プロセスについて](/help/forms/developing/aem-forms-processes.md)
-         + [サービスコンテナ](/help/forms/developing/service-container.md)
+            + [AEM Forms プロセスについて](/help/forms/developing/aem-forms-processes.md)
+            + [サービスコンテナ](/help/forms/developing/service-container.md)
          + AEM Forms 向け SPI の開発 {#developing-spis-aem-forms}
             + [外部ユーザー招待ハンドラーの作成](/help/forms/developing/creating-invite-external-users-handler.md)
          + Java API クイックスタート - コード例 {#java-api-quick-start-code-examples}
@@ -1208,7 +1208,7 @@ ht-degree: 100%
       + [Output サービス、Forms サービスまたは DoR（レコードのドキュメント）サービスを使用できない](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [Experience Manager Forms の Struts 2 RCE 脆弱性の緩和](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
       + [MySQL 用に 6.5.12.0 にアップグレードする際にデータベースをバックアップできない](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
-      + [WorkBench で多数の PDF を PDF 生成で印刷できない](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
+      + [ワークベンチで多数の PDF を PDF 生成で印刷できない](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
       + [AEM SDK を適切に再起動する方法](/help/forms/using/restart-aem-sdk.md)
       + [PaperCapture サービスが PDF に対して OCR を実行できない](/help/forms/using/papercapture-service-resolution.md)
       + [JEE 上の AEM Forms の Spring Framework の脆弱性の軽減](/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md)
@@ -1217,16 +1217,16 @@ ht-degree: 100%
       + [AEM Forms on JEE での XXE、設定、リモートコード実行の脆弱性の軽減](/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md)
       + [XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
       + [Firefox と Chrome で XFA ベースの PDF フォームを開く方法](/help/forms/using/xfa-forms-firefox-chrome.md)
-      + [BlazeDS での XML 外部エンティティ（XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blazeDS.md)
+      + [BlazeDS での XML 外部エンティティ（XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blaze-ds.md)
       + [JEE WebLogic Server での EAR デプロイメントの失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
    + レガシードキュメント {#legacy-documentation}
-      + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
+      + [JEE ワークベンチ上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
       + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](/help/forms/developing/compressing-decompressing-custom-dsc.md)
       + [JEE サーバークラスター上の AEM Forms の設定とトラブルシューティング](/help/forms/developing/configure-server-cluster.md)
       + [動的 PDF Forms でのハッシュの生成と操作](/help/forms/developing/hashing-forms.md)
       + [WS-Security ヘッダーを使用した資格情報の受け渡し](/help/forms/developing/passing-credentials.md)
    + 用語集 {#aem-forms-glossary}
-+[AEM Forms 用語集](/help/forms/using/aem-forms-glossary.md)
+      + [AEM Forms用語集](/help/forms/using/aem-forms-glossary.md)
 + AEM の AI {#ai-in-aem}
    + [概要](/help/ai-in-aem/overview.md)
    + AI アシスタント {#ai-assistant}
@@ -1642,7 +1642,7 @@ ht-degree: 100%
          + [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
          + [パフォーマンスツリー](/help/sites-deploying/performance-tree.md)
          + [パフォーマンステストに関するベストプラクティス](/help/sites-deploying/best-practices-for-performance-testing.md)
-         + [クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)
+         + [クエリとインデックス作成に関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)
          + [顧客向けのユーザーインターフェイスのレコメンデーション](/help/sites-deploying/ui-recommendations.md)
          + [パフォーマンスとスケーラビリティ](/help/sites-deploying/performance.md)
    + Fluid Experience {#fluid-experiences}

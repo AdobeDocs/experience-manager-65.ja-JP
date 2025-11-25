@@ -9,11 +9,11 @@ docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '3214'
-ht-degree: 100%
+source-wordcount: '3212'
+ht-degree: 98%
 
 ---
 
@@ -66,7 +66,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 >[!NOTE]
 >
->個々の必須ドキュメントと成果物の間には、直接の 1:1 の関係はありません。
+>個々の必須ドキュメントと成果物の間には、直接的な 1:1 関係はありません。
 
 ### 準備 {#preparation}
 
@@ -239,7 +239,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   開発の前に、デプロイ、リリース、テスト、問題の報告に必要なすべてのサポートプロセスを設定する必要があります。
 
-  詳しくは、[アドビサポートポータル](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)も参照してください。
+  詳しくは、[アドビサポートポータル](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)も参照してください。
 
 ### 運用計画と運用 {#operations-planning-and-operations}
 
@@ -316,7 +316,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * **実稼動システム**
 
-  以下を含めて、実稼動環境を計画し、文書化します。
+  以下を含めて、本番環境を計画し、文書化します。
 
    * アーキテクチャ
    * デプロイメントのサイクル
@@ -454,7 +454,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * **トランジション**
 
-  実稼動環境およびユーザーへの切り替えを計画し、実行します。
+  本番環境およびユーザーへの切り替えを計画し、実行します。
 
 * **ロールアウト**
 
@@ -579,7 +579,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 チェックリストは、各マイルストーンの&#x200B;**必須ドキュメント**&#x200B;および&#x200B;**成果物**&#x200B;をカバーしています。
 
-* これらの間には、一対一の関係はありません。例えば、複数の必須ドキュメントのグループが 1 つの成果物になる場合もあります。
+* これらの間には 1:1 の関係はありません。例えば、必須ドキュメントのグループによって 1 つの成果物になる場合などです。
 * 同じマイルストーンの中で、あるペルソナからの成果物が、別のペルソナの必須ドキュメントになる場合もあります。
 
 ### 必須ドキュメント {#required-documents}

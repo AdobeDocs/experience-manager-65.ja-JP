@@ -4,8 +4,8 @@ description: コンテンツフラグメントを使用したヘッドレス CMS
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 100%
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ## 目的 {#objective}
 
-* **対象読者**：初心者
+* **オーディエンス**：初心者
 * **目的**：ヘッドレス CMS オーサリングの基本を紹介します。
    * AEMaaCS を使用したオーサリングの概要
    * コンテンツフラグメントの概要

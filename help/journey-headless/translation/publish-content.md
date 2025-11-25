@@ -4,8 +4,8 @@ description: 翻訳済みコンテンツを公開し、コンテンツの更新�
 exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 100%
@@ -157,7 +157,7 @@ You see that a new job card was added to the project. In this example, another S
 
 ## ジャーニーの終了 {#end-of-journey}
 
-おめでとうございます。これで、ヘッドレス翻訳ジャーニーが完了しました。その結果、以下を達成できました。
+おめでとうございます。これで、ヘッドレス翻訳ジャーニーが完了しました。その結果、以下を習得しました。
 
 * ヘッドレスコンテンツ配信の概要を理解する
 * AEM のヘッドレス機能を基本的に理解する

@@ -9,10 +9,10 @@ role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '16917'
-ht-degree: 100%
+source-wordcount: '16916'
+ht-degree: 99%
 
 ---
 
@@ -93,7 +93,7 @@ Signature サービスの操作をプログラムで実行する前に、Signatu
 
 **署名フィールドを追加する**
 
-PDFドキュメントに正常に署名フィールドを追加するには、署名フィールドの場所を特定する座標値を指定します。（非表示の署名フィールドを追加する場合、これらの値は不要です）。また、署名が署名フィールドに適用された後にロックされる PDF ドキュメント内のフィールドを指定することもできます。
+PDFドキュメントに正常に署名フィールドを追加するには、署名フィールドの場所を特定する座標値を指定します。（非表示の署名フィールドを追加する場合、これらの値は不要です）。 また、署名が署名フィールドに適用された後にロックされるPDF ドキュメント内のフィールドを指定することもできます。
 
 **PDF ドキュメントを PDF ファイルとして保存する**
 
@@ -597,9 +597,9 @@ PDF ドキュメントの署名や認証に nCipher nShield HSM 資格情報を�
 
 この設定値を cknfastrc ファイルに追加すると、J2EE アプリケーションサーバーを再起動しなくても、新しい資格情報を使用できます。
 
-    ／［メモ］
-    ／
-    ／SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。別の方法（Java プロセスの停止など）を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+>[!NOTE]
+>
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 **署名は信頼されていません**
 

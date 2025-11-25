@@ -9,9 +9,9 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '312'
 ht-degree: 24%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 24%
 
 記事、バナーおよびコレクションは、AEMでは cq:Pages として表されます。
 
-これらは、Adobe Experience Manager（AEM） Mobile On-Demand Services のメタデータと統合に関するサポートプロパティを表す、以下に示すいくつかのプロパティに加えて、cq:Page で見つかるのと同じ共通プロパティを共有します。
+これらのスキーマエンティティは、Adobe Experience Manager（AEM） Mobile On-Demand Services のメタデータと統合に関するサポートプロパティを表す、以下に示すいくつかのプロパティに加えて :Page 任意の cq で見つかる同じ共通プロパティを共有します。
 
 次の表に、コンテンツのプロパティとノードを示します。
 
@@ -30,12 +30,12 @@ ht-degree: 24%
 
 | **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** | **説明** |
 |---|---|---|---|
-| dps-id | 文字列 |  | AEM Mobileによって割り当てられ、AEM Mobileにアップロードされた後、またはAEM Mobileから読み込まれた後にAEMによって保存されます |
-| dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
+| dps-id | 文字列 |  | AEM Mobileによって割り当てられ、AEM Mobileにアップロードされたり、AEM Mobileから読み込まれたりすると、AEMによって保存されます |
+| dps-resourceType | 文字列 | dps:Article | `dps:Banner` \| `dps:Collection` \| `entity type property` |
 | dps-version | 文字列 |  | AEM Mobile エンティティのバージョン （完全な aemm-id 内にも含まれる） |
-| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最終同期/ インポート日 |
+| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/読み込みの日付 |
 | dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最終アップロード日 |
-| dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロードリクエストを実行した id ユーザー |
+| dps-lastUploadedBy | 文字列:userid |  | AEMからAEM Mobileへの最後のアップロードリクエストを実行した id ユーザー |
 
 ## コアメタデータのプロパティ {#core-metadata-properties}
 
@@ -57,7 +57,7 @@ ht-degree: 24%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | ブール値 |  |
+| dps-hideFromBrowsePage | ブーリアン |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
 | **ソーシャル** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -77,8 +77,8 @@ ht-degree: 24%
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
-| dps-horizontalSwipe | ブール値 |  |
-| dps-allowDownload | ブール値 |  |
+| dps-horizontalSwipe | ブーリアン |  |
+| dps-allowDownload | ブーリアン |  |
 | dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
 | dps-layout | 文字列 |  |
 

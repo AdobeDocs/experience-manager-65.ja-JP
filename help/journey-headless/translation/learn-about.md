@@ -4,8 +4,8 @@ description: ヘッドレスの概念、AEM へのマッピング方法、AEM �
 exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 100%
@@ -67,7 +67,7 @@ AEM によるコンテンツの翻訳方法の詳細については、このジ�
 1. 翻訳プロジェクトを作成してコンテンツを収集し、翻訳サービスに送信して、結果を受け取ります。
 1. 翻訳済みコンテンツをレビューして公開します。
 
-## 次の手順 {#what-is-next}
+## 次のステップ {#what-is-next}
 
 AEM ヘッドレス翻訳ジャーニーを開始していただきありがとうございます。ドキュメントを読んだので、次を理解しているはずです。
 

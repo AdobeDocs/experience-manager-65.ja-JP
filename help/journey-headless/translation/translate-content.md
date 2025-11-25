@@ -4,8 +4,8 @@ description: 翻訳コネクタおよびルールを使用して、ヘッドレ�
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2115'
 ht-degree: 100%
@@ -234,7 +234,7 @@ AEM の翻訳フレームワークは、翻訳コネクタから翻訳を受け�
 
 人間による翻訳は、このローカライゼーションジャーニーの範囲外です。このトピックについて詳しくは、このドキュメントの最後にある[その他のリソース](#additional-resources)の節を参照してください。ただし、追加の承認オプション以外は、このジャーニーで説明しているように、人間による翻訳のワークフローは機械翻訳のものと同じです。
 
-## 次の手順 {#what-is-next}
+## 次のステップ {#what-is-next}
 
 これで、ヘッドレス翻訳ジャーニーのこの部分を完了し、次の操作を実行できます。
 

@@ -2,14 +2,14 @@
 title: 監視のベストプラクティス [!DNL Assets] デプロイメント
 description: ' [!DNL Adobe Experience Manager]  インスタンスをデプロイした後の環境およびパフォーマンスの監視に関するベストプラクティス。'
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 100%
+source-wordcount: '1638'
+ht-degree: 99%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 100%
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftop は、`yum install iftop` または `apt-get install iftop` を使用してほとんどの Linux システムにインストールできます。
 
-* Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorder を使用した CQ ランタイムの問題の診断方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
+* Java Flight Recorder（JFR）：非本番環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorder を使用した CQ ランタイムの問題の診断方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
 * [!DNL Experience Manager] `error.log` ファイル：システムでログに記録されたエラーの詳細を [!DNL Experience Manager] `error.log` ファイルで調査できます。コマンド `tail -F quickstart/logs/error.log` を使用して、調査するエラーを特定します。
 * [ワークフローコンソール](/help/sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
@@ -131,7 +131,7 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
 セッションカウンター
 
 * MBean：`org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
-* URL：*/system/console/jmx/org.apache.jackrabbit.oak:id=7,name=&quot;OakRepository Statistics&quot;,type*=&quot;RepositoryStats&quot;
+* URL: */system/console/jmx/org.apache.jackrabbit.oak:id=7,name=&quot;OakRepository Statistics&quot;,type*=&quot;RepositoryStats&quot;
 * インスタンス：すべてのサーバー
 * アラームしきい値：開いているセッションの数がベースラインよりも 50％以上多い場合。
 * アラーム定義：特定のコードによりセッションが開かれ、閉じられない状態になっています。この状態は徐々に進行し、最終的にはシステムでメモリリークの原因となります。システム上のセッション数は多少変動しますが、継続的に増加すべきではありません。

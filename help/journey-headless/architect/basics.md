@@ -4,8 +4,8 @@ description: コンテンツフラグメントを使用したヘッドレス CMS
 exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 100%
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ## 目的 {#objective}
 
-* **対象読者**：初心者
+* **オーディエンス**：初心者
 * **目的**：ヘッドレス CMS 向けコンテンツモデリングの概念を紹介します。
 
 ## コンテンツフラグメントモデルを使用したコンテンツモデリング {#architect-content-fragment-models}
@@ -83,7 +83,7 @@ AEM では、コンテンツをモデル化するために次のデータタイ�
 * 1 行のテキスト
 * 複数行テキスト
 * 数値
-* ブール値
+* ブーリアン
 * 日時
 * 列挙
 * タグ

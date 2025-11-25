@@ -3,12 +3,12 @@ title: MSM を使用したアセットの再利用
 description: 親アセットから派生し、親アセットにリンクされているアセットを複数のページ／フォルダーにわたって使用します。アセットはプライマリコピーとの同期が保たれ、数回クリックするだけで、親アセットから更新内容を受け取ります。
 contentOwner: AG
 mini-toc-levels: 1
-role: User, Admin, Architect
+role: User, Admin, Developer
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '3284'
 ht-degree: 100%

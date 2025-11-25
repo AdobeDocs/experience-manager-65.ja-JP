@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: f7e0cc48dbee90af2440e83ba82316d8237dcbe4
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '3534'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -86,22 +86,22 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 
 >[!CAUTION]
 >
->Java™ ベンダーからのセキュリティ情報をトラックします。これにより、実稼動環境の安全性とセキュリティが確保されます。また、常に最新の Java™ アップデートをインストールしてください。
+>Java™ ベンダーからのセキュリティ情報をトラックします。これにより、本番環境の安全性とセキュリティが確保されます。また、常に最新の Java™ アップデートをインストールしてください。
 
 | **プラットフォーム** | **サポートレベル** | **リンク** |
 |---|---|---|
-| Oracle Java™ SE 21 JDK | Z：サポート対象外 `[1]` |
-| Oracle Java™ SE 17 JDK | Z：サポート対象外 `[1]` |
+| Oracle Java™ SE 21 JDK | Z：サポート対象外 `[1]` |  |
+| Oracle Java™ SE 17 JDK | Z：サポート対象外 `[1]` |  |
 | Oracle Java™ SE 11 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24<td>) |
-| Oracle Java™ SE 10 JDK | Z：サポート対象外 `[1]` |
-| Oracle Java™ SE 9 JDK | Z：サポート対象外 `[1]` |
+| Oracle Java™ SE 10 JDK | Z：サポート対象外 `[1]` |  |
+| Oracle Java™ SE 9 JDK | Z：サポート対象外 `[1]` |  |
 | Oracle Java™ SE 8 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=10) |
-| IBM® J9 VM - ビルド 2.9、JRE 1.8.0 | A：サポート対象 `[2]` |
-| IBM® J9 VM - ビルド 2.8、JRE 1.8.0 | A：サポート対象 `[2]` |
+| IBM® J9 VM - ビルド 2.9、JRE 1.8.0 | A：サポート対象 `[2]` |  |
+| IBM® J9 VM - ビルド 2.8、JRE 1.8.0 | A：サポート対象 `[2]` |  |
 | Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` | |
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
-1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
+1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。本番環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
    **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 および 21 は、[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements) でサポートされています。**
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
@@ -200,7 +200,7 @@ Adobe Experience Manager は、スタンドアロンサーバー（Quickstart JA
 
 ### サーバーオペレーティングシステム {#server-operating-systems}
 
-Adobe Experience Manager は、実稼動環境では次のサーバープラットフォームで動作します。
+Adobe Experience Manager は、本番環境では次のサーバープラットフォームで動作します。
 
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
@@ -214,7 +214,7 @@ Adobe Experience Manager は、実稼動環境では次のサーバープラッ�
 | Oracle Solaris™ 11 | Z：サポート対象外 |
 | IBM® AIX® 7.2 | Z：サポート対象外 |
 
-1. Linux® Kernel 2.6、3. x、4. x、5.x, 6.x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Formsのアドオン機能は、Red Hat® Enterprise Linux® 8 および Red Hat® Enterprise Linux® 9 でのみサポートされています。
+1. Linux® Kernel 2.6、3. x、4. x、5.x, 6.x および 9.x には Red Hat® ディストリビューションの派生 OS（Red Hat® Enterprise Linux®、Oracle Linux®、Amazon Linux® など）が含まれます。AEM Forms のアドオン機能は、Red Hat® Enterprise Linux® 8 と Red Hat® Enterprise Linux® 9 でのみサポートされています。
 2. AEM Forms は、Ubuntu 20.04 および SUSE® Linux® Enterprise Server 15 SP6（64 ビット版）でサポートされています。
 3. Adobe Managed Services でサポートされている Linux® ディストリビューション。
 
@@ -251,7 +251,7 @@ Adobe Experience Manager は、クラウドコンピューティング環境上�
 
 クラウドネイティブな環境の場合は、AEM 製品ラインの最新オファー、Adobe Experience Manager as a Cloud Service をご確認ください。詳しくは、[Adobe Experience Manager as a Cloud Service ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)を参照してください。
 
-アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/jp/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
+アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 
 AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、Azure Blob Storage や AWS S3 などのクラウドサービスが、このページに記載されている技術要件の一部としてサポートされている場合を除きます。
 

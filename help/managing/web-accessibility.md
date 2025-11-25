@@ -4,8 +4,8 @@ description: Adobe Experience Manager（AEM）と web アクセシビリティ�
 exl-id: db8785b9-09eb-444a-addc-74c520e710a9
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 100%
@@ -38,7 +38,7 @@ Adobe Experience Manager は、[World Wide Web Consortium](#world-wide-web-conso
 
 ## Web Content Accessibility Guidelines（WCAG）2.1 {#wcag-accessibility-guidelines}
 
-Web デザイナーや開発者がアクセシブルな Web サイトを作成できるように、[Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)は [2018 年 6 月に Web Content Accessibility Guidelines（WCAG）2.1](https://www.w3.org/TR/WCAG/) を発行しました。
+Web デザイナーや開発者がアクセシブルな web サイトを作成できるように、[Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)は [2018年6月に Web Content Accessibility Guidelines（WCAG）2.1](https://www.w3.org/TR/WCAG/) を発行しました。
 
 WCAG 2.1 では、[アクセシビリティレベルとそれらの準拠方法に関するガイドライン（および関連する成功基準）を提供](https://www.w3.org/TR/WCAG/#conformance)しています。
 

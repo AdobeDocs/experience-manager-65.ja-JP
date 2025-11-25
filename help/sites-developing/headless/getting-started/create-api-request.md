@@ -4,8 +4,8 @@ description: AEM Assets REST API を使用して、コンテンツフラグメ�
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%

@@ -8,10 +8,10 @@ exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
 solution: Experience Manager
 feature: Mobile
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 8%
+source-wordcount: '547'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 {{ue-over-mobile}}
 
-Adobe Experience Manager（AEM）のコンテンツは、[Sling デフォルトサーブレット &#x200B;](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) を使用して簡単にレンダリングし、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) やその他の形式をレンダリングできます。
+Adobe Experience Manager（AEM）のコンテンツは、[Sling デフォルトサーブレット ](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) を使用して簡単にレンダリングし、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) やその他の形式をレンダリングできます。
 
 これらの標準レンダリングは、通常、リポジトリをウォークして、コンテンツをそのまま返します。
 
@@ -33,7 +33,7 @@ Content Services のデフォルトレンダラーは、標準の Sling のデ�
 
 ## JSON のリクエスト {#requesting-json}
 
-**&lt;RESOURCE.caas[ を使用します。&lt;EXPORT-CONFIG][。&lt;EXPORT-CONFIG].json**:JSON をリクエストします。
+**&lt;RESOURCE.caas`[.<EXPORT-CONFIG][.&lt;DEPTH-INT&gt;]`.json** を使用して JSON をリクエストします。
 
 <table>
  <tbody>

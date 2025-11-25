@@ -7,8 +7,8 @@ role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 18dd655887293188224f51fa713d0345991d20d7
-workflow-type: ht
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+workflow-type: tm+mt
 source-wordcount: '2191'
 ht-degree: 100%
 
@@ -395,7 +395,7 @@ To configure the [!DNL Adobe Stock] cloud service:
 | --- | --- | --- | --- | --- | --- |
 | admin | 該当なし | すべて | 該当なし | はい | はい |
 | test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | はい | はい | はい |
-| test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | 不可 | エラー：データの読み込みに失敗しました | 不可 |
+| test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | 不可 | エラー：データの読み込みに失敗しました | いいえ |
 | test-doc1 | DAM ユーザー | **許可**：/conf/global /settings/stock     **拒否**：/cloud-config | Stock 設定が表示されません | はい | いいえ |
 
 

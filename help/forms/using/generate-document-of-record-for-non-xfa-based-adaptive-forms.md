@@ -9,10 +9,10 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '4308'
-ht-degree: 100%
+source-wordcount: '4307'
+ht-degree: 99%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドをカスタマイズするサポートが、AEM 6.5 Forms サービスパック 19（6.5.19.0）で導入されました。
+> アダプティブフォームエディターでアダプティブフォームフラグメントとそのフィールドをカスタマイズするサポートが、AEM 6.5 Forms サービスパック 19 （6.5.19.0）で導入されました。
 
 
 >[!NOTE]
@@ -105,7 +105,7 @@ ht-degree: 100%
    <th>アダプティブフォームコンポーネント</th>
    <th>対応する XFA コンポーネント</th>
    <th>レコードのドキュメントテンプレートにデフォルトで含まれるか。</th>
-   <th>備考</th>
+   <th>メモ</th>
   </tr>
   <tr>
    <td>ボタン</td>
@@ -195,7 +195,7 @@ ht-degree: 100%
   <tr>
    <th>アダプティブフォームコンポーネント</th>
    <th>対応する XFA コンポーネント</th>
-   <th>備考</th>
+   <th>メモ</th>
   </tr>
   <tr>
    <td>パネル<br /> </td>
@@ -207,10 +207,10 @@ ht-degree: 100%
 
 ### 静的コンポーネント {#static-components}
 
-| アダプティブフォームコンポーネント | 対応する XFA コンポーネント | 備考 |
+| アダプティブフォームコンポーネント | 対応する XFA コンポーネント | メモ |
 |---|---|---|
 | 画像 | 画像 | レコードのドキュメントの設定を使用して除外しない限り、TextDraw と Image の各コンポーネントは、連結されているかどうかを問わず、XSD ベースのアダプティブフォーム用のレコードのドキュメントに常に表示されます。 |
-| テキスト | テキスト |
+| テキスト | テキスト |  |
 
 >[!NOTE]
 >
@@ -533,5 +533,5 @@ XCI ファイルは、ドキュメントの様々なプロパティを設定す�
 
 1. XCI ファイルをローカル開発環境にアップロードします。
 1. <!--Cloud Service SDK--> Configuration Manager を開きます。<!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
-1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネル]**」の設定を検索して開きます。
+1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブなコミュニケーション Web チャネル]**」の設定を検索して開きます。
 1. XCI ファイルのパスを指定し、「**[!UICONTROL 保存]**」をクリックします。

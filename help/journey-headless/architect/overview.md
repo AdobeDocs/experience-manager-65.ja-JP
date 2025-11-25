@@ -4,8 +4,8 @@ description: AEM の強力で柔軟なヘッドレス機能とその能力およ
 exl-id: 44c58ece-225e-4361-929c-faa110fe2842
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 100%
@@ -36,7 +36,7 @@ AEM の強力で柔軟なヘッドレス機能とその能力および初めて�
 
 AEM を使用してヘッドレスビジネスケースを解決する方法をアドビがどのように推奨しているかを理解するには、[AEM ヘッドレスジャーニー](/help/journey-headless/overview.md)がその出発点になります。
 
-## 対象読者 {#audience}
+## オーディエンス {#audience}
 
 このジャーニーは、コンテンツアーキテクトのペルソナ向けに設計されています。コンテンツアーキテクトは、コンテンツの構造を定義します。これらの定義は、コンテンツ作成者が実際のコンテンツを作成する際に使用します。
 

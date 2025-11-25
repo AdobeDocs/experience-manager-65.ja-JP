@@ -4,8 +4,8 @@ description: ヘッドレスコンテンツ配信用の Adobe Experience Manager
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1949'
 ht-degree: 100%
@@ -339,4 +339,4 @@ AEM UI または API を使用して、コンテンツフラグメントとそ�
 
 GraphQL クエリの処理は検索クエリの処理と似ており、単純な GET-all-content API リクエストよりも大幅に複雑です。
 
-管理対象の非実稼動環境でクエリを慎重に計画、テスト、最適化することが、後で実稼動環境で使用する際に成功するための鍵となります。
+管理対象の非本番環境でクエリを慎重に計画、テスト、最適化することが、後で本番環境で使用する際に成功するための鍵となります。

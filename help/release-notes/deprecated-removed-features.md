@@ -5,8 +5,8 @@ exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: bd29ae46ead836e16362ad3a9a63bb31548415ff
-workflow-type: ht
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ ht-degree: 100%
 | Sites | [SPA Editor](/help/sites-developing/spa-editor-deprecation.md) | ヘッドレスのユースケースでは、ビジュアル編集用の[ユニバーサルエディター](/help/sites-developing/universal-editor/introduction.md)、またはフォームベース編集用の[コンテンツフラグメントエディター](/help/sites-developing/universal-editor/introduction.md)を活用します。 | 6.5.23 |
 | Sites | **Adobe AEM Managed Polling Configuration** サービス：`com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | **Adobe AEM Analytics Report Sling Importer** サービス。詳しくは、 Adobe Analytics への接続とフレームワークの作成 - [読み込み間隔の設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)を参照してください。 | 6.5.19.0 |
 | Screens | Adobe Experience Manager（AEM）の ActiveMQ。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。 | アドビでは、現在ロードバランサーを使用することを推奨しています。 | 6.5.18.0 |
-| **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 |   | 6.5.11.0 |
+| **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 | |  | 6.5.11.0 |
 | [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | 現在の[モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud 統合 | AEM／Creative Cloud フォルダー共有は、AEM 6.2 で導入されました。これにより、クリエイティブユーザーが AEM のアセットにアクセスできるようになり、アセットを [!DNL Creative Cloud] アプリケーションで開いたり、AEM に新しいファイルをアップロードまたは変更を保存したりできるようになります。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが向上し、Photoshop、InDesign および Illustrator 内から AEM のアセットへの直接アクセスが強化されています。AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。この機能は AEM に含まれてはいますが、代替ソリューションを使用することをお勧めします。 | Adobe Asset Link や AEM Desktop App などの新しい Creative Cloud 統合機能に切り替えることをお勧めします。 |  |
 | Assets | `AssetDownloadServlet` は、パブリッシュインスタンスに対してデフォルトで無効になっています。詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 | 設定について詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 |  |
@@ -58,7 +58,7 @@ ht-degree: 100%
 | デベロッパー向け | `Granite.Sling.js` クライアントライブラリ。アドビでは今後、配布版（クイックスタート）の一部として含まれている Granite.Sling.js クライアントライブラリの機能強化を行う予定はありません。 | このライブラリの機能に頼っている場合は、それを使用しないようにコードをリファクタリングすることをお勧めします。 |  |
 | デベロッパー向け | YUI を使用した JavaScript クライアントライブラリの圧縮／軽量化。アドビでは、YUI ライブラリを今後更新する予定はありません。AEM 6.4 までは、JavaScript を軽量化するデフォルトの手段は YUI で、Google Closure Compiler（GCC）に切り替えるオプションもありました。AEM 6.5 以降は、GCC がデフォルトになっています。 | AEM 6.5 にアップグレードする場合は、GCC に切り替えることをお勧めします。 |  |
 | デベロッパー向け | CRXDE Lite のクラシック UI ダイアログエディター。アドビでは、配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能を今後強化する予定はありません | 代替手段はありません。 |  |
-| Forms | AEM Forms と AEM Mobile の統合は非推奨（廃止予定）となりました。 | 代替手段はありません。 |
+| Forms | AEM Forms と AEM Mobile の統合は非推奨（廃止予定）となりました。 | 代替手段はありません。 |  |
 | デベロッパー向け | CRXDE Lite のクラシック UI ダイアログエディター。アドビでは、配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能を今後強化する予定はありません | 代替機能はありません。 |  |
 | デベロッパー向け | Lodash／underscore クライアントライブラリ。アドビでは今後、配布版（クイックスタート）の一部として含まれている Lodash／underscore クライアントライブラリの保守や更新を行う予定はありません。 | コードに Lodash／underscore が引き続き必要な場合は、このクライアントライブラリをプロジェクトコードベースに追加することをお勧めします。 |  |
 
@@ -72,13 +72,13 @@ ht-degree: 100%
 | [!DNL Experience Cloud] との統合 | [!DNL Adobe I/O] 経由での設定を使用して、アセットを [!DNL Experience Cloud] と同期できます。[!DNL Adobe Experience Cloud] は、以前は [!DNL Adobe Experience Cloud] と呼ばれていました。 | 質問がある場合は、[アドビカスタマーサポートまでお問い合わせください](https://experienceleague.adobe.com/ja?support-solution=General#support)。 |  |
 | Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を使用してください。 |  |
 | 統合 | ExactTarget の統合は、デフォルトの配布（クイックスタート）から削除され、使用できなくなりました。 | 代替手段はありません。 |  |
-| 統合 | Salesforce Force API との統合はデフォルトの配布版（クイックスタート）から削除され、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からインストールする追加パッケージになりました。 | 機能は引き続き利用できます。 |
+| 統合 | Salesforce Force API との統合はデフォルトの配布版（クイックスタート）から削除され、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からインストールする追加パッケージになりました。 | 機能は引き続き利用できます。 |  |
 | Forms | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートが削除されました。 | 代替機能はありません. |  |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 代替機能はありません. |  |
 | Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 代替機能はありません |  |
 | Forms | LiveCycle ES4 SP1 から JEE での AEM 6.5 Forms へ直接アップグレードすることはできません | 詳しくは、AEM Forms のアップグレードに関するドキュメントの[使用可能なアップグレードパス](../forms/using/upgrade.md)を参照してください。 |  |
 | Forms | JEE 上の AEM Forms で、UPD ベースのクラスタリングがサポートされなくなりました。 | JEE 上の AEM Forms で使用できるのは、TCP ベースのクラスタリングのみです。UDP マルチキャストサーバーを以前のバージョンから JEE での AEM 5.5 Forms にアップグレードする場合は、手動設定を実行して、TCP ベースの GemFire クラスタリングに切り替えます。詳しい手順については、[JEE での AEM 6.5 Forms へのアップグレード](../forms/using/upgrade-forms-jee.md)を参照してください。 |  |
-| デベロッパー向け | デフォルトの配布版（クイックスタート）から Firebug Lite が削除されました | ブラウザー組み込みのデベロッパーコンソールを使用してください |
+| デベロッパー向け | デフォルトの配布版（クイックスタート）から Firebug Lite が削除されました | ブラウザービルトインのデベロッパーコンソールを使用してください |  |
 | デベロッパー向け | HTML クライアントライブラリマネージャーで `customJavaScriptPath` がサポートされなくなりました。 | 代替機能はありません |  |
 | [!DNL Assets] | アセットのオフロード機能は、[!DNL Adobe Experience Manager] 6.5 でサポートされなくなりました。 | 代替機能はありません。 |  |
 | キャッシュ | `system/console/slingjsp` は削除され、AEM 6.5 では使用できなくなりました。 | クラスとわずかなキャッシュが、Apache Sling Commons FileSystem ClassLoader バンドルに格納されています。AEM web コンソールでバンドル番号を確認し、ファイルシステムから直接キャッシュフォルダーを削除できます（`crx-quickstart/launchpad/felix/bundle<ID>`）。 |  |

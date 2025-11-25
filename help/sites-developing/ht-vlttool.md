@@ -9,7 +9,7 @@ exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2687'
 ht-degree: 100%
@@ -443,7 +443,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | ホットフィックスのリンクの printf の形式（名前、ID）。例：`[CQ520_HF_%s|%s]` |
+| `-l (--linkFormat) <format>` | ホットフィックスのリンクの printf の形式（名前、ID）。例：`[CQ520_HF_%s\|%s]` |
 | `-v (--verbose)` | 詳細 Output |
 | `-q (--quiet)` | 最小限に抑えた出力 |
 | `<localPaths> [<localPaths> ...]` | ローカルパス |

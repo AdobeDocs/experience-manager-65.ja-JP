@@ -5,8 +5,8 @@ contentOwner: carlino
 exl-id: 3a483b9d-627a-41d3-8ac1-66f9c5e89ad5
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
-role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 100%
@@ -19,7 +19,7 @@ ht-degree: 100%
 >
 >以下のセクションでは GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に当てはまります。
 
-データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。[アドビプライバシーセンターの GDPR ページ](https://business.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
+データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。[アドビプライバシーセンターの GDPR ページ](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >

@@ -2,14 +2,14 @@
 title: アセットのアップロード制限を設定する
 description: ユーザーがアップロードできるアセット（ファイル）のタイプを制限する
 contentOwner: AG
-role: Developer, Admin, Architect
+role: Developer, Admin
 feature: Asset Management,Upload
 exl-id: 0e009b9a-54c4-4715-98ee-0207839f90f6
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 
