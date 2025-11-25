@@ -246,12 +246,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
-* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
+* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
+* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
@@ -435,7 +435,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 このような優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更が行われました。
 

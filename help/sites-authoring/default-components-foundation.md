@@ -1415,7 +1415,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 
 >[!NOTE]
 >
->カスタムアップロードコンポーネントを作成して、Sling サーブレットにファイルをアップロードできます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?lang=ja)を参照してください。
+>カスタムアップロードコンポーネントを作成して、Sling サーブレットにファイルをアップロードできます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?profile.language=ja&lang=ja)を参照してください。
 
 ### 非表示のフィールド {#hidden-field}
 
