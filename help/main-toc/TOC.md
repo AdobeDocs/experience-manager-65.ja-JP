@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 61d2291418653a8d4f0c805d3722691cbbf8e1c0
 workflow-type: tm+mt
 source-wordcount: '7562'
 ht-degree: 99%
@@ -343,7 +343,7 @@ ht-degree: 99%
 + Assets {#assets}
    + [DAM について](/help/assets/assets.md)
    + [Assets のベストプラクティス](/help/assets/best-practices-for-assets.md)
-   + [&#x200B; [!DNL Assets] でのアクセシビリティ](/help/assets/accessibility.md)
+   + [ [!DNL Assets] でのアクセシビリティ](/help/assets/accessibility.md)
    + Experience Manager Assets の使用 {#using}
       + [[!DNL Assets] のホームページエクスペリエンス](/help/assets/assets-home-page.md)
       + [デジタルアセットの検索](/help/assets/search-assets.md)
@@ -412,14 +412,14 @@ ht-degree: 99%
       + [一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)
       + [セレクターを操作する](/help/assets/working-with-selectors.md)
    + Assets の拡張 {#extending}
-      + [&#x200B; [!DNL Assets] のカスタマイズと拡張](/help/assets/extending-assets.md)
+      + [ [!DNL Assets] のカスタマイズと拡張](/help/assets/extending-assets.md)
       + [メディアハンドラーとワークフローを使用したアセットの処理](/help/assets/media-handlers.md)
       + [検索機能の拡張](/help/assets/searchx.md)
-      + [&#x200B; [!DNL Assets] と連携して使用する  [!DNL ImageMagick]  のインストールと設定](/help/assets/best-practices-for-imagemagick.md)
+      + [ [!DNL Assets] と連携して使用する  [!DNL ImageMagick]  のインストールと設定](/help/assets/best-practices-for-imagemagick.md)
       + [Assets とアクティビティストリームの統合](/help/assets/extending-activity-stream.md)
       + [アセットエディターの拡張](/help/assets/asseteditorx.md)
       + [[!DNL Assets] HTTP API](/help/assets/mac-api-assets.md)
-      + [&#x200B; [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md)
+      + [ [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md)
       + [コンテンツフラグメント用 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
       + [GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)
@@ -447,7 +447,7 @@ ht-degree: 99%
       + [PDF ラスタライザを使用](/help/assets/aem-pdf-rasterizer.md)
       + [アップロード制限の設定](/help/assets/configuring-asset-upload-restrictions.md)
       + [[!DNL Experience Manager] と  [!DNL Creative Cloud]  の統合](/help/assets/aem-cc-integration-best-practices.md)
-      + [&#x200B; [!DNL InDesign Server] との統合](/help/assets/indesign.md)
+      + [ [!DNL InDesign Server] との統合](/help/assets/indesign.md)
       + [Assets の Digital Rights Management](/help/assets/drm.md)
       + [Assets Insights でのデモパッケージの使用](/help/assets/use-demo-package-for-asset-insights.md)
       + [Adobe Asset Link の設定](/help/assets/configure-asset-link.md)
@@ -461,10 +461,10 @@ ht-degree: 99%
       + [アセットの透かしの設定](/help/assets/watermarking.md)
       + [アセットテンプレート](/help/assets/asset-templates.md)
    + Brand Portal {#brandportal}
-      + [&#x200B; [!DNL Assets]  での [!DNL Brand Portal]の設定](/help/assets/configure-aem-assets-with-brand-portal.md)
-      + [&#x200B; [!DNL Brand Portal] へのアセットの公開](/help/assets/brand-portal-publish-assets.md)
-      + [&#x200B; [!DNL Brand Portal] へのフォルダーの公開](/help/assets/brand-portal-publish-folder.md)
-      + [&#x200B; [!DNL Brand Portal] へのコレクションの公開](/help/assets/brand-portal-publish-collection.md)
+      + [ [!DNL Assets]  での [!DNL Brand Portal]の設定](/help/assets/configure-aem-assets-with-brand-portal.md)
+      + [ [!DNL Brand Portal] へのアセットの公開](/help/assets/brand-portal-publish-assets.md)
+      + [ [!DNL Brand Portal] へのフォルダーの公開](/help/assets/brand-portal-publish-folder.md)
+      + [ [!DNL Brand Portal] へのコレクションの公開](/help/assets/brand-portal-publish-collection.md)
    + コンテンツフラグメント {#content-fragments}
       + [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
       + [コンテンツフラグメントと GraphQL のヘッドレス配信](/help/assets/content-fragments/content-fragments-graphql.md)
@@ -501,9 +501,9 @@ ht-degree: 99%
       + [プライベートフォルダーの共有](/help/assets/private-folder.md)
       + [ビデオレンディション](/help/assets/video-renditions.md)
    + 他のソリューションとの統合 {#integrations}
-      + [&#x200B; [!DNL Adobe Workfront] との統合](/help/assets/workfront-integrations.md)
-      + [&#x200B; [!DNL Workfront] への  [!DNL enhanced connector]  のインストール](/help/assets/workfront-connector-install.md)
-      + [&#x200B; [!DNL Workfront] への  [!DNL enhanced connector]  の設定](/help/assets/workfront-connector-configure.md)
+      + [ [!DNL Adobe Workfront] との統合](/help/assets/workfront-integrations.md)
+      + [ [!DNL Workfront] への  [!DNL enhanced connector]  のインストール](/help/assets/workfront-connector-install.md)
+      + [ [!DNL Workfront] への  [!DNL enhanced connector]  の設定](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
    + リリースノート {#release-notes-new-features}
       + [新機能](/help/forms/using/whats-new.md)
@@ -1099,7 +1099,7 @@ ht-degree: 99%
       + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
       + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [HTML5 フォームの Form Bridge API](/help/forms/using/form-bridge-apis.md)
-      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)
+      + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [アセンブラーサービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
       + [ワークベンチヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
       + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
@@ -1217,7 +1217,7 @@ ht-degree: 99%
       + [AEM Forms on JEE での XXE、設定、リモートコード実行の脆弱性の軽減](/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md)
       + [XFA ベースの PDF フォームとポリシーで保護されたドキュメントに関する表示の問題](/help/forms/using/xfa-pdf-forms-policy-protected-documents-not-displayed.md)
       + [Firefox と Chrome で XFA ベースの PDF フォームを開く方法](/help/forms/using/xfa-forms-firefox-chrome.md)
-      + [BlazeDS での XML 外部エンティティ（XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blaze-ds.md)
+      + [BlazeDS での XML 外部エンティティ（XXE）の脆弱性](/help/forms/using/xxe-vulnerability-blazeds.md)
       + [JEE WebLogic Server での EAR デプロイメントの失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
    + レガシードキュメント {#legacy-documentation}
       + [JEE ワークベンチ上の AEM Forms の Execute Script サービスを使用した XML データの作成](/help/forms/developing/building-xml.md)
