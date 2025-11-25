@@ -9,11 +9,11 @@ docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '4825'
-ht-degree: 100%
+source-wordcount: '4832'
+ht-degree: 99%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->**テンプレートエディター**&#x200B;は、テンプレートレベルで直接ターゲット設定をサポートしません。編集可能テンプレートに基づいて作成されたページは、ターゲット設定できますが、テンプレート自体はできません。
+>**テンプレートエディター**&#x200B;は、テンプレートレベルで直接ターゲティングをサポートしません。編集可能テンプレートに基づいて作成されたページは、ターゲット設定できますが、テンプレート自体はできません。
 
 >[!CAUTION]
 >
@@ -123,7 +123,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 * **テンプレート**&#x200B;コンソールを使用します。これは、**ツール**&#x200B;コンソールの「**一般**」セクションにあります。
 
-   * または、直接アクセスします（例：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)）。
+   * または、[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf) に直接アクセスします
 
 * 必要に応じて、[テンプレート用のフォルダーを作成](#creating-a-template-folder-admin)できます。
 * [テンプレートを作成](#creatinganewtemplateauthor)、（最初は空の状態）
@@ -504,7 +504,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
   ***ポリシー***
 
-  コンテンツ（またはデザイン）ポリシーは、コンポーネントのデザインプロパティを定義するものです。例えば、使用できるコンポーネントや最小／最大サイズを定義できます。これらのポリシーは、テンプレート（およびテンプレートを使用して作成されたページ）に適用できます。
+  コンテンツ（またはデザイン）ポリシーは、コンポーネントのデザインプロパティを定義するものです。例えば、使用できるコンポーネントや最小／最大サイズを定義できます。これらのポリシーは、テンプレート（および、そのテンプレートを使用して作成されるページ）に適用されます。
 
   **ポリシー**&#x200B;の下で、既存のポリシーを選択して、ドロップダウンからコンポーネントに適用できます。これは、ウィンドウの一般使用の場合と同じく機能します。
 

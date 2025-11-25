@@ -8,9 +8,9 @@ content-type: reference
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 41da3aef16e650d8dc33e96991d0a997564c9224
-workflow-type: ht
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '1853'
 ht-degree: 100%
 
@@ -208,7 +208,7 @@ AEM では、デバイスの幅に応じたレイアウトを定義できます�
 
 * [ツールバーのモードメニュー](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して&#x200B;**レイアウト**&#x200B;モードを選択する。
 
-   * **編集**&#x200B;モードまたは&#x200B;**ターゲット設定**&#x200B;モードに切り替える場合と同様に、**レイアウト**&#x200B;モードを選択します。
+   * **編集**&#x200B;モードまたは&#x200B;**ターゲティング**&#x200B;モードに切り替える場合と同様に、**レイアウト**&#x200B;モードを選択します。
    * **レイアウト**&#x200B;モードは持続され、モードセレクターで別のモードを選択するまで、**レイアウト**&#x200B;モードのままです。
 
 * [個別のコンポーネントを編集する](/help/sites-authoring/editing-content.md#edit-component-layout)。

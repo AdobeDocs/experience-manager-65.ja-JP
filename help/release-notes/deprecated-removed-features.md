@@ -4,8 +4,8 @@ description: リリースノート（Adobe Experience Manager 6.5 の廃止さ�
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 100%

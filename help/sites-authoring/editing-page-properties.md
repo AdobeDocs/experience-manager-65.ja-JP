@@ -4,10 +4,10 @@ description: Adobe Experience Manager でページに必要なプロパティを
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 mini-toc-levels: 2
-source-git-commit: d0515a6a3d08e181eada4a22e0d128305148e6ea
-workflow-type: ht
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '2477'
 ht-degree: 100%
 
@@ -85,7 +85,7 @@ ht-degree: 100%
 
 このページのバニティ URL を入力して、より短い URL や、より表現力のある URL を指定できます。
 
-例えば、web サイト `http://example.com,` のパス `/v1.0/startpage` で特定されるページに対して、バニティー URL が `welcome` に設定されている場合、`http://example.com/content/v1.0/startpage` のバニティー URL は `http://example.com/welcome` となります。
+例えば、web サイト `http://example.com,` のパス `/v1.0/startpage` で特定されるページに対して、バニティ URL が `welcome` に設定されている場合、`http://example.com/content/v1.0/startpage` のバニティ URL は `http://example.com/welcome` となります。
 
 >[!CAUTION]
 >
@@ -95,11 +95,11 @@ ht-degree: 100%
 >* 正規表現パターンはサポートしていません。
 >* 既存のページには設定しないでください。
 
-バニティー URL へのアクセスを有効にするように Dispatcher を設定します。詳しくは、 [バニティ URL へのアクセスの有効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
+バニティ URL へのアクセスを有効にするように Dispatcher を設定します。詳しくは、 [バニティ URL へのアクセスの有効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
 
 * **追加** - タップまたはクリックして、バニティ URL を追加します。
 * **削除** - タップまたはクリックして、バニティ URL を削除します。
-  **バニティー URL をリダイレクト** - ページでバニティー URL を使用するか、ページの実際の URL にリダイレクトするかを示します。
+  **バニティ URL をリダイレクト** - ページでバニティ URL を使用するか、ページの実際の URL にリダイレクトするかを示します。
 
 ### 詳細 {#advanced}
 
@@ -188,7 +188,7 @@ ht-degree: 100%
 
 #### ターゲティング設定 {#targeting}
 
-[ブランドを選択してターゲット設定の範囲](/help/sites-authoring/target-adobe-campaign.md)を選択します。
+[ブランドを選択してターゲティングの範囲](/help/sites-authoring/target-adobe-campaign.md)を選択します。
 
 >[!NOTE]
 >このオプションを使用するには、ユーザーアカウントが `Target Adminstrators` グループに属している必要があります。

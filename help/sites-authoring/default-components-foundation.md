@@ -4,8 +4,8 @@ description: Adobe Experience Manager 6.5 の基盤コンポーネントにつ�
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '6873'
 ht-degree: 100%
@@ -699,7 +699,7 @@ Flash コンポーネントを使用すると、Flash ムービーを読み込�
 
 ![dc_search_use](assets/dc_search_use.png)
 
-次に、スペルミスがあり使用できない検索用語の例を示します。
+次に、スペルミスがあり使用できない検索語の例を示します。
 
 ![dc_search_usenotfound](assets/dc_search_usenotfound.png)
 
@@ -1415,7 +1415,7 @@ Captcha コンポーネントでは、画面に表示される英数字の文字
 
 >[!NOTE]
 >
->カスタムアップロードコンポーネントを作成して、Sling サーブレットにファイルをアップロードできます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?profile.language=ja&lang=ja)を参照してください。
+>カスタムアップロードコンポーネントを作成して、Sling サーブレットにファイルをアップロードできます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?lang=ja)を参照してください。
 
 ### 非表示のフィールド {#hidden-field}
 

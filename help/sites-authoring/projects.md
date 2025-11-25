@@ -4,11 +4,11 @@ description: プロジェクトを使用すると、リソースを 1 つのエ�
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Projects
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -234,7 +234,7 @@ ht-degree: 100%
 
 プロジェクトの使用の詳細については、次の追加ドキュメントを参照してください。
 
-* [プロジェクトの管理 ](/help/sites-authoring/touch-ui-managing-projects.md)
+* [プロジェクトの管理](/help/sites-authoring/touch-ui-managing-projects.md)
 * [タスクの操作](/help/sites-authoring/task-content.md)
 * [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)
 * [クリエイティブプロジェクトと PIM 統合](/help/sites-authoring/managing-product-information.md)

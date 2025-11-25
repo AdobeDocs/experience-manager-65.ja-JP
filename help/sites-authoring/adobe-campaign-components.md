@@ -9,10 +9,10 @@ docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 index: false
-source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
-workflow-type: ht
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '2857'
 ht-degree: 100%
 
@@ -462,7 +462,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 このドロップダウンリストを使用すると、受信者の性別やステータスなどのオプションを選択できます。
 
-オプションフィールド（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を使用できます。ドロップダウンリストに値を入力するには、Adobe Campaign の記号をクリックまたはタップして Adobe Campaign のパーソナライゼーションフィールドに移動して、適切なフィールドを選択します。
+オプションフィールド（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を使用できます。ドロップダウンリストに値を入力するには、Adobe Campaign のシンボルをクリックまたはタップして Adobe Campaign のパーソナライゼーションフィールドに移動して、適切なフィールドを選択します。
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 

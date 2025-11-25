@@ -4,8 +4,8 @@ description: Adobe Experience Manager 6.5 での作業に使用するインタ�
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 100%
@@ -70,7 +70,7 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
   >
   >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
-  このオプションが有効になっている場合は、該当するコンソールにマウスを移動するたびに、アイコン（モニターの記号）が表示されます。これをタップまたはクリックすると、適切な場所がクラシック UI で開きます。
+  このオプションが有効になっている場合は、該当するコンソールにマウスを移動するたびに、アイコン（モニターシンボル）が表示されます。これをタップまたはクリックすると、適切な場所がクラシック UI で開きます。
 
   例えば、**Sites** から **siteadmin** へのリンクなどです。
 

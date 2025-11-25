@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.5 でコンテンツページを公開�
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 2a843cefdd881e3cab60b2ddba12a26d0a498d13
-workflow-type: ht
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '1701'
 ht-degree: 100%
 
@@ -25,13 +25,13 @@ ht-degree: 100%
 >公開に関する特定の用語は混同されることがあります。
 >
 >* **公開／非公開**
->  >  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
+>  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
 >
 >* **アクティブ化／非アクティブ化**
->  >  公開／非公開と同義です。
+>  公開／非公開と同義です。
 >
 >* **レプリケート／レプリケーション**
->  >  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
+>  これらは、ユーザーコメントの公開やリバースレプリケーションの際などに行われる、ある環境から別の環境へのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
 
 ## 特権が不十分 {#insufficient-privileges}
 
@@ -81,7 +81,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。エディターの「公開」オプションは、実際のパスを介してアクセスしたページでのみ使用できます。
 
 ### コンソールからの公開 {#publishing-from-the-console}
 
@@ -216,7 +216,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは、非公開にできません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは、非公開にできません。エディターの「公開」オプションは、実際のパスを介してアクセスしたページでのみ使用できます。
 
 ### コンソールから非公開にする {#unpublishing-from-the-console}
 

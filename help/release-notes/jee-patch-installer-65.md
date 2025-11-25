@@ -7,8 +7,8 @@ hide: true
 hidefromtoc: true
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 100%
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->詳細情報またはパッチの入手については、[サポートにお問い合わせ](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)ください。
+>詳細情報またはパッチの入手については、[サポートにお問い合わせ](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)ください。
 
 ## パッチインストーラーについて {#about-the-patch-installer}
 
@@ -97,4 +97,4 @@ SAML 認証を設定済みで、大きな IDP メタデータに関する問題�
 * Document Security
 * Foundation JEE
 
-[サポートへのお問い合わせ](https://experienceleague.adobe.com/ja?support-solution=General&amp;lang=ja&amp;support-tab=home#support)
+[サポートへのお問い合わせ](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)

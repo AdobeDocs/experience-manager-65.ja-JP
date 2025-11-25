@@ -4,9 +4,9 @@ description: Adobe Experience Manager でページのバージョンを作成、
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: d2e2f330dadb7c327324e53a17e8398ef3a473a9
-workflow-type: ht
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 100%
 

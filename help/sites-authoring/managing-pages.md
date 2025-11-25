@@ -4,9 +4,9 @@ description: Adobe Experience Manager を使用したページの作成と管理
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 383192083ec84176f67882a869550374f6074eef
-workflow-type: ht
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '2476'
 ht-degree: 100%
 
@@ -148,7 +148,7 @@ We.Retail サイトの例を次に示します。ハイキングショーツの�
 
 AEM では、テンプレートはページの特殊なタイプを指定します。テンプレートは、作成中のあらゆる新規ページの基礎として使用されます。
 
-テンプレートによって、サムネール画像やその他のプロパティなど、ページの構造が定義されます。例えば、商品ページ、サイトマップおよび問い合わせ先に、それぞれ別のテンプレートを使用することができます。テンプレートは、[コンポーネント](#components)で構成されています。
+テンプレートによって、サムネール画像やその他のプロパティなど、ページの構造が定義されます。例えば、製品ページ、サイトマップおよび問い合わせ先に、それぞれ別のテンプレートを使用することができます。テンプレートは、[コンポーネント](#components)で構成されています。
 
 AEM では、複数のテンプレートが標準提供されています。使用できるテンプレートは、個々の web サイトによって異なります。主なフィールドは次のとおりです。
 

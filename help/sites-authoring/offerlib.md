@@ -1,5 +1,5 @@
 ---
-title: オファーの作成と管理
+title: 'オファーの作成と管理 '
 description: アクティビティエクスペリエンスで使用するオファーを作成するには、オファーコンソールを使用します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 34293432-cfdc-466b-96bd-2c43b566a420
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 100%

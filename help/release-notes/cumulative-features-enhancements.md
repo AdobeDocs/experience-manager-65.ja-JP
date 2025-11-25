@@ -4,11 +4,11 @@ description: 以前の 8 つのサービスパックリリースから Adobe Exp
 content-type: reference
 docset: aem65
 feature: Release Information
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 01fe5b53-2244-445f-a4d0-bd58ea38b611
 solution: Experience Manager
-source-git-commit: eef3ad559612c338de0c4232aadc4133c910aaf8
-workflow-type: ht
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '3109'
 ht-degree: 100%
 
@@ -59,7 +59,7 @@ IPTC タブは、[!UICONTROL 代替テキスト]と[!UICONTROL 詳細な説明]�
 
 #### AEM Forms の新しい GA 機能 {#ga-aem-forms-sp22}
 
-* [インタラクティブ通信の Batch API](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) でフォント埋め込みを有効にするサポートの追加 - インタラクティブ通信には、Batch API で生成された PDF に Adobe Ming および Adobe Myungjo フォントを埋め込むサポートが含まれるようになりました。 この機能強化により、フォントサブセットを使用している場合でも、生成されたドキュメントで正確なテキストレンダリングが確保され、PDF 出力での多言語コンテンツのサポートが向上します。
+* [インタラクティブなコミュニケーションの Batch API](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) でフォント埋め込みを有効にするサポートの追加 - インタラクティブなコミュニケーションには、Batch API で生成された PDF に Adobe Ming および Adobe Myungjo フォントを埋め込むサポートが含まれるようになりました。 この機能強化により、フォントサブセットを使用している場合でも、生成されたドキュメントで正確なテキストレンダリングが確保され、PDF 出力での多言語コンテンツのサポートが向上します。
 
 * [PDF アクセシビリティに対する Table of Content API](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api) - OSGi 上の AEM Forms では、アクセシビリティ標準の PDF を強化する新しい TOC Tag API をサポートするようになりました。 これにより、支援テクノロジーを使用するユーザーが PDF にアクセスしやすくなります。
 

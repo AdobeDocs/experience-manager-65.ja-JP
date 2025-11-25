@@ -8,15 +8,15 @@ topic-tags: personalization
 exl-id: fc6fccba-41c5-4c13-aac0-b4ef67767abe
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
-role: User,Admin,Architect,Developer
-source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
-workflow-type: ht
-source-wordcount: '421'
-ht-degree: 100%
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Adobe Campaign のターゲット設定 {#targeting-your-adobe-campaign}
+# Adobe Campaign のターゲティング{#targeting-your-adobe-campaign}
 
 Adobe Campaign のニュースレターのターゲット設定を行うには、まずセグメント化を設定する必要があります（セグメント化の設定は、クラシック UI でのみ使用可能です）（ClientContext）。その後、Adobe Campaign 用のターゲット設定されたエクスペリエンスを作成できます。ここでは、この両方について説明します。
 
@@ -40,7 +40,7 @@ Adobe Campaign のニュースレターのターゲット設定を行うには�
 1. セグメントを作成し（例えば、男性ユーザーをターゲットにするセグメントを作成するには、作成した「Male」というセグメントの下にページを作成します）、**セグメント（Adobe Campaign）**&#x200B;テンプレートを選択します。
 1. 作成したセグメントページを開き、サイドキックからそのページに&#x200B;**セグメント ID** をドラッグ＆ドロップします。
 1. 特性をダブルクリックし、このセグメント（この例では、Adobe Campaign で定義されている男性セグメント）を表す ID（「**MALE**」など）を入力して、「**OK**」をクリックします。次のメッセージ「*`targetData.segmentCode == "MALE"`*」が表示されます。
-1. 同じステップを繰り返して、別のセグメント（例えば女性ユーザーをターゲットにするセグメント）を作成します。
+1. 同じステップを繰り返して、別のセグメント（例えば女性ユーザーをターゲティングしたセグメント）を作成します。
 
 ### ブランドの作成 {#creating-a-brand}
 

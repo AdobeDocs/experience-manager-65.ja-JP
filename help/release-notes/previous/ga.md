@@ -4,9 +4,9 @@ description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: ht
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
 source-wordcount: '4477'
 ht-degree: 100%
 
@@ -246,12 +246,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
-* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
+* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
+* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
@@ -421,12 +421,12 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられています。主なものは次のとおりです。
 
 * 送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できるトランザクションレポート
-* インタラクティブ通信の操作性の向上
+* インタラクティブなコミュニケーションの操作性の向上
 * アダプティブフォームでのクラウドベースの電子署名
-* AEM Sites の単一ページアプリケーション（SPA）へのアダプティブフォームやインタラクティブコミュニケーションの埋め込み。
+* AEM Sites の単一ページアプリケーション（SPA）へのアダプティブフォームやインタラクティブなコミュニケーションの埋め込み。
 * AEM ワークフローでの変数のサポート
-* インタラクティブ通信でのデータ表示パターンのサポート
-* アダプティブフォームとインタラクティブ通信テーブルの並べ替え
+* インタラクティブなコミュニケーションでのデータ表示パターンのサポート
+* アダプティブフォームとインタラクティブなコミュニケーションテーブルの並べ替え
 * フォームデータモデルの入力データの自動検証
 
 新機能や機能強化、ドキュメントのリソースについては、[AEM 6.5 Forms の新機能および機能強化の概要](/help/forms/using/whats-new.md)を参照してください。
@@ -435,7 +435,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 このような優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更が行われました。
 
@@ -565,7 +565,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * （WebSphere® 上の AEM Forms のみ）**ユーザー名**&#x200B;を検索条件として&#x200B;**管理者**&#x200B;を検索する場合、**Forms Workflow**／**タスク検索**&#x200B;を実行しても結果が返されません。（CQ-4266457）
 
 * AEM Forms では、JPEG 圧縮の TIF および TIFF ファイルを PDF ドキュメントに変換できません（CQ-4265972）
-* 「**AEM Forms アセットスキャナー**」オプションと「**レターからインタラクティブ通信への移行**」オプションが、**AEM Forms の移行**&#x200B;ページで機能しません。（CQ-4266572）
+* 「**AEM Forms アセットスキャナー**」オプションと「**レターからインタラクティブなコミュニケーションへの移行**」オプションが、**AEM Forms の移行**&#x200B;ページで機能しません。（CQ-4266572）
 
 * （JBoss® 7のみ）AEM Forms を以前のバージョンから 6.5 にアップグレードするとき、以前のバージョンにデフォルトの送信プロセスまたはレンダリングプロセスをコピーして使用しているプロセス（.lca）があると、そのプロセス（.lca）を使用する HTML5 フォームが必要なアクションを実行できません。（CQ-4243928）
 * アダプティブフォームでは、ルールエディターからフォームデータモデルサービスを呼び出して画像選択コンポーネントの値を動的に更新する場合、画像選択コンポーネントの値が更新されません。（CQ-4254754）

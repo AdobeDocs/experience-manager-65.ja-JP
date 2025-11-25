@@ -9,15 +9,15 @@ docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
-role: User,Admin,Architect,Developer
-source-git-commit: 7c4be888c392520c82ef7b2172d0eee61fc3ee44
-workflow-type: ht
-source-wordcount: '892'
-ht-degree: 100%
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+workflow-type: tm+mt
+source-wordcount: '896'
+ht-degree: 99%
 
 ---
 
-# ローンチ {#launches}
+# ローンチ{#launches}
 
 ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。
 
@@ -115,7 +115,7 @@ ht-degree: 100%
 
 * **ツール**&#x200B;コンソールで、**ツール**／**サイト**／**ローンチ**&#x200B;と選択します。
 
-* または、[http://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html) に直接アクセスします。
+* または、[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html) で直接確認できます
 
 ## 「参照」のローンチ（サイトコンソール） {#launches-in-references-sites-console}
 
