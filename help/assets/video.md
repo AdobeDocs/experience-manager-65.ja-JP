@@ -726,7 +726,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 
    ![ビデオビューアーのオーディオとキャプションのポップアップリスト。](assets-dm/msma-selectaudiosubtitle.png)*ビデオ再生用のオーディオとキャプションを選択するユーザーのシミュレーション。*
 
-1. 再生を開始するには、ビデオの&#x200B;**[!UICONTROL 再生]**ボタンを選択します。
+1. 再生を開始するには、ビデオの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンを選択します。
 左下隅には「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL 埋め込み]**」ボタンがあります。これらのボタンはそれぞれ、[web アプリケーションにビデオの URL をリンクする](/help/assets/linking-urls-to-yourwebapplication.md)ため、[web ページにビデオを埋め込む](/help/assets/embed-code.md)ために使用します。
 1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。
 

@@ -19,7 +19,7 @@ ht-degree: 7%
 
 {{ue-over-mobile}}
 
-Adobe Experience Manager（AEM）のコンテンツは、[Sling デフォルトサーブレット ](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) を使用して簡単にレンダリングし、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) やその他の形式をレンダリングできます。
+Adobe Experience Manager（AEM）のコンテンツは、[Sling デフォルトサーブレット &#x200B;](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) を使用して簡単にレンダリングし、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) やその他の形式をレンダリングできます。
 
 これらの標準レンダリングは、通常、リポジトリをウォークして、コンテンツをそのまま返します。
 

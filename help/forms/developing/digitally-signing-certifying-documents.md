@@ -148,7 +148,7 @@ Signature API (Java) を使用して署名フィールドを追加します。
 1. PDFドキュメントを PDF ファイルとして保存する
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   *  `com.adobe.idp` を呼び出します。`Document` オブジェクトの `copyToFile` メソッドで、`Document` オブジェクトの内容をファイルにコピーします。必ず `com.adobe.idp` を使用してください。`addSignatureField` メソッドによって返された `Document`オブジェクトです。
+   * `com.adobe.idp` を呼び出します。`Document` オブジェクトの `copyToFile` メソッドで、`Document` オブジェクトの内容をファイルにコピーします。必ず `com.adobe.idp` を使用してください。`addSignatureField` メソッドによって返された `Document`オブジェクトです。
 
 **関連トピック**
 
@@ -1480,7 +1480,7 @@ Signature Service API（Web サービス）を使用してデジタル署名を�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、検証するデジタルまたは認証済み署名が含まれる PDF ドキュメントを格納するために使用されます。
    * コンストラクタを使用して `System.IO.FileStream` オブジェクトを作成します。署名済み PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   *  `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを設定します。
 

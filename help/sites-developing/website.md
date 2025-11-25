@@ -103,7 +103,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 1. mywebsite という項目がテーブルに表示されない場合は、ツリーまたはテーブルを更新します。
 
-1. [WebDAV を使用 ](/help/sites-administering/webdav-access.md)https://localhostの URL にアクセスします :4502。サンプル `static.css` ファイルと `images` フォルダーを、ダウンロードした mywebsite.zip ファイルから `/etc/designs/mywebsite` フォルダーにコピーします。
+1. [WebDAV を使用 &#x200B;](/help/sites-administering/webdav-access.md)https://localhostの URL にアクセスします :4502。サンプル `static.css` ファイルと `images` フォルダーを、ダウンロードした mywebsite.zip ファイルから `/etc/designs/mywebsite` フォルダーにコピーします。
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -225,7 +225,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    * タイトル: `My Website`
    * 名前：`mywebsite`
-   *  `My Website Content Page Template`
+   * `My Website Content Page Template`
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
@@ -1289,7 +1289,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 1. 次のノードをコピーし、apps/mywebsite/components/search ノードに貼り付けます。
 
    * `/libs/foundation/components/search/dialog`
-   * `` `/libs/foundation/components/search/i18n`
+   * &grave;&grave; `/libs/foundation/components/search/i18n`
 
    * `/libs/foundation/components/search/icon.png`
 

@@ -419,10 +419,10 @@ ht-degree: 99%
 **フォームレベルの設定**
 
 * **[!UICONTROL 基本]**
-   * **テンプレート：**テンプレートは、「デフォルト」または「カスタム」から選択できます。
+   * **テンプレート：**&#x200B;テンプレートは、「デフォルト」または「カスタム」から選択できます。
      ![代替テキスト](image.png)
-   * **アクセントカラー：**[!UICONTROL レコードのドキュメント]のテンプレートカラーを事前に定義できます。
-   * **フォントファミリー：**[!UICONTROL レコードのドキュメント]のテキストのフォントタイプを選択します。
+   * **アクセントカラー：**&#x200B;[!UICONTROL レコードのドキュメント]のテンプレートカラーを事前に定義できます。
+   * **フォントファミリー：**&#x200B;[!UICONTROL レコードのドキュメント]のテキストのフォントタイプを選択します。
    * **バインドされていないフィールドをレコードのドキュメントに含める：**&#x200B;このプロパティを設定すると、スキーマベースのアダプティブフォームのバインドされていないフィールドが、[!UICONTROL レコードのドキュメント]に追加されます。デフォルトでは true になっています。
    * **非表示の場合に DoR からフィールドを除外：**&#x200B;フォーム送信時に[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外するようにプロパティを設定します。[サーバーで再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)を有効にすると、サーバーは非表示のフィールドを再計算してから、[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外します。
 * **[!UICONTROL フォームフィールドのプロパティ]**
@@ -532,6 +532,6 @@ XCI ファイルは、ドキュメントの様々なプロパティを設定す�
 ### ローカルの Forms 開発環境でのカスタム XCI ファイルの使用
 
 1. XCI ファイルをローカル開発環境にアップロードします。
-1. <!--Cloud Service SDK--> Configuration Manager を開きます。<!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+1. &#x200B;<!--Cloud Service SDK--> Configuration Manager を開きます。<!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
 1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブなコミュニケーション Web チャネル]**」の設定を検索して開きます。
 1. XCI ファイルのパスを指定し、「**[!UICONTROL 保存]**」をクリックします。

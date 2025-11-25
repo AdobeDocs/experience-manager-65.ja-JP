@@ -120,7 +120,7 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
 * MBean：`com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
 * URL：`/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
 * インスタンス：1 つのオーサーインスタンスおよびすべてのパブリッシュインスタンス（フラッシュエージェント）
-* アラームしきい値：`QueueBlocked``true` の値が 、または `QueueNumEntries` の値がベースラインの 150％を超えた場合。
+* アラームしきい値：`QueueBlocked` `true` の値が 、または `QueueNumEntries` の値がベースラインの 150％を超えた場合。
 
 * アラーム定義：システムにブロックされたキューが存在しており、レプリケーションターゲットがダウンしているか、または到達不能であることを示しています。多くの場合、ネットワークまたはインフラストラクチャの問題により過剰なエントリがキューに登録されています。それによってシステムのパフォーマンスに悪影響が生じる可能性があります。
 
