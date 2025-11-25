@@ -33,5 +33,5 @@ AEM のワークフローでは、（1 つ以上の）ページまたはアセ�
 
 参考資料：
 
-* [ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md)
-* [ワークフローへの参加 ](/help/sites-authoring/workflows-participating.md)
+* [ページへのワークフローの適用 &#x200B;](/help/sites-authoring/workflows-applying.md)
+* [ワークフローへの参加 &#x200B;](/help/sites-authoring/workflows-participating.md)

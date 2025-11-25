@@ -121,13 +121,13 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
      >
      >* **ConfigurationManager.bat** ファイルの更新または置き換えを行うと、.lax ファイルを手動で更新する必要がなくなります。
 
-1. **[UNIX ベース専用]：****Configuration Manager を起動**&#x200B;チェックボックスは、デフォルトで選択されています。 **[!UICONTROL 完了]**&#x200B;をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、**Configuration Manager を起動**&#x200B;オプションの選択を解除してから、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
+1. **[UNIX ベース専用]：**&#x200B;**Configuration Manager を起動**&#x200B;チェックボックスは、デフォルトで選択されています。 **[!UICONTROL 完了]**&#x200B;をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、**Configuration Manager を起動**&#x200B;オプションの選択を解除してから、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
    * [AEM Forms for JBoss® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [AEM Forms for WebSphere® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
-   * [ AEM Forms for WebLogic のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
+   * [&#x200B; AEM Forms for WebLogic のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
    * [AEM forms for JBoss® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
    * [AEM forms for WebSphere® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [AEM Forms for WebLogic Cluster のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)

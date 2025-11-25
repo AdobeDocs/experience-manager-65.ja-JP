@@ -228,7 +228,7 @@ ht-degree: 0%
 
 例えば、「Myproject」というプロジェクトには **Myproject Owners**、**Myproject Editors**、**Myproject Observers** という 3 つのグループがあります。
 
-プロジェクトを削除する場合、プロジェクトの削除時に適切なオプション [ を選択した場合にのみ、これらのグループが削除されます。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project)管理者は、**ツール**／**セキュリティ**／**グループ**&#x200B;から、手動でグループを削除することもできます。
+プロジェクトを削除する場合、プロジェクトの削除時に適切なオプション [&#x200B; を選択した場合にのみ、これらのグループが削除されます。](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project)管理者は、**ツール**／**セキュリティ**／**グループ**&#x200B;から、手動でグループを削除することもできます。
 
 ## その他のリソース {#additional-resources}
 
