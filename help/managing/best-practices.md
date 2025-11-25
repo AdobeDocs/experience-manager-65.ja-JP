@@ -239,7 +239,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   開発の前に、デプロイ、リリース、テスト、問題の報告に必要なすべてのサポートプロセスを設定する必要があります。
 
-  詳しくは、[アドビサポートポータル](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)も参照してください。
+  詳しくは、[アドビサポートポータル](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support)も参照してください。
 
 ### 運用計画と運用 {#operations-planning-and-operations}
 

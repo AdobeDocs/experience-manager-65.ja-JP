@@ -19,7 +19,7 @@ ht-degree: 100%
 >
 >以下のセクションでは GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に当てはまります。
 
-データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。[アドビプライバシーセンターの GDPR ページ](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
+データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。[アドビプライバシーセンターの GDPR ページ](https://business.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
