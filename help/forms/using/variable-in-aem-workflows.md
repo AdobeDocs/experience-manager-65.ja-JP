@@ -35,7 +35,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
-[ 変数の概要ビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
+[&#x200B; 変数の概要ビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
 変数は、既存の [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
 
@@ -113,7 +113,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 この例では、**formdata** XML 変数を選択して **cc-app.xml** ファイルを格納します。**formdata** 変数をクエリして、**emailaddress** 文字列変数の値を設定し、**cc-app.xml** ファイルで使用できる **emailAddress** プロパティの値を格納します。
 
-[ 変数を設定ビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
+[&#x200B; 変数を設定ビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
 
 ### 例 2：式を使用して、他の変数に基づいて値を格納 {#example2}
 
@@ -123,7 +123,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
-[ 変数式のビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
+[&#x200B; 変数式のビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## 式エディターの使用 {#use-expression-editor}
 
@@ -168,9 +168,9 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 変数を使用して、式エディターを使用したルーティング式を定義できます。OR 分割ステップでルーティング式を使用する方法について詳しくは、「[OR 分割ステップ](/help/sites-developing/workflows-step-ref.md#or-split)」を参照してください。
 
-この例では、ルーティング式を定義する前に、[例 2 ](../../forms/using/variable-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。**totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
+この例では、ルーティング式を定義する前に、[例 2 &#x200B;](../../forms/using/variable-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。**totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
 
-[OR 分割ビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
+[OR 分割ビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同様に、外部スクリプトパスを選択するか、ルーティング式の ECMA スクリプトを指定して、アクティブな分岐を評価します。「**[!UICONTROL 分岐名の変更]**」を選択して、分岐に別名を指定します。
 

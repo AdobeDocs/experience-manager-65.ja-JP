@@ -30,7 +30,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
-[ 変数を使用するビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
+[&#x200B; 変数を使用するビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
 
 変数は、[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
 
@@ -96,7 +96,7 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 1. 「**変数を設定**」ステップをワークフローエディターにドラッグ＆ドロップし、ステップを選択してレンチで示される ![「設定」アイコンを選択します。](assets/configure_icon.png)（設定）。
 1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
-1. より多くの変数をマッピングして、有意義な式を作成できるようにします。ボックス内のチェックマークで示される ![ 保存アイコンを選択します。](assets/Done_Icon.png) をタップして、変更を保存します。
+1. より多くの変数をマッピングして、有意義な式を作成できるようにします。ボックス内のチェックマークで示される ![&#x200B; 保存アイコンを選択します。](assets/Done_Icon.png) をタップして、変更を保存します。
 
 ### 例 1：XML 変数をクエリして、文字列変数の値を設定 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -104,7 +104,7 @@ XML ファイルを保存する XML タイプの変数を選択します。XML �
 
 この例では、**formdata** XML 変数を選択して **cc-app.xml** ファイルを格納します。**formdata** 変数をクエリすることで、**cc-app.xml** ファイルで使用可能な **emailAddress** プロパティの値を格納する **emailaddress** 文字列変数の値を設定できます。
 
-[ 変数を設定ビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
+[&#x200B; 変数を設定ビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
 
 ### 例 2：式を使用して、他の変数に基づいて値を格納 {#example2}
 
@@ -114,7 +114,7 @@ XML ファイルを保存する XML タイプの変数を選択します。XML �
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
-[ 変数式のビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
+[&#x200B; 変数式のビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## 式エディターの使用 {#use-expression-editor}
 
@@ -159,11 +159,11 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 変数を使用して、式エディターを使用したルーティング式を定義できます。OR 分割ステップでルーティング式を使用する方法について詳しくは、「[OR 分割ステップ](/help/sites-developing/workflows-step-ref.md#or-split)」を参照してください。
 
-この例では、ルーティング式を定義する前に、[例 2 ](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。**totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
+この例では、ルーティング式を定義する前に、[例 2 &#x200B;](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。**totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
-[OR 分割ビデオ ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
+[OR 分割ビデオ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同様に、外部スクリプトパスを選択するか、ルーティング式の ECMA スクリプトを指定して、アクティブな分岐を評価します。「**[!UICONTROL 分岐名の変更]**」を選択して、分岐に別名を指定します。
 
@@ -251,8 +251,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 変数の編集 {#edit-a-variable}
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンを選択します。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
-1. 鉛筆シンボルで示される ![ 編集アイコンを選択します。編集する変数名の横にある ](assets/edit.png)（編集）アイコン。
-1. 変数情報を編集し、チェックマークで示される ![ 保存アイコンを選択します。](assets/Done_Icon.png) をタップして、変更を保存します。変数の「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドは編集できません。
+1. 鉛筆シンボルで示される ![&#x200B; 編集アイコンを選択します。編集する変数名の横にある &#x200B;](assets/edit.png)（編集）アイコン。
+1. 変数情報を編集し、チェックマークで示される ![&#x200B; 保存アイコンを選択します。](assets/Done_Icon.png) をタップして、変更を保存します。変数の「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドは編集できません。
 
 ## 変数の削除 {#delete-a-variable}
 
@@ -262,4 +262,4 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンを選択します。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
 1. 削除する変数名の横にある「削除」アイコンを選択します。
-1. チェックマークシンボルで示される ![ 完了アイコンを選択します。](assets/Done_Icon.png)確認して変数を削除します。
+1. チェックマークシンボルで示される ![&#x200B; 完了アイコンを選択します。](assets/Done_Icon.png)確認して変数を削除します。
