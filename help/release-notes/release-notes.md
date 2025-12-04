@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 6eccdab5cd492686dda2aca3fee4df171a2d9011
+source-git-commit: 2580bb494bb81da0a923a34c88d37933d7575bec
 workflow-type: tm+mt
-source-wordcount: '8932'
+source-wordcount: '8905'
 ht-degree: 26%
 
 ---
@@ -393,11 +393,9 @@ FELIX-6747 を含むように Felix web コンソールバンドルを更新し�
 #### Security{#foundation-security-6524}
 -->
 
-
 #### Sling{#foundation-sling-6524}
 
-* SAML で保護されたページのキャッシュ動作を修正しました。 AEMは、適切なキャッシュコントロールを追加し、認証済みセッションに対するメタデータを変化させるので、プロキシとDispatcherはパーソナライズされた応答のキャッシュをスキップします。 匿名コンテンツは通常キャッシュされますが、ログイン済みビューはユーザー固有のキャッシュとなります。 （NPR-42640）
-
+* `org.apache.sling.scripting.jsp:2.6.0` バンドルに関する予期しない JSP コンパイルエラーを修正しました。 （SLING-12442）
 * プラットフォームは、コア Sling エンジンを 2.16.2 から 2.16.6 にアップグレードします。新しいエンジンは、入力の検証を強化し、負荷がかかった状態のリクエスト処理を安定化します。 （NPR-43105）
 
 #### SPA エディター {#foundation-spa-editor-6524}
