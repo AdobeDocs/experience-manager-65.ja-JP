@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: f852fa8d682241ffdddc60148fcd9dce7b89fed4
+source-git-commit: ae66b28497bfb12686152b324e1758ad2d8592ee
 workflow-type: tm+mt
-source-wordcount: '8809'
-ht-degree: 26%
+source-wordcount: '9451'
+ht-degree: 24%
 
 ---
 
@@ -40,11 +40,12 @@ ht-degree: 26%
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-<!--
-## Key features and enhancements
--->
 
+## 主な機能および機能強化
 
+### Forms
+
+* **カスタム XCI を渡すためのサポート：** cmdline アプリケーション xmlformcmd のパラメーターでカスタム XCI を渡すためのサポートを追加しました。 これにより、ユーザーはテスト用にカスタム XCI ファイルを指定でき、テストプロセスの柔軟性と制御が向上します。 （LC-3923248）
 
 
 ## サービスパック 24 で修正された問題 {#fixed-issues}
@@ -302,25 +303,40 @@ ContextHub では、公開ページに 2 番目の jQuery コピーを挿入し�
 
 ### [!DNL Forms]{#forms-6524}
 
+<!--
 >[!NOTE]
 >
->[!DNL Experience Manager] Forms の修正は、[!DNL Experience Manager] サービスパックリリース予定日の 1 週間後に、別のアドオンパッケージとして提供されます。この場合、アドオンパッケージは 2025 年 12 月 4 日木曜日（PT）にリリースされます。 さらに、Formsの修正と機能強化のリストがこの節に追加されました。
-
-<!--
-#### Forms Designer 
-
-#### Forms
-
-#### Forms JEE 
-
-#### Forms Captcha {#forms-captcha-6524} 
-
-#### XMLFM {#forms-xmlfm-6524}
-
-#### [!DNL Forms Designer] {#forms-designer-6524}
-
+>Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages release Thursday, December 4, 2025. In addition, a list of Forms fixes and enhancements is added to this section.
 -->
 
+#### Forms Designer
+
+* 特定のテストケースでハイパーリンクをクリックできないという問題が発生し、アプリケーション内のリンクを移動および検証する機能に影響が出ていました。 （LC-3923505）
+* AEM Forms Designer 6.5.23 を使用してラテン語以外の言語で生成された PDF で、アクセシビリティの問題が発生しました。 パス タグがアーティファクト コンテナ内に配置されなかったため、PAC およびスクリーン リーダーのチェックでエラーが発生しました。 （LC-3923295）
+* Output サービスを使用してバージョン 6.5.21 から 6.5.23 にパッチを適用した後、Portable Document Format （PDF）テキストボックスでハイパーリンクが壊れていました。 （LC-3923290）
+* レコードのドキュメント（DoR）フォームでアクセシビリティの問題が発生した。 入力フィールドが空の場合、スクリーンリーダーはフィールドのキャプションのみを読み取り、値を読み取らないので、障がいのあるユーザーがフォームを効果的に移動するのが難しくなります。 （LC-3923234）
+* DoR PDF formsで、NVDA がチェックボックス、ラジオボタン、テキストフィールドに対して「使用不可」と誤って読み取り、多くの場合、メッセージを繰り返し、スクリーンリーダーのユーザーが混乱するアクセシビリティの問題に直面しました。 （LC-3923201）
+* 新しいフィールドを追加する際に、XDP でタブ順序の不一致が発生しました。 既存のタブ順序が予期せず変更され、フォームのナビゲーションに影響を与えました。 （LC-3923183、LC-3922630）
+* HTMLのレンダリングで問題が発生しました。 `docReady` イベントを使用する際、HTMLで正しくトリガーされず、スクリプトが期待どおりに実行されない原因となりました。 （LC-3923118）
+* AEM Forms Cloud 実稼動環境でPDF レンダリングスクリプトが機能しない問題が発生しました。 （LC-3923082）
+* フォーム内のフローティングフィールドで問題が発生していました。 異なるデータファイルを使用する場合、フローティングフィールドはフィールドとは無関係な小さな違いにもかかわらず、一方のファイルでは正しくレンダリングされ、もう一方のファイルではレンダリングされません。 （LC-3923056）
+* 複数のマスターページを含む XDP （XML データパッケージ）で英語のコンテンツのみが選択された場合、空白のスペイン語マスターページが表示された。 （LC-3923009）
+* ユーザーは、AEM Designerで古い著作権年の情報を観察しました。 この問題は、起動時のポップアップボックス、「バージョン情報」セクション、「法律上の注意事項」セクションで、「2003-2025」ではなく「2003-2024」と表示されていた場合に発生していました。 （LC-3923005）
+* AEM Forms Designerでページネーションを使用すると、空白のPDFページが表示される。 この問題は、WireAdviceHeader に対して「次のページの先頭/ページの先頭」を選択すると、データの反復のレイアウトが中断される場合に発生していました。 （LC-3922997、LC-3922830）
+* Extensible Markup Language （XML） Schema Definition （XSD）の filedigest 値がAEM Forms Designerの 64 ビットバージョンに保持されない問題が発生しました。 （LC-3922924）
+* AEM Designer 6.5.19 では、最初の文字の書式設定など、テキストボックス内のハイパーリンクで周囲のテキストのスタイルが誤って採用され、不安定なハイパーリンク形式が発生していました。 （LC-3922376）
+* AEM Forms OSGI v6.5.22 を使用したMAC上のモバイルレンダリングを介してHTML Forms をレンダリングする際に問題が発生しました。 （LC-3923058）
+* Designer 6.5.23 で作成され、PAC 2024 で分析された XDP テンプレートで、境界フィールドまたは背景フィールドを使用すると、Portable Document Format （PDF）ファイルで「path object not tagged」エラーが発生しました。 （LC-3923013）
+* ポータブルアプリケーションコンポーネント（PAC）の見出し「Dati Richiedente」の背景色に「path object not tagged」というメッセージが表示され、エラーが発生しました。 （LC-3922912）
+* 特定のテンプレートが、意図したフォントを凝縮したフォントに置き換える問題が発生しました。 （LC-3922330）
+
+#### アダプティブフォーム
+
+* ルールエディターでオプションが見つからないという問題が発生しました。 作成者が数値入力に関するルールを記述した際に、クエリ、UTM、ブラウザーの詳細のオプションが使用できませんでした。 （FORMS-21660）
+* ヌルポインター例外が原因で OdataResponse を操作する際に、アプリケーションがクラッシュする問題が発生しました。 （FORMS-20344）
+* ユーザーは、パネルを表示し、パネル内の要素にフォーカスを設定するルールを作成する際に問題が発生しました。 表示が更新される前に setFocus ルールが実行され、フォーカスアクションが失敗する。 （FORMS-19563）
+* AEM Forms オーサーでコンポーネントの選択に関する問題が発生しました。 編集モードでタブ間を移動する際に、一部のコンテナが選択できなくなり、識別とインタラクションが容易になりました。 （FORMS-18525）
+* AEM 6.5.22 でアセットに注釈を付けようとすると、「無効な URL」エラーが発生しました。 （NPR-42684）
 
 ### 基盤 {#foundation-6524}
 
