@@ -5,10 +5,10 @@ feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '1712'
-ht-degree: 100%
+source-wordcount: '1728'
+ht-degree: 99%
 
 ---
 
@@ -34,6 +34,10 @@ ht-degree: 100%
 >
 >* ページのオーサリング時 -「[コンテンツフラグメントを使用したページオーサリング](/help/sites-authoring/content-fragments.md)」を参照してください。
 >* [GraphQL でコンテンツフラグメントを使用するヘッドレスコンテンツ配信用。](/help/assets/content-fragments/content-fragments-graphql.md)
+
+>[!NOTE]
+>
+>コンテンツフラグメントモデルとコンテンツフラグメントを使用する場合は、[ ベストプラクティス ](/help/assets/content-fragments/content-fragments.md#best-practices) に注意してください。
 
 >[!NOTE]
 >
@@ -81,7 +85,7 @@ ht-degree: 100%
 
         URL の作成に使用される名前です。
 
-        必須。タイトルから自動的に派生しますが、変更が可能です。
+        必須。タイトルから自動的に派生しますが、更新が可能です。
 
 1. 「**作成**」を選択して操作を完了してから、編集するためにフラグメントを&#x200B;**開く**&#x200B;か、「**完了**」でコンソールに戻ります。
 
