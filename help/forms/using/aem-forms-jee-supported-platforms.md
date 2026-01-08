@@ -28,7 +28,7 @@ ht-degree: 99%
 
 アドビでは、JEE 版 AEM 6.5.23.0 Forms サービスパック 23（6.5.23.0）を含んだ[完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)のほか、パッチインストーラーをリリースしました。完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-新規インストールを実行する場合や、JEE 環境での AEM 6.5.23.0 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 18 Forms インストーラー（2023年8月31日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2019年4月8日（PT）にリリース）ではなく、[ JEE 上の AEM 6.5.23.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)（2025年6月6日（PT）にリリース）を使用することをお勧めします。
+新規インストールを実行する場合や、JEE 環境での AEM 6.5.23.0 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 18 Forms インストーラー（2023年8月31日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2019年4月8日（PT）にリリース）ではなく、[&#x200B; JEE 上の AEM 6.5.23.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)（2025年6月6日（PT）にリリース）を使用することをお勧めします。
 
 
 </div>

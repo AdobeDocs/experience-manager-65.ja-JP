@@ -533,4 +533,4 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。GLIBC_2.14 を含む Linux® カーネルを使用します。例えば、Linux® カーネルバージョン 3.1.x です。PSD ファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
 
-サポートされている形式やプラットフォームのバージョンに関するご質問については、[AEM Forms サポートにお問い合わせください ](https://business.adobe.com/in/support/main.html)
+サポートされている形式やプラットフォームのバージョンに関するご質問については、[AEM Forms サポートにお問い合わせください &#x200B;](https://business.adobe.com/in/support/main.html)
