@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 6d29cc96630292d075597f80043075972b242a8b
+source-git-commit: 965585c68107bf3e8a9e118b80f7d46f2dbda852
 workflow-type: tm+mt
-source-wordcount: '3809'
-ht-degree: 100%
+source-wordcount: '3693'
+ht-degree: 99%
 
 ---
 
@@ -106,14 +106,14 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >[!NOTE]
 >
 >AEM Forms をご利用のお客様がオーナーシップのコストを削減し、開発アーキテクチャを簡略化し、開発スタックを近代化できるようにするために、Adobe Experience Manager のエンタープライズプラットフォームはアプリケーションサーバーベースのデプロイメントから、スタンドアロンの OSGi ベースのデプロイメントに移行します。対応するインフラストラクチャコンポーネントは削減されますが、アドビは引き続き AEM Forms JEE スタックをサポートします。
->><br>
->>6.5 のリリースでは、アドビのお客様の中で最も使用率の低い、以下のインフラストラクチャコンポーネントはサポートされなくなりました。
+><br>
+>6.5 のリリースでは、アドビのお客様の中で最も使用率の低い、以下のインフラストラクチャコンポーネントはサポートされなくなりました。
 >
 > - IBM® DB2® データベース
 > - IBM® AIX® および Sun Solaris™ オペレーティングシステム
 >
 >
->新規インストールに関しては、可能な場合は AEM Forms を最新の OSGi スタックでデプロイし、モバイル向けのレスポンシブなアダプティブフォーム、マルチチャンネルのインタラクティブ通信、そしてフォームデータモデルを使用したバックエンドのデータ統合などの最新技術を活用することが推奨されます。
+>新規インストールに関しては、可能な場合は AEM Forms を最新の OSGi スタックでデプロイし、モバイル向けのレスポンシブなアダプティブフォーム、マルチチャンネルのインタラクティブなコミュニケーション、そしてフォームデータモデルを使用したバックエンドのデータ統合などの最新技術を活用することが推奨されます。
 >
 >既存のお客様は、AEM Forms を引き続き JEE スタック上でデプロイしていただく必要があります。そのような場合は、AEM Forms JEE を本文書に記載されている対応インフラストラクチャでデプロイしていただく必要があります。前回の AEM Forms リリースをサポート対象ではないプラットフォームでご使用で、AEM 6.5 Forms にアップグレードされる場合は、アドビサポートにご連絡ください。サポート対象のプラットフォームへのアップグレードをお手伝いします。
 
@@ -166,8 +166,8 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 
 >[!NOTE]
 >
->- Java™ ベンダーが発表するセキュリティ情報を常に確認し、実稼働環境の安全性とセキュリティを確保すること、および最新の Java™ アップデートをインストールすることをお勧めします。
->- JEE 上の AEM Forms では、実稼動環境に対して 64 ビットの JVM のみがサポートされています。
+>- Java™ ベンダーが発表するセキュリティ情報を常に確認し、本番環境の安全性とセキュリティを確保すること、および最新の Java™ アップデートをインストールすることをお勧めします。
+>- JEE 上の AEM Forms では、本番環境に対して 64 ビットの JVM のみがサポートされています。
 
 ### データベースと CRX の永続性 {#databases-and-crx-persistence}
 
@@ -323,7 +323,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 ### サーバーオペレーティングシステム {#server-operating-systems}
 
 
-#### 実稼動環境 {#production-environments}
+#### 本番環境 {#production-environments}
 
 
 <table>
@@ -516,59 +516,42 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 ### PDF Generator に関する考慮事項
 
 <table>
-<tbody>
- <tr>
-  <th><p><strong>製品</strong></p> </th>
-  <th><p><strong>PDF への変換でサポートされる形式</strong></p> </th>
- </tr>
- <tr>
+ <tbody>
+  <tr>
+   <th><p><strong>製品</strong></p> </th>
+   <th><p><strong>PDF への変換でサポートされる形式</strong></p> </th>
+  </tr>
+  <tr>
    <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> 最新バージョン</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM</td>
   </tr>
- <tr>
-  <td>Microsoft® Office 2021  </td>
-  <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
- </tr>
- </tr>
 
 <tr>
-  <td>WordPerfect 2020<br /> </td>
-  <td>WP、WPD</td>
- </tr>
- <tr>
-  <td>Microsoft® Publisher 2019<br /> </td>
-  <td>PUB</td>
- </tr>
- <tr>
-  <td>Microsoft® Publisher 2021<br /> </td>
-  <td>PUB</td>
- </tr>
- <tr>
-  <td>OpenOffice 4.1.10</td>
-  <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX 、JP2、J2K、J2C、JPC）、HTML、HTM、RTF、TXT</td>
- </tr>
-</tbody>
-</table>
+   <td>Microsoft® Office 2021 Professional Plus、小売ライセンスおよびボリュームライセンス</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
+  </tr>
+  <tr>
+   <td>
+    <strong>OpenOffice 4.1.15</strong>   </td>
+   <td>
+    ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX 、JP2、J2K、J2C、JPC）、HTML、HTM、RTF、TXT<br>
 
+</td>
+  </tr>
+ </tbody>
+</table>
 
 >[!NOTE]
 >
->PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
->
->さらに、次の点に注意してください。
->
+>- PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
 >- PDF Generator で変換を実行するには、Adobe Acrobat Pro DC（32 ビット）が必要です。
 >- PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
->- Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >- ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
 >- PDF Generator は Microsoft® Office 365 をサポートしていません。
->- PDF Generator は、Linux® オペレーティングシステム上の 32 ビット版の OpenOffice をサポートしています。
->- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
+>- PDF Generatorの OpenOffice 向け変換機能は、Windows と Linux® の両方でサポートされています。
 >- OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
->- Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator で使用するために、AEM Forms のライセンス期間中に AEM Forms でのみプログラムでアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
->- PDF Generator サービスでは Microsoft® Windows 10 をサポートしていません。
->- PDF Generator は、Microsoft® Visio 2019 を使用してファイルを変換できません。
->- PDF Generator は、Microsoft® Project 2019 を使用してファイルを変換できません。
+>- PDF Generator サービスでは Microsoft® Windows 11 をサポートしていません。
+
 
 PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 
@@ -619,7 +602,7 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
   <td>Intel Xeon® E5-2670v2、1 vCPU、2.5 GHz プロセッサー <br />AWS m3.medium（3 つの ECU）<br />RAM：6 GB（64 ビット JVM が付属している 64 ビット OS）<br />空きディスク容量：6 GB の一時的空き容量のほかに、22 GB の容量<br />（JEE 上の AEM Forms 用）<br /> </td>
  </tr>
  <tr>
-  <td>小規模な実稼動環境向けのハードウェア要件</td>
+  <td>小規模な本番環境向けのハードウェア要件</td>
   <td>
    <ul>
     <li><strong>Intel® 搭載環境</strong>：Intel Xeon® E5-2680、2.4 GHz 以上。デュアルコアプロセッサーを使用するとパフォーマンスがさらに向上します。</li>
@@ -685,14 +668,14 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 </table>
 
 
-- インストールのためのディスク空き容量： 1.7 GB（Workbench のみ）、2.7 GB（Workbench、 Designer 、およびサンプルアセンブリのフルインストールを単一ドライブで行う場合）、400 MB （一時的インストールディレクトリ）、200 MB （ユーザー一時ディレクトリ）、および200 MB（Windows 一時ディレクトリ）。これらの場所がすべて 1 つのドライブ上にある場合は、インストール時に 1.5 GB の空き容量が必要です。一時ディレクトリにコピーされるファイルは、インストールが完了すると削除されます。
+- インストールのためのディスク空き容量：1.7 GB（ワークベンチのみ）、2.7 GB（ワークベンチ、Designer、およびサンプルアセンブリのフルインストールを単一ドライブで行う場合）、400 MB（一時的インストールディレクトリ）、200 Mb（ユーザー一時ディレクトリ）、および 200 MB（Windows 一時ディレクトリ）。これらの場所がすべて 1 つのドライブ上にある場合は、インストール時に 1.5 GB の空き容量が必要です。一時ディレクトリにコピーされるファイルは、インストールが完了すると削除されます。
 
 
-- Workbench を実行するためのメモリ：2 GB の RAM
+- ワークベンチを実行するためのメモリ：2 GB の RAM
 - ハードウェア要件： Intel® Pentium® 4 または AMD® の同等の 1 GHz プロセッサー
 - 1024 X 768 ピクセル以上のモニター解像度、16 ビットカラー以上
 - JEE サーバー上の AEM Forms に対する TCP/IPv4 または TCP/IPv6 ネットワーク接続
-- Workbench を Windows にインストールするには、管理者権限が必要です。管理者以外のアカウントを使用してインストールする場合は、適切なアカウントの資格情報が求められます。
+- ワークベンチを Windows にインストールするには、管理者権限が必要です。管理者以外のアカウントを使用してインストールする場合は、適切なアカウントの資格情報が求められます。
 
 
 ### Designer {#designer}
@@ -849,7 +832,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.18.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release on June 2, 2022:
 - Microsoft&reg; SharePoint 2016
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -920,7 +903,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Added support**: [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platform:
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016

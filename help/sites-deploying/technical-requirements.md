@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 965585c68107bf3e8a9e118b80f7d46f2dbda852
 workflow-type: tm+mt
-source-wordcount: '3534'
-ht-degree: 100%
+source-wordcount: '3490'
+ht-degree: 99%
 
 ---
 
@@ -251,7 +251,7 @@ Adobe Experience Manager は、クラウドコンピューティング環境上�
 
 クラウドネイティブな環境の場合は、AEM 製品ラインの最新オファー、Adobe Experience Manager as a Cloud Service をご確認ください。詳しくは、[Adobe Experience Manager as a Cloud Service ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)を参照してください。
 
-アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/jp/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
+アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 
 AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、Azure Blob Storage や AWS S3 などのクラウドサービスが、このページに記載されている技術要件の一部としてサポートされている場合を除きます。
 
@@ -495,9 +495,8 @@ Windows x86 の場合：
 >* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
->* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux® でのみサポートされています。
+>* PDF Generatorの OpenOffice 向け変換機能は、Windows と Linux® の両方でサポートされています。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために AEM Forms にバンドルされています。バンドルされたバージョンには、AEM Forms PDF Generator でのみ使用するために、AEM Forms のライセンス期間中に AEM Forms でプログラムでのみアクセスする必要があります。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 >* PDF Generator サービスでは Microsoft® Windows 11 をサポートしていません。
 
 ### AEM Forms Designer の要件 {#requirements-for-aem-forms-designer}
@@ -533,3 +532,5 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 ### AEM Assets がメタデータの多いアセットを Linux® で処理するための要件 {#assetsonlinux}
 
 XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。GLIBC_2.14 を含む Linux® カーネルを使用します。例えば、Linux® カーネルバージョン 3.1.x です。PSD ファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
+
+サポートされている形式やプラットフォームのバージョンに関するご質問については、[AEM Forms サポートにお問い合わせください ](https://business.adobe.com/in/support/main.html)
