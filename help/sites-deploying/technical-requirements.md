@@ -251,7 +251,7 @@ Adobe Experience Manager は、クラウドコンピューティング環境上�
 
 クラウドネイティブな環境の場合は、AEM 製品ラインの最新オファー、Adobe Experience Manager as a Cloud Service をご確認ください。詳しくは、[Adobe Experience Manager as a Cloud Service ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)を参照してください。
 
-アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
+アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/jp/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 
 AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。つまり、Azure Blob Storage や AWS S3 などのクラウドサービスが、このページに記載されている技術要件の一部としてサポートされている場合を除きます。
 
