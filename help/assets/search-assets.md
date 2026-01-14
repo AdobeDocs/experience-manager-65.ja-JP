@@ -8,10 +8,10 @@ role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
-workflow-type: ht
-source-wordcount: '5676'
-ht-degree: 100%
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
+workflow-type: tm+mt
+source-wordcount: '5664'
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ ht-degree: 100%
 * `woman-running`
 
 ただし、クエリ `woman -running` は、メタデータに `running` を含まないアセットを返します。
-スマートタグを使用すると、スマートタグを検索語として適用し、検索語のいずれかを探すための `OR` 句が追加されます。スマートタグを使用して `woman` または `running` のどちらかがタグ付けされているアセットも検索結果に表示されます。検索結果は、以下を組み合わせたものになります。
+スマートタグを使用すると、スマートタグを検索語として適用し、検索語のいずれかを探すための `OR` 句が追加されます。スマートタグを使用して `woman` または `running` のどちらかがタグ付けされているアセットも検索クエリに表示されます。検索結果は、以下を組み合わせたものになります。
 
 * `woman` と `running` の両方のキーワードがメタデータ内にあるアセット（デフォルト動作）。
 
@@ -126,7 +126,7 @@ ht-degree: 100%
 
 ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、「[ での検索](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
 
->[!VIDEO](https://video.tv.adobe.com/v/3410338/?quality=6&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
 *ビデオ：検索結果のランク付けの方法とランクへの影響について*
 
@@ -164,27 +164,27 @@ ht-degree: 100%
 
 | メタデータフィールド | ファセット値と使用法 |
 |---|---|
-| タイトル | title:John |
-| 作成者 | creator:John |
-| 場所 | location:NA |
+| タイトル | タイトル :John |
+| 作成者 | 作成者 :John |
+| 場所 | 場所 :NA |
 | 説明 | description:&quot;Sample Image&quot; |
 | 作成ツール | creatortool:&quot;Adobe Photoshop&quot; |
 | 著作権の所有者 | copyrightowner:&quot;Adobe Inc&quot; |
-| 投稿者 | contributor:John |
+| 投稿者 | 投稿者 :John |
 | 使用条件 | usageterms:&quot;CopyRights Reserved&quot; |
-| 作成日 | created:YYYY-MM-DDTHH |
-| 有効期限 | expires:YYYY-MM-DDTHH |
+| 作成日 | 作成日時 :YYYY-MM-DDTHH |
+| 有効期限 | 有効期限 :YYYY-MM-DDTHH |
 | オンタイム | ontime:YYYY-MM-DDTHH |
-| オフタイム | offtime:YYYY-MM-DDTHH |
+| オフタイム | オフタイム :YYYY-MM-DDTHH |
 | 時間の範囲（有効期限、オンタイム、オフタイム） | facet field : lowerbound..upperbound |
 | パス | /content/dam/&lt;folder name> |
 | PDF タイトル | pdftitle:&quot;Adobe Document&quot; |
 | 件名 | subject:&quot;Training&quot; |
 | タグ | tags:&quot;Location And Travel&quot; |
 | タイプ | type:&quot;image\png&quot; |
-| 画像の幅 | width:lowerbound..upperbound |
-| 画像の高さ | height:lowerbound..upperbound |
-| Person | person:John |
+| 画像の幅 | 幅 :lowerbound..upperbound |
+| 画像の高さ | 高さ :lowerbound..upperbound |
+| Person | 人物 :John |
 
 `path`、`limit`、`size`、`orderby` プロパティは、`OR` 演算子を使用して他のプロパティと組み合わせることはできません。
 
@@ -209,7 +209,7 @@ ht-degree: 100%
 
 ### Adobe Asset Link パネルからデジタルアセットを検索 {#aal}
 
-クリエイティブ担当者は、Adobe Asset Link を使用することで、サポートされている Adobe Creative Cloud アプリケーション内から、[!DNL Experience Manager Assets] に保存されているコンテンツにアクセスできるようになりました。[!DNL Adobe Creative Cloud] アプリの [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]、[!DNL Adobe InDesign] のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。また、Asset Link を使用すると、視覚的に類似した結果を検索できます。ビジュアル検索の表示結果は、Adobe Sensei の機械学習アルゴリズムを活用しており、見た目に類似した画像を見つけやすくなっています。詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
+クリエイティブ担当者は、Adobe Asset Link を使用することで、サポートされている Adobe Creative Cloud アプリケーション内から、[!DNL Experience Manager Assets] に保存されているコンテンツにアクセスできるようになりました。[!DNL Adobe Creative Cloud] アプリの [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]、[!DNL Adobe InDesign] のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。また、Asset Link を使用すると、視覚的に類似した結果を検索できます。Adobe AI の機械学習アルゴリズムを活用したビジュアル検索の表示結果により、見た目にも似た画像を見つけることができます。 詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
 
 ### [!DNL Experience Manager] デスクトップアプリケーションでデジタルアセットを検索 {#desktop-app}
 
@@ -249,7 +249,7 @@ ht-degree: 100%
 
 | 名前 | 値 | 例 | 目的 |
 |---|---|---|---|
-| リソースサフィックス（B） | URL のリソースサフィックスとしてのフォルダーパス：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えば、フォルダー `/content/dam/we-retail/en/activities` を選択した場合、URL は次のような形式になります。`https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
+| リソースサフィックス（B） | URL のリソースサフィックスとしてのフォルダーパス：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えば、フォルダー `/content/dam/we-retail/en/activities` が選択されている場合、URL は次のような形式になります。`https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
 | `mode` | single、multiple | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
 | `dialog` | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
 | `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | このオプションを使用して、アセットセレクターのルートフォルダーを指定します。この場合、アセットセレクターを使用すると、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |
@@ -292,7 +292,7 @@ ht-degree: 100%
 * フルテキスト検索では、`-` および `^` などの演算子がサポートされます。これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、`Notebook - Beauty` の代わりに `"Notebook - Beauty"` を使用します。
 * 検索結果が多すぎる場合は、[検索範囲](#scope)を制限して、目的のアセットを絞り込みます。これは、特定のファイルタイプ、特定の場所、特定のメタデータなど、目的のアセットを検索する良い方法がある程度わかっている場合に最も効果的です。
 
-* **タグ付け**：タグを使用すると、アセットを分類して参照や検索をより効率的に行えるようになります。タグ付けは、適切な分類を他のユーザーやワークフローに伝播するうえで役に立ちます。[!DNL Experience Manager] では、使用状況データやトレーニングでアセットのタグ付けを絶えず改善する、Adobe Sensei の AI サービスを活用して、アセットに自動的にタグを付ける手段を提供しています。この機能がアカウントで有効な場合は、アセットを検索する際にスマートタグが考慮されます。これは組み込みの検索機能と連携して機能します。[検索動作](#searchbehavior)を参照してください。検索結果の表示順序を最適化するには、選択した一部のアセットの[検索ランキングを上げる](#searchrank)ことができます。
+* **タグ付け**：タグを使用すると、アセットを分類して参照や検索をより効率的に行えるようになります。タグ付けは、適切な分類を他のユーザーやワークフローに伝播するうえで役に立ちます。[!DNL Experience Manager] では、Adobe AI サービスを使用してアセットを自動的にタグ付けし、使用状況とトレーニングによってアセットのタグ付けを継続的に改善します。 この機能がアカウントで有効な場合は、アセットを検索する際にスマートタグが考慮されます。これは組み込みの検索機能と連携して機能します。[検索動作](#searchbehavior)を参照してください。検索結果の表示順序を最適化するには、選択した一部のアセットの[検索ランキングを上げる](#searchrank)ことができます。
 
 * **インデックス作成**：インデックスが作成されたメタデータおよびアセットのみが検索結果に返されます。検索範囲とパフォーマンスを向上させるには、適切なインデックス作成を行い、ベストプラクティスに従ってください。詳しくは、[インデックス作成](#searchindex)を参照してください。
 
@@ -480,7 +480,7 @@ PSD ファイルや PDF ファイルなどのアセットをユーザーがア�
 
 | エラー、問題、症状 | 考えられる理由 | 問題の修正または理解 |
 |---|---|---|
-| メタデータが見つからないアセットを検索する場合に、誤った結果が返される | 必須メタデータがないアセットを検索すると、[!DNL Experience Manager] によって有効なメタデータを持つ一部のアセットが表示される場合があります。結果は、インデックス付きメタデータプロパティに基づきます。 | メタデータが更新された後、アセットメタデータの正しい状態を反映するために、再インデックス化が必要です。詳しくは、「[必須メタデータ](metadata-schemas.md#define-mandatory-metadata)」を参照してください。 |
+| メタデータが見つからないアセットを検索する場合に、誤った結果が返される | 必須メタデータがないアセットを検索すると、[!DNL Experience Manager] によって有効なメタデータを持つ一部のアセットが表示される場合があります。結果は、インデックス付きメタデータプロパティに基づきます。 | メタデータが更新された後、アセットメタデータの正しい状態を反映するために、インデックス再作成が必要です。詳しくは、「[必須メタデータ](metadata-schemas.md#define-mandatory-metadata)」を参照してください。 |
 | 検索結果が多すぎる | 広範な検索パラメーター。 | [検索範囲](#scope)を制限することを検討します。スマートタグを使用すると、予想以上に多くの検索結果が得られる場合があります。「[スマートタグによる検索動作](#withsmarttags)」を参照してください。 |
 | 検索結果が無関係か、一部関連している | スマートタグによって検索動作が変わります。 | [スマートタグによる検索の変化](#withsmarttags)を理解します。 |
 | アセットに対するオートコンプリートの提案がない | 新しくアップロードしたアセットのインデックスがまだ作成されていません。オムニサーチバーで検索キーワードを入力し始めても、メタデータはすぐにはサジェストとしては表示されません。 | [!DNL Experience Manager] では、タイムアウト期間（デフォルトは 1 時間）が経過してから、新しくアップロードまたは更新されたすべてのアセットのメタデータにインデックスを付けるバックグラウンドジョブを実行し、その後でメタデータを候補のリストに追加します。 |

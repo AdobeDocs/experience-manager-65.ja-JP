@@ -5,10 +5,10 @@ exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 100%
+source-wordcount: '1087'
+ht-degree: 96%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 100%
 
 * マーチャントは、Commerce のバックエンドを使用して、ナビゲーション時に特定の製品カタログカテゴリを非表示にできます。CIF ナビゲーションのコアコンポーネントは、Commerce のバックエンド設定の「メニューに含める」に従って、ナビゲーション時にカテゴリを表示／非表示にします
 
-* カテゴリまたは商品ページが見つからない場合、AEM ストアフロント Venia は HTTP 404 エラーを返します
+* カテゴリまたは製品ページが見つからない場合、AEM ストアフロント Venia は HTTP 404 エラーを返します
 
 ## リリース日：2021年9月
 
@@ -88,7 +88,7 @@ ht-degree: 100%
 
 * AEM CS のデプロイメント手順中およびクライアントサイドコンポーネントを使用していない場合に JS エラーが発生していました
 
-* sling:configs ノードを持つフォルダー内に CIF クラウド設定を作成できませんでした
+* sling:configs ノードを持つフォルダー内にCIF Cloud Config を作成できない
 
 ## リリース日：2021年8月
 
@@ -131,7 +131,7 @@ ht-degree: 100%
    * オーサリングモードでのステージングされた製品データの視覚的インジケーターにより、今後の変更の可視性が向上
    * コンテンツページとコマースページ用の新しいサイトマップコンポーネント
 
-* 事前定義済みのレコメンデーションまたはオンザフライで作成されたレコメンデーションを使用した、[AEM Storefront の Adobe Sensei による Adobe Commerce Sensei](https://business.adobe.com/jp/products/magento/product-recommendations.html) 製品レコメンデーションのサポート
+* 事前定義済みのレコメンデーションまたはオンザフライで作成されたレコメンデーションを使用した [AEM Storefront のAdobe AI を活用した ](https://business.adobe.com/ai/adobe-genai.html)Adobe Commerce AI 製品レコメンデーションのサポート
 
 ## リリース日：2021年6月
 
@@ -146,7 +146,7 @@ ht-degree: 100%
 * コンテンツフラグメントの新しい CIF 製品およびカテゴリ参照データタイプ（製品／カテゴリ選択ツール UI のサポートを含む）製品／カテゴリ選択ツール UI のサポート)
 * 新しいコマースコンテンツフラグメントコアコンポーネント
 * AEM バックエンドでフルテキストコマース検索をサポート
-* コマースコアコンポーネントは、Adobe Commerce Sensei Recs のデータ収集をサポートします。
+* Commerce コアコンポーネントは、Adobe Commerce AI Recs のデータ収集をサポートします
 * カテゴリページの SEO に対応する URL の改善
 * サイト／設定ごとのカスタム HTTP ヘッダーのサポート
 
