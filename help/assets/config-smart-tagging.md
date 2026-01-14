@@ -95,7 +95,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 スマートコンテンツサービス API を使用するには、Adobe Developer Consoleで統合を作成して、以下を取得します。
 
-* [!UICONTROL API キー ]（Adobe Developer Consoleの [!UICONTROL CLIENT ID] フィールドで生成）、
+* [!UICONTROL API キー &#x200B;]（Adobe Developer Consoleの [!UICONTROL CLIENT ID] フィールドで生成）、
 * [!UICONTROL ORGANIZATION ID]、
 * そして、[!UICONTROL CLIENT SECRET]、（[!DNL Experience Manager]のクラウド設定の[!UICONTROL アセットスマートタグ付けサービス設定]用）。
 

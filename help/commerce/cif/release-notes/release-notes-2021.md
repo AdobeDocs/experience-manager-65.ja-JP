@@ -131,7 +131,7 @@ ht-degree: 96%
    * オーサリングモードでのステージングされた製品データの視覚的インジケーターにより、今後の変更の可視性が向上
    * コンテンツページとコマースページ用の新しいサイトマップコンポーネント
 
-* 事前定義済みのレコメンデーションまたはオンザフライで作成されたレコメンデーションを使用した [AEM Storefront のAdobe AI を活用した ](https://business.adobe.com/ai/adobe-genai.html)Adobe Commerce AI 製品レコメンデーションのサポート
+* 事前定義済みのレコメンデーションまたはオンザフライで作成されたレコメンデーションを使用した [AEM Storefront のAdobe AI を活用した &#x200B;](https://business.adobe.com/ai/adobe-genai.html)Adobe Commerce AI 製品レコメンデーションのサポート
 
 ## リリース日：2021年6月
 

@@ -124,7 +124,7 @@ ht-degree: 98%
 1. 「**[!UICONTROL 昇格を検索]**」ボックスで、画像検索時の強化の対象となるキーワードを指定し、「**[!UICONTROL 追加]**」をクリックします。同じ方法で複数のキーワードを指定できます。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。指定したキーワードに対して昇格したアセットが、検索結果の上位に表示されます。
 
-ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、「[ での検索](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
+ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。以下の例（ビデオ）を参照してください。詳しくは、「[&#x200B; での検索](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -221,7 +221,7 @@ ht-degree: 98%
 
 ### [!DNL Adobe Stock] 画像の検索 {#adobe-stock1}
 
-[!DNL Experience Manager] のユーザーインターフェイス内から Adobe Stock アセットを検索し、必要なアセットのライセンスを取得できます。オムニサーチフィールドに「`Location: Adobe Stock`」を追加します。また、**[!UICONTROL フィルター]**&#x200B;パネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。「[ [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage) の  [!DNL Adobe Stock]  画像の管理」を参照してください。
+[!DNL Experience Manager] のユーザーインターフェイス内から Adobe Stock アセットを検索し、必要なアセットのライセンスを取得できます。オムニサーチフィールドに「`Location: Adobe Stock`」を追加します。また、**[!UICONTROL フィルター]**&#x200B;パネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。「[&#x200B; [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage) の  [!DNL Adobe Stock]  画像の管理」を参照してください。
 
 ### [!DNL Dynamic Media] アセットの検索  {#dynamic-media}
 
