@@ -10,8 +10,8 @@ exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: ht
+source-git-commit: 36cb540cda7faeca5949028c9c14ab2ecf860402
+workflow-type: tm+mt
 source-wordcount: '1779'
 ht-degree: 100%
 
@@ -128,7 +128,7 @@ AEM Managed Services を使用すると、お客様は次のような利点を�
 
 **最高のセキュリティ：**&#x200B;カスタマーアプリケーションを、アクセスが制限された施設、ファイアウォールシステムの背後や、仮想プライベートクラウド内でホストすることで、エンタープライズクラスの物理、ネットワーク、およびデータのセキュリティを確保します。堅牢なデータストレージ暗号化、ウイルス対策、データ分離を備えた、シングルテナントの仮想マシンも含まれています。
 
-**Cloud Manager**：Adobe Experience Manager Managed Services 製品の 1 つである Cloud Manager は、クラウドにおける Adobe Experience Manager の管理を組織内で行えるようにするセルフサービスポータルです。このサービスには最新の継続的インテグレーションと継続的デリバリー（CI／CD）のパイプラインが含まれており、IT チームや実装パートナーは、パフォーマンスやセキュリティを妥協することなく、カスタマイズや更新を迅速に配信できます。Cloud Manager をご利用いただけるのは、Adobe Managed Service のお客様のみです。
+**Cloud Manager**：Adobe Experience Manager Managed Services 製品の 1 つである Cloud Manager は、クラウドにおける Adobe Experience Manager の管理を組織内で行えるようにするセルフサービスポータルです。このサービスには最新の継続的インテグレーションと継続的デリバリー（CI/CD）のパイプラインが含まれており、IT チームや実装パートナーは、パフォーマンスやセキュリティを妥協することなく、カスタマイズや更新を迅速に配信できます。Cloud Manager をご利用いただけるのは、Adobe Managed Service のお客様のみです。
 
 Cloud Manger とそのリソースについて詳しくは、[**Cloud Manager ユーザーガイド**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja)を参照してください。
 
@@ -160,7 +160,7 @@ AEM ソフトウェアパッケージには、次の 2 つの形式がありま�
 
    UNIX® のインストール先：**/opt/aem**
 
-   Windows のインストール先： **`C:\Program Files\aem`**
+   Windows のインストール先： **`C:\aem`**
 
    同様に、デスクトップ上のフォルダーにサンプルインスタンスをインストールするのが一般的です。いずれの場合も、通常この場所は次のように参照します。
 
