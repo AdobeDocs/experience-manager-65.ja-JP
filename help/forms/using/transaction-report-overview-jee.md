@@ -5,22 +5,25 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
-workflow-type: ht
-source-wordcount: '529'
-ht-degree: 100%
+source-git-commit: eb059bc4c9f4b5064b8038a2b037670086a9139b
+workflow-type: tm+mt
+source-wordcount: '632'
+ht-degree: 87%
 
 ---
 
+
 # JEE 上の AEM Forms のトランザクションレポートの有効化と表示 {#transaction-reports-overview}
 
-<!--Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
+<span> トランザクションレポート機能は、AEM Forms 6.5.20.0 から JEE 上のAEM Formsに導入されました。 この機能はデフォルトでは無効になっており、管理 UI から有効にすることができます。</span>
 
-* Submission of a document
-* Rendition of a document
-* Conversion of a document from one file format to another 
+JEE 上のAEM Formsのトランザクションレポートを使用すると、AEM Formsのデプロイメントで発生したすべてのトランザクション数を保持できます。 目的は、製品の使用状況に関する情報を提供し、ビジネスの関係者がデジタル処理量を理解できるようにすることです。 トランザクションの例を次に示します。
 
-For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis-jee.md). Transaction log helps you to gain information about the number of documents submitted, rendered, and converted.-->
+* 文書の提出
+* ドキュメントのレンディション
+* あるファイル形式から別のファイル形式へのドキュメントの変換
+
+トランザクションと見なされる項目の詳細については、[課金対象 API](../../forms/using/transaction-reports-billable-apis-jee.md) を参照してください。
 
 ## トランザクションレポートを有効にする {#enable-transaction-reporting}
 
