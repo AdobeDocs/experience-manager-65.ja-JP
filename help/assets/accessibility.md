@@ -44,7 +44,7 @@ Possible topics to cover in this article are below.
 
 準拠レベルの詳細を記載したレポートについては、[アクセシビリティ準拠レポート](https://www.adobe.com/accessibility/compliance.html)（ACR）のページを参照してください。
 
-[!DNL Dynamic Media] のアクセシビリティについて詳しくは、「[ [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ」を参照してください。
+[!DNL Dynamic Media] のアクセシビリティについて詳しくは、「[&#x200B; [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ」を参照してください。
 
 ## 支援テクノロジー {#at-support}
 
@@ -60,7 +60,7 @@ Possible topics to cover in this article are below.
 
 [!DNL Experience Manager] のアクセシビリティ機能は、[!DNL Experience Manager] ユーザーとその顧客の 2 つの主要な要件に対応しています。
 
-* コンテンツデザイナーやクリエーターには、アクセシブルなコンテンツを作成して公開する機能が提供されます。作成されたコンテンツは、顧客や web サイト訪問者によって使用されます。障がいを持つユーザーは、支援テクノロジーを活用してコンテンツを利用します。詳しくは、「[Web アクセシビリティのガイドライン ](/help/managing/web-accessibility.md)」を参照してください。
+* コンテンツデザイナーやクリエーターには、アクセシブルなコンテンツを作成して公開する機能が提供されます。作成されたコンテンツは、顧客や web サイト訪問者によって使用されます。障がいを持つユーザーは、支援テクノロジーを活用してコンテンツを利用します。詳しくは、「[Web アクセシビリティのガイドライン &#x200B;](/help/managing/web-accessibility.md)」を参照してください。
 * [!DNL Experience Manager] た、障害を持つユーザーや管理者は、コンテンツの作成と管理を行うためのユーザーインターフェイスやコントロールにアクセスできます。 障害を持つユーザーは、支援テクノロジーを使用して、[!DNL Assets] 機能をナビゲート、使用、管理できます。
 
 [!DNL Assets] の主な機能は以前よりもアクセスしやすく、定期的にアップデートされており、グローバル標準への準拠が改善されています。[!DNL Assets] の CRUD 操作には、ある程度のアクセシビリティが組み込まれています。 アセットの追加、管理、検索、配布などの DAM ワークフローには、キーボードショートカット、スクリーンリーダーテキスト、カラーコントラストなどの支援を受けてアクセスできます。
@@ -89,7 +89,7 @@ Possible topics to cover in this article are below.
 | [!DNL Assets] コンソール | &grave; | サイドパネルを切り替えます。 |
 | [!DNL Assets] コンソール | `Alt + 1` | コンテンツツリーを開きます。 |
 | [!DNL Assets] コンソール | `Alt + 2` | 左側のパネルで[!UICONTROL ナビゲーション]を開きます。 |
-| [!DNL Assets] コンソール | `Alt + 3` | 選択したアセットの [!UICONTROL  タイムライン ] を表示します。 |
+| [!DNL Assets] コンソール | `Alt + 3` | 選択したアセットの [!UICONTROL &#x200B; タイムライン &#x200B;] を表示します。 |
 | [!DNL Assets] コンソール | `Alt + 4` | 選択したアセットのライブコピーの参照を開きます。 |
 | [!DNL Assets] コンソール | `Alt + 5` | 検索を開始し、選択したフォルダー内を検索します。 |
 | アセットまたはフォルダーが選択されている | Backspace | 選択したアセットまたはフォルダーを削除します。 |
@@ -166,10 +166,10 @@ CRUD 操作、アセットのダウンロード、メタデータの追加など
 
 通常、マーケターや管理者などの役割で行うメタデータ操作では、次の機能によりアクセシビリティが向上します。
 
-* アセット [!UICONTROL  プロパティ ] ページの「[!UICONTROL  保存して閉じる ] オプションに、キーボードを使用してアクセスできるようになりました。
-* スクリーンリーダーは、アセットの「プロパティ」の「[!UICONTROL  基本 ]」タブで、選択したタグを削除するオプションを読み上げ [!UICONTROL  し ] す。
+* アセット [!UICONTROL &#x200B; プロパティ &#x200B;] ページの「[!UICONTROL &#x200B; 保存して閉じる &#x200B;] オプションに、キーボードを使用してアクセスできるようになりました。
+* スクリーンリーダーは、アセットの「プロパティ」の「[!UICONTROL &#x200B; 基本 &#x200B;]」タブで、選択したタグを削除するオプションを読み上げ [!UICONTROL &#x200B; し &#x200B;] す。
 * ユーザーは、日付選択ポップアップダイアログボックスをキーボードで使用できます。 日付選択のユーザーインターフェイス要素を使用して、オンタイムとオフタイムを設定し、日付を選択します。
-* キーボードを使用したドラッグ機能は、スクリーンリーダーの参照モードの [!UICONTROL  メタデータスキーマエディター ] で正しく機能します。
+* キーボードを使用したドラッグ機能は、スクリーンリーダーの参照モードの [!UICONTROL &#x200B; メタデータスキーマエディター &#x200B;] で正しく機能します。
 * ユーザーはキーボードを使用して、フォーカスを「**ユーザーまたはグループの追加**」フィールドに移動できます。
 
 ## デジタルアセットの検索 {#search-assets}
@@ -220,7 +220,7 @@ CRUD 操作、アセットのダウンロード、メタデータの追加など
 
 >[!MORELIKETHIS]
 >
->* [  [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ機能。
+>* [&#x200B;  [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ機能。
 >* [各サービスパックのリリースでおこなわれた機能強化のリリースノート](/help/release-notes/release-notes.md)。
 >* [[!DNL Adobe Experience Manager] アクセシビリティガイダンス](/help/managing/web-accessibility.md)
 >* [アドビソリューションのアクセシビリティ準拠レポート（ACR）および VPAT リスト](https://www.adobe.com/accessibility/compliance.html)
