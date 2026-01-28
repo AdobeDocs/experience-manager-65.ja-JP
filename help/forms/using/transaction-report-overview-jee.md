@@ -15,7 +15,7 @@ ht-degree: 87%
 
 # JEE 上の AEM Forms のトランザクションレポートの有効化と表示 {#transaction-reports-overview}
 
-<span> トランザクションレポート機能は、AEM Forms [ から JEE 上の 6.5.20.0](/help/release-notes/previous/6-5-20.md#forms)AEM Formsに導入されました。 この機能はデフォルトでは無効になっており、管理 UI から有効にすることができます。</span>
+<span> トランザクションレポート機能は、AEM Forms [&#x200B; から JEE 上の 6.5.20.0](/help/release-notes/previous/6-5-20.md#forms)AEM Formsに導入されました。 この機能はデフォルトでは無効になっており、管理 UI から有効にすることができます。</span>
 
 JEE 上のAEM Formsのトランザクションレポートを使用すると、AEM Formsのデプロイメントで発生したすべてのトランザクション数を保持できます。 目的は、製品の使用状況に関する情報を提供し、ビジネスの関係者がデジタル処理量を理解できるようにすることです。 トランザクションの例を次に示します。
 
