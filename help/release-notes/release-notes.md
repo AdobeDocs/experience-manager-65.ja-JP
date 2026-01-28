@@ -696,7 +696,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 * **FORMS-21378**: サーバーサイド検証（SSV）が有効な場合、フォームの送信が失敗する場合があります。 この問題が発生した場合は、アドビサポートにお問い合わせください。
 
-* **FORMS-23703**: `contains` ルールが既定値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
+* **FORMS-23703**: `contains` ルールが既定値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
