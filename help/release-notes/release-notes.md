@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: ae66b28497bfb12686152b324e1758ad2d8592ee
+source-git-commit: 4305b4c7089fe4ac2b1bfe2dc6e4919181b3d892
 workflow-type: tm+mt
-source-wordcount: '9451'
+source-wordcount: '9486'
 ht-degree: 24%
 
 ---
@@ -694,9 +694,9 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
   have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
   ```
 
-* FORMS-21378：サーバーサイド検証（SSV）が有効になっている場合、フォームの送信が失敗する場合があります。 この問題が発生した場合は、アドビサポートにお問い合わせください。
+* **FORMS-21378**: サーバーサイド検証（SSV）が有効な場合、フォームの送信が失敗する場合があります。 この問題が発生した場合は、アドビサポートにお問い合わせください。
 
-
+* **FORMS-23703**: `contains` ルールが既定値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
