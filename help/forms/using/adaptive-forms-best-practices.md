@@ -7,9 +7,9 @@ feature: Adaptive Forms,Foundation Components,Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 6ec4eca0c0ad5ecfe18ffc766e6415a0f48506a9
-workflow-type: ht
-source-wordcount: '5963'
+source-git-commit: 5699f5814daf16a397eb6129b881ac2035456e39
+workflow-type: tm+mt
+source-wordcount: '5888'
 ht-degree: 100%
 
 ---
@@ -296,17 +296,17 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 * DoR から非表示フィールドを除外します。
 * `afAcceptLang` リクエストパラメーターを使用して、別のロケールで DoR を表示します。
 
-### アダプティブフォームのデバッグとテスト {#debugging-and-testing-adaptive-forms}
+<!--### Debugging and testing adaptive forms {#debugging-and-testing-adaptive-forms}
 
-[AEM Chrome プラグイン](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/)は、Google Chrome 用のブラウザー拡張機能で、アダプティブフォームのデバッグ用のツールを提供します。フォームの作成者および開発者は、これらのツールを使用して次のことを実行できます。
+[AEM Chrome Plug-in](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) is a browser extension for Google Chrome that provides tools for debugging adaptive forms. Form authors and developers can use these tools to:
 
-* フォームのレンダリングのボトルネックを特定し、パフォーマンスを最適化する
-* フォーム内のキーワードと bindRef エラーをデバッグする
-* ログを有効にして設定する
-* フォーム内のルールとスクリプトをデバッグする
-* guideBridge API の探索と学習を行う
+* Identify bottlenecks and optimize performance of form rendering
+* Debug keywords and bindRef errors in the form
+* Enable and configure logs
+* Debug rules and scripts in the form
+* Explore and learn about guideBridge APIs
 
-詳しくは、[AEM Chrome プラグイン - アダプティブフォーム](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)を参照してください。
+For more information, see [AEM Chrome Plug-in - Adaptive Form](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).-->
 
 ### AEM サーバー上でのアダプティブフォームの検証 {#validating-adaptive-forms-on-aem-server}
 
@@ -346,7 +346,7 @@ AEM プロジェクトをある環境から別の環境に移動する必要が�
 * 製品パッケージおよびパッチを、手動で、新しい環境で指定された順序でデプロイします。
 * プロジェクト固有のコードのパッケージとバンドルを、手動で、新しい AEM サーバー上の別個のパッケージやバンドルとしてデプロイします。
 * （*JEE 上の AEM Forms のみ*）LCA および DSC を手動で Forms ワークフローサーバー上にデプロイします。
-* [書き出し - 読み込み](/help/forms/using/import-export-forms-templates.md)機能を使用して、アセットを新しい環境に移動します。複製エージェントを構成し、アセットを公開することもできます。
+* [書き出し - 読み込み](/help/forms/using/import-export-forms-templates.md)機能を使用して、アセットを新しい環境に移動します。レプリケーションエージェントを構成し、アセットを公開することもできます。
 * アップグレードする際は、廃止されるすべての API と機能を新しい API と機能に置き換えてください。
 
 ### AEM の設定 {#configuring-aem}
@@ -372,7 +372,7 @@ AEM プロジェクトをある環境から別の環境に移動する必要が�
 
 ### ドラフトおよび送信済みフォームのデータを保存する外部ストレージの設定 {#external-storage}
 
-実稼動環境では、送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。「フォームポータル保存」、「コンテンツ保存」および「PDF の保存」送信アクションのデフォルト実装では、フォームデータが AEM リポジトリに保存されます。これらの送信アクションは、デモを目的としたものです。また、「保存して再開」機能や「自動保存」機能でも、デフォルトでポータルストレージが使用されます。このため、次のレコメンデーションを検討してください。
+本番環境では、送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。「フォームポータル保存」、「コンテンツ保存」および「PDF の保存」送信アクションのデフォルト実装では、フォームデータが AEM リポジトリに保存されます。これらの送信アクションは、デモを目的としたものです。また、「保存して再開」機能や「自動保存」機能でも、デフォルトでポータルストレージが使用されます。このため、次のレコメンデーションを検討してください。
 
 * **ドラフトデータの保存**：アダプティブフォームの「ドラフト」機能を使用している場合は、カスタムサービスプロバイダーインターフェイス（SPI）を実装して、データベースなどのより安全なストレージにドラフトデータを保存してください。詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
@@ -414,7 +414,7 @@ AEM Forms ルールエディターは、ルールを作成および管理する�
 * AEM Forms コンポーネントの標準的な機能を超える高度にカスタマイズされたユーザーインターフェイスが必要な場合。コードエディターを使用すると、カスタムのスタイルや動作を実装できるほか、カスタムフォームコンポーネントの作成さえ可能です。
 * フォームが非同期データ読み込みなどの非同期操作を伴う場合。コードエディターを使用して、カスタムの非同期 JavaScript コードでこれらの操作を管理できます。
 
-コードエディターを使用する場合は、JavaScript と AEM Forms のアーキテクチャを十分に理解しておく必要があることに注意してください。さらに、カスタムコードを実装する場合は、ベストプラクティスに従い、セキュリティガイドラインを順守し、コードを十分にテストして実稼動環境で問題が発生しないようにしてください。コードエディターを使用して、FDM のコールバックを実装できます。
+コードエディターを使用する場合は、JavaScript と AEM Forms のアーキテクチャを十分に理解しておく必要があることに注意してください。さらに、カスタムコードを実装する場合は、ベストプラクティスに従い、セキュリティガイドラインを順守し、コードを十分にテストして本番環境で問題が発生しないようにしてください。コードエディターを使用して、FDM のコールバックを実装できます。
 
 コードエディターは、AEM Forms 基盤コンポーネントでのみ使用できます。アダプティブフォームのコアコンポーネントの場合は、カスタム関数を使用して独自のフォームルールを作成できます（次の節を参照）。
 
