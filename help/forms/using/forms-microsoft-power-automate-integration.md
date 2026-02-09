@@ -27,7 +27,7 @@ ht-degree: 92%
 * キャプチャしたデータに対する複雑な計算を実行する
 * 事前に定義されたスケジュールでアダプティブフォームのデータをストレージシステムに保存する
 
-アダプティブフォームエディターには「**Microsoft Power Automate フローの呼び出し**」送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドフローに送信することができます。送信アクションを使用して、キャプチャしたデータを Microsoft® Power Automate に送信するには、[AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)します
+アダプティブフォームエディターには「**Microsoft Power Automate フローの呼び出し**」送信アクションが用意されており、アダプティブフォームのデータ、添付ファイル、レコードのドキュメントを Power Automate クラウドフローに送信することができます。送信アクションを使用して、キャプチャしたデータを Microsoft® Power Automate に送信するには、[AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続] (#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)します
 
 ## 前提条件
 
@@ -123,9 +123,9 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
 >
 >Microsoft® Power Automate 接続に使用するトークンは、90 日後に有効期限が切れます。
 >
-> 統合を引き続き機能させるには、トークンの有効期限が切れる前または切れた時点で、Microsoft® Power Automate Dataverse とMicrosoft® Power Automate Flow Service のクラウド設定の両方を再認証して再公開します。[Microsoft® Power Automate Dataverse とMicrosoft® Power Automate Flow Service クラウド設定の両方を公開する ](#publish-microsoft-power-automate-dataverse-cloud-configuration) に記載されている手順を使用します。
+> 統合を引き続き機能させるには、トークンの有効期限が切れる前または切れた時点で、Microsoft® Power Automate Dataverse とMicrosoft® Power Automate Flow Service のクラウド設定の両方を再認証して再公開します。[Microsoft® Power Automate Dataverse とMicrosoft® Power Automate Flow Service クラウド設定の両方を公開する &#x200B;](#publish-microsoft-power-automate-dataverse-cloud-configuration) に記載されている手順を使用します。
 >
-> トークン有効期間ポリシーについて詳しくは、[ 設定可能なトークン有効期間に関するMicrosoft Entra のドキュメント ](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens) を参照してください。 トークンが更新されない場合、Power Automate へのフォーム送信が失敗する可能性があります。
+> トークン有効期間ポリシーについて詳しくは、[&#x200B; 設定可能なトークン有効期間に関するMicrosoft Entra のドキュメント &#x200B;](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens) を参照してください。 トークンが更新されない場合、Power Automate へのフォーム送信が失敗する可能性があります。
 
 ## 「Microsoft® Power Automate フローの呼び出し」送信アクションを使用して、Power Automate フローにデータを送信する {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 
