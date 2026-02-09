@@ -5,9 +5,9 @@ exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+source-git-commit: 30137e36b60c3ada70240e1442390f9fdd26f3b9
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1771'
 ht-degree: 100%
 
 ---
@@ -61,6 +61,7 @@ ht-degree: 100%
 | Forms | AEM Forms と AEM Mobile の統合は非推奨（廃止予定）となりました。 | 代替手段はありません。 |  |
 | デベロッパー向け | CRXDE Lite のクラシック UI ダイアログエディター。アドビでは、配布版（クイックスタート）の一部として含まれているクラシック UI ダイアログエディターの機能を今後強化する予定はありません | 代替機能はありません。 |  |
 | デベロッパー向け | Lodash／underscore クライアントライブラリ。アドビでは今後、配布版（クイックスタート）の一部として含まれている Lodash／underscore クライアントライブラリの保守や更新を行う予定はありません。 | コードに Lodash／underscore が引き続き必要な場合は、このクライアントライブラリをプロジェクトコードベースに追加することをお勧めします。 |  |
+| [!DNL Foundation] | com.adobe.granite.oauth.server のサポート | Adobe IMS 統合 |  |
 
 ## 削除された機能 {#removed-features}
 
