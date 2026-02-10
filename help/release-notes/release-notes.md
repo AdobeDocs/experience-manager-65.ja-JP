@@ -703,7 +703,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS-23979。**:HTMLからPDFへの変換（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の ](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
+* **FORMS-23979。**:HTMLからPDFへの変換（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
 
 * **FORMS-23722** （タスクの割り当てに添付ファイルが見つからない）: **タスクの割り当て** ステップを使用するAEM ワークフローに **添付ファイル** フィールドが含まれるフォームが送信された場合、タスクがインボックスから開かれたときに、添付ファイルが表示されません。 ファイルはリポジトリに正しく保存され、CRXに表示されます。タスクを割り当てステップの UI には表示されません。
 
