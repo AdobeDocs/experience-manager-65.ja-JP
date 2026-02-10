@@ -4,16 +4,20 @@ description: AEM Forms は、ユーザーがルールエディター内で独自
 feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
 exl-id: 14a52bc1-c1b4-4a12-b8e1-54523e5f30bd
-source-git-commit: 23d3796e15294b0fc7486096ea02bcbedbed69f3
-workflow-type: ht
-source-wordcount: '1084'
-ht-degree: 100%
+source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
+workflow-type: tm+mt
+source-wordcount: '1116'
+ht-degree: 97%
 
 ---
 
 # AEM Forms のカスタム関数
 
 ## はじめに
+
+>[!NOTE]
+>
+> カスタム関数は、ECMAScript 5 （ES5）と互換性がある必要があります。 Foundation Formsは、ES5 のみをサポートしています。新しい ECMAScript バージョン（ES6 以降）の使用はサポートされておらず、エラーや予期しない動作が発生する可能性があります。
 
 AEM Forms 6.5 では、ルールエディターを使用した複雑なビジネスルールの定義に使用できる JavaScript 関数を定義する機能が導入されました。AEM Formsでは、すぐに使用できる多数のカスタム関数が用意されていますが、独自のカスタム関数を定義して複数のフォームで使用する必要があります。
 
@@ -87,7 +91,8 @@ function ValidateEmail(inputText)
 * **戻り値のタイプ**
 構文：`@return {type}`
 または、`@returns {type}` を使用できます。
-目的などの、関数に関する情報を追加します。{type} は、関数の戻り値のタイプを表します。許可されている戻り値のタイプは次のとおりです。
+目的などの、関数に関する情報を追加します。
+  {type} は、関数の戻り値のタイプを表します。許可されている戻り値のタイプは次のとおりです。
 
    1. 文字列
    1. 数値

@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 24e09fd7dd1801dc1511ed91a0b7c550d50eb484
+source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
 workflow-type: tm+mt
-source-wordcount: '9709'
+source-wordcount: '9732'
 ht-degree: 24%
 
 ---
@@ -694,7 +694,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 * **FORMS-21378**: サーバーサイド検証（SSV）が有効な場合、フォームの送信が失敗する場合があります。 この問題が発生した場合は、アドビサポートにお問い合わせください。
 
-* **FORMS-23703**: `contains` ルールが既定値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
+* **FORMS-23703**: `contains` ルールが既定値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
 
 * 必要なキーワードと正規表現パターンがデフォルトでは許可されていないので、フォームデータモデルコネクタの認証に失敗する可能性があります。 この問題を解決するには、設定マネージャー（`/system/console/configmgr`）から次を追加します。
 
@@ -703,9 +703,11 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS-23979。**:HTMLからPDFへの変換（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
+* **FORMS-23979。**:HTMLからPDFへの変換（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の ](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
 
 * **FORMS-23722** （タスクの割り当てに添付ファイルが見つからない）: **タスクの割り当て** ステップを使用するAEM ワークフローに **添付ファイル** フィールドが含まれるフォームが送信された場合、タスクがインボックスから開かれたときに、添付ファイルが表示されません。 ファイルはリポジトリに正しく保存され、CRXに表示されます。タスクを割り当てステップの UI には表示されません。
+
+* **FORMS-23717** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。
 
 * **FORMS-23717** **AEM Forms6.5.24.0** にアップグレードすると、`server.log` と `error.log` に大量の WARN メッセージが表示される場合があります。たとえば、*Secure parser factory creation failed* や *Security attribute ... is not supported* などです。 ログは 1 秒あたり約 **5～10 行** （1 時間あたり数百 MB）増加する可能性があり、ディスクがいっぱいになり、実稼動ロールアウトがブロックされる可能性があります。 **修正：** AEM Forms **6.5.25.0** に含まれています。 **それまで：**
 
