@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
+source-git-commit: a750a6093ae8ba6b43c46af52077ed3773d59a20
 workflow-type: tm+mt
-source-wordcount: '9732'
-ht-degree: 24%
+source-wordcount: '9595'
+ht-degree: 20%
 
 ---
 
@@ -641,26 +641,26 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6524}
 
+* **FORMS-14521** 保存された XML データを含むドラフトレターをプレビューしようとすると、一部のレターで `Loading` 状態が停止します。
+* **FORMS-16603** Interactive Communications Agent UI の印刷プレビューで、一部の計算値が正しく表示されません。
+* **FORMS-15681** 印刷プレビューでレターを表示すると、コンテンツが変更される。 つまり、いくつかのスペースが消え、特定の文字が `x` に置き換えられます。
+* **FORMS-15428**：Forms アドオンを使用して AEM Forms サービスパック 20（6.5.20.0）にアップデートすると、資格情報に基づく認証を使用する従来の Adobe Analytics Cloud Service に依存する設定が機能しなくなります。 この問題により、分析ルールが正しく実行されなくなりました。
+* **FORMS-16557** インタラクティブ通信エージェント UI の印刷プレビューで、すべてのフィールド値に対して通貨記号（ドル記号$など）が一貫して表示されません。 999 までの値の場合は表示されますが、1000 以上の値の場合はがありません。
+* **FORMS-16575** インタラクティブ通信内でネストされたレイアウトフラグメントの XDP に対して行われた変更は、IC Editor には反映されません。
+* **FORMS-21378** サーバーサイド検証（SSV）が有効になっている場合、フォームの送信が失敗する場合があります。 この問題が発生した場合は、アドビサポートにお問い合わせください。
+* **FORMS-23722** （タスクの割り当てに添付ファイルが見つからない）:bindref を使用する **添付ファイル** フィールドを含むフォームが、**タスクの割り当て** ステップを使用するAEM ワークフローに送信された場合、インボックスからタスクを開いたときに、添付ファイルが表示されません。 ファイルはリポジトリに正しく保存されますが、タスクを割り当てステップ UI に添付ファイルが表示されません。
+
+#### 使用可能なホットフィックスに関する問題 {#aem-forms-issues-with-hotfixes}
+
 >[!NOTE]
 >
 >利用可能なホットフィックスのない問題については、Service Pack 6.5.24.0 へのアップグレードを避けてください。 予期しないエラーが発生する可能性があります。 必要なホットフィックスがリリースされた後にのみ、サービスパック 6.5.24.0 にアップグレードしてください。
 
-#### 使用可能なホットフィックスに関する問題 {#aem-forms-issues-with-hotfixes}
-
 次の問題には、ダウンロードとインストールが可能なホットフィックスがあります。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
-
-* **FORMS-20203**：Struts フレームワークをバージョン 2.5.x から 6.x にアップグレードすると、AEM Forms のポリシー UI に透かしを追加するオプションなどのすべての設定が表示されなくなります。
-
-* **FORMS-20360**：AEM Forms サービスパック 6.5.24.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します。
-  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
-
-* **FORMS-20478**：7/8 TIFF ファイルタイプを PDF に変換しようとすると、「ALC-PDG-001-000-Image2Pdf 変換に失敗しました（com/sun/image/codec/jpeg/JPEGCodec および「ALC-PDG-016-003-PDF の後処理中に不明／予期しないエラーが発生しました）」というエラーが表示され、変換処理が失敗します。 システムは TM ImageIO TIFF デコーダを使用して再試行を試みますが、最終的にはジョブを完了できません。
-
-* **FORMS-14521**：ユーザーが保存された XML データを含むドラフトレターをプレビューしようとすると、一部の特定のレターが `Loading` 状態でスタックする。
 
 * AEM Forms には、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 このアップグレードにより、以前は欠落していた Struts の変更が SP24 には含まれていませんでした。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、[ホットフィックス](/help/release-notes/aem-forms-hotfix.md)を介して追加されました。
 
-* AEM Forms JEE サービスパック 21（6.5.21.0）のインストール後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダー配下に Geode JARs `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` の重複エントリが見つかった場合（FORMS-14926）、問題を解決するには、次の手順に従います。
+* **FORMS-14926** AEM Forms JEE サービスパック 21 （6.5.21.0）のインストール後、`(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` フォルダーに Geode jar `<AEM_Forms_Installation>/lib/caching/lib` の重複エントリが見つかった場合は、次の手順を実行して問題を解決します。
 
    1. ロケーターが実行中の場合は、ロケーターを停止します。
    2. AEM サーバーを停止します。
@@ -669,32 +669,14 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
    5. 管理者モードでコマンドプロンプトを開きます。
    6. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
-* ユーザーが AEM 6.5 Forms サービスパック 18 または 19 からサービスパック 20 または 21 にアップグレードした際、JSP コンパイルエラーが発生しました。 このエラーにより、アダプティブフォームを開いたり、作成したりすることができませんでした。 また、他の AEM インターフェイスでも問題が発生しました。 これらのインターフェイスには、ページエディター、AEM Forms UI、ワークフローエディター、システム概要 UI が含まれていました。（FORMS-15256）
+* **FORMS-15256** ユーザーをAEM 6.5 Forms サービスパック 18 または 19 からサービスパック 20 または 21 にアップグレードした際に、JSP コンパイルエラーが発生しました。 このエラーにより、アダプティブフォームを開いたり、作成したりすることができませんでした。 また、他の AEM インターフェイスでも問題が発生しました。 これらのインターフェイスには、ページエディター、AEM Forms UI、ワークフローエディターおよびシステム概要 UI が含まれていました。
 
   このような問題が発生した場合は、次の手順を実行して解決します。
    1. CRXDE のディレクトリ `/libs/fd/aemforms/install/` に移動します。
    2. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    3. AEM サーバーを再起動します。
 
-* インタラクティブなコミュニケーションエージェント UI の印刷プレビューでは、すべてのフィールド値に通貨記号（ドル記号 $ など）が一貫して表示されません。 999 までの値の場合は表示されますが、1000 以上の値の場合は表示されません。 （FORMS-16557）
-* インタラクティブなコミュニケーション内でネストされたレイアウトフラグメントの XDP に対する変更は、IC エディターに反映されません。 （FORMS-16575）
-* インタラクティブなコミュニケーションエージェント UI の印刷プレビューでは、一部の計算値が正しく表示されません。 （FORMS-16603）
-* 印刷プレビューでレターを表示すると、コンテンツが変更されます。 つまり、一部のスペースが表示されなくなり、特定の文字が `x` に置き換えられます。（FORMS-15681）
-* **FORMS-15428**：Forms アドオンを使用して AEM Forms サービスパック 20（6.5.20.0）にアップデートすると、資格情報に基づく認証を使用する従来の Adobe Analytics Cloud Service に依存する設定が機能しなくなります。 この問題により、分析ルールが正しく実行されなくなりました。
-
-* ユーザーが WebLogic 14c インスタンスを設定すると、JBoss® で実行されている JEE 上の AEM Forms サービスパック 21（6.5.21.0）の PDFG サービスが、SLF4J ライブラリに関連するクラスローダーの競合により失敗します。エラーは次のように表示されます。（CQDOC-22178）：
-
-  ```java
-  Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
-  the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
-  @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
-  (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
-  have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
-  ```
-
-* **FORMS-21378**: サーバーサイド検証（SSV）が有効な場合、フォームの送信が失敗する場合があります。 この問題が発生した場合は、アドビサポートにお問い合わせください。
-
-* **FORMS-23703**: `contains` ルールが既定値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
+* **FORMS-23703** `contains` ルールがデフォルト値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
 
 * 必要なキーワードと正規表現パターンがデフォルトでは許可されていないので、フォームデータモデルコネクタの認証に失敗する可能性があります。 この問題を解決するには、設定マネージャー（`/system/console/configmgr`）から次を追加します。
 
@@ -703,15 +685,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS-23979。**:HTMLからPDFへの変換（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
-
-* **FORMS-23722** （タスクの割り当てに添付ファイルが見つからない）: **タスクの割り当て** ステップを使用するAEM ワークフローに **添付ファイル** フィールドが含まれるフォームが送信された場合、タスクがインボックスから開かれたときに、添付ファイルが表示されません。 ファイルはリポジトリに正しく保存され、CRXに表示されます。タスクを割り当てステップの UI には表示されません。
-
-* **FORMS-23717** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。
+* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の ](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
 
 * **FORMS-23717** **AEM Forms6.5.24.0** にアップグレードすると、`server.log` と `error.log` に大量の WARN メッセージが表示される場合があります。たとえば、*Secure parser factory creation failed* や *Security attribute ... is not supported* などです。 ログは 1 秒あたり約 **5～10 行** （1 時間あたり数百 MB）増加する可能性があり、ディスクがいっぱいになり、実稼動ロールアウトがブロックされる可能性があります。 **修正：** AEM Forms **6.5.25.0** に含まれています。 **それまで：**
 
   ログボリュームを減らすには、アプリケーションサーバー設定または JVM 引数 `com.adobe.util.XMLSecurityUtil` を使用して、`ERROR` のログレベルを `-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR` に設定します。 これにより、メッセージが非表示になるだけで、根本原因は修正されません。
+
+* **FORMS-23875** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。 この問題を解決するには、[ リンク ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip) からホットフィックスをダウンロードしてインストールします。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
