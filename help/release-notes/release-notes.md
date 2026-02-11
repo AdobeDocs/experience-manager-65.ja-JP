@@ -686,13 +686,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の ](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
+* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
 
 * **FORMS-23717** **AEM Forms6.5.24.0** にアップグレードすると、`server.log` と `error.log` に大量の WARN メッセージが表示される場合があります。たとえば、*Secure parser factory creation failed* や *Security attribute ... is not supported* などです。 ログは 1 秒あたり約 **5～10 行** （1 時間あたり数百 MB）増加する可能性があり、ディスクがいっぱいになり、実稼動ロールアウトがブロックされる可能性があります。 **修正：** AEM Forms **6.5.25.0** に含まれています。 **それまで：**
 
   ログボリュームを減らすには、アプリケーションサーバー設定または JVM 引数 `com.adobe.util.XMLSecurityUtil` を使用して、`ERROR` のログレベルを `-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR` に設定します。 これにより、メッセージが非表示になるだけで、根本原因は修正されません。
 
-* **FORMS-23875** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。 この問題を解決するには、[ リンク ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip) からホットフィックスをダウンロードしてインストールします。
+* **FORMS-23875** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。 この問題を解決するには、[&#x200B; リンク &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip) からホットフィックスをダウンロードしてインストールします。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
