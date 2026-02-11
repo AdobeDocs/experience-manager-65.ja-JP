@@ -677,7 +677,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
    2. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    3. AEM サーバーを再起動します。
 
-* **FORMS-23703** `contains` ルールがデフォルト値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
+* **FORMS-23703** `contains` ルールがデフォルト値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
 
 * 必要なキーワードと正規表現パターンがデフォルトでは許可されていないので、フォームデータモデルコネクタの認証に失敗する可能性があります。 この問題を解決するには、設定マネージャー（`/system/console/configmgr`）から次を追加します。
 
@@ -686,7 +686,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
+* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
 
 * **FORMS-23717** **AEM Forms6.5.24.0** にアップグレードすると、`server.log` と `error.log` に大量の WARN メッセージが表示される場合があります。たとえば、*Secure parser factory creation failed* や *Security attribute ... is not supported* などです。 ログは 1 秒あたり約 **5～10 行** （1 時間あたり数百 MB）増加する可能性があり、ディスクがいっぱいになり、実稼動ロールアウトがブロックされる可能性があります。 **修正：** AEM Forms **6.5.25.0** に含まれています。 **それまで：**
 
