@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 71e85d8d140d0d478c9ef27daf90960747df295f
+source-git-commit: 5a851bf013a4ef7e6097bf32bd3fa8fe4d635f28
 workflow-type: tm+mt
-source-wordcount: '9567'
+source-wordcount: '9627'
 ht-degree: 20%
 
 ---
@@ -545,6 +545,12 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 AEM 6.5 で廃止または削除されたすべての機能の詳細なリストについては、[廃止および削除された機能](/help/release-notes/deprecated-removed-features.md)を参照してください。
 
+### AEM Assets REST API でのコンテンツフラグメントのサポート {#cf-support-assets-rest-api}
+
+AEM 6.5 LTS SP2 は、コンテンツフラグメントおよびモデル管理に最新の OpenAPI を提供するので、AEM Assets REST API の古いコンテンツフラグメントのサポートエンドポイントは非推奨（廃止予定）になりました。
+
+Adobeは、提供終了のお知らせが届くまで、これらの古いエンドポイントを引き続き利用できる状態にしておきます。 Adobeでは、非推奨（廃止予定）のエンドポイント向けに今後の機能強化は計画していません。
+
 ### SPA エディター {#spa-editor}
 
 [SPA エディター](/help/sites-developing/spa-overview.md)は、AEM 6.5 のリリース 6.5.24 以降の新しいプロジェクトでは廃止されました。SPA エディターは、既存のプロジェクトでは引き続きサポートされますが、新しいプロジェクトには使用しないでください。
@@ -677,7 +683,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
    2. `com.adobe.granite.ui.commons-5.10.26.jar` という名前のバンドルを削除します。
    3. AEM サーバーを再起動します。
 
-* **FORMS-23703** `contains` ルールがデフォルト値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
+* **FORMS-23703** `contains` ルールがデフォルト値なしで設定されている場合、アダプティブフォームのサーバーサイド検証が失敗します。 問題を修正するには、[AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) の最新バージョンをインストールしてください。
 
 * 必要なキーワードと正規表現パターンがデフォルトでは許可されていないので、フォームデータモデルコネクタの認証に失敗する可能性があります。 この問題を解決するには、設定マネージャー（`/system/console/configmgr`）から次を追加します。
 
@@ -686,13 +692,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
+* **FORMS23979** のHTMLからPDFへのコンバージョン（PDFG）が断続的にタイムアウトする場合があります。 その後、修正を含む SP24 用Forms アドオンの新しいバージョンがリリースされました。 この問題が発生した場合は、環境を [6.5.24.0 用の ](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) 最新リリースのForms アドオンに更新してください。
 
 * **FORMS-23717** **AEM Forms6.5.24.0** にアップグレードすると、`server.log` と `error.log` に大量の WARN メッセージが表示される場合があります。たとえば、*Secure parser factory creation failed* や *Security attribute ... is not supported* などです。 ログは 1 秒あたり約 **5～10 行** （1 時間あたり数百 MB）増加する可能性があり、ディスクがいっぱいになり、実稼動ロールアウトがブロックされる可能性があります。 **修正：** AEM Forms **6.5.25.0** に含まれています。 **それまで：**
 
   ログボリュームを減らすには、アプリケーションサーバー設定または JVM 引数 `com.adobe.util.XMLSecurityUtil` を使用して、`ERROR` のログレベルを `-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR` に設定します。 これにより、メッセージが非表示になるだけで、根本原因は修正されません。
 
-* **FORMS-23875** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。 この問題を解決するには、[&#x200B; リンク &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip) からホットフィックスをダウンロードしてインストールします。
+* **FORMS-23875** フォームデータモデル検索では、関連するエンティティが存在しない場合でも、HTML タグが UI に表示されます。 この問題を解決するには、[ リンク ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip) からホットフィックスをダウンロードしてインストールします。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 

@@ -5,10 +5,10 @@ exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 30137e36b60c3ada70240e1442390f9fdd26f3b9
+source-git-commit: 5a851bf013a4ef7e6097bf32bd3fa8fe4d635f28
 workflow-type: tm+mt
-source-wordcount: '1771'
-ht-degree: 100%
+source-wordcount: '1834'
+ht-degree: 96%
 
 ---
 
@@ -34,6 +34,7 @@ ht-degree: 100%
 
 | 領域 | 機能 | 代替手段 | バージョン（SP） |
 |---|---|---|---|
+| Sites | AEM Assets REST API でのコンテンツフラグメントのサポート | AEM 6.5 LTS SP2 は、コンテンツフラグメントおよびモデル管理に最新の OpenAPI を提供するので、AEM Assets REST API の古いコンテンツフラグメントのサポートエンドポイントは非推奨（廃止予定）になりました。<br>Adobeでは、提供終了のお知らせが届くまで、これらの古いエンドポイントを利用できるようにしています。 Adobeでは、非推奨（廃止予定）のエンドポイント向けに今後の機能強化は計画していません。 | 6.5.24 |
 | Sites | [SPA Editor](/help/sites-developing/spa-editor-deprecation.md) | ヘッドレスのユースケースでは、ビジュアル編集用の[ユニバーサルエディター](/help/sites-developing/universal-editor/introduction.md)、またはフォームベース編集用の[コンテンツフラグメントエディター](/help/sites-developing/universal-editor/introduction.md)を活用します。 | 6.5.23 |
 | Sites | **Adobe AEM Managed Polling Configuration** サービス：`com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | **Adobe AEM Analytics Report Sling Importer** サービス。詳しくは、 Adobe Analytics への接続とフレームワークの作成 - [読み込み間隔の設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)を参照してください。 | 6.5.19.0 |
 | Screens | Adobe Experience Manager（AEM）の ActiveMQ。2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。 | アドビでは、現在ロードバランサーを使用することを推奨しています。 | 6.5.18.0 |
