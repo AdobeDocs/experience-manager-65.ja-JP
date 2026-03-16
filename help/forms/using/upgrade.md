@@ -9,10 +9,10 @@ role: Admin,User
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms Upgrade
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 4f9129101f537e035b8a7ec52fbc046ae6f93f92
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 100%
+source-wordcount: '362'
+ht-degree: 88%
 
 ---
 
@@ -45,7 +45,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 次の図に、AEM Forms on JEE で使用可能なアップグレードパスを示します。
 
-![JEE アップグレード 6.5](do-not-localize/jee-upgrade-6-5.png)
+![JEE アップグレード 6.5](do-not-localize/upgradepathjee.png)
 
 
 次の場所から直接アップグレードを実行できます。
@@ -61,9 +61,9 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
 
-AEM 6.5.18.0 Forms on JEE には、[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)と[パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の 2 種類のインストーラーが用意されています。
+AEM 6.5.18.0 Forms on JEE には、[ 完全なインストーラー ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) と [ パッチインストーラー ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) の 2 種類のインストーラーが用意されています。
 
-**完全なインストーラー**：完全なインストーラーを使用すると、新しい AEM Forms インスタンスを設定したり、AEM 6.5.x.x Forms on JEE から AEM 6.5.18.0 Forms on JEE へのアップグレードを実行したりすることができます。
+**完全なインストーラー**：完全なインストーラーを使用すると、新しいAEM Forms インスタンスを設定したり、AEM 6.5.x.x Forms on JEE からAEM 6.5.18.0 Forms on JEE へのアップグレードを実行したりできます。
 
 **パッチインストーラー**：パッチインストーラーは、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。パッチインストーラーを使用すると、AEM Forms の最新バージョンにアップグレードできます。
 
@@ -78,7 +78,7 @@ JEE 環境の最新のサービスパックをインストールするには、[
 
 Migration involves moving only assets (PDF, XDP, images, adaptive forms, correspondence management assets) from one server to another - processes (LCA), settings, configurations, and a few other pieces of metadata are not migrated. Perform the following steps to migrate to AEM 6.3 Forms:
 
-1. Set up a fresh environment of [AEM 6.3 Forms](https://adobe.com/go/learn_aemforms_documentation_63_jp).
+1. Set up a fresh environment of [AEM 6.3 Forms](https://adobe.com/go/learn_aemforms_documentation_63).
 1. Move XDP or other compatible assets to the freshly set instance. For detailed instructions, see [Importing and exporting assets to AEM Forms](../../forms/using/import-export-forms-templates.md). [
    ](../../forms/using/import-export-forms-templates.md)
 1. Build the required services, if any.
