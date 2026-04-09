@@ -5,9 +5,9 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
+source-git-commit: a3c0010e5eaef7fc516d49e410bba1c3b3f9e4b9
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2121'
 ht-degree: 99%
 
 ---
@@ -95,7 +95,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 スマートコンテンツサービス API を使用するには、Adobe Developer Consoleで統合を作成して、以下を取得します。
 
-* [!UICONTROL API キー &#x200B;]（Adobe Developer Consoleの [!UICONTROL CLIENT ID] フィールドで生成）、
+* [!UICONTROL API キー ]（Adobe Developer Consoleの [!UICONTROL CLIENT ID] フィールドで生成）、
 * [!UICONTROL ORGANIZATION ID]、
 * そして、[!UICONTROL CLIENT SECRET]、（[!DNL Experience Manager]のクラウド設定の[!UICONTROL アセットスマートタグ付けサービス設定]用）。
 
@@ -151,7 +151,7 @@ To configure the Smart Content Service, follow these top-level steps:
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 -->
@@ -172,11 +172,6 @@ To configure the Smart Content Service, follow these top-level steps:
    | 関連付けられている Adobe IMS 設定 | ドロップダウンから設定を選択します。 |
    | サービス URL | `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>` に移行することで使用を置き換えることができます。（例：`https://smartcontent.adobe.io/apac`）。Experience Manager オーサーインスタンスがホストされている地域として、`na`、`emea` または `apac` を指定することができます。 |
 
-   >[!NOTE]
-   >
-   >2022年9月1日（PT）より前に Experience Manager Managed Service がプロビジョニングされている場合は、次のサービス URL を使用します。
-   >`https://mc.adobe.io/marketingcloud/smartcontent`
-
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
 ### 設定の検証 {#validate-the-configuration}
@@ -187,8 +182,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;に移動して、OSGi コンソールを開きます。**[!UICONTROL メイン]／[!UICONTROL JMX]** をクリックします。
 
-<!--
-1. Click `com.day.cq.dam.similaritysearch.internal.impl`. It opens **[!UICONTROL SimilaritySearch Miscellaneous Tasks]**.-->
+1. 「`com.day.cq.dam.similaritysearch.internal.impl`」をクリックします。**[!UICONTROL SimilaritySearchその他のタスク]**&#x200B;が開きます。—>
 
 1. 「`com.day.cq.dam.similaritysearch.internal.impl (SCS)`」をクリックします。
 
@@ -231,7 +225,7 @@ A public certificate lets you authenticate your profile on Adobe Developer Conso
 
    >[!NOTE]
    >
-   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. The configuration works OK with the same value of the [!UICONTROL Service URL] parameter. For the overall service status and maintenance schedule, see [https://status.adobe.com/ja-jp](https://status.adobe.com/ja-jp).
+   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. The configuration works OK with the same value of the [!UICONTROL Service URL] parameter. For the overall service status and maintenance schedule, see [https://status.adobe.com](https://status.adobe.com).
 
 1. Click **[!UICONTROL Download Public Certificate for OAuth Integration]**, and download the public certificate file `AEM-SmartTags.crt`.
 
@@ -291,7 +285,7 @@ To use Smart Content Service APIs, create an integration in Adobe Developer Cons
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 
@@ -434,7 +428,7 @@ The validation results are displayed in the same dialog.
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-フォルダーに対してこのオプションを選択すると、[!DNL Experience Manager] によりレーニングワークフローが自動的に実行され、フォルダーのアセットおよびそのタグに関するスマートコンテンツサービスのトレーニングが実施されます。デフォルトでは、トレーニングワークフローは毎週土曜日の午前 12:30 （PT）に実行されます。
+フォルダーに対してこのオプションを選択すると、[!DNL Experience Manager] によりレーニングワークフローが自動的に実行され、フォルダーのアセットおよびそのタグに関するスマートコンテンツサービスのトレーニングが実施されます。デフォルトでは、トレーニングワークフローは毎週土曜日の午前12:30時に実行されます。
 
 ### オンデマンドトレーニング {#on-demand-training}
 
