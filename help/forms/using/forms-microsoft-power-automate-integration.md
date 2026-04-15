@@ -125,7 +125,7 @@ AEM Forms オーサーインスタンスを Microsoft® Power Automate に接続
 >
 > トークンの有効期限が切れる前または期限切れになる前に、Microsoft® Power Automate DataverseおよびMicrosoft® Power Automate Flow Service クラウド設定の両方を再認証して再公開するには、[Microsoft® Power Automate DataverseおよびMicrosoft® Power Automate Flow Service クラウド設定の両方を公開する手順を使用します。](#publish-microsoft-power-automate-dataverse-cloud-configuration)
 >
-> トークンのライフタイムポリシーについて詳しくは、設定可能なトークンのライフタイムに関する[Microsoft Entra ドキュメント ](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)を参照してください。 トークンが更新されない場合、Power Automateへのフォーム送信が失敗する可能性があります。
+> トークンのライフタイムポリシーについて詳しくは、設定可能なトークンのライフタイムに関する[Microsoft Entra ドキュメント &#x200B;](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens)を参照してください。 トークンが更新されない場合、Power Automateへのフォーム送信が失敗する可能性があります。
 
 ## 「Microsoft® Power Automate フローの呼び出し」送信アクションを使用して、Power Automate フローにデータを送信する {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 
