@@ -20,13 +20,13 @@ ht-degree: 20%
 
 ## AEM Communities {#aem-communities}
 
-AEM Communitiesの場合、[ コミュニティサイト ](overview.md#community-sites)が適切に機能するようにDispatcherを構成する必要があります。 ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
+AEM Communitiesの場合、[&#x200B; コミュニティサイト &#x200B;](overview.md#community-sites)が適切に機能するようにDispatcherを構成する必要があります。 ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
 
 特定のデプロイメントとサイト設計に必要な情報を学習する
 
 * [カスタマーケア](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)に問い合わせる
 
-[Dispatcherのメインのドキュメント ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)も参照してください。
+[Dispatcherのメインのドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)も参照してください。
 
 ## Dispatcher のキャッシュ {#dispatcher-caching}
 
@@ -42,7 +42,7 @@ Dispatcher キャッシュをサポートするように設定されている場
 
 ### 要件 {#requirements}
 
-* Dispatcher バージョン 4.1.2以降（最新バージョンについては、[Dispatcherのインストール ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)を参照）
+* Dispatcher バージョン 4.1.2以降（最新バージョンについては、[Dispatcherのインストール &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)を参照）
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2以降
@@ -52,7 +52,7 @@ Dispatcher キャッシュをサポートするように設定されている場
 
 OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**&#x200B;は、指定されたパスの下に表示されるキャッシュされたページの有効期限を設定します。
 
-* [Web コンソール ](../../help/sites-deploying/configuring-osgi.md)から。
+* [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)から。
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
@@ -69,7 +69,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
-`dispatcher.any` ファイルの/filter セクションについては、[ コンテンツへのアクセスの設定 – /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
+`dispatcher.any` ファイルの/filter セクションについては、[&#x200B; コンテンツへのアクセスの設定 – /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
 
 この節では、コミュニティ機能の適切な機能に必要な可能性が高いエントリについて説明します。
 

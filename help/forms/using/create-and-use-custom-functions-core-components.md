@@ -857,7 +857,7 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 また、コンソールウィンドウを調べて、サーバーに送信されたデータを表示することもできます。
 
-![ コンソール ウィンドウのデータを調べる](/help/forms/using/assets/custom-function-submit-data-console-data.png)
+![&#x200B; コンソール ウィンドウのデータを調べる](/help/forms/using/assets/custom-function-submit-data-console-data.png)
 
 <!--
 

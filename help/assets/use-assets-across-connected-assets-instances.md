@@ -42,7 +42,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager]個のデプロイメントタイプの場合、サポートされている条件のいずれかが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets]は[!DNL Experience Manager] as a Cloud Serviceで動作します。 [!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[ Experience Manager as a Cloud Service における Connected Assets ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
+* [!DNL Adobe Experience Manager]個のデプロイメントタイプの場合、サポートされている条件のいずれかが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets]は[!DNL Experience Manager] as a Cloud Serviceで動作します。 [!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[&#x200B; Experience Manager as a Cloud Service における Connected Assets &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
 
   | | [!DNL Sites] as a [!DNL Cloud Service] | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
   |---|---|---|---|

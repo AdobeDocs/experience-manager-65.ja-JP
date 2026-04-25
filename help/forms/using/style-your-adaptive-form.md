@@ -480,7 +480,7 @@ ht-degree: 97%
 9. 新しく作成した `clientlibs` フォルダーに移動し、`allowProxy` プロパティと `categories` プロパティを追加します。
 10. `/apps/[fontslibrary]/[customlibrary(clientlibrary)]` に移動して、css フォルダーを作成します。
 11. 作成した CSS フォルダーに移動し、ファイルを作成します。 例えば、ファイルを `fonts.css` として作成し、埋め込みコードを URL と共に貼り付けます。
-   ![フォルダー構造](/help/forms/using/assets/fonts-add-in-crxde.png)
+    ![フォルダー構造](/help/forms/using/assets/fonts-add-in-crxde.png)
 12. 変更を保存します。
 
 >[!NOTE]

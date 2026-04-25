@@ -258,7 +258,7 @@ When 条件機能で許可された複数のフィールドで問題が発生し
 
 **[!UICONTROL 関数の出力]**：定義済み関数またはカスタム関数に基づいてルールを定義します。
 
-**[!UICONTROL に移動]**他のアダプティブ Forms、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動します。
+**[!UICONTROL に移動]**&#x200B;他のアダプティブ Forms、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動します。
 <!--Interactive Communications,-->
 <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
@@ -566,7 +566,7 @@ In the Marital Status radio button, **[!UICONTROL Married]** and **[!UICONTROL S
 
    * 「**[!UICONTROL 演算子を選択]**」フィールドから「**[!UICONTROL プラス]**」を選択します。
 
-   * 「フォームオブジェクト」タブから、他の&#x200B;**[!UICONTROL ドロップオブジェクトの「**[!UICONTROL  Spouse Salary （配偶者の給与）]**」フィールドを選択またはドラッグ＆ドロップするか、「ここ」]**&#x200B;フィールドを選択します。
+   * 「フォームオブジェクト」タブから、他の&#x200B;**[!UICONTROL ドロップオブジェクトの「**&#x200B;[!UICONTROL &#x200B; Spouse Salary （配偶者の給与）]&#x200B;**」フィールドを選択またはドラッグ＆ドロップするか、「ここ」]**&#x200B;フィールドを選択します。
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
