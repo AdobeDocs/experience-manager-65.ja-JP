@@ -196,7 +196,7 @@ Dynamic Media を画像専用、ビデオ専用、またはその両方の用途
 
 ## Dynamic Media の有効化 {#enabling-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) はデフォルトで無効になっています。 Dynamic Media の機能を活用するには、`publish` 実行モードなどの場合と同様に、`dynamicmedia` 実行モードを使用して Dynamic Media を有効にする必要があります。 有効にする前に、[技術要件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)を確認してください。
+[Dynamic Media](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html) はデフォルトで無効になっています。 Dynamic Media の機能を活用するには、`publish` 実行モードなどの場合と同様に、`dynamicmedia` 実行モードを使用して Dynamic Media を有効にする必要があります。 有効にする前に、[技術要件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)を確認してください。
 
 >[!NOTE]
 >

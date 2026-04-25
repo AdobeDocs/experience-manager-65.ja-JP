@@ -24,7 +24,7 @@ Once you are familiar with content management actions on articles, banners, and 
 
 >[!NOTE]
 >
->To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) in Online Help.
+>To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) in Online Help.
 
 ## Publishing/Unpublishing the Content {#publishing-unpublishing-the-content}
 
