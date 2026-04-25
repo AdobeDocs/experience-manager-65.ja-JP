@@ -10,10 +10,10 @@ exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 100%
+source-wordcount: '468'
+ht-degree: 92%
 
 ---
 
@@ -82,7 +82,8 @@ ht-degree: 100%
 
 **コメント**
 
-* CUG 認証の設定および評価の有効化/無効化CUG 認証によって影響を受けるべきではないプリンシパルの除外リストを設定するサービス。
+* CUG 認証の設定および評価の有効化/無効化
+CUG 認証によって影響を受けるべきではないプリンシパルの除外リストを設定するサービス。
 
   >[!NOTE]
   > 
@@ -90,14 +91,15 @@ ht-degree: 100%
 
   特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
 
-* LoginSelectorHandler に一致するログインパスを公開する LoginPathProvider を実装する OSGi コンポーネント。これは、granite:AuthenticationRequired mixin タイプによって、コンテンツに格納されている変更された認証要件を監視するオブザーバを登録するために使用される RequirementHandler への必須参照を持っています。
+* LoginSelectorHandler に一致するログインパスを公開する LoginPathProvider を実装する OSGi コンポーネント。 必須のRequirementHandlerへの参照があります。これは、コンテンツに保存されている変更された認証要件を、花崗岩:AuthenticationRequired mixin タイプを使用してリッスンするオブザーバーを登録するために使用されます。
 * authRequirements の変更について SlingAuthenticator に通知する RequirementHandler を実装する OSGi コンポーネント。
 
   このコンポーネントの設定ポリシーは REQUIRE なことから、サポートされているパスのセットが指定されている場合にのみ有効になります。
 
   サービスを有効にすると RequirementService が起動します。
 
-<!-- nested tables not supported - text above is the table>
+<!--
+nested tables not supported - text above is the table>
 <table>
  <tbody>
   <tr>

@@ -7,9 +7,9 @@ role: Admin
 exl-id: edccf23c-087e-4253-babb-dd4c6610517d
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '192'
 ht-degree: 100%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 100%
 
 [!DNL Adobe Experience Manager Assets] を使用して、アセット（バイナリ、メタデータ、タグを含む）に対する翻訳ワークフローを自動化し、多言語プロジェクトで使用するために他の言語のアセットを生成できます。
 
-翻訳ワークフローを自動化するには、翻訳サービスプロバイダーと [!DNL Experience Manager] とを統合して、アセットを複数の言語に翻訳するためのプロジェクトを作成してください。[!DNL Experience Manager] では人間による翻訳と機械翻訳のワークフローがサポートされます。
+翻訳ワークフローを自動化するには、翻訳サービスプロバイダーと [!DNL Experience Manager] とを統合して、アセットを複数の言語に翻訳するためのプロジェクトを作成してください。 [!DNL Experience Manager] では人間による翻訳と機械翻訳のワークフローがサポートされます。
 
-人間翻訳：翻訳済みアセットが返されて、[!DNL Experience Manager] にインポートされます。翻訳プロバイダーと [!DNL Experience Manager] を連携すると、[!DNL Experience Manager] と翻訳プロバイダーとの間でアセットが自動的に送信されます。
+人間翻訳：翻訳済みアセットが返されて、[!DNL Experience Manager] にインポートされます。 翻訳プロバイダーと [!DNL Experience Manager] を連携すると、[!DNL Experience Manager] と翻訳プロバイダーとの間でアセットが自動的に送信されます。
 
 機械翻訳：機械翻訳サービスでは、アセットのメタデータとタグがすぐに翻訳されます。
 

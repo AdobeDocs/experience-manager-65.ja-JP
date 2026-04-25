@@ -11,9 +11,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
-workflow-type: ht
-source-wordcount: '164'
+source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+workflow-type: tm+mt
+source-wordcount: '178'
 ht-degree: 100%
 
 ---
@@ -31,6 +31,6 @@ SPA と Adobe Experience Platform Launch の統合方法を理解するには、
 
 >[!NOTE]
 >
->Adobe Experience Manager SPA エディターを使用していない SPA と Adobe Experience Platform Launch の統合を有効にする方法については、この KB を参照してください。また、これらの方法を使用すると、Adobe Experience Platform Launch の統合が、SPA エディターを使用するように構築された SPA と共存できます。
+>Adobe Experience Manager SPA エディターを使用していない SPA と Adobe Experience Platform Launch の統合を有効にする方法については、この KB を参照してください。 また、これらの方法を使用すると、Adobe Experience Platform Launch の統合が、SPA エディターを使用するように構築された SPA と共存できます。
 >
->JavaScript SPA ライブラリと共に Redux を使用する方法については、まだ完全には確認されていません。Redux のサポートは、SPA エディターの今後のリリースで提供される予定です。
+>JavaScript SPA ライブラリと共に Redux を使用する方法については、まだ完全には確認されていません。 Redux のサポートは、SPA エディターの今後のリリースで提供される予定です。

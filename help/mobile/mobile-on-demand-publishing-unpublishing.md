@@ -1,6 +1,6 @@
 ---
 title: コンテンツの公開／非公開
-description: 記事、バナー、コレクションのコンテンツ管理アクションについて理解したら、このページでコンテンツの公開方法を確認します。 また、コンテンツを非公開にすることもできます。
+description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -9,9 +9,9 @@ exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '268'
 ht-degree: 4%
 
 ---
@@ -20,39 +20,41 @@ ht-degree: 4%
 
 {{ue-over-mobile}}
 
-記事、バナー、コレクションのコンテンツ管理アクションについて理解したら、コンテンツを公開できます。 また、コンテンツを非公開にすることもできます。
+Once you are familiar with content management actions on articles, banners, and collections you can publish your content. Also you can unpublish your content.
 
 >[!NOTE]
 >
->AEM Mobile アプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの [AEM Mobile アプリのデザインに関する考慮事項 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) を参照してください。
+>To learn more on design considerations for AEM Mobile apps, see [Design considerations for AEM Mobile apps](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) in Online Help.
 
-## コンテンツの公開/非公開 {#publishing-unpublishing-the-content}
+## Publishing/Unpublishing the Content {#publishing-unpublishing-the-content}
 
-これは、「AEM Publish」とは異なります。 コンテンツを公開するために、AEM Publish サーバーインスタンスにコンテンツをプッシュしているわけではありません。 ここでは、選択したコンテンツをライブの Mobile On-Demand アプリ内で公開する必要があることを Mobile On-Demand に通知しています。
+This differs from an &quot;AEM Publish&quot;. You are not pushing content to an AEM Publish server instance to make it publicly viewable. Here, you are informing Mobile On-Demand that the selected content should be made public within the live Mobile On-Demand app.
 
 >[!NOTE]
 >
->コンテンツを公開する前に、モバイルオンデマンドにアップロードする必要があります。
+>Content must be uploaded to Mobile On-Demand before it can be published.
 
-記事を公開/非公開にするための一般的なワークフローです。
+The general workflow to publish/unpublish an article:
 
-1. モバイルから、カタログのモバイルオンデマンドアプリを選択します。
-1. 記事を選択します。
-1. 必要に応じて、リスト表示から記事を追加します。
-1. アクションバーから「Publish」を選択します。 しばらくすると、記事が公開されます。
-1. 上記と同じ手順を使用して、公開記事を非公開にします。
+1. From Mobile, choose your Mobile On-Demand app from the catalog.
+1. Select an article.
+1. Add additional articles if needed from the list view.
+1. Select Publish from the action bar. After a few moments, your articles will now be public.
+1. Use the same steps above to Unpublish publish articles.
 
-<!-- FAIL >>[!NOTE]
+<!--
+FAIL >>[!NOTE]
 >
->Generally, you should preflight before publishing. See [Previewing with Preflight](/content/docs/en/aem/6-3/administer/mobile-apps/aem-mobile/previewing-with-preflight-on-demand-services.md) for more details.-->
+>Generally, you should preflight before publishing. See [Previewing with Preflight](/content/docs/en/aem/6-3/administer/mobile-apps/aem-mobile/previewing-with-preflight-on-demand-services.md) for more details.
+-->
 
 ![chlimage_1-9](assets/chlimage_1-9.gif)
 
 ### 次の手順 {#the-next-steps}
 
-コンテンツの作成と公開について理解したら、以下を参照してください。
+Once you have learned about creating and publishing content, see the following:
 
-* [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)
+* [Developing AEM Content for AEM Mobile On-Demand Services](/help/mobile/aem-mobile-on-demand.md)
+* [Administering Content to Use AEM Mobile On-Demand Services](/help/mobile/aem-mobile.md)
 
-オーサリングに関するトピックについて詳しくは、「[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング &#x200B;](/help/mobile/mobile-apps-ondemand.md)」を参照してください。
+Or, if you still want to learn more about the authoring topics, see [Authoring AEM Content for AEM Mobile On-Demand Services Apps](/help/mobile/mobile-apps-ondemand.md).

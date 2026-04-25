@@ -1,15 +1,15 @@
 ---
 title: Dynamic Media ニュースレターアーカイブ
-description: Experience League でアーカイブされている Dynamic Media ニュースレターは月刊のニュースレターでした。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されていました。アーカイブされたニュースレターには、廃止されたワンストップショップニュースレターで利用できた貴重な知識構築リソースが含まれています。アーカイブされたニュースレターには、ハウツービデオとソリューションの概要が含まれます。また、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介も含まれています。
+description: Experience League でアーカイブされている Dynamic Media ニュースレターは月刊のニュースレターでした。 Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されていました。 アーカイブされたニュースレターには、廃止されたワンストップショップニュースレターで利用できた貴重な知識構築リソースが含まれています。 アーカイブされたニュースレターには、ハウツービデオとソリューションの概要が含まれます。 また、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介も含まれています。
 keywords: Dynamic Media;ニュースレター;製品アップデート;ヒントとテクニック;イベント;カスタマーサクセス;ブログ;ブログ;画像;ビデオ;機能;機能
 contentOwner: Rick Brough
 solution: Experience Manager, Experience Manager Assets
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Collaboration,Dynamic Media Classic
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1111'
 ht-degree: 100%
 
 ---
@@ -18,19 +18,22 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->月刊ニュースレターの提供は終了しました。ただし、以下のニュースレターアーカイブには引き続きアクセスできます。
+>月刊ニュースレターの提供は終了しました。 ただし、以下のニュースレターアーカイブには引き続きアクセスできます。
 
 Experience League 提供の Dynamic Media ニュースレターは、Dynamic Media および Dynamic Media Classic をユーザーがすばやく習得して価値の実現にすぐに着手できるようにすることを目的としていました。
 
-必要なものがすべて揃っているこのニュースレターで、ハウツービデオやソリューション概要など、知識構築のための有益なリソースを見つけることができます。また、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介も含まれています。
+必要なものがすべて揃っているこのニュースレターで、ハウツービデオやソリューション概要など、知識構築のための有益なリソースを見つけることができます。 また、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介も含まれています。
 
-<!-- ## Get inspired - Stay informed
+<!--
+## Get inspired - Stay informed
 
-[Sign up](https://www.adobe.com/subscription/dynamic-media-newsletter.html) to receive the Dynamic Media Newsletter on a monthly basis in your inbox. -->
+[Sign up](https://www.adobe.com/subscription/dynamic-media-newsletter.html) to receive the Dynamic Media Newsletter on a monthly basis in your inbox.
+-->
 
 ## Dynamic Media ニュースレターアーカイブ
 
-<!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
+<!--
+* **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
     In this issue:
 
@@ -43,7 +46,8 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
     * Look what's new in Experience Manager Innovation.
     * Build your Experience Manager skills *live* with the Adobe pros.
     * Connect with the Adobe Experience Manager Community.
-    * Fast-track your Adobe expertise with Adobe Experience League. -->
+    * Fast-track your Adobe expertise with Adobe Experience League.
+    -->
 
 * **[2020 年 4 月、第 3 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2020_April.html?lang=ja)**
 
@@ -153,7 +157,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
 
 * **[2019 年 4 月、第 04 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_04_2019_April.html?lang=ja)**
 
-  Dynamic Media ニュースレターの創刊号へようこそ。アドビの新しい月刊ニュースレターには、ニュース、イベント、リソースが多数掲載されています。コンテンツは、 Experience Manager Assets や Adobe Dynamic Media Classic の Dynamic Media ユーザーを対象としています。
+  Dynamic Media ニュースレターの創刊号へようこそ。 アドビの新しい月刊ニュースレターには、ニュース、イベント、リソースが多数掲載されています。 コンテンツは、 Experience Manager Assets や Adobe Dynamic Media Classic の Dynamic Media ユーザーを対象としています。
 
   この号の主な内容：
 

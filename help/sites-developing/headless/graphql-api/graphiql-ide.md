@@ -5,10 +5,10 @@ exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,GraphQL API
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 100%
+source-wordcount: '792'
+ht-degree: 97%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 >
 >GraphiQL は AEM のすべての環境に含まれています（ただし、エンドポイントを設定した場合にのみアクセス可能／表示可能になります）。
 >
->以前のリリースでは、GraphiQL IDE をインストールするためにパッケージが必要でした。これをインストール済みの場合は、削除できます。
+>以前のリリースでは、GraphiQL IDE をインストールするためにパッケージが必要でした。 これをインストール済みの場合は、削除できます。
 
 >[!NOTE]
 >GraphiQL IDE を使用する前に、[設定ブラウザー](/help/assets/content-fragments/content-fragments-configuration-browser.md)で[エンドポイントを設定](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)しておく必要があります。
@@ -44,11 +44,11 @@ ht-degree: 100%
 
 ![GraphiQL インターフェイス](assets/cfm-graphiql-interface.png "GraphiQL インターフェイス")
 
-システムで GraphiQL を使用すると、GET リクエストを使用してクライアントアプリケーションからクエリをリクエストしたり、クエリを公開したりできます。実稼動環境で使用する場合は、その後[クエリを実稼動環境に移動](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)できます。最初は実稼動オーサーに移行して、新しくオーサリングしたコンテンツをクエリで検証し、最終的には実稼動パブリッシュに移行してライブで利用できるようにします。
+システムで GraphiQL を使用すると、GET リクエストを使用してクライアントアプリケーションからクエリをリクエストしたり、クエリを公開したりできます。 本番環境で使用する場合は、その後[クエリを本番環境に移動](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)できます。 最初は実稼動オーサーに移行して、新しくオーサリングしたコンテンツをクエリで検証し、最終的には実稼動パブリッシュに移行してライブで利用できるようにします。
 
 ## エンドポイントの選択 {#selecting-endpoint}
 
-まず、クエリに使用する&#x200B;**[エンドポイント](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)**&#x200B;を選択する必要があります。クエリに使用する Sites 設定に適したエンドポイントです。
+まず、クエリに使用する&#x200B;**[エンドポイント](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)**&#x200B;を選択する必要があります。 クエリに使用する Sites 設定に適したエンドポイントです。
 
 これは、右上のドロップダウンリストから選択できます。
 
@@ -77,11 +77,11 @@ ht-degree: 100%
 
 更新するクエリを（左端の）**[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)**&#x200B;パネルのリストから選択します。
 
-クエリがエディターパネルに表示されます。必要な変更を加えたあと、「**保存**」を使用して、更新内容を永続クエリにコミットします。
+クエリがエディターパネルに表示されます。 必要な変更を加えたあと、「**保存**」を使用して、更新内容を永続クエリにコミットします。
 
 ## クエリの実行 {#running-queries}
 
-新しいクエリをすぐに実行することもできますし、永続クエリを読み込んで実行することもできます。永続クエリを読み込むには、該当するクエリをリストから選択します。そのクエリがエディターパネルに表示されます。
+新しいクエリをすぐに実行することもできますし、永続クエリを読み込んで実行することもできます。 永続クエリを読み込むには、該当するクエリをリストから選択します。そのクエリがエディターパネルに表示されます。
 
 どちらの場合も、エディターパネルに表示されるクエリは、次のいずれかの場合に実行されるクエリです。
 
@@ -135,18 +135,18 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 永続クエリの公開 {#publishing-persisted-queries}
 
-リスト（左パネル）から [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)を選択したら、「**公開**」アクションと「**非公開**」アクションを使用できます。これにより、パブリッシュ環境（`dev-publish` など）に対してアクティブ化され、テスト時にアプリケーションから簡単にアクセスできるようになります。
+リスト（左パネル）から [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)を選択したら、「**公開**」アクションと「**非公開**」アクションを使用できます。 これにより、パブリッシュ環境（`dev-publish` など）に対してアクティブ化され、テスト時にアプリケーションから簡単にアクセスできるようになります。
 
 >[!NOTE]
 >
->永続クエリのキャッシュ `Time To Live` {&quot;cache-control&quot;:&quot;parameter&quot;:value} の定義では、デフォルト値は 2 時間（7200 秒）になっています。
+>永続クエリのキャッシュ `Time To Live` {&quot;cache-control&quot;:&quot;parameter&quot;:value}の定義の既定値は2時間（7200秒）です。
 
 ## URL をコピーしてクエリに直接アクセスする {#copy-url}
 
-「**URL をコピー**」オプションを使用すると、永続クエリに直接アクセスできる URL をコピーしてクエリをシミュレートし、結果を確認することができます。これは、ブラウザーでアクセスするなどしてテストに使用できます。
+「**URL をコピー**」オプションを使用すると、永続クエリに直接アクセスできる URL をコピーしてクエリをシミュレートし、結果を確認することができます。 これは、ブラウザーでアクセスするなどしてテストに使用できます。
 
 <!--
-  >[!NOTE]
+>[!NOTE]
   >
   >The URL will need [encoding before using programmatically](/help/headless/graphql-api/persisted-queries.md#encoding-query-url).
   >
@@ -174,7 +174,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 実稼動環境への永続クエリのインストール {#installing-persisted-query-production}
 
-GraphiQL を使用して永続クエリを作成およびテストした後は、その永続クエリを[実稼動環境に転送](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)してアプリケーションで使用できるようにします。
+GraphiQL を使用して永続クエリを作成およびテストした後は、その永続クエリを[本番環境に転送](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)してアプリケーションで使用できるようにします。
 
 ## キーボードショートカット {#keyboard-shortcuts}
 

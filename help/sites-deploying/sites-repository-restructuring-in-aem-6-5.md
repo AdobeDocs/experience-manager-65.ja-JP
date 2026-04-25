@@ -8,16 +8,16 @@ feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 100%
+source-wordcount: '1494'
+ht-degree: 94%
 
 ---
 
 # AEM 6.5 における Sites リポジトリの再構築 {#sites-repository-restructuring-in-aem}
 
-親の [AEM 6.5 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、AEM 6.5 にアップグレードするユーザーは、このページを使用して、AEM Sites ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
+親の [AEM 6.5 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、AEM 6.5 にアップグレードするユーザーは、このページを使用して、AEM Sites ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
@@ -28,8 +28,8 @@ ht-degree: 100%
 * [Adobe Analytics クライアントライブラリ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
 * [クラシックな Microsoft Word から web ページへのデザイン](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
 * [モバイルデバイスエミュレーター設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#mobile-device-emulator-configurations)
-* [Multi-site Manager のブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
-* [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-rollout-configurations)
+* [マルチサイトマネージャーのブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
+* [マルチサイトマネージャーのロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-rollout-configurations)
 * [ページイベント通知メールテンプレート](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
 * [ページ基礎モード](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-scaffolding)
 * [レスポンシブグリッド LESS](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#responsive-grid-less)
@@ -58,14 +58,14 @@ ht-degree: 100%
     <ol>
      <li>新規または変更された ContextHub セグメントを以前の場所から適切な新しい場所（/<code>apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）にコピー</li>
      <li>以前の場所の ContextHub Segments への参照を、新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）の移行された ContextHub Segments に更新します。</li>
-    </ol> <p>次の QueryBuilder クエリは、以前の場所内の ContextHub セグメントへのすべての参照を検索します。<br /> <br /> <code class="code">path=/content
+    </ol> <p>次のQueryBuilder クエリは、以前の場所にあるContextHub セグメントへのすべての参照を検索します。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UI</a> を使用して実行できます。これは走査クエリであるため、実稼働環境に対して実行しないでください。また、必要に応じて走査制限を調整してください。</p> </td>
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは<a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UI</a>を介して実行できます。 これはトラバーサルクエリであるため、実稼働環境に対して実行しないでください。また、必要に応じてトラバーサル制限を調整してください。</p> </td>
   </tr>
   <tr>
    <td><strong>メモ</strong></td>
-   <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライズ機能／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>ContextHub セグメントを AEM で編集可能にする場合は、それらを新しい場所（<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。AEM で作成された新しい ContentHub セグメントは、新しい場所（<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）に保持されます。</p> <p>AEM Sites ページのプロパティでは、以前の場所（<code>/etc</code>）または単一の新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）しか選択できないため、それに応じて ContextHub セグメントを移行する必要があります。</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p>
+   <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライズ機能／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>ContextHub セグメントを AEM で編集可能にする場合は、それらを新しい場所（<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。 AEM で作成された新しい ContentHub セグメントは、新しい場所（<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）に保持されます。</p> <p>AEM Sites ページのプロパティでは、以前の場所（<code>/etc</code>）または単一の新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）しか選択できないため、それに応じて ContextHub セグメントを移行する必要があります。</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p>
     <ul>
      <li>/etc/segmentation/geometrixx/</li>
      <li>/etc/segmentation/geometrixx-outdoors</li>
@@ -104,7 +104,7 @@ ht-degree: 100%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>注</strong></td>
+   <td><strong>メモ</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、カテゴリプロパティを調べます.</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
@@ -167,23 +167,23 @@ ht-degree: 100%
    <td>新しいモバイルデバイスエミュレーター設定は、新しい場所に移行する必要があります。
     <ol>
      <li>新規のモバイルデバイスエミュレータ設定を以前の場所から新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）にコピーします。</li>
-     <li>これらのモバイルデバイスエミュレーター設定に依存する AEM Sites ページの場合、ページの <span class="code"> をアップデートします。 
+     <li>これらのモバイルデバイスエミュレーター設定に依存するAEM Sites ページの場合、ページの <span class="code">
        <code>
         jcr
        </code>
        <code>
         :content
-       </code></span> ノード： <br /> <span class="code">[cq:Page]/jcr:content@cq:
+       </code></span> ノード：<br /> <span class="code">[cq:Page]/jcr:content@cq:
        <code>
         deviceGroups
        </code> = String[ mobile/groups/responsive ]</span></li>
-     <li>モバイルデバイスエミュレータの設定に依存する編集可能なテンプレートについては、編集可能なテンプレートで <span class="code"> への参照を新しい場所にアップデートします。
+     <li>これらのモバイルデバイスエミュレーター設定に依存する編集可能なテンプレートの場合は、 <span class="code">
        <code>
         cq
        </code>:
        <code>
         deviceGroups
-       </code></span></li>
+       </code></span>を新しい場所に移動します。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -227,7 +227,7 @@ ht-degree: 100%
  </tbody>
 </table>
 
-### Multi-site Manager のロールアウト設定 {#multi-site-manager-rollout-configurations}
+### マルチサイトマネージャーのロールアウト設定 {#multi-site-manager-rollout-configurations}
 
 <table>
  <tbody>
@@ -297,16 +297,16 @@ ht-degree: 100%
   <tr>
    <td><strong>新しい場所</strong></td>
    <td><p><span class="code">/libs/settings/
-      <code>
+      <code>
        wcm
       </code>/template-types/scaffolding/scaffolding</span></p> <p><span class="code">/apps/settings/
-      <code>
+      <code>
        wcm
       </code>/template-types/scaffolding/scaffolding</span></p> </td>
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td>以前の場所に作成された基礎モードは、従来の基礎モードフレームワークを使用するため、新しい場所に移行できません。新しい場所に合わせるには、サポートされている基礎モードフレームワークを使用して、従来の基礎モードを再開発する必要があります。</td>
+   <td>以前の場所に作成された基礎モードは、従来の基礎モードフレームワークを使用するため、新しい場所に移行できません。 新しい場所に合わせるには、サポートされている基礎モードフレームワークを使用して、従来の基礎モードを再開発する必要があります。</td>
   </tr>
   <tr>
    <td><strong>メモ</strong></td>
@@ -374,7 +374,8 @@ ht-degree: 100%
  </tbody>
 </table>
 
-<!-- Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promote Integration Client Libraries {#adobe-search-and-promote-integration-client-libraries}
+<!--
+Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promote Integration Client Libraries {#adobe-search-and-promote-integration-client-libraries}
 
 <table>
  <tbody>
@@ -405,7 +406,8 @@ ht-degree: 100%
     </ul> </td>
   </tr>
  </tbody>
-</table> -->
+</table>
+-->
 
 ### Adobe Target 統合クライアントライブラリ {#adobe-target-integration-client-libraries}
 
@@ -478,7 +480,7 @@ ht-degree: 100%
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>注</strong></td>
+   <td><strong>メモ</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、categories プロパティを調べます。</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>

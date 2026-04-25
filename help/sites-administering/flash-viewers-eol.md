@@ -9,9 +9,9 @@ exl-id: bb87898d-252e-4907-af03-11021d0d57fe
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '46'
 ht-degree: 100%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 100%
 
 *2017 年 1 月 31 日付けで、Adobe Dynamic Media Classic（旧 Scene7）は Flash ビューアプラットフォームのサポートを正式に終了しました。*
 
-<!-- *For more information about this important change, see the following FAQ website:*
+<!--
+*For more information about this important change, see the following FAQ website:*
 
-[https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html). -->
+[https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html).
+-->

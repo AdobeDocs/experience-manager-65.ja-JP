@@ -8,10 +8,10 @@ exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
 solution: Experience Manager, Experience Manager Forms
 feature: Release Information
 role: Admin, User, Developer
-source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
+source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 100%
+source-wordcount: '738'
+ht-degree: 94%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 100%
 | タイプ | サービスパックのリリース |
 | 日付 | 2023年12月8日金曜日（PT） |
 
-## Adobe Experience Manager 6.5 Forms サービスパック 19（6.5.19.0）の内容
+## Adobe Experience Manager 6.5 Forms サービスパック 19 （6.5.19.0）に含まれるもの
 
-Experience Manager 6.5.19.0 には、2019年4月の 6.5 の初公開以降にリリースされた新しい機能、お客様から要望のあった主な機能強化、バグ修正およびパフォーマンスや安定性、セキュリティの向上が含まれています。Experience Manager 6.5 で[このサービスパックをインストール](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)します。
+Experience Manager 6.5.19.0には、2019年4月に6.5が最初にリリースされて以降にリリースされた新機能、お客様が要求した主な機能強化、バグ修正、パフォーマンス、安定性、セキュリティの機能強化が含まれています。 Experience Manager 6.5 で[このサービスパックをインストール](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)します。
 
 ### 新機能
 
@@ -33,21 +33,21 @@ Experience Manager 6.5.19.0 には、2019年4月の 6.5 の初公開以降にリ
 
 垂直タブ、利用条件、チェックボックスが追加され、フォームのスケーラビリティが向上します。
 
-* **[チェックボックスコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームに、チェックボックスコンポーネントを含めることができるようになりました。これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
+* **[チェックボックスコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームにチェックボックスコンポーネントを含めることができるようになりました。 これにより、ユーザーは特定のオプションを選択または選択解除する二者択一の選択を行うことができます。 通常、小さなボックスとして表示され、クリックまたはタップすると、オンとオフの 2 つの状態を切り替えることができます。 チェックボックスは、はい／いいえ、または真／偽の選択肢を提示するために使用される一般的なフォーム要素です。
 
-* **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームに利用条件コンポーネントを含めることができるようになりました。これにより、フォーム作成者は、サービス、製品、プラットフォームの使用に関連する利用条件または法的合意をユーザーに提示するフォーム内に特定のセクションを導入できます。このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
+* **[利用条件コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームに利用条件コンポーネントを含めることができるようになりました。 これにより、フォーム作成者は、サービス、製品、プラットフォームの使用に関連する利用条件または法的合意をユーザーに提示するフォーム内に特定のセクションを導入できます。 このコンポーネントは、フォームを送信することで同意するルール、規制、義務についてユーザーに通知するように設計されています。
 
   ![垂直タブ、利用条件およびチェックボックスコンポーネント](/help/forms/using/assets/forms-components.png)
 
-* **[垂直タブコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームでは、フォームのコンテンツをタブの垂直リストに整理し、構造化されたナビゲートしやすいレイアウトを提供できるようになりました。フォームで垂直タブを使用すると、特にフォームに複数のセクションや複雑な情報が含まれている場合、ナビゲーションが簡素化され、フォームコンテンツの整理が改善され、全体的なユーザーエクスペリエンスが向上します。
+* **[垂直タブコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html?lang=ja)**：コアコンポーネントに基づくアダプティブフォームでは、フォームのコンテンツをタブの垂直リストに整理し、構造化されたナビゲートしやすいレイアウトを提供できるようになりました。 フォームで垂直タブを使用すると、特にフォームに複数のセクションや複雑な情報が含まれている場合、ナビゲーションが簡素化され、フォームコンテンツの整理が改善され、全体的なユーザーエクスペリエンスが向上します。
 
 #### 64 ビット版の AEM Forms Designer
 
-[64 ビット版の AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) では、パフォーマンス、スケーラビリティ、メモリ管理が強化され、フォーム作成エクスペリエンスを支援します。64 ビットアーキテクチャを使用すると、さらに大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率が保証されます。この最先端のリリースでフォームデザイン機能を強化し、AEM Forms Designer の未来を体現します。
+[64 ビット版の AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) では、パフォーマンス、スケーラビリティ、メモリ管理が強化され、フォーム作成エクスペリエンスを支援します。 64 ビットアーキテクチャを使用すると、さらに大規模で複雑なプロジェクトに簡単に取り組むことができ、シームレスな設計ワークフローと最適化された効率が保証されます。 この最先端のリリースでフォームデザイン機能を強化し、AEM Forms Designer の未来を体現します。
 
 #### アダプティブフォームと Microsoft® SharePoint リストの接続
 
-AEM Forms では、[フォームデータを SharePoint リストに直接送信](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)する標準の統合を提供し、SharePoint のリスト機能を使用できます。Microsoft® SharePoint リストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームを SharePoint リストに接続できます。
+AEM Forms では、[フォームデータを SharePoint リストに直接送信](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)する標準の統合を提供し、SharePoint のリスト機能を使用できます。 Microsoft® SharePoint リストをフォームデータモデルのデータソースとして設定し、「フォームデータモデルを使用して送信」送信アクションを使用して、アダプティブフォームを SharePoint リストに接続できます。
 
 #### アダプティブフォームフラグメントのレコードのドキュメントプロパティの設定のサポート
 
@@ -55,18 +55,18 @@ AEM Forms では、[フォームデータを SharePoint リストに直接送信
 
 #### 64 ビット版の XMLFM を含む
 
-64 ビット反復の XMLFM により、パフォーマンス、スケーラビリティ、洗練されたメモリ管理が導入されます。これは、サーバーサイドにデプロイされた最初の 64 ビットネイティブサービスです。XMLFM 64 ビットでは、32 ビット版と比較して大幅により大きなメモリリソースにアクセスする固有の機能を利用することで、より大きなレンダリングワークロードをシームレスに処理できます。このマイルストーンは、パフォーマンスの飛躍的な向上を示すだけでなく、AEM Forms サーバー内のネイティブサービスフレームワークに重要な機能強化も導入します。この更新により、AEM Forms サーバーでは 64 ビットのネイティブサービスをシームレスにサポートできます。
+64 ビット反復の XMLFM により、パフォーマンス、スケーラビリティ、洗練されたメモリ管理が導入されます。 これは、サーバーサイドにデプロイされた最初の 64 ビットネイティブサービスです。 XMLFM 64 ビットでは、32 ビット版と比較して大幅により大きなメモリリソースにアクセスする固有の機能を利用することで、より大きなレンダリングワークロードをシームレスに処理できます。 このマイルストーンは、パフォーマンスの飛躍的な向上を示すだけでなく、AEM Forms サーバー内のネイティブサービスフレームワークに重要な機能強化も導入します。 この更新により、AEM Forms サーバーでは 64 ビットのネイティブサービスをシームレスにサポートできます。
 
 
 
 ## バグの修正
 
-このリリースには、お客様から報告された 20 件以上の問題の修正も含まれています。サービスパックに含まれる修正のリストについて詳しくは、[リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja#forms-6519)を参照してください
+このリリースには、お客様から報告された 20 件以上の問題の修正も含まれています。 サービスパックに含まれる修正のリストについて詳しくは、[リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja#forms-6519)を参照してください
 
 
 ## サービスパックのインストール
 
-このサービスパックには、JEE 上の AEM Forms と OSGi 上の AEM Forms の両方に新機能とバグ修正が含まれます。インストール手順は、以前のサービスパックと比較して変更されます。インストール手順について詳しくは、[AEM Forms サービスパックのインストール手順](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)を参照してください。
+このサービスパックには、JEE 上の AEM Forms と OSGi 上の AEM Forms の両方に新機能とバグ修正が含まれます。 インストール手順は、以前のサービスパックと比較して変更されます。インストール手順について詳しくは、[AEM Forms サービスパックのインストール手順](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=ja)を参照してください。
 
 
 
@@ -132,7 +132,7 @@ There are several improvements in the Web channel layout auto-generated using th
 
 ### Use Adobe Sign's cloud-based digital signatures in Adaptive Forms {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
-[Cloud-based digital signatures](https://helpx.adobe.com/jp/sign/kb/digital-certificate-providers.html) or remote signatures are a new generation of digital signatures that work across desktop, mobile, and the web — and meet the highest levels of compliance and assurance for signer authentication. You can now [sign an Adaptive Form](../../forms/using/working-with-adobe-sign.md) with Cloud-based digital signatures.
+[Cloud-based digital signatures](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) or remote signatures are a new generation of digital signatures that work across desktop, mobile, and the web — and meet the highest levels of compliance and assurance for signer authentication. You can now [sign an Adaptive Form](../../forms/using/working-with-adobe-sign.md) with Cloud-based digital signatures.
 
 #### Embed an Adaptive Form or Interactive Communication in AEM Sites Single Page Applications {#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
@@ -274,6 +274,7 @@ In line with planned EOL of Adobe Flash Player and overall direction of migratin
 
 #### Accessibility improvements {#accessibility-improvements}
 
-AEM 6.5 Forms has improved accessibility of AEM Forms Workspace. 
-!-->
+AEM 6.5 Forms has improved accessibility of AEM Forms Workspace.
+
+-->
 
