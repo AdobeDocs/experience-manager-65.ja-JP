@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # アーカイブ
 
-このリポジトリは<https://github.com/Adobe-Enterprise-Docs/experience-manager-65.en>に移行されました。
+このリポジトリは<https://github.com/Adobe-Enterprise-Docs/experience-manager-65.ja-JP>に移行されました。
