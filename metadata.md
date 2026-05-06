@@ -1,14 +1,16 @@
 ---
 cloud: Experience Cloud
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/experience-manager-65.ja-JP
+git-repo: https://github.com/AdobeDocs/experience-manager-65.en
 solution: Experience Manager, Experience Manager 6.5
 feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
+landing-page-name: experience-manager-65
+landing-page-breadcrumb-title: AEM 6.5
 type: Documentation
 version: Experience Manager 6.5
 index: true
 recommendations: noDisplay
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+source-git-commit: 24d1ea8c2ddd56d7f1c312856ed2f67899834968
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 4%
