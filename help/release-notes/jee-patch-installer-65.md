@@ -4,11 +4,10 @@ description: AEM Forms JEE パッチインストーラーを使用して AEM 6.5
 content-type: reference
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
 hide: true
-hidefromtoc: true
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 91%

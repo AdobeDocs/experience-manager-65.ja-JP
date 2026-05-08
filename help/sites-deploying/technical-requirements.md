@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+source-git-commit: b8be2ca14bdc6c6f21a2a33c893841a9aa201112
 workflow-type: tm+mt
-source-wordcount: '3736'
-ht-degree: 96%
+source-wordcount: '3746'
+ht-degree: 94%
 
 ---
 
@@ -64,7 +64,7 @@ Adobe Experience Manager を実行するための最小要件：
    <td>Adobeでは、この設定に対する完全なサポートとメンテナンスを提供します。 この構成は、Adobeの品質保証プロセスでカバーされています。</td>
   </tr>
   <tr>
-   <td><strong>R：制限サポート</strong></td>
+   <td><strong>R：限定サポート</strong></td>
    <td>お客様のプロジェクトを確実に成功させるために、アドビは特定の条件を満たす必要がある限定的なサポートプログラム内で、完全なサポートを提供します。 R レベルのサポートでは、正式なお客様のリクエストとアドビの確認が必要です。 詳しくは、アドビカスタマーケアにお問い合わせください。</td>
   </tr>
  </tbody>
@@ -475,12 +475,12 @@ Windows x86 の場合：
   </tr>
 
 <tr>
-   <td>Microsoft® Office 2021 Professional Plus、小売ライセンスおよびボリュームライセンス</td>
+   <td>Microsoft® Office 2024 Professional Plus、小売およびボリュームライセンス</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
   </tr>
   <tr>
    <td>
-    <strong>OpenOffice 4.1.15</strong>   </td>
+OpenOffice 4.1.15 </td>
    <td>
     ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX 、JP2、J2K、J2C、JPC）、HTML、HTM、RTF、TXT<br>
 
@@ -492,13 +492,14 @@ Windows x86 の場合：
 >[!NOTE]
 >
 >* PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
->* PDF Generator で変換を実行するには、Adobe Acrobat Pro DC（32 ビット）が必要です。
->* PDF Generator では、32 ビット版の Microsoft® Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
->* ボリュームライセンスインストールで指定期間内に KMS ホストが見つからないなど、何らかの理由で Microsoft® Office インストールが非アクティブ化またはライセンス解除された場合、インストールのライセンスを再度取得して再アクティブ化するまでは、変換が失敗する場合があります。
+>* PDF Generatorでは、変換を実行するには、32 ビット版のAdobe Acrobat Pro DCとMicrosoft® Office Professional Plusが必要です。
+>* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
+>* 指定した期間内にKMS ホストを見つけることができないボリュームライセンスのインストールなど、何らかの理由でMicrosoft® Office インストールがディアクティベートまたはライセンス解除された場合、インストールが再ライセンス認証されて再アクティブ化されるまで、コンバージョンが失敗する可能性があります。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。
 >* OpenOffice向けPDF Generator コンバージョンは、WindowsとLinux®の両方でサポートされています。
 >* OCR PDF、Optimize PDF、Export PDF の各機能は、Windows でのみサポートされます。
->* PDF Generator サービスでは Microsoft® Windows 11 をサポートしていません。
+>* PDF Generatorは、Microsoft®Windows 11をサポートしていません。
+>* Microsoft® Office 2021 Professional Plusのサポートは廃止されました。
 
 ### AEM Forms Designer の要件 {#requirements-for-aem-forms-designer}
 

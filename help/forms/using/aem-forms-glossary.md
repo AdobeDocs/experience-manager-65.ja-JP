@@ -3,10 +3,9 @@ title: AEM Forms 用語集
 description: AEM Forms 用語集には、Adobe Experience Manager Forms（AEM Forms）で使用される主な用語、定義、概念の包括的なリストが記載されており、ユーザーがアダプティブフォームと関連機能を理解して操作するのに役立ちます。
 feature: Adaptive Forms
 role: Admin, User, Developer
-hidefromtoc: true
 hide: true
 exl-id: 1b327871-c861-48c8-aac6-cff864398bee
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
 workflow-type: tm+mt
 source-wordcount: '2818'
 ht-degree: 100%
