@@ -9,14 +9,18 @@ exl-id: 6c6fb516-1b11-4da4-b638-4388a070e397
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 100%
+source-wordcount: '354'
+ht-degree: 96%
 
 ---
 
 # ホーム画面{#home-screen}
+
+>[!NOTE]
+>
+>AEM Forms アプリは現在、非推奨です。 質問またはヘルプについては、[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)までお問い合わせください。
 
 AEM Forms アプリケーションにログインすると、ホーム画面に誘導されます。
 
