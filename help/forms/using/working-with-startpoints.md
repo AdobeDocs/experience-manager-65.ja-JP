@@ -1,6 +1,6 @@
 ---
 title: スタートポイントの使用
-description: Workbench で定義されたモバイルデバイスから Adobe Experience Manager Forms プロセスを操作する手順。
+description: ワークベンチで定義されたモバイルデバイスから Adobe Experience Manager Forms プロセスを操作する手順。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
@@ -9,32 +9,36 @@ exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: dd8748cee7a4b3ba91795a51928bd8590c47ef27
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 100%
+source-wordcount: '249'
+ht-degree: 94%
 
 ---
 
 
 # スタートポイントの使用{#working-with-startpoints}
 
-スタートポイントは Workbench で作成されたプロセスを呼び出します。これはフォームの送信時にプロセスを呼び出すフォームに関連付けられています。
+>[!NOTE]
+>
+>AEM Forms アプリは現在、非推奨です。 質問またはヘルプについては、[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)までお問い合わせください。
+
+スタートポイントはワークベンチで作成されたプロセスを呼び出します。 これはフォームの送信時にプロセスを呼び出すフォームに関連付けられています。
 
 >[!NOTE]
 >
 >この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
 
-Adobe Experience Manager（AEM）Forms アプリケーションからプロセスを開始するには、プロセスで&#x200B;**ワークスペース**&#x200B;タイプのスタートポイントが必要です。また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
+Adobe Experience Manager（AEM）Forms アプリケーションからプロセスを開始するには、プロセスで&#x200B;**ワークスペース**&#x200B;タイプのスタートポイントが必要です。 また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
-**Workbench で定義されたプロセスを開始するには**
+**ワークベンチで定義されたプロセスを開始するには**
 
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](../../forms/using/home-screen.md)に移動してください。
 1. デフォルトでは、**[!UICONTROL ホーム]**&#x200B;画面に「**[!UICONTROL すべてのフォーム]**」リストが表示されます。
 
-   スタートポイントはフォームに関連付けられています。リストでスタートポイントに関連付けられているフォームを選択して開きます。
+   スタートポイントはフォームに関連付けられています。 リストでスタートポイントに関連付けられているフォームを選択して開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 

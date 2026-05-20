@@ -1,6 +1,6 @@
 ---
 title: テーマのカスタマイズ
-description: AEM Forms アプリケーションのテーマをカスタマイズする方法を説明します。HTML コードおよび CSS ファイルをカスタマイズし、組織固有のルック＆フィールを提供することができます。
+description: AEM Forms アプリケーションのテーマをカスタマイズする方法を説明します。 HTML コードおよび CSS ファイルをカスタマイズし、組織固有のルック＆フィールを提供することができます。
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,16 +9,20 @@ exl-id: 9b8c5933-b783-48f9-b463-15a01e06ee98
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 100%
+source-wordcount: '254'
+ht-degree: 94%
 
 ---
 
 # テーマのカスタマイズ {#theme-customization}
 
-HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms アプリケーションに組織固有の明確なルック＆フィールを提供することができます。たとえば、タスクまたはスタートポイントの背景色や高さを変更できます。次のことを変更する手順を、以下に例で示します。
+>[!NOTE]
+>
+>AEM Forms アプリは現在、非推奨です。 質問またはヘルプについては、[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)までお問い合わせください。
+
+HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms アプリケーションに組織固有の明確なルック＆フィールを提供することができます。 たとえば、タスクまたはスタートポイントの背景色や高さを変更できます。 次のことを変更する手順を、以下に例で示します。
 
 * 説明の代わりに手順を表示
 * 表示ルート数
