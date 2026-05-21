@@ -345,7 +345,7 @@ ht-degree: 96%
 + Assets {#assets}
    + [DAM について](/help/assets/assets.md)
    + [Assets のベストプラクティス](/help/assets/best-practices-for-assets.md)
-   + [ [!DNL Assets] でのアクセシビリティ](/help/assets/accessibility.md)
+   + [&#x200B; [!DNL Assets] でのアクセシビリティ](/help/assets/accessibility.md)
    + Experience Manager Assets の使用 {#using}
       + [[!DNL Assets] のホームページエクスペリエンス](/help/assets/assets-home-page.md)
       + [デジタルアセットの検索](/help/assets/search-assets.md)
@@ -414,14 +414,14 @@ ht-degree: 96%
       + [一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)
       + [セレクターを操作する](/help/assets/working-with-selectors.md)
    + Assets の拡張 {#extending}
-      + [ [!DNL Assets] のカスタマイズと拡張](/help/assets/extending-assets.md)
+      + [&#x200B; [!DNL Assets] のカスタマイズと拡張](/help/assets/extending-assets.md)
       + [メディアハンドラーとワークフローを使用したアセットの処理](/help/assets/media-handlers.md)
       + [検索機能の拡張](/help/assets/searchx.md)
-      + [ [!DNL Assets] と連携して使用する  [!DNL ImageMagick]  のインストールと設定](/help/assets/best-practices-for-imagemagick.md)
+      + [&#x200B; [!DNL Assets] と連携して使用する  [!DNL ImageMagick]  のインストールと設定](/help/assets/best-practices-for-imagemagick.md)
       + [Assets とアクティビティストリームの統合](/help/assets/extending-activity-stream.md)
       + [アセットエディターの拡張](/help/assets/asseteditorx.md)
       + [[!DNL Assets] HTTP API](/help/assets/mac-api-assets.md)
-      + [ [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md)
+      + [&#x200B; [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md)
       + [コンテンツフラグメント用 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
       + [GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)
@@ -449,7 +449,7 @@ ht-degree: 96%
       + [PDF ラスタライザを使用](/help/assets/aem-pdf-rasterizer.md)
       + [アップロード制限の設定](/help/assets/configuring-asset-upload-restrictions.md)
       + [[!DNL Experience Manager] と  [!DNL Creative Cloud]  の統合](/help/assets/aem-cc-integration-best-practices.md)
-      + [ [!DNL InDesign Server] との統合](/help/assets/indesign.md)
+      + [&#x200B; [!DNL InDesign Server] との統合](/help/assets/indesign.md)
       + [Assets の Digital Rights Management](/help/assets/drm.md)
       + [Assets Insights でのデモパッケージの使用](/help/assets/use-demo-package-for-asset-insights.md)
       + [Adobe Asset Link の設定](/help/assets/configure-asset-link.md)
@@ -463,10 +463,10 @@ ht-degree: 96%
       + [アセットの透かしの設定](/help/assets/watermarking.md)
       + [アセットテンプレート](/help/assets/asset-templates.md)
    + Brand Portal {#brandportal}
-      + [ [!DNL Assets]  での [!DNL Brand Portal]の設定](/help/assets/configure-aem-assets-with-brand-portal.md)
-      + [ [!DNL Brand Portal] へのアセットの公開](/help/assets/brand-portal-publish-assets.md)
-      + [ [!DNL Brand Portal] へのフォルダーの公開](/help/assets/brand-portal-publish-folder.md)
-      + [ [!DNL Brand Portal] へのコレクションの公開](/help/assets/brand-portal-publish-collection.md)
+      + [&#x200B; [!DNL Assets]  での [!DNL Brand Portal]の設定](/help/assets/configure-aem-assets-with-brand-portal.md)
+      + [&#x200B; [!DNL Brand Portal] へのアセットの公開](/help/assets/brand-portal-publish-assets.md)
+      + [&#x200B; [!DNL Brand Portal] へのフォルダーの公開](/help/assets/brand-portal-publish-folder.md)
+      + [&#x200B; [!DNL Brand Portal] へのコレクションの公開](/help/assets/brand-portal-publish-collection.md)
    + コンテンツフラグメント {#content-fragments}
       + [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
       + [コンテンツフラグメントと GraphQL のヘッドレス配信](/help/assets/content-fragments/content-fragments-graphql.md)
@@ -503,9 +503,9 @@ ht-degree: 96%
       + [プライベートフォルダーの共有](/help/assets/private-folder.md)
       + [ビデオレンディション](/help/assets/video-renditions.md)
    + 他のソリューションとの統合 {#integrations}
-      + [ [!DNL Adobe Workfront] との統合](/help/assets/workfront-integrations.md)
-      + [ [!DNL Workfront] への  [!DNL enhanced connector]  のインストール](/help/assets/workfront-connector-install.md)
-      + [ [!DNL Workfront] への  [!DNL enhanced connector]  の設定](/help/assets/workfront-connector-configure.md)
+      + [&#x200B; [!DNL Adobe Workfront] との統合](/help/assets/workfront-integrations.md)
+      + [&#x200B; [!DNL Workfront] への  [!DNL enhanced connector]  のインストール](/help/assets/workfront-connector-install.md)
+      + [&#x200B; [!DNL Workfront] への  [!DNL enhanced connector]  の設定](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
    + リリースノート {#release-notes-new-features}
       + [新機能](/help/forms/using/whats-new.md)
@@ -888,10 +888,10 @@ ht-degree: 96%
       + [Designer での Page Zero コンテンツの変更](/help/forms/using/changing-page-zero-content-designer.md)
       + アクセシビリティのベストプラクティス {#accessibility-best-practices}
          + {hide-from-toc}[はじめに](/help/forms/using/introduction-accessibility-forms-designer.md)
-         + {hide-from-toc}[ フォーム作成のベストプラクティス ](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
-         + {hide-from-toc}[ フォームのアクセシビリティをテストするためのテクニック ](/help/forms/using/techniques-for-testing-form-accessibility.md)
-         + {hide-from-toc}[ ガイドラインとベストプラクティスのマッピング ](/help/forms/using/mapping-between-guidelines-and-best-practices.md)
-         + {hide-from-toc}[便利なリンク ](/help/forms/using/useful-links-accessibility-forms-designer.md)
+         + {hide-from-toc}[&#x200B; フォーム作成のベストプラクティス &#x200B;](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
+         + {hide-from-toc}[&#x200B; フォームのアクセシビリティをテストするためのテクニック &#x200B;](/help/forms/using/techniques-for-testing-form-accessibility.md)
+         + {hide-from-toc}[&#x200B; ガイドラインとベストプラクティスのマッピング &#x200B;](/help/forms/using/mapping-between-guidelines-and-best-practices.md)
+         + {hide-from-toc}[便利なリンク &#x200B;](/help/forms/using/useful-links-accessibility-forms-designer.md)
    + AEM Forms のカスタマイズ {#customize-aem-forms}
       + [アダプティブフォームおよび HTML5 フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)
       + [カスタムアダプティブフォームテンプレートの作成](/help/forms/using/custom-adaptive-forms-templates.md)

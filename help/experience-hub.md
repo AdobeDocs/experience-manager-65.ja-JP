@@ -9,10 +9,17 @@ role: Admin, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
 autotag-review: '2026-05-18T18:36:48.003Z'
 TQID: 'https://experienceleague.adobe.com/l50k7J-xXPu5kXKIg-rArib9aIMnMoXXlSoJ-YppJwQ'
-product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
 source-wordcount: 945
@@ -43,7 +50,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    このプリセットはいつでも変更できます。
 
-   ![ コンテンツ作成者プリセットを表示するドロップダウンリストが選択されています](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
+   ![&#x200B; コンテンツ作成者プリセットを表示するドロップダウンリストが選択されています](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
 
 Adobe Experience Manager ページが更新され、強化されたナビゲーションとインタラクティブウィジェットが使用できるようになりました。 以前のソリューションカードのコレクションでは、次のようなツールにアクセスできました。
 

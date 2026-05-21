@@ -12,11 +12,19 @@ exl-id: c86e79c4-e887-4ee3-bb54-eeffb34a33c2
 solution: Experience Manager, Experience Manager Assets
 autotag-review: '2026-05-18T18:46:26.981Z'
 TQID: 'https://experienceleague.adobe.com/DfSAGGSoBR-9TOXKA89X3U4VReVbP-Ej70vUK1Zfczk'
-product_v2: id: e14eb250-3c22-4a07-9061-a78112b2b826id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-level_v2: id: d378ca77-2da1-4f39-ad92-1917fe974a38id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
 source-wordcount: 3751
@@ -102,7 +110,7 @@ Dynamic Media ビューアリファレンスガイドの [RuleSetFile](https://e
 | **[!UICONTROL デフォルトのフォント書体名]** | テキストレイヤー要求でフォントが提供されない場合に使用するフォントを指定します。 指定する場合は、この画像カタログのフォントマップまたはデフォルトのカタログのフォントマップで有効なフォント名の値を指定する必要があります。<br>Dynamic Media ビューアリファレンスガイドの [DefaultFont](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont) パラメーターも参照してください。 |
 | **[!UICONTROL デフォルトの画像]** | リクエストされた画像が見つからない場合、リクエストに応答してデフォルトの画像が返されます。<br>Dynamic Media ビューアリファレンスガイドの[DefaultImage](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage) パラメーターも参照してください。<br>**メモ**: Dynamic Media Classic アカウントの&#x200B;**[!UICONTROL 設定]** > **[!UICONTROL アプリケーション]** > **[!UICONTROL 公開セットアップ]**&#x200B;で&#x200B;**[!UICONTROL Default image]**&#x200B;が選択されている場合、**[!UICONTROL Default Request Attributes]** グループで、Experience Managerはファイルを取得します。 その後、ファイルは保存され、**[!UICONTROL Dynamic Media 公開設定]**&#x200B;ページを初めて開いたときにこのフィールドで使用できるようになります。 |
 | **[!UICONTROL デフォルトの画像モード]** | スライダーボックスが有効な場合（右側のスライダー）、**[!UICONTROL デフォルトの画像]**&#x200B;はソースの画像の欠落している各レイヤーをデフォルトの画像に置き換え、通常どおり合成を返します。 スライダーボックスが無効な場合（左側のスライダー）、欠落している画像がいくつかのレイヤーの 1 つにすぎない場合でも、デフォルトの画像が合成画像全体に置き換わります。<br>Dynamic Media ビューアリファレンスガイドの [DefaultImageMode](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode) パラメーターも参照してください。 |
-| **[!UICONTROL デフォルトの表示サイズ]** | 必須。<br>新しいDynamic Media アカウントの場合のみ、デフォルトの表示サイズは、**[!UICONTROL 画像サービング]**&#x200B;と&#x200B;**[!UICONTROL 画像サービング]**&#x200B;の両方で、幅：`1280`と高さ：`1280`に自動的に設定されます。<br>要求が`wid=`、`hei=`または`scl=`を使用して表示サイズを明示的に指定しない場合、サーバーは返信画像をこの幅と高さより大きくしないように制限します。<br>Dynamic Media ビューアリファレンスガイド。[](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix) |
+| **[!UICONTROL デフォルトの表示サイズ]** | 必須。<br>新しいDynamic Media アカウントの場合のみ、デフォルトの表示サイズは、**[!UICONTROL 画像サービング]**&#x200B;と&#x200B;**[!UICONTROL 画像サービング]**&#x200B;の両方で、幅：`1280`と高さ：`1280`に自動的に設定されます。<br>要求が`wid=`、`hei=`または`scl=`を使用して表示サイズを明示的に指定しない場合、サーバーは返信画像をこの幅と高さより大きくしないように制限します。<br>Dynamic Media ビューアリファレンスガイド。[&#128279;](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix) |
 | **[!UICONTROL デフォルトのサムネールサイズ]** | 必須。<br> サムネール要求（`req=tmb`）の属性&#x200B;**[!UICONTROL 既定の表示サイズ]**&#x200B;の代わりに使用されます。 サムネールリクエスト （`req=tmb`）で`wid=`、`hei=`、または`scl=`を使用してサイズを明示的に指定しない場合、サーバーは返信画像をこの幅と高さよりも大きくしないように制限します。<br>Dynamic Media ビューアリファレンスガイドの[DefaultThumbPix](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix) パラメーターも参照してください。 |
 | **[!UICONTROL デフォルトの背景色]** | 返信画像内で実際の画像データが含まれない領域を埋めるために使用する RGB 値を指定します。<br>Dynamic Media ビューアリファレンスガイドの [BkgColor](https://experienceleague.adobe.com/ja/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor) パラメーターも参照してください。 |
 | **[!UICONTROL JPEG エンコード属性]** |  |
