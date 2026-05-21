@@ -5,10 +5,17 @@ solution: Experience Manager, Experience Manager 6.5
 feature: Authoring, AI Assistant, AI Tools
 role: Admin, Developer, User
 exl-id: 3b4a484e-55b5-4924-82dd-56735f6ed46d
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+autotag-review: '2026-05-18T18:36:07.915Z'
+TQID: 'https://experienceleague.adobe.com/dlFmrtn05S20z96wtAfkpGliITeVJhVkofqPix6QMxk'
+product_v2: id: e14eb250-3c22-4a07-9061-a78112b2b826id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
-source-wordcount: '1379'
-ht-degree: 5%
+source-wordcount: 1379
+ht-degree: 94%
 
 ---
 
@@ -16,13 +23,13 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->AEM 6.5およびAEM 6.5 LTSのお客様で、Cloud Manager/Experience Hubを使用していないお客様は、Adobe カスタマーサクセスエンジニアに連絡して、AI アシスタントへのアクセスをリクエストする必要があります。
+>AEM 6.5 および AEM 6.5 LTS のお客様で、Cloud Manager/Experience Hub を使用していないお客様は、Adobe カスタマーサクセスエンジニアに連絡して、AI アシスタントへのアクセスをリクエストする必要があります。
 
-AEM 6.5/AEM 6.5 LTSのAI アシスタントは、Adobe Experience Manager関連の質問に対する回答を効率的に見つけるように設計された、会話型インターフェイスを提供します。 この機能を使用すると、AEM製品関連の質問（*すべてのユーザーが利用できます*）、サポートチケットの作成（*サポート管理者が利用できます*）を自動化できます。
+AEM 6.5/AEM 6.5 LTSのAI アシスタントは、Adobe Experience Manager関連の質問に対する回答を効率的に見つけるように設計された、会話型インターフェイスを提供します。 これにより、AEM 製品関連の質問への回答を即座に得ることができ（*すべてのユーザーが使用可能*）、サポートチケットの作成を自動化できます（*サポート管理者が使用可能*）。
 
-AI アシスタントは、次のソリューションを含むAEM as a Cloud Serviceをサポートしています。
+AI アシスタントは、次のソリューションを含む AEM as a Cloud Service をサポートしています。
 
-* Experience Hubの概要ページ
+* Experience Hub の概要ページ
 * Edge Delivery Services
 * Sites
 * Assets
@@ -33,87 +40,87 @@ AI アシスタントは、次のソリューションを含むAEM as a Cloud Se
 
 AEM に直接埋め込まれ、AEM Experience Hub、Cloud Manager、オーサー UI からアクセスできます。
 
-次の3分25秒のビデオでは、AEMのAI アシスタントのステップバイステップのチュートリアルを紹介します。
+次の 3 分 25 秒のビデオでは、AEM の AI アシスタントの使い方を順を追って紹介しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475359/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
-## AEMのAI アシスタントを利用すれば{#get-access}
+## AEM の AI アシスタントにアクセスする{#get-access}
 
-AEMのAI アシスタントにアクセスするには、次の要件を満たしている必要があります。
+AEM の AI アシスタントにアクセスするには、次の要件を満たしている必要があります。
 
-* AEMのAI アシスタントを使用して製品知識を得る権限。 この権限を持つユーザーは、AI アシスタントのチャットで製品関連の質問をすることができます。 この権限を有効にする必要があります。
+* 製品知識向けの AEM の AI アシスタント使用権限。 この権限を持つユーザーは、AI アシスタントのチャットで製品関連の質問をすることができます。 この権限を有効にする必要があります。
 * サポートチケットを開く権限。これには&#x200B;**サポート管理者**&#x200B;の役割が必要です。
 
 >[!NOTE]
 >
->AEMのAI アシスタントのリクエストは、Adobe Identity Managementサービス（IMS）を通じて認証されます。 詳しくは、[Adobe Identity Management サービスの概要](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf)を参照してください。
+>AEM の AI アシスタントのリクエストは、Adobe Identity Management サービス（IMS）を通じて認証されます。 詳しくは、[Adobe Identity Management サービスの概要](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf)を参照してください。
 
-**AEMのAI アシスタントにアクセスするには：**
+**AEM の AI アシスタントにアクセスするには：**
 
-1. Adobe Experience ManagerのAIを活用したエージェント機能のほとんどにアクセスするには、お客様は追加契約を締結する必要があります。 詳しくは、Adobe担当者にお問い合わせください。
+1. Adobe Experience Manager の AI を活用したエージェント機能のほとんどにアクセスするには、お客様は追加契約を締結する必要があります。 詳しくは、アドビ担当者にお問い合わせください。
 
-1. AEMでAI アシスタントを使用するには、AI アシスタントを通じて製品情報にアクセスする権限が必要です。 この権限はデフォルトでオンになっています。
+1. AEM で AI アシスタントを使用するには、AI アシスタントを通じて製品知識にアクセスする権限が必要です。 この権限はデフォルトでオンになっています。
 
-   製品情報にアクセスできるユーザーを制御するには、Adobe IDに関連付けられている電子メールアドレスから[aemaiassistant@adobe.com](mailto:aemaiassistant@adobe.com)に電子メールを送信します。 Adobeでは、ユーザーレベルのアクセス制御を有効にできます。 有効にすると、管理者は[AEMのAI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)の手順に従って、ユーザーレベルのアクセス権を付与できます。
+   製品知識にアクセスできるユーザーを管理するには、Adobe ID に関連付けられているメールアドレスから [aemaiassistant@adobe.com](mailto:aemaiassistant@adobe.com) にメールを送信してください。 アドビでは、ユーザーレベルのアクセス制御を有効にできます。 有効にすると、管理者は [AEM の AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)の手順に従って、ユーザーレベルのアクセス権を付与できます。
 
 
 ## 範囲 {#scope}
 
-AEMのAI アシスタントの現在の範囲は、AEMr as a Cloud Serviceの製品知識に関する質問への対応に重点を置いています。 このスコープには、主要分野に対する包括的なサポートが含まれます。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
+AEMのAI アシスタントの現在の範囲は、AEMr as a Cloud Serviceの製品知識に関する質問への対応に重点を置いています。 この範囲には、主要分野に対する包括的なサポートが含まれます。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
 
-* **サーフェス**: AEM Experience Hub、オーサーUI、Cloud Manager全体で使用可能です。
-* **機能**：トラブルシューティングとガイダンス、サポートチケットの自動作成と参照のための製品知識とファーストストストップ。
-* **値**：時間を節約し、学習と価値実現までの時間を短縮し、サポートチケットを手動で作成する必要性を減らし、サポートチケットの作成の効率を向上させます。
+* **サーフェス**：AEM Experience Hub、オーサー UI、Cloud Manager 全体で使用可能です。
+* **機能**：製品知識の提供、トラブル対応や案内の一次窓口、サポートチケットの自動作成や検索を行います。
+* **価値**：時間を節約し、学習と価値実現までの時間を短縮し、サポートチケットを手動で作成する必要性を減らし、サポートチケット作成の効率を向上させます。
 
 ## プライバシー、セキュリティ、ガバナンス{#privacy-security-governance}
 
-AEMのAI アシスタントは、プライバシー、セキュリティ、ガバナンスを重視して設計されています。
+AEM の AI アシスタントは、プライバシー、セキュリティ、ガバナンスを重視して設計されています。
 
-この記事では、AEMのAI アシスタントが提供する、信頼の向上を重視した機能の概要を説明します。
+この記事では、AEM の AI アシスタントが提供する、信頼の向上を重視した機能の概要を説明します。
 
-* AEMのAI アシスタントでは、トレーニング目的を含め、個人データは使用されません。
-* AEMのAI アシスタントは、消費者データにアクセスできません。
-* AEMのAI アシスタントを利用するには、明示的な権限が必要です。
-* ユーザーが提供したプロンプト（質問、クエリなど）は、他の顧客と共有されません。
+* AEM の AI アシスタントでは、トレーニング目的を含め、個人データは使用されません。
+* AEM の AI アシスタントは、消費者データにアクセスできません。
+* AEM の AI アシスタントを利用するには、明示的な権限が必要です。
+* ユーザーが提供したプロンプト（質問、クエリなど）は、他の顧客と共有されることはありません。
 
 <!-- See also [Security at Adobe whitepaper](). NEED ACTIVE LINK FROM ADRIAN NICOLAE TANASE. CURRENTLY 404. -->
 
-## AEMのAI アシスタントを利用して、製品ナレッジと自動サポートチケット作成について学ぶ {#ai-prod-insights}
+## AEM の AI アシスタントを利用して、製品知識とサポートチケットの自動作成について学ぶ {#ai-prod-insights}
 
-製品知識には、Adobe Experience League ドキュメントから派生した概念とトピックが含まれます。 これらの質問は、次のサブグループに分類できます。
+製品知識には、Adobe Experience League ドキュメントから派生した概念やトピックが含まれます。 これらの質問は、次のサブグループに分類できます。
 
 
-| 製品知識 | すべてのユーザーが利用できます<br>例 |
+| 製品知識 | すべてのユーザーが利用可能<br>例 |
 | :--- | :--- |
-| ターゲットを絞った学習 | <ul><li>ユニバーサルエディターとは？</li><li>Cloud Managerでプログラムを作成するにはどうすればよいですか？</li></ul> |
-| オープン検出 | <ul><li>ユニバーサルエディターの使用方法を教えてください。</li><li>ある環境から別の環境にコンテンツをコピーする方法はありますか？</li></ul> |
+| ターゲットを絞った学習 | <ul><li>ユニバーサルエディターとは？</li><li>Cloud Manager でプログラムを作成する方法を教えてください。</li></ul> |
+| 自由探索型の質問 | <ul><li>ユニバーサルエディターの使用方法を教えてください。</li><li>ある環境から別の環境にコンテンツをコピーする方法はありますか？</li></ul> |
 | トラブルシューティング | <ul><li>ユニバーサルエディターにアクセスできないのはなぜですか？</li><li>パイプラインが失敗する理由</li></ul> |
-| **チケット作成をサポート** | **サポート管理者のみが利用できます&#x200B;**<br>**例** |
-| AI アシスタントのチャット履歴とコンテキストを取得した自動サポートチケット作成 | <ul><li>サポートチケットを作成する。</li></ul> |
-| サポートチケットのステータスの取得 | <ul><li>私が開いたサポートチケットをすべて見せてください。</li><li>チケット「E---------- – 」のステータスを表示</li></ul> |
+| **チケット作成をサポート** | **サポート管理者のみが利用可能&#x200B;**<br>**例** |
+| AI アシスタントのチャット履歴とコンテキストを取得したサポートチケットの自動作成 | <ul><li>サポートチケットを作成します。</li></ul> |
+| サポートチケットのステータスの取得 | <ul><li>私が開いたサポートチケットをすべて見せてください。</li><li>チケット「E-----------」のステータスを表示</li></ul> |
 
 {style="table-layout:auto"}
 
 
-## 質問を作成する方法 {#ai-craft-questions}
+## 効果的な質問を作成する方法 {#ai-craft-questions}
 
-AEMのAI アシスタントから最も正確な回答を得るには、質問を明確かつ文脈に沿って表現することが重要です。 次のヒントを使用して、クエリが明確かつ適切に構造化されていることを確認します。
+AEM の AI アシスタントから最も正確な回答を得るには、質問を明確かつ文脈が分かるように表現することが重要です。 次のヒントを使用して、クエリを明確かつ適切に構成してください。
 
-* タスクや質問を簡潔に明確に伝える。
-* あいまいな表現や複雑すぎる構文を避けて、理解を深めましょう。
-* AEMのAI アシスタントがより正確で関連性の高い回答を提供するのに役立つため、タスクや質問に関する関連コンテキストを含めることができます。
-例えば、プロンプトでは、使用しているAEM ソリューション（Sites、Assets、Dynamic Media、Edge Delivery Services、Cloud Manager、Forms）の名前を付けます。
+* タスクや質問を簡潔かつ明確に表現してください。
+* 分かりやすさを高めるため、あいまいな表現や複雑すぎる構文を避けてください。
+* 質問やタスクに関する関連コンテキストを含めることで、AEM の AI アシスタントがより正確で関連性の高い回答を提供できます。
+例えば、プロンプトに、作業中の AEM ソリューション（Sites、Assets、Dynamic Media、Edge Delivery Services、Cloud Manager、Forms）の名前を付けると役立ちます。
 
 ### サポートされていない質問の例 {#ai-unsupported-questions}
 
 | 領域 | 例 |
 | --- | --- |
-| 運用上のインサイト | <ul><li>テナントに存在する開発環境の数</li><li>最後の実稼動パイプラインを開始したのは誰ですか？</li></ul> |
-| トラブルシューティング | <ul><li>実稼動パイプラインが失敗するのはなぜですか？</li></ul> |
+| 運用上のインサイト | <ul><li>テナントに存在する開発環境の数は？</li><li>最後の実稼動パイプラインを開始したのは誰ですか？</li></ul> |
+| トラブルシューティング | <ul><li>実稼動パイプラインが失敗する理由</li></ul> |
 | タスクと自動化 | <ul><li>開発ブランチからコード品質パイプラインを設定します。</li></ul> |
 
 
-## AEMのAI アシスタントを活用して {#ai-use}
+## AEM AI アシスタントの使用 {#ai-use}
 
 <!--
 UNHIDE AFTER BETA or at GA
@@ -129,76 +136,76 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md).
 -->
 
 
-### AEMでAI アシスタントを起動する
+### AEM で AI アシスタントとの対話を開始する
 
-AEMのAI アシスタントをリセットして、トピックを変更する場合に新しい会話を開始できます。 この機能は、失敗しているクエリや誤った情報を提供しているクエリのトラブルシューティングに特に役立ちます。
+トピックを変更したい場合は、AEM の AI アシスタントをリセットして、新しい会話を開始できます。 この機能は、クエリの不具合や誤った情報を提供しているクエリのトラブルシューティングに特に役立ちます。
 
-**AEMの会話でAI アシスタントを開始するには：**
+**AEM で AI アシスタントとの対話を開始するには：**
 
-1. AEM ユーザーインターフェイスの右上隅付近（Cloud Manager ページまたはAEM環境のオーサーインスタンス）で、**AI アシスタント** アイコンをクリックします。
+1. AEM ユーザーインターフェイスの右上隅付近（Cloud Manager ページまたは AEM 環境のオーサーインスタンス）で、「**AI アシスタント**」アイコンをクリックします。
 
-   ![&#x200B; ツールバーのAI アシスタント アイコン &#x200B;](/help/assets/assets-ai/ai-assistant-icon.png)
+   ![ツールバーの AI アシスタントアイコン](/help/assets/assets-ai/ai-assistant-icon.png)
 
-1. 下部付近の&#x200B;**AI アシスタント** パネルのテキストボックスに、質問またはプロンプトを入力し、`Enter`を押すか、![送信アイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Send_18_N.svg)をクリックします。
+1. 下部付近の **AI アシスタント**&#x200B;パネルのテキストボックスに、質問またはプロンプトを入力し、`Enter` を押すか「![送信アイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Send_18_N.svg)」をクリックします。
 
    >[!NOTE]
    >
-   >個人データは入力に含めないでください。このツールを使用する場合は不要です。
+   >このツールの利用に個人データは不要なので、入力に含めないでください。
 
-   ![AI アシスタントパネルの下部にあるテキストボックス &#x200B;](/help/assets/assets-ai/ai-assistant-prompt-text-box.png)
+   ![AI アシスタントパネルの下部にあるテキストボックス](/help/assets/assets-ai/ai-assistant-prompt-text-box.png)
 
-1. 新しい会話（新しいトピックまたはトピックの変更）を開始するには、![詳細アイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)/**新しい会話を開始**&#x200B;をクリックします。
+1. 新しい会話（新しいトピックまたはトピックの変更）を開始するには、![詳細アイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)／**新しい会話を開始**&#x200B;をクリックします。
 
-   ![省略記号アイコンからAI アシスタントで新しい会話を開始](/help/assets/assets-ai/ai-assistant-start-new-conversation.png)
+   ![省略記号アイコンから AI アシスタントで新しい会話を開始](/help/assets/assets-ai/ai-assistant-start-new-conversation.png)
 
-### カテゴリー別のプロンプトを見つける
+### カテゴリ別のプロンプトを見つける
 
-AEMのAI アシスタントには、サポートされているトピックやカテゴリーを調べるのに役立つ見つけやすさ機能が搭載されています。
+AEM の AI アシスタントには、対応しているトピックやカテゴリを調べられる検出機能が搭載されています。
 
 **カテゴリ別にプロンプトを見つけるには：**
 
-1. AI アシスタントパネルで、![学習アイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Learn_18_N.svg)をクリックして、プロンプト検出パネルをオンにします。
+1. AI アシスタントパネルで、「![学習アイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Learn_18_N.svg)」をクリックして、プロンプト検出パネルをオンにします。
 
-   AI アシスタントのカテゴリ別にプロンプトを検索できる![&#x200B; パネル](/help/assets/assets-ai/ai-assistant-discover-prompts.png)
-   AI アシスタントのプロンプトカテゴリを表示する&#x200B;*パネル。*
+   ![AI アシスタントのカテゴリ別にプロンプトを検索できるパネル](/help/assets/assets-ai/ai-assistant-discover-prompts.png)
+   *AI アシスタントのプロンプトカテゴリを表示するパネル。*
 
-1. カテゴリを選択して、関連するプロンプトのリストを表示します。
-1. プロンプトを選択すると、AI アシスタントが回答できる質問の種類の例が表示されます。
+1. カテゴリを選択すると、関連するプロンプトのリストが表示されます。
+1. プロンプトを選択すると、AI アシスタントが回答できる質問の例が表示されます。
 
-1. プロンプト検出パネルを非表示にするには、![学習アイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Learn_18_N.svg)をもう一度クリックします。
+1. プロンプト検出パネルを非表示にするには、「![学習アイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Learn_18_N.svg)」をもう一度クリックします。
 
-### AEMのAI アシスタントに関するフィードバックを共有する
+### AEM の AI アシスタントに関するフィードバックを共有する
 
-Adobeは、AI アシスタントのパフォーマンスと正確性を向上させるのに役立ちます。
+お客様のフィードバック内容は、アドビが AI アシスタントのパフォーマンスと精度を向上させるのに役立ちます。
 
-次のオプションを通じて、AEMのAI アシスタントとエクスペリエンスに関するフィードバックを共有します。
+AEM の AI アシスタントの利用体験について、次の方法でフィードバックを共有できます。
 
-![親指を上げる、親指を下げる、フラグのアイコン &#x200B;](/help/assets/assets-ai/ai-assistant-feedback-icons.png)
+![サムズアップ／サムズダウン、フラグアイコン](/help/assets/assets-ai/ai-assistant-feedback-icons.png)
 
 | Click | 説明 |
 | --- | --- |
-| ![&#x200B; アウトラインの上にサムズアップ アイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbUpOutline_18_N.svg) | 何がうまくいったかを示し、肯定的なフィードバックを共有します。 |
-| ![&#x200B; アウトラインの下の親指アイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbDownOutline_18_N.svg) | 改善策の提案： 毎日レビューされる、エクスペリエンスに関する具体的なコメントを追加します。 |
-| ![&#x200B; フラグアイコン &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Flag_18_N.svg) | AEMのAI アシスタントを使用して、顧客の懸念を報告したり、やり取りに関する詳細なフィードバックを提供したりできます。 |
+| ![アウトラインのサムズアップアイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbUpOutline_18_N.svg) | うまくいった内容を示し、肯定的なフィードバックを共有します。 |
+| ![アウトラインのサムズダウンアイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbDownOutline_18_N.svg) | 改善策を提案します。 ご利用体験について具体的なコメントを追加してください。これらは毎日確認されています。 |
+| ![フラグアイコン](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Flag_18_N.svg) | AEM の AI アシスタントとの対話について、懸念を報告したり、詳細なフィードバックを提供したりできます。 |
 
-## AEMのAI アシスタントに関するよくある質問 {#ai-faq}
+## AEM の AI アシスタントに関するよくある質問 {#ai-faq}
 
 ここでは、AI アシスタントに関するよくある質問に対する回答を紹介します。
 
-* **AEMのAI アシスタントがリアルタイムで提供する情報ですか？**\
-  いいえ。 AI アシスタントは、Adobe Experience Leagueのドキュメントからコンテンツを調達しています。 コンテンツの更新が応答に反映されるまでに時間がかかる場合があります。
-* **AEMのAI アシスタントでサポートされているAdobe アプリケーションはどれですか？**\
+* **AEM の AI アシスタントはリアルタイムの情報を提供しますか？**\
+  いいえ。 AI アシスタントは、Adobe Experience League のドキュメントを情報源としています。 コンテンツの更新が反映されるまでには、時間がかかる場合があります。
+* **AEM の AI アシスタントでサポートされているアドビのアプリケーションはどれですか？**\
   現在、AI アシスタントは、Sites、Assets、Dynamic Media、Cloud Manager、Formsなど、AEM as a Cloud Serviceでの製品知識の問い合わせをサポートしています。
-* **AEMのAI アシスタントの機能は何ですか？**\
+* **AEM の AI アシスタントの機能は何ですか？**\
   AEMのAI アシスタントは、Adobeの製品知識に関する質問に答えるために設計されています。
-* **AEMのAI アシスタントは、トレーニング データに個人情報を使用していますか？**\
-  いいえ。 AEMのAI アシスタントは、トレーニング目的で個人情報を使用しません。 AEMのAI アシスタントを使用して、氏名や連絡先情報など、自身や他者に関する個人情報を共有することは避けます。
+* **AEM の AI アシスタントは、トレーニングデータに個人情報を使用していますか？**\
+  いいえ。 AEM の AI アシスタントは、トレーニング目的で個人情報を使用しません。 AEM の AI アシスタントでは、氏名や連絡先情報など、自身や他者に関する個人情報を共有しないでください。
 
 <!--
 IS THE DOCUMENTATION BELOW STILL NEEDED? IF SO, GO AHEAD AND DELETE THE COMMENT TAGS!!
