@@ -292,7 +292,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)を定義し、タスク／ステップを特定のワークフローステージに割り当てることができます。
 
-この情報は、**インボックス**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)&#x200B;から作業項目の「[**ワークフロー情報**」タブをクリックしたときにワークフローの進行状況を表示するために使用されます。 既存のワークフローモデルを編集してステージを追加することができます。
+この情報は、**インボックス**&#x200B;[&#128279;](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)&#x200B;から作業項目の「**ワークフロー情報**」タブをクリックしたときにワークフローの進行状況を表示するために使用されます。 既存のワークフローモデルを編集してステージを追加することができます。
 
 ### ページをアクティベートプロセスステップ {#activate-page-process-step}
 
