@@ -5,26 +5,26 @@ exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 9b4dd5a4a137e529be8142fff1ddbfca889e64ae
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 100%
+source-wordcount: '1032'
+ht-degree: 95%
 
 ---
 
 # AEM Forms と Microsoft® Office 365 メールサーバープロトコルの統合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
-組織が安全なメールの要件に準拠できるように、AEM Forms では、Microsoft® Office 365 メールサーバープロトコルとの統合のために OAuth 2.0 をサポートしています。Azure Active Directory（Azure AD）OAuth 2.0 認証サービスを使用して、IMAP、POP、SMTP などの様々なプロトコルと接続し、Office 365 ユーザーのメールデータにアクセスできます。OAuth 2.0 サービスを介して認証するように Microsoft® Office 365 メールサーバープロトコルを設定する手順を以下に示します。
+組織が安全なメールの要件に準拠できるように、AEM Forms では、Microsoft® Office 365 メールサーバープロトコルとの統合のために OAuth 2.0 をサポートしています。 Azure Active Directory（Azure AD）OAuth 2.0 認証サービスを使用して、IMAP、POP、SMTP などの様々なプロトコルと接続し、Office 365 ユーザーのメールデータにアクセスできます。 OAuth 2.0 サービスを介して認証するように Microsoft® Office 365 メールサーバープロトコルを設定する手順を以下に示します。
 
-1. [https://portal.azure.com/](https://portal.azure.com/) にログインし、検索バーで **Azure Active Directory** を検索して、結果をクリックします。
-または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
+1. [https://portal.azure.com/](https://portal.azure.com/)にログインし、検索バーで&#x200B;**Azure Active Directory**&#x200B;を検索して、結果をクリックします。
+または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)に直接参照することもできます
 1. **追加**／**アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
    ![アプリの登録](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
 1. 必要に応じて情報を入力し、「**登録**」をクリックします。
-   ![サポートされているアカウント](/help/forms/using/assets/azure_suuportedaccountype.png)
-上記の場合、「**任意の組織ディレクトリ（任意の Azure AD ディレクトリ - マルチテナント）内のアカウントおよび個人用の Microsoft® アカウント（Skype、Xbox など）**」オプションが選択されています。
+   ![&#x200B; サポートされているアカウント](/help/forms/using/assets/azure_suuportedaccountype.png)
+上記の場合、**任意の組織ディレクトリ （任意のAzure AD ディレクトリ – マルチテナント）および個人のMicrosoft® アカウント （Skype、Xboxなど）**&#x200B;のアカウントが選択されます。
 
    >[!NOTE]
    >
@@ -32,7 +32,7 @@ ht-degree: 100%
    > * **個人用の Microsoft® アカウントのみ**&#x200B;のアプリケーションはサポートされていません。
    > * **マルチテナントおよび個人用の Microsoft® アカウント**&#x200B;アプリケーションを使用することをお勧めします。
 
-1. 次に、**証明書とシークレット**&#x200B;に移動し、「**新しいクライアントシークレット**」をクリックし、画面上の手順に従ってシークレットを作成します。このシークレットは後で使用するので、必ずメモしてください。
+1. 次に、**証明書とシークレット**&#x200B;に移動し、「**新しいクライアントシークレット**」をクリックし、画面上の手順に従ってシークレットを作成します。 このシークレットは後で使用するので、必ずメモしてください。
 
    ![秘密鍵](/help/forms/using/assets/azure_secretkey.png)
 
@@ -71,7 +71,7 @@ ht-degree: 100%
 
 1. `clientID` を `<client_id>` に、`redirect_uri` をアプリケーションのリダイレクト URI に置き換えた後で、次の URL をブラウザーで開きます。
 
-   ```https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login```
+   `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
    >[!NOTE]
    >
@@ -116,9 +116,9 @@ ht-degree: 100%
    > OAuth 2.0 認証サービスを有効にするには、「**SMTP サーバーが認証を必要とするかどうか (SMTP 認証)**」チェックボックスをオンにする必要があります。
 
 1. 「**OAuth 2.0 認証設定**」を `True` に設定します。
-1. **クライアント ID** と&#x200B;**クライアントシークレット**&#x200B;の値を Azure Portal からコピーします。
+1. Azure Portal から&#x200B;**クライアント ID** および&#x200B;**クライアント秘密鍵**&#x200B;の値をコピーします。
 1. 生成された&#x200B;**更新トークン**&#x200B;の値をコピーします。
-1. **Workbench** にログインし、**アクティビティピッカー**&#x200B;から **Email 1.0** を検索します。
+1. **ワークベンチ**&#x200B;にログインし、**アクティビティピッカー**&#x200B;から **Email 1.0** を検索します。
 1. Email 1.0 では、次の 3 つのオプションを使用できます。
    * **ドキュメントと共に送信**：1 つの添付ファイルを含むメールを送信します。
    * **添付ファイルのマップと共に送信**：複数の添付ファイルを含むメールを送信します。
@@ -126,7 +126,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >* Transport Security プロトコルの有効な値は、「blank」、「SSL」または「TLS」です。oAuth 認証サービスを有効にするために、**SMTP Transport Security** と **Receive Transport Security** の値を **TLS** に設定します。
+   >* Transport Security プロトコルの有効な値は、「blank」、「SSL」または「TLS」です。 oAuth 認証サービスを有効にするために、**SMTP Transport Security** と **Receive Transport Security** の値を **TLS** に設定します。
    >* メールエンドポイントを使用している場合、**POP3 プロトコル**&#x200B;は OAuth でサポートされていません。
 
    ![接続設定](/help/forms/using/assets/oauth_connectionsettings.png)
@@ -137,7 +137,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >必要に応じて、Workbench で特定のプロセスの Auth 2.0 認証設定を基本認証に変更できます。それには、「**接続設定**」タブの「**グローバル設定を使用**」で「**OAuth 2.0 認証**」の値を「False」に設定します。
+   >必要に応じて、ワークベンチで特定のプロセスの Auth 2.0 認証設定を基本認証に変更できます。 それには、「**接続設定**」タブの「**グローバル設定を使用**」で「**OAuth 2.0 認証**」の値を「False」に設定します。
 
 ## OAuth タスク通知を有効にする手順は次のとおりです。 {#enable_oauth_task}
 
@@ -169,6 +169,6 @@ ht-degree: 100%
 
 ## トラブルシューティング {#troubleshooting}
 
-* メールサービスが正しく動作していない場合は、上記の説明に従って `Refresh Token` を再生成します。新しい値がデプロイされるまで数分かかります。
+* メールサービスが正しく動作していない場合は、上記の説明に従って `Refresh Token` を再生成します。 新しい値がデプロイされるまで数分かかります。
 
-* Workbench を使用してメールエンドポイントでメールサーバーの詳細を設定する際にエラーが発生した場合は、Workbench の代わりに管理 UI を使用してエンドポイントを設定してみます。
+* ワークベンチを使用してメールエンドポイントでメールサーバーの詳細を設定する際にエラーが発生した場合は、 ワークベンチの代わりに管理 UI を使用してエンドポイントを設定してみます。

@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: b8be2ca14bdc6c6f21a2a33c893841a9aa201112
+source-git-commit: 4cdf38284c195122307926f759fa6c60c5cd62af
 workflow-type: tm+mt
-source-wordcount: '3746'
-ht-degree: 94%
+source-wordcount: '3790'
+ht-degree: 93%
 
 ---
 
@@ -470,7 +470,7 @@ Windows x86 の場合：
    <th><p><strong>PDF への変換でサポートされる形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> 最新バージョン</td>
+   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> （Continuous Track、最新バージョン）</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM</td>
   </tr>
 
@@ -492,7 +492,7 @@ OpenOffice 4.1.15 </td>
 >[!NOTE]
 >
 >* PDF Generator は、サポート対象のオペレーティングシステムとアプリケーションの英語版、フランス語版、ドイツ語版、日本語版のみをサポートしています。
->* PDF Generatorでは、変換を実行するには、32 ビット版のAdobe Acrobat Pro DCとMicrosoft® Office Professional Plusが必要です。
+>* PDF Generatorでは、Acrobatを使用したネイティブコンバージョン用のAdobe Acrobat Pro DC （Continuous Track、最新バージョン）のサポート対象の32 ビット Windows ビルドと、Office ベースのコンバージョン用の32 ビット Microsoft® Office Professional Plus （Microsoft® Windows）が必要です。 Acrobat Pro DCのインストールと機能制限ライセンス （FRL）については、「[Adobe Acrobat Pro DCのインストール」を参照してください。](../forms/using/install-configure-document-services.md#install-adobe-acrobat-pro-dc)
 >* Microsoft® Office Professional Plus のインストールでは、リテールまたは MAK／KMS／AD ベースのボリュームライセンスを使用する場合があります。
 >* 指定した期間内にKMS ホストを見つけることができないボリュームライセンスのインストールなど、何らかの理由でMicrosoft® Office インストールがディアクティベートまたはライセンス解除された場合、インストールが再ライセンス認証されて再アクティブ化されるまで、コンバージョンが失敗する可能性があります。
 >* PDF Generator は Microsoft® Office 365 をサポートしていません。

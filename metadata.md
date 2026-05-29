@@ -7,13 +7,14 @@ feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sit
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+usetq: true
 landing-page-name: experience-manager-65
 landing-page-breadcrumb-title: AEM 6.5
 type: Documentation
 version: Experience Manager 6.5
 index: true
 recommendations: noDisplay
-source-git-commit: 02b84a07131b8d754f20e8c44daa70fb2eff9b5c
+source-git-commit: a8f9d8f70e60131ecfa51bafe3f6f5eadfb57702
 workflow-type: tm+mt
 source-wordcount: 152
 ht-degree: 4%
