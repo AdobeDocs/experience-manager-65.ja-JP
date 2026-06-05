@@ -144,7 +144,7 @@ window.guideBridge.connect(function () {
 https://publish.example.com/content/forms/af/my-form/jcr:content/guideContainer.af.submit.jsp
 ```
 
-AEM サーバーとweb ページが異なるドメイン上にある場合は、AEM パブリッシュインスタンスでCORSも設定する必要があります。 「[ AEM Formsでクロスドメインサイトにアダプティブフォームを提供する方法](#enable-aem-forms-to-serve-adaptive-forms-to-a-cross-domain-site-cross-site)」の節に記載されている手順を実行します。
+AEM サーバーとweb ページが異なるドメイン上にある場合は、AEM パブリッシュインスタンスでCORSも設定する必要があります。 「[&#x200B; AEM Formsでクロスドメインサイトにアダプティブフォームを提供する方法](#enable-aem-forms-to-serve-adaptive-forms-to-a-cross-domain-site-cross-site)」の節に記載されている手順を実行します。
 
 ## サンプルトポロジ {#sample-topology}
 
