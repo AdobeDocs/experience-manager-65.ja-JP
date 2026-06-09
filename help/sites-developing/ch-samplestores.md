@@ -9,16 +9,16 @@ exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: ab939c3928068a0836674db6207d9774d6033e79
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 100%
+source-wordcount: '475'
+ht-degree: 96%
 
 ---
 
 # ContextHub ストア候補のサンプル{#sample-contexthub-store-candidates}
 
-ContextHub には、ソリューションで利用できるサンプルストア候補がいくつか用意されています。各サンプルでは次の情報が提供されます。
+ContextHub には、ソリューションで利用できるサンプルストア候補がいくつか用意されています。 各サンプルでは次の情報が提供されます。
 
 * 学習目的で開くことのできるソースコードの場所。
 * ストア候補から作成するストアの設定方法。
@@ -26,11 +26,11 @@ ContextHub には、ソリューションで利用できるサンプルストア
 
 >[!WARNING]
 >
->サンプルストア候補は、プロジェクト専用の設定を構築する際に役立つリファレンス設定として提供されています。直接使用しないでください。
+>サンプルストア候補は、プロジェクト専用の設定を構築する際に役立つリファレンス設定として提供されています。 直接使用しないでください。
 
 ## aem.segmentation サンプルストア候補 {#aem-segmentation-sample-store-candidate}
 
-解決済みおよび未解決の ContextHub セグメント用のストア。ContextHub SegmentManager からセグメントを自動的に取得します.
+解決済みおよび未解決の ContextHub セグメント用のストア。 ContextHub SegmentManager からセグメントを自動的に取得します.
 
 ### ソースの場所 {#source-location-segmentation}
 
@@ -42,7 +42,7 @@ aem.segmentation ストア候補は、[`ContextHub.Store.PersistedJSONPStore`](/
 
 ### 設定 {#configuration-segmentation}
 
-aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
+aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。 デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
 
 ```xml
 {
@@ -110,7 +110,7 @@ contexthub.geolocation ストア候補は、[`ContextHub.Store.PersistedJSONPSto
 
 >[!NOTE]
 >
->Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用して行う必要があります。そのため、AEM では、AEM が https 経由で実行されていても、ジオロケーション API 呼び出しに https の使用を強制します。その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
+>Chrome 50.x で導入されたセキュリティポリシーでは、すべてのジオロケーション関連呼び出しは、安全な接続を使用して行う必要があります。 したがって、AEMがhttps経由でも実行されている場合、AEMはgeolocation API呼び出しに対してhttpsを強制的に使用します。 その他の場合は、同一オリジンポリシーに準拠するために、http が使用されます。 Chrome での変更について詳しくは、[Google のこのブログ投稿](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)を参照してください。
 
 ## contexthub.surferinfo サンプルストア候補 {#contexthub-surferinfo-sample-store-candidate}
 
@@ -193,7 +193,7 @@ contexthub.geolocation ストア候補は、[`ContextHub.Store.PersistedStore`](
 
 ### 設定 {#configuration-emulators}
 
-デフォルトの設定には、様々なデバイスに関する情報を格納する、`defaultEmulators` という配列が含まれます。ストアを作成する場合、次の例で説明する形式を使用して、必要に応じて詳細設定プロパティで様々なデバイスプロファイルを指定します。
+デフォルトの設定には、様々なデバイスに関する情報を格納する、`defaultEmulators` という配列が含まれます。 ストアを作成する場合、次の例で説明する形式を使用して、必要に応じて詳細設定プロパティで様々なデバイスプロファイルを指定します。
 
 ```xml
 {
@@ -326,7 +326,7 @@ contexthub.datetime ストア候補は、[`ContextHub.Store.PersistedJSONPStore`
 
 ### 設定 {#configuration-profile}
 
-次のデフォルトの設定を使用します。この設定は変更しないでください。
+次のデフォルトの設定を使用します。 この設定は変更しないでください。
 
 ```xml
 {
@@ -351,3 +351,4 @@ contexthub.datetime ストア候補は、[`ContextHub.Store.PersistedJSONPStore`
    "authorizableId":"anonymous"
 }
 ```
+

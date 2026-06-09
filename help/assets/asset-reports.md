@@ -7,10 +7,10 @@ feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+source-git-commit: 555cb326a4a554d98904cf1a2b27b609ba67c806
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 99%
+source-wordcount: '1173'
+ht-degree: 92%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 99%
 
    「**[!UICONTROL リンク共有]**」レポートには、[!DNL Assets] 内から外部ユーザーと共有されているアセットへの URL が表示されます。 アセットを共有したユーザーの電子メール ID、アセットを共有しているユーザーの電子メール ID、共有の日付、リンクの有効期限なども表示されます。 列をカスタマイズすることはできません。
 
-   「**[!UICONTROL リンク共有]**」レポートでは、`/var/dam/share` に表示される共有 URL が公開されるだけです。そのため、サブフォルダーやレンディションに関するオプションは用意されていません。
+   **[!UICONTROL リンク共有]** レポートには、`/var/dam/share`の下に表示される共有URLを公開するだけなので、サブフォルダーとレンディションのオプションは含まれません。
 
    ![リンク共有レポートの詳細ページ](assets/link_share.png)
 
@@ -109,7 +109,7 @@ ht-degree: 99%
 
    ![レポート列の選択または選択のキャンセル](assets/configure_columns.png)
 
-   カスタムの列名やプロパティパスを表示するには、CRX のノード下のアセットバイナリのプロパティを設定します。`jcr:content` または、プロパティパスピッカーを使用してパスを追加します。
+   カスタムの列名やプロパティパスを表示するには、CRX のノード下のアセットバイナリのプロパティを設定します。`jcr:content` または、プロパティパスピッカーから追加します。
 
    ![レポート列の選択または選択のキャンセル](assets/custom_columns.png)
 
@@ -164,8 +164,8 @@ ht-degree: 99%
 
 ## トラブルシューティング情報、ヒント、制限事項 {#best-practices-and-limitations}
 
-* 一部のレポートまたはレポート内の番号が利用できない場合、または期待どおりでない場合は、[!UICONTROL &#x200B; Day CQ DAM Event Recorder] サービスが有効になっていることを確認してください。
+* レポート内の一部のレポートまたは数値が利用できない、または期待どおりに表示されない場合は、[!UICONTROL Day CQ DAM Event Recorder] サービスが有効になっていることを確認してください。
 
 * 不要になったレポートを削除します。 DAM Report Purge サービスの設定オプションを使用して、レポートをパージする条件を設定します。
 
-* [!DNL Dynamic Media] を使用していて、ディスク使用量レポートが生成されない場合は、すべてのアセットが正しく処理されていることを確認します。 問題を解決するには、アセットを再処理してから、レポートを再度生成します。
+* ディスク使用状況レポートが生成されず、[!DNL Dynamic Media]を使用している場合は、すべてのアセットが正しく処理されていることを確認してください。 問題を解決するには、アセットを再処理してから、レポートを再度生成します。
