@@ -10,10 +10,10 @@ exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: 36265810f0284acfd13dfd01d89c250d9923cd45
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 100%
+source-wordcount: '1491'
+ht-degree: 94%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 100%
 
 Adobe Analytics で AEM ページからの web データを追跡するには、Adobe Analytics Cloud サービス設定と Adobe Analytics フレームワークを作成します。
 
-* **Adobe Analytics 設定：** Adobe Analytics アカウントに関する情報。Adobe Analytics 設定を使用して、AEM を Adobe Analytics に接続できます。使用するアカウントごとに Adobe Analytics 設定を作成します。
-* **Adobe Analytics フレームワーク：** Adobe Analytics レポートスイートプロパティと CQ 変数の間にある一連のマッピングです。フレームワークを使用して、web サイトデータを Adobe Analytics レポートにどのように入力するかを設定します。フレームワークは Adobe Analytics 設定と関連付けられています。設定ごとに複数のフレームワークを作成できます。
+* **Adobe Analytics 設定：** Adobe Analytics アカウントに関する情報。 Adobe Analytics 設定を使用して、AEM を Adobe Analytics に接続できます。 使用するアカウントごとに Adobe Analytics 設定を作成します。
+* **Adobe Analytics フレームワーク：** Adobe Analytics レポートスイートプロパティと CQ 変数の間にある一連のマッピングです。 フレームワークを使用して、web サイトデータを Adobe Analytics レポートにどのように入力するかを設定します。 フレームワークは Adobe Analytics 設定と関連付けられています。 設定ごとに複数のフレームワークを作成できます。
 
-web ページをフレームワークに関連付けると、フレームワークがそのページおよび子ページの追跡を実行します。ページビューは、Adobe Analytics から取得され、Sites コンソールに表示されます。
+web ページをフレームワークに関連付けると、フレームワークがそのページおよび子ページの追跡を実行します。 ページビューは、Adobe Analytics から取得され、Sites コンソールに表示されます。
 
 ## 前提条件 {#prerequisites}
 
@@ -39,19 +39,19 @@ Adobe Analytics アカウントには次の要件があります。
 
 >[!CAUTION]
 >
->（Adobe Analytics 内の）**管理者**&#x200B;権限を提供するだけでは、ユーザーが AEM から Adobe Analytics に接続するのに十分ではありません。また、アカウントには **web サービスへのアクセス**&#x200B;権限も必要です。
+>（Adobe Analytics 内の）**管理者**&#x200B;権限を提供するだけでは、ユーザーが AEM から Adobe Analytics に接続するのに十分ではありません。 また、アカウントには **web サービスへのアクセス**&#x200B;権限も必要です。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-先に進む前に、お使いの資格情報で Adobe Analytics にログインできることを確認してください。次のいずれかの方法を使用します。
+続行する前に、次のいずれかの方法で資格情報を使用してAdobe Analyticsにログインできることを確認してください。
 
 * [Adobe Experience Cloud へのログイン](https://experience.adobe.com/#/@login/home)
 
-* [Adobe Analytics へのログイン](https://sc.omniture.com/login/)
+* [Adobe Analytics ログイン](https://sc.omniture.com/login/)
 
 ### Adobe Analytics データセンターを使用するように AEM を設定 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=ja)では、Adobe Analytics レポートスイートに関連付けられたデータを収集、処理および格納します。Adobe Analytics レポートスイートをホストしているデータセンターを使用するように、AEM を設定します。データセンターに関しては、契約に記載されています。この情報については、組織の管理者にお問い合わせください。
+Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/reporting-interface/overview-data-collection.html?lang=ja)では、Adobe Analytics レポートスイートに関連付けられたデータを収集、処理および格納します。 Adobe Analytics レポートスイートをホストしているデータセンターを使用するように、AEM を設定します。 データセンターに関しては、契約に記載されています。 この情報については、組織の管理者にお問い合わせください。
 
 必要に応じて、`https://api.omniture.com/` を使用して正しいデータセンターにルーティングします。
 
@@ -63,11 +63,11 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 | シンガポール | `https://api4.omniture.com/` |
 | オレゴン | `https://api5.omniture.com/` |
 
-[Web コンソールを使用して OSGi バンドルを設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)します（**Adobe AEM Analytics HTTP Client**）。**データセンター URL** を追加してください。このデータセンターでは、AEM ページがデータを収集するレポートスイートをホスティングします。
+[Web コンソールを使用して OSGi バンドルを設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)します（**Adobe AEM Analytics HTTP Client**）。 **データセンター URL** を追加してください。このデータセンターでは、AEM ページがデータを収集するレポートスイートをホスティングします。
 
 ![aa-07](assets/aa-07.png)
 
-1. Web コンソールを Web ブラウザーで開きます。([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
+1. Web コンソールを Web ブラウザーで開きます。 （[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)）
 1. コンソールにアクセスするには、資格情報を入力します。
 
    >[!NOTE]
@@ -108,7 +108,7 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 >
 >サーバーインスタンスのタイプを選択しても、Adobe Analytics への呼び出しは制限されません。どの呼び出しが RSID を含むかを制御するだけです。
 >
->例えば、*diiweretail* レポートスイートを使用するようにフレームワークが設定されていて、選択したサーバーインスタンスがオーサーである場合を考えます。このフレームワークでページを公開すると、引き続き Adobe Analytics に対して呼び出しが行われますが、その呼び出しに RSID は含まれません。オーサーインスタンスからの呼び出しにのみ RSID が含まれます。
+>例えば、*diiweretail* レポートスイートを使用するようにフレームワークが設定されていて、選択したサーバーインスタンスがオーサーである場合を考えます。 フレームワークとともにページが公開されても、呼び出しはAdobe Analyticsに対して行われます。 ただし、これらの呼び出しにはRSIDは含まれていません。 オーサーインスタンスからの呼び出しにのみ RSID が含まれます。
 
 1. **ナビゲーション**&#x200B;を使用して、「**ツール**」／「**クラウドサービス**」から「**従来のクラウドサービス**」を選択します。
 1. スクロールして「**Adobe Analytics**」を選択し、「**設定を表示**」を選択します。
@@ -117,14 +117,14 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 1. **フレームワークを作成**&#x200B;ダイアログで、以下を行います。
 
    * 「**タイトル**」を指定します。
-   * オプションで、リポジトリにフレームワークの詳細を保存するノードの&#x200B;**名前**&#x200B;を指定できます。
+   * オプションとして、フレームワークの詳細をリポジトリに保存するノードに&#x200B;**Name**&#x200B;を指定できます。
    * 「**Adobe Analytics フレームワーク**」を選択します。
 
    「**作成**」をクリックします。
 
    フレームワークが編集用に開きます。
 
-1. サイドポッド（メインパネルの右側）の「**レポートスイート**」セクションで、「**項目を追加**」をクリックします。次に、ドロップダウンを使用して、フレームワークでやり取りするレポートスイート ID（例えば、`geometrixxauth`）を選択します。
+1. サイドポッド（メインパネルの右側）の「**レポートスイート**」セクションで、「**項目を追加**」をクリックします。 次に、ドロップダウンを使用して、フレームワークでやり取りするレポートスイート ID（例えば、`geometrixxauth`）を選択します。
 
    >[!NOTE]
    >
@@ -144,7 +144,7 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 >
 >データの送信先と送信方法を判断するための設定なので、*これらの設定には手を加えない*&#x200B;でください。代わりに Adobe Analytics 担当者に設定してもらってください。
 
-まず、パネルを開きます。**サーバー**&#x200B;の横の下向き矢印を押します。
+まず、パネルを開きます。 **サーバー**&#x200B;の横の下向き矢印を押します。
 
 ![server_001](assets/server_001.png)
 
@@ -168,17 +168,17 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 ## Adobe Analytics フレームワークへのページの関連付け {#associating-a-page-with-a-adobe-analytics-framework}
 
-ページを Adobe Analytics フレームワークに関連付けると、ページの読み込み時にページが Adobe Analytics にデータを送信します。ページに設定される変数は、フレームワークの Adobe Analytics 変数からマッピングされ取得されます。例えば、ページビュー数は Adobe Analytics から取得されます。
+ページを Adobe Analytics フレームワークに関連付けると、ページの読み込み時にページが Adobe Analytics にデータを送信します。 ページに設定される変数は、フレームワークの Adobe Analytics 変数からマッピングされ取得されます。 例えば、ページビュー数は Adobe Analytics から取得されます。
 
-ページの子は、フレームワークとの関連付けを継承します。例えば、サイトのルートページをフレームワークに関連付けると、サイトのすべてのページがそのフレームワークに関連付けられます。
+ページの子は、フレームワークとの関連付けを継承します。 例えば、サイトのルートページをフレームワークに関連付けると、サイトのすべてのページがそのフレームワークに関連付けられます。
 
 1. **Sites** コンソールから、トラッキングを設定したいページを選択します。
 1. コンソールから直接、またはページエディターから&#x200B;**[ページのプロパティ](/help/sites-authoring/editing-page-properties.md)**&#x200B;を開きます。
 1. 「クラウドサービス」タブを開きます。
 
-1. **設定を追加**&#x200B;ドロップダウンを使用して、利用可能なオプションから **Adobe Analytics** を選択します。継承が設定されている場合、セレクターが使用可能になる前に無効にします。
+1. **設定を追加**&#x200B;ドロップダウンを使用して、利用可能なオプションから **Adobe Analytics** を選択します。 継承が設定されている場合、セレクターが使用可能になる前に無効にします。
 
-1. **Adobe Analytics** のドロップダウンセレクターが、使用可能なオプションに追加されます。必要なフレームワーク設定を選択します。
+1. **Adobe Analytics** のドロップダウンセレクターが、使用可能なオプションに追加されます。 必要なフレームワーク設定を選択します。
 
 1. 「**保存して閉じる**」を選択します。
 1. ページおよび接続されている設定やファイルをアクティベートするには、ページを&#x200B;**[公開](/help/sites-authoring/publishing-pages.md)**&#x200B;します。
@@ -196,23 +196,23 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 次のように **Adobe AEM Analytics Report Sling Importer** サービスの適切なインスタンスを設定します。
 
-* **取得の試行**：
-キューに格納されたレポートを取得しようとした回数。
-デフォルトは、`6` です。
+* **試行を取得**:
+キューに入れたレポートの取得の試行回数。
+デフォルトは`6`です。
 
-* **取得の遅延**：
-キューに格納されたレポートを取得しようとする間隔のミリ秒数。
-デフォルトは、`10000` です。ミリ秒単位なので、10 秒に相当します。
+* **フェッチ遅延**:
+キューに入れたレポートの取得を試行するまでのミリ秒数。
+デフォルトは`10000`です。ミリ秒単位なので、10秒に相当します。
 
-* **取得の頻度**：
-Analytics レポートを取得する頻度を決定する `cron` 式。
-デフォルトは、`0 0 0/12 * * ?` です。これは、1 時間ごとの 12 個の取得に相当します。
+* **頻度を取得**:
+Analytics レポートを取得する頻度を決定する`cron`式。
+デフォルトは`0 0 0/12 * * ?`です。これは、1時間ごとに12回のフェッチに対応します。
 
 この OSGi サービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の osgiConfig ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)（サービス PID は `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）を使用して設定できます。
 
 ## Adobe Analytics 設定やフレームワークの編集 {#editing-adobe-analytics-configurations-and-or-frameworks}
 
-Adobe Analytics 設定またはフレームワークを作成する場合と同様に、（従来の）**クラウドサービス**&#x200B;画面に移動します。「**設定を表示**」を選択して、更新する特定の設定へのリンクをクリックします。
+Adobe Analytics 設定またはフレームワークを作成する場合と同様に、（従来の）**クラウドサービス**&#x200B;画面に移動します。 「**設定を表示**」を選択して、更新する特定の設定へのリンクをクリックします。
 
 Adobe Analytics 設定を編集する場合は、設定ページ自体で「**編集**」を押して、**コンポーネントを編集**&#x200B;ダイアログを開きます。
 
