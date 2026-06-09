@@ -231,7 +231,7 @@ ht-degree: 96%
 
 * **編集**
 
-  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)[コンポーネントのコンテンツを編集](#edit-content)できます。 多くの場合、ツールバーが用意されています。
+  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md) [コンポーネントのコンテンツを編集](#edit-content)できます。 多くの場合、ツールバーが用意されています。
 
   ![編集](do-not-localize/screen_shot_2018-03-22at112936.png)
 

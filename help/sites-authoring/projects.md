@@ -162,7 +162,7 @@ ht-degree: 83%
 
 ![ランディングページタイル](assets/project-tile-landing.png)
 
-このワークフローについては、ドキュメント [ ランディングページの作成ワークフロー](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)で説明しています。
+このワークフローについては、ドキュメント [&#x200B; ランディングページの作成ワークフロー](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)で説明しています。
 
 ### メール {#emails}
 
