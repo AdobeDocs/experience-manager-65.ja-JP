@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+source-git-commit: 8ad159ce65fd11c6d1d75a2bc75061f6996f173e
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 92%
+source-wordcount: '2144'
+ht-degree: 91%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 92%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.24.0 |
+| バージョン | 6.5.25.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2025年12月4日（PT） |
+| 日付 | 2026年6月10日（PT） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -122,14 +122,14 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
      >
      >* **ConfigurationManager.bat** ファイルの更新または置き換えを行うと、.lax ファイルを手動で更新する必要がなくなります。
 
-1. **[UNIX ベース専用]：**&#x200B;**Configuration Manager を起動**&#x200B;チェックボックスは、デフォルトで選択されています。 **[!UICONTROL 完了]**&#x200B;をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、**Configuration Manager を起動**&#x200B;オプションの選択を解除してから、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
+1. **[UNIX ベース専用]：****Configuration Manager を起動**&#x200B;チェックボックスは、デフォルトで選択されています。 **[!UICONTROL 完了]**&#x200B;をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、**Configuration Manager を起動**&#x200B;オプションの選択を解除してから、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
    * [JBoss用AEM フォームのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [WebSphere用AEM Formsのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
    * [AEM Forms for WebLogicのインストールとデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
-   * [JBoss® クラスター用AEM フォームのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
+   * [JBoss® クラスター用AEM フォームのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
    * [WebSphere® クラスター用AEM Formsのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [WebLogic クラスター用AEM Formsのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
@@ -176,8 +176,8 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 [!DNL ExperienceManager] サービスパックの自動インストールに使用できる方法は 2 つあります。<!--       UPDATE FOR EACH NEW RELEASE -->
 
-* サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。
-パッケージが自動的にインストールされます。
+* サーバーがオンラインで利用できるようになったら、パッケージを`../crx-quickstart/install` フォルダーに配置します。
+パッケージは自動的にインストールされます。
 
 * [パッケージマネージャーの HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) を使用します。 ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
@@ -256,7 +256,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   >[!NOTE]
   >
-  >Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+  >Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
   **インストールの検証**
 

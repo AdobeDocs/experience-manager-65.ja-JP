@@ -5,10 +5,10 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: cf6705707554894deeb0315d3e9c7252af211e54
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 87%
+source-wordcount: '666'
+ht-degree: 84%
 
 ---
 
@@ -96,7 +96,10 @@ TransactionRecord
     transactionOperationType='...', 
     transactionCount=..., 
     elapsedTime=..., 
-    transactionDate=...
+    transactionDate=...,
+    formName='...',
+    formPath='...',
+    formTitle='...'
 }
 ```
 
@@ -108,6 +111,15 @@ TransactionRecord
 * **transactionCount**：トランザクションの合計数。
 * **elapsedTime**：呼び出しの開始から応答の受信までの時間。
 * **transactionDate**：サービスがいつ呼び出されたかを示すタイムスタンプ。
+* **formName**、**formPath**、**formTitle**：フォームコンテキストが使用可能な場合のフォームレベルの詳細（AEM Forms サービスパック 6.5.25.0以降）。 該当しない場合は省略します。
+
+<a id="form-level-details-transaction-log-jee"></a>
+
+>[!NOTE]
+>
+> フォームレベルの詳細がある場合の例：
+>
+> `[2026-05-14 14:23:25] [INFO] TransactionRecord{service='FormsService', operation='render', internalService='FormsService', internalOperation='render', transactionOperationType='RENDER', transactionCount=1, elapsedTime=1250, transactionDate=Wed May 14 14:23:23 UTC 2026, formName='Loan.xdp', formPath='Applications/FormsApplication/1.0/FormsFolder/Loan.xdp', formTitle='Loan Application'}`
 
 **サンプルトランザクションログ**:
 
