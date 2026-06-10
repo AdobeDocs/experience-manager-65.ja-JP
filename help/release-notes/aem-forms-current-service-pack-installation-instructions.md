@@ -129,7 +129,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
    * [JBoss用AEM フォームのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [WebSphere用AEM Formsのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
    * [AEM Forms for WebLogicのインストールとデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
-   * [JBoss® クラスター用AEM フォームのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
+   * [JBoss® クラスター用AEM フォームのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
    * [WebSphere® クラスター用AEM Formsのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [WebLogic クラスター用AEM Formsのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
