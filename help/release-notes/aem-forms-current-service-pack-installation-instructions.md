@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+source-git-commit: 8ad159ce65fd11c6d1d75a2bc75061f6996f173e
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 92%
+source-wordcount: '2144'
+ht-degree: 91%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 92%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.24.0 |
+| バージョン | 6.5.25.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2025年12月4日（PT） |
+| 日付 | 2026年6月10日（PT） |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -176,8 +176,8 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 [!DNL ExperienceManager] サービスパックの自動インストールに使用できる方法は 2 つあります。<!--       UPDATE FOR EACH NEW RELEASE -->
 
-* サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。
-パッケージが自動的にインストールされます。
+* サーバーがオンラインで利用できるようになったら、パッケージを`../crx-quickstart/install` フォルダーに配置します。
+パッケージは自動的にインストールされます。
 
 * [パッケージマネージャーの HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) を使用します。 ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
@@ -256,7 +256,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   >[!NOTE]
   >
-  >Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+  >Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
   **インストールの検証**
 
