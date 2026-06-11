@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 8f8aed4c653cc286b32c83a38382f2b10370cdc8
+source-git-commit: 652162941dd716ae797ce50709e91757dad99054
 workflow-type: tm+mt
-source-wordcount: '8275'
+source-wordcount: '8272'
 ht-degree: 96%
 
 ---
@@ -587,9 +587,8 @@ ht-degree: 96%
          + [JBoss Turnkey向けJEE上のAEM Formsへのアップグレード](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
          + [WebSphere向けJEE上のAdobe Experience Manager Formsへのアップグレード](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
          + [WebLogic用JEE上のAdobe Experience Manager Formsへのアップグレード](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_jp)
-         + ナレッジベース記事 {#aem-forms-jee-knowledge-base-articles}
-            + [JEE上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードする](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)
-            + [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします。](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)
+         + [JEE上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードする](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)
+         + [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします。](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)
    + AEM Forms の管理 {#manage-administer-aem-forms}
       + [OSGi 上の AEM Forms のグループと権限](/help/forms/using/forms-groups-privileges-tasks.md)
       + [フォームを分類するための新しいフォルダーの作成](/help/forms/using/creating-new-folders-categorize-forms.md)

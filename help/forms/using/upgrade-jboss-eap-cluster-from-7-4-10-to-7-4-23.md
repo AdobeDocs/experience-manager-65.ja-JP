@@ -1,11 +1,15 @@
 ---
 title: JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします。
 description: JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードする追加の手順。
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+topic-tags: installing
+geptopics: SG_AEMFORMS/categories/jee
 exl-id: 2c9e7f41-a8d6-4b03-8e5c-1a4f6d9e0b72
 solution: Experience Manager, Experience Manager Forms
-feature: AEM Forms on JEE
+feature: AEM Forms Upgrade,AEM Forms on JEE
 role: User, Developer
-source-git-commit: dffa92539a8205387d21d3873ab9424508182f19
+source-git-commit: 652162941dd716ae797ce50709e91757dad99054
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 1%
