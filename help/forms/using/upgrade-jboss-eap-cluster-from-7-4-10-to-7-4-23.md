@@ -27,7 +27,7 @@ JEE上のAEM Formsのバージョン 7.4.10から7.4.23にJBoss EAP クラスタ
 
 ## 前提条件 {#prerequisites}
 
-既存のインストールから新しい設定ファイルへの接続URL、ユーザー名、パスワードのコピーを含む、JEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードする[すべての手順を完了します。
+既存のインストールから新しい設定ファイルへの接続URL、ユーザー名、パスワードのコピーを含む、JEE[&#128279;](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードするすべての手順を完了します。
 
 ## 手順 {#steps}
 
