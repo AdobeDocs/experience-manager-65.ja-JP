@@ -1,11 +1,15 @@
 ---
 title: JEE上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードする
 description: JEE スタンドアロン環境のAEM FormsでJBoss EAPを7.4.10から7.4.23にアップグレードする手順。
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+topic-tags: installing
+geptopics: SG_AEMFORMS/categories/jee
 exl-id: 8f4c2a91-6b3d-4e7f-9c12-5d8e1f0a2b34
 solution: Experience Manager, Experience Manager Forms
-feature: AEM Forms on JEE
+feature: AEM Forms Upgrade,AEM Forms on JEE
 role: User, Developer
-source-git-commit: 8f8aed4c653cc286b32c83a38382f2b10370cdc8
+source-git-commit: 652162941dd716ae797ce50709e91757dad99054
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 4%
@@ -27,7 +31,7 @@ JEE上のAEM Forms スタンドアロン環境で、JBoss EAPをバージョン 
 
 >[!NOTE]
 >
-> JBoss クラスター環境をアップグレードする場合は、まず最初にこの記事の手順を実行し、[JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレード &#x200B;](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)の追加手順を実行します。
+> JBoss クラスター環境をアップグレードする場合は、まず最初にこの記事の手順を実行し、[JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレード ](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)の追加手順を実行します。
 
 ## 前提条件 {#prerequisites}
 
