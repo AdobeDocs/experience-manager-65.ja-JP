@@ -9,10 +9,10 @@ exl-id: 8f4c2a91-6b3d-4e7f-9c12-5d8e1f0a2b34
 solution: Experience Manager, Experience Manager Forms
 feature: AEM Forms Upgrade,AEM Forms on JEE
 role: User, Developer
-source-git-commit: 652162941dd716ae797ce50709e91757dad99054
+source-git-commit: cb190feb41152d40c36ea2f152ee04cc8c8eba1d
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 4%
+source-wordcount: '396'
+ht-degree: 2%
 
 ---
 
@@ -29,15 +29,11 @@ JEE上のAEM Forms スタンドアロン環境で、JBoss EAPをバージョン 
 * スタンドアロン環境でJBoss EAP 7.4.10上で動作するJEE上のAEM Forms
 * WindowsおよびLinuxでのターンキーおよび部分的なターンキーインストールモード
 
->[!NOTE]
->
-> JBoss クラスター環境をアップグレードする場合は、まず最初にこの記事の手順を実行し、[JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレード &#x200B;](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)の追加手順を実行します。
-
 ## 前提条件 {#prerequisites}
 
 始める前に：
 
-* [Adobe Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aem.html)からJBoss 7.4.23 パッケージをダウンロードします。
+* [Adobe Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fjboss-eap-7.4.23-1.0.17.zip)からJBoss 7.4.23 パッケージをダウンロードします。
 * ターゲット環境への管理アクセス権があることを確認します。
 * 既存のJBoss インストールの完全なバックアップを作成します。
 
