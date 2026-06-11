@@ -9,10 +9,10 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 518481c75e22655bce0b104fe2eb5614f1d8a3b9
+source-git-commit: fddc5a648d8945e84283ce87725e64da57f1daed
 workflow-type: tm+mt
-source-wordcount: '3920'
-ht-degree: 86%
+source-wordcount: '4096'
+ht-degree: 82%
 
 ---
 
@@ -923,7 +923,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 | Microsoft® Office 2024 | | Microsoft® Office 2021 |
-| Adobe Acrobat Pro DC （Continuous Track、最新バージョン）のPDF Generatorおよび関連ドキュメントサービス | Adobe Acrobat 2020 （クラシックトラック） |  |
+| Adobe Acrobat Pro DC （Continuous Track、最新バージョン）のPDF Generatorおよび関連ドキュメントサービス | Adobe Acrobat 2020 （クラシックトラック） | JBoss® Enterprise Application Platform （EAP） 7.4.10 |
 
 ### リリース 6.5.23.0（2025年6月6日（PT））
 
@@ -934,6 +934,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | Microsoft® SQL Server 2022 | CentOS 7 | Microsoft® SQL Server 2019 |
 | Microsoft® SQL Server JDBC ドライバー 12.10.0 | Red Hat® Enterprise Linux® 7（Kernel 4.x）（64 ビット版） | Microsoft® SQL Server JDBC ドライバー 8.2 |
 | Red Hat® Enterprise Linux® 9 （Kernel 5.x）（64 ビット） | | Red Hat® Enterprise Linux® 8（Kernel 4.x）（64 ビット版） |
+| Adobe Acrobat 2020 （クラシックトラック） for PDF Generatorおよび関連ドキュメントサービス | | Microsoft® Office 2019 |
 
 ### リリース 6.5.22.0 （2024年11月29日）
 
@@ -946,7 +947,9 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
-| Microsoft® Office 2021 |  |  |
+| Microsoft® Office 2021 | Microsoft® Office Visio 2019 |  |
+|  | Microsoft® Publisher 2019 |  |
+|  | Microsoft® プロジェクト 2019 |  |
 
 ### リリース 6.5.19.1 （2023年12月15日）
 
@@ -963,6 +966,21 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 | MongoDB Enterprise 4.4 | Windows Server 2016（64 ビット版） | Microsoft® Windows Server 2019（64 ビット版） |
+| Oracle WebLogic Server 14c | MongoDB Enterprise 4.0 | Microsoft® Active Directory 2016 |
+| My SQL JDBC コネクタ 8 | Oracle Database 12c リリース 2 （12.2.0.1.0） |  |
+| Active Directory 2022 | MySQL 5.7.35 |  |
+| Microsoft® Windows Server 2022（64 ビット版） | Microsoft® SQL Server 2016 |  |
+|  | JBoss® EAP 7.1.4 |  |
+|  | My SQL JDBC コネクタ 5.1.44 |  |
+|  | Microsoft® SQL Server JDBC ドライバー6.2.1.0 |  |
+|  | Microsoft® SQL Server JDBC ドライバー6.2.2.0 |  |
+|  | Microsoft® JDBC Driver 8.x for SQL Server |  |
+|  | Microsoft® SharePoint 2016 |  |
+|  | Microsoft® Office 2016 |  |
+|  | Microsoft® Office Visio 2016 |  |
+|  | Microsoft® Publisher 2016 |  |
+|  | Microsoft® プロジェクト 2016 |  |
+|  | OpenOffice 4.1.2 |  |
 |  | Acrobat 2017（クラシックトラック）バージョン 17.011.30078 以降 |  |
 
 ### リリース 6.5.13.0（2022年6月2日（PT））
@@ -978,6 +996,14 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
 |  | IBM® J9 Virtual Machine（ビルド 2.8、JRE 1.8.0） | MongoDB Enterprise 4.0 |
+|  | Oracle Database 12c リリース 1 | MongoDB Enterprise 4.2 |
+|  | Oracle Database 18c | IBM® DB2® 11.1 |
+|  | Oracle Unified Directory （OUD） 11g リリース 2 | Oracle Database 12c リリース 2 |
+|  | IBM® Lotus Domino 9.0 | MySQL 5.7.35 |
+|  | IBM® FileNet 5.2 | Microsoft® SQL Server JDBC ドライバー6.2.1.0 |
+|  | Adobe Flash Player | JBoss® Enterprise Application Platform （EAP） 7.1.4 |
+|  | | IBM® Content Manager Server 8.5修正パック 2 |
+|  | | IBM® Content Manager Client 8.5 |
 |  | | Microsoft® SQL Server 2016 |
 |  | | Microsoft® Windows Server 2016 |
 
@@ -986,7 +1012,10 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 | 追加したサポート | 削除したサポート | 非推奨のサポート |
 | -------------- | --------------- | ------------------- |
-| アプリケーションサーバー JBoss® EAP 7.4 用の Oracle Java™ SE 11（64 ビット版）SDK | | [Adobe Acrobat 2017 - Adobe Acrobat 2017 のコアサポートは 2022年6月6日（PT）に終了します。](https://helpx.adobe.com/jp/support/programs/eol-matrix.html) |
+| アプリケーションサーバー JBoss® EAP 7.4 用の Oracle Java™ SE 11（64 ビット版）SDK | | Adobe Acrobat 2017 |
+|  | | Red Hat® Enterprise Linux® 7 （Kernel 3.x）（64 ビット） |
+|  | | Microsoft® Windows Server 2016 （64 ビット） |
+|  | | Microsoft® Office 2016 |
 |  | | OpenOffice 4.1.2 |
 
 >[!NOTE]
