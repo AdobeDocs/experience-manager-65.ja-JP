@@ -38,7 +38,7 @@ AEM 6.3 以降では、この機能のオンラインバージョンである「
 
 ### オフラインでのリビジョンクリーンアップではなく、オンラインのリビジョンクリーンアップを使用する場合 {#when-to-use-online-revision-cleanup-as-opposed-to-offline-revision-cleanup}
 
-**Online Revision Cleanup is the recommended way of performing revision cleanup.** Offline Revision cleanup should be used only on an exceptional basis - for example, before migrating to the new storage format or if you are requested by Adobe Customer Care to do so.
+**オンラインでのリビジョンクリーンアップは、リビジョンクリーンアップの実行に推奨される方法です。** オフラインでのリビジョンクリーンアップは、新しいストレージフォーマットに移行する前や、Adobe カスタマーケアから要求された場合など、例外的な方法でのみ使用してください。
 
 ## オンラインでのリビジョンクリーンアップの実行方法 {#how-to-run-online-revision-cleanup}
 
@@ -134,7 +134,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td>AEM 6.5 にアップグレードするときの注意点を教えてください。</td>
-   <td><p>The persistence format of TarMK changes with AEM 6.5. These changes do not require a proactive migration step. 既存のリポジトリは、周期的な移行を実行します。これはユーザーに対して透過的です。 AEM 6.5（または関連ツール）がリポジトリに初めてアクセスすると、移行プロセスが開始されます。</p> <p><strong>AEM 6.5 永続性形式への移行が開始されると、リポジトリを以前の AEM 6.3 永続性形式に戻すことはできません。</strong></p> </td>
+   <td><p>TarMKの永続性形式は、AEM 6.5で変更されます。 これらの変更は、プロアクティブな移行手順を必要としません。 既存のリポジトリは、周期的な移行を実行します。これはユーザーに対して透過的です。 AEM 6.5（または関連ツール）がリポジトリに初めてアクセスすると、移行プロセスが開始されます。</p> <p><strong>AEM 6.5 永続性形式への移行が開始されると、リポジトリを以前の AEM 6.3 永続性形式に戻すことはできません。</strong></p> </td>
   </tr>
  </tbody>
 </table>
@@ -252,7 +252,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップの時間に作用する要因は何ですか。</strong></td>
-   <td>The factors are:<br />
+   <td>要因は次のとおりです。<br />
     <ul>
      <li>リポジトリのサイズ</li>
      <li>システムへの負荷（リクエスト/分、特に書き込み操作）</li>
@@ -417,7 +417,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><p>オンラインでのリビジョンクリーンアップの後は、リポジトリの整合性チェックは必要ありません。 </p> <p>ただし、クリーンアップ後にリポジトリのステータスを確認するには、次の操作を実行できます。</p>
     <ul>
      <li>リポジトリ<a href="/help/sites-deploying/consistency-check.md" target="_blank">トラバーサルチェック</a></li>
-     <li>クリーンアッププロセスが完了したら、oak-run ツールを使用して不整合をチェックします。 For further info on how to do this, check the <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache Documentation.</a> You do not need to shut down AEM to run the tool.</li>
+     <li>クリーンアッププロセスが完了したら、oak-run ツールを使用して不整合をチェックします。 この方法について詳しくは、<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメントを参照してください。</a> ツールを実行するためにAEMをシャットダウンする必要はありません。</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -465,7 +465,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>ヘルスチェックおよびログエントリによると、オンラインでのリビジョンクリーンアップは 3 回連続で正常に完了していません。 オンラインでのリビジョンクリーンアップを正常に完了させるには、何が必要ですか。</strong></td>
-   <td>You can take several steps to find and fix the issue:<br />
+   <td>問題を見つけて修正するには、次の手順を実行します。<br />
     <ul>
      <li>まず、ログエントリを確認します。<br /> </li>
      <li>ログの情報に応じて、適切なアクションを実行します。
@@ -494,7 +494,7 @@ TarMK GC: no base state available, running full compaction instead
     <ol>
      <li>アプリケーションが、推奨されるアクセスメカニズム（Sling や JCR API など）を回避し、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。 つまり、オンラインでのリビジョンクリーンアップで許可されている保持時間（デフォルトでは 24 時間）より長い間、エンティティへの参照を保持します。 このケースは一時的なもので、データの破損にはつながりません。 復旧するには、oak-run ツールを使用して、この例外が一時的なものである（oak-run チェックでエラーが報告されない）ことを確認する必要があります。 このためには、インスタンスをオフラインにし、後で再起動する必要があります。</li>
      <li>ディスク上のデータの破損を招いた外部イベント。 これは、ディスク障害、ディスク容量不足、または必要なデータファイルの誤った変更などになります。 この場合は、インスタンスをオフラインにし、oak-run チェックを使用して修復する必要があります。 oak-run チェックの実行方法について詳しくは、次の <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメント</a> を参照してください。</li>
-     <li>他のすべての状況では、<a href="https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support" target="_blank">アドビカスタマーケア</a>に連絡して対処します。</li>
+     <li>他のすべての状況では、<a href="https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support" target="_blank">アドビカスタマーケア</a>に連絡して対処します。</li>
     </ol> </td>
    <td> </td>
   </tr>
@@ -616,7 +616,7 @@ Oak-run ツールには、リビジョンクリーンアッププロセスのパ
 
 このリストには、以下に示すいくつかのコマンドラインパラメーターが含まれています。
 
-* **-mmap.** You can set this as true or false. true に設定した場合は、メモリマップアクセスが使用されます。 false に設定した場合は、ファイルアクセスが使用されます。 指定されていない場合は、64 ビットシステムではメモリマップアクセスが使用され、32 ビットシステムではファイルアクセスが使用されます。 Windows では通常のファイルアクセスが常に適用され、このオプションは無視されます。 **このパラメーターは、-Dtar.memoryMapped パラメーターを置き換えたものです。**
+* **-mmap.** これをtrueまたはfalseに設定できます。 true に設定した場合は、メモリマップアクセスが使用されます。 false に設定した場合は、ファイルアクセスが使用されます。 指定されていない場合は、64 ビットシステムではメモリマップアクセスが使用され、32 ビットシステムではファイルアクセスが使用されます。 Windows では通常のファイルアクセスが常に適用され、このオプションは無視されます。 **このパラメーターは、-Dtar.memoryMapped パラメーターを置き換えたものです。**
 
 * **-Dupdate.limit**。 ディスクへの一時的なトランザクションのフラッシュのしきい値を定義します。 デフォルト値は 10000 です。
 
@@ -624,9 +624,9 @@ Oak-run ツールには、リビジョンクリーンアッププロセスのパ
 
 * **-Dcompaction-progress-log**。 ログに記録されるコンパクションされたノードの数です。 デフォルト値は 150000 です。これは、最初の 150000 個のコンパクションされたノードが操作中にログに記録されることを意味します。 これは、以下で説明する次のパラメーターと組み合わせて使用します。
 
-* **-Dtar.PersistCompactionMap.** Set this parameter to true to use disk space instead of heap memory for compaction map persistence. oak-run ツールの&#x200B;**バージョン 1.4** 以上が必要です。 詳しくは、[オフラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)の節の質問 3 を参照してください。 **このパラメーターは Oak バージョン 1.6 で削除されており、効果はありません。**
+* **-Dtar.PersistCompactionMap.** コンパクションマップの永続性にヒープメモリの代わりにディスクスペースを使用するには、このパラメーターをtrueに設定します。 oak-run ツールの&#x200B;**バージョン 1.4** 以上が必要です。 詳しくは、[オフラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)の節の質問 3 を参照してください。 **このパラメーターは Oak バージョン 1.6 で削除されており、効果はありません。**
 
-* **--force.** Force compaction and ignore a non-matching segment store version.
+* **– 強制** コンパクションを強制し、一致しないセグメントストアのバージョンを無視します。
 
 >[!CAUTION]
 >
@@ -642,7 +642,7 @@ java -Dupdate.limit=10000 -Dcompaction-progress-log=150000 -Dlogback.configurati
 
 上記の方法に加えて、次のように JMX コンソールを使用して、リビジョンのクリーンアップメカニズムをトリガーすることもできます。
 
-1. Open the JMX Console by going to [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)
+1. [http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)に移動して、JMX コンソールを開きます
 1. **RevisionGarbageCollection** MBean をクリックします。
 1. 次のウィンドウで、**startRevisionGC()** をクリックし、**起動**&#x200B;して、リビジョンのガベージコレクションジョブを開始します。
 

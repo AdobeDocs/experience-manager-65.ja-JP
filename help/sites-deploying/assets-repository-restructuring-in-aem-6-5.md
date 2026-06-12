@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1083'
 ht-degree: 100%
 
 ---
 
 # AEM 6.5 における Assets リポジトリの再構築 {#assets-repository-restructuring-in-aem}
 
-[Adobe Experience Manager（AEM）6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明しているように、AEM 6.5 にアップグレードする場合は、AEM Assets ソリューションに影響を与えるリポジトリ変更に伴う作業量を考慮する必要があります。一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
+[Adobe Experience Manager（AEM）6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明しているように、AEM 6.5 にアップグレードする場合は、AEM Assets ソリューションに影響を与えるリポジトリ変更に伴う作業量を考慮する必要があります。 一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
@@ -50,7 +50,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>カスタムコードがこの場所に依存（つまり、コードがこのパスに明示的に依存）している場合は、アップグレードする前に新しい場所を使用するようにコードを更新する必要があります。 理想的には、Java™ API を使用できれば、JCR 内の特定のパスへの依存を減らすことができます。</p> <p>クライアントがダウンロードする zip ファイルを一時的に保存するための場所。クライアントがアセットのダウンロードをリクエストしたときから、更新する必要はありません。新しい場所にファイルが生成されます。</p> </td>
+   <td><p>カスタムコードがこの場所に依存（つまり、コードがこのパスに明示的に依存）している場合は、アップグレードする前に新しい場所を使用するようにコードを更新する必要があります。 理想的には、Java™ API を使用できれば、JCR 内の特定のパスへの依存を減らすことができます。</p> <p>クライアントがダウンロードする zip ファイルを一時的に保存するための場所。 クライアントがアセットのダウンロードをリクエストしたときから、更新する必要はありません。 新しい場所にファイルが生成されます。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
@@ -88,7 +88,7 @@ ht-degree: 100%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -113,7 +113,7 @@ ht-degree: 100%
      <li>デザインを以前の場所から <code>/apps</code> 内の新しい場所にコピーします。</li>
      <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li>
      <li><strong>AEM／DAM 管理／アセット共有ページ／ページのプロパティ／詳細タブ／デザインフィールド</strong>を使用して、<code>cq:designPath</code> プロパティで以前の場所への参照を更新します。</li>
-     <li>新しいクライアントライブラリカテゴリを使用するには、以前の場所を参照しているページを更新します。それには、ページの実装コードを更新する必要があります。</li>
+     <li>新しいクライアントライブラリカテゴリを使用するには、以前の場所を参照しているページを更新します。 それには、ページの実装コードを更新する必要があります。</li>
      <li>Dispatcher ルールを更新して、<code>/etc.clientlibs/</code> プロキシサーブレット経由でクライアントライブラリを提供できるようにします。</li>
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されるデザインの場合は、オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</p> </td>
   </tr>
@@ -152,7 +152,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> はルックアップ対象として技術的にサポートされていますが（通常の Sling CAConfig ルックアップでは /apps より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> に格納することができます。ただし、メールテンプレートを容易に編集できるランタイム UI がないので、これはお勧めできません。</td>
+   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> はルックアップ対象として技術的にサポートされていますが（通常の Sling CAConfig ルックアップでは /apps より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> に格納することができます。 ただし、メールテンプレートを容易に編集できるランタイム UI がないので、これはお勧めできません。</td>
   </tr>
  </tbody>
 </table>
@@ -193,7 +193,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><code>/conf/global/settings/dam/adhocassetshare</code> はルックアップ対象として技術的にサポートされていますが（通常の Sling CAConfig ルックアップでは <code>/apps</code> より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code> に格納することができます。ただし、メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td>
+   <td><code>/conf/global/settings/dam/adhocassetshare</code> はルックアップ対象として技術的にサポートされていますが（通常の Sling CAConfig ルックアップでは <code>/apps</code> より優先されますが、<code>/etc</code> の方が優先されます）、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code> に格納することができます。 ただし、メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td>
   </tr>
  </tbody>
 </table>
@@ -275,9 +275,9 @@ ht-degree: 100%
    <td><strong>再構築の手引き</strong></td>
    <td><p>規定のビューアープリセットの場合は、新しい場所でのみ使用できます。</p> <p>カスタムビューアープリセットの場合：</p>
     <ul>
-     <li>移行スクリプトを実行して、<code>/etc</code> から <code>/conf</code> にノードを移動できます。スクリプトは <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em> にあります。</li>
+     <li>移行スクリプトを実行して、<code>/etc</code> から <code>/conf</code> にノードを移動できます。 スクリプトは <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em> にあります。</li>
      <li>または、設定を編集して、新しい場所に自動保存することもできます。</li>
-    </ul> <p>なお、<code>/conf</code> を指すようにコピー URL または埋め込みコードを調整する必要はありません。<code>/etc</code> への既存のリクエストは、<code>/conf</code> 内の適切なコンテンツに再ルーティングされます。</p> </td>
+    </ul> <p>なお、<code>/conf</code> を指すようにコピー URL または埋め込みコードを調整する必要はありません。 <code>/etc</code> への既存のリクエストは、<code>/conf</code> 内の適切なコンテンツに再ルーティングされます。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
@@ -300,10 +300,10 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p><code>/libs</code> 内の新しいリソースを指すようにすべての参照を調整します。それには、<code>/etc.clientlibs/</code> を使用してプロキシプレフィックスを許可します。</p> <p>最後に、移行した clientlibs のフォルダーを / / から削除して、クリーンアップをおこないます。 <code>/etc/clientlibs/foundation/</code></p> </td>
+   <td><p><code>/libs</code> 内の新しいリソースを指すようにすべての参照を調整します。それには、<code>/etc.clientlibs/</code> を使用してプロキシ接頭辞を許可します。</p> <p>最後に、移行した clientlibs のフォルダーを / / から削除して、クリーンアップをおこないます。 <code>/etc/clientlibs/foundation/</code></p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>

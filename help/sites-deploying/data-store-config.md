@@ -442,7 +442,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 設定ファイルは、次のオプションと共に使用できます。
 
-* azureSas=&quot;&quot;：コネクタのバージョン 1.6.3 で、Azure Shared Access Signature（SAS）のサポートが追加されました。 **設定ファイルにSASとストレージの両方の資格情報が存在する場合、SASには優先度があります。** SASについて詳しくは、[公式ドキュメント &#x200B;](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)を参照してください。 「=」文字は必ず、「\=」のようにエスケープしてください。
+* azureSas=&quot;&quot;：コネクタのバージョン 1.6.3 で、Azure Shared Access Signature（SAS）のサポートが追加されました。 **設定ファイルにSASとストレージの両方の資格情報が存在する場合、SASには優先度があります。** SASについて詳しくは、[公式ドキュメント ](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)を参照してください。 「=」文字は必ず、「\=」のようにエスケープしてください。
 
 * azureBlobEndpoint=&quot;&quot;：Azure Blob エンドポイントです。 例えば、https://&lt;storage-account>.blob.core.windows.net などです。
 * accessKey=&quot;&quot;：ストレージアカウント名です。 Microsoft® Azure の認証資格情報について詳しくは、[公式ドキュメント](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-create?tabs=azure-portal)を参照してください。
