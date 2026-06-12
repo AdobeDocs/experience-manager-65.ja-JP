@@ -164,7 +164,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 >[!NOTE]
 >
->`Resource` 引数には、`null` `Resources` オブジェクトなどの `Node` オブジェクトに適応しない [`NonExistingResource` または ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) オブジェクトを指定できます。
+>`Resource` 引数には、`null` `Resources` オブジェクトなどの `Node` オブジェクトに適応しない [`NonExistingResource` または &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) オブジェクトを指定できます。
 
 ## 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
 
@@ -237,7 +237,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. 次のノードプロパティを持つノードを&#x200B;**作成** ：
 
    * **Name**：同期アクションのノード名。
-名前は、[同期アクション ](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下のテーブルの&#x200B;**アクション名**&#x200B;と同じである必要があります（例：`contentCopy`または`workflow`）。
+名前は、[同期アクション &#x200B;](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下のテーブルの&#x200B;**アクション名**&#x200B;と同じである必要があります（例：`contentCopy`または`workflow`）。
    * **タイプ**：`cq:LiveSyncAction`
 
 1. 必要な数の同期アクションノードを追加して設定します。 アクションノードの順序を、実行する順序と一致するように並べ替えます。 最上位のアクションノードが最初に実行されます。

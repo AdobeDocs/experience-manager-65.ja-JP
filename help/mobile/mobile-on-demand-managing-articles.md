@@ -30,7 +30,7 @@ ht-degree: 3%
 >
 >AEM Mobile アプリケーションの次のトピックについて詳しくは、オンラインヘルプの次の資料を参照してください。
 >
->* [ デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [&#x200B; デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
 >* [記事の管理](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
 >

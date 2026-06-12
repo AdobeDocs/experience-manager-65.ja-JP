@@ -57,4 +57,4 @@ FAIL >>[!NOTE]
 * [AEM Mobile On-demand Services向けAEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Servicesを使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)
 
-オーサリングトピックについて引き続き詳しく知りたい場合は、[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング ](/help/mobile/mobile-apps-ondemand.md)を参照してください。
+オーサリングトピックについて引き続き詳しく知りたい場合は、[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング &#x200B;](/help/mobile/mobile-apps-ondemand.md)を参照してください。

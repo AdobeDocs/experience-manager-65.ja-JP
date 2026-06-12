@@ -30,9 +30,9 @@ ht-degree: 5%
 >
 >AEM Mobile アプリケーションの次のトピックについて詳しくは、オンラインヘルプの次の資料を参照してください。
 >
->* [ デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [&#x200B; デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
->* [ バナーの作成](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>* [&#x200B; バナーの作成](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
 >
 
 ## バナーの作成 {#creating-a-banner}
@@ -78,7 +78,7 @@ AEMのドラッグ&amp;ドロップエディターを使用して、記事を追
 記事を編集するワークフロー：
 
 1. モバイル版から、カタログからMobile On-Demand アプリを選択します。
-1. 「バナーを管理**」タイルからAEMのソース**バナーを選択します。
+1. 「バナーを管理&#x200B;**」タイルからAEMのソース**&#x200B;バナーを選択します。
 1. リストビューでハイライト表示されているバナーをクリックして、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、バナーコンテンツ（原稿、画像、テキストなど）をドラッグします。
 
