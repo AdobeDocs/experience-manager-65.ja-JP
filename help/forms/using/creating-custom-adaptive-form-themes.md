@@ -1,6 +1,6 @@
 ---
 title: カスタムアダプティブフォームテーマの作成
-description: アダプティブフォームテーマは、アダプティブフォームのスタイル（ルックアンドフィール）の定義に使用する Adobe Experience Manager クライアントライブラリです。カスタムアダプティブフォームテーマの作成方法について説明します。
+description: アダプティブフォームテーマは、アダプティブフォームのスタイル（ルックアンドフィール）の定義に使用する Adobe Experience Manager クライアントライブラリです。 カスタムアダプティブフォームテーマの作成方法について説明します。
 content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,8 +10,8 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 100%
+source-wordcount: '800'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->Adobe Experience Manager（AEM）Forms には、[テーマエディター](/help/forms/using/themes.md)機能があり、アダプティブフォームの[テーマ](/help/forms/using/themes.md)を作成および変更できます。この記事に示す手順は、[テーマエディター](/help/forms/using/themes.md)が存在しないバージョンからアップデートし、LESS/CSS ファイルを使用して作成されたテーマに対する投資を既に行っている場合（テーマ前のエディター方式）のみ実行します。
+>Adobe Experience Manager（AEM）Forms には、[テーマエディター](/help/forms/using/themes.md)機能があり、アダプティブフォームの[テーマ](/help/forms/using/themes.md)を作成および変更できます。 この記事に示す手順は、[テーマエディター](/help/forms/using/themes.md)が存在しないバージョンからアップデートし、LESS/CSS ファイルを使用して作成されたテーマに対する投資を既に行っている場合（テーマ前のエディター方式）のみ実行します。
 
 ## 前提条件 {#prerequisites}
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 **アダプティブフォームのテーマ**&#x200B;は、アダプティブフォームのスタイル（ルックアンドフィール）の定義に使用する AEM クライアントライブラリです。
 
-**アダプティブテンプレート**&#x200B;を作成し、テーマをテンプレートに適用します。そして、このカスタムテンプレートを使い、**アダプティブフォーム**&#x200B;を作成します。
+**アダプティブテンプレート**&#x200B;を作成し、テーマをテンプレートに適用します。 そして、このカスタムテンプレートを使い、**アダプティブフォーム**&#x200B;を作成します。
 
 ![アダプティブフォームとクライアントライブラリ](assets/hierarchy.png)
 
@@ -43,8 +43,8 @@ ht-degree: 100%
 >
 >この手順にしたがって同じ名前を使用すると、結果として次のスナップショットと同じようなテンプレートが出来上がるはずです：
 
-![フォレストテーマのアダプティブフォームのスナップショット](assets/thumbnail.png)
-**図：** *フォレストテーマのサンプル*
+![ フォレストをテーマにしたアダプティブフォームのスナップショット](assets/thumbnail.png)
+**図：** *森のテーマのサンプル*
 
 1. `/apps`ノードの下に `cq:ClientLibraryFolder` タイプのノードを作成します。
 
@@ -62,7 +62,7 @@ ht-degree: 100%
 
    * `less` フォルダー：`less` 変数と CSS スタイルの管理に使用される `less mixins` を定義する `less` 変数ファイルが含まれています。
 
-     このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインを使ったスタイルを定義する `less` ファイル、変数で構成されています。そして、これらすべての `less` ファイルは、styles.less にインポートされます。
+     このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインを使ったスタイルを定義する `less` ファイル、変数で構成されています。 そして、これらすべての `less` ファイルは、styles.less にインポートされます。
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
 
@@ -108,7 +108,7 @@ ht-degree: 100%
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **LESS ミックスインファイル：**&#x200B;変数を引数として受け入れる関数を定義することができます。これらの関数の出力が、結果のスタイルになります。CSS スタイルの繰り返しを避けるために、これらのミックスインを異なるスタイルで使用します。
+   **LESS ミックスインファイル：**&#x200B;変数を引数として受け入れる関数を定義することができます。 これらの関数の出力が、結果のスタイルになります。 CSS スタイルの繰り返しを避けるために、これらのミックスインを異なるスタイルで使用します。
 
    アダプティブフォームは、次のファイルで定義されている標準ミックスインを提供します。
 
@@ -118,7 +118,7 @@ ht-degree: 100%
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
 
-   ミックスインの定義の例： 
+   ミックスインの定義の例：
 
    ```css
    .rounded-corners (@radius) {
@@ -193,7 +193,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >styles.less ファイルは必須ではありません。つまり、カスタムスタイル、変数、ミックスインを定義していない場合には、このファイルを作成する必要はありません。
+   >styles.less ファイルは必須ではありません。 つまり、カスタムスタイル、変数、ミックスインを定義していない場合には、このファイルを作成する必要はありません。
    >
    >しかし、styles.less ファイルを作成しない場合には、css.txt ファイル内で次の行をコメント解除する必要があります。
    >
@@ -228,8 +228,8 @@ ht-degree: 100%
 
    1. **オプション**：カスタムページでは、header.jsp、footer.jsp、the body.jsp を必要に応じて上書きしてください。
 
-1. jcr:content が、前の手順で作成されたカスタムページ（例：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`）を指すカスタムテンプレート（例：`myAfCustomizations/myAfPages/forestPage)`）を作成します。
+1. jcr:contentが前の手順で作成されたカスタムページを指すカスタムテンプレート（例：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`）を作成します（例：`myAfCustomizations/myAfPages/forestPage)`）。
 
    ![CRX リポジトリのスナップショット](assets/2-1.png)
 
-1. 前の手順で作成したテンプレートを使用して、アダプティブフォームを作成します。アダプティブフォームのルックアンドフィールは、この記事の「アダプティブフォームテーマを作成するには」の節で作成したテーマによって定義されます。
+1. 前の手順で作成したテンプレートを使用して、アダプティブフォームを作成します。 アダプティブフォームのルックアンドフィールは、この記事の「アダプティブフォームテーマを作成するには」の節で作成したテーマによって定義されます。

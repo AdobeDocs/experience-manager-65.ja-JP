@@ -11,14 +11,14 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '220'
 ht-degree: 100%
 
 ---
 
 # インターフェイスのカラースキームの変更 {#changing-the-color-scheme-of-the-interface}
 
-AEM Forms Workspace のユーザーインターフェイス部分のカラースキームは、要件に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事の手順に加えて、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
+AEM Forms Workspace のユーザーインターフェイス部分のカラースキームは、要件に合わせて変更できます。 代表的なカラースキームのカスタマイズの例を以下にいくつか示します。 この記事の手順に加えて、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
 
 ## 上部ナビゲーションバー {#top-navigation-bar}
 
@@ -26,7 +26,7 @@ AEM Forms Workspace のユーザーインターフェイス部分のカラース
 
 AEM Forms Workspace の上部にあるナビゲーションバーを更新する手順は次のとおりです。
 
-1. 背景画像を作成してカラーを更新します。ファイルに newBackground.jpg と名前を付けます。
+1. 背景画像を作成してカラーを更新します。 ファイルに newBackground.jpg と名前を付けます。
 1. WebDAV クライアントを使用して、背景画像を /apps/ws/images フォルダーにアップロードします。
 
    >[!NOTE]
@@ -54,8 +54,8 @@ AEM Forms Workspace の上部にあるナビゲーションバーを更新する
 
 ## カテゴリコンポーネント {#category-component}
 
-カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。この色を変更するには、CSS ファイルの`.category`要素で、背景色を定義します。
+カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 この色を変更するには、CSS ファイルの`.category`要素で、背景色を定義します。
 
 ## タスクコンポーネント {#task-component}
 
-タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。色を変更するには、スタイルシートにある .task セレクターに関連付けられたスタイルを変更します。
+タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。 色を変更するには、スタイルシートにある .task セレクターに関連付けられたスタイルを変更します。
