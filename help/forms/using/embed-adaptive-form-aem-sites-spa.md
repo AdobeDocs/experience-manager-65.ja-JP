@@ -23,7 +23,7 @@ ht-degree: 96%
 
 AEM Forms を使用すると、フォーム開発者は AEM Sites 単一ページアプリケーション（SPA）ページにアダプティブフォームおよびインタラクティブなコミュニケーションをシームレスに埋め込むことができます。 組み込まれたアダプティブフォームおよびインタラクティブなコミュニケーションではすべての機能を使用できるため、ユーザーは、ページから移動せずにフォームの記入や送信ができます。 これにより、ユーザーは Web ページのその他の要素とのコンテキストを保ったまま、同時にアダプティブフォームやインタラクティブなコミュニケーションの操作を行うことができます。
 
-AEM Sites Single Page Applicationでは、[AEM Forms SPA コンテナコンポーネント ](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)[を使用して、アダプティブフォームまたはインタラクティブ通信を追加できます。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) これは、AEM Sites SPA用のAEM Forms コンポーネントで、Sites ページに追加できます。
+AEM Sites Single Page Applicationでは、[AEM Forms SPA コンテナコンポーネント &#x200B;](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) [を使用して、アダプティブフォームまたはインタラクティブ通信を追加できます。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) これは、AEM Sites SPA用のAEM Forms コンポーネントで、Sites ページに追加できます。
 
 SPA AEM Sites 以外でのアダプティブフォームの組み込みについて詳しくは、[AEM Sites ページへのアダプティブフォームまたはインタラクティブなコミュニケーションの組み込み](/help/forms/using/embed-adaptive-form-aem-sites.md)を参照してください。
 
