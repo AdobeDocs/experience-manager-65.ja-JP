@@ -10,8 +10,8 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 100%
+source-wordcount: '412'
+ht-degree: 93%
 
 ---
 
@@ -19,16 +19,16 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-Convert PDF サービスは、PDF ドキュメントを PostScript ファイルまたは画像ファイル（JPEG、JPEG 2000、PNG および TIFF）に変換します。PDFドキュメントを PostScript に変換すると、PostScript プリンターでサーバーベースの無人印刷を行う場合に便利です。PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換する方法が実用的です。
+Convert PDF サービスは、PDF ドキュメントを PostScript ファイルまたは画像ファイル（JPEG、JPEG 2000、PNG および TIFF）に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでサーバーベースの無人印刷を行う場合に便利です。 PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換する方法が実用的です。
 
 Convert PDF サービスを使用すると、次のタスクを実行できます。
 
-* PDF ドキュメントを PostScript に変換します。PostScript に変換する際に、この変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 と 3 のどちらに変換するかを指定できます。PostScript ファイルに変換する PDF ドキュメントは、非インタラクティブである必要があります。
-* PDF ドキュメントを JPEG、JPEG 2000、PNG および TIFF 画像形式に変換します。これらの画像形式のいずれかに変換する場合は、変換操作を使用して、ソースドキュメントおよび画像オプションの仕様を指定できます。画像オプションには、画像変換形式、画像の解像度、色変換などの様々な設定があります。
+* PDF ドキュメントを PostScript に変換します。 PostScript に変換する際に、この変換操作を使用して、変換元のドキュメントと、PostScript レベル 2 と 3 のどちらに変換するかを指定できます。 PostScript ファイルに変換する PDF ドキュメントは、非インタラクティブである必要があります。
+* PDF ドキュメントを JPEG、JPEG 2000、PNG および TIFF 画像形式に変換します。 これらの画像形式のいずれかに変換する場合は、変換操作を使用して、ソースドキュメントおよび画像オプションの仕様を指定できます。 画像オプションには、画像変換形式、画像の解像度、色変換などの様々な設定があります。
 
-## サービスのプロパティの設定 {#properties}
+## サービスのプロパティの設定   {#properties}
 
-AEM コンソールで **AEMFD ConvertPDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEM コンソールのデフォルト URL は `https://[host]:'port'/system/console/configMgr` です。
+AEM コンソールで **AEMFD ConvertPDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。 AEM コンソールのデフォルト URL は `https://[host]:'port'/system/console/configMgr` です。
 
 ## サービスの使用 {#using-the-service}
 
@@ -36,7 +36,7 @@ ConvertPDF サービスには次の 2 つの API があります。
 
 * **[toPS](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**：PDF ドキュメントを PostScript ファイルに変換します。
 
-* **[toImage](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：PDF ドキュメントを画像ファイルに変換します。サポートされている画像形式は、JPEG、JPEG2000、PNG および TIFF です。
+* **[toImage](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**：PDF ドキュメントを画像ファイルに変換します。 サポートされている画像形式は、JPEG、JPEG2000、PNG および TIFF です。
 
 ### JSP またはサーブレットでの toPS API の使用 {#using-tops-api-with-a-jsp-or-servlets}
 
@@ -133,10 +133,11 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 ワークフローから ConvertPDF サービスを実行する方法は、JSP またはサーブレットから実行する方法と似ています。
 
-唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。続いて、Document オブジェクトは
-渡された ResourceResolver オブジェクトを使用してリポジトリからコンテンツを読み込みます。
+唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。 この自動機構
+コードがワークフローから呼び出された場合は機能しません。 ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。 次に、Document オブジェクトは
+リポジトリからコンテンツを読み取るためにResourceResolver オブジェクトを提供しました。
 
-以下に示したサンプルワークフロープロセスでは、入力したドキュメントを PostScript ドキュメントに変換します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
+以下に示したサンプルワークフロープロセスでは、入力したドキュメントを PostScript ドキュメントに変換します。 コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
 ```javascript
 /*
