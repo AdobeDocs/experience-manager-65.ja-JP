@@ -120,7 +120,7 @@ Scope of metadata articles:
 
 <!--
 TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
-These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
+These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
 
@@ -274,7 +274,7 @@ To apply a metadata profile globally, follow these steps:
 
 * カスタム名前空間にメタデータを読み込むには、まず、その名前空間を登録します。
 * プロパティピッカーは、スキーマエディターおよび検索フォームで使用されるプロパティを表示します。 プロパティピッカーはアセットからメタデータプロパティを選択しません。
-* [!DNL Experience Manager] 6.5にアップグレードする前から、既存のメタデータプロファイルが存在している可能性があります。 アップグレード後、「[!UICONTROL &#x200B; メタデータプロファイル &#x200B;]」タブのフォルダー[!UICONTROL &#x200B; プロパティ &#x200B;]にそのようなプロファイルを適用すると、メタデータフォームフィールドが表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームのフィールドは表示されますが、期待どおりに使用できません。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
+* [!DNL Experience Manager] 6.5にアップグレードする前から、既存のメタデータプロファイルが存在している可能性があります。 アップグレード後、「[!UICONTROL  メタデータプロファイル ]」タブのフォルダー[!UICONTROL  プロパティ ]にそのようなプロファイルを適用すると、メタデータフォームフィールドが表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームのフィールドは表示されますが、期待どおりに使用できません。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
 
 >[!MORELIKETHIS]
 >
