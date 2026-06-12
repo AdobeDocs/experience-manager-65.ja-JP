@@ -29,7 +29,7 @@ We.Unlimited アプリは、完全に設定可能で管理可能なAEM Mobile On
 
 >[!NOTE]
 >
->AEM Mobile Apps Control Centerからアプリケーションとモバイルアプリのコンテンツを管理するには、[AEM Mobile アプリケーションダッシュボード ](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+>AEM Mobile Apps Control Centerからアプリケーションとモバイルアプリのコンテンツを管理するには、[AEM Mobile アプリケーションダッシュボード &#x200B;](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
 ## アプリテンプレートの作成 {#creating-app-templates}
 
@@ -44,7 +44,7 @@ We.Unlimited アプリは、完全に設定可能で管理可能なAEM Mobile On
 1. AEM Mobile アプリカタログに移動します：*&lt;server-url>/aem/apps.html/content/mobileapps*
 1. 次に示すように、**Create** > **App**&#x200B;を選択します
 
-このテンプレートを使用してアプリを作成したら、記事、バナー、コレクションをアプリに追加できます。 再訪問、記事、バナー、コレクションの作成については、[ コンテンツ管理アクション ](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)を参照してください。
+このテンプレートを使用してアプリを作成したら、記事、バナー、コレクションをアプリに追加できます。 再訪問、記事、バナー、コレクションの作成については、[&#x200B; コンテンツ管理アクション &#x200B;](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)を参照してください。
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ We.Unlimited アプリは、完全に設定可能で管理可能なAEM Mobile On
 
 ### すぐに使用できるテンプレートの作成 {#creating-out-of-the-box-templates}
 
-すぐに使える記事テンプレートはありませんが、カスタムテンプレートを拡張するデフォルトテンプレートがあります。詳しくは、Geometrixx Unlimited アプリの[記事テンプレートサンプル ](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article)を参照してください。
+すぐに使える記事テンプレートはありませんが、カスタムテンプレートを拡張するデフォルトテンプレートがあります。詳しくは、Geometrixx Unlimited アプリの[記事テンプレートサンプル &#x200B;](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article)を参照してください。
 
 通常のAEM テンプレートに必要なプロパティを超える主要なプロパティには、次のものが含まれます。
 
@@ -150,7 +150,7 @@ AEM テンプレートに従って、テンプレートの&#x200B;***jcr:content
 
 >[!NOTE]
 >
->AEM Mobileの[ テンプレートとコンポーネントの開発に関するベストプラクティス ](/help/mobile/best-practices-aem-mobile.md)を参照してください。
+>AEM Mobileの[&#x200B; テンプレートとコンポーネントの開発に関するベストプラクティス &#x200B;](/help/mobile/best-practices-aem-mobile.md)を参照してください。
 
 ### 次の手順 {#the-next-steps}
 

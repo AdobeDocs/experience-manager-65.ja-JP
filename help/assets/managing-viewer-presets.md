@@ -166,7 +166,7 @@ Dynamic Media に付属するすべての標準提供のビューアのプリセ
 > ビューアプリセットの公開[を参照](#publishing-viewer-presets)。
 >
 >作成および追加する新しいビューアプリセットは、アクティブ化された*および*公開された両方にする必要があります。
-> ビューアプリセットのアクティブ化または非アクティブ化](#activating-or-deactivating-viewer-presets)および[ ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。[
+> ビューアプリセットのアクティブ化または非アクティブ化[&#128279;](#activating-or-deactivating-viewer-presets)および[&#x200B; ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
 
 <table>
  <tbody>
@@ -446,7 +446,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
      CSS ファイルを読み込むと、Visual Editor は、その CSS に正しいビューアマーカーが使用されているかを確認します。 例えば、ズームビューアを作成している場合、読み込むすべての CSS ルールが、親のビューア要素に定義されているズームビューアのクラス名 `.s7mixedmediaviewer` を使用して定義されている必要があります。
 
-     指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます （CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。 例えば、Zoom ViewerのCSS マーカーについて読む場合は、[Zoom Viewerのカスタマイズ ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja)を参照してください。） ただし、ビジュアルエディターが一部のCSS値を理解できない場合があります。 そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
+     指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます （CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。 例えば、Zoom ViewerのCSS マーカーについて読む場合は、[Zoom Viewerのカスタマイズ &#x200B;](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja)を参照してください。） ただし、ビジュアルエディターが一部のCSS値を理解できない場合があります。 そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
 
    >[!NOTE]
    >

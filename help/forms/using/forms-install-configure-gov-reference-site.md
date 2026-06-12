@@ -178,7 +178,7 @@ ht-degree: 97%
 
 **メモ：**
 
-1. https://<aemserver>:<port>/aem/inbox に移動すると、上記の参照ドキュメントリンクで説明されているプロセスを完了できます。
+1. https://&lt;aemserver>:&lt;port>/aem/inbox に移動すると、上記の参照ドキュメントリンクで説明されているプロセスを完了できます。
 1. `we-gov-forms.pkg.all-[version].zip` パッケージには、パッケージの一部である `we-gov-forms.pkg.all-[version].zip/ssl` フォルダーを抽出することでアクセスできるサンプル SS キーと証明書が含まれています。
 
 1. SSL 証明書およびキーの詳細：
@@ -232,7 +232,7 @@ ht-degree: 97%
 
 1. 次の URL に移動します。
 
-   https://<aemserver>:<port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
+   https://&lt;aemserver>:&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
    1. MS Dynamics アプリケーションの登録で設定したリダイレクト URL と同じ URL を使用してサーバーにアクセスしていることを確認してください。
 
@@ -486,7 +486,7 @@ AEM Forms を Adobe Forms と共にインストールして設定するには、
 
 Forms 変換ツールと正しく通信するようにサービスを設定するには、ユーザーは Adobe I/O に登録できるように Identity Management System（IMS）サービスを設定する必要があります。
 
-1. https://<aemserver>:<port>に移動し、「Adobe Experience」をクリックします。
+1. https://&lt;aemserver>:&lt;port>に移動し、「Adobe Experience」をクリックします。
 左上のManager/Tools/Security/Adobe IMS設定。
 
 1. 「作成」をクリックします。
