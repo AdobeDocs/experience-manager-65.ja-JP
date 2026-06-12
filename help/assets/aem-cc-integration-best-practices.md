@@ -10,8 +10,8 @@ hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '3371'
-ht-degree: 100%
+source-wordcount: '3263'
+ht-degree: 99%
 
 ---
 
@@ -119,9 +119,9 @@ TBD: Add some info about XD integration and possibly info about DA v2.0.
 * Adobe Stock 内のアセットが [!DNL Experience Manager] に保存されると、それらは通常の [!DNL Assets] になり、バイナリが [!DNL Experience Manager] リポジトリに保存されます。 [!DNL Adobe Stock] に関係する一部のメタデータが [!DNL Experience Manager] 内のアセットに保存されます。その他の点では、取り込みプロセスは他のあらゆるファイルの場合と同様です。 例えば、スマートタグがアクティブな場合、保存時にこれらのアセットにタグが追加されます。
 * [!DNL Experience Manager] に保存されたアセットはコピーであり、[!DNL Adobe Stock] へのリンクではありません。
 
-**[!DNL Adobe Stock] から [!DNL Experience Manager] に保存されたアセットを[!DNL Creative Cloud]** で操作します。 この統合は [!DNL Adobe Asset Link] とは独立していますが、[!DNL Adobe Asset Link] は [!DNL Stock] からそのように保存されたこれらのアセットを認識し、[!DNL Photoshop]、[!DNL Illustrator] または [!DNL InDesign] の [!DNL Adobe Asset Link] 拡張 UI でこれらのアセットに追加のメタデータと [!DNL Adobe Stock] ロゴを表示するようにします。 ファイルは [!DNL Experience Manager] に保存されると標準のアセットとなるため、閲覧したり開いたりすることができます。
-[!DNL Adobe Asset Link] 拡張機能が存在する [!DNL Creative Cloud] アプリケーションで作業するクリエイティブ ユーザーは、[!DNL Adobe Stock] から [!DNL Experience Manager] へすでにライセンスを供与されているアセットにアクセスできるだけでなく、[!DNL Creative Cloud] ライブラリ パネルで [!DNL Adobe Stock] アセットの検索、プレビュー、ライセンスを供与できます。
-[!DNL Adobe Stock] からライセンスを取得して [!DNL Experience Manager] に保存した [!DNL Assets] は、[!DNL Experience Manager Assets] デプロイメントにアクセスする幅広いチームで利用できるようになります。一方、[!DNL Creative Cloud] ライブラリパネルを介して [!DNL Adobe Stock] からアセットのライセンスを取得したクリエイターは、デフォルトでは自分たちの [!DNL Creative Cloud] アカウントでのみ利用できるようになっています。
+**アセットの操作は、[!DNL Adobe Stock]から[!DNL Creative Cloud]**&#x200B;の[!DNL Experience Manager]に保存されました。この統合は[!DNL Adobe Asset Link]とは独立していますが、[!DNL Adobe Asset Link]はこの方法で[!DNL Stock]から保存されたアセットを認識し、これらのアセットに追加のメタデータと[!DNL Adobe Stock]のロゴを[!DNL Adobe Asset Link]拡張機能UIの[!DNL Photoshop]、[!DNL Illustrator]、または[!DNL InDesign]に表示します。これらのファイルは、[!DNL Experience Manager]に保存すると通常のアセットになるため、参照や開くなどの操作に利用できます。
+拡張機能[!DNL Adobe Asset Link]が存在する[!DNL Creative Cloud]個のアプリで作業しているCreative ユーザーは、[!DNL Adobe Stock]から[!DNL Experience Manager]までの既にライセンス済みのアセットにアクセスできるだけでなく、[!DNL Creative Cloud]個のライブラリパネルを使用して、[!DNL Adobe Stock]個のアセットを検索、プレビュー、ライセンス取得することもできます。
+[!DNL Adobe Stock]の[!DNL Assets]がライセンスされ、[!DNL Experience Manager]に保存されました。これは、[!DNL Experience Manager Assets]のデプロイメントにアクセスする幅広いチームが利用できるようになりました。一方、[!DNL Adobe Stock]のアセットを[!DNL Creative Cloud] ライブラリパネル経由でライセンス供与しているクリエイターは、デフォルトで[!DNL Creative Cloud] アカウントでのみ利用できます。
 
 <!-- 
 TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.
