@@ -80,7 +80,7 @@ CUG を単一ページまたは複数ページに適用するには：
 
    1. 「**有効にする**」チェックボックスをアクティブ化します。
 
-   1. **ログインページ**へのパスを追加します。
+   1. **ログインページ**&#x200B;へのパスを追加します。
 これはオプションです。空白のままにすると、標準ログインページが使用されます。
 
    ![CUG が追加されました](assets/cug-authentication-requirement.png)
@@ -123,7 +123,7 @@ Dispatcher を使用する場合は、次のプロパティを使用して Dispa
 
 ### CUG 用の Dispatcher セッション管理の設定 {#configuring-dispatcher-session-management-for-cugs}
 
-CUGのDispatcher.any ファイル ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement)で[ セッション管理を設定します。 CUG ページへのアクセスが要求されたときに使用される認証ハンドラーによって、セッション管理の設定方法が決まります。
+CUGのDispatcher.any ファイル [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement)で セッション管理を設定します。 CUG ページへのアクセスが要求されたときに使用される認証ハンドラーによって、セッション管理の設定方法が決まります。
 
 ```xml
 /sessionmanagement

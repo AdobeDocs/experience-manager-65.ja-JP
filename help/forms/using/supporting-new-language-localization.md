@@ -96,7 +96,7 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-カテゴリが`guides.I18N.<locale>`、依存関係が`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`および`guide.common`の`etc/<folderHierarchy>`の下にタイプ `cq:ClientLibraryFolder`のノードを作成します。 ``
+カテゴリが`guides.I18N.<locale>`、依存関係が`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`および`guide.common`の`etc/<folderHierarchy>`の下にタイプ `cq:ClientLibraryFolder`のノードを作成します。 &grave;&grave;
 
 クライアントライブラリに次のファイルを追加します。
 

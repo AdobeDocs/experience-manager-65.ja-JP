@@ -93,7 +93,7 @@ AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms にアップグレー
      AEM 6.5 Formsでは、jQueryのバージョンが3.2.1に更新され、jQuery UIのバージョンが1.12.1に更新されます。 AEM フォームは、**noConflict** モードでJQueryを使用します。 そのため、他の jQuery バージョンを使用している場合、アップグレードの実行中に問題は表示されません。 ただし、AEM 6.5 Forms にアップグレードする場合は、次の手順を実行します。
 
       * カスタムコンポーネントが（存在する場合）、サポートされる jQuery バージョンと互換性があることを確認します。
-      * サポートされていない API をカスタムコンポーネントから削除します。 削除された API のリストについては、[アップグレードガイド](https://jquery.com/upgrade-guide/3.0/)を参照してください。 例えば、load()、.unload()、.error() の各 API のサポートは削除されています。 前述の API の代わりに.on() メソッドを使用します。 例えば、$(&amp;quot;img&amp;quot;).load(fn) を $(&amp;quot;img&amp;quot;).on(&amp;quot;load&amp;quot;, fn) に変更します。
+      * サポートされていない API をカスタムコンポーネントから削除します。 削除された API のリストについては、[アップグレードガイド](https://jquery.com/upgrade-guide/3.0/)を参照してください。 例えば、load()、.unload()、.error() の各 API のサポートは削除されています。 前述の API の代わりに.on() メソッドを使用します。 例えば、$(&quot;img&quot;).load(fn) を $(&quot;img&quot;).on(&quot;load&quot;, fn) に変更します。
 
    * **分析機能とレポートの再設定（バージョン 6.2 以前の AEM Forms をアップグレードする場合のみ）**
 
