@@ -11,12 +11,12 @@ feature: Integration
 role: Admin
 source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
 workflow-type: tm+mt
-source-wordcount: '26'
+source-wordcount: '37'
 ht-degree: 100%
 
 ---
 
-# AEM Livefyre のレシピ {#aem-livefyre-recipes}
+# AEM Livefyre のレシピ{#aem-livefyre-recipes}
 
 >[!IMPORTANT]
 >

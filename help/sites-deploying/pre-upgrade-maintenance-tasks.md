@@ -131,7 +131,7 @@ You can find the packages at these locations:
   </tr>
   <tr>
    <td><code>GenerateBundlesListFileTask</code></td>
-   <td>crx2／crx3</td>
+   <td>crx2/crx3</td>
    <td> </td>
   </tr>
   <tr>
