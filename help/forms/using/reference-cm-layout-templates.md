@@ -10,7 +10,7 @@ feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '476'
 ht-degree: 100%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 Correspondence Management のレターテンプレートには、一般的なフォームフィールド、ヘッダーやフッターなどのレイアウト機能、コンテンツを配置するための空の「ターゲット領域」が含まれています。
 
-Correspondence Management のレターテンプレートは、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で入手できます。使用するブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。パッケージには次のテンプレートが含まれています。
+Correspondence Management のレターテンプレートは、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で入手できます。 使用するブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。 パッケージには次のテンプレートが含まれています。
 
 * クラシック
 * クラシックシンプル
@@ -54,7 +54,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 ## クラシックシンプル {#classic-simple}
 
-電話番号とメールアドレスを取得するためのフィールドが含まれています。クラシックシンプルのテンプレートは、受信者のアドレスを入力するフィールドが含まれていないこと以外はクラシックのテンプレートと同じです。
+電話番号とメールアドレスを取得するためのフィールドが含まれています。 クラシックシンプルのテンプレートは、受信者のアドレスを入力するフィールドが含まれていないこと以外はクラシックのテンプレートと同じです。
 
 ![連絡先情報フラグメント](assets/classicsimple.png)
 
@@ -70,7 +70,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 ## バランスライト {#balanced-right}
 
-バランスライトのテンプレートは、会社のロゴが右に配置され、受信者の住所をレターに入力するスペースが設けられています。バランスライトのテンプレートには、レターが複数ページにわたる場合にリフローできるフッターも含まれています。
+バランスライトのテンプレートは、会社のロゴが右に配置され、受信者の住所をレターに入力するスペースが設けられています。 バランスライトのテンプレートには、レターが複数ページにわたる場合にリフローできるフッターも含まれています。
 
 ![balancedright](assets/balancedright.png)
 
@@ -78,7 +78,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 ## ビジュアルレフト {#visual-left}
 
-ビジュアルレフトのテンプレートは、会社のロゴが配置されるサイドヘッダーが含まれています。ビジュアルレフトのテンプレートにはサブジェクトフィールドがありますが、フッターはありません。
+ビジュアルレフトのテンプレートは、会社のロゴが配置されるサイドヘッダーが含まれています。 ビジュアルレフトのテンプレートにはサブジェクトフィールドがありますが、フッターはありません。
 
 ![visualleft](assets/visualleft.png)
 
@@ -86,7 +86,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 ## ビジュアルトップ {#visual-top}
 
-ビジュアルトップのテンプレートは、上部にビジュアルマージンがあります。ビジュアルトップのテンプレートには、ページ自体に受信者のアドレスを入力するためのフィールドがあります。ビジュアルトップのテンプレートには、複数ページにわたるレターをリフローするサブジェクトフィールドとフッターがあります。
+ビジュアルトップのテンプレートは、上部にビジュアルマージンがあります。 ビジュアルトップのテンプレートには、ページ自体に受信者のアドレスを入力するためのフィールドがあります。 ビジュアルトップのテンプレートには、複数ページにわたるレターをリフローするサブジェクトフィールドとフッターがあります。
 
 ![visualtop](assets/visualtop.png)
 
@@ -94,7 +94,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 ## ビジュアルトップ - クラシック {#visual-top-classic}
 
-ビジュアルトップ - クラシックのテンプレートには、ページの上部に会社のロゴが配置されるヘッダーがあります。ビジュアルトップ - クラシックのテンプレートにはサブジェクトを入力するフィールドはありますが、フッターはありません。
+ビジュアルトップ - クラシックのテンプレートには、ページの上部に会社のロゴが配置されるヘッダーがあります。 ビジュアルトップ - クラシックのテンプレートにはサブジェクトを入力するフィールドはありますが、フッターはありません。
 
 ![visualtopclassic](assets/visualtopclassic.png)
 
