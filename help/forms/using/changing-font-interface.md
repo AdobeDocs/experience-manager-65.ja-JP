@@ -12,14 +12,14 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '278'
 ht-degree: 100%
 
 ---
 
 # インターフェイスのフォントの変更{#changing-the-font-on-the-interface}
 
-AEM Forms Workspace に表示されているフォントを変更することができます。ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。フォントは選択的にユーザーインタフェイス上で変更することができます。
+AEM Forms Workspace に表示されているフォントを変更することができます。 ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。 フォントは選択的にユーザーインタフェイス上で変更することができます。
 
 [AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従います。要件に応じて、CSS、HTML、またはその両方をカスタマイズするための手順に従います。
 
