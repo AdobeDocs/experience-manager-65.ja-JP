@@ -11,14 +11,14 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '142'
 ht-degree: 100%
 
 ---
 
 # ドキュメントへのリンクの更新 {#updating-the-link-to-the-documentation}
 
-AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセスするには、**ヘルプ／Workspace ヘルプ**&#x200B;を選択します。これは、アドビの web サイトのオンラインドキュメントを指しています。ただし、それを更新して他の URL を指定するようにすることができます。
+AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセスするには、**ヘルプ／Workspace ヘルプ**&#x200B;を選択します。 これは、アドビの web サイトのオンラインドキュメントを指しています。 ただし、それを更新して他の URL を指定するようにすることができます。
 
 デフォルトのヘルプ URL を変更する場合は以下の使用事例を考慮してください。
 

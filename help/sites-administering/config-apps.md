@@ -11,21 +11,21 @@ feature: Configuring
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '154'
 ht-degree: 100%
 
 ---
 
 # AEM アプリケーション用の設定{#configuring-for-aem-apps}
 
-Adobe Experience Manager アプリケーションでは、OTA（Over The Air）アプリケーションのコンテンツを更新できます。更新されたコンテンツはパブリッシュインスタンスに格納されます。デバイス上のアプリケーションがパブリッシュインスタンスに接続して更新を確認できるようにするには、空のリファラーヘッダーを使用できるようにパブリッシュインスタンスを設定する必要があります。
+Adobe Experience Manager アプリケーションでは、OTA（Over The Air）アプリケーションのコンテンツを更新できます。 更新されたコンテンツはパブリッシュインスタンスに格納されます。 デバイス上のアプリケーションがパブリッシュインスタンスに接続して更新を確認できるようにするには、空のリファラーヘッダーを使用できるようにパブリッシュインスタンスを設定する必要があります。
 
 ## 空のリファラーヘッダーの設定 {#configuring-empty-referrer-header}
 
 リファラーフィルターサービスを設定するには：
 
 * Apache Felix コンソール（**設定**）を次の場所で開きます。
-* https://&lt;server>:&lt;port>/system/console/configMgr
+* https://<server>:<port>/system/console/configMgr
 * admin としてログインします。
 * **Configurations** メニューで *Apache Sling Referrer Filter* を選択します。
 * 「空白を許可」フィールドにチェックマークを入れて、空のリファラーヘッダーを使用できるようにします。

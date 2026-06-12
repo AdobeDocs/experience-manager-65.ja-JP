@@ -11,15 +11,15 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
-workflow-type: ht
-source-wordcount: '710'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 92%
 
 ---
 
 # 閉じられたユーザーグループの作成{#creating-a-closed-user-group}
 
-閉じられたユーザーグループ（CUG）は、公開済みのインターネットサイト内にある特定のページへのアクセスを制限するために使用します。このようなページでは、割り当て済みのメンバーがログインしてセキュリティ資格情報を指定する必要があります。
+閉じられたユーザーグループ（CUG）は、公開済みのインターネットサイト内にある特定のページへのアクセスを制限するために使用します。 このようなページでは、割り当て済みのメンバーがログインしてセキュリティ資格情報を指定する必要があります。
 
 Web サイト内にこのような領域を設定するには、次の操作を行います。
 
@@ -80,8 +80,8 @@ CUG を単一ページまたは複数ページに適用するには：
 
    1. 「**有効にする**」チェックボックスをアクティブ化します。
 
-   1. **ログインページ**へのパスを追加します。
-このページは省略可能です。空白のままにすると、標準のログインページが使用されます。
+   1. **ログインページ**&#x200B;へのパスを追加します。
+これはオプションです。空白のままにすると、標準ログインページが使用されます。
 
    ![CUG が追加されました](assets/cug-authentication-requirement.png)
 
@@ -91,17 +91,17 @@ CUG を単一ページまたは複数ページに適用するには：
 
    >[!NOTE]
    >
-   >「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
+   >「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。 ライブコピーを設定する際には、この点を考慮してください。
    >
    >詳しくは、[AEM のクローズドユーザーグループ - ライブコピー](closed-user-groups.md#aem-livecopy)を参照してください。
 
-1. **閉じられたユーザーグループを編集**&#x200B;ダイアログが開きます。ここで、CUG を検索して選択し、「**保存**」でグループの選択を確認できます。 
+1. **閉じられたユーザーグループを編集**&#x200B;ダイアログが開きます。 ここで、CUG を検索して選択し、「**保存**」でグループの選択を確認できます。
 
    グループがリストに追加されます（例：グループ **cug_access**）。
 
    ![CUG が追加されました](assets/cug-added.png)
 
-1. 「**保存して閉じる**」で変更を確定します。 
+1. 「**保存して閉じる**」で変更を確定します。
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ CUG を単一ページまたは複数ページに適用するには：
 
 CUG ページへのリンクのターゲットは匿名ユーザーには表示されないので、そのようなリンクはリンクチェックによって削除されます。
 
-この問題を回避するには、CUG 領域内のページを指す、保護されていないリダイレクトページを作成することをお勧めします。これで、ナビゲーションエントリがレンダリングされます。リンクチェックが問題の原因になることはありません。ユーザーがログイン資格情報を正しく指定した後、実際にリダイレクトページにアクセスした場合にのみ、CUG 領域内にリダイレクトされます。
+この問題を回避するには、CUG 領域内のページを指す、保護されていないリダイレクトページを作成することをお勧めします。 これで、ナビゲーションエントリがレンダリングされます。リンクチェックが問題の原因になることはありません。 ユーザーがログイン資格情報を正しく指定した後、実際にリダイレクトページにアクセスした場合にのみ、CUG 領域内にリダイレクトされます。
 
 ## CUG 用の Dispatcher の設定 {#configure-dispatcher-for-cugs}
 
@@ -123,7 +123,7 @@ Dispatcher を使用する場合は、次のプロパティを使用して Dispa
 
 ### CUG 用の Dispatcher セッション管理の設定 {#configuring-dispatcher-session-management-for-cugs}
 
-[dispatcher.any ファイルのセッション管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement)を CUG 用に設定します。CUG ページへのアクセスがリクエストされる際に使用される認証ハンドラーで、セッション管理の設定方法を指定します。
+CUGのDispatcher.any ファイル [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement)で セッション管理を設定します。 CUG ページへのアクセスが要求されたときに使用される認証ハンドラーによって、セッション管理の設定方法が決まります。
 
 ```xml
 /sessionmanagement
@@ -134,8 +134,7 @@ Dispatcher を使用する場合は、次のプロパティを使用して Dispa
 
 >[!NOTE]
 >
->Dispatcher ファームでセッション管理が有効になっている場合、ファームが処理するすべてのページはキャッシュされません。CUG の外にあるページをキャッシュするには、CUG 以外のページを処理する 2 つ目のファームを dispatcher.any に
->作成します。
+>Dispatcher ファームでsession-managementが有効になっている場合、ファームが処理するすべてのページはキャッシュされません。CUG外のページをキャッシュするには、非CUG ページを処理する2番目のファームをDispatcher.any>に作成します。
 
 1. `/directory` を定義して [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement) を設定します。次に例を示します。
 
