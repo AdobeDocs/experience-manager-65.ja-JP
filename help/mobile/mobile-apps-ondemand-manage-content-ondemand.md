@@ -48,7 +48,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->一般的に、コンテンツを公開する前にプリフライトを適用する必要があります。 詳しくは、[ プリフライトを使用したプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
+>一般的に、コンテンツを公開する前にプリフライトを適用する必要があります。 詳しくは、[&#x200B; プリフライトを使用したプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
 
 ### その他のリソース {#additional-resources}
 

@@ -22,7 +22,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html)を参照してください。
+>Adobe Experience Manager（AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/digital-publishing-solution/topics.html)を参照してください。
 
 AEMには、コンテンツをモバイルアプリケーションに統合するためのツールがいくつか用意されています。
 
@@ -90,7 +90,7 @@ AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 
 ## AEM オーサー {#aem-author}
 
-***AEM作成者* （または&#x200B;*マーケター*） **は、カスタム開発された、または標準のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、画像、ビデオ、テキストフラグメント（コンテンツフラグメント）を含むあらゆるタイプのメディアの追加をDAMから行います。 AEMの組み込みコンテンツエディターは、*AEM作成者*によって使用され、他のAdobe Experience Cloudとの統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成します。
+***AEM作成者* （または&#x200B;*マーケター*） &#x200B;** は、カスタム開発された、または標準のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、画像、ビデオ、テキストフラグメント（コンテンツフラグメント）を含むあらゆるタイプのメディアの追加をDAMから行います。 AEMの組み込みコンテンツエディターは、*AEM作成者*によって使用され、他のAdobe Experience Cloudとの統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成します。
 
 AEMの作成者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のトピックを理解している必要があります。
 
@@ -100,8 +100,8 @@ AEMの作成者は、AEM Mobile On-demand Servicesを使用してアプリを作
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 * [コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md)
 
-作成者の役割と責任を開始するには、[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング ](/help/mobile/mobile-apps-ondemand.md)を参照してください。
+作成者の役割と責任を開始するには、[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング &#x200B;](/help/mobile/mobile-apps-ondemand.md)を参照してください。
 
 >[!NOTE]
 >
->AEMのオーサーは、使用権限の設定、カードとレイアウトの作成、プッシュ通知の送信も担当します。 また、コンテンツのオーサリング、記事やコレクションの管理、AEM Mobileでのバナー、カード、レイアウトの作成について詳しくは、[AEM Mobile オンデマンドポータル ](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2)を参照してください。
+>AEMのオーサーは、使用権限の設定、カードとレイアウトの作成、プッシュ通知の送信も担当します。 また、コンテンツのオーサリング、記事やコレクションの管理、AEM Mobileでのバナー、カード、レイアウトの作成について詳しくは、[AEM Mobile オンデマンドポータル &#x200B;](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2)を参照してください。
