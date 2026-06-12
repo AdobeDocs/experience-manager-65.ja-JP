@@ -228,13 +228,13 @@ AEM WCM とリポジトリに対するすべてのアクセス要求が、ここ
    * `error.log`
 エラーメッセージ（様々な深刻度レベル）はここに登録されます。
 
-   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log` ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html?lang=ja)
+   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log` &#x200B;](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html?lang=ja)
 このログは、[!DNL Dynamic Media] が有効になっている場合にのみ使用されます。 内部の ImageServer プロセスの動作を分析するための統計情報と分析情報を提供します。
 
    * `request.log`
 各アクセス要求が、応答と共にここに登録されます。
 
-   * [`s7access-<yyyy>-<mm>-<dd>.log` ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html?lang=ja)
+   * [`s7access-<yyyy>-<mm>-<dd>.log` &#x200B;](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html?lang=ja)
 このログは、[!DNL Dynamic Media] が有効になっている場合にのみ使用されます。 s7access ログには、`/is/image` および `/is/content` 経由で [!DNL Dynamic Media] に対して実行された各リクエストが記録されます。
 
    * `stderr.log`

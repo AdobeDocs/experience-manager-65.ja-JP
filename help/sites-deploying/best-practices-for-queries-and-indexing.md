@@ -296,7 +296,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
       * 既存の内容が変更の影響を受けない場合は、更新のみが必要です。
 
-         * [oak:queryIndexDefinition]@refresh=trueを設定して、lucene インデックスを](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition)更新します[
+         * [oak:queryIndexDefinition]@refresh=trueを設定して、lucene インデックスを[&#128279;](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition)更新します
 
       * それ以外の場合は、Lucene インデックスを[インデックス再作成](#how-to-re-index)します。
 

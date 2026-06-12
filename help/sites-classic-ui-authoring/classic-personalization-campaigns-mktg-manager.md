@@ -36,20 +36,20 @@ MCM から、以下にアクセスできます。
 * **[ダッシュボード](#dashboard)**
 これは4つのペインに分かれています。
 
-   * [ リスト ](#lists)
+   * [&#x200B; リスト &#x200B;](#lists)
 このペインには、既に作成したリストと、そのリスト内のリード数が表示されます。このペインから、リストを直接作成するか、リードを読み込んでリストを作成できます。
-特定のリストを選択すると、[ リスト ](#lists) セクションに移動し、リストの詳細が表示されます。
+特定のリストを選択すると、[&#x200B; リスト &#x200B;](#lists) セクションに移動し、リストの詳細が表示されます。
 
-   * [ セグメント ](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
+   * [&#x200B; セグメント &#x200B;](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#anoverviewofsegmentation)
 このペインには、定義したセグメントが表示されます。セグメントを使用すると、特定の特性を共有する訪問者のコレクションを特徴付けることができます。
 特定のセグメントを選択すると、セグメント定義ページが開きます。
 
-   * [ レポート ](/help/sites-administering/reporting.md)
+   * [&#x200B; レポート &#x200B;](/help/sites-administering/reporting.md)
 AEMには、インスタンスの状態を分析および監視するのに役立つ様々なレポートが用意されています。このMCM ペインには、レポートが一覧表示されます。
 レポートを選択すると、レポートページが開きます。
 
    * [件のキャンペーン](#campaigns)
-このペインには、[ ニュースレター](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)や[ ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)などのキャンペーンエクスペリエンスが一覧表示されます。
+このペインには、[&#x200B; ニュースレター](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)や[&#x200B; ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)などのキャンペーンエクスペリエンスが一覧表示されます。
 
 * **[リード](#leads)**
 ここでリードを管理することができます。リードを作成またはインポートしたり、個々のリードの詳細を編集したり、必要がなくなったら削除したりできます。また、リストと呼ばれる異なるグループにリードを分類することもできます。**注：** Adobeでは、この機能をさらに強化する予定はありません。
