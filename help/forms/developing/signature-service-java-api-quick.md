@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 100%
+source-wordcount: '871'
+ht-degree: 98%
 
 ---
 
@@ -44,11 +44,11 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」のクイックスタートは、JBoss アプリケーションサーバーとMicrosoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM Forms によるプログラミング」のクイックスタートは、JBoss アプリケーションサーバーとMicrosoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへの署名フィールドの追加 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*SignatureField1* という名前の署名フィールドを *Loan.pdf* という名前の PDF ファイルに基づく PDF ドキュメントに追加します。新しい署名フィールドを含む PDF ドキュメントは、*LoanSig.pdf* という名前の PDF ファイルとして保存されます。（[署名フィールドの追加](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields)を参照してください）。
+次の Java コードの例では、*SignatureField1* という名前の署名フィールドを *Loan.pdf* という名前の PDF ファイルに基づく PDF ドキュメントに追加します。 新しい署名フィールドを含む PDF ドキュメントは、*LoanSig.pdf* という名前の PDF ファイルとして保存されます。 （[署名フィールドの追加](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields)を参照してください）。
 
 ```java
  /*
@@ -164,7 +164,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した署名フィールド名の取得 {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}
 
-次の Java コードの例では、*LoanSig.pdf* という名前の PDF ドキュメント内にある署名フィールドの名前を取得します。（[署名フィールド名の取得](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照してください）。
+次の Java コードの例では、*LoanSig.pdf* という名前の PDF ドキュメント内にある署名フィールドの名前を取得します。 （[署名フィールド名の取得](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照してください）。
 
 ```java
  /*
@@ -270,7 +270,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した署名フィールドの変更 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
 
-次の Java コードの例では、署名フィールドに署名が適用されている場合にフォーム内のすべてのフィールドをロックし、変更が許可されていないことを確認して、SignatureField1 という名前の署名フィールドを変更します。Signature サービスが変更された署名フィールドを含む PDF ドキュメントを返すと、その PDF ドキュメントは LoanSig.pdf という名前の PDF ファイルとして保存されます。（この例は、Signature サービスに渡された PDF ファイルを上書きします）。（[署名フィールドの変更](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)を参照してください）。
+次の Java コードの例では、署名フィールドに署名が適用されている場合にフォーム内のすべてのフィールドをロックし、変更が許可されていないことを確認して、SignatureField1 という名前の署名フィールドを変更します。 Signature サービスが変更された署名フィールドを含む PDF ドキュメントを返すと、その PDF ドキュメントは LoanSig.pdf という名前の PDF ファイルとして保存されます。 （この例では、Signature サービスに渡されるPDF ファイルを上書きします）。 （[署名フィールドの変更](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)を参照してください）。
 
 ```java
  /*
@@ -398,7 +398,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのデジタル署名 {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントにデジタル署名を行います。セキュリティ資格情報に対して指定されたエイリアスはセキュリティで保護され、失効確認が実行されます。CRL または OCSP サーバー情報が指定されていないので、PDF ドキュメントへの電子署名に使用される証明書からサーバー情報が取得されます。署名済みのドキュメントは、*LoanSigned.pdf* という名前の PDF ファイルとして保存されます。（[PDF ドキュメントへの電子署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照してください）。
+次の Java コードの例では、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントにデジタル署名を行います。 セキュリティ資格情報に対して指定されたエイリアスはセキュリティで保護され、失効確認が実行されます。 CRL または OCSP サーバー情報が指定されていないので、PDF ドキュメントへの電子署名に使用される証明書からサーバー情報が取得されます。 署名済みのドキュメントは、*LoanSigned.pdf* という名前の PDF ファイルとして保存されます。 （[PDF ドキュメントへの電子署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -547,7 +547,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した XFA ベースのフォームのデジタル署名 {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}
 
-次の Java コードの例では、Forms サービスによってレンダリングされるインタラクティブフォームに署名します。Forms サービスから返される `com.adobe.idp.Document` インスタンスは、Signature サービスに渡されます。署名済みのインタラクティブフォームは、*LoanXFASigned.pdf* という名前の PDF ファイルとして保存されます。
+次の Java コードの例では、Forms サービスによってレンダリングされるインタラクティブフォームに署名します。 Forms サービスから返される `com.adobe.idp.Document` インスタンスは、Signature サービスに渡されます。 署名済みのインタラクティブフォームは、*LoanXFASigned.pdf* という名前の PDF ファイルとして保存されます。
 
 ```java
  /*
@@ -759,7 +759,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの認証 {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}
 
-次の Java コードの例は、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントを認証します。セキュリティ資格情報に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。認証済みのドキュメントは、*LoanCertified.pdf* という名前の PDF ファイルとして保存されます。（[PDF ドキュメントの認証](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照してください）。
+次の Java コードの例は、*LoanSig.pdf* という名前の PDF ファイルに基づいた PDF ドキュメントを認証します。 セキュリティ資格情報に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。 認証済みのドキュメントは、*LoanCertified.pdf* という名前の PDF ファイルとして保存されます。 （[PDF ドキュメントの認証](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -908,7 +908,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用したデジタル署名の検証 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-次の Java コードの例では、LoanSigned.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内のデジタル署名を検証します。検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。（[電子署名の検証](#verifying-digital-signatures)を参照してください）。
+次の Java コードの例では、LoanSigned.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内のデジタル署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。 （[電子署名の検証](#verifying-digital-signatures)を参照してください）。
 
 ```java
  /*
@@ -1072,7 +1072,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した複数のデジタル署名の検証 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
-次の Java コードの例では、LoanAllSigs.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内にある複数のデジタル署名を検証します。検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。（[複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照してください）。
+次の Java コードの例では、LoanAllSigs.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内にある複数のデジタル署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。 （[複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照してください）。
 
 ```java
  /*
@@ -1234,7 +1234,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用したデジタル署名の削除 {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}
 
-次の Java コードの例では、*SignatureField1* という名前の署名フィールドからデジタル署名を削除します。署名フィールドを含む PDF ファイルの名前は、*LoanSigned.pdf* です。（[電子署名の削除](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures)を参照してください）。
+次の Java コードの例では、*SignatureField1* という名前の署名フィールドからデジタル署名を削除します。 署名フィールドを含む PDF ファイルの名前は、*LoanSigned.pdf* です。 （[電子署名の削除](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures)を参照してください）。
 
 ```java
  /*

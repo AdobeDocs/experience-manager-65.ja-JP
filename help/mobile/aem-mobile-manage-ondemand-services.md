@@ -1,6 +1,6 @@
 ---
 title: プリフライトによるプレビュー
-description: アクセス権のあるすべてのプロジェクトを表示できるように、モバイルオンデマンドのプリフライトアプリを使用する方法を説明します。
+description: Mobile On-Demand プリフライトアプリを使用して、アクセス権のあるすべてのプロジェクトを表示する方法を説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -11,50 +11,50 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '266'
 ht-degree: 7%
 
 ---
 
 # プリフライトによるプレビュー {#previewing-with-preflight}
 
-ここでは、Preflight アプリを使用したプレビューについて説明します。
+このページでは、プリフライトアプリを使用したプレビューについて説明します。
 
 {{ue-over-mobile}}
 
-アプリケーション全体で次のアクションが実行されます。
+次のアクションは、アプリケーション全体で実行されます。
 
-Mobile On-Demand Preflight アプリを使用すると、アクセス権のあるすべてのプロジェクトを表示できます。 プロジェクトを選択すると、ページや記事の参照など、アプリのコンテンツをプレビューし、様々なデバイスでのアプリの外観やパフォーマンスを把握できます。
+Mobile On-Demand プリフライトアプリを使用すると、アクセス権を持つすべてのプロジェクトを表示できます。 プロジェクトを選択したら、ブラウジングページや記事を含むアプリのコンテンツをプレビューして、アプリがさまざまなデバイスでどのように表示され、パフォーマンスを確認できます。
 
 >[!NOTE]
 >
->Preflight アプリは、本質的に PhoneGap エンタープライズビューアに似ています。
+>プリフライトアプリは、本質的にはPhoneGap Enterprise ビューアに似ています。
 
 ## プリフライトによるプレビュー {#previewing-with-preflight-1}
 
-1. モバイルから、カタログのモバイルオンデマンドアプリを選択します。
-1. **記事を管理** （またはバナー/コレクション）タイルの省略記号（...）をクリックします。
+1. モバイル版から、カタログからMobile On-Demand アプリを選択します。
+1. 省略記号（。..）をクリックします **記事の管理** （またはバナー/コレクション）タイルから。
 1. アクションバーから「**プリフライト**」を選択します。
-1. ダイアログで「**プリフライトをアクティベート**」をクリックします。
-1. これで、モバイル オンデマンド プレフライト アプリでアプリをプレビューする準備が整いました。
+1. ダイアログから「**プリフライトをアクティブ化**」をクリックします。
+1. これで、アプリのプレビューの準備がモバイルオンデマンドのプリフライトアプリで整いました。
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight アプリは、コンテンツのプレビューとページの参照に使用されます。 Preflight アプリについて詳しくは、[&#x200B; こちら &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) をクリックしてください。
+>AEM Preflight アプリは、コンテンツのプレビューとページの参照に使用されます。 プリフライトアプリについて詳しくは、[こちら](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)をクリックしてください。
 >
 
-### 前に進む {#getting-ahead}
+### 一歩先を行く {#getting-ahead}
 
-コンテンツのオーサリングに関する詳細が必要な場合は、次のリソースを参照して、AEM Mobile アプリケーションでコンテンツを作成および管理します。
+コンテンツのオーサリングについて詳しくは、次のリソースを参照して、AEM Mobile アプリケーションでコンテンツを作成および管理してください。
 
 * [AEM Mobile アプリケーションのダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
 ## その他のリソース {#additional-resources}
 
-AEM Mobile On-demand Services アプリケーションを作成するための他の 2 つの役割と責務について詳しくは、次の資料を参照してください。
+AEM Mobile On-demand Services アプリの作成に関するその他の2つの役割と責任について詳しくは、次のリソースを参照してください。
 
-* [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand Services アプリケーション用AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
+* [AEM Mobile On-demand Services向けAEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
+* [AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
