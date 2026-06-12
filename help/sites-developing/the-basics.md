@@ -286,7 +286,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 これは、Sling API パッケージ、org.apache.sling.&amp;ast；およびタグライブラリを使用します。
 
-### sling:include {#referencing-existing-elements-using-sling-include}を使用した既存の要素の参照
+### sling:includeを使用した既存の要素の参照 {#referencing-existing-elements-using-sling-include}
 
 最後の考慮事項は、スクリプト内にある既存の要素の参照の必要性です。
 

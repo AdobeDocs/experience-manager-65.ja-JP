@@ -159,7 +159,7 @@ OR‧分岐は、ワークフロー内に分割を作成し、以降は 1 つの
 
 変数を使用して、式エディターを使用したルーティング式を定義できます。 OR‧分岐ステップでルーティング式を使用する方法について詳しくは、「[OR‧分岐ステップ](/help/sites-developing/workflows-step-ref.md#or-split)」を参照してください。
 
-この例では、ルーティング式を定義する前に、[例 2 ](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。 **totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。 同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
+この例では、ルーティング式を定義する前に、[例 2 &#x200B;](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。 **totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。 同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 

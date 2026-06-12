@@ -21,9 +21,9 @@ ht-degree: 3%
 
 ## SRPについて {#about-srp}
 
-すべてのAEM Communities コンポーネントと機能は、[ ソーシャルコンポーネントフレームワーク（SCF） ](/help/communities/scf.md)上に構築されており、SocialResourceProvider APIを呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
+すべてのAEM Communities コンポーネントと機能は、[&#x200B; ソーシャルコンポーネントフレームワーク（SCF） &#x200B;](/help/communities/scf.md)上に構築されており、SocialResourceProvider APIを呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
 
-コミュニティサイトを作成する前に、[ ストレージリソースプロバイダー（SRP） ](/help/communities/working-with-srp.md)を設定して、基になる[ トポロジ ](/help/communities/topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、[&#x200B; ストレージリソースプロバイダー（SRP） &#x200B;](/help/communities/working-with-srp.md)を設定して、基になる[&#x200B; トポロジ &#x200B;](/help/communities/topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
 
 1. [ASRP](/help/communities/asrp.md) - Adobe オンデマンドストレージ
 1. [MSRP](/help/communities/msrp.md) - MongoDB
@@ -35,7 +35,7 @@ UGCの保存について知っておくべき重要なことは、サイトがAS
 
 JCRには、UGCをシャドウして有用なメタデータを提供するノードがありますが、これらのノードは実際のUGCと混同しないでください。
 
-[ ストレージリソースプロバイダーの概要を参照してください。](/help/communities/srp.md)
+[&#x200B; ストレージリソースプロバイダーの概要を参照してください。](/help/communities/srp.md)
 
 ## ベストプラクティス {#best-practice}
 
@@ -68,12 +68,12 @@ JCRに固有の方法は避けるべきです。
 
 SRPごとに、ネイティブクエリ言語を指定できます。 [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) パッケージのメソッドを使用して、適切なクエリ言語を実行します。
 
-詳しくは、[検索エッセンシャル ](/help/communities/search-implementation.md)を参照してください。
+詳しくは、[検索エッセンシャル &#x200B;](/help/communities/search-implementation.md)を参照してください。
 
 ## リソース {#resources}
 
-* [ コミュニティコンテンツストレージ ](/help/communities/working-with-srp.md) - UGC共通ストアで利用可能なSRPの選択肢について説明します
-* [ ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
+* [&#x200B; コミュニティコンテンツストレージ &#x200B;](/help/communities/working-with-srp.md) - UGC共通ストアで利用可能なSRPの選択肢について説明します
+* [&#x200B; ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
 * [SRPおよびUGC Essentials](/help/communities/srp-and-ugc.md) - SRP ユーティリティのメソッドと例
 * [Search Essentials](/help/communities/search-implementation.md) - UGCを検索するための必須情報
-* [SocialUtils リファクタリング ](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング
+* [SocialUtils リファクタリング &#x200B;](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング
