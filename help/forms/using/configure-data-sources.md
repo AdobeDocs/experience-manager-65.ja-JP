@@ -181,7 +181,7 @@ SOAP ベースの web サービスは、[Web Services Description Language（WSD
    * SOAP サービスにアクセスするための認証タイプ（なし、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、API キー認証、カスタム認証、X509 トークン、相互認証）を選択し、その選択内容に応じて認証の詳細を指定します。
 
      認証タイプとして&#x200B;**[!UICONTROL X509 トークン]**&#x200B;を選択した場合は、X509証明書を設定します。詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
-X509証明書のKeyStore エイリアスを**[!UICONTROL Key Alias]** フィールドに指定します。認証要求が有効な状態を維持するまでの時間を&#x200B;**[!UICONTROL 有効期間]** フィールドに秒単位で指定します。オプションで、メッセージ本文またはタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
+X509証明書のKeyStore エイリアスを&#x200B;**[!UICONTROL Key Alias]** フィールドに指定します。認証要求が有効な状態を維持するまでの時間を&#x200B;**[!UICONTROL 有効期間]** フィールドに秒単位で指定します。オプションで、メッセージ本文またはタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
 
      認証タイプとして&#x200B;**[!UICONTROL 相互認証]**&#x200B;を選択した場合は、[RESTful web サービスおよび SOAP web サービスの証明書ベースの相互認証](#mutual-authentication)を参照してください。
 
