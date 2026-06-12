@@ -1,5 +1,5 @@
 ---
-title: Distiller サービス Java™ API クイックスタート（SOAP）
+title: Distiller サービス Java&trade; API クイックスタート（SOAP）
 description: Distiller サービスで PostScript、EPS、PRN の各ファイルを PDF に変換する方法を説明します。この方法は、大量の印刷物から電子ドキュメントへの変換に一般的に採用されます。
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 100%
+source-wordcount: '194'
+ht-degree: 96%
 
 ---
 
@@ -20,17 +20,17 @@ ht-degree: 100%
 
 Distiller® サービスで Java™ API クイックスタート（SOAP）を使用できます。
 
-[クイックスタート（SOAP モード）：Java を使用した PostScript ファイルの PDF ドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java™ API を使用した PostScript ファイルの PDF ドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
 AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」にあるクイックスタートは、JBoss® Application Server と Microsoft® Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM Forms によるプログラミング」にあるクイックスタートは、JBoss® Application Server と Microsoft® Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。 ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java™ API を使用した PostScript ファイルの PDF ドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
-次のコードの例では、*Loan.ps* という名前の PostScript ファイルを *Loan.pdf* という名前の PDF ファイルに変換します（[PostScript を PDF ドキュメントに変換する](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)を参照してください）。
+次のコードの例では、*Loan.ps* という名前の PostScript ファイルを *Loan.pdf* という名前の PDF ファイルに変換します （[PostScript を PDF ドキュメントに変換する](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)を参照してください）。
 
 ```java
  /*
