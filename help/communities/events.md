@@ -1,6 +1,6 @@
 ---
 title: コミュニティコンポーネントの OSGi イベント
-description: 非同期リスナーをトリガーにする OSGi イベントが送信されます
+description: 非同期リスナーをトリガーできるOSGi イベントが送信される
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 8%
+source-wordcount: '696'
+ht-degree: 6%
 
 ---
 
@@ -20,122 +20,122 @@ ht-degree: 8%
 
 ## 概要 {#overview}
 
-メンバーが Communities の機能を操作すると、通知やゲーミフィケーション（スコアおよびバッジ）などの非同期リスナーをトリガーにできる OSGi イベントが送信されます。
+メンバーがCommunities機能を操作すると、通知やgamification（スコアリングやバッジ）などの非同期リスナーをトリガーできるOSGi イベントが送信されます。
 
-コンポーネントの [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) インスタンスは、イベントを `topic` ージに発生した `actions` として記録します。 SocialEvent には、アクションに関連付けられた `verb` を返すメソッドが含まれています。 `actions` と `verbs` の間には *n-1* 関係があります。
+コンポーネントの[SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) インスタンスは、イベントを`topic`に対して発生した`actions`として記録します。 SocialEventには、アクションに関連付けられた`verb`を返すメソッドが含まれています。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;関係があります。
 
-このリリースで提供される Communities コンポーネントについて、使用可能な各 `topic` に定義されている `verbs` を次の表に示します。
+リリースで配信されたCommunities コンポーネントについて、次の表は、使用可能な各`topic`に対して定義された`verbs`を示しています。
 
 ## トピックと動詞 {#topics-and-verbs}
 
-[&#x200B; カレンダーコンポーネント &#x200B;](calendar-basics-for-developers.md)
+[ カレンダーコンポーネント](calendar-basics-for-developers.md)
 SocialEvent `topic`= com/adobe/cq/social/calendar
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがカレンダーイベントを作成する |
+| POST | メンバーがカレンダーイベントを作成 |
 | 追加 | カレンダーイベントに対するメンバーコメント |
-| 更新 | メンバーのカレンダーイベントまたはコメントが編集されたとき |
-| 削除 | メンバーのカレンダーイベントまたはコメントが削除されました |
+| 更新 | メンバーのカレンダーイベントまたはコメントが編集されます |
+| 削除 | メンバーのカレンダーイベントまたはコメントが削除されます |
 
-[&#x200B; コメントコンポーネント &#x200B;](essentials-comments.md)
+[ コメントコンポーネント](essentials-comments.md)
 SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがコメントを作成 |
-| 追加 | メンバーのコメントへの返信 |
+| POST | メンバーがコメントを作成します |
+| 追加 | メンバーがコメントに返信 |
 | 更新 | メンバーのコメントが編集されました |
 | 削除 | メンバーのコメントが削除されました |
 
-[&#x200B; ファイルライブラリコンポーネント &#x200B;](essentials-file-library.md)
+[ ファイルライブラリコンポーネント](essentials-file-library.md)
 SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがフォルダーを作成します |
-| 添付 | メンバーがファイルをアップロードする |
-| 更新 | メンバーがフォルダーまたはファイルを更新する |
-| 削除 | メンバーがフォルダーまたはファイルを削除します |
+| 添付 | メンバーがファイルをアップロード |
+| 更新 | メンバーはフォルダーまたはファイルを更新します |
+| 削除 | メンバーはフォルダーまたはファイルを削除します |
 
-[&#x200B; フォーラムコンポーネント &#x200B;](essentials-forum.md)
+[ フォーラムコンポーネント](essentials-forum.md)
 SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがフォーラムトピックを作成 |
-| 追加 | フォーラムトピックに対するメンバーの返信 |
-| 更新 | メンバーのフォーラムトピックまたは返信が編集された |
-| 削除 | メンバーのフォーラムトピックまたは返信が削除されました |
+| POST | メンバーがフォーラムのトピックを作成 |
+| 追加 | フォーラムのトピックに対するメンバーの返信 |
+| 更新 | メンバーのフォーラムのトピックまたは返信が編集されています |
+| 削除 | メンバーのフォーラム トピックまたは返信が削除されました |
 
-[&#x200B; ジャーナルコンポーネント &#x200B;](blog-developer-basics.md)
+[ ジャーナルコンポーネント](blog-developer-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがブログ記事を作成します |
-| 追加 | ブログ記事に対するメンバーコメント |
+| POST | メンバーがブログ記事を作成する |
+| 追加 | ブログ記事へのメンバーコメント |
 | 更新 | メンバーのブログ記事またはコメントが編集されました |
 | 削除 | メンバーのブログ記事またはコメントが削除されました |
 
-[QnA コンポーネント &#x200B;](qna-essentials.md)
+[QnA コンポーネント](qna-essentials.md)
 SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーが QnA 質問を作成します |
-| 追加 | メンバーが QnA 回答を作成 |
-| 更新 | メンバーの QnA 質問または回答が編集されました |
-| を選択 | メンバーの回答が選択されました |
-| 選択解除 | メンバーの回答は選択解除されています。 |
-| 削除 | メンバーの QnA 質問または回答が削除されました |
+| POST | メンバーはQnA質問を作成します |
+| 追加 | メンバーがQnA回答を作成 |
+| 更新 | メンバーのQnAの質問または回答が編集されます |
+| SELECT | メンバーの回答が選択されています |
+| 選択解除 | メンバーの回答が選択解除されました |
+| 削除 | メンバーのQnAの質問または回答が削除されます |
 
-[&#x200B; レビューコンポーネント &#x200B;](reviews-basics.md)
+[ レビューコンポーネント](reviews-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/review
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがレビューを作成 |
+| POST | メンバーによるレビューの作成 |
 | 更新 | メンバーのレビューが編集されました |
 | 削除 | メンバーのレビューが削除されました |
 
-[&#x200B; 評価コンポーネント &#x200B;](rating-basics.md)
+[評価コンポーネント](rating-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **動詞** | **説明** |
 |---|---|
 | 評価を追加 | メンバーのコンテンツが評価されました |
-| 評価を削除 | メンバーのコンテンツが評価されていません |
+| 評価を削除 | メンバーのコンテンツがダウン評価されています |
 
-[&#x200B; 議決権行使書面 &#x200B;](essentials-voting.md)
+[投票コンポーネント](essentials-voting.md)
 SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **動詞** | **説明** |
 |---|---|
-| 投票を追加 | メンバーのコンテンツが投票でアップしました |
-| 投票を削除 | メンバーのコンテンツが投票で落選しました |
+| 投票を追加 | メンバーのコンテンツが投票されました |
+| 投票を削除 | メンバーのコンテンツがダウンしています |
 
-**モデレートが有効なコンポーネント**
+**モデレーション対応コンポーネント**
 SocialEvent `topic`= com/adobe/cq/social/moderation
 
 | **動詞** | **説明** |
 |---|---|
 | 拒否 | メンバーのコンテンツが拒否されました |
-| 不相応な旗 | メンバーのコンテンツにフラグが付けられる |
-| 不適切なものとして旗を振らない | メンバーのコンテンツのフラグが解除されました |
-| 承諾 | メンバーのコンテンツはモデレーターによって承認されます |
-| 閉じる | メンバーがコメントを閉じて編集と返信を行う |
-| を開く | メンバーがコメントを再度開く |
+| 不適切なフラグ | メンバーのコンテンツにフラグが付けられている |
+| 不適切なフラグを付けない | メンバーのコンテンツにフラグが付いていません |
+| 承認 | メンバーのコンテンツはモデレーターによって承認されます |
+| 閉じる | メンバーが編集と返信にコメントを閉じる |
+| オープン | メンバーがコメントを再度開きます |
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
-カスタムコンポーネントの場合、[SocialEvent 抽象クラス &#x200B;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) を拡張して、コンポーネントのイベントを `actions` `topic` に発生するものとして記録する必要があります。
+カスタムコンポーネントの場合、`topic`に対して発生するコンポーネントのイベントを`actions`として記録するには、[SocialEvent抽象クラス ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張する必要があります。
 
-カスタムイベントはメソッド `getVerb()` を上書きし、各 `action` ージに対して適切な `verb` が返されるようにします。 アクションに対して返される `verb` は、一般的に使用されるもの（`POST` など）や、コンポーネント専用のもの（`ADD RATING` など）にすることができます。 `actions` と `verbs` の間には *n-1* 関係があります。
+カスタムイベントはメソッド `getVerb()`を上書きして、各`action`に適切な`verb`を返します。 アクションに対して返される`verb`は、一般的に使用される1つ（例：`POST`）またはコンポーネントに特化した1つ（例：`ADD RATING`）です。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;関係があります。
 
 >[!NOTE]
 >
->カスタム拡張機能が、製品の既存の実装よりも低いランキングで登録されていることを確認します。
+>カスタム拡張機能が、製品内の既存の実装よりも低いランキングで登録されていることを確認します。
 
 ### カスタムコンポーネントイベントの疑似コード {#pseudo-code-for-custom-component-event}
 
@@ -238,15 +238,15 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 }
 ```
 
-## アクティビティストリームデータをフィルタリングする EventListener のサンプル {#sample-eventlistener-to-filter-activity-stream-data}
+## Activity Stream データをフィルタリングするEventListenerのサンプル {#sample-eventlistener-to-filter-activity-stream-data}
 
-アクティビティストリームに表示される内容を変更する目的で、イベントをリッスンすることができます。
+アクティビティストリームに表示される内容を変更する目的で、イベントをリッスンできます。
 
-次の疑似コードのサンプルを使用すると、アクティビティストリームからコメントコンポーネントのDELETEイベントを削除できます。
+次の疑似コードサンプルは、DELETEのComments用イベントをアクティビティストリームから削除します。
 
-### EventListener の疑似コード {#pseudo-code-for-eventlistener}
+### EventListenerの疑似コード {#pseudo-code-for-eventlistener}
 
-[&#x200B; 最新機能パック &#x200B;](deploy-communities.md#latestfeaturepack) が必要です。
+[最新の機能パック ](deploy-communities.md#latestfeaturepack)が必要です。
 
 ```java
 package my.company.comments;
