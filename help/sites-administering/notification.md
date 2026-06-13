@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
-workflow-type: ht
-source-wordcount: '2154'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '2182'
+ht-degree: 97%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 100%
 
 AEM は、次のユーザーに対してメール通知を送信します。
 
-* 変更やレプリケーションなど、ページイベントを購読したことがある。「[通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)」セクションでは、このようなイベントを購読する方法について説明します。
+* 変更やレプリケーションなど、ページイベントを購読したことがある。 「[通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)」セクションでは、このようなイベントを購読する方法について説明します。
 
 * フォーラムイベントを購読したことがある。
-* ワークフローで手順を実行する必要がある。[参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
+* ワークフローで手順を実行する必要がある。 [参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
 
 前提条件：
 
 * ユーザーのプロファイルで有効なメールアドレスが定義されている必要があります。
 * **Day CQ Mail Service** が適切に設定されている必要があります。
 
-ユーザーへの通知は、各自がプロファイルで定義している言語のメールで送信されます。言語ごとに、独自のカスタマイズ可能なテンプレートがあります。新しい言語用には新しいメールテンプレートを追加できます。
+ユーザーに通知が送信されると、プロファイルで定義された言語のメールが送信されます。 各言語には、カスタマイズ可能な独自のテンプレートがあります。 新しい言語に対して、新しいメールテンプレートを追加できます。
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ AEM は、次のユーザーに対してメール通知を送信します。
 
 ## メールサービスの設定 {#configuring-the-mail-service}
 
-AEM でメールを送信できるようにするには、**Day CQ Mail Service** を適切に設定する必要があります。設定は web コンソールで確認できます。AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+AEM でメールを送信できるようにするには、**Day CQ Mail Service** を適切に設定する必要があります。 設定は web コンソールで確認できます。 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 以下の制約が適用されます。
 
@@ -58,33 +58,33 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 
 ## メール通知チャネルの設定 {#configuring-the-email-notification-channel}
 
-ページまたはフォーラムのイベント通知を購読するとき、送信元のメールアドレスは、デフォルトで `no-reply@acme.com` に設定されます。この値は、Web コンソールで **Notification Email Channel** サービスを設定することで変更できます。
+ページまたはフォーラムのイベント通知を購読するとき、送信元のメールアドレスは、デフォルトで `no-reply@acme.com` に設定されます。 この値は、Web コンソールで **Notification Email Channel** サービスを設定することで変更できます。
 
-送信元のメールアドレスを設定するには、`sling:OsgiConfig` ノードをリポジトリに追加します。以下の手順で、CRXDE Lite を使用してノードを直接追加します。
+送信元のメールアドレスを設定するには、`sling:OsgiConfig` ノードをリポジトリに追加します。 以下の手順で、CRXDE Lite を使用してノードを直接追加します。
 
 1. CRXDE Lite で、`config` という名前のノードを、アプリケーションフォルダーの下に追加します。
 1. config フォルダーに、以下の名前のノードを追加します。
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel`リソースのタイプは次のとおりとします。`sling:OsgiConfig`
 
-1.  `String` プロパティを `email.from` という名前のノードに追加します。値には、使用するメールアドレスを指定します。
+1. `String` プロパティを `email.from` という名前のノードに追加します。 値には、使用するメールアドレスを指定します。
 
 1. 「**すべて保存**」をクリックします。
 
 次の手順を実行して、コンテンツパッケージのソースフォルダーでノードを定義します。
 
-1.  `jcr_root/apps/*app_name*/config folder` に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml` という名前のファイルを作成します。
+1. `jcr_root/apps/*app_name*/config folder` に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml` という名前のファイルを作成します。
 
 1. このノードを表現する次の XML を追加します。
 
    `<?xml version="1.0" encoding="UTF-8"?> <jcr:root xmlns:sling="https://sling.apache.org/jcr/sling/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig" email.from="name@server.com"/>`
 1. `email.from` 属性の値（`name@server.com`）を、実際のメールアドレスに置き換えます。
 
-1.  ファイルを保存します。
+1. ファイルを保存します。
 
 ## ワークフローメール通知サービスの設定 {#configuring-the-workflow-email-notification-service}
 
-ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL プレフィックスの両方がデフォルト値に設定されます。Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。その場合は、リポジトリ内の変更内容を保存する必要があります。
+ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL 接頭辞の両方がデフォルト値に設定されます。 Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。 その場合は、リポジトリ内の変更内容を保存する必要があります。
 
 デフォルト設定は、web コンソールに次のように表示されます。
 
@@ -137,7 +137,7 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-&lt;text_x> には、静的なテキストと動的な文字列変数を混在させることができます。ページ通知用のメールテンプレート内では次の変数を使用できます。
+&lt;text_x> には、静的なテキストと動的な文字列変数を混在させることができます。 ページ通知用のメールテンプレート内では次の変数を使用できます。
 
 * `${time}`、イベントの日時。
 
@@ -203,11 +203,11 @@ subject=<text_1>
 
 >[!NOTE]
 >
->`<text_x>` には、静的なテキストと動的な文字列変数を混在させることができます。`<text_x>` 項目の各行の末尾には、最後のインスタンスを除き、バックスラッシュ（`\`）を付加する必要があります。バックスラッシュがないと、`<text_x>` 文字列変数の終了と見なされます。
+>`<text_x>` には、静的なテキストと動的な文字列変数を混在させることができます。 `<text_x>` 項目の各行の末尾には、最後のインスタンスを除き、バックスラッシュ（`\`）を付加する必要があります。バックスラッシュがないと、`<text_x>` 文字列変数の終了と見なされます。
 >
 >テンプレート形式について詳しくは、[Properties.load() メソッドの javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) を参照してください。
 
-メソッド `${payload.path.open}` を使用すると、作業項目のペイロードのパスが表示されます。例えば、Sites のページの場合、`payload.path.open` は `/bin/wcmcommand?cmd=open&path=…` と同じようなものです。これにサーバー名が抜けているのは、テンプレートによってプレフィックスとして `${host.prefix}` が付加されるためです。
+メソッド `${payload.path.open}` を使用すると、作業項目のペイロードのパスが表示されます。 例えば、Sitesのページの場合、`payload.path.open`は`/bin/wcmcommand?cmd=open&path=…`と似ています。これはサーバー名が含まれていません。そのため、テンプレートはこれを`${host.prefix}`で前置します。
 
 メールテンプレート内では以下の変数を使用できます。
 
@@ -254,15 +254,15 @@ subject=<text_1>
 
 >[!NOTE]
 >
->メールテンプレートのファイル名として使用される `<language-code>` は、AEM で認識できる小文字 2 文字の言語コードにする必要があります。言語コードについては、AEM は ISO-639-1 に依存しています。
+>メールテンプレートのファイル名として使用される `<language-code>` は、AEM で認識できる小文字 2 文字の言語コードにする必要があります。 言語コードについては、AEM は ISO-639-1 に依存しています。
 
 ## AEM Assets メール通知の設定 {#assetsconfig}
 
-AEM Assets のコレクションが共有されている場合も共有されていない場合も、ユーザーは AEM からメール通知を受信できます。メール通知を設定するには、次の手順に従います。
+AEM Assets のコレクションが共有されている場合も共有されていない場合も、ユーザーは AEM からメール通知を受信できます。 メール通知を設定するには、次の手順に従います。
 
 1. 前述の[メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)の説明に従って、メールサービスを設定します。
-1. AEM に管理者としてログインします。**ツール**／**操作**／**Web コンソール**&#x200B;をクリックして、Web コンソール設定を開きます。
-1. **Day CQ DAM リソースコレクションサーブレット**&#x200B;を編集します。「**メールを送信**」を選択します。「**保存**」をクリックします。
+1. AEM に管理者としてログインします。 **ツール**／**操作**／**Web コンソール**&#x200B;をクリックして、Web コンソール設定を開きます。
+1. **Day CQ DAM リソースコレクションサーブレット**&#x200B;を編集します。 「**メールを送信**」を選択します。 「**保存**」をクリックします。
 
 ## OAuth の設定 {#setting-up-oauth}
 
@@ -272,11 +272,11 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 >[!NOTE]
 >
->この手順は、公開インスタンスの例です。オーサーインスタンスでメール通知を有効にするには、オーサー上で同じ手順を実行する必要があります。
+>この手順は、公開インスタンスの例です。 オーサーインスタンスでメール通知を有効にするには、オーサー上で同じ手順を実行する必要があります。
 
 ### Gmail {#gmail}
 
-1. `https://console.developers.google.com/projectcreate` でプロジェクトを作成 
+1. `https://console.developers.google.com/projectcreate` でプロジェクトを作成
 1. プロジェクトを選択し、**API とサービス**／**ダッシュボード - 資格情報**&#x200B;に移動します。
 1. 必要に応じて OAuth 同意画面を設定する
 1. 次の更新画面で、これらの 2 つの範囲を追加します。
@@ -316,7 +316,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 1. 必要な情報を以下のとおり入力します。
    * 認証 URL：`https://accounts.google.com/o/oauth2/auth`
    * トークン URL：`https://accounts.google.com/o/oauth2/token`
-   * 範囲：`https://www.googleapis.com/auth/gmail.send` および `https://mail.google.com/`。複数の範囲を追加するには、設定された各範囲の右側にある「**+**」ボタンをクリックします。
+   * 範囲：`https://www.googleapis.com/auth/gmail.send` および `https://mail.google.com/`。 複数の範囲を追加するには、設定された各範囲の右側にある「**+**」ボタンをクリックします。
    * クライアント ID とクライアント秘密鍵：上記の段落で取得した値を使用して、これらのフィールドを設定します。
    * 更新トークン URL: `https://accounts.google.com/o/oauth2/token`
    * 更新トークンの有効期限：なし
@@ -328,7 +328,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 ![CQ Mailer SMTP Oauth2 Provider 設定ウィンドウ](assets/oauth-smtpprov2.png)
 
-次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
+次に、OAuth コンポーネントをアクティベートします。 手順は次のとおりです。
 
 1. URL：`http://serveraddress:serverport/system/console/components` にアクセスして、コンポーネントコンソールに移動します。
 1. 以下のコンポーネントを探します
@@ -341,9 +341,9 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 最後に、以下により設定を確認します。
 
 1. 公開インスタンスのアドレスに移動し、管理者としてログインします。
-1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
+1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。 これにより、ご利用の SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
 1. ログインして、必要な権限を与えることに同意する
-1. 同意すると、トークンがリポジトリに格納されます。公開インスタンス：`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth` でこの URL に直接アクセスすると、`accessToken` でトークンにアクセスできます。
+1. 同意すると、トークンがリポジトリに格納されます。 公開インスタンス：`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth` でこの URL に直接アクセスすると、`accessToken` でトークンにアクセスできます。
 1. 公開インスタンスごとに上記の手順を繰り返します。
 
 <!-- clarify if the ip/server address in the last procedure is that of the publish instance -->
@@ -351,7 +351,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 ### Microsoft Outlook {#microsoft-outlook}
 
 1. [https://portal.azure.com/](https://portal.azure.com/)に移動し、ログインします。
-1. 検索バーで **Azure Active Directory** を検索し、結果をクリックします。または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
+1. 検索バーで **Azure Active Directory** を検索し、結果をクリックします。 または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
 1. **アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
    ![Microsoft Outlook を設定する際の新しい登録ボタン](assets/oauth-outlook1.png)
@@ -369,14 +369,14 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 公開インスタンスごとに上記の手順を繰り返します。
 1. 要件に応じて設定を指定します
-1. 次に、**証明書とシークレット**&#x200B;に移動し、「**新しいクライアントシークレット**」をクリックし、画面上の手順に従ってシークレットを作成します。このシークレットは後で使用するため、必ずメモしてください
+1. 次に、**証明書とシークレット**&#x200B;に移動し、「**新しいクライアントシークレット**」をクリックし、画面上の手順に従ってシークレットを作成します。 このシークレットは後で使用するため、必ずメモしてください
 1. 左側のウィンドウで「**概要**」を押し、後で使用するために、「**アプリケーション（クライアント）ID**」および「**ディレクトリ（テナント）ID**」の値をコピーします。
 
 まとめると、以下の情報を使用して、AEM 側の Mailer サービスの Oauth2 を設定する必要があります。
 
-* 認証 URLはテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
-* トークン URL はテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 更新 URL はテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 認証 URLはテナント ID を使用して構築されます。 次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* トークン URL はテナント ID を使用して構築されます。 次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 更新 URL はテナント ID を使用して構築されます。 次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * クライアント ID
 * クライアント秘密鍵
 
@@ -417,7 +417,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 ![完了した CQ Mailer SMTP OAuth2 の設定](assets/oauth-outlook-smptconfig.png)
 
-次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
+次に、OAuth コンポーネントをアクティベートします。 手順は次のとおりです。
 
 1. URL：`http://serveraddress:serverport/system/console/components` にアクセスして、コンポーネントコンソールに移動します。
 1. 以下のコンポーネントを探します
@@ -430,6 +430,6 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 最後に、以下により設定を確認します。
 
 1. 公開インスタンスのアドレスに移動し、管理者としてログインします。
-1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Outlook）のページにリダイレクトされます。
+1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。 これにより、ご利用の SMTP プロバイダー（この場合は Outlook）のページにリダイレクトされます。
 1. ログインして、必要な権限を与えることに同意する
-1. 同意すると、トークンがリポジトリに格納されます。ご利用の公開インスタンスで次の URL に直接アクセスすることで、`accessToken` のトークンにアクセスできます。`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
+1. 同意すると、トークンがリポジトリに格納されます。 ご利用の公開インスタンスで次の URL に直接アクセスすることで、`accessToken` のトークンにアクセスできます。`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
