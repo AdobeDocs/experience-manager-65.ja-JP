@@ -397,7 +397,7 @@ INDD ファイルの取り込みをサポートして、このファイル形式
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li>
     </ul>
     <div>
-      シャープニングについては、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf">画像のシャープニング</a>を参照してください。
+      シャープニングについては、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf?lang=ja">画像のシャープニング</a>を参照してください。
     </div> </td>
   </tr>
   <tr>
