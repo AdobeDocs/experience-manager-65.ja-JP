@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # コミュニティコンポーネントのオーバーレイ {#overlay-communities-components}
 
-デフォルトのコンポーネントを[ オーバーレイ ](/help/communities/client-customize.md#overlays)する目的は、コンポーネントに対するすべての相対参照について、コンポーネントの外観や動作をグローバルに変更することです。 /libs フォルダーで検索する前に/apps フォルダーに解決するslingの性質に依存しています。 したがって、コンポーネントへのパスは、デフォルトコンポーネントへのパスと同じですが、/apps フォルダーにあり、/libs フォルダーにはありません。
+デフォルトのコンポーネントを[&#x200B; オーバーレイ &#x200B;](/help/communities/client-customize.md#overlays)する目的は、コンポーネントに対するすべての相対参照について、コンポーネントの外観や動作をグローバルに変更することです。 /libs フォルダーで検索する前に/apps フォルダーに解決するslingの性質に依存しています。 したがって、コンポーネントへのパスは、デフォルトコンポーネントへのパスと同じですが、/apps フォルダーにあり、/libs フォルダーにはありません。
 
 ## 例 {#example}
 
@@ -35,7 +35,7 @@ ht-degree: 3%
 
 **通知メールをオーバーレイ**
 
-電子メール通知のメッセージをカスタマイズする場合は、[ テンプレートを`/libs/settings/community/templates/email/html`に](/help/communities/client-customize.md#overlays) オーバーレイすることでカスタマイズできます。
+電子メール通知のメッセージをカスタマイズする場合は、[&#x200B; テンプレートを`/libs/settings/community/templates/email/html`に](/help/communities/client-customize.md#overlays) オーバーレイすることでカスタマイズできます。
 
 例えば、メンションメール通知を編集するとします（UGCが作成される特定のコミュニティコンポーネントの場合）。 このような場合は、**@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞&#x200B;**メンション**&#x200B;の&#x200B;**if**&#x200B;条件を追加します。
 

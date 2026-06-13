@@ -24,7 +24,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->[ オーバーレイ ](client-customize.md#overlays) コンポーネントの拡張はサポートされていません。
+>[&#x200B; オーバーレイ &#x200B;](client-customize.md#overlays) コンポーネントの拡張はサポートされていません。
 
 ## 例 {#example}
 

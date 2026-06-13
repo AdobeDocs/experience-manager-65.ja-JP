@@ -128,7 +128,7 @@ Forms サービスのクライアント API を使用して、サーバー上で
 [Web サービス APIを使用したフォームデータの計算](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 [Forms サービス API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
-[ インタラクティブ PDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[&#x200B; インタラクティブ PDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 [FormsをレンダリングするWeb アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Java API を使用してフォームデータを計算する {#calculate-form-data-using-the-java-api}

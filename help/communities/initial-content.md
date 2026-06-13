@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # 初期サンドボックスコンテンツ {#initial-sandbox-content}
 
-このセクションでは、次のページを作成します。すべてのページで[ ページテンプレート ](initial-app.md#createthepagetemplate)を使用します。
+このセクションでは、次のページを作成します。すべてのページで[&#x200B; ページテンプレート &#x200B;](initial-app.md#createthepagetemplate)を使用します。
 
 * SCF サンドボックスサイト：英語バージョンのメインページにリダイレクトされます。
 
@@ -30,17 +30,17 @@ ht-degree: 5%
 
 ## 最初のページを作成 {#create-first-pages}
 
-[ ページテンプレート ](initial-app.md#createthepagetemplate)が作成されたので、/content ディレクトリにweb サイトのルートページを設定できます。
+[&#x200B; ページテンプレート &#x200B;](initial-app.md#createthepagetemplate)が作成されたので、/content ディレクトリにweb サイトのルートページを設定できます。
 
 1. 標準UIには、現在、サイトを作成するためのブループリントが用意されています。 このチュートリアルではシンプルなサイトを作成するので、クラシック UIが便利です。
 
    クラシック UIに切り替えるには、グローバルナビゲーションを選択し、プロジェクトアイコンの右側にカーソルを合わせます。 表示される「*クラシック UIに切り替え*」アイコンを選択します。
 
-   ![ クラシック ui](assets/classic-ui.png)
+   ![&#x200B; クラシック ui](assets/classic-ui.png)
 
-   クラシック UIに切り替える機能は、管理者](../../help/sites-administering/enable-classic-ui.md)が[有効にする必要があります。
+   クラシック UIに切り替える機能は、管理者[&#128279;](../../help/sites-administering/enable-classic-ui.md)が有効にする必要があります。
 
-1. [ クラシック UIようこそページ ](http://localhost:4502/welcome.html)から、**[!UICONTROL Web サイト]**&#x200B;を選択します。
+1. [&#x200B; クラシック UIようこそページ &#x200B;](http://localhost:4502/welcome.html)から、**[!UICONTROL Web サイト]**&#x200B;を選択します。
 
    ![classic-ui-website](assets/classic-ui-website.png)
 
