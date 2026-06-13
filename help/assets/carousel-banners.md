@@ -144,10 +144,10 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
    <td>単一の SKU（クエリ文字列内）</td>
    <td><p>記録されたクイックビューの URLとしては以下が挙げられます。</p>
     <ul>
-     <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=866558&source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1196184&source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1081492&source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1898294&source=100</code></p> </li>
     </ul> <p>この URL で変化する唯一の部分は <code>productId=</code> というクエリ文字列パラメーターの値であり、これが SKU 値であることは明白です。 したがって、ホットスポットや画像マップには、次のような値が設定された SKU フィールドのみが必要になります。 <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
   </tr>
   <tr>
@@ -163,9 +163,9 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
    <td>SKU とカテゴリ ID（クエリ文字列内）</td>
    <td><p>記録されたクイックビューの URLとしては以下が挙げられます。</p>
     <ul>
-     <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
-     <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
-     <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1100004&prodId=305466</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1100004&prodId=310181</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1740148&prodId=308706</code></p> </li>
     </ul> <p>この場合、URL には変化する部分が 2 つあります。 SKU が <code>prodId</code> パラメーターに、カテゴリ ID が <code>category=</code> パラメーターに格納されています。</p> <p>そのため、ホットスポット／画像マップ定義はペアになります。 つまり、SKU 値と、<code>categoryId</code> という追加の変数です。 結果のペアは次のようになります。</p>
     <ul>
      <li><p>SKU が <strong><code>305466</code></strong>、<code>categoryId</code> が <code>1100004</code>。</p> </li>
@@ -310,8 +310,8 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
 
    * 「**[!UICONTROL エクスペリエンスフラグメント]**」を選択します。
 
-      * Experience Manager Sitesをご利用の場合は、検索アイコン（虫眼鏡）を選択してエクスペリエンスフラグメントページを開きます。使用するエクスペリエンスフラグメントを選択し、ページの右上隅にある&#x200B;**[!UICONTROL Select]**を選択して、ホットスポット管理ページに戻ります。
-[ エクスペリエンスフラグメント ](/help/sites-authoring/experience-fragments.md)を参照してください。
+      * Experience Manager Sitesをご利用の場合は、検索アイコン（虫眼鏡）を選択してエクスペリエンスフラグメントページを開きます。使用するエクスペリエンスフラグメントを選択し、ページの右上隅にある&#x200B;**[!UICONTROL Select]**&#x200B;を選択して、ホットスポット管理ページに戻ります。
+[&#x200B; エクスペリエンスフラグメント &#x200B;](/help/sites-authoring/experience-fragments.md)を参照してください。
 
       * エクスペリエンスフラグメントがバナーに表示されるときの幅と高さを指定します。
 
@@ -379,8 +379,8 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
 
 カルーセルバナーに問題がなければ、公開できます。
 Web ページへのビデオまたは画像ビューアの埋め込み[を参照してください](/help/assets/embed-code.md)。
-「[Web アプリケーションへのURLのリンク ](/help/assets/linking-urls-to-yourwebapplication.md)」を参照してください。インタラクティブコンテンツに相対URL （特にExperience Manager Sites ページへのリンク）を含むリンクがある場合、URL ベースのリンクは使用できません。
-[ ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+「[Web アプリケーションへのURLのリンク &#x200B;](/help/assets/linking-urls-to-yourwebapplication.md)」を参照してください。インタラクティブコンテンツに相対URL （特にExperience Manager Sites ページへのリンク）を含むリンクがある場合、URL ベースのリンクは使用できません。
+[&#x200B; ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 
 カルーセルバナーは、カルーセルエディター（推奨）または&#x200B;**[!UICONTROL ビューア]**&#x200B;リストでプレビューできます。
 
