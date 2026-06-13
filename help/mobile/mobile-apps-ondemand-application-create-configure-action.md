@@ -62,11 +62,11 @@ ht-degree: 7%
 
 アプリケーションダッシュボードからオンデマンドアプリを作成したら、次の手順でアプリをクラウド設定に関連付けます。
 
-詳しくは、[ アプリをクラウド設定に関連付ける](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
+詳しくは、[&#x200B; アプリをクラウド設定に関連付ける](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
 
 ### 一歩先を行く {#getting-ahead}
 
-オンデマンドアプリケーションを作成し、そのアプリケーションをクラウド設定に関連付けることに慣れたら、[ コンテンツ管理アクション ](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)を参照してください。
+オンデマンドアプリケーションを作成し、そのアプリケーションをクラウド設定に関連付けることに慣れたら、[&#x200B; コンテンツ管理アクション &#x200B;](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)を参照してください。
 
 **コンテンツ管理アクション**&#x200B;には、次のコンテンツの作成と管理が含まれます。
 

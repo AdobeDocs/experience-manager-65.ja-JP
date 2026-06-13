@@ -119,7 +119,7 @@ AEMで作成したモバイルアプリケーションのルートページがAp
 
 1. 基本プロパティと詳細プロパティを設定し、「完了」アイコンをクリックします。
 
-   ![ チェックマーク記号で示される「完了」アイコン。](do-not-localize/chlimage_1-10.png)
+   ![&#x200B; チェックマーク記号で示される「完了」アイコン。](do-not-localize/chlimage_1-10.png)
 
 #### アプリケーションの言語バリエーションの設定 {#configure-a-language-variation-of-the-application}
 
@@ -134,7 +134,7 @@ AEMで作成したモバイルアプリケーションのルートページがAp
 
 1. 「基本」、「詳細」、「ビルド」および「分析」タブでプロパティを設定し、「完了」アイコンをクリックします。
 
-   ![ チェックマーク記号で示される「完了」アイコン。](do-not-localize/chlimage_1-13.png)
+   ![&#x200B; チェックマーク記号で示される「完了」アイコン。](do-not-localize/chlimage_1-13.png)
 
 ### モバイルアプリケーションのコンテンツのオーサリング {#authoring-the-content-of-a-mobile-application}
 

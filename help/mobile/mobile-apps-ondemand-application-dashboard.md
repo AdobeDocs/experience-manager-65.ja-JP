@@ -58,7 +58,7 @@ AEM Mobile アプリケーションダッシュボードまたはコントロー
 >
 >右上の歯車をクリックして、Mobile On-Demand Cloud設定を設定します。
 >
->詳しくは、[ モバイルオンデマンドサービスの設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
+>詳しくは、[&#x200B; モバイルオンデマンドサービスの設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 

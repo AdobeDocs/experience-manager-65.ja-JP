@@ -168,7 +168,7 @@ OR‧分岐は、ワークフロー内に分割を作成し、以降は 1 つの
 
 変数を使用して、式エディターを使用したルーティング式を定義できます。 OR‧分岐ステップでルーティング式を使用する方法について詳しくは、「[OR‧分岐ステップ](/help/sites-developing/workflows-step-ref.md#or-split)」を参照してください。
 
-この例では、ルーティング式を定義する前に、[例 2 ](../../forms/using/variable-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。 **totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。 同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
+この例では、ルーティング式を定義する前に、[例 2 &#x200B;](../../forms/using/variable-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。 **totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。 同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
 
 [OR ビデオを分割](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
@@ -280,7 +280,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ### ワークフロー変数を使用して、機密性の高いユーザーデータを JCR 外に保存 {#jcr-independent-persistance}
 
 Forms Workflowを使用して処理されるデータには、個人情報や機密個人情報などの機密性の高い利用者データが含まれる場合があります。企業は、様々なワークフローステップ（およびワークフロー変数を使用して渡される）によって処理されるデータを、JCR ストレージから自社が所有および管理する外部データストアに保存できます。外部ストレージにワークフローデータを保持する方法について詳しくは、[顧客所有のデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
-[!DNL Adobe Experience Manager]は、ワークフロー変数を外部のAzure BLOB ストレージに保存するためのワークフローAPI [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)を提供します。APIの使用について詳しくは、[ ワークフロー変数を使用して機密データをパラメーター化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)を参照してください。
+[!DNL Adobe Experience Manager]は、ワークフロー変数を外部のAzure BLOB ストレージに保存するためのワークフローAPI [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)を提供します。APIの使用について詳しくは、[&#x200B; ワークフロー変数を使用して機密データをパラメーター化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)を参照してください。
 
 ## 変数の編集 {#edit-a-variable}
 

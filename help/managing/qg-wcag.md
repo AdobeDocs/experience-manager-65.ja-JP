@@ -16,7 +16,7 @@ ht-degree: 91%
 
 Adobe Experience Manager（AEM）は、web コンテンツのアクセシビリティガイドラインへの準拠を最大限に高めるように開発されました。
 
-[Web Content Accessibility Guidelines （WCAG）バージョン 2.1 ](https://www.w3.org/TR/WCAG/)は、[World Wide Web Consortium（W3C）](https://www.w3.org/)が [Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)の下で開発した一連のガイドラインであり、国際的に認知されています。
+[Web Content Accessibility Guidelines （WCAG）バージョン 2.1 &#x200B;](https://www.w3.org/TR/WCAG/)は、[World Wide Web Consortium（W3C）](https://www.w3.org/)が [Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)の下で開発した一連のガイドラインであり、国際的に認知されています。
 
 >[!NOTE]
 >

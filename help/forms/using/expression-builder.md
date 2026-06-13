@@ -155,7 +155,7 @@ public class RemoteFuntionImpl implements RemoteFunction {
 使用するサンプルアーカイブを以下に示します。
 
 * **GoodFunctions.jar.zip** はサンプルのリモート関数の定義を含むバンドルを持っている jar ファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
-* **GoodFunctions.zip **&#x200B;は、カスタムのリモート関数を定義しそれに対するバンドルを作成するためのソースコードのパッケージです。
+* **GoodFunctions.zip &#x200B;**&#x200B;は、カスタムのリモート関数を定義しそれに対するバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip
 
