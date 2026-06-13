@@ -8,7 +8,7 @@ role: User,Admin,Developer
 source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
 workflow-type: tm+mt
 source-wordcount: '1900'
-ht-degree: 89%
+ht-degree: 92%
 
 ---
 
@@ -36,11 +36,11 @@ Search&Promote is end-of-life September 1, 2022 | Assets | If a user does not ha
 
 | 領域 | 機能 | 代替手段 | バージョン（SP） |
 |---|---|---|---|
-| Sites | AEM Assets REST APIでのコンテンツフラグメントのサポート | AEM 6.5 LTS SP2では、コンテンツフラグメントとモデル管理用の最新のOpenAPIが提供されているため、AEM Assets REST APIの古いコンテンツフラグメントサポートエンドポイントは非推奨になりました。<br>Adobeでは、これらの古いエンドポイントを提供終了のお知らせまで利用できる予定です。 Adobeでは、非推奨のエンドポイントに対する機能強化は計画していません。 | 6.5.24 |
+| Sites | AEM Assets REST API でのコンテンツフラグメントのサポート | AEM 6.5 LTS SP2 では、コンテンツフラグメントとモデル管理用の最新の OpenAPI が提供されているので、AEM Assets REST API の古いコンテンツフラグメントサポートエンドポイントは非推奨（廃止予定）となりました。<br>アドビでは、提供終了の発表があるまで、これらの古いエンドポイントの提供を継続する予定です。 アドビでは、非推奨（廃止予定）のエンドポイントに対する今後の機能強化を予定していません。 | 6.5.24 |
 | Sites | [SPA Editor](/help/sites-developing/spa-editor-deprecation.md) | ヘッドレスのユースケースでは、ビジュアル編集用の[ユニバーサルエディター](/help/sites-developing/universal-editor/introduction.md)、またはフォームベース編集用の[コンテンツフラグメントエディター](/help/sites-developing/universal-editor/introduction.md)を活用します。 | 6.5.23 |
 | Sites | **Adobe AEM Managed Polling Configuration** サービス：`com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | **Adobe AEM Analytics Report Sling Importer** サービス。 詳しくは、 Adobe Analytics への接続とフレームワークの作成 - [読み込み間隔の設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)を参照してください。 | 6.5.19.0 |
 | Screens | Adobe Experience Manager（AEM）の ActiveMQ。 2 つの AEM パブリッシュインスタンス間の通信に ActiveMQ が使用されていました。 | アドビでは、現在ロードバランサーを使用することを推奨しています。 | 6.5.18.0 |
-| **ソーシャルメディアのステータス** のエクスペリエンスフラグメントのプロパティ。 | |  | 6.5.11.0 |
+| **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 | |  | 6.5.11.0 |
 | [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | 現在の[モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud 統合 | AEMからCreative Cloudへのフォルダー共有は、AEM 6.2で導入されました。 これは、クリエイティブユーザーにAEMからアセットへのアクセス権を付与し、[!DNL Creative Cloud]個のアプリケーションでアセットを開き、新しいファイルをアップロードしたり、AEMに変更内容を保存したりできるようにします。 Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが向上し、Photoshop、InDesign および Illustrator 内から AEM のアセットへの直接アクセスが強化されています。 AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。 この機能は AEM に含まれてはいますが、代替ソリューションを使用することをお勧めします。 | Adobe Asset Link や AEM Desktop App などの新しい Creative Cloud 統合機能に切り替えることをお勧めします。 |  |
 | Assets | `AssetDownloadServlet` は、パブリッシュインスタンスに対してデフォルトで無効になっています。 詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 | 設定について詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 |  |

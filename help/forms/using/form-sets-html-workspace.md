@@ -1,6 +1,6 @@
 ---
 title: AEM Forms Workspace のフォームセットの使用
-description: フォームセットは HTML5 フォームのコレクションであり、エンドユーザーには 1 つのフォームセットとして提供されます。AEM Forms Workspace のフォームセットの使用方法について説明します。
+description: フォームセットは HTML5 フォームのコレクションであり、エンドユーザーには 1 つのフォームセットとして提供されます。 AEM Forms Workspace のフォームセットの使用方法について説明します。
 contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,25 +12,25 @@ feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '347'
 ht-degree: 100%
 
 ---
 
 # AEM Forms Workspace のフォームセットの使用{#working-with-formsets-in-aem-forms-workspace}
 
-フォームセットは HTML5 フォームのコレクションであり、エンドユーザーには 1 つのフォームセットとして提供されます。エンドユーザーがフォームセットへの入力を開始すると、フォームセットは入力された内容をシームレスに別のフォームに移行します。フォームセットは 1 回クリックすれば送信できます。フォームセットおよびその設定方法について詳しくは、[AEM Forms のフォームセット](../../forms/using/formset-in-aem-forms.md)を参照してください。
+フォームセットは HTML5 フォームのコレクションであり、エンドユーザーには 1 つのフォームセットとして提供されます。 エンドユーザーがフォームセットへの入力を開始すると、フォームセットは入力された内容をシームレスに別のフォームに移行します。 フォームセットは 1 回クリックすれば送信できます。 フォームセットおよびその設定方法について詳しくは、[AEM Forms のフォームセット](../../forms/using/formset-in-aem-forms.md)を参照してください。
 
-AEM Forms Workspace はフォームセットをサポートします。フォームセットでは、サービスやプロセスに関連する複数のフォームをグループ化し、ビジネス上のプロセスを自動化すると共にエンドユーザーに表示します。このシナリオでは、ユーザーはセット全体を 1 つとして記入し、個々のフォームやプロセスをファイル、送信、追跡する必要はありません。
+AEM Forms Workspace はフォームセットをサポートします。 フォームセットでは、サービスやプロセスに関連する複数のフォームをグループ化し、ビジネス上のプロセスを自動化すると共にエンドユーザーに表示します。 このシナリオでは、ユーザーはセット全体を 1 つとして記入し、個々のフォームやプロセスをファイル、送信、追跡する必要はありません。
 
 ## AEM Forms Workspace アプリケーションにおけるフォームセットのスタートポイントへの割り当て {#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}
 
-1. Workbench でビジネスプロセスのワークフローを作成します。詳しくは、[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください。
+1. ワークベンチでビジネスプロセスのワークフローを作成します。 詳しくは、[ワークベンチヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください。
 1. スタートポイントの「Process Properties」の「Presentation &amp; Data」で、「**CRX アセットを使用する**」を選択します。
 
    ![1-3](assets/1-3.png)
 
-1. CRX アセットパスの横にある「![参照](assets/browse.png)」（参照）をクリックします。フォームアセットを選択ダイアログが表示されます。
+1. CRX アセットパスの横にある「![参照](assets/browse.png)」（参照）をクリックします。 フォームアセットを選択ダイアログが表示されます。
 
    ![2-1](assets/2-1.png)
 

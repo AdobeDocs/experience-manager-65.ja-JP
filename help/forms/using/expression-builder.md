@@ -11,18 +11,18 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 100%
+source-wordcount: '797'
+ht-degree: 96%
 
 ---
 
 # 式ビルダーのリモート関数{#remote-functions-in-expression-builder}
 
-式ビルダーを使用して、データ辞書またはエンドユーザーによって提供されたデータ値に対して計算を実行する式または条件を作成できます。Correspondence Management は式の評価の結果を使用して、アセット（テキスト、画像、リスト、条件など）を選択し、それらを必要に応じて通信に挿入することができます。
+式ビルダーを使用して、データ辞書またはエンドユーザーによって提供されたデータ値に対して計算を実行する式または条件を作成できます。 Correspondence Management は式の評価の結果を使用して、アセット（テキスト、画像、リスト、条件など）を選択し、それらを必要に応じて通信に挿入することができます。
 
 ## 式ビルダーによる式およびリモート関数の作成 {#creating-expressions-and-remote-functions-with-expression-builder}
 
-式ビルダーは内部的には JSP EL ライブラリを使用しているため、式は JSPEL 構文に従います。詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
+式ビルダーは内部的には JSP EL ライブラリを使用しているため、式は JSPEL 構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
 
 ![式ビルダー](assets/expressionbuilder.png)
 
@@ -35,10 +35,10 @@ ht-degree: 100%
 Correspondence Management ソリューションで使用できる、一般的な JSP EL の例は以下のとおりです。
 
 * 2 つの数値の追加： ${number1 + number2}
-* 2 つの文字列の連結： ${str1} ${str2}
+* 2つの文字列を連結するには：${str1} ${str2}
 * 2 つの数値の比較： ${age &lt; 18}
 
-詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の Expression Manager は、JSP EL 仕様の特定の変数や関数をサポートしていません。以下に例を示します。
+詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。 クライアント側の Expression Manager は、JSP EL 仕様の特定の変数や関数をサポートしていません。以下に例を示します。
 
 * コレクションのインデックスとマップのキー（[] 表記を使用）は、クライアント側で評価される式の変数名には対応していません。
 * 式に使用する関数のパラメーターの型や戻り値の型を以下に示しています。
@@ -67,21 +67,21 @@ Correspondence Management ソリューションで使用できる、一般的な
 
 ### リモート関数 {#remote-function}
 
-リモート関数を使用すると、式内でカスタムロジックを使用できます。Java のメソッドとして式内で使用するためのカスタムロジックを作成でき、同じ関数が式内で使用できます。使用可能なリモート関数の一覧は、式エディターの左側の「リモート関数」タブにあります。
+リモート関数を使用すると、式内でカスタムロジックを使用できます。 Java のメソッドとして式内で使用するためのカスタムロジックを作成でき、同じ関数が式内で使用できます。 使用可能なリモート関数の一覧は、式エディターの左側の「リモート関数」タブにあります。
 
 ![remotefunction](assets/remotefunction.png)
 
 #### カスタムリモート関数の追加 {#adding-custom-remote-functions}
 
-カスタムバンドルを作成して、式内で使用する独自のリモート関数をエクスポートできます。カスタムバンドルを作成して、独自のリモート関数をエクスポートするには、次のタスクを実行します。このデモでは、入力文字列を大文字に変換するカスタム関数を作成する例を示します。
+カスタムバンドルを作成して、式内で使用する独自のリモート関数をエクスポートできます。 カスタムバンドルを作成して、独自のリモート関数をエクスポートするには、次のタスクを実行します。 このデモでは、入力文字列を大文字に変換するカスタム関数を作成する例を示します。
 
 1. Expression Manager 用に書き出すメソッドを含んだ OSGi サービスのインターフェイスを定義します。
-1. インターフェイス A のメソッドを宣言し、@ServiceMethod 注釈を設定します（com.adobe.exm.expeval.ServiceMethod）。Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod 注釈には次のオプション属性があり、必要に応じて指定することができます。
+1. インターフェイス A のメソッドを宣言し、@ServiceMethod 注釈を設定します（com.adobe.exm.expeval.ServiceMethod）。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。 ServiceMethod 注釈には次のオプション属性があり、必要に応じて指定することができます。
 
-   1. **有効**：このメソッドを有効化するかどうかを決定します。Expression Manager では、無効なメソッドは無視されます。
-   1. **familyId**：メソッドのファミリー（グループ）を指定します。空の場合、Expression Manager では、メソッドがデフォルトのファミリーに属するものと見なします。関数が選択されたファミリーのレジストリはありません（デフォルトのファミリーを除く）。Expression Manager では、様々なバンドルによって書き出されたすべての関数で指定されているすべてのファミリー ID の和集合を取得すれば、レジストリが動的に作成されます。ここで指定された ID は式オーサリングユーザーインターフェイスにも表示されるため、適切に判読できることを確認します。
-   1. **displayName**：人が判読できる関数の名前です。この名前は、オーサリングユーザーインターフェイスに表示されます。空の場合、Expression Manager では、関数のプレフィックスとローカル名を使用してデフォルトの名前が作成されます。
-   1. **Description**：関数の詳細な説明です。この説明は、オーサリングユーザーインターフェイスに表示されます。空の場合、関数のプレフィックスとローカル名を使用するデフォルトの説明が Expression Manager によって作成されます。
+   1. **有効**：このメソッドを有効化するかどうかを決定します。 Expression Manager では、無効なメソッドは無視されます。
+   1. **familyId**：メソッドのファミリー（グループ）を指定します。 空の場合、Expression Manager では、メソッドがデフォルトのファミリーに属するものと見なします。 関数が選択されたファミリーのレジストリはありません（デフォルトのファミリーを除く）。 Expression Manager では、様々なバンドルによって書き出されたすべての関数で指定されているすべてのファミリー ID の和集合を取得すれば、レジストリが動的に作成されます。 ここで指定された ID は式オーサリングユーザーインターフェイスにも表示されるため、適切に判読できることを確認します。
+   1. **displayName**：人が判読できる関数の名前です。 この名前は、オーサリングユーザーインターフェイスに表示されます。 空の場合、Expression Manager では、関数の接頭辞とローカル名を使用してデフォルトの名前が作成されます。
+   1. **Description**：関数の詳細な説明です。 この説明は、オーサリングユーザーインターフェイスに表示されます。 空の場合、関数の接頭辞とローカル名を使用するデフォルトの説明が Expression Manager によって作成されます。
 
    ```java
    package mergeandfuse.com;
@@ -94,7 +94,7 @@ Correspondence Management ソリューションで使用できる、一般的な
    }
    ```
 
-   メソッドのパラメーターには、必要に応じて @ServiceMethodParameter 注釈（com.adobe.exm.expeval.ServiceMethodParameter）を使用し、注釈を設定することもできます。この注釈は、オーサリングユーザーインターフェイスに表示されるメソッドパラメーターの名前と説明を人が判読できる形で指定する目的でのみ使用されます。インターフェイスメソッドのパラメーターおよび戻り値が、次の型のいずれかに属していることを確認します。
+   メソッドのパラメーターには、必要に応じて @ServiceMethodParameter 注釈（com.adobe.exm.expeval.ServiceMethodParameter）を使用し、注釈を設定することもできます。 この注釈は、オーサリングユーザーインターフェイスに表示されるメソッドパラメーターの名前と説明を人が判読できる形で指定する目的でのみ使用されます。 インターフェイスメソッドのパラメーターおよび戻り値が、次の型のいずれかに属していることを確認します。
 
    * java.lang.String
    * java.lang.Character
@@ -126,7 +126,7 @@ Correspondence Management ソリューションで使用できる、一般的な
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-exm.service=true エントリは、式マネージャーに対して、式での使用に適したリモート関数をサービスに含めるように指示します。&lt;service_id> 値は、有効な Java 識別子である必要があります（英数字、$、他の特殊文字なしで _）。この値の先頭に REMOTE_ というキーワードを付けると、式の中で使用されるプレフィックスとなります。例えば、サービスプロパティ内の注釈付きメソッド bar() およびサービス ID foo とのインターフェイスは、REMOTE_foo:bar() を使用して式内で参照できます。
+exm.service=true エントリは、式マネージャーに対して、式での使用に適したリモート関数をサービスに含めるように指示します。 &lt;service_id> 値は、有効な Java 識別子である必要があります（英数字、$、他の特殊文字なしで _）。 この値の先頭に REMOTE_ というキーワードを付けると、式の中で使用される接頭辞となります。 例えば、注釈付きのメソッド bar （）とサービス プロパティのサービス ID fooを持つインターフェイスは、REMOTE_foo:bar （）を使用して式内で参照できます。
 
 ```java
 package mergeandfuse.com;
@@ -154,7 +154,7 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 使用するサンプルアーカイブを以下に示します。
 
-* **GoodFunctions.jar.zip** はサンプルのリモート関数の定義を含むバンドルを持っている jar ファイルです。GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
+* **GoodFunctions.jar.zip** はサンプルのリモート関数の定義を含むバンドルを持っている jar ファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
 * **GoodFunctions.zip **&#x200B;は、カスタムのリモート関数を定義しそれに対するバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip

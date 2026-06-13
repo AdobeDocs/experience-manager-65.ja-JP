@@ -11,8 +11,8 @@ feature: Mobile
 role: User
 source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 24%
+source-wordcount: '349'
+ht-degree: 22%
 
 ---
 
@@ -20,24 +20,24 @@ ht-degree: 24%
 
 {{ue-over-mobile}}
 
-記事、バナーおよびコレクションは、AEMでは cq:Pages として表されます。
+記事、バナーおよびコレクションは、AEMではcq:Pagesとして表されます。
 
-これらのスキーマエンティティは、Adobe Experience Manager（AEM） Mobile On-Demand Services のメタデータと統合に関するサポートプロパティを表す、以下に示すいくつかのプロパティに加えて :Page 任意の cq で見つかる同じ共通プロパティを共有します。
+これらは、任意のcq:Pageで見つかった同じ共通プロパティに加えて、Adobe Experience Manager（AEM） Mobile On-Demand Services メタデータと統合をサポートするプロパティを表す以下に示す他のプロパティを共有します。
 
-次の表に、コンテンツのプロパティとノードを示します。
+次の表に、コンテンツプロパティとノードを示します。
 
 ## 共通の統合プロパティ {#common-integration-properties}
 
-| **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** | **説明** |
+| **プロパティ名** | **タイプ** | **既定値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | 文字列 |  | AEM Mobileによって割り当てられ、AEM Mobileにアップロードされたり、AEM Mobileから読み込まれたりすると、AEMによって保存されます |
+| dps-id | 文字列 |  | AEM Mobileによって割り当てられ、AEMによって保存されます。AEM Mobileにアップロードするか、AEM Mobileから読み込まれた後 |
 | dps-resourceType | 文字列 | dps:Article | `dps:Banner` \| `dps:Collection` \| `entity type property` |
-| dps-version | 文字列 |  | AEM Mobile エンティティのバージョン （完全な aemm-id 内にも含まれる） |
-| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/読み込みの日付 |
-| dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最終アップロード日 |
-| dps-lastUploadedBy | 文字列:userid |  | AEMからAEM Mobileへの最後のアップロードリクエストを実行した id ユーザー |
+| dps-version | 文字列 |  | AEM Mobile エンティティのバージョン（完全なaemm-id内にも含まれています） |
+| dps-lastSynced | 日付 |  | AEM MobileからAEMへの前回の同期/読み込みの日付 |
+| dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最後のアップロード日 |
+| dps-lastUploadedBy | 文字列:userid |  | AEMからAEM Mobileへの最後のアップロードリクエストを実行したID ユーザー |
 
-## コアメタデータのプロパティ {#core-metadata-properties}
+## 主要メタデータプロパティ {#core-metadata-properties}
 
 | プロパティ名 | タイプ | デフォルト値または期待値 |
 |--- |--- |--- |
@@ -49,16 +49,16 @@ ht-degree: 24%
 | dps-category | 文字列 |  |
 | dps-keywords | 文字列[] |  |
 | dps-internalKeywords | 文字列[] |  |
-| dps-importance | 文字列[] | {&quot;low&quot;, &quot;normal&quot;, &quot;high&quot;} からの重要度 |
+| dps-importance | 文字列[] | {&quot;low&quot;, &quot;normal&quot;, &quot;high&quot;}からの重要度 |
 
 ### 記事 {#articles}
 
-| **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** |
+| **プロパティ名** | **タイプ** | **既定値または期待値** |
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
 | dps-hideFromBrowsePage | ブーリアン |  |
-| dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
+| dps-access | 文字列 | ProtectedAccess from {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
 | **ソーシャル** |  |  |
 | dps-socialShareURL | 文字列 |  |
 | dps-articleText | 文字列 |  |
@@ -66,20 +66,20 @@ ht-degree: 24%
 
 ### バナー {#banners}
 
-| **プロパティ名** | **タイプ** | **デフォルトまたは想定される値** |
+| **プロパティ名** | **タイプ** | **既定値または期待値** |
 |---|---|---|
-| dps-tapAction |  | {webLink} の TapAction |
-| dps-tapActionUrl |  |  |
+| dps-tapAction |  | {webLink}からのTapAction |
+| dps-tapActinUrl |  |  |
 
 ### コレクション {#collections}
 
 | プロパティ名 | タイプ | デフォルト値または期待値 |
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
-| dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
+| dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;}から |
 | dps-horizontalSwipe | ブーリアン |  |
 | dps-allowDownload | ブーリアン |  |
-| dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
+| dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;}から |
 | dps-layout | 文字列 |  |
 
 ## コンテンツノード {#content-nodes}
@@ -96,7 +96,7 @@ ht-degree: 24%
 
 | ノード名 | タイプ | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
-| ソーシャル共有イメージ |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
+| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### バナー {#banners-1}
 
