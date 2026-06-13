@@ -33,7 +33,7 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 
 ## 前提条件 {#prerequisites}
 
-GraphQLを使用しているお客様は、GraphQL インデックスパッケージ 1.0.5を使用してAEM コンテンツフラグメントをインストールする必要があります。 詳しくは、[ リリースノート ](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package)を参照してください。
+GraphQLを使用しているお客様は、GraphQL インデックスパッケージ 1.0.5を使用してAEM コンテンツフラグメントをインストールする必要があります。 詳しくは、[&#x200B; リリースノート &#x200B;](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package)を参照してください。
 
 ## GraphQL API {#graphql-api}
 
@@ -198,7 +198,7 @@ GraphQL の仕様には、特定のインスタンス上のデータをクエリ
    * そのうちの 3 つ（`author`、`main`、`referencearticle`）は、ユーザーが管理しています。
 
    * その他のフィールドは AEM によって自動的に追加されたもので、特定のコンテンツフラグメントに関する情報を提供する便利な手段となっています。 この例では，
-（[ ヘルパーフィールド ](#helper-fields)） `_path`、`_metadata`、`_variations`。
+（[&#x200B; ヘルパーフィールド &#x200B;](#helper-fields)） `_path`、`_metadata`、`_variations`。
 
 1. ユーザーが Article モデルに基づいてコンテンツフラグメントを作成すると、GraphQL を使用してそれをクエリできます。 例については、（[GraphQL で使用するコンテンツフラグメント構造のサンプル](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)に基づいた）[サンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#graphql-sample-queries)を参照してください。
 
