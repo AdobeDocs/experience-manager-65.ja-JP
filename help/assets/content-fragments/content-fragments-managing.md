@@ -7,8 +7,8 @@ exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 99%
+source-wordcount: '1741'
+ht-degree: 98%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->コンテンツフラグメントモデルとコンテンツフラグメントを使用する場合は、[&#x200B; ベストプラクティス &#x200B;](/help/assets/content-fragments/content-fragments.md#best-practices) に注意してください。
+>コンテンツフラグメントモデルとコンテンツフラグメントを操作する場合は、[&#x200B; ベストプラクティス &#x200B;](/help/assets/content-fragments/content-fragments.md#best-practices)に注意してください。
 
 >[!NOTE]
 >
@@ -135,11 +135,11 @@ ht-degree: 99%
 
 >[!CAUTION]
 >
->コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。問題が発生している場合は、システム管理者にお問い合わせください。
+>コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。 問題が発生している場合は、システム管理者にお問い合わせください。
 
 >[!CAUTION]
 >
->コンテンツフラグメントを編集するには、適切な権限が必要になります。問題が発生している場合は、システム管理者にお問い合わせください。
+>コンテンツフラグメントを編集するには、適切な権限が必要になります。 問題が発生している場合は、システム管理者にお問い合わせください。
 
 1. **Assets** コンソールを使用して、コンテンツフラグメントの場所に移動します。
 1. 次のいずれかの方法で、フラグメントを編集用に開きます。
@@ -147,7 +147,7 @@ ht-degree: 99%
    * フラグメントまたはフラグメントリンク（コンソール表示によって異なる）をクリックまたはタップします。
    * フラグメントを選択してから、ツールバーの「**編集**」を選択。
 
-1. フラグメントエディターが開きます。必要に応じて変更を加えます。
+1. フラグメントエディターが開きます。 必要に応じて変更を加えます。
 
    ![フラグメントエディター](assets/cfm-managing-03.png)
 
@@ -185,7 +185,7 @@ ht-degree: 99%
 
 ![モード](assets/cfm-managing-top-toolbar.png)
 
-* フラグメントがコンテンツページで既に参照されている場合は、メッセージが表示されます。このメッセージは&#x200B;**閉じる**&#x200B;ことができます。
+* フラグメントがコンテンツページで既に参照されている場合は、メッセージが表示されます。 このメッセージは&#x200B;**閉じる**&#x200B;ことができます。
 
 * **サイドパネルを切り替え**&#x200B;アイコンを使用してサイドパネルを非表示／表示できます。
 
@@ -197,7 +197,7 @@ ht-degree: 99%
 
 * 「**保存**」から、「**保存して閉じる**」オプションにアクセスできます。
 
-* 3 つのドット（**...**）ドロップダウンから、以下の追加アクションにアクセスできます。
+* 3つのドット （**...**） ドロップダウンから追加のアクションにアクセスできます。
    * **ページ参照を更新**
       * すべてのページ参照が更新されます。
    * **[クイック公開](#publishing-and-referencing-a-fragment)**
@@ -232,7 +232,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
   >[!CAUTION]
   >
-  >コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。問題が発生している場合は、システム管理者にお問い合わせください。
+  >コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。 問題が発生している場合は、システム管理者にお問い合わせください。
 
   >[!NOTE]
   >
@@ -240,7 +240,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
   >[!CAUTION]
   >
-  >これらの操作では、変更を保存するだけでなく、参照もすべて更新し、Dispatcher が必要に応じてフラッシュされます。これらの変更の処理には時間がかかる場合があります。このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
+  >これらの操作では、変更を保存するだけでなく、参照もすべて更新し、Dispatcher が必要に応じてフラッシュされます。 これらの変更の処理には時間がかかる場合があります。 このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
   >
   >「**保存して閉じる**」を使用する際はこの点に留意し、フラグメントエディターをすぐに開いて、さらに変更を加え保存してください。
 
@@ -277,7 +277,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 ## コンテンツとフラグメントの関連付け {#associating-content-with-your-fragment}
 
-フラグメントに[コンテンツを関連付ける](/help/assets/content-fragments/content-fragments-assoc-content.md)こともできます。これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
+フラグメントに[コンテンツを関連付ける](/help/assets/content-fragments/content-fragments-assoc-content.md)こともできます。 これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
 
 ## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
@@ -348,7 +348,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 ![比較](assets/cfm-managing-06.png)
 
-## 特定のバージョンへの復帰   {#reverting-to-a-version}
+## 特定のバージョンへの復帰  {#reverting-to-a-version}
 
 次の方法で特定のバージョンのフラグメントに戻すことができます。
 
@@ -366,7 +366,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 >
 >まだ公開されていないモデルのコンテンツフラグメントを公開すると、選択リストにそのことが示され、モデルがフラグメントと共に公開されます。
 
-コンテンツフラグメントをパブリッシュ環境で使用するには、公開する必要があります。次の方法で公開できます。
+コンテンツフラグメントをパブリッシュ環境で使用するには、公開する必要があります。 次の方法で公開できます。
 
 * 作成後、[Assets コンソールで使用可能なアクション](#actions-for-a-content-fragment-assets-console)を使用して。
 * [コンテンツフラグメントエディター](#toolbar-actions-in-the-content-fragment-editor)から。
@@ -374,7 +374,7 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 >[!CAUTION]
 >
->フラグメントが公開または参照（あるいは両方）された後に、作成者がフラグメントを開いて編集しようとすると警告が表示され、フラグメントを変更すると、参照されているページにも影響が及ぶことが警告されます。
+>フラグメントが公開または参照（あるいは両方）された後に、作成者がフラグメントを開いて編集しようとすると警告が表示され、 フラグメントを変更すると、参照されているページにも影響が及ぶことが警告されます。
 
 ## フラグメントの削除 {#deleting-a-fragment}
 
@@ -392,4 +392,4 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
    >[!CAUTION]
    >
-   >フラグメントが既にページで参照されている場合は、警告メッセージが表示されます。「**削除を強制**」を選択して続行を確認する必要があります。フラグメントはコンテンツフラグメントコンポーネントと一緒に、すべてのコンテンツページから削除されます。
+   >フラグメントが既にページで参照されている場合は、警告メッセージが表示されます。「**削除を強制**」を選択して続行を確認する必要があります。 フラグメントはコンテンツフラグメントコンポーネントと一緒に、すべてのコンテンツページから削除されます。

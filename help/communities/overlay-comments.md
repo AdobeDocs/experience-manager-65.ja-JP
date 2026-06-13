@@ -1,6 +1,6 @@
 ---
-title: Communities コンポーネントをオーバーレイ
-description: コンポーネントに関連するすべての参照について、デフォルトのコンポーネントをオーバーレイして、コンポーネントの外観や動作をグローバルに変更する方法を説明します。
+title: コミュニティコンポーネントのオーバーレイ
+description: コンポーネントに対するすべての相対参照について、グローバルにコンポーネントの外観や動作を変更できるように、デフォルトコンポーネントをオーバーレイする方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -17,15 +17,15 @@ ht-degree: 3%
 
 ---
 
-# Communities コンポーネントをオーバーレイ {#overlay-communities-components}
+# コミュニティコンポーネントのオーバーレイ {#overlay-communities-components}
 
-デフォルトコンポーネントを [&#x200B; オーバーレイ &#x200B;](/help/communities/client-customize.md#overlays) して表示する目的は、コンポーネントに関連するすべての参照について、そのコンポーネントの外観や動作をグローバルに変更することです。 これは、/libs フォルダーで検索する前に/apps フォルダーに解決される sling の性質に依存します。 そのため、コンポーネントのパスは、/libs フォルダーではなく/apps フォルダーにあることを除いて、デフォルトコンポーネントへのパスと同一です。
+デフォルトのコンポーネントを[&#x200B; オーバーレイ &#x200B;](/help/communities/client-customize.md#overlays)する目的は、コンポーネントに対するすべての相対参照について、コンポーネントの外観や動作をグローバルに変更することです。 /libs フォルダーで検索する前に/apps フォルダーに解決するslingの性質に依存しています。 したがって、コンポーネントへのパスは、デフォルトコンポーネントへのパスと同じですが、/apps フォルダーにあり、/libs フォルダーにはありません。
 
 ## 例 {#example}
 
-**コメントコンポーネントをオーバーレイ**
+**コメント コンポーネントをオーバーレイ**
 
-コメント機能を変更して web サイトのデザインと一致するようにする場合は、コメントのヘッダーを変更し、コメントのアバターが表示されないようにします。 アバターを非表示にするためのソリューションは、CSS を使用するか、後述のように、apps フォルダーの header.jsp をオーバーレイして、アバターを含むHTMLがクライアントに送信されないようにします。
+コメント機能を変更してweb サイトのデザインと一致させるには、コメントヘッダーを変更して、コメントのアバターを表示しないようにします。 アバターを非表示にするソリューションは、CSSを使用するか、ここで説明したように、apps フォルダー内のheader.jspをオーバーレイして、アバターを含むHTMLがクライアントに送信されないようにします。
 
 コメントをオーバーレイするには、次の操作を行う必要があります。
 
@@ -35,9 +35,9 @@ ht-degree: 3%
 
 **通知メールをオーバーレイ**
 
-例えば、メール通知のメッセージをカスタマイズする場合は、`/libs/settings/community/templates/email/html` のテンプレートを [&#x200B; オーバーレイ &#x200B;](/help/communities/client-customize.md#overlays) することで行うことができます。
+電子メール通知のメッセージをカスタマイズする場合は、[&#x200B; テンプレートを`/libs/settings/community/templates/email/html`に](/help/communities/client-customize.md#overlays) オーバーレイすることでカスタマイズできます。
 
-例えば、（UGC が作成された特定の Communities コンポーネントの）メンションメール通知を編集するとします。 その場合、**@mentions** サポートを有効にしたコンポーネントのテンプレートに動詞 **メンション** の **if** 条件を追加します。
+例えば、メンションメール通知を編集するとします（UGCが作成される特定のコミュニティコンポーネントの場合）。 このような場合は、**@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞&#x200B;**メンション**&#x200B;の&#x200B;**if**&#x200B;条件を追加します。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -45,4 +45,4 @@ ht-degree: 3%
 {{/equals}}\
 ```
 
-ブログコメント内の@mention のメール通知テンプレートを変更するには、次の場所に標準テンプレートを配置します。`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+ブログコメントの@mention用メール通知テンプレートを変更するには、標準テンプレートを`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`に配置します。

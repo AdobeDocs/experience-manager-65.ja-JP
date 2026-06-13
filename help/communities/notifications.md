@@ -1,6 +1,6 @@
 ---
 title: コミュニティの通知
-description: AEM Communitiesには、ログインしたコミュニティメンバーが関心を持つイベントを表示する通知があります
+description: AEM Communitiesには、サインインしたコミュニティメンバーに関心のあるイベントを表示する通知が表示されます
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -12,7 +12,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '610'
 ht-degree: 1%
 
 ---
@@ -21,112 +21,112 @@ ht-degree: 1%
 
 ## 概要 {#overview}
 
-AEM Communitiesには「通知」セクションがあり、ログインしたコミュニティメンバーが関心を持つイベントが表示されます。
+AEM Communitiesには、サインインコミュニティメンバーに関心のあるイベントを表示する「通知」セクションが用意されています。
 
-通知は、以下に起因する可能性があるので、[&#x200B; アクティビティ &#x200B;](/help/communities/essentials-activities.md) および [&#x200B; 購読 &#x200B;](/help/communities/subscriptions.md) に似ています。
+通知は、[&#x200B; アクティビティ &#x200B;](/help/communities/essentials-activities.md)および[&#x200B; サブスクリプション &#x200B;](/help/communities/subscriptions.md)と似ています。次の原因が考えられます。
 
 * コンテンツを投稿するメンバー。
-* 別のメンバーのフォローを選択したメンバー。
-* 特定のトピック、記事、その他のコンテンツスレッドをフォローすることを選択したメンバー。
-* メンバーのタグ付け（@mention）は、ユーザーが生成したコンテンツ内の別のコミュニティメンバーです。
+* 別のメンバーをフォローすることを選択したメンバー。
+* 特定のトピック、記事、その他のコンテンツのスレッドに従うことを選択するメンバー。
+* メンバのタグ付け（@mention）は、ユーザ生成コンテンツ内の他のコミュニティメンバーに対して行われる。
 
-通知をアクティビティや購読と区別するのは次のとおりです。
+通知とアクティビティおよびサブスクリプションの違いは次のとおりです。
 
-* 通知セクションへのリンクは、常にコミュニティサイトのヘッダーに存在します。
+* 通知セクションへのリンクは、常にコミュニティサイトのヘッダーに表示されます。
 
-   * アクティビティを使用するには、[&#x200B; アクティビティストリーム関数 &#x200B;](/help/communities/functions.md#activity-stream-function) をコミュニティサイトの構造に含める必要があります。
-   * 購読には [&#x200B; メールの設定 &#x200B;](/help/communities/email.md) が必要です。
+   * アクティビティでは、[&#x200B; アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)をコミュニティサイトの構造に含める必要があります。
+   * サブスクリプションを購入するには、電子メール [&#128279;](/help/communities/email.md)の設定が必要です。
 
-* 通知の実装は、スケーラブルでプラグ可能なチャネルを通じて行われます。
+* 通知の実装は、拡張性と接続性に優れたチャネルを通じて行われます。
 
-   * アクティビティは、web でのみ使用できます。
-   * 購読は、メールでのみ利用できます。
+   * アクティビティはwebでのみ使用できます。
+   * サブスクリプションは、メールでのみ利用できます。
 
-Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack) では、次の通知チャネルを使用できます。
+コミュニティ [FP1](/help/communities/deploy-communities.md#latestfeaturepack)の時点で、使用可能な通知チャネルは次のとおりです。
 
-* Web チャネル。`Notifications` リンクを使用してアクセスします。
-* E メールチャネル。E メールが適切に設定されている場合に使用できます。
+* `Notifications` リンクを使用してアクセスされたWeb チャネル。
+* 電子メールが適切に設定されている場合に使用できる電子メールチャネル。
 
-今後のチャネルはモバイルとデスクトップです。
+将来のチャネルは、モバイルとデスクトップです。
 
 ### 要件 {#requirements}
 
 **メールの設定**
 
-通知のメールチャネルを機能させるには、メールを設定する必要があります。
+通知を有効にするには、電子メールを設定する必要があります。
 
-メールの設定手順については、[&#x200B; メールの設定 &#x200B;](/help/communities/analytics.md) を参照してください。
+電子メールの設定方法については、[電子メールの設定](/help/communities/analytics.md)を参照してください。
 
 **フォローを有効にする**
 
-コンポーネントは、以下を有効にするように設定する必要があります。 次の機能を使用できます。[blog](/help/communities/blog-feature.md)、[forum](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[calendar](/help/communities/calendar.md)、[filelibrary](/help/communities/file-library.md)、[comments](/help/communities/comments.md)。
+以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を許可するのは、[&#x200B; ブログ &#x200B;](/help/communities/blog-feature.md)、[&#x200B; フォーラム &#x200B;](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[&#x200B; カレンダー](/help/communities/calendar.md)、[&#x200B; ファイルライブラリ &#x200B;](/help/communities/file-library.md)、および[&#x200B; コメント &#x200B;](/help/communities/comments.md)です。
 
 **メモ**：
 
-* コミュニティ [&#x200B; サイトテンプレート &#x200B;](/help/communities/sites.md) および [&#x200B; グループテンプレート &#x200B;](/help/communities/tools-groups.md) 内で使用するコンポーネントは、既にフォローするように設定されていることがあります。
+* コミュニティ [&#x200B; サイトテンプレート &#x200B;](/help/communities/sites.md)および[&#x200B; グループテンプレート &#x200B;](/help/communities/tools-groups.md)内で使用されているコンポーネントは、既にフォローするように設定されている可能性があります。
 
 * メンバープロファイルは、他のメンバーがフォローできるように既に設定されています。
 
-## 以下からの通知 {#notifications-from-following}
+## フォローからの通知 {#notifications-from-following}
 
-![&#x200B; 通知 &#x200B;](assets/notifications.png)
+![通知](assets/notifications.png)
 
-**[!UICONTROL フォロー]** ボタンは、エントリをアクティビティ、購読、通知としてフォローする手段を提供します。 「**[!UICONTROL フォロー]**」ボタンを選択するたびに、選択のオンとオフを切り替えることができます。 `Email Subscriptions` の選択は、設定されている場合にのみ存在します。
+「**[!UICONTROL フォロー]**」ボタンは、アクティビティ、サブスクリプション、通知などのエントリをフォローするための手段を提供します。 「**[!UICONTROL フォロー]**」ボタンを選択するたびに、選択範囲のオンとオフを切り替えることができます。 `Email Subscriptions`の選択は、設定時にのみ存在します。
 
-次のメソッドのいずれかを選択すると、ボタンのテキストが **[!UICONTROL 次]** に変わります。 便宜上、`Unfollow All` を選択してすべてのメソッドをオフにすることができます。
+次のいずれかの方法を選択すると、ボタンのテキストが&#x200B;**[!UICONTROL 次]**&#x200B;に変わります。 便宜上、`Unfollow All`を選択してすべてのメソッドをオフにすることができます。
 
-**[!UICONTROL フォロー]** ボタンが表示されます。
+「**[!UICONTROL フォロー]**」ボタンが表示されます。
 
-* 別のメンバーのプロファイルを表示する場合。
-* フォーラム、QnA、ブログなどのメインの機能ページで、次の操作を行います。
+* 他のメンバーのプロファイルを表示する場合。
+* フォーラム、QnA、ブログなどの主要機能ページで、次の操作を行います。
 
    * その一般的な機能のすべてのアクティビティに従います。
 
-* フォーラムのトピック、QnA の質問、ブログ記事など、特定のエントリの場合：
+* フォーラムのトピック、QnAの質問、ブログ記事など、特定のエントリの場合：
 
    * その特定のエントリのすべてのアクティビティに従います。
 
 ## 通知設定の管理 {#managing-notification-settings}
 
-通知ページから「通知設定」リンクを選択すると、各メンバーで通知の受信方法を管理できます。
+通知ページから「通知設定」リンクを選択すると、各メンバーが通知の受信方法を管理できます。
 
 Web チャネルは常に有効です。
 
 ![notifications14](assets/notifications1.png)
 
-メールチャネルは、適切な [&#x200B; メールの設定 &#x200B;](/help/communities/email.md) に依存し、web チャネルの場合と同じ設定を提供します。
+電子メール [&#128279;](/help/communities/email.md)の適切な設定に依存する電子メールチャネルは、web チャネルと同じ設定を提供します。
 
 メールチャネルはデフォルトでオフになっています。
 
-![notifications2](assets/notifications2.png)
+![通知2](assets/notifications2.png)
 
-メンバーがオンにしている場合もありますが、メールの設定によっては変わりません。
+メンバーがオンにすることはできますが、設定するメールによって異なります。
 
-![notifications3](assets/notifications3.png)
+![通知3](assets/notifications3.png)
 
 ## 通知の表示 {#viewing-notifications}
 
-### Web 通知 {#web-notifications}
+### Web通知 {#web-notifications}
 
-[&#x200B; ウィザードで作成されたコミュニティサイト &#x200B;](/help/communities/sites-console.md) に、バナーの上にあるサイトのヘッダーバーに `Notifications` 機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成されますが、サイト作成プロセス中はメッセージを有効にする必要があります。
+[&#x200B; ウィザードが作成したコミュニティサイト &#x200B;](/help/communities/sites-console.md)には、バナーの上にあるサイトのヘッダーバーに`Notifications`機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成されますが、メッセージはサイト作成プロセスで有効にする必要があります。
 
-公開済みサイトにアクセスして「`Notifications`」リンクを選択すると、メンバーに関するすべての通知が表示されます。
+公開されたサイトにアクセスすると、`Notifications` リンクを選択すると、メンバーのすべての通知が表示されます。
 
-![notifications4](assets/notifications4.png)
+![通知4](assets/notifications4.png)
 
 ### メール通知 {#email-notifications}
 
-メールチャネルを有効にすると、メンバーは、web 上のコンテンツへのリンクを含むメールを受け取ります。
+メールチャネルが有効になっている場合、メンバーはweb上のコンテンツへのリンクを含むメールを受信します。
 
-![notifications5](assets/notifications5.png)
+![通知5](assets/notifications5.png)
 
 ## メール通知のカスタマイズ {#customize-email-notifications}
 
-組織は、**/libs/settings/community/templates/email/html[&#x200B; にあるテンプレートを &#x200B;](/help/communities/client-customize.md#overlays) オーバーレイ** することで、メール通知をカスタマイズできます。
+組織は、**/libs/settings/community/templates/email/html**&#x200B;のテンプレートを[&#x200B; オーバーレイ &#x200B;](/help/communities/client-customize.md#overlays)することで、メール通知をカスタマイズできます。
 
-例えば、（コミュニティコンポーネントの）メンションメール通知を変更するには、**@mentions** サポートを有効にしたコンポーネントのテンプレートに動詞 **メンション** の **if** 条件を追加します。
+例えば、（コミュニティコンポーネントの）メンションメール通知を変更するには、**@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞&#x200B;**メンション**&#x200B;の&#x200B;**if**&#x200B;条件を追加します。
 
-ブログコメント内の@mention のメール通知テンプレートを変更するには、次の場所に標準テンプレートを配置します。**/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
+ブログコメントの@mentionのメール通知テンプレートを変更するには、標準テンプレートの&#x200B;**/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**&#x200B;に配置します。
 
 ```java
 {{#equals this.verb "mention"}}\

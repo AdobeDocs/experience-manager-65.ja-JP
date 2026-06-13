@@ -10,8 +10,8 @@ hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '2199'
-ht-degree: 97%
+source-wordcount: '2170'
+ht-degree: 96%
 
 ---
 
@@ -116,8 +116,8 @@ ht-degree: 97%
 
 参照元のアセットまたはフォルダーのリストを含むコレクションにアセットを追加できます。 スマートコレクションでは、検索クエリを使用してアセットを設定します。 そのため、アセットおよびフォルダーへの静的な参照はスマートコレクションに適用できません。
 
-1. [!DNL A]Assets ユーザーインターフェイスで、アセットを選択し、ツールバーから「**[!UICONTROL コレクションに追加]** ![コレクションに追加](assets/do-not-localize/add-to-collection.png)」をクリックします。
-または、アセットをインターフェイスの「**[!UICONTROL コレクションにドロップ]**」にドラッグでます。 そのリージョンのラベルが「**[!UICONTROL ドロップして追加]**」に変わったら、アセットを追加します。
+1. [!DNL A] アセットのユーザーインターフェイスで、アセットを選択し、ツールバーから「**[!UICONTROL コレクションへ]**![&#x200B; コレクションに追加](assets/do-not-localize/add-to-collection.png)」をクリックします。
+または、アセットをインターフェイスの&#x200B;**[!UICONTROL コレクション内のドロップ]**&#x200B;領域にドラッグすることもできます。リージョンのラベルが&#x200B;**[!UICONTROL 追加にドロップ]**&#x200B;に変わったら、アセットを追加します。
 
 1. **[!UICONTROL コレクションに追加]**&#x200B;ページで、アセットを追加するコレクションを選択します。
 

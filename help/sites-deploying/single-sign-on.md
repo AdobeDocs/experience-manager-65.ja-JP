@@ -11,16 +11,16 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 100%
+source-wordcount: '738'
+ht-degree: 99%
 
 ---
 
 # シングルサインオン {#single-sign-on}
 
-シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。別個のシステム（信頼された認証と呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。Experience Manager は、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
+シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。 別個のシステム（信頼された認証と呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。 Experience Manager は、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
 
-SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`）は、信頼された認証が提供する認証結果を処理します。SSO 認証ハンドラーは、次の順序で特別な属性の値として SSO 識別子（SSID）を検索します。
+SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`）は、信頼された認証が提供する認証結果を処理します。 SSO 認証ハンドラーは、次の順序で特別な属性の値として SSO 識別子（SSID）を検索します。
 
 1. リクエストヘッダー
 1. Cookie
@@ -33,7 +33,7 @@ SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuth
 * ログインモジュール。
 * SSO 認証サービス。
 
-両方のサービスに同じ属性名を指定します。属性は `Repository.login` に提供される `SimpleCredentials` が含められます。属性の値は無関係で無視されます。単に存在していることが重要で検証されます。
+両方のサービスに同じ属性名を指定します。 属性は `Repository.login` に提供される `SimpleCredentials` が含められます。 属性の値は無関係で無視されます。単に存在していることが重要で検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
@@ -85,8 +85,7 @@ AEM インスタンスの SSO を設定するには、[SSO 認証ハンドラー
 >* `disp_iis.ini`
 >* IIS
 >
->`disp_iis.ini` で次のように設定します。
->（詳しくは、[Dispatcher を Microsoft® Internet Information Server と共にインストールする方法に関するページ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja#microsoft-internet-information-server)を参照してください）
+>`disp_iis.ini` セット：> （詳細については、[Microsoft® Internet Information ServerでのDispatcherのインストール &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja#microsoft-internet-information-server)を参照）
 >
 >* `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
@@ -102,7 +101,7 @@ Felix コンソールの「**Authenticator**」オプションを使用すると
 
 `http://localhost:4502/system/console/slingauth`
 
-パスに最適なハンドラーが最初に照会されます。例えば、パス `/` に handler-A を設定し、パス `/content` に handler-B を設定すると、`/content/mypage.html` へのリクエストに対して handler-B が最初に照会されます。
+パスに最適なハンドラーが最初に照会されます。 例えば、パス `/` に handler-A を設定し、パス `/content` に handler-B を設定すると、`/content/mypage.html` へのリクエストに対して handler-B が最初にクエリ実行されます。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
@@ -154,7 +153,7 @@ Transfer-Encoding: chunked
 
 >[!NOTE]
 >
->ブラウザーでリクエストパラメーターを使用すると、HTML の一部のみが表示されます（CSS は表示されません）。これは、HTML からのリクエストはすべてリクエストパラメーターなしで行われるからです。
+>ブラウザーでリクエストパラメーターを使用すると、HTML の一部のみが表示されます（CSS は表示されません）。 これは、HTML からのリクエストはすべてリクエストパラメーターなしで行われるからです。
 
 ## AEM ログアウトリンクの削除 {#removing-aem-sign-out-links}
 

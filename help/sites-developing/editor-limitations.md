@@ -1,6 +1,6 @@
 ---
 title: エディターの制限事項
-description: タッチ操作対応 UI のエディターでは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
+description: タッチ操作対応 UI のエディターでは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -11,14 +11,14 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '312'
 ht-degree: 100%
 
 ---
 
 # エディターの制限事項{#editor-limitations}
 
-タッチ操作対応 UI のエディターでは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
+タッチ操作対応 UI のエディターでは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。 このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
 
 ## 機能の制限事項 {#functional-limitations}
 
@@ -32,7 +32,7 @@ ht-degree: 100%
 
 ### 構造ページ {#structure-pages}
 
-ページに `structure` という名前を付けることはできません。`structure` と名前が付けられたページは、ページエディターで編集できません。
+ページに `structure` という名前を付けることはできません。 `structure` と名前が付けられたページは、ページエディターで編集できません。
 
 ## CSS の制限 {#css-limitations}
 

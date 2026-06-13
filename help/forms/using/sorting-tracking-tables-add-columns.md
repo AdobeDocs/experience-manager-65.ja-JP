@@ -10,14 +10,14 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '332'
 ht-degree: 100%
 
 ---
 
 # 追跡テーブルのカスタマイズ{#customize-tracking-tables}
 
-AEM Forms Workspace の「追跡」タブを使用すると、ログインしたユーザーが関係するプロセスインスタンスの詳細を表示できます。追跡テーブルを表示するには、最初に左側のパネルでプロセス名を選択して、中央のパネルでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右側のパネルに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
+AEM Forms Workspace の「追跡」タブを使用すると、ログインしたユーザーが関係するプロセスインスタンスの詳細を表示できます。 追跡テーブルを表示するには、最初に左側のパネルでプロセス名を選択して、中央のパネルでインスタンスのリストを表示します。 プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右側のパネルに表示されます。 デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
 
 * ID（`taskId`）
 * 名前（`stepName`）
@@ -114,7 +114,7 @@ AEM Forms Workspace の「追跡」タブを使用すると、ログインした
  </tbody>
 </table>
 
-次のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDK を使用してセマンティックの変更を行い、変更されたソースから縮小パッケージを構築する方法については、「[AEM Forms Workspace のカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md)」を参照してください。
+次のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。 Workspace SDK を使用してセマンティックの変更を行い、変更されたソースから縮小パッケージを構築する方法については、「[AEM Forms Workspace のカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md)」を参照してください。
 
 ## テーブル列と順序の変更 {#changing-table-columns-and-their-order}
 

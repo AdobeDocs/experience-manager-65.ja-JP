@@ -1,6 +1,6 @@
 ---
 title: メールの設定
-description: Adobe Experience Manager Communities のメール通知と購読を設定する方法について説明します。
+description: Adobe Experience Manager Communitiesのメール通知と購読を設定する方法について説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -12,48 +12,48 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 4%
+source-wordcount: '846'
+ht-degree: 5%
 
 ---
 
 # メールの設定 {#configuring-email}
 
-AEM Communitiesは、次の目的でメールを使用します。
+AEM Communitiesでは、次の目的で電子メールを使用します。
 
 * [コミュニティの通知](notifications.md)
 * [コミュニティの購読](subscriptions.md)
 
-デフォルトでは、メール機能は機能しません。SMTP サーバーと SMTP ユーザーを指定する必要があるからです。
+デフォルトでは、メール機能は機能しません。SMTP サーバーとSMTP ユーザーの指定が必要です。
 
 >[!CAUTION]
 >
->通知および購読の電子メールは、[&#x200B; プライマリ発行者 &#x200B;](deploy-communities.md#primary-publisher) 上でのみ設定する必要があります。
+>通知と購読の電子メールは、[&#x200B; プライマリパブリッシャー](deploy-communities.md#primary-publisher)でのみ設定する必要があります。
 
 ## デフォルトのメールサービス設定 {#default-mail-service-configuration}
 
-通知と購読の両方にデフォルトのメールサービスが必要です。
+デフォルトのメールサービスは、通知と購読の両方に必要です。
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md) にアクセスします。
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* `Day CQ Mail Service` を見つけます。
+* `Day CQ Mail Service`を探します。
 * 編集アイコンを選択します。
 
-これは [&#x200B; メール通知の設定 &#x200B;](../../help/sites-administering/notification.md) のドキュメントに基づいていますが、「`"From" address`」フィールドは必須 *ではなく* 空のままにする必要がある点が異なります。
+これは、[&#x200B; メール通知の設定](../../help/sites-administering/notification.md)に関するドキュメントに基づいていますが、フィールド `"From" address`が&#x200B;*ではなく*&#x200B;必要であり、空のままにしておく必要があるという違いがあります。
 
-例（例として値が入力されている）:
+例えば、次の例のように入力します（値が入力されているのは実例の場合のみ）。
 
 ![email-config](assets/email-config.png)
 
-* **[!UICONTROL SMTP サーバーのホスト名]**
+* **[!UICONTROL SMTP サーバーホスト名]**
 
-  *（必須）* 使用する SMTP サーバー。
+  *（必須）*&#x200B;使用するSMTP サーバー。
 
 * **[!UICONTROL SMTP サーバーポート]**
 
-  *（必須）* SMTP サーバーポートは 25 以上にする必要があります。
+  *（必須）* SMTP サーバーポートは25以上である必要があります。
 
 * **[!UICONTROL SMTP ユーザー]**
 
@@ -63,33 +63,33 @@ AEM Communitiesは、次の目的でメールを使用します。
 
   *（必須）* SMTP ユーザーのパスワード。
 
-* **[!UICONTROL 「送信者」アドレス]**
+* **[!UICONTROL &quot;From&quot; アドレス]**
 
-  空のままにします
-* **[!UICONTROL SMTP での SSL の使用]**
+  空のままにする
+* **[!UICONTROL SMTPはSSL]**&#x200B;を使用します
 
-  オンにした場合、セキュリティで保護されたメールを送信します。 ポートが 465 か、SMTP サーバーの要件に応じて設定されていることを確認します。
-* **[!UICONTROL Debug Email]**
+  オンにすると、安全な電子メールが送信されます。 ポートが465に設定されているか、SMTP サーバーの必要に応じて設定されていることを確認します。
+* **[!UICONTROL 電子メールをデバッグ]**
 
-  オンにすると、SMTP サーバーインタラクションのログが有効になります。
+  オンにすると、SMTP サーバーインタラクションのログ記録が有効になります。
 
 ## AEM Communitiesのメール設定 {#aem-communities-email-configuration}
 
-[&#x200B; デフォルトメールサービス &#x200B;](#default-mail-service-configuration) を設定すると、リリースに含まれている `AEM Communities Email Reply Configuration` OSGi 設定の既存の 2 つのインスタンスが機能するようになります。
+[&#x200B; デフォルトのメールサービス &#x200B;](#default-mail-service-configuration)を設定すると、リリースに含まれている`AEM Communities Email Reply Configuration` OSGi設定の2つの既存のインスタンスが機能するようになります。
 
-メールによる返信を許可する場合は、購読のインスタンスのみを、さらに設定する必要があります。
+メールによる返信を許可する場合は、サブスクリプションのインスタンスのみを追加で設定する必要があります。
 
 1. [&#x200B; メール &#x200B;](#configuration-for-notifications) インスタンス：
 
-   は、返信メールをサポートしないので、変更しないでください。
+   通知の場合は、返信メールをサポートしていないので、変更しないでください。
 
 1. [Subscriptions-email](#configuration-for-subscriptions) インスタンス：
 
-   返信メールからの投稿の作成を完全に有効にするための設定が必要です。
+   返信メールからの投稿の作成を完全に有効にするには、設定が必要です。
 
-Communities のメール設定インスタンスにアクセスするには：
+Communities メール設定インスタンスにアクセスするには：
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md) にアクセスします
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
@@ -99,25 +99,25 @@ Communities のメール設定インスタンスにアクセスするには：
 
 ### 通知の設定 {#configuration-for-notifications}
 
-名前がメール `AEM Communities Email Reply Configuration` 持つ OSGi 設定のインスタンスは、forthenotifications 機能です。 この機能にはメール返信は含まれません。
+名前の電子メールを含む`AEM Communities Email Reply Configuration` OSGi設定のインスタンスは、forthenotifications機能です。 この機能には、電子メールによる返信は含まれません。
 
 この設定は変更しないでください。
 
-* `AEM Communities Email Reply Configuration` を見つけます。
+* `AEM Communities Email Reply Configuration`を探します。
 * 編集アイコンを選択します。
-* **Name** が `email` であることを確認します。
+* **Name**&#x200B;が`email`であることを確認します。
 
-* **返信メールから投稿を作成** が `unchecked` しいことを確認します。
+* 返信電子メール **から** Create postが`unchecked`であることを確認します。
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
 ### サブスクリプションの設定 {#configuration-for-subscriptions}
 
-コミュニティの購読の場合、メンバーがメールに返信してコンテンツを投稿する機能を有効または無効にすることができます。
+Communities サブスクリプションの場合、メンバーがメールに返信してコンテンツを投稿する機能を有効または無効にすることができます。
 
-* `AEM Communities Email Reply Configuration` を見つけます。
+* `AEM Communities Email Reply Configuration`を探します。
 * 編集アイコンを選択します。
-* **Name** が `subscriptions-email` であることを確認します。
+* **Name**&#x200B;が`subscriptions-email`であることを確認します。
 
   ![configure-email-subscription](assets/configure-email-subscriptions.png)
 
@@ -127,44 +127,44 @@ Communities のメール設定インスタンスにアクセスするには：
 
 * **[!UICONTROL 返信メールから投稿を作成]**
 
-  オンにすると、購読メールの受信者は、返信を送信してコンテンツを投稿できます。 デフォルトではオンになっています。
-* **[!UICONTROL トラッキング対象 ID をヘッダーに追加]**
+  チェックを入れた場合、購読メールの受信者は、返信を送信してコンテンツを投稿できます。 デフォルトはオンです。
+* **[!UICONTROL トラッキング IDをヘッダーに追加]**
 
   デフォルトは `Reply-To` です。
 
-* **[!UICONTROL 対象の最大長]**
+* **[!UICONTROL 件名の最大長]**
 
-  件名行にトラッカー ID が追加されている場合、これは、トラッキングされた ID を除く、件名の最大長であり、その後でトリミングされます。 トラッキング対象の ID 情報が失われるのを防ぐため、この値はできるだけ小さくしてください。 デフォルトは 200 です。
+  トラッカーIDが件名に追加されている場合、これは追跡されたIDを除く被写体の最大長であり、その後トリミングされます。 これは、トラッキングされたID情報が失われるのを防ぐために、できるだけ小さくする必要があります。 デフォルトは200です。
 
-* **[!UICONTROL 「返信先」のメールアドレス]**
+* **[!UICONTROL 「返信先」電子メールアドレス]**
 
-  「返信先」メールアドレスとして使用するアドレス。 デフォルトは `no-reply@example.com` です。
+  「返信先」メールアドレスとして使用されるアドレス。 デフォルトは `no-reply@example.com` です。
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
-  返信先ヘッダーにトラッカー ID が追加されている場合は、この区切り文字が使用されます。 デフォルトは `+` （プラス記号）です。
+  トラッカーIDがReply-to ヘッダーに追加されている場合は、この区切り文字が使用されます。 デフォルトは`+` （プラス記号）です。
 
-* **[!UICONTROL 件名のトラッカー ID プレフィックス]**
+* 件名&#x200B;**の** トラッカーID プレフィックス
 
-  件名行にトラッカー ID が追加されている場合は、このプレフィックスが使用されます。 デフォルトは `post#` です。
+  トラッカーIDが件名に追加されている場合は、この接頭辞が使用されます。 デフォルトは `post#` です。
 
-* **[!UICONTROL メッセージ本文のトラッカー ID プレフィックス]**
+* メッセージ本文&#x200B;**の** トラッカーID プレフィックス
 
-  トラッカー ID がメッセージ本文に追加された場合は、このプレフィックスが使用されます。 デフォルトは `Please do not remove this:` です。
+  トラッカーIDがメッセージ本文に追加されている場合は、このプレフィックスが使用されます。 デフォルトは `Please do not remove this:` です。
 
-* **[!UICONTROL HTMLとしてメール]**: オンにすると、メールのコンテンツタイプが `"text/html;charset=utf-8"` に設定されます。 デフォルトではオンになっています。
+* **[!UICONTROL HTMLとして電子メール]**：オンにした場合、電子メールのコンテンツタイプは`"text/html;charset=utf-8"`に設定されます。 デフォルトはオンです。
 
-* **[!UICONTROL デフォルトのユーザー名]**
+* **[!UICONTROL 既定のユーザー名]**
 
   この名前は、名前のないユーザーに使用されます。 デフォルトは `no-reply@example.com` です。
 
 * **[!UICONTROL テンプレートのルートパス]**
 
-  メールは、このルートパスに保存されたテンプレートを使用して作成されます。 デフォルトは `/etc/community/templates/subscriptions-email` です。
+  メールは、このルートパスに保存されているテンプレートを使用して作成されます。 デフォルトは `/etc/community/templates/subscriptions-email` です。
 
 ## ポーリングインポーターの設定 {#configure-polling-importer}
 
-メールをリポジトリに取得するには、ポーリングインポーターを設定し、リポジトリでそのプロパティを手動で設定する必要があります。
+メールをリポジトリに取り込むには、ポーリングインポーターを設定し、リポジトリ内のプロパティを手動で設定する必要があります。
 
 ### 新しいポーリングインポーターを追加 {#add-new-polling-importer}
 
@@ -172,26 +172,26 @@ Communities のメール設定インスタンスにアクセスするには：
 
   例：[http://localhost:4503/etc/importers/polling.html](http://localhost:4503/etc/importers/polling.html)
 
-* 「**[!UICONTROL 追加]**」を選択します
+* **[!UICONTROL 追加]**&#x200B;を選択
 
   ![polling-importer](assets/polling-importer.png)
 
 * **[!UICONTROL タイプ]**
 
-  *（必須）* プルダウンして `POP3 (over SSL)` を選択します。
+  *（必須）*&#x200B;引き下げて`POP3 (over SSL)`を選択します。
 
 * **[!UICONTROL URL]**
 
-  *（必須）* 送信メールサーバー。 例えば、`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=**&#x200B;**` のように指定します。
+  *（必須）*&#x200B;送信メールサーバー。 例えば、`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****` のように指定します。
 
-* **[!UICONTROL パスにインポート]**&ast;
+* **[!UICONTROL パスに読み込む]** （&amp;ast）
 
-  *（必須）*`/content/usergenerated/mailFolder/postEmails` に設定
-`postEmails` フォルダーに移動して、「**OK**」を選択します。
+  *（必須）*&#x200B;をに設定 `/content/usergenerated/mailFolder/postEmails`
+`postEmails` フォルダーを参照して、**OK**&#x200B;を選択します。
 
 * **[!UICONTROL 更新間隔（秒）]**
 
-  *（任意）* デフォルトのメールサービス用に設定されたメールサーバーには、更新間隔の値に関する要件が存在する場合があります。 例えば、Gmail では `300` の間隔が必要な場合があります。
+  *（オプション）* デフォルトのメールサービス用に設定されたメールサーバーには、更新間隔の値に関する要件がある場合があります。 例えば、Gmailでは`300`の間隔が必要な場合があります。
 
 * **[!UICONTROL ログイン]**
 
@@ -203,20 +203,20 @@ Communities のメール設定インスタンスにアクセスするには：
 
 * 「**[!UICONTROL OK]**」を選択します。
 
-### 新しいポーリングインポーターのプロトコルの調整 {#adjust-protocol-for-new-polling-importer}
+### 新しいポーリングインポーターのプロトコルを調整 {#adjust-protocol-for-new-polling-importer}
 
-新しいポーリング設定を保存したら、サブスクリプションメールインポーターのプロパティをさらに変更して、プロトコルを `POP3` から `emailreply` に変更する必要があります。
+新しいポーリング設定が保存されたら、サブスクリプション電子メールインポーターのプロパティをさらに変更して、プロトコルを`POP3`から`emailreply`に変更する必要があります。
 
-[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用：
+[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)を使用：
 
-* 管理者権限でプライマリパブリッシャーにログインし、[https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling) を参照します。
+* 管理者権限でプライマリパブリッシャーにログインし、[https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling)を参照します。
 * 新しく作成した設定を選択し、次のプロパティを変更します。
 
-   * **feedType**: `pop3s` を **`emailreply`** に置き換えます
-   * **source**: ソースのプロトコル `pop3s://` を **`emailreply://`** に置き換えます
+   * **feedType**: `pop3s`を&#x200B;**`emailreply`**&#x200B;に置換します
+   * **source**: ソースのプロトコル `pop3s://`を&#x200B;**`emailreply://`**&#x200B;に置換します
 
 ![polling-protocol](assets/polling-protocol.png)
 
-赤い三角形は、変更されたプロパティを示します。 必ず変更内容を保存してください。
+赤い三角形は、変更されたプロパティを示します。 変更を保存してください：
 
 * 「**[!UICONTROL すべて保存]**」を選択します。

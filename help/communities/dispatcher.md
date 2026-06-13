@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 20%
+source-wordcount: '666'
+ht-degree: 21%
 
 ---
 
@@ -64,7 +64,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 * **フィルターパターン**
   *（必須）* コミュニティページへの1つ以上のパス。 例えば、`/content/sites/engage/(.*)` のように指定します。
 
-* **キャッシュコントロールの最大有効期間**
+* **キャッシュ制御の最大年齢**
   *（必須）* キャッシュ コントロール ヘッダーに追加する最大経過時間（秒単位）です。 値は0より大きくなければなりません。
 
 ## Dispatcher フィルター {#dispatcher-filters}
@@ -84,7 +84,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 >[!NOTE]
 >
 >**プロパティ名の例**
->**/0050**&#x200B;や&#x200B;**/0170**&#x200B;など、表示されるすべてのプロパティ名は、既存の`dispatcher.any`設定ファイルに収まるように調整する必要があります。
+>表示されるすべてのプロパティ名（**/0050**&#x200B;や&#x200B;**/0170**&#x200B;など）は、既存の`dispatcher.any`設定ファイルに収まるように調整する必要があります。
 >
 
 >[!CAUTION]

@@ -8,13 +8,13 @@ solution: Experience Manager, Experience Manager Assets
 source-git-commit: 3648662306bb1e7ea27a9d74f42bfa321bf5b91f
 workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
 # 関連コンテンツ{#associated-content}
 
-関連コンテンツのAEM機能により関連性がわかり、フラグメントをコンテンツページに追加するときに、アセットを（オプションで）フラグメントと共に使用できるようになります。 これにより、[&#x200B; ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になる &#x200B;](/help/sites-authoring/content-fragments.md#using-associated-content) ことでヘッドレスコンテンツ配信に柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。 関連する任意のコンテンツは、コンテンツフラグメントエディターを使用して設定できます。
+AEM の関連コンテンツ機能により関連性を付加して、フラグメントをコンテンツページに追加する際に、アセットを（オプションで）フラグメントと共に使用できるようになります。 これにより、[ページ上のコンテンツフラグメントを使用する際に広範なアセットにアクセスでき](/help/sites-authoring/content-fragments.md#using-associated-content)、ヘッドレスコンテンツ配信の柔軟性が向上すると共に、適切なアセットの検索に必要な時間も短縮されます。 関連するコンテンツは、コンテンツフラグメントエディターを使用して設定できます。
 
 ## 関連コンテンツの追加 {#adding-associated-content}
 
@@ -22,7 +22,7 @@ ht-degree: 71%
 >
 >[ビジュアルアセット（画像など）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するための様々な方法があります。
 
-関連付けを行うには、最初に[メディアアセットをコレクションに追加する](/help/assets/manage-collections.md)必要があります。それが完了した後で以下を実行できます。
+関連付けを行うには、最初に[メディアアセットをコレクションに追加する](/help/assets/manage-collections.md)必要があります。 それが完了した後で以下を実行できます。
 
 1. フラグメントを開き、サイドパネルから「**関連コンテンツ**」を選択します。
 
@@ -39,7 +39,7 @@ ht-degree: 71%
 
    ![コレクションの選択](assets/cfm-assoc-content-02.png)
 
-1. 確定します（「**選択**」を使用）。コレクションが関連付けられて表示されます。
+1. 確定します（「**選択**」を使用）。 コレクションが関連付けられて表示されます。
 
    ![cfm-6420-05](assets/cfm-assoc-content-03.png)
 

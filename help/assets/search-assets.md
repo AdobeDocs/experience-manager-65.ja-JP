@@ -10,8 +10,8 @@ hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '5839'
-ht-degree: 98%
+source-wordcount: '5796'
+ht-degree: 97%
 
 ---
 
@@ -87,8 +87,8 @@ ht-degree: 98%
 * `woman.running`
 * `woman-running`
 
-ただし、クエリ `woman -running` は、メタデータに `running` を含まないアセットを返します。
-スマートタグを使用すると、スマートタグを検索語として適用し、検索語のいずれかを探すための `OR` 句が追加されます。 スマートタグを使用して `woman` または `running` のどちらかがタグ付けされているアセットも検索クエリに表示されます。 検索結果は、以下を組み合わせたものになります。
+ただし、クエリ `woman -running`は、`running`がメタデータに含まれていないアセットを返します。
+スマートタグを使用すると、追加の`OR`句が追加され、適用されたスマートタグとして検索語が検索されます。スマートタグを使用して`woman`または`running`のタグが付けられたアセットも、そのような検索クエリに表示されます。つまり、検索結果は、モバイル版とweb版を，
 
 * `woman` と `running` の両方のキーワードがメタデータ内にあるアセット（デフォルト動作）。
 

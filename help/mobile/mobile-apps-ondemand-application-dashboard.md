@@ -1,6 +1,6 @@
 ---
 title: AEM Mobile アプリケーションのダッシュボード
-description: アプリケーションおよびモバイルアプリのコンテンツは、AEM Mobile Application Dashboard またはコントロールセンターで管理できます。 このページでは、この機能について詳しく見ていきます。
+description: AEM Mobile アプリケーションダッシュボードまたはコントロールセンターから、アプリケーションとモバイルアプリのコンテンツを管理できます。 このページでは、この機能について詳しく見ていきます。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -11,8 +11,8 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 8%
+source-wordcount: '590'
+ht-degree: 7%
 
 ---
 
@@ -20,23 +20,23 @@ ht-degree: 8%
 
 {{ue-over-mobile}}
 
-アプリケーションおよびモバイルアプリのコンテンツは、AEM Mobile Application Dashboard またはコントロールセンターで管理できます。
+AEM Mobile アプリケーションダッシュボードまたはコントロールセンターから、アプリケーションとモバイルアプリのコンテンツを管理できます。
 
-コントロール・センターの各タイルをドリル・インして詳細を表示または編集するには、右下隅の「。..」をクリックします。
+コントロールセンターの各タイルをドリルダウンして、右下隅にある「。..」をクリックすることで、詳細を表示または編集できます。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
 >[!NOTE]
 >
->タイルのグラバーアイコン（左上の 9 ドット）をクリックすると、タイルの順序を並べ替えることができます。 注文の変更はユーザーごとに異なります。
+>タイルのグラバーアイコン（左上の9つのドット）をクリックすると、タイルの順序を並べ替えることができます。 注文の変更はユーザー固有であり、個々のユーザーごとに異なります。
 
-アプリコンテンツの管理には、開発者、コンテンツ作成者および管理者の協力が必要です。 作成者がページを操作します。これは、アプリ開発者が生成したテンプレートやコンポーネントに基づいて無効になります。
+アプリコンテンツの管理には、開発者、コンテンツ作成者、管理者などの共同作業が必要です。 作成者はページを操作します。ページは、アプリ開発者によって生成されたテンプレートとコンポーネントに基づいてオフになります。
 
-最後に、管理者は、更新されたアプリコンテンツを戦略的に公開します。
+最後に、管理者は更新されたアプリコンテンツを戦略的に公開します。
 
 ## アプリを管理タイル {#the-manage-app-tile}
 
-**アプリを管理** タイルに利用可能なアプリケーション情報が表示されます。
+**アプリの管理** タイルには、使用可能なアプリケーション情報が表示されます。
 
 * タイトル
 * 説明
@@ -48,98 +48,98 @@ ht-degree: 8%
 
 ## 接続を管理タイル {#the-manage-connection-tile}
 
-**接続を管理** タイルには、AEM Mobile On-demand Servicesの接続情報が表示されます。
+**Manage Connection** タイルには、AEM Mobile On-demand Servicesの接続情報が表示されます。
 
 * クラウド設定名
-* プロジェクト名と ID
+* プロジェクト名とID
 * 接続ステータス
 
 >[!NOTE]
 >
->右上の歯車をクリックして、Mobile On-Demand Cloud 設定をセットアップします。
+>右上の歯車をクリックして、Mobile On-Demand Cloud設定を設定します。
 >
->詳しくは、[Mobile On-Demand Services の設定 &#x200B;](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
+>詳しくは、[&#x200B; モバイルオンデマンドサービスの設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
 ## エンティティの管理 {#managing-entities}
 
-次の 3 つのタイルは、アプリのコンテンツの状態の概要を示します。
+これらの3つのタイルは、アプリのコンテンツの状態の概要を提供します。
 
 * **バナー**
 * **記事**
 * **コレクション**
 
-各タイルを展開すると、右下隅の省略記号（...）をクリックして、より詳細なリスト表示を提供できます。 これらのリスト表示は、プロパティの削除、アップロード、編集など、一般的なモバイルオンデマンド アクションにアクセスする代替の方法を提供します。
+各タイルを展開して、省略記号（。..）をクリックすると、より詳細なリストビューを提供できます。 右下隅にあります。 これらのリストビューは、プロパティの削除、アップロード、編集など、Mobile On Demandの一般的なアクションにアクセスするための代替の方法を提供します。
 
-### バナーの管理タイル {#the-manage-banners-tile}
+### バナー管理タイル {#the-manage-banners-tile}
 
-**バナーの管理** タイルでは、バナーのコンテンツを管理できます。 バナーには、次の情報が表示されます。
+**バナーの管理** タイルを使用すると、バナーのコンテンツを管理できます。 バナーには次の情報が表示されます。
 
 * 画像
-* **タイトル**：バナーの名前
-* **変更済み**：最終変更日：AEM
+* **TITLE**: バナーの名前
+* **MODIFIED**：最終更新日：AEM
 * **アップロード済み**：前回AEMからアップロード済み
-* **公開済み**：前回公開されたリクエストフォーム AEM
-* **SOURCE**: ソース （AEM ローカルまたはモバイル オンデマンドからのリモート）
+* **公開済み**：最終公開済みリクエストフォーム AEM
+* **SOURCE**: ソース （Mobile On DemandのAEM ローカルまたはリモート）
 
-次の画像は、AEM Mobile アプリケーションダッシュボードの **バナーを管理** タイルを示しています。
+次の図は、AEM Mobile Application Dashboardの&#x200B;**Manage Banners** タイルを示しています。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 >[!NOTE]
 >
->バナーの作成、削除、更新については、**[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)** を参照してください。
+>バナーの作成、削除または更新については、**[バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)**&#x200B;を参照してください。
 
-### 記事を管理タイル {#the-manage-articles-tile}
+### 記事の管理タイル {#the-manage-articles-tile}
 
-**記事を管理** タイルでは、記事のコンテンツを管理できます。 記事に関して次の情報が表示されます。
+**記事の管理** タイルを使用すると、記事のコンテンツを管理できます。 記事には次の情報が表示されます。
 
 * 画像
-* **タイトル**：記事の名前
-* **変更済み**：最終変更日：AEM
+* **TITLE**：記事の名前
+* **MODIFIED**：最終更新日：AEM
 * **アップロード済み**：前回AEMからアップロード済み
-* **公開済み**：前回公開されたリクエストフォーム AEM
-* **SOURCE**: ソース （AEM ローカルまたはモバイル オンデマンドからのリモート）
+* **公開済み**：最終公開済みリクエストフォーム AEM
+* **SOURCE**: ソース （Mobile On-DemandのAEM ローカルまたはリモート）
 
-次の画像は、AEM Mobile アプリケーションダッシュボードの **記事を管理** タイルを示しています。
+次の図は、AEM Mobile Application Dashboardの&#x200B;**記事の管理** タイルを示しています。
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 >[!NOTE]
 >
->記事の作成、削除、更新については、[**記事の管理**](/help/mobile/mobile-on-demand-managing-articles.md) を参照してください。
+>記事の作成、削除または更新については、[**記事の管理**](/help/mobile/mobile-on-demand-managing-articles.md)&#x200B;を参照してください。
 
 ### コレクションを管理タイル {#the-manage-collections-tile}
 
-**コレクションを管理** タイルでは、コレクションのコンテンツを管理できます。 コレクションに関する次の情報が表示されます。
+**コレクションの管理** タイルを使用すると、コレクションのコンテンツを管理できます。 コレクションには次の情報が表示されます。
 
 * 画像
-* **タイトル**：コレクションの名前
-* **変更済み**：最終変更日：AEM
+* **TITLE**: コレクションの名前
+* **MODIFIED**：最終更新日：AEM
 * **アップロード済み**：前回AEMからアップロード済み
-* **公開済み**：前回公開されたリクエストフォーム AEM
-* **SOURCE**: ソース （AEM ローカルまたはモバイル オンデマンドからのリモート）
+* **公開済み**：最終公開済みリクエストフォーム AEM
+* **SOURCE**: ソース （Mobile On-DemandのAEM ローカルまたはリモート）
 
-次の画像は、AEM Mobile アプリケーションダッシュボードの **コレクションを管理** タイルを示しています。
+次の図は、AEM Mobile Application Dashboardの&#x200B;**Manage Collections** タイルを示しています。
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
 >[!NOTE]
 >
->コレクションの作成、削除、更新については、**[コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)** を参照してください。
+>コレクションの作成、削除または更新については、**[コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)**&#x200B;を参照してください。
 
 ### 次の手順 {#the-next-steps}
 
-アプリケーションダッシュボードをよく理解したら、次のリソースを参照してモバイルアプリを作成してください。
+アプリケーションダッシュボードについて理解したら、次のリソースを参照してモバイルアプリを作成します。
 
 * [アプリケーションの作成および設定アクション](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [オンデマンドアプリのクラウド設定への関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
-* [コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
+* [コンテンツ管理のアクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 
 ### その他のリソース {#additional-resources}
 
-管理者と開発者の役割と責任については、以下のリソースを参照してください。
+管理者と開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
-* [AEM Mobile On-demand Services用AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)
+* [AEM Mobile On-demand Services向けAEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
+* [AEM Mobile On-demand Servicesを使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)

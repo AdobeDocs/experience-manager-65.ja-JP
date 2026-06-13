@@ -13,7 +13,7 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1691'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ This is a 404 on helpx. Update or remove.
 * **コミュニティグループルート**
 
   グループへのルートパス。
-デフォルトのルートは親サイトですが、ルートはweb サイト内の任意の場所に移動できます。 変更することはお勧めできません。
+デフォルトのルートは親サイトですが、ルートはweb サイト内の任意の場所に移動できます。変更することはお勧めできません。
 
 * **その他の利用可能なコミュニティグループ言語** メニュー
 

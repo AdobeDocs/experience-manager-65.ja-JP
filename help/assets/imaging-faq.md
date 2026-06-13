@@ -11,8 +11,8 @@ exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '3480'
-ht-degree: 97%
+source-wordcount: '3434'
+ht-degree: 96%
 
 ---
 
@@ -269,8 +269,8 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
       * スマートイメージングを HTTP/2 上で機能させる必要があるかどうかを指定します。
 
 1. アドビカスタマーサポートでは、リクエストされたスマートイメージング機能がデフォルトで有効になっているので、URL にパラメーターを手動で追加する必要はありません。
-1. アドビでは、キャッシュによるパフォーマンスを最大化するために、有効期間（TTL）を 24 時間以上に設定することをお勧めします。
-TTL を調整するには：
+1. Adobeでは、キャッシュを使用してパフォーマンスを最大化するために、TTL （Time To Live）を少なくとも24時間に設定することをお勧めします。
+TTLを調整するには：
 
    1. **Dynamic Media Classic の場合：**
       1. **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 公開設定]**／**[!UICONTROL Image Server]** に移動します。
@@ -338,9 +338,9 @@ TTL を調整するには：
 >
 >**X-Adobe-Smart-Imaging = -1 で WebP を配信中**
 >
->`X-Adobe-Smart-Imaging` の値が -1 で、WebP がまだ配信中の場合、スマートイメージングはアクティブです。 ただし、キャッシュが古いので、サイズのメリットは計算されませんでした。 画像の URL で `cache=update` を（1 回だけ）使用して、この問題を修正できます。
->この修飾子の使用例を次に示します。
->`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`>キャッシュ全体を無効にするには、サポートケースを作成する必要があります。
+>`X-Adobe-Smart-Imaging`の値が–1で、WebPがまだ配信されている場合、スマートイメージングはアクティブです。しかし、古いキャッシュのため、サイズのメリットは計算されませんでした。この問題を修正するには、画像のURLで`cache=update` （1回のみ）を使用できます。
+>修飾子の使用例：
+>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`> キャッシュ全体を無効にするには、サポートケースを作成する必要があります。
 
 +++
 
