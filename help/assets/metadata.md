@@ -39,7 +39,7 @@ Scope of metadata articles:
 
 * まず、アセットを作成するネイティブアプリケーションがメタデータを追加します。 例えば、[Acrobat がいくつかのメタデータを PDF ファイルに追加](https://helpx.adobe.com/jp/acrobat/using/pdf-properties-metadata.html)する場合や、カメラが写真にいくつかの基本的なメタデータを追加する場合があります。 アセットを生成する際に、ネイティブアプリケーション自体にメタデータを追加できます。 例えば、[Adobe Lightroom で IPTC メタデータを追加する](https://helpx.adobe.com/jp/lightroom-classic/help/metadata-basics-actions.html)ことができます。
 
-* アセットを [!DNL Experience Manager] にアップロードする前に、アセットの作成に使用するネイティブアプリケーションまたは他のメタデータ編集アプリケーションを使用して、メタデータの編集および変更ができます。 アセットを Experience Manager にアップロードすると、メタデータは処理されます。 例えば、 [&#x200B; [!DNL Adobe Bridge] でのメタデータの操作](https://helpx.adobe.com/jp/bridge/using/metadata-adobe-bridge.html)を参照し、[!DNL Adobe Exchange] での [&#x200B; [!DNL Adobe Bridge] のタグパネル](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)を参照してください。
+* アセットを [!DNL Experience Manager] にアップロードする前に、アセットの作成に使用するネイティブアプリケーションまたは他のメタデータ編集アプリケーションを使用して、メタデータの編集および変更ができます。 アセットを Experience Manager にアップロードすると、メタデータは処理されます。 例えば、 [ [!DNL Adobe Bridge] でのメタデータの操作](https://helpx.adobe.com/jp/bridge/using/metadata-adobe-bridge.html)を参照し、[!DNL Adobe Exchange] での [ [!DNL Adobe Bridge] のタグパネル](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)を参照してください。
 
 * [!DNL Experience Manager Assets] では、[!UICONTROL プロパティ]ページでアセットのメタデータを手動で追加または編集することができます。
 
@@ -90,7 +90,7 @@ XMP の書き戻しは、[技術要件](/help/sites-deploying/technical-requirem
 1. 様々なタブで選択したアセットのメタデータプロパティを変更します。
 1. 特定のアセットのメタデータを表示するには、リストの残りのアセットの選択をキャンセルします。 [!UICONTROL プロパティ]ページでいくつかのアセットの選択をキャンセルした場合、それらのアセットのメタデータは更新されません。
 1. アセットに別のメタデータスキーマを選択するには、ツールバーの「**[!UICONTROL 設定]**」をクリックし、スキーマを選択します。 「**[!UICONTROL 保存して閉じる]**」をクリックします。
-1. 複数の値が含まれるフィールドで、既存のメタデータに新しいメタデータを追加するには、「**[!UICONTROL 追加モード]**」を選択します。 このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置き換えられます。 「**[!UICONTROL 送信]**」をクリックします。
+1. 複数の値が含まれるフィールドで、既存のメタデータに新しいメタデータを追加するには、「**[!UICONTROL 追加モード]**」を選択します。 このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置換されます。 「**[!UICONTROL 送信]**」をクリックします。
 
 ![複数のアセットへのメタデータスキーマの一括適用](assets/metadata-schema-bulk-edit.gif)
 
