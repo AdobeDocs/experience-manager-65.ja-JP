@@ -1,6 +1,6 @@
 ---
 title: 初期サンドボックスコンテンツ
-description: サンドボックスでページテンプレートを使用して、英語版の web サイトのメインページと、メインページの子ページを作成する方法を説明します。
+description: サンドボックスでページテンプレートを使用して、英語版のweb サイトのメインページとメインページの子ページを作成する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -11,81 +11,81 @@ feature: Communities
 role: Developer
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 4%
+source-wordcount: '508'
+ht-degree: 5%
 
 ---
 
 # 初期サンドボックスコンテンツ {#initial-sandbox-content}
 
-この節では、次のページを作成します。これらのページはすべて [&#x200B; ページテンプレート &#x200B;](initial-app.md#createthepagetemplate) を使用します。
+このセクションでは、次のページを作成します。すべてのページで[ ページテンプレート ](initial-app.md#createthepagetemplate)を使用します。
 
-* メインページの英語版にリダイレクトされる SCF サンドボックスサイト。
+* SCF サンドボックスサイト：英語バージョンのメインページにリダイレクトされます。
 
-   * SCF サンドボックス – サイトの英語版のメインページ。
+   * SCF Sandbox - サイトの英語版のメインページ。
 
-   * SCF プレイ – 再生するメインページの子。
+   * SCF Play – 再生するメインページの子。
 
-このチュートリアルでは、[&#x200B; 言語コピー &#x200B;](../../help/sites-administering/tc-prep.md) については説明しません。 代わりに、ルートページがHTMLヘッダーを介して利用者の優先言語を検出し、その言語の適切なメインページにリダイレクトするように設計される。 慣例により、ページのノード名には 2 文字の国コードを使用します。例えば、英語は「en」、フランス語は「fr」です。
+このチュートリアルでは、[言語コピー](../../help/sites-administering/tc-prep.md)について詳しく説明しません。 その代わりに、ルートページがHTML ヘッダーを通じてユーザーに適した言語を検出し、その言語に適したメインページにリダイレクトするように設計されています。 この規則では、ページのノード名に2文字の国コード（英語の場合は「en」、フランス語の場合は「fr」など）を使用します。
 
 ## 最初のページを作成 {#create-first-pages}
 
-[&#x200B; ページテンプレート &#x200B;](initial-app.md#createthepagetemplate) が用意されたので、/content ディレクトリに web サイトのルートページを設定できます。
+[ ページテンプレート ](initial-app.md#createthepagetemplate)が作成されたので、/content ディレクトリにweb サイトのルートページを設定できます。
 
-1. 標準 UI は現在、サイトを作成するためのブループリントを提供しています。 このチュートリアルではシンプルなサイトを作成するので、クラシック UI が役立ちます。
+1. 標準UIには、現在、サイトを作成するためのブループリントが用意されています。 このチュートリアルではシンプルなサイトを作成するので、クラシック UIが便利です。
 
-   クラシック UI に切り替えるには、グローバルナビゲーションを選択して、プロジェクト アイコンの右側にカーソルを置きます。 表示される *クラシック UI に切り替える* アイコンを選択します。
+   クラシック UIに切り替えるには、グローバルナビゲーションを選択し、プロジェクトアイコンの右側にカーソルを合わせます。 表示される「*クラシック UIに切り替え*」アイコンを選択します。
 
-   ![classic-ui](assets/classic-ui.png)
+   ![ クラシック ui](assets/classic-ui.png)
 
-   クラシック UI に切り替える機能は、[&#x200B; 管理者が有効にする &#x200B;](../../help/sites-administering/enable-classic-ui.md) 必要があります。
+   クラシック UIに切り替える機能は、管理者](../../help/sites-administering/enable-classic-ui.md)が[有効にする必要があります。
 
-1. [&#x200B; クラシック UI のようこそページ &#x200B;](http://localhost:4502/welcome.html) から、「**[!UICONTROL Web サイト]**」を選択します。
+1. [ クラシック UIようこそページ ](http://localhost:4502/welcome.html)から、**[!UICONTROL Web サイト]**&#x200B;を選択します。
 
    ![classic-ui-website](assets/classic-ui-website.png)
 
-   または、[/siteadmin.](http://localhost:4502/siteadmin) にブラウジングして、web サイトのクラシック UI に直接アクセスします。
+   または、[/siteadminを参照して、Web サイトのクラシック UIに直接アクセスします。](http://localhost:4502/siteadmin)
 
-1. エクスプローラーウィンドウで、「**[!UICONTROL Web サイト]**」を選択し、ツールバーで **[!UICONTROL 新規]**/**[!UICONTROL 新しいページ]** を選択します。
+1. エクスプローラーパネルで「**[!UICONTROL Web サイト]**」を選択し、ツールバーで「**[!UICONTROL 新規]** > **[!UICONTROL 新規ページ]**」を選択します。
 
-   **[!UICONTROL ページを作成]** ダイアログで、以下を入力します。
+   「**[!UICONTROL ページを作成]**」ダイアログで、次のように入力します。
 
    * タイトル: `SCF Sandbox Site`
    * 名前：`an-scf-sandbox`
-   * **[!UICONTROL SCF サンドボックス再生テンプレート]** を選択します
-   * 「**[!UICONTROL 作成]**」をクリックします
+   * **[!UICONTROL SCF サンドボックス再生テンプレートを選択]**
+   * 「**[!UICONTROL 作成]**」をクリックします。
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
-1. エクスプローラーウィンドウで、作成したページを選択して `/Websites/SCF Sandbox Site` 成し、**[!UICONTROL 新規]**/**[!UICONTROL 新しいページ]** をクリックします。
+1. エクスプローラーパネルで、作成したページ「`/Websites/SCF Sandbox Site`」を選択し、**[!UICONTROL 新規]**/**[!UICONTROL 新規ページ]**&#x200B;をクリックします。
 
    * タイトル: `SCF Sandbox`
    * 名前：`en`
-   * **[!UICONTROL SCF サンドボックス再生テンプレート]** を選択します
-   * 「**[!UICONTROL 作成]**」をクリックします
+   * **[!UICONTROL SCF サンドボックス再生テンプレートを選択]**
+   * 「**[!UICONTROL 作成]**」をクリックします。
 
-1. エクスプローラーウィンドウで、作成したページを選択して `/Websites/SCF Sandbox Site/SCF Sandbox` 成し、**[!UICONTROL 新規]**/**[!UICONTROL 新しいページ]** をクリックします
+1. エクスプローラーパネルで、作成したページ「`/Websites/SCF Sandbox Site/SCF Sandbox`」を選択し、**[!UICONTROL 新規]**/**[!UICONTROL 新規ページ]**&#x200B;をクリックします
 
    * タイトル: `SCF Play`
    * 名前：`play`
-   * **[!UICONTROL SCF サンドボックス再生テンプレート]** を選択します
-   * 「**[!UICONTROL 作成]**」をクリックします
+   * **[!UICONTROL SCF サンドボックス再生テンプレートを選択]**
+   * 「**[!UICONTROL 作成]**」をクリックします。
 
-1. Web サイトコンソールに、web サイトがこのように表示されるようになりました。 エクスプローラーペインで選択された項目の子ページが右側のペインに表示され、そこで管理できます。
+1. これが、Web サイトコンソールでのweb サイトの表示方法です。 エクスプローラーペインで選択した項目の子ページが、管理可能な右側のペインに表示されます。
 
    ![classic-ui-website-page](assets/classic-ui-website-page.png)
 
-   これは、Web サイトツールとテンプレートを使用して作成された内容のリポジトリビューです。
+   Web サイトツールとテンプレートを使用して作成されたもののリポジトリビューです。
 
    ![classic-ui-repository-view](assets/classic-ui-repository-view.png)
 
-## デザインパスを追加 {#add-the-design-path}
+## デザインパスの追加 {#add-the-design-path}
 
-ツ ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)` ルコンソールの designs セクションを使用して作成した場合は、プロパティ「
+` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)`がツールコンソールのデザインセクションを使用して作成された場合、プロパティ「
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
-を定義しました。これにより、`currentDesign.getPath()` を使用してスクリプトでデザインアセットを参照するオプション機能が提供されます。 例：
+が定義されました。`currentDesign.getPath()`を使用してスクリプト内のデザインアセットを参照するオプション機能を提供します。 例：
 
 * `% String favIcon = currentDesign.getPath() + "/favicon.ico"; %`
 
@@ -94,16 +94,16 @@ ht-degree: 4%
    * タイプ：`String`
    * 値：`/etc/designs/an-scf-sandbox`
 
-* 緑の `[+] Add` をクリックします
+* 緑の`[+] Add`をクリックします
 
 リポジトリは次のように表示されます。
 
 ![classic-ui-repository-path](assets/classic-ui-repository-path.png)
 
-* **[!UICONTROL すべて保存]** をクリックします。
+* 「**[!UICONTROL すべて保存]**」をクリック
 
-設定の保存で問題が発生した場合は、再度ログインして設定し直します。
+設定の保存で問題が発生した場合は、再ログインして再設定します。
 
 >[!NOTE]
 >
->`cq:designPath` の使用はオプションで、SCF コンポーネントが JS と CSS の管理に [clientlibs](develop-app.md#includeclientlibsintemplate) を使用するので必須である [clientlibs の使用 &#x200B;](client-customize.md#clientlibs-for-scf) とは無関係です。
+>`cq:designPath`の使用はオプションであり、SCF コンポーネントが[clientlibs](client-customize.md#clientlibs-for-scf)を使用してJSとCSSを管理するため、[clientlibs](develop-app.md#includeclientlibsintemplate)の使用とは関係ありません。
