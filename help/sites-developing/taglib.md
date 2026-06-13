@@ -176,7 +176,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 
 `source` 属性が設定されていない場合：
 
-* `language` 属性が設定されている場合は、`source` 属性のデフォルト値が `` `static` になります。
+* `language` 属性が設定されている場合は、`source` 属性のデフォルト値が &grave;&grave; `static` になります。
 
 * `language` 属性が設定されていない場合は、`source` 属性のデフォルト値が `auto` になります。
 
