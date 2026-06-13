@@ -110,12 +110,12 @@ ht-degree: 1%
 
 デモ用にMSRPのSolr コレクションを設定するには、次の2つの決定を行う必要があります（詳細については、メインドキュメントへのリンクを選択してください）。
 
-1. スタンドアロンまたは[SolrCloud モード ](msrp.md#solrcloudmode)でSolrを実行します。
+1. スタンドアロンまたは[SolrCloud モード &#x200B;](msrp.md#solrcloudmode)でSolrを実行します。
 1. [standard](msrp.md#installingstandardmls)または[advanced](msrp.md#installingadvancedmls)の多言語検索（MLS）をインストールします。
 
 ### スタンドアロン Solr {#standalone-solr}
 
-Solrを実行する方法は、インストールのバージョンと方法によって異なります。 [Solr リファレンスガイド ](https://archive.apache.org/dist/lucene/solr/ref-guide/)は権威あるドキュメントです。
+Solrを実行する方法は、インストールのバージョンと方法によって異なります。 [Solr リファレンスガイド &#x200B;](https://archive.apache.org/dist/lucene/solr/ref-guide/)は権威あるドキュメントです。
 
 簡単にするために、バージョン 4.10を例として使用すると、スタンドアロンモードでSolrを起動できます。
 
@@ -150,13 +150,13 @@ MongoDBが開始される前にAEMが実行されていた場合は、AEM イン
 
 MongoDB共通ストアをテストおよび検証するには、パブリッシュインスタンスにコメントを投稿してオーサーインスタンスで表示し、MongoDBおよびSolrでUGCを表示します。
 
-1. パブリッシュインスタンスで、[ コミュニティコンポーネントガイド ](http://localhost:4503/content/community-components/en/comments.html) ページを参照し、コメントコンポーネントを選択します。
+1. パブリッシュインスタンスで、[&#x200B; コミュニティコンポーネントガイド &#x200B;](http://localhost:4503/content/community-components/en/comments.html) ページを参照し、コメントコンポーネントを選択します。
 1. ログインしてコメントを投稿：
 1. コメントテキストエントリボックスにテキストを入力し、**[!UICONTROL 投稿]**&#x200B;をクリックします
 
-   ![ コメント後](assets/post-comment.png)
+   ![&#x200B; コメント後](assets/post-comment.png)
 
-1. [ オーサーインスタンス ](http://localhost:4502/content/community-components/en/comments.html)のコメントを表示するだけです（おそらく、まだ管理者/管理者としてサインインしています）。
+1. [&#x200B; オーサーインスタンス &#x200B;](http://localhost:4502/content/community-components/en/comments.html)のコメントを表示するだけです（おそらく、まだ管理者/管理者としてサインインしています）。
 
    ![view-comment](assets/view-comment.png)
 

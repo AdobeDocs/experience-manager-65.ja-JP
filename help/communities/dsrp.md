@@ -22,7 +22,7 @@ ht-degree: 3%
 
 AEM Communitiesがリレーショナルデータベースを共通ストアとして使用するように設定されている場合、UGC （ユーザー生成コンテンツ）は、同期やレプリケーションを必要とせずに、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスできます。
 
-[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)および[推奨トポロジ ](topologies.md)も参照してください。
+[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)および[推奨トポロジ &#x200B;](topologies.md)も参照してください。
 
 ## 要件 {#requirements}
 
@@ -53,7 +53,7 @@ Oak コレクションとSRP コレクションの両方を集中的に使用す
 
 ### DSRPの選択 {#select-dsrp}
 
-[ ストレージ設定コンソール ](srp-config.md)では、使用するSRPの実装を特定するデフォルトのストレージ設定を選択できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md)では、使用するSRPの実装を特定するデフォルトのストレージ設定を選択できます。
 
 作成者は、ストレージ設定コンソールにアクセスできます
 
@@ -91,7 +91,7 @@ Oak コレクションとSRP コレクションの両方を集中的に使用す
 
    * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) ホスト**
 
-     内部ZooKeeperを使用してSolrを実行する場合は、この値を空白のままにします。 または、外部ZooKeeperを使用して[SolrCloud モード ](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:80*&#x200B;など、ZooKeeperのURIに設定します
+     内部ZooKeeperを使用してSolrを実行する場合は、この値を空白のままにします。 または、外部ZooKeeperを使用して[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:80*&#x200B;など、ZooKeeperのURIに設定します
 
      *default*: *&lt;blank>*
 
