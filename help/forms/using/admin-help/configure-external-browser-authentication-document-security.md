@@ -9,10 +9,10 @@ feature: Document Security
 exl-id: a452674c-aea0-45d6-88cd-438af539d355
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: c3961bcb03929fc38fcd29b7368cd3ddd01f2872
+source-git-commit: 98a772829d3568a5826ea9e3ae65760f1587040f
 workflow-type: tm+mt
-source-wordcount: '985'
-ht-degree: 2%
+source-wordcount: '986'
+ht-degree: 4%
 
 ---
 

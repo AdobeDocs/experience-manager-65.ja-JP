@@ -9,7 +9,7 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: c98a3d8a9ece450b120c80e99a1c09fce81f29dd
+source-git-commit: 87e11d37b9aa14ee3d4e47ae30eaa25f151a9b5b
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 82%

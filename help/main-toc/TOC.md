@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 25928abbff3ed684fd1b7130c3f4f6095c33e0d2
+source-git-commit: 6af329d2faa778c3cdbb83854fb36066242e14d5
 workflow-type: tm+mt
 source-wordcount: '8279'
 ht-degree: 96%
@@ -1669,3 +1669,4 @@ ht-degree: 96%
       + [WCAG 2.1 クイックガイド](/help/managing/qg-wcag.md)
    + データ保護 {#data-protection}
       + [データ保護およびデータプライバシーに関する規制に対する AEM の対応](/help/managing/data-protection-and-privacy.md)
+
