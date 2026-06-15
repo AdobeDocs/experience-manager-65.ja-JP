@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 606ea57b0e9c012b9bc87ac87910337c025038ee
+source-git-commit: 25928abbff3ed684fd1b7130c3f4f6095c33e0d2
 workflow-type: tm+mt
-source-wordcount: '8270'
+source-wordcount: '8279'
 ht-degree: 96%
 
 ---
@@ -1007,6 +1007,7 @@ ht-degree: 96%
          + [Document Security について](/help/forms/using/admin-help/document-security.md)
          + [大量の保護された情報の配布](/help/forms/using/admin-help/high-volume-secure-information-delivery.md)
          + [クライアントおよびサーバーオプションの設定](/help/forms/using/admin-help/configuring-client-server-options.md)
+         + [ドキュメントのセキュリティのために外部ブラウザーからの拡張認証を設定する](/help/forms/using/admin-help/configure-external-browser-authentication-document-security.md)
          + [招待ユーザーおよびローカルユーザーのアカウントの管理](/help/forms/using/admin-help/invited-local-user-accounts.md)
          + [ポリシーで保護されたドキュメントへのアクセス制御](/help/forms/using/admin-help/controlling-access-policy-protected-documents.md)
          + [イベントの監視](/help/forms/using/admin-help/monitoring-events.md)
