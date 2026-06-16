@@ -9,9 +9,9 @@ feature: Document Security
 exl-id: a452674c-aea0-45d6-88cd-438af539d355
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 98a772829d3568a5826ea9e3ae65760f1587040f
+source-git-commit: 89a07256cd5bb850aac19565ad86273322fa1f31
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1029'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,11 @@ ht-degree: 4%
 
 * サービスパック 6.5.25.0がデプロイされたJEE上のAEM Forms 6.5、またはサポートされているアプリケーションサーバー（JBoss、WebLogic、またはWebSphere）にインストールされた該当するJEE ホットフィックスパッチを含むサービスパック 6.5.24.0。 AEM Forms JEE Hotfix2 6.5.24.0[&#128279;](#software-distribution-links)の ソフトウェア配布リンクを参照してください。
 * 拡張認証（サードパーティ認証）は既に有効になっており、IDPで機能します。 [&#x200B; サーバー設定](/help/forms/using/admin-help/configuring-client-server-options.md#server-configuration-settings)および[拡張認証プロバイダーの追加](/help/forms/using/admin-help/configuring-client-server-options.md#add-the-extended-authentication-provider)を参照してください。
-* クライアントにインストールされたAdobe Acrobat ProまたはAdobe Acrobat Reader（64 ビット）最新のアップデートが適用されたWindows PC
+* Adobe Acrobat ProまたはAdobe Acrobat Reader（64 ビット）を最新のアップデートでクライアントのWindows PCにインストールします。
+
+>[!NOTE]
+>
+> 外部ブラウザー認証には、クライアントでサポートされているバージョンのAdobe AcrobatまたはAdobe Acrobat Readerが必要です。 バージョンの詳細とアップデートについては、[Acrobat リリースノート（2026年3月の継続的なトラック） &#x200B;](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)を参照してください。
 
 ### AEM Forms JEE ホットフィックス 2 6.5.24.0のソフトウェア配布リンク {#software-distribution-links}
 
@@ -115,7 +119,7 @@ To disable external browser authentication on specific client machines (forcing 
 ### システムブラウザーではなく、埋め込まれたブラウザーが開きます {#embedded-browser-opens-instead-of-system-browser}
 
 * サーバーで外部ブラウザー認証が有効になっていることを確認します。 [外部ブラウザー認証を有効にする](#enable-external-browser-authentication)を参照してください。
-* AcrobatまたはReaderのバージョンがこの機能をサポートしていることを確認します。
+* AcrobatまたはReaderのバージョンがこの機能をサポートしていることを確認します。 [Acrobat](#acrobat)を参照してください。
 
 ### 認証はブラウザーで成功しますが、ドキュメントのロックが解除されません {#authentication-succeeds-but-document-does-not-unlock}
 
