@@ -10,7 +10,7 @@ role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 100%
@@ -125,7 +125,7 @@ AEM Assets と Brand Portal を初めて設定する場合は、以下の手順�
 
 [Adobe Developer Console で OAuth 資格情報を設定](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)し、「Brand Portal API」を選択します。
 
-#### OAuth を使用して新しい Adobe IMS 統合を作成 {#create-ims-account-configuration}
+#### OAuth を使用して新しい Adobe IMS 統合を作成
 
 [OAuth を使用して新しい Adobe IMS 統合を作成](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) し、ドロップダウンから「Brand Portal」を選択します。
 
@@ -178,7 +178,7 @@ The public key (certificate) authenticates your profile on Adobe Developer Conso
 
    Open a new tab and [create a service account (JWT) connection in Adobe Developer Console](#createnewintegration) so you can get the credentials and JWT payload for configuring the IMS account. 
 
-### Create the service account (JWT) connection {#createnewintegration}
+### Create the service account (JWT) connection
 
 In Adobe Developer Console, projects and APIs are configured at the Brand Portal tenant (organization) level. Configuring an API creates a service account (JWT) connection. There are two methods to configure the API, by generating a key pair (private and public keys) or by uploading a public key. To configure AEM Assets with Brand Portal, you must generate a public key (certificate) in AEM Assets and create credentials in Adobe Developer Console by uploading the public key. These credentials are required to configure the IMS account in AEM Assets. Once the IMS account is configured, you can configure the Brand Portal cloud service in AEM Assets.
 
@@ -234,7 +234,7 @@ To create the service account credentials and JWT payload, do the following:
 You can now use the client ID (API key), client secret, and JWT payload to [configure the IMS account](#create-ims-account-configuration) in AEM Assets.
 
 <!--
-### Create Adobe I/O integration {#createnewintegration}
+### Create Adobe I/O integration
 
 Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which is required in setting up the IMS Account configurations.
 
@@ -277,7 +277,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    The API Key, Client Secret key, and JWT payload information that is used to create IMS account configuration.
 -->
 <!--
-### Configure the IMS account {#create-ims-account-configuration}
+### Configure the IMS account
 
 Ensure that you have already performed the following steps:
 

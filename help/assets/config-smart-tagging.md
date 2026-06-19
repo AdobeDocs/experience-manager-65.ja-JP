@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 99%
+source-wordcount: '2294'
+ht-degree: 98%
 
 ---
 
@@ -106,8 +106,8 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. **[!UICONTROL API を追加]**&#x200B;ページで、「**[!UICONTROL Experience Cloud]**」を選択し、「**[!UICONTROL スマートコンテンツ]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
 
-1. 「**[!UICONTROL OAuth サーバー間]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
-この設定を行う方法について詳しくは、要件に応じて、Developer Console のドキュメントを参照してください。
+1. 「**[!UICONTROL OAuth Server-to-Server]**」を選択します。「**[!UICONTROL 次へ]**」をクリックします。
+この設定の方法について詳しくは、要件に応じてDeveloper Consoleのドキュメントを参照してください。
 
    * 概要については、developer.adobe.comの「*サーバー間認証（Server to Server authentication）*」を参照してください。
    * 新しい OAuth 資格情報を作成するには、developer.adobe.com 「*OAuth サーバー間資格情報実装ガイド（OAuth Server-to-Server credential implementation guide）*」を参照してください。
@@ -146,7 +146,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. ヘルスをチェックダイアログボックスを確認し、設定が正常な状態になったら「閉じる」をクリックします。
 
-### 新しい設定の作成 {#configure-smart-content-service}
+### 新しい設定の作成
 
 <!--
 >[!CAUTION]
@@ -175,7 +175,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
-### 設定の検証 {#validate-the-configuration}
+### 設定の検証
 
 設定を完了したら、JMX MBean を使用して設定を検証できます。 検証するには、次の手順に従います。
 
@@ -281,7 +281,7 @@ To use Smart Content Service APIs, create an integration in Adobe Developer Cons
 
    *Figure: Details of integration in Adobe Developer Console*
 
-### Configure Smart Content Service {#configure-smart-content-service}
+### Configure Smart Content Service
 
 >[!CAUTION]
 >
@@ -338,7 +338,7 @@ An authorization scope is an OAuth string that contains the following prerequisi
 6. Delete the old configuration for `"Access Token provider name: adobe-ims-similaritysearch"` in `/system/console/configMgr`.
 7. Restart the console.
 
-### Validate the configuration {#validate-the-configuration}
+### Validate the configuration
 
 After you have completed the configuration, you can use a JMX MBean to validate the configuration. To validate, follow these steps.
 
