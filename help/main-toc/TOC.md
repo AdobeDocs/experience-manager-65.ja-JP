@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 6af329d2faa778c3cdbb83854fb36066242e14d5
+source-git-commit: ec3941675081255879065c3be9d5af77474b2072
 workflow-type: tm+mt
-source-wordcount: '8279'
+source-wordcount: '8286'
 ht-degree: 96%
 
 ---
@@ -564,6 +564,7 @@ ht-degree: 96%
          + [JBoss クラスター上のJEE上のAdobe Experience Manager Formsの設定](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65_jp)
          + [WebSphere クラスター上のJEE上のAdobe Experience Manager Formsの設定](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65_jp)
          + [WebLogic クラスター上のJEE上のAdobe Experience Manager Formsの設定](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65_jp)
+         + [AEM Forms JEEでのシリアル化の問題の軽減](/help/forms/using/mitigating-serialization-issues-forms-jee.md)
       + AEM Forms の設定 {#configure-aem-forms}
          + [AEM Forms サーバーのパフォーマンスチューニング](/help/forms/using/performance-tuning-aem-forms.md)
          + [アダプティブフォームのキャッシュの設定](/help/forms/using/configure-adaptive-forms-cache.md)
