@@ -8,10 +8,10 @@ role: Admin,User
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: b6714ae8f3464ef600c252c7ae5dcc75cbe6610b
 workflow-type: tm+mt
-source-wordcount: '7800'
-ht-degree: 98%
+source-wordcount: '7949'
+ht-degree: 96%
 
 ---
 
@@ -807,6 +807,20 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 * 拒否されたリクエストにリファラーヘッダーがない場合は、リファラーヘッダーを含めるようにクライアントアプリケーションを変更します。
 * クライアントがブラウザーで動作できる場合は、そのデプロイメントモデルを試してみます。
 * 最後の手段として、許可されている URI リストにリソースを追加できます。 ただし、これは推奨設定ではありません。
+
+### シリアル化の問題の軽減 {#mitigating-serialization-issues}
+
+Javaの逆シリアル化攻撃は、信頼できないデータを逆シリアル化するアプリケーションを悪用し、サーバー上でリモートコードが実行される可能性があります。 JEE上のAEM Formsには、オブジェクトのデシリアライズを試みる前にプリフライトチェックを実行するデシリアライゼーションファイアウォールが含まれています。 チェックは、ファイアウォール形式の許可リストに加える、ブロックリストに加える、またはその両方に対してクラス名をテストし、デシリアライゼーション攻撃によって悪用されることが知られているクラスを拒否します。
+
+**JDK 11以降**&#x200B;を実行しているインストールでは、この保護はプラットフォームのネイティブのシリアル化フィルターによってアクティブ化され、手動の手順は必要ありません。 **JDK 8**&#x200B;を実行しているインストールでは、ネイティブのシリアル化フィルタリングは効果的ではないため、NotSoSerial エージェントは起動時にJVMに明示的にアタッチする必要があります。
+
+シリアル化解除フィルターのヘルスチェックを参照して、保護がアクティブであることを確認します。
+
+```text
+https://<server>:<port>/system/console/healthcheck?tags=deserialization
+```
+
+JDK 8 インスタンスでヘルスチェックが失敗したと報告された場合は、[AEM Forms JEEでのシリアル化の問題の軽減](/help/forms/using/mitigating-serialization-issues-forms-jee.md)の説明に従って、エージェントを添付して設定します。
 
 ## 保護されたネットワーク設定 {#secure-network-configuration}
 
