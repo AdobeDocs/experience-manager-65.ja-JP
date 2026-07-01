@@ -87,13 +87,13 @@ ht-degree: 5%
  </tbody>
 </table>
 
-[ クライアントサイドのカスタマイズ ](/help/communities/client-customize.md)も参照してください
+[&#x200B; クライアントサイドのカスタマイズ &#x200B;](/help/communities/client-customize.md)も参照してください
 
 ## サーバーサイドの基本 {#essentials-for-server-side}
 
 * [メッセージングの設定](/help/communities/configure-messaging.md)
-* SCF コンポーネント用の[ メッセージング クライアント API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html)
-* サービスの[ メッセージング API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)
+* SCF コンポーネント用の[&#x200B; メッセージング クライアント API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html)
+* サービスの[&#x200B; メッセージング API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)
 * [メッセージングエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [サーバーサイドのカスタマイズ](/help/communities/server-customize.md)
 
@@ -113,7 +113,7 @@ ht-degree: 5%
 
 ### コミュニティサイト {#community-site}
 
-ウィザードを使用して作成されたコミュニティサイト構造には、選択時にメッセージ機能が含まれます。 [ コミュニティサイトコンソール ](/help/communities/sites-console.md#user-management)の`User Management`設定を参照してください。
+ウィザードを使用して作成されたコミュニティサイト構造には、選択時にメッセージ機能が含まれます。 [&#x200B; コミュニティサイトコンソール &#x200B;](/help/communities/sites-console.md#user-management)の`User Management`設定を参照してください。
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 
