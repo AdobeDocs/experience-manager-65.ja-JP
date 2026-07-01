@@ -1,4 +1,4 @@
-サブパッケージ                                          バージョン                    
+SUBPACKAGE                                          VERSION                    
 ----------                                          -------                    
 aem-bundle-remover-content                          2.0.0                      
 com.adobe.granite.backup.content                    0.0.76                     
