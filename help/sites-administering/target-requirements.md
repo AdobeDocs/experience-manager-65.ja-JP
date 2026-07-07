@@ -12,8 +12,8 @@ feature: Integration
 role: Admin
 source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 100%
+source-wordcount: '533'
+ht-degree: 90%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 ## Adobe Target の登録 {#registering-with-adobe-target}
 
-AEM と Adobe Target を統合するには、有効な Adobe Target アカウントが必要です。このアカウントには、**承認者**&#x200B;レベル以上の権限が必要です。Adobe Target に登録すると、クライアントコードを受け取ります。AEM を Adobe Target に接続するには、クライアントコードおよび Adobe Target のログイン名とパスワードが必要です。
+AEM と Adobe Target を統合するには、有効な Adobe Target アカウントが必要です。 このアカウントには、**承認者**&#x200B;レベル以上の権限が必要です。 Adobe Target に登録すると、クライアントコードを受け取ります。 AEM を Adobe Target に接続するには、クライアントコードおよび Adobe Target のログイン名とパスワードが必要です。
 
 クライアントコードは、Adobe Target サーバーを呼び出すときに Adobe Target の顧客アカウントを識別します。
 
@@ -35,7 +35,7 @@ AEM と Adobe Target を統合するには、有効な Adobe Target アカウン
 
 ## Target レプリケーションエージェントの有効化 {#enabling-the-target-replication-agent}
 
-Test &amp; Target [レプリケーションエージェント](/help/sites-deploying/replication.md)を作成者インスタンス上で有効にする必要があります。AEM のインストールに [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 実行モードを使用した場合、このレプリケーションエージェントはデフォルトでは有効になっていません。実稼動環境の保護に関する情報については、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。
+Test &amp; Target [レプリケーションエージェント](/help/sites-deploying/replication.md)をオーサーインスタンス上で有効にする必要があります。 AEM のインストールに [nosamplecontent](/help/sites-deploying/configure-runmodes.md#using-samplecontent-and-nosamplecontent) 実行モードを使用した場合、このレプリケーションエージェントはデフォルトでは有効になっていません。 本番環境の保護に関する情報については、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。
 
 1. AEM のホームページで、**ツール**／**デプロイメント**／**レプリケーション**&#x200B;をクリックします。
 1. 「**作成者のエージェント**」をクリックします。
@@ -44,27 +44,27 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
 
    >[!NOTE]
    >
-   >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。この URI を **https://admin.testandtarget.omniture.com** に置換しないでください。
+   >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。 この URI を **https://admin.testandtarget.omniture.com** に置換しないでください。
    >
-   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生します。これは想定されている動作です。この URI は内部でのみ使用されるべきものであり、**接続をテスト**&#x200B;では使用しません。
+   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生します。 これは想定されている動作です。この URI は内部でのみ使用されるべきものであり、**接続をテスト**&#x200B;では使用しません。
 
 ## アクティビティ設定ノードの保護 {#securing-the-activity-settings-node}
 
-パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護し、通常のユーザーがアクセスできないようにします。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
+パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護し、通常のユーザーがアクセスできないようにします。 アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
-**cq:ActivitySettings** ノードは、*アクティビティ jcr:content ノードの下*&#x200B;の `/content/campaigns/*nameofbrand*`* の下の CRXDE Lite で利用できます（例：`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`）。このノードは、コンポーネントのターゲティング後にのみ作成されます。
+**cq:ActivitySettings** ノードは、`/content/campaigns/*nameofbrand*`**&#x200B;のCRXDE liteでアクティビティ jcr:content ノード；* *例：`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`で利用できます。 このノードは、コンポーネントのターゲティング後にのみ作成されます。
 
-アクティビティの jcr:content の下にある **cq:ActivitySettings** ノードは、次の ACL によって保護されています。
+アクティビティのjcr:contentの下にある&#x200B;**cq:ActivitySettings** ノードは、次のACLによって保護されています。
 
 * すべて拒否（全員）
-* &quot;target-activity-authors&quot; に jcr:read,rep:write を許可（デフォルトで作成者はこのグループのメンバー）
-* &quot;targetservice&quot; に jcr:read,rep:write を許可
+* jcr:read,rep:writeを「target-activity-authors」に許可します（作成者はこのグループのメンバーです）
+* jcr:read,rep:writeに「targetservice」を許可
 
-これらの設定により、権限を持たないユーザーがノードプロパティにアクセスできなくなります。オーサーインスタンスとパブリッシュインスタンスの両方で同じ ACL を使用します。詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
+これらの設定により、権限を持たないユーザーがノードプロパティにアクセスできなくなります。 オーサーインスタンスとパブリッシュインスタンスの両方で同じ ACL を使用します。 詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
 ## AEM Link Externalizer の設定 {#configuring-the-aem-link-externalizer}
 
-Adobe Target でアクティビティを編集する場合、AEM オーサーノードで URL を変更していなければ、URL は **localhost** を指しています。書き出すコンテンツを特定の&#x200B;*Publish*&#x200B;ドメインに指定する場合は、AEM Link Externalizer を設定できます。
+Adobe Target でアクティビティを編集する場合、AEM オーサーノードで URL を変更していなければ、URL は **localhost** を指しています。 書き出すコンテンツを特定の&#x200B;*Publish*&#x200B;ドメインに指定する場合は、AEM Link Externalizer を設定できます。
 
 >[!NOTE]
 >

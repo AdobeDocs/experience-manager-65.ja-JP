@@ -1,6 +1,6 @@
 ---
 title: コミュニティサイト
-description: の管理者向けAdobe Experience Manager（AEM） Communities の基本事項について説明します。ユーザーは、その基本機能に精通しています。
+description: 管理者がAdobe Experience Manager（AEM）の基本機能に精通している場合は、その基本について説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -11,25 +11,25 @@ solution: Experience Manager
 feature: Communities
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '453'
 ht-degree: 8%
 
 ---
 
 # コミュニティサイト {#communities-sites}
 
-この節は、AEM Communitiesを管理するユーザーを対象としており、AEM Communitiesの機能に関する知識を前提としています。
+このセクションは、AEM Communitiesを管理し、AEM Communitiesの機能に精通しているユーザーを対象としています。
 
 ## 概要 {#overview}
 
-概要とはじめにのチュートリアルについては、次を参照してください。
+概要と基本チュートリアルについては、次のサイトを参照してください。
 
 * [AEM Communities の概要](overview.md)
 * [AEM Communities 使用の手引き](getting-started.md)
 
-## 管理および設定に関するトピック {#administration-and-configuration-topics}
+## 管理と設定のトピック {#administration-and-configuration-topics}
 
-### コミュニティサイトの作成と管理 {#communities-site-creation-and-management}
+### Communities サイトの作成と管理 {#communities-site-creation-and-management}
 
 * コミュニティ [&#x200B; コンソール &#x200B;](consoles.md)
 
@@ -53,45 +53,45 @@ ht-degree: 8%
 
 ### ユーザー生成コンテンツ {#user-generated-content}
 
-AEM Communitiesの主な機能は、ログインしたサイト訪問者（メンバー）がユーザー生成コンテンツ（UGC）を生成することです。 UGC の操作について詳しくは、次を参照してください。
+AEM Communitiesの主な機能は、サインインサイト訪問者（メンバー）がUGCを生成することです。 UGCの利用方法について詳しくは、次のサイトをご覧ください。
 
-* [Common UGC Store](working-with-srp.md):UGC の共有ストレージ用の SRP の選択
-* [UGC のモデレート &#x200B;](moderate-ugc.md)：信頼されたメンバーは、一括またはコンテキスト内で UGC をモデレートできる場合があります
-* [UGC のタグ付け &#x200B;](tag-ugc.md)：メンバーがコンテンツにタグ付けできるように機能を設定できます
-* [UGC の翻訳 &#x200B;](translate-ugc.md)：機能は、すべての UGC を翻訳するように設定することも、メンバーが選択した投稿を翻訳できるようにすることもできます
-* [Analytics 設定 &#x200B;](analytics.md)：メンバーアクティビティに関する様々な指標についてAdobe Analyticsがレポートできるようにします
+* [共通UGC ストア &#x200B;](working-with-srp.md):UGCの共有ストレージ用のSRPの選択
+* [UGCの管理](moderate-ugc.md)：信頼できるメンバーは、一括またはコンテキスト内でUGCを管理できます
+* [UGC](tag-ugc.md)のタグ付け：メンバーがコンテンツをタグ付けできるように機能を設定できます
+* [UGCの翻訳](translate-ugc.md)：すべてのUGCを翻訳するように機能を設定するか、メンバーが選択した投稿を翻訳できるように設定できます
+* [Analytics Configuration](analytics.md): Adobe Analyticsでメンバーのアクティビティに関する様々な指標をレポートできるようにしています
 
 ### コミュニティメンバー {#community-members}
 
-* [&#x200B; ユーザーとユーザーグループの管理 &#x200B;](users.md)：コミュニティメンバーとメンバーグループの詳細（権限のあるメンバーを含む）。
-* [&#x200B; 貢献度制限 &#x200B;](limits.md)：新しいメンバーによる投稿を制限する機能。
-* [&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author)：オーサー環境からパブリッシュ側のメンバーおよびメンバーグループにアクセスできるようにします。
-* [&#x200B; メンバーコンソールとグループコンソール &#x200B;](members.md)：パブリッシュサイドのメンバーおよびメンバーグループを、オーサー環境で作成および管理できます。
-* [&#x200B; ユーザー同期 &#x200B;](sync.md)：複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する場合。
-* [FacebookおよびTwitterでのソーシャルログイン &#x200B;](social-login.md)：サイト訪問者がFacebookまたはTwitterの資格情報を使用してコミュニティメンバーになる機能。
-* [&#x200B; スコアおよびバッジ &#x200B;](implementing-scoring.md)：バッジを割り当ててメンバーの役割を特定し、メンバーがコミュニティへの参加を通じてバッジを獲得する機能。
-* [&#x200B; 通知 &#x200B;](notifications.md)：メンバーがフォローするアクティビティの通知を受け取る機能。
-* [&#x200B; 購読 &#x200B;](subscriptions.md)：メンバーが外部メールを使用してコミュニティとやり取りする機能。
-* [&#x200B; メッセージング &#x200B;](messaging.md)：メンバーが内部メッセージを使用してコミュニティとやり取りする機能。
+* [&#x200B; ユーザーとユーザーグループの管理](users.md)：権限のあるメンバーを含む、コミュニティメンバーとメンバーグループの詳細。
+* [貢献度制限](limits.md)：新しいメンバーによる投稿を制限する機能。
+* [&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author)：パブリッシュサイドのメンバーとメンバーグループにオーサー環境からアクセスできるようにします。
+* [&#x200B; メンバーとグループ コンソール &#x200B;](members.md)：パブリッシュサイドのメンバーとメンバーグループを作成し、オーサー環境から管理できます。
+* [&#x200B; ユーザー同期](sync.md)：複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期します。
+* [FacebookおよびTwitterでログイン &#x200B;](social-login.md)：サイト訪問者がFacebookまたはTwitterの資格情報を使用してコミュニティ メンバーになる機能。
+* [&#x200B; スコアリングとバッジ &#x200B;](implementing-scoring.md): バッジを割り当ててメンバーの役割を特定し、メンバーがコミュニティへの参加を通じてバッジを獲得できるようにする機能。
+* [通知](notifications.md)：メンバーがフォローしているアクティビティを通知する機能。
+* [&#x200B; サブスクリプション &#x200B;](subscriptions.md)：メンバーが外部メールを使用してコミュニティと対話する機能。
+* [&#x200B; メッセージ &#x200B;](messaging.md)：メンバーが内部メッセージを使用してコミュニティと対話する機能。
 
 ### デプロイメント {#deployment}
 
-「デプロイメント」セクションには、AEM Communitiesに固有の情報が含まれます。
+「デプロイメント」セクションには、AEM Communitiesに固有の情報が含まれています。
 
-コミュニティコンテンツの操作の性質は、デプロイメントの構造に影響します。
+コミュニティコンテンツを扱う性質は、デプロイメントの構造に影響します。
 
 * [Communities 用の推奨トポロジ](topologies.md)
 
-AEM プラットフォームには、最新の Communities リリースをインストールすることが重要です。
+AEM プラットフォームに最新のCommunities リリースをインストールすることが重要です。
 
-* [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)
+* [最新のコミュニティ機能パック](deploy-communities.md#latestfeaturepack)
 
-[&#x200B; アップグレード &#x200B;](upgrade.md)、[Dispatcher](dispatcher.md)、&lbrace; レプリケーション [&#128279;](deploy-communities.md#replication-agents-on-author) など、Communities 固有のその他の情報については、デプロイメントページを参照し  ください。
+[&#x200B; アップグレード &#x200B;](upgrade.md)、[Dispatcher](dispatcher.md)、[&#x200B; レプリケーション &#x200B;](deploy-communities.md#replication-agents-on-author)など、その他のコミュニティ固有の情報については、デプロイメントページを参照してください。
 
-## 関連する Communities ドキュメント {#related-communities-documentation}
+## 関連するCommunities ドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントについて詳しくは、[Communities のデプロイ &#x200B;](deploy-communities.md) を参照してください。
+* [&#x200B; コミュニティのデプロイ &#x200B;](deploy-communities.md)にアクセスすると、推奨されるデプロイメントについて確認できます。
 
-* [&#x200B; コミュニティの開発 &#x200B;](communities.md) を参照して、ソーシャルコンポーネントフレームワーク（SCF）と、コミュニティのコンポーネントや機能のカスタマイズについて学ぶことができます。
+* [&#x200B; コミュニティの開発](communities.md)にアクセスして、ソーシャルコンポーネントフレームワーク（SCF）とコミュニティのコンポーネントと機能のカスタマイズについて学ぶことができます。
 
-* Communities コンポーネントを使用してオーサリングする方法と設定する方法については、[Communities コンポーネントのオーサリング &#x200B;](author-communities.md) を参照してください。
+* [Communities コンポーネントのオーサリング &#x200B;](author-communities.md)にアクセスして、Communities コンポーネントのオーサリングと設定方法を学ぶことができます。

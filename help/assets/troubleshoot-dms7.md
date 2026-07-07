@@ -13,8 +13,8 @@ mini-toc-levels: 3
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '1393'
-ht-degree: 100%
+source-wordcount: '1410'
+ht-degree: 97%
 
 ---
 
@@ -54,7 +54,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 ### 同期のログ {#synchronization-logging}
 
-同期のエラーと問題は `error.log`（Experience Manager サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Sling コンソール（[https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)）を通じて `com.adobe.cq.dam.ips` パッケージのログレベルをデバッグに引き上げると、さらに詳しい情報を集めることができます。
+同期のエラーと問題は `error.log`（Experience Manager サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。 ほとんどの問題の根本原因を特定するには十分なログを利用できますが、Sling コンソール（[https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)）を通じて`com.adobe.cq.dam.ips` パッケージのDEBUGへのログを増やして、より多くの情報を収集できます。
 
 ### 移動、コピー、削除 {#move-copy-delete}
 
@@ -68,9 +68,9 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 既存の Dynamic Media アセット（同じ名称、同じ場所）を置換する際、双方のアセットを保持またはバージョンを置換／作成の選択が可能です。
 
-* 両方を保持すると、公開済みアセット URL の名前が一意なアセットが作成されます。例えば、`image.jpg` は元のアセットで、`image1.jpg` は新しくアップロードされたアセットです。
+* 両方を保持すると、公開済みアセット URL の名前が一意なアセットが作成されます。 例えば、`image.jpg` は元のアセットで、`image1.jpg` は新しくアップロードされたアセットです。
 
-* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信の既存アセットが新しいバージョンに置き換わります。
+* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。 配信の既存アセットが新しいバージョンに置き換わります。
 
 ## 画像とセット {#images-and-sets}
 
@@ -89,7 +89,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
     <ol>
      <li><p>CRX/DE に移動します。</p>
       <ul>
-       <li>JCR 内のプリセット <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> が定義されているかどうかを確認します。この場所は、Experience Manager 6.x から 6.4 にアップグレードし、移行をオプトアウトした場合に適用されます。それ以外の場合、場所は <code>/conf/global/settings/dam/dm/presets/viewer</code> になります。</li>
+       <li>JCR 内のプリセット <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> が定義されているかどうかを確認します。 この場所は、Experience Manager 6.x から 6.4 にアップグレードし、移行をオプトアウトした場合に適用されます。 それ以外の場合、場所は <code>/conf/global/settings/dam/dm/presets/viewer</code> になります。</li>
        <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong> </strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li>
       </ul> </li>
     </ol> </td>
@@ -152,7 +152,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
    <td>ビデオをプレビューできない</td>
    <td>
     <ul>
-     <li>（サポートされていないファイル形式の場合）フォルダーにビデオプロファイルが割り当てられていることを確認します。サポートされていない場合は、画像のみが表示されます。</li>
+     <li>（サポートされていないファイル形式の場合）フォルダーにビデオプロファイルが割り当てられていることを確認します。 サポートされていない場合は、画像のみが表示されます。</li>
      <li>AVS セットを生成するには、ビデオプロファイルに複数のエンコーディングプリセットが含まれている必要があります（単一のエンコーディングは MP4 ファイルのビデオコンテンツとして扱われます。サポートされていないファイルの場合は、未処理のファイルと同じように扱われます）。</li>
      <li>メタデータで <code>dam:scene7File</code> の <code>dam:scene7FileAvs</code> を確認して、ビデオの処理が終了したことを確かめます。</li>
     </ul> </td>
@@ -160,7 +160,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
     <ol>
      <li>ビデオプロファイルをフォルダーに割り当てます。</li>
      <li>エンコーディングプリセットを 2 つ以上含むよう、ビデオプロファイルを編集します。</li>
-     <li>ビデオの処理が終わるのを待ちます。</li>
+     <li>ビデオの処理が終了するまで待ちます。</li>
      <li>ビデオを再読み込みする前に、Dynamic Media エンコーディングビデオワークフローが実行されていないことを確認します。<br /> </li>
      <li>ビデオを再度アップロードします。</li>
     </ol> </td>
@@ -177,7 +177,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
     <ol>
      <li>次を使用して Experience Manager インスタンスを確認します。 <code>-r dynamicmedia_scene7</code></li>
      <li>クラウドサービスページで Dynamic Media 設定が正しくセットアップされていることを確認します。</li>
-     <li>フォルダーにビデオプロファイルが含まれていることを確認します。そのビデオプロファイルも確認します。</li>
+     <li>フォルダーにビデオプロファイルが含まれていることを確認します。 そのビデオプロファイルも確認します。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -214,7 +214,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 **デバッグの方法**
 
 1. サンプルマネージャー診断ページ `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html` に移動します。
-1. 計算された値を確認します。正しく動作すると、次のように表示されます。`_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets`。
+1. 計算された値を確認します。 正しく動作すると、次のように表示されます。`_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets`。
 
    >[!NOTE]
    >
@@ -236,7 +236,7 @@ CRXDE Lite で以下を行います。
 
 1. Dynamic Media 同期フォルダー内の `<sync-folder>/_CSS/_OOTB` フォルダー（例えば `/content/dam/_CSS/_OOTB`）に移動します。
 1. 問題のあるアセットのメタデータノードを見つけます（例えば `<sync-folder>/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/`）。
-1. `dam:scene7*` プロパティがあることを確認します。アセットの同期と公開に成功した場合は `dam:scene7FileStatus` が **PublishComplete** に設定されています。
+1. `dam:scene7*` プロパティがあることを確認します。 アセットの同期と公開に成功した場合は `dam:scene7FileStatus` が **PublishComplete** に設定されています。
 1. 次のプロパティと文字列リテラルの値を連結して Dynamic Media に直接アートワークを要求します。
 
    * `dam:scene7Domain`
@@ -247,7 +247,7 @@ CRXDE Lite で以下を行います。
 
 **解決策**
 
-サンプルアセットまたはビューアプリセットのアートワークが同期されていないか、公開されてない場合は、コピー／同期処理全体をやり直します。
+サンプルアセットまたはビューアプリセットのアートワークが同期されていないか、公開されてない場合は、コピー／同期処理全体を再起動します。
 
 1. CRXDE Lite に移動します。
 1. `<sync-folder>/_CSS/_OOTB` を削除します。

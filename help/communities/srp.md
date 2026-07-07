@@ -1,6 +1,6 @@
 ---
 title: ストレージリソースプロバイダーの概要
-description: ユーザー生成コンテンツ（UGC）と呼ばれるコミュニティコンテンツが、ストレージリソースプロバイダー（SRP）から提供されるシンプルで共通のストアにどのように保存されるかを説明します。
+description: ユーザー生成コンテンツ（UGC）と呼ばれるコミュニティコンテンツが、ストレージリソースプロバイダー（SRP）が提供するシンプルで一般的なストアにどのように保存されるのかを説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -11,8 +11,8 @@ feature: Communities
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 1%
+source-wordcount: '1154'
+ht-degree: 3%
 
 ---
 
@@ -20,135 +20,135 @@ ht-degree: 1%
 
 ## はじめに {#introduction}
 
-Adobe Experience Manager（AEM） Communities 6.1 では、コミュニティコンテンツ（一般的にユーザー生成コンテンツ（UGC）と呼ばれます）は、[&#x200B; ストレージリソースプロバイダー &#x200B;](working-with-srp.md) （SRP）から提供される単一の共通ストアに保存されます。
+Adobe Experience Manager （AEM） Communities 6.1では、一般的にユーザー生成コンテンツ （UGC）と呼ばれるコミュニティコンテンツが、[&#x200B; ストレージリソースプロバイダー](working-with-srp.md) （SRP）が提供する1つの共通ストアに保存されています。
 
-SRP オプションはいくつかあり、そのすべてが、新しいAEM Communities インターフェイスである [SocialResourceProvider API](srp-and-ugc.md) （SRP API）を通じて UGC にアクセスします。この API には、作成、読み取り、更新、削除（CRUD）のすべての操作が含まれています。
+新しいAEM Communities インターフェイス [SocialResourceProvider API](srp-and-ugc.md) （SRP API）を介してUGCにアクセスするSRP オプションがいくつかあり、これには、すべての作成、読み取り、更新、削除（CRUD）操作が含まれます。
 
-すべての SCF コンポーネントは SRP API を使用して実装されているため、[&#x200B; 基盤となるトポロジ &#x200B;](topologies.md) または UGC の場所に関する知識がなくてもコードを開発できます。
+すべてのSCF コンポーネントはSRP APIを使用して実装されているため、[基になるトポロジ &#x200B;](topologies.md)またはUGCの場所を知らずにコードを開発できます。
 
-***SocialResourceProvider API は、AEM Communitiesのライセンスをお持ちのお客様のみが利用できます。***
+***SocialResourceProvider APIは、AEM Communitiesのライセンスを取得したお客様のみが利用できます。***
 
 >[!NOTE]
 >
->**カスタムコンポーネント**:AEM Communitiesのライセンスをお持ちのお客様は、SRP API を、基盤となるトポロジに関係なく UGC にアクセスするカスタムコンポーネントの開発者が使用できます。 [SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md) を参照してください。
+>**カスタムコンポーネント**: AEM Communitiesのライセンスを取得したお客様の場合、SRP APIは、基礎となるトポロジに関係なく、カスタムコンポーネントの開発者がUGCにアクセスできるようにします。 [SRPおよびUGC Essentials](srp-and-ugc.md)を参照してください。
 
 関連トピック：
 
-* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
-* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
 
 ## リポジトリについて {#about-the-repository}
 
-SRP を理解するには、AEM コミュニティサイトにおけるAEM リポジトリ（Oak）の役割を理解すると役に立ちます。
+SRPを理解するには、AEM コミュニティサイトでのAEM リポジトリ（Oak）の役割を理解することが役立ちます。
 
-**Java™ コンテンツリポジトリ（JCR）**
-この標準は、コンテンツリポジトリのデータモデルとアプリケーションプログラミングインターフェイス（[JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)）を定義します。 従来のファイルシステムの特性とリレーショナルデータベースの特性を組み合わせ、コンテンツアプリケーションでしばしば必要とされる機能をいくつか追加しています。
+**Java™ コンテンツ リポジトリ （JCR）**
+この標準は、コンテンツリポジトリのデータモデルとアプリケーションプログラミングインターフェイス（[JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)）を定義します。 従来のファイルシステムの特徴とリレーショナルデータベースの特徴を組み合わせ、コンテンツアプリケーションに必要な追加機能をいくつか追加します。
 
-JCR の実装の 1 つにAEM リポジトリーであるOakがあります。
+JCRの実装の1つは、AEM リポジトリであるOakです。
 
 **Apache Jackrabbit Oak**
-[Oak](../../help/sites-deploying/platform.md) は、コンテンツ中心のアプリケーション向けに設計されたデータストレージシステムである JCR 2.0 の実装です。 非構造化データと半構造化データ用に設計された階層データベースの一種です。 リポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレート、内部データも保存されます。 コンテンツにアクセスするための UI は、[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) です。
+[Oak](../../help/sites-deploying/platform.md)は、コンテンツ中心のアプリケーション向けに設計されたデータ ストレージ システムであるJCR 2.0の実装です。 これは、非構造化データと半構造化データ用に設計された階層データベースの一種です。 リポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレート、内部データも保存されます。 コンテンツにアクセスするためのUIは[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)です。
 
-通常、JCR とOakは両方ともAEM リポジトリを参照するために使用されます。
+JCRとOakの両方は、通常、AEM リポジトリを参照するために使用されます。
 
-非公開のオーサー環境でサイトコンテンツを開発した後、それを公開パブリッシュ環境にコピーする必要があります。 この操作は、多くの場合、*[レプリケーション](deploy-communities.md#replication-agents-on-author)* と呼ばれる操作を通じて行われます。 これは、作成者、開発者、管理者の管理下で行われます。
+プライベートオーサー環境でサイトコンテンツを開発した後、パブリックパブリッシュ環境にコピーする必要があります。 これは多くの場合、*[replication](deploy-communities.md#replication-agents-on-author)*&#x200B;という操作を通じて行われます。 これは作成者/開発者/管理者のコントロール下で行われます。
 
-UGC の場合、コンテンツは、登録されたサイト訪問者（コミュニティメンバー）によって、公開パブリッシュ環境に入力されます。 これはランダムに発生します。
+UGCの場合、コンテンツは登録されたサイト訪問者（コミュニティメンバー）によってパブリッシュ環境に入力されます。 ランダムに発生します。
 
-管理やレポートの目的では、非公開のオーサー環境から UGC にアクセスできると便利です。 Publishからオーサーへのリバースレプリケーションが必要ないので、SRP を使用すると、オーサーからの UGC へのアクセスの一貫性とパフォーマンスが向上します。
+管理とレポートの目的では、プライベート オーサー環境からUGCにアクセスできることが便利です。 SRPでは、オーサーからオーサーへのリバースレプリケーションは必要ないため、オーサーからのUGCへのアクセスがより一貫性があり、パフォーマンスも高くなります。
 
-## SRP について {#about-srp}
+## SRPについて {#about-srp}
 
-UGC を共有ストレージに保存すると、メンバーコンテンツのインスタンスが 1 つになり、ほとんどのデプロイメントで、オーサー環境とパブリッシュ環境の両方からアクセスできます。 SRP の選択（MSRP、ASRP、JSRP）に関係なく、SRP API を使用してすべてにプログラムでアクセスする必要があります。
+UGCを共有ストレージに保存すると、メンバーコンテンツのインスタンスが1つだけ存在します。ほとんどのデプロイメントでは、オーサー環境とパブリッシュ環境の両方からアクセスできます。 SRPの選択（MSRP、ASRP、JSRP）に関係なく、すべてはSRP APIを使用してプログラムでアクセスする必要があります。
 
 >[!NOTE]
 >
->サンプルコードとその他の詳細については、[SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md) を参照してください。
+>サンプルコードとその他の詳細については、[SRPおよびUGC Essentials](srp-and-ugc.md)を参照してください。
 >
->コーディング時のベストプラクティスについては、[SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) を参照してください。
+>コーディングのベストプラクティスについては、[SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md)を参照してください。
 
 ### ASRP {#asrp}
 
-ASRP がある場合、UGC は JCR に格納されず、Adobeがホストおよび管理するクラウドサービスに格納されます。 ASRP に保存された UGC は、CRXDE Liteで閲覧したり、JCR API を使用してアクセスしたりすることはできません。
+ASRPがある場合、UGCはJCRに保存されず、Adobeでホストおよび管理されるクラウドサービスに保存されます。 ASRPに保存されたUGCは、CRXDE Liteで表示したり、JCR APIを使用してアクセスしたりすることはできません。
 
-[ASRP - Adobeストレージリソースプロバイダー &#x200B;](asrp.md) を参照してください。
+[ASRP - Adobe ストレージリソースプロバイダー](asrp.md)を参照してください。
 
-開発者が UGC に直接アクセスすることはできません。
+開発者がUGCに直接アクセスすることはできません。
 
-ASRP は、クエリにAdobeクラウドを使用します。
+ASRPは、クエリにAdobe Cloudを使用しています。
 
 ### MSRP {#msrp}
 
-存在する場合、MSRP、UGC は JCR には格納されず、MongoDB に格納されます。 MSRP に保存された UGC には、CRXDE Liteで表示したり、JCR API を使用してアクセスしたりすることはできません。
+MSRP、UGCがJCRに保存されていない場合は、MongoDBに保存されます。 MSRPに保存されたUGCは、CRXDE Liteで表示したり、JCR APIを使用してアクセスしたりすることはできません。
 
-[MSRP - MongoDB ストレージリソースプロバイダー &#x200B;](msrp.md) を参照してください。
+[MSRP - MongoDB ストレージリソースプロバイダー](msrp.md)を参照してください。
 
-MSRP は ASRP に相当しますが、すべてのAEM サーバーインスタンスが同じ UGC にアクセスしているので、共通のツールを使用して MongoDB に保存された UGC に直接アクセスすることができます。
+MSRPはASRPと同等ですが、すべてのAEM サーバーインスタンスが同じUGCにアクセスしているため、一般的なツールを使用してMongoDBに保存されているUGCに直接アクセスできます。
 
-MSRP は、クエリに Solr を使用します。
+MSRPはクエリにSolrを使用します。
 
 ### JSRP {#jsrp}
 
-JSRP は、1 つのAEM インスタンス上のすべての UGC にアクセスするためのデフォルトのプロバイダーです。 これにより、MSRP や ASRP を設定しなくても、AEM Communities 6.1 をすばやく体験できます。
+JSRPは、1つのAEM インスタンス上のすべてのUGCにアクセスするためのデフォルトプロバイダーです。 MSRPやASRPを設定しなくても、AEM Communities 6.1をすばやく体験できます。
 
-[JSRP - JCR ストレージリソースプロバイダー &#x200B;](jsrp.md) を参照してください。
+[JSRP - JCR ストレージリソースプロバイダー](jsrp.md)を参照してください。
 
-UGC が JCR に格納されていて、CRXDE Liteおよび JCR API でアクセスできる場合、Adobeは JCR API を使用しないことをお勧めします。 その場合、今後の変更により、カスタムコードに影響が出る可能性があります。
+UGCがJCRに保存されている間にJSRPがあり、CRXDE LiteおよびJCR APIでアクセスできる場合、AdobeではJCR APIを使用しないことをお勧めします。 変更を加えると、今後の変更がカスタムコードに影響を与える可能性があります。
 
-また、オーサー環境とPublish環境用のリポジトリは共有されません。 パブリッシュインスタンスのクラスターは共有パブリッシュリポジトリーになりますが、Publishに入力された UGC はオーサー環境には表示されないので、オーサー環境から UGC を管理することはできません。 UGC は、入力されたインスタンスのAEM リポジトリ（JCR）にのみ保持されます。
+さらに、オーサー環境とパブリッシュ環境のリポジトリは共有されません。 パブリッシュインスタンスのクラスターは共有パブリッシュリポジトリになりますが、パブリッシュで入力されたUGCはオーサーには表示されないため、オーサーからUGCを管理することはできません。 UGCは、そのUGCが入力されたインスタンスのAEM リポジトリ（JCR）にのみ保持されます。
 
-JSRP は、クエリにOak インデックスを使用します。
+JSRPは、クエリにOak インデックスを使用します。
 
-## JCR のシャドウノードについて {#about-shadow-nodes-in-jcr}
+## JCRのシャドウノードについて {#about-shadow-nodes-in-jcr}
 
-UGC のパスを模したシャドウノードがローカルリポジトリに存在し、次の 2 つの目的を果たします。
+UGCへのパスを模倣するシャドウノードは、次の2つの目的を果たすためにローカルリポジトリに存在します。
 
 1. [アクセス制御（ACL）](#for-access-control-acls)
-1. [存在しないリソース（NER）](#for-non-existing-resources-ners)
+1. [非既存リソース（NER）](#for-non-existing-resources-ners)
 
-SRP の実装に関係なく、実際の UGC はシャドウノードと同じ場所に表示 *されません*。
+SRPの実装に関係なく、実際のUGCはシャドウ ノードと同じ場所に&#x200B;*not*&#x200B;表示されます。
 
-### アクセス制御（ACL） {#for-access-control-acls}
+### ACL （アクセス制御） {#for-access-control-acls}
 
-ASRP や MSRP など、一部の SRP 実装では、ACL 検証を提供しないデータベースにコミュニティコンテンツを保存します。 シャドウノードは、ACL を適用できるローカルリポジトリ内の場所を提供します。
+ASRPやMSRPなどの一部のSRP実装では、ACL検証を提供しないデータベースにコミュニティ コンテンツを保存します。 シャドウノードは、ACLを適用できるローカルリポジトリ内の場所を提供します。
 
-SRP API を使用すると、すべての SRP オプションは、すべての CRUD 操作の前にシャドウの場所の同じチェックを実行します。
+SRP APIを使用すると、すべてのSRP オプションは、すべてのCRUD操作の前にシャドウの場所を同じようにチェックします。
 
-ACL チェックでは、ユーティリティメソッドを使用して、リソースの UGC に適用される権限を確認するのに適したパスを返します。
+ACL チェックでは、リソースのUGCに適用される権限のチェックに適したパスを返すユーティリティメソッドを使用します。
 
-サンプルコードについては、「[SRP と UGC の初期設定 &#x200B;](srp-and-ugc.md)」を参照してください。
+サンプルコードについては、[SRPおよびUGC Essentials](srp-and-ugc.md)を参照してください。
 
-### 既存のリソース以外（NER） {#for-non-existing-resources-ners}
+### 非既存リソース（NER） {#for-non-existing-resources-ners}
 
-一部の Communities コンポーネントはスクリプト内に含まれるので、Communities の機能をサポートするには Sling アドレス可能なノードが必要です。 [&#x200B; 含まれるコンポーネント &#x200B;](scf.md#add-or-include-a-communities-component) は、存在しないリソース（NER）と呼ばれます。
+一部のCommunities コンポーネントはスクリプト内に含まれるため、Communities機能をサポートするにはSling Addressable ノードが必要です。 [含まれるコンポーネント &#x200B;](scf.md#add-or-include-a-communities-component)は、既存でないリソース （NER）と呼ばれます。
 
-シャドウノードは、リポジトリ内の Sling のアドレス指定可能な場所を提供します。
+シャドウノードは、リポジトリ内のSling アドレス可能な場所を提供します。
 
 >[!CAUTION]
 >
->シャドウノードには複数の用途があるので、シャドウノードが存在するということは、コンポーネントが NER であるということを意味 *しません*。
+>シャドウ ノードには複数の用途があるため、シャドウ ノードの存在は&#x200B;*not*&#x200B;は、コンポーネントがNERであることを意味します。
 
 ### 保存場所 {#storage-location}
 
-[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) の [&#x200B; コメントコンポーネント &#x200B;](http://localhost:4502/content/community-components/en/comments.html) を使用した、シャドウノードの例を次に示します。
+次に、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)の[&#x200B; コメント コンポーネント &#x200B;](http://localhost:4502/content/community-components/en/comments.html)を使用したシャドウノードの例を示します。
 
-* コンポーネントは、次の場所にあるローカルリポジトリに存在します。
+* コンポーネントは、次の場所のローカルリポジトリに存在します。
 
   `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-* 対応するシャドウノードは、次の場所にあるローカルリポジトリに存在します。
+* 対応するシャドウ ノードは、次の場所のローカル リポジトリに存在します。
 
   `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-シャドウノードの下に UGC が見つかりません。
+シャドウ ノードの下にUGCが見つかりません。
 
-デフォルトの動作では、関連するサブツリーが読み取りまたは書き込みに参照されるたびに、パブリッシュインスタンスにシャドウノードが設定されます。
+デフォルトの動作は、読み取りまたは書き込みのために関連するサブツリーが参照されるたびに、パブリッシュインスタンスにシャドウノードを設定することです。
 
-例えば、デプロイメントが TarMK パブリッシュファームを使用する [MSRP](msrp.md) であるとします。
+例えば、デプロイメントがTarMK パブリッシュファームを持つ[MSRP](msrp.md)であるとします。
 
-[&#x200B; メンバー &#x200B;](users.md) が UGC を pub1 に投稿すると（MongoDB に保存されます）、シャドーノードが pub1 の JCR に作成されます。
+[&#x200B; メンバー](users.md)が（MongoDBに保存されている） pub1にUGCを投稿すると、pub1のJCRにシャドウノードが作成されます。
 
-UGC が pub2 で初めて読み取られるときに、何も設定されていない場合、デフォルトの動作はシャドウノードを作成することです。
+pub2でUGCを初めて読み取る場合、何も設定されていない場合、デフォルトの動作はシャドウノードを作成することです。
 
-デフォルトの動作以外が必要な場合は、オーサーインスタンスで設定し、すべてのパブリッシュインスタンスにロールフォワードする必要があります。通常、これは手動のプロセスです。
+デフォルトのビヘイビアー以外のビヘイビアーが必要な場合は、オーサーインスタンスで設定し、すべてのパブリッシュインスタンスにロールフォワードする必要があります。これは通常、手動プロセスです。
