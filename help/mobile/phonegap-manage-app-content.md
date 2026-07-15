@@ -28,7 +28,7 @@ ht-degree: 5%
 >
 >**前提条件**:
 >
->[ デプロイとメンテナンス ](/help/sites-deploying/deploy.md)で、開発者はAdobe Experience Manager（AEM）のシステム コンポーネントとテンプレートに慣れました。
+>[&#x200B; デプロイとメンテナンス &#x200B;](/help/sites-deploying/deploy.md)で、開発者はAdobe Experience Manager（AEM）のシステム コンポーネントとテンプレートに慣れました。
 
 ## ページコンテンツを管理タイルを使用すると {#the-manage-page-content-tile}
 
@@ -36,7 +36,7 @@ ht-degree: 5%
 >
 >すぐに使えるアプリテンプレートを使用していない場合、新しいアプリコンテンツをOTAで公開できるようにするには、コンテンツ同期ハンドラーを設定する必要があります。
 >
->詳しくは、開発者の節の「[ コンテンツ同期を使用したモバイル ](/help/mobile/phonegap-contentsync.md)」を参照してください。
+>詳しくは、開発者の節の「[&#x200B; コンテンツ同期を使用したモバイル &#x200B;](/help/mobile/phonegap-contentsync.md)」を参照してください。
 
 ここでは、AEM Sitesと同様に、AEM Mobileでもコンテンツを作成、編集、削除できます。
 
@@ -50,7 +50,7 @@ ht-degree: 5%
 
 注意&#x200B;*すべてがコンテンツ*&#x200B;です。つまり、アプリケーションスタイル、コピー（テキスト）、メディア、ページ、ナビゲーション、コンテンツのターゲティングはすべて、アプリストアに行かなくても、OTAで編集および更新できます。
 
-AEM Mobile コンテンツを編集するには、*AEM オーサー*は、AEMのコンテンツ編集インターフェイスについて十分に理解している必要があります。[AEMでのページのオーサリング ](/help/sites-authoring/qg-page-authoring.md)
+AEM Mobile コンテンツを編集するには、*AEM オーサー*は、AEMのコンテンツ編集インターフェイスについて十分に理解している必要があります。[AEMでのページのオーサリング &#x200B;](/help/sites-authoring/qg-page-authoring.md)
 
 ## 「コンテンツパッケージを管理」タイル {#the-manage-content-packages-tile}
 
@@ -80,7 +80,7 @@ AEM Mobile コンテンツを編集するには、*AEM オーサー*は、AEMの
 >
 >ステージングされたコンテンツは、公開前にAEM Verify アプリを使用して検証できます。
 >
->AEM Verify アプリについて詳しくは、[AEM Verifyのモバイルクイックスタート ](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
+>AEM Verify アプリについて詳しくは、[AEM Verifyのモバイルクイックスタート &#x200B;](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
