@@ -1,6 +1,6 @@
 ---
 title: AEM Communities 使用の手引き
-description: AEM Communitiesの概要に関するチュートリアル
+description: AEM Communitiesの概要と利点を解説
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
@@ -19,9 +19,9 @@ ht-degree: 26%
 
 # AEM Communities 使用の手引き {#getting-started-with-aem-communities}
 
-AEM Communitiesを使用すると、企業はサイトテンプレートのライブラリから専用のブランドコミュニティエクスペリエンスを作成できます。 フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルを web サイトに統合して、プロジェクト、顧客、企業間のインタラクションを促進できます。
+AEM Communitiesを活用すれば、企業はサイトテンプレートのライブラリから、ブランド化された専用のコミュニティエクスペリエンスを作成できます。 フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルをweb サイトに統合することで、見込み客、顧客、企業間のやり取りを促進できます。
 
-以下は、デモや開発の目的で [&#x200B; エンゲージメントコミュニティ &#x200B;](/help/communities/overview.md#engagement-community) をすばやく設定するためのチュートリアルです。
+以下は、デモまたは開発目的で[&#x200B; エンゲージメントコミュニティ &#x200B;](/help/communities/overview.md#engagement-community)を素早く設定する方法に関するチュートリアルです。
 
 * [初期セットアップ](/help/communities/setup.md)
 
