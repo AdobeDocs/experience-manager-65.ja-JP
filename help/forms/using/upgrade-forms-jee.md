@@ -9,7 +9,7 @@ role: Admin,User
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms Upgrade,AEM Forms on JEE
-source-git-commit: 'null'
+source-git-commit: 894956434811b74fadea6d4e1f1a0ad88330e818
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 63%
