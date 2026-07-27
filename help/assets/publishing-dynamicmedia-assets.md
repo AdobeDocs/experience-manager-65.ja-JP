@@ -20,8 +20,8 @@ ht-degree: 97%
 
 Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開]**」をタップします。 Dynamic Media アセットを公開すると、URL を経由して、または web ページにコードを埋め込むことで、web ページに含めることができます。
 
-また、ユーザーの操作なしで、アップロードしたアセットを即座に公開することもできます。[Dynamic Mediaの設定 – Scene7 モード ](config-dms7.md)を参照してください。
-また、フォルダーレベルで**[!UICONTROL 選択的公開]**&#x200B;を使用して、Dynamic MediaまたはAdobe Experience Managerに対して、相互に排他的にアセットを選択して公開することもできます。[Dynamic Mediaでの選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
+また、ユーザーの操作なしで、アップロードしたアセットを即座に公開することもできます。[Dynamic Mediaの設定 – Scene7 モード &#x200B;](config-dms7.md)を参照してください。
+また、フォルダーレベルで&#x200B;**[!UICONTROL 選択的公開]**&#x200B;を使用して、Dynamic MediaまたはAdobe Experience Managerに対して、相互に排他的にアセットを選択して公開することもできます。[Dynamic Mediaでの選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
 
 **[!UICONTROL カード表示]**&#x200B;で、アセット名のすぐ下、アセットが発行されたことを示す日時の左側に、小さな地球アイコンが表示されます。 **[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 
