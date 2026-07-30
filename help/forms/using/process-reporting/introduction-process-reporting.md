@@ -9,9 +9,9 @@ exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: c29c24f3e8b05d12689536376ce1a07798f784e6
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '305'
 ht-degree: 100%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ### アドホックレポート {#adhoc-reports}
 
-![print-&amp;-color](assets/print-&-colour.png)
+![print-&amp;-color](assets/print-and-colour.png)
 
 フィルターを使用して、データの特定の表示を取得します。
 
@@ -60,7 +60,7 @@ ID、期間、開始日と終了日、プロセス開始者などで、プロセ
 
 ![file-management](assets/file-management.png)
 
-AEM Forms サーバーは、多数のプロセスを並行して実行します。これらのプロセスは、ある状態から別の状態への移行を続けます。Forms のデータを一定の間隔でプロセスレポートリポジトリーに公開すると、プロセスレポートには、AEM Forms で実行中のプロセスに関する移行情報が保持されます。
+AEM Forms サーバーは、多数のプロセスを並行して実行します。 これらのプロセスは、ある状態から別の状態への移行を続けます。 Forms のデータを一定の間隔でプロセスレポートリポジトリーに公開すると、プロセスレポートには、AEM Forms で実行中のプロセスに関する移行情報が保持されます。
 
 ### アクセス制御 {#access-control-br}
 
