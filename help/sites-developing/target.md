@@ -12,8 +12,8 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 100%
+source-wordcount: '1296'
+ht-degree: 92%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 100%
 このセクションでは、コンテンツターゲティングで使用するコンポーネントの開発に関するトピックについて説明します。
 
 * Adobe Target との接続について詳しくは、[Adobe Targetとの統合](/help/sites-administering/target.md)を参照してください。
-* ターゲットコンテンツのオーサリングについて詳しくは、[ターゲットモードを使用したターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)を参照してください。
+* ターゲットコンテンツのオーサリングについて詳しくは、[ターゲティングモードを使用したターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)を参照してください。
 
 >[!NOTE]
 >
->AEM オーサーインスタンスでコンポーネントをターゲット設定すると、そのコンポーネントが、キャンペーンの登録、オファーの設定、Adobe Target セグメントの取得（設定されている場合）を行うために、Adobe Target に対して一連のサーバー側呼び出しを実行します。AEM パブリッシュから Adobe Target にサーバー側呼び出しは作成されません。
+>AEM オーサーインスタンスでコンポーネントをターゲット設定すると、そのコンポーネントが、キャンペーンの登録、オファーの設定、Adobe Target セグメントの取得（設定されている場合）を行うために、Adobe Target に対して一連のサーバー側呼び出しを実行します。 AEM パブリッシュから Adobe Target にサーバー側呼び出しは作成されません。
 
-## ページ上での Adobe Target によるターゲット設定の有効化 {#enabling-targeting-with-adobe-target-on-your-pages}
+## ページ上での Adobe Target によるターゲティングの有効化 {#enabling-targeting-with-adobe-target-on-your-pages}
 
 ページ内のターゲットコンポーネントを使用して Adobe Target とやり取りするには、&lt;head> 要素に特定のクライアントサイドコードを含めます。
 
@@ -45,7 +45,7 @@ ht-degree: 100%
 <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
 ```
 
-このコードによって、必要な分析用 Javascript オブジェクトが追加され、web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。Target のサービスでは、ライブラリは `/libs/cq/analytics/components/testandtarget/headlibs.jsp` によって読み込まれます。
+このコードによって、必要な分析用 Javascript オブジェクトが追加され、web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。 Target のサービスでは、ライブラリは `/libs/cq/analytics/components/testandtarget/headlibs.jsp` によって読み込まれます。
 
 読み込まれるライブラリのセットは、Target の設定で使用されているターゲットクライアントライブラリのタイプ（mbox.js または at.js）によって異なります。
 
@@ -79,7 +79,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->製品と共に出荷された `at.js` のバージョンのみがサポートされます。製品と共に出荷された `at.js` のバージョンは、次の場所の `at.js` ファイルで取得できます。
+>製品と共に出荷された `at.js` のバージョンのみがサポートされます。 製品と共に出荷された `at.js` のバージョンは、次の場所の `at.js` ファイルで取得できます。
 >
 >**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**。
 
@@ -91,7 +91,7 @@ ht-degree: 100%
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/atjs-integration.js"></script>
 ```
 
-Target のクライアントサイド機能は、`CQ_Analytics.TestTarget` オブジェクトによって管理されます。そのため、ページには次の例のような init コードが含まれます。
+Target のクライアントサイド機能は、`CQ_Analytics.TestTarget` オブジェクトによって管理されます。 そのため、ページには次の例のような init コードが含まれます。
 
 ```
 <script type="text/javascript">
@@ -125,7 +125,7 @@ Target のクライアントサイド機能は、`CQ_Analytics.TestTarget` オ�
  </div>
 ```
 
-この JSP によって、必要な分析 JavaScript オブジェクトと参照がクライアントサイドの JavaScript ライブラリに追加されます。testandtarget.js ファイルには、mbox.js 関数が含まれています。このスクリプトが生成する HTML は、次の例のようになります。
+この JSP によって、必要な分析 JavaScript オブジェクトと参照がクライアントサイドの JavaScript ライブラリに追加されます。 testandtarget.js ファイルには、mbox.js 関数が含まれています。 このスクリプトが生成する HTML は、次の例のようになります。
 
 ```xml
 <script type="text/javascript">
@@ -158,7 +158,7 @@ ClientContext 機能をページに追加するには、&lt;body> タグの直�
 <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
 ```
 
-このコンポーネントの JSP スクリプトは、Target JavaScript API への呼び出しを生成し、その他の必要な設定を実装します。このスクリプトが生成する HTML は、次の例のようになります。
+このコンポーネントの JSP スクリプトは、Target JavaScript API への呼び出しを生成し、その他の必要な設定を実装します。 このスクリプトが生成する HTML は、次の例のようになります。
 
 ```xml
 <div class="servicecomponents cloudservices">
@@ -194,21 +194,21 @@ ClientContext 機能をページに追加するには、&lt;body> タグの直�
 
 >[!NOTE]
 >
->デフォルトでは mbox は非表示です。この設定は、mboxDefault クラスによって決まります。mbox が非表示の場合は、入れ替える前のデフォルトコンテンツは訪問者に表示されません。ただし、体感パフォーマンスに影響が生じます。
+>デフォルトでは mbox は非表示です。この設定は、mboxDefault クラスによって決まります。 mbox が非表示の場合は、入れ替える前のデフォルトコンテンツは訪問者に表示されません。ただし、体感パフォーマンスに影響が生じます。
 
-mbox の作成に使用されるデフォルトの mbox.js ファイルは、/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js にあります。お客様の mbox.js ファイルを使用するには、このファイルを Target クラウド設定に追加します。mbox.js ファイルを追加するには、そのファイルがファイルシステム上で使用可能になっている必要があります。
+mbox の作成に使用されるデフォルトの mbox.js ファイルは、/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js にあります。 お客様の mbox.js ファイルを使用するには、このファイルを Target クラウド設定に追加します。 mbox.js ファイルを追加するには、そのファイルがファイルシステム上で使用可能になっている必要があります。
 
-例えば、[Marketing Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)を使用する場合は、mbox.js をダウンロードし、使用するテナントに基づいて `imsOrgID` 変数に適切な値を格納する必要があります。この変数は、Marketing Cloud ID サービスとの統合に必須です。詳しくは、[Adobe Target のレポートソースとしての Adobe Analytics](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) および[実装する前に](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=ja)を参照してください。
+例えば、[Marketing Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)を使用する場合は、mbox.js をダウンロードし、使用するテナントに基づいて `imsOrgID` 変数に適切な値を格納する必要があります。 この変数は、Marketing Cloud ID サービスとの統合に必須です。 詳しくは、[Adobe Target のレポートソースとしての Adobe Analytics](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) および[実装する前に](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
->Target 設定でカスタム mbox が定義されている場合は、すべてのユーザーにパブリッシュサーバー上の **/etc/cloudservices** への読み取りアクセス権限が必要です。このアクセス権限がないと、発行 web サイト上の mbox.js ファイルの読み込みが 404 エラーになります。
+>Target 設定でカスタム mbox が定義されている場合は、すべてのユーザーにパブリッシュサーバー上の **/etc/cloudservices** への読み取りアクセス権限が必要です。 このアクセス権限がないと、発行 web サイト上の mbox.js ファイルの読み込みが 404 エラーになります。
 
-1. CQ の&#x200B;**ツール**&#x200B;ページに移動して、**クラウドサービス**&#x200B;を選択してください。（[https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）
+1. CQ の&#x200B;**ツール**&#x200B;ページに移動して、**クラウドサービス**&#x200B;を選択してください。 （[https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）
 1. ツリーで「Adobe Target」を選択し、設定リストの中から目的の Target 設定をダブルクリックします。
 1. 設定ページで「編集」をクリックします。
 1. カスタム mbox.js プロパティの場合は、「参照」をクリックし、ファイルを選択します。
-1. 変更を適用するには、Adobe Target アカウントのパスワードを入力し、「Adobe Target に再接続」をクリックして、接続が成功したら「OK」をクリックします。次に「コンポーネントを編集」ダイアログボックスで「OK」をクリックします。
+1. 変更を適用するには、Adobe Target アカウントのパスワードを入力し、「Adobe Target に再接続」をクリックして、接続が成功したら「OK」をクリックします。 次に「コンポーネントを編集」ダイアログボックスで「OK」をクリックします。
 
 Target 設定にカスタム mbox.js ファイルが含まれます。これはページの [head セクション内に必要なコード](/help/sites-developing/target.md#p-the-head-section-p)で、testandtarget.js ライブラリへの参照の代わりに、クライアントライブラリフレームワークにファイルを追加するものです。
 
@@ -218,13 +218,13 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-コンテキストメニューから Target コマンドを削除するには、次のプロパティをコンポーネントの cq:editConfig ノードに追加します。
+コンテキストメニューからTarget コマンドを削除するには、次のプロパティをコンポーネントのcq:editConfig ノードに追加します。
 
 * 名前：cq:disableTargeting
 * 型：ブール値
 * 値：True
 
-例えば、Geometrixx デモサイトページのタイトルコンポーネントに対するターゲット設定を無効化するには、このプロパティを /apps/geometrixx/components/title/cq:editConfig ノードに追加します。
+例えば、Geometrixx デモサイトページのタイトルコンポーネントのターゲティングを無効にするには、プロパティを/apps/geometrixx/components/title/cq:editConfig ノードに追加します。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
@@ -234,7 +234,7 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 >
 >DTM を使用していない場合は、注文確認を Adobe Target に送信します。
 
-Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（[orderConfirmPage mbox の作成](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=ja)および[注文確認 mbox - カスタムパラメーターの追加](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779?profile.language=ja&lang=ja)を参照してください）。Adobe Target は、mbox 名が `orderConfirmPage` で、以下の特定のパラメーター名を使用している場合は、mbox データを注文確認データとして認識します。
+Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します （[orderConfirmPage Mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=ja)および[Order Confirmation Mboxの作成 – カスタムパラメーターの追加](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779?lang=ja)を参照）。 Adobe Targetは、MBox名が`orderConfirmPage`の場合、mbox データを注文確認データとして認識し、次のパラメーター名を使用します。
 
 * productPurchasedId：購入した製品を識別する ID のリスト。
 * orderId：注文の ID。
@@ -251,7 +251,7 @@ Web サイトのパフォーマンスを追跡するには、注文確認ペー�
 </script>
 ```
 
-各パラメーターの値は注文ごとに異なります。そのため、購入のプロパティに基づいてコードを生成するコンポーネントが必要です。CQ の [e コマース統合フレームワーク](/help/commerce/cif-classic/administering/ecommerce.md)を使用すると、商品カタログを統合し、買い物かごとチェックアウトページを実装できます。
+各パラメーターの値は注文ごとに異なります。 そのため、購入のプロパティに基づいてコードを生成するコンポーネントが必要です。 CQ の [e コマース統合フレームワーク](/help/commerce/cif-classic/administering/ecommerce.md)を使用すると、商品カタログを統合し、買い物かごとチェックアウトページを実装できます。
 
 Geometrixx Outdoors のサンプルでは、訪問者が商品を購入すると、以下の確認ページが表示されます。
 
@@ -318,7 +318,7 @@ String orderID = session.getOrderId();
 
 ## Target コンポーネントについて {#understanding-the-target-component}
 
-Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます。（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。Target コンポーネントは、/libs/cq/personalization/components/target にあります。
+Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます。 （[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。 Target コンポーネントは/libs/cq/personalization/components/targetにあります。
 
 target.jsp スクリプトは、ページのプロパティにアクセスして、コンポーネントに使用するターゲティングエンジンを決定し、適切なスクリプトを実行します。
 
@@ -331,7 +331,7 @@ target.jsp スクリプトは、ページのプロパティにアクセスして
 
 >[!NOTE]
 >
->デフォルトでは mbox は非表示です。この設定は、mboxDefault クラスによって決まります。mbox が非表示の場合は、入れ替える前のデフォルトコンテンツは訪問者に表示されません。ただし、体感パフォーマンスに影響が生じます。
+>デフォルトでは mbox は非表示です。この設定は、mboxDefault クラスによって決まります。 mbox が非表示の場合は、入れ替える前のデフォルトコンテンツは訪問者に表示されません。ただし、体感パフォーマンスに影響が生じます。
 
 Adobe Target がコンテンツターゲティングをおこなうときには、engine_tnt.jsp スクリプトが、ターゲット設定されたエクスペリエンスのコンテンツを格納する mbox を作成します。
 
