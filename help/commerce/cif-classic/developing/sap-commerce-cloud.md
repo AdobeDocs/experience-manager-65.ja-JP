@@ -409,7 +409,7 @@ public class AxisFilter implements VariantFilter {
 * 買い物かごは、`CommerceSession:` によって管理されます。
 
   * `CommerceSession` は追加や削除などを実行します。
-  * `CommerceSession` は、買い物かごに対する様々な計算も実行します。 ``
+  * `CommerceSession` は、買い物かごに対する様々な計算も実行します。 &grave;&grave;
 
 * 買い物かごに直接関連はしませんが、`CommerceSession` はカタログの価格情報も提供する必要があります（価格を管理しているので）。
 
