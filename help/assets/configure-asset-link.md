@@ -33,7 +33,7 @@ Experience Manager Assetsを Asset Link と共に使用するように設定す�
 
 | Assets の機能 | Experience Manager のバージョンとサポート要件 |
 |--- |--- |
-| アセットリンクはデフォルトで機能します | Experience Manager 6.5および6.5.2以降。</br> Experience Manager 6.4.4および6.4.6以降。</br> Adobeでは、AALを使用する前に、最新の[Experience Manager サービスパック（SP） ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールすることをお勧めします。 |
+| アセットリンクはデフォルトで機能します | Experience Manager 6.5および6.5.2以降。</br> Experience Manager 6.4.4および6.4.6以降。</br> Adobeでは、AALを使用する前に、最新の[Experience Manager サービスパック（SP） &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールすることをお勧めします。 |
 | パッケージのインストール後にアセットリンクが機能します | Experience Manager 6.4.0 ～ 6.4.3 の場合は、[adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support) パッケージをインストールします。 |
 | Adobe Stock の統合 | Experience Manager 6.4.2 以降 |
 | ビジュアル検索または類似性検索 | Experience Manager 6.5.0 以降 |
