@@ -9,10 +9,10 @@ role: Admin,User
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms Upgrade
-source-git-commit: 4f9129101f537e035b8a7ec52fbc046ae6f93f92
+source-git-commit: beb40e8e83b52b60d68dffecb95f3d877a47d397
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 88%
+source-wordcount: '427'
+ht-degree: 89%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 88%
 | AEM 6.5 | この記事 |
 
 
-AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されています。これにより、フォームと通信の作成、管理、ユーザーエクスペリエンスが簡素化されます。AEM 6.5 Forms のすべての新機能と機能強化については、[新機能の概要についてのドキュメント](../../forms/using/whats-new.md)を参照してください。
+AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されています。これにより、フォームと通信の作成、管理、ユーザーエクスペリエンスが簡素化されます。 AEM 6.5 Forms のすべての新機能と機能強化については、[新機能の概要についてのドキュメント](../../forms/using/whats-new.md)を参照してください。
 
-既存の LiveCycle または AEM Forms のインストール環境をアップグレードすると、AEM 6.5 Forms に導入された新機能と機能強化を使用できるようになります。既存のデータ、プロセス、アセットはそのまま保存されます。アップグレード時には、メタデータとプロセスの状態も保持されます。アップグレードを開始するためのアップグレードパスを選択できます。
+既存の LiveCycle または AEM Forms のインストール環境をアップグレードすると、AEM 6.5 Forms に導入された新機能と機能強化を使用できるようになります。既存のデータ、プロセス、アセットはそのまま保存されます。 アップグレード時には、メタデータとプロセスの状態も保持されます。 アップグレードを開始するためのアップグレードパスを選択できます。
 
 次の図は、OSGi 上の AEM Forms で使用可能なアップグレードパスを示しています。
 
@@ -45,7 +45,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 次の図に、AEM Forms on JEE で使用可能なアップグレードパスを示します。
 
-![JEE アップグレード 6.5](do-not-localize/upgradepathjee.png)
+![JEE アップグレード 6.5](do-not-localize/upgradepathjee.svg)
 
 
 次の場所から直接アップグレードを実行できます。
@@ -61,11 +61,11 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
 
-AEM 6.5.18.0 Forms on JEE には、[&#x200B; 完全なインストーラー &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) と [&#x200B; パッチインストーラー &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) の 2 種類のインストーラーが用意されています。
+JEE上のAEM 6.5.18.0 Formsには、[&#x200B; フルインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)と[&#x200B; パッチインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)の2種類のインストーラーがあります。
 
-**完全なインストーラー**：完全なインストーラーを使用すると、新しいAEM Forms インスタンスを設定したり、AEM 6.5.x.x Forms on JEE からAEM 6.5.18.0 Forms on JEE へのアップグレードを実行したりできます。
+**完全インストーラー**：完全インストーラーを使用して、新しいAEM Forms インスタンスを設定したり、JEE上のAEM 6.5.x.x FormsからJEE上のAEM 6.5.18.0 Formsへのアップグレードを実行したりできます。
 
-**パッチインストーラー**：パッチインストーラーは、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。パッチインストーラーを使用すると、AEM Forms の最新バージョンにアップグレードできます。
+**パッチインストーラー**：パッチインストーラーは、既に AEM 6.5.x.x バージョンを使用しているユーザ―向けです。 パッチインストーラーを使用すると、AEM Forms の最新バージョンにアップグレードできます。
 
 次の画像は、完全なインストーラーとパッチインストーラーを使用する際のシナリオを示しています。
 
