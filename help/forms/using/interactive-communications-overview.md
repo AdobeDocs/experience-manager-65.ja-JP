@@ -20,7 +20,7 @@ ht-degree: 97%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/interactive-communication/overview/introduction) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/interactive-communication/overview/introduction) |
 | AEM 6.5 | この記事 |
 
 この記事では、インタラクティブなコミュニケーションの概要、サンプルのユースケース、作成ワークフロー、インタラクティブなコミュニケーションとレターの違いについて説明します。
