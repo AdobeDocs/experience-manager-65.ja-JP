@@ -12,7 +12,7 @@ feature: Developing
 role: Developer
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '5461'
+source-wordcount: '5464'
 ht-degree: 92%
 
 ---
@@ -250,7 +250,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 ### JavaScript を使用したメディアクエリの評価 {#evaluating-media-queries-using-javascript}
 
-W3Cが定義する[MediaQueryList インターフェイス &#x200B;](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
+W3Cが定義する[MediaQueryList インターフェイス ](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
 
 * MediaQueryList インターフェイスを実装するブラウザーは `window.matchMedia()` 関数をサポートします。 この関数は、指定された文字列に対してメディアクエリをテストします。 この関数は、クエリ結果へのアクセスを提供する `MediaQueryList` オブジェクトを返します。
 
@@ -472,7 +472,7 @@ JPEG 画質については、次の値がサポートされています。
 
 **サポートされているデフォルトの幅の変更**
 
-Web コンソール（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）またはsling:OsgiConfig ノードを使用して、Adobe CQ アダプティブ画像コンポーネントサーブレットのサポートされている幅を設定します。
+Web コンソール（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）またはsling:OsgiConfig ノードを使用して、Adobe CQ アダプティブ画像コンポーネントサーブレットのサポートされる幅を設定します。
 
 AEM サービスの設定方法について詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
