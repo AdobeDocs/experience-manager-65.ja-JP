@@ -361,7 +361,7 @@ N:charting
 
       * `totals`（`Boolean`）
 
-        **合計**を示す線を追加表示する場合は、true を指定します。
+        **合計**&#x200B;を示す線を追加表示する場合は、true を指定します。
         デフォルト：`false`
 
       * `series`（`Long`）
@@ -748,7 +748,7 @@ N:data
 
 以下のいずれかを指定して、前処理中に使用できます。
 
-* [ パターンの検索と置換](#preprocessing-find-and-replace-patterns)
+* [&#x200B; パターンの検索と置換](#preprocessing-find-and-replace-patterns)
 見つかった場合、指定されたパターン（正規表現として定義されている）は別のパターンに置き換えられます。例えば、これは元の部分文字列を抽出するために使用できます。
 
 * [データタイプフォーマッター](#preprocessing-data-type-formatters)

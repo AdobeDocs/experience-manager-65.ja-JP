@@ -74,11 +74,11 @@ Barcoded Forms サービスでは、以下の設定を使用できます。
 
 Central Migration Bridge サービス（`CentralMigrationBridge`）は Adobe Central Pro Output Server（Central）機能のサブセットを呼び出します（JFMERGE、JFTRANS、XMLIMPORT コマンドなど）。 Central Migration Bridge サービス操作を使用すると、AEM Forms で次の Central アセットを再利用できます。
 
-* テンプレートデザイン（&amp;ast;.ifd）
-* 出力テンプレート （&amp;ast;.mdf）
-* データファイル（&amp;ast;.dat ファイル）
-* プリアンブルファイル（&amp;ast;.pre ファイル）
-* データ定義ファイル（&amp;ast;.tdf）
+* テンプレートデザイン（&ast;.ifd）
+* 出力テンプレート （&ast;.mdf）
+* データファイル（&ast;.dat ファイル）
+* プリアンブルファイル（&ast;.pre ファイル）
+* データ定義ファイル（&ast;.tdf）
 
 Central Migration Bridge サービスでは、以下の設定を使用できます。
 

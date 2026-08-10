@@ -456,7 +456,7 @@ GitHub のコード
 
   * クラシック UI 固有の関数を使用する [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) コードの移行
   * RTE プラグイン。詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
-  * クラシック UI 固有の関数を使用する[ `cq:listener` コードを移行](#migrating-cq-listener-code)します。
+  * クラシック UI 固有の関数を使用する[&#x200B; `cq:listener` コードを移行](#migrating-cq-listener-code)します。
 
 * ダイアログ
 
