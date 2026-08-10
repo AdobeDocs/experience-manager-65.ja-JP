@@ -12,7 +12,7 @@ feature: Mobile
 role: Admin
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2955'
 ht-degree: 0%
 
 ---
@@ -135,11 +135,11 @@ cq:ContentSyncConfig ノードに`updateuser` プロパティがない場合、�
 * **パス** - /content/damの下のアセットフォルダーへのパス。
 * **レンディション** - タイプは、ユーザーがデフォルトの画像の代わりに使用するレンディションを指定できる文字列の配列です。 次のリストでは、一部の標準レンディションを要約していますが、ワークフローで作成した任意のレンディションを使用することもできます。
 
-   * *original*
-   * *cq5dam.thumbnail.48.48.png*
-   * *cq5dam.thumbnail.319.319.png*
-   * *cq5dam.thumbnail.140.100.png*
-   * *cq5dam.web.1280.1280.png*
+  * *original*
+  * *cq5dam.thumbnail.48.48.png*
+  * *cq5dam.thumbnail.319.319.png*
+  * *cq5dam.thumbnail.140.100.png*
+  * *cq5dam.web.1280.1280.png*
 
 **image** – 画像を収集します。
 
@@ -156,7 +156,8 @@ cq:ContentSyncConfig ノードに`updateuser` プロパティがない場合、�
 
 * **deep** – 子ページを含めるかどうかを決定するオプションのブール値プロパティです。 デフォルト値は&#x200B;*trueです。*
 
-* **includeImages** – 画像を含めるかどうかを決定するオプションのブール型プロパティ。 デフォルト値は&#x200B;*true*&#x200B;です。デフォルトでは、リソースタイプがfoundation/components/imageの画像コンポーネントのみが含まれると見なされます。 Web コンソールで&#x200B;**Day CQ WCM Pages Update Handler**&#x200B;を設定することで、さらにリソースタイプを追加できます。
+* **includeImages** – 画像を含めるかどうかを決定するオプションのブール型プロパティ。 デフォルト値は&#x200B;*true*です。
+デフォルトでは、リソースタイプがfoundation/components/imageの画像コンポーネントのみが含まれると見なされます。 Web コンソールで&#x200B;**Day CQ WCM Pages Update Handler**&#x200B;を設定することで、さらにリソースタイプを追加できます。
 
 **rewrite** – 書き換えノードは、書き出されたページでのリンクの書き換え方法を定義します。 書き換えられたリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
 
@@ -229,7 +230,7 @@ cq:ContentSyncConfig ノードに`updateuser` プロパティがない場合、�
 
 この例では、イベントリストページが最初のページになります。 この情報は&#x200B;**indexPage** プロパティで提供されるので、いつでも簡単に変更できます。 2番目のプロパティは、*events.plist* ファイルのパスを定義します。 後で見るように、クライアントアプリケーションはマニフェストを読み取り、それに従って行動できるようになりました。
 
-設定が設定されている場合、コンテンツはブラウザーまたはその他のHTTP クライアントでダウンロードできます。また、iOS用に開発する場合は、専用のWAppKitSync クライアントライブラリを使用できます。 ダウンロード場所は、設定のパスと&#x200B;*.zip*&#x200B;拡張機能で構成されます。例えば、ローカル AEM インスタンスで作業する場合は、*https://localhost:4502/content/weretail_go.zip*
+設定が設定されている場合、コンテンツはブラウザーまたはその他のHTTP クライアントでダウンロードできます。また、iOS用に開発する場合は、専用のWAppKitSync クライアントライブラリを使用できます。 ダウンロード場所は、設定のパスと&#x200B;*.zip*&#x200B;拡張機能で構成されます。例えば、ローカル AEM インスタンスで作業する場合は&#x200B;*https://localhost:4502/content/weretail_go.zip*
 
 ### コンテンツ同期コンソール {#the-content-sync-console}
 

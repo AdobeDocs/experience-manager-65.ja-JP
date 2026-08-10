@@ -11,7 +11,7 @@ feature: Mobile
 role: User
 source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2976'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Web コンソール [&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-c
 
 この例では、イベントリストページが最初のページになります。 この情報は&#x200B;**indexPage** プロパティで提供されるので、いつでも簡単に変更できます。 2番目のプロパティは、*events.plist* ファイルのパスを定義します。 後で見るように、クライアントアプリケーションはマニフェストを読み取り、それに従って行動できるようになりました。
 
-設定が設定されている場合、コンテンツはブラウザーまたはその他のHTTP クライアントでダウンロードできます。また、iOS用に開発する場合は、専用のWAppKitSync クライアントライブラリを使用できます。 ダウンロード場所は、設定のパスと&#x200B;*.zip*&#x200B;拡張機能で構成されます。例えば、ローカル AEM インスタンスで作業する場合は、*http://localhost:4502/content/weretail_go.zip*
+設定が設定されている場合、コンテンツはブラウザーまたはその他のHTTP クライアントでダウンロードできます。また、iOS用に開発する場合は、専用のWAppKitSync クライアントライブラリを使用できます。 ダウンロード場所は、設定のパスと&#x200B;*.zip*&#x200B;拡張機能で構成されます。例えば、ローカル AEM インスタンスで作業する場合は&#x200B;*http://localhost:4502/content/weretail_go.zip*
 
 ### コンテンツ同期コンソール {#the-content-sync-console}
 

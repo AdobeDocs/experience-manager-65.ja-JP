@@ -7,7 +7,7 @@ feature: Administering
 role: Admin
 source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1068'
 ht-degree: 90%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js`
 
    * サブフォルダー `content`（リポジトリ内のページへのパスを反映した一連のサブフォルダーのルート）
 
-      * この構造の中にある、選択したページの HTML ファイル（`<page-name>.html`）
+     * この構造の中にある、選択したページの HTML ファイル（`<page-name>.html`）
 
    * その他のリソース（`.js` ファイル、 `.css` ファイル、画像など）。エクスポートテンプレートの設定に従って配置されます。
 
@@ -119,16 +119,16 @@ For more details about the type property, see the Overview of configuration type
 * `page`
 ページノードを使用して、ページのhtmlをzip ファイルにコピーします。 次のような特徴があります。
 
-   * 必須ノード。
-   * `/etc/contentsync/templates/<mysite>` の下にある。
-   * プロパティ `Name` を `page` に設定して定義されている。
-   * ノードタイプは `nt:unstructured`。
+  * 必須ノード。
+  * `/etc/contentsync/templates/<mysite>` の下にある。
+  * プロパティ `Name` を `page` に設定して定義されている。
+  * ノードタイプは `nt:unstructured`。
 
   `page` ノードには以下のプロパティがあります。
 
-   * 値 `pages` が設定された `type` プロパティ。
+  * 値 `pages` が設定された `type` プロパティ。
 
-   * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
+  * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
   <!--
   * The other properties are described in the Overview of configuration types section of the Content Sync framework.
   -->
@@ -140,25 +140,25 @@ For more details about the type property, see the Overview of configuration type
 * `design`
 デザインノードは、書き出されたページに使用されるデザインをコピーするために使用されます。 次のような特徴があります。
 
-   * オプション。
-   * `/etc/contentsync/templates/<mysite>` の下にある。
-   * プロパティ `Name` を `design` に設定して定義される。
-   * ノードタイプは `nt:unstructured`。
+  * オプション。
+  * `/etc/contentsync/templates/<mysite>` の下にある。
+  * プロパティ `Name` を `design` に設定して定義される。
+  * ノードタイプは `nt:unstructured`。
 
   `design` ノードには次のプロパティがあります。
 
-   * 値 `copy` に設定された `type` プロパティ。
+  * 値 `copy` に設定された `type` プロパティ。
 
-   * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
+  * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
 * `generic`
 汎用ノードは、clientlibs の `.js` ファイルや `.css` ファイルのようなリソースを zip ファイルにコピーする際に使用します。 次のような特徴があります。
 
-   * オプション。
-   * `/etc/contentsync/templates/<mysite>` の下にある。
-   * 特定の名前はない。
-   * ノードタイプは `nt:unstructured`。
-   * `type` プロパティと `type` に関連したプロパティを持ちます。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
+  * オプション。
+  * `/etc/contentsync/templates/<mysite>` の下にある。
+  * 特定の名前はない。
+  * ノードタイプは `nt:unstructured`。
+  * `type` プロパティと `type` に関連したプロパティを持ちます。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
   例えば、次の設定ノードは `mysite.clientlibs.js` ファイルを zip ファイルにコピーします。
 
