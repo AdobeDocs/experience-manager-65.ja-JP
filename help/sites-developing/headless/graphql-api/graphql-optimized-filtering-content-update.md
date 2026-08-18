@@ -7,8 +7,8 @@ feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
 source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 94%
+source-wordcount: '249'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ GraphQL フィルターのパフォーマンスを最適化するには、コン
 
 ## 前提条件 {#prerequisites}
 
-AEMの 6.5.17.0 リリース以降がインストールされていることを確認します。
+AEMの6.5.17.0 リリース以上が必要です。
 
 ## コンテンツフラグメントの更新 {#updating-content-fragments}
 
@@ -39,7 +39,7 @@ AEMの 6.5.17.0 リリース以降がインストールされていることを�
 
 1. 指定した値を&#x200B;**保存**&#x200B;します。更新手続きが開始されます。
 
-1. 手続きが完了するまで待ちます。プロパティ `cfGlobalVersion` が `/content/dam` に表示され `1` に設定されたら、手続きは完了です。
+1. 手続きが完了するまで待ちます。 プロパティ `cfGlobalVersion` が `/content/dam` に表示され `1` に設定されたら、手続きは完了です。
 
 1. OSGi 設定に戻って、手続きのアクティベートを解除します。
 

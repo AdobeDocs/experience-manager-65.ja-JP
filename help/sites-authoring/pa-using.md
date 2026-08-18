@@ -11,12 +11,12 @@ feature: Authoring,Integration
 role: User,Admin,Developer
 source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '655'
 ht-degree: 98%
 
 ---
 
-# ページ分析データの表示 {#seeing-page-analytics-data}
+# ページ分析データの表示{#seeing-page-analytics-data}
 
 ページ分析データを使用して、ページコンテンツの効果を測定します。
 
@@ -24,22 +24,22 @@ ht-degree: 98%
 
 ![aa-10](assets/aa-10.png)
 
-ページ分析データは、Sites コンソールの[リスト表示](/help/sites-authoring/basic-handling.md#list-view)に表示されます。ページがリスト形式で表示されている場合、デフォルトで次の列が表示されます。
+ページ分析データは、Sites コンソールの[リスト表示](/help/sites-authoring/basic-handling.md#list-view)に表示されます。 ページがリスト形式で表示されている場合、デフォルトで次の列が表示されます。
 
 * ページ表示
 * ユニーク訪問者
 * ページ滞在時間
 
-各列には現在のレポート期間の値が表示され、その値が前のレポート期間以降に増加したか減少したかも示されます。表示されるデータは 12 時間ごとに更新されます。
+各列には現在のレポート期間の値が表示され、その値が前のレポート期間以降に増加したか減少したかも示されます。 表示されるデータは 12 時間ごとに更新されます。
 
 >[!NOTE]
 >
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
-1. **Sites** コンソールを開きます（例：[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)）。
+1. **Sites** コンソールを開きます。例：[http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
 1. ツールバーの右端（右上隅）で、アイコンをクリックして、「**リスト表示**」（表示されるアイコンは、[現在の表示](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)によって異なる）を選択します。
 
-1. もう一度、ツールバーの右端（右上隅）でアイコンをクリックして、「**表示設定**」を選択します。**列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
+1. もう一度、ツールバーの右端（右上隅）でアイコンをクリックして、「**表示設定**」を選択します。 **列を構成**&#x200B;ダイアログが開きます。 必要な変更を加えて、「**更新**」で確定します。
 
    ![aa-04](assets/aa-04.png)
 
@@ -51,7 +51,7 @@ Sites コンソールに表示される分析データのレポート期間を�
 * 過去 90 日間のデータ
 * 今年のデータ
 
-現在のレポート期間が Sites コンソールのツールバー（上部のツールバーの右側）に表示されます。ドロップダウンを使用して、必要なレポート期間を選択します。
+現在のレポート期間が Sites コンソールのツールバー（上部のツールバーの右側）に表示されます。 ドロップダウンを使用して、必要なレポート期間を選択します。
 ![aa-05](assets/aa-05.png)
 
 ### 表示可能なデータ列の設定 {#configuring-available-data-columns}
@@ -77,9 +77,9 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 Sites コンソールから「[コンテンツインサイト](/help/sites-authoring/content-insights.md)」を開き、ページの効果をさらに分析できます。
 
 1. コンテンツインサイトを表示するページを Sites コンソールで選択します。
-1. ツールバーで、Analytics と Recommendations アイコンをクリックします。
+1. ツールバーで、分析とレコメンデーションアイコンをクリックします。
 
-   ![Analytics と Recommendations アイコン](do-not-localize/chlimage_1-16a.png)
+   ![分析とレコメンデーションアイコン](do-not-localize/chlimage_1-16a.png)
 
 ## ページエディターに表示できる分析結果（Activity Map） {#analytics-visible-from-the-page-editor-activity-map}
 
@@ -91,7 +91,7 @@ Sites コンソールから「[コンテンツインサイト](/help/sites-autho
 >
 >Activity Map のデータは Adobe Analytics から取得されます。
 
-Web サイトが [Adobe Analytics 用に設定されている](/help/sites-administering/adobeanalytics-connect.md)場合は、[Activity Map モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して関連データを表示できます。次に例を示します。
+Web サイトが [Adobe Analytics 用に設定されている](/help/sites-administering/adobeanalytics-connect.md)場合は、[Activity Map モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して関連データを表示できます。 次に例を示します。
 
 ![aa-07](assets/aa-07.png)
 
@@ -137,23 +137,23 @@ Web サイトが [Adobe Analytics 用に設定されている](/help/sites-admin
 
 * 一般
 
-   * レポートスイート
-   * ページ名
-   * 言語
-   * ラベルのオーバーレイ
-   * ラベルのフォントサイズ
-   * グラデーションカラー
-   * バブルカラー
-   * カラーグラデーションの基準
-   * グラデーションの透明度
+  * レポートスイート
+  * ページ名
+  * 言語
+  * ラベルのオーバーレイ
+  * ラベルのフォントサイズ
+  * グラデーションカラー
+  * バブルカラー
+  * カラーグラデーションの基準
+  * グラデーションの透明度
 
 * 標準
 
-   * 表示（タイプとリンク数）
-   * ヒットのなかったリンクのオーバーレイを非表示
+  * 表示（タイプとリンク数）
+  * ヒットのなかったリンクのオーバーレイを非表示
 
 * ライブ
 
-   * 上に表示（勝者または敗者）
-   * 下位を除外（％）
-   * 自動更新（データと期間）
+  * 上に表示（勝者または敗者）
+  * 下位を除外（％）
+  * 自動更新（データと期間）
