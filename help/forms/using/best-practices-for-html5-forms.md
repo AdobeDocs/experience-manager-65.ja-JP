@@ -81,4 +81,4 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
 ## クイックリファレンスカード {#quick-reference-card}
 
 次のカードを印刷して（高解像度バージョンをダウンロードするにはカードをクリックします）すぐに参照できるようにデスクに置いておくことができます。
-[![HTML5 Formsのベストプラクティスのクイックリファレンスカード ](do-not-localize/best-practices_reference_card.png)](assets/html5_forms_best_practices_reference_card.pdf)
+[![HTML5 Formsのベストプラクティスのクイックリファレンスカード &#x200B;](do-not-localize/best-practices_reference_card.png)](assets/html5_forms_best_practices_reference_card.pdf)

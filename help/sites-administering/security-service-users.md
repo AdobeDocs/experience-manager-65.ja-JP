@@ -153,7 +153,7 @@ ht-degree: 99%
 
 ## ServiceUserMapper 設定への修正の追加 {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-サービスから対応するシステムユーザーへのマッピングを追加するには、[`ServiceUserMapper` ](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html) サービスのファクトリ設定を作成する必要があります。 このモジュラーを維持するために、[Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578)を使用してこのような設定を指定できます。 このような設定をバンドルと共にインストールする場合は、[Sling の初期コンテンツ読み込み機能](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)を使用することをお勧めします。
+サービスから対応するシステムユーザーへのマッピングを追加するには、[`ServiceUserMapper` &#x200B;](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html) サービスのファクトリ設定を作成する必要があります。 このモジュラーを維持するために、[Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578)を使用してこのような設定を指定できます。 このような設定をバンドルと共にインストールする場合は、[Sling の初期コンテンツ読み込み機能](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)を使用することをお勧めします。
 
 1. バンドルの src/main/resources フォルダーの下にサブフォルダー SLING-INF/content を作成します。
 1. このフォルダーに、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を定義した org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;ファクトリ設定の一意の名前>.xml という名前のファイルを作成します。 例：
