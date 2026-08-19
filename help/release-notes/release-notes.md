@@ -6,10 +6,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 87e11d37b9aa14ee3d4e47ae30eaa25f151a9b5b
+source-git-commit: 4a2915dc890887ad8c7174d3ef5f1de8413fd8f4
 workflow-type: tm+mt
-source-wordcount: '7373'
-ht-degree: 20%
+source-wordcount: '7412'
+ht-degree: 21%
 
 ---
 
@@ -48,21 +48,21 @@ Crosswalkは、このリリースではデフォルトで使用できるので�
 
 ### Formsの主な機能と機能強化
 
-* [&#x200B; マルチスレッドのPDF Generator コンバージョン &#x200B;](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions): AEM Formsが1つの設定済みユーザーアカウントでWindows サービスとして実行される場合に、Microsoft Word （doc/docx）とExcel （xls/xlsx）の同時コンバージョンを実行するためのサポートを追加しました。
+* [ マルチスレッドのPDF Generator コンバージョン ](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions): AEM Formsが1つの設定済みユーザーアカウントでWindows サービスとして実行される場合に、Microsoft Word （doc/docx）とExcel （xls/xlsx）の同時コンバージョンを実行するためのサポートを追加しました。
 
-* [XFA ベースのPDFの階層ブックマーク &#x200B;](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf):Output ServiceとAEM Forms Designerは、静的なインタラクティブおよびフラットなXFA ベースのPDFで構造化ブックマーク階層を生成するようになりました。 ブックマークは、テキストボックスのアクセシビリティプロパティで設定された見出しレベル（H1～H6）に従うため、H1～H6のエントリは並行して表示される代わりに正しい親の下にネストされます。
+* [XFA ベースのPDFの階層ブックマーク ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf):Output ServiceとAEM Forms Designerは、静的なインタラクティブおよびフラットなXFA ベースのPDFで構造化ブックマーク階層を生成するようになりました。 ブックマークは、テキストボックスのアクセシビリティプロパティで設定された見出しレベル（H1～H6）に従うため、H1～H6のエントリは並行して表示される代わりに正しい親の下にネストされます。
 
 * [JEE トランザクションログのフォームレベルの詳細](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee):JEE上のAEM Formsでは、既存のサービスとオペレーション情報に加えて、各トランザクションの`transaction_log.log`にフォームレベルの詳細が記録されるようになりました。 管理者は、送信、レンディション、コンバージョンを分析する際に、トランザクションレポートのデータを特定のフォームに関連付けることができます。 （FORMS-21574）
 
-* [&#x200B; サポート対象プラットフォームのマトリックス &#x200B;](/help/forms/using/aem-forms-jee-supported-platforms.md)を更新しました：JEE サービスパック 6.5.25.0のAEM Formsでは、次の新しいテクノロジとの互換性がサポートされています。
-   * JBoss® Enterprise Application Platform （EAP） 7.4.23
-   * IBM® Content Manager クライアント 8.7
-   * AEM Forms Designer Microsoft版® Windows Terminal Server 2025
+* [ サポート対象プラットフォームのマトリックス ](/help/forms/using/aem-forms-jee-supported-platforms.md)を更新しました：JEE サービスパック 6.5.25.0のAEM Formsでは、次の新しいテクノロジとの互換性がサポートされています。
+  * JBoss® Enterprise Application Platform （EAP） 7.4.23
+  * IBM® Content Manager クライアント 8.7
+  * AEM Forms Designer Microsoft版® Windows Terminal Server 2025
 
   >[!NOTE]
   >
   > JBoss EAPを7.4.10から7.4.23にアップグレードするには、次を参照してください。
-  > * [&#x200B; スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
+  > * [ スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
   > * [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)。
 
 ## Service Pack 25で修正された問題 {#fixed-issues}
@@ -403,7 +403,7 @@ AEMは、client-secretを含むキーワードを許可リストに加えるす�
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.25.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[&#x200B; アップグレードドキュメント &#x200B;](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.25.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[ アップグレードドキュメント ](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.25.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -419,7 +419,7 @@ AEMは、client-secretを含むキーワードを許可リストに加えるす�
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [&#x200B; ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -516,7 +516,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* Oakに関連する&#x200B;**&#x200B;**
+* Oakに関連する&#x200B;****
 サービスパック 13以降では、永続キャッシュに影響する次のエラーログが表示され始めています。
 
   ```shell
@@ -537,13 +537,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
   この例外を解決するには、次の手順を実行します。
 
-   1. 次の 2 つのフォルダーを `crx-quickstart/repository/` から削除する
+  1. 次の 2 つのフォルダーを `crx-quickstart/repository/` から削除する
 
-      * `cache`
-      * `diff-cache`
+     * `cache`
+     * `diff-cache`
 
-   1. サービスパックをインストールするか、Experience Manager as a Cloud Serviceを再起動します。
-`cache`と`diff-cache`の新しいフォルダーが自動的に作成され、`error.log`で`mvstore`に関連する例外が発生しなくなります。
+  1. サービスパックをインストールするか、Experience Manager as a Cloud Serviceを再起動します。
+     `cache` および `diff-cache` の新しいフォルダーが自動的に作成され、`error.log` 内で `mvstore` に関連する例外は発生しなくなりました。
 
 * コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
@@ -551,24 +551,24 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
   問題を修正するには、`damAssetLucene` では、`/indexRules/dam:Asset/properties` に次の 2 つのプロパティを含むように設定する必要があります。
 
-   * `contentFragment`
-      * `jcr:primaryType="nt:unstructured"`
-      * `name="jcr:content/contentFragment"`
-      * `propertyIndex="{Boolean}true"`
-      * `type="Boolean"`
-   * `model`
-      * `jcr:primaryType="nt:unstructured"`
-      * `name="jcr:content/data/cq:model"`
-      * `ordered="{Boolean}true"`
-      * `propertyIndex="{Boolean}true"`
-      * `type="String"`
+  * `contentFragment`
+    * `jcr:primaryType="nt:unstructured"`
+    * `name="jcr:content/contentFragment"`
+    * `propertyIndex="{Boolean}true"`
+    * `type="Boolean"`
+  * `model`
+    * `jcr:primaryType="nt:unstructured"`
+    * `name="jcr:content/data/cq:model"`
+    * `ordered="{Boolean}true"`
+    * `propertyIndex="{Boolean}true"`
+    * `type="String"`
 
   インデックス定義を変更した後、インデックス再作成が必要です（`reindex` = `true`）。
 
   これらの手順を行うと、GraphQL クエリの実行が高速化されます。
 
-* コンテンツフラグメント、サイト、ページのいずれかを移動、削除、または公開しようとすると、コンテンツフラグメントの参照を取得する際に問題が発生します。バックグラウンドクエリが失敗し、機能が機能しません。
-正しい操作を行うには、インデックス定義ノード `/oak:index/damAssetLucene`に次のプロパティを追加する必要があります（インデックス再作成は必要ありません）。
+* コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、コンテンツフラグメント参照が取得される際に問題が発生します。 バックグラウンドクエリが失敗し、機能が機能しません。
+正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。
 
   ```xml
   "tags": [
@@ -582,12 +582,12 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。 ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 
 * [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
-   * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
-   * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
-   * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
-   * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
+  * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
+  * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
+  * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
+  * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
+  * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
+  * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
 * AEM 6.5.15 以降、`org.apache.servicemix.bundles.rhino` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。 strict モード（`use strict;`）を使用するスクリプトでは、正しい変数を宣言する必要があります。 そうしないと、実行されず、ランタイムエラーがスローされます。
 
@@ -605,17 +605,16 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 次の問題には、ダウンロードとインストールが可能なホットフィックスがあります。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
 
-* **NPR-44100** WAR/JEE デプロイメント （JEE上のAEM Formsを含む）にAEM 6.5 Service Pack 25をインストールした後、`com.adobe.cq.screens.sessions` バンドルはインストール済み状態のままになり、アクティブになりません。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **NPR-44100** WAR/JEE デプロイメント （JEE上のAEM Formsを含む）にAEM 6.5 Service Pack 25をインストールした後、`com.adobe.cq.screens.sessions` バンドルはインストール済み状態のままになり、アクティブになりません。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **FORMS-23491** AEM Forms 6.5.24.0 JEE デプロイメント（JBoss、WebLogic、WebSphere）は、マルチパートリクエスト処理におけるApache Struts サービス拒否の脆弱性であるCVE-2025-64775の影響を受けます。 この問題を解決するには、[AEM Service Pack 6.5.24.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
 * **FORMS-14926** AEM Forms JEE サービスパック 21 （6.5.21.0）をインストールした後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダーの下にGeode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`の重複するエントリが見つかった場合は、次の手順を実行して問題を解決します。
 
-   1. ロケーターが実行中の場合は、ロケーターを停止します。
-   2. AEM サーバーを停止します。
-   3. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
-   4. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
-   5. 管理者モードでコマンドプロンプトを開きます。
-   6. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
-
-   * AEM Forms には、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 このアップグレードでは、SP24に含まれていなかったStrutsの以前の変更が提供されます。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、[ホットフィックス](/help/release-notes/aem-forms-hotfix.md)を介して追加されました。
+  1. ロケーターが実行中の場合は、ロケーターを停止します。
+  2. AEM サーバーを停止します。
+  3. `<AEM_Forms_Installation>/lib/caching/lib` に移動します。
+  4. `geode-*-1.15.1.2.jar` を除くすべての Geode パッチファイルを削除します。 `version 1.15.1.2` を含む Geode jar のみが存在することを確認します。
+  5. 管理者モードでコマンドプロンプトを開きます。
+  6. `geode-*-1.15.1.2.jar` ファイルを使用して Geode パッチをインストールします。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
@@ -631,7 +630,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 これらの Web サイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード。](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
