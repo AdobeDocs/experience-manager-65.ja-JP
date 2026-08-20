@@ -5,10 +5,10 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 0f718a65a5aa0257a1507f3c9541dba84d861ea3
+source-git-commit: 15a33b28a5148473cf7942328a85c594249a3571
 workflow-type: tm+mt
-source-wordcount: '3491'
-ht-degree: 85%
+source-wordcount: '4046'
+ht-degree: 81%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 85%
   <tr>
     <td>
       <strong>2026年6月8日</strong><br>
-      <em>適用対象：</em> AEM 6.5.25.0 WAR/JEE デプロイメント （JEE上のAEM Formsを含む） <br>
+      <em>適用先：</em> AEM 6.5.25.0 Forms JEE デプロイメント<br>
     </td>
     <td>
     <ul>
@@ -47,8 +47,32 @@ ht-degree: 85%
   </tr>
   <tr>
     <td>
+      <strong>2026年1月6日</strong><br>
+      <em>適用先：</em> AEM 6.5.24.0 Forms JEE デプロイメント （JBoss、WebLogic、WebSphere）<br>
+    </td>
+    <td>
+    <ul>
+    <strong>Jboss:</strong>
+    <li>Windows for JBoss JEE サーバー</a>のWindows版AEM Service Pack 6.5.24.0のホットフィックス<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/jboss/adobe-aem-forms-jee-service-pack-6.5.24.0-win-jboss.zip"></li>
+    <li>Linux - <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/jboss/adobe-aem-forms-jee-service-pack-6.5.24.0-linux-jboss.gz">JBoss JEE サーバー向けLinux上のAEM Service Pack 6.5.24.0のホットフィックス </a></li>
+    <strong>Weblogic:</strong>
+    <li>Windows for Weblogic JEE サーバー</a>のWindows上のAEM Service Pack 6.5.24.0のホットフィックス<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/weblogic/adobe-aem-forms-jee-service-pack-6.5.24.0-win-weblogic.zip"></li>
+    <li>Linux - <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/weblogic/adobe-aem-forms-jee-service-pack-6.5.24.0-linux-weblogic.gz">Weblogic JEE サーバー向けLinux上のAEM Service Pack 6.5.24.0のホットフィックス </a></li>
+    <strong>Websphere:</strong>
+    <li>Windows for Websphere JEE サーバー</a>のWindowsでのAEM Service Pack 6.5.24.0のホットフィックス<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/websphere/adobe-aem-forms-jee-service-pack-6.5.24.0-windows-websphere.zip"></li>
+    <li>Linux - <a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-115/websphere/adobe-aem-forms-jee-service-pack-6.5.24.0-linux-websphere.gz">Websphere JEE サーバー用Linux上のAEM Service Pack 6.5.24.0のホットフィックス </a></li>
+    </ul>
+    </td>
+    <td>
+    <ul>
+    <li><b>FORMS-23491</b>は、Strutsを問題を解決するバージョンにアップグレードすることで、CVE-2025-64775 （マルチパートリクエスト処理におけるApache Strutsのサービス拒否の脆弱性）を軽減します。</li>
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <strong>2025年10月14日</strong><br>
-      <em>適用先：</em> ImgToPdfがAEM Forms SP23 Jboss<br>で失敗する
+      <em>適用先：</em> ImgToPdfがAEM Forms SP23 Jbossで失敗する<br>
     </td>
     <td>
     <ul> 解決策については、<a href="https://business.adobe.com/in/support/main.html">Adobe Experience Manager Forms サポート </a>にお問い合わせください
@@ -80,18 +104,18 @@ ht-degree: 85%
     <td>
     <ul>
     <strong>このホットフィックスでは、次の問題が修正されます。</strong> 
-   <li> <b> （FORMS-21721）:</b> 6.5.23.0のホットフィックス （2025年8月5日（PT）にリリース）をデプロイした後、PSからPDFへのコンバージョンとHTMLからPDFへのコンバージョン （WebKit）のコンバージョンが失敗する問題を改善しました。 
-    <b></b></li>
+   <li> <b> （FORMS-21721）:</b> 6.5.23.0のホットフィックス （2025年8月5日（PT）にリリース）をデプロイした後、PSからPDFへのコンバージョンとHTMLからPDFへのコンバージョン （WebKit）のコンバージョンが失敗する問題を改善しました。 <b></b>
+    </li>
     </ul>
     </td>    
   </tr>
   <tr>
     <td>
-      <strong>2025年8月5日（PT）</strong><br>
-      <em>対象：</em>AEM 6.5 Forms サービスパック 23<br>
-      <em>設定手順：</em>
+      <strong>2025年8月5日</strong><br>
+      <em>適用先：</em> AEM 6.5 Forms サービスパック 23<br>
+      <em> セットアップ手順：</em>
       <a href="/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md#option-1-for-users-on-version-65230-install-latest-hotfix">
-        AEM Forms on JEE での XXE、設定、リモートコード実行（CVE-2025-49533）の脆弱性の軽減
+        JEE上のAEM FormsのXXE、設定、およびリモートコード実行（CVE-2025-49533）の脆弱性の軽減
       </a>
     </td>
     <td>
@@ -110,7 +134,7 @@ ht-degree: 85%
     <td>
     <ul>
     <li>Adobe Experience Manager（AEM）Forms のリモートコード実行（RCE）の脆弱性に対処することで、セキュリティを強化しました。 この問題は、管理ユーザー インターフェイス（UI）の Struts 開発モードに関連し、デバッグ機能を通じて任意のオブジェクトグラフナビゲーション言語（OGNL）評価が可能でした。 この修正により、Struts 開発モードが無効になり、適切なセキュリティフィルターが適用され、不正アクセスが防止されます。</li>
-    <li>Adobe Experience Manager（AEM）FormsのEDC （Electronic Document Component）モジュールにおけるXML （External Entity） XXE （Extensible Markup Language）の脆弱性に対する保護を改善しました。この脆弱性は、XXE保護のないXML ドキュメントの不適切な処理が原因で、ローカルのファイル読み取りにつながる可能性がありました。修正には次のものが含まれます。
+    <li>Adobe Experience Manager（AEM） Forms の電子文書コンポーネント（EDC）モジュールでの Extensible Markup Language （XML）External Entity（XXE）の脆弱性に対する保護を改善しました。 この脆弱性は、XXE 保護のない XML ドキュメントの不適切な処理により発生し、ローカルファイルの読み取りにつながる可能性がありました。 修正には以下が含まれます。
       <ul>
         <li>SecurityCheckHandler クラスで使用される DocumentBuilderFactory が XXE 攻撃を防ぐように設定されていることを確認します。</li>
         <li>EDC web サービスを更新して XML ドキュメントを安全に処理し、ローカルファイルへの不正アクセスを防ぎます。</li>
@@ -121,11 +145,11 @@ ht-degree: 85%
   </tr>
   <tr>
     <td>
-      <strong>2025年8月5日（PT）</strong><br>
-      <em>適用先：</em>AEM 6.5 Forms サービスパック 18 ～ 22<br>
-      <em>設定手順：</em>
+      <strong>2025年8月5日</strong><br>
+      <em>適用先：</em> AEM 6.5 Forms サービスパック 18 - 22<br>
+      <em> セットアップ手順：</em>
       <a href="/help/forms/using/mitigating-xxe-and-configuration-vulnerabilities-for-experience-manager-forms-jee.md#option-2-for-users-on-65180---65220-manual-hotfix-installation">
-        サービスパック18～22 のホットフィックスの手動インストール
+        サービスパックの手動ホットフィックスのインストール 18-22
       </a>
     </td>
     <td>
@@ -136,7 +160,7 @@ ht-degree: 85%
     <td>
     <ul>
     <li>Adobe Experience Manager（AEM）Forms のリモートコード実行（RCE）の脆弱性に対処することで、セキュリティを強化しました。 この問題は、管理ユーザー インターフェイス（UI）の Struts 開発モードに関連し、デバッグ機能を通じて任意のオブジェクトグラフナビゲーション言語（OGNL）評価が可能でした。 この修正により、Struts 開発モードが無効になり、適切なセキュリティフィルターが適用され、不正アクセスが防止されます。</li>
-    <li>Adobe Experience Manager（AEM）FormsのDocument Security モジュールにおける、XML （Extensible Markup Language） External Entity （XXE）の脆弱性に対する保護の強化。この脆弱性は、XXE保護のないXML ドキュメントの不適切な処理が原因で、ローカルのファイル読み取りにつながる可能性がありました。修正には次のものが含まれます。
+    <li>Adobe Experience Manager（AEM） Forms の Document Security モジュールでの Extensible Markup Language （XML）External Entity（XXE）の脆弱性に対する保護を改善しました。 この脆弱性は、XXE 保護のない XML ドキュメントの不適切な処理により発生し、ローカルファイルの読み取りにつながる可能性がありました。 修正には以下が含まれます。
       <ul>
         <li>SecurityCheckHandler クラスで使用される DocumentBuilderFactory が XXE 攻撃を防ぐように設定されていることを確認します。</li>
         <li>Document Security web サービスを更新して XML ドキュメントを安全に処理し、ローカルファイルへの不正アクセスを防ぎます。</li>
@@ -167,9 +191,9 @@ ht-degree: 85%
         <li><strong>FORMS-20533：</strong>AEM Forms には、フォームコンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、ホットフィックスを介して追加されました。</li>
         <li><strong>FORMS-20532：</strong>AEM Forms には、出力コンポーネントの Struts バージョンが 2.5.33 から 6.x へのアップグレードが含まれるようになりました。 これにより、SP23 には含まれていなかった Struts の変更が反映されます。 このサポートは、ダウンロードしてインストールすることで最新バージョンの Struts のサポートを追加できる、ホットフィックスを介して追加されました。</li>
         <li><strong>FORMS-20203：</strong>Struts を AEM サービスパック 2.5.x から AEM Forms サービスパック 6.x にアップグレードすると、ポリシー UI に透かしを追加するオプションなどのすべての設定が表示されなくなります。 問題を解決するには、ホットフィックスをダウンロードしてインストールしてください。</li>
-        <li><strong>FORMS-20360：</strong>AEM Forms サービスパック 6.5.23.0 にアップグレードすると、ImageToPDF 変換サービスが次のエラーで失敗します。<br>
-        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
-        問題を解決するには、ホットフィックスをダウンロードしてインストールしてください。</li>
+        <li><strong>FORMS-20360:</strong> AEM Forms Service Pack 6.5.23.0にアップグレードすると、ImageToPDF変換サービスが失敗し、次のエラーが発生します。<br>
+        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
+        この問題を解決するには、ホットフィックスをダウンロードしてインストールします。</li>
       </ul>
     </li>
     </ul>
@@ -206,7 +230,7 @@ ht-degree: 85%
      </ul>
      </td>
     <td>
-    <ul><li>ユーザーが JEE サーバー上で AEM Forms サービスパック 20（6.5.20.0）に更新し、Output サービスを使用して PDF を生成すると、PDF がアクセシビリティに関する問題を伴ってレンダリングされます。 （LC-3922112）</li><li>AEM Forms JEE の Output サービスを使用して生成されたタグ付き PDF に「不適切な構造の警告」が表示されます。 （LC-3922038）</li><li>AEM Forms JEE でフォームを送信すると、繰り返し XML 要素のインスタンスがデータから削除されます。 （LC-3922017）</li><li>Linux 環境のユーザーがアダプティブフォーム（JEE 上）を HTML でレンダリングすると、正しくレンダリングされません。 （LC-3921957）</li><li>ユーザーが AEM Forms JEE 上の Output サービスを使用して XTG ファイルを PostScript 形式に変換すると、エラー：AEM_OUT_001_003：予期しない例外：PAExecute 失敗：XFA_RENDER_FAILURE が発生して失敗します。 （LC-3921720）</li><li>JEE サーバー上のAEM Forms サービスパック 18 （6.5.18.0）にアップグレードした後、ユーザーがフォームを送信すると、HTML5またはPDF formsとXMLFMがクラッシュします。（LC-3921718）
+    <ul><li>ユーザーが JEE サーバー上で AEM Forms サービスパック 20（6.5.20.0）に更新し、Output サービスを使用して PDF を生成すると、PDF がアクセシビリティに関する問題を伴ってレンダリングされます。 （LC-3922112）</li><li>AEM Forms JEE の Output サービスを使用して生成されたタグ付き PDF に「不適切な構造の警告」が表示されます。 （LC-3922038）</li><li>AEM Forms JEE でフォームを送信すると、繰り返し XML 要素のインスタンスがデータから削除されます。 （LC-3922017）</li><li>Linux 環境のユーザーがアダプティブフォーム（JEE 上）を HTML でレンダリングすると、正しくレンダリングされません。 （LC-3921957）</li><li>ユーザーが AEM Forms JEE 上の Output サービスを使用して XTG ファイルを PostScript 形式に変換すると、エラー：AEM_OUT_001_003：予期しない例外：PAExecute 失敗：XFA_RENDER_FAILURE が発生して失敗します。 （LC-3921720）</li><li>JEE サーバーで AEM Forms サービスパック 18（6.5.18.0）にアップグレードした後、ユーザーがフォームを送信すると、HTML5 または PDF フォームのレンダリングに失敗し、XMLFM がクラッシュします。 （LC-3921718）
     </ul>
     </td>    
   </tr>
