@@ -31,10 +31,10 @@ ht-degree: 76%
 
 AEM には、リポジトリの管理に役立つ様々なメカニズムが備わっています。
 
-* バージョン マネージャー[](#version-manager)
+* バージョン マネージャー[&#128279;](#version-manager)
 これは、新しいバージョンが作成されたときに古いバージョンをパージするように設定できます。
 
-* [ バージョンのパージ ](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) ツール
+* [&#x200B; バージョンのパージ &#x200B;](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) ツール
 これは、リポジトリの監視とメンテナンスの一部として使用されます。
 このツールを使用すると、次のパラメーターに従って、ノードの古いバージョンまたはノードの階層を削除するためにユーザーが介入できます。
 
