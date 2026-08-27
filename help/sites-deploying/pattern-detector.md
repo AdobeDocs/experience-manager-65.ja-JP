@@ -53,7 +53,7 @@ ht-degree: 95%
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
-* **事後対応 JSON Lines インターフェイスを使用し、**各行に個別の JSON ドキュメントを生成します。
+* **事後対応 JSON Lines インターフェイスを使用し、**&#x200B;各行に個別の JSON ドキュメントを生成します。
 
 これらの両方の方法については、以下で詳しく説明します。
 

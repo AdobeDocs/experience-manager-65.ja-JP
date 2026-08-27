@@ -178,7 +178,7 @@ AEM では、よりシームレスなアップグレードを可能にするた�
 
 ### 開発および QA の実行 {#performing-development-and-qa}
 
-Adobeでは、[ コードとカスタマイズ ](/help/sites-deploying/upgrading-code-and-customizations.md)をAEM 6.5と互換性を持たせるためのアップグレード手順を提供しています。 この反復プロセスが実行されると、必要に応じてRunbookに変更を加える必要があります。 通常、アップグレード後にすぐに開発作業を行うことなく、カスタマイズの後方互換性を保つ方法について詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)も参照してください。
+Adobeでは、[&#x200B; コードとカスタマイズ &#x200B;](/help/sites-deploying/upgrading-code-and-customizations.md)をAEM 6.5と互換性を持たせるためのアップグレード手順を提供しています。 この反復プロセスが実行されると、必要に応じてRunbookに変更を加える必要があります。 通常、アップグレード後にすぐに開発作業を行うことなく、カスタマイズの後方互換性を保つ方法について詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)も参照してください。
 
 ![patru_cropped](assets/patru_cropped.png)
 
