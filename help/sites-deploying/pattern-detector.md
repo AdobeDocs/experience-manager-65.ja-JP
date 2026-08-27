@@ -12,8 +12,8 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 100%
+source-wordcount: '532'
+ht-degree: 95%
 
 ---
 
@@ -30,13 +30,13 @@ ht-degree: 100%
 
 ## 設定方法 {#how-to-set-up}
 
-パターン検出は、AEM 6.5 のアップグレードをターゲットとした 6.1 から 6.5 までの任意のソース AEM バージョンで機能する [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。この機能は、[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用してインストールできます。
+パターン検出は、AEM 6.5 のアップグレードをターゲティングした 6.1 から 6.5 までの任意のソース AEM バージョンで機能する [1 つのパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。 この機能は、[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用してインストールできます。
 
 ## 使用方法 {#how-to-use}
 
 >[!NOTE]
 >
->パターン検出は、ローカル開発インスタンスを含むあらゆる開発で実行できます。ただし、次の目的で使用します。
+>パターン検出は、ローカル開発インスタンスを含むあらゆる開発で実行できます。 ただし、次の目的で使用します。
 >
 >* 検出率を上げる
 >* ビジネスにとって重大なインスタンスの減速を避ける
@@ -47,7 +47,7 @@ ht-degree: 100%
 
 * **Felix Inventory コンソールを使用：**
 
-1. AEM web コンソールに移動します（*https://serveraddress:serverport/system/console/configMgr*）。
+1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照して、AEM Web コンソールに移動します
 1. 次の図に示すように、**ステータス - パターン検出**&#x200B;を選択します。
 
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
@@ -68,7 +68,7 @@ ht-degree: 100%
 
 ## プレーンテキストインターフェイスの処理 {#handling-the-plain-text-interface}
 
-出力内の情報は、一連のイベントエントリとして書式設定されます。違反を公開するチャネルと、現在の進行状況を公開するチャネルの 2 つがあります。
+出力内の情報は、一連のイベントエントリとして書式設定されます。 違反を公開するチャネルと、現在の進行状況を公開するチャネルの 2 つがあります。
 
 これらは、次のコマンドを使用して取得できます。
 
@@ -114,7 +114,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
     "code": "ECU",
     "type": "extraneous.content.usage",
     "detective": "ContentAccessDetector",
-    "moreInfo": "https://www.adobe.com/go/aem6_ECU_jp"
+    "moreInfo": "https://www.adobe.com/go/aem6_ECU"
   },
   "item": {
     "id": "a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f",
@@ -218,8 +218,8 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 * Sling リソースタイプとスーパータイプ（検索パスコンテンツオーバーレイを含む）の過剰使用
 * Oak インデックスの定義（互換性）
 * VLT パッケージ（過剰使用）
-* rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
+* rep:User ノードの互換性（OAuth設定のコンテキスト）
 
 >[!NOTE]
 >
->パターン検出はアップグレードに関する警告を正確に予測しようとします。ただし、シナリオによっては誤検知が発生する可能性があります。
+>パターン検出はアップグレードに関する警告を正確に予測しようとします。 ただし、シナリオによっては誤検知が発生する可能性があります。
