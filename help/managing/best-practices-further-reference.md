@@ -9,10 +9,10 @@ exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: 5158640898e2671a36daf04f54ac02703be020ca
+source-git-commit: c1f5f41ce7127c7f3e7193295d55c91b151d2146
 workflow-type: tm+mt
-source-wordcount: '3810'
-ht-degree: 98%
+source-wordcount: '3750'
+ht-degree: 100%
 
 ---
 
@@ -582,25 +582,3 @@ Web サイトが訪問者の要求に応答するまでにどの程度の時間�
 * [管理](/help/sites-administering/administer-best-practices.md)
 * [開発](/help/sites-developing/best-practices.md)
 * [プロジェクト管理](/help/managing/best-practices.md)
-
-**一時的な形式テスト -**&#x200B;を無視してください
-
-<!--
-| Something | Something | Something | Something | Something |
-|--- |--- |--- |--- |--- |
-| `env` | `Env` ("QA" | "DEV" | "DEV_443" | "STAGE" | "PROD") | No | | Deployment environment for the embedded dialog. If not provided, it is inferred from the hostname of the current page. |
--->
-
-| 何か | 何か | 何か | 何か | 何か |
-|--- |--- |--- |--- |--- |
-| `env` | `Env` （&quot;QA&quot; \| &quot;DEV&quot; \| &quot;DEV_443&quot; \| &quot;STAGE&quot; \| &quot;PROD&quot;） | いいえ | | 組み込みダイアログのデプロイメント環境。 指定しない場合は、現在のページのホスト名から推測されます。 |
-
-<!--
-| Something | Something | Something | Something | Something |
-|--- |--- |--- |--- |--- |
-| `env` | `Env` ("QA" `|` "DEV" `|` "DEV_443" `|` "STAGE" `|` "PROD") | No | | Deployment environment for the embedded dialog. If not provided, it is inferred from the hostname of the current page. |
--->
-
-| 何か | 何か | 何か | 何か | 何か |
-|--- |--- |--- |--- |--- |
-| `env` | `Env ("QA" \| "DEV" \| "DEV_443" \| "STAGE" \| "PROD")` | いいえ | | 組み込みダイアログのデプロイメント環境。 指定しない場合は、現在のページのホスト名から推測されます。 |
