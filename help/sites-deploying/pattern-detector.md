@@ -114,7 +114,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
     "code": "ECU",
     "type": "extraneous.content.usage",
     "detective": "ContentAccessDetector",
-    "moreInfo": "https://www.adobe.com/go/aem6_ECU"
+    "moreInfo": "https://www.adobe.com/go/aem6_ECU_jp"
   },
   "item": {
     "id": "a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f",
