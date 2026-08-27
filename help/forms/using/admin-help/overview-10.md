@@ -1,6 +1,6 @@
 ---
 title: Workspace の概要
-description: Workspace では、ユーザーはビジネスプロセスを開始、参加、追跡できます。Workspace の詳細について説明します。
+description: Workspace では、ユーザーはビジネスプロセスを開始、参加、追跡できます。 Workspace の詳細について説明します。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
@@ -9,7 +9,7 @@ exl-id: da1224e4-566a-402f-9d8b-27fda5f3101b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: b631b5d4308a2ad1e2397c60c4ee78ec097beaa9
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 100%
@@ -32,4 +32,4 @@ Workspace では、ユーザーはビジネスプロセスを開始、参加、�
 
 >[!NOTE]
 >
->管理コンソール内のナビゲーションを使用します。Web ブラウザーの「戻る」、「進む」または「更新」ボタンを使用しないでください。これらのボタンを使用すると、データの取得やデータの表示で問題が生じる可能性があります。
+>管理コンソール内のナビゲーションを使用します。 Web ブラウザーの「戻る」、「進む」または「更新」ボタンを使用しないでください。 これらのボタンを使用すると、データの取得やデータの表示で問題が生じる可能性があります。
