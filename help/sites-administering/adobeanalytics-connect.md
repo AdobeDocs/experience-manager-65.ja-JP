@@ -10,10 +10,10 @@ exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 36265810f0284acfd13dfd01d89c250d9923cd45
+source-git-commit: f6f6552b10cbc84d9e39e46905c2fa68201d4d96
 workflow-type: tm+mt
-source-wordcount: '1491'
-ht-degree: 94%
+source-wordcount: '1582'
+ht-degree: 91%
 
 ---
 
@@ -84,7 +84,11 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 >[!CAUTION]
 >
->Adobe Analytics API のセキュリティが変更され、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
+>[Adobe Analytics 1.4 APIが提供終了に達しました](https://developer.adobe.com/analytics-apis/docs/1.4/guides/eol/)。 その結果、ユーザー資格情報（ユーザー名とパスワード）を使用するAdobe Analytics設定はサポートされなくなりました。
+
+>[!CAUTION]
+>
+>Adobe Analytics API 内のセキュリティの変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
 >[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を使用する必要があります。
 
@@ -150,21 +154,21 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 * **トラッキングサーバー**
 
-   * Adobe Analytics の呼び出しを送信するための URL が格納されています。
+  * Adobe Analytics の呼び出しを送信するための URL が格納されています。
 
-      * `cname` - デフォルト値は Adobe Analytics アカウントの「*会社名*」です。
-      * `d1` - 情報の送信先のデータセンター（`d1`、`d2`、`d3` のいずれか）に対応しています
-      * `sc.omtrdc.net` - ドメイン名
+    * `cname` - デフォルト値は Adobe Analytics アカウントの「*会社名*」です。
+    * `d1` - 情報の送信先のデータセンター（`d1`、`d2`、`d3` のいずれか）に対応しています
+    * `sc.omtrdc.net` - ドメイン名
 
 * **トラッキングサーバーを保護**
 
-   * トラッキングサーバーと同じセグメントが指定されています。
-   * セキュリティで保護されているページ（`https://`）からのデータ送信に使用されます。
+  * トラッキングサーバーと同じセグメントが指定されています。
+  * セキュリティで保護されているページ（`https://`）からのデータ送信に使用されます。
 
 * **訪問者の名前空間**
 
-   * 名前空間は、トラッキング URL の最初の部分を決定します。
-   * 例えば、名前空間を **CNAME** に変更すると、Adobe Analytics に対して行われる呼び出しは、デフォルトではなく **CNAME.d1.omtrdc.net** のようになります。
+  * 名前空間は、トラッキング URL の最初の部分を決定します。
+  * 例えば、名前空間を **CNAME** に変更すると、Adobe Analytics に対して行われる呼び出しは、デフォルトではなく **CNAME.d1.omtrdc.net** のようになります。
 
 ## Adobe Analytics フレームワークへのページの関連付け {#associating-a-page-with-a-adobe-analytics-framework}
 
@@ -198,15 +202,15 @@ Adobe Analytics [データセンター](https://experienceleague.adobe.com/docs/
 
 * **試行を取得**:
 キューに入れたレポートの取得の試行回数。
-デフォルトは`6`です。
+デフォルトは、`6` です。
 
 * **フェッチ遅延**:
 キューに入れたレポートの取得を試行するまでのミリ秒数。
-デフォルトは`10000`です。ミリ秒単位なので、10秒に相当します。
+デフォルトは、`10000` です。 ミリ秒単位なので、10 秒に相当します。
 
 * **頻度を取得**:
 Analytics レポートを取得する頻度を決定する`cron`式。
-デフォルトは`0 0 0/12 * * ?`です。これは、1時間ごとに12回のフェッチに対応します。
+デフォルトは、`0 0 0/12 * * ?` です。これは、1 時間ごとの 12 個の取得に相当します。
 
 この OSGi サービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の osgiConfig ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)（サービス PID は `com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）を使用して設定できます。
 
