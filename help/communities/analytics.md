@@ -663,6 +663,6 @@ Adobe Analyticsには、ユーザーデータにアクセス、書き出し、�
 
 ## リソース {#resources}
 
-* Adobe Experience Cloud: [Analytics ヘルプと参照](https://experienceleague.adobe.com/docs/analytics.html)
+* Adobe Experience Cloud: [Analytics ヘルプと参照](https://experienceleague.adobe.com/docs/analytics.html?lang=ja)
 * AEM: [Adobe Analyticsとの統合](/help/sites-administering/adobeanalytics.md)
 * AEM: [外部プロバイダーを使用したAnalytics](/help/sites-administering/external-providers.md)
