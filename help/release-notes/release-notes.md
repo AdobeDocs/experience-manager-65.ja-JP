@@ -48,13 +48,13 @@ Crosswalkは、このリリースではデフォルトで使用できるので�
 
 ### Formsの主な機能と機能強化
 
-* [ マルチスレッドのPDF Generator コンバージョン ](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions): AEM Formsが1つの設定済みユーザーアカウントでWindows サービスとして実行される場合に、Microsoft Word （doc/docx）とExcel （xls/xlsx）の同時コンバージョンを実行するためのサポートを追加しました。
+* [&#x200B; マルチスレッドのPDF Generator コンバージョン &#x200B;](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions): AEM Formsが1つの設定済みユーザーアカウントでWindows サービスとして実行される場合に、Microsoft Word （doc/docx）とExcel （xls/xlsx）の同時コンバージョンを実行するためのサポートを追加しました。
 
-* [XFA ベースのPDFの階層ブックマーク ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf):Output ServiceとAEM Forms Designerは、静的なインタラクティブおよびフラットなXFA ベースのPDFで構造化ブックマーク階層を生成するようになりました。 ブックマークは、テキストボックスのアクセシビリティプロパティで設定された見出しレベル（H1～H6）に従うため、H1～H6のエントリは並行して表示される代わりに正しい親の下にネストされます。
+* [XFA ベースのPDFの階層ブックマーク &#x200B;](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf):Output ServiceとAEM Forms Designerは、静的なインタラクティブおよびフラットなXFA ベースのPDFで構造化ブックマーク階層を生成するようになりました。 ブックマークは、テキストボックスのアクセシビリティプロパティで設定された見出しレベル（H1～H6）に従うため、H1～H6のエントリは並行して表示される代わりに正しい親の下にネストされます。
 
 * [JEE トランザクションログのフォームレベルの詳細](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee):JEE上のAEM Formsでは、既存のサービスとオペレーション情報に加えて、各トランザクションの`transaction_log.log`にフォームレベルの詳細が記録されるようになりました。 管理者は、送信、レンディション、コンバージョンを分析する際に、トランザクションレポートのデータを特定のフォームに関連付けることができます。 （FORMS-21574）
 
-* [ サポート対象プラットフォームのマトリックス ](/help/forms/using/aem-forms-jee-supported-platforms.md)を更新しました：JEE サービスパック 6.5.25.0のAEM Formsでは、次の新しいテクノロジとの互換性がサポートされています。
+* [&#x200B; サポート対象プラットフォームのマトリックス &#x200B;](/help/forms/using/aem-forms-jee-supported-platforms.md)を更新しました：JEE サービスパック 6.5.25.0のAEM Formsでは、次の新しいテクノロジとの互換性がサポートされています。
   * JBoss® Enterprise Application Platform （EAP） 7.4.23
   * IBM® Content Manager クライアント 8.7
   * AEM Forms Designer Microsoft版® Windows Terminal Server 2025
@@ -62,7 +62,7 @@ Crosswalkは、このリリースではデフォルトで使用できるので�
   >[!NOTE]
   >
   > JBoss EAPを7.4.10から7.4.23にアップグレードするには、次を参照してください。
-  > * [ スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
+  > * [&#x200B; スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
   > * [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)。
 
 ## Service Pack 25で修正された問題 {#fixed-issues}
@@ -404,7 +404,7 @@ AEM 6.5のアップグレード後、CRXDE LiteでJSP ファイルの編集が�
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.25.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[ アップグレードドキュメント ](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.25.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[&#x200B; アップグレードドキュメント &#x200B;](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.25.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -420,7 +420,7 @@ AEM 6.5のアップグレード後、CRXDE LiteでJSP ファイルの編集が�
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [&#x200B; ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -517,7 +517,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* Oakに関連する&#x200B;****
+* Oakに関連する&#x200B;**&#x200B;**
 サービスパック 13以降では、永続キャッシュに影響する次のエラーログが表示され始めています。
 
   ```shell
@@ -606,8 +606,8 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 次の問題には、ダウンロードとインストールが可能なホットフィックスがあります。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
 
-* **NPR-44100** WAR/JEE デプロイメント （JEE上のAEM Formsを含む）にAEM 6.5 Service Pack 25をインストールした後、`com.adobe.cq.screens.sessions` バンドルはインストール済み状態のままになり、アクティブになりません。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
-* **FORMS-23491** AEM Forms 6.5.24.0 JEE デプロイメント（JBoss、WebLogic、WebSphere）は、マルチパートリクエスト処理におけるApache Struts サービス拒否の脆弱性であるCVE-2025-64775の影響を受けます。 この問題を解決するには、[AEM Service Pack 6.5.24.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **NPR-44100** WAR/JEE デプロイメント （JEE上のAEM Formsを含む）にAEM 6.5 Service Pack 25をインストールした後、`com.adobe.cq.screens.sessions` バンドルはインストール済み状態のままになり、アクティブになりません。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **FORMS-23491** AEM Forms 6.5.24.0 JEE デプロイメント（JBoss、WebLogic、WebSphere）は、マルチパートリクエスト処理におけるApache Struts サービス拒否の脆弱性であるCVE-2025-64775の影響を受けます。 この問題を解決するには、[AEM Service Pack 6.5.24.0のホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
 * **FORMS-14926** AEM Forms JEE サービスパック 21 （6.5.21.0）をインストールした後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダーの下にGeode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`の重複するエントリが見つかった場合は、次の手順を実行して問題を解決します。
 
   1. ロケーターが実行中の場合は、ロケーターを停止します。
