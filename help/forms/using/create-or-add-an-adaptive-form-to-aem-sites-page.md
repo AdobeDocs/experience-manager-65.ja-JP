@@ -6,10 +6,10 @@ feature: Adaptive Forms,Foundation Components
 exl-id: dcf023a1-8735-48cb-b3ea-d17357eeedaf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: f67bc6dce0f923294fba7d543eb3b170f992182f
 workflow-type: tm+mt
-source-wordcount: '2961'
-ht-degree: 100%
+source-wordcount: '3002'
+ht-degree: 98%
 
 ---
 
@@ -88,6 +88,10 @@ AEM ページエディターでアダプティブフォームコンテナを使�
        <sly data-sly-call="${clientlib.css @ categories='core.forms.components.runtime.all'}"/>
        </sly> 
    ```
+
+   >[!NOTE]
+   >
+   >`core.forms.components.runtime.all`には、すべての標準（OOTB）コンポーネントが含まれています。 代わりに、デザインポリシーの一部であり、フォームに含める予定のコンポーネントのみを含むカスタムクライアントライブラリを作成し、ページに追加します。
 
 1. `/apps/[your-sites-project]/components/page/customfooterlibs.html` ファイルを開き、次のコードをファイルに追加します。
 
