@@ -20,7 +20,7 @@ ht-degree: 97%
 * [概念](/help/commerce/cif-classic/administering/concepts.md)
 * [管理（汎用）](/help/commerce/cif-classic/administering/generic.md)
 
-アドビでは、2 つのバージョンの Commerce 統合フレームワークを提供しています。
+アドビでは、2 つのバージョンの Commerce Integration Framework を提供しています。
 
 <table>
  <tbody>
