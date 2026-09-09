@@ -148,36 +148,36 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 * 新規プロジェクト用の単一ページアプリ Maven プロジェクトアーキタイプ 1.0.6 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-spa-project-archetype/releases) を参照してください。
 * HTL バージョン 1.4 については、[リリースノートの GitHub](https://github.com/adobe/htl-spec/releases/tag/1.4) を参照してください。
 
-   * 文字列、配列、オブジェクトの「in」演算子
+  * 文字列、配列、オブジェクトの「in」演算子
 
-     ```html
-     ${'a' in 'abc'}
-     ${100 in myArray}
-     ${'a' in myObject}
-     ```
+    ```html
+    ${'a' in 'abc'}
+    ${100 in myArray}
+    ${'a' in myObject}
+    ```
 
-   * data-sly-set を使用した変数の宣言
-     `<sly data-sly-set.title="${currentPage.title}"/>${title}`
+  * data-sly-set を使用した変数の宣言
+    `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * 制御パラメーターのリストと繰り返し（begin、step、end）
-     `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
+  * 制御パラメーターのリストと繰り返し（begin、step、end）
+    `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
-   * data-sly-unwrap の識別子
+  * data-sly-unwrap の識別子
 
-     ```html
-     <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-     text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-     </div>
-     ```
+    ```html
+    <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
+    text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+    </div>
+    ```
 
-   * 負の数のサポート
+  * 負の数のサポート
 
 * コアコンポーネント 2.3.2 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-core-wcm-components/releases) を参照してください。
 * レイアウトコンテナのグリッドシステムについては、[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照してください。
 * クライアントライブラリマネージャー：JavaScript クライアントライブラリの軽量化に合わせて Google Closure Compiler がデフォルトになり（以前のデフォルトは Yahoo YUI でした）、Google Closure Compiler がバージョン v20190121 に更新されました。
 * テンプレートエディターとポリシー
 
-   * JS SDK を使用している単一ページアプリのテンプレートを作成および編集できます（SPA エディターとも呼ばれます）。
+  * JS SDK を使用している単一ページアプリのテンプレートを作成および編集できます（SPA エディターとも呼ばれます）。
 
 * 参照サイト We.Retail 4.0 については、[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照してください。
 * 既存のサイトをアップグレードして最新のエディター機能を使用するためのツールキットについては、[Github リポジトリ](https://github.com/adobe/aem-modernize-tools)を参照してください。
@@ -246,12 +246,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。 アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
-* `at.js` バージョン 1.5.0 が含まれるようになりました。 [Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
+* `at.js` バージョン 1.5.0 が含まれるようになりました。 [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。 実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。 [Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
+* `AppMeasurement.js` v1.8.0 が含まれています。 [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
@@ -435,7 +435,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。 このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。 [Experience Manager サポート ポータル](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。 研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。 開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。 [Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。 研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。 開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 このような優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更が行われました。
 
@@ -457,17 +457,17 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 * We.Retail 参照実装（[詳細を表示](/help/sites-developing/we-retail.md)）
 * Maven プロジェクトアーキタイプ：
 
-   * フルスタックサイトの場合：[GitHub プロジェクト](https://github.com/adobe/aem-project-archetype)
-   * React または Angular を使用した単一ページアプリの場合：[GitHub プロジェクト](https://github.com/adobe/aem-spa-project-archetype)
+  * フルスタックサイトの場合：[GitHub プロジェクト](https://github.com/adobe/aem-project-archetype)
+  * React または Angular を使用した単一ページアプリの場合：[GitHub プロジェクト](https://github.com/adobe/aem-spa-project-archetype)
 
 * 様々なプラットフォーム向けの AEM Screens Players（[ダウンロード](https://download.macromedia.com/screens/)）
 
 * スマートコンテンツの言語モデル。 英語は事前インストール済み。ほかに以下の言語がダウンロード可能
 
-   * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+  * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+  * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+  * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+  * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * ダイアログ変換ツールなどの AEM Modernize Tool Suite （[GitHub プロジェクト](https://github.com/adobe/aem-modernize-tools)）
 
@@ -478,7 +478,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 **Forms**
 
-* [AEM Forms機能のパッケージ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)
+* [AEM Forms機能のパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 * [AEM Forms OSGi Client SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
 
 ## 言語 {#languages}
@@ -526,9 +526,9 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
   次の各アクションで、プロパティ `htmllibmanager.fileSystemOutputCacheLocation` が空の文字列ではありません。
 
-   1. `/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true` の呼び出し。
-   2. AEM 6.5 へのアップグレード。
-   3. AEM 6.5 での「遅延コンテンツ移行」の実行。
+  1. `/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true` の呼び出し。
+  2. AEM 6.5 へのアップグレード。
+  3. AEM 6.5 での「遅延コンテンツ移行」の実行。
 
 * AEM 6.5 インスタンスで JDK 11 を使用している場合、一部のパッケージをデプロイすると、一部のページが空白で表示されることがあります。 次のエラーメッセージがログファイルに表示されます。
 
@@ -575,13 +575,13 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 * コンポーネントの値を動的に更新するようにアダプティブフォームが設定されていて、そのフォームをホストするパブリッシュインスタンスに Dispatcher を通じてアクセスする場合、フィールドの値を動的に更新する機能が動作しなくなります。 この問題を解決するには、パブリッシュインスタンスで CRXDE を開き、`/libs/fd/af/runtime/clientlibs/guideChartReducer` を検索して、次のプロパティを作成します。
 
-   * 名前：allowProxy
-   * タイプ：Boolean
-   * 値：True
-   * 保護：False
-   * 必須：False
-   * 複数：False
-   * 自動作成：False
+  * 名前：allowProxy
+  * タイプ：Boolean
+  * 値：True
+  * 保護：False
+  * 必須：False
+  * 複数：False
+  * 自動作成：False
 
   このプロパティを設定すると、ランタイムフォルダー内のクライアントライブラリからプロキシにアクセスできます。 （CQ-4268679）
 

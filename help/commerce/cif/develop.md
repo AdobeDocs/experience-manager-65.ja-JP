@@ -1,6 +1,6 @@
 ---
 title: AEM Commerce の開発
-description: AEM プロジェクトアーキタイプを使用してコマース対応の AEM プロジェクトを生成する方法を説明します。プロジェクトを構築し、ローカル開発環境にデプロイする方法を説明します。
+description: AEM プロジェクトアーキタイプを使用してコマース対応の AEM プロジェクトを生成する方法を説明します。 プロジェクトを構築し、ローカル開発環境にデプロイする方法を説明します。
 topics: Commerce, Development
 feature: Commerce Integration Framework
 doc-type: tutorial
@@ -11,14 +11,14 @@ solution: Experience Manager,Commerce
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 100%
+source-wordcount: '941'
+ht-degree: 94%
 
 ---
 
 # AEM Commerce の開発 {#develop}
 
-AEM 向けコマース統合フレームワーク（CIF）に基づく AEM Commerce プロジェクトの開発でも、他の AEM プロジェクトと同じルールとベストプラクティスに従います。最初に以下を確認します。
+AEM Commerce Integration Framework（CIF）に基づく AEM Commerce プロジェクトの開発でも、他の AEM プロジェクトと同じルールとベストプラクティスに従います。 最初に以下を確認します。
 
 - [AEM 6.5 開発ユーザーガイド](/help/sites-developing/getting-started.md)
 - [AEM の中心概念](/help/sites-developing/the-basics.md)
@@ -31,9 +31,9 @@ CIF プロジェクトを使用する場合は、ローカル開発環境を使�
 
 >[!NOTE]
 >
->以下の手順は、CIF を使用して AEM Commerce 用のローカル AEM 開発環境を AEM 6.5 用に設定する場合に役立ちます。AEM as a Cloud Service を使用している場合は、[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) ドキュメントを参照してください。
+>以下の手順は、CIF を使用して AEM Commerce 用のローカル AEM 開発環境を AEM 6.5 用に設定する場合に役立ちます。 AEM as a Cloud Service を使用している場合は、[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) ドキュメントを参照してください。
 
-AEM Commerce Add-On for AEM 6.5 アドオンCIF アドオンは、ローカル開発にも使用でき、AEM パッケージとしても提供されます。これは、 [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から機能パックとしてダウンロードできます。
+AEM Commerce Add-On for AEM 6.5 アドオン CIF アドオンは、ローカル開発にも使用でき、AEM パッケージとしても提供されます。 これは、 [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から機能パックとしてダウンロードできます。
 
 ### 必要なソフトウェア
 
@@ -43,8 +43,8 @@ AEM Commerce Add-On for AEM 6.5 アドオンCIF アドオンは、ローカル�
 - [AEM 6.5 サービスパック](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 以降
 - [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 - [Apache Maven](https://maven.apache.org/)（3.3.9 以降）
-- [Node LTS](https://nodejs.org/ja/)
-- [npm 6 以降](https://www.npmjs.com/)
+- [ノード LTS](https://nodejs.org/ja/)
+- [npm 6+](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 
 ### CIF アドオンへのアクセス
@@ -59,7 +59,7 @@ CIF アドオンは、 [ソフトウェア配布ポータル](https://experience
 
 AEM と CIF アドオンを使用するローカル CIF プロジェクト開発の場合は、次の手順に従います。
 
-1. AEM 6.5 リリースを入手し、AEM 6.5 サービスパックをインストールします。AEM 6.5 サービスパック 7 が必要ですが、入手可能な最新のサービスパックをインストールすることをお勧めします。
+1. AEM 6.5 リリースを入手し、AEM 6.5 サービスパックをインストールします。 AEM 6.5 サービスパック 7 が必要ですが、入手可能な最新のサービスパックをインストールすることをお勧めします。
 
 1. AEM.jar を解凍し、`crx-quickstart` フォルダーを作成します。次を実行します。
 
@@ -77,7 +77,7 @@ AEM と CIF アドオンを使用するローカル CIF プロジェクト開発
 
 1. AEM クイックスタートを起動します。
 
-OSGI コンソールを使用して設定を確認します：`http://localhost:4502/system/console/osgi-installer`。このリストには、CIF アドオン関連バンドル、コンテンツパッケージ、OSGI 設定が含まれている必要があります。すべてのバンドルが起動されていることを確認します。
+OSGI コンソールを使用して設定を確認します：`http://localhost:4502/system/console/osgi-installer`。 このリストには、CIF アドオン関連バンドル、コンテンツパッケージ、OSGI 設定が含まれている必要があります。 すべてのバンドルが起動されていることを確認します。
 
 ## プロジェクトのセットアップ {#project}
 
@@ -85,13 +85,13 @@ CIF を使用して AEM Commerce プロジェクトを開始する方法は 2 �
 
 ### AEM プロジェクトアーキタイプの使用
 
-CIF を使い始めるために事前に設定されたプロジェクトをブートストラップするには、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)が主なツールです。CIF コアコンポーネントと必要なすべての設定を、生成されたプロジェクトに 1 つの追加オプションで含めることができます。
+CIF を使い始めるために事前に設定されたプロジェクトをブートストラップするには、[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)が主なツールです。 CIF コアコンポーネントと必要なすべての設定を、生成されたプロジェクトに 1 つの追加オプションで含めることができます。
 
 >[!TIP]
 >
 >プロジェクトを生成するには、[AEM プロジェクトアーキタイプ 25 以降](https://github.com/adobe/aem-project-archetype/releases)を使用します。
 
-AEM プロジェクトの生成方法については、AEM プロジェクトのアーキタイプの「[使用手順](https://github.com/adobe/aem-project-archetype#usage)」を参照してください。プロジェクトに CIF を含めるには、`includeCommerce` オプションを使用します。
+AEM プロジェクトの生成方法については、AEM プロジェクトのアーキタイプの「[使用手順](https://github.com/adobe/aem-project-archetype#usage)」を参照してください。 プロジェクトに CIF を含めるには、`includeCommerce` オプションを使用します。
 
 例：
 
@@ -108,7 +108,7 @@ mvn -B archetype:generate \
  -D includeCommerce=y
 ```
 
-提供されている `all` パッケージを含めるか、CIF コンテンツパッケージと関連する OSGI バンドルを個別に使用することで、CIF コアコンポーネントを任意のプロジェクトで使用できます。CIF コアコンポーネントを手動でプロジェクトに追加するには、次の依存関係を使用します。
+提供されている `all` パッケージを含めるか、CIF コンテンツパッケージと関連する OSGI バンドルを個別に使用することで、CIF コアコンポーネントを任意のプロジェクトで使用できます。 CIF コアコンポーネントを手動でプロジェクトに追加するには、次の依存関係を使用します。
 
 ```java
 <dependency>
@@ -142,13 +142,13 @@ mvn -B archetype:generate \
 
 ### AEM Venia 参照用ストアの使用
 
-CIF プロジェクトを開始する 2 つ目の方法は、[AEM Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)をコピーして使用する方法です。AEM Venia 参照用ストアは、AEM 用の CIF コアコンポーネントの使用方法を示すサンプルのストアフロントアプリケーションです。これは、ベストプラクティス例として意図されていて、独自機能を開発するための有望な出発点としての役割も果たします。
+CIF プロジェクトを開始する 2 つ目の方法は、[AEM Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)をコピーして使用する方法です。 AEM Venia 参照用ストアは、AEM 用の CIF コアコンポーネントの使用方法を示すサンプルのストアフロントアプリケーションです。 これは、ベストプラクティス例として意図されていて、独自機能を開発するための有望な出発点としての役割も果たします。
 
 Venia 参照用ストアの使用を開始するには、[Git リポジトリー](https://github.com/adobe/aem-cif-guides-venia)をコピーし、必要に応じてプロジェクトをカスタマイズします。
 
 >[!NOTE]
 >
->Venia 参照用ストアプロジェクトには、AEM as a Cloud Service 用および AEM 6.5 用の 2 つのビルドプロファイルが含まれています。[project readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md) を参照して、使用方法を確認してください。AEM 6.5 の場合は、 `classic` プロファイルを使用します。
+>Venia Reference Store プロジェクトには、AEM as a Cloud ServiceとAEM 6.5用の2つのビルドプロファイルが含まれています。 [project readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md)を確認して、その使用方法を確認してください。 AEM 6.5 の場合は、 `classic` プロファイルを使用します。
 
 ### コマースシステムへの AEM の接続
 
@@ -158,13 +158,13 @@ Venia 参照用ストアの使用を開始するには、[Git リポジトリー
 
 `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` の `url` の値を、プロジェクトで使用されるコマースシステムの GraphQL エンドポイントに置き換えます。
 
-AEM Commerce アドオンと CIF コアコンポーネントは、AEM サーバーを介して、またはブラウザーを介して直接、コマース GraphQL エンドポイントに接続します。クライアントサイドの CIF コアコンポーネントと CIF アドオンのオーサリングツールは、デフォルトで `/api/graphql` に接続します。必要に応じて、 CIF Cloud Service 設定で調整できます（以下を参照）。
+AEM Commerce アドオンと CIF コアコンポーネントは、AEM サーバーを介して、またはブラウザーを介して直接、コマース GraphQL エンドポイントに接続します。 クライアントサイドの CIF コアコンポーネントと CIF アドオンのオーサリングツールは、デフォルトで `/api/graphql` に接続します。 必要に応じて、 CIF Cloud Service 設定で調整できます（以下を参照）。
 
-CIF アドオンは、`/api/graphql` で GraphQL プロキシサーブレットを提供します。ローカルの AEM Dispatcher を使用する予定がない場合は、GraphQL プロキシサーブレットも設定することをお勧めします。
+CIF アドオンは、`/api/graphql` で GraphQL プロキシサーブレットを提供します。 ローカルの AEM Dispatcher を使用する予定がない場合は、GraphQL プロキシサーブレットも設定することをお勧めします。
 
-http://localhost:4502/system/console/configMgr に移動し、`Adobe CIF GraphQL Proxy Configuration` サービスの OSGI 設定を作成します。上記の GraphQL クライアントで使用したのと同じ GraphQL エンドポイントを、コマースシステムで使用します。
+http://localhost:4502/system/console/configMgrに移動し、`Adobe CIF GraphQL Proxy Configuration` サービスのOSGI設定を作成します。 上記の GraphQL クライアントで使用したのと同じ GraphQL エンドポイントを、コマースシステムで使用します。
 
 ## その他のリソース
 
 - [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)
-- [AEM Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)
+- [AEM Venia リファレンスストア](https://github.com/adobe/aem-cif-guides-venia)

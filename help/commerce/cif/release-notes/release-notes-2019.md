@@ -12,7 +12,7 @@ ht-degree: 100%
 
 ---
 
-# コマース統合フレームワーク GitHub リリースの概要
+# Commerce Integration Framework GitHub リリースの概要
 
 ## リリース日：2019年11月
 
