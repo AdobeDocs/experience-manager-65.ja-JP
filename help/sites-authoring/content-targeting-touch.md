@@ -14,9 +14,7 @@ source-git-commit: ee6294a03b2e4faf4e3c2dc8a466d03a0fb8a28a
 workflow-type: tm+mt
 source-wordcount: '5344'
 ht-degree: 95%
-
 ---
-
 # ターゲティングモードを使用したターゲットコンテンツのオーサリング{#authoring-targeted-content-using-targeting-mode}
 
 ターゲティングモードを使用すると、AEMのターゲットコンテンツを作成できます。 ターゲティングモードとターゲットコンポーネントには、以下のエクスペリエンス用コンテンツを作成するためのツールが用意されています。
@@ -530,7 +528,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
  </tbody>
 </table>
 
-成功指標について詳しくは、[Adobe Target ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)を参照してください。
+成功指標について詳しくは、[Adobe Target ドキュメント ](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)を参照してください。
 
 ### 設定の指定（AEM ターゲティング） {#configuring-settings-aem-targeting}
 
