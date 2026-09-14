@@ -528,7 +528,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
  </tbody>
 </table>
 
-成功指標について詳しくは、[Adobe Target ドキュメント ](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)を参照してください。
+成功指標について詳しくは、[Adobe Target ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)を参照してください。
 
 ### 設定の指定（AEM ターゲティング） {#configuring-settings-aem-targeting}
 
