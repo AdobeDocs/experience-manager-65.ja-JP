@@ -64,7 +64,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 >[!NOTE]
 >
->`adobe-livecycle-client.jar`などのAEM Forms クライアントライブラリファイルを使用する際に問題が発生した場合は、[AEM Forms ホットフィックス ](/help/release-notes/aem-forms-hotfix.md) ページで、ホットフィックスがファイルの更新版を提供しているかどうかを確認してください。 その場合は、更新されたファイルをプロジェクトのクラスパスで使用します。
+>`adobe-livecycle-client.jar`などのAEM Forms クライアントライブラリファイルを使用する際に問題が発生した場合は、[AEM Forms ホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md) ページで、ホットフィックスがファイルの更新版を提供しているかどうかを確認してください。 その場合は、更新されたファイルをプロジェクトのクラスパスで使用します。
 
 ### サービス固有の JAR ファイル {#service-specific-jar-files}
 
