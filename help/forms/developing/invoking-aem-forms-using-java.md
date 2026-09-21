@@ -8,14 +8,13 @@ topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 2856a470ceb45fbdc6852c016386c465ee1b4930
 workflow-type: tm+mt
-source-wordcount: '5557'
-ht-degree: 100%
-
+source-wordcount: '5599'
+ht-degree: 99%
 ---
-
 # Java API を使用した AEM Forms の呼び出し {#invoking-aem-forms-using-the-javaapi}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -62,6 +61,10 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 >（自動オプションのみ）EJB 用のサーバー IP を指定するには、コマンド `standalone.bat -b <Server IP> -c lc_turnkey.xml` を使用して AEM Forms サーバーを起動します。
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
+
+>[!NOTE]
+>
+>`adobe-livecycle-client.jar`などのAEM Forms クライアントライブラリファイルを使用する際に問題が発生した場合は、[AEM Forms ホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md) ページで、ホットフィックスがファイルの更新版を提供しているかどうかを確認してください。 その場合は、更新されたファイルをプロジェクトのクラスパスで使用します。
 
 ### サービス固有の JAR ファイル {#service-specific-jar-files}
 
@@ -422,21 +425,21 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
 * **DSC_DEFAULT_EJB_ENDPOINT**：EJB 接続モードを使用している場合、この値は AEM Forms のデプロイ先 J2EE アプリケーションサーバーの URL を表します。 リモートで AEM Forms を呼び出すには、AEM Forms のデプロイ先 J2EE アプリケーションサーバー名を指定します。 クライアントアプリケーションが同じ J2EE アプリケーションサーバー上にある場合は、`localhost` を指定できます。 AEM Forms のデプロイ先 J2EE アプリケーションサーバーに応じて、次のいずれかの値を指定します。
 
-   * JBoss: `https://<ServerName>:8080 (default port)`
-   * WebSphere: `iiop://<ServerName>:2809 (default port)`
-   * WebLogic: `t3://<ServerName>:7001 (default port)`
+  * JBoss: `https://<ServerName>:8080 (default port)`
+  * WebSphere: `iiop://<ServerName>:2809 (default port)`
+  * WebLogic: `t3://<ServerName>:7001 (default port)`
 
 * **DSC_DEFAULT_SOAP_ENDPOINT**：SOAP 接続モードを使用している場合、この値は呼び出しリクエストが送信されるエンドポイントを表します。 リモートで AEM Forms を呼び出すには、AEM Forms のデプロイ先 J2EE アプリケーションサーバー名を指定します。 クライアントアプリケーションが同じ J2EE アプリケーションサーバー上にある場合は、`localhost`（たとえば `http://localhost:8080`）を指定できます。
 
-   * ポート値 `8080` は、J2EE アプリケーションが JBoss の場合に適用されます。 J2EE アプリケーションサーバーが IBM® WebSphere® の場合は、ポート `9080` を使用します。 同様に、J2EE アプリケーションサーバーが WebLogic の場合は、ポート `7001` を使用します。 （これらの値はデフォルトのポート値です。 ポートの値を変更する場合は、適用可能なポート番号を使用してください。）
+  * ポート値 `8080` は、J2EE アプリケーションが JBoss の場合に適用されます。 J2EE アプリケーションサーバーが IBM® WebSphere® の場合は、ポート `9080` を使用します。 同様に、J2EE アプリケーションサーバーが WebLogic の場合は、ポート `7001` を使用します。 （これらの値はデフォルトのポート値です。 ポートの値を変更する場合は、適用可能なポート番号を使用してください。）
 
 * **DSC_TRANSPORT_PROTOCOL**：EJB 接続モードを使用している場合は、この値に `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` を指定します。 SOAP 接続モードを使用している場合は `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL` を指定します。
 * **DSC_SERVER_TYPE**：AEM Forms のデプロイ先 J2EE アプリケーションサーバーを指定します。 有効な値は `JBoss`、`WebSphere`、`WebLogic` です。
 
-   * この接続プロパティを `WebSphere` に設定すると、`java.naming.factory.initial` 値は `com.ibm.ws.naming.util.WsnInitCtxFactory` に設定されます。
-   * この接続プロパティを `WebLogic` に設定すると、`java.naming.factory.initial` 値は `weblogic.jndi.WLInitialContextFactory` に設定されます。
-   * 同様に、この接続プロパティを `JBoss` に設定すると、`java.naming.factory.initial` 値は `org.jnp.interfaces.NamingContextFactory` に設定されます。
-   * デフォルトの値を使用しない場合、`java.naming.factory.initial` プロパティを要件を満たす値に設定することができます。
+  * この接続プロパティを `WebSphere` に設定すると、`java.naming.factory.initial` 値は `com.ibm.ws.naming.util.WsnInitCtxFactory` に設定されます。
+  * この接続プロパティを `WebLogic` に設定すると、`java.naming.factory.initial` 値は `weblogic.jndi.WLInitialContextFactory` に設定されます。
+  * 同様に、この接続プロパティを `JBoss` に設定すると、`java.naming.factory.initial` 値は `org.jnp.interfaces.NamingContextFactory` に設定されます。
+  * デフォルトの値を使用しない場合、`java.naming.factory.initial` プロパティを要件を満たす値に設定することができます。
 
   >[!NOTE]
   >
@@ -474,12 +477,12 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
    * `ServiceClientFactoryProperties.DSC_SERVER_TYPE` 列挙値
    * AEM Forms をホストする J2EE アプリケーションサーバーを指定する文字列値（例えば、AEM Forms が JBoss にデプロイされている場合は `JBoss` を指定します）。
 
-      1. `DSC_CREDENTIAL_USERNAME` 接続プロパティを設定するには、`java.util.Properties` オブジェクトの `setProperty` メソッドを呼び出し、次の値を渡します。
+     1. `DSC_CREDENTIAL_USERNAME` 接続プロパティを設定するには、`java.util.Properties` オブジェクトの `setProperty` メソッドを呼び出し、次の値を渡します。
 
    * `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME` 列挙値
    * AEM Forms を呼び出すのに必要なユーザー名を指定する文字列値
 
-      1. `DSC_CREDENTIAL_PASSWORD` 接続プロパティを設定するには、`java.util.Properties` オブジェクトの `setProperty` メソッドを呼び出し、次の値を渡します。
+     1. `DSC_CREDENTIAL_PASSWORD` 接続プロパティを設定するには、`java.util.Properties` オブジェクトの `setProperty` メソッドを呼び出し、次の値を渡します。
 
    * `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD` 列挙値
    * 対応するパスワード値を指定する文字列値
