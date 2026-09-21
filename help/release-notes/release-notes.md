@@ -1,18 +1,16 @@
 ---
-title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
-description: ' [!DNL Adobe Experience Manager]  6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
+title: '[!DNL Adobe Experience Manager] 6.5のリリースノート'
+description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: b30bc6ce844cacce396a09c5195c48083b96a9ec
+source-git-commit: 11e155ed72caf8f75bd2d8c8293723f24fe82945
 workflow-type: tm+mt
-source-wordcount: '7444'
-ht-degree: 21%
-
+source-wordcount: '7679'
+ht-degree: 20%
 ---
-
 # [!DNL Adobe Experience Manager] 6.5 の最新のサービスパックのリリースノート {#aem-service-pack-release-notes}
 
 <!-- For an itemized list of all issues found in this release information, see the following spreadsheet: https://adobe-my.sharepoint.com/:x:/r/personal/anujkapo_adobe_com/_layouts/15/Doc.aspx?sourcedoc=%7B3ea81ae4-e605-4153-b132-f2698c86f84e%7D&action=edit&wdinitialsession=d8c7b903-87fc-4f2d-9ef2-542a82169570&wdrldsc=3&wdrldc=1&wdrldr=SessionMemoryQuotaExceededDuringSession -->
@@ -48,13 +46,13 @@ Crosswalkは、このリリースではデフォルトで使用できるので�
 
 ### Formsの主な機能と機能強化
 
-* [&#x200B; マルチスレッドのPDF Generator コンバージョン &#x200B;](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions): AEM Formsが1つの設定済みユーザーアカウントでWindows サービスとして実行される場合に、Microsoft Word （doc/docx）とExcel （xls/xlsx）の同時コンバージョンを実行するためのサポートを追加しました。
+* [ マルチスレッドのPDF Generator コンバージョン ](/help/forms/using/install-configure-document-services.md#windows-only-enable-multi-threaded-pdf-generator-conversions): AEM Formsが1つの設定済みユーザーアカウントでWindows サービスとして実行される場合に、Microsoft Word （doc/docx）とExcel （xls/xlsx）の同時コンバージョンを実行するためのサポートを追加しました。
 
-* [XFA ベースのPDFの階層ブックマーク &#x200B;](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf):Output ServiceとAEM Forms Designerは、静的なインタラクティブおよびフラットなXFA ベースのPDFで構造化ブックマーク階層を生成するようになりました。 ブックマークは、テキストボックスのアクセシビリティプロパティで設定された見出しレベル（H1～H6）に従うため、H1～H6のエントリは並行して表示される代わりに正しい親の下にネストされます。
+* [XFA ベースのPDFの階層ブックマーク ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/using-designer.pdf):Output ServiceとAEM Forms Designerは、静的なインタラクティブおよびフラットなXFA ベースのPDFで構造化ブックマーク階層を生成するようになりました。 ブックマークは、テキストボックスのアクセシビリティプロパティで設定された見出しレベル（H1～H6）に従うため、H1～H6のエントリは並行して表示される代わりに正しい親の下にネストされます。
 
 * [JEE トランザクションログのフォームレベルの詳細](/help/forms/using/transaction-report-overview-jee.md#form-level-details-transaction-log-jee):JEE上のAEM Formsでは、既存のサービスとオペレーション情報に加えて、各トランザクションの`transaction_log.log`にフォームレベルの詳細が記録されるようになりました。 管理者は、送信、レンディション、コンバージョンを分析する際に、トランザクションレポートのデータを特定のフォームに関連付けることができます。 （FORMS-21574）
 
-* [&#x200B; サポート対象プラットフォームのマトリックス &#x200B;](/help/forms/using/aem-forms-jee-supported-platforms.md)を更新しました：JEE サービスパック 6.5.25.0のAEM Formsでは、次の新しいテクノロジとの互換性がサポートされています。
+* [ サポート対象プラットフォームのマトリックス ](/help/forms/using/aem-forms-jee-supported-platforms.md)を更新しました：JEE サービスパック 6.5.25.0のAEM Formsでは、次の新しいテクノロジとの互換性がサポートされています。
   * JBoss® Enterprise Application Platform （EAP） 7.4.23
   * IBM® Content Manager クライアント 8.7
   * AEM Forms Designer Microsoft版® Windows Terminal Server 2025
@@ -62,8 +60,10 @@ Crosswalkは、このリリースではデフォルトで使用できるので�
   >[!NOTE]
   >
   > JBoss EAPを7.4.10から7.4.23にアップグレードするには、次を参照してください。
-  > * [&#x200B; スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
+  > * [ スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
   > * [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)。
+
+* **Configuration Manager （LCM） Express Mode資格情報プロンプト：** Express ModeでConfiguration Manager （LCM）を使用してJEE上のAEM Formsを設定すると、組み込みのデフォルト資格情報を使用するのではなく、設定中にAEM管理者の資格情報を入力するよう求める新しい画面が表示されるようになりました。 この変更は、AEM サービスパック 6.5.25.0の[ ホットフィックス ](/help/release-notes/aem-forms-hotfix.md)を通じて利用できます。 設定手順については、[JBoss Turnkeyを使用したJEEでのAEM Formsのインストールとデプロイ ](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_jp)を参照してください。 （FORMS-26365）
 
 ## Service Pack 25で修正された問題 {#fixed-issues}
 
@@ -404,7 +404,7 @@ AEM 6.5のアップグレード後、CRXDE LiteでJSP ファイルの編集が�
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.25.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[&#x200B; アップグレードドキュメント &#x200B;](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.25.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[ アップグレードドキュメント ](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.25.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -420,7 +420,7 @@ AEM 6.5のアップグレード後、CRXDE LiteでJSP ファイルの編集が�
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [&#x200B; ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -517,7 +517,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* Oakに関連する&#x200B;**&#x200B;**
+* Oakに関連する&#x200B;****
 サービスパック 13以降では、永続キャッシュに影響する次のエラーログが表示され始めています。
 
   ```shell
@@ -604,10 +604,14 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 #### 利用可能なホットフィックスに関する既知の問題 {#aem-forms-issues-with-hotfixes}
 
-次の問題には、ダウンロードとインストールが可能なホットフィックスがあります。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
+次の問題には、ダウンロードしてインストールできるホットフィックスが用意されています。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
 
-* **NPR-44100** WAR/JEE デプロイメント （JEE上のAEM Formsを含む）にAEM 6.5 Service Pack 25をインストールした後、`com.adobe.cq.screens.sessions` バンドルはインストール済み状態のままになり、アクティブになりません。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
-* **FORMS-23491** AEM Forms 6.5.24.0 JEE デプロイメント（JBoss、WebLogic、WebSphere）は、マルチパートリクエスト処理におけるApache Struts サービス拒否の脆弱性であるCVE-2025-64775の影響を受けます。 この問題を解決するには、[AEM Service Pack 6.5.24.0のホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **NPR-44100** WAR/JEE デプロイメント （JEE上のAEM Formsを含む）にAEM 6.5 Service Pack 25をインストールした後、`com.adobe.cq.screens.sessions` バンドルはインストール済み状態のままになり、アクティブになりません。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **FORMS-26802** SOAP SDK認証の強化後、`/soap/sdk` エンドポイントが未認証のリクエストを拒否するため、LCM Configuration Manager、Workbench、およびDesignerがJEE サーバー上のAEM Formsに接続できない。エラー`ALC-LCM-200-001`が発生する。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **FORMS-26679** AEM Forms Document Securityでは、Microsoft Entra ID （MFA）のリダイレクト後に認証Cookieがドロップされ、ポリシーで保護されたドキュメントを開くときに「Cookieが有効になっていない可能性があります」というエラーが発生します。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **FORMS-26617** WebLogicを使用するJEE上のAEM Formsで、Microsoft SQL Server JDBC ドライバー12.10.0を使用すると、Configuration Managerを介したデータベース設定で「適切なドライバーが見つかりません」というエラーが発生する。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* 最新のFORMS 6.5 ビルドをインストールした後、**AEM Forms-27869**&#x200B;個のPDFをゆっくりと開きます。 この問題を解決するには、[AEM Service Pack 6.5.25.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
+* **FORMS-23491** AEM Forms 6.5.24.0 JEE デプロイメント（JBoss、WebLogic、WebSphere）は、マルチパートリクエスト処理におけるApache Struts サービス拒否の脆弱性であるCVE-2025-64775の影響を受けます。 この問題を解決するには、[AEM Service Pack 6.5.24.0のホットフィックス ](/help/release-notes/aem-forms-hotfix.md)をダウンロードしてインストールします。
 * **FORMS-14926** AEM Forms JEE サービスパック 21 （6.5.21.0）をインストールした後、`<AEM_Forms_Installation>/lib/caching/lib` フォルダーの下にGeode jar `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)`の重複するエントリが見つかった場合は、次の手順を実行して問題を解決します。
 
   1. ロケーターが実行中の場合は、ロケーターを停止します。
@@ -631,7 +635,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 これらの Web サイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード。](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
