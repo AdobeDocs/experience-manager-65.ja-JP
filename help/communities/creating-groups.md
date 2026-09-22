@@ -19,15 +19,15 @@ ht-degree: 1%
 
 コミュニティグループ機能は、パブリッシュ環境とオーサー環境から許可されたユーザー（コミュニティメンバーと作成者）が、コミュニティサイト内でサブコミュニティを動的に作成する機能です。
 
-この機能は、[groups関数](/help/communities/functions.md#groups-function)が[ コミュニティサイト ](/help/communities/sites-console.md)構造に存在する場合に使用できます。
+この機能は、[groups関数](/help/communities/functions.md#groups-function)が[&#x200B; コミュニティサイト &#x200B;](/help/communities/sites-console.md)構造に存在する場合に使用できます。
 
-[ コミュニティグループテンプレート ](/help/communities/tools-groups.md)は、コミュニティグループが動的に作成されるときに、コミュニティグループページのデザインを提供します。
+[&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools-groups.md)は、コミュニティグループが動的に作成されるときに、コミュニティグループページのデザインを提供します。
 
 コミュニティ サイトの構造またはコミュニティ サイト テンプレートに関数を追加する場合、グループ関数に1つ以上のグループ テンプレートが選択されます。 このグループテンプレートのリストは、コミュニティサイト内から動的にグループを作成するメンバーまたは作成者に表示されます。
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
-コミュニティグループを作成する機能は、[参照サイトテンプレート ](/help/communities/sites.md)から作成されたグループ関数など、グループ関数を含むコミュニティサイトの存在に依存しています。
+コミュニティグループを作成する機能は、[参照サイトテンプレート &#x200B;](/help/communities/sites.md)から作成されたグループ関数など、グループ関数を含むコミュニティサイトの存在に依存しています。
 
 次の例では、[AEM Communitiesの概要](/help/communities/getting-started.md) チュートリアルの説明に従って、`Reference Site Template`から作成されたコミュニティサイトを使用しています。
 
@@ -91,4 +91,4 @@ ht-degree: 1%
 
 詳しくは、開発者向けの[Community Group Essentials](/help/communities/essentials-groups.md) ページを参照してください。
 
-コミュニティグループに関するその他の情報については、[ ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+コミュニティグループに関するその他の情報については、[&#x200B; ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。

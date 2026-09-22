@@ -59,7 +59,7 @@ ht-degree: 3%
 
 例えば、`vertical-sitepage.hbs`は、バナーの下ではなく、ページの左側の垂直方向にメニューリンクを配置するサイトテンプレートです。
 
-[ ファイルを取得](assets/vertical-sitepage.hbs)
+[&#x200B; ファイルを取得](assets/vertical-sitepage.hbs)
 カスタムサイトテンプレートをオーバーレイフォルダーに配置します。
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
@@ -72,13 +72,13 @@ ht-degree: 3%
 
 **すべて保存**&#x200B;し、すべてのAdobe Experience Manager（AEM）インスタンスにカスタムコードをレプリケートしてください（コミュニティサイトコンテンツがコンソールから公開される場合、カスタムコードは含まれません）。
 
-カスタムコードをレプリケートするための推奨される方法は、[ パッケージを作成し](../../help/sites-administering/package-manager.md#creating-a-new-package)すべてのインスタンスにデプロイすることです。
+カスタムコードをレプリケートするための推奨される方法は、[&#x200B; パッケージを作成し](../../help/sites-administering/package-manager.md#creating-a-new-package)すべてのインスタンスにデプロイすることです。
 
 ## コミュニティサイトのエクスポート {#exporting-a-community-site}
 
 コミュニティサイトを作成したら、そのサイトをPackage Managerに保存され、ダウンロードおよびアップロード可能なAEM パッケージとして書き出すことができます。
 
-これは、[Communities Sites コンソール ](sites-console.md#exporting-the-site)から利用できます。
+これは、[Communities Sites コンソール &#x200B;](sites-console.md#exporting-the-site)から利用できます。
 
 UGCとカスタムコードは、コミュニティサイトパッケージには含まれません。
 
@@ -120,11 +120,11 @@ GitHubからcommunities-srp-tools プロジェクトを取得します。
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-これにより、ユーザーが生成したコンテンツ（パブリッシュに入力）と未作成のコンテンツ（オーサーに入力）のみが削除されます。 したがって、[ シャドウ ノード ](srp.md#shadownodes)は影響を受けません。
+これにより、ユーザーが生成したコンテンツ（パブリッシュに入力）と未作成のコンテンツ（オーサーに入力）のみが削除されます。 したがって、[&#x200B; シャドウ ノード &#x200B;](srp.md#shadownodes)は影響を受けません。
 
 ### コミュニティユーザーグループ {#community-user-groups}
 
-すべてのオーサーインスタンスとパブリッシュインスタンスで、[ セキュリティコンソール ](../../help/sites-administering/security.md)から、次の[ ユーザーグループ ](users.md)を見つけて削除します。
+すべてのオーサーインスタンスとパブリッシュインスタンスで、[&#x200B; セキュリティコンソール &#x200B;](../../help/sites-administering/security.md)から、次の[&#x200B; ユーザーグループ &#x200B;](users.md)を見つけて削除します。
 
 * 接頭辞が`community`
 * 次に、[一意のサイト ID](#community-unique-site-id)が続きます

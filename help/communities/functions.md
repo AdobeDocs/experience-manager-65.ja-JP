@@ -17,13 +17,13 @@ ht-degree: 2%
 ---
 # コミュニティ機能{#community-functions}
 
-コミュニティ体験に期待される機能の種類は周知の事実です。 コミュニティ機能は、コミュニティ機能として使用できます。 基本的には、コミュニティ機能を実装するために事前に接続された1つ以上のページで、オーサーモードでページにコンポーネントを追加するだけでは不十分です。 これらは、コミュニティサイトが[作成](/help/communities/sites-console.md)される[ コミュニティサイトテンプレート ](/help/communities/sites.md)の構造を定義するために使用される構成要素です。
+コミュニティ体験に期待される機能の種類は周知の事実です。 コミュニティ機能は、コミュニティ機能として使用できます。 基本的には、コミュニティ機能を実装するために事前に接続された1つ以上のページで、オーサーモードでページにコンポーネントを追加するだけでは不十分です。 これらは、コミュニティサイトが[作成](/help/communities/sites-console.md)される[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)の構造を定義するために使用される構成要素です。
 
-コミュニティサイトを作成したら、標準の[AEM オーサリングモード ](/help/sites-authoring/editing-content.md)を使用して、作成されたページにコンテンツを追加できます。 コミュニティ関数コンソールに表示されているように、様々なコミュニティ関数を使用できます。
+コミュニティサイトを作成したら、標準の[AEM オーサリングモード &#x200B;](/help/sites-authoring/editing-content.md)を使用して、作成されたページにコンテンツを追加できます。 コミュニティ関数コンソールに表示されているように、様々なコミュニティ関数を使用できます。
 
 >[!NOTE]
 >
->[ コミュニティサイト ](/help/communities/sites-console.md)、[ コミュニティサイトテンプレート ](/help/communities/sites.md)、[ コミュニティグループテンプレート ](/help/communities/tools-groups.md)、[ コミュニティ関数](/help/communities/functions.md)の作成用コンソールは、オーサー環境でのみ使用できます。
+>[&#x200B; コミュニティサイト &#x200B;](/help/communities/sites-console.md)、[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)、[&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools-groups.md)、[&#x200B; コミュニティ関数](/help/communities/functions.md)の作成用コンソールは、オーサー環境でのみ使用できます。
 
 ## Community Functions Console {#community-functions-console}
 
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 ## 事前定義済みの関数 {#pre-built-functions}
 
-以下に、AEM Communitiesで提供される機能の簡単な説明を示します。 各関数には、Communities コンポーネントを含む1つ以上のAEM ページが含まれており、これらは[ コミュニティサイトテンプレート ](/help/communities/sites.md)に簡単に組み込まれる機能に接続されています。
+以下に、AEM Communitiesで提供される機能の簡単な説明を示します。 各関数には、Communities コンポーネントを含む1つ以上のAEM ページが含まれており、これらは[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)に簡単に組み込まれる機能に接続されています。
 
 コミュニティサイトテンプレートは、ログイン、ユーザープロファイル、通知、メッセージ、サイトメニュー、検索、テーマ、ブランディング機能など、コミュニティサイトの構造を提供します。
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
-アクティビティストリーム関数は、[ アクティビティストリームコンポーネント ](/help/communities/activities.md)を持つページで、すべてのビュー（すべてのアクティビティ、ユーザーアクティビティ、その後）が選択されています。 開発者については、[Activity Stream Essentials](/help/communities/essentials-activities.md)も参照してください。
+アクティビティストリーム関数は、[&#x200B; アクティビティストリームコンポーネント &#x200B;](/help/communities/activities.md)を持つページで、すべてのビュー（すべてのアクティビティ、ユーザーアクティビティ、その後）が選択されています。 開発者については、[Activity Stream Essentials](/help/communities/essentials-activities.md)も参照してください。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
@@ -94,7 +94,7 @@ ht-degree: 2%
 
 ### ブログ機能 {#blog-function}
 
-ブログ関数は、タグ付け、ファイルのアップロード、フォロー、メンバーの自己編集、投票、モデレーション用に設定された[ ブログコンポーネント ](/help/communities/blog-feature.md)を持つページです。 開発者向け[Blog Essentials](/help/communities/blog-developer-basics.md)も参照してください。
+ブログ関数は、タグ付け、ファイルのアップロード、フォロー、メンバーの自己編集、投票、モデレーション用に設定された[&#x200B; ブログコンポーネント &#x200B;](/help/communities/blog-feature.md)を持つページです。 開発者向け[Blog Essentials](/help/communities/blog-developer-basics.md)も参照してください。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
@@ -104,7 +104,7 @@ ht-degree: 2%
 
 * **特権メンバーを許可**
 
-  選択した場合、ブログでは、[特権メンバーグループ ](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみが記事を作成できます。 選択しない場合は、すべてのコミュニティメンバーが作成できます。 デフォルトの選択は解除されます。
+  選択した場合、ブログでは、[特権メンバーグループ &#x200B;](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみが記事を作成できます。 選択しない場合は、すべてのコミュニティメンバーが作成できます。 デフォルトの選択は解除されます。
 
 * **ファイルのアップロードを許可**
 
@@ -116,11 +116,11 @@ ht-degree: 2%
 
 * **おすすめのコンテンツを許可**
 
-  選択すると、ブログは[おすすめコンテンツ ](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
+  選択すると、ブログは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
 
 ### カレンダー機能 {#calendar-function}
 
-カレンダー関数は、[ カレンダーコンポーネント ](/help/communities/calendar.md)がタグ付けを許可するように設定されたページです。 開発者については、[Calendar Essentials](/help/communities/calendar-basics-for-developers.md)も参照してください。
+カレンダー関数は、[&#x200B; カレンダーコンポーネント &#x200B;](/help/communities/calendar.md)がタグ付けを許可するように設定されたページです。 開発者については、[Calendar Essentials](/help/communities/calendar-basics-for-developers.md)も参照してください。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
@@ -134,7 +134,7 @@ ht-degree: 2%
 
 * **特権メンバーを許可**
 
-  選択した場合、ブログでは、[特権メンバーグループ ](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみが記事を作成できます。 選択しない場合は、すべてのコミュニティメンバーが作成できます。 デフォルトの選択は解除されます。
+  選択した場合、ブログでは、[特権メンバーグループ &#x200B;](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみが記事を作成できます。 選択しない場合は、すべてのコミュニティメンバーが作成できます。 デフォルトの選択は解除されます。
 
 * **ファイルのアップロードを許可**
 
@@ -146,25 +146,25 @@ ht-degree: 2%
 
 * **おすすめのコンテンツを許可**
 
-  選択すると、そのコンテンツは[おすすめコンテンツ ](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
+  選択すると、そのコンテンツは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
 
 ### おすすめのコンテンツ機能 {#featured-content-function}
 
-おすすめコンテンツ関数は、コメントの追加と削除を許可するように[おすすめコンテンツコンポーネント ](/help/communities/featured.md)が設定されたページです。
+おすすめコンテンツ関数は、コメントの追加と削除を許可するように[おすすめコンテンツコンポーネント &#x200B;](/help/communities/featured.md)が設定されたページです。
 
-コンテンツを機能させる機能は、コンポーネントごとに許可または禁止される場合があります（[ ブログ機能](#blog-function)、[ カレンダー機能](#calendar-function)、[ フォーラム機能](#forum-function)、[ アイデア出し機能](#ideation-function)、および[QnA機能](#qna-function)を参照）。
+コンテンツを機能させる機能は、コンポーネントごとに許可または禁止される場合があります（[&#x200B; ブログ機能](#blog-function)、[&#x200B; カレンダー機能](#calendar-function)、[&#x200B; フォーラム機能](#forum-function)、[&#x200B; アイデア出し機能](#ideation-function)、および[QnA機能](#qna-function)を参照）。
 
-テンプレートに追加する場合、設定は[ タイトルとURL設定](#title-and-url-settings)のみです。
+テンプレートに追加する場合、設定は[&#x200B; タイトルとURL設定](#title-and-url-settings)のみです。
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-ファイルライブラリ関数は、[ ファイルライブラリコンポーネント ](/help/communities/file-library.md)が設定されたページで、コメントの追加と削除が可能です。
+ファイルライブラリ関数は、[&#x200B; ファイルライブラリコンポーネント &#x200B;](/help/communities/file-library.md)が設定されたページで、コメントの追加と削除が可能です。
 
-テンプレートに追加する場合、設定は[ タイトルとURL設定](#title-and-url-settings)のみです。
+テンプレートに追加する場合、設定は[&#x200B; タイトルとURL設定](#title-and-url-settings)のみです。
 
 ### フォーラム機能 {#forum-function}
 
-フォーラム関数は、タグ付け、ファイルのアップロード、フォロー、メンバーの自己編集、投票、モデレーション用に設定された[ フォーラムコンポーネント ](/help/communities/forum.md)を持つページです。
+フォーラム関数は、タグ付け、ファイルのアップロード、フォロー、メンバーの自己編集、投票、モデレーション用に設定された[&#x200B; フォーラムコンポーネント &#x200B;](/help/communities/forum.md)を持つページです。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
@@ -180,7 +180,7 @@ ht-degree: 2%
 
 * **特権メンバーを許可**
 
-  選択した場合、フォーラムでは、[特権メンバーグループ ](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみがトピックを投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
+  選択した場合、フォーラムでは、[特権メンバーグループ &#x200B;](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみがトピックを投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
 
 * **ファイルのアップロードを許可**
 
@@ -192,7 +192,7 @@ ht-degree: 2%
 
 * **おすすめのコンテンツを許可**
 
-  選択すると、コンポーネントのコンテンツは[おすすめコンテンツ ](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
+  選択すると、コンポーネントのコンテンツは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
 
 ### Groups関数 {#groups-function}
 
@@ -200,15 +200,15 @@ ht-degree: 2%
 >
 >グループ関数&#x200B;*not*&#x200B;は、サイトの構造またはコミュニティ サイト テンプレート内の&#x200B;*firstまたはonly*&#x200B;関数である必要があります。
 >
->[ ページ関数](#page-function)などの他の関数を最初に含めてリストする必要があります。
+>[&#x200B; ページ関数](#page-function)などの他の関数を最初に含めてリストする必要があります。
 
 グループ関数は、パブリッシュ環境でコミュニティサイト内にサブコミュニティを作成する機能をコミュニティメンバーに提供します。
 
-グループ関数が[ コミュニティサイトテンプレート ](/help/communities/sites.md)に含まれている場合、[設定](/help/communities/sites-console.md#groupmanagement)に応じて、グループはパブリックまたはプライベートにでき、コミュニティグループが実際に作成されたときにテンプレートの選択肢を提供するように1つ以上のコミュニティグループテンプレートを設定できます（パブリッシュ環境からなど）。 [ コミュニティグループテンプレート ](/help/communities/tools-groups.md)は、フォーラムやカレンダーなど、グループページ用に作成されるコミュニティ機能を指定します。
+グループ関数が[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)に含まれている場合、[設定](/help/communities/sites-console.md#groupmanagement)に応じて、グループはパブリックまたはプライベートにでき、コミュニティグループが実際に作成されたときにテンプレートの選択肢を提供するように1つ以上のコミュニティグループテンプレートを設定できます（パブリッシュ環境からなど）。 [&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools-groups.md)は、フォーラムやカレンダーなど、グループページ用に作成されるコミュニティ機能を指定します。
 
-コミュニティグループを作成すると、新しいグループのメンバーグループが動的に作成され、メンバーを割り当てたり参加したりできます。 詳しくは、[ ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+コミュニティグループを作成すると、新しいグループのメンバーグループが動的に作成され、メンバーを割り当てたり参加したりできます。 詳しくは、[&#x200B; ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
 
-コミュニティ [機能パック 1](/help/communities/deploy-communities.md#latestfeaturepack)の時点では、コミュニティグループは[ コミュニティサイトのグループコンソール ](/help/communities/groups.md)を使用してオーサー環境で作成され、有効にするとパブリッシュ環境で作成される可能性があります。
+コミュニティ [機能パック 1](/help/communities/deploy-communities.md#latestfeaturepack)の時点では、コミュニティグループは[&#x200B; コミュニティサイトのグループコンソール &#x200B;](/help/communities/groups.md)を使用してオーサー環境で作成され、有効にするとパブリッシュ環境で作成される可能性があります。
 
 テンプレートに追加すると、次のダイアログが開きます。
 
@@ -222,7 +222,7 @@ ht-degree: 2%
 
 * **特権メンバーを許可**
 
-  選択した場合、フォーラムでは、[特権メンバーのセキュリティグループ ](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみがトピックを投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
+  選択した場合、フォーラムでは、[特権メンバーのセキュリティグループ &#x200B;](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみがトピックを投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
 
 * **公開の作成を許可**
 
@@ -231,7 +231,7 @@ ht-degree: 2%
 
 ### アイディエーション機能 {#ideation-function}
 
-アイデア出し関数は、1つの[ アイデア出しコンポーネント ](/help/communities/ideation-feature.md)を持つページです。
+アイデア出し関数は、1つの[&#x200B; アイデア出しコンポーネント &#x200B;](/help/communities/ideation-feature.md)を持つページです。
 
 テンプレートに追加すると、次のダイアログが開き、テンプレートのデフォルトのタイトル名とURL名、およびデフォルトの表示設定が指定されます。
 
@@ -241,7 +241,7 @@ ht-degree: 2%
 
 * **特権メンバーを許可**
 
-  選択した場合、フォーラムでは、[特権メンバーのセキュリティグループ ](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみがトピックを投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
+  選択した場合、フォーラムでは、[特権メンバーのセキュリティグループ &#x200B;](/help/communities/users.md#privileged-members-group)の選択を許可することによって、特権メンバーのみがトピックを投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
 
 * **ファイルのアップロードを許可**
 
@@ -253,17 +253,17 @@ ht-degree: 2%
 
 * **おすすめのコンテンツを許可**
 
-  選択すると、そのコンテンツは[おすすめコンテンツ ](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
+  選択すると、そのコンテンツは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
 
 ### リーダーボード機能 {#leaderboard-function}
 
-リーダーボード関数は、1つの[ リーダーボード コンポーネント ](/help/communities/enabling-leaderboard.md)を含むページです。
+リーダーボード関数は、1つの[&#x200B; リーダーボード コンポーネント &#x200B;](/help/communities/enabling-leaderboard.md)を含むページです。
 
-**メモ**: リーダーボード機能を含むコミュニティテンプレートからコミュニティサイトを作成した後&#x200B;*3}に、リーダーボードのコンポーネントをさらに設定する必要があります。*&#x200B;リーダーボードコンポーネントの[ ルール ](/help/communities/enabling-leaderboard.md#rules-tab)を指定します。このルールは、コミュニティサイトの[ スコアリングとバッジ ](/help/communities/implementing-scoring.md)の設定によって異なります。
+**メモ**: リーダーボード機能を含むコミュニティテンプレートからコミュニティサイトを作成した後&#x200B;*3&rbrace;に、リーダーボードのコンポーネントをさらに設定する必要があります。*&#x200B;リーダーボードコンポーネントの[&#x200B; ルール &#x200B;](/help/communities/enabling-leaderboard.md#rules-tab)を指定します。このルールは、コミュニティサイトの[&#x200B; スコアリングとバッジ &#x200B;](/help/communities/implementing-scoring.md)の設定によって異なります。
 
 テンプレートに追加すると、次のダイアログが開き、テンプレートのデフォルトのタイトル名とURL名、およびデフォルトの表示設定が指定されます。
 
-![ リーダーボードダイアログ ](assets/leaderboard-dialog.png)
+![&#x200B; リーダーボードダイアログ &#x200B;](assets/leaderboard-dialog.png)
 
 * [タイトルとURL設定](#title-and-url-settings)
 
@@ -284,13 +284,13 @@ ht-degree: 2%
 
 ### ページ機能 {#page-function}
 
-このページ機能は、コミュニティサイトの機能であるログイン、メニュー、通知、メッセージング、テーマ、ブランディングに接続される空白のページをコミュニティサイトに追加します。 コンテンツは、[標準のAEM オーサリングモード ](/help/sites-authoring/editing-content.md)を使用してページに追加されます。
+このページ機能は、コミュニティサイトの機能であるログイン、メニュー、通知、メッセージング、テーマ、ブランディングに接続される空白のページをコミュニティサイトに追加します。 コンテンツは、[標準のAEM オーサリングモード &#x200B;](/help/sites-authoring/editing-content.md)を使用してページに追加されます。
 
-テンプレートに追加する場合、設定は[ タイトルとURL設定](#title-and-url-settings)のみです。
+テンプレートに追加する場合、設定は[&#x200B; タイトルとURL設定](#title-and-url-settings)のみです。
 
 ### Q&amp;A 機能 {#qna-function}
 
-QnA関数は、[QnA コンポーネント ](/help/communities/working-with-qna.md)を持つページで、タグ付け、ファイルのアップロード、フォロー、自己編集、投票、モデレーションを行うためのメンバーが設定されています。
+QnA関数は、[QnA コンポーネント &#x200B;](/help/communities/working-with-qna.md)を持つページで、タグ付け、ファイルのアップロード、フォロー、自己編集、投票、モデレーションを行うためのメンバーが設定されています。
 
 テンプレートに追加すると、設定では特権メンバーに対する制限が許可されます。
 
@@ -304,7 +304,7 @@ QnA関数は、[QnA コンポーネント ](/help/communities/working-with-qna.m
 
 * **特権メンバーを許可**
 
-  選択した場合、QnA フォーラムでは、[特権メンバーグループ ](/help/communities/users.md#privileged-members-group)の選択を許可することで、特権メンバーのみが質問を投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
+  選択した場合、QnA フォーラムでは、[特権メンバーグループ &#x200B;](/help/communities/users.md#privileged-members-group)の選択を許可することで、特権メンバーのみが質問を投稿できます。 選択しない場合は、すべてのコミュニティメンバーが投稿できます。 デフォルトの選択は解除されます。
 
 * **ファイルのアップロードを許可**
 
@@ -316,7 +316,7 @@ QnA関数は、[QnA コンポーネント ](/help/communities/working-with-qna.m
 
 * **おすすめのコンテンツを許可**
 
-  選択すると、そのコンテンツは[おすすめコンテンツ ](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
+  選択すると、そのコンテンツは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別されます。 デフォルトが選択されています。
 
 ## コミュニティ機能を作成 {#create-community-function}
 
@@ -350,15 +350,15 @@ QnA関数は、[QnA コンポーネント ](/help/communities/working-with-qna.m
 
 コミュニティ機能は、ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ、ブランディング機能など、1つ以上のページを含むミニサイトです。 関数を作成したら、作成者の編集モードで[関数](#open-community-function)を開き、ページまたはコンポーネントの設定をカスタマイズできます。
 
-コミュニティ関数は[ ブループリント ](/help/sites-administering/msm-livecopy.md#creatingablueprint)の[ ライブコピー](/help/sites-administering/msm.md#live-copies)として実装されるので、関数を含む[ コミュニティサイトテンプレート ](/help/communities/sites.md)または[ コミュニティグループテンプレート ](/help/communities/tools-groups.md)から作成されたすべてのコミュニティサイトページに影響を与える関数に変更をロールアウトできます。 親ブループリントからページの関連付けを解除して、ページレベルの変更を行うこともできます。
+コミュニティ関数は[&#x200B; ブループリント &#x200B;](/help/sites-administering/msm-livecopy.md#creatingablueprint)の[&#x200B; ライブコピー](/help/sites-administering/msm.md#live-copies)として実装されるので、関数を含む[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)または[&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools-groups.md)から作成されたすべてのコミュニティサイトページに影響を与える関数に変更をロールアウトできます。 親ブループリントからページの関連付けを解除して、ページレベルの変更を行うこともできます。
 
-[ マルチサイトマネージャー](/help/sites-administering/msm.md)も参照してください。
+[&#x200B; マルチサイトマネージャー](/help/sites-administering/msm.md)も参照してください。
 
 ### サムネイル {#thumbnail}
 
 ![funtion-thumbnail](assets/funtion-thumbnail.png)
 
-サムネールパネルで、画像をアップロードして[ コミュニティ機能コンソール ](#community-functions-console)に表示することができます。
+サムネールパネルで、画像をアップロードして[&#x200B; コミュニティ機能コンソール &#x200B;](#community-functions-console)に表示することができます。
 
 ## コミュニティ機能を開く {#open-community-function}
 
@@ -368,16 +368,16 @@ QnA関数は、[QnA コンポーネント ](/help/communities/working-with-qna.m
 
 ### コンポーネントの設定 {#configuring-components}
 
-コミュニティ関数は、AEM ブループリントのライブコピーとして実装され、その詳細は[ マルチサイトマネージャー](/help/sites-administering/msm.md)に記載されています。
+コミュニティ関数は、AEM ブループリントのライブコピーとして実装され、その詳細は[&#x200B; マルチサイトマネージャー](/help/sites-administering/msm.md)に記載されています。
 
 ページコンテンツの作成だけでなく、コンポーネントの設定も可能です。
 
 作成したコミュニティサイトのページでコンポーネントを設定する場合は、コンポーネントを設定するために[継承](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)をキャンセルする必要がある場合があります。 設定が完了したら、継承を再度確立する必要があります。
 
-設定の詳細については、作成者の[ コミュニティコンポーネント ](/help/communities/author-communities.md)を参照してください。
+設定の詳細については、作成者の[&#x200B; コミュニティコンポーネント &#x200B;](/help/communities/author-communities.md)を参照してください。
 
 ## コミュニティ機能を編集 {#edit-community-function}
 
 ![edit-function](assets/edit-function.png)
 
-`Edit Community Function` アイコンを選択して、[ コミュニティ関数の作成](#create-community-function)と同じパネルを使用して、関数のプロパティを編集します。これには、関数の有効化または無効化が含まれます。
+`Edit Community Function` アイコンを選択して、[&#x200B; コミュニティ関数の作成](#create-community-function)と同じパネルを使用して、関数のプロパティを編集します。これには、関数の有効化または無効化が含まれます。
