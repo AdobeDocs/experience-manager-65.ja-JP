@@ -1,6 +1,6 @@
 ---
 title: サンプルページの作成
-description: シンプルなコミュニティサイトの作成に役立つ、ページ関数のみを含んだコミュニティサイトテンプレートを作成する方法を説明します。
+description: 単純なコミュニティサイトの作成に役立つページ機能のみを含むコミュニティサイトテンプレートを作成する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
@@ -11,83 +11,81 @@ feature: Communities
 role: Developer
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '451'
 ht-degree: 3%
-
 ---
-
 # サンプルページの作成 {#create-a-sample-page}
 
-AEM 6.1 Communities の場合、サンプルページを作成する最も簡単な方法は、Page 関数だけで構成されるシンプルなコミュニティサイトを作成することです。
+AEM 6.1 Communitiesでは、サンプルページを作成する最も簡単な方法は、Page関数だけで構成されるシンプルなコミュニティサイトを作成することです。
 
-これには parsys コンポーネントが含まれるので、このコンポーネントを [&#x200B; オーサリング用に有効にする &#x200B;](basics.md#accessing-communities-components) ことができます。
+これにはparsys コンポーネントが含まれているため、[ オーサリング用のコンポーネントを有効にできます](basics.md#accessing-communities-components)。
 
-サンプルコンポーネントを使用した探索のもう 1 つのオプションは、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) に記載されている機能を使用することです。
+サンプルコンポーネントを使用して調査するもうひとつの方法は、[ コミュニティコンポーネントガイド ](components-guide.md)で示されている機能を使用することです。
 
 ## コミュニティサイトの作成 {#create-a-community-site}
 
-これは、[AEM Communitiesの基本を学ぶ &#x200B;](getting-started.md) で説明されているサイトの作成に似ています。
+これは、[AEM Communitiesの概要](getting-started.md)に記載されているサイトを作成する場合と同様です。
 
-主な違いは、このチュートリアルでは、単純なコミュニティサイトを作成するための [&#x200B; ページ関数 &#x200B;](functions.md#page-function) のみを含むコミュニティサイトテンプレートを作成する点です。 他の機能（すべてのコミュニティサイトに不可欠な有線機能を除く）は含まれません。
+大きな違いは、このチュートリアルでは、[ ページ関数](functions.md#page-function)のみを含むコミュニティサイトテンプレートを作成して、シンプルなコミュニティサイトを作成することです。 これは他の機能（すべてのコミュニティサイトに基本的な事前有線機能を除く）を無料で提供します。
 
-### 新しいサイトテンプレートの作成 {#create-new-site-template}
+### 新しいサイトテンプレートを作成 {#create-new-site-template}
 
-開始するには、シンプルな [&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md) を作成します。
+開始するには、シンプルな[ コミュニティサイトテンプレート ](sites.md)を作成します。
 
-オーサーインスタンスのグローバルナビゲーションで、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL サイトテンプレート]** を選択します。
+オーサーインスタンスのグローバルナビゲーションから、**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL サイトテンプレート]**&#x200B;を選択します。
 
 ![create-site-template](assets/create-site-template1.png)
 
 * `Create button` を選択します。
 * 基本情報
 
-   * `Name`：単一ページテンプレート
-   * `Description`：単一の Page 関数で構成されるテンプレート。
-   * `Enabled` を選択します。
+  * `Name`：単一ページテンプレート
+  * `Description`：単一のページ関数で構成されるテンプレート。
+  * `Enabled` を選択します。
 
 ![site-template-editor](assets/site-template-editor.png)
 
 * 構造
 
-   * `Page` 関数をテンプレートビルダーにドラッグ
-   * 「構成機能の詳細」で、次のように入力します
+  * `Page`関数をテンプレートビルダーにドラッグします
+  * 「構成機能の詳細」に、次のように入力します。
 
-      * `Title`：単一ページ
-      * `URL`: ページ
+    * `Title`：単一ページ
+    * `URL`: ページ
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 
-* 設定する **`Save`** を選択します
-* サイトテンプレートの **`Save`** を選択
+* 設定の&#x200B;**`Save`**&#x200B;を選択してください
+* サイトテンプレートの&#x200B;**`Save`**&#x200B;を選択
 
 ### 新しいコミュニティサイトを作成 {#create-new-community-site}
 
 次に、シンプルなサイトテンプレートに基づいてコミュニティサイトを作成します。
 
-サイトテンプレートを作成したら、グローバルナビゲーションから **[!UICONTROL Communities/サイト]** を選択します。
+サイトテンプレートを作成したら、グローバルナビゲーションから&#x200B;**[!UICONTROL コミュニティ/サイト]**&#x200B;を選択します。
 
 ![create-community-site](assets/create-community-site1.png)
 
-* アイコン **`Create`** 選択
+* **`Create`**&#x200B;を選択アイコン
 
 * ステップ `1 - Site Template`
 
-   * `Title`：シンプルなコミュニティサイト
-   * `Description`：実験のための単一ページで構成されるコミュニティサイト。
-   * `Community Site Root: (leave blank)`
-   * `Community Site Base Language: English`
-   * `Name`: サンプル
+  * `Title`: シンプルなコミュニティ サイト
+  * `Description`：実験用の単一ページで構成されるコミュニティサイト。
+  * `Community Site Root: (leave blank)`
+  * `Community Site Base Language: English`
+  * `Name`: サンプル
 
-      * url = http://localhost:4502/content/sites/sample
+    * url = http://localhost:4502/content/sites/sample
 
-      * `Template`: `Single Page Template` を選択
+    * `Template`: `Single Page Template`を選択
 
-     ![create-community-site-template](assets/create-community-site-template.png)
+    ![create-community-site-template](assets/create-community-site-template.png)
 
 * `Next` を選択します。
 * ステップ `2 - Design`
 
-   * 任意のデザインを選択
+  * デザインを選択
 
 * `Next` を選択します。
 * `Next` を選択します。
@@ -98,24 +96,24 @@ AEM 6.1 Communities の場合、サンプルページを作成する最も簡単
 
   ![create-community-site](assets/create-community-site.png)
 
-## サイトのPublish {#publish-the-site}
+## サイトを公開 {#publish-the-site}
 
 ![publish-site](assets/publish-site.png)
 
-[&#x200B; コミュニティサイトコンソール &#x200B;](sites-console.md) から、公開アイコンを選択して、サイトを公開します（デフォルトではhttp://localhost:4503）。
+[ コミュニティサイトコンソール ](sites-console.md)から、公開アイコンを選択してサイトを公開します。デフォルトではhttp://localhost:4503です。
 
-## オーサー環境で編集モードでサイトを開きます {#open-the-site-on-author-in-edit-mode}
+## 編集モードで作成者のサイトを開く {#open-the-site-on-author-in-edit-mode}
 
 ![open-site](assets/open-site.png)
 
-「サイトを開く」アイコンを選択して、編集モードでサイトを表示します。
+サイトを開くアイコンを選択して、編集モードでサイトを表示します。
 
-URL は [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html) です
+URLは[http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)です
 
 ![author-site](assets/author-site.png)
 
-シンプルなホームページでは、コミュニティの機能やテンプレートをあらかじめ組み込んでいるものを確認したり、コミュニティコンポーネントを追加したり設定したりすることができます。
+シンプルなホームページでは、コミュニティ機能やテンプレートを通じて事前に接続されているものを確認したり、コミュニティコンポーネントの追加や設定を操作したりすることができます。
 
-## Publishでサイトを表示 {#view-site-on-publish}
+## 公開時にサイトを表示 {#view-site-on-publish}
 
-ページを公開したら、[&#x200B; パブリッシュインスタンス &#x200B;](http://localhost:4503/content/sites/sample/en.html) 上のページを開いて、匿名サイト訪問者、ログインメンバー、管理者などの機能を試します。 オーサー環境に表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。
+ページを公開した後、[ パブリッシュインスタンス ](http://localhost:4503/content/sites/sample/en.html)でページを開き、匿名のサイト訪問者、サインインメンバー、または管理者として機能を試します。 オーサー環境で表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。
