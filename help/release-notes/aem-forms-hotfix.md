@@ -14,7 +14,7 @@ ht-degree: 68%
 
 この記事では、既知の問題に対処し、システムの安定性を改善して、AEM Forms の全体的なパフォーマンスを向上させるために実装された重要な修正について説明します。
 
-この記事は、AEM 6.5 Forms（LTS以外）に適用されます。 AEM 6.5 LTS デプロイメントについては、[Adobe Experience Manager Forms 6.5 LTS ホットフィックス &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/adobe-experience-manager-forms-65-lts-hotfixes)を参照してください。
+この記事は、AEM 6.5 Forms（LTS以外）に適用されます。 AEM 6.5 LTS デプロイメントについては、[Adobe Experience Manager Forms 6.5 LTS ホットフィックス &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/forms/adobe-experience-manager-forms-65-lts-hotfixes)を参照してください。
 
 >[!NOTE]
 >
