@@ -7,11 +7,9 @@ feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
-source-wordcount: '1301'
-ht-degree: 100%
-
+source-wordcount: '1352'
+ht-degree: 99%
 ---
-
 # AEM Delivery API を使用してコンテンツにアクセスする方法 {#access-your-content}
 
 [AEM ヘッドレスデベロッパージャーニー](overview.md)のこのパートでは、GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスし、アプリにコンテンツをフィードする方法（ヘッドレス配信）について説明します。
@@ -27,19 +25,19 @@ AEM ヘッドレスジャーニーの前のドキュメント、[コンテンツ
 
 この記事は、これらの基本事項に基づいているので、AEM GraphQL API を使用して AEM の既存のヘッドレスコンテンツにアクセスする方法を理解できます。
 
-* **対象読者**：初心者
+* **オーディエンス**：初心者
 * **目的**：AEM GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスする方法を説明します。具体的な内容は次のとおりです。
-   * GraphQL と AEM GraphQL API の概要を説明します。
-   * AEM GraphQL API の詳細を説明します。
-   * いくつかのサンプルクエリを通じて実際の動作を確認します。
+  * GraphQL と AEM GraphQL API の概要を説明します。
+  * AEM GraphQL API の詳細を説明します。
+  * いくつかのサンプルクエリを通じて実際の動作を確認します。
 
-## コンテンツへのアクセス  {#so-youd-like-to-access-your-content}
+## コンテンツへのアクセス {#so-youd-like-to-access-your-content}
 
-（コンテンツフラグメントで）整然と構造化されたコンテンツがすべて用意されていて、それらが新しいアプリにフィードされるのを待つばかりだとします。問題は、どうやってコンテンツにアクセスするかです。
+（コンテンツフラグメントで）整然と構造化されたコンテンツがすべて用意されていて、それらが新しいアプリにフィードされるのを待つばかりだとします。 問題は、どうやってコンテンツにアクセスするかです。
 
 必要なのは、特定のコンテンツをターゲットにし、必要なものを選択してさらに処理するためにアプリに返す方法です。
 
-Adobe Experience Manager（AEM） 使用すると、AEM GraphQL API を使用してコンテンツフラグメントに選択的にアクセスし、必要なコンテンツのみを返すことができます。つまり、アプリケーションで使用する構造化コンテンツのヘッドレス配信を実現できることになります。
+Adobe Experience Manager（AEM） 使用すると、AEM GraphQL API を使用してコンテンツフラグメントに選択的にアクセスし、必要なコンテンツのみを返すことができます。 つまり、アプリケーションで使用する構造化コンテンツのヘッドレス配信を実現できることになります。
 
 >[!NOTE]
 >
@@ -52,7 +50,7 @@ GraphQL は、次の機能を提供するオープンソース仕様です。
 * 構造化オブジェクトから特定のコンテンツを選択できるクエリ言語
 * 構造化コンテンツに対してこれらのクエリを実行するためのランタイム
 
-GraphQL は、*厳密に*&#x200B;型指定された API です。つまり、*すべての*&#x200B;コンテンツが型別に明確に構造化および編成されている必要があります。その結果、アクセスする対象と方法を GraphQL が&#x200B;*認識*&#x200B;できるようになります。データフィールドは、コンテンツオブジェクトの構造を定義する GraphQL スキーマ内で定義されます。
+GraphQL は、*厳密に*&#x200B;型指定された API です。 つまり、*すべての*&#x200B;コンテンツが型別に明確に構造化および編成されている必要があります。その結果、アクセスする対象と方法を GraphQL が&#x200B;*認識*&#x200B;できるようになります。 データフィールドは、コンテンツオブジェクトの構造を定義する GraphQL スキーマ内で定義されます。
 
 次に、GraphQL クエリに応答するパスを GraphQL エンドポイントが提供します。
 
@@ -84,17 +82,17 @@ GraphQL is used in various locations in AEM; for example:
 
 AEM GraphQL API は、標準の GraphQL API 仕様に基づいたカスタマイズバージョンで、コンテンツフラグメントに対して（複雑な）クエリを実行できるように特別に設定されています。
 
-コンテンツは、コンテンツフラグメントモデルに従って構造化されているので、コンテンツフラグメントが使用されます。これは GraphQL の基本要件を満たしています。
+コンテンツは、コンテンツフラグメントモデルに従って構造化されているので、コンテンツフラグメントが使用されます。 これは GraphQL の基本要件を満たしています。
 
 * コンテンツフラグメントモデルは、1 つ以上のフィールドで構成されます。
-   * 各フィールドは、データタイプに従って定義されます。
+  * 各フィールドは、データタイプに従って定義されます。
 * コンテンツフラグメントモデルは、対応する AEM GraphQL スキーマの生成に使用されます。
 
 AEM（およびコンテンツ）の GraphQL に実際にアクセスするには、エンドポイントを使用してアクセスパスを指定します。
 
 AEM GraphQL API を使用して返されたコンテンツは、アプリケーションで使用できます。
 
-クエリを直接入力およびテストできるように、標準の GraphQL インターフェイスの実装も AEM GraphQL で使用できます（これは AEM と共にインストールできます）。構文のハイライト表示、オートコンプリート、自動候補表示などの機能と共に、履歴およびオンラインドキュメントが用意されています。
+クエリを直接入力およびテストできるように、標準の GraphQL インターフェイスの実装も AEM GraphQL で使用できます（これは AEM と共にインストールできます）。 構文のハイライト表示、オートコンプリート、自動候補表示などの機能と共に、履歴およびオンラインドキュメントが用意されています。
 
 >[!NOTE]
 >
@@ -127,7 +125,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 コンテンツフラグメントモデルは、
 
 * **有効**&#x200B;にされると、スキーマの生成に使用されます。
-* GraphQL に必要なデータタイプとフィールドを提供します。アプリケーションが、可能なことだけを要求して期待するものを受け取るようにします。
+* GraphQL に必要なデータタイプとフィールドを提供します。 アプリケーションが、可能なことだけを要求して期待するものを受け取るようにします。
 * データタイプ&#x200B;**フラグメント参照**&#x200B;は、別のコンテンツフラグメントを参照するためにモデル内で使用できるので、構造レベルを追加します。
 
 ### フラグメント参照 {#fragment-references}
@@ -138,7 +136,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 * 特定のコンテンツフラグメントモデルに依存する別のフラグメントを参照します。
 * 構造化データを作成し、取得できます。
 
-   * **マルチフィード**&#x200B;として定義した場合、複数のサブフラグメントをプライムフラグメントで参照（取得）できます。
+  * **マルチフィード**&#x200B;として定義した場合、複数のサブフラグメントをプライムフラグメントで参照（取得）できます。
 
 ### JSON プレビュー {#json-preview}
 
@@ -245,23 +243,23 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 コンテンツに関するクエリを開始する前に、次の操作が必要です。
 
 * エンドポイントの有効化
-   * ツール／アセット／GraphQL の使用
-   * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+  * ツール／アセット／GraphQL の使用
+  * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * GraphiQL へのアクセス（必要な場合）
-   * [AEM GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
+  * [AEM GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### サンプル構造 {#sample-structure}
 
 AEM GraphQL API をクエリで実際に使用するにあたって、次のような非常に基本的な 2 つのコンテンツフラグメントモデル構造を例として使用できます。
 
 * 会社
-   * 名前 - テキスト
-   * CEO（人）- フラグメント参照
-   * 従業員（人）- フラグメント参照（複数可）
+  * 名前 - テキスト
+  * CEO（人）- フラグメント参照
+  * 従業員（人）- フラグメント参照（複数可）
 * 人
-   * 名前 - テキスト
-   * 名前（名）- テキスト
+  * 名前 - テキスト
+  * 名前（名）- テキスト
 
 ご覧のように、「CEO」フィールドと「従業員」フィールドは、「人」フラグメントを参照しています。
 
@@ -280,7 +278,7 @@ AEM GraphQL API をクエリで実際に使用するにあたって、次のよ�
 
 ### クエリの概要 {#getting-Started-with-queries}
 
-わかりやすいクエリとしては、「会社」スキーマ内のすべてのエントリの名前を返す場合があります。以下では、すべての会社名のリストをリクエストします。
+わかりやすいクエリとしては、「会社」スキーマ内のすべてのエントリの名前を返す場合があります。 以下では、すべての会社名のリストをリクエストします。
 
 ```xml
 query {
@@ -292,7 +290,7 @@ query {
 }
 ```
 
-もう少し複雑なクエリとしては、「Jobs」という名前を持たないすべての人を選択する場合があります。以下では、「Jobs」という名前を持たないすべての人を抜き出します。これは EQUALS_NOT 演算子で実現します（演算子は他にも多数あります）。
+もう少し複雑なクエリとしては、「Jobs」という名前を持たないすべての人を選択する場合があります。 以下では、「Jobs」という名前を持たないすべての人を抜き出します。 これは EQUALS_NOT 演算子で実現します（演算子は他にも多数あります）。
 
 ```xml
 query {
@@ -314,7 +312,7 @@ query {
 }
 ```
 
-また、もっと複雑なクエリを作成することもできます。例えば、「Smith」という名前の従業員が 1 人以上いるすべての会社をクエリする場合です。以下のクエリでは、「Smith」という名前の人を抜き出し、ネストされたフラグメントから取得した情報を返します。
+また、もっと複雑なクエリを作成することもできます。 例えば、「Smith」という名前の従業員が 1 人以上いるすべての会社をクエリする場合です。 以下のクエリでは、「Smith」という名前の人を抜き出し、ネストされたフラグメントから取得した情報を返します。
 
 ```xml
 query {
@@ -354,29 +352,29 @@ AEM GraphQL API の使用と必要な要素の設定について詳しくは、�
 * サンプルコンテンツフラグメント構造
 * AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ
 
-## 次の手順 {#whats-next}
+## 次のステップ {#whats-next}
 
 これで、AEM GraphQL API を使用してヘッドレスコンテンツにアクセスしクエリを実行する方法について説明します。次は、[REST API を使用してコンテンツフラグメントのコンテンツにアクセスしコンテンツを更新する方法](update-your-content.md)について説明します。
 
 ## その他のリソース {#additional-resources}
 
 * [GraphQL.org](https://graphql.org)
-   * [スキーマ](https://graphql.org/learn/schema/)
-   * [変数](https://graphql.org/learn/queries/#variables)
-   * [GraphQL Java ライブラリ](https://graphql.org/code/#java)
+  * [スキーマ](https://graphql.org/learn/schema/)
+  * [変数](https://graphql.org/learn/queries/#variables)
+  * [GraphQL Java ライブラリ](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
 * [AEM での GraphQL の使用方法](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
-   * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
-   * [AEM GraphiQL インターフェイスのインストール](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
+  * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+  * [AEM GraphiQL インターフェイスのインストール](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
 * [サンプルコンテンツフラグメント構造](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
 * [AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
-   * [サンプルクエリ - 1 つの特定の都市フラグメント](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
+  * [サンプルクエリ - 1 つの特定の都市フラグメント](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+  * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+  * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [設定ブラウザーでコンテンツフラグメント機能を有効にする](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
-   * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
-   * [JSON 出力](/help/assets/content-fragments/content-fragments-json-preview.md)
+  * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
+  * [JSON 出力](/help/assets/content-fragments/content-fragments-json-preview.md)
 * [クロスオリジンリソース共有（CORS）について](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja#understand-cross-origin-resource-sharing-(cors))
 * [AEM ヘッドレス入門 - GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja) - AEM ヘッドレス機能（コンテンツモデリングや GraphQL など）の使用の概要を説明する短いビデオチュートリアルシリーズです。
 
