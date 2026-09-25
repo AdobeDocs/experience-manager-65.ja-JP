@@ -11,11 +11,9 @@ feature: Developing
 role: Developer
 source-git-commit: bf99ad3710638ec823d3b17967e1c750d0405c77
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 100%
-
+source-wordcount: '825'
+ht-degree: 99%
 ---
-
 # We.Retail 参照実装{#we-retail-reference-implementation}
 
 ## 概要 {#introduction}
@@ -44,11 +42,11 @@ We.Retail は、AEM の標準的な参照実装として、AEM の最も強力�
 
 ## はじめに {#getting-started}
 
-We.Retail は AEM のサンプルコンテンツとして提供されています。使用するには、[通常どおりに AEM を起動する](/help/sites-deploying/deploy.md#getting-started)だけです。このとき、サンプルコンテンツが無効になっていないことを確認してください。
+We.Retail は AEM のサンプルコンテンツとして提供されています。 使用するには、[通常どおりに AEM を起動する](/help/sites-deploying/deploy.md#getting-started)だけです。このとき、サンプルコンテンツが無効になっていないことを確認してください。
 
 >[!CAUTION]
 >
->We.Retail は、実稼動インスタンスにインストールしないでください。実稼動インスタンスは、`nosamplecontent` [実行モード](/help/sites-deploying/configure-runmodes.md)で開始する必要があります。
+>We.Retail は、実稼動インスタンスにインストールしないでください。 実稼動インスタンスは、`nosamplecontent` [実行モード](/help/sites-deploying/configure-runmodes.md)で開始する必要があります。
 
 >[!CAUTION]
 >
@@ -56,7 +54,7 @@ We.Retail は AEM のサンプルコンテンツとして提供されていま�
 
 ### 最新バージョン {#latest-version}
 
-We.Retail は AEM リリースと共に配布されますが、リリース後にコンテンツおよびその機能が更新される可能性があります。そのため、[GitHub から最新リリースをダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)した後、AEM インスタンスにパッケージとして[アップロード](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)して[インストール](/help/sites-administering/package-manager.md#installing-packages)することができます。
+We.Retail は AEM リリースと共に配布されますが、リリース後にコンテンツおよびその機能が更新される可能性があります。 そのため、[GitHub から最新リリースをダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)した後、AEM インスタンスにパッケージとして[アップロード](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)して[インストール](/help/sites-administering/package-manager.md#installing-packages)することができます。
 
 ### 最初の手順 {#first-steps}
 
@@ -67,7 +65,7 @@ We.Retail は AEM リリースと共に配布されますが、リリース後�
 
 ## We.Retail および Geometrixx {#we-retail-geometrixx}
 
-以前のバージョンの AEM では、サンプルコンテンツとして Geometrixx とその多くの実例が提供されてきました。バージョン 6.3 以降では、We.Retail が AEM で提供されるサンプルコンテンツになり、新しい標準の参照実装となります。
+以前のバージョンの AEM では、サンプルコンテンツとして Geometrixx とその多くの実例が提供されてきました。 バージョン 6.3 以降では、We.Retail が AEM で提供されるサンプルコンテンツになり、新しい標準の参照実装となります。
 
 We.Retail には、最新の AEM テクノロジーが搭載されています。製品の最新機能を見ると、技術的な堅牢性や、柔軟性、スケーラビリティの向上が明らかです。
 
@@ -86,7 +84,7 @@ We.Retail には、最新の AEM テクノロジーが搭載されています�
 | レスポンシブレイアウト | すべてのページ | Geometrixx Media のみ |
 | 編集可能なテンプレート | すべてのページ | 使用不可 |
 | HTL | すべてのコンポーネント | 限定的 |
-| ターゲット設定 | すべてのページ | Geometrixx Outdoors のみ |
+| ターゲティング | すべてのページ | Geometrixx Outdoors のみ |
 | Screens | 使用可 | 使用不可 |
 | モバイル | 使用不可 | 使用可 |
 | 原稿 | 使用不可 | 使用可 |
@@ -107,7 +105,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります。
 
-* [GitHub の aem-sample-we-retail プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
+* [GitHubでaem-sample-we-retail プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * プロジェクトを [ZIP ファイル](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)としてダウンロードします
 
 最新のリリースは、インストール可能なパッケージとして[直接ダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/tag/we.retail.reactor-4.0.0)することもできます。

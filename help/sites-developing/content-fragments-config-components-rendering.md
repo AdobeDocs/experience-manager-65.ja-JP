@@ -1,9 +1,13 @@
 ---
 title: レンダリングコンポーネントのコンテンツフラグメントの設定
+
 description: レンダリングコンポーネントのコンテンツフラグメントの設定
+
+
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
+
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
 solution: Experience Manager, Experience Manager Sites
@@ -11,14 +15,12 @@ feature: Content Fragments
 role: Developer
 source-git-commit: 2e141ab04be33fea09ed7f6608dc9dcfaf2e50f1
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '475'
 ht-degree: 100%
-
 ---
-
 # レンダリングコンポーネントのコンテンツフラグメントの設定{#content-fragments-configuring-components-for-rendering}
 
-コンテンツフラグメントのレンダリングには、いくつかの[アドバンスドサービス](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration)があります。これらのサービスを使用するには、そのようなコンポーネントのリソースタイプが、コンテンツフラグメントフレームワークに存在を認識させる必要があります。
+コンテンツフラグメントのレンダリングには、いくつかの[アドバンスドサービス](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration)があります。 これらのサービスを使用するには、そのようなコンポーネントのリソースタイプが、コンテンツフラグメントフレームワークに存在を認識させる必要があります。
 
 これは、[OSGi サービス - コンテンツフラグメントコンポーネントの設定](#osgi-service-content-fragment-component-configuration)を設定しておこないます。
 
@@ -32,7 +34,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->アドバンスドサービスを使用することなく、コンテンツフラグメント API のみを使用するコンポーネントを新規に作成できます。ただし、この場合は、適切な処理をおこなうようにコンポーネントを開発する必要がありますので、
+>アドバンスドサービスを使用することなく、コンテンツフラグメント API のみを使用するコンポーネントを新規に作成できます。 ただし、この場合は、適切な処理をおこなうようにコンポーネントを開発する必要がありますので、
 >
 >そのため、コアコンポーネントを使用することをお勧めします。
 

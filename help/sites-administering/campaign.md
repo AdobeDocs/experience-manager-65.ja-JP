@@ -1,21 +1,21 @@
 ---
 title: AEM 6.5 と Adobe Campaign の統合
 description: Adobe Campaign との統合に対する AEM 6.5 のサポートについて説明します。
+
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
+
 exl-id: ab41e540-1d43-4fc2-99d4-621ff2290e77
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 100%
-
+source-wordcount: '346'
+ht-degree: 99%
 ---
-
 
 # AEM 6.5 と Adobe Campaign の統合{#integrating-with-adobe-campaign}
 
@@ -31,7 +31,7 @@ Adobe Campaign は、オンラインおよびオフラインのあらゆるチ�
 
 ## Adobe Campaign Classic との統合 {#acc}
 
-Adobe Campaign Classic（ACC）には複数のバージョンがあります。AEM との統合のサポートは、実装した ACC のバージョンと、AEM が Adobe Manage Services（AMS）のオンプレミスにインストールされているかどうかによって異なります。
+Adobe Campaign Classic（ACC）には複数のバージョンがあります。 AEM との統合のサポートは、実装した ACC のバージョンと、AEM が Adobe Manage Services（AMS）のオンプレミスにインストールされているかどうかによって異なります。
 
 | ACC バージョン | AEM 6.5 オンプレミス<br>との統合 | AEM 6.5 AMS<br>との統合 |
 |---|---|---|

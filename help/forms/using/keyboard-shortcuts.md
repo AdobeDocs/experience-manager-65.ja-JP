@@ -10,14 +10,12 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 100%
-
+source-wordcount: '1208'
+ht-degree: 94%
 ---
-
 # AEM Forms のキーボードショートカット {#aem-forms-keyboard-shortcuts}
 
-<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 この記事では、Windows オペレーティングシステムと Macintosh オペレーティングシステムのアダプティブフォームエディター、テーマエディター、コンテンツブラウザーおよび Correspondence Management で使用できるキーボードショートカットについて説明します。
 
@@ -34,7 +32,7 @@ ht-degree: 100%
 | 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
 | 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&amp;ast; |
-| 選択したコンポーネントを切り取る（カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl+X&amp;ast; |
+| 選択したコンポーネントを切り取る （カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl-X&amp;ast; |
 | コンポーネントをペーストする | Ctrl + V | Ctrl + V |
 | 選択したコンポーネントを削除する | Ctrl + Del | Ctrl+Del&amp;ast; |
 | 選択したコンポーネントを削除する | Ctrl + Backspace キー | Ctrl+Backspace&amp;ast; |
@@ -44,7 +42,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
+>「&amp;ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
 
 >[!NOTE]
 >
@@ -66,7 +64,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
+>「&amp;ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 
@@ -84,7 +82,7 @@ ht-degree: 100%
 
 ## Correspondence Management {#correspondence-management}
 
-この説では、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
+この説では、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。 これらのショートカットキーを使用して、以下の操作を行うことができます。
 
 * [テキスト](texts-interactive-communications.md)アセットの作成と編集
 * [通信の作成時](/help/forms/using/create-correspondence.md)に関連する編集アイコン（![edittextmodule](assets/edittextmodule.png)）をタップしてからテキストモジュールを編集する。
