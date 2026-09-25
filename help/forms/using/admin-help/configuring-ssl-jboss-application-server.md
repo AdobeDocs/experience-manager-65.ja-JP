@@ -11,14 +11,12 @@ feature: Document Security
 role: User, Developer
 source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '908'
 ht-degree: 100%
-
 ---
-
 # JBoss Application Server に対する SSL の設定 {#configuring-ssl-for-jboss-application-server}
 
-JBoss Application Server で SSL を設定するには、認証用の SSL 秘密鍵証明書が必要です。資格情報は、Java keytool を使用して作成するか、認証局（CA）からリクエストして読み込むことができます。その後、JBoss で SSL を有効にする必要があります。
+JBoss Application Server で SSL を設定するには、認証用の SSL 秘密鍵証明書が必要です。 資格情報は、Java keytool を使用して作成するか、認証局（CA）からリクエストして読み込むことができます。 その後、JBoss で SSL を有効にする必要があります。
 
 keytool を使用すると、キーストアの作成に必要なすべての情報を 1 つのコマンドで指定できます。
 
@@ -35,9 +33,9 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    >[!NOTE]
    >
-   >`[JAVA_HOME]` は JDK がインストールされているディレクトリに置き換え、斜体のテキストは自分の環境に対応する値に置き換えます。「Host Name」は、アプリケーションサーバーの完全修飾ドメイン名です。
+   >`[JAVA_HOME]` は JDK がインストールされているディレクトリに置き換え、斜体のテキストは自分の環境に対応する値に置き換えます。 「Host Name」は、アプリケーションサーバーの完全修飾ドメイン名です。
 
-1. パスワードの入力を求められたら、`keystore_password` を入力します。キーストアおよびキーのパスワードは、同じである必要があります。
+1. パスワードの入力を求められたら、`keystore_password` を入力します。 キーストアおよびキーのパスワードは、同じである必要があります。
 
    >[!NOTE]
    >
@@ -78,9 +76,9 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    `keytool -import -alias "AEMForms Cert" -file`*AEMForms_cert* `.cer -keystore`*JAVA_HOME* `\jre\lib\security\cacerts`
 
-1. パスワードとして`changeit`を入力します。Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
-1. `Trust this certificate? [no]` の入力を求められた場合、`yes` と入力します。「証明書がキーストアに追加されました」という確認メッセージが表示されます。
-1. Workbench から SSL 経由で接続している場合は、Workbench コンピューターに証明書をインストールします。
+1. パスワードとして`changeit`を入力します。 Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
+1. `Trust this certificate? [no]` の入力を求められた場合、`yes` と入力します。 「証明書がキーストアに追加されました」という確認メッセージが表示されます。
+1. ワークベンチから SSL 経由で接続している場合は、ワークベンチコンピューターに証明書をインストールします。
 1. テキストエディターで、次のファイルを開いて編集します。
 
    * シングルサーバー - `[appserver root]`¥standalone¥configuration¥lc_&lt;dbname/turnkey>.xml
@@ -89,7 +87,7 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    * サーバークラスター - `[appserver root]`¥domain¥configuration¥domain_&lt;dbname>.xml
 
-1. &#x200B;
+1. 
    * **シングルサーバーの場合、** lc_&lt;dbaname/tunkey>.xml ファイルの &lt;security-realms> セクションに次のテキストを追加します。
 
    ```xml
@@ -139,29 +137,29 @@ keytool を使用すると、キーストアの作成に必要なすべての情
 
    * 自動インストールの場合：
 
-      * Windows のコントロールパネルで、「管理ツール」をクリックして「サービス」をクリックします。
-      * JBoss for Adobe Experience Manager Forms を選択します。
-      * 操作／停止を選択します。
-      * サービスのステータスが停止になるまで待ちます。
-      * 操作／開始を選択します。
+     * Windows のコントロールパネルで、「管理ツール」をクリックして「サービス」をクリックします。
+     * JBoss for Adobe Experience Manager Forms を選択します。
+     * 操作／停止を選択します。
+     * サービスのステータスが停止になるまで待ちます。
+     * 操作／開始を選択します。
 
    * アドビにより事前設定された JBoss または手動で設定した JBoss のインストールの場合：
 
-      * コマンドプロンプトで、*`[appserver root]`*¥bin に移動します。
-      * 次のコマンドを入力して、サーバーを停止します。
+     * コマンドプロンプトで、*`[appserver root]`*¥bin に移動します。
+     * 次のコマンドを入力して、サーバーを停止します。
 
-         * (Windows) `shutdown.bat -S`
-         * (Linux) `./shutdown.sh -S`
+       * (Windows) `shutdown.bat -S`
+       * (Linux) `./shutdown.sh -S`
 
-      * JBoss プロセスが完全にシャットダウンする（JBoss プロセスが起動したターミナルにコントロールを返す）まで待ちます。
-      * 次のコマンドを入力して、サーバーを起動します。
+     * JBoss プロセスが完全にシャットダウンする（JBoss プロセスが起動したターミナルにコントロールを返す）まで待ちます。
+     * 次のコマンドを入力して、サーバーを起動します。
 
-         * (Windows) `run.bat -c <profile>`
-         * (Linux) `./run.sh -c <profile>`
+       * (Windows) `run.bat -c <profile>`
+       * (Linux) `./run.sh -c <profile>`
 
 1. SSL を使用して管理コンソールにアクセスするには、web ブラウザーで `https://[host name]:'port'/adminui` を入力してください。
 
-   JBoss のデフォルト SSL ポートは 8443 です。以降、AEM Forms にアクセスする際はこのポートを指定します。
+   JBoss のデフォルト SSL ポートは 8443 です。 以降、AEM Forms にアクセスする際はこのポートを指定します。
 
 ## CA に証明書をリクエスト {#request-a-credential-from-a-ca}
 

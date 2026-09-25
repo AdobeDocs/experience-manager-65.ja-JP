@@ -11,11 +11,9 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 100%
-
+source-wordcount: '570'
+ht-degree: 98%
 ---
-
 # コンポーネントの JSON 書き出しの有効化{#enabling-json-export-for-a-component}
 
 モデラーフレームワークに基づいてコンテンツの JSON 書き出しを生成するように、コンポーネントを適応させることができます。
@@ -24,7 +22,7 @@ ht-degree: 100%
 
 JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) と [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) フレームワーク（それ自体が [Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)に依存）に基づいています。
 
-つまり、JSON を書き出す必要がある場合、コンポーネントには Sling Model が必要です。したがって、次の 2 つの手順に従って、任意のコンポーネントで JSON 書き出しを有効にします。
+つまり、JSON を書き出す必要がある場合、コンポーネントには Sling Model が必要です。 したがって、次の 2 つの手順に従って、任意のコンポーネントで JSON 書き出しを有効にします。
 
 * [コンポーネントに Sling Model を定義する](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Sling Model インターフェイスに注釈を付ける](#annotate-the-sling-model-interface)
@@ -51,7 +49,7 @@ Sling Model の実装クラスに次のような注釈を付ける必要があ�
 
 >[!NOTE]
 >
->Jackson 注釈は Sling モデルクラスレベルではなく、モデルインターフェイスレベルで指定されます。これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
+>Jackson 注釈は Sling モデルクラスレベルではなく、モデルインターフェイスレベルで指定されます。 これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
 
 >[!NOTE]
 >
@@ -73,7 +71,7 @@ JSON エクスポーターフレームワークで認識されるようにする
 
 対応する Sling モデルインターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
-シリアル化されるメソッドを定義するためには、モデルインターフェイスに適切に注釈を付ける必要があります。デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名から派生されます。これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
+シリアル化されるメソッドを定義するためには、モデルインターフェイスに適切に注釈を付ける必要があります。 デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名から派生されます。 これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 
 ## 例 {#example}
 
@@ -85,7 +83,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHub の aem-core-wcm-components プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components)
+* [GitHubでaem-core-wcm-components プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/archive/master.zip)としてダウンロードします
 
 ## 関連ドキュメント {#related-documentation}
