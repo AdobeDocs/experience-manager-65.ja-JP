@@ -624,13 +624,13 @@ GitHub のコード
 テンプレートを参照する結果のページ。 コンテンツがプロセス全体を制御します。 定義に従って、適切なテンプレートとコンポーネントにアクセスします。
 
 * 設定 –  `/conf/<my-folder>/settings/wcm/templates/<my-template>`
-[ テンプレートと関連するコンテンツポリシー](#template-definitions)により、ページ設定が定義されます。
+[&#x200B; テンプレートと関連するコンテンツポリシー](#template-definitions)により、ページ設定が定義されます。
 
 * モデル - OSGi バンドル
-[OSGI バンドル ](/help/sites-deploying/osgi-configuration-settings.md)は機能を実装します。
+[OSGI バンドル &#x200B;](/help/sites-deploying/osgi-configuration-settings.md)は機能を実装します。
 
 * ビュー –  `/apps/<my-site>/components`
-オーサー環境とパブリッシュ環境の両方で、コンテンツは[ コンポーネント ](/help/sites-developing/components.md)によってレンダリングされます。
+オーサー環境とパブリッシュ環境の両方で、コンテンツは[&#x200B; コンポーネント &#x200B;](/help/sites-developing/components.md)によってレンダリングされます。
 
 ページのレンダリング時：
 

@@ -24,7 +24,7 @@ ht-degree: 91%
 
 ## 概要 {#overview}
 
-インタラクティブ通信は、AEM Forms 6.5でお客様とのコミュニケーションを作成する際にデフォルトで推奨される方法です。 AEM Forms 6.5で引き続き文字を使用するには、最新の[AEMFD互換性パッケージ ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールする必要があります。
+インタラクティブ通信は、AEM Forms 6.5でお客様とのコミュニケーションを作成する際にデフォルトで推奨される方法です。 AEM Forms 6.5で引き続き文字を使用するには、最新の[AEMFD互換性パッケージ &#x200B;](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールする必要があります。
 
 AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、AEM Forms 6.4、6.3、6.2 の次のアセットも使用できます。](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
