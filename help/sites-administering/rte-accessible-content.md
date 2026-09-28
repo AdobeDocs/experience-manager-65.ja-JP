@@ -8,20 +8,18 @@ feature: Administering
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 100%
-
+source-wordcount: '970'
+ht-degree: 89%
 ---
-
 # アクセシブルな web ページとサイトを作成するための RTE の設定 {#configure-rte-for-accessibility}
 
-Adobe Experience Manager は、様々なアクセシビリティ標準に従ったユーザーフレンドリーなアクセシビリティ機能をサポートしています。また、開発者は、リッチテキストエディター（RTE）を使用する Experience Manager コンポーネントを使用して、アクセシブルなコンテンツを作成するのに役立つ機能を提供するようカスタマイズまたは拡張できます。
+Adobe Experience Manager は、様々なアクセシビリティ標準に従ったユーザーフレンドリーなアクセシビリティ機能をサポートしています。 また、開発者は、リッチテキストエディター（RTE）を使用する Experience Manager コンポーネントを使用して、アクセシブルなコンテンツを作成するのに役立つ機能を提供するようカスタマイズまたは拡張できます。
 
-Web ページをデザインし、そのページにコンテンツを追加する際に、コンテンツ開発者や作成者は RTE の機能を使用してアクセシビリティ関連の情報を提供できます。例えば、見出しから段落要素に至るまでの構造情報を追加できます。
+Web ページをデザインし、そのページにコンテンツを追加する際に、コンテンツ開発者や作成者は RTE の機能を使用してアクセシビリティ関連の情報を提供できます。 例えば、見出しから段落要素に至るまでの構造情報を追加できます。
 
-これらの機能を設定およびカスタマイズするには、コンポーネントの [RTE プラグインを設定](#configure-the-plugin-features)します。例えば、`paraformat` プラグインを使用すると、ブロックレベルのセマンティック要素を追加できます。具体的には、デフォルトで提供される基本の `H1`、`H2` および `H3` に加え、見出しレベルの数を拡張する機能がサポートされます。
+これらの機能を設定およびカスタマイズするには、コンポーネントの [RTE プラグインを設定](#configure-the-plugin-features)します。 例えば、`paraformat` プラグインを使用すると、ブロックレベルのセマンティック要素を追加できます。具体的には、デフォルトで提供される基本の `H1`、`H2` および `H3` に加え、見出しレベルの数を拡張する機能がサポートされます。
 
-RTE は、タッチ操作対応 UI とクラシック UI 用の様々なコンポーネントで使用できます。ただし、RTE を使用する主なコンポーネントは&#x200B;**テキスト**&#x200B;コンポーネントで、これは両方のインターフェイスで使用できます。次の画像は、`paraformat` をはじめ様々なプラグインが有効になっている RTE を示しています。
+RTE は、タッチ操作対応 UI とクラシック UI 用の様々なコンポーネントで使用できます。 ただし、RTE を使用する主なコンポーネントは&#x200B;**テキスト**&#x200B;コンポーネントで、これは両方のインターフェイスで使用できます。 次の画像は、`paraformat` をはじめ様々なプラグインが有効になっている RTE を示しています。
 
 ![タッチ操作対応 UI のフルスクリーンモードのテキストコンポーネント（RTE）](assets/chlimage_1-206.png)
 
@@ -35,7 +33,7 @@ RTE は、タッチ操作対応 UI とクラシック UI 用の様々なコン�
 
 ## プラグイン機能の設定 {#configure-the-plugin-features}
 
-RTE の設定手順について詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)ページを参照してください。ここでは、次の主な手順を含め、すべての項目について説明します。
+RTE の設定手順について詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)ページを参照してください。 ここでは、次の主な手順を含め、すべての項目について説明します。
 
 * [プラグインとその機能](/help/sites-administering/rich-text-editor.md#aboutplugins)
 * [設定場所](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)
@@ -53,20 +51,20 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 1. 使用している RTE によって、[設定場所](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)を特定し、移動します。
 1. [プラグインをアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)することにより、[段落選択フィールドを有効](/help/sites-administering/rich-text-editor.md)にします。
 1. [段落選択フィールドで使用可能にする書式を指定](/help/sites-administering/rich-text-editor.md)します。
-1. これにより、コンテンツ作成者は、指定した段落書式を RTE の選択フィールドから選択できます。アクセス方法は次のとおりです。
+1. これにより、コンテンツ作成者は、指定した段落形式を RTE の選択フィールドから選択できます。 これらのツールには、次の方法でアクセスできます。
 
    * タッチ操作対応 UI で段落記号アイコンを使用。
    * クラシック UI で「**フォーマット**」フィールド（ポップアップセレクター）を使用。
 
-段落書式オプションを介して RTE で構造要素を使用できるので、AEM はアクセシブルなコンテンツの開発に適した基盤を提供します。コンテンツ作成者は、RTE を使用してフォントのサイズや色、その他の関連する属性を書式設定できないので、インライン書式設定は作成できません。代わりに、見出しなどの該当する構造要素を選択し、「スタイル」オプションから選択されるグローバルスタイルを使用する必要があります。これにより、独自のスタイルシートで閲覧するユーザーにとってはマークアップがクリーンになり、オプションも多くなるほか、コンテンツの構造が正確になります。
+段落フォーマットを使用してRTEで構造要素を使用できるAEMは、アクセシブルなコンテンツを作成するための良い基盤となります。 コンテンツ作成者は、RTE を使用してフォントサイズや色などの関連属性の形式を設定できず、インライン形式を作成できません。 代わりに、見出しなどの適切な構造要素を選択し、「スタイル」オプションから選択したグローバルスタイルを使用する必要があります。 これにより、独自のスタイルシートと正しく構造化されたコンテンツで閲覧するユーザーに対して、クリーンなマークアップとより大きなオプションを保証します。
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。例えば、RTE 内で作成されるコンテンツの一部が WCAG 2.0 に準拠するためには、追加のマークアップが必要になる場合があります。これを行うには、RTE の[ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションが使用できます。[`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
+場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。 例えば、RTE内で作成されたコンテンツは、WCAG 2.0への準拠を確保するために、追加のマークアップが必要になる場合があります。 これは、RTEの[&#x200B; ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins) オプションを使用して実行できます。 [`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
 
 >[!CAUTION]
 >
->`sourceedit` 機能の使用には十分に注意してください。タイピングの誤りやサポート対象外の機能は、問題を大きくする可能性があります。
+>`sourceedit` 機能の使用には十分に注意してください。 タイピングの誤りやサポート対象外の機能は、問題を大きくする可能性があります。
 
 ## その他の HTML 要素および属性のサポートを追加 {#add-support-for-more-html-elements-and-attributes}
 
@@ -76,9 +74,9 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テーブルのプロパティダイアログへのキャプションの追加 {#example-adding-the-caption-to-the-table-properties-dialog}
 
-`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。`itemId` は、コンテンツを自動的に処理するために、`caption`（つまり、DOM 属性の名前）に設定する必要がある点に注意してください。
+`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。 `itemId` は、コンテンツを自動的に処理するために、`caption`（つまり、DOM 属性の名前）に設定する必要がある点に注意してください。
 
-**テーブル**&#x200B;で、DOM 要素に属性を明示的に設定したり削除したりします。値は、`config` オブジェクトのダイアログによって渡されます。DOM 属性は、ブラウザーの実装に伴う一般的な落とし穴を回避するために、対応する `CQ.form.rte.Common` メソッド（`com` は `CQ.form.rte.Common` のショートカット）を使用して、設定／削除する必要があります。
+**テーブル**&#x200B;で、DOM 要素に属性を明示的に設定したり削除したりします。 値は、`config` オブジェクトのダイアログによって渡されます。 DOM 属性は、ブラウザーの実装に伴う一般的な落とし穴を回避するために、対応する `CQ.form.rte.Common` メソッド（`com` は `CQ.form.rte.Common` のショートカット）を使用して、設定／削除する必要があります。
 
 >[!NOTE]
 >
@@ -86,7 +84,7 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テキストで強調を使用する際のアクセシブルな HTML の作成 {#create-accessible-html-for-text}
 
-RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として、ダイアログの `uiSettings` ノードおよび `rtePlugins` ノードに追加します。
+RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。 次のノードを兄弟として、ダイアログの `uiSettings` ノードおよび `rtePlugins` ノードに追加します。
 
 ```HTML
 <htmlRules jcr:primaryType="nt:unstructured">
@@ -103,7 +101,7 @@ RTE は `b` および `i` の代わりに `strong` および `em` タグを使�
 
 ### 詳しい手順 {#step-by-step-instructions}
 
-1. CRXDE Lite を開始します。例：[http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
+1. CRXDE Lite を開始します。 例：[http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
 1. コピー：
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`
@@ -189,7 +187,7 @@ RTE は `b` および `i` の代わりに `strong` および `em` タグを使�
 
 >[!NOTE]
 >
->キャプション要素の値に使用できる入力タイプは、プレーンテキストフィールドだけではありません。`getValue()` メソッドを通してキャプションの値を指定する任意の ExtJS ウィジェットを使用できます。
+>キャプション要素の値に使用できる入力タイプは、プレーンテキストフィールドだけではありません。 `getValue()` メソッドを通してキャプションの値を指定する任意の ExtJS ウィジェットを使用できます。
 >
 >追加の要素および属性用に編集機能を追加するには、以下の両方を確認します。
 >
