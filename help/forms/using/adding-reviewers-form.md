@@ -1,8 +1,12 @@
 ---
 title: 送信レビュー担当者のフォームへの関連付け
-description: AEM Forms で送信レビュー担当者をフォームに関連付ける方法を説明します。関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
+
+description: AEM Forms で送信レビュー担当者をフォームに関連付ける方法を説明します。 関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
+
+
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
+
 docset: aem65
 feature: Adaptive Forms,Foundation Components
 exl-id: 46e7b858-44d1-41c8-9f44-4e959e593dc1
@@ -10,18 +14,16 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '554'
 ht-degree: 100%
-
 ---
-
 # 送信レビュー担当者とフォームの関連付け {#associating-submission-reviewers-with-a-form}
 
-<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
-フォーム作成時に、フォームポータル経由で送信されたフォームのレビューおよびフィードバックを行うユーザーを指定できます。組織はフィードバックを収集し、送信済みフォームに対して再作業を行うことができます。
+フォーム作成時に、フォームポータル経由で送信されたフォームのレビューおよびフィードバックを行うユーザーを指定できます。 組織はフィードバックを収集し、送信済みフォームに対して再作業を行うことができます。
 
-AEM Forms では、レビュー担当者グループをフォームに関連付けることができます。フォームのレビューグループに追加されたユーザーは、フォームの送信を確認し、フィードバックを提供します。
+AEM Forms では、レビュー担当者グループをフォームに関連付けることができます。 フォームのレビューグループに追加されたユーザーは、フォームの送信を確認し、フィードバックを提供します。
 
 フォームに割り当てられたレビュー担当者グループは指定されたフォームのみをレビューできます。
 
@@ -29,7 +31,7 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 ### メタデータスキーマエディターを使用してアダプティブフォームの送信レビュー担当者グループのプロパティを有効化 {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
 
-レビュー担当者グループをフォームに関連付けるには、アダプティブフォームのメタデータスキーマを編集します。デフォルトでは、送信されたフォームにレビュー担当者グループを追加できません。
+レビュー担当者グループをフォームに関連付けるには、アダプティブフォームのメタデータスキーマを編集します。 デフォルトでは、送信されたフォームにレビュー担当者グループを追加できません。
 
 メタデータスキーマを編集するには、以下の手順に従います。
 
@@ -54,11 +56,14 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 ## 送信レビュー担当者のフォームへの関連付け {#associating-submission-reviewers-with-a-form-1}
 
-アダプティブフォームに送信レビュー担当者を関連付けるには、レビュー担当者グループを作成してユーザーを追加します。フォームの詳細属性内のフォーム送信レビュー担当者のフィールドに、作成したレビュー担当者グループを追加します。ユーザーグループを使用することで、アダプティブフォームごとに異なる送信レビュー担当者のグループを関連付けることができます。この機能によって、権限のないユーザーによる送信レビューを避けることができます。
+アダプティブフォームに送信レビュー担当者を関連付けるには、レビュー担当者グループを作成してユーザーを追加します。 フォームの詳細属性内のフォーム送信レビュー担当者のフィールドに、作成したレビュー担当者グループを追加します。
+ユーザーグループを使用することで、アダプティブフォームごとに異なる送信レビュー担当者のグループを関連付けることができます。 この機能によって、権限のないユーザーによる送信レビューを避けることができます。
 
 以下の手順を行う前に、「[必要条件](../../forms/using/adding-reviewers-form.md#prerequisite)」を参照してください。
 
-グループを作成し、メンバーを追加するには、**ツール**／**操作**／**セキュリティ**／**グループ**&#x200B;に移動します。詳しくは、「[ユーザー管理およびサービス](/help/sites-administering/security.md)」を参照してください。作成したグループが、あらかじめ用意されているユーザーグループ **forms-submission-reviewers** のメンバーとして追加されていることを確認してください。このユーザーグループは、AEM Forms に付属しており、ユーザーは送信レビュー担当者として確実に追加されます。
+グループを作成し、メンバーを追加するには、**ツール**／**操作**／**セキュリティ**／**グループ**に移動します。
+詳しくは、「[ユーザー管理およびサービス](/help/sites-administering/security.md)」を参照してください。
+作成したグループが、あらかじめ用意されているユーザーグループ **forms-submission-reviewers** のメンバーとして追加されていることを確認してください。 このユーザーグループは、AEM Forms に付属しており、ユーザーは送信レビュー担当者として確実に追加されます。
 
 ユーザーグループをアダプティブフォームに関連付けるには：
 

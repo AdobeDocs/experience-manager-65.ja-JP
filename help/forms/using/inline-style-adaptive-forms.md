@@ -1,8 +1,12 @@
 ---
 title: アダプティブフォームコンポーネントのインラインスタイリング
+
 description: アダプティブフォームではカスタムスタイルを適用することができますが、アダプティブフォームの個々のコンポーネントにインライン CSS プロパティを適用することもできます。
+
+
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
+
 docset: aem65
 feature: Adaptive Forms,Foundation Components
 exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
@@ -10,36 +14,34 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '638'
 ht-degree: 100%
-
 ---
-
 # アダプティブフォームコンポーネントのインラインスタイリング {#inline-styling-of-adaptive-form-components}
 
-<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/inline-style-adaptive-forms.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-アダプティブフォームの全体的な外観とスタイルは、[テーマエディター](../../forms/using/themes.md)でスタイルを指定して定義できます。また、アダプティブフォームの個々のコンポーネントにインライン CSS スタイルを適用し、即座に変更をプレビューすることもできます。インラインスタイルは、テーマで設定されたスタイルよりも優先されます。
+アダプティブフォームの全体的な外観とスタイルは、[テーマエディター](../../forms/using/themes.md)でスタイルを指定して定義できます。 また、アダプティブフォームの個々のコンポーネントにインライン CSS スタイルを適用し、即座に変更をプレビューすることもできます。 インラインスタイルは、テーマで設定されたスタイルよりも優先されます。
 
 ## インライン CSS プロパティを適用 {#apply-inline-css-properties}
 
 コンポーネントにインラインスタイルを追加するには、次の手順を実行します。
 
-1. フォームエディターからフォームを開き、モードをスタイルモードに変更します。モードをスタイルモードに変更するには、ページツールバーで ![canvas-drop-down](assets/canvas-drop-down.png)／**スタイル**&#x200B;を選択します。
-1. ページ内のコンポーネントを選択し、編集ボタン ![edit-button](assets/edit-button.png) を選択します。サイドバーにスタイルのプロパティが開きます。
+1. フォームエディターからフォームを開き、モードをスタイルモードに変更します。 モードをスタイルモードに変更するには、ページツールバーで ![canvas-drop-down](assets/canvas-drop-down.png)／**スタイル**&#x200B;を選択します。
+1. ページ内のコンポーネントを選択し、編集ボタン ![edit-button](assets/edit-button.png) を選択します。 サイドバーにスタイルのプロパティが開きます。
 
-   サイドバーのフォーム階層ツリーからコンポーネントを選択することもできます。フォーム階層ツリーは、サイドバーのフォームオブジェクトとして使用できます。
+   サイドバーのフォーム階層ツリーからコンポーネントを選択することもできます。 フォーム階層ツリーは、サイドバーのフォームオブジェクトとして使用できます。
 
-   サイドバーからコンポーネントを選択することもできます。スタイルモードでは、フォームオブジェクトの下にコンポーネントが表示されます。ただし、サイドバーのフォームオブジェクトリストにはフィールドやパネルなどのコンポーネントが表示されます。フィールドとパネルは、テキストボックスやラジオボタンなどのコンポーネントを含めることができる汎用的なコンポーネントです。
+   サイドバーからコンポーネントを選択することもできます。 スタイルモードでは、フォームオブジェクトの下にコンポーネントが表示されます。 ただし、サイドバーのフォームオブジェクトリストにはフィールドやパネルなどのコンポーネントが表示されます。 フィールドとパネルは、テキストボックスやラジオボタンなどのコンポーネントを含めることができる汎用的なコンポーネントです。
 
-   サイドバーからコンポーネントを選択すると、選択したコンポーネントのすべてのサブコンポーネントのリストと選択したコンポーネントのプロパティが表示されます。特定のサブコンポーネントを選択して、そのスタイルを設定できます。
+   サイドバーからコンポーネントを選択すると、選択したコンポーネントのすべてのサブコンポーネントのリストと選択したコンポーネントのプロパティが表示されます。 特定のサブコンポーネントを選択して、そのスタイルを設定できます。
 
-1. サイドバーのタブをクリックして、CSS プロパティを指定します。次のようなプロパティを指定できます。
+1. サイドバーのタブをクリックして、CSS プロパティを指定します。 次のようなプロパティを指定できます。
 
    * 寸法と位置（表示設定、パディング、高さ、幅、余白、位置、z インデックス、フロート、クリア、オーバーフロー）
    * テキスト（フォントファミリー、太さ、色、サイズ、行の高さ、整列）

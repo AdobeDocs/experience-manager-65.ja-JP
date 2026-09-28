@@ -1,32 +1,32 @@
 ---
-title: Java™ API クイックスタートの概要
-description: SOAP 接続が有効になっている AEM Forms Java™ の厳密に型指定された API を使用して AEM Forms の操作を実行する方法について説明します。
+title: Java&trade; API QuickStartの概要
+description: SOAP接続で有効になっている厳密に型指定されたAPIであるAEM Forms Java&trade；を使用して、AEM Forms操作を実行する方法について説明します。
+
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, development-tools
+
 role: Developer
 exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 100%
-
+source-wordcount: '533'
+ht-degree: 95%
 ---
-
 # Java™ API クイックスタートの概要 {#introducing-java-api-quickstart}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-Adobe AEM Forms API クイックスタートは、AEM Forms サービスとやり取りするプログラムの開発に向けた取り組みを加速するのに役立ちます。*クイックスタート*&#x200B;は、独自のプロジェクトにコピーして貼り付け、出発点として使用できる完全なプログラムです。クイックスタートを実行して、動作を確認し、独自のニーズに合わせて変更できます。
+Adobe AEM Forms API クイックスタートは、AEM Forms サービスとやり取りするプログラムの開発に向けた取り組みを加速するのに役立ちます。 *クイックスタート*&#x200B;は、独自のプロジェクトにコピーして貼り付け、出発点として使用できる完全なプログラムです。 クイックスタートを実行して、動作を確認し、独自のニーズに合わせて変更できます。
 
 AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
-Java™ の厳密に型指定された API クイックスタートには、Java™ アプリケーションの実行に必要な JAR ファイルのリストが表示されます。ほとんどの Java™ クイックスタートは、`main` 内で実行されるコンソールアプリケーションです。ただし、Forms Java™ の厳密に型指定された API クイックスタートは、web アプリケーション内で実行する Java™ サーブレットとして実装されます。
+Java™ の厳密に型指定された API クイックスタートには、Java™ アプリケーションの実行に必要な JAR ファイルのリストが含まれています。 ほとんどの Java™ クイックスタートは、`main` 内で実行されるコンソールアプリケーションです。 ただし、Forms Java™ の厳密に型指定された API クイックスタートは、web アプリケーション内で実行する Java™ サーブレットとして実装されます。
 
-JAR ファイルのリストは、クイックスタートの先頭にあるコメントセクションにあります。例えば、次のコメントは Output クイックスタートにあり、各 Java™ クイックスタートにある一般的な JAR ファイルリストです。
+JAR ファイルのリストは、クイックスタートの先頭にあるコメントセクションにあります。 例えば、次のコメントは Output クイックスタートにあり、各 Java™ クイックスタートにある一般的な JAR ファイルリストです。
 
 ```java
  /*
@@ -65,7 +65,7 @@ JAR ファイルのリストは、クイックスタートの先頭にあるコ�
 
 ## 複数のサービスのクイックスタート {#multiple-services-quick-start}
 
-*AEM Forms on JEE を使用したプログラミング*&#x200B;にあるほとんどのクイックスタートは、ある 1 つのサービスを呼び出すことで操作を実行します。ただし、一部のクイックスタートでは、複数の AEM Forms サービスを呼び出すことで特定のワークフローを実行します。次のリストは、複数の AEM Forms サービスを呼び出す Java™ クイックスタートを示しています。
+*AEM Forms on JEE を使用したプログラミング*&#x200B;にあるほとんどのクイックスタートは、ある 1 つのサービスを呼び出すことで操作を実行します。 ただし、一部のクイックスタートでは、複数の AEM Forms サービスを呼び出すことで特定のワークフローを実行します。 次のリストは、複数の AEM Forms サービスを呼び出す Java™ クイックスタートを示しています。
 
 [クイックスタート（SOAP モード）：Java™ API を使用して、AEM Forms リポジトリ内のドキュメントを Output サービスに渡します](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)（Repository サービスと Output サービスを呼び出します）
 
@@ -83,8 +83,8 @@ JAR ファイルのリストは、クイックスタートの先頭にあるコ�
 
 >[!NOTE]
 >
->「AEM Forms のプログラミング」にあるクイックスタートは、JBoss® Application Server と Microsoft® Windows® オペレーティングシステムにデプロイされる AEM Forms に基づいています。ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+>「AEM Forms によるプログラミング」のクイックスタートは、Forms サーバーが JBoss® アプリケーションサーバーおよび Microsoft® Windows オペレーティングシステムにデプロイされていることを前提としています。 ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
 >[!NOTE]
 >
->ほとんどの web サービスのクイックスタートは、C# で記述され、.NET フレームワークを使用します。ただし、SOAP 標準をサポートする任意の開発環境で、AEM Forms サービスを呼び出せるクライアントアプリケーションロジックを作成できます。（[Web サービスを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)を参照。）
+>ほとんどの web サービスのクイックスタートは、C# で記述され、.NET フレームワークを使用します。 ただし、SOAP 標準をサポートする任意の開発環境で、AEM Forms サービスを呼び出せるクライアントアプリケーションロジックを作成できます。 （[Web サービスを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)を参照。）

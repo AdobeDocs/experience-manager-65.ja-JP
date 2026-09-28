@@ -1,26 +1,28 @@
 ---
 title: AEM 開発者向けのベストプラクティス
+
 description: アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。
+
+
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
+
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 100%
-
+source-wordcount: '497'
+ht-degree: 93%
 ---
-
 # ベストプラクティス{#best-practices}
 
 ## 開発者向けのベストプラクティス - はじめに {#best-practices-for-developers-getting-started}
 
-アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。アドビの開発者は、コアとなる AEM 製品のアップデートと顧客実装のための顧客コードを開発する際に、これらのベストプラクティスに従ってください。
+アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。 アドビの開発者は、コアとなる AEM 製品のアップデートと顧客実装のための顧客コードを開発する際に、これらのベストプラクティスに従ってください。
 
 AEM 開発プロジェクトを開始する前に、まず、次のベストプラクティスを確認してください。
 
@@ -31,7 +33,7 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [コードの落とし穴](/help/sites-developing/code-pitfalls.md)
 * [JCR 統合](/help/sites-developing/jcr-integration.md)
 * [OSGi バンドル](/help/sites-developing/osgi-bundles.md)
-* [Java API のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=ja)
+* [Java APIのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=ja)
 
 ### ベストプラクティスに関する追加情報 {#additional-best-practices-information}
 
@@ -91,7 +93,7 @@ Communities のベストプラクティスは、こちらで説明していま�
 
 ## ツール／HTL {#tooling-htl}
 
-HTML テンプレート言語（HTL）は、AEM 6.0 で導入された新しい HTML テンプレートシステムです。JSP と ESP に代わり、AEM で推奨されるテンプレートシステムになります。
+HTML Template Language （HTL）は、AEM 6.0で導入された新しいHTML テンプレートシステムです。 AEMの推奨テンプレートシステムとして、JSPおよびESPに代わるものです。
 
 |  |  |  |
 |---|---|---|

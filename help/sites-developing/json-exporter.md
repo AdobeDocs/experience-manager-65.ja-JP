@@ -1,6 +1,6 @@
 ---
 title: コンテンツサービス用の JSON エクスポーター
-description: AEM コンテンツサービスは、web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM web ページとは異なるチャネルにコンテンツを配信できます。
+description: AEM コンテンツサービスは、web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。 AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM web ページとは異なるチャネルにコンテンツを配信できます。
 contentOwner: User
 content-type: reference
 topic-tags: components
@@ -11,22 +11,20 @@ feature: Developing
 role: Developer
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 100%
-
+source-wordcount: '453'
+ht-degree: 97%
 ---
-
 # コンテンツサービス用の JSON エクスポーター{#json-exporter-for-content-services}
 
 AEM コンテンツサービスは、web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。
 
-AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM web ページとは異なるチャネルにコンテンツを配信できます。そうしたチャネルの例を次に示します。
+AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM web ページとは異なるチャネルにコンテンツを配信できます。 そうしたチャネルの例を次に示します。
 
 * [単一ページアプリケーション](spa-walkthrough.md)
 * ネイティブモバイルアプリケーション
 * AEM の外部の他のチャネルおよびタッチポイント
 
-構造化コンテンツを使用するコンテンツフラグメントでは、JSON エクスポーターを使用して任意の AEM ページのコンテンツを JSON データモデル形式で配信することにより、コンテンツサービスを提供できます。このメソッドは、独自のアプリケーションで使用できます。
+構造化コンテンツを使用するコンテンツフラグメントでは、JSON エクスポーターを使用して任意の AEM ページのコンテンツを JSON データモデル形式で配信することにより、コンテンツサービスを提供できます。 このメソッドは、独自のアプリケーションで使用できます。
 
 >[!NOTE]
 >
@@ -34,7 +32,7 @@ AEM コンテンツサービスにより、あらゆるクライアントで使�
 
 ## JSON エクスポーターとコンテンツフラグメントコアコンポーネント {#json-exporter-with-content-fragment-core-components}
 
-AEM JSON エクスポーターを使用すると、任意の AEM ページのコンテンツを JSON データモデル形式で配信できます。このメソッドは、独自のアプリケーションで使用できます。
+AEM JSON エクスポーターを使用すると、任意の AEM ページのコンテンツを JSON データモデル形式で配信できます。 このメソッドは、独自のアプリケーションで使用できます。
 
 AEM 内では、セレクター `model` と `.json` 拡張機能を使用して配信します。
 
@@ -50,13 +48,13 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-代わりに、構造化コンテンツフラグメントのコンテンツを、ターゲット設定して配信することもできます。
+代わりに、構造化コンテンツフラグメントのコンテンツを、ターゲティングして配信することもできます。
 
 フラグメントへのパス全体を使用します（`jcr:content` を経由）。例えば、次のような接尾辞を付けます。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
-ページには、単一のコンテンツフラグメントまたは様々なタイプの複数のコンポーネントを含めることができます。また、リストコンポーネントなどのメカニズムを使用して、関連するコンテンツを自動的に検索することもできます。
+ページには、単一のコンテンツフラグメントまたは様々なタイプの複数のコンポーネントを含めることができます。 また、リストコンポーネントなどのメカニズムを使用して、関連するコンテンツを自動的に検索することもできます。
 
 * 例えば、次のような URL があります。
 
@@ -82,15 +80,15 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 
 * Assets HTTP API
 
-   * [Assets HTTP API](/help/assets/mac-api-assets.md)
+  * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
 * Sling モデル：
 
-   * [Sling モデル - 1.3.0 以降のモデルクラスとリソースタイプの関連付け](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+  * [Sling モデル - 130以降のリソースタイプにモデルクラスを関連付ける](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
 * AEM と JSON：
 
-   * [JSON 形式でページ情報を取得](/help/sites-developing/pageinfo.md)
+  * [JSON 形式でページ情報を取得](/help/sites-developing/pageinfo.md)
 
 ## 関連ドキュメント {#related-documentation}
 

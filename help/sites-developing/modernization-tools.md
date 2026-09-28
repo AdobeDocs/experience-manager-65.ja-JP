@@ -1,6 +1,8 @@
 ---
 title: AEM Modernization Tools
+
 description: AEM Modernization Tools は、従来の AEM 機能を最新のテクノロジーに変換する際に役立ちます。
+
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 8865a641-fdac-43ab-b1c3-722f120cd749
@@ -9,11 +11,9 @@ feature: Developing,Developer Tools
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '95'
 ht-degree: 100%
-
 ---
-
 # AEM Modernization Tools {#modernization-tools}
 
 [AEM Modernization Tools を使用すると、以下の変換を容易におこなえるようになります。](https://opensource.adobe.com/aem-modernize-tools/)

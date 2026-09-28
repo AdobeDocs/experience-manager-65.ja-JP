@@ -10,14 +10,12 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 100%
-
+source-wordcount: '1208'
+ht-degree: 94%
 ---
-
 # AEM Forms のキーボードショートカット {#aem-forms-keyboard-shortcuts}
 
-<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 この記事では、Windows オペレーティングシステムと Macintosh オペレーティングシステムのアダプティブフォームエディター、テーマエディター、コンテンツブラウザーおよび Correspondence Management で使用できるキーボードショートカットについて説明します。
 
@@ -29,22 +27,22 @@ ht-degree: 100%
 | 選択したアダプティブフォームコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
 | 選択したアダプティブフォームコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Command + S |
 | 選択したアダプティブフォームコンポーネントのルールを編集する | Ctrl + Alt + Enter | Command + Alt + Return |
-| プレビューと現在選択されているモード（編集モードや基礎モードなど）を切り替える | Ctrl + Shift + M | Ctrl+Shift+M&amp;ast; |
-| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&amp;ast; |
-| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
+| プレビューと現在選択されているモード（編集モードや基礎モードなど）を切り替える | Ctrl + Shift + M | Ctrl+Shift+M&ast; |
+| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
-| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&amp;ast; |
-| 選択したコンポーネントを切り取る（カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl+X&amp;ast; |
+| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&ast; |
+| 選択したコンポーネントを切り取る （カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl-X&ast; |
 | コンポーネントをペーストする | Ctrl + V | Ctrl + V |
-| 選択したコンポーネントを削除する | Ctrl + Del | Ctrl+Del&amp;ast; |
-| 選択したコンポーネントを削除する | Ctrl + Backspace キー | Ctrl+Backspace&amp;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B キー | Ctrl+B&amp;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを斜体にする | Ctrl + I | Ctrl+I&amp;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl+U&amp;ast; |
+| 選択したコンポーネントを削除する | Ctrl + Del | Ctrl+Del&ast; |
+| 選択したコンポーネントを削除する | Ctrl + Backspace キー | Ctrl+Backspace&ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B キー | Ctrl+B&ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを斜体にする | Ctrl + I | Ctrl+I&ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl+U&ast; |
 
 >[!NOTE]
 >
->「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
+>「&ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
 
 >[!NOTE]
 >
@@ -60,13 +58,13 @@ ht-degree: 100%
 |---|---|---|
 | テーマで選択したコンポーネントのプロパティブラウザーを開く | Alt + Enter | Alt + Return |
 | テーマで選択したコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
-| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&amp;ast; |
-| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
-| テーマで選択したコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Ctrl+S&amp;ast; |
+| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&ast; |
+| テーマで選択したコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Ctrl+S&ast; |
 
 >[!NOTE]
 >
->「&amp;ast;」が付いている macOS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
+>「&ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 
@@ -84,7 +82,7 @@ ht-degree: 100%
 
 ## Correspondence Management {#correspondence-management}
 
-この説では、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
+この説では、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。 これらのショートカットキーを使用して、以下の操作を行うことができます。
 
 * [テキスト](texts-interactive-communications.md)アセットの作成と編集
 * [通信の作成時](/help/forms/using/create-correspondence.md)に関連する編集アイコン（![edittextmodule](assets/edittextmodule.png)）をタップしてからテキストモジュールを編集する。

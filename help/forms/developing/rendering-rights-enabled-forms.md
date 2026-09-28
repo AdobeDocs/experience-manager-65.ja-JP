@@ -1,35 +1,38 @@
 ---
 title: 権限付きフォームのレンダリング
-description: Forms サービスを使用して、使用権限が適用されているフォームをレンダリングします。Java API および web サービス API を使用して、権限付きフォームをレンダリングできます。
+
+description: Forms サービスを使用して、使用権限が適用されているフォームをレンダリングします。 Java API および web サービス API を使用して、権限付きフォームをレンダリングできます。
+
+
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: 012a3a9f-542c-4ed1-a092-572bfccbdf21
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1488'
 ht-degree: 100%
-
 ---
-
 # 権限付きフォームのレンダリング {#rendering-rights-enabled-forms}
 
-Forms サービスでは、使用権限が適用されているフォームをレンダリングできます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。使用権限が適用されたフォームは、権限付きフォームと呼ばれます。ユーザーは、権限付きフォームを Adobe Reader で開くことで、そのフォームで有効になっている操作を実行できます。
+Forms サービスでは、使用権限が適用されているフォームをレンダリングできます。 使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。 使用権限が適用されたフォームは、権限付きフォームと呼ばれます。 ユーザーは、権限付きフォームを Adobe Reader で開くことで、そのフォームで有効になっている操作を実行できます。
 
-使用権限をフォームに適用するには、Acrobat Reader DC Extensions サービスが AEM Forms のインストール環境に含まれている必要があります。また、使用権限を PDF ドキュメントに適用できる有効な資格情報が必要です。つまり、権限付きフォームをレンダリングするには、Acrobat Reader DC Extensions サービスを適切に設定する必要があります。（[Acrobat Reader DC Extensions サービスについて](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)を参照してください）。
-
->[!NOTE]
->
->使用権限を含むフォームをレンダリングするには、PDF ファイルではなく XDP ファイルを入力として使用する必要があります。PDF ファイルを入力として使用した場合、フォームのレンダリングは可能ですが、権限付きフォームにはなりません。
+使用権限をフォームに適用するには、Acrobat Reader DC Extensions サービスが AEM Forms のインストール環境に含まれている必要があります。 また、使用権限を PDF ドキュメントに適用できる有効な資格情報が必要です。 つまり、権限付きフォームをレンダリングするには、Acrobat Reader DC Extensions サービスを適切に設定する必要があります。 （[Acrobat Reader DC Extensions サービスについて](/help/forms/developing/assigning-usage-rights.md#about-the-acrobat-reader-dc-extensions-service)を参照してください）。
 
 >[!NOTE]
 >
->`enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles` または `enableDigitalSignatures` の使用権限を指定する場合、フォームに XML データを事前入力することはできません。（[編集可能なレイアウトを使用した Forms の事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照してください）。
+>使用権限を含むフォームをレンダリングするには、PDF ファイルではなく XDP ファイルを入力として使用する必要があります。 PDF ファイルを入力として使用した場合、フォームのレンダリングは可能ですが、権限付きフォームにはなりません。
+
+>[!NOTE]
+>
+>`enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles` または `enableDigitalSignatures` の使用権限を指定する場合、フォームに XML データを事前入力することはできません。 （[編集可能なレイアウトを使用した Forms の事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照してください）。
 
 >[!NOTE]
 >
@@ -47,19 +50,19 @@ Forms サービスでは、使用権限が適用されているフォームを�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**Forms Client API オブジェクトの作成**
+**Forms Client API オブジェクトを作成**
 
-Forms サービス Client API 操作をプログラムで実行には、事前に Forms サービスクライアントを作成しておく必要があります。
+Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。
 
 **使用権限の実行時オプションの設定**
 
-権限付きフォームをレンダリングするには、使用権限の実行時オプションを設定します。使用権限をフォームに適用するために使用する資格情報のエイリアスも指定します。エイリアス値を指定したら、フォームに適用する各使用権限を指定します。
+権限付きフォームをレンダリングするには、使用権限の実行時オプションを設定します。 使用権限をフォームに適用するために使用する資格情報のエイリアスを指定します。 エイリアス値を指定したら、フォームに適用する各使用権限を指定します。
 
 **権限付きフォームのレンダリング**
 
-権限付きフォームをレンダリングするには、使用権限のないフォームをレンダリングする場合と同じアプリケーションロジックを使用します。唯一の違いは、使用権限の実行時オプションがアプリケーションロジックに含まれていることを確認する必要がある点です。
+権限付きフォームをレンダリングするには、使用権限のないフォームをレンダリングする場合と同じアプリケーションロジックを使用します。 唯一の違いは、使用権限の実行時オプションがアプリケーションロジックに含まれていることを確認する必要がある点です。
 
 >[!NOTE]
 >
@@ -67,11 +70,11 @@ Forms サービス Client API 操作をプログラムで実行には、事前�
 
 **フォームデータストリームをクライアント web ブラウザーに書き込む**
 
-Forms サービスが権限付きフォームをレンダリングすると、クライアント web ブラウザーに書き込む必要があるフォームデータストリームが返されます。クライアント web ブラウザーに書き込まれると、ユーザーはフォームを表示できます。Adobe Reader で権限付きフォームを表示しているユーザーは、そのフォームで有効になっている操作を実行できます。
+Forms サービスが権限付きフォームをレンダリングすると、クライアント web ブラウザーに書き込む必要があるフォームデータストリームが返されます。 クライアント web ブラウザーに書き込まれると、ユーザーはフォームを表示できます。 Adobe Reader で権限付きフォームを表示しているユーザーは、そのフォームで有効になっている操作を実行できます。
 
 **関連トピック**
 
-[Java API を使用して権限付きフォームをレンダリングする](#render-rights-enabled-forms-using-the-java-api)
+[Java API を使用した権限付きフォームのレンダリング](#render-rights-enabled-forms-using-the-java-api)
 
 [Web サービス API を利用したライツ対応フォームのレンダリング](#render-rights-enabled-forms-using-the-web-service-api)
 
@@ -85,7 +88,7 @@ Forms サービスが権限付きフォームをレンダリングすると、�
 
 [Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### Java API を使用して権限付きフォームをレンダリングする {#render-rights-enabled-forms-using-the-java-api}
+### Java API を使用した権限付きフォームのレンダリング {#render-rights-enabled-forms-using-the-java-api}
 
 Forms API（Java）を使用して、権限付きフォームをレンダリングします。
 
@@ -96,39 +99,39 @@ Forms API（Java）を使用して、権限付きフォームをレンダリン�
 1. Forms Client API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクタを使用し、`ServiceClientFactory` オブジェクトを渡すことによって、`FormsServiceClient` オブジェクトを作成します。
+   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことにより、`FormsServiceClient` オブジェクトを作成します。
 
 1. 使用権限の実行時オプションを設定する
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
    * `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを呼び出して、資格情報のエイリアスを指定し、そのエイリアスの値を表す文字列値を指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。以下に例を示します。ユーザーがフォームのフィールドに入力して保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。 ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。 つまり、資格情報で設定が許可されていない場合は、使用権限を設定できません。 以下に例を示します。 ユーザーがフォームのフィールドに入力して保存できる使用権を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
 
    >[!NOTE]
    >
-   >`ReaderExtensionSpec` オブジェクトの `setReCredentialPassword` メソッドを呼び出す必要はありません。このメソッドは、Forms サービスでは使用されません。
+   >`ReaderExtensionSpec` オブジェクトの `setReCredentialPassword` メソッドを呼び出す必要はありません。 このメソッドは、Forms サービスでは使用されません。
 
 1. 権限設定されたフォームをレンダリングする
 
    `FormsServiceClient` オブジェクトの `renderPDFFormWithUsageRights` メソッドを呼び出して、以下の値を渡します。
 
-   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
-   * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
-   * ランタイムオプションを格納する `PDFFormRenderSpec` オブジェクトです。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。 Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクトです。 データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
+   * 実行時オプションを保存する `PDFFormRenderSpec` オブジェクト。
    * 使用権限の実行時オプションを格納する `ReaderExtensionSpec` オブジェクトです。
    * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクトです。
 
-   `renderPDFFormWithUsageRights` メソッドは、クライアントの web ブラウザーに書き込まれなければならないフォームデータストリームを含む `FormsResult` オブジェクトを返します。
+   `renderPDFFormWithUsageRights` メソッドは、 クライアント web ブラウザーに書き込む必要があるフォームデータストリームを含んだ `FormsResult` オブジェクトを返します。
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
    * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
    * `javax.servlet.http.HttpServletResponse` オブジェクトの `setContentType` メソッドを呼び出してコンテンツタイプを設定し、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、`javax.servlet.ServletOutputStream` オブジェクトを作成します。このオブジェクトは、フォームデータストリームをクライアント web ブラウザーに書き込むために使用されます。
-   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`java.io.InputStream` オブジェクトを作成します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、クライアントの web ブラウザーにフォームデータストリームを書き込むために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出して、`java.io.InputStream` オブジェクトを作成します。
    * `InputStream` オブジェクトの `read` メソッドを呼び出して、引数としてバイト配列を渡すことで、バイト配列を作成し、フォームデータストリームを入力します。
-   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
@@ -155,28 +158,28 @@ Forms API（web サービス）を使用して、権限が有効なフォーム�
 
    * コンストラクタを使用して `ReaderExtensionSpec` オブジェクトを作成します。
    * `ReaderExtensionSpec` オブジェクトの `setReCredentialAlias` メソッドを呼び出して、資格情報のエイリアスを指定し、そのエイリアスの値を表す文字列値を指定します。
-   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。ユーザーがフォームフィールドに入力し、フォームを保存できる使用権限を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
+   * `ReaderExtensionSpec` オブジェクトに属する対応するメソッドを呼び出して、各使用権限を設定します。 ただし、使用権限を設定できるのは、参照する秘密鍵証明書でその権限が与えられている場合のみです。 つまり、秘密鍵証明書で設定が許可されていない場合は、使用権限を設定できません。 ユーザーがフォームフィールドに入力し、フォームを保存できる使用権限を設定するには、`ReaderExtensionSpec` オブジェクトの `setReFillIn` メソッドを呼び出し、`true` を渡します。
 
 1. 権限設定されたフォームをレンダリングする
 
    `FormsService` オブジェクトの `renderPDFFormWithUsageRights` メソッドを呼び出して、以下の値を渡します。
 
-   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
-   * フォームで結合するデータを格納する `BLOB` オブジェクト。フォームでデータを結合しない場合は、空の XML データソースを基にした `BLOB` オブジェクトを渡す必要があります。null の `BLOB` オブジェクトを渡すことはできません。このようなオブジェクトを渡すと例外が発生します。
-   * ランタイムオプションを格納する `PDFFormRenderSpec` オブジェクト。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。 Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * フォームと結合するデータを含む `BLOB` オブジェクトです。 フォームでデータを結合しない場合は、空の XML データソースを基にした `BLOB` オブジェクトを渡す必要があります。 null の `BLOB` オブジェクトを渡すことはできません。このようなオブジェクトを渡すと例外が発生します。
+   * 実行時オプションを保存する `PDFFormRenderSpec` オブジェクト。
    * 使用権限の実行時オプションを格納する `ReaderExtensionSpec` オブジェクトです。
    * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクトです。
 
-   `renderPDFFormWithUsageRights` メソッドは、クライアントの web ブラウザーに書き込まれなければならないフォームデータストリームを含む `FormsResult` オブジェクトを返します。
+   `renderPDFFormWithUsageRights` メソッドは、 クライアント web ブラウザーに書き込む必要があるフォームデータストリームを含んだ `FormsResult` オブジェクトを返します。
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを格納する `BLOB` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
    * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
    * `javax.servlet.http.HttpServletResponse` オブジェクトの `setContentType` メソッドを呼び出してコンテンツタイプを設定し、`BLOB` オブジェクトのコンテンツタイプを渡します。
    * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、クライアントの web ブラウザーにフォームデータストリームを書き込むために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出し、バイト配列を作成して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出し、バイト配列を作成して入力します。 このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
