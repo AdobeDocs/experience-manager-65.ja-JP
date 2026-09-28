@@ -7,14 +7,12 @@ exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 100%
-
+source-wordcount: '697'
+ht-degree: 96%
 ---
-
 # GraphQL のコンテンツフラグメントを使用したヘッドレスコンテンツ配信 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化されたコンテンツをヘッドレスで配信できます。単一の API クエリをカスタマイズできる機能により、レンダリングする特定のコンテンツを（単一の API クエリに対する応答として）取得して配信できます。
+Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化コンテンツをヘッドレスで配信できます。 単一の API クエリをカスタマイズできる機能により、レンダリングする特定のコンテンツを（単一の API クエリに対する応答として）取得して配信できます。
 
 <!--
 >[!NOTE]
@@ -39,9 +37,9 @@ Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 Gra
 
 AEM のコンテンツフラグメントのオーサリングとは、次のことを意味します。
 
-* コンテンツフラグメントを使用すると、主にフォーマットされたページに直接公開することを目的としていない（1:1）コンテンツを作成できます。
+* コンテンツフラグメントを使用して、主に書式設定されたページに直接公開することを意図しない（1:1）コンテンツを作成できます。
 
-* コンテンツフラグメントのコンテンツは、コンテンツフラグメントモデルに従って、あらかじめ決められた方法で構造化されます。これにより、アプリケーションへのアクセスが簡素化され、コンテンツの処理が促進されます。
+* コンテンツフラグメントのコンテンツは、コンテンツフラグメントモデルに従って、あらかじめ決められた方法で構造化されます。 これにより、アプリケーションへのアクセスが簡素化され、コンテンツの処理が促進されます。
 
 ## GraphQL - 概要 {#graphql-overview}
 
@@ -51,11 +49,11 @@ GraphQL とは次のことを意味します。
 
   [GraphQL.org](https://graphql.org) を参照
 
-[AEM GraphQL API](#aem-graphql-api) を使用すると、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)で（複雑な）クエリを実行できます。各クエリは、特定のモデルタイプに従っています。返されたコンテンツは、アプリケーションで使用できます。
+[AEM GraphQL API](#aem-graphql-api) を使用すると、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)で（複雑な）クエリを実行できます。各クエリは、特定のモデルタイプに従っています。 返されたコンテンツは、アプリケーションで使用できます。
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-Adobe Experience では、標準 GraphQL API をカスタマイズした実装を開発しています。詳しくは、「[コンテンツフラグメントと共に使用する AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)」を参照してください。
+Adobe Experience では、標準 GraphQL API をカスタマイズした実装を開発しています。 詳しくは、「[コンテンツフラグメントと共に使用する AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)」を参照してください。
 
 AEM GraphQL API の実装は、[GraphQL Java ライブラリ](https://graphql.org/code/#java)に基づいています。
 
@@ -83,7 +81,7 @@ AEM GraphQL API の実装は、[GraphQL Java ライブラリ](https://graphql.or
 
 * **有効**&#x200B;にされると、[スキーマ](https://graphql.org/learn/schema/)の生成に使用されます。
 
-* GraphQL に必要なデータタイプとフィールドを提供します。アプリケーションが、可能なことだけを要求して期待するものを受け取るようにします。
+* GraphQL に必要なデータタイプとフィールドを提供します。 アプリケーションが、可能なことだけを要求して期待するものを受け取るようにします。
 
 * データタイプ&#x200B;**[フラグメント参照](#fragment-references)**&#x200B;は、別のコンテンツフラグメントを参照するためにモデル内で使用できるので、構造レベルを追加します。
 
@@ -99,7 +97,7 @@ AEM GraphQL API の実装は、[GraphQL Java ライブラリ](https://graphql.or
 
 * 構造化データを取得できます。
 
-   * **マルチフィード**&#x200B;として定義した場合、複数のサブフラグメントをプライムフラグメントで参照（取得）できます。
+  * **マルチフィード**&#x200B;として定義した場合、複数のサブフラグメントをプライムフラグメントで参照（取得）できます。
 
 ### JSON プレビュー {#json-preview}
 
@@ -111,4 +109,4 @@ AEM GraphQL API の使い方の紹介は、「[AEM での GraphQL の使用方�
 
 ## チュートリアル - AEM ヘッドレスと GraphQL をはじめる前に
 
-実践的なチュートリアルを探している場合は、AEM の GraphQL API を使用し、外部アプリで使用するコンテンツをヘッドレス CMS シナリオで構築して公開する方法を示す「[AEM ヘッドレスと GraphQL をはじめる前に](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)」のエンドツーエンドのチュートリアルをご覧ください。
+実践的なチュートリアルを探している場合は、 AEM の GraphQL API を使用し、外部アプリで使用するコンテンツをヘッドレス CMS シナリオで構築して公開する方法を示す「[AEM ヘッドレスと GraphQL をはじめる前に](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=ja)」のエンドツーエンドのチュートリアルをご覧ください。

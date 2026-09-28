@@ -10,12 +10,10 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Document Services,Reader Extensions
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: ht
-source-wordcount: '327'
+workflow-type: tm+mt
+source-wordcount: '339'
 ht-degree: 100%
-
 ---
-
 # データキャプチャのための Acrobat Reader DC Extensions の設定 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
 >[!NOTE]
@@ -24,9 +22,9 @@ ht-degree: 100%
 
 AEM Forms インストール環境のユーザーが Content Services（非推奨）のデータキャプチャ機能を使用する場合、このユーザー用に、読み取り専用アクセス権を持つ役割を作成することをお勧めします。
 
-***メモ&#x200B;**：Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。このサービスでは、人間中心のプロセスをデザイン、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014年12月31日（PT）をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を参照してください。*
+***メモ&#x200B;**：Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。 このサービスでは、人間中心のプロセスをデザイン、管理、監視および最適化することができます。 Content Services（非推奨）のサポートは 2014年12月31日（PT）をもって終了しています。 [アドビ製品のライフサイクルに関するドキュメント](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を参照してください。*
 
-データをキャプチャするには、SampleReaderExtensionsCredential にアクセスするために、ユーザーに役割を割り当てる必要があります。標準のトラスト管理者の役割を割り当てることができます。ただし、この役割を割り当てると、PKI 信頼設定を制御し PKI 認証情報を管理する管理者権限を管理者以外の一般ユーザーに与えることになるため、実稼働環境での AEM Forms インストールのセキュリティが危険にさらされる可能性があることを考慮してください。AEM Forms システム管理者が Trust Store への読み取り専用アクセス権のみを含む役割を作成して、データキャプチャ機能を使用する管理者以外のユーザーにこの役割を割り当てることをお勧めします。
+データをキャプチャするには、SampleReaderExtensionsCredential にアクセスするために、ユーザーに役割を割り当てる必要があります。 標準のトラスト管理者の役割を割り当てることができます。 ただし、この役割を割り当てると、PKI 信頼設定を制御し PKI 認証情報をコントロールする管理者権限を、管理者以外の一般ユーザーに与えることになるため、本番環境での AEM Forms インストールのセキュリティが危険にさらされる可能性があることを考慮してください。 AEM Forms システム管理者が Trust Store への読み取り専用アクセス権のみを含む役割を作成して、データキャプチャ機能を使用する管理者以外のユーザーに、この役割を割り当てることをお勧めします。
 
 ## データキャプチャを行うユーザーの役割を作成 {#create-a-role-for-data-capture-users}
 
@@ -41,4 +39,4 @@ AEM Forms インストール環境のユーザーが Content Services（非推�
 1. 作成したデータキャプチャユーザーの役割をクリックします。
 1. 「ユーザー／グループの役割」タブで、「ユーザーまたはグループを検索」をクリックします。
 1. ユーザーおよびグループを検索画面で「検索」をクリックし、データキャプチャユーザーの役割を必要とするユーザーを選択して、「OK」をクリックします。
-1. 役割を編集画面で、「保存」をクリックします。
+1. 「役割を編集」画面で、「保存」をクリックします。

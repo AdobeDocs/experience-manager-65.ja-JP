@@ -10,15 +10,13 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 source-git-commit: a3587d248569982a8f9b137602ba95dd40c47012
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 100%
-
 ---
+# AEM での CRXDE Lite の有効化{#enabling-crxde-lite-in-aem}
 
-# AEM での CRXDE Lite の有効化 {#enabling-crxde-lite-in-aem}
-
-AEM のインストールを可能な限り保護するために、セキュリティチェックリストでは実稼動環境で [WebDAV を無効化](/help/sites-administering/security-checklist.md#disable-webdav)することをお勧めしています。
+AEM のインストールを可能な限り保護するために、セキュリティチェックリストでは本番環境で [WebDAV を無効化](/help/sites-administering/security-checklist.md#disable-webdav)することをお勧めしています。
 
 ただし、CRXDE Lite が正しく機能するには `org.apache.sling.jcr.davex` バンドルに依存するので、WebDAV を無効にすると CRXDE Lite も無効になります。
 
