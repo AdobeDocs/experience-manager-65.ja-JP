@@ -11,16 +11,14 @@ exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '343'
 ht-degree: 100%
-
 ---
-
 # レスポンシブサイト用に最適化された画像の配信 {#delivering-optimized-images-for-a-responsive-site}
 
-レスポンシブサービング用のコードを Web 開発者と共有する場合は、レスポンシブコード機能を使用します。レスポンシブ（**[!UICONTROL RESS]**）コードをクリップボードにコピーして、Web 開発者と共有することができます。
+レスポンシブサービング用のコードを Web 開発者と共有する場合は、レスポンシブコード機能を使用します。 レスポンシブ（**[!UICONTROL RESS]**）コードをクリップボードにコピーして、Web 開発者と共有することができます。
 
-この機能は、Web サイトがサードパーティの WCM で稼動する場合に有効です。ただし、Web サイトが Adobe Experience Manager で稼動する場合は、オフサイトの画像サーバーが画像をレンダリングして Web ページに提供します。
+この機能は、Web サイトがサードパーティの WCM で稼動する場合に有効です。 ただし、Web サイトが Adobe Experience Manager で稼動する場合は、オフサイトの画像サーバーが画像をレンダリングして Web ページに提供します。
 
 [Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
 
@@ -32,7 +30,7 @@ ht-degree: 100%
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
-1. レスポンシブ画像プリセットを選択します。「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL RESS]**」ボタンが表示されます。
+1. レスポンシブ画像プリセットを選択します。 「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL RESS]**」ボタンが表示されます。
 
    ![chlimage_1-409](assets/chlimage_1-208.png)
 
@@ -47,10 +45,10 @@ ht-degree: 100%
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
 1. **[!UICONTROL レスポンシブ画像を埋め込み]**&#x200B;ダイアログボックスで、レスポンシブコードテキストを選択してコピーし Web サイトに貼り付けて、レスポンシブアセットにアクセスします。
-1. 埋め込みコード内でデフォルトのブレークポイントを編集して、コード内で直接、レスポンシブ web サイトのブレークポイントに合わせます。また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
+1. 埋め込みコード内でデフォルトのブレークポイントを編集して、コード内で直接、レスポンシブ web サイトのブレークポイントに合わせます。 また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
 
 ## HTTP/2 を使用して Dynamic Media アセットを配信する {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2 は、ブラウザーとサーバーの通信方法を改善する、新しく更新された web プロトコルです。情報の転送を高速化し、必要な処理能力を削減します。Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
+HTTP/2 は、ブラウザーとサーバーの通信方法を改善する、新しく更新された web プロトコルです。 情報の転送を高速化し、必要な処理能力を削減します。 Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
 
 Dynamic Media アカウントでの HTTP/2 の使用方法について詳しくは、[コンテンツの HTTP/2 配信](http2.md)を参照してください。

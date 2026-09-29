@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media アセットの管理について
-description: アップロード後に、ビデオや画像などの Dynamic Media アセットを操作する方法について説明します。アセットのプレビューやダウンロード、公開を行うことができます。
+description: アップロード後に、ビデオや画像などの Dynamic Media アセットを操作する方法について説明します。 アセットのプレビューやダウンロード、公開を行うことができます。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -11,16 +11,14 @@ exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '129'
 ht-degree: 100%
-
 ---
-
 # Dynamic Media アセットの管理について {#managing-assets}
 
 アップロード後の Dynamic Media アセット（画像、ビデオ、インタラクティブアセット）の管理には、アセットのプレビュー、ダウンロード、公開など、多数のタスクが必要になります。
 
-プレビュー時には、画像プリセット（画像のみの場合）またはビューアプリセット（ビデオと画像の場合）を適用することもできます。この両方をアセットに適用することはできません。詳しくは、[ビューアプリセットの適用](/help/assets/viewer-presets.md)および[画像プリセットの適用](/help/assets/image-sets.md)を参照してください。
+プレビュー時には、画像プリセット（画像のみの場合）またはビューアプリセット（ビデオと画像の場合）を適用することもできます。 この両方をアセットに適用することはできません。 詳しくは、[ビューアプリセットの適用](/help/assets/viewer-presets.md)および[画像プリセットの適用](/help/assets/image-sets.md)を参照してください。
 
 アセットの管理について詳しくは、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
