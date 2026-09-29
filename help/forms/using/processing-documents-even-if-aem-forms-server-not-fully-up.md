@@ -7,11 +7,9 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '129'
 ht-degree: 100%
-
 ---
-
 # AEM Forms サーバーは、すべてのサービスが起動して実行される前でもドキュメントの処理を開始します。{#aem-forms-server-start-processing-documents-even-if-it-is-not-fully-up}
 
 ## 問題 {#issue}
