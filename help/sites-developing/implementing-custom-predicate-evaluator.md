@@ -12,18 +12,16 @@ feature: Developing,Search,Query Builder
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 100%
-
+source-wordcount: '816'
+ht-degree: 98%
 ---
-
 # Query Builder 用のカスタム述語エバリュエーターの実装{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
 ここでは、カスタム述語エバリュエーターを実装して、[Query Builder](/help/sites-developing/querybuilder-api.md) を拡張する方法について説明します。
 
 ## 概要 {#overview}
 
-[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。CQ には、データの処理に役立つ一連の述語エバリュエーターが付属しています。
+[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。 CQ には、データの処理に役立つ一連の述語エバリュエーターが付属しています。
 
 ただし、複雑さを軽減し、より適切なセマンティクスを確保するカスタム述語エバリュエーターを実装することで、クエリを簡略化できます。
 
@@ -44,14 +42,14 @@ GitHub のコード
 
 このページのコードは GitHub にあります。
 
-* [GitHub の aem-search-custom-predicate-evaluator プロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)を開きます
+* [GitHubでaem-search-custom-predicate-evaluator プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)としてダウンロードします
 
 ### 述語エバリュエーターの詳細 {#predicate-evaluator-in-detail}
 
 述語エバリュエーターは、クエリの制約を定義する特定の述語を評価します。
 
-高度な検索制約（&quot;width > 200&quot;など）を、実際のコンテンツモデルに適合する特定の JCR クエリにマッピングします（例：metadata/@width > 200）。ノードを手動でフィルタリングして、制約をチェックすることもできます。
+高度な検索制約（&quot;width > 200&quot;など）を、実際のコンテンツモデルに適合する特定の JCR クエリにマッピングします（例：metadata/@width > 200）。 ノードを手動でフィルタリングして、制約をチェックすることもできます。
 
 >[!NOTE]
 >
@@ -85,7 +83,7 @@ daterange.lowerBound=2013-01-01T00:00:00.000+01:00
 daterange.lowerOperation=>=
 ```
 
-このクエリは有効ですが、解読しにくく、3 つのレプリケーションプロパティ間の関係が一目ではわかりません。カスタム述語エバリュエーターを実装すると、複雑さが軽減され、このクエリのセマンティックが向上します。
+このクエリは有効ですが、解読しにくく、3 つのレプリケーションプロパティ間の関係が一目ではわかりません。 カスタム述語エバリュエーターを実装すると、複雑さが軽減され、このクエリのセマンティックが向上します。
 
 #### 目的 {#objectives}
 
@@ -107,7 +105,7 @@ replic.action=Activate
 >
 >Maven を使用した新しい AEM プロジェクトの設定については、[Apache Maven を使用した AEM プロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
 
-まず、プロジェクトの Maven の依存関係を更新します。`PredicateEvaluator` は `cq-search` アーティファクトの一部なので、Maven の pom.xml ファイルに追加する必要があります。
+まず、プロジェクトの Maven の依存関係を更新します。 `PredicateEvaluator` は `cq-search` アーティファクトの一部なので、Maven の pom.xml ファイルに追加する必要があります。
 
 >[!NOTE]
 >
@@ -136,11 +134,11 @@ pom.xml
 
 #### ReplicationPredicateEvaluator の作成 {#writing-the-replicationpredicateevaluator}
 
-`cq-search` プロジェクトには、`AbstractPredicateEvaluator` 抽象クラスが含まれます。このクラスを数ステップで拡張して、独自のカスタム述語エバリュエーター `(PredicateEvaluator`）を実装できます。
+`cq-search` プロジェクトには、`AbstractPredicateEvaluator` 抽象クラスが含まれます。 このクラスを数ステップで拡張して、独自のカスタム述語エバリュエーター `(PredicateEvaluator`）を実装できます。
 
 >[!NOTE]
 >
->次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。詳しくは、[Java™ のドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
+>次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。 この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。 詳しくは、[Java™ のドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
 
 1. `com.day.cq.search.eval.AbstractPredicateEvaluator` を拡張する Java™ クラスを作成します。
 1. 次のように、`@Component` を使用してクラスに注釈を付けます

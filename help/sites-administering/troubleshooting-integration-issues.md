@@ -1,32 +1,34 @@
 ---
 title: 統合に関する問題のトラブルシューティング
+
 description: Adobe Experience Manager との統合時の問題のトラブルシューティング方法について説明します。
+
+
 contentOwner: raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
+
 exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '1078'
-ht-degree: 100%
-
+source-wordcount: '1102'
+ht-degree: 97%
 ---
-
 # 統合に関する問題のトラブルシューティング{#troubleshooting-integration-issues}
 
 ## トラブルシューティングに関する一般的なヒント {#general-troubleshooting-tips}
 
 ### JavaScript エラーがないことを確認 {#ensure-there-are-no-javascript-errors}
 
-ブラウザの JavaScript コンソールにエラーが表示されていないか確認してください。未処理のエラーにより、後続のコードが正しく実行されない可能性があります。エラーがある場合は、どのスクリプトがどの領域でエラーの原因となっているのかを確認してください。スクリプトへのパスにより、そのスクリプトがどの機能に属しているかがわかる場合があります。
+ブラウザの JavaScript コンソールにエラーが表示されていないか確認してください。 未処理のエラーにより、後続のコードが正しく実行されない可能性があります。 エラーがある場合は、どのスクリプトがどの領域でエラーの原因となっているのかを確認してください。 スクリプトへのパスにより、そのスクリプトがどの機能に属しているかがわかる場合があります。
 
 ### コンポーネントレベルでのログ {#logging-on-component-level}
 
-コンポーネントレベルでステートメントを追加すると便利な場合があります。コンポーネントがレンダリングされることで、変数値を表示し、潜在的な問題を特定するのに役立つ可能性のある一時的なマークアップを追加できます。次に例を示します。
+コンポーネントレベルでステートメントを追加すると便利な場合があります。 コンポーネントがレンダリングされることで、変数値を表示し、潜在的な問題を特定するのに役立つ可能性のある一時的なマークアップを追加できます。 次に例を示します。
 
 ```
 <%
@@ -61,14 +63,14 @@ AEM でカスタムデータインポーターサービスを作成について�
 
 ### PollingImporter が原因でシャットダウンに時間がかかる {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analytics は継承メカニズムを念頭に置いて設計されています。通常、ページプロパティの「[クラウドサービス](/help/sites-developing/extending-cloud-config.md)」タブ内の Analytics 設定への参照を追加することで、サイトの Analytics を有効にします。ページで別の設定が必要な場合を除き、設定は再度参照する必要はなく、自動的にすべてのサブページに継承されます。サイトへの参照を追加すると、タイプ `cq;PollConfig` の複数のノード（AEM 6.3 以前の場合は 12、AEM 6.4 以降の場合は 6）も自動的に作成されます。これは、Analytics データを AEM にインポートするために使用される PollingImporters をインスタンス化します。これにより、以下のようなことが起こります。
+Analytics は継承メカニズムを念頭に置いて設計されています。 通常、ページプロパティの「[クラウドサービス](/help/sites-developing/extending-cloud-config.md)」タブ内の Analytics 設定への参照を追加することで、サイトの Analytics を有効にします。 ページで別の設定が必要な場合を除き、設定は再度参照する必要はなく、自動的にすべてのサブページに継承されます。 サイトへの参照を追加すると、タイプ `cq;PollConfig` の複数のノード（AEM 6.3 以前の場合は 12、AEM 6.4 以降の場合は 6）も自動的に作成されます。これは、Analytics データを AEM にインポートするために使用される PollingImporters をインスタンス化します。 これにより、以下のようなことが起こります。
 
 * 多数のページが Analytics を参照すると、PollingImporter の数が増加します。
 * さらに、Analytics 設定への参照を含むページをコピーして貼り付けると、PollingImporters が重複します。
 
 #### 解決策 {#solution-1}
 
-まず、[error.log](/help/sites-deploying/configure-logging.md) を分析することで、アクティブまたは登録済みの PollingImporters の量について、何らかのインサイトを得られることがあります。次に例を示します。
+まず、[error.log](/help/sites-deploying/configure-logging.md) を分析することで、アクティブまたは登録済みの PollingImporters の量について、何らかのインサイトを得られることがあります。 次に例を示します。
 
 ```
 # Count PollingImporter entries
@@ -96,15 +98,15 @@ AEM でのカスタムデータインポーターサービスの作成につい�
 
 この問題を解決するには、次の方法を試してください。
 
-* 暗号化されたプロパティが復号化できることを確認します（暗号化では各 AEM インスタンスで異なる自動生成キーが使用される可能性があることに注意してください）。詳しくは、[構成プロパティの暗号化サポート](/help/sites-administering/encryption-support-for-configuration-properties.md)も参照してください。
+* 暗号化されたプロパティが復号化できることを確認します（暗号化では各 AEM インスタンスで異なる自動生成キーが使用される可能性があることに注意してください）。 詳しくは、[構成プロパティの暗号化サポート](/help/sites-administering/encryption-support-for-configuration-properties.md)も参照してください。
 * `/etc/cloudservices/dynamictagmanagement` で検索された設定の再公開
-* `/etc/cloudservices` 上の ACL をチェックします。ACL は次のようになります。
+* `/etc/cloudservices` 上の ACL をチェックします。 ACL は次のようになります。
 
-   * allow; jcr:read; webservice-support-servicelibfinder
-   * allow; jcr:read; everyone; `rep:glob:`&amp;ast;`/defaults/`&amp;ast;
-   * allow; jcr:read; everyone; `rep:glob:`&amp;ast;`/defaults`
-   * allow; jcr:read; everyone; `rep:glob:`&amp;ast;`/public/`&amp;ast;
-   * allow; jcr:read; everyone; `rep:glob:`&amp;ast;`/public`
+  * allow; jcr:read; webservice-support-servicelibfinder
+  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/defaults/`&amp;ast;
+  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/defaults`
+  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/public/`&amp;ast;
+  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/public`
 
 ACL 管理について詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md#permissions-in-aem)ページを参照してください。
 
@@ -132,21 +134,21 @@ ACL 管理について詳しくは、[ユーザー管理とセキュリティ](/
 <meta data-sly-include="/libs/cq/dtm/components/dynamictagmanagement/headlibs.jsp" data-sly-unwrap/>
 ```
 
-この `servicelibs.jsp` によって、必要な分析用 Javascript オブジェクトが追加され、Web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。Target サービスでは、ライブラリは `/libs/cq/analytics/components/testandtarget/headlibs.jsp` で読み込まれます。
+この `servicelibs.jsp` によって、必要な分析用 Javascript オブジェクトが追加され、Web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。 Target サービスでは、ライブラリは `/libs/cq/analytics/components/testandtarget/headlibs.jsp` で読み込まれます。
 
 読み込まれるライブラリのセットは、Target の設定で使用されているターゲットクライアントライブラリのタイプ（`mbox.js` または `at.js`）によって異なります。
 
-`mbox.js` または `at.js` 送信に DTM を使用する場合、コンテンツがレンダリングされる前にライブラリがロードされていることを確認してください。これらのライブラリを非同期的にロードするタグ管理システムを使用すると、ターゲット固有の JavaScript コードの実行に問題が生じる可能性があります。
+`mbox.js` または `at.js` 送信に DTM を使用する場合、コンテンツがレンダリングされる前にライブラリがロードされていることを確認してください。 これらのライブラリを非同期的にロードするタグ管理システムを使用すると、ターゲット固有の JavaScript コードの実行に問題が生じる可能性があります。
 
 追加情報については、[ターゲットコンテンツ向けの開発](/help/sites-developing/target.md#understanding-the-target-component)ページを参照してください。
 
 ### 「AppMeasurement の初期化でレポートスイート ID が見つかりません」というエラーがブラウザーコンソールに表示される {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
 
-この問題は、Adobe Analytics が DTM を使用して web サイトに実装され、カスタムコードを使用している場合に発生することがあります。原因は、`s = new AppMeasurement()` を使用して `s` オブジェクトをインスタンス化しているためです。
+この問題は、Adobe Analytics が DTM を使用して web サイトに実装され、カスタムコードを使用している場合に発生することがあります。 原因は、`s = new AppMeasurement()` を使用して `s` オブジェクトをインスタンス化しているためです。
 
 #### 解決策 {#solution-4}
 
-インスタンス化メソッドに `new AppMeasurement` ではなく `s_gi` を使用します。次に例を示します。
+インスタンス化メソッドに `new AppMeasurement` ではなく `s_gi` を使用します。 次に例を示します。
 
 ```
 var s_account="INSERT-RSID-HERE"
@@ -157,9 +159,9 @@ var s=s_gi(s_account)
 
 この問題には複数の原因が考えられます。
 
-* Target クライアントライブラリ（`mbox.js` または `at.js`）をサードパーティのタグ管理システムを使用して非同期にロードすると、ターゲティングがランダムに解除される可能性があります。ターゲットライブラリはページヘッドに同期的にロードされることになっています。これは、ライブラリが AEM から配信される場合に常に当てはまります。
+* Target クライアントライブラリ（`mbox.js` または `at.js`）をサードパーティのタグ管理システムを使用して非同期にロードすると、ターゲティングがランダムに解除される可能性があります。 ターゲットライブラリはページヘッドに同期的にロードされることになっています。 これは、ライブラリが AEM から配信される場合に常に当てはまります。
 
-* 2 つの Target クライアントライブラリ（`at.js`）を同時にロード（例えば、1 つは DTM を使用し、もう 1 つは AEM のTarget の設定を使用）。`adobe.target` バージョンが異なる場合、これが原因で `at.js` の定義がクラッシュする可能性があります。
+* 2 つの Target クライアントライブラリ（`at.js`）を同時にロード（例えば、1 つは DTM を使用し、もう 1 つは AEM のTarget の設定を使用）。 `adobe.target` バージョンが異なる場合、これが原因で `at.js` の定義がクラッシュする可能性があります。
 
 #### 解決策 {#solution-5}
 
@@ -170,7 +172,7 @@ var s=s_gi(s_account)
 
 ### AT.js 1.3 以降を使用すると、正しいオファーではなくデフォルトのオファーが常に表示される {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
-標準の AEM 6.2 および 6.3 は、AT.js バージョン 1.3.0 以降と互換性がありません。API のパラメータ検証が導入された AT.js バージョン 1.3.0 では、`adobe.target.applyOffer()` が要求する「mbox」パラメーターが `atjs-itegration.js` コードで提供されません。
+標準の AEM 6.2 および 6.3 は、AT.js バージョン 1.3.0 以降と互換性がありません。 API のパラメータ検証が導入された AT.js バージョン 1.3.0 では、`adobe.target.applyOffer()` が要求する「mbox」パラメーターが `atjs-itegration.js` コードで提供されません。
 
 #### 解決策 {#solution-6}
 

@@ -1,24 +1,26 @@
 ---
 title: 管理者が作業を開始しやすくするためのベストプラクティス
+
 description: アドビのエンジニアリングチームとコンサルティングチームが管理者のために作成したベストプラクティスです。
+
+
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
+
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '533'
 ht-degree: 100%
-
 ---
-
 # ベストプラクティス{#best-practices}
 
-ベストプラクティスでは、AEM を可能な限り効率的かつ効果的に開発、管理または使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+ベストプラクティスでは、AEM を可能な限り効率的かつ効果的に開発、管理または使用する方法を説明しています。 AEM の様々な領域を対象としたトピックが順次追加されています。
 
 次の領域について、ベストプラクティスに関するドキュメントが提供されています。
 
@@ -47,7 +49,7 @@ Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベス
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td>
    <td><a href="/help/assets/organize-assets.md">ファイル管理のベストプラクティス</a></td>
-   <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーを基準としています。このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td>
+   <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーを基準としています。 このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td>
   </tr>
   <tr>
    <td>Scene7 と AEM の統合</td>
@@ -76,12 +78,12 @@ Web サイトのコンテンツの管理とオーサリングには、次のよ�
   <tr>
    <td>GDPR コンプライアンス</td>
    <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR コンプライアンス</a></td>
-   <td>データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。AEM Sites は GDPR に準拠しています。このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。</td>
+   <td>データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。 AEM Sites は GDPR に準拠しています。 このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。 プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。</td>
   </tr>
   <tr>
    <td>インスタンスのデフォルト UI の定義</td>
    <td><p><a href="/help/sites-authoring/select-ui.md#configuring-the-default-ui-for-your-instance">個別の例に合わせたデフォルト UI の設定</a></p> </td>
-   <td>AEM には、タッチ操作向け UI とクラシック UI という 2 つの UI があります。この節では、個別の例に合わせたデフォルト UI の定義方法について詳しく説明します。</td>
+   <td>AEM には、タッチ操作向け UI とクラシック UI という 2 つの UI があります。 この節では、個別の例に合わせたデフォルト UI の定義方法について詳しく説明します。</td>
   </tr>
   <tr>
    <td>マルチサイト管理</td>

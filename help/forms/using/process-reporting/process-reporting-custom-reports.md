@@ -1,5 +1,5 @@
 ---
-title: 処理中のレポートのカスタムレポート
+title: プロセスレポートのカスタムレポート
 description: カスタムレポートを作成し、これらのレポートを JEE プロセスレポート UI 上の AEM Forms に追加できます。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,10 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '1053'
 ht-degree: 100%
-
 ---
-
-# 処理中のレポートのカスタムレポート{#custom-reports-in-process-reporting}
+# プロセスレポートのカスタムレポート{#custom-reports-in-process-reporting}
 
 QueryBuilder の REST インターフェイスを使用するか、QueryBuilder API を使用して OSGi サービスを作成して、カスタムレポートを作成できます。
 
@@ -24,19 +22,19 @@ QueryBuilder の REST インターフェイスを使用するか、QueryBuilder 
 
 カスタムレポートを追加する前に、次のテンプレート手順を実行します。
 
-1. カスタムレポートで使用するデータは、プロセスレポートで使用可能である必要があります。データを確実に使用できるようにするには、cron ジョブをスケジュールするか、プロセスレポート UI で「**[同期](https://helpx.adobe.com/jp/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 」オプションを使用します。
-1. URL リクエスト（目的のクエリをカプセル化）は、適切なクエリ結果オブジェクトを返す必要があります。クエリを作成するには、[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja) の REST インターフェイスを使用して、QueryBuilder API を使用して OSGi サービスを作成します。動的クエリや静的クエリを作成できます。
+1. カスタムレポートで使用するデータは、プロセスレポートで使用可能である必要があります。 データを確実に使用できるようにするには、cron ジョブをスケジュールするか、プロセスレポート UI で「**[同期](https://helpx.adobe.com/jp/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 」オプションを使用します。
+1. URL リクエスト（目的のクエリをカプセル化）は、適切なクエリ結果オブジェクトを返す必要があります。 クエリを作成するには、[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja) の REST インターフェイスを使用して、QueryBuilder API を使用して OSGi サービスを作成します。 動的クエリや静的クエリを作成できます。
 
-1. 結果を表示するカスタムユーザーインターフェイスを作成します。スタンドアロンのユーザーインターフェイスを作成したり、結果を既存のプロセスレポート UI と統合したりできます。
+1. 結果を表示するカスタムユーザーインターフェイスを作成します。 スタンドアロンのユーザーインターフェイスを作成したり、結果を既存のプロセスレポート UI と統合したりできます。
 
 ## QueryBuilder の REST インターフェイスの使用 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST インターフェイスは、Java API と REST API を介してアセット共有 QueryBuilder の機能を表示します。次の手順を実行する前に [CRX QueryBuilder REST インターフェイス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja)の使用方法を学びます。
+CRX QueryBuilder REST インターフェイスは、Java API と REST API を介してアセット共有 QueryBuilder の機能を公開します。 次の手順を実行する前に [CRX QueryBuilder REST インターフェイス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja)の使用方法を学びます。
 
-1. URL `https://'[server]:[port]'/lc/bin/querybuilder.json` を参照 
+1. URL `https://'[server]:[port]'/lc/bin/querybuilder.json` を参照
 1. プロセスレポートのストレージノード構造とノードプロパティに基づいてクエリを作成します。
 
-   オプションのパラメーターを指定して、オフセット、制限、ヒット、プロパティを指定できます。静的レポートでは引数をハードコードし、動的レポートでは UI からパラメーターを取得できます。
+   オプションのパラメーターを指定して、オフセット、制限、ヒット、プロパティを指定できます。 静的レポートでは引数をハードコードし、動的レポートでは UI からパラメーターを取得できます。
 
    すべてのプロセス名を取得するには、次のようなクエリを実行します。
 
@@ -44,27 +42,27 @@ CRX QueryBuilder REST インターフェイスは、Java API と REST API を介
 
    >[!NOTE]
    >
-   >すべてのクエリで、パスパラメーターは crx ストレージの場所を指し、文字は URL 標準に従ってエスケープされます。
+   >すべてのクエリで、パスパラメーターは CRX ストレージの場所を指し、文字は URL 標準に従ってエスケープされます。
 
 ## QueryBuilder API を使用したサービスの作成  {#creating-a-service-using-query-builder-api-nbsp}
 
 QueryBuilder API を使用してサービスを作成するための前提条件は、[CQ OSGI バンドルの作成と導入](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および [QueryBuilder API の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja)です。
 
-1. 適切な注釈で OSGi サービスを作成します。QueryBuilder にアクセスするには、次を使用します。
+1. 適切な注釈で OSGi サービスを作成します。 QueryBuilder にアクセスするには、次を使用します。
 
    ```java
    @Reference(referenceInterface = QueryBuilder.class)
     private QueryBuilder queryBuilder;
    ```
 
-1. 述語グループを作成します。述語グループを作成するコードは次のとおりです。
+1. 述語グループを作成します。 述語グループを作成するコードは次のとおりです。
 
    ```java
    PredicateGroup predicateGroup = new PredicateGroup();
     predicateGroup.setAllRequired(true);
    ```
 
-1. 新しく作成した predicateGroup に述語を追加します。[5.3 の JcrBoolPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の JcrPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の RangePropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の DateRangePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の TypePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) は便利な述語の構成例です。
+1. 新しく作成した predicateGroup に述語を追加します。 [5.3 の JcrBoolPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の JcrPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の RangePropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の DateRangePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の TypePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) は便利な述語の構成例です。
 
    静的レポートの場合は述語をハードコードし、動的レポートの場合はリクエストから述語を取得します。
 
@@ -113,7 +111,7 @@ QueryBuilder API を使用してサービスを作成するための前提条件
            SearchResult searchResult = query.getResult();
    ```
 
-1. 結果に対して反復処理を行い、結果を目的の形式に変換します。結果を CSV 形式で送信するコードは次のとおりです。
+1. 結果に対して反復処理を行い、結果を目的の形式に変換します。 結果を CSV 形式で送信するコードは次のとおりです。
 
    ```java
    Iterator<Node> iter = searchResult.getNodes();
@@ -421,21 +419,21 @@ public class PeriodicProcessVolume {
 </project>
 ```
 
-## 個別の UI の作成 {#creating-a-separate-ui-nbsp}
+## 個別の UI の作成  {#creating-a-separate-ui-nbsp}
 
 結果を表示するための個別の UI を作成するための前提条件は [5.6.1 での Sling の基本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[CRX ノードの作成](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および適切な[アクセス権限](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)です。
 
-1. `/apps` ノードに CRX ノードを作成し、適切なアクセス権限を付与します。（PERM_PROCESS_REPORTING_USER）
+1. `/apps` ノードに CRX ノードを作成し、適切なアクセス権限を付与します。 （PERM_PROCESS_REPORTING_USER）
 1. `/content` ノードにレンダラーを定義します。
-1. 手順 1 で作成した HTML に JSP ファイルまたはノードファイルを追加します。また、CSS ファイルを追加することもできます。
+1. 手順 1 で作成したノードに JSP ファイルまたは HTML ファイルを追加します。 また、CSS ファイルを追加することもできます。
 
    ![JSP ファイルと CSS ファイルを含むサンプルノード](assets/nodewith_jsp_css_new.png)
 
    JSP ファイルと CSS ファイルを含むサンプルノード
 
-1. querybuilder REST API またはサービスへの Ajax 呼び出しを開始する JavaScript コードを追加します。また、適切な引数を追加します。
+1. querybuilder REST API またはサービスへの Ajax 呼び出しを開始する JavaScript コードを追加します。 また、適切な引数を追加します。
 
-1. Ajax 呼び出しに適切なサクセスハンドラーを追加し、結果を解析して表示します。結果を複数の形式（json、csv、ユーザー定義）で解析し、表形式または他の形式で表示できます。
+1. Ajax 呼び出しに適切なサクセスハンドラーを追加し、結果を解析して表示します。 結果を複数の形式（json、csv、ユーザー定義）で解析し、表形式または他の形式で表示できます。
 
 1. （オプション）Ajax 呼び出しに適切なエラーハンドラーを追加します。
 
@@ -637,16 +635,16 @@ response.setCharacterEncoding("utf-8");
 1. `/content/process-reporting-runtime/custom-reports` プラグイン可能なすべてのレポート用ノードに、子 `nt:unstructured` ノードを作成します。
 
    * **ID** - レポートの独自の ID 番号を指定します。
-   * **名前** - レポートの名前を指定します。名前が UI に表示されます。
-   * **リンク** - 個別の UI のレンダラーへの相対リンクを指定します。リンクは手順 1 で作成します。
-   * **説明** - レポートの 1 行の説明を指定します。説明フィールドは空のままにすることができます。
-   * **アイコン** - レポートを画像で表す画像を指定します。アイコンフィールドは空のままにすることができます。
+   * **名前** - レポートの名前を指定します。 名前が UI に表示されます。
+   * **リンク** - 個別の UI のレンダラーへの相対リンクを指定します。 リンクは手順 1 で作成します。
+   * **説明** - レポートの 1 行の説明を指定します。 説明フィールドは空のままにすることができます。
+   * **アイコン** - レポートを画像で表す画像を指定します。 アイコンフィールドは空のままにすることができます。
 
    ![ノードのプロパティ](assets/node_properties_new.png)
 
    ノードのプロパティ
 
-1. レポート UI は、プロセスレポート UI に統合されています。UI を統合すると、更新された UI は次の画像のようになります。
+1. レポート UI は、プロセスレポート UI に統合されています。 UI を統合すると、更新された UI は次の画像のようになります。
 
    ![新しく追加されたカスタムレポートのユーザーインターフェイス](assets/sampleui_screenshot_new.png)
 
@@ -660,4 +658,4 @@ response.setCharacterEncoding("utf-8");
 
 `sample-report-pkg-1.zip` パッケージをインポートすると、記事で紹介したカスタムレポートや UI を、プロセス管理 UI に統合することができます。
 
-[ファイルを入手](assets/sample-report-pkg-1.zip)
+[ファイルの取得](assets/sample-report-pkg-1.zip)
