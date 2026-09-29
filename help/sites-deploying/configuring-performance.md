@@ -235,7 +235,7 @@ AEM 6.0 以降、Adobe Experience Manager は Oak ベースのリポジトリア
 
 #### リポジトリでの設定 {#configuration-in-the-repo}
 
-sling:OsgiConfig ノード ](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス [を設定する場合は、既存のサービスのPID （例：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705）を見つける必要があります。 Web コンソールを使用すると、PID を検出できます。
+sling:OsgiConfig ノード [&#128279;](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス を設定する場合は、既存のサービスのPID （例：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705）を見つける必要があります。 Web コンソールを使用すると、PID を検出できます。
 
 `queue.maxparallel` という名前のプロパティを設定します。
 
@@ -432,7 +432,7 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 
 | エラーのシナリオ | エラータイプ | いいえ。 /ユーザー | トランザクション/秒（予想値） | トランザクション/秒（テスト値） | 説明 |
 |---|---|---|---|---|---|
-| 検索コンポーネントのオーバーロード | グローバルワイルドカード（アスタリスク）で検索 | 10 | 1 |  | &amp;ast;&amp;ast;&amp;ast；のみが検索されます。 |
+| 検索コンポーネントのオーバーロード | グローバルワイルドカード（アスタリスク）で検索 | 10 | 1 |  | &ast;&ast;&amp;ast；のみが検索されます。 |
 |   | ストップワード | 20 | 2 |  | ストップワードの検索。 |
 |   | 空の文字列 | 10 | 1 |  | 空の文字列の検索。 |
 |   | 特殊文字 | 10 | 1 |  | 特殊文字の検索。 |
@@ -479,7 +479,7 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 
 ## Dispatcher の使用時のパフォーマンスの最適化 {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) はアドビのキャッシュ／ロードバランシングツールです。 Dispatcher を使用する場合は、キャッシュパフォーマンスを確保するために web サイトの最適化を検討してください。
+[Dispatcher &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) はアドビのキャッシュ／ロードバランシングツールです。 Dispatcher を使用する場合は、キャッシュパフォーマンスを確保するために web サイトの最適化を検討してください。
 
 >[!NOTE]
 >

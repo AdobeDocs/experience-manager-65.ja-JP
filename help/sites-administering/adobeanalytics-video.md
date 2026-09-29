@@ -225,7 +225,7 @@ Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の�
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*これは Adobe Analytics への&#x200B;**最初の呼び出し**であり、次の値が含まれています。*
+*これは Adobe Analytics への&#x200B;**最初の呼び出し**&#x200B;であり、次の値が含まれています。*
 
 * *eventdata.a.media.name に対する prop1 と eVar1*
 * *prop2～4、および contentType（video）と segment（1:O:1-4）を格納している eVar2 と eVar3*
@@ -233,7 +233,7 @@ Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の�
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-*これは Adobe Analytics への&#x200B;**3 回目の呼び出**しです。*
+*これは Adobe Analytics への&#x200B;**3 回目の呼び出**&#x200B;しです。*
 
 * *prop1 と eVar1 には a.media.name が格納されている*
 * *セグメントが表示されたことによって event1 が送信された*
@@ -320,7 +320,7 @@ eventdata.events.milestoneXX
 
    ![lmilestones1](assets/lmilestones1.png)
 
-   *この呼び出しで送信される&#x200B;**pev3**変数には、以下の情報が格納されます。*
+   *この呼び出しで送信される&#x200B;**pev3**&#x200B;変数には、以下の情報が格納されます。*
 
    * *Name* - ビデオファイルの名前（例：*film.avi*）
 
