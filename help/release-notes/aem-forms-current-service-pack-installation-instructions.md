@@ -5,13 +5,11 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 8ad159ce65fd11c6d1d75a2bc75061f6996f173e
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '2144'
-ht-degree: 91%
-
+source-wordcount: '2149'
+ht-degree: 92%
 ---
-
 # AEM 6.5 Forms サービスパックのインストール手順 {#aem-form-patch-installation-instructions}
 
 ## リリース情報
@@ -29,14 +27,14 @@ ht-degree: 91%
 
 ## Experience Manager Forms 6.5 に含まれる内容
 
-Adobe Experience Manager（AEM）Forms サービスパックには、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善など、新機能およびアップグレードされた機能が含まれています。 最新の機能と改善を提供するために、AEM Forms リリースのサービスパックを定期的に用意しています。 テクノロジースタックに応じて次のいずれかのパスを選択し、お使いの環境にサービスパックをダウンロードしてインストールします。
+Adobe Experience Manager（AEM）Forms サービスパックには、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善など、新機能およびアップグレードされた機能が含まれています。 AEM Forms では、最新の機能と改善を提供するために、サービスパックを定期的にリリースしています。 テクノロジースタックに応じて次のいずれかのパスを選択し、お使いの環境にサービスパックをダウンロードしてインストールします。
 
 * [JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール](#download-and-install-for-jee-service-pack)
 * [OSGi 環境の AEM Forms へのサービスパックのダウンロードおよびインストール](#download-and-install-for-osgi-service-pack)
 
 >[!NOTE]
 >
-> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。 AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE の完全なインストーラーです。 完全なインストーラーが新しいプラットフォームをサポートするのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善のみが含まれます。 新規インストールを実行する場合や、JEE 環境上の AEM 6.5 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12.0 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、JEE 上のAEM 6.5.18.0 Forms の完全なインストーラー（2023年8月31日（PT）にリリース）を使用することをお勧めします。 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> * アドビは、6 回目のサービスパックごとに完全なインストーラーをリリースしています。 AEM 6.5 Forms サービスパック 18（6.5.18.0）は、最新の JEE の完全なインストーラーです。 完全なインストーラーが新しいプラットフォームをサポートするのに対して、通常のサービスパックインストーラーには新機能、バグ修正、一般的な改善が含まれます。 新規インストールを実行する場合や、JEE 環境上の AEM 6.5 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 Forms インストーラー（2019年4月8日（PT）にリリース）または AEM 6.5.12.0 Forms インストーラー（2022年3月3日（PT）にリリース）ではなく、JEE 上のAEM 6.5.18.0 Forms の完全なインストーラー（2023年8月31日（PT）にリリース）を使用することをお勧めします。 完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 > * [AEM 6.5 クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=ja)で使用できるアダプティブフォームなどの AEM Forms 機能は、探索と評価のみを目的としています。 実稼動環境で使用する場合は、AEM Forms の有効なライセンスを取得することが不可欠です。
 
 <!--
@@ -95,15 +93,15 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 1. **AEM Forms on JEE サービスパックのインストーラーアーカイブ**&#x200B;をハードドライブに抽出します。
 
    * **ウィンドウ**
-インストーラーをコピーしたハードディスク上のインストールメディアまたはフォルダー上の適切なディレクトリに移動し、`aemforms65_cfp_install.exe` ファイルをダブルクリックします。
+     インストーラーをコピーしたハードディスク上のインストールメディアまたはフォルダー上の適切なディレクトリに移動し、`aemforms65_cfp_install.exe` ファイルをダブルクリックします。
 
-      * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
-      * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
+     * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
+     * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-適切なディレクトリに移動し、シェルから`./aem65_cfp_install.bin`と入力します。
+     適切なディレクトリに移動し、シェルから`./aem65_cfp_install.bin`と入力します。
 
-      * （Linux®）`Linux/Disk1/InstData/NoVM`
+     * （Linux®）`Linux/Disk1/InstData/NoVM`
 
    これにより、インストール手順を示すインストールウィザードが起動します。
 
@@ -122,14 +120,14 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
      >
      >* **ConfigurationManager.bat** ファイルの更新または置き換えを行うと、.lax ファイルを手動で更新する必要がなくなります。
 
-1. **[UNIX ベース専用]：**&#x200B;**Configuration Manager を起動**&#x200B;チェックボックスは、デフォルトで選択されています。 **[!UICONTROL 完了]**&#x200B;をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、**Configuration Manager を起動**&#x200B;オプションの選択を解除してから、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
+1. **[UNIX ベース専用]：****Configuration Manager を起動**&#x200B;チェックボックスは、デフォルトで選択されています。 **[!UICONTROL 完了]**&#x200B;をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、**Configuration Manager を起動**&#x200B;オプションの選択を解除してから、**[!UICONTROL 完了]**&#x200B;をクリックします。 `[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
    * [JBoss用AEM フォームのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [WebSphere用AEM Formsのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
    * [AEM Forms for WebLogicのインストールとデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
-   * [JBoss® クラスター用AEM フォームのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
+   * [JBoss® クラスター用AEM フォームのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
    * [WebSphere® クラスター用AEM Formsのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [WebLogic クラスター用AEM Formsのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
@@ -150,7 +148,7 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
    > * If you are upgrading from **AEM Service Pack 6.5.15.0**, the installation of the **servlet fragment** is not required. For versions **AEM Service Pack 6.5.14.0** or earlier, it is **mandatory to install** the servlet fragment.
    -->
 
-サーブレットフラグメントのダウンロードとインストール
+サーブレットフラグメントをダウンロードしてインストールするには：
 
 1. フラグメントをダウンロードしていない場合は、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)からダウンロードします。
 
@@ -176,8 +174,8 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
 [!DNL ExperienceManager] サービスパックの自動インストールに使用できる方法は 2 つあります。<!--       UPDATE FOR EACH NEW RELEASE -->
 
-* サーバーがオンラインで利用できるようになったら、パッケージを`../crx-quickstart/install` フォルダーに配置します。
-パッケージは自動的にインストールされます。
+* サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。
+パッケージが自動的にインストールされます。
 
 * [パッケージマネージャーの HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) を使用します。 ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
@@ -189,9 +187,9 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-   1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (spversion)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
-   1. すべての OSGi バンドルは、OSGi コンソールで&#x200B;**[!UICONTROL アクティブ]**&#x200B;または&#x200B;**[!UICONTROL フラグメント]**&#x200B;のいずれかになっています（web コンソールを使用：`/system/console/bundles`）。
-   1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/bundles`）。
+  1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (spversion)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+  1. すべての OSGi バンドルは、OSGi コンソールで&#x200B;**[!UICONTROL アクティブ]**&#x200B;または&#x200B;**[!UICONTROL フラグメント]**&#x200B;のいずれかになっています（web コンソールを使用：`/system/console/bundles`）。
+  1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/bundles`）。
 
 +++
 
@@ -262,11 +260,11 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 
   このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-   1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (spversion)` が表示されます。 <!-- UPDATE FOR EACH NEW RELEASE -->
+  1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (spversion)` が表示されます。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-   1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
+  1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
 
-      1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/bundles`）。
+     1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/bundles`）。
 
 +++
 

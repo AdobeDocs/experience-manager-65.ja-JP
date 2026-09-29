@@ -6,13 +6,11 @@ exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: 38e3439b5b9f3b4bc56bb1618d33e570ca0603f5
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1920'
 ht-degree: 99%
-
 ---
-
 # [!DNL Adobe Launch] を使用した Analytics {#analyticsusingadobelaunch}
 
 AEM Forms は [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=ja) と統合されているので、公開したフォームのパフォーマンス指標を取得および追跡できます。 これらの指標を分析する目的は、ビジネスユーザーがエンドユーザーの行動に関するインサイトを得て、データキャプチャエクスペリエンスを最適化できるようにすることです。 Adobe Analytics for Adaptive Forms を介して、ログインしているユーザーとログインしていない（匿名）ユーザーの両方の動作を取得および追跡できます。
@@ -165,7 +163,7 @@ AEM Forms と [Adobe Analytics](https://experienceleague.adobe.com/docs/experien
 
 1. 「**[!UICONTROL アクション]**」セクションで、「+」を選択し、拡張機能名として「**[!UICONTROL Adobe Analytics]**」を指定します。
 
-1. アクションタイプとして「**[!UICONTROL 変数をクリア]**」を選択します。「**[!UICONTROL 変更を保持]**」を選択します。これらの手順を実行すると、**[!UICONTROL アクション]** セクションは次のように表示されます。
+1. アクションタイプとして「**[!UICONTROL 変数をクリア]**」を選択します。 「**[!UICONTROL 変更を保持]**」を選択します。 これらの手順を実行すると、「**[!UICONTROL アクション]**」セクションの表示は次のようになります。
    ![アクションの設定](/help/forms/using/assets/actions-config.png)
 
    必要に応じて、「**[!UICONTROL アクション]**」セクションをカスタマイズします。 例えば、アクションフローで「**ビーコンを送信**」ステップを 2 つ定義して、一方のステップではデータを [!DNL Adobe Analytics] に送信してページビューとして扱い、もう一方のステップではデータを [!DNL Adobe Analytics] に送信するものの、ページビューとしては扱わない、というようなことが可能です。
@@ -239,8 +237,8 @@ Adobe Launch 設定を作成するには、次の手順を実行します。
 アダプティブフォームで [!DNL Adobe Analytics] を有効にすると、AEM Forms と [!DNL Adobe Analytics] の間に適切なデータイベントフローがあるかどうかを[検証](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=ja#validate-the-page-view-beacon)できます。 AEM Forms と Adobe Analytics の統合が完了しました。 これで [Adobe Analytics でのレポートの設定と表示](#view-reports-adobe-analytics)を行えるようになりました。
 
 >[!NOTE]
+>
 >[クラウドサービスのフレームワークを使用した分析](/help/forms/using/configure-analytics-forms-documents.md)機能と **Adobe Launch を使用した分析**&#x200B;機能の両方が同時に有効になっている場合、**Adobe Launch を使用した分析**&#x200B;機能が優先されます。
-> 
 
 ### カスタムイベントをキャプチャするルールの作成（オプション） {#capture-custom-events}
 

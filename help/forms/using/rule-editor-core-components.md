@@ -5,16 +5,14 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 107ad23b-53df-41d4-ab97-b09d189abc1b
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '5734'
+source-wordcount: '5748'
 ht-degree: 98%
-
 ---
-
 # アダプティブフォームコアコンポーネントへのルールの追加 {#adaptive-forms-rule-editor}
 
-この記事では、アダプティブフォームコアコンポーネントの最新のルールエディター機能を紹介します。以下の機能です。
+この記事では、アダプティブフォームコアコンポーネントの最新のルールエディター機能として、次の機能を紹介します。
 * when-then-else 機能を使用したネストされた条件の実装のサポート
 * パネルやフォーム（フィールドを含む）の検証またはリセット
 * カスタム関数内の let 関数や arrow 関数（ES10 サポート）などの最新の JavaScript 機能をサポートします。
@@ -53,7 +51,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->利用可能なルールタイプ（ルールエディターで定義した条件やアクションを含む）は、ルールを作成しているフォームオブジェクトの種類によっても異なります。 ルールエディターには、特定のフォームオブジェクトタイプに対して条件およびアクションステートメントを記述するための、有効なルールタイプとオプションのみが表示されます。 例えば、パネルオブジェクトでは、「Validate」タイプと「Set Value Of」タイプは表示されません。
+>利用可能なルールタイプ（ルールエディターで定義した条件やアクションを含む）は、ルールを作成しているフォームオブジェクトの種類によっても異なります。 ルールエディターには、特定のフォームオブジェクトタイプに対して条件およびアクションステートメントを記述するための、有効なルールタイプとオプションのみが表示されます。 例えば、パネルオブジェクトでは、「Validate」タイプと「Set value of」タイプは表示されません。
 
 ルールエディターで使用可能なルールタイプついて詳しくは、[ルールエディターで利用できるルールタイプ](rule-editor.md#p-available-rule-types-in-rule-editor-p)を参照してください。
 
@@ -167,7 +165,7 @@ _
 ##### When 条件機能で許可された複数のフィールドを使用する際の考慮事項
 
 * ルールエディターでこの機能を使用するには、[コアコンポーネントおよび仕様のバージョンが最新バージョン](https://github.com/adobe/aem-core-forms-components/tree/release/650)に設定されていることを確認します。
-* ルールが When 条件内の異なるフィールドに適用されている場合、これらのフィールドの 1 つのみを変更した場合でも、ルールはトリガーします。
+* ルールが When 条件内の異なるフィールドに適用されている場合、これらのフィールドの 1 つのみを変更した場合でも、ルールがトリガーされます。
 
 
 <!--
@@ -258,7 +256,7 @@ When 条件機能で許可された複数のフィールドで問題が発生し
 
 **[!UICONTROL 関数の出力]**：定義済み関数またはカスタム関数に基づいてルールを定義します。
 
-**[!UICONTROL に移動]**&#x200B;他のアダプティブ Forms、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動します。
+**[!UICONTROL に移動]**他のアダプティブ Forms、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動します。
 <!--Interactive Communications,-->
 <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
@@ -419,7 +417,7 @@ To define a rule based on a form data model:
 
 ルールエディターのユーザーインターフェイスの左側のペインには、「**[!UICONTROL フォームオブジェクト]**」と「**[!UICONTROL 関数]**」の 2 つのタブがあります。
 
-「フォームオブジェクト」タブには、アダプティブフォームに含まれているオブジェクトがすべて階層表示されます。 ここには、オブジェクトのタイトルとタイプが表示されます。 ルールの作成時は、フォームオブジェクトをルールエディターまでドラッグ＆ドロップすることができます。 オブジェクトまたは関数をプレースホルダーにドラッグ＆ドロップしてルールの作成や編集を行うと、適切な値の型がプレースホルダーに自動的に取り込まれるます。
+「フォームオブジェクト」タブには、アダプティブフォームに含まれているオブジェクトがすべて階層表示されます。 ここには、オブジェクトのタイトルとタイプが表示されます。 ルールの作成時は、フォームオブジェクトをルールエディターまでドラッグ＆ドロップすることができます。 オブジェクトまたは関数をプレースホルダーにドラッグ＆ドロップしてルールの作成や編集を行うと、適切な値の型がプレースホルダーに自動的に取り込まれます。
 
 1 つ以上の有効なルールが適用されているフォームオブジェクトには、緑のドットが付いています。 フォームオブジェクトに適用されているルールのいずれかが無効な場合、フォームオブジェクトには黄色のドットが付きます。
 
@@ -437,7 +435,7 @@ To define a rule based on a form data model:
 
 ### C. フォームオブジェクトと関数の切り替え {#c-form-objects-and-functions-toggle-br}
 
-切替スイッチボタンをタップすると、フォームオブジェクトと関数ペインが切り替わります。
+切替スイッチをタップすると、フォームオブジェクトと関数のペインの表示が切り替わります。
 
 ### D. ルールのビジュアルエディター {#visual-rule-editor}
 
@@ -536,17 +534,11 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 1. 「**[!UICONTROL 完了]**」を選択し、ルールを保存します。
 
-<!--
-1. Repeat steps 1 through 5 to define another rule to hide the Spouse Salary field if the marital Status is Single. The rule appears as follows in the rule editor.
+   >[!NOTE]
+   >
+   > または、「Marital Status（配偶者の有無）」フィールドに「When」ルールを記述する代わりに、「Spouse Salary（配偶者の給与）」フィールド上に「Show」ルールを設けて、同じ動作を実装することもできます。
 
-   ![write-rules-visual-editor-8](assets/write-rules-visual-editor-8-cc.png)
-   -->
-
->[!NOTE]
->
-> または、「Marital Status（配偶者の有無）」フィールドに「When」ルールを記述する代わりに、「Spouse Salary（配偶者の給与）」フィールド上に「Show」ルールを設けて、同じ動作を実装することもできます。
-
-![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
+   ![write-rules-visual-editor-9](assets/write-rules-visual-editor-9-cc.png)
 
 1. 次に、融資適格金額を算出するためのルールを記述します。ここでは、総給与の 50% として計算され、「Loan Eligibility（貸付資格）」フィールドに表示されます。 この結果を得るには、「Loan Eligibility （貸付資格）」フィールド上に「**[!UICONTROL 設定値]**」ルールを作成します。
 
@@ -566,7 +558,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
    * 「**[!UICONTROL 演算子を選択]**」フィールドから「**[!UICONTROL プラス]**」を選択します。
 
-   * 「フォームオブジェクト」タブから、他の&#x200B;**[!UICONTROL ドロップオブジェクトの「**&#x200B;[!UICONTROL &#x200B; Spouse Salary （配偶者の給与）]&#x200B;**」フィールドを選択またはドラッグ＆ドロップするか、「ここ」]**&#x200B;フィールドを選択します。
+   * 「フォームオブジェクト」タブから、他の&#x200B;**[!UICONTROL ドロップオブジェクトの「**[!UICONTROL  Spouse Salary （配偶者の給与）]**」フィールドを選択またはドラッグ＆ドロップするか、「ここ」]**&#x200B;フィールドを選択します。
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
@@ -600,7 +592,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 1. 「**[!UICONTROL 完了]**」を選択します。 ルールが保存されます。
 
-1. ステップ 7～14 を繰り返し、配偶者の有無が「Single（独身）」であれば融資適格額を計算する別のルールを定義します。 ルールエディターでは、ルールが次のように表示されます。
+1. ステップ 7～14 を繰り返し、配偶者の有無が「Single（独身）」であれば融資資格を計算する別のルールを定義します。 ルールエディターでは、ルールが次のように表示されます。
 
    ![write-rules-visual-editor-17](assets/write-rules-visual-editor-17-cc.png)
 
@@ -612,13 +604,19 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 ![write-rules-visual-editor-19](assets/write-rules-visual-editor-19-cc.png)
 
+<!--
+1. Repeat steps 1 through 5 to define another rule to hide the Spouse Salary field if the marital Status is Single. The rule appears as follows in the rule editor.
+
+   ![write-rules-visual-editor-8](assets/write-rules-visual-editor-8-cc.png)
+-->
+
 
 <!--
 ### Using code editor {#using-code-editor}
 
 Users added to the forms-power-users group can use code editor. The rule editor auto generates the JavaScript code for any rule you create using visual editor. You can switch from visual editor to the code editor to view the generated code. However, if you modify the rule code in the code editor, you cannot switch back to the visual editor. If you prefer writing rules in code editor rather than visual editor, you can write rules afresh in the code editor. The visual-code editors switcher helps you switch between the two modes.
 
-The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html).
+The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 For more information about guidelines to write rules in the code editor, see [Adaptive Form Expressions](adaptive-form-expressions.md).
 
@@ -720,7 +718,7 @@ For example, you want to add a custom function which calculates area of a square
 
 To create a client library and add it in the CRX repository, perform the following steps:
 
-1. Create a client library. For more information, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=ja#developing).
+1. Create a client library. For more information, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 2. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
 
    >[!NOTE]
