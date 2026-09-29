@@ -37,7 +37,7 @@ AEM には、[SAML](https://saml.xml.org/saml-specifications) 認証ハンドラ
 
 ## SAML 2.0 認証ハンドラーの設定 {#configuring-the-saml-authentication-handler}
 
-[Web コンソール ](/help/sites-deploying/configuring-osgi.md)では、**Adobe Granite SAML 2.0 Authentication Handler**&#x200B;と呼ばれる[SAML](https://saml.xml.org/saml-specifications) 2.0認証ハンドラー設定にアクセスできます。 次のプロパティを設定できます。
+[Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)では、**Adobe Granite SAML 2.0 Authentication Handler**&#x200B;と呼ばれる[SAML](https://saml.xml.org/saml-specifications) 2.0認証ハンドラー設定にアクセスできます。 次のプロパティを設定できます。
 
 >[!NOTE]
 >
