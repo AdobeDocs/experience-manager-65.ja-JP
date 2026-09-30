@@ -10,13 +10,11 @@ exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 97%
-
+source-wordcount: '702'
+ht-degree: 95%
 ---
-
 # タッチ UI への移行{#migration-to-the-touch-ui}
 
 バージョン 6.0 以降、Adobe Experience Manager（AEM）では、*タッチ操作対応 UI*（単に&#x200B;*タッチ UI*&#x200B;とも呼ばれます）をクリックします。 これは、Adobe Experience Cloud と、全体的な Adobe ユーザーインターフェイスのガイドラインに合わせて表示されます。 これは AEM の標準的な UI で、レガシーでデスクトップ向けのインターフェースは&#x200B;*クラシック UI* と呼ばれています。
@@ -119,7 +117,7 @@ ht-degree: 97%
 * [クラシックコンポーネントからの移行](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
 * [AEM 最新化ツール](/help/sites-developing/modernization-tools.md) — クラシック UI コンポーネントのダイアログをタッチ UI に変換することに役立ちます。
 
-   * タッチ UI には、「タッチ UI のラッパー」内でクラシック UI ダイアログを開くための互換性レイヤーがありますが、機能が限られているので、長期的には推奨されません。
+  * タッチ UI には、「タッチ UI のラッパー」内でクラシック UI ダイアログを開くための互換性レイヤーがありますが、機能が限られているので、長期的には推奨されません。
 
 * [タッチ UIでのダイアログフィールドのカスタマイズ](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [新しい Granite UI フィールドコンポーネントの作成](/help/sites-developing/granite-ui-component.md)
@@ -148,9 +146,9 @@ ht-degree: 97%
 AEM の開発について詳しくは、以下のリソースのコレクションを参照してください。
 
 * [ユーザーガイドの作成](/help/sites-developing/getting-started.md)
-* [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [Granite UI ドキュメント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sitesのチュートリアルとビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)
-* [AEM Sites の開発の手引き - WKND チュートリアル](/help/sites-developing/getting-started.md)
+* [AEM Sites 開発入門 - WKND チュートリアル](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=ja)
 * [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 

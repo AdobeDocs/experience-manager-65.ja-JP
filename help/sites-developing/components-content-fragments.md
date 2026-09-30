@@ -11,10 +11,10 @@ exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Content Fragments
 role: Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 100%
+source-wordcount: '1004'
+ht-degree: 98%
 ---
 # コンテンツフラグメント用コンポーネント{#components-for-content-fragments}
 
@@ -129,4 +129,4 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 * `transformer-cfm-parfilter` - 段落範囲が指定されている場合に、不要な段落を除外します（コンテンツフラグメントコンポーネントで実行可能）
 * `transformer-cfm-assetprocessor` - フラグメントに埋め込まれたアセットのリストを取得するために内部で使用されます
 
-レンダリング処理は [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) を通じて行われ、必要に応じて、（例えば）カスタムコンポーネントによって使用されます。
+レンダリング処理は [`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html) を通じて行われ、必要に応じて、（例えば）カスタムコンポーネントによって使用されます。

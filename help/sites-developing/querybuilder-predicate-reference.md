@@ -9,13 +9,11 @@ exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Search,Query Builder
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2381'
-ht-degree: 93%
-
+source-wordcount: '2385'
+ht-degree: 92%
 ---
-
 # Query Builder の述語リファレンス{#query-builder-predicate-reference}
 
 >[!CAUTION]
@@ -229,7 +227,7 @@ group.2_group.type=dam:Asset
 
 ### hasPermission {#haspermission}
 
-指定された [JCR 権限](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)が現在のセッションに含まれる項目に、結果を制限します。
+指定された [JCR 権限](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)が現在のセッションに含まれる項目に、結果を制限します。
 
 これはフィルターのみの述語で、検索インデックスは利用できません。 ファセットの抽出には対応していません。
 
@@ -269,7 +267,7 @@ group.2_group.type=dam:Asset
 
 ### memberOf {#memberof}
 
-特定の [sling リソースコレクション](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)のメンバーであるアイテムを検索します。
+特定の [sling リソースコレクション](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)のメンバーであるアイテムを検索します。
 
 これはフィルターのみの述語で、検索インデックスは利用できません。 ファセットの抽出には対応していません。
 
@@ -381,7 +379,7 @@ JCR プロパティとその値に一致します。
 
 * **depth**
 
-  プロパティまたは相対パスが存在するワイルドカードレベルの数（例えば、`property=size depth=2`はnode/size、node/&ast;/size、node/&ast;/&amp;sizeをチェックします）。
+  プロパティまたは相対パスが存在するワイルドカードレベルの数（例えば、`property=size depth=2`はnode/size、node/&amp;ast;/size、node/&amp;ast;/&amp;sizeをチェックします）。
 
 ### rangeproperty {#rangeproperty}
 
@@ -473,17 +471,17 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
   （JSON サーブレット専用）ヒットを JSON として記述する方法を、次の標準的なものの中から選択します（ResultHitWriter サービスを使用して拡張可能）。
 
-   * **simple**：
+  * **simple**：
 
-     `path`、`title`、`lastmodified`、`excerpt`（設定されている場合）などの最小限の項目。
+    `path`、`title`、`lastmodified`、`excerpt`（設定されている場合）などの最小限の項目。
 
-   * **full**：
+  * **full**：
 
-     ノードの Sling JSON レンダリング。`jcr:path` はヒットのパスを示します。デフォルトではノードの直属のプロパティのみをリストし、`p.nodedepth=N` で指定された深さのツリーが含まれます（0 は無制限のサブツリー全体を表します）。`p.acls=true` を追加すると、特定の結果項目に対する現在のセッションの JCR 権限が含まれます（マッピング：`create` = `add_node`、`modify` = `set_property`、`delete` = `remove`）
+    ノードの Sling JSON レンダリング。`jcr:path` はヒットのパスを示します。デフォルトではノードの直属のプロパティのみをリストし、`p.nodedepth=N` で指定された深さのツリーが含まれます（0 は無制限のサブツリー全体を表します）。`p.acls=true` を追加すると、特定の結果項目に対する現在のセッションの JCR 権限が含まれます（マッピング：`create` = `add_node`、`modify` = `set_property`、`delete` = `remove`）
 
-   * **selective**：
+  * **selective**：
 
-     `p.properties`で指定されたプロパティのみが、相対パスのスペース区切り（URLで「+」を使用）リストです。相対パスの深さが1を超える場合、これらは子オブジェクトとして表されます。特殊なjcr:path プロパティには、ヒットのパスが含まれます
+    `p.properties`で指定されたプロパティのみが、相対パスのスペース区切り（URLで「+」を使用）リストです。相対パスの深さが1を超える場合、これらは子オブジェクトとして表されます。特殊なjcr:path プロパティには、ヒットのパスが含まれます
 
 ### savedquery {#savedquery}
 

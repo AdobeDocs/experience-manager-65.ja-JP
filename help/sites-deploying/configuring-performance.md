@@ -13,9 +13,9 @@ feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '6649'
+source-wordcount: '6650'
 ht-degree: 98%
 ---
 # パフォーマンスの最適化 {#performance-optimization}
@@ -225,7 +225,7 @@ AEM 6.0 以降、Adobe Experience Manager は Oak ベースのリポジトリア
 ワークフローエンジンは、作業項目の処理とスケジュール設定にApache Sling ジョブキューを使用します。 次のジョブキューサービスは、ワークフロージョブを処理するために、デフォルトでApache Sling ジョブキュー設定サービスファクトリから作成されました。
 
 * Granite Workflow Queue：ワークフローのほとんどのステップ（DAM アセットを処理するステップなど）では、Granite Granite Workflow Queue サービスを使用します。
-* Granite ワークフロー外部プロセスジョブキュー：このサービスは、通常は外部システムへのアクセスや結果のポーリングに使用される、特殊な外部ワークフローのステップに使用します。 例えば、InDesign のメディア抽出プロセスステップは外部プロセスとして実装されます。 ワークフローエンジンでは、ポーリングの処理に外部キューを使用します。 （[com.day.cq.workflow.exec.WorkflowExternalProcess](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html) を参照してください）。
+* Granite ワークフロー外部プロセスジョブキュー：このサービスは、通常は外部システムへのアクセスや結果のポーリングに使用される、特殊な外部ワークフローのステップに使用します。 例えば、InDesign のメディア抽出プロセスステップは外部プロセスとして実装されます。 ワークフローエンジンでは、ポーリングの処理に外部キューを使用します。 （[com.day.cq.workflow.exec.WorkflowExternalProcess](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html) を参照してください）。
 
 これらのサービスを設定して、同時に実行するワークフロープロセスの最大数を制限します。
 
@@ -235,7 +235,7 @@ AEM 6.0 以降、Adobe Experience Manager は Oak ベースのリポジトリア
 
 #### リポジトリでの設定 {#configuration-in-the-repo}
 
-sling:OsgiConfig ノード [&#128279;](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス を設定する場合は、既存のサービスのPID （例：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705）を見つける必要があります。 Web コンソールを使用すると、PID を検出できます。
+sling:OsgiConfig ノード ](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス [を設定する場合は、既存のサービスのPID （例：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705）を見つける必要があります。 Web コンソールを使用すると、PID を検出できます。
 
 `queue.maxparallel` という名前のプロパティを設定します。
 
@@ -432,7 +432,7 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 
 | エラーのシナリオ | エラータイプ | いいえ。 /ユーザー | トランザクション/秒（予想値） | トランザクション/秒（テスト値） | 説明 |
 |---|---|---|---|---|---|
-| 検索コンポーネントのオーバーロード | グローバルワイルドカード（アスタリスク）で検索 | 10 | 1 |  | &ast;&ast;&amp;ast；のみが検索されます。 |
+| 検索コンポーネントのオーバーロード | グローバルワイルドカード（アスタリスク）で検索 | 10 | 1 |  | &amp;ast;&amp;ast;&amp;ast；のみが検索されます。 |
 |   | ストップワード | 20 | 2 |  | ストップワードの検索。 |
 |   | 空の文字列 | 10 | 1 |  | 空の文字列の検索。 |
 |   | 特殊文字 | 10 | 1 |  | 特殊文字の検索。 |
@@ -479,7 +479,7 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 
 ## Dispatcher の使用時のパフォーマンスの最適化 {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) はアドビのキャッシュ／ロードバランシングツールです。 Dispatcher を使用する場合は、キャッシュパフォーマンスを確保するために web サイトの最適化を検討してください。
+[Dispatcher ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) はアドビのキャッシュ／ロードバランシングツールです。 Dispatcher を使用する場合は、キャッシュパフォーマンスを確保するために web サイトの最適化を検討してください。
 
 >[!NOTE]
 >

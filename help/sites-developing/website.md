@@ -10,20 +10,18 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '4923'
-ht-degree: 95%
-
+source-wordcount: '5032'
+ht-degree: 89%
 ---
-
 # 完全な機能を備えた web サイトの作成（JSP）{#create-a-fully-featured-website-jsp}
 
 >[!NOTE]
 >
->この記事では、JSP を使用して、クラシック UI に基づいた web サイトを作成する方法について説明します。アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、web サイトに最新の Adobe Experience Manager（AEM）テクノロジーを利用することをお勧めします。
+>この記事では、JSP を使用して、クラシック UI に基づいた web サイトを作成する方法について説明します。 アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、web サイトに最新の Adobe Experience Manager（AEM）テクノロジーを利用することをお勧めします。
 
-このチュートリアルでは、AEM で完全な機能を備えた web サイトを作成できます。Web サイトは汎用の web サイトに基づき、主に web 開発者をターゲットにしています。すべての開発は、1 つのオーサー環境内で行われます。
+このチュートリアルでは、AEM で完全な機能を備えた web サイトを作成できます。 Web サイトは汎用の web サイトに基づき、主に web 開発者をターゲットにしています。 すべての開発は、1 つのオーサー環境内で行われます。
 
 このチュートリアルでは、次の方法について説明します。
 
@@ -49,7 +47,7 @@ ht-degree: 95%
 
 **最終結果をダウンロード**
 
-演習を実行する代わりにチュートリアルに従うには、website-1.0.zip をダウンロードします。このファイルは、このチュートリアルの結果を含む AEM コンテンツパッケージです。[パッケージマネージャー](/help/sites-administering/package-manager.md)を使用して、パッケージをオーサーインスタンスにインストールします。
+演習を実行する代わりにチュートリアルに従うには、website-1.0.zip をダウンロードします。 このファイルは、このチュートリアルの結果を含む AEM コンテンツパッケージです。 [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用して、パッケージをオーサーインスタンスにインストールします。
 
 **メモ：**&#x200B;このパッケージをインストールすると、このチュートリアルを使用して作成したオーサーインスタンス上のリソースがすべて上書きされます。
 
@@ -59,7 +57,7 @@ Web サイトコンテンツパッケージ
 
 ## Adobe Experience Manager のインストール {#installing-adobe-experience-manager}
 
-Web サイトを開発するための AEM インスタンスをインストールするには、[オーサーインスタンスとパブリッシュインスタンスを含むデプロイメント環境](/help/sites-deploying/deploy.md#author-and-publish-installs)の設定手順に従うか、または[汎用インストール](/help/sites-deploying/deploy.md#default-local-install)を実行します。汎用インストールでは、AEM クイックスタート JAR ファイルをダウンロードし、license.properties ファイルを JAR ファイルと同じディレクトリに配置して、JAR ファイルをダブルクリックします。
+Web サイトを開発するためのAEM インスタンスをインストールするには、オーサーインスタンスとパブリッシュインスタンス ](/help/sites-deploying/deploy.md#author-and-publish-installs)を使用して[ デプロイメント環境を設定する手順に従うか、[汎用インストール ](/help/sites-deploying/deploy.md#default-local-install)を実行します。 汎用インストールでは、AEM クイックスタート JAR ファイルをダウンロードし、license.properties ファイルをJAR ファイルと同じディレクトリに配置し、JAR ファイルをダブルクリックします。
 
 AEM をインストールしたら、ようこそページで CRXDE Lite のリンクをクリックして CRXDE Lite 開発環境にアクセスします。
 
@@ -67,15 +65,15 @@ AEM をインストールしたら、ようこそページで CRXDE Lite のリ�
 
 >[!NOTE]
 >
->デフォルトポートを使用してローカルにインストールされたAEM オーサーインスタンスのCRXDE Liteの URL は [https://localhost:4502/crx/de/](https://localhost:4502/crx/de/) です。
+>デフォルトポートを使用してローカルにインストールされているAEM オーサリングインスタンスのCRXDE LiteのURLは[https://localhost:4502/crx/de/](https://localhost:4502/crx/de/)です。
 
 ### CRXDE Lite でプロジェクトの構造を設定します。 {#setting-up-the-project-structure-in-crxde-lite}
 
 CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーション構造を作成します。
 
-1. CRXDE Liteの左側のツリーで、**`/apps`** フォルダーを右クリックし、**作成**／**作成**／**フォルダー**&#x200B;をクリックします。**フォルダーを作成**&#x200B;ダイアログで、フォルダー名として `mywebsite` と入力し、「**OK**」をクリックします。
-1. **`/apps/mywebsite`** フォルダーを右クリックして、**作成**／**フォルダーを作成**&#x200B;をクリックします。**フォルダーを作成**&#x200B;ダイアログで、フォルダー名として `components` と入力し、「**OK**」をクリックします。
-1. **`/apps/mywebsite`** フォルダーを右クリックして、**作成**／**フォルダーを作成**&#x200B;をクリックします。**フォルダーを作成**&#x200B;ダイアログで、フォルダー名として `templates` と入力し、「**OK**」をクリックします。
+1. CRXDE Liteの左側のツリーで、**`/apps`** フォルダーを右クリックし、**作成**／**作成**／**フォルダー**&#x200B;をクリックします。 **フォルダーを作成**&#x200B;ダイアログで、フォルダー名として `mywebsite` と入力し、「**OK**」をクリックします。
+1. **`/apps/mywebsite`** フォルダーを右クリックして、**作成**／**フォルダーを作成**&#x200B;をクリックします。 **フォルダーを作成**&#x200B;ダイアログで、フォルダー名として `components` と入力し、「**OK**」をクリックします。
+1. **`/apps/mywebsite`** フォルダーを右クリックして、**作成**／**フォルダーを作成**&#x200B;をクリックします。 **フォルダーを作成**&#x200B;ダイアログで、フォルダー名として `templates` と入力し、「**OK**」をクリックします。
 
    ツリー内の構造は次のようになります。
 
@@ -85,25 +83,25 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 ### デザインの設定 {#setting-up-the-design}
 
-この節では、Designer ツールを使用して、アプリケーションのデザインを作成します。デザインは、web サイトに CSS および画像リソースを提供します。
+この節では、Designer ツールを使用して、アプリケーションのデザインを作成します。 デザインは、web サイトに CSS および画像リソースを提供します。
 
 >[!NOTE]
 >
->以下のリンクをクリックして mywebsite.zip をダウンロードします。アーカイブには、デザイン用の static.css および画像ファイルが含まれています。
+>次のリンクをクリックして、mywebsite.zipをダウンロードします。 アーカイブには、デザイン用のstatic.cssと画像ファイルが含まれています。
 
 サンプルの static.css ファイルおよび画像
 
 [ファイルを入手](assets/mywebsite.zip)
 
-1. AEM のようこそ画面で、「**ツール**」をクリックします。（[https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)）
+1. AEM のようこそ画面で、「**ツール**」をクリックします。 （[https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)）
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
-1. フォルダーツリーで、**Designs** フォルダーを選択して、**新規**／**新しいページ**&#x200B;をクリックします。タイトルとして `mywebsite` と入力し、「**作成**」をクリックします。
+1. フォルダーツリーで、**Designs** フォルダーを選択して、**新規**／**新しいページ**&#x200B;をクリックします。 タイトルとして `mywebsite` と入力し、「**作成**」をクリックします。
 
 1. mywebsite という項目がテーブルに表示されない場合は、ツリーまたはテーブルを更新します。
 
-1. [WebDAV を使用 &#x200B;](/help/sites-administering/webdav-access.md)https://localhostの URL にアクセスします :4502。サンプル `static.css` ファイルと `images` フォルダーを、ダウンロードした mywebsite.zip ファイルから `/etc/designs/mywebsite` フォルダーにコピーします。
+1. [WebDAV](/help/sites-administering/webdav-access.md)によるhttps://localhost:4502のURLへのアクセスを使用して、ダウンロードしたmywebsite.zip ファイルからサンプル `static.css` ファイルと`images` フォルダーを`/etc/designs/mywebsite` フォルダーにコピーします。
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -119,7 +117,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 サイトの web ページの基礎として使用するテンプレートを作成します。
 
-テンプレートは、新しいページのデフォルトコンテンツを定義します。複雑な web サイトでは、サイト内の様々なタイプのページを作成するために、複数のテンプレートを使用する場合があります。この演習では、すべてのページを 1 つのシンプルなテンプレートに基づいて作成します。
+テンプレートは、新しいページのデフォルトコンテンツを定義します。 複雑な web サイトでは、サイト内の様々なタイプのページを作成するために、複数のテンプレートを使用する場合があります。 この演習では、すべてのページを 1 つのシンプルなテンプレートに基づいて作成します。
 
 1. CRXDE Lite のフォルダーツリーで、`/apps/mywebsite/templates` を右クリックして、**作成**／**テンプレートを作成**&#x200B;をクリックします。
 
@@ -134,23 +132,23 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-   リソースタイプは、ページをレンダリングするコンポーネントを識別します。この場合、contentpage テンプレートを使用して作成されたページはすべて `mywebsite/components/contentpage` コンポーネントによってレンダリングされます。
+   リソースタイプは、ページをレンダリングするコンポーネントを識別します。 この場合、contentpage テンプレートを使用して作成されたページはすべて `mywebsite/components/contentpage` コンポーネントによってレンダリングされます。
 
-1. このテンプレートを使用できるページのパスを指定するには、プラス記号のボタンをクリックして、表示されるテキストボックスに `/content(/.*)?` と入力します。次に、「**次へ**」をクリックします。
+1. このテンプレートを使用できるページのパスを指定するには、プラス記号のボタンをクリックして、表示されるテキストボックスに `/content(/.*)?` と入力します。 次に、「**次へ**」をクリックします。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-   許可されているパスプロパティの値は&#x200B;*正規表現です。*&#x200B;この正規表現に一致するパスを含むページがテンプレートを使用できます。この場合、正規表現は、**/content** フォルダーおよびすべてのサブページのパスと一致します。
+   許可されたパスプロパティの値は&#x200B;*正規表現です。* 式に一致するパスを持つページは、テンプレートを使用できます。 この場合、正規表現は、**/content** フォルダーおよびすべてのサブページのパスと一致します。
 
    作成者が /content の下にページを作成すると、使用可能なテンプレートのリストに **contentpage** テンプレートが表示されます。
 
-1. **許可された親**&#x200B;パネルおよび&#x200B;**許可されている子**&#x200B;パネルで「**次へ**」をクリックして、「**OK**」をクリックします。CRXDE Lite で、「**すべて保存**」をクリックします。
+1. **許可された親**&#x200B;パネルおよび&#x200B;**許可されている子**&#x200B;パネルで「**次へ**」をクリックして、「**OK**」をクリックします。 CRXDE Lite で、「**すべて保存**」をクリックします。
 
    ![chlimage_1-31](assets/chlimage_1-31.png)
 
 #### contentpage コンポーネントの作成 {#creating-the-contentpage-component}
 
-コンテンツを定義し、contentpage テンプレートを使用するコンポーネントを作成します&#x200B;*。*&#x200B;コンポーネントの場所は、contentpage テンプレートの「リソースタイプ」プロパティの値と一致する必要があります。
+コンテンツを定義し、contentpage テンプレートを使用するページをレンダリングする&#x200B;*コンポーネント*&#x200B;を作成します。 コンポーネントの場所は、contentpage テンプレートのResource Type プロパティの値と一致している必要があります。
 
 1. CRXDE Lite で、`/apps/mywebsite/components` を右クリックして、**作成**／**コンポーネント**&#x200B;をクリックします。
 1. **コンポーネントを作成**&#x200B;ダイアログで、以下のプロパティ値を入力します。
@@ -161,11 +159,11 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
-   新しいコンポーネントの場所は `/apps/mywebsite/components/contentpage` です。このパスは、contentpage テンプレートのリソースタイプ（パスの最初の **`/apps/`** 部分を除く）に対応します。
+   新しいコンポーネントの場所は `/apps/mywebsite/components/contentpage` です。 このパスは、contentpage テンプレートのリソースタイプ（パスの最初の **`/apps/`** 部分を除く）に対応します。
 
    この一致は、テンプレートをコンポーネントと結び付けるものなので、Web サイトを正常に機能させるために重要です。
 
-1. 「**次へ**」をクリックしてダイアログの許可されている子パネルを表示し、「**OK**」をクリックします。CRXDE Lite で、「**すべて保存**」をクリックします。
+1. 「**次へ**」をクリックしてダイアログの許可されている子パネルを表示し、「**OK**」をクリックします。 CRXDE Lite で、「**すべて保存**」をクリックします。
 
    この時点で構造は次のようになります。
 
@@ -175,7 +173,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 contentpage.jsp スクリプトにコードを追加して、ページのコンテンツを定義します。
 
-1. CRXDE Liteで、`/apps/mywebsite/components/contentpage` にあるファイル `contentpage.jsp` を開きます。ファイルには、デフォルトで次のコードが含まれています。
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage` にあるファイル `contentpage.jsp` を開きます。 ファイルには、デフォルトで次のコードが含まれています。
 
    ```java
    <%--
@@ -216,7 +214,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
 ここでは、すべて contentpage テンプレートを使用する、My Website、English、Products、Services、Customers の各ページを作成します。
 
-1. AEMのようこそページ （[https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)）で、「Web サイト」をクリックします。
+1. AEMのようこそページ（[https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)）で、「Web サイト」をクリックします。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
@@ -229,7 +227,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
-1. 「**作成**」をクリックします。フォルダーツリーで、**/Websites/My Website/** ページを選択して、**新規**／**新しいページ**&#x200B;をクリックします。
+1. 「**作成**」をクリックします。 フォルダーツリーで、**/Websites/My Website/** ページを選択して、**新規**／**新しいページ**&#x200B;をクリックします。
 1. ページを作成ダイアログで、以下のプロパティ値を入力して「作成」をクリックします。
 
    * タイトル：English
@@ -258,7 +256,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    ![chlimage_1-36](assets/chlimage_1-36.png)
 
-1. ページを mywebsite デザインにリンクさせるには、CRXDE Liteで、`/content/mywebsite/en/jcr:content` ノードを選択します。「プロパティ」タブで、新しいプロパティに次の値を入力し、「追加」をクリックします。
+1. ページを mywebsite デザインにリンクさせるには、CRXDE Liteで、`/content/mywebsite/en/jcr:content` ノードを選択します。 「プロパティ」タブで、新しいプロパティに次の値を入力し、「追加」をクリックします。
 
    * 名前：cq:designPath
    * タイプ：String
@@ -266,7 +264,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
-1. Web ブラウザーの新しいタブまたはウィンドウで、[https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) を開いて Products ページを確認します。
+1. 新しいweb ブラウザータブまたはウィンドウで、[https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html)を開いて製品ページを表示します。
 
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
@@ -280,7 +278,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
 #### 基盤ページスクリプトの使用 {#using-the-foundation-page-scripts}
 
-この演習では、スーパータイプが AEM のページコンポーネントとなるように pagecontent コンポーネントを設定します。コンポーネントはスーパータイプの機能を継承するので、pagecontent はページコンポーネントのスクリプトとプロパティを継承します。
+この演習では、ページコンテンツコンポーネントを設定して、そのスーパータイプがAEM ページコンポーネントとなるようにします。 コンポーネントはスーパータイプの機能を継承するため、ページコンテンツはページコンポーネントのスクリプトとプロパティを継承します。
 
 例えば、自分のコンポーネントの JSP コード内で、スーパータイプコンポーネントによって提供されているスクリプトを、自分のコンポーネントに含まれているかのように参照できます。
 
@@ -308,11 +306,11 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。次のようなコンソールが表示されます。
+1. ブラウザーで製品ページをリロードします。 次のようなコンソールが表示されます。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   ページソースを開いて、head.jsp および body.jsp スクリプトで生成された JavaScript 要素と HTML 要素を確認します。次のスクリプトスニペットは、ページを開く際にサイドキックを開きます。
+   ページソースを開いて、head.jsp および body.jsp スクリプトで生成された JavaScript 要素と HTML 要素を確認します。 次のスクリプトスニペットは、ページを開く際にサイドキックを開きます。
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -323,7 +321,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
 #### 独自のスクリプトの使用 {#using-your-own-scripts}
 
-この節では、ページ本文の一部を生成する複数のスクリプトを作成します。次に、pagecontent コンポーネントに body.jsp ファイルを作成して、AEM ページコンポーネントの body.jsp を上書きします。body.jsp ファイルに、ページ本文の様々な部分を生成するスクリプトを含めます。
+この節では、ページ本文の一部を生成する複数のスクリプトを作成します。 次に、pagecontent コンポーネントに body.jsp ファイルを作成して、AEM ページコンポーネントの body.jsp を上書きします。 body.jsp ファイルに、ページ本文の様々な部分を生成するスクリプトを含めます。
 
 **ヒント：**&#x200B;コンポーネントのスーパータイプ内のファイルと同じ名前で相対的な場所も同じファイルがコンポーネントに含まれている場合、これをオーバーレイと呼びます&#x200B;*。*
 
@@ -400,15 +398,15 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。次のようなコンソールが表示されます。
+1. ブラウザーで製品ページをリロードします。 次のようなコンソールが表示されます。
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
 ### 上部ナビゲーションコンポーネントの作成 {#creating-the-top-navigation-component}
 
-この節では、ナビゲーションを容易にするために、web サイトのすべてのトップレベルページへのリンクを表示するコンポーネントを作成します。このコンポーネントのコンテンツは、contentpage テンプレートを使用して作成されるすべてのページの上部に表示されます。
+この節では、ナビゲーションを容易にするために、web サイトのすべてのトップレベルページへのリンクを表示するコンポーネントを作成します。 このコンポーネントのコンテンツは、contentpage テンプレートを使用して作成されるすべてのページの上部に表示されます。
 
-上部ナビゲーションコンポーネント（topnav）の最初のバージョンでは、ナビゲーション項目はテキストリンクのみです。2 つ目のバージョンでは、画像ナビゲーションリンクを含む topnav を実装します。
+上部ナビゲーションコンポーネント（topnav）の最初のバージョンでは、ナビゲーション項目はテキストリンクのみです。 2 つ目のバージョンでは、画像ナビゲーションリンクを含む topnav を実装します。
 
 完了したら、上部ナビゲーションは次のようになります。
 
@@ -425,7 +423,7 @@ contentpage.jsp スクリプトにコードを追加して、ページのコン�
 
    * **説明**: `This is My Top Navigation Component`
 
-1. 最後のウィンドウまで「**次へ**」をクリックしたら、「**OK**」をクリックします。変更を保存します。
+1. 最後のウィンドウまで「**次へ**」をクリックしたら、「**OK**」をクリックします。 変更を保存します。
 
 #### テキストリンクを含む上部ナビゲーションスクリプトの作成 {#creating-the-top-navigation-script-with-textual-links}
 
@@ -471,29 +469,29 @@ topnav を contentpage コンポーネントに含めるには、次の操作を
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。上部ナビゲーションは次のように表示されます。
+1. ブラウザーで製品ページをリロードします。 上部ナビゲーションは次のように表示されます。
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
 #### サブタイトル付きのページの強化 {#enhancing-pages-with-subtitles}
 
-ページコンポーネントでは、ページのキャプションを指定できるプロパティを定義します。ページコンテンツに関する情報を提供するキャプションを追加します。
+ページコンポーネントでは、ページのキャプションを指定できるプロパティを定義します。 ページコンテンツに関する情報を提供するキャプションを追加します。
 
 1. ブラウザーで、**製品**&#x200B;ページを開きます。
 1. サイドキックの「**ページ**」タブで、「**ページのプロパティ**」をクリックします。
-1. ダイアログの「基本」タブで「**他のタイトルと説明**」を展開して、「**サブタイトル**」プロパティに「**私たちの活動**」と入力します。「**OK**」をクリックします。
+1. ダイアログの「基本」タブで「**他のタイトルと説明**」を展開して、「**サブタイトル**」プロパティに「**私たちの活動**」と入力します。 「**OK**」をクリックします。
 1. ここまでの手順を繰り返して、「**私たちのサービス**」というサブタイトルを&#x200B;**サービス**&#x200B;ページに追加します。
 1. ここまでの手順を繰り返して、「**私たちが得た信頼**」というサブタイトルを&#x200B;**顧客**&#x200B;ページに追加します。
 
-   **ヒント：** CRXDE Liteで、/content/mywebsite/en/products/jcr:content ノードを選択して、subtitle プロパティが追加されていることを確認します。
+   **ヒント：** CRXDE Liteで、/content/mywebsite/en/products/jcr:content ノードを選択して、字幕プロパティが追加されていることを確認します。
 
 #### 画像リンクを使用して上部ナビゲーションを強化する {#enhance-top-navigation-by-using-image-links}
 
-topnav コンポーネントのレンダリングスクリプトを強化して、ナビゲーションコントロールにハイパーテキストの代わりに画像リンクを使用します。画像には、リンクターゲットのタイトルとサブタイトルが含まれます。
+topnav コンポーネントのレンダリングスクリプトを強化して、ナビゲーションコントロールにハイパーテキストの代わりに画像リンクを使用します。 画像には、リンクターゲットのタイトルとサブタイトルが含まれます。
 
-この演習では、[Sling のリクエスト処理](/help/sites-developing/the-basics.md#sling-request-processing)を示します。topnav.jsp スクリプトを変更して、ページナビゲーションリンクに使用する画像を動的に生成するスクリプトを呼び出します。この演習では、Sling は画像ソースファイルの URL を解析し、画像のレンダリングに使用するスクリプトを決定します。
+この演習では、[Sling のリクエスト処理](/help/sites-developing/the-basics.md#sling-request-processing)を示します。 topnav.jsp スクリプトを変更して、ページナビゲーションリンクに使用する画像を動的に生成するスクリプトを呼び出します。 この演習では、Sling は画像ソースファイルの URL を解析し、画像のレンダリングに使用するスクリプトを決定します。
 
-例えば、製品ページへの画像リンクのソースは、https://localhost:4502/content/mywebsite/en/products.navimage.png になります。 Sling は、この URL を解析して、リソースタイプと、リソースをレンダリングするために使用するスクリプトを決定します。
+例えば、製品ページへの画像リンクのソースはhttps://localhost:4502/content/mywebsite/en/products.navimage.pngです。 Sling は、この URL を解析して、リソースタイプと、リソースをレンダリングするために使用するスクリプトを決定します。
 
 1. Sling がリソースのパスを `/content/mwebysite/en/products.png.` と特定します。
 1. Sling がこのパスを `/content/mywebsite/en/products` ノードと照合します。
@@ -523,9 +521,9 @@ topnav コンポーネントのレンダリングスクリプトを強化して�
 
 1. 以下のコードを `navimage.png.java.` にコピーします。このコードによって、AbstractImageServlet クラスが拡張されます。
 
-   * [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) は、現在のリソースのプロパティを格納する ImageContext オブジェクトを作成します。
-   * リソースの親ページは、ImageContext オブジェクトから抽出されます。次に、ページタイトルとサブタイトルが取得されます。
-   * [ImageHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/ImageHelper.html) は、サイトデザインの navimage_bg.jpg ファイル、ページタイトルおよびページサブタイトルから画像を生成するために使用されます。
+   * [AbstractImageServlet](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) は、現在のリソースのプロパティを格納する ImageContext オブジェクトを作成します。
+   * リソースの親ページは、ImageContext オブジェクトから抽出されます。 次に、ページタイトルとサブタイトルが取得されます。
+   * [ImageHelper](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/ImageHelper.html) は、サイトデザインの navimage_bg.jpg ファイル、ページタイトルおよびページサブタイトルから画像を生成するために使用されます。
 
    ```java
    package apps.mywebsite.components.contentpage;
@@ -643,19 +641,19 @@ topnav コンポーネントのレンダリングスクリプトを強化して�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。上部ナビゲーションは次のように表示されます。
+1. ブラウザーで製品ページをリロードします。 上部ナビゲーションは次のように表示されます。
 
    ![screen_shot_2012-03-07at10047pm](assets/screen_shot_2012-03-07at10047pm.png)
 
 ### リストの子コンポーネントの作成 {#creating-the-list-children-component}
 
-ページのタイトル、説明、日付（製品ページなど）を含むページリンクのリストを生成する listchildren コンポーネントを作成します。リンクは、現在のページの子ページ、またはコンポーネントダイアログで指定されたルートページをターゲットとします。
+ページのタイトル、説明、日付（製品ページなど）を含むページリンクのリストを生成する listchildren コンポーネントを作成します。 リンクは、現在のページの子ページ、またはコンポーネントダイアログで指定されたルートページをターゲットとします。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
 #### 製品ページの作成 {#creating-product-pages}
 
-製品ページの下に 2 つのページを作成します。2 つの特定の製品について説明する各ページに、タイトル、説明および日付を設定します。
+製品ページの下に 2 つのページを作成します。 2 つの特定の製品について説明する各ページに、タイトル、説明および日付を設定します。
 
 1. Web サイトページのフォルダーツリーで、Websites/My Website/English/Products 項目を選択し、新規／新しいページをクリックします。
 1. ダイアログで、次のプロパティ値を入力して「作成」をクリックします。
@@ -782,23 +780,23 @@ listchildren コンポーネントのプロパティの設定に使用するダ�
 1. tab1 ノードを選択し、作成／ノードを作成をクリックし、次のプロパティ値を入力して、「OK」をクリックします。
 
    * 名前：items
-   * タイプ：cq:WidgetCollection
+   * 種類：cq:WidgetCollection
 
    ![screen_shot_2012-03-07at51018pm](assets/screen_shot_2012-03-07at51018pm.png)
 
 1. 次のプロパティ値を使用して、items ノードの下にノードを作成します。
 
    * 名前：listroot
-   * タイプ：cq:Widget
+   * 種類：cq:Widget
 
    ![screen_shot_2012-03-07at51031pm](assets/screen_shot_2012-03-07at51031pm.png)
 
-1. listroot ノードのプロパティを追加して、テキストフィールドとして設定します。以下の表の行は、それぞれプロパティを表します。完了したら、「すべて保存」をクリックします。
+1. Listroot ノードのプロパティを追加して、テキストフィールドとして設定します。 次の表の各行はプロパティを表します。 終了したら、「すべて保存」をクリックします。
 
-   | 名前 | タイプ | 値 |
+   | 名前 | 種類 | 値 |
    |---|---|---|
    | fieldLabel | 文字列 | リストルートのパス |
-   | name | 文字列 | 。/listroot |
+   | name | 文字列 | ./listroot |
    | xtype | 文字列 | textfield |
 
    ![screen_shot_2012-03-07at51433pm](assets/screen_shot_2012-03-07at51433pm.png)
@@ -828,24 +826,24 @@ contentpage コンポーネントに listchildren コンポーネントを組み
 * 親ページ（「リストルートのパス」）が定義されていない場合。
 * 親ページ（「リストルートのパス」）が定義されている場合。
 
-1. ブラウザーで製品ページをリロードします。listchildren コンポーネントは次のように表示されます。
+1. ブラウザーで製品ページをリロードします。 listchildren コンポーネントは次のように表示されます。
 
    ![chlimage_1-43](assets/chlimage_1-43.png)
 
 1. ![chlimage_1-44](assets/chlimage_1-44.png)
 
-1. 「リストルートのパス」に、`/content/mywebsite/en` と入力します。「OK」をクリックします。ページ上の listchildren コンポーネントは次のようになります。
+1. リスト ルートのパスとして、`/content/mywebsite/en`と入力します。 「OK」をクリックします。 ページ上の listchildren コンポーネントは次のようになります。
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
 ### ロゴコンポーネントの作成 {#creating-the-logo-component}
 
-会社のロゴを表示し、サイトのホームページへのリンクを提供するコンポーネントを作成します。コンポーネントにはデザインモードのダイアログが含まれ、プロパティの値はサイトデザイン（/etc/designs/mywebsite）に格納されます。
+会社のロゴを表示し、サイトのホームページへのリンクを提供するコンポーネントを作成します。 コンポーネントにはデザインモードのダイアログが含まれ、プロパティの値はサイトデザイン（/etc/designs/mywebsite）に格納されます。
 
 * プロパティの値は、デザインを使用するページに追加されるコンポーネントのすべてのインスタンスに適用されます。
 * プロパティは、デザインを使用するページ上にある任意のコンポーネントのインスタンスを使用して設定できます。
 
-デザインモードダイアログには、画像とリンクパスを設定するためのプロパティが含まれています。ロゴコンポーネントは、web サイトのすべてのページの左上に配置されます。
+デザインモードダイアログには、画像とリンクパスを設定するためのプロパティが含まれています。 ロゴコンポーネントは、web サイトのすべてのページの左上に配置されます。
 
 完了したら、次のようになります。
 
@@ -873,7 +871,7 @@ contentpage コンポーネントに listchildren コンポーネントを組み
 この節では、ホームページへのリンクを含むロゴ画像を表示するスクリプトを作成する方法について説明します。
 
 1. CRXDE Lite で、`/apps/mywebsite/components/logo` の下の `logo.jsp` ファイルを開きます。
-1. 以下のコードでは、サイトのホームページへのリンクが作成され、ロゴイメージへの参照が追加されます。このコードを `logo.jsp` にコピーします。
+1. 以下のコードでは、サイトのホームページへのリンクが作成され、ロゴイメージへの参照が追加されます。 このコードを `logo.jsp` にコピーします。
 
    ```xml
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -909,7 +907,7 @@ contentpage コンポーネントに listchildren コンポーネントを組み
 
 #### ロゴデザインダイアログの作成 {#creating-the-logo-design-dialog}
 
-デザインモードでロゴコンポーネントを設定するためのダイアログを作成します。デザインモードのダイアログには、`design_dialog` という名前を付ける必要があります。
+デザインモードでロゴコンポーネントを設定するためのダイアログを作成します。 デザインモードのダイアログには、`design_dialog` という名前を付ける必要があります。
 
 1. logo コンポーネントの下に dialog ノードを作成します。
 
@@ -921,14 +919,14 @@ contentpage コンポーネントに listchildren コンポーネントを組み
 
       * **タイトル:** `Logo (Design)`
 
-1. design_dialog ブランチの tab1 ノードを右クリックして「削除」をクリックします。「すべて保存」をクリックします。
-1. `design_dialog/items/items` ノードの下に、`cq:Widget` タイプの `img` という名前のノードを作成します。次のプロパティを追加し、「すべて保存」をクリックします。
+1. design_dialog ブランチのtab1 ノードを右クリックし、「削除」をクリックします。 「すべて保存」をクリックします。
+1. `design_dialog/items/items` ノードの下に、`cq:Widget` タイプの `img` という名前のノードを作成します。 次のプロパティを追加し、「すべて保存」をクリックします。
 
-   | 名前 | タイプ | 値 |
+   | 名前 | 種類 | 値 |
    |---|---|---|
-   | fileNameParameter | 文字列 | 。/imageName |
-   | fileReferenceParameter | 文字列 | 。/imageReference |
-   | name | 文字列 | 。/画像 |
+   | fileNameParameter | 文字列 | ./imageName |
+   | fileReferenceParameter | 文字列 | ./imageReference |
+   | name | 文字列 | ./image |
    | title | String | 画像 |
    | xtype | 文字列 | html5smartimage |
 
@@ -1022,7 +1020,7 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。ロゴは以下のようになりますが、現時点では基になるリンクのみが表示されます。
+1. ブラウザーで製品ページをリロードします。 ロゴは次のように見えますが、現在は下のリンクのみが表示されています。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -1064,7 +1062,7 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 変更を保存します。
-1. ブラウザーで **Products 1** ページをリロードします。trail コンポーネントは次のようになります。
+1. ブラウザーで **Products 1** ページをリロードします。 trail コンポーネントは次のようになります。
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -1085,7 +1083,7 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。タイトルコンポーネントは次のようになります。
+1. ブラウザーで製品ページをリロードします。 タイトルコンポーネントは次のようになります。
 
    ![chlimage_1-51](assets/chlimage_1-51.png)
 
@@ -1093,7 +1091,7 @@ public class img_GET extends AbstractImageServlet {
 
 ### 段落システムコンポーネントの取り込み {#including-the-paragraph-system-component}
 
-段落システム（parsys）は、段落のリストを管理する web サイトの重要な部分です。作成者は、これを使用して、ページに段落コンポーネントを追加し、構造を提供できます。
+段落システム（parsys）は、段落のリストを管理する web サイトの重要な部分です。 作成者は、これを使用して、ページに段落コンポーネントを追加し、構造を提供できます。
 
 parsys コンポーネント（基盤コンポーネントの 1 つ）を contentpage コンポーネントに追加します。
 
@@ -1109,13 +1107,13 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
    <cq:include path="par" resourceType="foundation/components/parsys" />
    ```
 
-1. ブラウザーで、Products ページを更新します。parsys コンポーネントが以下のように表示されます。
+1. ブラウザーで、製品ページを更新します。 これでparsys コンポーネントが追加されました。これは次のようになります。
 
    ![chlimage_1-52](assets/chlimage_1-52.png)
 
 ### 画像コンポーネントの作成 {#creating-the-image-component}
 
-段落システムに画像を表示するコンポーネントを作成します。時間を節約するために、画像コンポーネントはロゴコンポーネントのコピーとして作成され、いくつかのプロパティの変更が加えられます。
+段落システムに画像を表示するコンポーネントを作成します。 時間を節約するために、画像コンポーネントはロゴコンポーネントのコピーとして作成され、いくつかのプロパティの変更が加えられます。
 
 >[!NOTE]
 >
@@ -1172,34 +1170,34 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 
 1. 変更内容を保存します。
 
-#### 画像 cq:editConfig ノードの作成 {#creating-the-image-cq-editconfig-node}
+#### 画像cq:editConfig ノードの作成 {#creating-the-image-cq-editconfig-node}
 
 `cq:editConfig` ノードタイプを使用すると、プロパティを編集するときに、コンポーネントの一定の動作を設定できます。
 
-この節では、cq:editConfig ノードを使用して、コンテンツファインダーから画像コンポーネントにアセットをドラッグできます。
+この節では、cq:editConfig ノードを使用して、コンテンツファインダーから画像コンポーネントにアセットをドラッグできるようにします。
 
 1. CRXDE Lite の /apps/mywebsite/components/image ノードの下に、次のようにノードを作成します。
 
-   * 名前：cq:editConfig.
-   * タイプ：cq:EditConfig.
+   * 名前：cq:editConfig。
+   * 型：cq:EditConfig。
 
-1. cq:editConfig ノードの下に、次のようにノードを作成します。
+1. ノード cq:editConfigの下に、次のようにノードを作成します。
 
-   * 名前：cq:dropTargets.
-   * タイプ：cq:DropTargetConfig.
+   * 名前：cq:dropTargets。
+   * 型：cq:DropTargetConfig。
 
-1. cq:dropTargets ノードの下に、次のようにノードを作成します。
+1. ノード cq:dropTargetsの下に、次のようにノードを作成します。
 
    * 名前：画像
-   * 型：nt:unstructured.
+   * 型：nt:unstructured。
 
 1. CRXDE で、プロパティを次のように設定します。
 
-| 名前 | タイプ | 値 |
+| 名前 | 種類 | 値 |
 |---|---|---|
 | 同意 | 文字列 | image/（gif\|jpeg\|png） |
 | グループ | 文字列 | media |
-| propertyName | 文字列 | 。/imageReference |
+| propertyName | String | ./imageReference |
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -1219,7 +1217,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 1. 「編集」ボタンをクリックして、par のデザインダイアログを編集します。
 1. ダイアログで、**許可されたコンポーネント**&#x200B;のリストが表示されます。**MyWebsite**&#x200B;に移動して、「**マイ画像コンポーネント**」を選択し、「**OK**」をクリックします。
 1. **編集モードに戻ります。**
-1. parsys フレーム（**コンポーネントまたはアセットをここにドラッグ**）をダブルクリックします。**新規コンポーネントを挿入**&#x200B;および&#x200B;**サイドキック**&#x200B;セレクターは次のようになります。
+1. parsys フレーム（**コンポーネントまたはアセットをここにドラッグ**）をダブルクリックします。 **新規コンポーネントを挿入**&#x200B;および&#x200B;**サイドキック**&#x200B;セレクターは次のようになります。
 
    ![chlimage_1-4](assets/chlimage_1-4.jpeg)
 
@@ -1241,12 +1239,12 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
    <cq:include path="toolbar" resourceType="foundation/components/toolbar"/>
    ```
 
-1. AEM web サイトページのフォルダーツリーで、Websites／My Website／English を選択し、新規／新しいページをクリックします。次のプロパティ値を指定し、「作成」をクリックします。
+1. AEM web サイトページのフォルダーツリーで、Websites／My Website／English を選択し、新規／新しいページをクリックします。 次のプロパティ値を指定し、「作成」をクリックします。
 
    * タイトル：ツールバー
    * 「マイ web サイトコンテンツページテンプレート」を選択します。
 
-1. ページのリストで、ツールバーページを右クリックし、「プロパティ」をクリックします。「ナビゲーション内で非表示にする」を選択し、「OK」をクリックします。
+1. ページのリストで、ツールバーページを右クリックし、「プロパティ」をクリックします。 「ナビゲーション内で非表示にする」を選択し、「OK」をクリックします。
 
    「ナビゲーション内で非表示にする」オプションを使用すると、topnav や listchildren などのナビゲーションコンポーネントにページが表示されなくなります。
 
@@ -1257,13 +1255,13 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
    * ログイン
    * 検索
 
-1. ブラウザーで製品ページをリロードします。次のようなコンソールが表示されます。
+1. ブラウザーで製品ページをリロードします。 次のようなコンソールが表示されます。
 
    ![chlimage_1-55](assets/chlimage_1-55.png)
 
 ### 検索コンポーネントの作成 {#creating-the-search-component}
 
-この節では、web サイト上のコンテンツを検索するためのコンポーネントを作成します。この検索コンポーネントは、任意のページの段落システム（特殊な検索結果ページなど）に配置できます。
+この節では、web サイト上のコンテンツを検索するためのコンポーネントを作成します。 この検索コンポーネントは、任意のページの段落システム（特殊な検索結果ページなど）に配置できます。
 
 完了したら、検索入力ボックスは、**英語**&#x200B;のページに以下のように表示されます。
 
@@ -1289,7 +1287,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 1. 次のノードをコピーし、apps/mywebsite/components/search ノードに貼り付けます。
 
    * `/libs/foundation/components/search/dialog`
-   * &grave;&grave; `/libs/foundation/components/search/i18n`
+   * `` `/libs/foundation/components/search/i18n`
 
    * `/libs/foundation/components/search/icon.png`
 
@@ -1490,7 +1488,7 @@ contentpage ページの左側のセクションに検索入力ボックスを�
    </div>
    ```
 
-1. ブラウザーで、Products ページを再読み込みします。検索コンポーネントは次のようになります。
+1. ブラウザーで製品ページをリロードします。 検索コンポーネントは次のようになります。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -1503,17 +1501,17 @@ contentpage ページの左側のセクションに検索入力ボックスを�
 1. デザインの par ブロック（検索タイトルの下）で、「編集」をクリックします。
 1. ダイアログで、下にスクロールして&#x200B;**自分の web サイト**&#x200B;グループを表示し、「**自分の検索コンポーネント**」を選択して「**OK**」をクリックします。
 1. サイドキックで、三角形をクリックして編集モードに戻ります。
-1. My Search コンポーネントをサイドキックから parsys フレームにドラッグします。次のようなコンソールが表示されます。
+1. My Search コンポーネントをサイドキックから parsys フレームにドラッグします。 次のようなコンソールが表示されます。
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
-1. 製品ページに移動します。入力ボックスに customers と入力して Enter キーを押して検索します。検索ページにリダイレクトされます。プレビューモードに切り替わります。出力は以下のような形式です。
+1. 製品ページに移動します。 入力ボックスで顧客を検索し、Enter キーを押します。 検索ページにリダイレクトされます。 プレビューモードに切り替える：出力は次のような形式になります。
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
 ### iparsys コンポーネントの取り込み {#including-the-iparsys-component}
 
-この節では、基盤コンポーネントの 1 つである継承段落システム (iparsys) コンポーネントを含めます。このコンポーネントを使用すると、親ページ上に段落の構造を作成でき、子ページに段落を継承させることができます。
+この節では、基盤コンポーネントの 1 つである継承段落システム (iparsys) コンポーネントを含めます。 このコンポーネントを使用すると、親ページ上に段落の構造を作成でき、子ページに段落を継承させることができます。
 
 このコンポーネントでは、編集モードとデザインモードの両方で複数のパラメーターを設定できます。
 
@@ -1530,6 +1528,6 @@ contentpage ページの左側のセクションに検索入力ボックスを�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで製品ページをリロードします。ページ全体は次のようになります。
+1. ブラウザーで、** Products** ページをリロードします。 ページ全体は次のようになります。
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)

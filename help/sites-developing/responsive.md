@@ -10,13 +10,11 @@ exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '5464'
-ht-degree: 92%
-
+source-wordcount: '5471'
+ht-degree: 90%
 ---
-
 # Web ページのレスポンシブデザイン{#responsive-design-for-web-pages}
 
 {{ue-over-mobile}}
@@ -250,7 +248,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 ### JavaScript を使用したメディアクエリの評価 {#evaluating-media-queries-using-javascript}
 
-W3Cが定義する[MediaQueryList インターフェイス &#x200B;](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
+W3Cが定義する[MediaQueryList インターフェイス ](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
 
 * MediaQueryList インターフェイスを実装するブラウザーは `window.matchMedia()` 関数をサポートします。 この関数は、指定された文字列に対してメディアクエリをテストします。 この関数は、クエリ結果へのアクセスを提供する `MediaQueryList` オブジェクトを返します。
 
@@ -506,7 +504,7 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
 
 #### 実装の詳細 {#implementation-details}
 
-`com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` クラスは、[AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) クラスを拡張します。 AdaptiveImageComponentServlet のソースコードは、`/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl` フォルダーにあります。
+`com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` クラスは、[AbstractImageServlet](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) クラスを拡張します。 AdaptiveImageComponentServlet のソースコードは、`/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl` フォルダーにあります。
 
 このクラスは、Felix SCR アノテーションを使用して、サーブレットが関連付けられるリソースタイプとファイル拡張子および 1 つ目のセレクターの名前を設定します。
 
@@ -539,11 +537,11 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
             description = "List of widths this component is permitted to generate.")
 ```
 
-`AbstractImageServlet` クラスは、HTTP リクエストを処理する `doGet` メソッドを提供します。 このメソッドは、リクエストに関連付けられるリソースを決定し、リポジトリからリソースのプロパティを取得し、それらのプロパティを [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) オブジェクトに返します。
+`AbstractImageServlet` クラスは、HTTP リクエストを処理する `doGet` メソッドを提供します。 このメソッドは、リクエストに関連付けられるリソースを決定し、リポジトリからリソースのプロパティを取得し、それらのプロパティを [ImageContext](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) オブジェクトに返します。
 
 >[!NOTE]
 >
->[com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) クラスは、リソースの `fileReference` プロパティの値を取得する `getFileReference method` を提供します。
+>[com.day.cq.commons.DownloadResource](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/DownloadResource.html) クラスは、リソースの `fileReference` プロパティの値を取得する `getFileReference method` を提供します。
 
 `AdaptiveImageComponentServlet` クラスは、`createLayer` メソッドをオーバーライドします。 このメソッドは、`ImageContext` オブジェクトから画像リソースのパスとリクエストされた画像幅を取得します。 その後、実際の画像の拡大／縮小を実行する `info.geometrixx.commons.impl.AdaptiveImageHelper` クラスのメソッドを呼び出します。
 
@@ -611,7 +609,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 #### 実装の詳細 {#implementation-details-1}
 
-info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet クラスは、[AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) クラスを拡張します。 cq-geometrixx-commons-pkg パッケージがインストールされている場合、ImageReferenceModificationServlet のソースコードは `/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets` フォルダーにあります。
+info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet クラスは、[AbstractImageServlet](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) クラスを拡張します。 cq-geometrixx-commons-pkg パッケージがインストールされている場合、ImageReferenceModificationServlet のソースコードは `/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets` フォルダーにあります。
 
 このクラスは、Felix SCR アノテーションを使用して、サーブレットが関連付けられるリソースタイプとファイル拡張子および 1 つ目のセレクターの名前を設定します。
 
@@ -651,12 +649,12 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet クラ�
             description = "List of resolutions this component is permitted to generate.")
 ```
 
-`AbstractImageServlet` クラスには、HTTP リクエストを処理する `doGet` メソッドが含まれます。 このメソッドは、呼び出しに関連付けられるリソースを決定し、リポジトリからリソースのプロパティを取得して、[ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) オブジェクトにそれらのプロパティを保存します。
+`AbstractImageServlet` クラスには、HTTP リクエストを処理する `doGet` メソッドが含まれます。 このメソッドは、呼び出しに関連付けられるリソースを決定し、リポジトリからリソースのプロパティを取得して、[ImageContext](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) オブジェクトにそれらのプロパティを保存します。
 
-`ImageReferenceModificationServlet` クラスは、`createLayer` メソッドをオーバーライドし、レンダリングする画像リソースを決定するロジックを実装します。 このメソッドは、該当するページで `jcr:content` ノードの子ノード（`image`）を取得します。 [画像](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/Image.html) オブジェクトはこの `image` ノードから作成され、`getFileReference` メソッドは、画像ノードの `fileReference` プロパティから画像ファイルへのパスを返します。
+`ImageReferenceModificationServlet` クラスは、`createLayer` メソッドをオーバーライドし、レンダリングする画像リソースを決定するロジックを実装します。 このメソッドは、該当するページで `jcr:content` ノードの子ノード（`image`）を取得します。 [画像](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/foundation/Image.html) オブジェクトはこの `image` ノードから作成され、`getFileReference` メソッドは、画像ノードの `fileReference` プロパティから画像ファイルへのパスを返します。
 
 >[!NOTE]
->[com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) クラスには getFileReference メソッドが含まれます。
+>[com.day.cq.commons.DownloadResource](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/DownloadResource.html) クラスには getFileReference メソッドが含まれます。
 >
 
 ## 可変グリッドの開発 {#developing-a-fluid-grid}

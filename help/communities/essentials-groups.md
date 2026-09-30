@@ -9,9 +9,9 @@ exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '444'
 ht-degree: 4%
 ---
 # コミュニティグループの基本事項  {#community-group-essentials}
@@ -76,9 +76,9 @@ ht-degree: 4%
 
 ## サーバーサイドの基本 {#essentials-for-server-side}
 
-* [コミュニティグループ API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [コミュニティグループ API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
-* [コミュニティグループエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
+* [コミュニティグループエンドポイント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
@@ -86,9 +86,9 @@ ht-degree: 4%
 
 [Groups関数](functions.md#groups-function)を含むコミュニティサイト構造は、パブリッシュ環境とオーサー環境からの新しい`community groups`の作成をサポートしています。 作成されたコミュニティグループには、グループのメンバーをリストする`community groups member list` コンポーネントが含まれています。
 
-コミュニティ グループ ページのデザインを提供する1つ以上の[&#x200B; コミュニティ グループ テンプレート &#x200B;](tools-groups.md)を、グループ関数に設定できます。 これは、関数が[&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md)に追加されているか、コミュニティグループテンプレート内にネストされている場合に当てはまります。
+コミュニティ グループ ページのデザインを提供する1つ以上の[ コミュニティ グループ テンプレート ](tools-groups.md)を、グループ関数に設定できます。 これは、関数が[ コミュニティサイトテンプレート ](sites.md)に追加されているか、コミュニティグループテンプレート内にネストされている場合に当てはまります。
 
-複数のコミュニティグループテンプレートを含めると、選択が行われます。 すなわち、コミュニティサイト用にコミュニティグループを作成する際に、許可されたユーザに提示されるデザインの選択である。 作成者については、[&#x200B; コミュニティグループ &#x200B;](creating-groups.md)の節を参照してください。
+複数のコミュニティグループテンプレートを含めると、選択が行われます。 すなわち、コミュニティサイト用にコミュニティグループを作成する際に、許可されたユーザに提示されるデザインの選択である。 作成者については、[ コミュニティグループ ](creating-groups.md)の節を参照してください。
 
 ### ネストされたグループ {#nested-groups}
 

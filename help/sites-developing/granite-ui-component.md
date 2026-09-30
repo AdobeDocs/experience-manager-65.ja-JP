@@ -9,13 +9,11 @@ exl-id: e4820330-2ee6-4eca-83fd-462aa0b83647
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 100%
-
+source-wordcount: '550'
+ht-degree: 93%
 ---
-
 # 新しい Granite UI フィールドコンポーネントの作成{#creating-a-new-granite-ui-field-component}
 
 Granite UI には、フォームで使用するようにデザインされた幅広いコンポーネントが用意されています。これらを Granite の UI 用語では「フィールド」と呼びます&#x200B;*。* 標準の Granite フォームコンポーネントは、次の場所にあります。
@@ -28,35 +26,35 @@ Granite UI には、フォームで使用するようにデザインされた幅
 
 >[!NOTE]
 >
->フィールドについて詳しくは、[Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)を参照してください。
+>フィールドについて詳しくは、[Granite UI ドキュメント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)を参照してください。
 
 Granite コンポーネントを開発または拡張するには、Granite UI の基盤フレームワークを使用します。 このフレームワークには次の 2 つの要素があります。
 
 * サーバーサイド：
 
-   * 基盤コンポーネントのコレクション
+  * 基盤コンポーネントのコレクション
 
-      * 基盤 - モジュール式、組み立て可能、階層化可能、再利用可能
-      * コンポーネント - Sling コンポーネント
+    * 基盤 - モジュール式、組み立て可能、階層化可能、再利用可能
+    * コンポーネント - Sling コンポーネント
 
-   * アプリケーション開発を支援するヘルパー
+  * アプリケーション開発を支援するヘルパー
 
 * クライアントサイド：
 
-   * ハイパーメディア駆動型ユーザーインターフェイスを使用して、一般的なインタラクションパターンを実現するための語彙（HTML 言語の拡張）を提供するクライアントライブラリのコレクション
+  * ハイパーメディア駆動型ユーザーインターフェイスを使用して、一般的なインタラクションパターンを実現するための語彙（HTML 言語の拡張）を提供するクライアントライブラリのコレクション
 
 一般的な Granite UI コンポーネントである `field` は、次の 2 つのファイルで構成されます。
 
 * `init.jsp`：ラベル付けや説明などの一般的な処理を扱い、フィールドをレンダリングする際に必要なフォーム値を提供します。
 * `render.jsp`：ここで、フィールドの実際のレンダリングが実行され、カスタムフィールドの場合は上書きされる必要があります。`init.jsp` に含まれます。
 
-詳しくは、[Granite UI ドキュメント - フィールド](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)を参照してください。
+詳しくは、[Granite UI ドキュメント - フィールド](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)を参照してください。
 
 詳しくは、例えば、以下を参照してください。
 
 * `cqgems/customizingfield/components/colorpicker`
 
-   * [コードサンプル](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)で提供
+  * [コードサンプル](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)で提供
 
 * `granite/ui/components/foundation/form`
 

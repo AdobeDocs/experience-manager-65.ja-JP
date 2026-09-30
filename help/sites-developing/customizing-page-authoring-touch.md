@@ -9,13 +9,11 @@ exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 95%
-
+source-wordcount: '1471'
+ht-degree: 90%
 ---
-
 # ページオーサリングのカスタマイズ{#customizing-page-authoring}
 
 >[!CAUTION]
@@ -28,16 +26,16 @@ Adobe Experience Manager（AEM）には、オーサーインスタンスのペ�
 
   クライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際に、独自のクライアントライブラリを `/apps.` に作成できます。新しいクライアントライブラリには次の条件があります。
 
-   * オーサリングクライアントライブラリ `cq.authoring.editor.sites.page` を使用する必要があります。
-   * 適切な `cq.authoring.editor.sites.page.hook` カテゴリに含める必要があります。
+  * オーサリングクライアントライブラリ `cq.authoring.editor.sites.page` を使用する必要があります。
+  * 適切な `cq.authoring.editor.sites.page.hook` カテゴリに含める必要があります。
 
 * オーバーレイ
 
-  オーバーレイはノード定義に基づいており、標準の機能（`/libs`）にカスタマイズした独自機能（`/apps`）をオーバーレイすることができます。 オーバーレイを作成する場合、[sling リソースの結合](/help/sites-developing/sling-resource-merger.md)で継承が可能なため、元の1:1 コピーは必要ありません。
+  オーバーレイはノード定義に基づいており、標準の機能（`/libs`）にカスタマイズした独自機能（`/apps`）をオーバーレイすることができます。 オーバーレイを作成する場合、[sling リソースの結合](/help/sites-developing/sling-resource-merger.md)で継承が可能なため、元のコピーを1:1で作成する必要はありません。
 
 >[!NOTE]
 >
->詳しくは、[JS ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)を参照してください。
+>詳しくは、[JS ドキュメント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/jsdoc/ui-touch/editor-core/index.html)を参照してください。
 
 これらをさまざまな方法で使用して、AEM インスタンスのページオーサリング機能を拡張できます。 一部については、以降で（大まかに）説明します。
 
@@ -47,7 +45,7 @@ Adobe Experience Manager（AEM）には、オーサーインスタンスのペ�
 >
 >* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
->* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 >
 
@@ -107,9 +105,9 @@ GitHub のコード
 
 ページをオーサリングする際、ユーザーは頻繁にリソース（ページ、コンポーネント、アセットなど）から選択する必要があります。 これは、作成者が項目を選択する必要があるリストの形式などで表示されます。
 
-リストを適切なサイズに保ち、使用事例にも関連するように、フィルターをカスタム述語の形式で実装できます。 例えば、[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) コンポーネントを使用してユーザーが特定のリソースへのパスを選択できるようにするには、表示されるパスを次のようにフィルタリングできます。
+リストを適切なサイズに保ち、使用事例にも関連するように、フィルターをカスタム述語の形式で実装できます。 例えば、[`pathbrowser`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) コンポーネントを使用してユーザーが特定のリソースへのパスを選択できるようにするには、表示されるパスを次のようにフィルタリングできます。
 
-* [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
+* [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
 * 述語の名前を指定し、`pathbrowser`を使用するときにその名前を参照します。
 
 カスタム述語の作成について詳しくは、[Query Builder 用のカスタム述語エバリュエーターの実装](/help/sites-developing/implementing-custom-predicate-evaluator.md)を参照してください。
@@ -151,12 +149,12 @@ GitHub のコード
 
      例：
 
-      * `/libs/foundation/components/text/cq:editConfig`
-      * `/libs/foundation/components/image/cq:editConfig`
+     * `/libs/foundation/components/text/cq:editConfig`
+     * `/libs/foundation/components/image/cq:editConfig`
 
-         * プロパティ：`editorType`
+       * プロパティ：`editorType`
 
-           そのコンポーネントに対してインプレース編集が呼び出された場合に使用されるインラインエディターのタイプを定義します（`text`、`textimage`、`image`、`title` など）。
+         そのコンポーネントに対してインプレース編集が呼び出された場合に使用されるインラインエディターのタイプを定義します（`text`、`textimage`、`image`、`title` など）。
 
 1. エディターの追加の設定の詳細は、設定が含まれている `config` ノード、および必要なプラグイン設定の詳細が含まれている `plugin` ノードを使用して設定できます。
 
@@ -192,7 +190,7 @@ GitHub のコード
 
 >[!NOTE]
 >
->例えば、次を参照してください。
+>例として、次を参照してください。
 >`/libs/cq/gui/components/authoring/editors/clientlibs/core/js/editors/editorExample.js`
 
 1. 実装方法：

@@ -7,13 +7,11 @@ role: Admin,User
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 100%
-
+source-wordcount: '993'
+ht-degree: 92%
 ---
-
 # Document Security | ユーザーデータの処理 {#document-security-handling-user-data}
 
 AEM Forms Document Security を使用すると、事前定義されたセキュリティ設定を作成および保存して、ドキュメントに適用できます。 これにより、許可されたユーザーのみがドキュメントを使用できるようになります。 ドキュメントを保護するには、ポリシーを使用します。 ポリシーは、セキュリティ設定と許可されたユーザーのリストを含む情報のコレクションです。 1 つ以上のドキュメントにポリシーを適用し、AEM Forms JEE User Management に追加されるユーザーを許可することができます。
@@ -125,7 +123,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
->`EdcAuditEntity` テーブルからデータを書き出すには、[EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API を使用します。これは、[EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) をパラメーターとして受け取り、`principalId`、`policyId`、`licenseId` のいずれかに基づいて監査データを書き出します。
+>`EdcAuditEntity` テーブルからデータを書き出すには、[EventManager.exportEvents](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API を使用します。これは、[EventSearchFilter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) をパラメーターとして受け取り、`principalId`、`policyId`、`licenseId` のいずれかに基づいて監査データを書き出します。
 
 システム内のユーザーに関する完全なデータを取得するには、User Management データベースのデータにアクセスしてデータを書き出す必要があります。 詳しくは、[Forms User Management | ユーザーデータの処理](/help/forms/using/user-management-handling-user-data.md)を参照してください。
 
@@ -150,7 +148,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   >`EdcAuditEntity` テーブルからデータを削除するには、[EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API を使用します。これは、[EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) をパラメーターとして受け取り、`principalId`、`policyId`、`licenseId` のいずれかに基づいて監査データを削除します。
+   >`EdcAuditEntity` テーブルからデータを削除するには、[EventManager.deleteEvents](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API を使用します。これは、[EventSearchFilter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) をパラメーターとして受け取り、`principalId`、`policyId`、`licenseId` のいずれかに基づいて監査データを削除します。
 
 1. アクティブなポリシー XML ファイルとアーカイブされたポリシー XML ファイルは、それぞれ `EdcPolicyXmlEntity` および `EdcPolicyArchiveEntity` データベーステーブルに格納されます。 これらのテーブルからユーザーのデータを削除するには、次を実行します。
 
@@ -209,5 +207,5 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    >
    >管理者は、管理コンソールの&#x200B;**[!UICONTROL サービス／Document Security／マイポリシー]**&#x200B;で、他のユーザーの個人用ポリシーからユーザーデータを検索、アクセスおよび削除できます。
 
-1. プリンシパル ID のデータを User Management のデータベースから削除します。 詳しい手順については、[Forms User Management | ユーザーデータの処理](/help/forms/using/user-management-handling-user-data.md)を参照してください。
+1. プリンシパル ID のデータをユーザー管理のデータベースから削除します。 詳しい手順については、[Forms User Management | ユーザーデータの処理](/help/forms/using/user-management-handling-user-data.md)を参照してください。
 1. AEM Forms サーバーを開始します。

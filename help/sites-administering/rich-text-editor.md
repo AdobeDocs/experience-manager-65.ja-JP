@@ -6,13 +6,11 @@ exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3070'
-ht-degree: 98%
-
+source-wordcount: '3073'
+ht-degree: 97%
 ---
-
 # リッチテキストエディターの設定 {#configure-the-rich-text-editor}
 
 リッチテキストエディター（RTE）には、テキストコンテンツの編集に使用できる幅広い機能が用意されています。 アイコン、選択ボックス、ツールバーおよびメニューを使用して、テキストを WYSIWYG で編集できます。
@@ -325,12 +323,12 @@ RTE ツールバーに表示される Coral アイコンと使用可能なコマ
 
 ## その他の情報 {#further-information}
 
-RTE の設定について詳しくは、[AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) リファレンスを参照してください。
+RTE の設定について詳しくは、[AEM Widget API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText) リファレンスを参照してください。
 
 特に、使用可能なプラグインおよび関連オプションを確認するには、以下を参照してください。
 
-* [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) コンポーネントは、スタイル設定されたテキスト情報（リッチテキスト）を編集するためのフォームフィールドを提供します。 リッチテキストフォームに使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。
-* RichText コンポーネントは、[CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)にリストされているプラグインを使用して、幅広い機能を提供します。 各プラグインについて：
+* [CQ.form.RichText](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText) コンポーネントは、スタイル設定されたテキスト情報（リッチテキスト）を編集するためのフォームフィールドを提供します。 リッチテキストフォームに使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。
+* RichText コンポーネントは、[CQ.form.rte.plugins.Plugin](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)にリストされているプラグインを使用して、幅広い機能を提供します。 各プラグインについて：
 
   * 有効化（または無効化）が可能な機能の詳細については「機能」を参照してください。
   * 該当するプラグインの詳細設定に使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。

@@ -11,13 +11,11 @@ exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 88%
-
+source-wordcount: '785'
+ht-degree: 83%
 ---
-
 # デバイスグループフィルターの作成{#creating-device-group-filters}
 
 {{ue-over-mobile}}
@@ -30,7 +28,7 @@ ht-degree: 88%
 
 ## フィルターの Java™ クラス {#the-filter-java-class}
 
-デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。 この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
+デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。 この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
 この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。 そのため、サンプルの Java™ クラスでは `@Component` と `@Service` の注釈を使用します。 このクラスの構造は次のとおりです。
 
@@ -94,7 +92,7 @@ public String getTitle() {
 * ユーザーエージェントの名前
 * デバイスの機能を格納する Map オブジェクト。 Map のキーは WURFL™ の機能名であり、値は WURFL™ データベースの対応する値です。
 
-[com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスには、静的フィールドにWURFL™機能名のサブセットが含まれています。 デバイス機能のマップから値を取得する際に、これらのフィールド定数をキーとして使用します。
+[com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスには、静的フィールドにWURFL™機能名のサブセットが含まれています。 デバイス機能のマップから値を取得する際に、これらのフィールド定数をキーとして使用します。
 
 例えば、次のコード例では、デバイスが CSS をサポートするかどうかを指定します。
 
@@ -188,7 +186,7 @@ Maven を使用してアプリケーションをビルドする場合は、次�
 
 DeviceGroupおよびDeviceGroupFilter インターフェイスは、Day Communique 5 WCM Mobile API バンドルに含まれています。 Felix注釈は、Apache Felix Declarative Services バンドルに含まれています。 このJAR ファイルは、パブリック Adobe リポジトリから取得できます。
 
-この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。 Adobe Web コンソール （[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)）を使用して、これが環境にデプロイされているバンドルバージョンであることを確認します。
+この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。 Adobe Web コンソール （[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)）を使用して、環境にデプロイされているバンドルバージョンであることを確認します。
 
 **POM**：（ユーザーの POM では別の groupId と version が使用されます）。
 

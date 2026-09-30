@@ -1,6 +1,6 @@
 ---
 title: カレンダーの基本事項
-description: Experience Managerコミュニティでカレンダー機能を使用する方法を説明します。 カレンダーでは、権限を持つメンバーユーザーグループの識別がサポートされています。
+description: Experience Manager Communitiesのカレンダー機能の操作方法について説明します。 カレンダーでは、権限を持つメンバーユーザーグループを識別できます。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,18 +9,16 @@ exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '244'
 ht-degree: 4%
-
 ---
-
 # カレンダーの基本事項 {#calendar-essentials}
 
 このページでは、カレンダー機能の操作に関する重要な情報を提供します。
 
-## クライアントサイドの基本事項 {#essentials-for-client-side}
+## クライアントサイドの基本 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -29,15 +27,15 @@ ht-degree: 4%
    <td>ソーシャル/カレンダー/コンポーネント/hbs/カレンダー</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong> 含む </strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
    <td>cq.social.hbs.calendar</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong> テンプレート </strong></td>
    <td>/libs/social/calendar/components/hbs/calendar/calendar.hbs</td>
    <td> </td>
   </tr>
@@ -47,34 +45,34 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="calendar.md"> カレンダーの使用 </a> を参照してください。</td>
+   <td><a href="calendar.md"> カレンダーの使用</a>を参照してください</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアントサイドのカスタマイズ](client-customize.md)
 
-## サーバーサイドの初期設定 {#essentials-for-server-side}
+## サーバーサイドの基本 {#essentials-for-server-side}
 
-* [&#x200B; カレンダー API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
+* [カレンダーAPI](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
-* [&#x200B; カレンダーエンドポイント &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
+* [カレンダーエンドポイント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/calendar/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### カレンダー機能 {#calendar-function}
 
-[&#x200B; カレンダー関数 &#x200B;](functions.md#calendar-function) を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[&#x200B; 特権メンバーユーザーグループ &#x200B;](users.md#privileged-members-group) の識別をサポートしています。
+[ カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[特権メンバーユーザーグループ ](users.md#privileged-members-group)の識別をサポートしています。
 
 ### カレンダー投稿へのアクセス（UGC） {#accessing-calendar-posts-ugc}
 
-AEM 6.1 Communities の時点では、UGC の [&#x200B; 共通ストア &#x200B;](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
+AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
+**リポジトリ内のUGCの場所と形式は、警告なしで変更される可能性があります**。
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要
-* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例
-* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要
+* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング

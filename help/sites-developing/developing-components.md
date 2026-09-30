@@ -1,23 +1,25 @@
 ---
 title: AEM コンポーネントの開発
+
 description: AEM コンポーネントを使用して、web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
+
+
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
+
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3593'
-ht-degree: 99%
-
+source-wordcount: '3605'
+ht-degree: 93%
 ---
-
 # AEM コンポーネントの開発{#developing-aem-components}
 
 AEM コンポーネントを使用して、web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
@@ -116,13 +118,13 @@ AEM コンポーネントを使用して、web ページ上で使用できるコ
 
 ## プレビュー動作の設定 {#configuring-the-preview-behavior}
 
-**プレビュー**&#x200B;モードに切り替えると、ページが更新されなくても [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie が設定されます。
+**プレビュー**&#x200B;モードに切り替えると、ページが更新されなくても [WCM モード](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie が設定されます。
 
 レンダリングが WCM モードの影響を受けるコンポーネントの場合は、明確にそのコンポーネントを更新し、この Cookie の値を使用するように定義する必要があります。
 
 >[!NOTE]
 >
->値 `EDIT` と `PREVIEW` は、タッチ操作対応 UI でのみ [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie に使用されます。
+>値 `EDIT` と `PREVIEW` は、タッチ操作対応 UI でのみ [WCM モード](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie に使用されます。
 
 ## ダイアログの作成と設定 {#creating-and-configuring-a-dialog}
 
@@ -130,9 +132,9 @@ AEM コンポーネントを使用して、web ページ上で使用できるコ
 
 ### Coral UI と Granite UI {#coral-ui-and-granite-ui}
 
-AEM の現代的なルックアンドフィールは [Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) と [Granite UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) で定義されています。
+AEM の現代的なルックアンドフィールは [Coral UI](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/coral-ui/coralui3/index.html) と [Granite UI](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) で定義されています。
 
-[Granite UI で提供される幅広い基本コンポーネント（ウィジェット）](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、オーサリング環境でダイアログを作成するために使用されます。 必要な場合には、選択したウィジェットを拡張し、[独自のウィジェットを作成](#creatinganewwidget)することができます。
+[Granite UI で提供される幅広い基本コンポーネント（ウィジェット）](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、オーサリング環境でダイアログを作成するために使用されます。 必要な場合には、選択したウィジェットを拡張し、[独自のウィジェットを作成](#creatinganewwidget)することができます。
 
 詳しくは、以下を参照してください。
 
@@ -140,13 +142,13 @@ AEM の現代的なルックアンドフィールは [Coral UI](https://develope
 
   * すべてのクラウドソリューションに一貫性ある UI を提供
   * [AEM タッチ操作対応 UI の概念 - Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-  * [Coral UI ガイド](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
+  * [Coral UI ガイド](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/coral-ui/coralui3/index.html)
 
 * Granite UI
 
   * UI コンソールおよびダイアログの構築用に Coral UI マークアップを Sling コンポーネントにラップして提供
   * [AEM タッチ対応 UI の概念 - Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-  * [Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+  * [Granite UI ドキュメント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 
 >[!NOTE]
 >
@@ -209,13 +211,13 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->Granite UI について詳しくは、[Granite UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)を参照してください。
+>Granite UI について詳しくは、[Granite UI ドキュメント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)を参照してください。
 
 ダイアログをフォーム要素の単純なコンテナと見なす場合、ダイアログコンテンツの主なコンテンツをフォームフィールドとして表示することもできます。 フォームフィールドを作成するには、リソースタイプを作成する必要があります。これは、コンポーネントの作成と同じです。 この作業を容易にするために、Granite UI は、`sling:resourceSuperType` を使用して以下を継承する汎用フィールドコンポーネントを提供しています。
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-Granite UI には、具体的に言えばダイアログ（一般的に言えば[フォーム](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)）での使用に適した、幅広いフィールドコンポーネントが用意されています。
+Granite UI には、具体的に言えばダイアログ（一般的に言えば[フォーム](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)）での使用に適した、幅広いフィールドコンポーネントが用意されています。
 
 >[!NOTE]
 >
@@ -267,7 +269,7 @@ Granite UI には、具体的に言えばダイアログ（一般的に言えば
 1. 対象となるフィールドを、指定された CSS クラス（*フック*）でマークします。
 1. クライアントライブラリ内で、その CSS クラス名に対してフックされる JS リスナーを定義します（これによって、カスタムロジックの範囲がそのフィールドのみに限定され、同じタイプの他のフィールドに影響を与えなくなります）。
 
-これを実現するには、やり取りする、基になるウィジェットライブラリについて理解する必要があります。 反応するイベントの識別については、[Coral UI ドキュメント](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)を参照してください ExtJS を使用して実行する必要があったプロセスと非常によく似ています。指定されたウィジェットのドキュメントページを探し、そのイベント API の詳細を確認してください。
+これを実現するには、やり取りする、基になるウィジェットライブラリについて理解する必要があります。 反応するイベントの識別については、[Coral UI ドキュメント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/coral-ui/coralui3/index.html)を参照してください ExtJS を使用して実行する必要があったプロセスと非常によく似ています。指定されたウィジェットのドキュメントページを探し、そのイベント API の詳細を確認してください。
 
 例えば、次を参照してください。
 
@@ -306,7 +308,7 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 
 #### フィールドの検証（Granite UI） {#field-validation-granite-ui}
 
-Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。 [詳しくは、`foundation-valdiation`Granite のドキュメントを参照してください。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。 [詳しくは、`foundation-valdiation`Granite のドキュメントを参照してください。](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
 詳しくは、例えば、以下を参照してください。
 
@@ -456,7 +458,7 @@ GitHub のコード
 
   * クラシック UI 固有の関数を使用する [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) コードの移行
   * RTE プラグイン。詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
-  * クラシック UI 固有の関数を使用する[&#x200B; `cq:listener` コードを移行](#migrating-cq-listener-code)します。
+  * クラシック UI 固有の関数を使用する[ `cq:listener` コードを移行](#migrating-cq-listener-code)します。
 
 * ダイアログ
 
@@ -464,7 +466,7 @@ GitHub のコード
   * [AEM 最新化ツール](/help/sites-developing/modernization-tools.md)を使用すると、既存のコンポーネントを拡張するのに役立ちます。
   * [ExtJS を Granite UI コンポーネントへマッピング](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)では、ExtJS の xtype とノードタイプを、同等の Granite UI リソースタイプにマッピングする便利な概要について説明しています。
   * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションを参照してください。
-  * vtypes から [Granite UI 検証](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
+  * vtypes から [Granite UI 検証](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
   * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションを参照してください。
 
 ### cq:listener コードの移行中 {#migrating-cq-listener-code}

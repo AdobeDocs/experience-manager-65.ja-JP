@@ -9,20 +9,18 @@ exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 100%
-
+source-wordcount: '570'
+ht-degree: 85%
 ---
-
 # クラウドサービス設定{#cloud-service-configurations}
 
 設定は、サービス設定を保存するためのロジックと構造を提供するようにデザインされています。
 
 既存のインスタンスを拡張して、独自の設定を作成できます。
 
-## 概念  {#concepts}
+## 概念 {#concepts}
 
 設定の作成に用いられる原則は、以下の概念に基づいています。
 
@@ -37,9 +35,9 @@ ht-degree: 100%
 
 設定のベースパスは次のとおりです。
 
-`/etc/cloudservices`。
+`/etc/cloudservices`
 
-設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
+設定のタイプごとに、テンプレートとコンポーネントが提供されます。 これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
 新しいサービス用の設定を行うには、以下の操作を実行します。
 
@@ -49,8 +47,8 @@ ht-degree: 100%
 
 * この下に次のコンポーネントを作成します。
 
-   * 設定テンプレート
-   * 設定コンポーネント
+  * 設定テンプレート
+  * 設定コンポーネント
 
 テンプレートとコンポーネントは、`sling:resourceSuperType` をそれぞれ次の場所から継承する必要があります。ベーステンプレート：
 
@@ -136,7 +134,7 @@ propertyname
 
 ### API {#api}
 
-API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html) を参照してください。
+API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html) を参照してください。
 
 ### AEM の統合 {#aem-integration}
 
@@ -151,7 +149,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。 このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
 
 `password@Encrypted`
 
@@ -165,7 +163,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 >
 >デフォルトでは、`EcryptionPostProcessor` は、`/etc/cloudservices` に対する `POST` リクエストのみを暗号化します。
 
-#### サービスページの jcr:content ノード用の追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
+#### サービスページ jcr:content ノードの追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
 
 <table>
  <tbody>
@@ -175,10 +173,10 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br /> 追加機能および JS インクルージョンに使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Adobe Analytics および Adobe Target の場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td>
+   <td>ページに自動的に含めるコンポーネントへの参照パス。<br /> これは、追加機能とJSのインクルージョンに使用されます。<br /> これには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br />が含まれるページ上のコンポーネントが含まれます（通常は<code>body</code> タグの前）。<br /> Adobe AnalyticsとAdobe Targetの場合は、これを使用して、JavaScript呼び出しなどの追加機能を追加して訪問者の動作を追跡します。</td>
   </tr>
   <tr>
-   <td>description</td>
+   <td>説明</td>
    <td>サービスの簡単な説明。<br /> </td>
   </tr>
   <tr>

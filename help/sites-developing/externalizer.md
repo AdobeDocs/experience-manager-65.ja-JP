@@ -10,24 +10,22 @@ exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 100%
-
+source-wordcount: '504'
+ht-degree: 94%
 ---
-
 # URL の外部化{#externalizing-urls}
 
 Adobe Experience Manager（AEM）の **Externalizer** は、あらかじめ設定された DNS を接頭辞として、リソースパス（例えば `/path/to/my/page`）をプログラム的に外部の絶対URL（例えば `https://www.mycompany.com/path/to/my/page`）に変換できる OSGi サービスです。
 
 インスタンスが Web レイヤーの背後で実行されている場合、自身の外部向け URL がわかりません。また、リンクをリクエストスコープの範囲外で作成する必要がある場合があります。これらの理由で、このサービスは、そのような外部 URL を設定して組み立てるための一元化された場所を提供します。
 
-このページでは、**Externalizer** サービスの設定方法と使用方法について説明します。詳しくは、[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
+このページでは、**Externalizer** サービスの設定方法と使用方法について説明します。 詳しくは、[Javadocs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
 
 ## Externalizer サービスの設定 {#configuring-the-externalizer-service}
 
-**Externalizer** サービスでは、プログラムでリソースパスに接頭辞を付けるために使用可能な複数のドメインを一元的に定義できます。各ドメインは一意の名前によって識別され、その名前を使用して、プログラムからそのドメインを参照できます。
+**Externalizer** サービスでは、プログラムでリソースパスに接頭辞を付けるために使用可能な複数のドメインを一元的に定義できます。 各ドメインは一意の名前によって識別され、その名前を使用して、プログラムからそのドメインを参照できます。
 
 **Externalizer** サービスのドメインマッピングを定義するには：
 
@@ -51,8 +49,8 @@ Adobe Experience Manager（AEM）の **Externalizer** は、あらかじめ設�
 
    * **スキーム**&#x200B;は http または https ですが、ftp などでもかまいません。
 
-      * 必要に応じて、https を使用して https リンクを強制的に適用します。
-      * URL の外部化を要求する際にクライアントコードがスキームを上書きしない場合に使用されます。
+     * 必要に応じて、https を使用して https リンクを強制的に適用します。
+     * URL の外部化を要求する際にクライアントコードがスキームを上書きしない場合に使用されます。
 
    * **server** はホスト名です（ドメイン名または IP アドレス）。
    * **port**（オプション）はポート番号です。
@@ -68,7 +66,7 @@ Adobe Experience Manager（AEM）の **Externalizer** は、あらかじめ設�
 
    >[!NOTE]
    >
-   >カスタム設定を使用すると、`production` や `staging` などのカテゴリまたは `my-internal-webservice` などの AEM 以外の外部システムを追加できます。このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
+   >カスタム設定を使用すると、`production` や `staging` などのカテゴリまたは `my-internal-webservice` などの AEM 以外の外部システムを追加できます。 このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
 
 1. 「**保存**」をクリックして変更を保存します。
 
@@ -128,4 +126,4 @@ Adobe Experience Manager（AEM）の **Externalizer** は、あらかじめ設�
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. 他の例については、関連する [Javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
+1. 他の例については、関連する [Javadoc](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。

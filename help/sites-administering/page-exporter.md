@@ -5,18 +5,16 @@ exl-id: 15d08758-cf75-43c0-9818-98a579d64183
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 90%
-
+source-wordcount: '1072'
+ht-degree: 84%
 ---
-
 # ページエクスポーター{#the-page-exporter}
 
 Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js` ファイル、`.css` ファイルを含む完全な web ページとして、ページをエクスポートできます。
 
-設定が完了したら、URL の `html` を `export.zip` に置き換えることにより、ページのエクスポートをブラウザーからリクエストします。 これにより、HTML 形式でレンダリングされたページと参照元のアセットを含む、アーカイブ（zip）ファイルが生成されます。 ページ内のすべてのパス（例えば、画像へのパス）は、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。 アーカイブ（zip）ファイルは、ブラウザーからダウンロードできます。
+設定が完了したら、URL の `html` を `export.zip` に置き換えることにより、ページのエクスポートをブラウザーからリクエストします。 これにより、HTML 形式でレンダリングされたページと参照されるアセットを含む、アーカイブ（zip）ファイルが生成されます。 ページ内のすべてのパス（例えば、画像へのパス）は、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。 アーカイブ（zip）ファイルは、ブラウザーからダウンロードできます。
 
 >[!NOTE]
 >
@@ -47,7 +45,7 @@ Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js`
    次は例です。
    * localhost:4502/content/we-retail/language-masters/en.html
 
-   次の方法でアクセスされます。
+   次の方法でアクセス：
    * localhost:4502/content/we-retail/language-masters/en.export.zip
 
 1. アーカイブファイルをファイルシステムにダウンロードします。
@@ -64,7 +62,7 @@ Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js`
 
 ## サイト用のページエクスポーター設定の作成 {#creating-a-page-exporter-configuration-for-your-site}
 
-ページエクスポーターは、[コンテンツ同期フレームワーク](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html)に基づいています。 「**ページプロパティ**」ダイアログで利用できる設定は、ページに必要な依存関係を定義するエクスポートテンプレートです。
+ページエクスポーターは、[コンテンツ同期フレームワーク](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/contentsync/package-summary.html)に基づいています。 「**ページプロパティ**」ダイアログで利用できる設定は、ページに必要な依存関係を定義するエクスポートテンプレートです。
 
 ページの書き出しがトリガーされると、書き出しテンプレートが参照されます。 ページパスとデザインパスの両方が動的に適用されます。 その後、標準のコンテンツ同期機能を使用して、zip ファイルが作成されます。
 
@@ -89,7 +87,7 @@ Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js`
 
 1. **CRXDE Lite** で、`/etc/contentsync/templates` の下にノードを作成します。
 
-   * `Name`：サイトに適した名前（例：`<mysite>`）。 ページエクスポーターテンプレートを選択すると、この名前がページプロパティのダイアログボックスに表示されます。
+   * `Name`：サイトに適した名前（例：`<mysite>`）。 ページエクスポーターテンプレートを選択すると、この名前がページプロパティのダイアログに表示されます。
 
    * `Type`：`nt:unstructured`
 
@@ -108,7 +106,7 @@ Adobe Experience Manager（AEM）を使用すると、画像ファイル、`.js`
 
 ### ページエクスポーター設定ノード {#page-exporter-configuration-nodes}
 
-[コンテンツ同期フレームワーク](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/package-summary.html)を使用しているため、テンプレートはノード構造で構成されています。 各ノードには、zip ファイルの作成プロセスで特定のアクションを定義する `type` プロパティが含まれています。
+[コンテンツ同期フレームワーク](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/contentsync/package-summary.html)を使用しているため、テンプレートはノード構造で構成されています。 各ノードには、zip ファイルの作成プロセスで特定のアクションを定義する `type` プロパティが含まれています。
 
 <!--
 For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
@@ -179,7 +177,7 @@ For more details about the type property, see the Overview of configuration type
 As you may have noticed in the node structure, the **Geometrixx** page export template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
 -->
 
-特定の要件を満たすには、[カスタム更新ハンドラー](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html)を実装する必要があります。
+特定の要件を満たすには、[カスタム更新ハンドラー](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/contentsync/handler/package-summary.html)を実装する必要があります。
 
 <!--
 To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
@@ -187,7 +185,7 @@ To meet some specific requirements, you may need to implement a custom `type` pr
 
 ## プログラムによるページの書き出し {#programmatically-exporting-a-page}
 
-プログラムによってページを書き出すには、[PageExporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI サービスを使用できます。 このサービスを使用すると、次のことができます。
+プログラムによってページを書き出すには、[PageExporter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI サービスを使用できます。 このサービスを使用すると、次のことができます。
 
 * ページを書き出して HTTP サーブレット応答に書き込む。
 * ページを書き出して zip ファイルを特定の場所に保存する。
