@@ -6,13 +6,11 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: 2b097caa05ec889ae445d74a905fb6c3f8457cee
+source-git-commit: b860fd19c0aeaa94fb0e04052dac70b0bc58b11b
 workflow-type: tm+mt
-source-wordcount: '10688'
-ht-degree: 96%
-
+source-wordcount: '10825'
+ht-degree: 95%
 ---
-
 # ドキュメントサービスのインストールと設定 {#installing-and-configuring-document-services}
 
 AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、アーカイブや、ドキュメントへのアクセスを制限するためのデジタル署名の追加、Barcoded Forms のデコードなど、様々なドキュメントレベルの操作を実現する一連の OSGi サービスを提供します。 これらのサービスは、AEM Forms のアドオンパッケージに含まれており、 ドキュメントサービスと総称されます。 利用可能なドキュメントサービスのリストとその主な機能は次のとおりです。
@@ -37,9 +35,9 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **Signature サービス：** AEM サーバーでデジタル署名とドキュメントを処理できます。 例えば、通常、署名サービスは次のような状況で使用されます。
 
-   * ユーザーにフォームが送信されて Acrobat または Adobe Reader で開かれる前に、AEM サーバーでフォームを認証する場合。
-   * Acrobat または Adobe Reader を使用してフォームに追加された署名を、AEM サーバーが検証する場合。
-   * AEM サーバーが公証人に代わってフォームに署名する場合。
+  * ユーザーにフォームが送信されて Acrobat または Adobe Reader で開かれる前に、AEM サーバーでフォームを認証する場合。
+  * Acrobat または Adobe Reader を使用してフォームに追加された署名を、AEM サーバーが検証する場合。
+  * AEM サーバーが公証人に代わってフォームに署名する場合。
 
   署名サービスは、トラストストアに格納されている証明書および認証情報にアクセスします。 詳しくは、[Signature サービス](/help/forms/using/aem-document-services-programmatically.md)を参照してください。
 
@@ -64,18 +62,18 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
 * AEM インスタンスが稼働していること。 AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。 通常、AEM Forms ドキュメントサービスを実行するには、1 つの AEM インスタンス（オーサーインスタンスまたはパブリッシュインスタンス）があれば十分です。
 
-   * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
+  * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
+  * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
 
 * メモリ要件が満たされていること。 AEM Forms アドオンパッケージでは、次が必要です。
 
-   * Microsoft® Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
-   * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
+  * Microsoft® Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
+  * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
 * PDF Generator を使用して Microsoft® Windows や Linux® で変換を実行するには、必要なクライアントソフトウェアをインストールする必要があります。
 
-   * **Microsoft® Windows**：[Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) または [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) をインストールします
-   * **Linux®**：[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) をインストールします
+  * **Microsoft® Windows**：[Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) または [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) をインストールします
+  * **Linux®**：[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) をインストールします
 
 >[!NOTE]
 >
@@ -165,26 +163,30 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 * **（PDF Generator のみ）** 32 ビット版の libcurl ライブラリ、libcrypto ライブラリ、および libssl ライブラリをインストールし、以下のシンボリックリンクを作成します。 シンボリックリンクは、それぞれのライブラリの最新バージョンを指すようにします。
 
-   * /usr/lib/libcurl.so
-   * /usr/lib/libcrypto.so
-   * /usr/lib/libssl.so
+  * /usr/lib/libcurl.so
+  * /usr/lib/libcrypto.so
+  * /usr/lib/libssl.so
 
 * **（PDF Generator のみ）** PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および WebToPDF の各ルートをサポートしています。 WebToPDF ルートの変換を有効にするには、下記の 64 ビットライブラリをインストールします。 通常、これらのライブラリは既にインストールされています。 不足しているライブラリがあれば、手動でインストールします。
 
-   * linux-gate.so.1
-   * libz.so.1
-   * libfontconfig.so.1
-   * libfreetype.so.6
-   * libdl.so.2
-   * librt.so.1
-   * libpthread.so.0
-   * libstdc++.so.6
-   * libm.so.6
-   * libgcc_s.so.1
-   * libc.so.6
-   * ld-linux.so.2
-   * libexpat.so.1
+  * linux-gate.so.1
+  * libz.so.1
+  * libfontconfig.so.1
+  * libfreetype.so.6
+  * libdl.so.2
+  * librt.so.1
+  * libpthread.so.0
+  * libstdc++.so.6
+  * libm.so.6
+  * libgcc_s.so.1
+  * libc.so.6
+  * ld-linux.so.2
+  * libexpat.so.1
 * （PDF Generatorのみ） RHEL 8またはRHEL 9のSLES15設定でWebKit ルートを有効にするには、32 ビット `nspr` ライブラリがデフォルトで使用できない場合があります。存在しない場合はインストールします。
+
+* Red Hat® Enterprise Linux® 9では、32 ビット OpenOffice ビルドには`libcrypt.so.1`が必要ですが、これはデフォルトではインストールされていません。 見つからない場合、OpenOfficeはエラー`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`で開始できず、OpenOfficeからPDFへの変換が失敗します。 `libxcrypt-compat` パッケージ （32 ビット）をインストールして、ライブラリを提供します。
+
+  `sudo dnf install -y libxcrypt-compat.i686`
 
 * （PDF Generator のみ）UNIX® サーバーで WebToPDF の変換が次のエラーで失敗した場合：
 
@@ -1128,7 +1130,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    >[!NOTE]
    >
-   >Adobe以外の当事者から提供されたフォントを使用するお客様の権利は、その当事者から提供された使用許諾契約に準拠し、Adobe ソフトウェアの使用に関するお客様のライセンスには適用されません。Adobeでは、Adobe ソフトウェアでAdobe以外のフォントを使用する前に、適用されるすべての非Adobe使用許諾契約を確認し、遵守していることを確認することをお勧めします。特に、サーバー環境でのフォントの使用に関する点が重要です。
+   >アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。 アドビ以外が提供しているフォントをアドビのソフトウェアで使用する前に、適用されるすべてのアドビ以外の使用許諾契約書に準拠していることを確認してください。特に、サーバー環境でフォントを使用する際は注意が必要です。
    >新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
    >
 
@@ -1247,7 +1249,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
 * 証明書ファイルとともに提供する秘密鍵パスワード。
 
-* 秘密鍵のエイリアス：Java keytool コマンドを実行して、秘密鍵エイリアスを表示できます。
+* 秘密鍵のエイリアス。 Java keytool コマンドを実行し、秘密鍵エイリアスを表示します。
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * キーストアファイルのパスワード。 アドビの Reader Extensions 証明書を使用している場合、Keystore ファイルのパスワードは常に秘密鍵のパスワードと同一です。
@@ -1405,13 +1407,13 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * PDF Generator ユーザーが PDF 設定 UI に追加されていることを確認します。
 * PDF Generator ユーザーが管理グループのメンバーであり、[プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege)権限がそのユーザーに対して設定されていることを確認します。
 * ユーザーが PDF Generator UI で設定されており、次のアクションを実行していることを確認します。
-   1. Microsoft® Windows に、PDF Generator ユーザーでログインします。
-   1. Microsoft® Office または OpenOffice アプリケーションを開き、すべてのダイアログをキャンセルします。
-   1. AdobePDF をデフォルトのプリンターとして設定します。
-   1. Acrobat を PDF ファイルのデフォルトプログラムに設定します。
-   1. Microsoft Office アプリケーションのファイル／印刷および Acrobat リボンを使用して手動変換を実行し、すべてのダイアログをキャンセルします。
-   1. winword.exe、powerpoint.exe、excel.exe など、変換に関連するすべてのプロセスを終了します。
-   1. AEM Forms サーバーを再起動します。
+  1. Microsoft® Windows に、PDF Generator ユーザーでログインします。
+  1. Microsoft® Office または OpenOffice アプリケーションを開き、すべてのダイアログをキャンセルします。
+  1. AdobePDF をデフォルトのプリンターとして設定します。
+  1. Acrobat を PDF ファイルのデフォルトプログラムに設定します。
+  1. Microsoft Office アプリケーションのファイル／印刷および Acrobat リボンを使用して手動変換を実行し、すべてのダイアログをキャンセルします。
+  1. winword.exe、powerpoint.exe、excel.exe など、変換に関連するすべてのプロセスを終了します。
+  1. AEM Forms サーバーを再起動します。
 
 **Linux®**
 
@@ -1419,6 +1421,10 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 * 環境変数 `OpenOffice_PATH` を作成し、[コンソール](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)または dt（デバイスツリー）プロファイルに設定されている OpenOffice のインストール先を指すように設定します。
 * OpenOffice のインストールに問題がある場合は、OpenOffice のインストールに必要な [32 ビットライブラリ](#extrarequirements)が利用可能であることを確認します。
+
+* Red Hat® Enterprise Linux® 9では、32 ビット OpenOffice ビルドには`libcrypt.so.1`が必要ですが、これはデフォルトではインストールされていません。 見つからない場合、OpenOfficeはエラー`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`で開始できず、OpenOfficeからPDFへの変換が失敗します。 `libxcrypt-compat` パッケージ （32 ビット）をインストールして、ライブラリを提供します。
+
+  `sudo dnf install -y libxcrypt-compat.i686`
 
 +++
 
@@ -1451,29 +1457,29 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * 最新バージョンの 32 ビット lib curl、libcrypto、libssl ライブラリがシステムにインストールされていることを確認します。 また、それぞれのライブラリの最新版（32 ビット）を指すシンボリックリンク `/usr/lib/libcurl.so`（AIX® では libcurl.a）、`/usr/lib/libcrypto.so`（AIX® では libcrypto.a）および `/usr/lib/libssl.so`（AIX® では libssl.a）も作成します。
 
 * 以下の手順を実行して、IBM® SSL ソケットプロバイダーを設定します。
-   1. java.security ファイルを `<WAS_Installed_JAVA>\jre\lib\security` から AEM Forms Server 上の任意の場所にコピーします。 デフォルトの場所は `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.です。
+  1. java.security ファイルを `<WAS_Installed_JAVA>\jre\lib\security` から AEM Forms Server 上の任意の場所にコピーします。 デフォルトの場所は `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.です。
 
-   1. コピー先の java.security ファイルを編集し、デフォルトの SSL Socket factories を JSSE2 factories に変更します（WebSphere® の代わりに JSSE2 factories を使用します）。
+  1. コピー先の java.security ファイルを編集し、デフォルトの SSL Socket factories を JSSE2 factories に変更します（WebSphere® の代わりに JSSE2 factories を使用します）。
 
-      次のデフォルトの JSSE socket factories を変更します。
+     次のデフォルトの JSSE socket factories を変更します。
 
-      ```
-      #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
-      #ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
-      WebSphere socket factories (in cryptosf.jar)
-      ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
-      ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
-      ```
+     ```
+     #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
+     #ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
+     WebSphere socket factories (in cryptosf.jar)
+     ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
+     ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
+     ```
 
-      以下に置き換えます。
+     以下に置き換えます。
 
-      ```
-      ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
-      ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
-      WebSphere socket factories (in cryptosf.jar)
-      #ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
-      #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
-      ```
+     ```
+     ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
+     ssl.ServerSocketFactory.provider=com.ibm.jsse2.SSLServerSocketFactoryImpl
+     WebSphere socket factories (in cryptosf.jar)
+     #ssl.SocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLSocketFactory
+     #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
+     ```
 
 +++
 
