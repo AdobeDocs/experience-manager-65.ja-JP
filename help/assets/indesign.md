@@ -1,18 +1,16 @@
 ---
-title: ' [!DNL Assets]  と  [!DNL InDesign Server] の統合'
-description: ' [!DNL Adobe Experience Manager Assets] と [!DNL Adobe InDesign Server] を統合する方法について説明します。'
+title: '[!DNL Assets] と [!DNL InDesign Server] の統合'
+description: '[!DNL Adobe Experience Manager Assets]と[!DNL Adobe InDesign Server]の統合方法について説明します。'
 contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1584'
 ht-degree: 99%
-
 ---
-
 # [!DNL Adobe Experience Manager Assets] と [!DNL Adobe InDesign Server] の統合 {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets] 使用する:
@@ -25,7 +23,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] は、2 つの異なる製品として提供されます。 [Adobe InDesign](https://www.adobe.com/jp/products/indesign.html) は、印刷およびデジタル配布用のページレイアウトのデザインに使用するデスクトップアプリケーションです。 [Adobe InDesign Server](https://www.adobe.com/jp/products/indesignserver.html) は、[!DNL InDesign] で作成した内容に基づいて、ドキュメントをプログラムによって自動生成できるようにします。 このエンジンは、ExtendScript エンジンへのインターフェイスを提供するサービスとして動作します。 スクリプトは [!DNL ExtendScript] で記述されており、これは [!DNL JavaScript] に似ています。
+>[!DNL Adobe InDesign] は、2 つの異なる製品として提供されます。 [Adobe InDesign](https://www.adobe.com/jp/products/indesign.html) は、印刷およびデジタル配布用のページレイアウトのデザインに使用するデスクトップアプリケーションです。 [Adobe InDesign Server](https://www.adobe.com/jp/products/indesignserver.html) は、[!DNL InDesign] で作成した内容に基づいて、ドキュメントをプログラムによって自動生成できるようにします。 これは、ExtendScript エンジンへのインターフェイスを提供するサービスとして動作します。 スクリプトは [!DNL ExtendScript] で記述されており、これは [!DNL JavaScript] に似ています。
 
 ## 抽出の仕組み {#how-the-extraction-works}
 
@@ -42,9 +40,9 @@ ht-degree: 99%
    * INDD ファイルを取得します。
    * 次の [!DNL InDesign Server] コマンドを実行します。
 
-      * 構造、テキストおよびすべてのメディアファイルが抽出されます。
-      * PDF と JPG のレンダリングが生成されます。
-      * HTML と IDML のレンダリングが生成されます。
+     * 構造、テキストおよびすべてのメディアファイルが抽出されます。
+     * PDF と JPG のレンディションが生成されます。
+     * HTML と IDML のレンディションが生成されます。
 
    * 生成されたファイルを [!DNL Experience Manager Assets] に送り返します。
 
@@ -87,7 +85,7 @@ ht-degree: 99%
 
    >[!NOTE]
    >
-   >ファイルに出力メッセージを保存してリダイレクトを使用する場合は、例えば Windows の場合は次のように実行します。
+   >出力メッセージをファイルに保存する場合は、リダイレクトを使用します。例えば、Windows では次のように実行します。
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### [!DNL Experience Manager Assets] ワークフローの設定 {#configuring-the-aem-assets-workflow}
@@ -126,24 +124,24 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 メディア抽出ワークフロー手順で実行される `ThumbnailExport.jsx` スクリプトにより、サムネールのレンディションを JPG 形式で生成します。 このレンディションはサムネール処理ワークフロー手順で使用され、[!DNL Experience Manager] で要求される静的レンディションを生成します。
 
-サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。 デフォルトの設定は、[!DNL Experience Manager Assets] で必要となるため、削除しないでください。 最後に、画像プレビューレンディションを削除ワークフロー手順で不要になった .JPG 形式のサムネールレンディションが削除されます。
+Process Thumbnails ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。 デフォルトの設定は、[!DNL Experience Manager Assets] で必要となるため、削除しないでください。 最後に、画像プレビューレンディションを削除ワークフロー手順で不要になった .JPG 形式のサムネールレンディションが削除されます。
 
 #### ページ抽出 {#page-extraction}
 
-抽出された要素から [!DNL Experience Manager] ページを作成します。 抽出ハンドラーが、レンダリング（現時点では HTML または IDML）からデータを抽出するために使用されます。 このデータを元に、PageBuilder を使用してページが作成されます。
+抽出された要素から [!DNL Experience Manager] ページを作成します。 抽出ハンドラーが、レンダリング（現時点では HTML または IDML）からデータを抽出するために使用されます。 このデータを元に、ページビルダーを使用してページが作成されます。
 
 カスタマイズするには、**[!UICONTROL ページ抽出]**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
 * **ページ抽出ハンドラー**：ポップアップリストから、使用するハンドラーを選択します。 抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。 標準の [!DNL Experience Manager] インストールでは、次の抽出ハンドラーを使用できます。
-   * IDML 書き出し抽出ハンドラー：MediaExtract ステップで生成された `IDML` レンディションに対して動作します。
+  * IDML 書き出し抽出ハンドラー：MediaExtract ステップで生成された `IDML` レンディションに対して動作します。
 
 * **ページ名**：生成されるページに割り当てる名前を指定します。 空白のままにした場合、名前は「page」（「page」が既に存在する場合は、その派生形）になります。
 
 * **ページタイトル**：生成されるページに割り当てるタイトルを指定します。
 
-* **ページルートのパス**：生成されるページのルート位置を示すパス。 空白にした場合、アセットのレンダリングを保持しているノードが使用されます。
+* **ページルートのパス**：生成されるページのルート位置を示すパス。 空白にした場合、アセットのレンディションを保持しているノードが使用されます。
 
 * **ページテンプレート**：ページの生成時に使用するテンプレート。
 
@@ -164,7 +162,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
    * **ID プール**
-[!DNL InDesign Server]との通信に使用されるSOAP エンドポイント。 必要な項目を追加、削除、並べ替えることができます。
+     [!DNL InDesign Server]との通信に使用されるSOAP エンドポイント。 必要な項目を追加、削除、並べ替えることができます。
 
 1. 「OK」をクリックして保存します。
 
@@ -204,19 +202,20 @@ IDS 並列ジョブ数を設定するには、次の手順を実行します。
 
    複数のマシンで [!DNL InDesign Server] を実行している場合は、マシンあたりのプロセッサー数から 1 を減算した数の SOAP エンドポイントを各マシンに追加します。
 
+   >[!NOTE]
+   >
+   >ワーカーのプールを使用する場合、IDS ワーカーのブロックリストを有効にできます。
+   >
+   >その場合は、`com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定の下にある「**[!UICONTROL enable.retry.name]**」チェックボックスをオンにします。これにより、IDS ジョブの再試行が可能になります。
+   >
+   >また、`com.day.cq.dam.ids.impl.IDSPoolImpl.name` 設定で、`max.errors.to.blacklist` パラメーターに正の値を設定します。このパラメーターでは、IDS をジョブハンドラーリストから除外するまでのジョブ再試行回数を指定します。
+   >
+   >デフォルトでは、設定可能な（`retry.interval.to.whitelist.name`）時間（分単位）が経過した後で、IDS ワーカーが再検証されます。 ワーカーがオンラインである場合は、ブロックリストから削除されます。
+
 <!-- 
 TBD: Make updates to configurations for allow and block list after product updates are done.
 -->
 
->[!NOTE]
->
->ワーカーのプールを使用する場合、IDS ワーカーのブロックリストを有効にできます。
->
->その場合は、`com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定の下にある「**[!UICONTROL enable.retry.name]**」チェックボックスをオンにします。これにより、IDS ジョブの再試行が可能になります。
->
->また、`com.day.cq.dam.ids.impl.IDSPoolImpl.name` 設定で、`max.errors.to.blacklist` パラメーターに正の値を設定します。このパラメーターでは、IDS をジョブハンドラーリストから除外するまでのジョブ再試行回数を指定します。
->
->デフォルトでは、設定可能な（`retry.interval.to.whitelist.name`）時間（分単位）が経過した後で、IDS ワーカーが再検証されます。 ワーカーがオンラインである場合は、ブロックリストから削除されます。
 
 ## [!DNL InDesign Server] 10.0 以降のサポートを有効にする {#enabling-support-for-indesign-server-or-later}
 

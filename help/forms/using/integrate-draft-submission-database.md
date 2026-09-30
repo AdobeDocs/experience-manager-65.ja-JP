@@ -8,25 +8,23 @@ exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 100%
-
+source-wordcount: '1537'
+ht-degree: 97%
 ---
-
 # ドラフトと送信コンポーネントとデータベースの統合のサンプル {#sample-for-integrating-drafts-submissions-component-with-database}
 
 ## サンプルの概要 {#sample-overview}
 
-AEM Forms ポータルのドラフトと送信コンポーネントにより、ユーザーはフォームをドラフトとして保存し、任意のデバイスから後で送信できます。また、ユーザーは、ポータルで送信済みのフォームを表示できます。この機能を有効にするために、AEM Forms では、ユーザーによってフォームに入力されたデータ、ドラフトと送信済みフォームに関連するフォームメタデータを保存する、データおよびメタデータサービスを提供します。このデータは、デフォルトで CRX レポジトリに格納されます。ただし、ユーザーが AEM のパブリッシュインスタンスを通じてフォームとやり取りを行うのは通常企業のファイアウォールの外側であるため、組織によっては、よりセキュアで信頼性のあるデータストレージが必要となる場合もあります。
+AEM Forms ポータルのドラフトと送信コンポーネントにより、ユーザーはフォームをドラフトとして保存し、任意のデバイスから後で送信できます。 また、ユーザーは、ポータルで送信済みのフォームを表示できます。 この機能を有効にするために、AEM Forms では、ユーザーによってフォームに入力されたデータ、ドラフトと送信済みフォームに関連するフォームメタデータを保存する、データおよびメタデータサービスを提供します。 このデータは、デフォルトで CRX レポジトリに格納されます。 ただし、ユーザーが AEM のパブリッシュインスタンスを通じてフォームとやり取りを行うのは通常企業のファイアウォールの外側であるため、組織によっては、よりセキュアで信頼性のあるデータストレージが必要となる場合もあります。
 
-このドキュメントで取り上げるサンプルは、ドラフトと送信コンポーネントをデータベースに統合するカスタマイズされたデータサービスおよびメタデータサービスのリファレンス実装です。サンプル実装で使用されるデータベースは **MySQL 5.6.24** です。ただし、ドラフトと送信コンポーネントは、あらゆるデータベースに統合できます。
+このドキュメントで取り上げるサンプルは、ドラフトと送信コンポーネントをデータベースに統合するカスタマイズされたデータサービスおよびメタデータサービスのリファレンス実装です。 サンプル実装で使用されるデータベースは **MySQL 5.6.24** です。 ただし、ドラフトと送信コンポーネントは、あらゆるデータベースに統合できます。
 
 >[!NOTE]
 >
 >* このドキュメントで説明される例および設定は、MySQL 5.6.24 に基づいているため、お使いのデータベースシステムに合わせてそれらを適切に置き換える必要があります。
->* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認します。使用可能なパッケージのリストについて詳しくは、[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
+>* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認します。 使用可能なパッケージのリストについて詳しくは、[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
 >* サンプルパッケージは、アダプティブフォーム送信アクションでのみ機能します。
 
 ## サンプルのセットアップおよび設定 {#set-up-and-configure-the-sample}
@@ -37,15 +35,15 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    データベース統合のサンプルパッケージ
 
-[ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+   [ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. AEM パッケージマネージャー（https://[*host*]:[*port*]/crx/packmgr/）に移動します。
 1. 「**[!UICONTROL パッケージをアップロード]**」をクリックします。
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
 1. パッケージの隣にある「**[!UICONTROL インストール]**」をクリックし、パッケージをインストールします。
-1. **[!UICONTROL AEM web コンソール設定]**
-ページ（https://[*host*]:[*port*]/system/console/configMgr）に移動します。
+1. **[!UICONTROL AEM Web コンソール設定に移動]**
+https://[*host*]:[*port*]/system/console/configMgrにあるページ。
 1. **[!UICONTROL Forms Portal Draft and Submission Configuration]** をクリックし、編集モードで開きます。
 
 1. 次の表の説明に従って、プロパティの値を指定します。
@@ -74,11 +72,11 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    メタデータテーブルに別の名前を付けるには、次の手順を実行します。
 
-   * Web コンソール設定で、「Forms Portal Metadata Service Sample Implementation」を見つけてクリックします。データソースと、メタデータ／追加メタデータテーブル名の値を変更できます。
+   * Web コンソール設定で、「Forms Portal Metadata Service Sample Implementation」を見つけてクリックします。 データソースと、メタデータ／追加メタデータテーブル名の値を変更できます。
 
    データテーブルに別の名前を付けるには、次の手順を実行します。
 
-   * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。データソースとデータテーブル名の値を変更できます。
+   * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。 データソースとデータテーブル名の値を変更できます。
 
    >[!NOTE]
    >
@@ -87,81 +85,81 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
 1. データベース接続は、Apache Sling Connection Pooled Data Source 経由で実行できます。
-1. Apache Sling 接続の場合は、web コンソール設定で「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」を見つけてクリックし、編集モードで開きます。次の表の説明に従って、プロパティの値を指定します。
+1. Apache Sling 接続の場合は、web コンソール設定で「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」を見つけてクリックし、編集モードで開きます。 次の表の説明に従って、プロパティの値を指定します。
 
-<table>
- <tbody>
-  <tr>
+   <table>
+   <tbody>
+   <tr>
    <td><strong>プロパティ</strong></td>
    <td><strong>値</strong></td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>データソース名</td>
    <td><p>データソースプールからドライバーをフィルターするためのデータソース名</p> <p><strong>メモ：</strong><em>サンプル実装では、データソース名として「FormsPortal」を使用します。</em></p> </td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>JDBC ドライバークラス</td>
    <td>com.mysql.jdbc.Driver</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>JDBC 接続 URI<br /> </td>
    <td>jdbc:mysql://[<em>host</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>ユーザー名</td>
-   <td>データベース表でのアクションを認証・実行するためのユーザー名</td>
-  </tr>
-  <tr>
+   <td>データベーステーブル上でアクションを認証および実行するためのユーザー名</td>
+   </tr>
+   <tr>
    <td>パスワード</td>
    <td>ユーザー名に関連するパスワード</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>トランザクションの分離</td>
    <td>READ_COMMITTED</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最大アクティブ接続数</td>
    <td>1000</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最大アイドル接続数</td>
    <td>100</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最小アイドル接続数</td>
    <td>10</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>初期サイズ</td>
    <td>10</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>最大待機時間</td>
    <td>100000</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>Test on Borrow</td>
    <td>チェック</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>Test while Idle</td>
    <td>チェック</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
    <td>検証クエリ</td>
-   <td>値の例：SELECT 1（mySQL）、select 1 from dual（Oracle）、SELECT 1（MS SQL Server）（validationQuery）</td>
-  </tr>
-  <tr>
+   <td>値の例：SELECT 1（mysql）、select 1 from dual（oracle）、SELECT 1（MS Sql Server）（validationQuery）</td>
+   </tr>
+   <tr>
    <td>検証クエリタイムアウト</td>
    <td>10000</td>
-  </tr>
- </tbody>
-</table>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->* MySQL 向けの JDBC ドライバーは、サンプルでは提供されていません。これに対してのプロビジョニングを行い、JDBC 接続プールの設定に必要な情報を提供します。
->* オーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用するよう指定します。JDBC 接続の URI フィールドの値は、すべてのオーサーインスタンスとパブリッシュインスタンスで同じである必要があります。
+   >[!NOTE]
+   >
+   >* MySQL 向けの JDBC ドライバーは、サンプルでは提供されていません。 これに対してのプロビジョニングを行い、JDBC 接続プールの設定に必要な情報を提供します。
+   >* オーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用するよう指定します。 JDBC 接続の URI フィールドの値は、すべてのオーサーインスタンスとパブリッシュインスタンスで同じである必要があります。
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -171,7 +169,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    >[!NOTE]
    >
-   >オーサーインスタンスとパブリッシュインスタンスで異なるデータベースは必要はありません。すべてのオーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用します。
+   >オーサーインスタンスとパブリッシュインスタンスで異なるデータベースは必要はありません。 すべてのオーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用します。
 
    **データ表用の SQL ステートメント**
 
@@ -297,7 +295,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    ALTER TABLE `additionalmetadatatable` CHANGE `value` `value` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `key` `key` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
    ```
 
-データおよびメタデータをデータベースに保存しながら、ドラフトと送信をリスト表示する際に使用できるサンプル実装が設定されました。サンプルにおいて、データサービスとメタデータサービスがどのように設定されているかを説明します。
+データおよびメタデータをデータベースに保存しながら、ドラフトと送信をリスト表示する際に使用できるサンプル実装が設定されました。 サンプルにおいて、データサービスとメタデータサービスがどのように設定されているかを説明します。
 
 ## mysql-connector-java-5.1.39-bin.jar ファイルをインストールする {#install-mysql-connector-java-bin-jar-file}
 
@@ -309,8 +307,8 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    パッケージがバンドルで書き出されていない場合は、先に進みます。
 
 1. `https://'[server]:[port]'/system/console/bundles` に移動して「**[!UICONTROL Install/Update]**」をクリックします。
-1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
-1. 「**[!UICONTROL Install」または「Update]**」をクリックします。完了したら、サーバーを再起動します。
+1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。 また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
+1. 「**[!UICONTROL Install」または「Update]**」をクリックします。 完了したら、サーバーを再起動します。
 1. （*Windows のみ*）オペレーティングシステムのシステムファイアウォールをオフにします。
 
 >[!NOTE]
@@ -319,33 +317,33 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
 
-次の zip ファイルには、データおよびメタデータサービスインターフェイスの `FormsPortalSampleDataServiceImpl` および `FormsPortalSampleMetadataServiceImpl`（実装クラス）が含まれます。また、上記で述べた実装クラスのコンパイルに必要なすべてのクラスが含まれます。
+次の zip ファイルには、データおよびメタデータサービスインターフェイスの `FormsPortalSampleDataServiceImpl` および `FormsPortalSampleMetadataServiceImpl`（実装クラス）が含まれます。 また、上記で述べた実装クラスのコンパイルに必要なすべてのクラスが含まれます。
 
 [ファイルを入手](assets/sample_package.zip)
 
 ## ファイル名の長さの検証  {#verify-length-of-the-file-name}
 
-フォームポータルのデータベース実装では、追加のメタデータテーブルを使用します。このテーブルには、テーブルのキーと ID 列に基づいた複合プライマリキーが含まれます。MySQL では、プライマリキーの長さを最大 255 文字にできます。次のクライアントサイドの検証スクリプトを使用して、ファイルウィジェットに添付されたファイル名の長さを検証できます。この検証は、ファイルが添付されているときに実行されます。次の手順で提供されるスクリプトでは、ファイル名が（拡張子を含めて）150 文字を超えるとメッセージが表示されます。スクリプトを変更して、異なる文字数でチェックできます。
+フォームポータルのデータベース実装では、追加のメタデータテーブルを使用します。 このテーブルには、テーブルのキーと ID 列に基づいた複合プライマリキーが含まれます。 MySQL では、プライマリキーの長さを最大 255 文字にできます。 次のクライアントサイドの検証スクリプトを使用して、ファイルウィジェットに添付されたファイル名の長さを検証できます。 この検証は、ファイルが添付されているときに実行されます。 次の手順で提供されるスクリプトでは、ファイル名が（拡張子を含めて）150 文字を超えるとメッセージが表示されます。 スクリプトを変更して、異なる文字数でチェックできます。
 
 次の手順を実行して、[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成し、次のスクリプトを使用します。
 
 1. CRXDE にログインし、/etc/clientlibs/ に移動します。
-1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を指定します。（例：`validation`）。
+1. タイプ **cq:ClientLibraryFolder**&#x200B;のノードを作成し、ノードの名前を指定します。 （例：`validation`）。
 
    「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. ノードを右クリックして「**[!UICONTROL 新しいファイルを作成]**」をクリックし、.txt の拡張子を付けてファイルを作成します。例えば、`js.txt` です。新しく作成した .txt ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。
+1. ノードを右クリックして「**[!UICONTROL 新しいファイルを作成]**」をクリックし、.txt の拡張子を付けてファイルを作成します。 例えば、`js.txt` です。新しく作成した .txt ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。
 
    ```javascript
    #base=util
     util.js
    ```
 
-   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。`util` フォルダーと `util.js` ファイルはこの後に続く手順で作成されます。
+   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。 `util` フォルダーと `util.js` ファイルはこの後に続く手順で作成されます。
 
-1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。`util` という名前のフォルダーを作成します。「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。`util.js` という名前のファイルを作成します。「**[!UICONTROL すべて保存]**」をクリックします。
+1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。 `util` という名前のフォルダーを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。 `util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。 `util.js` という名前のファイルを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。このコードでファイル名の長さを検証します。
+1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。 このコードでファイル名の長さを検証します。
 
    ```javascript
    /*
@@ -400,7 +398,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    >[!NOTE]
    >
-   >スクリプトは、標準の添付ウィジェットコンポーネントです。カスタマイズした標準の添付ウィジェットがある場合は、上記のスクリプトを変更してそれぞれの変更を組み込みます。
+   >スクリプトは、標準の添付ウィジェットコンポーネントです。 カスタマイズした標準の添付ウィジェットがある場合は、上記のスクリプトを変更してそれぞれの変更を組み込みます。
 
 1. 次のプロパティを手順 2 で作成したフォルダーに追加し、「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -420,4 +418,4 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    >
    >guideRuntime および guideRuntimeWithXfa クライアントライブラリの代わりにカスタムクライアントライブラリを使用している場合、カテゴリ名を使用してこの手順で作成したクライアントライブラリを、実行時にロードしたカスタムライブラリに埋め込みます。
 
-1. 「**[!UICONTROL すべて保存」をクリックします。]** ここで、ファイル名が拡張子を含めて 150 文字を超えるとメッセージが表示されます。
+1. **[!UICONTROL すべて保存]**&#x200B;をクリックします。 ファイル名が150 （拡張子を含む）文字を超える場合、メッセージが表示されるようになりました。

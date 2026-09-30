@@ -8,13 +8,11 @@ role: Developer, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '2400'
 ht-degree: 97%
-
 ---
-
 # デジタルアセットのメタデータの管理 {#managing-metadata-for-digital-assets}
 
 | バージョン | 記事リンク |

@@ -11,23 +11,21 @@ feature: Operations
 role: Admin
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 100%
-
+source-wordcount: '820'
+ht-degree: 98%
 ---
-
 # ワークフローの開始{#starting-workflows}
 
 ワークフローを管理する場合、ワークフローを様々な方法で開始できます。
 
 * 手動：
 
-   * [ワークフローモデル](#workflow-models)から開始。
-   * [バッチ処理](#workflow-packages-for-batch-processing)用のワークフローパッケージを使用して開始。
+  * [ワークフローモデル](#workflow-models)から開始。
+  * [バッチ処理](#workflow-packages-for-batch-processing)用のワークフローパッケージを使用して開始。
 
 * 自動：
 
-   * [ランチャーを使用](#workflows-launchers)してノードの変更に応答して開始。
+  * [ランチャーを使用](#workflows-launchers)してノードの変更に応答して開始。
 
 >[!NOTE]
 >
@@ -41,7 +39,7 @@ ht-degree: 100%
 
 ## ワークフローモデル {#workflow-models}
 
-ワークフローモデルコンソールにリストされている[モデルの 1 つに基づいて](/help/sites-administering/workflows.md#workflow-models-and-instances)ワークフローを開始できます。必須の情報はペイロードのみですが、タイトルやコメントも同様に追加できます。
+ワークフローモデルコンソールにリストされている[モデルの 1 つに基づいて](/help/sites-administering/workflows.md#workflow-models-and-instances)ワークフローを開始できます。 必須の情報はペイロードのみですが、タイトルやコメントも同様に追加できます。
 
 ## ワークフローランチャー {#workflows-launchers}
 
@@ -53,7 +51,7 @@ ht-degree: 100%
 * 特定のノードまたはノードの種類が作成、変更または削除されたときに起動するワークフローを選択する。
 * 既存のワークフローとノード間の関係を削除する。
 
-ランチャーは任意のノードに対して作成できます。ただし、特定のノードに変更を加えた場合、ワークフローは起動されません。次のパス以下のノードに変更を加えた場合、ワークフローは起動されません。
+ランチャーは任意のノードに対して作成できます。 ただし、特定のノードに変更を加えた場合、ワークフローは起動されません。 次のパス以下のノードに変更を加えた場合、ワークフローは起動されません。
 
 * `/var/workflow/instances`
 * `/home/users` ブランチのいずれかにあるワークフローインボックスノード
@@ -65,9 +63,9 @@ ht-degree: 100%
 * `/var/mobile`
 * `/var/statistics`
 
-   * 例外：`/var/statistics/tracking` 以下のノードに変更を加えると、ワークフローが起動&#x200B;*します*。
+  * 例外：`/var/statistics/tracking` 以下のノードに変更を加えると、ワークフローが起動&#x200B;*します*。
 
-標準インストールには、様々な定義が含まれています。それらの定義は、デジタルアセット管理および Social Collaboration のタスクに対して使用されます。
+標準インストールには、様々な定義が含まれています。 それらの定義は、デジタルアセット管理および Social Collaboration のタスクに対して使用されます。
 
 ![wf-100](assets/wf-100.png)
 
@@ -122,9 +120,9 @@ ht-degree: 100%
 
      ワークフローを起動するイベントタイプ。
 
-      * 作成日
-      * 変更
-      * 削除済み
+     * 作成日
+     * 変更
+     * 削除済み
 
    * **ノードタイプ**
 
@@ -136,21 +134,21 @@ ht-degree: 100%
 
    * **実行モード**
 
-     ワークフローランチャーが適用されるサーバーの種類。**オーサー**、**パブリッシュ**&#x200B;または&#x200B;**オーサーとパブリッシュ**&#x200B;を選択します。
+     ワークフローランチャーが適用されるサーバーの種類。 **オーサー**、**パブリッシュ**&#x200B;または&#x200B;**オーサーとパブリッシュ**&#x200B;を選択します。
 
    * **条件**
 
-     評価時にワークフローを起動するかどうかを決定するノード値の条件のリスト。例えば、次の条件では、ノードの 1 つのプロパティ名に「User」の値が含まれる場合、ワークフローが起動されます。
+     評価時にワークフローを起動するかどうかを決定するノード値の条件のリスト。 例えば、次の条件では、ノードの 1 つのプロパティ名に「User」の値が含まれる場合、ワークフローが起動されます。
 
      name==User
 
    * **機能**
 
-     有効にする機能のリスト。ドロップダウンセレクターを使用して、必要な機能を選択します。
+     有効にする機能のリスト。 ドロップダウンセレクターを使用して、必要な機能を選択します。
 
    * **無効にされた機能**
 
-   無効にする機能のリスト。ドロップダウンセレクターを使用して、必要な機能を選択します。
+   無効にする機能のリスト。 ドロップダウンセレクターを使用して、必要な機能を選択します。
 
    * **ワークフローモデル**
 
@@ -164,8 +162,8 @@ ht-degree: 100%
 
      ワークフローランチャーをアクティベートするかどうかを制御します。
 
-      * 設定プロパティが満たされた場合にワークフローを起動するには、「**有効にする**」を選択します。
-      * （設定プロパティが満たされた場合でも）ワークフローを実行しない場合は、「**無効にする**」を選択します。
+     * 設定プロパティが満たされた場合にワークフローを起動するには、「**有効にする**」を選択します。
+     * （設定プロパティが満たされた場合でも）ワークフローを実行しない場合は、「**無効にする**」を選択します。
 
    * **リストを除外**
 
@@ -173,8 +171,8 @@ ht-degree: 100%
 
      このランチャープロパティは、次のような項目のコンマ区切りリストです。
 
-      * `property-name` は、指定したプロパティ名に対して実行されたすべての `jcr` イベントを無視します。
-      * `event-user-data:<*someValue*>` は、[`ObservationManager` API] (https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String）で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。
+     * `property-name`は、指定されたプロパティ名でトリガーされた`jcr` イベントを無視します。 &grave;&grave;
+     * `event-user-data:<*someValue*>` は、[`ObservationManager` API] (https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String）で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。
 
      次に例を示します。
 

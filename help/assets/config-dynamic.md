@@ -12,13 +12,11 @@ role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '8511'
+source-wordcount: '8519'
 ht-degree: 94%
-
 ---
-
 # Dynamic Media の設定 - ハイブリッドモード {#configuring-dynamic-media-hybrid-mode}
 
 ## Dynamic Media - ハイブリッドアドオンパッケージ（AEM 6.5.23 以降）
@@ -498,7 +496,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **解決策：**
 
-1. User Management ページに移動します。
+1. ユーザー管理ページに移動します。
    `localhost:4502/libs/granite/security/content/useradmin.html`
 1. User Management ページで `dynamic-media-replication` ユーザーに移動し、選択して開きます。
 1. **[!UICONTROL キーストア]**&#x200B;タブを選択します。 **[!UICONTROL キーストアを作成]**&#x200B;ボタンが表示された場合は、前述の[認証の設定](#setting-up-authentication)の手順をやり直す必要があります。
@@ -629,7 +627,7 @@ Dynamic Media ハイブリッドを使用する複数の Experience Manager イ�
 1. 次のいずれかを実施してパッケージのインストールを検証し、必要に応じてデバッグを行います。
 
    * **JCR経由でビデオ分析プリセットを確認する**
-JCR経由でVideo Analytics プリセットを確認するには、CRXDE Liteにアクセスする必要があります。
+     JCR経由でVideo Analytics プリセットを確認するには、CRXDE Liteにアクセスする必要があります。
 
      Experience Manager の CRXDE Lite で、次に移動します。`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
@@ -640,7 +638,7 @@ JCR経由でVideo Analytics プリセットを確認するには、CRXDE Liteに
    * **Image Server でビデオ分析プリセットを確認する**
 
      Image Server の req=userdata リクエストを実行することで、ビデオ分析プリセットを直接検証できます。
-例えば、オーサーノードで分析プリセットを表示するには、次のリクエストを実行します。
+     例えば、オーサーノードで分析プリセットを表示するには、次のリクエストを実行します。
 
      `https://localhost:4502/is/image/conf/global/settings/dam/dm/presets/analytics?req=userdata`
 
@@ -654,7 +652,7 @@ JCR経由でVideo Analytics プリセットを確認するには、CRXDE Liteに
      ```
 
    * **Experience ManagerのビデオレポートツールでVideo Analytics プリセットを確認する**
-**[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL ビデオレポート]**&#x200B;に移動します
+     **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL ビデオレポート]**&#x200B;に移動します
 
      `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -1001,248 +999,248 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
 
    **カラー補正プロパティの表**
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Property</strong></td>
-   <td><strong>タイプ</strong></td>
-   <td><strong>デフォルト</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html?lang=ja">icprofilergb</a></td>
-   <td>文字列</td>
-   <td>&lt;空白&gt;</td>
-   <td>デフォルトの RGB カラープロファイルの名前。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=ja">iccprofilemyk</a></td>
-   <td>文字列</td>
-   <td>&lt;空白&gt;</td>
-   <td>デフォルトの CMYK カラープロファイルの名前。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=ja">icprofilegray</a></td>
-   <td>文字列</td>
-   <td>&lt;空白&gt;</td>
-   <td>デフォルトのグレーカラープロファイルの名前。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=ja">iccprofilesrcgb</a></td>
-   <td>文字列</td>
-   <td>&lt;空白&gt;</td>
-   <td>カラープロファイルが埋め込まれていない RGB 画像に使用される、デフォルトの RGB カラープロファイルの名前</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=ja">iccprofilesrccmyk</a></td>
-   <td>文字列</td>
-   <td>&lt;空白&gt;</td>
-   <td>カラープロファイルが埋め込まれていない CMYK 画像に使用される、デフォルトの CMYK カラープロファイルの名前。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=ja">iccprofilesrcgray</a></td>
-   <td>文字列</td>
-   <td>&lt;空白&gt;</td>
-   <td>カラープロファイルが埋め込まれていない CMYK 画像に使用されるデフォルトのグレーカラープロファイルの名前。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html?lang=ja">iccblackpointcompensation</a></td>
-   <td>ブール演算式</td>
-   <td>True</td>
-   <td>カラー補正中に黒点補正を行うかどうかを指定します。 Adobeでは、この設定をオンにすることを推奨します。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html?lang=ja">iccdither</a></td>
-   <td>ブーリアン</td>
-   <td>False</td>
-   <td>カラー補正中にディザリングを行うかどうかを指定します。</td>
-  </tr>
-  <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html?lang=ja">icrenderintent</a></td>
-   <td>文字列</td>
-   <td>相対的</td>
-   <td><p>レンダリングインテントを指定します。 使用可能な値は、<strong>知覚的、相対的、彩度、絶対です。</strong><i></i>Adobeでは、デフォルトとして<strong>相対</strong><i></i>をお勧めします。</p> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>Property</strong></td>
+      <td><strong>タイプ</strong></td>
+      <td><strong>デフォルト</strong></td>
+      <td><strong>説明</strong></td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html?lang=ja">icprofilergb</a></td>
+      <td>文字列</td>
+      <td>&lt;空白&gt;</td>
+      <td>デフォルトの RGB カラープロファイルの名前。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=ja">iccprofilemyk</a></td>
+      <td>文字列</td>
+      <td>&lt;空白&gt;</td>
+      <td>デフォルトの CMYK カラープロファイルの名前。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=ja">icprofilegray</a></td>
+      <td>文字列</td>
+      <td>&lt;空白&gt;</td>
+      <td>デフォルトのグレーカラープロファイルの名前。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=ja">iccprofilesrcgb</a></td>
+      <td>文字列</td>
+      <td>&lt;空白&gt;</td>
+      <td>カラープロファイルが埋め込まれていない RGB 画像に使用される、デフォルトの RGB カラープロファイルの名前</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=ja">iccprofilesrccmyk</a></td>
+      <td>文字列</td>
+      <td>&lt;空白&gt;</td>
+      <td>カラープロファイルが埋め込まれていない CMYK 画像に使用される、デフォルトの CMYK カラープロファイルの名前。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=ja">iccprofilesrcgray</a></td>
+      <td>文字列</td>
+      <td>&lt;空白&gt;</td>
+      <td>カラープロファイルが埋め込まれていない CMYK 画像に使用されるデフォルトのグレーカラープロファイルの名前。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html?lang=ja">iccblackpointcompensation</a></td>
+      <td>ブール演算式</td>
+      <td>True</td>
+      <td>カラー補正中に黒点補正を行うかどうかを指定します。 Adobeでは、この設定をオンにすることを推奨します。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html?lang=ja">iccdither</a></td>
+      <td>ブーリアン</td>
+      <td>False</td>
+      <td>カラー補正中にディザリングを行うかどうかを指定します。</td>
+   </tr>
+   <tr>
+      <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html?lang=ja">icrenderintent</a></td>
+      <td>文字列</td>
+      <td>相対的</td>
+      <td><p>レンダリングインテントを指定します。 使用可能な値は、<strong>知覚的、相対的、彩度、絶対です。</strong><i></i>Adobeでは、デフォルトとして<strong>相対</strong><i></i>をお勧めします。</p> </td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->プロパティ名は大文字と小文字が区別され、すべて小文字にする必要があります。
+   >[!NOTE]
+   >
+   >プロパティ名は大文字と小文字が区別され、すべて小文字にする必要があります。
 
-**カラープロファイルの表**
+   **カラープロファイルの表**
 
-次のカラープロファイルがインストールされます。
+   次のカラープロファイルがインストールされます。
 
-<table>
- <tbody>
-  <tr>
-   <th><p>名前</p> </th>
-   <th><p>色のペース</p> </th>
-   <th><p>説明</p> </th>
-  </tr>
-  <tr>
-   <td>Adobe RGB</td>
-   <td>RGB</td>
-   <td>Adobe RGB (1998)</td>
-  </tr>
-  <tr>
-   <td>AppleRGB</td>
-   <td>RGB</td>
-   <td>Apple RGB</td>
-  </tr>
-  <tr>
-   <td>CIERGB</td>
-   <td>RGB</td>
-   <td>CIE RGB</td>
-  </tr>
-  <tr>
-   <td>CoatedFogra27</td>
-   <td>CMYK</td>
-   <td>Coated FOGRA27（ISO 12647-2:2004）</td>
-  </tr>
-  <tr>
-   <td>CoatedFogra39</td>
-   <td>CMYK</td>
-   <td>Coated FOGRA39（ISO 12647-2:2004）</td>
-  </tr>
-  <tr>
-   <td>CoatedGraCol</td>
-   <td>CMYK</td>
-   <td>Coated GRACoL 2006（ISO 12647-2:2004）</td>
-  </tr>
-  <tr>
-   <td>ColorMatchRGB</td>
-   <td>RGB</td>
-   <td>ColorMatch RGB</td>
-  </tr>
-  <tr>
-   <td>EuropeISOCoated</td>
-   <td>CMYK</td>
-   <td>Europe ISO Coated FOGRA27</td>
-  </tr>
-  <tr>
-   <td>EuroscaleCoated</td>
-   <td>CMYK</td>
-   <td>Euro scale Coated v2</td>
-  </tr>
-  <tr>
-   <td>EuroscaleUncoated</td>
-   <td>CMYK</td>
-   <td>Euro scale Uncoated v2</td>
-  </tr>
-  <tr>
-   <td>JapanColorCoated</td>
-   <td>CMYK</td>
-   <td>Japan Color 2001 Coated</td>
-  </tr>
-  <tr>
-   <td>JapanColorNewspaper</td>
-   <td>CMYK</td>
-   <td>Japan Color 2002 Newspaper</td>
-  </tr>
-  <tr>
-   <td>JapanColorUncoated</td>
-   <td>CMYK</td>
-   <td>Japan Color 2001 Uncoated</td>
-  </tr>
-  <tr>
-   <td>JapanColorWebCoated</td>
-   <td>CMYK</td>
-   <td>Japan Color 2003 Web Coated</td>
-  </tr>
-  <tr>
-   <td>JapanWebCoated</td>
-   <td>CMYK</td>
-   <td>Japan Web Coated（Ad）</td>
-  </tr>
-  <tr>
-   <td>NewsprintSNAP2007</td>
-   <td>CMYK</td>
-   <td>US Newsprint（SNAP 2007）</td>
-  </tr>
-  <tr>
-   <td>NTSC</td>
-   <td>RGB</td>
-   <td>NTSC（1953）</td>
-  </tr>
-  <tr>
-   <td>PAL</td>
-   <td>RGB</td>
-   <td>PAL／SECAM</td>
-  </tr>
-  <tr>
-   <td>ProPhoto</td>
-   <td>RGB</td>
-   <td>ProPhoto RGB</td>
-  </tr>
-  <tr>
-   <td>PS4Default</td>
-   <td>CMYK</td>
-   <td>Photoshop 4 Default CMYK</td>
-  </tr>
-  <tr>
-   <td>PS5Default</td>
-   <td>CMYK</td>
-   <td>Photoshop 5 Default CMYK</td>
-  </tr>
-  <tr>
-   <td>SheetfedCoated</td>
-   <td>CMYK</td>
-   <td>U.S. Sheetfed Coated v2</td>
-  </tr>
-  <tr>
-   <td>SheetfedUncoated</td>
-   <td>CMYK</td>
-   <td>U.S. Sheetfed Uncoated v2</td>
-  </tr>
-  <tr>
-   <td>SMPTE</td>
-   <td>RGB</td>
-   <td>SMPTE-C</td>
-  </tr>
-  <tr>
-   <td>sRGB</td>
-   <td>RGB</td>
-   <td>sRGB IEC61966-2.1</td>
-  </tr>
-  <tr>
-   <td>UncoatedFogra29</td>
-   <td>CMYK</td>
-   <td>Uncoated FOGRA29 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>WebCoated</td>
-   <td>CMYK</td>
-   <td>U.S. Web Coated (SWOP) v2</td>
-  </tr>
-  <tr>
-   <td>WebCoatedFogra28</td>
-   <td>CMYK</td>
-   <td>Web Coated FOGRA28 (ISO 12647-2:2004)</td>
-  </tr>
-  <tr>
-   <td>WebCoatedGrade3</td>
-   <td>CMYK</td>
-   <td>Web Coated SWOP 2006 Grade 3 Paper</td>
-  </tr>
-  <tr>
-   <td>WebCoatedGrade5</td>
-   <td>CMYK</td>
-   <td>Web Coated SWOP 2006 Grade 5 Paper</td>
-  </tr>
-  <tr>
-   <td>WebUncoated</td>
-   <td>CMYK</td>
-   <td>U.S. Web Uncoated v2</td>
-  </tr>
-  <tr>
-   <td>WideGamutRGB</td>
-   <td>RGB</td>
-   <td>Wide Gamut RGB</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <th><p>名前</p> </th>
+      <th><p>色のペース</p> </th>
+      <th><p>説明</p> </th>
+   </tr>
+   <tr>
+      <td>Adobe RGB</td>
+      <td>RGB</td>
+      <td>Adobe RGB (1998)</td>
+   </tr>
+   <tr>
+      <td>AppleRGB</td>
+      <td>RGB</td>
+      <td>Apple RGB</td>
+   </tr>
+   <tr>
+      <td>CIERGB</td>
+      <td>RGB</td>
+      <td>CIE RGB</td>
+   </tr>
+   <tr>
+      <td>CoatedFogra27</td>
+      <td>CMYK</td>
+      <td>Coated FOGRA27（ISO 12647-2:2004）</td>
+   </tr>
+   <tr>
+      <td>CoatedFogra39</td>
+      <td>CMYK</td>
+      <td>Coated FOGRA39（ISO 12647-2:2004）</td>
+   </tr>
+   <tr>
+      <td>CoatedGraCol</td>
+      <td>CMYK</td>
+      <td>Coated GRACoL 2006（ISO 12647-2:2004）</td>
+   </tr>
+   <tr>
+      <td>ColorMatchRGB</td>
+      <td>RGB</td>
+      <td>ColorMatch RGB</td>
+   </tr>
+   <tr>
+      <td>EuropeISOCoated</td>
+      <td>CMYK</td>
+      <td>Europe ISO Coated FOGRA27</td>
+   </tr>
+   <tr>
+      <td>EuroscaleCoated</td>
+      <td>CMYK</td>
+      <td>Euro scale Coated v2</td>
+   </tr>
+   <tr>
+      <td>EuroscaleUncoated</td>
+      <td>CMYK</td>
+      <td>Euro scale Uncoated v2</td>
+   </tr>
+   <tr>
+      <td>JapanColorCoated</td>
+      <td>CMYK</td>
+      <td>Japan Color 2001 Coated</td>
+   </tr>
+   <tr>
+      <td>JapanColorNewspaper</td>
+      <td>CMYK</td>
+      <td>Japan Color 2002 Newspaper</td>
+   </tr>
+   <tr>
+      <td>JapanColorUncoated</td>
+      <td>CMYK</td>
+      <td>Japan Color 2001 Uncoated</td>
+   </tr>
+   <tr>
+      <td>JapanColorWebCoated</td>
+      <td>CMYK</td>
+      <td>Japan Color 2003 Web Coated</td>
+   </tr>
+   <tr>
+      <td>JapanWebCoated</td>
+      <td>CMYK</td>
+      <td>Japan Web Coated（Ad）</td>
+   </tr>
+   <tr>
+      <td>NewsprintSNAP2007</td>
+      <td>CMYK</td>
+      <td>US Newsprint（SNAP 2007）</td>
+   </tr>
+   <tr>
+      <td>NTSC</td>
+      <td>RGB</td>
+      <td>NTSC（1953）</td>
+   </tr>
+   <tr>
+      <td>PAL</td>
+      <td>RGB</td>
+      <td>PAL／SECAM</td>
+   </tr>
+   <tr>
+      <td>ProPhoto</td>
+      <td>RGB</td>
+      <td>ProPhoto RGB</td>
+   </tr>
+   <tr>
+      <td>PS4Default</td>
+      <td>CMYK</td>
+      <td>Photoshop 4 Default CMYK</td>
+   </tr>
+   <tr>
+      <td>PS5Default</td>
+      <td>CMYK</td>
+      <td>Photoshop 5 Default CMYK</td>
+   </tr>
+   <tr>
+      <td>SheetfedCoated</td>
+      <td>CMYK</td>
+      <td>U.S. Sheetfed Coated v2</td>
+   </tr>
+   <tr>
+      <td>SheetfedUncoated</td>
+      <td>CMYK</td>
+      <td>U.S. Sheetfed Uncoated v2</td>
+   </tr>
+   <tr>
+      <td>SMPTE</td>
+      <td>RGB</td>
+      <td>SMPTE-C</td>
+   </tr>
+   <tr>
+      <td>sRGB</td>
+      <td>RGB</td>
+      <td>sRGB IEC61966-2.1</td>
+   </tr>
+   <tr>
+      <td>UncoatedFogra29</td>
+      <td>CMYK</td>
+      <td>Uncoated FOGRA29 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>WebCoated</td>
+      <td>CMYK</td>
+      <td>U.S. Web Coated (SWOP) v2</td>
+   </tr>
+   <tr>
+      <td>WebCoatedFogra28</td>
+      <td>CMYK</td>
+      <td>Web Coated FOGRA28 (ISO 12647-2:2004)</td>
+   </tr>
+   <tr>
+      <td>WebCoatedGrade3</td>
+      <td>CMYK</td>
+      <td>Web Coated SWOP 2006 Grade 3 Paper</td>
+   </tr>
+   <tr>
+      <td>WebCoatedGrade5</td>
+      <td>CMYK</td>
+      <td>Web Coated SWOP 2006 Grade 5 Paper</td>
+   </tr>
+   <tr>
+      <td>WebUncoated</td>
+      <td>CMYK</td>
+      <td>U.S. Web Uncoated v2</td>
+   </tr>
+   <tr>
+      <td>WideGamutRGB</td>
+      <td>RGB</td>
+      <td>Wide Gamut RGB</td>
+   </tr>
+   </tbody>
+   </table>
 
 1. **[!UICONTROL すべて保存]** を選択します。
 
@@ -1250,7 +1248,7 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
 
 これにより、次の操作が行われます。
 
-* 画像と CMYK 画像のカラー補正をRGBにします。
+* RGB 画像と CMYK 画像のカラー補正を有効にします。
 * カラープロファイルを持たない RGB 画像は、*sRGB* カラースペースにあると見なされます。
 * カラープロファイルを持たない CMYK 画像は、*WebCoated* カラースペースにあると見なされます。
 * RGB 出力を返す動的レンディションは、RGB 出力を *sRGB *カラースペース内で返します。

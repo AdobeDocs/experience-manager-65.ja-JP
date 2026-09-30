@@ -9,13 +9,11 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 100%
-
 ---
-
 # アダプティブフォームの CAPTCHA の使用{#using-captcha-in-adaptive-forms}
 
 | バージョン | 記事リンク |
@@ -24,7 +22,7 @@ ht-degree: 100%
 | AEM 6.5 | この記事 |
 
 
-<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 CAPTCHA（コンピュータと人間を区別する完全に自動化された公開チューリングテスト）は、人間と自動化されたプログラム／ボットを区別するために、オンライントランザクションで一般的に使用されるプログラムです。 テストを行ってユーザーの反応を評価し、サイトを使用しているのが人間かボットかを判断します。 テストが失敗した場合の続行を防ぎ、ボットによるスパムの投稿や悪意のある目的を防止することで、オンライントランザクションの安全性を高めます。
 
@@ -32,7 +30,7 @@ AEM Forms は、アダプティブフォームでの CAPTCHA をサポートし�
 
 >[!NOTE]
 >
->* AEM Forms は、reCAPTCHA v2 および Enterprise をサポートします。 その他のバージョンはサポートされません。
+>* AEM Forms は、reCAPTCHA v2 および reCAPTCHA Enterprise をサポートします。 その他のバージョンはサポートされません。
 >* アダプティブフォームの CAPTCHA は、AEM Forms アプリのオフラインモードではサポートされていません。
 
 ## アダプティブフォーム向けに Google が提供する reCAPTCHA サービスを設定する {#google-reCAPTCHA}
@@ -230,15 +228,15 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 アダプティブフォームのコンポーネントに適用するルールに基づいて、CAPTCHA コンポーネントの表示／非表示を切り替えることができます。 コンポーネントを選択して、「![ルールを編集](assets/edit-rules-icon.svg)」を選択し、「**[!UICONTROL 作成]**」を選択してルールを作成します。 ルールの作成について詳しくは、「[ルールエディター](rule-editor.md)」を参照してください。
 
-例えば、CAPTCHA コンポーネントは、フォームの「通貨の値」フィールドの値が 25000 を超える場合にのみ、アダプティブフォームに表示する必要があります。
+例えば、CAPTCHA コンポーネントは、フォームの「通貨の値」フィールドの値が 25000 を超える場合にのみ、アダプティブフォームに表示されます。
 
 フォームの「**[!UICONTROL 通貨の値]**」フィールドを選択して、以下のルールを作成します。
 
-![ルールの表示／非表示](assets/rules-show-hide-captcha.png)
+![ルールを表示／非表示](assets/rules-show-hide-captcha.png)
 
 >[!NOTE]
 >
-> * サイズを&#x200B;**[!UICONTROL 非表示]**&#x200B;にするか、reCAPTCHA Enterprise スコアベースのキーを使用して reCAPTCHA v2 の設定を選択した場合、表示／非表示オプションは適用されません。
+>* サイズを&#x200B;**[!UICONTROL 非表示]**&#x200B;にするか、reCAPTCHA Enterprise スコアベースのキーを使用して reCAPTCHA v2 の設定を選択した場合、表示／非表示オプションは適用されません。
 
 ### CAPTCHA の検証 {#validate-captcha}
 
@@ -258,7 +256,7 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 1. Captcha コンポーネントを選択し、「![cmppr](assets/configure-icon.svg)」を選択してコンポーネントプロパティを表示します。
 1. 「**[!UICONTROL CAPTCHA を検証]**」セクションの、「**[!UICONTROL ユーザーアクションで CAPTCHA を検証する]**」を選択します。
-1. 「![完了](assets/save_icon.svg)」を選択して、コンポーネントのプロパティを保存します。
+1. 「![完了](assets/save_icon.svg)」を選択して、コンポーネントプロパティを保存します。
 
    >[!NOTE]
    >

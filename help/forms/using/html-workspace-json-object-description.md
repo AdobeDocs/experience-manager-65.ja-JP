@@ -8,64 +8,62 @@ exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
-source-wordcount: '2144'
-ht-degree: 100%
-
+source-wordcount: '2168'
+ht-degree: 92%
 ---
-
 # AEM Forms Workspace JSON オブジェクトの詳細 {#aem-forms-workspace-json-object-description}
 
 AEM Forms Workspace で使用される JSON オブジェクトについて以下に説明します。
 
 1. カテゴリ
 
-   カテゴリは、Workspace の「開始プロセス」タブにあります。これらのカテゴリは、スタートポイントを分類するのに使用されます。
+   カテゴリは、Workspace の「開始プロセス」タブにあります。 これらのカテゴリは、スタートポイントを分類するのに使用されます。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>プロパティ</strong></td>
-   <td><strong>クライアントのみ</strong></td>
-   <td><strong>コメント</strong></td>
-  </tr>
-  <tr>
-   <td>name</td>
-   <td>F</td>
-   <td>カテゴリ名</td>
-  </tr>
-  <tr>
-   <td>id</td>
-   <td>F</td>
-   <td>カテゴリ ID<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>説明<br type="_moz" /> </td>
-   <td>F</td>
-   <td>カテゴリの説明<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>parentOid<br type="_moz" /> </td>
-   <td>F</td>
-   <td>親カテゴリの oid が含まれます<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>startPointsList<br type="_moz" /> </td>
-   <td>T</td>
-   <td>カテゴリにあるすべてのスタートポイントのリストが含まれます</td>
-  </tr>
-  <tr>
-   <td>categoryList</td>
-   <td>T</td>
-   <td>カテゴリの直接の子カテゴリのリストが含まれます<br type="_moz" /> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>プロパティ</strong></td>
+      <td><strong>クライアントのみ</strong></td>
+      <td><strong>コメント</strong></td>
+   </tr>
+   <tr>
+      <td>name</td>
+      <td>F</td>
+      <td>カテゴリ名</td>
+   </tr>
+   <tr>
+      <td>id</td>
+      <td>F</td>
+      <td>カテゴリ ID<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>description<br type="_moz" /> </td>
+      <td>F</td>
+      <td>カテゴリの説明<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>parentOid<br type="_moz" /> </td>
+      <td>F</td>
+      <td>親カテゴリの oid が含まれます<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>startPointsList<br type="_moz" /> </td>
+      <td>T</td>
+      <td>カテゴリにあるすべてのスタートポイントのリストが含まれます</td>
+   </tr>
+   <tr>
+      <td>categoryList</td>
+      <td>T</td>
+      <td>カテゴリの直接の子カテゴリのリストが含まれます<br type="_moz" /> </td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->「すべてのスタートポイント」および「お気に入り」は、クライアント側で定義されるカテゴリです。「お気に入り」カテゴリには、ユーザーがお気に入りのマークを付けたすべてのスタートポイントが含まれます。「すべてのスタートポイント」カテゴリには、すべてのスタートポイントが含まれます。
+   >[!NOTE]
+   >
+   >「すべてのスタートポイント」および「お気に入り」は、クライアント側で定義されるカテゴリです。 「お気に入り」カテゴリには、ユーザーがお気に入りのマークを付けたすべてのスタートポイントが含まれます。 「すべてのスタートポイント」カテゴリには、すべてのスタートポイントが含まれます。
 
 1. Startpoint
 
@@ -76,17 +74,17 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    | categoryId | F | スタートポイントが属するカテゴリの ID が含まれます。 |
    | description | F | スタートポイントの説明が含まれます。 |
    | name | F | スタートポイントの名前が含まれます。 |
-   | serializedImageTicket | F | スタートポイントに対応するイメージチケットが含まれます。このイメージチケットは、サーバーからスタートポイントのイメージを取得するために、スタートポイントの imageUrl フィールドで使用されます。 |
+   | serializedImageTicket | F | スタートポイントに対応するイメージチケットが含まれます。 このイメージチケットは、サーバーからスタートポイントのイメージを取得するために、スタートポイントの imageUrl フィールドで使用されます。 |
    | serviceName | F | スタートポイントのサービスの名前が含まれます。 |
    | startpointId | F | スタートポイントの ID が含まれます。 |
-   | isFavorite | T | スタートポイントがお気に入りであるかどうかを示します。スタートポイントがお気に入りである場合は true、そうでない場合は false です。 |
-   | isDefaultImage | T | プロセスに指定されたイメージがあるかどうかを示します。プロセスに関連付けられたイメージがない場合は true、ある場合は false です。 |
+   | isFavorite | T | スタートポイントがお気に入りであるかどうかを示します。 スタートポイントがお気に入りである場合は true、そうでない場合は false です。 |
+   | isDefaultImage | T | プロセスに指定されたイメージがあるかどうかを示します。 プロセスに関連付けられたイメージがない場合は true、ある場合は false です。 |
    | task | T | スタートポイントが呼び出される際に作成されたタスクが含まれます。 |
    | imageUrl | T | スタートポイントに対応するイメージの URL が含まれます。 |
 
 1. タスク
 
-   タスクはユーザー／グループに割り当てられ、データを入力できるフォームまたはガイド（推奨されていません）のユーザーインターフェイスが含まれます。ユーザーにタスクが割り当てられると、完了して送信するためのフォームまたはガイドが提供されます。
+   タスクはユーザー／グループに割り当てられ、データを入力できるフォームまたはガイド（推奨されていません）のユーザーインターフェイスが含まれます。 ユーザーにタスクが割り当てられると、完了して送信するためのフォームまたはガイドが提供されます。
 
 <table>
  <tbody>
@@ -108,7 +106,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>consultGroupId<br /> </td>
    <td>F</td>
-   <td>タスクを問い合わせることができるグループの ID が含まれます。これは、プロセスのデザイン中に設定されます。<br /> </td>
+   <td>タスクを問い合わせることができるグループの ID が含まれます。 これは、プロセスのデザイン中に設定されます。<br /> </td>
   </tr>
   <tr>
    <td>createTime<br /> </td>
@@ -143,7 +141,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>forwardGroupId<br /> </td>
    <td>F</td>
-   <td>タスクを転送することができるグループの ID が含まれます。これは、プロセスのデザイン中に設定されます。<br /> </td>
+   <td>タスクを転送することができるグループの ID が含まれます。 これは、プロセスのデザイン中に設定されます。<br /> </td>
   </tr>
   <tr>
    <td>instructions<br /> </td>
@@ -193,7 +191,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>priority<br /> </td>
    <td>F</td>
-   <td>タスクの優先度が含まれます。<br /> 1 = 最高の優先度<br /> 2 = 高い優先度<br /> 3 = 標準の優先度<br /> 4 = 低い優先度<br /> 5 = 最低の優先度<br /> </td>
+   <td>タスクの優先度が含まれています。<br /> 1 =優先度が最も高い<br /> 2 =優先度が高い<br /> 3 =通常優先度<br /> 4 =優先度が低い<br /> 5 =優先度が低い<br /> </td>
   </tr>
   <tr>
    <td>processInstanceId</td>
@@ -213,7 +211,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>routeList<br /> </td>
    <td>F</td>
-   <td>タスクに関連付けられたルートのリストが含まれます。ユーザーはルートリストからいずれかのルートを選択することによって、タスクを完了することができます。<br /> </td>
+   <td>タスクに関連付けられたルートのリストが含まれます。 ユーザーはルートリストからいずれかのルートを選択することによって、タスクを完了することができます。<br /> </td>
   </tr>
   <tr>
    <td>selectedRoute<br /> </td>
@@ -223,7 +221,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>serializedImageTicket<br /> </td>
    <td>F</td>
-   <td>タスクに対応するイメージチケットが含まれます。このイメージチケットは、サーバーからタスクのイメージを取得するために、タスクの imageUrl フィールドで使用されます。<br /><br /> </td>
+   <td>タスクに対応するイメージチケットが含まれます。 このイメージチケットは、サーバーからタスクのイメージを取得するために、タスクの imageUrl フィールドで使用されます。<br /><br /> </td>
   </tr>
   <tr>
    <td>serviceName<br /> </td>
@@ -238,7 +236,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>status<br /> </td>
    <td>F</td>
-   <td>1 = 作成済み（タスクはスタートポイントから作成されました。）<br /> 2 = 作成して保存済み（タスクはスタートポイントから作成されて保存されました。）<br /> 3 = 割り当て済み（タスクはプロセスが開始した後でユーザーに割り当てられました。）<br /> 4 = 割り当てて保存済み（タスクは割り当てられて保存されました。）<br /> 100 = 完了（タスクは完了しました。）<br /> 101 = 期限切れ（タスクはデッドラインに達しました。）<br /> 102 = 終了<br /> </td>
+   <td>1 =作成済み（タスクは開始点から作成されます） <br /> 2 =作成および保存（タスクは開始点から作成され、保存されます） <br /> 3 =割り当て済み（プロセスの開始後、タスクがユーザーに割り当てられます） <br /> 4 =割り当ておよび保存（タスクが割り当てられ、保存されています） <br /> 100 =完了（タスクが完了しました） <br /> 101 =期限切れ（タスクは期限に達しました） <br /> 102 =終了<br /> </td>
   </tr>
   <tr>
    <td>stepName<br /> </td>
@@ -273,7 +271,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>taskFormType<br /> </td>
    <td>T</td>
-   <td>タスクのフォームタイプが含まれます。このフィールドを使用して、タスクはクライアントで PDF フォーム、SWF フォームなどにレンダリングされます。<br /> </td>
+   <td>タスクのフォームタイプが含まれます。 このフィールドを使用して、タスクはクライアントで PDF フォーム、SWF フォームなどにレンダリングされます。<br /> </td>
   </tr>
   <tr>
    <td>showDirectActions<br /> </td>
@@ -288,7 +286,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>supportsOffline<br /> </td>
    <td>T</td>
-   <td>true の場合、フォームをオフラインで使用することができます。これは、PDF フォームのみです。<br /> </td>
+   <td>true の場合、フォームをオフラインで使用することができます。 これは、PDF フォームのみです。<br /> </td>
   </tr>
   <tr>
    <td>supportsSave<br /> </td>
@@ -303,7 +301,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>isDefaultImage<br /> </td>
    <td>T</td>
-   <td>プロセスに指定されたイメージがあるかどうかを示します。プロセスに関連付けられたイメージがない場合は true、ある場合は false です。<br /> </td>
+   <td>プロセスに指定されたイメージがあるかどうかを示します。 プロセスに関連付けられたイメージがない場合は true、ある場合は false です。<br /> </td>
   </tr>
   <tr>
    <td>historyTaskList<br /> </td>
@@ -353,7 +351,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>userActions<br /> </td>
    <td>T</td>
-   <td>オブジェクトの配列です。各オブジェクトにはルートに関する詳細および対応する確認メッセージが含まれます（存在する場合）。<br /> </td>
+   <td>オブジェクトの配列です。 各オブジェクトにはルートに関する詳細および対応する確認メッセージが含まれます（存在する場合）。<br /> </td>
   </tr>
   <tr>
    <td>dataUrl<br /> </td>
@@ -385,7 +383,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 
 1. フィルター
 
-   フィルターは基本的にユーザーまたはグループのキューです。タスクがユーザー／グループに割り当てられた場合、タスクは対応するキューに追加されます。
+   フィルターは基本的にユーザーまたはグループのキューです。 タスクがユーザー／グループに割り当てられた場合、タスクは対応するキューに追加されます。
 
 <table>
  <tbody>
@@ -412,12 +410,12 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>type</td>
    <td>F</td>
-   <td>キューのタイプが含まれます。<br /> 0 - ユーザーキュー<br />1.共有キュー.<br />2.グループキュー<br type="_moz" /> </td>
+   <td>キューのタイプが含まれています。<br /> 0 - ユーザーキュー。<br /> 1. 共有キュー。<br /> 2. グループ キュー。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>query</td>
    <td>T</td>
-   <td>フィルターに関連付けられたキューが含まれます。このクエリを使用して完全なタスクリストからタスクを検索します。<br type="_moz" /> </td>
+   <td>フィルターに関連付けられたクエリが含まれます。 このクエリを使用して完全なタスクリストからタスクを検索します。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>tasks</td>
@@ -441,7 +439,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>dateRanges<br type="_moz" /> </td>
    <td>F</td>
-   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトには、startDate フィールドにスケジュールの開始日、endDate フィールドにスケジュールの終了日が含まれます。スケジュールの endDate が null の場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td>
+   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。 各スケジュールオブジェクトには、startDate フィールドにスケジュールの開始日、endDate フィールドにスケジュールの終了日が含まれます。 スケジュールの endDate が null の場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td>
@@ -461,7 +459,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processSpecificDesignates<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定のオブジェクトには、processName （プロセスの名前）、 isNotDesignated （ユーザーが対応するプロセスに割り当てられていない場合は true）、および userDesignated （ユーザーが割り当てられていない場合はヌルで、割り当てられている場合は対応するプロセスに割り当てられたユーザーの詳細）が含まれます。<br type="_moz" /> </td>
+   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。 各プロセス固有の指定のオブジェクトには、processName （プロセスの名前）、 isNotDesignated （ユーザーが対応するプロセスに割り当てられていない場合は true）、および userDesignated （ユーザーが割り当てられていない場合はヌルで、割り当てられている場合は対応するプロセスに割り当てられたユーザーの詳細）が含まれます。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processes<br type="_moz" /> </td>
@@ -488,7 +486,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 
 1. プロセスインスタンス
 
-   プロセスインスタンスは、プロセスが Workspace または Workbench 経由で呼び出された場合に作成されます。
+   プロセスインスタンスは、プロセスが Workspace またはワークベンチ経由で呼び出された場合に作成されます。
 
 <table>
  <tbody>
@@ -540,7 +538,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processVariables<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトは、name（プロセス変数の名前）、value（プロセス変数の値）、type（プロセス変数のタイプ）を含みます。<br type="_moz" /> </td>
+   <td>プロセス変数のオブジェクトの配列。 各プロセス変数オブジェクトは、name（プロセス変数の名前）、value（プロセス変数の値）、type（プロセス変数のタイプ）を含みます。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>tasklist<br type="_moz" /> </td>
@@ -589,7 +587,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 
 1. タスクの割り当てオブジェクト
 
-   タスクの割り当てオブジェクトには、タスクの割り当てに関する情報が含まれます。以下にタスクの割り当てのプロパティを示します。
+   タスクの割り当てオブジェクトには、タスクの割り当てに関する情報が含まれます。 以下にタスクの割り当てのプロパティを示します。
 
 <table>
  <tbody>
@@ -606,7 +604,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>assignmentType<br type="_moz" /> </td>
    <td>F</td>
-   <td>0 = 初期割り当て<br /> 1 = 転送（タスクはタスクの現在の所有者に転送されました）<br /> 2 = 返信（タスクはタスクの以前の所有者によってタスクの現在の所有者に返信されました。）<br /> 3 = 要求済み（タスクは現在のタスクの所有者によって要求されました）<br /> 4 =エスカレーション（タスクはエスカレーション後に現在のタスクの所有者に割り当てられました。）<br /> 5 = 割り当てられている管理者（タスクは現在のタスクの所有者に管理者によって割り当てられました）<br /> 6 = 問い合わせ済み（タスクはタスクの現在の所有者に問い合わせされました）<br type="_moz" /> </td>
+   <td>0 =初期割り当て<br /> 1 =転送（タスクはタスクの現在の所有者に転送されました） <br /> 2 =返されました（タスクは、タスクの前の所有者によってタスクの現在の所有者に返されました） <br /> 3 = クレーム済み（タスクは、現在のタスクの所有者によってクレームされています） <br /> 4 = エスカレーション （エスカレーション後にタスクの現在の所有者にタスクが割り当てられました） <br /> 5 =管理者が割り当てられました（タスクは管理者によってタスクの現在の所有者に割り当てられました） <br /> 6 = コンサルテーション済み（タスクは現在のタスクの所有者に相談されています） <br type="_moz" /> </td>
   </tr>
   <tr>
    <td>assignmentUpdateTime<br type="_moz" /> </td>
@@ -633,7 +631,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 
 1. タスク ACL オブジェクト
 
-   タスク ACL オブジェクトには、タスクの転送、共有、問い合わせなどの権限に関する情報が含まれます。以下にタスク ACL のプロパティを示します。
+   タスク ACL オブジェクトには、タスクの転送、共有、問い合わせなどの権限に関する情報が含まれます。 以下にタスク ACL のプロパティを示します。
 
 <table>
  <tbody>
@@ -677,7 +675,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 
 1. タスクの添付ファイル
 
-   添付ファイルをタスクに追加することができます。添付のタイプは添付ファイルおよびメモが可能です。以下に添付オブジェクトのプロパティを示します。
+   添付ファイルをタスクに追加することができます。 添付のタイプは添付ファイルおよびメモが可能です。 以下に添付オブジェクトのプロパティを示します。
 
 <table>
  <tbody>
@@ -729,7 +727,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>権限<br type="_moz" /> </td>
    <td>F</td>
-   <td>添付ファイルに関連付けられた権限。allowRead フィールドは読み取り権限、allowWrite は書き込み権限、allowDelete は削除権限用です。<br type="_moz" /> </td>
+   <td>添付ファイルに関連付けられた権限。 allowRead フィールドは読み取り権限、allowWrite は書き込み権限、allowDelete は削除権限用です。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>サイズ<br type="_moz" /> </td>
@@ -754,12 +752,12 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>formattedDescription<br type="_moz" /> </td>
    <td>T</td>
-   <td>書式設定された添付ファイルの説明。AEM Forms Workspace の添付ファイルの説明に存在する特殊文字を表示するのに使用されます。<br type="_moz" /> </td>
+   <td>書式設定された添付ファイルの説明。 AEM Forms Workspace の添付ファイルの説明に存在する特殊文字を表示するのに使用されます。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>formattedFileName<br type="_moz" /> </td>
    <td>T</td>
-   <td>書式設定された添付ファイル名。AEM Forms Workspace の添付ファイルの名前に存在する特殊文字を表示するのに使用されます。これは、メモでのみ利用できます。<br type="_moz" /> </td>
+   <td>書式設定された添付ファイル名。 AEM Forms Workspace の添付ファイルの名前に存在する特殊文字を表示するのに使用されます。 これは、メモでのみ利用できます。<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>

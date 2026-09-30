@@ -10,7 +10,7 @@ exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Developer
-source-git-commit: ee6294a03b2e4faf4e3c2dc8a466d03a0fb8a28a
+source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
 workflow-type: tm+mt
 source-wordcount: '5344'
 ht-degree: 95%
@@ -656,82 +656,82 @@ Target コンポーネントをカスタマイズするには、次の 2 つの�
 
 1. 下の表の説明に従って、ターゲットコンポーネントを設定します。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>オプション</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td><strong>場所</strong></td>
-   <td><p>場所は、Target コンテンツの場所を識別する文字列であり、オファーを配置するページ上の場所（または位置あるいはコンポーネント）とオファーとを関連付けるために使用されます。</p> <p>このフィールドは汎用値です。</p> <p>オファーをコンポーネント内に配置すると、オファーが場所 ID を記憶します。 ページが実行されると、エンジンがユーザーのセグメントを評価し、その評価に基づいて、アクティブなキャンペーンから表示すべきエクスペリエンスを選択します。 次に、ページ上の場所 ID を確認し、それらの場所 ID を持つオファーの照合を試みます。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>エンジン</strong></td>
-   <td>使用したいエンジンに応じて、「<strong>クライアントサイドのルール（トラッキングなし）」、「Adobe Target」、「ContextHub」</strong>、<strong>「Adobe Campaign」</strong>から選択します。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>オプション</strong></td>
+      <td><strong>説明</strong></td>
+   </tr>
+   <tr>
+      <td><strong>場所</strong></td>
+      <td><p>場所は、Target コンテンツの場所を識別する文字列であり、オファーを配置するページ上の場所（または位置あるいはコンポーネント）とオファーとを関連付けるために使用されます。</p> <p>このフィールドは汎用値です。</p> <p>オファーをコンポーネント内に配置すると、オファーが場所 ID を記憶します。 ページが実行されると、エンジンがユーザーのセグメントを評価し、その評価に基づいて、アクティブなキャンペーンから表示すべきエクスペリエンスを選択します。 次に、ページ上の場所 ID を確認し、それらの場所 ID を持つオファーの照合を試みます。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>エンジン</strong></td>
+      <td>使用したいエンジンに応じて、「<strong>クライアントサイドのルール（トラッキングなし）」、「Adobe Target」、「ContextHub」</strong>、<strong>「Adobe Campaign」</strong>から選択します。</td>
+   </tr>
+   </tbody>
+   </table>
 
-エンジンとして Adobe Target を選択した場合：
+   エンジンとして Adobe Target を選択した場合：
 
-![chlimage_1-39](assets/chlimage_1-39.png)
+   ![chlimage_1-39](assets/chlimage_1-39.png)
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>オプション</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td><strong>正確なターゲティング</strong></td>
-   <td><p>正確なターゲティングを有効にすると、リクエストを Adobe Target に送信する前に、クライアントコンテキストまたはコンテキストハブデータが利用可能になるまで待機するように、コンポーネントに指示します。 読み込み時間が長くなる場合があります。 オーサリング時は、正確なターゲティングは常に有効になっています。</p> <p>「<strong>正確なターゲティング</strong>」チェックボックスをオンにした場合、mbox はまず <code>mboxDefine</code> を実行し、後で <code>mboxUpdate</code> を実行するので、データが利用可能になった時点で Ajax リクエストが送信されます。</p> <p>「<strong>正確なターゲティング</strong>」チェックボックスをオフにした場合、mbox は <code>mboxCreate</code> を実行するので、直ちに同期リクエストが行われます（この場合、必ずしもすべてのコンテクストデータがまだ利用可能になっていないことがあります）。</p> <p><strong>メモ：</strong>特定のコンポーネントで「正確なターゲティング」を有効または無効にしても、グローバル設定には影響しません。 コンポーネントで「正確なターゲティング」を有効にすれば、その設定が常にグローバル設定よりも優先されます。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>解決されたセグメントを含める</strong></td>
-   <td><p>このチェックボックスをオンにすると、mbox 呼び出しにすべての解決されたセグメントが含められ、すべての設定済みパラメーターがページおよびフレームワークに含められます。</p> <p>これは、AEM セグメントを同期している XML API を使用する状況でのみ機能します。 AEM で Adobe Target によって処理されないセグメント（スクリプトセグメントなど）がある場合、このオプションを使用すると、AEM でセグメントを解決し、セグメントがアクティブであるという情報を Adobe Target に送信できます。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>継承されたコンテキストパラメーター</strong></td>
-   <td>選択したページに関連付けられている、Adobe Target フレームワークから継承されたコンテキストパラメーターがあれば、一覧表示します。</td>
-  </tr>
-  <tr>
-   <td><strong>コンテキストパラメーター</strong></td>
-   <td>追加のコンテキストパラメーター（Target フレームワークで使用可能なものと同じ）を設定するには、「<strong>フィールドを追加</strong>」をクリックします。 コンポーネントに追加されたコンテクストパラメーターは、そのコンポーネントに<i>のみ</i>適用されます。フレームワークに直接コンテクストパラメーターを追加した場合とは異なり、他のコンポーネントには適用されません。</td>
-  </tr>
-  <tr>
-   <td><strong>静的パラメーター</strong></td>
-   <td>追加の静的パラメーター（Target フレームワークで使用可能なものと同じ）を設定するには、「<strong>フィールドを追加</strong>」をクリックします。 コンポーネントに追加された静的パラメーターは、そのコンポーネントに<i>のみ</i>適用されます。フレームワークに直接静的パラメーターを追加した場合とは異なり、他のコンポーネントには適用されません。 静的パラメーターは、コンテキスト（ContextHub または ClientContext）からは得られません。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>オプション</strong></td>
+      <td><strong>説明</strong></td>
+   </tr>
+   <tr>
+      <td><strong>正確なターゲティング</strong></td>
+      <td><p>正確なターゲティングを有効にすると、リクエストを Adobe Target に送信する前に、クライアントコンテキストまたはコンテキストハブデータが利用可能になるまで待機するように、コンポーネントに指示します。 読み込み時間が長くなる場合があります。 オーサリング時は、正確なターゲティングは常に有効になっています。</p> <p>「<strong>正確なターゲティング</strong>」チェックボックスをオンにした場合、mbox はまず <code>mboxDefine</code> を実行し、後で <code>mboxUpdate</code> を実行するので、データが利用可能になった時点で Ajax リクエストが送信されます。</p> <p>「<strong>正確なターゲティング</strong>」チェックボックスをオフにした場合、mbox は <code>mboxCreate</code> を実行するので、直ちに同期リクエストが行われます（この場合、必ずしもすべてのコンテクストデータがまだ利用可能になっていないことがあります）。</p> <p><strong>メモ：</strong>特定のコンポーネントで「正確なターゲティング」を有効または無効にしても、グローバル設定には影響しません。 コンポーネントで「正確なターゲティング」を有効にすれば、その設定が常にグローバル設定よりも優先されます。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>解決されたセグメントを含める</strong></td>
+      <td><p>このチェックボックスをオンにすると、mbox 呼び出しにすべての解決されたセグメントが含められ、すべての設定済みパラメーターがページおよびフレームワークに含められます。</p> <p>これは、AEM セグメントを同期している XML API を使用する状況でのみ機能します。 AEM で Adobe Target によって処理されないセグメント（スクリプトセグメントなど）がある場合、このオプションを使用すると、AEM でセグメントを解決し、セグメントがアクティブであるという情報を Adobe Target に送信できます。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>継承されたコンテキストパラメーター</strong></td>
+      <td>選択したページに関連付けられている、Adobe Target フレームワークから継承されたコンテキストパラメーターがあれば、一覧表示します。</td>
+   </tr>
+   <tr>
+      <td><strong>コンテキストパラメーター</strong></td>
+      <td>追加のコンテキストパラメーター（Target フレームワークで使用可能なものと同じ）を設定するには、「<strong>フィールドを追加</strong>」をクリックします。 コンポーネントに追加されたコンテクストパラメーターは、そのコンポーネントに<i>のみ</i>適用されます。フレームワークに直接コンテクストパラメーターを追加した場合とは異なり、他のコンポーネントには適用されません。</td>
+   </tr>
+   <tr>
+      <td><strong>静的パラメーター</strong></td>
+      <td>追加の静的パラメーター（Target フレームワークで使用可能なものと同じ）を設定するには、「<strong>フィールドを追加</strong>」をクリックします。 コンポーネントに追加された静的パラメーターは、そのコンポーネントに<i>のみ</i>適用されます。フレームワークに直接静的パラメーターを追加した場合とは異なり、他のコンポーネントには適用されません。 静的パラメーターは、コンテキスト（ContextHub または ClientContext）からは得られません。</td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->コンポーネントを選択してターゲットに設定可能にすると、AEM もコンポーネントを置き換え、Adobe Target コンポーネントを挿入します。 （Adobe Target コンポーネントは、ページに手動で追加する場合にのみ使用できず、既存のコンポーネントをターゲットにする場合にも使用できます。）
+   >[!NOTE]
+   >
+   >コンポーネントを選択してターゲットに設定可能にすると、AEM もコンポーネントを置き換え、Adobe Target コンポーネントを挿入します。 （Adobe Target コンポーネントは、ページに手動で追加する場合にのみ使用できず、既存のコンポーネントをターゲットにする場合にも使用できます。）
 
-エンジンとして ClientContext（クライアント側）を選択した場合：
+   エンジンとして ClientContext（クライアント側）を選択した場合：
 
-![chlimage_1-40](assets/chlimage_1-40.png)
+   ![chlimage_1-40](assets/chlimage_1-40.png)
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>オプション</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td><strong>クライアントサイドのオプション - 戦略</strong></td>
-   <td><p>次のいずれかを選択します。</p>
-    <ul>
-     <li><strong>第 1</strong>：キャンペーン内で順に並べられたリスト内の最上位のエクスペリエンス。</li>
-     <li><strong>ランダム</strong>：任意のエクスペリエンスが使用されます。</li>
-     <li><strong>クリックストリームのスコア</strong>：ClientContext で追跡されるタグおよび関連タグのヒットが使用されます。 ティーザーページに定義されている複数のタグのヒット率が比較されます。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>オプション</strong></td>
+      <td><strong>説明</strong></td>
+   </tr>
+   <tr>
+      <td><strong>クライアントサイドのオプション - 戦略</strong></td>
+      <td><p>次のいずれかを選択します。</p>
+      <ul>
+      <li><strong>第 1</strong>：キャンペーン内で順に並べられたリスト内の最上位のエクスペリエンス。</li>
+      <li><strong>ランダム</strong>：任意のエクスペリエンスが使用されます。</li>
+      <li><strong>クリックストリームのスコア</strong>：ClientContext で追跡されるタグおよび関連タグのヒットが使用されます。 ティーザーページに定義されている複数のタグのヒット率が比較されます。</li>
+      </ul> </td>
+   </tr>
+   </tbody>
+   </table>
 
-AEM と Adobe Campaign を統合している場合は、**Adobe Campaign** をエンジンとして選択します。 詳しくは、[AEM と Adobe Campaign の統合](/help/sites-administering/campaign.md)を参照してください。
+   AEM と Adobe Campaign を統合している場合は、**Adobe Campaign** をエンジンとして選択します。 詳しくは、[AEM と Adobe Campaign の統合](/help/sites-administering/campaign.md)を参照してください。
 
-ターゲティングに ContextHub を使用する場合は、**ContextHub** をエンジンとして選択します。 詳しくは、[ContextHub の設定](/help/sites-developing/ch-configuring.md)を参照してください。
+   ターゲティングに ContextHub を使用する場合は、**ContextHub** をエンジンとして選択します。 詳しくは、[ContextHub の設定](/help/sites-developing/ch-configuring.md)を参照してください。
