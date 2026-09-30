@@ -10,16 +10,14 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 100%
-
+source-wordcount: '742'
+ht-degree: 98%
 ---
-
-# SAP Commerce Cloud {#sap-commerce-cloud}
+# SAP Commerce Cloud{#sap-commerce-cloud}
 
 >[!NOTE]
 >
->このページには、hybris web サイトへのリンクが含まれています。特定のページでは、ログインアカウントが必要です。
+>このページには、hybris web サイトへのリンクが含まれています。 特定のページでは、ログインアカウントが必要です。
 
 ## SAP Commerce Cloud を使用した e コマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
 
@@ -58,18 +56,18 @@ e コマース機能をインストールするには、次が必要です。
 * お使いの hybris サーバー
 * AEM e コマースフレームワーク：
 
-   * これは、標準の AEM インストールの一部です
+  * これは、標準の AEM インストールの一部です
 
 * AEM Geometrixx オールパッケージ：
 
-   * `cq-geometrixx-all-pkg`
+  * `cq-geometrixx-all-pkg`
 
 * AEM hybris コンテンツパッケージ：
 
-   * `cq-hybris-content-6.3.2`
-   * hybris 固有の API 実装
-   * `cq-geometrixx-hybris-content-6.3.2`
-   * hybris の使用法を示すリファレンス実装（`geometrixx-outdoors/en_US`）
+  * `cq-hybris-content-6.3.2`
+  * hybris 固有の API 実装
+  * `cq-geometrixx-hybris-content-6.3.2`
+  * hybris の使用法を示すリファレンス実装（`geometrixx-outdoors/en_US`）
 
 ### hybris を使用した e コマースのインストール {#installation-of-ecommerce-with-hybris}
 
@@ -102,7 +100,7 @@ e コマース機能をインストールするには、次が必要です。
 
 ### hybris サーバーのダウンロードと構築 {#download-and-build-your-hybris-server}
 
-この手順では、hybris サーバーをダウンロードして構築します。また、hybris と cq 間の接続に必要な初期設定も行います。拡張はデフォルト設定で使用できます。
+この手順では、hybris サーバーをダウンロードして構築します。 また、hybris と cq 間の接続に必要な初期設定も行います。 拡張はデフォルト設定で使用できます。
 
 >[!CAUTION]
 >
@@ -143,7 +141,7 @@ e コマース機能をインストールするには、次が必要です。
    ```
 
 
-[ファイルを入手](/help/sites-deploying/assets/setup.groovy)
+   [ファイルを入手](/help/sites-deploying/assets/setup.groovy)
 
    >[!NOTE]
    >
@@ -151,7 +149,7 @@ e コマース機能をインストールするには、次が必要です。
 
    5.6.0 以降
 
-[ファイルを入手](/help/sites-deploying/assets/setup-1.groovy)
+   [ファイルを入手](/help/sites-deploying/assets/setup-1.groovy)
 
 1. コマンドラインから、次の操作を実行します。
 
@@ -186,7 +184,7 @@ e コマース機能をインストールするには、次が必要です。
 
 この手順では、Geometrixx オンラインのデモストアをアップロードして設定します。
 
-1. hybris インスタンスを起動します。コマンドラインから、次の操作を実行します。
+1. hybris インスタンスを起動します。 コマンドラインから、次の操作を実行します。
 
    ```shell
    cd <hybris-root-directory>/bin/platform
@@ -201,10 +199,10 @@ e コマース機能をインストールするには、次が必要です。
    * ユーザー名：admin
    * パスワード：nimda
 
-1. サイドバーナビゲーションから、「**システム**」と「**ツール**」を展開します。次に、「**読み込み**」を選択して、**ウィザード：CSV の読み込み** ウィンドウを開きます。
+1. サイドバーナビゲーションから、「**システム**」と「**ツール**」を展開します。 次に、「**読み込み**」を選択して、**ウィザード：CSV の読み込み** ウィンドウを開きます。
 1. 「**設定**」タブで、次の&#x200B;**読み込み**&#x200B;ファイル&#x200B;**をアップロードします**。
 
-[ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
+   [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
 1. 「**ロケール設定**」を次のように設定します。
 
@@ -213,9 +211,9 @@ e コマース機能をインストールするには、次が必要です。
 1. 「**リソース**」タブを開きます。
 1. 次の&#x200B;**メディア Zip** **をアップロードします**。
 
-[ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
+   [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
-1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
+1. 「**開始**」をクリックして、指定したファイルを読み込みます。 「**結果**」タブにログエントリが表示されます。
 
 1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
@@ -223,17 +221,17 @@ e コマース機能をインストールするには、次が必要です。
 
 1. 次の&#x200B;**読み込みファイル** **をアップロードします**。
 
-[ファイルを入手](/help/sites-deploying/assets/base-store.csv)
+   [ファイルを入手](/help/sites-deploying/assets/base-store.csv)
 
    hybris 5.7 の場合は、次の手順を使用してください。
 
-[ファイルを入手](/help/sites-deploying/assets/base-store-5_7.csv)
+   [ファイルを入手](/help/sites-deploying/assets/base-store-5_7.csv)
 
 1. 「**ロケール設定**」を次のように設定します。
 
    `en_US - English (United States)`
 
-1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
+1. 「**開始**」をクリックして、指定したファイルを読み込みます。 「**結果**」タブにログエントリが表示されます。
 
 1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
