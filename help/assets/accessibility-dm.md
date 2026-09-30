@@ -12,20 +12,23 @@ autotag-review: '2026-05-18T18:39:42.457Z'
 TQID: 'https://experienceleague.adobe.com/f9-0rO4QHX7kbx7xwptmuOW1W7WzduM3tOlL2YgHXxI'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
 source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
 workflow-type: tm+mt
-source-wordcount: 647
+source-wordcount: '666'
 ht-degree: 100%
-
 ---
-
 # [!DNL Dynamic Media] でのアクセシビリティ {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media] では、オーサリングユーザーインターフェイス全体でキーボードコントロールおよび支援テクノロジー（JAWS スクリーンリーダーや NVDA スクリーンリーダーなど）をサポートしています。
@@ -34,20 +37,20 @@ ht-degree: 100%
 
 [!DNL Dynamic Media]は[!DNL Adobe Experience Manager Assets]のプラグインなので、キーボードコントロールの動作のほとんどは[!DNL Experience Manager Assets]と同じです。 例えば、 [!DNL Dynamic Media]の「`Cancel`」ボタンは、[!DNL Experience Manager Assets]と同じフォーカスハイライトを持ち、[!DNL Experience Manager Assets]と同じように`Spacebar`キーに反応します。 詳しくは、[Assets のキーボードショートカット](/help/assets/accessibility.md#keyboard-shortcuts)を参照してください。
 
-[!DNL Dynamic Media]の個々のユーザーインターフェイス要素でサポートされるキーストロークは明確で見つけやすい。 [!DNL Dynamic Media]のキーボードコントロールは、次の通りです。
+[!DNL Dynamic Media]の個人ユーザーインターフェイス要素でサポートされるキーストロークは明確で見つけやすい。 [!DNL Dynamic Media]のキーボードコントロールは、次の通りです。
 
 * `Tab` と `Shift+Tab` のキー操作を使用して、ページ上のインタラクティブ要素間を移動できます。
 `Tab` を使用すると、タブ順序における次のユーザーインターフェイス要素に入力フォーカスが進みます。`Shift+Tab` を使用すると、入力フォーカスが前のユーザーインターフェイス要素に戻ります。
 フォーカストラバーサルは、画面上のユーザーインターフェイス要素の自然な位置に従い、左から右、上から下の順序で移動します。 また、フィールドにエラーがある場合は、`Tab` を押して、そのフィールドにフォーカスを移動できます。
 * `Spacebar` キーと `Enter` キーを使用して、ボタン、ドロップダウンリストなどの標準的なユーザーインターフェイス要素をアクティブにできます。
-* アクティブな要素にキーボードフォーカスのハイライト表示を行えます。 入力フォーカスのあるユーザーインターフェイス要素には、その要素の周りにボーダーをレンダリングして視覚的にフォーカスを表示します。
+* アクティブな要素にキーボードフォーカスのハイライト表示を行えます。 入力フォーカスのあるユーザーインターフェイス要素では、その周囲に表示される枠線によって、視覚的なフォーカス表示が行われます。
 * ホットスポットエディターでは、矢印キーなどのいくつかのカスタムキー操作を使用して複雑なユーザーインターフェイス要素を操作し、ホットスポットの位置を変更できます。
 * インタラクティブビデオエディターでは、`Spacebar` を使用して画像を選択し、それをセグメントに追加できます。 さらに、`Backspace` キーを使用して、選択した項目を「**[!UICONTROL コンテンツ]**」タブから削除できます。 また、必要に応じて `Tab` キーを押して、ページ上のインタラクティブ要素間を移動できます。
 * 画像切り抜き／スマート切り抜きエディターで、次の操作を実行できます。
-   * 矢印キーを使用して、フレームサイズの切り抜きや画像位置の変更、またはその両方を行います。
-   * 最初の `Tab` ストップで画像フレーム全体がハイライト表示されます。 その場合、キーボードの矢印キーを使用してフレームの位置を変更できます。
-   * その次の 4 つの `Tab` ストップはフレームの四隅です。 フレームの隅をフォーカスすると、その隅がハイライト表示されます。 この場合も、キーボードの矢印キーを使用して、フォーカスされた隅を移動できます。
-[単一の画像のスマート切り抜きまたはスマートスウォッチの編集](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)を参照してください。
+  * 矢印キーを使用して、フレームサイズの切り抜きや画像位置の変更、またはその両方を行います。
+  * 最初の `Tab` ストップで画像フレーム全体がハイライト表示されます。 その場合、キーボードの矢印キーを使用してフレームの位置を変更できます。
+  * その次の 4 つの `Tab` ストップはフレームの四隅です。 フレームの隅をフォーカスすると、その隅がハイライト表示されます。 この場合も、キーボードの矢印キーを使用して、フォーカスされた隅を移動できます。
+    [単一の画像のスマート切り抜きまたはスマートスウォッチの編集](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)を参照してください。
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
 

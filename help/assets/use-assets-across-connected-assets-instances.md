@@ -1,6 +1,6 @@
 ---
-title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの共有
-description: 別の  [!DNL Adobe Experience Manager Sites]  デプロイメントで web ページを作成する場合、リモートの  [!DNL Adobe Experience Manager Assets]  デプロイメントで使用できるアセットを使用します。
+title: Connected Assets を使用した [!DNL Sites] での DAM アセットの共有
+description: 別の[!DNL Adobe Experience Manager Sites] デプロイメントでweb ページを作成する際に、リモート [!DNL Adobe Experience Manager Assets] デプロイメントで利用可能なアセットを使用します。
 contentOwner: AK
 mini-toc-levels: 2
 role: User, Admin, Leader
@@ -10,11 +10,9 @@ hide: true
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: bca6156727dca11b2e09be549f3def6130827193
 workflow-type: tm+mt
-source-wordcount: '3999'
+source-wordcount: '4025'
 ht-degree: 98%
-
 ---
-
 # Connected Assets を使用した [!DNL Experience Manager Sites] での DAM アセットの共有 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
 | バージョン | 記事リンク |
@@ -29,7 +27,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 
 >[!NOTE]
 >
->Web ページのオーサリング用に、別の Sites デプロイメント上のリモート DAM デプロイメントで利用可能なアセットを使用する必要がある場合にのみ、Connected Assets を設定します。
+>Web ページのオーサリング用に、別の Sites デプロイメントでリモート DAM デプロイメント上の利用可能なアセットを使用する必要がある場合にのみ、Connected Assets を設定します。
 
 ## Connected Assets の概要 {#overview-of-connected-assets}
 
@@ -42,7 +40,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager]個のデプロイメントタイプの場合、サポートされている条件のいずれかが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets]は[!DNL Experience Manager] as a Cloud Serviceで動作します。 [!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[&#x200B; Experience Manager as a Cloud Service における Connected Assets &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
+* [!DNL Adobe Experience Manager]個のデプロイメントタイプの場合、サポートされている条件のいずれかが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets]は[!DNL Experience Manager] as a Cloud Serviceで動作します。 [!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[ Experience Manager as a Cloud Service における Connected Assets ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
 
   | | [!DNL Sites] as a [!DNL Cloud Service] | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
   |---|---|---|---|
@@ -61,7 +59,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 
 この機能の設定や使用に関係する様々な役割と対応するユーザーグループについて、以下で説明します。 ローカルスコープは、作成者が web ページを作成する場合に使用します。 リモートスコープは、必要なアセットをホストしている DAM デプロイメントで使用されます。 [!DNL Sites] 作成者は、これらのリモートアセットを取得します。
 
-| 役割 | 対象範囲 | ユーザーグループ | 手順のユーザーネーム | 説明 |
+| 役割 | 対象範囲 | ユーザーグループ | 手順のユーザー名 | 説明 |
 |---|---|---|---|---|
 | [!DNL Sites] administrator | ローカル | [!DNL Experience Manager] `administrators` | `admin` | [!DNL Experience Manager]を設定し、リモート [!DNL Assets] デプロイメントとの統合を設定します。 |
 | DAM ユーザー | ローカル | `Authors` | `ksaner` | `/content/DAM/connectedassets/` の取得済みアセットを表示／複製するために使用されます。 |
@@ -107,14 +105,14 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
    1. 「**[!UICONTROL マウントポイント]**」フィールドに、[!DNL Experience Manager] が取得したアセットの格納先となるローカルの [!DNL Experience Manager] パスを入力します。 例：`remoteassets` フォルダー。 DAM から取得したアセットは、[!DNL Sites] デプロイメントのこのフォルダーに保存されます。
    1. **[!UICONTROL ローカルサイト URL]** は、 [!DNL Sites] デプロイメントの場所です。 [!DNL Assets] デプロイメントは、この値を使用して、この [!DNL Sites] デプロイメントによって取得されたデジタルアセットへの参照を維持します。
    1. [!DNL Sites] 技術ユーザーの資格情報。
-   1. **[!UICONTROL 元のバイナリ転送最適化しきい値]**&#x200B;フィールドの値は、元のアセット（レンディションを含む）を同期的に転送するかどうかを指定します。 ファイルサイズが比較的小さいアセットは簡単に取得できますが、ファイルサイズが大きいアセットは非同期で同期するのが最適です。 値は、ネットワークの機能に応じて異なります。
+   1. **[!UICONTROL 元のバイナリ転送最適化しきい値]**&#x200B;フィールドの値は、元のアセット（レンディションを含む）を同期的に転送するかどうかを指定します。 ファイルサイズが比較的小さいアセットは簡単に取得できますが、ファイルサイズが大きいアセットは非同期で同期するのが最適です。 値は、ネットワークの性能に応じて異なります。
    1. データストアを使用してアセットを保存し、データストアが両方のデプロイメント間で共有されている場合は、「**[!UICONTROL Connected Assets とデータストアを共有]**」を選択します。 この場合、実際のアセットバイナリはデータストアで利用可能で、転送されないため、しきい値の制限は重要ではありません。
 
    ![Connected Assets 機能の典型的な設定](assets/connected-assets-typical-config.png)
 
    *図：Connected Assets 機能の典型的な設定*
 
-1. [!DNL Assets]デプロイメント上の既存のデジタルアセットは既に処理され、レンディションが生成されます。 これらのレンディションは、この機能を使用して取得されるので、レンディションを再生成する必要はありません。 レンディションの再生成を禁止するには、ワークフローランチャーを無効にします。 （[!DNL Sites]）デプロイメントのランチャーの設定を調整して、`connectedassets` フォルダーを除外します（アセットはこのフォルダーに取得されます）。
+1. [!DNL Assets]デプロイメント上の既存のデジタルアセットは既に処理され、レンディションが生成されます。 これらのレンディションは、この機能を使用して取得されるので、レンディションを再生成する必要はありません。 レンディションの再生成を防ぐには、ワークフローランチャーを無効にします。 （[!DNL Sites]）デプロイメントのランチャーの設定を調整して、`connectedassets` フォルダーを除外します（アセットはこのフォルダーに取得されます）。
 
    1. [!DNL Sites] デプロイメントで、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL ランチャー]**&#x200B;をクリックします。
 
@@ -152,7 +150,7 @@ Connected Assets で [!DNL Dynamic Media] を使用するには、以下の手�
 
 1. 同期モードが有効なリモート DAM デプロイメントで [!DNL Dynamic Media] を設定します。
 1. [Connected Assets](#configure-a-connection-between-sites-and-assets-deployments) を設定します。
-1. リモート DAM で設定された名前と同じ会社名を持つ Sites インスタンス上で、[!DNL Dynamic Media] を設定します。 Sites デプロイメントで Connected Assets を操作するには、Dynamic Media アカウントへの読み取り専用アクセス権が必要です。 そのため、Sites インスタンスの Dynamic Media 設定で同期モードを無効にする必要があります。
+1. リモート DAM で設定された名前と同じ会社名を持つ Sites インスタンス上で、[!DNL Dynamic Media] を設定します。 Connected Assets を機能させるには、Sites デプロイメントが Dynamic Media アカウントへの読み取り専用アクセス権を持っている必要があります。 そのため、Sites インスタンスの Dynamic Media 設定で同期モードを無効にする必要があります。
 
 >[!CAUTION]
 >
@@ -162,8 +160,8 @@ Connected Assets で [!DNL Dynamic Media] を使用するには、以下の手�
 
 [!DNL Assets] および [!DNL Sites] のデプロイメントで [!DNL Dynamic Media] を設定するには、以下を実行します。
 
-1. リモート [!DNL Assets]作成者のデプロイメントで[!DNL Dynamic Media]をグローバル設定として有効にして設定します。Dynamic Mediaを設定するには、[Dynamic Mediaの設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。
-リモート [!DNL Assets]のデプロイメントで、[!UICONTROL Dynamic Media同期モード &#x200B;]で、**[!UICONTROL デフォルトで有効]**&#x200B;を選択します。
+1. [!DNL Dynamic Media] を有効にして、リモート [!DNL Assets] オーサーデプロイメントでグローバル設定として設定します。 Dynamic Media を設定するには、[Dynamic Media の設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。
+リモート [!DNL Assets] デプロイメントの [!UICONTROL Dynamic Media 同期モード]で、「**[!UICONTROL デフォルトで有効]**」を選択します。
 
 1. [Sites デプロイメントと Assets デプロイメント間の接続の設定](#configure-a-connection-between-sites-and-assets-deployments)に説明されているとおりに、Connected Assets を設定します。 また、「**[!UICONTROL Dynamic Media Connected Assets 用の元のレンディションを取得]**」オプションを選択します。
 
@@ -177,7 +175,7 @@ Connected Assets で [!DNL Dynamic Media] を使用するには、以下の手�
 
 ## リモートアセットの使用 {#use-remote-assets}
 
-Web サイト作成者は、コンテンツファインダーを使用して DAM デプロイメントに接続します。 Web サイト作成者は、コンポーネント内のリモートアセットを参照、検索、ドラッグできます。 リモート DAM に対する認証を行うには、管理者から提供された資格情報（ある場合）を手元に用意します。
+Web サイト作成者は、コンテンツファインダーを使用して DAM デプロイメントに接続します。 Web サイト作成者は、リモートアセットを参照、検索し、コンポーネントにドラッグできます。 リモート DAM に対する認証を行うには、管理者から提供された資格情報（ある場合）を手元に用意します。
 
 作成者は、ローカル DAM デプロイメントで利用可能なアセットとリモート DAM デプロイメントで利用可能なアセットを、単一の web ページ内で使用できます。 コンテンツファインダーを使用すれば、ローカル DAM の検索とリモート DAM の検索を切り替えることができます。
 
@@ -327,7 +325,7 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 * [!DNL Sites] 作成者は全員、リモート DAM デプロイメントへのアクセス権限を持っていなくても、取得されたコピーに対する読み取り権限を持ちます。
 * 統合をカスタマイズするための API サポートはありません。
 * この機能は、リモートアセットのシームレスな検索と使用をサポートします。 多くのリモートアセットをローカルデプロイメントで一度に利用できるようにするには、リモートアセットの移行を検討します。 詳しくは、[アセット移行ガイド](assets-migration-guide.md)を参照してください。
-* リモートアセットを[!UICONTROL ページプロパティ]ユーザーインターフェイスのページサムネールとして使用することはできません。 Web ページのサムネールは、[!UICONTROL ページプロパティ]ユーザインターフェイスの[!UICONTROL サムネール]から、「[!UICONTROL 画像を選択]」をクリックして設定できます。
+* リモートアセットを[!UICONTROL ページプロパティ]ユーザーインターフェイスのページサムネールとして使用することはできません。 Web ページのサムネールは、[!UICONTROL ページプロパティ]ユーザーインターフェイスの[!UICONTROL サムネール]から、「[!UICONTROL 画像を選択]」をクリックして設定できます。
 
 ### セットアップとライセンス {#setup-licensing}
 
