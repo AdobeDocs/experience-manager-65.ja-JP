@@ -9,13 +9,11 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 87e11d37b9aa14ee3d4e47ae30eaa25f151a9b5b
+source-git-commit: b860fd19c0aeaa94fb0e04052dac70b0bc58b11b
 workflow-type: tm+mt
-source-wordcount: '4096'
-ht-degree: 82%
-
+source-wordcount: '4259'
+ht-degree: 84%
 ---
-
 
 
 # JEE 上の AEM Forms でサポートされているプラットフォーム {#supported-platforms-for-aem-forms-on-jee}
@@ -28,7 +26,7 @@ ht-degree: 82%
 
 アドビでは、JEE 版 AEM 6.5.23.0 Forms サービスパック 23（6.5.23.0）を含んだ[完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)のほか、パッチインストーラーをリリースしました。 完全なインストーラーは新しいプラットフォームをサポートするのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-新規インストールを実行する場合や、JEE 環境での AEM 6.5.23.0 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 18 Forms インストーラー（2023年8月31日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2019年4月8日（PT）にリリース）ではなく、[&#x200B; JEE 上の AEM 6.5.23.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)（2025年6月6日（PT）にリリース）を使用することをお勧めします。
+新規インストールを実行する場合や、JEE 環境での AEM 6.5.23.0 Forms の最新ソフトウェアを使用することを計画している場合は、AEM 6.5 18 Forms インストーラー（2023年8月31日（PT）にリリース）または AEM 6.5.12 Forms インストーラー（2019年4月8日（PT）にリリース）ではなく、[ JEE 上の AEM 6.5.23.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)（2025年6月6日（PT）にリリース）を使用することをお勧めします。
 
 
 </div>
@@ -106,8 +104,9 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 
 >[!NOTE]
 >
->AEM Formsのお客様が所有コストを削減し、デプロイメントアーキテクチャを簡素化し、開発スタックを最新化できるよう、Adobe Experience Manager Enterprise PlatformはアプリケーションサーバーベースのデプロイメントからスタンドアロンのOSGi ベースのデプロイメントに移行しています。Adobeでは、インフラストラクチャのコンポーネントの行列を減らして、AEM Forms JEE スタックを引き続きサポートします。
-><br>>6.5のリリースで、Adobeのお客様の中で使用率が最も低いインフラストラクチャ コンポーネントは、次のようにサポートされなくなりました。
+>AEM Forms をご利用のお客様がオーナーシップのコストを削減し、開発アーキテクチャを簡略化し、開発スタックを近代化できるようにするために、Adobe Experience Manager のエンタープライズプラットフォームはアプリケーションサーバーベースのデプロイメントから、スタンドアロンの OSGi ベースのデプロイメントに移行します。 対応するインフラストラクチャコンポーネントは削減されますが、アドビは引き続き AEM Forms JEE スタックをサポートします。
+><br>
+>6.5 のリリースでは、アドビのお客様の中で最も使用率の低い、以下のインフラストラクチャコンポーネントはサポートされなくなりました。
 >
 > - IBM® DB2® データベース
 > - IBM® AIX® および Sun Solaris™ オペレーティングシステム
@@ -237,8 +236,8 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 
 - IBM® DB2® は、新規インストールではサポートされていません。 AEM 6.5 Forms にアップグレードする既存のお客様の場合のみサポートされます。
 - MongoDB はサードパーティのソフトウェアで、AEM ライセンスパッケージには含まれていません。 詳しくは、[MongoDB ライセンスポリシー](https://www.mongodb.org/about/licensing/)を参照してください。
-- AEMのデプロイメントを最大限に活用するには、Adobeでは、プロフェッショナルサポートを利用するために、MongoDB エンタープライズ版のライセンスを取得することをお勧めします。
-@@ -242,187 +206,150 @@ Adobe Experience Manager Formsを実行するにはJava™ Virtual Machineが必要です。
+- AEM のデプロイメントを最大限に活用するには、プロフェッショナルサポートを受けられるように MongoDB Enterprise バージョンのライセンスを取得することをお勧めします。
+@@ -242,187 +206,150 @@ Adobe Experience Manager Forms を実行するには Java™ 仮想マシンが必要です。
 - Document Security モジュールは、コンテンツリポジトリを使用しません。 つまり、Document Security のみを使用していて、HTML Workspace、HTML5 フォーム、アダプティブフォームを使用する予定がない場合は、コンテンツリポジトリをインストールしないでください。
 - JEE 上の AEM Forms は、AEM リポジトリ（CRX リポジトリ）を永続化するための MySQL の使用をサポートしていません。
 
@@ -317,7 +316,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 
 >[!NOTE]
 >
->- AEM Forms サービスパック 6.5.25.0以降では、JBoss® Enterprise Application Platform （EAP） 7.4.23がサポートされています。 この[&#x200B; リンク &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)を使用すると、ソフトウェア配布ポータルからJBoss® EAP 7.4.23をダウンロードできます。
+>- AEM Forms サービスパック 6.5.25.0以降では、JBoss® Enterprise Application Platform （EAP） 7.4.23がサポートされています。 この[ リンク ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)を使用すると、ソフトウェア配布ポータルからJBoss® EAP 7.4.23をダウンロードできます。
 >- IBM® WebSphere® のクラスターは、Network Deployment エディションでのみサポートされます。
 
 ### サーバーオペレーティングシステム {#server-operating-systems}
@@ -383,6 +382,7 @@ Adobe Experience Manager Forms を使用するには、Java™ 仮想マシン�
 > - libXau.x86_64（1.0.8-2.1.el7）
 > - glibc-locale.x86_64（2.17 以降）
 > - OpenSSL 3（OS のデフォルトの場所で必要）。
+> - Red Hat® Enterprise Linux® 9では、32 ビット OpenOffice ビルドには`libcrypt.so.1`が必要ですが、これはデフォルトではインストールされていません。 見つからない場合、OpenOfficeはエラー`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`で開始できず、OpenOfficeからPDFへの変換が失敗します。 `libxcrypt-compat` パッケージ （32 ビット）をインストールして、ライブラリ `sudo dnf install -y libxcrypt-compat.i686`を提供します。
 
 OpenSSL 3 のインストールの場合：ライブラリ libcrypto.so.3 および libssl.so.3 は、環境変数 LD_LIBRARY_PATH によって表されるデフォルトのライブラリパスで使用できる必要があります。 それらが非標準の場所にインストールされている場合は、サーバーを起動する前に、このパスが LD_LIBRARY_PATH に追加されていることを確認してください。
 
@@ -420,8 +420,8 @@ AEM Forms on JEE サーバーの設定でプラットフォームを選択する
 1. AEM Forms on JEE では、SUSE® Linux® Enterprise Server 12 上での JBoss をサポートしていません。 SUSE® Linux® Enterprise Server 12 上では、IBM® WebSphere® のみがサポートされています。
 1. AEM Forms on JEE では、Oracle Java™ SE 以外の JBoss® を使用する JDK をサポートしていません。
 1. AEM Forms on JEE では、IBM® JDK 以外の IBM® WebSphere® を使用する JDK をサポートしていません。
-1. CRX-repositoryは、TarMK、MongoDB、リレーショナルデータベース（RDBMK）タイプの永続性をサポートしています。 アプリケーションサーバーとCRX リポジトリーの間に2つの異なるデータベースシステムを持つことはできません。ただし、JEE上のAEM Forms環境では、MongoMKをCRX リポジトリと共に使用し、サポートされているリレーショナルデータベースをアプリケーションサーバーと共に使用できます。
-@@ -432,12 +359,12 @@AEM Fを設定するプラットフォームを選択する際は、次の例外を考慮してください
+1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。 アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。 ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
+@@ -432,12 +359,12 @@ AEM を設定するプラットフォームを選択する際には、次の例外事項を考慮してください。
 1. 1.8.0_281 より後の JDK バージョンは、WebLogic サーバーではサポートされていません。 （FORMS-8498）
 1. JDK 11.0.20 では、AEM Forms on JEE インストーラーのインストールをサポートしていません。 AEM Forms on JEE インストーラーのインストールは、JDK 11.0.19 以前のバージョンのみがサポートしています。
 
@@ -433,8 +433,8 @@ AEM Forms on JEE サーバーの設定でプラットフォームを選択する
 
 - AEM Forms on JEE では、対応ソフトウェアの指定されたメジャーおよびマイナーバージョンに加えて、アップデート、パッチ、および修正パックをサポートしています。 ただし、次のメジャーバージョンまたはマイナーバージョンに対するアップデートは、特に記載がない限りサポートされていません。
 - クラスターベースのインストールは、TarMK 永続性をサポートしていません。 サポートされている永続性については、[AEM Forms のインストールでの永続性タイプの選択](/help/forms/using/choosing-persistence-type-for-aem-forms.md)を参照してください。
-- AEM Forms on JEEでは、Adobeの[&#x200B; サードパーティ製ソフトウェアサポートポリシー](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)に従って、様々なサードパーティ製ソフトウェアをサポートしています。
-@@ -449,274 +376,219 @@さらに、Adobe AEMのソフトウェアを選択する際には、次の点を考慮してください
+- AEM Forms on JEE では、弊社の[サードパーティソフトウェアサポートポリシー](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)に従い、様々なサードパーティソフトウェアをサポートしています。
+@@ -449,274 +376,219 @@さらに、Adobe AEM のソフトウェアを選択する際は、次の点を考慮してください。
 
 ### LDAP サーバー（オプション） {#ldap-servers-optional}
 
@@ -810,7 +810,7 @@ JEE 上の AEM Forms のサードパーティ参照プラットフォームは�
 
 サードパーティパッチの追加情報は、アドビのエンタープライズサポートサイトで、ご使用の製品に関するナレッジベース記事を検索することでも確認できます。
 
-サポートされている形式またはプラットフォームバージョンに関連する質問については、[AEM Forms サポート &#x200B;](https://business.adobe.com/in/support/main.html)にお問い合わせください
+サポートされている形式またはプラットフォームバージョンに関連する質問については、[AEM Forms サポート ](https://business.adobe.com/in/support/main.html)にお問い合わせください
 
 <!--
 
@@ -821,7 +821,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.18.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release on June 2, 2022:
 - Microsoft&reg; SharePoint 2016
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -892,7 +892,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Added support**: [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platform:
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/jp/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
