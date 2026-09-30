@@ -28,7 +28,7 @@ Tallyは、メンバーが特定の製品やサービスをどのように評価
 
 AEM 6.1以降、ポーリングコンポーネントは使用できなくなりました。
 
-[ レビュー](reviews-basics.md)は、[ コメント ](essentials-comments.md)と[評価](rating-basics.md)のハイブリッドであるSCF コンポーネントです。
+[&#x200B; レビュー](reviews-basics.md)は、[&#x200B; コメント &#x200B;](essentials-comments.md)と[評価](rating-basics.md)のハイブリッドであるSCF コンポーネントです。
 
 ## クライアントサイドの基本 {#essentials-for-client-side}
 
@@ -45,7 +45,7 @@ AEM 6.1以降、ポーリングコンポーネントは使用できなくなり�
 ### UGC （投稿済み集計）へのアクセス {#accessing-posted-tallies-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -53,7 +53,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

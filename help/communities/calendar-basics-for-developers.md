@@ -62,7 +62,7 @@ ht-degree: 4%
 
 ### カレンダー機能 {#calendar-function}
 
-[ カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[特権メンバーユーザーグループ ](users.md#privileged-members-group)の識別をサポートしています。
+[&#x200B; カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[特権メンバーユーザーグループ &#x200B;](users.md#privileged-members-group)の識別をサポートしています。
 
 ### カレンダー投稿へのアクセス（UGC） {#accessing-calendar-posts-ugc}
 
@@ -72,7 +72,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング

@@ -29,7 +29,7 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 
 ## クライアントサイドの基本 {#essentials-for-client-side}
 
-ブログ機能は、[ ブログ関数](/help/communities/functions.md#blog-function)を追加するか、作成者編集モードでページにコンポーネントを追加することで使用できる2つの主要コンポーネントで構成されています。
+ブログ機能は、[&#x200B; ブログ関数](/help/communities/functions.md#blog-function)を追加するか、作成者編集モードでページにコンポーネントを追加することで使用できる2つの主要コンポーネントで構成されています。
 
 ### ブログ {#blog}
 
@@ -70,7 +70,7 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 | [**clientllibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **プロパティ** | [ ブログ機能](/help/communities/blog-feature.md)を参照 |
+| **プロパティ** | [&#x200B; ブログ機能](/help/communities/blog-feature.md)を参照 |
 
 * [クライアントサイドのカスタマイズ](/help/communities/client-customize.md)
 
@@ -84,12 +84,12 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 
 ### ブログ機能 {#blog-function}
 
-[ ブログ関数](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造には、`Blog`および`Blog Sidebar`個のコンポーネントが設定されています。 ブログ関数は、[特権メンバーユーザーグループ ](/help/communities/users.md#privileged-members-group)の識別をサポートしています。
+[&#x200B; ブログ関数](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造には、`Blog`および`Blog Sidebar`個のコンポーネントが設定されています。 ブログ関数は、[特権メンバーユーザーグループ &#x200B;](/help/communities/users.md#privileged-members-group)の識別をサポートしています。
 
 ### ブログエントリ（UGC）へのアクセス {#accessing-blog-entries-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](/help/communities/working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -97,10 +97,10 @@ AEM 6.1 Communitiesでは、UGC用の[common store](/help/communities/working-wi
 
 を参照：
 
-* [ ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要。
+* [&#x200B; ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](/help/communities/srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP](/help/communities/accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
-* [SocialUtils リファクタリング ](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SocialUtils リファクタリング &#x200B;](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
 
 ## プライマリ発行者 {#primary-publisher}
 
@@ -118,4 +118,4 @@ AEM 6.2以降、以前は手動で行う必要があった変更は、デフォ�
 
 リッチメディアは、`Embed Media from External Sites` アイコンを選択してブログ記事に埋め込まれます。
 
-![ メディア ](assets/media-icon.png)
+![&#x200B; メディア &#x200B;](assets/media-icon.png)

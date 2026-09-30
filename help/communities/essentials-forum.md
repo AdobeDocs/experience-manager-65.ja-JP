@@ -61,12 +61,12 @@ ht-degree: 3%
 
 ### フォーラム機能 {#forum-function}
 
-[ フォーラム関数](functions.md#forum-function)を含むコミュニティサイト構造には、設定済みの`forum` コンポーネントと、モデレーション、タグ付け、翻訳に影響を与える設定が含まれています。
+[&#x200B; フォーラム関数](functions.md#forum-function)を含むコミュニティサイト構造には、設定済みの`forum` コンポーネントと、モデレーション、タグ付け、翻訳に影響を与える設定が含まれています。
 
 ### フォーラム投稿へのアクセス（UGC） {#accessing-forum-posts-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 Adobe Experience Manager 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -74,7 +74,7 @@ Adobe Experience Manager 6.1 Communitiesでは、UGC用の[common store](working
 
 以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

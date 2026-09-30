@@ -57,7 +57,7 @@ Web サイトコンテンツパッケージ
 
 ## Adobe Experience Manager のインストール {#installing-adobe-experience-manager}
 
-Web サイトを開発するためのAEM インスタンスをインストールするには、オーサーインスタンスとパブリッシュインスタンス ](/help/sites-deploying/deploy.md#author-and-publish-installs)を使用して[ デプロイメント環境を設定する手順に従うか、[汎用インストール ](/help/sites-deploying/deploy.md#default-local-install)を実行します。 汎用インストールでは、AEM クイックスタート JAR ファイルをダウンロードし、license.properties ファイルをJAR ファイルと同じディレクトリに配置し、JAR ファイルをダブルクリックします。
+Web サイトを開発するためのAEM インスタンスをインストールするには、オーサーインスタンスとパブリッシュインスタンス [&#128279;](/help/sites-deploying/deploy.md#author-and-publish-installs)を使用して デプロイメント環境を設定する手順に従うか、[汎用インストール &#x200B;](/help/sites-deploying/deploy.md#default-local-install)を実行します。 汎用インストールでは、AEM クイックスタート JAR ファイルをダウンロードし、license.properties ファイルをJAR ファイルと同じディレクトリに配置し、JAR ファイルをダブルクリックします。
 
 AEM をインストールしたら、ようこそページで CRXDE Lite のリンクをクリックして CRXDE Lite 開発環境にアクセスします。
 
@@ -1287,7 +1287,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 1. 次のノードをコピーし、apps/mywebsite/components/search ノードに貼り付けます。
 
    * `/libs/foundation/components/search/dialog`
-   * `` `/libs/foundation/components/search/i18n`
+   * &grave;&grave; `/libs/foundation/components/search/i18n`
 
    * `/libs/foundation/components/search/icon.png`
 
@@ -1528,6 +1528,6 @@ contentpage ページの左側のセクションに検索入力ボックスを�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで、** Products** ページをリロードします。 ページ全体は次のようになります。
+1. ブラウザーで、**&#x200B; Products** ページをリロードします。 ページ全体は次のようになります。
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)

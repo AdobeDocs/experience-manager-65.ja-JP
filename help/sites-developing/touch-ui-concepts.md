@@ -109,7 +109,7 @@ Granite エンジニアリングプラットフォームには、基盤 UI フ�
 ![chlimage_1-81](assets/chlimage_1-81.png)
 GraniteUI.pdf
 
-[ ファイルを取得](assets/graniteui.pdf)
+[&#x200B; ファイルを取得](assets/graniteui.pdf)
 Granite UI:
 
 * Sling の RESTful アーキテクチャを使用
@@ -243,14 +243,14 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete``cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete`&#x200B;`cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **ノードタイプ** | **Granite UI のリソースタイプ** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container`&#x200B;`granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI 管理コンポーネント {#granite-ui-administration-components}
@@ -275,7 +275,7 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 
 CoralUI.pdf
 
-[ ファイルを取得](assets/coralui.pdf)
+[&#x200B; ファイルを取得](assets/coralui.pdf)
 Coral UI （CUI）は、複数の製品間でユーザーエクスペリエンスの一貫性を保つように設計された、タッチ対応UI用のAdobeのビジュアルスタイルの実装です。 Coral UI は、オーサリング環境で使用されるビジュアルスタイルを採用するのに必要なものをすべて備えています。
 
 >[!CAUTION]

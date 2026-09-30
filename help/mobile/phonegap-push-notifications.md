@@ -18,7 +18,7 @@ ht-degree: 1%
 
 {{ue-over-mobile}}
 
-重要な通知をAdobe Experience Manager（AEM）モバイルアプリのユーザーにすばやく通知できるようにすることは、モバイルアプリとそのマーケティングキャンペーンの価値にとって非常に重要です。 ここでは、アプリがプッシュ通知を受信できるようにするために実行する必要がある手順について説明します。 また、AEM Mobileからスマートフォンにインストールされたアプリにプッシュを設定して送信する方法についても説明します。 また、この節では、プッシュ通知に[ ディープリンク ](#deeplinking)機能を設定する方法についても説明します。
+重要な通知をAdobe Experience Manager（AEM）モバイルアプリのユーザーにすばやく通知できるようにすることは、モバイルアプリとそのマーケティングキャンペーンの価値にとって非常に重要です。 ここでは、アプリがプッシュ通知を受信できるようにするために実行する必要がある手順について説明します。 また、AEM Mobileからスマートフォンにインストールされたアプリにプッシュを設定して送信する方法についても説明します。 また、この節では、プッシュ通知に[&#x200B; ディープリンク &#x200B;](#deeplinking)機能を設定する方法についても説明します。
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Google ページ [こちら](https://developer.android.com/google/gcm/index.html
 
 次の手順では、GCM API キーを作成する別の方法を示します。
 
-1. Googleにログインし、[Google開発者向けページ ](https://developers.google.com/mobile/add?platform=android&cntapi=gcm)に移動します。
+1. Googleにログインし、[Google開発者向けページ &#x200B;](https://developers.google.com/mobile/add?platform=android&cntapi=gcm)に移動します。
 1. リストからアプリを選択します（またはアプリを作成します）。
 1. Android™ パッケージ名の下に、アプリ ID （`com.adobe.cq.mobile.weretail.outdoorsapp`）を入力します。 （それが機能しない場合は、「test.test」でもう一度試してください）。
 1. 「**続行してサービスを選択して設定する**」をクリックします
@@ -252,7 +252,7 @@ XCode 8.1では、プッシュ通知を使用する前に、プロジェクト�
 
 #### Android™ {#android}
 
-CLIを使用してAndroid™携帯電話にアプリをインストールするには（以下を参照：**手順6 - アプリをビルドしてデプロイ**）、まず携帯電話を「デベロッパーモード」にする必要があります。 この方法について詳しくは、[ オンデバイス開発者オプションの有効化](https://developer.android.com/tools/device.html#developer-device-options)を参照してください。
+CLIを使用してAndroid™携帯電話にアプリをインストールするには（以下を参照：**手順6 - アプリをビルドしてデプロイ**）、まず携帯電話を「デベロッパーモード」にする必要があります。 この方法について詳しくは、[&#x200B; オンデバイス開発者オプションの有効化](https://developer.android.com/tools/device.html#developer-device-options)を参照してください。
 
 ### 手順5:AEM アプリケーションでのプッシュの設定 {#step-configure-push-on-aem-apps}
 

@@ -162,7 +162,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 >[!NOTE]
 >
->`Resource` 引数には、`null` `Resources` オブジェクトなどの `Node` オブジェクトに適応しない [`NonExistingResource` または ](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) オブジェクトを指定できます。
+>`Resource` 引数には、`null` `Resources` オブジェクトなどの `Node` オブジェクトに適応しない [`NonExistingResource` または &#x200B;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) オブジェクトを指定できます。
 
 ## 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
 

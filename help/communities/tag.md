@@ -20,13 +20,13 @@ AEM Communities コンポーネントでタグ付けが有効になっている�
 
 パブリッシュ環境で適用されるタグの基礎となるインフラストラクチャは、ページやアセットなど、オーサー環境でコンテンツに適用されるタグと同じです。
 
-* タグの作成と管理について詳しくは、[ タグの管理](../../help/sites-administering/tags.md)および[ ユーザー生成コンテンツのタグ付け](tag-ugc.md) （UGC）を参照してください。
+* タグの作成と管理について詳しくは、[&#x200B; タグの管理](../../help/sites-administering/tags.md)および[&#x200B; ユーザー生成コンテンツのタグ付け](tag-ugc.md) （UGC）を参照してください。
 
-* [ タグ付けフレームワーク ](../../help/sites-developing/framework.md)と、[ カスタムアプリケーション ](../../help/sites-developing/building.md)でのタグの追加と拡張について詳しくは、[開発者向けタグ付け](../../help/sites-developing/tags.md)を参照してください。
+* [&#x200B; タグ付けフレームワーク &#x200B;](../../help/sites-developing/framework.md)と、[&#x200B; カスタムアプリケーション &#x200B;](../../help/sites-developing/building.md)でのタグの追加と拡張について詳しくは、[開発者向けタグ付け](../../help/sites-developing/tags.md)を参照してください。
 
-* パブリッシュ環境でUGCに適用されたタグをハイライト表示するために`social tag cloud` コンポーネントをページに追加する方法については、[ ソーシャルタグクラウドの使用](tagcloud.md)を参照してください。
+* パブリッシュ環境でUGCに適用されたタグをハイライト表示するために`social tag cloud` コンポーネントをページに追加する方法については、[&#x200B; ソーシャルタグクラウドの使用](tagcloud.md)を参照してください。
 
-UGCのタグ付けは、[ コミュニティサイト ](sites-console.md#tagging)または次のいずれかの機能を設定する際に有効にすることができます。
+UGCのタグ付けは、[&#x200B; コミュニティサイト &#x200B;](sites-console.md#tagging)または次のいずれかの機能を設定する際に有効にすることができます。
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -79,6 +79,6 @@ UGCのタグ付けは、[ コミュニティサイト ](sites-console.md#tagging
 
 ## タグ検索 {#tag-searching}
 
-[機能パック 1](deploy-communities.md#latestfeaturepack) （FP1）の時点では、[ タグタイトル ](../../help/sites-developing/framework.md#tag-characteristics)を使用してタグ検索が実行されています。
+[機能パック 1](deploy-communities.md#latestfeaturepack) （FP1）の時点では、[&#x200B; タグタイトル &#x200B;](../../help/sites-developing/framework.md#tag-characteristics)を使用してタグ検索が実行されています。
 
-FP1以前は、[ タグ ID](../../help/sites-developing/framework.md#tagid)を使用して検索を実行していました。
+FP1以前は、[&#x200B; タグ ID](../../help/sites-developing/framework.md#tagid)を使用して検索を実行していました。

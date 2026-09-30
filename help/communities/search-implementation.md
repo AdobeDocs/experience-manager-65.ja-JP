@@ -34,7 +34,7 @@ UGCを作成または管理するカスタムコンポーネントを作成す�
 
 ## セキュリティ ノードとシャドウ ノード {#security-and-shadow-nodes}
 
-カスタムコンポーネントの場合は、[SocialResourceUtilities](socialutils.md#socialresourceutilities-package) メソッドを使用する必要があります。 UGCを作成および検索するユーティリティ メソッドは、必要な[ シャドウ ノード ](srp.md#about-shadow-nodes-in-jcr)を確立し、メンバーがリクエストに対する正しい権限を持っていることを確認します。
+カスタムコンポーネントの場合は、[SocialResourceUtilities](socialutils.md#socialresourceutilities-package) メソッドを使用する必要があります。 UGCを作成および検索するユーティリティ メソッドは、必要な[&#x200B; シャドウ ノード &#x200B;](srp.md#about-shadow-nodes-in-jcr)を確立し、メンバーがリクエストに対する正しい権限を持っていることを確認します。
 
 SRP ユーティリティを通じて管理されないものは、モデレーションに関連するプロパティです。
 
@@ -42,11 +42,11 @@ UGCおよびACL シャドウ ノードへのアクセスに使用されるユー
 
 ## UGC検索API {#ugc-search-api}
 
-[UGC共通ストア ](working-with-srp.md)は、様々なストレージリソースプロバイダー（SRP）のいずれかによって提供され、それぞれが異なるネイティブクエリ言語を持っている可能性があります。 したがって、選択したSRPに関係なく、カスタムコードでは、選択したSRPに適したクエリ言語を呼び出す[UGC API パッケージ ](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) （*com.adobe.cq.social.ugc.api*）のメソッドを使用する必要があります。
+[UGC共通ストア &#x200B;](working-with-srp.md)は、様々なストレージリソースプロバイダー（SRP）のいずれかによって提供され、それぞれが異なるネイティブクエリ言語を持っている可能性があります。 したがって、選択したSRPに関係なく、カスタムコードでは、選択したSRPに適したクエリ言語を呼び出す[UGC API パッケージ &#x200B;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) （*com.adobe.cq.social.ugc.api*）のメソッドを使用する必要があります。
 
 ### ASRP Searches {#asrp-searches}
 
-[ASRP](asrp.md)の場合、UGCはAdobe クラウドに保存されます。 UGCはCRXでは表示されませんが、[ モデレーション ](moderate-ugc.md)はオーサー環境とパブリッシュ環境の両方から利用できます。 [UGC検索API](#ugc-search-api)の使用は、他のSRPと同じようにASRPで機能します。
+[ASRP](asrp.md)の場合、UGCはAdobe クラウドに保存されます。 UGCはCRXでは表示されませんが、[&#x200B; モデレーション &#x200B;](moderate-ugc.md)はオーサー環境とパブリッシュ環境の両方から利用できます。 [UGC検索API](#ugc-search-api)の使用は、他のSRPと同じようにASRPで機能します。
 
 現在、ASRP検索を管理するためのツールは存在しません。
 
@@ -54,7 +54,7 @@ UGCおよびACL シャドウ ノードへのアクセスに使用されるユー
 
 ### MSRP検索 {#msrp-searches}
 
-[MSRP](msrp.md)の場合、UGCは検索にSolrを使用するように設定されたMongoDBに保存されます。 UGCはCRXでは表示されませんが、[ モデレーション ](moderate-ugc.md)はオーサー環境とパブリッシュ環境の両方から利用できます。
+[MSRP](msrp.md)の場合、UGCは検索にSolrを使用するように設定されたMongoDBに保存されます。 UGCはCRXでは表示されませんが、[&#x200B; モデレーション &#x200B;](moderate-ugc.md)はオーサー環境とパブリッシュ環境の両方から利用できます。
 
 MSRPとSolrについて：
 
@@ -71,9 +71,9 @@ MSRPとSolrについて：
 
 [JSRP](jsrp.md)の場合、UGCは[Oak](../../help/sites-deploying/platform.md)に保存され、入力されたAEM オーサーインスタンスまたはパブリッシュインスタンスのリポジトリでのみ表示されます。
 
-UGCは通常、パブリッシュ環境で入力されるので、マルチパブリッシャーの実稼動システムの場合は、入力されたコンテンツがすべてのパブリッシャーから表示されるように、パブリッシュファームではなく[ パブリッシュクラスター](topologies.md)を設定する必要があります。
+UGCは通常、パブリッシュ環境で入力されるので、マルチパブリッシャーの実稼動システムの場合は、入力されたコンテンツがすべてのパブリッシャーから表示されるように、パブリッシュファームではなく[&#x200B; パブリッシュクラスター](topologies.md)を設定する必要があります。
 
-JSRPの場合、パブリッシュ環境で入力されたUGCは、オーサー環境では表示されません。 したがって、すべての[ モデレーション ](moderate-ugc.md) タスクはパブリッシュ環境で実行されます。
+JSRPの場合、パブリッシュ環境で入力されたUGCは、オーサー環境では表示されません。 したがって、すべての[&#x200B; モデレーション &#x200B;](moderate-ugc.md) タスクはパブリッシュ環境で実行されます。
 
 カスタム検索機能では、[UGC検索API](#ugc-search-api)を使用する必要があります。
 
@@ -163,7 +163,7 @@ Solrは、スキーマを使用するクエリ言語の例です。
 
 ## フィルター {#filters}
 
-[ コメントシステム ](essentials-comments.md)を含むコンポーネントは、エンドポイントに加えてフィルターパラメーターをサポートします。
+[&#x200B; コメントシステム &#x200B;](essentials-comments.md)を含むコンポーネントは、エンドポイントに加えてフィルターパラメーターをサポートします。
 
 ANDおよびOR ロジックのフィルター構文は、次のように表されます（URL エンコード前に示します）。
 
@@ -175,7 +175,7 @@ ANDおよびOR ロジックのフィルター構文は、次のように表さ�
 
   * `filter = name eq 'Jackson'&filter=message eq 'testing'`
 
-[検索コンポーネント ](search.md)のデフォルトの実装では、この構文が使用されます。この構文は、[ コミュニティコンポーネントガイド ](components-guide.md)の検索結果ページを開くURLに表示されます。 実験するには、[http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html)を参照してください。
+[検索コンポーネント &#x200B;](search.md)のデフォルトの実装では、この構文が使用されます。この構文は、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)の検索結果ページを開くURLに表示されます。 実験するには、[http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html)を参照してください。
 
 フィルター演算子は次のとおりです。
 
@@ -227,8 +227,8 @@ Solrへのクエリは`sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btit
 
 ## 関連リソース {#related-resources}
 
-* [ コミュニティコンテンツストレージ ](working-with-srp.md) - UGC共通ストアで利用可能なSRPの選択肢について説明します。
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。
-* [検索および検索結果コンポーネント ](search.md) - UGC検索機能をテンプレートに追加します。
+* [&#x200B; コミュニティコンテンツストレージ &#x200B;](working-with-srp.md) - UGC共通ストアで利用可能なSRPの選択肢について説明します。
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。
+* [検索および検索結果コンポーネント &#x200B;](search.md) - UGC検索機能をテンプレートに追加します。

@@ -61,12 +61,12 @@ ht-degree: 4%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-[ ファイルライブラリ関数](functions.md#file-library-function)を含むコミュニティサイト構造には、設定済みの`file library` コンポーネントが含まれています。
+[&#x200B; ファイルライブラリ関数](functions.md#file-library-function)を含むコミュニティサイト構造には、設定済みの`file library` コンポーネントが含まれています。
 
 ### ファイルライブラリ（UGC）に投稿されたコメントへのアクセス {#accessing-comments-posted-for-file-libraries-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -74,7 +74,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

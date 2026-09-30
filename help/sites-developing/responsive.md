@@ -248,7 +248,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 ### JavaScript を使用したメディアクエリの評価 {#evaluating-media-queries-using-javascript}
 
-W3Cが定義する[MediaQueryList インターフェイス ](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
+W3Cが定義する[MediaQueryList インターフェイス &#x200B;](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
 
 * MediaQueryList インターフェイスを実装するブラウザーは `window.matchMedia()` 関数をサポートします。 この関数は、指定された文字列に対してメディアクエリをテストします。 この関数は、クエリ結果へのアクセスを提供する `MediaQueryList` オブジェクトを返します。
 
