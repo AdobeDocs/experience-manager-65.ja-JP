@@ -39,13 +39,13 @@ Client Context は、現在のページと訪問者に関する特定の情報�
 ![ClientContext ウィンドウの編集アイコン、読み込みアイコン、リセットアイコン](do-not-localize/clientcontext_icons.png)
 
 * **編集**
-新しいページが開き、[ プロファイルプロパティの編集、追加、または削除が可能になります](#editingprofiledetails)。
+新しいページが開き、[&#x200B; プロファイルプロパティの編集、追加、または削除が可能になります](#editingprofiledetails)。
 
 * **ロード**
-プロファイルのリストから[選択して、テストするプロファイル ](#loading-a-new-user-profile)を読み込むことができます。
+プロファイルのリストから[選択して、テストするプロファイル &#x200B;](#loading-a-new-user-profile)を読み込むことができます。
 
 * **リセット**
-プロファイル ](#resetting-the-profile-to-the-current-user)を現在のユーザーのプロファイルに[ リセットできます。
+プロファイル [&#128279;](#resetting-the-profile-to-the-current-user)を現在のユーザーのプロファイルに リセットできます。
 
 ## 使用できる ClientContext のコンポーネント {#available-client-context-components}
 

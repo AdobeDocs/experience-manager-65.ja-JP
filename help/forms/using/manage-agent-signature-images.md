@@ -66,7 +66,7 @@ agentFolder DDE の値は、Correspondence Management 設定プロパティに�
 
       プロパティが存在しない場合は、まずjcr:contentという名前のプロパティを作成します。
 
-      ![jcr:content プロパティ ](assets/3_jcrcontentntresource.png)
+      ![jcr:content プロパティ &#x200B;](assets/3_jcrcontentntresource.png)
 
       jcr:contentのサブプロパティの中には、jcr:dataがあり、グレー表示されています。 jcr:dataをダブルクリックします。 プロパティが編集可能になり、「ファイルの選択」ボタンがエントリに表示されます。 「**ファイルを選択**」をクリックし、ロゴとして使用する画像ファイルを選択します。 画像ファイルには、拡張子を付ける必要はありません。
 
