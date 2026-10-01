@@ -9,13 +9,11 @@ exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3364'
-ht-degree: 91%
-
+source-wordcount: '3377'
+ht-degree: 89%
 ---
-
 # AEM の中心概念 {#aem-core-concepts}
 
 >[!NOTE]
@@ -28,10 +26,10 @@ AEM での開発には、以下のスキルが必要です。
 
 * 以下を含む web アプリケーション技術の基本知識
 
-   * リクエスト - 応答（XMLHttpRequest／XMLHttpResponse）のサイクル
-   * HTML
-   * CSS
-   * JavaScript
+  * リクエスト - 応答（XMLHttpRequest／XMLHttpResponse）のサイクル
+  * HTML
+  * CSS
+  * JavaScript
 
 * Content Explorer を含む Experience Server（CRX）の実務知識
 * クラシック UI で開発する場合は、JSP の簡単な例を理解および変更できる能力を含む、JSP（JavaServer Pages）の基本知識も必要です。
@@ -40,11 +38,11 @@ AEM での開発には、以下のスキルが必要です。
 
 ## Java™ コンテンツリポジトリ {#java-content-repository}
 
-Java™ コンテンツリポジトリ（JCR）の規格である [JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html) では、コンテンツリポジトリ内で、任意の精度レベルでコンテンツに双方向アクセスするための、ベンダーにも実装にも依存しない方法が指定されています。
+Java™ コンテンツリポジトリ（JCR）の規格である [JSR 283](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/index.html) では、コンテンツリポジトリ内で、任意の精度レベルでコンテンツに双方向アクセスするための、ベンダーにも実装にも依存しない方法が指定されています。
 
 仕様を主導しているのは、Adobe Research（スイス）AG です。
 
-[JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ javax.jcr.&amp;ast；は、リポジトリコンテンツへの直接アクセスと操作に使用されます。
+[JCR API 2.0](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ javax.jcr.&amp;ast；は、リポジトリコンテンツへの直接アクセスと操作に使用されます。
 
 ## Experience Server（CRX）と Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -86,8 +84,8 @@ Sling は&#x200B;*コンテンツ中心型*&#x200B;です。 （HTTP）リクエ
 * 表面上だけでなく、RESTful であり、リソースや表示域をサーバー内で正しくモデリングされます。
 * 1 つ以上のデータモデルを削除
 
-   * 以前に必要だったもの：URL 構造、ビジネスオブジェクト、DB スキーマ
-   * これは現在、次のように短縮されています：URL = リソース = JCR 構造
+  * 以前に必要だったもの：URL 構造、ビジネスオブジェクト、DB スキーマ
+  * これは現在、次のように短縮されています：URL = リソース = JCR 構造
 
 ### URL の分解 {#url-decomposition}
 
@@ -160,11 +158,11 @@ Sling のスクリプトはすべて、`/apps` または `/libs` のサブフォ
 * メソッド（GET、POST）が必要な場合は、HTTP の仕様に従って、jobs.POST.esp のように大文字で指定します（以下を参照）。
 * 次のような様々なスクリプトエンジンがサポートされています。
 
-   * HTL（HTML テンプレート言語 - Adobe Experience Manager で優先および推奨される HTML 用のサーバーサイドのテンプレートシステム）：`.html`
-   * ECMAScript（JavaScript）ページ（サーバーサイド実行）：`.esp, .ecma`
-   * Java™ サーバーページ（サーバーサイド実行）：`.jsp`
-   * Java™ サーブレットコンパイラー（サーバーサイド実行）：`.java`
-   * JavaScript テンプレート（クライアント側実行）：`.jst`
+  * HTL（HTML テンプレート言語 - Adobe Experience Manager で優先および推奨される HTML 用のサーバーサイドのテンプレートシステム）：`.html`
+  * ECMAScript（JavaScript）ページ（サーバーサイド実行）：`.esp, .ecma`
+  * Java™ サーバーページ（サーバーサイド実行）：`.jsp`
+  * Java™ サーブレットコンパイラー（サーバーサイド実行）：`.java`
+  * JavaScript テンプレート（クライアント側実行）：`.jst`
 
 AEM の特定のインスタンスでサポートされているスクリプトエンジンのリストは、Felix Management Console（`http://<host>:<port>/system/console/slingscripting`）にあります。
 
@@ -198,24 +196,25 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 * Sling:resourceTypeが定義されていない場合は、次の操作を行います。
 
-   * コンテンツパスは、適切なスクリプトを検索するために使用されます（パスに基づいた ResourceTypeProvider がアクティブな場合）。
+  * コンテンツパスは、適切なスクリプトを検索するために使用されます（パスに基づいた ResourceTypeProvider がアクティブな場合）。
 
-     例えば、`../content/corporate/jobs/developer.html` のスクリプトは、`/apps/content/corporate/jobs/` で検索を生成します。
+    例えば、`../content/corporate/jobs/developer.html` のスクリプトは、`/apps/content/corporate/jobs/` で検索を生成します。
 
-   * プライマリノードタイプが使用されます。
+  * プライマリノードタイプが使用されます。
 
 * スクリプトが見つからない場合は、デフォルトのスクリプトが使用されます。
 
   デフォルトのレンディションはプレーンテキスト（.txt）、HTML（.html）および JSON（.json）としてサポートされています。これらのレンディションでは、ノードのプロパティ（適切な形式）がリストされます。 拡張子 .res のデフォルトのレンディション、またはリクエスト拡張子のないリクエストは、（可能な場合は）リソースをスプールします。
 * HTTP エラー処理（コード 403 または 404）の場合、Sling は次のいずれかの場所でスクリプトを検索します。
 
-   * それぞれ、[カスタマイズされたスクリプト](/help/sites-developing/customizing-errorhandler-pages.md)の場所 /apps/sling/servlet/errorhandler
-   * または標準スクリプト /libs/sling/servlet/errorhandler/403.esp または 404.esp の場所です。
+  * それぞれ、[カスタマイズされたスクリプト](/help/sites-developing/customizing-errorhandler-pages.md)の場所 /apps/sling/servlet/errorhandler
+  * または標準スクリプト /libs/sling/servlet/errorhandler/403.esp または 404.esp の場所です。
 
 特定のリクエストに複数のスクリプトが適用される場合、最適な一致を持つスクリプトが選択されます。 一致が具体的であればあるほど良くなります。つまり、リクエストの拡張子やメソッド名の一致に関係なく、セレクターの一致が多いほど良くなります。
 
 例えば、次のリソースにアクセスするためのリクエストについて考えます。
-`/content/corporate/jobs/developer.print.a4.html` リソースのタイプは次のとおりとします。
+`/content/corporate/jobs/developer.print.a4.html`
+タイプの
 `sling:resourceType="hr/jobs"`
 
 次のスクリプトのリストが正しい場所にあると仮定します。
@@ -242,30 +241,30 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 * ／
 
-   * a
-   * b
+  * a
+  * b
 
-      * sling:resourceSuperType = a
+    * sling:resourceSuperType = a
 
-   * c
+  * c
 
-      * sling:resourceSuperType = b
+    * sling:resourceSuperType = b
 
-   * x
+  * x
 
-      * sling:resourceType = c
+    * sling:resourceType = c
 
-   * y
+  * y
 
-      * sling:resourceType = c
-      * sling:resourceSuperType = a
+    * sling:resourceType = c
+    * sling:resourceSuperType = a
 
 タイプの階層は
 
 * `/x`
-   * `[ c, b, a, <default>]` です
+  * `[ c, b, a, <default>]` です
 * 一方、`/y` では
-   * 階層は `[ c, a, <default>]` です
+  * 階層は `[ c, a, <default>]` です
 
 これは、`/y` には `sling:resourceSuperType` プロパティがあるのに対して、`/x` にはなく、スーパータイプがリソースタイプから継承されているからです。
 
@@ -277,8 +276,8 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 * GET 以外の HTTP メソッドの自動処理。これには以下が含まれます。
 
-   * Sling のデフォルトの実装で扱う POST、PUT、DELETE
-   * sling:resourceTypeの場所にある`POST.jsp` スクリプト
+  * Sling のデフォルトの実装で扱う POST、PUT、DELETE
+  * sling:resourceTypeの場所にある`POST.jsp` スクリプト
 
 * コードアーキテクチャに必要なクリーン性や明確な構造が失われます。これは大規模な開発では最も重要です。
 
@@ -335,7 +334,7 @@ OSGi は、モジュラー型アプリケーションとライブラリを開発
 
 **項目** - ノードまたはプロパティのアイテム。
 
-Item オブジェクトの操作方法について詳しくは、javax.jcr Interface Item の [Java™ docs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) を参照してください。
+Item オブジェクトの操作方法について詳しくは、javax.jcr Interface Item の [Java™ docs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) を参照してください。
 
 **ノード（およびそのプロパティ）** - ノードとそのプロパティは、JCR API 2.0 仕様（JSR 283）で定義されています。 コンテンツ、オブジェクト定義、レンダリングスクリプトおよびその他のデータを格納します。
 
@@ -351,7 +350,7 @@ Item オブジェクトの操作方法について詳しくは、javax.jcr Inter
 
 currentNode は現在のノードオブジェクトです。
 
-Node オブジェクトの操作方法について詳しくは、[Java™ docs](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) を参照してください。
+Node オブジェクトの操作方法について詳しくは、[Java™ docs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) を参照してください。
 
 **Widget** - AEMでは、すべてのユーザー入力はウィジェットで管理されます。 多くの場合、コンテンツの一部の編集を制御するために使用されます。
 
@@ -390,7 +389,7 @@ AEM 内では、多くの場合、コンポーネントを使用してリソー�
 
 S`tring pageName = currentPage.getName();`
 
-TcurrentPage は現在のページオブジェクトです。 Page オブジェクトの操作方法について詳しくは、[Java™ docs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html) を参照してください。
+TcurrentPage は現在のページオブジェクトです。 Page オブジェクトの操作方法について詳しくは、[Java™ docs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/Page.html) を参照してください。
 
 **ページマネージャー** - ページマネージャーは、ページレベルの操作方法を提供するインターフェイスです。
 
@@ -398,7 +397,7 @@ TcurrentPage は現在のページオブジェクトです。 Page オブジェ�
 
 Page myPage = pageManager.getContainingPage(myResource);
 
-pageManager はページマネージャーオブジェクトで、myResource はリソースオブジェクトです。 ページマネージャーが提供するメソッドについて詳しくは、[Java™ docs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html) を参照してください。
+pageManager はページマネージャーオブジェクトで、myResource はリソースオブジェクトです。 ページマネージャーが提供するメソッドについて詳しくは、[Java™ docs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/PageManager.html) を参照してください。
 
 ## リポジトリ内の構造 {#structure-within-the-repository}
 
@@ -469,9 +468,9 @@ FileVault は、JCR リポジトリにファイルシステムマッピングと
 * Web サイトの様々な言語バージョンを効率的に管理します。
 * ソースサイトに基づいて 1 つ以上のサイトを自動的に更新します。
 
-   * 基本構造を共通化し、複数のサイトで共通のコンテンツを使用します。
-   * 利用可能なリソースを最大限に活用します。
-   * 共通のルックアンドフィールを維持します。
-   * サイト間で異なるコンテンツの管理に労力を集中させます。
+  * 基本構造を共通化し、複数のサイトで共通のコンテンツを使用します。
+  * 利用可能なリソースを最大限に活用します。
+  * 共通のルックアンドフィールを維持します。
+  * サイト間で異なるコンテンツの管理に労力を集中させます。
 
 詳しくは、[マルチサイトマネージャー](/help/sites-administering/msm.md)を参照してください。

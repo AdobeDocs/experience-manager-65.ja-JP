@@ -9,13 +9,11 @@ exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '371'
 ht-degree: 0%
-
 ---
-
 # コミュニティのトラブルシューティング {#troubleshooting}
 
 このセクションには、コミュニティのトラブルシューティング時の一般的な懸念事項と既知の問題が含まれています。
@@ -51,7 +49,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 失敗は、オーサーとパブリッシュで異なります。 オーサーでは、静かに失敗し、単にフォーラムのトピックを表示しません。 「公開」で、ページ上のエラーがスローされます。
 
-詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) APIを参照してください。
+詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) APIを参照してください。
 
 ## 共通の懸念 {#common-concerns}
 

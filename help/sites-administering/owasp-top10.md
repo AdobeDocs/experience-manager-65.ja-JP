@@ -9,13 +9,11 @@ exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 88%
-
+source-wordcount: '520'
+ht-degree: 86%
 ---
-
 # OWASP Top 10{#owasp-top}
 
 [Open Web Application Security Project](https://owasp.org/)（OWASP）は、[Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/)（Web アプリケーションに関する上位 10 件のセキュリティリスク）のリストを保持しています。
@@ -62,7 +60,7 @@ AEMでは、[Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html)お
 
 ## &#x200B;8. URL アクセス制限の失敗 {#failure-to-restrict-url-access}
 
-リポジトリでは、アクセス制御エントリを使用して、特定のパスの特定のユーザーまたはグループに対して[（JCR で指定された）詳細な権限](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)を設定できます。 アクセス制限はリポジトリによって適用されます。
+リポジトリでは、アクセス制御エントリを使用して、特定のパスの特定のユーザーまたはグループに対して[（JCR で指定された）詳細な権限](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)を設定できます。 アクセス制限はリポジトリによって適用されます。
 
 ## &#x200B;9. トランスポート層の保護が不十分 {#insufficient-transport-layer-protection}
 

@@ -10,13 +10,11 @@ exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2553'
 ht-degree: 89%
-
 ---
-
 
 # ユーザー同期{#user-synchronization}
 
@@ -34,7 +32,7 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 ## Sling 配布 {#sling-distribution}
 
-ユーザーデータは [ACL](/help/sites-administering/security.md) と共に Oak JCR の下のレイヤーの [Oak Core](/help/sites-deploying/platform.md) に格納され、[Oak API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/jackrabbit/oak/api/package-tree.html) を使用してアクセスできます。 アップデートの頻度が少ない場合は、[Sling コンテンツ配布](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)（Sling 配布）を使用してユーザーデータを他のパブリッシュインスタンスに同期するのが適切です。
+ユーザーデータは [ACL](/help/sites-administering/security.md) と共に Oak JCR の下のレイヤーの [Oak Core](/help/sites-deploying/platform.md) に格納され、[Oak API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/org/apache/jackrabbit/oak/api/package-tree.html) を使用してアクセスできます。 アップデートの頻度が少ない場合は、[Sling コンテンツ配布](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)（Sling 配布）を使用してユーザーデータを他のパブリッシュインスタンスに同期するのが適切です。
 
 従来のレプリケーションと比較して、Sling 配布を使用してユーザーを同期する利点は次のとおりです。
 
@@ -79,24 +77,24 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 * [AEM プラットフォームのアップデート](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)
 * [AEM Communities の更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
-### 1. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
+### &#x200B;1. Apache Sling 配分エージェント - 同期エージェントファクトリ {#apache-sling-distribution-agent-sync-agents-factory}
 
 **ユーザー同期を有効にする**
 
 * **オーサー環境で**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+    * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-   * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
+  * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
 
-      * 既存の設定を選択して、編集のために開きます（鉛筆アイコン）
-`name` が **`socialpubsync`** であることを確認します
+    * 既存の設定を選択して、編集のために開きます（鉛筆アイコン）
+      `name` が **`socialpubsync`** であることを確認します
 
-      * 「`Enabled`」チェックボックスをオンにします
-      * 「`Save`」を選択します。
+    * 「`Enabled`」チェックボックスをオンにします
+    * 「`Save`」を選択します。
 
 ![Apache Sling Distribution Agent](assets/chlimage_1-20.png)
 
@@ -108,19 +106,19 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * **各パブリッシュインスタンスで**
 
-   * 管理者権限でログインします
-   * [セキュリティコンソール](/help/sites-administering/security.md)にアクセスします
+  * 管理者権限でログインします
+  * [セキュリティコンソール](/help/sites-administering/security.md)にアクセスします
 
-      * 例：[https://localhost:4503/useradmin](https://localhost:4503/useradmin)
+    * 例：[https://localhost:4503/useradmin](https://localhost:4503/useradmin)
 
-   * ユーザーを作成します
+  * ユーザーを作成します
 
-      * 例：`usersync-admin`
+    * 例：`usersync-admin`
 
-   * このユーザーを **`administrators`** ユーザーグループに追加します
-   * [このユーザーに対する ACL を /home に追加します](#howtoaddacl)
+  * このユーザーを **`administrators`** ユーザーグループに追加します
+  * [このユーザーに対する ACL を /home に追加します](#howtoaddacl)
 
-      * `Allow jcr:all` 制限付きで `rep:glob=*/activities/*`
+    * `Allow jcr:all` 制限付きで `rep:glob=*/activities/*`
 
 >[!CAUTION]
 >
@@ -134,17 +132,17 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * CRXDE Lite にアクセスします
 
-   * 例：[https://localhost:4503/crx/de](https://localhost:4503/crx/de)
+  * 例：[https://localhost:4503/crx/de](https://localhost:4503/crx/de)
 
 * `/home` ノードを選択します
 * 右側のペインで「`Access Control`」タブを選択します
 * ACL エントリを追加するには、`+` ボタンを選択します
 
-   * **プリンシパル**：*ユーザー同期用に作成されたユーザーを検索*
-   * **タイプ**：`Allow`
-   * **権限**：`jcr:all`
-   * **制限**`rep:glob`：`*/activities/*`
-   * 「**OK**」を選択します
+  * **プリンシパル**：*ユーザー同期用に作成されたユーザーを検索*
+  * **タイプ**：`Allow`
+  * **権限**：`jcr:all`
+  * **制限**`rep:glob`：`*/activities/*`
+  * 「**OK**」を選択します
 
 * 「**すべて保存**」を選択します
 
@@ -155,7 +153,7 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 * [アクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * トラブルシューティングの節の[応答処理中の操作の例外の変更](#modify-operation-exception-during-response-processing)。
 
-### 3. Adobe Granite Distribution - Encrypted Password Transport Secret Provider {#adobegraniteencpasswrd}
+### &#x200B;3. Adobe Granite 配分 - 暗号化パスワードトランスポート秘密鍵プロバイダー {#adobegraniteencpasswrd}
 
 **権限の設定**
 
@@ -163,18 +161,18 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * **オーサー環境で**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+    * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-   * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name` を見つけます。
-   * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
-`property name` が **`socialpubsync-publishUser`** であることを確認します
+  * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name` を見つけます。
+  * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+    `property name` が **`socialpubsync-publishUser`** であることを確認します
 
-   * 手順 2 でパブリッシュ環境で作成した[承認済みユーザー](#createauthuser)のユーザー名とパスワードを設定します
+  * 手順 2 でパブリッシュ環境で作成した[承認済みユーザー](#createauthuser)のユーザー名とパスワードを設定します
 
-      * 例：`usersync-admin`
+    * 例：`usersync-admin`
 
 ![Encrypted Password Transport Secret Provider](assets/chlimage_1-22.png)
 
@@ -184,20 +182,20 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * **各パブリッシュインスタンスの場合**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+    * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-   * `Apache Sling Distribution Agent - Queue Agents Factory` を見つけます。
+  * `Apache Sling Distribution Agent - Queue Agents Factory` を見つけます。
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
-`Name` が `socialpubsync-reverse` であることを確認します
+    * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+      `Name` が `socialpubsync-reverse` であることを確認します
 
-      * 「`Enabled`」チェックボックスをオンにします
-      * 「`Save`」を選択します。
+    * 「`Enabled`」チェックボックスをオンにします
+    * 「`Save`」を選択します。
 
-   * 各パブリッシュインスタンスで&#x200B;**繰り返し**&#x200B;ます
+  * 各パブリッシュインスタンスで&#x200B;**繰り返し**&#x200B;ます
 
 ![Queue Agents Factory](assets/chlimage_1-23.png)
 
@@ -207,19 +205,19 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * **各パブリッシュインスタンスで**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+    * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-   * **`Adobe Social Sync - Diff Observer Factory`** を見つけます。
+  * **`Adobe Social Sync - Diff Observer Factory`** を見つけます。
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+    * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
 
-        `agent name` が `socialpubsync-reverse` であることを確認します
+      `agent name` が `socialpubsync-reverse` であることを確認します
 
-      * 「`Enabled`」チェックボックスをオンにします
-      * 「`Save`」を選択します。
+    * 「`Enabled`」チェックボックスをオンにします
+    * 「`Save`」を選択します。
 
 ![Diff Observer Factory](assets/screen-shot_2019-05-24at090809.png)
 
@@ -231,19 +229,19 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * **オーサー環境で**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+    * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-   * `Apache Sling Distribution Trigger - Scheduled Triggers Factory` を見つけます。
+  * `Apache Sling Distribution Trigger - Scheduled Triggers Factory` を見つけます。
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+    * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
 
-         * `Name` が `socialpubsync-scheduled-trigger` であることを確認します
+      * `Name` が `socialpubsync-scheduled-trigger` であることを確認します
 
-      * 「`Interval in Seconds`」に任意の間隔を指定します
-      * 「`Save`」を選択します。
+    * 「`Interval in Seconds`」に任意の間隔を指定します
+    * 「`Save`」を選択します。
 
 ![Scheduled Triggers Factory](assets/chlimage_1-24.png)
 
@@ -251,37 +249,37 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 デフォルトの設定は、単一のパブリッシュインスタンス用の設定です。 ユーザー同期を有効にする理由は、複数のパブリッシュインスタンス（パブリッシュファーム用になど）を同期するためなので、追加のパブリッシュインスタンスを Sync Agents Factory に追加する必要があります。
 
-### 7. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory-1}
+### &#x200B;7. Apache Sling 配分エージェント - 同期エージェントファクトリ {#apache-sling-distribution-agent-sync-agents-factory-1}
 
 **パブリッシュインスタンスを追加するには：**
 
 * **オーサー環境で**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+    * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-   * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
+  * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
 
-      * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
-`Name` が `socialpubsync` であることを確認します
+    * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+      `Name` が `socialpubsync` であることを確認します
 
 ![Sync Agents Factory](assets/chlimage_1-25.png)
 
 * **エクスポーターエンドポイント**
-パブリッシュインスタンスごとにエクスポーターエンドポイントが必要です。 例えば、2つのパブリッシュインスタンス（localhost:4503と4504）がある場合、次の2つのエントリが必要です。
+パブリッシュインスタンスごとにエクスポーターエンドポイントが必要です。 例えば、2つのパブリッシュインスタンス（localhost:4503および4504）がある場合、次の2つのエントリが必要です。
 
-   * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
-   * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
+  * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
+  * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **インポーターエンドポイント**
-パブリッシュインスタンスごとにインポーターエンドポイントが必要です。 例えば、2つのパブリッシュインスタンス（localhost:4503と4504）がある場合、次の2つのエントリが必要です。
+パブリッシュインスタンスごとにインポーターエンドポイントが必要です。 例えば、2つのパブリッシュインスタンス（localhost:4503および4504）がある場合、次の2つのエントリが必要です。
 
-   * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
-   * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
+  * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
+  * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
 
-* 「`Save`」を選択します。
+* `Save` を選択
 
 ### 8. AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
 
@@ -291,41 +289,45 @@ AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータ
 
 * **各パブリッシュインスタンスで**
 
-   * 管理者権限でログインします
-   * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
+  * 管理者権限でログインします
+  * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-      * 例：`https://localhost:4503/system/console/configMgr`
+    * 例：`https://localhost:4503/system/console/configMgr`
 
-   * `AEM Communities User Sync Listener` を見つけます。
-   * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
-`Name` が `socialpubsync-scheduled-trigger` であることを確認します
+  * `AEM Communities User Sync Listener` を見つけます。
+  * 編集用に開くには、既存の設定（鉛筆アイコン）を選択します
+    `Name` が `socialpubsync-scheduled-trigger` であることを確認します
 
 ![AEM Communities User Sync Listener](assets/chlimage_1-26.png)
 
 * **ノードタイプ**
-これは、同期されているノードタイプのリストです。 sling:Folder以外のノードタイプは、ここにリストする必要があります（sling:folderは個別に処理されます）。同期されるノードタイプのデフォルトのリストは次のとおりです。
+これは、同期されているノードタイプのリストです。 sling:Folder以外のノードタイプは、ここにリストする必要があります（sling:folderは個別に処理されます）。
+同期されるノードタイプのデフォルトのリストは次のとおりです。
 
-   * 担当者:User
-   * nt:unstructured
-   * nt:resource
+  * 担当者:User
+  * nt:unstructured
+  * nt:resource
 
 * **Ignorable プロパティ**
-これは、変更が検出された場合に無視されるプロパティのリストです。 これらのプロパティに対する変更は、他の変更の副作用として同期される場合がありますが（同期は常にノードレベルで行われるので）、これらのプロパティに対する変更そのものが同期をトリガーすることはありません。無視されるデフォルトのプロパティは次のとおりです。
+これは、変更が検出された場合に無視されるプロパティのリストです。 これらのプロパティに対する変更は、他の変更の副作用として同期される場合がありますが（同期は常にノードレベルで行われるので）、これらのプロパティに対する変更そのものが同期をトリガーすることはありません。
+無視されるデフォルトのプロパティは次のとおりです。
 
-   * cq:lastModified
+  * cq:lastModified
 
 * **無視ノード**
-同期中に無視されるサブパス。 このサブパスの下にあるものはどのタイミングでも同期されません。無視されるデフォルトのノードは次のとおりです。
+同期中に無視されるサブパス。 このサブパスの下にあるものはどのタイミングでも同期されません。
+無視されるデフォルトのノードは次のとおりです。
 
-   * .tokens
-   * system
+  * .tokens
+  * system
 
 * **分散フォルダー**
-同期が不要なため、ほとんどのsling:Foldersは無視されます。 数少ない例外を次に示します。同期されるデフォルトのフォルダーは次のとおりです。
+同期が不要なため、ほとんどのsling:Foldersは無視されます。 数少ない例外を次に示します。
+同期されるデフォルトのフォルダーは次のとおりです。
 
-   * segments/scoring
-   * social/relationships
-   * activities
+  * segments/scoring
+  * social/relationships
+  * activities
 
 ### &#x200B;9. 一意のSling ID {#unique-sling-id}
 
@@ -349,11 +351,11 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
    * *sling.id.file* という名前のファイルを検索して削除する
 
-      * Linux® システムの例を次に示します。
-        `rm -i $(find . -type f -name sling.id.file)`
+     * Linux® システムの例を次に示します。
+       `rm -i $(find . -type f -name sling.id.file)`
 
-      * Windows システムの例を次に示します。
-        `use windows explorer and search for *sling.id.file*`
+     * Windows システムの例を次に示します。
+       `use windows explorer and search for *sling.id.file*`
 
 1. パブリッシュインスタンスを開始する
 
@@ -370,27 +372,27 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 * 各 AEM パブリッシュインスタンスで
 * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-   * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+  * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
 * `Apache Sling Distribution Packaging - Vault Package Builder Factory`を見つけます。
 
-   * `Builder name: socialpubsync-vlt`
+  * `Builder name: socialpubsync-vlt`
 
 * 編集アイコンを選択します。
 * 2 つを追加 `Package Node Filters`：
 
-   * `/home/users|-.*/.tokens`
-   * `/home/users|-.*/rep:cache`
+  * `/home/users|-.*/.tokens`
+  * `/home/users|-.*/rep:cache`
 
 * ポリシーの処理：
 
-   * 既存の担当者:policy ノードを新しいノードで上書きするには、3番目のパッケージフィルターを追加します。
+  * 既存の担当者:policy ノードを新しいノードで上書きするには、3番目のパッケージフィルターを追加します。
 
-      * `/home/users|+.*/rep:policy`
+    * `/home/users|+.*/rep:policy`
 
-   * ポリシーが配布されないようにするには、次のように設定します
+  * ポリシーが配布されないようにするには、次のように設定します
 
-      * `Acl Handling:` `IGNORE`
+    * `Acl Handling:` `IGNORE`
 
 ![Vault Package Builder Factory](assets/vault-package-builder-factory.png)
 
@@ -418,30 +420,30 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 * オーサー環境で
 
-   * [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用する場合
+  * [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用する場合
 
-      * `/var/sling/distribution/packages`内で次のエントリを探します
+    * `/var/sling/distribution/packages`内で次のエントリを探します
 
-         * `distrpackage_*`という名前パターンを持つフォルダーノード
+      * `distrpackage_*`という名前パターンを持つフォルダーノード
 
-   * [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用する場合
+  * [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用する場合
 
-      * （まだインストールされていない）保留中のパッケージを探します
+    * （まだインストールされていない）保留中のパッケージを探します
 
-         * `socialpubsync-vlt*`という名前パターンを持つもの
-         * 作成者 `communities-user-admin`
+      * `socialpubsync-vlt*`という名前パターンを持つもの
+      * 作成者 `communities-user-admin`
 
 配布キューが空である場合は、ユーザー同期を無効にします。
 
 * オーサー環境で
 
-   * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」*チェックボックスをオフ*にします
+  * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」*チェックボックスをオフ*にします
 
 タスク完了後にユーザー同期を再び有効にするには、以下のように行います。
 
 * オーサー環境で
 
-   * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」チェックボックスをオンにします
+  * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」チェックボックスをオンにします
 
 ### ユーザー同期診断 {#user-sync-diagnostics}
 
@@ -475,7 +477,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-30.png)
 
-#### （オーサー）1 つの Apache Sling Distribution トランスポート認証情報 - ユーザ認証情報に基づく DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
+#### （オーサー）1 つの Apache Sling Distribution トランスポート認証情報 - ユーザー認証情報に基づく DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
 
 ![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-31.png)
 
@@ -533,19 +535,19 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 * ユーザーおよびユーザーグループが存在するパブリッシュインスタンスで
 
-   * [ユーザー同期が有効になっている場合は無効にします](#how-to-take-user-sync-offline)
-   * `/home` の[パッケージを作成](/help/sites-administering/package-manager.md#creating-a-new-package)します
+  * [ユーザー同期が有効になっている場合は無効にします](#how-to-take-user-sync-offline)
+  * `/home` の[パッケージを作成](/help/sites-administering/package-manager.md#creating-a-new-package)します
 
-      * パッケージの編集時
+    * パッケージの編集時
 
-         * 「フィルター」タブ／フィルターを追加／ルートパス：`/home`
-         * 「詳細」タブ／AC の処理：`Overwrite`
+      * 「フィルター」タブ／フィルターを追加／ルートパス：`/home`
+      * 「詳細」タブ／AC の処理：`Overwrite`
 
-   * [パッケージをエクスポート](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
+  * [パッケージをエクスポート](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
 * その他のパブリッシュインスタンスで
 
-   * [パッケージをインポートします](/help/sites-administering/package-manager.md#installing-packages)
+  * [パッケージをインポートします](/help/sites-administering/package-manager.md#installing-packages)
 
 ユーザー同期を設定したり、有効にしたりするには、手順 1（[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)）に進みます。
 
@@ -571,12 +573,12 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 * オーサー環境で
 
-   * [ユーザー同期をオフラインにする](#how-to-take-user-sync-offline)
-   * [手順 7](#apache-sling-distribution-agent-sync-agents-factory) に従って、次の両方のサーバーリストからパブリッシュインスタンスを削除します。
+  * [ユーザー同期をオフラインにする](#how-to-take-user-sync-offline)
+  * [手順 7](#apache-sling-distribution-agent-sync-agents-factory) に従って、次の両方のサーバーリストからパブリッシュインスタンスを削除します。
 
-      * `Exporter Endpoints`
-      * `Importer Endpoints`
+    * `Exporter Endpoints`
+    * `Importer Endpoints`
 
-   * ユーザー同期を再び有効にする
+  * ユーザー同期を再び有効にする
 
-      * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」チェックボックスをオンにします
+    * [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) の「`Enabled`」チェックボックスをオンにします

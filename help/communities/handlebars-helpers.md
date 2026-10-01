@@ -7,13 +7,11 @@ exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 6%
-
+source-wordcount: '1534'
+ht-degree: 4%
 ---
-
 # SCF Handlebars ヘルパー {#scf-handlebars-helpers}
 
 | **[⇐機能エッセンシャル](essentials.md)** | **[サーバーサイドのカスタマイズ ⇒](server-customize.md)** |
@@ -180,7 +178,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-[WCM モード &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)の現在の値を、文字列区切りのモードのリストに対してテストするブロックヘルパー。
+[WCM モード &#x200B;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)の現在の値を、文字列区切りのモードのリストに対してテストするブロックヘルパー。
 
 ### パラメーター {#parameters-4}
 
@@ -190,7 +188,7 @@ Then content-loadmore would return
 
 * **mode**：文字列
 
-  （オプション）設定されている場合にテストする[WCM モード &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)のコンマ区切りリスト。
+  （オプション）設定されている場合にテストする[WCM モード &#x200B;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html)のコンマ区切りリスト。
 
 ### 例 {#example-2}
 
@@ -458,10 +456,10 @@ XSSから保護するために、HTMLのhrefまたはsrce属性値として書�
 
 * Handlebarsは、「options」という名前のヘルパーに最終的なパラメーターを提供します。 特殊オブジェクト「options」には
 
-   * オプションのプライベートデータ（options.data）
-   * 呼び出し（options.hash）からのオプションのキー値プロパティ
-   * 自分自身を呼び出す機能（options.fn （））
-   * 自身の逆を呼び出す機能（options.inverse （））
+  * オプションのプライベートデータ（options.data）
+  * 呼び出し（options.hash）からのオプションのキー値プロパティ
+  * 自分自身を呼び出す機能（options.fn （））
+  * 自身の逆を呼び出す機能（options.inverse （））
 
 * ヘルパーから返されるHTML文字列コンテンツはSafeStringであることをお勧めします。
 
@@ -523,7 +521,7 @@ template(data);
 
 ### サーバーサイドのカスタムヘルパー {#server-side-custom-helpers}
 
-サーバーサイドでカスタム SCF ヘルパーを実装して登録するには、Java™ インターフェイス [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)を実装し、[OSGi サービス &#x200B;](../../help/sites-developing/the-basics.md#osgi)にして、OSGi バンドルの一部としてインストールします。
+サーバーサイドでカスタム SCF ヘルパーを実装して登録するには、Java™ インターフェイス [TemplateHelper](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)を実装し、[OSGi サービス &#x200B;](../../help/sites-developing/the-basics.md#osgi)にして、OSGi バンドルの一部としてインストールします。
 
 例：
 

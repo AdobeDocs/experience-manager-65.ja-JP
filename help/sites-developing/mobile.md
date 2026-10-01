@@ -11,13 +11,11 @@ exl-id: 21b2037a-685a-441d-aecd-865884253e03
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '3807'
-ht-degree: 92%
-
+source-wordcount: '3844'
+ht-degree: 90%
 ---
-
 # モバイルデバイス用サイトの作成{#creating-sites-for-mobile-devices}
 
 {{ue-over-mobile}}
@@ -33,7 +31,7 @@ ht-degree: 92%
 1. ページコンポーネントを作成します。
 
    * `sling:resourceSuperType` プロパティをに設定 `wcm/mobile/components/page`
-この方法で、コンポーネントはモバイルページコンポーネントに依存します。
+     この方法で、コンポーネントはモバイルページコンポーネントに依存します。
 
    * プロジェクトに特有のロジックを使用して `body.jsp` を作成します。
 
@@ -68,11 +66,11 @@ ht-degree: 92%
 
 モバイルクラスを格納する Java™ パッケージを次に示します。
 
-* [com.day.cq.wcm.mobile.api](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - MobileConstants を定義します。
-* [com.day.cq.wcm.mobile.api.device](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/mobile/api/device/package-summary.html) - Device、DeviceGroup および DeviceGroupList を定義します。
-* [com.day.cq.wcm.mobile.api.device.capability](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - DeviceCapability を定義します。
-* [com.day.cq.wcm.mobile.api.wurfl](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/workflow/api/package-summary.html) - WurflQueryEngine を定義します。
-* [com.day.cq.wcm.mobile.core](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/mobile/core/package-summary.html) - WCM モバイルに関連するさまざまなユーティリティメソッドを提供する MobileUtil を定義します。
+* [com.day.cq.wcm.mobile.api](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - MobileConstants を定義します。
+* [com.day.cq.wcm.mobile.api.device](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/mobile/api/device/package-summary.html) - Device、DeviceGroup および DeviceGroupList を定義します。
+* [com.day.cq.wcm.mobile.api.device.capability](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - DeviceCapability を定義します。
+* [com.day.cq.wcm.mobile.api.wurfl](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/workflow/api/package-summary.html) - WurflQueryEngine を定義します。
+* [com.day.cq.wcm.mobile.core](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/day/cq/wcm/mobile/core/package-summary.html) - WCM モバイルに関連するさまざまなユーティリティメソッドを提供する MobileUtil を定義します。
 
 ### モバイルコンポーネント {#mobile-components}
 
@@ -170,8 +168,8 @@ AEM モバイルフレームワークを使用すると、リクエストを発�
 
 **モバイルエミュレーターの主な特徴**
 
-* デバイスグループは、複数のエミュレーターの1つから構成されています。デバイスグループ設定ページ（例：/etc/mobile/groups/touch）には、`jcr:content` ノードの下の`emulators` プロパティが含まれています。
-注：同じエミュレータが複数のデバイスグループに属している可能性がありますが、あまり意味がありません。
+* デバイスグループは、複数のエミュレーターのうちの 1 つで構成されます。デバイスグループ設定ページ（例： /etc/mobile/groups/touch）には、`jcr:content` ノードの下の `emulators` プロパティが含まれます。
+メモ：同じエミュレーターが複数のデバイスグループに属する可能性もありますが、あまり意味がありません。
 
 * デバイスグループの設定ダイアログでは、目的のエミュレーターのパスを使用して `emulators` プロパティが設定されます。 （例：`/libs/wcm/mobile/components/emulators/iPhone4`）。
 
@@ -250,8 +248,8 @@ AEM がインストールするグループが要件を満たさない場合は�
 1. CRXDE で、デバイスグループ用のスタイルを格納する **static.css** ファイルを `/etc/mobile/groups/special` ノードの下に追加します。
 
 1. **Special Phones** ページを開きます。
-1. デバイスグループを設定するには、**設定**&#x200B;の横にある&#x200B;**編集** ボタンをクリックします。
-「**一般**」タブ：
+1. デバイスグループを設定するには、「**設定**」の横にある「**編集**」ボタンをクリックします。
+「**一般**」タブで、次の設定を行います。
 
    * **タイトル**：モバイルデバイスグループの名前
    * **説明**：グループの説明

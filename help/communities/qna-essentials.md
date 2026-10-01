@@ -1,6 +1,6 @@
 ---
 title: Q&A の基本事項
-description: Adobe Experience Manager Communities の質問と回答（QnA）フォーラム機能を使用するための基本について説明します。
+description: Adobe Experience Manager Communitiesの質疑応答（QnA）フォーラム機能の操作の基本について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,35 +9,33 @@ exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '273'
 ht-degree: 3%
-
 ---
-
 # Q&amp;A の基本事項 {#qna-essentials}
 
-このページでは、QnA （Questions and Answers）フォーラム機能の操作に関する基本的な情報を提供します。
+このページでは、質疑応答（QnA）フォーラム機能を操作するための重要な情報を提供します。
 
-## クライアントサイドの基本事項 {#essentials-for-client-side}
+## クライアントサイドの基本 {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
    <td> resourceType</td>
-   <td>ソーシャル/qna/components/hbs/qnaforum</td>
+   <td>social/qna/components/hbs/qnaforum</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"> 次を含む </a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component">include</a></td>
    <td>いいえ</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md">clientlibs</a></td>
-   <td>cq.ckeditor<br />cq.social.hbs.voting<br />cq.social.hbs.qna</td>
+   <td> <a href="clientlibs.md">clientllibs</a></td>
+   <td>cq.ckeditor<br /> cq.social.hbs.voting<br /> cq.social.hbs.qna</td>
   </tr>
   <tr>
-   <td> templates</td>
+   <td> テンプレート</td>
    <td> /libs/social/qna/components/hbs/qnaforum/qnaforum.hbs<br /> /libs/social/qna/components/hbs/qnaforum/activity-title.hbs</td>
   </tr>
   <tr>
@@ -46,37 +44,37 @@ ht-degree: 3%
   </tr>
   <tr>
    <td> properties</td>
-   <td><a href="working-with-qna.md">Q&amp;A フォーラム機能 </a> 参照</td>
+   <td><a href="working-with-qna.md">Q&amp;A フォーラム機能</a>を参照してください</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアントサイドのカスタマイズ](client-customize.md)
 
-## サーバーサイドの初期設定 {#essentials-for-server-side}
+## サーバーサイドの基本 {#essentials-for-server-side}
 
-* [QnA API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
+* [QnA API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
-* [QnA エンドポイント &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
+* [QnA エンドポイント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
 ### Q&amp;A 機能 {#qna-function}
 
-[QnA 関数 &#x200B;](functions.md#qna-function) を含むコミュニティサイト構造は、設定済みの `QnA` コンポーネントと、モデレートおよびタグ付けに影響する設定を持ちます。 QnA 関数は、[&#x200B; 特権メンバーユーザーグループ &#x200B;](users.md#privileged-members-group) の識別をサポートします。
+[QnA関数](functions.md#qna-function)を含むコミュニティサイト構造には、設定済みの`QnA` コンポーネントと、モデレーションとタグ付けに影響する設定が含まれています。 QnA関数は、[特権メンバーユーザーグループ &#x200B;](users.md#privileged-members-group)の識別をサポートしています。
 
-### QnA フォーラム投稿へのアクセス （UGC） {#accessing-qna-forum-posts-ugc}
+### QnA フォーラム投稿へのアクセス（UGC） {#accessing-qna-forum-posts-ugc}
 
-UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
-[&#x200B; ユーザー作成コンテンツのモデレート &#x200B;](moderate-ugc.md) を参照してください。
+UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
+[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
-AEM 6.1 Communities の時点では、UGC の [&#x200B; 共通ストア &#x200B;](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
+AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
+**リポジトリ内のUGCの場所と形式は、警告なしで変更される可能性があります**。
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
-* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

@@ -9,10 +9,10 @@ exl-id: 84a1964c-4121-4763-b946-9eee6093747d
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 98%
+source-wordcount: '821'
+ht-degree: 95%
 ---
 # ワークフローの開始{#starting-workflows}
 
@@ -172,7 +172,7 @@ ht-degree: 98%
      このランチャープロパティは、次のような項目のコンマ区切りリストです。
 
      * `property-name`は、指定されたプロパティ名でトリガーされた`jcr` イベントを無視します。 &grave;&grave;
-     * `event-user-data:<*someValue*>` は、[`ObservationManager` API] (https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String）で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。
+     * `event-user-data:<*someValue*>`は、[`ObservationManager` API] （https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)）を通じて設定された`*<someValue*`> `user-data`を含むイベントを無視します。
 
      次に例を示します。
 

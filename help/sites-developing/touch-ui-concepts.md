@@ -10,13 +10,11 @@ exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2238'
-ht-degree: 97%
-
+source-wordcount: '2240'
+ht-degree: 96%
 ---
-
 # Adobe Experience Manager タッチ操作対応 UI の概念{#concepts-of-the-aem-touch-enabled-ui}
 
 Adobe Experience Manager（AEM）は、タッチデバイスとデスクトップデバイスの両方で動作するように設計されたオーサー環境向けに、[レスポンシブデザイン](/help/sites-authoring/responsive-layout.md)を採用したタッチ操作対応 UI を備えています。
@@ -28,24 +26,24 @@ Adobe Experience Manager（AEM）は、タッチデバイスとデスクトッ�
 タッチ対応 UI は以下で構成されます。
 
 * スイートヘッダー：
-   * ロゴを表示します
-   * グローバルナビゲーションへのリンクを表示します
-   * 検索、ヘルプ、Experience Cloud ソリューション、通知、ユーザー設定など、その他の汎用アクションへのリンクを表示します。
+  * ロゴを表示します
+  * グローバルナビゲーションへのリンクを表示します
+  * 検索、ヘルプ、Experience Cloud ソリューション、通知、ユーザー設定など、その他の汎用アクションへのリンクを表示します。
 * 左側のレール（必要に応じて表示／非表示の切り替えが可能）には次を表示できます。
-   * タイムライン
-   * 参照
-   * フィルター
+  * タイムライン
+  * 参照
+  * フィルター
 * ナビゲーションヘッダー：コンテキストに応じて、次を表示できます。
-   * 現在使用しているコンソールやそのコンソール内の場所、または両方
-   * 左側のパネルの選択内容
-   * パンくずリスト
-   * 適切な&#x200B;**作成**&#x200B;アクションへのアクセス
-   * 表示の選択状況
+  * 現在使用しているコンソールやそのコンソール内の場所、または両方
+  * 左側のパネルの選択内容
+  * パンくずリスト
+  * 適切な&#x200B;**作成**&#x200B;アクションへのアクセス
+  * 表示の選択状況
 * 次の特長を持つコンテンツ領域：
-   * コンテンツの項目（ページ、アセット、フォーラム投稿など）をリストします。
-   * 必要に応じて形式（コラム、カードまたはリストなど）を指定できます。
-   * レスポンシブデザインを使用します（デバイスやウィンドウのサイズに応じて自動的に表示サイズが変更されます）。
-   * 無限スクロールを使用します（ページネーションがなく、すべての項目が 1 つのウィンドウに表示されます）。
+  * コンテンツの項目（ページ、アセット、フォーラム投稿など）をリストします。
+  * 必要に応じて形式（コラム、カードまたはリストなど）を指定できます。
+  * レスポンシブデザインを使用します（デバイスやウィンドウのサイズに応じて自動的に表示サイズが変更されます）。
+  * 無限スクロールを使用します（ページネーションがなく、すべての項目が 1 つのウィンドウに表示されます）。
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -200,7 +198,7 @@ Granite UI と ExtJS（クラシック UI に使用）の違いも重要です�
 
 ### Granite UI 基盤コンポーネント {#granite-ui-foundation-components}
 
-[Granite UI 基盤コンポーネント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI の構築に必要な基本的な構築ブロックを提供します。 次に例を示します。
+[Granite UI 基盤コンポーネント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI の構築に必要な基本的な構築ブロックを提供します。 次に例を示します。
 
 * ボタン
 * ハイパーリンク
@@ -257,7 +255,7 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 
 ### Granite UI 管理コンポーネント {#granite-ui-administration-components}
 
-[Granite UI 管理コンポーネント](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、基盤コンポーネントをベースに構築され、あらゆる管理アプリケーションが実装できる汎用構築ブロックを提供します。 次に例を示します。
+[Granite UI 管理コンポーネント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、基盤コンポーネントをベースに構築され、あらゆる管理アプリケーションが実装できる汎用構築ブロックを提供します。 次に例を示します。
 
 * グローバルナビゲーションバー
 * パネル（スケルトン）

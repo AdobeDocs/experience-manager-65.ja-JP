@@ -9,13 +9,11 @@ exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1210'
 ht-degree: 4%
-
 ---
-
 # 検索の基本事項 {#search-essentials}
 
 ## 概要 {#overview}
@@ -26,11 +24,11 @@ Communitiesでは、一般的に検索される2つの項目を次に示しま�
 
 * コミュニティメンバーが投稿したコンテンツ
 
-   * AEM CommunitiesのUGC検索APIを使用しています。
+  * AEM CommunitiesのUGC検索APIを使用しています。
 
 * ユーザーとユーザーグループ（ユーザーデータ）
 
-   * AEMのプラットフォーム検索機能を使用しています。
+  * AEMのプラットフォーム検索機能を使用しています。
 
 UGCを作成または管理するカスタムコンポーネントを作成する開発者は、この節のドキュメントを参照してください。
 
@@ -44,7 +42,7 @@ UGCおよびACL シャドウ ノードへのアクセスに使用されるユー
 
 ## UGC検索API {#ugc-search-api}
 
-[UGC共通ストア &#x200B;](working-with-srp.md)は、様々なストレージリソースプロバイダー（SRP）のいずれかによって提供され、それぞれが異なるネイティブクエリ言語を持っている可能性があります。 したがって、選択したSRPに関係なく、カスタムコードでは、選択したSRPに適したクエリ言語を呼び出す[UGC API パッケージ &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) （*com.adobe.cq.social.ugc.api*）のメソッドを使用する必要があります。
+[UGC共通ストア &#x200B;](working-with-srp.md)は、様々なストレージリソースプロバイダー（SRP）のいずれかによって提供され、それぞれが異なるネイティブクエリ言語を持っている可能性があります。 したがって、選択したSRPに関係なく、カスタムコードでは、選択したSRPに適したクエリ言語を呼び出す[UGC API パッケージ &#x200B;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) （*com.adobe.cq.social.ugc.api*）のメソッドを使用する必要があります。
 
 ### ASRP Searches {#asrp-searches}
 
@@ -160,8 +158,8 @@ Solrは、スキーマを使用するクエリ言語の例です。
 
 * 複数値の型の場合は、次のように接尾辞に「s」を追加します。
 
-   * `viewDate_dt`：単一の日付プロパティ
-   * `viewDates_dts`：日付プロパティのリスト
+  * `viewDate_dt`：単一の日付プロパティ
+  * `viewDates_dts`：日付プロパティのリスト
 
 ## フィルター {#filters}
 
@@ -171,11 +169,11 @@ ANDおよびOR ロジックのフィルター構文は、次のように表さ�
 
 * ORを指定するには、コンマ区切りの値を持つ1つのフィルターパラメーターを使用します。
 
-   * `filter=name eq 'Jennifer',name eq 'Jen'`
+  * `filter=name eq 'Jennifer',name eq 'Jen'`
 
 * 複数のフィルターパラメーターを指定して使用するには：
 
-   * `filter = name eq 'Jackson'&filter=message eq 'testing'`
+  * `filter = name eq 'Jackson'&filter=message eq 'testing'`
 
 [検索コンポーネント &#x200B;](search.md)のデフォルトの実装では、この構文が使用されます。この構文は、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)の検索結果ページを開くURLに表示されます。 実験するには、[http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html)を参照してください。
 
@@ -193,9 +191,9 @@ ANDおよびOR ロジックのフィルター構文は、次のように表さ�
 URLは、コンポーネントが配置されているページではなく、Communities コンポーネント（リソース）を参照することが重要です。
 
 * 正解：フォーラムのコンポーネント
-   * `/content/community-components/en/forum/jcr:content/content/forum.social.json`
+  * `/content/community-components/en/forum/jcr:content/content/forum.social.json`
 * 不正：フォーラムページ
-   * `/content/community-components/en/forum.social.json`
+  * `/content/community-components/en/forum.social.json`
 
 ## SRP ツール {#srp-tools}
 

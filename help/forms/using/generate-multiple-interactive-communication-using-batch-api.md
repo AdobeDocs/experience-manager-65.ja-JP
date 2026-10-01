@@ -9,24 +9,22 @@ feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '2134'
-ht-degree: 100%
-
+source-wordcount: '2265'
+ht-degree: 97%
 ---
-
 # Batch API を使用して複数のインタラクティブなコミュニケーションを生成する {#use-batch-api-to-generate-multiple-ic}
 
-Batch API を使用すると、テンプレートから複数のインタラクティブなコミュニケーションを作成できます。テンプレートは、データのないインタラクティブなコミュニケーションです。Batch API は、データとテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成します。この API は、インタラクティブなコミュニケーションを大量に作成する際に役立ちます。例えば、複数の顧客に電話料金やクレジットカードの明細書を送信する場合です。
+Batch API を使用すると、テンプレートから複数のインタラクティブなコミュニケーションを作成できます。 テンプレートは、データのないインタラクティブなコミュニケーションです。 Batch API は、データとテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成します。 この API は、インタラクティブなコミュニケーションを大量に作成する際に役立ちます。 例えば、複数の顧客に電話料金やクレジットカードの明細書を送信する場合です。
 
-バッチ API は、フォームデータモデルから JSON 形式のレコード（データ）を受け取ります。生成されるインタラクティブなコミュニケーションの数は、設定したフォームデータモデル内の入力 JSON ファイルで指定されたレコード数と等しくなります。API を使用して、印刷出力と Web 出力の両方を生成できます。「PRINT」オプションを選択すると PDF ドキュメントが生成され、「WEB」オプションを選択すると個々のレコードの JSON 形式のデータが生成されます。
+バッチ API は、フォームデータモデルから JSON 形式のレコード（データ）を受け取ります。 生成されるインタラクティブなコミュニケーションの数は、設定したフォームデータモデル内の入力 JSON ファイルで指定されたレコード数と等しくなります。 API を使用して、印刷出力と Web 出力の両方を生成できます。 「PRINT」オプションを選択すると PDF ドキュメントが生成され、「WEB」オプションを選択すると個々のレコードの JSON 形式のデータが生成されます。
 
 ## Batch API の使用 {#using-the-batch-api}
 
-Batch API は、監視フォルダーと共に使用することも、スタンドアロンの Rest API として使用することもできます。Batch API を使用するには、生成されるインタラクティブなコミュニケーションのテンプレート、出力タイプ （HTML、印刷、または両方）、ロケール、事前入力サービス、名前を設定します。
+Batch API は、監視フォルダーと共に使用することも、スタンドアロンの Rest API として使用することもできます。 Batch API を使用するには、生成されるインタラクティブなコミュニケーションのテンプレート、出力タイプ （HTML、印刷、または両方）、ロケール、事前入力サービス、名前を設定します。
 
-レコードとインタラクティブなコミュニケーションテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成します。Batch API は、JSON ファイルから直接レコード（インタラクティブなコミュニケーションテンプレートのデータ）を読み取ることも、フォームデータモデルを介してアクセスする外部データソースから読み取ることもできます。各レコードを別々の JSON ファイルに保持するか、JSON 配列を作成してすべてのレコードを 1 つのファイルに保持できます。
+レコードとインタラクティブなコミュニケーションテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成します。 Batch API は、JSON ファイルから直接レコード（インタラクティブなコミュニケーションテンプレートのデータ）を読み取ることも、フォームデータモデルを介してアクセスする外部データソースから読み取ることもできます。 各レコードを別々の JSON ファイルに保持するか、JSON 配列を作成してすべてのレコードを 1 つのファイルに保持できます。
 
 **JSON ファイル内の 1 つのレコード**
 
@@ -70,63 +68,63 @@ Batch API は、監視フォルダーと共に使用することも、スタン�
 
 ### 監視フォルダーでの Batch API の使用 {#using-the-batch-api-watched-folders}
 
-API を簡単に操作できるように、AEM Forms には、Batch API を使用するように設定された監視フォルダーサービスが標準で用意されています。AEM Forms UI 経由でこのサービスにアクセスして、複数のインタラクティブなコミュニケーションを生成できます。また、必要に応じて、カスタムサービスを作成することもできます。次に示すメソッドを使用して、監視フォルダーで Batch API を使用できます。
+API を簡単に操作できるように、AEM Forms には、Batch API を使用するように設定された監視フォルダーサービスが標準で用意されています。 AEM Forms UI 経由でこのサービスにアクセスして、複数のインタラクティブなコミュニケーションを生成できます。 また、必要に応じて、カスタムサービスを作成することもできます。 次に示すメソッドを使用して、監視フォルダーで Batch API を使用できます。
 
 * JSON ファイル形式で入力データ（レコード）を指定すると、インタラクティブなコミュニケーションを作成できます。
 * インタラクティブなコミュニケーションを作成するには、外部データソースに保存され、フォームデータモデルを介してアクセスされる入力データ（レコード）を使用します。
 
 #### JSON ファイル形式で入力データレコードを指定すると、インタラクティブなコミュニケーションを作成できます。 {#specify-input-data-in-JSON-file-format}
 
-レコードとインタラクティブなコミュニケーションテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成します。各レコードに対して個別の JSON ファイルを作成するか、すべてのレコードを 1 つのファイルに保持する JSON 配列を作成できます。
+レコードとインタラクティブなコミュニケーションテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成します。 各レコードに対して個別の JSON ファイルを作成するか、すべてのレコードを 1 つのファイルに保持する JSON 配列を作成できます。
 
 JSON ファイルに保存されたレコードからインタラクティブなコミュニケーションを作成するには：
 
 1. [監視フォルダー](/help/forms/using/creating-configure-watched-folder.md)を作成して、Batch API を使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
-   1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」を選択します。
-   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
+   1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。 「**[!UICONTROL 新規]**」を選択します。
+   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。 例えば、`c:\batchprocessing` のように指定します。
    1. **[!UICONTROL 次を使用してファイルを処理]**&#x200B;フィールドで「**[!UICONTROL サービス]**」オプションを選択します。
    1. **[!UICONTROL サービス名]**&#x200B;フィールドで、**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** サービスを選択します。
-   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。例：%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=ja#about-file-patterns) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
+   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。 例：%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=ja#about-file-patterns) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
 1. 以下の手順に従って、詳細設定パラメーターを設定します。
    1. 「**[!UICONTROL 詳細]**」タブを開いて、次のカスタムプロパティを追加します。
 
-      | Property | タイプ | 説明 |
+      | Property | 種類 | 説明 |
       |--- |--- |--- |
-      | templatePath | 文字列 | 使用するインタラクティブなコミュニケーションテンプレートのパスを指定します。例えば、`/content/dam/formsanddocuments/testsample/mediumic` のようになります。これは必須プロパティです。 |
-      | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブなコミュニケーションの名前を設定するのに役立ちます。レコードのフィールドのパスは、recordPath フィールドの値として設定できます。例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブなコミュニケーションの名前になります。デフォルト値は [random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |
-      | usePrefillService | Boolean | 値を False に設定します。usePrefillService パラメーターを使用すると、対応するインタラクティブなコミュニケーション用に設定された事前入力サービスから取得したデータを、インタラクティブなコミュニケーションに事前入力することができます。usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。デフォルト値は false です。 |
-      | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。デフォルト値は WEB_AND_PRINT です。 |
-      | locale | 文字列 | 出力インタラクティブなコミュニケーションのロケールを指定します。そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブなコミュニケーションを生成することができます。デフォルト値は en_US です。 |
+      | templatePath | 文字列 | 使用するインタラクティブなコミュニケーションテンプレートのパスを指定します。 例えば、`/content/dam/formsanddocuments/testsample/mediumic` のようになります。 これは必須プロパティです。 |
+      | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブなコミュニケーションの名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPath フィールドの値として設定できます。 例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブなコミュニケーションの名前になります。 デフォルト値は [random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |
+      | usePrefillService | Boolean | 値を False に設定します。 usePrefillService パラメーターを使用すると、対応するインタラクティブなコミュニケーション用に設定された事前入力サービスから取得したデータを、インタラクティブなコミュニケーションに事前入力することができます。 usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 デフォルト値は false です。 |
+      | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。 デフォルト値は WEB_AND_PRINT です。 |
+      | locale | 文字列 | 出力インタラクティブなコミュニケーションのロケールを指定します。 そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブなコミュニケーションを生成することができます。 デフォルト値は en_US です。 |
 
    1. 「**[!UICONTROL 作成]**」を選択します。
 1. 作成した監視フォルダーを使用してインタラクティブなコミュニケーションを生成します。
-   1. 監視フォルダーを開きます。入力フォルダーに移動します。
+   1. 監視フォルダーを開きます。 入力フォルダーに移動します。
    1. 入力フォルダーにフォルダーを作成し、新しく作成したフォルダーに JSON ファイルを配置します。
-   1. 監視フォルダーがファイルを処理するのを待ちます。処理が開始されると、入力ファイルと、そのファイルを含むサブフォルダーがステージングフォルダーに移動します。
+   1. 監視フォルダーがファイルを処理するのを待ちます。 処理が開始されると、入力ファイルと、そのファイルを含むサブフォルダーがステージングフォルダーに移動します。
    1. 出力フォルダーを開いて出力を表示します。
       * 監視フォルダー設定で PRINT オプションを指定すると、インタラクティブなコミュニケーション用の PDF 出力が生成されます。
-      * 監視フォルダー設定で WEB オプションを指定すると、レコードごとに JSON ファイルが生成されます。JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
+      * 監視フォルダー設定で WEB オプションを指定すると、レコードごとに JSON ファイルが生成されます。 JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
       * PRINT オプションと WEB オプションの両方を指定すると、レコードごとに PDF ドキュメントと JSON ファイルの両方が生成されます。
 
 #### 外部データソースに保存され、フォームデータモデルを介してアクセスされる入力データを使用して、インタラクティブなコミュニケーションを作成する {#use-fdm-as-data-source}
 
-外部データソースに保存されたデータ（レコード）とインタラクティブなコミュニケーションテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成できます。インタラクティブなコミュニケーションを作成する場合は、フォームデータモデル（FDM）を介して外部データソースに接続し、データにアクセスします。外部データソースから同じフォームデータモデルを使用してデータを取得するように、監視フォルダーのバッチ処理サービスを設定できます。[外部データソースに保存されたレコードからインタラクティブなコミュニケーションを作成する](/help/forms/using/work-with-form-data-model.md)には、次をおこないます。
+外部データソースに保存されたデータ（レコード）とインタラクティブなコミュニケーションテンプレートを組み合わせて、インタラクティブなコミュニケーションを作成できます。 インタラクティブなコミュニケーションを作成する場合は、フォームデータモデル（FDM）を介して外部データソースに接続し、データにアクセスします。 外部データソースから同じフォームデータモデルを使用してデータを取得するように、監視フォルダーのバッチ処理サービスを設定できます。 [外部データソースに保存されたレコードからインタラクティブなコミュニケーションを作成する](/help/forms/using/work-with-form-data-model.md)には、次をおこないます。
 
 1. テンプレートのフォームデータモデルを設定します。
    1. インタラクティブなコミュニケーションテンプレートに関連付けたフォームデータモデルを開きます。
    1. トップレベルモデルオブジェクトを選択し、「プロパティを編集」を選択します。
    1. プロパティを編集パネルの「サービスの読み取り」フィールドから、サービス取得を選択します。
-   1. 読み取りサービスの引数の鉛筆アイコンを選択して、引数をリクエスト属性にバインドし、バインド値を指定します。これにより、サービスの引数が、指定したバインド属性またはリテラル値にバインドされます。この値が引数としてサービスに渡されて、データソースから、指定した値に関連付けられている詳細情報を取得します。
+   1. 読み取りサービスの引数の鉛筆アイコンを選択して、引数をリクエスト属性にバインドし、バインド値を指定します。 これにより、サービスの引数が、指定したバインド属性またはリテラル値にバインドされます。この値が引数としてサービスに渡されて、データソースから、指定した値に関連付けられている詳細情報を取得します。
 
-      この例では、id 引数を使用してユーザープロファイルの id 属性の値を取得し、それを引数として読み取りサービスに渡しています。指定された ID について、従業員のデータモデルオブジェクトから関連プロパティの値を読み取って返されます。そのため、フォームの「ID」フィールドに 00250 という値を入力すると、読み取りサービスは、従業員 ID に 00250 と設定されている従業員の詳細情報を読み取ります。
+      この例では、id 引数を使用してユーザープロファイルの id 属性の値を取得し、それを引数として読み取りサービスに渡しています。 指定された ID について、従業員のデータモデルオブジェクトから関連プロパティの値を読み取って返されます。 そのため、フォームの「ID」フィールドに 00250 という値を入力すると、読み取りサービスは、従業員 ID に 00250 と設定されている従業員の詳細情報を読み取ります。
 
       ![リクエスト属性の設定](assets/request-attribute.png)
 
    1. プロパティとフォームデータモデルを保存します。
 1. リクエスト属性の値を設定：
    1. .json ファイルをファイルシステム上に作成し、編集用に開きます。
-   1. JSON 配列を作成し、フォームデータモデルからデータを取得するプライマリ属性を指定します。例えば、次の JSON は FDM に対し、id が 27126 または 27127 のレコードのデータを送信するようにリクエストします。
+   1. JSON 配列を作成し、フォームデータモデルからデータを取得するプライマリ属性を指定します。 例えば、次の JSON は FDM に対し、id が 27126 または 27127 のレコードのデータを送信するようにリクエストします。
 
       ```json
           [
@@ -143,41 +141,41 @@ JSON ファイルに保存されたレコードからインタラクティブな
 
 1. [監視フォルダー](/help/forms/using/creating-configure-watched-folder.md)を作成して、Batch API サービスを使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
-   1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」を選択します。
-   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
+   1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。 「**[!UICONTROL 新規]**」を選択します。
+   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。 例えば、`c:\batchprocessing` のように指定します。
    1. **[!UICONTROL 次を使用してファイルを処理]**&#x200B;フィールドで「**[!UICONTROL サービス]**」オプションを選択します。
    1. **[!UICONTROL サービス名]**&#x200B;フィールドで、**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** サービスを選択します。
-   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。例：%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=ja#about-file-patterns) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
+   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。 例：%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=ja#about-file-patterns) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
 1. 以下の手順に従って、詳細設定パラメーターを設定します。
    1. 「**[!UICONTROL 詳細]**」タブを開いて、次のカスタムプロパティを追加します。
 
-      | Property | タイプ | 説明 |
+      | Property | 種類 | 説明 |
       |--- |--- |--- |
-      | templatePath | 文字列 | 使用するインタラクティブなコミュニケーションテンプレートのパスを指定します。例えば、 /content/dam/formsanddocuments/testsample/mediumic のように指定します。これは必須プロパティです。 |
-      | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブなコミュニケーションの名前を設定するのに役立ちます。レコードのフィールドのパスは、recordPath フィールドの値として設定できます。例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブなコミュニケーションの名前になります。デフォルト値は [random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |
-      | usePrefillService | Boolean | 値を True に設定します。デフォルト値は false です。値を true に設定すると、Batch API は設定されたフォームデータモデルからデータを読み取り、インタラクティブなコミュニケーションに入力します。usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 |
-      | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。デフォルト値は WEB_AND_PRINT です。 |
-      | locale | 文字列 | 出力インタラクティブなコミュニケーションのロケールを指定します。そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブなコミュニケーションを生成することができます。デフォルト値は en_US です。 |
+      | templatePath | 文字列 | 使用するインタラクティブなコミュニケーションテンプレートのパスを指定します。 例えば、 /content/dam/formsanddocuments/testsample/mediumic のように指定します。 これは必須プロパティです。 |
+      | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブなコミュニケーションの名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPath フィールドの値として設定できます。 例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブなコミュニケーションの名前になります。 デフォルト値は [random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |
+      | usePrefillService | Boolean | 値を True に設定します。 デフォルト値は false です。 値を true に設定すると、Batch API は設定されたフォームデータモデルからデータを読み取り、インタラクティブなコミュニケーションに入力します。 usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 |
+      | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。 デフォルト値は WEB_AND_PRINT です。 |
+      | locale | 文字列 | 出力インタラクティブなコミュニケーションのロケールを指定します。 そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブなコミュニケーションを生成することができます。 デフォルト値は en_US です。 |
 
    1. 「**[!UICONTROL 作成]**」を選択します。
 1. 作成した監視フォルダーを使用してインタラクティブなコミュニケーションを生成します。
-   1. 監視フォルダーを開きます。入力フォルダーに移動します。
-   1. 入力フォルダーにフォルダーを作成します。手順 2 で作成した JSON ファイルを、新しく作成したフォルダーに配置します。
-   1. 監視フォルダーがファイルを処理するのを待ちます。処理が開始されると、入力ファイルと、そのファイルを含むサブフォルダーがステージングフォルダーに移動します。
+   1. 監視フォルダーを開きます。 入力フォルダーに移動します。
+   1. 入力フォルダーにフォルダーを作成します。 手順 2 で作成した JSON ファイルを、新しく作成したフォルダーに配置します。
+   1. 監視フォルダーがファイルを処理するのを待ちます。 処理が開始されると、入力ファイルと、そのファイルを含むサブフォルダーがステージングフォルダーに移動します。
    1. 出力フォルダーを開いて出力を表示します。
       * 監視フォルダー設定で PRINT オプションを指定すると、インタラクティブなコミュニケーション用の PDF 出力が生成されます。
-      * 監視フォルダー設定で WEB オプションを指定すると、レコードごとに JSON ファイルが生成されます。JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
+      * 監視フォルダー設定で WEB オプションを指定すると、レコードごとに JSON ファイルが生成されます。 JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
       * PRINT オプションと WEB オプションの両方を指定すると、レコードごとに PDF ドキュメントと JSON ファイルの両方が生成されます。
 
 ## REST リクエストを使用した Batch API の呼び出し
 
-[Batch API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html) は Representational State Transfer（REST）リクエストを通じて呼び出すことができます。これにより、他のユーザーに REST エンドポイントを提供し、API へのアクセス、インタラクティブなコミュニケーションの処理、保存とカスタマイズのための独自のメソッドを設定できます。独自のカスタム Java™ サーブレットを開発して、AEM インスタンスに API をデプロイできます。
+[Batch API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/index.html) は Representational State Transfer（REST）リクエストを通じて呼び出すことができます。 これにより、他のユーザーに REST エンドポイントを提供し、API へのアクセス、インタラクティブなコミュニケーションの処理、保存とカスタマイズのための独自のメソッドを設定できます。 独自のカスタム Java™ サーブレットを開発して、AEM インスタンスに API をデプロイできます。
 
-Java™ サーブレットをデプロイする前に、インタラクティブなコミュニケーションがあり、対応するデータファイルの準備が整っていることを確認します。次の手順を実行して、Java™ サーブレットの作成とデプロイを行います。
+Java™ サーブレットをデプロイする前に、インタラクティブなコミュニケーションがあり、対応するデータファイルの準備が整っていることを確認します。 次の手順を実行して、Java™ サーブレットの作成とデプロイを行います。
 
-1. AEM インスタンスにログインし、インタラクティブなコミュニケーションを作成します。以下のサンプルコードで説明するインタラクティブなコミュニケーションを使用するには、[ここをクリック](assets/SimpleMediumIC.zip)してください。
+1. AEM インスタンスにログインし、インタラクティブなコミュニケーションを作成します。 以下のサンプルコードで説明するインタラクティブなコミュニケーションを使用するには、[ここをクリック](assets/SimpleMediumIC.zip)してください。
 1. AEM インスタンスで [Apache Maven を使用した AEM プロジェクトのビルドとデプロイ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=ja)をおこないます。
-1. AEM プロジェクトの POM ファイルの依存関係リストに [AEM Forms Client SDK バージョン 6.0.12 以降](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を追加します。例：
+1. AEM プロジェクトの POM ファイルの依存関係リストに [AEM Forms Client SDK バージョン 6.0.12 以降](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を追加します。 例：
 
    ```xml
        <dependency>
@@ -187,7 +185,7 @@ Java™ サーブレットをデプロイする前に、インタラクティブ
        </dependency>
    ```
 
-1. Java™ プロジェクトを開き、.java ファイル（例：CCMBatchServlet.java）を作成します。次のコードをファイルに追加します。
+1. Java™ プロジェクトを開き、.java ファイル（例：CCMBatchServlet.java）を作成します。 次のコードをファイルに追加します。
 
    ```java
            package com.adobe.fd.ccm.multichannel.batch.integration;
@@ -324,26 +322,26 @@ Java™ サーブレットをデプロイする前に、インタラクティブ
 
 1. 上記のコードで、テンプレートのパス（setTemplatePath）をテンプレートのパスに置き換え、setBatchType API の値を設定します。
    * 印刷オプションを指定すると、インタラクティブなコミュニケーションの PDF 出力が生成されます。
-   * Web オプションを指定すると、レコードごとに JSON ファイルが生成されます。JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
+   * Web オプションを指定すると、レコードごとに JSON ファイルが生成されます。 JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
    * PRINT オプションと WEB オプションの両方を指定すると、レコードごとに PDF ドキュメントと JSON ファイルの両方が生成されます。
 
 1. [Maven を使用して、更新されたコードを AEM インスタンスにデプロイする](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=ja)。
-1. インタラクティブなコミュニケーションを生成するには、バッチ API を呼び出します。バッチ API では、レコード数に応じて、PDFと.json ファイルのストリームを出力して返します。JSON ファイルを使用すると、[Web テンプレートの事前入力](#web-template)ができます。上記のコードを使用する場合、API は `http://localhost:4502/bin/batchServlet` にデプロイされます。このコードは、PDF ファイルと JSON ファイルのストリームを出力して返します。
+1. インタラクティブなコミュニケーションを生成するには、バッチ API を呼び出します。 バッチ API では、レコード数に応じて、PDFと.json ファイルのストリームを出力して返します。 JSON ファイルを使用すると、[Web テンプレートの事前入力](#web-template)ができます。 上記のコードを使用する場合、API は `http://localhost:4502/bin/batchServlet` にデプロイされます。 このコードは、PDF ファイルと JSON ファイルのストリームを出力して返します。
 
 ### Web テンプレートの事前入力 {#web-template}
 
-Web チャネルをレンダリングする batchType を設定すると、API はデータレコードごとに JSON ファイルを生成します。次の構文を使用して、JSON ファイルを対応する web チャネルに結合して、インタラクティブなコミュニケーションを生成できます。
+Web チャネルをレンダリングする batchType を設定すると、API はデータレコードごとに JSON ファイルを生成します。 次の構文を使用して、JSON ファイルを対応する web チャネルに結合して、インタラクティブなコミュニケーションを生成できます。
 
 **構文**
 `http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
 
 **例**
-JSON ファイルが `C:\batch\mergedJsonPath.json` にあり、次のインタラクティブなコミュニケーションテンプレートを使用する場合：`http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
+JSON ファイルが`C:\batch\mergedJsonPath.json`にあり、次のインタラクティブ通信テンプレートを使用している場合：`http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
 
-次に、パブリッシュノード上の次の URL は、インタラクティブなコミュニケーションの web チャネルを表示します
+次に、パブリッシュノードの次のURLに、インタラクティブ通信のWeb チャネルが表示されます
 `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
 
-ファイルシステムにデータを保存する以外に、JSON ファイルを CRX リポジトリ、ファイルシステム、Web サーバーに保存するか、OSGI 事前入力サービスを介してデータにアクセスできます。様々なプロトコルを使用してデータを結合する構文は次のとおりです。
+ファイルシステムにデータを保存する以外に、JSON ファイルを CRX リポジトリ、ファイルシステム、Web サーバーに保存するか、OSGI 事前入力サービスを介してデータにアクセスできます。 様々なプロトコルを使用してデータを結合する構文は次のとおりです。
 
 * **CRX プロトコル**
   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
@@ -354,13 +352,13 @@ JSON ファイルが `C:\batch\mergedJsonPath.json` にあり、次のインタ�
 * **事前入力サービスプロトコル**
   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
 
-  SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。「事前入力サービスの作成と実行」を参照してください。
+  SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。 「事前入力サービスの作成と実行」を参照してください。
 
-  識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログインしたユーザーの識別子は、使用できるメタデータの例です。
+  識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。 ログイン済みユーザーの識別子は、使用できるメタデータの一例です。
 
 * **HTTP プロトコル**
   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
 
 >[!NOTE]
 >
->デフォルトでは、CRX プロトコルのみが有効になっています。その他のサポートされているプロトコルを有効にするには、[Configuration Manager を使用した事前入力サービスの設定](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=ja)を参照してください。
+>デフォルトでは、CRX プロトコルのみが有効になっています。 その他のサポートされているプロトコルを有効にするには、[Configuration Manager を使用した事前入力サービスの設定](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=ja)を参照してください。

@@ -10,10 +10,10 @@ role: Admin,User
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 99%
+source-wordcount: '1033'
+ht-degree: 97%
 ---
 # OSGi 上の Forms 中心のワークフロー | ユーザーデータの処理 {#forms-centric-workflows-on-osgi-handling-user-data}
 
@@ -158,5 +158,5 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 また、API を使用してノードおよびプロパティにアクセスしてこれらを削除することもできます。 詳しくは、次のドキュメントを参照してください。
 
 * [AEM JCR へのプログラムからのアクセス方法](/help/sites-developing/access-jcr.md)
-* [ノードとプロパティの削除](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html?lang=ja#10.9%20Removing%20Nodes%20and%20Properties)
+* [ノードとプロパティの削除](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)

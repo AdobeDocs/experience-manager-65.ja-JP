@@ -1,6 +1,6 @@
 ---
 title: 「いいね!」の設定の基本事項
-description: メンバーがハートアイコンを選択することで、一部のコンテンツに対する肯定的な意見を表明できる便利なツールである、好きなコンポーネントの使用方法を説明します。
+description: 「いいね！」コンポーネントを使用する方法を説明します。このコンポーネントは、メンバーがハートアイコンを選択して、コンテンツに関する肯定的な意見を表明するのに役立ちます。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -10,39 +10,37 @@ exl-id: ef314385-cd5c-411c-91df-83691a81c1bc
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '327'
 ht-degree: 2%
-
 ---
-
 # 「いいね!」の設定の基本事項 {#liking-essentials}
 
-[&#x200B; 集計 &#x200B;](tally.md) サブクラスの Liking コンポーネントは、メンバーがハートアイコンを選択するだけで、特定のコンテンツに関する肯定的な意見を表明できる便利なツールです。
+「いいね！」コンポーネント（[集計](tally.md) サブクラス）は、メンバーがハートアイコンを選択するだけで、特定のコンテンツに関する肯定的な意見を表明できる便利なツールです。
 
-好みのコンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の `tally name` プロパティを使用して設定する必要があります。
+同じページに同じコンポーネントの複数のインスタンスを配置することは許可されています。各インスタンスは一意の`tally name` プロパティで設定する必要があります。
 
-類似のの匿名投稿はサポートされていません。 サイト訪問者が好みに参加するには、登録してログインする必要があります。 ログインした訪問者（メンバー）は、いつでもオンとオフを切り替えることができます。
+いいね！の匿名投稿はサポートされていません。 サイト訪問者は登録してログインして、いいね！ サインインした訪問者（メンバー）は、いつでもオンとオフを切り替えることができます。
 
-## クライアントサイドの基本事項 {#essentials-for-client-side}
+## クライアントサイドの基本 {#essentials-for-client-side}
 
 <table>
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/tally/components/hbs/liking</td>
+   <td>ソーシャル/集計/コンポーネント/hbs/いいね</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong> 含む </strong></a></td>
-   <td>はい – プロパティは <i> デザイン </i> モードで編集可能です</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能</strong></a></td>
+   <td>はい – プロパティは<i> デザイン </i> モードで編集可能です</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong> テンプレート </strong></td>
    <td><p> /libs/social/tally/components/hbs/liking/liking.hbs<br /> /libs/social/tally/components/hbs/liking/activity-icon.hbs<br /> /libs/social/tally/components/hbs/liking/activity-title.hbs</p> </td>
   </tr>
   <tr>
@@ -51,33 +49,33 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p><a href="liking.md">Liking の使用 </a> を参照してください。</p> </td>
+   <td><p><a href="liking.md">いいね！の使用</a>を参照してください</p> </td>
   </tr>
  </tbody>
 </table>
 
 * [クライアントサイドのカスタマイズ](client-customize.md)
 
-## サーバーサイドの初期設定 {#essentials-for-server-side}
+## サーバーサイドの基本 {#essentials-for-server-side}
 
-* [&#x200B; 集計 API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [APIの合計](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [&#x200B; 集計エンドポイント &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [集計エンドポイント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [サーバーサイドのカスタマイズ](server-customize.md)
 
-### 投稿された投票（UGC）へのアクセス {#accessing-posted-voting-ugc}
+### UGC （投稿された投票）へのアクセス {#accessing-posted-voting-ugc}
 
-UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
-[&#x200B; ユーザー生成コンテンツのモデレート &#x200B;](moderate-ugc.md) を参照してください。
+UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
+[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
-AEM 6.1 Communities の時点では、UGC の [&#x200B; 共通ストア &#x200B;](working-with-srp.md) の使用には、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、UGC へのプログラムによるアクセスが含まれます。
+AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は、警告なく変更される場合があります**。
+**リポジトリ内のUGCの場所と形式は、警告なしで変更される可能性があります**。
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRP と UGC の基本事項 &#x200B;](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
-* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
+* [SRP](accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
