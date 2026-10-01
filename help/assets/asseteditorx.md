@@ -8,11 +8,9 @@ exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
 solution: Experience Manager, Experience Manager Assets
 source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 100%
-
+source-wordcount: '694'
+ht-degree: 95%
 ---
-
 # アセットエディターの拡張 {#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
@@ -31,7 +29,7 @@ Geometrixx には次のサンプルページがあります。
 
 ### Clientlib の設定 {#configuring-clientlib}
 
-[!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` に読み込まれます。
+[!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。 クライアントライブラリは通常、`init.jsp` に読み込まれます。
 
 （コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、[!DNL Assets] テンプレートは次の条件を満たす必要があります。
 
@@ -43,7 +41,7 @@ Geometrixx には次のサンプルページがあります。
 
 ### JS アクションの設定 {#configuring-js-actions}
 
-一部の [!DNL Assets] コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の [!DNL Assets] コンポーネントでは `component.js` で定義されている JS 関数が必要です。 このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
@@ -53,7 +51,7 @@ Geometrixx には次のサンプルページがあります。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
-一部の [!DNL Assets] コンポーネントでは、 ウィジェットライブラリが使用されます。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の [!DNL Assets] コンポーネントでは、 ウィジェットライブラリが使用されます。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。 タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
@@ -61,7 +59,7 @@ Geometrixx には次のサンプルページがあります。
 
 ### Geometrixx スタイルシート {#geometrixx-style-sheet}
 
-サンプルページコンポーネントでは、すべてのセレクターが `static.css`（`/etc/designs/geometrixx/static.css`）の `.asseteditor` で始まっている必要があります。ベストプラクティス：すべての `.asseteditor` セレクターをスタイルシートにコピーし、ルールを必要に応じて調整します。
+サンプルページコンポーネントでは、すべてのセレクターが `static.css`（`/etc/designs/geometrixx/static.css`）の `.asseteditor` で始まっている必要があります。 ベストプラクティス：すべての `.asseteditor` セレクターをスタイルシートにコピーし、ルールを必要に応じて調整します。
 
 ### FormChooser：最終的に読み込まれるリソースの調整 {#formchooser-adjustments-for-eventually-loaded-resources}
 
@@ -69,8 +67,8 @@ Geometrixx には次のサンプルページがあります。
 
 例：
 
-* プレーンフォームページ：[http://localhost:4502/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/geometrixx/jp/press/asseteditor.html)
-* フォームページに読み込まれるアセット：[http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)
+* プレーンフォームページ：[http://localhost:4502/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/geometrixx/jp/press/asseteditor.html)
+* アセットがフォームページに読み込まれました：[http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/en/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)
 
 `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）のサンプルハンドルは、次の処理をおこないます。
 
@@ -197,11 +195,11 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
    </div>
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE Lite で、`cq:EditConfig` プライマリ型の `cq:editConfig` ノードを追加します。段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。 コンポーネントを編集可能にするには、CRXDE Lite で、`cq:EditConfig` プライマリ型の `cq:editConfig` ノードを追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
 
 1. ブラウザーを開き、サンプルページ（`asseteditor.html` など）でデザインモードに切り替え、段落システム用の新しいコンポーネントを有効にします。
 
-1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。コンポーネントを挿入します。メタデータを保存するには、メタデータフォームに追加する必要があります。
+1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。 コンポーネントを挿入します。 メタデータを保存するには、メタデータフォームに追加する必要があります。
 
 ## メタデータオプションを変更 {#modifying-metadata-options}
 
@@ -221,4 +219,4 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 
 >[!NOTE]
 >
->新しい名前空間を追加する場合は、リポジトリ／CRX に登録する必要があります。この作業を行わない場合、メタデータフォームで送信を行うとエラーが発生します。
+>新しい名前空間を追加する場合は、リポジトリ／CRX に登録する必要があります。 この作業を行わない場合、メタデータフォームで送信を行うとエラーが発生します。
