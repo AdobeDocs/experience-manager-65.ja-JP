@@ -13,12 +13,10 @@ source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 100%
-
 ---
-
 # ContextHub の診断 {#contexthub-diagnostics}
 
-ContextHub には、ContextHub フレームワークの概要を確認できる診断ページがあります。このページを開くには、AEM オーサーインスタンスの `contexthub.diagnostics.html` ページに移動します。例：
+ContextHub には、ContextHub フレームワークの概要を確認できる診断ページがあります。 このページを開くには、AEM オーサーインスタンスの `contexthub.diagnostics.html` ページに移動します。例：
 
 `http://<host>:<port>/conf/<tenant>/settings/cloudsettings/default/contexthub.diagnostics.html`
 
@@ -26,7 +24,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 >[!NOTE]
 >
->診断情報が返されるようにするために、デバッグモードを有効にする必要があります。そうしないと、診断ページが空白になります。デバッグモードを有効にする方法について詳しくは、[このドキュメント](ch-configuring.md#debugging-contexthub)を参照してください。
+>診断情報が返されるようにするために、デバッグモードを有効にする必要があります。そうしないと、診断ページが空白になります。 デバッグモードを有効にする方法について詳しくは、[このドキュメント](ch-configuring.md#debugging-contexthub)を参照してください。
 
 >[!NOTE]
 >
@@ -34,7 +32,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 ## ストア {#stores}
 
-「ストア」セクションには、設定されたすべての ContextHub ストアが一覧表示されます。リスト内の各項目は、次の情報で構成されます。
+「ストア」セクションには、設定されたすべての ContextHub ストアが一覧表示されます。 リスト内の各項目は、次の情報で構成されます。
 
 * **タイトル：**&#x200B;ストアのベースとなっている[ストアタイプ](/help/sites-developing/ch-samplestores.md)。
 * **パス：**&#x200B;設定を保持するリポジトリノードへのパス。
@@ -43,7 +41,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 ## モジュール {#modules}
 
-「モジュール」セクションには、設定されたすべての ContextHub UI モジュールが一覧表示されます。リスト内の各項目は、次の情報で構成されます。
+「モジュール」セクションには、設定されたすべての ContextHub UI モジュールが一覧表示されます。 リスト内の各項目は、次の情報で構成されます。
 
 * **タイトル**：UI モジュールのベースとなっている [UI モジュールタイプ](/help/sites-developing/ch-samplemodules.md)。
 * **パス：**&#x200B;設定を保持するリポジトリノードへのパス。
@@ -52,7 +50,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 ## Clientlibs {#clientlibs}
 
-Clientlibs セクションには、ContextHub によって読み込まれたすべてのクライアントライブラリフォルダーが一覧表示されます。クライアントライブラリは、次のように分類されます。
+Clientlibs セクションには、ContextHub によって読み込まれたすべてのクライアントライブラリフォルダーが一覧表示されます。 クライアントライブラリは、次のように分類されます。
 
 * **kernel.js：** ContextHub フレームワーク、セグメントエンジン、ストアタイプを実装するクライアントライブラリ。
 * **ui.js：** ContextHub UI および UI モジュールタイプを実装するクライアントライブラリ。
