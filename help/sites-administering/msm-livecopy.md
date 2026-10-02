@@ -44,7 +44,7 @@ ht-degree: 97%
 
 ブループリント設定を作成するには、以下を実行します。
 
-1. [](/help/sites-authoring/basic-handling.md#global-navigation)**ツール**&#x200B;メニューに移動し、**Sites** メニューを選択します。
+1. [&#128279;](/help/sites-authoring/basic-handling.md#global-navigation)**ツール**&#x200B;メニューに移動し、**Sites** メニューを選択します。
 1. 「**ブループリント**」を選択し、**ブループリント設定**&#x200B;コンソールを開きます。
 
    ![ブループリント設定](assets/blueprint-configurations.png)
@@ -63,7 +63,7 @@ ht-degree: 97%
 
 以下の手順で、既存のブループリント設定を編集または削除できます。
 
-1. [](/help/sites-authoring/basic-handling.md#global-navigation)**ツール**&#x200B;メニューに移動し、**Sites** メニューを選択します。
+1. [&#128279;](/help/sites-authoring/basic-handling.md#global-navigation)**ツール**&#x200B;メニューに移動し、**Sites** メニューを選択します。
 1. 「**ブループリント**」を選択し、**ブループリント設定**&#x200B;コンソールを開きます。
 
    ![ブループリント設定](assets/blueprint-configurations.png)
