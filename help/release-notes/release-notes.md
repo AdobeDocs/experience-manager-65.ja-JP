@@ -63,7 +63,7 @@ Crosswalkは、このリリースではデフォルトで使用できるので�
   > * [&#x200B; スタンドアロン環境のJEE](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードします。
   > * [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)。
 
-* **Configuration Manager （LCM） Express Mode資格情報プロンプト：** Express ModeでJEE上のAEM Formsを設定すると、LCMはデフォルトを使用する代わりにAEM管理者資格情報を入力するよう求めます。 この変更は、AEM サービスパック 6.5.25.0の[&#x200B; ホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)を通じて利用できます。 設定手順については、「[JBoss Turnkeyを使用したJEEでのAEM Forms 6.5のインストールとデプロイ &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-turnkey.pdf)」を参照してください。 （FORMS-26365）
+* **Configuration Manager （LCM） Express Mode資格情報プロンプト：** Express ModeでJEE上のAEM Formsを設定すると、LCMはデフォルトを使用する代わりにAEM管理者資格情報を入力するよう求めます。 この変更は、AEM サービスパック 6.5.25.0の[&#x200B; ホットフィックス &#x200B;](/help/release-notes/aem-forms-hotfix.md)を通じて利用できます。 設定手順については、「[JBoss Turnkeyを使用したJEEでのAEM Forms 6.5のインストールとデプロイ &#x200B;](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-turnkey.pdf)」を参照してください。 （FORMS-26365）
 
 ## Service Pack 25で修正された問題 {#fixed-issues}
 
@@ -635,7 +635,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 これらの Web サイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード。](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
