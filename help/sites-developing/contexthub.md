@@ -11,14 +11,12 @@ feature: Developing,Personalization
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '285'
 ht-degree: 100%
-
 ---
-
 # ContextHub{#contexthub}
 
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。 クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
 
 >[!NOTE]
 >
@@ -32,7 +30,7 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 
 ## 永続性 {#persistence}
 
-ContextHub ストアは、コンテキストデータをクライアント上に保持します。ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。したがって、ContextHub はページ上のデータレイヤーに相当します。
+ContextHub ストアは、コンテキストデータをクライアント上に保持します。 ContextHub JavaScript API を使用してストアにアクセスし、必要に応じてデータを作成、更新および削除できます。 したがって、ContextHub はページ上のデータレイヤーに相当します。
 
 個々の ContextHub ストアは、事前定義されたストアタイプのインスタンスです。
 
@@ -43,11 +41,11 @@ ContextHub ストアは、コンテキストデータをクライアント上に
 
 ## セグメント化 {#segmentation}
 
-ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントを判断するセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments)できます。
+ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントを判断するセグメント化エンジンが含まれています。 いくつかのセグメントが定義されています。 JavaScript API を使用して、[解決されたセグメントを判断](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments)できます。
 
 ## プレゼンテーション {#presentation}
 
-マーケターと作成者は、[ContextHub ツールバー](/help/sites-authoring/ch-previewing.md)を使用してストアデータを表示および操作し、ページのオーサリング時にユーザーエクスペリエンスをシミュレートできます。このツールバーは、ContextHub ストアへのアクセスを提供する UI モジュールのグループで構成されています。
+マーケターと作成者は、[ContextHub ツールバー](/help/sites-authoring/ch-previewing.md)を使用してストアデータを表示および操作し、ページのオーサリング時にユーザーエクスペリエンスをシミュレートできます。 このツールバーは、ContextHub ストアへのアクセスを提供する UI モジュールのグループで構成されています。
 
 各 ContextHub UI モジュールは、事前定義されたモジュールタイプのインスタンスです。
 
