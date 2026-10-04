@@ -11,23 +11,21 @@ role: User, Developer
 feature: Adaptive Forms,Foundation Components,Form Data Model
 source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 100%
-
+source-wordcount: '351'
+ht-degree: 99%
 ---
-
 # ドロップダウンリストの動的な自動入力 {#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
-* [OSGi バンドルの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)
+* [OSGI バンドルの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&CID=RedirectAEMCommunityKautuk)
 * [AEM コンポーネントの開発](/help/sites-developing/components.md)
 * [アダプティブフオームの作成](../../forms/using/creating-adaptive-form.md)
 * [アダプティブフォームのオーサリング](../../forms/using/introduction-forms-authoring.md)
 
 ## ドロップダウンリストを動的に自動入力する手順 {#procedure-to-dynamically-populate-drop-down-lists}
 
-「**国**」ドロップダウンリストで選択した値に基づいて、「**州**」ドロップダウンリストに自動入力するシナリオを考えてみます。「**国**」ドロップダウンリストでオーストラリアを選択した場合、「**州**」ドロップダウンリストにはオーストラリアの州名が表示されます。次の手順では、このタスクを実行する手順を説明します。
+「**国**」ドロップダウンリストで選択した値に基づいて、「**州**」ドロップダウンリストに自動入力するシナリオを考えてみます。 「**国**」ドロップダウンリストでオーストラリアを選択した場合、「**州**」ドロップダウンリストにはオーストラリアの州名が表示されます。 次の手順では、このタスクを実行する手順を説明します。
 
 1. 次のモジュールでプロジェクトを作成します。
 
@@ -145,12 +143,12 @@ ht-degree: 100%
    }
    ```
 
-1. アプリケーション内の特定のフォルダー階層の下にドロップダウンノードを作成します（例えば、/apps/myfolder/demo の下にノードを作成します）。ノードの `sling:resourceType` パラメーターがサーブレットがポイントするもの（/apps/populatedropdown）と同じであるようにしてください。
+1. アプリケーション内の特定のフォルダー階層の下にドロップダウンノードを作成します（例えば、/apps/myfolder/demo の下にノードを作成します）。 ノードの `sling:resourceType` パラメーターがサーブレットがポイントするもの（/apps/populatedropdown）と同じであるようにしてください。
 
    ![ドロップダウンノードの作成](assets/dropdown-node.png)
 
-1. コンテンツノードをパッケージ化し、その .jar ファイルを特定の場所（例えば /apps/myfolder/demo/install/）に埋め込みます。同じファイルをサーバーにデプロイします。
-1. アダプティブフォームを作成し、2 つのドロップダウンリスト（国と州）をそれに追加します。国リストには、国の名前を含めることができます。 州リストは、最初のリストで選択した国の州名を動的に入力できます。
+1. コンテンツノードをパッケージ化し、その .jar ファイルを特定の場所（例えば /apps/myfolder/demo/install/）に埋め込みます。 同じファイルをサーバーにデプロイします。
+1. アダプティブフォームを作成し、2 つのドロップダウンリスト（国と州）をそれに追加します。 国リストには、国の名前を含めることができます。 州リストは、最初のリストで選択した国の州名を動的に入力できます。
 
    国リストに表示する国の名前を追加します。 州リストに、国リスト内の国の名前に基づいて入力するスクリプトを追加します。
 
