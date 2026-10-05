@@ -1,28 +1,31 @@
 ---
 title: Form Bridge と HTML5 フォームのカスタムポータルの統合
+
 description: FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定し、フォームを送信できます。
+
+
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
+
 docset: aem65
+
 feature: HTML5 Forms,Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '394'
 ht-degree: 100%
-
 ---
-
 # Form Bridge と HTML5 フォームのカスタムポータルの統合{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge は、フォームの操作を可能にする HTML5 forms ブリッジ API です。FormBridge API リファレンスについては、[FormBridge API リファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
+FormBridge は、フォームの操作を可能にする HTML5 forms ブリッジ API です。 FormBridge API リファレンスについては、[FormBridge API リファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
 
-FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定し、フォームを送信できます。例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
+FormBridge API を使用して、HTML ページからフォームフィールドの値を取得または設定し、フォームを送信できます。 例えば、API を使用してウィザードのようなエクスペリエンスを作成できます。
 
-既存の HTML アプリケーションは、FormBridge API を使用してフォームを操作し、HTML ページに埋め込むことができます。次の手順で、Form Bridge API を使用してフィールドの値を設定できます。
+既存の HTML アプリケーションは、FormBridge API を使用してフォームを操作し、HTML ページに埋め込むことができます。 次の手順で、Form Bridge API を使用してフィールドの値を設定できます。
 
 ## HTML5 フォームと web ページの統合 {#integrating-html-forms-to-a-web-page}
 
@@ -80,14 +83,14 @@ FormBridge API を使用して、HTML ページからフォームフィールド
    >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
    >
    >
-   >ページは 2 つのコンテナ、**left** と **right** にスタイル設定されます。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
+   >ページは 2 つのコンテナ、**left** と **right** にスタイル設定されます。 right コンテナにはフォームがあります。 left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
    >
    >
    >次のスクリーンショットは、フォームがブラウザーでどのように表示されるかを示します。
 
    ![ポータル](assets/portal.jpg)
 
-   左側は **HTML ページ**&#x200B;の一部です。右側でフィールドを含んでいるのは **xfa フォーム**&#x200B;です。
+   左側は **HTML ページ**&#x200B;の一部です。 右側でフィールドを含んでいるのは **xfa フォーム**&#x200B;です。
 
 1. **ページからのフォームフィールドへのアクセス**
 
