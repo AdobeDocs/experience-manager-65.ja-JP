@@ -23,7 +23,7 @@ PDF Generatorでは、複数のファイル変換を同時に実行して、変�
 | マルチユーザーモード | OpenOffice | 各OpenOffice インスタンスは、個別のユーザーアカウントで実行されます。 |
 | シングルユーザーモード | Microsoft® WordおよびMicrosoft® Excel | 1つのユーザーアカウントで複数のWordおよびExcel インスタンスを実行します。 PowerPoint変換はシリアル化されたままです。 |
 
-いずれかのモードを有効にする前に、使用しているアプリケーションとオペレーティングシステムの[PDF Generatorのプレインストール設定](/help/forms/using/install-configure-document-services.md#preinstallationconfigurations)を完了してください。 サポートされているアプリケーションのバージョンについては、[PDF Generatorのソフトウェアサポート ](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)を参照してください。
+いずれかのモードを有効にする前に、使用しているアプリケーションとオペレーティングシステムの[PDF Generatorのプレインストール設定](/help/forms/using/install-configure-document-services.md#preinstallationconfigurations)を完了してください。 サポートされているアプリケーションのバージョンについては、[PDF Generatorのソフトウェアサポート &#x200B;](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)を参照してください。
 
 ## マルチユーザーモード {#multi-user-mode}
 
