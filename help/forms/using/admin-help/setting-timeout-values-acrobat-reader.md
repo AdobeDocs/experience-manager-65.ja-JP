@@ -10,12 +10,10 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: ht
-source-wordcount: '189'
+workflow-type: tm+mt
+source-wordcount: '190'
 ht-degree: 100%
-
 ---
-
 # Acrobat Reader DC Extensions で使用するタイムアウト値の設定  {#setting-timeout-values-for-use-with-acrobat-reader-dc-extensions}
 
 >[!NOTE]
@@ -26,9 +24,9 @@ Acrobat Reader DC Extensions で多数の PDF ファイルを処理している�
 
 **ドキュメント破棄タイムアウト：**
 
-この値は管理コンソールで設定できます。設定／コアシステム設定／設定をクリックし、デフォルトのドキュメント破棄タイムアウトの値を指定します。
+この値は管理コンソールで設定できます。 設定／コアシステム設定／設定をクリックし、デフォルトのドキュメント破棄タイムアウトの値を指定します。
 
-**User Manager AEM Forms のタイムアウト：**&#x200B;この値を設定するには、config.xml ファイルを編集してください。管理コンソールで、設定／ユーザー管理／設定／設定ファイルのインポートとエクスポートをクリックし、「エクスポート」をクリックします。エクスポートされた config.xml ファイルを開き、次の行を編集します。
+**User Manager AEM Forms のタイムアウト：**&#x200B;この値を設定するには、config.xml ファイルを編集してください。 管理コンソールで、設定／ユーザー管理／設定／設定ファイルのインポートとエクスポートをクリックし、「エクスポート」をクリックします。 エクスポートされた config.xml ファイルを開き、次の行を編集します。
 
 &lt;entry key=&quot;assertionValidityInMinutes&quot; value=&quot;600&quot;/>
 
@@ -36,4 +34,4 @@ Acrobat Reader DC Extensions で多数の PDF ファイルを処理している�
 
 config.xml ファイルを保存し、再び管理コンソールに読み込みます。
 
-**アプリケーションサーバーセッションタイムアウト：**&#x200B;この値は、アプリケーションサーバーで設定できます。詳しくは、アプリケーションサーバーに付属するマニュアルを参照してください。
+**アプリケーションサーバーセッションタイムアウト：**&#x200B;この値は、アプリケーションサーバーで設定できます。 詳しくは、アプリケーションサーバーに付属するマニュアルを参照してください。

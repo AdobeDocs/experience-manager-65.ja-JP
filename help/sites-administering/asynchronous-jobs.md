@@ -7,14 +7,12 @@ feature: Developing
 role: Developer
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 100%
-
+source-wordcount: '806'
+ht-degree: 97%
 ---
-
 # 非同期操作 {#asynchronous-operations}
 
-Adobe Experience Manager では、パフォーマンスを悪化させないために、長時間実行されてリソースを集中的に消費する特定の操作は、非同期的に処理されます。非同期処理では複数のジョブがキューに入れられ、システムリソースの可用性に応じて順に実行されます。
+Adobe Experience Manager では、パフォーマンスを悪化させないために、長時間実行されてリソースを集中的に消費する特定の操作は、非同期的に処理されます。 非同期処理では複数のジョブがキューに入れられ、システムリソースの可用性に応じて順に実行されます。
 
 次のような操作が含まれます。
 
@@ -28,7 +26,7 @@ Adobe Experience Manager では、パフォーマンスを悪化させないた�
 
 >[!NOTE]
 >
->デフォルトでは、非同期ジョブは並行して実行されます。*`n`* を CPU コアの数とすると、デフォルトでは *`n/2`* のジョブを並行して実行できます。ジョブキューのカスタム設定を使用するには、Web コンソールから **[!UICONTROL Async Operation Default Queue Config]** と **Async Operation Page Move and Rollout Config** を変更します。
+>デフォルトでは、非同期ジョブは並行して実行されます。 *`n`* を CPU コアの数とすると、デフォルトでは *`n/2`* のジョブを並行して実行できます。 ジョブキューのカスタム設定を使用するには、Web コンソールから **[!UICONTROL Async Operation Default Queue Config]** と **Async Operation Page Move and Rollout Config** を変更します。
 >
 >詳しくは、[キューの設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)を参照してください。
 
@@ -44,7 +42,7 @@ AEM が操作を非同期で処理する場合は常に、[インボックス](/
 
    ![非同期操作のステータスと詳細](assets/async-operation-status.png)
 
-   特定の操作の進行状況を確認するには、「**[!UICONTROL ステータス]**」列の値を参照します。進行状況に応じて、次のいずれかのステータスが表示されます。
+   特定の操作の進行状況を確認するには、「**[!UICONTROL ステータス]**」列の値を参照します。 進行状況に応じて、次のいずれかのステータスが表示されます。
 
    * **[!UICONTROL アクティブ]**：操作を処理中です
 
@@ -66,7 +64,7 @@ AEM が操作を非同期で処理する場合は常に、[インボックス](/
 
    ![job_details](assets/async-job-details.png)
 
-1. リストから操作を削除するには、ツールバーの「**[!UICONTROL 削除]**」を選択します。詳細を CSV ファイルでダウンロードするには、「**[!UICONTROL ダウンロード]**」をクリックします。
+1. リストから操作を削除するには、ツールバーの「**[!UICONTROL 削除]**」を選択します。 詳細を CSV ファイルでダウンロードするには、「**[!UICONTROL ダウンロード]**」をクリックします。
 
    >[!NOTE]
    >
@@ -74,9 +72,9 @@ AEM が操作を非同期で処理する場合は常に、[インボックス](/
 
 ## 完了したジョブをパージ {#purging-completed-jobs}
 
-AEM は、毎日午前 1 時にパージジョブを実行して、1 日以上経過した完了済みの非同期ジョブを削除します。
+AEMでは、毎日01:00にパージジョブを実行し、1日以上経過した完了した非同期ジョブを削除します。
 
-パージジョブのスケジュールと、完了済みジョブの詳細を削除するまでの保持期間は、変更することができます。任意の時点で詳細を保持する完了済みジョブの最大数を設定することもできます。
+パージジョブのスケジュールと、完了済みジョブの詳細を削除するまでの保持期間は、変更することができます。 任意の時点で詳細を保持する完了済みジョブの最大数を設定することもできます。
 
 1. グローバルナビゲーションで、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;をクリックします。
 1. **[!UICONTROL Adobe Granite Async Jobs Purge Scheduled Job]** ジョブを開きます。
@@ -103,7 +101,7 @@ AEM で特定の操作を非同期で処理するように、アセット、ペ�
 
    ![アセット削除しきい値](assets/async-delete-threshold.png)
 
-1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます例えば、成功、失敗です。
+1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます 例えば、成功、失敗です。
 1. 変更を保存します。
 
 ### 非同期アセット移動操作を設定 {#configuring-asynchronous-move-operations}
@@ -116,14 +114,14 @@ AEM で特定の操作を非同期で処理するように、アセット、ペ�
 
    ![アセット移動しきい値](assets/async-move-threshold.png)
 
-1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます例えば、成功、失敗です。
+1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます 例えば、成功、失敗です。
 1. 変更を保存します。
 
 ### 非同期 MSM 操作を設定 {#configuring-asynchronous-msm-operations}
 
 1. グローバルナビゲーションで、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;をクリックします。
 1. Web コンソールで、「**[!UICONTROL Async Page Move Operation Job Processing Configuration]**」を開きます。
-1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます例えば、成功、失敗です。
+1. 「**メール通知を有効にする**」オプションを選択すると、このジョブステータスに関するメール通知を受信できます 例えば、成功、失敗です。
 
    ![MSM 設定](assets/async-msm.png)
 

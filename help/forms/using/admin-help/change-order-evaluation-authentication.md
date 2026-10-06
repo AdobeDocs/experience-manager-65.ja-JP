@@ -1,5 +1,5 @@
 ---
-title: 認証評価の順序を変更する
+title: 認証評価の順序の変更
 description: AEM Forms が複数の認証プロバイダーを評価する順序を変更できます。
 contentOwner: admin
 content-type: reference
@@ -10,21 +10,19 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 100%
-
 ---
-
-# 認証評価の順序を変更する {#change-the-order-of-evaluation-for-authentication}
+# 認証評価の順序の変更 {#change-the-order-of-evaluation-for-authentication}
 
 >[!NOTE]
 > 
 > ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
-複数の認証プロバイダーを設定した場合、AEM Forms による認証評価の順序を変更できます。config.xml ファイルにリストされている認証プロバイダーの順序によって、認証評価の順序が決まります。
+複数の認証プロバイダーを設定した場合、AEM Forms による認証評価の順序を変更できます。 config.xml ファイルにリストされている認証プロバイダーの順序によって、認証評価の順序が決まります。
 
-1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
+1. 管理コンソールで、設定／ユーザー管理／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. ファイルに現在の設定をエクスポートするには、「エクスポート」をクリックして別の場所に設定ファイルを保存します。
 1. ファイル内で次のノードを見つけます。
 
@@ -48,5 +46,5 @@ ht-degree: 100%
 
    `<entry key="order" value="3" />` で、各ノードの値を編集して認証評価の順序を設定します。
 
-1. 更新したファイルをインポートするには、User Management で、「設定ファイルのインポートとエクスポート」をクリックします。
+1. 更新したファイルをインポートするには、ユーザー管理で、「設定ファイルのインポートとエクスポート」をクリックします。
 1. 「参照」をクリックしてファイルを探し、「インポート」をクリックして「OK」をクリックします。

@@ -1,35 +1,38 @@
 ---
 title: XMP ユーティリティの操作
+
 description: XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートして、PDF ドキュメントから XMP メタデータを取得して保存します。
+
+
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
+
 role: Developer
 exl-id: cff65f74-ba95-438e-88a4-5ec7d22aafba
 solution: Experience Manager, Experience Manager Forms
+
 feature: Adaptive Forms,Document Services,APIs & Integrations
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1401'
 ht-degree: 100%
-
 ---
-
 # XMP ユーティリティの操作 {#working-with-xmp-utilities}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
 **XMP ユーティリティサービスについて**
 
-PDF ドキュメントにはメタデータが含まれます。メタデータは、ドキュメントの内容と区別されるドキュメントに関する情報（テキストやグラフィックなど）です。Adobe Extensive Metadata Platform（XMP）は、ドキュメントのメタデータを処理するための標準です。
+PDF ドキュメントにはメタデータが含まれます。メタデータは、ドキュメントの内容と区別されるドキュメントに関する情報（テキストやグラフィックなど）です。 Adobe Extensible Metadata Platform（XMP）は、ドキュメントのメタデータを処理するための標準です。
 
 XMP ユーティリティサービスでは、XMP メタデータを PDF ドキュメントから取得して保存し、XMPメタデータを PDF ドキュメントにインポートすることができます。
 
 XMP ユーティリティサービスを使用して、次のタスクを実行できます。
 
-* メタデータを PDF ドキュメントにインポートします。（[メタデータを PDF ドキュメントにインポート](xmp-utilities.md#importing-metadata-into-pdf-documents)を参照。）
-* PDF ドキュメントからメタデータをエクスポート（[PDF ドキュメントからのメタデータのエクスポート](xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照。）
+* メタデータを PDF ドキュメントにインポートします。 （[メタデータを PDF ドキュメントにインポート](xmp-utilities.md#importing-metadata-into-pdf-documents)を参照。）
+* PDF ドキュメントからメタデータをエクスポート （[PDF ドキュメントからのメタデータのエクスポート](xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照。）
 
 >[!NOTE]
 >
@@ -37,17 +40,17 @@ XMP ユーティリティサービスを使用して、次のタスクを実行�
 
 ## メタデータの PDF ドキュメントへのインポート {#importing-metadata-into-pdf-documents}
 
-XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートできます。メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDF ドキュメントに関する情報を提供します。メタデータは、次の図に示すように、ドキュメントのドキュメントプロパティダイアログに表示できます。
+XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートできます。 メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDF ドキュメントに関する情報を提供します。 メタデータは、次の図に示すように、ドキュメントのドキュメントプロパティダイアログに含まれる場合があります。
 
 ![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
 
-プログラムによってメタデータを PDF ドキュメントにインポートするには、メタデータ値を指定する既存の XML ドキュメントを使用するか、タイプ `XMPUtilityMetadata` のオブジェクトを使用できます。（[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照。）
+プログラムによってメタデータを PDF ドキュメントにインポートするには、メタデータ値を指定する既存の XML ドキュメントを使用するか、タイプ `XMPUtilityMetadata` のオブジェクトを使用できます。 （[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照。）
 
 >[!NOTE]
 >
 >この節では、XML ドキュメントを使用してメタデータを PDF ドキュメントにインポートする方法を説明します。
 
-次の XML コードには、以前のイラストに対応するメタデータ値が含まれています。例えば、キーワードを指定する太字の項目に注意してください。
+次の XML コードには、以前のイラストに対応するメタデータ値が含まれています。 例えば、キーワードを指定する太字の項目に注意してください。
 
 ```xml
  <?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -126,11 +129,11 @@ XMP メタデータを PDF ドキュメントにインポートするには、�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **XMPUtilityService クライアントを作成**
 
-プログラムで XMP ユーティリティの操作をプログラムで実行する前に、XMPUtilityService クライアントを作成する必要があります。Java API では、これは `XMPUtilityServiceClient` オブジェクトを作成することによって実現できます。Web サービス API では、これは `XMPUtilityServiceService` オブジェクトを使用することによって実現できます。
+プログラムで XMP ユーティリティの操作をプログラムで実行する前に、XMPUtilityService クライアントを作成する必要があります。 Java API では、これは `XMPUtilityServiceClient` オブジェクトを作成することによって実現できます。 Web サービス API では、これは `XMPUtilityServiceService` オブジェクトを使用することによって実現できます。
 
 **XMP メタデータインポート操作を呼び出す**
 
@@ -176,11 +179,11 @@ XMP ユーティリティ API（Java）を使用して XMP メタデータをイ
    * PDF ファイルを表す `com.adobe.idp.Document` オブジェクト。
    * インポートするメタデータを含む XML ファイルを表す `com.adobe.idp.Document` オブジェクト。
 
-   どちらの場合も、返される値は新しくインポートされたメタデータを含む PDF ファイルを表す `com.adobe.idp.Document` オブジェクトです。このオブジェクトをディスクに保存できます。
+   どちらの場合も、返される値は新しくインポートされたメタデータを含む PDF ファイルを表す `com.adobe.idp.Document` オブジェクトです。 このオブジェクトをディスクに保存できます。
 
 **関連トピック**
 
-[メタデータの PDF ドキュメントへの読み込み](xmp-utilities.md#importing-metadata-into-pdf-documents)
+[メタデータの PDF ドキュメントへのインポート](xmp-utilities.md#importing-metadata-into-pdf-documents)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -192,8 +195,8 @@ XMP ユーティリティ web サービス API を使用してプログラムで
 
 1. プロジェクトファイルを含める
 
-   * XMP Utilities サービスの WSDL ファイルを使用する Microsoft .NET クライアントアセンブリを作成します。（[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください）。
-   * Microsoft .NET クライアントアセンブリを参照します（[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を参照してください）。
+   * XMP Utilities サービスの WSDL ファイルを使用する Microsoft .NET クライアントアセンブリを作成します。 （[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください）。
+   * Microsoft .NET クライアントアセンブリを参照します （[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を参照してください）。
 
 1. XMPUtilityService クライアントを作成
 
@@ -213,7 +216,7 @@ XMP ユーティリティ web サービス API を使用してプログラムで
    * PDF ファイルを表す `BLOB` オブジェクト。
    * インポートするメタデータを含む XML ファイルを表す `BLOB` オブジェクト。
 
-   どちらの場合も、返される値は新しくインポートされたメタデータを含む PDF ファイルを表す `BLOB` オブジェクトです。このオブジェクトをディスクに保存できます。
+   どちらの場合も、返される値は新しくインポートされたメタデータを含む PDF ファイルを表す `BLOB` オブジェクトです。 このオブジェクトをディスクに保存できます。
 
 **関連トピック**
 
@@ -243,11 +246,11 @@ PDF ドキュメントから XMP メタデータをエクスポートするに�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **XMPUtilityService クライアントを作成**
 
-プログラムで XMP ユーティリティの操作をプログラムで実行する前に、XMPUtilityService クライアントを作成する必要があります。Java API では、これは `XMPUtilityServiceClient` オブジェクトを作成することで実行されます。Web サービス API でこれを実行するには、`XMPUtilityServiceService` オブジェクトを使用します。
+プログラムで XMP ユーティリティの操作を実行する前に、XMPUtilityService クライアントを作成する必要があります。 Java API では、これは `XMPUtilityServiceClient` オブジェクトを作成することで実行されます。 Web サービス API でこれを実行するには、`XMPUtilityServiceService` オブジェクトを使用します。
 
 **XMPメタデータのエクスポート操作を呼び出す**
 
@@ -281,13 +284,13 @@ XMP Utilities API（Java）を使用して XMP メタデータをエクスポー
 
 1. XMP メタデータのインポート操作の呼び出し
 
-   XMP メタデータを検査するには、`XMPUtilityServiceClient` オブジェクトの `exportMetadata` メソッドを呼び出して、PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、取得したメタデータを含む `XMPUtilityMetadata` オブジェクトを返します。
+   XMP メタデータを検査するには、`XMPUtilityServiceClient` オブジェクトの `exportMetadata` メソッドを呼び出して、PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。 このメソッドは、取得したメタデータを含む `XMPUtilityMetadata` オブジェクトを返します。
 
-   XMP メタデータを取得して保存するには、`XMPUtilityServiceClient` オブジェクトの `exportXMP` メソッドを呼び出して、PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、取得したメタデータを含む `com.adobe.idp.Document` オブジェクトを返します。このオブジェクトは、XML ファイルとしてディスクに保存できます。
+   XMP メタデータを取得して保存するには、`XMPUtilityServiceClient` オブジェクトの `exportXMP` メソッドを呼び出して、PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。 このメソッドは、取得したメタデータを含む `com.adobe.idp.Document` オブジェクトを返します。このオブジェクトは、XML ファイルとしてディスクに保存できます。
 
 **関連項目**
 
-[PDF ドキュメントからのメタデータへの書き出し](xmp-utilities.md#exporting-metadata-from-pdf-documents)
+[PDF ドキュメントからのメタデータの書き出し](xmp-utilities.md#exporting-metadata-from-pdf-documents)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -308,9 +311,9 @@ XMP Utilities API（web サービス）を使用して XMP メタデータをエ
 
 1. XMP メタデータのインポート操作の呼び出し
 
-   XMP メタデータを検査するには、`XMPUtilityServiceClient` オブジェクトの `exportMetadata` メソッドを呼び出して、PDF ファイルを表す `BLOB` オブジェクトを渡します。このメソッドは、取得したメタデータを含む `XMPUtilityMetadata` オブジェクトを返します。
+   XMP メタデータを検査するには、`XMPUtilityServiceClient` オブジェクトの `exportMetadata` メソッドを呼び出して、PDF ファイルを表す `BLOB` オブジェクトを渡します。 このメソッドは、取得したメタデータを含む `XMPUtilityMetadata` オブジェクトを返します。
 
-   XMP メタデータを取得して保存するには、`XMPUtilityServiceClient` オブジェクトの `exportXMP` メソッドを呼び出して、PDF ファイルを表す `BLOB` オブジェクトを渡します。このメソッドは、取得したメタデータを含む `BLOB` オブジェクトを返します。このオブジェクトは、XML ファイルとしてディスクに保存できます。
+   XMP メタデータを取得して保存するには、`XMPUtilityServiceClient` オブジェクトの `exportXMP` メソッドを呼び出して、PDF ファイルを表す `BLOB` オブジェクトを渡します。 このメソッドは、取得したメタデータを含む `BLOB` オブジェクトを返します。このオブジェクトは、XML ファイルとしてディスクに保存できます。
 
 **関連項目**
 

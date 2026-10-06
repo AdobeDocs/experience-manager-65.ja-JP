@@ -11,11 +11,9 @@ feature: Security
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '306'
 ht-degree: 100%
-
 ---
-
 # インストール時の管理者パスワードの設定{#configure-the-admin-password-on-installation}
 
 ## 概要 {#overview}
@@ -28,7 +26,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->この機能は Felix コンソールには対応しておらず、このコンソールのパスワードについては手動で変更する必要があります。詳しくは、関連する[セキュリティチェックリストの節](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)を参照してください。
+>この機能は Felix コンソールには対応しておらず、このコンソールのパスワードについては手動で変更する必要があります。 詳しくは、関連する[セキュリティチェックリストの節](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)を参照してください。
 
 ## 使用方法 {#how-do-i-use-it}
 
@@ -50,7 +48,7 @@ java -jar aem6.3.jar
 
 ## -nointeractive フラグの使用 {#using-the-nointeractive-flag}
 
-また、プロパティファイルでパスワードを指定することもできます。これは、`-Dadmin.password.file` システムプロパティと組み合わせた `-nointeractive` フラグを使用して行われます。
+また、プロパティファイルでパスワードを指定することもできます。 これは、`-Dadmin.password.file` システムプロパティと組み合わせた `-nointeractive` フラグを使用して行われます。
 
 次に例を示します。
 
@@ -66,4 +64,4 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->`-Dadmin.password.file` システムプロパティを使用せずに `-nointeractive` パラメーターだけを使用した場合は、AEM ではデフォルトの管理者パスワードが使用され、変更を求めるメッセージは表示されません（基本的に以前のバージョンの動作と同じになります）。インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
+>`-Dadmin.password.file` システムプロパティを使用せずに `-nointeractive` パラメーターだけを使用した場合は、AEM ではデフォルトの管理者パスワードが使用され、変更を求めるメッセージは表示されません（基本的に以前のバージョンの動作と同じになります）。 インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
