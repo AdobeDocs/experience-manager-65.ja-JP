@@ -25,7 +25,7 @@ ht-degree: 97%
 1. 管理コンソールで、設定／ユーザー管理／ドメイン管理をクリックします。
 1. 「新規エンタープライズドメイン」をクリックします。
 1. 「ID」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します （[ドメイン名および ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids)を参照）。
-1. アカウントロックを有効にするかどうかを指定します （[ アカウントロック設定の設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。 デフォルトでは、「アカウントロックを有効にする」が選択されています。
+1. アカウントロックを有効にするかどうかを指定します （[&#x200B; アカウントロック設定の設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。 デフォルトでは、「アカウントロックを有効にする」が選択されています。
 1. 「認証を追加」をクリックし、「認証プロバイダー」リストで、組織が使用している認証メカニズムに応じてプロバイダーを選択します。 選択できる値は、「LDAP」、「Kerberos」、「SAML」または「カスタム」認証プロバイダーです。
 
    LDAP を選択すると、ディレクトリ設定で指定した LDAP サーバーを使用するか、異なる LDAP サーバーを選択して認証に使用することができます。 異なるサーバーを選択する場合、ユーザーは両方の LDAP サーバーに存在する必要があります。
@@ -41,7 +41,7 @@ ht-degree: 97%
 1. 管理コンソールで、設定／ユーザー管理／ドメイン管理をクリックします。
 1. 「新規ローカルドメイン」をクリックします。
 1. 「ID」ボックスにドメインの一意の ID を入力し、「名前」ボックスにドメインのわかりやすい名前を入力します （[ドメイン名および ID に関する重要な考慮事項](adding-domains.md#important-considerations-for-domain-names-and-ids)を参照）。
-1. アカウントロックを有効にするかどうかを指定して、「OK」をクリックします （[ アカウントロック設定の設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。 デフォルトでは、「アカウントロックを有効にする」が選択されています。
+1. アカウントロックを有効にするかどうかを指定して、「OK」をクリックします （[&#x200B; アカウントロック設定の設定](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)を参照）。 デフォルトでは、「アカウントロックを有効にする」が選択されています。
 
 ## ハイブリッドドメインを追加 {#add-a-hybrid-domain}
 

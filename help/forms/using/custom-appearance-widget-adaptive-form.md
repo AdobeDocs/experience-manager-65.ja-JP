@@ -128,9 +128,9 @@ Maven アーキタイプは、カスタム外観作成の開始点です。 使�
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
-   <td>HTML イベントをXFA イベントに変換するマップを返します。<br /> <code class="code">{
+   <td>HTML イベントをXFA イベントに変換するマップを返します。<br /> <code class="code">&lbrace;
       blur: XFA_EXIT_EVENT,
-      }</code><br /> この例は、<code>blur</code>がHTML イベントであり、<code>XFA_EXIT_EVENT</code>が対応するXFA イベントであることを示しています。 </td>
+      &rbrace;</code><br /> この例は、<code>blur</code>がHTML イベントであり、<code>XFA_EXIT_EVENT</code>が対応するXFA イベントであることを示しています。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>

@@ -234,7 +234,7 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-コマンドを実行したら、すべての証明書がキーストアに送信されたことを確認します。 **キーストア**のエントリを次の場所から確認します。
+コマンドを実行したら、すべての証明書がキーストアに送信されたことを確認します。 **キーストア**&#x200B;のエントリを次の場所から確認します。
 [http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### TLS 1.3 接続の有効化 {#enabling-tls-connection}
