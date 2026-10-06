@@ -21,7 +21,7 @@ ht-degree: 80%
 
 AEM インスタンスを標準でインストールすると、サイドキックで直ちに様々なコンポーネントを使用できます。
 
-これらのほかにも、さまざまなコンポーネントを利用できます。 デザインモードを使用して[このようなコンポーネントを有効または無効にできます](#enabledisablecomponentsusingdesignmode)。 ページ上で有効にして配置すると、デザインモードを使用して、属性パラメーターを編集してコンポーネントデザインの側面](#configuringcomponentsusingdesignmode)を[設定できます。
+これらのほかにも、さまざまなコンポーネントを利用できます。 デザインモードを使用して[このようなコンポーネントを有効または無効にできます](#enabledisablecomponentsusingdesignmode)。 ページ上で有効にして配置すると、デザインモードを使用して、属性パラメーターを編集してコンポーネントデザインの側面[&#128279;](#configuringcomponentsusingdesignmode)を設定できます。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 >[!NOTE]
 >
->[ について詳しくは、](/help/sites-developing/components.md#paragraphsystem)コンポーネントの開発[および](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components)テンプレートとコンポーネントの使用に関するガイドライン`parsys`を参照してください。
+>[&#x200B; について詳しくは、](/help/sites-developing/components.md#paragraphsystem)コンポーネントの開発[および](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components)テンプレートとコンポーネントの使用に関するガイドライン`parsys`を参照してください。
 
 ## コンポーネントを有効／無効にする {#enable-disable-components}
 
