@@ -10,14 +10,12 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 100%
-
+source-wordcount: '1034'
+ht-degree: 94%
 ---
-
 # AEM Communities 6.5 におけるリポジトリの再構築 {#repository-restructuring-for-aem-communities-in}
 
-[AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)の親ページで説明しているように、AEM 6.5 にアップグレードする場合は、このページを参考に、AEM Communities ソリューションに影響を与えるリポジトリ変更に伴う作業量を評価する必要があります。一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
+[AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)の親ページで説明しているように、AEM 6.5 にアップグレードする場合は、このページを参考に、AEM Communities ソリューションに影響を与えるリポジトリ変更に伴う作業量を評価する必要があります。 一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
 
 **6.5 へのアップグレード時におこなう変更**
 
@@ -52,10 +50,10 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードのプロパティ <code>mergeList</code> を <code>true</code> に設定し、<code>nt:unstructured</code> 子ノードを追加します。</p> </td>
+   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。 Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードのプロパティ <code>mergeList</code> を <code>true</code> に設定し、<code>nt:unstructured</code> 子ノードを追加します。</p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -75,10 +73,10 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードのプロパティ <code>mergeList</code> を <code>true</code> に設定し、<code>nt:unstructured</code> 子ノードを追加します。</p> </td>
+   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。 Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードのプロパティ <code>mergeList</code> を <code>true</code> に設定し、<code>nt:unstructured</code> 子ノードを追加します。</p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -101,7 +99,7 @@ ht-degree: 100%
    <td>Communities 設定をクリーンアップするために、遅延移行タスクを利用できます。<br /> <p>タスクはウォッチワードを <code>/etc/watchwords</code> から <code>/conf/global/settings/community/watchwords</code> に移動します。</p> <p>カスタマイズしたウォッチワードが SCM に格納されている場合は、それらを <code>/apps/settings/...</code> にデプロイしてください。また、優先されるオーバーレイ <code>/conf/global/settings/...</code> 設定がないようにする必要があります。</p> <p>移行タスクで <code>/etc</code> の場所が削除されます。</p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -123,11 +121,11 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>手動移行が必要です。</p> <p>インスタンスがバッジ／スコアルールをカスタマイズしている場合、すべてのルールをバケットの下に自動的に配置する方法はありません。サイトに使用する conf バケット（グローバルまたはサイト固有）に関する顧客からの情報が必要です。</p> <p>サイトのバッジおよびスコア設定に使用できる UI はありません。</p> <p>新しいリポジトリ構造に合わせるには、次の手順に従います。</p>
+   <td><p>手動移行が必要です。</p> <p>インスタンスがバッジ／スコアルールをカスタマイズしている場合、すべてのルールをバケットの下に自動的に配置する方法はありません。 サイトに使用する conf バケット（グローバルまたはサイト固有）に関する顧客からの情報が必要です。</p> <p>サイトのバッジおよびスコア設定に使用できる UI はありません。</p> <p>新しいリポジトリ構造に合わせるには、次の手順に従います。</p>
     <ol>
      <li><strong>ツール</strong>の下の<strong>設定ブラウザー</strong>を使用して、サイトコンテキストバケットを作成します。</li>
      <li>サイトのルートに移動します。</li>
-     <li><code>cq:confproperty</code> を、すべての設定を格納するバケットのパスに設定します。同じ設定をサイトの「<strong>編集ウィザード - クラウド設定入力</strong>」で行うこともできます。</li>
+     <li><code>cq:confproperty</code> を、すべての設定を格納するバケットのパスに設定します。 同じ設定をサイトの「<strong>編集ウィザード - クラウド設定入力</strong>」で行うこともできます。</li>
      <li>関連するバッジルールおよびスコアルールを <code>/etc/community/*</code> から、前の手順で作成したサイトコンテキストバケットに移動します。</li>
      <li>新しいルールの場所への相対参照を使用するように、サイトルートのバッジルールとスコアルールの各プロパティを調整します。
       <ol>
@@ -137,7 +135,7 @@ ht-degree: 100%
     </ol> <p> </p> <p>最後に、リソースを削除してクリーンアップします。 <code>/etc/community/badging</code></p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -160,7 +158,7 @@ ht-degree: 100%
    <td>該当なし</td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -185,7 +183,7 @@ ht-degree: 100%
     <ol>
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ol>
-       <li><strong>ツール／クラウドサービス／Facebook ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Facebook ソーシャルログイン設定を手動で再作成します。<br /> または <br /> </li>
+       <li>AEM オーサリング UI （<strong> ツール/Cloud Services/Facebook Social Login Configuration</strong>）を使用して、新しいFacebook ソーシャルログイン設定を手動で再作成します。<br /> または<br /> </li>
        <li>新しい Facebook クラウド設定をすべて、以前の場所から新しい適切な場所（<code>/conf/global or /conf/&lt;tenant&gt;</code> の下）にコピーします。</li>
       </ol> </li>
      <li>新しい Facebook ソーシャルログイン設定を参照するように AEM Communities サイトのルートを更新します。それには、<code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li>
@@ -193,7 +191,7 @@ ht-degree: 100%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -216,7 +214,7 @@ ht-degree: 100%
    <td>該当なし<br /> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -241,7 +239,7 @@ ht-degree: 100%
     <ol>
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ol>
-       <li><strong>ツール／クラウドサービス／Pinterest ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Pinterest ソーシャルログイン設定を手動で再作成します。<br />または</li>
+       <li>AEM オーサリング UI （<strong> ツール/Cloud Services/Pinterest Social Login Configuration</strong>）を使用して、新しいPinterest Social Login Configurationを手動で再作成します。<br /> または</li>
        <li>新しい Pinterest クラウド設定をすべて、以前の場所から適切な新しい場所（<code>/conf/global or /conf/&lt;tenant&gt;</code> の下）にコピーします。</li>
       </ol> </li>
      <li>新しい Pinterest ソーシャルログイン設定を参照するように AEM Communities サイトのルートを更新します。それには、<code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li>
@@ -249,7 +247,7 @@ ht-degree: 100%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -282,7 +280,7 @@ ht-degree: 100%
     </ol> <p>クリーンアップ：リソースを削除する <code>/etc/community/scoring</code></p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -307,7 +305,7 @@ ht-degree: 100%
     <ol>
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ol>
-       <li><strong>ツール／クラウドサービス／Twitter ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Twitter ソーシャルログイン設定を手動で再作成します。<br /> または <br /> </li>
+       <li>AEM オーサリング UI （<strong> ツール/Cloud Services/Twitter Social Login Configuration</strong>）を使用して、新しいTwitter ソーシャルログイン設定を手動で再作成します。<br /> または<br /> </li>
        <li>新しい Twitter クラウド設定をすべて、以前の場所から適切な新しい場所（<code>/conf/global or /conf/&lt;tenant&gt;</code> の下）にコピーします。</li>
       </ol> </li>
      <li>新しい Twitter ソーシャルログイン設定を参照するように AEM Communities サイトのルートを更新します。それには、<code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li>
@@ -315,7 +313,7 @@ ht-degree: 100%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>

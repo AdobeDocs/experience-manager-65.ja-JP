@@ -12,20 +12,18 @@ feature: Authoring
 role: User
 source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '227'
 ht-degree: 100%
-
 ---
-
 # コンポーネント{#components}
 
-Adobe Experience Manager（AEM）には、すぐに使用できる様々なコンポーネントが用意されており、web サイト作成者は包括的な機能を使用できます。これらの機能は、[ページの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)時に使用でき、フィルタリングに役立つように主な機能領域（コンポーネントグループ）別にグループ化されています。
+Adobe Experience Manager（AEM）には、すぐに使用できる様々なコンポーネントが用意されており、web サイト作成者は包括的な機能を使用できます。 これらの機能は、[ページの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)時に使用でき、フィルタリングに役立つように主な機能領域（コンポーネントグループ）別にグループ化されています。
 
 >[!CAUTION]
 >
 >ここでは、標準の AEM インストールでそのまま使用できるコンポーネントについてのみ説明します。
 >
->インスタンスによっては、要件に合わせて明示的に開発されたカスタマイズコンポーネントが存在する場合があります。これらは、ここで説明するいくつかのコンポーネントと同じ名前の場合があります。
+>インスタンスによっては、要件に合わせて明示的に開発されたカスタマイズコンポーネントが存在する場合があります。 これらは、ここで説明するいくつかのコンポーネントと同じ名前の場合があります。
 
 ## コンポーネント - 主な領域 {#components-major-areas}
 
@@ -37,8 +35,8 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [e コマース](/help/commerce/cif-classic/administering/ecommerce.md)
 
-  AEM の e コマース機能にも様々なコンポーネントが用意されており、これらのコンポーネントは **コマース**&#x200B;グループに格納されています。実際の使用方法は、使用しているコマースエンジンによって異なります。
+  AEM の e コマース機能にも様々なコンポーネントが用意されており、これらのコンポーネントは **コマース**&#x200B;グループに格納されています。 実際の使用方法は、使用しているコマースエンジンによって異なります。
 
-## デザインモードでのコンポーネントの設定  {#using-design-mode-to-configure-components}
+## デザインモードでのコンポーネントの設定 {#using-design-mode-to-configure-components}
 
-作成者が標準インストールのサイドキックからアクセスできるコンポーネントに加えて、他の様々なコンポーネントも使用できます。このようなコンポーネントを有効または無効にして、特定のコンポーネントのパラメーターを編集するには、[デザインモード](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components)を使用します。
+作成者が標準インストールのサイドキックからアクセスできるコンポーネントに加えて、他の様々なコンポーネントも使用できます。 このようなコンポーネントを有効または無効にして、特定のコンポーネントのパラメーターを編集するには、[デザインモード](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components)を使用します。
