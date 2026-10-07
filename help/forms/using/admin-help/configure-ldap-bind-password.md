@@ -10,23 +10,21 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
-workflow-type: ht
-source-wordcount: '195'
+workflow-type: tm+mt
+source-wordcount: '196'
 ht-degree: 100%
-
 ---
-
 # LDAP バインドパスワードの設定{#configure-the-ldap-bind-password}
 
 >[!NOTE]
 > 
 > ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
-セキュリティ上の問題を防ぐため、書き出された設定ファイル（config.xml）のバインドパスワードフィールドは設定されていません。設定ファイルを別のシステムに読み込む前に、このパスワードを設定してください。このパスワードは、データベースに格納されている既存のパスワードを上書きします。パスワードが null の場合は、既存の null 以外のパスワード値は上書きされません。
+セキュリティ上の問題を防ぐため、書き出された設定ファイル（config.xml）のバインドパスワードフィールドは設定されていません。 設定ファイルを別のシステムに読み込む前に、このパスワードを設定してください。 このパスワードは、データベースに格納されている既存のパスワードを上書きします。 パスワードが null の場合は、既存の null 以外のパスワード値は上書きされません。
 
-1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
+1. 管理コンソールで、設定／ユーザー管理／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. ファイルに現在の設定をエクスポートするには、「エクスポート」をクリックして別の場所に設定ファイルを保存します。
-1. ファイル内で、`Domains`／*[自分のドメイン名]*／`DirectoryConfigs`／`LDAPGroupConfig` ノードを探します。次は例です。
+1. ファイル内で、`Domains`／*[自分のドメイン名]*／`DirectoryConfigs`／`LDAPGroupConfig` ノードを探します。 次は例です。
 
    ```xml
     <node name="LDAPGroupConfig">
@@ -41,7 +39,7 @@ ht-degree: 100%
 
    `bindpassword` の値を入力して変更を保存します。
 
-1. ファイル内で、`Domains`／*[自分のドメイン名]*／`DirectoryConfigs`／`LDAPGroupConfig`／`LDAPUserConfig` ノードを探します。次は例です。
+1. ファイル内で、`Domains`／*[自分のドメイン名]*／`DirectoryConfigs`／`LDAPGroupConfig`／`LDAPUserConfig` ノードを探します。 次は例です。
 
    ```xml
     <node name="LDAPUserConfig">
@@ -56,5 +54,5 @@ ht-degree: 100%
 
    `bindpassword` の値を入力して変更を保存します。
 
-1. 更新したファイルをインポートするには、User Management で、「設定ファイルのインポートとエクスポート」をクリックします。
+1. 更新したファイルをインポートするには、ユーザー管理で、「設定ファイルのインポートとエクスポート」をクリックします。
 1. 「参照」をクリックしてファイルを探し、「インポート」をクリックして「OK」をクリックします。

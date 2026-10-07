@@ -11,21 +11,19 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 100%
-
+source-wordcount: '196'
+ht-degree: 94%
 ---
-
 # ユーザーアバターの表示 {#displaying-the-user-avatar}
 
-ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspace を設定して LDAP サーバーなどのデータベースからユーザー画像を選択できます。
+ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。 また、組織階層の直接レポートのアバターはマネージャービューに表示されます。 AEM Forms Workspace を設定して LDAP サーバーなどのデータベースからユーザー画像を選択できます。
 
 >[!NOTE]
 >
->サポートされているユーザー画像の縦横比は 1：1 です。
+>サポートされているユーザー画像の縦横比は1:1です。
 
-1. 次の手順に記載されている詳細説明を使用して DSC を作成してください。詳細については、[AEM Forms のプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)ガイドの「AEM Forms のコンポーネントの開発」トピックを参照してください。
-1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。Java™ コードスニペットのサンプルを以下に示します。
+1. 次の手順に記載されている詳細説明を使用して DSC を作成してください。 詳細については、[AEM Forms のプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)ガイドの「AEM Forms のコンポーネントの開発」トピックを参照してください。
+1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。 Java™ コードスニペットのサンプルを以下に示します。
 
    ```java
    public class DemoUserImageURLProviderService {
@@ -40,9 +38,9 @@ ht-degree: 100%
    }
    ```
 
-1. component.xml ファイルを作成します。spec-id が以下に表示されているコードスニペットと同じであることを確認します。
+1. component.xml ファイルを作成します。 spec-id が以下に表示されているコードスニペットと同じであることを確認します。
 
-   以下にサンプルのコードスニペットを示します。特定の要件に合うようにカスタマイズします。
+   以下にサンプルのコードスニペットを示します。 特定の要件に合うようにカスタマイズします。
 
    ```java
    <component xmlns="https://adobe.com/idp/dsc/component/document">
@@ -82,5 +80,5 @@ ht-degree: 100%
    </component>
    ```
 
-1. Workbench を介して DSC をデプロイします。再起動 `ProcessManagementClientSessionService` サービス。
+1. ワークベンチを介して DSC をデプロイします。 再起動 `ProcessManagementClientSessionService` サービス。
 1. ブラウザーを更新するか、ユーザーでログアウトまたはログインをし直す必要があります。

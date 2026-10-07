@@ -1,6 +1,6 @@
 ---
 title: Designer のインストールと設定
-description: WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。スタンドアロン Designer のインストール方法を説明します。
+description: ワークベンチにバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。 スタンドアロン Designer のインストール方法を説明します。
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
@@ -11,19 +11,17 @@ feature: Forms Designer,Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
 source-git-commit: 8f14518117b3aff1cdb2e033fbfe40d0a903d53f
-workflow-type: ht
-source-wordcount: '826'
-ht-degree: 100%
-
+workflow-type: tm+mt
+source-wordcount: '969'
+ht-degree: 98%
 ---
-
 # Designer のインストールと設定{#installing-and-configuring-designer}
 
 ## 前提条件 {#pre-requisites}
 
 +++ 64 ビット版 AEM Forms Designer の場合（推奨）
 
-* 64 ビット版の [Visual C++ 2019 再頒布可能パッケージ（x64）](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
+* 64 ビット版の [Visual C++ 2019 再頒布可能パッケージ（x64）](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。 インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
 * AEM Forms Designer をインストールまたはアンインストールするには、管理者権限を持っている必要があります。
 * 64 ビット AEM Forms Designerを実行しているシステムには、OpenSSL3 （特に共有ライブラリ `libcrypto-3-x64.dll`）がインストールされている必要があります。\
   このライブラリは、AEM Designerが正しく機能し、**SHAHash** を計算するために必要です。
@@ -32,7 +30,7 @@ ht-degree: 100%
 
 +++ 32 ビット版 AEM Forms Designer の場合
 
-* 32 ビット版の [Visual C++ 2019 再頒布可能パッケージ（x64）](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
+* 32 ビット版の [Visual C++ 2019 再頒布可能パッケージ（x64）](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。 インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
 * AEM Forms Designer をインストールまたはアンインストールするには、管理者権限を持っている必要があります。
 
 +++
@@ -41,22 +39,22 @@ ht-degree: 100%
 >
 >* 64 ビット版の Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）で導入されました。
 >* [AEM Forms サービスパック 21（6.5.21.0）](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)のリリース以降、32 ビット版の Designer は非推奨になりました。
-> * Forms Designer でサポートされているプラットフォームは、AEM Forms でサポートされているプラットフォームと一致します。Forms Designer でサポートされているプラットフォームについて詳しくは、[こちらをクリック](/help/forms/using/aem-forms-jee-supported-platforms.md)してください。
+> * Forms Designer でサポートされているプラットフォームは、AEM Forms でサポートされているプラットフォームと一致します。 Forms Designer でサポートされているプラットフォームについて詳しくは、[こちらをクリック](/help/forms/using/aem-forms-jee-supported-platforms.md)してください。
 
-フォームデザイナーのインストールに関して詳しくは、[よくある質問](#fandq)を参照してください。
+フォーム designer のインストールに関して詳しくは、[よくある質問](#fandq)を参照してください。
 
 ## AEM Forms Designer のインストール {#install-designer}
 
-WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。AEM Forms Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
+ワークベンチにバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。 AEM Forms Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
 
 1. AEM Forms Designer の以前のバージョンが既にインストールされている場合は、そのバージョンをアンインストールします。
 1. 要件に応じて、64 ビット版の AEM Forms Designer（推奨）または 32 ビット版の AEM Forms Designer をダウンロードします。
 
    >[!NOTE]
    > 
-   >* 32 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 20（6.5.20.0）リリースで廃止される予定です。アドビでは、64 ビット版の Forms Designer にアップグレードすることをお勧めします。
+   >* 32 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 20（6.5.20.0）リリースで廃止される予定です。 アドビでは、64 ビット版の Forms Designer にアップグレードすることをお勧めします。
    >* 64 ビット版の Forms Designer は、AEM 6.5 Forms Service Pack 19（6.5.19.0）以降のリリースでのみ使用できます。
-   >* Adobe Experience Manager 6.5 Forms サービスパック 15（6.5.15.0）以降の Forms Designer バージョンには、サービスパックバージョンも含まれています。例えば、サービスパック 15 の場合、バージョン番号は 6.5.15.20221112.1.0 です。この例では、6.5.15 がサービスパックのバージョンです。
+   >* Adobe Experience Manager 6.5 Forms サービスパック 15（6.5.15.0）以降の Forms Designer バージョンには、サービスパックバージョンも含まれています。 例えば、サービスパック 15のバージョン番号は6.5.15.20221112.1.0です。 この例では、6.5.15はサービスパックバージョンです。
 
 1. setup.exe をダブルクリックして、AEM Forms Designer のインストーラーを起動します。
 1. 続行して、「パーソナライズ機能」画面で詳細とシリアル番号を入力します。
@@ -66,19 +64,19 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
    >* Forms Designer のライセンスキーを [アドビライセンス web サイト](https://licensing.adobe.com/)から取得します。
 
 1. 使用許諾契約に同意する場合は、「次へ」をクリックして先に進みます。
-1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。「次へ」をクリックします。
-1. 設定を変更するには、「戻る」をクリックします。Designer をインストールするには、「インストール」をクリックします。
+1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。 「次へ」をクリックします。
+1. 設定を変更するには、「戻る」をクリックします。 Designer をインストールするには、「インストール」をクリックします。
 1. インストールが完了したら、「完了」をクリックします。
 
 または、コマンドラインからパッシブモードもしくはサイレントモードを使用して AEM Forms Designer をインストールすることもできます。
 
-* パッシブコマンドラインインストール：インストーラーにインストールが進行中であることを示す進行状況バーが表示されますが、プロンプトやエラーメッセージは表示されません。起動後は、インストールをキャンセルできません。
+* パッシブコマンドラインインストール：インストーラーにインストールが進行中であることを示す進行状況バーが表示されますが、プロンプトやエラーメッセージは表示されません。 起動後は、インストールをキャンセルできません。
 
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /passive SERIALNUMBER=****-****-****-****-****-****
 ```
 
-* サイレントコマンドラインインストール：インストーラーは、ユーザーインターフェイスを表示せずにインストールを実行します。プロンプト、メッセージ、ダイアログボックスは表示されません。起動後は、インストールをキャンセルできません。
+* サイレントコマンドラインインストール：インストーラーは、ユーザーインターフェイスを表示せずにインストールを実行します。 プロンプト、メッセージ、ダイアログボックスは表示されません。 起動後は、インストールをキャンセルできません。
 
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-****-****-****
@@ -111,19 +109,19 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
 
 ## よくある質問 {#fandq}
 
-* **ユーザーは 64 ビットデザイナーを直接アップグレードまたはインストールできますか？**
-   * はい、ユーザーは 64 ビットデザイナーを直接アップグレードまたはインストールできます。アップグレードするには、[SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) デザイナーのフルインストーラーをインストールし、その上に後続のデザイナーパッチリリースを適用します。
+* **ユーザーは 64 ビット designer を直接アップグレードまたはインストールできますか？**
+  * はい、ユーザーは 64 ビット designer を直接アップグレードまたはインストールできます。 アップグレードするには、[SP19](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/Designer-Patch/sp19_x64/aemforms_designer_6_5_0_wwe_win.zip) designer のフルインストーラーをインストールし、その上に後続の designer パッチリリースを適用します。
 
-     >[!NOTE]
-     > 64 ビットデザイナーにアップグレードする前に、32 ビットデザイナーが存在する場合はそれをアンインストールします。
+    >[!NOTE]
+    > 64 ビット designer にアップグレードする前に、32 ビット designer が存在する場合はそれをアンインストールします。
 
 * **ユーザーは 32 ビットと 64 ビットの両方をシステムにインストールしたままにすることができますか？**
-   * いいえ、32 ビットと 64 ビットのインストールは同じマシンでは動作しません。ユーザーは 32 ビットデザイナーまたは 64 ビットデザイナーのいずれかを使用できます。
+  * いいえ、32 ビットと 64 ビットのインストールは同じマシンでは動作しません。 ユーザーは 32 ビット designer または 64 ビット designer のいずれかを使用できます。
 
-* **ユーザーが 64 ビットデザイナーを使用しているか、32 ビットデザイナーを使用しているかを確認するにはどうすればよいですか？**
-   * Forms Designer のバージョンを確認するには、次の 2 つの方法があります。
+* **ユーザーが 64 ビット designer を使用しているか、32 ビット designer を使用しているかを確認するにはどうすればよいですか？**
+  * Forms Designer のバージョンを確認するには、次の 2 つの方法があります。
 
-      1. Designer を開き、「ヘルプ」に移動し、「Designer について」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、バージョンの最後に 64 ビットと記載されていることがわかります。
-         `6.5.21.20240522.1.161 | 64 bit`
-      1. Designer を開くと、左上に、製品名と 64 ビット情報を含むブランディングアイコンが表示されます。
+    1. Designer を開き、「ヘルプ」に移動し、「Designer について」をクリックすると、Designer のバージョン情報とビット情報が表示されます。例えば、次に示すように、バージョンの最後に 64 ビットと記載されていることがわかります。
+       `6.5.21.20240522.1.161 | 64 bit`
+    1. Designer を開くと、左上に、製品名と 64 ビット情報を含むブランディングアイコンが表示されます。
 
