@@ -200,10 +200,10 @@ Web サイトコンソールには、[ページの現在のステータスに関
 * [編集](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 これはデフォルトのモードで、ページの編集、コンポーネントの追加または削除、その他の変更を行うことができます。
 
-* [ プレビュー](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
+* [&#x200B; プレビュー](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
 このモードでは、最終形式でweb サイトに表示されているかのように、ページをプレビューできます。
 
-* [ デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
+* [&#x200B; デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
 このモードでは、アクセス可能なコンポーネントを設定することで、ページのデザインを編集できます。
 
 >[!NOTE]
