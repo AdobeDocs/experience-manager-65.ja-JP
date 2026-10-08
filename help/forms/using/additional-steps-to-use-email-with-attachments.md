@@ -7,12 +7,10 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '281'
 ht-degree: 100%
-
 ---
-
-# AEM Forms on JEE プラットフォームで添付ファイル付きのメールを受信できない{#unable-to-get-email-with-attachments}
+# AEM Forms on JEE プラットフォームで添付ファイル付きのメールを受信できない問題{#unable-to-get-email-with-attachments}
 
 この問題が該当するのは、次のバージョンです。
 
@@ -39,7 +37,7 @@ ht-degree: 100%
 
 1. `http://<server name>:<port>/lc/system/console/bundles` に移動し、`JavaMail API (com.sun.mail.javax.mail) version 1.6.2` という名前のバンドルを削除します。
 
-1. 手順 3 で取得した `java.mail-1.5.jar` をインストールします。この手順を実行すると、JEE デプロイメントの Sling プロパティが再起動されます。`http://<server name>:<port>/lc/system/console/bundles` にインストールされたバンドルのステータス表示が&#x200B;**アクティブ**&#x200B;になるまで待ちます。
+1. 手順 3 で取得した `java.mail-1.5.jar` をインストールします。 この手順を実行すると、JEE デプロイメントの Sling プロパティが再起動されます。 `http://<server name>:<port>/lc/system/console/bundles` にインストールされたバンドルのステータス表示が&#x200B;**アクティブ**&#x200B;になるまで待ちます。
 
    >メモ：ステータスが&#x200B;**非アクティブ**&#x200B;のままの場合は、**サービスコンソール**&#x200B;から **JBoss®** を再起動します。
 

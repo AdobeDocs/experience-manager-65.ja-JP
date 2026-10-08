@@ -1,21 +1,21 @@
 ---
 title: IntelliJ IDEA を使用して AEM プロジェクトを開発する方法
 description: IntelliJ IDEA を使用してAdobe Experience Manager プロジェクトを開発する方法について説明します。
+
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
+
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '663'
 ht-degree: 100%
-
 ---
-
 # IntelliJ IDEA を使用して AEM プロジェクトを開発する方法{#how-to-develop-aem-projects-using-intellij-idea}
 
 ## 概要 {#overview}
@@ -85,7 +85,7 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 
 #### プロジェクトでの web ファセットの設定 {#set-up-a-web-facet-in-the-project}
 
-デバッグ用の JSP を検索する場所を IntelliJ IDEA で認識する必要があります。IDEA では `content-package-maven-plugin` 設定を解釈できないので、これを手動で設定する必要があります。
+デバッグ用の JSP を検索する場所を IntelliJ IDEA で認識する必要があります。 IDEA では `content-package-maven-plugin` 設定を解釈できないので、これを手動で設定する必要があります。
 
 1. **ファイル／プロジェクト構造**&#x200B;に移動します。
 1. 「**コンテンツ**」モジュールを選択します。
@@ -150,4 +150,4 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 ### IntelliJ IDEA によるバンドルのデバッグ {#debugging-bundles-with-intellij-idea}
 
-標準の汎用リモートデバッグ接続を使用して、バンドル内のコードをデバッグできます。[リモートデバッグに関する Jetbrain のドキュメント](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter)の手順に従ってください。
+標準の汎用リモートデバッグ接続を使用して、バンドル内のコードをデバッグできます。 [リモートデバッグに関する Jetbrain のドキュメント](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter)の手順に従ってください。

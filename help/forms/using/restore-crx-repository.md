@@ -7,16 +7,14 @@ feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '184'
 ht-degree: 100%
-
 ---
-
 # 破損した CRX リポジトリを復元できません {#unable-to-restore-corrupt-crx-repository}
 
 ## 問題 {#issue}
 
-リレーショナルデータベースを使用する JEE 上の AEM Forms の場合、AEM Forms とリレーショナルデータベースをホストするマシンでの時間は常に絶対同期にする必要があります。 これらのマシンの時間が同期しなくなった場合、JEE 上の AEM Forms サーバーの CRX リポジトリにアクセスできなくなる可能性があります。 破損しているように見え、URL 経由でアクセスできなくなる場合があります。この `AuthenticationsupportService missing` エラーが記録されます。
+リレーショナルデータベースを使用する JEE 上の AEM Forms の場合、AEM Forms とリレーショナルデータベースをホストするマシンでの時間は常に絶対同期にする必要があります。 これらのマシンの時間が同期しなくなった場合、JEE 上の AEM Forms サーバーの CRX リポジトリにアクセスできなくなる可能性があります。 破損しているように見え、URL 経由でアクセスできなくなる場合があります。 この `AuthenticationsupportService missing` エラーが記録されます。
 
 ## 前提条件 {#prerequisites}
 
@@ -28,7 +26,7 @@ ht-degree: 100%
 
 1. `oak-core` バンドルを見つけて、実行中かどうかを確認します。
 
-1. 実行されていない場合は、`oak-core` バンドルを再起動します。![「一時停止」ボタン](/help/forms/using/assets/stop.png)アイコンが `oak-core` バンドルの前にある場合、バンドルが実行状態であることを示しています。
+1. 実行されていない場合は、`oak-core` バンドルを再起動します。 ![「一時停止」ボタン](/help/forms/using/assets/stop.png)アイコンが `oak-core` バンドルの前にある場合、バンドルが実行状態であることを示しています。
 
 1. それでも問題が解決されない場合は、バックアップの CRX リポジトリから復元するか、バックアップが使用できない場合は CRX リポジトリを再構築します。
 

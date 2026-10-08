@@ -1,25 +1,25 @@
 ---
-title: 最新の 6.5.15.0 サービスパックがインストールされると、CRX/bundle と開始ページサービスが利用できないというエラーが表示される
-description: 最新の 6.5.15.0 サービスパックがインストールされると、CRX/bundle と開始ページサービスが利用できないというエラーが表示される
+title: 最新の6.5.15.0 サービスパックがインストールされると、CRX/バンドルおよびスタートページサービスが利用できないエラーが発生する
+description: 最新の6.5.15.0 サービスパックがインストールされると、CRX/バンドルおよびスタートページサービスが利用できないエラーが発生する
+SEO Description: Trouble shooting steps to resolve the errors after installing latest 6.5.15.0 service pack
 exl-id: dfe015a3-3a24-41c5-aede-8e086851d62b
 solution: Experience Manager, Experience Manager Forms
+
 role: User, Developer
 feature: Adaptive Forms,AEM Forms on JEE,AEM Forms on OSGi
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 100%
-
+source-wordcount: '368'
+ht-degree: 76%
 ---
-
-# AEM（6.5.15.0）サービスパックのインストール後に、サービスが使用できないというエラーが表示される {#steps-to-resolve-error-after-installing-service-pack}
+# AEM （6.5.15.0） サービスパックのインストール後にサービス使用不可エラーが発生しました {#steps-to-resolve-error-after-installing-service-pack}
 
 ## 問題 {#issue}
 
-[AEM 6.5.15.0 サービスパック](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)のインストール後、次のようなエラーが発生します。
+[AEM 6.5.15.0 サービスパック ](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)をインストールすると、次のようなエラーが発生します。
 * ERROR [FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent ERROR (org.osgi.framework.BundleException: Unable to resolve org.apache.sling.scripting.console
 
-AEM 6.5.15.0 サービスパックをインストールした後、CRX/bundle と開始ページにサービスを利用できないというエラーが表示されます。
+AEM 6.5.15.0 サービスパックのインストール後、CRX/バンドルと開始ページに「サービスが利用できません」というエラーが表示されます。
 
 ## 適用先 {#applies-to}
 
@@ -32,7 +32,7 @@ AEM 6.5.15.0 サービスパックをインストールした後、CRX/bundle �
 >
 >トラブルシューティングの手順は、JBoss EAP 7.4 を除くすべてのアプリケーションサーバーに適用されます。
 
-[AEM 6.5.15.0 サービスパック](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)のインストール後、CRX/bundle と開始ページにサービスを利用できないというエラーが表示される場合は、次の手順を実行します。
+[AEM 6.5.15.0 サービスパック ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)をインストールした後、CRX/バンドルと開始ページにサービスが利用できないエラーが表示された場合は、次の手順を実行します。
 
 1. アプリケーションサーバーを停止します。
 1. `[aem-forms root]\crx-repository\launchpad\felix\bundle52` に移動します。
@@ -41,7 +41,7 @@ AEM 6.5.15.0 サービスパックをインストールした後、CRX/bundle �
 
    >[!NOTE]
    >
-   >`bundle52` の下の `bundle.info` に `org.apache.felix.http.bridge` バンドルが含まれていない場合は、`org.apache.felix.http.bridge` の横にある角括弧内のバンドル番号を確認してください。次に、[aem-forms root]\crx-repository\launchpad\felix\bundle[x] に移動し、次の手順をこの場所で実行します。
+   >`bundle52` の下の `bundle.info` に `org.apache.felix.http.bridge` バンドルが含まれていない場合は、`org.apache.felix.http.bridge` の横にある角括弧内のバンドル番号を確認してください。 次に、[aem-forms root]\crx-repository\launchpad\felix\bundle[x] に移動し、次の手順をこの場所で実行します。
 
 1. 次のURLに移動：`[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`。
 1. `bundle.jar` を検索し、`bundle.jar` の名前を `bundle.jar.bak` に変更します。
