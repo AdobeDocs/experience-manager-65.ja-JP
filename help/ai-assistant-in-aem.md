@@ -77,7 +77,7 @@ AEM の AI アシスタントにアクセスするには、次の要件を満た
 
 **AEM の AI アシスタントにアクセスするには：**
 
-1. Adobe Experience Manager の AI を活用した機能とエージェント型機能のほとんどにアクセスするには、お客様は追加契約を締結する必要があります。 詳しくは、アドビ担当者にお問い合わせください。 生成AIの有効化の仕組みについては、[CX Enterprise アプリケーションの生成AI](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)を参照してください。
+1. Adobe Experience Manager の AI を活用した機能とエージェント型機能のほとんどにアクセスするには、お客様は追加契約を締結する必要があります。 詳しくは、アドビ担当者にお問い合わせください。 生成AIの有効化の仕組みについては、[CX Enterprise アプリケーションの生成AI](https://experienceleague.adobe.com/ja/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)を参照してください。
 
 1. 組織がこの契約書を取得すると、すべてのユーザーがデフォルトで製品知識にAI アシスタントを使用できるようになります。 ユーザーごとの権限やグループごとの権限は必要ありません。
 
