@@ -16,7 +16,7 @@ ht-degree: 76%
 
 ## 問題 {#issue}
 
-[AEM 6.5.15.0 サービスパック ](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)をインストールすると、次のようなエラーが発生します。
+[AEM 6.5.15.0 サービスパック &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)をインストールすると、次のようなエラーが発生します。
 * ERROR [FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent ERROR (org.osgi.framework.BundleException: Unable to resolve org.apache.sling.scripting.console
 
 AEM 6.5.15.0 サービスパックのインストール後、CRX/バンドルと開始ページに「サービスが利用できません」というエラーが表示されます。
@@ -32,7 +32,7 @@ AEM 6.5.15.0 サービスパックのインストール後、CRX/バンドルと
 >
 >トラブルシューティングの手順は、JBoss EAP 7.4 を除くすべてのアプリケーションサーバーに適用されます。
 
-[AEM 6.5.15.0 サービスパック ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)をインストールした後、CRX/バンドルと開始ページにサービスが利用できないエラーが表示された場合は、次の手順を実行します。
+[AEM 6.5.15.0 サービスパック &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)をインストールした後、CRX/バンドルと開始ページにサービスが利用できないエラーが表示された場合は、次の手順を実行します。
 
 1. アプリケーションサーバーを停止します。
 1. `[aem-forms root]\crx-repository\launchpad\felix\bundle52` に移動します。
