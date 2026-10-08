@@ -12,14 +12,12 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 100%
-
+source-wordcount: '844'
+ht-degree: 93%
 ---
-
 # HTML5 フォームのデバッグ {#debugging-html-forms}
 
-このドキュメントには様々なトラブルシューティングのシナリオが含まれています。各シナリオにつき、問題をトラブルシューティングするためにいくつかの手順が提供されています。次の手順を実行しても、引き続き問題が発生する場合は、ロガーを設定してエラーや警告のログを取得し、確認します。HTML5 フォームのロギングについて詳しくは、[HTML5 フォームのログの生成](/help/forms/using/enable-logs.md)を参照してください。
+このドキュメントには様々なトラブルシューティングのシナリオが含まれています。 各シナリオにつき、問題をトラブルシューティングするためにいくつかの手順が提供されています。 次の手順を実行しても、引き続き問題が発生する場合は、ロガーを設定してエラーや警告のログを取得し、確認します。 HTML5 フォームのロギングについて詳しくは、[HTML5 フォームのログの生成](/help/forms/using/enable-logs.md)を参照してください。
 
 ## 問題：フォームをレンダリングすると、org.apache.sling.api.SlingException 例外ページが表示される {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
@@ -45,7 +43,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>テンプレートと結合されているデータファイルの絶対パス。<br />メモ：パスはデータファイルの絶対パスを定義します。</td>
+   <td>テンプレートと結合されるデータ ファイルの絶対パス。<br /> 注意：Pathは、データファイルの絶対パスを定義します。</td>
   </tr>
   <tr>
    <td>データ</td>
@@ -56,13 +54,13 @@ ht-degree: 100%
 
 ## 問題：フォームをレンダリングできない（エラーメッセージが表示される） {#problem-unable-to-render-form}
 
-1. 指定したパラメーターが正しいことを確認します。パラメーター関する詳しい情報については、[パラメーターのレンダリング](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)を参照してください。
-1. https://&lt;server>:&lt;port>/crx/packmgr/index.jsp で CRX パッケージマネージャーにログインし、以下のパッケージが正しくインストールされているかどうか確認します。
+1. 指定したパラメーターが正しいことを確認します。 パラメーター関する詳しい情報については、[パラメーターのレンダリング](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)を参照してください。
+1. https://<server>:<port>/crx/packmgr/index.jsp で CRX パッケージマネージャーにログインし、以下のパッケージが正しくインストールされているかどうか確認します。
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
    * adobe-lc-forms-runtime-pkg-&lt;version>.zip
 
-1. https://&lt;server>:&lt;port>/system/console/bundles で CQ web コンソール（Felix コンソール）にログインします。
+1. https://<server>:<port>/system/console/bundles で CQ web コンソール（Felix コンソール）にログインします。
 
    次のバンドルのステータスが「アクティブ」であることを確認します。
 
@@ -80,9 +78,9 @@ ht-degree: 100%
 
 ## 問題：フォームがスタイルなしでレンダリングされる {#problem-form-renders-without-styles}
 
-1. お使いのブラウザーで、**開発ツール**&#x200B;を開きます。profile.css が存在することを確認します。
+1. ブラウザーで、**開発者ツール**&#x200B;を開きます。 profile.cssが使用可能であることを確認します。
 1. profile.css ファイルが存在しない場合は、https://&lt;server>:&lt;port>/crx/de で CRX DE にログインします。
-1. 左のフォルダー階層で、/etc/clientlibs/fd/xfaforms/ に移動します。フォルダーにリストされている css.txt ファイルを開きます。
+1. 左のフォルダー階層で、/etc/clientlibs/fd/xfaforms/ に移動します。 フォルダーにリストされている css.txt ファイルを開きます。
 
    * プロファイル
    * runtime
@@ -107,19 +105,19 @@ ht-degree: 100%
 
 1. フォームの URL にクエリーパラメーター「debugClientLibs」を追加し、その値を「true」に設定します（例：https://&lt;サーバー>:&lt;ポート>/content/xfaforms/profiles/test.html?contentRoot=&lt;パス>&amp;template=&lt;xdp ファイル名>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true）
 1. Chrome のようなデスクトップブラウザーでデベロッパーツール／コンソールに移動します。
-1. ログを開いて、エラーのタイプを特定します。ログについて詳しくは、[HTML5 フォームのログ](/help/forms/using/enable-logs.md)を参照してください。
-1. デベロッパーツール／コンソールに移動します。スタックトレースを使用して、エラーの原因となっているコードを探します。エラーをデバッグして問題を解決します。
+1. ログを開いて、エラーのタイプを特定します。 ログについて詳しくは、[HTML5 フォームのログ](/help/forms/using/enable-logs.md)を参照してください。
+1. デベロッパーツール／コンソールに移動します。 スタックトレースを使用して、エラーの原因となっているコードを探します。 エラーをデバッグして問題を解決します。
 
    >[!NOTE]
    >
-   >スクリプティングの失敗の場合は、フォームの PDF レンダリングでも問題が発生するかを確認します。発生する場合は、フォームスクリプティングのロジックに問題があります。
+   >スクリプティングの失敗の場合は、フォームの PDF レンダリングでも問題が発生するかを確認します。 発生する場合は、フォームスクリプティングのロジックに問題があります。
 
 ## 問題：フォームを送信できない {#problem-unable-to-submit-the-form}
 
 1. AEM サーバーにアクセスする権限を持っていること、およびサーバーに接続されていることを確認します。
 1. パラメーター submitUrl が正しいことを確認します。
-1. **1-a5-b5-c5** をデバッグオプションとして使用し、[HTML5 フォームのログ](/help/forms/using/enable-logs.md)に記載されている通りにクライアントサイドログを有効にします。次に、フォームをレンダリングし、送信をクリックします。ブラウザーのデバッグコンソールを開き、エラーがあるかどうかを確認します。
-1. [HTML5 フォームのログ](/help/forms/using/enable-logs.md)に記載されている通りに、サーバーログを見つけます。サーバーログで送信の際にエラーが発生したかを確認します。
+1. **1-a5-b5-c5** をデバッグオプションとして使用し、[HTML5 フォームのログ](/help/forms/using/enable-logs.md)に記載されている通りにクライアントサイドログを有効にします。 次に、フォームをレンダリングし、送信をクリックします。 ブラウザーのデバッグコンソールを開き、エラーがあるかどうかを確認します。
+1. [HTML5 フォームのログ](/help/forms/using/enable-logs.md)に記載されている通りに、サーバーログを見つけます。 サーバーログで送信の際にエラーが発生したかを確認します。
 
 ## 問題：ローカライズされたエラーメッセージが表示されない {#problem-localized-error-messages-do-not-display}
 
@@ -132,7 +130,7 @@ ht-degree: 100%
    * 言語用のフォルダー
 
 1. 上記のファイルまたはフォルダーで存在しないものがある場合は、**adobe-lc-forms-runtime-pkg-&lt;version>.zip** パッケージを再度インストールします。
-1. ロケールの名前と同じ名前のフォルダーに移動し、そのコンテンツを確認します。フォルダーには次のファイルが含まれている必要があります。
+1. ロケールの名前と同じ名前のフォルダーに移動し、そのコンテンツを確認します。 フォルダーには次のファイルが含まれている必要があります。
 
    * I18N.js
    * js.txt
@@ -154,7 +152,7 @@ ht-degree: 100%
    推定原因は、URL にある 1 つ以上のパラメーターが間違っていることです。
 
    次のパラメーターを確認します。
-ステップテキスト
+   手順テキスト
 
 <table>
  <tbody>
@@ -172,7 +170,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>dataRef</td>
-   <td>テンプレートと結合されているデータファイルの絶対パス。<br />メモ：パスはデータファイルの絶対パスを定義します。</td>
+   <td>テンプレートと結合されるデータ ファイルの絶対パス。<br /> 注意：Pathは、データファイルの絶対パスを定義します。</td>
   </tr>
   <tr>
    <td>データ</td>

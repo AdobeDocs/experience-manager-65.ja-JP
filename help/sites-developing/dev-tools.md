@@ -11,28 +11,26 @@ feature: Developing,Developer Tools
 role: Developer
 source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 100%
-
+source-wordcount: '394'
+ht-degree: 99%
 ---
-
 # 開発ツール{#development-tools}
 
 JCR、Apache Sling または Adobe Experience Manager（AEM）のアプリケーションを開発するために、以下のツールセットが用意されています。
 
-* [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) と WebDAV で構成されたツールセット。CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティ、バンドルを作成および編集することができ、さらに SVN によるロギングや統合が可能です。
+* [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) と WebDAV で構成されたツールセット。 CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。 CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティ、バンドルを作成および編集することができ、さらに SVN によるロギングや統合が可能です。
 
   CRXDE Lite は、CRX／AEM サーバーに直接アクセスできない場合、すぐに使用可能なコンポーネントと Java™ バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完および構文のハイライト表示を必要としない場合にお勧めします。
 
 * 以下で構成されたツールセット：
-   * 統合開発環境。例：[Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md)。
-   * ビルドツール。例：[Apache Maven](/help/sites-developing/ht-projects-maven.md)。
-   * リポジトリをファイルシステム、バージョン管理システムにマッピングするために開発された FileVault。例：Subversion。
-   * バグ追跡システム。例：JIRA。
-   * 依存関係中央管理システム。例：Apache Archiva。
-   * ビルド自動化システム。例：Apache Continuum。
+  * 統合開発環境。 例：[Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md)。
+  * ビルドツール。 例：[Apache Maven](/help/sites-developing/ht-projects-maven.md)。
+  * リポジトリをファイルシステム、バージョン管理システムにマッピングするために開発された FileVault。 例：Subversion。
+  * バグ追跡システム。 例：JIRA。
+  * 依存関係中央管理システム。 例：Apache Archiva。
+  * ビルド自動化システム。 例：Apache Continuum。
 
-  この設定で、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境とプロセスに完全に統合できます。リポジトリのファイルシステムは FileVault によって様々な要素間のリンクで表わされ、前述のすべての開発ツールでファイルを操作できます。
+  この設定で、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境とプロセスに完全に統合できます。 リポジトリのファイルシステムは FileVault によって様々な要素間のリンクで表わされ、前述のすべての開発ツールでファイルを操作できます。
 
 ## 統合開発環境の拡張機能 {#extensions-for-integrated-development-environments}
 

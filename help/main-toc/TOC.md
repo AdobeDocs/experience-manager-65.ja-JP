@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: d4a8b41ee8136bb69845fdf65456e1407b2b5d19
+source-git-commit: b3d193fafabe3f04a98ac17b30a5c6506472faf3
 workflow-type: tm+mt
-source-wordcount: '8300'
+source-wordcount: '8305'
 ht-degree: 95%
 ---
 
@@ -599,6 +599,7 @@ ht-degree: 95%
     + [AEM Forms におけるアセットのインポートとエクスポート](/help/forms/using/import-export-forms-templates.md)
     + [アダプティブフォームのローカリゼーション向けに新しいロケールをサポートする](/help/forms/using/supporting-new-language-localization.md)
     + ユーザーデータの処理 {#handling-user-data}
+      + [AEM Formsにおけるデータ保持](/help/forms/using/data-retention-aem-forms.md)
       + [OSGi でのフォームに特化したワークフロー](/help/forms/using/forms-workflow-osgi-handling-user-data.md)
       + [Forms のユーザー管理](/help/forms/using/user-management-handling-user-data.md)
       + [Forms の JEE ワークフロー](/help/forms/using/forms-workflow-jee-handling-user-data.md)
