@@ -22,9 +22,9 @@ AEM Formsは拡張可能な基盤であるため、AEMをカスタマイズし�
 
 フォームを独自の宛先に接続するすぐに利用できるメカニズムには、フォームデータモデル（FDM）、すぐに利用できるコネクタ、送信アクションなどがあります。 これらは、それぞれが所有および設定する場所にデータを送信するので、AEM リポジトリには保持されません。 フォームは、ルールまたは送信アクションからREST APIなどの外部サービスまたはサードパーティサービスを呼び出し、AEMのデータを保持することなく、そのサービスにデータを転送することもできます。
 
-承認手順を含む長期間有効なプロセスでAEM ワークフローを使用する場合、AEM Formsは、操作を完了するためにデータをメモリおよび一時的なストレージに保持する場合があります。 このデータがAEMに保存されないようにする方法について詳しくは、[長期間有効なワークフロープロセスのデータ ](#long-lived-workflow-processes)の節を参照してください。
+承認手順を含む長期間有効なプロセスでAEM ワークフローを使用する場合、AEM Formsは、操作を完了するためにデータをメモリおよび一時的なストレージに保持する場合があります。 このデータがAEMに保存されないようにする方法について詳しくは、[長期間有効なワークフロープロセスのデータ &#x200B;](#long-lived-workflow-processes)の節を参照してください。
 
-Forms ポータルの送信アクションでは、アダプティブ Formsを介してキャプチャまたは送信されたデータは保持されますが、データはAEM リポジトリやログではなく、指定して所有する保存場所に保存されます。 詳細については、「[ フォームポータルによって保存されたデータの保護アクション ](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-data-saved-by-forms-portal-submit-action)」を参照してください。
+Forms ポータルの送信アクションでは、アダプティブ Formsを介してキャプチャまたは送信されたデータは保持されますが、データはAEM リポジトリやログではなく、指定して所有する保存場所に保存されます。 詳細については、「[&#x200B; フォームポータルによって保存されたデータの保護アクション &#x200B;](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-data-saved-by-forms-portal-submit-action)」を参照してください。
 
 ## 転送中のデータ {#data-in-transit}
 
@@ -32,13 +32,13 @@ AEM Formsでは、デフォルトではエンドユーザーのデータは保�
 
 ブラウザーとAEM間の接続を保護するには、AEM インスタンスでHTTPSを有効にします。 手順については、「[SSL/TLS デフォルト設定](/help/sites-administering/ssl-by-default.md)」を参照してください。
 
-さらに、クラウド設定、送信アクション URL、フォームデータモデルのデータソースなど、AEM Formsがデータを送信するエンドポイントが安全なHTTPS エンドポイントを使用していることを確認します。 AEM Formsは通過するデータを保存しないため、保存中の暗号化はそのデータに適用されません。 接続の保護に関する詳細なガイダンスについては、[ トランスポート層の保護](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-transport-layer)を参照してください。
+さらに、クラウド設定、送信アクション URL、フォームデータモデルのデータソースなど、AEM Formsがデータを送信するエンドポイントが安全なHTTPS エンドポイントを使用していることを確認します。 AEM Formsは通過するデータを保存しないため、保存中の暗号化はそのデータに適用されません。 接続の保護に関する詳細なガイダンスについては、[&#x200B; トランスポート層の保護](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-transport-layer)を参照してください。
 
 ## 外部データストアのフォームデータモデル {#form-data-model}
 
 データストアにデータを読み書きするには、フォームデータモデル（FDM）を使用します。 FDMは、データベースやRESTful web サービスなど、所有および管理するデータソースにフォームを接続する際に推奨されるメカニズムです。
 
-詳しくは、[AEM Forms Data Integrationの概要](/help/forms/using/data-integration.md)を参照してください。 FDMが処理するデータの保護に関するガイダンスについては、[ フォームデータモデル（FDM）で処理されるデータの保護](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-data-handled-by-form-data-model-fdm)を参照してください。
+詳しくは、[AEM Forms Data Integrationの概要](/help/forms/using/data-integration.md)を参照してください。 FDMが処理するデータの保護に関するガイダンスについては、[&#x200B; フォームデータモデル（FDM）で処理されるデータの保護](/help/forms/using/hardening-securing-aem-forms-environment.md#secure-data-handled-by-form-data-model-fdm)を参照してください。
 
 ## 長期間有効なワークフロープロセスのデータ {#long-lived-workflow-processes}
 
@@ -68,7 +68,7 @@ AEMを利用すれば。 AEMをカスタマイズする場合は、AEM リポジ
 
 **長期間有効なワークフローはフォームデータを保存しますか？**
 
-Adobe Experience Manager（AEM）の長期間有効なワークフロープロセス Formsでは、ワークフローペイロードの一部としてデータを一時的に保存できます。このデータは、AEM リポジトリのワークフローインスタンスのメタデータに保存されます。 このデータを、AEMではなくAzure Blob Storageなどの所有および管理するリポジトリに保存するには、ワークフロー変数](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)に[AEM データ外部化機能を使用します。
+Adobe Experience Manager（AEM）の長期間有効なワークフロープロセス Formsでは、ワークフローペイロードの一部としてデータを一時的に保存できます。このデータは、AEM リポジトリのワークフローインスタンスのメタデータに保存されます。 このデータを、AEMではなくAzure Blob Storageなどの所有および管理するリポジトリに保存するには、ワークフロー変数[&#128279;](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)にAEM データ外部化機能を使用します。
 
 **AEM Formsはデータをログに書き込みますか？**
 
