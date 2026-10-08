@@ -10,14 +10,12 @@ feature: Forms Portal
 role: Admin, User, Developer
 source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '693'
 ht-degree: 100%
-
 ---
-
 # API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
 
-AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
+AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリを実行し、検索条件に合う一連のフォームを取得できます。 API を使用することで、様々なフィルターに基づいてフォームを検索できます。 応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
 REST API を使用してフォームを検索するには、以下に説明するクエリパラメーターを使用して、`https://'[server]:[port]'/libs/fd/fm/content/manage.json` にあるサーバーに GET リクエストを送信します。
 
@@ -31,25 +29,25 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>呼び出す関数を指定します。フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例： <code class="code">
+   <td><p>呼び出す関数を指定します。 フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例： <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
        entityBuilder.add("func", "searchForms");</code></p> <p><strong>メモ：</strong><em>このパラメーターは必須です。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
-   <td><p>フォームを検索するアプリケーションパスを指定します。デフォルトでは、appPath 属性はルートノードレベルで使用可能なすべてのアプリケーションを検索します。<br /> </p> <p>1 つの検索クエリで複数のアプリケーションパスを指定できます。複数のパスは、パイプ（|）文字を使用して区切ります。 </p> </td>
+   <td><p>フォームを検索するアプリケーションパスを指定します。 デフォルトでは、appPath 属性はルートノードレベルで使用可能なすべてのアプリケーションを検索します。<br /> </p> <p>1 つの検索クエリで複数のアプリケーションパスを指定できます。 複数のパスは、パイプ（|）文字を使用して区切ります。 </p> </td>
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定するには、パイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>メモ</strong>： </p>
+   <td><p>アセットと一緒に取得するプロパティを指定します。 アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。 複数のプロパティを指定するには、パイプ（|）演算子を使用します。 </p> <p>次に例を示します。 <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>メモ</strong>： </p>
     <ul>
      <li><em>プロパティ（ID、パス、名前など）は、常に取得されます。 </em></li>
-     <li><em>すべてのアセットには、異なるプロパティのセットがあります。formUrl、pdfUrl、guideUrl などのプロパティは、cutPoints 属性に依存しません。これらのプロパティは、アセットタイプに依存し、それに応じて取得されます。 </em></li>
+     <li><em>すべてのアセットには、異なるプロパティのセットがあります。 formUrl、pdfUrl、guideUrl などのプロパティは、cutPoints 属性に依存しません。 これらのプロパティは、アセットタイプに依存し、それに応じて取得されます。 </em></li>
     </ul> </td>
   </tr>
   <tr>
    <td>relation<br /> </td>
-   <td>検索結果と共に取得する関連アセットを指定します。以下のオプションからいずれか 1 つを選択して、関連アセットを取得できます。
+   <td>検索結果と共に取得する関連アセットを指定します。 以下のオプションからいずれか 1 つを選択して、関連アセットを取得できます。
     <ul>
      <li><strong>NO_RELATION</strong>：関連アセットを取得しません。</li>
      <li><strong>IMMEDIATE</strong>：検索結果に直接関連するアセットを取得します。</li>
@@ -70,7 +68,7 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>statements</td>
-   <td><p>文のリストを指定します。クエリは、JSON 形式で指定した文のリストに対して実行されます。 </p> <p>例：</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>文のリストを指定します。 クエリは、JSON 形式で指定した文のリストに対して実行されます。 </p> <p>次に例を示します。</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
@@ -78,7 +76,7 @@ REST API を使用してフォームを検索するには、以下に説明す�
     <ul>
      <li><strong>name</strong>：検索するプロパティの名前を指定します。</li>
      <li><strong>value</strong>：検索するプロパティの値を指定します。</li>
-     <li><strong>operator</strong>：検索時に適用する演算子を指定します。次の演算子がサポートされています。
+     <li><strong>operator</strong>：検索時に適用する演算子を指定します。 次の演算子がサポートされています。
       <ul>
        <li>EQ - 次と等しい </li>
        <li>NEQ - 次と等しくない</li>
@@ -97,7 +95,7 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>orderings<br /> </td>
-   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、クエリに表示されるフィールドの順序でソートされます。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えられたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>検索結果の順序条件を指定します。 条件は JSON 形式で定義されます。 複数のフィールドの検索結果を並べ替えることができます。 検索結果は、クエリに表示されるフィールドの順序でソートされます。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えられたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
@@ -105,7 +103,7 @@ REST API を使用してフォームを検索するには、以下に説明す�
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
      <li><strong>name</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
-     <li><strong>criteria</strong>：結果の順序を指定します。順序属性には次の値を使用できます。
+     <li><strong>criteria</strong>：結果の順序を指定します。 順序属性には次の値を使用できます。
       <ul>
        <li>ASC - ASC を使用すると、結果を昇順に並べ替えます。<br /> </li>
        <li>DES - DES を使用すると、結果を降順に並べ替えます。</li>
@@ -114,11 +112,11 @@ REST API を使用してフォームを検索するには、以下に説明す�
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code> 属性は、タイプ <code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code> のアセットに適用されます。</td>
+   <td>バイナリコンテンツを取得するかどうかを指定します。 <code>includeXdp</code> 属性は、タイプ <code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code> のアセットに適用されます。</td>
   </tr>
   <tr>
    <td>assetType</td>
-   <td>公開されたすべてのアセットから取得するアセットのタイプを指定します。複数のアセットタイプを指定するには、パイプ（|）演算子を使用します。有効なアセットタイプは FORM、PDFFORM、PRINTFORM、RESOURCE、GUIDE です。</td>
+   <td>公開されたすべてのアセットから取得するアセットのタイプを指定します。 複数のアセットタイプを指定するには、パイプ（|）演算子を使用します。 有効なアセットタイプは FORM、PDFFORM、PRINTFORM、RESOURCE、GUIDE です。</td>
   </tr>
  </tbody>
 </table>
@@ -170,7 +168,7 @@ orderings:[{"name" :"lastModifiedDate":"order":"ASC"}]
 ## 関連記事
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
-* [フォームポータルページの作成 ](/help/forms/using/creating-form-portal-page.md)
+* [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)

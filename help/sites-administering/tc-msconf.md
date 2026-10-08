@@ -6,15 +6,13 @@ role: Admin
 exl-id: ca575a30-fc3e-4f38-9aa7-dbecbc089f87
 solution: Experience Manager, Experience Manager Sites
 source-git-commit: 3bb516289dbff4fb3b94685b9e25360e7717776e
-workflow-type: ht
-source-wordcount: '258'
+workflow-type: tm+mt
+source-wordcount: '270'
 ht-degree: 100%
-
 ---
-
 # Microsoft Translator への接続 {#connecting-to-microsoft-translator}
 
-AEM には、ページのコンテンツまたはアセットを翻訳する [Microsoft Translator](https://www.microsoft.com/ja-jp/translator/business/) の組み込みコネクタが用意されています。Microsoft Translator を使用するためのライセンスを Microsoft から取得したら、このページの手順に従ってコネクタを設定してください。
+AEM には、ページのコンテンツまたはアセットを翻訳する [Microsoft Translator](https://www.microsoft.com/ja-jp/translator/business/) のビルトインのコネクタが用意されています。 Microsoft Translator を使用するためのライセンスを Microsoft から取得したら、このページの手順に従ってコネクタを設定してください。
 
 | プロパティ | 説明 |
 |---|---|
@@ -26,11 +24,11 @@ AEM には、ページのコンテンツまたはアセットを翻訳する [Mi
 Microsoft Translator 設定を作成するには、次の手順に従います。
 
 1. [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#first-steps)で、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;をクリックします。
-1. 設定を作成する場所に移動します。通常は、これはサイトのルートにあります。また、グローバルなデフォルト設定にすることもできます。
+1. 設定を作成する場所に移動します。 通常は、これはサイトのルートにあります。また、グローバルなデフォルト設定にすることもできます。
 1. 「**作成**」ボタンをクリックします。
 1. 設定を定義します。
    1. ドロップダウンで **Microsoft Translator** を選択します。
-   1. 設定のタイトルを入力します。このタイトルによって、クラウドサービスコンソールおよびページプロパティのドロップダウンリストで設定が識別されます。
+   1. 設定のタイトルを入力します。 このタイトルによって、クラウドサービスコンソールおよびページプロパティのドロップダウンリストで設定が識別されます。
    1. オプションとして、設定を格納するリポジトリーノードに使用する名前を入力します。
 
    ![翻訳設定の作成](assets/create-translation-config.png)

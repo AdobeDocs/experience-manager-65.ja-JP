@@ -1,6 +1,6 @@
 ---
 title: HTML5 フォームのカスタムプロファイルの作成
-description: HTML5 フォームプロファイルは Apache Sling のリソースノードです。それは HTML5 フォームレンダリングサービスのカスタマイズされたバージョンを表します。
+description: HTML5 フォームプロファイルは Apache Sling のリソースノードです。 それは HTML5 フォームレンダリングサービスのカスタマイズされたバージョンを表します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
@@ -11,34 +11,32 @@ solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 100%
-
+source-wordcount: '657'
+ht-degree: 95%
 ---
-
 # HTML5 フォームのカスタムプロファイルの作成 {#creating-a-custom-profile-for-html-forms}
 
-プロファイルは [Apache Sling](https://sling.apache.org/) のリソースノードです。それは HTML5 フォームレンダリングサービスのカスタマイズされたバージョンを表します。HTML5 フォームレンダリングサービスを使用して、HTML5 フォームの外観、動作、インタラクションをカスタマイズできます。Profile ノードは JCR リポジトリーの `/content` フォルダーにあります。ノードは `/content` フォルダー直下か、`/content` フォルダーのサブフォルダーに入れることができます。
+プロファイルは [Apache Sling](https://sling.apache.org/) のリソースノードです。 それは HTML5 フォームレンダリングサービスのカスタマイズされたバージョンを表します。 HTML5 フォームレンダリングサービスを使用して、HTML5 フォームの外観、動作、インタラクションをカスタマイズできます。 Profile ノードは JCR リポジトリーの `/content` フォルダーにあります。 ノードは `/content` フォルダー直下か、`/content` フォルダーのサブフォルダーに入れることができます。
 
-Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType** プロパティがあります。このノードのレンダリングスクリプトは、/libs/xfaforms/profile にあります。
+プロファイルノードには&#x200B;**sling:resourceSuperType** プロパティがあり、デフォルト値は&#x200B;**xfaforms/profile**&#x200B;です。 このノードのレンダリングスクリプトは、/libs/xfaforms/profile にあります。
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトはリクエストされたフォームと必要な JS／CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらの Sling スクリプトは&#x200B;**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。プロファイルレンダラーは要求されたフォームをレンダリングするために Forms OSGi サービスを呼び出します。
+Sling スクリプトは JSP スクリプトです。 JSP スクリプトはリクエストされたフォームと必要な JS／CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。 これらの Sling スクリプトは&#x200B;**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。 プロファイルレンダラーは要求されたフォームをレンダリングするために Forms OSGi サービスを呼び出します。
 
-GET と POST リクエストのためのプロファイルスクリプトは html.jsp と html.POST.jsp 内にあります。これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースでの変更はおこなわないでください。このような変更は、パッチのアップデートによって上書きされてしまいます。
+GET と POST リクエストのためのプロファイルスクリプトは html.jsp と html.POST.jsp 内にあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。 インプレースでの変更はおこなわないでください。このような変更は、パッチのアップデートによって上書きされてしまいます。
 
-プロファイルにはさまざまなモジュールが含まれています。これらのモジュールは、formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp、および footer.jsp です。
+プロファイルにはさまざまなモジュールが含まれています。 これらのモジュールは、formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp、および footer.jsp です。
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-formRuntime.jsp モジュールには、クライアントライブラリの参照が含まれています。これは、リクエストからロケール情報を抽出し、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。formRuntime.jsp に独自のカスタム javascript ライブラリやスタイルを含めることができます。
+formRuntime.jsp モジュールには、クライアントライブラリの参照が含まれています。 これは、リクエストからロケール情報を抽出し、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。 formRuntime.jsp に独自のカスタム javascript ライブラリやスタイルを含めることができます。
 
 ## config.jsp {#config-jsp}
 
-config.jsp モジュールには、ログ、プロキシサービス、動作バージョンなど、様々な設定が含まれています。独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加できます。カスタムウィジェット登録などの設定を config.jsp モジュールに追加することもできます。
+config.jsp モジュールには、ログ、プロキシサービス、動作バージョンなど、様々な設定が含まれています。 独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加できます。 カスタムウィジェット登録などの設定を config.jsp モジュールに追加することもできます。
 
 ## toolbar.jsp {#toolbar-jsp}
 
-toolbar.jsp は、カラーのツールバーを作成するためのコードを含みます。ツールバーを削除するには、toolbar.jsp を HTML.jsp から削除します。
+toolbar.jsp は、カラーのツールバーを作成するためのコードを含みます。 ツールバーを削除するには、toolbar.jsp を HTML.jsp から削除します。
 
 ## formBody.jsp {#formbody-jsp}
 
@@ -46,11 +44,11 @@ formBody.jsp モジュールは、XFA フォームの HTML 表現のための�
 
 ## nav_footer.jsp {#nav-footer-jsp}
 
-最初に、HTML5 フォームはフォームの最初のページのみをレンダリングします。ユーザーがフォームをスクロールすると、フォームの残りの部分が読み込まれます。こうすることで読み込みのエクスペリエンスが高速になります。nav_footer.jsp コンポーネントには、すべてのスタイルとスクロール時のページの読み込みを支援するために必要な要素が含まれます。 
+最初に、HTML5 フォームはフォームの最初のページのみをレンダリングします。 ユーザーがフォームをスクロールすると、フォームの残りの部分が読み込まれます。 こうすることで読み込みのエクスペリエンスが高速になります。 nav_footer.jsp コンポーネントには、すべてのスタイルとスクロール時のページの読み込みを支援するために必要な要素が含まれます。
 
 ## footer.jsp {#footer-jsp}
 
-footer.jsp モジュールは空です。これにより、ユーザーインタラクションのみに使用するスクリプトを追加できます。
+footer.jsp モジュールは空です。 これにより、ユーザーインタラクションのみに使用するスクリプトを追加できます。
 
 ## カスタムプロファイルの作成 {#creating-custom-profiles}
 
@@ -64,13 +62,13 @@ footer.jsp モジュールは空です。これにより、ユーザーインタ
 
 1. default ノードをコピーし、*hrform* という名前で別のフォルダー（*/content/profiles*）にそのノードをペーストします。
 
-1. 新しいノード、*hrform* を選択し、*hrform/demo* の値を持つ文字列プロパティ *sling:resourceType* を追加します。
+1. 新しいノード *hrform*&#x200B;を選択し、文字列プロパティ *sling:resourceType*&#x200B;を値&#x200B;*hrform/demo*&#x200B;で追加します。
 
 1. ツールバーメニューで「すべて保存」をクリックして、変更を保存します。
 
 ### プロファイルレンダラースクリプトを作成 {#create-the-profile-renderer-script}
 
-カスタムプロファイルの作成後、このプロファイルにレンダラーの情報を追加します。新しいプロファイルのリクエストを受け取る際に、CRX はレンダリングする JSP ページの /apps フォルダーの存在を確認します。JSP ページを /apps フォルダーに作成します。
+カスタムプロファイルの作成後、このプロファイルにレンダラーの情報を追加します。 新しいプロファイルのリクエストを受け取る際に、CRX はレンダリングする JSP ページの /apps フォルダーの存在を確認します。 JSP ページを /apps フォルダーに作成します。
 
 1. 左のペインで、`/apps` フォルダーに移動します。
 1. `/apps` フォルダーを右クリックして選択し、「**hrform**」という名前のフォルダーを作成します。
