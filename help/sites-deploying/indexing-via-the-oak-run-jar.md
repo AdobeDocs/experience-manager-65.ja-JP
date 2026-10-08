@@ -10,14 +10,12 @@ feature: Configuring
 role: Admin
 source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '985'
 ht-degree: 100%
-
 ---
-
 # Oak-run Jar を使用したインデックス作成 {#indexing-via-the-oak-run-jar}
 
-Oak-run は、コマンドラインでのすべてのインデックス作成の使用例をサポートします。JMX レベルで操作する必要はありません。次に Oak-run アプローチのメリットを示します。
+Oak-run は、コマンドラインでのすべてのインデックス作成の使用例をサポートします。JMX レベルで操作する必要はありません。 次に Oak-run アプローチのメリットを示します。
 
 1. AEM 6.4 用の新しいインデックス作成ツールセットです。
 1. インデックス再作成時間を削減します。より大きいリポジトリでのインデックス再作成時間に有益な影響があります。
@@ -62,7 +60,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
 ### SegmentNodeStore および DocumentNodeStore のテキスト事前抽出 {#textpre-extraction}
 
-[テキスト事前抽出](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction)（AEM 6.3 まで存在した機能）を使用して、インデックス再作成までの時間を削減できます。テキスト事前抽出は、すべてのインデックス再作成アプローチと連携して使用できます。
+[テキスト事前抽出](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction)（AEM 6.3 まで存在した機能）を使用して、インデックス再作成までの時間を削減できます。 テキスト事前抽出は、すべてのインデックス再作成アプローチと連携して使用できます。
 
 `oak-run.jar` のインデックス作成アプローチに応じて、次の図に示す「インデックス再作成の実行」ステップのどちら側にも様々なステップがあります。
 
@@ -78,7 +76,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 >
 >このシナリオについて詳しくは、[インデックス再作成 - DocumentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#reindexdocumentnodestore) を参照してください。
 
-これは、MongoMK（および RDBMK）AEM インストールのインデックスを再作成する場合にお勧めする方法です。他の方法は使用しないでください。
+これは、MongoMK（および RDBMK）AEM インストールのインデックスを再作成する場合にお勧めする方法です。 他の方法は使用しないでください。
 
 このプロセスは、クラスターの単一の AEM インスタンスに対してのみ実行します。
 
@@ -92,11 +90,11 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
 * **コールドスタンバイに関する考慮事項（TarMK）**
 
-   * コールドスタンバイに関して特別な考慮事項はありません。コールドスタンバイインスタンスは、通常どおり変更を同期します。
+  * コールドスタンバイに関して特別な考慮事項はありません。コールドスタンバイインスタンスは、通常どおり変更を同期します。
 
 * **AEM パブリッシュファーム（AEM パブリッシュファームは常に TarMK である必要があります）**
 
-   * パブリッシュファームの場合は、すべてのパブリッシュに対して実行するか、単一のパブリッシュに対して手順を実行する必要があります。次に、他の設定のクローンを作成します（AEM インスタンスのクローンを作成する際には、通常のすべての対策を取ります。sling.id をここの何かにリンクする必要があります）。
+  * パブリッシュファームの場合は、すべてのパブリッシュに対して実行するか、単一のパブリッシュに対して手順を実行する必要があります。 次に、他の設定のクローンを作成します（AEM インスタンスのクローンを作成する際には、通常のすべての対策を取ります。sling.id をここの何かにリンクする必要があります）。
 
 ### TarMK のオンラインインデックス再作成 {#onlinere-indexingfortarmk}
 
@@ -104,9 +102,9 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 >
 >このシナリオについて詳しくは、[オンラインのインデックス再作成 - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestore) を参照してください。
 
-これは、oak-run.jar の新しいインデックス作成機能の導入前に使用された方法です。Oak インデックスの `reindex=true` プロパティを設定することで行うことができます。
+これは、oak-run.jar の新しいインデックス作成機能の導入前に使用された方法です。 Oak インデックスの `reindex=true` プロパティを設定することで行うことができます。
 
-この方法は、インデックス作成のための時間とパフォーマンスへの影響をお客様が受け入れられる場合に使用できます。これは、小～中規模の AEM インストールでよくある事例です。
+この方法は、インデックス作成のための時間とパフォーマンスへの影響をお客様が受け入れられる場合に使用できます。 これは、小～中規模の AEM インストールでよくある事例です。
 
 ![TarMK のオンラインインデックス再作成](assets/6.png)
 
@@ -116,7 +114,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 >
 >このシナリオについて詳しくは、[オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンス実行中](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning)を参照してください。
 
-oak-run.jar を使用した TarMK のオンラインインデックス再作成は、上記の [TarMK のオンラインインデックス再作成](#onlinere-indexingfortarmk)より高速です。ただし、メンテナンスウィンドウ中に実行する必要があり、時間は短くなりますが、インデックス再作成の実行に必要な手順が増えます。
+oak-run.jar を使用した TarMK のオンラインインデックス再作成は、上記の [TarMK のオンラインインデックス再作成](#onlinere-indexingfortarmk)より高速です。 ただし、メンテナンスウィンドウ中に実行する必要があり、時間は短くなりますが、インデックス再作成の実行に必要な手順が増えます。
 
 >[!NOTE]
 >
@@ -130,7 +128,7 @@ oak-run.jar を使用した TarMK のオンラインインデックス再作成�
 >
 >このシナリオについて詳しくは、[オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンスのシャットダウン](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoreaeminstanceisdown)を参照してください。
 
-TarMK のオフラインインデックス再作成は、必要な `oak-run.jar` コメントが 1 つだけなので、`oak-run.jar` ベースの TarMK 用インデックス再作成アプローチとしては最も簡単です。ただし、AEM インスタンスをシャットダウンする必要があります。
+TarMK のオフラインインデックス再作成は、必要な `oak-run.jar` コメントが 1 つだけなので、`oak-run.jar` ベースの TarMK 用インデックス再作成アプローチとしては最も簡単です。 ただし、AEM インスタンスをシャットダウンする必要があります。
 
 >[!NOTE]
 >
@@ -164,7 +162,7 @@ Out-of-band インデックス再作成は、使用中の AEM インスタンス
 >
 >ACS Ensure Index は、コミュニティがサポートするプロジェクトで、アドビサポートはサポートしていません。
 
-これにより、コンテンツパッケージを介したインデックス定義の送信が可能になり、reindex フラグを `true` に設定すれば、後でインデックスが再作成されることになります。これは、インデックス再作成に時間がかからない小規模なセットアップで機能します。
+これにより、コンテンツパッケージを介したインデックス定義の送信が可能になり、reindex フラグを `true` に設定すれば、後でインデックスが再作成されることになります。 これは、インデックス再作成に時間がかからない小規模なセットアップで機能します。
 
 詳しくは、[ACS Ensure Index のドキュメント](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html)を参照してください。
 
