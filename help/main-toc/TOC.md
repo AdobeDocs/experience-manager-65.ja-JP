@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: b3d193fafabe3f04a98ac17b30a5c6506472faf3
+source-git-commit: f46e653863a8724a5f50bed7a2f76079803b162e
 workflow-type: tm+mt
-source-wordcount: '8305'
+source-wordcount: '8300'
 ht-degree: 95%
 ---
 
@@ -1237,7 +1237,6 @@ ht-degree: 95%
 + AEM の AI {#ai-in-aem}
   + [概要](/help/ai-in-aem/overview.md)
   + AI アシスタント {#ai-assistant}
-    + [AEM の AI アシスタントの設定](/help/ai-assistant-in-aem-admin.md)
     + [AEM の AI アシスタントについて](/help/ai-assistant-in-aem.md)
 + コンテンツとコマース {#commerce}
   + [概要](/help/commerce/cif/introduction.md)
