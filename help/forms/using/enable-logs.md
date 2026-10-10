@@ -10,28 +10,43 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '644'
 ht-degree: 100%
-
 ---
-
 # HTML5 フォーム内でのログの有効化{#enable-logging-for-html-forms}
 
-ロガーユーティリティを設定することで、HTML5フォームでログの作成を開始することができます。ロガーユーティリティにはいくつかのレベルがあり、要件に応じてレベルを設定することができます。HTML5 フォームは、サーバーコンポーネントとクライアントコンポーネントから構成されています。両方のコンポーネントに対してログを設定できます。 
+ロガーユーティリティを設定することで、HTML5フォームでログの作成を開始することができます。 ロガーユーティリティにはいくつかのレベルがあり、要件に応じてレベルを設定することができます。 HTML5 フォームは、サーバーコンポーネントとクライアントコンポーネントから構成されています。 両方のコンポーネントに対してログを設定できます。
 
 ## サーバーサイドのログの設定 {#configuring-server-side-logging}
 
 次の手順を実行して、サーバー側のログを設定します。
 
-1. `https://'[server]:[port]'/system/console/configMgr` に移動します。*Apace Sling ロギングロガー設定* オプションを探して開きます。ダイアログボックスが表示されます。
+1. `https://'[server]:[port]'/system/console/configMgr` に移動します。 *Apace Sling ロギングロガー設定* オプションを探して開きます。 ダイアログボックスが表示されます。
 
    ![Apace Sling ロギングのロガー設定オプションのダイアログボックス](assets/logconfig.png)
 
    Apace Sling ロギングロガー設定オプション
 
-1. **ログレベル**&#x200B;を&#x200B;**デバッグ**&#x200B;に変更します。 
+1. **ログレベル**&#x200B;を&#x200B;**デバッグ**&#x200B;に変更します。
 
 1. **ログファイル**&#x200B;のパスと名前を指定します。
 
@@ -39,7 +54,7 @@ ht-degree: 100%
    >
    >HTML5 Forms ログディレクトリ内にログを生成する場合は、ファイル名の前に ../logs/ を追加します。
 
-1. **ロガー**&#x200B;を **HTMLFormsPerfLogger** に変更します。「**保存**」をクリックします。
+1. **ロガー**&#x200B;を **HTMLFormsPerfLogger** に変更します。 「**保存**」をクリックします。
 
 ## クライアントログの設定 {#configuring-client-logging}
 
@@ -50,7 +65,7 @@ ht-degree: 100%
 
 ### リクエストパラメーターの使用によるログの有効化 {#enabling-logging-using-request-parameter}
 
-この方法を使用して、特定のリクエストに対するログを生成できます。リクエストパラメーター名は `log` です。ログ URL は次のとおりです。
+この方法を使用して、特定のリクエストに対するログを生成できます。 リクエストパラメーター名は `log` です。 ログ URL は次のとおりです。
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -168,7 +183,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：
+>a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。 そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：
 >a（xfa）：2（デフォルトレベルのエラー）
 >b（xfaView）：6（ユーザー指定トレース）
 >a（xfaPerf）：2（デフォルトレベルのエラー）
@@ -187,18 +202,18 @@ ht-degree: 100%
 
 ## ログのアップロード {#uploading-logs}
 
-宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと供にこれらのログを必要とする場合は、出力先レベルを 2 に設定します。このレベルでは、すべてのログはクライアント側の JS オブジェクトに収集されて、フォームがデフォルトプロファイルでレンダリングされる場合、ツールバーの&#x200B;**既存のフィールドのハイライト**&#x200B;ボタンの左に&#x200B;**ログを送信**&#x200B;ボタンが表示されます。ユーザーがリンクをクリックすると、収集されたすべてのログはサーバーに投稿され、サーバー上の設定されたエラーログファイルに記録されます。
+宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。 管理者がサーバーログと供にこれらのログを必要とする場合は、出力先レベルを 2 に設定します。 このレベルでは、すべてのログはクライアント側の JS オブジェクトに収集されて、フォームがデフォルトプロファイルでレンダリングされる場合、ツールバーの&#x200B;**既存のフィールドのハイライト**&#x200B;ボタンの左に&#x200B;**ログを送信**&#x200B;ボタンが表示されます。 ユーザーがリンクをクリックすると、収集されたすべてのログはサーバーに投稿され、サーバー上の設定されたエラーログファイルに記録されます。
 
 デフォルトでは、すべての情報が /crx-repository/logs/ ディレクトリに保存されている error.log ファイルに追加されます。
 
 ログファイルの場所と名前を変更するには、次の操作を実行します。
 
-1. 管理者として「 Configuration Manager」にログインします。Configuration Manager のデフォルトの URL は、`https://'[server]:[port]'/system/console/configMgr` です。
-1. 「**Apache Sling Logging Logger Configuration**」をクリックします。ダイアログボックスが表示されます。
+1. 管理者として「 Configuration Manager」にログインします。 Configuration Manager のデフォルトの URL は、`https://'[server]:[port]'/system/console/configMgr` です。
+1. 「**Apache Sling Logging Logger Configuration**」をクリックします。 ダイアログボックスが表示されます。
 
    ![logconfig-1](assets/logconfig-1.png)
 
-1. **ログレベル**&#x200B;をデバッグに変更します。 
+1. **ログレベル**&#x200B;をデバッグに変更します。
 
 1. **ログファイル**&#x200B;のパスと名前を指定します。
 
