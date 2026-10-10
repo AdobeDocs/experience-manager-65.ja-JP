@@ -7,62 +7,78 @@ exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '518'
 ht-degree: 100%
-
 ---
-
 # タスク割り当て手順でのカスタムメールテンプレートの使用{#use-custom-email-templates-in-an-assign-task-step}
 
-ユーザーまたはグループにタスクを作成して割り当てるには、タスクの割り当て手順を使用します。ユーザーまたはグループにタスクが割り当てられると、指定されたユーザーまたは指定されたグループのメンバーに、メール通知が送信されます。一般的なメール通知には、割り当てられたタスクのリンクと、タスクに関連する情報が含まれています。次の画像は、サンプルのメール通知を示します。
+ユーザーまたはグループにタスクを作成して割り当てるには、タスクの割り当て手順を使用します。 ユーザーまたはグループにタスクが割り当てられると、指定されたユーザーまたは指定されたグループのメンバーに、メール通知が送信されます。 一般的なメール通知には、割り当てられたタスクのリンクと、タスクに関連する情報が含まれています。 次の画像には、サンプルメール通知が表示されています。
 
 ![デフォルトのテンプレートを使用したメール通知](do-not-localize/default_email_template_new.png)
 
-メール通知では、外観をカスタマイズしてカスタムメタデータを使用することができます。AEM Forms にはメール通知用の初期設定済みテンプレートが用意されています。初期設定済みテンプレートをカスタマイズするか、テンプレートをゼロから作成することができます。
+メール通知では、外観をカスタマイズしてカスタムメタデータを使用することができます。 AEM Forms にはメール通知用の初期設定済みテンプレートが用意されています。 初期設定済みテンプレートをカスタマイズするか、テンプレートをゼロから作成することができます。
 
-メール通知テンプレートは、[HTML 形式のメール](https://en.wikipedia.org/wiki/HTML_email)をベースにしています。これらのメールは、様々なメールクライアントや画面サイズに対応します。さらに、メールのスタイルはテンプレート内で定義されます。
+メール通知テンプレートは、[HTML 形式のメール](https://en.wikipedia.org/wiki/HTML_email)をベースにしています。 これらのメールは、様々なメールクライアントや画面サイズに対応します。 さらに、メールのスタイルはテンプレート内で定義されます。
 
-次の画像は、カスタマイズされたメール通知です。
+次の画像には、カスタマイズされたメール通知が表示されています。
 
 ![カスタムテンプレートを使用したメール通知](do-not-localize/customized-email.png)
 
 ## 既存テンプレートのカスタマイズ {#customize-the-existing-template}
 
-AEM Forms にはメール通知用の初期設定済みテンプレートが用意されています。テンプレートには、タイトルの説明、期限、優先度、ワークフロー名、割り当てられたタスクのリンクが含まれています。テンプレートをカスタマイズして外観を変更することができます。次の手順を実行してテンプレートをカスタマイズします。
+AEM Forms にはメール通知用の初期設定済みテンプレートが用意されています。 テンプレートには、タイトルの説明、期限、優先度、ワークフロー名、割り当てられたタスクのリンクが含まれています。 テンプレートをカスタマイズして外観を変更することができます。 次の手順を実行してテンプレートをカスタマイズします。
 
 1. 管理者アカウントで CRXDE にログインします。
 
 1. /libs/fd/dashboard/templates/email に移動します。
 
-1. htmlEmailTemplate.txt ファイルを開きます。これにはデフォルトのテンプレートが含まれています。
+1. htmlEmailTemplate.txt ファイルを開きます。 これにはデフォルトのテンプレートが含まれています。
 
 1. htmlEmailTemplate.txt ファイルのコンテンツをカスタムコンテンツと置き換えます。
 
-   メール通知テンプレートは、[HTML 形式のメール](https://en.wikipedia.org/wiki/HTML_email)です。既存の HTML コードをカスタムコードで置き換えることで、テンプレートの外観を変更することができます。
+   メール通知テンプレートは、[HTML 形式のメール](https://en.wikipedia.org/wiki/HTML_email)です。 既存の HTML コードをカスタムコードで置き換えることで、テンプレートの外観を変更することができます。
 
-1. ファイルを保存します。これでカスタマイズされたテンプレートが使用できるようになります。
+1. ファイルを保存します。 これでカスタマイズされたテンプレートが使用できるようになります。
 
 ## メールテンプレートの作成 {#create-an-email-template}
 
-AEM Forms にはメール通知用の初期設定済みテンプレートが用意されています。テンプレートには、タイトルの説明、期限、優先度、ワークフロー名、割り当てられたタスクのリンクが含まれています。また、タスクの割り当て手順にカスタムのメールテンプレート（独自のテンプレート）を追加できます。次の手順を実行して、カスタムのメールテンプレートを追加します。
+AEM Forms にはメール通知用の初期設定済みテンプレートが用意されています。 テンプレートには、タイトルの説明、期限、優先度、ワークフロー名、割り当てられたタスクのリンクが含まれています。 また、タスクの割り当て手順にカスタムのメールテンプレート（独自のテンプレート）を追加できます。 次の手順を実行して、カスタムのメールテンプレートを追加します。
 
 1. 管理者アカウントで CRXDE にログインします。
 
 1. /libs/fd/dashboard/templates/email に移動します。
 
-1. .txt ファイルを作成します。例えば、EmailOnTaskAssign.txt などです。
+1. .txt ファイルを作成します。 例えば、EmailOnTaskAssign.txt などです。
 
 1. カスタムの HTML コードをファイルに追加します。
 
-   メール通知テンプレートは、[HTML 形式のメール](https://en.wikipedia.org/wiki/HTML_email)です。カスタムの HTML コードをファイルに追加して、テンプレートを作成します。
+   メール通知テンプレートは、[HTML 形式のメール](https://en.wikipedia.org/wiki/HTML_email)です。 カスタムの HTML コードをファイルに追加して、テンプレートを作成します。
 
-1. ファイルを保存します。テンプレートが、タスクの割り当て手順で使用できるようになりました。
+1. ファイルを保存します。 テンプレートが、タスクの割り当て手順で使用できるようになりました。
 
 ## タスクの割り当て手順におけるメールテンプレートの使用 {#use-an-email-template-in-an-assign-task-step}
 
-タスクの割り当て手順では、初期状態でデフォルトテンプレート htmlEmailTemplate.txt を使用するように設定されています。カスタムのテンプレートを使用するように選択できます。テンプレートの場所を変更するには：
+タスクの割り当て手順では、初期状態でデフォルトテンプレート htmlEmailTemplate.txt を使用するように設定されています。 カスタムのテンプレートを使用するように選択できます。 テンプレートの場所を変更するには：
 
 1. タスクの割り当て手順を開きます。
 
@@ -70,6 +86,6 @@ AEM Forms にはメール通知用の初期設定済みテンプレートが用�
 
 1. 新しく作成された HTML メールテンプレートを選択します。
 
-1. 「OK」をクリックします。テンプレートが変更されました。
+1. 「OK」をクリックします。 テンプレートが変更されました。
 
-メール通知では、[メタデータ](../../forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。[カスタムメタデータ](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification)を使用するために、テンプレートを設定することもできます。
+メール通知では、[メタデータ](../../forms/using/use-metadata-in-email-notifications.md)も使用します。 例えば、期限、優先度、ワークフロー名などです。 [カスタムメタデータ](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification)を使用するために、テンプレートを設定することもできます。
