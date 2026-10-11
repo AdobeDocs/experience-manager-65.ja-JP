@@ -33,9 +33,9 @@ https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 開発者は、この例を、PhoneGapを使用してAEM Mobile アプリケーションを試す出発点として使用できます。 スターターキットとリファレンスアプリケーションを実行すると、リッチモバイルアプリケーションを作成するための基本をしっかりと理解できます。
 
 * [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)を使用して、AEM Mobile カタログに適したアプリケーションを作成します。
-* 既存のアプリをAEM Mobileに移行する場合でも、新たに開始する場合でも、AEM Mobileの新機能の多くを示すフルソースの[参照アプリ ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が作成されました。
+* 既存のアプリをAEM Mobileに移行する場合でも、新たに開始する場合でも、AEM Mobileの新機能の多くを示すフルソースの[参照アプリ &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が作成されました。
 * すべてのサンプルはgithub: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps)で確認でき、Mavenを使用してプロジェクトをブートストラップできます。
-* ほとんどのカンファレンスでは、[Kitchen Sink チュートリアル ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)を使用しています。このチュートリアルはGitHubでも利用でき、Apache Cordovaのネイティブ拡張機能の使用に焦点を当てています。
+* ほとんどのカンファレンスでは、[Kitchen Sink チュートリアル &#x200B;](https://github.com/blefebvre/aem-phonegap-kitchen-sink)を使用しています。このチュートリアルはGitHubでも利用でき、Apache Cordovaのネイティブ拡張機能の使用に焦点を当てています。
 
 >[!NOTE]
 >

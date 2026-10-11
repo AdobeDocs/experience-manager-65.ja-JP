@@ -33,7 +33,7 @@ Adobe Experience Manager（AEM）モバイルは、AEMの包括的な基盤を�
 
 ## PhoneGap アプリケーションのオーサリング {#authoring-phonegap-applications}
 
-***AEM オーサー* （または&#x200B;*マーケター*） **は、すぐに使えるテンプレートとコンポーネントを使用して、ページを追加および編集できます。 コンポーネントをドラッグ&amp;ドロップし、画像、動画、テキストフラグメント（コンテンツフラグメント）など、あらゆるタイプのメディアをDAMから追加できます。
+***AEM オーサー* （または&#x200B;*マーケター*） &#x200B;** は、すぐに使えるテンプレートとコンポーネントを使用して、ページを追加および編集できます。 コンポーネントをドラッグ&amp;ドロップし、画像、動画、テキストフラグメント（コンテンツフラグメント）など、あらゆるタイプのメディアをDAMから追加できます。
 
 詳しくは、次のリソースを参照してください。
 
@@ -45,7 +45,7 @@ Adobe Experience Manager（AEM）モバイルは、AEMの包括的な基盤を�
 * [作成ウィザードを使用したAEM Mobile アプリの作成](/help/mobile/phonegap-create-new-app.md)
 * [既存のハイブリッドアプリの読み込み](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-**コンテンツサービス**&#x200B;について詳しくは、[ コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md)を参照してください。
+**コンテンツサービス**&#x200B;について詳しくは、[&#x200B; コンテンツサービスの概要](/help/mobile/develop-content-as-a-service.md)を参照してください。
 
 ## その他のリソース {#additional-resources}
 

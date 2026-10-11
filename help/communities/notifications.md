@@ -30,7 +30,7 @@ ht-degree: 1%
 
 AEM Communitiesには、サインインコミュニティメンバーに関心のあるイベントを表示する「通知」セクションが用意されています。
 
-通知は、[ アクティビティ ](/help/communities/essentials-activities.md)および[ サブスクリプション ](/help/communities/subscriptions.md)と似ています。次の原因が考えられます。
+通知は、[&#x200B; アクティビティ &#x200B;](/help/communities/essentials-activities.md)および[&#x200B; サブスクリプション &#x200B;](/help/communities/subscriptions.md)と似ています。次の原因が考えられます。
 
 * コンテンツを投稿するメンバー。
 * 別のメンバーをフォローすることを選択したメンバー。
@@ -41,8 +41,8 @@ AEM Communitiesには、サインインコミュニティメンバーに関心�
 
 * 通知セクションへのリンクは、常にコミュニティサイトのヘッダーに表示されます。
 
-  * アクティビティでは、[ アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)をコミュニティサイトの構造に含める必要があります。
-  * サブスクリプションを購入するには、電子メール ](/help/communities/email.md)の[設定が必要です。
+  * アクティビティでは、[&#x200B; アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)をコミュニティサイトの構造に含める必要があります。
+  * サブスクリプションを購入するには、電子メール [&#128279;](/help/communities/email.md)の設定が必要です。
 
 * 通知の実装は、拡張性と接続性に優れたチャネルを通じて行われます。
 
@@ -66,11 +66,11 @@ AEM Communitiesには、サインインコミュニティメンバーに関心�
 
 **フォローを有効にする**
 
-以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を許可するのは、[ ブログ ](/help/communities/blog-feature.md)、[ フォーラム ](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[ カレンダー](/help/communities/calendar.md)、[ ファイルライブラリ ](/help/communities/file-library.md)、および[ コメント ](/help/communities/comments.md)です。
+以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を許可するのは、[&#x200B; ブログ &#x200B;](/help/communities/blog-feature.md)、[&#x200B; フォーラム &#x200B;](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[&#x200B; カレンダー](/help/communities/calendar.md)、[&#x200B; ファイルライブラリ &#x200B;](/help/communities/file-library.md)、および[&#x200B; コメント &#x200B;](/help/communities/comments.md)です。
 
 **メモ**：
 
-* コミュニティ [ サイトテンプレート ](/help/communities/sites.md)および[ グループテンプレート ](/help/communities/tools-groups.md)内で使用されているコンポーネントは、既にフォローするように設定されている可能性があります。
+* コミュニティ [&#x200B; サイトテンプレート &#x200B;](/help/communities/sites.md)および[&#x200B; グループテンプレート &#x200B;](/help/communities/tools-groups.md)内で使用されているコンポーネントは、既にフォローするように設定されている可能性があります。
 
 * メンバープロファイルは、他のメンバーがフォローできるように既に設定されています。
 
@@ -101,7 +101,7 @@ Web チャネルは常に有効です。
 
 ![notifications14](assets/notifications1.png)
 
-電子メール ](/help/communities/email.md)の適切な[設定に依存する電子メールチャネルは、web チャネルと同じ設定を提供します。
+電子メール [&#128279;](/help/communities/email.md)の適切な設定に依存する電子メールチャネルは、web チャネルと同じ設定を提供します。
 
 メールチャネルはデフォルトでオフになっています。
 
@@ -115,7 +115,7 @@ Web チャネルは常に有効です。
 
 ### Web通知 {#web-notifications}
 
-[ ウィザードが作成したコミュニティサイト ](/help/communities/sites-console.md)には、バナーの上にあるサイトのヘッダーバーに`Notifications`機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成されますが、メッセージはサイト作成プロセスで有効にする必要があります。
+[&#x200B; ウィザードが作成したコミュニティサイト &#x200B;](/help/communities/sites-console.md)には、バナーの上にあるサイトのヘッダーバーに`Notifications`機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成されますが、メッセージはサイト作成プロセスで有効にする必要があります。
 
 公開されたサイトにアクセスすると、`Notifications` リンクを選択すると、メンバーのすべての通知が表示されます。
 
@@ -129,7 +129,7 @@ Web チャネルは常に有効です。
 
 ## メール通知のカスタマイズ {#customize-email-notifications}
 
-組織は、**/libs/settings/community/templates/email/html**&#x200B;のテンプレートを[ オーバーレイ ](/help/communities/client-customize.md#overlays)することで、メール通知をカスタマイズできます。
+組織は、**/libs/settings/community/templates/email/html**&#x200B;のテンプレートを[&#x200B; オーバーレイ &#x200B;](/help/communities/client-customize.md#overlays)することで、メール通知をカスタマイズできます。
 
 例えば、（コミュニティコンポーネントの）メンションメール通知を変更するには、**@mentions** サポートを有効にしたコンポーネントのテンプレートに、動詞&#x200B;**メンション**&#x200B;の&#x200B;**if**&#x200B;条件を追加します。
 

@@ -329,7 +329,7 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 >
 >Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合のレコメンデーションは、クラウドプロバイダーと直接共同作業することです。 または、任意のクラウド環境での AEM のデプロイをサポートするアドビのパートナーと協力することもできます。 選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計、および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
 >
->>[技術要件](/help/sites-deploying/technical-requirements.md#supported-platforms)ページも参照してください。
+>&#x200B;>[技術要件](/help/sites-deploying/technical-requirements.md#supported-platforms)ページも参照してください。
 
 ### 検索 {#search-features}
 

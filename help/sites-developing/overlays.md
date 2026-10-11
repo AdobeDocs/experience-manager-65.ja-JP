@@ -70,9 +70,9 @@ AEM 6.0 以降、オーバーレイの実装方法と使用方法が以下のよ
 >
 >他のエリア（クラシック UI を含む）のオーバーレイでは、適切なノードとサブ構造全体をコピーし、必要な変更を加えます。
 
-オーバーレイは、[ コンソールの設定](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)や[選択カテゴリをサイドパネル ](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser)のアセットブラウザーに作成するなど、多くの変更に推奨される方法です（ページのオーサリング時に使用）。 必要な理由は次のとおりです。
+オーバーレイは、[&#x200B; コンソールの設定](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)や[選択カテゴリをサイドパネル &#x200B;](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser)のアセットブラウザーに作成するなど、多くの変更に推奨される方法です（ページのオーサリング時に使用）。 必要な理由は次のとおりです。
 
-* ****&#x200B;は`/libs` ブランチで変更を加えません&#x200B;**行った変更はすべて失われる可能性があります。このブランチは、次の操作を行うたびに変更される可能性があります。
+* **&#x200B;**&#x200B;は`/libs` ブランチで変更を加えません&#x200B;**行った変更はすべて失われる可能性があります。このブランチは、次の操作を行うたびに変更される可能性があります。
 
   * インスタンスをアップグレード
   * ホットフィックスを適用

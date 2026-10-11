@@ -120,7 +120,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [ ファイルを取得](assets/dscsample.zip)
+   [&#x200B; ファイルを取得](assets/dscsample.zip)
    DSCのダウンロード：サンプル DSCは、上記のDSCSample.zip ファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。 DSC サービスを使用する前に、設定する必要があります。 [DSC サービスを設定](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
 
    アクティビティを定義ダイアログで、適切なアクティビティ（getLetterInstanceInfo など）を選択し、「**OK**」をクリックします。

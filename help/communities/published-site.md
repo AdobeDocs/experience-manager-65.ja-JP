@@ -76,14 +76,14 @@ jcr コンテンツとjsonを通じて匿名ユーザーによるアクセスか
 
 1. **認証要件**&#x200B;を有効にします。
 
-   ![ サイト認証](assets/site-authentication.png)
+   ![&#x200B; サイト認証](assets/site-authentication.png)
 
 1. ログインページのパスを追加します。 例：**/content/......./GetStarted**
 1. ページを公開します。
 
 ## 信頼できるコミュニティメンバー {#trusted-community-member}
 
-このエクスペリエンスでは、[Aaron McDonald](/help/communities/tutorials.md#demo-users)が[ コミュニティマネージャーおよびモデレーター](/help/communities/create-site.md#roles)の役割を割り当てられていることを前提としています。 そうでない場合は、オーサー環境に戻って[ サイト設定を変更](/help/communities/sites-console.md#modifying-site-properties)し、コミュニティマネージャーとモデレーターの両方としてAaron McDonaldを選択します。
+このエクスペリエンスでは、[Aaron McDonald](/help/communities/tutorials.md#demo-users)が[&#x200B; コミュニティマネージャーおよびモデレーター](/help/communities/create-site.md#roles)の役割を割り当てられていることを前提としています。 そうでない場合は、オーサー環境に戻って[&#x200B; サイト設定を変更](/help/communities/sites-console.md#modifying-site-properties)し、コミュニティマネージャーとモデレーターの両方としてAaron McDonaldを選択します。
 
 右上隅の「`Log in`」を選択し、ユーザー名（aaron.mcdonald@mailinator.com）とパスワード（パスワード）で署名します。 TwitterまたはFacebookの資格情報でログインする機能に注意してください。
 
@@ -92,7 +92,7 @@ jcr コンテンツとjsonを通じて匿名ユーザーによるアクセスか
 登録したコミュニティメンバーとしてログインしたら、次のメニュー項目に注意して、コミュニティサイトをクリックして検索します。
 
 * **プロファイル** オプションを使用すると、プロファイルを表示および編集できます。
-* [ メッセージ ](/help/communities/configure-messaging.md) オプションを使用すると、ダイレクトメッセージングセクションに移動します。このセクションでは、次の操作を実行できます。
+* [&#x200B; メッセージ &#x200B;](/help/communities/configure-messaging.md) オプションを使用すると、ダイレクトメッセージングセクションに移動します。このセクションでは、次の操作を実行できます。
 
   1. 受信（受信トレイ）、送信（送信済みアイテム）、削除（ゴミ箱）したダイレクトメッセージを表示します。
   1. 新しいダイレクトメッセージを作成して、個人やグループに送信できます。
@@ -102,16 +102,16 @@ jcr コンテンツとjsonを通じて匿名ユーザーによるアクセスか
 
 ![adminscreen](assets/adminscreen.png)
 
-選択した参照サイトテンプレートには、まずカレンダー機能が含まれ、次にアクティビティストリーム機能、フォーラム機能などが含まれているため、カレンダーページがホームページであることに注意してください。 この構造は、[ サイトテンプレート ](/help/communities/sites.md#edit-site-template) コンソールから、またはオーサー環境でサイトプロパティを変更する場合に表示されます。
+選択した参照サイトテンプレートには、まずカレンダー機能が含まれ、次にアクティビティストリーム機能、フォーラム機能などが含まれているため、カレンダーページがホームページであることに注意してください。 この構造は、[&#x200B; サイトテンプレート &#x200B;](/help/communities/sites.md#edit-site-template) コンソールから、またはオーサー環境でサイトプロパティを変更する場合に表示されます。
 
-![ サイトテンプレート ](assets/sitetemplate.png)
+![&#x200B; サイトテンプレート &#x200B;](assets/sitetemplate.png)
 
 >[!NOTE]
 >
 >コミュニティのコンポーネントと機能について詳しくは、次のサイトを参照してください。
 >
->* [ コミュニティコンポーネント ](/help/communities/author-communities.md) （作成者向け）
->* [ コンポーネント、関数、および機能の基本](/help/communities/essentials.md) （開発者向け）
+>* [&#x200B; コミュニティコンポーネント &#x200B;](/help/communities/author-communities.md) （作成者向け）
+>* [&#x200B; コンポーネント、関数、および機能の基本](/help/communities/essentials.md) （開発者向け）
 
 ### フォーラムリンク {#forum-link}
 
@@ -129,7 +129,7 @@ Aaronはグループ管理者なので、「グループ」リンクを選択す
 
 これは、パブリッシュ環境でグループを作成する例です。
 
-グループはオーサー環境で作成し、オーサー環境（[ コミュニティグループコンソール ](/help/communities/groups.md)）のコミュニティサイト内で管理することもできます。 オーサー](/help/communities/nested-groups.md)で[ グループを作成する方法については、次のチュートリアルで説明します。
+グループはオーサー環境で作成し、オーサー環境（[&#x200B; コミュニティグループコンソール &#x200B;](/help/communities/groups.md)）のコミュニティサイト内で管理することもできます。 オーサー[&#128279;](/help/communities/nested-groups.md)で グループを作成する方法については、次のチュートリアルで説明します。
 
 ![grouplink](assets/grouplink.png)
 
@@ -173,7 +173,7 @@ Aaronはグループ管理者なので、「グループ」リンクを選択す
 
 * 両方のグループを表示する前に、ページの更新が必要になる場合があります。
 * このテンプレートには&#x200B;*not*&#x200B;にグループ関数が含まれていないため、グループをさらにネストすることはできません。
-* 作成者の場合、[ グループコンソール ](/help/communities/groups.md)は3つ目の選択肢を提供します – `Public Group` （オプションのメンバーシップ）。
+* 作成者の場合、[&#x200B; グループコンソール &#x200B;](/help/communities/groups.md)は3つ目の選択肢を提供します – `Public Group` （オプションのメンバーシップ）。
 
 両方のグループを作成したら、ベースボールグループと開いているグループを選択し、そのリンクを確認します。
 
@@ -183,7 +183,7 @@ Aaronはグループ管理者なので、「グループ」リンクを選択す
 
 ![grouplink2](assets/grouplink2.png)
 
-作成者 – 管理者権限で[ コミュニティグループコンソール ](/help/communities/members.md)に移動し、Weston McCallを`Community Engage Gymnastics <uid> Members` グループに追加します。
+作成者 – 管理者権限で[&#x200B; コミュニティグループコンソール &#x200B;](/help/communities/members.md)に移動し、Weston McCallを`Community Engage Gymnastics <uid> Members` グループに追加します。
 
 公開を続け、Aaron McDonaldとしてログアウトし、Sports Groupのグループを匿名のサイト訪問者として表示します。
 
@@ -202,13 +202,13 @@ Weston McCall （weston.mccall@dodgit.com / password）としてログインし�
 
 「Web ページ」リンクを選択して、サイトに含まれている基本web ページを表示します。 標準のAEM オーサリングツールを使用して、オーサー環境でこのページにコンテンツを追加できます。
 
-例えば、**author** インスタンスに移動し、[Communities Sites コンソール ](/help/communities/sites-console.md)で`engage` フォルダーを開き、**サイトを開く** アイコンを選択して作成者編集モードに入ります。 次に、「`Web Page`」リンクを選択できるようにプレビューモードを選択し、次に「編集」モードを選択してタイトルとテキストコンポーネントを追加します。 最後に、ページまたはサイト全体のいずれかを再公開します。
+例えば、**author** インスタンスに移動し、[Communities Sites コンソール &#x200B;](/help/communities/sites-console.md)で`engage` フォルダーを開き、**サイトを開く** アイコンを選択して作成者編集モードに入ります。 次に、「`Web Page`」リンクを選択できるようにプレビューモードを選択し、次に「編集」モードを選択してタイトルとテキストコンポーネントを追加します。 最後に、ページまたはサイト全体のいずれかを再公開します。
 
 ![webpagelink](assets/webpagelink.png)
 
 ### モデレーションリンク {#moderationlink}
 
-コミュニティメンバーにモデレーション権限がある場合、モデレーションリンクが表示されます。 リンクを選択すると、投稿されたコミュニティコンテンツが表示され、オーサー環境の[ モデレーションコンソール ](/help/communities/moderation.md)と同様に[ モデレーション ](/help/communities/moderate-ugc.md)できます。
+コミュニティメンバーにモデレーション権限がある場合、モデレーションリンクが表示されます。 リンクを選択すると、投稿されたコミュニティコンテンツが表示され、オーサー環境の[&#x200B; モデレーションコンソール &#x200B;](/help/communities/moderation.md)と同様に[&#x200B; モデレーション &#x200B;](/help/communities/moderate-ugc.md)できます。
 
 ブラウザーの「戻る」ボタンを使用して、公開されたサイトに戻ります。 ほとんどのコンソールは、パブリッシュ環境のグローバルナビゲーションからアクセスできません。
 
@@ -231,7 +231,7 @@ Weston McCall （weston.mccall@dodgit.com / password）としてログインし�
 
 ログイン後、表示された最初のページは`Profile` ページで、パーソナライズできます。
 
-![ プロファイル ](assets/profile.png)
+![&#x200B; プロファイル &#x200B;](assets/profile.png)
 
 メンバーがログイン IDを忘れた場合、メールアドレスを使用して回復することができます。
 

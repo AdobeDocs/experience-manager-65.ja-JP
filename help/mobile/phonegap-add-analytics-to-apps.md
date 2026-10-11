@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ユーザーはすべてのコンテンツにアクセスしていますか？ アプリを放棄しているか、その場合、どこで放棄しているか、などです。 どれくらいの頻度でアプリに滞在し、どれくらいの頻度でアプリを使用するために再訪問するか？ リテンションを高めるために、どのような変化を導入し、それを測定できますか？ クラッシュ率について、あなたのアプリはあなたのユーザーのためにクラッシュしていますか？
 
-[Adobe Mobile Services](https://business.adobe.com/products/campaign/mobile-marketing.html)と連携することで、Adobe Experience Manager（AEM）アプリの[ モバイルアプリ分析](https://business.adobe.com/products/analytics/mobile-marketing.html)を活用できます。
+[Adobe Mobile Services](https://business.adobe.com/products/campaign/mobile-marketing.html)と連携することで、Adobe Experience Manager（AEM）アプリの[&#x200B; モバイルアプリ分析](https://business.adobe.com/products/analytics/mobile-marketing.html)を活用できます。
 
 AEMアプリを計測することで、利用者がモバイルアプリやコンテンツにどのようにエンゲージしているのかを追跡、レポート、把握し、ローンチ、アプリ滞在時間、クラッシュ率などの主要なライフサイクル指標を測定できます。
 
@@ -68,7 +68,7 @@ Mobile Application AEM Apps ダッシュボードからADBMobileConfigをダウ�
 
 PhoneGap CLIでビルドする場合は、cordova ビルドフックスクリプトを使用します。 これは、次のGeometrixx Outdoors アプリで確認できます：*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-IOSの場合、ファイルをXCode プロジェクトの&#x200B;**Resources** ディレクトリにコピーする必要があります（例：「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」）。 アプリがAndroid™を対象としている場合、コピー先のパスは「platforms/android/assets/ADBMobileConfig.json」になります。 PhoneGap CLIのビルド中にフックを使用する方法について詳しくは、[Cordova/PhoneGap プロジェクトに必要な3つのフック ](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c)を参照してください。
+IOSの場合、ファイルをXCode プロジェクトの&#x200B;**Resources** ディレクトリにコピーする必要があります（例：「platforms/ios/Geometrixx/Resources/ADBMobileConfig.json」）。 アプリがAndroid™を対象としている場合、コピー先のパスは「platforms/android/assets/ADBMobileConfig.json」になります。 PhoneGap CLIのビルド中にフックを使用する方法について詳しくは、[Cordova/PhoneGap プロジェクトに必要な3つのフック &#x200B;](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c)を参照してください。
 
 ```xml
 ///////////////////////////

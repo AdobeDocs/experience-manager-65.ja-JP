@@ -26,7 +26,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Manager （AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html)を参照してください。
+>Adobe Experience Manager （AEM）をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/digital-publishing-solution/topics.html)を参照してください。
 
 ## AEM 管理者 {#aem-administrator}
 
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEM グループと権限の設定について詳しくは、オンラインヘルプの「[ ユーザーロールの作成とアクセス権の付与](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
+>AEM グループと権限の設定について詳しくは、オンラインヘルプの「[&#x200B; ユーザーロールの作成とアクセス権の付与](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
 
 AEM管理者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次の作業を担当します。
 

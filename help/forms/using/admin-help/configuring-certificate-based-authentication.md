@@ -76,7 +76,7 @@ User Management は通常、ユーザー名とパスワードを使用して認�
    正規表現では次の文字を使用できます。
 
    * . （任意の文字）
-   * &amp;ast; （0個以上の出現）
+   * &ast; （0個以上の出現）
    * ()（括弧内にグループを指定）
    * \（正規表現文字を通常の文字にエスケープするために使用）
    * $n（n 番目のグループを参照するために使用）
@@ -85,21 +85,21 @@ User Management は通常、ユーザー名とパスワードを使用して認�
 
    * 「Alex Pink (Authentication)」から「Alex Pink」を抽出するには
 
-     **正規表現：** （。&amp;ast;） \（認証\）
+     **正規表現：** （。&ast;） \（認証\）
 
    * 「Alex（認証）Pink」から「Alex Pink」を抽出するには
 
-     **正規表現：** （。&amp;ast;）\（認証\） （。&amp;ast;）
+     **正規表現：** （。&ast;）\（認証\） （。&ast;）
 
    * 「Alex (Authentication) Pink」から「Pink Alex」を抽出するには
 
-     **正規表現：** （。&amp;ast;）\（認証\） （。&amp;ast;）
+     **正規表現：** （。&ast;）\（認証\） （。&ast;）
 
      カスタム順序：$2 $1（空白文字でキャプチャされた、最初のグループに連結された 2 番目のグループを返します）
 
    * 「smtp:apink@sampleorg.com」から「apink@sampleorg.com」を抽出するには
 
-     **正規表現：** smtp:（。&amp;ast;）
+     **正規表現：** smtp:（。&ast;）
 
    正規表現の使用について詳しくは、[正規表現に関する Java チュートリアル](https://java.sun.com/docs/books/tutorial/essential/regex/)を参照してください。
 

@@ -26,13 +26,13 @@ ht-degree: 2%
 
 AEM Mobile ダッシュボードでは、モバイルアプリケーションの作成、構築、デプロイ、アプリケーションのメタデータの作成、削除、編集を行うことができます。 アプリケーションが公開されたら、ライフサイクルや利用指標を含むアプリケーション分析を分析して、顧客コンバージョンとブランドロイヤルティを向上させることができます。
 
-AEM Mobile アプリケーションを作成するには、[ モバイルアプリケーションの作成](/help/mobile/building-app-mobile-phonegap.md) ページを参照してください。
+AEM Mobile アプリケーションを作成するには、[&#x200B; モバイルアプリケーションの作成](/help/mobile/building-app-mobile-phonegap.md) ページを参照してください。
 
 環境を設定して開始するには、[AEM PhoneGap Enterpriseを使用するためのAEMの管理](/help/mobile/administer-phonegap.md)を参照してください。
 
 ## AEM Mobile アプリカタログ {#the-aem-mobile-apps-catalog}
 
-[AEM Mobile Apps カタログ ](http://localhost:4502/aem/apps.html/content/phonegap)には、AEMで管理されているすべてのモバイルアプリが表示されます。
+[AEM Mobile Apps カタログ &#x200B;](http://localhost:4502/aem/apps.html/content/phonegap)には、AEMで管理されているすべてのモバイルアプリが表示されます。
 
 このカタログは、AEM Mobileの「ランディングページ」と考えてください。管理者は、テンプレートに基づいて作成するか、モバイル開発者によって既に開始されている既存のアプリをアップロードすることで、新しいAEM Mobile アプリケーションを開始できます。
 
@@ -42,7 +42,7 @@ AEM Mobile アプリケーションを作成するには、[ モバイルアプ�
 
 1. **アプリ**&#x200B;を選択して、アプリカタログを開きます。
 
-![AEM Mobile Apps カタログ ](assets/chlimage_1-135.png)
+![AEM Mobile Apps カタログ &#x200B;](assets/chlimage_1-135.png)
 
 ## AEM Mobileアプリダッシュボード {#the-aem-mobile-app-dashboard}
 
@@ -64,7 +64,7 @@ AEM Mobile ダッシュボードの各タイルに展開し、右下隅にある
 
 AEM Mobileでは、AEM Sitesと同様にコンテンツを作成、更新、削除できます。 **ページコンテンツタイルを管理**&#x200B;すると、管理されたコンテンツと最終更新日のページ数が表示されます。 コンテンツをドリルダウンして、タイルの各レコードをクリックすることで、ページを作成、コピー、移動、削除、更新できます。 コンテンツが更新されたら、**コンテンツパッケージの管理タイル**&#x200B;を通じて、コンテンツの更新を顧客にプッシュできます。
 
-![ コンテンツタイル ](assets/chlimage_1-138.png)
+![&#x200B; コンテンツタイル &#x200B;](assets/chlimage_1-138.png)
 
 ### 「コンテンツパッケージを管理」タイル {#the-manage-content-packages-tile}
 
@@ -84,11 +84,11 @@ Content Packageを使用すると、AEM App AuthorはAEMでページコンテン
 
 **公開済み**&#x200B;列には、最後のコンテンツ更新が公開され、顧客が利用できるようになった日時が表示されます。 コンテンツを公開するには、最初にそのコンテンツをステージングし、次にこのタイルをドリルダウンしてコンテンツリリースの詳細コンソールから公開して、更新を公開する必要があります。
 
-![ コンテンツリリースタイル ](assets/chlimage_1-139.png) ![ アプリシェル用ContentSync パッケージ ](do-not-localize/chlimage_1-5.png)
+![&#x200B; コンテンツリリースタイル &#x200B;](assets/chlimage_1-139.png) ![&#x200B; アプリシェル用ContentSync パッケージ &#x200B;](do-not-localize/chlimage_1-5.png)
 
 このアイコンは、アプリシェルのコンテンツリリースパッケージを表します
 
-![ コンテンツリリースパッケージアイコンが、2つの正方形の重なり合うパッケージシンボルで示されています。](do-not-localize/chlimage_1-6.png)
+![&#x200B; コンテンツリリースパッケージアイコンが、2つの正方形の重なり合うパッケージシンボルで示されています。](do-not-localize/chlimage_1-6.png)
 
 これらのアイコンは、アプリコンテンツのコンテンツリリースパッケージを表します
 
@@ -98,7 +98,7 @@ Content Packageを使用すると、AEM App AuthorはAEMでページコンテン
 
 または、デバイス ソースをダウンロードして、PhoneGap CLI （`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`）を使用してローカルでビルドすることもできます。
 
-![PhoneGap ビルド タイル ](assets/chlimage_1-140.png)
+![PhoneGap ビルド タイル &#x200B;](assets/chlimage_1-140.png)
 
 ### 指標タイル {#the-metrics-tile}
 
@@ -112,7 +112,7 @@ AEM Mobileは、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/d
 
 コントロールセンター&#x200B;**指標タイル**&#x200B;には、アプリケーションのAMSから取得したサマリー分析が表示されます。 右下の「。..」をクリックすると、分析ダッシュボードをドリルダウンできます。
 
-![指標タイル ](assets/chlimage_1-141.png)
+![指標タイル &#x200B;](assets/chlimage_1-141.png)
 
 ### エンティティコンテンツを管理タイル {#the-manage-entity-content-tile}
 

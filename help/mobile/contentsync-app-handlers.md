@@ -67,8 +67,8 @@ ht-degree: 1%
 
 * ***type - String - mobilecontentlisting***
 * ***path*** – 文字列 – 空のままにする。有効なハンドラーと見なすには存在する必要がありますが、パスは現在のContentSync キャッシュであると推測されます。 この値は無視されます。
-* ***targetRootDirectory* -**文字列 – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ContentSyncがこのハンドラーを実行するための&#x200B;***注文 – Long* -**注文。 この数値は、100など、他のすべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後で実行する必要があります。
+* ***targetRootDirectory* -**&#x200B;文字列 – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
+* ContentSyncがこのハンドラーを実行するための&#x200B;***注文 – Long* -**&#x200B;注文。 この数値は、100など、他のすべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後で実行する必要があります。
 
 ```xml
 {
@@ -93,9 +93,9 @@ ht-degree: 1%
 ハンドラーは、AEM App Shell ContentSync Config （node with pge-type=app-instance）で使用する必要があります
 
 * ***type - String - mobilecontentpackageslisting***
-* ***path **-**String*** - アプリシェルへのパス（pge-type=app-instanceを持つノード）。
+* ***path &#x200B;**-**String*** - アプリシェルへのパス（pge-type=app-instanceを持つノード）。
 * ***targetRootDirectory - String*** – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
-* ContentSyncがこのハンドラーを実行するための&#x200B;***注文 – Long* -**注文。 この数値は、100など、他のすべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後で実行する必要があります。
+* ContentSyncがこのハンドラーを実行するための&#x200B;***注文 – Long* -**&#x200B;注文。 この数値は、100など、他のすべてのハンドラーよりも高く設定する必要があります。 従来のコンテンツハンドラーの後で実行する必要があります。
 
 >[!NOTE]
 >
@@ -127,8 +127,8 @@ ht-degree: 1%
 
 このハンドラーは、AEM App Shell ContentSync設定（page-type=[app-instance]）で使用する必要があります。
 
-* ***type - String* - **widgetconfig
-* ***path **-**String*** - アプリシェルの任意の子ノード（pge-type=[app-instance]）へのパス。
+* ***type - String* - &#x200B;** widgetconfig
+* ***path &#x200B;**-**String*** - アプリシェルの任意の子ノード（pge-type=[app-instance]）へのパス。
 * ***targetRootDirectory - String*** – このハンドラーのコンテンツ更新のターゲットルートとしてパスに追加するプレフィックス。
 * ***targetIconDirectory - String*** - アプリのアイコンを配置するディレクトリ
 
@@ -182,7 +182,7 @@ mobileappsoffers ハンドラーは、mobileappspages ハンドラーを拡張�
 
 **mobileappconfig** mobileappconfig コンテンツ同期ハンドラーは、JSON データをMobileAppsConfig.jsonに挿入する方法を提供します。 プロバイダークラスを登録するには、開発者はMobileAppsInfoProvider クラスをプロバイダーのリストに追加します。 ハンドラーはMobileAppsInfoProvidersのリストを繰り返し処理し、プロバイダーが結果のjson ファイルにデータを注入できるようにします。 このハンドラーがサポートするプロパティのリストは次のとおりです。
 
-* ***path **-**String*** - pge-type=app-instanceまたは/libs/mobileapps/core/components/instanceを拡張するRTを含むアプリインスタンスノードへのパス
+* ***path &#x200B;**-**String*** - pge-type=app-instanceまたは/libs/mobileapps/core/components/instanceを拡張するRTを含むアプリインスタンスノードへのパス
 * ***providers - String*** `[]` – 完全修飾されたMobileAppsInfoProvidersのリスト
 * ***targetRootDirectory - String*** - MobileAppsConfig.json ファイルの書き込み先ディレクトリ。
 * **fileName - String** - JSONを書き込むファイルのオプション名。デフォルトはMobileAppsConfig.jsonです

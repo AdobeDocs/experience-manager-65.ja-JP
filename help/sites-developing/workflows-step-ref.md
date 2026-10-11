@@ -181,7 +181,7 @@ function check(){
 
 ### ルール定義を使用した for ループのシミュレーション {#simulateforloop}
 
-ルーティング式としてルール定義を使用し、for ループをシミュレートすることもできます。 Long データタイプの[ **count** 変数を作成します](/help/forms/using/variable-in-aem-workflows.md#create-a-variable)。 **[変数の設定](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)**&#x200B;ステップのマッピングモードとして&#x200B;**式**&#x200B;を使用し、**変数の設定**&#x200B;ステップの各実行で **count** 変数の値を **count + 1** に設定してください。
+ルーティング式としてルール定義を使用し、for ループをシミュレートすることもできます。 Long データタイプの[&#x200B; **count** 変数を作成します](/help/forms/using/variable-in-aem-workflows.md#create-a-variable)。 **[変数の設定](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)**&#x200B;ステップのマッピングモードとして&#x200B;**式**&#x200B;を使用し、**変数の設定**&#x200B;ステップの各実行で **count** 変数の値を **count + 1** に設定してください。
 
 ![for ループのシミュレーション](assets/variable_use_case_count_new.png)
 

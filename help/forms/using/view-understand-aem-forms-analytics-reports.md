@@ -108,7 +108,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 * **ドラフト**：フォームがドラフトとして保存された回数
 * **送信**：フォームが送信された回数
 * **中止**：フォームの記入が開始されたが完了されずに中止された回数
-* **ユニーク訪問者**：ユニーク訪問者によってフォーム i ``s がレンダリングされた回数。 ユニーク訪問者について詳しくは、「[ユニーク訪問者、表示ページ、顧客の行動](https://helpx.adobe.com/jp/analytics/kb/unique-visitors-visitor-behavior.html)」を参照してください。
+* **ユニーク訪問者**：ユニーク訪問者によってフォーム i &grave;&grave;s がレンダリングされた回数。 ユニーク訪問者について詳しくは、「[ユニーク訪問者、表示ページ、顧客の行動](https://helpx.adobe.com/jp/analytics/kb/unique-visitors-visitor-behavior.html)」を参照してください。
 
 ![フォームレベルの概要分析レポートの拡張](assets/analytics-report.png)
 
@@ -142,7 +142,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 分析データをさらにフィルターするには、任意のテーブル内のエントリをクリックします。 例えば、ブラウザー配布テーブルで Google Chrome をクリックすると、Google Chrome ブラウザーに関連するデータを使用して、レポートが次のように再レンダリングされます。
 
-![Analytics レポートに適用されるフィルター - Google Chrome ](assets/filter-1.png)
+![Analytics レポートに適用されるフィルター - Google Chrome &#x200B;](assets/filter-1.png)
 
 フィルターを適用した後にパネルレポートを表示すると、パネルレポートのデータも適用したフィルターに従って表示されます。
 

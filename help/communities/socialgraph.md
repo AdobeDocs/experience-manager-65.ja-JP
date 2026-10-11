@@ -27,19 +27,19 @@ ht-degree: 4%
 
 ## はじめに {#introduction}
 
-コミュニティメンバーが[ アクティビティ ](activities.md)に従ってフォローする機能は、`Follow`と`Following`の2つのコンポーネントによって確立されます。
+コミュニティメンバーが[&#x200B; アクティビティ &#x200B;](activities.md)に従ってフォローする機能は、`Follow`と`Following`の2つのコンポーネントによって確立されます。
 
 `Follow` コンポーネントは別のリソースに関連付ける必要があり、この関連付けはコミュニティ メンバーと機能に対して既に確立されています。
 
-`Following` コンポーネントには、現在のメンバーに従っているか、現在のメンバーに従っているメンバーが一覧表示されます。 メンバー間の関係を示すこのソーシャルグラフは、[ コミュニティサイト ](overview.md#communitiessites)用に作成されたユーザープロファイルに含まれています。
+`Following` コンポーネントには、現在のメンバーに従っているか、現在のメンバーに従っているメンバーが一覧表示されます。 メンバー間の関係を示すこのソーシャルグラフは、[&#x200B; コミュニティサイト &#x200B;](overview.md#communitiessites)用に作成されたユーザープロファイルに含まれています。
 
 ## ページへのフォローの追加 {#adding-following-to-a-page}
 
 作成者モードのページに`Following` コンポーネントを追加する場合は、コンポーネント `Communities / Following`を見つけて、ソーシャルグラフが表示されるページ上に配置します。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](essentials-socialgraph.md#essentials-for-client-side)が含まれている場合、`Following` コンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](essentials-socialgraph.md#essentials-for-client-side)が含まれている場合、`Following` コンポーネントは次のように表示されます。
 
 ![次の](assets/following.png)
 

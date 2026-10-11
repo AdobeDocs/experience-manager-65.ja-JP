@@ -47,9 +47,9 @@ ht-degree: 2%
 
 ユーザーがコメントする機能に対する相対的な位置や、ページの下部など、ページ上にドラッグして配置します。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/essentials-comments.md#essentials-for-client-side)が含まれている場合、`Comments` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/essentials-comments.md#essentials-for-client-side)が含まれている場合、`Comments` コンポーネントはこのように表示されます。
 
 ![comments-component](assets/comments-component.png)
 
@@ -111,7 +111,7 @@ ht-degree: 2%
 
 #### 「User Moderation」タブ {#user-moderation-tab}
 
-「**ユーザーモデレーション**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、「[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)」を参照してください。
+「**ユーザーモデレーション**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、「[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)」を参照してください。
 
 * **事前管理**
 
@@ -165,7 +165,7 @@ ht-degree: 2%
 
 コメントリソースタイプを変更すると、コメントシステムはデフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されたインスタンスを生成するようになりました。
 
-カスタムリソースタイプがわかったら、[ デザインモード ](/help/sites-authoring/default-components-designmode.md)と入力し、配置された`Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
+カスタムリソースタイプがわかったら、[&#x200B; デザインモード &#x200B;](/help/sites-authoring/default-components-designmode.md)と入力し、配置された`Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
 
 「**リソースタイプ**」タブで、`Comments or Voting` コンポーネントの新しいインスタンスのカスタム resourceTypeを指定します。
 
@@ -185,7 +185,7 @@ ht-degree: 2%
 
 * **コメント システム リソースの種類**
 
-  /appsの拡張`comments` コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート [がリソースとしてページに追加されるのではなく、基になるスクリプトにコメントシステム ](/help/communities/scf.md#add-or-include-a-communities-component)を動的に含めない限り、空白のままにします（コメントノード）。 詳しくは、[`{{include}}` ヘルパー](/help/communities/handlebars-helpers.md#include)を参照してください。
+  /appsの拡張`comments` コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート [がリソースとしてページに追加されるのではなく、基になるスクリプトにコメントシステム &#x200B;](/help/communities/scf.md#add-or-include-a-communities-component)を動的に含めない限り、空白のままにします（コメントノード）。 詳しくは、[`{{include}}` ヘルパー](/help/communities/handlebars-helpers.md#include)を参照してください。
 
 ### サイト訪問者エクスペリエンス {#site-visitor-experience}
 
@@ -210,6 +210,6 @@ ht-degree: 2%
 
 詳細については、開発者向けの[Comments Essentials](/help/communities/essentials-comments.md) ページを参照してください。
 
-投稿されたコメントの管理については、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+投稿されたコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
-投稿されたコメントの翻訳については、[ ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
+投稿されたコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。

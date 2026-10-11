@@ -67,7 +67,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    このプリセットはいつでも変更できます。
 
-   ![ コンテンツ作成者プリセットを表示するドロップダウンリストが選択されています](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
+   ![&#x200B; コンテンツ作成者プリセットを表示するドロップダウンリストが選択されています](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
 
 Adobe Experience Manager ページが更新され、強化されたナビゲーションとインタラクティブウィジェットが使用できるようになりました。 以前のソリューションカードのコレクションでは、次のようなツールにアクセスできました。
 

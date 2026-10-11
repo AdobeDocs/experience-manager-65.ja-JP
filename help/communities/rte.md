@@ -29,7 +29,7 @@ ht-degree: 7%
 
 リッチテキストエディター（RTE）を使用すると、マークアップ付きのテキストを入力できます。
 
-Communities コンポーネントの場合、オーサー環境の[ リッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)と同様ですが、パブリッシュ環境に入力されたテキストに影響します。
+Communities コンポーネントの場合、オーサー環境の[&#x200B; リッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)と同様ですが、パブリッシュ環境に入力されたテキストに影響します。
 
 ![rich-text-editor](assets/rich-text-editor.png)
 
@@ -37,7 +37,7 @@ Communities コンポーネントの場合、オーサー環境の[ リッチテ
 
 ユーザー生成コンテンツ（UGC）を許可するコミュニティコンポーネントを有効にして、RTEを許可できます。 コンポーネントがページに追加されたか、[関数](functions.md)に含まれている場合、RTEはデフォルトで有効にされるか、無効にされる可能性があります。
 
-有効になっていない場合は、[作成者の編集モード ](sites-console.md#authoring-site-content)を入力し、編集するコンポーネントを選択して、`Rich Text Editor` チェックボックスを選択します。
+有効になっていない場合は、[作成者の編集モード &#x200B;](sites-console.md#authoring-site-content)を入力し、編集するコンポーネントを選択して、`Rich Text Editor` チェックボックスを選択します。
 
 RTEは、次のCommunities コンポーネントで使用できます。
 

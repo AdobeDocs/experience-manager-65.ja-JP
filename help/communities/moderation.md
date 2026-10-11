@@ -26,15 +26,15 @@ ht-degree: 3%
 ---
 # モデレートコンソール {#moderation-console}
 
-AEM Communitiesでは、作成者とパブリッシュ環境の両方から、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）がコミュニティコンテンツの一括[ モデレーションを行うことができます](/help/communities/moderate-ugc.md)。
+AEM Communitiesでは、作成者とパブリッシュ環境の両方から、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）がコミュニティコンテンツの一括[&#x200B; モデレーションを行うことができます](/help/communities/moderate-ugc.md)。
 
-管理者とコミュニティ モデレーターは、パブリッシュ環境で[ インコンテクスト モデレーション ](/help/communities/in-context.md)を実行することもできます。
+管理者とコミュニティ モデレーターは、パブリッシュ環境で[&#x200B; インコンテクスト モデレーション &#x200B;](/help/communities/in-context.md)を実行することもできます。
 
-すべての[ コミュニティサイト ](/help/communities/sites-console.md)の機能は、管理者権限でログインしているユーザーが利用できる`Administration` メニュー項目です。 `Administration` リンクを使用すると、モデレーションコンソールにアクセスできます。
+すべての[&#x200B; コミュニティサイト &#x200B;](/help/communities/sites-console.md)の機能は、管理者権限でログインしているユーザーが利用できる`Administration` メニュー項目です。 `Administration` リンクを使用すると、モデレーションコンソールにアクセスできます。
 
 モデレーションコンソールから、管理者とコミュニティモデレーターは、モデレーションする権限を持つすべてのユーザー生成コンテンツ（UGC）にアクセスできます。 複数のサイトを管理できる場合は、すべてのサイトで投稿を表示したり、選択したコミュニティサイトで絞り込んだりできます。
 
-詳細については、[ ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+詳細については、[&#x200B; ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
 
 モデレーションコンソールでは、次の機能がサポートされています。
 
@@ -61,7 +61,7 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 
 * グローバルナビゲーションから、**[!UICONTROL Communities]** > **[!UICONTROL Moderation]**&#x200B;を選択します。
 
-管理者として、または[ モデレーター権限](/help/communities/in-context.md#identifyingtrustedmembers)を持つメンバーとしてログインした場合にのみ、モデレーションタスクを実行できます。 表示される唯一のコミュニティコンテンツは、サインインしたメンバーが管理を許可されているコンテンツです。
+管理者として、または[&#x200B; モデレーター権限](/help/communities/in-context.md#identifyingtrustedmembers)を持つメンバーとしてログインした場合にのみ、モデレーションタスクを実行できます。 表示される唯一のコミュニティコンテンツは、サインインしたメンバーが管理を許可されているコンテンツです。
 
 >[!NOTE]
 >
@@ -85,14 +85,14 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 
 上部のナビゲーションバーの下にあるツールバーには、左側に次の切り替えスイッチがあります。
 
-* [ フィルターパネル](/help/communities/moderation.md#filterrail)
+* [&#x200B; フィルターパネル](/help/communities/moderation.md#filterrail)
 コンテンツをフィルタリングするプロパティを選択できるパネルが開きます。
 
 上部のナビゲーションバーの下にあるツールバーには、左側に次の切り替えスイッチがあります。
 
 ![toggleswitch](assets/toggleswitch.png)
 
-[ フィルターパネル](/help/communities/moderation.md#filterrail)
+[&#x200B; フィルターパネル](/help/communities/moderation.md#filterrail)
 「検索」を選択するとパネルが開き、コンテンツをフィルタリングするプロパティを選択できます。
 
 ![filterrail](assets/filterrail.png)
@@ -145,7 +145,7 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 
 テキスト検索では、入力されたテキストが含まれる投稿に表示される参照UGCを制限します。
 
-![ テキスト検索](assets/text-search.png)
+![&#x200B; テキスト検索](assets/text-search.png)
 
 #### サイト {#site}
 
@@ -155,7 +155,7 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 
 >[!NOTE]
 >
->管理者が一括管理コンソールにアクセスすると、Geometrixx サンプルなど、[ サイト作成ウィザード ](/help/communities/sites-console.md)で作成されていないサイトを含め、UGCへのすべての参照が表示されます。
+>管理者が一括管理コンソールにアクセスすると、Geometrixx サンプルなど、[&#x200B; サイト作成ウィザード &#x200B;](/help/communities/sites-console.md)で作成されていないサイトを含め、UGCへのすべての参照が表示されます。
 >
 >信頼できるコミュニティメンバーが一括管理コンソールにパブリッシュでアクセスすると、そのメンバーが管理を許可されたコミュニティサイト用に作成されたUGCへの参照のみが表示されます。 また、サイトフィルターでフィルタリングすることもできます。
 
@@ -184,7 +184,7 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 フィルターするリソースを追加するには：
 
 * オーサーインスタンスに管理者としてログインします。
-* [Web コンソール ](https://localhost:4502/system/console/configMgr)を開きます。
+* [Web コンソール &#x200B;](https://localhost:4502/system/console/configMgr)を開きます。
 * `AEM Communities Moderation Dashboard Filters` を見つけます。
 * 編集モードで開くことができるように、設定を選択します。
 * フィルターするコンポーネントのResourceTypeを入力します。
@@ -210,7 +210,7 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 >
 >「未回答」ステータスのみが選択されている場合は、回答された質問を除くすべてのコンテンツ（すべてのコンテンツタイプ）がモデレーターに表示されます。 これは、回答済み質問の責任を負うプロパティが、未回答の質問やその他のコンテンツ（フォーラムのトピック、ブログ記事、コメントなど）が存在しない場合に存在しないためです。
 
-![ ステータス ](assets/statuses.png)
+![&#x200B; ステータス &#x200B;](assets/statuses.png)
 
 #### フラグ設定 {#flagging}
 
@@ -218,13 +218,13 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 
 コンテンツの一部にフラグを付けた後、**フラグ** ボタンをもう一度選択して、そのコンテンツの一部のフラグを解除するまで、そのコンテンツはフラグ付けされたままになります。 「重要」や「フォローアップ」などのフラグ付きレベルはありません。
 
-![ フラグ付け](assets/flagging.png)
+![&#x200B; フラグ付け](assets/flagging.png)
 
 #### メンバー {#members}
 
 メンバーは、入力されたメンバー名によって投稿されたUGCに表示される参照UGCを制限します。
 
-![ メンバー](assets/members.png)
+![&#x200B; メンバー](assets/members.png)
 
 #### 過去に投稿済み {#posted-in-the-last}
 
@@ -240,11 +240,11 @@ AEM Communitiesでは、作成者とパブリッシュ環境の両方から、�
 
 ## カスタムフィルター {#custom-filters}
 
-[ フィルターレール ](/help/communities/moderation.md#ootbfilters)の標準フィルターとは別に、メタデータに対する追加のカスタムフィルターをモデレーション UIに追加できます。 開発者は、GitHubのサンプルコードを使用して、既存のモデレーション UI フィルターを拡張できます。
+[&#x200B; フィルターレール &#x200B;](/help/communities/moderation.md#ootbfilters)の標準フィルターとは別に、メタデータに対する追加のカスタムフィルターをモデレーション UIに追加できます。 開発者は、GitHubのサンプルコードを使用して、既存のモデレーション UI フィルターを拡張できます。
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-GitHubの[ サンプルプロジェクト ](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter)は、ユーザーが生成したコンテンツに特定のタグが適用されているかどうかに基づいてUGC リストをフィルタリングするタグフィルターを実装しています。 サンプルコードに従って、ほかの類似するUGC メタデータフィールド用の類似フィルターを構築できます。
+GitHubの[&#x200B; サンプルプロジェクト &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter)は、ユーザーが生成したコンテンツに特定のタグが適用されているかどうかに基づいてUGC リストをフィルタリングするタグフィルターを実装しています。 サンプルコードに従って、ほかの類似するUGC メタデータフィールド用の類似フィルターを構築できます。
 
 タグフィルターのサンプルをインストールするには：
 
@@ -271,7 +271,7 @@ GitHubの[ サンプルプロジェクト ](https://github.com/Adobe-Marketing-C
 
 ## モデレーション活動 {#moderation-actions}
 
-[ モデレーションアクション ](/help/communities/moderate-ugc.md#moderation-actions)は、コンテンツ領域で行われた1つ以上の選択や、コンテンツの詳細を表示する際に実行できます。
+[&#x200B; モデレーションアクション &#x200B;](/help/communities/moderate-ugc.md#moderation-actions)は、コンテンツ領域で行われた1つ以上の選択や、コンテンツの詳細を表示する際に実行できます。
 
 投稿を一括管理するには、コンテンツ領域で、投稿の選択（![選択](assets/selecticon.png)）アイコンをクリックします。これは、マウス（デスクトップ）で投稿の上にカーソルを合わせるか、投稿（モバイル）で指を押し続けるときに表示されます。 これを行うと、複数選択モードに入り、その後の投稿をクリックするだけで一括管理するように選択できるようになりました。 ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレーションアクションを実行できます。 すべてのアクションで確認を求めるプロンプトが表示されます。
 
@@ -306,7 +306,7 @@ GitHubの[ サンプルプロジェクト ](https://github.com/Adobe-Marketing-C
 * [拒否](#deny)
 * [削除](#delete)
 * [閉じる](#close)
-* [ モデレーション履歴](#moderation-history)を表示
+* [&#x200B; モデレーション履歴](#moderation-history)を表示
 * [詳細を表示](#viewdetails)
 
 モデレーションアクションアイコンの上にあるカード表示には、投稿のテキストが表示され、次のデータが表示されます。
@@ -356,7 +356,7 @@ GitHubの[ サンプルプロジェクト ](https://github.com/Adobe-Marketing-C
 
 #### モデレート履歴 {#moderation-history}
 
-![ モデレーション ](assets/moderation.png)
+![&#x200B; モデレーション &#x200B;](assets/moderation.png)
 
 1つの投稿を操作する場合、その上にカーソルを置くと、モデレーション履歴アイコンが表示されます。 このアイコンを選択すると、UGC投稿に関して実行されたアクションの履歴を含むペインが表示されます。
 

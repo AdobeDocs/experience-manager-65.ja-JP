@@ -25,7 +25,7 @@ ht-degree: 3%
 ---
 # Ugcの翻訳 {#translating-user-generated-content}
 
-Adobe Experience Manager （AEM） Communitiesの翻訳機能では、[ ソーシャルコンポーネントフレームワーク （SCF） コンポーネント ](scf.md)を使用してコミュニティサイトに投稿されたユーザー生成コンテンツ （UGC）に[ ページコンテンツ ](../../help/sites-administering/translation.md)を翻訳するというコンセプトを拡張しています。
+Adobe Experience Manager （AEM） Communitiesの翻訳機能では、[&#x200B; ソーシャルコンポーネントフレームワーク （SCF） コンポーネント &#x200B;](scf.md)を使用してコミュニティサイトに投稿されたユーザー生成コンテンツ （UGC）に[&#x200B; ページコンテンツ &#x200B;](../../help/sites-administering/translation.md)を翻訳するというコンセプトを拡張しています。
 
 UGCの翻訳により、サイト訪問者とメンバーは、言語の障壁を取り除くことで、グローバルコミュニティを体験できます。
 
@@ -39,23 +39,23 @@ UGCの翻訳により、サイト訪問者とメンバーは、言語の障壁�
 
 ## 概要 {#overview}
 
-ここでは、翻訳サービスとUGCの連携について詳しく説明します。 また、AEMを[翻訳サービスプロバイダー](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider)に接続し、[翻訳統合フレームワーク ](../../help/sites-administering/tc-tic.md)を設定して、そのサービスをweb サイトに統合する方法を理解していることを前提としています。
+ここでは、翻訳サービスとUGCの連携について詳しく説明します。 また、AEMを[翻訳サービスプロバイダー](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider)に接続し、[翻訳統合フレームワーク &#x200B;](../../help/sites-administering/tc-tic.md)を設定して、そのサービスをweb サイトに統合する方法を理解していることを前提としています。
 
 翻訳サービスプロバイダーがサイトに関連付けられている場合、サイトの各言語コピーは、コメントなどのSCF コンポーネントを通じて投稿されたUGCの独自のスレッドを保持します。
 
-翻訳サービスプロバイダーに加えて翻訳統合が設定されている場合、サイトの各言語コピーでUGCの単一スレッドを共有し、言語コピー間でグローバルなコミュニケーションを提供できます。 言語で分離されたディスカッションスレッドの代わりに、設定された[ グローバル共有ストア ](#global-translation-of-ugc)を使用すると、表示されている言語コピーに関係なく、スレッド全体を表示できます。 さらに、複数の翻訳統合設定を設定して、グローバル参加者の論理グループ（地域別など）に対して異なるグローバル共有ストアを指定することができます。
+翻訳サービスプロバイダーに加えて翻訳統合が設定されている場合、サイトの各言語コピーでUGCの単一スレッドを共有し、言語コピー間でグローバルなコミュニケーションを提供できます。 言語で分離されたディスカッションスレッドの代わりに、設定された[&#x200B; グローバル共有ストア &#x200B;](#global-translation-of-ugc)を使用すると、表示されている言語コピーに関係なく、スレッド全体を表示できます。 さらに、複数の翻訳統合設定を設定して、グローバル参加者の論理グループ（地域別など）に対して異なるグローバル共有ストアを指定することができます。
 
 ## デフォルトの翻訳サービス {#the-default-translation-service}
 
-AEM Communitiesには、複数の言語で有効な[ デフォルト翻訳サービス ](../../help/sites-administering/tc-msconf.md)の[体験版ライセンス ](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license)が含まれています。
+AEM Communitiesには、複数の言語で有効な[&#x200B; デフォルト翻訳サービス &#x200B;](../../help/sites-administering/tc-msconf.md)の[体験版ライセンス &#x200B;](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license)が含まれています。
 
-[ コミュニティサイト ](sites-console.md)を作成する場合、`Allow Machine Translation`が[翻訳](sites-console.md#translation) サブパネルからチェックされると、デフォルトの翻訳サービスが有効になります。
+[&#x200B; コミュニティサイト &#x200B;](sites-console.md)を作成する場合、`Allow Machine Translation`が[翻訳](sites-console.md#translation) サブパネルからチェックされると、デフォルトの翻訳サービスが有効になります。
 
 >[!CAUTION]
 >
 >デフォルトの翻訳サービスはデモ用のみです。
 >
->実稼動システムの場合は、ライセンス済みの翻訳サービスが必要です。 ライセンスを取得していない場合、デフォルトの翻訳サービスは[ オフ ](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)にする必要があります。
+>実稼動システムの場合は、ライセンス済みの翻訳サービスが必要です。 ライセンスを取得していない場合、デフォルトの翻訳サービスは[&#x200B; オフ &#x200B;](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)にする必要があります。
 
 ## UGCのグローバル翻訳 {#global-translation-of-ugc}
 
@@ -71,7 +71,7 @@ Web サイトに複数の[言語コピー](../../help/sites-administering/tc-pre
 >
 >グローバル翻訳前に存在していたUGCは、すべて表示されなくなります。
 >
->UGCはまだ[共通ストア ](working-with-srp.md)にありますが、言語に固有のUGCの場所の下に配置され、グローバル翻訳が設定された後に追加された新しいコンテンツは、グローバル共有ストアの場所から取得されます。
+>UGCはまだ[共通ストア &#x200B;](working-with-srp.md)にありますが、言語に固有のUGCの場所の下に配置され、グローバル翻訳が設定された後に追加された新しいコンテンツは、グローバル共有ストアの場所から取得されます。
 >
 >言語固有のコンテンツをグローバル共有ストアに移動または結合するための移行ツールはありません。
 
@@ -80,7 +80,7 @@ Web サイトに複数の[言語コピー](../../help/sites-administering/tc-pre
 翻訳統合を作成するには、翻訳サービスコネクタをオーサーインスタンスのweb サイトと統合します。
 
 * 管理者としてログイン
-* [ メインメニュー](http://localhost:4502/)から
+* [&#x200B; メインメニュー](http://localhost:4502/)から
 * 「**[!UICONTROL ツール]**」を選択します
 * **[!UICONTROL 操作]**&#x200B;を選択
 * **[!UICONTROL クラウド]**&#x200B;を選択

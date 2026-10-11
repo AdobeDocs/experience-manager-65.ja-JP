@@ -77,7 +77,7 @@ Dynamic Media の公開設定ページでは、Adobe Dynamic Media サーバー�
    * 「[Illustrator](#illustrator-tab)」タブ
 
    ![Dynamic Mediaの一般設定ページ](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media の一般設定ページ（**[!UICONTROL 画像編集]**タブが選択済み）*<br><br>
+   *Dynamic Media の一般設定ページ（**[!UICONTROL 画像編集]**&#x200B;タブが選択済み）*<br><br>
 
 1. 作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 保存]**」を選択してください。
 
@@ -111,7 +111,7 @@ Dynamic Media の公開設定ページでは、Adobe Dynamic Media サーバー�
 
   既存の手動切り抜き定義の保存を制御します。
 
-  Dynamic Media ビューアリファレンスガイドの [UploadPostJob ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html?lang=ja) および [ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html?lang=ja) の `preserveCrop` も参照してください。
+  Dynamic Media ビューアリファレンスガイドの [UploadPostJob &#x200B;](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html?lang=ja) および [ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html?lang=ja) の `preserveCrop` も参照してください。
 
 ## デフォルトのアップロードオプション {#default-upload-options}
 

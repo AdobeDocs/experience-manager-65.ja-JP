@@ -25,7 +25,7 @@ ht-degree: 2%
 ---
 # レビューおよびレビューの概要（表示）の使用 {#using-reviews-and-reviews-summary-display}
 
-`Reviews` コンポーネントは、[ コメント ](comments.md)と[評価](rating.md) コンポーネントの組み合わせで使用できます。
+`Reviews` コンポーネントは、[&#x200B; コメント &#x200B;](comments.md)と[評価](rating.md) コンポーネントの組み合わせで使用できます。
 
 `Reviews Summary (Display)` コンポーネントは、サイト上の別の場所に表示するために、`Reviews` コンポーネントのアクティブなインスタンスまたはクローズしたインスタンスの概要を提供します。
 
@@ -37,9 +37,9 @@ ht-degree: 2%
 
 作成者モードでページに`Reviews` コンポーネントを追加するには、コンポーネントブラウザーを使用して`Communities / Reviews`を見つけ、ユーザーがレビューする機能に対する相対的な位置など、ページ上の場所にコンポーネントブラウザーをドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](reviews-basics.md#essentials-for-client-side)が含まれている場合、`Reviews` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](reviews-basics.md#essentials-for-client-side)が含まれている場合、`Reviews` コンポーネントはこのように表示されます。
 
 ![create-review](assets/create-review.png)
 
@@ -81,7 +81,7 @@ web サイトでは、必要な評価にアスタリスクが付いています�
 
 「**[!UICONTROL レビュー]**」タブで、レビューの処理方法を指定します。
 
-![ レビュー](assets/configure-review3.png)
+![&#x200B; レビュー](assets/configure-review3.png)
 
 * **[!UICONTROL 返信を許可]**
 
@@ -115,7 +115,7 @@ web サイトでは、必要な評価にアスタリスクが付いています�
 
   チェックを入れた場合は、トピックの投票機能を含めます。 デフォルトはオフです。
 
-「**[!UICONTROL ユーザーモデレーション]**」タブで、投稿されたレビューの管理方法を指定します。 詳しくは、「[ ユーザー生成コンテンツの管理](moderate-ugc.md)」を参照してください。
+「**[!UICONTROL ユーザーモデレーション]**」タブで、投稿されたレビューの管理方法を指定します。 詳しくは、「[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)」を参照してください。
 
 ![user-moderation](assets/configure-review4.png)
 
@@ -163,9 +163,9 @@ web サイトでは、必要な評価にアスタリスクが付いています�
 
 アクティブなレビューまたはクローズしたレビューの概要を表示するページ上にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](reviews-basics.md#essentials-for-client-side)が含まれている場合、`Reviews Summary (Display)` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](reviews-basics.md#essentials-for-client-side)が含まれている場合、`Reviews Summary (Display)` コンポーネントはこのように表示されます。
 
 ![review-summary](assets/configure-review5.png)
 
@@ -199,7 +199,7 @@ web サイトでは、必要な評価にアスタリスクが付いています�
 
 コメントリソースタイプを変更すると、コメントシステムはデフォルトを使用してコメントのインスタンスを生成しなくなり、開発者によってカスタマイズ（拡張）されたインスタンスを生成するようになりました。
 
-カスタムリソースタイプがわかっている場合は、[ デザインモード ](../../help/sites-authoring/default-components-designmode.md)と入力し、配置された`Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
+カスタムリソースタイプがわかっている場合は、[&#x200B; デザインモード &#x200B;](../../help/sites-authoring/default-components-designmode.md)と入力し、配置された`Comments` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
 
 「**[!UICONTROL リソースタイプ]**」タブで、`Comments or Voting` コンポーネントの新しいインスタンスのカスタム resourceTypeを指定します。
 
@@ -219,7 +219,7 @@ web サイトでは、必要な評価にアスタリスクが付いています�
 
 * **[!UICONTROL コメント システム リソースの種類]**
 
-  /appsの拡張`comments` コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート [がリソースとしてページに追加されるのではなく、基になるスクリプトにコメントシステム ](scf.md#add-or-include-a-communities-component)を動的に含めない限り、空白のままにします（コメントノード）。 詳しくは、[`{{include}}` ヘルパー](handlebars-helpers.md#include)を参照してください。
+  /appsの拡張`comments` コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート [がリソースとしてページに追加されるのではなく、基になるスクリプトにコメントシステム &#x200B;](scf.md#add-or-include-a-communities-component)を動的に含めない限り、空白のままにします（コメントノード）。 詳しくは、[`{{include}}` ヘルパー](handlebars-helpers.md#include)を参照してください。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
@@ -246,6 +246,6 @@ web サイトでは、必要な評価にアスタリスクが付いています�
 
 詳しくは、[Review Essentials](reviews-basics.md) ページの開発者向けページを参照してください。
 
-投稿されたコメントの管理については、[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+投稿されたコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
-投稿されたコメントの翻訳については、[ ユーザー生成コンテンツの翻訳](translate-ugc.md)を参照してください。
+投稿されたコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳](translate-ugc.md)を参照してください。

@@ -110,7 +110,7 @@ MySQL Workbenchが最初に起動された場合、他の目的で既に使用�
 
 #### 新しいコミュニティ接続 {#new-communities-connection}
 
-![ コミュニティ接続](assets/community-connection.png)
+![&#x200B; コミュニティ接続](assets/community-connection.png)
 
 ## データベース設定 {#database-setup}
 
@@ -177,7 +177,7 @@ MySQLがAEMとは異なるサーバーで実行される場合、JDBC コネク�
 
 * AEMのインスタンスをパブリッシュします。
 * 管理者権限でログイン。
-* [web コンソール ](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
+* [web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
 
   * 例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 

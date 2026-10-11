@@ -278,7 +278,7 @@ Forms API（Java）を使用して、フロアブルレイアウトでフォー�
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
-   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[ データサブグループについて](#understanding-data-subgroups)を参照）。
+   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[&#x200B; データサブグループについて](#understanding-data-subgroups)を参照）。
    * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
@@ -354,7 +354,7 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
-   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[ データサブグループについて](#understanding-data-subgroups)を参照）。
+   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[&#x200B; データサブグループについて](#understanding-data-subgroups)を参照）。
    * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`

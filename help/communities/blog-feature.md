@@ -37,11 +37,11 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 * ブログ記事やコメントのパブリッシュ側での作成
 * リッチテキスト編集
 * インライン画像（ドラッグ&amp;ドロップ対応）
-* 埋め込みソーシャルネットワーキングコンテンツ （[埋め込みサポート ](/help/communities/blog-developer-basics.md#allowing-rich-media)）
+* 埋め込みソーシャルネットワーキングコンテンツ （[埋め込みサポート &#x200B;](/help/communities/blog-developer-basics.md#allowing-rich-media)）
 * ドラフトモード
 * スケジュール済み公開
-* 代理で作成（権限を持つ[ メンバー](/help/communities/users.md#privileged-members-group)は、別のコミュニティメンバーの代理でコンテンツを作成できます）
-* ブログ記事とコメントの[ インコンテクストおよび一括モデレーション ](/help/communities/moderate-ugc.md)
+* 代理で作成（権限を持つ[&#x200B; メンバー](/help/communities/users.md#privileged-members-group)は、別のコミュニティメンバーの代理でコンテンツを作成できます）
+* ブログ記事とコメントの[&#x200B; インコンテクストおよび一括モデレーション &#x200B;](/help/communities/moderate-ugc.md)
 
 この節では、次の内容について説明します。
 
@@ -63,9 +63,9 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 ブログを表示するページにドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/blog-developer-basics.md#essentials-for-client-side)が含まれている場合、`Blog` コンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/blog-developer-basics.md#essentials-for-client-side)が含まれている場合、`Blog` コンポーネントは次のように表示されます。
 
 ![add-blog-component](assets/add-blog-component.png)
 
@@ -75,7 +75,7 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 ![configure](assets/configure-new.png)
 
-![ ブログ設定](assets/blog-configure.png)
+![&#x200B; ブログ設定](assets/blog-configure.png)
 
 #### 「設定」タブ {#settings-tab}
 
@@ -177,17 +177,17 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 * **メール配信の許可**
 
-  チェックを入れた場合は、新しい投稿がメールでメンバーに通知されるようにします（[ サブスクリプション ](/help/communities/subscriptions.md)）。 `Allow Following`を確認し、電子メール [を設定する必要があります](/help/communities/email.md)。 デフォルトはオフです。
+  チェックを入れた場合は、新しい投稿がメールでメンバーに通知されるようにします（[&#x200B; サブスクリプション &#x200B;](/help/communities/subscriptions.md)）。 `Allow Following`を確認し、電子メール [を設定する必要があります](/help/communities/email.md)。 デフォルトはオフです。
 
 * **バッジの表示**
 
-  チェックを入れた場合、メンバーのブログエントリで獲得および割り当てられた[ バッジ ](/help/communities/implementing-scoring.md)を表示します。 デフォルトはオフです。
+  チェックを入れた場合、メンバーのブログエントリで獲得および割り当てられた[&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md)を表示します。 デフォルトはオフです。
 
 * **リストページで返信を受け取らない**
 
 * **おすすめのコンテンツを許可**
 
-  チェックを入れると、アイデアは[おすすめコンテンツ ](/help/communities/featured.md)として識別されます。 デフォルトはオフです。
+  チェックを入れると、アイデアは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別されます。 デフォルトはオフです。
 
 * **メンションを有効にする**
 
@@ -305,7 +305,7 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 #### モデレーターと管理者 {#moderators-and-administrators}
 
-ログインしたユーザーがモデレーターまたは管理者権限を持っている場合、ブログに投稿されたすべてのブログ記事とコメントに対して、[ モデレーションタスク ](/help/communities/moderate-ugc.md)を（コンポーネントの設定で許可されているように）実行できます。
+ログインしたユーザーがモデレーターまたは管理者権限を持っている場合、ブログに投稿されたすべてのブログ記事とコメントに対して、[&#x200B; モデレーションタスク &#x200B;](/help/communities/moderate-ugc.md)を（コンポーネントの設定で許可されているように）実行できます。
 
 ![moderator-homepage](assets/moderator-homepage.png)
 
@@ -336,8 +336,8 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
 詳しくは、開発者向けの[Blog Essentials](/help/communities/blog-developer-basics.md) ページを参照してください。
 
-ブログのエントリとコメントの管理については、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+ブログのエントリとコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
-ブログのエントリとコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
+ブログのエントリとコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
 
-ブログ記事とコメントの翻訳については、[ ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
+ブログ記事とコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。

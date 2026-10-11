@@ -717,7 +717,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用したポリシーで保護された PDF ドキュメントの検査 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-次のJava コードの例では、*PolicyProtectedLoanDoc.pd* fという名前のポリシーで保護されたPDF ドキュメントを調べます。 （[ ポリシーで保護されたPDF ドキュメントの調査](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)を参照してください）。
+次のJava コードの例では、*PolicyProtectedLoanDoc.pd* fという名前のポリシーで保護されたPDF ドキュメントを調べます。 （[&#x200B; ポリシーで保護されたPDF ドキュメントの調査](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)を参照してください）。
 
 ```java
  /*

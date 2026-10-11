@@ -84,7 +84,7 @@ AEM Communities を使用すると、オンプレミスのコミュニティの�
 
 [コミュニティコンテンツストア](/help/communities/working-with-srp.md) - ユーザー生成コンテンツ（UGC）のための新しい共有ストレージ機能と、基盤となる[トポロジ](/help/communities/topologies.md)の選択に関する考察について説明しています。
 
-[ コミュニティに推奨されるデプロイメント ](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - コミュニティに推奨されるデプロイメントについて説明します。 |
+[&#x200B; コミュニティに推奨されるデプロイメント &#x200B;](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - コミュニティに推奨されるデプロイメントについて説明します。 |
 
 ## UI {#ui}
 

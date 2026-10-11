@@ -63,4 +63,4 @@ JCRは、オーサー環境とパブリッシュ環境で共有される共通�
 
 >[!NOTE]
 >
->`/etc/socialconfig`の下にノード `srpc`がないことは、デフォルトの[JCR ストア ](jsrp.md)を示します。
+>`/etc/socialconfig`の下にノード `srpc`がないことは、デフォルトの[JCR ストア &#x200B;](jsrp.md)を示します。

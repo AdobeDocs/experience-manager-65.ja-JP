@@ -219,7 +219,7 @@ Assembler Service API（Java）を使用して、複数の XDP フラグメン�
 **関連トピック**
 
 [複数のXDP フラグメントのアセンブリ](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
-[ クイックスタート（SOAP モード）:Java APIを使用した複数のXDP フラグメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[&#x200B; クイックスタート（SOAP モード）:Java APIを使用した複数のXDP フラグメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 

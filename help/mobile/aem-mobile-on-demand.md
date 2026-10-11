@@ -25,7 +25,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->AEMをコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ ](https://helpx.adobe.com/digital-publishing-solution/topics.html)を参照してください。
+>AEMをコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Services ヘルプ &#x200B;](https://helpx.adobe.com/digital-publishing-solution/topics.html)を参照してください。
 
 >[!NOTE]
 >

@@ -85,7 +85,7 @@ ResourceResolver.map メソッドがリソースパスをURLにマッピング�
 
 次のリクエストをリダイレクトするには、
 
-`https://localhost:4503/welcome` ``
+`https://localhost:4503/welcome` &grave;&grave;
 
 次に対して
 

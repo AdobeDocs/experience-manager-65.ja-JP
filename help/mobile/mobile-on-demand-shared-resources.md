@@ -42,7 +42,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Shared Resourcesでは、ContentSyncを使用して、様々なリソースをすべて収集します。 詳しくは、[ContentSyncを使用したモバイル ](/help/mobile/mobile-ondemand-contentsync.md)を参照してください。
+>Shared Resourcesでは、ContentSyncを使用して、様々なリソースをすべて収集します。 詳しくは、[ContentSyncを使用したモバイル &#x200B;](/help/mobile/mobile-ondemand-contentsync.md)を参照してください。
 
 記事の共有リソースをアップロードするには、次の手順に従います。
 

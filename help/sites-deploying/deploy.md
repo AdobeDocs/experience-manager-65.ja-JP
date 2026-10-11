@@ -152,7 +152,7 @@ Cloud Manger とそのリソースについて詳しくは、[**Cloud Manager �
 
 AEM に習熟したい場合や、AEM で開発する場合は、Apple OS X またはデスクトップ版の Microsoft® Windows または Linux® を実行しているローカルマシンにインストールされたインスタンスを使用するのが一般的です。
 
-クライアント側では、AEM は、デスクトップとタブレットの両方のオペレーティングシステムにおけるすべてのブラウザー（**Microsoft® Edge**、**Internet Explorer** 11、**Chrome** 51 以上&#x200B;****、**Firefox 47 以上**、**Safari** 8 以上）に対応します。 詳細に関しては、[サポートされているクライアントプラットフォーム](/help/sites-deploying/technical-requirements.md#supported-client-platforms)を参照してください。
+クライアント側では、AEM は、デスクトップとタブレットの両方のオペレーティングシステムにおけるすべてのブラウザー（**Microsoft® Edge**、**Internet Explorer** 11、**Chrome** 51 以上&#x200B;**&#x200B;**、**Firefox 47 以上**、**Safari** 8 以上）に対応します。 詳細に関しては、[サポートされているクライアントプラットフォーム](/help/sites-deploying/technical-requirements.md#supported-client-platforms)を参照してください。
 
 ### ソフトウェアの入手 {#getting-the-software}
 

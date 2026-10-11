@@ -211,7 +211,7 @@ Adobe Experience Manager は、スタンドアロンサーバー（Quickstart JA
 2. アプリケーションサーバーで AEM 6.5 デプロイメントを開始すると、制限付きサポートに移行します。 既存のお客様は AEM 6.5 にアップグレードして、引き続きアプリケーションサーバーを使用することができます。 新規のお客様には、前述のレベル R の説明にあるサポート基準とサポートプログラムが適用されます。
 3. 適用可能 AEM Forms のみ：
    * JBoss® EAP 7.1.4 のサポートを削除し、JBoss® EAP 7.4.10 のサポートを追加しました。
-   * AEM Forms サービスパック 6.5.25.0以降では、JBoss® EAP 7.4.23のサポートが追加されています。 この[ リンク ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)を使用すると、ソフトウェア配布ポータルからJBoss® EAP 7.4.23をダウンロードできます。
+   * AEM Forms サービスパック 6.5.25.0以降では、JBoss® EAP 7.4.23のサポートが追加されています。 この[&#x200B; リンク &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)を使用すると、ソフトウェア配布ポータルからJBoss® EAP 7.4.23をダウンロードできます。
 
 ### サーバーオペレーティングシステム {#server-operating-systems}
 
@@ -549,4 +549,4 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。 GLIBC_2.14を含むLinux® カーネル（Linux® カーネルバージョン 3.1.xなど）を使用します。 PSD ファイルなど、大量のメタデータを含むアセットを処理する際のパフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
 
-サポートされている形式またはプラットフォームバージョンに関連する質問については、[AEM Forms サポート ](https://business.adobe.com/in/support/main.html)にお問い合わせください
+サポートされている形式またはプラットフォームバージョンに関連する質問については、[AEM Forms サポート &#x200B;](https://business.adobe.com/in/support/main.html)にお問い合わせください

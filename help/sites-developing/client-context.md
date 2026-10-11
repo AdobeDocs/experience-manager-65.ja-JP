@@ -508,7 +508,7 @@ CQ アプリケーションを作成し、ジオロケーションコンポー�
 
 1. Web ブラウザー（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）でCRXDE Liteを開きます。
 1. `/apps` フォルダーを右クリックして、作成／フォルダーを作成をクリックします。 「`myapp`」の名前を指定して、「OK」をクリックします。
-1. 同様に、`myapp`の下に、`contextstores`という名前のフォルダーを作成します。 ``
+1. 同様に、`myapp`の下に、`contextstores`という名前のフォルダーを作成します。 &grave;&grave;
 1. `/apps/myapp/contextstores` フォルダーを右クリックして、作成／コンポーネントを作成をクリックします。 次のプロパティ値を指定して、「次へ」をクリックします。
 
    * ラベル：geoloc

@@ -268,7 +268,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## イベント - タイムライン {#events-timeline}
 
-適切なリソース（例えば、**Sites** コンソールのページ、または&#x200B;**Assets** コンソールのアセット）の場合、[ タイムラインを使用して、選択した項目に対する最近のアクティビティを表示できます](/help/sites-authoring/basic-handling.md#timeline)。
+適切なリソース（例えば、**Sites** コンソールのページ、または&#x200B;**Assets** コンソールのアセット）の場合、[&#x200B; タイムラインを使用して、選択した項目に対する最近のアクティビティを表示できます](/help/sites-authoring/basic-handling.md#timeline)。
 
 必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**タイムライン**」を開きます。
 
@@ -308,9 +308,9 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 ページの編集時には様々なモードがあり、異なるアクションを行うことができます。
 
 * [編集](/help/sites-authoring/editing-content.md) - ページコンテンツの編集時には、このモードを使用します。
-* [ レイアウト ](/help/sites-authoring/responsive-layout.md) - デバイスに応じてレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）。
+* [&#x200B; レイアウト &#x200B;](/help/sites-authoring/responsive-layout.md) - デバイスに応じてレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）。
 
-* [基礎モード ](/help/sites-authoring/scaffolding.md) – 構造を共有しながらコンテンツが異なる大規模なページのセットを作成できます。
+* [基礎モード &#x200B;](/help/sites-authoring/scaffolding.md) – 構造を共有しながらコンテンツが異なる大規模なページのセットを作成できます。
 * [開発者](/help/sites-developing/developer-mode.md) - 様々なアクションを実行できます（権限が必要）。 これには、ページとそのコンポーネントの技術的な詳細の検査が含まれます。
 
 * [デザイン](/help/sites-authoring/default-components-designmode.md) - ページで使用するコンポーネントを有効または無効にしたり、コンポーネントのデザインを設定したりできます（ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合）。
@@ -320,7 +320,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 * [タイムワープ](/help/sites-authoring/working-with-page-versions.md#timewarp) - 特定の時点のページの状態を表示できます。
 * [ライブコピーステータス](/help/sites-authoring/editing-content.md#live-copy-status) - ライブコピーのステータスと継承される（または継承されない）コンポーネントの概要をすばやく確認できます。
-* [ プレビュー](/help/sites-authoring/editing-content.md#previewing-pages) – 公開環境に表示されているページを表示したり、コンテンツ内のリンクを使用して移動したりするために使用されます。
+* [&#x200B; プレビュー](/help/sites-authoring/editing-content.md#previewing-pages) – 公開環境に表示されているページを表示したり、コンテンツ内のリンクを使用して移動したりするために使用されます。
 
 * [注釈](/help/sites-authoring/annotations.md) - ページに注釈を追加または表示するために使用します。
 

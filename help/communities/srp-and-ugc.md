@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## はじめに {#introduction}
 
-ストレージリソースプロバイダー（SRP）と、ユーザー生成コンテンツ（UGC）との関係についてご存じない場合は、[ コミュニティコンテンツストレージ ](working-with-srp.md)および[ ストレージリソースプロバイダーの概要](srp.md)にアクセスしてください。
+ストレージリソースプロバイダー（SRP）と、ユーザー生成コンテンツ（UGC）との関係についてご存じない場合は、[&#x200B; コミュニティコンテンツストレージ &#x200B;](working-with-srp.md)および[&#x200B; ストレージリソースプロバイダーの概要](srp.md)にアクセスしてください。
 
 このセクションでは、SRPとUGCに関する重要な情報を提供します。
 
@@ -49,7 +49,7 @@ AEM 6.0以前からアップグレードする場合は、Open Source ツール�
 >
 >従来、UGCにアクセスするためのユーティリティは、SocialUtils パッケージに含まれていましたが、このパッケージは既に存在しません。
 >
->代替ユーティリティについては、[SocialUtils リファクタリング ](socialutils.md)を参照してください。
+>代替ユーティリティについては、[SocialUtils リファクタリング &#x200B;](socialutils.md)を参照してください。
 
 ## UGCへのアクセス方法 {#utility-method-to-access-ugc}
 
@@ -70,9 +70,9 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-その他のSocialUtilsの置換については、[SocialUtils リファクタリング ](socialutils.md)を参照してください。
+その他のSocialUtilsの置換については、[SocialUtils リファクタリング &#x200B;](socialutils.md)を参照してください。
 
-コーディングガイドラインについては、[SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md)を参照してください。
+コーディングガイドラインについては、[SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md)を参照してください。
 
 >[!CAUTION]
 >
@@ -113,20 +113,20 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 メンバーがパブリッシュ環境でUGCを開始すると、AEM サイトの一部としてコンポーネントと対話します。
 
-このようなコンポーネントの例として、[ コミュニティコンポーネントガイド ](components-guide.md) サイトに存在する[ コメント コンポーネント ](http://localhost:4502/content/community-components/en/comments.html)があります。 ローカルリポジトリ内のコメントノードへのパスは次のとおりです。
+このようなコンポーネントの例として、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) サイトに存在する[&#x200B; コメント コンポーネント &#x200B;](http://localhost:4502/content/community-components/en/comments.html)があります。 ローカルリポジトリ内のコメントノードへのパスは次のとおりです。
 
 * コンポーネント パス = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **シャドウ ノードの場所**
 
-UGCを作成すると、必要なACLが適用される[ シャドウ ノード ](srp.md#about-shadow-nodes-in-jcr)も作成されます。 ローカルリポジトリ内の対応するシャドウノードへのパスは、コンポーネントパスにシャドウノードルートパスを追加した結果です。
+UGCを作成すると、必要なACLが適用される[&#x200B; シャドウ ノード &#x200B;](srp.md#about-shadow-nodes-in-jcr)も作成されます。 ローカルリポジトリ内の対応するシャドウノードへのパスは、コンポーネントパスにシャドウノードルートパスを追加した結果です。
 
 * ルート パス = `/content/usergenerated`
 * コメント シャドウ ノード = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGCの場所**
 
-UGCは、どちらの場所にも作成されず、SRP APIを呼び出す[ ユーティリティメソッド ](#utility-method-to-access-ugc)を使用してのみアクセスする必要があります。
+UGCは、どちらの場所にも作成されず、SRP APIを呼び出す[&#x200B; ユーティリティメソッド &#x200B;](#utility-method-to-access-ugc)を使用してのみアクセスする必要があります。
 
 * ルート パス = `/content/usergenerated/asi/srp-choice`
 * JSRPのUGC ノード = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
@@ -135,6 +135,6 @@ UGCは、どちらの場所にも作成されず、SRP APIを呼び出す[ ユ�
 
 ## 関連する情報 {#related-information}
 
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

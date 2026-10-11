@@ -27,4 +27,4 @@ ht-degree: 11%
 
 **[Clientlibsを追加](add-clientlibs.md)**
 
-この時点で、[We-Retail Community](../../help/sites-developing/we-retail.md)、[ コミュニティコンポーネントガイド ](components-guide.md)、[Feature Essentials](essentials.md)を参考にしながら、サンドボックス内のコミュニティ機能を検討できます。
+この時点で、[We-Retail Community](../../help/sites-developing/we-retail.md)、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)、[Feature Essentials](essentials.md)を参考にしながら、サンドボックス内のコミュニティ機能を検討できます。

@@ -32,7 +32,7 @@ ht-degree: 4%
 
 このドキュメントには、次の内容が記載されています。
 
-* `Community Activity List` コンポーネントを[ コミュニティサイト ](/help/communities/overview.md#community-sites)に追加しています。
+* `Community Activity List` コンポーネントを[&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#community-sites)に追加しています。
 
 * `Community Activity List` コンポーネントの構成設定。
 
@@ -46,11 +46,11 @@ ht-degree: 4%
 
 作成者モードのページに`Community Activity List` コンポーネントを追加するには、コンポーネント `Communities / Community Activity List`を見つけて、ページ上の場所にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
 最初にコミュニティサイトのページに配置した場合、コンポーネントは次のように表示されます。
 
-![ コミュニティアクティビティ ](assets/community-activity.png)
+![&#x200B; コミュニティアクティビティ &#x200B;](assets/community-activity.png)
 
 ### コミュニティアクティビティリストの設定  {#configuring-community-activity-list}
 

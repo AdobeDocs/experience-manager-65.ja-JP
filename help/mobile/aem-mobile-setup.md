@@ -36,7 +36,7 @@ AEM Mobileを設定し、AEM内でコンテンツを作成および管理でき�
 
 AEM Mobileの設定を開始するには、次の手順を実行する必要があります。
 
-* **API キーを要求**: On-Demand Services APIにアクセスするには、API キーを要求する必要があります。 API キーをリクエストするには、[PDF フォーム ](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)に記入してください。 記入したフォームをAdobe Developer サポートに送信します：[wwds@adobe.com](mailto:wwds@adobe.com)
+* **API キーを要求**: On-Demand Services APIにアクセスするには、API キーを要求する必要があります。 API キーをリクエストするには、[PDF フォーム &#x200B;](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)に記入してください。 記入したフォームをAdobe Developer サポートに送信します：[wwds@adobe.com](mailto:wwds@adobe.com)
 
 * **デバイス IDとデバイス トークンを生成**: API キーを受け取ったら、デバイス IDとデバイス トークンを生成できます。 `https://aex.aemmobile.adobe.com`に移動し、次の操作を行います。
 
@@ -121,13 +121,13 @@ AEM Mobile アプリ開発には、次の3つの異なる役割があります�
 * 開発者
 * 作成者
 
-アプリの作成やコンテンツの作成と公開など、様々な権限を持つロールの作成について詳しくは、AEM Mobile ヘルプの「[ ユーザーのロールの作成とアクセス権の付与](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
+アプリの作成やコンテンツの作成と公開など、様々な権限を持つロールの作成について詳しくは、AEM Mobile ヘルプの「[&#x200B; ユーザーのロールの作成とアクセス権の付与](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
 
 >[!NOTE]
 >
 >アプリのコンテンツを管理するには、開発者、コンテンツ作成者、管理者などの協力が必要です。 作成者はページを操作します。ページは、アプリ開発者によって生成されたテンプレートとコンポーネントにもとづいています。 最後に、管理者は更新されたアプリコンテンツを戦略的に公開します。 AEMのグループと権限を設定すると、アプリダッシュボードまたはコントロールセンターで役割が定義されます。
 >
->[AEM Mobile ダッシュボード ](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+>[AEM Mobile ダッシュボード &#x200B;](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
 アプリの作成やコンテンツの作成と公開など、異なる権限を持つ役割を作成する場合は、[**ユーザーグループとユーザーグループの設定**](/help/mobile/aem-mobile-configure-users.md)&#x200B;を参照してください。 これにより、モバイルアプリのオーサリングと管理をサポートするようにユーザーとグループを設定できます。
 
@@ -140,4 +140,4 @@ AEM Mobile On-demand Services アプリの作成に関するその他の2つの�
 
 >[!NOTE]
 >
->閲覧ページや記事を含むアプリのコンテンツをプレビューするには、[ プリフライトを使用したプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
+>閲覧ページや記事を含むアプリのコンテンツをプレビューするには、[&#x200B; プリフライトを使用したプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。

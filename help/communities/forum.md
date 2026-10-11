@@ -50,9 +50,9 @@ ht-degree: 2%
 
 フォーラムが表示されるページ上にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/essentials-forum.md#essentials-for-client-side)が含まれている場合、`Forum` コンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/essentials-forum.md#essentials-for-client-side)が含まれている場合、`Forum` コンポーネントは次のように表示されます。
 
 ![forum-component](assets/forum-component.png)
 
@@ -115,11 +115,11 @@ ht-degree: 2%
 
 * **おすすめのコンテンツを許可**
 
-  チェックを入れると、アイデアは[おすすめコンテンツ ](/help/communities/featured.md)として識別できます。 デフォルトはオフです。
+  チェックを入れると、アイデアは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別できます。 デフォルトはオフです。
 
 * **メール配信の許可**
 
-  チェックを入れた場合は、新しい投稿がメールでメンバーに通知されるようにします（[ サブスクリプション ](/help/communities/subscriptions.md)）。 `Allow Following`を確認し、電子メール [を設定する必要があります](/help/communities/email.md)。 デフォルトはオフです。
+  チェックを入れた場合は、新しい投稿がメールでメンバーに通知されるようにします（[&#x200B; サブスクリプション &#x200B;](/help/communities/subscriptions.md)）。 `Allow Following`を確認し、電子メール [を設定する必要があります](/help/communities/email.md)。 デフォルトはオフです。
 
 * **最大ファイルサイズ**
 
@@ -150,7 +150,7 @@ ht-degree: 2%
 
 * **バッジの表示**
 
-  チェックを入れた場合、メンバーのブログエントリで獲得および割り当てられた[ バッジ ](/help/communities/implementing-scoring.md)を表示します。 デフォルトはオフです。
+  チェックを入れた場合、メンバーのブログエントリで獲得および割り当てられた[&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md)を表示します。 デフォルトはオフです。
 
 * **特権メンバーを許可**
 
@@ -182,7 +182,7 @@ ht-degree: 2%
 
 #### 「User Moderation」タブ {#user-moderation-tab}
 
-「**ユーザーモデレーション**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+「**ユーザーモデレーション**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
 * **投稿を拒否**
 
@@ -226,7 +226,7 @@ ht-degree: 2%
 
 * **推奨回数**
 
-  フォーラムに投稿するメンバーに提案として表示するタグの数を入力します。 デフォルトは**-**1 （制限なし）です。
+  フォーラムに投稿するメンバーに提案として表示するタグの数を入力します。 デフォルトは&#x200B;**-**&#x200B;1 （制限なし）です。
 
 #### 「翻訳」タブ {#translation-tab}
 
@@ -258,8 +258,8 @@ ht-degree: 2%
 
 詳しくは、開発者向けの[Forum Essentials](/help/communities/essentials-forum.md) ページを参照してください。
 
-投稿されたトピックとコメントの管理については、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+投稿されたトピックとコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
-投稿されたトピックやコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
+投稿されたトピックやコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
 
-投稿されたトピックやコメントの翻訳については、[ ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
+投稿されたトピックやコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。

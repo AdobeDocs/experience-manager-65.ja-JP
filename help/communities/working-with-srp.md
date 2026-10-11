@@ -32,13 +32,13 @@ AEM Communities 6.1では、UGCは、ストレージリソースプロバイダ�
 
 以前のリリースとは異なり、AEM インスタンス間でUGCのリバースレプリケーションやフォワードレプリケーションは行われません。 代わりに、SRPは、JSRPを除いて、すべてのオーサーインスタンスとパブリッシュインスタンスの作成、読み取り、更新、削除（CRUD）操作でUGCに直接アクセスできるようにします。
 
-以下に、各SRP オプション ](#characteristics-of-srp-options)の[特性を示します。これは、適切なSRPと[基礎となるデプロイメント ](/help/communities/topologies.md)を選択する際の決定プロセスに関する重要な情報です。
+以下に、各SRP オプション [&#128279;](#characteristics-of-srp-options)の特性を示します。これは、適切なSRPと[基礎となるデプロイメント &#x200B;](/help/communities/topologies.md)を選択する際の決定プロセスに関する重要な情報です。
 
-UGCでのSRPの使用について詳しくは、[ ストレージリソースプロバイダーの概要](/help/communities/srp.md)を参照してください。
+UGCでのSRPの使用について詳しくは、[&#x200B; ストレージリソースプロバイダーの概要](/help/communities/srp.md)を参照してください。
 
 >[!NOTE]
 >
->SRPはコミュニティコンテンツにのみ適用されます。 サイトコンテンツの保存場所（[node store](/help/sites-deploying/data-store-config.md)）には影響せず、AEM インスタンス間のユーザー登録、ユーザープロファイル、ユーザーグループの安全な取り扱いにも影響しません（[ ユーザーデータの管理](#managing-user-data)も参照）。
+>SRPはコミュニティコンテンツにのみ適用されます。 サイトコンテンツの保存場所（[node store](/help/sites-deploying/data-store-config.md)）には影響せず、AEM インスタンス間のユーザー登録、ユーザープロファイル、ユーザーグループの安全な取り扱いにも影響しません（[&#x200B; ユーザーデータの管理](#managing-user-data)も参照）。
 
 >[!CAUTION]
 >
@@ -112,7 +112,7 @@ JSRP:
 
 ## SRPの設定 {#configuring-srp}
 
-デフォルトストレージオプションの指定は、基礎となるデプロイメントに基づいて、[ ストレージ設定コンソール ](/help/communities/srp-config.md)を通じて行われます。
+デフォルトストレージオプションの指定は、基礎となるデプロイメントに基づいて、[&#x200B; ストレージ設定コンソール &#x200B;](/help/communities/srp-config.md)を通じて行われます。
 
 各オプションの設定の詳細については、次を参照してください。
 
@@ -137,9 +137,9 @@ AEM Communities 6.1以降、UGCのレプリケーションの必要性は、前�
 
 ### ユーザーデータの管理 {#managing-user-data}
 
-CommunitIesにとっても興味深いのは、[*ユーザー*、*ユーザーグループ*、*ユーザープロファイル*](/help/communities/users.md)&#x200B;です。 このユーザー関連データは、パブリッシュ環境で作成および更新される際に、トポロジが[ パブリッシュファーム ](/help/sites-deploying/recommended-deploys.md#tarmk-farm)の場合に、他のパブリッシュインスタンスで利用できるようにする必要があります。
+CommunitIesにとっても興味深いのは、[*ユーザー*、*ユーザーグループ*、*ユーザープロファイル*](/help/communities/users.md)&#x200B;です。 このユーザー関連データは、パブリッシュ環境で作成および更新される際に、トポロジが[&#x200B; パブリッシュファーム &#x200B;](/help/sites-deploying/recommended-deploys.md#tarmk-farm)の場合に、他のパブリッシュインスタンスで利用できるようにする必要があります。
 
-AEM Communities 6.1では、ユーザー関連のデータは、レプリケーションではなくSling ディストリビューションを使用して同期されます。 詳細については、[ ユーザー同期](/help/communities/sync.md)を参照してください。
+AEM Communities 6.1では、ユーザー関連のデータは、レプリケーションではなくSling ディストリビューションを使用して同期されます。 詳細については、[&#x200B; ユーザー同期](/help/communities/sync.md)を参照してください。
 
 ### AEM Communities 6.5へのアップグレード {#upgrading-to-aem-communities}
 

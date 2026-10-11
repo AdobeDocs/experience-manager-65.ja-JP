@@ -74,7 +74,7 @@ IOSの開発者は、iOS 9で実行されているCordova アプリに関する�
 
 >[!NOTE]
 >
->「アプリトランスポートセキュリティ」について詳しくは、[AppleのiOS9 プレリリースドキュメント ](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14)の次の節と、この[ スタックオーバーフローに関するディスカッション ](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/)を参照してください。
+>「アプリトランスポートセキュリティ」について詳しくは、[AppleのiOS9 プレリリースドキュメント &#x200B;](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14)の次の節と、この[&#x200B; スタックオーバーフローに関するディスカッション &#x200B;](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/)を参照してください。
 
 ## AEM でのモバイルアプリケーションの開発 {#developing-mobile-applications-in-aem-1}
 

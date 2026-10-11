@@ -27,9 +27,9 @@ ht-degree: 8%
 
 このページでは、リーダーボード機能を操作するための重要な情報を提供します。
 
-ページにリーダーボードコンポーネントを含める前に、[ コミュニティのスコアリングとバッジ ](implementing-scoring.md)を設定する必要があります。
+ページにリーダーボードコンポーネントを含める前に、[&#x200B; コミュニティのスコアリングとバッジ &#x200B;](implementing-scoring.md)を設定する必要があります。
 
-[ スコアリングとバッジの基本](configure-scoring.md)を参照してください。
+[&#x200B; スコアリングとバッジの基本](configure-scoring.md)を参照してください。
 
 ## クライアントサイドの基本 {#essentials-for-client-side}
 
@@ -66,4 +66,4 @@ ht-degree: 8%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-[ リーダーボード関数](functions.md#leaderboard-function)を含むコミュニティサイト構造には、設定済みの`leaderboard` コンポーネントが含まれています。
+[&#x200B; リーダーボード関数](functions.md#leaderboard-function)を含むコミュニティサイト構造には、設定済みの`leaderboard` コンポーネントが含まれています。

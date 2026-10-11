@@ -529,7 +529,7 @@ Web テンプレートのルートパネルをタップして「**+**」を選�
 
 ただし、作成者は、Web チャネル内のコンポーネントについて、必要に応じて継承設定を解除することができます。
 
-![印刷マスターの作成](assets/create_ic_print_master_new-1.png) ![印刷マスター ](assets/create_ic_print_master_web_new-1.png)
+![印刷マスターの作成](assets/create_ic_print_master_new-1.png) ![印刷マスター &#x200B;](assets/create_ic_print_master_web_new-1.png)
 
 ### 自動同期 {#autosync}
 

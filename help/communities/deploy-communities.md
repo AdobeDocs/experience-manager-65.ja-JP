@@ -42,42 +42,42 @@ ht-degree: 5%
 
 **[AEM プラットフォーム](/help/sites-deploying/deploy.md#what-is-aem)**&#x200B;の場合
 
-* 最新の[AEM 6.5 アップデート ](#aem64updates)をインストールする
+* 最新の[AEM 6.5 アップデート &#x200B;](#aem64updates)をインストールする
 
-* デフォルトのポート（4502、4503）を使用しない場合は、[ レプリケーションエージェントの設定](#replication-agents-on-author)
+* デフォルトのポート（4502、4503）を使用しない場合は、[&#x200B; レプリケーションエージェントの設定](#replication-agents-on-author)
 * [暗号化キーのレプリケート](#replicate-the-crypto-key)
 * グローバル化をサポートしている場合、[自動翻訳を設定](/help/sites-administering/translation.md)
 （開発用にサンプル設定が用意されています）
 
-**[ コミュニティ機能](/help/communities/overview.md)**&#x200B;の場合
+**[&#x200B; コミュニティ機能](/help/communities/overview.md)**&#x200B;の場合
 
-* [ パブリッシングファーム ](/help/sites-deploying/recommended-deploys.md#tarmk-farm)をデプロイする場合、[ プライマリパブリッシャーを特定](#primary-publisher)
+* [&#x200B; パブリッシングファーム &#x200B;](/help/sites-deploying/recommended-deploys.md#tarmk-farm)をデプロイする場合、[&#x200B; プライマリパブリッシャーを特定](#primary-publisher)
 
 * [トンネルサービスを有効にする](#tunnel-service-on-author)
 * [ソーシャルログインを有効にする](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
 * [Adobe Analytics の設定](/help/communities/analytics.md)
-* [既定の電子メール サービス ](/help/communities/email.md)を設定する
-* [共有UGC ストレージ ](/help/communities/working-with-srp.md) （**SRP**）の選択肢を特定
+* [既定の電子メール サービス &#x200B;](/help/communities/email.md)を設定する
+* [共有UGC ストレージ &#x200B;](/help/communities/working-with-srp.md) （**SRP**）の選択肢を特定
 
-  * MongoDB SRP [ （MSRP） ](/help/communities/msrp.md)の場合
+  * MongoDB SRP [&#x200B; （MSRP） &#x200B;](/help/communities/msrp.md)の場合
 
     * [MongoDBのインストールと設定](/help/communities/msrp.md#mongodb-configuration)
     * [Solrの設定](/help/communities/solr.md)
     * [MSRPを選択](/help/communities/srp-config.md)
 
-  * リレーショナル データベース SRP [ （DSRP） ](/help/communities/dsrp.md)の場合
+  * リレーショナル データベース SRP [&#x200B; （DSRP） &#x200B;](/help/communities/dsrp.md)の場合
 
     * [MySQL用JDBC ドライバーのインストール](#jdbc-driver-for-mysql)
     * [DSRP用MySQLのインストールと設定](/help/communities/dsrp-mysql.md)
     * [Solrの設定](/help/communities/solr.md)
     * [DSRPの選択](/help/communities/srp-config.md)
 
-  * Adobe SRP [ （ASRP） ](/help/communities/asrp.md)
+  * Adobe SRP [&#x200B; （ASRP） &#x200B;](/help/communities/asrp.md)
 
     * プロビジョニングについては、アカウント担当者にお問い合わせください
     * [ASRPの選択](/help/communities/srp-config.md)
 
-  * JCR SRP [ （JSRP） ](/help/communities/jsrp.md)の場合
+  * JCR SRP [&#x200B; （JSRP） &#x200B;](/help/communities/jsrp.md)の場合
 
     * 共有UGC （ユーザー生成コンテンツ）ストアではない：
 
@@ -88,13 +88,13 @@ ht-degree: 5%
 
 ## 最新リリース {#latest-releases}
 
-AEM 6.5 Communities GAには、Communities パッケージが含まれています。 AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)の更新プログラムについて詳しくは、[AEM 6.5 リリースノート ](/help/release-notes/release-notes.md#communities-release-notes.html)を参照してください。
+AEM 6.5 Communities GAには、Communities パッケージが含まれています。 AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities)の更新プログラムについて詳しくは、[AEM 6.5 リリースノート &#x200B;](/help/release-notes/release-notes.md#communities-release-notes.html)を参照してください。
 
 ### AEM 6.5のアップデート {#aem-updates}
 
 AEM 6.4以降では、AEMの累積修正パックとサービスパックの一部として、コミュニティの更新が配信されます。
 
-AEM 6.5の最新のアップデートについては、[Adobe Experience Manager 6.4累積修正パックとサービスパック ](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates)を参照してください。
+AEM 6.5の最新のアップデートについては、[Adobe Experience Manager 6.4累積修正パックとサービスパック &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates)を参照してください。
 
 ### バージョン履歴 {#version-history}
 
@@ -130,11 +130,11 @@ MySQL コネクタを取得し、個別にインストールする必要があ�
 
 1. すべてのオーサーインスタンスとパブリッシュインスタンスで手順3と4を繰り返します
 
-バンドルのインストールについて詳しくは、[Web コンソール ](/help/sites-deploying/web-console.md) ページを参照してください。
+バンドルのインストールについて詳しくは、[Web コンソール &#x200B;](/help/sites-deploying/web-console.md) ページを参照してください。
 
 #### 例：インストールされたMySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
 
-![ コネクタバンドル ](assets/connector-bundle.png)
+![&#x200B; コネクタバンドル &#x200B;](assets/connector-bundle.png)
 
 
 
@@ -172,17 +172,17 @@ SRP コレクション（MSRPまたはDSRP）が高度な多言語検索（MLS�
 
 ローカルのAEM インスタンスのパッケージリポジトリに移動したら、パッケージマネージャーを使用してパッケージをインストールします。
 
-詳しくは、[ パッケージの操作方法](/help/sites-administering/package-manager.md#package-share)を参照してください。
+詳しくは、[&#x200B; パッケージの操作方法](/help/sites-administering/package-manager.md#package-share)を参照してください。
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ストレージリソースプロバイダー（SRP） ](/help/communities/working-with-srp.md)と呼ばれることが多いです。 推奨されるデプロイメントでは、共通ストアのSRP オプションを選択することに重点を置きます。
+AEM Communitiesでは、UGCの保存には共通ストアが使用され、[&#x200B; ストレージリソースプロバイダー（SRP） &#x200B;](/help/communities/working-with-srp.md)と呼ばれることが多いです。 推奨されるデプロイメントでは、共通ストアのSRP オプションを選択することに重点を置きます。
 
-共通ストアは、UGCの[ レプリケーション ](/help/communities/sync.md)の必要性を排除しながら、公開環境でのUGCのモデレーションと分析をサポートしています。
+共通ストアは、UGCの[&#x200B; レプリケーション &#x200B;](/help/communities/sync.md)の必要性を排除しながら、公開環境でのUGCのモデレーションと分析をサポートしています。
 
 * [Community Content Store](/help/communities/working-with-srp.md) :AEM CommunitiesのSRP ストレージオプションについて説明します
 
-* [推奨トポロジ ](/help/communities/topologies.md)：ユースケースとSRPの選択に応じて使用するトポロジについて説明します
+* [推奨トポロジ &#x200B;](/help/communities/topologies.md)：ユースケースとSRPの選択に応じて使用するトポロジについて説明します
 
 ## アップグレード {#upgrading}
 
@@ -194,7 +194,7 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 
 ### プライマリ発行者 {#primary-publisher}
 
-選択したデプロイメントが[ パブリッシュファーム ](/help/communities/topologies.md#tarmk-publish-farm)である場合、すべてのインスタンスで発生しないアクティビティについて、1つのAEM パブリッシュインスタンスを&#x200B;**`primary publisher`**&#x200B;として識別する必要があります。 例えば、**notifications**&#x200B;または&#x200B;**Adobe Analytics**&#x200B;に依存する機能があります。
+選択したデプロイメントが[&#x200B; パブリッシュファーム &#x200B;](/help/communities/topologies.md#tarmk-publish-farm)である場合、すべてのインスタンスで発生しないアクティビティについて、1つのAEM パブリッシュインスタンスを&#x200B;**`primary publisher`**&#x200B;として識別する必要があります。 例えば、**notifications**&#x200B;または&#x200B;**Adobe Analytics**&#x200B;に依存する機能があります。
 
 デフォルトでは、`AEM Communities Publisher Configuration` OSGi設定は&#x200B;**`Primary Publisher`** チェックボックスがオンになっている状態で設定され、パブリッシュファーム内のすべてのパブリッシュインスタンスがプライマリとして自己識別されます。
 
@@ -205,7 +205,7 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 パブリッシュファーム内のその他のすべての（セカンダリ）パブリッシュインスタンスの場合：
 
 * 管理者権限を持ったログイン
-* [web コンソール ](/help/sites-deploying/configuring-osgi.md)にアクセスする
+* [web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスする
 
   * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
@@ -216,9 +216,9 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 
 ### オーサー上のレプリケーションエージェント {#replication-agents-on-author}
 
-レプリケーションは、パブリッシュ環境で作成されたサイトコンテンツ（コミュニティグループなど）に使用されます。また、[ トンネルサービス ](#tunnel-service-on-author)を使用して、オーサー環境からメンバーおよびメンバーグループを管理します。
+レプリケーションは、パブリッシュ環境で作成されたサイトコンテンツ（コミュニティグループなど）に使用されます。また、[&#x200B; トンネルサービス &#x200B;](#tunnel-service-on-author)を使用して、オーサー環境からメンバーおよびメンバーグループを管理します。
 
-プライマリパブリッシャーの場合、[ レプリケーションエージェント設定](/help/sites-deploying/replication.md)が公開サーバーと承認済みユーザーを正しく識別していることを確認します。 既定の承認済みユーザー`admin,`には、既に適切な権限があります（`Communities Administrators`のメンバー）。
+プライマリパブリッシャーの場合、[&#x200B; レプリケーションエージェント設定](/help/sites-deploying/replication.md)が公開サーバーと承認済みユーザーを正しく識別していることを確認します。 既定の承認済みユーザー`admin,`には、既に適切な権限があります（`Communities Administrators`のメンバー）。
 
 他のユーザーが適切な権限を持つには、そのユーザーを`administrators` ユーザーグループのメンバー（`Communities Administrators`のメンバー）として追加する必要があります。
 
@@ -226,7 +226,7 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 
 * 作成者のレプリケーションコンソールにアクセスする
 
-  * グローバルナビゲーションから、作成者&#x200B;]**の**[!UICONTROL  ツール ]**>**[!UICONTROL  デプロイメント ]**>**[!UICONTROL  レプリケーション ]**>**[!UICONTROL  エージェントに移動します
+  * グローバルナビゲーションから、作成者&#x200B;**の**&#x200B;[!UICONTROL &#x200B; ツール &#x200B;]&#x200B;**>**&#x200B;[!UICONTROL &#x200B; デプロイメント &#x200B;]&#x200B;**>**&#x200B;[!UICONTROL &#x200B; レプリケーション &#x200B;]&#x200B;**>** エージェントに移動します
 
 * 両方のエージェントに対して同じ手順に従います。
 
@@ -252,7 +252,7 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 
 ### オーサー上のトンネルサービス {#tunnel-service-on-author}
 
-オーサー環境を使用して[ サイトを作成](/help/communities/sites-console.md)、[ サイトプロパティを変更](/help/communities/sites-console.md#modifying-site-properties)または[ コミュニティメンバーを管理](/help/communities/members.md)する場合、オーサーに登録されたユーザーではなく、パブリッシュ環境に登録されたメンバー（ユーザー）にアクセスする必要があります。
+オーサー環境を使用して[&#x200B; サイトを作成](/help/communities/sites-console.md)、[&#x200B; サイトプロパティを変更](/help/communities/sites-console.md#modifying-site-properties)または[&#x200B; コミュニティメンバーを管理](/help/communities/members.md)する場合、オーサーに登録されたユーザーではなく、パブリッシュ環境に登録されたメンバー（ユーザー）にアクセスする必要があります。
 
 トンネルサービスは、オーサー上のレプリケーションエージェントを使用してこのアクセスを提供します。
 
@@ -260,9 +260,9 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 
 * オーサーインスタンスの管理者権限でログインします。
 * 発行者がlocalhost:4503でない場合、またはトランスポートユーザーが`admin`でない場合，
-次に、[ レプリケーションエージェントを設定](#replication-agents-on-author)
+次に、[&#x200B; レプリケーションエージェントを設定](#replication-agents-on-author)
 
-* [Web コンソール ](/help/sites-deploying/configuring-osgi.md)へのアクセス
+* [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)へのアクセス
 
   * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
@@ -271,7 +271,7 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[ ス
 * **有効** ボックスをオンにします
 * 「**保存**」を選択します
 
-  ![ トンネル サービス ](assets/tunnel-service.png)
+  ![&#x200B; トンネル サービス &#x200B;](assets/tunnel-service.png)
 
 ### 暗号化キーのレプリケート {#replicate-the-crypto-key}
 
@@ -308,7 +308,7 @@ AEM 6.3以降では、キーマテリアルはファイルシステムに保存�
 
 >[!CAUTION]
 >
->暗号鍵に基づく別のセキュリティ機能が既に設定されている場合、暗号鍵をレプリケートすると設定が破損する可能性があります。 サポートについては、[ カスタマーケアにお問い合わせください](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)。
+>暗号鍵に基づく別のセキュリティ機能が既に設定されている場合、暗号鍵をレプリケートすると設定が破損する可能性があります。 サポートについては、[&#x200B; カスタマーケアにお問い合わせください](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)。
 
 #### リポジトリレプリケーション {#repository-replication}
 
@@ -316,7 +316,7 @@ AEM 6.2以前の場合と同様に、キーマテリアルをリポジトリに�
 
 >[!NOTE]
 >
->作成者](#replication-agents-on-author)の[ レプリケーションエージェントが正しく設定されていることを確認します。
+>作成者[&#128279;](#replication-agents-on-author)の レプリケーションエージェントが正しく設定されていることを確認します。
 
 キーマテリアルがリポジトリに保存されている場合、クリプトキーをオーサーから他のインスタンスにレプリケートする方法は次のとおりです。
 
@@ -333,7 +333,7 @@ AEM 6.2以前の場合と同様に、キーマテリアルをリポジトリに�
 
 #### Granite Crypto バンドルを更新する {#refresh-the-granite-crypto-bundle}
 
-* 各公開インスタンスで、[Web コンソール ](/help/sites-deploying/configuring-osgi.md)にアクセスします
+* 各公開インスタンスで、[Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
   * 例：[https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
@@ -379,8 +379,8 @@ Dispatcherを使用している場合は、次を参照してください。
 
 ## 関連するCommunities ドキュメント {#related-communities-documentation}
 
-* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージの設定について詳しくは、[ コミュニティサイトの管理](/help/communities/administer-landing.md)にアクセスしてください。
+* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージの設定について詳しくは、[&#x200B; コミュニティサイトの管理](/help/communities/administer-landing.md)にアクセスしてください。
 
-* [ コミュニティの開発](/help/communities/communities.md)にアクセスして、ソーシャルコンポーネントフレームワーク（SCF）とコミュニティのコンポーネントと機能のカスタマイズについて学ぶことができます。
+* [&#x200B; コミュニティの開発](/help/communities/communities.md)にアクセスして、ソーシャルコンポーネントフレームワーク（SCF）とコミュニティのコンポーネントと機能のカスタマイズについて学ぶことができます。
 
-* [Communities コンポーネントのオーサリング ](/help/communities/author-communities.md)にアクセスして、Communities コンポーネントのオーサリングと設定方法を学ぶことができます。
+* [Communities コンポーネントのオーサリング &#x200B;](/help/communities/author-communities.md)にアクセスして、Communities コンポーネントのオーサリングと設定方法を学ぶことができます。

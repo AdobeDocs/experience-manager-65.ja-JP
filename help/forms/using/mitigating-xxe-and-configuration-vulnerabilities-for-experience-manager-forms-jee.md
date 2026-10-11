@@ -87,7 +87,7 @@ ht-degree: 94%
 
 **手順 1：ホットフィックスパッケージをダウンロードして抽出**
 
-- 6.5.18.0の[ ホットフィックスをダウンロード - 6.5.22.](/help/release-notes/aem-forms-hotfix.md) Adobe Software Distribution Portalから
+- 6.5.18.0の[&#x200B; ホットフィックスをダウンロード - 6.5.22.](/help/release-notes/aem-forms-hotfix.md) Adobe Software Distribution Portalから
 - ローカルで抽出します
 
 **手順 2：正しいバージョンフォルダーに移動**

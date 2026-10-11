@@ -208,7 +208,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの分割 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*AssemblerResultPDF.pdf* という名前の PDF ドキュメントを分割します。 DDX ドキュメントの名前は *shell_disassemble.xml* です。 分割後の各 PDF 文書には、`ResultPDF[Number].pdf` という名前が付けられます。 つまり、最初に分解されたPDF文書の名前は&#x200B;*ResultPDF1.pdf*&#x200B;です。 このコード例で使用されている&#x200B;*shell_disassemble.xml* DDX ドキュメントについて詳しくは、[ プログラムによるPDF ドキュメントの分解](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)を参照してください。
+次の Java コードの例では、*AssemblerResultPDF.pdf* という名前の PDF ドキュメントを分割します。 DDX ドキュメントの名前は *shell_disassemble.xml* です。 分割後の各 PDF 文書には、`ResultPDF[Number].pdf` という名前が付けられます。 つまり、最初に分解されたPDF文書の名前は&#x200B;*ResultPDF1.pdf*&#x200B;です。 このコード例で使用されている&#x200B;*shell_disassemble.xml* DDX ドキュメントについて詳しくは、[&#x200B; プログラムによるPDF ドキュメントの分解](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)を参照してください。
 
 ```java
  /*
@@ -1205,7 +1205,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 * `convertDDX`：`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。 このメソッドは、入力パラメーターとして `org.w3c.dom.Document` オブジェクトを受け入れ、`com.adobe.idp.Document` オブジェクトを返します。
 
   このクイックスタートでは、これらの両方のメソッドが呼び出されます。 （[DDX ドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)を参照）。
-  ``
+  &grave;&grave;
 
 ```java
 /*

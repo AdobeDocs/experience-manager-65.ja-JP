@@ -69,7 +69,7 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。 このコンポーネントの多くは[コミュニティサイト](/help/communities/overview.md)の作成時に追加されます。
 
-* [e コマース ](/help/commerce/cif-classic/administering/ecommerce.md) - AEMのe コマース機能には、さまざまなコンポーネントも含まれています。 実際の使用方法は、使用しているコマースエンジンによって異なります。
+* [e コマース &#x200B;](/help/commerce/cif-classic/administering/ecommerce.md) - AEMのe コマース機能には、さまざまなコンポーネントも含まれています。 実際の使用方法は、使用しているコマースエンジンによって異なります。
 
 ### コンポーネントの設定 {#configuring-components}
 

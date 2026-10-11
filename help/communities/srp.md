@@ -27,11 +27,11 @@ ht-degree: 3%
 
 ## はじめに {#introduction}
 
-Adobe Experience Manager （AEM） Communities 6.1では、一般的にユーザー生成コンテンツ （UGC）と呼ばれるコミュニティコンテンツが、[ ストレージリソースプロバイダー](working-with-srp.md) （SRP）が提供する1つの共通ストアに保存されています。
+Adobe Experience Manager （AEM） Communities 6.1では、一般的にユーザー生成コンテンツ （UGC）と呼ばれるコミュニティコンテンツが、[&#x200B; ストレージリソースプロバイダー](working-with-srp.md) （SRP）が提供する1つの共通ストアに保存されています。
 
 新しいAEM Communities インターフェイス [SocialResourceProvider API](srp-and-ugc.md) （SRP API）を介してUGCにアクセスするSRP オプションがいくつかあり、これには、すべての作成、読み取り、更新、削除（CRUD）操作が含まれます。
 
-すべてのSCF コンポーネントはSRP APIを使用して実装されているため、[基になるトポロジ ](topologies.md)またはUGCの場所を知らずにコードを開発できます。
+すべてのSCF コンポーネントはSRP APIを使用して実装されているため、[基になるトポロジ &#x200B;](topologies.md)またはUGCの場所を知らずにコードを開発できます。
 
 ***SocialResourceProvider APIは、AEM Communitiesのライセンスを取得したお客様のみが利用できます。***
 
@@ -42,8 +42,8 @@ Adobe Experience Manager （AEM） Communities 6.1では、一般的にユーザ
 関連トピック：
 
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
 
 ## リポジトリについて {#about-the-repository}
 
@@ -73,7 +73,7 @@ UGCを共有ストレージに保存すると、メンバーコンテンツの�
 >
 >サンプルコードとその他の詳細については、[SRPおよびUGC Essentials](srp-and-ugc.md)を参照してください。
 >
->コーディングのベストプラクティスについては、[SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md)を参照してください。
+>コーディングのベストプラクティスについては、[SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md)を参照してください。
 
 ### ASRP {#asrp}
 
@@ -128,7 +128,7 @@ ACL チェックでは、リソースのUGCに適用される権限のチェッ�
 
 ### 非既存リソース（NER） {#for-non-existing-resources-ners}
 
-一部のCommunities コンポーネントはスクリプト内に含まれるため、Communities機能をサポートするにはSling Addressable ノードが必要です。 [含まれるコンポーネント ](scf.md#add-or-include-a-communities-component)は、既存でないリソース （NER）と呼ばれます。
+一部のCommunities コンポーネントはスクリプト内に含まれるため、Communities機能をサポートするにはSling Addressable ノードが必要です。 [含まれるコンポーネント &#x200B;](scf.md#add-or-include-a-communities-component)は、既存でないリソース （NER）と呼ばれます。
 
 シャドウノードは、リポジトリ内のSling アドレス可能な場所を提供します。
 
@@ -138,7 +138,7 @@ ACL チェックでは、リソースのUGCに適用される権限のチェッ�
 
 ### 保存場所 {#storage-location}
 
-次に、[ コミュニティコンポーネントガイド ](components-guide.md)の[ コメント コンポーネント ](http://localhost:4502/content/community-components/en/comments.html)を使用したシャドウノードの例を示します。
+次に、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)の[&#x200B; コメント コンポーネント &#x200B;](http://localhost:4502/content/community-components/en/comments.html)を使用したシャドウノードの例を示します。
 
 * コンポーネントは、次の場所のローカルリポジトリに存在します。
 
@@ -154,7 +154,7 @@ ACL チェックでは、リソースのUGCに適用される権限のチェッ�
 
 例えば、デプロイメントがTarMK パブリッシュファームを持つ[MSRP](msrp.md)であるとします。
 
-[ メンバー](users.md)が（MongoDBに保存されている） pub1にUGCを投稿すると、pub1のJCRにシャドウノードが作成されます。
+[&#x200B; メンバー](users.md)が（MongoDBに保存されている） pub1にUGCを投稿すると、pub1のJCRにシャドウノードが作成されます。
 
 pub2でUGCを初めて読み取る場合、何も設定されていない場合、デフォルトの動作はシャドウノードを作成することです。
 

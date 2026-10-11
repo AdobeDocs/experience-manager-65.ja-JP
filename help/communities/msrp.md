@@ -29,7 +29,7 @@ ht-degree: 3%
 
 AEM CommunitiesがMSRPを共通ストアとして使用するように設定されている場合、同期やレプリケーションを必要とせずに、ユーザー生成コンテンツ（UGC）はすべてのオーサーインスタンスとパブリッシュインスタンスからアクセスできます。
 
-[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)および[推奨トポロジ ](topologies.md)も参照してください。
+[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)および[推奨トポロジ &#x200B;](topologies.md)も参照してください。
 
 ## 要件 {#requirements}
 
@@ -37,7 +37,7 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 
   * バージョン 2.6以降
   * Mongosやshardingを設定する必要はありません
-  * [ レプリカセット ](#mongoreplicaset)の使用を強くお勧めします
+  * [&#x200B; レプリカセット &#x200B;](#mongoreplicaset)の使用を強くお勧めします
   * AEMと同じホストで実行するか、リモートで実行する可能性があります
 
 * [Apache Solr](https://lucene.apache.org/solr/):
@@ -47,7 +47,7 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
   * サービスは必要ありません
   * 実行モードの選択：
     * スタンドアロンモード
-    * [SolrCloud モード ](solr.md#solrcloud-mode) （実稼動環境に推奨）
+    * [SolrCloud モード &#x200B;](solr.md#solrcloud-mode) （実稼動環境に推奨）
   * 多言語検索（MLS）の選択：
     * [標準MLSのインストール](solr.md#installing-standard-mls)
     * [高度なMLSのインストール](solr.md#installing-advanced-mls)
@@ -56,7 +56,7 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 
 ### MSRPを選択 {#select-msrp}
 
-[ ストレージ設定コンソール ](srp-config.md)では、使用するSRPの実装を特定するデフォルトのストレージ設定を選択できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md)では、使用するSRPの実装を特定するデフォルトのストレージ設定を選択できます。
 
 オーサーで、ストレージ設定コンソールにアクセスするには、次の手順を実行します。
 
@@ -87,7 +87,7 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 
   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) ホスト**
 
-    外部ZooKeeperを使用して[SolrCloud モード ](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:2181*&#x200B;など、ZooKeeperの`HOST:PORT`に設定します
+    外部ZooKeeperを使用して[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:2181*&#x200B;など、ZooKeeperの`HOST:PORT`に設定します
 
     ZooKeeper Ensembleの場合、*host1:2181,host2:2181*&#x200B;のように、`HOST:PORT`のコンマ区切りの値を入力します
 
@@ -107,13 +107,13 @@ Solr コレクション名。
 
 >[!NOTE]
 >
->デフォルトの名前`communities`であるmongoDB データベースは、[ ノードストアまたはデータ（バイナリ）ストア ](../../help/sites-deploying/data-store-config.md)に使用されるデータベースの名前に設定しないでください。 AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md)の[Storage Elementsも参照してください。
+>デフォルトの名前`communities`であるmongoDB データベースは、[&#x200B; ノードストアまたはデータ（バイナリ）ストア &#x200B;](../../help/sites-deploying/data-store-config.md)に使用されるデータベースの名前に設定しないでください。 AEM 6.5[&#128279;](../../help/sites-deploying/storage-elements-in-aem-6.md)のStorage Elementsも参照してください。
 
 ### MongoDB レプリカセット {#mongodb-replica-set}
 
 実稼動環境では、プライマリセカンダリレプリケーションと自動フェイルオーバーを実装するMongoDB サーバーのクラスターであるレプリカセットをセットアップすることを強くお勧めします。
 
-レプリカセットについて詳しくは、MongoDBの[ レプリケーション ](https://docs.mongodb.org/manual/replication/)のドキュメントを参照してください。
+レプリカセットについて詳しくは、MongoDBの[&#x200B; レプリケーション &#x200B;](https://docs.mongodb.org/manual/replication/)のドキュメントを参照してください。
 
 レプリカセットを操作し、アプリケーションとMongoDB インスタンス間の接続を定義する方法については、MongoDBの[接続文字列URI形式](https://docs.mongodb.org/manual/reference/connection-string/) ドキュメントを参照してください。
 
@@ -133,7 +133,7 @@ Solr インストールは、異なるコレクションを使用して、ノー
 
 Oak コレクションとMSRP コレクションの両方を集中的に使用する場合は、パフォーマンス上の理由から2番目のSolrをインストールできます。
 
-実稼動環境の場合、[SolrCloud モード ](solr.md#solrcloud-mode)では、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
+実稼動環境の場合、[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)では、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
 構成の詳細については、[Solr Configuration for SRP](solr.md)を参照してください。
 
@@ -141,12 +141,12 @@ Oak コレクションとMSRP コレクションの両方を集中的に使用�
 
 MSRPで設定された以前のバージョンからアップグレードする場合は、次のことが必要になります。
 
-1. AEM Communities](upgrade.md)への[ アップグレードを実行します
+1. AEM Communities[&#128279;](upgrade.md)への アップグレードを実行します
 1. 新しいSolr設定ファイルのインストール
    * [標準MLS](solr.md#installing-standard-mls)の場合
    * [Advanced MLS](solr.md#installing-advanced-mls)の場合
 1. MSRPのインデックス再作成
-セクション [MSRP インデックス再作成ツール ](#msrp-reindex-tool)を参照してください
+セクション [MSRP インデックス再作成ツール &#x200B;](#msrp-reindex-tool)を参照してください
 
 ## 設定の公開 {#publishing-the-configuration}
 
@@ -221,7 +221,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ## MSRPのデモ方法 {#how-to-demo-msrp}
 
-デモ環境または開発環境のMSRPをセットアップするには、[ デモ用MongoDBのセットアップ方法](demo-mongo.md)を参照してください。
+デモ環境または開発環境のMSRPをセットアップするには、[&#x200B; デモ用MongoDBのセットアップ方法](demo-mongo.md)を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 

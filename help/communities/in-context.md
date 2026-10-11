@@ -27,11 +27,11 @@ ht-degree: 1%
 
 AEM Communitiesの場合、管理者と信頼できるコミュニティメンバーは、コミュニティコンテンツが投稿された公開済みページで直接モデレーションを実行できます。
 
-[ モデレーションコンソール ](moderation.md)を使用する場合、コンテンツに表示される情報には、公開済みページへのリンクが含まれており、コンテキスト内でモデレーションする際に使用できる追加のモデレーションアクションへのアクセスが可能になります。
+[&#x200B; モデレーションコンソール &#x200B;](moderation.md)を使用する場合、コンテンツに表示される情報には、公開済みページへのリンクが含まれており、コンテキスト内でモデレーションする際に使用できる追加のモデレーションアクションへのアクセスが可能になります。
 
 ## モデレーション活動 {#moderation-actions}
 
-[ モデレーションアクション ](moderate-ugc.md#moderation-actions)の説明については、モデレーションの概要を参照してください。
+[&#x200B; モデレーションアクション &#x200B;](moderate-ugc.md#moderation-actions)の説明については、モデレーションの概要を参照してください。
 
 ## モデレーション UI {#moderation-ui}
 
@@ -45,13 +45,13 @@ AEM Communitiesの場合、管理者と信頼できるコミュニティメン�
 
 ## 例 {#example}
 
-[Geometrixxの使用開始時に作成された[AEM Communities Engage](http://localhost:4503/content/sites/engage/en.html) サイトを使用して、パブリッシュ環境で様々なモデレーションアクティビティを体験するフォーラムにスレッドを設定できます。 ](getting-started.md)以下を参照してください。
+[&#128279;](getting-started.md)Geometrixxの使用開始時に作成された[AEM Communities Engage](http://localhost:4503/content/sites/engage/en.html) サイトを使用して、パブリッシュ環境で様々なモデレーションアクティビティを体験するフォーラムにスレッドを設定できます。 &#x200B;以下を参照してください。
 
 Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時にcommunity-engage-moderators グループに追加することで、信頼できるコミュニティメンバーとして識別されました。
 
-Rebekah Larsen （`rebekah.larsen@trashymail.com`）は、[ メンバーコンソール ](members.md)を使用して、community-engage-members グループのメンバーとして追加できます。
+Rebekah Larsen （`rebekah.larsen@trashymail.com`）は、[&#x200B; メンバーコンソール &#x200B;](members.md)を使用して、community-engage-members グループのメンバーとして追加できます。
 
-コミュニティユーザーグループについて詳しくは、[ ユーザーとユーザーグループの管理](users.md)を参照してください。
+コミュニティユーザーグループについて詳しくは、[&#x200B; ユーザーとユーザーグループの管理](users.md)を参照してください。
 
 ### フォーラム投稿の作成 {#create-the-forum-posts}
 
@@ -102,7 +102,7 @@ Rebekah Larsen （`rebekah.larsen@trashymail.com`）は、[ メンバーコン�
 
 ### 新しいメンバー（#4） {#new-member}
 
-作成者は、管理者としてログインし、[ メンバーコンソール ](members.md)を使用してCommunity-engage-members グループの新しいメンバーとしてBoyd Larsen （boyd.larsen@dodgit.com）を追加してからログアウトします。
+作成者は、管理者としてログインし、[&#x200B; メンバーコンソール &#x200B;](members.md)を使用してCommunity-engage-members グループの新しいメンバーとしてBoyd Larsen （boyd.larsen@dodgit.com）を追加してからログアウトします。
 
 公開時にBoyd Larsenとしてログインし、ハミングバードの投稿に「`Forum`」、「`Read more`」を選択してスレッドにアクセスします。
 
@@ -129,7 +129,7 @@ BoydにAndrewが投稿したコンテンツにフラグを付けるフラグを�
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-管理メニュー項目を選択して、パブリッシュ環境から[ モデレーションコンソール ](moderation.md)にアクセスできるようにします。
+管理メニュー項目を選択して、パブリッシュ環境から[&#x200B; モデレーションコンソール &#x200B;](moderation.md)にアクセスできるようにします。
 
 管理者の場合、Geometrixx Engage コミュニティサイトのコンテンツだけでなく、モデレート可能なすべてのコンテンツが表示されます。
 
@@ -152,7 +152,7 @@ BoydにAndrewが投稿したコンテンツにフラグを付けるフラグを�
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-管理メニュー項目を選択して、パブリッシュ環境から[ モデレーションコンソール ](moderation.md)にアクセスできるようにします。
+管理メニュー項目を選択して、パブリッシュ環境から[&#x200B; モデレーションコンソール &#x200B;](moderation.md)にアクセスできるようにします。
 
 コミュニティモデレーターの場合、Geometrixx Engage コミュニティサイトのモデレート可能なコンテンツのみが表示されます。
 

@@ -164,7 +164,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    * **[!UICONTROL Dynamic Media 同期モード]**
      * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
      * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
-       選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」を選択します。 「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。 完了したら、「**[!UICONTROL 保存]**」を選択します。 *覚えておいてください：**[!UICONTROL 以前のすべてのコンテンツを同期]**を選択した場合、これらの3つのオプションは使用できません。* [Dynamic Mediaのフォルダーレベルでの選択的公開の操作](/help/assets/selective-publishing.md)も参照してください。
+       選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」を選択します。 「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。 完了したら、「**[!UICONTROL 保存]**」を選択します。 *覚えておいてください：**[!UICONTROL 以前のすべてのコンテンツを同期]**&#x200B;を選択した場合、これらの3つのオプションは使用できません。* [Dynamic Mediaのフォルダーレベルでの選択的公開の操作](/help/assets/selective-publishing.md)も参照してください。
        * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つまたはクラウド設定のデフォルトモードから同期値を継承します。 継承した場合の詳細なステータスは、ツールチップで表示されます。
        * **[!UICONTROL サブフォルダーに対して有効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期に含めます。 フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
        * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。

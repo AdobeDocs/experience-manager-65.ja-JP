@@ -71,7 +71,7 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。 例えば、RTE内で作成されたコンテンツは、WCAG 2.0への準拠を確保するために、追加のマークアップが必要になる場合があります。 これは、RTEの[ ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins) オプションを使用して実行できます。 [`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
+場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。 例えば、RTE内で作成されたコンテンツは、WCAG 2.0への準拠を確保するために、追加のマークアップが必要になる場合があります。 これは、RTEの[&#x200B; ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins) オプションを使用して実行できます。 [`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
 
 >[!CAUTION]
 >

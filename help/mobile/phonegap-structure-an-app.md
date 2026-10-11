@@ -24,7 +24,7 @@ ht-degree: 1%
 
 {{ue-over-mobile}}
 
-AEM Mobile プロジェクトには、ページ、JavaScriptおよびCSS クライアントライブラリ、再利用可能なAEM コンポーネント、Content Sync設定、PhoneGap アプリシェルのコンテンツなど、様々なコンテンツタイプが含まれます。 新しいAEM Mobile アプリを[ スターターキット ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)に基づいて作成することは、様々な種類のコンテンツをすべて推奨の構造に取り込み、長期的な持ち運びとメンテナンス性の両方を容易にするための優れた方法です。
+AEM Mobile プロジェクトには、ページ、JavaScriptおよびCSS クライアントライブラリ、再利用可能なAEM コンポーネント、Content Sync設定、PhoneGap アプリシェルのコンテンツなど、様々なコンテンツタイプが含まれます。 新しいAEM Mobile アプリを[&#x200B; スターターキット &#x200B;](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)に基づいて作成することは、様々な種類のコンテンツをすべて推奨の構造に取り込み、長期的な持ち運びとメンテナンス性の両方を容易にするための優れた方法です。
 
 ## ページコンテンツ {#page-content}
 
@@ -38,7 +38,7 @@ AEMの規則では、アプリの最初のページは、アプリのデフォ�
 
 アプリのテンプレートとコンポーネントコードは/apps/&lt; ブランド名>/&lt; アプリ名>にする必要があります。 規則に従って、テンプレートとコンポーネントコードを/apps/&lt; ブランド名>/&lt; アプリ名>に配置する必要があります。 このパターンは、AEMで既にSiteを使用している開発者に慣れ親しんでいる必要があります。 通常は、パブリッシュインスタンスで/apps/がデフォルトで匿名アクセスにロックダウンされているので、この設定に従います。 そのため、生のJSP コードは潜在的な攻撃者から隠されています。
 
-アプリ固有のテンプレートは、テンプレート自体で`allowedPaths` プロパティノードを使用し、その値を&#39;/content/mobileapps （/.&amp;ast;）?&#39;に設定することによってのみ表示されるように設定できます。テンプレートが単一のアプリでのみ使用できる場合は、さらに具体的な設定も可能です。 `allowedParents`および`allowedChildren` プロパティは、作成者が新しいページを作成する場所に基づいて利用できるテンプレートを詳細に制御するために使用することもできます。
+アプリ固有のテンプレートは、テンプレート自体で`allowedPaths` プロパティノードを使用し、その値を&#39;/content/mobileapps （/.&ast;）?&#39;に設定することによってのみ表示されるように設定できます。テンプレートが単一のアプリでのみ使用できる場合は、さらに具体的な設定も可能です。 `allowedParents`および`allowedChildren` プロパティは、作成者が新しいページを作成する場所に基づいて利用できるテンプレートを詳細に制御するために使用することもできます。
 
 アプリページコンポーネントをゼロから作成する場合は、その`sling:resourceSuperType` プロパティを「mobileapps/components/angular/ng-page」に設定することをお勧めします。 これにより、オーサリングとレンダリングの両方を単一ページアプリとして行うためのページが設定され、コンポーネントを変更する必要がある.jsp ファイルをオーバーレイできるようになります。 ng-pageにはUI フレームワークがまったく含まれていないため、開発者は通常、（少なくとも）「template.jsp」（/libs/mobileapps/components/angular/ng-page/template.jspからオーバーレイ）をオーバーレイすることになります。
 
@@ -54,9 +54,9 @@ AngularJSを使用したいオーサリング可能なページコンポーネ�
 
 ## PhoneGap設定 {#phonegap-configuration}
 
-各AEM Mobile アプリには、Web コンテンツを実行可能なアプリケーションに変換するために`https://build.phonegap.com/`のPhoneGap [ コマンドラインインターフェイス ](https://github.com/phonegap/phonegap-cli)およびPhoneGap ビルドで使用される設定ファイルをホストするディレクトリが含まれています。 例えば、Geometrixx サンプルでは、このディレクトリ（/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-content）がシェルの一部として配置されています。デバイス APIやアプリ自体の設定を扱うプラグインなど、無線で更新できないコンテンツのみが含まれているため、デザインが決定されました。
+各AEM Mobile アプリには、Web コンテンツを実行可能なアプリケーションに変換するために`https://build.phonegap.com/`のPhoneGap [&#x200B; コマンドラインインターフェイス &#x200B;](https://github.com/phonegap/phonegap-cli)およびPhoneGap ビルドで使用される設定ファイルをホストするディレクトリが含まれています。 例えば、Geometrixx サンプルでは、このディレクトリ（/content/phonegap/geometrixx-outdoors/shell/jcr:content/page-app/app-content）がシェルの一部として配置されています。デバイス APIやアプリ自体の設定を扱うプラグインなど、無線で更新できないコンテンツのみが含まれているため、デザインが決定されました。
 
-このディレクトリには、プラグインのインストール、プラットフォーム固有の場所へのリソースファイルの配置、ビルドの一部として実行されるその他のアクションに使用できる[Cordova フック ](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/index.html#Hooks%20Guide)もあります。 注：ビルドの一部として各プラグインをダウンロードする代わりに、Kitchen Sink アプリのパターンに従い、プラグインソースコード <!-- THIS URL IS 404 (https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) -->をアプリプロジェクトの残りの部分に含めることができます。
+このディレクトリには、プラグインのインストール、プラットフォーム固有の場所へのリソースファイルの配置、ビルドの一部として実行されるその他のアクションに使用できる[Cordova フック &#x200B;](https://cordova.apache.org/docs/en/dev/guide/appdev/hooks/index.html#Hooks%20Guide)もあります。 注：ビルドの一部として各プラグインをダウンロードする代わりに、Kitchen Sink アプリのパターンに従い、プラグインソースコード <!-- THIS URL IS 404 (https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) -->をアプリプロジェクトの残りの部分に含めることができます。
 
 ## 次の手順 {#the-next-steps}
 

@@ -46,7 +46,7 @@ ht-degree: 96%
 
 アダプティブフォームには、すぐに使用できる一連のレイアウトが用意されています。
 
-![標準搭載のツールバーレイアウト ](assets/toolbar1.png)
+![標準搭載のツールバーレイアウト &#x200B;](assets/toolbar1.png)
 
 標準搭載のツールバーレイアウト
 
@@ -58,7 +58,7 @@ ht-degree: 96%
 
 CustomToolbarLayoutDemo.zip
 
-[ ファイルを取得](assets/customtoolbarlayoutdemo.zip)
+[&#x200B; ファイルを取得](assets/customtoolbarlayoutdemo.zip)
 カスタムツールバーレイアウトのデモ
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}

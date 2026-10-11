@@ -28,7 +28,7 @@ ht-degree: 2%
 
 AEM Communitiesのメッセージング機能を使用すると、フォーラムやコメントで発生する一般的に見えるインタラクションに加えて、コミュニティメンバー同士がよりプライベートにインタラクションできるようになります。
 
-この機能は、[ コミュニティサイト ](/help/communities/overview.md#communitiessites)を作成するときに含めることができます。
+この機能は、[&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#communitiessites)を作成するときに含めることができます。
 
 メッセージング機能を使用すると、次のことが可能になります。
 
@@ -46,13 +46,13 @@ AEM Communitiesのメッセージング機能を使用すると、フォーラ�
 
 **G** – 削除されたメッセージの復元
 
-![ メッセージングセクション ](assets/messaging-section.png)
+![&#x200B; メッセージングセクション &#x200B;](assets/messaging-section.png)
 
 ![restore-message](assets/restore-message.png)
 
 メッセージ機能を有効にして変更するには、次を参照してください。
 
-* [管理者向けメッセージ ](/help/communities/messaging.md)の設定
+* [管理者向けメッセージ &#x200B;](/help/communities/messaging.md)の設定
 * 開発者向け[Messaging Essentials](/help/communities/essentials-messaging.md)
 
 >[!NOTE]
@@ -65,7 +65,7 @@ AEM Communitiesのメッセージング機能を使用すると、フォーラ�
 
 ### メッセージリストの設定（メッセージボックス） {#configure-message-list-message-box}
 
-メッセージ機能の&#x200B;**受信トレイ**、**送信済みアイテム**&#x200B;および&#x200B;**ゴミ箱** ページのメッセージのリストの設定を変更するには、[作成者の編集モード ](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
+メッセージ機能の&#x200B;**受信トレイ**、**送信済みアイテム**&#x200B;および&#x200B;**ゴミ箱** ページのメッセージのリストの設定を変更するには、[作成者の編集モード &#x200B;](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
 
 1. `Preview` モードで、**メッセージ** リンクを選択して、メイン メッセージ ページを開きます。 次に、**受信トレイ**、**送信済みアイテム**&#x200B;または&#x200B;**ごみ箱**&#x200B;のいずれかを選択して、そのメッセージリストのコンポーネントを設定します。
 
@@ -139,7 +139,7 @@ AEM Communitiesのメッセージング機能を使用すると、フォーラ�
 
 ### メッセージ作成の設定 {#configure-compose-message}
 
-メッセージ作成ページの設定を変更するには、[作成者編集モード ](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
+メッセージ作成ページの設定を変更するには、[作成者編集モード &#x200B;](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
 
 * `Preview` モードで、**メッセージ** リンクを選択して、メイン メッセージ ページを開きます。 次に、「新規メッセージ」ボタンを選択して、`Compose Message` ページを開きます。
 

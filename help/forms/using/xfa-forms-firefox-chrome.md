@@ -62,7 +62,7 @@ Firefox および Chrome で XFA ベースの PDF フォームを使用するに
 
 1. Chrome PDF ビューアで「無効にする」をクリックしてから、Adobe PDF プラグインで「有効にする」をクリックします。
    ![chrome-pdf-viewer](/help/forms/using/assets/chrome-image.png)
-   詳しくは、Googleによる[Adobe PDF プラグイン ](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)のドキュメントを参照してください。
+   詳しくは、Googleによる[Adobe PDF プラグイン &#x200B;](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)のドキュメントを参照してください。
 
 >[!NOTE]
 > 

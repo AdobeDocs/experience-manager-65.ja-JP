@@ -30,7 +30,7 @@ ht-degree: 0%
 
 AEM Communitiesのメッセージ機能では、ログインしているサイト訪問者（メンバー）が、サイトにログインしたときにアクセスできるメッセージを相互に送信できます。
 
-[ コミュニティサイト作成中](/help/communities/sites-console.md)にチェックボックスをオンにすると、コミュニティサイトに対するメッセージが有効になります。
+[&#x200B; コミュニティサイト作成中](/help/communities/sites-console.md)にチェックボックスをオンにすると、コミュニティサイトに対するメッセージが有効になります。
 
 このページには、デフォルト設定と可能な調整に関する情報が表示されます。
 
@@ -44,7 +44,7 @@ AEM Communitiesのメッセージ機能では、ログインしているサイ�
 
 ### コミュニティメッセージングオペレーションサービス {#community-messaging-operations-service}
 
-以下に示すように、[ サイト作成ウィザード ](/help/communities/sites-console.md)で作成されたサイトに対するサービスの設定が存在します。 設定は、設定の横にある鉛筆アイコンを選択して表示または編集できます。
+以下に示すように、[&#x200B; サイト作成ウィザード &#x200B;](/help/communities/sites-console.md)で作成されたサイトに対するサービスの設定が存在します。 設定は、設定の横にある鉛筆アイコンを選択して表示または編集できます。
 
 ![messaging-operations](assets/messaging-operations.png)
 
@@ -126,7 +126,7 @@ AEM Communitiesのメッセージ機能では、ログインしているサイ�
 
 * **サービスセレクター**
 
-  （*必須*） サービスが呼び出される絶対パス （エンドポイント） （仮想リソース）。 選択したパスのルートは、OSGi設定[`Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)の&#x200B;*実行パス*&#x200B;構成設定（`/bin/`、`/apps/`、および`/services/`など）に含まれている必要があります。 サイトのメッセージ機能にこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[ メッセージ機能](/help/communities/configure-messaging.md)を参照）。
+  （*必須*） サービスが呼び出される絶対パス （エンドポイント） （仮想リソース）。 選択したパスのルートは、OSGi設定[`Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)の&#x200B;*実行パス*&#x200B;構成設定（`/bin/`、`/apps/`、および`/services/`など）に含まれている必要があります。 サイトのメッセージ機能にこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[&#x200B; メッセージ機能](/help/communities/configure-messaging.md)を参照）。
 
   デフォルトは&#x200B;*/bin/messaging*&#x200B;です。
 
@@ -157,7 +157,7 @@ AEM Communitiesのメッセージ機能では、ログインしているサイ�
 
 ## トラブルシューティング {#troubleshooting}
 
-問題をトラブルシューティングする方法の1つは、[ ログ内のメッセージのデバッグを有効にすることです。](/help/sites-administering/troubleshooting.md)
+問題をトラブルシューティングする方法の1つは、[&#x200B; ログ内のメッセージのデバッグを有効にすることです。](/help/sites-administering/troubleshooting.md)
 
 [個別サービスのロガーとライター](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services)も参照してください。
 

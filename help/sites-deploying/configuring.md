@@ -189,7 +189,7 @@ AEM 内のユーザー管理（アクセス権の割り当てを含む）につ�
 
 Dispatcher は、Adobe Experience Manager のキャッシュ、ロードバランシングまたはその両方を行うツールです。 エンタープライズクラスの web サーバーで使用できます。
 
-詳しくは、[Dispatcher ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
+詳しくは、[Dispatcher &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
 
 ### AEM LiveCycle Connector の設定 {#configuring-aem-livecycle-connector}
 

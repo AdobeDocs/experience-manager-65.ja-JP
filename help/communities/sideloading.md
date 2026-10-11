@@ -39,7 +39,7 @@ SCF コンポーネントを動的に追加する手順は次のとおりです�
 
 1. [コンポーネントをDOMに追加する](#dynamically-add-component-to-dom)
 
-1. [次の2つの方法のいずれかを使用してコンポーネント ](#sideload-by-invoking-scf)を読み込みます。
+1. [次の2つの方法のいずれかを使用してコンポーネント &#x200B;](#sideload-by-invoking-scf)を読み込みます。
 
 * [動的インクルージョン](#dynamic-inclusion)
   * 動的に追加されたすべてのコンポーネントをブーストラップする
@@ -48,7 +48,7 @@ SCF コンポーネントを動的に追加する手順は次のとおりです�
 
 >[!NOTE]
 >
->[既存でないリソース ](scf.md#add-or-include-a-communities-component)のサイドロードはサポートされていません。
+>[既存でないリソース &#x200B;](scf.md#add-or-include-a-communities-component)のサイドロードはサポートされていません。
 
 ## DOMにコンポーネントを動的に追加 {#dynamically-add-component-to-dom}
 

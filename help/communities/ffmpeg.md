@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ## 概要 {#overview}
 
-FFmpegは、オーディオおよびビデオを変換およびストリーミングするためのソリューションであり、インストール時に、[ ビデオアセット ](../../help/sites-authoring/default-components-foundation.md#video)の適切なトランスコードに使用されます。
+FFmpegは、オーディオおよびビデオを変換およびストリーミングするためのソリューションであり、インストール時に、[&#x200B; ビデオアセット &#x200B;](../../help/sites-authoring/default-components-foundation.md#video)の適切なトランスコードに使用されます。
 
 ## FFmpegのインストール {#installing-ffmpeg}
 

@@ -81,7 +81,7 @@ css.txtのコンテンツをに設定してみてください
 
 ### SCF Clientlibsを埋め込む {#embed-scf-clientlibs}
 
-`clientlibs` ノードの「**プロパティ**」タブで、複数値の文字列プロパティ **埋め込み**&#x200B;を入力します。 これには、SCF コンポーネント ](/help/communities/client-customize.md#clientlibs-for-scf)に必要な[ クライアントサイドライブラリ（clientlibs）が埋め込まれます。 このチュートリアルでは、Communities コンポーネントに必要な多くのクライアントライブラリが追加されています。
+`clientlibs` ノードの「**プロパティ**」タブで、複数値の文字列プロパティ **埋め込み**&#x200B;を入力します。 これには、SCF コンポーネント [&#128279;](/help/communities/client-customize.md#clientlibs-for-scf)に必要な クライアントサイドライブラリ（clientlibs）が埋め込まれます。 このチュートリアルでは、Communities コンポーネントに必要な多くのクライアントライブラリが追加されています。
 
 これは、利便性と、各ページに対してダウンロードされるクライアントライブラリのサイズや速度に関する考慮事項があるため、実稼動サイトで使用する目的のアプローチである場合とそうでない場合があります。
 
@@ -97,7 +97,7 @@ css.txtのコンテンツをに設定してみてください
 * 値：**`cq.social.scf`**
 
   * ダイアログがポップアップ表示され，
-    各エントリの後で**`+`**&#x200B;をクリックして、次のclientlib カテゴリを追加します。
+    各エントリの後で&#x200B;**`+`**&#x200B;をクリックして、次のclientlib カテゴリを追加します。
 
     * **`cq.ckeditor`**
     * **`cq.social.author.hbs.comments`**
@@ -156,17 +156,17 @@ include ステートメントは、`html` スクリプトの`head` セクショ�
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![ コミュニティプレイ ](assets/community-play.png)
+![&#x200B; コミュニティプレイ &#x200B;](assets/community-play.png)
 
 ### これまでの作業を保存する {#saving-your-work-so-far}
 
 この時点で、ミニマリストのサンドボックスが存在します。 パッケージとして保存する価値があるかもしれませんが、再生中にリポジトリが破損し、やり直したい場合は、サーバーをオフにすることができます。 次に、crx-quickstart/ フォルダーの名前を変更または削除し、サーバーの電源を入れ、この保存されたパッケージをアップロードしてインストールします。これらの最も基本的な手順を繰り返す必要はありません。
 
-このパッケージは、[ サンプルページの作成](/help/communities/create-sample-page.md) チュートリアルに存在します。このチュートリアルは、ジャンプして再生を開始するのを待つことができないユーザー向けです。
+このパッケージは、[&#x200B; サンプルページの作成](/help/communities/create-sample-page.md) チュートリアルに存在します。このチュートリアルは、ジャンプして再生を開始するのを待つことができないユーザー向けです。
 
 パッケージを作成するには：
 
-* CRXDE Liteから、[ パッケージアイコン ](https://localhost:4502/crx/packmgr/)をクリックします
+* CRXDE Liteから、[&#x200B; パッケージアイコン &#x200B;](https://localhost:4502/crx/packmgr/)をクリックします
 * 「**パッケージを作成**」をクリックします
 
   * パッケージ名：an-scf-sandbox-minimal-pkg

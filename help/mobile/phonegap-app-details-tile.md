@@ -65,7 +65,7 @@ Apple App StoreやGoogle Play Storeなどの各ベンダーアプリケーショ
 
 >[!NOTE]
 >
->**`Manage App`** タイルについて理解できたら、[ アプリのメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照して、メタデータを表示および編集します。
+>**`Manage App`** タイルについて理解できたら、[&#x200B; アプリのメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照して、メタデータを表示および編集します。
 
 #### 共通メタデータ {#common-metadata}
 
@@ -147,7 +147,7 @@ Content Update Server URL プロパティは、直接またはDispatcherまた�
 
 >[!NOTE]
 >
->スクリーンショットを追加および削除するには、[ アプリメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照してください。
+>スクリーンショットを追加および削除するには、[&#x200B; アプリメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照してください。
 
 ### 「認証」タブ {#the-authentication-tab}
 

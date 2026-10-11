@@ -94,7 +94,7 @@ _Experience Manager Development Tools for Eclipse_&#x200B;は、AEMの視点を�
 
 ## サンプルのマルチモジュールプロジェクト {#sample-multi-module-project}
 
-_Experience Manager Developer Tools for Eclipse_&#x200B;には、Eclipseでのプロジェクト設定を迅速に行うためのマルチモジュールプロジェクトのサンプルが付属しています。 また、[AEM プロジェクトアーキタイプ ](https://github.com/adobe/aem-project-archetype)を活用して、いくつかのAEM機能のベストプラクティスガイドとしても役立ちます。
+_Experience Manager Developer Tools for Eclipse_&#x200B;には、Eclipseでのプロジェクト設定を迅速に行うためのマルチモジュールプロジェクトのサンプルが付属しています。 また、[AEM プロジェクトアーキタイプ &#x200B;](https://github.com/adobe/aem-project-archetype)を活用して、いくつかのAEM機能のベストプラクティスガイドとしても役立ちます。
 
 サンプルプロジェクトを作成する手順は次のとおりです。
 
@@ -137,7 +137,7 @@ _Experience Manager Developer Tools for Eclipse_&#x200B;には、Eclipseでの�
 
    >[!TIP]
    >
-   >ローカル AEM SDKで実行中のプロジェクトのデバッグについて詳しくは、[AEM SDKのリモートデバッグに関するドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)を参照してください。
+   >ローカル AEM SDKで実行中のプロジェクトのデバッグについて詳しくは、[AEM SDKのリモートデバッグに関するドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)を参照してください。
 
 1. 「**終了**」をクリックします。
 
@@ -151,7 +151,7 @@ _Experience Manager Developer Tools for Eclipse_&#x200B;には、Eclipseでの�
 
 **新規プロジェクト**&#x200B;機能を使用して、基本的なプロジェクト構造を作成します。
 
-1. 次の手順に従って、[ サンプルマルチモジュールプロジェクト、](#sample-multi-module-project)を作成します。このプロジェクトでは、基本的なプロジェクト構造を作成し、関心を健全に分離します。
+1. 次の手順に従って、[&#x200B; サンプルマルチモジュールプロジェクト、](#sample-multi-module-project)を作成します。このプロジェクトでは、基本的なプロジェクト構造を作成し、関心を健全に分離します。
 
    * `PROJECT.ui.apps`：`/apps` および `/etc` のコンテンツ用
    * `PROJECT.ui.content`：`/content` の作成済みコンテンツ用

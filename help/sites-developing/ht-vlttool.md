@@ -811,7 +811,7 @@ $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
 
 ### サービスのステータスの表示 {#displaying-the-service-status}
 
-`status` コマンドを使用して、実行中の同期サービスに関する情報を表示できます。 ``
+`status` コマンドを使用して、実行中の同期サービスに関する情報を表示できます。 &grave;&grave;
 
 ```shell
 $ vlt sync status --uri http://localhost:4502/crx

@@ -43,9 +43,9 @@ ht-degree: 3%
 
 ページ上の所定の位置にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/essentials-file-library.md#essentials-for-client-side)が含まれている場合、`File Library` コンポーネントが表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/essentials-file-library.md#essentials-for-client-side)が含まれている場合、`File Library` コンポーネントが表示されます。
 
 ![file-library1](assets/file-library1.png)
 
@@ -175,6 +175,6 @@ ht-degree: 3%
 
 詳しくは、開発者向けの[File Library Essentials](/help/communities/essentials-file-library.md) ページを参照してください。
 
-投稿されたトピックとコメントの管理については、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+投稿されたトピックとコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
-投稿されたトピックやコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
+投稿されたトピックやコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。

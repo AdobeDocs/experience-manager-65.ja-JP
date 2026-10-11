@@ -31,9 +31,9 @@ ht-degree: 3%
 
 作成者モードのページに`Rating` コンポーネントを追加するには、コンポーネント `Communities / Rating`を見つけて、メンバーが評価する機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](rating-basics.md#essentials-for-client-side)が含まれている場合、`Rating` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](rating-basics.md#essentials-for-client-side)が含まれている場合、`Rating` コンポーネントはこのように表示されます。
 
 ![評価](assets/rating.png)
 

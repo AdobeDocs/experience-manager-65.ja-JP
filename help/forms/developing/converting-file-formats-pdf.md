@@ -766,7 +766,7 @@ PDF の生成サービスで、以前にリストされたファイルのいず�
 
 新しいネイティブアプリケーションにファイルをダイレクトする場合は、そのアプリケーション用のスクリプト XML ファイルを作成する必要があります。 PDF 生成サービスと既にサポートされているネイティブアプリケーションとのやり取りを変更する場合は、そのアプリケーションのスクリプトを変更する必要があります。
 
-スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。 この情報を含むファイルは `appmon.`[アプリ名]`` `.script.`[ロケール]`.xml`です。 例えば appmon.notepad.script.en_US.xml です。
+スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。 この情報を含むファイルは `appmon.`[アプリ名]&grave;&grave; `.script.`[ロケール]`.xml`です。 例えば appmon.notepad.script.en_US.xml です。
 
 #### スクリプトが実行する必要があるステップの識別 {#identifying-steps-the-script-must-execute}
 
@@ -874,7 +874,7 @@ Microsoft Spy++ を使用して、ネイティブアプリケーションのウ�
 
 >[!NOTE]
 >
->native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。 この仕様については、[ ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
+>native2pdfconfig.xml 設定ファイルで指定された一般のアプリケーションには、プライマリダイアログ XML ファイルが含まれていません。 この仕様については、[&#x200B; ネイティブファイル形式に対するサポートの追加または変更](converting-file-formats-pdf.md#adding-or-modifying-support-for-a-native-file-format)のセクションで説明します。
 
 `window` 要素で子として表示される `windowList` 要素に順序を付けます。 （[window 要素と windowList 要素の順序](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照してください。）
 

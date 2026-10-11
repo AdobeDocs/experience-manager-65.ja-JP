@@ -35,7 +35,7 @@ ht-degree: 6%
 
 ## トピックと動詞 {#topics-and-verbs}
 
-[ カレンダーコンポーネント](calendar-basics-for-developers.md)
+[&#x200B; カレンダーコンポーネント](calendar-basics-for-developers.md)
 SocialEvent `topic`= com/adobe/cq/social/calendar
 
 | **動詞** | **説明** |
@@ -45,7 +45,7 @@ SocialEvent `topic`= com/adobe/cq/social/calendar
 | 更新 | メンバーのカレンダーイベントまたはコメントが編集されます |
 | 削除 | メンバーのカレンダーイベントまたはコメントが削除されます |
 
-[ コメントコンポーネント](essentials-comments.md)
+[&#x200B; コメントコンポーネント](essentials-comments.md)
 SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **動詞** | **説明** |
@@ -55,7 +55,7 @@ SocialEvent `topic`= com/adobe/cq/social/comment
 | 更新 | メンバーのコメントが編集されました |
 | 削除 | メンバーのコメントが削除されました |
 
-[ ファイルライブラリコンポーネント](essentials-file-library.md)
+[&#x200B; ファイルライブラリコンポーネント](essentials-file-library.md)
 SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **動詞** | **説明** |
@@ -65,7 +65,7 @@ SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 | 更新 | メンバーはフォルダーまたはファイルを更新します |
 | 削除 | メンバーはフォルダーまたはファイルを削除します |
 
-[ フォーラムコンポーネント](essentials-forum.md)
+[&#x200B; フォーラムコンポーネント](essentials-forum.md)
 SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **動詞** | **説明** |
@@ -75,7 +75,7 @@ SocialEvent `topic`= com/adobe/cq/social/forum
 | 更新 | メンバーのフォーラムのトピックまたは返信が編集されています |
 | 削除 | メンバーのフォーラム トピックまたは返信が削除されました |
 
-[ ジャーナルコンポーネント](blog-developer-basics.md)
+[&#x200B; ジャーナルコンポーネント](blog-developer-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **説明** |
@@ -97,7 +97,7 @@ SocialEvent `topic` = com/adobe/cq/social/qna
 | 選択解除 | メンバーの回答が選択解除されました |
 | 削除 | メンバーのQnAの質問または回答が削除されます |
 
-[ レビューコンポーネント](reviews-basics.md)
+[&#x200B; レビューコンポーネント](reviews-basics.md)
 SocialEvent `topic`= com/adobe/cq/social/review
 
 | **動詞** | **説明** |
@@ -136,7 +136,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
-カスタムコンポーネントの場合、`topic`に対して発生するコンポーネントのイベントを`actions`として記録するには、[SocialEvent抽象クラス ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張する必要があります。
+カスタムコンポーネントの場合、`topic`に対して発生するコンポーネントのイベントを`actions`として記録するには、[SocialEvent抽象クラス &#x200B;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張する必要があります。
 
 カスタムイベントはメソッド `getVerb()`を上書きして、各`action`に適切な`verb`を返します。 アクションに対して返される`verb`は、一般的に使用される1つ（例：`POST`）またはコンポーネントに特化した1つ（例：`ADD RATING`）です。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;関係があります。
 
@@ -253,7 +253,7 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 
 ### EventListenerの疑似コード {#pseudo-code-for-eventlistener}
 
-[最新の機能パック ](deploy-communities.md#latestfeaturepack)が必要です。
+[最新の機能パック &#x200B;](deploy-communities.md#latestfeaturepack)が必要です。
 
 ```java
 package my.company.comments;

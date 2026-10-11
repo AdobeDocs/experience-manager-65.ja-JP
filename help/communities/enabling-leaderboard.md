@@ -30,11 +30,11 @@ ht-degree: 4%
 
 `Leaderboard` コンポーネントは、獲得したポイント（基本スコアリング）または専門知識（高度なスコアリング）に基づいてメンバーをランク付けすることで、メンバーがコミュニティ内でどのように操作しているのかを把握するのに役立ちます。
 
-ページにリーダーボードコンポーネントを含める前に、[ コミュニティのスコアリングとバッジ ](/help/communities/implementing-scoring.md)を設定する必要があります。
+ページにリーダーボードコンポーネントを含める前に、[&#x200B; コミュニティのスコアリングとバッジ &#x200B;](/help/communities/implementing-scoring.md)を設定する必要があります。
 
 この節では、次の内容について説明します。
 
-* `Leaderboard` コンポーネントを[ コミュニティサイト ](/help/communities/overview.md#community-sites)に追加しています。
+* `Leaderboard` コンポーネントを[&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#community-sites)に追加しています。
 * `Leaderboard` コンポーネントの構成設定。
 
 ### ページへのリーダーボードの追加 {#adding-a-leaderboard-to-a-page}
@@ -45,11 +45,11 @@ ht-degree: 4%
 
 ページ上の所定の位置にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
 最初にコミュニティサイトのページに配置した場合、コンポーネントは次のように表示されます。
 
-![ リーダーボード ](assets/leaderboard.png)
+![&#x200B; リーダーボード &#x200B;](assets/leaderboard.png)
 
 ### リーダーボードの設定 {#configuring-leaderboard}
 
@@ -125,7 +125,7 @@ ht-degree: 4%
   * バッジルール = `/libs/settings/community/badging/rules//reference-badging`
   * 表示制限= `10`
 
-![参加者 – リーダーボード ](assets/participants-leaderboard.png)
+![参加者 – リーダーボード &#x200B;](assets/participants-leaderboard.png)
 
 ### 例：エキスパートリーダーボード {#example-experts-leaderboard}
 
@@ -154,4 +154,4 @@ ht-degree: 4%
 
 詳細については、開発者向けの[Leaderboard Essentials](/help/communities/leaderboard.md) ページを参照してください。
 
-ルールを作成する方法については、管理者向けの[ コミュニティのスコアリングとバッジ ](/help/communities/implementing-scoring.md) ページを参照してください。
+ルールを作成する方法については、管理者向けの[&#x200B; コミュニティのスコアリングとバッジ &#x200B;](/help/communities/implementing-scoring.md) ページを参照してください。

@@ -48,7 +48,7 @@ AEM Mobileを使用する前に、この基本ガイドの手順に従う前に�
 
 ## 作成者向けクイックリンク {#quicklinks-for-authors}
 
-作成者の役割と責任について詳しくは、[AEMでのAdobe PhoneGap Enterpriseのオーサリング ](/help/mobile/phonegap.md)を参照してください。
+作成者の役割と責任について詳しくは、[AEMでのAdobe PhoneGap Enterpriseのオーサリング &#x200B;](/help/mobile/phonegap.md)を参照してください。
 
 ## 開発者向けQuickLinks {#quicklinks-for-developers}
 

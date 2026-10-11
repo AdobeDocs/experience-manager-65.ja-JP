@@ -36,14 +36,14 @@ ht-degree: 3%
 
 MSRPで設定されたデプロイメントに新しいCommunities機能パックをインストールする場合、次のことが必要になります。
 
-1. [最新の機能パック ](/help/communities/deploy-communities.md#latestfeaturepack)をインストールします。
-1. 最新の[Solr設定ファイル ](/help/communities/msrp.md#upgrading)をインストールします。
+1. [最新の機能パック &#x200B;](/help/communities/deploy-communities.md#latestfeaturepack)をインストールします。
+1. 最新の[Solr設定ファイル &#x200B;](/help/communities/msrp.md#upgrading)をインストールします。
 1. MSRPのインデックス再作成
-セクション [MSRP インデックス再作成ツール ](/help/communities/msrp.md#msrp-reindex-tool)を参照してください。
+セクション [MSRP インデックス再作成ツール &#x200B;](/help/communities/msrp.md#msrp-reindex-tool)を参照してください。
 
 ## AEM 6.0からのアップグレード {#upgrading-from-aem}
 
-既存のUGCを保持する必要がある場合、そのための手段は、デプロイメントがUGC [ オンプレミス ](#on-premise-storage)または[Adobe クラウド ](#adobe-cloud-storage)のどちらに保存されているかによって異なります。
+既存のUGCを保持する必要がある場合、そのための手段は、デプロイメントがUGC [&#x200B; オンプレミス &#x200B;](#on-premise-storage)または[Adobe クラウド &#x200B;](#adobe-cloud-storage)のどちらに保存されているかによって異なります。
 
 ### Adobe クラウドストレージ {#adobe-cloud-storage}
 
@@ -68,7 +68,7 @@ MSRPで設定されたデプロイメントに新しいCommunities機能パッ�
 
       * 「**保存**」を選択します
 
-    ![ ユーティリティ ](assets/utilities.png)
+    ![&#x200B; ユーティリティ &#x200B;](assets/utilities.png)
 
 ### オンプレミスストレージ {#on-premise-storage}
 
@@ -81,13 +81,13 @@ MSRPで設定されたデプロイメントに新しいCommunities機能パッ�
 
 AEM 6.0 ソーシャルコミュニティからAEM 6.3 コミュニティにアップグレードすると、多くのAPIが異なるパッケージに再編成されました。 コミュニティ機能のカスタマイズにIDEを使用する場合は、ほとんどの場合は簡単に解決できます。
 
-非推奨のSocialUtils パッケージについて詳しくは、[SocialUtils リファクタリング ](/help/communities/socialutils.md)を参照してください。
+非推奨のSocialUtils パッケージについて詳しくは、[SocialUtils リファクタリング &#x200B;](/help/communities/socialutils.md)を参照してください。
 
 [Maven for Communitiesの使用](/help/communities/maven.md)も参照してください。
 
 ### JSP コンポーネントテンプレートがありません {#no-jsp-component-templates}
 
-[ ソーシャルコンポーネントフレームワーク ](/help/communities/scf.md) （SCF）では、AEM 6.0以前に使用されていたJava Server Pages （JSP）の代わりに[HandlebarsJS](https://handlebarsjs.com/) （HBS）テンプレート言語が使用されています。
+[&#x200B; ソーシャルコンポーネントフレームワーク &#x200B;](/help/communities/scf.md) （SCF）では、AEM 6.0以前に使用されていたJava Server Pages （JSP）の代わりに[HandlebarsJS](https://handlebarsjs.com/) （HBS）テンプレート言語が使用されています。
 
 AEM 6.0では、JSP コンポーネントは新しいHBS フレームワークコンポーネントと同じ場所に配置され、HBS コンポーネントは通常「hbs」という名前のサブフォルダーに配置されていました。
 
@@ -105,6 +105,6 @@ AEM 6.1以降、JSP コンポーネントは完全に削除されました。 �
 
 **Gen 1**：大まかにCQ 5.4からAEM 5.6.0まで、これらは&#x200B;**collab** コンポーネントです。これらは、プラットフォーム間でUGCを同期する手段として、レプリケーションを使用してローカルリポジトリにUGCを保存します。 その他の違いとして、Java Server Pages （JSP）を使用した実装と、オーサー環境でのみオーサリングできるブログ機能があります。
 
-**Gen 2**: AEM 5.6.1からAEM 6.1まで、これは&#x200B;**collab**&#x200B;と&#x200B;**social** コンポーネントの組み合わせです。 AEM 6.0では新しい[ ソーシャルコンポーネントフレームワーク ](/help/communities/scf.md) （SCF）が導入され、AEM 6.2では[一般的なUGC ストア ](/help/communities/working-with-srp.md)が導入されました。UGCには[ ストレージリソースプロバイダー](/help/communities/srp.md) （SRP）を使用してアクセスします。
+**Gen 2**: AEM 5.6.1からAEM 6.1まで、これは&#x200B;**collab**&#x200B;と&#x200B;**social** コンポーネントの組み合わせです。 AEM 6.0では新しい[&#x200B; ソーシャルコンポーネントフレームワーク &#x200B;](/help/communities/scf.md) （SCF）が導入され、AEM 6.2では[一般的なUGC ストア &#x200B;](/help/communities/working-with-srp.md)が導入されました。UGCには[&#x200B; ストレージリソースプロバイダー](/help/communities/srp.md) （SRP）を使用してアクセスします。
 
 **Gen 3**: AEM 6.2以降では、**social**&#x200B;個のコンポーネントのみがSCF as Handlebars （HBS）コンポーネントとして実装され、UGCにSRPを選択する必要があります。

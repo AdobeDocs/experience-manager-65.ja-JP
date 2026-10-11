@@ -35,11 +35,11 @@ ht-degree: 3%
 
 ユーザーが好む機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](essentials-liking.md#essentials-for-client-side)が含まれている場合、`Liking` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](essentials-liking.md#essentials-for-client-side)が含まれている場合、`Liking` コンポーネントはこのように表示されます。
 
-![いいね – コンポーネント ](assets/liking-component.png)
+![いいね – コンポーネント &#x200B;](assets/liking-component.png)
 
 ## 「いいね！」の設定 {#configuring-liking}
 

@@ -42,7 +42,7 @@ HTML5 フォームで添付ファイルをアップロード、プレビュー�
    | multiSelect | trueまたはfalse (デフォルトではtrue) |
    | fileSizeLimit | MB 単位の数（デフォルトは 2 MB）。 例えば、5 を入力します。 |
    | buttonText | ポップアップウィンドウのボタンテキスト（デフォルトでは 「Attach」） |
-   | 同意 | 受け入れるファイルタイプのコンマ区切りリスト（「audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf」） |
+   | 同意 | 受け入れるファイルタイプのコンマ区切りリスト（「audio/&ast;, video/&ast;, image/&ast;, text/&ast;, .pdf」） |
 
    次に例を示します。
 

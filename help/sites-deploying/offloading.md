@@ -217,7 +217,7 @@ Web コンソールまたはsling:OsgiConfig ノードを使用して、org.apac
 | ジョブトピック | サービス PID | 説明 |
 |---|---|---|
 | ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling と共にインストールされます。 後方互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
-| com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
+| com/day/cq/replication/job/&ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
 
 <!--
 | com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
@@ -298,7 +298,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### リバースエージェントの作成 {#creating-the-reverse-agent}
 
-1. 作成者に&#x200B;**リバースレプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント ](/help/sites-deploying/replication.md)の[ ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は命名規則に従う必要があります。
+1. 作成者に&#x200B;**リバースレプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント [&#128279;](/help/sites-deploying/replication.md)の ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は命名規則に従う必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
@@ -311,7 +311,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### アウトボックスエージェントの作成 {#creating-the-outbox-agent}
 
-1. ワーカーインスタンス上に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント ](/help/sites-deploying/replication.md)の[ ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は `offloading_outbox` にする必要があります。
+1. ワーカーインスタンス上に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント [&#128279;](/help/sites-deploying/replication.md)の ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は `offloading_outbox` にする必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |

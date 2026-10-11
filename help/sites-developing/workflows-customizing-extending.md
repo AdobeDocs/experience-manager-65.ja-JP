@@ -140,7 +140,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 
    >[!NOTE]
    >
-   >cq:editConfig ノードについて詳しくは、[ コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
+   >cq:editConfig ノードについて詳しくは、[&#x200B; コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
 
 1. `cq:EditConfig` ノードの下に、次のノードを追加します。
 
@@ -189,7 +189,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
    * 名前：`cq:editConfig`
    * 型：`cq:EditConfig`
 
-   cq:editConfig ノードについて詳しくは、[ コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
+   cq:editConfig ノードについて詳しくは、[&#x200B; コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 
@@ -224,7 +224,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
    * 名前：`cq:editConfig`
    * 型：`cq:EditConfig`
 
-   cq:editConfig ノードについて詳しくは、[ コンポーネントの編集動作の設定](/help/sites-developing/components-basics.md#edit-behavior)を参照してください。
+   cq:editConfig ノードについて詳しくは、[&#x200B; コンポーネントの編集動作の設定](/help/sites-developing/components-basics.md#edit-behavior)を参照してください。
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 

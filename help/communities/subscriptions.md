@@ -47,7 +47,7 @@ ht-degree: 1%
 
 **サブスクリプションを有効にしてフォローする**
 
-次のサブスクリプション *および*&#x200B;を有効にするには、コンポーネントを設定する必要があります。 サブスクリプションを許可する機能は、[ ブログ ](blog-feature.md)、[ フォーラム ](forum.md)、[QnA](working-with-qna.md)です。
+次のサブスクリプション *および*&#x200B;を有効にするには、コンポーネントを設定する必要があります。 サブスクリプションを許可する機能は、[&#x200B; ブログ &#x200B;](blog-feature.md)、[&#x200B; フォーラム &#x200B;](forum.md)、[QnA](working-with-qna.md)です。
 
 ## フォローからの購読 {#subscriptions-from-following}
 
@@ -71,6 +71,6 @@ ht-degree: 1%
 
 ![email-reply](assets/email-reply.png)
 
-返信が投稿されるまでの時間は、[ ポーリングインポーターの更新間隔](email.md#configure-polling-importer)によって制御されます。
+返信が投稿されるまでの時間は、[&#x200B; ポーリングインポーターの更新間隔](email.md#configure-polling-importer)によって制御されます。
 
 ![QA](assets/qa.png)

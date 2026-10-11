@@ -102,7 +102,7 @@ window.addEventListener("FormBridgeInitialized",
 
     * **widgetConfig：**&#x200B;フォーム内のデフォルトウィジェットをカスタムウィジェットでオーバーライドするのをユーザーに許可します。 設定は次のようにオーバーライドされます。
 
-      *formBridge.registerConfig （&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/}）*
+      *formBridge.registerConfig （&quot;widgetConfig&quot;:{/&ast;configuration&ast;/}）*
 
     * **pagingConfig：**&#x200B;最初のページのみがレンダリングされるデフォルト動作をオーバーライドするのをユーザーに許可します。 設定は次のようにオーバーライドされます。
 

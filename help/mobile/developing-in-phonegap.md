@@ -37,13 +37,13 @@ AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単�
 
 * [AEM Mobile Content Services：概要](/help/mobile/develop-content-as-a-service.md)
 
-  * コンテンツサービスとデータモデルを有効にするには、[ コンテンツサービスの管理](/help/mobile/developing-content-services.md)を参照してください
-  * モデルの作成については、[ モデルの開発](/help/mobile/administer-mobile-apps.md)を参照してください
-  * レンダリングと配信について詳しくは、[ コンテンツサービスのレンダリングと配信](/help/mobile/rendering-and-delivery.md)を参照してください。
+  * コンテンツサービスとデータモデルを有効にするには、[&#x200B; コンテンツサービスの管理](/help/mobile/developing-content-services.md)を参照してください
+  * モデルの作成については、[&#x200B; モデルの開発](/help/mobile/administer-mobile-apps.md)を参照してください
+  * レンダリングと配信について詳しくは、[&#x200B; コンテンツサービスのレンダリングと配信](/help/mobile/rendering-and-delivery.md)を参照してください。
 
 >[!NOTE]
 >
->AEM モバイルアプリケーションを任意のiOSまたはAndroid モバイルデバイスで実行するには、[AEM Verify Appを使用したモバイルクイックスタート ](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
+>AEM モバイルアプリケーションを任意のiOSまたはAndroid モバイルデバイスで実行するには、[AEM Verify Appを使用したモバイルクイックスタート &#x200B;](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
 
 ## 一歩先を行く {#getting-ahead}
 

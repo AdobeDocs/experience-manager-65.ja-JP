@@ -37,7 +37,7 @@ AEM のコンテンツフラグメントモデルは、[コンテンツフラグ
 
 >[!NOTE]
 >
->コンテンツフラグメントモデルとコンテンツフラグメントを操作する場合は、[ ベストプラクティス ](/help/assets/content-fragments/content-fragments.md#best-practices)に注意してください。
+>コンテンツフラグメントモデルとコンテンツフラグメントを操作する場合は、[&#x200B; ベストプラクティス &#x200B;](/help/assets/content-fragments/content-fragments.md#best-practices)に注意してください。
 
 ## コンテンツフラグメントモデルの作成 {#creating-a-content-fragment-model}
 

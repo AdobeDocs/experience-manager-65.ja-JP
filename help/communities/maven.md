@@ -41,7 +41,7 @@ Adobe Experience Manager（AEM）のコミュニティに関するドキュメ�
 >
 >最新のCommunities リリースを使用して最新情報を入手します。
 >
->最新バージョンを特定できる最新のリリース ](deploy-communities.md#latest-releases)の節を参照してください。[
+>最新バージョンを特定できる最新のリリース [&#128279;](deploy-communities.md#latest-releases)の節を参照してください。
 
 ## Maven依存関係の例
 
@@ -56,7 +56,7 @@ Adobe Experience Manager（AEM）のコミュニティに関するドキュメ�
 
 >[!NOTE]
 >
->最新のUber jar アーティファクトを特定できる[AEM Uber jar リポジトリ ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
+>最新のUber jar アーティファクトを特定できる[AEM Uber jar リポジトリ &#x200B;](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

@@ -33,7 +33,7 @@ ht-degree: 2%
 
 ソーシャルログインを含めるには、カスタム FacebookおよびTwitter アプリケーションを作成することが&#x200B;*必要です*。
 
-we-retail サンプルは、サンプルのFacebook アプリとTwitter アプリおよびクラウドサービスを提供していますが、[実稼動web サイト ](../../help/sites-administering/production-ready.md)では利用できません。
+we-retail サンプルは、サンプルのFacebook アプリとTwitter アプリおよびクラウドサービスを提供していますが、[実稼動web サイト &#x200B;](../../help/sites-administering/production-ready.md)では利用できません。
 
 必要な手順は次のとおりです。
 
@@ -45,13 +45,13 @@ we-retail サンプルは、サンプルのFacebook アプリとTwitter アプ�
 
    * Facebookでのログインをサポートするには：
 
-     * [Facebook アプリ ](#create-a-facebook-app)を作成します。
-     * [Facebook Connect クラウドサービス ](#create-a-facebook-connect-cloud-service)を作成して公開します。
+     * [Facebook アプリ &#x200B;](#create-a-facebook-app)を作成します。
+     * [Facebook Connect クラウドサービス &#x200B;](#create-a-facebook-connect-cloud-service)を作成して公開します。
 
    * Twitterでのログインをサポートするには：
 
-     * [Twitter アプリ ](#create-a-twitter-app)を作成します。
-     * [Twitter Connect クラウドサービス ](#create-a-twitter-connect-cloud-service)を作成して公開します。
+     * [Twitter アプリ &#x200B;](#create-a-twitter-app)を作成します。
+     * [Twitter Connect クラウドサービス &#x200B;](#create-a-twitter-connect-cloud-service)を作成して公開します。
 
 1. コミュニティサイトの&#x200B;[**ソーシャルログイン**&#x200B;を有効にする](#enable-social-login)。
 
@@ -99,7 +99,7 @@ Facebook アプリケーションを作成するには、[https://developers.fac
 >
 >開発の場合は、http://localhost:4503が機能します。
 
-アプリケーションを作成したら、**[!UICONTROL アプリ ID]**&#x200B;と&#x200B;**[!UICONTROL アプリ シークレット]**&#x200B;の設定を見つけます。 この情報は、[Facebook クラウドサービス ](#createafacebookcloudservice)の設定に必要です。
+アプリケーションを作成したら、**[!UICONTROL アプリ ID]**&#x200B;と&#x200B;**[!UICONTROL アプリ シークレット]**&#x200B;の設定を見つけます。 この情報は、[Facebook クラウドサービス &#x200B;](#createafacebookcloudservice)の設定に必要です。
 
 ### Facebook Connect Cloud Serviceの作成 {#create-a-facebook-connect-cloud-service}
 
@@ -128,7 +128,7 @@ Facebook アプリケーションを作成するには、[https://developers.fac
    * **[!UICONTROL Create Users]** オンにした場合、Facebook アカウントでログインすると、AEM ユーザーエントリが作成され、選択したユーザーグループにメンバーとして追加されます。  デフォルトはオンになっています（強くお勧めします）。
    * **[!UICONTROL ユーザーIDをマスク]**：選択解除のままにします。
    * **[!UICONTROL 範囲メール]**: ユーザーのメール IDをFacebookから取得する必要があります。
-   * **[!UICONTROL ユーザーグループに追加]**&#x200B;を選択して、ユーザーを追加するコミュニティサイトの1つ以上の[ メンバーグループ ](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html)を選択します。
+   * **[!UICONTROL ユーザーグループに追加]**&#x200B;を選択して、ユーザーを追加するコミュニティサイトの1つ以上の[&#x200B; メンバーグループ &#x200B;](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html)を選択します。
 
    >[!NOTE]
    >
@@ -146,14 +146,14 @@ AEM Communities プロバイダーは、[Adobe Granite OAuth Application and Pro
 このプロバイダーは、次の場所で編集する必要があります。
 
 * ユーザーによる更新を許可
-* 範囲](#adobe-granite-oauth-application-and-provider)内の[追加フィールドを追加します
+* 範囲[&#128279;](#adobe-granite-oauth-application-and-provider)内の追加フィールドを追加します
 
   * デフォルトで許可されているすべてのフィールドがデフォルトで含まれているわけではありません。
 
 編集が必要な場合は、各AEM パブリッシュインスタンスで次の操作を行います。
 
 1. 管理者権限でログインします。
-1. [Web コンソール ](../../help/sites-deploying/configuring-osgi.md)に移動します。 例：http://localhost:4503/system/console/configMgr
+1. [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)に移動します。 例：http://localhost:4503/system/console/configMgr
 1. AEM Communities Facebook OAuth プロバイダーを探します。
 1. 編集のために開く鉛筆アイコンを選択します。
 
@@ -233,7 +233,7 @@ Twitter アプリケーションを作成するには、最新の手順（[https
    >
    >開発の場合は、https://127.0.0.1/が機能します。
 
-1. アプリケーションを作成したら、**[!UICONTROL Consumer （API） Key]**&#x200B;と&#x200B;**[!UICONTROL Consumer （API） Secret]**&#x200B;を見つけます。 この情報は、[Twitter クラウドサービス ](#createatwittercloudservice)の設定に必要です。
+1. アプリケーションを作成したら、**[!UICONTROL Consumer （API） Key]**&#x200B;と&#x200B;**[!UICONTROL Consumer （API） Secret]**&#x200B;を見つけます。 この情報は、[Twitter クラウドサービス &#x200B;](#createatwittercloudservice)の設定に必要です。
 
 #### 権限 {#permissions}
 
@@ -293,7 +293,7 @@ Twitter アプリケーション管理の権限セクションで、次の操作
 
    * **[!UICONTROL ユーザーグループに追加]**
 
-     「ユーザーグループを追加」を選択して、ユーザーを追加するコミュニティサイトの1つ以上の[ メンバーグループ ](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html)を選択します。
+     「ユーザーグループを追加」を選択して、ユーザーを追加するコミュニティサイトの1つ以上の[&#x200B; メンバーグループ &#x200B;](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html)を選択します。
 
    >[!NOTE]
    >
@@ -311,7 +311,7 @@ AEM Communities設定は、[Adobe Granite OAuth Application and Provider](#adobe
 編集が必要な場合は、各AEM パブリッシュインスタンスで次の操作を行います。
 
 1. 管理者権限でログインします。
-1. [Web コンソール ](../../help/sites-deploying/configuring-osgi.md)に移動します。
+1. [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)に移動します。
 
    例：http://localhost:4503/system/console/configMgr
 
@@ -353,7 +353,7 @@ AEM Communities設定は、[Adobe Granite OAuth Application and Provider](#adobe
 
 ### AEM Communities Sites Console {#aem-communities-sites-console}
 
-クラウドサービスを設定すると、コミュニティサイト [作成](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation)または[管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties)中に、[ ユーザー管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT)設定サブパネルを使用して、コミュニティサイトの関連するソーシャルログイン設定に対してクラウドサービスを有効にすることができます。
+クラウドサービスを設定すると、コミュニティサイト [作成](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation)または[管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties)中に、[&#x200B; ユーザー管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT)設定サブパネルを使用して、コミュニティサイトの関連するソーシャルログイン設定に対してクラウドサービスを有効にすることができます。
 
 1. ソーシャルログイン設定を保存したサイト設定コンテキストを選択します。
 
@@ -388,7 +388,7 @@ AEM Communities設定は、[Adobe Granite OAuth Application and Provider](#adobe
 パブリッシュで認証ハンドラーを有効にするには、OSGi設定を開いて保存します。
 
 * 管理者権限でログインします。
-* [Web コンソール ](../../help/sites-deploying/configuring-osgi.md)に移動します。
+* [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)に移動します。
 例：http://localhost:4503/system/console/configMgr
 * `Adobe Granite OAuth Authentication Handler` を見つけます。
 * を選択して、編集する設定を開きます。
@@ -409,7 +409,7 @@ FacebookまたはTwitter用のクラウドサービスが作成されると、`A
 FacebookまたはTwitter アプリ用に作成されたインスタンスを見つけるには：
 
 1. 管理者権限でログインします。
-1. [Web コンソール ](../../help/sites-deploying/configuring-osgi.md)に移動します。
+1. [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)に移動します。
 
    例：http://localhost:4503/system/console/configMgr
 

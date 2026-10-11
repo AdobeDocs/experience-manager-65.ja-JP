@@ -147,7 +147,7 @@ AEM セカンダリノードの災害時復旧シナリオのためにこのフ�
    1. ノードにある clusterNode/revision.log ファイルを削除します。
    1. ノードに .lock がある場合は、それを削除します。
    1. ノードに repository/system.id がある場合は、それを削除します。
-   1. ノード上の&amp;ast;&amp;ast;/listener.properties ファイルが存在する場合は、そのファイルを削除します。
+   1. ノード上の&ast;&ast;/listener.properties ファイルが存在する場合は、そのファイルを削除します。
    1. クラスターノードごとに、repository/cluster_node.id を復元します。
 
 >[!NOTE]
@@ -177,7 +177,7 @@ AEM セカンダリノードの災害時復旧シナリオのためにこのフ�
    1. すべてのクラスターノードで clusterNode/revision.log ファイルを削除します。
    1. .lock がある場合は、すべてのクラスターノードでそれを削除します。
    1. repository/system.id がある場合は、すべてのクラスターノードでそれを削除します。
-   1. すべてのクラスターノード上のファイル &amp;ast;&amp;ast;/listener.propertiesが存在する場合は削除します。
+   1. すべてのクラスターノード上のファイル &ast;&ast;/listener.propertiesが存在する場合は削除します。
    1. クラスターノードごとに、repository/cluster_node.id を復元します。
 
 >[!NOTE]

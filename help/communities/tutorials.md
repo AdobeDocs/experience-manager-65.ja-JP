@@ -25,7 +25,7 @@ ht-degree: 14%
 ---
 # チュートリアル {#tutorials}
 
-以下は、Adobe Experience Manager（AEM） 6.1 Communities [ ソーシャルコンポーネントフレームワーク（SCF） ](scf.md)の学習と操作に役立つ例です。
+以下は、Adobe Experience Manager（AEM） 6.1 Communities [&#x200B; ソーシャルコンポーネントフレームワーク（SCF） &#x200B;](scf.md)の学習と操作に役立つ例です。
 
 ## クライアントサイドのカスタマイズ {#client-side-customization}
 
@@ -41,7 +41,7 @@ ht-degree: 14%
 
 ## サーバーサイドのカスタマイズ {#server-side-customization}
 
-[SCF サーバーサイドのカスタマイズ ](server-customize.md)も参照してください。
+[SCF サーバーサイドのカスタマイズ &#x200B;](server-customize.md)も参照してください。
 
 サンプルコードは、[Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで利用できます。
 
@@ -67,11 +67,11 @@ ht-degree: 14%
 
 ## デモユーザー {#demo-users}
 
-Geometrixx サンプルパッケージには、デモユーザーが含まれています。 多くの場合、訪問者（ログインしていない）とメンバー（ログイン）の間にエクスペリエンスの違いがあります。 また、Geometrixx サンプルパッケージがインストールされたままである限り、[ コミュニティコンポーネントガイド ](components-guide.md)を使用して探索する際に、これらのユーザーを使用してログイン状態をシミュレートできます。
+Geometrixx サンプルパッケージには、デモユーザーが含まれています。 多くの場合、訪問者（ログインしていない）とメンバー（ログイン）の間にエクスペリエンスの違いがあります。 また、Geometrixx サンプルパッケージがインストールされたままである限り、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)を使用して探索する際に、これらのユーザーを使用してログイン状態をシミュレートできます。
 
-デモユーザーの完全なリストについては、Railを使用して&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ > ユーザー]**&#x200B;に移動します。 または、クラシック UI [ セキュリティコンソール ](http://localhost:4502/useradmin)を使用して、ユーザーとグループを管理します。
+デモユーザーの完全なリストについては、Railを使用して&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ > ユーザー]**&#x200B;に移動します。 または、クラシック UI [&#x200B; セキュリティコンソール &#x200B;](http://localhost:4502/useradmin)を使用して、ユーザーとグループを管理します。
 
-[ コミュニティサイトが作成された場合](getting-started.md)は、その[ コミュニティユーザーグループ ](users.md)にデモユーザーを割り当てることができます。
+[&#x200B; コミュニティサイトが作成された場合](getting-started.md)は、その[&#x200B; コミュニティユーザーグループ &#x200B;](users.md)にデモユーザーを割り当てることができます。
 
 ***ユーザーid* / *パスワード***:
 

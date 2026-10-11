@@ -160,4 +160,4 @@ phonegap run <platform> --emulator
 
 ## 次の手順 {#the-next-steps}
 
-PhoneGap CLIを使用したアプリの開発について学習した後、[ デバイス機能へのアクセス ](/help/mobile/phonegap-access-device-features.md)を参照してください。
+PhoneGap CLIを使用したアプリの開発について学習した後、[&#x200B; デバイス機能へのアクセス &#x200B;](/help/mobile/phonegap-access-device-features.md)を参照してください。

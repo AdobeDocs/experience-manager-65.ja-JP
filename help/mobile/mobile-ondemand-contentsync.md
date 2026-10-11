@@ -79,9 +79,9 @@ AEMがインストールされている場合、管理者グループのメン�
 
 Day CQ Content Sync Manager サービスは、Content Syncへのアクセスを制御します。 このサービスを設定して、デフォルトでコンテンツ同期からダウンロードできるユーザーまたはグループを指定します。
 
-Web コンソール ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用してサービスを設定する[場合は、ユーザーまたはグループの名前をフォールバックキャッシュ承認可能プロパティの値として入力します。
+Web コンソール [&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用してサービスを設定する場合は、ユーザーまたはグループの名前をフォールバックキャッシュ承認可能プロパティの値として入力します。
 
-リポジトリ ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)で[構成している場合は、サービスに関する次の情報を使用します。
+リポジトリ [&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)で構成している場合は、サービスに関する次の情報を使用します。
 
 * PID: com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * プロパティ名：contentsync.fallback.authorizable
@@ -172,7 +172,7 @@ Web コンソール ](/help/sites-deploying/configuring-osgi.md#osgi-configurati
 
 * `REWRITE_RELATIVE`: ファイル システム上のページ .html ファイルへの相対位置を持つパスを書き換えます。
 
-* `REWRITE_EXTERNAL`: AEM [Externalizer サービス ](/help/sites-developing/externalizer.md)を使用して、サーバー上のリソースを指すことでパスを書き換えます。
+* `REWRITE_EXTERNAL`: AEM [Externalizer サービス &#x200B;](/help/sites-developing/externalizer.md)を使用して、サーバー上のリソースを指すことでパスを書き換えます。
 
 **PathRewriterTransformerFactory**&#x200B;というAEM サービスを使用すると、書き換える特定のhtml属性を設定できます。 サービスはWeb コンソールで設定でき、`rewrite` ノードの各プロパティの設定があります：`clientlibs`、`images`、および`links`。
 
@@ -258,7 +258,7 @@ Web コンソール ](/help/sites-deploying/configuring-osgi.md#osgi-configurati
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` – すべての更新ハンドラーが実装する必要があるインターフェイス
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - Slingを使用したリソースのレンダリングを簡略化する抽象クラス
 
-クラスをOSGi コンポーネントファクトリとして登録し、バンドルのOSGi コンテナにデプロイします。 これは、[Maven SCR プラグイン ](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)を使用して、JavaDoc タグまたは注釈を使用して行うことができます。 次の例は、JavaDoc バージョンを示しています。
+クラスをOSGi コンポーネントファクトリとして登録し、バンドルのOSGi コンテナにデプロイします。 これは、[Maven SCR プラグイン &#x200B;](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)を使用して、JavaDoc タグまたは注釈を使用して行うことができます。 次の例は、JavaDoc バージョンを示しています。
 
 ```java
 /*

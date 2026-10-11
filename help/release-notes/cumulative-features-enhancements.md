@@ -207,7 +207,7 @@ AEM 6.5 Forms on JEE 環境に最新ソフトウェアをインストールし�
 
   これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 
-* **Dynamic Media _スナップショット_**では、テスト画像または Dynamic Media の URL を使用して、画像の修飾子とスマートイメージングの最適化（WebP または AVIF 出力、帯域幅対応の圧縮、デバイスピクセル比のスケーリングなど）をプレビューできます。 その後、各設定が画質とファイルサイズにどのように影響するかを即座に比較できます。
+* **Dynamic Media _スナップショット_**&#x200B;では、テスト画像または Dynamic Media の URL を使用して、画像の修飾子とスマートイメージングの最適化（WebP または AVIF 出力、帯域幅対応の圧縮、デバイスピクセル比のスケーリングなど）をプレビューできます。 その後、各設定が画質とファイルサイズにどのように影響するかを即座に比較できます。
 詳しくは、[Dynamic Media スナップショット](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot)を参照してください。
 * **Dynamic Media での DASH ストリーミング** - CMAF が有効な Dynamic Media ビデオ配信で、アダプティブストリーミング用の新しいプロトコル（DASH - HTTP での動的アダプティブストリーミング）が開始されました。 すべての地域で利用可能です。
 * **Experience Manager SitesとコンテンツフラグメントをAssets Next-Generation Dynamic Mediaと統合** - ユーザーは、Experience Manager Sites 6.5でクラウドホスティングされたアセットを使用できるようになりました。 オンプレミスまたはManaged Servicesインスタンスでアセットをオーサリングし、配信することができます。

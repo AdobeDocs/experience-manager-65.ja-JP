@@ -35,16 +35,16 @@ AEM Communitiesの使用は、Java Server Pagesに大きく依存することか
 
 ### コード {#code}
 
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - UGCがJCR （JSRP）に保存されている場合にのみ機能するアプリケーションの書き込みを避ける方法。
-* [SocialUtils リファクタリング ](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - UGCがJCR （JSRP）に保存されている場合にのみ機能するアプリケーションの書き込みを避ける方法。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。
 * [命名規則](naming-conventions.md) - カスタム Java クラスの命名規則。
 
 ### スクリプト {#scripts}
 
 * [Sideloading Communities Components](sideloading.md) - ページの読み込み後にコンポーネントを動的に追加する方法。
-* [ リッチテキストエディターの基本](rte.md) - コンテンツを投稿するためにメンバーに提供されるリッチテキスト UIをカスタマイズする方法。
+* [&#x200B; リッチテキストエディターの基本](rte.md) - コンテンツを投稿するためにメンバーに提供されるリッチテキスト UIをカスタマイズする方法。
 
 ### IDE {#ide}
 
 * [Maven for Communitiesの使用](maven.md) - Communities API jarを含める方法。
-* [SocialUtils リファクタリング ](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。
+* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。

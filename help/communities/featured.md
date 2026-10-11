@@ -52,9 +52,9 @@ ht-degree: 5%
 
 をクリックし、注目のコンテンツが表示されるページ上にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](essentials-featured.md#essentials-for-client-side)が含まれている場合、`Featured Content` コンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](essentials-featured.md#essentials-for-client-side)が含まれている場合、`Featured Content` コンポーネントは次のように表示されます。
 
 ![featuredcontent](assets/featuredcontent.png)
 
@@ -100,6 +100,6 @@ ht-degree: 5%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[おすすめコンテンツ ](essentials-featured.md) ページを参照してください。
+詳しくは、開発者向けの[おすすめコンテンツ &#x200B;](essentials-featured.md) ページを参照してください。
 
-おすすめのコンテンツとしてフラグを立てる方法については、[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+おすすめのコンテンツとしてフラグを立てる方法については、[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。

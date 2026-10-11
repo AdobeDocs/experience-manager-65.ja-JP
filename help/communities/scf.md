@@ -36,7 +36,7 @@ ht-degree: 1%
 * **アクセス可能**: HTTP APIは、モバイルアプリを含むあらゆるクライアントからの投稿をサポートしています。
 * **ポータブル**：任意のテクノロジ上に構築された任意のWeb ページを統合または埋め込みます。
 
-インタラクティブな[ コミュニティコンポーネントガイド ](components-guide.md)を使用して、オーサーインスタンスまたはパブリッシュインスタンスを調査します。
+インタラクティブな[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)を使用して、オーサーインスタンスまたはパブリッシュインスタンスを調査します。
 
 ## 概要 {#overview}
 
@@ -61,7 +61,7 @@ SocialComponent APIは、クライアントがビューレイヤーまたはHTTP
 * ルックアンドフィールの場合：
   * JS テンプレートとCSSを変更します。
 * 「Look, Feel and UX」に関するページ：
-  * JS テンプレート、CSS、および[JavaScriptの拡張/オーバーライド ](client-customize.md#extending-javascript)を変更します。
+  * JS テンプレート、CSS、および[JavaScriptの拡張/オーバーライド &#x200B;](client-customize.md#extending-javascript)を変更します。
 * JS テンプレートまたはGET エンドポイントで使用できる情報を変更するには：
   * [SocialComponent](server-customize.md#socialcomponent-interface)を拡張します。
 * 運用中にカスタム処理を追加するには：
@@ -79,9 +79,9 @@ SocialComponent APIは、クライアントがビューレイヤーまたはHTTP
 
 Java™ APIは、簡単に継承またはサブクラス化できる抽象クラスとインターフェイスを提供します。
 
-主なクラスについては、[ サーバーサイドのカスタマイズ ](server-customize.md) ページで説明しています。
+主なクラスについては、[&#x200B; サーバーサイドのカスタマイズ &#x200B;](server-customize.md) ページで説明しています。
 
-UGCの操作について詳しくは、[ ストレージリソースプロバイダーの概要](srp.md)にアクセスしてください。
+UGCの操作について詳しくは、[&#x200B; ストレージリソースプロバイダーの概要](srp.md)にアクセスしてください。
 
 ### HTTP API {#http-api}
 
@@ -119,15 +119,15 @@ HTTP APIは、PhoneGap アプリ、ネイティブアプリ、その他の統合
 
 ### ストレージリソースプロバイダー（SRP） {#storage-resource-provider-srp}
 
-[ コミュニティコンテンツストア ](working-with-srp.md)に保存されているUGCの処理について詳しくは、次を参照してください。
+[&#x200B; コミュニティコンテンツストア &#x200B;](working-with-srp.md)に保存されているUGCの処理について詳しくは、次を参照してください。
 
-* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP API ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
 
 ### サーバーサイドのカスタマイズ {#server-side-customizations}
 
-サーバーサイドのCommunities コンポーネントのビジネスロジックと動作のカスタマイズについて詳しくは、[ サーバーサイドのカスタマイズ ](server-customize.md)を参照してください。
+サーバーサイドのCommunities コンポーネントのビジネスロジックと動作のカスタマイズについて詳しくは、[&#x200B; サーバーサイドのカスタマイズ &#x200B;](server-customize.md)を参照してください。
 
 ## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
 
@@ -151,7 +151,7 @@ HBS スクリプトはシンプルでロジックを使用せず、サーバー�
 
 ほとんどのCommunities コンポーネントは、Sling アドレス可能リソースとして&#x200B;*追加*&#x200B;されている必要があります。 一部のコミュニティコンポーネントは、UGCを記述する場所を動的に含めてカスタマイズできるように、テンプレート内に既存でないリソースとして&#x200B;*含まれる*&#x200B;を含めることができます。
 
-いずれの場合も、コンポーネントの[必要なクライアントライブラリ ](clientlibs.md)も存在する必要があります。
+いずれの場合も、コンポーネントの[必要なクライアントライブラリ &#x200B;](clientlibs.md)も存在する必要があります。
 
 **コンポーネントを追加**
 
@@ -161,7 +161,7 @@ HBS スクリプトはシンプルでロジックを使用せず、サーバー�
 
 **コンポーネントを含める**
 
-コンポーネントを含めるとは、スクリプト言語を使用するなど、テンプレート内の[ 「存在しない」リソース ](srp.md#for-non-existing-resources-ners) （JCR ノードなし）への参照を追加するプロセスを指します。
+コンポーネントを含めるとは、スクリプト言語を使用するなど、テンプレート内の[&#x200B; 「存在しない」リソース &#x200B;](srp.md#for-non-existing-resources-ners) （JCR ノードなし）への参照を追加するプロセスを指します。
 
 Adobe Experience Manager（AEM） 6.1では、コンポーネントが追加ではなく動的に含まれている場合、作成者&#x200B;*デザイン* モードでコンポーネントのプロパティを編集できます。
 
@@ -172,7 +172,7 @@ Adobe Experience Manager（AEM） 6.1では、コンポーネントが追加で�
 * [レビュー](reviews-basics.md)
 * [投票](essentials-voting.md)
 
-[ コミュニティコンポーネントガイド ](components-guide.md)では、追加されたコンポーネントを追加から追加に切り替えることができます。
+[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)では、追加されたコンポーネントを追加から追加に切り替えることができます。
 
 **Handlebars** テンプレート言語を使用する場合、resourceTypeを指定して[include ヘルパー](handlebars-helpers.md#include)を使用して、既存でないリソースが含まれます。
 
@@ -187,7 +187,7 @@ Adobe Experience Manager（AEM） 6.1では、コンポーネントが追加で�
 
 >[!NOTE]
 >
->ページにコンポーネントを動的に追加するには、テンプレートにコンポーネントを追加または含める代わりに、[ コンポーネントサイドローディング ](sideloading.md)を参照してください。
+>ページにコンポーネントを動的に追加するには、テンプレートにコンポーネントを追加または含める代わりに、[&#x200B; コンポーネントサイドローディング &#x200B;](sideloading.md)を参照してください。
 
 ### Handlebars Helpers {#handlebars-helpers}
 
@@ -211,7 +211,7 @@ CSS クラスを定義および使用する際に推奨される規則は次の�
 
 ### クライアントサイドのカスタマイズ {#client-side-customizations}
 
-クライアントサイドのCommunities コンポーネントの外観と動作をカスタマイズするには、[ クライアントサイドのカスタマイズ ](client-customize.md)を参照してください。これには、次の情報が含まれます。
+クライアントサイドのCommunities コンポーネントの外観と動作をカスタマイズするには、[&#x200B; クライアントサイドのカスタマイズ &#x200B;](client-customize.md)を参照してください。これには、次の情報が含まれます。
 
 * [オーバーレイ](client-customize.md#overlays)
 * [拡張子](client-customize.md#extensions)
@@ -224,8 +224,8 @@ CSS クラスを定義および使用する際に推奨される規則は次の�
 
 開発者向けの重要な情報については、[機能とコンポーネントの基本](essentials.md) セクションで説明しています。
 
-追加の開発者情報については、[ コーディングガイドライン ](code-guide.md) セクションを参照してください。
+追加の開発者情報については、[&#x200B; コーディングガイドライン &#x200B;](code-guide.md) セクションを参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 
-よくある懸念と既知の問題については、[ トラブルシューティング ](troubleshooting.md)の節を参照してください。
+よくある懸念と既知の問題については、[&#x200B; トラブルシューティング &#x200B;](troubleshooting.md)の節を参照してください。

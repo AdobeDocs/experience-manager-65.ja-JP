@@ -82,7 +82,7 @@ Experience Manager のアセットの詳細ページから、インタラクテ�
 
 1. 3D アセットのカードを選択します。
 
-   ![ インタラクティブ 3D プレビュー](/help/assets/assets-dm/3d-preview.png)
+   ![&#x200B; インタラクティブ 3D プレビュー](/help/assets/assets-dm/3d-preview.png)
    _アセット詳細表示ページでの 3D アセットのインタラクティブプレビュー_
 1. 3D アセットのアセット詳細表示ページで、次のいずれかの操作を行います。
 

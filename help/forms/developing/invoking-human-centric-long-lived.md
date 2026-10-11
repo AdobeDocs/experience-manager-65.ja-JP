@@ -845,7 +845,7 @@ localhost は ASP.NET プロジェクトをホストする web サーバーの�
 
 ## 人間中心の長期間有効なプロセスを呼び出す、Flexで構築されたクライアントアプリケーションの作成 {#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process}
 
-Flex で構築した *FirstAppSolution/PreLoanProcess* プロセスを呼び出すためのクライアントアプリケーションを作成できます。 このアプリケーションは、Remoting を使用して *FirstAppSolution/PreLoanProcess* プロセスを呼び出します。 （[ AEM Forms では廃止となった AEM Forms Remoting を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)を参照。）
+Flex で構築した *FirstAppSolution/PreLoanProcess* プロセスを呼び出すためのクライアントアプリケーションを作成できます。 このアプリケーションは、Remoting を使用して *FirstAppSolution/PreLoanProcess* プロセスを呼び出します。 （[&#x200B; AEM Forms では廃止となった AEM Forms Remoting を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)を参照。）
 
 次のイラストに、Flex で構築したクライアントアプリケーションでエンドユーザーからデータを収集する様子を示します。 データは XML データソースに配置され、プロセスに送信されます。
 

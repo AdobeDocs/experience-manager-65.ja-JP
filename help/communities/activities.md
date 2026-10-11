@@ -45,9 +45,9 @@ ht-degree: 1%
 
 アクティビティストリームが表示されるページ上にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/essentials-activities.md#essentials-for-client-side)が含まれている場合、`Activity Streams` コンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/essentials-activities.md#essentials-for-client-side)が含まれている場合、`Activity Streams` コンポーネントは次のように表示されます。
 
 ![activity-streams](assets/activity-component.png)
 
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 「**ユーザーアクティビティ**」タブで、表示するアクティビティを指定します。
 
-![ ユーザー活動](assets/user-activities.png)
+![&#x200B; ユーザー活動](assets/user-activities.png)
 
 * **アクティビティの最大数**
 
@@ -83,11 +83,11 @@ ht-degree: 1%
 
 ### 次のビュー {#following-view}
 
-以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を許可するのは、[ ブログ ](/help/communities/blog-feature.md)、[ フォーラム ](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[ カレンダー](/help/communities/calendar.md)、[ ファイルライブラリ ](/help/communities/file-library.md)、および[ コメント ](/help/communities/comments.md)です。
+以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を許可するのは、[&#x200B; ブログ &#x200B;](/help/communities/blog-feature.md)、[&#x200B; フォーラム &#x200B;](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[&#x200B; カレンダー](/help/communities/calendar.md)、[&#x200B; ファイルライブラリ &#x200B;](/help/communities/file-library.md)、および[&#x200B; コメント &#x200B;](/help/communities/comments.md)です。
 
 ![following-view](assets/following-activities.png)
 
-「**フォロー**」ボタンは、エントリをアクティビティ、[通知](/help/communities/notifications.md)、または[ サブスクリプション ](/help/communities/subscriptions.md)としてフォローする手段を提供します。 「**フォロー**」ボタンを選択するたびに、選択範囲のオンとオフを切り替えることができます。 `Email Subscriptions`の選択は、設定時にのみ存在します。
+「**フォロー**」ボタンは、エントリをアクティビティ、[通知](/help/communities/notifications.md)、または[&#x200B; サブスクリプション &#x200B;](/help/communities/subscriptions.md)としてフォローする手段を提供します。 「**フォロー**」ボタンを選択するたびに、選択範囲のオンとオフを切り替えることができます。 `Email Subscriptions`の選択は、設定時にのみ存在します。
 
 次のいずれかの方法を選択すると、ボタンのテキストが&#x200B;**次**&#x200B;に変わります。 便宜上、`Unfollow All`を選択してすべてのメソッドをオフにすることができます。
 

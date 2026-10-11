@@ -30,7 +30,7 @@ HTML5とPhoneGapを使用してモバイルアプリケーションを構築し�
 
 AEM Apps Control Centerを使用すれば、モバイルアプリケーションの構築とデプロイ、アプリケーションメタデータの作成と編集、モバイルアプリケーションを公開する前に、アプリケーションストアの提出プロセスを再検討することなく、新鮮で関連性の高いコンテンツを共同作業で頻繁に公開できます。また、アプリケーションのライフサイクルと使用状況を分析し、顧客のコンバージョンとブランドロイヤルティを向上させることができます。
 
-AEM Mobile アプリケーションを構築するには、「[ モバイルアプリケーションの構築](/help/mobile/building-app-mobile-phonegap.md)」ページ（「開発者」セクション）を参照してください。
+AEM Mobile アプリケーションを構築するには、「[&#x200B; モバイルアプリケーションの構築](/help/mobile/building-app-mobile-phonegap.md)」ページ（「開発者」セクション）を参照してください。
 
 環境を設定し、Control Centerを使い始めるには，
 
@@ -39,7 +39,7 @@ AEM Mobile アプリケーションを構築するには、「[ モバイルア�
 1. [Adobe PhoneGap Build の設定](/help/mobile/configure-phonegap-build-cloud.md)
 1. [Adobe Analytics Cloud サービスの設定](/help/mobile/configure-adobe-mobile-cloud-service.md)
 
-コンテンツサービス コンテンツサービスについて詳しくは、[ コンテンツサービスの管理](/help/mobile/developing-content-services.md)を参照してください。
+コンテンツサービス コンテンツサービスについて詳しくは、[&#x200B; コンテンツサービスの管理](/help/mobile/developing-content-services.md)を参照してください。
 
 >[!NOTE]
 >

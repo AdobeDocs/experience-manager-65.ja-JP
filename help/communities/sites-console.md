@@ -31,30 +31,30 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 * サイトの構築
 * サイト編集
 * サイト管理
-* [ ネストされたグループの作成と編集](/help/communities/groups.md) （サブコミュニティ）
+* [&#x200B; ネストされたグループの作成と編集](/help/communities/groups.md) （サブコミュニティ）
 
 オーサー環境でコミュニティサイトをすばやく作成する方法、オーサー環境とパブリッシュ環境からコミュニティグループを作成する方法については、[AEM Communitiesの概要](/help/communities/getting-started.md)を参照してください。
 
 >[!NOTE]
 >
->[ コミュニティサイト ](/help/communities/sites-console.md)、[ コミュニティサイトテンプレート ](/help/communities/sites.md)、[ コミュニティグループテンプレート ](/help/communities/tools-groups.md)および[ コミュニティ関数](/help/communities/functions.md)の作成に使用される主なコミュニティメニューは、オーサー環境でのみ使用できます。
+>[&#x200B; コミュニティサイト &#x200B;](/help/communities/sites-console.md)、[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)、[&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools-groups.md)および[&#x200B; コミュニティ関数](/help/communities/functions.md)の作成に使用される主なコミュニティメニューは、オーサー環境でのみ使用できます。
 
 ## 前提条件 {#prerequisites}
 
 コミュニティサイトを作成する前に、*次の操作が必要です*。
 
 * 1つ以上のパブリッシュインスタンスが実行されていることを確認します。
-* [ トンネルサービス ](/help/communities/deploy-communities.md#tunnel-service-on-author)を有効にして、メンバーとメンバーグループを管理します。
-* [ プライマリパブリッシャー](/help/communities/deploy-communities.md#primary-publisher)を特定します。
-* [ プライマリパブリッシャーポートがデフォルト（4503）でない場合は、レプリケーション ](/help/communities/deploy-communities.md#replication-agents-on-author)を設定します。
+* [&#x200B; トンネルサービス &#x200B;](/help/communities/deploy-communities.md#tunnel-service-on-author)を有効にして、メンバーとメンバーグループを管理します。
+* [&#x200B; プライマリパブリッシャー](/help/communities/deploy-communities.md#primary-publisher)を特定します。
+* [&#x200B; プライマリパブリッシャーポートがデフォルト（4503）でない場合は、レプリケーション &#x200B;](/help/communities/deploy-communities.md#replication-agents-on-author)を設定します。
 
 サイトが多くの機能をサポートする準備ができていることを確認するためのベストプラクティスは、次の手順を実行することです。
 
-* [最新の機能パック ](/help/communities/deploy-communities.md#latestfeaturepack)をインストールします。
+* [最新の機能パック &#x200B;](/help/communities/deploy-communities.md#latestfeaturepack)をインストールします。
 * AEM Communitiesの[Adobe Analytics](/help/communities/analytics.md)を有効にします。
 * [email](/help/communities/email.md)を設定
-* [ コミュニティ管理者](/help/communities/users.md#creating-community-members)を特定します。
-* [ ソーシャルログイン用にOAuth ハンドラー](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)を有効にします。
+* [&#x200B; コミュニティ管理者](/help/communities/users.md#creating-community-members)を特定します。
+* [&#x200B; ソーシャルログイン用にOAuth ハンドラー](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)を有効にします。
 
 ## Communities Sites コンソールへのアクセス {#accessing-communities-sites-console}
 
@@ -70,7 +70,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 ## サイト作成 {#site-creation}
 
-サイト作成コンソールでは、選択した[ コミュニティサイトテンプレート ](/help/communities/sites.md)と設定に基づいてサイトの機能を組み立てるステップバイステップのアプローチを提供します。
+サイト作成コンソールでは、選択した[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)と設定に基づいてサイトの機能を組み立てるステップバイステップのアプローチを提供します。
 
 サイト訪問者は、コンテンツの投稿、メッセージの送信、グループへの参加などをおこなう前にログインする必要があるため、すべてのサイトにログイン機能が搭載されています。 その他の機能には、ユーザープロファイル、メッセージ、通知、サイトメニュー、検索、テーマ、ブランディングなどがあります。
 
@@ -119,7 +119,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 * **コミュニティサイトテンプレート** メニュー
 
-  プルダウンメニューを使用して、使用可能な[ コミュニティサイトテンプレート ](/help/communities/tools.md)を選択します。
+  プルダウンメニューを使用して、使用可能な[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/tools.md)を選択します。
 
 * 「**次へ**」を選択します。
 
@@ -129,13 +129,13 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 #### コミュニティサイトのテーマ {#community-site-theme}
 
-![ サイトテーマ ](assets/sitetheme.png)
+![&#x200B; サイトテーマ &#x200B;](assets/sitetheme.png)
 
 このフレームワークでは、`Twitter Bootstrap`を使用して、レスポンシブで柔軟なデザインをサイトに取り入れています。 選択したコミュニティサイトテンプレートのスタイルを設定するために、多数のプリロードされたBootstrap テーマの1つが選択されるか、Bootstrap テーマがアップロードされます。
 
 選択すると、テーマは不透明な青いチェックマークでオーバーレイされます。
 
-コミュニティサイトが公開されたら、[ プロパティを編集して](#modifying-site-properties)別のテーマを選択できます。
+コミュニティサイトが公開されたら、[&#x200B; プロパティを編集して](#modifying-site-properties)別のテーマを選択できます。
 
 #### コミュニティサイトブランディング {#community-site-branding}
 
@@ -173,7 +173,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 >
 >いくつかの設定サブパネルでは、信頼できるメンバーを割り当てて、UGCを管理したり、グループを管理したり、パブリッシュ環境のイネーブルメントリソースの連絡先にしたりできます。
 >
->この規則は、パブリッシュ側の[ ユーザーとユーザーグループ ](/help/communities/users.md) （メンバーとメンバーグループ）がオーサー環境で重複しないように設定されています。
+>この規則は、パブリッシュ側の[&#x200B; ユーザーとユーザーグループ &#x200B;](/help/communities/users.md) （メンバーとメンバーグループ）がオーサー環境で重複しないように設定されています。
 >
 >したがって、オーサー環境でコミュニティサイトを作成し、信頼できるメンバーを様々な役割に割り当てる場合は、パブリッシュ環境からメンバーデータを取得する必要があります。
 >
@@ -217,13 +217,13 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 >
 >**ソーシャルログインの許可**
 >
->サンプルのFacebookおよびTwitter設定が存在し、[本番環境](/help/sites-administering/production-ready.md)で選択可能な場合がありますが、カスタムのFacebookおよびTwitter アプリケーションを作成する必要があります。 [FacebookおよびTwitterでのソーシャルログイン ](/help/communities/social-login.md)を参照してください。
+>サンプルのFacebookおよびTwitter設定が存在し、[本番環境](/help/sites-administering/production-ready.md)で選択可能な場合がありますが、カスタムのFacebookおよびTwitter アプリケーションを作成する必要があります。 [FacebookおよびTwitterでのソーシャルログイン &#x200B;](/help/communities/social-login.md)を参照してください。
 
 #### タグ付け {#tagging}
 
-![ サイトのタグ付け](assets/site-tagging.png)
+![&#x200B; サイトのタグ付け](assets/site-tagging.png)
 
-コミュニティコンテンツに適用できるタグは、[ タグコンソール ](/help/sites-administering/tags.md#tagging-console)で事前に定義したタグ名前空間を選択することで制御できます。
+コミュニティコンテンツに適用できるタグは、[&#x200B; タグコンソール &#x200B;](/help/sites-administering/tags.md#tagging-console)で事前に定義したタグ名前空間を選択することで制御できます。
 
 さらに、コミュニティサイトのタグ名前空間を選択すると、カタログとリソースを定義する際に表示される選択が制限されます。
 
@@ -231,9 +231,9 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 #### 役割 {#roles}
 
-![ コミュニティの役割](assets/site-admin-2.png)
+![&#x200B; コミュニティの役割](assets/site-admin-2.png)
 
-コミュニティメンバー](/help/communities/users.md)の[の役割は、これらの設定に割り当てられます。
+コミュニティメンバー[&#128279;](/help/communities/users.md)のの役割は、これらの設定に割り当てられます。
 
 コミュニティのメンバーを見つけるのは、先行検索を使用すると簡単です。
 
@@ -247,7 +247,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 * **コミュニティ特権メンバー**
 
-  `Allow Privileged Member`が[ コミュニティ関数](/help/communities/functions.md)に対して選択されたときにコンテンツを作成する機能が与えられる1つ以上のコミュニティメンバーまたはメンバーグループを選択するには、入力を開始します。
+  `Allow Privileged Member`が[&#x200B; コミュニティ関数](/help/communities/functions.md)に対して選択されたときにコンテンツを作成する機能が与えられる1つ以上のコミュニティメンバーまたはメンバーグループを選択するには、入力を開始します。
 
 * **コミュニティ管理者**
 
@@ -261,7 +261,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 * **コンテンツは事前定義済みです**
 
-  チェックを入れると、投稿されたコミュニティコンテンツは、モデレーターによって承認されるまで表示されません。 デフォルトはオフです。 詳しくは、「[ コミュニティコンテンツの管理](/help/communities/moderate-ugc.md#premoderation)」を参照してください。
+  チェックを入れると、投稿されたコミュニティコンテンツは、モデレーターによって承認されるまで表示されません。 デフォルトはオフです。 詳しくは、「[&#x200B; コミュニティコンテンツの管理](/help/communities/moderate-ugc.md#premoderation)」を参照してください。
 
 * **コンテンツが非表示になる前にしきい値をフラグしています**
 
@@ -285,11 +285,11 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 #### 翻訳 {#translation}
 
-![ サイト翻訳](assets/site-translation.png)
+![&#x200B; サイト翻訳](assets/site-translation.png)
 
 * **機械翻訳を許可**
 
-  オンにすると（デフォルトはオフになっています）、サイト内でUGCの機械翻訳が有効になります。 多言語サイトとして設定されている場合でも、ページコンテンツなどの他のコンテンツには影響しません。 AEM Communitiesのライセンス済み翻訳サービスの設定について詳しくは、[ ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。 完全な概要については、[多言語サイト向けコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
+  オンにすると（デフォルトはオフになっています）、サイト内でUGCの機械翻訳が有効になります。 多言語サイトとして設定されている場合でも、ページコンテンツなどの他のコンテンツには影響しません。 AEM Communitiesのライセンス済み翻訳サービスの設定について詳しくは、[&#x200B; ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。 完全な概要については、[多言語サイト向けコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
 ![allow-machine-translation](assets/allow-machine-translation.png)
 
@@ -307,7 +307,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 * **翻訳プロバイダー設定の選択**
 
-  ライセンス取得済みの翻訳プロバイダー用に作成された[翻訳統合フレームワーク ](/help/sites-administering/tc-tic.md)を選択します。
+  ライセンス取得済みの翻訳プロバイダー用に作成された[翻訳統合フレームワーク &#x200B;](/help/sites-administering/tc-tic.md)を選択します。
 
 * **コミュニティサイトの翻訳オプションを選択**
 
@@ -384,7 +384,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 >[!NOTE]
 >
->AEMに詳しくない場合は、[基本処理](/help/sites-authoring/basic-handling.md)に関するドキュメントと、[ ページのオーサリングに関するクイックガイド ](/help/sites-authoring/qg-page-authoring.md)をご覧ください。
+>AEMに詳しくない場合は、[基本処理](/help/sites-authoring/basic-handling.md)に関するドキュメントと、[&#x200B; ページのオーサリングに関するクイックガイド &#x200B;](/help/sites-authoring/qg-page-authoring.md)をご覧ください。
 
 ## サイトプロパティの変更 {#modifying-site-properties}
 
@@ -392,7 +392,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 サイト作成プロセス中に指定された既存のサイトのプロパティは、サイトにマウスを合わせると表示される`Edit Site` アイコンを選択して変更できます。
 
-`Details of the following properties match the descriptions provided in the` [ サイト作成](#site-creation) セクション。
+`Details of the following properties match the descriptions provided in the` [&#x200B; サイト作成](#site-creation) セクション。
 
 ![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
@@ -413,12 +413,12 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 構造パネルでは、選択したコミュニティサイトテンプレートから最初に作成した構造を変更できます。 パネルから、次のことが可能です。
 
-* 追加の[ コミュニティ関数](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
+* 追加の[&#x200B; コミュニティ関数](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
 * サイト構造内のコミュニティ関数のインスタンス：
 
   * **`gear icon`**
 
-    表示タイトルとURL名、および[特権メンバーグループ ](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
+    表示タイトルとURL名、および[特権メンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
 
   * **`trashcan icon`**
 
@@ -442,7 +442,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 >
 >グループ関数&#x200B;*not*&#x200B;は、サイト構造内の&#x200B;*firstまたはonly*&#x200B;関数である必要があります。
 >
->[ ページ関数](/help/communities/functions.md#page-function)などの他の関数を最初に含めてリストする必要があります。
+>[&#x200B; ページ関数](/help/communities/functions.md#page-function)などの他の関数を最初に含めてリストする必要があります。
 
 #### 例：コミュニティサイト構造へのカタログ関数の追加 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -480,17 +480,17 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 サイトが正常に公開された後に表示されます。
 
-![ サイト公開](assets/site-published.png)
+![&#x200B; サイト公開](assets/site-published.png)
 
 ### ネストされたグループを使用した公開 {#publishing-with-nested-groups}
 
-コミュニティサイトを公開したら、[ グループコンソール ](/help/communities/groups.md)を使用して作成した各サブコミュニティ（ネストされたグループ）を個別に公開する必要があります。
+コミュニティサイトを公開したら、[&#x200B; グループコンソール &#x200B;](/help/communities/groups.md)を使用して作成した各サブコミュニティ（ネストされたグループ）を個別に公開する必要があります。
 
 ## サイトのエクスポート {#exporting-the-site}
 
 ![export-site](assets/export-site.png)
 
-書き出しアイコンを選択し、サイトにマウスカーソルを合わせると、[ パッケージマネージャー](/help/sites-administering/package-manager.md)に保存され、ダウンロードされたコミュニティサイトのパッケージを作成できます。
+書き出しアイコンを選択し、サイトにマウスカーソルを合わせると、[&#x200B; パッケージマネージャー](/help/sites-administering/package-manager.md)に保存され、ダウンロードされたコミュニティサイトのパッケージを作成できます。
 
 UGCはサイトパッケージに含まれていません。
 
@@ -513,12 +513,12 @@ UGCはサイトパッケージに含まれていません。
 
 サイトの作成時にモデレータまたはグループ管理者として役割を割り当てられたメンバーは、適切なグループに割り当てられ、メンバーグループに割り当てられます。 これらのグループとメンバーの割り当ては、新しいサイトの公開時に公開時に作成されます。
 
-詳しくは、[ ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+詳しくは、[&#x200B; ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
 
 >[!NOTE]
 >
->[ ソーシャルログインを許可：Facebook](#user-management)が有効になっている場合、ユーザーグループが `community-<site-name>-<uid>-members`
->が作成された場合、適用された[Facebook クラウドサービス ](/help/communities/social-login.md#createafacebookcloudservice)は、このグループにユーザーを追加するように設定する必要があります。
+>[&#x200B; ソーシャルログインを許可：Facebook](#user-management)が有効になっている場合、ユーザーグループが `community-<site-name>-<uid>-members`
+>が作成された場合、適用された[Facebook クラウドサービス &#x200B;](/help/communities/social-login.md#createafacebookcloudservice)は、このグループにユーザーを追加するように設定する必要があります。
 
 ## 認証エラー用に設定 {#configure-for-authentication-error}
 
@@ -528,7 +528,7 @@ UGCはサイトパッケージに含まれていません。
 
 * AEMの各インスタンスで更新されます。
 * 管理者権限でログインします。
-* [Web コンソール ](/help/sites-deploying/configuring-osgi.md)にアクセスします。
+* [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
   * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 

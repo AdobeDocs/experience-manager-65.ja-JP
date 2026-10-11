@@ -53,13 +53,13 @@ AEM アプリの権限モデルの整理と管理を支援するために、次�
 
    作成者グループにアプリ作成者を追加
 
-1. アプリ作成者ユーザーグループを作成したので、[ ユーザーAdmin Console](http://localhost:4502/libs/granite/security/content/useradmin.md)を使用して、この新しいグループに個々のチームメンバーを追加できます。
+1. アプリ作成者ユーザーグループを作成したので、[&#x200B; ユーザーAdmin Console](http://localhost:4502/libs/granite/security/content/useradmin.md)を使用して、この新しいグループに個々のチームメンバーを追加できます。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
    ユーザーグループの編集
 
-1. [権限コンソール ](http://localhost:4502/useradmin)に移動し、cloudservicesを管理する権限を追加します
+1. [権限コンソール &#x200B;](http://localhost:4502/useradmin)に移動し、cloudservicesを管理する権限を追加します
 
    * （読み取り） /etc/cloudservices
 
@@ -90,7 +90,7 @@ app-admins グループのメンバーは、app-authors **AND**&#x200B;に含ま
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. [権限コンソール ](http://localhost:4502/useradmin)に移動し、cloudservicesを管理する権限を追加します
+1. [権限コンソール &#x200B;](http://localhost:4502/useradmin)に移動し、cloudservicesを管理する権限を追加します
 
    * （読み取り、変更、作成、削除、複製） /etc/cloudservices/mobileservices
    * （読み取り、変更、作成、削除、複製） /etc/cloudservices/phonegap-build

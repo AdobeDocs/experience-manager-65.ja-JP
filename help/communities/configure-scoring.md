@@ -34,9 +34,9 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 このページには、追加の技術的な詳細が含まれています。
 
-* バッジ ](#displaying-badges)を画像またはテキストとして[表示する方法
-* 広範な[ デバッグログ ](#debug-log-for-scoring-and-badging)を有効にする方法
-* スコアリングとバッジに関連するUGC](#ugc-for-scoring-and-badging)に[ アクセスする方法
+* バッジ [&#128279;](#displaying-badges)を画像またはテキストとして表示する方法
+* 広範な[&#x200B; デバッグログ &#x200B;](#debug-log-for-scoring-and-badging)を有効にする方法
+* スコアリングとバッジに関連するUGC[&#128279;](#ugc-for-scoring-and-badging)に アクセスする方法
 
 >[!CAUTION]
 >
@@ -78,13 +78,13 @@ trueの場合、`isAssigned`は、バッジが役割に割り当てられてい�
 
 falseの場合、`isAssigned`は、バッジが獲得スコアに対して授与され、バッジが画像として表示されることを示します。
 
-この動作の変更は、カスタマイズされたスクリプト（オーバーライドまたはオーバーレイ）で行う必要があります。 [ クライアントサイドのカスタマイズ ](/help/communities/client-customize.md)を参照してください。
+この動作の変更は、カスタマイズされたスクリプト（オーバーライドまたはオーバーレイ）で行う必要があります。 [&#x200B; クライアントサイドのカスタマイズ &#x200B;](/help/communities/client-customize.md)を参照してください。
 
 ## スコアリングとバッジのデバッグログ {#debug-log-for-scoring-and-badging}
 
 スコアリングとバッジのデバッグに役立つように、カスタムログファイルを設定できます。 このログファイルの内容は、機能に問題が発生した場合に、カスタマーサポートに提供される場合があります。
 
-詳細な手順については、[ カスタムログファイルの作成](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file)を参照してください。
+詳細な手順については、[&#x200B; カスタムログファイルの作成](/help/sites-deploying/monitoring-and-maintaining.md#create-a-custom-log-file)を参照してください。
 
 スリングログファイルをすばやく設定するには：
 
@@ -123,17 +123,17 @@ falseの場合、`isAssigned`は、バッジが獲得スコアに対して授与
 
   * 例えば、`.../crx-quickstart/logs/scoring-debug.log` のように指定します。
 
-![ スコアリングログ ](assets/scoring-log.png)
+![&#x200B; スコアリングログ &#x200B;](assets/scoring-log.png)
 
 ## スコアリングとバッジ作成のためのUGC {#ugc-for-scoring-and-badging}
 
-選択したSRPがJSRPまたはMSRPのどちらかで、ASRPではない場合、スコアリングとバッジに関連するUGCを表示できます。 （これらの用語に精通していない場合は、[ コミュニティコンテンツストレージ ](/help/communities/working-with-srp.md)および[ ストレージリソースプロバイダーの概要](/help/communities/srp.md)を参照してください）。
+選択したSRPがJSRPまたはMSRPのどちらかで、ASRPではない場合、スコアリングとバッジに関連するUGCを表示できます。 （これらの用語に精通していない場合は、[&#x200B; コミュニティコンテンツストレージ &#x200B;](/help/communities/working-with-srp.md)および[&#x200B; ストレージリソースプロバイダーの概要](/help/communities/srp.md)を参照してください）。
 
 UGCには[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)を使用して簡単にアクセスできるため、スコアリングとバッジのデータへのアクセスに関する説明ではJSRPを使用します。
 
 作成者&#x200B;**の** JSRP: オーサー環境で実験すると、オーサー環境からのみ表示されるUGCになります。
 
-**パブリッシュ上のJSRP**：同様に、パブリッシュ環境でテストを行う場合は、パブリッシュインスタンスの管理者権限でCRXDE Liteにアクセスする必要があります。 パブリッシュインスタンスが[実稼動モード ](/help/sites-administering/production-ready.md) （nosamplecontent実行モード）で実行されている場合は、[CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)を有効にする必要があります。
+**パブリッシュ上のJSRP**：同様に、パブリッシュ環境でテストを行う場合は、パブリッシュインスタンスの管理者権限でCRXDE Liteにアクセスする必要があります。 パブリッシュインスタンスが[実稼動モード &#x200B;](/help/sites-administering/production-ready.md) （nosamplecontent実行モード）で実行されている場合は、[CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)を有効にする必要があります。
 
 JSRP上のUGCの基本場所は`/content/usergenerated/asi/jcr/`です。
 
@@ -154,7 +154,7 @@ JSRP上のUGCの基本場所は`/content/usergenerated/asi/jcr/`です。
 
 1. 一意のIDが&#x200B;*のAEM サイト*&#x200B;です（ウィザードを使用して作成されたコミュニティサイト） :
 
-   * [入門チュートリアル ](/help/communities/getting-started.md)で作成した入門チュートリアル（エンゲージ）サイトを使用する
+   * [入門チュートリアル &#x200B;](/help/communities/getting-started.md)で作成した入門チュートリアル（エンゲージ）サイトを使用する
    * フォーラムページノードを探す
 
      `/content/sites/engage/en/forum/jcr:content`
@@ -184,7 +184,7 @@ JSRP上のUGCの基本場所は`/content/usergenerated/asi/jcr/`です。
 
 1. 一意のIDを&#x200B;*持たないAEM サイト* :
 
-   * [ コミュニティコンポーネントガイド ](/help/communities/components-guide.md)の使用
+   * [&#x200B; コミュニティコンポーネントガイド &#x200B;](/help/communities/components-guide.md)の使用
    * フォーラムページノードを探す
 
      `/content/community-components/en/forum/jcr:content`
@@ -220,7 +220,7 @@ JSRP上のUGCの基本場所は`/content/usergenerated/asi/jcr/`です。
 
    ユーザーが2つのブロンズバッジを獲得し、モデレーターのバッジを授与されたため、ユーザーは次のフォーラムエントリで表示されます。
 
-   ![ モデレーター](assets/moderator.png)
+   ![&#x200B; モデレーター](assets/moderator.png)
 
 >[!NOTE]
 >
@@ -281,5 +281,5 @@ Geometrixx Engage サイトの場合、ユーザーとそのスコアは、ス�
 
 ポイントに基づいてメンバーのソートされたリストを表示するには、次の手順に従います。
 
-* コミュニティサイトまたはグループテンプレートに含めるための[ リーダーボード関数](/help/communities/functions.md#leaderboard-function)。
-* ページのオーサリング用に、リーダーボード関数の注目のコンポーネント [ リーダーボード コンポーネント ](/help/communities/enabling-leaderboard.md)。
+* コミュニティサイトまたはグループテンプレートに含めるための[&#x200B; リーダーボード関数](/help/communities/functions.md#leaderboard-function)。
+* ページのオーサリング用に、リーダーボード関数の注目のコンポーネント [&#x200B; リーダーボード コンポーネント &#x200B;](/help/communities/enabling-leaderboard.md)。

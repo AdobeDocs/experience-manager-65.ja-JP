@@ -48,11 +48,11 @@ ht-degree: 2%
 
 アイデアを表示するページ上にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/ideation.md#essentials-for-client-side)が含まれている場合、`Ideation` コンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/ideation.md#essentials-for-client-side)が含まれている場合、`Ideation` コンポーネントは次のように表示されます。
 
-![ アイデア創出](assets/ideation.png)
+![&#x200B; アイデア創出](assets/ideation.png)
 
 ### アイデアの設定 {#configuring-an-ideation}
 
@@ -134,7 +134,7 @@ ht-degree: 2%
 
 * **メール配信の許可**
 
-  チェックを入れた場合は、新しい投稿がメールでメンバーに通知されるようにします（[ サブスクリプション ](/help/communities/subscriptions.md)）。 `Allow Following`を確認し、電子メール [を設定する必要があります](/help/communities/email.md)。 デフォルトはオフです。
+  チェックを入れた場合は、新しい投稿がメールでメンバーに通知されるようにします（[&#x200B; サブスクリプション &#x200B;](/help/communities/subscriptions.md)）。 `Allow Following`を確認し、電子メール [を設定する必要があります](/help/communities/email.md)。 デフォルトはオフです。
 
 * **投票を許可**
 
@@ -142,13 +142,13 @@ ht-degree: 2%
 
 * **バッジの表示**
 
-  チェックを入れた場合、メンバーのアイデアで獲得および割り当てられた[ バッジ ](/help/communities/implementing-scoring.md)を表示します。 デフォルトはオフです。
+  チェックを入れた場合、メンバーのアイデアで獲得および割り当てられた[&#x200B; バッジ &#x200B;](/help/communities/implementing-scoring.md)を表示します。 デフォルトはオフです。
 
 * **リストページで返信を受け取らない**
 
 * **おすすめのコンテンツを許可**
 
-  チェックを入れると、アイデアは[おすすめコンテンツ ](/help/communities/featured.md)として識別できます。 デフォルトはオフです。
+  チェックを入れると、アイデアは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別できます。 デフォルトはオフです。
 
 * **メンションを有効にする**
 * **最大言及数**
@@ -156,7 +156,7 @@ ht-degree: 2%
 
 #### 「User Moderation」タブ {#user-moderation-tab}
 
-「**[!UICONTROL ユーザーモデレーション]**」タブで、投稿されたアイデアとコメント（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、「[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)」を参照してください。
+「**[!UICONTROL ユーザーモデレーション]**」タブで、投稿されたアイデアとコメント（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、「[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)」を参照してください。
 
 * **投稿を拒否**
 
@@ -238,12 +238,12 @@ ht-degree: 2%
 
 アイデアが公開されると、他のメンバーがログインしてアイデアを開き（`Read More`）、アイデアを気に入って投票カウントに追加し、コメントを作成できます。
 
-![ フィードバック ](assets/feedback-idea.png)
+![&#x200B; フィードバック &#x200B;](assets/feedback-idea.png)
 
 ### 追加情報 {#additional-information}
 
 詳しくは、開発者向けの[Ideation Essentials](/help/communities/ideation.md) ページを参照してください。
 
-投稿されたトピックとコメントの管理については、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+投稿されたトピックとコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
-投稿されたトピックとコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
+投稿されたトピックとコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。

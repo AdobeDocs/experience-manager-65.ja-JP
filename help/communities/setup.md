@@ -48,11 +48,11 @@ AEM Communitiesの場合，
 
 >[!NOTE]
 >
->AEMに詳しくない場合は、[基本処理](../../help/sites-authoring/basic-handling.md)に関するドキュメントと、[ ページのオーサリングに関するクイックガイド ](../../help/sites-authoring/qg-page-authoring.md)をご覧ください。
+>AEMに詳しくない場合は、[基本処理](../../help/sites-authoring/basic-handling.md)に関するドキュメントと、[&#x200B; ページのオーサリングに関するクイックガイド &#x200B;](../../help/sites-authoring/qg-page-authoring.md)をご覧ください。
 
 ## 最新のCommunities リリースのインストール {#install-latest-communities-release}
 
-このチュートリアルでは、AEM Communities 6.2機能パックバージョン 1.10をベースとする[ エンゲージメントコミュニティサイト ](overview.md#engagement-community)を作成します。
+このチュートリアルでは、AEM Communities 6.2機能パックバージョン 1.10をベースとする[&#x200B; エンゲージメントコミュニティサイト &#x200B;](overview.md#engagement-community)を作成します。
 
 最新の機能パックがインストールされていることを確認するには、次のサイトにアクセスしてください。
 
@@ -74,11 +74,11 @@ Adobe Analyticsとの連携はオプションです。
 
 ## トンネルサービスを有効にする {#enable-the-tunnel-service}
 
-オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用すると、パブリッシュ環境に登録されている信頼できるコミュニティメンバーに役割を割り当てることができます。 トンネルサービスでは、オーサー環境の[ メンバーおよびグループコンソール ](members.md)からコミュニティメンバーにアクセスすることもできます。
+オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用すると、パブリッシュ環境に登録されている信頼できるコミュニティメンバーに役割を割り当てることができます。 トンネルサービスでは、オーサー環境の[&#x200B; メンバーおよびグループコンソール &#x200B;](members.md)からコミュニティメンバーにアクセスすることもできます。
 
-この規則は、パブリッシュ環境で作成されたメンバーとメンバーグループをオーサー環境で&#x200B;*not*&#x200B;に再作成する場合に適用されます。 詳しくは、[ ユーザーとユーザーグループの管理](users.md)を参照してください。
+この規則は、パブリッシュ環境で作成されたメンバーとメンバーグループをオーサー環境で&#x200B;*not*&#x200B;に再作成する場合に適用されます。 詳しくは、[&#x200B; ユーザーとユーザーグループの管理](users.md)を参照してください。
 
-**Author** インスタンスでトンネルサービスを有効にする簡単な手順については、[ トンネルサービス ](deploy-communities.md#tunnel-service-on-author)を参照してください。
+**Author** インスタンスでトンネルサービスを有効にする簡単な手順については、[&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author)を参照してください。
 
 ## コミュニティ管理者の役割 {#community-administrator-role}
 
@@ -125,18 +125,18 @@ Adobe Analyticsとの連携はオプションです。
 
 FacebookやTwitterでのソーシャルログインのデモ版を使用する前に、次のことが必要です
 
-1. 修正パックまたは[最新の機能パック ](deploy-communities.md#latestfeaturepack)をインストールします（2017年3月のFacebook APIの変更点）。
-1. [ パブリッシュ環境でOAuth プロバイダー](social-login.md#adobe-granite-oauth-authentication-handler)を有効にします。
+1. 修正パックまたは[最新の機能パック &#x200B;](deploy-communities.md#latestfeaturepack)をインストールします（2017年3月のFacebook APIの変更点）。
+1. [&#x200B; パブリッシュ環境でOAuth プロバイダー](social-login.md#adobe-granite-oauth-authentication-handler)を有効にします。
 
 本番サーバーの場合は、ソーシャルログインを提供するために必要なクラウドサービスを作成する必要があります。
 
-[FacebookおよびTwitterでのソーシャルログイン ](social-login.md)を参照してください。
+[FacebookおよびTwitterでのソーシャルログイン &#x200B;](social-login.md)を参照してください。
 
 ## チュートリアルタグの作成 {#create-tutorial-tags}
 
 タグを作成して、`Tutorial`のタグ名前空間を使用して、エンゲージメントチュートリアルに使用できるようにします。
 
-[ タグ付けコンソール ](../../help/sites-administering/tags.md#tagging-console)を使用して、次のタグを作成します。
+[&#x200B; タグ付けコンソール &#x200B;](../../help/sites-administering/tags.md#tagging-console)を使用して、次のタグを作成します。
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -149,8 +149,8 @@ FacebookやTwitterでのソーシャルログインのデモ版を使用する�
 
 次に、指示に従って次の操作を行います。
 
-1. [ タグ権限を設定](../../help/sites-administering/tags.md#setting-tag-permissions)。
-1. [ タグを公開](../../help/sites-administering/tags.md#publishing-tags)。
+1. [&#x200B; タグ権限を設定](../../help/sites-administering/tags.md#setting-tag-permissions)。
+1. [&#x200B; タグを公開](../../help/sites-administering/tags.md#publishing-tags)。
 
 AEM Communities入門チュートリアル用に作成されたタグのサンプルパッケージ
 
@@ -158,8 +158,8 @@ AEM Communities入門チュートリアル用に作成されたタグのサン�
 
 ## MongoDB for UGC Common Store {#mongodb-for-ugc-common-store}
 
-[MSRP](msrp.md) （MongoDB）を[共通ストア ](working-with-srp.md)として設定して、パブリッシュ環境とオーサー環境のいずれかからすべてのUGCを柔軟にモデレートできるようにすることをお勧めしますが、オプションで設定することをお勧めします。
+[MSRP](msrp.md) （MongoDB）を[共通ストア &#x200B;](working-with-srp.md)として設定して、パブリッシュ環境とオーサー環境のいずれかからすべてのUGCを柔軟にモデレートできるようにすることをお勧めしますが、オプションで設定することをお勧めします。
 
-手順については、[ デモ用MongoDBのセットアップ方法](demo-mongo.md)を参照してください。
+手順については、[&#x200B; デモ用MongoDBのセットアップ方法](demo-mongo.md)を参照してください。
 
-デフォルトでは、オーサーインスタンスとパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）が[JCR Tar ストレージ ](../../help/sites-deploying/platform.md)に保存され、[JSRP](jsrp.md)を使用してアクセスされます。 JSRPは一般的なストアではないため、UGCは入力されたインスタンスでのみ表示されます。 通常、UGCはパブリッシュインスタンスで入力され、オーサー環境では表示されないため、パブリッシュインスタンスを使用する必要があるすべてのモデレーションタスクが発生します。
+デフォルトでは、オーサーインスタンスとパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）が[JCR Tar ストレージ &#x200B;](../../help/sites-deploying/platform.md)に保存され、[JSRP](jsrp.md)を使用してアクセスされます。 JSRPは一般的なストアではないため、UGCは入力されたインスタンスでのみ表示されます。 通常、UGCはパブリッシュインスタンスで入力され、オーサー環境では表示されないため、パブリッシュインスタンスを使用する必要があるすべてのモデレーションタスクが発生します。

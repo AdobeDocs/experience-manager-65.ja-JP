@@ -64,7 +64,7 @@ ${ myHtlVariable }
 この問題を解決するには、次の方法を試してください。
 
 * 大量の PollingImporter が登録されていないことを確認します（下記の「PollingImporter が原因でシャットダウンに時間がかかる」の節を参照）。
-* `ManagedPollingImporter`OSGi コンソール[で ](/help/sites-deploying/configuring-osgi.md) を設定する CRON 式を使用して、特定の時刻にレポートインポーターを実行します。
+* `ManagedPollingImporter`OSGi コンソール[で &#x200B;](/help/sites-deploying/configuring-osgi.md) を設定する CRON 式を使用して、特定の時刻にレポートインポーターを実行します。
 
 AEM でカスタムデータインポーターサービスを作成について詳しくは、以下の記事を参照してください。[https://helpx.adobe.com/jp/experience-manager/using/polling.html](https://helpx.adobe.com/jp/experience-manager/using/polling.html)
 
@@ -110,10 +110,10 @@ AEM でのカスタムデータインポーターサービスの作成につい�
 * `/etc/cloudservices` 上の ACL をチェックします。 ACL は次のようになります。
 
   * allow; jcr:read; webservice-support-servicelibfinder
-  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/defaults/`&amp;ast;
-  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/defaults`
-  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/public/`&amp;ast;
-  * 許可；jcr:read；全員；`rep:glob:`&amp;ast;`/public`
+  * 許可；jcr:read；全員；`rep:glob:`&ast;`/defaults/`&ast;
+  * 許可；jcr:read；全員；`rep:glob:`&ast;`/defaults`
+  * 許可；jcr:read；全員；`rep:glob:`&ast;`/public/`&ast;
+  * 許可；jcr:read；全員；`rep:glob:`&ast;`/public`
 
 ACL 管理について詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md#permissions-in-aem)ページを参照してください。
 

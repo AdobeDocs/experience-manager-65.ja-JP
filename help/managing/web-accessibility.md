@@ -66,10 +66,10 @@ Adobe Experience Manager を使用すると、コンテンツ作成者や Web �
 
 * AEM との関係について詳しくは、[アクセシブルなコンテンツの作成](/help/sites-authoring/creating-accessible-content.md)を参照してください。
 
-* [ アクセス可能なサイトを作成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
+* [&#x200B; アクセス可能なサイトを作成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
 アクセス可能なコンテンツを生成するために管理者がAEMを設定する方法に関するガイドラインです。
 
-* [ アクセス可能なアダプティブ Formsの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
+* [&#x200B; アクセス可能なアダプティブ Formsの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
 Adobe Experience Manager（AEM）には、能力が異なるユーザー向けにアダプティブフォームの使いやすさを向上させる機能がいくつか用意されています。 このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
 
 >[!NOTE]

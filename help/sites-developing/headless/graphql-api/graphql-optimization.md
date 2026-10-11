@@ -213,7 +213,7 @@ AEM の GraphQL では、次の 2 種類のページネーションに対応し�
 これはリスト クエリに使用されます。これらは`List`で終わります。例：`articleList`。
 これを使用するには、最初に返す項目（`offset`）と返す項目の数（`limit` またはページサイズ）を指定する必要があります。
 
-* [ カーソルベースのページネーション ](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （`first`および`after`で表されます）
+* [&#x200B; カーソルベースのページネーション &#x200B;](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （`first`および`after`で表されます）
 これにより、アイテムごとに一意のIDが提供されます。これはカーソルとも呼ばれます。
 クエリでは、前のページの最後の項目のカーソルとページサイズ（返される項目の最大数）を指定します。
 

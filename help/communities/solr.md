@@ -31,7 +31,7 @@ ht-degree: 3%
 
 Oak コレクションとSRP コレクションの両方を集中的に使用する場合は、パフォーマンス上の理由から2番目のSolrをインストールできます。
 
-実稼動環境の場合、[SolrCloud モード ](#solrcloud-mode)では、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
+実稼動環境の場合、[SolrCloud モード &#x200B;](#solrcloud-mode)では、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
 ### 要件 {#requirements}
 
@@ -44,7 +44,7 @@ Apache Solrをダウンロードしてインストールします。
 * 実行モードの選択：
 
   * スタンドアロンモード
-  * [SolrCloud モード ](#solrcloud-mode) （実稼動環境に推奨）
+  * [SolrCloud モード &#x200B;](#solrcloud-mode) （実稼動環境に推奨）
 
 * 多言語検索（MLS）の選択
 
@@ -198,10 +198,10 @@ Solr 5.xの標準MLS ファイル（schema.xml、solrconfig.xml）。
    1. ダウンロードした&#x200B;**schema.xml**&#x200B;および&#x200B;**solrconfig.xml**&#x200B;を&#x200B;*new-config-dir*&#x200B;にコピーして、既存のファイルを上書きします。
 
 1. [新しい設定](#upload-a-configuration-to-zookeeper)をZooKeeperにアップロードします。
-1. [ シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション ](#create-a-collection)を作成します。
-1. コレクションの作成中に構成名が*提供されなかった場合、[この新しく作成されたコレクション ](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
+1. [&#x200B; シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション &#x200B;](#create-a-collection)を作成します。
+1. コレクションの作成中に構成名が*提供されなかった場合、[この新しく作成されたコレクション &#x200B;](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
 
-1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール ](msrp.md#msrp-reindex-tool)を実行します。
+1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール &#x200B;](msrp.md#msrp-reindex-tool)を実行します。
 
 #### スタンドアロンモード – 標準MLS {#standalone-mode-standard-mls}
 
@@ -219,7 +219,7 @@ Solr 5.xの標準MLS ファイル（schema.xml、solrconfig.xml）。
 1. ダウンロードした&#x200B;**schema.xml**&#x200B;と&#x200B;**solrconfig.xml**&#x200B;を同じディレクトリにコピーします。
 
 1. Solrを再起動します。
-1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール ](#msrpreindextool)を実行します。
+1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール &#x200B;](#msrpreindextool)を実行します。
 
 ### 高度なMLSのインストール {#installing-advanced-mls}
 
@@ -281,10 +281,10 @@ SolrCloudまたはスタンドアロンモードのインストールを開始�
    * *solr-install-dir/contrib/analysis-extras/lib/*.jar
    * *solr-install-dir/contrib/analysis-extras/lucene-libs/*.jar
 
-1. [ シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション ](#create-a-collection)を作成します。
-1. コレクションの作成中に構成名が&#x200B;*not*&#x200B;だった場合、[この新しく作成されたコレクション ](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
+1. [&#x200B; シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション &#x200B;](#create-a-collection)を作成します。
+1. コレクションの作成中に構成名が&#x200B;*not*&#x200B;だった場合、[この新しく作成されたコレクション &#x200B;](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
 
-1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール ](#msrpreindextool)を実行します。
+1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール &#x200B;](#msrpreindextool)を実行します。
 
 #### スタンドアロンモード – 高度なMLS {#standalone-mode-advanced-mls}
 

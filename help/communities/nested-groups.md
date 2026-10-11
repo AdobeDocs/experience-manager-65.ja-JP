@@ -37,7 +37,7 @@ AEM オーサーインスタンスでは、グローバルナビゲーション�
   * カード画像を選択します。
   * *not*&#x200B;でアイコンを選択します。
 
-その結果、[ グループコンソール ](/help/communities/groups.md)にアクセスできます。
+その結果、[&#x200B; グループコンソール &#x200B;](/help/communities/groups.md)にアクセスできます。
 
 ![create-group](assets/create-group.png)
 
@@ -63,7 +63,7 @@ AEM オーサーインスタンスでは、グローバルナビゲーション�
   * **[!UICONTROL テンプレート]**: `Reference Group`を選択するためのドロップダウン
   * **[!UICONTROL 次へ]**&#x200B;を選択
 
-![ ネストされたコミュニティグループ ](assets/parent-to-nestedgroup.png)
+![&#x200B; ネストされたコミュニティグループ &#x200B;](assets/parent-to-nestedgroup.png)
 
 次の設定で他のパネルを続行します。
 
@@ -93,7 +93,7 @@ AEM オーサーインスタンスでは、グローバルナビゲーション�
 
 `groups` フォルダーに2つのグループが含まれるようになりました（ページを更新します）。
 
-![ グループのネスト ](assets/create-community-group.png)
+![&#x200B; グループのネスト &#x200B;](assets/create-community-group.png)
 
 #### グループを公開 {#publish-group}
 
@@ -126,7 +126,7 @@ AEM オーサーインスタンスでは、グローバルナビゲーション�
    * タイトル: `Art History`
    * 名前：`history`
    * テンプレート：`Reference Group`
-   * メンバーシップ：招待されたメンバーにのみ表示されるシークレットグループである`Restricted Membership`を選択します。 例として、[ デモユーザー](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`を招待します。
+   * メンバーシップ：招待されたメンバーにのみ表示されるシークレットグループである`Restricted Membership`を選択します。 例として、[&#x200B; デモユーザー](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`を招待します。
 
 3つのネストされたグループ（サブコミュニティ）をすべて表示できるように、ページを更新します。
 
@@ -158,7 +158,7 @@ Communities Sites コンソールからネストされたグループに移動�
 
 ## 公開時のエクスペリエンス {#experience-on-publish}
 
-例えば、[ デモユーザー](/help/communities/tutorials.md#demo-users)が次の目的で使用されている場合、ログイン時に様々なグループを体験できます。
+例えば、[&#x200B; デモユーザー](/help/communities/tutorials.md#demo-users)が次の目的で使用されている場合、ログイン時に様々なグループを体験できます。
 
 * アート/ヒストリーグループ メンバー：`emily.andrews@mailinator.com/password`
   * 制限付き（秘密鍵）グループ、アート/履歴が表示されます。
@@ -171,4 +171,4 @@ Communities Sites コンソールからネストされたグループに移動�
   * 制限付き（オープン）グループに参加できます。
   * 制限付き（秘密鍵）グループを表示できません。
 
-作成者のコミュニティ [ メンバーとグループ コンソール ](/help/communities/members.md)にアクセスして、コミュニティグループに対応する様々なメンバーグループに他のユーザーを追加します。
+作成者のコミュニティ [&#x200B; メンバーとグループ コンソール &#x200B;](/help/communities/members.md)にアクセスして、コミュニティグループに対応する様々なメンバーグループに他のユーザーを追加します。

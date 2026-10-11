@@ -190,7 +190,7 @@ ContextHub.Utils.Persistence オブジェクト。 デフォルト値と初期�
 **パラメーター**
 
 * **tree：**（Object または Array）ストアに追加するデータ。
-* **options：**（Object）setItem 関数に渡すオプションからなる任意のオブジェクト。 詳しくは、`options`setItem(key,value,)[ の ](/help/sites-developing/contexthub-api.md#setitem-key-value-options)options パラメーターを参照してください。
+* **options：**（Object）setItem 関数に渡すオプションからなる任意のオブジェクト。 詳しくは、`options`setItem(key,value,) [&#x200B; の &#x200B;](/help/sites-developing/contexthub-api.md#setitem-key-value-options)options パラメーターを参照してください。
 
 **戻り値**
 

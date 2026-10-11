@@ -31,9 +31,9 @@ ht-degree: 3%
 
 作成者モードでページに`Voting` コンポーネントを追加するには、コンポーネントブラウザーを使用します。 `Communities / Voting`を見つけ、ユーザーが投票する機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](essentials-voting.md#essentials-for-client-side)が含まれている場合、`Voting` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](essentials-voting.md#essentials-for-client-side)が含まれている場合、`Voting` コンポーネントはこのように表示されます。
 
 ![voting-component](assets/voting-component.png)
 

@@ -31,7 +31,7 @@ AEM CommunitiesがJSRPをストレージオプション（デフォルト）と�
 
 デプロイメントはシンプルであるため、JSRPは、1つのパブリッシュインスタンスと1つのオーサーインスタンスのデモ環境や開発環境に最適です。
 
-[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)および[推奨トポロジ ](topologies.md)も参照してください。
+[SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)および[推奨トポロジ &#x200B;](topologies.md)も参照してください。
 
 ## 設定 {#configuration}
 
@@ -39,7 +39,7 @@ AEM CommunitiesがJSRPをストレージオプション（デフォルト）と�
 
 デフォルトでは、JSRPはUGCのストレージオプションです。
 
-[ ストレージ設定コンソール ](srp-config.md)では、使用するSRPの実装を特定するデフォルトのストレージ設定を選択できます。
+[&#x200B; ストレージ設定コンソール &#x200B;](srp-config.md)では、使用するSRPの実装を特定するデフォルトのストレージ設定を選択できます。
 
 オーサー環境で、ストレージ設定コンソールにアクセスします
 

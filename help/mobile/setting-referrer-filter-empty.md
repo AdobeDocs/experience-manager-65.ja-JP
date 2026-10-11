@@ -30,4 +30,4 @@ Adobe Experience Manager（AEM）モバイルアプリケーションビュー�
 
 実行中のAEMのオーサーインスタンス内で、[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)に移動し、「Apache Sling Referrer Filter」を検索します。 クリックしてリファラーフィルターを編集し、「空を許可」チェックボックスをオンにします（下の画像を参照）。 次に保存ボタンを押してブラウザーページを閉じます。
 
-![ リファラーフィルター設定](assets/chlimage_1-106.png)
+![&#x200B; リファラーフィルター設定](assets/chlimage_1-106.png)

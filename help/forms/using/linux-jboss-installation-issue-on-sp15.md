@@ -42,7 +42,7 @@ AEM Forms JEE 6.5.15.0 サービスパックがJBoss® Linux®環境に正しく
 
 >[!NOTE]
 >
-> [RUP_BOM.xml ファイルをXML ディレクトリ ](#solution-solution)に追加する手順を実行する前に、AEM Forms JEE 6.5.15.0 サービスパックが少なくとも1回アプリケーションサーバーにインストールされていることを確認してください。
+> [RUP_BOM.xml ファイルをXML ディレクトリ &#x200B;](#solution-solution)に追加する手順を実行する前に、AEM Forms JEE 6.5.15.0 サービスパックが少なくとも1回アプリケーションサーバーにインストールされていることを確認してください。
 
 ## 解決策 {#solution}
 
@@ -52,4 +52,4 @@ AEM Forms JEE 6.5.15.0 サービスパックのインストールに関する問
 1. 抽出されたフォルダー以外の場所に `Resource1.zip` ファイルをコピーし、`Resource1.zip` ファイルを解凍します。
 1. `/C_/builds/dev_releng/branches/rrt/aem6.5.0_rollup/tier1/install/patch/fileset_dir/xml` に移動して、`RUP_BOM.xml` ファイルをコピーします。
 1. RUP_BOM.xml ファイルを `[aem_forms_jee_installation_dir]/patch/AEMForms-6.5.0-0057/xml` に貼り付けます。
-1. [AEM Forms JEE 6.5.15.0 サービスパック ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を再インストールします。
+1. [AEM Forms JEE 6.5.15.0 サービスパック &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を再インストールします。

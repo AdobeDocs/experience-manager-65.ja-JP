@@ -30,14 +30,14 @@ ht-degree: 3%
 
 コミュニティコンテンツは、ユーザー生成コンテンツ（UGC）とも呼ばれ、メンバー（サイト訪問者にサインイン）が、次のいずれかのコミュニティコンポーネントを使用して、公開されたコミュニティサイトからコンテンツを投稿したときに作成されます。
 
-* [ ブログ ](/help/communities/blog-feature.md)：メンバーがブログ記事またはコメントを投稿します。
-* [ カレンダー](/help/communities/calendar.md)：メンバーがカレンダーイベントまたはコメントを投稿します。
-* [ コメント ](/help/communities/comments.md)：メンバーがコメントを投稿するか、コメントに返信します。
+* [&#x200B; ブログ &#x200B;](/help/communities/blog-feature.md)：メンバーがブログ記事またはコメントを投稿します。
+* [&#x200B; カレンダー](/help/communities/calendar.md)：メンバーがカレンダーイベントまたはコメントを投稿します。
+* [&#x200B; コメント &#x200B;](/help/communities/comments.md)：メンバーがコメントを投稿するか、コメントに返信します。
 
-* [ フォーラム ](/help/communities/forum.md)：メンバーは新しいトピックを投稿するか、トピックに返信します。
-* [ アイデア ](/help/communities/ideation-feature.md): メンバーがアイデアまたはコメントを投稿します。
+* [&#x200B; フォーラム &#x200B;](/help/communities/forum.md)：メンバーは新しいトピックを投稿するか、トピックに返信します。
+* [&#x200B; アイデア &#x200B;](/help/communities/ideation-feature.md): メンバーがアイデアまたはコメントを投稿します。
 * [QnA](/help/communities/working-with-qna.md): メンバーが質問を作成するか、質問に回答します。
-* [ レビュー](/help/communities/reviews.md)：メンバーがアイテムを評価する際にコメントを投稿します。
+* [&#x200B; レビュー](/help/communities/reviews.md)：メンバーがアイテムを評価する際にコメントを投稿します。
 
 UGCの管理は、肯定的な貢献を認識し、否定的な貢献（スパムや悪用言語など）を制限するのに役立ちます。 UGCは、次のような複数の環境から管理できます。
 
@@ -45,7 +45,7 @@ UGCの管理は、肯定的な貢献を認識し、否定的な貢献（スパ�
 
 * [一括管理コンソール](moderation.md)
 
-  モデレーションコンソールには、公開環境の管理者と[ コミュニティモデレーター](/help/communities/users.md)およびオーサー環境の管理者がアクセスできます。 これは、コミュニティコンテンツが[共通ストア ](/help/communities/working-with-srp.md)に保存されている場合に可能です。
+  モデレーションコンソールには、公開環境の管理者と[&#x200B; コミュニティモデレーター](/help/communities/users.md)およびオーサー環境の管理者がアクセスできます。 これは、コミュニティコンテンツが[共通ストア &#x200B;](/help/communities/working-with-srp.md)に保存されている場合に可能です。
 
 * [インコンテクストモデレーション](in-context.md)
 
@@ -61,7 +61,7 @@ UGCの管理は、肯定的な貢献を認識し、否定的な貢献（スパ�
 
 * `Moderator`
 
-  [ コミュニティモデレーター](users.md#publishenvironmentusersandgroups) グループのメンバー（[ モデレーター権限](in-context.md#moderatorpermissions)）。
+  [&#x200B; コミュニティモデレーター](users.md#publishenvironmentusersandgroups) グループのメンバー（[&#x200B; モデレーター権限](in-context.md#moderatorpermissions)）。
 
 * `Creator`
 
@@ -202,12 +202,12 @@ UGCが削除されると、リポジトリから削除され、復元されな�
 
 ### 事前緩和 {#premoderation}
 
-UGCをプレモデレーションすると、モデレーションアクションで承認されるまで、投稿は公開されたサイトに表示されません。 [ コミュニティサイト ](/help/communities/sites-console.md)の作成中、「[ コンテンツは事前定義済み](sites-console.md#moderation)」チェックボックスをオンにすると、サイト全体の事前調整が有効になります。 コンポーネントがページに配置されている場合、モデレーションをサポートするコンポーネントは、編集ダイアログの設定を使用してプレモデレーション用に設定できます。
+UGCをプレモデレーションすると、モデレーションアクションで承認されるまで、投稿は公開されたサイトに表示されません。 [&#x200B; コミュニティサイト &#x200B;](/help/communities/sites-console.md)の作成中、「[&#x200B; コンテンツは事前定義済み](sites-console.md#moderation)」チェックボックスをオンにすると、サイト全体の事前調整が有効になります。 コンポーネントがページに配置されている場合、モデレーションをサポートするコンポーネントは、編集ダイアログの設定を使用してプレモデレーション用に設定できます。
 
-* [ コメント ](comments.md)および[件のレビュー](reviews.md)
+* [&#x200B; コメント &#x200B;](comments.md)および[件のレビュー](reviews.md)
 **[!UICONTROL User Moderation]** > **[!UICONTROL Pre-Moderation]**&#x200B;に含まれます。
 
-* [ フォーラム ](/help/communities/forum.md)、[ アイデア ](/help/communities/ideation-feature.md)、[QnA](/help/communities/working-with-qna.md)、および[ カレンダー](/help/communities/calendar.md)
+* [&#x200B; フォーラム &#x200B;](/help/communities/forum.md)、[&#x200B; アイデア &#x200B;](/help/communities/ideation-feature.md)、[QnA](/help/communities/working-with-qna.md)、および[&#x200B; カレンダー](/help/communities/calendar.md)
 **[!UICONTROL 設定]** > **[!UICONTROL モデレート]**&#x200B;で。
 
 ### スパム検出 {#spam-detection}
@@ -216,7 +216,7 @@ UGCをプレモデレーションすると、モデレーションアクショ�
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`。
 
-ただし、デフォルトのスパム語をカスタマイズまたは拡張するには、[ オーバーレイ ](/help/communities/overlay-comments.md)を含むデフォルトのスパム語の構造に従って、/apps ディレクトリに一連の単語を作成します。
+ただし、デフォルトのスパム語をカスタマイズまたは拡張するには、[&#x200B; オーバーレイ &#x200B;](/help/communities/overlay-comments.md)を含むデフォルトのスパム語の構造に従って、/apps ディレクトリに一連の単語を作成します。
 
 スパムワードを含むユーザー生成の投稿（ブログ、フォーラム、コメントなど、すべてのコンテンツタイプ）には、投稿の上に「この投稿はスパムとして分類されました」というテキストが表示されます。
 
@@ -226,7 +226,7 @@ UGCをプレモデレーションすると、モデレーションアクショ�
 
 スパム検出エンジンを有効にするには、次の手順に従います。
 
-1. `/system/console/configMgr`に移動して、[Web コンソール ](https://localhost:4502/system/console/configMgr)を開きます。
+1. `/system/console/configMgr`に移動して、[Web コンソール &#x200B;](https://localhost:4502/system/console/configMgr)を開きます。
 
 1. **AEM Communities Auto Moderation**&#x200B;設定を見つけて、編集します。
 1. **[!UICONTROL SpamProcess]** エントリを追加します。
@@ -239,7 +239,7 @@ UGCをプレモデレーションすると、モデレーションアクショ�
 
 ### 好感度 {#sentiment}
 
-センチメントは、投稿（UGC）に含まれるポジティブなキーワードとネガティブなキーワードの数（[ ウォッチワード ](#configuringwatchwords)）にもとづいて計算されます。
+センチメントは、投稿（UGC）に含まれるポジティブなキーワードとネガティブなキーワードの数（[&#x200B; ウォッチワード &#x200B;](#configuringwatchwords)）にもとづいて計算されます。
 
 センチメント分析では、事前設定済みの一連のルールを使用して、UGCのセンチメントを計算します。 デフォルトのルールは`/libs/cq/workflow/components/workflow/social/sentiments/rules`です。
 
@@ -256,7 +256,7 @@ UGCをプレモデレーションすると、モデレーションアクショ�
 
 分析が完了すると、センチメントはUGCと共に保存されます。
 
-[ バルクモデレーションコンソール ](/help/communities/moderation.md)から、センチメントが負、中立、正のいずれであるかに基づいて、UGCをフィルタリングして表示できます。
+[&#x200B; バルクモデレーションコンソール &#x200B;](/help/communities/moderation.md)から、センチメントが負、中立、正のいずれであるかに基づいて、UGCをフィルタリングして表示できます。
 
 #### Watchwords {#watchwords}
 
@@ -273,11 +273,11 @@ AEM Communitiesでは、[センチメント](#sentiment)を評価するプロセ
 センチメントとウォッチワードを設定するには：
 
 * オーサーインスタンスに管理者としてログインします。
-* [Web コンソール ](https://localhost:4502/system/console/configMgr)を開きます。
+* [Web コンソール &#x200B;](https://localhost:4502/system/console/configMgr)を開きます。
 * `sentimentprocess.name` を見つけます。
 * 設定を選択すると、編集モードで開くことができます。
 
-![ センチメントプロセス ](assets/sentimentprocess.png)
+![&#x200B; センチメントプロセス &#x200B;](assets/sentimentprocess.png)
 
 * **肯定的なウォッチワード**
 

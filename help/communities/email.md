@@ -35,20 +35,20 @@ AEM Communitiesでは、次の目的で電子メールを使用します。
 
 >[!CAUTION]
 >
->通知と購読の電子メールは、[ プライマリパブリッシャー](deploy-communities.md#primary-publisher)でのみ設定する必要があります。
+>通知と購読の電子メールは、[&#x200B; プライマリパブリッシャー](deploy-communities.md#primary-publisher)でのみ設定する必要があります。
 
 ## デフォルトのメールサービス設定 {#default-mail-service-configuration}
 
 デフォルトのメールサービスは、通知と購読の両方に必要です。
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール ](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
 
   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * `Day CQ Mail Service`を探します。
 * 編集アイコンを選択します。
 
-これは、[ メール通知の設定](../../help/sites-administering/notification.md)に関するドキュメントに基づいていますが、フィールド `"From" address`が&#x200B;*ではなく*&#x200B;必要であり、空のままにしておく必要があるという違いがあります。
+これは、[&#x200B; メール通知の設定](../../help/sites-administering/notification.md)に関するドキュメントに基づいていますが、フィールド `"From" address`が&#x200B;*ではなく*&#x200B;必要であり、空のままにしておく必要があるという違いがあります。
 
 例えば、次の例のように入力します（値が入力されているのは実例の場合のみ）。
 
@@ -82,11 +82,11 @@ AEM Communitiesでは、次の目的で電子メールを使用します。
 
 ## AEM Communitiesのメール設定 {#aem-communities-email-configuration}
 
-[ デフォルトのメールサービス ](#default-mail-service-configuration)を設定すると、リリースに含まれている`AEM Communities Email Reply Configuration` OSGi設定の2つの既存のインスタンスが機能するようになります。
+[&#x200B; デフォルトのメールサービス &#x200B;](#default-mail-service-configuration)を設定すると、リリースに含まれている`AEM Communities Email Reply Configuration` OSGi設定の2つの既存のインスタンスが機能するようになります。
 
 メールによる返信を許可する場合は、サブスクリプションのインスタンスのみを追加で設定する必要があります。
 
-1. [ メール ](#configuration-for-notifications) インスタンス：
+1. [&#x200B; メール &#x200B;](#configuration-for-notifications) インスタンス：
 
    通知の場合は、返信メールをサポートしていないので、変更しないでください。
 
@@ -96,7 +96,7 @@ AEM Communitiesでは、次の目的で電子メールを使用します。
 
 Communities メール設定インスタンスにアクセスするには：
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール ](../../help/sites-deploying/configuring-osgi.md)にアクセスします
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします
 
   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
@@ -151,11 +151,11 @@ Communities サブスクリプションの場合、メンバーがメールに�
 
   トラッカーIDがReply-to ヘッダーに追加されている場合は、この区切り文字が使用されます。 デフォルトは`+` （プラス記号）です。
 
-* 件名&#x200B;]**の**[!UICONTROL  トラッカーID プレフィックス
+* 件名&#x200B;**の** トラッカーID プレフィックス
 
   トラッカーIDが件名に追加されている場合は、この接頭辞が使用されます。 デフォルトは `post#` です。
 
-* メッセージ本文&#x200B;]**の**[!UICONTROL  トラッカーID プレフィックス
+* メッセージ本文&#x200B;**の** トラッカーID プレフィックス
 
   トラッカーIDがメッセージ本文に追加されている場合は、このプレフィックスが使用されます。 デフォルトは `Please do not remove this:` です。
 

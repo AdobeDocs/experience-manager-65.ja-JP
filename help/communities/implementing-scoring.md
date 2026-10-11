@@ -33,13 +33,13 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 スコアリングとバッジの主な要素は次のとおりです。
 
-* [ バッジ ](#assign-and-revoke-badges)を割り当てて、コミュニティ内のメンバーの役割を特定します。
+* [&#x200B; バッジ &#x200B;](#assign-and-revoke-badges)を割り当てて、コミュニティ内のメンバーの役割を特定します。
 
-* メンバーに対するバッジ ](#enable-scoring)の基本授与（作成されたコンテンツの量）:[ メンバーへのバッジの基本授与。
+* メンバーに対するバッジ [&#128279;](#enable-scoring)の基本授与（作成されたコンテンツの量）: メンバーへのバッジの基本授与。
 
-* [ メンバーをエキスパートとして識別するためのバッジ ](/help/communities/advanced.md)の高度な授与（作成されたコンテンツの品質）。
+* [&#x200B; メンバーをエキスパートとして識別するためのバッジ &#x200B;](/help/communities/advanced.md)の高度な授与（作成されたコンテンツの品質）。
 
-バッジの授与が[ デフォルトで有効になっていないことを&#x200B;**メモ**&#x200B;してください](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
+バッジの授与が[&#x200B; デフォルトで有効になっていないことを&#x200B;**メモ**&#x200B;してください](/help/communities/implementing-scoring.md#main-pars-text-237875536)。
 
 >[!CAUTION]
 >
@@ -59,13 +59,13 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 ### バッジ管理UI {#badge-management-ui}
 
-コミュニティ [ バッジコンソール ](/help/communities/badges.md)では、メンバーが獲得（授与）またはコミュニティ内の特定の役割（割り当て）を引き受けたときにメンバーに表示できるカスタムバッジを追加できます。
+コミュニティ [&#x200B; バッジコンソール &#x200B;](/help/communities/badges.md)では、メンバーが獲得（授与）またはコミュニティ内の特定の役割（割り当て）を引き受けたときにメンバーに表示できるカスタムバッジを追加できます。
 
 ### 割り当て済みバッジ {#assigned-badges}
 
 役割ベースのバッジは、管理者がコミュニティ内での役割に基づいてコミュニティメンバーに割り当てます。
 
-割り当てられた（および授与された）バッジは、選択した[SRP](/help/communities/srp.md)に保存され、直接アクセスできません。 GUIが使用可能になるまで、ロールベースのバッジを割り当てる唯一の方法は、コードまたはcURLを使用して割り当てることです。 cURLの手順については、「[ バッジの割り当てと取り消し](#assign-and-revoke-badges)」というタイトルのセクションを参照してください。
+割り当てられた（および授与された）バッジは、選択した[SRP](/help/communities/srp.md)に保存され、直接アクセスできません。 GUIが使用可能になるまで、ロールベースのバッジを割り当てる唯一の方法は、コードまたはcURLを使用して割り当てることです。 cURLの手順については、「[&#x200B; バッジの割り当てと取り消し](#assign-and-revoke-badges)」というタイトルのセクションを参照してください。
 
 このリリースには、次の3つのロールベースのバッジが含まれています。
 
@@ -78,7 +78,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 * **特権メンバー**
   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
-  ![割り当て済みバッジ ](assets/assigned-badges.png)
+  ![割り当て済みバッジ &#x200B;](assets/assigned-badges.png)
 
 ### 授与されたバッジ {#awarded-badges}
 
@@ -100,17 +100,17 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 * **ブロンズ**
   `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-  ![授与されたバッジ ](assets/awarded-badges.png)
+  ![授与されたバッジ &#x200B;](assets/awarded-badges.png)
 
 >[!NOTE]
 >
 >スコアリングルールは、不適切としてフラグ付けされた投稿に対してマイナスポイントを割り当て、スコア値に影響を与えるように設定できます。 ただし、バッジが獲得されると、スコアリングポイントの削減やスコアリングルールの変更により、バッジは自動的に削除されません。
 >
->付与されたバッジは、割り当てられたバッジと同じ方法で取り消すことができます。 「[ バッジの割り当てと取り消し](#assign-and-revoke-badges)」の節を参照してください。 今後は、メンバーのバッジを管理するためのUIも追加される予定です。
+>付与されたバッジは、割り当てられたバッジと同じ方法で取り消すことができます。 「[&#x200B; バッジの割り当てと取り消し](#assign-and-revoke-badges)」の節を参照してください。 今後は、メンバーのバッジを管理するためのUIも追加される予定です。
 
 ### カスタムバッジ {#custom-badges}
 
-カスタムバッジは、[ バッジコンソール ](/help/communities/badges.md)を使用してインストールでき、バッジルールで割り当てられるか指定されます。
+カスタムバッジは、[&#x200B; バッジコンソール &#x200B;](/help/communities/badges.md)を使用してインストールでき、バッジルールで割り当てられるか指定されます。
 
 バッジコンソールからインストールすると、カスタムバッジがパブリッシュ環境に自動的にレプリケートされます。
 
@@ -118,13 +118,13 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 スコアリングはデフォルトでは有効になっていません。 バッジのスコアリングと授与を設定および有効化するための基本的な手順は次のとおりです。
 
-* ポイントを獲得するためのルールを特定します（[ ルールのスコアリング ](#scoring-rules)）。
-* スコアリングルールごとに累積されたポイントに対して、[ バッジ ](#badges) （[ バッジングルール ](#badging-rules)）を割り当てます。
+* ポイントを獲得するためのルールを特定します（[&#x200B; ルールのスコアリング &#x200B;](#scoring-rules)）。
+* スコアリングルールごとに累積されたポイントに対して、[&#x200B; バッジ &#x200B;](#badges) （[&#x200B; バッジングルール &#x200B;](#badging-rules)）を割り当てます。
 
-* [ スコアリング ルールとバッジ ルールをコミュニティ サイトに適用します](#apply-rules-to-content)。
-* [ コミュニティ機能のバッジを有効にする](#enable-badges-for-component)。
+* [&#x200B; スコアリング ルールとバッジ ルールをコミュニティ サイトに適用します](#apply-rules-to-content)。
+* [&#x200B; コミュニティ機能のバッジを有効にする](#enable-badges-for-component)。
 
-フォーラムとコメントのデフォルトのスコアリングとバッジルールを使用してコミュニティサイトのスコアリングを有効にするには、[ クイックテスト ](#quick-test)の節を参照してください。
+フォーラムとコメントのデフォルトのスコアリングとバッジルールを使用してコミュニティサイトのスコアリングを有効にするには、[&#x200B; クイックテスト &#x200B;](#quick-test)の節を参照してください。
 
 ### コンテンツへのルールの適用 {#apply-rules-to-content}
 
@@ -138,18 +138,18 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 | **プロパティ** | **タイプ** | **説明** |
 |---|---|---|
-| badgingRules | 文字列 | [ バッジングルール ](#badging-rules)の配列リスト |
-| scoringRules | 文字列 | [ スコアリングルール ](#scoring-rules)の配列リスト |
+| badgingRules | 文字列 | [&#x200B; バッジングルール &#x200B;](#badging-rules)の配列リスト |
+| scoringRules | 文字列 | [&#x200B; スコアリングルール &#x200B;](#scoring-rules)の配列リスト |
 
 >[!NOTE]
 >
->スコアリングルールがバッジの授与に影響を与えていないようであれば、スコアリングルールがバッジングルールのscoringRules プロパティによってブロックされていないことを確認してください。 「[ バッジルール ](#badging-rules)」の節を参照してください。
+>スコアリングルールがバッジの授与に影響を与えていないようであれば、スコアリングルールがバッジングルールのscoringRules プロパティによってブロックされていないことを確認してください。 「[&#x200B; バッジルール &#x200B;](#badging-rules)」の節を参照してください。
 
 ### コンポーネントのバッジを有効にする {#enable-badges-for-component}
 
-スコアリングとベイディングのルールは、[ オーサリングモード ](/help/communities/author-communities.md)でコンポーネント設定を編集してバッジを有効にしたコンポーネントのインスタンスに対してのみ有効です。
+スコアリングとベイディングのルールは、[&#x200B; オーサリングモード &#x200B;](/help/communities/author-communities.md)でコンポーネント設定を編集してバッジを有効にしたコンポーネントのインスタンスに対してのみ有効です。
 
-ブール型プロパティ `allowBadges`は、コンポーネントインスタンスのバッジの表示を有効または無効にします。 **バッジを表示**&#x200B;というラベルの付いたチェックボックスを使用して、フォーラム、QnAおよびコメントコンポーネントの[ コンポーネント編集ダイアログ ](/help/communities/author-communities.md)で設定できます。
+ブール型プロパティ `allowBadges`は、コンポーネントインスタンスのバッジの表示を有効または無効にします。 **バッジを表示**&#x200B;というラベルの付いたチェックボックスを使用して、フォーラム、QnAおよびコメントコンポーネントの[&#x200B; コンポーネント編集ダイアログ &#x200B;](/help/communities/author-communities.md)で設定できます。
 
 #### 例：Forum コンポーネントインスタンスのallowBadges {#example-allowbadges-for-forum-component-instance}
 
@@ -210,7 +210,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 * member-comment-create
 * member-receive-vote
 
-サブルールは、[動詞とトピック ](#topics-and-verbs)を指定する`jcr:content` ノードにプロパティを持つタイプ `cq:Page`のノードです。
+サブルールは、[動詞とトピック &#x200B;](#topics-and-verbs)を指定する`jcr:content` ノードにプロパティを持つタイプ `cq:Page`のノードです。
 
 <table>
  <tbody>
@@ -277,7 +277,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 ### 含まれるスコアリングルールとサブルール {#included-scoring-rules-and-sub-rules}
 
-このリリースには、[ フォーラム機能](/help/communities/functions.md#forum-function)の2つのスコアリングルールが含まれています（フォーラム機能のフォーラムおよびコメントコンポーネント用にそれぞれ1つ）。
+このリリースには、[&#x200B; フォーラム機能](/help/communities/functions.md#forum-function)の2つのスコアリングルールが含まれています（フォーラム機能のフォーラムおよびコメントコンポーネント用にそれぞれ1つ）。
 
 1. /libs/settings/community/scoring/rules/comments-scoring
 
@@ -333,7 +333,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
   * ゴールドバッジは80 ポイントが貯まると授与されます。
 
-バッジルールは、ポイントの累積方法を決定するスコアリングルールと組み合わされます。 「[ コンテンツにルールを適用](#apply-rules-to-content)」の節を参照してください。
+バッジルールは、ポイントの累積方法を決定するスコアリングルールと組み合わされます。 「[&#x200B; コンテンツにルールを適用](#apply-rules-to-content)」の節を参照してください。
 
 バッジングルールの`scoringRules` プロパティは、その特定のバッジングルールとペアにできるスコアリングルールを単に制限します。
 
@@ -375,7 +375,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 ### 含まれるバッジルール {#included-badging-rules}
 
-このリリースには、[ フォーラムとコメントのスコアリングルール ](#includedscoringrules)に対応する2つのバッジルールが含まれています。
+このリリースには、[&#x200B; フォーラムとコメントのスコアリングルール &#x200B;](#includedscoringrules)に対応する2つのバッジルールが含まれています。
 
 * `/libs/settings/community/badging/rules/comments-badging`
 
@@ -394,7 +394,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 ## バッジの割り当てと取り消し {#assign-and-revoke-badges}
 
-バッジは、[ メンバーコンソール ](/help/communities/members.md#badges-tab)を使用するか、cURL コマンドを使用してプログラムでメンバーに割り当てることができます。
+バッジは、[&#x200B; メンバーコンソール &#x200B;](/help/communities/members.md#badges-tab)を使用するか、cURL コマンドを使用してプログラムでメンバーに割り当てることができます。
 
 次のcURL コマンドは、バッジの割り当てと取り消しに対するHTTP リクエストに必要な処理を示しています。 基本的な形式は次のとおりです。
 
@@ -420,8 +420,8 @@ cURL -i -X POST -H *ヘッダー* -u *サインイン* -F *操作* -F *バッジ
 >
 >*member-profile-url*:
 >
->* [ トンネルサービス ](/help/communities/users.md#tunnel-service)が有効になっている場合、オーサーインスタンスを参照できます。
->* 不明瞭でランダムな名前である可能性があります。承認可能なIDについては、[ セキュリティチェックリスト ](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path)を参照してください。
+>* [&#x200B; トンネルサービス &#x200B;](/help/communities/users.md#tunnel-service)が有効になっている場合、オーサーインスタンスを参照できます。
+>* 不明瞭でランダムな名前である可能性があります。承認可能なIDについては、[&#x200B; セキュリティチェックリスト &#x200B;](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path)を参照してください。
 
 ### 例： {#examples}
 
@@ -451,11 +451,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 コンポーネントのSocialEvent インスタンスは、`topic`に対して発生したイベントを`actions`として記録します。 SocialEventには、アクションに関連付けられた`verb`を返すメソッドが含まれています。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;関係があります。
 
-配信されたコミュニティコンポーネントについて、次の表は、[ スコアリングサブルール ](#scoring-sub-rules)で使用できる`topic`ごとに定義された`verbs`を示しています。
+配信されたコミュニティコンポーネントについて、次の表は、[&#x200B; スコアリングサブルール &#x200B;](#scoring-sub-rules)で使用できる`topic`ごとに定義された`verbs`を示しています。
 
 >[!NOTE]
 >
->新しいブール型プロパティ `allowBadges`は、コンポーネントインスタンスのバッジの表示を有効または無効にします。 **バッジの表示**&#x200B;というラベルの付いたチェックボックスを使用して、更新された[ コンポーネント編集ダイアログ ](/help/communities/author-communities.md)で設定できます。
+>新しいブール型プロパティ `allowBadges`は、コンポーネントインスタンスのバッジの表示を有効または無効にします。 **バッジの表示**&#x200B;というラベルの付いたチェックボックスを使用して、更新された[&#x200B; コンポーネント編集ダイアログ &#x200B;](/help/communities/author-communities.md)で設定できます。
 
 **[カレンダーコンポーネント](/help/communities/calendar.md)**
 SocialEvent `topic`= com/adobe/cq/social/calendar
@@ -568,13 +568,13 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 スコアリングとバッジルールがweb サイトのコンテンツに適用されていて、バッジがアクティビティに付与されていない場合は、そのコンポーネントのインスタンスでバッジが有効になっていることを確認します。
 
-コンポーネント ](#enable-badges-for-component)のバッジを有効にするを参照してください。[
+コンポーネント [&#128279;](#enable-badges-for-component)のバッジを有効にするを参照してください。
 
 ### スコアリングルールは効果がありません {#scoring-rule-has-no-effect}
 
 スコアリングとバッジのルールがweb サイトのコンテンツに適用され、一部のアクションに対してバッジが付与されているが、その他のアクションに対してバッジが付与されていない場合は、バッジルールが適用されるスコアリングルールを制限していないことを確認してください。
 
-[ バッジングルール ](#badging-rules)の`scoringRules` プロパティを参照してください。
+[&#x200B; バッジングルール &#x200B;](#badging-rules)の`scoringRules` プロパティを参照してください。
 
 ### 大文字と小文字を区別 {#case-sensitive-typo}
 
@@ -584,7 +584,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## クイックテスト {#quick-test}
 
-[はじめにチュートリアル ](/help/communities/getting-started.md) （エンゲージ）サイトを使用して、スコアリングとバッジの作成をすばやく試すことができます。
+[はじめにチュートリアル &#x200B;](/help/communities/getting-started.md) （エンゲージ）サイトを使用して、スコアリングとバッジの作成をすばやく試すことができます。
 
 * 作成者のCRXDE Liteへのアクセス。
 * 基本ページを参照します。
@@ -651,8 +651,8 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## 追加情報 {#additional-information}
 
-詳細については、開発者向けの[ スコアリングとバッジの基本](/help/communities/configure-scoring.md) ページを参照してください。
+詳細については、開発者向けの[&#x200B; スコアリングとバッジの基本](/help/communities/configure-scoring.md) ページを参照してください。
 
-高度なスコアリングエンジンについて詳しくは、[高度なスコアリングとバッジ ](/help/communities/advanced.md)を参照してください。
+高度なスコアリングエンジンについて詳しくは、[高度なスコアリングとバッジ &#x200B;](/help/communities/advanced.md)を参照してください。
 
-設定可能なリーダーボード [ コンポーネント ](/help/communities/enabling-leaderboard.md)と[関数](/help/communities/functions.md#leaderboard-function)は、コミュニティサイトでのメンバーとそのスコアの表示を簡素化します。
+設定可能なリーダーボード [&#x200B; コンポーネント &#x200B;](/help/communities/enabling-leaderboard.md)と[関数](/help/communities/functions.md#leaderboard-function)は、コミュニティサイトでのメンバーとそのスコアの表示を簡素化します。

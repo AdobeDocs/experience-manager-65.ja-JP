@@ -109,7 +109,7 @@ XFA ベースのアダプティブフォームの事前入力 XML と送信済�
 
 Prefill-Submit-Data-ContentPackage.zip
 
-[ ファイルを取得](assets/prefill-submit-data-contentpackage.zip)
+[&#x200B; ファイルを取得](assets/prefill-submit-data-contentpackage.zip)
 事前入力データと送信されたデータを含むサンプル
 
 ### XML スキーマベースのアダプティブフォーム  {#xml-schema-af}
@@ -355,7 +355,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 prefill-page component.zip
 
-[ ファイルを取得](assets/prefill-page-component.zip)
+[&#x200B; ファイルを取得](assets/prefill-page-component.zip)
 ページコンポーネントのprefill.jsp サンプル
 
 ## AEM Forms カスタム事前入力サービス {#aem-forms-custom-prefill-service}

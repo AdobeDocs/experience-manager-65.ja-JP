@@ -31,7 +31,7 @@ AEM Communities 6.1では、サイト訪問者（メンバー）がパブリッ�
 
 AEMでは、サイトコンテンツをオーサーからパブリッシュまでレプリケートするノードストアを使用します。一方、AEM Communitiesでは、レプリケートされないUGCに対して、単一の一般的なストアを使用します。
 
-共通のUGC ストアの場合、[ ストレージリソースプロバイダー（SRP） ](working-with-srp.md)を選択する必要があります。 推奨される選択肢は次のとおりです。
+共通のUGC ストアの場合、[&#x200B; ストレージリソースプロバイダー（SRP） &#x200B;](working-with-srp.md)を選択する必要があります。 推奨される選択肢は次のとおりです。
 
 * [DSRP - リレーショナルデータベースストレージリソースプロバイダー](dsrp.md)
 * [MSRP - MongoDB ストレージリソースプロバイダー](msrp.md)
@@ -50,7 +50,7 @@ AEMでは、サイトコンテンツをオーサーからパブリッシュま�
 
 >[!NOTE]
 >
->AEM Platformについて詳しくは、[推奨されるデプロイメント ](../../help/sites-deploying/recommended-deploys.md)および[AEM Platformの概要](../../help/sites-deploying/data-store-config.md)を参照してください。
+>AEM Platformについて詳しくは、[推奨されるデプロイメント &#x200B;](../../help/sites-deploying/recommended-deploys.md)および[AEM Platformの概要](../../help/sites-deploying/data-store-config.md)を参照してください。
 
 ## 本番用 {#for-production}
 
@@ -60,13 +60,13 @@ UGC用の共通ストアを確立することは不可欠です。そのため�
 
 1. 予想されるUGCのボリュームが多く、ローカル MongoDB インスタンスが可能な場合は、[MSRP](msrp.md)を選択します。
 
-1. ページコンテンツの最適なパフォーマンスを実現するには、[ パブリッシュファーム ](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)と[ASRP](asrp.md)を選択すると、比較的簡単な操作でUGCを最適に拡張できます。
+1. ページコンテンツの最適なパフォーマンスを実現するには、[&#x200B; パブリッシュファーム &#x200B;](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)と[ASRP](asrp.md)を選択すると、比較的簡単な操作でUGCを最適に拡張できます。
 
 どちらの場合も、デプロイメントは任意のOAK マイクロカーネルに基づいている可能性があります。
 
 適切な共通ストアを選択するには、それぞれの一意の[特性](working-with-srp.md#characteristics-of-srp-options)を慎重に検討します。
 
-Oak マイクロカーナルについて詳しくは、[おすすめのデプロイメント ](../../help/sites-deploying/recommended-deploys.md)を参照してください。
+Oak マイクロカーナルについて詳しくは、[おすすめのデプロイメント &#x200B;](../../help/sites-deploying/recommended-deploys.md)を参照してください。
 
 ### TarMK パブリッシュファーム {#tarmk-publish-farm}
 
@@ -107,7 +107,7 @@ Oak マイクロカーナルについて詳しくは、[おすすめのデプロ
 
   オーサー環境とパブリッシュ環境でのユーザーとユーザーグループの役割について説明します。
 
-* UGC [共通ストア ](working-with-srp.md)
+* UGC [共通ストア &#x200B;](working-with-srp.md)
 
   サイトコンテンツとは別に、コミュニティコンテンツのストレージについて説明します。
 

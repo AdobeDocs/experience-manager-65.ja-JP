@@ -43,9 +43,9 @@ ht-degree: 1%
 
 ユーザーがレビューする機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[ コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
-[必要なクライアントサイドライブラリ ](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side)が含まれている場合、`Calendar` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side)が含まれている場合、`Calendar` コンポーネントはこのように表示されます。
 
 ![calendar-component](assets/calendar-component.png)
 
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 * **最大アタッチ画像ファイル サイズ**
 
-  「ファイルのアップロードを許可」がオンになっている場合にのみ関連します。 アップロードされた画像ファイルの最大バイト数。 デフォルトは2097152** **（2 Mb）です。
+  「ファイルのアップロードを許可」がオンになっている場合にのみ関連します。 アップロードされた画像ファイルの最大バイト数。 デフォルトは2097152 **&#x200B; **（2 Mb）です。
 
 * **許可されている表紙画像の種類**
 
@@ -127,9 +127,9 @@ ht-degree: 1%
 
 * **おすすめのコンテンツを許可**
 
-  チェックを入れると、アイデアは[おすすめコンテンツ ](/help/communities/featured.md)として識別できます。 デフォルトはオフです。
+  チェックを入れると、アイデアは[おすすめコンテンツ &#x200B;](/help/communities/featured.md)として識別できます。 デフォルトはオフです。
 
-「**ユーザーモデレーション**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、「[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)」を参照してください。
+「**ユーザーモデレーション**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、「[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)」を参照してください。
 
 #### 「User Moderation」タブ {#user-moderation-tab}
 
@@ -171,11 +171,11 @@ ht-degree: 1%
 
 * **推奨回数**
 
-  フォーラムに投稿するメンバーに提案として表示するタグの数を入力します。 デフォルトは**-**1 （制限なし）です。
+  フォーラムに投稿するメンバーに提案として表示するタグの数を入力します。 デフォルトは&#x200B;**-**&#x200B;1 （制限なし）です。
 
 >[!NOTE]
 >
->タグの名前空間（分類）を追加する方法を学ぶことができる、[ タグの管理](/help/sites-administering/tags.md)にアクセスしてください。
+>タグの名前空間（分類）を追加する方法を学ぶことができる、[&#x200B; タグの管理](/help/sites-administering/tags.md)にアクセスしてください。
 
 #### 「翻訳」タブ {#translation-tab}
 
@@ -195,7 +195,7 @@ ht-degree: 1%
 
 ### モデレーターと管理者 {#moderators-and-administrators}
 
-サインインしたユーザーがモデレーターまたは管理者権限を持っている場合、イベントに投稿されたすべてのカレンダーイベントとコメントに対して、[ モデレーションタスク ](/help/communities/moderate-ugc.md)を（コンポーネントの設定で許可されているように）実行できます。
+サインインしたユーザーがモデレーターまたは管理者権限を持っている場合、イベントに投稿されたすべてのカレンダーイベントとコメントに対して、[&#x200B; モデレーションタスク &#x200B;](/help/communities/moderate-ugc.md)を（コンポーネントの設定で許可されているように）実行できます。
 
 ![moderators-view](assets/moderators-view.png)
 
@@ -225,8 +225,8 @@ ht-degree: 1%
 
 詳しくは、開発者向けの[Calendar Essentials](/help/communities/calendar-basics-for-developers.md) ページを参照してください。
 
-カレンダーのイベントとコメントの管理については、[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+カレンダーのイベントとコメントの管理については、[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
-カレンダーイベントとコメントのタグ付けについては、[ ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
+カレンダーイベントとコメントのタグ付けについては、[&#x200B; ユーザー生成コンテンツのタグ付け](/help/communities/tag-ugc.md)を参照してください。
 
-カレンダーイベントとコメントの翻訳については、[ ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
+カレンダーイベントとコメントの翻訳については、[&#x200B; ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。

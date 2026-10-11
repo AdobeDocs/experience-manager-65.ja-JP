@@ -89,7 +89,7 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 >* オーサー環境のエージェント：リバースレプリケーションエージェント（publish_reverse）
 >* パブリッシュ環境のエージェント：リバースレプリケーション（outbox）
 >
->エージェントまたはキューのステータスを確認するには、**ツール**コンソールを使用します。
+>エージェントまたはキューのステータスを確認するには、**ツール**&#x200B;コンソールを使用します。
 >[レプリケーションエージェントのモニタリング](#monitoring-your-replication-agents)を参照してください。
 
 #### レプリケーション（オーサー環境からパブリッシュ環境へ） {#replication-author-to-publish}
@@ -119,7 +119,7 @@ AEM の標準インストールに含まれている we-retail web サイトを�
 * Dispatcher フラッシュ
 これは、Dispatcher キャッシュの管理に使用されます。 詳しくは、[オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-the-authoring-environment)および[パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance)を参照してください。
 
-* [ リバースレプリケーション](#reverse-replication-publish-to-author)
+* [&#x200B; リバースレプリケーション](#reverse-replication-publish-to-author)
 パブリッシュからオーサーへのレプリケートに使用します。 リバースレプリケーションは、フォーラム、ブログ、コメントなどのコミュニティ機能には使用されません。 アウトボックスが有効化されていないので、事実上、この機能は無効になっています。 リバースレプリケーションを使用するには、カスタム設定が必要になります。
 
 * 静的エージェント
@@ -457,7 +457,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 >[!NOTE]
 >
->これは、[ エージェントユーザーID](#agentuserid)を使用して、個々のパブリッシュ環境にレプリケートする異なるコンテンツを選択すると組み合わせることができます。 パブリッシュ環境ごとに：
+>これは、[&#x200B; エージェントユーザーID](#agentuserid)を使用して、個々のパブリッシュ環境にレプリケートする異なるコンテンツを選択すると組み合わせることができます。 パブリッシュ環境ごとに：
 >
 >1. パブリッシュ環境へのレプリケーション用のレプリケーションエージェントを設定します。
 >1. 特定のパブリッシュ環境にレプリケートされたコンテンツの読み取りに必要なアクセス権を持つユーザーアカウントを設定します。

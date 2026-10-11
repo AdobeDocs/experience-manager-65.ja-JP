@@ -32,17 +32,17 @@ ht-degree: 4%
 
 基本的な情報については、次を参照してください。
 
-* [使用状況の詳細とデバッグツールを提供するクライアントサイドライブラリ ](/help/sites-developing/clientlibs.md)の使用
-* SCF コンポーネントをカスタマイズする際に役立つ情報を提供するSCF](/help/communities/client-customize.md#clientlibs)の[Clientlibs
+* [使用状況の詳細とデバッグツールを提供するクライアントサイドライブラリ &#x200B;](/help/sites-developing/clientlibs.md)の使用
+* SCF コンポーネントをカスタマイズする際に役立つ情報を提供するSCF[&#128279;](/help/communities/client-customize.md#clientlibs)のClientlibs
 
 
 ## Clientlibsが必要な理由 {#why-clientlibs-are-required}
 
 コンポーネントの適切な機能（JavaScript）とスタイル設定（CSS）には、Clientlibが必要です。
 
-機能に[ コミュニティ関数](/help/communities/functions.md)が存在する場合、必要なクライアントライブラリを含むすべての必要なコンポーネントと設定がコミュニティサイトに存在します。 追加のコンポーネントを作成者が使用できる場合にのみ、追加のクライアントライブラリを追加する必要があります。
+機能に[&#x200B; コミュニティ関数](/help/communities/functions.md)が存在する場合、必要なクライアントライブラリを含むすべての必要なコンポーネントと設定がコミュニティサイトに存在します。 追加のコンポーネントを作成者が使用できる場合にのみ、追加のクライアントライブラリを追加する必要があります。
 
-必要なclientlibが見つからない場合、[Communities コンポーネントをページ ](/help/communities/author-communities.md)に追加すると、JavaScript エラーが発生し、予期しない外観になる可能性があります。
+必要なclientlibが見つからない場合、[Communities コンポーネントをページ &#x200B;](/help/communities/author-communities.md)に追加すると、JavaScript エラーが発生し、予期しない外観になる可能性があります。
 
 ### 例：Clientlibsを使用しないレビューの配置 {#example-placed-reviews-without-clientlibs}
 
@@ -56,9 +56,9 @@ ht-degree: 4%
 
 開発者に必要な機能情報によって、必要なクライアントライブラリが特定されます。
 
-また、AEM インスタンスから[ コミュニティコンポーネントガイド ](/help/communities/components-guide.md)を参照すると、コンポーネントに必要なclientlib カテゴリのリストにアクセスできます。
+また、AEM インスタンスから[&#x200B; コミュニティコンポーネントガイド &#x200B;](/help/communities/components-guide.md)を参照すると、コンポーネントに必要なclientlib カテゴリのリストにアクセスできます。
 
-例えば、[ レビューページ ](https://localhost:4502/content/community-components/en/reviews.html)の上部に、リストされている必須のclientlibは次のとおりです
+例えば、[&#x200B; レビューページ &#x200B;](https://localhost:4502/content/community-components/en/reviews.html)の上部に、リストされている必須のclientlibは次のとおりです
 
 * cq.ckeditor
 * cq.social.hbs.reviews

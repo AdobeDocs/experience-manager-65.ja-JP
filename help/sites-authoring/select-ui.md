@@ -35,10 +35,10 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
 
 使用する UI を様々な場所で定義できます。
 
-* [ インスタンスのデフォルト UIの設定](#configuring-the-default-ui-for-your-instance)
+* [&#x200B; インスタンスのデフォルト UIの設定](#configuring-the-default-ui-for-your-instance)
 これは、ユーザーログイン時に表示するデフォルトのUIを設定します。 ユーザーは、この設定を上書きして、自分のアカウントまたは現在のセッション用に別の UI を選択できます。
 
-* [ アカウントのクラシック UI オーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
+* [&#x200B; アカウントのクラシック UI オーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
 これは、ページを編集する際にUIをデフォルトに設定しますが、ユーザーはこれを上書きし、アカウントまたは現在のセッションに対して別のUIを選択できます。
 
 * [現在のセッションのクラシック UIに切り替える](#switching-to-classic-ui-for-the-current-session)
