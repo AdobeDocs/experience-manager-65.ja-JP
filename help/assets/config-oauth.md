@@ -41,7 +41,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->必要に応じて、[サポートプロセス](https://experienceleague.adobe.com/?lang=ja&support-tab=home#support)に従ってサポートチケットを送信できます。
+>必要に応じて、[サポートプロセス](https://experienceleague.adobe.com/ja?lang=ja&support-tab=home#support)に従ってサポートチケットを送信できます。
 
 ## 既存の AMS ユーザーの OAuth 設定 {#oauth-config-new-ams-users}
 
@@ -58,7 +58,7 @@ OAuth 設定には、次の前提条件が必要です。
 
 ### 既存の AMS およびオンプレミスユーザーの OAuth 設定 {#steps-config-oauth-onprem}
 
-次の手順は、システム管理者が **CRXDE** で実行できます。 AMS のお客様は、[サポートプロセス](https://experienceleague.adobe.com/?lang=ja&support-tab=home#support)に従ってアドビ担当者に連絡するか、サポートチケットを送信できます。
+次の手順は、システム管理者が **CRXDE** で実行できます。 AMS のお客様は、[サポートプロセス](https://experienceleague.adobe.com/ja?lang=ja&support-tab=home#support)に従ってアドビ担当者に連絡するか、サポートチケットを送信できます。
 
 1. `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`で以下のプロパティを追加または更新します。
 
@@ -151,7 +151,7 @@ OAuth 設定には、次の前提条件が必要です。
 
    >[!NOTE]
    >
-   >[!UICONTROL サービス URL] として提供された URL は、ブラウザーからアクセスできず、404 エラーが発生します。 設定は、[!UICONTROL サービス URL] パラメーターの同じ値で正常に動作します。 サービスの全体的なステータスとメンテナンススケジュールについては、[https://status.adobe.com](https://status.adobe.com) を参照してください。
+   >[!UICONTROL サービス URL] として提供された URL は、ブラウザーからアクセスできず、404 エラーが発生します。 設定は、[!UICONTROL サービス URL] パラメーターの同じ値で正常に動作します。 サービスの全体的なステータスとメンテナンススケジュールについては、[https://status.adobe.com/ja-jp](https://status.adobe.com/ja-jp) を参照してください。
 
 1. 「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックし、公開証明書ファイル `AEM-SmartTags.crt` をダウンロードします。 この証明書は Adobe Developer Console にアップロードする必要がなくなりました。
 

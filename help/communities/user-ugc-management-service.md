@@ -36,7 +36,7 @@ AEM Communitiesでは、すぐに利用できるAPIを通じてユーザーの�
 
 >[!NOTE]
 >
->AEM Communities[&#128279;](/help/communities/analytics.md) サイトでAdobe Analyticsを設定した場合、キャプチャしたユーザーデータはAdobe Analytics サーバーに送信されます。 Adobe Analyticsには、ユーザーデータへのアクセス、書き出し、削除をおこない、GDPRに準拠するためのAPIが用意されています。 詳細については、[&#x200B; アクセス要求と削除要求の送信](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
+>AEM Communities[&#128279;](/help/communities/analytics.md) サイトでAdobe Analyticsを設定した場合、キャプチャしたユーザーデータはAdobe Analytics サーバーに送信されます。 Adobe Analyticsには、ユーザーデータへのアクセス、書き出し、削除をおこない、GDPRに準拠するためのAPIが用意されています。 詳細については、[&#x200B; アクセス要求と削除要求の送信](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html?lang=ja)を参照してください。
 
 これらのAPIを使用するには、UserUgcManagement サービスをアクティブ化して`/services/social/ugcmanagement` エンドポイントを有効にする必要があります。 このサービスをアクティブにするには、[GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)で利用可能な[&#x200B; サンプルサーブレット &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)をインストールします。 次に、次のようなhttp リクエストを使用して、コミュニティサイトのパブリッシュインスタンスのエンドポイントを適切なパラメーターでクリックします。
 

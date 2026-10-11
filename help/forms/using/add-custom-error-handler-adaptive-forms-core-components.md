@@ -184,7 +184,7 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
 アダプティブフォームでエラーハンドラーを使用する前に、次が必要です。
 
 * [環境でのアダプティブフォームコアコンポーネントの有効化](enable-adaptive-forms-core-components.md)。
-* [カスタム関数作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)の基本知識。
+* [カスタム関数作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=ja#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)の基本知識。
 * [Apache Maven](https://maven.apache.org/download.cgi) の最新リリースをインストールします。
 
 ## ルールエディターを使用したエラーハンドラーの追加 {#add-error-handler-using-rule-editor}

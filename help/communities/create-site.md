@@ -126,7 +126,7 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 >[!NOTE]
 >
->[&#x200B; トンネルサービス &#x200B;](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)では、パブリッシュ環境でのみ存在するメンバーとグループを選択できます。
+>[&#x200B; トンネルサービス &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)では、パブリッシュ環境でのみ存在するメンバーとグループを選択できます。
 
 新しいサイトの![&#x200B; ユーザーの役割](assets/site-admin-1.png)
 

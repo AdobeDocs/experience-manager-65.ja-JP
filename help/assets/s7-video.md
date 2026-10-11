@@ -39,7 +39,7 @@ Dynamic Media Classic のビデオの統合により、最適化されたビデ�
 
 * **[!UICONTROL Scene7 ビデオ]**&#x200B;コンポーネントでは、デスクトップ、タブレットおよびモバイルで適切な形式と画質を使用してビデオを再生するために、デバイスと帯域幅の検出を自動的に実行します。
 * Assets - 単一のビデオアセットだけでなく、アダプティブビデオセットを含めることもできます。 アダプティブビデオセットには、複数の画面をシームレスに再生するのに必要なすべてのビデオレンディションが含まれています。 アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。 デスクトップ、iOS、Android™、BlackBerry®、Windows モバイルデバイスなど、複数の画面にわたるアダプティブビデオストリーミングに、S7 ビデオコンポーネントとアダプティブビデオセットを使用します。
-<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
+<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/ja_JP/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
 ## FFMPEG と Dynamic Media Classic について {#about-ffmpeg-and-scene}
 

@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ユーザーはすべてのコンテンツにアクセスしていますか？ アプリを放棄しているか、その場合、どこで放棄しているか、などです。 どれくらいの頻度でアプリに滞在し、どれくらいの頻度でアプリを使用するために再訪問するか？ リテンションを高めるために、どのような変化を導入し、それを測定できますか？ クラッシュ率について、あなたのアプリはあなたのユーザーのためにクラッシュしていますか？
 
-[Adobe Mobile Services](https://business.adobe.com/products/campaign/mobile-marketing.html)と連携することで、Adobe Experience Manager（AEM）アプリの[&#x200B; モバイルアプリ分析](https://business.adobe.com/products/analytics/mobile-marketing.html)を活用できます。
+[Adobe Mobile Services](https://business.adobe.com/jp/products/campaign/mobile-marketing.html)と連携することで、Adobe Experience Manager（AEM）アプリの[&#x200B; モバイルアプリ分析](https://business.adobe.com/jp/products/analytics/mobile-marketing.html)を活用できます。
 
 AEMアプリを計測することで、利用者がモバイルアプリやコンテンツにどのようにエンゲージしているのかを追跡、レポート、把握し、ローンチ、アプリ滞在時間、クラッシュ率などの主要なライフサイクル指標を測定できます。
 

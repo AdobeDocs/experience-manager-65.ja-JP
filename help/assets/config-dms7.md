@@ -64,7 +64,7 @@ ht-degree: 98%
 
 ## Scene7 モードの Dynamic Media の有効化 {#enabling-dynamic-media-in-scene-mode}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) はデフォルトで無効になっています。 Dynamic Media の機能を活用するには、Dynamic Media を有効にする必要があります。
+[Dynamic Media](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html) はデフォルトで無効になっています。 Dynamic Media の機能を活用するには、Dynamic Media を有効にする必要があります。
 
 >[!WARNING]
 >
@@ -96,14 +96,14 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 機能パック 18912 のインストールは&#x200B;*オプション*&#x200B;です。
 
-機能パック 18912 を使用すると、FTP 経由でアセットを一括取り込みするか、Experience Manager で Dynamic Media - ハイブリッドモードまたは Dynamic Media Classic から Dynamic Media - Scene7 モードにアセットを移行できます。 これは、[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html) から入手できます。
+機能パック 18912 を使用すると、FTP 経由でアセットを一括取り込みするか、Experience Manager で Dynamic Media - ハイブリッドモードまたは Dynamic Media Classic から Dynamic Media - Scene7 モードにアセットを移行できます。 これは、[Adobe Professional Services](https://business.adobe.com/jp/customers/consulting-services/main.html) から入手できます。
 
 詳しくは、[一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)を参照してください。
 
 ## Cloud Services での Dynamic Media 設定の作成 {#configuring-dynamic-media-cloud-services}
 
 <!--
-**Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
+**Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
    ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 

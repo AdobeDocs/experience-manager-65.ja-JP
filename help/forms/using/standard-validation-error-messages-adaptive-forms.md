@@ -197,7 +197,7 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 
 アダプティブフォームでカスタムエラーハンドラーを使用する前に、次が必要です。
 
-* [カスタム関数作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)の基本知識。
+* [カスタム関数作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=ja#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)の基本知識。
 * [Apache Maven](https://maven.apache.org/download.cgi) の最新リリースをインストールします。
 
 

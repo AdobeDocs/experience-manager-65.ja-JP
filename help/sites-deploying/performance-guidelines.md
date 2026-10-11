@@ -313,7 +313,7 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 
 >[!CAUTION]
 >
->リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。 このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)にお問い合わせください。
+>リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。 このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support)にお問い合わせください。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
@@ -325,7 +325,7 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 
 >[!NOTE]
 >
->アドビでは、Adobe Managed Services を使用して Azure または Amazon Web Services（AWS）に AEM をデプロイするオプションを選択することをお勧めします。 お客様は、これらのクラウドコンピューティング環境で AEM をデプロイおよび運用する経験とスキルを持つチームのメリットを享受できます。 [Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
+>アドビでは、Adobe Managed Services を使用して Azure または Amazon Web Services（AWS）に AEM をデプロイするオプションを選択することをお勧めします。 お客様は、これらのクラウドコンピューティング環境で AEM をデプロイおよび運用する経験とスキルを持つチームのメリットを享受できます。 [Adobe Managed Services に関するドキュメント](https://business.adobe.com/jp/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 >
 >Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合のレコメンデーションは、クラウドプロバイダーと直接共同作業することです。 または、任意のクラウド環境での AEM のデプロイをサポートするアドビのパートナーと協力することもできます。 選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計、および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
 >

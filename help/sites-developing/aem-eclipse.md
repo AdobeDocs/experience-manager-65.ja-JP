@@ -137,7 +137,7 @@ _Experience Manager Developer Tools for Eclipse_&#x200B;には、Eclipseでの�
 
    >[!TIP]
    >
-   >ローカル AEM SDKで実行中のプロジェクトのデバッグについて詳しくは、[AEM SDKのリモートデバッグに関するドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)を参照してください。
+   >ローカル AEM SDKで実行中のプロジェクトのデバッグについて詳しくは、[AEM SDKのリモートデバッグに関するドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)を参照してください。
 
 1. 「**終了**」をクリックします。
 

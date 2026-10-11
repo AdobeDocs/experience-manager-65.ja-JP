@@ -108,7 +108,7 @@ Content Packageを使用すると、AEM App AuthorはAEMでページコンテン
 >
 >詳しくは、[Adobe Mobile Services Cloud Service](/help/mobile/configure-adobe-mobile-cloud-service.md)の設定を参照してください。
 
-AEM Mobileは、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) （AMS）を通じてAdobe Analyticsと統合されます。
+AEM Mobileは、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=ja) （AMS）を通じてAdobe Analyticsと統合されます。
 
 コントロールセンター&#x200B;**指標タイル**&#x200B;には、アプリケーションのAMSから取得したサマリー分析が表示されます。 右下の「。..」をクリックすると、分析ダッシュボードをドリルダウンできます。
 
